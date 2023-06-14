@@ -36,7 +36,7 @@ str.substring(indexStart[, indexEnd])
 
 ## 示例
 
-### 例子：使用 `substring`
+### 示例：使用 `substring`
 
 下例使用 `substring` 输出字符串 "`Mozilla`" 中的字符：
 
@@ -66,7 +66,7 @@ console.log(anyString.substring(0,7));
 console.log(anyString.substring(0,10));
 ```
 
-### **运用 length 属性来使用 substring()**
+### 运用 length 属性来使用 substring()
 
 下面一个例子运用了 String.length 属性去获取指定字符串的倒数元素。显然这个办法更容易记住，因为你不再像上面那个例子那样去记住起始位置和最终位置。
 
@@ -82,7 +82,7 @@ var anyString5 = anyString.substring(anyString.length - 5);
 console.log(anyString5);
 ```
 
-### 例子：替换一个字符串的子字符串
+### 示例：替换一个字符串的子字符串
 
 下例替换了一个字符串中的子字符串。可以替换单个字符和子字符串。该例结尾调用的函数将 "`Brave New World`" 变成了 "`Brave New Web`"。
 
@@ -118,7 +118,7 @@ function replaceString(oldS, newS,fullS){
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("String.prototype.substr()")}}
 - {{jsxref("String.prototype.slice()")}}

@@ -3,7 +3,7 @@ title: API プロパティサブページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_property_subpage_template
 original_slug: MDN/Structures/Page_types/API_property_subpage_template
 l10n:
-  sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}
@@ -22,14 +22,10 @@ l10n:
 > title: インターフェイス名.プロパティ名
 > slug: Web/API/インターフェイス名/プロパティ名
 > page-type: web-api-instance-property または web-api-static-property
-> tags:
->   - プロパティ名
->   - API
->   - Property
->   - Reference
->   - Experimental
->   - Deprecated
->   - Non-standard
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: path.to.feature.NameOfTheProperty
 > ---
 > ```
@@ -43,15 +39,11 @@ l10n:
 >     これは `Web/API/インターフェイス名/プロパティ名` のような形式になります。
 > - **page-type**
 >   - : `page-type` キーは、 Web/API プロパティでは `web-api-instance-property` （インスタンスプロパティの場合）または `web-api-static-property` （静的プロパティの場合）です。
-> - **tags**
->   - : 常に **API**, **Reference**, **Property**, _API 名_ (**WebVR** など), _インターフェイス名_ (**IDBIndex** など), プロパティ名 (**capabilities** など) のタグを含めてください。
->
->     必要に応じて以下のタグを入れてください。
->     - 技術状態: **Experimental** （この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)である場合）、 **Deprecated** （[非推奨](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨と廃止)である場合）、 **Non-standard** （標準化過程にない場合）
->     - 特別な要件: **Secure context** （安全なコンテキストでのみ利用可能な場合）
->     - その他、技術に関連して検索されそうな言葉を表すタグ。
->       例えば、 WebVR インターフェイスのページでは、 **VR** と **Virtual reality** を入れています。
+> - **status**
+>   - : （適切な）技術の状態のキーを入れてください。
+[**experimental**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)、[**deprecated**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)、**non-standard** （標準化過程にない場合）
 > - **browser-compat**
+>
 >   - : プレースホルダーの値 `path.to.feature.NameOfTheProperty` を [ブラウザー互換性データリポジトリー](https://github.com/mdn/browser-compat-data) にあるプロパティのクエリー文字列に置き換えてください。
 >     ツールチェインが自動的に互換性セクションと仕様書セクションのためにキーを使用します（`\{{Compat}}` と `\{{Specifications}}` マクロを置き換えます）。
 >
@@ -93,6 +85,8 @@ l10n:
 
 ## 例
 
+ページ内に例が 1 つしかない場合でも、複数形の "Examples" を使用することに留意してください。
+
 ### 説明的な見出し
 
 それぞれの例には、その例を説明する H3 見出し (`###`) がなければなりません。見出しは例が何を行っているかを説明するものであるべきです。例えば、「単純な例」というのは例について何も説明していないので、良い見出しとは言えません。見出しは簡潔であるべきです。より詳しい説明をする場合は、見出しの後の段落を使用してください。
@@ -105,25 +99,27 @@ l10n:
 >
 > このページのそれぞれの例に H3 見出し (`###`) を記載し、最後に H3 見出し (`###`) に「その他の例」というテキストを入れ、その下に他のページの例へのリンクを貼ることができます。例えば次のようにします。
 >
->  ```md
->  ## 例
+> ```md
+> ## 例
 >
->  ### Fetch API の使用
->  Fetch の例
+> ### Fetch API の使用
 >
->  ### その他の例
->  他のページにある他の例へのリンク
->  ```
+> Fetch の例
+>
+> ### その他の例
+>
+> 他のページにある他の例へのリンク
+> ```
 >
 > **シナリオ 2:** このページには何も例がなく、他のページに*だけ*ある場合。
 >
 > H3 の見出しは追加せず、 H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
 >
->  ```md
->   ## 例
+> ```md
+> ## 例
 >
->   この API の例については、[Fetch() ページ](https://example.org)を参照してください。
->
+> この API の例については、[fetch() のページ](https://example.org)を参照してください。
+> ```
 
 ## 仕様書
 

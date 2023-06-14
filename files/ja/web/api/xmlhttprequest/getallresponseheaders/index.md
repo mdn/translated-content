@@ -1,6 +1,8 @@
 ---
 title: XMLHttpRequest.getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
+l10n:
+  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -13,8 +15,8 @@ slug: Web/API/XMLHttpRequest/getAllResponseHeaders
 
 ## 構文
 
-```js
-var headers = XMLHttpRequest.getAllResponseHeaders();
+```js-nolint
+getAllResponseHeaders()
 ```
 
 ### 引数
@@ -23,11 +25,11 @@ var headers = XMLHttpRequest.getAllResponseHeaders();
 
 ### 返値
 
-{{Glossary('CRLF')}} で区切ったすべてのレスポンスヘッダー (フィールド名が `Set-Cookie` または `Set-Cookie2` のものを除く) を表す文字列、またはレスポンスを受信していなければ `null` です。ネットワークエラーが発生した場合は、空文字列が返されます。
+{{Glossary('CRLF')}} で区切ったすべてのレスポンスヘッダー（フィールド名が `Set-Cookie` のものを除く）を表す文字列、またはレスポンスを受信していなければ `null` です。ネットワークエラーが発生した場合は、空文字列が返されます。
 
 生のヘッダー文字列がどのように見えるかの例です。
 
-```
+```http
 date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
 content-encoding: gzip\r\n
 x-content-type-options: nosniff\r\n
@@ -47,29 +49,29 @@ x-xss-protection: 1; mode=block\r\n
 
 ## 例
 
-この例では、リクエストの {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}} イベントハンドラーである {{domxref("XMLHttpRequest.onreadystatechange")}} の中でヘッダーを調べます。このコードは生のヘッダー文字列を取得する方法、またそれを個別のヘッダーの配列に変換する方法、そして配列からヘッダー名とその値のマップを生成する方法を示しています。
+この例では、リクエストの {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}} イベントの中でヘッダーを調べます。このコードは生のヘッダー文字列を取得する方法、またそれを個別のヘッダーの配列に変換する方法、そして配列からヘッダー名とその値のマップを生成する方法を示しています。
 
-```html
-var request = new XMLHttpRequest();
+```js
+const request = new XMLHttpRequest();
 request.open("GET", "foo.txt", true);
 request.send();
 
-request.onreadystatechange = function() {
-  if(this.readyState == this.HEADERS_RECEIVED) {
+request.onreadystatechange = () => {
+  if (request.readyState === this.HEADERS_RECEIVED) {
 
     // 生のヘッダー文字列を取得
-    var headers = request.getAllResponseHeaders();
+    const headers = request.getAllResponseHeaders();
 
     // ヘッダー文字列を個別のヘッダーの
     // 配列に変換
-    var arr = headers.trim().split(/[\r\n]+/);
+    const arr = headers.trim().split(/[\r\n]+/);
 
     // ヘッダー名と値のマップを生成
-    var headerMap = {};
-    arr.forEach(function (line) {
-      var parts = line.split(': ');
-      var header = parts.shift();
-      var value = parts.join(': ');
+    const headerMap = {};
+    arr.forEach((line) => {
+      const parts = line.split(': ');
+      const header = parts.shift();
+      const value = parts.join(': ');
       headerMap[header] = value;
     });
   }
@@ -79,7 +81,7 @@ request.onreadystatechange = function() {
 いったんこれを行えば、次のようなことができます。
 
 ```js
-var contentType = headerMap["content-type"];
+const contentType = headerMap["content-type"];
 ```
 
 これは {{httpheader("Content-Type")}} ヘッダーの値を変数 `contentType` の中に入れます。

@@ -681,7 +681,7 @@ for (initializer; exit-condition; final-expression) {
 ```plain
 initializer
 while (exit-condition) {
-  // code to run
+  // 要运行的代码
 
   final-expression
 }
@@ -692,7 +692,7 @@ while (exit-condition) {
 ```plain
 initializer
 do {
-  // code to run
+  // 要运行的代码
 
   final-expression
 } while (exit-condition)

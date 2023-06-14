@@ -46,7 +46,7 @@ slug: Web/HTML/Attributes/rel
 
 ## 值
 
-- {{htmlattrdef("alternate")}}
+- `alternate`
 
   - : 表示当前文档的另一种方式。对 {{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 有效，其含义取决于其他属性的值。
 
@@ -95,7 +95,7 @@ slug: Web/HTML/Attributes/rel
         title="French PDF" />
       ```
 
-- {{htmlattrdef("author")}}
+- `author`
 
   - : 表示被引用的文档提供了关于当前文档或文章作者的进一步信息。与 {{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素有关。
 
@@ -105,17 +105,17 @@ slug: Web/HTML/Attributes/rel
 
     > **备注：** 由于历史原因，废弃的属性值 `rev="made"` 被视为 `rel="author"`。
 
-- {{htmlattrdef("bookmark")}}
+- `bookmark`
   - : 与 {{htmlelement('a')}} 和 {{htmlelement('area')}} 元素的 `rel` 属性值相关。如果有的话，给最近的祖先 {{htmlelement('article')}} 元素提供一个固定链接。如果没有祖先 `<article>` 元素，则给出链接元素与之联系最紧密的部分的固定链接。
-- {{htmlattrdef("canonical")}}
+- `canonical`
   - : 对 {{htmlelement('link')}} 元素有效，它定义了当前文档的首选 URL，这有助于搜索引擎减少重复内容。
-- {{htmlattrdef("dns-prefetch")}}
+- `dns-prefetch`
   - : 在 {{htmlelement('body')}} 和 {{htmlelement('head')}} 元素内与 {{htmlelement('link')}} 元素相关。它告诉浏览器为目标资源的来源预先执行 DNS 解析。对于用户可能需要的资源来说，它有助于减少延迟，从而提高用户访问资源时的性能，因为浏览器会预先对指定资源的来源进行 DNS 解析。参见[资源提示](https://w3c.github.io/resource-hints/)中描述的 [dns-prefetch](/zh-CN/docs/Web/Performance/dns-prefetch)。
-- {{htmlattrdef("external")}}
+- `external`
   - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，它表示引用的文档不是当前网站的一部分。这可以与属性选择器一起使用，使外部链接的样式向用户表明他们将离开当前网站。
-- {{htmlattrdef("help")}}
+- `help`
   - : 与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和{{htmlelement('area')}} 元素相关，`help` 关键字表示链接到的内容提供上下文敏感的帮助，为定义超链接的元素的父元素及其子元素提供信息。当在 `<link>` 中使用时，针对整个文档。当与 {{htmlelement('a')}} 和 {{htmlelement('area')}} 一起包含并支持这种使用方法时，默认的 {{cssxref('cursor')}} 将是 `help` 而不是 `pointer`。
-- {{htmlattrdef("icon")}}
+- `icon`
 
   - : 对 {{htmlelement('link')}} 元素有效，链接的资源代表了当前文档的图标，这是一种在用户界面上代表页面资源的方法。
 
@@ -133,7 +133,7 @@ slug: Web/HTML/Attributes/rel
 
     > **备注：** `shortcut` 链接类型经常出现在 `icon` 之前，但这种链接类型是不符合规定的，该类型会被忽略，且**网站作者不得再使用它**。
 
-- {{htmlattrdef("license")}}
+- `license`
 
   - : 在 {{HTMLElement("a")}}、{{HTMLElement("area")}}、{{HTMLElement("form")}}、 {{HTMLElement("link")}} 元素上有效，`license` 值表示该超链接指向描述许可信息的文件；当前文件的主要内容被引用文件描述的版权许可所覆盖。如果不在 {{HTMLElement("head")}} 元素内，标准并不区分适用于文档特定部分的超链接还是适用于整个文档的超链接。只有页面上的数据可以表明这一点。
 
@@ -143,47 +143,47 @@ slug: Web/HTML/Attributes/rel
 
     > **备注：** 虽然同义词 `copyright` 也是可以识别的，但它是不正确的，必须避免使用。
 
-- {{htmlattrdef("manifest")}}
+- `manifest`
   - : 代表 [Web 应用清单](/zh-CN/docs/Web/Manifest)。需要使用 CORS 协议进行跨源获取。
-- {{htmlattrdef("modulepreload")}}
+- `modulepreload`
   - : 对于提高性能很有用，并且与文档中的 {{htmlelement('link')}} 元素相关，设置 `rel="modulepreload"` 告诉浏览器预先获取脚本（和依赖关系）并存储在文档的模块映射中，以便以后评估。 `modulepreload` 链接可以确保网络抓取时，模块映射中的模块已经准备好（但没有评估），然后才一定需要它。参见 [`modulepreload`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload)。
-- {{htmlattrdef("next")}}
+- `next`
   - : 与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`next` 值表示当前文档是一个系列的一部分，引用文档是该系列的下一个文档。当包含在 `<link>` 中时，浏览器可能会假定将要获取那个文档，并将其作为一个资源提示。
-- {{htmlattrdef("nofollow")}}
+- `nofollow`
   - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关， `nofollow` 关键字告诉搜索引擎蜘蛛忽略链接关系。nofollow 关系可能表明当前文档的所有者并不认可被引用的文档。它经常被搜索引擎优化者包括在内，假装他们的链接农场不是垃圾页面。
-- {{htmlattrdef("noopener")}}
+- `noopener`
 
   - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，如果超链接一开始就会创建其中之一（即有一个适当的 `target` 属性值），则会创建一个顶级浏览环境，而不是一个辅助浏览环境。换句话说，它使链接的行为如同 [`window.opener`](/zh-CN/docs/Web/API/Window/opener)是空的，并且 `target="_parent"` 被设置。
 
     这与 [`opener`](#attr-opener) 具有的含义相反。
 
-- {{htmlattrdef("noreferrer")}}
+- `noreferrer`
   - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，包括这个值使得 referrer 未知（不会包含 `Referer` 标头），并创建一个顶级的浏览上下文，就像 `noopener` 也被设置一样。
-- {{htmlattrdef("opener")}}
+- `opener`
   - : 如果超链接会创建一个非辅助浏览上下文的顶级浏览上下文（即以“`_blank`”作为 `target` 属性值），则创建一个辅助浏览上下文。与 [noopener](#noopener) 作用相反。
-- {{htmlattrdef("pingback")}}
+- `pingback`
   - : 给出处理当前文档的 pingback 的 pingback 服务器地址。详见 [Pingback 规范](https://www.hixie.ch/specs/pingback/pingback)。
-- {{htmlattrdef("preconnect")}}
+- `preconnect`
   - : 向浏览器提供提示，建议它提前打开与链接网站的连接，而不透露任何私人信息或下载任何内容，以便在跟踪链接时能更快地获取链接内容。
-- {{htmlattrdef("prefetch")}}
+- `prefetch`
   - : 指定用户代理应预先获取并缓存目标资源，因为后续导航可能需要该资源。[链接预取常见问题](/zh-CN/docs/Web/HTTP/Link_prefetching_FAQ)有关于哪些链接可以被预取以及替代方法的详细信息
-- {{htmlattrdef("preload")}}
+- `preload`
   - : 指定用户代理必须根据 [`as`](/zh-CN/docs/Web/HTML/Element/link#attr-as) 属性给出的潜在目的地（以及与相应目的地相关的优先级），为当前导航预先获取和缓存目标资源。参见 [`preload`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 值的页面。
-- {{htmlattrdef("prerender")}}
+- `prerender`
   - : 指定用户代理应抢先获取目标资源，并以有助于在未来提供更快的响应的方式对其进行处理，例如，获取其子资源或执行一些渲染。
-- {{htmlattrdef("prev")}}
+- `prev`
 
   - : 与 [`next`](#attr-next) 关键字类似，与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`prev` 值表示当前文档是一个系列的一部分，而链接引用该系列中的一个先前文档就是被引用的文档。
 
     备注：同义词 `previous` 并不正确，不应被使用。
 
-- {{htmlattrdef("search")}}
+- `search`
 
   - : 与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`search` 关键字表示该超链接引用一个文档，其界面是专门为在当前文档、站点和相关资源中搜索而设计的，提供一个可以用来搜索的资源链接。
 
     如果 [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 属性被设置为 `application/opensearchdescription+xml`，则该资源是一个 [OpenSearch](/zh-CN/docs/Web/OpenSearch) 插件，可以很容易地添加到一些浏览器（如 Firefox 或 Internet Explorer）的界面中。
 
-- {{htmlattrdef("stylesheet")}}
+- `stylesheet`
 
   - : 对 {{htmlelement('link')}} 元素有效，它导入一个外部资源作为样式表使用。`text/css` 的样式表不需要 [`type`](/zh-CN/docs/Web/HTML/Element/link#attr-type) 属性，因为这是该属性的默认值。如果它不是 `text/css` 类型的样式表，最好是声明这个类型。
 
@@ -195,12 +195,12 @@ slug: Web/HTML/Attributes/rel
 
     需要使用 CORS 协议进行跨源获取。
 
-- {{htmlattrdef("tag")}}
+- `tag`
   - : 对 {{htmlelement('a')}} 和 {{htmlelement('area')}} 元素有效，它给出了一个适用于当前文档的标签（由给定地址标识）。标签值表示该链接指向一个描述适用于其所在文档的标签的文档。这种链接类型不是指标签云中的标签，因为这些标签适用于一组页面，而 `rel` 属性的 `tag` 值是针对单个文档。
 
 ### 非标准值
 
-- {{htmlattrdef("apple-touch-icon")}}
+- `apple-touch-icon`
   - : 指定 iOS 设备上的网络应用的图标。
 
 ## 规范

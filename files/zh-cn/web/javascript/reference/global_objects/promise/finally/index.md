@@ -7,12 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 
 ## 语法
 
-```plain
-p.finally(onFinally);
-
-p.finally(function() {
-   // 返回状态为 (resolved 或 rejected)
-});
+```js-nolint
+p.finally(onFinally)
 ```
 
 ### 参数

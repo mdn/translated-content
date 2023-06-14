@@ -54,7 +54,7 @@ Dans cet article, nous écrirons une démo classique de "balles bondissantes", p
 
 ![](bouncing-balls.png)
 
-Cet exemple utilise l'[API Canvas](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) pour dessiner les balles sur l'écran, et l'API [requestAnimationFrame](/fr/docs/Web/API/window/requestAnimationFrame) pour animer l'ensemble de l'affichage — Nul besoin d'avoir une connaissance préalable de ces APIs, nous expérons qu'une fois cet article terminé, vous aurez envie d'en faire une exploration approfondie. Tout le long du parcours nous utiliserons certains objets formidables et vous montrerons nombre de techniques sympathiques comme des balles bondissantes sur les murs et la vérification de balles qui s'entrechoquent (encore connue sous l'appelation **détection de collision**).
+Cet exemple utilise l'[API Canvas](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) pour dessiner les balles sur l'écran, et l'API [requestAnimationFrame](/fr/docs/Web/API/window/requestAnimationFrame) pour animer l'ensemble de l'affichage — Nul besoin d'avoir une connaissance préalable de ces APIs, nous espérons qu'une fois cet article terminé, vous aurez envie d'en faire une exploration approfondie. Tout le long du parcours nous utiliserons certains objets formidables et vous montrerons nombre de techniques sympathiques comme des balles bondissantes sur les murs et la vérification de balles qui s'entrechoquent (encore connue sous l'appelation **détection de collision**).
 
 Pour commencer, faites des copies locales de nos fichiers [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), et [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js). Ces fichiers contiennent respectivement :
 
@@ -316,13 +316,3 @@ C'est tout pour les articles sur les objets — il ne vous reste plus qu'à test
 - [Jeu d'évasion 2D utilisant phaser](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) — explique les bases de la construction d'un jeu 2D en utilisant une bibliothèque de jeux JavaScript.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
-
-## Dans ce module
-
-- [Les bases de l'objet](/fr/docs/Learn/JavaScript/Objects/Basics)
-- [JavaScript orienté objet pour les débutants](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Prototypes d'objets](/fr/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Héritage en JavaScript](/fr/docs/Learn/JavaScript/Objects/Inheritance)
-- [Travailler avec des données JSON](/fr/docs/Learn/JavaScript/Objects/JSON)
-- [Pratique de construction d'objets](/fr/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Ajout de fonctionnalités à notre démo de balles bondissantes](/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

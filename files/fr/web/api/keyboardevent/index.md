@@ -163,7 +163,7 @@ Certaines touches inversent l'état d'un voyant lumineux ; celles-ci comprennent
 
 > **Note :** Sous Linux, Firefox 12 et les versions antérieures ont également envoyé l'événement `keypress` pour ces touches.
 
-Cependant, une limitation du modèle d'événement Mac OS X fait que Caps Lock ne génère que l'événement `keydown`. Num Lock était supporté sur certains modèles d'ordinateurs portables plus anciens (modèles 2007 et plus anciens), mais depuis lors, Mac OS X n'a pas supporté Num Lock même sur les claviers externes. Sur les MacBooks plus anciens avec une touche Num Lock, cette touche ne génère aucun événement touche. Gecko supporte la touche Scroll Lock si un clavier externe ayant une touche F14 est connecté. Dans certaines anciennes versions de Firefox, cette touche générait un événement `keypress` ; ce comportement incohérent était le {{bug(602812)}}.
+Cependant, une limitation du modèle d'événement Mac OS X fait que Caps Lock ne génère que l'événement `keydown`. Num Lock était supporté sur certains modèles d'ordinateurs portables plus anciens (modèles 2007 et plus anciens), mais depuis lors, Mac OS X n'a pas supporté Num Lock même sur les claviers externes. Sur les MacBooks plus anciens avec une touche Num Lock, cette touche ne génère aucun événement touche. Gecko supporte la touche Scroll Lock si un clavier externe ayant une touche F14 est connecté. Dans certaines anciennes versions de Firefox, cette touche générait un événement `keypress` ; ce comportement incohérent était le [bug Firefox 602812](https://bugzil.la/602812).
 
 ### Gestion de l'auto-répétition
 

@@ -3,6 +3,20 @@ title: AJAX
 slug: Web/Guide/AJAX
 ---
 
+<section id="Quick_links">
+  {{ListSubpagesForSidebar("/ko/docs/Web/Guide/AJAX")}}
+  <ol>
+    <li class="toggle">
+      <details>
+        <summary>Guides</summary>
+        <ol>
+          {{ListSubpagesForSidebar("/ko/docs/Web/Guide")}}
+        </ol>
+      </details>
+    </li>
+  </ol>
+</section>
+
 **[시작하기](/ko/AJAX/Getting_Started)** AJAX를 소개합니다.
 
 <strong>Asynchronous JavaScript + XML(AJAX)</strong>은 그 자체가 특정 기술은 아닙니다. 2005년 Jesse James Garrett이 처음 만들어낸 말로, [HTML](/ko/docs/Web/HTML) 또는 [XHTML](/ko/docs/Glossary/XHTML), [CSS](/ko/docs/Web/CSS), [JavaScript](/ko/docs/Web/JavaScript), [DOM](/ko/docs/Web/API/Document_Object_Model), [XML](/ko/docs/Web/XML), [XSLT](/ko/docs/Web/XSLT), 그리고 제일 중요한 [XMLHttpRequest 객체](/ko/docs/Web/API/XMLHttpRequest)를 비롯해 기존의 여러 기술을 사용하는 "새로운" 접근법을 설명하는 용어입니다.

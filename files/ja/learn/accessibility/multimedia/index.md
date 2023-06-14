@@ -290,7 +290,7 @@ This is the second.
 HTML のメディア再生と共に表示させるためには、次のことをする必要があります:
 
 - .vtt ファイルとしてアクセス可能な場所に保存します。
-- {{htmlelement("track")}} 要素で .vtt へのリンクを設定します。 `<track>` は `<audio>` か `<video>` の間に設置する必要がありますが、すべての `<source>` 要素の後でなければいけません。 {{htmlattrxref("kind","track")}} 属性を使い、キューが字幕、キャプション、ディスクリプションのどれなのかを指定します。さらに、 {{htmlattrxref("srclang","track")}} を使って、字幕でどの言語が使用されているのかを伝えます。
+- {{htmlelement("track")}} 要素で .vtt へのリンクを設定します。 `<track>` は `<audio>` か `<video>` の間に設置する必要がありますが、すべての `<source>` 要素の後でなければいけません。 [`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性を使い、キューが字幕、キャプション、ディスクリプションのどれなのかを指定します。さらに、 [`srclang`](/ja/docs/Web/HTML/Element/track#srclang) を使って、字幕でどの言語が使用されているのかを伝えます。
 
 例を見てみましょう:
 
@@ -332,13 +332,3 @@ HTML のメディア再生と共に表示させるためには、次のことを
 このチャプターでは、マルチメディアにおけるアクセシビリティの関心ごとの要約をいくつかの実践的なソリューションと共に提供しました。
 
 {{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
-
-## このモジュール内の文書
-
-- [アクセシビリティとは?](/ja/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: アクセシビリティの基礎](/ja/docs/Learn/Accessibility/HTML)
-- [CSS と JavaScript のアクセシビリティのベスト・プラクティス](/ja/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA の基本](/ja/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [アクセシブルなマルチメディア](/ja/docs/Learn/Accessibility/Multimedia)
-- [モバイルアクセシビリティ](/ja/docs/Learn/Accessibility/Mobile)
-- [アクセシビリティのトラブルシューティング](/ja/docs/Learn/Accessibility/Accessibility_troubleshooting)

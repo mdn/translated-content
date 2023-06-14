@@ -1,6 +1,6 @@
 ---
 title: First Meaningful Paint
-slug: Glossary/first_meaningful_paint
+slug: Glossary/First_meaningful_paint
 translation_of: Glossary/first_meaningful_paint
 original_slug: Glossaire/first_meaningful_paint
 ---

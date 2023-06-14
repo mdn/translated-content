@@ -4,7 +4,7 @@ slug: Web/CSS/filter-function/drop-shadow
 original_slug: Web/CSS/filter-function/drop-shadow()
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 The **`drop-shadow()`** [CSS](/zh-CN/docs/Web/CSS) function applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 

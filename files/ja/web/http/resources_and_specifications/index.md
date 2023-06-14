@@ -2,7 +2,7 @@
 title: HTTP のリソースと仕様書
 slug: Web/HTTP/Resources_and_specifications
 l10n:
-  sourceCommit: 07b16eba30c0f343199170145b57440f66501453
+  sourceCommit: eb9eef29f1ccdaf1c8a464dbe4483c78f7a13b2a
 ---
 
 {{HTTPSidebar}}

@@ -28,7 +28,7 @@ quotes: unset;
 - `none`
   - : {{cssxref("content")}} 属性的值 `open-quote` 和 `close-quote` 将不会展示引号。
 - `auto`
-  - : 用适当的引号，基于在所选元素上设置的任何语言值（例如，通过 {{htmlattrxref("lang")}} 属性）。
+  - : 用适当的引号，基于在所选元素上设置的任何语言值（例如，通过 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）。
 - `[<string> <string>]+`
   - : 一组或者多组 {{cssxref("&lt;string&gt;")}} 的值对应 `open-quote` and `close-quote`. 第一对表示引号的外层，第二对表示第一个嵌套层，下一对表示第三层，依此类推。
 

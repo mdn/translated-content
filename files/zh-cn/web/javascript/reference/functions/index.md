@@ -338,7 +338,7 @@ function foo() {         // source element
 }
 ```
 
-### 例子
+### 示例
 
 ```js
 // 函数声明

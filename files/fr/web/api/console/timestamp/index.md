@@ -1,6 +1,6 @@
 ---
 title: Console.timeStamp()
-slug: Web/API/Console/timeStamp
+slug: Web/API/console/timeStamp
 tags:
   - API
   - DOM

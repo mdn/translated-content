@@ -36,10 +36,10 @@ l10n:
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("step", "input")}}
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -67,7 +67,7 @@ l10n:
 
 入力欄に入力された日付の値を表す文字列です。この入力型で使われる日付と時刻の値の形式は、[ローカル日時の文字列](/ja/docs/Web/HTML/Date_and_time_formats#ローカル日時の文字列)で説明されています。
 
-次のように、 {{htmlattrxref("value", "input")}} 属性に日付と時刻を入れることで、入力欄の既定値を設定することができます。
+次のように、 [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に日付と時刻を入れることで、入力欄の既定値を設定することができます。
 
 ```html
 <label for="party">パーティーを予約する日時を入力してください。</label>
@@ -99,19 +99,19 @@ JavaScript の {{jsxref("Date")}} では、数値の日付情報を適切な書�
 
 ### max
 
-受け付ける最新の日時です。要素に入力された {{htmlattrxref("value", "input")}} がこのタイムスタンプよりも後の場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。 `max` 属性の値が `YYYY-MM-DDThh:mm` の書式に従う妥当な文字列でない場合、要素は最大値を持ちません。
+受け付ける最新の日時です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこのタイムスタンプよりも後の場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `max` 属性の値が `YYYY-MM-DDThh:mm` の書式に従う妥当な文字列でない場合、要素は最大値を持ちません。
 
 この値は `min` 属性で指定されたものより後か、同じ日付を指定する必要があります。
 
 ### min
 
-受け付ける最古の日時です。これより前のタイムスタンプの場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。 `min` 属性の値が `YYYY-MM-DDThh:mm` の書式に従う妥当な文字列でない場合、要素は最小値を持ちません。
+受け付ける最古の日時です。これより前のタイムスタンプの場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `min` 属性の値が `YYYY-MM-DDThh:mm` の書式に従う妥当な文字列でない場合、要素は最小値を持ちません。
 
 この値は `max` 属性で指定されたものより前か、同じ日付を指定する必要があります。
 
 ### step
 
-`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ {{htmlattrxref("value", "input")}}、どちらも設定されていなければ適切な既定値）のみが妥当となります。
+`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Element/input#value)、どちらも設定されていなければ適切な既定値）のみが妥当となります。
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
@@ -142,7 +142,7 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 
 ### 日時の最大値と最小値の設定
 
-{{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} 属性を使用して、ユーザーが選択できる日時を制限することができます。次の例では、日時の最小値を `2017-06-01T08:30` に、日時の最大値を `2017-06-30T16:30` に設定しています。
+[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を使用して、ユーザーが選択できる日時を制限することができます。次の例では、日時の最小値を `2017-06-01T08:30` に、日時の最大値を `2017-06-30T16:30` に設定しています。
 
 ```html
 <form>
@@ -163,11 +163,11 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 - この結果は、 2017 年の 6 月の日付のみが選択できるようになります。文字列値の「日」の部分のみが編集可能となり、日付選択ウィジェットで 6 月以外にスクロールすることはできなくなります。
 - どのブラウザーを使用するかによって、指定された値の範囲外の時刻が時刻選択画面で選択できなかったり (Edge など)、無効な値（[検証](#検証)を参照）であっても設定できたりすることがあります (Chrome など)。
 
-> **メモ:** {{htmlattrxref("step", "input")}} 属性を使用すると、日時を加算するたびに飛ばす日時を設定できるはずです (例えば、土曜日のみを選択できるようにしたい場合など)。しかし、執筆時点でどの実装も正しく動作していないようです。
+> **メモ:** [`step`](/ja/docs/Web/HTML/Element/input#step) 属性を使用すると、日時を加算するたびに飛ばす日時を設定できるはずです (例えば、土曜日のみを選択できるようにしたい場合など)。しかし、執筆時点でどの実装も正しく動作していないようです。
 
 ### 入力欄の寸法の制御
 
-`<input type="datetime-local">` は、 {{htmlattrxref("size", "input")}} のようなコントロールの寸法に関する属性には対応していません。寸法を変更する必要がある場合は、 [CSS](/ja/docs/Web/CSS) を使用する必要があります。
+`<input type="datetime-local">` は、 [`size`](/ja/docs/Web/HTML/Element/input#size) のようなコントロールの寸法に関する属性には対応していません。寸法を変更する必要がある場合は、 [CSS](/ja/docs/Web/CSS) を使用する必要があります。
 
 ### タイムゾーンの設定
 
@@ -197,7 +197,7 @@ _現時点で、 `datetime-local` 入力欄で `step` に `any` の値が何を�
 
 既定では、 `<input type="datetime-local">` は入力された値の検証を行いません。ユーザーインターフェイスの実装は一般的に、日付でないものの入力をさせないからです。これは便利です。しかし、それでも入力欄を空のままにしたり、 (`text` 型にフォールバックするブラウザーにおいて) 無効な日付 (例えば 4 月 32 日など) を入力したりすることが可能です。
 
-{{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} を使用して有効な日付を制限したり ([日付の最大値と最小値の設定](#日付の最大値と最小値の設定)を参照)、 {{htmlattrxref("required", "input")}} 属性を使用して日時の入力を必須にしたりすることができます。その結果、対応しているブラウザーでは、範囲を外れた日付や空の日付欄を送信しようとするとエラーが表示されるでしょう。
+[`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) を使用して有効な日付を制限したり ([日付の最大値と最小値の設定](#日付の最大値と最小値の設定)を参照)、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用して日時の入力を必須にしたりすることができます。その結果、対応しているブラウザーでは、範囲を外れた日付や空の日付欄を送信しようとするとエラーが表示されるでしょう。
 
 例を見てみましょう。ここで日付の最小値と最大値を設定し、入力欄を必須にしました。
 
@@ -268,7 +268,7 @@ input:valid + span::after {
 - `MM-DD-YYYY HH:mm` (24 時制)
 - など
 
-これを回避する方法の一つは、日付入力欄に {{htmlattrxref("pattern", "input")}} 属性を付けることです。日付入力欄はこれを使用しないので、 `text` 入力欄にフォールバックされたときは使用します。例えば、次の例を未対応のブラウザーで見てみてください。
+これを回避する方法の一つは、日付入力欄に [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を付けることです。日付入力欄はこれを使用しないので、 `text` 入力欄にフォールバックされたときは使用します。例えば、次の例を未対応のブラウザーで見てみてください。
 
 ```html
 <form>

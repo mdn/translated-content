@@ -1,7 +1,8 @@
 ---
 title: 연산자 우선순위
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 ---
+
 {{jsSidebar("Operators")}}
 
 **연산자 우선순위**는 연산자를 실행하는 순서를 결정합니다. 우선순위가 높은 연산자가 먼저 실행됩니다.
@@ -183,7 +184,7 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
 ```js
 a || (b * c);  // `a`를 먼저 평가하고, `a`가 "truthy"라면  `a`를 생성합니다.
 a && (b < c);  // `a`를 먼저 평가하고, `a`가 "falsy"라면  `a`를 생성합니다.
-a ?? (b || c); // `a`를 먼저 평가하고, `a`가 `null`과 `undefined`가 아니라면 `a`를 생성합니다. 
+a ?? (b || c); // `a`를 먼저 평가하고, `a`가 `null`과 `undefined`가 아니라면 `a`를 생성합니다.
 a?.b.c;        // `a`를 먼저 평가하고, `a`가 `null`또는 `undefined`라면 `undefined`를 생성합니다.
 ```
 

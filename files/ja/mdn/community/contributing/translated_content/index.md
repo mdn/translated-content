@@ -3,7 +3,7 @@ title: MDN Web Docs のローカライズ
 slug: MDN/Community/Contributing/Translated_content
 original_slug: MDN/Contribute/Localize
 l10n:
-  sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}

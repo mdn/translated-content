@@ -33,7 +33,7 @@ slug: Web/HTML/Element/canvas
           >対話型コンテンツ</a
         >のうち {{HTMLElement("a")}} 要素,
         {{HTMLElement("button")}} 要素, {{HTMLElement("input")}}
-        要素の {{htmlattrxref("type", "input")}} 属性が
+        要素の <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> 属性が
         <code>checkbox</code>, <code>radio</code>,
         <code>button</code> のいずれか以外を含まないもの
       </td>
@@ -73,11 +73,11 @@ slug: Web/HTML/Element/canvas
 
 他のすべての HTML 要素と同様に、[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-- {{htmlattrdef("height")}}
+- `height`
   - : CSS ピクセルで示した座標空間の高さ。既定では 150 ピクセルに設定されています。
-- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}
+- `moz-opaque` {{non-standard_inline}} {{deprecated_inline}}
   - : canvas に半透明性がファクターになるかを知らせます。キャンバスは半透明性がないことがわかっていれば、描画パフォーマンスを最適化できます。これは Mozilla ベースのブラウザーしか対応していません。代わりに標準化された {{domxref("HTMLCanvasElement.getContext()", "canvas.getContext('2d', { alpha: false })")}} を使用してください。
-- {{htmlattrdef("width")}}
+- `width`
   - : CSS ピクセルで示した座標空間の幅。既定では 300 ピクセルに設定されています。
 
 ## 使用上の注意

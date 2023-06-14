@@ -220,7 +220,7 @@ ul {
 
 ### start
 
-{{htmlattrxref("start","ol")}} 属性を使用すると、1 以外の数からリストを数え始めます。 次の例では、
+[`start`](/ja/docs/Web/HTML/Element/ol#start) 属性を使用すると、1 以外の数からリストを数え始めます。 次の例では、
 
 ```html
 <ol start="4">
@@ -237,7 +237,7 @@ ul {
 
 ### reversed
 
-{{htmlattrxref("reversed","ol")}} 属性はリストのカウントアップではなくカウントダウンを開始します。 次の例では、
+[`reversed`](/ja/docs/Web/HTML/Element/ol#reversed) 属性はリストのカウントアップではなくカウントダウンを開始します。 次の例では、
 
 ```html
 <ol start="4" reversed>
@@ -256,7 +256,7 @@ ul {
 
 ### value
 
-{{htmlattrxref("value","ol")}} 属性を使用すると、リスト項目を特定の数値に設定できます。 次の例では、
+[`value`](/ja/docs/Web/HTML/Element/ol#value) 属性を使用すると、リスト項目を特定の数値に設定できます。 次の例では、
 
 ```html
 <ol>
@@ -367,11 +367,3 @@ CSS カウンターは、リストの数え方と装飾をカスタマイズす�
 関連するいくつかの基本的な原則と特定のプロパティを知っていれば、リストの装飾のこつは比較的簡単です。 次の記事では、リンクの装飾テクニックについて説明します。
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
-
-## このモジュール内の文書
-
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
-- [リストの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_lists)
-- [リンクの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_links)
-- [ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)
-- [コミュニティスクールのホームページの組版](/ja/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

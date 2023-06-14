@@ -3,9 +3,9 @@ title: URLSearchParams.toString()
 slug: Web/API/URLSearchParams/toString
 ---
 
-{{ApiRef("URL API")}}{{SeeCompatTable}}
+{{ApiRef("URL API")}}
 
-{{domxref("URLSearchParams")}} 接口的 toString() 方法 返回适用在 URL 中的查询字符串。
+{{domxref("URLSearchParams")}} 接口的 **`toString()`** 方法返回适用在 URL 中的查询字符串。
 
 ## 语法
 
@@ -33,7 +33,7 @@ console.log(params.toString());
 
 {{Specifications}}
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

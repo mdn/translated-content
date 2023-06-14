@@ -477,7 +477,7 @@ MPEG-4 メディア形式 (`audio/mp4` または `video/mp4`) を指定すると
       <td></td>
       <td>
         <p>あり</p>
-        <p>Firefox の AV1 対応は、Android ({{bug(1672276)}}) と Windows on ARM では無効です （環境設定 <code>media.av1.enabled</code> を <code>true</code> に設定すると有効になります）。</p>
+        <p>Firefox の AV1 対応は、Android ([Firefox バグ 1672276](https://bugzil.la/1672276)) と Windows on ARM では無効です （環境設定 <code>media.av1.enabled</code> を <code>true</code> に設定すると有効になります）。</p>
       </td>
       <td></td>
     </tr>
@@ -1096,7 +1096,7 @@ MP3 の幅広い互換性と、使用する際に支払うべきロイヤリテ�
 例えば、 Ogg や WebM の動画を最初の選択肢として提供し、フォールバックとして MP4 形式の動画を提供することができます。
 さらに、レトロな QuickTime や AVI をフォールバックとして提供することもできます。
 
-これを行うには、 {{htmlattrxref("src", "video")}} 属性のない `<video>` （または `<audio>`）要素を作成します。
+これを行うには、 [`src`](/ja/docs/Web/HTML/Element/video#src) 属性のない `<video>` （または `<audio>`）要素を作成します。
 そして、`<video>` 要素の中に、提供する動画のバージョンごとに子要素である {{HTMLElement("source")}} を追加します。
 これは、帯域幅の利用可能性に応じて選択できるさまざまなバージョンの動画を提供するために使用できますが、私たちの場合は、形式オプションを提供するために使用することにします。
 
@@ -1104,7 +1104,7 @@ MP3 の幅広い互換性と、使用する際に支払うべきロイヤリテ�
 
 {{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
 
-動画は最初に WebM 形式で提供されます（{{htmlattrxref("type", "video")}} 属性に `video/webm` を設定した場合）。
+動画は最初に WebM 形式で提供されます（[`type`](/ja/docs/Web/HTML/Element/video#type) 属性に `video/webm` を設定した場合）。
 もし {{Glossary("user agent")}} がそれを再生できなければ、`type` が `video/mp4` に指定された次のオプションに移動します。
 どちらも再生できない場合、"This browser does not support the HTML video element." というテキストが表示されます。
 

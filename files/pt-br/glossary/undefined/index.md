@@ -1,6 +1,6 @@
 ---
 title: undefined
-slug: Glossary/undefined
+slug: Glossary/Undefined
 original_slug: Glossario/undefined
 ---
 

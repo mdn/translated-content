@@ -39,9 +39,9 @@ parseFloat(string)
 
 `parseFloat` 也可以转换一个已经定义了 `toString` 或者 `valueOf` 方法的对象，它返回的值和在调用该方法的结果上调用 `parseFloat` 值相同。
 
-## 例子
+## 示例
 
-### 例子：`parseFloat`返回正常数字
+### 示例：`parseFloat`返回正常数字
 
 下面的例子都返回 **3.14**
 

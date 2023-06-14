@@ -189,24 +189,3 @@ A tabela a seguir fornece uma visão geral dos seletores disponíveis para uso, 
 | [Child combinator](/pt-BR/docs/Web/CSS/Child_combinator)                       | `article > p`       | [Child combinator](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Child_combinator)                               |
 | [Adjacent sibling combinator](/pt-BR/docs/Web/CSS/Adjacent_sibling_combinator) | `h1 + p`            | [Adjacent sibling](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Adjacent_sibling)                               |
 | [General sibling combinator](/pt-BR/docs/Web/CSS/General_sibling_combinator)   | `h1 ~ p`            | [General sibling](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators#General_sibling)                                 |
-
-## In this module
-
-1. [Cascade and inheritance](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/pt-BR/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/pt-BR/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/pt-BR/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/pt-BR/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Organizing)

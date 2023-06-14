@@ -1,6 +1,6 @@
 ---
 title: Console.groupCollapsed()
-slug: Web/API/Console/groupCollapsed
+slug: Web/API/console/groupCollapsed
 tags:
   - API
   - DOM

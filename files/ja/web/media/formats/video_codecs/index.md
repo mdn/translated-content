@@ -1951,7 +1951,7 @@ let recorder = new MediaRecorder(sourceStream, options);
 
 コーデック選択のための文書は、おそらく `codecs` 引数を作成するときに使用する情報を提供してくれるでしょう。
 
-## 科rん連情報
+## 関連情報
 
 - [ウェブ音声コーデックガイド](/ja/docs/Web/Media/Formats/Audio_codecs)
 - [メディアコンテナー形式（ファイル形式）](/ja/docs/Web/Media/Formats/Containers)

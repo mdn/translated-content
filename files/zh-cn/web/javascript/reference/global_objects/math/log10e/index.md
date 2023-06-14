@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 
 ## 示例
 
-### 例子：使用 `Math.LOG10E`
+### 示例：使用 `Math.LOG10E`
 
 下面的函数返回以 10 为底数，E 的对数：
 

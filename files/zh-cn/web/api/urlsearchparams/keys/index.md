@@ -3,9 +3,9 @@ title: URLSearchParams.keys()
 slug: Web/API/URLSearchParams/keys
 ---
 
-{{APIRef("URL API")}}{{SeeCompatTable}}
+{{APIRef("URL API")}}
 
-URLSearchParams.keys() 返回一个{{jsxref("Iteration_protocols",'iterator')}}，遍历器允许遍历对象中包含的所有键。这些键都是{{domxref("USVString")}}对象。
+URLSearchParams.keys() 返回一个{{jsxref("Iteration_protocols",'iterator')}}，遍历器允许遍历对象中包含的所有键。这些键都是字符串对象。
 
 > **备注：** 该方法在 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)中也可使用
 

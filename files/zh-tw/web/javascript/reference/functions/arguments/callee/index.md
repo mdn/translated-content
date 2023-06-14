@@ -106,7 +106,7 @@ var result = create()(5); // returns 120 (5 * 4 * 3 * 2 * 1)
 
 ### A use of `arguments.callee` with no good alternative
 
-However, in a case like the following, there are not alternatives to `arguments.callee`, so its deprecation could be a bug (see {{Bug("725398")}}):
+However, in a case like the following, there are not alternatives to `arguments.callee`, so its deprecation could be a bug (see [Firefox bug 725398](https://bugzil.la/725398)):
 
 ```js
 function createPerson (sIdentity) {

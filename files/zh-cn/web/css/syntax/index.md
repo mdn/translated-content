@@ -3,7 +3,7 @@ title: 语法
 slug: Web/CSS/Syntax
 ---
 
-{{cssref}}
+{{CSSRef}}
 
 层叠样式表（Cascading Stylesheet，简称 [CSS](/zh-CN/docs/Web/CSS)），其基本目标是让浏览器以指定的特性去绘制页面元素，比如颜色、定位、装饰。CSS 的语法反映了这个目标，由下面两个部分构建：
 
@@ -73,10 +73,10 @@ CSS1 与 CSS2.1 下，条件规则组里面只能用规则。CSS3 下还可以�
   - [注释](/zh-CN/docs/Web/CSS/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-CN/docs/Web/CSS/initial_value)

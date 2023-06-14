@@ -1,6 +1,6 @@
 ---
 title: Authentification par défi-réponse
-slug: Glossary/challenge
+slug: Glossary/Challenge
 tags:
   - Glossaire
   - Protocoles

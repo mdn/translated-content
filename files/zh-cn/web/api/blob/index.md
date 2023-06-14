@@ -64,7 +64,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'
 
 #### JavaScript
 
-该示例代码片段的主要片段是 `typedArrayToURL()` 函数，其用于从给定的类型化数组创建一个 `Blob`，并返回该 `Blob` 的对象 URL。将数据转换为对象 URL 后，可通过多种方式使用，包括：作为 {{HTMLElement("img")}} 元素 {{htmlattrxref("src", "img")}} 属性的值（当然，假设给定的数据包含了一张图片）。
+该示例代码片段的主要片段是 `typedArrayToURL()` 函数，其用于从给定的类型化数组创建一个 `Blob`，并返回该 `Blob` 的对象 URL。将数据转换为对象 URL 后，可通过多种方式使用，包括：作为 {{HTMLElement("img")}} 元素 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性的值（当然，假设给定的数据包含了一张图片）。
 
 ```js
 function showViewLiveResultButton() {

@@ -1,6 +1,6 @@
 ---
 title: CSS 카운터 사용하기
-slug: Web/CSS/CSS_Counter_Styles/Using_CSS_counters
+slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
 

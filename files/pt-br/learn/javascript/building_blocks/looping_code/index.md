@@ -873,13 +873,3 @@ If there is anything you didn't understand, feel free to read through the articl
 - [What’s the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/pt-BR/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/pt-BR/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/pt-BR/docs/Learn/JavaScript/Building_blocks/Image_gallery)

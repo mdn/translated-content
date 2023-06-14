@@ -2,7 +2,7 @@
 title: 'Window: vrdisplaypresentchange イベント'
 slug: Web/API/Window/vrdisplaypresentchange_event
 l10n:
-  sourceCommit: f01646c40eb0c51d267c54d0ae77d912fde1cb85
+  sourceCommit: bb8221e061bba27dbdbe5a3698b6c69febf0bc70
 ---
 
 {{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}

@@ -1,6 +1,6 @@
 ---
 title: <legend>
-slug: Web/HTML/Element/Legend
+slug: Web/HTML/Element/legend
 tags:
   - Element
   - Formulaires

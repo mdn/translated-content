@@ -49,7 +49,7 @@ Utilisez la clé du thème pour définir un thème statique à appliquer à Fire
 
 > **Note :** Si vous voulez inclure un thème avec une extension, veuillez voir l'API {{WebExtAPIRef("theme")}}.
 
-> **Note :** Depuis mai 2019, les thèmes doivent être signés pour être installés ({{bug(1545109)}}). Voir [Signature et distribution votre extension](/fr/docs/Mozilla/Add-ons/Distribution) pour plus de détails.
+> **Note :** Depuis mai 2019, les thèmes doivent être signés pour être installés ([bug Firefox 1545109](https://bugzil.la/1545109)). Voir [Signature et distribution votre extension](/fr/docs/Mozilla/Add-ons/Distribution) pour plus de détails.
 
 > **Note :** Prise en charge des thèmes dans Firefox pour Android : Une nouvelle version de Firefox pour Android, basée sur GeckoView, est en cours de développement. Une [pré-version](https://play.google.com/store/apps/details?id=org.mozilla.fenix) ne support pas les thèmes.
 
@@ -203,7 +203,7 @@ Les images doivent avoir une hauteur de 200 pixels pour garantir qu'elles rempli
           également que dans Firefox 60 et suivants, tout
           {{cssxref("text-shadow")}} appliqué au texte d'en-tête est
           supprimé si aucun <code>headerURL</code> n'est spécifié (voir
-          {{bug(1404688)}}).
+          [bug Firefox 1404688](https://bugzil.la/1404688)).
         </p>
         <p>
           Dans Firefox pour Android, <code>headerURL</code> ou

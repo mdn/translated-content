@@ -169,11 +169,3 @@ Iremos visualizar várias outras maneiras de auxiliar diferentes browsers em li�
 Você está quase encerrando este módulo; só temos mais uma tarefa para fazer. No próximo artigo, você utilizará seu novo conhecimento para reestilizar um exemplo, testando seus aprendizados de CSS no processo.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
-
-## Neste módulo
-
-1. [O que é CSS?](/pt-BR/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Começando com CSS](/pt-BR/docs/Learn/CSS/First_steps/Getting_started)
-3. [Como o CSS é estruturado](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [Como o CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Utilizando seu novo conhecimento](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

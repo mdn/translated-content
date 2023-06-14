@@ -3,7 +3,7 @@ title: align-items
 slug: Web/CSS/align-items
 ---
 
-{{ CSSRef}}
+{{CSSRef}}
 
 CSS align-items 属性将所有直接子节点上的 align-self 值设置为一个组。align-self 属性设置项目在其包含块中在交叉轴方向上的对齐方式。
 

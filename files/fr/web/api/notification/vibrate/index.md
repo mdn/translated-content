@@ -1,6 +1,6 @@
 ---
 title: Notification.vibrate
-slug: Web/API/notification/vibrate
+slug: Web/API/Notification/vibrate
 tags:
   - API
   - API Notifications

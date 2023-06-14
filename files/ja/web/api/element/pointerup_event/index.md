@@ -1,9 +1,9 @@
 ---
-title: 'Element: pointerup event'
+title: "Element: pointerup イベント"
 slug: Web/API/Element/pointerup_event
 original_slug: Web/API/Document/pointerup_event
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: 9fb6c9e56c6db295967384730feeb941509ac743
 ---
 
 {{APIRef}}
@@ -15,9 +15,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('pointerup', (event) => {});
+addEventListener("pointerup", (event) => {});
 
-onpointerup = (event) => { };
+onpointerup = (event) => {};
 ```
 
 ## イベント型
@@ -56,20 +56,20 @@ _このインターフェイスは {{domxref("MouseEvent")}} および {{domxref
 `addEventListener()` を使用した例です。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointerup', (event) => {
-  console.log('Pointer up');
+para.addEventListener("pointerup", (event) => {
+  console.log("Pointer up");
 });
 ```
 
 `onpointerup` イベントハンドラープロパティを使用した例です。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointerup = (event) => {
-  console.log('Pointer up');
+  console.log("Pointer up");
 };
 ```
 

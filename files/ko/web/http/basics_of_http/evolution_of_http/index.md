@@ -198,4 +198,4 @@ HTTP의 진화는 그것의 확장성과 단순함이 예측 불가능한 애플
 
 HTTP의 다음 메이저 버전인 HTTP/3에서는 전송 계층 부분에 {{Glossary("TCP")}}/{{Glossary("TLS")}} 대신 {{Glossary("QUIC")}}가 사용됩니다.
 
-Firefox에서의 구현 상태는 {{bug(1158011)}}을 참조해주세요.
+Firefox에서의 구현 상태는 [Firefox bug 1158011](https://bugzil.la/1158011)을 참조해주세요.

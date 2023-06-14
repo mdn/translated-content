@@ -24,8 +24,6 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
   - : 返回元素大小的一个数值。对 `Uint8ClampedArray` 而言是 1。
 - {{jsxref("TypedArray.prototype.length", "Uint8ClampedArray.prototype.length")}}
   - : 静态长度属性值为 0。对于实际长度（元素的数量），见 {{jsxref("TypedArray.prototype.length", "Uint8ClampedArray.prototype.length")}}。
-- {{jsxref("TypedArray.name", "Uint8ClampedArray.name")}}
-  - : 返回构造函数名的字符串值。对 `Uint8ClampedArray` 类型而言："Uint8ClampedArray"。
 - {{jsxref("TypedArray.prototype", "Uint8ClampedArray.prototype")}}
   - : 原型是 _TypedArray_（类型化数组）对象。
 
@@ -110,7 +108,7 @@ new Uint8ClampedArray(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.@@iterator", "Uint8ClampedArray.prototype[@@iterator]()")}}
   - : Returns a new `Array Iterator` object that contains the values for each index in the array.
 
-## 实例
+## 示例
 
 创建一个 `Uint8ClampedArray` 的不同方式：
 

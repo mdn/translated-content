@@ -266,7 +266,7 @@ MDN 页面被嵌入在其他页面中没有多大意义，除非你想要将其�
 来为你的父文档提供服务。但是，由于 HTTPS 的第二个好处，_无论成本如何，你绝对不能使用 HTTP 嵌入第三方内容_（在最好的情况下，你的用户的 Web 浏览器会给他们一个可怕的警告）。所有有声望的公司，例如
 Google Maps 或 Youtube，当你嵌入内容时，`<iframe>` 将通过 HTTPS 提供——查看 `<iframe>` `src` 属性内的 URL。
 
-> **备注：** [Github 页面](/zh-CN/docs/Learn/Common_questions/Using_Github_pages)允许默认情况下通过 HTTPS
+> **备注：** [Github 页面](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)允许默认情况下通过 HTTPS
 > 提供内容，因此对托管内容很有用。如果你正在使用不同的托管，并且不确定，请向你的托管服务商询问。
 
 #### 始终使用 `sandbox` 属性
@@ -301,9 +301,9 @@ Java 小程序和 Flash，PDF（可在浏览器中显示为一个 PDF 插件）�
 
 |                                                            | {{htmlelement("embed")}}                                                          | {{htmlelement("object")}}                                                              |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| 嵌入内容的[网址](/zh-CN/docs/Glossary/URL)                 | {{htmlattrxref('src','embed')}}                                                  | {{htmlattrxref('data','object')}}                                                  |
-| 嵌入内容的*准确*[媒体类型](/zh-CN/docs/Glossary/MIME_type) | {{htmlattrxref('type','embed')}}                                              | {{htmlattrxref('type','object')}}                                                  |
-| 由插件控制的框的高度和宽度（以 CSS 像素为单位）            | {{htmlattrxref('height','embed')}} {{htmlattrxref('width','embed')}} | {{htmlattrxref('height','object')}} {{htmlattrxref('width','object')}} |
+| 嵌入内容的[网址](/zh-CN/docs/Glossary/URL)                 | [`src`](/zh-CN/docs/Web/HTML/Element/embed#src)                                                  | [`data`](/zh-CN/docs/Web/HTML/Element/object#data)                                                  |
+| 嵌入内容的*准确*[媒体类型](/zh-CN/docs/Glossary/MIME_type) | [`type`](/zh-CN/docs/Web/HTML/Element/embed#type)                                              | [`type`](/zh-CN/docs/Web/HTML/Element/object#type)                                                  |
+| 由插件控制的框的高度和宽度（以 CSS 像素为单位）            | [`height`](/zh-CN/docs/Web/HTML/Element/embed#height) [`width`](/zh-CN/docs/Web/HTML/Element/embed#width) | [`height`](/zh-CN/docs/Web/HTML/Element/object#height) [`width`](/zh-CN/docs/Web/HTML/Element/object#width) |
 | 名称和值，将插件作为参数提供                               | 具有这些名称和值的 ad hoc 属性                                                            | 单标签[`<param>`](/zh-CN/docs/Web/HTML/Element/param)元素，包含在内`<object>`                 |
 | 独立的 HTML 内容作为不可用资源的回退                       | 不支持（`<noembed>`已过时）                                                               | 包含在元素`<object>`之后`<param>`                                                             |
 

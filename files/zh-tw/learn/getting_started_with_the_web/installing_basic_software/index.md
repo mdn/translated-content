@@ -25,7 +25,7 @@ slug: Learn/Getting_started_with_the_web/Installing_basic_software
 
 ### 安裝文字編輯器
 
-你的電腦裡很可能已經提供基本的文字編輯器了。Windows 本身就有 [記事本](https://zh.wikipedia.org/wiki/記事本)；OS X 已提供 [文字編輯](https://zh.wikipedia.org/wiki/文字編輯_(應用程式))；Linux 各版本不太一樣：例如 Ubuntu 就有 [gedit](https://zh.wikipedia.org/wiki/Gedit)。
+你的電腦裡很可能已經提供基本的文字編輯器了。Windows 本身就有[記事本](https://zh.wikipedia.org/wiki/記事本)；OS X 已提供[文字編輯](<https://zh.wikipedia.org/wiki/文字編輯_(應用程式)>)；Linux 各版本不太一樣：例如 Ubuntu 就有 [gedit](https://zh.wikipedia.org/wiki/Gedit)。
 
 而針對 Web 開發，其實有著比 Notepad 或 TextEdit 好很多的工具。我們推薦使用 [Visual Studio Code](https://code.visualstudio.com/)，因為這個自由編輯器有提供即時預覽、以及程式碼提示。
 

@@ -66,11 +66,11 @@ l10n:
 
 > **メモ:** `alt` 属性は技術的には省略可能ですが、コンテンツの利用性を最大化するために常に設定してください。
 
-`<input type="image">` の `alt` 属性は、機能的には {{HTMLElement("img")}} 要素における {{htmlattrdef("alt", "img")}} 属性と同様に動作します。
+`<input type="image">` の `alt` 属性は、機能的には {{HTMLElement("img")}} 要素における [`alt`](/ja/docs/Web/HTML/Element/img#alt) 属性と同様に動作します。
 
 ### formaction
 
-文字列で、データの送信先の URL を示します。これはこの {{HTMLElement("input")}} が属する {{HTMLElement("form")}} 要素の {{htmlattrxref("action", "form")}} 属性より優先します。
+文字列で、データの送信先の URL を示します。これはこの {{HTMLElement("input")}} が属する {{HTMLElement("form")}} 要素の [`action`](/ja/docs/Web/HTML/Element/form#action) 属性より優先します。
 
 この属性は [`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit) および {{HTMLElement("button")}} 要素でも使用できます。
 
@@ -85,18 +85,18 @@ l10n:
 - `text/plain`
   - : プレーンテキストです。ほとんどデバッグでしか役に立ちませんが、送信されたデータを簡単に見ることができます。
 
-`formenctype` 属性が指定された場合、所属するフォームの {{htmlattrxref("action", "form")}} 属性を上書きします。
+`formenctype` 属性が指定された場合、所属するフォームの [`action`](/ja/docs/Web/HTML/Element/form#action) 属性を上書きします。
 
 この属性は [`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit) および {{HTMLElement("button")}} 要素でも使用できます。
 
 ### formmethod
 
-文字列で、フォームのデータを送信するときに使用する HTTP メソッドを示します。この値は所有者であるフォームの {{htmlattrxref("method", "form")}} を上書きします。許されている値は次の通りです。
+文字列で、フォームのデータを送信するときに使用する HTTP メソッドを示します。この値は所有者であるフォームの [`method`](/ja/docs/Web/HTML/Element/form#method) を上書きします。許されている値は次の通りです。
 
 - `get`
-  - : URL は `formaction` または {{htmlattrxref("action", "form")}} 属性で与えられた URL で始まり、クエスチョンマーク ("?") 文字を付加し、次に `formenctype` またはフォームの {{htmlattrxref("enctype", "form")}} 属性の記述に従ってコード化したフォームデータを付加して作成されます。この URL は、 HTTP の {{HTTPMethod("get")}} リクエストでサーバーに送信されます。この方法は、ASCII 文字のみを含み、副作用のない単純なフォームに対してよく機能します。これは既定値です。
+  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) 属性で与えられた URL で始まり、クエスチョンマーク ("?") 文字を付加し、次に `formenctype` またはフォームの [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性の記述に従ってコード化したフォームデータを付加して作成されます。この URL は、 HTTP の {{HTTPMethod("get")}} リクエストでサーバーに送信されます。この方法は、ASCII 文字のみを含み、副作用のない単純なフォームに対してよく機能します。これは既定値です。
 - `post`
-  - : フォームのデータは `formaction` または {{htmlattrxref("action", "form")}} 属性で指定された URL に HTTP の {{HTTPMethod("post")}} リクエストで送信される本文に含まれます。このメソッドは、複雑なデータやファイルの添付に対応しています。
+  - : フォームのデータは `formaction` または [`action`](/ja/docs/Web/HTML/Element/form#action) 属性で指定された URL に HTTP の {{HTTPMethod("post")}} リクエストで送信される本文に含まれます。このメソッドは、複雑なデータやファイルの添付に対応しています。
 - `dialog`
   - : このメソッドは、ボタンが入力に関連するダイアログを閉じ、フォームデータを全く送信しないことを示すために使用される。
 
@@ -104,13 +104,13 @@ l10n:
 
 ### formnovalidate
 
-論理属性で、これがある場合は、サーバーに送信する前にフォームの検証を行わないことを指定します。これは、その要素の所有するフォームの {{htmlattrxref("novalidate", "form")}} 属性の値より優先されます。
+論理属性で、これがある場合は、サーバーに送信する前にフォームの検証を行わないことを指定します。これは、その要素の所有するフォームの [`novalidate`](/ja/docs/Web/HTML/Element/form#novalidate) 属性の値より優先されます。
 
 この属性は [`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit) および {{HTMLElement("button")}} 要素でも使用できます。
 
 ### formtarget
 
-文字列で、フォームを送信した後に受け取ったレスポンスを表示する場所を示す、名前またはキーワードを指定します。この文字列は、**閲覧コンテキスト**（つまり、タブ、ウィンドウ、または {{HTMLElement("iframe")}}）の名前である必要があります。ここで指定された値は、この入力を所有する {{HTMLElement("form")}} の {{htmlattrxref("target", "form")}} 属性で指定されたターゲットよりも優先されます。
+文字列で、フォームを送信した後に受け取ったレスポンスを表示する場所を示す、名前またはキーワードを指定します。この文字列は、**閲覧コンテキスト**（つまり、タブ、ウィンドウ、または {{HTMLElement("iframe")}}）の名前である必要があります。ここで指定された値は、この入力を所有する {{HTMLElement("form")}} の [`target`](/ja/docs/Web/HTML/Element/form#target) 属性で指定されたターゲットよりも優先されます。
 
 タブ、ウィンドウ、インライン枠などの実際の名前のほかに、いくつかの特別なキーワードを使用することができます。
 
@@ -173,31 +173,31 @@ l10n:
 
 `<input type="image">` 要素は — 通常の[送信ボタン](/ja/docs/Web/HTML/Element/input/submit)と同様に — 既定のフォームの動作を上書きするいくつかの属性を受け付けます。
 
-- {{htmlattrdef("formaction")}}
-  - : input 要素から送信された情報を処理するプログラムの URI。要素のフォームオーナーの {{htmlattrxref("action", "form")}} 属性を上書きします。
-- {{htmlattrdef("formenctype")}}
+- `formaction`
+  - : input 要素から送信された情報を処理するプログラムの URI。要素のフォームオーナーの [`action`](/ja/docs/Web/HTML/Element/form#action) 属性を上書きします。
+- `formenctype`
 
   - : サーバーにフォームを送信する際に使用するコンテンツの種類を指定します。指定可能な値は以下のとおりです。
 
     - `application/x-www-form-urlencoded`: 属性が指定されていない場合の既定値。
     - `text/plain`.
 
-    この属性が指定された場合、要素のフォームオーナーの {{htmlattrxref("enctype", "form")}} 属性を上書きします。
+    この属性が指定された場合、要素のフォームオーナーの [`enctype`](/ja/docs/Web/HTML/Element/form#enctype) 属性を上書きします。
 
-- {{htmlattrdef("formmethod")}}
+- `formmethod`
 
   - : ブラウザーがフォームを送信するために使用する HTTP メソッドを指定します。指定可能な値は以下のとおりです。
 
     - `post`: フォームのデータは、フォームの本文に含まれ、サーバーに送信されます。
     - `get`: フォームからのデータは、 '?' を区切り文字として **`form`** 属性の URI に追加され、結果の URI がサーバーに送信されます。このメソッドは、フォームに副作用がなく、 ASCII 文字のみを含む場合に使用してください。
 
-    指定された場合、この属性は要素のフォームオーナーの {{htmlattrxref("method", "form")}} 属性を上書きします。
+    指定された場合、この属性は要素のフォームオーナーの [`method`](/ja/docs/Web/HTML/Element/form#method) 属性を上書きします。
 
-- {{htmlattrdef("formnovalidate")}}
-  - : 論理属性で、フォーム送信時に検証を行わないことを指定します。この属性が指定された場合、要素のフォームオーナーの {{htmlattrxref("novalidate", "form")}} 属性を上書きします。
-- {{htmlattrdef("formtarget")}}
+- `formnovalidate`
+  - : 論理属性で、フォーム送信時に検証を行わないことを指定します。この属性が指定された場合、要素のフォームオーナーの [`novalidate`](/ja/docs/Web/HTML/Element/form#novalidate) 属性を上書きします。
+- `formtarget`
 
-  - : フォームを送信した後に受信したレスポンスを表示する場所を示す名前またはキーワードです。これは、閲覧コンテキスト（例えば、タブ、ウィンドウ、インライン枠）の名前、またはキーワードです。この属性が指定された場合、要素のフォームオーナーの {{htmlattrxref("target", "form")}} 属性を上書きします。次のキーワードは特別な意味を持ちます。
+  - : フォームを送信した後に受信したレスポンスを表示する場所を示す名前またはキーワードです。これは、閲覧コンテキスト（例えば、タブ、ウィンドウ、インライン枠）の名前、またはキーワードです。この属性が指定された場合、要素のフォームオーナーの [`target`](/ja/docs/Web/HTML/Element/form#target) 属性を上書きします。次のキーワードは特別な意味を持ちます。
 
     - \_`self`: 現在のコンテキストと同じ閲覧コンテキストにレスポンスを読み込みます。この属性が指定されていない場合は、この値が既定値となります。
     - `_blank`: 新しい無名の閲覧コンテキストにレスポンスを読み込みます。

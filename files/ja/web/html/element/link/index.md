@@ -63,7 +63,7 @@ slug: Web/HTML/Element/link
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{HTMLAttrDef("as")}}
+- `as`
 
   - : この属性は、 `rel="preload"` または `rel="prefetch"` を `<link>` 要素に設定した場合に限り使用されます。
     これは `<link>` によって読み込まれるコンテンツのタイプを指定する属性であり、リクエストの照合、正しい[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)の適用、正しい {{HTTPHeader("Accept")}} リクエストヘッダーの設定のために必要です。
@@ -142,7 +142,7 @@ slug: Web/HTML/Element/link
       </tbody>
     </table>
 
-- {{HTMLAttrDef("crossorigin")}}
+- `crossorigin`
 
   - : 列挙型の属性で、関連リソースを取得する際に {{Glossary("CORS")}} を使用しなければならないかを示します。
     [CORS が有効な画像](/ja/docs/Web/HTML/CORS_enabled_image)は、<em>汚染</em>されることなく {{HTMLElement("canvas")}} 要素で再利用できます。次の値が使用できます。
@@ -157,13 +157,13 @@ slug: Web/HTML/Element/link
     この属性が存在しない場合、リソースは {{Glossary("CORS")}} リクエストなしで (`Origin` HTTP ヘッダーを送信せずに) 取得され、汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワード **anonymous** が指定されたものとして扱われます。
     それ以上の情報は [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin) を参照してください。
 
-- {{HTMLAttrDef("disabled")}}
+- `disabled`
 
   - : `rel="stylesheet"` の場合のみ、 `disabled` は論理属性であり、指定されたスタイルシートを読み込んで文書に適用するかどうかを示します。 `disabled` が HTML に読み込み時点で指定されていた場合、そのスタイルシートはページ読み込み処理の間に読み込まれません。代わりに、そのスタイルシートは `disabled` 属性が `false` に変更されたか削除された場合にオンデマンドで読み込まれます。
 
     DOM から `disabled` プロパティの値を変更すると、そのスタイルシートを文書の {{domxref("Document.styleSheets")}} の一覧から削除します。
 
-- {{htmlattrdef("fetchpriority")}}
+- `fetchpriority`
 
   - : 先読みされたリソースを取得する際に使用する相対的な優先度のヒントを 提供します。使用できる値は次の通りです。
 
@@ -174,20 +174,20 @@ slug: Web/HTML/Element/link
     - `auto`
       - : 既定値。同じ型の他のリソースに対するフェッチ優先順位を自動的に決定することを示します。
 
-- {{HTMLAttrDef("href")}}
+- `href`
   - : この属性は、リンクしたリソースの {{glossary("URL")}} を指定します。 URL は絶対・相対のどちらでもかまいません。
-- {{HTMLAttrDef("hreflang")}}
+- `hreflang`
   - : この属性は、リンク先のリソースの言語を示します。
     これは単なる助言です。
     許容される値は {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} で定めています。
-    この属性は、 {{HTMLAttrxRef("href", "a")}} 属性が提供されている場合にのみ使用します。
-- {{HTMLAttrDef("imagesizes")}}
+    この属性は、 [`href`](/ja/docs/Web/HTML/Element/a#href) 属性が提供されている場合にのみ使用します。
+- `imagesizes`
   - : `rel="preload"` および `as="image"` において、 `imagesizes` 属性は、 `img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示す [sizes 属性](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute)です。
-- {{HTMLAttrDef("imagesrcset")}}
+- `imagesrcset`
   - : `rel="preload"` および `as="image"` において、 `imagesrcset` 属性は `img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示す [sourceset 属性](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute)です。
-- {{HTMLAttrDef("integrity")}} {{Experimental_Inline}}
+- `integrity` {{Experimental_Inline}}
   - : この属性は、取得したリソースが予期せぬ改ざんを受けずに提供されたかを、ユーザーエージェントが検証するために使用できるメタデータである、ブラウザーに取得させたリソース (ファイル) の暗号学的ハッシュを BASE64 でエンコードしたデータを含みます。[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity) をご覧ください。
-- {{HTMLAttrDef("media")}}
+- `media`
 
   - : この属性は、リンク先のリソースが適用されるメディアを指定します。この値は[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)でなければなりません。この属性は主に外部のスタイルシートから、実行中のデバイスに最適なものをユーザーエージェントが選択できるようにリンクするときに役立ちます。
 
@@ -197,9 +197,9 @@ slug: Web/HTML/Element/link
     >   HTML5 ではこれがあらゆる[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)に拡張され、 HTML 4 で使用できる値の上位互換となっています。
     > - [CSS3 メディアクエリー](/ja/docs/Web/CSS/Media_Queries)に対応していないブラウザーは、リンクを適切に理解するとは限りません。 HTML 4 で定義されたメディアクエリーのセットに制限されるので、フォールバックリンクを設定することを忘れないでください。
 
-- {{HTMLAttrDef("prefetch")}} {{secureContext_inline}} {{experimental_inline}}
+- `prefetch` {{secureContext_inline}} {{experimental_inline}}
   - : この属性は、おそらく次のナビゲーション先で必要でありユーザーエージェントが取得すべきであるリソースを特定します。これは将来リソースがリクエストされたときに、ユーザーエージェントが早く応答することを可能にします。
-- {{HTMLAttrDef("referrerpolicy")}} {{Experimental_Inline}}
+- `referrerpolicy` {{Experimental_Inline}}
 
   - : リソースを読み込む際にどのリファラーを使用するかを示す文字列です。
 
@@ -209,51 +209,51 @@ slug: Web/HTML/Element/link
     - `origin-when-cross-origin` は、異なるオリジンへの移動ではリファラーをスキーム、ホスト、ポートに制限します。同一オリジンへの移動では、リファラーのパスも含めます。
     - `unsafe-url` は、リファラーにオリジンとパスを含めることを表します (ただし、フラグメント、パスワード、ユーザー名は含めません)。これはオリジンやパスの情報が TLS で保護されたリソースからセキュアでないオリジンへ漏えいしますので、安全ではありません。
 
-- {{HTMLAttrDef("rel")}}
+- `rel`
   - : この属性は現在の文書に対する、リンクされた文書の関係を示します。属性値は、空白で区切られた[リンク種別の値](/ja/docs/Web/HTML/Link_types)のリストでなければなりません。
-- {{HTMLAttrDef("sizes")}}
+- `sizes`
 
-  - : この属性は、リソースに含まれる映像メディア向けのアイコンのサイズを定義します。これは、 {{HTMLAttrxRef("rel","link")}} の値が `icon` または Apple の `apple-touch-icon` のような標準外の種別が含まれている場合にのみ指定することができます。以下の値を指定できます。
+  - : この属性は、リソースに含まれる映像メディア向けのアイコンのサイズを定義します。これは、 [`rel`](/ja/docs/Web/HTML/Element/link#rel) の値が `icon` または Apple の `apple-touch-icon` のような標準外の種別が含まれている場合にのみ指定することができます。以下の値を指定できます。
 
     - `any`: `image/svg+xml` のようなベクター画像であるため、どのようなサイズにも調整可能であることを示します。
     - ホワイトスペースで区切られたサイズのリスト。サイズはそれぞれ `<幅のピクセル数>x<高さのピクセル数>` または `<幅のピクセル数>X<高さのピクセル数>` という形式です。それぞれのサイズがリソースに含まれていることが必要です。
 
-    > **メモ:** ほとんどのアイコン形式は 1 個のアイコンのみ保存可能です。よってほとんどの場合、 {{HTMLAttrxRef("sizes")}} 属性はエントリーが 1 個だけになります。
+    > **メモ:** ほとんどのアイコン形式は 1 個のアイコンのみ保存可能です。よってほとんどの場合、 [`sizes`](#sizes) 属性はエントリーが 1 個だけになります。
     > アップルの ICN はもちろん、マイクロソフトの ICO 形式も使用できます。 ICO の方が一般的であり、複数ブラウザーの対応 (特に IE の古いバージョン) が重要である場合はこの形式を使用してください。
 
-- {{HTMLAttrDef("title")}}
+- `title`
   - : `title` 属性は、`<link>` 要素では特別な意味があります。`<link rel="stylesheet">` で使用すると、[優先スタイルシートか代替スタイルシートか](/ja/docs/Web/CSS/Alternative_style_sheets) を定義します。
-- {{HTMLAttrDef("type")}}
+- `type`
   - : この属性は、リンク先コンテンツの種類を定義します。この属性の値は **text/html** や **text/css** などの MIME タイプにします。
     この属性の一般的な使用法は、参照されるスタイルシートのタイプ (**text/css** など) の定義ですが、 CSS はウェブ上の唯一のスタイルシート言語であるため、 `type` 属性を省略できるばかりでなく、それが実際に推奨される習慣になっています。
     また `rel="preload"` リンク種別で、ブラウザーが対応するファイルタイプのみダウンロードさせるためにも使用します。
 
 ### 標準外の属性
 
-- {{HTMLAttrDef("methods")}} {{Non-standard_Inline}}
+- `methods` {{Non-standard_Inline}}
   - : この属性の値は、オブジェクト上で動作する関数についての情報を提供します。
     この値は基本的に HTTP プロトコルが利用されたときに与えられますが、(**title** 属性と同じような理由で) リンク先の情報を前もって含めるときに役立ちます。
     例えば定義されたメソッドの機能によって、異なるリンクの描画をブラウザーが選択します。
     検索可能なリンクで異なるアイコンを取得したり、外部リンクには現在のサイトから去ることを示す描画にしたりできます。
     この属性は、定義された Internet Explorer 4 ですら、あまり理解されておらず対応もされていません。
-- {{HTMLAttrDef("target")}} {{Non-standard_Inline}}
+- `target` {{Non-standard_Inline}}
   - : 定義されたリンク関係を持つ、またはリンクしたリソースを表示するフレームまたはウィンドウの名前を定義します。
 
 ### 廃止された属性
 
-- {{HTMLAttrDef("charset")}} {{deprecated_inline}}
+- `charset` {{deprecated_inline}}
 
   - : この属性は、リンク先のリソースの文字エンコーディングを定義します。この値は {{rfc(2045)}} で定義されている文字セットの、スペースまたはカンマで区切られたリストです。
     既定値は `iso-8859-1` です。
 
     > **メモ:** この廃止された属性と同じ効果を生み出すためには、リンク先のリソースで HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
 
-- {{HTMLAttrDef("rev")}} {{deprecated_inline}}
+- `rev` {{deprecated_inline}}
 
-  - : この属性の値は、{{HTMLAttrxRef("href", "link")}} 属性で定義したリンク先文書に対する、現在の文書の関係を示します。従って、この属性は `rel` 属性の値と比べたときに逆向きの関係を定義します。
-    この属性向けの[リンク種別の値](/ja/docs/Web/HTML/Link_types)は、{{HTMLAttrxRef("rel", "link")}} 向けの値と似ています。
+  - : この属性の値は、[`href`](/ja/docs/Web/HTML/Element/link#href) 属性で定義したリンク先文書に対する、現在の文書の関係を示します。従って、この属性は `rel` 属性の値と比べたときに逆向きの関係を定義します。
+    この属性向けの[リンク種別の値](/ja/docs/Web/HTML/Link_types)は、[`rel`](/ja/docs/Web/HTML/Element/link#rel) 向けの値と似ています。
 
-    > **メモ:** 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Link_types)を与えた {{HTMLAttrxRef("rel", "link")}} 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
+    > **メモ:** 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Link_types)を与えた [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
 
 ## 例
 

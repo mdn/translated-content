@@ -132,7 +132,7 @@ Pour inclure une référence à la source du matériel cité qui est contenu dan
 
 En général, les navigateurs donnent un style au contenu d'un élément `<cite>` en italique par défaut. Pour éviter cela, appliquez la propriété CSS [`font-style`](/fr/docs/Web/CSS/font-style) à l'élément `<cite>`.
 
-## Exemple
+## Exemples
 
 ```html
 <p>
@@ -140,9 +140,9 @@ En général, les navigateurs donnent un style au contenu d'un élément `<cite>
 </p>
 ```
 
-Le HTML ci-dessus produit le résultat suivant :
+### Résultat
 
-{{EmbedLiveSample('Exemple', '', 80)}}
+{{EmbedLiveSample('', '', 80)}}
 
 ## Spécifications
 

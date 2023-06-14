@@ -1,6 +1,6 @@
 ---
 title: mime
-slug: Glossary/mime
+slug: Glossary/MIME
 tags:
   - Débutant
   - Glossaire

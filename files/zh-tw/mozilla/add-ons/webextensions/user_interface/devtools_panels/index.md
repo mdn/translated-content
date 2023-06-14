@@ -40,14 +40,16 @@ function handleHidden() {
   console.log("panel is being hidden");
 }
 
-browser.devtools.panels.create(
-  "My Panel",           // title
-  "icons/star.png",           // icon
-  "devtools/panel/panel.html"          // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(handleShown);
-  newPanel.onHidden.addListener(handleHidden);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "icons/star.png", // icon
+    "devtools/panel/panel.html" // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(handleShown);
+    newPanel.onHidden.addListener(handleHidden);
+  });
 ```
 
 套件現在可以在檢測器視窗透過 [`devtools.inspectedWindow.eval()`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval) 或透過後端腳本傳送訊息來插入內容腳本兩種方式執行。你可以在[擴充開發者工具](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)找到更多相關訊息。

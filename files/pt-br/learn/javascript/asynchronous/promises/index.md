@@ -381,11 +381,3 @@ Muitas APIs da Web modernas são baseadas em promises, incluindo [WebRTC](/pt-BR
 - [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
-
-## Neste módulo
-
-- [Introdução ao JavaScript Async](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
-- **Como usar Promises**
-- [Implementing a promise-based API](/pt-BR/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Introducing workers](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Assessment: sequencing animations](/pt-BR/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

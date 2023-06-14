@@ -190,7 +190,10 @@ moz-todo-svelte
 
 <main>
   <h1>Hello {name}!</h1>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <p>
+    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    how to build Svelte apps.
+  </p>
 </main>
 
 <style>
@@ -235,7 +238,10 @@ Svelte 使用 [`export`](/zh-TW/docs/Web/JavaScript/Reference/Statements/export)
 ```html
 <main>
   <h1>Hello {name}!</h1>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <p>
+    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    how to build Svelte apps.
+  </p>
 </main>
 ```
 
@@ -273,7 +279,7 @@ Svelte 也支援一些標籤，像是 `{#if...}`，`{#each...}` 和 `{#await...}
 
 在 Svelte 中，CSS 在元件 `<style>` 區塊中且被侷限於該元件範圍之內。這是透過對所選的元素加上一個類別來實現，而這個類別則會是基於元件樣式的雜湊值。
 
-你可以觀察到這個現象，藉由在瀏覽器開一個新標籤至 `localhost:8080` 位址，對 *HELLO WORLD!* 標籤右鍵／<kbd>Ctrl</kbd> 點選並選擇*檢查*：
+你可以觀察到這個現象，藉由在瀏覽器開一個新標籤至 `localhost:8080` 位址，對 _HELLO WORLD!_ 標籤右鍵／<kbd>Ctrl</kbd> 點選並選擇*檢查*：
 
 ![Svelte starter app with devtools open, showing classes for scoped styles](02-svelte-component-scoped-styles.png)
 
@@ -305,18 +311,21 @@ Svelte 也支援一些標籤，像是 `{#if...}`，`{#each...}` 和 `{#await...}
   export let name;
 
   function toggleName() {
-    if (name === 'world') {
-      name = 'svelte'
+    if (name === "world") {
+      name = "svelte";
     } else {
-      name = 'world'
+      name = "world";
     }
   }
 </script>
 
 <main>
   <h1>Hello {name}!</h1>
-  <button on:click={toggleName}>Toggle name</button>
-  <p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <button on:click="{toggleName}">Toggle name</button>
+  <p>
+    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn
+    how to build Svelte apps.
+  </p>
 </main>
 ```
 
@@ -331,13 +340,13 @@ Svelte 也支援一些標籤，像是 `{#if...}`，`{#each...}` 和 `{#await...}
 讓我們打開 `src/main.js`，它會告訴你 `App` 元件是從哪裡載入並使用。這個檔案是我們應用程式的進入點，一開始會看起來如下內容：
 
 ```js
-import App from './App.svelte';
+import App from "./App.svelte";
 
 const app = new App({
   target: document.body,
   props: {
-    name: 'world'
-  }
+    name: "world",
+  },
 });
 
 export default app;
@@ -361,21 +370,20 @@ Svelte 編譯器處理每一個元件的 `<style>` 區塊並編譯它們至 `pub
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>Svelte app</title>
+    <title>Svelte app</title>
 
-  <link rel='icon' type='image/png' href='/favicon.png'>
-  <link rel='stylesheet' href='/global.css'>
-  <link rel='stylesheet' href='/build/bundle.css'>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="/build/bundle.css" />
 
-  <script defer src='/build/bundle.js'></script>
-</head>
+    <script defer src="/build/bundle.js"></script>
+  </head>
 
-<body>
-</body>
+  <body></body>
 </html>
 ```
 
@@ -434,9 +442,9 @@ Svelte 的 REPL 功能卻不只如此。它是一個線上工具，允許你建�
 - 更上方的列有你 REPL 的標題。點擊可以編輯它。
 - 右邊有三個標籤：
 
-  - *Result* 標籤內會顯示你應用程式的輸出，底下也有提供控制台。
-  - *JS output* 標籤內會讓你檢查被 Svelte 產生的 JavaScript 程式碼並可以設定編譯器選項。
-  - *CSS output* 標籤內會顯示被 Svelte 產生的 CSS。
+  - _Result_ 標籤內會顯示你應用程式的輸出，底下也有提供控制台。
+  - _JS output_ 標籤內會讓你檢查被 Svelte 產生的 JavaScript 程式碼並可以設定編譯器選項。
+  - _CSS output_ 標籤內會顯示被 Svelte 產生的 CSS。
 
 - 這些標籤的上方，你將會找到一個工具列，讓你可以進入全螢幕模式和下載你的應用程式。假如你有登入 GitHub 帳號，你將能夠複製（fork）和儲存應用程式。透過點擊你 GitHub 的用戶概況並選取那些你已儲存的應用程式，將能夠看到所有你已儲存的 REPLs。
 

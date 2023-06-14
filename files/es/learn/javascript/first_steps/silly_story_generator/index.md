@@ -19,7 +19,7 @@ Para iniciar esta evaluación, debe:
 - Vaya y [tome el archivo HTML](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html) para el ejemplo y guarde una copia local de este como `index.html` en un directorio nuevo en algún lugar de su computadora. Esto también tiene el CSS para estilizar el ejemplo que contiene.
 - Vaya a la [página que contiene el texto sin procesar](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt) y manténgalo abierto en una pestaña separada del navegador en algún lugar. Lo necesitarás más tarde.
 
-> **Nota:** Alternativamente, puede usar un sitio como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/) para hacer su evaluación. Puede pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que está utilizando no tiene un panel de JavaScript separado, no dude en colocarlo en línea en un elemento `<script>` dentro de la página HTML.
+> **Nota:** Alternativamente, puede usar un sitio como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/) para hacer su evaluación. Puede pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que está utilizando no tiene un panel de JavaScript separado, no dude en colocarlo en línea en un elemento `<script>` dentro de la página HTML.
 
 ## Resumen del proyecto
 

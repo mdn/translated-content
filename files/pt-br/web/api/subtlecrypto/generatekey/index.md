@@ -1,6 +1,6 @@
 ---
 title: SubtleCrypto.generateKey()
-slug: Web/API/SubtleCrypto/GenerateKey
+slug: Web/API/SubtleCrypto/generateKey
 ---
 
 {{APIRef("Web Crypto API")}}

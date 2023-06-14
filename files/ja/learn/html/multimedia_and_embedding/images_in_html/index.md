@@ -333,7 +333,7 @@ textarea.onkeyup = function(){
 
 {{htmlelement("figcaption")}} 要素は、キャプションが {{htmlelement("figure")}} 要素の他のコンテンツを説明していることをブラウザーと支援技術に伝えます。
 
-> **メモ:** アクセシビリティの観点から、キャプションと {{htmlattrxref('alt','img')}} テキストには明確な役割があります。キャプションは画像を見ることができる人にも利益をもたらしますが、代替テキストは欠けている画像と同じ機能を提供します。したがって、キャプションと代替テキストは、画像がなくなったときに両方が表示されるため、同じことを言うべきではありません。ブラウザーで画像をオフにして見た目を確認してみてください。
+> **メモ:** アクセシビリティの観点から、キャプションと [`alt`](/ja/docs/Web/HTML/Element/img#alt) テキストには明確な役割があります。キャプションは画像を見ることができる人にも利益をもたらしますが、代替テキストは欠けている画像と同じ機能を提供します。したがって、キャプションと代替テキストは、画像がなくなったときに両方が表示されるため、同じことを言うべきではありません。ブラウザーで画像をオフにして見た目を確認してみてください。
 
 図表は画像である必要はありません。それは次のようにコンテンツの独立した単位です。
 
@@ -499,12 +499,3 @@ p {
 今回は以上です。ここまで画像とキャプションについて詳しく述べてきました。次の記事では、さらにギアを上げて、 HTML を使用してウェブページに[動画や音声コンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)を埋め込む方法について見ていきたいと思います。
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
-
-## このモジュール
-
-- [HTML の画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [\<object> から \<iframe> まで — その他の埋め込み技術](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [ウェブへのベクターグラフィックの追加](/ja/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla のスプラッシュページ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

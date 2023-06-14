@@ -31,12 +31,12 @@ If you want DOM to get parsed as fast as possible after the user had requested t
 
 ## 屬性
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
 ## 規範
 

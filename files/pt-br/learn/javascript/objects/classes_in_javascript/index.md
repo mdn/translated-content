@@ -404,13 +404,3 @@ No próximo artigo, veremos como trabalhar com JavaScript Object Notation (JSON)
 - [Você não sabe JS: this & Object Prototypes](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) — Parte da excelente série de manuais de JavaScript de Kyle Simpson, o Capítulo 5, em particular, analisa os protótipos com muito mais detalhes do que fazemos aqui. Nós apresentamos uma visão simplificada nesta série de artigos destinados a iniciantes, enquanto Kyle entra em grande profundidade e fornece uma imagem mais complexa, mas mais precisa.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/pt-BR/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

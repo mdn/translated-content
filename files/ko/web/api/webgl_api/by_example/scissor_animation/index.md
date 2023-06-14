@@ -7,7 +7,7 @@ slug: Web/API/WebGL_API/By_example/Scissor_animation
 
 활동을 청소하고 잘라내는 어떤 애니메이션 장난
 
-{{EmbedLiveSample("scissor-animation-source",660,425)}}
+{{EmbedLiveSample("애니메이션_잘라내기",660,425)}}
 
 ### 애니메이션 잘라내기
 
@@ -149,6 +149,6 @@ function getRenderingContext() {
 })();
 ```
 
-The source code of this example is also available on [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation).
+이 예시 코드는 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/scissor-animation)에서도 확인 가능합니다.
 
 {{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}

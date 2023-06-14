@@ -33,9 +33,9 @@ Este artículo habla sobre las Uniform Resource Locators (URLs), explicando qué
 
 ## Resumen
 
-Junto con el {{Glossary("Hypertext", "Hipertexto")}} y {{Glossary("HTTP")}}, las **_URL_** son uno de los conceptos claves de la Web. Es el mecanismo usado por los {{Glossary("Browser","navegadores")}} para obtener cualquier recurso publicadon en la web.
+Junto con el {{Glossary("Hypertext", "Hipertexto")}} y {{Glossary("HTTP")}}, las **_URL_** son uno de los conceptos claves de la Web. Es el mecanismo usado por los {{Glossary("Browser","navegadores")}} para obtener cualquier recurso publicado en la web.
 
-**URL** significa _Uniform Resource Locator (Localizador de Recursos Uniforme)_. Una URL no es más que una direccion que es dada a un recurso único en la Web. En teoria, cada URL valida apunta a un único recurso. Dichos recursos pueden ser páginas HTML, documentos CSS, imagenes, etc. En la practica, hay algunas excepciones, siendo la más común una URL apuntando a un recurso que ya no existe o que ha sido movido. Como el recurso representado por la URL y la URL en si son manejadas por el servidor Web, depende del dueño del servidor web manejar ese recurso y su URL asociada adecuadamente.
+**URL** significa _Uniform Resource Locator (Localizador de Recursos Uniforme)_. Una URL no es más que una direccion que es dada a un recurso único en la Web. En teoria, cada URL válida apunta a un único recurso. Dichos recursos pueden ser páginas HTML, documentos CSS, imagenes, etc. En la practica, hay algunas excepciones, siendo la más común una URL apuntando a un recurso que ya no existe o que ha sido movido. Como el recurso representado por la URL y la URL en si son manejadas por el servidor Web, depende del dueño del servidor web manejar ese recurso y su URL asociada adecuadamente.
 
 ## Active Learning
 

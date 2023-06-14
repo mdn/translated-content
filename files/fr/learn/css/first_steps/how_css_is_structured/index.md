@@ -61,8 +61,6 @@ Dans le cas d'une feuille de style externe, les règles CSS sont écrites dans u
 </html>
 ```
 
-e
-
 Le fichier CSS devrait ressembler à cela :
 
 ```css
@@ -549,11 +547,3 @@ Le navigateur ne connaît pas la propriété `padding-` . Les noms de propriét�
 Il est utile de comprendre, au moins dans les grandes lignes, comment votre navigateur calcule le rendu d'une page web à partir des fichiers HTML et CSS. Dans la prochaine leçon — [Comment CSS fonctionne](/fr/docs/Learn/CSS/First_steps/How_CSS_works) — nous examinerons donc ce point.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## Dans ce cours
-
-1. [Qu'est ce que CSS?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-3. Comment CSS est structuré
-4. [CSS comment ça marche ?](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Mettre en œuvre vos connaissances](/fr/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

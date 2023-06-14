@@ -95,4 +95,4 @@ div {
   - {{cssxref("border-left-color")}}.
 
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
-- {{bug("1297097")}}
+- [bug Firefox 1297097](https://bugzil.la/1297097)

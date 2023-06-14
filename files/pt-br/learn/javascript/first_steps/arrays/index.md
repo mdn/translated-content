@@ -675,15 +675,3 @@ A única coisa que resta a fazer é trabalhar na avaliação deste módulo, a qu
 - {{jsxref("Array")}} — a página de referência `Array` — para um guia de referência detalhado para as funcionalidades discutidas nesta página e muito mais.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
-
-## Neste módulo
-
-- [O que é JavaScript?](/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Um primeiro mergulho em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [O que deu errado? Resolvendo problemas no JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Armazenando as informações que você precisa — Variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Variables)
-- [Matemática básica em JavaScript — números e operadores](/pt-BR/docs/Learn/JavaScript/First_steps/Math)
-- [Trabalhando com texto — strings em JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
-- [Métodos úteis em String](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/pt-BR/docs/Learn/JavaScript/First_steps/Arrays)
-- [Avaliação: geração de histórias bobas](/pt-BR/docs/Learn/JavaScript/First_steps/Silly_story_generator)

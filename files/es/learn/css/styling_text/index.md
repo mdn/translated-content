@@ -11,7 +11,7 @@ Con los conceptos básicos del lenguaje CSS cubiertos, el siguiente tema de CSS 
 
 Antes de iniciar este módulo, ya debe estár familizarizado con HTML, como se explica en el módulo [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML), y sentirse cómodo con los fundamentos de CSS, como se explica en [Introducción a CSS](/es/docs/Learn/CSS/Introduction_to_CSS).
 
-> **Nota:** Si está trabajando en una computadora/tableta/u otro dispositivo donde no tenga la capacidad de crear sus propios archivos, puede probar (la mayoría) de los ejemplos de código en un programa de codificación en línea como [JSBin](http://jsbin.com/), [CodePen](https://codepen.io/) o [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Si está trabajando en una computadora/tableta/u otro dispositivo donde no tenga la capacidad de crear sus propios archivos, puede probar (la mayoría) de los ejemplos de código en un programa de codificación en línea como [JSBin](http://jsbin.com/), [CodePen](https://codepen.io/) o [Glitch](https://glitch.com/).
 
 ## Guías
 

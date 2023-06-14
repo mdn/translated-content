@@ -67,7 +67,7 @@ slug: Web/CSS/@layer
 }
 ```
 
-向 `layout` 层内部的 `framework` 层附加规则，只需用 `.` 连接这两层。
+向 `framework` 层内部的 `layout` 层附加规则，只需用 `.` 连接这两层。
 
 ```css
 @layer framework.layout {

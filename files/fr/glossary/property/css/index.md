@@ -1,6 +1,6 @@
 ---
 title: Propriété (CSS)
-slug: Glossary/property/CSS
+slug: Glossary/Property/CSS
 tags:
   - Encodage
   - Glossaire

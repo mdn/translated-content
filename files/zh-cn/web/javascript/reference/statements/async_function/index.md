@@ -211,9 +211,7 @@ setTimeout(parallel, 10000); // truly parallel: after 1 second, logs "fast", the
 
 在 Promise 例子中这种情况同样会发生，该函数必须负责返回一个捕获函数完成的`Promise`。在`concurrentPromise`函数中，这意味着它从`Promise.all([]).then()`返回一个 Promise。事实上，在此示例的先前版本忘记了这样做！
 
-但是，async 函数仍有可能然可能错误地忽略错误。
-以`parallel` async 函数为例。如果它没有等待`await`（或返回）`Promise.all([])`调用的结果，则不会传播任何错误。
-虽然`parallelPromise`函数示例看起来很简单，但它根本不会处理错误！这样做需要一个类似于 `return Promise.all([])`处理方式。
+但是，async 函数仍有可能错误地忽略错误。以 `parallel` async 函数为例。如果它没有等待 `await`（或返回）`Promise.all([])` 调用的结果，则不会传播任何错误。虽然 `parallelPromise` 函数示例看起来很简单，但它根本不会处理错误！这样做需要一个类似于 `return Promise.all([])` 处理方式。
 
 ### 使用 async 函数重写 promise 链
 
@@ -245,11 +243,11 @@ async function getProcessedData(url) {
 }
 ```
 
-注意，在上述示例中，`return` 语句中没有 `await` 操作符，因为 `async function` 的返回值将被隐式地传递给 `{{jsxref("Promise.resolve")}}`。
+注意，在上述示例中，`return` 语句中没有 `await` 运算符，因为 `async function` 的返回值将被隐式地传递给 {{jsxref("Promise.resolve")}}。
 
-返回值`隐式的传递给`{{jsxref("Promise.resolve")}}，并不意味着`return await promiseValue;和 return promiseValue;`在功能上相同。
+返回值隐式地传递给 {{jsxref("Promise.resolve")}}，并不意味着 `return await promiseValue;` 和 `return promiseValue;` 在功能上相同。
 
-看下下面重写的上面代码，在`processDataInWorker`抛出异常时返回了 null：
+看下下面重写的上面代码，在 `processDataInWorker` 抛出异常时返回了 null：
 
 ```js
 async function getProcessedData(url) {

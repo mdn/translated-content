@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 
 ## 示例
 
-### 例子：使用 `ignoreCase`
+### 示例：使用 `ignoreCase`
 
 ```js
 var regex = new RegExp("foo", "i")

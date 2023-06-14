@@ -55,7 +55,7 @@ str.lastIndexOf(searchValue[, fromIndex])
 
 ## 示例
 
-### 例子：使用 `indexOf` 和 `lastIndexOf`
+### 示例：使用 `indexOf` 和 `lastIndexOf`
 
 下例使用 `indexOf` 和 `lastIndexOf` 方法来定位字符串 "`Brave new world`" 中的值。
 

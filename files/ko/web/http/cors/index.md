@@ -259,7 +259,7 @@ CORS 프로토콜은 본래 그 동작(리다이렉트)이 필요했지만, [이
 
 그러나 요청에 `Authorization` 헤더가 있기 때문에 preflight를 트리거하는 요청일 경우에, 위의 단계를 사용하여 제한을 제거할 수 없습니다. 또한 요청이 있는 서버를 제어하지 않으면 문제를 해결할 수 없습니다.
 
-### 인증정보를 포함한 요청
+### 자격 증명을 포함한 요청
 
 {{domxref("XMLHttpRequest")}} 혹은 [Fetch](/ko/docs/Web/API/Fetch_API) 를 사용할 때 CORS 에 의해 드러나는 가장 흥미로운 기능은 "credentialed" requests 입니다. credentialed requests는 [HTTP cookies](/ko/docs/Web/HTTP/Cookies) 와 HTTP Authentication 정보를 인식합니다. 기본적으로 cross-site `XMLHttpRequest` 나 [Fetch](/ko/docs/Web/API/Fetch_API) 호출에서 브라우저는 자격 증명을 보내지 **않습니다.** `XMLHttpRequest` 객체나 {{domxref("Request")}} 생성자가 호출될 때 특정 플래그를 설정해야 합니다.
 
@@ -323,7 +323,7 @@ Content-Type: text/plain
 
 CORS 실행 전 요청에는 자격 증명이 포함되지 않아야 합니다. 실행 전 요청에 대한 *응답*은 `Access-Control-Allow-Credentials: true`를 지정하여 자격 증명으로 실제 요청을 수행할 수 있음을 나타내야 합니다.
 
-> **참고:** #### 참고일부 엔터프라이즈 인증 서비스는 `cors-protocol-and-credentials` 사양을 위반하여 실행 전 요청에서 TLS 클라이언트 인증서를 보내도록 요구합니다.Firefox 87에서는 기본 설정을 지정하여 이 비준수 동작을 활성화할 수 있습니다: `network.cors_preflight.allow_client_cert`을 `true`로 설정 ({{bug(1511151)}}). Chromium 기반 브라우저는 현재 항상 CORS 실행 전 요청에서 TLS 클라이언트 인증서를 보냅니다([Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)).
+> **참고:** #### 참고일부 엔터프라이즈 인증 서비스는 `cors-protocol-and-credentials` 사양을 위반하여 실행 전 요청에서 TLS 클라이언트 인증서를 보내도록 요구합니다.Firefox 87에서는 기본 설정을 지정하여 이 비준수 동작을 활성화할 수 있습니다: `network.cors_preflight.allow_client_cert`을 `true`로 설정 ([Firefox bug 1511151](https://bugzil.la/1511151)). Chromium 기반 브라우저는 현재 항상 CORS 실행 전 요청에서 TLS 클라이언트 인증서를 보냅니다([Chrome bug 775438](https://bugs.chromium.org/p/chromium/issues/detail?id=775438)).
 
 #### 자격증명 요청 및 와일드카드(Credentialed requests and wildcards)
 

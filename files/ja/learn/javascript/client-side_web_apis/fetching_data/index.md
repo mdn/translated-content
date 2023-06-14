@@ -264,13 +264,3 @@ Fetch API がこれより改善されていると思うことを期待します�
 - [サーバーサイドウェブサイトプログラミング](/ja/docs/Learn/Server-side)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## このモジュール
-
-- [Web API の紹介](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [文書の操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- **サーバーからのデータ取得**
-- [サードパーティ API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [グラフィックの描画](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [動画と音声の API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [クライアント側ストレージ](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

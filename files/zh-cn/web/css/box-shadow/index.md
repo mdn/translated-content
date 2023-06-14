@@ -11,7 +11,7 @@ slug: Web/CSS/box-shadow
 
 你几乎可以在任何元素上使用`box-shadow`来添加阴影效果。如果元素同时设置了 {{ cssxref("border-radius") }}属性，那么阴影也会有圆角效果。多个阴影在 z 轴上的顺序和多个 [text shadows](/zh-CN/CSS/text-shadow) 规则相同 (第一个阴影在最上面)。
 
-[Box-shadow generator](/zh-CN/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator) 是一个允许你生成 `box-shadow` 的交互式工具。
+[Box-shadow generator](/zh-CN/docs/Web/CSS/CSS_box_model/Box-shadow_generator) 是一个允许你生成 `box-shadow` 的交互式工具。
 
 ## 语法
 

@@ -1,6 +1,6 @@
 ---
 title: beacon
-slug: Glossary/beacon
+slug: Glossary/Beacon
 translation_of: Glossary/beacon
 original_slug: Glossaire/beacon
 ---

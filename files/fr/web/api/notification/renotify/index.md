@@ -1,6 +1,6 @@
 ---
 title: Notification.renotify
-slug: Web/API/notification/renotify
+slug: Web/API/Notification/renotify
 tags:
   - API
   - API Notifications

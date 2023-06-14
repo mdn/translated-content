@@ -5,7 +5,7 @@ slug: Web/API/WritableStream
 
 {{APIRef("Streams")}}
 
-[Streams API](/zh-CN/docs/Web/API/Streams_API) 的 **`WritableStream`** 接口为将流数据写入目的地（称为 sink）提供了一个标准的抽象。该对象带有内置的背压和队列。
+[Stream API](/zh-CN/docs/Web/API/Streams_API) 的 **`WritableStream`** 接口为将流数据写入目的地（称为接收器）提供了一个标准的抽象。该对象带有内置的背压和队列。
 
 `WritableStream` 是一个[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。
 
@@ -14,12 +14,12 @@ slug: Web/API/WritableStream
 - {{domxref("WritableStream.WritableStream", "WritableStream()")}}
   - : 创造一个新的 `WritableStream` 对象。
 
-## 属性
+## 实例属性
 
 - {{domxref("WritableStream.locked")}} {{readonlyinline}}
   - : 一个布尔值，表示 `WritableStream` 是否锁定到一个 writer。
 
-## 方法
+## 实例方法
 
 - {{domxref("WritableStream.abort()")}}
   - : 中止流，使得生产者不能再成功向流写入数据（会立刻返回一个错误状态），并丢弃所有已入队的数据。
@@ -104,7 +104,7 @@ sendMessage("Hello, world.", writableStream);
 
 - 为创建计数策略（第 35 行）而设置的 `highWaterMark` 属性，其用于设置 `WritableStream` 实例处理单个 `write()` 操作时可接受的最大数据量。在该示例中，它是可以传递给 `defaultWriter.write()` 的最大数据量（第 11 行）。
 - `defaultWriter.ready` 属性返回一个当 sink（`WritableStream` 构造函数的第一个属性）完成写入数据时兑现的 promise。数据源可以写入更多的数据（第 9 行）或者调用 `close()`（第 24 行）。过早调用 close() 会阻止数据写入。这就是示例调用 `defaultWriter.ready` 两次的原因（第 9 行和第 22 行）。
-- sink 的 `write()` 方法（第 40 行）返回的 {{jsxref("Promise")}} 告诉 `WritableStream` 和它的 writer 何时去兑现 `defaultWriter.ready`。
+- 接收器的 `write()` 方法（第 40 行）返回的 {{jsxref("Promise")}} 告诉 `WritableStream` 和它的 writer 何时去兑现 `defaultWriter.ready`。
 
 ## 规范
 

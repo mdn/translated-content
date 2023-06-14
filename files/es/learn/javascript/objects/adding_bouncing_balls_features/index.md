@@ -15,7 +15,7 @@ En esta evaluación, se espera que use la demo de bouncing balls del artículo a
 
 Para iniciar esta evaluación, haz una copia local de [index-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index-finished.html), [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), y [main-finished.js](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) de nuestro último artículo en un nuevo directorio en tu ordenador.
 
-> **Nota:** Alternativamente, puede usar un sitio como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/) para hacer su evaluación. Puede pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que está utilizando no tiene paneles JavaScript / CSS separados, sientase libre de poner en linea elementos `<script>`/`<style>` dentro de la página.
+> **Nota:** Alternativamente, puede usar un sitio como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/) para hacer su evaluación. Puede pegar el HTML, CSS y JavaScript en uno de estos editores en línea. Si el editor en línea que está utilizando no tiene paneles JavaScript / CSS separados, sientase libre de poner en linea elementos `<script>`/`<style>` dentro de la página.
 
 ## Resumen del proyecto
 

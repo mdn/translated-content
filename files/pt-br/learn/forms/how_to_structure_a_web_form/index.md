@@ -298,17 +298,3 @@ You now have all the knowledge you'll need to properly structure your HTML forms
 - [A List Apart: _Sensible Forms: A Form Usability Checklist_](http://www.alistapart.com/articles/sensibleforms/)
 
 {{PreviousMenuNext("Learn/HTML/Forms/Your_first_HTML_form", "Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms")}}
-
-## In this module
-
-- [Your first HTML form](/pt-BR/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/pt-BR/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/pt-BR/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/pt-BR/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/pt-BR/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/pt-BR/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/pt-BR/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/pt-BR/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/pt-BR/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/pt-BR/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/pt-BR/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

@@ -15,7 +15,7 @@ slug: Web/API/Service_Worker_API/Using_Service_Workers
 
 직전의 시도였던 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 는 캐싱할 리소스를 쉽게 지정할 수 있었기 때문에 좋은 생각이였던것 처럼 보였지만, 당신이 지정한 동작에 대한 가정을 앱이 정확하게 따르지 않을 경우 앱이 끔찍하게 망가집니다. 자세히 알고 싶으면 Jake Archibald의 [Application Cache is a Douchebag](http://alistapart.com/article/application-cache-is-a-douchebag) 을 참고하세요.
 
-> **참고:** Firefox 44에서 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 를 사용해서 페이지의 오프라인 지원을 제공할 경우 콘솔에 [서비스 워커](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers) 를 대신 사용하는것에 대한 제안이 경고로 표시됩니다. ({{bug("1204581")}})
+> **참고:** Firefox 44에서 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 를 사용해서 페이지의 오프라인 지원을 제공할 경우 콘솔에 [서비스 워커](/ko/docs/Web/API/Service_Worker_API/Using_Service_Workers) 를 대신 사용하는것에 대한 제안이 경고로 표시됩니다. ([Firefox bug 1204581](https://bugzil.la/1204581))
 
 서비스 워커는 최종적으로 이러한 문제를 해결해야 합니다. 서비스 워커 구문은 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 보다 복잡하지만, 자바스크립트를 사용해서 세밀하게 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 의 암묵적인 동작들을 제어할 수 있으므로 이 문제 그 이상을 처리 할 수 있습니다. 서비스 워커를 사용하면 먼저 캐싱된 리소스를 사용하도록 앱을 설정해서 오프라인일 경우에도 일관적인 경험을 제공한다음 네트워크 연결이 돌아올 때 더 많은 데이터를 불러오게 할 수 있습니다. (보통 [오프라인 우선](http://offlinefirst.org/) 이라고 함) 이 기능은 네이티브 앱에서는 이미 널리 사용되는 구현법이며, 이는 네이티브 앱이 웹 앱 대신 선택되는 주된 이유 중 하나입니다.
 

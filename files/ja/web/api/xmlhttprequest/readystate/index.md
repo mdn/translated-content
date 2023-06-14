@@ -1,6 +1,8 @@
 ---
 title: XMLHttpRequest.readyState
 slug: Web/API/XMLHttpRequest/readyState
+l10n:
+  sourceCommit: abf155210d826c2584d23433eb2eac45a6669d23
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -26,22 +28,20 @@ slug: Web/API/XMLHttpRequest/readyState
 - DONE
   - : 取得操作が完了している。これはデータ転送が成功または失敗で完了したことを意味している。
 
-> **メモ:** Internet Explorer 11 よりも前では、状態の名前が異なります。 `UNSENT`, `OPENED`, `HEADERS_RECEIVED`, `LOADING`, `DONE` の代わりに、`READYSTATE_UNINITIALIZED` (0), `READYSTATE_LOADING` (1), `READYSTATE_LOADED` (2), `READYSTATE_INTERACTIVE` (3) and `READYSTATE_COMPLETE` (4) が使われています。
-
 ## 例
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 console.log('UNSENT', xhr.readyState); // readyState will be 0
 
 xhr.open('GET', '/api', true);
 console.log('OPENED', xhr.readyState); // readyState will be 1
 
-xhr.onprogress = function () {
+xhr.onprogress = () => {
     console.log('LOADING', xhr.readyState); // readyState will be 3
 };
 
-xhr.onload = function () {
+xhr.onload = () => {
     console.log('DONE', xhr.readyState); // readyState will be 4
 };
 

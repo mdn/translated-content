@@ -24,8 +24,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/find
 ### 매개변수
 
 - `callback`
-  - : 배열의 각 값에 대해 실행할 함수. 아래의 세 인자를 받습니다._ `element`
-    _ : 콜백함수에서 처리할 현재 요소.
+  - : 배열의 각 값에 대해 실행할 함수. 아래의 세 인자를 받습니다.
+    - `element`
+      - : 콜백함수에서 처리할 현재 요소.
     - `index`{{optional_inline}}
       - : 콜백함수에서 처리할 현재 요소의 인덱스.
     - `array`{{optional_inline}}

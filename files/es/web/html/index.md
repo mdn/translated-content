@@ -50,11 +50,11 @@ El [Área de aprendizaje de HTML](/es/docs/Learn/HTML) incluye varios módulos q
 ## Temas avanzados
 
 - [Imagen compatible con CORS](/es/docs/Web/HTML/CORS_enabled_image)
-  - : El atributo {{HTMLAttrxRef("crossorigin", "img")}}, en combinación con un encabezado {{Glossary("CORS")}} apropiado, permite imágenes definidas por el elemento {{HTMLElement("img")}} que se cargarán desde orígenes externos y se utilizarán en un elemento {{HTMLElement("canvas")}} como si se estuvieran cargando desde el origen actual.
+  - : El atributo [`crossorigin`](/es/docs/Web/HTML/Element/img#crossorigin), en combinación con un encabezado {{Glossary("CORS")}} apropiado, permite imágenes definidas por el elemento {{HTMLElement("img")}} que se cargarán desde orígenes externos y se utilizarán en un elemento {{HTMLElement("canvas")}} como si se estuvieran cargando desde el origen actual.
 - [Atributos de configuración de CORS](/es/docs/Web/HTML/CORS_settings_attributes)
   - : Algunos elementos HTML que brindan soporte para [CORS](/es/docs/Web/HTTP/CORS), como {{HTMLElement("img")}} o {{HTMLElement("video")}}, tienen un atributo `crossorigin` (propiedad `crossOrigin`), que te permite configurar las solicitudes CORS para los datos extraídos del elemento.
 - [Precarga de contenido con rel='preload'](/es/docs/Web/HTML/Preloading_content)
-  - : El valor de `preload` del atributo {{HTMLElement("link")}} del elemento {{HTMLAttrxRef("rel", "link")}} te permite escribir solicitudes de recuperación declarativas en tu HTML {{HTMLElement("head")}}, que especifican los recursos que tus páginas necesitarán muy pronto después de la carga, que por lo tanto deseas comenzar a precargar al principio del ciclo de vida de la carga de una página, antes de la representación principal del navegador la maquinaria entra en acción. Esto asegura que estén disponibles antes y es menos probable que bloqueen el primer procesamiento de la página, lo que lleva a mejoras de rendimiento. Este artículo proporciona una guía básica sobre cómo funciona `preload`.
+  - : El valor de `preload` del atributo {{HTMLElement("link")}} del elemento [`rel`](/es/docs/Web/HTML/Element/link#rel) te permite escribir solicitudes de recuperación declarativas en tu HTML {{HTMLElement("head")}}, que especifican los recursos que tus páginas necesitarán muy pronto después de la carga, que por lo tanto deseas comenzar a precargar al principio del ciclo de vida de la carga de una página, antes de la representación principal del navegador la maquinaria entra en acción. Esto asegura que estén disponibles antes y es menos probable que bloqueen el primer procesamiento de la página, lo que lleva a mejoras de rendimiento. Este artículo proporciona una guía básica sobre cómo funciona `preload`.
 
 ## Referencias
 
@@ -65,7 +65,7 @@ El [Área de aprendizaje de HTML](/es/docs/Learn/HTML) incluye varios módulos q
 - [Referencia de atributos HTML](/es/docs/Web/HTML/Attributes)
   - : Los elementos en HTML tienen **atributos**. Se trata de valores adicionales que configuran los elementos o ajustan su comportamiento de diversas formas.
 - [Atributos globales](/es/docs/Web/HTML/Global_attributes)
-  - : Los atributos globales se pueden especificar en todos los [elementos HTML](/es/docs/Web/HTML/Element){, _incluso aquellos no especificados en el estándar_. Esto significa que cualquier elemento no estándar debe permitir esos atributos, aunque esos elementos hagan que el documento no sea compatible con HTML5.
+  - : Los atributos globales se pueden especificar en todos los [elementos HTML](/es/docs/Web/HTML/Element), _incluso aquellos no especificados en el estándar_. Esto significa que cualquier elemento no estándar debe permitir esos atributos, aunque esos elementos hagan que el documento no sea compatible con HTML5.
 - [Elementos en línea](/es/docs/Web/HTML/Inline_elements) y [Elementos a nivel de bloque](/es/docs/Web/HTML/Block-level_elements)
   - : Los elementos HTML suelen ser elementos "en línea" o "a nivel de bloque". Un elemento en línea ocupa solo el espacio delimitado por las etiquetas que lo definen. Un elemento a nivel de bloque ocupa todo el espacio de su elemento padre (contenedor), creando así un "bloque".
 - [Tipos de enlaces](/es/docs/Web/HTML/Link_types)
@@ -79,5 +79,5 @@ El [Área de aprendizaje de HTML](/es/docs/Learn/HTML) incluye varios módulos q
 
 ## Temas relacionados
 
-- [Aplicación de color a elementos HTML mediante CSS](/es/docs/Web/HTML/Applying_color)
+- [Aplicando color a elementos HTML mediante CSS](/es/docs/Web/HTML/Applying_color)
   - : Este artículo cubre la mayoría de las formas en que usas CSS para agregar color al contenido HTML, enumerando qué partes de los documentos HTML se pueden colorear y qué propiedades CSS usar al hacerlo. Incluye ejemplos, enlaces a herramientas de creación de paletas de colores y más.

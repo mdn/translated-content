@@ -28,7 +28,7 @@ sab.slice(begin, end)
 
 一个包含被提取出的元素的新 {{jsxref("SharedArrayBuffer")}} 。
 
-## 例子
+## 示例
 
 ```js
 var sab = new SharedArrayBuffer(1024);

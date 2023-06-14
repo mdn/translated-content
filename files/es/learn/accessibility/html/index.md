@@ -251,7 +251,7 @@ Los diseños con tablas son una reliquia del pasado: tenían sentido cuando la c
 
 Si pruebas nuestro ejemplo de estructura más moderna con un lector de pantalla, verás que el marcado de diseño ya no se interpone ni confunde la lectura del contenido. También es mucho más ágil y más pequeño en términos de tamaño de código, lo que significa que el código es más fácil de mantener y menos ancho de banda para que el usuario lo descargue (especialmente para aquellos con conexiones lentas).
 
-Otra consideración al crear diseños es usar elementos semánticos HTML5 como se ve en el ejemplo anterior (ver [secciónado de contenido](/es/docs/Web/HTML/Elemento#Seccionamiento_del_contenido)): puedes crear un diseño usando solo elementos {{htmlelement ("div")}} anidados, pero es mejor usar los elementos de seccionado adecuados para marcar la navegación principal ({{htmlelement ("nav")}}), el pie de página ({{htmlelement ("footer")}}), los bloques de contenido ({{htmlelement ("article")}}), etc. Estos proporcionan semántica adicional para lectores de pantalla (y otras herramientas) para brindar al usuario pistas adicionales sobre el contenido por el que están navegando (consulta [Screen Reader Support for new HTML5 Section Elements](http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/) para hacerte una idea de cómo es el soporte de lectores de pantalla).
+Otra consideración al crear diseños es usar elementos semánticos HTML5 como se ve en el ejemplo anterior (ver [secciónado de contenido](/es/docs/Web/HTML/Elemento#Seccionamiento_del_contenido)): puedes crear un diseño usando solo elementos {{htmlelement ("div")}} anidados, pero es mejor usar los elementos de seccionado adecuados para marcar la navegación principal ({{htmlelement ("nav")}}), el pie de página ({{htmlelement ("footer")}}), los bloques de contenido ({{htmlelement ("article")}}), etc. Estos proporcionan semántica adicional para lectores de pantalla (y otras herramientas) para brindar al usuario pistas adicionales sobre el contenido por el que están navegando (consulta [Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) para hacerte una idea de cómo es el soporte de lectores de pantalla).
 
 > **Nota:** Además de tener una buena semántica y un diseño atractivo, tu contenido debería tener sentido lógico en su orden en el código; siempre puedes colocarlo donde desees usando CSS más adelante, pero deberías tener el orden en el código correcto para empezar, para que lo que se lee a los usuarios de lectores de pantalla tenga sentido.
 
@@ -329,7 +329,7 @@ Volver a agregar estas ventajas requiere un poco de trabajo (puedes ver un ejemp
 <div data-message="Esto es del tercer botón" tabindex="0">¡Y aquí!</div>
 ```
 
-Básicamente, el atributo {{htmlattrxref("tabindex")}} está destinado principalmente a permitir que los elementos tabulables tengan un orden de tabulación personalizado (especificado en orden numérico positivo), en lugar de simplemente tabularlos en su orden de origen predeterminado. Casi siempre es una mala idea, ya que puede causar una gran confusión. Úsalo solo si realmente lo necesitas; por ejemplo, si el diseño muestra las cosas en un orden visual muy diferente al código fuente, y deseas que las cosas funcionen de manera más lógica. Hay otras dos opciones para `tabindex`:
+Básicamente, el atributo [`tabindex`](/es/docs/Web/HTML/Global_attributes#tabindex) está destinado principalmente a permitir que los elementos tabulables tengan un orden de tabulación personalizado (especificado en orden numérico positivo), en lugar de simplemente tabularlos en su orden de origen predeterminado. Casi siempre es una mala idea, ya que puede causar una gran confusión. Úsalo solo si realmente lo necesitas; por ejemplo, si el diseño muestra las cosas en un orden visual muy diferente al código fuente, y deseas que las cosas funcionen de manera más lógica. Hay otras dos opciones para `tabindex`:
 
 - `tabindex = "0"`: como se indicó anteriormente, este valor permite que los elementos que normalmente no se pueden tabular se conviertan en tabulables. Este es el valor más útil de `tabindex`.
 - `tabindex = "- 1"`: esto permite que los elementos que normalmente no se pueden tabular reciban el foco mediante programación, p. ej. a través de JavaScript o como destino de enlaces.
@@ -555,7 +555,7 @@ Las personas con problemas de baja visión, que navegan con la ayuda de tecnolog
 <a target="_blank" href="2017-annual-report.ppt">Informe anual de 2017 (PowerPoint)</a>
 ```
 
-Si se utiliza un icono en lugar de texto para indicar este tipo de comportamiento de enlaces, asegúrate de que incluya una {{HTMLAttrxRef("alt", "img", "descripción alternativa", "true")}}.
+Si se utiliza un icono en lugar de texto para indicar este tipo de comportamiento de enlaces, asegúrate de que incluya una [descripción alternativa](/es/docs/Web/HTML/Element/img#alt).
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
 - [MDN Understanding WCAG, Guideline 3.2 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.2_—_Predictable_Make_Web_pages_appear_and_operate_in_predictable_ways)

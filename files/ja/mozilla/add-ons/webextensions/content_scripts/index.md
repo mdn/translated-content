@@ -53,8 +53,8 @@ l10n:
 
 方法 (3) では、拡張機能と一緒にパッケージされたページのスクリプトも読み込みできますが、"`about:debugging`" や "`about:addons`"のような権限つきページにはスクリプトを読み込めません。
 
-> **メモ:** [ダイナミック JS モジュールインポート](/ja/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)がコンテンツスクリプトで動作するようになりました。詳しくは{{bug(1536094)}}を参照してください。
-> _moz-extension_ スキームを持つ URL のみが許可され、データ URL は除外されます ({{bug(1587336)}})。
+> **メモ:** [ダイナミック JS モジュールインポート](/ja/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)がコンテンツスクリプトで動作するようになりました。詳しくは[Firefox バグ 1536094](https://bugzil.la/1536094)を参照してください。
+> _moz-extension_ スキームを持つ URL のみが許可され、データ URL は除外されます ([Firefox バグ 1587336](https://bugzil.la/1587336))。
 
 ## コンテンツスクリプト環境
 

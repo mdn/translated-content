@@ -71,7 +71,7 @@ slug: Web/HTML/Element/q
 
 この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)を持ちます。
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : この属性の値は、引用した情報の引用元文書やメッセージの URL です。この属性は、引用文の文脈や参照先を説明する情報を指すためのものです。
 
 ## 例

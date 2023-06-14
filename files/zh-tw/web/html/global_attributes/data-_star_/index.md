@@ -24,7 +24,7 @@ slug: Web/HTML/Global_attributes/data-*
   onclick="spaceships[this.dataset.shipId].blasted()" />
 ```
 
-（參見*[這個網站](https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes)*）
+（參見[_這個網站_](https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes)）
 
 ## 規範
 

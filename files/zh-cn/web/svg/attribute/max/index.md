@@ -44,10 +44,6 @@ html, body, svg {
 
 {{Specifications}}
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
 - {{SVGAttr("min")}}

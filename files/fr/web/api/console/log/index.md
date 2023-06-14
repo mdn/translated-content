@@ -1,6 +1,6 @@
 ---
 title: console.log()
-slug: Web/API/Console/log
+slug: Web/API/console/log
 translation_of: Web/API/Console/log
 browser-compat: api.Console.log
 ---

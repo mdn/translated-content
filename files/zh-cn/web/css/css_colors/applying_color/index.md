@@ -1,10 +1,10 @@
 ---
 title: 使用 CSS 为 HTML 元素应用颜色
-slug: Web/CSS/CSS_Colors/Applying_color
+slug: Web/CSS/CSS_colors/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
 
-{{HTMLSidebar}}
+{{CSSRef}}
 
 色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。借助 [CSS](/zh-CN/docs/Web/CSS)，有很多方法可以为 [HTML](/zh-CN/docs/Web/HTML) [元素](/zh-CN/docs/Web/HTML/Element) 添加颜色，以创建所需的外观。本文是一篇入门文章，介绍了 CSS 颜色在 HTML 中的各种使用方法。
 
@@ -35,7 +35,7 @@ Whenever an element is rendered, these properties are used to determine the colo
 - {{cssxref("text-emphasis-color")}}
   - : The color to use when drawing emphasis symbols adjacent to each character in the text. This is used primarily when drawing text for East Asian languages.
 - {{cssxref("caret-color")}}
-  - : The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML {{htmlattrxref("contenteditable")}} attribute is set.
+  - : The color to use when drawing the {{Glossary("caret")}} (sometimes referred to as the text input cursor) within the element. This is only useful in elements that are editable, such as {{HTMLElement("input")}} and {{HTMLElement("textarea")}} or elements whose HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) attribute is set.
 
 ### 盒
 
@@ -272,7 +272,7 @@ Our two colored boxes share a number of properties in common, so next we establi
 }
 ```
 
-In brief, `.box` establishes the size of each box, as well as the configuration of the font used within. We also take advantage of [CSS Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout) to easily center the contents of each box. We enable `flex` mode using {{cssxref("display", "display: flex")}}, and set both {{cssxref("justify-content")}} and {{cssxref("align-items")}} to `center`. Then we can create a class for each of the two boxes that defines the properties that differ between the two.
+In brief, `.box` establishes the size of each box, as well as the configuration of the font used within. We also take advantage of [CSS Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout) to easily center the contents of each box. We enable `flex` mode using {{cssxref("display", "display: flex")}}, and set both {{cssxref("justify-content")}} and {{cssxref("align-items")}} to `center`. Then we can create a class for each of the two boxes that defines the properties that differ between the two.
 
 ```css
 .boxLeft {
@@ -309,7 +309,7 @@ Finally, the `.boxRight` class describes the unique properties of the box that's
 
 ## 让用户选择颜色
 
-There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own [color picker](https://zh.wikipedia.org/wiki/color_picker), HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its {{htmlattrxref("type", "input")}} attribute.
+There are many situations in which your website may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own [color picker](https://zh.wikipedia.org/wiki/color_picker), HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its [`type`](/zh-CN/docs/Web/HTML/Element/input#type) attribute.
 
 The `<input>` element represents a color only in the [hexadecimal string notation](#十六进制颜色码) covered above.
 
@@ -397,7 +397,7 @@ Once you have decided on your base color, there are plenty of online tools that 
 
 A few examples (all free to use as of the time this list was last revised):
 
-- [MDN's color picker tool](/zh-CN/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [MDN's color picker tool](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)
 - [Paletton](http://paletton.com)
 - [Adobe Color CC online color wheel](https://color.adobe.com/create/color-wheel)
 
@@ -474,4 +474,4 @@ You can set `color-adjust` to `exact` to tell the browser that the element or el
 
 - [Drawing graphics](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Graphics on the web](/zh-CN/docs/Web/Guide/Graphics)
-- [MDN's color picker tool](/zh-CN/docs/Web/CSS/CSS_Colors/Color_picker_tool)
+- [MDN's color picker tool](/zh-CN/docs/Web/CSS/CSS_colors/Color_picker_tool)

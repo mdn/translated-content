@@ -329,12 +329,3 @@ In the last article of this module we will explore responsive images in detail, 
 - [How to scale SVGs](https://css-tricks.com/scale-svg/) (it's not as simple as raster graphics!)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
-
-## In this module
-
-- [Images in HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

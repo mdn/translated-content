@@ -81,11 +81,3 @@ Se gostaria de ter seu trabalho avaliado, ou se ficou emperrado e gostaria de aj
 Parabéns por terminar seu primeiro módulo. Agora você deve ter uma boa compreensão geral de CSS, e ser capaz de entender boa parte do que acontece numa folha de estilos. No próximo módulo, [CSS building blocks](/pt-BR/docs/Learn/CSS/Building_blocks), iremos dar uma olhada com mais profundidade em várias áreas chave.
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## Neste módulo
-
-1. [O que é CSS?](/pt-BR/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Começando com CSS](/pt-BR/docs/Learn/CSS/First_steps/Getting_started)
-3. [Como o CSS é estruturado](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [Como o CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Utilizando seu novo conhecimento](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

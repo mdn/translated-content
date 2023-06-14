@@ -1,6 +1,6 @@
 ---
 title: rtl
-slug: Glossary/rtl
+slug: Glossary/RTL
 translation_of: Glossary/rtl
 original_slug: Glossaire/rtl
 ---

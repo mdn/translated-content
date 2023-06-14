@@ -9,7 +9,7 @@ JavaScript 提供一套灵活的语句集，特别是控制流语句，你可以
 
 这一章中的语句，在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference/Statements) 中包含更为详尽的细节。在 JavaScript 代码中，分号（;）字符被用来分割语句。
 
-在 JavaScript 中，任何表达式 (expression) 都可以看作一条语句 (statement),如果你想了解表达式的详细信息，可以阅读[表达式与运算符（Expressions and operators）](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators)这一章节。
+在 JavaScript 中，任何表达式 (expression) 都可以看作一条语句 (statement),如果你想了解表达式的详细信息，可以阅读[表达式与运算符（Expressions and operators）](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators)这一章节。
 
 ## 语句块
 
@@ -27,7 +27,7 @@ JavaScript 提供一套灵活的语句集，特别是控制流语句，你可以
 }
 ```
 
-### **示例**
+### 示例
 
 语句块通常用于流程控制，如`if`，`for`，`while`等等。
 
@@ -136,7 +136,7 @@ if (b) //结果视为真
 if (b == true) // 结果视为假
 ```
 
-#### **示例**
+#### 示例
 
 在以下示例中，如果`Text`对象中的字符数为 3，函数`checkData`将返回`true`；否则，显示警报并返回`false`。
 

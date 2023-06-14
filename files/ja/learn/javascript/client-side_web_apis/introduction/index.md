@@ -280,13 +280,3 @@ WebAPI 機能は、 JavaScript や他のウェブ技術（例えば [同一オ�
 この時点で、 API が何であるか、それがどのように動作するか、そして JavaScript コードで API を使って何ができるかについて、よく分かったはずです。おそらく、実際に特定の API を使って楽しいことを始めることに期待していることでしょうから、さっそく始めましょう。次は、 Document Object Model (DOM) を使った文書内の操作について見ていきます。
 
 {{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## このモジュール内
-
-- [Web API の紹介](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [文書の操作](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [サーバーからのデータ取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [サードパーティの API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [グラフィックの描画](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [動画と音声の API](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [クライアント側ストレージ](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

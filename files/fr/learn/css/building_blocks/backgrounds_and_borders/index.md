@@ -311,24 +311,3 @@ Nous avons vu beaucoup de choses dans cette leçon, ajouter un arrière-plan à 
 Dans la leçon suivante nous découvrirons comment le mode d'écriture de votre document interagit avec CSS. Que se passe-t-il quand le texte ne se déroule pas de la gauche vers la droite ?
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
-
-## Dans ce cours
-
-1. [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Sélecteurs de classe, de type et d'identifiant](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4. Arrières-plans et bordures
-5. [Gérer la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Dimensionnement des objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, médias, et formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Mettre en forme les tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Déboguer CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organiser son code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

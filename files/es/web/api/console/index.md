@@ -61,11 +61,11 @@ Esta página documenta los [Métodos](#métodos) disponibles en el objeto `conso
 - {{domxref("console.timeLog()")}}
   - : Muestra el valor del [temporizador](#temporizadores) especificado en la consola.
 - {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : Agrega un marcador a las herramientas del navegador [Timeline](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) o [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html).
+  - : Agrega un marcador a las herramientas del navegador [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) o [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline).
 - {{domxref("console.trace()")}}
   - : Muestra una [traza de pila](#trazas_de_pila).
 - {{domxref("console.warn()")}}
-  - : Muestra un mensaje de advertencia.Puedes usar [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y argumentos adicionales con este método.
+  - : Muestra un mensaje de advertencia. Puedes usar [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y argumentos adicionales con este método.
 
 ## Ejemplos
 

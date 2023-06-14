@@ -147,4 +147,4 @@ function toggleFullScreen() {
 - {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }}, {{cssxref("::backdrop")}}
-- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)

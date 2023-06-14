@@ -25,9 +25,9 @@ const request = new XMLHttpRequest();
 
 ## 非标准 Firefox 语法
 
-Firefox 16 added a non-standard parameter to the constructor that can enable anonymous mode (see {{Bug("692677")}}). Setting the `mozAnon` flag to `true` effectively resembles the [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) constructor described in older versions of the XMLHttpRequest specification.
+Firefox 16 added a non-standard parameter to the constructor that can enable anonymous mode (see [Firefox bug 692677](https://bugzil.la/692677)). Setting the `mozAnon` flag to `true` effectively resembles the [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) constructor described in older versions of the XMLHttpRequest specification.
 
-Gecko/Firefox 16 为该构造方法新增了一个非标准的参数，以启用匿名模式（参见 {{Bug("692677")}}）。将 `mozAnon` 属性设置为 `true`，即可有效地模拟 [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) 构造器。此构造器在早先的 XMLHttpRequest 规范中有描述，但并未在任何浏览器中被实现。
+Gecko/Firefox 16 为该构造方法新增了一个非标准的参数，以启用匿名模式（参见 [Firefox bug 692677](https://bugzil.la/692677)）。将 `mozAnon` 属性设置为 `true`，即可有效地模拟 [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) 构造器。此构造器在早先的 XMLHttpRequest 规范中有描述，但并未在任何浏览器中被实现。
 
 ```plain
 const request = new XMLHttpRequest(paramsDictionary);

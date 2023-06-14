@@ -6,7 +6,7 @@ slug: Glossary/TLS
 
 모든 모던 브라우저들을 TLS를 지원하고, 안전한 연결을 하기위해서 서버가 유효한 {{Glossary("Digital certificate", "digital certificate")}} 를 제공하기를 요구한다. 클라이언트와 서버 둘 다 각자 digital certificate을 제공하면, 서로를 인증해줄 수 있다.
 
-> **참고:** TLS 1.0 와 1.1 2020년 초부터 대부분의 브라우저에서 지원하지 않을 예정이다; 웹 브라우저가 TLS 1.2 나 TLS 1.3을 지원하는지 확인해보는 것이 좋을 것이다. Firefox는 버전 74 이후로 구 TLS 버전을 사용해서 서버에 연결을 시도할 경우 [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) 에러를 반환한다. ({{bug(1606734)}}).
+> **참고:** TLS 1.0 와 1.1 2020년 초부터 대부분의 브라우저에서 지원하지 않을 예정이다; 웹 브라우저가 TLS 1.2 나 TLS 1.3을 지원하는지 확인해보는 것이 좋을 것이다. Firefox는 버전 74 이후로 구 TLS 버전을 사용해서 서버에 연결을 시도할 경우 [Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) 에러를 반환한다. ([Firefox bug 1606734](https://bugzil.la/1606734)).
 
 ## 같이 보기
 

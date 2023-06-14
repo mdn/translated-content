@@ -3,7 +3,7 @@ title: API イベントサブページのテンプレート
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
 original_slug: MDN/Structures/Page_types/API_event_subpage_template
 l10n:
-  sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}
@@ -19,16 +19,13 @@ l10n:
 >
 > ```md
 > ---
-> title: 'インターフェイス名: <イベント名> イベント'
+> title: "インターフェイス名: <イベント名> イベント"
 > slug: Web/API/インターフェイス名/イベント名_event
 > page-type: web-api-event
-> tags:
->   - イベント名
->   - API
->   - Event
->   - Reference
->   - Experimental
->   - Non-standard
+> status:
+>   - experimental
+>   - deprecated
+>   - non-standard
 > browser-compat: path.to.feature.NameOfTheEvent_event
 > ---
 > ```
@@ -42,15 +39,11 @@ l10n:
 >     これは `Web/API/インターフェイス名/イベント名_event` のような形式になります。
 > - **page-type**
 >   - : `page-type` キーは、 Web/API イベントでは常に `web-api-event` です。
-> - **tags**
->   - : 常に **API**, **Reference**, **Event**, _イベント名_, _インターフェイス名_ （**Window** など）のタグを含めてください。
->
->     必要に応じて以下のタグを入れてください。
->     - 技術状態: **Experimental** （この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)である場合）、 **Deprecated** （[非推奨](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨と廃止)である場合）、 **Non-standard** （標準化過程にない場合）
->     - 特別な要件: **Secure context** （安全なコンテキストでのみ利用可能な場合）
->     - その他、技術に関連して検索されそうな言葉を表すタグ。
->       例えば、 WebVR インターフェイスのページでは、 **VR** と **Virtual reality** を入れています。
+> - **status**
+>   - : （適切な）技術の状態のキーを入れてください。
+[**experimental**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental)、[**deprecated**](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated_and_obsolete)、**non-standard** （標準化過程にない場合）
 > - **browser-compat**
+>
 >   - : プレースホルダーの値 `path.to.feature.NameOfTheEvent_event` を [ブラウザー互換性データリポジトリー](https://github.com/mdn/browser-compat-data) にあるイベントのクエリー文字列に置き換えてください。
 >     ツールチェインが自動的に互換性セクションと仕様書セクションのためにキーを使用します（`\{{Compat}}` と `\{Specifications}}` マクロを置き換えます）。
 >
@@ -83,7 +76,7 @@ l10n:
 > **親オブジェクトのリンク**
 >
 > 親オブジェクトの「イベント」セクションから、この新しいページへのリンクを追加してください。
-> 例えば [Element: wheel イベント](/ja/docs/Web/API/Element/wheel_event)は [`Element` > Events](/ja/docs/Web/API/Element#イベント) からリンクされます。
+> 例えば [Element: wheel イベント](/ja/docs/Web/API/Element/wheel_event)は [`Element` Events](/ja/docs/Web/API/Element#イベント) からリンクされます。
 >
 > 親オブジェクトに「イベント」セクションがない場合は、追加してください。
 > これが新しい「クラス」のイベントであれば、[イベントリファレンス](/ja/docs/Web/Events)から親のこの節へのリンクを追加する必要があります。
@@ -101,9 +94,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('NameOfTheEvent', (event) => {});
+addEventListener("NameOfTheEvent", (event) => {});
 
-onNameOfTheEvent = (event) => { };
+onNameOfTheEvent = (event) => {};
 ```
 
 ## イベント型
@@ -142,6 +135,8 @@ _以下の一覧のプロパティに加え、親インターフェースであ�
 
 ## 例
 
+ページ内に例が 1 つしかない場合でも、複数形の "Examples" を使用することに留意してください。
+
 ### 説明的な見出し
 
 それぞれの例には、その例を説明する H3 見出し (`###`) がなければなりません。見出しは例が何を行っているかを説明するものであるべきです。例えば、「単純な例」というのは例について何も説明していないので、良い見出しとは言えません。見出しは簡潔であるべきです。より詳しい説明をする場合は、見出しの後の段落を使用してください。
@@ -154,25 +149,27 @@ _以下の一覧のプロパティに加え、親インターフェースであ�
 >
 > このページのそれぞれの例に H3 見出し (`###`) を記載し、最後に H3 見出し (`###`) に「その他の例」というテキストを入れ、その下に他のページの例へのリンクを貼ることができます。例えば次のようにします。
 >
->  ```md
->  ## 例
+> ```md
+> ## 例
 >
->  ### Fetch API の使用
->  Fetch の例
+> ### Fetch API の使用
 >
->  ### その他の例
->  他のページにある他の例へのリンク
->  ```
+> Fetch の例
+>
+> ### その他の例
+>
+> 他のページにある他の例へのリンク
+> ```
 >
 > **シナリオ 2:** このページには何も例がなく、他のページに*だけ*ある場合。
 >
 > H3 の見出しは追加せず、 H2 の見出し「例」の下に直接リンクを追加してください。例えば次のようにします。
 >
->  ```md
->   ## 例
+> ```md
+> ## 例
 >
->   この API の例については、[Fetch() ページ](https://example.org)を参照してください。
->
+> この API の例については、[fetch() のページ](https://example.org)を参照してください。
+> ```
 
 ## 仕様書
 

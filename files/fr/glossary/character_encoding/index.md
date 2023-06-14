@@ -1,6 +1,6 @@
 ---
 title: Codage des caractères
-slug: Glossary/character_encoding
+slug: Glossary/Character_encoding
 tags:
   - Composition
   - Glossaire

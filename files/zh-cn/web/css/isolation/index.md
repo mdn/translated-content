@@ -3,7 +3,7 @@ title: isolation
 slug: Web/CSS/isolation
 ---
 
-{{CSSRef()}}
+{{CSSRef}}
 
 ## 概述
 

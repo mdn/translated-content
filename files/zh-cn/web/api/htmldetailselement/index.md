@@ -14,7 +14,7 @@ slug: Web/API/HTMLDetailsElement
 _从其父级 {{domxref("HTMLElement")}} 继承属性._
 
 - {{domxref("HTMLDetailsElement.open")}}
-  - : 是一个 {{domxref("boolean")}} 反射 {{htmlattrxref("open", "details")}} HTML 属性，指示是否向用户显示元素的内容 (不包括 {{HTMLElement("summary")}})
+  - : 是一个 {{domxref("boolean")}} 反射 [`open`](/zh-CN/docs/Web/HTML/Element/details#open) HTML 属性，指示是否向用户显示元素的内容 (不包括 {{HTMLElement("summary")}})
 
 ## 方法
 

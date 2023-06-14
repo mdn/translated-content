@@ -1,5 +1,5 @@
 ---
-title: WAI-ARIA basics
+title: WAI-ARIA 基础
 slug: Learn/Accessibility/WAI-ARIA_basics
 ---
 
@@ -112,7 +112,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 ### 路牌/地标（**Signposts/Landmarks**）
 
-WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) 属性，这允许我们给站点中的元素增加我们想要的语义属性。第一个主要区域便是用于为屏幕阅读器提供信息，以便用户可以找到常见的页面元素。我们来举个例子，一个[没有角色的站点](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-no-roles)的例子（[在线 demo](http://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)）的页面结构：
+WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) 属性，这允许我们给站点中的元素增加我们想要的语义属性。第一个主要区域便是用于为屏幕阅读器提供信息，以便用户可以找到常见的页面元素。我们来举个例子，一个[没有角色的站点](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-no-roles)的例子（[在线演示](http://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)）的页面结构：
 
 ```html
 <header>
@@ -226,9 +226,9 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 这会让你的屏幕阅读器在更新时可以读取内容。
 
-> **备注：** 当你用`file://`协议头来发 `XMLHttpRequest` 大部分浏览器会抛出 security exception。所以你可能要设置一个 web 服务器来作为请求源，例如 用 Github: [using GitHub](/zh-CN/docs/Learn/Common_questions/Using_Github_pages)，或者设置一个本地服务器 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
+> **备注：** 当你用 `file://` 协议头来发 `XMLHttpRequest` 大部分浏览器会抛出 security exception。所以你可能要设置一个 web 服务器来作为请求源，例如，[使用 GitHub](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)，或者设置一个本地服务器 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
 
-这里有一个附加的考虑—— 只读取更新的文本位。如果我们总是读出标题可能会很好，这样用户就可以记住正在读出的内容。为了能做到这个，我们增加了 [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) 给 section。再次更新 `<section>` ，像这样：
+这里有一个附加的考虑—— 只读取更新的文本位。如果我们总是读出标题可能会很好，这样用户就可以记住正在读出的内容。为了能做到这个，我们增加了 [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) 给 section。再次更新 `<section>`，像这样：
 
 ```html
 <section aria-live="assertive" aria-atomic="true">
@@ -240,7 +240,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 > **备注：** [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 属性对于控制更新实时区域时读取的内容也非常有用。例如，你读取内容添加或删除。
 
-### **优化键盘的无障碍操作**
+### 优化键盘的无障碍操作
 
 正如上下文中其他几处讨论的，HTML 在无障碍方面的关键优势之一是按钮，表单控件和链接等功能的内置键盘无障碍。平时你可以使用 Tab 键在控件之间移动，使用 Enter / Return 键选择或激活控件，偶尔也可以根据需要使用其他控件（例如上下光标在`<select>` 框中的选项之间移动）。
 

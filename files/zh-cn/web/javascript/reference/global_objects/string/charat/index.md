@@ -26,7 +26,7 @@ str.charAt(index)
 
 ## 示例
 
-### 例子：输出字符串中不同位置的字符
+### 示例：输出字符串中不同位置的字符
 
 下例输出字符串 "`Brave new world`" 不同位置处的字符：
 
@@ -52,7 +52,7 @@ The character at index 4 is 'e'
 The character at index 999 is ''
 ```
 
-### 例子：获取所有字符
+### 示例：获取所有字符
 
 以下提供了一种确保通过字符串循环总是提供整个字符的方法，即使该字符串包含不在[基本多文种平面](https://zh.wikipedia.org/wiki/Unicode%E5%AD%97%E7%AC%A6%E5%B9%B3%E9%9D%A2%E6%98%A0%E5%B0%84#.E5.9F.BA.E6.9C.AC.E5.A4.9A.E6.96.87.E7.A7.8D.E5.B9.B3.E9.9D.A2)（BMP）中的字符。
 

@@ -1,6 +1,8 @@
 ---
 title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
+l10n:
+  sourceCommit: abf155210d826c2584d23433eb2eac45a6669d23
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -11,21 +13,19 @@ slug: Web/API/XMLHttpRequest/timeout
 
 [非同期リクエストでのタイムアウトの使用](/ja/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#example_using_a_timeout)
 
-Internet Explorer においては、 timeout プロパティは [open()](/ja/docs/Web/API/XMLHttpRequest/open) メソッドを呼び出してから [send()](/ja/docs/Web/API/XMLHttpRequest/send) メソッドを呼び出すまでの間しか設定することはできません。
-
 ## 例
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 xhr.timeout = 2000; // ミリ秒単位の時間
 
-xhr.onload = function () {
+xhr.onload = () => {
   // リクエスト完了。ここで処理を行います。
 };
 
-xhr.ontimeout = function (e) {
+xhr.ontimeout = (e) => {
   // XMLHttpRequest がタイムアウト。ここで何かを行います。
 };
 

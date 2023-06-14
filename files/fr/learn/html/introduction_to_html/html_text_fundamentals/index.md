@@ -736,7 +736,7 @@ function insertAtCaret(text) {
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_mettre_des_balises_pour_une_recette_de_cuisine', 700, 500) }}
+{{ EmbedLiveSample('', 700, 1000) }}
 
 Si vous êtes bloqué, vous pouvez cliquer sur le bouton _Voir la solution_, ou alors regarder l'exemple [text-complete.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/html-text-formatting/text-complete.html) sur le dépôt GitHub.
 
@@ -944,7 +944,7 @@ textarea.onkeyup = function(){
 };
 ```
 
-{{ EmbedLiveSample("Apprentissage_actif_soulignez_l'important", 700, 500) }}
+{{ EmbedLiveSample("", 700, 700)}}
 
 ### Italique, gras, soulignement…
 
@@ -995,15 +995,3 @@ Voici la meilleure règle d'or : il est probablement approprié d'utiliser `<b>`
 C'est tout pour l'instant ! Cet article doit vous avoir donné une bonne idée de la façon de commencer à baliser le texte en HTML et présenté les éléments les plus importants dans ce domaine. Il existe énormément d'autres éléments sémantiques à connaître dans ce domaine&nbsp;; nous en verrons beaucoup plus dans notre article «&nbsp;More Semantic Elements&nbsp;», plus loin dans ce cours. Dans le prochain article, nous examinerons en détail comment [créer des hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), qui est peut-être l'élément le plus important sur le Web.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
-
-## Dans ce module
-
-- [Commencer avec le HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- Fondamentaux du texte HTML
-- [Creation d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formatage avancé du texte](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Structure de Site Web et de document](/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Déboguer de l'HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Faire une Lettre](/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structurer une page de contenu](/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

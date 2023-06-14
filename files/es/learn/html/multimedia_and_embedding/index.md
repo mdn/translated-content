@@ -9,7 +9,7 @@ Hemos visto mucho texto hasta ahora en este curso, pero la web sería realmente 
 
 Antes de empezar con este módulo, deberías tener un buen conocimiento de las bases de HTML, enseñadas en [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML). Si no has estado trabajando en este módulo (o alguno similar), ¡hazlo y luego vuelve!
 
-> **Nota:** Si estas trabajando en un ordenador/tablet/u otro dispositivo donde no puedas crear tus propios archivos, puedes probar (la mayoría de ellos) los ejemplos de código en programas online de codificado como [JSBin](http://jsbin.com/) o [Glitch](https://thimble.mozilla.org/).
+> **Nota:** Si estas trabajando en un ordenador/tablet/u otro dispositivo donde no puedas crear tus propios archivos, puedes probar (la mayoría de ellos) los ejemplos de código en programas online de codificado como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 

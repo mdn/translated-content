@@ -63,7 +63,7 @@ Cela crée un lecteur vidéo à l'intérieur du navigateur :
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-Vous pouvez consulter toutes fonctionnalités HTML audio et vidéo dans l'article mentionné précédemment. Pour notre utilisation ici, l'attribut le plus intéressant est {{htmlattrxref("controls", "video")}}. Il permet d'activer l'ensemble des contrôles de lecture par défaut; si vous ne le spécifiez pas, vous aucun contrôle ne sera affiché :
+Vous pouvez consulter toutes fonctionnalités HTML audio et vidéo dans l'article mentionné précédemment. Pour notre utilisation ici, l'attribut le plus intéressant est [`controls`](/fr/docs/Web/HTML/Element/video#controls). Il permet d'activer l'ensemble des contrôles de lecture par défaut; si vous ne le spécifiez pas, vous aucun contrôle ne sera affiché :
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 
@@ -485,13 +485,3 @@ Voici quelques suggestions de modifications à apporter à l'exemple que nous av
 - [Formats pris en charge par les éléments HTML audio et vidéo](/fr/docs/Web/HTML/Formats_pour_audio_video).
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## Dans ce module
-
-- [Introduction aux API du Web](/fr/Apprendre/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipuler des documents](/fr/Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Récupérer des données du serveur](/fr/Apprendre/JavaScript/Client-side_web_APIs/Fetching_data)
-- [APIs tierces](/fr/Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Dessiner des éléments graphiques](/fr/Apprendre/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [APIs vidéo et audio](/fr/Apprendre/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Stockage côté client](/fr/Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage)

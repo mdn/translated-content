@@ -117,7 +117,7 @@ Para incrustar un SVG a través de un elemento {{htmlelement ("img")}}, solo nec
 
 ### Solución de problemas y compatibilidad con varios navegadores
 
-Para los navegadores que no admiten SVG (IE 8 y versiones anteriores, Android 2.3 y versiones anteriores), puede hacer referencia a un PNG o JPG de su atributo src y usar un atributo {{htmlattrxref ("srcset", "img")}} ( que solo los navegadores recientes reconocen) para hacer referencia al SVG. Siendo este el caso, solo los navegadores compatibles cargarán el SVG; los navegadores más antiguos cargarán el PNG en su lugar:
+Para los navegadores que no admiten SVG (IE 8 y versiones anteriores, Android 2.3 y versiones anteriores), puede hacer referencia a un PNG o JPG de su atributo src y usar un atributo [`srcset`](/es/docs/Web/HTML/Element/img#srcset) ( que solo los navegadores recientes reconocen) para hacer referencia al SVG. Siendo este el caso, solo los navegadores compatibles cargarán el SVG; los navegadores más antiguos cargarán el PNG en su lugar:
 
 ```html
 <img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg">

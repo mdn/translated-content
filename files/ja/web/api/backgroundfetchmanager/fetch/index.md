@@ -2,12 +2,12 @@
 title: BackgroundFetchManager.fetch()
 slug: Web/API/BackgroundFetchManager/fetch
 l10n:
-  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
+  sourceCommit: 49c552151144b2e61fc34a12586d4d0c40abfbe6
 ---
 
 {{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
-{{domxref("BackgroundFetchManager")}} インターフェイスの **`fetch()`** メソッドは、引数に与えられた配列( URL や {{domxref("Request")}} オブジェクトで構成される) に対して、{{domxref("BackgroundFetchRegistration")}} オブジェクトで解決される {{jsxref("Promise")}} を返します。
+**`fetch()`** は {{domxref("BackgroundFetchManager")}} インターフェイスのメソッドで、指定された 1 つ以上の URL または {{domxref("Request")}} オブジェクトを取り、バックグラウンドのフェッチ操作を開始します。
 
 ## 構文
 
@@ -19,11 +19,34 @@ fetch(id, requests, options)
 ### 引数
 
 - `id`
-  - : {{domxref("backgroundFetchRegistration")}} を取得するために他のメソッドに渡すことができる、開発者定義の識別子。
+  - : この操作の {{domxref("BackgroundFetchRegistration")}} を取得するために、他のメソッドに渡すことができる、開発者定義の識別子です。
 - `requests`
-  - : {{domxref("RequestInfo")}} オブジェクトか、その配列。
+
+  - : `RequestInfo` オブジェクトまたは `RequestInfo` お武衛ジェクトの配列です。
+
+    それぞれの `RequestInfo` オブジェクトは {{domxref("Request")}} オブジェクト、または {{domxref("Request.Request()", "Request()")}} コンストラクターの `input` 引数として与えられる文字列です。
+
 - `options` {{optional_inline}}
-  - : {{domxref("BackgroundFetchOptions")}} オブジェクト。
+
+  - : ブラウザーの表示するフェッチ進捗ダイアログをカスタマイズするために使用されるオブジェクトです。以下のプロパティがあります。
+
+    - `title`
+      - : 文字列で、進捗ダイアログのタイトルとして使われます。
+    - `icons`
+      - : ブラウザーの進捗ダイアログに使用するアイコンを表すオブジェクトの配列です。各オブジェクトには、以下のプロパティがあります。
+        - `src`
+          - : アイコンファイルの URL を表す文字列。
+        - `sizes`
+          - : 画像の大きさを表す文字列で、 [`<link>`](/ja/docs/Web/HTML/Element/link) 要素の [`sizes`](/ja/docs/Web/HTML/Element/link#sizes) 属性と同じ構文を使用して表します。 {{optional_inline}}
+        - `type`
+          - : アイコンの {{Glossary("MIME")}} タイプを表す文字列です。 {{optional_inline}}
+        - `label`
+          - : アイコンのアクセシブル名を表す文字列です。 {{optional_inline}}
+    - `downloadTotal`
+
+      - : フェッチ操作の推定総ダウンロードサイズを表す数値（バイト単位）。これは、ダウンロードの大きさをユーザーに示すため、また、ユーザーのダウンロードの進捗状況を示すために使用されます。
+
+        ダウンロードサイズの合計が `downloadTotal` を超えると、すぐに取得が中止されます。
 
 ### 返値
 
@@ -40,7 +63,7 @@ fetch(id, requests, options)
 
 ## 例
 
-下記の例は `fetch()` を使用して {{domxref("BackgroundFetchRegistration")}} を作成する方法を示しています。 アクティブな {{domxref('ServiceWorker', 'service worker')}} で、 {{domxref('ServiceWorkerRegistration.backgroundFetch')}} プロパティを使用して `BackgroundFetchManager` オブジェクトにアクセスし、その `fetch()` メソッドを呼び出しています。
+下記の例は `fetch()` を使用してバックグラウンドフェッチ操作を行う方法を方法を示しています。アクティブな {{domxref('ServiceWorker', 'サービスワーカー', "", "nocode")}} で、 {{domxref('ServiceWorkerRegistration.backgroundFetch')}} プロパティを使用して `BackgroundFetchManager` オブジェクトにアクセスし、その `fetch()` メソッドを呼び出しています。
 
 ```js
 navigator.serviceWorker.ready.then(async (swReg) => {
@@ -54,6 +77,7 @@ navigator.serviceWorker.ready.then(async (swReg) => {
           sizes: "300x300",
           src: "/ep-5-icon.png",
           type: "image/png",
+          label: "Downloading a show",
         },
       ],
       downloadTotal: 60 * 1024 * 1024,

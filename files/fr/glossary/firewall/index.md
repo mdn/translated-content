@@ -1,6 +1,6 @@
 ---
 title: pare-feu
-slug: Glossary/firewall
+slug: Glossary/Firewall
 tags:
   - DDoS
   - Glossaire

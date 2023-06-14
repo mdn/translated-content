@@ -180,13 +180,3 @@ Pour implémenter le compteur de score, suivez les étapes suivantes:
 Si vous effectuez cette évalutation dans le cadre d'un cours, vous devriez pouvoir fournir votre travail à votre professeur/mentor pour correction. Si vous apprenez par vous même, vous pouvez obtenir la correction sur [discussion thread for this exercise](https://discourse.mozilla.org/t/adding-features-to-our-bouncing-balls-demo-assessment/24689), ou sur [#mdn](irc://irc.mozilla.org/mdn) IRC channel sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Tout d'abord effectuez cet exercice — vous n'obtiendrez jamais rien en trichant !
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
-
-## Dans ce Module
-
-- [Object basics](/fr/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/fr/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/fr/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/fr/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/fr/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/fr/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

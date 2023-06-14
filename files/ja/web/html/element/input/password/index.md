@@ -38,15 +38,15 @@ l10n:
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("inputmode", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("required", "input")}},
-        {{htmlattrxref("size", "input")}}
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#inputmode"><code>inputmode</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
@@ -73,9 +73,9 @@ l10n:
 
 ## 値
 
-{{htmlattrxref("value", "input")}} 属性は、パスワードを入力するために使われているテキスト編集コントロールの、現在の内容である文字列を格納します。ユーザーが何も入力していない場合、この値は空文字列 (`""`) です。{{htmlattrxref("required")}} プロパティが指定されている場合、パスワード編集ボックスが妥当となるためには、空文字列以外の値を含まなければなりません。
+[`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、パスワードを入力するために使われているテキスト編集コントロールの、現在の内容である文字列を格納します。ユーザーが何も入力していない場合、この値は空文字列 (`""`) です。[`required`](/ja/docs/Web/HTML/Element/input#required) プロパティが指定されている場合、パスワード編集ボックスが妥当となるためには、空文字列以外の値を含まなければなりません。
 
-{{htmlattrxref("pattern", "input")}} 属性が指定されている場合、`password` コントロールの内容は、その値が検証をパスした場合のみ、妥当とみなされます。詳細は[検証](#検証)を参照してください。
+[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性が指定されている場合、`password` コントロールの内容は、その値が検証をパスした場合のみ、妥当とみなされます。詳細は[検証](#検証)を参照してください。
 
 > **メモ:** 改行文字の LF (U+000A) と CR (U+000D) は `password` の値には許容されません。パスワードコントロールに値がセットされるとき、LF および CR は値から取り除かれます。
 
@@ -87,21 +87,21 @@ l10n:
 
 ユーザーがパスワード入力欄に入力することができる（UTF-16 コード単位での）最大文字数です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、パスワード入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
-フィールドに入力されたテキストの長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。
+フィールドに入力されたテキストの長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 
 ### minlength
 
 ユーザーがパスワード入力欄に入力することができる (UTF-16 コード単位での) 最小文字数です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、パスワード入力欄には最小文字数が設定されません。
 
-入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。
+入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 
 ### pattern
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の {{htmlattrxref("value")}} が[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
-> **メモ:** {{htmlattrxref("title", "input")}} 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
+> **メモ:** [`title`](/ja/docs/Web/HTML/Element/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
 
 パスワードの入力には、 pattern を使用することを強くお勧めします。これは、さまざまな文字クラスを使用した有効なパスワードが、ユーザーによって選択され使用されることを保証するためです。パターンでは、大文字と小文字を区別するルールや、数字や記号の使用を義務付けることができます。詳細と例については[検証](#検証)の節を参照してください。
 
@@ -142,7 +142,7 @@ l10n:
 
 ### オートコンプリートを許可する
 
-パスワードを自動的に入力するため、ユーザーのパスワードマネージャを許可するには、{{htmlattrxref("autocomplete", "input")}} 属性を指定します。パスワードの場合、通常は次のいずれかの値をとります。
+パスワードを自動的に入力するため、ユーザーのパスワードマネージャを許可するには、[`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を指定します。パスワードの場合、通常は次のいずれかの値をとります。
 
 - `on`
   - : ブラウザー、あるいはパスワードマネージャが自動的にパスワード欄を埋めることを許可します。これは、`current-password` あるいは`new-password` を使用するほど有益ではありません。
@@ -162,7 +162,7 @@ l10n:
 
 ### パスワードを必須にする
 
-ユーザーのブラウザーに対して、フォームの送信前に、パスワード欄に有効な値が入力されている必要があることを伝えるためには、 {{htmlattrxref("required", "input")}} 論理属性を指定してください。
+ユーザーのブラウザーに対して、フォームの送信前に、パスワード欄に有効な値が入力されている必要があることを伝えるためには、 [`required`](/ja/docs/Web/HTML/Element/input#required) 論理属性を指定してください。
 
 ```html
 <label for="userPassword">パスワード: </label>
@@ -174,7 +174,7 @@ l10n:
 
 ### 入力モードを指定する
 
-推奨する、または必須となるパスワードの構文ルールが、標準キーボードよりも、代替となるテキスト入力インターフェースから恩恵を受ける場合、特定のものを要求するために {{htmlattrxref("inputmode", "input")}} 属性を使用することができます。この最も明快な用途は、 PIN のようにパスワードが数字で構成されていることを必要とする場合です。例えば、仮想キーボードを持つモバイル端末では、パスワードの入力をより簡単にするため、フルキーボードの代わりに、数字のキーパッドレイアウトに切り替えることを選択するかもしれません。 PIN が１回限りの使用であれば、 {{htmlattrxref("autocomplete", "input")}} 属性を `off` または `one-time-code` のどちらかに設定してサジェストが保存されないようにしてください。
+推奨する、または必須となるパスワードの構文ルールが、標準キーボードよりも、代替となるテキスト入力インターフェースから恩恵を受ける場合、特定のものを要求するために [`inputmode`](/ja/docs/Web/HTML/Element/input#inputmode) 属性を使用することができます。この最も明快な用途は、 PIN のようにパスワードが数字で構成されていることを必要とする場合です。例えば、仮想キーボードを持つモバイル端末では、パスワードの入力をより簡単にするため、フルキーボードの代わりに、数字のキーパッドレイアウトに切り替えることを選択するかもしれません。 PIN が１回限りの使用であれば、 [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を `off` または `one-time-code` のどちらかに設定してサジェストが保存されないようにしてください。
 
 ```html
 <label for="pin">PIN: </label>
@@ -185,7 +185,7 @@ l10n:
 
 ### 長さの要件を設定する
 
-普通、{{htmlattrxref("minlength", "input")}} 属性や {{htmlattrxref("maxlength", "input")}} 属性を使って、許容する最小の長さと最大の長さをパスワードに適用することができます。この例では、直前の例を拡張して、ユーザーの PIN が 4 〜 8文字でなければならないことを指定しています。{{htmlattrxref("size", "input")}} 属性は、パスワード入力コントロールが 8 文字分の幅であることを保証するために使用されています。
+普通、[`minlength`](/ja/docs/Web/HTML/Element/input#minlength) 属性や [`maxlength`](/ja/docs/Web/HTML/Element/input#maxlength) 属性を使って、許容する最小の長さと最大の長さをパスワードに適用することができます。この例では、直前の例を拡張して、ユーザーの PIN が 4 〜 8文字でなければならないことを指定しています。[`size`](/ja/docs/Web/HTML/Element/input#size) 属性は、パスワード入力コントロールが 8 文字分の幅であることを保証するために使用されています。
 
 ```html
 <label for="pin">PIN:</label>
@@ -228,7 +228,7 @@ document.getElementById("selectAll").onclick = () => {
 
 ## 検証
 
-もしアプリケーションが文字セットの制限を有している場合、あるいは入力されたパスワードの実際の内容について、他の何らかの要件がある場合には、{{htmlattrxref("pattern", "input")}} 属性を使って、パスワードがそれらの要件に合致しているか自動的に確認するための正規表現を設定することができます。
+もしアプリケーションが文字セットの制限を有している場合、あるいは入力されたパスワードの実際の内容について、他の何らかの要件がある場合には、[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使って、パスワードがそれらの要件に合致しているか自動的に確認するための正規表現を設定することができます。
 
 この例では、4 〜 8 文字の 16 進数の数字のみが妥当です。
 
@@ -268,9 +268,9 @@ document.getElementById("selectAll").onclick = () => {
 <span id="current"></span>
 ```
 
-ここでは {{htmlattrxref("pattern", "input")}} を使って、入力される値を、正当な社会保障番号を示す文字列に制限しています。明らかに、この正規表現は、妥当な SSN であることを保証していません（社会保障局のデータベースにアクセスしているわけではないので）が、その番号が SSN になり得るものであることは保証しています。一般に、値が妥当になり得ないことを避けています。加えて、3 つの数字のグループがスペース、ダッシュ ("-") で区切る、あるいは区切らないことを許容しています。
+ここでは [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) を使って、入力される値を、正当な社会保障番号を示す文字列に制限しています。明らかに、この正規表現は、妥当な SSN であることを保証していません（社会保障局のデータベースにアクセスしているわけではないので）が、その番号が SSN になり得るものであることは保証しています。一般に、値が妥当になり得ないことを避けています。加えて、3 つの数字のグループがスペース、ダッシュ ("-") で区切る、あるいは区切らないことを許容しています。
 
-{{htmlattrxref("inputmode", "input")}} が `numeric` にセットされ、より入力しやすくするために、仮想キーボードを持つ端末が数字キーパッドレイアウトに切り替えることを支援しています。{{htmlattrxref("minlength", "input")}} と {{htmlattrxref("maxlength", "input")}} がそれぞれ 9 と 12 にセットされ、値が 9 〜 12 文字 (前者はグループ間の区切り文字無し、後者は有り) であることを要件としています。 {{htmlattrxref("required", "input")}} 属性は、このコントロールが値を持っていなければならないことを示すために使われています。最後に、 {{htmlattrxref("autocomplete", "input")}} が `"off"` にセットされており、これはまったくパスワードではないので、パスワードマネージャーが値をセットしようとすることを回避しています。
+[`inputmode`](/ja/docs/Web/HTML/Element/input#inputmode) が `numeric` にセットされ、より入力しやすくするために、仮想キーボードを持つ端末が数字キーパッドレイアウトに切り替えることを支援しています。[`minlength`](/ja/docs/Web/HTML/Element/input#minlength) と [`maxlength`](/ja/docs/Web/HTML/Element/input#maxlength) がそれぞれ 9 と 12 にセットされ、値が 9 〜 12 文字 (前者はグループ間の区切り文字無し、後者は有り) であることを要件としています。 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性は、このコントロールが値を持っていなければならないことを示すために使われています。最後に、 [`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) が `"off"` にセットされており、これはまったくパスワードではないので、パスワードマネージャーが値をセットしようとすることを回避しています。
 
 #### JavaScript
 

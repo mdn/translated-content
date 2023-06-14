@@ -24,7 +24,7 @@ Intl.getCanonicalLocales(locales)
 
 一个包含规范区域语言代码的数组。
 
-## 例子
+## 示例
 
 ```js
 Intl.getCanonicalLocales('EN-US'); // ["en-US"]

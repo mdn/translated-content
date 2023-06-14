@@ -763,13 +763,3 @@ That's it for now. We hope you've found our rundown of client-side storage techn
 - [Service worker API](/pt-BR/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## In this module
-
-- [Introduction to web APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

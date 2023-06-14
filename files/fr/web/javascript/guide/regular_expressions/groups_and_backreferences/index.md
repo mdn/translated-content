@@ -1,10 +1,8 @@
 ---
 title: Groupes et références arrière
-slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
+slug: Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
-l10n:
-  sourceCommit: df24a4432fc479f58901c9a101330d1100f1172a
 ---
 
 {{jsSidebar("JavaScript Guide")}}

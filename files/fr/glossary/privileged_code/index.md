@@ -1,6 +1,6 @@
 ---
 title: Code privilégié
-slug: Glossary/privileged_code
+slug: Glossary/Privileged_code
 tags:
   - Glossaire
   - Privilégié

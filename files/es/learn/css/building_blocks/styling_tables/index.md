@@ -74,7 +74,7 @@ Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica
 </table>
 ```
 
-La tabla está bien creada, puede aplicársele estilo fácilmente y presenta características de accesibilidad gracias a propiedades como {{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlattrxref("summary","table")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Por desgracia, no presenta un aspecto agradable cuando se muestra en pantalla (puedes ver el ejemplo en [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)):
+La tabla está bien creada, puede aplicársele estilo fácilmente y presenta características de accesibilidad gracias a propiedades como [`scope`](/es/docs/Web/HTML/Element/th#scope), {{htmlelement("caption")}}, [`summary`](/es/docs/Web/HTML/Element/table#summary), {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Por desgracia, no presenta un aspecto agradable cuando se muestra en pantalla (puedes ver el ejemplo en [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)):
 
 ![](table-unstyled.png)
 

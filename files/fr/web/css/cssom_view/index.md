@@ -1,6 +1,6 @@
 ---
 title: CSSOM View
-slug: Web/CSS/CSSOM_View
+slug: Web/CSS/CSSOM_view
 tags:
   - Aperçu
   - CSS

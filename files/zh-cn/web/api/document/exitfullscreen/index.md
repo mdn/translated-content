@@ -44,4 +44,4 @@ document.onclick = function (event) {
 - {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }}
-- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)

@@ -77,7 +77,7 @@ Le type de boîte appliqué à un élément est défini par la valeur de la prop
 
 ## Aparté : les positionnements intérieurs et extérieurs
 
-Au point où nous en sommes, il faut aborder la différence entre les propriétés de positionnement **intérieurs** ("_inner dipslay_") et **extérieurs** ("_outer display_"). Comme nous l'avons évoqué, les boîtes en CSS possèdent un type de positionnement _extérieur_ qui détermine si la boîte est "en ligne" ou bien "en bloc".
+Au point où nous en sommes, il faut aborder la différence entre les propriétés de positionnement **intérieurs** ("_inner display_") et **extérieurs** ("_outer display_"). Comme nous l'avons évoqué, les boîtes en CSS possèdent un type de positionnement _extérieur_ qui détermine si la boîte est "en ligne" ou bien "en bloc".
 
 Cependant, les boîtes ont aussi un type de positionnement intérieur, qui décrit le comportement de mise en page des éléments contenus dans la boîte. Par défaut, les éléments contenus dans la boîte sont affichés dans la **[disposition normale](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)**, ce qui signifie qu'ils se comportent exactement comme n'importe quel autre élément "en bloc" ou "en ligne" (comme décrit auparavant).
 
@@ -341,24 +341,3 @@ Vous pouvez rencontrer cette astuce sur bon nombre de menus de navigation dans l
 Dans la leçon suivante, ce sont les arrières-plans et les bordures qui capteront notre attention, afin de rendre votre mise en page plus attrayante.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
-
-## Dans ce module
-
-1. [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Sélecteurs de classe, de type et d'identifiant](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. Le modèle de boîte
-4. [Arrières-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Gérer la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Dimensionnement des objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, médias, et formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Mettre en forme les tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Déboguer CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organiser son code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

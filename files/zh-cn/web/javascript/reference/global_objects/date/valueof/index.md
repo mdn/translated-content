@@ -27,7 +27,7 @@ dateObj.valueOf()
 
 该方法通常在 JavaScript 内部被调用，而不是在代码中显式调用。
 
-## 例子
+## 示例
 
 ### 使用 `valueOf()`
 

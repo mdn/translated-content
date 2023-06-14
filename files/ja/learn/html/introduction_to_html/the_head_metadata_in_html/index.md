@@ -161,7 +161,7 @@ description は検索エンジンの結果ページにも使われます。練�
 例えば、 [Open Graph Data](https://ogp.me/) は Facebook が開発した、ウェブサイトにより豊富なメタデータを与えるメタデータプロトコルです。 MDN Web Docs のソースコードでは、次のようなものがあります。
 
 ```html
-<meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
+<meta property="og:image" content="https://developer.mozilla.org/mdn-social-share.png">
 <meta property="og:description" content="The Mozilla Developer Network (MDN) provides
 information about Open Web technologies including HTML, CSS, and APIs for both Web sites
 and HTML Apps. It also documents Mozilla products, like Firefox OS.">
@@ -234,7 +234,7 @@ Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/tw
   <script src="my-js-file.js" defer></script>
   ```
 
-  **メモ**: `<script>` 要素は空要素のように見えるかもしれませんが、そうではありませんので、終了タグが必要です。また、外部のスクリプトファイルを読み込むのではなく、 `<script>` 要素の中にスクリプトを置くこともできます。
+  > **メモ:** `<script>` 要素は空要素のように見えるかもしれませんが、そうではありませんので、終了タグが必要です。また、外部のスクリプトファイルを読み込むのではなく、 `<script>` 要素の中にスクリプトを置くこともできます。
 
 ### アクティブラーニング: ページに CSS と JavaScript を追加する
 
@@ -274,15 +274,3 @@ Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/tw
 これで HTML のヘッド部の弾丸ツアーは終了します。ここでできることは他にもたくさんありますが、この段階では徹底的なツアーでは退屈で混乱を招くことになるでしょうから、もっとも一般的なことに関する考えだけを紹介したかったのです。たった今、そこに到達しました。次の記事では、 [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)について説明します。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
-
-## このモジュール内の文書
-
-- [HTML を始めよう](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [ヘッド部には何が入る? HTML のメタデータ](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [HTML テキストの基礎](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [ハイパーリンクの作成](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [高度なテキスト整形](/ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [文書とウェブサイトの構造](/ja/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [手紙のマークアップ](/ja/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [コンテンツのページの構造化](/ja/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

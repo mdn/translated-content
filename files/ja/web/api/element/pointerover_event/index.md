@@ -1,9 +1,9 @@
 ---
-title: 'Element: pointerover イベント'
+title: "Element: pointerover イベント"
 slug: Web/API/Element/pointerover_event
 original_slug: Web/API/Document/pointerover_event
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: 9fb6c9e56c6db295967384730feeb941509ac743
 ---
 
 {{APIRef}}
@@ -15,9 +15,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('pointerover', (event) => {});
+addEventListener("pointerover", (event) => {});
 
-onpointerover = (event) => { };
+onpointerover = (event) => {};
 ```
 
 ## イベント型
@@ -56,20 +56,20 @@ _このインターフェイスは {{domxref("MouseEvent")}} および {{domxref
 `addEventListener()` を使用した例です。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointerover', (event) => {
-  console.log('Pointer moved in');
+para.addEventListener("pointerover", (event) => {
+  console.log("Pointer moved in");
 });
 ```
 
 `onpointerover` イベントハンドラープロパティを使用した例です。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointerover = (event) => {
-  console.log('Pointer moved in');
+  console.log("Pointer moved in");
 };
 ```
 

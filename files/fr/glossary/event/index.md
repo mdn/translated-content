@@ -1,6 +1,6 @@
 ---
 title: Évènement
-slug: Glossary/event
+slug: Glossary/Event
 tags:
   - DOM
   - Encodage

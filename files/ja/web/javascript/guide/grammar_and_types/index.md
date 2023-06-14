@@ -174,7 +174,7 @@ x = 3;
 
 巻き上げがあるため、関数内にあるすべての `var` 文は関数内で可能な限り先頭に近い位置に置くべきです。これはコードの明確さを高める最善の方法です。
 
-`let` と `const` が巻き上げられるかどうかは、定義の議論の余地があります。変数宣言の前にブロック内で変数を参照すると常に {{jsxref("ReferenceError")}} が発生します。ブロックの始まりから宣言が処理されるまで、変数は「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_tdz)」にあるからです。
+`let` と `const` が巻き上げられるかどうかは、定義の議論の余地があります。変数宣言の前にブロック内で変数を参照すると常に {{jsxref("ReferenceError")}} が発生します。ブロックの始まりから宣言が処理されるまで、変数は「[一時的なデッドゾーン](/ja/docs/Web/JavaScript/Reference/Statements/let#一時的なデッドゾーン_tdz)」にあるからです。
 
 ```js
 console.log(x); // ReferenceError

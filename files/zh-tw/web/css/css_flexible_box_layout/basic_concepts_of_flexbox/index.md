@@ -1,6 +1,6 @@
 ---
 title: CSS彈性盒子用法
-slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
 ---
 
@@ -80,7 +80,7 @@ Recall that while the display order of the elements is independent of their orde
 
 由於彈性盒子使用不同的排版演算法，所以有些屬性不太適合用在彈性容器內：
 
-- [multiple column 模組](/zh-TW/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)的 `column-*` 屬性對彈性項目無效。
+- [multiple column 模組](/zh-TW/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)的 `column-*` 屬性對彈性項目無效。
 - {{cssxref("clear")}} 對彈性項目無效。
 - {{cssxref("float")}} causes the `display` property of the element to compute to `block`.
 - {{cssxref("vertical-align")}} 對已對齊的彈性項目無效。
@@ -95,9 +95,9 @@ Recall that while the display order of the elements is independent of their orde
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <style>
-    .flex {
+      .flex {
         /* basic styling */
         width: 350px;
         height: 200px;
@@ -107,25 +107,30 @@ Recall that while the display order of the elements is independent of their orde
         /* flexbox setup */
         display: flex;
         flex-direction: row;
-    }
+      }
 
-    .flex > div {
+      .flex > div {
         flex: 1 1 auto;
         width: 30px; /* To make the transition work nicely. (Transitions to/from
                         "width:auto" are buggy in Gecko and Webkit, at least.
                         See http://bugzil.la/731886 for more info.) */
         transition: width 0.7s ease-out;
-    }
+      }
 
-    /* colors */
-    .flex > div:nth-child(1){ background: #009246; }
-    .flex > div:nth-child(2){ background: #F1F2F1; }
-    .flex > div:nth-child(3){ background: #CE2B37; }
+      /* colors */
+      .flex > div:nth-child(1) {
+        background: #009246;
+      }
+      .flex > div:nth-child(2) {
+        background: #f1f2f1;
+      }
+      .flex > div:nth-child(3) {
+        background: #ce2b37;
+      }
 
-    .flex > div:hover {
+      .flex > div:hover {
         width: 200px;
-    }
-
+      }
     </style>
   </head>
   <body>
@@ -152,20 +157,20 @@ Recall that while the display order of the elements is independent of their orde
 <html lang="en">
   <head>
     <style>
-    body {
+      body {
         font: 24px Helvetica;
         background: #999999;
-    }
+      }
 
-    #main {
+      #main {
         min-height: 800px;
         margin: 0;
         padding: 0;
         display: flex;
         flex-flow: row;
-    }
+      }
 
-    #main > article {
+      #main > article {
         margin: 4px;
         padding: 5px;
         border: 1px solid #cccc33;
@@ -173,9 +178,9 @@ Recall that while the display order of the elements is independent of their orde
         background: #dddd88;
         flex: 3 1 60%;
         order: 2;
-    }
+      }
 
-    #main > nav {
+      #main > nav {
         margin: 4px;
         padding: 5px;
         border: 1px solid #8888bb;
@@ -183,9 +188,9 @@ Recall that while the display order of the elements is independent of their orde
         background: #ccccff;
         flex: 1 6 20%;
         order: 1;
-    }
+      }
 
-    #main > aside {
+      #main > aside {
         margin: 4px;
         padding: 5px;
         border: 1px solid #8888bb;
@@ -193,9 +198,10 @@ Recall that while the display order of the elements is independent of their orde
         background: #ccccff;
         flex: 1 6 20%;
         order: 3;
-    }
+      }
 
-    header, footer {
+      header,
+      footer {
         display: block;
         margin: 4px;
         padding: 5px;
@@ -203,29 +209,35 @@ Recall that while the display order of the elements is independent of their orde
         border: 1px solid #eebb55;
         border-radius: 7pt;
         background: #ffeebb;
-    }
+      }
 
-    /* Too narrow to support three columns */
-    @media all and (max-width: 640px) {
-        #main, #page {
-            flex-direction: column;
+      /* Too narrow to support three columns */
+      @media all and (max-width: 640px) {
+        #main,
+        #page {
+          flex-direction: column;
         }
 
-        #main > article, #main > nav, #main > aside {
-        /* Return them to document order */
-            order: 0;
+        #main > article,
+        #main > nav,
+        #main > aside {
+          /* Return them to document order */
+          order: 0;
         }
 
-        #main > nav, #main > aside, header, footer {
-            min-height: 50px;
-            max-height: 50px;
+        #main > nav,
+        #main > aside,
+        header,
+        footer {
+          min-height: 50px;
+          max-height: 50px;
         }
-    }
+      }
     </style>
   </head>
   <body>
     <header>header</header>
-    <div id='main'>
+    <div id="main">
       <article>article</article>
       <nav>nav</nav>
       <aside>aside</aside>

@@ -1,6 +1,6 @@
 ---
 title: Mettre à l'échelle des images en arrière-plan
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 tags:
   - CSS
   - Guide

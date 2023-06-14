@@ -46,7 +46,7 @@ De plus, certaines valeurs par défaut diffèrent selon les versions ou les inst
 
 ## Solution
 
-Afin de résoudre ce problème, Mozilla a modifié le comportement du chargement des URLs ressource via {{bug(863246)}}, rendu disponible à partir de Firefox 57 (Quantum).
+Afin de résoudre ce problème, Mozilla a modifié le comportement du chargement des URLs ressource via [bug Firefox 863246](https://bugzil.la/863246), rendu disponible à partir de Firefox 57 (Quantum).
 
 Auparavant, les sites web étaient capables d'accéder à n'importe quelle URI `resource:`, celles de Firefox mais aussi celles des modules complémentaires. Ce comportement est désormais interdit par défaut.
 

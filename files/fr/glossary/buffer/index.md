@@ -1,6 +1,6 @@
 ---
 title: Tampon
-slug: Glossary/buffer
+slug: Glossary/Buffer
 tags:
   - Glossaire
   - Stockage temporaire

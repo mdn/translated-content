@@ -9,11 +9,11 @@ slug: Web/HTML/Element/fieldset
 
 这个元素包含[所有全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : 如果设置了这个 bool 值属性，`<fieldset>` 的所有子代表单控件也会继承这个属性。这意味着它们不可编辑，也不会随着 {{htmlelement("form")}} 一起提交。它们也不会接收到任何浏览器事件，如鼠标点击或与聚焦相关的事件。默认情况下，浏览器会将这样的控件展示为灰色。注意，{{HTMLElement("legend")}} 中的表单元素不会被禁用。
-- {{htmlattrdef("form")}}
-  - : 将该值设为一个 {{HTMLElement("form")}} 元素的 {{htmlattrxref("id")}} 属性值以将 `<fieldset>` 设置成这个 {{HTMLElement("form")}} 的一部分。
-- {{htmlattrdef("name")}}
+- `form`
+  - : 将该值设为一个 {{HTMLElement("form")}} 元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性值以将 `<fieldset>` 设置成这个 {{HTMLElement("form")}} 的一部分。
+- `name`
   - : 元素分组的名称
 
     > **备注：** fieldset 的标题由第一个 {{HTMLElement("legend")}} 子元素确定。
@@ -30,7 +30,7 @@ slug: Web/HTML/Element/fieldset
 
 你可以以任意方式自行设置 `<fieldset>` 和 `<legend>` 的样式以配合你的页面设计。
 
-> **备注：** 截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 [flexbox](/zh-CN/docs/Glossary/Flexbox) 和 [grid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 布局。[这个 GitHub issue](https://github.com/w3c/csswg-drafts/issues/321) 跟踪了这个 bug。
+> **备注：** 截至这篇文章发出为止，Microsoft Edge 和 Google Chrome 不能在 {{HTMLElement("fieldset")}} 中使用 [flexbox](/zh-CN/docs/Glossary/Flexbox) 和 [grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) 布局。[这个 GitHub issue](https://github.com/w3c/csswg-drafts/issues/321) 跟踪了这个 bug。
 
 ## 示例
 

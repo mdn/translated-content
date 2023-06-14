@@ -20,7 +20,7 @@ L'élément **`<rtc>`** permet d'ajouter des notations Ruby sémantiques. Il est
 
 Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-## Exemple
+## Exemples
 
 ### HTML
 
@@ -42,7 +42,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
 
 ### Résultat
 
-{{EmbedLiveSample("Exemple",600,120)}}
+{{EmbedLiveSample("",600,120)}}
 
 ## Résumé technique
 

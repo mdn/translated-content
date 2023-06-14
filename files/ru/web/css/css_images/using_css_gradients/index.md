@@ -1,12 +1,13 @@
 ---
 title: Использование CSS-градиентов
-slug: Web/CSS/CSS_Images/Using_CSS_gradients
+slug: Web/CSS/CSS_images/Using_CSS_gradients
 tags:
   - Градиенты
   - Примеры
   - Руководство
 translation_of: Web/CSS/CSS_Images/Using_CSS_gradients
 ---
+
 {{CSSRef}}
 
 **CSS-градиенты** представлены типом данных {{cssxref("&lt;gradient&gt;")}}, специальным типом {{cssxref("&lt;image&gt;")}}, состоящим из последовательного перехода между двумя и более цветами. Вы можете выбрать один из трёх типов градиентов: _линейный_ (создаётся с помощью функции {{cssxref("linear-gradient")}}), _круговой_ (создаётся с помощью {{cssxref("radial-gradient")}}) и конический (создаётся с помощью функции {{cssxref("conic-gradient")}}). Вы можете также создавать повторяющиеся градиенты с помощью функций {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}} и {{cssxref("repeating-conic-gradient")}}.

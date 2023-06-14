@@ -1,6 +1,6 @@
 ---
 title: CSS フローレイアウト
-slug: Web/CSS/CSS_Flow_Layout
+slug: Web/CSS/CSS_flow_layout
 ---
 
 {{CSSRef}}

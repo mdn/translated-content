@@ -1,81 +1,60 @@
 ---
-title: Web Performance
+title: Web 性能
 slug: Learn/Performance
 ---
 
-## {{LearnSidebar}}
+{{LearnSidebar}}
 
-构建一个网站需要 HTML、CSS 和 JavaScript。为了构建人们需要的、能吸引和留住用户的网站和应用，你需要创建一个良好的用户体验。良好用户体验的一部分是确保内容能够快速加载并响应用户交互。这就是所谓的**web 性能**，在这个模块中，你将会学到构建性能良好的网站所需要的知识。
+构建一个网站需要 HTML、CSS 和 JavaScript。为了构建人们需要的、能吸引和留住用户的网站和应用，你需要创建一个良好的用户体验。良好用户体验的一部分是确保内容能够快速加载并响应用户交互。这就是所谓的 **web 性能**，在这个模块中，你将会学到构建性能良好的网站所需要的知识。
 
-给初学者的学习材料的剩下部分主要关注于如何尽量提高性能和易用性等网络体验。但是，也需要特别关注这些话题，确保你熟悉他们。
+我们的初学者学习材料的其余部分尽量坚持网络最佳实践，如性能和[无障碍](/zh-CN/docs/Learn/Accessibility)，然而，专门关注此类主题也是不错的，并确保你熟悉它们。
 
-## 学习方法
+## 学习途径
 
-虽然了解 HTML，CSS 和 Javascript 是实现许多网页性能提升建议的必要条件，但了解如何构建应用却不是理解和衡量网页性能的必要先决条件。即便如此我们仍建议在通读此模块之前，你至少要过一遍我们的网页编程入门模块，对网页发展有一个基本认识。
+虽然了解 HTML、CSS 和 Javascript 是实现许多网页性能提升建议的必要条件，但了解如何构建应用却不是理解和衡量网页性能的必要先决条件。然而，我们建议你在学习本模块之前，至少通过学习我们的 [web 入门](/zh-CN/docs/Learn/Getting_started_with_the_web)模块，获得一个网络开发的基本概念。
 
-更深入进行以下主题也很有必要，这些模块包括
+更深入进行以下主题也很有必要，这些模块包括：
 
-- HTML 入门
-- CSS 初步
-- Javascript 初步
+- [HTML 入门](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)
+- [CSS 初步](/zh-CN/docs/Learn/CSS/First_steps)
+- [JavaScript 初步](/zh-CN/docs/Learn/JavaScript/First_steps)
 
-当你通读了这个部分之后，你或许特别想深入了解网页性能——你可以 在我们的主 MDN 网页性能章节找到更多教学，包括性能 API 的概览，测试和分析工具，以及性能瓶颈问题。
+一旦你完成了这个模块的学习，你可能会对深入研究网络性能感到兴奋——你可以在我们的 [MDN 网络主要性能部分](/zh-CN/docs/Web/Performance)找到很多进一步的教学内容，包括性能 API的概述、测试和分析工具，以及性能瓶颈问题。
 
-## Introductory modules
+## 指南
 
-This topic contains the following modules, in a suggested order for working through them. You should definitely start with the first one.
+本专题包含以下指南。以下是建议的学习顺序；你肯定应该从第一个开始。
 
-- [What is web performance?](/zh-CN/docs/Learn/Performance/What_is_performance)
-  - : This article starts the module off with a good look at what performance actually is — this includes the tools, metrics, APIs, networks, and groups of people we need to consider when thinking about performance, and how we can make performance part of our web development workflow.
-- [How do users perceive performance?](/zh-CN/docs/Learn/Performance/Perceived_performance)
-  - : More important than how fast your website is in milliseconds, is how fast your users perceive your site to be. These perceptions are impacted by actual page load time, idling, responsiveness to user interaction, and the smoothness of scrolling and other animations. In this article, we discuss the various loading metrics, animation, and responsiveness metrics, along with best practices to improve user perception, if not the actual timings.
-- [Web performance basics](/zh-CN/docs/Learn/Performance/Basics)
-  - : In addition to the front end components of HTML, CSS, JavaScript, and media files, there are features that can make applications slower and features that can make applications subjectively and objectively faster. There are many APIs, developer tools, best practices, and bad practices relating to web performance. Here we'll introduce many of these features ad the basic level and provide links to deeper dives to improve performance for each topic.
-- [HTML performance features](/zh-CN/docs/Learn/Performance/HTML)
-  - : Some attributes and the source order of your mark-up can impact the performance or your website. By minimizing the number of DOM nodes, making sure the best order and attributes are used for including content such as styles, scripts, media, and third-party scripts, you can drastically improve the user experience. This article looks in detail at how HTML can be used to ensure maximum performance.
-- [Multimedia: images and video](/zh-CN/docs/Learn/Performance/Multimedia)
-  - : The lowest hanging fruit of web performance is often media optimization. Serving different media files based on each user agent's capability, size, and pixel density is possible. Additional tips like removing audio tracks from background videos can improve performance even further. In this article we discuss the impact video, audio, and image content has on performance, and the methods to ensure that impact is as minimal as possible.
-- Responsive Images
-  - : While optimizing images is vital to high-performance media-rich user experiences, ensuring that images are sized appropriately for the devices that download them is especially important. In this article, we'll discuss the role of native browser features such as the \<picture> element and the srcset attribute in efficient image delivery, and how you can use them with confidence.
-- Alternative media formats
-  - : When it comes to images and videos, there are more formats than you're likely aware of. Some of these formats can take your highly optimized media-rich pages even further by offering additional reductions in file size. In this guide we'll discuss some alternative media formats, how to use them responsibly so that non-supporting browsers don't get left out in the cold, and some advanced guidance on transcoding your existing assets to them.
-- [CSS performance features](/zh-CN/docs/Learn/Performance/CSS)
-  - : CSS may be a less important optimization focus for improved performance, but there are some CSS features that impact performance more than others. In this article we look at some CSS properties that impact performance and suggested ways of handling styles to ensure performance is not negatively impacted.
-- [JavaScript performance best practices](/zh-CN/docs/Learn/Performance/JavaScript)
-  - : JavaScript, when used properly, can allow for interactive and immersive web experiences — or it can significantly harm download time, render time, in-app performance, battery life, and user experience. This article outlines some JavaScript best practices that should be considered to ensure even complex content is as performant as possible.
-- Web font performance
-  - : An often overlooked aspect of performance landscape are web fonts. Web fonts are more prominent in web design than ever, yet many developers simply embed them from a third party service and think nothing of it. In this article, we'll covers methods for getting your font files as small as possible with efficient file formats and sub setting. From there, we'll go on to talk about how browsers text, and how you can use CSS and JavaScript features to ensure your fonts render quickly, and with minimal disruption to the user experience.
-- [Mobile performance](/zh-CN/docs/Learn/Performance/Mobile)
-  - : With web access on mobile devices being so popular, and all mobile platforms having fully-fledged web browsers, but possibly limited bandwidth, CPU and battery life, it is important to consider the performance of your web content on these platforms. This article looks at mobile-specific performance considerations.
+- [为什么要提升 web 性能](/zh-CN/docs/Learn/Performance/why_web_performance)
+  - : 本文讨论了为什么网络性能对无障碍、用户体验和你的商业目标很重要。
+- [什么是 web 性能？](/zh-CN/docs/Learn/Performance/What_is_web_performance)
+  - : 你知道网络性能很重要，但什么构成了网络性能？本文介绍了性能的组成部分，从网页的加载和渲染，包括你的内容如何进入用户的浏览器被浏览，到我们在考虑性能时需要考虑哪些群体的问题。
+- [用户如何感知性能？](/zh-CN/docs/Learn/Performance/Perceived_performance)
+  - : 比你的网站有多快（以毫秒为单位）更重要的是你的用户认为你的网站有多快。这些感知受到实际页面加载时间、空闲、对用户互动的响应能力、滚动和其他动画的流畅度的影响。在这篇文章中，我们将讨论各种加载指标、动画和响应性指标，以及改善用户感知的最佳做法，如果不是实际时间的话。
+- [性能的衡量](/zh-CN/docs/Learn/Performance/Measuring_performance)
+  - : 现在你已经了解了一些性能指标，我们将深入了解性能工具、指标和 API，以及我们如何使性能成为 Web 开发工作流程的一部分。
+- [多媒体：图片](/zh-CN/docs/Learn/Performance/Multimedia)
+  - : 最容易提升网络性能的方式往往是媒体优化。根据每个用户代理的能力、尺寸和像素密度来提供不同的媒体文件是可能的。在这篇文章中，我们讨论了图像对性能的影响，以及减少每张图像发送字节数的方法。
+- [多媒体：视频](/zh-CN/docs/Learn/Performance/video)
+  - : 最容易提升网络性能的方式往往是媒体优化。在这篇文章中，我们讨论了视频内容对性能的影响，并涵盖了从背景视频中删除音轨等技巧，可以提高性能。
+- [JavaScript 性能最佳实践](/zh-CN/docs/Learn/Performance/JavaScript)
+  - : 如果使用得当，JavaScript 可以实现交互式和沉浸式的网络体验——反之则可能显著增加下载时间、渲染时间并损害应用性能、电池寿命和用户体验。本文概述了一些应该考虑的 JavaScript 最佳实践，以确保即使是复杂的内容也能尽可能地执行。
+- [HTML 性能特性](/zh-CN/docs/Learn/Performance/HTML)
+  - : 一些属性和你的标记的源顺序会影响你的网站的性能。通过尽量减少 DOM 节点的数量，确保使用最佳的顺序和属性来包括样式、脚本、媒体和第三方脚本等内容，你可以大幅提高用户体验。这篇文章详细研究了如何使用 HTML 来确保最大的性能。
+- [CSS 性能特性](/zh-CN/docs/Learn/Performance/CSS)
+  - : 在提高性能方面，CSS 可能是一个不太重要的优化重点，但有一些 CSS 特性对性能的影响比其他的更大。在这篇文章中，我们看看一些影响性能的 CSS 属性，以及处理样式的建议方法，以确保性能不受负面影响。
+- [字体与性能](/zh-CN/docs/Learn/Performance/Fonts)
+  - : 看看你是否需要引入外部字体，如果需要，如何以对网站性能影响最小的方式引入你的设计所需的字体。
+- [移动端性能](/zh-CN/docs/Learn/Performance/Mobile)
+  - : 随着移动设备上的网络访问普及，所有的移动平台都有成熟的网络浏览器，但可能存在带宽、CPU 和电池寿命受限等问题，因此必须考虑在这些平台上提供的 Web 内容的性能。本文探讨了针对移动设备的性能考虑。
+- [web 性能的商业案例](/zh-CN/docs/Learn/Performance/business_case_for_performance)
+  - : 开发人员可以采取许多措施来提高系统的性能，但是什么样的速度才算快？如何说服管理层重视这些努力？一旦优化完成，如何确保系统不会再次出现性能问题？本文将探讨如何说服管理层、如何培养性能文化和制定性能预算，并介绍确保系统不会出现性能回退的方法。
 
-## Advanced Modules
+## 参见
 
-- Populating the page
-  - : An HTTP request is made and, hopefully, a few seconds later, the site appears. Displaying the content involves executing JavaScript, possibly modifying the DOM, calculating styles, calculating layout, and finally rendering the content, which involves painting and compositing, and can involve GPU acceleration on a separate thread.
-- [Understanding latency](/zh-CN/docs/Learn/Performance/Latency)
-  - : Latency is the amount of time it takes between the browser making a request for a resource, and the browser receiving back the first byte of the resource requested. This article explains what latency is, how it impacts performance, and how to measure and improve latency.
-- Understanding bandwidth
-  - : Bandwidth is the amount of data (measured in Mbps or Kbps) that can be sent per second. This article explains the role of bandwidth in media-rich internet applications, how it can be measured, and how you can optimize applications to make the best use of available bandwidth.
-- HTTP/2 and you
-  - : The transport layer—that is, HTTP—is utterly essential to the functioning of the web, and it has only been relatively recently that it has seen a major update in the form of HTTP/2. Out of the box, HTTP/2 provides many performance improvements and advantages over its predecessor, but it also changes the landscape. In this article, you'll learn what HTTP/2 does for you, and how to fine-tune your application to make it do go even further.
-- The role of TLS in performance
-  - : TLS—or HTTPS as we tend to call it—is crucial in creating secure and safe user experiences. While hardware has reduced the negative impacts TLS has had on server performance, it's still represents a substantial slice of the time we spend waiting for browsers to connect to servers. This article explains the TLS handshake process, and offers some tips for reducing this time, such as OCSP stapling, HSTS preload headers, and the potential role of resource hints in masking TLS latency for third parties.
-- [Profiling with the built-in profiler](/zh-CN/docs/Performance/Profiling_with_the_Built-in_Profiler)
-  - : Learn how to profile app performance with Firefox's built-in profiler.
-- Reading performance charts
-  - : Developer tools provide information on performance, memory, and network requests. Knowing how to read [waterfall](/zh-CN/docs/Tools/Performance/Waterfall) charts, [call trees](/zh-CN/docs/Tools/Performance/Call_Tree), traces, [flame charts](/zh-CN/docs/Tools/Performance/Flame_Chart) , and [allocations](/zh-CN/docs/Tools/Performance/Allocations) in your browser developer tools will help you understand waterfall and flame charts in other performance tools.
-- [CSS and JavaScript animation performance](/zh-CN/Apps/Build/Performance/CSS_JavaScript_animation_performance)
-  - : Animations are critical for a pleasurable user experience. This article discusses the performance differences between CSS and JavaScript-based animations.
-- Analyzing JavaScript bundles
-  - : No doubt, JavaScript is a big part of modern web development. While you should always strive to reduce the amount of JavaScript you use in your applications, it can be difficult to know where to start. In this guide, we'll show you how to analyze your application's script bundles, so you know _what_ you're using, as well how to detect if there are duplicated scripts between bundles in your app.
-- Lazy-loading JavaScript with dynamic imports
-  - : When developers hear the term "lazy loading", they immediately think of below-the-fold imagery that loads when it scrolls into the viewport. But did you know you can lazy load JavaScript as well? In this guide we'll talk about the dynamic import() statement, which is a feature in modern browsers that loads a JavaScript module on demand. Of course, since this feature isn't available everywhere, we'll also show you how you can configure your tooling to use this feature in a widely compatible fashion.
-- Controlling resource delivery with resource hints
-  - : Browsers often know better than we do when it comes to resource prioritization and delivery—but they're far from clairvoyant. Native browser features enable us to hint to the browser when it should connect to another server, or preload a resource before the browser knows it ever needs it. When used judiciously, this can make fast experience seem even faster. In this article, we cover native browser features like rel=preconnect, rel=dns-prefetch, rel=prefetch, and rel=preload, and how to use them to your advantage.
-
-## See Also
-
-- [Mobile performance checklist](/zh-CN/docs/Web/Performance/Mobile_performance_checklist)
-- [Optimizing Startup Performance](/zh-CN/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)
-
-{{LandingPageListSubpages}}
+- [Web 性能资源](/zh-CN/docs/Learn/Performance/Web_Performance_Basics)
+  - : 除了 HTML、CSS、JavaScript 和媒体文件等前端组件外，还有一些可以使应用程序变慢的功能和可以使应用程序在主观和客观上变快的功能。有许多与网络性能有关的 API、开发者工具、最佳实践和不良实践。在这里，我们将介绍许多这些功能的基本水平，并提供更深入的链接，以提高每个主题的性能。
+- [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - : 在这篇文章中，我们将了解响应式图像的概念，并看看 HTML 提供了哪些工具来帮助实现它们。响应式图像是在屏幕尺寸、分辨率和其他类似特征差别很大的设备上能很好地工作的图像。这有助于提高不同设备的性能。响应式图像只是[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)的一部分，这是你未来要学习的一个 CSS 主题。
+- [MDN 上主要的 web 性能页面](/zh-CN/docs/Web/Performance)
+  - : 我们主要的网络性能部分。在这里你会发现更多关于网络性能的细节，包括性能 API 的概述，测试和分析工具，以及性能瓶颈的问题。

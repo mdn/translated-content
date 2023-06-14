@@ -1,6 +1,6 @@
 ---
 title: Notification.silent
-slug: Web/API/notification/silent
+slug: Web/API/Notification/silent
 tags:
   - API
   - API Notifications

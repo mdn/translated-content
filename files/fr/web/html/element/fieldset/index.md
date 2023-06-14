@@ -1,6 +1,6 @@
 ---
 title: '<fieldset> : l''élément pour les ensembles de champs'
-slug: Web/HTML/Element/Fieldset
+slug: Web/HTML/Element/fieldset
 tags:
   - Element
   - Forms

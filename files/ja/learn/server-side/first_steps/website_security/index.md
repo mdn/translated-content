@@ -129,10 +129,3 @@ CSRF 攻撃は、悪意のあるユーザーが他のユーザーの資格情報
 この記事で、[モジュール](/ja/docs/Learn/Server-side/First_steps)の終わりに来ました。サーバーサイドのウェブサイトプログラミングの最初のステップをカバーしました。これらの基本概念を学んで楽しんでいただければ幸いです。これでウェブフレームワークを選択してプログラミングを開始する準備が整いました。
 
 {{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## このモジュールの記事一覧
-
-- [サーバーサイドの概要](/ja/docs/Learn/Server-side/First_steps/Introduction)
-- [クライアント - サーバーの概要](/ja/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [サーバーサイドウェブフレームワーク](/ja/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [ウェブサイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)

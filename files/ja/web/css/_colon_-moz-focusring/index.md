@@ -57,4 +57,4 @@ input {
 ## 関連情報
 
 - {{cssxref(":focus-visible")}}
-- {{bug("418521")}}
+- [Firefox バグ 418521](https://bugzil.la/418521)

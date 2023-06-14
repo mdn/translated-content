@@ -1,18 +1,21 @@
 ---
 title: TypedArray.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin
+l10n:
+  sourceCommit: 194d3e00cb93a6e5ea44812548f4131cb17f0381
 ---
 
 {{JSRef}}
 
-**`copyWithin()`** メソッドは、配列内の一連の配列の要素を `target` から始まる位置にコピーします。コピーは第二、第三の引数、 `start` と `end` のインデックス位置から実施されます。 `end` 引数はオプションで、既定では配列の長さです。このメソッドは {{jsxref("Array.prototype.copyWithin")}} と同じアルゴリズムです。 _TypedArray_ は、ここでは [型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。
+**`copyWithin()`** メソッドは、配列内の一連の配列の要素を `target` から始まる位置にコピーします。コピーは第 2、第 3の引数、 `start` と `end` の位置から実施されます。 `end` 引数はオプションで、既定では配列の長さです。このメソッドは {{jsxref("Array.prototype.copyWithin")}} と同じアルゴリズムです。 _TypedArray_ は、ここでは [型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_オブジェクト)のうちの一つです。
 
 {{EmbedInteractiveExample("pages/js/typedarray-copywithin.html")}}
 
 ## 構文
 
-```
-typedarray.copyWithin(target, start[, end = this.length])
+```js-nolint
+copyWithin(target, start)
+copyWithin(target, start, end)
 ```
 
 ### 引数
@@ -37,11 +40,11 @@ typedarray.copyWithin(target, start[, end = this.length])
 ### copyWithin の使用
 
 ```js
-var buffer = new ArrayBuffer(8);
-var uint8 = new Uint8Array(buffer);
-uint8.set([1,2,3]);
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer);
+uint8.set([1, 2, 3]);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 0, 0, 0, 0, 0 ]
-uint8.copyWithin(3,0,3);
+uint8.copyWithin(3, 0, 3);
 console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
 ```
 
@@ -51,8 +54,9 @@ console.log(uint8); // Uint8Array [ 1, 2, 3, 1, 2, 3, 0, 0 ]
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.TypedArray.copyWithin")}}
+{{Compat}}
 
 ## 関連情報
 
+- [`TypedArray.prototype.copyWithin` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
 - {{jsxref("TypedArray")}}

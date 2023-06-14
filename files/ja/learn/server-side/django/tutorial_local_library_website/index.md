@@ -53,21 +53,3 @@ _地域図書館（LocalLibrary）は、この一連のチュートリアルの�
 地域図書館ウェブサイトについてと、何を学ぶのかをもう少し知りました。今度は例を含む[スケルトンプロジェクト](/ja/docs/Learn/Server-side/Django/skeleton_website)を作成しましょう。
 
 {{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
-
-## このモジュール内
-
-- [Django の紹介](/ja/docs/Learn/Server-side/Django/Introduction)
-- [Django 開発環境の設定](/ja/docs/Learn/Server-side/Django/development_environment)
-- [Django チュートリアル: 地域図書館ウェブサイト](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django チュートリアル Part 2: ウェブサイトの骨組み作成](/ja/docs/Learn/Server-side/Django/skeleton_website)
-- [Django チュートリアル Part 3: モデルの使用](/ja/docs/Learn/Server-side/Django/Models)
-- [Django チュートリアル Part 4: Django 管理サイト](/ja/docs/Learn/Server-side/Django/Admin_site)
-- [Django チュートリアル Part 5: ホームページの作成](/ja/docs/Learn/Server-side/Django/Home_page)
-- [Django チュートリアル Part 6: 汎用の一覧表示と詳細表示](/ja/docs/Learn/Server-side/Django/Generic_views)
-- [Django チュートリアル Part 7: セッションフレームワーク](/ja/docs/Learn/Server-side/Django/Sessions)
-- [Django チュートリアル Part 8: ユーザー認証と権限](/ja/docs/Learn/Server-side/Django/Authentication)
-- [Django チュートリアル Part 9: フォームの操作](/ja/docs/Learn/Server-side/Django/Forms)
-- [Django チュートリアル Part 10: Django ウェブアプリケーションのテスト](/ja/docs/Learn/Server-side/Django/Testing)
-- [Django チュートリアル Part 11: Django を本番環境にデプロイする](/ja/docs/Learn/Server-side/Django/Deployment)
-- [Django ウェブアプリケーションセキュリティ](/ja/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django ミニブログ](/ja/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -3,7 +3,7 @@ title: API リファレンスサイドバー
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
 original_slug: MDN/Contribute/Howto/Write_an_API_reference/Sidebars
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}
@@ -92,8 +92,10 @@ API サイドバーを作成するには、次の 3 つの手順を実行する�
     例として、次のようなオブジェクトがあります。
 
    ```json
-   { "url":   "/docs/Web/API/Detecting_device_orientation",
-   "title": "Detecting device orientation" }
+   {
+     "url": "/docs/Web/API/Detecting_device_orientation",
+     "title": "Detecting device orientation"
+   }
    ```
 
     "Detecting device orientation" というタイトルのリンクを生成し、 [https://developer.mozilla.org/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation) を指すようにします。
@@ -101,8 +103,10 @@ API サイドバーを作成するには、次の 3 つの手順を実行する�
 7. `"dictionaries"` — API の一部であるすべての辞書を一覧にした文字列の配列。
     一般的に、特別な意味がある場合や、複数のページから参照する必要がある場合を除き、複数のプロパティやメソッドで使用される辞書のみをここにリストアップすべきです。
     "CryptoKeyPair" は [https://developer.mozilla.org/ja/docs/Web/API/CryptoKeyPair](/ja/docs/Web/API/CryptoKeyPair) へのリンクを生成します。
+   > **メモ:** MDN は、辞書を別個に文書化することをやめつつあります。
+   > 可能な限り、これらは使用される場所でオブジェクトとして記述するようになりました。
 8. `"types"` — API で定義されている型定義子と列挙型の配列。リストを短くするために、特別に重要なものや複数のページから参照されるものだけをリストアップすることもできます。
-   > **メモ:** MDN は型定義子を個別に文書化することから脱却しつつあります。
+   > **メモ:** MDN は型定義子を個別に文書化することをやめつつあります。
    > 可能な限り、これらが使用されている箇所で値として記述されるようになりました。
 9. `"callbacks"` — 値は、その API で定義されているすべてのコールバック型のリストを含む配列です。コールバック型を含む API であっても、このグループを使用する必要はないと思われるかもしれません。
     コールバック型を含む API でも、このグループを全く使用する必要がないと感じるかもしれません。なぜなら、コールバック型は個別にドキュメント化しても意味がないことが多いからです。

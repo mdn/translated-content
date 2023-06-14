@@ -56,7 +56,7 @@ console.log(gen.next().value); // 2
 
 ## Générateurs historiques
 
-Firefox (SpiderMonkey) implémente également une version antérieure pour les générateurs avec [JavaScript 1.7](/fr/docs/Web/JavaScript/New_in_JavaScript/1.7). Pour cette syntaxe, il n'y a pas besoin d'utiliser l'astérisque dans la déclaration de la fonction, il suffit d'utiliser le mot-clé `yield` dans le corps de la fonction. Les générateurs historiques sont une fonctionnalité dépréciée et seront supprimés à l'avenir ({{bug(1083482)}}), il est fortement déconseillé de les utiliser.
+Firefox (SpiderMonkey) implémente également une version antérieure pour les générateurs avec [JavaScript 1.7](/fr/docs/Web/JavaScript/New_in_JavaScript/1.7). Pour cette syntaxe, il n'y a pas besoin d'utiliser l'astérisque dans la déclaration de la fonction, il suffit d'utiliser le mot-clé `yield` dans le corps de la fonction. Les générateurs historiques sont une fonctionnalité dépréciée et seront supprimés à l'avenir ([bug Firefox 1083482](https://bugzil.la/1083482)), il est fortement déconseillé de les utiliser.
 
 ### Méthodes pour les générateurs historiques
 

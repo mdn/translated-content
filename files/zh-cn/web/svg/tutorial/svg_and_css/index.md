@@ -1,31 +1,15 @@
 ---
-title: SVG and CSS
+title: SVG 和 CSS
 slug: Web/SVG/Tutorial/SVG_and_CSS
-original_slug: Web/Guide/CSS/Getting_started/SVG_and_CSS
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
 
-本节将演示如何将 CSS 应用到 [SVG](/zh-CN/docs/SVG) 中。
+本节将演示如何将 CSS 应用到 [SVG](/zh-CN/docs/Web/SVG) 中。
 
 你将创建一个简单的演示代码并在支持 SVG 的浏览器中运行。
-
-这是 [CSS 教程](/zh-CN/docs/Web/Guide/CSS/Getting_started) 第二部分的第二节
-前一节：[JavaScript](/zh-CN/docs/Web/JavaScript/Getting_Started)
-下一节：[XML data](/zh-CN/docs/Web/Guide/CSS/Getting_started/XML_data)
-
-### 信息：SVG
-
-_SVG_ (Scalable Vector Graphics) 是一个基于 XML 的图形描述语言。
-
-它可以用于描述静态图、动画，以及用户界面。
-
-和其他基于 XML 的语言一样，SVG 支持用 CSS 样式表将图形内容和图形样式分离。
-
-在样式表中你可以在任何可以可以指定图片的地方指定一个 SVG 的 URL。比如，在 HTML 的样式表中，你可以为 `background` 属性指定一个 SVG 的 URL。
-
-| 在这个教程编写的时间点 (2011 中旬)，绝大多数现代浏览器都对 SVG 有基本的支持。其中包括 Internet Explorer 9 及其后续版本。一些 SVG 特性只被某些浏览器支持。参见 [SVG tables on caniuse.com](http://caniuse.com/#search=SVG) 了解支持情况。参见 [SVG element reference](/zh-CN/docs/SVG/Element) 了解兼容情况。通过安装 [Adobe](http://www.adobe.com/svg/viewer/install/main.html) 提供的插件，你可以让某些浏览器支持 SVG。欲在 Mozilla 了解更多关于 SVG 的信息，参考 [这里 SVG](/zh-CN/docs/SVG)。 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## 示例
 
@@ -393,8 +377,8 @@ svg {
 | 修改样式表使得当鼠标指针移到任何一个内层花瓣上时所有内层花瓣都变为粉色，但不改变外层花瓣的效果。 |
 | ------------------------------------------------------------------------------------------------ |
 
-#### 接下来？
+{{ PreviousNext("Web/SVG/Tutorial/Tools_for_SVG") }}
 
-如果你有任何疑问或评论请移步到[讨论区](/zh-CN/docs/Talk:CSS/Getting_Started/SVG_and_CSS)。
+## 接下来？
 
-在这个演示中，支持 SVG 的浏览器知道如何显示 SVG 元素。样式表只是修改其呈现的方式。同样，这对 HTML 和 XUL 文档也是适用的。你也可以将 CSS 用于 XML 文档。（与 HTML 相比，）XML 没有预先为元素定义样式。下一个节将对此进行演示：[XML data](/zh-CN/docs/Web/Guide/CSS/Getting_started/XML_data)
+在这个演示中，你的支持 SVG 的浏览器已经知道如何显示 SVG 元素。样式表只是在某些方面修改了显示方式。这对 HTML 文档来说也是如此。但是你可以将 CSS 用于通用的 XML 文档，在这些文档中，没有预定义的方式来显示元素。下一页演示了这一点：[XML 介绍](/zh-CN/docs/Web/XML/XML_introduction)

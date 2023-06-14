@@ -13,9 +13,9 @@ slug: Web/CSS/justify-items
 
 - 在块级布局中，会将其包含的项目在其行内轴上对齐；
 - 绝对定位的元素中，会将其包含的项目在其行内轴上对齐，同时考虑 top、left、bottom、right 的值；
-- 表格单元中，该属性被忽略（块级元素、绝对定位元素和表格布局中对齐的[更多信息](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables)）；
-- 弹性盒子布局中，该属性被忽略（弹性盒子中对齐的[更多信息](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)）；
-- 栅格布局中，会将其栅格区域内的项目在其行内轴上对齐（栅格布局中对齐的[更多信息](/zh-CN/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)）；
+- 表格单元中，该属性被忽略（块级元素、绝对定位元素和表格布局中对齐的[更多信息](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Block_Abspos_Tables)）；
+- 弹性盒子布局中，该属性被忽略（弹性盒子中对齐的[更多信息](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)）；
+- 栅格布局中，会将其栅格区域内的项目在其行内轴上对齐（栅格布局中对齐的[更多信息](/zh-CN/docs/Web/CSS/CSS_box_alignment/Box_Alignment_In_Grid_Layout)）；
 
 ## 语法规则
 
@@ -124,8 +124,8 @@ justify-items: unset;
 
 ## 另见
 
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)
+- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)
 - The {{CSSxRef("place-items")}} shorthand property
 - The {{CSSxRef("justify-self")}} property
 - The {{CSSxRef("align-items")}} property

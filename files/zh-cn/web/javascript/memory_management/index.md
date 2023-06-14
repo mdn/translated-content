@@ -1,6 +1,6 @@
 ---
 title: 内存管理
-slug: Web/JavaScript/Memory_Management
+slug: Web/JavaScript/Memory_management
 ---
 
 {{JsSidebar("Advanced")}}

@@ -1,6 +1,6 @@
 ---
 title: Notification.timestamp
-slug: Web/API/notification/timestamp
+slug: Web/API/Notification/timestamp
 tags:
   - API
   - API Notifications

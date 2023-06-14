@@ -616,16 +616,3 @@ Comme vous le voyez, vous n'avez besoin d'écrire que peu de CSS en utilisant Sk
 Vous savez maintenant comment les divers systèmes de trames sont créés. La connaissance de ces processus est utile dans le cadre d'un travail sur des sites anciens, ainsi que pour la compréhension des différences entre les trames natives de «&nbsp;CSS Grid Layout&nbsp;» et celles des anciens systèmes.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
-
-## Dans ce module
-
-- [Introduction to CSS layout](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal Flow](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column Layout](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Legacy Layout Methods](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental Layout Comprehension Assessment](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

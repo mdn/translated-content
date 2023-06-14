@@ -11,7 +11,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 过程中的每一步都会有例子可供体验，让你更清晰的了解他的制作过程。你将学习到如何使用 canvas 标签的基本语法去实现简单游戏的渲染、动画、碰撞、控制胜负。
 
-为了更快速高效的学习本系列教程，你需要掌握 [JavaScript](/zh-CN/Learn/Getting_started_with_the_web/JavaScript_basics) 的一些基础知识。学习完本教程之后你就可以创建自己的网页小游戏了。
+为了更快速高效的学习本系列教程，你需要掌握 [JavaScript](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics) 的一些基础知识。学习完本教程之后你就可以创建自己的网页小游戏了。
 
 ![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](mdn-breakout-gameplay.png)
 

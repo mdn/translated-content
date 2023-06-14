@@ -1,9 +1,9 @@
 ---
-title: 'Element: pointerout イベント'
+title: "Element: pointerout イベント"
 slug: Web/API/Element/pointerout_event
 original_slug: Web/API/Document/pointerout_event
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: 9fb6c9e56c6db295967384730feeb941509ac743
 ---
 
 {{APIRef}}
@@ -15,9 +15,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('pointerout', (event) => {});
+addEventListener("pointerout", (event) => {});
 
-onpointerout = (event) => { };
+onpointerout = (event) => {};
 ```
 
 ## イベント型
@@ -56,20 +56,20 @@ _このインターフェイスは {{domxref("MouseEvent")}} および {{domxref
 `addEventListener()` を使用した例です。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('pointerout', (event) => {
-  console.log('Pointer moved out');
+para.addEventListener("pointerout", (event) => {
+  console.log("Pointer moved out");
 });
 ```
 
 `onpointerout` イベントハンドラープロパティを使用した例です。
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
 para.onpointerout = (event) => {
-  console.log('Pointer moved out');
+  console.log("Pointer moved out");
 };
 ```
 

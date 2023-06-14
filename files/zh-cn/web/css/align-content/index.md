@@ -5,7 +5,7 @@ slug: Web/CSS/align-content
 
 {{CSSRef("CSS Flexible Boxes")}}
 
-[CSS](/zh-CN/docs/Web/CSS) 的 **`align-content`** 属性设置了浏览器如何沿着[弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)的纵轴和[网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)的主轴在内容项之间和周围分配空间。
+[CSS](/zh-CN/docs/Web/CSS) 的 **`align-content`** 属性设置了浏览器如何沿着[弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)的纵轴和[网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)的主轴在内容项之间和周围分配空间。
 
 {{EmbedInteractiveExample("pages/css/align-content.html")}}
 
@@ -242,7 +242,7 @@ display.addEventListener('change', function (evt) {
 
 ## 参见
 
-- 弹性盒子布局的基本概念：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- 对齐弹性容器中的弹性项目：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- 网格布局中的盒模型对齐：_[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
-- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_Box_Alignment)
+- 弹性盒子布局的基本概念：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- 对齐弹性容器中的弹性项目：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- 网格布局中的盒模型对齐：_[Box alignment in CSS Grid layouts](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
+- [CSS Box Alignment](/zh-CN/docs/Web/CSS/CSS_box_alignment)

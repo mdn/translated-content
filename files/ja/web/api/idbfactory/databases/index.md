@@ -2,16 +2,16 @@
 title: IDBFactory.databases()
 slug: Web/API/IDBFactory/databases
 l10n:
-  sourceCommit: d42b609444efb915ab46117f59985d67dda21eb6
+  sourceCommit: 21d3e89589aaf9e5cfa667de679134513ab833f3
 ---
 
 {{ APIRef("IndexedDB") }}
 
-{{domxref("IDBFactory")}} インターフェイスの **`databases`** メソッドは、利用可能な全てのデータベースのリストを、名前とバージョンを含めて返します。
+**`databases`** は {{domxref("IDBFactory")}} のインターフェイスのメソッドは、利用可能な全てのデータベースのリストを、名前とバージョンを含めて返します。
 
 {{AvailableInWorkers}}
 
-> **メモ:** このメソッドは仕様書のドラフトで導入されており、ブラウザーの互換性は限られています。
+> **メモ:** このメソッドは仕様書の草稿で導入されており、ブラウザーの互換性は限られています。
 
 ## 構文
 
@@ -25,7 +25,7 @@ databases()
 
 ### 返値
 
-エラーで解決するか、`name` と `version` の 2 個の要素からなる辞書のリストで解決する {{jsxref("Promise")}} を返します。
+エラーで解決するか、`name` と `version` の 2 個の要素からなる辞書のリストで解決するプロミスを返します。
 
 - `name`
   - : データベースの名前です。
@@ -40,10 +40,10 @@ databases()
 ## 例
 
 ```js
-const promise = indexedDB.databases()
+const promise = indexedDB.databases();
 promise.then((databases) => {
-  console.log(databases)
-})
+  console.log(databases);
+});
 ```
 
 ## 仕様書

@@ -394,12 +394,3 @@ Pour le faire fonctionner, vous devrez&nbsp;:
 Dans cet article, nous avons vu une introduction à l'utilisation des API tierces afin d'ajouter des fonctionnalités à nos sites web.
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## Dans ce module
-
-- [Une introduction aux API Web](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipuler les documents](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Récupérer des données du serveur](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Dessiner des graphiques](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Les API pour l'audio et la vidéo](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Le stockage côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

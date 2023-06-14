@@ -821,7 +821,7 @@ XMLHttpRequest が `status=0` および `statusText=null` を受信して終了�
 
 ## ワーカー
 
-overrideMimeType を設定すると、 {{domxref("Worker")}} では動作しません。詳しくは {{bug(678057)}} を参照してください。他のブラウザーは扱いが異なるかもしれません。
+overrideMimeType を設定すると、 {{domxref("Worker")}} では動作しません。詳しくは [Firefox バグ 678057](https://bugzil.la/678057) を参照してください。他のブラウザーは扱いが異なるかもしれません。
 
 ## 仕様書
 

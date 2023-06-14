@@ -22,10 +22,12 @@ _親インターフェイス{{domxref("BaseAudioContext")}}からプロパティ
   - : {{domxref("AudioDestinationNode")}}から音声サブシステムまでの音声を渡す{{domxref("AudioContext")}}によって起きる処理レイテンシーの秒数を返します。
 - {{domxref("AudioContext.outputLatency")}} {{readonlyinline}} {{experimental_inline}}
   - : 現在の音声コンテキストの出力レイテンシーの見積もりを返します。
+- {{domxref("AudioContext.sinkId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : 現在の出力音声デバイスの sink ID を返します。
 
 ## メソッド
 
-親インターフェイス{{domxref("<em>BaseAudioContext</em>")}} からメソッドを継承します。
+親インターフェイス{{domxref("BaseAudioContext")}} からメソッドを継承します。
 
 - {{domxref("AudioContext.close()")}}
   - : 任意のシステム音声リソースをリリースするために、音声コンテキストを閉じます。
@@ -39,6 +41,8 @@ _親インターフェイス{{domxref("BaseAudioContext")}}からプロパティ
   - : メディアストリームトラックを表している{{domxref("MediaStream")}}と関連づけられた{{domxref("MediaStreamTrackAudioSourceNode")}}を生成します。
 - {{domxref("AudioContext.getOutputTimestamp()")}}
   - : 二つの関連づけられたコンテキストの音声ストリームの位置の値を含んでいる `AudioTimestamp` オブジェクトを新しく返します。
+- {{domxref("AudioContext.setSinkId()")}} {{Experimental_Inline}}
+  - : この `AudioContext` 用の出力音声デバイスを設定します。
 - {{domxref("AudioContext.suspend()")}}
   - : 一時的に音声ハードウェアアクセスを停止し、プロセスの CPU/バッテリー使用を減らすために、音声コンテキストの時間の進行を中断します。
 
@@ -49,6 +53,11 @@ _親インターフェイス{{domxref("BaseAudioContext")}}からプロパティ
   - : あらかじめ中断させられた音声コンテキストの時間の進行を返します。
 
     注意: `resume()` メソッドはまだ利用することができます。このメソッドは{{domxref("BaseAudioContext")}}インターフェイス({{domxref("BaseAudioContext.resume()")}}を見てください)上で現在定義されています。したがって、{{domxref("AudioContext")}}インターフェイスと{{domxref("OfflineAudioContext")}}インターフェイスの両方でアクセスすることができます。
+
+## イベント
+
+- {{domxref("AudioContext/sinkchange_event", "sinkchange")}} {{Experimental_Inline}}
+  - : 出力音声デバイスが変更された (そしてその結果 {{domxref("AudioContext.sinkId")}} が変更された) 時発火します。
 
 ## 例
 

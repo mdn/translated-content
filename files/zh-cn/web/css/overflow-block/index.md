@@ -5,73 +5,95 @@ slug: Web/CSS/overflow-block
 
 {{CSSRef}}
 
-The **`overflow-block`** [CSS](/zh-CN/docs/Web/CSS) property sets what shows when content overflows the block start and block end edges of a box. This may be nothing, a scroll bar, or the overflow content.
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-block`** 设置了当内容溢出盒的块首和块末侧时所显示的内容。可以不显示，或者显示滚动条或溢出内容。
 
-> **备注：** The `overflow-block` property maps to {{Cssxref("overflow-y")}} or {{Cssxref("overflow-x")}} depending on the writing mode of the document.
+> **备注：**`overflow-block` 属性根据文档的书写模式对应于 {{CSSXref("overflow-y")}} 或 {{CSSXref("overflow-x")}}。
 
-## Syntax
+## 语法
 
 ```css
-/* Keyword values */
+/* 关键词值 */
 overflow-block: visible;
 overflow-block: hidden;
 overflow-block: scroll;
 overflow-block: auto;
 
-/* Global values */
+/* 全局值 */
 overflow-block: inherit;
 overflow-block: initial;
+overflow-block: revert;
+overflow-block: revert-layer;
 overflow-block: unset;
 ```
 
-The `overflow-block` property is specified as a single keyword chosen from the list of values below.
+`overflow-block` 属性可指定为下列关键词之一。
 
-### Values
+### 取值
 
 - `visible`
-  - : Content is not clipped and may be rendered outside the padding box's block start and block end edges.
+  - : 不裁剪内容且可在内边距盒的块首和块末侧外渲染内容。
 - `hidden`
-  - : Content is clipped if necessary to fit the block dimension in the padding box. No scrollbars are provided.
+  - : 若内边距盒在块向尺度上无法容纳内容则裁剪内容。不提供滚动条。
 - `scroll`
-  - : Content is clipped if necessary to fit in the block dimension in the padding box. Browsers display scrollbars whether or not any content is actually clipped. (This prevents scrollbars from appearing or disappearing when the content changes.) Printers may still print overflowing content.
+  - : 若内边距盒在块向尺度上无法容纳内容则裁剪内容。无论内容是否被裁剪，浏览器均显示滚动条。（由此可阻止滚动条在内容变化时显示或消失。）打印机仍可能打印溢出内容。
 - `auto`
-  - : Depends on the user agent. If content fits inside the padding box, it looks the same as `visible`, but still establishes a new block-formatting context. Desktop browsers provide scrollbars if content overflows.
+  - : 取决于用户代理。若内边距盒可以容纳内容，则与 `visible` 表现相同，但仍建立新的块格式化上下文。若内容溢出则桌面浏览器提供滚动条。
 
-## Formal definition
+## 形式定义
 
 {{CSSInfo}}
 
-## Formal syntax
+## 形式语法
 
-{{csssyntax}}
+{{CSSSyntax}}
 
-## Examples
+## 示例
 
 ### HTML
 
 ```html
 <ul>
-  <li><code>overflow-block:hidden</code> — hides the text outside the box
-  <div id="div1">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-block:hidden</code>——在盒外隐藏文本
+    <div id="div1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
-  <li><code>overflow-block:scroll</code> — always adds a scrollbar
-  <div id="div2">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-block:scroll</code>——总是添加滚动条
+    <div id="div2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
-  <li><code>overflow-block:visible</code> — displays the text outside the box if needed
-  <div id="div3">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-block:visible</code>——按需在盒外显示文本
+    <div id="div3">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 
-  <li><code>overflow-block:auto</code> — on most browser, equivalent to <code>scroll</code>
-  <div id="div4">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  <li>
+    <code>overflow-block:auto</code>——在多数浏览器上等价于 <code>scroll</code>
+    <div id="div4">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur.
     </div>
   </li>
 </ul>
@@ -85,30 +107,42 @@ The `overflow-block` property is specified as a single keyword chosen from the l
 #div3,
 #div4 {
   border: 1px solid black;
-  width:  250px;
+  width: 250px;
   height: 100px;
 }
 
-#div1 { overflow-block: hidden; margin-bottom: 120px;}
-#div2 { overflow-block: scroll; margin-bottom: 120px;}
-#div3 { overflow-block: visible; margin-bottom: 120px;}
-#div4 { overflow-block: auto; margin-bottom: 120px;}
+#div1 {
+  overflow-block: hidden;
+  margin-bottom: 120px;
+}
+#div2 {
+  overflow-block: scroll;
+  margin-bottom: 120px;
+}
+#div3 {
+  overflow-block: visible;
+  margin-bottom: 120px;
+}
+#div4 {
+  overflow-block: auto;
+  margin-bottom: 120px;
+}
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Examples", "100%", "780")}}
+{{EmbedLiveSample("示例", "100%", "780")}}
 
-## Specifications
+## 规范
 
-{{Specifications}}{{cssinfo}}
+{{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- Related CSS properties: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-inline")}}, {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
-- [CSS Logical Properties](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)
-- [Writing Modes](/zh-CN/docs/Web/CSS/CSS_Writing_Modes)
+- 相关 CSS 属性：{{CSSXref("text-overflow")}}、{{CSSXref("white-space")}}、{{CSSXref("overflow")}}、{{CSSXref("overflow-inline")}}、{{CSSXref("overflow-x")}}、{{CSSXref("overflow-y")}}、{{CSSXref("clip")}}、{{CSSXref("display")}}
+- [CSS 逻辑属性](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
+- [书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)

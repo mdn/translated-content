@@ -3,7 +3,7 @@ title: よく使われるマクロ
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 original_slug: MDN/Structures/Macros/Commonly-used_macros
 l10n:
-  sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
+  sourceCommit: d3cdafcdb4d22e5c55771501e7c80451a96aa032
 ---
 
 {{MDNSidebar}}
@@ -30,7 +30,7 @@ MDN では、リファレンスページや用語集などへのリンクを簡�
 
 ### リファレンスのページへのリンク
 
-MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）のページに、ロケールに依存しないリンクを張るためのマクロが用意されています。
+MDN の特定の参照領域（JavaScript、CSS、HTML 要素、SVG など）のページに、ロケールに依存しないリンクを張るためのマクロが用意されています。
 
 マクロの使い方は簡単です。
 必要なのは、第一引数にリンクするアイテムの名前を指定することだけです。
@@ -77,20 +77,6 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
       </td>
       <td>
         <code>\{{HTMLElement("select")}}</code> は {{HTMLElement("select")}} になります。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrxref.ejs"
-          >HTMLAttrxRef</a>
-      </td>
-      <td>
-        属性名のみを指定した場合は <a href="/ja/docs/Web/HTML/Global_attributes">HTML のグローバル属性の説明</a>。
-        <br />属性名と要素名を指定した場合は、特定の HTML 要素に関連付けられた属性。
-      </td>
-      <td>
-        <code>\{{HTMLAttrxRef("lang")}}</code> は、グローバル属性の説明 {{HTMLAttrxRef("lang")}} にリンクします。<br />
-        <code>\{{HTMLAttrxRef("type","input")}}</code> は（{{HTMLElement("input")}} 要素の） {{htmlattrxref("type","input")}} 属性へのリンクになります。
       </td>
     </tr>
     <tr>
@@ -163,13 +149,6 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
   </tbody>
 </table>
 
-### バグへのリンク
-
-- バグ
-
-  - [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) を使うと、 bugzilla.mozilla.org に登録されているバグへのリンクを簡単に作ることができます。構文は `\{{Bug(123456)}}` です。 {{Bug(123456)}} のようなリンクになります。
-  - [`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) は WebKit バグのデータベースへのリンクを挿入します。例えば `\{{WebkitBug(31277)}}` は {{WebkitBug(31277)}} を挿入します。
-
 ### 複数のページからなるガイドのためのナビゲーション補助
 
 [`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs)、[`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs)、[`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) は、一連の記事の中でのナビゲーションコントロールを提供します。一方向用のテンプレートでは、 前の または 次の 記事の Wiki 位置を指す 1 つの引数が必要です。 [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) については、前の記事、次の記事を指す 2 つの引数を取ります。最初の引数が前の記事を指し、2 番めの引数が次の記事を指します。
@@ -225,6 +204,7 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
 #### 実験的なもの
 
 [`experimental_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/experimental_inline.ejs) は、その API が広く実装されておらず、また将来変更される可能性があることを示すインラインマークを付けます。
+**experimental** の定義の詳細については、[実験的、非推奨、廃止](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)の記事を参照してください。
 
 ##### 構文
 
@@ -239,6 +219,7 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
 #### 非推奨のもの
 
 [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) はインラインの非推奨 (deprecated) マークを付け、その API が公式には非推奨であり、使用を控えるべきであることを示します。
+**deprecated** の定義の詳細については、[実験的、非推奨、廃止](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete)の記事を参照してください。
 
 ##### 構文
 
@@ -265,14 +246,14 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
 [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) マクロは、その機能が[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)のコンテキストで有効であることを示すためのローカライズされた注釈ボックスを挿入するのに使われます。
 引数 `notservice` を使用すると、ある機能がサービスワーカー以外のウェブワーカーで動作することを示すことができます。
 
-##### 構文
+#### 構文
 
 ```plain
 \{{AvailableInWorkers}}
 \{{AvailableInWorkers("notservice")}}
 ```
 
-##### 例
+#### 例
 
 {{AvailableInWorkers}}
 {{AvailableInWorkers("notservice")}}

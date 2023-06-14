@@ -46,7 +46,7 @@ Ejemplos: [Asteroids in Popup](https://addons.mozilla.org/en-US/firefox/addon/as
 
 Las extensiones para Firefox se construyen utilizando las [APIs de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions), un sistema multi-navegador para desarrollar extensiones. En gran medida, la API es compatible con la [extension API](https://developer.chrome.com/extensions) soportada por Google Chrome y Opera. Extensiones escritas para estos navegadores en la mayoría de los casos se ejecutan en Firefox o Microsoft Edge con sólo unos pocos [cambios](/es/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension). La API es también totalmente compatible con los [multiprocesos de Firefox](/es/Firefox/Multiprocess_Firefox).
 
-Si tiene ideas o preguntas, o necesita ayuda para migrar un Add-on heredado a las APIs de WebExtensions, puede comunicarse con nosotros en el[dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) o en [#extdev](irc://irc.mozilla.org/extdev) en [IRC](https://wiki.mozilla.org/IRC).
+Si tiene ideas o preguntas, o necesita ayuda para migrar un Add-on heredado a las APIs de WebExtensions, puede comunicarse con nosotros en el [Discourse de Add-ons](https://discourse.mozilla.org/c/add-ons/35) o en [#extdev](irc://irc.mozilla.org/extdev) en [IRC](https://wiki.mozilla.org/IRC).
 
 ## ¿Qué sigue?
 

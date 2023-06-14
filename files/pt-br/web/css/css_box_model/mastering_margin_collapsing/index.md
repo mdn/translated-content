@@ -1,6 +1,6 @@
 ---
 title: Dominando margin collapsing
-slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 original_slug: Web/CSS/CSS_Box_Model/margin_collapsing
 ---
 

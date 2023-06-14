@@ -21,7 +21,7 @@ WebAssembly JavaScript API를 사용하는 방법과 웹 페이지에서 wasm �
 2. 다음으로, wasm 파일과 동일한 디렉토리에 index.html이라는 간단한 HTML 파일을 작성해보세요 ([simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)을 참고하면 쉽습니다.)
 3. 이제 여기서 무슨 일이 벌어지는지 이해하기 쉽도록 하기위해 wasm 모듈 ([Converting WebAssembly format to wasm](/ko/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format)을 참고)의 텍스트 표현을 살펴 보겠습니다.
 
-    ```rs
+    ```rust
     (module
       (func $i (import "imports" "imported_func") (param i32))
       (func (export "exported_func")

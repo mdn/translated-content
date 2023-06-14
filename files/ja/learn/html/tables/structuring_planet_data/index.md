@@ -50,9 +50,3 @@ slug: Learn/HTML/Tables/Structuring_planet_data
 あなたが組織的コースの一環としてこの評価に従っている場合、採点のために作品を教師/メンターに渡すことができるはずです。もし自己学習しているのであれば、[この練習問題についてのディスカッションスレッド](https://discourse.mozilla.org/t/structuring-planet-data-assessment/24680)、または [Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャンネルで尋ねることで、非常に簡単にマーキングガイドを入手することができます。最初にエクササイズをしてみてください。不正をすることによって得られるものは何もありません！
 
 {{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
-
-## このモジュール
-
-- [HTML の表の基本](/ja/docs/Learn/HTML/Tables/Basics)
-- [HTML 表の高度な機能とアクセシビリティ](/ja/docs/Learn/HTML/Tables/Advanced)
-- [評価: 太陽系の惑星のデータを構造化する](/ja/docs/Learn/HTML/Tables/Structuring_planet_data)

@@ -262,13 +262,3 @@ panel.ontouchend = stopMove;
 - [サイトをタッチデバイスで機能させる](http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644)（英語） — タッチイベントを使用してモバイルデバイスで対話を機能させるための便利な記事。
 
 {{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
-
-## このモジュール内の文書
-
-- [アクセシビリティとは？](/ja/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: アクセシビリティの基礎](/ja/docs/Learn/Accessibility/HTML)
-- [CSS と JavaScript のアクセシビリティのベスト・プラクティス](/ja/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA の基本](/ja/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [アクセシブルなマルチメディア](/ja/docs/Learn/Accessibility/Multimedia)
-- [モバイルのアクセシビリティ](/ja/docs/Learn/Accessibility/Mobile)
-- [アクセシビリティのトラブルシューティング](/ja/docs/Learn/Accessibility/Accessibility_troubleshooting)

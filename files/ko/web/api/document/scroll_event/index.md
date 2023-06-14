@@ -30,7 +30,7 @@ document view 나 element가 스크롤 될 때, **`scroll`** 이벤트가 발생
 ### 스크롤 이벤트의 조절
 
 `scroll` 이벤트가 빠른 속도로 실행될 수 있기 때문에, 이벤트 핸들러는 DOM 수정과 같이 느린 작업을 실행하지 말아야 합니다. 대신, 다음을 사용하여 이벤트를 제한하는 것을 권장합니다.
-{{domxref("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{domxref("WindowOrWorkerGlobalScope.setTimeout()", "setTimeout()")}}, 혹은, {{domxref("CustomEvent")}}
+{{domxref("Window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{domxref("setTimeout()")}}, 혹은, {{domxref("CustomEvent")}}
 
 그러나 입력 이벤트와 애니메이션 프레임은 거의 동일한 속도로 실행되므로 아래 최적화는 종종 불필요합니다. 다음은 `requestAnimationFrame`에 대한 `scroll`이벤트를 최적화하는 예제입니다.
 

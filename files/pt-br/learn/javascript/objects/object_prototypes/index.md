@@ -279,13 +279,3 @@ Este artigo abrangeu protótipos de objetos JavaScript, incluindo como cadeias d
 No próximo artigo, veremos como você pode implementar a herança de funcionalidade entre dois dos seus próprios objetos personalizados.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
-
-## Neste módulo
-
-- [Object basics](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/pt-BR/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

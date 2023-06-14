@@ -218,12 +218,3 @@ Isto também encerra o módulo [Multimedia and embedding](/pt-BR/docs/Learn/HTML
 - {{htmlelement("source")}}
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
-
-## Neste Módulo
-
-- [Imagens em HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [De \<object> a \<iframe> — outras tecnologias](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adicionando gráficos vetorias na Web](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Imagens responsivas](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

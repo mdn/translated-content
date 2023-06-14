@@ -92,5 +92,5 @@ slug: Web/HTML/Element/datalist
 
 ## 関連情報
 
-- {{HTMLElement("input")}} 要素、およびもっと具体的な {{htmlattrxref("list", "input")}} 属性
+- {{HTMLElement("input")}} 要素、およびもっと具体的な [`list`](/ja/docs/Web/HTML/Element/input#list) 属性
 - {{HTMLElement("option")}} 要素

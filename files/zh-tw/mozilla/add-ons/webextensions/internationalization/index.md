@@ -78,9 +78,9 @@ Let's now look at the structure of one of these files ([\_locales/en/messages.js
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }
@@ -116,7 +116,9 @@ To call a message string like this, you need to specify it like this:
 4. The name of the message you want to call as defined in `messages.json`, followed by
 5. Two underscores
 
-    __MSG_ + messageName + __
+```
+__MSG_ + messageName + __
+```
 
 ### Specifying a default locale
 

@@ -11,11 +11,11 @@ slug: Web/HTML/Element/canvas
 
 本元素支持[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-- {{htmlattrdef("height")}}
+- `height`
   - : 该元素占用空间的高度，以 CSS 像素（px）表示，默认为 150。
-- {{htmlattrdef("moz-opaque")}} {{non-standard_inline}} {{deprecated_inline}}
+- `moz-opaque` {{non-standard_inline}} {{deprecated_inline}}
   - : 通过设置这个属性，来控制 canvas 元素是否半透明。如果你不想 canvas 元素被设置为半透明，使用这个元素将可以优化浏览器绘图性能。
-- {{htmlattrdef("width")}}
+- `width`
   - : 该元素占用空间的宽度，以 CSS 像素（px）表示，默认为 300。
 
 ## 注意事项

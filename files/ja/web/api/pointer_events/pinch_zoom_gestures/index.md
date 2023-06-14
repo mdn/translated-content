@@ -2,7 +2,7 @@
 title: ピンチズームのジェスチャー
 slug: Web/API/Pointer_events/Pinch_zoom_gestures
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}
@@ -97,7 +97,9 @@ function pointermoveHandler(ev) {
   ev.target.style.border = "dashed";
 
   // キャッシュ内でこのイベントを見つけ、このイベントの記録を更新します
-  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  const index = evCache.findIndex(
+    (cachedEv) => cachedEv.pointerId === ev.pointerId
+  );
   evCache[index] = ev;
 
   // ポインターが 2 つダウンしている場合は、ピンチジェスチャーを確認します
@@ -107,13 +109,13 @@ function pointermoveHandler(ev) {
 
     if (prevDiff > 0) {
       if (curDiff > prevDiff) {
-         // 2 つのポインター間の距離が増えた
-         log("Pinch moving OUT -> Zoom in", ev);
-         ev.target.style.background = "pink";
+        // 2 つのポインター間の距離が増えた
+        log("Pinch moving OUT -> Zoom in", ev);
+        ev.target.style.background = "pink";
       }
       if (curDiff < prevDiff) {
         // 2 つのポインター間の距離が減った
-        log("Pinch moving IN -> Zoom out",ev);
+        log("Pinch moving IN -> Zoom out", ev);
         ev.target.style.background = "lightblue";
       }
     }
@@ -177,7 +179,9 @@ function pointerupHandler(ev) {
 ```js
 function removeEvent(ev) {
   // このイベントをターゲットのキャッシュから削除する
-  const index = evCache.findIndex((cachedEv) => cachedEv.pointerId === ev.pointerId);
+  const index = evCache.findIndex(
+    (cachedEv) => cachedEv.pointerId === ev.pointerId
+  );
   evCache.splice(index, 1);
 }
 ```
@@ -197,16 +201,17 @@ function enableLog(ev) {
 
 function log(prefix, ev) {
   if (!logEvents) return;
-  const o = document.getElementsByTagName('output')[0];
-  const s = `${name}:<br>`
-    + `  pointerID   = ${ev.pointerId}<br>`
-    + `  pointerType = ${ev.pointerType}<br>`
-    + `  isPrimary   = ${ev.isPrimary}`;
+  const o = document.getElementsByTagName("output")[0];
+  const s =
+    `${prefix}:<br>` +
+    `  pointerID   = ${ev.pointerId}<br>` +
+    `  pointerType = ${ev.pointerType}<br>` +
+    `  isPrimary   = ${ev.isPrimary}`;
   o.innerHTML += `${s}<br>`;
 }
 
 function clearLog(event) {
-  const o = document.getElementsByTagName('output')[0];
+  const o = document.getElementsByTagName("output")[0];
   o.innerHTML = "";
 }
 ```

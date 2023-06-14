@@ -207,7 +207,7 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 
 > **참고:** 리눅스에서는, Firefox 12와 그 이전 버전에서는 이 키들의 `keypress` 이벤트도 전송했습니다.
 
-그러나, macOS의 이벤트 모델의 제한으로 인해 Caps Lock은 `keydown` 이벤트만 전송합니다. Num Lock은 일부 오래된(2007년 이전의) 노트북 모델에서는 지원되었지만, 그 이후로는 macOS에선 외부 키보드에서도 Num Lock을 지원하지 않습니다. Num Lock 키가 있는 옛 맥북에서는 Num Lock은 어떤 이벤트도 생성하지 않습니다. Gecko는 F14 키가 있는 외부 키보드가 연결되어 있다면 Scroll Lock 키를 지원합니다. Firefox의 일부 이전 버전에서는 Scroll Lock 키도 `keypress` 이벤트를 발생시켰습니다. 이 일관성 없는 동작은 {{bug(602812)}}였습니다.
+그러나, macOS의 이벤트 모델의 제한으로 인해 Caps Lock은 `keydown` 이벤트만 전송합니다. Num Lock은 일부 오래된(2007년 이전의) 노트북 모델에서는 지원되었지만, 그 이후로는 macOS에선 외부 키보드에서도 Num Lock을 지원하지 않습니다. Num Lock 키가 있는 옛 맥북에서는 Num Lock은 어떤 이벤트도 생성하지 않습니다. Gecko는 F14 키가 있는 외부 키보드가 연결되어 있다면 Scroll Lock 키를 지원합니다. Firefox의 일부 이전 버전에서는 Scroll Lock 키도 `keypress` 이벤트를 발생시켰습니다. 이 일관성 없는 동작은 [Firefox bug 602812](https://bugzil.la/602812)였습니다.
 
 ### 자동 반복 처리
 
@@ -311,7 +311,7 @@ document.addEventListener('keyup', (event) => {
 
   <kbd>Enter</kbd>
 
-  키의 조합(상호 호환성을 위해 유지됨)을 제외한 [non-printable keys](</ko/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>)에 대해서는 `keypress` 이벤트가 발생하지 않습니다 ({{bug(968056)}}).
+  키의 조합(상호 호환성을 위해 유지됨)을 제외한 [non-printable keys](</ko/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>)에 대해서는 `keypress` 이벤트가 발생하지 않습니다 ([Firefox bug 968056](https://bugzil.la/968056)).
 
 ## 같이 보기
 

@@ -341,7 +341,7 @@ var func = (
 
 ## 解析顺序
 
-虽然箭头函数中的箭头不是运算符，但箭头函数具有与常规函数不同的特殊[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)解析规则。
+虽然箭头函数中的箭头不是运算符，但箭头函数具有与常规函数不同的特殊[运算符优先级](/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_precedence)解析规则。
 
 ```js
 let callback;

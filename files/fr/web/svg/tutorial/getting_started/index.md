@@ -29,7 +29,7 @@ Commençons directement avec un exemple pratique. Jetez un coup d'œil au morcea
 </svg>
 ```
 
-Copiez le code précédent dans un document texte, puis enregistrez-le sous le nom de _demo1.svg_. Ouvrez le fichier dans Firefox. Vous obtiendrez alors l'image suivante (pour les utilisateurs de Firefox : cliquez [ici](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
+Copiez le code précédent dans un document texte, puis enregistrez-le sous le nom de _demo1.svg_. Ouvrez le fichier dans Firefox. Vous obtiendrez alors l'image suivante (pour les utilisateurs de Firefox : cliquez [ici](https://mdn.dev/archives/media/attachments/2012/07/09/3075/89b1e0a26e8421e19f907e0522b188bd/svgdemo1.xml))
 
 ![une image avec un rectangle rouge contenant un disque vert dans lequel est écrit SVG en blanc](svgdemo1.png)
 

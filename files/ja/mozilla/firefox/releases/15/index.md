@@ -25,19 +25,19 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 
 ### DOM
 
-- DOM Events Level 3 のメソッドであり、`Ctrl` `や Shift`のような、モディファイアキーの状態を調べることができる、[`KeyboardEvent.getModifierState()`](/ja/docs/DOM/KeyboardEvent#getModifierState%28%29) と [`MouseEvent.getModifierState()`](/ja/docs/DOM/MouseEvent#getModifierState%28%29)　が実装されました（bugs [630811](https://bugzilla.mozilla.org/show_bug.cgi?id=630811) および [731878](https://bugzilla.mozilla.org/show_bug.cgi?id=731878)）。ただし、その挙動は最新の D3E 草案に従っています。そのため、モディファイアキー名のいくつかが IE と異なります（{{bug("769190")}}）。
+- DOM Events Level 3 のメソッドであり、`Ctrl` `や Shift`のような、モディファイアキーの状態を調べることができる、[`KeyboardEvent.getModifierState()`](/ja/docs/DOM/KeyboardEvent#getModifierState%28%29) と [`MouseEvent.getModifierState()`](/ja/docs/DOM/MouseEvent#getModifierState%28%29)　が実装されました（bugs [630811](https://bugzilla.mozilla.org/show_bug.cgi?id=630811) および [731878](https://bugzilla.mozilla.org/show_bug.cgi?id=731878)）。ただし、その挙動は最新の D3E 草案に従っています。そのため、モディファイアキー名のいくつかが IE と異なります（[Firefox バグ 769190](https://bugzil.la/769190)）。
 - マウスイベントで、[`MouseEvent.buttons`](/ja/docs/DOM/MouseEvent) 属性を用いたマウスボタンの状態を調べるためのサポートが実装されました。
-- キーボードイベントで、 [KeyboardEvent.location](/ja/docs/DOM/KeyboardEvent#Attributes_location) 属性を用いたキーの位置（標準、モディファイアキーの左もしくは右、テンキー上）を調べるためのサポートが実装されました（{{bug("166240")}}）。
+- キーボードイベントで、 [KeyboardEvent.location](/ja/docs/DOM/KeyboardEvent#Attributes_location) 属性を用いたキーの位置（標準、モディファイアキーの左もしくは右、テンキー上）を調べるためのサポートが実装されました（[Firefox バグ 166240](https://bugzil.la/166240)）。
 - `KeyboardEvent.keycode` の結果が Windows/Linux/Mac でほぼ同じであった従来のルールよりも優れたルールから算出されるようになりました。そして、それらは アラビア文字、キリル文字, タイ文字などのような、Linux と Mac での非 ASCII 入力可能レイアウトでも利用可能です。[仮想キーコードのための文書](/ja/docs/DOM/KeyboardEvent#Virtual_key_codes)を参照してください。
 - [`range.detach()`](/ja/docs/DOM/range.detach) メソッドは何もしないように変更されました。恐らく、将来的に削除されるでしょう。
-- `HTMLVideoElement.mozHasAudio() メソッドが実装されました。与えられた video 要素に関連づけられた音声トラックがあるかどうかを示します（bug 480376）。`
+- `HTMLVideoElement.mozHasAudio()` メソッドが実装されました。与えられた video 要素に関連づけられた音声トラックがあるかどうかを示します（[Firefox バグ 480376](https://bugzil.la/480376)）。
 - `Performance` API に新しいメソッド `now()` が追加されました。このメソッドは `DOMHighResTimeStamp` 型の高解像度タイマをサポートします（[bug 539095](https://bugzilla.mozilla.org/show_bug.cgi?id=539095)）。
 - [WebSMS API](/ja/docs/API/WebSMS) が更新され、SMS テキストメッセージが既読か未読かのどちらかを示す `read` 属性がサポートされました。
 - [FileHandle API](https://wiki.mozilla.org/WebAPI/FileHandleAPI) が実装されました。
 - [`Blob`](/ja/docs/DOM/Blob) コンストラクタが `blobParts` 引数の値として `ArrayBuffer` に加えて `ArrayBufferView` を取れるようになりました。 ([bug 752402](https://bugzilla.mozilla.org/show_bug.cgi?id=752402))
 - [Ambient Light Events Working Draft](http://www.w3.org/TR/ambient-light/) で策定された `DeviceLightEvent` が実装されました。
 - {{domxref("DeviceProximityEvent")}} および {{domxref("UserProximityEvent")}} [Proximity Events](http://www.w3.org/TR/proximity/) が実装されました。
-- {{domxref("File")}} `lastModifiedDate` プロパティが実装されました。 ({{bug("673586")}})
+- {{domxref("File")}} `lastModifiedDate` プロパティが実装されました。 ([Firefox バグ 673586](https://bugzil.la/673586))
 
 ### JavaScript
 
@@ -54,13 +54,13 @@ Firefox 15 は 2012 年 8 月 28 日にリリースされました。この記�
 
 - 数学演算記号で {{cssxref("@font-face")}} で指定したダウンローダブルフォントを利用できるようになりました。これにより、[MathML-fonts アドオン](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/) で引き伸ばされた演算記号が正常に表示されるようになります。
 - {{MathMLElement("maction")}} の `selection` 属性が `actiontype` 属性の値が `toggle` のときにのみ考慮されるようになりました。
-- [非推奨の名前付き空白バインディング](http://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) が削除されました（{{bug("673759")}}）。
+- [非推奨の名前付き空白バインディング](http://www.w3.org/TR/MathML3/chapter3.html#id.3.3.4.2.1) が削除されました（[Firefox バグ 673759](https://bugzil.la/673759)）。
 - [Length](/ja/docs/MathML/Attributes/Values) と {{MathMLElement("mpadded")}} の値でサポートされる構文が MathML3 仕様で指定されたものにより近くなりました。
-- New MathML mirrorable operators for Arabic math have been added to the operator dictionary ({{bug("757125")}}).
+- New MathML mirrorable operators for Arabic math have been added to the operator dictionary ([Firefox バグ 757125](https://bugzil.la/757125)).
 
 ### SVG
 
-- {{SVGElement("view")}} 要素のサポートが追加されました ({{bug("512525")}})。
+- {{SVGElement("view")}} 要素のサポートが追加されました ([Firefox バグ 512525](https://bugzil.la/512525))。
 
 ### Network
 

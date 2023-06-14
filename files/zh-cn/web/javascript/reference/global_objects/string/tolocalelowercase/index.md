@@ -33,7 +33,7 @@ str.toLocaleLowerCase([locale, locale, ...])
 
 `toLocaleLowerCase()` 方法返回根据任意区域语言大小写映射集而转换成小写格式的字符串。`toLocaleLowerCase()` 并不会影响字符串原本的值。在大多数情况下，该方法和调用 {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}的结果相同，但是在某些区域环境中，比如土耳其语，它的大小写映射并不遵循在 Unicode 中的默认的大小写映射，因此会有一个不同的结果。
 
-## 例子
+## 示例
 
 ### 使用 `toLocaleLowerCase()`
 

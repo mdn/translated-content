@@ -3,9 +3,9 @@ title: mask
 slug: Web/SVG/Attribute/mask
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-`mask`属性绑定的元素将应用给定的{{ SVGElement("mask") }}元素。
+`mask` 属性绑定的元素将应用给定的 {{ SVGElement("mask") }} 元素。
 
 作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。
 

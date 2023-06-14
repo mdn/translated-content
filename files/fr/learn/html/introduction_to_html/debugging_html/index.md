@@ -106,7 +106,7 @@ Voici le moment venu d'étudier le caractère permissif du code HTML.
     - Les élements {{htmlelement("p")}} (paragraphe) et {{htmlelement("li")}} (élément de liste) n'ont pas de balise de fermeture. En voyant l'image ci‑dessus, cela ne semble pas avoir trop sévèrement affecté le rendu, car on voit bien où un élément se termine et où le suivant commence.
     - Le premier élément {{htmlelement("strong")}} n'a pas de balise de fermeture. C'est un peu plus problématique, car il n'est pas possible de dire où l'élément est supposé se terminer. En fait, tout le reste du texte est en gras.
     - Cette partie est mal imbriquée&nbsp;: `<strong>caractères gras <em>ou gras et italiques ?</strong> qu'est ce ?</em>`. Pas facile de dire comment il faut interpréter cela en raison du problème précédent.
-    - La valeur de l'attribut {{htmlattrxref("href","a")}} n'a pas de guillemet double fermant. C'est ce qui semble avoir posé le plus gros problème — le lien n'a pas été mentionné du tout.
+    - La valeur de l'attribut [`href`](/fr/docs/Web/HTML/Element/a#href) n'a pas de guillemet double fermant. C'est ce qui semble avoir posé le plus gros problème — le lien n'a pas été mentionné du tout.
 
 5. Revoyons maintenant comment le navigateur a vu le balisage, par comparaison au balisage du code source. Pour ce faire, utilisons les outils de développement du navigateur. Si vous n'êtes pas un familier de l'utilisation des outils de développement du navigateur, prenez quelques minutes pour revoir [Découverte des outils de développement du navigateur](/fr/docs/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs).
 6. Dans l'«&nbsp;Inspecteur&nbsp;», vous pouvez voir ce à quoi le balisage du rendu ressemble&nbsp;: ![L'inspecteur HTML dans Firefox, avec le paragraphe de l'exemple en surbrillance, montrant le texte "Quelles sont les causes d'erreurs en HTML ? Ici, vous pouvez voir que l'élément de paragraphe a été fermé par le navigateur.](fr-inspecteur.png)
@@ -184,15 +184,3 @@ Vous saurez que toutes vos erreurs sont corrigées quand vous verrez la bannièr
 Voilà donc une introduction au débogage HTML, qui devrait vous donner des compétences utiles sur lesquelles compter lorsque vous commencerez à déboguer des CSS, du JavaScript ou d'autres types de code plus tard dans votre carrière. Ceci marque également la fin des articles d'apprentissage du module Introduction au HTML — maintenant vous pouvez faire un auto‑test avec nos évaluations : le lien ci‑dessous vous dirige sur la première.
 
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}
-
-## Dans ce module
-
-- [Commencer avec le HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fondamentaux du texte HTML](/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/HTML_text_fundamentals)
-- [Creation d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formatage avancé du texte](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Structure de Site Web et de document](/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- Déboguer de l'HTML
-- [Faire une Lettre](/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structurer une page de contenu](/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

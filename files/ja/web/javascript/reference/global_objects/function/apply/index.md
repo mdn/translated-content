@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 
 {{JSRef}}
 
-**`apply()`** メソッドは、 `this` 値を指定して関数を呼び出し、 `arguments` は配列 (または[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)) として提供します。
+**`apply()`** メソッドは、 `this` 値を指定して関数を呼び出し、 `arguments` は配列 (または[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#配列風オブジェクトの扱い)) として提供します。
 
 {{EmbedInteractiveExample("pages/js/function-apply.html")}}
 

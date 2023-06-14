@@ -1,6 +1,6 @@
 ---
 title: Undefined
-slug: Glossary/undefined
+slug: Glossary/Undefined
 tags:
   - Encodage
   - Glossaire

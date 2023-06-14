@@ -731,15 +731,3 @@ Você chegou ao final do artigo — esperamos que tenha gostado do seu tour pelo
 - [Aplicando cores a elementos HTML usando CSS](/pt-BR/docs/Web/HTML/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## Neste módulo
-
-- [Iniciando com HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started)
-- [O que está no cabeçalho? Metadados em HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/The_head_metadata_in_HTML)
-- [Fundamentos do texto em HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML)
-- [Criando links](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks)
-- [Formatação avançada de texto](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Formatacao_avancada_texto)
-- [Estrutura do documento e site](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Estrutura_de_documento_e_sites)
-- [Depurando HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Debugging_HTML)
-- [Marcando uma carta](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Marking_up_a_letter)
-- [Estruturando o conteudo de uma página](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Structuring_a_page_of_content)

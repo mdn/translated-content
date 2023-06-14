@@ -1,6 +1,8 @@
 ---
 title: object-fit
 slug: Web/CSS/object-fit
+l10n:
+  sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
 
 {{CSSRef}}
@@ -24,6 +26,7 @@ object-fit: scale-down;
 object-fit: inherit;
 object-fit: initial;
 object-fit: revert;
+object-fit: revert-layer;
 object-fit: unset;
 ```
 
@@ -52,36 +55,36 @@ object-fit: unset;
 
 ## 例
 
-<h3 id="Setting_object-fit_for_an_image">画像に object-fit を設定</h3>
+### 画像に object-fit を設定
 
 #### HTML
 
 ```html
 <section>
   <h2>object-fit: fill</h2>
-  <img class="fill" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="fill" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="fill narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="fill narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: contain</h2>
-  <img class="contain" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="contain" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="contain narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="contain narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: cover</h2>
-  <img class="cover" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="cover" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="cover narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="cover narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: none</h2>
-  <img class="none" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="none" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="none narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="none narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
   <h2>object-fit: scale-down</h2>
-  <img class="scale-down" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="scale-down" src="mdn_logo_only_color.png" alt="MDN Logo" />
 
-  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="MDN Logo">
+  <img class="scale-down narrow" src="mdn_logo_only_color.png" alt="MDN Logo" />
 </section>
 ```
 

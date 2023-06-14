@@ -41,7 +41,10 @@ La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et 
 
 ### Syntaxe formelle
 
-{{csssyntax}}
+```plain
+-moz-float-edge =
+  border-box | content-box | margin-box | padding-box
+```
 
 ## Exemples
 
@@ -81,4 +84,4 @@ Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla e
 
 ## Voir aussi
 
-- {{bug(432891)}}
+- [bug Firefox 432891](https://bugzil.la/432891)

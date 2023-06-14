@@ -305,7 +305,7 @@ Modifiers are special keys which are used to generate special characters or caus
   </thead>
 </table>
 
-\[1] In Internet Explorer (tested on release 9 and 11), as well as in all versions of Firefox, the <kbd>Windows</kbd> key is reported as `"OS"` instead of as `"Meta"`. This will be changed in Firefox per {{bug(1232918)}}. Until that's fixed, these keys are returned as `"OS"` by Firefox: `VK_LWIN` (0x5B) and `VK_RWIN` (0x5C) on Windows, and `GDK_KEY_Super_L (0xFFEB)`, `GDK_KEY_Super_R (0xFFEC)`, `GDK_KEY_Hyper_L (0xFFED)`, and `GDK_KEY_Hyper_R (0xFFEE)` on Linux.
+\[1] In Internet Explorer (tested on release 9 and 11), as well as in all versions of Firefox, the <kbd>Windows</kbd> key is reported as `"OS"` instead of as `"Meta"`. This will be changed in Firefox per [bug Firefox 1232918](https://bugzil.la/1232918). Until that's fixed, these keys are returned as `"OS"` by Firefox: `VK_LWIN` (0x5B) and `VK_RWIN` (0x5C) on Windows, and `GDK_KEY_Super_L (0xFFEB)`, `GDK_KEY_Super_R (0xFFEC)`, `GDK_KEY_Hyper_L (0xFFED)`, and `GDK_KEY_Hyper_R (0xFFEE)` on Linux.
 
 \[2] Internet Explorer (tested on release 9 and 11) reports `"Scroll"` instead of `"ScrollLock"` for the <kbd>Scroll Lock</kbd> key.
 
@@ -313,7 +313,7 @@ Modifiers are special keys which are used to generate special characters or caus
 
 \[4] Firefox generates the key value `"OS`" for the <kbd>Super</kbd> and <kbd>Hyper</kbd> keys, instead of `"Super"` and `"Hyper"`.
 
-\[5] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug {{bug(900750)}} and [Chrome bug 25503](https://bugs.chromium.org/p/chromium/issues/detail?id=25503) for further details.
+\[5] Chrome 67 and Firefox 63 now correctly interpret the right <kbd>Alt</kbd> key for keyboard layouts which map that key to <kbd>AltGr</kbd>. See Firefox bug [bug Firefox 900750](https://bugzil.la/900750) and [Chrome bug 25503](https://bugs.chromium.org/p/chromium/issues/detail?id=25503) for further details.
 
 ## Whitespace keys
 

@@ -531,13 +531,3 @@ A razão para usar um `alt` vazio ao invés de não incluí-lo é porque muitos 
 Agora você deve estar familiarizado com a escrita de HTML acessível para a maioria das ocasiões. Nosso artigo básico do WAI-ARIA também preencherá algumas lacunas nesse conhecimento, mas este artigo cuidou do básico. Em seguida, exploraremos CSS e JavaScript e como a acessibilidade é afetada por seu uso bom ou ruim.
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
-
-## Neste módulo
-
-- [O que é acessibilidade?](/pt-BR/docs/Learn/Accessibility/What_is_accessibility&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhjKbO6WIg9b4xWjdZSQcnXxP1foyg)
-- [HTML: uma boa base para acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhg8RYEjwUHElGCpA1Q_60OiOtXeLg)
-- [Práticas recomendadas de acessibilidade de CSS e JavaScript](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhjUFLV1YWbEtSBOMPU_Bt7V-OmzDw)
-- [Noções básicas de WAI-ARIA](/pt-BR/docs/Learn/Accessibility/WAI-ARIA_basics&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhj5LnkD6EVmrTiupwf932KoV4VCTw)
-- [Multimídia acessível](/pt-BR/docs/Learn/Accessibility/Multimedia&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhgWAjBOw_jwWHOvK_zBEob2xQdEmA)
-- [Acessibilidade móvel](/pt-BR/docs/Learn/Accessibility/Mobile&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhgnwNfnWbOmqpMWRI1c1zBqGFfU1Q)
-- [Solução de problemas de acessibilidade](/pt-BR/docs/Learn/Accessibility/Accessibility_troubleshooting&xid=17259,15700021,15700124,15700149,15700186,15700190,15700201,15700214&usg=ALkJrhjy6mgQ3Y6D6sT4QvsOicr2-Fmt9Q)

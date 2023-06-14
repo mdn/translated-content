@@ -173,13 +173,3 @@ Se houver algo que você não entendeu, fique à vontade para ler o artigo novam
 - [Funções de retorno de chamada em JavaScript](https://www.impressivewebs.com/callback-functions-javascript/) — um padrão JavaScript comum é passar uma função para outra função como um argumento, que é então chamado dentro da primeira função. Isso está um pouco além do escopo deste curso, mas vale a pena ser estudado em pouco tempo.
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## In this module
-
-- [Making decisions in your code — conditionals](/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Looping code](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [Functions — reusable blocks of code](/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
-- [Build your own function](/pt-BR/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [Function return values](/pt-BR/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [Introduction to events](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
-- [Image gallery](/pt-BR/docs/Learn/JavaScript/Building_blocks/Image_gallery)

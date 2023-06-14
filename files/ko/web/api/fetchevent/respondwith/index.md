@@ -18,11 +18,11 @@ From Firefox 59 onwards, when a service worker provides a {{domxref("Response")}
 
 In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used as the final URL in all cases. The provided {{domxref("Response.url")}} was effectively ignored.
 
-This means, for example, if a service worker intercepts a stylesheet or worker script, then the provided {{domxref("Response.url")}} will be used to resolve any relative {{cssxref("@import")}} or {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads ({{bug(1222008)}}).
+This means, for example, if a service worker intercepts a stylesheet or worker script, then the provided {{domxref("Response.url")}} will be used to resolve any relative {{cssxref("@import")}} or {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads ([Firefox bug 1222008](https://bugzil.la/1222008)).
 
 For most types of network request this change has no impact because you can't observe the final URL. There are a few, though, where it does matter:
 
-- If a {{domxref("WindowOrWorkerGlobalScope.fetch()", "fetch()")}} is intercepted, then you can observe the final URL on the result's {{domxref("Response.url")}}.
+- If a {{domxref("fetch()")}} is intercepted, then you can observe the final URL on the result's {{domxref("Response.url")}}.
 - If a [worker](/ko/docs/Web/API/Web_Workers_API) script is intercepted, then the final URL is used to set [`self.location`](/en-US/docs/Web/API/WorkerGlobalScope/location) and used as the base URL for relative URLs in the worker script.
 - If a stylesheet is intercepted, then the final URL is used as the base URL for resolving relative {{cssxref("@import")}} loads.
 

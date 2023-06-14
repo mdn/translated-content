@@ -217,7 +217,7 @@ Un `<iframe>` en acción. Después de crear el marco, cuando el usuario hace cli
 #### HTML
 
 ```html
-<iframe src="https://mdn-samples.mozilla.org/snippets/html/iframe-simple-contents.html" title="iframe Example 1" width="400" height="300">
+<iframe src="https://example.org" title="iframe Example 1" width="400" height="300">
   <p>Your browser does not support iframes.</p>
 </iframe>
 ```

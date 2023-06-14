@@ -83,7 +83,7 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 ## Voir aussi
 
 - {{HTMLElement("input")}}
-- L'attribut HTML {{htmlattrxref("contenteditable")}} qui rend le texte d'un élément éditable
+- L'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable) qui rend le texte d'un élément éditable
 - [Rendre du contenu éditable](/fr/docs/Web/Guide/HTML/Editable_content)
 - [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)
 - Le type de données {{cssxref("&lt;color&gt;")}}

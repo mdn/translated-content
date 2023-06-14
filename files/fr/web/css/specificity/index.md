@@ -108,6 +108,7 @@ Quelques exemples avec une spécificité accrue&nbsp;:
 table td    { height: 50px !important; }
 .monTableau td { height: 50px !important; }
 #monTableau td { height: 50px !important; }
+```
 
 B) Ou ajouter le même sélecteur après le sélecteur existant&nbsp;:
 
@@ -125,6 +126,7 @@ C) Ou, de préférence, réécrire la règle d'origine afin d'éviter totalement
 p.genial {
   color: red;
 }
+```
 
 Inclure un identifiant comme un sélecteur d'attribut au lieu d'un sélecteur d'identifiant (`#someElement`) lui donne la même spécificité qu'une classe. Les deux sélecteurs ci-dessus ont à présent la même importance. Lors d'une égalité de spécificité, la dernière règle définie est prise en compte.
 
@@ -209,6 +211,7 @@ div p {
     <p>Ce texte est dans la div interne.</p>
   </div>
 </div>
+```
 
 &hellip;s'affiche sur l'écran ainsi&nbsp;:
 

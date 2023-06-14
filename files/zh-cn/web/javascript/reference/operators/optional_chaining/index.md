@@ -93,7 +93,7 @@ function doSomething(onContent, onError) {
 
 ### 可选链和表达式
 
-当使用[方括号与属性名](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors#方括号表示法)的形式来访问属性时，你也可以使用可选链运算符：
+当使用[方括号与属性名](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)的形式来访问属性时，你也可以使用可选链运算符：
 
 ```js
 let nestedProp = obj?.['prop' + 'Name'];
@@ -112,7 +112,7 @@ object?.property = 1; // Uncaught SyntaxError: Invalid left-hand side in assignm
 let arrayItem = arr?.[42];
 ```
 
-## 例子
+## 示例
 
 ### 基本例子
 

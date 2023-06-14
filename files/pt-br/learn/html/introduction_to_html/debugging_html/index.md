@@ -169,15 +169,3 @@ Você vai saber quando todos os seus erros forem resolvidos quando ver a seguint
 Então é isso, uma introdução a debugação de HTML, na qual deve te dar dicas úteis quando você começar a debugar CSS, JavaScript, e outros tipos de códigos mais tarde na sua carreira. Isso também significa o fim dos artigos de aprendizado do Módulo de Introdução ao HTML — agora você pode testar a si mesmo com nossa avaliação: a primeira está no link abaixo.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
-
-## Neste módulo
-
-- [Iniciando com HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [O que está no cabeçalho? Metadados em HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fundamentos do texto em HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Criando hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formatação avançada de texto](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Estrutura de documento e sites](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Debugging HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marking up a letter](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

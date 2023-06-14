@@ -42,7 +42,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%","120")}}
+{{EmbedLiveSample("",'','130')}}
 
 ## Résumé technique
 

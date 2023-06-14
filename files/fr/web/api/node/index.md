@@ -18,7 +18,7 @@ translation_of: Web/API/Node
 
 **`Node`** (_nœud)_ est une classe abstraite de laquelle de nombreux objets de type DOM API héritent, leur permettant d'être traités de manière similaire et souvent interchangeable. Étant une classe abstraire, il n'existe pas d'objet qui soit directement un `Node`. Tous les objets implantant les fonctionnalités de `Node` sont des instances d'une de ses sous-classes, dont les plus notables sont {{domxref("Document")}}, {{domxref("Element")}} et {{domxref("DocumentFragment")}}.
 
-De pls, tous les types de nœuds du DOM sont représentés par une classe héritant des propriétés et méthodes de `Node` : {{domxref("CharacterData")}} (duquel {{domxref("Text")}}, {{domxref("Comment")}} et {{domxref("CDATASection")}} héritent), {{domxref("ProcessingInstruction")}}, , {{domxref("DocumentType")}}, {{domxref("Notation")}}, {{domxref("Entity")}} et {{domxref("EntityReference")}}.
+De plus, tous les types de nœuds du DOM sont représentés par une classe héritant des propriétés et méthodes de `Node` : {{domxref("CharacterData")}} (duquel {{domxref("Text")}}, {{domxref("Comment")}} et {{domxref("CDATASection")}} héritent), {{domxref("ProcessingInstruction")}}, , {{domxref("DocumentType")}}, {{domxref("Notation")}}, {{domxref("Entity")}} et {{domxref("EntityReference")}}.
 
 Les propriétés ou méthodes de ces interfaces peuvent retourner `null` lorsque leur existence n'est pas pertinente. Elles peuvent aussi générer une exception – par exemple lors de l'ajout d'un enfant à un type de nœud pour lequel aucun enfant ne peut exister.
 

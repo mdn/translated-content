@@ -5,7 +5,7 @@ slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 
 {{GamesSidebar}}
 
-在本教程中，我们将介绍构建 HTML5 移动游戏的过程。本游戏使用 [Device Orientation](/zh-CN/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes) 和 [Vibration](/zh-CN/docs/Web/Guide/API/Vibration) **APIs** 来增强游戏玩法，并使用 [Phaser](http://phaser.io/) 框架构建。为了充分理解本教程建议您先学习基础的 JavaScript 知识。
+在本教程中，我们将介绍构建 HTML5 移动游戏的过程。本游戏使用 [Device Orientation](/zh-CN/docs/Web/API/Device_orientation_events) 和 [Vibration](/zh-CN/docs/Web/API/Vibration_API) **API** 来增强游戏玩法，并使用 [Phaser](http://phaser.io/) 框架构建。为了充分理解本教程建议您先学习基础的 JavaScript 知识。
 
 ## Example game
 
@@ -293,7 +293,7 @@ The more you tilt the device, the more force is applied to the ball, therefore t
 
 ![An explanation of the X, Y and Z axes of a Flame mobile device with the Cyber Orb game demo on the screen.](cyber-orb-flame-orientation.png)
 
-> **备注：** To find more out about implementing device orientation and what raw code would look like, read [Keep it level: responding to device orientation changes](/zh-CN/Apps/Build/gather_and_modify_data/responding_to_device_orientation_changes).
+> **备注：** To find more out about implementing device orientation and what raw code would look like, read [Keep it level: responding to device orientation changes](/zh-CN/docs/Web/API/Device_orientation_events).
 
 #### Adding the hole
 

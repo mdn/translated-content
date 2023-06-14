@@ -28,9 +28,9 @@ dateObj.setDate(dayValue)
 
 如果 dayValue 被设置为负数，日期会设置为上个月最后一天往前数这个负数绝对值天数后的日期。-1 会设置为上月最后一天的前一天（译者注：例如当前为 4 月，如果 setDate(-2),则为 3 月 29 日）
 
-## 例子
+## 示例
 
-### 例子：使用`setDate`方法
+### 示例：使用`setDate`方法
 
 ```js
 var theBigDay = new Date(1962, 6, 7); // 1962-07-07

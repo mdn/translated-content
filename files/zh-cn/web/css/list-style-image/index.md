@@ -3,7 +3,7 @@ title: list-style-image
 slug: Web/CSS/list-style-image
 ---
 
-{{ CSSRef}}
+{{CSSRef}}
 
 ## 概要
 

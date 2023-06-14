@@ -1,6 +1,6 @@
 ---
 title: Console.info()
-slug: Web/API/Console/info
+slug: Web/API/console/info
 tags:
   - API
   - Debugging

@@ -228,7 +228,7 @@ for (var value of iterable) {
 
 {{jsxref("Statements/for...in", "for...in")}} 语句以任意顺序迭代对象的[可枚举属性](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
 
-`for...of` 语句遍历[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables)定义要迭代的数据。
+`for...of` 语句遍历[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#可迭代对象)定义要迭代的数据。
 
 以下示例显示了与{{jsxref("Array")}}一起使用时，`for...of`循环和`for...in`循环之间的区别。
 
@@ -288,7 +288,7 @@ for (let i of iterable) {
 }
 ```
 
-该循环迭代并记录`iterable`作为[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators#Iterables)定义的迭代值，这些是数组元素 `3`, `5`, `7`，而不是任何对象的**属性**。
+该循环迭代并记录`iterable`作为[可迭代对象](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators#可迭代对象)定义的迭代值，这些是数组元素 `3`, `5`, `7`，而不是任何对象的**属性**。
 
 ## 规范
 

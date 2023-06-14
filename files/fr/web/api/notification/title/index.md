@@ -1,6 +1,6 @@
 ---
 title: Notification.title
-slug: Web/API/notification/title
+slug: Web/API/Notification/title
 tags:
   - API
   - API Notifications

@@ -31,7 +31,7 @@ En nuestra evaluación te proporcionamos datos sobre los planetas de nuestro sis
 
 Para comenzar esta evaluación, crea una copia local de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/blank-template.html), [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/minimal-table.css), y [planets-data.txt](https://github.com/mdn/learning-area/blob/master/html/tables/assessment-start/planets-data.txt) en una nueva carpeta de tu ordenador.
 
-> **Nota:** Como alternativa, puedes usar una web como [JSBin](https://jsbin.com/) o [Thimble](https://thimble.mozilla.org/) para realizar tu evaluación. Puedes pegar el HTML, CSS y JavaScript en uno de estos editores online. Si el editor online que estas usando no tiene paneles separados para JavaScript/CSS, sientete libre de ponerlos en línea dentro del mismo HTML mediante el uso de `<script>`/`<style>`.
+> **Nota:** Como alternativa, puedes usar una web como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/) para realizar tu evaluación. Puedes pegar el HTML, CSS y JavaScript en uno de estos editores online. Si el editor online que estas usando no tiene paneles separados para JavaScript/CSS, sientete libre de ponerlos en línea dentro del mismo HTML mediante el uso de `<script>`/`<style>`.
 
 ## Resumen del proyecto
 

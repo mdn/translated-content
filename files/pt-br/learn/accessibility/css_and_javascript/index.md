@@ -105,7 +105,7 @@ De qualquer forma, você raramente irá precisar de estilizar um elemento de ên
 
 #### Abreviações
 
-É um elemento que permite abraviação, acrônimo ou inicialização que esteja associada com sua expansão:
+É um elemento que permite abreviação, acrônimo ou inicialização que esteja associada com sua expansão:
 
 ```html
 <p>Web content is marked up using <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
@@ -353,13 +353,3 @@ We hope this article has given you a good amount of detail and understanding abo
 Next up, WAI-ARIA!
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/pt-BR/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/pt-BR/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/pt-BR/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/pt-BR/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/pt-BR/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/pt-BR/docs/Learn/Accessibility/Accessibility_troubleshooting)

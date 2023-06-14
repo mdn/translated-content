@@ -322,11 +322,3 @@ Quando aninhamos callbacks como este, também pode ficar muito difícil lidar co
 Por esses motivos, as APIs assíncronas mais modernas não usam retornos de chamada. Em vez disso, a base da programação assíncrona em JavaScript é a {{jsxref("Promise")}}, e esse é o assunto do próximo artigo.
 
 {{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
-
-## Neste módulo
-
-- **Introduzindo JavaScript assíncrono**
-- [Como usar Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Implementando uma API baseada em Promise](/pt-BR/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Introdução aos workers](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Avaliação: sequenciamento de animações](/pt-BR/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

@@ -24,7 +24,7 @@ TypeError: reduce of empty array with no initial value
 
 这些函数有选择性的接收 `initialValue` (将会被用作回调函数第一次被调用的参数)。然而，如果没有初始值提供，它会用 {{jsxref("Array")}} 或 {{jsxref("TypedArray")}} 的第一个元素作为初始值。当提供一个空数组的时候这个错误会出现，因为那种情况下没有初始值被返回。
 
-## 例子
+## 示例
 
 ### 无效的情况
 

@@ -1,6 +1,6 @@
 ---
 title: video
-slug: Web/HTML/Element/Video
+slug: Web/HTML/Element/video
 ---
 
 ## Sumário

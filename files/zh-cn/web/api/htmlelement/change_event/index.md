@@ -116,4 +116,4 @@ function updateValue(e) {
 
 {{Compat}}
 
-对于一些特定类型的交互是否要触发 `change` 事件，不同浏览器的意见并不总是一致的。例如，在 Gecko 的 {{HTMLElement("select")}} 元素中使用键盘导航，除非用户按下 Enter 键或将焦点从 `<select>` 上移走（参见 {{bug("126379")}}），否则不会触发 `change` 事件。但从 Firefox 63（Quantum）开始，这个行为在已经在主流浏览器中达成一致。
+对于一些特定类型的交互是否要触发 `change` 事件，不同浏览器的意见并不总是一致的。例如，在 Gecko 的 {{HTMLElement("select")}} 元素中使用键盘导航，除非用户按下 Enter 键或将焦点从 `<select>` 上移走（参见 [Firefox bug 126379](https://bugzil.la/126379)），否则不会触发 `change` 事件。但从 Firefox 63（Quantum）开始，这个行为在已经在主流浏览器中达成一致。

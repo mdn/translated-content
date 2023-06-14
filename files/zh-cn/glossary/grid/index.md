@@ -67,4 +67,4 @@ _（注：在容器 div 上用 row 和 column 定义的网格总数，等于 行
 
 ### 扩展阅读
 
-- CSS Grid Layout Guide: _[布局的基本概念](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- CSS Grid Layout Guide: _[布局的基本概念](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_

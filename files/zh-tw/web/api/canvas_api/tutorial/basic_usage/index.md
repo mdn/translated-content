@@ -13,7 +13,7 @@ Let's start this tutorial by looking at the {{HTMLElement("canvas")}} {{Glossary
 <canvas id="tutorial" width="150" height="150"></canvas>
 ```
 
-首先，先來看看 {{HTMLElement("canvas")}}，它看起來有點像 {{HTMLElement("img")}} 元素，其中的差異點在於 `<canvas>` 沒有 `src` 和 `alt` 屬性，`<canvas>` 只有 {{htmlattrxref("width", "canvas")}} 與 {{htmlattrxref("height", "canvas")}} 這兩個屬性，這兩個屬性皆為非必須、能透過 [DOM](/zh-TW/docs/DOM) 屬性設定；若是沒有設定 `width` 和 `height` 屬性，畫布寬預設值為 **300 pixels**、高預設值為 **150 pixels**，我們可以用 [CSS](/zh-TW/docs/Web/CSS) 強制設定元素尺寸，但當渲染時，影像會縮放以符合元素的尺寸。
+首先，先來看看 {{HTMLElement("canvas")}}，它看起來有點像 {{HTMLElement("img")}} 元素，其中的差異點在於 `<canvas>` 沒有 `src` 和 `alt` 屬性，`<canvas>` 只有 [`width`](/zh-TW/docs/Web/HTML/Element/canvas#width) 與 [`height`](/zh-TW/docs/Web/HTML/Element/canvas#height) 這兩個屬性，這兩個屬性皆為非必須、能透過 [DOM](/zh-TW/docs/DOM) 屬性設定；若是沒有設定 `width` 和 `height` 屬性，畫布寬預設值為 **300 pixels**、高預設值為 **150 pixels**，我們可以用 [CSS](/zh-TW/docs/Web/CSS) 強制設定元素尺寸，但當渲染時，影像會縮放以符合元素的尺寸。
 
 > **備註：** 如果繪圖結果看起來有些扭曲，可以改試著用\<canvas>自身的 width 和 height 屬性而不要用 CSS 來設定寬高。
 
@@ -35,7 +35,7 @@ Let's start this tutorial by looking at the {{HTMLElement("canvas")}} {{Glossary
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt=""/>
+  <img src="images/clock.png" width="150" height="150" alt="" />
 </canvas>
 ```
 
@@ -54,8 +54,8 @@ Let's start this tutorial by looking at the {{HTMLElement("canvas")}} {{Glossary
 一開始 canvas 為空白，程式碼腳本需要先存取渲染環境，在上面繪圖，然後才會顯現影像。{{HTMLElement("canvas")}} 素有一個方法([method](/zh-TW/docs/Web/API/HTMLCanvasElement#Methods))叫 getContext()，透過此方法可以取得渲染環境及其繪圖函數(function)；getContext()輸入參數只有渲染環境類型一項，像本教學所討論的 2D 繪圖，就是輸入”2d”。
 
 ```js
-var canvas = document.getElementById('tutorial');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("tutorial");
+var ctx = canvas.getContext("2d");
 ```
 
 上面第一行先呼叫{{domxref("document.getElementById()")}}來取得{{HTMLElement("canvas")}}元素，一旦取得元素後，便可以用其 getContext()取得渲染環境。
@@ -65,10 +65,10 @@ var ctx = canvas.getContext('2d');
 替代內容會被不支援{{HTMLElement("canvas")}}.的瀏覽器所顯示。程式碼腳本也可以利用檢查 getContext()方法是否存在來檢查是否支援\<canvas>，我們可以修改上面例子成如下:
 
 ```js
-var canvas = document.getElementById('tutorial');
+var canvas = document.getElementById("tutorial");
 
-if (canvas.getContext){
-  var ctx = canvas.getContext('2d');
+if (canvas.getContext) {
+  var ctx = canvas.getContext("2d");
   // drawing code here
 } else {
   // canvas-unsupported code here
@@ -84,15 +84,17 @@ if (canvas.getContext){
   <head>
     <title>Canvas tutorial</title>
     <script type="text/javascript">
-      function draw(){
-        var canvas = document.getElementById('tutorial');
-        if (canvas.getContext){
-          var ctx = canvas.getContext('2d');
+      function draw() {
+        var canvas = document.getElementById("tutorial");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
         }
       }
     </script>
     <style type="text/css">
-      canvas { border: 1px solid black; }
+      canvas {
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body onload="draw();">
@@ -113,25 +115,25 @@ if (canvas.getContext){
 
 ```html
 <html>
- <head>
-  <script type="application/javascript">
-    function draw() {
-      var canvas = document.getElementById("canvas");
-      if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
+  <head>
+    <script type="application/javascript">
+      function draw() {
+        var canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
 
-        ctx.fillStyle = "rgb(200,0,0)";
-        ctx.fillRect (10, 10, 55, 50);
+          ctx.fillStyle = "rgb(200,0,0)";
+          ctx.fillRect(10, 10, 55, 50);
 
-        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-        ctx.fillRect (30, 30, 55, 50);
+          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillRect(30, 30, 55, 50);
+        }
       }
-    }
-  </script>
- </head>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: CSS Masks
-slug: Web/CSS/CSS_Masking
+slug: Web/CSS/CSS_masking
 tags:
   - Aperçu
   - CSS

@@ -1,6 +1,6 @@
 ---
 title: Précédence des opérateurs
-slug: Web/JavaScript/Reference/Operators/Operator_Precedence
+slug: Web/JavaScript/Reference/Operators/Operator_precedence
 tags:
   - JavaScript
   - Opérateur

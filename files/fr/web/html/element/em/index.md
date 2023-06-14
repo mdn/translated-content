@@ -104,7 +104,7 @@ Un exemple pour `<em>` pourrait être&nbsp;: «&nbsp;_Faites_-le déjà&nbsp;!&n
 
 Un exemple pour `<i>` pourrait être&nbsp;: «&nbsp;Le <i lang="en">Queen Mary</i> a pris la mer la nuit dernière&nbsp;». Ici, il n'y a pas d'accentuation ou d'importance supplémentaire sur le mot «&nbsp;Queen Mary&nbsp;». Il est simplement indiqué que l'objet en question n'est pas une reine nommée Mary, mais un navire nommé <i lang="en">Queen Mary</i>. Un autre exemple de `<i>` pourrait être&nbsp;: «&nbsp;Le mot <i lang="en">the</i> est un article&nbsp;».
 
-## Exemple
+## Exemples
 
 L'élément `<em>` est souvent utilisé pour indiquer un contraste, implicite ou explicite.
 

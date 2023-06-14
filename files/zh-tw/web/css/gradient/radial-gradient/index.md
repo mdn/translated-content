@@ -39,6 +39,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 - `<shape>`
   - : The gradient's shape. The value can be `circle` (meaning that the gradient's shape is a circle with constant radius) or `ellipse` (meaning that the shape is an axis-aligned ellipse). If unspecified, it defaults to `ellipse`.
 - `<extent-keyword>`
+
   - : A keyword describing how big the ending shape must be. The possible values are:
 
     | Keyword           | Description                                                                                                                                                                     |
@@ -113,14 +114,17 @@ where <extent-keyword> = closest-corner | closest-side | farthest-corner | farth
 
 ```css
 .radial-gradient {
-  background-image: radial-gradient(farthest-corner at 40px 40px,
-      #f35 0%, #43e 100%);
+  background-image: radial-gradient(
+    farthest-corner at 40px 40px,
+    #f35 0%,
+    #43e 100%
+  );
 }
 ```
 
 {{EmbedLiveSample('Non-centered_gradient', 240, 120)}}
 
-> **備註：** Please see [Using CSS gradients](/zh-TW/docs/Web/CSS/CSS_Images/Using_CSS_gradients) for more examples.
+> **備註：** Please see [Using CSS gradients](/zh-TW/docs/Web/CSS/CSS_images/Using_CSS_gradients) for more examples.
 
 ## 規格
 
@@ -136,7 +140,7 @@ Gecko used to have a long-standing bug whereby radial gradients like `radial-gra
 
 ## See also
 
-- [Using CSS gradients](/zh-TW/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [Using CSS gradients](/zh-TW/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Other gradient functions: {{cssxref("repeating-radial-gradient")}}, {{cssxref("linear-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("conic-gradient")}}, {{cssxref("repeating-conic-gradient")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("_image","image()")}}

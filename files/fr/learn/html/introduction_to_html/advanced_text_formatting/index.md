@@ -232,7 +232,7 @@ Le HTML possède également des fonctionnalités pour marquer les citations. Le 
 
 ### Blocs de citation
 
-Si une section ou un contenu de niveau bloc (que ce soit un paragraphe, de multiples paragraphes, une liste, etc.) est cité depuis une autre origine, vous pouvez le signaler en le mettant dans un élément {{htmlelement("blockquote")}} et en incluant une URL qui pointe vers la source de la citation dans un attribut {{htmlattrxref("cite","blockquote")}}. Par exemple, le balisage suivant provient de la page MDN pour l'élément `<blockquote>`&nbsp;:
+Si une section ou un contenu de niveau bloc (que ce soit un paragraphe, de multiples paragraphes, une liste, etc.) est cité depuis une autre origine, vous pouvez le signaler en le mettant dans un élément {{htmlelement("blockquote")}} et en incluant une URL qui pointe vers la source de la citation dans un attribut [`cite`](/fr/docs/Web/HTML/Element/blockquote#cite). Par exemple, le balisage suivant provient de la page MDN pour l'élément `<blockquote>`&nbsp;:
 
 ```html
 <p>L'<strong>Élément HTML <code>&lt;blockquote&gt;</code></strong> (ou <em>Élément HTML bloc
@@ -271,7 +271,7 @@ Le navigateur l'affichera par défaut comme du texte normal entre guillemets pou
 
 ### Citations
 
-Le contenu de l'attribut {{htmlattrxref("cite","blockquote")}} semble utile, malheureusement les navigateurs, lecteurs d'écran, etc. n'en font pas grand chose. Il n'y a pas possibilité de faire afficher différemment au navigateur le contenu d'un `cite` sans utiliser votre propre JavaScript ou style CSS. Si vous souhaitez rendre disponible la source de la citation sur votre page, la meilleure façon de le faire est d'inclure l'élément {{htmlelement("cite")}} à coté de l'élément citation. Cet élément est vraiment destiné à contenir le nom de la source de la citation — c'est-à-dire le nom du livre ou de la personne auteur de la citation — mais il n'y a aucune raison pour laquelle vous n'avez pas pu lier le texte à l'intérieur de `<cite>` à la source de la citation d'une manière ou d'une autre :
+Le contenu de l'attribut [`cite`](/fr/docs/Web/HTML/Element/blockquote#cite) semble utile, malheureusement les navigateurs, lecteurs d'écran, etc. n'en font pas grand chose. Il n'y a pas possibilité de faire afficher différemment au navigateur le contenu d'un `cite` sans utiliser votre propre JavaScript ou style CSS. Si vous souhaitez rendre disponible la source de la citation sur votre page, la meilleure façon de le faire est d'inclure l'élément {{htmlelement("cite")}} à coté de l'élément citation. Cet élément est vraiment destiné à contenir le nom de la source de la citation — c'est-à-dire le nom du livre ou de la personne auteur de la citation — mais il n'y a aucune raison pour laquelle vous n'avez pas pu lier le texte à l'intérieur de `<cite>` à la source de la citation d'une manière ou d'une autre :
 
 ```html
 <p>Selon la <a href="/fr/docs/Web/HTML/Element/blockquote">
@@ -431,7 +431,7 @@ textarea.onkeyup = function(){
 
 ## Abréviations
 
-Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut {{htmlattrxref("title")}}}. Voyons quelques exemples :
+Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#title)}. Voyons quelques exemples :
 
 ```html
 <p>Nous utilisons l'<abbr title="Hypertext Markup Language">HTML</abbr> pour structurer nos documents web.</p>
@@ -695,15 +695,3 @@ L'exemple de base ci-dessus ne fournit qu'une simple date lisible par machine, m
 Nous voici arrivés à la fin de notre étude de la sémantique des textes en HTML. N'oubliez pas que ce qui précède ne constitue pas la liste exhaustive des éléments texte en HTML — nous avons essayé de couvrir essentiellement les plus courants dans la nature ou du moins ceux que nous avons pensé intéressants. Pour en voir plus, jetez un coup d'oeil à notre [Référence des éléments HTML](/fr/docs/Web/HTML/Element) (la section [sémantique de texte en ligne](/fr/docs/Web/HTML/Element#inline_text_semantics) serait un bon point de départ.) Dans l'article suivant, nous examinerons les éléments HTML à utiliser pour structurer les diverses parties d'un document HTML.
 
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}
-
-## Dans ce module
-
-- [Commencer avec le HTML](/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started)
-- [Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fondamentaux du texte HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Création d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- Formatage avancé du texte
-- [Structure de Site Web et de document](/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Déboguer de l'HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Faire une lettre](/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structurer une page de contenu](/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

@@ -130,21 +130,3 @@ The next and final step in this module about Django is to complete the [assessme
 - [Securing your site](/ja/docs/Web/Security/Securing_your_site) (MDN)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/ja/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/ja/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/ja/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/ja/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/ja/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/ja/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/ja/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/ja/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/ja/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/ja/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/ja/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/ja/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/ja/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/ja/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -3,7 +3,7 @@ title: ページの種類
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 original_slug: MDN/Structures/Page_types
 l10n:
-  sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}
@@ -46,6 +46,12 @@ MDN に新しいページを作成するには、 GitHub を使用する必要�
 - その特集はどの程度人気があるか？その情報はどの程度求められているか？
 
 もし、チームを結成して更新作業を行いたい場合、または単に更新が必要なコンテンツを報告または議論したい場合は、お気軽に[コンテンツの問題を報告](https://github.com/mdn/content/issues)または[助けを求める](/ja/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help)までお問い合わせください。
+
+## フロントマターの page-type キー
+
+MDN ページの種類を明確に識別するために、フロントマターキー `page-type` を定義しました。下記リンクのテンプレートは、各ページ種類にどの `page-type` 値を設定すべきかを示しています。
+
+ページ種類の完全なリストは、[フロントマターの page-type キー](/ja/docs/MDN/Writing_guidelines/Page_structures/Page_types/Page_type_key)を参照してください。
 
 ## API ランディングページ
 

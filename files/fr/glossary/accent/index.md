@@ -1,6 +1,6 @@
 ---
 title: Accentuation
-slug: Glossary/accent
+slug: Glossary/Accent
 translation_of: Glossary/accent
 ---
 

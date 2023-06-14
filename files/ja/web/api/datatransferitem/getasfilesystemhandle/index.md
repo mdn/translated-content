@@ -21,7 +21,7 @@ getAsFileSystemHandle()
 
 ### 返値
 
-{{jsxref('Promise')}} で、 {{domxref('FileSystemFileHandle')}} または {{domxref('FileSystemDirectoryHandle')}} で履行されます。
+{{jsxref('Promise')}} で、{{domxref('FileSystemFileHandle')}} または {{domxref('FileSystemDirectoryHandle')}} で履行されます。
 
 ### 例外
 
@@ -29,26 +29,26 @@ getAsFileSystemHandle()
 
 ## 例
 
-この例では、`getAsFileSystemHandle` メソッドを使用して、ドロップした項目に対して {{domxref('FileSystemHandle','file handles')}} を返します。
+この例では、`getAsFileSystemHandle` メソッドを使用して、ドロップした項目に対して {{domxref('FileSystemHandle','ファイルハンドル')}} を返します。
 
 ```js
 elem.addEventListener('dragover', (e) => {
-  // Prevent navigation.
+  // ナビゲーションを防ぐ
   e.preventDefault();
 });
 elem.addEventListener('drop', async (e) => {
-  // Prevent navigation.
+  // ナビゲーションを防ぐ
   e.preventDefault();
 
-  // Process all of the items.
+  // すべてのアイテムを処理する
   for (const item of e.dataTransfer.items) {
-    // kind will be 'file' for file/directory entries.
+    // ファイルやディレクトリーの項目では、kind は 'file' になる
     if (item.kind === 'file') {
     const entry = await item.getAsFileSystemHandle();
       if (entry.kind === 'file') {
-        // run code for if entry is a file
+        // 項目がファイルのとき、コードを実行する
       } else if (entry.kind === 'directory') {
-        // run code for is entry is a directory
+        // 項目がディレクトリーのとき、コードを実行する
       }
     }
   }

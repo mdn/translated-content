@@ -1,6 +1,6 @@
 ---
 title: CSS を使った HTML の要素への色の適用
-slug: Web/CSS/CSS_Colors/Applying_color
+slug: Web/CSS/CSS_colors/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
 
@@ -35,7 +35,7 @@ original_slug: Web/HTML/Applying_color
 - {{cssxref("text-emphasis-color")}}
   - : テキストの各文字に隣接した圏点の描画に使用する色です。主に東アジア言語の文字描画で使用します。
 - {{cssxref("caret-color")}}
-  - : 要素の {{Glossary("caret", "キャレット")}} (テキスト入力カーソルとも表現されるもの) の描画に使用する色です。これは編集可能な要素でのみ有用であり、{{HTMLElement("input")}} や {{HTMLElement("textarea")}} または HTML の {{htmlattrxref("contenteditable")}} 属性が設定された要素に使用されます。
+  - : 要素の {{Glossary("caret", "キャレット")}} (テキスト入力カーソルとも表現されるもの) の描画に使用する色です。これは編集可能な要素でのみ有用であり、{{HTMLElement("input")}} や {{HTMLElement("textarea")}} または HTML の [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性が設定された要素に使用されます。
 
 ### ボックス
 
@@ -312,7 +312,7 @@ th {
 
 <h2 id="Letting_the_user_pick_a_color">ユーザーに色を選択させる</h2>
 
-ウェブサイト上では、ユーザーに色を選択させる必要がある場合があります。カスタマイズ可能なユーザーインターフェースがある場合や、お絵かきアプリを実装している場合などが考えられるでしょう。編集可能なテキストがあってユーザーにテキストの色を選択させる、あるいはアプリでフォルダーやアイテムに色を割り当てることができる場合があるかもしれません。古くは、独自の[カラーピッカー](https://en.wikipedia.org/wiki/Color_picker)を実装する必要がありましたが、HTML では {{HTMLElement("input")}} 要素を通じて {{htmlattrxref("type", "input")}} 属性の値を `"color"` にすれば、ブラウザーがカラーピッカーを提供できるようになりました。
+ウェブサイト上では、ユーザーに色を選択させる必要がある場合があります。カスタマイズ可能なユーザーインターフェースがある場合や、お絵かきアプリを実装している場合などが考えられるでしょう。編集可能なテキストがあってユーザーにテキストの色を選択させる、あるいはアプリでフォルダーやアイテムに色を割り当てることができる場合があるかもしれません。古くは、独自の[カラーピッカー](https://en.wikipedia.org/wiki/Color_picker)を実装する必要がありましたが、HTML では {{HTMLElement("input")}} 要素を通じて [`type`](/ja/docs/Web/HTML/Element/input#type) 属性の値を `"color"` にすれば、ブラウザーがカラーピッカーを提供できるようになりました。
 
 `<input>` 要素は、先で取り上げた [16 進数文字列表記](#16_進数文字列表記)でのみ色を表します。
 

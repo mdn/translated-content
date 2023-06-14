@@ -22,10 +22,12 @@ AJAX 代表 **A**synchronous **J**avaScript **A**nd **X**ML，即非同步 JavaS
 
 ```js
 // Old compatibility code, no longer needed.
-if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
-    httpRequest = new XMLHttpRequest();
-} else if (window.ActiveXObject) { // IE 6 and older
-    httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+if (window.XMLHttpRequest) {
+  // Mozilla, Safari, IE7+ ...
+  httpRequest = new XMLHttpRequest();
+} else if (window.ActiveXObject) {
+  // IE 6 and older
+  httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
 }
 ```
 
@@ -47,15 +49,15 @@ httpRequest.onreadystatechange = nameOfTheFunction;
 注意，指定的函式名稱後不加括號也沒有參數。這只是簡單的賦值，而非真的呼叫函數。除了指定函式名稱外，你也能用 Javascript 即時定義函式的技巧（稱為〝匿名函數〞）來定一個新的處理函式，如下：
 
 ```js
-httpRequest.onreadystatechange = function(){
-    // 做些事
+httpRequest.onreadystatechange = function () {
+  // 做些事
 };
 ```
 
 決定處理方式之後你得確實發出 request，此時需叫用 HTTP request 類別的 `open()` 及 `send()` 方法，如下：
 
 ```js
-httpRequest.open('GET', 'http://www.example.org/some.file', true);
+httpRequest.open("GET", "http://www.example.org/some.file", true);
 httpRequest.send();
 ```
 
@@ -72,7 +74,10 @@ httpRequest.send();
 不過如果你想要以 POST 方式傳送資料，則必須先將 MIME 型態改好，如下：
 
 ```js
-httpRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+httpRequest.setRequestHeader(
+  "Content-Type",
+  "application/x-www-form-urlencoded"
+);
 ```
 
 否則伺服器就不會理你傳過來的資料了。
@@ -89,9 +94,9 @@ httpRequest.onreadystatechange = nameOfTheFunction;
 
 ```js
 if (httpRequest.readyState === XMLHttpRequest.DONE) {
-    // 一切 ok, 繼續解析
+  // 一切 ok, 繼續解析
 } else {
-    // 還沒完成
+  // 還沒完成
 }
 ```
 
@@ -109,11 +114,11 @@ if (httpRequest.readyState === XMLHttpRequest.DONE) {
 
 ```js
 if (httpRequest.status === 200) {
-    // 萬事具備
+  // 萬事具備
 } else {
-    // 似乎有點問題。
-    // 或許伺服器傳回了 404（查無此頁）
-    // 或者 500（內部錯誤）什麼的。
+  // 似乎有點問題。
+  // 或許伺服器傳回了 404（查無此頁）
+  // 或者 500（內部錯誤）什麼的。
 }
 ```
 
@@ -130,32 +135,34 @@ if (httpRequest.status === 200) {
 <button id="ajaxButton" type="button">Make a request</button>
 
 <script>
-(function() {
-  var httpRequest;
-  document.getElementById("ajaxButton").addEventListener('click', makeRequest);
+  (function () {
+    var httpRequest;
+    document
+      .getElementById("ajaxButton")
+      .addEventListener("click", makeRequest);
 
-  function makeRequest() {
-    httpRequest = new XMLHttpRequest();
+    function makeRequest() {
+      httpRequest = new XMLHttpRequest();
 
-    if (!httpRequest) {
-      alert('Giving up :( Cannot create an XMLHTTP instance');
-      return false;
+      if (!httpRequest) {
+        alert("Giving up :( Cannot create an XMLHTTP instance");
+        return false;
+      }
+      httpRequest.onreadystatechange = alertContents;
+      httpRequest.open("GET", "test.html");
+      httpRequest.send();
     }
-    httpRequest.onreadystatechange = alertContents;
-    httpRequest.open('GET', 'test.html');
-    httpRequest.send();
-  }
 
-  function alertContents() {
-    if (httpRequest.readyState === XMLHttpRequest.DONE) {
-      if (httpRequest.status === 200) {
-        alert(httpRequest.responseText);
-      } else {
-        alert('There was a problem with the request.');
+    function alertContents() {
+      if (httpRequest.readyState === XMLHttpRequest.DONE) {
+        if (httpRequest.status === 200) {
+          alert(httpRequest.responseText);
+        } else {
+          alert("There was a problem with the request.");
+        }
       }
     }
-  }
-})();
+  })();
 </script>
 ```
 
@@ -183,12 +190,11 @@ function alertContents() {
       if (httpRequest.status === 200) {
         alert(httpRequest.responseText);
       } else {
-        alert('There was a problem with the request.');
+        alert("There was a problem with the request.");
       }
     }
-  }
-  catch( e ) {
-    alert('Caught Exception: ' + e.description);
+  } catch (e) {
+    alert("Caught Exception: " + e.description);
   }
 }
 ```
@@ -201,14 +207,12 @@ function alertContents() {
 
 ```html
 <?xml version="1.0" ?>
-<root>
-    I'm a test.
-</root>
+<root> I'm a test. </root>
 ```
 
 在程式中，我們叫用檔案的地方只須略事修改如下：
 
-```html
+```js
 ...
 onclick="makeRequest('test.xml')">
 ...
@@ -218,7 +222,7 @@ onclick="makeRequest('test.xml')">
 
 ```js
 var xmldoc = httpRequest.responseXML;
-var root_node = xmldoc.getElementsByTagName('root').item(0);
+var root_node = xmldoc.getElementsByTagName("root").item(0);
 alert(root_node.firstChild.data);
 ```
 
@@ -233,7 +237,8 @@ Finally, let's send some data to the server and receive a response. Our JavaScri
 First we'll add a text box to our HTML so the user can enter their name:
 
 ```html
-<label>Your name:
+<label
+  >Your name:
   <input type="text" id="ajaxTextbox" />
 </label>
 <span id="ajaxButton" style="cursor: pointer; text-decoration: underline">
@@ -244,10 +249,10 @@ First we'll add a text box to our HTML so the user can enter their name:
 We'll also add a line to our event handler to get the user's data from the text box and send it to the `makeRequest()` function along with the URL of our server-side script:
 
 ```js
-  document.getElementById("ajaxButton").onclick = function() {
-      var userName = document.getElementById("ajaxTextbox").value;
-      makeRequest('test.php',userName);
-  };
+document.getElementById("ajaxButton").onclick = function () {
+  var userName = document.getElementById("ajaxTextbox").value;
+  makeRequest("test.php", userName);
+};
 ```
 
 We need to modify `makeRequest()` to accept the user data and pass it along to the server. We'll change the request method from `GET` to `POST`, and include our data as a parameter in the call to `httpRequest.send()`:
@@ -277,7 +282,7 @@ function alertContents() {
       var response = JSON.parse(httpRequest.responseText);
       alert(response.computedString);
     } else {
-      alert('There was a problem with the request.');
+      alert("There was a problem with the request.");
     }
   }
 }

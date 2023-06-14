@@ -231,14 +231,3 @@ Se você ficar emperrado, pode sempre comparar seu trabalho com nosso [código d
 Aqui, nós só arranhamos na superfície do HTML. Para descobrir mais, vá a nossa [Estruturando a web com HTML](/pt-BR/docs/Learn/HTML).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
-
-## Neste módulo
-
-- [Instalando os programas básicos](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [Como será o seu site?](/pt-BR/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML básico](/pt-BR/docs/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS básico](/pt-BR/docs/Learn/Getting_started_with_the_web/CSS_basics)
-- [Javascript básico](/pt-BR/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publicando seu website](/pt-BR/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Como a web funciona](/pt-BR/docs/Learn/Getting_started_with_the_web/How_the_Web_works)

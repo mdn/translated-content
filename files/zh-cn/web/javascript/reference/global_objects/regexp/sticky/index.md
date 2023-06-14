@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 
 你不能直接更改这个属性，它是只读的。
 
-## 例子
+## 示例
 
 ### 使用带 sticky 标志的正则表达式
 

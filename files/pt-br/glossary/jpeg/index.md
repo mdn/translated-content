@@ -1,6 +1,6 @@
 ---
 title: JPEG
-slug: Glossary/jpeg
+slug: Glossary/JPEG
 original_slug: Glossario/JPEG
 ---
 

@@ -839,17 +839,3 @@ Voici quelques bibliothèques à prendre en considération avant de coder les v�
 - [et beaucoup d'autres…](https://www.google.fr/search?q=HTML+custom+form+controls&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:fr:official&client=firefox-a)
 
 Si vous voulez aller plus loin, le code de cet exemple mérite quelques amélioration avant de devenir générique et réutilisable. C'est un exercice que vous pouvez essayer de faire. Deux conseils pour vous aider : le premier argument pour toutes nos fonctions est le même, ce qui signifie que ces fonctions ont besoin du même contexte. Il serait avisé de construire un objet pour partager ce contexte. En outre, vous devrez éprouver ses fonctionnalités, c'est-à-dire qu'il doit pouvoir fonctionner avec les divers navigateurs dont la compatibilité avec les normes Web qu'ils utilisent varie. Amusez-vous bien !
-
-## Dans ce module
-
-- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML)
-- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/Comment_structurer_un_formulaire_HTML)
-- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs)
-- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)
-- [Validation des données de formulaire](/fr/docs/Learn/Forms/Validation_donnees_formulaire)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Apparence_des_formulaires_HTML)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)

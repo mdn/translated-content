@@ -271,13 +271,3 @@ These permission prompts are given to users for security — if they weren't in 
 Ao chegar aqui, você deve ter uma boa ideia do que são APIs, como funcionam e o que você pode fazer com elas em seu código JavaScript. Além do mais, você deve estar ansioso(a) para colocar a mão na massa e trabalhar com APIs. Na sequência, iremos ver como manipular documentos com o DOM (Document Object Model).
 
 {{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## Neste módulo
-
-- [Introduction to web APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Drawing graphics](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Video and audio APIs](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

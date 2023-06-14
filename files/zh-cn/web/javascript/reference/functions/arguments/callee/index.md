@@ -84,7 +84,7 @@ function f (a, b, c, d, e) { return a ? b * c : d * e; }
 
 如果 JavaScript 解释器不能保证所有提供的参数数量在被调用的时候都存在，那么它需要在行内代码插入检查，或者不能内联这个函数。现在在这个特殊例子里一个智能的解释器应该能重排检查而更优，并检查任何将不用到的值。然而在许多的情况里那是不可能的，也因此它不能够内联。
 
-## 例子
+## 示例
 
 ### 在匿名递归函数中使用 `arguments.callee`
 
@@ -106,7 +106,7 @@ var result = create()(5); // returns 120 (5 * 4 * 3 * 2 * 1)
 
 ### 没有替代方案的 arguments.callee
 
-当你必须要使用 Function 构造函数时，下面的例子是没有可以替代 `arguments.callee` 的方案的，因此弃用它时会产生一个 BUG (参看 {{Bug("725398")}}):
+当你必须要使用 Function 构造函数时，下面的例子是没有可以替代 `arguments.callee` 的方案的，因此弃用它时会产生一个 BUG (参看 [Firefox bug 725398](https://bugzil.la/725398)):
 
 ```js
 function createPerson (sIdentity) {
@@ -143,6 +143,6 @@ john(); //John Smith
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{jsxref("Function")}}

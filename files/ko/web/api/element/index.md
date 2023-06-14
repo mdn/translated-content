@@ -84,13 +84,6 @@ _`Element` 인터페이스는 {{domxref("Slotable")}} 믹스인에 정의된 다
 - {{domxref("Slotable.assignedSlot")}}{{readonlyInline}}
   - : Returns a {{domxref("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.
 
-### 이벤트 처리기
-
-- {{domxref("Element.ongotpointercapture")}}
-  - : Returns the event handler for the {{event("gotpointercapture")}} event type.
-- {{domxref("Element.onlostpointercapture")}}
-  - : Returns the event handler for the {{event("lostpointercapture")}} event type.
-
 ## 메서드
 
 _부모 인터페이스인 {{domxref("Node")}}와 그 부모인 {{domxref("EventTarget")}}의 메서드를 상속합니다. {{domxref("ParentNode")}}, {{domxref("ChildNode")}}, {{domxref("NonDocumentTypeChildNode")}}와 {{domxref("Animatable")}}의 메서드를 구현합니다._

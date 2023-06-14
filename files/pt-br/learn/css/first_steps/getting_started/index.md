@@ -184,7 +184,7 @@ span.special {
 }
 ```
 
-Como pode imaginar, algumas classes podem ser aplicadas a muitos elementos e você não quer ter que editar seu CSS a cada vez que algo novo precisar assumir esse estilo. Portanto, as vezes é melhor ignorar o lemento e simplesmente se referir à classe, a menos que você queira criar algumas regras especiais para um elemento em particular, e, talvez, queira ter certeza que eles não serão aplicados aos outros.
+Como pode imaginar, algumas classes podem ser aplicadas a muitos elementos e você não quer ter que editar seu CSS a cada vez que algo novo precisar assumir esse estilo. Portanto, as vezes é melhor ignorar o elemento e simplesmente se referir à classe, a menos que você queira criar algumas regras especiais para um elemento em particular, e, talvez, queira ter certeza que eles não serão aplicados aos outros.
 
 ## Estilizando coisas baseadas em sua localização no documento
 
@@ -285,11 +285,3 @@ Neste tutorial, demos uma olhada na quantidade de maneiras as quais pode-se esti
 Na próxima lição, veremos como o CSS é estruturado.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
-
-## Neste módulo
-
-1. [O que é CSS?](/pt-BR/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Começando com CSS](/pt-BR/docs/Learn/CSS/First_steps/Getting_started)
-3. [Como o CSS é estruturado](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [Como o CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Usando o seu novo conhecimento](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

@@ -61,15 +61,7 @@ Use el [foro de discusión sobre complementos](https://discourse.mozilla-communi
 
 ### Listas de correo
 
-Utilice la lista **dev-addons** para discutir el desarrollo del ecosistema de complementos, incluyendo el desarrollo del sistema WebExtensions y de AMO:
-
-- [info de la lista dev-addons](https://mail.mozilla.org/listinfo/dev-addons)
-- [archivos de dev-addons](https://mail.mozilla.org/pipermail/dev-addons/)
-
-Utilice la lista **webextensions-support** para obtener ayuda para portar o realizar la transición a WebExtensions:
-
-[webextensions-support lista de información](https://mail.mozilla.org/listinfo/webextensions-support)
-[webextensions-support archivos](https://mail.mozilla.org/private/webextensions-support/)
+La **lista de correo de dev-addons** se retiró el 1 de diciembre de 2020. Puede ver los [archivos de dev-addons](https://mail.mozilla.org/pipermail/dev-addons/) para ver debates anteriores sobre la API de WebExtensions y addons.mozilla.org.
 
 ### IRC
 

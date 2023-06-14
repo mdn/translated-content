@@ -1,6 +1,6 @@
 ---
 title: WebM
-slug: Glossary/webm
+slug: Glossary/WebM
 tags:
   - Composition
   - Glossaire

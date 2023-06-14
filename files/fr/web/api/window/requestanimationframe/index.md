@@ -1,11 +1,9 @@
 ---
 title: Window.requestAnimationFrame()
-slug: Web/API/Window/requestAnimationFrame
+slug: Web/API/window/requestAnimationFrame
 page-type: web-api-instance-method
 translation_of: Web/API/window/requestAnimationFrame
 browser-compat: api.Window.requestAnimationFrame
-l10n:
-  sourceCommit: 2665f98fa021d22f9b0678f836fba25590bd6aa4
 ---
 
 {{APIRef}}

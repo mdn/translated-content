@@ -1,6 +1,6 @@
 ---
 title: accent
-slug: Glossary/accent
+slug: Glossary/Accent
 ---
 
 Um **accent** é uma cor tipicamente brilhante que contrasta com as cores de fundo e de primeiro plano mais utilitárias dentro de um esquema de cores. Estes estão presentes no estilo visual de muitas plataformas (embora não todas).

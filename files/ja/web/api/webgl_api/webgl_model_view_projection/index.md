@@ -7,7 +7,7 @@ slug: Web/API/WebGL_API/WebGL_model_view_projection
 
 この記事では、[WebGL](/ja/docs/Web/API/WebGL_API) プロジェクト内でデータを取得し、それを適切な空間に投影して画面に表示する方法について説明します。並進、拡縮、回転行列を使用した基本的な行列計算の知識があることを前提としています。3D シーンを構成するときに通常使用される中心的な 3 つの行列である、モデル、ビュー、射影行列について説明します。
 
-> **メモ:** This article is also available as an [MDN content kit](https://github.com/TatumCreative/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/TatumCreative/mdn-webgl) available under the `MDN` global object.
+> **メモ:** This article is also available as an [MDN content kit](https://github.com/gregtatum/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/gregtatum/mdn-webgl) available under the `MDN` global object.
 
 ## モデル、ビュー、射影行列
 
@@ -31,7 +31,7 @@ WebGL プログラムでは、通常、データは自分の座標系で GPU に
 
 この例では、画面上に 2D ボックスを描画するカスタム `WebGLBox` オブジェクトを作成します。
 
-> **メモ:** The code for each WebGLBox example is available in this [github repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
+> **メモ:** The code for each WebGLBox example is available in this [github repo](https://github.com/gregtatum/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
 
 #### WebGLBox コンストラクタ
 
@@ -108,7 +108,7 @@ WebGLBox.prototype.draw = function(settings) {
 }
 ```
 
-シェーダーは GLSL で記述されたコードの一部であり、データポイントを取得して最終的に画面に描画します。便宜上、これらのシェーダーは、カスタム関数 `MDN.createWebGLProgramFromIds()` を介してプログラムに取り込まれる要素 {{htmlelement("script")}} に格納されます。この関数は、これらのチュートリアル用に作成された [ユーティリティ関数群](https://github.com/TatumCreative/mdn-webgl) の一部であり、ここでは詳しく説明しません。この関数は、いくつかの GLSL ソースコードを取得して WebGL プログラムにコンパイルする基本を処理します。関数は 3 つのパラメーターを取ります。プログラムをレンダリングするコンテキスト、頂点シェーダーを含む要素の ID {{htmlelement("script")}}、フラグメントシェーダーを含む要素の ID {{htmlelement("script")}} です。頂点シェーダーは頂点を配置し、フラグメントシェーダーは各ピクセルに色を付けます。
+シェーダーは GLSL で記述されたコードの一部であり、データポイントを取得して最終的に画面に描画します。便宜上、これらのシェーダーは、カスタム関数 `MDN.createWebGLProgramFromIds()` を介してプログラムに取り込まれる要素 {{htmlelement("script")}} に格納されます。この関数は、これらのチュートリアル用に作成された [ユーティリティ関数群](https://github.com/gregtatum/mdn-webgl) の一部であり、ここでは詳しく説明しません。この関数は、いくつかの GLSL ソースコードを取得して WebGL プログラムにコンパイルする基本を処理します。関数は 3 つのパラメーターを取ります。プログラムをレンダリングするコンテキスト、頂点シェーダーを含む要素の ID {{htmlelement("script")}}、フラグメントシェーダーを含む要素の ID {{htmlelement("script")}} です。頂点シェーダーは頂点を配置し、フラグメントシェーダーは各ピクセルに色を付けます。
 
 最初に、画面上で頂点を移動させる頂点シェーダーを見てみましょう。
 
@@ -331,7 +331,7 @@ Finally a single model matrix is computed and set. This matrix represents the tr
 
 In this case, for every frame of the animation a series of scale, rotation, and translation matrices move the data into the desired spot in clip space. The cube is the size of clip space (-1,-1,-1) to (1,1,1) so it will need to be shrunk down in order to not fill the entirety of clip space. This matrix is sent directly to the shader, having been multiplied in JavaScript beforehand.
 
-The following code sample defines a method on the `CubeDemo` object that will create the model matrix. It uses custom functions to create and multiply matrices as defined in the [MDN WebGL](https://github.com/TatumCreative/mdn-webgl) shared code. The new function looks like this:
+The following code sample defines a method on the `CubeDemo` object that will create the model matrix. It uses custom functions to create and multiply matrices as defined in the [MDN WebGL](https://github.com/gregtatum/mdn-webgl) shared code. The new function looks like this:
 
 ```js
 CubeDemo.prototype.computeModelMatrix = function(now) {

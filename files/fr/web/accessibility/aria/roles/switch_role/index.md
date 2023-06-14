@@ -1,6 +1,6 @@
 ---
 title: Utilisation du groupe switch
-slug: Web/Accessibility/ARIA/Roles/Switch_role
+slug: Web/Accessibility/ARIA/Roles/switch_role
 tags:
   - ARIA
   - Accessibility

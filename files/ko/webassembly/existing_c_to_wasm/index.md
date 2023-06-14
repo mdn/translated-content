@@ -1,6 +1,6 @@
 ---
 title: Compiling an Existing C Module to WebAssembly
-slug: WebAssembly/existing_C_to_wasm
+slug: WebAssembly/existing_C_to_Wasm
 ---
 
 {{WebAssemblySidebar}}

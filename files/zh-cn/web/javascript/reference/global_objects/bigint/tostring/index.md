@@ -39,7 +39,7 @@ bigIntObj.toString([radix])
 
 如果 `bigIntObj` 为负，则保留符号。即使基数是 2，情况也是如此；返回的字符串是 `bigIntObj` 的正二进制表示，前面是一个 `-` 符号，而不是 `bigIntObj` 的两个补码。
 
-## 例子
+## 示例
 
 ### Using `toString`
 
