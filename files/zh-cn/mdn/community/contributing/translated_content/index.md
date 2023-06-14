@@ -11,7 +11,7 @@ slug: MDN/Community/Contributing/Translated_content
 
 ## 活跃语言
 
-> **备注：** 如果你有意向为某个活跃语言做出贡献，请联系下面这些小组中的成员，或[联系我们以寻求帮助](/zh-CN/docs/MDN/Community/Communication_channels)。
+> **备注：** 如果你有意向为某个活跃语言做出贡献，请联系下面这些小组中的成员；如果你有任何疑问，也欢迎[联系我们](/zh-CN/docs/MDN/Community/Communication_channels)。
 
 ### 巴西葡萄牙语（pt-BR）
 
@@ -47,8 +47,6 @@ slug: MDN/Community/Contributing/Translated_content
 
 - 讨论组：[Matrix (#mdn-l10n-es channel)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org)
 - 目前的志愿者：[JuanVqz](https://github.com/JuanVqz)、[davbrito](https://github.com/davbrito)、[Graywolf9](https://github.com/Graywolf9)、[Vallejoanderson](https://github.com/Vallejoanderson)、[marcelozarate](https://github.com/marcelozarate)、[Jalkhov](https://github.com/Jalkhov)
-
-> **备注：** 如果你想讨论关于解冻某个语言的内容，请先了解[所需要的准备工作指南](https://github.com/mdn/translated-content/blob/main/PEERS_GUIDELINES.md#activating-a-locale)。
 
 ## 参见
 
