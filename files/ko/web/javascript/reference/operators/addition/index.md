@@ -65,7 +65,6 @@ false + false // 0
 Number(1n) + 2; // 3
 ```
 
-
 ### 문자열 연결
 
 ```js
