@@ -38,7 +38,7 @@ if (window.confirm("Do you really want to leave?")) {
 
 ## 注意事项
 
-对话框是模态窗口——它们阻止用户访问程序界面的其他部分，直到对话框被关闭。出于这个原因，你不应该过度使用任何创建对话框（或模态窗口）的函数。无论如何，有很好的理由可以[避免使用对话框进行确认](https://alistapart.com/article/neveruseawarning/)。
+对话框是模态窗口——它们阻止用户访问程序界面的其他部分，直到对话框被关闭。出于这个原因，你不应该过度使用任何创建对话框（或模态窗口）的函数。无论如何，有很好的应[避免使用对话框进行确认](https://alistapart.com/article/neveruseawarning/)的理由。
 
 另外，{{HTMLElement("dialog")}} 元素也可用于确认。
 
