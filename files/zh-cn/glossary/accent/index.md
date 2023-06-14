@@ -3,6 +3,8 @@ title: 强调色
 slug: Glossary/Accent
 ---
 
+{{GlossarySidebar}}
+
 **强调色**（accent）通常为一种明亮的颜色，与颜色方案中更实用的背景和前景色形成对比。这些颜色存在于很多平台（但不是所有平台）的视觉样式中。
 
 在 web 上，强调色有时用于 {{HTMLElement("input")}} 元素中控件的活跃部分，例如勾选的[复选框](/zh-CN/docs/Web/HTML/Element/input/checkbox)的背景。

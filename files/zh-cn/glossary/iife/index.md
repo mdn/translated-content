@@ -3,6 +3,8 @@ title: IIFE（立即调用函数表达式）
 slug: Glossary/IIFE
 ---
 
+{{GlossarySidebar}}
+
 **IIFE**（立即调用函数表达式）是一个在定义时就会立即执行的 {{glossary("JavaScript")}} {{glossary("function","函数")}}。IIFE 这个名字是由 Ben Alman 在[他的博客](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife)中提出的。
 
 ```js
