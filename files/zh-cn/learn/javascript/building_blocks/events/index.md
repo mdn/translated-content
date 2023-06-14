@@ -294,7 +294,7 @@ function bgChange(e) {
 btn.addEventListener("click", bgChange);
 ```
 
-> **备注：** 你可以在 GitHub 上查看这个示例的[完整代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) ，或者在这里查看[实时演示](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)。
+> **备注：** 你可以在 GitHub 上查看这个示例的[完整代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) ，或者在这里查看[实时演示](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)。
 
 在这里，可以看到我们在函数中包括一个事件对象 `e`，并在函数中设置背景颜色样式在 `e.target` 上——它指的是按钮本身。事件对象 `e` 的 `target` 属性始终是事件刚刚发生的元素的引用。所以在这个例子中，我们在按钮上设置一个随机的背景颜色，而不是页面。
 
@@ -382,7 +382,7 @@ form.addEventListener("submit", (e) => {
 
 {{ EmbedLiveSample('阻止默认行为', '100%', 180, "", "") }}
 
-> **备注：** 你可以在 GitHub 上查看这个示例的完整源代码 [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html)，也可以[在线运行它](http://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html)。
+> **备注：** 你可以在 GitHub 上查看这个示例的完整源代码 [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html)，也可以[在线运行它](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html)。
 
 ## 事件冒泡
 
