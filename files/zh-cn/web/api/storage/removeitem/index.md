@@ -50,8 +50,7 @@ function populateStorage() {
 }
 ```
 
-
-> **备注：** 查看在实际示例中的使用，请参阅 [Web Storage 演示](https://mdn.github.io/dom-examples/web-storage/)。
+> **备注：** 有关实际运行的例子，详见 [Web Storage 演示](https://mdn.github.io/dom-examples/web-storage/)。
 
 ## 规范
 
