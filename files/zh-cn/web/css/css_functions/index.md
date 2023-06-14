@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_Functions
 
 {{CSSRef}}
 
-**CSS 值函数**是调用特殊数据处理或计算的语句，以返回一个 CSS 属性的 [CSS](/zh-CN/docs/Web/CSS) [值](/zh-CN/docs/Web/CSS_Values_and_Units)。CSS 值函数代表更复杂的[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)，它们可能需要一些输入参数来计算返回值。
+**CSS 值函数**是调用特殊数据处理或计算的语句，以返回一个 CSS 属性的 [CSS](/zh-CN/docs/Web/CSS) [值](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)。CSS 值函数代表更复杂的[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)，它们可能需要一些输入参数来计算返回值。
 
 ## 语法
 
@@ -101,16 +101,16 @@ selector {
 - {{CSSxRef("max", "max()")}}
   - : 计算一系列值的最大值。
 - {{CSSxRef("clamp", "clamp()")}}
-  - : 计算最小值、中心值、最大值的“中心”。
+  - : 计算最小值、中间值、最大值的中值。
 
 ### 阶跃值函数
 
 - {{CSSxRef("round", "round()")}} {{Experimental_Inline}}
-  - : 根据四舍五入策略计算一个四舍五入的数字。
+  - : 根据舍入策略计算一个舍入的数字。
 - {{CSSxRef("mod", "mod()")}} {{Experimental_Inline}}
-  - : 当一个数字除以另一个数字时，计算一个模数（与除数的符号相同）。
+  - : 计算一个数除以另一个数的模（与除数的符号相同）。
 - {{CSSxRef("rem", "rem()")}} {{Experimental_Inline}}
-  - : 当一个数字除以另一个数字时，计算余数（与除数的符号相同）。
+  - : 计算一个数字除以另一个数字的余数（与被除数的符号相同）。
 
 ### 三角函数
 
@@ -259,7 +259,7 @@ CSS计数器函数通常与 {{CSSxRef("content")}} 属性一起使用，不过�
 - {{CSSxRef("path", "path()")}}
   - : 接受 SVG 路径字符串，以便绘制一个形状。
 
-## 参照函数
+## 引用函数
 
 以下函数被用作属性的值，以引用其他地方定义的值。
 
@@ -274,7 +274,7 @@ CSS计数器函数通常与 {{CSSxRef("content")}} 属性一起使用，不过�
 
 ## 网格函数
 
-以下函数用于定义一个 [CSS 网格](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)。
+以下函数用于定义一个 [CSS 网格](/zh-CN/docs/Web/CSS/CSS_grid_layout)。
 
 - {{CSSxRef("fit-content", "fit-content()")}}
   - : 根据公式 `min(maximum size, max(minimum size, argument))` 将一个给定的尺寸固定在一个可用的尺寸范围中。
@@ -307,7 +307,7 @@ CSS 字体函数与 {{CSSxRef("font-variant-alternates")}} 属性一起使用，
 - {{cssxref("easing-function#cubic_b%C3%A9zier_easing_function", "cubic-bezier()")}}
   - : 定义三次贝塞尔曲线的缓动函数。
 - {{cssxref("easing-function#step_easing_function", "steps()")}}
-  - : 在过渡中迭代若干次“阶梯”，每个“阶梯”停留相同的时间。
+  - : 在过渡中迭代若干次定格，每次定格停留相同的时间。
 
 ## 动画函数
 
