@@ -3,6 +3,8 @@ title: 編譯
 slug: Glossary/Compile
 ---
 
+{{GlossarySidebar}}
+
 編譯是將給定編程語言中的計算機程式轉換成用另一種語言（通常是計算機可執行的二進制語言）編寫的相同程式的過程。
 
 ## 了解更多
