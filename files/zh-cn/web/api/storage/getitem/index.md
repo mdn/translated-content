@@ -5,7 +5,7 @@ slug: Web/API/Storage/getItem
 
 {{APIRef("Web Storage API")}}
 
-{{domxref("Storage")}} 接口的 **`getItem()`** 方法，当传递一个键名时，将返回该键的值，如果该键不存在，则返回 `null`，在给定的 `Storage` 对象中。
+{{domxref("Storage")}} 接口的 **`getItem()`** 方法，当传递一个键名时，将返回该键的值；而如果在给定的 `Storage` 对象中不存在该键，则返回 `null`。
 
 ## 语法
 

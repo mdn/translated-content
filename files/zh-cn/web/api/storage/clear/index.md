@@ -5,7 +5,7 @@ slug: Web/API/Storage/clear
 
 {{APIRef("Web Storage API")}}
 
-{{domxref("Storage")}} 接口的 `clear()` 方法清除给定 `Storage` 对象中存储的所有键。
+{{domxref("Storage")}} 接口的 **`clear()`** 方法清除给定 `Storage` 对象中存储的所有键。
 
 ## 语法
 
