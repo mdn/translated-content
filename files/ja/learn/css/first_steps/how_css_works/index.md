@@ -8,9 +8,28 @@ slug: Learn/CSS/First_steps/How_CSS_works
 
 CSS の基本と目的、簡単なスタイルシートの書き方を学んできました。このレッスンでは、ブラウザーが CSS と HTML を実際にウェブページとして表示していくさまを見ていきます。
 
-| 前提条件: | 基本的なコンピューターリテラシー、 [基本的なソフトウェアがインストールされていること](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)、[ファイルの操作方法](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)についての基本的な知識、HTML の基本 ([HTML 概論](/ja/docs/Learn/HTML/Introduction_to_HTML)を学習のこと)。 |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目的:     | ブラウザーが CSS と HTML を解析する方法、およびブラウザーが解釈できない CSS に遭遇したときに何が起こるかを理解する。                                                                                                                                                                                                                              |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        基本的なコンピューターリテラシー、<a
+          href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >基本的なソフトウェアがインストールされていること</a
+        >、基本的な<a
+          href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >ファイルの操作方法</a
+        >に関する知識、 HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+          >HTML 概論</a
+        >を学習のこと）。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>ブラウザーが CSS と HTML を解析する方法、およびブラウザーが解釈できない CSS に遭遇したときに何が起こるかを理解する。</td>
+    </tr>
+  </tbody>
+</table>
 
 ## CSS は実際にはどう機能するのか？
 
