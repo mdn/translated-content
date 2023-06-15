@@ -39,7 +39,7 @@ slug: Learn/JavaScript/Building_blocks/Events
 - 用户调整浏览器窗口的大小或者关闭浏览器窗口。
 - 网页结束加载。
 - 表单提交。
-- 视频播放、暂停、或结束。
+- 视频播放、暂停或结束。
 - 发生错误。
 
 你可以从这里（以及从 MDN [事件参考](/zh-CN/docs/Web/Events)文档）中看出，有**相当多**的事件可以被触发。
@@ -124,7 +124,7 @@ btn.addEventListener("click", changeBackground);
 
 有许多不同的事件可以由一个按钮元素来触发。让我们来做个实验。
 
-首先，在本地创建 [random-color-addeventlistener.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-addeventlistener.html) 的复制，并在浏览器中打开。这只是我们已经玩过的简单的随机颜色示例的一个副本。现在试着依次将 `click` 改为以下不同的值，并观察示例中的结果：
+首先，在本地创建 [random-color-addeventlistener.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-addeventlistener.html) 的副本，并在浏览器中打开。这只是我们已经玩过的简单的随机颜色示例的一个副本。现在试着依次将 `click` 改为以下不同的值，并观察示例中的结果：
 
 - [`focus`](/zh-CN/docs/Web/API/Element/focus_event) 和 [`blur`](/zh-CN/docs/Web/API/Element/blur_event)：当按钮被聚焦或失焦时，颜色会改变；尝试按下 tab 键来聚焦于按钮，再次按下该键来使按钮失去焦点。这些事件通常用于在聚焦时显示填入表单字段的信息，或者在表单字段填入不正确的值时显示错误信息。
 - [`dblclick`](/zh-CN/docs/Web/API/Element/dblclick_event)：颜色只在按钮被双击时改变。
@@ -219,7 +219,7 @@ function bgChange() {
 btn.onclick = bgChange;
 ```
 
-对于事件处理器属性，你不能为一个事件添加一个以上的处理程序。例如，你可以在一个元素上多次调用 `addEventListener('click', handler)`，并在第二个参数中指定不同的功能：
+对于事件处理器属性，你不能为一个事件添加一个以上的处理程序。例如，你可以在一个元素上多次调用 `addEventListener('click', handler)`，并在第二个参数中指定不同的函数：
 
 ```js
 element.addEventListener("click", function1);
@@ -380,7 +380,7 @@ form.addEventListener("submit", (e) => {
 
 显然，这是一种非常弱的表单验证——例如，用户输入空格或数字提交表单，表单验证并不会阻止用户提交——但对于演示来说已经足够。输出如下：
 
-{{ EmbedLiveSample('阻止默认行为', '100%', 180, "", "") }}
+{{ EmbedLiveSample('阻止默认行为', '100%', 180) }}
 
 > **备注：** 你可以在 GitHub 上查看这个示例的完整源代码 [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html)，也可以[在线运行它](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html)。
 
@@ -550,7 +550,7 @@ box.addEventListener("click", () => box.classList.add("hidden"));
 
 ### 使用 stopPropagation() 修复问题
 
-正如我们在上一节所看到的，事件冒泡有时会产生问题，但有一种方法可以防止这些问题。[`Event`](/zh-CN/docs/Web/API/Event)对象有一个可用的函数，叫做 [`stopPropagation()`](/zh-CN/docs/Web/API/Event/stopPropagation)，当在一个事件处理器中调用时，可以防止事件向任何其他元素传递。
+正如我们在上一节所看到的，事件冒泡有时会产生问题，但有一种方法可以防止这些问题。[`Event`](/zh-CN/docs/Web/API/Event) 对象有一个可用的函数，叫做 [`stopPropagation()`](/zh-CN/docs/Web/API/Event/stopPropagation)，当在一个事件处理器中调用时，可以防止事件向任何其他元素传递。
 
 我们可以通过修改 JavaScript 代码来修复当前的问题：
 
