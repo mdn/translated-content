@@ -5,7 +5,7 @@ slug: Learn/Forms/UI_pseudo-classes
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
 
-In the previous articles, we covered the styling of various form controls, in a general manner. This included some usage of pseudo-classes, for example using `:checked` to target a checkbox only when it is selected. In this article, we will explore in detail the different UI pseudo-classes available to us in modern browsers for styling forms in different states.
+在以前的文章中，我们以一般的方式介绍了各种表单控件的样式。这包括一些伪类的使用，例如，使用 `:checked` 来选择一个选中的复选框。在这篇文章中，我们将详细探讨在现代浏览器中可用的不同 UI 伪类，以便在不同状态下对表单添加样式。
 
 <table>
   <tbody>
@@ -29,41 +29,33 @@ In the previous articles, we covered the styling of various form controls, in a 
 
 ## 都有什么样的伪类？
 
-The original pseudo-classes available to us (as of [CSS 2.1](https://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes)) that are relevant to forms are:
+我们可以使用的（截至 [CSS 2.1](https://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes)）与表单相关的原始伪类是：
 
-- {{cssxref(":hover")}}: Selects an element only when it is being hovered over by a mouse pointer.
-- {{cssxref(":focus")}}: Selects an element only when it is focused (i.e. by being tabbed to via the keyboard).
-- {{cssxref(":active")}}: selects an element only when it is being activated (i.e. while it is being clicked on, or when the
+- {{cssxref(":hover")}}：只在鼠标指针悬停在一个元素上时选择该元素。
+- {{cssxref(":focus")}}：只在元素被聚焦时选择该元素（也就是说，通过键盘上的 tab 键选中该元素）。
+- {{cssxref(":active")}}：只在元素被激活时选择该元素（也就是说，通过点击或键盘上的 <kbd>Return</kbd> / <kbd>Enter</kbd> 键选中该元素）。
 
-  <kbd>Return</kbd>
+这些基本的伪类现在对你来说应该很熟悉了。最近，[CSS Selector Level 3](https://www.w3.org/TR/selectors-3/) 和 [CSS Basic UI Level 3](https://drafts.csswg.org/css-ui-3/#pseudo-classes) 增加了更多与 HTML 表单有关的伪类，提供了其他几个有用的定位条件以便于利用。我们将在下面的章节中更详细地讨论这些内容，但简单地说，我们要看的主要内容是：
 
-  /
+- {{cssxref(':required')}} 和 {{cssxref(':optional')}}：针对必需的或可选的表单控件。
+- {{cssxref(":valid")}} 和 {{cssxref(":invalid")}}、{{cssxref(":in-range")}} 和 {{cssxref(":out-of-range")}}：针对表单控件，根据对其设置的表单验证约束，或范围内/范围外，是有效/无效的。
+- {{cssxref(":enabled")}} 和 {{cssxref(":disabled")}}、{{cssxref(":read-only")}} 和 {{cssxref(":read-write")}}：针对启用或禁用的表单控件（例如，设置了 `disabled` HTML 属性），以及读写或只读的表单控件（例如，设置了 `readonly` HTML 属性）。
+- {{cssxref(":checked")}}、{{cssxref(":indeterminate")}} 和 {{cssxref(":default")}}：分别针对被选中的复选框和单选按钮，处于不确定的状态（既不被选中也不被选中），以及页面加载时默认选择的选项（例如，一个设置了 `checked` 属性的 [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox)，或者一个设置了 `selected` 属性[`<option>`](/zh-CN/docs/Web/Element/option) 元素）。
 
-  <kbd>Enter</kbd>
+还有很多其他的，但上面列出的是最明显有用的。其中一些旨在解决非常具体的小众问题，或者在浏览器中还没有得到很好的支持。上面列出的那些都有相当好的浏览器支持，但当然，你应该仔细测试你的表单实现，以确保它们对你的目标受众有效。
 
-  key is being pressed down in the case of a keyboard activation).
-
-These basic pseudo-classes should be familiar to you now. More recently, the [CSS Selector Level 3](https://www.w3.org/TR/selectors-3/) and [CSS Basic UI Level 3](https://drafts.csswg.org/css-ui-3/#pseudo-classes) added more pseudo-classes related to HTML forms that provide several other useful targeting conditions that you can take advantage of. We'll discuss these in more detail in the sections below, but briefly, the main ones we'll be looking at are:
-
-- {{cssxref(':required')}} and {{cssxref(':optional')}}: Targets required or optional form controls.
-- {{cssxref(":valid")}} and {{cssxref(":invalid")}}, and {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}: Target form controls that are valid/invalid according to form validation constraints set on them, or in-range/out-of-range.
-- {{cssxref(":enabled")}} and {{cssxref(":disabled")}}, and {{cssxref(":read-only")}} and {{cssxref(":read-write")}}: Target enabled or disabled form controls (e.g. with the `disabled` HTML attribute set), and read-write or read-only form controls (e.g. with the `readonly` HTML attribute set).
-- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked or not checked), and the default selected option when the page loads (e.g. an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) with the `checked` attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Element/option) element with the `selected` attribute set).
-
-There are many others too, but the ones listed above are the most obviously useful. Some of them are aimed at solving very specific niche problems, or not very well-supported in browsers yet. The ones listed above all have pretty good browser support, but of course, you should test your form implementations carefully to make sure they work for your target audience.
-
-> **备注：** A number of the pseudo-classes discussed here are concerned with styling form controls based on their validation state (is their data valid, or not?) You'll learn much more about setting and controlling validation constraints in our next article — [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) — but for now we'll keep things simple regarding the form validation, so it doesn't confuse things.
+> **备注：** 这里讨论的许多伪类都是关于根据表单控件的验证状态（它们的数据是否有效？）你会在我们的下一篇文章[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)中学习到更多关于设置和控制验证约束的知识，但现在我们将保持关于表单验证的简单内容，以便不会混淆。
 
 ## 根据必需与否为输入控件添加样式
 
-One of the most basic concepts regarding client-side form validation is whether a form input is required (it has to be filled in before the form can be submitted) or optional.
+关于客户端表单验证的一个最基本的概念是，一个表单输入是必需的（在提交表单之前必须填写）还是可选的。
 
-{{htmlelement('input')}}, {{htmlelement('select')}}, and {{htmlelement('textarea')}} elements have a `required` attribute available which, when set, means that you have to fill in that control before the form will successfully submit. For example:
+{{htmlelement('input')}}、{{htmlelement('select')}} 和 {{htmlelement('textarea')}} 元素都有一个 `required` 属性可用，设置后意味着你必须在表单成功提交前填入该控件。比如说：
 
 ```html
 <form>
   <fieldset>
-    <legend>Feedback form</legend>
+    <legend>反馈表单</legend>
     <div>
       <label for="fname">First name: </label>
       <input id="fname" name="fname" type="text" required />
@@ -74,18 +66,18 @@ One of the most basic concepts regarding client-side form validation is whether 
     </div>
     <div>
       <label for="email">
-        Email address (include if you want a response):
+        电子邮件地址（如果需要回复，请填写这里）：
       </label>
       <input id="email" name="email" type="email" />
     </div>
-    <div><button>Submit</button></div>
+    <div><button>提交</button></div>
   </fieldset>
 </form>
 ```
 
-Here, the first name and last name are required, but the email address is optional.
+在这里，first name 和 last name 是必需的，但电子邮件地址是可选的。
 
-You can match these two states using the {{cssxref(':required')}} and {{cssxref(':optional')}} pseudo-classes. For example, if we apply the following CSS to the above HTML:
+你可以使用 {{cssxref(':required')}} 和 {{cssxref(':optional')}} 伪类来匹配这两种状态。例如，如果我们将下列 CSS 应用于上述 HTML 代码中：
 
 ```css
 input:required {
@@ -97,27 +89,27 @@ input:optional {
 }
 ```
 
-The required controls would have a black border, and the optional control will have a silver border, like so:
+必需的表单控件会有一个黑色的边框，可选的表单控件会有一个银色的边框，像这样：
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/basic-required-optional.html", '100%', 400)}}
 
-You can also try submitting the form without filling it in, to see the client-side validation error messages browsers give you by default.
+你也可以尝试在不填写表单的情况下提交，观察浏览器默认给你的客户端验证错误信息。
 
-The above form isn't bad, but it isn't great either. For a start, we are signalling required versus optional status using color alone, which isn't great for colorblind people. Second, the standard convention on the web for required status is an asterisk (\*), or the word "required" being associated with the controls in question.
+上述形式并不坏，但也不是很好。首先，我们只用颜色来表示必填和可选的状态，这对色盲的人来说不是很好。其次，网络上关于必填状态的标准惯例是一个星号（\*），或者将“必需”这个词与相关的控件联系起来。
 
-In the next section, we'll look at a better example of indicating required fields using `:required`, which also digs into using generated content.
+在下一节，我们将看一个更好的例子，使用 `:required` 表示必填字段，这也是对使用生成内容的挖掘。
 
-> **Note:** You'll probably not find yourself using the `:optional` pseudo-class very often. Form controls are optional by default, so you could just do your optional styling by default, and add styles on top for required controls.
+> **备注：** 你可能不会发现自己经常使用 `:optional` 这个伪类。表单控件默认是可选的，所以你可以将可选状态的样式当作默认样式，然后在必需的组件上添加样式。
 
-> **Note:** If one radio button in a same-named group of radio buttons has the `required` attribute, all the radio buttons will be invalid until one is selected, but only the one with the attribute assigned will actually match {{cssxref(':required')}}.
+> **备注：** 如果一组同名的单选按钮中的一个单选按钮具有 `required` 属性，那么所有的单选按钮都将无效，直到有一个被选中，但只有分配了该属性的单选按钮才会真正匹配 {{cssxref(':required')}}。
 
 ## 使用伪类生成内容
 
-In previous articles, we've seen the usage of [generated content](/en-US/docs/Web/CSS/CSS_Generated_Content), but we thought now would be a good time to talk about it in a bit more detail.
+在之前的文章中，我们已经看到了[生成内容](/zh-CN/docs/Web/CSS/CSS_Generated_Content)的用法，现在是一个更详细地谈论它的好时机。
 
-The idea is that we can use the [`::before`](/en-US/docs/Web/CSS/::before) and [`::after`](/en-US/docs/Web/CSS/::after) pseudo-elements along with the [`content`](/en-US/docs/Web/CSS/content) property to make a chunk of content appear before or after the affected element. The chunk of content is not added to the DOM, so it's invisible to screen readers; it is part of the document's styles. Because it is a pseudo-element, it can be targeted with styles in the same way that any actual DOM node can.
+我们可以使用 [`::before`](/zh-CN/docs/Web/CSS/::before) 和 [`::after`](/zh-CN/docs/Web/CSS/::after) 伪元素以及 [`content`](/zh-CN/docs/Web/CSS/content) 属性来使一大块内容出现在受影响元素的前面或后面。这块内容没有被添加到 DOM 中，所以对屏幕阅读器来说是看不见的；它是文档样式的一部分。因为它是一个伪元素，所以它可以像任何实际的 DOM 节点一样被作为目标样式。
 
-This is really useful when you want to add a visual indicator to an element, such as a label or icon, but don't want it to be picked up by assistive technologies. For example, in our [custom radio buttons example](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html), we use generated content to handle the placement and animation of the inner circle when a radio button is selected:
+当你想给一个元素添加一个视觉指示器，比如一个标签或图标，但又不想让它被辅助技术发现时，这就非常有用。例如，在我们的[自定义单选按钮示例](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)中，我们使用生成的内容来处理单选按钮被选中时内圈的位置和动画：
 
 ```css
 input[type="radio"]::before {
@@ -139,21 +131,21 @@ input[type="radio"]:checked::before {
 }
 ```
 
-This is really useful — screen readers already let their users know when a radio button or checkbox they encounter is checked/selected, so you don't want them to read out another DOM element that indicates selection — that could be confusing. Having a purely visual indicator solves this problem.
+这真的很有用——屏幕阅读器已经让它们的用户知道单选按钮或复选框被选中了，所以你不希望它们读出另一个表示选择的 DOM 元素——那会让人困惑。有一个纯粹的视觉指示器可以解决这个问题。
 
-> **备注：** This also shows how you can combine a pseudo-class and pseudo-element if required.
+> **备注：** 这个示例也说明了如何将伪类和伪元素结合使用。
 
-Back to our required/optional example from before, this time we'll not alter the appearance of the input itself — we'll use generated content to add an indicating label ([see it live here](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html), and see the [source code here](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/required-optional-generated.html)).
+回到我们之前的必填/可选的例子，这次我们不会改变输入本身的外观——我们将使用生成的内容来添加一个指示标签（[在这里看到它的实时演示](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html)，并在这里看到[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/required-optional-generated.html)）。
 
-First of all, we'll add a paragraph to the top of the form to say what you are looking for:
+首先，我们要在表单的顶部添加一段话，说明你在寻找什么：
 
 ```html
 <p>Required fields are labelled with "required".</p>
 ```
 
-screen reader users will get "required" read out as an extra bit of information when they get to each required input, while sighted users will get our label.
+当屏幕阅读器用户到达每个需要的输入时，他们会得到“required”这个额外的信息，而视力正常的用户会看到我们的标签。
 
-Since form inputs don't directly support having generated content put on them (this is because generated content is placed relative to an element's formatting box, but form inputs work more like replaced elements and therefore don't have one), we will add an empty [`<span>`](/en-US/docs/Web/HTML/Element/span) to hang the generated content on:
+由于表单输入不直接支持将生成的内容放在上面（这是因为生成的内容是相对于元素的格式化框放置的，但表单输入的工作方式更像被替换的元素，因此没有格式化框），我们将添加一个空的 [`<span>`](/zh-CN/docs/Web/HTML/Element/span) 元素来存放生成的内容：
 
 ```html
 <div>
@@ -163,7 +155,7 @@ Since form inputs don't directly support having generated content put on them (t
 </div>
 ```
 
-The immediate problem with this was that the span was dropping onto a new line below the input because the input and label are both set with `width: 100%`. To fix this we style the parent `<div>` to become a flex container, but also tell it to wrap its contents onto new lines if the content becomes too long:
+一个直接的问题是，由于 input 和 label 都设置了 `width: 100%`，span 会沉到输入框下一行中。为了修复这一点，我们令父 `<div>` 为弹性容器，同时令它如果内容变得太长，就把它的内容换行：
 
 ```css
 fieldset > div {
@@ -173,9 +165,9 @@ fieldset > div {
 }
 ```
 
-The effect this has is that the label and input sit on separate lines because they are both `width: 100%`, but the `<span>` has a width of 0 so it can sit on the same line as the input.
+这样做的效果是，标签和输入是分开的，因为它们都是 `width: 100%`，但 `<span>` 的宽度是 0，所以它可以和 input 位于同一行。
 
-Now onto the generated content. We create it using this CSS:
+现在来看看生成的内容。我们使用这个 CSS 代码创建它：
 
 ```css
 input + span {
@@ -194,29 +186,29 @@ input:required + span::after {
 }
 ```
 
-We set the `<span>` to `position: relative` so that we can set the generated content to `position: absolute` and position it relative to the `<span>` rather than the \<body> (The generated content acts as though it is a child node of the element it is generated on, for the purposes of positioning).
+我们将 `<span>` 设置为 `position: relative`，这样我们就可以将生成的内容设置为 `position: absolute`，并将其相对于 `<span>` 而不是 `<body>` 定位（出于定位需求，生成的内容就像它是生成元素的一个子节点）。
 
-Then we give the generated content the content "required", which is what we wanted our label to say, and style and position it as we want. The result is seen below.
+然后我们给生成的内容加上“required”，也就是我们想要的标签内容，并按照我们想要的样式和位置排布。结果见下文。
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/required-optional-generated.html", '100%', 430)}}
 
 ## 根据数据是否有效为控件添加样式
 
-The other really important, fundamental concept in form validation is whether a form control's data is valid or not (in the case of numerical data, we can also talk about in-range and out-of-range data). Form controls with [constraint limitations](/en-US/docs/Web/HTML/Constraint_validation) can be targeted based on these states.
+表单验证中另一个真正重要的基本概念是表单控件的数据是否有效（在数值数据的情况下，我们也可以谈论范围内和范围外的数据）。具有[约束限制](/zh-CN/docs/Web/HTML/Constraint_validation)的表单控件可以根据这些状态来进行定位。
 
 ### :valid 和 :invalid
 
-You can target form controls using the {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes. Some points worth bearing in mind:
+你可以使用 {{cssxref(":valid")}} 和 {{cssxref(":invalid")}} 伪类来定位表单控件。这里有一些值得注意的地方：
 
-- Controls with no constraint validation will always be valid, and therefore matched with `:valid`.
-- Controls with `required` set on them that have no value are counted as invalid — they will be matched with `:invalid` and `:required`.
-- Controls with built-in validation, such as `<input type="email">` or `<input type="url">` are (matched with) `:invalid` when the data entered into them does not match the pattern they are looking for (but they are valid when empty).
-- Controls whose current value is outside the range limits specified by the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes are (matched with) `:invalid`, but also matched by {{cssxref(":out-of-range")}}, as you'll see later on.
-- There are some other ways to make an element matched by `:valid`/`:invalid`, as you'll see in the [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) article. But we'll keep things simple for now.
+- 没有约束验证的表单控件永远是有效的，因此永远与 `:valid` 匹配。
+- 设定了 `required`，且没有任何值的表单控件是无效的——它们与 `:invalid` 和 `:required` 匹配。
+- 具有内置验证功能的控件，如 `<input type="email">` 或 `<input type="url">`，当输入的数据与它们所需的模式不匹配时，会被（与）`:invalid` 匹配（但当它们为空时是有效的）。
+- 当前值超出 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性所指定的范围限制的控件，会被（与）`:invalid` 匹配，但也会被 {{cssxref(":out-of-range")}} 匹配，后面还会看到。
+- 还有一些其他的方法可以使元素被 `:valid`/`:invalid` 匹配，你会在[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)文章中看到。但目前还没有必要介绍的太复杂。
 
-Let's go in and look at a simple example of `:valid`/`:invalid` (see [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) for the live version, and also check out the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)).
+让我们看看一个简单的 `:valid`/`:invalid` 的示例（见 [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) 的实时演示，也可以看看[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)）。
 
-As in the previous example, we've got extra `<span>`s to generate content on, which we'll use to provide indicators of valid/invalid data:
+和前面的示例一样，我们有额外的 `<span>` 来生成内容，我们将用它来提供有效/无效数据的指示：
 
 ```html
 <div>
@@ -226,7 +218,7 @@ As in the previous example, we've got extra `<span>`s to generate content on, wh
 </div>
 ```
 
-To provide these indicators, we use the following CSS:
+为了提供这些指示，我们使用了这些 CSS 样式：
 
 ```css
 input + span {
@@ -254,37 +246,37 @@ input:valid + span::before {
 }
 ```
 
-As before, we set the `<span>`s to `position: relative` so that we can position the generated content relative to them. We then absolutely position different generated content depending on whether the form's data is valid or invalid — a green check or a red cross, respectively. To add a bit of extra urgency to the invalid data, we've also given the inputs a thick red border when invalid.
+和之前一样，我们将 `<span>` 设置为 `position: relative`，这样我们就可以将生成的内容相对于它们定位。然后，我们根据表单的数据是有效还是无效，绝对定位不同的生成内容——分别是绿色复选框或红色叉号。为了给无效数据增加一点额外的紧迫感，我们还在无效时给输入的数据加上了厚厚的红边。
 
-> **备注：** We've used `::before` to add these labels, as we were already using `::after` for the "required" labels.
+> **备注：** 我们使用 `::before` 来添加这些标签，因为我们已经使用 `::after` 来添加“required”标签。
 
-You can try it below:
+你可以在下方尝试：
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/valid-invalid.html", '100%', 430)}}
 
-Notice how the required text inputs are invalid when empty, but valid when they have something filled in. The email input on the other hand is valid when empty, as it is not required, but invalid when it contains something that is not a proper email address.
+注意到必需的文本 input 在空的时候是无效的，但当它们有东西填入时是有效的。另一方面，电子邮件 input 在空的时候是有效的，因为它不是必需的，但当它包含一些不是正确的电子邮件地址时，就无效了。
 
 ### 在范围内和不在范围内的数据
 
-As we hinted at above, there are two other related pseudo-classes to consider — {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}. These match numeric inputs where range limits are specified by the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max), when their data is inside or outside the specified range, respectively.
+正如我们上面所提示的内容一样，还有两个相关的伪类需要考虑——{{cssxref(":in-range")}} 和 {{cssxref(":out-of-range")}}。这些与数字输入相匹配，其中范围限制由 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max)指定，分别供其数据在指定范围之内或之外所使用。
 
-> **备注：** Numeric input types are `date`, `month`, `week`, `time`, `datetime-local`, `number`, and `range`.
+> **备注：** 数值输入类型包括 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range`。
 
-It is worth noting that inputs whose data is in-range will also be matched by the `:valid` pseudo-class and inputs whose data is out-of-range will also be matched by the `:invalid` pseudo-class. So why have both? The issue is really one of semantics — out-of-range is a more specific type of invalid communication, so you might want to provide a different message for out-of-range inputs, which will be more helpful to users than just saying "invalid". You might even want to provide both.
+值得注意的是，数据在范围内的输入也会被 `:valid` 伪类匹配，而数据在范围外的输入也会被 `:invalid` 伪类匹配。那么，为什么要同时拥有这两个类呢？这个问题实际上是一个语义问题——超出范围是一种更具体的无效通信类型，所以你可能想为超出范围的输入提供一个不同的消息，这将比只说“无效”对用户更有帮助。你甚至可能想同时提供这两种信息。
 
-Let's look at an example that does exactly this. Our [out-of-range.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/out-of-range.html) demo (see also the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/out-of-range.html)) builds on top of the previous example to provide out-of-range messages for the numeric inputs, as well as saying whether they are required.
+让我们看看一个正是这样做的例子。我们的 [out-of-range.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/out-of-range.html) 演示（也可参见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/out-of-range.html)）建立在前一个示例的基础上，为数字输入提供超出范围的信息，并说明它们是否是必需的。
 
-The numeric input looks like this:
+数值输入看起来像这样：
 
 ```html
 <div>
-  <label for="age">Age (must be 12+): </label>
+  <label for="age">年龄（至少为 12 岁）：</label>
   <input id="age" name="age" type="number" min="12" max="120" required />
   <span></span>
 </div>
 ```
 
-And the CSS looks like this:
+CSS 样式看起来像这样：
 
 ```css
 input + span {
@@ -301,7 +293,7 @@ input + span::after {
 input:required + span::after {
   color: white;
   background-color: black;
-  content: "Required";
+  content: "必填";
   left: -70px;
 }
 
@@ -309,75 +301,75 @@ input:out-of-range + span::after {
   color: white;
   background-color: red;
   width: 155px;
-  content: "Outside allowable value range";
+  content: "在允许范围之外";
   left: -182px;
 }
 ```
 
-This is a similar story to what we had before in the `:required` example, except that here we've split out the declarations that apply to any `::after` content into a separate rule, and given the separate `::after` content for `:required` and `:out-of-range` states their own content and styling. You can try it here:
+这和我们之前在 `:required` 示例中的情况类似，只是在这里我们把适用于任何 `::after` 内容的声明分割成一个单独的规则，并给 `:after` 内容的 `:required` 和 `:out-of-range` 状态设置它们自己的内容和样式。你可以在这里试试：
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/out-of-range.html", '100%', 430)}}
 
-It is possible for the number input to be both required and out-of-range at the same time, so what happens then? Because the `:out-of-range` rule appears later in the source code than the `:required` rule, the [cascade rules](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#understanding_the_cascade) come into play, and the out of range message is shown.
+数字输入有可能同时是必需的和超出范围的，那么会发生什么呢？因为 `:out-of-range` 规则在源代码中出现的时间比 `:required` 规则晚，[级联规则](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#理解层叠)开始发挥作用，并且显示“超出范围”信息。
 
-This works quite nicely — when the page first loads, "Required" is shown, along with a red cross and border. When you've typed in a valid age (i.e. in the range of 12-120), the input turns valid. If however, you then change the age entry to one that is out of range, the "Outside allowable value range" message then pops up in place of "Required".
+这一点做得很好--当页面第一次加载时，“必填”显示出来，还有一个红叉和边界。当你输入了一个有效的年龄（即在 12-120 的范围内），输入就会变成有效。然而，如果你将年龄输入改为超出范围，则会弹出“在允许范围之外”的信息，取代了原先的“必填”。
 
-> **备注：** To enter an invalid/out-of-range value, you'll have to actually focus the form and type it in using the keyboard. The spinner buttons won't let you increment/decrement the value outside the allowable range.
+> **备注：** 要输入一个无效的/超出范围的值，你必须实际聚焦于表格，用键盘输入该值。控件提供的按钮不会让你在允许的范围之外增加/减少数值。
 
 ## 为启用或禁用、只读或可读写输入控件添加样式
 
-An enabled element is an element that can be activated; it can be selected, clicked on, typed into, etc. A disabled element on the other hand cannot be interacted with in any way, and its data isn't even sent to the server.
+一个启用的元素是一个可以被激活的元素；它可以被选择、点击、输入等等。另一方面，一个禁用的元素不能以任何方式进行互动，它的数据甚至不会被发送到服务器上。
 
-These two states can be targeted using {{cssxref(":enabled")}} and {{cssxref(":disabled")}}. Why are disabled inputs useful? Well, sometimes if some data does not apply to a certain user, you might not even want to submit that data when they submit the form. A classic example is a shipping form — commonly you'll get asked if you want to use the same address for billing and shipping; if so, you can just send a single address to the server, and might as well just disable the billing address fields.
+这两种状态可以用 {{cssxref(":enabled")}} 和 {{cssxref(":disabled")}} 来定位。为什么禁用的输入是有用的？有时候如果某些数据不适用于某个用户，你甚至可能不想在他们提交表单时提交这些数据。一个典型的例子是运输表单，通常你会被问到是否要使用相同的地址付款或运输；如果是这样，你可以只发送一个地址到服务器，也可以直接禁用账单地址字段。
 
-Let's have a look at an example that does just this. First of all, the HTML is a simple form containing text inputs, plus a checkbox to toggle disabling the billing address on and off. The billing address fields are disabled by default.
+让我们来看看一个这样做的示例。首先，其 HTML 代码是一个简单的表单，包含文本输入，加上一个复选框来切换禁用账单地址的开关。账单地址字段默认是禁用的。
 
 ```html
 <form>
   <fieldset id="shipping">
-    <legend>Shipping address</legend>
+    <legend>发货地址</legend>
     <div>
-      <label for="name1">Name: </label>
+      <label for="name1">姓名：</label>
       <input id="name1" name="name1" type="text" required />
     </div>
     <div>
-      <label for="address1">Address: </label>
+      <label for="address1">地址：</label>
       <input id="address1" name="address1" type="text" required />
     </div>
     <div>
-      <label for="pcode1">Zip/postal code: </label>
+      <label for="pcode1">邮政编码：</label>
       <input id="pcode1" name="pcode1" type="text" required />
     </div>
   </fieldset>
   <fieldset id="billing">
-    <legend>Billing address</legend>
+    <legend>付款地址</legend>
     <div>
-      <label for="billing-checkbox">Same as shipping address:</label>
+      <label for="billing-checkbox">与发货地址相同：</label>
       <input type="checkbox" id="billing-checkbox" checked />
     </div>
     <div>
-      <label for="name" class="billing-label disabled-label">Name: </label>
+      <label for="name" class="billing-label disabled-label">姓名：</label>
       <input id="name" name="name" type="text" disabled required />
     </div>
     <div>
       <label for="address2" class="billing-label disabled-label">
-        Address:
+        地址：
       </label>
       <input id="address2" name="address2" type="text" disabled required />
     </div>
     <div>
       <label for="pcode2" class="billing-label disabled-label">
-        Zip/postal code:
+        邮政编码：
       </label>
       <input id="pcode2" name="pcode2" type="text" disabled required />
     </div>
   </fieldset>
 
-  <div><button>Submit</button></div>
+  <div><button>提交</button></div>
 </form>
 ```
 
-Now onto the CSS. The most relevant parts of this example are as follows:
+现在来看看 CSS 部分。这个示例中最相关的部分如下：
 
 ```css
 input[type="text"]:disabled {
@@ -390,16 +382,16 @@ input[type="text"]:disabled {
 }
 ```
 
-We've directly selected the inputs we want to disable using `input[type="text"]:disabled`, but we also wanted to gray out the corresponding text labels. These weren't quite as easy to select, so we've used a class to provide them with that styling.
+我们用 `input[type="text"]:disabled` 直接选择了我们要禁用的输入控件，但我们也想把相应的文本标签弄成灰色。这些并不那么容易选择，所以我们用一个类来为它们提供这种风格。
 
-Now finally, we've used some JavaScript to toggle the disabling of the billing address fields:
+最后我们用一些 JavaScript 代码来切换账单地址字段的禁用状态：
 
 ```js
-// Wait for the page to finish loading
+// 等待页面完成加载
 document.addEventListener(
   "DOMContentLoaded",
   () => {
-    // Attach `change` event listener to checkbox
+    // 向复选框附加 `change` 事件
     document
       .getElementById("billing-checkbox")
       .addEventListener("change", toggleBilling);
@@ -408,12 +400,12 @@ document.addEventListener(
 );
 
 function toggleBilling() {
-  // Select the billing text fields
+  // 选择账单文本字段
   const billingItems = document.querySelectorAll('#billing input[type="text"]');
-  // Select the billing text labels
+  // 选择账单文本标签
   const billingLabels = document.querySelectorAll(".billing-label");
 
-  // Toggle the billing text fields and labels
+  // 切换账单文本字段和标签
   for (let i = 0; i < billingItems.length; i++) {
     billingItems[i].disabled = !billingItems[i].disabled;
 
@@ -428,30 +420,30 @@ function toggleBilling() {
 }
 ```
 
-It uses the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) to let the user enable/disable the billing fields, and toggle the styling of the associated labels.
+它使用 [`change` 事件](/zh-CN/docs/Web/API/HTMLElement/change_event)来让用户启用/禁用账单字段，并切换相关标签的样式。
 
-You can see the example in action below (also [see it live here](https://mdn.github.io/learning-area/html/forms/pseudo-classes/enabled-disabled-shipping.html), and see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/enabled-disabled-shipping.html)):
+你可以在下面看到这个示例（也可以[在这里看到它的运行版本](https://mdn.github.io/learning-area/html/forms/pseudo-classes/enabled-disabled-shipping.html)，并看到[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/enabled-disabled-shipping.html)）：
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/enabled-disabled-shipping.html", '100%', 600)}}
 
 ### 只读或可读写
 
-In a similar manner to `:disabled` and `:enabled`, the `:read-only` and `:read-write` pseudo-classes target two states that form inputs toggle between. Read-only inputs have their values submitted to the server, but the user can't edit them, whereas read-write means they can be edited — their default state.
+与 `:disabled` 和 `:enabled` 类似，`:read-only` 和 `:read-write` 伪类针对表单输入的两种状态进行了切换。只读输入的值提交给服务器，但用户不能编辑它们，而可读写输入意味着它们可以被编辑——这是它们的默认状态。
 
-An input is set to read-only using the `readonly` attribute. As an example, imagine a confirmation page where the developer has sent the details filled in on previous pages over to this page, with the aim of getting the user to check them all in one place, add any final data that is needed, and then confirm the order by submitting. At this point, all the final form data can be sent to the server in one go.
+使用 `readonly` 属性可将一个输入设置为只读。举个例子，设想一个确认页面，开发者将之前页面上填写的细节发送到这个页面，目的是让用户在一个地方检查所有细节，添加任何需要的最终数据，然后通过提交确认订单。在这一点上，所有最终的表单数据都可以一次性发送到服务器上。
 
-Let's look at what a form might look like (see [readonly-confirmation.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/readonly-confirmation.html) for the live example; also [see the source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/readonly-confirmation.html)).
+让我们来看看一个表单可能是什么样子的（见运行实例 [readonly-confirmation.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/readonly-confirmation.html)，其[源代码在这里](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/readonly-confirmation.html)）。
 
-A fragment of the HTML is as follows — note the readonly attribute:
+HTML 的一个片段如下，注意其中的 readonly 属性：
 
 ```html
 <div>
-  <label for="name">Name: </label>
+  <label for="name">姓名：</label>
   <input id="name" name="name" type="text" value="Mr Soft" readonly />
 </div>
 ```
 
-If you try the live example, you'll see that the top set of form elements are not focusable, however, the values are submitted when the form is submitted. We've styled the form controls using the `:read-only` and `:read-write` pseudo-classes, like so:
+如果你尝试了运行实例，你会发现最上面的一组表单元素是不可聚焦的，然而，当表单被提交时，其值会被提交。我们使用 `:read-only` 和 `:read-write` 伪类为表单控件添加了样式，就像这样：
 
 ```css
 :is(
@@ -471,26 +463,26 @@ If you try the live example, you'll see that the top set of form elements are no
 }
 ```
 
-Firefox only supported these pseudo-classes with a prefix up to version 78; at which point it started to support the unprefixed version. The full example looks like so:
+Firefox 在版本 78 之前只支持带前缀的伪类，从这个版本以后才开始支持无前缀的版本。完整的示例看起来是这样的：
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
 
-> **Note:** `:enabled` and `:read-write` are two more pseudo-classes that you'll probably rarely use, given that they describe the default states of input elements.
+> **备注：** `:enabled` 和 `:read-write` 是另外两个可能很少使用的伪类，它们描述了输入元素的默认状态。
 
 ## 单选和复选按钮状态——选中、默认和中间状态
 
-As we've seen in earlier articles in the module, {{HTMLElement("input/radio", "radio buttons")}} and {{HTMLElement("input/checkbox", "checkboxes")}} can be checked or unchecked. But there are a couple of other states to consider too:
+正如我们在本模块前面的文章中所看到的，{{HTMLElement("input/radio", "单选按钮")}}和{{HTMLElement("input/checkbox", "复选框")}}可以被选中或不被选中。但也有一些其他的状态需要考虑：
 
-- {{cssxref(":default")}}: Matches radios/checkboxes that are checked by default, on page load (i.e. by setting the `checked` attribute on them) These match the {{cssxref(":default")}} pseudo-class, even if the user unchecks them.
-- {{cssxref(":indeterminate")}}: When radios/checkboxes are neither checked nor unchecked, they are considered _indeterminate_ and will match the {{cssxref(":indeterminate")}} pseudo-class. More on what this means below.
+- {{cssxref(":default")}}：匹配在页面加载时默认选中的单选钮/复选框（即通过设置 `checked` 属性），这些匹配 {{cssxref(":default")}} 伪类，即使用户取消选中。
+- {{cssxref(":indeterminate")}}：当单选钮/复选框既没有被选中也没有被取消时，它们是*中间状态*，并将与 {{cssxref(":indeterminate")}} 伪类匹配。下文将阐述其细节。
 
 ### :checked
 
-When checked, they will be matched by the {{cssxref(":checked")}} pseudo-class.
+当单选钮或复选框被选中时，它们将被 {{cssxref(":checked")}} 伪类所匹配。
 
-The most common use of this is to add a different style onto the checkbox/radiobutton when it is checked, in cases where you've removed the system default styling with `appearance: none;` and want to build the styles back up yourself. We saw examples of this in the previous article when we talked about [Using `appearance: none` on radios/checkboxes](/en-US/docs/Learn/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes).
+最常见的用途是在复选框或单选按钮被选中时添加不同的样式，在这种情况下，已经使用 `appearance: none;` 删除了系统默认的样式，想自己重新建立样式。我们在上一篇文章中看到了这样的示例，当时我们谈到了[在单选钮/复选框上使用 `appearance: none`](/zh-CN/docs/Learn/forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes)。
 
-As a recap, the `:checked` code from our [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html) example looks like so:
+回顾一下，我们的[有样式的单选钮](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)示例中的 `:checked` 代码看起来像这样：
 
 ```css
 input[type="radio"]::before {
@@ -512,35 +504,35 @@ input[type="radio"]:checked::before {
 }
 ```
 
-You can try it out here:
+你可以在这里试试：
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/radios-styled.html", '100%', 200)}}
 
-Basically, we build the styling for the radio button "inner circle" using the `::before` pseudo-element, but set a `scale(0)` [`transform`](/en-US/docs/Web/CSS/transform) on it. We then use a [`transition`](/en-US/docs/Web/CSS/transition) to make it nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning [`width`](/en-US/docs/Web/CSS/width)/[`height`](/en-US/docs/Web/CSS/height) is that you can use [`transform-origin`](/en-US/docs/Web/CSS/transform-origin) to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner.
+基本上，我们使用 `::before` 伪元素建立了单选按钮“内圈”的样式，但在它上面设置了一个 `scale(0)` 的 [`transform`](/zh-CN/docs/Web/CSS/transform) 值。然后我们使用一个 [`transition`](/zh-CN/docs/Web/CSS/transition)来使它在被选择时能有一个很好的动画效果。使用变换而不是过渡 [`width`](/zh-CN/docs/Web/CSS/width)/[`height`](/zh-CN/docs/Web/CSS/height) 的好处是，你可以使用 [`transform-origin`](/zh-CN/docs/Web/CSS/transform-origin) 来使它从圆的中心生长，而不是让它看起来从圆的角落生长。
 
 ### :default 和 :indeterminate
 
-As mentioned above, the {{cssxref(":default")}} pseudo-class matches radios/checkboxes that are checked by default, on page load, even when unchecked. This could be useful for adding an indicator to a list of options to remind the user what the defaults (or starting options) were, in case they want to reset their choices.
+如前文所述，{{cssxref(":default")}} 伪类可以匹配在页面加载时默认勾选的单选钮或复选框，即使未勾选也是如此。这对于在选项列表中添加一个指示器很有用，可以提醒用户默认值（或起始选项）是什么，以防他们想重设他们的选择。
 
-Also, the radios/checkboxes mentioned above will be matched by the {{cssxref(":indeterminate")}} pseudo-class when they are in a state where they are neither checked nor unchecked. But what does this mean? Elements that are indeterminate include:
+另外，上面提到的单选钮或复选框在处于既没有选中也没有取消选中的状态时，会被 {{cssxref(":indeterminate")}} 伪类所匹配。但这是什么意思呢？不确定的元素包括：
 
-- {{HTMLElement("input/radio")}} inputs, when all radio buttons in a same-named group are unchecked
-- {{HTMLElement("input/checkbox")}} inputs whose `indeterminate` property is set to `true` via JavaScript
-- {{HTMLElement("progress")}} elements that have no value.
+- {{HTMLElement("input/radio")}} 输入，当同名组中的所有单选按钮都取消勾选时
+- {{HTMLElement("input/checkbox")}} 输入，其 `indeterminate` 属性通过 JavaScript 代码设置为 `true`。
+- 没有值的 {{HTMLElement("progress")}} 元素。
 
-This isn't something you'll likely use very often. One use case could be an indicator to tell users that they really need to select a radio button before they move on.
+这不是你可能会经常使用的东西。一个可能的用例是一个指示器，告诉用户他们真的需要在继续前进之前选择一个单选按钮。
 
-Let's look at a couple of modified versions of the previous example that remind the user what the default option was, and style the radio buttons when indeterminate. Both of these have the following HTML structure for the inputs:
+让我们看看前面示例的几个修改版本，它们提醒用户默认选项是什么，并在不确定的情况下对单选按钮进行样式设计。这两个示例的输入都有以下的 HTML 结构：
 
 ```html
 <p>
   <input type="radio" name="fruit" value="cherry" id="cherry" />
-  <label for="cherry">Cherry</label>
+  <label for="cherry">樱桃</label>
   <span></span>
 </p>
 ```
 
-For the `:default` example, we've added the `checked` attribute to the middle radio button input, so it will be selected by default when loaded. We then style this with the following CSS:
+对于 `:default` 示例，我们给中间的单选按钮输入添加了 `checked` 属性，所以它在加载时将被默认选择。然后我们用下面的 CSS 来设计这个样式：
 
 ```css
 input ~ span {
@@ -559,15 +551,15 @@ input:default ~ span::after {
 }
 ```
 
-This provides a little "Default" label on the item that was originally selected when the page loaded. Note here we are using the general sibling combinator (`~`) rather than the adjacent sibling combinator (`+`) — we need to do this because the `<span>` does not come right after the `<input>` in the source order.
+这为页面加载时最初选择的项目提供了一个小小的“default”标签。注意这里我们使用的是一般的兄弟姐妹组合器（`~`），而不是相邻的兄弟姐妹组合器（`+`）——我们需要这样做，因为在源代码中，`<span>` 并不在 `<input>` 之后。
 
-See the live result below:
+参见下方的实时结果：
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-default.html", '100%', 200)}}
 
-> **备注：** You can also find the example live on GitHub at [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) (also see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html).)
+> **备注：** 你也可以在 GitHub 的 [radios-checked-default.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-default.html) 中找到这个示例的实时演示（也可以看看[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-default.html)）。
 
-For the `:indeterminate` example, we've got no default selected radio button — this is important — if there was, then there would be no indeterminate state to style. We style the indeterminate radio buttons with the following CSS:
+对于 `:indeterminate` 示例，我们没有默认的选定的单选按钮——这很重要——如果有的话，就不会有 indeterminate 状态的样式。我们用下面的 CSS 来设计不确定的单选按钮：
 
 ```css
 input[type="radio"]:indeterminate {
@@ -586,30 +578,30 @@ input[type="radio"]:indeterminate {
 }
 ```
 
-This creates a fun little animated border on the radio buttons, which hopefully indicates that you need to select one of them!
+这将在单选按钮上创建一个有趣的动画边框，希望它能表明你需要选择其中的一个！
 
-See the live result below:
+参见下方的实时结果：
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html", '100%', 200)}}
 
-> **备注：** You can also find the example live on GitHub at [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) (also see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html).)
+> **备注：** 你也可以在 GitHub 的 [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) 上找到这个示例的运行实例，也可以参见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html)。
 
-> **备注：** You can find an [interesting example involving `indeterminate` states](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) on the [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) reference page.
+> **备注：** 你可以在 [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkboxes) 参考页上找到一个[涉及 `indeterminate` 状态的有趣示例](/zh-CN/docs/Web/HTML/Element/input/checkboxes)。
 
 ## 更多伪类
 
-There are a number of other pseudo-classes of interest, and we don't have space to write about them all in detail here. Let's talk about a few more that you should take the time to investigate.
+还有一些其他有趣的伪类，我们没有空间在这里详细地写它们。让我们再谈一谈你应该花时间研究的几个。
 
-The following are fairly well-supported in modern browsers:
+以下这些伪类在现代浏览器中得到了相当好的支持：
 
-- The {{cssxref(":focus-within")}} pseudo-class matches an element that has received focus or _contains_ an element that has received focus. This is useful if you want a whole form to highlight in some way when an input inside it is focused.
-- The {{cssxref(":focus-visible")}} pseudo-class matches focused elements that received focus via keyboard interaction (rather than touch or mouse) — useful if you want to show a different style for keyboard focus compared to mouse (or other) focus.
-- The {{cssxref(":placeholder-shown")}} pseudo-class matches {{htmlelement('input')}} and {{htmlelement('textarea')}} elements that have their placeholder showing (i.e. the contents of the [`placeholder`](/en-US/docs/Web/HTML/Element/input#placeholder) attribute) because the value of the element is empty.
+- {{cssxref(":focus-within")}} 伪类匹配一个已经收到焦点的元素或*包含*一个已经收到焦点的元素。如果你想让整个表单在其内部的输入被聚焦时以某种方式突出显示，这很有用。
+- {{cssxref(":focus-visible")}} 伪类匹配通过键盘交互（而不是触摸或鼠标）获得焦点的元素。如果你想对键盘焦点与鼠标（或其他）焦点显示不同的样式，这很有用。
+- {{cssxref(":placeholder-shown")}} 伪类匹配占位符（即 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 属性的内容）正在显示的 {{htmlelement('input')}} 和 {{htmlelement('textarea')}} 元素，因为该元素的值为空。
 
-The following are also interesting, but as yet not well-supported in browsers:
+下面这些也很有意思，但在浏览器中还没有得到很好的支持：
 
-- The {{cssxref(":blank")}} pseudo-class selects empty form controls. {{cssxref(":empty")}} also matches elements that have no children, like {{HTMLElement("input")}}, but it is more general — it also matches other {{glossary("void element", "void elements")}} like {{HTMLElement("br")}} and {{HTMLElement("hr")}}. `:empty` has reasonable browser support; the `:blank` pseudo-class's specification is not yet finished, so it is not yet supported in any browser.
-- The [`:user-invalid`](https://drafts.csswg.org/selectors-4/#user-invalid-pseudo) pseudo-class, when supported, will be similar to {{cssxref(":invalid")}}, but with better user experience. If the value is valid when the input receives focus, the element may match `:invalid` as the user enters data if the value is temporarily invalid, but will only match `:user-invalid` when the element loses focus. If the value was originally invalid, it will match both `:invalid` and `:user-invalid` for the whole duration of the focus. In a similar manner to `:invalid`, it will stop matching `:user-invalid` if the value does become valid.
+- {{cssxref(":blank")}} 伪类可以选择空表单控件。{{cssxref(":empty")}} 也匹配没有子元素的元素，如 {{HTMLElement("input")}}，但它更普遍——它也匹配其他{{glossary("void element", "空元素")}}，如 {{HTMLElement("br")}} 和 {{HTMLElement("hr")}}。`:empty` 有合理的浏览器支持；`:blank` 伪类的规范还没有完成，所以它还不被任何浏览器支持。
+- [`:user-invalid`](https://drafts.csswg.org/selectors-4/#user-invalid-pseudo) 伪类，如果支持，将类似于 {{cssxref(":invalid")}}，但有更好的用户体验。如果输入收到焦点时值是有效的，当用户输入数据时，如果值暂时无效，该元素可能会匹配 `:invalid`，但只有当该元素失去焦点时才会匹配 `:user-invalid`。如果该值最初是无效的，它将在整个焦点持续期间同时匹配 `:invalid` 和 `:user-invalid`。与 `:invalid` 类似，如果该值确实变得有效，它将停止匹配 `:user-invalid`。
 
 ## 测试你的技能！
 
@@ -617,7 +609,7 @@ The following are also interesting, but as yet not well-supported in browsers:
 
 ## 总结
 
-This completes our look at UI pseudo-classes that relate to form inputs. Keep playing with them, and create some fun form styles! Next up, we'll move on to something different — [client-side form validation](/en-US/docs/Learn/Forms/Form_validation).
+这就完成了我们对与表单输入有关的 UI 伪类的研究。继续使用它们，创造一些有趣的表单样式吧。接下来，我们将继续研究一些不同的东西——[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)。
 
 {{PreviousMenuNext("Learn/Forms/Advanced_form_styling", "Learn/Forms/Form_validation", "Learn/Forms")}}
 
