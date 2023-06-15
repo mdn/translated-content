@@ -60,7 +60,7 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 - [5. React の対話性: 編集、フィルタリング、条件付きレンダリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
   - : React の旅が終わりに近づくにつれて（少なくとも今は）、Todo リスト アプリの主要な機能領域に最後の仕上げを追加します。これには、既存のタスクを編集できるようにすることと、タスクのリストをすべて、完了、未完了の間でフィルタリングすることが含まれます。その過程で、条件付きUIレンダリングについても見ていきます。
 - [6. React におけるアクセシビリティ](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - : 最後のチュートリアル記事では、 React のフォーカス管理など、キーボードのみのユーザーと画面リーダーユーザーの両方にとってユーザビリティを向上させ、混乱を軽減することができる（シャレた）アクセシビリティに焦点を当てます。
+  - : 最後のチュートリアル記事では、 React のフォーカス管理など、キーボードのみのユーザーとスクリーンリーダーユーザーの両方にとってユーザビリティを向上させ、混乱を軽減することができる（シャレた）アクセシビリティに焦点を当てます。
 - [7. React のリソース](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
   - : この記事の最終回では、さらに学習を進めるために使用できる React のリソースの一覧を提供しています。
 

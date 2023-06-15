@@ -39,8 +39,3 @@ CSS (Cascading Style Sheets) はウェブページをスタイリングしたり
   - : CSS の基本とその目的、そして簡単なスタイルシートの書き方を学びました。このレッスンでは CSS と HTML がブラウザーにどう働いてウェブページにするかを見ていきます。
 - [新しい知識を使う](/ja/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
   - : 過去数回のレッスンで学んだことから、CSS で単純なテキスト文書をフォーマットし、独自のスタイルを追加できることがわかります。この記事ではそれを行う機会を提供します。
-
-## 関連情報
-
-- [Intermediate Web Literacy 1: Intro to CSS](https://teach.mozilla.org/activities/intermediate-web-lit/)
-  - : 本記事で説明した _CSS 入門_ スキルを確認およびテストするのにちょうどいい Mozilla 基礎コース。セレクター、属性、値などを使った HTML 要素のスタイリングを学べます。
