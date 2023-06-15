@@ -40,7 +40,7 @@ slug: Learn/Forms/UI_pseudo-classes
 - {{cssxref(':required')}} 和 {{cssxref(':optional')}}：针对必需的或可选的表单控件。
 - {{cssxref(":valid")}} 和 {{cssxref(":invalid")}}、{{cssxref(":in-range")}} 和 {{cssxref(":out-of-range")}}：针对表单控件，根据对其设置的表单验证约束，或范围内/范围外，是有效/无效的。
 - {{cssxref(":enabled")}} 和 {{cssxref(":disabled")}}、{{cssxref(":read-only")}} 和 {{cssxref(":read-write")}}：针对启用或禁用的表单控件（例如，设置了 `disabled` HTML 属性），以及读写或只读的表单控件（例如，设置了 `readonly` HTML 属性）。
-- {{cssxref(":checked")}}、{{cssxref(":indeterminate")}} 和 {{cssxref(":default")}}：分别针对被选中的复选框和单选按钮，处于不确定的状态（既不被选中也不被选中），以及页面加载时默认选择的选项（例如，一个设置了 `checked` 属性的 [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox)，或者一个设置了 `selected` 属性[`<option>`](/zh-CN/docs/Web/Element/option) 元素）。
+- {{cssxref(":checked")}}、{{cssxref(":indeterminate")}} 和 {{cssxref(":default")}}：分别针对被选中的复选框和单选按钮，处于不确定的状态（既不被选中也不被选中），以及页面加载时默认选择的选项（例如，一个设置了 `checked` 属性的 [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox)，或者一个设置了 `selected` 属性的 [`<option>`](/zh-CN/docs/Web/HTML/Element/option) 元素）。
 
 还有很多其他的，但上面列出的是最明显有用的。其中一些旨在解决非常具体的小众问题，或者在浏览器中还没有得到很好的支持。上面列出的那些都有相当好的浏览器支持，但当然，你应该仔细测试你的表单实现，以确保它们对你的目标受众有效。
 
