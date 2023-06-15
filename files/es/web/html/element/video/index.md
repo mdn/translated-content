@@ -87,7 +87,7 @@ Su proveedor de alojamiento web puede proporcionar una interfaz fácil para los 
 
 ## Interfaz DOM
 
-- [HTMLVideoElement](/en/DOM/HTMLVideoElement)
+- {{domxref("HTMLVideoElement")}}
 
 ## Consulta también
 

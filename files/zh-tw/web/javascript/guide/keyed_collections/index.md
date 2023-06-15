@@ -17,17 +17,17 @@ The following code shows some basic operations with a `Map`. See also the {{jsxr
 
 ```js
 var sayings = new Map();
-sayings.set('dog', 'woof');
-sayings.set('cat', 'meow');
-sayings.set('elephant', 'toot');
+sayings.set("dog", "woof");
+sayings.set("cat", "meow");
+sayings.set("elephant", "toot");
 sayings.size; // 3
-sayings.get('fox'); // undefined
-sayings.has('bird'); // false
-sayings.delete('dog');
-sayings.has('dog'); // false
+sayings.get("fox"); // undefined
+sayings.has("bird"); // false
+sayings.delete("dog");
+sayings.has("dog"); // false
 
 for (var [key, value] of sayings) {
-  console.log(key + ' goes ' + value);
+  console.log(key + " goes " + value);
 }
 // "cat goes meow"
 // "elephant goes toot"
@@ -71,7 +71,7 @@ function Public() {
   privates.set(this, me);
 }
 
-Public.prototype.method = function() {
+Public.prototype.method = function () {
   const me = privates.get(this);
   // Do stuff with private data in `me`...
 };
@@ -90,11 +90,11 @@ The following code shows some basic operations with a `Set`. See also the {{jsxr
 ```js
 var mySet = new Set();
 mySet.add(1);
-mySet.add('some text');
-mySet.add('foo');
+mySet.add("some text");
+mySet.add("foo");
 
 mySet.has(1); // true
-mySet.delete('foo');
+mySet.delete("foo");
 mySet.size; // 2
 
 for (let item of mySet) console.log(item);
@@ -113,7 +113,7 @@ Array.from(mySet);
 mySet2 = new Set([1, 2, 3, 4]);
 ```
 
-### `比較 Array` 和 `Set`
+### 比較 `Array` 和 `Set`
 
 Traditionally, a set of elements has been stored in arrays in JavaScript in a lot of situations. The new `Set` object, however, has some advantages:
 

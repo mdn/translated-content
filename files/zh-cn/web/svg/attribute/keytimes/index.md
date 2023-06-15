@@ -3,9 +3,9 @@ title: keyTimes
 slug: Web/SVG/Attribute/keyTimes
 ---
 
-« [SVG](/zh-CN/docs/Web/SVG/Attribute) 属性参考主页
+{{SVGRef}}
 
-keyTimes 属性是一个以分号分隔的时间值列表，用于控制动画的执行步骤。列表中的每个值与{{ SVGAttr("values") }}中的值一一对应，定义了{{ SVGAttr("values") }}中的值在动画中何时执行，keyTimes 列表中的每一个值都是指定在 \[0-1] 之间的浮点数，表示动画的完成时间。
+keyTimes 属性是一个以分号分隔的时间值列表，用于控制动画的执行步骤。列表中的每个值与 {{ SVGAttr("values") }} 中的值一一对应，定义了 {{ SVGAttr("values") }} 中的值在动画中何时执行，keyTimes 列表中的每一个值都是指定在 \[0-1] 之间的浮点数，表示动画的完成时间。
 
 如果指定了 keyTimes 列表，那么一定有与之完全对应的{{ SVGAttr("values") }}列表。
 

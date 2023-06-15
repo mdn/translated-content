@@ -3,9 +3,9 @@ title: result
 slug: Web/SVG/Attribute/result
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-属性`result`定义了滤镜的分配名。如果提供了它，则经过滤镜处理的结果即图形可以再次滤镜处理，在后继滤镜（即另一个{{ SVGElement("filter") }}元素）上通过一个{{ SVGAttr("in") }}属性引用之前的结果。如果没有提供`result`值，而且如果下一个滤镜也没有提供{{ SVGAttr("in") }}属性值，则输出只可作为下一个滤镜的隐式输入。
+属性 `result` 定义了滤镜的分配名。如果提供了它，则经过滤镜处理的结果即图形可以再次滤镜处理，在后继滤镜（即另一个 {{ SVGElement("filter") }} 元素）上通过一个 {{ SVGAttr("in") }} 属性引用之前的结果。如果没有提供 `result` 值，而且如果下一个滤镜也没有提供 {{ SVGAttr("in") }} 属性值，则输出只可作为下一个滤镜的隐式输入。
 
 ## 用法
 

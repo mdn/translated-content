@@ -38,8 +38,8 @@ Let's say we want to render a gradient in which each corner of the square is a d
 
 為了使用這些顏色，我們需要修改 vertex shader，讓他可以從 buffer 中取得正確的顏色。
 
-```html
-  const vsSource = `
+```js
+const vsSource = `
     attribute vec4 aVertexPosition;
     attribute vec4 aVertexColor;
 
@@ -61,8 +61,8 @@ The key difference here is that for each vertex, we pass its color using a `vary
 
 我們重新回顧一下，[之前](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)我們的 fragment shader 如下：
 
-```html
-  const fsSource = `
+```js
+const fsSource = `
     void main() {
       gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
     }
@@ -71,8 +71,8 @@ The key difference here is that for each vertex, we pass its color using a `vary
 
 為了要讓每個 pixel 使用內插的顏色，我們讓 `gl_FragColor` 取得 vColor 的值。
 
-```html
-  const fsSource = `
+```js
+const fsSource = `
     varying lowp vec4 vColor;
 
     void main(void) {
@@ -102,25 +102,25 @@ Next, it's necessary to add the code look up the attribute location for the colo
 Then, drawScene() can be revised to actually use these colors when drawing the square:
 
 ```js
-  // Tell WebGL how to pull out the colors from the color buffer
-  // into the vertexColor attribute.
-  {
-    const numComponents = 4;
-    const type = gl.FLOAT;
-    const normalize = false;
-    const stride = 0;
-    const offset = 0;
-    gl.bindBuffer(gl.ARRAY_BUFFER, buffers.color);
-    gl.vertexAttribPointer(
-        programInfo.attribLocations.vertexColor,
-        numComponents,
-        type,
-        normalize,
-        stride,
-        offset);
-    gl.enableVertexAttribArray(
-        programInfo.attribLocations.vertexColor);
-  }
+// Tell WebGL how to pull out the colors from the color buffer
+// into the vertexColor attribute.
+{
+  const numComponents = 4;
+  const type = gl.FLOAT;
+  const normalize = false;
+  const stride = 0;
+  const offset = 0;
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffers.color);
+  gl.vertexAttribPointer(
+    programInfo.attribLocations.vertexColor,
+    numComponents,
+    type,
+    normalize,
+    stride,
+    offset
+  );
+  gl.enableVertexAttribArray(programInfo.attribLocations.vertexColor);
+}
 ```
 
 {{EmbedGHLiveSample('webgl-examples/tutorial/sample3/index.html', 670, 510) }}

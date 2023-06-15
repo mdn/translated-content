@@ -3,6 +3,8 @@ title: XHTML
 slug: Glossary/XHTML
 ---
 
+{{GlossarySidebar}}
+
 **XHTML**（eXtensible HyperText Markup Language，可扩展超文本标记语言）是在历史上被用来描述 [HTML](/zh-CN/docs/Web/HTML)文档的术语，这些文档是按照 {{Glossary("XML")}} 语法规则编写的。
 
 下面的例子显示了一个 HTML 文档和相应的“XHTML”文档，以及应当搭配使用的 {{Glossary("HTTP")}} {{HTTPHeader("Content-Type")}} 标头。

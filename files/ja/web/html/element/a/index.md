@@ -247,7 +247,7 @@ a { display: block; margin-bottom: 0.5em }
 - 携帯電話ではその番号に自動ダイヤルします。
 - 多くのオペレーティングシステムには、 Skype や FaceTime のように電話をかけるプログラムがあります。
 - ウェブサイトは {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}} によって `web.skype.com` などを用いて電話を掛けることができます。
-- 他にも、連絡先の電話番号をしたり、他の端末へ電話番号を送信したりする動作があります。
+- 他にも、連絡先の電話番号を保存したり、他の端末へ電話番号を送信したりする動作があります。
 
 `tel` URL スキームについての構文、追加機能、その他の詳細について、詳しくは {{RFC(3966)}} をご覧ください。
 

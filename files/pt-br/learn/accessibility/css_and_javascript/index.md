@@ -105,7 +105,7 @@ De qualquer forma, você raramente irá precisar de estilizar um elemento de ên
 
 #### Abreviações
 
-É um elemento que permite abraviação, acrônimo ou inicialização que esteja associada com sua expansão:
+É um elemento que permite abreviação, acrônimo ou inicialização que esteja associada com sua expansão:
 
 ```html
 <p>Web content is marked up using <abbr title="Hypertext Markup Language">HTML</abbr>.</p>

@@ -11,7 +11,7 @@ translation_of: Web/MathML/Element
 
 Ce document est une liste, par ordre alphabétique, des éléments de **présentation** MathML.
 
-La locution « **élement de présentation** » est utilisée pour décrire l'organisation et la mise en forme d'une formule mathématique. Les **éléments de contenus**, quant à eux, fournissent le sens mathématique inhérent à la formule et ne sont pas censés être affichés par l'interpréteur MathML parser (voir {{ bug(276028) }}). Si vous souhaitez avoir plus d'informations sur les éléments de contenus, il est conseillé de lire le [chapitre 4](http://www.w3.org/TR/MathML3/chapter4.html) de la spécification [MathML 3](http://www.w3.org/TR/MathML3/).
+La locution « **élement de présentation** » est utilisée pour décrire l'organisation et la mise en forme d'une formule mathématique. Les **éléments de contenus**, quant à eux, fournissent le sens mathématique inhérent à la formule et ne sont pas censés être affichés par l'interpréteur MathML parser (voir [bug Firefox 276028](https://bugzil.la/276028)). Si vous souhaitez avoir plus d'informations sur les éléments de contenus, il est conseillé de lire le [chapitre 4](http://www.w3.org/TR/MathML3/chapter4.html) de la spécification [MathML 3](http://www.w3.org/TR/MathML3/).
 
 ### math
 

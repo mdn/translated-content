@@ -83,7 +83,7 @@ div {
 
 {{EmbedLiveSample("示例", "400", "160")}}
 
-有关更多示例，请参阅[使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_Transitions)和{{cssxref("&lt;transform-function&gt;")}}。
+有关更多示例，请参阅[使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transitions)和{{cssxref("&lt;transform-function&gt;")}}。
 
 ## 规范
 

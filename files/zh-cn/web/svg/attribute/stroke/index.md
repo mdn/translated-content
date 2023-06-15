@@ -3,9 +3,9 @@ title: stroke
 slug: Web/SVG/Attribute/stroke
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-`stroke`属性定义了给定图形元素的外轮廓的颜色。它的默认值是**none**。
+`stroke` 属性定义了给定图形元素的外轮廓的颜色。它的默认值是 **`none`**。
 
 ## 用法
 

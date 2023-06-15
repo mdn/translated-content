@@ -114,9 +114,9 @@ slug: Web/Tutorials
 
 ### 高级课程
 
-- [应用 CSS 转换](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [应用 CSS 转换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : 使用 CSS 旋转、倾斜、缩放和变换。
-- [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : CSS 过渡是 CSS3 草案规范的一部分，提供了渐变动画来改变 CSS 属性，而不是突变生效。
 - [应用网页字体快速指南 - 使用 @font-face](http://www.html5rocks.com/tutorials/webfonts/quick/) (HTML5 Rocks)
   - : 来自 CSS3 的 @font-face 功能，允许你以可访问的，可操作的，易扩展的方式使用 web 上的自定义字体。

@@ -87,11 +87,7 @@ function simulateClick() {
 }
 ```
 
-## 瀏覽器的支援度
-
-{{Compat}}
-
-## 延伸閱讀
+## 參見
 
 - {{domxref("document.createEvent()")}}
 - {{domxref("Event.initEvent()")}}

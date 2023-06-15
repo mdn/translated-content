@@ -1,6 +1,6 @@
 ---
 title: CSS Animations tips and tricks
-slug: Web/CSS/CSS_Animations/Tips
+slug: Web/CSS/CSS_animations/Tips
 ---
 
 {{CSSRef}}
@@ -9,7 +9,7 @@ CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或�
 
 ## 重新播放动画
 
-[CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations)的规范并没有提供使得动画重新激活的方法。在元素上调用`resetAnimation()` 并不生效，您也不能直接通过设置元素的 {{cssxref("animation-play-state")}}使得动画重新“跑起来”。事实上，你必须使用一些技巧使得已经停止的动画重新播放。
+[CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)的规范并没有提供使得动画重新激活的方法。在元素上调用`resetAnimation()` 并不生效，您也不能直接通过设置元素的 {{cssxref("animation-play-state")}}使得动画重新“跑起来”。事实上，你必须使用一些技巧使得已经停止的动画重新播放。
 
 这有一种我们认为足够稳定和可靠的方法推荐给您。
 

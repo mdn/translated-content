@@ -3,6 +3,8 @@ title: 引言
 slug: Web/SVG/Tutorial/Introduction
 ---
 
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
 
 [SVG](/zh-TW/docs/Web/SVG)（Scalable Vector Graphics）是 [XML](/docs/Web/XML) 的方言，有点类似 XHTML，它可以用来绘制矢量图形，例如右面展示的图形。SVG 可以通过定义必要的线和形状来创建一个图形，也可以修改已有的位图，或者将这两种方式结合起来创建图形。图形和其组成部分可以变形，可以合并，也可以通过滤镜完全改变外观。

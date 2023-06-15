@@ -42,9 +42,11 @@ _Inherits properties from its parent interface, {{domxref("Node")}}, and by exte
 - {{ domxref("Element.localName") }} {{readOnlyInline}}
   - : A {{domxref("DOMString")}} representing the local part of the qualified name of the element.
 - {{domxref("Element.namespaceURI")}} {{readonlyInline}}
+
   - : The namespace URI of the element, or `null` if it is no namespace.
 
     > **備註：** In Firefox 3.5 and earlier, HTML elements are in no namespace. In later versions, HTML elements are in the [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) namespace in both HTML and XML trees.
+
 - {{ domxref("NonDocumentTypeChildNode.nextElementSibling") }} {{readOnlyInline}}
   - : Is a {{ domxref("Element") }}, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{ domxref("Element.outerHTML") }} {{experimental_inline}}

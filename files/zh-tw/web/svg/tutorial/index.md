@@ -3,9 +3,11 @@ title: SVG教學
 slug: Web/SVG/Tutorial
 ---
 
-[SVG](/zh-TW/SVG)是 W3C XML 的方言之一，用於標記可縮放的向量圖形。目前在 Firefox、Opera、Webkit 瀏覽器、IE 等瀏覽器中已經部分實作。
+{{SVGRef}}
 
-本教學之目標在解釋 SVG 內部的技術細節。如果你只是想要畫出漂亮的圖形，你可以在[Inkscape 的文件頁面](http://inkscape.org/doc/)上找到更多有用的資源。或是看看另一個好的 SVG 介绍：[W3C 的 SVG 入門](http://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)。
+[SVG](/zh-TW/docs/Web/SVG) 是 W3C XML 的方言之一，用於標記可縮放的向量圖形。目前在 Firefox、Opera、Webkit 瀏覽器、IE 等瀏覽器中已經部分實作。
+
+本教學之目標在解釋 SVG 內部的技術細節。如果你只是想要畫出漂亮的圖形，你可以在 [Inkscape 的文件頁面](http://inkscape.org/doc/)上找到更多有用的資源。或是看看另一個好的 SVG 介绍：[W3C 的 SVG 入門](http://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html)。
 
 > **備註：** 本教學文件還在初期階段，如果你有能力，可以來增加擴展一兩段，寫一整頁的话會更好！
 

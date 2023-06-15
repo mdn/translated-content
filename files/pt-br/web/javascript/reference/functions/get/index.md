@@ -67,7 +67,7 @@ var o = { a:0 }
 
 Object.defineProperty(o, "b", { get: function () { return this.a + 1; } });
 
-console.log(o.b) // Executa o getter, que retornará a + 1 (which is 1)
+console.log(o.b) // Executa o getter, que retornará a + 1 (que é 1)
 ```
 
 ### Usando uma propriedade com nome computado

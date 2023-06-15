@@ -104,7 +104,7 @@ animation: 3s linear slidein, 3s ease-out 5s slideout;
 
 {{EmbedLiveSample('赛隆人之眼')}}
 
-更多示例请参阅[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Examples)。
+更多示例请参阅[使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations#Examples)。
 
 ## 潜在的问题
 

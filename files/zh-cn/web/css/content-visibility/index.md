@@ -30,9 +30,9 @@ content-visibility: unset;
 - `visible`
   - : 无效果。元素内容照常进行布局和渲染。
 - `hidden`
-  - : 元素[跳过其内容](/zh-CN/docs/Web/CSS/CSS_Containment#跳过其内容)。被跳过的内容必须不可被例如页内查找和 tab 键顺序导航等用户代理特性访问，亦不可被选中或获得焦点。此值类似于为内容赋予 `display: none`。
+  - : 元素[跳过其内容](/zh-CN/docs/Web/CSS/CSS_containment#跳过其内容)。被跳过的内容必须不可被例如页内查找和 tab 键顺序导航等用户代理特性访问，亦不可被选中或获得焦点。此值类似于为内容赋予 `display: none`。
 - `auto`
-  - : 元素启用布局局限、样式局限和绘制局限。若元素不[与用户相关](/zh-CN/docs/Web/CSS/CSS_Containment#与用户相关)，则元素还跳过其内容。与 `hidden` 不同的是，被跳过的内容必须仍可照常被例如页内查找和 tab 键顺序导航等用户代理特性访问，且必须照常可获得焦点或被选中。
+  - : 元素启用布局局限、样式局限和绘制局限。若元素不[与用户相关](/zh-CN/docs/Web/CSS/CSS_containment#与用户相关)，则元素还跳过其内容。与 `hidden` 不同的是，被跳过的内容必须仍可照常被例如页内查找和 tab 键顺序导航等用户代理特性访问，且必须照常可获得焦点或被选中。
 
 ## 形式定义
 
@@ -148,7 +148,7 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 
 ## 参见
 
-- [CSS 局限](/zh-CN/docs/Web/CSS/CSS_Containment)
+- [CSS 局限](/zh-CN/docs/Web/CSS/CSS_containment)
 - {{CSSXref("contain-intrinsic-size")}}
 - {{DOMXref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
 - [content-visibility：提高渲染性能的新 CSS 属性](https://web.dev/content-visibility/)（web.dev）

@@ -3,11 +3,11 @@ title: seed
 slug: Web/SVG/Attribute/seed
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-`seed`属性代表了{{SVGElement("feTurbulence")}}元素生成的伪随机数的开始数字。
+`seed`属性代表了 {{SVGElement("feTurbulence")}} 元素生成的伪随机数的开始数字。
 
-如果没有指定这个属性，它等效于指定了一个`0`值。
+如果没有指定这个属性，它等效于指定了一个 `0` 值。
 
 ## 用法
 

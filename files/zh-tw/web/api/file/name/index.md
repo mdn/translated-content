@@ -17,7 +17,7 @@ original_slug: Web/API/File/fileName
 ## 語法
 
 ```js
-var name = instanceOfFile.fileName
+var name = instanceOfFile.fileName;
 ```
 
 ## 數值

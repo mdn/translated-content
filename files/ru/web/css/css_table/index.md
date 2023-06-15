@@ -1,6 +1,6 @@
 ---
 title: CSS Table
-slug: Web/CSS/CSS_Table
+slug: Web/CSS/CSS_table
 tags:
   - CSS
   - CSS Reference

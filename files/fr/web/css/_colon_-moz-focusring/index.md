@@ -58,4 +58,4 @@ Cette fonctionnalité ne fait partie d'aucune spécification bien qu'elle ait [d
 
 ## Voir aussi
 
-- {{bug("418521")}}
+- [bug Firefox 418521](https://bugzil.la/418521)

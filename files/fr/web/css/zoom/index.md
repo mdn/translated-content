@@ -117,4 +117,4 @@ Cette propriété n'est pas standard et est née avec Internet Explorer. Apple l
 
 - [L'article de CSS-Tricks sur `zoom`](https://css-tricks.com/almanac/properties/z/zoom/)
 - Le descripteur `zoom` pour la règle @ [`@viewport`](/fr/docs/Web/CSS/@viewport)
-- {{bug("390936")}} à propos de l'implémentation de la propriété dans Firefox
+- [bug Firefox 390936](https://bugzil.la/390936) à propos de l'implémentation de la propriété dans Firefox

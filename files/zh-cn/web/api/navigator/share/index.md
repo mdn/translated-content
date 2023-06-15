@@ -3,7 +3,7 @@ title: Navigator.share
 slug: Web/API/Navigator/share
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}} {{securecontext_header}}
+{{APIRef("Web Share API")}}{{securecontext_header}}
 
 **`Navigator.share()`** 方法通过调用本机的共享机制作为 Web Share API 的一部分。如果不支持 Web Share API，则此方法为 `undefined`。
 
@@ -39,7 +39,7 @@ navigator.share({
 }); // 分享 MDN 的 URL
 ```
 
-#### **分享文件**
+### 分享文件
 
 分享文件之前，先使用 `navigator.canShare()` 判断这个文件能否被分享，Then include an array of files in the call to `navigator.share()`:
 

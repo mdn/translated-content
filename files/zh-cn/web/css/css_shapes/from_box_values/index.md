@@ -1,6 +1,6 @@
 ---
 title: Shapes from box values
-slug: Web/CSS/CSS_Shapes/From_box_values
+slug: Web/CSS/CSS_shapes/From_box_values
 ---
 
 {{CSSRef}}
@@ -74,5 +74,5 @@ You can create some interesting effects however with just this simple technique.
 
 {{EmbedGHLiveSample("css-examples/shapes/box/bottom-margin-box.html", '100%', 800)}}
 
-For more complex shapes you will need to use one of the [basic shapes](/zh-CN/docs/Web/CSS/CSS_Shapes/Basic_Shapes) as a value, or define your Shape from an image as covered in other guides in this section.
+For more complex shapes you will need to use one of the [basic shapes](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_Shapes) as a value, or define your Shape from an image as covered in other guides in this section.
 对于更复杂的形状，您需要使用其中一个基本形状作为值，或者根据本节其他指南中介绍的图像定义形状。

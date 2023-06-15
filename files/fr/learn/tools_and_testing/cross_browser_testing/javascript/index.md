@@ -445,7 +445,7 @@ Beaucoup de développeurs on implémenté de mauvais détecteur de code de navig
 
 La leçon à retenir ici est — ne JAMAIS utiliser de détecteur de code. Le seul cas d'usage pour le détecteur de code de nos jours c'est si vous implémentez un fix pour un bug pour une version très particulière d'un navigateur en particulier. Même dans ce cas, la plupart des bugs sont fixés rapidement dans le cycle rapide des sorties des navigateurs. Cela n'arrive pas très souvent. [La fonctionnalité de détection](#fonctionnalité_de_détection) est presque toujours une meilleure option — si vous détectez si une fonctionnalité est supportée, vous n'aurez pas besoin de changer votre code quand de nouvelles versions de navigateur sortiront, et les tests sont bien plus fiables.
 
-Si vous rejoignez un projet existant où il y a déjà de la détection de navigateur, regardez si elle peut être remplacée avec quelque chose de plus pratique. La détection de navigateur est à l'origine de toutes sortes de bugs curieux, comme {{bug(1308462)}}.
+Si vous rejoignez un projet existant où il y a déjà de la détection de navigateur, regardez si elle peut être remplacée avec quelque chose de plus pratique. La détection de navigateur est à l'origine de toutes sortes de bugs curieux, comme le [bug Firefox 1308462](https://bugzil.la/1308462).
 
 ### Gérer les préfixes JavaScript
 

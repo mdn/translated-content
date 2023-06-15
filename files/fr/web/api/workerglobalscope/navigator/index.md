@@ -43,7 +43,7 @@ Object {onLine: true, userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1
 
 Vous pouvez utiliser l'objet navigator pour récupérer des informations supplémentaires sur l'environnement d'exécution, comme vous pourriez le faire avec un objet {{domxref("Navigator")}} normal.
 
-> **Note :** Firefox rencontre un bogue avec l'utilisation de `console.log` à l'intérieur des workers partagés/service (voir {{Bug("1058644")}}), ce qui peut occasionner d'étranges résultats, mais cela devrait être bientôt corrigé.
+> **Note :** Firefox rencontre un bogue avec l'utilisation de `console.log` à l'intérieur des workers partagés/service (voir [bug Firefox 1058644](https://bugzil.la/1058644)), ce qui peut occasionner d'étranges résultats, mais cela devrait être bientôt corrigé.
 
 ## Spécifications
 
