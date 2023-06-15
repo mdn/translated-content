@@ -38,6 +38,6 @@ l10n:
 - `<dir>` 要素を整形するのに特に有用な CSS プロパティ:
 
   - {{cssxref('list-style')}} は行頭記号の表示方法を選択するのに便利です。
-  - [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)は、複雑な入れ子リストの扱いに便利です。
-  - {{Cssxref('line-height')}} プロパティは、非推奨の [`compact`](/ja/docs/Web/HTML/Element/dir#compact) 属性の代替になります。
+  - [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)は、複雑な入れ子リストの扱いに便利です。
+  - {{Cssxref('line-height')}} プロパティは、非推奨の [`compact`](#compact) 属性の代替になります。
   - {{cssxref('margin')}} プロパティは、リストのインデントを制御するのに便利です。
