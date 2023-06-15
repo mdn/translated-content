@@ -7,7 +7,7 @@ slug: Web/HTML/Element/u
 
 [HTML](/zh-CN/docs/Web/HTML) **`<u>`** 元素表示行内文本拥有一个非文本形式的注释，该注释需要以某种方式渲染出来。默认情况下渲染为一个实线下划线，可以用 CSS 替换。
 
-> **警告：** 此元素以前在旧版本的 HTML 中称为“下划线”元素，但有时仍会以这种方式被滥用。要为文本加下划线，您应该应用包含 CSS {{cssxref("text-decoration")}} 属性设置为 `underline` 的样式。
+> **警告：** 此元素以前在旧版本的 HTML 中称为“下划线”元素，但有时仍会以这种方式被滥用。要为文本加下划线，你应该应用包含 CSS {{cssxref("text-decoration")}} 属性设置为 `underline` 的样式。
 
 {{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
 
@@ -23,15 +23,15 @@ slug: Web/HTML/Element/u
 
 > **备注：** 在可能和超链接混淆的地方，避免使用默认样式的 `<u>` 元素，它们都默认用下划线装饰。
 
-### 用例
+### 示例
 
 `<u>` 元素的有效用例包括标注拼写错误、向中文文本中的专有名称添加[专名号](https://zh.wikipedia.org/wiki/%E4%B8%93%E5%90%8D%E5%8F%B7)，以及其他形式的注释。
 
-您**不**应该使用 `<u>` 为文字添加视觉上的下划线，或者表示书籍的标题。
+你**不**应该使用 `<u>` 为文字添加视觉上的下划线，或者表示书籍的标题。
 
 ### 要考虑使用的其他要素
 
-在大多数情况下，您应该使用 `<u>` 以外的元素，例如：
+在大多数情况下，你应该使用 `<u>` 以外的元素，例如：
 
 - 用 {{HTMLElement("em")}} 来强调重点
 - 用 {{HTMLElement("b")}} 来吸引对文字的注意
@@ -76,7 +76,7 @@ u.spelling {
 
 ### 避免使用 \<u>
 
-大多数情况下，您实际上不想使用 `<u>`。以下是一些示例，显示在几种情况下您应该做什么。
+大多数情况下，你实际上不想使用 `<u>`。以下是一些示例，显示在几种情况下你应该做什么。
 
 #### 非语义下划线
 
@@ -106,19 +106,17 @@ u.spelling {
 
 书籍标题应使用 {{HTMLElement("cite")}} 元素而不是 `<u>` 甚至 `<i>` 来呈现。
 
-##### HTML
+##### 使用 cite 元素
 
 ```html
 <p>The class read <cite>Moby Dick</cite> in the first term.</p>
 ```
 
-##### 默认样式的结果
-
 {{EmbedLiveSample("表示书名", 650, 80)}}
 
 ##### 为 cite 元素添加样式
 
-请注意， `<cite>` 元素的默认样式会以斜体显示文本。如果您愿意，可以使用 CSS 覆盖它：
+`<cite>` 元素的默认样式会以斜体显示文本，你可以使用 CSS 覆盖它：
 
 ```html
 <p>The class read <cite>Moby Dick</cite> in the first term.</p>
@@ -131,21 +129,19 @@ cite {
 }
 ```
 
-##### 定制样式的结果
-
 {{EmbedLiveSample("为 cite 元素添加样式", 650, 80)}}
 
-## 技术总结
+## 技术概要
 
 <table class="properties">
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容类别</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a>、palpable 内容。</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>、palpable 内容。</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a></td>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a></td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -153,7 +149,7 @@ cite {
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">短语内容</a>的元素。</td>
+   <td>任何接受<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>的元素。</td>
   </tr>
   <tr>
     <th scope="row">隐式 ARIA 角色</th>
@@ -165,7 +161,7 @@ cite {
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLElement")}} Gecko 1.9.2 (Firefox 4) 之前（包含）, Firefox 为这个元素实现了 {{domxref("HTMLSpanElement")}} 接口。</td>
+   <td>{{domxref("HTMLElement")}} Gecko 1.9.2 (Firefox 4) 之前（包含），Firefox 为这个元素实现了 {{domxref("HTMLSpanElement")}} 接口。</td>
   </tr>
  </tbody>
 </table>
