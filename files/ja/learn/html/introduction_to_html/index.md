@@ -2,7 +2,7 @@
 title: HTML 入門
 slug: Learn/HTML/Introduction_to_HTML
 l10n:
-  sourceCommit: 645439f270755c91a8e3c1a661c18b9a09ce8fa0
+  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
 ---
 
 {{LearnSidebar}}

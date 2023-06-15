@@ -28,7 +28,7 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
         <a href="/en-US/docs/Web/HTML/Content_categories#Embedded_content"
           >embedded content</a
         >, palpable content; if the element has a
-        {{htmlattrxref("usemap","object")}} attribute,
+        <a href="/es/docs/Web/HTML/Element/object#usemap"><code>usemap</code></a> attribute,
         <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content"
           >interactive content</a
         >;
@@ -115,7 +115,7 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 - {{HTMLAttrDef("typemustmatch")}}
   - : Este valor booleano indica si el atributo **type** y el [content type](/es/docs/Glossary/Content_type) real del recurso deben coincidir para porder ser usados.
 - {{HTMLAttrDef("usemap")}}
-  - : Una refercia hash-name a un elemento {{HTMLElement("map")}}; es decir un '#' seguido del valor de un {{htmlattrxref("name", "map")}} de un elemento map.
+  - : Una refercia hash-name a un elemento {{HTMLElement("map")}}; es decir un '#' seguido del valor de un [`name`](/es/docs/Web/HTML/Element/map#name) de un elemento map.
 - {{HTMLAttrDef("width")}}
   - : El ancho del recurso mostrado, en [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Valores absolutos unicamente. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 

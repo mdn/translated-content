@@ -30,7 +30,7 @@ Object.isSealed(obj)
 
 ## 示例
 
-### 使用 Object.isSealed
+### 使用 Object.isSealed()
 
 ```js
 // 新建的对象默认不是密封的。

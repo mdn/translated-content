@@ -54,7 +54,7 @@ Object.setPrototypeOf(Object.prototype, null); // 没有错误；`Object.prototy
 
 ## 示例
 
-### 使用 Object.setPrototypeOf 实现伪类继承
+### 使用 Object.setPrototypeOf() 实现伪类继承
 
 JS 中可以这样实现类继承。
 
