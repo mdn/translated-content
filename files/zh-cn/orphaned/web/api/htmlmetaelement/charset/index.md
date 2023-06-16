@@ -1,6 +1,7 @@
 ---
 title: HTMLMetaElement.charset
-slug: Web/API/HTMLMetaElement/charset
+slug: orphaned/Web/API/HTMLMetaElement/charset
+original_slug: Web/API/HTMLMetaElement/charset
 ---
 
 {{APIRef("HTML DOM")}}
