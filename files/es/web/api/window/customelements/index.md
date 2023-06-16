@@ -1,11 +1,13 @@
 ---
-title: "Window: customElements"
+title: "Window: Propiedad customElements"
 slug: Web/API/Window/customElements
+l10n:
+  sourceCommit: ac2874857a3de0be38430e58068597edf0afa2b2
 ---
 
 {{APIRef}}
 
-La propiedad de solo lectura **`customElements`** de la interface {{domxref("Window")}}, devuelve una referencia al objeto {{domxref("CustomElementRegistry")}}, el cual puede usarse para registrar un nuevo [elemento personalizado](/es/docs/Web/API/Web_components/Using_custom_elements) y obtener información sobre el elemento previamente registrado.
+La propiedad de solo lectura **`customElements`** de la interfaz {{domxref("Window")}}, devuelve una referencia al objeto {{domxref("CustomElementRegistry")}}, el cual puede usarse para registrar un nuevo [elemento personalizado](/es/docs/Web/API/Web_components/Using_custom_elements) y obtener información sobre el elemento previamente registrado.
 
 ## Ejemplos
 

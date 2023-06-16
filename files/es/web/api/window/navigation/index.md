@@ -1,13 +1,13 @@
 ---
-title: "Window: navigation"
+title: "Window: Propiedad navigation"
 slug: Web/API/Window/navigation
-status:
-  - experimental
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}{{SeeCompatTable}}
 
-La propiedad de solo lectura `navigation` de la interface {{domxref("Window")}} devuelve el objeto {{domxref("Navigation")}} asociada a la ventana actual.
+La propiedad de solo lectura `navigation` de la interfaz {{domxref("Window")}} devuelve el objeto {{domxref("Navigation")}} asociada a la ventana actual.
 
 El punto de entrada para el {{domxref("Navigation API")}}.
 

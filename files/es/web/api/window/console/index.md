@@ -1,6 +1,8 @@
 ---
-title: "Window: console"
+title: "Window: Propiedad console"
 slug: Web/API/Window/console
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
