@@ -55,7 +55,7 @@ dtmfSender.addEventListener(
 );
 ```
 
-您还可以直接设置 `ontonechange` 事件处理器属性：
+你还可以直接设置 `ontonechange` 事件处理器属性：
 
 ```js
 dtmfSender.ontonechange = (ev) => {
