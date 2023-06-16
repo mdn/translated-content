@@ -53,10 +53,10 @@ slug: Web/HTML/Element/u
 #### HTML
 
 ```html
-<p>这一段包含一个拼写<u class="spelling">错雾</u>的词。</p>
+<p>This paragraph includes a <u class="spelling">wrnogly</u> spelled word.</p>
 ```
 
-在 HTML 中，我们用 `<u>` 及一个类 `spelling` 来表示“错雾”一词的拼写错误。
+在 HTML 中，我们用 `<u>` 及一个类 `spelling` 来表示“wrnogly”一词的拼写错误。
 
 #### CSS
 
@@ -112,7 +112,7 @@ u.spelling {
 <p>The class read <cite>Moby Dick</cite> in the first term.</p>
 ```
 
-{{EmbedLiveSample("表示书名", 650, 80)}}
+{{EmbedLiveSample("使用 cite 元素", 650, 80)}}
 
 ##### 为 cite 元素添加样式
 
