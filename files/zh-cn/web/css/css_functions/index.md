@@ -300,7 +300,7 @@ CSS 字体函数与 {{CSSxRef("font-variant-alternates")}} 属性一起使用，
 - {{CSSxRef("font-variant-alternates#annotation", "annotation()")}}
   - : 启用注解，如圈出的数字或倒置的字符。该参数是一个映射到数字的字体特定名称。它对应于 OpenType 值 `nalt`，例如 `nalt 2`。
 
-## 时间函数
+## 缓动函数
 
 以下函数在过渡和动画属性中作为一个值使用。
 
