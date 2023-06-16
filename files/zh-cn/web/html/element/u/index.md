@@ -1,5 +1,5 @@
 ---
-title: <u>
+title: <u>：未阐明的注释（下划线）元素
 slug: Web/HTML/Element/u
 ---
 
@@ -15,7 +15,7 @@ slug: Web/HTML/Element/u
 
 ## 属性
 
-这个元素仅包含[全局属性](/zh-CN/docs/HTML/Global_attributes)。
+这个元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
 ## 使用说明
 
