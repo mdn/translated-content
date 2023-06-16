@@ -1,6 +1,8 @@
 ---
-title: "Window: confirm() "
+title: "Window: Método confirm() "
 slug: Web/API/Window/confirm
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{ApiRef("Window")}}
@@ -22,7 +24,7 @@ confirm(message);
 
 ### Valor devuelto
 
-Un valor booleano que indica si seleccionó Aceptar(`true`) o Cancelar (`false`). Si un navegador esta ignorando cuadros de diálogo, entonces el valor devuelto siempre será `false`.
+Un valor booleano que indica si seleccionó OK (`true`) o Cancel (`false`). Si un navegador esta ignorando cuadros de diálogo, entonces el valor devuelto siempre será `false`.
 
 ## Ejemplos
 
