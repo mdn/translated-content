@@ -189,9 +189,9 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
       </td>
     </tr>
     <tr>
-      <td><a href="/zh-CN/docs/Web/HTML/Attributes/charset">charset</a></td>
+      <td><code><a href="/zh-CN/docs/Web/HTML/Element/meta#charset">charset</a></code></td>
       <td>
-        {{ HTMLElement("meta") }}, {{ HTMLElement("script") }}
+        {{ HTMLElement("meta") }}
       </td>
       <td>申明该页面或脚本的字符编码。</td>
     </tr>
