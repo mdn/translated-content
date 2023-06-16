@@ -19,13 +19,13 @@ slug: Web/HTML/Element/u
 
 ## 使用说明
 
-就像所有排版元素那样，原本的下划线元素（`<u>`）在 HTML 4 中被废弃。但是 `<u>` 在 HTML 5 中被恢复，并被赋予了一个新的语义：将文本标记为应用了某种形式的非文本注释。
+就像所有纯样式元素那样，原本的下划线元素（`<u>`）在 HTML 4 中被废弃。但是 `<u>` 在 HTML 5 中被恢复，并被赋予了一个新的语义：将文本标记为应用了某种形式的非文本注释。
 
 > **备注：** 在可能和超链接混淆的地方，避免使用默认样式的 `<u>` 元素，它们都默认用下划线装饰。
 
 ### 示例
 
-`<u>` 元素的有效用例包括标注拼写错误、向中文文本中的专有名称添加[专名号](https://zh.wikipedia.org/wiki/%E4%B8%93%E5%90%8D%E5%8F%B7)，以及其他形式的注释。
+`<u>` 元素的有效用例包括标注拼写错误、向中文文本中的专有名称添加[专名号](https://zh.wikipedia.org/wiki/专名号)，以及其他形式的注释。
 
 你**不**应该使用 `<u>` 为文字添加视觉上的下划线，或者表示书籍的标题。
 
@@ -42,7 +42,7 @@ slug: Web/HTML/Element/u
 
 要提供文本注释（与使用 `<u>` 创建的非文本注释相对），请使用 {{HTMLElement("ruby")}} 元素。
 
-要应用带下划线的外观而没有任何语义含义，请使用 {{cssxref("text-decoration")}} 属性的值 `underline`。
+要在没有任何语义含义的情况下应用下划线外观，请使用 {{cssxref("text-decoration")}} 属性的 `underline` 属性值 。
 
 ## 示例
 
@@ -137,7 +137,7 @@ cite {
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容类别</a></th>
-   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>、palpable 内容。</td>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Content_categories#短语内容">短语内容</a>、可感知内容。</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -161,7 +161,7 @@ cite {
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLElement")}} Gecko 1.9.2 (Firefox 4) 之前（包含），Firefox 为这个元素实现了 {{domxref("HTMLSpanElement")}} 接口。</td>
+   <td>{{domxref("HTMLElement")}}</td>
   </tr>
  </tbody>
 </table>
@@ -176,5 +176,5 @@ cite {
 
 ## 参见
 
-- {{HTMLElement("span")}}、{{HTMLElement("i")}}、{{HTMLElement("em")}} 和 {{HTMLElement("cite")}} 元素，取决于情况，可以替代使用。
-- CSS {{cssxref("text-decoration")}} 属性可以用于完成 `<u>` 元素的上文提到的视觉效果。
+- 通常应使用 {{HTMLElement("span")}}、{{HTMLElement("i")}}、{{HTMLElement("em")}}、{{HTMLElement("b")}} 或 {{HTMLElement("cite")}} 元素代替。
+- 应当使用 CSS {{cssxref("text-decoration")}} 属性添加非语义的下划线。
