@@ -84,61 +84,61 @@ El **elemento `<body>` de HTML** representa el contenido de un documento HTML. S
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("alink")}} {{deprecated_inline}}
+- `alink` {{deprecated_inline}}
   - : Color del texto de los hipervínculos cuando se selecciona. _Este método no es conforme a la especificación, utiliza la propiedad {{CSSxRef("color")}} de CSS junto con la pseudoclase {{CSSxRef(":active")}} en su lugar._
-- {{HTMLAttrDef("background")}} {{deprecated_inline}}
+- `background` {{deprecated_inline}}
   - : URI de una imagen para usar como fondo. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("background")}} en el elemento_.
-- {{HTMLAttrDef("bgcolor")}} {{deprecated_inline}}
+- `bgcolor` {{deprecated_inline}}
   - : Color de fondo del documento. _Este método no es conforme, utiliza la propiedad CSS {{CSSxRef("background-color")}} en el elemento_.
-- {{HTMLAttrDef("bottommargin")}} {{deprecated_inline}}
+- `bottommargin` {{deprecated_inline}}
   - : El margen de la parte inferior del _\<body>_. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("margin-bottom")}} en el elemento_.
-- {{HTMLAttrDef("leftmargin")}} {{deprecated_inline}}
+- `leftmargin` {{deprecated_inline}}
   - : El margen de la izquierda del _\<body>_. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("margin-left")}} en el elemento en su lugar_.
-- {{HTMLAttrDef("link")}} {{deprecated_inline}}
+- `link` {{deprecated_inline}}
   - : Color del texto de los enlaces de hipertexto no visitados. _Este método no es conforme, usa la propiedad {{CSSxRef("color")}} de CSS junto con la pseudoclase {{CSSxRef(":link")}} en su lugar_.
-- {{HTMLAttrDef("onafterprint")}}
+- `onafterprint`
   - : Función para llamar después de que el usuario haya impreso el documento.
-- {{HTMLAttrDef("onbeforeprint")}}
+- `onbeforeprint`
   - : Función para llamar cuando el usuario solicita la impresión del documento.
-- {{HTMLAttrDef("onbeforeunload")}}
+- `onbeforeunload`
   - : Función para llamar cuando se está a punto de descargar el documento.
-- {{HTMLAttrDef("onblur")}}
+- `onblur`
   - : Función para llamar cuando el documento pierde el foco.
-- {{HTMLAttrDef("onerror")}}
+- `onerror`
   - : Función para llamar cuando el documento no se carga correctamente.
-- {{HTMLAttrDef("onfocus")}}
+- `onfocus`
   - : Función para llamar cuando el documento recibe el foco.
-- {{HTMLAttrDef("onhashchange")}}
+- `onhashchange`
   - : Función para llamar cuando la parte del identificador del fragmento (comenzando con el carácter de almohadilla (`'#'` también conocido como numeral)) de la dirección actual del documento ha cambiado.
-- {{HTMLAttrDef("onlanguagechange")}} {{experimental_inline}}
+- `onlanguagechange` {{experimental_inline}}
   - : Función para llamar cuando cambiaron los idiomas preferidos.
-- {{HTMLAttrDef("onload")}}
+- `onload`
   - : Función a llamar cuando se haya terminado de cargar el documento.
-- {{HTMLAttrDef("onmessage")}}
+- `onmessage`
   - : Función para llamar cuando el documento ha recibido un mensaje.
-- {{HTMLAttrDef("onoffline")}}
+- `onoffline`
   - : Función para llamar cuando falla la comunicación de la red.
-- {{HTMLAttrDef("ononline")}}
+- `ononline`
   - : Función para llamar cuando se restablece la comunicación de la red.
-- {{HTMLAttrDef("onpopstate")}}
+- `onpopstate`
   - : Función para llamar cuando el usuario ha navegado el historial de sesiones.
-- {{HTMLAttrDef("onredo")}}
+- `onredo`
   - : Función para llamar cuando el usuario ha avanzado en el historial de deshacer transacciones.
-- {{HTMLAttrDef("onresize")}}
+- `onresize`
   - : Función para llamar cuando el documento ha cambiado de tamaño.
-- {{HTMLAttrDef("onstorage")}}
+- `onstorage`
   - : Función para llamar cuando el área de almacenamiento ha cambiado.
-- {{HTMLAttrDef("onundo")}}
+- `onundo`
   - : Función para llamar cuando el usuario ha retrocedido en el historial de deshacer transacciones.
-- {{HTMLAttrDef("onunload")}}
+- `onunload`
   - : Función para llamar cuando el documento se vaya.
-- {{HTMLAttrDef("rightmargin")}} {{deprecated_inline}}
+- `rightmargin` {{deprecated_inline}}
   - : El margen de la derecha del _\<body>_. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("margin-right")}} en el elemento_.
-- {{HTMLAttrDef("text")}} {{deprecated_inline}}
+- `text` {{deprecated_inline}}
   - : Color de primer plano del texto. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("color")}} en el elemento_.
-- {{HTMLAttrDef("topmargin")}} {{deprecated_inline}}
+- `topmargin` {{deprecated_inline}}
   - : El margen de la parte superior del _\<body>_. _Este método no es conforme, usa la propiedad CSS {{CSSxRef("margin-top")}} en el elemento_.
-- {{HTMLAttrDef("vlink")}} {{deprecated_inline}}
+- `vlink` {{deprecated_inline}}
   - : Color del texto de los enlaces de hipertexto visitados. _Este método no es conforme, utiliza la propiedad {{CSSxRef("color")}} de CSS junto con la pseudoclase {{CSSxRef(":visited")}} en su lugar_.
 
 ## Ejemplo
