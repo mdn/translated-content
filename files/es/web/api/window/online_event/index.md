@@ -1,6 +1,8 @@
 ---
-title: "Window: evento online"
+title: "Window: Evento online"
 slug: Web/API/Window/online_event
+l10n:
+  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
 ---
 
 {{APIRef}}
