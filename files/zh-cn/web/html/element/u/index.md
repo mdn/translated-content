@@ -56,7 +56,7 @@ slug: Web/HTML/Element/u
 <p>This paragraph includes a <u class="spelling">wrnogly</u> spelled word.</p>
 ```
 
-在 HTML 中，我们用 `<u>` 及一个类 `spelling` 来表示“wrnogly”一词的拼写错误。
+在 HTML 中，我们用 `<u>` 元素及 `spelling` 类来表示“wrnogly”一词的拼写错误。
 
 #### CSS
 
