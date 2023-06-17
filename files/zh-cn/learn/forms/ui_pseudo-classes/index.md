@@ -55,7 +55,7 @@ slug: Learn/Forms/UI_pseudo-classes
 ```html
 <form>
   <fieldset>
-    <legend>反馈表单</legend>
+    <legend>Feedback form</legend>
     <div>
       <label for="fname">First name: </label>
       <input id="fname" name="fname" type="text" required />
@@ -66,11 +66,11 @@ slug: Learn/Forms/UI_pseudo-classes
     </div>
     <div>
       <label for="email">
-        电子邮件地址（如果需要回复，请填写这里）：
+        Email address (include if you want a response):
       </label>
       <input id="email" name="email" type="email" />
     </div>
-    <div><button>提交</button></div>
+    <div><button>Submit</button></div>
   </fieldset>
 </form>
 ```
@@ -270,7 +270,7 @@ input:valid + span::before {
 
 ```html
 <div>
-  <label for="age">年龄（至少为 12 岁）：</label>
+  <label for="age">Age (must be 12+): </label>
   <input id="age" name="age" type="number" min="12" max="120" required />
   <span></span>
 </div>
@@ -293,7 +293,7 @@ input + span::after {
 input:required + span::after {
   color: white;
   background-color: black;
-  content: "必填";
+  content: "Required";
   left: -70px;
 }
 
@@ -301,7 +301,7 @@ input:out-of-range + span::after {
   color: white;
   background-color: red;
   width: 155px;
-  content: "在允许范围之外";
+  content: "Outside allowable value range";
   left: -182px;
 }
 ```
@@ -327,45 +327,45 @@ input:out-of-range + span::after {
 ```html
 <form>
   <fieldset id="shipping">
-    <legend>发货地址</legend>
+    <legend>Shipping address</legend>
     <div>
-      <label for="name1">姓名：</label>
+      <label for="name1">Name: </label>
       <input id="name1" name="name1" type="text" required />
     </div>
     <div>
-      <label for="address1">地址：</label>
+      <label for="address1">Address: </label>
       <input id="address1" name="address1" type="text" required />
     </div>
     <div>
-      <label for="pcode1">邮政编码：</label>
+      <label for="pcode1">Zip/postal code: </label>
       <input id="pcode1" name="pcode1" type="text" required />
     </div>
   </fieldset>
   <fieldset id="billing">
-    <legend>付款地址</legend>
+    <legend>Billing address</legend>
     <div>
-      <label for="billing-checkbox">与发货地址相同：</label>
+      <label for="billing-checkbox">Same as shipping address:</label>
       <input type="checkbox" id="billing-checkbox" checked />
     </div>
     <div>
-      <label for="name" class="billing-label disabled-label">姓名：</label>
+      <label for="name" class="billing-label disabled-label">Name: </label>
       <input id="name" name="name" type="text" disabled required />
     </div>
     <div>
       <label for="address2" class="billing-label disabled-label">
-        地址：
+        Address:
       </label>
       <input id="address2" name="address2" type="text" disabled required />
     </div>
     <div>
       <label for="pcode2" class="billing-label disabled-label">
-        邮政编码：
+        Zip/postal code:
       </label>
       <input id="pcode2" name="pcode2" type="text" disabled required />
     </div>
   </fieldset>
 
-  <div><button>提交</button></div>
+  <div><button>Submit</button></div>
 </form>
 ```
 
@@ -438,7 +438,7 @@ HTML 的一个片段如下，注意其中的 readonly 属性：
 
 ```html
 <div>
-  <label for="name">姓名：</label>
+  <label for="name">Name: </label>
   <input id="name" name="name" type="text" value="Mr Soft" readonly />
 </div>
 ```
@@ -508,7 +508,7 @@ input[type="radio"]:checked::before {
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/radios-styled.html", '100%', 200)}}
 
-基本上，我们使用 `::before` 伪元素建立了单选按钮“内圈”的样式，但在它上面设置了一个 `scale(0)` 的 [`transform`](/zh-CN/docs/Web/CSS/transform) 值。然后我们使用一个 [`transition`](/zh-CN/docs/Web/CSS/transition)来使它在被选择时能有一个很好的动画效果。使用变换而不是过渡 [`width`](/zh-CN/docs/Web/CSS/width)/[`height`](/zh-CN/docs/Web/CSS/height) 的好处是，你可以使用 [`transform-origin`](/zh-CN/docs/Web/CSS/transform-origin) 来使它从圆的中心生长，而不是让它看起来从圆的角落生长。
+基本上，我们使用 `::before` 伪元素建立了单选按钮“内圈”的样式，但在它上面设置了一个 `scale(0)` 的 [`transform`](/zh-CN/docs/Web/CSS/transform) 值。然后我们使用一个 [`transition`](/zh-CN/docs/Web/CSS/transition) 来使它在被选择时能有一个很好的动画效果。使用变换而不是过渡 [`width`](/zh-CN/docs/Web/CSS/width)/[`height`](/zh-CN/docs/Web/CSS/height) 的好处是，你可以使用 [`transform-origin`](/zh-CN/docs/Web/CSS/transform-origin) 来使它从圆的中心生长，而不是让它看起来从圆的角落生长。
 
 ### :default 和 :indeterminate
 
@@ -527,7 +527,7 @@ input[type="radio"]:checked::before {
 ```html
 <p>
   <input type="radio" name="fruit" value="cherry" id="cherry" />
-  <label for="cherry">樱桃</label>
+  <label for="cherry">Cherry</label>
   <span></span>
 </p>
 ```
