@@ -1,11 +1,11 @@
 ---
-title: "RTCDTMFSender: tonechange 事件"
+title: RTCDTMFSender：tonechange 事件
 slug: Web/API/RTCDTMFSender/tonechange_event 
 ---
 
 {{APIRef("WebRTC")}}
 
-**`tonechange`** 事件会被 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 发送给 {{domxref("RTCDTMFSender")}}，以指示先前排队等待发送的 {{Glossary("DTMF")}} 音调（通过调用 {{domxref("RTCDTMFSender.insertDTMF()")}}）何时开始和结束。
+**`tonechange`** 事件会被 [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API) 发送给 {{domxref("RTCDTMFSender")}}，以指示先前（通过调用 {{domxref("RTCDTMFSender.insertDTMF()")}}）排队等待发送的 {{Glossary("DTMF")}} 音调何时开始和结束。
 
 要确定哪个音调开始播放，或者音调是否停止播放，请检查事件的 {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} 属性的值。
 
@@ -13,7 +13,7 @@ slug: Web/API/RTCDTMFSender/tonechange_event
 
 ## 语法
 
-在像 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理程序属性。
+在像 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
 addEventListener("tonechange", (event) => {});
