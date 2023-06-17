@@ -7,9 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/@@species
 
 静态访问器属性 **`Promise[@@species]`** 返回用于构造 Promise 方法返回值的构造函数。
 
-> **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
-
-**警告：** `@@species` 的存在允许任意代码的执行，这可能会导致安全漏洞，并且使某些优化更加困难。引擎实现者正在[调查是否删除此特性](https://github.com/tc39/proposal-rm-builtin-subclassing)。如果可能的话，应避免依赖它。
+> **警告：** `@@species` 的存在允许任意代码的执行，这可能会导致安全漏洞，并且使某些优化更加困难。引擎实现者正在[调查是否删除此特性](https://github.com/tc39/proposal-rm-builtin-subclassing)。如果可能的话，应避免依赖它。
 
 ## 语法
 
@@ -53,8 +51,6 @@ Promise 链式方法——[`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global
 Promise[Symbol.species]; // [Function: Promise]
 ```
 
-### Species in derived objects
-
 ### 派生对象中的 Species
 
 在自定义 `Promise` 子类的实例中，比如 `MyPromise`，`MyPromise` 的 species 是 `MyPromise` 构造函数本身。然而，你可能希望在派生类的方法中覆盖该属性，以便返回父类 `Promise` 对象。
@@ -68,7 +64,7 @@ class MyPromise extends Promise {
 }
 ```
 
-默认情况下，Promise 方法将返回具有子类类型的 `Promise`。
+默认情况下，Promise 方法将返回具有子类类型的 Promise。
 
 ```js
 class MyPromise extends Promise {
