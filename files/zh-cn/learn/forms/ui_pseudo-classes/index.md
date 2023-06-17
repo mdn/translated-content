@@ -204,9 +204,9 @@ input:required + span::after {
 - 设定了 `required`，且没有任何值的表单控件是无效的——它们与 `:invalid` 和 `:required` 匹配。
 - 具有内置验证功能的控件，如 `<input type="email">` 或 `<input type="url">`，当输入的数据与它们所需的模式不匹配时，会被（与）`:invalid` 匹配（但当它们为空时是有效的）。
 - 当前值超出 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性所指定的范围限制的控件，会被（与）`:invalid` 匹配，但也会被 {{cssxref(":out-of-range")}} 匹配，后面还会看到。
-- 还有一些其他的方法可以使元素被 `:valid`/`:invalid` 匹配，你会在[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)文章中看到。但目前还没有必要介绍的太复杂。
+- 还有一些其他的方法可以使元素被 `:valid`/`:invalid` 匹配，你会在[客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)文章中看到。但目前还没有必要介绍得太复杂。
 
-让我们看看一个简单的 `:valid`/`:invalid` 的示例（见 [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) 的实时演示，也可以看看[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)）。
+让我们看看一个简单的 `:valid`/`:invalid` 的示例（访问 [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) 以查看实时演示，也可以查看[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)）。
 
 和前面的示例一样，我们有额外的 `<span>` 来生成内容，我们将用它来提供有效/无效数据的指示：
 
@@ -254,11 +254,11 @@ input:valid + span::before {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/valid-invalid.html", '100%', 430)}}
 
-注意到必需的文本 input 在空的时候是无效的，但当它们有东西填入时是有效的。另一方面，电子邮件 input 在空的时候是有效的，因为它不是必需的，但当它包含一些不是正确的电子邮件地址时，就无效了。
+注意，必需的文本 input 在空的时候是无效的，但当它们有东西填入时是有效的。另一方面，电子邮件 input 在空的时候是有效的，因为它不是必需的，但当它包含一些不是正确的电子邮件地址时，就无效了。
 
 ### 在范围内和不在范围内的数据
 
-正如我们上面所提示的内容一样，还有两个相关的伪类需要考虑——{{cssxref(":in-range")}} 和 {{cssxref(":out-of-range")}}。这些与数字输入相匹配，其中范围限制由 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max)指定，分别供其数据在指定范围之内或之外所使用。
+正如我们上面所提示的内容一样，还有两个相关的伪类需要考虑——{{cssxref(":in-range")}} 和 {{cssxref(":out-of-range")}}。这些与数字输入相匹配，其中范围限制由 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 指定，分别供其数据在指定范围之内或之外所使用。
 
 > **备注：** 数值输入类型包括 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range`。
 
@@ -310,9 +310,9 @@ input:out-of-range + span::after {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/out-of-range.html", '100%', 430)}}
 
-数字输入有可能同时是必需的和超出范围的，那么会发生什么呢？因为 `:out-of-range` 规则在源代码中出现的时间比 `:required` 规则晚，[级联规则](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#理解层叠)开始发挥作用，并且显示“超出范围”信息。
+数字输入有可能同时是必需的和超出范围的，那么会发生什么呢？因为 `:out-of-range` 规则在源代码中出现的时间比 `:required` 规则晚，[层叠规则](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#理解层叠)开始发挥作用，并且显示“超出范围”信息。
 
-这一点做得很好--当页面第一次加载时，“必填”显示出来，还有一个红叉和边界。当你输入了一个有效的年龄（即在 12-120 的范围内），输入就会变成有效。然而，如果你将年龄输入改为超出范围，则会弹出“在允许范围之外”的信息，取代了原先的“必填”。
+这一点做得很好——当页面第一次加载时，会显示“required”，还有一个红叉和边界。当你输入了一个有效的年龄（即在 12-120 的范围内），输入就会变成有效。然而，如果你将年龄输入改为超出范围，则会弹出“Outside allowable value range”的信息，取代了原先的“required”。
 
 > **备注：** 要输入一个无效的/超出范围的值，你必须实际聚焦于表格，用键盘输入该值。控件提供的按钮不会让你在允许的范围之外增加/减少数值。
 
@@ -551,7 +551,7 @@ input:default ~ span::after {
 }
 ```
 
-这为页面加载时最初选择的项目提供了一个小小的“default”标签。注意这里我们使用的是一般的兄弟姐妹组合器（`~`），而不是相邻的兄弟姐妹组合器（`+`）——我们需要这样做，因为在源代码中，`<span>` 并不在 `<input>` 之后。
+这为页面加载时最初选择的项目提供了一个小小的“default”标签。注意这里我们使用的是通用兄弟组合器（`~`），而不是相邻兄弟组合器（`+`）——我们需要这样做，因为在源代码中，`<span>` 并不在 `<input>` 之后。
 
 参见下方的实时结果：
 
@@ -586,7 +586,7 @@ input[type="radio"]:indeterminate {
 
 > **备注：** 你也可以在 GitHub 的 [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) 上找到这个示例的运行实例，也可以参见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html)。
 
-> **备注：** 你可以在 [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkboxes) 参考页上找到一个[涉及 `indeterminate` 状态的有趣示例](/zh-CN/docs/Web/HTML/Element/input/checkboxes)。
+> **备注：** 你可以在 [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox) 参考页上找到一个[涉及 `indeterminate` 状态的有趣示例](/zh-CN/docs/Web/HTML/Element/input/checkbox#中间状态复选框)。
 
 ## 更多伪类
 
