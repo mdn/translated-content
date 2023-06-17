@@ -105,7 +105,7 @@ input:optional {
 
 ## 使用伪类生成内容
 
-在之前的文章中，我们已经看到了[生成内容](/zh-CN/docs/Web/CSS/CSS_Generated_Content)的用法，现在是一个更详细地谈论它的好时机。
+在之前的文章中，我们已经看到了[生成内容](/zh-CN/docs/Web/CSS/CSS_generated_content)的用法，现在是一个更详细地谈论它的好时机。
 
 我们可以使用 [`::before`](/zh-CN/docs/Web/CSS/::before) 和 [`::after`](/zh-CN/docs/Web/CSS/::after) 伪元素以及 [`content`](/zh-CN/docs/Web/CSS/content) 属性来使一大块内容出现在受影响元素的前面或后面。这块内容没有被添加到 DOM 中，所以对屏幕阅读器来说是看不见的；它是文档样式的一部分。因为它是一个伪元素，所以它可以像任何实际的 DOM 节点一样被作为目标样式。
 
@@ -480,7 +480,7 @@ Firefox 在版本 78 之前只支持带前缀的伪类，从这个版本以后�
 
 当单选钮或复选框被选中时，它们将被 {{cssxref(":checked")}} 伪类所匹配。
 
-最常见的用途是在复选框或单选按钮被选中时添加不同的样式，在这种情况下，已经使用 `appearance: none;` 删除了系统默认的样式，想自己重新建立样式。我们在上一篇文章中看到了这样的示例，当时我们谈到了[在单选钮/复选框上使用 `appearance: none`](/zh-CN/docs/Learn/forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes)。
+最常见的用途是在复选框或单选按钮被选中时添加不同的样式，在这种情况下，已经使用 `appearance: none;` 删除了系统默认的样式，想自己重新建立样式。我们在上一篇文章中看到了这样的示例，当时我们谈到了[在单选钮/复选框上使用 `appearance: none`](/zh-CN/docs/Learn/Forms/Advanced_form_styling#using_appearance_none_on_radioscheckboxes)。
 
 回顾一下，我们的[有样式的单选钮](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)示例中的 `:checked` 代码看起来像这样：
 
