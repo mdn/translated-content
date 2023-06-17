@@ -39,7 +39,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
         <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/accesskey">accesskey</a></code>
       </td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性 attribute</a>
+        <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
       </td>
       <td>用于激活或聚焦元素的键盘快捷键。</td>
     </tr>
@@ -897,7 +897,6 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
         {{ HTMLElement("input") }}、{{ HTMLElement("textarea") }}
       </td>
       <td>提供用于告诉用户可以在字段中输入什么的提示。</td>
-      </td>
     </tr>
     <tr>
       <td>
@@ -1237,11 +1236,8 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
         </p>
         <div class="note">
           <p>
-            <strong>备注：</strong> For all other instances, such as
-            {{ HTMLElement("div") }}, this is a legacy attribute, in
-            which case the CSS {{ Cssxref("width") }} property should be
-            used instead.
-            对于其他所有实例，例如 {{ HTMLElement("div") }}，这是一个遗留属性，对于这些实例应使用
+            <strong>备注：</strong>对于其他所有实例，例如
+            {{ HTMLElement("div") }}，这是一个遗留属性，对于这些实例应使用
             CSS {{ Cssxref("height") }} 属性代替。
           </p>
         </div>
@@ -1265,7 +1261,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
 
 IDL 属性（attribute）也就是 JavaScript 属性（property）。你可以使用 JavaScript 属性如 `element.foo` 来设置这些属性。当你需要获取 IDL 属性的值时，IDL 属性总会使用隐含的内容属性的值（可能先经过转换）来返回一个值。同样地，当你设置这个值时，这个值会保存在内容属性中。换句话说，IDL 属性本质上反映了内容属性。
 
-大多数时候，IDL 属性会返回元素实际使用的值。例如，{{HTMLElement("input")}} 的默认 `type` 是 "text"，所以如果你设置 `input.type="foobar"`，`<input>` 元素仍然会是文本类型（在外观上和表现上），但 `type` 内容属性的值是 "foobar"。然而，`type` IDL 属性依旧会返回字符串 "text"。
+大多数时候，IDL 属性会返回元素实际使用的值。例如，{{HTMLElement("input")}} 的默认 `type` 是“text”，所以如果你设置 `input.type="foobar"`，`<input>` 元素仍然会是文本类型（在外观上和表现上），但 `type` 内容属性的值是“foobar”。然而，`type` IDL 属性依旧会返回字符串“text”。
 
 IDL 属性并不总是字符串；例如 `input.maxlength` 是一个数字（有符号长整型）。使用 IDL 属性时，你读取或设置值的类型都是要求的类型。所以 `input.maxlength` 总会返回一个数字，而如果你要设置 `input.maxlength`，也需要使用数字。如果你传入了别的类型，则会根据标准 JavaScript 的类型转换规则被转换为数字。
 
