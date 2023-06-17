@@ -116,7 +116,7 @@ CSS fornece quatro valores especiais de propriedades universais para controlar a
 
 > **Nota:** Temos um comando mais recente, {{cssxref("revert")}}, mas nem todos os navegadores suportam
 
-> **Nota:** veja {{SectionOnPage("/en-US/docs/Web/CSS/Cascade", "Origin of CSS declarations")}}para obter mais informações sobre como cada um deles funcionam.
+> **Nota:** Veja [Origem das declarações CSS](/pt-BR/docs/Web/CSS/Cascade#origin_types) para obter mais informações sobre como cada um deles funcionam.
 
 Podemos ver uma lista de links e explorar como funcionam os valores universais. O exemplo ao vivo abaixo permite que você brinque com o CSS e veja o que acontece quando você faz alterações. Usar/modificar o código é realmente a melhor maneira de se familiarizar com HTML e CSS.
 

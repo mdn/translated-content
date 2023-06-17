@@ -12,7 +12,7 @@ l10n:
 このメソッドは、フォームの送信 {{HtmlElement("button") }} をアクティブにするのと似ていますが、同じではありません。ただ、このメソッドを直接呼び出す場合は、
 
 - {{domxref("HTMLFormElement/submit_event", "submit")}} イベントは発生しません。特に、フォームの `onsubmit` イベントハンドラーは実行されません。
-- [制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)は行われません。
+- [制約検証](/ja/docs/Web/HTML/Constraint_validation)は行われません。
 
 {{domxref("HTMLFormElement.requestSubmit()")}} メソッドはフォームの送信ボタン ({{HtmlElement("button")}}) を使用にするのと同じで、これらの相違点はありません。
 

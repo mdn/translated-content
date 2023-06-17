@@ -52,5 +52,5 @@ shape-image-threshold: 0.7;
 
 - [基本文本和字体样式](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
 - [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Types)
-- [CSS 颜色](/zh-CN/docs/Web/CSS/CSS_Colors)
+- [CSS 颜色](/zh-CN/docs/Web/CSS/CSS_colors)
 - {{CSSXref("&lt;color&gt;")}}

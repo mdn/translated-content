@@ -26,9 +26,8 @@ console.log(rest); // [30, 40, 50]
 console.log(a); // 10
 console.log(b); // 20
 
-
 // Stage 4(finished) proposal
-({a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40});
+({ a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 });
 console.log(a); // 10
 console.log(b); // 20
 console.log(rest); // {c: 30, d: 40}
@@ -58,7 +57,7 @@ Perl 和 Python 也有類似的語法和功能。
 ### 基本變數指定敘述
 
 ```js
-const foo = ['one', 'two', 'three'];
+const foo = ["one", "two", "three"];
 
 const [red, yellow, green] = foo;
 console.log(red); // "one"
@@ -85,7 +84,7 @@ console.log(b); // 2
 ```js
 let a, b;
 
-[a=5, b=7] = [1];
+[a = 5, b = 7] = [1];
 console.log(a); // 1
 console.log(b); // 7
 ```
@@ -104,7 +103,7 @@ let b = 3;
 console.log(a); // 3
 console.log(b); // 1
 
-const arr = [1,2,3];
+const arr = [1, 2, 3];
 [arr[2], arr[1]] = [arr[1], arr[2]];
 console.log(arr); // [1,3,2]
 ```
@@ -143,7 +142,7 @@ console.log(b); // 3
 當然你也可以忽略全部回傳值：
 
 ```js
-[,,] = f();
+[, ,] = f();
 ```
 
 ### 把矩陣剩餘部分解構到一個變數
@@ -159,7 +158,7 @@ console.log(b); // [2, 3]
 要注意的是，當左邊函式裡使用其餘解構，同時使用結尾逗號，這樣會拋出例外 {{jsxref("SyntaxError")}} :
 
 ```js example-bad
-const [a, ...b,] = [1, 2, 3];
+const [a, ...b] = [1, 2, 3];
 
 // SyntaxError 語法錯誤: 其餘元素不可以跟隨結尾逗號
 // 需要把其餘運算子放在最後的元素
@@ -181,7 +180,9 @@ function parseProtocol(url) {
   return protocol;
 }
 
-console.log(parseProtocol('https://developer.mozilla.org/en-US/Web/JavaScript')); // "https"
+console.log(
+  parseProtocol("https://developer.mozilla.org/en-US/Web/JavaScript")
+); // "https"
 ```
 
 ## 物件解構
@@ -189,8 +190,8 @@ console.log(parseProtocol('https://developer.mozilla.org/en-US/Web/JavaScript'))
 ### 基本指派式
 
 ```js
-const o = {p: 42, q: true};
-const {p, q} = o;
+const o = { p: 42, q: true };
+const { p, q } = o;
 
 console.log(p); // 42
 console.log(q); // true
@@ -203,7 +204,7 @@ console.log(q); // true
 ```js
 let a, b;
 
-({a, b} = {a:1, b:2});
+({ a, b } = { a: 1, b: 2 });
 ```
 
 > **備註：** 當針對物件進行解構，而該句式沒有進行宣告時，指派式外必須加上括號 `( ... )` 。
@@ -219,8 +220,8 @@ let a, b;
 物件中的屬性可以解構並擷取到名稱跟該屬性不一樣的變數。
 
 ```js
-const o = {p: 42, q: true};
-const {p: foo, q: bar} = o;
+const o = { p: 42, q: true };
+const { p: foo, q: bar } = o;
 
 console.log(foo); // 42
 console.log(bar); // true
@@ -233,7 +234,7 @@ console.log(bar); // true
 當解構物件中對應的值是 `undefined` 時，變數可以設定預設值。
 
 ```js
-const {a = 10, b = 5} = {a: 3};
+const { a = 10, b = 5 } = { a: 3 };
 
 console.log(a); // 3
 console.log(b); // 5
@@ -244,7 +245,7 @@ console.log(b); // 5
 屬性 1) 可以從物件中被解開，且被指定一個不同名稱的變數及 2) 同時指定一個預設值，在解開的值為 `undefined` 時使用。
 
 ```js
-const {a:aa = 10, b:bb = 5} = {a: 3};
+const { a: aa = 10, b: bb = 5 } = { a: 3 };
 
 console.log(aa); // 3
 console.log(bb); // 5
@@ -255,23 +256,23 @@ console.log(bb); // 5
 ```js
 const user = {
   id: 42,
-  displayName: 'jdoe',
+  displayName: "jdoe",
   fullName: {
-    firstName: 'John',
-    lastName: 'Doe'
-  }
+    firstName: "John",
+    lastName: "Doe",
+  },
 };
 
-function userId({id}) {
+function userId({ id }) {
   return id;
 }
 
-function whois({displayName, fullName: {firstName: name}}) {
+function whois({ displayName, fullName: { firstName: name } }) {
   return `${displayName} is ${name}`;
 }
 
 console.log(userId(user)); // 42
-console.log(whois(user));  // "jdoe is John"
+console.log(whois(user)); // "jdoe is John"
 ```
 
 這樣從 user 物件中提出了 `id`, `displayName` 和 `firstName` 並且印出。
@@ -279,14 +280,18 @@ console.log(whois(user));  // "jdoe is John"
 ### 設定函式參數的預設值
 
 ```js
-function drawChart({size = 'big', coords = {x: 0, y: 0}, radius = 25} = {}) {
+function drawChart({
+  size = "big",
+  coords = { x: 0, y: 0 },
+  radius = 25,
+} = {}) {
   console.log(size, coords, radius);
   // do some chart drawing
 }
 
 drawChart({
-  coords: {x: 18, y: 30},
-  radius: 30
+  coords: { x: 18, y: 30 },
+  radius: 30,
 });
 ```
 
@@ -296,30 +301,30 @@ drawChart({
 
 ```js
 const metadata = {
-  title: 'Scratchpad',
+  title: "Scratchpad",
   translations: [
     {
-      locale: 'de',
+      locale: "de",
       localization_tags: [],
-      last_edit: '2014-04-14T08:43:37',
-      url: '/de/docs/Tools/Scratchpad',
-      title: 'JavaScript-Umgebung'
-    }
+      last_edit: "2014-04-14T08:43:37",
+      url: "/de/docs/Tools/Scratchpad",
+      title: "JavaScript-Umgebung",
+    },
   ],
-  url: '/en-US/docs/Tools/Scratchpad'
+  url: "/en-US/docs/Tools/Scratchpad",
 };
 
 let {
   title: englishTitle, // rename
   translations: [
     {
-       title: localeTitle, // rename
+      title: localeTitle, // rename
     },
   ],
 } = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"
+console.log(localeTitle); // "JavaScript-Umgebung"
 ```
 
 ### 循環取出的解構
@@ -327,27 +332,30 @@ console.log(localeTitle);  // "JavaScript-Umgebung"
 ```js
 const people = [
   {
-    name: 'Mike Smith',
+    name: "Mike Smith",
     family: {
-      mother: 'Jane Smith',
-      father: 'Harry Smith',
-      sister: 'Samantha Smith'
+      mother: "Jane Smith",
+      father: "Harry Smith",
+      sister: "Samantha Smith",
     },
-    age: 35
+    age: 35,
   },
   {
-    name: 'Tom Jones',
+    name: "Tom Jones",
     family: {
-      mother: 'Norah Jones',
-      father: 'Richard Jones',
-      brother: 'Howard Jones'
+      mother: "Norah Jones",
+      father: "Richard Jones",
+      brother: "Howard Jones",
     },
-    age: 25
-  }
+    age: 25,
+  },
 ];
 
-for (const {name: n, family: {father: f}} of people) {
-  console.log('Name: ' + n + ', Father: ' + f);
+for (const {
+  name: n,
+  family: { father: f },
+} of people) {
+  console.log("Name: " + n + ", Father: " + f);
 }
 
 // "Name: Mike Smith, Father: Harry Smith"
@@ -359,8 +367,8 @@ for (const {name: n, family: {father: f}} of people) {
 物件演算屬性名稱（像是在 [object literals](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names)）可以在解構指派式使用。
 
 ```js
-let key = 'z';
-let {[key]: foo} = {z: 'bar'};
+let key = "z";
+let { [key]: foo } = { z: "bar" };
 
 console.log(foo); // "bar"
 ```
@@ -370,7 +378,7 @@ console.log(foo); // "bar"
 [ECMAScript 中的其餘/展開屬性](https://github.com/tc39/proposal-object-rest-spread)在 proposal (stage 4) 新增了在解構式內使用[其餘 (rest)](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters) 語法的定義。其餘屬性可以收集解構式中沒有指定的屬性值。
 
 ```js
-let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
+let { a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 };
 a; // 10
 b; // 20
 rest; // { c: 30, d: 40 }
@@ -381,8 +389,8 @@ rest; // { c: 30, d: 40 }
 解構賦值可以透過另一個符合 JavaScript [識別字](/zh-TW/docs/Glossary/Identifier)的變數名稱來解出不符合識別字的屬性。
 
 ```js
-const foo = { 'fizz-buzz': true };
-const { 'fizz-buzz': fizzBuzz } = foo;
+const foo = { "fizz-buzz": true };
+const { "fizz-buzz": fizzBuzz } = foo;
 
 console.log(fizzBuzz); // "true"
 ```
@@ -393,12 +401,12 @@ console.log(fizzBuzz); // "true"
 
 ```js
 const props = [
-  { id: 1, name: 'Fizz'},
-  { id: 2, name: 'Buzz'},
-  { id: 3, name: 'FizzBuzz'}
+  { id: 1, name: "Fizz" },
+  { id: 2, name: "Buzz" },
+  { id: 3, name: "FizzBuzz" },
 ];
 
-const [,, { name }] = props;
+const [, , { name }] = props;
 
 console.log(name); // "FizzBuzz"
 ```

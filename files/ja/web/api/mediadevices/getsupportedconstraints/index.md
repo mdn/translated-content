@@ -1,6 +1,8 @@
 ---
-title: MediaDevices.getSupportedConstraints()
+title: "MediaDevices: getSupportedConstraints() メソッド"
 slug: Web/API/MediaDevices/getSupportedConstraints
+l10n:
+  sourceCommit: eab4066e72d5478de920e4020e5db71214dcffa6
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -9,7 +11,7 @@ slug: Web/API/MediaDevices/getSupportedConstraints
 
 ## 構文
 
-```js
+```js-nolint
 getSupportedConstraints()
 ```
 
@@ -28,8 +30,7 @@ getSupportedConstraints()
 ```html hidden
 <p>あなたのブラウザーは、以下のメディア制約に対応しています。</p>
 
-<ul id="constraintList">
-</ul>
+<ul id="constraintList"></ul>
 ```
 
 ```css hidden
@@ -39,16 +40,13 @@ body {
 ```
 
 ```js
-let constraintList = document.getElementById("constraintList");
-let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+const constraintList = document.querySelector("#constraintList");
+const supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
 
-for (let constraint in supportedConstraints) {
-  if (supportedConstraints.hasOwnProperty(constraint)) {
-    let elem = document.createElement("li");
-
-    elem.innerHTML = "<code>" + constraint + "</code>";
-    constraintList.appendChild(elem);
-  }
+for (const constraint of Object.keys(supportedConstraints)) {
+  const elem = document.createElement("li");
+  elem.innerHTML = `<code>${constraint}</code>`;
+  constraintList.appendChild(elem);
 }
 ```
 

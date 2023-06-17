@@ -2,7 +2,7 @@
 title: HTML テキストの基礎
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 l10n:
-  sourceCommit: be879d1d348cad4c917ecedb04aedabf57525ea9
+  sourceCommit: 65b9418c7d0e3a331ac50249adf0024f44789923
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
@@ -48,7 +48,7 @@ HTML では、各段落は {{htmlelement("p")}} 要素で囲む必要があり�
 <h1>I am the title of the story.</h1>
 ```
 
-見出し要素は 6 つあります — {{htmlelement("h1")}}, {{htmlelement("h2")}}, {{htmlelement("h3")}}, {{htmlelement("h4")}}, {{htmlelement("h5")}}, {{htmlelement("h6")}} です。各要素は文書内で別々のコンテンツレベルを表現します。 `<h1>` は最も主要な見出しで、`<h2>` は副見出しで、`<h3>` は副副見出しを表すというようになります。
+見出し要素は 6 つあります — {{htmlelement("Heading_Elements", "h1")}}、{{htmlelement("Heading_Elements", "h2")}}、{{htmlelement("Heading_Elements", "h3")}}、{{htmlelement("Heading_Elements", "h4")}}、{{htmlelement("Heading_Elements", "h5")}}、{{htmlelement("Heading_Elements", "h6")}} です。各要素は文書内で別々のコンテンツレベルを表現します。 `<h1>` は最も主要な見出しで、`<h2>` は副見出しで、`<h3>` は副副見出しを表すというようになります。
 
 ### 構造的な階層を実装する
 
@@ -61,7 +61,9 @@ HTML では、各段落は {{htmlelement("p")}} 要素で囲む必要があり�
 
 <h2>Chapter 1: The dark night</h2>
 
-<p>It was a dark night. Somewhere, an owl hooted. The rain lashed down on the…</p>
+<p>
+  It was a dark night. Somewhere, an owl hooted. The rain lashed down on the…
+</p>
 
 <h2>Chapter 2: The eternal silence</h2>
 
@@ -69,7 +71,10 @@ HTML では、各段落は {{htmlelement("p")}} 要素で囲む必要があり�
 
 <h3>The specter speaks</h3>
 
-<p>Several more hours had passed, when all of a sudden the specter sat bolt upright and exclaimed, "Please have mercy on my soul!"</p>
+<p>
+  Several more hours had passed, when all of a sudden the specter sat bolt
+  upright and exclaimed, "Please have mercy on my soul!"
+</p>
 ```
 
 実に自由な発想で、どのような要素を表現するか、階層構造に意味を持たせればよいのです。ただ、このような構造を作成する際には、いくつかの最善の手法を念頭に置いておく必要があります。
@@ -80,7 +85,7 @@ HTML では、各段落は {{htmlelement("p")}} 要素で囲む必要があり�
 
 ### なぜ構造が必要なのか
 
-この質問に答えるには、 [text-start.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html) を見てください — この記事の動作例の開始点です (すてきなハマスのレシピです)。あとの練習で必要になるため、ローカルマシンにこのファイルのコピーを保存します。この文書の本文は現在、複数の部分のコンテンツが入っています — まったくマークアップされていませんが、改行で区切られています（次の行に移るのに Enter/Return を押します）。
+この質問に答えるには、[text-start.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html) を見てください — この記事の動作例の開始点です (すてきなハマスのレシピです)。あとの練習で必要になるため、ローカルマシンにこのファイルのコピーを保存します。この文書の本文は現在、複数の部分のコンテンツが入っています — まったくマークアップされていませんが、改行で区切られています（次の行に移るのに Enter/Return を押します）。
 
 しかし、この文書をブラウザーで開くと、テキストが 1 つの大きな塊に見えるでしょう。
 
@@ -90,7 +95,7 @@ HTML では、各段落は {{htmlelement("p")}} 要素で囲む必要があり�
 
 - ウェブページを見ているユーザーは、関連コンテンツを探すのにざっと見たり、時には読み始めるために見出しだけを見ている傾向にあります（私たちはふつう、[ウェブページに費やす時間はわずかです](http://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/))。しばらく有用なものが見つからない場合、イライラして別の場所に去っていきます。
 - ページをインデックスする検索エンジンは、見出しのコンテンツを、ページの検索ランクに影響する重要なキーワードとみなします。見出しがないと、 {{glossary("SEO")}} （検索エンジン最適化）の点で良くないでしょう。
-- 極めて目が不自由な人はウェブページを読みません。つまりその代わりにウェブページを聞きます。これは [画面リーダー](https://ja.wikipedia.org/wiki/画面リーダー)というソフトウェアで実現されます。このソフトウェアはテキストコンテンツにすばやくアクセスする方法を提供します。さまざまな技術が使用される中で、文書の概要を見出しを読むことで提供し、ユーザーが必要な情報をすばやく見つけられるようにしています。見出しが見つからない場合、文書全体が読み上げられるのを聞くことになってしまいます。
+- 極めて目が不自由な人はウェブページを読みません。つまりその代わりにウェブページを聞きます。これは [スクリーンリーダー](https://ja.wikipedia.org/wiki/スクリーンリーダー)というソフトウェアで実現されます。このソフトウェアはテキストコンテンツにすばやくアクセスする方法を提供します。さまざまな技術が使用される中で、文書の概要を見出しを読むことで提供し、ユーザーが必要な情報をすばやく見つけられるようにしています。見出しが見つからない場合、文書全体が読み上げられるのを聞くことになってしまいます。
 - {{glossary("CSS")}} でコンテンツをスタイリングしたり、 {{glossary("JavaScript")}} で面白いことをさせるには、関連コンテンツを包んでいる要素が必要となり、それを効率的に CSS/JavaScript はターゲットとします。
 
 このため、コンテンツに構造的なマークアップが必要となります。
@@ -104,19 +109,22 @@ HTML では、各段落は {{htmlelement("p")}} 要素で囲む必要があり�
 ```html hidden
 <h2>ライブ出力</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>編集可能なコード</h2>
-<p class="a11y-label">Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。</p>
+<p class="a11y-label">
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+</p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">My short story I am a statistician and my name is Trish.
+<textarea id="code" class="input" style="min-height: 100px; width: 95%">
+My short story I am a statistician and my name is Trish.
 
-My legs are made of cardboard and I am married to a fish.</textarea>
+My legs are made of cardboard and I am married to a fish.
+</textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを表示">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを表示" />
 </div>
 ```
 
@@ -143,10 +151,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -164,34 +172,34 @@ const htmlSolution = `<h1>My short story</h1>
 
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '答えを表示';
+  solution.value = "答えを表示";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '答えを表示') {
+solution.addEventListener("click", () => {
+  if (solution.value === "答えを表示") {
     textarea.value = solutionEntry;
     solution.value = '答えを隠す';
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを表示';
+    solution.value = "答えを表示";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // Stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -204,7 +212,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -214,10 +225,10 @@ function insertAtCaret(text) {
 }
 
 // Update the saved userCode every time the user updates the text area code
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === '答えを表示') {
+  if (solution.value === "答えを表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -233,18 +244,20 @@ textarea.onkeyup = function(){
 
 私たちはあらゆる場面で意味づけに頼っています。 —私たちは日常にある物の機能が何かを判断するために過去の経験を頼りにします。つまり、私たちは物を見れば、 それがどのような機能をもつかを知っています。 例えば、赤信号は「止まれ」を、「青信号」は「進め」を意味すると期待します。もしも、間違った意味づけを適用すれば、ものごとは一瞬にして扱いにくくなることがあります。（赤を「進め」の意味で使っている国はあるのでしょうか？そんな国がないといいのですが。）
 
-同様に、正確な要素を使い、コンテンツに正しい意味や機能、見た目をを与えられているかどうかを確かめる必要があります。この文脈では、 {{htmlelement("h1")}} 要素は要素によって囲んだテキストを「ページの最上位の見出し」の役割（または意味）にします。
+同様に、正確な要素を使い、コンテンツに正しい意味や機能、見た目をを与えられているかどうかを確かめる必要があります。この文脈では、{{htmlelement("Heading_Elements", "h1")}} 要素は要素によって囲んだテキストを「ページの最上位の見出し」の役割（または意味）にします。
 
 ```html
 <h1>This is a top level heading</h1>
 ```
 
-既定では、ブラウザーは見出しらしく見えるようにフォントサイズを大きくします（ただし、 CSS を使用して好きなようにスタイルを設定することができます）。さらに重要なことは、その意味的な価値が、例えば検索エンジンや画面リーダー（前述）などで、複数の方法で使用されることです。
+既定では、ブラウザーは見出しらしく見えるようにフォントサイズを大きくします（ただし、 CSS を使用して好きなようにスタイルを設定することができます）。さらに重要なことは、その意味的な価値が、例えば検索エンジンやスクリーンリーダー（前述）などで、複数の方法で使用されることです。
 
 他にも、どんな要素でも最上位の見出しのように見せることができます。従うことで、以下のように考えてみましょう。
 
 ```html
-<span style="font-size: 32px; margin: 21px 0; display: block;">Is this a top level heading?</span>
+<span style="font-size: 32px; margin: 21px 0; display: block;">
+  Is this a top level heading?
+</span>
 ```
 
 これは {{htmlelement("span")}} 要素です。これは何の意味も持ちません。CSS を適用する（または JavaScript で何かをする）ときに、コンテンツを囲むために使用し、余分な意味を与えません。（これらについてはコースの後半で詳しく説明します。）最上位の見出しのように見えるように CSS を適用していますが、これは何の意味も持たないので、上記のような好ましいことは何も得られません。その仕事に関連した HTML 要素を使用するのはよい考えです。
@@ -266,12 +279,12 @@ hummus
 
 すべての順序なしリストは {{htmlelement("ul")}} で開始し、すべてのリストの項目を囲みます。
 
-```html
+```html-nolint
 <ul>
-milk
-eggs
-bread
-hummus
+  milk
+  eggs
+  bread
+  hummus
 </ul>
 ```
 
@@ -293,20 +306,23 @@ hummus
 ```html hidden
 <h2>ライブ出力</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>編集可能なコード</h2>
-<p class="a11y-label">Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。</p>
+<p class="a11y-label">
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+</p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">milk
+<textarea id="code" class="input" style="min-height: 100px; width: 95%">
+milk
 eggs
 bread
-hummus</textarea>
+hummus
+</textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを表示">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを表示" />
 </div>
 ```
 
@@ -333,10 +349,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -344,30 +360,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<ul>\n<li>milk</li>\n<li>eggs</li>\n<li>bread</li>\n<li>hummus</li>\n</ul>';
+const htmlSolution =
+  "<ul>\n<li>milk</li>\n<li>eggs</li>\n<li>bread</li>\n<li>hummus</li>\n</ul>";
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '答えを表示';
+  solution.value = "答えを表示";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '答えを表示') {
+solution.addEventListener("click", () => {
+  if (solution.value === "答えを表示") {
     textarea.value = solutionEntry;
     solution.value = '答えを隠す';
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを表示';
+    solution.value = "答えを表示";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -375,7 +392,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -388,7 +405,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -401,7 +421,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '答えを表示') {
+  if (solution.value === "答えを表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -444,21 +464,24 @@ The school is on your right, 300 meters up the road
 ```html hidden
 <h2>ライブ出力</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>編集可能なコード</h2>
-<p class="a11y-label">Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。</p>
+<p class="a11y-label">
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">Drive to the end of the road
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+Drive to the end of the road
 Turn right
 Go straight across the first two roundabouts
 Turn left at the third roundabout
-The school is on your right, 300 meters up the road</textarea>
+The school is on your right, 300 meters up the road
+</textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを表示">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを表示" />
 </div>
 ```
 
@@ -485,10 +508,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -496,30 +519,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<ol>\n<li>Drive to the end of the road</li>\n<li>Turn right</li>\n<li>Go straight across the first two roundabouts</li>\n<li>Turn left at the third roundabout</li>\n<li>The school is on your right, 300 meters up the road</li>\n</ol>';
+const htmlSolution =
+  "<ol>\n<li>Drive to the end of the road</li>\n<li>Turn right</li>\n<li>Go straight across the first two roundabouts</li>\n<li>Turn left at the third roundabout</li>\n<li>The school is on your right, 300 meters up the road</li>\n</ol>";
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '答えを表示';
+  solution.value = "答えを表示";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '答えを表示') {
+solution.addEventListener("click", () => {
+  if (solution.value === "答えを表示") {
     textarea.value = solutionEntry;
     solution.value = '答えを隠す';
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを表示';
+    solution.value = "答えを表示";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -527,7 +551,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -540,7 +564,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -553,7 +580,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '答えを表示') {
+  if (solution.value === "答えを表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -572,13 +599,15 @@ textarea.onkeyup = () => {
 ```html hidden
 <h2>ライブ出力</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>編集可能なコード</h2>
-<p class="a11y-label">Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。</p>
+<p class="a11y-label">
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%">Quick hummus recipe
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+Quick hummus recipe
 
   This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.
 
@@ -609,11 +638,12 @@ textarea.onkeyup = () => {
 
   Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.
 
-  Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</textarea>
+  Hummus is suitable for freezing; you should thaw it and use it within a couple of months.
+</textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを表示">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを表示" />
 </div>
 ```
 
@@ -640,10 +670,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -651,30 +681,31 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<h1>Quick hummus recipe</h1>\n\n<p>This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>\n\n<p>Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.</p>\n\n<h2>Ingredients</h2>\n\n<ul>\n<li>1 can (400g) of chick peas (garbanzo beans)</li>\n<li>175g of tahini</li>\n<li>6 sundried tomatoes</li>\n<li>Half a red pepper</li>\n<li>A pinch of cayenne pepper</li>\n<li>1 clove of garlic</li>\n<li>A dash of olive oil</li>\n</ul>\n\n<h2>Instructions</h2>\n\n<ol>\n<li>Remove the skin from the garlic, and chop coarsely.</li>\n<li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>\n<li>Add all the ingredients into a food processor.</li>\n<li>Process all the ingredients into a paste.</li>\n<li>If you want a coarse "chunky" hummus, process it for a short time.</li>\n<li>If you want a smooth hummus, process it for a longer time.</li>\n</ol>\n\n<p>For a different flavor, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.</p>\n\n<h2>Storage</h2>\n\n<p>Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you\'ve made it. If it starts to become fizzy, you should definitely discard it.</p>\n\n<p>Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</p>';
+const htmlSolution =
+  '<h1>Quick hummus recipe</h1>\n\n<p>This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.</p>\n\n<p>Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.</p>\n\n<h2>Ingredients</h2>\n\n<ul>\n<li>1 can (400g) of chick peas (garbanzo beans)</li>\n<li>175g of tahini</li>\n<li>6 sundried tomatoes</li>\n<li>Half a red pepper</li>\n<li>A pinch of cayenne pepper</li>\n<li>1 clove of garlic</li>\n<li>A dash of olive oil</li>\n</ul>\n\n<h2>Instructions</h2>\n\n<ol>\n<li>Remove the skin from the garlic, and chop coarsely.</li>\n<li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>\n<li>Add all the ingredients into a food processor.</li>\n<li>Process all the ingredients into a paste.</li>\n<li>If you want a coarse "chunky" hummus, process it for a short time.</li>\n<li>If you want a smooth hummus, process it for a longer time.</li>\n</ol>\n\n<p>For a different flavor, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.</p>\n\n<h2>Storage</h2>\n\n<p>Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you\'ve made it. If it starts to become fizzy, you should definitely discard it.</p>\n\n<p>Hummus is suitable for freezing; you should thaw it and use it within a couple of months.</p>';
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '答えを表示';
+  solution.value = "答えを表示";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '答えを表示') {
+solution.addEventListener("click", () => {
+  if (solution.value === "答えを表示") {
     textarea.value = solutionEntry;
     solution.value = '答えを隠す';
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを表示';
+    solution.value = "答えを表示";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
@@ -682,7 +713,7 @@ window.addEventListener('load', updateCode);
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -695,7 +726,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -708,7 +742,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '答えを表示') {
+  if (solution.value === "答えを表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -744,9 +778,12 @@ textarea.onkeyup = () => {
   <li>Remove the skin from the garlic, and chop coarsely.</li>
   <li>Remove all the seeds and stalk from the pepper, and chop coarsely.</li>
   <li>Add all the ingredients into a food processor.</li>
-  <li>Process all the ingredients into a paste.
+  <li>
+    Process all the ingredients into a paste.
     <ul>
-      <li>If you want a coarse "chunky" hummus, process it for a short time.</li>
+      <li>
+        If you want a coarse "chunky" hummus, process it for a short time.
+      </li>
       <li>If you want a smooth hummus, process it for a longer time.</li>
     </ul>
   </li>
@@ -769,7 +806,7 @@ textarea.onkeyup = () => {
 
 最初の文は、その人が遅刻しなかったことに純粋にほっとしているように聞こえます。これに対して 2 つ目の文は、 "glad" と "late" の両方が斜体になっており、相手が少し遅れてきたことに腹を立てている、嫌味な、あるいは受動的な表現に聞こえます。
 
-HTML では、このようなインスタンスをマークアップするために {{htmlelement("em")}} （強調）要素を使用します。文書を読みやすくするだけでなく、これらは画面リーダーによって認識され、異なるトーンの音声で話されます。ブラウザーでは既定でイタリック体になっていますが、純粋にイタリック体にするだけの場合にはこのタグを使用しないでください。その場合は、 {{htmlelement("span")}} 要素と CSS、あるいは {{htmlelement("i")}} 要素（下記参照）を使用してください。
+HTML では、このようなインスタンスをマークアップするために {{htmlelement("em")}} （強調）要素を使用します。文書を読みやすくするだけでなく、これらはスクリーンリーダーによって認識され、異なるトーンの音声で話されます。ブラウザーでは既定でイタリック体になっていますが、純粋にイタリック体にするだけの場合にはこのタグを使用しないでください。その場合は、 {{htmlelement("span")}} 要素と CSS、あるいは {{htmlelement("i")}} 要素（下記参照）を使用してください。
 
 ```html
 <p>I am <em>glad</em> you weren't <em>late</em>.</p>
@@ -783,7 +820,7 @@ HTML では、このようなインスタンスをマークアップするため
 >
 > I am counting on you. **Do not** be late!
 
-HTML では、このようなインスタンスをマークアップするために {{htmlelement("strong")}} （強い重要性）要素を使用します。 この文書をより便利にするだけでなく、これらも画面リーダーによって認識され、異なるトーンの音声で話されています。ブラウザーでは既定で太字のテキストとしてスタイル設定されていますが、太字のスタイルにするだけの場合にはこのタグを使用しないでください。そのためには、{{htmlelement("span")}} 要素といくつかの CSS、あるいは {{htmlelement("b")}} 要素（下記参照）を使用してください。
+HTML では、このようなインスタンスをマークアップするために {{htmlelement("strong")}} （強い重要性）要素を使用します。 この文書をより便利にするだけでなく、これらもスクリーンリーダーによって認識され、異なるトーンの音声で話されています。ブラウザーでは既定で太字のテキストとしてスタイル設定されていますが、太字のスタイルにするだけの場合にはこのタグを使用しないでください。そのためには、{{htmlelement("span")}} 要素といくつかの CSS、あるいは {{htmlelement("b")}} 要素（下記参照）を使用してください。
 
 ```html
 <p>This liquid is <strong>highly toxic</strong>.</p>
@@ -793,9 +830,8 @@ HTML では、このようなインスタンスをマークアップするため
 
 必要に応じて、 strong と em を相互に入れ子にすることができます。
 
-```html
-<p>This liquid is <strong>highly toxic</strong> —
-if you drink it, <strong>you may <em>die</em></strong>.</p>
+```html-nolint
+<p>This liquid is <strong>highly toxic</strong> — if you drink it, <strong>you may <em>die</em></strong>.</p>
 ```
 
 ### アクティブラーニング: 重要性を付け加えましょう
@@ -805,24 +841,27 @@ if you drink it, <strong>you may <em>die</em></strong>.</p>
 ```html hidden
 <h2>ライブ出力</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>編集可能なコード</h2>
-<p class="a11y-label">Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。</p>
+<p class="a11y-label">
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+</p>
 
-<textarea id="code" class="input" style="min-height: 200px; width: 95%"><h1>Important notice</h1>
+<textarea id="code" class="input" style="min-height: 200px; width: 95%">
+<h1>Important notice</h1>
 <p>On Sunday January 9th 2010, a gang of goths were
   spotted stealing several garden gnomes from a
   shopping center in downtown Milwaukee. They were
   all wearing green jumpsuits and silly hats, and
   seemed to be having a whale of a time. If anyone
    has any information about this incident, please
-    contact the police now.</p></textarea>
+    contact the police now.</p>
+</textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを表示">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを表示" />
 </div>
 ```
 
@@ -849,10 +888,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 const code = textarea.value;
 let userEntry = textarea.value;
 
@@ -860,37 +899,38 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-const htmlSolution = '<h1>Important notice</h1>\n<p>On <strong>Sunday January 9th 2010</strong>, a gang of <em>goths</em> were spotted stealing <strong><em>several</em> garden gnomes</strong> from a shopping center in downtown <strong>Milwaukee</strong>. They were all wearing <em>green jumpsuits</em> and <em>silly hats</em>, and seemed to be having a whale of a time. If anyone has <strong>any</strong> information about this incident, please contact the police <strong>now</strong>.</p>';
+const htmlSolution =
+  "<h1>Important notice</h1>\n<p>On <strong>Sunday January 9th 2010</strong>, a gang of <em>goths</em> were spotted stealing <strong><em>several</em> garden gnomes</strong> from a shopping center in downtown <strong>Milwaukee</strong>. They were all wearing <em>green jumpsuits</em> and <em>silly hats</em>, and seemed to be having a whale of a time. If anyone has <strong>any</strong> information about this incident, please contact the police <strong>now</strong>.</p>";
 let solutionEntry = htmlSolution;
 
-reset.addEventListener('click', () => {
+reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '答えを表示';
+  solution.value = "答えを表示";
   updateCode();
 });
 
-solution.addEventListener('click', () => {
-  if (solution.value === '答えを表示') {
+solution.addEventListener("click", () => {
+  if (solution.value === "答えを表示") {
     textarea.value = solutionEntry;
     solution.value = '答えを隠す';
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを表示';
+    solution.value = "答えを表示";
   }
   updateCode();
 });
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // Stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 textarea.onkeydown = (e) => {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -903,7 +943,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -916,7 +959,7 @@ function insertAtCaret(text) {
 textarea.onkeyup = () => {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '答えを表示') {
+  if (solution.value === "答えを表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -934,9 +977,9 @@ textarea.onkeyup = () => {
 
 HTML5 では `<b>`、`<i>`、`<u>` が新しい、やや混乱しやすい意味的な役割で再定義されました。
 
-最適な経験則は次のとおりです。 `<b>`、`<i>`、`<u>` を使用するのは、伝統的に太字、斜体、下線を使って意味を伝えてきたものを、より適切な要素がない場合のみで使用してください。通常はあるはずです。 `<strong>`、`<em>`、`<mark>`、`<span>` の方が適切ではないかどうか考えてみてください。
+最適な経験則は次のとおりです。`<b>`、`<i>`、`<u>` を使用するのは、伝統的に太字、斜体、下線を使って意味を伝えてきたものを、より適切な要素がない場合のみで使用してください。通常はあるはずです。 `<strong>`、`<em>`、`<mark>`、`<span>` の方が適切ではないかどうか考えてみてください。
 
-アクセシビリティの考え方を守ることは常に重要です。 イタリック体の概念は、画面リーダーを使っている人、またはラテン系のアルファベット以外の書記体系を使っている人にとってはあまり役に立ちません。
+アクセシビリティの考え方を守ることは常に重要です。 イタリック体の概念は、スクリーンリーダーを使っている人、またはラテン系のアルファベット以外の書記体系を使っている人にとってはあまり役に立ちません。
 
 - {{HTMLElement('i')}} は、伝統的にイタリック体で伝えられた意味を伝えるために使われます：外来語、分類名、技術用語、考え...
 - {{HTMLElement('b')}} は、伝統的に太字で伝えられている意味を伝えるために使用されます。キーワード、製品名、リードセンテンス...
@@ -947,8 +990,8 @@ HTML5 では `<b>`、`<i>`、`<u>` が新しい、やや混乱しやすい意味
 ```html
 <!-- scientific names -->
 <p>
-  The Ruby-throated Hummingbird (<i>Archilochus colubris</i>)
-  is the most common hummingbird in Eastern North America.
+  The Ruby-throated Hummingbird (<i>Archilochus colubris</i>) is the most common
+  hummingbird in Eastern North America.
 </p>
 
 <!-- foreign words -->
@@ -958,14 +1001,15 @@ HTML5 では `<b>`、`<i>`、`<u>` が新しい、やや混乱しやすい意味
 </p>
 
 <!-- a known misspelling -->
-<p>
-  Someday I'll learn how to <u class="spelling-error">spel</u> better.
-</p>
+<p>Someday I'll learn how to <u class="spelling-error">spel</u> better.</p>
 
 <!-- term being defined when used in a definition -->
 <dl>
   <dt>Semantic HTML</dt>
-  <dd>Use the elements based on their <b>semantic</b> meaning, not their appearance.</dd>
+  <dd>
+    Use the elements based on their <b>semantic</b> meaning, not their
+    appearance.
+  </dd>
 </dl>
 ```
 

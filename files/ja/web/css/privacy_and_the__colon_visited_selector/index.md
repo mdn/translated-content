@@ -28,7 +28,7 @@ slug: Web/CSS/Privacy_and_the_:visited_selector
 - {{cssxref("outline-color")}}
 - {{SVGAttr("fill")}} および {{SVGAttr("stroke")}} プロパティの色の部分
 
-さらに、訪問済みリンクにセットできるプロパティであっても、未訪問リンクと訪問済みリンク間で不透明度を変えることはできません。これは、別の状況なら、[`rgba()`](</js/docs/Web/CSS/color_value#rgba()>) や [`hsla()`](</ja/docs/Web/CSS/color_value#hsla()>) のカラー値、もしくは [`transparent`](/ja/docs/Web/CSS/color_value#transparent) キーワードを使ってできた操作でした。
+さらに、訪問済みリンクにセットできるプロパティであっても、未訪問リンクと訪問済みリンク間で不透明度を変えることはできません。これは、別の状況なら、[`rgba()`](</ja/docs/Web/CSS/color_value#rgba()>) や [`hsla()`](</ja/docs/Web/CSS/color_value#hsla()>) のカラー値、もしくは [`transparent`](/ja/docs/Web/CSS/color_value#transparent) キーワードを使ってできた操作でした。
 
 制限内でスタイルづけをする方法を、次の例で示します。
 

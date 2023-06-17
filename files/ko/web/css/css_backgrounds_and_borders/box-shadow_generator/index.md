@@ -1,6 +1,6 @@
 ---
 title: Box-shadow 생성기
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
+slug: Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 original_slug: Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
 ---
 

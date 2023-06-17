@@ -15,7 +15,7 @@ Cette technique présente l’utilisation du rôle [link](http://www.w3.org/TR/w
 
 Le rôle `link` est utilisé pour identifier un élément qui crée un hyperlien vers une ressource qui peut être dans l’application ou à l’extérieur. Lorsque ce rôle est ajouté à un élément, la tabulation peut être utilisée pour donner le focus au lien et la barre d’espace ou la touche Entrée peuvent exécuter le lien.
 
-L’attribut [tabindex](http://www.w3.org/TR/wai-aria-practices/#focus_tabindex) peut éventuellement être utilisé avec ce rôle pour spécifier directement la position de l’élément dans l’ordre de tabulation.
+L’attribut [`tabindex`](http://www.w3.org/TR/wai-aria-practices/#focus_tabindex) peut éventuellement être utilisé avec ce rôle pour spécifier directement la position de l’élément dans l’ordre de tabulation.
 
 ### Effets possibles sur les agents utilisateurs et les technologies d’assistance
 

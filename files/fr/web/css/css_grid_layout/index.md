@@ -1,6 +1,6 @@
 ---
 title: Grilles CSS (CSS Grid)
-slug: Web/CSS/CSS_Grid_Layout
+slug: Web/CSS/CSS_grid_layout
 tags:
   - CSS
   - CSS Grids

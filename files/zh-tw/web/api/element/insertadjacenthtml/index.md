@@ -41,8 +41,8 @@ element.insertAdjacentHTML(position, text);
 
 ```js
 // <div id="one">one</div>
-var d1 = document.getElementById('one');
-d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+var d1 = document.getElementById("one");
+d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 // At this point, the new structure is:
 // <div id="one">one</div><div id="two">two</div>

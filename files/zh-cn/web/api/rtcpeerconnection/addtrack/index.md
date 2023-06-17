@@ -163,7 +163,7 @@ pc.setRemoteDescription(desc).then(function () {
 })
 ```
 
-这段代码获取从远程对等方接收到的 SDP，并构造一个新的{{domxref("RTCSessionDescription")}}传递到{{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}。成功之后，它使用{{domxref(" mediadevic. getusermedia()")}}获得对本地摄像头和麦克风的访问。
+这段代码获取从远程对等方接收到的 SDP，并构造一个新的 {{domxref("RTCSessionDescription")}} 传递到 {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}。成功之后，它使用 {{domxref("MediaDevices.getUserMedia")}} 获得对本地摄像头和麦克风的访问。
 
 如果成功，结果流将被分配为变量 **`previewElement`** 引用的{{HTMLElement("video")}}元素的源。
 

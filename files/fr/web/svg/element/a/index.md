@@ -77,14 +77,14 @@ svgns|a:hover, svgns|a:active {
 
 ### Attributs spécifiques
 
-- {{htmlattrxref("download", "a")}} {{experimental_inline}}
+- [`download`](/fr/docs/Web/HTML/Element/a#download) {{experimental_inline}}
 - {{SVGAttr("href")}}
-- {{htmlattrxref("hreflang", "a")}}
-- {{htmlattrxref("ping", "a")}} {{experimental_inline}}
-- {{htmlattrxref("referrerpolicy", "a")}} {{experimental_inline}}
-- {{htmlattrxref("rel", "a")}} {{experimental_inline}}
+- [`hreflang`](/fr/docs/Web/HTML/Element/a#hreflang)
+- [`ping`](/fr/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
+- [`referrerpolicy`](/fr/docs/Web/HTML/Element/a#referrerpolicy) {{experimental_inline}}
+- [`rel`](/fr/docs/Web/HTML/Element/a#rel) {{experimental_inline}}
 - {{SVGAttr("target")}}
-- {{htmlattrxref("type", "a")}}
+- [`type`](/fr/docs/Web/HTML/Element/a#type)
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## Contexte d'utilisation

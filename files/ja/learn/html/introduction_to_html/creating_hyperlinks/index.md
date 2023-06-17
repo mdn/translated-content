@@ -2,12 +2,12 @@
 title: ハイパーリンクの作成
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 l10n:
-  sourceCommit: 3c82191324ff6ef3e3c1b0e792b5e62ff8d2267a
+  sourceCommit: bb6092c4230b69c2eceae6910af68c73955cae1c
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
-ハイパーリンクとは本当に重要なものです。ウェブをウェブたらしめているものです。
+ハイパーリンクは本当に重要なものです。ウェブをウェブたらしめているものです。
 この記事ではリンクを作るために必要な構文を示し、リンクに関する良き習慣について議論します。
 
 <table>
@@ -49,34 +49,74 @@ l10n:
 
 ## リンクの解剖
 
-基本的なリンクは、リンクにしたいテキスト（またはその他のコンテンツ、[ブロックレベルリンク](#ブロックレベルリンク)を参照）を {{htmlelement("a")}} 要素の中に囲むことで作成し、[`href`](/ja/docs/Web/HTML/Element/a#href) （**ハイパーテキスト参照**または**ターゲット**とも）にリンク先にしたいウェブアドレスを入れます。
+基本的なリンクは、リンクにしたいテキストやその他のコンテンツを {{htmlelement("a")}} 要素の中に囲むことで作成し、[`href`](/ja/docs/Web/HTML/Element/a#href) （**ハイパーテキスト参照**または**ターゲット**とも）にリンク先にしたいウェブアドレスを入れます。
 
 ```html
-<p>I'm creating a link to
-<a href="https://www.mozilla.org/ja/">the Mozilla homepage</a>.
+<p>
+  <a href="https://www.mozilla.org/ja/">Mozilla ホームページ</a>へのリンクを作成しています。
 </p>
 ```
 
-これは以下のような結果をもたらします。
+これは以下のような結果になります。\
+[Mozilla ホームページ](https://www.mozilla.org/ja/)へのリンクを作成しています。
 
-I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/ja/).
+### ブロックレベルリンク
+
+前述したように、[ブロックレベル要素](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started#block_versus_inline_elements) を含む、ほぼすべてのコンテンツをリンクにすることが可能です。
+見出しをリンクにしたい場合は、以下のコードのようにアンカー（`<a>`）要素で囲みます。
+
+```html
+<a href="https://developer.mozilla.org/ja/">
+  <h1>MDN Web Docs</h1>
+</a>
+<p>
+  2005 年から CSS、HTML、JavaScript などのウェブ技術を文書化しています。
+</p>
+```
+
+これで見出しがリンクになります。
+{{EmbedLiveSample('Block level links', '100%', 150)}}
+
+### 画像リンク
+
+リンクにしたい画像がある場合は、{{htmlelement("a")}} 要素により、{{htmlelement("img")}} 要素で参照する画像ファイルを囲んでください。
+
+```css hidden
+img {
+  height: 100px;
+  width: 150px;
+  border: 1px solid gray;
+}
+```
+
+```html
+<a href="https://developer.mozilla.org/ja/">
+  <img src="mdn_logo.svg" alt="MDN Web Docs ホームページ" />
+</a>
+```
+
+これにより、MDN ロゴがリンクになります。
+{{EmbedLiveSample('Image links', '100%', 150)}}
+
+> **メモ:** ウェブで画像を使用する方法については、今後の記事で詳しくご紹介します。
 
 ### title 属性による補足情報の追加
 
 リンクに追加したいもう一つの属性は `title` です。
 タイトルには、そのページがどのような情報を含んでいるか、あるいはウェブサイトで注意すべきことなど、リンクに関する追加情報が含まれます。
 
-```html
-<p>I'm creating a link to
-<a href="https://www.mozilla.org/ja/"
-   title="The best place to find more information about Mozilla's
-          mission and how to contribute">the Mozilla homepage</a>.
+```html-nolint
+<p>
+  <a
+    href="https://www.mozilla.org/ja/"
+    title="Mozilla の使命と協力方法について調べる最適な場所">
+    Mozilla ホームページ</a>へのリンクを作成しています。
 </p>
 ```
 
 これにより、以下のような結果が得られ、リンクの上にマウスを当てると、タイトルがツールチップとして表示されます。
 
-I'm creating a link to <a href="https://www.mozilla.org/en-US/" title="The best place to find more information about Mozilla's mission and how to contribute">the Mozilla homepage</a>.
+{{EmbedLiveSample('Adding supporting information with the title attribute', '100%', 150)}}
 
 > **メモ:** リンクのタイトルはマウスを当てないと表示されないため、キーボード操作やタッチ画面でウェブページを操作している人は、タイトル情報にアクセスしにくいという問題があります。
 > タイトルの情報がページのユーザビリティにとって本当に重要であれば、通常のテキストに入れるなどして、すべてのユーザーがアクセスできるように表示する必要があります。
@@ -89,19 +129,6 @@ I'm creating a link to <a href="https://www.mozilla.org/en-US/" title="The best 
 - コンテンツの一部をリンクにしてください。
 - タイトル属性を含めてください。
 
-### ブロックレベルリンク
-
-前述したように、[ブロックレベル要素](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started#ブロック要素とインライン要素)であっても、あらゆるコンテンツをリンクに変えることができます。
-リンクにしたい画像がある場合は、 {{htmlelement("a")}} 要素を使用し、その画像ファイルを {{htmlelement("img")}} 要素で参照してください。
-
-```html
-<a href="https://www.mozilla.org/ja/">
-  <img src="mozilla-image.png" alt="Mozilla homepage">
-</a>
-```
-
-> **メモ:** 今後の記事ではウェブ上での画像の使用についてさらに多くのことがわかります。
-
 ## URL とパスに関する簡単な入門
 
 リンク先を完全に理解するには、 URL とファイルパスを理解する必要があります。この節では、これを達成するために必要な情報を提供します。
@@ -112,24 +139,26 @@ URL はファイルを見つけるためにパスを使います。パスはフ�
 
 ![シンプルなディレクトリー構造です。親ディレクトリーは creating-hyperlinks という名前で、 index.html と contacts.html という 2 つのファイルと、 projects と pdfs という 2 つのディレクトリーがあり、それぞれ index.html と project-brief.pdf ファイルが含まれています。](simple-directory.png)
 
-このディレクトリー構造の**ルート**は `creating-hyperlinks` と呼ばれます。ウェブサイトを使用してローカルで作業する場合は、サイト全体が入る 1 つのディレクトリーがあります。ルート内には、`index.html` ファイルと `contacts.html` があります。実際のウェブサイトでは、`index.html` が私たちのホームページまたはランディングページ (ウェブサイトまたはウェブサイトの特定の部分の入口として機能するウェブページ）になります。
+このディレクトリー構造の**ルート**は `creating-hyperlinks` と呼ばれます。ウェブサイトを使用してローカルで作業する場合は、サイト全体が入る 1 つのディレクトリーがあります。ルート内には、`index.html` ファイルと `contacts.html` があります。実際のウェブサイトでは、`index.html` が私たちのホームページまたはランディングページ（ウェブサイトまたはウェブサイトの特定の部分の入口として機能するウェブページ）になります。
 
 私たちのルートの中にも 2 つのディレクトリー、 `pdfs` と `projects` があります。これらはそれぞれ中に PDF (`project-brief.pdf`) と `index.html` ファイルというファイルがあります。ファイルシステム内の別の場所にある限り、1 つのプロジェクトに 2 つの `index.html` ファイルを非常にうまく入れることができることに注意してください。多くのウェブサイトはそうします。2 番目の `index.html` は、おそらくプロジェクト関連の情報のメインランディングページになります。
 
 - **同じディレクトリーの場合**: `index.html` （最上位の `index.html`）内に `contacts.html` を指すハイパーリンクを含める場合は、現在のファイルと同じディレクトリーにあるため、リンクしたいファイルの名前を指定するだけです。そのため使用する URL は `contacts.html` です。
 
   ```html
-  <p>Want to contact a specific staff member?
-  Find details on our <a href="contacts.html">contacts page</a>.</p>
+  <p>
+    Want to contact a specific staff member? Find details on our
+    <a href="contacts.html">contacts page</a>.
+  </p>
   ```
 
-- **サブディレクトリーへの移動**: `index.html` （最上位の `index.html`）内に `projects/index.html` を指すハイパーリンクを含める場合は、リンクしたいファイルを指定する前に `projects` ディレクトリーに移動する必要があります。これはディレクトリーの名前、スラッシュ、そしてファイルの名前を指定することでできます。そのため使用する URL は `projects/index.html` です：
+- **サブディレクトリーへの移動**: `index.html` （最上位の `index.html`）内に `projects/index.html` を指すハイパーリンクを含める場合は、リンクしたいファイルを指定する前に `projects` ディレクトリーに移動する必要があります。これはディレクトリーの名前、スラッシュ、そしてファイルの名前を指定することでできます。そのため使用する URL は `projects/index.html` です。
 
   ```html
   <p>Visit my <a href="projects/index.html">project homepage</a>.</p>
   ```
 
-- **親ディレクトリーに戻る**: `projects/index.html` の中に `pdfs/project-brief.pdf` を指すハイパーリンクを含めたい場合は、ディレクトリー階層を上がってから `pdf` ディレクトリーに戻る必要があります。「ディレクトリーを上る」は 2 つのドット — `..` — を使用して表します。そのため使用する URL は `../pdfs/project-brief.pdf` です：
+- **親ディレクトリーに戻る**: `projects/index.html` の中に `pdfs/project-brief.pdf` を指すハイパーリンクを含めたい場合は、ディレクトリー階層を上がってから `pdfs` ディレクトリーに戻る必要があります。「ディレクトリーを上る」は 2 つのドット — `..` — を使用して表します。そのため使用する URL は `../pdfs/project-brief.pdf` です。
 
   ```html
   <p>A link to my <a href="../pdfs/project-brief.pdf">project brief</a>.</p>
@@ -150,18 +179,24 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 次にその特定の `id` にリンクするには、URL の最後にハッシュ/ポンド記号 (`#`) を付けて書きます。例えば次のようになります。
 
 ```html
-<p>Want to write us a letter? Use our <a href="contacts.html#Mailing_address">mailing address</a>.</p>
+<p>
+  Want to write us a letter? Use our
+  <a href="contacts.html#Mailing_address">mailing address</a>.
+</p>
 ```
 
 *同じ文書の別の部分*にリンクするために、文書フラグメント参照を単独で使用することもできます。
 
 ```html
-<p>The <a href="#Mailing_address">company mailing address</a> can be found at the bottom of this page.</p>
+<p>
+  The <a href="#Mailing_address">company mailing address</a> can be found at the
+  bottom of this page.
+</p>
 ```
 
 ### 絶対 URL vs 相対 URL
 
-ウェブ上では、**絶対 URL** と**関連 URL** という 2 つの用語があります。
+ウェブ上では、**絶対 URL** と**相対 URL** という 2 つの用語があります。
 
 **絶対 URL**: {{glossary("protocol", "プロトコル")}}と{{glossary("domain name", "ドメイン名")}}を含む、ウェブ上の絶対位置で定義された位置を指します。
 たとえば、`index.html` ページがウェブサーバーのルート内にある `projects` というディレクトリーにアップロードされており、そのウェブサイトのドメインが `http://www.example.com` である場合、そのページは `http://www.example.com/projects/index.html` （あるいは `http://www.example.com/projects/` だけでも、URL で指定されていない場合、ウェブサーバーは `index.html` のようなランディングページを探して読み込みます）で取得することができます。
@@ -174,9 +209,9 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 
 もちろん、`index.html` ファイルを移動しても `project-brief.pdf` ファイルと `pdfs` フォルダーの場所が突然変わることはありません。これはリンクが間違った場所を指しているため、クリックしても機能しません。注意する必要があります。
 
-## リンクの良い習慣
+## リンクの良い慣習
 
-リンクを書くときに従うべき良い習慣がいくつかあります。今これらを見てみましょう。
+リンクを書くときに従うべき良い慣習がいくつかあります。今これらを見てみましょう。
 
 ### 明確なリンク語を使う
 
@@ -188,20 +223,20 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 
 具体的な例を見てみましょう。
 
-**良い** リンクテキスト: [Firefox をダウンロード](https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com)
+**良い** リンクテキスト: [Firefox をダウンロード](https://www.mozilla.org/ja/firefox/new/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://www.mozilla.org/firefox/">
-  Firefox をダウンロード
-</a></p>
+<p><a href="https://www.mozilla.org/firefox/">Firefox をダウンロード</a></p>
 ```
 
 **悪い** リンクテキスト: [こちらをクリック](https://www.mozilla.org/firefox/)して Firefox をダウンロード
 
 ```html example-bad
-<p><a href="https://www.mozilla.org/firefox/">
+<p>
+  <a href="https://www.mozilla.org/firefox/">
   こちらをクリック
-</a>して Firefox をダウンロード</p>
+</a>して Firefox をダウンロード
+</p>
 ```
 
 その他のヒントです。
@@ -215,27 +250,26 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 
 ### HTML 以外のリソースへのリンク - 明確な道標を示す
 
-（PDF や Word 文書のように）ダウンロードされたり（動画や音声のように）ストリーミングされたり、ポップアップウィンドウを開いたり、Flash ムービーを読み込んだりするなど、予期せぬ効果をもたらすリソースにリンクする場合は、混乱を避けるために明確な表現を追加してください。
+（PDF や Word 文書のように）ダウンロードを行ったり、（動画や音声のように）ストリーミングを行ったり、（ポップアップウィンドウを開くなど）予期せぬ効果をもたらすリソースにリンクする場合は、混乱を避けるために明確な表現を追加してください。
 
 例えば次のようなものがあります。
 
 - 低帯域幅の接続を使用している場合に、リンクをクリックすると、数メガバイトのダウンロードが突然開始される。
-- Flash プレーヤーがインストールされていない場合で、リンクをクリックすると突然 Flash が必要なページに移動する。
 
 ここで、どのようなテキストを使用することができるか、いくつかの例を見てみましょう。
 
 ```html
-<p><a href="https://www.example.com/large-report.pdf">
-  販売レポートをダウンロード (PDF, 10MB)
-</a></p>
+<p>
+  <a href="https://www.example.com/large-report.pdf">
+    販売レポートをダウンロード (PDF, 10MB)
+  </a>
+</p>
 
-<p><a href="https://www.example.com/video-stream/" target="_blank">
-  動画を見る（別なタブで HD 品質のストリーミングが開きます）
-</a></p>
-
-<p><a href="https://www.example.com/car-game">
-  カーゲームで遊ぶ（Flash が必要）
-</a></p>
+<p>
+  <a href="https://www.example.com/video-stream/" target="_blank">
+    動画を見る（別なタブで HD 品質のストリーミングが開きます）
+  </a>
+</p>
 ```
 
 ### ダウンロードへのリンクは download 属性を使う
@@ -243,8 +277,9 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 ブラウザーで開くのではなく、ダウンロードするリソースにリンクしている場合は、 `download` 属性を使用して既定の保存ファイル名を指定できます。これは最新の Windows 版 Firefox のダウンロードリンクの例です。
 
 ```html
-<a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
-   download="firefox-latest-64bit-installer.exe">
+<a
+  href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+  download="firefox-latest-64bit-installer.exe">
   Download Latest Firefox for Windows (64-bit) (English, US)
 </a>
 ```
@@ -297,7 +332,8 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 これは cc、bcc、件名、本文を含む例です。
 
 ```html
-<a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
+<a
+  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
   Send mail with cc, bcc, subject and body
 </a>
 ```

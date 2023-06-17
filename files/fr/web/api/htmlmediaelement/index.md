@@ -23,7 +23,7 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
   - : est une {{domxref("AudioTrackList")}} qui liste les objets {{domxref("AudioTrack")}} (_pistes audio_) contenus dans l'élément.
 - {{domxref("HTMLMediaElement.autoplay")}}
 
-  - : est un {{jsxref("Boolean")}} qui reflète l'attribut HTML {{htmlattrxref("autoplay","video")}}, indiquant si la lecture doit commencer automatiquement dès que suffisamment de médias sont disponibles pour le faire sans interruption.
+  - : est un {{jsxref("Boolean")}} qui reflète l'attribut HTML [`autoplay`](/fr/docs/Web/HTML/Element/video#autoplay), indiquant si la lecture doit commencer automatiquement dès que suffisamment de médias sont disponibles pour le faire sans interruption.
 
     > **Note :** Les sites qui lisent automatiquement l'audio (ou les vidéos avec une piste audio) peuvent être désagréables pour les utilisateurs, il faut donc l'éviter autant que possible. Si vous devez offrir la fonctionnalité de lecture automatique, vous devez la faire activer (par un utilisateur qui la lance expréssement). Cependant, cela peut être utile lors de la création d'éléments média dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur.
 
@@ -32,7 +32,7 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.controller")}}
   - : est un objet {{domxref("MediaController")}} qui représente le contrôleur du média assigné à l'élément, ou `null` si aucun n'est défini.
 - {{domxref("HTMLMediaElement.controls")}}
-  - : est un {{jsxref('Boolean')}} qui reflète l'attribut HTML {{htmlattrxref("controls","video")}}, indiquant quels éléments de contrôle de ressource de l'interface utilisateur doivent être affichés.
+  - : est un {{jsxref('Boolean')}} qui reflète l'attribut HTML [`controls`](/fr/docs/Web/HTML/Element/video#controls), indiquant quels éléments de contrôle de ressource de l'interface utilisateur doivent être affichés.
 - {{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}
   - : renvoie une {{domxref("DOMTokenList")}} qui aide l'agent utilisateur à sélectionner les contrôles à afficher sur l'élément du média chaque fois que l'agent utilisateur affiche son propre jeu de contrôles. La `DOMTokenList` prend une ou plusieurs des trois valeurs possibles : `nodownload`, `nofullscreen` et `noremoteplayback`.
 - {{domxref("HTMLMediaElement.crossOrigin")}}
@@ -42,7 +42,7 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.currentTime")}}
   - : est un `double` indiquant le temps de lecture actuel en secondes. La définition de cette valeur recherche le média à la nouvelle heure.
 - {{domxref("HTMLMediaElement.defaultMuted")}}
-  - : est un {{jsxref('Boolean')}} qui reflète l'attribut HTML {{htmlattrxref("muted","video")}}, qui indique si la sortie audio de l'élément média doit être désactivée par défaut.
+  - : est un {{jsxref('Boolean')}} qui reflète l'attribut HTML [`muted`](/fr/docs/Web/HTML/Element/video#muted), qui indique si la sortie audio de l'élément média doit être désactivée par défaut.
 - {{domxref("HTMLMediaElement.defaultPlaybackRate")}}
   - : est un `double` indiquant le taux de lecture par défaut pour le média.
 - {{domxref("HTMLMediaElement.disableRemotePlayback")}}
@@ -54,9 +54,9 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.error")}}{{readonlyinline}}
   - : renvoie un objet {{domxref("MediaError")}} pour l'erreur la plus récente, ou `null` s'il n'y a pas eu d'erreur.
 - {{domxref("HTMLMediaElement.loop")}}
-  - : est un {{jsxref('Boolean')}} qui reflète l'attribut HTML {{htmlattrxref("loop","video")}} (_boucle_), lequel indique si l'élément média doit recommencer quand il arrive à la fin.
+  - : est un {{jsxref('Boolean')}} qui reflète l'attribut HTML [`loop`](/fr/docs/Web/HTML/Element/video#loop) (_boucle_), lequel indique si l'élément média doit recommencer quand il arrive à la fin.
 - {{domxref("HTMLMediaElement.mediaGroup")}}
-  - : est une {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("mediagroup","video")}}, lequel indique le nom du groupe d'éléments auquel il appartient. Un groupe d'éléments média partage un {{domxref('MediaController')}} commun.
+  - : est une {{domxref("DOMString")}} qui reflète l'attribut HTML [`mediagroup`](/fr/docs/Web/HTML/Element/video#mediagroup), lequel indique le nom du groupe d'éléments auquel il appartient. Un groupe d'éléments média partage un {{domxref('MediaController')}} commun.
 - {{domxref("HTMLMediaElement.mediaKeys")}}{{readonlyinline}} {{experimental_inline}}
   - : Renvoie un objet {{domxref("MediaKeys")}} ou `null`. `MediaKeys` est un ensemble de clés qu'un élément `HTMLMediaElement` associé peut utiliser pour déchiffrer les données du média pendant la lecture.
 - {{domxref("HTMLMediaElement.mozAudioCaptured")}}{{readonlyinline}} {{non-standard_inline}}
@@ -82,7 +82,7 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.played")}}{{readonlyinline}}
   - : renvoie un objet {{domxref('TimeRanges')}} qui contient les plages de la source média que le navigateur a lu, le cas échéant.
 - {{domxref("HTMLMediaElement.preload")}}
-  - : est une {{domxref("DOMString")}} (_chaîne_) qui reflète l'attribut HTML {{htmlattrxref("preload","video")}}, indiquant quelles données doivent être préchargées, le cas échéant. Les valeurs possibles sont : `none`, `metadata`, `auto`.
+  - : est une {{domxref("DOMString")}} (_chaîne_) qui reflète l'attribut HTML [`preload`](/fr/docs/Web/HTML/Element/video#preload), indiquant quelles données doivent être préchargées, le cas échéant. Les valeurs possibles sont : `none`, `metadata`, `auto`.
 - {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}}
   - : est un {{jsxref('Boolean')}} qui détermine si la hauteur du son sera préservée. S'il est défini à `false` (_faux_), la hauteur du son s'ajustera à la vitesse de l'audio. C'est implémenté avec préfixe dans Firefox (`mozPreservesPitch`) et WebKit (`webkitPreservesPitch`).
 - {{domxref("HTMLMediaElement.readyState")}}{{readonlyinline}}
@@ -94,7 +94,7 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.sinkId")}}{{readonlyinline}} {{experimental_inline}}
   - : Renvoie une {{domxref("DOMString")}} (_chaîne_) qui est l'identifiant unique du périphérique audio de sortie, ou une chaîne vide s'il utilise l'agent utilisateur par défaut. Cet identifiant doit être l'une des valeurs `MediaDeviceInfo.deviceid` retournées par {{domxref("MediaDevices.enumeratedDevices()")}}, `id-multimedia` ou `id-communications`.
 - {{domxref("HTMLMediaElement.src")}}
-  - : est une {{domxref("DOMString")}} qui reflète l'attribut HTML {{htmlattrxref("src","video")}}, lequel contient l'URL d'une ressource média à utiliser.
+  - : est une {{domxref("DOMString")}} qui reflète l'attribut HTML [`src`](/fr/docs/Web/HTML/Element/video#src), lequel contient l'URL d'une ressource média à utiliser.
 - {{domxref("HTMLMediaElement.srcObject")}}
   - : est un {{domxref('MediaStream')}} représentant le média à lire ou qui a joué dans le `HTMLMediaElement` courant, ou `null` s'il n'est pas assigné.
 - {{domxref("HTMLMediaElement.textTracks")}}{{readonlyinline}}

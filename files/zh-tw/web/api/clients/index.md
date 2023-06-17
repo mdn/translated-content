@@ -21,9 +21,9 @@ The `Clients` interface of the [Service Workers API](/zh-TW/docs/Web/API/Service
 ## Examples
 
 ```js
-clients.matchAll(options).then(function(clients) {
-  for(i = 0 ; i < clients.length ; i++) {
-    if(clients[i] === 'index.html') {
+clients.matchAll(options).then(function (clients) {
+  for (i = 0; i < clients.length; i++) {
+    if (clients[i] === "index.html") {
       clients.openWindow(clients[i]);
       // or do something else involving the matching client
     }

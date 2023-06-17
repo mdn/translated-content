@@ -1,6 +1,6 @@
 ---
 title: Disposition de flux et modes d'écriture
-slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes
+slug: Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes
 tags:
   - CSS
   - Guide

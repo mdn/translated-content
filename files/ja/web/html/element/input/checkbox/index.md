@@ -201,7 +201,7 @@ function updateDisplay() {
 
 ## 検証
 
-チェックボックスは[検証](/ja/docs/Web/Guide/HTML/Constraint_validation) (すべての {{HTMLElement("input")}} に対して行われる) に対応しています。しかし、多くの場合 {{domxref("ValidityState")}} は常に `false` になります。チェックボックスに [`required`](/ja/docs/Web/HTML/Element/input#required) 属性がある場合で、チェックされていない場合、 {{domxref("ValidityState.valueMissing")}} が `true` になります。
+チェックボックスは[検証](/ja/docs/Web/HTML/Constraint_validation) (すべての {{HTMLElement("input")}} に対して行われる) に対応しています。しかし、多くの場合 {{domxref("ValidityState")}} は常に `false` になります。チェックボックスに [`required`](/ja/docs/Web/HTML/Element/input#required) 属性がある場合で、チェックされていない場合、 {{domxref("ValidityState.valueMissing")}} が `true` になります。
 
 ## 例
 

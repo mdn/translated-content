@@ -10,6 +10,7 @@ subdirectories:
 - [Simplified Chinese Guide / 简体中文翻译指南](zh-cn/translation-guide.md)
 - [Traditional Chinese Guide / 正體中文翻譯指南](zh-tw/translation-guide.md)
 - [Spanish guide / Guía en español](es/README.md)
+- [Japanese translation guide / 日本語翻訳ガイド](ja/README.md)
 - [Korean translation guide / 한국 번역 지침](ko/README.md)
 
 If you want to add a guide to document some specific guidelines for your locale

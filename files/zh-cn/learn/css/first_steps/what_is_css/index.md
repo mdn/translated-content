@@ -47,7 +47,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 
 > **备注：** 浏览器有时候也被称为 {{Glossary("User agent","user agent")}}，大致可以当这个程序是一个存在于计算机系统中的人。当我们讨论 CSS 时，浏览器是 User agent 的主要形式，然而它并不是唯一的一个。还有其他可用的 user agents — 像是那些可以把 HTML 和 CSS 文档转换为可以打印的 PDF 文档的软件。
 
-CSS 可以用于给文档添加样式 —— 比如改变标题和链接的[颜色](/zh-CN/docs/Web/CSS/color_value)及[大小](/zh-CN/docs/Web/CSS/font-size)。它也可用于创建布局 —— 比如将一个单列文本变成包含主要内容区域和存放相关信息的侧边栏区域的[布局](/zh-CN/docs/Web/CSS/Layout_cookbook/Column_layouts)。它甚至还可以用来做一些特效，比如[动画](/zh-CN/docs/Web/CSS/CSS_Animations)。查看本段内容中所给出的特定案例。
+CSS 可以用于给文档添加样式 —— 比如改变标题和链接的[颜色](/zh-CN/docs/Web/CSS/color_value)及[大小](/zh-CN/docs/Web/CSS/font-size)。它也可用于创建布局 —— 比如将一个单列文本变成包含主要内容区域和存放相关信息的侧边栏区域的[布局](/zh-CN/docs/Web/CSS/Layout_cookbook/Column_layouts)。它甚至还可以用来做一些特效，比如[动画](/zh-CN/docs/Web/CSS/CSS_animations)。查看本段内容中所给出的特定案例。
 
 ## CSS 语法
 
@@ -62,11 +62,11 @@ h1 {
 }
 ```
 
-语法由一个 {{Glossary("CSS Selector", "选择器 (selector)")}}起头。它 _选择 (selects)_ 了我们将要用来添加样式的 HTML 元素。在这个例子中我们为一级标题（主标题{{htmlelement("h1")}}）添加样式。
+语法由一个 {{Glossary("CSS Selector", "选择器（selector）")}}起头。它*选择*了我们将要用来添加样式的 HTML 元素。在这个例子中我们为一级标题（主标题{{htmlelement("h1")}}）添加样式。
 
-接着输入一对大括号`{ }`。在大括号内部定义一个或多个形式为 **属性 (property):值 (value);** 的 **声明 (declarations)**。每个声明都指定了我们所选择元素的一个属性，之后跟一个我们想赋给这个属性的值。
+接着输入一对大括号 `{ }`。在大括号内部定义一个或多个形式为**属性**（property）—**值**（value）对的**声明**。每个声明都指定了我们所选择元素的一个属性，之后跟一个我们想赋给这个属性的值。
 
-冒号之前是属性，冒号之后是值。不同的 CSS {{Glossary("property/CSS","属性 (properties)")}} 对应不同的合法值。在这个例子中，我们指定了 `color` 属性，它可以接受许多[颜色值](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#颜色)；还有 `font-size` 属性，它可以接收许多 [size units](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#数字，长度和百分比) 值。
+冒号之前是属性，冒号之后是值。不同的 CSS {{Glossary("property/CSS","属性")}}对应不同的合法值。在这个例子中，我们指定了 `color` 属性，它可以接受许多[颜色值](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#颜色)；还有 `font-size` 属性，它可以接收许多 [size unit](/zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units#数字，长度和百分比) 值。
 
 一个 CSS 样式表可以包含很多个规则。
 
@@ -83,11 +83,11 @@ p {
 
 你会发现你已经很快掌握了一些属性的值，但是属性可以接受的值远不止这些。在 MDN 上每个属性都有单独的页面，不论你是忘记了某个属性，还是想要知道一个属性还能接受什么其他的值，这些页面都可以帮助你。
 
-> **备注：** 在 MDN 上的 [CSS reference](/zh-CN/docs/Web/CSS/Reference) 页面列举了所有的 CSS 属性页面（同时也包括其他的 CSS 特性）。另外，当你想要寻找一个 CSS 特性的更多内容时，多使用你的搜索引擎来搜索 "mdn _css-feature-name_" 。例如，搜索 "mdn color" 和 "mdn font-size"！
+> **备注：** 在 MDN 上的 [CSS 参考](/zh-CN/docs/Web/CSS/Reference)页面列举了所有的 CSS 属性页面（同时也包括其他的 CSS 特性）。另外，当你想要寻找一个 CSS 特性的更多内容时，多使用你的搜索引擎来搜索“mdn _css-feature-name_”。例如，搜索“mdn color”和“mdn font-size”！
 
 ## CSS 模块
 
-你可以通过 CSS 为许多东西添加样式，CSS 由许多*模块 (modules)* 构成。你可以在 MDN 上浏览这些模块的参考内容 (MDN reference)，许多模块都被组织在自己单独的文档页面。例如，我想查找一下 MDN reference 的 [Backgrounds and Borders](/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders) 模块的相关内容，来了解它是用来做什么的、它还包括什么属性、它还有什么其他特性等。你也可以在 _CSS Specification_ 查找（见下文），它定义了 CSS 规范。
+你可以通过 CSS 为许多东西添加样式，CSS 由许多*模块*（module）构成。你可以在 MDN 上浏览这些模块的参考内容，许多模块都被组织在自己单独的文档页面。例如，我想查找一下 MDN 的 [Backgrounds and Borders](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders) 模块的参考页面，来了解它是用来做什么的、它还包括什么属性、它还有什么其他特性等。在该模块中，你也可以找到指向定义了该技术*规范*的链接（见下文）。
 
 在这个阶段你不必过于担心 CSS 是如何组织的 (how CSS is structured)，但是它能帮助你更好的掌握 CSS。例如，你注意到某个属性和另外一些属性的相似点，并且它们可能确实是相同的格式。
 

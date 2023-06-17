@@ -3,6 +3,8 @@ title: 不可变的（Immutable）
 slug: Glossary/Immutable
 ---
 
+{{GlossarySidebar}}
+
 不可变值指的是，如果不创建一个全新的值替换它，它的内容是无法更改的。
 
 在 {{glossary("JavaScript")}} 中，{{Glossary("primitive", "原始值")}}是不可变的——一旦创建了原始值，它就不能被改变，尽管持有它的变量可以被重新分配另一个值。相比之下，{{Glossary("Object","对象")}}和{{Glossary("Array","数组")}}默认是可变的——它们的属性和元素可以在不重新分配新值的情况下更改。

@@ -76,4 +76,4 @@ Dans ce fragment de code HTML, c'est l'élément {{HTMLElement("button")}} avec 
   - {{domxref("Document.exitFullscreen()")}},
   - {{domxref("Document.fullscreenElement")}}
 
-- L'attribut {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- L'attribut [`allowfullscreen`](/fr/docs/Web/HTML/Element/iframe#allowfullscreen)

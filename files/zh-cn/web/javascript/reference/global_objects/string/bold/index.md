@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/bold
 str.bold()
 ```
 
-### **返回值**
+### 返回值
 
 包含 HTML 元素 {{HTMLElement("b")}} 的字符串。
 
@@ -44,7 +44,7 @@ console.log(worldString.strike());  // <strike>Hello, world</strike>
 
 {{Compat}}
 
-## 相关连接
+## 参见
 
 - {{jsxref("String.prototype.blink()")}}
 - {{jsxref("String.prototype.italics()")}}
