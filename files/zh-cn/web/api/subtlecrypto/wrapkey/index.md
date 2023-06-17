@@ -37,7 +37,7 @@ wrapKey(format, key, wrappingKey, wrapAlgo)
   - : 用于加密导出密钥的{{domxref("CryptoKey", "密钥", "", 1)}}。密钥的用途必须包括 `wrapKey`。
 - `wrapAlgo`
   - : 指定用于加密导出密钥的[算法](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#支持的算法)的对象，以及任何所需的额外参数：
-    - 对于 [RSA-OAEP](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep)，请转入 [`RsaOaepParams`](/zh-CN/docs/Web/API/RsaOaepParams) 对象。
+    - 对于 [RSA-OAEP](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep)，请传入 [`RsaOaepParams`](/zh-CN/docs/Web/API/RsaOaepParams) 对象。
     - 对于 [AES-CTR](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-ctr)，请传入 [`AesCtrParams`](/zh-CN/docs/Web/API/AesCtrParams) 对象。
     - 对于 [AES-CBC](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-cbc)，请传入 [`AesCbcParams`](/zh-CN/docs/Web/API/AesCbcParams) 对象。
     - 对于 [AES-GCM](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-gcm)，请传入 [`AesGcmParams`](/zh-CN/docs/Web/API/AesGcmParams) 对象。
