@@ -5,7 +5,7 @@ slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 
 {{DefaultAPISidebar("DOM")}}
 
-Selectors API 提供了通过与一组[选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)匹配来轻松快速地从 DOM 检索 {{domxref("Element")}} 节点的方法。这比以前的技术要快得多，其中有必要使用 JavaScript 代码中的循环来定位你需要查找的特定项目。
+Selectors API 提供了通过与一组[选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)匹配来轻松快速地从 DOM 检索 {{domxref("Element")}} 节点的方法。这比以前的技术要快得多，例如，过去的技术需要在 JavaScript 代码中使用循环来定位你需要查找的特定项目。
 
 ## NodeSelector 接口
 
