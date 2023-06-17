@@ -384,7 +384,7 @@ window.crypto.subtle
 ## 参见
 
 - [`SubtleCrypto.exportKey()`](/zh-CN/docs/Web/API/SubtleCrypto/exportKey)
-- [PKCS #8 格式](https://datatracker.ietf.org/doc/html/rfc5208).
-- [SubjectPublicKeyInfo 格式](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1).
-- [JSON Web Key 格式](https://datatracker.ietf.org/doc/html/rfc7517).
-- [AES-KW 规范](https://datatracker.ietf.org/doc/html/rfc3394).
+- [PKCS #8 格式](https://datatracker.ietf.org/doc/html/rfc5208)。
+- [SubjectPublicKeyInfo 格式](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1)。
+- [JSON Web Key 格式](https://datatracker.ietf.org/doc/html/rfc7517)。
+- [AES-KW 规范](https://datatracker.ietf.org/doc/html/rfc3394)。
