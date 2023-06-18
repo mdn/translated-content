@@ -1,6 +1,8 @@
 ---
-title: '<body>: 文書の本文要素'
+title: "<body>: 文書本体要素"
 slug: Web/HTML/Element/body
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
@@ -11,7 +13,7 @@ slug: Web/HTML/Element/body
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -24,7 +26,7 @@ slug: Web/HTML/Element/body
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -136,15 +138,19 @@ slug: Web/HTML/Element/body
 ## 例
 
 ```html
-<html>
+<html lang="en">
   <head>
     <title>Document title</title>
   </head>
   <body>
-    <p>This is a paragraph</p>
+    <p>The <code>&lt;body&gt;</code> HTML element represents the content of an HTML document. There can be only one <code>&lt;body&gt;</code> element in a document.</p>
   </body>
 </html>
 ```
+
+### 結果
+
+{{EmbedLiveSample('Example')}}
 
 ## 仕様書
 

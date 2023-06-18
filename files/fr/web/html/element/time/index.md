@@ -25,7 +25,7 @@ Cet élément permet de représenter :
 
 Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : Cet attribut indique l'heure et la date associées à l'élément. La valeur de cet attribut doit être une chaîne de caractères décrivant [une date valide avec un fragment optionnel pour décrire l'heure](https://www.w3.org/TR/html51/infrastructure.html#dates-and-times) (cf. ci-après). Si la valeur ne peut pas être analysée comme une date/heure, le contenu de l'élément n'aura pas d'indication temporelle associée.
 
 ## Notes d'utilisation

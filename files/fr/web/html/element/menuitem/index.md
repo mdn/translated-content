@@ -20,21 +20,21 @@ Une commande peut être définie explicitement, avec un texte et éventuellement
 
 Cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Attributs_universels) et notamment `title` qui peut être utilisé afin de décrire une commande ou pour fournir des indications quant à l'utilisation de celle-ci.
 
-- {{htmlattrdef("checked")}}
+- `checked`
   - : Un attribut booléen qui indique si la commande est sélectionné. Cet attribut peut uniquement être utilisé lorsque l'attribut `type` vaut `checkbox` ou `radio`.
-- {{htmlattrdef("command")}}
+- `command`
   - : Cet attribut définit l'identifiant d'un autre élément qui indique une commande invoquée indirectement. Cet attribut ne peut pas être utilisé si les attributs `checked`, `disabled`, `icon`, `label`, `radiogroup` ou `type` sont utilisés.
-- {{htmlattrdef("default")}}
+- `default`
   - : Un attribut booléen qui indique la commande par défaut du menu.
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : Un attribut booléen qui indique que la commande n'est pas disponible dans l'état actuel. On notera que `disabled` est sémantiquement différent de `hidden`.
-- {{htmlattrdef("icon")}}
+- `icon`
   - : Une URL vers image qui représente la commande.
-- {{htmlattrdef("label")}}
+- `label`
   - : Le nom de la commande affiché pour l'utilisateur. Cet attribut est obligatoire lorsque l'attribut `command` est absent.
-- {{htmlattrdef("radiogroup")}}
+- `radiogroup`
   - : Cet attribut indique le nom d'un groupe de commandes étant des boutons radio. Cet attribut peut uniquement être utilisé lorsque `type` vaut `radio`.
-- {{htmlattrdef("type")}}
+- `type`
 
   - : Cet attribut indique le type de commande dans le menu. C'est un attribut à valeur contrainte qui peut prendre une des valeurs suivantes :
 

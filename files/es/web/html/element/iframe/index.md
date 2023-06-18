@@ -77,25 +77,25 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
 <!---->
 
-- {{htmlattrdef("allow")}}
+- `allow`
   - : Especifíca una [política de características](/es/docs/Web/HTTP/Feature_Policy) para el `<iframe>`. Vea el articulo [Privacy, permissions, and information security](/es/docs/Web/Privacy) para detalles en temas de seguridad y como `<iframe>` funciona con las Politicas de Herramientas para mantener los sistemas seguros.
-- {{htmlattrdef("allowfullscreen")}}
+- `allowfullscreen`
 
   - : Definido como `true` si el `<iframe>` puede activar el modo a pantalla completa llamando al método {{domxref("Element.requestFullscreen", "requestFullscreen()")}}.
 
     > **Nota:** Se considera un atributo heredado y se redefine como `allow="fullscreen"`.
 
-- {{htmlattrdef("allowpaymentrequest")}}
+- `allowpaymentrequest`
 
   - : Definido como `true` si se debe permitir que un `<iframe>` de origen cruzado pueda invocar el [API de solicitud de pago](/es/docs/Web/API/Payment_Request_API). <
 
     > **Nota:** Se considera un atributo heredado y se redefine como `allow="payment"`.
 
-- {{htmlattrdef("csp")}} {{experimental_inline}}
+- `csp` {{experimental_inline}}
   - : Una [Politica de Seguridad del Contenido](/es/docs/Web/HTTP/CSP) aplicada para el recurso incrustado. Vea {{domxref("HTMLIFrameElement.csp")}} para detalles.
-- {{ htmlattrdef("height") }}
+- `height`
   - : Indica la altura del frame en HTML5 en píxeles CSS, o en HTML4.01 en píxeles o como un porcentaje.
-- {{htmlattrdef("importance")}} {{experimental_inline}}
+- `importance` {{experimental_inline}}
 
   - : La prioridad de descarga en el recurso para el atributo `src` del `<iframe>`. Valores permitidos:
 
@@ -103,7 +103,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
     - `high`: El recurso debe ser descargado antes que otros recursos de baja-prioridad de los recursos de la página.
     - `low`: El recurso debe ser descargado después de otros recursos de alta-prioridad de los recursos de la página.
 
-- {{ htmlattrdef("name") }}
+- `name`
 
   - : Nombre objetivo para el contexto de navegación incrustado. Se puede utilizar:
 
@@ -111,7 +111,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
     - En el atributo formtarget de los elementos {{HTMLElement("input")}} y {{HTMLElement("button")}}
     - En el parámetro windowName en el método {{domxref("Window.open()","window.open()")}}.
 
-- {{htmlattrdef("referrerpolicy")}}
+- `referrerpolicy`
 
   - : Indicates which [referrer](/es/docs/Web/API/Document/referrer) to send when fetching the frame's resource:
 
@@ -124,7 +124,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
     - `strict-origin-when-cross-origin`: Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/es/docs/Web/API/HTMLHyperlinkElementUtils/hash), [password](/es/docs/Web/API/HTMLHyperlinkElementUtils/password), or [username](/es/docs/Web/API/HTMLHyperlinkElementUtils/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
-- {{htmlattrdef("sandbox")}}
+- `sandbox`
 
   - : Applies extra restrictions to the content in the frame. The value of the attribute can either be empty to apply all restrictions, or space-separated tokens to lift particular restrictions:
 
@@ -147,30 +147,30 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
     > - Sandboxing is useless if the attacker can display content outside a sandboxed `iframe` — such as if the viewer opens the frame in a new tab. Such content should be also served from a _separate origin_ to limit potential damage.
     > - The `sandbox` attribute is unsupported in Internet Explorer 9 and earlier.
 
-- {{ htmlattrdef("seamless") }}
+- `seamless`
   - : This Boolean attribute indicates that the browser should render the inline frame in a way that makes it appear to be part of the containing document, for example by applying CSS styles that apply to the `<iframe>` to the contained document before styles specified in that document, and by opening links in the contained documents in the parent browsing context (unless another setting prevents this).
-- {{ htmlattrdef("src") }}
+- `src`
   - : The URL of the page to embed.
-- {{ htmlattrdef("srcdoc") }}
+- `srcdoc`
   - : The content of the page that the embedded context is to contain.
-- {{ htmlattrdef("width") }}
+- `width`
   - : Indicates the width of the frame in HTML5 in CSS pixels, or in HTML4.01 in pixels or as a percentage.
 
 ### Atributos obsoletos
 
 Estos atributos están obsoletos y es posible que ya no sean compatibles con todos los agentes de usuario. No debe utilizarlos en contenido nuevo y tratar de eliminarlos del contenido existente.
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : La alineación de este elemento con respecto al contexto que lo rodea.
-- {{ htmlattrdef("frameborder") }} {{ deprecated_inline}}
+- `frameborder` {{ deprecated_inline}}
   - : El valor 1 (por defecto) indica al navegador establecer una frontera entre este marco y todo otro marco. El valor 0 indica que el navegador no establece una frontera entre este marco y otros marcos.
-- {{ htmlattrdef("longdesc") }} {{ deprecated_inline}}
+- `longdesc` {{ deprecated_inline}}
   - : Una URI de una descripción larga del marco. Debido al mal uso generalizado, esto no es útil para navegadores no visuales.
-- {{ htmlattrdef("marginheight") }} {{ deprecated_inline }}
+- `marginheight` {{ deprecated_inline }}
   - : La cantidad de espacio en píxeles entre el contenido del marco y sus márgenes superior e inferior.
-- {{ htmlattrdef("marginwidth") }} {{ deprecated_inline }}
+- `marginwidth` {{ deprecated_inline }}
   - : La cantidad de espacio en píxeles entre el contenido del marco y sus márgenes izquierdo y derecho.
-- {{ htmlattrdef("scrolling") }} {{ deprecated_inline }}
+- `scrolling` {{ deprecated_inline }}
 
   - : Indica cuándo el navegador debe proporcionar una barra de desplazamiento para el marco:
 
@@ -180,7 +180,7 @@ Estos atributos están obsoletos y es posible que ya no sean compatibles con tod
 
 ### Atributos no estándar
 
-- {{htmlattrdef("mozbrowser")}} {{non-standard_inline}}
+- `mozbrowser` {{non-standard_inline}}
 
   - : &#x20;
 
@@ -189,13 +189,13 @@ Estos atributos están obsoletos y es posible que ya no sean compatibles con tod
     Makes the `<iframe>` act like a top-level browser window. See [Browser API](/es/docs/Mozilla/Gecko/Chrome/API/Browser_API) for details.
     **Available only to [WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions).**
 
-- {{ htmlattrdef("mozallowfullscreen") }} {{ non-standard_inline() }}
+- `mozallowfullscreen` {{ non-standard_inline() }}
   - : In Gecko 9.0 or later, this attribute can be set to `true` if the frame is allowed to be placed into full screen mode by calling its {{ domxref("element.mozRequestFullScreen()") }} method. If this isn't set, the element can't be placed into full screen mode.
-- {{ htmlattrdef("webkitallowfullscreen") }} {{ non-standard_inline() }}
+- `webkitallowfullscreen` {{ non-standard_inline() }}
   - : In Chrome 17 or later (and maybe earlier), this attribute can be set to `true` if the frame is allowed to be placed into full screen mode by calling its {{ domxref("element.webkitRequestFullScreen()") }} method. If this isn't set, the element can't be placed into full screen mode.
-- {{ htmlattrdef("mozapp") }} {{ non-standard_inline() }}
+- `mozapp` {{ non-standard_inline() }}
   - : For frames hosting an [open web app](/en/Apps), this specifies the URL of the [app manifest](/en/Apps/Manifest). This ensures that the app is loaded with the right permissions. See [Using the Browser API](/en/DOM/Using_the_Browser_API) for details. Available in Gecko 13.0 and later.
-- {{ htmlattrdef("remote") }} {{ non-standard_inline() }}
+- `remote` {{ non-standard_inline() }}
   - : Load the frame's page in a separate content process.
 
 ## Secuencia de comandos

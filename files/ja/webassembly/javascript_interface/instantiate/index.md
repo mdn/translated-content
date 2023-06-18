@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 - 第一のオーバーロードは、 [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays) または {{jsxref("ArrayBuffer")}} で表現された WebAssembly バイナリコードを受け取り、そして、コンパイルとインスタンス化の両方を 1 ステップで行います。返された `Promise` は解決時にコンパイルされた {{jsxref("WebAssembly.Module")}} と最初の {{jsxref("WebAssembly.Instance")}} を渡します。
 - 第二のオーバーロードは、すでにコンパイルされた {{jsxref("WebAssembly.Module")}} を受け取り、解決時にその `Module` の `Instance` を渡す `Promise` を返します。このオーバーロードは、すでに `Module` がコンパイル済みの場合に有用です。
 
-> **警告:** このメソッドは wasm モジュールの読み込みとインスタンス化に最も効率で黄な方法ではありません。可能であれば、代わりにもっと新しい {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用すれば、生のバイトコードから直接モジュールの読み込み、コンパイル、インスタンス化を 1 ステップで行うことができ、 {{jsxref("ArrayBuffer")}} へ変換する必要がありません。
+> **警告:** このメソッドは wasm モジュールの読み込みとインスタンス化に最も効率的な方法ではありません。可能であれば、代わりにもっと新しい {{jsxref("WebAssembly.instantiateStreaming()")}} メソッドを使用すれば、生のバイトコードから直接モジュールの読み込み、コンパイル、インスタンス化を 1 ステップで行うことができ、 {{jsxref("ArrayBuffer")}} へ変換する必要がありません。
 
 ## 構文
 

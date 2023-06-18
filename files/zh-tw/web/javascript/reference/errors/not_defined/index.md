@@ -41,9 +41,9 @@ foo.substring(1); // "ar"
 A variable need to be available in the current context of execution. Variables defined inside a [function](/zh-TW/docs/Web/JavaScript/Reference/Functions) cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function
 
 ```js example-bad
-function numbers () {
+function numbers() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
   return num1 + num2;
 }
 
@@ -54,9 +54,9 @@ However, a function can access all variables and functions defined inside the sc
 
 ```js example-good
 var num1 = 2,
-    num2 = 3;
+  num2 = 3;
 
-function numbers () {
+function numbers() {
   return num1 + num2;
 }
 

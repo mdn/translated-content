@@ -47,9 +47,9 @@ Accept-Patch: application/merge-patch+json
 
 ## 浏览器兼容性
 
-{{Compat}}
+浏览器的兼容性与此标头无关（标头是由服务器发送的，规范没有定义客户端行为）。
 
 ## 参见
 
-- Http method {{HTTPMethod("PATCH")}}
-- HTTP Semantic and context {{RFC("7231", "PUT", "4.3.4")}}
+- HTTP 方法 {{HTTPMethod("PATCH")}}
+- HTTP 语义和上下文 {{RFC("7231", "PUT", "4.3.4")}}

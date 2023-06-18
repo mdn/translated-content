@@ -2,7 +2,7 @@
 title: object から iframe まで — その他の埋め込み技術
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 l10n:
-  sourceCommit: bf7b8b744aba00d0457f4636e0940d3ec162931b
+  sourceCommit: 0b2ed45bea188abc27cdd92c3faffcb7483d3314
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
@@ -68,18 +68,21 @@ l10n:
 ```html hidden
 <h2>ライブ出力</h2>
 
-<div class="output" style="min-height: 250px;">
-</div>
+<div class="output" style="min-height: 250px;"></div>
 
 <h2>編集可能なコード</h2>
-<p class="a11y-label">Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。</p>
+<p class="a11y-label">
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+</p>
 
-<textarea id="code" class="input" style="width: 95%;min-height: 100px;">
-</textarea>
+<textarea
+  id="code"
+  class="input"
+  style="width: 95%;min-height: 100px;"></textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="リセット">
-  <input id="solution" type="button" value="答えを表示">
+  <input id="reset" type="button" value="リセット" />
+  <input id="solution" type="button" value="答えを表示" />
 </div>
 ```
 
@@ -106,10 +109,10 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
-const output = document.querySelector('.output');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
+const output = document.querySelector(".output");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -117,38 +120,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = '答えを表示';
+  solution.value = "答えを表示";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === '答えを表示') {
+solution.addEventListener("click", function () {
+  if(solution.value === "答えを表示") {
     textarea.value = solutionEntry;
     solution.value = '答えを隠す';
   } else {
     textarea.value = userEntry;
-    solution.value = '答えを表示';
+    solution.value = "答えを表示";
   }
   updateCode();
 });
 
-const htmlSolution = '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
+const htmlSolution =
+  '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
 let solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -161,7 +165,10 @@ function insertAtCaret(text) {
   let caretPos = textarea.selectionStart;
 
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos += text.length;
   textarea.selectionStart = caretPos;
@@ -172,10 +179,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === '答えを表示') {
+  if(solution.value === "答えを表示") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -189,17 +196,27 @@ textarea.onkeyup = function(){
 
 ## iframe の詳細
 
-簡単で楽しかったでしょう？ {{htmlelement("iframe")}} 要素は、他のウェブ文書を現在の文書に埋め込むことができるように設計されています。これは、直接制御できない可能性のある第三者のコンテンツをウェブサイトに組み込むのに適していて、独自のバージョンを実装する必要はありません — オンライン動画プロバイダーの動画、 [Disqus](https://disqus.com/) のようなコメントシステム、オンライン地図プロバイダーの地図、広告バナーなど。このコースで使用しているライブ編集可能な例は、`<iframe>` を使用して実装されています。
+簡単で楽しかったでしょう？ {{htmlelement("iframe")}} 要素は、他のウェブ文書を現在の文書に埋め込むことができるように設計されています。これは、直接制御できない可能性のある第三者のコンテンツをウェブサイトに組み込むのに適していて、独自のバージョンを実装する必要はありません — オンライン動画プロバイダーの動画、 [Disqus](https://disqus.com/) のようなコメントシステム、オンライン地図プロバイダーの地図、広告バナーなど。このコースで使用しているライブ編集可能な例も、`<iframe>` を使用して実装されています。
 
-以下に述べるように、`<iframe>` には考慮すべき重大な[セキュリティ上の懸念](#セキュリティ上の懸念)がありますが、これはウェブサイトで使用してはいけないということではなく、いくつかの知識と注意深い考えが必要なだけです。もう少し詳しくコードを調べてみましょう。例えば、自分のウェブページに MDN 用語集を記載したいとします。次のように試すことができます。
+`<iframe>` 要素を使用する前に、いくつかのセキュリティ上の懸念があります。
+例えば、{{htmlelement("iframe")}} 要素を使用して、MDN 用語集をウェブページに記載するために、次のコード例のようなことを試みるとします。
+下記のコードをページに追加した場合、用語集ページではなく、エラーメッセージが表示されることに驚くかもしれません。
 
 ```html
 <head>
-  <style> iframe { border: none } </style>
+  <style>
+    iframe {
+      border: none;
+    }
+  </style>
 </head>
 <body>
-  <iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
-          width="100%" height="500" allowfullscreen sandbox>
+  <iframe
+    src="https://developer.mozilla.org/ja/docs/Glossary"
+    width="100%"
+    height="500"
+    allowfullscreen
+    sandbox>
     <p>
       <a href="/ja/docs/Glossary">
          iframe に対応していないブラウザーのための代替リンク
@@ -208,6 +225,14 @@ textarea.onkeyup = function(){
   </iframe>
 </body>
 ```
+
+ブラウザーでコンソールを見ると、次のようなエラーメッセージが表示されているはずです。
+
+```
+Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X-Frame-Options' to 'deny'.
+```
+
+後述の[セキュリティ](#セキュリティの懸念)の節では、このエラーが発生する原因について詳しく説明していますが、最初のうちは、このコードが何を行っているのかを見ていきましょう。
 
 この例には、`<iframe>` の使用に必要な基本的な要素が含まれています。
 
@@ -219,8 +244,6 @@ textarea.onkeyup = function(){
   - : この属性は、 {{htmlelement("video")}} や {{htmlelement("img")}} と同様に、埋め込む文書の URL を指すパスを含んでいます。
 - [`width`](/ja/docs/Web/HTML/Element/iframe#width) と [`height`](/ja/docs/Web/HTML/Element/iframe#height)
   - : これらの属性は、 iframe の幅と高さを指定します。
-- 代替コンテンツ
-  - : {{htmlelement("video")}} のような他の要素と同じように、 `<iframe>` と `</iframe>` のタグの間に、ブラウザーが `<iframe>` に対応していない場合に表示される代替コンテンツを含めることができます。この場合、代わりにページへのリンクが含まれています。最近では、`<iframe>` に対応していないブラウザーを見かけることはまずありません。
 - [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox)
   - : この属性は、他の `<iframe>` の機能よりも若干現代的なブラウザー(たとえば、IE 10 以上)で機能し、高度なセキュリティ設定を要求します。これについては、次のセクションで詳しく説明します。
 
@@ -234,7 +257,7 @@ textarea.onkeyup = function(){
 
 > **メモ:** [クリックジャッキング](/ja/docs/Glossary/Clickjacking)は、ハッカーが目に見えない iframe を文書に埋め込んだり（文書を自分の悪意のあるウェブサイトに埋め込んだり）して、ユーザーの操作を乗っ取るための一般的な iframe 攻撃の一種です。これは、ユーザーを誤解させたり機密データを盗む一般的な方法です。
 
-簡単な例ですが、先ほど紹介した例をブラウザーに読み込んでみましょう。Github に[ライブ](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)が公開されています（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)も参照してください）。実際にページに何も表示されませんが、[ブラウザーの開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)のコンソールに、理由を示すメッセージが表示されます。 Firefox では、`The loading of "https://developer.mozilla.org/en-US/docs/Glossary" in a frame is denied by "X-Frame-Options" directive set to "DENY"` （フレーム内への `https://developer.mozilla.org/en-US/docs/Glossary` の読み込みは、 X-Frame-Options ディレクティブが "DENY" に設定されているため、拒否されました）というメッセージが表示されます。これは、MDN を作成した開発者が、`<iframe>` 内に埋め込まれないようにウェブサイトのページを提供する設定をサーバーに組み込んだためです（下記の [CSP ディレクティブの設定](#csp_ディレクティブの設定)を参照してください）。これは実に理にかなっています。MDN のページ全体を他のページに埋め込むことは、自分のサイトに埋め込んで自分自身で主張するようなことをしない限り、実に意味がありませんし、また[クリックジャッキング](/ja/docs/Glossary/Clickjacking)によってデータを盗もうとすることも、どちらも本当に悪いことです。さらに、もしみんながこれをやり始めたら、必要な通信帯域が増え、 Mozilla にたくさん課金されてしまうでしょう。
+簡単な例ですが、先ほど紹介した例をブラウザーに読み込んでみましょう。Github に[ライブ](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)が公開されています（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)も参照してください）。実際にページに何も表示されませんが、[ブラウザーの開発者ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)のコンソールに、理由を示すメッセージが表示されます。 Firefox では、`The loading of "https://developer.mozilla.org/en-US/docs/Glossary" in a frame is denied by "X-Frame-Options" directive set to "DENY"` （フレーム内への `https://developer.mozilla.org/en-US/docs/Glossary` の読み込みは、 X-Frame-Options ディレクティブが "DENY" に設定されているため、拒否されました）というメッセージが表示されます。これは、MDN を作成した開発者が、`<iframe>` 内に埋め込まれないようにウェブサイトのページを提供する設定をサーバーに組み込んだためです（下記の [CSP ディレクティブの設定](#csp_ディレクティブの設定)を参照してください）。これは実に理にかなっています。MDN のページ全体を他のページに埋め込むことは、自分のサイトに埋め込んで自分自身で主張するようなことをしない限り、実に意味がありませんし、また[クリックジャッキング](/ja/docs/Glossary/Clickjacking)によってデータを盗もうとすることも、どちらも本当に悪いことです。さらに、もしみんながこれをやり始めたら、必要な通信帯域が増え、 Mozilla にたくさん課金されてしまうでしょう。
 
 #### 必要なときのみ埋め込む
 
@@ -253,13 +276,13 @@ textarea.onkeyup = function(){
 
 サイトで HTTPS を有効にするには、特別なセキュリティ証明書をインストールする必要があります。多くのホスティングプロバイダーは、自分自身で資格情報を所有するための設定をすることなく、 HTTPS 対応のホスティングを提供しています。しかし、自分自身でサイトの HTTPS 対応を設定する必要がある場合、 [Let's Encrypt](https://letsencrypt.org/) は、必要な証明書を自動的に作成してインストールするためのツールや手順を、Apache web server、Nginx など、最も広く使用されているウェブサーバーの組み込み対応で使用する方法を提供しています。 Let's Encrypt のツールは、可能な限りプロセスを簡単にするように設計されているので、サイトを HTTPS 化するために、このツールまたは他に使用できる手段を避ける理由は、実に何もないのです。
 
-> **メモ:** [GitHub ページ](/ja/docs/Learn/Common_questions/Using_Github_pages)では、既定で HTTPS 経由でコンテンツを提供できるため、コンテンツのホスティングに便利です。異なるホスティングを使用していて、わからない場合は、ホスティングプロバイダーに問い合わせてください。
+> **メモ:** [GitHub ページ](/ja/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)では、既定で HTTPS 経由でコンテンツを提供できるため、コンテンツのホスティングに便利です。異なるホスティングを使用していて、わからない場合は、ホスティングプロバイダーに問い合わせてください。
 
 #### 常に `sandbox` 属性を使用する
 
 攻撃者がウェブサイトで悪事を働く力をできるだけ小さくしたいので、埋め込みコンテンツには「その仕事をするために必要な権限」だけを与えるべきです。もちろん、これは自分自身のコンテンツにも当てはまります。コードが適切に使用できる、あるいはテストのために使用できる、しかしコードベースの残りの部分に（偶然であれ悪意であれ）害を発生させることができない、コードのためのコンテナーは[サンドボックス](<https://ja.wikipedia.org/wiki/サンドボックス_(セキュリティ)>)と呼ばれています。
 
-サンドボックス化されていないコンテンツは、あまりにも多くのことを行うことができます（JavaScriptの実行、フォームの送信、ポップアップウィンドウなど）。既定では、前の例で示したように、引数なしの `sandbox` 属性を使用して、利用可能なすべての制限を課す必要があります。
+サンドボックス化されていないコンテンツは、JavaScript の実行、フォームの送信、ポップアップウィンドウの起動などを行うことができます。既定では、前の例で示したように、引数なしの `sandbox` 属性を使用して、利用可能なすべての制限を課す必要があります。
 
 絶対に必要な場合は、権限を（`sandbox=""` 属性値内に） 1 つずつ追加することができます。使用可能なすべてのオプションについては、 [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) のリファレンスの記事を参照してください。重要な注意点の 1 つは、 `sandbox` 属性に `allow-scripts` と `allow-same-origin` の両方を追加しないことです。この場合、埋め込みコンテンツは、サイトのスクリプトの実行を停止する同一オリジンセキュリティポリシーをバイパスし、 JavaScript を使用してサンドボックスを完全に無効にすることができます。
 
@@ -304,7 +327,7 @@ textarea.onkeyup = function(){
     </tr>
     <tr>
       <td>
-        プラグインで制御されるボックスの幅と高さ（CSS ピクセル数）
+        プラグインで制御されるボックスの幅と高さ（CSS ピクセル単位）
       </td>
       <td>
         <a href="/ja/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/ja/docs/Web/HTML/Element/embed#width"><code>width</code></a>
@@ -331,14 +354,13 @@ textarea.onkeyup = function(){
   </tbody>
 </table>
 
-次に、PDF をページに埋め込む `<object>` の例を見てみましょう([ライブ](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)のサンプルと[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)を参照)。
+次に、PDF をページに埋め込む `<object>` の例を見てみましょう（[ライブ例](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)と[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)を参照）。
 
 ```html
-<object data="mypdf.pdf" type="application/pdf"
-        width="800" height="1200">
-  <p>PDF プラグインはありませんが、
-    <a href="mypdf.pdf">PDF ファイルをダウンロードできます。
-    </a>
+<object data="mypdf.pdf" type="application/pdf" width="800" height="1200">
+  <p>
+    PDF プラグインはありませんが、
+    <a href="mypdf.pdf">PDF ファイルをダウンロードできます。</a>
   </p>
 </object>
 ```
@@ -347,11 +369,11 @@ PDF は紙とデジタルの間の必要な足がかりでしたが、多くの[
 
 ## スキルをテストしましょう
 
-この記事はここまでですが、最も重要な情報を覚えていますか？先に進む前に、この情報を保持しているかどうかを確認するためのテストをいくつか見つけることができます — [Test your skills: Multimedia and embedding](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding)を参照してください。
+この記事はここまでですが、最も重要な情報を覚えていますか？先に進む前に、この情報を保持しているかどうかを確認するためのテストをいくつか見つけることができます — [スキルテスト: マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding)を参照してください。
 
 ## まとめ
 
-ウェブ文書に他のコンテンツを埋め込むという話題は、すばやくとても複雑になりがちです。そこでこの記事では、関連する技術のより高度な機能のいくつかを示唆しつつ、すぐに関連性が感じられるような、シンプルで身近な方法でそれを紹介しようと試みました。はじめのうちは、地図や動画のようなサードパーティーのコンテンツをページに記載する以上の目的で、埋め込みを使用することはあまりないと思われます。しかし、経験を積むにつれて、より多くの使用方法を見つけることができるようになるはずです。
+ウェブ文書に他のコンテンツを埋め込むという話題は、すぐに複雑になりがちです。そこでこの記事では、関連する技術のより高度な機能のいくつかを示唆しつつ、すぐに関連性が感じられるような、シンプルで身近な方法でそれを紹介しようと試みました。はじめのうちは、地図や動画のようなサードパーティーのコンテンツをページに記載する以上の目的で、埋め込みを使用することはあまりないと思われます。しかし、経験を積むにつれて、より多くの使用方法を見つけることができるようになるはずです。
 
 ここで説明したもの以外にも、外部コンテンツの埋め込みを含む他の多くの技術があります。以前の記事では {{htmlelement("video")}}、{{htmlelement("audio")}}、{{htmlelement("img")}} などいくつかを見ましたが、JavaScript で生成された 2D および 3D グラフィックの場合は {{htmlelement("canvas")}}、ベクターグラフィックス埋め込む場合は {{SVGElement("svg")}} など、他にも見い出されるものがあります。モジュールの次の記事では [SVG](/ja/docs/Web/SVG) を見ていきます。
 

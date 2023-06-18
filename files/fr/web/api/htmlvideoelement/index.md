@@ -24,15 +24,15 @@ La liste des [formats multimédias pris en charge](/fr/docs/Web/Media/Formats) v
 _Cette interface hérite des propriétés de ses interfaces ancêtres :_ _{{domxref("HTMLMediaElement")}} et_ _{{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLVideoElement.height")}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut HTML {{htmlattrxref("height", "video")}} indiquant la hauteur de la zone d'affichage, en pixels.
+  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut HTML [`height`](/fr/docs/Web/HTML/Element/video#height) indiquant la hauteur de la zone d'affichage, en pixels.
 - {{domxref("HTMLVideoElement.poster")}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut {{htmlattrxref("poster", "video")}} qui indique une image à afficher tant qu'aucune donnée vidéo n'est disponible.
+  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut [`poster`](/fr/docs/Web/HTML/Element/video#poster) qui indique une image à afficher tant qu'aucune donnée vidéo n'est disponible.
 - {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
   - : Un entier non signé qui indique la hauteur intrinsèque de la ressource, exprimée en pixels CSS, ou 0 tant que le média n'est pas disponible.
 - {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
   - : Un entier non signé qui indique la largeur intrinsèque de la ressource, exprimée en pixels CSS, ou 0 tant que le média n'est pas disponible.
 - {{domxref("HTMLVideoElement.width")}}
-  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut HTML {{htmlattrxref("width", "video")}} indiquant la largeur de la zone d'affichage, en pixels.
+  - : Une chaîne de caractères {{domxref("DOMString")}} qui reflète la valeur de l'attribut HTML [`width`](/fr/docs/Web/HTML/Element/video#width) indiquant la largeur de la zone d'affichage, en pixels.
 
 ### Propriétés spécifiques à Gecko
 

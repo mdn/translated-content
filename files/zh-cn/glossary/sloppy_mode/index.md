@@ -3,6 +3,8 @@ title: 正常模式
 slug: Glossary/Sloppy_mode
 ---
 
+{{GlossarySidebar}}
+
 因为翻译原因，正常模式也被翻译为——马虎模式/稀松模式/懒散模式
 
 {{Glossary("ECMAScript")}} 5 以及其后续的版本可以选择性的使用一种新模式——严格模式 ([strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode))，这种严格模式在多个方面改变了 JavaScript 的语义，从而使得当出现问题时我们更好的理解到底发生了什么。

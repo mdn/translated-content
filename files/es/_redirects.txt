@@ -1705,6 +1705,7 @@
 /es/docs/Web/API/ParentNode/childElementCount	/es/docs/Web/API/Element/childElementCount
 /es/docs/Web/API/Position	/es/docs/Web/API/GeolocationPosition
 /es/docs/Web/API/PositionOptions	/es/docs/conflicting/Web/API/Geolocation/getCurrentPosition
+/es/docs/Web/API/PushManager/supportedContentEncodings	/es/docs/Web/API/PushManager/supportedContentEncodings_static
 /es/docs/Web/API/RandomSource/Obtenervaloresaleatorios	/es/docs/Web/API/Crypto/getRandomValues
 /es/docs/Web/API/SubtleCrypto/encrypt	/es/docs/Web/HTTP/Headers/Digest
 /es/docs/Web/API/UIEvent/pageX	/es/docs/Web/API/MouseEvent/pageX
@@ -2730,9 +2731,10 @@
 /es/docs/Web/Performance/mejorando_rendimienot_inicial	/es/docs/Web/Performance/Optimizing_startup_performance
 /es/docs/Web/Progressive_web_apps/App_structure	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 /es/docs/Web/Progressive_web_apps/Developer_guide	/es/docs/orphaned/Web/Progressive_web_apps/Developer_guide
-/es/docs/Web/Progressive_web_apps/Developer_guide/Instalar	/es/docs/Web/Progressive_web_apps/Installing
-/es/docs/Web/Progressive_web_apps/Developer_guide/Installing	/es/docs/Web/Progressive_web_apps/Installing
+/es/docs/Web/Progressive_web_apps/Developer_guide/Instalar	/es/docs/Web/Progressive_web_apps/Guides/Installing
+/es/docs/Web/Progressive_web_apps/Developer_guide/Installing	/es/docs/Web/Progressive_web_apps/Guides/Installing
 /es/docs/Web/Progressive_web_apps/Installable_PWAs	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
+/es/docs/Web/Progressive_web_apps/Installing	/es/docs/Web/Progressive_web_apps/Guides/Installing
 /es/docs/Web/Progressive_web_apps/Introduction	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
 /es/docs/Web/Progressive_web_apps/Loading	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading
 /es/docs/Web/Progressive_web_apps/Offline_Service_workers	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers

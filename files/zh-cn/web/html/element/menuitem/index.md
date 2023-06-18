@@ -108,8 +108,8 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat}}
+不再被任何浏览器支持。唯一支持过该元素的浏览器 Firefox 在版本 85 时也移除了支持。
 
 ## 参见
 
-- [HTML5 context menus in Firefox (Screencast and Code)](https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/)
+- [HTML context menus in Firefox (Screencast and Code)](https://hacks.mozilla.org/2011/11/html5-context-menus-in-firefox-screencast-and-code/)

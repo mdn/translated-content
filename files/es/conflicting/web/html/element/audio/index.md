@@ -14,13 +14,13 @@ El elemento HTML de sonido de fondo (\<bgsound>) es un elemento de Internet Expl
 
 ## Atributos
 
-- {{htmlattrdef("balance")}}
+- `balance`
   - : Este atributo define un número entre -10,000 y + 10,000 que determina como el volumen será dividido entre los altavoces .
-- {{htmlattrdef("loop")}}
+- `loop`
   - : Este atributo indica el número de veces que un soinido será reproducido ya sea como un valor numérico o la palabra clave _infinite_ .
-- {{htmlattrdef("src")}}
+- `src`
   - : Este atributo especifica la URL del archivo de sonido que será reproducido , el cual debe ser uno de los siguientes tipos : wav, .au, o .mid.
-- {{htmlattrdef("volume")}}
+- `volume`
   - : Este atributo define un número entre -10,000 y 0 que determina la fuerza del sonido de fondo de una página .
 
 ## Ejemplo

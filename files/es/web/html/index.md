@@ -50,11 +50,11 @@ El [Área de aprendizaje de HTML](/es/docs/Learn/HTML) incluye varios módulos q
 ## Temas avanzados
 
 - [Imagen compatible con CORS](/es/docs/Web/HTML/CORS_enabled_image)
-  - : El atributo {{HTMLAttrxRef("crossorigin", "img")}}, en combinación con un encabezado {{Glossary("CORS")}} apropiado, permite imágenes definidas por el elemento {{HTMLElement("img")}} que se cargarán desde orígenes externos y se utilizarán en un elemento {{HTMLElement("canvas")}} como si se estuvieran cargando desde el origen actual.
+  - : El atributo [`crossorigin`](/es/docs/Web/HTML/Element/img#crossorigin), en combinación con un encabezado {{Glossary("CORS")}} apropiado, permite imágenes definidas por el elemento {{HTMLElement("img")}} que se cargarán desde orígenes externos y se utilizarán en un elemento {{HTMLElement("canvas")}} como si se estuvieran cargando desde el origen actual.
 - [Atributos de configuración de CORS](/es/docs/Web/HTML/CORS_settings_attributes)
   - : Algunos elementos HTML que brindan soporte para [CORS](/es/docs/Web/HTTP/CORS), como {{HTMLElement("img")}} o {{HTMLElement("video")}}, tienen un atributo `crossorigin` (propiedad `crossOrigin`), que te permite configurar las solicitudes CORS para los datos extraídos del elemento.
 - [Precarga de contenido con rel='preload'](/es/docs/Web/HTML/Preloading_content)
-  - : El valor de `preload` del atributo {{HTMLElement("link")}} del elemento {{HTMLAttrxRef("rel", "link")}} te permite escribir solicitudes de recuperación declarativas en tu HTML {{HTMLElement("head")}}, que especifican los recursos que tus páginas necesitarán muy pronto después de la carga, que por lo tanto deseas comenzar a precargar al principio del ciclo de vida de la carga de una página, antes de la representación principal del navegador la maquinaria entra en acción. Esto asegura que estén disponibles antes y es menos probable que bloqueen el primer procesamiento de la página, lo que lleva a mejoras de rendimiento. Este artículo proporciona una guía básica sobre cómo funciona `preload`.
+  - : El valor de `preload` del atributo {{HTMLElement("link")}} del elemento [`rel`](/es/docs/Web/HTML/Element/link#rel) te permite escribir solicitudes de recuperación declarativas en tu HTML {{HTMLElement("head")}}, que especifican los recursos que tus páginas necesitarán muy pronto después de la carga, que por lo tanto deseas comenzar a precargar al principio del ciclo de vida de la carga de una página, antes de la representación principal del navegador la maquinaria entra en acción. Esto asegura que estén disponibles antes y es menos probable que bloqueen el primer procesamiento de la página, lo que lleva a mejoras de rendimiento. Este artículo proporciona una guía básica sobre cómo funciona `preload`.
 
 ## Referencias
 

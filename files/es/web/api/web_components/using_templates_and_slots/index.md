@@ -89,7 +89,7 @@ Así que, si queremos agregar un slot dentro de nuestro ejemplo sencillo, podemo
 
 Si el contenido del slot no está definido cuando el elemento se agrega al marcado, o si el navegador no soporta el elemento slot, `<my-paragraph>` solo contiene el texto alternativo "Mi texto predeterminado".
 
-Para definir el contenido de un slot, incluimos una estructura HTML dentro del elemento `<my-paragraph>` con un atributo {{htmlattrxref("slot")}} cuyo valor es igual al nombre del slot que queremos rellenar. Al igual que antes, esto puede ser cualquier cosa, por ejemplo:
+Para definir el contenido de un slot, incluimos una estructura HTML dentro del elemento `<my-paragraph>` con un atributo [`slot`](/es/docs/Web/HTML/Global_attributes#slot) cuyo valor es igual al nombre del slot que queremos rellenar. Al igual que antes, esto puede ser cualquier cosa, por ejemplo:
 
 ```html
 <my-paragraph>
@@ -110,7 +110,7 @@ o
 
 > **Nota:** Los elementos que pueden ser insertados en los slots son conocidos como {{domxref("Slotable")}}; cuando un elemento ha sido insertado en un slot, se dice que fue _eslotado_ por su término en inglés _slotted._
 
-> **Nota:** Un {{HTMLElement("slot")}} sin nombre se rellenará con todos los nodos secundarios de nivel superior del elemento personalizado que no tengan el atributo {{htmlattrxref("slot")}}. Esto incluye nodos de texto.
+> **Nota:** Un {{HTMLElement("slot")}} sin nombre se rellenará con todos los nodos secundarios de nivel superior del elemento personalizado que no tengan el atributo [`slot`](/es/docs/Web/HTML/Global_attributes#slot). Esto incluye nodos de texto.
 
 Y eso es todo nuestro ejemplo sencillo. Si quieres jugar con él un poco más, puedes encontrarlo en [GitHub](https://github.com/mdn/web-components-examples/tree/master/simple-template) (también puedes [verlo en vivo](https://mdn.github.io/web-components-examples/simple-template/)).
 
@@ -164,7 +164,7 @@ En primer lugar, usamos el elemento {{HTMLElement("slot")}} dentro de un element
 Ese elemento {{HTMLElement("template")}} tiene varias características.
 
 - El {{HTMLElement ("template")}} tiene un elemento {{HTMLElement ("style")}} con un conjunto de estilos CSS ajustados al ámbito del fragmento de documento que {{HTMLElement ("template")}} crea.
-- El elemento {{HTMLElement("template")}} usa {{HTMLElement("slot")}} y su atributo {{htmlattrxref("name", "slot")}} para hacer tres [slots con el atributo name](/es/docs/Web/HTML/Element/slot#named-slot):
+- El elemento {{HTMLElement("template")}} usa {{HTMLElement("slot")}} y su atributo [`name`](/es/docs/Web/HTML/Element/slot#name) para hacer tres [slots con el atributo name](/es/docs/Web/HTML/Element/slot#named-slot):
 
   - `<slot name="element-name">`
   - `<slot name="description">`
@@ -218,7 +218,7 @@ Ahora tomaremos el elemento **`<element-details>`** para usarlo en nuestro docum
 
 Observa estos puntos sobre el fragmento anterior:
 
-- El fragento tiene dos instancias de elementos **`<element-details>`** que usan el atributo {{htmlattrxref("slot")}} para referenciar los [slots con atributo name](/es/docs/Web/HTML/Element/slot#named-slot) `"element-name"` y `"description"` que colocamos en el [shadow root](/es/docs/Web/API/ShadowRoot) del `<element-details>`
+- El fragento tiene dos instancias de elementos **`<element-details>`** que usan el atributo [`slot`](/es/docs/Web/HTML/Global_attributes#slot) para referenciar los [slots con atributo name](/es/docs/Web/HTML/Element/slot#named-slot) `"element-name"` y `"description"` que colocamos en el [shadow root](/es/docs/Web/API/ShadowRoot) del `<element-details>`
 - Solo el primero de esos dos elementos **`<element-details>`** hace referencia a los `"attributes"` de [slot con atributo name.](/es/docs/Web/HTML/Element/slot#named-slot)El segundo elemento `<element-details>` carece de cualquier referencia a `"attributes"` de [slot con atributo name](/es/docs/Web/HTML/Element/slot#named-slot).
 - El primer elemento `<element-details>` está referenciando los `"attributes"` de [slot con atributo name](/es/docs/Web/HTML/Element/slot#named-slot) usando un elemento {{HTMLElement("dl")}} con {{HTMLElement("dt")}} y {{HTMLElement("dd")}} como hijos.
 

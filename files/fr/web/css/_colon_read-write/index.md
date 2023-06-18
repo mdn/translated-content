@@ -25,7 +25,7 @@ input:read-write {
 }
 ```
 
-> **Note :** Ce sélecteur ne sélectionne pas que les champs de saisie textuels ({{HTMLElement("input")}} ou {{HTMLElement("textarea")}}). Il permet de sélectionner n'importe quel élément qui peut être édité par l'utilisateur (par exemple un élément {{htmlelement("p")}} avec un attribut {{htmlattrxref("contenteditable")}}).
+> **Note :** Ce sélecteur ne sélectionne pas que les champs de saisie textuels ({{HTMLElement("input")}} ou {{HTMLElement("textarea")}}). Il permet de sélectionner n'importe quel élément qui peut être édité par l'utilisateur (par exemple un élément {{htmlelement("p")}} avec un attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable)).
 
 ## Syntaxe
 
@@ -68,4 +68,4 @@ p[contenteditable="true"] { color: blue; }
 ## Voir aussi
 
 - {{cssxref(":read-only")}}
-- L'attribut HTML {{htmlattrxref("contenteditable")}}
+- L'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable)

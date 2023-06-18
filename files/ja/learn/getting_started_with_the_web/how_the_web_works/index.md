@@ -2,7 +2,7 @@
 title: ウェブのしくみ
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
 l10n:
-  sourceCommit: 281934f1f2deb6612a939f8248f7be89ea321843
+  sourceCommit: 2a05d41787da87b54d662d5d6937afaadc42b2ef
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
@@ -13,7 +13,7 @@ l10n:
 
 ## クライアントとサーバー
 
-ウェブに接続されたコンピューターは**クライアント** (client) と**サーバー** (server) と呼ばれます。これらがどのように相互作用するかを概略図で表すと次のようになります。
+インターネットに接続されたコンピューターは**クライアント** (client) と**サーバー** (server) と呼ばれます。これらがどのように相互作用するかを概略図で表すと次のようになります。
 
 ![クライアントとサーバーを表す 2 つの円。リクエストと書かれた矢印は、クライアントからサーバーへ、レスポンスと書かれた矢印は、サーバーからクライアントへと向かっている。](simple-client-server.png)
 
@@ -33,7 +33,7 @@ l10n:
 - **インターネット接続**: ウェブ上でデータの送受信をできるようにします。あなたの自宅とお店との間の通りのようなものです。
 - **TCP/IP**: Transmission Control Protocol と Internet Protocol は、どのようにウェブ上をデータが動くのか、を定義した通信プロトコルです。これは注文したり、店に行ったり、物を買ったりするための通信手段や交通機関のようなものです。身近な例では、車やバイク (またはその辺りにあるもの) のようなものです。
 - **DNS**: Domain Name System はウェブサイトの住所録のようなものです。ブラウザーにウェブアドレスを入力すると、ブラウザーはウェブサイトを取得する前に DNS を見て、ウェブサイトの IP アドレスを探します。ブラウザーはウェブサイトがどのサーバーにいるかを探し出す必要があり、それで HTTP のメッセージを正しい場所（下記参照）に送ることができます。これはお店の所在地を探してからお店に行くようなものです。
-- **HTTP**: Hypertext Transfer Protocol は、クライアントとサーバーが対話をする方法を定義するアプリケーション{{Glossary("Protocol" , "プロトコル")}}です。これは商品を注文するための言語のようなものです。
+- **HTTP**: Hypertext Transfer Protocol は、クライアントとサーバーが対話をする方法を定義するアプリケーション{{Glossary("Protocol", "プロトコル")}}です。これは商品を注文するための言語のようなものです。
 - **コンポーネントファイル**: ウェブサイトは多くの異なるファイルで構成されます。これはお店で複数の部品を買うようなものです。これらのファイルは主に 2 種類に当てはまります。
 
   - **コードファイル**: ウェブサイトは主に HTML、CSS、JavaScript から作られます。しかし、ちょっと後で他の技術にも出会うことになるでしょう。
@@ -61,7 +61,7 @@ l10n:
 
 実際のウェブアドレスは、お気に入りのウェブサイトを見つけるためにアドレスバーに入力するような、すばらしい、覚えやすい文字列ではありません。実際のウェブアドレスは `63.245.215.20` のような特殊な数字です。
 
-これは、 {{Glossary("IP Address", "IP アドレス")}}と呼ばれ、ウェブ上の一意の場所を表します。しかし、あまり覚えやすくはないですね。だから、ドメインネームサーバーが発明されました。これらは特別なサーバーで、ブラウザーに入力したウェブアドレス（"mozilla.org" など）とウェブサイトの実際の (IP) アドレスを対応させます。
+これは、 {{Glossary("IP Address", "IP アドレス")}}と呼ばれ、ウェブ上の一意の場所を表します。しかし、あまり覚えやすくはないですね。それが、ドメインネームシステムが発明された理由です。このシステムは、特別なサーバーを使用して、ブラウザーに入力されたウェブアドレス（"mozilla.org" など）とウェブサイトの実際の (IP) アドレスを対応させます。
 
 ウェブサイトには、 IP アドレスを使用して直接アクセスできます。 [DNS lookup ツール](https://www.nslookup.io/website-to-ip-lookup/)を使用して、ウェブサイトの IP アドレスを知ることができます。
 
@@ -71,9 +71,9 @@ l10n:
 
 ## 関連情報
 
-- [インターネットはどのように動くのか](/ja/docs/Learn/Common_questions/How_does_the_Internet_work)
+- [インターネットはどのように動くのか](/ja/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
 - [HTTP — an Application-Level Protocol](https://dev.opera.com/articles/http-basic-introduction/)
-- [HTTP: Let’s GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
+- [HTTP: Let's GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: Response Codes](https://dev.opera.com/articles/http-response-codes/)
 
 ## クレジット表示
