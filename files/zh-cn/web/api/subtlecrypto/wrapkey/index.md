@@ -41,7 +41,7 @@ wrapKey(format, key, wrappingKey, wrapAlgo)
     - 对于 [AES-CTR](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-ctr)，请传入 [`AesCtrParams`](/zh-CN/docs/Web/API/AesCtrParams) 对象。
     - 对于 [AES-CBC](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-cbc)，请传入 [`AesCbcParams`](/zh-CN/docs/Web/API/AesCbcParams) 对象。
     - 对于 [AES-GCM](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#aes-gcm)，请传入 [`AesGcmParams`](/zh-CN/docs/Web/API/AesGcmParams) 对象。
-    - 对于 [AES-KW](#aes-kw)，请传入字符串 `"AES-KW"`，或 `{ "name": "AES-KW }` 形式的对象。
+    - 对于 [AES-KW](#aes-kw)，请传入字符串 `"AES-KW"`，或 `{ "name": "AES-KW" }` 形式的对象。
 
 ### 返回值
 
