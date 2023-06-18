@@ -214,11 +214,11 @@ selector {
 - {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}
   - : 锥形渐变是在一个圆周上逐步过渡颜色。
 - {{CSSxRef("gradient/repeating-linear-gradient","repeating-linear-gradient()")}}
-  - : 类似于 `linear-gradient()`，接受相同的参数，但它在所有方向上无限重复颜色停止，以覆盖其整个容器。
+  - : 类似于 `linear-gradient()`，接受相同的参数，但它在所有方向上无限重复使用色标，以覆盖其整个容器。
 - {{CSSxRef("gradient/repeating-radial-gradient","repeating-radial-gradient()")}}
-  - : 类似于 `radial-gradient()`，接受相同的参数，但它在所有方向上无限重复颜色停止，以覆盖其整个容器。
+  - : 类似于 `radial-gradient()`，接受相同的参数，但它在所有方向上无限重复使用色标，以覆盖其整个容器。
 - {{CSSxRef("gradient/repeating-conic-gradient","repeating-conic-gradient()")}}
-  - : 类似于 `conic-gradient()`，接受相同的参数，但它在所有方向上无限重复颜色停止，以覆盖其整个容器。
+  - : 类似于 `conic-gradient()`，接受相同的参数，但它在所有方向上无限重复使用色标，以覆盖其整个容器。
 
 ### 图像函数
 
