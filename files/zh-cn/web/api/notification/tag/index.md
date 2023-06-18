@@ -5,23 +5,17 @@ slug: Web/API/Notification/tag
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-The **`tag`** read-only property of the
-{{domxref("Notification")}} interface signifies an identifying tag for the notification,
-as specified in the `tag` option of the
-{{domxref("Notification.Notification","Notification()")}} constructor.
+{{domxref("Notification")}} 接口的 **`tag`** 只读属性表示通知的识别标签，在 {{domxref("Notification. Notification","Notification()")}} 构造函数的 `tag` 选项中指定。
 
-The idea of notification tags is that more than one notification can share the same
-tag, linking them together. One notification can then be programmatically replaced with
-another to avoid the users' screen being filled up with a huge number of similar
-notifications.
+通知的标签的构想是多个通知可以共享同一个标签，将它们链接在一起。然后可以通过编程方式将一个通知替换为另一个通知，以避免用户的屏幕被大量类似的通知填满。
 
 ## 值
 
-A string.
+一个字符串。
 
 ## 示例
 
-Our [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API#dealing_with_repeated_notifications) article has a good example of tag usage.
+我们的[使用通知 API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API#dealing_with_repeated_notifications) 文章有一个很好的标签属性的使用示例。
 
 ## 规范
 
