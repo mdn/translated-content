@@ -32,7 +32,7 @@ Matrix 聊天室是 Discord 服务器的替代品。
 
 MDN Web 文档的 [GitHub 讨论](https://github.com/orgs/mdn/discussions)是一个寻找任何有关项目[公告](https://github.com/orgs/mdn/discussions/categories/announcements)的地方。
 
-使用 GitHub 讨论来发布你的问题和建议。在开始一个话题时，请选择适当的[讨论类别](https://github.com/mdn/mdn-community#github-discussions)。你的回答问题可能对其他人在未来寻找类似信息时非常有用。
+使用 GitHub 讨论来发布你的问题和建议。在开始一个话题时，请选择适当的[讨论类别](https://github.com/mdn/mdn-community#github-discussions)。你得到回答的问题可能对其他人在未来寻找类似信息时非常有用。
 
 我们强烈建议你使用 GitHub 讨论来分享你计划进行的工作，以及你认为需要就行动方案达成共识的工作。你也可以使用 GitHub 讨论来谈论你的想法，以制定可行的工作内容，特别是当这些更改具有广泛的影响时。
 
