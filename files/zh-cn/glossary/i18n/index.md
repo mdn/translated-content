@@ -3,6 +3,8 @@ title: I18N
 slug: Glossary/I18N
 ---
 
+{{GlossarySidebar}}
+
 i18n（取自 "internationalization", 共 20 个字母）是让产品或服务更容易适应各种文化的最佳实践。
 
 > **国际化**是指在设计和开发产品、应用或文档内容时，为不同文化、地区或语言的目标受众提供方便的本地化服务。（{{Glossary("W3C")}} 定义）

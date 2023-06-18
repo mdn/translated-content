@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor
 
 {{JSRef}}
 
-**`Object.getOwnPropertyDescriptor()`** 静态方法返回一个对象，该对象描述给定对象上特定属性的配置（即直接存在于对象上而不在对象的原型链中的属性）。返回的对象是可变的，但对其进行更改不会影响原始属性的配置。
+**`Object.getOwnPropertyDescriptor()`** 静态方法返回一个对象，该对象描述给定对象上特定属性（即直接存在于对象上而不在对象的原型链中的属性）的配置。返回的对象是可变的，但对其进行更改不会影响原始属性的配置。
 
 {{EmbedInteractiveExample("pages/js/object-getownpropertydescriptor.html")}}
 
@@ -43,11 +43,11 @@ Object.getOwnPropertyDescriptor(obj, prop)
 - `configurable`
   - : 当且仅当此属性描述符的类型可以更改且该属性可以从相应对象中删除时，为 `true`。
 - `enumerable`
-  - : 当且仅当此属性在相应对象的属性枚举中显示时，为 `true`。
+  - : 当且仅当此属性在相应对象的属性枚举中出现时，为 `true`。
 
 ## 示例
 
-### 使用 Object.getOwnPropertyDescriptor
+### 使用 Object.getOwnPropertyDescriptor()
 
 ```js
 let o, d;

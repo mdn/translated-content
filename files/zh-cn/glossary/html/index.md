@@ -3,6 +3,8 @@ title: HTML
 slug: Glossary/HTML
 ---
 
+{{GlossarySidebar}}
+
 HTML（HyperText Markup Language，超文本标记语言）是一种描述语言，用来定义网页结构。
 
 ## 发展历史

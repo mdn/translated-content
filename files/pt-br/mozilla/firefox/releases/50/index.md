@@ -14,7 +14,7 @@ Nenhuma mudança.
 
 ### HTML
 
-- For compatibility purposes, the non-standard {{HTMLattrxref("webkitdirectory", "input")}} attribute of the {{HTMLElement("input")}} element, as well as the property {{domxref("HTMLInputElement.webkitDirectory")}} property, have been implemented ({{bug(1258489)}}).
+- For compatibility purposes, the non-standard [`webkitdirectory`](/pt-BR/docs/Web/HTML/Element/input#webkitdirectory) attribute of the {{HTMLElement("input")}} element, as well as the property {{domxref("HTMLInputElement.webkitDirectory")}} property, have been implemented ({{bug(1258489)}}).
 - The default style of {{HTMLElement("bdo")}} now has a {{cssxref("unicode-bidi")}} with the `isolate-override` value ({{bug(1249497)}}).
 
 ### CSS
@@ -89,7 +89,7 @@ _No change._
 
 ## Networking
 
-- The {{htmlattrxref("ping", "a")}} attribute of {{htmlelement("a")}} element is now abiding by the [`connect-src`](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives#connect-src) [CSP 1.1 policy directive](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives) ({{bug(1100181)}}).
+- The [`ping`](/pt-BR/docs/Web/HTML/Element/a#ping) attribute of {{htmlelement("a")}} element is now abiding by the [`connect-src`](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives#connect-src) [CSP 1.1 policy directive](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives) ({{bug(1100181)}}).
 - Support of the [`sandbox`](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives#sandbox) [CSP](/pt-BR/docs/Web/Security/CSP) directive has been added ({{bug(671389)}}).
 
 ## Segurança

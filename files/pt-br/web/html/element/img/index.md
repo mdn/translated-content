@@ -19,7 +19,7 @@ O **elemento** **HTML `<img>` **(or _HTML Image Element_) representa a inserçã
 > **Note:** **Usage note:**
 > Navegadores nem sempre exibem a imagem referenciada pelo elemento. Este é o caso para navegadores não gráficos (incluindo aqueles usados por pessoas com deficiência de visão), ou se o usuário optar por não exibir imagens ou se o navegador não conseguir exibir a imagem porque é inválido ou um tipo não suportado. Nesses casos, o navegador pode substituir a imagem pelo texto definido no atributo **alt** deste elemento.
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), embedded content, palpable content. If the element has a {{htmlattrxref("usemap", "img")}} attribute, it also is a part of the interactive content category.
+- _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), embedded content, palpable content. If the element has a [`usemap`](/pt-BR/docs/Web/HTML/Element/img#usemap) attribute, it also is a part of the interactive content category.
 - _Permitted content_ None, it is an {{Glossary("empty element")}}.
 - _Tag omission_ Must have a start tag and must not have an end tag.
 - _Permitted parent elements_ Any element that accepts embedded content.
@@ -58,12 +58,12 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 
   - : This Boolean attribute indicates that the image is part of a server-side map. If so, the precise coordinates of a click are sent to the server.
 
-    > **Note:** **Usage note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid {{htmlattrxref("href","a")}} attribute.
+    > **Note:** **Usage note:** This attribute is allowed only if the `<img>` element is a descendant of an {{htmlelement("a")}} element with a valid [`href`](/pt-BR/docs/Web/HTML/Element/a#href) attribute.
 
 - {{htmlattrdef("longdesc")}} {{deprecated_inline}}
-  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element {{htmlattrxref("id")}}.
+  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id).
 - {{htmlattrdef("name")}} {{deprecated_inline}}
-  - : A name for the element. Use the {{htmlattrxref("id")}} attribute instead.
+  - : A name for the element. Use the [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id) attribute instead.
 - {{htmlattrdef("src")}}
   - : Image URL, this attribute is obligatory for the `<img>` element. On browsers supporting **srcset**, **src** is ignored if this one is provided.
 - {{htmlattrdef("srcset")}}
@@ -183,7 +183,7 @@ Quando o atributo `alt` não estiver presente em uma imagem, alguns programas le
 
 ### O atributo title
 
-O atributo {{htmlattrxref("title")}} não é um substituto aceitável para o atributo `alt`. Além disso, evite duplicar o valor do atributo `alt` no atributo `title` para uma mesma imagem. Isso pode fazer com que alguns programas leitores de tela narrem duas vezes a descrição, o que pode criar uma experiência confusa para usuários.
+O atributo [`title`](/pt-BR/docs/Web/HTML/Global_attributes#title) não é um substituto aceitável para o atributo `alt`. Além disso, evite duplicar o valor do atributo `alt` no atributo `title` para uma mesma imagem. Isso pode fazer com que alguns programas leitores de tela narrem duas vezes a descrição, o que pode criar uma experiência confusa para usuários.
 
 Evite usar o atributo `title` como uma forma suplementar de legenda para a descrição do `alt`. Caso a imagem precise de uma legenda, prefisa os elementos [`figure`](/pt-BR/docs/Web/HTML/Element/figure) e [`figcaption`](/pt-BR/docs/Web/HTML/Element/figcaption).
 

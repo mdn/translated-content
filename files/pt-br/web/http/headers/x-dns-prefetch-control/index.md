@@ -52,7 +52,7 @@ Além disso, por padrão, a pré-busca de nomes de host de link incorporado não
 
 ### Ativando e desativando a pré-busca
 
-Você pode enviar o cabeçalho do lado do servidor X-DNS-Prefetch-Control ou de documentos individuais, usando o atributo {{htmlattrxref ("http-equiv", "meta")}} no {{HTMLElement ("meta" )}} elemento, assim:
+Você pode enviar o cabeçalho do lado do servidor X-DNS-Prefetch-Control ou de documentos individuais, usando o atributo [`http-equiv`](/pt-BR/docs/Web/HTML/Element/meta#http-equiv) no {{HTMLElement ("meta" )}} elemento, assim:
 
 ```html
 <meta http-equiv="x-dns-prefetch-control" content="off">
@@ -62,7 +62,7 @@ Você pode reverter essa configuração configurando o `content` como "`on`".
 
 ### Forçando a procura de nomes de host específicos
 
-Você pode forçar a pesquisa de nomes de host específicos sem fornecer âncoras específicas usando esse nome de host com o uso de {{htmlattrxref ("rel", "link")}} no elemento {{HTMLElement ("link")}} com um tipo de link de `dns-prefetch`:
+Você pode forçar a pesquisa de nomes de host específicos sem fornecer âncoras específicas usando esse nome de host com o uso de [`rel`](/pt-BR/docs/Web/HTML/Element/link#rel) no elemento {{HTMLElement ("link")}} com um tipo de link de `dns-prefetch`:
 
 ```html
 <link rel="dns-prefetch" href="http://www.spreadfirefox.com/">

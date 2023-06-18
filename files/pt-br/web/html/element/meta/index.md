@@ -16,7 +16,7 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
       </th>
       <td>
         Conteúdo de metadado. Se o
-        {{htmlattrxref("itemprop", "meta")}} atributo estiver
+        <a href="/pt-BR/docs/Web/HTML/Element/meta#itemprop"><code>itemprop</code></a> atributo estiver
         presente:
         <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
@@ -42,7 +42,7 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
       <td>
         <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code>:
         um elemento {{HTMLElement("head")}}. Se o
-        {{htmlattrxref("http-equiv", "meta")}} não for uma
+        <a href="/pt-BR/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> não for uma
         declaração de codificação, ele pode estar dentro de um elemento
         {{HTMLElement("noscript")}}, dentro de um elemento
         {{HTMLElement("head")}}.
@@ -63,7 +63,7 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
 
 Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-> **Nota:** o atributo global {{htmlattrxref("name", "meta")}} tem um significado específico para o elemento {{HTMLElement("meta")}}, e o atributo {{htmlattrxref("itemprop", "meta")}} não deve ser definido no mesmo elemento`<meta>` que tem algum desses atributos existentes: {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}}.
+> **Nota:** o atributo global [`name`](/pt-BR/docs/Web/HTML/Element/meta#name) tem um significado específico para o elemento {{HTMLElement("meta")}}, e o atributo [`itemprop`](/pt-BR/docs/Web/HTML/Element/meta#itemprop) não deve ser definido no mesmo elemento`<meta>` que tem algum desses atributos existentes: [`name`](/pt-BR/docs/Web/HTML/Element/meta#name), [`http-equiv`](/pt-BR/docs/Web/HTML/Element/meta#http-equiv) ou [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset).
 
 - {{htmlattrdef("charset")}}
 
@@ -80,13 +80,13 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     > - Esse elemento {{HTMLElement ("meta")}} deve estar dentro do elemento {{HTMLElement ("head")}} e dentro dos primeiros 1024 bytes da página, pois alguns navegadores só olham para esses primeiros bytes antes de escolher um caractere definido para a página.
     > - Esse elemento {{HTMLElement ("meta")}} é apenas uma parte do algoritmo para determinar o conjunto de caracteres de uma página que os navegadores aplicam. O cabeçalho HTTP Content-Type e quaisquer elementos da BOM têm precedência sobre esse elemento.
     > - É uma boa prática, e altamente recomendável, definir o conjunto de caracteres usando este atributo. Se nenhum conjunto de caracteres estiver definido para uma página, várias técnicas de scripts cruzados poderão prejudicar o usuário da página, como a técnica de cross-scripting de fallback UTF-7. Sempre definindo esta meta irá proteger contra esses riscos.
-    > - Esse elemento {{HTMLElement("meta")}} é um sinônimo para o pre-HTML5 `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` onde o atributo `IANAcharset` corresponde ao valor equivalente de {{htmlattrxref("charset", "meta")}}. Essa sintaxe ainda é permitida, embora obsoleta e não mais recomendada.
+    > - Esse elemento {{HTMLElement("meta")}} é um sinônimo para o pre-HTML5 `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` onde o atributo `IANAcharset` corresponde ao valor equivalente de [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset). Essa sintaxe ainda é permitida, embora obsoleta e não mais recomendada.
 
 - {{htmlattrdef("content")}}
-  - : Esse atributo fornece o valor associado ao atributo {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("name", "meta")}}, dependendo do contexto.
+  - : Esse atributo fornece o valor associado ao atributo [`http-equiv`](/pt-BR/docs/Web/HTML/Element/meta#http-equiv) ou [`name`](/pt-BR/docs/Web/HTML/Element/meta#name), dependendo do contexto.
 - {{htmlattrdef("http-equiv")}}
 
-  - : Este enumerado atributo define a pragma isso pode alterar o comportamento de servers e user-agents. o valor do pragma é definido usando {{htmlattrxref("content", "meta")}} e pode ser um dos seguintes:
+  - : Este enumerado atributo define a pragma isso pode alterar o comportamento de servers e user-agents. o valor do pragma é definido usando [`content`](/pt-BR/docs/Web/HTML/Element/meta#content) e pode ser um dos seguintes:
 
     - `"content-language"`
 
@@ -100,19 +100,19 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
       - : Esse atributo define o [MIME type](/pt-BR/docs/MIME) e o conjunto de caracteres do documento. Isso segue a mesma sintaxe como o HTTP `content-type` entity-header field, mas isto esta dentro de um elemento HTML, a maioria dos valores não é possível. Sendo assim a sintaxe válida para este conteúdo é a literal string '`text/html`' eventualmente seguido por estes caracteres com a seguinte sintaxe: '`; charset=`_`IANAcharset`_' onde `IANAcharset` é o _MIME preferido nome para um conjunto de caracteres como_ [definido pela IANA.](https://www.iana.org/assignments/character-sets)
 
-        > **Note:** **nota de uso:**- Nao use esta pragma ela esta obsoleta. use {{htmlattrxref("charset", "meta")}} atributo {{HTMLElement("meta")}} element instead.
+        > **Note:** **nota de uso:**- Nao use esta pragma ela esta obsoleta. use [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset) atributo {{HTMLElement("meta")}} element instead.
         >
         > - como o {{HTMLElement("meta")}} pode nao ser usado para mudar o tipo de documento no XHTML, ou em um documento de HTML5 seguindo uma syntax de XHTML, nunca marque MIME type para um XHTML MIME type desta forma. isso sera incoerente.
-        > - somente um documento HTML pode usar o content-type, então a maioria disto é redundante: isso porque esta obsoleto e trocado pelo atributo {{htmlattrxref("charset", "meta")}}.
+        > - somente um documento HTML pode usar o content-type, então a maioria disto é redundante: isso porque esta obsoleto e trocado pelo atributo [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset).
 
     - `"default-style"`
-      - : Este pragma preferencia de stylesheet a ser usado na página. o atributo {{htmlattrxref("content", "meta")}} deve conter o **title** de um {{HTMLElement("link")}} elemento de quem {{htmlattrxref("href", "link")}} atributo link um CSS stylesheet, ou um **title** de um elemento {{HTMLElement("style")}} do qual contem um [CSS](/pt-BR/docs/Web/CSS) stylesheet.
+      - : Este pragma preferencia de stylesheet a ser usado na página. o atributo [`content`](/pt-BR/docs/Web/HTML/Element/meta#content) deve conter o **title** de um {{HTMLElement("link")}} elemento de quem [`href`](/pt-BR/docs/Web/HTML/Element/link#href) atributo link um CSS stylesheet, ou um **title** de um elemento {{HTMLElement("style")}} do qual contem um [CSS](/pt-BR/docs/Web/CSS) stylesheet.
     - `"refresh"`
 
       - : este pragma especifica:
 
-        - o numero de segundos até a página ser recarregada, se o atributo {{htmlattrxref("content", "meta")}} contém apenas um número inteiro não negativo;
-        - o número de segundos até a página ser redirecionada para outro lugar, se o atributo {{htmlattrxref("content", "meta")}} contém um inteiro não negativo seguido de uma string '`;url=`' e uma URL válida.
+        - o numero de segundos até a página ser recarregada, se o atributo [`content`](/pt-BR/docs/Web/HTML/Element/meta#content) contém apenas um número inteiro não negativo;
+        - o número de segundos até a página ser redirecionada para outro lugar, se o atributo [`content`](/pt-BR/docs/Web/HTML/Element/meta#content) contém um inteiro não negativo seguido de uma string '`;url=`' e uma URL válida.
 
     - `"set-cookie"`
 
@@ -122,8 +122,8 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 - {{htmlattrdef("name")}}
 
-  - : Este atributo define o nome do document-level metadata. Isso não deve ser marcado se um dos atributos {{htmlattrxref("itemprop", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}} já estiver preparado.
-    este document-level metadata name é associado a um valor, contido pelo atributo {{htmlattrxref("content", "meta")}}. os possíveis valores para o elemento name são, com seu valor associado, guardado via {{htmlattrxref("content", "meta")}} attribute:
+  - : Este atributo define o nome do document-level metadata. Isso não deve ser marcado se um dos atributos [`itemprop`](/pt-BR/docs/Web/HTML/Element/meta#itemprop), [`http-equiv`](/pt-BR/docs/Web/HTML/Element/meta#http-equiv) ou [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset) já estiver preparado.
+    este document-level metadata name é associado a um valor, contido pelo atributo [`content`](/pt-BR/docs/Web/HTML/Element/meta#content). os possíveis valores para o elemento name são, com seu valor associado, guardado via [`content`](/pt-BR/docs/Web/HTML/Element/meta#content) attribute:
 
     - `application-name`, define o nome da aplicação que esta rodando na página;
 
@@ -206,7 +206,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 - {{htmlattrdef("scheme")}}
 
-  - : Este atributo define o esquema no qual os metadados são descritos. Um esquema é um contexto que leva às interpretações corretas dos {{htmlattrxref("content", "meta")}} valores, como um formato.
+  - : Este atributo define o esquema no qual os metadados são descritos. Um esquema é um contexto que leva às interpretações corretas dos [`content`](/pt-BR/docs/Web/HTML/Element/meta#content) valores, como um formato.
 
     > **Note:** **Notes:** Não use este atributo pois esta obsoleto.Não há substituto para isso, pois não houve uso real para isso. Omitir completamente.
 
@@ -214,11 +214,11 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 Dependendo do conjunto escolhido, o tipo de metadata pode ser uma das seguintes:
 
-- se {{htmlattrxref("name", "meta")}} é definido, isto é _document-level_ _metadata_, aplicando para a página inteira.
-- se {{htmlattrxref("http-equiv", "meta")}} é definido, isto é um _pragma diretiva_, i.e. normalmente informação dada pelo web server sobre como a página web deve ser entregue.
-- se {{htmlattrxref("charset", "meta")}} é definido, isto é uma declaração de _charset_, i.e. o charset usado para o formulário serializado da página da Web
+- se [`name`](/pt-BR/docs/Web/HTML/Element/meta#name) é definido, isto é _document-level_ _metadata_, aplicando para a página inteira.
+- se [`http-equiv`](/pt-BR/docs/Web/HTML/Element/meta#http-equiv) é definido, isto é um _pragma diretiva_, i.e. normalmente informação dada pelo web server sobre como a página web deve ser entregue.
+- se [`charset`](/pt-BR/docs/Web/HTML/Element/meta#charset) é definido, isto é uma declaração de _charset_, i.e. o charset usado para o formulário serializado da página da Web
 
-- se {{htmlattrxref("itemprop", "meta")}} é definido, isto é _user-defined metadata_, transparente para o user-agent, pois a semântica dos metadados é específica do usuário. {{experimental_inline}}
+- se [`itemprop`](/pt-BR/docs/Web/HTML/Element/meta#itemprop) é definido, isto é _user-defined metadata_, transparente para o user-agent, pois a semântica dos metadados é específica do usuário. {{experimental_inline}}
 
 ## Exemplos
 

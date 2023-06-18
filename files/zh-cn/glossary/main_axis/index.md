@@ -3,6 +3,8 @@ title: 主轴
 slug: Glossary/Main_Axis
 ---
 
+{{GlossarySidebar}}
+
 {{glossary("flexbox", "弹性盒")}}的主轴（main axis）由 {{cssxref("flex-direction")}} 属性设置的方向所定义。`flex-direction` 有四个取值，分别是：
 
 - `row`
