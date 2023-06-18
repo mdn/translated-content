@@ -150,7 +150,7 @@ _注意_：`mdn-community/discussions` 不是报告问题的地方。对于在 M
         <a href="https://github.com/mdn/bob">BoB</a>、<a
           href="https://github.com/mdn/markdown/">markdown</a>、<a
           href="https://github.com/mdn/workflows">可重用工作流</a
-        >，等等。注意：此类别不适用于与 MDN Plus 相关特性的讨论。MDN Plus 有一个单独的讨论类别。
+        >，等等。注意：此类别不适用于 MDN Plus 相关特性的讨论。MDN Plus 有一个单独的讨论类别。
       </td>
     </tr>
     <tr>
