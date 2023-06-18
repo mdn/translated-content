@@ -5,29 +5,23 @@ slug: Web/API/Notification/vibrate
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-The `vibrate` read-only property of the {{domxref("Notification")}}
-interface specifies a [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns)
-for the device's vibration hardware to emit when the notification fires. This is
-specified in the `vibrate` option of the
-{{domxref("Notification.Notification","Notification()")}} constructor.
+{{domxref("Notification")}} 接口的 `vibrate` 只读属性指定当通知触发时设备振动硬件发出的[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)。这是在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `vibrate` 选项中指定的。
 
 ## 值
 
-A [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns), as specified in the [Vibration API spec](https://w3c.github.io/vibration/).
+一个[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)，在 [振动 API 规范](https://w3c.github.io/vibration/) 中所指定。
 
 ## 示例
 
-The following snippet is intended to create a notification that also triggers a device
-vibration; a simple `options` object is created, and then the notification is
-fired using the `Notification()` constructor.
+以下代码段旨在创建同时触发设备振动的通知；首先创建一个简单的 `options` 对象，然后使用 `Notification()` 构造函数触发通知。
 
 ```js
 const options = {
-  body: "Your code submission has received 3 new review comments.",
+  body: "您提交的代码收到了 3 条新的审阅意见。",
   vibrate: [200, 100, 200],
 };
 
-const n = new Notification("New review activity", options);
+const n = new Notification("新的评论活动", options);
 
 console.log(n.vibrate); // "[200, 100, 200]"
 ```
