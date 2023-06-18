@@ -3,6 +3,8 @@ title: JSON
 slug: Glossary/JSON
 ---
 
+{{GlossarySidebar}}
+
 _JavaScript Object Notation_ (**JSON**) 是一种数据交换格式。尽管不是严格意义上的子集，JSON 非常接近 {{Glossary("JavaScript")}} 语法的子集。
 
 许多编程语言都支持 JSON，尤其是 JavaScript，它在网站和浏览器扩展应用广泛。

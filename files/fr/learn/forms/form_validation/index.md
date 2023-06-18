@@ -109,7 +109,7 @@ Pour commencer, faites une copie de fruit-start.html dans un nouveau répertoire
 
 ### Attribut required
 
-La fonctionnalité de validation HTML5 la plus simple à utiliser est l'attribut {{htmlattrxref("required", "input")}}} — si vous voulez rendre une entrée obligatoire, vous pouvez marquer l'élément en utilisant cet attribut. Lorsque cet attribut est mis, le formulaire ne sera pas soumis (et affichera un message d'erreur) si l'entrée est vide (l'entrée sera également considérée comme invalide).
+La fonctionnalité de validation HTML5 la plus simple à utiliser est l'attribut [`required`](/fr/docs/Web/HTML/Element/input#required) — si vous voulez rendre une entrée obligatoire, vous pouvez marquer l'élément en utilisant cet attribut. Lorsque cet attribut est mis, le formulaire ne sera pas soumis (et affichera un message d'erreur) si l'entrée est vide (l'entrée sera également considérée comme invalide).
 
 Ajoutez un attribut `required` à votre saisie, comme montré ci‑dessous&nbsp;:
 
@@ -139,7 +139,7 @@ L'entrée a une bordure en pointillés rouge vif lorsqu'elle n'est pas valide, e
 
 ### Validation selon une expression régulière
 
-Une autre fonctionnalité de validation très courante est l'attribut {{htmlattrxref("pattern", "input")}}, qui attend une [expression régulière](/fr/docs/Web/JavaScript/Guide/Regular_Expressions) comme valeur. Une expression régulière (regex) est un modèle qui peut être utilisé pour faire correspondre des combinaisons de caractères dans des chaînes de texte, de sorte qu'elles sont idéales pour la validation de formulaires (ainsi que diverses autres utilisations en JavaScript). Les Regex sont assez complexes et nous n'avons pas l'intention de vous les enseigner de manière exhaustive dans cet article.
+Une autre fonctionnalité de validation très courante est l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#pattern), qui attend une [expression régulière](/fr/docs/Web/JavaScript/Guide/Regular_Expressions) comme valeur. Une expression régulière (regex) est un modèle qui peut être utilisé pour faire correspondre des combinaisons de caractères dans des chaînes de texte, de sorte qu'elles sont idéales pour la validation de formulaires (ainsi que diverses autres utilisations en JavaScript). Les Regex sont assez complexes et nous n'avons pas l'intention de vous les enseigner de manière exhaustive dans cet article.
 
 Vous trouverez ci-dessous quelques exemples pour vous donner une idée de base de leur fonctionnement :
 
@@ -192,15 +192,15 @@ Dans cet exemple, l'élément {{HTMLElement("input")}}} accepte l'une des deux v
 
 Maintenant, essayez de changer la valeur à l'intérieur de l'attribut `pattern` suivant certains exemples vus plus haut et regardez comment les valeurs entrées en sont affectées pour rester valides. Écrivez vos propres textes et voyez comment vous vous en sortez ! Restez dans le domaine des fruits dans la mesure du possible, afin que vos exemples aient du sens !
 
-> **Note :** Certains types d'éléments {{HTMLElement("input")}} n'ont pas besoin d'un attribut {{htmlattrxref("pattern", "input")}} pour être validés. Spécifier le type `email`, par exemple, valide la valeur saisie par rapport à une expression régulière correspondant à une adresse e‑mail bien formée (ou une liste d'adresses e‑mail séparées par des virgules si elle possède l'attribut {{htmlattrxref("multiple", "input")}}. Comme autre exemple, les champs de type `url` vont automatiquement nécessiter une URL correctement formée.
+> **Note :** Certains types d'éléments {{HTMLElement("input")}} n'ont pas besoin d'un attribut [`pattern`](/fr/docs/Web/HTML/Element/input#pattern) pour être validés. Spécifier le type `email`, par exemple, valide la valeur saisie par rapport à une expression régulière correspondant à une adresse e‑mail bien formée (ou une liste d'adresses e‑mail séparées par des virgules si elle possède l'attribut [`multiple`](/fr/docs/Web/HTML/Element/input#multiple). Comme autre exemple, les champs de type `url` vont automatiquement nécessiter une URL correctement formée.
 
-> **Note :** L'élément {{HTMLElement("textarea")}} ne prend pas en charge l'attribut {{htmlattrxref("pattern", "input")}}.
+> **Note :** L'élément {{HTMLElement("textarea")}} ne prend pas en charge l'attribut [`pattern`](/fr/docs/Web/HTML/Element/input#pattern).
 
 ### Limitation de la taille des entrées
 
-Tous les champs de texte créés avec ({{HTMLElement("input")}} ou {{HTMLElement("textarea")}}) peuvent être limités en taille avec les attributs {{htmlattrxref("minlength", "input")}} et {{htmlattrxref("maxlength", "input")}}. Le champ sera invalide si sa taille est inférieure à la valeur {{htmlattrxref("minlength", "input")}} ou supérieure la valeur {{htmlattrxref("maxlength", "input")}}. Souvent, les navigateurs ne permettent pas aux utilisateurs de saisir des textes de grande longueur dans les champs texte, mais il peut être utile de disposer d'un contrôle plus fin.
+Tous les champs de texte créés avec ({{HTMLElement("input")}} ou {{HTMLElement("textarea")}}) peuvent être limités en taille avec les attributs [`minlength`](/fr/docs/Web/HTML/Element/input#minlength) et [`maxlength`](/fr/docs/Web/HTML/Element/input#maxlength). Le champ sera invalide si sa taille est inférieure à la valeur [`minlength`](/fr/docs/Web/HTML/Element/input#minlength) ou supérieure la valeur [`maxlength`](/fr/docs/Web/HTML/Element/input#maxlength). Souvent, les navigateurs ne permettent pas aux utilisateurs de saisir des textes de grande longueur dans les champs texte, mais il peut être utile de disposer d'un contrôle plus fin.
 
-Pour les champs numériques (c'est à dire, \<type d'entrée="nombre">), les attributs {{htmlattrxref("min", "input")}} et {{htmlattrxref("max", "input")}} permettent également des contraintes de validité. Si la valeur du champ est inférieure à l'attribut {{htmlattrxref("min", "input")}} ou supérieure à l'attribut {{htmlattrxref("max", "input")}}, le champ ne sera pas valide.
+Pour les champs numériques (c'est à dire, \<type d'entrée="nombre">), les attributs [`min`](/fr/docs/Web/HTML/Element/input#min) et [`max`](/fr/docs/Web/HTML/Element/input#max) permettent également des contraintes de validité. Si la valeur du champ est inférieure à l'attribut [`min`](/fr/docs/Web/HTML/Element/input#min) ou supérieure à l'attribut [`max`](/fr/docs/Web/HTML/Element/input#max), le champ ne sera pas valide.
 
 Prenons un autre exemple. Créez une nouvelle copie du fichier [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html).
 
@@ -243,7 +243,7 @@ Voici cet exemple s'exécutant en «&nbsp;live&nbsp;»&nbsp;:
 
 {{EmbedLiveSample('Limitation_de_la_taille_des_entrées', "100%", 100)}}
 
-> **Note :** `<input type="number">` (et d'autres types, comme `range`) acceptent aussi un attribut {{htmlattrxref("step", "input")}} qui spécifie l'incrément en plus ou en moins de la valeur quand les contrôles d'entrée sont utilisés (comme les boutons <kbd>^</kbd> et <kbd>v</kbd>).
+> **Note :** `<input type="number">` (et d'autres types, comme `range`) acceptent aussi un attribut [`step`](/fr/docs/Web/HTML/Element/input#step) qui spécifie l'incrément en plus ou en moins de la valeur quand les contrôles d'entrée sont utilisés (comme les boutons <kbd>^</kbd> et <kbd>v</kbd>).
 
 ### Exemple complet
 
@@ -436,7 +436,7 @@ Voyons comment utiliser l'API pour créer des messages d'erreur personnalisés. 
 </form>
 ```
 
-Ce formulaire simple utilise l'attribut {{htmlattrxref("novalidate","form")}} pour désactiver la validation automatique par le navigateur ; cela permet donc à notre script d'avoir le contrôle sur la validation. Toutefois, cela ne désactive la prise en charge par l'API de validation des contraintes, ni l'application des pseudo-classes CSS {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}} et {{cssxref(":out-of-range")}}. Cela signifie que, même si le navigateur ne vérifie pas automatiquement la validité du formulaire avant l'envoi des données, vous pouvez toujours effectuer cette validation et définir l'apparence du formulaire par vous-même.
+Ce formulaire simple utilise l'attribut [`novalidate`](/fr/docs/Web/HTML/Element/form#novalidate) pour désactiver la validation automatique par le navigateur ; cela permet donc à notre script d'avoir le contrôle sur la validation. Toutefois, cela ne désactive la prise en charge par l'API de validation des contraintes, ni l'application des pseudo-classes CSS {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}} et {{cssxref(":out-of-range")}}. Cela signifie que, même si le navigateur ne vérifie pas automatiquement la validité du formulaire avant l'envoi des données, vous pouvez toujours effectuer cette validation et définir l'apparence du formulaire par vous-même.
 
 L'attribut [`aria-live`](/fr/docs/Accessibility/ARIA/ARIA_Live_Regions) garantit que nos messages d'erreur personnalisés seront affichés à tout le monde, y compris les personnes utilisant des techniques d'assistance comme des lecteurs d'écran.
 

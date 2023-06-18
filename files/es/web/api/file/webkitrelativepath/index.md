@@ -5,7 +5,7 @@ slug: Web/API/File/webkitRelativePath
 
 {{APIRef("File API")}}{{non-standard_header}}
 
-La propiedad **`File.webkitRelativePath`** de solo lectura contiene un {{domxref("USVString")}} el cual especifica la ruta relativa del archivo al directorio seleccionado por el usuario en un elemento {{HTMLElement("input")}} con su {{htmlattrxref("webkitdirectory", "input")}} atributo definido.
+La propiedad **`File.webkitRelativePath`** de solo lectura contiene un {{domxref("USVString")}} el cual especifica la ruta relativa del archivo al directorio seleccionado por el usuario en un elemento {{HTMLElement("input")}} con su [`webkitdirectory`](/es/docs/Web/HTML/Element/input#webkitdirectory) atributo definido.
 
 ## Sintaxis
 

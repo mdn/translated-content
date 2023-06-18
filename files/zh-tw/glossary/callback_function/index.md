@@ -3,6 +3,8 @@ title: 回呼函式
 slug: Glossary/Callback_function
 ---
 
+{{GlossarySidebar}}
+
 回呼函式（callback function）是指能藉由參數（argument）通往另一個函式的函式。它會在外部函式內調用、以完成某些事情。
 
 以下是簡單的範例：

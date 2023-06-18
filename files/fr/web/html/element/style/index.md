@@ -25,18 +25,18 @@ Si plusieurs éléments `<style>` et `<link>` sont appliqués au document, ils s
 
 Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("media")}}
+- `media`
   - : Cet attribut est [une requête média](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries) qui indique le média auquel la mise en forme doit s'appliquer. Cet attribut est optionnel, la valeur par défaut est `all`.
-- {{htmlattrdef("nonce")}}
+- `nonce`
   - : Un _nonce_ cryptographique utilisé pour inscrire les styles en ligne sur une liste blanche pour la règle [`style-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/style-src) de la CSP (_Content Security Policy_). Le serveur doit générer un nonce unique chaque fois qu'il transmet une règle de sécurité. Ce nonce ne doit pas pouvoir être deviné car sinon, il devient trivial d'outrepasser la règle de sécurité.
-- {{htmlattrdef("type")}}
+- `type`
   - : Cet attribut définit le langage de la feuille de style sous la forme d'un type MIME (le jeu de caractères ne doit pas être indiqué). Cet attribut est optionnel, la valeur par défaut est `text/css`.
-- {{htmlattrdef("title")}}
+- `title`
   - : Cet attribut indique un ensemble [de feuilles de style alternatif](/fr/docs/Web/CSS/Feuilles_de_style_alternatives).
 
 ### Attributs dépréciés ou obsolètes
 
-- {{htmlattrdef("scoped")}} {{non-standard_inline}} {{deprecated_inline}}
+- `scoped` {{non-standard_inline}} {{deprecated_inline}}
   - : Cet attribut indique que les règles de mises en forme ne s'appliquent qu'aux éléments ayant le même élément parent que l'élément courant.
 
 ## Exemples

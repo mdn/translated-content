@@ -177,8 +177,6 @@ Opcode _0x1_ signifie que ceci est un texte. [Liste exhaustive des Opcodes](http
 
 \- 134:
 
-If the second byte minus 128 is between 0 and 125, this is the length of the message. If it is 126, the following 2 bytes (16-bit unsigned integer), if 127, the following 8 bytes (64-bit unsigned integer, the most significant bit MUST be 0) are the length.
-
 Si le second octet moins 128 est entre 0 et 125, alors il s’agit de la longueur du message. Si c’est 126, les deux octets suivants (entier non signé de 16-bits), si c’est 127, les huit octets suivants (entier non signé de 64-bis, dont le poid ford doit être 0) sont la longueur.
 
 > **Note :** Je peux prendre 128 car le premier bit est toujours 1.

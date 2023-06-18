@@ -68,9 +68,9 @@ O elemento {{htmlelement("video")}} permite incorporar um vídeo com muita facil
 
 Os recursos da nota são:
 
-- {{htmlattrxref("src","video")}}
+- [`src`](/pt-BR/docs/Web/HTML/Element/video#src)
   - : Da mesma maneira que para o elemento {{htmlelement("img")}}, O atributo `src` contém um caminho para o vídeo que você deseja incorporar. Funciona exatamente da mesma maneira.
-- {{htmlattrxref("controls","video")}}
+- [`controls`](/pt-BR/docs/Web/HTML/Element/video#controls)
   - : Os usuários devem poder controlar a reprodução de vídeo e áudio (isso é especialmente crítico para pessoas que possuem [epilepsy](https://pt.wikipedia.org/wiki/Epilepsia).) Você deve usar o atributo `controls` para incluir a própria interface de controle do navegador ou criar sua interface usando o apropriado [JavaScript API](/pt-BR/docs/Web/API/HTMLMediaElement). No mínimo, a interface deve incluir uma maneira de iniciar e parar a mídia e ajustar o volume.
 - O parágrafo dentro do `<video>` tags
   - : Isso é chamado de **conteúdo alternativo** - será exibido se o navegador que acessa a página não suportar o elemento `<video>`, permitindo fornecer um substituto para navegadores mais antigos. Isso pode ser o que você quiser; nesse caso, fornecemos um link direto para o arquivo de vídeo, para que o usuário possa acessá-lo de alguma forma, independentemente do navegador que estiver usando.
@@ -127,7 +127,7 @@ Então, como fazemos isso? Dê uma olhada no seguinte [exemplo atualizado](https
 
 Aqui nós tiramos o atributo `src` (source) do {{HTMLElement("video")}} tag, mas incluímos os elementos {{htmlelement("source")}} que apontam para suas próprias fontes. Nesse caso, o navegador passará pelo elemento {{HTMLElement("source")}} e reproduza o primeiro que ele possui o codec para suportar. A inclusão de fontes WebM e MP4 deve ser suficiente para reproduzir seu vídeo na maioria das plataformas e navegadores atualmente.
 
-Cada elemento `<source>` também tem um atributo {{htmlattrxref("type", "source")}}. Isso é opcional, mas é recomendável que você os inclua - eles contêm o {{glossary("MIME type","MIME types")}} dos arquivos de vídeo, e os navegadores podem lê-los e pular imediatamente os vídeos que não entendem. Se não estiverem incluídos, os navegadores carregarão e tentarão reproduzir cada arquivo até encontrar um que funcione, consumindo ainda mais tempo e recursos.
+Cada elemento `<source>` também tem um atributo [`type`](/pt-BR/docs/Web/HTML/Element/source#type). Isso é opcional, mas é recomendável que você os inclua - eles contêm o {{glossary("MIME type","MIME types")}} dos arquivos de vídeo, e os navegadores podem lê-los e pular imediatamente os vídeos que não entendem. Se não estiverem incluídos, os navegadores carregarão e tentarão reproduzir cada arquivo até encontrar um que funcione, consumindo ainda mais tempo e recursos.
 
 > **Nota:** Consulte o nosso [guia sobre tipos e formatos de mídias](/pt-BR/docs/Web/Media/Formats) (inglês) para obter ajuda na seleção dos melhores contêineres e codecs para suas necessidades, bem como procurar os tipos MIME certos para especificar cada
 
@@ -149,17 +149,17 @@ Isso nos dará uma saída parecida com esta:
 
 ![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](extra-video-features.png)Os novos recursos são:
 
-- {{htmlattrxref("width","video")}} and {{htmlattrxref("height","video")}}
+- [`width`](/pt-BR/docs/Web/HTML/Element/video#width) and [`height`](/pt-BR/docs/Web/HTML/Element/video#height)
   - : Você pode controlar o tamanho do vídeo com esses atributos ou com {{Glossary("CSS")}}. Nos dois casos, os vídeos mantêm sua proporção largura-altura nativa - conhecida como **proporção de tela**. Se a proporção não for mantida pelos tamanhos definidos, o vídeo aumentará para preencher o espaço horizontalmente, e o espaço não preenchido receberá apenas uma cor sólida de fundo por padrão.
-- {{htmlattrxref("autoplay","video")}}
+- [`autoplay`](/pt-BR/docs/Web/HTML/Element/video#autoplay)
   - : Faz com que o áudio ou o vídeo comece a ser reproduzido imediatamente, enquanto o restante da página está sendo carregado. É aconselhável não usar vídeo (ou áudio) de reprodução automática em seus sites, porque os usuários podem achar isso realmente irritante.
-- {{htmlattrxref("loop","video")}}
+- [`loop`](/pt-BR/docs/Web/HTML/Element/video#loop)
   - : Faz com que o vídeo (ou áudio) comece a ser reproduzido novamente sempre que terminar. Isso também pode ser irritante, portanto, use apenas se for realmente necessário.
-- {{htmlattrxref("muted","video")}}
+- [`muted`](/pt-BR/docs/Web/HTML/Element/video#muted)
   - : Faz com que a mídia seja reproduzida com o som desativado por padrão.
-- {{htmlattrxref("poster","video")}}
+- [`poster`](/pt-BR/docs/Web/HTML/Element/video#poster)
   - : O URL de uma imagem que será exibida antes da reprodução do vídeo. Destina-se a ser usado para uma tela inicial ou tela de publicidade.
-- {{htmlattrxref("preload","video")}}
+- [`preload`](/pt-BR/docs/Web/HTML/Element/video#preload)
 
   - : Usado para armazenar arquivos grandes em buffer; pode levar um dos três valores:
 
@@ -257,7 +257,7 @@ This is the second.
 Para que isso seja exibido juntamente com a reprodução de mídia HTML, você precisa:
 
 1. Salve-o como um arquivo `.vtt` em um local adequado.
-2. Vincule ao arquivo `.vtt` com o elemento {{htmlelement ("track")}}. `<track>` deve ser colocado dentro de `<audio>` ou `<video>`, mas depois de todos os elementos `<source>`. Use o atributo {{htmlattrxref ("kind", "track")}} para especificar se as pistas são `subtitles`, `captions,`ou `descriptions`. Além disso, use {{htmlattrxref ("srclang", "track")}} para informar ao navegador em que idioma você escreveu as legendas.
+2. Vincule ao arquivo `.vtt` com o elemento {{htmlelement ("track")}}. `<track>` deve ser colocado dentro de `<audio>` ou `<video>`, mas depois de todos os elementos `<source>`. Use o atributo [`kind`](/pt-BR/docs/Web/HTML/Element/track#kind) para especificar se as pistas são `subtitles`, `captions,`ou `descriptions`. Além disso, use [`srclang`](/pt-BR/docs/Web/HTML/Element/track#srclang) para informar ao navegador em que idioma você escreveu as legendas.
 
 Aqui está um exemplo:
 
