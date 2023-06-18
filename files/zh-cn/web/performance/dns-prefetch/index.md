@@ -9,9 +9,9 @@ slug: Web/Performance/dns-prefetch
 
 ## 为什么要使用 dns-prefetch？
 
-当浏览器从（第三方）服务器请求资源时，必须先将该[跨域](/zh-CN/docs/Web/HTTP/CORS)域名解析为 IP 地址，然后浏览器才能发出请求。此过程称为 DNS 解析。DNS 缓存可以帮助减少此延迟，而 DNS 解析可以导致请求增加明显的延迟。对于打开了与许多第三方的连接的网站，此延迟可能会大大降低加载性能。
+当浏览器从（第三方）服务器请求资源时，必须先将该[跨源](/zh-CN/docs/Web/HTTP/CORS)域名解析为 IP 地址，然后浏览器才能发出请求。此过程称为 DNS 解析。DNS 缓存可以帮助减少此延迟，而 DNS 解析可以导致请求增加明显的延迟。对于打开了与许多第三方的连接的网站，此延迟可能会大大降低加载性能。
 
-`dns-prefetch` 可帮助开发人员掩盖 DNS 解析延迟。[HTML `<link>` 元素](/zh-CN/docs/Web/HTML/Element/link) 通过 `dns-prefetch` 的 [`rel` 属性](/zh-CN/docs/Web/HTML/Attributes/rel)值提供此功能。然后在 [href 属性](/zh-CN/docs/Web/HTML/Attributes)中指明要[跨域](/zh-CN/docs/Web/HTTP/CORS)的域名：
+`dns-prefetch` 可帮助开发人员掩盖 DNS 解析延迟。[HTML `<link>` 元素](/zh-CN/docs/Web/HTML/Element/link)通过 `dns-prefetch` 的 [`rel` 属性](/zh-CN/docs/Web/HTML/Attributes/rel)值提供此功能。然后在 [href 属性](/zh-CN/docs/Web/HTML/Attributes)中指明要[跨源](/zh-CN/docs/Web/HTTP/CORS)的域名：
 
 ## 语法
 
