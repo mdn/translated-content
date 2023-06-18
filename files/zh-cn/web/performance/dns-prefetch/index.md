@@ -35,13 +35,13 @@ slug: Web/Performance/dns-prefetch
 </html>
 ```
 
-每当站点引用跨域资源时，都应在 [`<head>` 元素](/zh-CN/docs/Web/HTML/Element/head)中放置 `dns-prefetch` 提示，但是要记住一些注意事项。
+每当站点引用跨源资源时，都应在 [`<head>` 元素](/zh-CN/docs/Web/HTML/Element/head)中放置 `dns-prefetch` 提示，但是要记住一些注意事项。
 
 ## 最佳实践
 
 请记住以下三点：
 
-**首先**，`dns-prefetch` 仅对[跨域](/zh-CN/docs/Web/HTTP/CORS)域上的 DNS 查找有效，因此请避免使用它来指向你的站点或域。这是因为，到浏览器看到提示时，你的站点背后的 IP 已经被解析了。
+**首先**，`dns-prefetch` 仅对[跨源](/zh-CN/docs/Web/HTTP/CORS)域上的 DNS 查找有效，因此请避免使用它来指向你的站点或域。这是因为，到浏览器看到提示时，你的站点背后的 IP 已经被解析了。
 
 **其次**，还可以通过使用 [HTTP Link 字段](/zh-CN/docs/Web/HTTP/Headers/Link)将 `dns-prefetch`（以及其他资源提示）指定为 [HTTP 标头](/zh-CN/docs/Web/HTTP/Headers)之一：
 
@@ -56,7 +56,7 @@ Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
 ```
 
-> **备注：** 如果页面需要建立与许多第三方域的连接，则将它们预先连接会适得其反。`preconnect` 提示最好仅用于最关键的连接。对于其他的连接，只需使用 `<link rel="dns-prefetch">` 即可节省第一步的时间——DNS 查找。
+> **备注：** 如果页面需要建立与许多第三方域的连接，则将它们预先连接会适得其反。`preconnect` 提示最好仅用于最关键的连接。对于其他的连接，只需使用 `<link rel="dns-prefetch">` 即可节省第一步——DNS 查询——的时间。
 
 配对这些提示的逻辑是因为对 dns-prefetch 的支持比对预连接的支持要好。不支持预连接的浏览器仍然可以通过回退到 dns-prefetch 来获得更多好处。由于这是 HTML 特性，因此容错性很强。如果不支持的浏览器遇到 dns-prefetch 提示（或任何其他资源提示），则网站不会中断，只是不会获得它提供的好处。
 
