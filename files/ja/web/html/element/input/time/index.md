@@ -109,7 +109,7 @@ timeControl.value = '15:30';
 
 ### 時刻値の書式
 
-`time` 入力欄の `value` は、常に先頭にゼロを含む 24 時制で `hh:mm` の書式であり、ユーザーのロケール（またはユーザーエージェント）に基づいて選択される入力書式とは関係ありません。時刻が秒を含む場合（[step 属性の使用](#step_属性の使用)を参照）は、書式は常に `hh:mm:ss` です。この入力型で使用される時刻の値の形式について詳しくは、 [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)の[時刻の文字列](/ja/docs/Web/HTML/Date_and_time_formats#time_strings)をご覧ください。
+`time` 入力欄の `value` は、常に先頭にゼロを含む 24 時制で `hh:mm` の書式であり、ユーザーのロケール（またはユーザーエージェント）に基づいて選択される入力書式とは関係ありません。時刻が秒を含む場合（[step 属性の使用](#step_属性の使用)を参照）は、書式は常に `hh:mm:ss` です。この入力型で使用される時刻の値の形式について詳しくは、 [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)の[時刻文字列](/ja/docs/Web/HTML/Date_and_time_formats#時刻文字列)をご覧ください。
 
 この例では、時刻を入力すると time 入力欄の値が、どのように変化するかを見ることができます。
 
