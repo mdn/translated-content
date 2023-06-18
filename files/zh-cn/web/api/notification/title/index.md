@@ -5,14 +5,11 @@ slug: Web/API/Notification/title
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-The **`title`** read-only property of the
-{{domxref("Notification")}} interface indicates the title of the notification, as
-specified in the `title` parameter of the
-{{domxref("Notification.Notification","Notification()")}} constructor.
+{{domxref("Notification")}} 接口的 **`title`** 只读属性指示通知的标题，在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `title` 参数中指定。
 
 ## 值
 
-A string.
+一个字符串。
 
 ## 示例
 
