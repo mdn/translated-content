@@ -61,20 +61,24 @@ var arr1 = [1, 2, [3, 4]];
 arr1.flat();
 
 //展開單層陣列
-arr1.reduce((acc, val) => acc.concat(val), []);// [1, 2, 3, 4]
+arr1.reduce((acc, val) => acc.concat(val), []); // [1, 2, 3, 4]
 ```
 
 ```js
 //欲展開更深層的巢狀結構請使用reduce與concat的遞迴
 function flattenDeep(arr1) {
-   return arr1.reduce((acc, val) => Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val), []);
+  return arr1.reduce(
+    (acc, val) =>
+      Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val),
+    []
+  );
 }
-flattenDeep(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+flattenDeep(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
 ```
 
 ```js
 //使用stack來實作非遞迴的展開
-var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
+var arr1 = [1, 2, 3, [1, 2, 3, 4, [2, 3, 4]]];
 function flatten(input) {
   const stack = [...input];
   const res = [];
@@ -91,7 +95,7 @@ function flatten(input) {
   //reverse to restore input order
   return res.reverse();
 }
-flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+flatten(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
 ```
 
 ```plain
@@ -116,7 +120,7 @@ function flatten(array) {
 
 {{Compat}}
 
-## See also
+## 參見
 
 - {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.map()")}}

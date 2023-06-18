@@ -70,7 +70,7 @@ console.log(Array.of.call({}, 1)); // [ 1 ]
 
 ```js
 if (!Array.of) {
-  Array.of = function() {
+  Array.of = function () {
     return Array.prototype.slice.call(arguments);
   };
 }
