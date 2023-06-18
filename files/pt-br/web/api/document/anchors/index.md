@@ -76,7 +76,7 @@ function init() {
 
 ## Notas
 
-Por motivos de compatibilidade, o conjunto de âncoras retornadas por `anchors` contém apenas as âncoras criadas com o atributo `name`, não incluindo as âncoras criadas com o atributo {{ htmlattrxref("id") }}.
+Por motivos de compatibilidade, o conjunto de âncoras retornadas por `anchors` contém apenas as âncoras criadas com o atributo `name`, não incluindo as âncoras criadas com o atributo [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id).
 
 ## Especificações
 

@@ -48,10 +48,10 @@ O campo de `time` do Edge é melhor elaborado, abrindo um seletor de hora e minu
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}} e
-        {{htmlattrxref("step", "input")}}.
+        <a href="/pt-BR/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> e
+        <a href="/pt-BR/docs/Web/HTML/Element/input#step"><code>step</code></a>.
       </td>
     </tr>
     <tr>
@@ -74,7 +74,7 @@ O campo de `time` do Edge é melhor elaborado, abrindo um seletor de hora e minu
 
 ## Valor
 
-Uma {{domxref("DOMString")}} contendo o valor do horário inserido no campo. Você pode definir um valor padrão para o campo incluindo um horário válido no atributo {{htmlattrxref("value", "input")}} ao criar o elemento `<input>`, tipo assim:
+Uma {{domxref("DOMString")}} contendo o valor do horário inserido no campo. Você pode definir um valor padrão para o campo incluindo um horário válido no atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value) ao criar o elemento `<input>`, tipo assim:
 
 ```html
 <label for="hora-cons">Escolha o horário da consulta: </label>
@@ -145,11 +145,11 @@ O caso de uso mais simples do `<input type="time">` envolve uma combinação bá
 
 ### Controlando o tamanho do campo
 
-O elemento `<input type="time">` não é compatível com atributos de dimensionamento de formulários tais como {{htmlattrxref("size", "input")}}, já que horários quase sempre tem o mesmo número de caracteres. Você terá que recorrer ao [CSS](/pt-BR/docs/Web/CSS) para ajustar tamanhos.
+O elemento `<input type="time">` não é compatível com atributos de dimensionamento de formulários tais como [`size`](/pt-BR/docs/Web/HTML/Element/input#size), já que horários quase sempre tem o mesmo número de caracteres. Você terá que recorrer ao [CSS](/pt-BR/docs/Web/CSS) para ajustar tamanhos.
 
 ### Usando o atributo step
 
-Você pode usar o atributo {{htmlattrxref("step", "input")}} para variar a quantidade de tempo pulada sempre que o horário for incrementado/decrementado (por exemplo, para fazer com que o horário avançe ou volte em 10 minutos ao clicar nas setinhas ao lado do campo).
+Você pode usar o atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step) para variar a quantidade de tempo pulada sempre que o horário for incrementado/decrementado (por exemplo, para fazer com que o horário avançe ou volte em 10 minutos ao clicar nas setinhas ao lado do campo).
 
 > **Note:** Esta propriedade pode se comportar de maneira inesperada em alguns navegadores. Por isso, ela não é 100% confiável.
 
@@ -178,7 +178,7 @@ Por padrão, `<input type="time">` não aplica nenhum tipo de validação nos va
 
 ### Definindo horários mínimo e máximo
 
-Você pode usar os atributos {{htmlattrxref("min", "input")}} e {{htmlattrxref("max", "input")}} para restringir a faixa de horário válida que o usuário pode escolher. No seguinte exemplo, definimos `12:00` como o horário mínimo e `18:00` como o horário máximo:
+Você pode usar os atributos [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [`max`](/pt-BR/docs/Web/HTML/Element/input#max) para restringir a faixa de horário válida que o usuário pode escolher. No seguinte exemplo, definimos `12:00` como o horário mínimo e `18:00` como o horário máximo:
 
 ```html
 <form>
@@ -227,7 +227,7 @@ O resultado disso é que:
 
 ### Tornando campos de horário obrigatórios
 
-Além do mais, você pode usar o atributo {{htmlattrxref("required", "input")}} para tornar obrigatória a inserção de um horário. Como resultado, os navegadores compatíves irão mostrar um erro se você tentar enviar um horário fora da proporção adequada ou que esteja em branco.
+Além do mais, você pode usar o atributo [`required`](/pt-BR/docs/Web/HTML/Element/input#required) para tornar obrigatória a inserção de um horário. Como resultado, os navegadores compatíves irão mostrar um erro se você tentar enviar um horário fora da proporção adequada ou que esteja em branco.
 
 Vamos ver um exemplo. Nele, colocamos um horário mínimo e um máximo, além de tornarmos o campo obrigatório.
 
@@ -271,7 +271,7 @@ The second problem is the more serious; as mentioned previously, `time` inputs' 
 - `3 o'clock in the afternoon`
 - etc.
 
-One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your `time` input. Even though the `time` input doesn't use it, the `text` input fallback will. For example, try viewing the following demo in a browser that doesn't support time inputs:
+One way around this is to put a [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) attribute on your `time` input. Even though the `time` input doesn't use it, the `text` input fallback will. For example, try viewing the following demo in a browser that doesn't support time inputs:
 
 ```html
 <form>

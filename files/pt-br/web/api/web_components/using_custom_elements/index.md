@@ -50,7 +50,7 @@ Você aprenderá mais sobre eles na seção [Using the lifecycle callbacks](#usi
 Existem dois tipos de custom elements:
 
 - **Autonomous custom elements** são autonômos — eles não herdam de elementos HTML padrão. Você os usa em uma página, literalmente escrevendo-os como um elemento HTML. Por exemplo `<popup-info>`, ou `document.createElement("popup-info")`.
-- **Customized built-in elements** herdam de elementos HTML básicos. Para criar um deles, você deve especificar qual elemento eles estendem (como implícito nos exemplos acima), e eles são usados escrevendo o elemento básico, mas especificando o nome do elemento personalizado no atributo {{htmlattrxref("is")}} (ou propriedade). Por exemplo `<p is="word-count">`, ou `document.createElement("p", { is: "word-count" })`.
+- **Customized built-in elements** herdam de elementos HTML básicos. Para criar um deles, você deve especificar qual elemento eles estendem (como implícito nos exemplos acima), e eles são usados escrevendo o elemento básico, mas especificando o nome do elemento personalizado no atributo [`is`](/pt-BR/docs/Web/HTML/Global_attributes#is) (ou propriedade). Por exemplo `<p is="word-count">`, ou `document.createElement("p", { is: "word-count" })`.
 
 ## Trabalhando com alguns exemplos simples
 
