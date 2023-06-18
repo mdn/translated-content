@@ -33,17 +33,17 @@ En los navegadores que no sopartan el tipo `email`, la entrada `email` se degrad
     <tr>
       <td><strong>Atributos comunes soprtados</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("multiple", "input")}},
-        {{htmlattrxref("name", "input")}},{{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("readonly", "input")}},
-        {{htmlattrxref("required", "input")}},
-        {{htmlattrxref("size", "input")}} y
-        {{htmlattrxref("type", "input")}}
+        <a href="/es/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#multiple"><code>multiple</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#name"><code>name</code></a>, <a href="/es/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#size"><code>size</code></a> y
+        <a href="/es/docs/Web/HTML/Element/input#type"><code>type</code></a>
       </td>
     </tr>
     <tr>
@@ -65,11 +65,11 @@ En los navegadores que no sopartan el tipo `email`, la entrada `email` se degrad
 
 ## Valor
 
-El atributo {{HTMLAttrxRef("value", "input")}} del elemento {{HTMLElement("input")}} contiene un {{DOMxRef("DOMString")}} que se valida automáticamente conforme a la sintaxis del correo. Específicamente, hay tres posibles formatos de valor que pasarán la validación:
+El atributo [`value`](/es/docs/Web/HTML/Element/input#value) del elemento {{HTMLElement("input")}} contiene un {{DOMxRef("DOMString")}} que se valida automáticamente conforme a la sintaxis del correo. Específicamente, hay tres posibles formatos de valor que pasarán la validación:
 
 1. Una cadena vacía ("") — indica que el usuario no ingresó un valor o que el valor fue eliminado.
 2. Una única dirección de correo debidamente formada. Esto no necesariamente significa que exista la dirección de correo electrónico, pero al menos tiene el formato correcto. En términos simples, esto significa `nombreusuario@dominio` o `nombreusuario@dominio.tld`. Hay más que eso, por supuesto; consulta [Validación](#validación) para obtener una {{Glossary("regular expression")}} que coincida con el algoritmo de validación de la dirección de correo.
-3. Si y solo si se especifica el atributo {{HTMLAttrxRef("multiple", "input")}}, el valor puede ser una lista de direcciones de correo correctamente formadas separadas por coma. Los espacios en blanco iniciales y finales se eliminan de cada dirección de la lista.
+3. Si y solo si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple), el valor puede ser una lista de direcciones de correo correctamente formadas separadas por coma. Los espacios en blanco iniciales y finales se eliminan de cada dirección de la lista.
 
 Véase [Validación](#validación) para más detalles de como las dirrecciones de correo son validadas para asegurarse que están formadas correctamente.
 
@@ -79,7 +79,7 @@ Además de los atributos que operan en todos los elementos {{HTMLElement("input"
 
 ### list
 
-El valor del atributo lista es el {{domxref("Element.id", "id")}} del elemento {{HTMLElement("datalist")}} ubicado en el mismo documento. {{HTMLElement("datalist")}} aporta una lista de valores predefinidos sugeridos al usuario para la entrada. Cualquier valor de la lista que no sea compatible con {{htmlattrxref("type", "input")}} no son incluidos en las opciones sugeridas. Los valores proporcionados son sugerencias, no valores requeridos: los usuarios pueden seleccionar elementos de la lista o proporcionar uno diferente.
+El valor del atributo lista es el {{domxref("Element.id", "id")}} del elemento {{HTMLElement("datalist")}} ubicado en el mismo documento. {{HTMLElement("datalist")}} aporta una lista de valores predefinidos sugeridos al usuario para la entrada. Cualquier valor de la lista que no sea compatible con [`type`](/es/docs/Web/HTML/Element/input#type) no son incluidos en las opciones sugeridas. Los valores proporcionados son sugerencias, no valores requeridos: los usuarios pueden seleccionar elementos de la lista o proporcionar uno diferente.
 
 ### maxlength
 
@@ -97,15 +97,15 @@ La entrada fallará la [restricción de validación](/es/docs/Web/Guide/HTML/Con
 
 Un atributo booleano que, si está presente, indica que el usuario puede ingresar una lista de múltiples direcciones de correo, separadas por coma y, opcionalmente, espacios en blanco. Consulta [Permitiendo múltiples dirreciones de correo](#permitiendo_multiples_dirrecciones_de_correo) para ver un ejemplo o [Atributo HTML: multiple](/es/docs/Web/HTML/Attributes/multiple) para más detalles.
 
-> **Nota:** Normalmente, si especificas el atributo {{HTMLAttrxRef("required", "input")}}, el usuario debe ingresar una dirección de correo válida para que el campo se considere válido. Sin embargo, si agregas el atributo `multiple`, una lista de cero direcciones de correo electrónico (una cadena vacía o una que sea completamente en blanco) es un valor válido. En otras palabras, el usuario no tiene que ingresar ni siquiera una dirección de correo electrónico cuando se especifica `multiple`, independientemente del valor de `required`.
+> **Nota:** Normalmente, si especificas el atributo [`required`](/es/docs/Web/HTML/Element/input#required), el usuario debe ingresar una dirección de correo válida para que el campo se considere válido. Sin embargo, si agregas el atributo `multiple`, una lista de cero direcciones de correo electrónico (una cadena vacía o una que sea completamente en blanco) es un valor válido. En otras palabras, el usuario no tiene que ingresar ni siquiera una dirección de correo electrónico cuando se especifica `multiple`, independientemente del valor de `required`.
 
 ## pattern
 
-El atributo `pattern`, cuando es especificado, es una expresión regular que el {{htmlattrxref("value")}} del input debe seguir para que el valor pase la [restricción de validación](/es/docs/Web/Guide/HTML/Constraint_validation). Debe ser una expresión regular de JavaScript válida, como las usadas en el tipo {{jsxref("RegExp")}}, y como se explica en nuestra [guía sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions); la bandera `'u'` es especificada cuando se compila la expresión regular, por lo tanto el patrón es tratado como una secuencia de puntos de código Unicode, y no como ASCII. No deben colocarse barras diagonales alrededor del patrón de texto.
+El atributo `pattern`, cuando es especificado, es una expresión regular que el [`value`](/es/docs/Web/HTML/Global_attributes#value) del input debe seguir para que el valor pase la [restricción de validación](/es/docs/Web/Guide/HTML/Constraint_validation). Debe ser una expresión regular de JavaScript válida, como las usadas en el tipo {{jsxref("RegExp")}}, y como se explica en nuestra [guía sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions); la bandera `'u'` es especificada cuando se compila la expresión regular, por lo tanto el patrón es tratado como una secuencia de puntos de código Unicode, y no como ASCII. No deben colocarse barras diagonales alrededor del patrón de texto.
 
 Si el patrón no está especificado o es inválido, no se aplica la expresión regular y el atributo es completamente ignorado.
 
-> **Nota:** Usa el atributo {{htmlattrxref("title", "input")}} para especificar un texto que muchos navegadores mostrarán como una indicación para explicar qué requerimientos se deben seguir para que se cumpla el patrón. También debes incluir otro texto explicativo cerca.
+> **Nota:** Usa el atributo [`title`](/es/docs/Web/HTML/Element/input#title) para especificar un texto que muchos navegadores mostrarán como una indicación para explicar qué requerimientos se deben seguir para que se cumpla el patrón. También debes incluir otro texto explicativo cerca.
 
 Véase la sección [Validación de patrón](#validacion_de_patron) para más detalles y un ejemplo.
 
@@ -147,7 +147,7 @@ Actualmente, todos los navegadores que admiten este elemento lo implementan como
 
 {{ EmbedLiveSample('A_simple_email_input', 600, 40) }}
 
-Ten en cuenta que se considera válido cuando está vacío y cuando se ingresa una única dirección de correo con formato válido, pero por lo demás no se considera válido. Al agregar el atributo {{htmlattrxref("required", "input")}}, solo se permiten direcciones de correo con formato válido; la entrada ya no se considera válida cuando está vacía.
+Ten en cuenta que se considera válido cuando está vacío y cuando se ingresa una única dirección de correo con formato válido, pero por lo demás no se considera válido. Al agregar el atributo [`required`](/es/docs/Web/HTML/Element/input#required), solo se permiten direcciones de correo con formato válido; la entrada ya no se considera válida cuando está vacía.
 
 ### Permitir varias direcciones de correo
 
@@ -196,7 +196,7 @@ Puedes controlar no solo la longitud física del cuadro de entrada, sino tambié
 
 #### Tamaño físico del elemento de entrada
 
-El tamaño físico del cuadro de entrada se puede controlar mediante el atributo {{HTMLAttrxRef("size", "input")}}. Con él, puedes especificar el número de caracteres que el cuadro de entrada puede mostrar a la vez. En este ejemplo, el cuadro de edición `email` tiene 15 caracteres de ancho:
+El tamaño físico del cuadro de entrada se puede controlar mediante el atributo [`size`](/es/docs/Web/HTML/Element/input#size). Con él, puedes especificar el número de caracteres que el cuadro de entrada puede mostrar a la vez. En este ejemplo, el cuadro de edición `email` tiene 15 caracteres de ancho:
 
 ```html
 <input type="email" size="15" />
@@ -206,7 +206,7 @@ El tamaño físico del cuadro de entrada se puede controlar mediante el atributo
 
 #### Longitud del valor del elemento
 
-`size` es independiente de la limitación de longitud de la dirección de correo ingresada, por lo que puedes hacer que los campos quepan en un espacio pequeño y, al mismo tiempo, permitir que se ingresen cadenas de direcciones de correo más largas. Puedes especificar una longitud mínima, en caracteres, para la dirección de correo ingresada usando el atributo {{HTMLAttrxRef("minlength", "input")}}; de manera similar, usa {{HTMLAttrxRef("maxlength", "input")}} para establecer la longitud máxima de la dirección de correo ingresada.
+`size` es independiente de la limitación de longitud de la dirección de correo ingresada, por lo que puedes hacer que los campos quepan en un espacio pequeño y, al mismo tiempo, permitir que se ingresen cadenas de direcciones de correo más largas. Puedes especificar una longitud mínima, en caracteres, para la dirección de correo ingresada usando el atributo [`minlength`](/es/docs/Web/HTML/Element/input#minlength); de manera similar, usa [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) para establecer la longitud máxima de la dirección de correo ingresada.
 
 El siguiente ejemplo crea un cuadro de entrada de dirección de correo de 32 caracteres de ancho, que requiere que el contenido tenga no menos de 3 caracteres y no más de 64 caracteres.
 
@@ -218,7 +218,7 @@ El siguiente ejemplo crea un cuadro de entrada de dirección de correo de 32 car
 
 ### Proporcionar opciones predeterminadas
 
-Como siempre, puedes proporcionar un valor predeterminado para un cuadro de entrada de tipo `email` configurando su atributo {{HTMLAttrxRef("value", "input")}}:
+Como siempre, puedes proporcionar un valor predeterminado para un cuadro de entrada de tipo `email` configurando su atributo [`value`](/es/docs/Web/HTML/Element/input#value):
 
 <div id="Default_value">
 <pre class="brush: html notranslate">&lt;input type="email" value="usuario@ejemplo.com"&gt;</pre>
@@ -232,7 +232,7 @@ Como siempre, puedes proporcionar un valor predeterminado para un cuadro de entr
 
 #### Ofreciendo valores sugeridos
 
-Yendo un paso más allá, puedes proporcionar una lista de opciones predeterminadas entre las que el usuario puede seleccionar especificando el atributo {{HTMLAttrxRef("list", "input")}}. Esto no limita al usuario a esas opciones, pero le permite seleccionar rápidamente las direcciones de correo de uso común. Esto también ofrece sugerencias para {{HTMLAttrxRef("autocomplete", "input")}}. El atributo {{HTMLAttrDef("list")}} especifica el ID de un {{HTMLElement("datalist")}}, que a su vez contiene un elemento {{HTMLElement("option")}} por valor sugerido; El `value` de cada `option` es el valor sugerido correspondiente para el cuadro de entrada de correo.
+Yendo un paso más allá, puedes proporcionar una lista de opciones predeterminadas entre las que el usuario puede seleccionar especificando el atributo [`list`](/es/docs/Web/HTML/Element/input#list). Esto no limita al usuario a esas opciones, pero le permite seleccionar rápidamente las direcciones de correo de uso común. Esto también ofrece sugerencias para [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete). El atributo `list` especifica el ID de un {{HTMLElement("datalist")}}, que a su vez contiene un elemento {{HTMLElement("option")}} por valor sugerido; El `value` de cada `option` es el valor sugerido correspondiente para el cuadro de entrada de correo.
 
 ```html
 <input type="email" size="40" list="defaultEmails" />
@@ -273,11 +273,11 @@ Para obtener más información sobre cómo funciona la validación de formulario
 
 ### Patrón de validación
 
-Si necesitas restringir la dirección de correo electrónico ingresada más allá de "cualquier cadena que parezca una dirección de correo electrónico", puedes usar el atributo {{HTMLAttrxRef("pattern", "input")}} para especificar una {{Glossary("regular expression")}} con la cual el valor debe coincidir para que sea válido. Si se especifica el atributo {{HTMLAttrxRef("multiple", "input")}}, cada elemento individual en la lista de valores delimitados por comas debe coincidir con la {{Glossary("regular expression")}}.
+Si necesitas restringir la dirección de correo electrónico ingresada más allá de "cualquier cadena que parezca una dirección de correo electrónico", puedes usar el atributo [`pattern`](/es/docs/Web/HTML/Element/input#pattern) para especificar una {{Glossary("regular expression")}} con la cual el valor debe coincidir para que sea válido. Si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple), cada elemento individual en la lista de valores delimitados por comas debe coincidir con la {{Glossary("regular expression")}}.
 
 Por ejemplo, supón que estás creando una página para los empleados de "Best Startup Ever, Inc". lo que les permitirá ponerse en contacto con su departamento de TI para obtener ayuda. En nuestro formulario simplificado, el usuario debe ingresar su dirección de correo y un mensaje que describa el problema con el que necesita ayuda. Queremos asegurarnos de que el usuario no solo proporcione una dirección de correo válida, sino que, por motivos de seguridad, requerimos que la dirección sea una dirección de correo electrónico corporativa interna.
 
-Dado que las entradas de tipo `email` se comprueban con la validación de la dirección de correo estándar _y_ el {{HTMLAttrxRef("pattern", "input")}} especificado, se puede implementar así de fácil. Observa cómo:
+Dado que las entradas de tipo `email` se comprueban con la validación de la dirección de correo estándar _y_ el [`pattern`](/es/docs/Web/HTML/Element/input#pattern) especificado, se puede implementar así de fácil. Observa cómo:
 
 ```css hidden
 body {
@@ -335,17 +335,17 @@ label::after {
 
 El {{HTMLElement("form")}} contiene un {{HTMLElement("input")}} de tipo `email` para la dirección de correo del usuario, un {{HTMLElement("textarea")}} para ingresar su mensaje y un `<input>` de tipo [`"submit"`](/es/docs/Web/HTML/Element/input/submit), que crea un botón para enviar el formulario. Cada cuadro de entrada de texto tiene una {{HTMLElement("label")}} asociada para que el usuario sepa lo que se espera de ellos.
 
-Échale un vistazo más de cerca al cuadro de entrada de la dirección de correo. Sus atributos {{HTMLAttrxRef("size", "input")}} y {{HTMLAttrxRef("maxlength", "input")}} se establecen en 64 para mostrar espacio para 64 caracteres en direcciones de correo y limitar la cantidad de caracteres ingresados realmente a un máximo de 64. Se especifica el atributo {{HTMLAttrxRef("required", "input")}}, lo cual hace obligatorio que se proporcione una dirección de correo válida.
+Échale un vistazo más de cerca al cuadro de entrada de la dirección de correo. Sus atributos [`size`](/es/docs/Web/HTML/Element/input#size) y [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) se establecen en 64 para mostrar espacio para 64 caracteres en direcciones de correo y limitar la cantidad de caracteres ingresados realmente a un máximo de 64. Se especifica el atributo [`required`](/es/docs/Web/HTML/Element/input#required), lo cual hace obligatorio que se proporcione una dirección de correo válida.
 
-Se proporciona un {{HTMLAttrxRef("placeholder", "input")}} apropiado, `nombreusuario@beststartupever.com`, para demostrar lo que constituye una entrada válida. Esta cadena demuestra que se debe ingresar una dirección de correo y sugiere que debe ser una cuenta corporativa de "beststartupever.com". Esto se suma al hecho de que el uso del tipo `email` validará el texto para garantizar que tenga el formato de una dirección de correo. Si el texto en el cuadro de entrada no es una dirección de correo, recibirá un mensaje de error similar a este:
+Se proporciona un [`placeholder`](/es/docs/Web/HTML/Element/input#placeholder) apropiado, `nombreusuario@beststartupever.com`, para demostrar lo que constituye una entrada válida. Esta cadena demuestra que se debe ingresar una dirección de correo y sugiere que debe ser una cuenta corporativa de "beststartupever.com". Esto se suma al hecho de que el uso del tipo `email` validará el texto para garantizar que tenga el formato de una dirección de correo. Si el texto en el cuadro de entrada no es una dirección de correo, recibirá un mensaje de error similar a este:
 
 ![](enter-valid-email-address.png)
 
-Si dejas las cosas así, al menos estarías validando direcciones de correo legítimas. Pero quieres ir un paso más allá: quieres asegurarte de que la dirección de correo tenga el formato "_nombreusuario_@beststartupever.com". Aquí es donde usarás el {{HTMLAttrxRef("pattern", "input")}}. Establece el `pattern` en `.+@beststartupever.com`. Esta simple expresión regular solicita una cadena que consta de al menos un carácter de cualquier tipo, luego una "@" seguida por el nombre de dominio "beststartupever.com".
+Si dejas las cosas así, al menos estarías validando direcciones de correo legítimas. Pero quieres ir un paso más allá: quieres asegurarte de que la dirección de correo tenga el formato "_nombreusuario_@beststartupever.com". Aquí es donde usarás el [`pattern`](/es/docs/Web/HTML/Element/input#pattern). Establece el `pattern` en `.+@beststartupever.com`. Esta simple expresión regular solicita una cadena que consta de al menos un carácter de cualquier tipo, luego una "@" seguida por el nombre de dominio "beststartupever.com".
 
 Ten en cuenta que esto ni siquiera se acerca a un filtro adecuado para direcciones de correo electrónico válidas; permitiría cosas como " @beststartupever.com" (tenga en cuenta el espacio inicial) o "@@beststartupever.com", ninguna de las cuales es válida. Sin embargo, el navegador ejecuta tanto el filtro de dirección de correo estándar _como_ nuestro patrón personalizado contra el texto especificado. Como resultado, terminamos con una validación que dice "asegúrate de que se asemeje a una dirección de correo válida, y si lo es, asegúrate de que también sea una dirección beststartupever.com".
 
-Es recomendable utilizar el atributo {{HTMLAttrxRef("title")}} junto con `pattern`. Si lo haces, el `title` _debe_ describir el patrón. Es decir, debe explicar qué formato deben adoptar los datos, en lugar de cualquier otra información. Esto se debe a que el `title` se puede mostrar o pronunciar como parte de un mensaje de error de validación. Por ejemplo, el navegador puede presentar el mensaje "El texto ingresado no coincide con el patrón requerido". seguido de su `title` especificado. Si tu `title` es algo así como "Dirección de correo electrónico", el resultado sería el mensaje "El texto ingresado no coincide con el patrón requerido. Dirección de correo electrónico", no es muy buena.
+Es recomendable utilizar el atributo [`title`](/es/docs/Web/HTML/Global_attributes#title) junto con `pattern`. Si lo haces, el `title` _debe_ describir el patrón. Es decir, debe explicar qué formato deben adoptar los datos, en lugar de cualquier otra información. Esto se debe a que el `title` se puede mostrar o pronunciar como parte de un mensaje de error de validación. Por ejemplo, el navegador puede presentar el mensaje "El texto ingresado no coincide con el patrón requerido". seguido de su `title` especificado. Si tu `title` es algo así como "Dirección de correo electrónico", el resultado sería el mensaje "El texto ingresado no coincide con el patrón requerido. Dirección de correo electrónico", no es muy buena.
 
 Es por eso que, en cambio, especificamos la cadena "Por favor, proporciona solo una dirección de correo electrónico corporativo de Best Startup Ever", Al hacerlo, el mensaje de error completo resultante podría ser algo como "El texto ingresado no coincide con el patrón requerido. Proporciona solo una dirección de correo electrónico corporativo de Best Startup Ever."
 
@@ -357,7 +357,7 @@ Es por eso que, en cambio, especificamos la cadena "Por favor, proporciona solo 
 
 Aquí tenemos una entrada de correo con el ID `emailAddress` que puede tener un máximo de 256 caracteres. El cuadro de entrada en sí mismo, físicamente tiene 64 caracteres de ancho y muestra el texto `usuario@ejemplo.gov` como marcador de posición cada vez que el campo está vacío. Además, al utilizar el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple), el cuadro se configura para permitir al usuario ingresar cero o más direcciones de correo, separadas por comas, como se describe en [Permitir varias direcciones de correo](#permitir_varias_direcciones_de_correo). Como toque final, el atributo [`list`](/es/docs/Web/HTML/Attributes/list) contiene el ID de un {{HTMLElement("datalist")}} cuyas {{HTMLElement("option")}}es especifican un conjunto de valores sugeridos que el usuario puede elegir.
 
-Adicionalmente, el elemento {{HTMLElement("label")}} se utiliza para establecer una etiqueta para el cuadro de entrada de correo, con su atributo {{HTMLAttrxRef("for", "label")}} que hace referencia al ID `emailAddress` del elemento {{HTMLElement("input")}}. Al asociar los dos elementos de esta manera, entonces al hacer clic en la etiqueta se enfocará el elemento de entrada.
+Adicionalmente, el elemento {{HTMLElement("label")}} se utiliza para establecer una etiqueta para el cuadro de entrada de correo, con su atributo [`for`](/es/docs/Web/HTML/Element/label#for) que hace referencia al ID `emailAddress` del elemento {{HTMLElement("input")}}. Al asociar los dos elementos de esta manera, entonces al hacer clic en la etiqueta se enfocará el elemento de entrada.
 
 ```html
 <label for="emailAddress">Correo electrónico</label><br />

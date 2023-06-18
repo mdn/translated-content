@@ -69,13 +69,13 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - `center`, centraliza o conteúdo ao centro da célula
     - `right`, alinha o conteúdo do elemento a direita da célula
     - `justify`, insere espaços ao texto para que o mesmo fique centralizado na célula
-    - `char`, alinha o texto em um alinhamento especial com um deslocamento mínimo definido pelos atributos {{htmlattrxref("char", "tbody")}} e {{htmlattrxref("charoff", "tbody")}} atributos {{unimplemented_inline("2212")}}.
+    - `char`, alinha o texto em um alinhamento especial com um deslocamento mínimo definido pelos atributos [`char`](/pt-BR/docs/Web/HTML/Element/tbody#char) e [`charoff`](/pt-BR/docs/Web/HTML/Element/tbody#charoff) atributos {{unimplemented_inline("2212")}}.
 
     Se nenhum atributo for definido o valor `left` é passado por padrão
 
     > **Note:**Não use esse atributo o mesmo está obsoleto (não suportado) no último padrão.- Para obter os mesmo efeitos `left`, `center`, `right` ou `justify`, use a propriedade {{cssxref("text-align")}} do CSS.
     >
-    > - Para obter o mesmo efeito no CSS3, você pode usar os valores {{htmlattrxref("char", "tfoot")}} com o valor de {{cssxref("text-align")}} propriedade {{unimplemented_inline}}.
+    > - Para obter o mesmo efeito no CSS3, você pode usar os valores [`char`](/pt-BR/docs/Web/HTML/Element/tfoot#char) com o valor de {{cssxref("text-align")}} propriedade {{unimplemented_inline}}.
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
 
@@ -95,9 +95,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 - {{htmlattrdef("char")}} {{Deprecated_inline}}
 
-  - : O elemento é usado para alinhar as células em uma columa. Valores típicos para isso inclui o periódico (.) quando se alinha valores monetários. Se {{htmlattrxref("align", "tfoot")}} não é definido para `char`, este atributo é ignorado
+  - : O elemento é usado para alinhar as células em uma columa. Valores típicos para isso inclui o periódico (.) quando se alinha valores monetários. Se [`align`](/pt-BR/docs/Web/HTML/Element/tfoot#align) não é definido para `char`, este atributo é ignorado
 
-    > **Nota:** Não use esté atributo, ele é obsoleto (e não é mais suportado) desde da última versão padrão. Em vez disso use {{htmlattrxref("char", "tfoot")}} no CSS3, você pode usar o atributo {{htmlattrxref("char", "tfoot")}} com a propriedade {{cssxref("text-align")}}.
+    > **Nota:** Não use esté atributo, ele é obsoleto (e não é mais suportado) desde da última versão padrão. Em vez disso use [`char`](/pt-BR/docs/Web/HTML/Element/tfoot#char) no CSS3, você pode usar o atributo [`char`](/pt-BR/docs/Web/HTML/Element/tfoot#char) com a propriedade {{cssxref("text-align")}}.
 
 - {{htmlattrdef("charoff")}} {{Deprecated_inline}}
 

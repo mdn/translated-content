@@ -61,7 +61,7 @@ La page d'accueil de la BBC, par exemple, contient un nombre important de liens 
 
 ## Anatomie d'un lien
 
-Un lien élémentaire se crée en intégrant le texte (ou tout autre contenu, cf. [Liens de niveau bloc](#liens_de_niveau_bloc)) que vous voulez transformer en lien dans un élément {{htmlelement("a")}} et en lui affectant un attribut {{htmlattrxref("href", "a")}} (également connu comme étant une **Hypertext Reference**) contenant l'adresse web vers laquelle vous voulez que le lien pointe.
+Un lien élémentaire se crée en intégrant le texte (ou tout autre contenu, cf. [Liens de niveau bloc](#liens_de_niveau_bloc)) que vous voulez transformer en lien dans un élément {{htmlelement("a")}} et en lui affectant un attribut [`href`](/fr/docs/Web/HTML/Element/a#href) (également connu comme étant une **Hypertext Reference**) contenant l'adresse web vers laquelle vous voulez que le lien pointe.
 
 ```html
 <p>Je suis en train de créer un lien à
@@ -148,7 +148,7 @@ Il y a aussi deux répertoires dans la racine — `pdfs` et `projects`. Chacun d
 
 ### Fragments de documents
 
-Il est possible de faire un lien vers une partie donnée d'un document HTML (désignée du terme **fragment de document**), plutôt que juste le haut du document. Pour ce faire, vous devrez d'abord assigner un attribut {{htmlattrxref("id")}} à l'élément sur lequel vous voulez pointer. Il est généralement logique d'établir un lien vers une rubrique précise, ainsi cela ressemble à quelque chose comme :
+Il est possible de faire un lien vers une partie donnée d'un document HTML (désignée du terme **fragment de document**), plutôt que juste le haut du document. Pour ce faire, vous devrez d'abord assigner un attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id) à l'élément sur lequel vous voulez pointer. Il est généralement logique d'établir un lien vers une rubrique précise, ainsi cela ressemble à quelque chose comme :
 
 ```html
 <h2 id="Adresse_mailing">Adresse de mailing</h2>
@@ -295,7 +295,7 @@ Sous sa forme la plus basique et la plus communément utilisée, un lien `mailto
 
 Ceci donne un résultat qui ressemble à ceci : [Envoyer un courriel à nullepart](mailto:nowhere@mozilla.org).
 
-En fait, l'adresse de courriel est même optionnelle. Si vous l'omettez (c'est-à-dire, si votre {{htmlattrxref("href", "a")}} est simplement "mailto:"), une nouvelle fenêtre de courriel sortant sera ouverte par le client de courriel de l'utilisateur, sans adresse de destination encore spécifiée. C'est souvent utile comme pour les liens "Partager" que lesquels les utilisateurs peuvent cliquer pour envoyer un e-mail à l'adresse de leur choix.
+En fait, l'adresse de courriel est même optionnelle. Si vous l'omettez (c'est-à-dire, si votre [`href`](/fr/docs/Web/HTML/Element/a#href) est simplement "mailto:"), une nouvelle fenêtre de courriel sortant sera ouverte par le client de courriel de l'utilisateur, sans adresse de destination encore spécifiée. C'est souvent utile comme pour les liens "Partager" que lesquels les utilisateurs peuvent cliquer pour envoyer un e-mail à l'adresse de leur choix.
 
 ### Spécification des détails
 

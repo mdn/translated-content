@@ -3,6 +3,8 @@ title: Routers
 slug: Glossary/Routers
 ---
 
+{{GlossarySidebar}}
+
 **routers** 是指路由器。在 Web 有兩種意思：
 
 1. 針對網路層，路由器是一種決定{{Glossary('封包')}}去向的網路設備。路由器是由 retailer 分發，允許用戶與網際網路互動。

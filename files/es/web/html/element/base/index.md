@@ -69,9 +69,9 @@ La dirección URL base de un documento puede ser consultado a partir de una secu
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
-- {{htmlattrdef("href")}}
+- `href`
   - : La dirección URL base que se usa en todo el documento para las direcciones URL relativas. Si no se especifica este atributo, este elemento debe venir antes de cualesquiera otros elementos con atributos cuyos valores son direcciones URL. Se permiten las direcciones URL absolutas y relativas.
-- {{htmlattrdef("target")}}
+- `target`
 
   - : Un nombre o una palabra clave que indica la ubicación predeterminada para navegar por el resultado de hipervínculos o formas, para los elementos que no tienen una referencia explícita del objetivo . Es un nombre o una palabra clave para un contexto de navegación (por ejemplo: pestaña, ventana o marco en línea). Las siguientes palabras clave tienen un significado especial: tab, window, o inline frame).Las siguientes palabras clave tienen un significado especial:
 

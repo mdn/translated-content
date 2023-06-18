@@ -13,7 +13,7 @@ translation_of: Web/HTML/Element/main
 
 L’élément HTML **`<main>`** représente le contenu majoritaire du {{HTMLElement("body")}} du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document ou de la fonctionnalité principale d'une application.
 
-Un document ne peut pas avoir plus d'un seul élément `<main>` sans attribut {{htmlattrxref("hidden")}}.
+Un document ne peut pas avoir plus d'un seul élément `<main>` sans attribut [`hidden`](/fr/docs/Web/HTML/Global_attributes#hidden).
 
 {{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}
 
@@ -70,7 +70,7 @@ L'élément `<main>` a le rôle d'une [balise `main`](/fr/docs/Web/Accessibility
 
 La navigation rapide (aussi appelée _skip navigation_ ou _skipnav_ en anglais) est une technique permettant aux outils d'assistance de passer certaines sections de contenu répétés (menu de navigation, bannières, etc.). Cela permet à l'utilisateur d'accéder plus rapidement au contenu principal de la page.
 
-Ajouter un attribut {{htmlattrxref("id")}} à l'élément `<main>` lui permet d'être une cible pour la navigation rapide.
+Ajouter un attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id) à l'élément `<main>` lui permet d'être une cible pour la navigation rapide.
 
 ```html
 <body>

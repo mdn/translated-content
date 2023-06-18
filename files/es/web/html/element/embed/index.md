@@ -20,13 +20,13 @@ El _Elemento HTML Embed_ ( `<embed>` ) representa un punto de integración para 
 
 Este elemento admite los siguientes atributos además de los [atributos globales](/en/HTML/Global_attributes) .
 
-- {{ htmlattrdef("height") }}
+- `height`
   - : La altura del recurso mostrada en píxeles CSS.
-- {{ htmlattrdef("src") }}
+- `src`
   - : La dirección URL del recurso que se está incrustado.
-- {{ htmlattrdef("type") }}
+- `type`
   - : El tipo MIME que se va a usar para la selección del plug-in para crear una instancia.
-- {{ htmlattrdef("width") }}
+- `width`
   - : El ancho del recurso mostrado en píxeles CSS.
 
 ## Interfaz DOM

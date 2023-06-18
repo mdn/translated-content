@@ -72,10 +72,12 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 >
 > ```js
 > var myIterator = {
->   next: function() {
+>   next: function () {
 >     // ...
 >   },
->   [Symbol.iterator]: function() { return this }
+>   [Symbol.iterator]: function () {
+>     return this;
+>   },
 > };
 > ```
 
@@ -84,43 +86,44 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 {{jsxref("String")}} 為一個可迭代內建物件（built-in iterable object）的範例：
 
 ```js
-var someString = 'hi';
-typeof someString[Symbol.iterator];          // "function"
+var someString = "hi";
+typeof someString[Symbol.iterator]; // "function"
 ```
 
 `String` 的[預設迭代器](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)會回傳字串中的一個一個字元：
 
 ```js
 var iterator = someString[Symbol.iterator]();
-iterator + '';                               // "[object String Iterator]"
+iterator + ""; // "[object String Iterator]"
 
-iterator.next();                             // { value: "h", done: false }
-iterator.next();                             // { value: "i", done: false }
-iterator.next();                             // { value: undefined, done: true }
+iterator.next(); // { value: "h", done: false }
+iterator.next(); // { value: "i", done: false }
+iterator.next(); // { value: undefined, done: true }
 ```
 
 部分內建語法結構（built-in constructs），如 [spread syntax](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator)，其內部也使用了相同的迭代協議：
 
 ```js
-[...someString]                              // ["h", "i"]
+[...someString]; // ["h", "i"]
 ```
 
 我們可以藉由提供我們自己的 `@@iterator` 來重新定義迭代行為：
 
 ```js
-var someString = new String('hi');           // need to construct a String object explicitly to avoid auto-boxing
+var someString = new String("hi"); // need to construct a String object explicitly to avoid auto-boxing
 
-someString[Symbol.iterator] = function() {
-  return { // this is the iterator object, returning a single element, the string "bye"
-    next: function() {
+someString[Symbol.iterator] = function () {
+  return {
+    // this is the iterator object, returning a single element, the string "bye"
+    next: function () {
       if (this._first) {
         this._first = false;
-        return { value: 'bye', done: false };
+        return { value: "bye", done: false };
       } else {
         return { done: true };
       }
     },
-    _first: true
+    _first: true,
   };
 };
 ```
@@ -128,8 +131,8 @@ someString[Symbol.iterator] = function() {
 請注意，重新定義 `@@iterator` 會影響使用迭代協議之內建語法結構的行為：
 
 ```js
-[...someString];                             // ["bye"]
-someString + '';                             // "hi"
+[...someString]; // ["bye"]
+someString + ""; // "hi"
 ```
 
 ## 可迭代範例
@@ -145,28 +148,38 @@ someString + '';                             // "hi"
 ```js
 var myIterable = {};
 myIterable[Symbol.iterator] = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
+  yield 1;
+  yield 2;
+  yield 3;
 };
 [...myIterable]; // [1, 2, 3]
 ```
 
-### 接受可迭代物件的內建 APIs
+### 接受可迭代物件的內建 API
 
 有許多 APIs 接受可迭代物件，如：{{jsxref("Map", "Map([iterable])")}}、{{jsxref("WeakMap", "WeakMap([iterable])")}}、{{jsxref("Set", "Set([iterable])")}} 及 {{jsxref("WeakSet", "WeakSet([iterable])")}}：
 
 ```js
 var myObj = {};
-new Map([[1, 'a'], [2, 'b'], [3, 'c']]).get(2);               // "b"
-new WeakMap([[{}, 'a'], [myObj, 'b'], [{}, 'c']]).get(myObj); // "b"
-new Set([1, 2, 3]).has(3);                               // true
-new Set('123').has('2');                                 // true
-new WeakSet(function* () {
+new Map([
+  [1, "a"],
+  [2, "b"],
+  [3, "c"],
+]).get(2); // "b"
+new WeakMap([
+  [{}, "a"],
+  [myObj, "b"],
+  [{}, "c"],
+]).get(myObj); // "b"
+new Set([1, 2, 3]).has(3); // true
+new Set("123").has("2"); // true
+new WeakSet(
+  (function* () {
     yield {};
     yield myObj;
     yield {};
-}()).has(myObj);                                         // true
+  })()
+).has(myObj); // true
 ```
 
 另外可參考 {{jsxref("Promise.all", "Promise.all(iterable)")}}、{{jsxref("Promise.race", "Promise.race(iterable)")}} 以及 {{jsxref("Array.from", "Array.from()")}}。
@@ -176,23 +189,23 @@ new WeakSet(function* () {
 部分陳述式（statements）及運算式（expressions）為預期用於可迭代物件，例如 [`for-of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 迴圈、[spread syntax](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_operator)、[`yield*`](/zh-TW/docs/Web/JavaScript/Reference/Operators/yield*)，及[解構賦值](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)：
 
 ```js
-for(let value of ['a', 'b', 'c']){
-    console.log(value);
+for (let value of ["a", "b", "c"]) {
+  console.log(value);
 }
 // "a"
 // "b"
 // "c"
 
-[...'abc']; // ["a", "b", "c"]
+[..."abc"]; // ["a", "b", "c"]
 
 function* gen() {
-  yield* ['a', 'b', 'c'];
+  yield* ["a", "b", "c"];
 }
 
 gen().next(); // { value:"a", done:false }
 
-[a, b, c] = new Set(['a', 'b', 'c']);
-a // "a"
+[a, b, c] = new Set(["a", "b", "c"]);
+a; // "a"
 ```
 
 ### 非良好的（Non-well-formed）可迭代物件
@@ -211,35 +224,35 @@ nonWellFormedIterable[Symbol.iterator] = () => 1
 
 ```js
 function makeIterator(array) {
-    var nextIndex = 0;
+  var nextIndex = 0;
 
-    return {
-       next: function() {
-           return nextIndex < array.length ?
-               {value: array[nextIndex++], done: false} :
-               {done: true};
-       }
-    };
+  return {
+    next: function () {
+      return nextIndex < array.length
+        ? { value: array[nextIndex++], done: false }
+        : { done: true };
+    },
+  };
 }
 
-var it = makeIterator(['yo', 'ya']);
+var it = makeIterator(["yo", "ya"]);
 
 console.log(it.next().value); // 'yo'
 console.log(it.next().value); // 'ya'
-console.log(it.next().done);  // true
+console.log(it.next().done); // true
 ```
 
 ### 無限迭代器
 
 ```js
 function idMaker() {
-    var index = 0;
+  var index = 0;
 
-    return {
-       next: function(){
-           return {value: index++, done: false};
-       }
-    };
+  return {
+    next: function () {
+      return { value: index++, done: false };
+    },
+  };
 }
 
 var it = idMaker();
@@ -254,25 +267,22 @@ console.log(it.next().value); // '2'
 
 ```js
 function* makeSimpleGenerator(array) {
-    var nextIndex = 0;
+  var nextIndex = 0;
 
-    while (nextIndex < array.length) {
-        yield array[nextIndex++];
-    }
+  while (nextIndex < array.length) {
+    yield array[nextIndex++];
+  }
 }
 
-var gen = makeSimpleGenerator(['yo', 'ya']);
+var gen = makeSimpleGenerator(["yo", "ya"]);
 
 console.log(gen.next().value); // 'yo'
 console.log(gen.next().value); // 'ya'
-console.log(gen.next().done);  // true
-
-
+console.log(gen.next().done); // true
 
 function* idMaker() {
-    var index = 0;
-    while (true)
-        yield index++;
+  var index = 0;
+  while (true) yield index++;
 }
 
 var gen = idMaker();
@@ -296,20 +306,20 @@ class SimpleClass {
     return {
       next: () => {
         if (this.index < this.data.length) {
-          return {value: this.data[this.index++], done: false};
+          return { value: this.data[this.index++], done: false };
         } else {
           this.index = 0; //If we would like to iterate over this again without forcing manual update of the index
-          return {done: true};
+          return { done: true };
         }
-      }
-    }
-  };
+      },
+    };
+  }
 }
 
-const simple = new SimpleClass([1,2,3,4,5]);
+const simple = new SimpleClass([1, 2, 3, 4, 5]);
 
 for (const val of simple) {
-  console.log(val);  //'0' '1' '2' '3' '4' '5'
+  console.log(val); //'0' '1' '2' '3' '4' '5'
 }
 ```
 
@@ -318,11 +328,11 @@ for (const val of simple) {
 [生成器物件（generator object）](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Generator)同時為迭代器及可迭代物件：
 
 ```js
-var aGeneratorObject = function* () {
-    yield 1;
-    yield 2;
-    yield 3;
-}();
+var aGeneratorObject = (function* () {
+  yield 1;
+  yield 2;
+  yield 3;
+})();
 typeof aGeneratorObject.next;
 // "function", because it has a next method, so it's an iterator
 typeof aGeneratorObject[Symbol.iterator];
