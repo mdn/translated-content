@@ -320,7 +320,7 @@ WEBVTT
 Pour que ceci soit affiché avec la lecture du média HTML, vous devez:
 
 - Enregistrez-le en tant que fichier .vtt dans un endroit approprié.
-- Lien vers le fichier .vtt avec l'élément {{htmlelement("track")}} . `<track>`  devrait être placé dans `<audio>` ou `<video>`, mais après tout `<source>` éléments . Utilisez l’attribut {{htmlattrxref ("kind", "track")}} pour indiquer si les signaux sont des sous-titres, des légendes ou des descriptions. De plus, utilisez {{htmlattrxref ("srclang", "track")}} pour indiquer au navigateur la langue dans laquelle vous avez écrit les sous-titres. .
+- Lien vers le fichier .vtt avec l'élément {{htmlelement("track")}} . `<track>`  devrait être placé dans `<audio>` ou `<video>`, mais après tout `<source>` éléments . Utilisez l’attribut [`kind`](/fr/docs/Web/HTML/Element/track#kind) pour indiquer si les signaux sont des sous-titres, des légendes ou des descriptions. De plus, utilisez [srclang](/fr/docs/Web/HTML/Element/track#srclang) pour indiquer au navigateur la langue dans laquelle vous avez écrit les sous-titres. .
 
 Voici un exemple:
 

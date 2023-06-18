@@ -118,10 +118,6 @@ p {
 
 {{EmbedLiveSample('示例', 'auto', 350)}}
 
-## 规范
-
-{{Specifications}}
-
 ## 参见
 
 - CSS 重要概念：

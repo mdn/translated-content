@@ -17,9 +17,9 @@ L'élément HTML **`<meta>`** représente toute information de métadonnées qui
 
 Comme tous les autres éléments, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-> **Note :** Il faut préciser que l'attribut {{htmlattrxref("name", "meta")}} possède une signification spécifique à l'élément {{HTMLElement("meta")}} et que l'attribut {{htmlattrxref("itemprop")}} ne doit pas être utilisé quand l'un de ces attributs est déjà utilisé : {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}}.
+> **Note :** Il faut préciser que l'attribut [`name`](/fr/docs/Web/HTML/Element/meta#name) possède une signification spécifique à l'élément {{HTMLElement("meta")}} et que l'attribut [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop) ne doit pas être utilisé quand l'un de ces attributs est déjà utilisé : [`name`](/fr/docs/Web/HTML/Element/meta#name), [`http-equiv`](/fr/docs/Web/HTML/Element/meta#http-equiv) ou [`charset`](/fr/docs/Web/HTML/Element/meta#charset).
 
-- {{htmlattrdef("charset")}}
+- `charset`
 
   - : Cet attribut déclare l'encodage utilisé par la page. Il peut être outrepassé de manière locale en utilisant l'attribut **`lang`** d'un élément. La valeur de cet attribut est une chaîne de caractères et doit être l'un des _noms MIME préférés_ d'un encodage comme [spécifié par l'IANA](https://www.iana.org/assignments/character-sets/character-sets.xml). Bien que le standard ne fixe pas d'encodage particulier, il fournit cependant quelques recommendations :
 
@@ -34,13 +34,13 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
     > - L'élément {{HTMLElement("meta")}} doit appartenir à l'élément {{HTMLElement("head")}} et doit apparaître parmi les **512 premiers octets de la page**. En effet, certains navigateurs ne consultent seulement ces premiers octets pour déterminer l'encodage utilisé pour la page.
     > - L'élément {{HTMLElement("meta")}} ne représente qu'une partie de l'[algorithme déterminant le jeu de caractères](https://www.whatwg.org/specs/web-apps/current-work/multipage/parsing.html#encoding-sniffing-algorithm) à appliquer sur la page par le navigateur. Ainsi, l'en-tête HTTP Content-Type et tous les éléments BOM auront une priorité supérieure à cet élément.
     > - Définir le jeu de caractères utilisé grâce à cet attribut représente une bonne pratique et est fortement recommandé. Si aucun encodage n'est défini pour la page, plusieurs techniques XSS peuvent porter atteinte à l'utilisateur (voir l'exemple de la [technique XSS de recours à UTF-7](https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7)). Toujours renseigner cet élément meta protégera contre ces dangers.
-    > - L'élément {{HTMLElement("meta")}} est un synonyme de `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` utilisé avant HTML5. Ici *`IANAcharset`* correspond à la valeur de l'attribut {{htmlattrxref("charset", "meta")}} correspondant. Bien qu'elle soit obsolète et qu'elle ne soit plus recommandée, cette syntaxe est toujours autorisée.
+    > - L'élément {{HTMLElement("meta")}} est un synonyme de `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` utilisé avant HTML5. Ici *`IANAcharset`* correspond à la valeur de l'attribut [`charset`](/fr/docs/Web/HTML/Element/meta#charset) correspondant. Bien qu'elle soit obsolète et qu'elle ne soit plus recommandée, cette syntaxe est toujours autorisée.
 
-- {{htmlattrdef("content")}}
-  - : Cet attribut fournit la valeur associée avec l'attribut {{htmlattrxref("http-equiv", "meta")}} ou l'attribut {{htmlattrxref("name", "meta")}} suivant le contexte utilisé.
-- {{htmlattrdef("http-equiv")}}
+- `content`
+  - : Cet attribut fournit la valeur associée avec l'attribut [`http-equiv`](/fr/docs/Web/HTML/Element/meta#http-equiv) ou l'attribut [`name`](/fr/docs/Web/HTML/Element/meta#name) suivant le contexte utilisé.
+- `http-equiv`
 
-  - : Cet attribut pouvant prendre des valeurs pré-définies représente un objet pouvant modifier le comportement des serveurs ou des agents utilisateur. Sa valeur est définie grâce à l'attribut {{htmlattrxref("content", "meta")}} et peut être l'une des suivantes :
+  - : Cet attribut pouvant prendre des valeurs pré-définies représente un objet pouvant modifier le comportement des serveurs ou des agents utilisateur. Sa valeur est définie grâce à l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#content) et peut être l'une des suivantes :
 
     - `content-language` {{deprecated_inline}}
 
@@ -56,16 +56,16 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
 
         > **Attention :**
         >
-        > - Ce champ n'est plus recommandé et ne donc doit pas être utilisé. L'attribut {{htmlattrxref("charset", "meta")}} de l'élément {{HTMLElement("meta")}} doit être utilisé à la place.
+        > - Ce champ n'est plus recommandé et ne donc doit pas être utilisé. L'attribut [`charset`](/fr/docs/Web/HTML/Element/meta#charset) de l'élément {{HTMLElement("meta")}} doit être utilisé à la place.
         > - Étant donné que l'élément {{HTMLElement("meta")}} peut ne pas être utilisé pour changer le type d'un document XHTML, ou d'un document HTML5 précédé par une syntaxe XHTML, il ne faut pas utiliser ce champs pour définir un type MIME étant un type MIME XHTML. Cela serait incorrect.
-        > - Seuls les documents HTML peuvent utiliser ce champ, cela entraîne donc une certaine redondance. C'est pourquoi il a été rendu obsolète et remplacé par l'attribut {{htmlattrxref("charset", "meta")}}.
+        > - Seuls les documents HTML peuvent utiliser ce champ, cela entraîne donc une certaine redondance. C'est pourquoi il a été rendu obsolète et remplacé par l'attribut [`charset`](/fr/docs/Web/HTML/Element/meta#charset).
 
     - `refresh`
 
       - : Ce champ définit :
 
-        - le nombre de secondes qu'il faudrait attendre avant de recharger la page si l'attribut {{htmlattrxref("content", "meta")}} contient seulement un nombre entier positif
-        - le nombre de secondes qu'il faudrait attendre avant que la page soit redirigée vers une autre page, si l'attribut {{htmlattrxref("content", "meta")}} contient un nombre entier positif suivi par la chaîne de caractères '`;url=`' ainsi qu'une URL valide.
+        - le nombre de secondes qu'il faudrait attendre avant de recharger la page si l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#content) contient seulement un nombre entier positif
+        - le nombre de secondes qu'il faudrait attendre avant que la page soit redirigée vers une autre page, si l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#content) contient un nombre entier positif suivi par la chaîne de caractères '`;url=`' ainsi qu'une URL valide.
 
     - `set-cookie` {{deprecated_inline}}{{non-standard_inline}}
 
@@ -73,10 +73,10 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
 
         > **Attention :** Ce champ est désormais obsolète et ne doit donc pas être utilisé. L'en-tête HTTP [Set-Cookie](/fr/docs/Web/HTTP/Headers/Set-Cookie) doit être utilisée à la place. Cette valeur a été retirée du standard et n'est plus prise en charge à partir de [Firefox 68](https://www.fxsitecompat.dev/en-CA/docs/2019/setting-cookies-with-meta-http-equiv-is-no-longer-allowed/) et de [Chrome 65](https://www.chromestatus.com/feature/6170540112871424).
 
-- {{htmlattrdef("name")}}
+- `name`
 
-  - : Cet attribut définit le nom d'un métadonnée au niveau du document. Il ne doit pas être utilisé si l'un des attributs {{htmlattrxref("itemprop", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("charset", "meta")}} est utilisé.
-    Le nom de la métadonnée document est associé à une valeur contenue dans l'attribut {{htmlattrxref("content", "meta")}}. Les noms possibles et la signification de leurs valeurs (contenues dans l'attribut {{htmlattrxref("content", "meta")}}) sont :
+  - : Cet attribut définit le nom d'un métadonnée au niveau du document. Il ne doit pas être utilisé si l'un des attributs [`itemprop`](/fr/docs/Web/HTML/Element/meta#itemprop), [`http-equiv`](/fr/docs/Web/HTML/Element/meta#http-equiv) ou [`charset`](/fr/docs/Web/HTML/Element/meta#charset) est utilisé.
+    Le nom de la métadonnée document est associé à une valeur contenue dans l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#content). Les noms possibles et la signification de leurs valeurs (contenues dans l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#content)) sont :
 
     - `application-name`, qui définit le nom de l'application web utilisée dans la page
 
@@ -180,7 +180,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
 
         - : Définit un ou plusieurs modes de couleurs avec lesquels le document est compatible. Le navigateur utilisera cette information ainsi que les réglages du navigateur ou de l'appareil pour déterminer les couleurs à utiliser (que ce soit pour l'arrière-plan, les contrôles, les barres de défilement, etc.). `<meta name="color-scheme">` sert principalement à indiquer la compatibilité et la préférence pour les différents modes de couleur (sombre / clair entre autres).
 
-          La valeur de {{htmlattrxref("content","meta")}} pour `color-scheme` peut être :
+          La valeur de [`content`](/fr/docs/Web/HTML/Element/meta#content) pour `color-scheme` peut être :
 
           - `normal`
             - : Le document n'est pas affecté par les modes de couleurs et devrait utiliser la palette de couleur par défaut.
@@ -420,9 +420,9 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
       > - Les valeurs par défaut peuvent être différentes suivant les appareils et les navigateurs.
       > - Pour en savoir plus sur l'utilisation faite de cet attribut par Firefox pour Mobile, vous pouvez lire [cet article](/fr/docs/Mozilla/Mobile/Viewport_meta_tag).
 
-- {{htmlattrdef("scheme")}} {{deprecated_inline}}
+- `scheme` {{deprecated_inline}}
 
-  - : Cet attribut définit le schéma dans lequel la métadonnée est décrite. Un schéma, de la même manière qu'un format, est un contexte permettant d'interpréter correctement la valeur de l'attribut {{htmlattrxref("content", "meta")}}.
+  - : Cet attribut définit le schéma dans lequel la métadonnée est décrite. Un schéma, de la même manière qu'un format, est un contexte permettant d'interpréter correctement la valeur de l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#content).
 
     > **Attention :** Cet attribut a été déprécié et ne doit donc plus être utilisé. Il n'y pas d'attributs ou d'éléments remplaçant sa fonction car cet attribut n'était pas usité.
 
@@ -430,10 +430,10 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
 
 Selon les attributs qui sont renseignés, la métadonnée peut être de différentes sortes :
 
-- si {{htmlattrxref("name", "meta")}} est renseigné, c'est une _métadonnée de document_ s'appliquant à la page entière,
-- si {{htmlattrxref("http-equiv", "meta")}} est renseigné, c'est une information transmise au serveur web indiquant comment la page doit être servie (_pragma directive_ en anglais),
-- si {{htmlattrxref("charset", "meta")}} est renseigné, c'est une déclaration sur le jeu de caractères, autrement dit l'ensemble de caractères utilisés pour la version sérialisée de la page web,
-- si {{htmlattrxref("itemprop", "meta")}} est renseigné, c'est une métadonnée définie par l'utilisateur, gérée de manière transparente par l'agent utilisateur car la signification de cette métadonnée est spécifique à l'utilisateur. {{experimental_inline}}
+- si [`name`](/fr/docs/Web/HTML/Element/meta#name) est renseigné, c'est une _métadonnée de document_ s'appliquant à la page entière,
+- si [`http-equiv`](/fr/docs/Web/HTML/Element/meta#http-equiv) est renseigné, c'est une information transmise au serveur web indiquant comment la page doit être servie (_pragma directive_ en anglais),
+- si [`charset`](/fr/docs/Web/HTML/Element/meta#charset) est renseigné, c'est une déclaration sur le jeu de caractères, autrement dit l'ensemble de caractères utilisés pour la version sérialisée de la page web,
+- si [`itemprop`](/fr/docs/Web/HTML/Element/meta#itemprop) est renseigné, c'est une métadonnée définie par l'utilisateur, gérée de manière transparente par l'agent utilisateur car la signification de cette métadonnée est spécifique à l'utilisateur. {{experimental_inline}}
 
 ## Exemples
 
@@ -480,7 +480,7 @@ Désactiver la possibilité de zoom avec `user-scalable: no` empêche les person
       </th>
       <td>
         Contenu de métadonnées. Si l'attribut
-        {{htmlattrxref("itemprop")}} est utilisé : du
+        <a href="/fr/docs/Web/HTML/Global_attributes#itemprop"><code>itemprop</code></a> est utilisé : du
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
           >contenu de flux</a
         >
@@ -507,7 +507,7 @@ Désactiver la possibilité de zoom avec `user-scalable: no` empêche les person
       <td>
         <code>&#x3C;meta charset></code>, <code>&#x3C;meta http-equiv></code> :
         un élément {{HTMLElement("head")}}. Si l'attribut
-        {{htmlattrxref("http-equiv", "meta")}} n'est pas une
+        <a href="/fr/docs/Web/HTML/Element/meta#http-equiv"><code>http-equiv</code></a> n'est pas une
         déclaration d'encodage, l'élément peut également être au sein d'un
         élément {{HTMLElement("noscript")}} lui-même contenu par un
         élément {{HTMLElement("head")}}.<br /><code

@@ -17,16 +17,16 @@ L'élément HTML **`<param>`** définit les paramètres qui peuvent être employ
 
 Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("name")}}
+- `name`
   - : Le nom du paramètre
-- {{htmlattrdef("value")}}
+- `value`
   - : Cet attribut définit la valeur du paramètre.
 
 ### Attributs obsolètes
 
-- {{htmlattrdef("type")}} {{deprecated_inline}}
+- `type` {{deprecated_inline}}
   - : Cet attribut est uniquement utilisé si l'attribut `valuetype` vaut `"ref"`. Il définit le type MIME des valeurs trouvées à l'URI.
-- {{htmlattrdef("valuetype")}} {{deprecated_inline}}
+- `valuetype` {{deprecated_inline}}
 
   - : Cet attribut définit le type de la valeur indiquée par l'attribut `value`. Les valeurs possibles sont :
 

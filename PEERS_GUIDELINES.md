@@ -79,48 +79,9 @@ See [the guide about orphaned and conflicting pages](./docs/orphaned_and_conflic
 
 ---
 
-## Activating a locale
-
-To activate a locale you must apply with the following information:
-
-### Your locale
-
-Please specify which of the following two locales you wish to have unfrozen:
-
-- German (de)
-- Polish (pl)
-
-NB These are the only frozen locales we will consider - see [The future of MDN localization in this Hacks post](https://hacks.mozilla.org/2020/10/mdn-web-docs-evolves-lowdown-on-the-upcoming-new-platform/)
-
-### Your team members
-
-You need to put together a community maintenance team. This requires:
-
-- A team lead who will be the communication point between that team and the MDN core team, and have overall responsibility for the team.
-- At least two other members, so that members can review other members work.
-- A place to discuss this team's localization work. This can be a Telegram group, Matrix chat room, or whatever the team thinks is best.
-
-To find out more about our existing teams see [Review teams](#review-teams) above.
-
-### Agree to our terms
-
-Please indicate that you agree to our [Requirements for keeping locales up-to-date](#requirements-for-keeping-locales-up-to-date) above.
-
-### The team agrees to our CoC and license
-
-Also indicate that your team agrees to adhere by our Code of Conduct and License (see below)
-
-### Acceptance
-
-If the application is been successful you can start work on your locale. See the [guidelines for set up in the README](README.md).
-
-You can add your team to the [localizing MDN][] page.
-
 ## Get in touch
 
 If you want to ask questions or talk to us about forming a new community maintenance team, see [ask for help][].
-
----
 
 ### Code of Conduct
 
@@ -130,5 +91,4 @@ Everyone participating in this project is expected to follow our [Code of Conduc
 
 When contributing to the content you agree to license your contributions according to [our license](LICENSE.md).
 
-[ask for help]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help
-[localizing MDN]: https://developer.mozilla.org/en-US/docs/MDN/Contribute/Localize
+[ask for help]: https://developer.mozilla.org/docs/MDN/Community/Communication_channels

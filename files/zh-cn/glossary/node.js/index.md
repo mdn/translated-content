@@ -3,6 +3,8 @@ title: Node.js
 slug: Glossary/Node.js
 ---
 
+{{GlossarySidebar}}
+
 Node.js 是一个跨平台 {{Glossary("JavaScript")}} 运行环境，使开发者可以搭建服务器端的 JavaScript 应用程序。
 
 ## 了解更多

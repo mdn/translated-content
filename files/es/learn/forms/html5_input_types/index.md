@@ -35,13 +35,13 @@ Debido a que la apariéncia de un control de formulario puede ser algo distinta 
 
 ## Campo de dirección de correo electrónico
 
-Este tipo de campo se define utilizando el valor `email` en el atributo {{htmlattrxref("type","input")}} del elemento \<input>:
+Este tipo de campo se define utilizando el valor `email` en el atributo [`type`](/es/docs/Web/HTML/Element/input#type) del elemento \<input>:
 
 ```html
 <input type="email" id="email" name="email">
 ```
 
-Cuando se utiliza este valor {{htmlattrxref("type","input")}} , se le obliga al usuario a escribir dentro del campo una dirección de correo electrónico válida. Cualquier otro contenido ocasiona que el navegador muestre un mensaje de error cuando se envía el formulario. Puedes verlo en acción en la siguiente captura de pantalla
+Cuando se utiliza este valor [`type`](/es/docs/Web/HTML/Element/input#type) , se le obliga al usuario a escribir dentro del campo una dirección de correo electrónico válida. Cualquier otro contenido ocasiona que el navegador muestre un mensaje de error cuando se envía el formulario. Puedes verlo en acción en la siguiente captura de pantalla
 
 ![﻿An invalid email input showing the message "Please enter an email address."](email_address_invalid.png)
 
@@ -71,7 +71,7 @@ Ten en cuenta que `a@b` es una dirección de correo electrónico válida de acue
 
 ## Campo de búsqueda
 
-Los campos de búsqueda están destinados a ser utilizados para crear cajas de búsqueda en páginas y aplicaciones. Este tipo de campo se define utilizando el valor `search` en su atributo {{htmlattrxref("type","input")}}:
+Los campos de búsqueda están destinados a ser utilizados para crear cajas de búsqueda en páginas y aplicaciones. Este tipo de campo se define utilizando el valor `search` en su atributo [`type`](/es/docs/Web/HTML/Element/input#type):
 
 ```html
 <input type="search" id="search" name="search">
@@ -87,7 +87,7 @@ Otra característica que vale la pena señalar es que se puede guardar los valor
 
 ## Campo número de teléfono
 
-Se puede crear un campo especial para introducir números de teléfono utilizando `tel` como valor del atributo {{htmlattrxref("type","input")}}:
+Se puede crear un campo especial para introducir números de teléfono utilizando `tel` como valor del atributo [`type`](/es/docs/Web/HTML/Element/input#type):
 
 ```html
 <input type="tel" id="tel" name="tel">
@@ -105,7 +105,7 @@ Como mencionamos anteriormente, se puede utilizar el atributo [`pattern`](/es/do
 
 ## Campo URL
 
-Se puede crear un tipo especial de campo para introducir URLs utilizando el valor `url` para el atributo {{htmlattrxref("type","input")}}:
+Se puede crear un tipo especial de campo para introducir URLs utilizando el valor `url` para el atributo [`type`](/es/docs/Web/HTML/Element/input#type):
 
 ```html
 <input type="url" id="url" name="url">
@@ -121,13 +121,13 @@ Mira el siguiente ejemplo tomado de Firefox para Android:
 
 ## Campo numérico
 
-Se pueden crear controles para introducir números con el {{htmlattrxref("type","input")}} `number` de {{HTMLElement("input")}}. Este control se parece a un campo de texto pero solo permite números de punto flotante, y normalmente proporciona botones deslizadores para incrementar o reducir el valor del control. En dispositivos con teclados dinámicos generalmente se muestra el teclado numérico.
+Se pueden crear controles para introducir números con el [`type`](/es/docs/Web/HTML/Element/input#type) `number` de {{HTMLElement("input")}}. Este control se parece a un campo de texto pero solo permite números de punto flotante, y normalmente proporciona botones deslizadores para incrementar o reducir el valor del control. En dispositivos con teclados dinámicos generalmente se muestra el teclado numérico.
 
 La siguiente captura de pantalla tomada de Firefox para Android proporciona un ejemplo:
 
 ![firefox for android email keyboard, with ampersand displayed by default.](fx-android-number-type-keyboard.jpg)
 
-Con el tipo de input `number` puedes limitar los valores mínimo y máximo permitidos definiendo los atributos {{htmlattrxref("min","input")}} y {{htmlattrxref("max","input")}}.
+Con el tipo de input `number` puedes limitar los valores mínimo y máximo permitidos definiendo los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y [`max`](/es/docs/Web/HTML/Element/input#max).
 
 También puedes utilizar el atributo `step` para cambiar el incremento y decremento causado por los botones deslizadores. Por defecto, el tipo de input number sólo valida si el número es un entero. Para permitir números decimales, especifica [`step="any"`](/es/docs/Web/HTML/Attributes/step). Si se omite, su valor por defecto es `1`, lo que significa que solo son válidos números enteros.
 
@@ -155,7 +155,7 @@ Otra forma de tomar un número es usando un **slider**. Podrás observar cómo s
 
 Usage-wise, sliders are less accurate than text fields. Therefore, they are used to pick a number whose _precise_ value is not necessarily important.
 
-A slider is created using the {{HTMLElement("input")}} with its {{htmlattrxref("type","input")}} attribute set to the value `range`. The slider-thumb can be moved via mouse or touch, or with the arrows of the keypad.
+A slider is created using the {{HTMLElement("input")}} with its [`type`](/es/docs/Web/HTML/Element/input#type) attribute set to the value `range`. The slider-thumb can be moved via mouse or touch, or with the arrows of the keypad.
 
 It's important to properly configure your slider. To that end, it's highly recommended that you set the [`min`](/es/docs/Web/HTML/Attributes/min), [`max`](/es/docs/Web/HTML/Attributes/max), and [`step`](/es/docs/Web/HTML/Attributes/step) attributes which set the minimum, maximum and increment values, respectively.
 
@@ -194,7 +194,7 @@ Gathering date and time values has traditionally been a nightmare for web develo
 
 HTML date controls are available to handle this specific kind of data, providing calendar widgets and making the data uniform.
 
-A date and time control is created using the {{HTMLElement("input")}} element and an appropriate value for the {{htmlattrxref("type","input")}} attribute, depending on whether you wish to collect dates, times, or both. Here's a live example that falls back to {{htmlelement("select")}} elements in non-supporting browsers:
+A date and time control is created using the {{HTMLElement("input")}} element and an appropriate value for the [`type`](/es/docs/Web/HTML/Element/input#type) attribute, depending on whether you wish to collect dates, times, or both. Here's a live example that falls back to {{htmlelement("select")}} elements in non-supporting browsers:
 
 {{EmbedGHLiveSample("learning-area/html/forms/datetime-local-picker-fallback/index.html", '100%', 200)}}
 
@@ -253,7 +253,7 @@ The reference pages linked to above provide suggestions on how to program fallba
 
 Colors are always a bit difficult to handle. There are many ways to express them: RGB values (decimal or hexadecimal), HSL values, keywords, etc.
 
-A `color` control can be created using the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to the value `color`:
+A `color` control can be created using the {{HTMLElement("input")}} element with its [`type`](/es/docs/Web/HTML/Element/input#type) attribute set to the value `color`:
 
 ```html
 <input type="color" name="color" id="color">

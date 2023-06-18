@@ -3,6 +3,8 @@ title: REST
 slug: Glossary/REST
 ---
 
+{{GlossarySidebar}}
+
 具象状态传输（**REST，**Representational State Transfer) 是一组实现效率、可读性、还有可拓展分散式系统的软件架构设计规范。如果一个系统能坚守这些规范，那么它就是 RESTful。
 
 REST 的基本概念是资源（resource），例如文件能通过明确和标准的操作与格式，转换其状态与超文本的关系。通常在 {{Glossary("API","API's")}} 或服务能直接修改文件的类型，而非触发其他行为时，它们就称自己为 RESTful。

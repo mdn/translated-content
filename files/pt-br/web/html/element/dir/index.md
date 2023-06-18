@@ -32,7 +32,7 @@ Como todos os outros elementos HTML, este elemento suporta os [global attributes
 
   - A propriedade {{cssxref('list-style')}}, útil para escolher a maneira como o ordinal é exibido.
   - [CSS counters](/pt-BR/docs/CSS_Counters), útil para lidar com listas aninhadas complexas.
-  - A propriedade {{Cssxref('line-height')}}, útil para simular o atributo obsoleto {{htmlattrxref("compact", "dir")}}.
+  - A propriedade {{Cssxref('line-height')}}, útil para simular o atributo obsoleto [`compact`](/pt-BR/docs/Web/HTML/Element/dir#compact).
   - A propriedade {{cssxref('margin')}}, útil para controlar o recuo da lista.
 
 {{HTMLSidebar}}

@@ -21,9 +21,9 @@ L'élément HTML **`<ins>`** représente un fragment de texte qui a été ajout�
 
 On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attributs_universels) pour cet élément.
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : Cet attribut définit l'URI d'une ressource qui explique la modification (par exemple, un compte-rendu de réunion ou un lien vers un rapport).
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : Cet attribut indique la date et l'heure de la modification. La valeur de cet attribut doit être [une date valide avec une chaîne de caractères optionnelle pour l'heure](https://www.w3.org/TR/2011/WD-html5-20110525/common-microsyntaxes.html#valid-date-string-with-optional-time). Si la valeur ne peut pas être analysée comme une date, l'indication temporelle sera absente de l'élément. Voir [l'article sur les formats](/fr/docs/Web/HTML/Formats_date_heure_HTML) pour la représentation d'[une date seule](/fr/docs/Web/HTML/Formats_date_heure_HTML#Représentation_des_dates) ou d'[une date avec une heure](/fr/docs/Web/HTML/Formats_date_heure_HTML#Représentation_des_dates_et_heures_locales).
 
 ## Exemples

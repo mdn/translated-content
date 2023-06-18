@@ -23,7 +23,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 - [`propertyIsEnumerable()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable) 和 [`hasOwnProperty()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) 方法可以分别用静态方法 {{jsxref("Object.getOwnPropertyDescriptor()")}} 和 {{jsxref("Object.hasOwn()")}} 替换。
 - 如果你正在检查一个构造函数的 `prototype` 属性，通常可以用 [`instanceof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 代替 [`isPrototypeOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf) 方法。
 
-如果不存在语义上等价的静态方法，或者你真的想使用 `Object.prototype` 方法，你应该通过 [`call()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 直接在目标对象上调用 `Object.prototype` 方法，以防止因目标对象上原有方法被覆盖而产生意外的结果。
+如果不存在语义上等价的静态方法，或者你真的想使用 `Object.prototype` 方法，你应该通过 [`call()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call) 直接在目标对象上调用 `Object.prototype` 方法，以防止因目标对象上原有方法被重写而产生意外的结果。
 
 ```js
 const obj = {
@@ -80,7 +80,7 @@ normalObj.constructor; // 显示 "Object() { [native code] }"
 nullProtoObj.constructor; // 显示 "undefined"
 ```
 
-我们可以通过为 null 原型对象分配属性的方式将 `toString` 方法添加回去：
+我们可以通过为 `null` 原型对象分配属性的方式将 `toString` 方法添加回去：
 
 ```js
 nullProtoObj.toString = Object.prototype.toString; // 由于新对象缺少 `toString` 方法，因此需要将原始的通用 `toString` 方法添加回来。
@@ -89,7 +89,7 @@ console.log(nullProtoObj.toString()); // 显示 "[object Object]"
 console.log(`nullProtoObj 是：${nullProtoObj}`); // 显示 "nullProtoObj 是：[object Object]"
 ```
 
-普通对象的 `toString()` 方法是在对象的原型上的，而与普通对象不同的是，这里的 `toString()` 方法是 `nullProtoObj` 自己的属性。这是因为 `nullProtoObj` 没有原型（即为 `null`）。
+普通对象的 `toString()` 方法是在对象的原型上的，而与普通对象不同的是，这里的 `toString()` 方法是 `nullProtoObj` 的自有属性。这是因为 `nullProtoObj` 没有原型（即为 `null`）。
 
 在实践中，`null` 原型对象通常被用作 [map](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map) 的简单替代品。由于存在 `Object.prototype` 属性，会导致一些错误：
 
@@ -178,23 +178,23 @@ JavaScript 还具有内置的 API，用于生成 `null` 原型对象，特别是
 - {{jsxref("Object.create()")}}
   - : 使用指定的原型对象和属性创建一个新对象。
 - {{jsxref("Object.defineProperties()")}}
-  - : 给对象添加多个属性并分别指定它们的配置。
+  - : 向对象添加多个由给定描述符描述的命名属性。
 - {{jsxref("Object.defineProperty()")}}
-  - : 给对象添加一个属性并指定该属性的配置。
+  - : 向对象添加一个由给定描述符描述的命名属性。
 - {{jsxref("Object.entries()")}}
-  - : 返回给定对象**自身**可枚举字符串属性的 `[key, value]` 数组。
+  - : 返回包含给定对象**自有**可枚举字符串属性的所有 `[key, value]` 数组。
 - {{jsxref("Object.freeze()")}}
-  - : 冻结一个对象：其他代码不能删除或更改其任何属性。
+  - : 冻结一个对象。其他代码不能删除或更改其任何属性。
 - {{jsxref("Object.fromEntries()")}}
   - : 从一个包含 `[key, value]` 对的可迭代对象中返回一个新的对象（{{jsxref("Object.entries")}} 的反操作）。
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
-  - : 返回对象指定的属性配置。
+  - : 返回一个对象的已命名属性的属性描述符。
 - {{jsxref("Object.getOwnPropertyDescriptors()")}}
-  - : 返回一个包含给定对象所有自有属性配置的对象。
+  - : 返回一个包含对象所有自有属性的属性描述符的对象。
 - {{jsxref("Object.getOwnPropertyNames()")}}
-  - : 返回一个数组，它包含了指定对象**自身**所有的可枚举或不可枚举的属性名。
+  - : 返回一个包含给定对象的所有**自有**可枚举和不可枚举属性名称的数组。
 - {{jsxref("Object.getOwnPropertySymbols()")}}
-  - : 返回一个数组，它包含了指定对象自身所有的符号属性。
+  - : 返回一个数组，它包含了指定对象所有自有 symbol 属性。
 - {{jsxref("Object.getPrototypeOf()")}}
   - : 返回指定对象的原型（内部的 `[[Prototype]]` 属性）。
 - {{jsxref("Object.hasOwn()")}}
@@ -208,7 +208,7 @@ JavaScript 还具有内置的 API，用于生成 `null` 原型对象，特别是
 - {{jsxref("Object.isSealed()")}}
   - : 判断对象是否已经封闭。
 - {{jsxref("Object.keys()")}}
-  - : 返回一个包含所有给定对象**自身**可枚举字符串属性名称的数组。
+  - : 返回一个包含所有给定对象**自有**可枚举字符串属性名称的数组。
 - {{jsxref("Object.preventExtensions()")}}
   - : 防止对象的任何扩展。
 - {{jsxref("Object.seal()")}}
@@ -216,7 +216,7 @@ JavaScript 还具有内置的 API，用于生成 `null` 原型对象，特别是
 - {{jsxref("Object.setPrototypeOf()")}}
   - : 设置对象的原型（即内部 `[[Prototype]]` 属性）。
 - {{jsxref("Object.values()")}}
-  - : 返回给定对象**自身**所有可枚举字符串属性的值的数组。
+  - : 返回包含给定对象所有**自有**可枚举字符串属性的值的数组。
 
 ## 实例属性
 
@@ -248,7 +248,7 @@ JavaScript 还具有内置的 API，用于生成 `null` 原型对象，特别是
 - {{jsxref("Object.prototype.toString()")}}
   - : 返回一个代表该对象的字符串。
 - {{jsxref("Object.prototype.valueOf()")}}
-  - : 返回指定对象的原始值。
+  - : 返回指定对象的基本类型值。
 
 ## 示例
 

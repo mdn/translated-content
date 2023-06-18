@@ -34,7 +34,7 @@ Les _attributs SVG de base_ sont tous les attributs communs pouvant être spéci
     _Type de valeur_: [\<IRI>](/fr/docs/Web/SVG/Content_type#IRI); _Animation_: **Non**
 - {{SVGAttr('xml:lang')}}
 
-  - : C'est un attribut universel autorisé dans tous les documents XML pour définir le langage du texte présent dans l'élément. Son utilisation est presque identique à celle de l'attribut [lang](/fr/docs/Web/HTML/Attributs_universels/lang) en HTML, hormis que les documents XML 1.0 ne permettent pas l'utilisation d'une valeur d'attribut nulle (`xml:lang=""`) pour indiquer un langage inconnu. À la place, utiliser `xml:lang="und"`.
+  - : C'est un attribut universel autorisé dans tous les documents XML pour définir le langage du texte présent dans l'élément. Son utilisation est presque identique à celle de l'attribut [`lang`](/fr/docs/Web/HTML/Attributs_universels/lang) en HTML, hormis que les documents XML 1.0 ne permettent pas l'utilisation d'une valeur d'attribut nulle (`xml:lang=""`) pour indiquer un langage inconnu. À la place, utiliser `xml:lang="und"`.
 
     > **Note :** SVG 2 introduit l'attribut `lang`. Si les attributs `lang` et `xml:lang` sont tous les deux définis, `xml:lang` a la priorité sur `lang`.
 
