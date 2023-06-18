@@ -7,9 +7,9 @@ slug: Web/API/Document_Object_Model/Introduction
 
 **文档对象模型**（_DOM_）是 web 上构成文档结构和内容的对象的数据表示。本指南将介绍 DOM，研究 DOM 如何在内存中表示 {{Glossary("HTML")}} 文档以及如何使用 API 来创建 web 内容和应用程序。
 
-## 什么是 DOM?
+## 什么是 DOM？
 
-文档对象模型（DOM）是一个网络文档的编程接口。它代表页面，以便程序可以改变文档的结构、风格和内容。DOM 将文档表示为节点和对象；这样，编程语言就可以与页面互动。
+文档对象模型（DOM）是一个网络文档的编程接口。它代表页面，以便程序可以改变文档的结构、风格和内容。DOM 将文档表示为节点和对象；这样，编程语言就可以与页面交互。
 
 网页是一个既可以在浏览器窗口中显示，也可以作为 HTML 源代码的文档。在这两种情况下，它都是同一个文档，但文档对象模型（DOM）的表示方式使它可以被操作。作为一个面向对象的网页表示，它可以用脚本语言（如 JavaScript）进行修改。
 
@@ -24,7 +24,7 @@ alert(paragraphs[0].nodeName);
 
 所有可用于操作和创建网页的属性、方法和事件都被组织到对象中。例如，代表文档本身的 `document` 对象，任何实现 {{domxref("HTMLTableElement")}} 访问 HTML 表格的 `table` 对象等，都是对象。
 
-DOM是使用多个API构建的，它们一起工作。核心 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 定义了描述任何文档和其中对象的实体。其他 API 会根据需要对其进行扩展，为 DOM 增加新的特性和功能。例如，[HTML DOM API](/zh-CN/docs/Web/API/HTML_DOM_API) 为核心 DOM 增加了对表示 HTML 文档的支持，而 SVG API 增加了对表示 SVG 文档的支持。
+DOM 是使用多个 API 构建的，它们一起工作。核心 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 定义了描述任何文档和其中对象的实体。其他 API 会根据需要对其进行扩展，为 DOM 增加新的特性和功能。例如，[HTML DOM API](/zh-CN/docs/Web/API/HTML_DOM_API) 为核心 DOM 增加了对表示 HTML 文档的支持，而 SVG API 增加了对表示 SVG 文档的支持。
 
 ## DOM 和 JavaScript
 
@@ -42,13 +42,13 @@ doc.nodeName # 文档对象的 DOM 属性
 p_list = doc.getElementsByTagName("para")
 ```
 
-要获取更多在网页上使用 JavaScript 的信息，可以参考 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)。
+要获取更多在网页上使用 JavaScript 的信息，请参阅 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)。
 
 ## 访问 DOM
 
 在使用 DOM 时，不需要做任何其他特殊的操作。你可以在*脚本*中直接使用 JavaScript 的 API，这是一个由浏览器运行的程序。
 
-当你创建一个脚本时，无论是内联的 `<script>` 元素还是包含在网页中，你都可以立即开始使用 {{domxref("document")}} 或 {{domxref("Window", "window")}} 对象的 API 来操作文档本身，或网页中的任何元素（文档的子元素）。你的 DOM 编程可能就像下面这个示例一样简单，通过使用 {{domxref("console.log()")}} 函数在控制台显示一条信息：
+当你创建一个脚本时，无论是内联到 `<script>` 元素中还是包含在网页中，你都可以立即开始使用 {{domxref("document")}} 或 {{domxref("Window", "window")}} 对象的 API 来操作文档本身，或网页中的任何元素（文档的子元素）。你的 DOM 编程可能就像下面这个示例一样简单，通过使用 {{domxref("console.log()")}} 函数在控制台显示一条信息：
 
 ```html
 <body onload="console.log('欢迎来到我的主页！');">
@@ -82,7 +82,7 @@ p_list = doc.getElementsByTagName("para")
 
 本页试图用简单的语言描述各种对象和类型。但是，有一些不同的数据类型在 API 中传递，你应该注意到。
 
-> **备注：** 因为绝大多数使用 DOM 的代码都是围绕着操作 HTML 文档进行的，所以我们通常把 DOM 中的节点称为**元素**（elements），尽管严格来说并不是每个节点都是一个元素。
+> **备注：** 因为绝大多数使用 DOM 的代码都是围绕着操作 HTML 文档进行的，所以我们通常把 DOM 中的节点称为**元素**（element），尽管严格来说并不是每个节点都是一个元素。
 
 下面的表格大致描述了这些数据类型。
 
@@ -123,7 +123,7 @@ p_list = doc.getElementsByTagName("para")
       <td>
         <code>nodeList</code> 是由元素组成的数组，如同
         {{domxref("document.querySelectorAll()")}}
-        等方法返回的类型。<code>nodeList</code> 中的条目通过下标有两种方式进行访问：
+        等方法返回的类型。<code>nodeList</code> 中的条目通过索引有两种方式进行访问：
         <ul>
           <li>list.item(1)</li>
           <li>list[1]</li>
