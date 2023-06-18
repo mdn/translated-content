@@ -5,30 +5,23 @@ slug: Web/API/Notification/silent
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-The **`silent`** read-only property of the
-{{domxref("Notification")}} interface specifies whether the notification should be
-silent, i.e., no sounds or vibrations should be issued, regardless of the device
-settings. This is specified in the `silent` option of the
-{{domxref("Notification.Notification","Notification()")}} constructor.
+{{domxref("Notification")}} 接口的 **`silent`** 只读属性指定通知是否应当静音，即无论设备设置如何，都不发出声音或振动。在{{domxref("Notification.Notification","Notification()")}} 构造函数的 `silent` 选项中指定。
 
 ## 值
 
-A boolean value. `false` is the default; `true` makes
-the notification silent.
+一个布尔值。`false` 是默认值；`true` 使通知静音。
 
 ## 示例
 
-The following snippet is intended to fire a silent notification; a simple
-`options` object is created, and then the notification is fired using the
-{{DOMxRef("Notification.Notification","Notification()")}} constructor.
+以下代码段旨在触发静默通知；创建一个简单的 `options` 对象，然后调用 {{DOMxRef("Notification.Notification","Notification()")}} 构造函数触发通知。
 
 ```js
 const options = {
-  body: "Your code submission has received 3 new review comments.",
+  body: "您提交的代码收到了 3 条新的审阅意见。",
   silent: true,
 };
 
-const n = new Notification("New review activity", options);
+const n = new Notification("新评论活动", options);
 
 console.log(n.silent); // "true"
 ```
