@@ -304,9 +304,9 @@ CSS 字体函数与 {{CSSxRef("font-variant-alternates")}} 属性一起使用，
 
 以下函数在过渡和动画属性中作为一个值使用。
 
-- {{cssxref("easing-function#cubic_b%C3%A9zier_easing_function", "cubic-bezier()")}}
+- {{cssxref("easing-function#三次贝塞尔缓动函数", "cubic-bezier()")}}
   - : 定义三次贝塞尔曲线的缓动函数。
-- {{cssxref("easing-function#step_easing_function", "steps()")}}
+- {{cssxref("easing-function#阶跃缓动函数", "steps()")}}
   - : 在过渡中迭代若干次定格，每次定格停留相同的时间。
 
 ## 动画函数
