@@ -70,7 +70,7 @@ Microsoft Edge では、 `month` コントロールはこのように表示さ�
 ## 値
 
 文字列で、入力欄に入力された年と月の値を YYYY-MM (4 桁以上の年に続いてハイフン ("`-`")、続いて 2 桁の月) の形式で表します。
-この入力型で使用される時刻の値の形式について詳しくは、 [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)の[月の文字列](/ja/docs/Web/HTML/Date_and_time_formats#month_string)をご覧ください。
+この入力型で使用される時刻の値の形式について詳しくは、 [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)の[月文字列](/ja/docs/Web/HTML/Date_and_time_formats#月文字列)をご覧ください。
 
 ### 既定値の設定
 
