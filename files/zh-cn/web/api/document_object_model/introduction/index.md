@@ -100,8 +100,7 @@ p_list = doc.getElementsByTagName("para")
         当一个成员返回 <code>document</code> 对象（例如，元素的
         <code>ownerDocument</code> 属性返回它所属的
         <code>document</code>），这个对象就是 root
-        <code>document</code> 对象本身。
-        <a href="/zh-CN/docs/Web/API/Document"
+        <code>document</code> 对象本身。<a href="/zh-CN/docs/Web/API/Document"
           >DOM <code>document</code> 参考</a
         >一章对 <code>document</code> 对象进行了描述。
       </td>
