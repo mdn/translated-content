@@ -134,9 +134,8 @@ p_list = doc.getElementsByTagName("para")
     <tr>
       <td>{{domxref("Attr")}}</td>
       <td>
-        当 <code>attribute</code> 通过成员函数（例如通过
-        <strong><code>createAttribute()</code></strong
-        >方法）返回时，它是一个为属性暴露出专门接口的对象引用。DOM
+        当 <code>attribute</code> 通过成员函数（例如通过 <code>createAttribute()</code>
+        方法）返回时，它是一个为属性暴露出专门接口的对象引用。DOM
         中的属性也是节点，就像元素一样，只不过你可能会很少使用它。
       </td>
     </tr>
