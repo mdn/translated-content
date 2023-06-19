@@ -37,9 +37,9 @@ new Promise((resolveOuter) => {
 });
 ```
 
-此 Promise 在创建时已经被解决（因为 `resolveOuter` 是同步调用的），但它被解决为另一个 Promise，因此在内部 Promise 实现后的 1 秒钟之后才会被 _fulfilled_。在实践中，“解决”通常是在幕后完成的，不可观察，只有其兑现或拒绝是可观察的。
+此 Promise 在创建时已经被解决（因为 `resolveOuter` 是同步调用的），但它被解决为另一个 Promise，因此在内部 Promise 实现后的 1 秒钟之后才会被*兑现*。在实践中，“解决”通常是在幕后完成的，不可观察，只有其兑现或拒绝是可观察的。
 
-> **备注：** 其他几种语言也有一些机制来实现惰性求值和延迟计算，它们也称之为“promise”，例如Scheme。在JavaScript中，Promise 代表已经在进行中的进程，而且可以通过回调函数实现链式调用。如果你想要实现惰性求值，考虑使用不带参数的函数，例如 `f = () => expression` 来创建惰性求值表达式，然后使用 `f()` 立即求值。
+> **备注：** 其他几种语言也有一些机制来实现惰性求值和延迟计算，它们也称之为“promise”，例如 Scheme。在 JavaScript 中，Promise 代表已经在进行中的进程，而且可以通过回调函数实现链式调用。如果你想要实现惰性求值，考虑使用不带参数的函数，例如 `f = () => expression` 来创建惰性求值表达式，然后使用 `f()` 立即求值。
 
 ### Promise 的链式调用
 
@@ -127,7 +127,7 @@ console.log("立即记录");
 // 异步日志记录有值：777
 ```
 
-### Thenables
+### Thenable
 
 在 Promise 成为 JavaScript 语言的一部分之前，JavaScript 生态系统已经实现了多个 Promise 实现。尽管它们在内部的表示方式不同，但至少所有类 Promise 的对象都实现了 _Thenable_ 接口。一个 thenable 对象实现了 [`.then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 方法，该方法被调用时需要传入两个回调函数，一个用于 Promise 被兑现时调用，一个用于 Promise 被拒绝时调用。Promise 也是 thenable 对象。
 
@@ -161,7 +161,7 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 - {{jsxref("Promise.race()")}}
   - : 当**任意一个** Promise 被敲定时（无论是被兑现还是被拒绝），`Promise.any` 方法返回一个已兑现的 Promise。换句话说，当**任意一个** Promise 被兑现时，返回一个成功兑现的 Promise；当**所有**的 Promise 都被拒绝时，返回一个被拒绝的 Promise。
 
-所有这些方法都接受一个 Promise（确切地说是 [thenable](#thenables)）的[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，并返回一个新的 Promise。它们都支持子类化，这意味着它们可以在 `Promise` 的子类上调用，结果将是一个属于子类类型的 Promise。为此，子类的构造函数必须实现与 [`Promise()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) 构造函数相同的签名——接受一个以 `resolve` 和 `reject` 回调函数作为参数的单个 `executor` 函数。子类还必须有一个 `resolve` 静态方法，可以像 {{jsxref("Promise.resolve()")}} 一样调用，以将值解析为 Promise。
+所有这些方法都接受一个 Promise（确切地说是 [thenable](#thenable)）的[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，并返回一个新的 Promise。它们都支持子类化，这意味着它们可以在 `Promise` 的子类上调用，结果将是一个属于子类类型的 Promise。为此，子类的构造函数必须实现与 [`Promise()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) 构造函数相同的签名——接受一个以 `resolve` 和 `reject` 回调函数作为参数的单个 `executor` 函数。子类还必须有一个 `resolve` 静态方法，可以像 {{jsxref("Promise.resolve()")}} 一样调用，以将值解析为 Promise。
 
 请注意，JavaScript 的本质上是[单线程的](/zh-CN/docs/Glossary/Thread)，因此在任何时刻，只有一个任务会被执行，尽管控制权可以在不同的 Promise 之间切换，从而使 Promise 的执行看起来是并发的。在 JavaScript 中，[并行执行](https://zh.wikipedia.org/wiki/并行计算)只能通过[工作线程](/zh-CN/docs/Web/API/Web_Workers_API)实现。
 
@@ -374,7 +374,7 @@ btn.addEventListener("click", testPromise);
 
 #### 结果
 
-{{EmbedLiveSample("Advanced_Example", "500", "200")}}
+{{EmbedLiveSample("高级示例", "500", "200")}}
 
 ### 使用 XHR 加载图像
 
