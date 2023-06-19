@@ -187,7 +187,7 @@ dt::after {
 
 ## アクセシビリティの考慮
 
-画面リーダーによって `<dl>` の内容の読み上げは異なります。 iOS 14 では、 VoiceOver は仮想カーソルで操作する際に、 `<dl>` の内容がリストであることをアナウンスします（read-all コマンドを使用しなくても）。このため、リストグループ内の他のリスト項目との関係が分かるような形でリスト項目の内容が書かれていることを確認してください。
+スクリーンリーダーによって `<dl>` の内容の読み上げは異なります。 iOS 14 では、 VoiceOver は仮想カーソルで操作する際に、 `<dl>` の内容がリストであることをアナウンスします（read-all コマンドを使用しなくても）。このため、リストグループ内の他のリスト項目との関係が分かるような形でリスト項目の内容が書かれていることを確認してください。
 
 - [CodePen - HTML Buddies: dt & dd](https://codepen.io/aardrian/debug/NzGaKP)
 - [VoiceOver on iOS 14 Supports Description Lists](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html)
