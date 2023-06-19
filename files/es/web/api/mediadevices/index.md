@@ -43,7 +43,7 @@ navigator.mediaDevices.getUserMedia(constraints)
   video.srcObject = stream;
 })
 .catch(function(error) {
-  if (error.name === 'ConstraintNotSatisfiedError') {
+  if (error.name === 'OverconstrainedError') {
     errorMsg('The resolution ' + constraints.video.width.exact + 'x' +
         constraints.video.width.exact + ' px is not supported by your device.');
   } else if (error.name === 'NotAllowedError') {
