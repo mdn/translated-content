@@ -147,7 +147,7 @@ slug: Web/API/Document_Object_Model/Examples
 </html>
 ```
 
-## 示例 4: 使用样式表
+## 示例 4：使用样式表
 
 {{domxref("document")}} 对象的 {{domxref("document.styleSheets", "styleSheets")}} 属性返回该文档中已加载的样式表列表。你可以使用 styleheet、style 和 {{domxref("CSSRule")}} 对象单独访问这些样式表及其规则，如本例所示，它将所有的样式规则选择器打印到控制台。
 
@@ -185,7 +185,7 @@ P
 #LUMPY
 ```
 
-## 示例 5: 事件传播
+## 示例 5：事件传播
 
 本实例以一种非常简单的方式演示了事件是如何在 DOM 中启动和处理的。当这个 HTML 文档的 BODY 加载时，一个事件监听器被注册在 TABLE 的顶行。事件监听器通过执行函数 stopEvent 来处理事件，它改变了表格底部单元格的值。
 
@@ -301,7 +301,7 @@ P
 </html>
 ```
 
-## 示例 7: 显示事件对象的属性
+## 示例 7：显示事件对象的属性
 
 本示例使用 DOM 方法来显示 {{domxref("Window.load_event", "onload")}} {{domxref("event")}} 对象的所有属性及其在表格中的值。它还展示了一种有用的技术，即使用 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环来迭代对象的属性以获取其值。
 
