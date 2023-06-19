@@ -58,10 +58,6 @@ p {
 
 {{EmbedLiveSample('Ejemplos', 'auto', 350)}}
 
-## Especificaciones
-
-{{Specifications}}
-
 ## También puedes ver
 
 - [CSS Reference](/es/docs/Web/CSS/Referencia_CSS)
