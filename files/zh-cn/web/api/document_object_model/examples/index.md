@@ -240,7 +240,7 @@ P
 
 这个例子演示了如何使用 {{domxref("window.getComputedStyle")}} 方法来获取一个元素的样式，这些样式不是用 `style` 属性或用 JavaScript 设置的（例如 `elt.style.backgroundColor="rgb(173, 216, 230)"`）。后面这些类型的样式可以用更直接的 {{domxref("HTMLElement.style", "elt.style")}} 属性来检索，其属性在 [DOM CSS 属性列表](/zh-CN/docs/Web/CSS/Reference)中列出。
 
-`getComputedStyle()` 返回一个 {{domxref("CSSStyleDeclaration")}} 对象，其各个样式属性可以用这个对象的 {{domxref("CSSStyleDeclaration.getPropertyValue()", "getPropertyValue()"}} 方法进行引用，正如下面的示例文档所示。
+`getComputedStyle()` 返回一个 {{domxref("CSSStyleDeclaration")}} 对象，其各个样式属性可以用这个对象的 {{domxref("CSSStyleDeclaration.getPropertyValue()", "getPropertyValue()")}} 方法进行引用，正如下面的示例文档所示。
 
 ```html
 <!DOCTYPE html>
