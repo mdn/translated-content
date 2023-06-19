@@ -170,7 +170,7 @@ Vamos agora dar uma olhada em como o navegador calculará a especificidade. Já 
 
 A quantidade de especificidade que um seletor tem é medida usando quatro valores (ou componentes) diferentes, que podem ser considerados como milhares, centenas, dezenas e uns - quatro dígitos únicos em quatro colunas:
 
-1. **Thousands**: marque um nesta coluna se a declaração estiver dentro de um atributo {{htmlattrxref ("style")}}, também conhecido como estilos embutidos. Essas declarações não têm seletores, portanto, sua especificidade é sempre simplesmente 1000.
+1. **Thousands**: marque um nesta coluna se a declaração estiver dentro de um atributo [`style`](/pt-BR/docs/Web/HTML/Global_attributes#style), também conhecido como estilos embutidos. Essas declarações não têm seletores, portanto, sua especificidade é sempre simplesmente 1000.
 2. **Hundreds**: marque um nesta coluna para cada seletor de ID contido no seletor geral.
 3. **Tens**: marque um nesta coluna para cada seletor de classe, seletor de atributo ou pseudoclasse contido no seletor geral.
 4. **Ones**: marque um nesta coluna para cada seletor de elemento ou pseudoelemento contido dentro do seletor geral.
@@ -185,7 +185,7 @@ A tabela a seguir mostra alguns exemplos isolados para colocá-lo no clima. Expe
 | `h1 + p::first-letter`                                                                  | 0         | 0        | 0    | 3    | 0003              |
 | `li > a[href*="en-US"] > .inline-warning`                                               | 0         | 0        | 2    | 2    | 0022              |
 | `#identifier`                                                                           | 0         | 1        | 0    | 0    | 0100              |
-| No selector, with a rule inside an element's {{htmlattrxref("style")}} attribute | 1         | 0        | 0    | 0    | 1000              |
+| No selector, with a rule inside an element's [`style`](/pt-BR/docs/Web/HTML/Global_attributes#style) attribute | 1         | 0        | 0    | 0    | 1000              |
 
 Antes de prosseguirmos, vejamos um exemplo em ação.
 
@@ -213,7 +213,7 @@ Vamos examinar isso para ver o que está acontecendo - tente remover algumas das
 
 1. Você verá que os valores da terceira regra {{cssxref ("color")}} e {{cssxref ("padding")}} foram aplicados, mas o {{cssxref ("background-color")}} não foram?. Por quê? Na verdade, todos os três devem ser aplicados, porque as regras posteriores na ordem de origem geralmente substituem as regras anteriores.
 2. No entanto, as regras acima vencem, porque os seletores de classe têm uma especificidade mais alta do que os seletores de elemento.
-3. Ambos elementos tem {{htmlattrxref("class")}} de `better (melhor)`, mas o segundo tem um **id** {{htmlattrxref("id")}} que é mais forte. Como os IDs têm uma especificidade ainda maior do que as classes (você só pode ter um elemento com cada ID exclusivo em uma página, mas muitos elementos com a mesma classe - os seletores de ID são muito específicos no que se destinam), a cor de fundo vermelha e A borda preta de 1 pixel deve ser aplicada ao segundo elemento, com o primeiro elemento recebendo a cor de fundo cinza, e sem borda, conforme especificado pela classe.
+3. Ambos elementos tem [`class`](/pt-BR/docs/Web/HTML/Global_attributes#class) de `better (melhor)`, mas o segundo tem um **id** [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id) que é mais forte. Como os IDs têm uma especificidade ainda maior do que as classes (você só pode ter um elemento com cada ID exclusivo em uma página, mas muitos elementos com a mesma classe - os seletores de ID são muito específicos no que se destinam), a cor de fundo vermelha e A borda preta de 1 pixel deve ser aplicada ao segundo elemento, com o primeiro elemento recebendo a cor de fundo cinza, e sem borda, conforme especificado pela classe.
 4. O segundo elemento obtém a cor de fundo vermelha, mas sem borda. Por quê? Por causa da declaração! Important na segunda regra - incluindo isso depois de border: none significa que essa declaração vai superar o valor de border na regra anterior, embora o ID tenha uma especificidade mais alta.
 
 > **Nota:** A única maneira de sobrescrever essa declaração! Importante seria incluir outra declaração! Importante em uma declaração com a mesma especificidade posteriormente na ordem de origem, ou uma com uma especificidade mais alta.

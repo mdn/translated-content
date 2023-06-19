@@ -57,7 +57,7 @@ Esta seção dispõe de um resumo das etapas básicas para adicionar a funcional
 
 ### Identificando o que é arrastável _(draggable)_
 
-Para fazer um elemento se tornar arrastável, é necessária a adição de um atributo {{htmlattrxref("draggable")}} além da adição do manipulador de eventos global {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}, conforme descrito no exemplo a seguir
+Para fazer um elemento se tornar arrastável, é necessária a adição de um atributo [`draggable`](/pt-BR/docs/Web/HTML/Global_attributes#draggable) além da adição do manipulador de eventos global {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}}, conforme descrito no exemplo a seguir
 
 ```
 function dragstart_handler(ev) {

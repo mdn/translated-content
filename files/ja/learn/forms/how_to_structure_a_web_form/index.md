@@ -48,7 +48,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 
 {{HTMLElement("fieldset")}} 要素は、スタイルや意味付けのために、同じ目的を持つウィジェットのグループの作成に便利です。 {{HTMLElement("fieldset")}} 要素にラベルを付与するには、 {{HTMLElement("legend")}} 要素を {{HTMLElement("fieldset")}} の開始タグの直下に入れることで実現できます。{{HTMLElement("legend")}} 要素は、{{HTMLElement("fieldset")}} 要素の目的を正式に説明します。
 
-多くの支援技術は {{HTMLElement("legend")}} 要素を、対応する {{HTMLElement("fieldset")}} 要素内にある各ウィジェットのラベルの一部であるかのように扱うでしょう。例えば [Jaws](https://www.freedomscientific.com/products/software/jaws/) や [NVDA](https://www.nvaccess.org/) といった画面リーダーは、各ウィジェットのラベルを読み上げる前に legend の内容を読み上げます。
+多くの支援技術は {{HTMLElement("legend")}} 要素を、対応する {{HTMLElement("fieldset")}} 要素内にある各ウィジェットのラベルの一部であるかのように扱うでしょう。例えば [Jaws](https://www.freedomscientific.com/products/software/jaws/) や [NVDA](https://www.nvaccess.org/) といったスクリーンリーダーは、各ウィジェットのラベルを読み上げる前に legend の内容を読み上げます。
 
 以下に小さなサンプルを挙げます。
 
@@ -74,21 +74,21 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 
 > **メモ:** この例は [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html))。
 
-この例では、画面リーダーは最初のウィジェットを "Fruit juice size small"、2 番目を "Fruit juice size medium"、3 番目を "Fruit juice size large" と読み上げるでしょう。
+この例では、スクリーンリーダーは最初のウィジェットを "Fruit juice size small"、2 番目を "Fruit juice size medium"、3 番目を "Fruit juice size large" と読み上げるでしょう。
 
 この例での用途は、最も重要なものの 1 つです。一連のラジオボタンを有するたびに、それらを {{HTMLElement("fieldset")}} 要素の内部に入れ子にする必要があります。他にも用途があり、一般的に {{HTMLElement("fieldset")}} 要素はフォームを分割するために使用することもできます。長いフォームは複数のページにまたがるのが理想的ですが、フォームが長くなって単一のページに収めなければならない場合、異なるフィールドセット内に異なる関連するセクションを置くことでユーザビリティを向上させることができます。
 
-支援技術に対する影響力が大きいため、 {{HTMLElement("fieldset")}} 要素はアクセシブルなフォームを構築するための重要な要素の 1 つです。しかし、それを乱用しないことはあなたの責任です。可能であれば、フォームを作成するたびに、[画面リーダーがどのように解釈するかを聞いてみる](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#画面リーダー)ようにしてください。変だと感じたら、フォームの構造を改善するようにしましょう。
+支援技術に対する影響力が大きいため、 {{HTMLElement("fieldset")}} 要素はアクセシブルなフォームを構築するための重要な要素の 1 つです。しかし、それを乱用しないことはあなたの責任です。可能であれば、フォームを作成するたびに、[スクリーンリーダーがどのように解釈するかを聞いてみる](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#スクリーンリーダー)ようにしてください。変だと感じたら、フォームの構造を改善するようにしましょう。
 
 ## \<label> 要素
 
-これまでの記事で見てきたように、{{HTMLElement("label")}} 要素は、HTML フォームウィジェットのラベルを定義する正式な方法です。これは、アクセシブルなフォームを作成したい場合にもっとも重要な要素です — 適切に実装された時は、画面リーダーはフォーム要素のラベルと関連する指示を一緒に読み上げます。前の記事で見てきたこの例を見てみます:
+これまでの記事で見てきたように、{{HTMLElement("label")}} 要素は、HTML フォームウィジェットのラベルを定義する正式な方法です。これは、アクセシブルなフォームを作成したい場合にもっとも重要な要素です — 適切に実装された時は、スクリーンリーダーはフォーム要素のラベルと関連する指示を一緒に読み上げます。前の記事で見てきたこの例を見てみます:
 
 ```html
 <label for="name">Name:</label> <input type="text" id="name" name="user_name">
 ```
 
-`<label>` と`<input>` とがそれぞれ `for` と `id` 属性により正し関連付けられると (label の `for` 属性は対応するウィジェットの `id` 属性を参照します)、画面リーダーは "Name, edit text"のように読み上げます。
+`<label>` と`<input>` とがそれぞれ `for` と `id` 属性により正し関連付けられると (label の `for` 属性は対応するウィジェットの `id` 属性を参照します)、スクリーンリーダーは "Name, edit text"のように読み上げます。
 
 フォームコントロールとラベルを関連付けるもう 1 つの方法は、フォームコントロールを `<label>` の中でネストすることで、暗黙的に関連付けることです。
 
@@ -100,7 +100,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 
 この場合でも `for` 属性を設定することがベストプラクティスと考えられています。これは、ラベルとウィジェットの暗黙的な関係を理解できない支援技術があるためです。
 
-ラベルがなかったり、フォームコントロールが明示的/暗黙にラベルに関連付けられていない場合、画面リーダーは全く役立たない "Edit text blank" のような読み上げを行います。
+ラベルがなかったり、フォームコントロールが明示的/暗黙にラベルに関連付けられていない場合、スクリーンリーダーは全く役立たない "Edit text blank" のような読み上げを行います。
 
 ### ラベルもクリック可能です！
 
@@ -157,17 +157,17 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 
 {{EmbedLiveSample("Multiple_labels", 120, 120)}}
 
-このサンプルでは、最初の段落で入力必須の要素の規則を定義しています。ユーザーが入力必須の要素を見つける前に画面リーダーのような支援技術が注意事項を表示したり読み上げたりするためには、規則をはじめに置かなければなりません。これがユーザーにアスタリスクの意味を知らせても、それに依存することはできません。画面リーダーはアスタリスクが出てくると "スター" と読み上げます。視力のあるユーザーがマウスを持ってくると、`title` 属性によって"必須"と表示されます。タイトルは画面リーダーの設定により読み上げられるので、常に画面リーダーに読み上げられる [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を入れておくのがより信頼性が高いでしょう。
+このサンプルでは、最初の段落で入力必須の要素の規則を定義しています。ユーザーが入力必須の要素を見つける前にスクリーンリーダーのような支援技術が注意事項を表示したり読み上げたりするためには、規則をはじめに置かなければなりません。これがユーザーにアスタリスクの意味を知らせても、それに依存することはできません。スクリーンリーダーはアスタリスクが出てくると "スター" と読み上げます。視力のあるユーザーがマウスを持ってくると、`title` 属性によって"必須"と表示されます。タイトルはスクリーンリーダーの設定により読み上げられるので、常にスクリーンリーダーに読み上げられる [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を入れておくのがより信頼性が高いでしょう。
 
 上記の違いをふまえると、以降を効率よく見ていけるでしょう。
 
-- 最初の例では、 label 要素すべての入力が読み上げられません — "edit text blank" だけです。その上に実際のラベルは別々に読まれます。複数の `<label>` 要素は画面リーダーを混乱させます。
+- 最初の例では、 label 要素すべての入力が読み上げられません — "edit text blank" だけです。その上に実際のラベルは別々に読まれます。複数の `<label>` 要素はスクリーンリーダーを混乱させます。
 - 2 つ目の例では、少し明確になります "name star name edit text required" というようにラベルが入力と一緒に読み上げられます。しかしラベルはまだ別々に読み上げられます。少し混乱しやすいですが、これは `<input>` と関連したラベルがあるためまだ良いでしょう。
 - 3 つ目の例が最も良いです — 実際のラベルがすべて一緒に読み上げられ、 "name required edit text" のようにラベルと入力が一緒に読み上げられます。
 
-> **メモ:** 画面リーダーによっては、少し異なる結果になる場合もあります。これは VoiceOver (と同様に動作する NVDA)でテストしています。あなたの体験を聞きたいです。
+> **メモ:** スクリーンリーダーによっては、少し異なる結果になる場合もあります。これは VoiceOver (と同様に動作する NVDA)でテストしています。あなたの体験を聞きたいです。
 
-> **メモ:** この例は GitHub の [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))。2 や 3 のコメントを外したバージョンの例を実行しないでください — 複数の label と複数の同じ input ID があると、画面リーダーは確実に混乱します!
+> **メモ:** この例は GitHub の [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))。2 や 3 のコメントを外したバージョンの例を実行しないでください — 複数の label と複数の同じ input ID があると、スクリーンリーダーは確実に混乱します!
 
 ## フォームで使用される一般的な HTML 構造
 

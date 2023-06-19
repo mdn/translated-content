@@ -35,12 +35,12 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 ### HTML
 
 - Adicionado suporte para estes elementros: {{HTMLElement("details")}} e {{HTMLElement("summary")}} ({{bug(1226455)}}).
-- O {{htmlattrxref("pattern", "input")}} atribuido para {{HTMLElement("input")}} agora usa o parâmetro `'u'` no JavaScript base {{jsxref("RegExp")}} ({{bug(1227906)}}).
-- Para corresponder a uma mudança específica, de um valor inválido {{htmlattrxref("kind", "track")}} atributo do elemento {{HTMLElement('track')}} é agora tratado como `"metadata"` ao invés de`"subtitles"` ({{bug(1269712)}}).
-- O atributo {{htmlattrxref("sandbox", "iframe")}} do elemento {{HTMLElement("iframe")}} agora suporta os valores 'allow-popups-to-escape-sandbox' e 'allow-modals' ({{bug(1190641)}}).
+- O [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) atribuido para {{HTMLElement("input")}} agora usa o parâmetro `'u'` no JavaScript base {{jsxref("RegExp")}} ({{bug(1227906)}}).
+- Para corresponder a uma mudança específica, de um valor inválido [`kind`](/pt-BR/docs/Web/HTML/Element/track#kind) atributo do elemento {{HTMLElement('track')}} é agora tratado como `"metadata"` ao invés de`"subtitles"` ({{bug(1269712)}}).
+- O atributo [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#sandbox) do elemento {{HTMLElement("iframe")}} agora suporta os valores 'allow-popups-to-escape-sandbox' e 'allow-modals' ({{bug(1190641)}}).
 - Suporte para atributos microdata e a Microdata API foram removidas ({{bug(909633)}}).
-- O atributo {{htmlattrxref("referrerpolicy", "a")}} do elemento {{HTMLElement("a")}} agora suporta esses atributos `'no-referrer-when-downgrade`' e `'origin-when-cross-origin'` ({{bug(1178337)}}).
-- O {{htmlattrxref("form", "label")}} que é atributo do elemento {{HTMLElement("label")}} foi removido. A propriedade {{domxref("HTMLLabelElement.form")}} ainda existe, mas agora retorna o formulário na qual o controle do label's está associado , se houver um controle (e se esse controle for associado ao formulário) ({{bug(1268852)}}).
+- O atributo [`referrerpolicy`](/pt-BR/docs/Web/HTML/Element/a#referrerpolicy) do elemento {{HTMLElement("a")}} agora suporta esses atributos `'no-referrer-when-downgrade`' e `'origin-when-cross-origin'` ({{bug(1178337)}}).
+- O [`form`](/pt-BR/docs/Web/HTML/Element/label#form) que é atributo do elemento {{HTMLElement("label")}} foi removido. A propriedade {{domxref("HTMLLabelElement.form")}} ainda existe, mas agora retorna o formulário na qual o controle do label's está associado , se houver um controle (e se esse controle for associado ao formulário) ({{bug(1268852)}}).
 
 ### CSS
 
