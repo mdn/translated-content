@@ -33,15 +33,15 @@ x == y
    - 두 피연산자의 타입이 같다면, 1단계를 이용해 비교합니다.
    - 하나의 피연산자가 심볼이고 다른 하나가 심볼이 아닌 경우, `false`를 반환합니다.
    - 하나의 피연산자가 불리언이고 다른 하나가 불리언이 아닌 경우, [불리언을 숫자로 변환합니다.](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) `true`는 1로 변환하고 `false`는 0으로 변환합니다. 그 후 두 피연산자를 다시 느슨하게 비교합니다.
-   - 숫자와 문자열: [문자열을 숫자로 변환합니다.](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) 변환이 실패의 결괏값은 `NaN`이므로, 비교 결과가 `false`라는 것을 보장합니다.
-   - 숫자와 BigInt: 숫자 값으로 비교합니다. 숫자가 ±Infinity or `NaN`이면 `false`를 반환합니다.
+   - 숫자와 문자열: [문자열을 숫자로 변환합니다.](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) 변환 실패의 결괏값은 `NaN`이므로, 비교 결과가 `false`라는 것을 보장합니다.
+   - 숫자와 BigInt: 숫자 값으로 비교합니다. 숫자가 ±Infinity 혹은 `NaN`이면 `false`를 반환합니다.
    - 문자열과 BigInt: 문자열을 [BigInt()](/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 생성자와 같은 알고리즘으로 BigInt로 변환합니다. 만약 변환이 실패하면 `false`를 반환합니다.
 
 동등 연산자는 대칭적입니다. A와 B가 어떤 값을 가져도 `A == B`는 `B == A`와 항상 동일한 의미입니다(타입 변환의 적용 순서를 제외하고).
 
 [일치 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality) (`===`)와의 가장 두드러지는 차이점은 일치 연산자는 타입 변환을 시도하지 않는다는 것입니다. 일치 연산자는 다른 타입을 가진 피연산자는 다르다고 판단합니다. 일치 연산자는 기본적으로 1단계만 수행하고 다른 모든 경우에 `false`를 반환합니다.
 
-위 알고리즘에는 "의도적인 위반"이 있습니다. 한 피연산자가 [`document.all`](/ko/docs/Web/API/Document/all)인 경우, `undefined`처럼 처리됩니다. 이는 `document.all === null`은 `true`지만, `document.all === undefined && document.all === null`이 `false`라는 것을 의미합니다.
+위 알고리즘에는 "의도적인 위반"이 있습니다. 한 피연산자가 [`document.all`](/ko/docs/Web/API/Document/all)인 경우, `undefined`처럼 처리됩니다. 이는 `document.all == null`은 `true`지만, `document.all === undefined && document.all === null`이 `false`라는 것을 의미합니다.
 
 ## 예시
 
