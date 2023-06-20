@@ -14717,10 +14717,6 @@
     "modified": "2019-10-10T16:35:21.119Z",
     "contributors": ["jcr4"]
   },
-  "conflicting/Web/HTML/Element/slot": {
-    "modified": "2019-03-23T22:36:12.624Z",
-    "contributors": ["jcr4"]
-  },
   "conflicting/Web/HTML/Global_attributes": {
     "modified": "2019-03-18T21:19:21.658Z",
     "contributors": ["PabloDeTorre"]
