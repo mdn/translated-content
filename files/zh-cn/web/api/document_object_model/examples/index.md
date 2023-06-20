@@ -9,7 +9,7 @@ slug: Web/API/Document_Object_Model/Examples
 
 ## 示例 1：高度和宽度
 
-下面的示例展示了在不同尺寸的图片时使用其 `height` 和 `width` 属性的情况：
+下面的示例展示了不同尺寸的图片对 `height` 和 `width` 属性的使用：
 
 ```html
 <!DOCTYPE html>
@@ -118,7 +118,7 @@ slug: Web/API/Document_Object_Model/Examples
 
 ## 示例 3：修改样式
 
-在这个简单的例子中，HTML 段落元素的一些基本样式属性是使用该元素上的样式对象和该对象的 CSS 样式属性来访问的，这些对象可以从 DOM 中检索和设置。在这个示例中，你是直接操作各个样式的。在下一个例子中（见例 4），你可以使用样式表及其规则来改变整个文档的样式。
+在这个简单的例子中，HTML 段落元素的一些基本样式属性是使用该元素上的样式对象和该对象的 CSS 样式属性来访问的，这些对象可以从 DOM 中检索和设置。在这个示例中，你是直接操作各个样式的。在下一个例子中（见示例 4），你可以使用样式表及其规则来改变整个文档的样式。
 
 ```html
 <!DOCTYPE html>
@@ -413,4 +413,4 @@ DOM {{domxref("HTMLTableElement")}} 接口提供了一些用于创建和操作�
 
 - 表格的 {{domxref("element.innerHTML","innerHTML")}} 属性不应该被用来修改表格，即使你可以用它来写一个完整的表格或单元格的内容。
 - 如果使用 DOM 核心方法 {{domxref("document.createElement")}} 和 {{domxref("Node.appendChild")}} 来创建行和单元格，IE 要求它们被追加到 {{HTMLElement("tbody")}} 元素，而其他浏览器将允许追加到 {{HTMLElement("table")}} 元素（行将被添加到最后的 `<tbody>` 元素）。
-- 还有一些属于 [`HTMLTableElement` 接口](/zh-CN/docs/Web/API/HTMLTableElement#methods)的便利方法，可以用来创建和修改表格。
+- 还有一些属于 [`HTMLTableElement` 接口](/zh-CN/docs/Web/API/HTMLTableElement#方法)的便利方法，可以用来创建和修改表格。
