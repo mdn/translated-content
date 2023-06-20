@@ -5,26 +5,27 @@ slug: Web/API/Web_Workers_API
 
 {{DefaultAPISidebar("Web Workers API")}}
 
-通过使用 Web Workers，Web 应用程序可以在独立于主线程的后台线程中，运行一个脚本操作。这样做的好处是可以在独立线程中执行费时的处理任务，从而允许主线程（通常是 UI 线程）不会因此被阻塞/放慢。
+Web Workers 使得在一个独立于 Web 应用程序主执行线程的后台线程中运行一个脚本操作。这样做的好处是可以在独立线程中执行费时的处理任务，使主线程（通常是 UI 线程）的运行不会被阻塞/放慢。
 
-## Web Workers 概念与用法
+## Web Worker 概念与用法
 
-使用构造函数（例如，{{domxref("Worker.Worker", "Worker()")}}）创建一个 **worker** 对象，构造函数接受一个 JavaScript 文件 URL — 这个文件包含了将在 worker 线程中运行的代码。worker 将运行在与当前 {{domxref("window")}}不同的另一个全局上下文中，这个上下文由一个对象表示，标准情况下为{{domxref("DedicatedWorkerGlobalScope")}} （标准 workers 由单个脚本使用; 共享 workers 使用{{domxref("SharedWorkerGlobalScope")}}）。
+Worker 是一个使用构造函数创建的对象（例如 {{domxref("Worker.Worker", "Worker()")}}），它运行一个命名的 JavaScript 文件——该文件包含将在 worker 线程中运行的代码。
 
-你可以在 worker 线程中运行任意的代码，但注意存在一些例外：你不能直接在 worker 线程中操纵 DOM 元素；或使用{{domxref("window")}} 对象中的某些方法和属性。大部分 window 对象的方法和属性是可以使用的，包括 [WebSockets](/zh-CN/docs/WebSockets)，以及诸如 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API) 和 FireFox OS 中独有的 [Data Store API](/zh-CN/docs/Web/API/Data_Store_API) 这一类数据存储机制。更多信息请参见： [Functions and classes available to workers](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers) 。
+除了标准的 [JavaScript](/zh-CN/docs/Web/JavaScript) 函数集（如 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)、 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)、[`Object`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)、[`JSON`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) 等等 )，你可以在 worker 线程中运行任意的代码，但注意存在一些例外：你不能直接在 worker 线程中操作 DOM 元素；或使用 [`window`](/zh-CN/docs/Web/API/Window) 对象中的某些方法和属性。有关你可以运行的代码的信息，请参见下面的 [worker global context and functions](#worker_global_contexts_and_functions) 和 [supported web APIs](#supported_web_apis) 。
 
-主线程和 worker 线程相互之间使用 `postMessage()` 方法来发送信息，并且通过 `onmessage` 这个 event handler 来接收信息（传递的信息包含在 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 这个事件的`data`属性内) 。数据的交互方式为传递副本，而不是直接共享数据。
+数据通过消息系统在 worker 和主线程之间发送——双方都使用 `postMessage()` 方法发送消息，并通过 `onmessage` 事件处理程序响应消息（消息包含在 {{domxref("Worker/message_event", "message")}} 事件的 `data` 属性中）。数据是复制的，而不是共享的。
 
-worker 可以另外生成新的 worker，这些 worker 与它们父页面的宿主相同。此外，worker 可以通过 [`XMLHttpRequest`](/zh-CN/DOM/XMLHttpRequest) 来访问网络，只不过 `XMLHttpRequest` 的 `responseXML` 和 `channel` 这两个属性的值将总是 `null` 。
+worker 可以依次生成新的 worker，只要这些 worker 与父页面托管在同一个 {{glossary("origin")}} 中。此外，worker 可以通过 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)  来访问网络，但 `XMLHttpRequest` 的 `responseXML` 和 `channel` 属性始终返回 `null`。
 
-除了专用 worker 之外，还有一些其他种类的 worker：
+### Worker 类型
 
-- Shared Workers 可被不同的窗体的多个脚本运行，例如 IFrames 等，只要这些 workers 处于同一主域。共享 worker 比专用 worker 稍微复杂一点 — 脚本必须通过活动端口进行通讯。详情请见{{domxref("SharedWorker")}}。
-- [Service Workers](/zh-CN/docs/Web/API/Service_Worker_API) 一般作为 web 应用程序、浏览器和网络（如果可用）之间的代理服务。他们旨在（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动，更新驻留在服务器上的资源。他们还将允许访问推送通知和后台同步 API。
-- Chrome Workers 是一种仅适用于 firefox 的 worker。如果您正在开发附加组件，希望在扩展程序中使用 worker 且可以访问 [js-ctypes](/zh-CN/js-ctypes)，那么可以使用 Chrome Workers。详情请见{{domxref("ChromeWorker")}}
-- 音频 [Workers](/zh-CN/docs/Web/API/Web_Audio_API#Audio_Workers)可以在网络 worker 上下文中直接完成脚本化音频处理。
+有许多不同类型的 worker：
 
-> **备注：** 根据网络 worker 规范，worker 错误事件不应该冒泡（参见 [Firefox bug 1188141](https://bugzil.la/1188141)）。该规范已在 Firefox 42 中实现。
+- 专用 worker 是由一个脚本使用的工作器。这种情况由 {{DOMxRef("DedicatedWorkerGlobalScope")}} 对象来表示。
+- {{DOMxRef("SharedWorker","Shared worker")}} 是可以由在不同窗口、IFrame等中运行的多个脚本使用的 worker ，只要它们与工作者在同一域中。它们比专用的 worker 稍微复杂一点——脚本必须通过活动端口进行通信。
+- [Service Workers](/zh-CN/docs/Web/API/Service_Worker_API) 基本上是作为代理服务器，位于 web 应用程序、浏览器和网络（如果可用）之间。它们的目的是（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。它们还将允许访问推送通知和后台同步 API。
+
+> **备注：** 根据[web worker 规范](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2)，worker 错误事件不应该冒泡（参见 [Firefox bug 1188141](https://bugzil.la/1188141)）。该规范已在 Firefox 42 中实现。
 
 ## Web Worker 接口
 
