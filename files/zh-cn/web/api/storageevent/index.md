@@ -30,14 +30,14 @@ void initStorageEvent(
 
 ## 属性
 
-除了下面列出的属性以外，`StorageEvent` 还继承了 {{domxref("Event")}} 的属性。
+_除了下面列出的属性以外，`StorageEvent` 还继承了父接口 {{domxref("Event")}} 的属性。_
 
 - {{domxref("StorageEvent.key", "key")}} {{ReadOnlyInline}}
   - : 被修改的键名。当被 `clear()` 方法清除后该属性值为 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 - {{domxref("StorageEvent.newValue", "newValue")}} {{ReadOnlyInline}}
-  - : 修改后的新值。当被 `clear()` 方法清除或者该键值对被移除时，`newValue` 的值为 `null` 。
+  - : 修改后的新值。当被 `clear()` 方法清除或者从存储中移除该键值对时，`newValue` 的值为 `null` 。
 - {{domxref("StorageEvent.oldValue", "oldValue")}} {{ReadOnlyInline}}
-  - : 修改前的旧值。在设置新键值对时由于没有原始值，该属性值为 `null`。
+  - : 该键（`key`）在修改前的旧值。在添加新键值对时由于没有原始值，该属性值为 `null`。
 - {{domxref("StorageEvent.storageArea", "storageArea")}} {{ReadOnlyInline}}
   - : 被操作的 {{DOMxRef("Storage")}} 对象。
 - {{domxref("StorageEvent.url", "url")}} {{ReadOnlyInline}}
