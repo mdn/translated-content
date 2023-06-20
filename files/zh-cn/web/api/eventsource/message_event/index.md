@@ -57,7 +57,7 @@ evtSource.addEventListener("message", (e) => {
 ```
 
 ### onmessage 的等价写法
-
+仅仅在接收无类型消息的时候，才会通过onmessage处理函数。
 ```js
 evtSource.onmessage = (e) => {
   const newElement = document.createElement("li");
