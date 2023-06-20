@@ -45,7 +45,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/action">action</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Element/form#action">action</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -54,7 +54,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/align">align</a></code>
+        <code>align</code> {{deprecated_inline}}
       </td>
       <td>
         {{ HTMLElement("caption") }}、{{ HTMLElement("col") }}、{{ HTMLElement("colgroup") }}、{{ HTMLElement("hr") }}、{{ HTMLElement("iframe") }}、{{ HTMLElement("img") }}、{{ HTMLElement("table") }}、{{ HTMLElement("tbody") }}、{{ HTMLElement("td") }}、{{ HTMLElement("tfoot") }}、{{ HTMLElement("th") }}、{{ HTMLElement("thead") }}、{{ HTMLElement("tr") }}
@@ -281,7 +281,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
     </tr>
     <tr>
       <td>
-        <code><a href="/zh-CN/docs/Web/HTML/Attributes/contextmenu">contextmenu</a></code>
+        <code><a href="/zh-CN/docs/Web/HTML/Global_attributes/contextmenu">contextmenu</a></code> {{non-standard_inline}} {{deprecated_inline}}
       </td>
       <td>
         <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
