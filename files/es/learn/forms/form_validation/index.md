@@ -401,7 +401,7 @@ Estos mensajes automatizados tienen dos inconvenientes:
 - No hay una forma estándar de cambiar su aspecto con CSS.
 - Dependen de la configuración regional del navegador, lo que significa que puedes tener una página en un idioma pero un mensaje de error en otro idioma, como se ve en la siguiente captura de pantalla de Firefox.
 
-![Ejemplo de un mensaje de error en francés en una página de Firefox en inglés](/files/4329/error-firefox-win7.png)
+![Ejemplo de un mensaje de error en francés en una página de Firefox en inglés](/es/docs/learn/forms/form_validation/error-firefox-win7.png)
 
 La personalización de estos mensajes de error es uno de los casos de uso más comunes de la [API de validación de restricciones](/es/docs/Web/API/Constraint_validation). Veamos un ejemplo simple de cómo hacer esto.
 
@@ -437,7 +437,7 @@ Si la propiedad `validity.typeMismatch` devuelve `false`, llamamos al método `s
 
 Puedes probarlo a continuación:
 
-{{EmbedGHLiveSample("/en-US/learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
+{{EmbedGHLiveSample("learning-area/html/forms/form-validation/custom-error-message.html", '100%', 80)}}
 
 > **Nota:** Puede encontrar este ejemplo vivo en GitHub como [custom-error-message.html](https://mdn.github.io/learning-area/html/forms/form-validation/custom-error-message.html) (véase también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/custom-error-message.html)).
 
@@ -588,7 +588,7 @@ Los comentarios explican las cosas bastante bien, pero de una manera muy breve:
 
 Este es el resultado:
 
-{{EmbedGHLiveSample("/en-US/learning-area/html/forms/form-validation/detailed-custom-validation.html", '100%', 150)}}
+{{EmbedGHLiveSample("learning-area/html/forms/form-validation/detailed-custom-validation.html", '100%', 150)}}
 
 > **Nota:** Puedes encontrar este ejemplo en vivo en GitHub como [detailed-custom-validation.html](https://mdn.github.io/learning-area/html/forms/form-validation/detailed-custom-validation.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/detailed-custom-validation.html)).
 
