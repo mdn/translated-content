@@ -6,7 +6,7 @@ l10n:
 ---
 {{jsSidebar("Operators")}}
 
-동등 연산자(==)는 두 개의 피연산자가 동일한지 확인하며, Boolean값을 반환합니다. [일치 연산자](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)(===)와는 다르게 다른 타입의 피연산자들끼리의 비교를 시도합니다.
+동등 연산자(==)는 두 개의 피연산자가 동일한지 확인하며, Boolean값을 반환합니다. [일치 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)와는 다르게 다른 타입의 피연산자들끼리의 비교를 시도합니다.
 
 {{EmbedInteractiveExample("pages/js/expressions-equality.html")}}
 
