@@ -1,6 +1,8 @@
 ---
 title: 동등 연산자(==)
 slug: Web/JavaScript/Reference/Operators/Equality
+l10n:
+  sourceCommit:3e2369d97e2d6fbfe33a3c496a8edd90e0b539e2
 ---
 {{jsSidebar("Operators")}}
 
@@ -64,8 +66,13 @@ number1 == number2;   // false
 ### 객체들 간의 비교
 
 ```js
-const object1 = {"key": "value"}
-const object2 = {"key": "value"};
+const object1 = {
+  "key": "value",
+}
+
+const object2 = {
+  "key": "value",
+};
 
 object1 == object2 // false
 object2 == object2 // true
@@ -88,12 +95,24 @@ console.log(string3 == string4); // false
 console.log(string4 == string4); // true
 ```
 
-### Comparing Dates and strings
+### Dates와 문자열의 비교
 
 ```js
 const d = new Date('December 17, 1995 03:24:00');
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
 console.log(d == s);    //true
+```
+
+### 배열과 문자열의 비교
+
+```js
+const a = [1, 2, 3];
+const b = "1,2,3";
+a == b; // true, `a` converts to string
+
+const c = [true, 0.5, "hey"];
+const d = c.toString(); // "true,0.5,hey"
+c == d; // true
 ```
 
 ## 명세서
