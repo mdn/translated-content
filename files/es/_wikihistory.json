@@ -15542,14 +15542,6 @@
     "modified": "2020-10-15T21:51:27.517Z",
     "contributors": ["IsraelFloresDGA", "AlePerez92", "jesumv"]
   },
-  "orphaned/Web/API/HTMLShadowElement": {
-    "modified": "2019-03-23T22:10:24.059Z",
-    "contributors": ["dkocho4", "Sebastianz"]
-  },
-  "orphaned/Web/API/HTMLShadowElement/getDistributedNodes": {
-    "modified": "2019-03-23T22:10:23.317Z",
-    "contributors": ["dkocho4"]
-  },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
     "modified": "2020-01-13T04:48:11.759Z",
     "contributors": ["chrisdavidmills", "fscholz", "elin3t", "sebasmagri"]
