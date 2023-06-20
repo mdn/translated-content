@@ -7,11 +7,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 
 **`flat()`** 函數以遞迴方式將特定深度的子陣列重新串接成為一新的陣列
 
-\\{{EmbedInteractiveExample("pages/js/array-flatten.html")}}
+{{EmbedInteractiveExample("pages/js/array-flat.html")}}
 
 ## 語法
 
-```plain
+```js
 var newArray = arr.flat([depth]);
 ```
 
@@ -44,7 +44,7 @@ arr3.flat(2);
 
 ### 當遭遇空元素時
 
-flat()函數會自動清除陣列中空的元素
+`flat()` 函數會自動清除陣列中空的元素
 
 ```js
 var arr4 = [1, 2, , 4, 5];
@@ -98,12 +98,12 @@ function flatten(input) {
 flatten(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
 ```
 
-```plain
+```js
 // 递归版本的反嵌套
 function flatten(array) {
   var flattend = [];
   (function flat(array) {
-    array.forEach(function(el) {
+    array.forEach(function (el) {
       if (Array.isArray(el)) flat(el);
       else flattend.push(el);
     });

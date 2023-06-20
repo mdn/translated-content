@@ -24,7 +24,7 @@ arr.sort([compareFunction])
 
 ### 回傳值
 
-排序後的陣列。請注意此為[*原地*（in place）](https://zh.wikipedia.org/wiki/原地算法)進行排序過的陣列，並且不是原陣列的拷貝。
+排序後的陣列。請注意此為[_原地_（in place）](https://zh.wikipedia.org/wiki/原地算法)進行排序過的陣列，並且不是原陣列的拷貝。
 
 ## 描述
 

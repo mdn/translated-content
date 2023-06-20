@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
 
 {{JSRef}}
 
-**`reverse()`** 方法會[*原地*（in place）](https://zh.wikipedia.org/wiki/原地算法)反轉（reverse）一個陣列。陣列中的第一個元素變為最後一個，而最後一個元素則變成第一個。
+**`reverse()`** 方法會[_原地_（in place）](https://zh.wikipedia.org/wiki/原地算法)反轉（reverse）一個陣列。陣列中的第一個元素變為最後一個，而最後一個元素則變成第一個。
 
 {{EmbedInteractiveExample("pages/js/array-reverse.html")}}
 
