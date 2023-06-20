@@ -401,7 +401,7 @@ Estos mensajes automatizados tienen dos inconvenientes:
 - No hay una forma estándar de cambiar su aspecto con CSS.
 - Dependen de la configuración regional del navegador, lo que significa que puedes tener una página en un idioma pero un mensaje de error en otro idioma, como se ve en la siguiente captura de pantalla de Firefox.
 
-![Ejemplo de un mensaje de error en francés en una página de Firefox en inglés](/es/docs/learn/forms/form_validation/error-firefox-win7.png)
+![Ejemplo de un mensaje de error en francés en una página de Firefox en inglés](error-firefox-win7.png)
 
 La personalización de estos mensajes de error es uno de los casos de uso más comunes de la [API de validación de restricciones](/es/docs/Web/API/Constraint_validation). Veamos un ejemplo simple de cómo hacer esto.
 
