@@ -50,7 +50,7 @@ Você pode encontrar o código fonte completo em [readonly-confirmation.html](ht
 
 ### Estilizar controle não formal de read-write.
 
-Este seletor não seleciona apenas {{htmlElement("input")}}/{{htmlElement("textarea")}} elementos - ele selecionará qualquer elemento que possa ser editado pelo usuário, como um {{htmlelement("p")}} elemento com {{htmlattrxref("contenteditable")}} definido sobre ele.
+Este seletor não seleciona apenas {{htmlElement("input")}}/{{htmlElement("textarea")}} elementos - ele selecionará qualquer elemento que possa ser editado pelo usuário, como um {{htmlelement("p")}} elemento com [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable) definido sobre ele.
 
 ```html
 <p contenteditable>Este parágrafo é editável; é read-write.</p>
@@ -92,4 +92,4 @@ p:read-write {
 ## Veja também
 
 - {{cssxref(":read-only")}}
-- Atributo HTML {{htmlattrxref("contenteditable")}}.
+- Atributo HTML [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable).

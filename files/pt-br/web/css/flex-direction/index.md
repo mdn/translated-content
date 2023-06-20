@@ -9,7 +9,7 @@ A propriedade [CSS](/pt-BR/docs/Web/CSS) **`flex-direction`** define como os ite
 
 {{EmbedInteractiveExample("pages/css/flex-direction.html")}}
 
-Observe que os valores `row` e `row-reverse` são afetados pela direcionalidade do contêiner flexível. Se seu atributo {{HTMLAttrxRef("dir")}} for **`ltr`**, **`row`** representa o eixo horizontal orientado da esquerda para a direita, e `row-reverse` está orientado da direita para esquerda; Se seu atributo **`rtl`**, **`row`** representa o eixo orientado da direita para a esquerda e `row-reverse` da esquerda para a direita.
+Observe que os valores `row` e `row-reverse` são afetados pela direcionalidade do contêiner flexível. Se seu atributo [`dir`](/pt-BR/docs/Web/HTML/Global_attributes#dir) for **`ltr`**, **`row`** representa o eixo horizontal orientado da esquerda para a direita, e `row-reverse` está orientado da direita para esquerda; Se seu atributo **`rtl`**, **`row`** representa o eixo orientado da direita para a esquerda e `row-reverse` da esquerda para a direita.
 
 ## Syntax
 

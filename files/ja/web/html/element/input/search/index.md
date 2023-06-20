@@ -224,10 +224,10 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 検索フォームの一つの問題はアクセシビリティです。一般的なデザインの慣例では、検索フィールドにハラベルがなく（虫眼鏡のアイコンや同類のものはあります）、よく見えるユーザーには、その配置から検索フォームの目的が明確に分かります（[この例ではよくあるパターンを示しています](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/))。
 
-しかし、これは、検索入力が何であるかを言葉で示していないため、画面リーダーの利用者に混乱を引き起こす可能性があります。 ビジュアルデザインに影響を与えないでこれを解決する方法として、 [WAI-ARIA](/ja/docs/Learn/Accessibility/WAI-ARIA_basics) の機能を使用することができます。
+しかし、これは、検索入力が何であるかを言葉で示していないため、スクリーンリーダーの利用者に混乱を引き起こす可能性があります。 ビジュアルデザインに影響を与えないでこれを解決する方法として、 [WAI-ARIA](/ja/docs/Learn/Accessibility/WAI-ARIA_basics) の機能を使用することができます。
 
-- `<form>` フォームの `role` 属性の値が `search` であると、画面リーダーがフォームが検索フォームであることをアナウンスします。
-- これで十分ではない場合、 {{HTMLElement("input")}} 自身の [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を使用することができます。これは画面リーダーによって読み上げられ説明的なテキストラベルです。これは非視覚的な `<label>` と同等のものです。
+- `<form>` フォームの `role` 属性の値が `search` であると、スクリーンリーダーがフォームが検索フォームであることをアナウンスします。
+- これで十分ではない場合、 {{HTMLElement("input")}} 自身の [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を使用することができます。これはスクリーンリーダーによって読み上げられ説明的なテキストラベルです。これは非視覚的な `<label>` と同等のものです。
 
 例を見てみましょう。
 
@@ -249,7 +249,7 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 {{EmbedLiveSample("Search_form_labels_and_accessibility", 600, 40)}}
 
-前回の例から見かけ上の違いはありませんが、画面リーダーのユーザーは追加情報を得る方法があります。
+前回の例から見かけ上の違いはありませんが、スクリーンリーダーのユーザーは追加情報を得る方法があります。
 
 > **メモ:** このようなアクセシビリティ機能の詳細ついては、 [Signposts/Landmarks](/ja/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) をご覧ください。
 
