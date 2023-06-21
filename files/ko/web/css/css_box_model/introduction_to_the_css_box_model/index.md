@@ -15,7 +15,7 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 **콘텐츠 영역**(content area)은 콘텐츠 경계(content edge)가 감싼 영역으로, 글이나 이미지, 비디오 등 요소의 실제 내용을 포함합니다. 콘텐츠 영역의 크기는 콘텐츠 너비(콘텐츠 박스 너비)와 콘텐츠 높이(콘텐츠 박스 높이)입니다. 배경색과 배경 이미지를 가지고 있기도 합니다.
 
-{{cssxref("box-sizing")}} 속성의 값이 기본값인 `content-box`이며 요소가 블록 레벨 요소인 경우, 콘텐츠 영역의 크기를 {{cssxref("width")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}, {{ cssxref("height") }}, {{cssxref("min-height")}}, {{cssxref("max-height")}} 속성을 사용해 사용해 명시적으로 설정할 수 있습니다.
+{{cssxref("box-sizing")}} 속성의 값이 기본 값인 `content-box`이며 요소가 블록 레벨 요소인 경우, 콘텐츠 영역의 크기를 {{cssxref("width")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}, {{ cssxref("height") }}, {{cssxref("min-height")}}, {{cssxref("max-height")}} 속성을 사용해 사용해 명시적으로 설정할 수 있습니다.
 
 ## 안쪽 여백(패딩) 영역
 
@@ -55,10 +55,10 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
   - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
 
-    - [초깃값](/ko/docs/Web/CSS/initial_value)
-    - [계산값](/ko/docs/Web/CSS/computed_value)
-    - [사용값](/ko/docs/Web/CSS/used_value)
-    - [실제값](/ko/docs/Web/CSS/actual_value)
+    - [초기 값](/ko/docs/Web/CSS/initial_value)
+    - [계산 값](/ko/docs/Web/CSS/computed_value)
+    - [사용 값](/ko/docs/Web/CSS/used_value)
+    - [실제 값](/ko/docs/Web/CSS/actual_value)
 
   - [값 정의 구문](/ko/docs/Web/CSS/Value_definition_syntax)
   - [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)
