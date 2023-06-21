@@ -1,6 +1,7 @@
 ---
 title: scroll-snap-points-x
-slug: Web/CSS/scroll-snap-points-x
+slug: orphaned/Web/CSS/scroll-snap-points-x
+original_slug: Web/CSS/scroll-snap-points-x
 ---
 
 {{CSSRef}}{{deprecated_header}}

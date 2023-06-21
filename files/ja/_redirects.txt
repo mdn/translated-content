@@ -3727,6 +3727,12 @@
 /ja/docs/Web/CSS/repeating-linear-gradient()	/ja/docs/Web/CSS/gradient/repeating-linear-gradient
 /ja/docs/Web/CSS/repeating-radial-gradient	/ja/docs/Web/CSS/gradient/repeating-radial-gradient
 /ja/docs/Web/CSS/repeating-radial-gradient()	/ja/docs/Web/CSS/gradient/repeating-radial-gradient
+/ja/docs/Web/CSS/scroll-snap-coordinate	/ja/docs/orphaned/Web/CSS/scroll-snap-coordinate
+/ja/docs/Web/CSS/scroll-snap-destination	/ja/docs/orphaned/Web/CSS/scroll-snap-destination
+/ja/docs/Web/CSS/scroll-snap-points-x	/ja/docs/orphaned/Web/CSS/scroll-snap-points-x
+/ja/docs/Web/CSS/scroll-snap-points-y	/ja/docs/orphaned/Web/CSS/scroll-snap-points-y
+/ja/docs/Web/CSS/scroll-snap-type-x	/ja/docs/orphaned/Web/CSS/scroll-snap-type-x
+/ja/docs/Web/CSS/scroll-snap-type-y	/ja/docs/orphaned/Web/CSS/scroll-snap-type-y
 /ja/docs/Web/CSS/single-transition-timing-function	/ja/docs/Web/CSS/easing-function
 /ja/docs/Web/CSS/symbols()	/ja/docs/Web/CSS/symbols
 /ja/docs/Web/CSS/timing-function	/ja/docs/Web/CSS/easing-function

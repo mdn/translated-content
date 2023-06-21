@@ -1,6 +1,7 @@
 ---
 title: scroll-snap-type-y
-slug: Web/CSS/scroll-snap-type-y
+slug: orphaned/Web/CSS/scroll-snap-type-y
+original_slug: Web/CSS/scroll-snap-type-y
 ---
 
 {{CSSRef}}{{deprecated_header}}
