@@ -19826,14 +19826,6 @@
     "modified": "2020-10-15T22:29:36.376Z",
     "contributors": ["mfuji09"]
   },
-  "Web/CSS/scroll-snap-coordinate": {
-    "modified": "2020-10-15T22:12:59.561Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/scroll-snap-destination": {
-    "modified": "2020-10-15T22:13:25.242Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/CSS/scroll-snap-stop": {
     "modified": "2020-10-15T22:12:57.197Z",
     "contributors": ["mfuji09"]
