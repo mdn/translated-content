@@ -27,7 +27,7 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 **테두리 영역**(border area)은 테두리 경계(border edge)가 감싼 영역으로, 안쪽 여백 영역을 요소의 테두리까지 포함하는 크기로 확장합니다. 영역의 크기는 테두리 박스 너비와 테두리 박스 높이입니다.
 
-테두리의 두께는 {{cssxref("border-width")}}와 단축 속성인 {{cssxref("border")}}가 결정합니다. {{cssxref("box-sizing")}} 속성의 값이 `border-box`라면 테두리 영역의 크기를 {{cssxref("width")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}, {{ cssxref("height") }}, {{cssxref("min-height")}}, {{cssxref("max-height")}} 속성을 사용해 명시적으로 설정할 수 있습니다. 박스의 배경({{cssxref("background-color")}} 또는 {{cssxref("background-image")}})은 테두리의 바깥 경계까지 늘어나고, 그릴 땐 테두리에 가려집니다. 이 동작 방식은 {{cssxref("background-clip")}} 속성으로 바꿀 수 있습니다.
+테두리의 두께는 {{cssxref("border-width")}}와 단축 속성인 {{cssxref("border")}}가 결정합니다. {{cssxref("box-sizing")}} 속성의 값이 `border-box`라면 테두리 영역의 크기를 {{cssxref("width")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}, {{ cssxref("height") }}, {{cssxref("min-height")}}, {{cssxref("max-height")}} 속성을 사용해 명시적으로 설정할 수 있습니다. 박스의 배경({{cssxref("background-color")}} 또는 {{cssxref("background-image")}})은 테두리의 바깥 경계까지 늘어나고, 그릴 땐 테두리에 가려집니다. 이 기본동작 방식은 {{cssxref("background-clip")}} 속성으로 바꿀 수 있습니다.
 
 ## 바깥 여백(마진) 영역
 
