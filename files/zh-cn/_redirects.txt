@@ -2155,10 +2155,6 @@
 /zh-CN/docs/Web/CSS/min()	/zh-CN/docs/Web/CSS/min
 /zh-CN/docs/Web/CSS/minmax()	/zh-CN/docs/Web/CSS/minmax
 /zh-CN/docs/Web/CSS/repeat()	/zh-CN/docs/Web/CSS/repeat
-/zh-CN/docs/Web/CSS/scroll-snap-coordinate	/zh-CN/docs/orphaned/Web/CSS/scroll-snap-coordinate
-/zh-CN/docs/Web/CSS/scroll-snap-destination	/zh-CN/docs/orphaned/Web/CSS/scroll-snap-destination
-/zh-CN/docs/Web/CSS/scroll-snap-points-x	/zh-CN/docs/orphaned/Web/CSS/scroll-snap-points-x
-/zh-CN/docs/Web/CSS/scroll-snap-points-y	/zh-CN/docs/orphaned/Web/CSS/scroll-snap-points-y
 /zh-CN/docs/Web/CSS/transform-function/matrix()	/zh-CN/docs/Web/CSS/transform-function/matrix
 /zh-CN/docs/Web/CSS/transform-function/matrix3d()	/zh-CN/docs/Web/CSS/transform-function/matrix3d
 /zh-CN/docs/Web/CSS/transform-function/perspective()	/zh-CN/docs/Web/CSS/transform-function/perspective
