@@ -25,7 +25,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise
 
 ![流程图展示了 Promise 状态在 `pending`、`fulfilled` 和 `rejected` 之间如何通过 `then()` 和 `catch()` 处理程序进行转换。一个待定的 Promise 可以变成已兑现或已拒绝的状态。如果 Promise 已经兑现，则会执行“on fulfillment”处理程序（即 `then()` 方法的第一个参数），并继续执行进一步的异步操作。如果 Promise 被拒绝，则会执行错误处理程序，可以将其作为 `then()` 方法的第二个参数或 `catch()` 方法的唯一参数来传递。](promises.png)
 
-你还会听到使用*已解决（resolved）*这个术语来描述 Promise——这意味着该 Promise 已经敲定（settled），或为了匹配另一个 Promise 的最终状态而被“锁定（lock-in）”，进一步解决或拒绝它都没有影响。原始 Promise 提案中的 [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 文档包含了更多关于 Promise 术语的细节。在口语中，“已解决”的 Promise 通常等价于“已兑现”的 Promise，但是正如“States and fates”所示，已解决的 Promise 也可以是待定或拒绝的。例如：
+你还会听到使用*已解决*（resolved）这个术语来描述 Promise——这意味着该 Promise 已经敲定（settled），或为了匹配另一个 Promise 的最终状态而被“锁定（lock-in）”，进一步解决或拒绝它都没有影响。原始 Promise 提案中的 [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 文档包含了更多关于 Promise 术语的细节。在口语中，“已解决”的 Promise 通常等价于“已兑现”的 Promise，但是正如“States and fates”所示，已解决的 Promise 也可以是待定或拒绝的。例如：
 
 ```js
 new Promise((resolveOuter) => {
@@ -37,13 +37,13 @@ new Promise((resolveOuter) => {
 });
 ```
 
-此 Promise 在创建时已经被解决（因为 `resolveOuter` 是同步调用的），但它被解决为另一个 Promise，因此在内部 Promise 实现后的 1 秒钟之后才会被*兑现*。在实践中，“解决”通常是在幕后完成的，不可观察，只有其兑现或拒绝是可观察的。
+此 Promise 在创建时已经被解决（因为 `resolveOuter` 是同步调用的），但它是用另一个 Promise 解决的，因此在内部 Promise 兑现的 1 秒之后才会*被兑现*。在实践中，“解决”过程通常是在幕后完成的，不可观察，只有其兑现或拒绝是可观察的。
 
 > **备注：** 其他几种语言也有一些机制来实现惰性求值和延迟计算，它们也称之为“promise”，例如 Scheme。在 JavaScript 中，Promise 代表已经在进行中的进程，而且可以通过回调函数实现链式调用。如果你想要实现惰性求值，考虑使用不带参数的函数，例如 `f = () => expression` 来创建惰性求值表达式，然后使用 `f()` 立即求值。
 
 ### Promise 的链式调用
 
-{{jsxref("Promise.prototype.then()")}}、{{jsxref("Promise.prototype.catch()")}} 和 {{jsxref("Promise.prototype.finally()")}} 方法用于将进一步的操作与已敲定的 Promise 相关联。由于这些方法返回 Promise，因此它们可以进行链接操作。
+{{jsxref("Promise.prototype.then()")}}、{{jsxref("Promise.prototype.catch()")}} 和 {{jsxref("Promise.prototype.finally()")}} 方法用于将进一步的操作与已敲定的 Promise 相关联。由于这些方法返回 Promise，因此它们可以被链式调用。
 
 `.then()` 方法最多接受两个参数；第一个参数是 Promise 兑现时的回调函数，第二个参数是 Promise 拒绝时的回调函数。每个 `.then()` 返回一个新生成的 Promise 对象，这个对象可被用于链式调用，例如：
 
@@ -62,7 +62,7 @@ myPromise
 
 即使 `.then()` 缺少返回 Promise 对象的回调函数，处理程序仍会继续到链的下一个链式调用。因此，在最终的 `.catch()` 之前，可以安全地省略每个链式调用中处理已拒绝状态的回调函数。
 
-在每个 `.then()` 中处理拒绝的 Promise 对于 Promise 链下游有重要的影响。有时候别无选择，因为有的错误必须立即被处理。在这种情况下，必须抛出某种类型的错误以维护链中的错误状态。另一方面，在没有迫切需要的情况下，最好将错误处理留到最后一个 `.catch()` 语句。`.catch()` 其实就是一个没有为 Promise 时的回调函数留出空位的 `.then()`。
+在每个 `.then()` 中处理被拒绝的 Promise 对于 Promise 链的下游有重要的影响。有时候别无选择，因为有的错误必须立即被处理。在这种情况下，必须抛出某种类型的错误以维护链中的错误状态。另一方面，在没有迫切需要的情况下，最好将错误处理留到最后一个 `.catch()` 语句。`.catch()` 其实就是一个没有为 Promise 时的回调函数留出空位的 `.then()`。
 
 ```js
 myPromise
@@ -157,9 +157,9 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 - {{jsxref("Promise.allSettled()")}}
   - : 当**所有**的 Promise 都被敲定时（不论是被兑现还是被拒绝），`Promise.allSettled` 方法返回一个已兑现的 Promise。
 - {{jsxref("Promise.any()")}}
-  - : 当**任意一个** Promise 被兑现时，`Promise.race` 方法返回一个成功兑现的 Promise；当**所有**的 Promise 都被拒绝时，`Promise.race` 方法返回一个被拒绝的 Promise。
+  - : 当**任意一个** Promise 被兑现时，`Promise.any` 方法返回一个成功兑现的 Promise；当**所有**的 Promise 都被拒绝时，`Promise.any` 方法返回一个被拒绝的 Promise。
 - {{jsxref("Promise.race()")}}
-  - : 当**任意一个** Promise 被敲定时（无论是被兑现还是被拒绝），`Promise.any` 方法返回一个已兑现的 Promise。换句话说，当**任意一个** Promise 被兑现时，返回一个成功兑现的 Promise；当**所有**的 Promise 都被拒绝时，返回一个被拒绝的 Promise。
+  - : 当**任意一个** Promise 被敲定时（无论是被兑现还是被拒绝），`Promise.race` 方法返回一个已兑现的 Promise。换句话说，当**任意一个** Promise 被兑现时，返回一个成功兑现的 Promise；当**任意一个**的 Promise 被拒绝时，返回一个被拒绝的 Promise。
 
 所有这些方法都接受一个 Promise（确切地说是 [thenable](#thenable)）的[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，并返回一个新的 Promise。它们都支持子类化，这意味着它们可以在 `Promise` 的子类上调用，结果将是一个属于子类类型的 Promise。为此，子类的构造函数必须实现与 [`Promise()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) 构造函数相同的签名——接受一个以 `resolve` 和 `reject` 回调函数作为参数的单个 `executor` 函数。子类还必须有一个 `resolve` 静态方法，可以像 {{jsxref("Promise.resolve()")}} 一样调用，以将值解析为 Promise。
 
