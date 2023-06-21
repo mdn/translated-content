@@ -670,7 +670,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
         <code><a href="/zh-CN/docs/Web/HTML/Element/track#kind">kind</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
-      <td>指定文本字母的类型。</td>
+      <td>指定文本字幕的类型。</td>
     </tr>
     <tr>
       <td>
@@ -1156,7 +1156,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
         <a href="/zh-CN/docs/Web/HTML/Global_attributes">全局属性</a>
       </td>
       <td>
-        覆盖浏览器的默认聚焦（tab）顺序，而是按照指定的顺序。
+        使用指定的聚焦（tab）顺序覆盖浏览器的默认聚焦顺序。
       </td>
     </tr>
     <tr>
