@@ -20869,22 +20869,6 @@
     "modified": "2020-11-27T01:35:52.693Z",
     "contributors": ["EryouHao"]
   },
-  "Web/CSS/scroll-snap-coordinate": {
-    "modified": "2019-01-16T21:50:21.410Z",
-    "contributors": ["rockywen"]
-  },
-  "Web/CSS/scroll-snap-destination": {
-    "modified": "2019-03-23T22:42:44.523Z",
-    "contributors": ["rockywen"]
-  },
-  "Web/CSS/scroll-snap-points-x": {
-    "modified": "2019-03-23T22:42:35.765Z",
-    "contributors": ["rockywen"]
-  },
-  "Web/CSS/scroll-snap-points-y": {
-    "modified": "2019-03-23T22:42:33.911Z",
-    "contributors": ["rockywen"]
-  },
   "Web/CSS/scroll-snap-type": {
     "modified": "2020-10-15T21:40:51.208Z",
     "contributors": ["suyanhanx", "RoXoM", "rockywen"]
@@ -33526,5 +33510,21 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "orphaned/Web/CSS/scroll-snap-coordinate": {
+    "modified": "2019-01-16T21:50:21.410Z",
+    "contributors": ["rockywen"]
+  },
+  "orphaned/Web/CSS/scroll-snap-destination": {
+    "modified": "2019-03-23T22:42:44.523Z",
+    "contributors": ["rockywen"]
+  },
+  "orphaned/Web/CSS/scroll-snap-points-x": {
+    "modified": "2019-03-23T22:42:35.765Z",
+    "contributors": ["rockywen"]
+  },
+  "orphaned/Web/CSS/scroll-snap-points-y": {
+    "modified": "2019-03-23T22:42:33.911Z",
+    "contributors": ["rockywen"]
   }
 }
