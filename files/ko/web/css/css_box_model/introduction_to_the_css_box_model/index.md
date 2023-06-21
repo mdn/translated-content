@@ -35,7 +35,7 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 바깥 여백 영역의 크기는 {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}}와 단축 속성인 {{cssxref("margin")}}이 결정합니다. [여백 상쇄](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)가 발생할 때는 요소 간에 바깥 여백이 공유되므로 여백 영역이 명확하게 결정되지 않습니다.
 
-끝으로, 비대체 인라인 요소가 차지하는 공간의 크기(줄 높이에 기여하는 양)는, 요소 주위에 테두리와 안쪽 여백이 표시되더라도 {{cssxref('line-height')}} 속성으로 결정한다는 점을 주의하세요.
+끝으로, 비대체 인라인 요소가 차지하는 공간의 크기(줄 높이에 기여하는 양)는 요소 주위에 테두리와 안쪽 여백이 표시되더라도 {{cssxref('line-height')}} 속성으로 결정한다는 점을 주의하세요.
 
 ## 같이 보기
 
