@@ -1,8 +1,6 @@
 ---
 title: transform-origin
 slug: Web/CSS/transform-origin
-page-type: css-property
-browser-compat: css.properties.transform-origin
 ---
 
 {{CSSRef}}
