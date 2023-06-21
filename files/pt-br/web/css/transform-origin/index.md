@@ -5,7 +5,7 @@ slug: Web/CSS/transform-origin
 
 {{CSSRef}}
 
-A propriedade **`transform-origin`** define a origem das transformações de um elemento no CSS.
+A propriedade **`transform-origin`** define a origem das transformações de um elemento no [CSS](/pt-BR/docs/Web/CSS).
 
 {{EmbedInteractiveExample("pages/css/transform-origin.html")}}
 
