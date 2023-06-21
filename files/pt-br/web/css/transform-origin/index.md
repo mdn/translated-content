@@ -310,7 +310,7 @@ transform-origin: 100% -30%;
 
 {{Specifications}}
 
-## Compatibilidade de navegadorres
+## Compatibilidade com navegadorres
 
 {{Compat}}
 
