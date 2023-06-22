@@ -90,7 +90,7 @@ myPromise
 
 > **备注：** 为了更快的执行，最好将所有同步操作都放在一个处理程序中，否则如果将它们拆分为多个处理程序，执行所有处理程序将需要几个时钟周期。
 
-一个 Promise 的终止条件决定了链中下一个 Promise 的“settled”状态。“fulfilled”状态表示 Promise 成功完成，而“rejected”状态表示 Promise 执行失败。链中每个已兑现的 Promise 的返回值会传递给下一个 `.then()`，而已拒绝的 Promise 会把失败原因传递给链中下一个拒绝处理函数。
+一个 Promise 的终止条件决定了链中下一个 Promise 的“已敲定”状态。“已兑现”状态表示 Promise 成功完成，而“已拒绝”状态表示 Promise 执行失败。链中每个已兑现的 Promise 的返回值会传递给下一个 `.then()`，而已拒绝的 Promise 会把失败原因传递给链中下一个拒绝处理函数。
 
 链式调用中的 promise 们就像俄罗斯套娃一样，是嵌套起来的，但又像是一个栈，每个都必须从顶端被弹出。链式调用中的第一个 promise 是嵌套最深的一个，也将是第一个被弹出的。
 
@@ -129,7 +129,7 @@ console.log("立即记录");
 
 ### Thenable
 
-在 Promise 成为 JavaScript 语言的一部分之前，JavaScript 生态系统已经实现了多个 Promise 实现。尽管它们在内部的表示方式不同，但至少所有类 Promise 的对象都实现了 _Thenable_ 接口。一个 thenable 对象实现了 [`.then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 方法，该方法被调用时需要传入两个回调函数，一个用于 Promise 被兑现时调用，一个用于 Promise 被拒绝时调用。Promise 也是 thenable 对象。
+在 Promise 成为 JavaScript 语言的一部分之前，JavaScript 生态系统已经有了多种 Promise 实现。尽管它们在内部的表示方式不同，但至少所有类 Promise 的对象都实现了 _Thenable_ 接口。thenable 对象实现了 [`.then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 方法，该方法被调用时需要传入两个回调函数，一个用于 Promise 被兑现时调用，一个用于 Promise 被拒绝时调用。Promise 也是 thenable 对象。
 
 为了与现有的 Promise 实现进行交互，JavaScript 语言允许在 Promise 的位置使用 thenable 对象。例如，[`Promise.resolve`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 方法不仅可以解析 Promise 对象，还可以追踪 thenable 对象。
 
@@ -153,7 +153,7 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 `Promise` 类提供了四个静态方法来促进异步任务的[并发](https://zh.wikipedia.org/wiki/并发计算)：
 
 - {{jsxref("Promise.all()")}}
-  - : 当**所有**的 Promise 都被兑现时，`Promise.all` 方法返回一个成功兑现的 Promise；当**任意一个** Promise 被拒绝时，`Promise.all` 方法返回一个被拒绝的 Promise。
+  - : `Promise.all` 方法返回一个 Promise，当**所有**传入的 Promise 都被兑现时，该 Promise 也成功兑现；当**任意一个** Promise 被拒绝时，该 Promise 也被拒绝。
 - {{jsxref("Promise.allSettled()")}}
   - : 当**所有**的 Promise 都被敲定时（不论是被兑现还是被拒绝），`Promise.allSettled` 方法返回一个已兑现的 Promise。
 - {{jsxref("Promise.any()")}}
@@ -163,7 +163,7 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 
 所有这些方法都接受一个 Promise（确切地说是 [thenable](#thenable)）的[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，并返回一个新的 Promise。它们都支持子类化，这意味着它们可以在 `Promise` 的子类上调用，结果将是一个属于子类类型的 Promise。为此，子类的构造函数必须实现与 [`Promise()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) 构造函数相同的签名——接受一个以 `resolve` 和 `reject` 回调函数作为参数的单个 `executor` 函数。子类还必须有一个 `resolve` 静态方法，可以像 {{jsxref("Promise.resolve()")}} 一样调用，以将值解析为 Promise。
 
-请注意，JavaScript 的本质上是[单线程的](/zh-CN/docs/Glossary/Thread)，因此在任何时刻，只有一个任务会被执行，尽管控制权可以在不同的 Promise 之间切换，从而使 Promise 的执行看起来是并发的。在 JavaScript 中，[并行执行](https://zh.wikipedia.org/wiki/并行计算)只能通过[工作线程](/zh-CN/docs/Web/API/Web_Workers_API)实现。
+请注意，JavaScript 的本质上是[单线程的](/zh-CN/docs/Glossary/Thread)，因此在任何时刻，只有一个任务会被执行，尽管控制权可以在不同的 Promise 之间切换，从而使 Promise 的执行看起来是并发的。在 JavaScript 中，[并行执行](https://zh.wikipedia.org/wiki/并行计算)只能通过[ worker 线程](/zh-CN/docs/Web/API/Web_Workers_API)实现。
 
 ## 构造函数
 
@@ -192,9 +192,8 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
     返回一个 Promise，该 Promise 在所有给定的 Promise 都已成功兑现或被拒绝后被兑现，并且返回一个描述每个 Promise 结果的对象数组。
 
 - {{jsxref("Promise.any()")}}
-  - : 接受一个 Promise 对象的可迭代对象，一旦可迭代对象中的任意一个 Promise 对象成功兑现，就会返回一个新的 Promise 对象，该新的 Promise 对象兑现该 Promise的 兑现值。
+  - : 接受一个 Promise 对象的可迭代对象，一旦可迭代对象中的任意一个 Promise 对象成功兑现，就会返回一个新的 Promise 对象，该新的 Promise 对象兑现该 Promise 的兑现值。
 - {{jsxref("Promise.race()")}}
--
   - : 等待直到任意一个 Promise 被成功兑现或被拒绝。
 
     如果返回的 Promise 被兑现，它将以第一个兑现的 Promise 的值作为兑现值。
