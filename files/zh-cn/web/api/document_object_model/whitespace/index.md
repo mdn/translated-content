@@ -40,14 +40,14 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 ```html
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title>我的文档</title>
+    <title>My Document</title>
   </head>
   <body>
-    <h1>头部</h1>
-    <p>段落</p>
+    <h1>Header</h1>
+    <p>Paragraph</p>
   </body>
 </html>
 ```
