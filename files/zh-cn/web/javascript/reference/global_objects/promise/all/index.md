@@ -24,8 +24,8 @@ Promise.all(iterable)
 
 一个 {{jsxref("Promise")}}，其状态为：
 
-- **已兑现（already fulfilled）**，如果传入的 `iterable` 为空的话。
-- **异步兑现（asynchronously fulfilled）**，当给定的 `iterable` 中所有的 promise 都已兑现。兑现值是一个数组，其元素顺序与传入的 promise 一致，而非按照兑现的时间顺序排列。如果传入的 `iterable` 是一个非空但不包含待定的（pending） promise，则返回的 promise 依然是异步兑现，而非同步兑现。
+- **已兑现（already fulfilled）**，如果传入的 `iterable` 为空。
+- **异步兑现（asynchronously fulfilled）**，如果给定的 `iterable` 中所有的 promise 都已兑现。兑现值是一个数组，其元素顺序与传入的 promise 一致，而非按照兑现的时间顺序排列。如果传入的 `iterable` 是一个非空但不包含待定的（pending）promise，则返回的 promise 依然是异步兑现，而非同步兑现。
 - **异步拒绝（asynchronously rejected）**，如果给定的 `iterable` 中的任意 promise 被拒绝。拒绝原因是第一个拒绝的 promise 的拒绝原因。
 
 ## 描述
@@ -38,7 +38,7 @@ Promise.all(iterable)
 
 ### 使用 Promise.all()
 
-`Promise.all` 等待所有都完成（或第一个失败）。
+`Promise.all` 等待所有兑现的结果（或第一个失败）。
 
 ```js
 const p1 = Promise.resolve(3);
@@ -54,7 +54,7 @@ Promise.all([p1, p2, p3]).then((values) => {
 });
 ```
 
-如果 `iterable` 包含非 promise 值，这些值将被忽略，当仍包含在返回的 primise 数组值中（如果该 promise 兑现的话）：
+如果 `iterable` 包含非 promise 值，这些值将被忽略，但仍包含在返回的 promise 数组值中（如果该 promise 得到了兑现）：
 
 ```js
 // 所有的值都不是 Promise，因此返回的 Promise 将被兑现
@@ -200,8 +200,6 @@ async function getPrice() {
 ```
 
 `Promise.all` 在这里是[并发方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_并发)中的最佳选择，因为错误处理很直观——如果有任何一个 Promise 被拒绝，结果将不再可用，整个 `await` 表达式会抛出异常。
-
-`Promise.all` accepts an iterable of promises, so if you are using it to parallelize execution of several async functions, you need to call the async functions and use the returned promises. Directly passing the functions to `Promise.all` does not work, since they are not promises.
 
 `Promise.all` 接受一个 Promise 可迭代对象，因此如果要使用它来并行执行多个异步函数，你需要调用这些异步函数并使用返回的 Promise。直接将函数传递给 `Promise.all` 是不起作用的，因为它们不是 Promise。
 
