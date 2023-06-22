@@ -30718,10 +30718,6 @@
     "modified": "2019-03-23T23:28:35.294Z",
     "contributors": ["yyss", "teoli"]
   },
-  "conflicting/Web/CSS/CSS_paged_media": {
-    "modified": "2019-03-18T21:35:37.752Z",
-    "contributors": ["mfuji09"]
-  },
   "conflicting/Web/CSS/Reference": {
     "modified": "2019-03-18T21:33:15.134Z",
     "contributors": ["mfuji09"]
