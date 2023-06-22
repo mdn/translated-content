@@ -86,7 +86,7 @@ p {
 
 #### 结果
 
-{{EmbedLiveSample('Comparing_to_the_default_size')}}
+{{EmbedLiveSample('与默认尺寸相比较')}}
 
 ## 规范
 
