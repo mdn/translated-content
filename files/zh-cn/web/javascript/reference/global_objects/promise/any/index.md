@@ -40,8 +40,6 @@ Promise.any(iterable)
 
 ### 使用 Promise.any()
 
-如果可迭代数组内的任意一个 `promise` 兑现了，那么该方法所返回的 `promise` 也会切换至兑现状态，哪怕首个敲定的 `promise` 是被拒的。不同的是，{{jsxref("Promise.race()")}} 所返回的 `promise` 的状态会跟随首个敲定的 `promise` 的状态。
-
 `Promise.any()` 会以第一个兑现的 Promise 来兑现，即使有 Promise 先被拒绝。这与 {{jsxref("Promise.race()")}} 不同，后者会使用第一个敲定的 Promise 来兑现或拒绝。
 
 ```js
