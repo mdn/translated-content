@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/any
 
 {{JSRef}}
 
-**`Promise.any()`** 静态方法将一个 Promise 可迭代对象作为输入，并返回一个 {{jsxref("Promise")}}。当输入的 Promise 中的任何一个兑现时，这个返回的 Promise 将会兑现，并返回第一个兑现的值。如果输入的所有 Promise 都被拒绝（包括传递的可迭代对象为空时），则返回的 Promise 将被拒绝，带有一个包含拒绝原因数组的 {{jsxref("AggregateError")}}。
+**`Promise.any()`** 静态方法将一个 Promise 可迭代对象作为输入，并返回一个 {{jsxref("Promise")}}。当输入的任何一个 Promise 兑现时，这个返回的 Promise 将会兑现，并返回第一个兑现的值。当所有输入 Promise 都被拒绝（包括传递了空的可迭代对象）时，它会以一个包含拒绝原因数组的 {{jsxref("AggregateError")}} 被拒绝。
 
 {{EmbedInteractiveExample("pages/js/promise-any.html")}}
 
@@ -20,7 +20,7 @@ Promise.any(iterable)
 - `iterable`
   - : 一个[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，例如一个 promise {{jsxref("Array", "数组", "", 1)}}。
 
-### 返回值s
+### 返回值
 
 一个 {{jsxref("Promise")}}，其状态为：
 
@@ -42,7 +42,7 @@ Promise.any(iterable)
 
 如果可迭代数组内的任意一个 `promise` 兑现了，那么该方法所返回的 `promise` 也会切换至兑现状态，哪怕首个敲定的 `promise` 是被拒的。不同的是，{{jsxref("Promise.race()")}} 所返回的 `promise` 的状态会跟随首个敲定的 `promise` 的状态。
 
-`Promise.any()` 会以第一个兑现的 Promise 而兑现，即使有 Promise 先被拒绝。这与 {{jsxref("Promise.race()")}} 不同，后者会使用第一个敲定的 Promise 来兑现或拒绝。
+`Promise.any()` 会以第一个兑现的 Promise 来兑现，即使有 Promise 先被拒绝。这与 {{jsxref("Promise.race()")}} 不同，后者会使用第一个敲定的 Promise 来兑现或拒绝。
 
 ```js
 const pErr = new Promise((resolve, reject) => {
