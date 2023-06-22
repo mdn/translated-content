@@ -16,7 +16,7 @@ The **`HTMLContentElement`** interface represents a {{HTMLElement("content")}} H
 _This interface inherits the properties of {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLContentElement.select")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("select", "content") }} HTML attribute. The value is a comma-separated list of CSS selectors that select the content to insert in place of the `<content>` element.
+  - : Is a {{domxref("DOMString")}} that reflects the [`select`](/ru/docs/Web/HTML/Element/content#select) HTML attribute. The value is a comma-separated list of CSS selectors that select the content to insert in place of the `<content>` element.
 
 ## Методы
 

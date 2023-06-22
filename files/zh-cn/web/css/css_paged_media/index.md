@@ -1,6 +1,6 @@
 ---
 title: Paged media
-slug: Web/CSS/Paged_Media
+slug: Web/CSS/CSS_paged_media
 ---
 
 {{CSSRef}}
