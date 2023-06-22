@@ -51,7 +51,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/заставка_Mozilla
 
 ### Добавление отзывчивых изображений к ссылкам с доп. информацией
 
-Внутри {{htmlelement("div")}} с классом `further-info` вы найдёте четыре элемента {{htmlelement("a")}} — каждый из которых ссылается на интересную страницу, связанную с Mozilla. Для завершения этой секции вам необходимо поместить элемент {{htmlelement("img")}} внутрь каждого элемента {{htmlelement("a")}} дополнив подходящими атрибутами {{htmlattrxref("src", "img")}}, {{htmlattrxref("alt", "img")}}, {{htmlattrxref("srcset", "img")}} и {{htmlattrxref("sizes", "img")}}.
+Внутри {{htmlelement("div")}} с классом `further-info` вы найдёте четыре элемента {{htmlelement("a")}} — каждый из которых ссылается на интересную страницу, связанную с Mozilla. Для завершения этой секции вам необходимо поместить элемент {{htmlelement("img")}} внутрь каждого элемента {{htmlelement("a")}} дополнив подходящими атрибутами [`src`](/ru/docs/Web/HTML/Element/img#src), [`alt`](/ru/docs/Web/HTML/Element/img#alt), [`srcset`](/ru/docs/Web/HTML/Element/img#srcset) и [`sizes`](/ru/docs/Web/HTML/Element/img#sizes).
 
 В каждом случае (кроме одного - какой из них по сути отзывчивый?) мы хотим, чтобы браузер использовал изображение шириной 120px , когда экран меньше или равен 480px, либо шириной 400px в других случаях.
 

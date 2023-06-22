@@ -17136,10 +17136,6 @@
       "Piro"
     ]
   },
-  "Web/CSS/Paged_Media": {
-    "modified": "2019-03-18T21:35:37.752Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/CSS/Privacy_and_the_:visited_selector": {
     "modified": "2020-12-01T21:03:57.973Z",
     "contributors": ["mfuji09", "SphinxKnight", "ethertank", "sosleepy"]
@@ -19824,14 +19820,6 @@
   },
   "Web/CSS/scroll-snap-align": {
     "modified": "2020-10-15T22:29:36.376Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/scroll-snap-coordinate": {
-    "modified": "2020-10-15T22:12:59.561Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/scroll-snap-destination": {
-    "modified": "2020-10-15T22:13:25.242Z",
     "contributors": ["mfuji09"]
   },
   "Web/CSS/scroll-snap-stop": {
