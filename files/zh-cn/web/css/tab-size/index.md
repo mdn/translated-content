@@ -5,7 +5,7 @@ slug: Web/CSS/tab-size
 
 {{CSSRef}}
 
-**`tab-size`** CSS 属性用于自定义制表符字符的宽度 (U+0009)。
+**`tab-size`** CSS 属性用于自定义制表符（U+0009）的宽度。
 
 {{EmbedInteractiveExample("pages/css/tab-size.html")}}
 
