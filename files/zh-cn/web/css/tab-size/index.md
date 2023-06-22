@@ -51,7 +51,7 @@ pre {
 }
 ```
 
-### Collapse tabs
+### 折叠制表符
 
 ```css
 pre {
