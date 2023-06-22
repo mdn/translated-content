@@ -17136,10 +17136,6 @@
       "Piro"
     ]
   },
-  "Web/CSS/Paged_Media": {
-    "modified": "2019-03-18T21:35:37.752Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/CSS/Privacy_and_the_:visited_selector": {
     "modified": "2020-12-01T21:03:57.973Z",
     "contributors": ["mfuji09", "SphinxKnight", "ethertank", "sosleepy"]
@@ -30721,6 +30717,10 @@
   "conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea": {
     "modified": "2019-03-23T23:28:35.294Z",
     "contributors": ["yyss", "teoli"]
+  },
+  "conflicting/Web/CSS/CSS_paged_media": {
+    "modified": "2019-03-18T21:35:37.752Z",
+    "contributors": ["mfuji09"]
   },
   "conflicting/Web/CSS/Reference": {
     "modified": "2019-03-18T21:33:15.134Z",
