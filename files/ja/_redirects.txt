@@ -3631,7 +3631,7 @@
 /ja/docs/Web/CSS/Media_Queries/Using_media_queries	/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /ja/docs/Web/CSS/Motion_Path	/ja/docs/Web/CSS/CSS_motion_path
 /ja/docs/Web/CSS/Other_Resources	/ja/docs/Web/CSS
-/ja/docs/Web/CSS/Paged_Media	/ja/docs/conflicting/Web/CSS/CSS_paged_media
+/ja/docs/Web/CSS/Paged_Media	/ja/docs/Web/CSS/CSS_paged_media
 /ja/docs/Web/CSS/Reference/@viewport	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/@viewport/max-zoom	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/@viewport/min-zoom	/ja/docs/Web/CSS
