@@ -6,7 +6,7 @@ translation_of: Web/CSS/animation
 
 {{CSSRef}}
 
-La propriété **`animation`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de d'appliquer une animation entre des styles.
+La propriété **`animation`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet d'appliquer une animation entre des styles.
 
 C'est une propriété qui synthétise les propriétés suivantes :
 

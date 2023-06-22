@@ -1,19 +1,43 @@
 ---
-title: '<head>: 文書メタデータ (ヘッダー) 要素'
+title: "<head>: 文書メタデータ（ヘッダー）要素"
 slug: Web/HTML/Element/head
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<head>` 要素**は、文書に関する機械可読な情報 ({{glossary("metadata", "メタデータ")}})、たとえば[題名](/ja/docs/Web/HTML/Element/title)、[スクリプト](/ja/docs/Web/HTML/Element/script)、[スタイルシート](/ja/docs/Web/HTML/Element/style)などを含みます。
+**`<head>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に関する機械可読な情報（{{glossary("metadata", "メタデータ")}}）、たとえば[題名](/ja/docs/Web/HTML/Element/title)、[スクリプト](/ja/docs/Web/HTML/Element/script)、[スタイルシート](/ja/docs/Web/HTML/Element/style)などを含みます。
 
-> **メモ:** `<head>` は機械処理のための情報を保持するためのものであり、人間が読むためのものではありません。人間が読むための情報、例えば最上位のヘッダーや著者のリストのためのものは、 {{HTMLElement("header")}} 要素を参照してください。
+> **メモ:** `<head>` は主に人間が読むためのものではなく、機械処理のための情報を保持するためのものです。人間が読むための情報、例えば最上位の見出しや著者の掲載のためのものは、 {{HTMLElement("header")}} 要素を参照してください。
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+
+- `profile` {{deprecated_inline}} {{Non-standard_Inline}}
+  - : 1 つ以上のメタデータプロファイルの {{glossary("URI")}} で、{{Glossary("whitespace", "ホワイトスペース")}}区切りです。
+
+## 例
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Document title</title>
+  </head>
+</html>
+```
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -25,31 +49,22 @@ slug: Web/HTML/Element/head
         <p>
           文書が {{HTMLElement("iframe")}} の
           <a href="/ja/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a>
-          文書である場合、または題名情報がより上位のプロトコル (HTML
-          メールの件名の行など)
-          で使用される場合は、0個以上のメタデータコンテンツ。
+          文書である場合、または題名情報がより上位のプロトコル（HTML メールの件名の行など）で使用される場合は、0 個以上のメタデータコンテンツ。
         </p>
         <p>
-          他の場合は正確に1つの {{HTMLElement("title")}}
-          要素を含む、1個以上のメタデータコンテンツ。
+          他の場合は正確に 1 つの {{HTMLElement("title")}} 要素を含む、1 つ以上のメタデータコンテンツ。
         </p>
       </td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
       <td>
-        <code>&#x3C;head></code>
-        要素内で最初に存在するものが要素である場合、開始タグを省略可能。<br /><code
-          >&#x3C;head></code
-        >
-        要素に続く最初のものが空白文字やコメントでない場合、終了タグが省略可能。
+        この <code>&#x3C;head></code> 要素内で最初に存在するものが要素である場合、開始タグを省略可能。<br /><code>&#x3C;head></code> 要素に続く最初のものが空白文字やコメントでない場合、終了タグが省略可能。
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
-      <td>
-        {{HTMLElement("html")}} 要素の最初の子要素として配置可能。
-      </td>
+      <td>{{HTMLElement("html")}} 要素の最初の子要素として配置可能。</td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
@@ -69,28 +84,6 @@ slug: Web/HTML/Element/head
     </tr>
   </tbody>
 </table>
-
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
-
-- `profile` {{deprecated_inline}}
-  - : 1 つ以上のメタデータプロファイルの {{glossary("URI")}} で、{{Glossary("whitespace", "ホワイトスペース")}}区切りです。
-
-## 例
-
-```html
-<!doctype html>
-<html>
-  <head>
-    <title>Document title</title>
-  </head>
-</html>
-```
-
-## メモ
-
-HTML5 互換のブラウザーでは、タグが省略されていても `<head>` 要素を自動的に生成します。[この自動生成は、過去のブラウザーでは保証されていません](https://www.stevesouders.com/blog/2010/05/12/autohead-my-first-browserscope-user-test/)。
 
 ## 仕様書
 
