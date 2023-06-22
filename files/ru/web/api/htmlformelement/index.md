@@ -20,27 +20,27 @@ The **`HTMLFormElement`** interface provides methods to create and modify {{HTML
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLFormElement.acceptCharset")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("accept-charset", "form") }} HTML attribute, containing a list of character encodings that the server accepts.
+  - : Is a {{domxref("DOMString")}} that reflects the [`accept-charset`](/ru/docs/Web/HTML/Element/form#accept-charset) HTML attribute, containing a list of character encodings that the server accepts.
 - {{domxref("HTMLFormElement.action")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("action", "form") }} HTML attribute, containing the URI of a program that processes the information submitted by the form.
+  - : Is a {{domxref("DOMString")}} that reflects the [`action`](/ru/docs/Web/HTML/Element/form#action) HTML attribute, containing the URI of a program that processes the information submitted by the form.
 - {{domxref("HTMLFormElement.autocomplete")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("autocomplete", "form") }} HTML attribute, containing a string that indicates whether the controls in this form can have their values automatically populated by the browser.
+  - : Is a {{domxref("DOMString")}} that reflects the [`autocomplete`](/ru/docs/Web/HTML/Element/form#autocomplete) HTML attribute, containing a string that indicates whether the controls in this form can have their values automatically populated by the browser.
 - {{domxref("HTMLFormElement.elements")}} {{readonlyinline}}
   - : Returns a live {{domxref("HTMLFormControlsCollection")}} containing all the form controls belonging to this form element.
 - {{domxref("HTMLFormElement.encoding")}}
   - : Is a synonym for `enctype`.
 - {{domxref("HTMLFormElement.enctype")}}
-  - : Is a {{domxref("DOMString")}} reflects the {{ htmlattrxref("enctype", "form") }} HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set.
+  - : Is a {{domxref("DOMString")}} reflects the [`enctype`](/ru/docs/Web/HTML/Element/form#enctype) HTML attribute, indicating the type of content that is used to transmit the form to the server. Only specified values can be set.
 - {{domxref("HTMLFormElement.length")}} {{readonlyinline}}
   - : Returns a `long` that represents the number of controls in the form.
 - {{domxref("HTMLFormElement.method")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("method", "form") }} HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
+  - : Is a {{domxref("DOMString")}} that reflects the [`method`](/ru/docs/Web/HTML/Element/form#method) HTML attribute, indicating the HTTP method used to submit the form. Only specified values can be set.
 - {{domxref("HTMLFormElement.name")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("name", "form") }} HTML attribute, containing the name of the form.
+  - : Is a {{domxref("DOMString")}} that reflects the [`name`](/ru/docs/Web/HTML/Element/form#name) HTML attribute, containing the name of the form.
 - {{domxref("HTMLFormElement.noValidate")}}
-  - : Is a {{jsxref("Boolean")}} that reflects the {{ htmlattrxref("novalidate", "form") }} HTML attribute, indicating that the form should not be validated.
+  - : Is a {{jsxref("Boolean")}} that reflects the [`novalidate`](/ru/docs/Web/HTML/Element/form#novalidate) HTML attribute, indicating that the form should not be validated.
 - {{domxref("HTMLFormElement.target")}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{ htmlattrxref("target", "form") }} HTML attribute, indicating where to display the results received from submitting the form.
+  - : Is a {{domxref("DOMString")}} that reflects the [`target`](/ru/docs/Web/HTML/Element/form#target) HTML attribute, indicating where to display the results received from submitting the form.
 
 ## Methods
 

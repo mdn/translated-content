@@ -69,7 +69,7 @@ Edge の `week` コントロールはもう少し凝っており、年と週を�
 
 ## 値
 
-文字列で、入力欄に入力された年と週を表します。この入力型で使われる日時値の形式は、 [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)の[HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats#week_strings)で説明しています。
+文字列で、入力欄に入力された年と週を表します。この入力型で使われる日時値の形式は、 [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)の[週文字列](/ja/docs/Web/HTML/Date_and_time_formats#週文字列)で説明しています。
 
 次のように [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に値を入れることで、既定値を設定することができます。
 
