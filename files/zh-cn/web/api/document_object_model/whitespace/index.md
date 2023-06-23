@@ -135,7 +135,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 这就是为什么人们在访问网页时，会看到“Hello World!”这句话很好地写在页面的顶部，而不是一个奇怪的缩进的“Hello”，但在下面一行有一个更奇怪的缩进的“World!”。
 
-> **备注：** 从版本 52 开始，[Firefox 开发者工具]支持高亮文本节点，使得观察包含节点中包含的空白字符变得更加容易。纯的空白符节点会有一个“whitespace”标记。
+> **备注：** 从版本 52 开始，[Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)支持高亮文本节点，使得观察包含节点中包含的空白字符变得更加容易。纯的空白符节点会有一个“whitespace”标记。
 
 ### 在块格式化上下文的空白符
 
@@ -167,7 +167,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 它会像这样渲染：
 
-{{EmbedLiveSample('示例')}}
+{{EmbedLiveSample('示例_2')}}
 
 #### 解释
 
@@ -265,9 +265,9 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 这个示例将渲染为这样：
 
-{{EmbedLiveSample('Example_3')}}
+{{EmbedLiveSample('示例_3')}}
 
-根据使用情况，你可能不希望块之间包含空隙（是头像列表，还是水平导航按钮？）。你可能希望元素的两边彼此平齐，并且能够自己控制任何间距。
+根据使用情况（是头像列表，还是水平导航按钮？），你可能不希望块之间包含空隙。你可能希望元素的两边彼此平齐，并且能够自己控制任何间距。
 
 Firefox 开发者工具 HTML 检查器将突出显示文本节点，并准确显示这些元素所占用的面积。如果你想知道是什么原因造成的问题，并可能认为你在那里有一些额外的内边距或其他东西，那就很有用了！
 
@@ -277,7 +277,7 @@ Firefox 开发者工具 HTML 检查器将突出显示文本节点，并准确显
 
 有一些方法来解决这个问题：
 
-使用 [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox) 来创建项目的水平列表，而不是尝试 `inline-block` 解决方案。这可以为你处理一切，而且绝对是首选的解决方案：
+使用[弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)来创建项目的水平列表，而不是尝试 `inline-block` 解决方案。这可以为你处理一切，而且绝对是首选的解决方案：
 
 ```css
 ul {
@@ -288,7 +288,7 @@ ul {
 }
 ```
 
-如果你确实需要依赖于 `inline-block`，你可以将列表的 [`font-size`](/zh-CN/docs/Web/CSS/font-size) 设置为 0。这只有在你的区块不是用 em 确定大小（em 基于 `font-size'，所以区块大小最终也会是 0）的情况下才有效。rem 在这里是更好的选择：
+如果你确实需要依赖于 `inline-block`，你可以将列表的 [`font-size`](/zh-CN/docs/Web/CSS/font-size) 设置为 0。这只有在你的区块不是用 em 确定大小（em 基于 `font-size`，所以区块大小最终也会是 0）的情况下才有效。rem 在这里是更好的选择：
 
 ```css
 ul {
@@ -327,7 +327,7 @@ li {
 
 再比如，如果你有一个特定的元素子集，你想根据它们是否为空（没有子节点）来做一些事情，你可以使用类似 [`Node.hasChildNodes()`](/zh-CN/docs/Web/API/Node/hasChildNodes) 的东西来检查每个元素是否为空，但同样，如果任何目标元素包含文本节点，你可能会得到错误的结果。
 
-## 空白符帮助函数
+## 空白符辅助函数
 
 以下的 JavaScript 代码定义了许多函数，能够让你在处理 DOM 中的空白符时轻松点：
 
