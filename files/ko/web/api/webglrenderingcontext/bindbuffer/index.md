@@ -6,8 +6,7 @@ slug: Web/API/WebGLRenderingContext/bindBuffer
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API)의 **`WebGLRenderingContext.bindBuffer()`** 메서드는 주어진 
-{{domxref("WebGLBuffer")}} target에 바인딩합니다.
+[WebGL API](/en-US/docs/Web/API/WebGL_API)의 **`WebGLRenderingContext.bindBuffer()`** 메서드는 주어진 {{domxref("WebGLBuffer")}} target에 바인딩합니다.
 
 ## 구문
 
