@@ -218,8 +218,6 @@ setTimeout(() => {
 // { status: '已拒绝', reason: 300 }
 ```
 
-> **Note:** The `promiseState` function still runs asynchronously, because there is no way to synchronously get a promise's value (i.e. without `then()` or `await`), even when it is already settled. However, `promiseState()` always fulfills within one tick and never actually waits for any promise's settlement.
-
 > **备注：** `promiseState` 函数仍然是异步执行的，因为没有办法同步地获取 Promise 的值（即没有 `then` 或者 `await`），即使它已经敲定。但是，`promiseState()` 总是在一次事件循环内就会完成，并且实际上从不等待任何 Promise 的敲定。
 
 ### 与 Promise.any() 的比较
