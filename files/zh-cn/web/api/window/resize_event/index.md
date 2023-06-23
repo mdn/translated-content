@@ -80,7 +80,7 @@ window.onresize = reportWindowSize;
 >
 > [在示例本身窗口查看示例](https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/API/Window/resize_event/_sample_.window_size_logger.html)更容易观察到效果。
 
-### addEventListener 的等价形式
+### addEventListener 等价形式
 
 你也可以使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 方法设定事件处理器：
 
