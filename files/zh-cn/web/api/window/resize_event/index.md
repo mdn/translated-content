@@ -17,7 +17,7 @@ slug: Web/API/Window/resize_event
 
 ## 语法
 
-在像 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或者设置一个事件处理器属性。
+在像 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或者设置事件处理器属性。
 
 ```js
 addEventListener("resize", (event) => {});
