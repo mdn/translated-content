@@ -1,6 +1,7 @@
 ---
 title: update
-slug: Web/CSS/@media/update-frequency
+slug: Web/CSS/@media/update
+original_slug: Web/CSS/@media/update-frequency
 ---
 
 {{CSSRef}}
