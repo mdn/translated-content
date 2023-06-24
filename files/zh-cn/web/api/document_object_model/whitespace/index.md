@@ -23,7 +23,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 这段源代码在 `DOCTYPE` 后面有几个换行符，在 `<h1>` 元素前后和里面有很多空格字符，但浏览器似乎根本不在乎，只是显示“Hello World!”，好像这些字符根本不存在：
 
-{{EmbedLiveSample('HTML 会大幅度忽略空白符吗')}}
+{{EmbedLiveSample('HTML 会大幅度忽略空白符吗？')}}
 
 这是为了使空白字符不影响你的页面布局。在元素周围和内部创造空间是 CSS 的工作。
 
