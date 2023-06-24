@@ -49,7 +49,7 @@ Try updating the live code below to recreate the finished example:
 在本例中，尝试在不添加 HTML 的情况下进行以下更改。
 
 - 链接文本的样式：使链接为橘色，被访问后变为绿色，当被 hover 时，移除链接文本的下划线。
-- 让 `container` 类里的第一个元素的字体大小为:150%，并且让这个元素的第一行是红色的。
+- 让容器里的第一个元素的字体大小为:150%，并且让这个元素的第一行是红色的。
 - 让表格中每隔一行条带化，分别给它们一个颜色为#333 的背景和一个白色前景。
 
 ![Text with the CSS applied for the solution to task 3.](selectors3.jpg)
