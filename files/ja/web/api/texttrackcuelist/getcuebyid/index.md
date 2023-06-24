@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("WebVTT")}}
 
-**`getCueById()`** は {{domxref("TextTrackCueList")}} インターフェイスのメソッドで、`TextTrackCueList` オブジェクトが表すリストの中で、識別子が `id` の値と一致する最初の {{domxref("VTTCue")}} を返す。
+**`getCueById()`** は {{domxref("TextTrackCueList")}} インターフェイスのメソッドで、`TextTrackCueList` オブジェクトが表すリストの中で、識別子が `id` の値と一致する最初の {{domxref("VTTCue")}} を返します。
 
 ## 構文
 
