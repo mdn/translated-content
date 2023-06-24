@@ -46,7 +46,7 @@ import "module-name";
 
 `import` 宣言はモジュールのトップレベル（要するにブロックや関数などの中以外）にのみ書くことができます。パーサーが `import` 宣言をモジュール以外の文脈（例えば `type="module"` のない `<script>` タグ、 `eval`、 `new Function` など、「スクリプト」や「関数の本体」をパース時の目標として持つもの） で検出すると、`SyntaxError` を発生させます。モジュール以外の文脈でモジュールをロードするには、[ダイナミックインポート](/ja/docs/Web/JavaScript/Reference/Operators/import)という構文を代わりに使用してください。
 
-`import` 宣言は構文的に硬直したものとなっています。例えば、文字列リテラルしか指定子に使えなかったり、トップレベルでしか使用できなかったり、すべてのバインディングが識別子でなければならない、といった制限があります。この制限により、モジュールは評価する前に静的に解析してリンクさせることができます。これはモジュールを非同期にロードする上で鍵となる性質で、[トップレベル await](/ja/docs/Web/JavaScript/Guide/Modules#top_level_await) といった機能を実現させてくれています。
+`import` 宣言は構文的に硬直したものとなっています。例えば、文字列リテラルしか指定子に使えなかったり、トップレベルでしか使用できなかったり、すべてのバインディングが識別子でなければならない、といった制限があります。この制限により、モジュールは評価する前に静的に解析してリンクさせることができます。これはモジュールを非同期にロードする上で鍵となる性質で、[トップレベル await](/ja/docs/Web/JavaScript/Guide/Modules#最上位の_await) といった機能を実現させてくれています。
 
 `import` 宣言には4つの形式があります:
 
@@ -91,7 +91,7 @@ import { "a-b" as a } from "/modules/my-module.js";
 
 > **メモ:** `import { x, y } from "mod"` は、 `import defaultExport from "mod"` して `defaultExport` から `x` と `y` を分割代入することと等価ではありません。名前付きのインポートとデフォルトのインポートは JavaScript のモジュールにおける別種の構文です。
 
-### デフォルトのインポート
+### デフォルトの import
 
 デフォルトエクスポートでエクスポートされた値は、対応するデフォルトのインポート構文を用いてインポートする必要があります。最も単純なバージョンでは、デフォルトの値を直接インポートします:
 
@@ -120,7 +120,7 @@ import myDefault, { foo, bar } from "/modules/my-module.js";
 import { default as myDefault } from "/modules/my-module.js";
 ```
 
-### 名前空間のインポート
+### 名前空間の import
 
 次のコードは、 `/modules/my-module.js` という場所にあるモジュールがエクスポートするすべての値を含んだ `myModule` を現在のスコープに追加します。
 
@@ -226,5 +226,5 @@ setTimeout(() => {
 - Limin Zhu, Brian Terlson and Microsoft Edge Team: [Previewing ES6 Modules and more from ES2015, ES2016 and beyond](https://blogs.windows.com/msedgedev/2016/05/17/es6-modules-and-beyond/)
 - Hacks blog post by Jason Orendorff: [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
 - Hacks blog post by Lin Clark: [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/)
-- Axel Rauschmayer's book: ["Exploring JS: Modules"](http://exploringjs.com/es6/ch_modules.html)
+- Axel Rauschmayer's book: ["Exploring JS: Modules"](https://exploringjs.com/es6/ch_modules.html)
 - The Modern JavaScript Tutorial(javascript.info): [Export and Import](https://javascript.info/import-export)
