@@ -54,7 +54,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 其 DOM 树类似于这样：
 
-![代表单个 HTML 文档的 DOM 树](whitespace_tree.png)
+![代表单个 HTML 文档的 DOM 树](dom-string.png)
 
 在 DOM 中保留空白字符在很多方面都是有用的，但在某些地方，这使得某些布局更难实现，并给那些想在 DOM 中迭代节点的开发者带来了问题。我们将在后面讨论这些问题，以及一些解决方案。
 
