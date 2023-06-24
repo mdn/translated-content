@@ -3519,6 +3519,7 @@
 /ja/docs/Web/CSS/:host()	/ja/docs/Web/CSS/:host_function
 /ja/docs/Web/CSS/:matches	/ja/docs/Web/CSS/:is
 /ja/docs/Web/CSS/@font-face/font-variant	/ja/docs/Web/CSS/@font-face
+/ja/docs/Web/CSS/@media/update-frequency	/ja/docs/Web/CSS/@media/update
 /ja/docs/Web/CSS/@scroll-timeline	/ja/docs/Web/CSS/scroll-timeline
 /ja/docs/Web/CSS/@viewport	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/@viewport/height	/ja/docs/Web/CSS
