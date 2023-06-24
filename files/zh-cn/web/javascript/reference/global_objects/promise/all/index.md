@@ -38,7 +38,7 @@ Promise.all(iterable)
 
 ### 使用 Promise.all()
 
-`Promise.all` 等待所有兑现的结果（或第一个失败）。
+`Promise.all` 等待所有兑现（或第一个拒绝）的结果。
 
 ```js
 const p1 = Promise.resolve(3);
