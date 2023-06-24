@@ -1,35 +1,34 @@
 ---
-title: Introducing a complete toolchain
+title: 完全なツールチェーンの導入
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain
+l10n:
+  sourceCommit: c2274293475b0a5b4febf85a49c1f91bf43ebac7
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Package_management","Learn/Tools_and_testing/Understanding_client-side_tools/Deployment", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-In the final couple of articles in the series, we will solidify your tooling knowledge by walking you through the process of building up a sample case study toolchain. We'll go all the way from setting up a sensible development environment and putting transformation tools in place to actually deploying your app on Netlify. In this article, we'll introduce the case study, set up our development environment, and set up our code transformation tools.
+シリーズの最後の 2 つの記事では、ケーススタディのツールチェインサンプルを構築するプロセスを通して、ツールに関する知識を理解していきます。理にかなった開発環境のセットアップと変換ツールの配置から、実際にNetlifyにアプリをデプロイするまでの全過程を説明します。この記事では、ケーススタディの紹介、開発環境のセットアップ、コード変換ツールのセットアップを行います。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">前提条件：</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages.
+        主要な <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、と <a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">目的：</th>
       <td>
-        To solidify what we've learnt so far by working through a complete
-        toolchain case study.
+        ツールチェーンのケーススタディの演習を完了して、これまでに学んだことを確実に理解します。
       </td>
     </tr>
   </tbody>
 </table>
 
-There really are unlimited combinations of tools and ways to use them, what you see in this article and the next is only _one_ way that the featured tools can be used for a project.
+ツールとその使用方法の組み合わせは実際に無限にあります。この記事と次の記事で説明したことは、プロジェクトで注目のツールを使用できる _1つの_ 方法にすぎません。
 
-> **Note:** It's also worth repeating that not all of these tools need to be run on the command line. Many of today's code editors (such as VS Code and Atom) have integration support for a _lot_ of tools via plugins.
+> **メモ:** これらのツールのすべてをコマンドラインで実行する必要があるわけではないことも繰り返し述べておきます。 現在のコードエディター (VS Code や Atom など) の _多く_ は、プラグインを介して多数のツールの統合をサポートしています。
 
 ## Introducing our case study
 
