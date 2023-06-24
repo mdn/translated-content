@@ -1,5 +1,5 @@
 ---
-title: 'Test your skills: Selectors'
+title: 测试你的技能：选择器
 slug: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
 ---
 
@@ -7,9 +7,9 @@ slug: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
 
 这个任务的目的是帮助你理解 CSS 里的选择器。
 
-> **备注：** 你可以 在下面那些交换编辑器中尝试解决问题，然而 把代码下载然后使用一个在线工具比如 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/) 去解决这些问题可能对你更有作用。
+> **备注：** 你可以在下面的交互式编辑器中尝试解决问题，然而把代码下载然后使用一个在线工具比如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/) 去解决这些问题可能对你更有作用。
 >
-> 如果你卡住了，可以向我们寻求帮助 — 请参阅本页底部的[Assessment or further help](#assessment_or_further_help) 部分。
+> 如果你卡住了，可以向我们寻求帮助——请参阅本页底部的[打分评估或进一步帮助](#打分评估或进一步帮助)部分。
 
 ## 选择器一
 
@@ -21,11 +21,13 @@ slug: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
 
 ![Text with the CSS applied for the solution to task 1.](selectors1.jpg)
 
-Try updating the live code below to recreate the finished example:
+尝试更新下面的实时代码，以重现完整的示例：
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/selectors/type.html", '100%', 700)}}
 
-> **备注：** 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/type-download.html)，然后在本地或在线编辑器中练习。
+> **标注：**
+>
+> 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/type-download.html)，然后在本地或在线编辑器中练习。
 
 ## 选择器二
 
@@ -38,11 +40,13 @@ Try updating the live code below to recreate the finished example:
 
 ![Text with the CSS applied for the solution to task 2.](selectors2.jpg)
 
-Try updating the live code below to recreate the finished example:
+尝试更新下面的实时代码，以重现完整的示例：
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/selectors/class-id.html", '100%', 800)}}
 
-> **备注：** 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/class-id-download.html)，然后在本地或在线编辑器中练习。
+> **标注：**
+>
+> 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/class-id-download.html)，然后在本地或在线编辑器中练习。
 
 ## 选择器三
 
@@ -54,11 +58,13 @@ Try updating the live code below to recreate the finished example:
 
 ![Text with the CSS applied for the solution to task 3.](selectors3.jpg)
 
-Try updating the live code below to recreate the finished example:
+尝试更新下面的实时代码，以重现完整的示例：
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/selectors/pseudo.html", '100%', 800)}}
 
-> **备注：** 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/pseudo-download.html)，然后在本地或在线编辑器中练习。
+> **标注：**
+>
+> 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/pseudo-download.html)，然后在本地或在线编辑器中练习。
 
 ## 选择器四
 
@@ -69,11 +75,13 @@ Try updating the live code below to recreate the finished example:
 
 ![Text with the CSS applied for the solution to task 4.](selectors4.jpg)
 
-Try updating the live code below to recreate the finished example:
+尝试更新下面的实时代码，以重现完整的示例：
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/selectors/combinators.html", '100%', 800)}}
 
-> **备注：** 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/combinators-download.html)，然后在本地或在线编辑器中练习。
+> **标注：**
+>
+> 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/combinators-download.html)，然后在本地或在线编辑器中练习。
 
 ## 选择器五
 
@@ -85,11 +93,13 @@ Try updating the live code below to recreate the finished example:
 
 ![Four links with different color borders.](selectors-attribute.png)
 
-Try updating the live code below to recreate the finished example:
+尝试更新下面的实时代码，以重现完整的示例：
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/selectors/attribute-links.html", '100%', 800)}}
 
-> **备注：** 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/master/learn/tasks/selectors/attribute-links-download.html)，然后在本地或在线编辑器中练习。
+> **标注：**
+>
+> 如需提交测评或进一步练习，[下载本任务的初始文件](https://github.com/mdn/css-examples/blob/main/learn/tasks/selectors/attribute-links-download.html)，然后在本地或在线编辑器中练习。
 
 ## 打分评估或进一步帮助
 
