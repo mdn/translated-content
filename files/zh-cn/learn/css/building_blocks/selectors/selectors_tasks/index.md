@@ -79,9 +79,9 @@ Try updating the live code below to recreate the finished example:
 
 在最后一个任务中，使用属性选择器添加 CSS 以执行以下操作：
 
-- 选择带有 `title` 属性的 `<a>` 元素，将其边框颜色设置为粉色 (`border-color: pink`)。
-- 选择带有 `href` 属性且属性值中包含 `contact` 的 `<a>` 元素，将其边框颜色设置为橙色 (`border-color: orange`)。
-- 选择 `href` 属性值以 `https` 开头的 `<a>` 元素，将其边框颜色设置为绿色 (`border-color: green`)。
+- 选择带有 `title` 属性的 `<a>` 元素，将其边框颜色设置为粉色（`border-color: pink`）。
+- 选择带有 `href` 属性且属性值中包含 `contact` 的 `<a>` 元素，将其边框颜色设置为橙色（`border-color: orange`）。
+- 选择 `href` 属性值以 `https` 开头的 `<a>` 元素，将其边框颜色设置为绿色（`border-color: green`）。
 
 ![Four links with different color borders.](selectors-attribute.png)
 
