@@ -11,7 +11,7 @@ The **`Number.isNaN()`** method determines whether the passed value is {{jsxref(
 
 ## Syntax
 
-```plain
+```js-nolint
 Number.isNaN(value)
 ```
 
@@ -33,24 +33,24 @@ In comparison to the global {{jsxref("isNaN", "isNaN()")}} function, `Number.isN
 ## Examples
 
 ```js
-Number.isNaN(NaN);        // true
+Number.isNaN(NaN); // true
 Number.isNaN(Number.NaN); // true
-Number.isNaN(0 / 0);      // true
+Number.isNaN(0 / 0); // true
 
 // e.g. these would have been true with global isNaN()
-Number.isNaN('NaN');      // false
-Number.isNaN(undefined);  // false
-Number.isNaN({});         // false
-Number.isNaN('blabla');   // false
+Number.isNaN("NaN"); // false
+Number.isNaN(undefined); // false
+Number.isNaN({}); // false
+Number.isNaN("blabla"); // false
 
 // These all return false
 Number.isNaN(true);
 Number.isNaN(null);
 Number.isNaN(37);
-Number.isNaN('37');
-Number.isNaN('37.37');
-Number.isNaN('');
-Number.isNaN(' ');
+Number.isNaN("37");
+Number.isNaN("37.37");
+Number.isNaN("");
+Number.isNaN(" ");
 ```
 
 ## Polyfill
@@ -58,9 +58,11 @@ Number.isNaN(' ');
 The following works because NaN is the only value in javascript which is not equal to itself.
 
 ```js
-Number.isNaN = Number.isNaN || function(value) {
+Number.isNaN =
+  Number.isNaN ||
+  function (value) {
     return value !== value;
-}
+  };
 ```
 
 ## Specifications
