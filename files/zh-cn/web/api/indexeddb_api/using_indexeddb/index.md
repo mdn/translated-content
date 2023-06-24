@@ -5,51 +5,27 @@ slug: Web/API/IndexedDB_API/Using_IndexedDB
 
 {{DefaultAPISidebar("IndexedDB")}}
 
-IndexedDB 是一种可以让你在用户的浏览器内持久化存储数据的方法。IndexedDB 为生成 Web Application 提供了丰富的查询能力，使我们的应用在在线和离线时都可以正常工作。
+IndexedDB 是一种可以让你在用户的浏览器内持久化存储数据的方法。IndexedDB 为创建 Web 应用提供了丰富的查询能力，而无需考虑网络的可用性，使你的应用在在线和离线时都可以正常工作。
 
 ## 关于本文档
 
-本篇教程将教会你如何使用 IndexedDB 的异步 API。如果你对 IndexedDB 还不熟悉，你应该首先阅读[有关 IndexedDB 的基本概念](/zh-CN/IndexedDB/Basic_Concepts_Behind_IndexedDB)。
+本篇教程将指导你如何使用 IndexedDB 的异步 API。如果你对 IndexedDB 还不熟悉，你应该首先阅读文章：[IndexedDB 的关键特性和基本术语](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology)。
 
-有关 IndexedDB API 的参考手册，请参见 [IndexedDB](/zh-CN/IndexedDB) 这篇文章及其子页面，包括 IndexedDB 使用的对象类型，以及异步 API（同步 API 已从规范中删除）。
+有关 IndexedDB API 的参考手册，请参见 [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 这篇文章及其子页面。文章内容包括 IndexedDB 使用的对象类型，以及异步 API（同步 API 已从规范中删除）的方法。
 
 ## 基本模式
 
 IndexedDB 鼓励使用的基本模式如下所示：
 
 1. 打开数据库。
-2. 在数据库中创建一个对象仓库（object store）。
-3. 启动一个事务，并发送一个请求来执行一些数据库操作，像增加或提取数据等。
+2. 在数据库中创建一个对象存储（object store）。
+3. 启动事务，并发送一个请求来执行一些数据库操作，如增加或提取数据等。
 4. 通过监听正确类型的 DOM 事件以等待操作完成。
-5. 在操作结果上进行一些操作（可以在 request 对象中找到）
+5. 对结果进行一些操作（可以在 request 对象中找到）
 
 有了这些提纲，我们可以进行更具体的探讨。
 
-## 生成和构建一个对象存储空间
-
-由于 IndexedDB 本身的规范还在持续演进中，当前的 IndexedDB 的实现还是使用浏览器前缀。在规范更加稳定之前，浏览器厂商对于标准 IndexedDB API 可能都会有不同的实现。但是一旦大家对规范达成共识的话，厂商就会不带前缀标记地进行实现。实际上一些实现已经移除了浏览器前缀：IE 10，Firefox 16 和 Chrome 24。当使用前缀的时候，基于 Gecko 内核的浏览器使用 `moz` 前缀，基于 WebKit 内核的浏览器会使用 `webkit` 前缀。
-
-### 使用实验版本的 IndexedDB
-
-如果你希望在仍旧使用前缀的浏览器中测试你的代码，可以使用下列代码：
-
-```js
-// In the following line, you should include the prefixes of implementations you want to test.
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
-// DON'T use "var indexedDB = ..." if you're not in a function.
-// Moreover, you may need references to some window.IDB* objects:
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange
-// (Mozilla has never prefixed these objects, so we don't need window.mozIDB*)
-```
-
-要注意的是使用前缀的实现可能会有问题，或者是实现的并不完整，也可能遵循的还是旧版的规范。因此不建议在生产环境中使用。我们更倾向于明确的不支持某一浏览器，而不是声称支持但是实际运行中却出问题：
-
-```js
-if (!window.indexedDB) {
-    window.alert("Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.")
-}
-```
+## 生成和构建一个对象存储
 
 ### 打开数据库
 
@@ -57,14 +33,14 @@ if (!window.indexedDB) {
 
 ```js
 // 打开我们的数据库
-var request = window.indexedDB.open("MyTestDatabase");
+const request = window.indexedDB.open("MyTestDatabase", 3);
 ```
 
-看到了吗？打开数据库就像任何其他操作一样 — 你必须进行 "request"。
+看到了吗？打开数据库就像任何其他操作一样——你必须进行“请求”。
 
-open 请求不会立即打开数据库或者开始一个事务。对 `open()` 函数的调用会返回一个我们可以作为事件来处理的包含 result（成功的话）或者错误值的 [`IDBOpenDBRequest`](/zh-CN/docs/IndexedDB/IDBOpenDBRequest) 对象。在 IndexedDB 中的大部分异步方法做的都是同样的事情 - 返回一个包含 result 或错误的 [`IDBRequest`](/zh-CN/docs/IndexedDB/IDBRequest) 对象。open 函数的结果是一个 [`IDBDatabase`](/zh-CN/docs/IndexedDB/IDBDatabase) 对象的实例。
+open 请求不会立即打开数据库或者开始一个事务。对 `open()` 函数的调用会返回一个我们可以作为事件来处理的包含结果（result，如果成功的话）或者错误值的 [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) 对象。在 IndexedDB 中的大部分异步方法做的都是同样的事情——返回一个包含结果或错误的 [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) 对象。open 函数的结果是一个 `IDBDatabase` 对象的实例。
 
-该 open 方法接受第二个参数，就是数据库的版本号。数据库的版本决定了数据库架构，即数据库的对象仓库（object store）和他的结构。如果数据库不存在，`open` 操作会创建该数据库，然后 `onupgradeneeded` 事件被触发，你需要在该事件的处理函数中创建数据库模式。如果数据库已经存在，但你指定了一个更高的数据库版本，会直接触发 `onupgradeneeded` 事件，允许你在处理函数中更新数据库模式。我们在后面的[更新数据库的版本号](#Updating_the_version_of_the_database)和 {{ domxref("IDBFactory.open") }} 中会提到更多有关这方面的内容。
+open 方法的二个参数是数据库的版本号。数据库的版本决定了数据库架构（schema），即数据库的对象存储（object store）以及存储结构。如果数据库不存在，`open` 操作会创建该数据库，然后触发 `onupgradeneeded` 事件，你需要在该事件的处理器中创建数据库模式（schema）。如果数据库已经存在，但你指定了一个更高的数据库版本，会直接触发 `onupgradeneeded` 事件，允许你在处理函数中更新数据库模式。我们在后面的[更新数据库的版本号](#Updating_the_version_of_the_database)和 {{ domxref("IDBFactory.open") }} 中会提到更多有关这方面的内容。
 
 > **警告：** 版本号是一个 unsigned long long 数字，这意味着它可以是一个特别大的数字，但不能使用浮点数，否则它将会被转变成离它最近的整数，这可能导致 `upgradeneeded` 事件不会被触发。例如，不要使用 2.4 作为版本号。
 >
