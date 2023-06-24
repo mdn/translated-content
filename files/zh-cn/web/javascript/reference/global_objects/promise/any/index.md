@@ -18,7 +18,7 @@ Promise.any(iterable)
 ### 参数
 
 - `iterable`
-  - : 一个 promise 的[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)（例如一个  {{jsxref("Array", "数组", "", 1)}}）。
+  - : 一个 promise 的[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)（例如一个{{jsxref("Array", "数组", "", 1)}}）。
 
 ### 返回值
 
