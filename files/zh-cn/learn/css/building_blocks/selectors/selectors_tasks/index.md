@@ -49,7 +49,7 @@ Try updating the live code below to recreate the finished example:
 在本例中，尝试在不添加 HTML 的情况下进行以下更改。
 
 - 链接文本的样式：使链接为橘色，被访问后变为绿色，当被 hover 时，移除链接文本的下划线。
-- 让容器里的第一个元素的字体大小为:150%，并且让这个元素的第一行是红色的。
+- 让 `container` 类里的第一个元素的字体大小为:150%，并且让这个元素的第一行是红色的。
 - 让表格中每隔一行条带化，分别给它们一个颜色为#333 的背景和一个白色前景。
 
 ![Text with the CSS applied for the solution to task 3.](selectors3.jpg)
@@ -79,9 +79,9 @@ Try updating the live code below to recreate the finished example:
 
 在最后一个任务中，使用属性选择器添加 CSS 以执行以下操作：
 
-- Target the `<a>` element with a `title` attribute and make the border pink (`border-color: pink`).
-- Target the `<a>` element with an `href` attribute that contains the word `contact` somewhere in its value and make the border orange (`border-color: orange`).
-- Target the `<a>` element with an `href` value starting with `https` and give it a green border (`border-color: green`).
+- 选择带有 `title` 属性的 `<a>` 元素，将其边框颜色设置为粉色 (`border-color: pink`)。
+- 选择带有 `href` 属性且属性值中包含 `contact` 的 `<a>` 元素，将其边框颜色设置为橙色 (`border-color: orange`)。
+- 选择 `href` 属性值以 `https` 开头的 `<a>` 元素，将其边框颜色设置为绿色 (`border-color: green`)。
 
 ![Four links with different color borders.](selectors-attribute.png)
 
