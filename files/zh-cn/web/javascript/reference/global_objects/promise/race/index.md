@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/race
 
 {{JSRef}}
 
-**`Promise.race()`** 静态方法接受一个 promise 可迭代对象作为输入，并返回一个 {{jsxref("Promise")}}。这个返回的 promise 会随着第一个敲定的 promise 的敲定而敲定。
+**`Promise.race()`** 静态方法接受一个 promise 可迭代对象作为输入，并返回一个 {{jsxref("Promise")}}。这个返回的 promise 会随着第一个 promise 的敲定而敲定。
 
 {{EmbedInteractiveExample("pages/js/promise-race.html", "taller")}}
 
@@ -21,8 +21,6 @@ Promise.race(iterable)
   - : 一个[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，例如一个 promise {{jsxref("Array", "数组", "", 1)}}。
 
 ### 返回值
-
-一个**待定的** {{jsxref("Promise")}} 只要给定的迭代中的一个 promise 解决或拒绝，就采用第一个 promise 的值作为它的值，从而**异步**地解析或拒绝（一旦堆栈为空）。
 
 一个 {{jsxref("Promise")}}，会以 `iterable` 中第一个敲定的 promise 的状态**异步敲定**。换句话说，如果第一个敲定的 promise 被兑现，那么返回的 promise 也会被兑现；如果第一个敲定的 promise 被拒绝，那么返回的 promise 也会被拒绝。如果传入的 `iterable` 为空，返回的 promise 就会一直保持待定状态。如果传入的 `iterable` 非空但其中没有任何一个 promise 是待定状态，返回的 promise 仍会异步敲定（而不是同步敲定）。
 
@@ -218,7 +216,7 @@ setTimeout(() => {
 // { status: '已拒绝', reason: 300 }
 ```
 
-> **备注：** `promiseState` 函数仍然是异步执行的，因为没有办法同步地获取 Promise 的值（即没有 `then` 或者 `await`），即使它已经敲定。但是，`promiseState()` 总是在一次事件循环内就会完成，并且实际上从不等待任何 Promise 的敲定。
+> **备注：** `promiseState` 函数仍然是异步执行的，因为没有办法同步地获取 Promise 的值（即不使用 `then()` 或 `await`），即使它已经敲定。但是，`promiseState()` 总是在一次事件循环内就会完成，并且实际上从不等待任何 Promise 的敲定。
 
 ### 与 Promise.any() 的比较
 
