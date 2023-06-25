@@ -5,11 +5,11 @@ slug: Web/API/Notification/vibrate
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{domxref("Notification")}} 接口的 `vibrate` 只读属性指定当通知触发时设备振动硬件发出的[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)。这是在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `vibrate` 选项中指定的。
+{{domxref("Notification")}} 接口的 `vibrate` 只读属性指定当通知触发时设备振动硬件发出的[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)，在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `vibrate` 选项中指定。
 
 ## 值
 
-一个[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)，在 [振动 API 规范](https://w3c.github.io/vibration/) 中所指定。
+一个[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)，在 [振动 API 规范](https://w3c.github.io/vibration/)中所指定。
 
 ## 示例
 
