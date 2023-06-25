@@ -27,7 +27,7 @@ Nouveautés:
 
 ### CSS
 
-- Support for laying out vertical scripts has been activated by default ({{bug(1138384)}}). That means that the following CSS properties are now available:
+- Support for laying out vertical scripts has been activated by default ([bug Firefox 1138384](https://bugzil.la/1138384)). That means that the following CSS properties are now available:
 
   - Choosing the direction of writing: {{cssxref("writing-mode")}}.
   - Controlling orientation of characters: {{cssxref("text-orientation")}}.
@@ -41,22 +41,22 @@ Nouveautés:
 
 ### HTML
 
-- {{HTMLElement("a")}} without an `href` attribute is no longer classified as interactive content. Clicking it inside {{HTMLElement("label")}} will activate labelled content ({{bug(1167816)}}).
-- SVG icons are now supported for site icons, that is favicons and shortcut icons ({{bug(366324)}}).
-- The {{htmlattrxref('crossorigin', 'link')}} attribute is now supported for [\<link rel='preconnect'>](/fr/docs/Web/HTML/Element/link) ({{bug(1174152)}}).
+- {{HTMLElement("a")}} without an `href` attribute is no longer classified as interactive content. Clicking it inside {{HTMLElement("label")}} will activate labelled content ([bug Firefox 1167816](https://bugzil.la/1167816)).
+- SVG icons are now supported for site icons, that is favicons and shortcut icons ([bug Firefox 366324](https://bugzil.la/366324)).
+- The [`crossorigin`](/fr/docs/Web/HTML/Element/link#crossorigin) attribute is now supported for [\<link rel='preconnect'>](/fr/docs/Web/HTML/Element/link) ([bug Firefox 1174152](https://bugzil.la/1174152)).
 
 ### JavaScript
 
-- {{jsxref("Date.prototype")}} is now an ordinary object, not a {{jsxref("Date")}} instance anymore ({{bug(861219)}}).
-- {{jsxref("Date.prototype.toString")}} is now a generic method ({{bug(861219)}}).
-- {{jsxref("Symbol.species")}} has been added ({{bug(1131043)}}).
-- {{jsxref("Map.@@species", "Map[@@species]")}} and {{jsxref("Set.@@species", "Set[@@species]")}} getters have been added ({{bug(1131043)}}).
-- Non-standard {{jsxref("Statements/let", "let expression", "#let_expressions", 1)}} support has been dropped ({{bug(1023609)}}).
-- {{jsxref("Functions/Default_parameters", "Destructured parameters with default value assignment", "#Destructured_parameter_with_default_value_assignment", 1)}} are now supported ({{bug(1018628)}}).
-- Per ES6, curly braces are required for [method definitions](/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions). Syntax without them will fail from now on ({{bug(1150855)}}).
-- [Method definitions](/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions) (except for generator methods) are not constructable anymore ({{bug(1059908)}} and {{bug(1166950)}}).
+- {{jsxref("Date.prototype")}} is now an ordinary object, not a {{jsxref("Date")}} instance anymore ([bug Firefox 861219](https://bugzil.la/861219)).
+- {{jsxref("Date.prototype.toString")}} is now a generic method ([bug Firefox 861219](https://bugzil.la/861219)).
+- {{jsxref("Symbol.species")}} has been added ([bug Firefox 1131043](https://bugzil.la/1131043)).
+- {{jsxref("Map.@@species", "Map[@@species]")}} and {{jsxref("Set.@@species", "Set[@@species]")}} getters have been added ([bug Firefox 1131043](https://bugzil.la/1131043)).
+- Non-standard {{jsxref("Statements/let", "let expression", "#let_expressions", 1)}} support has been dropped ([bug Firefox 1023609](https://bugzil.la/1023609)).
+- {{jsxref("Functions/Default_parameters", "Destructured parameters with default value assignment", "#Destructured_parameter_with_default_value_assignment", 1)}} are now supported ([bug Firefox 1018628](https://bugzil.la/1018628)).
+- Per ES6, curly braces are required for [method definitions](/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions). Syntax without them will fail from now on ([bug Firefox 1150855](https://bugzil.la/1150855)).
+- [Method definitions](/fr/docs/Web/JavaScript/Reference/Functions/Method_definitions) (except for generator methods) are not constructable anymore ([bug Firefox 1059908](https://bugzil.la/1059908) and [bug Firefox 1166950](https://bugzil.la/1166950)).
 - As part of ES6 specification compliance, parenthesized [destructuring](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) patterns, like `([a, b]) = [1, 2]` or `({a, b}) = { a: 1, b: 2 }`, are now considered invalid and will throw a {{jsxref("SyntaxError")}}. See [Jeff Walden's blog post](http://whereswalden.com/2015/06/20/new-changes-to-make-spidermonkeys-and-firefoxs-parsing-of-destructuring-patterns-more-spec-compliant/) for more details.
-- The [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target) syntax has been added ({{bug(1141865)}}).
+- The [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target) syntax has been added ([bug Firefox 1141865](https://bugzil.la/1141865)).
 
 ### Interfaces/APIs/DOM
 
@@ -64,65 +64,65 @@ Nouveautés:
 
 - Cut, copy and paste commands handling has been revamped and now allow programmatic copying and cutting from JS for Web content:
 
-  - With the `'paste'` command as argument, {{domxref("Document.queryCommandSupported()")}} now returns `false` if has insufficient privileges to actually perform the action ({{bug(1161721)}}).
-  - With the `'cut'` or `'copy'` command as argument, {{domxref("Document.queryCommandSupported()")}} now returns `true` if called within the context of a user-initiated or privileged code ({{bug(1162952)}}).
-  - With the `'cut'` or `'copy'` command as argument, {{domxref("Document.execCommand()")}} now works, but only within the context of user-initiated or privileged code ({{bug(1012662)}}).
+  - With the `'paste'` command as argument, {{domxref("Document.queryCommandSupported()")}} now returns `false` if has insufficient privileges to actually perform the action ([bug Firefox 1161721](https://bugzil.la/1161721)).
+  - With the `'cut'` or `'copy'` command as argument, {{domxref("Document.queryCommandSupported()")}} now returns `true` if called within the context of a user-initiated or privileged code ([bug Firefox 1162952](https://bugzil.la/1162952)).
+  - With the `'cut'` or `'copy'` command as argument, {{domxref("Document.execCommand()")}} now works, but only within the context of user-initiated or privileged code ([bug Firefox 1012662](https://bugzil.la/1012662)).
 
 #### Events
 
-- The non-standard {{domxref("CloseEvent.initCloseEvent()")}} method and the ability to create a {{domxref("CloseEvent")}} using the {{domxref("Event.createEvent", "Event.createEvent('CloseEvent')")}} method has been removed; use the standard constructor, {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} instead ({{bug(1161950)}}).
-- On Desktop, {{domxref("PointerEvent")}} is now activated by default in Nightly; it is not activated in Developer Edition, Beta or Release and won't be for at least some versions ({{bug(1166347)}}).
-- The unprefixed version of {{domxref("MouseEvent.movementX")}} and {{domxref("MouseEvent.movementY")}}}} have been added; the prefixed versions are deprecated and will be removed at some point in the future ({{bug(1164981)}}).
+- The non-standard {{domxref("CloseEvent.initCloseEvent()")}} method and the ability to create a {{domxref("CloseEvent")}} using the {{domxref("Event.createEvent", "Event.createEvent('CloseEvent')")}} method has been removed; use the standard constructor, {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} instead ([bug Firefox 1161950](https://bugzil.la/1161950)).
+- On Desktop, {{domxref("PointerEvent")}} is now activated by default in Nightly; it is not activated in Developer Edition, Beta or Release and won't be for at least some versions ([bug Firefox 1166347](https://bugzil.la/1166347)).
+- The unprefixed version of {{domxref("MouseEvent.movementX")}} and {{domxref("MouseEvent.movementY")}}}} have been added; the prefixed versions are deprecated and will be removed at some point in the future ([bug Firefox 1164981](https://bugzil.la/1164981)).
 
 #### Web Crypto
 
-- {{domxref("SubtleCrypto.importKey()")}} and {{domxref("SubtleCrypto.exportKey()")}} now supports `ECDH` keys ({{bug(1050175)}}).
+- {{domxref("SubtleCrypto.importKey()")}} and {{domxref("SubtleCrypto.exportKey()")}} now supports `ECDH` keys ([bug Firefox 1050175](https://bugzil.la/1050175)).
 
 #### Canvas API
 
-- {{domxref("HTMLCanvasElement.captureStream()")}} and {{domxref("CanvasCaptureMediaStream")}} have been added and allow to stream the display of a {{HTMLElement("canvas")}} in real-time ({{bug(1032848)}}).
-- {{domxref("MediaStream.id")}} now returns the unique id of a stream ({{bug(1089798)}}).
-- The initial value of {{domxref("CanvasRenderingContext2D.filter")}} is now correctly set to `none` ({{bug(1163124)}}).
+- {{domxref("HTMLCanvasElement.captureStream()")}} and {{domxref("CanvasCaptureMediaStream")}} have been added and allow to stream the display of a {{HTMLElement("canvas")}} in real-time ([bug Firefox 1032848](https://bugzil.la/1032848)).
+- {{domxref("MediaStream.id")}} now returns the unique id of a stream ([bug Firefox 1089798](https://bugzil.la/1089798)).
+- The initial value of {{domxref("CanvasRenderingContext2D.filter")}} is now correctly set to `none` ([bug Firefox 1163124](https://bugzil.la/1163124)).
 
 #### Service Workers
 
 - Improvement to our experimental [Service Worker](/fr/docs/Web/API/ServiceWorker_API) implementation:
 
-  - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} has been implemented ({{bug(1131352)}}).
-  - {{domxref("Clients.claim()")}} has been added ({{bug(1130684)}}).
-  - The other functional events of Service Workers have been made to inherit from {{domxref("ExtendableEvent")}}, giving them access to the {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} method ({{bug("1160527")}}).
+  - {{domxref("ServiceWorkerGlobalScope.skipWaiting()")}} has been implemented ([bug Firefox 1131352](https://bugzil.la/1131352)).
+  - {{domxref("Clients.claim()")}} has been added ([bug Firefox 1130684](https://bugzil.la/1130684)).
+  - The other functional events of Service Workers have been made to inherit from {{domxref("ExtendableEvent")}}, giving them access to the {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} method ([bug Firefox 1160527](https://bugzil.la/1160527)).
 
-- The {{domxref("CacheStorage")}} and {{domxref("Cache")}} interfaces are now supported ({{bug("1110144")}}).
+- The {{domxref("CacheStorage")}} and {{domxref("Cache")}} interfaces are now supported ([bug Firefox 1110144](https://bugzil.la/1110144)).
 
 #### Miscellaneous
 
-- On OS X and Windows, {{domxref("NavigatorOnLine.onLine", "Navigator.onLine")}} now changes regarding network connectivity (it always returned `true`, , unless "Work offline" mode was selected) before ({{bug(654579)}}).
-- {{domxref("MessagePort")}} and {{domxref("MessageChannel")}} now available in [Web workers](/fr/docs/Web/API/Web_Workers_API), and are enabled by default in all contexts ({{bug(952139)}}) and ({{bug(911972)}}).
-- The User Timing API is now available in [Web workers](/fr/docs/Web/API/Web_Workers_API) ({{bug(1155761)}}).
-- The [Notifications API](/fr/docs/Web/API/Notifications_API) is now available in [Web workers](/fr/docs/Web/API/Web_Workers_API) ({{bug(916893)}}).
-- {{domxref("DOMRequest")}} and {{domxref("DOMCursor")}} are now available in [Web workers](/fr/docs/Web/API/Web_Workers_API) ({{bug(1167650)}}).
-- The [CSS Font Loading API](/fr/docs/Web/API/CSSFontLoading_API) is now enabled by default ({{bug(1149381)}}).
-- Shared workers can no longer be shared between private (i.e. browsing in a private window) and non-private documents (see {{bug(1177621)}}).
-- The {{domxref("URLUtilsSearchParams.searchParams")}} property is now read-only ({{bug(1174731)}}).
-- The {{domxref('URLUtils.hash')}} property no longer decodes URL fragment ({{bug(1093611)}}).
+- On OS X and Windows, {{domxref("NavigatorOnLine.onLine", "Navigator.onLine")}} now changes regarding network connectivity (it always returned `true`, , unless "Work offline" mode was selected) before ([bug Firefox 654579](https://bugzil.la/654579)).
+- {{domxref("MessagePort")}} and {{domxref("MessageChannel")}} now available in [Web workers](/fr/docs/Web/API/Web_Workers_API), and are enabled by default in all contexts ([bug Firefox 952139](https://bugzil.la/952139)) and ([bug Firefox 911972](https://bugzil.la/911972)).
+- The User Timing API is now available in [Web workers](/fr/docs/Web/API/Web_Workers_API) ([bug Firefox 1155761](https://bugzil.la/1155761)).
+- The [Notifications API](/fr/docs/Web/API/Notifications_API) is now available in [Web workers](/fr/docs/Web/API/Web_Workers_API) ([bug Firefox 916893](https://bugzil.la/916893)).
+- {{domxref("DOMRequest")}} and {{domxref("DOMCursor")}} are now available in [Web workers](/fr/docs/Web/API/Web_Workers_API) ([bug Firefox 1167650](https://bugzil.la/1167650)).
+- The [CSS Font Loading API](/fr/docs/Web/API/CSSFontLoading_API) is now enabled by default ([bug Firefox 1149381](https://bugzil.la/1149381)).
+- Shared workers can no longer be shared between private (i.e. browsing in a private window) and non-private documents (see [bug Firefox 1177621](https://bugzil.la/1177621)).
+- The {{domxref("URLUtilsSearchParams.searchParams")}} property is now read-only ([bug Firefox 1174731](https://bugzil.la/1174731)).
+- The {{domxref('URLUtils.hash')}} property no longer decodes URL fragment ([bug Firefox 1093611](https://bugzil.la/1093611)).
 
 ### MathML
 
 #### New default and fallback font handling
 
-Mathematical formulas require special fonts. So far, these fonts were hard-coded in the `mathml.css` user agent stylesheet (which sets the font-family on {{MathMLElement("math")}} tag) and in the preference option `font.mathfont-family` (which sets the fallback fonts to use for stretchy and large operators). Firefox 41 introduces, an internal `x-math` language that is automatically set on the `<math>` tag as well as corresponding preference options (e.g. `font.name.serif.x-math`). The user agent stylesheet now sets font-family to serif on the `<math>` tag and the preference option `font.mathfont-family` is replaced with `font.name.serif.x-math`. All platforms now essentially use the same list of fallback fonts, with "Latin Modern Math" as first one. The default/fallback fonts can be configured from the standard per-language font preference menu. For more details, see {{bug(947654)}} and {{bug(1160456)}}.
+Mathematical formulas require special fonts. So far, these fonts were hard-coded in the `mathml.css` user agent stylesheet (which sets the font-family on {{MathMLElement("math")}} tag) and in the preference option `font.mathfont-family` (which sets the fallback fonts to use for stretchy and large operators). Firefox 41 introduces, an internal `x-math` language that is automatically set on the `<math>` tag as well as corresponding preference options (e.g. `font.name.serif.x-math`). The user agent stylesheet now sets font-family to serif on the `<math>` tag and the preference option `font.mathfont-family` is replaced with `font.name.serif.x-math`. All platforms now essentially use the same list of fallback fonts, with "Latin Modern Math" as first one. The default/fallback fonts can be configured from the standard per-language font preference menu. For more details, see [bug Firefox 947654](https://bugzil.la/947654) and [bug Firefox 1160456](https://bugzil.la/1160456).
 
 ### SVG
 
-- Site icons (favicons, shortcut icons) now support SVG ({{bug(366324)}}).
+- Site icons (favicons, shortcut icons) now support SVG ([bug Firefox 366324](https://bugzil.la/366324)).
 
 ### Audio/Video
 
-- The `media.autoplay.enabled` preference now also apply to untrusted {{domxref("HTMLMediaElement.play()")}} invocations too, that is calls from non-users activated scripts ({{bug(659285)}}).
+- The `media.autoplay.enabled` preference now also apply to untrusted {{domxref("HTMLMediaElement.play()")}} invocations too, that is calls from non-users activated scripts ([bug Firefox 659285](https://bugzil.la/659285)).
 
 ## HTTP
 
-- The `X-Content-Duration` header is no longer supported ({{Bug(1160695)}}).
+- The `X-Content-Duration` header is no longer supported ([bug Firefox 1160695](https://bugzil.la/1160695)).
 
 ## Networking
 
@@ -130,7 +130,7 @@ _pas de changement._
 
 ## Security
 
-- The [CSP](/fr/docs/Web/Security/CSP) 1.1 `manifest-src` [directive](/fr/docs/Web/Security/CSP/CSP_policy_directives) is now supported ({{bug(1089255)}}).
+- The [CSP](/fr/docs/Web/Security/CSP) 1.1 `manifest-src` [directive](/fr/docs/Web/Security/CSP/CSP_policy_directives) is now supported ([bug Firefox 1089255](https://bugzil.la/1089255)).
 
 ## Changes for add-on and Mozilla developers
 

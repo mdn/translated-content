@@ -6798,10 +6798,6 @@
     "modified": "2019-03-23T22:45:47.956Z",
     "contributors": ["YuichiNukiyama"]
   },
-  "Web/API/DeviceProximityEvent": {
-    "modified": "2020-10-15T21:53:01.564Z",
-    "contributors": ["mfuji09", "yyss", "YuichiNukiyama"]
-  },
   "Web/API/Device_Memory_API": {
     "modified": "2020-10-15T22:28:37.534Z",
     "contributors": ["Wind1808"]
@@ -11796,10 +11792,6 @@
     "modified": "2020-10-15T21:48:50.276Z",
     "contributors": ["Uemmra3", "YuichiNukiyama"]
   },
-  "Web/API/Proximity_Events": {
-    "modified": "2020-10-15T21:25:12.920Z",
-    "contributors": ["mfuji09", "yyss"]
-  },
   "Web/API/PublicKeyCredential": {
     "modified": "2020-10-15T22:16:00.529Z",
     "contributors": ["mfuji09", "SphinxKnight"]
@@ -13249,10 +13241,6 @@
   "Web/API/URL_API": {
     "modified": "2020-10-15T22:23:51.539Z",
     "contributors": ["mfuji09", "Wind1808"]
-  },
-  "Web/API/UserProximityEvent": {
-    "modified": "2020-10-15T21:22:31.047Z",
-    "contributors": ["mfuji09", "yyss", "AshfaqHossain", "ethertank"]
   },
   "Web/API/VRDisplay": {
     "modified": "2020-10-15T21:40:29.390Z",
@@ -16363,7 +16351,7 @@
     "modified": "2020-10-15T22:20:56.866Z",
     "contributors": ["mfuji09"]
   },
-  "Web/CSS/@media/update-frequency": {
+  "Web/CSS/@media/update": {
     "modified": "2020-10-15T22:06:02.463Z",
     "contributors": ["mfuji09"]
   },
@@ -17147,10 +17135,6 @@
       "Level",
       "Piro"
     ]
-  },
-  "Web/CSS/Paged_Media": {
-    "modified": "2019-03-18T21:35:37.752Z",
-    "contributors": ["mfuji09"]
   },
   "Web/CSS/Privacy_and_the_:visited_selector": {
     "modified": "2020-12-01T21:03:57.973Z",
@@ -19836,14 +19820,6 @@
   },
   "Web/CSS/scroll-snap-align": {
     "modified": "2020-10-15T22:29:36.376Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/scroll-snap-coordinate": {
-    "modified": "2020-10-15T22:12:59.561Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/CSS/scroll-snap-destination": {
-    "modified": "2020-10-15T22:13:25.242Z",
     "contributors": ["mfuji09"]
   },
   "Web/CSS/scroll-snap-stop": {

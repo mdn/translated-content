@@ -3,6 +3,8 @@ title: First-class Function（头等函数）
 slug: Glossary/First-class_Function
 ---
 
+{{GlossarySidebar}}
+
 当一门编程语言的函数可以被当作变量一样用时，则称这门语言拥有**头等函数**。例如，在这门语言中，函数可以被当作参数传递给其他函数，可以作为另一个函数的返回值，还可以被赋值给一个变量。
 
 ## 示例 | 把函数赋值给变量

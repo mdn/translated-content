@@ -1,13 +1,14 @@
 ---
-title: HTMLFormElement.length
+title: "HTMLFormElement: length プロパティ"
+short-title: length
 slug: Web/API/HTMLFormElement/length
 l10n:
-  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
 
-**HTMLFormElement.length`** は読み取り専用のプロパティで、 {{HTMLElement("form")}} 要素に含まれるコントロールの数を返します。
+**`HTMLFormElement.length`** は読み取り専用のプロパティで、 {{HTMLElement("form")}} 要素に含まれるコントロールの数を返します。
 
 フォームのコントロールの一覧には {{domxref("HTMLFormElement.elements", "elements")}} プロパティを使用してアクセスすることができます。
 
@@ -22,7 +23,7 @@ l10n:
 ## 例
 
 ```js
-if (document.getElementById('form1').length > 1) {
+if (document.getElementById("form1").length > 1) {
   // 複数のフォームコントロールがある場合
 }
 ```

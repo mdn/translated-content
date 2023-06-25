@@ -3699,10 +3699,6 @@
     "modified": "2019-03-23T22:11:26.376Z",
     "contributors": ["JinSeungHo"]
   },
-  "Web/API/Proximity_Events": {
-    "modified": "2019-03-23T23:26:46.443Z",
-    "contributors": ["yunji_koh"]
-  },
   "Web/API/PushManager": {
     "modified": "2020-10-15T21:24:43.793Z",
     "contributors": ["alattalatta", "khalid32", "minchang"]
@@ -4901,106 +4897,6 @@
     "modified": "2020-10-15T21:50:30.795Z",
     "contributors": ["alattalatta", "young-gratia"]
   },
-  "Web/CSS/CSS_Flow_Layout": {
-    "modified": "2020-10-25T09:14:50.404Z",
-    "contributors": ["DeadIntegral", "Hwan-Woong-Lee", "cybaj"]
-  },
-  "Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow": {
-    "modified": "2019-09-26T08:28:44.702Z",
-    "contributors": ["Hwan-Woong-Lee"]
-  },
-  "Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow": {
-    "modified": "2020-03-10T09:52:12.477Z",
-    "contributors": ["EricByHPHK", "Hwan-Woong-Lee"]
-  },
-  "Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes": {
-    "modified": "2019-09-17T21:10:09.773Z",
-    "contributors": ["Hwan-Woong-Lee"]
-  },
-  "Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow": {
-    "modified": "2019-09-24T15:45:35.513Z",
-    "contributors": ["Hwan-Woong-Lee"]
-  },
-  "Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts": {
-    "modified": "2019-09-25T06:26:34.609Z",
-    "contributors": ["Hwan-Woong-Lee", "cybaj"]
-  },
-  "Web/CSS/CSS_Generated_Content": {
-    "modified": "2019-04-24T12:43:29.904Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
-  "Web/CSS/CSS_Grid_Layout": {
-    "modified": "2019-03-23T22:19:44.989Z",
-    "contributors": ["miname", "techhtml"]
-  },
-  "Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout": {
-    "modified": "2019-10-10T16:32:21.410Z",
-    "contributors": ["alattalatta", "dbwodlf3"]
-  },
-  "Web/CSS/CSS_Grid_Layout/Grid_Template_Areas": {
-    "modified": "2019-10-10T16:54:35.246Z",
-    "contributors": ["chrisdavidmills", "dbwodlf3", "miname"]
-  },
-  "Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines": {
-    "modified": "2019-03-23T22:00:52.287Z",
-    "contributors": ["chrisdavidmills", "dbwodlf3", "miname"]
-  },
-  "Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid": {
-    "modified": "2019-03-23T22:01:04.533Z",
-    "contributors": ["chrisdavidmills", "dbwodlf3", "miname"]
-  },
-  "Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout": {
-    "modified": "2019-03-23T22:01:05.023Z",
-    "contributors": ["chrisdavidmills", "dbwodlf3", "miname", "sarojaba"]
-  },
-  "Web/CSS/CSS_Images": {
-    "modified": "2020-08-05T10:48:34.252Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
-  "Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS": {
-    "modified": "2020-08-05T10:28:13.719Z",
-    "contributors": ["alattalatta", "corean", "ingee.kim"]
-  },
-  "Web/CSS/CSS_Images/Using_CSS_gradients": {
-    "modified": "2020-08-05T10:27:39.634Z",
-    "contributors": ["alattalatta", "albertkang1004"]
-  },
-  "Web/CSS/CSS_Lists_and_Counters": {
-    "modified": "2019-04-24T12:48:26.621Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
-  "Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation": {
-    "modified": "2019-03-18T21:13:02.657Z",
-    "contributors": ["alattalatta", "teoli", "Ioseph"]
-  },
-  "Web/CSS/CSS_Logical_Properties": {
-    "modified": "2019-04-25T12:25:18.617Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
-  "Web/CSS/CSS_Masking": {
-    "modified": "2019-04-26T08:55:40.990Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
-  "Web/CSS/CSS_Miscellaneous": {
-    "modified": "2019-03-23T22:32:29.213Z",
-    "contributors": ["Netaras"]
-  },
-  "Web/CSS/CSS_Namespaces": {
-    "modified": "2019-04-26T08:57:19.875Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
-  "Web/CSS/CSS_Pages": {
-    "modified": "2019-04-24T12:50:22.680Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
-  "Web/CSS/CSS_Ruby": {
-    "modified": "2019-04-25T10:56:54.378Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
-  "Web/CSS/CSS_Scroll_Snap": {
-    "modified": "2019-04-14T23:39:58.448Z",
-    "contributors": ["alattalatta", "Netaras"]
-  },
   "Web/CSS/CSS_Selectors": {
     "modified": "2020-08-22T11:28:21.089Z",
     "contributors": ["alattalatta"]
@@ -5125,8 +5021,88 @@
     "modified": "2019-10-04T18:40:14.389Z",
     "contributors": ["Hwan-Woong-Lee"]
   },
+  "Web/CSS/CSS_flow_layout": {
+    "modified": "2020-10-25T09:14:50.404Z",
+    "contributors": ["DeadIntegral", "Hwan-Woong-Lee", "cybaj"]
+  },
+  "Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow": {
+    "modified": "2019-09-26T08:28:44.702Z",
+    "contributors": ["Hwan-Woong-Lee"]
+  },
+  "Web/CSS/CSS_flow_layout/Flow_layout_and_overflow": {
+    "modified": "2020-03-10T09:52:12.477Z",
+    "contributors": ["EricByHPHK", "Hwan-Woong-Lee"]
+  },
+  "Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes": {
+    "modified": "2019-09-17T21:10:09.773Z",
+    "contributors": ["Hwan-Woong-Lee"]
+  },
+  "Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow": {
+    "modified": "2019-09-24T15:45:35.513Z",
+    "contributors": ["Hwan-Woong-Lee"]
+  },
+  "Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts": {
+    "modified": "2019-09-25T06:26:34.609Z",
+    "contributors": ["Hwan-Woong-Lee", "cybaj"]
+  },
   "Web/CSS/CSS_fonts": {
     "modified": "2019-04-25T10:51:28.269Z",
+    "contributors": ["alattalatta", "Netaras"]
+  },
+  "Web/CSS/CSS_generated_content": {
+    "modified": "2019-04-24T12:43:29.904Z",
+    "contributors": ["alattalatta", "Netaras"]
+  },
+  "Web/CSS/CSS_grid_layout": {
+    "modified": "2019-03-23T22:19:44.989Z",
+    "contributors": ["miname", "techhtml"]
+  },
+  "Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout": {
+    "modified": "2019-10-10T16:32:21.410Z",
+    "contributors": ["alattalatta", "dbwodlf3"]
+  },
+  "Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement": {
+    "modified": "2019-03-23T22:01:04.533Z",
+    "contributors": ["chrisdavidmills", "dbwodlf3", "miname"]
+  },
+  "Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines": {
+    "modified": "2019-03-23T22:00:52.287Z",
+    "contributors": ["chrisdavidmills", "dbwodlf3", "miname"]
+  },
+  "Web/CSS/CSS_grid_layout/Grid_template_areas": {
+    "modified": "2019-10-10T16:54:35.246Z",
+    "contributors": ["chrisdavidmills", "dbwodlf3", "miname"]
+  },
+  "Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods": {
+    "modified": "2019-03-23T22:01:05.023Z",
+    "contributors": ["chrisdavidmills", "dbwodlf3", "miname", "sarojaba"]
+  },
+  "Web/CSS/CSS_images": {
+    "modified": "2020-08-05T10:48:34.252Z",
+    "contributors": ["alattalatta", "Netaras"]
+  },
+  "Web/CSS/CSS_images/Implementing_image_sprites_in_CSS": {
+    "modified": "2020-08-05T10:28:13.719Z",
+    "contributors": ["alattalatta", "corean", "ingee.kim"]
+  },
+  "Web/CSS/CSS_images/Using_CSS_gradients": {
+    "modified": "2020-08-05T10:27:39.634Z",
+    "contributors": ["alattalatta", "albertkang1004"]
+  },
+  "Web/CSS/CSS_lists": {
+    "modified": "2019-04-24T12:48:26.621Z",
+    "contributors": ["alattalatta", "Netaras"]
+  },
+  "Web/CSS/CSS_lists/Consistent_list_indentation": {
+    "modified": "2019-03-18T21:13:02.657Z",
+    "contributors": ["alattalatta", "teoli", "Ioseph"]
+  },
+  "Web/CSS/CSS_logical_properties_and_values": {
+    "modified": "2019-04-25T12:25:18.617Z",
+    "contributors": ["alattalatta", "Netaras"]
+  },
+  "Web/CSS/CSS_masking": {
+    "modified": "2019-04-26T08:55:40.990Z",
     "contributors": ["alattalatta", "Netaras"]
   },
   "Web/CSS/CSS_media_queries": {
@@ -5154,6 +5130,10 @@
     "modified": "2019-04-29T00:53:50.949Z",
     "contributors": ["qwqw312x"]
   },
+  "Web/CSS/CSS_miscellaneous": {
+    "modified": "2019-03-23T22:32:29.213Z",
+    "contributors": ["Netaras"]
+  },
   "Web/CSS/CSS_multicol_layout": {
     "modified": "2019-04-11T11:34:08.500Z",
     "contributors": ["alattalatta", "Netaras"]
@@ -5161,6 +5141,14 @@
   "Web/CSS/CSS_multicol_layout/Using_multicol_layouts": {
     "modified": "2019-10-11T18:26:42.559Z",
     "contributors": ["escattone", "Netaras", "Sebuls", "Ioseph"]
+  },
+  "Web/CSS/CSS_namespaces": {
+    "modified": "2019-04-26T08:57:19.875Z",
+    "contributors": ["alattalatta", "Netaras"]
+  },
+  "Web/CSS/CSS_paged_media": {
+    "modified": "2019-04-24T12:50:22.680Z",
+    "contributors": ["alattalatta", "Netaras"]
   },
   "Web/CSS/CSS_positioned_layout": {
     "modified": "2019-04-21T01:25:04.626Z",
@@ -5204,6 +5192,14 @@
   "Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index": {
     "modified": "2020-02-05T05:13:01.975Z",
     "contributors": ["SphinxKnight", "teoli", "jaemin_jo"]
+  },
+  "Web/CSS/CSS_ruby_layout": {
+    "modified": "2019-04-25T10:56:54.378Z",
+    "contributors": ["alattalatta", "Netaras"]
+  },
+  "Web/CSS/CSS_scroll_snap": {
+    "modified": "2019-04-14T23:39:58.448Z",
+    "contributors": ["alattalatta", "Netaras"]
   },
   "Web/CSS/CSS_shapes": {
     "modified": "2019-04-25T10:46:18.309Z",
@@ -5286,10 +5282,6 @@
   "Web/CSS/Layout_mode": {
     "modified": "2020-08-05T01:05:50.434Z",
     "contributors": ["alattalatta", "Netaras"]
-  },
-  "Web/CSS/Paged_Media": {
-    "modified": "2019-03-23T22:33:25.305Z",
-    "contributors": ["Netaras"]
   },
   "Web/CSS/Pseudo-classes": {
     "modified": "2020-08-13T04:55:02.947Z",
@@ -10754,7 +10746,7 @@
       "lukewagner"
     ]
   },
-  "WebAssembly/C_to_wasm": {
+  "WebAssembly/C_to_Wasm": {
     "modified": "2020-10-29T08:46:10.367Z",
     "contributors": ["limkukhyun", "jung-han", "04SeoHyun", "nakyong"]
   },
@@ -10835,11 +10827,11 @@
     "modified": "2019-03-23T22:11:38.016Z",
     "contributors": ["limkukhyun", "kesuskim"]
   },
-  "WebAssembly/Rust_to_wasm": {
+  "WebAssembly/Rust_to_Wasm": {
     "modified": "2020-06-15T19:31:56.028Z",
     "contributors": ["fantajeon", "04SeoHyun", "piutranq", "limkukhyun"]
   },
-  "WebAssembly/Text_format_to_wasm": {
+  "WebAssembly/Text_format_to_Wasm": {
     "modified": "2019-03-18T21:28:27.225Z",
     "contributors": ["limkukhyun"]
   },
@@ -10851,13 +10843,21 @@
     "modified": "2019-12-26T10:33:44.717Z",
     "contributors": ["04SeoHyun", "limkukhyun"]
   },
-  "WebAssembly/existing_C_to_wasm": {
+  "WebAssembly/existing_C_to_Wasm": {
     "modified": "2019-03-18T21:28:25.734Z",
     "contributors": ["limkukhyun"]
+  },
+  "conflicting/Web/CSS/CSS_paged_media": {
+    "modified": "2019-03-23T22:33:25.305Z",
+    "contributors": ["Netaras"]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal": {
     "modified": "2020-03-12T19:44:24.834Z",
     "contributors": ["magnoliaa"]
+  },
+  "orphaned/Web/API/Proximity_Events": {
+    "modified": "2019-03-23T23:26:46.443Z",
+    "contributors": ["yunji_koh"]
   },
   "orphaned/Web/HTML/Element/applet": {
     "modified": "2019-03-23T22:50:49.180Z",

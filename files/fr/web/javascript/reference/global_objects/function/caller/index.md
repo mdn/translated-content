@@ -83,4 +83,4 @@ Ne fait partie d'aucune spécification. Implémentée avec JavaScript 1.5.
 
 ## Voir aussi
 
-- Le bug d'implémentation pour SpiderMonkey {{bug(65683)}}
+- Le bug d'implémentation pour SpiderMonkey [bug Firefox 65683](https://bugzil.la/65683)

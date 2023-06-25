@@ -3,6 +3,8 @@ title: 假值
 slug: Glossary/Falsy
 ---
 
+{{GlossarySidebar}}
+
 **假值**（**falsy**，有时写为 **falsey**）是在 {{Glossary("Boolean")}} 上下文中认定为 false 的值。
 
 {{Glossary("JavaScript")}} 在需要用到布尔类型值的上下文中使用{{Glossary("Type_Conversion", "强制类型转换")}}将值转换为布尔值，例如{{Glossary("Conditional", "条件语句")}}和{{Glossary("Loop", "循环语句")}}。

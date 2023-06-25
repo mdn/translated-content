@@ -63,12 +63,12 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
 
 Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("sizes")}} {{experimental_inline}}
-  - : Es una lista de tamaños del origen que describe el ancho renderizado final de la imagen representada por el origen. Cada tamaño de origen consiste de una lista separada por comas de pares de longitud de condición de medios. Esta información es utilizada por el navegador para determinar, antes de distribuir la página, qué imagen definida en {{htmlattrxref("srcset", "source")}} se utilizará.
+- `sizes` {{experimental_inline}}
+  - : Es una lista de tamaños del origen que describe el ancho renderizado final de la imagen representada por el origen. Cada tamaño de origen consiste de una lista separada por comas de pares de longitud de condición de medios. Esta información es utilizada por el navegador para determinar, antes de distribuir la página, qué imagen definida en [`srcset`](/es/docs/Web/HTML/Element/source#srcset) se utilizará.
     El atributo `sizes` tiene un efecto solo cuando el elemento {{HTMLElement("source")}} es hijo directo de un elemento {{HTMLElement("picture")}}.
-- {{htmlattrdef("src")}}
+- `src`
   - : Es la ubicación del recurso multimedia, requerido por los elementos {{HTMLElement("audio")}} y {{HTMLElement("video")}}. El valor de este atributo es ignorado cuando el elemento `<source>` se coloca dentro de un elemento {{HTMLElement("picture")}}.
-- {{htmlattrdef("srcset")}} {{experimental_inline}}
+- `srcset` {{experimental_inline}}
 
   - : Una lista de una o más cadenas separadas por comas que indican un conjunto de posibles imágenes representadas por la fuente para que las utilice el navegador. Cada cadena se compone de:
 
@@ -80,9 +80,9 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
     El navegador elige la imagen más adecuada para mostrar en un momento determinado.
     El atributo `srcset` solo tiene efecto cuando el elemento {{HTMLElement("source")}} es hijo directo de un elemento {{HTMLElement("picture")}}.
 
-- {{htmlattrdef("type")}}
+- `type`
   - : El tipo MIME del recurso, opcionalmente con un parámetro `codecs`. Consultar [RFC 4281](https://tools.ietf.org/html/rfc4281)para obtener información sobre cómo especificar los códecs.
-- {{htmlattrdef("media")}} {{experimental_inline}}
+- `media` {{experimental_inline}}
   - : [Consulta multimedia](/es/docs/CSS/Media_queries) de los medios destinados al recurso; esto solo debe usarse en un elemento {{HTMLElement("picture")}}.
 
 Si el atributo `type` no se especifica, el tipo de medio se recupera del servidor y se verifica para ver si el agente de usuario puede manejarlo; si no se puede procesar, se comprueba el siguiente `<source>`. Si se especifica el atributo `type`, se compara con los tipos que puede presentar el agente de usuario y, si no se reconoce, el servidor ni siquiera recibe consultas; en su lugar, el siguiente elemento `<source>` se comprueba a la vez.

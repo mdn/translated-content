@@ -1629,6 +1629,7 @@
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/toString	/zh-CN/docs/Web/API/HTMLAnchorElement/toString
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
 /zh-CN/docs/Web/API/HTMLMediaElement/onerror	/zh-CN/docs/Web/API/HTMLMediaElement/error_event
+/zh-CN/docs/Web/API/HTMLMetaElement/charset	/zh-CN/docs/Web/HTML/Element/meta#charset
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
 /zh-CN/docs/Web/API/HTMLVideoElement/autoPictureInPicture	/zh-CN/docs/Web/API/HTMLVideoElement
 /zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/Web/API/Headers/get
@@ -1731,11 +1732,14 @@
 /zh-CN/docs/Web/API/PositionError	/zh-CN/docs/Web/API/GeolocationPositionError
 /zh-CN/docs/Web/API/PositionOptions	/zh-CN/docs/Web/API/Geolocation/getCurrentPosition
 /zh-CN/docs/Web/API/PositionOptions/timeout	/zh-CN/docs/Web/API/Geolocation/getCurrentPosition
+/zh-CN/docs/Web/API/PushManager/supportedContentEncodings	/zh-CN/docs/Web/API/PushManager/supportedContentEncodings_static
 /zh-CN/docs/Web/API/RTCConfiguration	/zh-CN/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /zh-CN/docs/Web/API/RTCPeerConnection/onaddstream	/zh-CN/docs/Web/API/RTCPeerConnection/addstream_event
 /zh-CN/docs/Web/API/RTCPeerConnection/ondatachannel	/zh-CN/docs/Web/API/RTCPeerConnection/datachannel_event
 /zh-CN/docs/Web/API/RTCPeerConnection/onicecandidate	/zh-CN/docs/Web/API/RTCPeerConnection/icecandidate_event
 /zh-CN/docs/Web/API/RTCPeerConnection/ontrack	/zh-CN/docs/Web/API/RTCPeerConnection/track_event
+/zh-CN/docs/Web/API/RTCStats	/zh-CN/docs/Web/API/RTCStatsReport
+/zh-CN/docs/Web/API/RTCStats/id	/zh-CN/docs/Web/API/RTCStatsReport
 /zh-CN/docs/Web/API/RandomSource/getRandomValues	/zh-CN/docs/Web/API/Crypto/getRandomValues
 /zh-CN/docs/Web/API/Resource_Timing_API	/zh-CN/docs/Web/API/Performance_API/Resource_timing
 /zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API	/zh-CN/docs/Web/API/Performance_API/Resource_timing
@@ -2115,6 +2119,7 @@
 /zh-CN/docs/Web/CSS/Media_Queries	/zh-CN/docs/Web/CSS/CSS_media_queries
 /zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries	/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
+/zh-CN/docs/Web/CSS/Paged_Media	/zh-CN/docs/Web/CSS/CSS_paged_media
 /zh-CN/docs/Web/CSS/Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
 /zh-CN/docs/Web/CSS/Reference/background-blend-mode	/zh-CN/docs/Web/CSS/background-blend-mode
 /zh-CN/docs/Web/CSS/Reference/mix-blend-mode	/zh-CN/docs/Web/CSS/mix-blend-mode

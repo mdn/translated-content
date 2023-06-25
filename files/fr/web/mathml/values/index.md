@@ -68,7 +68,7 @@ Plusieurs éléments de présentation MathML possèdent des attributs qui accept
   <thead>
     <tr>
       <th colspan="2">
-        Les <em>contstantes</em> négatives ont été introduites avec Gecko 7.0 ({{ bug(650530) }})
+        Les <em>contstantes</em> négatives ont été introduites avec Gecko 7.0 ([bug Firefox 650530](https://bugzil.la/650530))
       </th>
     </tr>
   </thead>

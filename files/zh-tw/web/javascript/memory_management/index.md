@@ -27,25 +27,29 @@ slug: Web/JavaScript/Memory_management
 
 ```js
 var n = 123; // 配置一記憶體空間給數字
-var s = 'azerty'; // 配置記憶體空間給字串
+var s = "azerty"; // 配置記憶體空間給字串
 
 var o = {
   a: 1,
-  b: null
+  b: null,
 }; //配置記憶體空間給內含值的物件
 
 // (像物件一樣) 分配記憶體給一個陣列
 // 該陣列包含一些值
-var a = [1, null, 'abra'];
+var a = [1, null, "abra"];
 
 function f(a) {
   return a + 2;
 } // 分配記憶體給一個函式 (一個可呼叫的物件)
 
 // function expressions also allocate an object
-someElement.addEventListener('click', function() {
-  someElement.style.backgroundColor = 'blue';
-}, false);
+someElement.addEventListener(
+  "click",
+  function () {
+    someElement.style.backgroundColor = "blue";
+  },
+  false
+);
 ```
 
 #### 藉由函式呼叫來配置
@@ -55,20 +59,20 @@ someElement.addEventListener('click', function() {
 ```js
 var d = new Date(); // 配置一個日期物件
 
-var e = document.createElement('div'); // 配置一個 DOM 物件
+var e = document.createElement("div"); // 配置一個 DOM 物件
 ```
 
 有些方法配置新的值或物件：
 
 ```js
-var s = 'azerty';
+var s = "azerty";
 var s2 = s.substr(0, 3); // s2 是一個新字串
 // 因為字串是一種不可變的值，
 // JavaScript 會決定不分配新的記憶體，
 // 只儲存 0 到 3 這個範圍的字元。
 
-var a = ['ouais ouais', 'nan nan'];
-var a2 = ['generation', 'nan nan'];
+var a = ["ouais ouais", "nan nan"];
+var a2 = ["generation", "nan nan"];
 var a3 = a.concat(a2);
 // 一個有四個元素的新陣列
 // 將 a 與 a2 的元素串聯起來
@@ -105,29 +109,28 @@ var a3 = a.concat(a2);
 ```js
 var o = {
   a: {
-    b: 2
-  }
+    b: 2,
+  },
 };
 // 兩個物件被創造出來。其中一個物件(b)被視為另一個物件(a)的屬性，並且被該物件(a)參考
 // 另一個物件(a)被分配給一個變數(o)，並且被變數(o)參考
 // 很明顯的，沒有任何物件應該被回收
 
-
 var o2 = o; // 另外創造第二個變數(o2)
-            // 他參考一個物件
-o = 1;      // 現在，物件 o 有另一個不同的參考
-            // 而原本在物件 o 的物件，則被物件 o2 參考
+// 他參考一個物件
+o = 1; // 現在，物件 o 有另一個不同的參考
+// 而原本在物件 o 的物件，則被物件 o2 參考
 
 var oa = o2.a; // 變數 oa 參考物件 a
-               // 物件 a 有兩個物件參考到它，一個是 o2，並且它是 o2 的屬性
-               // 另一個是變數 oa
+// 物件 a 有兩個物件參考到它，一個是 o2，並且它是 o2 的屬性
+// 另一個是變數 oa
 
-o2 = 'yo'; // 現在 o2 變成 'yo'
-           // 原本應該沒有任何物件參考到 a ，因此它應該被回收
-           // 但 a 仍然被變數 oa 參考，因此它逃過被回收的命運
+o2 = "yo"; // 現在 o2 變成 'yo'
+// 原本應該沒有任何物件參考到 a ，因此它應該被回收
+// 但 a 仍然被變數 oa 參考，因此它逃過被回收的命運
 
 oa = null; // 現在把 oa 變成 null
-           // 因為沒有任何物件與變數參考 a ，因此他可以被回收
+// 因為沒有任何物件與變數參考 a ，因此他可以被回收
 ```
 
 #### 限制：循環
@@ -141,7 +144,7 @@ function f() {
   o.a = o2; // o 參考 o2
   o2.a = o; // o2 參考 o
 
-  return 'azerty';
+  return "azerty";
 }
 
 f();
@@ -153,10 +156,10 @@ Internet Explorer 6 和 7 有一個 DOM 物件的垃圾回收參考計數。循�
 
 ```js
 var div;
-window.onload = function() {
-  div = document.getElementById('myDivElement');
+window.onload = function () {
+  div = document.getElementById("myDivElement");
   div.circularReference = div;
-  div.lotsOfData = new Array(10000).join('*');
+  div.lotsOfData = new Array(10000).join("*");
 };
 ```
 
@@ -194,11 +197,11 @@ The max amount of available heap memory can be increased with a flag:
 
 We can also expose the garbage collector for debugging memory issues using a flag and the [Chrome Debugger](https://nodejs.org/en/docs/guides/debugging-getting-started/):
 
-```plain
+```sh
 node --expose-gc --inspect index.js
 ```
 
-## 可以參考
+## 參見
 
 - [IBM article on "Memory leak patterns in JavaScript" (2007)](http://www.ibm.com/developerworks/web/library/wa-memleak/)
 - [Kangax article on how to register event handler and avoid memory leaks (2010)](http://msdn.microsoft.com/en-us/magazine/ff728624.aspx)

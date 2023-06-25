@@ -8,7 +8,7 @@ original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/新�
 
 ```js
 // 建立新的物件 myobj，以及兩個屬性 a 和 b。
-myobj = new Object;
+myobj = new Object();
 myobj.a = 5;
 myobj.b = 12;
 

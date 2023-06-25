@@ -12,7 +12,7 @@ Los atributos globales se pueden especificar en todos los [elementos HTML](/es/d
 
 Además de los atributos globales HTML básicos, también existen los siguientes atributos globales:
 
-- {{HTMLAttrDef("xml:lang")}} y {{HTMLAttrDef("xml:base")}} — estos se heredan de las especificaciones XHTML y están en desuso, pero se mantienen por motivos de compatibilidad.
+- `xml:lang` y `xml:base` — estos se heredan de las especificaciones XHTML y están en desuso, pero se mantienen por motivos de compatibilidad.
 - Los múltiples atributos **`[aria-*](/es/docs/Web/Accessibility/ARIA)`**, utilizados para mejorar la accesibilidad.
 - Los atributos de [control de eventos](/es/docs/Web/Guide/Events/Event_handlers): **`onabort`**, **`onautocomplete`**, **`onautocompleteerror`**, **`onblur`**, **`oncancel`**, **`oncanplay`**, **`oncanplaythrough`**, **`onchange`**, **`onclick`**, **`onclose`**, **`oncontextmenu`**, **`oncuechange`**, **`ondblclick`**, **`ondrag`**, **`ondragend`**, **`ondragenter`**, **`ondragexit`**, **`ondragleave`**, **`ondragover`**, **`ondragstart`**, **`ondrop`**, **`ondurationchange`**, **`onemptied`**, **`onended`**, **`onerror`**, **`onfocus`**, **`oninput`**, **`oninvalid`**, **`onkeydown`**, **`onkeypress`**, **`onkeyup`**, **`onload`**, **`onloadeddata`**, **`onloadedmetadata`**, **`onloadstart`**, **`onmousedown`**, **`onmouseenter`**, **`onmouseleave`**, **`onmousemove`**, **`onmouseout`**, **`onmouseover`**, **`onmouseup`**, **`onmousewheel`**, **`onpause`**, **`onplay`**, **`onplaying`**, **`onprogress`**, **`onratechange`**, **`onreset`**, **`onresize`**, **`onscroll`**, **`onseeked`**, **`onseeking`**, **`onselect`**, **`onshow`**, **`onsort`**, **`onstalled`**, **`onsubmit`**, **`onsuspend`**, **`ontimeupdate`**, **`ontoggle`**, **`onvolumechange`**, **`onwaiting`**.
 
@@ -56,7 +56,7 @@ Además de los atributos globales HTML básicos, también existen los siguientes
 - **`[id](/es/docs/Web/HTML/Global_attributes/id)`**
   - : Define un identificador (ID) único que debe ser único en todo el documento. Su propósito es identificar el elemento al vincularlo (usando un identificador de fragmento), al escribir un script o al aplicarle estilo (con CSS).
 - **`[inputmode](/es/docs/Web/HTML/Global_attributes/inputmode)`**
-  - : Proporciona una pista a los navegadores sobre el tipo de configuración de teclado virtual que se debe utilizar al editar este elemento o su contenido. Se usa principalmente en elementos {{HTMLElement("input")}}, pero se puede usar en cualquier elemento mientras esté en modo {{HTMLAttrxRef("contenteditable")}}.
+  - : Proporciona una pista a los navegadores sobre el tipo de configuración de teclado virtual que se debe utilizar al editar este elemento o su contenido. Se usa principalmente en elementos {{HTMLElement("input")}}, pero se puede usar en cualquier elemento mientras esté en modo [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable).
 - **`[is](/es/docs/Web/HTML/Global_attributes/is)`**
   - : Te permite especificar que un elemento HTML estándar se debe comportar como un elemento integrado personalizado registrado (consulta [Uso de elementos personalizados](/es/docs/Web/Web_Components/Using_custom_elements) para obtener más detalles).
 
@@ -69,15 +69,15 @@ Además de los atributos globales HTML básicos, también existen los siguientes
 - **`[itemref](/es/docs/Web/HTML/Global_attributes/itemref)`**
   - : Las propiedades que no son descendientes de un elemento con el atributo `itemscope` se pueden asociar con el elemento usando un `itemref`. Proporciona una lista de IDs de elementos (no `itemid`s) con propiedades adicionales en otras partes del documento.
 - **`[itemscope](/es/docs/Web/HTML/Global_attributes/itemscope)`**
-  - : `itemscope` (normalmente) funciona junto con {{HTMLAttrxRef("itemtype")}} para especificar que el HTML contenido en un bloque es sobre un elemento en particular. `itemscope` crea el «_Item_» y define el alcance del `itemtype` asociado con él. `itemtype` es una URL válida de un vocabulario (tal como [schema.org](https://schema.org/)) que describe el elemento y las propiedades de su contexto.
+  - : `itemscope` (normalmente) funciona junto con [`itemtype`](/es/docs/Web/HTML/Global_attributes#itemtype) para especificar que el HTML contenido en un bloque es sobre un elemento en particular. `itemscope` crea el «_Item_» y define el alcance del `itemtype` asociado con él. `itemtype` es una URL válida de un vocabulario (tal como [schema.org](https://schema.org/)) que describe el elemento y las propiedades de su contexto.
 - **`[itemtype](/es/docs/Web/HTML/Global_attributes/itemtype)`**
-  - : Especifica la URL del vocabulario que se utilizará para definir `itemprop`s (propiedades del elemento) en la estructura de datos. {{HTMLAttrxRef("itemscope")}} se utiliza para establecer el alcance de la estructura de datos en la que estará activo el vocabulario establecido por `itemtype`.
+  - : Especifica la URL del vocabulario que se utilizará para definir `itemprop`s (propiedades del elemento) en la estructura de datos. [`itemscope`](/es/docs/Web/HTML/Global_attributes#itemscope) se utiliza para establecer el alcance de la estructura de datos en la que estará activo el vocabulario establecido por `itemtype`.
 - **`[lang](/es/docs/Web/HTML/Global_attributes/lang)`**
   - : Ayuda a definir el idioma de un elemento: el idioma en el que se encuentran los elementos no editables o el idioma en el que el usuario debe escribir los elementos editables. El atributo contiene una “etiqueta de idioma” (compuesta de “subetiquetas de idioma” separadas por guiones) en el formato definido en [_Etiquetas para identificar idiomas (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt). [xml:lang](#attr-xml:lang) tiene prioridad sobre él.
 - **`[part](/es/docs/Web/HTML/Global_attributes/part)`**
   - : Una lista separada por espacios de los nombres de las partes del elemento. Los nombres de las partes permiten que CSS seleccione y aplique estilo a elementos específicos en la sombra de un árbol mediante el pseudoelemento {{CSSxRef("::part")}}.
 - **`[slot](/es/docs/Web/HTML/Global_attributes/slot)`**
-  - : Asigna un espacio en la sombra de un árbol [DOM de sombra](/es/docs/Web/Web_Components/Shadow_DOM) a un elemento: Un elemento con un atributo `slot` es asignado al espacio creado por el elemento {{HTMLElement("slot")}} cuyo valor del atributo {{HTMLAttrxRef("name", "slot")}} coincide con el valor del atributo `slot`.
+  - : Asigna un espacio en la sombra de un árbol [DOM de sombra](/es/docs/Web/Web_Components/Shadow_DOM) a un elemento: Un elemento con un atributo `slot` es asignado al espacio creado por el elemento {{HTMLElement("slot")}} cuyo valor del atributo [`name`](/es/docs/Web/HTML/Element/slot#name) coincide con el valor del atributo `slot`.
 - **`[spellcheck](/es/docs/Web/HTML/Global_attributes/spellcheck)`**
   - : Un atributo enumerado define si se puede verificar el elemento para detectar errores ortográficos. Puede tener los siguientes valores:
     - `true`, el cual indica que, si es posible, el elemento se debe revisar para detectar errores ortográficos;

@@ -1,17 +1,21 @@
 ---
-title: '<canvas>: グラフィックキャンバス要素'
+title: "<canvas>: グラフィックキャンバス要素"
 slug: Web/HTML/Element/canvas
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<canvas>` 要素** と [Canvas スクリプティング API](/ja/docs/Web/API/Canvas_API) や [WebGL API](/ja/docs/Web/API/WebGL_API) を使用して、グラフィックやアニメーションを描画することができます。
+**HTML の `<canvas>` 要素** と [キャンバススクリプティング API](/ja/docs/Web/API/Canvas_API) や [WebGL API](/ja/docs/Web/API/WebGL_API) を使用して、グラフィックやアニメーションを描画することができます。
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
@@ -84,7 +88,7 @@ slug: Web/HTML/Element/canvas
 
 ### 代替コンテンツ
 
-`<canvas>` のブロックの中で、代替コンテンツを提供することが可能 (また、提供すべき) です。その内容物は、 canvas に対応しない古いブラウザーおよび JavaScript が無効であるブラウザーで描画されます。有用な代替テキストやサブ DOM のヘルプを提供すると、[キャンバスがよりアクセシブルになります](/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)。
+`<canvas>` のブロックの中で、代替コンテンツを提供すべきです。その内容物は、 canvas に対応しない古いブラウザーおよび JavaScript が無効であるブラウザーで描画されます。
 
 ### \</canvas> タグが必要
 
@@ -94,11 +98,11 @@ slug: Web/HTML/Element/canvas
 
 表示されるキャンバスの寸法は、スタイルシートを用いて変更できますが、そうすると画像はスタイルで設定した寸法に合うように拡大縮小され、最終的なグラフィックが歪んで表示されることがあります。
 
-キャンバスの寸法は、 HTML または JavaScript を用いて `width` および `height` 属性を `<canvas>` 要素に直接設定するした方がいいでしょう。
+キャンバスの寸法は、HTML または JavaScript を用いて `width` および `height` 属性を `<canvas>` 要素に直接設定するした方がいいでしょう。
 
 ### キャンバスの最大寸法
 
-`<canvas>` 要素の最大寸法はとても広いのですが、正確な寸法はブラウザーに依存します。以下のものは様々なテストやその他の情報源 ([Stack Overflow](https://stackoverflow.com/questions/6081483/maximum-size-of-a-canvas-element) など) から収集したいくらかのデータです。
+`<canvas>` 要素の最大寸法はとても広いのですが、正確な寸法はブラウザーに依存します。以下のものは様々なテストやその他の情報源（[Stack Overflow](https://stackoverflow.com/questions/6081483/maximum-size-of-a-canvas-element) など）から収集したいくらかのデータです。
 
 | ブラウザー | 最大高        | 最大幅        | 最大面積                                    |
 | ---------- | ------------- | ------------- | ------------------------------------------- |
@@ -140,12 +144,11 @@ ctx.fillRect(10, 10, 100, 100);
 
 ### 代替コンテンツ
 
-`canvas` 要素は単なるビットマップであり、描かれたオブジェクトに関する情報は提供しません。キャンバスのコンテンツには、セマンティック HTML のようなアクセシビリティツールには公開されていません。一般的に、アクセシビリティに配慮したウェブサイトやアプリではキャンバスを使用しないでください。アクセシビリティを改善するには、以下のガイドが役立ちます。
+`<canvas>` 要素は単なるビットマップであり、描かれたオブジェクトに関する情報は提供しません。キャンバスのコンテンツには、セマンティック HTML のようなアクセシビリティツールには公開されていません。一般的に、アクセシビリティに配慮したウェブサイトやアプリではキャンバスを使用しないでください。アクセシビリティを改善するには、以下のガイドが役立ちます。
 
-- [MDN ヒット領域とアクセシビリティ](/ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility)
 - [Canvas accessibility use cases](https://www.w3.org/WAI/PF/HTML/wiki/Canvas_Accessibility_Use_Cases)
 - [Canvas element accessibility issues](https://www.w3.org/html/wg/wiki/AddedElementCanvas)
-- [HTML5 Canvas Accessibility in Firefox 13 – by Steve Faulkner](https://developer.paciellogroup.com/blog/2012/06/html5-canvas-accessibility-in-firefox-13/)
+- [HTML Canvas Accessibility in Firefox 13 – by Steve Faulkner](https://www.tpgi.com/html5-canvas-accessibility-in-firefox-13/)
 - [Best practices for interactive canvas elements](https://html.spec.whatwg.org/multipage/scripting.html#best-practices)
 
 ## 仕様書
@@ -154,12 +157,14 @@ ctx.fillRect(10, 10, 100, 100);
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.canvas")}}
+{{Compat}}
 
 ## 関連情報
 
-- [MDN の canvas ポータル](/ja/docs/Web/API/Canvas_API)
-- [Canvas チュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)
-- [Canvas チートシート](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
-- [Canvas に関するデモ](/ja/demos/tag/tech:canvas)
-- [Apple によるキャンバスの紹介](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)
+- [MDN のキャンバスポータル](/ja/docs/Web/API/Canvas_API)
+- [キャンバスチュートリアル](/ja/docs/Web/API/Canvas_API/Tutorial)
+- [キャンバス関連のデモ](/ja/docs/Web/Demos#canvas)
+- [キャンバス早見表 (2009)](https://simon.html5.org/dump/html5-canvas-cheat-sheet.html)
+- [キャンバス早見表 (pdf) (2015)](https://websitesetup.org/wp-content/uploads/2015/11/Infopgraphic-CanvasCheatSheet-Final2.pdf)
+- [キャンバス早見表 (pdf)](https://www.coding-dude.com/wp/wp-content/uploads/2020/09/HTML5-canvas-cheat-sheet.pdf)
+- [Apple によるキャンバスの紹介 (2013)](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/HTML-canvas-guide/Introduction/Introduction.html)

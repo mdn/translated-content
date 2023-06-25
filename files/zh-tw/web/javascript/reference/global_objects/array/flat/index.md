@@ -7,11 +7,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 
 **`flat()`** 函數以遞迴方式將特定深度的子陣列重新串接成為一新的陣列
 
-\\{{EmbedInteractiveExample("pages/js/array-flatten.html")}}
+{{EmbedInteractiveExample("pages/js/array-flat.html")}}
 
 ## 語法
 
-```plain
+```js
 var newArray = arr.flat([depth]);
 ```
 
@@ -44,7 +44,7 @@ arr3.flat(2);
 
 ### 當遭遇空元素時
 
-flat()函數會自動清除陣列中空的元素
+`flat()` 函數會自動清除陣列中空的元素
 
 ```js
 var arr4 = [1, 2, , 4, 5];
@@ -61,20 +61,24 @@ var arr1 = [1, 2, [3, 4]];
 arr1.flat();
 
 //展開單層陣列
-arr1.reduce((acc, val) => acc.concat(val), []);// [1, 2, 3, 4]
+arr1.reduce((acc, val) => acc.concat(val), []); // [1, 2, 3, 4]
 ```
 
 ```js
 //欲展開更深層的巢狀結構請使用reduce與concat的遞迴
 function flattenDeep(arr1) {
-   return arr1.reduce((acc, val) => Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val), []);
+  return arr1.reduce(
+    (acc, val) =>
+      Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val),
+    []
+  );
 }
-flattenDeep(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+flattenDeep(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
 ```
 
 ```js
 //使用stack來實作非遞迴的展開
-var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
+var arr1 = [1, 2, 3, [1, 2, 3, 4, [2, 3, 4]]];
 function flatten(input) {
   const stack = [...input];
   const res = [];
@@ -91,15 +95,15 @@ function flatten(input) {
   //reverse to restore input order
   return res.reverse();
 }
-flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+flatten(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
 ```
 
-```plain
+```js
 // 递归版本的反嵌套
 function flatten(array) {
   var flattend = [];
   (function flat(array) {
-    array.forEach(function(el) {
+    array.forEach(function (el) {
       if (Array.isArray(el)) flat(el);
       else flattend.push(el);
     });
@@ -116,7 +120,7 @@ function flatten(array) {
 
 {{Compat}}
 
-## See also
+## 參見
 
 - {{jsxref("Array.prototype.flatMap()")}}
 - {{jsxref("Array.prototype.map()")}}

@@ -72,7 +72,7 @@ original_slug: Web/HTML/Elemento/slot
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("name")}}
+- `name`
   - : El nombre del slot.
 
     Un **slot nombrado** es un elemento `<slot>` con el atributo `name`.

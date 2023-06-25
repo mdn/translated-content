@@ -2,7 +2,7 @@
 title: ファイルの扱い
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
 l10n:
-  sourceCommit: 8ea72d18cda0ced287d9955621061e20a99bb003
+  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
@@ -43,18 +43,19 @@ l10n:
 1. 以前に選択した画像を `images` フォルダーにコピーします。
 2. `index.html` ファイルを開き、次のコードをファイルに挿入します。それが今のところ何を意味するのか気にしないでください。シリーズの後半で構造を詳しく見ていきます。
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="ja">
-      <head>
-        <meta charset="utf-8">
-        <title>テストページ</title>
-      </head>
-      <body>
-        <img src="" alt="テスト画像">
-      </body>
-    </html>
-    ```
+   ```html
+   <!DOCTYPE html>
+   <html lang="ja">
+     <head>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width" />
+       <title>テストページ</title>
+     </head>
+     <body>
+       <img src="" alt="テスト画像" />
+     </body>
+   </html>
+   ```
 
 3. `<img src="" alt="テスト画像">` という行は、ページに画像を挿入する HTML コードです。画像がどこにあるのかを HTML に伝える必要があります。画像は _images_ ディレクトリー内にあり、`index.html` と同じディレクトリーにあります。ファイル構造の中で `index.html` からその画像に移動するのに必要なファイルパスは `images/your-image-filename` です。例えば、私たちの画像は `firefox-icon.png` と呼ばれており、ファイルパスは `images/firefox-icon.png` になります。
 4. `src=""` コードの二重引用符の間の HTML コードにファイルパスを挿入してください。

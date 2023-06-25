@@ -35,5 +35,4 @@ build/
 /files/zh-cn/**/*.md
 
 # zh-tw
-/files/zh-tw/web/api/[a-e]*/**/*.md
-/files/zh-tw/web/javascript/**/*.md
+/files/zh-tw/web/javascript/reference/global_objects/[f-t]*/**/*.md

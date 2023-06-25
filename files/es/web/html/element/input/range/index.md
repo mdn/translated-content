@@ -38,11 +38,11 @@ Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un 
     <tr>
       <td><strong>Atributos comunes soportados</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("max", "input")}},
-        {{htmlattrxref("min", "input")}} y
-        {{htmlattrxref("step", "input")}}
+        <a href="/es/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#max"><code>max</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#min"><code>min</code></a> y
+        <a href="/es/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -63,7 +63,7 @@ Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un 
 
 ## Value
 
-El atributo {{htmlattrxref("value", "input")}} contiene un {{domxref("DOMString")}} que es la representación de tipo cadena del número seleccionado. El valor nunca es una cadena vacía (`""`). El valor por defecto es el punto intermedio entre los valores mínimo y máximo especificados, a menos que el valor máximo sea menor que el valor mínimo, en cuyo caso el valor por defecto será el valor del atributo `min`. El algoritmo de determina el valor por defecto es:
+El atributo [`value`](/es/docs/Web/HTML/Element/input#value) contiene un {{domxref("DOMString")}} que es la representación de tipo cadena del número seleccionado. El valor nunca es una cadena vacía (`""`). El valor por defecto es el punto intermedio entre los valores mínimo y máximo especificados, a menos que el valor máximo sea menor que el valor mínimo, en cuyo caso el valor por defecto será el valor del atributo `min`. El algoritmo de determina el valor por defecto es:
 
 ```js
 defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
@@ -87,7 +87,7 @@ Como regla general, si el usuario está más interesado en la distancia entre un
 
 ### Especificar los valores mínimo y máximo
 
-Por defecto, el valor mínimo es 0 y el máximo es 100. Si es necesario modificar dichos valores, podemos usar los atributos {{htmlattrxref("min", "input")}} y/o {{htmlattrxref("max", "input")}}. Podemos usar cualquier valor de coma flotante.
+Por defecto, el valor mínimo es 0 y el máximo es 100. Si es necesario modificar dichos valores, podemos usar los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y/o [`max`](/es/docs/Web/HTML/Element/input#max). Podemos usar cualquier valor de coma flotante.
 
 Por ejemplo, para usar un rango entre -10 y 10, usaremos:
 
@@ -99,7 +99,7 @@ Por ejemplo, para usar un rango entre -10 y 10, usaremos:
 
 ### Definir el tamaño de los saltos
 
-Por defecto, cada salto tiene valor 1, es decir el valor será siempre un número entero. Podemos cambiarlo mediante el atributo {{htmlattrxref("step")}}. Si necesitas, por ejemplo, un valor entre 5 y 10 con una precisión de dos decimales, debes indicar que el valor de `step` es 0.01:
+Por defecto, cada salto tiene valor 1, es decir el valor será siempre un número entero. Podemos cambiarlo mediante el atributo [`step`](/es/docs/Web/HTML/Global_attributes#step). Si necesitas, por ejemplo, un valor entre 5 y 10 con una precisión de dos decimales, debes indicar que el valor de `step` es 0.01:
 
 ```html
 <input type="range" min="5" max="10" step="0.01">
@@ -109,7 +109,7 @@ Por defecto, cada salto tiene valor 1, es decir el valor será siempre un númer
 
 #### Valor `any`
 
-Si quieres aceptar cualquier valor independientemente de la cantidad de decimales, puede especificar un valor de `"any"` al atrtibuto {{htmlattrxref("step", "input")}}:
+Si quieres aceptar cualquier valor independientemente de la cantidad de decimales, puede especificar un valor de `"any"` al atrtibuto [`step`](/es/docs/Web/HTML/Element/input#step):
 
 ```html
 <input type="range" min="0" max="3.14" step="any">
@@ -121,7 +121,7 @@ En el ejemplo, permitimos al usuario seleccionar cualquier valor entre 0 y π si
 
 ### Añadir marcas y etiquetas
 
-La especificación HTML permite a los navegadores cierta flexibilidad sobre cómo presentar el control range. En ningún sitio es más notoria dicha flexibilidad como a la hora de representar las marcas y las etiquetas de un rango. La especificación describe cómo añadir puntos personalizados al control range usando el atributo {{htmlattrxref("list", "input")}} y el elemento {{HTMLElement("datalist")}}, pero no hay requisitos o recomendaciones de estandarizar las marcas a lo largo del control.
+La especificación HTML permite a los navegadores cierta flexibilidad sobre cómo presentar el control range. En ningún sitio es más notoria dicha flexibilidad como a la hora de representar las marcas y las etiquetas de un rango. La especificación describe cómo añadir puntos personalizados al control range usando el atributo [`list`](/es/docs/Web/HTML/Element/input#list) y el elemento {{HTMLElement("datalist")}}, pero no hay requisitos o recomendaciones de estandarizar las marcas a lo largo del control.
 
 #### Mockups del control range
 
@@ -129,7 +129,7 @@ Como los navegadores tienen esta flexibilidad, y hasta la fecha ninguno admite t
 
 ##### El control rango sin adornos
 
-Cuando no especificas un atributo {{htmlattrxref("list", "input")}} al input range, un navegador que lo soporte mostrará lo siguie.
+Cuando no especificas un atributo [`list`](/es/docs/Web/HTML/Element/input#list) al input range, un navegador que lo soporte mostrará lo siguie.
 
 HTML
 
@@ -142,7 +142,7 @@ Captura de pantalla
 
 ##### Un control rango con marcas
 
-El siguiente rango utiliza el atributo `list` (al cual le especificamos el ID del elemento {{HTMLElement("datalist")}}) para definir la serie de marcas del rango. Hay once marcas, cada una de ellas mide un 10%, representadas por el {{htmlattrxref("value", "option")}} de cada elemento {{HTMLElement("option")}}.
+El siguiente rango utiliza el atributo `list` (al cual le especificamos el ID del elemento {{HTMLElement("datalist")}}) para definir la serie de marcas del rango. Hay once marcas, cada una de ellas mide un 10%, representadas por el [`value`](/es/docs/Web/HTML/Element/option#value) de cada elemento {{HTMLElement("option")}}.
 
 HTML
 
@@ -169,7 +169,7 @@ Captura de pantalla
 
 ##### Un control rango con marcas y etiquetas
 
-Puedes añadir etiquetas a tu control range usando el atributo {{htmlattrxref("label", "option")}} al elemento {{HTMLElement("option")}} correspondiente a cada marca que desees etiquetar.
+Puedes añadir etiquetas a tu control range usando el atributo [`label`](/es/docs/Web/HTML/Element/option#label) al elemento {{HTMLElement("option")}} correspondiente a cada marca que desees etiquetar.
 
 HTML
 
@@ -280,10 +280,10 @@ El tamaño del range es 150 pixeles de ancho por 20 pixeles de alto. Ponemos los
 
 No hay un patrón de validación disponible; sin embargo, se realizan las siguientes formas de validación automática:
 
-- Si el {{htmlattrxref("value", "input")}} está configurado con un valor que no se puede convertir en un número de coma flotante válido, la validación falla porque recibe una entrada incorrecta.
-- El valor no puede ser menor que el valor de {{htmlattrxref("min", "input")}}. Por defecto es 0.
-- El valor no puede ser mayor que el {{htmlattrxref("max", "input")}}. Por defecto es 100.
-- El valor será un múltiplo del valor de {{htmlattrxref("step", "input")}}. Por defecto es 1.
+- Si el [`value`](/es/docs/Web/HTML/Element/input#value) está configurado con un valor que no se puede convertir en un número de coma flotante válido, la validación falla porque recibe una entrada incorrecta.
+- El valor no puede ser menor que el valor de [`min`](/es/docs/Web/HTML/Element/input#min). Por defecto es 0.
+- El valor no puede ser mayor que el [`max`](/es/docs/Web/HTML/Element/input#max). Por defecto es 100.
+- El valor será un múltiplo del valor de [`step`](/es/docs/Web/HTML/Element/input#step). Por defecto es 1.
 
 ## Ejemplos
 

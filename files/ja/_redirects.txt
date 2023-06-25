@@ -687,8 +687,6 @@
 /ja/docs/DOM/Storage	/ja/docs/Web/API/Web_Storage_API
 /ja/docs/DOM/TouchList	/ja/docs/Web/API/TouchList
 /ja/docs/DOM/Touch_events	/ja/docs/Web/API/Touch_events
-/ja/docs/DOM/UserProximityEvent	/ja/docs/Web/API/UserProximityEvent
-/ja/docs/DOM/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/DOM/Using_full-screen_mode	/ja/docs/Web/API/Fullscreen_API
 /ja/docs/DOM/Using_media_queries_from_code	/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /ja/docs/DOM/Using_media_queries_from_code-redirect-1	/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries
@@ -2640,6 +2638,8 @@
 /ja/docs/Web/API/CSSNumericValue/parse	/ja/docs/Web/API/CSSNumericValue/parse_static
 /ja/docs/Web/API/CSSOMString	/ja/docs/Glossary/String
 /ja/docs/Web/API/CSSStyleSheet.insertRule	/ja/docs/Web/API/CSSStyleSheet/insertRule
+/ja/docs/Web/API/CSSStyleValue/parse	/ja/docs/Web/API/CSSStyleValue/parse_static
+/ja/docs/Web/API/CSSStyleValue/parseAll	/ja/docs/Web/API/CSSStyleValue/parseAll_static
 /ja/docs/Web/API/CSS_Painting_API/ガイド	/ja/docs/Web/API/CSS_Painting_API/Guide
 /ja/docs/Web/API/CSS_Typed_Object_Model_API	/ja/docs/Web/API/CSS_Object_Model#CSS_Typed_Object_Model
 /ja/docs/Web/API/CanvasRenderingContext2D.drawFocusIfNeeded	/ja/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
@@ -3085,8 +3085,6 @@
 /ja/docs/Web/API/URL/createObjectURL	/ja/docs/Web/API/URL/createObjectURL_static
 /ja/docs/Web/API/URL/revokeObjectURL	/ja/docs/Web/API/URL/revokeObjectURL_static
 /ja/docs/Web/API/USVString	/ja/docs/Glossary/String
-/ja/docs/Web/API/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent
-/ja/docs/Web/API/UserProximityEvent/near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/Web/API/User_Timing_API	/ja/docs/Web/API/Performance_API/User_timing
 /ja/docs/Web/API/VRDevice	/ja/docs/Web/API/VRDisplay
 /ja/docs/Web/API/VRDevice/cancelAnimationFrame	/ja/docs/Web/API/VRDisplay/cancelAnimationFrame
@@ -3521,6 +3519,7 @@
 /ja/docs/Web/CSS/:host()	/ja/docs/Web/CSS/:host_function
 /ja/docs/Web/CSS/:matches	/ja/docs/Web/CSS/:is
 /ja/docs/Web/CSS/@font-face/font-variant	/ja/docs/Web/CSS/@font-face
+/ja/docs/Web/CSS/@media/update-frequency	/ja/docs/Web/CSS/@media/update
 /ja/docs/Web/CSS/@scroll-timeline	/ja/docs/Web/CSS/scroll-timeline
 /ja/docs/Web/CSS/@viewport	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/@viewport/height	/ja/docs/Web/CSS
@@ -3633,6 +3632,7 @@
 /ja/docs/Web/CSS/Media_Queries/Using_media_queries	/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /ja/docs/Web/CSS/Motion_Path	/ja/docs/Web/CSS/CSS_motion_path
 /ja/docs/Web/CSS/Other_Resources	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/Paged_Media	/ja/docs/Web/CSS/CSS_paged_media
 /ja/docs/Web/CSS/Reference/@viewport	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/@viewport/max-zoom	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/@viewport/min-zoom	/ja/docs/Web/CSS
@@ -4554,7 +4554,6 @@
 /ja/docs/WebAPI/Battery_Status	/ja/docs/Web/API/Battery_Status_API
 /ja/docs/WebAPI/Managing_screen_orientation	/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ja/docs/WebAPI/Network_Information	/ja/docs/Web/API/Network_Information_API
-/ja/docs/WebAPI/Proximity	/ja/docs/Web/API/Proximity_Events
 /ja/docs/WebAPI/Using_Web_Notifications	/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /ja/docs/WebAPI/Using_geolocation	/ja/docs/Web/API/Geolocation_API
 /ja/docs/WebAssembly/Index	/ja/docs/WebAssembly

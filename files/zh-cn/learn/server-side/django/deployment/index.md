@@ -615,7 +615,7 @@ heroku ps   #Display dyno status
 
 如果您需要比这些更多的信息，您将需要开始研究 [Django Logging](https://docs.djangoproject.com/en/2.0/topics/logging/)。
 
-## **总结**
+## 总结
 
 本教程讲述如何在生产环境中配置 Django 应用，也是本系列 Django 教程的结尾。我们希望你觉得教程有用。你可以在 Github 上取得一个完全可工作版本的[源码（用力点击此处）](https://github.com/mdn/django-locallibrary-tutorial)。
 

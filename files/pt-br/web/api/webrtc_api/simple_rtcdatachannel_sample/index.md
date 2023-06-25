@@ -235,7 +235,7 @@ Quando o usuário pressiona o botão "Enviar", o método sendMessage() que estab
   }
 ```
 
-Primeiro, o texto da mensagem é obtido dos atributos do elemento de _input_ {{htmlattrxref("value", "input")}} . Isso é enviado para o ponto remoto, ligando para {{domxref("RTCDataChannel.send", "sendChannel.send()")}}. E está tudo aí! O resto deste método é apenas um pouco de açúcar para experiência do usuário - a caixa de entrada é esvaziada e re-focada para que o usuário comece imediatamente a digitar outra mensagem.
+Primeiro, o texto da mensagem é obtido dos atributos do elemento de _input_ [`value`](/pt-BR/docs/Web/HTML/Element/input#value) . Isso é enviado para o ponto remoto, ligando para {{domxref("RTCDataChannel.send", "sendChannel.send()")}}. E está tudo aí! O resto deste método é apenas um pouco de açúcar para experiência do usuário - a caixa de entrada é esvaziada e re-focada para que o usuário comece imediatamente a digitar outra mensagem.
 
 ### Recebendo mensagens
 

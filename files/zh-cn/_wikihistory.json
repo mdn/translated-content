@@ -7757,10 +7757,6 @@
     "modified": "2019-03-23T22:09:56.370Z",
     "contributors": ["CGerAJ"]
   },
-  "Web/API/DeviceProximityEvent": {
-    "modified": "2019-03-18T21:47:06.146Z",
-    "contributors": ["MaxTime"]
-  },
   "Web/API/Document": {
     "modified": "2020-10-15T21:04:40.161Z",
     "contributors": [
@@ -13090,7 +13086,7 @@
     "modified": "2019-03-23T22:30:26.556Z",
     "contributors": ["jiraiya"]
   },
-  "Web/API/PushManager/supportedContentEncodings": {
+  "Web/API/PushManager/supportedContentEncodings_static": {
     "modified": "2020-10-15T22:14:59.278Z",
     "contributors": ["chenqingyue"]
   },
@@ -13221,14 +13217,6 @@
   "Web/API/RTCSessionDescription": {
     "modified": "2019-09-10T06:45:22.765Z",
     "contributors": ["IsolatedTraveler", "SolitudeRA"]
-  },
-  "Web/API/RTCStats": {
-    "modified": "2020-10-15T22:31:33.896Z",
-    "contributors": ["Sheppy"]
-  },
-  "Web/API/RTCStats/id": {
-    "modified": "2020-10-15T22:31:33.589Z",
-    "contributors": ["alexwen.cn"]
   },
   "Web/API/RTCStatsReport": {
     "modified": "2020-10-15T22:31:34.788Z",
@@ -18342,6 +18330,10 @@
     "modified": "2019-03-23T23:28:24.667Z",
     "contributors": ["Bayes", "xgqfrms-GitHub", "fscholz", "Nightingale"]
   },
+  "Web/CSS/CSS_paged_media": {
+    "modified": "2020-03-18T05:04:22.843Z",
+    "contributors": ["RainSlide", "Princess_Knight"]
+  },
   "Web/CSS/CSS_positioned_layout": {
     "modified": "2019-03-23T22:16:58.595Z",
     "contributors": ["ZZES_REN"]
@@ -18611,10 +18603,6 @@
   "Web/CSS/Layout_mode": {
     "modified": "2019-03-23T22:27:53.945Z",
     "contributors": ["wh1msy", "xgqfrms-GitHub", "xgqfrms"]
-  },
-  "Web/CSS/Paged_Media": {
-    "modified": "2020-03-18T05:04:22.843Z",
-    "contributors": ["RainSlide", "Princess_Knight"]
   },
   "Web/CSS/Privacy_and_the_:visited_selector": {
     "modified": "2019-03-23T23:07:40.024Z",
@@ -20880,22 +20868,6 @@
   "Web/CSS/scroll-margin-top": {
     "modified": "2020-11-27T01:35:52.693Z",
     "contributors": ["EryouHao"]
-  },
-  "Web/CSS/scroll-snap-coordinate": {
-    "modified": "2019-01-16T21:50:21.410Z",
-    "contributors": ["rockywen"]
-  },
-  "Web/CSS/scroll-snap-destination": {
-    "modified": "2019-03-23T22:42:44.523Z",
-    "contributors": ["rockywen"]
-  },
-  "Web/CSS/scroll-snap-points-x": {
-    "modified": "2019-03-23T22:42:35.765Z",
-    "contributors": ["rockywen"]
-  },
-  "Web/CSS/scroll-snap-points-y": {
-    "modified": "2019-03-23T22:42:33.911Z",
-    "contributors": ["rockywen"]
   },
   "Web/CSS/scroll-snap-type": {
     "modified": "2020-10-15T21:40:51.208Z",
