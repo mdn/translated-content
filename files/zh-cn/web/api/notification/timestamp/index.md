@@ -5,9 +5,9 @@ slug: Web/API/Notification/timestamp
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{domxref("Notification")}} 接口的 **`timestamp`** 只读属性返回一个数字，在 {{domxref("Notification.Notification"," Notification()")}} 构造函数的 `timestamp` 选项中指定。
+{{domxref("Notification")}} 接口的 **`timestamp`** 只读属性返回一个数字。此属性通过 {{domxref("Notification.Notification"," Notification()")}} 构造函数的 `timestamp` 选项指定。
 
-通知的时间戳可以表示创建通知的事件的时间（自 1970 年 1 月 1 日 00:00:00 UTC 时间以来的毫秒数），或者它可以是您希望与通知相关联的任意时间戳。例如，一个即将召开的会议的时间戳可以设置在未来，而一条错过的消息的时间戳可以设置在过去。
+通知的时间戳可以表示创建通知的事件的时间（自 1970 年 1 月 1 日 00:00:00 UTC 时间以来的毫秒数），或者它可以是你希望与通知相关联的任意时间戳。例如，一个即将召开的会议的时间戳可以设置在未来，而一条错过的消息的时间戳可以设置在过去。
 
 ## 值
 
