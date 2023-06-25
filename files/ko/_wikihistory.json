@@ -5283,10 +5283,6 @@
     "modified": "2020-08-05T01:05:50.434Z",
     "contributors": ["alattalatta", "Netaras"]
   },
-  "Web/CSS/Paged_Media": {
-    "modified": "2019-03-23T22:33:25.305Z",
-    "contributors": ["Netaras"]
-  },
   "Web/CSS/Pseudo-classes": {
     "modified": "2020-08-13T04:55:02.947Z",
     "contributors": ["alattalatta", "Netaras"]
@@ -10850,6 +10846,10 @@
   "WebAssembly/existing_C_to_Wasm": {
     "modified": "2019-03-18T21:28:25.734Z",
     "contributors": ["limkukhyun"]
+  },
+  "conflicting/Web/CSS/CSS_paged_media": {
+    "modified": "2019-03-23T22:33:25.305Z",
+    "contributors": ["Netaras"]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal": {
     "modified": "2020-03-12T19:44:24.834Z",
