@@ -3,7 +3,7 @@ title: 使用 XSLT 转换 XML
 slug: Web/XSLT/Transforming_XML_with_XSLT
 ---
 
-{{XSLTRef}}
+{{XsltSidebar}}
 
 ## 概览
 
