@@ -9,7 +9,7 @@ slug: Web/API/Notification/silent
 
 ## 值
 
-一个布尔值。`false` 是默认值；`true` 使通知静音。
+一个布尔值。默认值是 `false`；设为 `true` 使通知静音。
 
 ## 示例
 
