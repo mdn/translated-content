@@ -7,10 +7,10 @@ l10n:
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Keyed_collections")}}
 
-이번 장에서는 인덱스 값에 의해 정렬이 되는 데이터 자료구조에 대해 소개합니다. 배열과 유사 배열 생성자인
-{{jsxref("Array")}} 객체와 {{jsxref("TypedArray")}} 객체 같은 생성자들을 포함합니다.
+이번 장에서는 인덱스 값에 의해 정렬이 되는 데이터 컬렉션에 대해 소개합니다. 배열과 유사 배열 구조인
+{{jsxref("Array")}} 객체와 {{jsxref("TypedArray")}} 객체를 포함합니다.
 
-배열은 이름과 인덱스로 참조되는 정렬된 값들의 집합입니다.
+배열은 이름과 인덱스를 사용하여 참조하는 값들의 순서가 있는 목록입니다.
 
 예를 들면, 숫자로 된 사원번호로 인덱스되고 사원명을 가지고 있는 `emp`라는 배열을 고려해보겠습니다.
 그래서 `emp[0]`은 사원번호 0번, `emp[1]`는 사원번호 1번, 이런 식이 되겠죠.
@@ -21,7 +21,7 @@ JavaScript는 명시적인 배열 데이터 형식을 가지고 있지 않습니
 정규 표현식과 함께 사용할 수 있는 다양한 속성이 있습니다.
 
 이 글에서는 배열에 초점을 맞추겠지만, 배열과 형식화 배열(typed array)은 유사한 메서드를 많이 공유하기 때문에
-타입 배열에도 동일한 개념이 많이 적용됩니다. 타입 배열에 대한 자세한 내용은
+형식화 배열에도 동일한 개념이 많이 적용됩니다. 형식화 배열에 대한 자세한 내용은
 [형식화 배열 가이드](/ko/docs/Web/JavaScript/Guide/Typed_arrays)를 참조하세요.
 
 ## 배열 생성
@@ -155,7 +155,7 @@ const myArray = ["Mango", "Apple", "Orange"];
 다음 예제에서 `'Dusty'`는 인덱스 `30`번 째에 위치하기 때문에 `cats.length`는 `30 + 1`을 반환합니다.
 
 기억하실 것은 JavaScript 배열의 인덱스는 항상 `1`부터가 아닌 `0`부터 시작한다는 점입니다.
-이는 아래 예제처럼 배열의 `length` 속성은 배열에 저장되어 있는 가장 큰 인덱스보다 1만큼 큰 값이 된다는 뜻입니다.
+이는 아래 예제처럼 배열의 `length` 속성은 배열에 저장된 가장 큰 인덱스보다 1만큼 큰 값이 된다는 뜻입니다.
 
 ```js
 const cats = [];
@@ -252,12 +252,12 @@ nonsparseArray.forEach((element) => {
 JavaScript 객체의 요소는 표준 객체 속성으로 저장되기 때문에 {{jsxref("Statements/for...in","for...in")}} 반복문을 사용하여 JavaScript 배열을 반복하는 것은 바람직하지 않습니다.
 왜냐면 일반 요소들과 그리고 모든 열거할 수 있는 속성들이 나열되기 때문입니다.
 
-### 배열 객체의 메서드
+### 배열의 메서드
 
 {{jsxref("Array")}} 객체는 다음과 같은 메서드들을 가지고 있습니다.
 
 [`concat()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/concat) 메서드는
-두개의 배열을 합쳐 새로운 배열을 반환합니다.
+두 개의 배열을 합쳐 새로운 배열을 반환합니다.
 
 ```js
 let myArray = ["1", "2", "3"];
@@ -424,7 +424,7 @@ a.forEach((element) => {
 // c
 ```
 
-콜백을 받는 `forEach` 메서드 (그리고 아래의 다른 메서드)는 어떤 방식으로든 전체 배열을 반복하기 때문에
+콜백을 받는 `forEach` 메서드(그리고 아래의 다른 메서드)는 어떤 방식으로든 전체 배열을 반복하기 때문에
 반복적인(iterative) 메서드로 알려져 있습니다. 각 메서드는 `thisArg`라는 선택적 두 번째 인수를 받습니다.
 이 인수가 제공되면 `thisArg`는 콜백 함수 안에 있는 `this` 키워드의 값이 됩니다.
 제공되지 않으면, 함수가 명시적 객체 컨텍스트 외부에서 호출되는 다른 경우와 마찬가지로, `this`는 함수가 [엄격한 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)가 아닐 경우 전역 객체([`window`](/ko/docs/Web/API/Window), [`globalThis`](/ko/docs/Web/JavaScript/Reference/Global_Objects/globalThis) 등)을 참조하게 됩니다. 엄격할 모드일 경우 `undefined`을 참조합니다.
@@ -605,7 +605,7 @@ for (const key in arr) {
 const objectSpread = { ...arr }; // { '0': 1, '1': 2, '4': 5 }
 ```
 
-배열 메서드가 희소 배열에서 작동하는 방식에 대한 전체 목록은 [`Array` 레퍼런스 페이지](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#array_methods_and_empty_slots)를 참조하세요.
+배열 메서드가 희소 배열에서 작동하는 방식에 대한 전체 목록은 [`Array` 참조 페이지](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array#array_methods_and_empty_slots)를 참조하세요.
 
 ## 다차원 배열
 
