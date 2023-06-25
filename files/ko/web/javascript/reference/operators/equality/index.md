@@ -6,7 +6,7 @@ l10n:
 ---
 {{jsSidebar("Operators")}}
 
-동등 연산자(==)는 두 개의 피연산자가 동일한지 확인하며, Boolean값을 반환합니다. [일치 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)와는 다르게 다른 타입의 피연산자들끼리의 비교를 시도합니다.
+동등 연산자(==)는 두 개의 피연산자가 동일한지 확인하며, 불리언 결과를 반환합니다. [일치 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)와는 다르게 다른 타입의 피연산자들끼리의 비교를 시도합니다.
 
 {{EmbedInteractiveExample("pages/js/expressions-equality.html")}}
 
@@ -41,7 +41,7 @@ x == y
 
 [일치 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality) (`===`)와의 가장 두드러지는 차이점은 일치 연산자는 타입 변환을 시도하지 않는다는 것입니다. 일치 연산자는 다른 타입을 가진 피연산자는 다르다고 판단합니다. 일치 연산자는 기본적으로 1단계만 수행하고 다른 모든 경우에 `false`를 반환합니다.
 
-위 알고리즘에는 "의도적인 위반"이 있습니다. 한 피연산자가 [`document.all`](/ko/docs/Web/API/Document/all)인 경우, `undefined`처럼 처리됩니다. 이는 `document.all == null`은 `true`지만, `document.all === undefined && document.all === null`이 `false`라는 것을 의미합니다.
+위 알고리즘에는 "고의적 위반"이 있습니다. 한 피연산자가 [`document.all`](/ko/docs/Web/API/Document/all)인 경우, `undefined`처럼 처리됩니다. 이는 `document.all == null`은 `true`지만, `document.all === undefined && document.all === null`이 `false`라는 것을 의미합니다.
 
 ## 예시
 
