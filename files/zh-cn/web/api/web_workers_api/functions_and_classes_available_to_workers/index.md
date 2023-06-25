@@ -13,7 +13,7 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 
 - {{domxref("DedicatedWorkerGlobalScope")}} 用于专用 worker
 - {{domxref("SharedWorkerGlobalScope")}} 用于共享 worker
-- {{domxref("ServiceWorkerGlobalScope")}} 用于 [service workers](/zh-CN/docs/Web/API/Service_Worker_API)
+- {{domxref("ServiceWorkerGlobalScope")}} 用于 [service worker](/zh-CN/docs/Web/API/Service_Worker_API)
 
 一些函数在所有的 worker 和主线程中均可用（来自 `WindowOrWorkerGlobalScope`）：
 
