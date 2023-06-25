@@ -13,7 +13,7 @@ slug: Web/API/Notification/silent
 
 ## 示例
 
-以下代码段旨在触发静默通知；创建一个简单的 `options` 对象，然后调用 {{DOMxRef("Notification.Notification","Notification()")}} 构造函数触发通知。
+以下代码片段旨在触发静默通知；创建一个简单的 `options` 对象，然后调用 {{DOMxRef("Notification.Notification","Notification()")}} 构造函数触发通知。
 
 ```js
 const options = {
