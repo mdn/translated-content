@@ -23,7 +23,7 @@ worker 可以依次生成新的 worker，只要这些 worker 与父页面托管�
 
 - 专用 worker 是由单个脚本使用的 worker。该上下文由 {{DOMxRef("DedicatedWorkerGlobalScope")}} 对象表示。
 - {{DOMxRef("SharedWorker","Shared worker")}} 是可以由在不同窗口、IFrame 等中运行的多个脚本使用的 worker ，只要它们与 worker 在同一域中。它们比专用的 worker 稍微复杂一点——脚本必须通过活动端口进行通信。
-- [Service Workers](/zh-CN/docs/Web/API/Service_Worker_API) 基本上是作为代理服务器，位于 web 应用程序、浏览器和网络（如果可用）之间。它们的目的是（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。它们还将允许访问推送通知和后台同步 API。
+- [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 基本上是作为代理服务器，位于 web 应用程序、浏览器和网络（如果可用）之间。它们的目的是（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。它们还将允许访问推送通知和后台同步 API。
 
 > **备注：** 根据 [web worker 规范](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2)，worker 错误事件不应该冒泡（参见 [Firefox bug 1188141](https://bugzil.la/1188141)）。该规范已在 Firefox 42 中实现。
 
@@ -120,7 +120,7 @@ worker 也可以派生其他 worker，所以这些 API 也是可用的：
 - [基本的共享 worker 示例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) （[运行共享 worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)）。
 - [OffscreenCanvas worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/offscreen-canvas-worker) （[运行 OffscreenCanvas worker](https://mdn.github.io/dom-examples/web-workers/offscreen-canvas-worker/)）。
 
-你可以在[使用 web workers](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)中找到有关这些演示是如何工作的更多信息。
+你可以在[使用 web worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)中找到有关这些演示是如何工作的更多信息。
 
 ## 规范
 
@@ -128,7 +128,7 @@ worker 也可以派生其他 worker，所以这些 API 也是可用的：
 
 ## 相关链接
 
-- [使用 Web Workers](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [使用 Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
 - {{domxref("Worker")}} 接口
 - {{domxref("SharedWorker")}} 接口
 - [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
