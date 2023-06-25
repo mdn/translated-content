@@ -5,15 +5,15 @@ slug: Web/API/Notification/vibrate
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{domxref("Notification")}} 接口的 `vibrate` 只读属性指定当通知触发时设备振动硬件发出的[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)，在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `vibrate` 选项中指定。
+{{domxref("Notification")}} 接口的 `vibrate` 只读属性指定当通知触发时设备振动硬件发出的[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)。此属性通过 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `vibrate` 选项指定。
 
 ## 值
 
-一个[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)，在 [振动 API 规范](https://w3c.github.io/vibration/)中所指定。
+一个[振动 API 规范](https://w3c.github.io/vibration/)所指定的[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)。
 
 ## 示例
 
-以下代码段旨在创建同时触发设备振动的通知；首先创建一个简单的 `options` 对象，然后使用 `Notification()` 构造函数触发通知。
+以下代码片段旨在创建同时触发设备振动的通知；首先创建一个简单的 `options` 对象，然后使用 `Notification()` 构造函数触发通知。
 
 ```js
 const options = {
