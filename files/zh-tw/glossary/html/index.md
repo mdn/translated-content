@@ -3,6 +3,8 @@ title: HTML
 slug: Glossary/HTML
 ---
 
+{{GlossarySidebar}}
+
 {{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
 
 超文件標示語言（**HTML**，HyperText Markup Language）是用於指定網頁結構的描述性語言。

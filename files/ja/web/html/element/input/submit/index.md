@@ -2,44 +2,12 @@
 title: <input type="submit">
 slug: Web/HTML/Element/input/submit
 l10n:
-  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
+  sourceCommit: f6d04a43eadf5ab26a3488942dfb318b58234eb5
 ---
 
 {{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`submit`** 型は、ボタンとして描画されます。 {{domxref("Element/click_event", "click")}} イベントが発生したとき（ふつうはユーザーがボタンをクリックしたとき）、{{Glossary("user agent", "ユーザーエージェント")}}はサーバーへフォームを送信しようとします。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">値</a></strong></td>
-      <td>ボタンのラベルとして使用する文字列</td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>{{domxref("Element/click_event", "click")}}</td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> および
-        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>なし</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 値
 
@@ -78,7 +46,7 @@ l10n:
 文字列で、フォームのデータをサーバーに送信する際に使われるエンコーディング方法を識別します。許されている値は 3 つです。
 
 - `application/x-www-form-urlencoded`
-  - : これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使って URL エンコーディングした後で送信します。
+  - : これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使って [URL エンコーディング](https://ja.wikipedia.org/wiki/パーセントエンコーディング)した後で送信します。
 - `multipart/form-data`
   - : データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーに送信することができます。フォームに {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) が `file` ([`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)) が含まれている場合は、このエンコーディング型を*使わなければなりません*。
 - `text/plain`
@@ -128,7 +96,7 @@ l10n:
 
 `<input type="submit">` ボタンはフォームを送信するために使用されます。もしカスタムボタンを作成し、JavaScript で動作をカスタマイズしたい場合は、[`<input type="button">`](/ja/docs/Web/HTML/Element/input/button) か、より好ましくは {{htmlelement("button")}} 要素を使用しなければいけません。
 
-もしフォームのボタンを作成するのに `<button>` 要素を使用するのであれば、次のことに注意してください。 `<button>` が {{HTMLElement("form")}} の中に 1 つしかない場合、そのボタンは "submit" ボタンとして扱われます。ですから、どのボタンが送信ボタンであるかを明示的に指定する習慣をつけるとよいでしょう。
+もしフォームのボタンを作成するのに `<button>` 要素を使用するのであれば、次のことに注意してください。`<button>` が {{HTMLElement("form")}} の中にある場合、そのボタンは "submit" ボタンとして扱われます。ですから、どのボタンが送信ボタンであるかを明示的に指定する習慣をつけるとよいでしょう。
 
 ### 単純な送信ボタン
 
@@ -154,11 +122,11 @@ l10n:
 
 送信すると、データの名前と値のペアがサーバーに送信されます。この例では、文字列は `text=usertext` となります。"usertext" はユーザーが入力したテキストで、特殊文字を保持するためにエンコードされています。どこでどのようにデータを送信するかは `<form>` の設定によります。詳しくは[フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)を参照してください。
 
-### 送信するキーボードショートカットの追加
+### 送信ボタンへのキーボードショートカットの追加
 
 キーボードショートカットは、アクセスキーやキーボード相当物とも呼ばれ、ユーザーがキーボードのキーまたはキーの組み合わせを使ってボタンを発生させることができます。送信ボタンにキーボードショートカットを追加するには、それが意味をなす他の {{HTMLElement("input")}} と同じように、[`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey) グローバル属性を使用してください。
 
-この例では、 <kbd>s</kbd> がアクセスキーとして指定されています（<kbd>s</kbd> と、あなたのブラウザー/OS の組み合わせに応じた特定の修飾キーを押す必要があります。ユーザーエージェント自身のキーボードショートカットとの競合を避けるために、ホストコンピュータ上の他のショートカットとは異なる修飾キーがアクセスキーに使用されます。詳しくは [`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey) を参照してください。
+この例では、 <kbd>s</kbd> がアクセスキーとして指定されています（<kbd>s</kbd> と、あなたのブラウザー/OS の組み合わせに応じた特定の修飾キーを押す必要があります）。ユーザーエージェント自身のキーボードショートカットとの競合を避けるために、ホストコンピュータ上の他のショートカットとは異なる修飾キーがアクセスキーに使用されます。詳しくは [`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey) を参照してください。
 
 以下は、前回の例に <kbd>s</kbd> アクセスキーを追加した例です。
 
@@ -176,7 +144,7 @@ l10n:
 
 例えば、 Mac 版 Firefox では <kbd>Control</kbd>-<kbd>Option</kbd>-<kbd>S</kbd> を押すと送信ボタンを起動しますが、Windows 版 Chrome では <kbd>Alt</kbd>+<kbd>S</kbd> を使用します。
 
-{{EmbedLiveSample("Adding_a_submit_keyboard_shortcut", 650, 100)}}
+{{EmbedLiveSample("Adding_a_keyboard_shortcut_to_a_submit_button", 650, 100)}}
 
 上の例の問題点は、ユーザーがアクセスキーが何であるかを知らないということです。 特に、競合を避けるために変更する修飾子は通常標準的でないため、このようなことが起こります。サイトを構築する際には、サイトのデザインを邪魔しないような方法でこの情報を提供するようにしてください（例えば、サイトのアクセスキーが何であるかについての情報を指し示す、簡単にアクセスできるリンクを提供する）。ボタンにツールチップを追加する（[`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性を使用する）こともできますが、アクセシビリティの観点からは完全な解決策とは言えません。
 
@@ -200,6 +168,42 @@ l10n:
 
 上に簡単な例を記載しています。送信ボタンについては、実のところこれ以上言うべきことはありません。この種のコントロールが「単純なボタン」と呼ばれることがあるのはそのためです。
 
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">値</a></strong></td>
+      <td>ボタンのラベルとして使用する文字列</td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>{{domxref("Element/click_event", "click")}}</td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> および
+        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+    </tr>
+  </tbody>
+</table>
+
 ## 仕様書
 
 {{Specifications}}
@@ -212,7 +216,6 @@ l10n:
 
 - {{HTMLElement("input")}} およびそれが実装している {{domxref("HTMLInputElement")}} インターフェイス
 - [フォームとボタン](/ja/docs/Learn/Forms/Basic_native_form_controls#実際のボタン)
-- [フォーム（アクセシビリティ）](/ja/docs/Web/Accessibility/ARIA/forms)
 - [HTML フォーム](/ja/docs/Learn/Forms)
 - {{HTMLElement("button")}} 要素
 - [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

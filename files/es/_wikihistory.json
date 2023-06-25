@@ -5085,7 +5085,7 @@
     "modified": "2019-03-23T22:40:00.540Z",
     "contributors": ["chrisdavidmills"]
   },
-  "Web/API/PushManager/supportedContentEncodings": {
+  "Web/API/PushManager/supportedContentEncodings_static": {
     "modified": "2020-10-15T22:03:55.545Z",
     "contributors": ["Erto"]
   },
@@ -13738,7 +13738,7 @@
       "javichito"
     ]
   },
-  "Web/Progressive_web_apps/Installing": {
+  "Web/Progressive_web_apps/Guides/Installing": {
     "modified": "2020-09-20T03:25:41.762Z",
     "contributors": ["Nachec"]
   },

@@ -27,21 +27,21 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
   - : Esse atributo booleano indica que o usuário não poderá interagir com o botão. Se esse atributo não for especificado, o botão herdará a configuração do elemento que o contém, por exemplo {{HTMLElement("fieldset")}}, se não existir nenhum elemento com o atributo **disabled** definido, então o botão estará habilitado.
 
-    Firefox irá, diferente de outros navegadores, por padrão, [persiste com o estado dinâmico desativado](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} sob as páginas carregadas. Use o atributo {{htmlattrxref("autocomplete","button")}} para controlar esse recurso.
+    Firefox irá, diferente de outros navegadores, por padrão, [persiste com o estado dinâmico desativado](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} sob as páginas carregadas. Use o atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/button#autocomplete) para controlar esse recurso.
 
 - {{htmlattrdef("form")}}
   - : O elemento de formulário que o botão está associado (é o _formulário proprietário_). O valor do atributo deve ser o atributo **id** de um elemento {{HTMLElement("form")}} no mesmo documento. Se esse atributo não for especificado, o elemento `<button>` deve ser descendente de um elemento de formulário. Esse atributo permite que você coloque elementos `<button>` em qualquer lugar do documento, não apenas como descendente de seus elementos {{HTMLElement("form")}}.
 - {{htmlattrdef("formaction")}}
-  - : A URI de um programa que processa a informação submetida pelo botão. Se especificado, ele sobrescreve o atributo {{htmlattrxref("action","form")}} do formulário proprietário do botão.
+  - : A URI de um programa que processa a informação submetida pelo botão. Se especificado, ele sobrescreve o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action) do formulário proprietário do botão.
 - {{htmlattrdef("formenctype")}}
 
   - : Se o botão é um botão de envio, esse atributo especifica o tipo de conteúdo que é usado para enviar o formulário para o servidor; Possíveis valores são:
 
     - `application/x-www-form-urlencoded`: O valor padrão se o atributo não está especificado.
-    - `multipart/form-data`: Use esse valor se você está usando um elemento {{HTMLElement("input")}} com o atributo {{htmlattrxref("type","input")}} definido para o `arquivo`.
+    - `multipart/form-data`: Use esse valor se você está usando um elemento {{HTMLElement("input")}} com o atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type) definido para o `arquivo`.
     - `text/plain`
 
-    Se esse atributo fro especificado, ele sobrescreve o atributo {{htmlattrxref("enctype","form")}} do formulário proprietário do botão.
+    Se esse atributo fro especificado, ele sobrescreve o atributo [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) do formulário proprietário do botão.
 
 - {{htmlattrdef("formmethod")}}
 
@@ -50,13 +50,13 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
     - `post`: Os dados obtidos do formulário são incluídos em seu corpo e enviados para o servidor.
     - `get`: Os dados obtidos do formulário são anexados aos atributos URI do **formulário**, com uma '?' como separador, e o resultado URI é enviado para o servidor. Use esse método quando o formulário não possui efeitos colaterais e contém apenas caracteres ASCII.
 
-    Se especificado, esse atributo sobrescreve o atributo {{htmlattrxref("method","form")}} do formulário proprietário do botão.
+    Se especificado, esse atributo sobrescreve o atributo [`method`](/pt-BR/docs/Web/HTML/Element/form#method) do formulário proprietário do botão.
 
 - {{htmlattrdef("formnovalidate")}}
-  - : Se o botão é um botão de envio, esse atributo Booleano especifica que o formulário não é para ser validado quando submetido. Se esse atributo for especificado, ele sobrescreve o atributo {{htmlattrxref("novalidate","form")}} do formulário proprietário do botão.
+  - : Se o botão é um botão de envio, esse atributo Booleano especifica que o formulário não é para ser validado quando submetido. Se esse atributo for especificado, ele sobrescreve o atributo [`novalidate`](/pt-BR/docs/Web/HTML/Element/form#novalidate) do formulário proprietário do botão.
 - {{htmlattrdef("formtarget")}}
 
-  - : Se o botão é um botão de envio, esse atributo é um nome ou palavra-chave indicando onde exibir a resposta que é recebida após o envio do formulário. Esse é um nome de, ou palavra-chave para, um _contexto de navegação_ (por exemplo, uma aba, janela ou quadro embutido). Se esse atributo é especificado, ele sobrescreve o atributo {{htmlattrxref("target", "form")}} do formulário proprietário do botão. As seguintes palavras-chaves possuem significados especiais:
+  - : Se o botão é um botão de envio, esse atributo é um nome ou palavra-chave indicando onde exibir a resposta que é recebida após o envio do formulário. Esse é um nome de, ou palavra-chave para, um _contexto de navegação_ (por exemplo, uma aba, janela ou quadro embutido). Se esse atributo é especificado, ele sobrescreve o atributo [`target`](/pt-BR/docs/Web/HTML/Element/form#target) do formulário proprietário do botão. As seguintes palavras-chaves possuem significados especiais:
 
     - `_self`: Carrega a resposta no mesmo contexto navegação como o atual. Esse valor é o padrão se o atributo não é especificado.
     - `_blank`: Carrega a resposta em um contexto de navegação sem nome.
@@ -112,7 +112,7 @@ Esse bug foi corrigido no IE8.
 
 Firefox adicionará, com propósitos de acessibilidade, uma pequena borda pontinhada e um botão focado. Essa borda será declarada por meio de CSS, no estilo do navegador, mas você pode sobrescreve-lo se necessário para adicionar seu próprio estilo de foco usando `button{{cssxref("::-moz-focus-inner")}} { }`
 
-Firefox irá, diferente de outros navegadores, por padrão, [persistir o estado dinâmico desativado](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} sob o carregamento das páginas. Definindo o valor do atributo {{htmlattrxref("autocomplete","button")}} para `off` desabilita esse recurso. See {{bug(654072)}}.
+Firefox irá, diferente de outros navegadores, por padrão, [persistir o estado dinâmico desativado](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} sob o carregamento das páginas. Definindo o valor do atributo [`autocomplete`](/pt-BR/docs/Web/HTML/Element/button#autocomplete) para `off` desabilita esse recurso. See {{bug(654072)}}.
 
 Firefox <35 para Android define um padrão {{ cssxref("background-image") }} gradiente em todos os botões (see {{bug(763671)}}). Isso pode ser desabilitado usando `background-image: none`.
 

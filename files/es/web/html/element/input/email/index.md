@@ -232,7 +232,7 @@ Como siempre, puedes proporcionar un valor predeterminado para un cuadro de entr
 
 #### Ofreciendo valores sugeridos
 
-Yendo un paso más allá, puedes proporcionar una lista de opciones predeterminadas entre las que el usuario puede seleccionar especificando el atributo [`list`](/es/docs/Web/HTML/Element/input#list). Esto no limita al usuario a esas opciones, pero le permite seleccionar rápidamente las direcciones de correo de uso común. Esto también ofrece sugerencias para [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete). El atributo {{HTMLAttrDef("list")}} especifica el ID de un {{HTMLElement("datalist")}}, que a su vez contiene un elemento {{HTMLElement("option")}} por valor sugerido; El `value` de cada `option` es el valor sugerido correspondiente para el cuadro de entrada de correo.
+Yendo un paso más allá, puedes proporcionar una lista de opciones predeterminadas entre las que el usuario puede seleccionar especificando el atributo [`list`](/es/docs/Web/HTML/Element/input#list). Esto no limita al usuario a esas opciones, pero le permite seleccionar rápidamente las direcciones de correo de uso común. Esto también ofrece sugerencias para [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete). El atributo `list` especifica el ID de un {{HTMLElement("datalist")}}, que a su vez contiene un elemento {{HTMLElement("option")}} por valor sugerido; El `value` de cada `option` es el valor sugerido correspondiente para el cuadro de entrada de correo.
 
 ```html
 <input type="email" size="40" list="defaultEmails" />
