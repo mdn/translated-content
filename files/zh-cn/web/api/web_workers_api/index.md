@@ -11,25 +11,25 @@ Web Worker 使得在一个独立于 Web 应用程序主执行线程的后台线�
 
 Worker 是一个使用构造函数创建的对象（例如 {{domxref("Worker.Worker", "Worker()")}}），它运行一个命名的 JavaScript 文件——该文件包含将在 worker 线程中运行的代码。
 
-除了标准的 [JavaScript](/zh-CN/docs/Web/JavaScript) 函数集（如 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)、 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)、[`Object`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)、[`JSON`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) 等等 )，你可以在 worker 线程中运行任意的代码，但注意存在一些例外：你不能直接在 worker 线程中操作 DOM 元素；或使用 [`window`](/zh-CN/docs/Web/API/Window) 对象中的某些方法和属性。有关你可以运行的代码的信息，请参见下面的 [Worker 全局上下文和函数](#worker_global_contexts_and_functions) 和 [支持的 Web API](#supported_web_apis) 。
+除了标准的 [JavaScript](/zh-CN/docs/Web/JavaScript) 函数集（如 [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)、 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)、[`Object`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)、[`JSON`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON) 等），你可以在 worker 线程中运行任何你喜欢的代码，有一些例外：你不能直接在 worker 线程中操作 DOM 元素，或使用 [`window`](/zh-CN/docs/Web/API/Window) 对象中的某些方法和属性。有关你可以运行的代码的信息，请参见下面的 [Worker 全局上下文和函数](#worker_全局上下文和函数)和[支持的 Web API](#支持的_web_api) 。
 
 数据通过消息系统在 worker 和主线程之间发送——双方都使用 `postMessage()` 方法发送消息，并通过 `onmessage` 事件处理程序响应消息（消息包含在 {{domxref("Worker/message_event", "message")}} 事件的 `data` 属性中）。数据是复制的，而不是共享的。
 
-worker 可以依次生成新的 worker，只要这些 worker 与父页面托管在同一个 {{glossary("origin")}} 中。此外，worker 可以通过 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)  来访问网络，但 `XMLHttpRequest` 的 `responseXML` 和 `channel` 属性始终返回 `null`。
+worker 可以依次生成新的 worker，只要这些 worker 与父页面托管在同一个 {{glossary("origin")}} 中。此外，worker 可以通过 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 来访问网络，但 `XMLHttpRequest` 的 `responseXML` 和 `channel` 属性始终返回 `null`。
 
 ### Worker 类型
 
 有许多不同类型的 worker：
 
-- 专用 worker 是由一个脚本使用的工作器。这种情况由 {{DOMxRef("DedicatedWorkerGlobalScope")}} 对象来表示。
-- {{DOMxRef("SharedWorker","Shared worker")}} 是可以由在不同窗口、IFrame等中运行的多个脚本使用的 worker ，只要它们与工作者在同一域中。它们比专用的 worker 稍微复杂一点——脚本必须通过活动端口进行通信。
+- 专用 worker 是由单个脚本使用的 worker。该上下文由 {{DOMxRef("DedicatedWorkerGlobalScope")}} 对象表示。
+- {{DOMxRef("SharedWorker","Shared worker")}} 是可以由在不同窗口、IFrame 等中运行的多个脚本使用的 worker ，只要它们与 worker 在同一域中。它们比专用的 worker 稍微复杂一点——脚本必须通过活动端口进行通信。
 - [Service Workers](/zh-CN/docs/Web/API/Service_Worker_API) 基本上是作为代理服务器，位于 web 应用程序、浏览器和网络（如果可用）之间。它们的目的是（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。它们还将允许访问推送通知和后台同步 API。
 
 > **备注：** 根据 [web worker 规范](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2)，worker 错误事件不应该冒泡（参见 [Firefox bug 1188141](https://bugzil.la/1188141)）。该规范已在 Firefox 42 中实现。
 
 ### Worker 全局上下文和函数
 
-worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运行! 虽然 {{domxref("Window")}} 不能直接用于 worker，但许多相同的方法被定义在一个共享的 mixin（`WindowOrWorkerGlobalScope`）中，并通过 worker 自己的 {{domxref("WorkerGlobalScope")}} 衍生的上下文提供给他们：
+worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运行！虽然 {{domxref("Window")}} 不能直接用于 worker，但许多相同的方法被定义在一个共享的混入（`WindowOrWorkerGlobalScope`）中，并通过 worker 自己的 {{domxref("WorkerGlobalScope")}} 衍生的上下文提供给他们：
 
 - {{domxref("DedicatedWorkerGlobalScope")}} 用于专用 worker
 - {{domxref("SharedWorkerGlobalScope")}} 用于共享 worker
@@ -45,9 +45,9 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
 
-以下函数仅对 worker 可用：
+以下函数**仅**对 worker 可用：
 
-- {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}} （所有 worker）。
+- {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}} （所有 worker）
 - {{domxref("DedicatedWorkerGlobalScope.postMessage")}} （仅限专用 worker）
 
 ### 支持的 Web API
@@ -73,7 +73,7 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 - {{domxref("IndexedDB_API", "IndexedDB")}}
 - [Network Information API](/zh-CN/docs/Web/API/Network_Information_API)
 - {{domxref("Notifications_API", "Notifications API")}}
-- {{domxref("Performance_API","Performance API")}}, 包括：
+- {{domxref("Performance_API","Performance API")}} ，包括：
   - {{domxref("Performance")}}
   - {{domxref("PerformanceEntry")}}
   - {{domxref("PerformanceMeasure")}}
@@ -95,7 +95,7 @@ worker 也可以派生其他 worker，所以这些 API 也是可用的：
 - {{domxref("WorkerLocation")}}
 - {{domxref("WorkerNavigator")}}
 
-  ## Web Worker 接口
+## Web Worker 接口
 
 - {{domxref("Worker")}}
   - : 表示正在运行的 worker 线程，允许你将信息传递到正在运行的 worker 程序代码。
