@@ -1,8 +1,9 @@
 ---
 title: "HTMLFormElement: submit イベント"
+short-title: submit
 slug: Web/API/HTMLFormElement/submit_event
 l10n:
-  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef}}
@@ -11,7 +12,7 @@ l10n:
 
 `submit` イベントは `<form>` 要素自身で発生するものであり、その中の {{HtmlElement("button")}} や {{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}} で発生するものではないことに注意してください。しかし、フォームの送信が起動されたことを示すために送信される {{domxref("SubmitEvent")}} には、送信リクエストがどのボタンで起動されたかを {{domxref("SubmitEvent.submitter", "submitter")}} プロパティが含まれています。
 
-`submit` イベントは、ユーザーが送信ボタン ({{HtmlElement("button")}} または {{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}) を押したり、 <kbd>Enter</kbd> キーをフォーム内のフィールド (例えば {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}) の編集中に押したりしたときに発生します。このイベントは {{domxref("HTMLFormElement.submit()", "form.submit()")}} メソッドを呼び出した場合には送信されません。
+`submit` イベントは、ユーザーが{{Glossary("submit button", "送信ボタン")}}を押したり、 <kbd>Enter</kbd> キーをフォーム内のフィールド（例えば {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}）の編集中に押したりしたときに発生します。このイベントは {{domxref("HTMLFormElement.submit()", "form.submit()")}} メソッドを呼び出した場合には送信されません。
 
 > **メモ:** [フォームの検証](/ja/docs/Learn/Forms/Form_validation)に合格していないフォームを送信しようとすると、 {{domxref("HTMLInputElement/invalid_event", "invalid")}} イベントが発生します。この場合、フォーム検証が送信を阻止しますので、 `submit` イベントは発生しません。
 
@@ -20,9 +21,9 @@ l10n:
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等のメソッドで使用するか、イベントハンドラープロパティを使用するかしてください。
 
 ```js
-addEventListener('submit', (event) => {});
+addEventListener("submit", (event) => {});
 
-onsubmit = (event) => { };
+onsubmit = (event) => {};
 ```
 
 ## イベント型
@@ -57,13 +58,13 @@ _以下に列挙したプロパティに加えて、このインターフェイ�
 
 ```js
 function logSubmit(event) {
-  log.textContent = `Form Submitted! Time stamp: ${event.timeStamp}`;
+  log.textContent = `Form Submitted! Timestamp: ${event.timeStamp}`;
   event.preventDefault();
 }
 
-const form = document.getElementById('form');
-const log = document.getElementById('log');
-form.addEventListener('submit', logSubmit);
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+form.addEventListener("submit", logSubmit);
 ```
 
 ### 結果

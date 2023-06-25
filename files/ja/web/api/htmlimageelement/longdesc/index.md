@@ -1,11 +1,14 @@
 ---
-title: HTMLImageElement.longDesc
+title: "HTMLImageElement: longDesc プロパティ"
+short-title: longDesc
 slug: Web/API/HTMLImageElement/longDesc
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-**`longDesc`** は {{domxref("HTMLImageElement")}} インターフェイスの*非推奨の*プロパティで、この画像の長い説明のテキストまたは HTML ファイルの URL を指定します。これは、 [`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性で提供される短い説明の他に、オプションで追加された詳細を提供するために使用することができます。
+**`longDesc`** は {{domxref("HTMLImageElement")}} インターフェイスの*非推奨の*プロパティで、この画像の長い説明のテキストまたは HTML ファイルの URL を指定します。これは、[`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性で提供される短い説明の他に、オプションで追加された詳細を提供するために使用することができます。
 
 ## 値
 
@@ -21,7 +24,10 @@ slug: Web/API/HTMLImageElement/longDesc
 以下の古い HTML があったとします。
 
 ```html
-<img src="taco-tuesday.jpg" alt="Taco Tuesday" longDesc="image-descriptions/taco-tuesday.html">
+<img
+  src="taco-tuesday.jpg"
+  alt="Taco Tuesday"
+  longdesc="image-descriptions/taco-tuesday.html" />
 ```
 
 ここでは `longDesc` を使って、画像 `taco-tuesday.jpg` の詳細な説明を HTML ファイル `image-descriptions/taco-tuesday.html` で参照できるようにすることを指定しています。
@@ -30,7 +36,7 @@ slug: Web/API/HTMLImageElement/longDesc
 
 ```html
 <a href="image-descriptions/taco-tuesday.html">
-  <img src="taco-tuesday.jpg" alt="Taco Tuesday" >
+  <img src="taco-tuesday.jpg" alt="Taco Tuesday" />
 </a>
 ```
 

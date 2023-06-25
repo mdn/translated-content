@@ -988,24 +988,31 @@ HEVCは独占的な形式で、多くの特許で保護されています。ラ�
             </tr>
             <tr>
               <th scope="row">HEVC / H.265 対応</th>
-              <td>なし</td>
+              <td>107</td>
               <td>18</td>
               <td>なし</td>
               <td>11</td>
-              <td>なし</td>
+              <td>94</td>
               <td>11</td>
             </tr>
           </tbody>
         </table>
-        <p>
-          Internet Explorer、Chrome、Edge は、ハードウェアコーデックを搭載した機器でのみ HEVC に対応しています。
+        <p>Chrome は、ハードウェアコーデックを備えた Windows 8 以降、Linux、ChromeOS デバイス、およびすべての macOS Big Sur+ および Android 5.0 以降のデバイスで HEVC をサポートします。 </p>
+        <p>Edge (Chromium) は、ハードウェアコーデックを備えた Windows 10 1709 以降の端末で、<a href="https://apps.microsoft.com/store/detail/hevc-video-extension/9NMZLZ57R3T7">Microsoft Store から HEVC 動画拡張機能</a>をインストールした場合に対応します。他のプラットフォームにおける Chrome と同様の対応状況となります。Edge（レガシー）は、ハードウェアデコーダーのある端末でのみ HEVC に対応しています。
         </p>
-        <p>Mozilla は、特許に邪魔されている間は、 HEVC に対応しない予定です。</p>
+        <p>HEVC は特許で保護されているため、Mozilla は HEVC をサポートしません。</p>
+        <p>Internet Explorer は、ハードウェアデコーダーを備えた端末でのみ HEVC に対応します。</p>
+        <p>Opera およびその他の Chromium ベースのブラウザーは、Chrome と同じ対応状況です。</p>
+        <p>Safari は、macOS High Sierra 以降のすべての端末で HEVC に対応しています。</p>
       </td>
     </tr>
     <tr>
       <th scope="row">コンテナーの対応</th>
-      <td><a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
+      <td>
+        <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format"
+            >ISOBMFF</a
+          >、MPEG-TS、<a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/ja/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
+      </td>
     </tr>
     <tr>
       <th scope="row">

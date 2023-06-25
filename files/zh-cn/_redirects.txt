@@ -2119,6 +2119,7 @@
 /zh-CN/docs/Web/CSS/Media_Queries	/zh-CN/docs/Web/CSS/CSS_media_queries
 /zh-CN/docs/Web/CSS/Media_Queries/Testing_media_queries	/zh-CN/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
+/zh-CN/docs/Web/CSS/Paged_Media	/zh-CN/docs/Web/CSS/CSS_paged_media
 /zh-CN/docs/Web/CSS/Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
 /zh-CN/docs/Web/CSS/Reference/background-blend-mode	/zh-CN/docs/Web/CSS/background-blend-mode
 /zh-CN/docs/Web/CSS/Reference/mix-blend-mode	/zh-CN/docs/Web/CSS/mix-blend-mode
