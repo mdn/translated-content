@@ -6,7 +6,7 @@ original_slug: Web/API/HTMLElement/contextMenu
 
 {{APIRef("HTML DOM")}}{{deprecated_header()}}
 
-A propriedade **`HTMLElement.contextMenu`** refere-se ao menu de contexo atribuído aum elemento usando o {{htmlattrxref("contextmenu")}} atributo. O menu em sí é criado usando o {{HTMLElement("menu")}} elemento.
+A propriedade **`HTMLElement.contextMenu`** refere-se ao menu de contexo atribuído aum elemento usando o [`contextmenu`](/pt-BR/docs/Web/HTML/Global_attributes#contextmenu) atributo. O menu em sí é criado usando o {{HTMLElement("menu")}} elemento.
 
 ## Sintaxe
 
@@ -29,6 +29,6 @@ contextMenu.firstElementChild.label = "New label";
 
 ## Veja também
 
-- {{htmlattrxref("contextmenu")}}
+- [`contextmenu`](/pt-BR/docs/Web/HTML/Global_attributes#contextmenu)
 - {{HTMLElement("menu")}}
 - {{HTMLElement("menuitem")}}

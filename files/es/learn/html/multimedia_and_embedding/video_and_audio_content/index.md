@@ -102,7 +102,7 @@ Los formatos anteriores existen para comprimir los archivos de audio y video vol
 
 > **Nota:** Debes estar preguntándote por qué sucede esto. El **MP3** (para audio) y el **MP4/H.264** (para video) son ampliamente compatibles y de buena calidad, sin embargo, también están patentados — sus patentes cubren MP3 al menos hasta 2017 y a H.264 hasta 2027, lo que significa que los browsers que no tienen la patente tienen que pagar grandes sumas de dinero para soportar estos formatos. Además, mucha gente no permite el software con restricciones, por estar a favor de formatos abiertos. Por todo esto es que tenemos que proveer múltiples formatos para los diferentes browsers.
 
-Está bien, ¿pero cómo lo hacemos? Miremos el siguiente [ejemplo actualizado](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)[pruébalo en vivo aquí](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)), o acá:
+Está bien, ¿pero cómo lo hacemos? Miremos el siguiente [ejemplo actualizado](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html) ([pruébalo en vivo aquí](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)):
 
 ```html
 <video controls>

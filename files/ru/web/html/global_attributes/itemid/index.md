@@ -8,7 +8,7 @@ translation_of: Web/HTML/Global_attributes/itemid
 
 {{HTMLSidebar("Global_attributes")}}
 
-[Глобальный атрибут](/ru/docs/Web/HTML/Global_attributes) **`itemid`** предоставляет микроданные в форме уникального глобального идентификатора элемента. Атрибут `itemid` может быть указан только для элемента, который имеет оба атрибута {{htmlattrxref("itemscope")}} и {{htmlattrxref("itemtype")}}. Также, `itemid` может быть указан только для элементов, обладающих атрибутом `itemscope`, соответствующий ссылке `itemtype` или определяющий словарь, поддерживающий глобальные идентификаторы.
+[Глобальный атрибут](/ru/docs/Web/HTML/Global_attributes) **`itemid`** предоставляет микроданные в форме уникального глобального идентификатора элемента. Атрибут `itemid` может быть указан только для элемента, который имеет оба атрибута [`itemscope`](/ru/docs/Web/HTML/Global_attributes#itemscope) и [`itemtype`](/ru/docs/Web/HTML/Global_attributes#itemtype). Также, `itemid` может быть указан только для элементов, обладающих атрибутом `itemscope`, соответствующий ссылке `itemtype` или определяющий словарь, поддерживающий глобальные идентификаторы.
 
 Точное значение глобального идентификатора `itemtype` обеспечивается определением этого идентификатора в пределах указанного словаря. Словарь определяет, могут ли сосуществовать несколько элементов с одним и тем же глобальным идентификатором, и, если да, то как обрабатываются элементы с одним и тем же идентификатором.
 
@@ -74,8 +74,7 @@ translation_of: Web/HTML/Global_attributes/itemid
 - [Другие различные глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes)
 - Другие глобальные атрибуты, связанные с микроданными
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop)
+  - [`itemref`](/ru/docs/Web/HTML/Global_attributes#itemref)
+  - [`itemscope`](/ru/docs/Web/HTML/Global_attributes#itemscope)
+  - [`itemtype`](/ru/docs/Web/HTML/Global_attributes#itemtype)

@@ -22,7 +22,7 @@ O elemento **HTML `<head>` providencia informações gerais** (metadados) sobre 
       <td>
         <p>Se o elemento é um {{HTMLElement("iframe")}}</p>
         <p>
-          {{htmlattrxref("srcdoc", "iframe")}}, ou se a informação
+          <a href="/pt-BR/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a>, ou se a informação
           do título está sendo avaliada desde um nivel alto do protocolo, zero
           ou mais elementos de conteúdo de metadados.
         </p>

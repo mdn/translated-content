@@ -4,7 +4,7 @@ slug: Web/HTML/CORS_enabled_image
 original_slug: Web/HTML/CORS_imagens_habilitadas
 ---
 
-The HTML specification introduces a {{ htmlattrxref("crossorigin", "img") }} attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in canvas as if they were being loaded from the current origin.
+The HTML specification introduces a [`crossorigin`](/pt-BR/docs/Web/HTML/Element/img#crossorigin) attribute for images that, in combination with an appropriate {{Glossary("CORS")}} header, allows images defined by the {{ HTMLElement("img") }} element that are loaded from foreign origins to be used in canvas as if they were being loaded from the current origin.
 
 See [CORS settings attributes](/pt-BR/HTML/CORS_settings_attributes) for details on how the `crossorigin` attribute is used.
 

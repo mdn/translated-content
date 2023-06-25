@@ -61,7 +61,7 @@ xywh=percent:25,25,50,50    /* 50%x50% の画像を x=25% および y=25% の位
 
 ## アクセシビリティの考慮
 
-ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主に画面リーダーにとって重要なことで、画面リーダーはその存在を告知しないため、ユーザーに何も伝えません。画像に、ページ全体の目的を理解するために重要な情報が含まれている場合は、文書内で意味的に記述したほうがよいでしょう。
+ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主にスクリーンリーダーにとって重要なことで、スクリーンリーダーはその存在を告知しないため、ユーザーに何も伝えません。画像に、ページ全体の目的を理解するために重要な情報が含まれている場合は、文書内で意味的に記述したほうがよいでしょう。
 
 - [MDN WCAG を理解する, ガイドライン 1.1 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)

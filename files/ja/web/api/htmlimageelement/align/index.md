@@ -1,6 +1,9 @@
 ---
-title: HTMLImageElement.align
+title: "HTMLImageElement: align プロパティ"
+short-title: align
 slug: Web/API/HTMLImageElement/align
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
@@ -15,7 +18,7 @@ slug: Web/API/HTMLImageElement/align
 
 文字列で、画像の配置モードを設定する以下の文字列のうちの一つを指定します。
 
-#### ベースラインの配置
+### ベースラインの配置
 
 これら 3 つの値は、テキストのベースラインに対する要素の配置を指定します。
 これらは、 CSS の {{cssxref("vertical-align")}} プロパティを使用して置き換える必要があります。
@@ -29,9 +32,9 @@ slug: Web/API/HTMLImageElement/align
 
 {{cssxref("vertical-align")}} は、その値に対していくつかの追加オプションを提供していることに留意しておくとよいでしょう。
 
-#### 画像を水平に浮動させる
+### 画像を水平に浮動させる
 
-`left` および `right` プロパティはベースラインと相対的な配置に影響を与えません。その代わりに、画像を左または右のマージンに「浮動」させ、続くテキストが画像の周りに流れるようにします。代わりに、 CSS の {{cssxref("float")}} プロパティを使用して、値として `left` または `right` のいずれかを指定するようにしてください。
+`left` および `right` プロパティはベースラインと相対的な配置に影響を与えません。画像を左または右のマージンに「浮動」させ、続くテキストが画像の周りに流れるようにします。代わりに、CSS の {{cssxref("float")}} プロパティを使用して、値として `left` または `right` のいずれかを指定するようにしてください。
 
 - `left`
   - : 画像の左端が現在のマージンと同じ位置になるように、画像を浮動させます。その後に続くテキストは、画像の右端に流れるようになります。

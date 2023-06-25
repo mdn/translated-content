@@ -55,7 +55,7 @@ translation_of: Mozilla/Firefox/Releases/65
 
 - События теперь отправляются на отключённые элементы HTML, то есть элементы {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("select")}} и {{htmlelement("textarea")}} с установленными атрибутами `disabled` ({{bug(329509)}}).
 - Как в Chrome и Safari, удаление атрибута `src` у элемента {{htmlelement("iframe")}} загружает в него `about:blank` ({{bug(1501418)}}) . До этого удаление `src` не влияло на содержимое `iframe`.
-- Добавлена поддержка атрибута {{htmlattrxref("referrerpolicy", "script")}} у элементов {{htmlelement("script")}} ({{bug(1460920)}}).
+- Добавлена поддержка атрибута [`referrerpolicy`](/ru/docs/Web/HTML/Element/script#referrerpolicy) у элементов {{htmlelement("script")}} ({{bug(1460920)}}).
 
 ### CSS
 

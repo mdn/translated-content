@@ -13,9 +13,9 @@ translation_of: Web/API/HTMLBaseElement
 _Наследует свойства от его родителя, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLBaseElement.href")}}
-  - : Это {{domxref("DOMString")}} которая отображает {{htmlattrxref("href", "base")}} HTML атрибут, содержащий базовый URL относительно URLs ы документе.
+  - : Это {{domxref("DOMString")}} которая отображает [`href`](/ru/docs/Web/HTML/Element/base#href) HTML атрибут, содержащий базовый URL относительно URLs ы документе.
 - {{domxref("HTMLBaseElement.target")}}
-  - : Это {{domxref("DOMString")}} которое отображает {{htmlattrxref("target", "base")}} HTML атрибут, содержащий контекст цели просмотра по умолчанию или фрейм для элементов которые не имеют указанную целевую ссылку.
+  - : Это {{domxref("DOMString")}} которое отображает [`target`](/ru/docs/Web/HTML/Element/base#target) HTML атрибут, содержащий контекст цели просмотра по умолчанию или фрейм для элементов которые не имеют указанную целевую ссылку.
 
 ## Методы
 

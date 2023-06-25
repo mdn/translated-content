@@ -3519,6 +3519,7 @@
 /ja/docs/Web/CSS/:host()	/ja/docs/Web/CSS/:host_function
 /ja/docs/Web/CSS/:matches	/ja/docs/Web/CSS/:is
 /ja/docs/Web/CSS/@font-face/font-variant	/ja/docs/Web/CSS/@font-face
+/ja/docs/Web/CSS/@media/update-frequency	/ja/docs/Web/CSS/@media/update
 /ja/docs/Web/CSS/@scroll-timeline	/ja/docs/Web/CSS/scroll-timeline
 /ja/docs/Web/CSS/@viewport	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/@viewport/height	/ja/docs/Web/CSS
@@ -3631,6 +3632,7 @@
 /ja/docs/Web/CSS/Media_Queries/Using_media_queries	/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /ja/docs/Web/CSS/Motion_Path	/ja/docs/Web/CSS/CSS_motion_path
 /ja/docs/Web/CSS/Other_Resources	/ja/docs/Web/CSS
+/ja/docs/Web/CSS/Paged_Media	/ja/docs/Web/CSS/CSS_paged_media
 /ja/docs/Web/CSS/Reference/@viewport	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/@viewport/max-zoom	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/@viewport/min-zoom	/ja/docs/Web/CSS

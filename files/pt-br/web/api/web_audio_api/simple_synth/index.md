@@ -49,7 +49,7 @@ Primeiro criamos o `<div>` para conter a barra de opções, para ser personaliza
   </div>
 ```
 
-Especificamos um valor padrão de 0.5, e provemos um elemento {{HTMLElement("datalist")}} no qual é conectado ao range usando o atributo {{htmlattrxref("name")}} para achar uma lista de opções cujo ID encaixa; nesse caso, o conjunto de informações é nomeado de `"volume"`. isso nos permite prover um conjunto de valores comuns e strings especiais que o browser pode de forma opcional escolher mostrar de alguma maneira; e então atribuimos nomes aos valores 0.0 ("Mute") e 1.0 ("100%").
+Especificamos um valor padrão de 0.5, e provemos um elemento {{HTMLElement("datalist")}} no qual é conectado ao range usando o atributo [`name`](/pt-BR/docs/Web/HTML/Global_attributes#name) para achar uma lista de opções cujo ID encaixa; nesse caso, o conjunto de informações é nomeado de `"volume"`. isso nos permite prover um conjunto de valores comuns e strings especiais que o browser pode de forma opcional escolher mostrar de alguma maneira; e então atribuimos nomes aos valores 0.0 ("Mute") e 1.0 ("100%").
 
 ##### A seleção de forma de onda
 
@@ -467,7 +467,7 @@ function createKey(note, octave, freq) {
 }
 ```
 
-Após criar os elementos representando as teclas e seus rótulos, nós configuramos o elemento das teclas ao configurar sua classe para "key" (Que estabelece a aparência). Então adicionamos atributos {{htmlattrxref("data-*")}} que contém a string da oitava da nota (attribute `data-octave`), representando a nota a ser tocada (attribute `data-note`), e frequência (attribute `data-frequency`) em Hertz. Isso irá nos permitir facilmente pegar informação conforme necessário ao cuidar de eventos.
+Após criar os elementos representando as teclas e seus rótulos, nós configuramos o elemento das teclas ao configurar sua classe para "key" (Que estabelece a aparência). Então adicionamos atributos [`data-*`](/pt-BR/docs/Web/HTML/Global_attributes#data-*) que contém a string da oitava da nota (attribute `data-octave`), representando a nota a ser tocada (attribute `data-note`), e frequência (attribute `data-frequency`) em Hertz. Isso irá nos permitir facilmente pegar informação conforme necessário ao cuidar de eventos.
 
 ### Fazendo música
 
@@ -521,7 +521,7 @@ function notePressed(event) {
 
 Começamos checando se o botão esquerdo do mouse é pressionado, por dois motivos. Primeiro, queremos que apenas o botão esquerdo acione as notas. Segundo, e mais importante, estamos usando isso para cuidar do {{event("mouseover")}} para casos onde o usuário arrasta de tecla a tecla, e só queremos tocar uma nota se o mouse estiver pressionado quando entrar no elemento.
 
-Se o botão do mouse estiver de fato sendo pressionado, recebemos o atributo de tecla pressionada {{htmlattrxref("dataset")}} ; isso torna fácil o acesso das informações de atributo customizadas no elemento. Procuramos por um atributo `data-pressed` ; caso não haja um(o que indica que a nota não está tocando ainda), chamamos `playTone()` para começar a tocar a nota, passando no valor dos elementos do atributo `data-frequency`. O valor retornado do oscilador é guardado no `oscList` para refêrencia futura, e `data-pressed` é colocado como `yes` para indicar que a nota está tocando para que não iniciemos novamente na próxima vez que isso for chamado.
+Se o botão do mouse estiver de fato sendo pressionado, recebemos o atributo de tecla pressionada [`dataset`](/pt-BR/docs/Web/HTML/Global_attributes#dataset) ; isso torna fácil o acesso das informações de atributo customizadas no elemento. Procuramos por um atributo `data-pressed` ; caso não haja um(o que indica que a nota não está tocando ainda), chamamos `playTone()` para começar a tocar a nota, passando no valor dos elementos do atributo `data-frequency`. O valor retornado do oscilador é guardado no `oscList` para refêrencia futura, e `data-pressed` é colocado como `yes` para indicar que a nota está tocando para que não iniciemos novamente na próxima vez que isso for chamado.
 
 #### Parando um tom
 

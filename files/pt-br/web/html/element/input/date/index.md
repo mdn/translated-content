@@ -44,10 +44,10 @@ O controle de data do Firefox se parece assim:
     <tr>
       <td><strong>Atributos Comuns Suportados</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}} e
-        {{htmlattrxref("step", "input")}}
+        <a href="/pt-BR/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> e
+        <a href="/pt-BR/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -70,7 +70,7 @@ O controle de data do Firefox se parece assim:
 
 ## Valores
 
-Um {{domxref("DOMString")}} representa o valor data informada na entrada. Você pode definir o valor padrão para a entrada incluindo uma data dentro do atributo {{htmlattrxref("value", "input")}}, como:
+Um {{domxref("DOMString")}} representa o valor data informada na entrada. Você pode definir o valor padrão para a entrada incluindo uma data dentro do atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value), como:
 
 ```html
 <input id="date" type="date" value="2017-06-01">
@@ -123,7 +123,7 @@ O uso mais simples de `<input type="date">` envolve a combinação de um `<input
 
 ### Definindo data mínima e máxima
 
-Você pode usar os atributos {{htmlattrxref("min", "input")}} e {{htmlattrxref("max", "input")}} para restringir as datas que podem ser escolhidas pelo usuário. No próximo exemplo nós definimos uma data mínima como `2017-04-01` e data máxima como `2017-04-30`:
+Você pode usar os atributos [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [`max`](/pt-BR/docs/Web/HTML/Element/input#max) para restringir as datas que podem ser escolhidas pelo usuário. No próximo exemplo nós definimos uma data mínima como `2017-04-01` e data máxima como `2017-04-30`:
 
 ```html
 <form>
@@ -138,19 +138,19 @@ Você pode usar os atributos {{htmlattrxref("min", "input")}} e {{htmlattrxref("
 
 O resultado aqui será apenas que as dias de Abril de 2017 serão selecionados — apenas a parte "dias" do texto será editável e datas fora de Abril não serão rolados na ferramenta de seleção de data.
 
-> **Note:** **Observação**: Você deve conhecer o uso do atributo {{htmlattrxref("step", "input")}} para variar o número de dias pulados cada vez que a data é incrementada (ex.: talvez você queira deixar que os Sábados sejam selecionáveis). Contudo, isto não parece funcionar eficiente de qualquer implementação em tempo de escrita.
+> **Note:** **Observação**: Você deve conhecer o uso do atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step) para variar o número de dias pulados cada vez que a data é incrementada (ex.: talvez você queira deixar que os Sábados sejam selecionáveis). Contudo, isto não parece funcionar eficiente de qualquer implementação em tempo de escrita.
 
 ### Controlando o tamanho da entrada
 
-`<input type="date">` não suporta atributos de tamanho de formulário como {{htmlattrxref("size", "input")}}. Você poderá recorrer ao [CSS](/pt-BR/docs/Web/CSS) para modificar o tamanho.
+`<input type="date">` não suporta atributos de tamanho de formulário como [`size`](/pt-BR/docs/Web/HTML/Element/input#size). Você poderá recorrer ao [CSS](/pt-BR/docs/Web/CSS) para modificar o tamanho.
 
 ## Validação
 
 Por padrão `<input type="date">` não aplica nenhuma validação de entrada de valores. As implementações da interface geralmente não deixam você informar nada que não seja uma data — o que é útil — mas você pode continuar deixando o campo vazio ou (em navegadores onde a entrada converte para o tipo `text`) informar uma data inválida (ex.: o 32 de Abril).
 
-Se você usa {{htmlattrxref("min", "input")}} e {{htmlattrxref("max", "input")}} para restringir datas disponíveis (ver [Definindo data mínima e máxima](#definindo_data_mínima_e_máxima)), os navegadores suportados mostrarão um erro se você tentar submeter uma data fora da faixa. Contudo, você terá que verificar os resultados para ter certeza que o valor está entre estas datas, uma vez que são aplicadas apenas se o selecionador de data for totalmente suportado pelo dispositivo do usuário.
+Se você usa [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [`max`](/pt-BR/docs/Web/HTML/Element/input#max) para restringir datas disponíveis (ver [Definindo data mínima e máxima](#definindo_data_mínima_e_máxima)), os navegadores suportados mostrarão um erro se você tentar submeter uma data fora da faixa. Contudo, você terá que verificar os resultados para ter certeza que o valor está entre estas datas, uma vez que são aplicadas apenas se o selecionador de data for totalmente suportado pelo dispositivo do usuário.
 
-Adicionalmente, você pode usar o atributo {{htmlattrxref("required", "input")}} para tornar o preenchimento da data obrigatório — novamente, um erro será mostrado se você tentar submeter um campo de data vazia. Isto, finalmente, deve funcionar em muitos navegadores.
+Adicionalmente, você pode usar o atributo [`required`](/pt-BR/docs/Web/HTML/Element/input#required) para tornar o preenchimento da data obrigatório — novamente, um erro será mostrado se você tentar submeter um campo de data vazia. Isto, finalmente, deve funcionar em muitos navegadores.
 
 Vamos dar uma olhada em um exemplo — aqui nós definimos datas mínima e máxima e deixamos o campo como obrigatório:
 
@@ -219,7 +219,7 @@ O segundo problema é mais sério que os anterirores; como mencionamos antes, co
 - `mm-dd-yyyy`
 - `Month dd yyyy`
 
-Um jeito de contornar isso é colocar um atributo {{htmlattrxref("pattern", "input")}} na caixa de texto de data. Sempre que a caixa de texto de data não usá-lo, a caixa de texto devolverá um erro. Por exemplo, tente ver o que o seguinte exemplo faz num navegador sem suporte:
+Um jeito de contornar isso é colocar um atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) na caixa de texto de data. Sempre que a caixa de texto de data não usá-lo, a caixa de texto devolverá um erro. Por exemplo, tente ver o que o seguinte exemplo faz num navegador sem suporte:
 
 ```html
 <form>
@@ -279,16 +279,16 @@ Beside the attributes listed below, this element can have any of the [global att
 - {{htmlattrdef("form")}}
   - : The form element that the input element is associated with (its _form owner_). The value of the attribute must be an **id** of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this `<input>` element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place `<input>` elements anywhere within a document, not just as descendants of their form elements. An input can only be associated with one form.
 - {{htmlattrdef("formaction")}}
-  - : The URI of a program that processes the information submitted by the input element, if it is a submit button or image. If specified, it overrides the {{htmlattrxref("action","form")}} attribute of the element's form owner.
+  - : The URI of a program that processes the information submitted by the input element, if it is a submit button or image. If specified, it overrides the [`action`](/pt-BR/docs/Web/HTML/Element/form#action) attribute of the element's form owner.
 - {{htmlattrdef("formenctype")}}
 
   - : If the input element is a submit button or image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:
 
     - `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
-    - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the {{htmlattrxref("type","input")}} attribute set to `file`.
+    - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the [`type`](/pt-BR/docs/Web/HTML/Element/input#type) attribute set to `file`.
     - `text/plain`
 
-    If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the element's form owner.
+    If this attribute is specified, it overrides the [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) attribute of the element's form owner.
 
 - {{htmlattrdef("formmethod")}}
 
@@ -297,13 +297,13 @@ Beside the attributes listed below, this element can have any of the [global att
     - `post`: The data from the form is included in the body of the form and is sent to the server.
     - `get`: The data from the form are appended to the **form** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.
 
-    If specified, this attribute overrides the {{htmlattrxref("method","form")}} attribute of the element's form owner.
+    If specified, this attribute overrides the [`method`](/pt-BR/docs/Web/HTML/Element/form#method) attribute of the element's form owner.
 
 - {{htmlattrdef("formnovalidate")}}
-  - : If the input element is a submit button or image, this Boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the {{htmlattrxref("novalidate","form")}} attribute of the element's form owner.
+  - : If the input element is a submit button or image, this Boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/pt-BR/docs/Web/HTML/Element/form#novalidate) attribute of the element's form owner.
 - {{htmlattrdef("formtarget")}}
 
-  - : If the input element is a submit button or image, this attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the elements's form owner. The following keywords have special meanings:
+  - : If the input element is a submit button or image, this attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the [`target`](/pt-BR/docs/Web/HTML/Element/form#target) attribute of the elements's form owner. The following keywords have special meanings:
 
     - `_self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context.
