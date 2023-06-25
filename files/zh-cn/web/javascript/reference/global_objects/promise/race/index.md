@@ -18,7 +18,7 @@ Promise.race(iterable)
 ### 参数
 
 - `iterable`
-  - : 一个[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，例如一个 promise {{jsxref("Array", "数组", "", 1)}}。
+  - : 一个 promise [可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)（例如  {{jsxref("Array", "数组", "", 1)}}）。
 
 ### 返回值
 
@@ -28,13 +28,13 @@ Promise.race(iterable)
 
 `Promise.race()` 方法是 [Promise 并发](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_并发)方法之一。当你想要第一个异步任务完成时，但不关心它的最终状态（即它既可以成功也可以失败）时，它就非常有用。
 
-如果可迭代对象中包含一个或多个非 promise 值和/或已敲定的 promise，则 `Promise.race()` 将以可迭代对象中找到的第一个敲定值敲定。
+如果可迭代对象中包含一个或多个非 promise 值和/或已敲定的 promise，则 `Promise.race()` 将以可迭代对象中找到的第一个此类值敲定。
 
 ## 示例
 
 ### 使用 Promise.race()
 
-这个例子展示了如何使用 `Promise.race()` 来比较多个使用 [`setTimeout()`](/zh-CN/docs/Web/API/setTimeout) 实现的计时器。计时时间最短的计时器总是赢得竟态，并成为返回的 promise 状态。
+这个例子展示了如何使用 `Promise.race()` 来比较多个使用 [`setTimeout()`](/zh-CN/docs/Web/API/setTimeout) 实现的计时器。计时时间最短的计时器总是赢得竞态，并成为返回的 promise 状态。
 
 ```js
 function sleep(time, value, state) {
