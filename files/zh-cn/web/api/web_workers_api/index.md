@@ -33,7 +33,7 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 
 - {{domxref("DedicatedWorkerGlobalScope")}} 用于专用 worker
 - {{domxref("SharedWorkerGlobalScope")}} 用于共享 worker
-- {{domxref("ServiceWorkerGlobalScope")}} 用于 [service workers](/zh-CN/docs/Web/API/Service_Worker_API)
+- {{domxref("ServiceWorkerGlobalScope")}} 用于 [service worker](/zh-CN/docs/Web/API/Service_Worker_API)
 
 所有 worker 和主线程（来自`WindowOrWorkerGlobalScope`）共有的一些函数（子集）是：
 
