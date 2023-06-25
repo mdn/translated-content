@@ -872,16 +872,27 @@ HEVC는 상용 포맷이며 여러 특허로 보호받고 있습니다. [MPEG LA
               <td>
                 11<sup><a href="#hevc-foot--1">[1]</a></sup>
               </td>
-              <td>No</td>
+              <td>94</td>
               <td>11</td>
             </tr>
           </tbody>
         </table>
+        <p>Chrome은 macOS Big Sur 11+ 및 Android 5.0+의 모든 장치에 대해 Windows 8+, Linux 및 ChromeOS에서 하드웨어를 지원하는 장치에 대해 HEVC를 지원합니다.</p>
+        <p>Edge(Chromium)는 <a href="https://apps.microsoft.com/store/detail/hevc-video-extension/9NMZLZ57R3T7">Microsoft Store의 HEVC 비디오 확장 프로그램</a>이 설치된 경우 Windows 10 1709+에서 하드웨어 지원 장치에 대해 HEVC를 지원하며 다른 플랫폼의 Chrome과 동일한 지원 상태를 갖습니다. Edge(레거시)는 하드웨어 디코더가 있는 장치에 대해서만 HEVC를 지원합니다.
+        </p>
+        <p>Mozilla는 HEVC가 특허에 의해 방해받는 동안 지원하지 않을 것입니다.</p>
+        <p>Internet Explorer는 하드웨어 디코더가 있는 장치에 대해서만 HEVC를 지원합니다.</p>
+        <p>Opera 및 기타 Chromium 기반 브라우저는 Chrome과 동일한 방식으로 지원됩니다.</p>
+        <p>Safari는 macOS High Sierra 및 이후 버전의 모든 기기에서 HEVC를 지원합니다.</p>
       </td>
     </tr>
     <tr>
       <th scope="row">지원 컨테이너</th>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a></td>
+      <td>
+        <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format"
+            >ISOBMFF</a
+          >、MPEG-TS、<a href="/ko/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/ko/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
+      </td>
     </tr>
     <tr>
       <th scope="row">
@@ -917,10 +928,6 @@ HEVC는 상용 포맷이며 여러 특허로 보호받고 있습니다. [MPEG LA
     </tr>
   </tbody>
 </table>
-
-\[1] Internet Explorer and Edge only supports HEVC on devices with a hardware codec.
-
-\[2] Mozilla will not support HEVC while it is encumbered by patents.
 
 ### MP4V-ES
 
