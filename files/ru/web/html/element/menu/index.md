@@ -24,7 +24,7 @@ translation_of: Web/HTML/Element/menu
 - {{HTMLAttrDef("label")}} {{Deprecated_inline}}
   - : The name of the menu as shown to the user. Used within nested menus, to provide a label through which the submenu can be accessed. Must only be specified when the parent element is a {{HTMLElement("menu")}} in the _context menu_ state.
 - {{HTMLAttrDef("type")}}
-  - : This attribute indicates the kind of menu being declared, and can be one of two values.\* `context` {{Deprecated_inline}} : Indicates the _popup menu_ state, which represents a group of commands activated through another element. This might be as a button menu referenced by a {{HTMLAttrxRef("menu", "button")}} attribute of a {{HTMLElement("button")}} element, or as context menu for an element with a [`contextmenu`](/ru/docs/HTML/Global_attributes#attr-contextmenu) attribute. This value is the default if the attribute is missing and the parent element is also a `<menu>` element.
+  - : This attribute indicates the kind of menu being declared, and can be one of two values.\* `context` {{Deprecated_inline}} : Indicates the _popup menu_ state, which represents a group of commands activated through another element. This might be as a button menu referenced by a [`menu`](/ru/docs/Web/HTML/Element/button#menu) attribute of a {{HTMLElement("button")}} element, or as context menu for an element with a [`contextmenu`](/ru/docs/HTML/Global_attributes#attr-contextmenu) attribute. This value is the default if the attribute is missing and the parent element is also a `<menu>` element.
     - `toolbar`: Indicates the _toolbar_ state, which represents a toolbar consisting of a series of commands for user interaction. This might be in the form of an unordered list of {{HTMLElement("li")}} elements, or, if the element has no `<li>` element children, [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content) describing available commands. This value is the default if the attribute is missing.
 
 ## Примечания по использованию
@@ -33,7 +33,7 @@ The {{HTMLElement("menu")}} and {{HTMLElement("ul")}} elements both represent an
 
 An HTML menu can be used to create context menus (typically activated by right-clicking another element) or toolbars.
 
-**[Context menus](#context_menu)** consist of a `<menu>` element which contains {{HTMLElement("menuitem")}} elements for each selectable option in the menu, `<menu>` elements for submenus within the menu, and {{HTMLElement("hr")}} elements for separator lines to break up the menu's content into sections. Context menus are then attached to the element they're activated from using either the associated element's {{HTMLAttrxRef("contextmenu")}} attribute or, for [button-activated menus](#button_menu) attached to {{HTMLElement("button")}} elements, the {{HTMLAttrxRef("menu", "button")}} attribute.
+**[Context menus](#context_menu)** consist of a `<menu>` element which contains {{HTMLElement("menuitem")}} elements for each selectable option in the menu, `<menu>` elements for submenus within the menu, and {{HTMLElement("hr")}} elements for separator lines to break up the menu's content into sections. Context menus are then attached to the element they're activated from using either the associated element's [`contextmenu`](/ru/docs/Web/HTML/Global_attributes#contextmenu) attribute or, for [button-activated menus](#button_menu) attached to {{HTMLElement("button")}} elements, the [`menu`](/ru/docs/Web/HTML/Element/button#menu) attribute.
 
 **[Toolbar menus](#toolbar)** consist of a `<menu>` element whose content is described in one of two ways: either as an unordered list of items represented by {{HTMLElement("li")}} elements (each representing a command or option the user can utilize), or (if there are no `<li>` elements), [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content) describing the available commands and options.
 
@@ -75,7 +75,7 @@ div {
 
 ### Menu button
 
-> **Предупреждение:** Menu buttons haven't been implemented in any known browsers yet. The {{HTMLAttrxRef("type", "menu")}} attribute on the `<menu>` element is now obsolete.
+> **Предупреждение:** Menu buttons haven't been implemented in any known browsers yet. The [`type`](/ru/docs/Web/HTML/Element/menu#type) attribute on the `<menu>` element is now obsolete.
 
 > **Предупреждение:** {{HTMLElement("menuitem")}} element is obsolete.
 
@@ -143,4 +143,3 @@ div {
 ## See also
 
 - Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("hr")}}, and the obsolete {{HTMLElement("dir")}}.
-- The [`contextmenu`](/ru/docs/Web/HTML/Global_attributes#attr-contextmenu) [global attribute](/ru/docs/Web/HTML/Global_attributes) can be used on an element to refer to the `id` of a `menu` with {{HTMLAttrxRef("type", "menu", 'type="context"')}}.

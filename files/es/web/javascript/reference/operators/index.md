@@ -64,7 +64,7 @@ Operadores de incremento sufijo/prefijo y decremento sufijo/prefijo.
 - {{jsxref("Operators/Increment", "A++")}}
   - : Operador de incremento sufijo.
 - {{jsxref("Operators/Decrement", "A--")}}
-  - : Operador de incremento sufijo.
+  - : Operador de decremento sufijo.
 - {{jsxref("Operators/Increment", "++A")}}
   - : Operador de incremento prefijo.
 - {{jsxref("Operators/Decrement", "--A")}}
