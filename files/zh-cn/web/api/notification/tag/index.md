@@ -5,7 +5,7 @@ slug: Web/API/Notification/tag
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的 **`tag`** 只读属性表示通知的识别标签，在 {{domxref("Notification. Notification","Notification()")}} 构造函数的 `tag` 选项中指定。
+{{domxref("Notification")}} 接口的 **`tag`** 只读属性表示通知的识别标签。此属性通过 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `tag` 选项中指定。
 
 通知的标签的构想是多个通知可以共享同一个标签，将它们链接在一起。然后可以通过编程方式将一个通知替换为另一个通知，以避免用户的屏幕被大量类似的通知填满。
 
