@@ -5,7 +5,7 @@ slug: Web/API/Notification/silent
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}
 
-{{domxref("Notification")}} 接口的 **`silent`** 只读属性指定通知是否应当静音，即无论设备设置如何，都不发出声音或振动。在{{domxref("Notification.Notification","Notification()")}} 构造函数的 `silent` 选项中指定。
+{{domxref("Notification")}} 接口的 **`silent`** 只读属性指定通知是否应当保持静默，即无论设备设置如何，都不发出声音或振动。该属性在{{domxref("Notification.Notification","Notification()")}} 构造函数的 `silent` 选项中指定。
 
 ## 值
 
