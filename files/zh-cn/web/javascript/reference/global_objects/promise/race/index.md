@@ -18,7 +18,7 @@ Promise.race(iterable)
 ### 参数
 
 - `iterable`
-  - : 一个 promise [可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)（例如  {{jsxref("Array", "数组", "", 1)}}）。
+  - : 一个 promise [可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)（例如{{jsxref("Array", "数组", "", 1)}}）。
 
 ### 返回值
 
