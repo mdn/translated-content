@@ -624,6 +624,7 @@
 /ru/docs/Web/CSS/Media_Queries/Testing_media_queries	/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /ru/docs/Web/CSS/Media_Queries/Using_media_queries	/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /ru/docs/Web/CSS/Media_Queries/Тестирование_медиа_запросы	/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries
+/ru/docs/Web/CSS/Paged_Media	/ru/docs/Web/CSS/CSS_paged_media
 /ru/docs/Web/CSS/Reference/background-blend-mode	/ru/docs/Web/CSS/background-blend-mode
 /ru/docs/Web/CSS/Using_CSS_variables	/ru/docs/Web/CSS/Using_CSS_custom_properties
 /ru/docs/Web/CSS/attr()	/ru/docs/Web/CSS/attr

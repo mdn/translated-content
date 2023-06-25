@@ -29,11 +29,11 @@ _Наследует свойства от его родителя, {{domxref("HT
 - {{domxref("URLUtils.hostname")}}
   - : Это {{domxref("DOMString")}} отображает имя хоста в указанном URL.
 - {{domxref("URLUtils.href")}}
-  - : Это {{domxref("DOMString")}} что отображает {{htmlattrxref("href", "a")}} HTML атрибут, содержащий действительный URL связанного ресурса.
+  - : Это {{domxref("DOMString")}} что отображает [`href`](/ru/docs/Web/HTML/Element/a#href) HTML атрибут, содержащий действительный URL связанного ресурса.
 - {{domxref("HTMLAnchorElement.hreflang")}}
-  - : Это {{domxref("DOMString")}} что отображает HTML атрибут {{htmlattrxref("hreflang", "a")}}, показывающий язык связанного ресурса.
+  - : Это {{domxref("DOMString")}} что отображает HTML атрибут [`hreflang`](/ru/docs/Web/HTML/Element/a#hreflang), показывающий язык связанного ресурса.
 - {{domxref("HTMLAnchorElement.media")}}
-  - : Это {{domxref("DOMString")}} что отображает {{htmlattrxref("media", "a")}} HTML атрибут, с указанием предполагаемого media для связанного ресурса.
+  - : Это {{domxref("DOMString")}} что отображает [`media`](/ru/docs/Web/HTML/Element/a#media) HTML атрибут, с указанием предполагаемого media для связанного ресурса.
 - {{domxref("HTMLAnchorElement.name")}}
   - : Это {{domxref("DOMString")}} отображает имя якоря.
 - {{domxref("URLUtils.password")}}
@@ -47,13 +47,13 @@ _Наследует свойства от его родителя, {{domxref("HT
 - {{domxref("URLUtils.protocol")}}
   - : Is a {{domxref("DOMString")}} отображающий составную часть протокола, включая двоеточия ('`:`'), ссылающегося URL.
 - {{domxref("HTMLAnchorElement.referrer")}} {{experimental_inline}}
-  - : Это {{domxref("DOMString")}} что отображает {{htmlattrxref("referrer", "a")}} HTML атрибут, показывающий какой referrer используется, когда выбрано изображение.
+  - : Это {{domxref("DOMString")}} что отображает [`referrer`](/ru/docs/Web/HTML/Element/a#referrer) HTML атрибут, показывающий какой referrer используется, когда выбрано изображение.
 - {{domxref("HTMLAnchorElement.rel")}}
-  - : Это {{domxref("DOMString")}} что отображает {{htmlattrxref("rel", "a")}} HTML атрибут, уточняя взаимоотношения целевого объекта к связанному объекту.
+  - : Это {{domxref("DOMString")}} что отображает [`rel`](/ru/docs/Web/HTML/Element/a#rel) HTML атрибут, уточняя взаимоотношения целевого объекта к связанному объекту.
 - {{domxref("HTMLAnchorElement.relList")}} {{readonlyInline}}
-  - : Возвращает {{domxref("DOMTokenList")}} который отображает {{htmlattrxref("rel", "a")}} HTML атрибут, как список токенов.
+  - : Возвращает {{domxref("DOMTokenList")}} который отображает [`rel`](/ru/docs/Web/HTML/Element/a#rel) HTML атрибут, как список токенов.
 - {{domxref("HTMLAnchorElement.rev")}}
-  - : Это {{domxref("DOMString")}} отображающий как {{htmlattrxref("rev", "a")}} HTML атрибут, уточняя взаимоотношения связанного объекта к целевому объекту
+  - : Это {{domxref("DOMString")}} отображающий как [`rev`](/ru/docs/Web/HTML/Element/a#rev) HTML атрибут, уточняя взаимоотношения связанного объекта к целевому объекту
 - {{domxref("URLUtils.search")}}
   - : Это {{domxref("DOMString")}} отображающий искомый элемент, включая ведущий знак вопроса ('`?`'), если таковой имеется, в ссылающемся URL.
 - {{domxref("HTMLAnchorElement.shape")}}
@@ -61,11 +61,11 @@ _Наследует свойства от его родителя, {{domxref("HT
 - {{domxref("HTMLAnchorElement.tabindex")}}
   - : Это `long` содержащий положение элемента в порядке навигационного переключения для текущего документа.
 - {{domxref("HTMLAnchorElement.target")}}
-  - : Это {{domxref("DOMString")}} который отображает {{htmlattrxref("target", "a")}} HTML атрибут, указывая где отображается связанный ресурс.
+  - : Это {{domxref("DOMString")}} который отображает [`target`](/ru/docs/Web/HTML/Element/a#target) HTML атрибут, указывая где отображается связанный ресурс.
 - {{domxref("HTMLAnchorElement.text")}}
   - : Это {{domxref("DOMString")}} является синонимом {{domxref("Node.textContent")}} свойства.
 - {{domxref("HTMLAnchorElement.type")}}
-  - : Это {{domxref("DOMString")}} которое отображает {{htmlattrxref("type", "a")}} HTML атрибут, показывающий MIME тип связанного ресурса.
+  - : Это {{domxref("DOMString")}} которое отображает [`type`](/ru/docs/Web/HTML/Element/a#type) HTML атрибут, показывающий MIME тип связанного ресурса.
 - {{domxref("URLUtils.username")}}
   - : Это {{domxref("DOMString")}} содержащий имя пользователя определённое перед именем домена.
 
