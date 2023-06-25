@@ -15,7 +15,7 @@ slug: Web/API/Notification/timestamp
 
 ## 示例
 
-以下代码段会触发一条通知；首先创建一个简单的 `options` 对象，然后使用 `Notification()` 构造函数触发通知。
+以下代码片段会触发一条通知；首先创建一个简单的 `options` 对象，然后使用 `Notification()` 构造函数触发通知。
 
 ```js
 const dts = Math.floor(Date.now());
