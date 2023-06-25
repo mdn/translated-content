@@ -5,7 +5,7 @@ slug: Web/API/Notification/title
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-{{domxref("Notification")}} 接口的 **`title`** 只读属性指示通知的标题，在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `title` 参数中指定。
+{{domxref("Notification")}} 接口的 **`title`** 只读属性指示通知的标题。此属性在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `title` 参数中指定。
 
 ## 值
 
