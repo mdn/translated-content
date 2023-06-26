@@ -13,7 +13,7 @@ slug: MDN/Community/Pull_requests
 
 无论内容更改是如何完成的，它们都会作为拉取请求提交到 GitHub 上。在发布到 MDN Web 文档之前，内容更改会经历以下阶段：
 
-1. **提交更改**：作为拉取请求的作者，你可以通过打开拉取请求来提交更改。有关我们的流程的更多信息，请参阅[开始之前](#开始之前)、[打开拉取请求](#打开拉取请求)和[打开拉取请求后](#打开拉取请求后)这几部分。
+1. **提交更改**：作为拉取请求的作者，你可以通过创建拉取请求来提交更改。有关我们的流程的更多信息，请参阅[开始之前](#开始之前)、[创建拉取请求](#创建拉取请求)和[创建拉取请求后](#创建拉取请求后)这几部分。
 2. **审查更改**：你的更改由 [MDN 成员和志愿者](#拉取请求审查流程)审查。有关更多详细信息，请参阅[拉取请求审查流程](#拉取请求审查流程)部分。
 3. **查看已发布更改**：`mdn/content`（本地化内容则是 `mdn/translated-content`）更改的内容将在合并后的一天内通过每 24 小时一次的网站重新构建发布。
 
@@ -21,96 +21,63 @@ slug: MDN/Community/Pull_requests
 
 ### 价值观与参与指南
 
-We want MDN Web Docs to be a welcoming, friendly community that we can all be proud of.
-All participants must follow our [Code of Conduct](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md) which means adhering to [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
-Be polite and constructive when opening pull requests, writing review comments, interacting with the pull request author or other community members.
-If you or someone else has experienced behavior that is potentially illegal or makes you feel unsafe, unwelcome, or uncomfortable, we encourage you to [report it](https://www.mozilla.org/en-US/about/governance/policies/participation/reporting/).
-
-我们希望 MDN Web 文档成为一个我们
+我们希望 MDN Web 文档成为一个我们都可以为之感到自豪的热情而又友好的社区。所有参与者都必须遵守我们的[行为准则](https://github.com/mdn/content/blob/main/CODE_OF_CONDUCT.md)，这意味着需要遵守 [Mozilla 社区参与准则](https://www.mozilla.org/zh-CN/about/governance/policies/participation/)。在创建拉取请求、撰写审查意见、与拉取请求作者或其他社区成员互动时，请保持礼貌和并使内容具有建设性。如果你或其他人遇到了可能违法或让你感到不安全、不受欢迎或不舒服的行为，我们鼓励你[报告此类行为](https://www.mozilla.org/zh-CN/about/governance/policies/participation/reporting/)。
 
 ### 开始之前
 
-Before you start work on MDN, please go through the recommendations and guidelines listed below.
+在你开始为 MDN Web 文档做出贡献之前，请阅读以下建议和指南。
 
-**Pull requests must resolve or partially fix an existing issue.**
-The reason why we have this restriction is to avoid that you start on any kind of task that someone else might already be working on.
-Search through issues and pull requests in the [MDN repository](https://github.com/orgs/mdn/repositories) you want to contribute to and confirm that the work you want to start is not already being worked on.
-When looking to contribute to the MDN project, you will find yourself in one of the following situations:
+**拉取请求必须解决或部分解决现有的议题**。我们之所以有此限制，是为了避免你开始任何其他人可能已经在做的任务。在你想要贡献的 [MDN 仓库](https://github.com/orgs/mdn/repositories)中搜索议题和拉取请求，并确认你想要开始的工作尚未有其他人正在进行。当寻求为 MDN 项目做出贡献时，你会发现自己处于以下情况之一：
 
-- **If you are looking to contribute to the project**, you can find tasks under 'Issues' in any of the [MDN GitHub repositories](https://github.com/orgs/mdn/repositories) (for example, [`mdn/content` issues](https://github.com/mdn/content/issues)) and our [public GitHub project boards](https://github.com/orgs/mdn/projects).
-  Make sure the issue isn't assigned to someone and no one has already opened a pull request for the task.
-  Issues labelled with `good first issue` are a good place to start.
+- **如果你希望为该项目做出共享**，你可以在任意 [MDN GitHub 仓库](https://github.com/orgs/mdn/repositories)（例如 [`mdn/content` 仓库的议题](https://github.com/mdn/content/issues)）的“Issues”下以及我们的[公共 GitHub 项目看板](https://github.com/orgs/mdn/projects)中找到任务。请确保议题未被分配给其他人，并且没有人已经为该任务创建拉取请求。标记为 `good first issue` 的议题是一个很好的起点。
+- **如果你在 MDN 上发现了问题**，你应该首先创建一个议题。**在开始工作之前，议题需要维护者的回复**，以便你知道拉取请求所解决的问题是有效的，并且你的拉取请求将被接受。有关议题的更多信息，请参阅我们的 [GitHub 议题的社区页面](https://github.com/mdn/mdn/issues/new?labels=proposal%2Cneeds+triage&template=content-or-feature-suggestion.yml&title=Enter+your+proposal+here)。
+- **如果你想提议新内容或新特性**，请通过 [GitHub 议题模板](https://github.com/mdn/mdn/issues/new/choose)“New content or feature suggestion”提交提议。
 
-- **If you have found a problem on MDN**, you should open an issue first.
-  **Issues need a response from maintainers before you start working** so that you know a problem addressed by a pull request is valid and that your pull request will be accepted.
-  More information on issues can be found on our [Community pages for GitHub issues](https://github.com/mdn/mdn/issues/new?assignees=schalkneethling&labels=proposal%2Cneeds+triage&template=content-or-feature-suggestion.yml&title=Enter+your+proposal+here).
+如果你不确定从哪里开始，请在 [Discord 服务器](/zh-CN/docs/MDN/Community/Communication_channels#discord_服务器)上与我们联系并寻求反馈。
 
-- **If you want to suggest new content or a new feature**, submit a proposal through the 'New content or feature suggestion' [GitHub issue template](https://github.com/mdn/mdn/issues/new/choose).
+### 创建拉取请求
 
-If you're not sure where to start, reach out to us on [the Discord server](/en-US/docs/MDN/Community/Communication_channels#discord_server) and ask for feedback.
+当你准备好创建拉取请求时，请遵循以下指南：
 
-### 打开拉取请求
+- **拉取请求应该简短且集中于一个议题**：如果可以，请将相关的一组更改分成多个小的拉取请求。如果拉取请求变得太大，审查者可能会关闭它，并要求你为每个逻辑上属于一组的更改提交拉取请求。
+- **添加更改的描述**：尽可能提供拉取请求的上下文和理由。
+- **添加指向你要关闭的议题的链接**：在拉取请求的描述中，如果拉取请求完全解决了某个议题，请添加“Fixes”，如果它是一个相关的议题，请添加“Relates to”。有关在拉取请求中链接到议题的更多信息，请参阅 [GitHub 文档](https://docs.github.com/zh/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)。
+- **添加“依赖”**：如果有必须先合并的拉取请求（例如，其他仓库中的代码示例），请添加依赖的链接。
+- **将代码示例更改和内容更改放在一起**：这对于确保更新后的示例能够正确运行非常重要。如果你正在进行的内容更改会影响示例的使用方式，则应同时更新相关的代码示例。
+- **添加审查员**：如果你已经知道谁应该审查你的拉取请求，你可以添加审查员，例如团队成员或主题所有者。
+- **不要仅进行语法更改**：MDN Web 文档包含技术文档；除非语法不正确，否则你不应提议散文风格的更改。
+- **不要在遵循特定格式的页面上不必要地添加或删除换行符。**
+- **不要启用自动合并。**
 
-When you're ready to open a pull request, follow these guidelines:
+### 创建拉取请求后
 
-- **Pull requests should be short and focused to one issue:** If possible, group related set of changes into multiple, small pull requests.
-  If a pull request becomes too large, the reviewer may close it and ask that you to submit pull requests for each logical set of changes that belong together.
-- **Add a description of the changes:** Provide as much context and rationale for the pull request as possible.
-- **Add the link to the issue you are closing:** In the pull request description, add 'Fixes' if it fully resolves the issue or 'Relates to' if it is a related issue.
-  More information about linking to issues in pull requests can be found in [GitHub docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
-- **Add 'depends on'** with a link to a dependency if there are pull requests that must be merged first (e.g., code examples in other repositories).
-- **Accompany code example changes with content changes:** This is important to ensure that updated examples are served correctly.
-  If you're making content changes that affect how examples are used, the related code examples should also be updated.
-- **Add a reviewer:** You can add a reviewer, such as a team member or a topic owner, if you already know who should review your pull request.
-- **Don't make grammar-only changes:**
-  MDN Web Docs contains technical documentation; you should not suggest prose style changes except where grammar is incorrect.
-- **Don't unnecessarily add or remove line breaks** on pages that follow a certain formatting style.
-- **Don't enable auto-merge.**
-
-### 打开拉取请求后
-
-- **Handle CI failures** from the automated tests that run as GitHub Actions (see `.github/workflows`).
-  If one or more of these tests fail, it is your responsibility to try to resolve them.
-  If you don't know how to resolve the underlying issues, ask for help.
-- **Resolve merge conflicts** with the main branch; you are responsible for resolving these.
-  You can do this by merging the `mdn/main` branch into your branch.
-  For more information, see the GitHub documentation on [keeping your branch up to date](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/keeping-your-pull-request-in-sync-with-the-base-branch#about-keeping-your-pull-request-in-sync).
-- **Be responsive to feedback.**
-  This means being prepared to make changes to the pull request based on the review.
-  If a review happens and the changes are not made, the pull request may be closed.
-- **Be patient during the review process.**
-  The MDN organization receives a large volume of pull requests and the team may need time to review your contributions.
-- **Don't reopen closed pull requests.**
-  If you must create a new pull request, it can reference the closed one.
+- **处理持续集成（CI）的错误**，这些错误是由 GitHub Actions 运行的自动化测试引起的（见 `.github/workflows`）。如果这些测试中的一个或多个失败，你有责任尝试解决它们。如果你不知道如何解决潜在的问题，请寻求帮助。
+- **解决与主分支的合并冲突**，你有责任解决这些冲突。你可以通过将 `mdn/main` 分支合并到你的分支来解决这些冲突。有关更多信息，请参阅 GitHub 文档[关于使拉取请求保持同步](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/keeping-your-pull-request-in-sync-with-the-base-branch#about-keeping-your-pull-request-in-sync)。
+- **对反馈做出回应**。这意味着你应该准备根据审查意见对拉取请求进行更改。如果进行了审查，但没有进行更改，那么拉取请求可能会被关闭。
+- **对审查过程保持耐心**。MDN 组织收到了大量的拉取请求，团队可能需要一定的时间来审查你的贡献。
+- **请不要重新打开已关闭的拉取请求**。如果你必须创建一个新的拉取请求，其可以引用已关闭的拉取请求。
 
 ## 拉取请求审查流程
 
-Reviewer(s) are automatically assigned when you open a pull request based on a `CODEOWNERS` file, but if there is a specific person you want to request review from, you can [request a review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review) manually.
-We also use auto-labeling on pull requests to help us triage them.
-Maintainers can further triage pull requests and add any additional labels, such as `needs-info` or `on-hold`, if needed based on context.
+当你创建拉取请求时，会基于 `CODEOWNERS` 文件自动分配审查员，但如果你想要请求特定的人进行审查，你可以手动[请求审查](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review)。我们还使用拉取请求的自动标记来帮助我们对其进行分类。维护者可以进一步对拉取请求进行分类，并根据上下文添加任何其他标签，例如 `needs-info` 或 `on-hold`。
 
-If you want to review a pull request but are not listed as a reviewer, you may add yourself as one.
-It's polite to check with existing reviewers first by commenting on the pull request that you intend to start a review.
+如果你想要审查拉取请求，但没有被列为审查员，你可以将自己添加为审查员。通过在拉取请求上发表评论，告知现有的审查员你打算开始审查是有礼貌的。
 
-### Reviewers and assignees
+### 审查员和受理人
 
-The MDN Web Docs team uses reviewers and assignees to track the status of pull requests.
+MDN Web 文档团队使用审查员（reviewer）和受理人（assignee）来跟踪拉取请求的状态。
 
-- **Reviewers** are people that assess the changes in pull request and provide feedback for the author.
-- **Assignees** are people responsible for making sure the pull request is not blocked.
-  Not all pull requests have assignees, but if they do, they are responsible for making sure the pull request progresses.
-  An assignee helps the work reach a conclusion either by merging, closing, or undertaking unblocking work themselves.
+- **审查员**are people that assess the changes in pull request and provide feedback for the author.
+- **审查员**是对拉取请求中的更改进行评估并为作者提供反馈的人。
+- **受理人**是负责确保拉取请求不被阻塞的人。并非所有拉取请求都有受理人，但如果有，他们负责确保拉取请求的进展。受理人通过合并、关闭或自己进行解除阻塞工作来帮助工作的完成。
 
-A pull request reviewer or assignee is responsible for merging the changes.
+拉取请求的审查员或受理人负责合并更改。
 
-Before you start with a review, check the pull request description to make sure no one specific should review it.
-Ensure that all continuous integration (CI) tasks have been completed successfully and that there are no merge conflicts.
+在你开始审查之前，请检查拉取请求的描述，以确保没有人应该对其进行审查。确保所有持续集成测试都已成功完成，并且没有合并冲突。
 
-If any tasks fail or there are merge conflicts, communicate this to the author; it is their responsibility to address these.
-You may set the author as an **assignee** to indicate that a pull request needs their attention before a review can start.
-Do leave the door open to the author to ask for help, especially new contributors to the project.
+如果有任何测试失败或存在合并冲突，请将此信息传达给作者；他们有责任解决这些问题。你可以将作者设置为**受理人**，以表示拉取请求在审查开始之前需要他们的注意。确保能够为作者提供帮助，特别是对于项目的新贡献者。
 
-### Reviewing a pull request
+### 审查拉取请求
 
 When it comes to the changes in a pull request, content and prose must adhere to the [MDN Writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide) and example code must follow the [code style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
 
@@ -134,21 +101,21 @@ It's recommended to use [comments with suggestions](https://docs.github.com/en/p
 When submitting your review you have three options, **approve**, **comment**, or **request changes**.
 The following sections explain when to use each option.
 
-### Requesting changes
+### 请求更改
 
 Use the request changes option when the feedback you provided _needs_ to be addressed by the author and re-reviewed by the reviewer before the pull request can be approved and merged.
 
-#### Comment
+#### 评论
 
 Use the comment option when your feedback is not critical and will not require a re-review.
 In short, you trust the author and other reviewers to use good judgment.
 
-#### Approve
+#### 批准
 
 Use the approve option when everything looks good and is ready to merge from your perspective.
 After submitting your review, you can safely merge the pull request if there are no other reviewers or any outstanding review comments to address.
 
-#### What to do if you are stuck
+#### 遇到困难时该怎么办
 
 If you don't understand a content change or feel that it is too large and complex for you to deal with, don't panic!
 A good place to start is by asking for information from the pull request author to help.
@@ -158,7 +125,7 @@ If this does happen, however, the pull request description should link to an iss
 
 If you are still not sure or if you think the content is suspicious, reach out to the MDN Web Docs team and ask for help.
 
-### Guidelines for turnaround times for authors and reviewers
+### 作者和审查员的周转时间指南
 
 This section provides details for expected turnaround times while responding to review comments if you're a pull request author and while reviewing pull requests if you're a reviewer.
 
@@ -173,7 +140,7 @@ This section provides details for expected turnaround times while responding to 
   - Commit the changes and merge the pull request
   - Close the pull request
 
-### External reviewers
+### 外部审查员
 
 Some pull requests on the MDN content repo relate to specific work by browser vendors or organizations with defined authors and reviewers.
 The author will include the username of the reviewer in a line at the bottom of the pull request description in these cases, for example:
@@ -185,7 +152,7 @@ reviewer: @jpmedley
 If you receive a review request and you have been overridden with another reviewer in the manner described above, do not review the changes.
 Once the reviewer mentioned in the description has approved the changes, they will ask for an approval required by the `CODEOWNERS`.
 
-## Reading list
+## 阅读清单
 
 Reviewers are encouraged to read the following articles for help with common tasks:
 
