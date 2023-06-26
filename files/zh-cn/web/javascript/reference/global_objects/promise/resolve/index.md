@@ -24,7 +24,7 @@ Promise.resolve(value)
 
 ### 返回值
 
-一个由给定值解决的 {{jsxref("Promise")}}，或者如果该值为一个 Promise 对象，则返回该对象。一个已解决的 Promise 可以处于已兑现、已拒绝或待定状态中的任何一种。例如，对一个已拒绝的 Promise 进行解决仍将返回一个已拒绝的 Promise。
+一个由给定值解决的 {{jsxref("Promise")}}，或者如果该值为一个 Promise 对象，则返回该对象。一个已解决的 Promise 可以处于已兑现、已拒绝或待定状态中的任何一种。例如，对一个已拒绝的 Promise 进行调用仍将返回一个已拒绝的 Promise。
 
 ## 描述
 
