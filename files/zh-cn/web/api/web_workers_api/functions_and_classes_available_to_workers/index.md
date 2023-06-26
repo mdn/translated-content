@@ -51,6 +51,7 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 - {{domxref("FormData")}}
 - {{domxref("ImageData")}}
 - {{domxref("IndexedDB_API", "IndexedDB")}}
+- {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}}（仅限专用 worker）
 - [Network Information API](/zh-CN/docs/Web/API/Network_Information_API)
 - {{domxref("Notifications_API", "Notifications API")}}
 - {{domxref("Performance_API","Performance API")}}，包括：
