@@ -1,14 +1,6 @@
 ---
 title: Explication des bases théoriques de la 3D
 slug: Games/Techniques/3D_on_the_web/Basic_theory
-tags:
-  - 3D
-  - Bases
-  - Images
-  - Lumières
-  - Textures
-  - fragment
-  - vertex
 translation_of: Games/Techniques/3D_on_the_web/Basic_theory
 ---
 

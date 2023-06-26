@@ -1,16 +1,7 @@
 ---
 title: Fin de partie
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
-tags:
-  - Canvas
-  - Débutant
-  - Fin de partie
-  - JavaScript
-  - Jeux
-  - Tutoriel
-  - game over
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
-original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over
 ---
 
 {{GamesSidebar}}
