@@ -54,7 +54,7 @@ fun.call(thisArg[, arg1[, arg2[, ...]]])
 
 ### 使用 `call` 來串接物件上的建構子
 
-你可以使用 `call` 來串接其他物件的建構子，就像 Java。下面的例子中，`Product` 物件的建構子定義了兩個參數 `name` 以及 `price`。其他函數`Food` 及 `Toy` 引用了 `Product` 並傳入 `this`、`name` 和 `price`。Product 初始化它的屬性 `name` 和 `price`，而兩個子函數則定義了`category`。
+你可以使用 `call` 來串接其他物件的建構子，就像 Java。下面的例子中，`Product` 物件的建構子定義了兩個參數 `name` 以及 `price`。其他函數 `Food` 及 `Toy` 引用了 `Product` 並傳入 `this`、`name` 和 `price`。Product 初始化它的屬性 `name` 和 `price`，而兩個子函數則定義了 `category`。
 
 ```js
 function Product(name, price) {
