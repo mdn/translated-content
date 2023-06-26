@@ -41,19 +41,19 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 - {{domxref("Cache", "Cache API")}}
 - {{domxref("Channel_Messaging_API", "Channel Messaging API")}}
 - {{domxref("Console API", "Console API")}}
-- [Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) （例如 {{domxref("Crypto")}}）
+- [Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API)（例如 {{domxref("Crypto")}}）
 - [CSS Font Loading API](/zh-CN/docs/Web/API/CSS_Font_Loading_API)
 - {{domxref("CustomEvent")}}
-- {{domxref("Encoding_API", "Encoding API")}} （例如 {{domxref("TextEncoder")}}，{{domxref("TextDecoder")}}）
+- {{domxref("Encoding_API", "Encoding API")}}（例如 {{domxref("TextEncoder")}}、{{domxref("TextDecoder")}}）
 - {{domxref("Fetch_API", "Fetch API")}}
 - {{domxref("FileReader")}}
-- {{domxref("FileReaderSync")}} （仅在 worker 中有效！）
+- {{domxref("FileReaderSync")}}（仅在 worker 中有效！）
 - {{domxref("FormData")}}
 - {{domxref("ImageData")}}
 - {{domxref("IndexedDB_API", "IndexedDB")}}
 - [Network Information API](/zh-CN/docs/Web/API/Network_Information_API)
 - {{domxref("Notifications_API", "Notifications API")}}
-- {{domxref("Performance_API","Performance API")}} ，包括：
+- {{domxref("Performance_API","Performance API")}}，包括：
   - {{domxref("Performance")}}
   - {{domxref("PerformanceEntry")}}
   - {{domxref("PerformanceMeasure")}}
@@ -61,9 +61,9 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
   - {{domxref("PerformanceObserver")}}
   - {{domxref("PerformanceResourceTiming")}}
 - {{jsxref("Promise")}}
-- [Server-sent events](/zh-CN/docs/Web/API/Server-sent_events)
+- [Server-sent 事件](/zh-CN/docs/Web/API/Server-sent_events)
 - {{domxref("ServiceWorkerRegistration")}}
-- {{domxref("URL_API","URL API")}} （例如 {{domxref("URL")}}）
+- {{domxref("URL_API","URL API")}}（例如 {{domxref("URL")}}）
 - [WebGL](/en-US/docs/Web/API/WebGL_API) 与 {{domxref("OffscreenCanvas")}}
 - {{domxref("WebSocket")}}
 - {{domxref("XMLHttpRequest")}}
