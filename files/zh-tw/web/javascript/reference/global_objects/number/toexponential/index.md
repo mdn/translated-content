@@ -15,8 +15,8 @@ numObj.toExponential([fractionDigits])
 
 ### 參數
 
-| 參數             | 可選 | 默認值                   | 類型                             | 說明                                |
-| ---------------- | ---- | ------------------------ | -------------------------------- | ----------------------------------- |
+| 參數             | 可選 | 默認值                   | 類型                           | 說明                                |
+| ---------------- | ---- | ------------------------ | ------------------------------ | ----------------------------------- |
 | `fractionDigits` | ●    | 默認盡可能將數字完整顯示 | {{jsxref("Number")}}（正整數） | 小數點後的位數。需為 0 至 20 之間。 |
 
 ### 回傳值
@@ -26,7 +26,7 @@ numObj.toExponential([fractionDigits])
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : `若 fractionDigits` 超出範圍（可接受的範圍是 0 ～ 20 之間的正整數）觸發 {{jsxref("RangeError")}}。
+  - : 若 `fractionDigits` 超出範圍（可接受的範圍是 0 ～ 20 之間的正整數）觸發 {{jsxref("RangeError")}}。
 - {{jsxref("TypeError")}}
   - : 若參數 `fractionDigits` 不是 {{jsxref("Number")}}，則觸發{{jsxref("TypeError")}}。
 
