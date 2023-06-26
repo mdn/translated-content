@@ -72,7 +72,7 @@ JSON.parse('{"1": 1, "2": 2, "3": {"4": 4, "5": {"6": 6}}}', function (k, v) {
 
 ### `JSON.parse()` 不容許尾部有逗號
 
-```js example-bad example-bad
+```js example-bad
 // 這兩個都會拋出 SyntaxError
 JSON.parse("[1, 2, 3, 4, ]");
 JSON.parse('{"foo" : 1, }');
