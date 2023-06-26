@@ -4889,6 +4889,14 @@
     "modified": "2020-10-15T22:26:06.271Z",
     "contributors": ["Gnuxdar"]
   },
+  "Web/API/Navigator/language": {
+    "modified": "2019-03-23T22:46:24.341Z",
+    "contributors": ["cesiztel", "jesus9ias"]
+  },
+  "Web/API/Navigator/onLine": {
+    "modified": "2019-03-23T22:07:34.200Z",
+    "contributors": ["MarkelCuesta"]
+  },
   "Web/API/Navigator/registerProtocolHandler": {
     "modified": "2019-03-23T23:53:04.318Z",
     "contributors": ["fscholz", "khalid32", "Nukeador", "HenryGR", "Mgjbot"]
@@ -15553,32 +15561,6 @@
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
     "modified": "2020-01-13T04:48:11.759Z",
     "contributors": ["chrisdavidmills", "fscholz", "elin3t", "sebasmagri"]
-  },
-  "orphaned/Web/API/NavigatorLanguage": {
-    "modified": "2019-03-23T22:46:20.556Z",
-    "contributors": ["teoli"]
-  },
-  "orphaned/Web/API/NavigatorLanguage/language": {
-    "modified": "2019-03-23T22:46:24.341Z",
-    "contributors": ["cesiztel", "jesus9ias"]
-  },
-  "orphaned/Web/API/NavigatorOnLine": {
-    "modified": "2019-03-23T22:07:33.991Z",
-    "contributors": ["abbycar"]
-  },
-  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-01-16T15:46:38.836Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Mgjbot",
-      "Nukeador",
-      "RickieesES",
-      "Unixcoder"
-    ]
-  },
-  "orphaned/Web/API/NavigatorOnLine/onLine": {
-    "modified": "2019-03-23T22:07:34.200Z",
-    "contributors": ["MarkelCuesta"]
   },
   "orphaned/Web/API/ParentNode": {
     "modified": "2019-03-23T22:43:20.773Z",

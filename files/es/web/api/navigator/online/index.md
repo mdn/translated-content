@@ -1,6 +1,6 @@
 ---
 title: Navigator.onLine
-slug: orphaned/Web/API/NavigatorOnLine/onLine
+slug: Web/API/Navigator/onLine
 original_slug: Web/API/NavigatorOnLine/onLine
 ---
 
