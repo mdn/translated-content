@@ -1,5 +1,5 @@
 ---
-title: Web Workers API
+title: Web Worker API
 slug: Web/API/Web_Workers_API
 ---
 
@@ -47,8 +47,8 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 
 以下函数**仅**对 worker 可用：
 
-- {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}} （所有 worker）
-- {{domxref("DedicatedWorkerGlobalScope.postMessage")}} （仅限专用 worker）
+- {{domxref("WorkerGlobalScope.importScripts", "WorkerGlobalScope.importScripts()")}}（所有 worker）
+- {{domxref("DedicatedWorkerGlobalScope.postMessage")}}（仅限专用 worker）
 
 ### 支持的 Web API
 
@@ -61,13 +61,13 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 - {{domxref("Cache", "Cache API")}}
 - {{domxref("Channel_Messaging_API", "Channel Messaging API")}}
 - {{domxref("Console API", "Console API")}}
-- [Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) （例如 {{domxref("Crypto")}}）
+- [Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API)（例如 {{domxref("Crypto")}}）
 - [CSS Font Loading API](/zh-CN/docs/Web/API/CSS_Font_Loading_API)
 - {{domxref("CustomEvent")}}
-- {{domxref("Encoding_API", "Encoding API")}} （例如 {{domxref("TextEncoder")}}，{{domxref("TextDecoder")}}）
+- {{domxref("Encoding_API", "Encoding API")}}（例如 {{domxref("TextEncoder")}}、{{domxref("TextDecoder")}}）
 - {{domxref("Fetch_API", "Fetch API")}}
 - {{domxref("FileReader")}}
-- {{domxref("FileReaderSync")}} （仅在 worker 中有效！）
+- {{domxref("FileReaderSync")}}（仅在 worker 中有效！）
 - {{domxref("FormData")}}
 - {{domxref("ImageData")}}
 - {{domxref("IndexedDB_API", "IndexedDB")}}
@@ -83,7 +83,7 @@ worker 在一个与当前 {{DOMxRef("window")}} 不同的全局上下文中运�
 - {{jsxref("Promise")}}
 - [Server-sent 事件](/zh-CN/docs/Web/API/Server-sent_events)
 - {{domxref("ServiceWorkerRegistration")}}
-- {{domxref("URL_API","URL API")}} （例如 {{domxref("URL")}}）
+- {{domxref("URL_API","URL API")}}（例如 {{domxref("URL")}}）
 - [WebGL](/zh-CN/docs/Web/API/WebGL_API) 与 {{domxref("OffscreenCanvas")}}
 - {{domxref("WebSocket")}}
 - {{domxref("XMLHttpRequest")}}
