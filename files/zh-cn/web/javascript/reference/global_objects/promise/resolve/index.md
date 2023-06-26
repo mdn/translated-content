@@ -5,9 +5,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 
 {{JSRef}}
 
-**`Promise.resolve()`** 静态方法将给定的值转换为一个 {{jsxref("Promise")}}。如果该值本身就是一个 Promise，那么该 Promise 将被返回；如果该值是一个 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable)，`Promise.resolve()` 将调用 `then()` 方法及其两个回调函数；否则，返回的 Promise 将会以该值兑现。
+**`Promise.resolve()`** 静态方法将给定的值转换为一个 {{jsxref("Promise")}}。如果该值本身就是一个 Promise，那么该 Promise 将被返回；如果该值是一个 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 对象，`Promise.resolve()` 将调用其 `then()` 方法及其两个回调函数；否则，返回的 Promise 将会以该值兑现。
 
-该函数将嵌套的类 Promise 对象（例如，一个 Promise 对象被兑现后返回另一个 Promise 对象）展平，转化为一个单层的 Promise 对象，其兑现值为一个非 thenable 值。
+该函数将嵌套的类 Promise 对象（例如，一个将被兑现为另一个 Promise 对象的 Promise 对象）展平，转化为单个 Promise 对象，其兑现值为一个非 thenable 值。
 
 {{EmbedInteractiveExample("pages/js/promise-resolve.html")}}
 
@@ -36,8 +36,8 @@ Promise.resolve(value)
 
 实际上，大部分解决逻辑是由 `Promise()` 构造函数传递的 [resolver 函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_函数)实现的，简单概括如下：
 
-- 如果传入的是一个非 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 值，则返回的 Promise 对象将以该值兑现。
-- 如果传入的是一个 thenable 对象，则通过传入一对解决函数作为参数调用该 thenable 对象的 `then` 方法后得到的状态将作为返回的 Promise 对象的状态。（但是因为原生的 Promise 直接通过 `Promise.resolve()` 调用，而不创建封装器，所以不会在原生 Promise 上调用 `then` 方法。）如果 resolver 函数接收到另一个 thenable 对象，则会再次进行解决，以确保 Promise 对象的最终兑现值永远不会是 thenable 对象。
+- 如果传入的是一个非 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 对象的值，则返回的 Promise 对象将以该值兑现。
+- 如果传入的是一个 thenable 对象，则通过传入一对解决函数作为参数调用该 thenable 对象的 `then` 方法后得到的状态将作为返回的 Promise 对象的状态。（但是因为原生的 Promise 直接通过 `Promise.resolve()` 调用，而不创建封装对象，所以不会在原生 Promise 上调用 `then` 方法。）如果 resolver 函数接收到另一个 thenable 对象，则会再次进行解决，以确保 Promise 对象的最终兑现值永远不会是 thenable 对象。
 
 ## 示例
 
