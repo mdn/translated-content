@@ -34,27 +34,27 @@ let var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]];
 function varTest() {
   var x = 1;
   {
-    var x = 2;  // 這裡的 x 與 function 區塊內部的 x 是一樣的，因此會影響 function 區塊內所有的 x
-    console.log(x);  // 2
+    var x = 2; // 這裡的 x 與 function 區塊內部的 x 是一樣的，因此會影響 function 區塊內所有的 x
+    console.log(x); // 2
   }
-  console.log(x);  // 2
+  console.log(x); // 2
 }
 
 function letTest() {
   let x = 1;
   {
-    let x = 2;  // 這裡的 x 與 function 區塊內部的 x 是不同的，只會作用在這層 block 區塊中
-    console.log(x);  // 2
+    let x = 2; // 這裡的 x 與 function 區塊內部的 x 是不同的，只會作用在這層 block 區塊中
+    console.log(x); // 2
   }
-  console.log(x);  // 1
+  console.log(x); // 1
 }
 ```
 
 在上列例子裡的最前行 `let` 和 `var` 不同，`let` 並不會在全域物件中建立變數。舉例來說：
 
 ```js
-var x = 'global';
-let y = 'global';
+var x = "global";
+let y = "global";
 console.log(this.x); // "global"
 console.log(this.y); // undefined
 ```
@@ -70,19 +70,19 @@ var Thing;
   let privateScope = new WeakMap();
   let counter = 0;
 
-  Thing = function() {
-    this.someProperty = 'foo';
+  Thing = function () {
+    this.someProperty = "foo";
 
     privateScope.set(this, {
       hidden: ++counter,
     });
   };
 
-  Thing.prototype.showPublic = function() {
+  Thing.prototype.showPublic = function () {
     return this.someProperty;
   };
 
-  Thing.prototype.showPrivate = function() {
+  Thing.prototype.showPrivate = function () {
     return privateScope.get(this).hidden;
   };
 }
@@ -141,8 +141,8 @@ switch (x) {
 You can use the `let` keyword to bind variables locally in the scope of `for` loops. This is different from the var keyword in the head of a for loop, which makes the variables visible in the whole function containing the loop.
 
 ```js
-var i=0;
-for ( let i=i ; i < 10 ; i++ ) {
+var i = 0;
+for (let i = i; i < 10; i++) {
   console.log(i);
 }
 ```
@@ -152,7 +152,7 @@ However, it's important to point out that a block nested inside a case clause wi
 ```js
 let x = 1;
 
-switch(x) {
+switch (x) {
   case 0: {
     let foo;
     break;
@@ -182,11 +182,11 @@ Due to lexical scoping, the identifier **"foo"** inside the expression `(foo + 5
 In that very line, the _if block's "foo"_ has already been created in the lexical environment, but has not yet reached (and **terminated**) its initialization (which is part of the statement itself): it's still in the temporal dead zone.
 
 ```js example-bad
-function test(){
-   var foo = 33;
-   {
-      let foo = (foo + 55); // ReferenceError
-   }
+function test() {
+  var foo = 33;
+  {
+    let foo = foo + 55; // ReferenceError
+  }
 }
 test();
 ```
@@ -198,12 +198,13 @@ function go(n) {
   // n here is defined!
   console.log(n); // Object {a: [1,2,3]}
 
-  for (let n of n.a) { // ReferenceError
+  for (let n of n.a) {
+    // ReferenceError
     console.log(n);
   }
 }
 
-go({a: [1, 2, 3]});
+go({ a: [1, 2, 3] });
 ```
 
 ## Other situations
@@ -218,8 +219,8 @@ if (a === 1) {
   var a = 11; // the scope is global
   let b = 22; // the scope is inside the if-block
 
-  console.log(a);  // 11
-  console.log(b);  // 22
+  console.log(a); // 11
+  console.log(b); // 22
 }
 
 console.log(a); // 11

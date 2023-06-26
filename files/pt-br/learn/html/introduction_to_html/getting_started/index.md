@@ -401,7 +401,7 @@ textarea.onkeyup = function(){
 
 ### Atributos boleanos
 
-Às vezes você verá atributos escritos sem valores — isso é permitido nos chamados atributos boleanos, e eles podem ter somente um valor, que é geralmente o mesmo nome do atributo. Por exemplo, o atributo {{htmlattrxref("disabled", "input")}} você pode atribuir para os elementos de entrada de formulários, se desejar que estes estejam desativados (acinzentados), para que o usuário não possa inserir nenhum dado neles.
+Às vezes você verá atributos escritos sem valores — isso é permitido nos chamados atributos boleanos, e eles podem ter somente um valor, que é geralmente o mesmo nome do atributo. Por exemplo, o atributo [`disabled`](/pt-BR/docs/Web/HTML/Element/input#disabled) você pode atribuir para os elementos de entrada de formulários, se desejar que estes estejam desativados (acinzentados), para que o usuário não possa inserir nenhum dado neles.
 
 ```
 <input type="text" disabled="disabled">

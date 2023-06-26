@@ -1,19 +1,75 @@
 ---
-title: '<cite>: 引用元要素'
+title: "<cite>: 引用元要素"
 slug: Web/HTML/Element/cite
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
 
-**HTML の引用元要素** (**`<cite>`**) は、引用された創作物の参照を表し、作品のタイトルを含む必要があります。参照は、引用メタデータに関する利用場面に合わせた慣習に応じて省略形が用いられることがあります。
+**`<cite>`** は [HTML](/ja/docs/Web/HTML) の要素で、引用された創作物のタイトルをマークアップするために使用します。この参照は、引用メタデータに関する利用場面に合わせた慣習に応じて省略形が用いられることがあります。
 
 {{EmbedInteractiveExample("pages/tabbed/cite.html", "tabbed-standard")}}
+
+## 属性
+
+この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみを持ちます。
+
+## 使用上の注意
+
+`<cite>` 要素の文脈では、例えば以下のような創作物のうちの一つを引用することができます。
+
+- 書籍
+- 研究論文
+- エッセイ
+- 詩
+- 楽譜
+- 歌
+- 演劇や映画の台本
+- 映画
+- テレビ番組
+- ゲーム
+- 彫刻
+- 絵画
+- 舞台作品
+- 演劇
+- オペラ
+- ミュージカル
+- 展示
+- 事件報告書
+- コンピュータープログラム
+- ウェブサイト
+- ウェブページ
+- ブログ投稿やコメント
+- フォーラム投稿やコメント
+- ツイート
+- Facebook 投稿
+- 記述された、または口頭の声明
+- その他
+
+{{HTMLElement("blockquote")}} 要素や {{HTMLElement("q")}} 要素によって引用された素材の情報源の出典を記述するには、これらの要素の [`cite`](/ja/docs/Web/HTML/Element/blockquote#cite) 属性を使用してください。
+
+通常、ブラウザーは既定で `<cite>` にイタリック体を適用します。これを防ぐには、CSS の {{cssxref("font-style")}} プロパティを `<cite>` 要素に適用してください。
+
+## 例
+
+```html
+<p>より詳しい情報については <cite>[ISO-0000]</cite> に記載されています。</p>
+```
+
+### 結果
+
+{{EmbedLiveSample("Example", 640, 80)}}
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories"
+          >コンテンツカテゴリー</a
+        >
       </th>
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
@@ -67,67 +123,15 @@ slug: Web/HTML/Element/cite
   </tbody>
 </table>
 
-## 属性
-
-この要素は[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみを持ちます。
-
-## 使用上の注意
-
-`<cite>` 要素の文脈では、例えば以下のような創作物のうちの一つを引用することができます。
-
-- 書籍
-- 研究論文
-- エッセイ
-- 詩
-- 楽譜
-- 歌
-- 演劇や映画の台本
-- 映画
-- テレビ番組
-- ゲーム
-- 彫刻
-- 絵画
-- 舞台作品
-- 演劇
-- オペラ
-- ミュージカル
-- 展示
-- 事件報告書
-- コンピュータープログラム
-- ウェブサイト
-- ウェブページ
-- ブログ投稿やコメント
-- フォーラム投稿やコメント
-- ツイート
-- Facebook 投稿
-- 記述された、または口頭の声明
-- その他
-
-注目すべきこととして、 W3C の仕様書では、 `<cite>` 要素に含められる創作物の参照には、作者名を含めてよいとしています。しかし、 WHATWG における `<cite>` の仕様では逆に、どのような場合でも人名を含めてはならないとしています。
-
-{{HTMLElement("blockquote")}} 要素や {{HTMLElement("q")}} 要素によって引用された素材の情報源の出典を記述するには、これらの要素の [`cite`](/ja/docs/Web/HTML/Element/blockquote#cite) 属性を使用してください。
-
-通常、ブラウザーは既定で `<cite>` に斜体を適用します。これを防ぐには、要素で既定のイタリックスタイルが使用されるのを避けるには、 `<cite>` 要素に CSS の {{cssxref("font-style")}} プロパティを適用してください。
-
-## 例
-
-```html
-より詳しい情報については <cite>[ISO-0000]</cite> に記載されています。
-```
-
-以下のように出力されます。
-
-{{EmbedLiveSample("Example", 640, 60)}}
-
 ## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.cite")}}
+{{Compat}}
 
 ## 関連情報
 
 - {{HTMLElement("blockquote")}} 要素は長い引用に使用します。
-- {{HTMLElement("q")}} 要素は行内の引用に使用します。
+- {{HTMLElement("q")}} 要素と [`cite`](/en-US/docs/Web/HTML/Element/q#cite) 属性はインラインの引用に使用します。

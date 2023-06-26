@@ -1,16 +1,7 @@
 ---
 title: Finitions
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
-tags:
-  - Canevas
-  - Débutant
-  - JavaScript
-  - Jeux
-  - Tutoriel
-  - requestAnimationFrame
-  - vies
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
-original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/finitions
 ---
 
 {{GamesSidebar}}

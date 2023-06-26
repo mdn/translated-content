@@ -7,7 +7,7 @@ original_slug: Web/HTML/Elemento/img
 El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
 
 > **Nota:**
-> Los navegadores no siempre muestran la imagen a la que el elemento hace referencia. Es el caso de los navegadores no gráficos (incluyendo aquellos usados por personas con problemas de visión), sí el usuario elige no mostrar la imagen, o sí el navegador es incapaz de mostrarla porque no es válida o [soportada](/es/docs/Web/HTML/Elemento/img#Supported_image_formats). En ese caso, el navegador la reemplazará con el texto definido en el atributo {{htmlattrdef("alt", "img")}}.
+> Los navegadores no siempre muestran la imagen a la que el elemento hace referencia. Es el caso de los navegadores no gráficos (incluyendo aquellos usados por personas con problemas de visión), sí el usuario elige no mostrar la imagen, o sí el navegador es incapaz de mostrarla porque no es válida o [soportada](/es/docs/Web/HTML/Elemento/img#Supported_image_formats). En ese caso, el navegador la reemplazará con el texto definido en el atributo `alt`.
 
 <table class="properties">
   <tbody>
@@ -31,7 +31,7 @@ El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
           href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Embedded_content"
           >contenido incrustado</a
         >, contenido palpable. Si el elemento tiene un atributo
-        {{htmlattrdef("usemap", "img")}}, it also is a part of the
+        <code>usemap</code>, it also is a part of the
         interactive content category.
       </td>
     </tr>
@@ -60,18 +60,18 @@ El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
 
 Este elemento incluye atributos globales.
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
   - : Alineamiento de la texto respecto al contexto que la rodea.
-- {{htmlattrdef("alt")}}
+- `alt`
   - : Este atributo define el texto alternativo que describe la imagen, texto que los usuarios verán si la URL de la imagen es errónea o la imagen tiene un [formato no soportado](/es/docs/Web/HTML/Elemento/img#Supported_image_formats) o si la imagen aún no se ha descargado.
 
     > **Nota:** Omitir este atributo indica que la imagen es una parte clave del contenido, y no tiene equivalencia textual. Establecer este atributo como cadena vacía indica que la imagen no es una parte clave del contenido; los navegadores no gráficos pueden omitirlo.
 
-- {{htmlattrdef("border")}} {{deprecated_inline}}
+- `border` {{deprecated_inline}}
 
   - : Anchura del borde alrededor de la imagen.
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
 
   - : Este atributo enumerado indica si la búsqueda de la imagen debe ser por CORS o no. [Imagen hablidata CORS](/es/docs/Web/HTML/Imagen_con_CORS_habilitado) puede ser usada en el elemento {{HTMLElement("canvas")}} sin ser pintada. Los valores permitidos son:
 
@@ -81,21 +81,21 @@ Este elemento incluye atributos globales.
       - : Una petición cross-origin (i.e., with `Origin:` HTTP header) es realizada con credenciales (i.e., a cookie, a certificate, and HTTP Basic authentication is performed). Sí el servidor no emite credenciales al sitio de origen (a través del `Access-Control-Allow-Credentials:` HTTP header), la imagen será pintada y su uso restringido.
 
     Cuando no existe, el recurso es buscado sin petición CORS (i.e., `sin enviar el Origen:` HTTP header) , previniendo el uso no pintado del elemento {{HTMLElement('canvas')}}. Si es inválido, se maneja como si se hubiese usado **anonymous**. Ver [atributos de configuración CORS](/es/docs/HTML/CORS_settings_attributes) para más información.
-- {{htmlattrdef("height")}}
+- `height`
   - : La altura de la imagen en píxeles CSS en HTML5 o píxeles o como porcentaje en HTML4.
-- {{htmlattrdef("hspace")}} {{deprecated_inline}}
+- `hspace` {{deprecated_inline}}
   - : El número de píxeles de espaciado a la izquierda y la derecha de la imagen.
-- {{htmlattrdef("ismap")}}
+- `ismap`
 
   - : Este atributo boleano indica que la imagen es parte del mapa del lado del servidor. Así que, se envían las coordenadas precisas de un clic.
 
-    > **Nota:** Este atributo está permitido solo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} con un atributo {{htmlattrxref("href","a")}} válido.
+    > **Nota:** Este atributo está permitido solo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} con un atributo [`href`](/es/docs/Web/HTML/Element/a#href) válido.
 
-- {{htmlattrdef("longdesc")}}
-  - : La URL como descripción de una imagen mostrada, complementa al texto de {{htmlattrdef("alt", "img")}}.
-- {{htmlattrdef("name")}} {{deprecated_inline}}
+- `longdesc`
+  - : La URL como descripción de una imagen mostrada, complementa al texto de `alt`.
+- `name` {{deprecated_inline}}
   - : El nombre para el elemento. Soportado en HTML4 solo para compatibilidad con versiones anteriores. En su lugar, usa el atributo **`id`**.
-- {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
+- `referrerpolicy` {{experimental_inline}}
 
   - : Una cadena indicando que referencia usar cuando buscas un recurso:
 
@@ -105,7 +105,7 @@ Este elemento incluye atributos globales.
     - "origin-when-cross-origin": navega hacia otro origen limitado por el esquema, el anfitrión y el puerto, mientras navegas en el mismo origen incluirá el camino del referente.
     - `"unsafe-url"`: el referente incluirá el origen y el camino (pero no el fragment, contraseña, o nombre de usuario). Este caso es arriegasdo porque puede haber una fuga del origen o el camino desde los recursos protegidos por TLS desde orígenes inseguros.
 
-- {{htmlattrdef("sizes")}}
+- `sizes`
 
   - : Una lista de una o más cadenas separadas por comas indicando el tamaño de la fuente. Cada tamaño de la fuente consiste en:
 
@@ -114,9 +114,9 @@ Este elemento incluye atributos globales.
 
     El valor del tamaño de la fuente especifica el tamaño de la imagen incrustada. Se usa el tamaño actual de la fuente para seleccionar las fuentes soportadas por el atributo `srcset`, cuando esas fuentes son descritas usando el ancho (width). El tamaño de la fuente afecta al tamaño de la imagen (la imagen muestra tamaño si no se aplican estilos CSS). Si no hay atributo `srcset`, o no contiene valores con el ancho definido, entonces el atributo sizes no funciona.
 
-- {{htmlattrdef("src")}}
+- `src`
   - : La URL de la imagen. Este atributo es obligatorio para el elemento \<img>. En navegadores que soportan `srcset`, `src` es tratado como imagen candidata con una densidad del píxel `1x` sino una imagen estará definida en `srcset` o `srcset` contiene ancho.
-- {{htmlattrdef("srcset")}}
+- `srcset`
 
   - : Una lista de una o más cadenas separadas por comas indicando las posibles fuentes para usar. Cada cadena está compuesta por:
 
@@ -132,15 +132,15 @@ Este elemento incluye atributos globales.
 
     Los agentes de usuario son discretos al elegir cualquiera de las fuentes disponibles. Esto les proporciona un margen significativo para adaptar su selección basada en cosas como las preferencias del usuario o las condiciones de ancho de banda.
 
-- {{htmlattrdef("width")}}
+- `width`
   - : El ancho de la imagen en píxeles CSS en HTML5, o píxeles o porcentaje en HTML4.
-- {{htmlattrdef("usemap")}}
+- `usemap`
 
   - : La URL parcial (empezando con '#') de un [mapa de imagea](/es/docs/HTML/Element/map) asociado a un elemento.
 
     > **Nota:** No puedes usar este atributo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} o {{HTMLElement("button")}}.
 
-- {{htmlattrdef("vspace")}} {{deprecated_inline}}
+- `vspace` {{deprecated_inline}}
   - : El número de píxeles de espacio blanco insertado sobre y bajo la imagen.
 
 ## Formatos de imagen soportada

@@ -3,6 +3,8 @@ title: 码元（Code unit）
 slug: Glossary/Code_unit
 ---
 
+{{GlossarySidebar}}
+
 **码元**是字符编码系统（例如 UTF-8 或 UTF-16）使用的基本组成部分。字符编码系统将一个 Unicode {{Glossary("code point", "码位")}}编码为一个或者多个码元。
 
 在 UTF-16（JavaScript 字符串使用的编码系统）中，码元是 16 位值。这意味着索引到字符串或者获取字符串长度等操作将在这些 16 位单元上进行。这些单元不总是一对一地映射到我们可能认为的字符上。

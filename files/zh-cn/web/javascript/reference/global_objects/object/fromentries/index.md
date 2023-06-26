@@ -22,7 +22,7 @@ Object.fromEntries(iterable)
   - : 一个包含对象列表的[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)对象，例如 {{jsxref("Array")}} 或者 {{jsxref("Map")}}。每个对象都要有两个属性：
 
     - `0`
-      - : 表示属性键的字符串或者 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
+      - : 表示属性键的字符串或者 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
     - `1`
       - : 属性值。
 
@@ -36,13 +36,13 @@ Object.fromEntries(iterable)
 
 `Object.fromEntries()` 方法接收一个键值对列表，并返回一个新对象，该对象的属性由这些条目给定。`iterable` 参数应该是实现了 `@@iterator` 方法的可迭代对象。该方法返回一个可迭代对象，产生包含两个元素的类数组对象。第一个元素是将用作属性键的值，第二个元素是要与该属性键关联的值。
 
-`Object.fromEntries()` 执行 {{jsxref("Object.entries()")}} 的逆操作，只是 `Object.entries()` 只返回字符串键属性，而 `Object.fromEntries()` 还可以创建符号键属性。
+`Object.fromEntries()` 是 {{jsxref("Object.entries()")}} 的逆操作，只是 `Object.entries()` 只返回字符串键属性，而 `Object.fromEntries()` 还可以创建符号键属性。
 
 > **备注：** 与 {{jsxref("Array.from()")}} 不同的是，`Object.fromEntries()` 不使用 `this` 的值，因此在另一个构造函数上调用它不会创建该类型的对象。
 
 ## 示例
 
-### Map 转换成对象
+### 将 Map 转换成对象
 
 通过 `Object.fromEntries`，你可以将 {{jsxref("Map")}} 转换成 {{jsxref("Object")}}：
 
@@ -55,7 +55,7 @@ const obj = Object.fromEntries(map);
 console.log(obj); // { foo: "bar", baz: 42 }
 ```
 
-### Array 转换成对象
+### 将 Array 转换成对象
 
 通过 `Object.fromEntries`，你可以将 {{jsxref("Array")}} 转换成 {{jsxref("Object")}}：
 
@@ -71,7 +71,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 
 ### 对象转换
 
-你可以通过 `Object.fromEntries`、其逆操作 {{jsxref("Object.entries()")}} 和[数组操作方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#实例方法)，像这样转换对象：
+通过 `Object.fromEntries`、其逆操作 {{jsxref("Object.entries()")}} 和[数组操作方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#实例方法)，你可以像这样转换对象：
 
 ```js
 const object1 = { a: 1, b: 2, c: 3 };

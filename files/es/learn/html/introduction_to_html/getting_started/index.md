@@ -419,7 +419,7 @@ textarea.onkeyup = function () {
 
 ### Atributos booleanos
 
-En ocasiones puedes ver atributos escritos sin valor. Esto está permitido. Estos se denominan atributos booleanos. Los atributos booleanos solo pueden tener un valor, que generalmente es el mismo que el nombre del atributo. Por ejemplo, considera el atributo {{htmlattrxref("disabled", "input")}}, que puedes asignar a los elementos de entrada del formulario. (Usa esto para _deshabilitar_ los elementos de entrada del formulario para que el usuario no pueda realizar entradas. Los elementos desactivados suelen tener una apariencia atenuada). Por ejemplo:
+En ocasiones puedes ver atributos escritos sin valor. Esto está permitido. Estos se denominan atributos booleanos. Los atributos booleanos solo pueden tener un valor, que generalmente es el mismo que el nombre del atributo. Por ejemplo, considera el atributo [`disabled`](/es/docs/Web/HTML/Element/input#disabled), que puedes asignar a los elementos de entrada del formulario. (Usa esto para _deshabilitar_ los elementos de entrada del formulario para que el usuario no pueda realizar entradas. Los elementos desactivados suelen tener una apariencia atenuada). Por ejemplo:
 
 ```bash
 <input type="text" disabled="disabled">

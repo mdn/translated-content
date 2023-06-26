@@ -2,7 +2,6 @@
 title: Jeu 2D avec l'API Device orientation
 slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
-original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation_FR
 ---
 
 {{GamesSidebar}}

@@ -19,7 +19,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
 
 > **Note :** Il faut préciser que l'attribut [`name`](/fr/docs/Web/HTML/Element/meta#name) possède une signification spécifique à l'élément {{HTMLElement("meta")}} et que l'attribut [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop) ne doit pas être utilisé quand l'un de ces attributs est déjà utilisé : [`name`](/fr/docs/Web/HTML/Element/meta#name), [`http-equiv`](/fr/docs/Web/HTML/Element/meta#http-equiv) ou [`charset`](/fr/docs/Web/HTML/Element/meta#charset).
 
-- {{htmlattrdef("charset")}}
+- `charset`
 
   - : Cet attribut déclare l'encodage utilisé par la page. Il peut être outrepassé de manière locale en utilisant l'attribut **`lang`** d'un élément. La valeur de cet attribut est une chaîne de caractères et doit être l'un des _noms MIME préférés_ d'un encodage comme [spécifié par l'IANA](https://www.iana.org/assignments/character-sets/character-sets.xml). Bien que le standard ne fixe pas d'encodage particulier, il fournit cependant quelques recommendations :
 
@@ -36,9 +36,9 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
     > - Définir le jeu de caractères utilisé grâce à cet attribut représente une bonne pratique et est fortement recommandé. Si aucun encodage n'est défini pour la page, plusieurs techniques XSS peuvent porter atteinte à l'utilisateur (voir l'exemple de la [technique XSS de recours à UTF-7](https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7)). Toujours renseigner cet élément meta protégera contre ces dangers.
     > - L'élément {{HTMLElement("meta")}} est un synonyme de `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` utilisé avant HTML5. Ici *`IANAcharset`* correspond à la valeur de l'attribut [`charset`](/fr/docs/Web/HTML/Element/meta#charset) correspondant. Bien qu'elle soit obsolète et qu'elle ne soit plus recommandée, cette syntaxe est toujours autorisée.
 
-- {{htmlattrdef("content")}}
+- `content`
   - : Cet attribut fournit la valeur associée avec l'attribut [`http-equiv`](/fr/docs/Web/HTML/Element/meta#http-equiv) ou l'attribut [`name`](/fr/docs/Web/HTML/Element/meta#name) suivant le contexte utilisé.
-- {{htmlattrdef("http-equiv")}}
+- `http-equiv`
 
   - : Cet attribut pouvant prendre des valeurs pré-définies représente un objet pouvant modifier le comportement des serveurs ou des agents utilisateur. Sa valeur est définie grâce à l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#content) et peut être l'une des suivantes :
 
@@ -73,7 +73,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
 
         > **Attention :** Ce champ est désormais obsolète et ne doit donc pas être utilisé. L'en-tête HTTP [Set-Cookie](/fr/docs/Web/HTTP/Headers/Set-Cookie) doit être utilisée à la place. Cette valeur a été retirée du standard et n'est plus prise en charge à partir de [Firefox 68](https://www.fxsitecompat.dev/en-CA/docs/2019/setting-cookies-with-meta-http-equiv-is-no-longer-allowed/) et de [Chrome 65](https://www.chromestatus.com/feature/6170540112871424).
 
-- {{htmlattrdef("name")}}
+- `name`
 
   - : Cet attribut définit le nom d'un métadonnée au niveau du document. Il ne doit pas être utilisé si l'un des attributs [`itemprop`](/fr/docs/Web/HTML/Element/meta#itemprop), [`http-equiv`](/fr/docs/Web/HTML/Element/meta#http-equiv) ou [`charset`](/fr/docs/Web/HTML/Element/meta#charset) est utilisé.
     Le nom de la métadonnée document est associé à une valeur contenue dans l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#content). Les noms possibles et la signification de leurs valeurs (contenues dans l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#content)) sont :
@@ -420,7 +420,7 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
       > - Les valeurs par défaut peuvent être différentes suivant les appareils et les navigateurs.
       > - Pour en savoir plus sur l'utilisation faite de cet attribut par Firefox pour Mobile, vous pouvez lire [cet article](/fr/docs/Mozilla/Mobile/Viewport_meta_tag).
 
-- {{htmlattrdef("scheme")}} {{deprecated_inline}}
+- `scheme` {{deprecated_inline}}
 
   - : Cet attribut définit le schéma dans lequel la métadonnée est décrite. Un schéma, de la même manière qu'un format, est un contexte permettant d'interpréter correctement la valeur de l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#content).
 

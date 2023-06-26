@@ -16,28 +16,28 @@ Propiedades relacionadas al formulario padre
 - `form`{{readonlyInline}}
   - : _`{{domxref("HTMLFormElement")}} object:`_ Retorna una referencia al elemento {{HtmlElement("form")}} padre
 - `formAction`
-  - : _`string`:_ **Retorna / Establece** los atributos de los elementos {{ htmlattrxref("formaction", "input") }}, conteniendo la URI de un programa que procesa la información enviada por el elemento. Esto invalida al atributo {{ htmlattrxref("action", "form") }} del formulario padre.
+  - : _`string`:_ **Retorna / Establece** los atributos de los elementos [`formaction`](/es/docs/Web/HTML/Element/input#formaction), conteniendo la URI de un programa que procesa la información enviada por el elemento. Esto invalida al atributo [`action`](/es/docs/Web/HTML/Element/form#action) del formulario padre.
 - `formEncType`
-  - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("formenctype", "input") }} attribute, containing the type of content that is used to submit the form to the server. This overrides the {{ htmlattrxref("enctype", "form") }} attribute of the parent form.
+  - : _`string`:_ **Returns / Sets** the element's [`formenctype`](/es/docs/Web/HTML/Element/input#formenctype) attribute, containing the type of content that is used to submit the form to the server. This overrides the [`enctype`](/es/docs/Web/HTML/Element/form#enctype) attribute of the parent form.
 - `formMethod`
-  - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("formmethod", "input") }} attribute, containing the HTTP method that the browser uses to submit the form. This overrides the {{ htmlattrxref("method", "form") }} attribute of the parent form.
+  - : _`string`:_ **Returns / Sets** the element's [`formmethod`](/es/docs/Web/HTML/Element/input#formmethod) attribute, containing the HTTP method that the browser uses to submit the form. This overrides the [`method`](/es/docs/Web/HTML/Element/form#method) attribute of the parent form.
 - `formNoValidate`
-  - : _`boolean`:_ **Returns / Sets** the element's {{ htmlattrxref("formnovalidate", "input") }} attribute, indicating that the form is not to be validated when it is submitted. This overrides the {{ htmlattrxref("novalidate", "form") }} attribute of the parent form.
+  - : _`boolean`:_ **Returns / Sets** the element's [`formnovalidate`](/es/docs/Web/HTML/Element/input#formnovalidate) attribute, indicating that the form is not to be validated when it is submitted. This overrides the [`novalidate`](/es/docs/Web/HTML/Element/form#novalidate) attribute of the parent form.
 - `formTarget`
-  - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("formtarget", "input") }} attribute, containing a name or keyword indicating where to display the response that is received after submitting the form. This overrides the {{ htmlattrxref("target", "form") }} attribute of the parent form.
+  - : _`string`:_ **Returns / Sets** the element's [`formtarget`](/es/docs/Web/HTML/Element/input#formtarget) attribute, containing a name or keyword indicating where to display the response that is received after submitting the form. This overrides the [`target`](/es/docs/Web/HTML/Element/form#target) attribute of the parent form.
 
 Propiedades que aplican a cualquier tipo de elemento input que no se encuentre escondido
 
 - `name`
-  - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("name", "input") }} attribute, containing a name that identifies the element when submitting the form.
+  - : _`string`:_ **Returns / Sets** the element's [`name`](/es/docs/Web/HTML/Element/input#name) attribute, containing a name that identifies the element when submitting the form.
 - `type`
-  - : `string:` **Returns / Sets** the element's {{ htmlattrxref("type", "input") }} attribute, indicating the type of control to display. See {{ htmlattrxref("type", "input") }} attribute of {{ HTMLElement("input") }} for possible values.
+  - : `string:` **Returns / Sets** the element's [`type`](/es/docs/Web/HTML/Element/input#type) attribute, indicating the type of control to display. See [`type`](/es/docs/Web/HTML/Element/input#type) attribute of {{ HTMLElement("input") }} for possible values.
 - `disabled`
-  - : _`boolean`:_ **Returns / Sets** the element's {{ htmlattrxref("disabled", "input") }} attribute, indicating that the control is not available for interaction. The input values will not be submitted with the form. See also {{ htmlattrxref("readOnly", "input") }}
+  - : _`boolean`:_ **Returns / Sets** the element's [`disabled`](/es/docs/Web/HTML/Element/input#disabled) attribute, indicating that the control is not available for interaction. The input values will not be submitted with the form. See also [`readOnly`](/es/docs/Web/HTML/Element/input#readOnly)
 - `autofocus`
-  - : `boolean:` **Returns / Sets** the element's {{ htmlattrxref("autofocus", "input") }} attribute, which specifies that a form control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form element in a document can have the {{htmlattrxref("autofocus","input")}} attribute. It cannot be applied if the {{htmlattrxref("type","input")}} attribute is set to `hidden` (that is, you cannot automatically set focus to a hidden control).
+  - : `boolean:` **Returns / Sets** the element's [`autofocus`](/es/docs/Web/HTML/Element/input#autofocus) attribute, which specifies that a form control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form element in a document can have the [`autofocus`](/es/docs/Web/HTML/Element/input#autofocus) attribute. It cannot be applied if the [`type`](/es/docs/Web/HTML/Element/input#type) attribute is set to `hidden` (that is, you cannot automatically set focus to a hidden control).
 - `required`
-  - : _`boolean`:_ **Returns / Sets** the element's {{ htmlattrxref("required", "input") }} attribute, indicating that the user must fill in a value before submitting a form.
+  - : _`boolean`:_ **Returns / Sets** the element's [`required`](/es/docs/Web/HTML/Element/input#required) attribute, indicating that the user must fill in a value before submitting a form.
 - `value`
 
   - : `string:` **Returns / Sets** the current value of the control.
@@ -47,14 +47,14 @@ Propiedades que aplican a cualquier tipo de elemento input que no se encuentre e
 - `validity` {{readonlyInline}}
   - : `{{domxref("ValidityState")}} object:` Returns the validity state that this element is in.
 - `validationMessage` {{readonlyInline}}
-  - : `string:` **Returns** a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ({{htmlattrxref("willValidate","input")}} is false), or it satisfies its constraints.
+  - : `string:` **Returns** a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation ([`willValidate`](/es/docs/Web/HTML/Element/input#willValidate) is false), or it satisfies its constraints.
 - `willValidate`{{readonlyInline}}
   - : _`{{jsxref("Boolean")}}:`_ **Indicates** whether the element is a candidate for constraint validation. It is false if any conditions bar it from constraint validation.
 
 Propiedades que aplican solo a los elementos de tipo `checkbox` o `radio`
 
 - `checked`
-  - : `boolean:`**Returns / Sets** the current state of the element when {{htmlattrxref("type","input")}} is `checkbox` or `radio`.
+  - : `boolean:`**Returns / Sets** the current state of the element when [`type`](/es/docs/Web/HTML/Element/input#type) is `checkbox` or `radio`.
 - `defaultChecked`
   - : _`boolean:`_ **Returns / Sets** the default state of a radio button or checkbox as originally specified in HTML that created this object.
 - `indeterminate`
@@ -63,24 +63,24 @@ Propiedades que aplican solo a los elementos de tipo `checkbox` o `radio`
 Propiedades que sólo aplican a los elementos de tipo `image`
 
 - `alt`
-  - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("alt", "input") }} attribute, containing alternative text to use when {{htmlattrxref("type","input")}} is `image.`
+  - : _`string`:_ **Returns / Sets** the element's [`alt`](/es/docs/Web/HTML/Element/input#alt) attribute, containing alternative text to use when [`type`](/es/docs/Web/HTML/Element/input#type) is `image.`
 - `height`
-  - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("height", "input") }} attribute, which defines the height of the image displayed for the button, if the value of {{htmlattrxref("type","input")}} is `image`.
+  - : _`string`:_ **Returns / Sets** the element's [`height`](/es/docs/Web/HTML/Element/input#height) attribute, which defines the height of the image displayed for the button, if the value of [`type`](/es/docs/Web/HTML/Element/input#type) is `image`.
 - `src`
-  - : `string:` **Returns / Sets** the element's {{ htmlattrxref("src", "input") }} attribute, which specifies a URI for the location of an image to display on the graphical submit button, if the value of {{htmlattrxref("type","input")}} is `image`; otherwise it is ignored.
+  - : `string:` **Returns / Sets** the element's [`src`](/es/docs/Web/HTML/Element/input#src) attribute, which specifies a URI for the location of an image to display on the graphical submit button, if the value of [`type`](/es/docs/Web/HTML/Element/input#type) is `image`; otherwise it is ignored.
 - `width`
-  - : `string:` **Returns / Sets** the document's {{ htmlattrxref("width", "input") }} attribute, which defines the width of the image displayed for the button, if the value of {{htmlattrxref("type","input")}} is `image`.
+  - : `string:` **Returns / Sets** the document's [`width`](/es/docs/Web/HTML/Element/input#width) attribute, which defines the width of the image displayed for the button, if the value of [`type`](/es/docs/Web/HTML/Element/input#type) is `image`.
 
 Propiedades que sólo aplican a los elementos de tipo `file`
 
 - `accept`
-  - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("accept", "input") }} attribute, containing comma-separated list of file types accepted by the server when {{htmlattrxref("type","input")}} is `file`.
+  - : _`string`:_ **Returns / Sets** the element's [`accept`](/es/docs/Web/HTML/Element/input#accept) attribute, containing comma-separated list of file types accepted by the server when [`type`](/es/docs/Web/HTML/Element/input#type) is `file`.
 - `allowdirs` {{non-standard_inline}}
   - : boolean: Part of the non-standard Directory Upload API; **indicates** whether or not to allow directories and files both to be selected in the file list. Implemented only in Firefox and is hidden behind a preference.
 - `files`
   - : **Returns/accepts** a {{domxref("FileList")}} object, which contains a list of {{domxref("File")}} objects representing the files selected for upload.
 - {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}} {{Non-standard_inline}}
-  - : boolean: **Returns** the {{htmlattrxref("webkitdirectory", "input")}} attribute; if true, the file system picker interface only accepts directories instead of files.
+  - : boolean: **Returns** the [`webkitdirectory`](/es/docs/Web/HTML/Element/input#webkitdirectory) attribute; if true, the file system picker interface only accepts directories instead of files.
 - {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} {{Non-standard_inline}}
   - : Array of {{domxref("FileSystemEntry")}} objects **describing** the currently-selected files or directories.
 
@@ -88,28 +88,28 @@ Properties that apply only to text/number-containing or elements
 
 - `autocomplete`
 
-  - : _`string`:_ **Returns / Sets** the element's {{htmlattrxref("autocomplete", "input")}} attribute, indicating whether the value of the control can be automatically completed by the browser. Ignored if the value of the {{htmlattrxref("type","input")}} attribute is `hidden`, `checkbox`, `radio`, `file`, or a button type (`button`, `submit`, `reset`, `image`). Possible values are:
+  - : _`string`:_ **Returns / Sets** the element's [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete) attribute, indicating whether the value of the control can be automatically completed by the browser. Ignored if the value of the [`type`](/es/docs/Web/HTML/Element/input#type) attribute is `hidden`, `checkbox`, `radio`, `file`, or a button type (`button`, `submit`, `reset`, `image`). Possible values are:
 
     "on": the browser can autocomplete the value using previously stored value
 
     "off": the user must explicity enter a value
 
 - `maxLength`
-  - : _`long`:_ **Returns / Sets** the element's {{ htmlattrxref("maxlength", "input") }} attribute, containing the **maximum length of characters** (in Unicode code points) that the value can have. (If you set this to a negative number, an exception will be thrown.)
+  - : _`long`:_ **Returns / Sets** the element's [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) attribute, containing the **maximum length of characters** (in Unicode code points) that the value can have. (If you set this to a negative number, an exception will be thrown.)
 - `size`
-  - : _`unsigned long`:_ **Returns / Sets** the element's {{ htmlattrxref("size", "input") }} attribute, containing **size of the control**. This value is in pixels unless the value of {{htmlattrxref("type","input")}} is `text` or `password`, in which case, it is an integer number of characters. Applies only when {{htmlattrxref("type","input")}} is set to `text`, `search`, `tel`, `url`, `email`, or `password`; otherwise it is ignored.
+  - : _`unsigned long`:_ **Returns / Sets** the element's [`size`](/es/docs/Web/HTML/Element/input#size) attribute, containing **size of the control**. This value is in pixels unless the value of [`type`](/es/docs/Web/HTML/Element/input#type) is `text` or `password`, in which case, it is an integer number of characters. Applies only when [`type`](/es/docs/Web/HTML/Element/input#type) is set to `text`, `search`, `tel`, `url`, `email`, or `password`; otherwise it is ignored.
 - `pattern`
-  - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("pattern", "input") }} attribute, containing a **regular expression** that the control's value is checked against. Use the {{htmlattrxref("title","input")}} attribute to describe the pattern to help the user. This attribute applies when the value of the {{htmlattrxref("type","input")}} attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored.
+  - : _`string`:_ **Returns / Sets** the element's [`pattern`](/es/docs/Web/HTML/Element/input#pattern) attribute, containing a **regular expression** that the control's value is checked against. Use the [`title`](/es/docs/Web/HTML/Element/input#title) attribute to describe the pattern to help the user. This attribute applies when the value of the [`type`](/es/docs/Web/HTML/Element/input#type) attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored.
 - `placeholder`
-  - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("placeholder", "input") }} attribute, containing a hint to the user of what can be entered in the control. The placeholder text must not contain carriage returns or line-feeds. This attribute applies when the value of the {{htmlattrxref("type","input")}} attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored.
+  - : _`string`:_ **Returns / Sets** the element's [`placeholder`](/es/docs/Web/HTML/Element/input#placeholder) attribute, containing a hint to the user of what can be entered in the control. The placeholder text must not contain carriage returns or line-feeds. This attribute applies when the value of the [`type`](/es/docs/Web/HTML/Element/input#type) attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored.
 - `readOnly`
 
-  - : _`boolean`:_ **Returns / Sets** the element's {{ htmlattrxref("readonly", "input") }} attribute, indicating that the user cannot modify the value of the control. This is ignored if the value of the {{htmlattrxref("type","input")}} attribute is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type.
+  - : _`boolean`:_ **Returns / Sets** the element's [`readonly`](/es/docs/Web/HTML/Element/input#readonly) attribute, indicating that the user cannot modify the value of the control. This is ignored if the value of the [`type`](/es/docs/Web/HTML/Element/input#type) attribute is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type.
 
 - `min`
-  - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("min", "input") }} attribute, containing the minimum (numeric or date-time) value for this item, which must not be greater than its maximum ({{htmlattrxref("max","input")}} attribute) value.
+  - : _`string`:_ **Returns / Sets** the element's [`min`](/es/docs/Web/HTML/Element/input#min) attribute, containing the minimum (numeric or date-time) value for this item, which must not be greater than its maximum ([`max`](/es/docs/Web/HTML/Element/input#max) attribute) value.
 - `max`
-  - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("max", "input") }} attribute, containing the maximum (numeric or date-time) value for this item, which must not be less than its minimum (**min** attribute) value.
+  - : _`string`:_ **Returns / Sets** the element's [`max`](/es/docs/Web/HTML/Element/input#max) attribute, containing the maximum (numeric or date-time) value for this item, which must not be less than its minimum (**min** attribute) value.
 - `selectionStart`
   - : _`unsigned long`:_ **Returns / Sets** the beginning index of the selected text. When nothing is selected, this returns the position of the text input cursor (caret) inside of the {{HTMLElement("input")}} element.
 - `selectionEnd`
@@ -129,15 +129,15 @@ Propiedades aun no categorizadas
 - `accessKey`
   - : _`string`:_ **Returns** a string containing a single character that switches input focus to the control when pressed.
 - `list` {{readonlyInline}}
-  - : _`{{domxref("HTMLElement")}} object:`_ **Returns** the element pointed by the {{ htmlattrxref("list", "input") }} attribute. The property may be `null` if no HTML element found in the same tree.
+  - : _`{{domxref("HTMLElement")}} object:`_ **Returns** the element pointed by the [`list`](/es/docs/Web/HTML/Element/input#list) attribute. The property may be `null` if no HTML element found in the same tree.
 - `multiple`
-  - : _`boolean`:_ **Returns / Sets** the element's {{ htmlattrxref("multiple", "input") }} attribute, indicating whether more than one value is possible (e.g., multiple files).
+  - : _`boolean`:_ **Returns / Sets** the element's [`multiple`](/es/docs/Web/HTML/Element/input#multiple) attribute, indicating whether more than one value is possible (e.g., multiple files).
 - `files`
   - : _`{{domxref("FileList")}} array:`_ **Returns** the list of selected files.
 - {{domxref("HTMLInputElement.labels")}} {{readonlyInline}}
   - : `{{domxref("NodeList")}} array:` **Returns** a list of {{ HTMLElement("label") }} elements that are labels for this element.
 - `step`
-  - : `string:` **Returns / Sets** the element's {{ htmlattrxref("step", "input") }} attribute, which works with {{htmlattrxref("min","input")}} and {{htmlattrxref("max","input")}} to limit the increments at which a numeric or date-time value can be set. It can be the string `any` or a positive floating point number. If this is not set to `any`, the control accepts only values at multiples of the step value greater than the minimum.
+  - : `string:` **Returns / Sets** the element's [`step`](/es/docs/Web/HTML/Element/input#step) attribute, which works with [`min`](/es/docs/Web/HTML/Element/input#min) and [`max`](/es/docs/Web/HTML/Element/input#max) to limit the increments at which a numeric or date-time value can be set. It can be the string `any` or a positive floating point number. If this is not set to `any`, the control accepts only values at multiples of the step value greater than the minimum.
 - `valueAsDate`
   - : `{{jsxref("Date")}} object:` Returns / Sets the value of the element, interpreted as a date, or `null` if conversion is not possible.
 - `valueAsNumber`
@@ -192,21 +192,21 @@ Propiedades aun no categorizadas
 
 - {{domxref("HTMLInputElement.stepDown()")}}
 
-  - : Decrements the {{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} \* n), where n defaults to 1 if not specified. Throws an INVALID_STATE_ERR exception:
+  - : Decrements the [`value`](/es/docs/Web/HTML/Element/input#value) by ([`step`](/es/docs/Web/HTML/Element/input#step) \* n), where n defaults to 1 if not specified. Throws an INVALID_STATE_ERR exception:
 
-    - if the method is not applicable to for the current {{htmlattrxref("type","input")}} value,
-    - if the element has no {{htmlattrxref("step","input")}} value,
-    - if the {{htmlattrxref("value","input")}} cannot be converted to a number,
-    - if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}.
+    - if the method is not applicable to for the current [`type`](/es/docs/Web/HTML/Element/input#type) value,
+    - if the element has no [`step`](/es/docs/Web/HTML/Element/input#step) value,
+    - if the [`value`](/es/docs/Web/HTML/Element/input#value) cannot be converted to a number,
+    - if the resulting value is above the [`max`](/es/docs/Web/HTML/Element/input#max) or below the [`min`](/es/docs/Web/HTML/Element/input#min).
 
 - {{domxref("HTMLInputElement.stepUp()")}}
 
-  - : Increments the {{htmlattrxref("value","input")}} by ({{htmlattrxref("step","input")}} \* n), where n defaults to 1 if not specified. Throws an INVALID_STATE_ERR exception:
+  - : Increments the [`value`](/es/docs/Web/HTML/Element/input#value) by ([`step`](/es/docs/Web/HTML/Element/input#step) \* n), where n defaults to 1 if not specified. Throws an INVALID_STATE_ERR exception:
 
-    - if the method is not applicable to for the current {{htmlattrxref("type","input")}} value.,
-    - if the element has no {{htmlattrxref("step","input")}} value,
-    - if the {{htmlattrxref("value","input")}} cannot be converted to a number,
-    - if the resulting value is above the {{htmlattrxref("max","input")}} or below the {{htmlattrxref("min","input")}}.
+    - if the method is not applicable to for the current [`type`](/es/docs/Web/HTML/Element/input#type) value.,
+    - if the element has no [`step`](/es/docs/Web/HTML/Element/input#step) value,
+    - if the [`value`](/es/docs/Web/HTML/Element/input#value) cannot be converted to a number,
+    - if the resulting value is above the [`max`](/es/docs/Web/HTML/Element/input#max) or below the [`min`](/es/docs/Web/HTML/Element/input#min).
 
 ### Métodos no estandarizados
 
