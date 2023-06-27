@@ -29,7 +29,7 @@ slug: MDN/Community/Pull_requests
 
 **拉取请求必须解决或部分解决现有的议题**。我们之所以有此限制，是为了避免你开始任何其他人可能已经在做的任务。在你想要贡献的 [MDN 仓库](https://github.com/orgs/mdn/repositories)中搜索议题和拉取请求，并确认你想要开始的工作尚未有其他人正在进行。当寻求为 MDN 项目做出贡献时，你会发现自己处于以下情况之一：
 
-- **如果你希望为该项目做出共享**，你可以在任意 [MDN GitHub 仓库](https://github.com/orgs/mdn/repositories)（例如 [`mdn/content` 仓库的议题](https://github.com/mdn/content/issues)）的“Issues”下以及我们的[公共 GitHub 项目看板](https://github.com/orgs/mdn/projects)中找到任务。请确保议题未被分配给其他人，并且没有人已经为该任务创建拉取请求。标记为 `good first issue` 的议题是一个很好的起点。
+- **如果你希望为该项目做出贡献**，你可以在任意 [MDN GitHub 仓库](https://github.com/orgs/mdn/repositories)的“议题（Issues）”（例如 [`mdn/content` 仓库的议题](https://github.com/mdn/content/issues)）下以及我们[公开的 GitHub 项目看板](https://github.com/orgs/mdn/projects)中找到任务。请确保议题未被分配给其他人，并且没有人已经为该任务创建拉取请求。标记为 `good first issue` 的议题是一个很好的起点。
 - **如果你在 MDN 上发现了问题**，你应该首先创建一个议题。**在开始工作之前，议题需要维护者的回复**，以便你知道拉取请求所解决的问题是有效的，并且你的拉取请求将被接受。有关议题的更多信息，请参阅我们的 [GitHub 议题的社区页面](https://github.com/mdn/mdn/issues/new?labels=proposal%2Cneeds+triage&template=content-or-feature-suggestion.yml&title=Enter+your+proposal+here)。
 - **如果你想提议新内容或新特性**，请通过 [GitHub 议题模板](https://github.com/mdn/mdn/issues/new/choose)“New content or feature suggestion”提交提议。
 
@@ -53,7 +53,7 @@ slug: MDN/Community/Pull_requests
 
 - **处理持续集成（CI）的错误**，这些错误是由 GitHub Actions 运行的自动化测试引起的（见 `.github/workflows`）。如果这些测试中的一个或多个失败，你有责任尝试解决它们。如果你不知道如何解决潜在的问题，请寻求帮助。
 - **解决与主分支的合并冲突**，你有责任解决这些冲突。你可以通过将 `mdn/main` 分支合并到你的分支来解决这些冲突。有关更多信息，请参阅 GitHub 文档[关于使拉取请求保持同步](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/keeping-your-pull-request-in-sync-with-the-base-branch#about-keeping-your-pull-request-in-sync)。
-- **对反馈做出回应**。这意味着你应该准备根据审查意见对拉取请求进行更改。如果进行了审查，但没有进行更改，那么拉取请求可能会被关闭。
+- **对反馈做出响应**。这意味着你应该准备根据审查意见对拉取请求进行更改。如果进行了审查，但没有进行更改，那么拉取请求可能会被关闭。
 - **对审查过程保持耐心**。MDN 组织收到了大量的拉取请求，团队可能需要一定的时间来审查你的贡献。
 - **请不要重新打开已关闭的拉取请求**。如果你必须创建一个新的拉取请求，其可以引用已关闭的拉取请求。
 
@@ -61,13 +61,12 @@ slug: MDN/Community/Pull_requests
 
 当你创建拉取请求时，会基于 `CODEOWNERS` 文件自动分配审查员，但如果你想要请求特定的人进行审查，你可以手动[请求审查](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/requesting-a-pull-request-review)。我们还使用拉取请求的自动标记来帮助我们对其进行分类。维护者可以进一步对拉取请求进行分类，并根据上下文添加任何其他标签，例如 `needs-info` 或 `on-hold`。
 
-如果你想要审查拉取请求，但没有被列为审查员，你可以将自己添加为审查员。通过在拉取请求上发表评论，告知现有的审查员你打算开始审查是有礼貌的。
+如果你想要审查拉取请求，但没有被列为审查员，你可以将自己添加为审查员。通过在拉取请求上发表评论，告知现有的审查员你打算开始审查是一种有礼貌的做法。
 
 ### 审查员和受理人
 
 MDN Web 文档团队使用审查员（reviewer）和受理人（assignee）来跟踪拉取请求的状态。
 
-- **审查员**are people that assess the changes in pull request and provide feedback for the author.
 - **审查员**是对拉取请求中的更改进行评估并为作者提供反馈的人。
 - **受理人**是负责确保拉取请求不被阻塞的人。并非所有拉取请求都有受理人，但如果有，他们负责确保拉取请求的进展。受理人通过合并、关闭或自己进行解除阻塞工作来帮助工作的完成。
 
@@ -79,83 +78,66 @@ MDN Web 文档团队使用审查员（reviewer）和受理人（assignee）来�
 
 ### 审查拉取请求
 
-When it comes to the changes in a pull request, content and prose must adhere to the [MDN Writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide) and example code must follow the [code style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+当涉及拉取请求的更改时，内容和散文必须遵循 [MDN 写作风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide) ，示例代码必须遵循[代码风格指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
 
-When you are reviewing a pull request, you should:
+在审查拉取请求时，你应该：
 
-- **Add a comment** to the pull request to let the author know you are aware of the pull request and will start the review.
-  This is to avoid cases when someone else starts to review the pull request at the same time unnecessarily.
-- **Limit the scope of review** to the changes in the pull request only.
-  Open a follow-up issue or pull request to address other improvements not covered by the pull request.
-- **Ask for help** and add the `review-help-needed` label if you need technical assistance with the review.
-- **Close pull requests with unrelated changes** if it is too complex or contains multiple unrelated changes.
-  In such cases, ask the pull request author to submit their changes in smaller chunks.
-- **Request load balancing** if your plate is full and you don't have bandwidth for the review.
-  Tag the `@core-yari-content` team and ask if someone else can step in.
-- **Don't merge unless 'depends on'** pull requests are merged first.
+- **为拉取请求添加评论**，以便让作者知道你已经知道了这个拉取请求，并将开始审查。这是为了避免不必要的情况，即其他人同时开始审查拉取请求。
+- **将审查范围限制**在拉取请求中的更改上。提出后续议题或拉取请求，以解决拉取请求未涵盖的其他改进。
+- **寻求帮助**，如果你需要审查方面的技术帮助，请添加 `review-help-needed` 标签。
+- **关闭包含不相关更改的拉取请求**，如果拉取请求过于复杂或包含多个不相关的更改。在这种情况下，请要求拉取请求的作者将其更改拆分成更细粒度的更改以提交。
+- **平衡请求负载**，如果你的工作量已满，而没有时间进行审查。通知 `@core-yari-content` 团队，并询问是否有其他人可以接手。
+- **不要在“依赖”未合并的情况下合并**拉取请求。
 
-If a pull request looks good apart from small typos or other minor issues, you may want to fix the problem directly.
-You can do this provided the pull request [has been set up to allow changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork).
-It's recommended to use [comments with suggestions](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request) for fixing minor issues, as they can be batched and committed in one go.
+如果除了小的拼写错误和其他小问题之外，拉取请求看起来不错，你可能需要直接修复问题。如果拉取请求[已设置为允许更改](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)，你就可以这样做。建议使用[带有建议的评论](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request)来修复小问题，因为它们可以一次性批量提交。
 
-When submitting your review you have three options, **approve**, **comment**, or **request changes**.
-The following sections explain when to use each option.
+提交评论时，你有三个选项：**批准**（approve）、**评论**（comment）或**请求更改**（request changes）。下面的部分将解释每个选项应在何时使用。
 
 ### 请求更改
 
-Use the request changes option when the feedback you provided _needs_ to be addressed by the author and re-reviewed by the reviewer before the pull request can be approved and merged.
+当你提供的反馈*需要*作者解决并由审查员重新审查才能批准和合并拉取请求时，请使用请求更改选项。
 
 #### 评论
 
-Use the comment option when your feedback is not critical and will not require a re-review.
-In short, you trust the author and other reviewers to use good judgment.
+当你的反馈不是关键性的，且不需要重新审查时，请使用评论选项。简而言之，你相信作者和其他审查员会做出正确的判断。
 
 #### 批准
 
-Use the approve option when everything looks good and is ready to merge from your perspective.
-After submitting your review, you can safely merge the pull request if there are no other reviewers or any outstanding review comments to address.
+当一切看起来都很好，且从你的角度来看准备好合并时，请使用批准选项。提交审查后，如果没有其他审查员或任何未解决的审查意见，你可以安全地合并拉取请求。
 
 #### 遇到困难时该怎么办
 
-If you don't understand a content change or feel that it is too large and complex for you to deal with, don't panic!
-A good place to start is by asking for information from the pull request author to help.
+如果你不理解内容更改，或者觉得它太大且太复杂，无法处理，请不要惊慌！向拉取请求的作者寻求帮助信息是一个很好的开始。
 
-It is rare that you'll be required to review a large, complex content change with no warning.
-If this does happen, however, the pull request description should link to an issue that explains the background information.
+很少有情况需要你在没有警告的情况下审查一个大型、复杂的内容更改。但是，如果确实发生了这种情况，拉取请求的描述应该链接到一个解释背景信息的议题。
 
-If you are still not sure or if you think the content is suspicious, reach out to the MDN Web Docs team and ask for help.
+如果你仍然不确定，或者认为内容是可疑的，请联系 MDN Web 文档团队并寻求帮助。
 
 ### 作者和审查员的周转时间指南
 
-This section provides details for expected turnaround times while responding to review comments if you're a pull request author and while reviewing pull requests if you're a reviewer.
+这个部分为拉取请求作者和审查员提供了预期周转时间的详细信息。
 
-- **Reviewing**:
-  The pull request reviewer should be able to review the changes in 2 weeks or less.
-  In the 2 weeks after a pull request is open, the reviewer can:
-  - Leave a comment about when they can start reviewing the pull request
-  - Ask for technical or resource help
-- **Addressing requested changes:**
-  The pull request author should be able to respond to or fix the comments in 4 weeks or less.
-  If the pull request author is unable to respond or fix the review comments in that time, the reviewer can do one of the following:
-  - Commit the changes and merge the pull request
-  - Close the pull request
+- **审查**：拉取请求的审查员应该能够在 2 周内审查更改。在拉取请求打开后的 2 周内，审查员可以：
+  - 留下评论，说明他们何时可以开始审查拉取请求
+  - 寻求技术或资源方面的帮助
+- **处理请求的更改**：拉取请求的作者应该能够在 4 周内回应或修复审查意见。如果拉取请求的作者无法在此期限内回应或修复审查意见，审查员可以执行以下操作之一：
+  - 提交更改并合并拉取请求
+  - 关闭拉取请求
 
 ### 外部审查员
 
-Some pull requests on the MDN content repo relate to specific work by browser vendors or organizations with defined authors and reviewers.
-The author will include the username of the reviewer in a line at the bottom of the pull request description in these cases, for example:
+MDN 内容仓库上的某些拉取请求与浏览器供应商或组织的特定工作相关联，这些工作由明确的作者和审查员完成。在这些情况下，作者将在拉取请求描述的底部的一行中包含审查员的用户名，例如：
 
 ```md
 reviewer: @jpmedley
 ```
 
-If you receive a review request and you have been overridden with another reviewer in the manner described above, do not review the changes.
-Once the reviewer mentioned in the description has approved the changes, they will ask for an approval required by the `CODEOWNERS`.
+如果你收到审查请求，而且你已经被上述方式中的另一个审查员覆盖，请不要审查更改。一旦描述中提到的审查员批准了更改，他们将要求 `CODEOWNERS` 的批准。
 
 ## 阅读清单
 
-Reviewers are encouraged to read the following articles for help with common tasks:
+我们鼓励审查员阅读以下文章，以帮助完成常见任务：
 
-- [The Art of Closing](https://blog.jessfraz.com/post/the-art-of-closing/) explains how to close an unfinished or rejected pull request
-- [Kindness and Code Reviews: Improving the Way We Give Feedback](https://product.voxmedia.com/2018/8/21/17549400/kindness-and-code-reviews-improving-the-way-we-give-feedback) gives useful hints to give feedback
-- [Code Review Guidelines for the Reviewer](https://phauer.com/2018/code-review-guidelines/#code-reviews-guidelines-for-the-reviewer) provides examples of good and bad feedback
+- [关闭的艺术](https://blog.jessfraz.com/post/the-art-of-closing/)解释了如何关闭未完成或被拒绝的拉取请求
+- [善意和代码审查：改进我们提供反馈的方式](https://product.voxmedia.com/2018/8/21/17549400/kindness-and-code-reviews-improving-the-way-we-give-feedback)给出了提供反馈的有用提示
+- [审查员的代码审阅指南](https://phauer.com/2018/code-review-guidelines/#code-reviews-guidelines-for-the-reviewer)提供了友好和不友好的反馈示例
