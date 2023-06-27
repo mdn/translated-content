@@ -153,17 +153,17 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 `Promise` 类提供了四个静态方法来促进异步任务的[并发](https://zh.wikipedia.org/wiki/并发计算)：
 
 - {{jsxref("Promise.all()")}}
-  - : `Promise.all` 方法返回一个 Promise，当**所有**传入的 Promise 都被兑现时，该 Promise 也成功兑现；当**任意一个** Promise 被拒绝时，该 Promise 也被拒绝。
+  - : 在**所有**传入的 Promise 都被兑现时兑现；在**任意一个** Promise 被拒绝时拒绝。
 - {{jsxref("Promise.allSettled()")}}
-  - : 当**所有**的 Promise 都被敲定时（不论是被兑现还是被拒绝），`Promise.allSettled` 方法返回一个已兑现的 Promise。
+  - : 在**所有**的 Promise 都被敲定时兑现。
 - {{jsxref("Promise.any()")}}
-  - : 当**任意一个** Promise 被兑现时，`Promise.any` 方法返回一个成功兑现的 Promise；当**所有**的 Promise 都被拒绝时，`Promise.any` 方法返回一个被拒绝的 Promise。
+  - : 在**任意一个** Promise 被兑现时兑现；仅在**所有**的 Promise 都被拒绝时才会拒绝。
 - {{jsxref("Promise.race()")}}
-  - : 当**任意一个** Promise 被敲定时（无论是被兑现还是被拒绝），`Promise.race` 方法返回一个已兑现的 Promise。换句话说，当**任意一个** Promise 被兑现时，返回一个成功兑现的 Promise；当**任意一个**的 Promise 被拒绝时，返回一个被拒绝的 Promise。
+  - : 在**任意一个** Promise 被敲定时敲定。换句话说，在**任意一个** Promise 被兑现时兑现；在**任意一个**的 Promise 被拒绝时拒绝。
 
 所有这些方法都接受一个 Promise（确切地说是 [thenable](#thenable)）的[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)，并返回一个新的 Promise。它们都支持子类化，这意味着它们可以在 `Promise` 的子类上调用，结果将是一个属于子类类型的 Promise。为此，子类的构造函数必须实现与 [`Promise()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) 构造函数相同的签名——接受一个以 `resolve` 和 `reject` 回调函数作为参数的单个 `executor` 函数。子类还必须有一个 `resolve` 静态方法，可以像 {{jsxref("Promise.resolve()")}} 一样调用，以将值解析为 Promise。
 
-请注意，JavaScript 的本质上是[单线程的](/zh-CN/docs/Glossary/Thread)，因此在任何时刻，只有一个任务会被执行，尽管控制权可以在不同的 Promise 之间切换，从而使 Promise 的执行看起来是并发的。在 JavaScript 中，[并行执行](https://zh.wikipedia.org/wiki/并行计算)只能通过[ worker 线程](/zh-CN/docs/Web/API/Web_Workers_API)实现。
+请注意，JavaScript 的本质上是[单线程的](/zh-CN/docs/Glossary/Thread)，因此在任何时刻，只有一个任务会被执行，尽管控制权可以在不同的 Promise 之间切换，从而使 Promise 的执行看起来是并发的。在 JavaScript 中，[并行执行](https://zh.wikipedia.org/wiki/并行计算)只能通过 [worker 线程](/zh-CN/docs/Web/API/Web_Workers_API)实现。
 
 ## 构造函数
 
