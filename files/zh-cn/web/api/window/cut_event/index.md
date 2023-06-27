@@ -42,7 +42,7 @@ window.addEventListener("cut", (event) => {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - 相关联事件：{{domxref("Window/copy_event", "copy")}}、{{domxref("Window/paste_event", "paste")}}
 - {{domxref("Element")}} 目标上的这个事件：{{domxref("Element/cut_event", "cut")}}
