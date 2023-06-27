@@ -213,4 +213,4 @@ const rejectedResolved2 = new Promise((resolve) => {
 ## 参见
 
 - [`core-js` 中 `Promise` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-promise)
-- [使用 Promises](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
+- [使用 Promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
