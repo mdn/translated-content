@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 
 ## 語法
 
-```plain
+```js-nolint
 JSON.stringify(value[, replacer[, space]])
 ```
 
@@ -38,39 +38,44 @@ A JSON string representing the given value.
 - Non-enumerable properties will be ignored
 
 ```js
-JSON.stringify({});                  // '{}'
-JSON.stringify(true);                // 'true'
-JSON.stringify('foo');               // '"foo"'
-JSON.stringify([1, 'false', false]); // '[1,"false",false]'
-JSON.stringify({ x: 5 });            // '{"x":5}'
+JSON.stringify({}); // '{}'
+JSON.stringify(true); // 'true'
+JSON.stringify("foo"); // '"foo"'
+JSON.stringify([1, "false", false]); // '[1,"false",false]'
+JSON.stringify({ x: 5 }); // '{"x":5}'
 
-JSON.stringify(new Date(2006, 0, 2, 15, 4, 5))
+JSON.stringify(new Date(2006, 0, 2, 15, 4, 5));
 // '"2006-01-02T15:04:05.000Z"'
 
 JSON.stringify({ x: 5, y: 6 });
 // '{"x":5,"y":6}'
-JSON.stringify([new Number(3), new String('false'), new Boolean(false)]);
+JSON.stringify([new Number(3), new String("false"), new Boolean(false)]);
 // '[3,"false",false]'
 
-JSON.stringify({ x: [10, undefined, function(){}, Symbol('')] });
+JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] });
 // '{"x":[10,null,null,null]}'
 
 // Symbols:
-JSON.stringify({ x: undefined, y: Object, z: Symbol('') });
+JSON.stringify({ x: undefined, y: Object, z: Symbol("") });
 // '{}'
-JSON.stringify({ [Symbol('foo')]: 'foo' });
+JSON.stringify({ [Symbol("foo")]: "foo" });
 // '{}'
-JSON.stringify({ [Symbol.for('foo')]: 'foo' }, [Symbol.for('foo')]);
+JSON.stringify({ [Symbol.for("foo")]: "foo" }, [Symbol.for("foo")]);
 // '{}'
-JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
-  if (typeof k === 'symbol') {
-    return 'a symbol';
+JSON.stringify({ [Symbol.for("foo")]: "foo" }, function (k, v) {
+  if (typeof k === "symbol") {
+    return "a symbol";
   }
 });
 // '{}'
 
 // Non-enumerable properties:
-JSON.stringify( Object.create(null, { x: { value: 'x', enumerable: false }, y: { value: 'y', enumerable: true } }) );
+JSON.stringify(
+  Object.create(null, {
+    x: { value: "x", enumerable: false },
+    y: { value: "y", enumerable: true },
+  })
+);
 // '{"y":"y"}'
 ```
 
@@ -91,13 +96,19 @@ The `replacer` parameter can be either a function or an array. As a function, it
 ```js
 function replacer(key, value) {
   // Filtering out properties
-  if (typeof value === 'string') {
+  if (typeof value === "string") {
     return undefined;
   }
   return value;
 }
 
-var foo = {foundation: 'Mozilla', model: 'box', week: 45, transport: 'car', month: 7};
+var foo = {
+  foundation: "Mozilla",
+  model: "box",
+  week: 45,
+  transport: "car",
+  month: 7,
+};
 JSON.stringify(foo, replacer);
 // '{"week":45,"month":7}'
 ```
@@ -107,7 +118,7 @@ JSON.stringify(foo, replacer);
 If `replacer` is an array, the array's values indicate the names of the properties in the object that should be included in the resulting JSON string.
 
 ```js
-JSON.stringify(foo, ['week', 'month']);
+JSON.stringify(foo, ["week", "month"]);
 // '{"week":45,"month":7}', only keep "week" and "month" properties
 ```
 
@@ -116,7 +127,7 @@ JSON.stringify(foo, ['week', 'month']);
 The `space` argument may be used to control spacing in the final string. If it is a number, successive levels in the stringification will each be indented by this many space characters (up to 10). If it is a string, successive levels will be indented by this string (or the first ten characters of it).
 
 ```js
-JSON.stringify({ a: 2 }, null, ' ');
+JSON.stringify({ a: 2 }, null, " ");
 // '{
 //  "a": 2
 // }'
@@ -125,7 +136,7 @@ JSON.stringify({ a: 2 }, null, ' ');
 Using a tab character mimics standard pretty-print appearance:
 
 ```js
-JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
+JSON.stringify({ uno: 1, dos: 2 }, null, "\t");
 // returns the string:
 // '{
 //     "uno": 1,
@@ -145,36 +156,36 @@ For example:
 
 ```js
 const bonnie = {
-  name: 'Bonnie Washington',
+  name: "Bonnie Washington",
   age: 17,
-  class: 'Year 5 Wisdom',
+  class: "Year 5 Wisdom",
   isMonitor: false,
-  toJSON: function(key) {
+  toJSON: function (key) {
     // Clone object to prevent accidentally performing modification on the original object
     const cloneObj = { ...this };
 
     delete cloneObj.age;
     delete cloneObj.isMonitor;
     cloneObj.year = 5;
-    cloneObj.class = 'Wisdom';
+    cloneObj.class = "Wisdom";
 
     if (key) {
       cloneObj.code = key;
     }
 
     return cloneObj;
-  }
-}
+  },
+};
 
 JSON.stringify(bonnie);
 // Returns '{"name":"Bonnie Washington","class":"Wisdom","year":5}'
 
-const students = {bonnie};
+const students = { bonnie };
 JSON.stringify(students);
 // Returns '{"bonnie":{"name":"Bonnie Washington","class":"Wisdom","year":5,"code":"bonnie"}}'
 
 const monitorCandidate = [bonnie];
-JSON.stringify(monitorCandidate)
+JSON.stringify(monitorCandidate);
 // Returns '[{"name":"Bonnie Washington","class":"Wisdom","year":5,"code":"0"}]'
 ```
 
@@ -183,24 +194,24 @@ JSON.stringify(monitorCandidate)
 Note that JSON is [not a completely strict subset of JavaScript](http://timelessrepo.com/json-isnt-a-javascript-subset), with two line terminators (Line separator and Paragraph separator) not needing to be escaped in JSON but needing to be escaped in JavaScript. Therefore, if the JSON is meant to be evaluated or directly utilized within [JSONP](https://en.wikipedia.org/wiki/JSONP), the following utility can be used:
 
 ```js
-function jsFriendlyJSONStringify (s) {
-    return JSON.stringify(s).
-        replace(/\u2028/g, '\\u2028').
-        replace(/\u2029/g, '\\u2029');
+function jsFriendlyJSONStringify(s) {
+  return JSON.stringify(s)
+    .replace(/\u2028/g, "\\u2028")
+    .replace(/\u2029/g, "\\u2029");
 }
 
 var s = {
-    a: String.fromCharCode(0x2028),
-    b: String.fromCharCode(0x2029)
+  a: String.fromCharCode(0x2028),
+  b: String.fromCharCode(0x2029),
 };
 try {
-    eval('(' + JSON.stringify(s) + ')');
+  eval("(" + JSON.stringify(s) + ")");
 } catch (e) {
-    console.log(e); // "SyntaxError: unterminated string literal"
+  console.log(e); // "SyntaxError: unterminated string literal"
 }
 
 // No need for a catch
-eval('(' + jsFriendlyJSONStringify(s) + ')');
+eval("(" + jsFriendlyJSONStringify(s) + ")");
 
 // console.log in Firefox unescapes the Unicode if
 //   logged to console, so we use alert
@@ -216,23 +227,23 @@ In a case where you want to store an object created by your user and allowing it
 ```js
 // Creating an example of JSON
 var session = {
-  'screens': [],
-  'state': true
+  screens: [],
+  state: true,
 };
-session.screens.push({ 'name': 'screenA', 'width': 450, 'height': 250 });
-session.screens.push({ 'name': 'screenB', 'width': 650, 'height': 350 });
-session.screens.push({ 'name': 'screenC', 'width': 750, 'height': 120 });
-session.screens.push({ 'name': 'screenD', 'width': 250, 'height': 60 });
-session.screens.push({ 'name': 'screenE', 'width': 390, 'height': 120 });
-session.screens.push({ 'name': 'screenF', 'width': 1240, 'height': 650 });
+session.screens.push({ name: "screenA", width: 450, height: 250 });
+session.screens.push({ name: "screenB", width: 650, height: 350 });
+session.screens.push({ name: "screenC", width: 750, height: 120 });
+session.screens.push({ name: "screenD", width: 250, height: 60 });
+session.screens.push({ name: "screenE", width: 390, height: 120 });
+session.screens.push({ name: "screenF", width: 1240, height: 650 });
 
 // Converting the JSON string with JSON.stringify()
 // then saving with localStorage in the name of session
-localStorage.setItem('session', JSON.stringify(session));
+localStorage.setItem("session", JSON.stringify(session));
 
 // Example of how to transform the String generated through
 // JSON.stringify() and saved in localStorage in JSON object again
-var restoredSession = JSON.parse(localStorage.getItem('session'));
+var restoredSession = JSON.parse(localStorage.getItem("session"));
 
 // Now restoredSession variable contains the object that was saved
 // in localStorage
@@ -247,6 +258,6 @@ console.log(restoredSession);
 
 {{Compat}}
 
-## See also
+## 參見
 
 - {{jsxref("JSON.parse()")}}
