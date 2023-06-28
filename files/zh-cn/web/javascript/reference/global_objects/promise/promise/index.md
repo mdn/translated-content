@@ -41,7 +41,7 @@ readFile("./data.txt", (error, result) => {
 
 为了利用 Promise 提供的更好的可读性和语言特性，`Promise()` 构造函数允许将基于回调的 API 转换为基于 Promise 的 API。
 
-> **备注：** 如果你的任务已经基于 Promise 实现，你可能不需要使用 `Promise()` 构造函数。
+> **备注：** 如果你的任务已经基于 Promise 实现，你大概率不需要使用 `Promise()` 构造函数。
 
 `executor` 是将回调函数的结果与 Promise 关联在一起的自定义代码。编写 `executor` 的工作由程序员完成。它的函数签名应该是：
 
@@ -62,7 +62,7 @@ rejectFunc(reason); // 拒绝时调用
 
 `executor` 的完成状态对 Promise 的状态影响有限：
 
-- `executor` 函数的返回值会被忽略。`executor` 函数中的 `return` 语句仅影响控制流程，改变函数是否执行的部分，但不会影响 Promise 的履行值。如果 `executor` 函数退出，且未来不可能调用 `resolveFunc` 或 `rejectFunc`（例如，没有安排异步任务），那么 Promise 将永远保持待定状态。
+- `executor` 函数的返回值会被忽略。`executor` 函数中的 `return` 语句仅影响控制流程，调整函数某个部分是否执行，但不会影响 Promise 的履行值。如果 `executor` 函数退出，且未来不可能调用 `resolveFunc` 或 `rejectFunc`（例如，没有安排异步任务），那么 Promise 将永远保持待定状态。
 - 如果在 `executor` 函数中抛出错误，则 Promise 将被拒绝，除非 `resolveFunc` 或 `rejectFunc` 已经被调用。
 
 > **备注：** 待定的 Promise 的存在并不会防止程序退出。如果事件循环为空，则程序会退出，尽管存在待定的 Promise（因为它们必然永远处于待定状态）。
@@ -76,7 +76,7 @@ rejectFunc(reason); // 拒绝时调用
    - 如果先调用 `resolveFunc`，则传入的值将[解决](#resolver_函数)。Promise 可能会保持处于待定状态（如果传入了另一个 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 对象），变为已兑现状态（在传入非 thenable 值的大多数情况下），或者变为已拒绝状态（在无效的解析值的情况下）。
    - 如果先调用 `rejectFunc`，则 Promise 立即变为已拒绝状态。
    - 一旦 `resolveFunc` 或 `rejectFunc` 中的一个被调用，Promise 将保持解决状态。只有第一次调用 `resolveFunc` 或 `rejectFunc` 会影响 Promise 的最终状态，随后对任一函数的调用都不能更改兑现值或拒绝原因，也不能将其最终状态从“已兑现”转换为“已拒绝”或相反。
-   - 如果 `executor` 抛出错误，则 Promise 被拒绝。但是，如果 resolveFunc 或 rejectFunc 中的一个被调用（因此 Promise 已经被解决），则忽略该错误。
+   - 如果 `executor` 抛出错误，则 Promise 被拒绝。但是，如果 resolveFunc 或 rejectFunc 中的一个已经被调用（因此 Promise 已经被解决），则忽略该错误。
    - 解决 Promise 不一定会导致 Promise 变为已兑现或已拒绝（即已敲定）。Promise 可能仍处于待定状态，因为它可能是用另一个 thenable 对象解决的，但它的最终状态将与已解决的 thenable 对象一致。
 5. 一旦 Promise 敲定，它会（异步地）调用任何通过 {{jsxref("Promise/then", "then()")}}、{{jsxref("Promise/catch", "catch()")}} 或 {{jsxref("Promise/finally", "finally()")}} 关联的进一步处理程序。最终的兑现值或拒绝原因在调用时作为输入参数传给兑现和拒绝处理程序（请参阅 [promise 的链式调用](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_的链式调用)）。
 
@@ -130,7 +130,7 @@ new Promise((resolve, reject) => {
 });
 ```
 
-在 `resolve(thenable)` 的情况下：
+但是在 `resolve(thenable)` 的情况中，有如下区别：
 
 1. `resolve` 函数是同步调用的，因此再次调用 `resolve` 或 `reject` 函数没有任何影响，即使通过 `anotherPromise.then()` 绑定的处理程序尚未被调用。
 2. `then` 方法是异步调用的，因此如果传入 thenable 对象，则该 `Promise` 对象不会被立即解决。
