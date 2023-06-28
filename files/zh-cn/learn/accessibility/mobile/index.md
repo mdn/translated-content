@@ -205,13 +205,13 @@ div.ontouchstart = function(e) {
 panel.ontouchend = stopMove;
 ```
 
-我们提供了一个简单的例子来展示如何使用鼠标和触摸事件 - [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html) ([查看在线例子](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html))
+我们提供了一个简单的例子来展示如何使用鼠标和触摸事件——[multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html)（[查看在线例子](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html)）
 
 **注意**: 你可以看到一个功能完善的例子，展示如何在实现[游戏控制机制](/zh-CN/docs/Games/Techniques/Control_mechanisms)中实现不同的控制机制。
 
 ## 响应式设计
 
-[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)是根据屏幕大小和分辨率等因素动态更改您的应用程序的布局和其他功能的做法，因此对于不同设备类型的用户来说，它们是可用和可访问的。
+[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)是根据屏幕大小和分辨率等因素动态更改你的应用程序的布局和其他功能的做法，因此对于不同设备类型的用户来说，它们是可用和可访问的。
 
 特别是，移动端设备需要解决的最常见的问题是：
 
