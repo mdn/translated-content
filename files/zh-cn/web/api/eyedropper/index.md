@@ -17,7 +17,7 @@ slug: Web/API/EyeDropper
 _`EyeDropper` 接口不继承任何方法_。
 
 - {{DOMxRef("EyeDropper.open()")}} {{Experimental_Inline}}
-  - : 返回一个 Promise，该 Promise 在解析时提供了一个对象，该对象可以访问所选颜色。
+  - : 返回一个 Promise，该 Promise 会兑现一个可以访问所选颜色的对象。
 
 ## 示例
 
@@ -28,7 +28,7 @@ _`EyeDropper` 接口不继承任何方法_。
 #### HTML
 
 ```html
-<button id="start-button">Open the eyedropper</button> <span id="result"></span>
+<button id="start-button">打开拾色器</button> <span id="result"></span>
 ```
 
 #### JavaScript
@@ -39,7 +39,7 @@ document.getElementById("start-button").addEventListener("click", () => {
 
   if (!window.EyeDropper) {
     resultElement.textContent =
-      "Your browser does not support the EyeDropper API";
+      "你的浏览器不支持 EyeDropper API";
     return;
   }
 
@@ -59,7 +59,7 @@ document.getElementById("start-button").addEventListener("click", () => {
 
 #### 结果
 
-{{EmbedLiveSample("Opening the eyedropper tool and sampling a color")}}
+{{EmbedLiveSample("打开拾色器工具并进行颜色采样")}}
 
 ### 中止拾色器模式
 
@@ -68,7 +68,7 @@ document.getElementById("start-button").addEventListener("click", () => {
 #### HTML
 
 ```html
-<button id="start-button">Open the eyedropper</button> <span id="result"></span>
+<button id="start-button">打开拾色器</button> <span id="result"></span>
 ```
 
 #### JavaScript
@@ -79,7 +79,7 @@ document.getElementById("start-button").addEventListener("click", () => {
 
   if (!window.EyeDropper) {
     resultElement.textContent =
-      "Your browser does not support the EyeDropper API";
+      "你的浏览器不支持 EyeDropper API";
     return;
   }
 
@@ -104,7 +104,7 @@ document.getElementById("start-button").addEventListener("click", () => {
 
 #### 结果
 
-{{EmbedLiveSample("Aborting the eyedropper mode")}}
+{{EmbedLiveSample("中止拾色器模式")}}
 
 ## 规范
 

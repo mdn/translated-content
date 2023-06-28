@@ -1,5 +1,5 @@
 ---
-title: "EyeDropper: EyeDropper() 构造函数"
+title: EyeDropper：EyeDropper() 构造函数
 short-title: EyeDropper()
 slug: Web/API/EyeDropper/EyeDropper
 ---

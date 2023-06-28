@@ -1,5 +1,5 @@
 ---
-title: "EyeDropper: open() 方法"
+title: EyeDropper：open() 方法
 short-title: open()
 slug: Web/API/EyeDropper/open
 ---
@@ -19,7 +19,7 @@ open(options)
 
 - `options` {{optional_inline}}
 
-  - : 可以通过传递一个选项对象来使用 {{domxref("AbortSignal")}} 信号。：
+  - : 一个用于传递 {{domxref("AbortSignal")}} 信号的对象：
 
     - `signal`
       - : 一个 {{domxref("AbortSignal")}} 对象。当调用 `AbortSignal` 的 {{domxref("AbortController/abort()", "abort()")}} 方法时，拾色器模式将被中止。
@@ -36,9 +36,10 @@ open(options)
 ### 例外情况
 
 在 {{jsxref("Promise")}} 被拒绝（rejected）时，不会抛出异常，而是返回一个错误对象。
+Promise 在以下两种情况下被拒绝：
 
-- 当用户通过按下 <kbd>Escape</kbd> 键来取消拾色器模式。
-- 当通过传递给 `open()` 方法的 {{domxref("AbortController")}} 的方式中止拾色器模式。
+- 当用户通过按下 <kbd>Escape</kbd> 键来取消拾色器模式时。
+- 当通过作为参数传递给 `open()` 方法的 {{domxref("AbortController")}} 来中止拾色器模式时。
 
 ## 规范
 
