@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 ## 語法
 
-```plain
+```js-nolint
 fun.bind(thisArg[, arg1[, arg2[, ...]]])
 ```
 
@@ -26,7 +26,7 @@ A copy of the given function with the specified **`this`** value and initial arg
 
 ## 敘述
 
-**bind()** 函式建立了一個新的**綁定函式（BF）**。**BF** 是個包裝了原有函式物件的 **exotic function object**（**ECMAScript 2015** 的術語）。通常，呼叫 **BF** 會執行該 **wrapped function**。 **BF** 含有以下內部屬性：
+**bind()** 函式建立了一個新的**綁定函式（BF）**。**BF** 是個包裝了原有函式物件的 **exotic function object**（**ECMAScript 2015** 的術語）。通常，呼叫 **BF** 會執行該 **wrapped function**。**BF** 含有以下內部屬性：
 
 - **\[\[BoundTargetFunction]]** - the wrapped function object;
 - **\[\[BoundThis]]** - the value that is always passed as **this** value when calling the wrapped function.
@@ -44,10 +44,12 @@ A bound function may also be constructed using the [`new`](/zh-TW/docs/Web/JavaS
 The simplest use of `bind()` is to make a function that, no matter how it is called, is called with a particular **`this`** value. A common mistake for new JavaScript programmers is to extract a method from an object, then to later call that function and expect it to use the original object as its `this` (e.g. by using that method in callback-based code). Without special care, however, the original object is usually lost. Creating a bound function from the function, using the original object, neatly solves this problem:
 
 ```js
-this.x = 9;    // this refers to global "window" object here in the browser
+this.x = 9; // this refers to global "window" object here in the browser
 var module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX: function () {
+    return this.x;
+  },
 };
 
 module.getX(); // 81
@@ -94,13 +96,12 @@ function LateBloomer() {
 }
 
 // Declare bloom after a delay of 1 second
-LateBloomer.prototype.bloom = function() {
+LateBloomer.prototype.bloom = function () {
   window.setTimeout(this.declare.bind(this), 1000);
 };
 
-LateBloomer.prototype.declare = function() {
-  console.log('I am a beautiful flower with ' +
-    this.petalCount + ' petals!');
+LateBloomer.prototype.declare = function () {
+  console.log("I am a beautiful flower with " + this.petalCount + " petals!");
 };
 
 var flower = new LateBloomer();
@@ -120,8 +121,8 @@ function Point(x, y) {
   this.y = y;
 }
 
-Point.prototype.toString = function() {
-  return this.x + ',' + this.y;
+Point.prototype.toString = function () {
+  return this.x + "," + this.y;
 };
 
 var p = new Point(1, 2);
@@ -131,11 +132,10 @@ p.toString(); // '1,2'
 
 // works fine with native bind:
 
-var YAxisPoint = Point.bind(null, 0/*x*/);
-
+var YAxisPoint = Point.bind(null, 0 /*x*/);
 
 var emptyObj = {};
-var YAxisPoint = Point.bind(emptyObj, 0/*x*/);
+var YAxisPoint = Point.bind(emptyObj, 0 /*x*/);
 
 var axisPoint = new YAxisPoint(5);
 axisPoint.toString(); // '0,5'
@@ -155,7 +155,7 @@ Note that you need do nothing special to create a bound function for use with {{
 // (although usually this is undesired)
 YAxisPoint(13);
 
-emptyObj.x + ',' + emptyObj.y;
+emptyObj.x + "," + emptyObj.y;
 // >  '0,13'
 ```
 
@@ -193,22 +193,24 @@ You can partially work around this by inserting the following code at the beginn
 
 ```js
 if (!Function.prototype.bind) {
-  Function.prototype.bind = function(oThis) {
-    if (typeof this !== 'function') {
+  Function.prototype.bind = function (oThis) {
+    if (typeof this !== "function") {
       // closest thing possible to the ECMAScript 5
       // internal IsCallable function
-      throw new TypeError('Function.prototype.bind - what is trying to be bound is not callable');
+      throw new TypeError(
+        "Function.prototype.bind - what is trying to be bound is not callable"
+      );
     }
 
-    var aArgs   = Array.prototype.slice.call(arguments, 1),
-        fToBind = this,
-        fNOP    = function() {},
-        fBound  = function() {
-          return fToBind.apply(this instanceof fNOP
-                 ? this
-                 : oThis,
-                 aArgs.concat(Array.prototype.slice.call(arguments)));
-        };
+    var aArgs = Array.prototype.slice.call(arguments, 1),
+      fToBind = this,
+      fNOP = function () {},
+      fBound = function () {
+        return fToBind.apply(
+          this instanceof fNOP ? this : oThis,
+          aArgs.concat(Array.prototype.slice.call(arguments))
+        );
+      };
 
     if (this.prototype) {
       // Function.prototype doesn't have a prototype property

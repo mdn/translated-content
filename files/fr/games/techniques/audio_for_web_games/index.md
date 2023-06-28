@@ -1,12 +1,6 @@
 ---
 title: L'audio dans les jeux Web
 slug: Games/Techniques/Audio_for_Web_Games
-tags:
-  - API
-  - Audio
-  - Jeux
-  - Web Audio API
-  - audio sprites
 translation_of: Games/Techniques/Audio_for_Web_Games
 ---
 

@@ -9,24 +9,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
 
 ## 語法
 
-```plain
+```js-nolint
 numObj.toExponential([fractionDigits])
 ```
 
 ### 參數
 
-| 參數             | 可選 | 默認值                   | 類型                                     | 說明                                |
-| ---------------- | ---- | ------------------------ | ---------------------------------------- | ----------------------------------- |
-| `fractionDigits` | ●    | 默認盡可能將數字完整顯示 | `{{jsxref("Number")}}（正整數）` | 小數點後的位數。需為 0 至 20 之間。 |
+| 參數             | 可選 | 默認值                   | 類型                           | 說明                                |
+| ---------------- | ---- | ------------------------ | ------------------------------ | ----------------------------------- |
+| `fractionDigits` | ●    | 默認盡可能將數字完整顯示 | {{jsxref("Number")}}（正整數） | 小數點後的位數。需為 0 至 20 之間。 |
 
-### 回傳直
+### 回傳值
 
 一 string，將數字以「科學計數法」格式表示出來
 
 ### Exceptions
 
 - {{jsxref("RangeError")}}
-  - : `若 fractionDigits` 超出範圍（可接受的範圍是 0 ～ 20 之間的正整數）觸發 {{jsxref("RangeError")}}。
+  - : 若 `fractionDigits` 超出範圍（可接受的範圍是 0 ～ 20 之間的正整數）觸發 {{jsxref("RangeError")}}。
 - {{jsxref("TypeError")}}
   - : 若參數 `fractionDigits` 不是 {{jsxref("Number")}}，則觸發{{jsxref("TypeError")}}。
 
@@ -45,11 +45,11 @@ If a number has more digits than requested by the `fractionDigits` parameter, th
 ```js
 var numObj = 77.1234;
 
-console.log(numObj.toExponential());  // logs 7.71234e+1
+console.log(numObj.toExponential()); // logs 7.71234e+1
 console.log(numObj.toExponential(4)); // logs 7.7123e+1
 console.log(numObj.toExponential(2)); // logs 7.71e+1
-console.log(77.1234.toExponential()); // logs 7.71234e+1
-console.log(77 .toExponential());     // logs 7.7e+1
+console.log((77.1234).toExponential()); // logs 7.71234e+1
+console.log((77).toExponential()); // logs 7.7e+1
 ```
 
 ## 規範
@@ -60,7 +60,7 @@ console.log(77 .toExponential());     // logs 7.7e+1
 
 {{Compat}}
 
-## 延伸閱讀
+## 參見
 
 - {{jsxref("Number.prototype.toFixed()")}}
 - {{jsxref("Number.prototype.toPrecision()")}}
