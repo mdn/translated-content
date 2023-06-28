@@ -211,7 +211,7 @@ panel.ontouchend = stopMove;
 
 ## 响应式设计
 
-[响应式设计](/zh-CN/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks)是根据屏幕大小和分辨率等因素动态更改您的应用程序的布局和其他功能的做法，因此对于不同设备类型的用户来说，它们是可用和可访问的。
+[响应式设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)是根据屏幕大小和分辨率等因素动态更改您的应用程序的布局和其他功能的做法，因此对于不同设备类型的用户来说，它们是可用和可访问的。
 
 特别是，移动端设备需要解决的最常见的问题是：
 

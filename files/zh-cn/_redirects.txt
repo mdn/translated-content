@@ -2663,7 +2663,7 @@
 /zh-CN/docs/Web/Progressive_web_apps/Offline_Service_workers	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
 /zh-CN/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 /zh-CN/docs/Web/Progressive_web_apps/Responsive/Media_types	/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries
-/zh-CN/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks	/zh-CN/docs/conflicting/Learn/CSS/CSS_layout/Responsive_Design
+/zh-CN/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks	/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design
 /zh-CN/docs/Web/Progressive_web_apps/加载	/zh-CN/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading
 /zh-CN/docs/Web/Progressive_web_apps/添加到主屏幕	/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /zh-CN/docs/Web/SVG/Attribute/文本锚点	/zh-CN/docs/Web/SVG/Attribute/text-anchor
