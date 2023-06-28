@@ -1,6 +1,7 @@
 ---
 title: 响应式设计的基础
-slug: Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
+slug: conflicting/Learn/CSS/CSS_layout/Responsive_Design
+original_slug: Web/Progressive_web_apps/Responsive/responsive_design_building_blocks
 ---
 
 在本文中，我们将讨论响应式设计的主要基本组成部分，并在必要时提供一些指向更多信息的链接。
