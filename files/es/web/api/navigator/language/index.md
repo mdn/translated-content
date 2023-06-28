@@ -1,12 +1,12 @@
 ---
 title: NavigatorLanguage.language
-slug: orphaned/Web/API/NavigatorLanguage/language
+slug: Web/API/Navigator/language
 original_slug: Web/API/NavigatorLanguage/language
 ---
 
 {{APIRef("HTML DOM")}}
 
-La propiedad de solo lectura **`NavigatorLanguage.language`** devuelve un string representando el lenguaje predefinido del usuario, generalmente es el lenguaje configurado para la interfaz del navegador.
+La propiedad de solo lectura **`Navigator.language`** devuelve un string representando el lenguaje predefinido del usuario, generalmente es el lenguaje configurado para la interfaz del navegador.
 
 ## Sintaxis
 
@@ -36,5 +36,5 @@ if (window.navigator.language != "en") {
 
 ## Ver también
 
-- {{domxref("NavigatorLanguage.languages", "navigator.languages")}}
+- {{domxref("Navigator.languages", "navigator.languages")}}
 - {{domxref("navigator")}}

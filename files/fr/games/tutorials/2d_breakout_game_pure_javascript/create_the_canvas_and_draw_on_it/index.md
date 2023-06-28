@@ -2,18 +2,8 @@
 title: Créer l'élément Canvas et l'afficher
 slug: >-
   Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-tags:
-  - 2D
-  - Canvas
-  - Débutant
-  - HTML
-  - JavaScript
-  - Jeux
-  - Tutoriel
 translation_of: >-
   Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
-original_slug: >-
-  Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher
 ---
 
 {{GamesSidebar}}
