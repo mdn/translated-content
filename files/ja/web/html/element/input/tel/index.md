@@ -2,7 +2,7 @@
 title: <input type="tel">
 slug: Web/HTML/Element/input/tel
 l10n:
-  sourceCommit: 4b2f9de5cf7a4eb7b684960b6b9f5f5c35693181
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}
@@ -14,57 +14,6 @@ l10n:
 `tel` の入力欄は機能的に標準の `text` 入力欄と同じであるという事実にもかかわらず、便利な用途を提供します。もっとも手っ取り早く表れるのは、モバイルブラウザー — 特に携帯電話のもの — では、電話番号の入力に最適化された専用のキーパッドを表示することがあります。電話番号の専用の入力型を使用すると、カスタム検証を追加して電話番号の扱いをもっと便利にすることができます。
 
 > **メモ:** `tel` 型に対応していないブラウザーでは、通常の {{HTMLElement("input/text", "text")}} 入力欄で代用されます。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#値">値</a></strong></td>
-      <td>
-        電話番号を表す文字列、または空欄
-      </td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td>
-        <code>list</code>, <code>selectionStart</code>,
-        <code>selectionEnd</code>, <code>selectionDirection</code>,
-        <code>value</code>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## 値
 
@@ -92,7 +41,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### pattern
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
@@ -106,7 +55,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
-> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[\<input>: 入力欄 (フォーム入力) 要素](/ja/docs/Web/HTML/Element/input)の[プレイスホルダーはアクセシブルではない](/ja/docs/Web/HTML/Element/input#プレイスホルダーはアクセシブルではない)を参照してください。
+> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Element/inputlabels)を参照してください。
 
 ### readonly
 
@@ -369,7 +318,7 @@ input:valid + span::after {
 
 この例では、ユーザーにどの国にいるかを選択させる {{htmlelement("select")}} 要素と、電話番号の各部分を入力させる一連の `<input type="tel">` 要素でシンプルなインターフェイスを表します。複数の `tel` 入力欄を使ってはいけないという理由はありません。
 
-それぞれの入力欄には [`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) 属性があり、目の見えるユーザーが何を入力すればよいかのヒントを表示します。また [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) で、求められる部分で指定された文字数を強制します。さらに [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性があり、画面リーダーのユーザーに何を入力すればよいかのヒントを読み上げることができるようになっています。
+それぞれの入力欄には [`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) 属性があり、目の見えるユーザーが何を入力すればよいかのヒントを表示します。また [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) で、求められる部分で指定された文字数を強制します。さらに [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性があり、スクリーンリーダーのユーザーに何を入力すればよいかのヒントを読み上げることができるようになっています。
 
 ```html
 <form>
@@ -442,7 +391,7 @@ selectElem.onchange = () => {
 
     inputElems[1].placeholder = "First part";
     inputElems[1].pattern = "[0-9]{3}";
-    inputElems[1].setAttribute("aria-label","First part of number");
+    inputElems[1].setAttribute("aria-label", "First part of number");
 
     inputElems[2].placeholder = "Second part";
     inputElems[2].pattern = "[0-9]{4}";
@@ -464,13 +413,13 @@ selectElem.onchange = () => {
 
     inputElems[1].placeholder = "First part";
     inputElems[1].pattern = "[0-9]{2,4}";
-    inputElems[1].setAttribute("aria-label","First part of number");
+    inputElems[1].setAttribute("aria-label", "First part of number");
 
     inputElems[2].placeholder = "Second part";
     inputElems[2].pattern = "[0-9]{4}";
-    inputElems[2].setAttribute("aria-label","Second part of number");
+    inputElems[2].setAttribute("aria-label", "Second part of number");
   }
-}
+};
 ```
 
 この例は次のように見えます。
@@ -510,6 +459,65 @@ input:valid + span::after {
 }
 ```
 
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#値">値</a></strong></td>
+      <td>
+        電話番号を表す文字列、または空欄
+      </td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} および
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td>
+        <code>list</code>, <code>selectionStart</code>,
+        <code>selectionEnd</code>, <code>selectionDirection</code>,
+        <code>value</code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
+        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><code>list</code> 属性がある場合:
+                <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
+      <td><code>list</code> 属性がない場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## 仕様書
 
 {{Specifications}}
@@ -521,7 +529,6 @@ input:valid + span::after {
 ## 関連情報
 
 - [HTML フォームガイド](/ja/docs/Learn/Forms)
-- [フォームとアクセシビリティ](/ja/docs/Web/Accessibility/ARIA/forms)
 - {{HTMLElement("input")}}
 
   - [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text)

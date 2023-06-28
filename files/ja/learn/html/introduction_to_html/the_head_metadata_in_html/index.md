@@ -30,13 +30,13 @@ HTML の文書の{{glossary("Head", "ヘッド")}}部は、ページが読み込
 
 ## HTML のヘッド部とは何か？
 
-[前の記事で扱った HTML 文書](/ja/Learn/HTML/Introduction_to_HTML/Getting_started#html_文書の構成)をもう一度見てみましょう。
+[前の記事で扱った HTML 文書](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_文書の構成)をもう一度見てみましょう。
 
 ```html
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My test page</title>
   </head>
   <body>
@@ -49,49 +49,51 @@ HTML のヘッド部は {{htmlelement("head")}} 要素の内容です。 {{htmle
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>My test page</title>
 </head>
 ```
 
-しかし、より大きなページでは、ヘッド部がかなり大きくなることがあります。好きなウェブサイトで、[開発者ツール](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を使用して、ヘッド部の中身を確認してみてください。ここでの目的は、ヘッド部に記載できるすべてのものの使用方法を紹介することではなく、ヘッド部に記載したい主要な要素の使用方法を教え、ある程度慣れてもらうことです。では、始めましょう。
+しかし、より大きなページでは、ヘッド部がかなり大きくなることがあります。好きなウェブサイトで、[開発者ツール](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)を使用して、ヘッド部の中身を確認してみてください。ここでの目的は、ヘッド部に記載できるすべてのものの使用方法を紹介することではなく、ヘッド部に記載したい主要な要素の使用方法を教え、ある程度慣れてもらうことです。では、始めましょう。
 
 ## タイトルをつける
 
-{{htmlelement("title")}} 要素についてはすでに見てきました。これは文書にタイトルを追加するのに使います。しかしこれは {{htmlelement("h1")}} 要素と良く混同されます。こちらは body の中で最上位レベルの見出しを追加するものであり、時々ページタイトルとしても参照されます。しかしこれらは別のものです。
+{{htmlelement("title")}} 要素についてはすでに見てきました。これは文書にタイトルを追加するのに使います。しかしこれは {{htmlelement("Heading_Elements", "h1")}} 要素と良く混同されます。こちらは body の中で最上位レベルの見出しを追加するものであり、時々ページタイトルとしても参照されます。しかしこれらは別のものです。
 
-- {{htmlelement("h1")}} 要素は、ブラウザーで読み込まれるとページに現れます。一般的に、これは 1 ページに 1 回使用し、ページ内容のタイトル（記事のタイトル、またはニュースの見出しなど、使用に適したもの）をマークアップするために使用すべきです。
+- {{htmlelement("Heading_Elements", "h1")}} 要素は、ブラウザーで読み込まれるとページに現れます。一般的に、これは 1 ページに 1 回使用し、ページ内容のタイトル（記事のタイトル、またはニュースの見出しなど、使用に適したもの）をマークアップするために使用すべきです。
 - {{htmlelement("title")}} 要素は（文書のコンテンツではなく） HTML 文書全体のタイトルを表すメタデータです。
 
 ### アクティブラーニング: 単純な例を検討する
 
 1. このアクティブラーニングを始めるのに、我々の GitHub リポジトリーに移動して [title-example.html page](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html) のコピーをダウンロードしてください。これは次のいずれかでできます。
 
-    1. ページのコードをコピー＆ペーストして、コードエディターの新規ファイルに入れて、ふさわしい場所に保存します
-    2. ページの "Raw" を押すと、新しいタブに生のコードが出ます。次に、ブラウザーの \[名前を付けて保存...] メニューを選択して、、ファイルの保存場所を選んでください。
+   1. ページのコードをコピー＆ペーストして、コードエディターの新規ファイルに入れて、ふさわしい場所に保存します
+   2. ページの "Raw" を押すと、新しいタブに生のコードが出ます。次に、ブラウザーの \[名前を付けて保存...] メニューを選択して、、ファイルの保存場所を選んでください。
 
 2. ファイルをブラウザーで開きます。このようなものが見えるでしょう。
 
-    ![シンプルなウェブページで、タイトルに \<title> 要素を設定し、 \<h1> 要素を \<h1> に設定したものです。](title-example.png)\<h1> コンテンツが出ている場所と、`<title>` コンテンツが出ている場所がひと目で分かります!
+    ![ブラウザーのページタブに 'title' テキスト、文書本体のページ見出しに 'h1' テキストを持つウェブページ。](title-example.png)
+
+   `<h1>` コンテンツが出ている場所と、`<title>` コンテンツが出ている場所がひと目で分かります。
 
 3. また、コードをコードエディターで開き、これらの要素の内容を編集し、ブラウザーでページを更新してみてください。楽しみながらやってみてください。
 
 `<title>` 要素はいろいろな方法で使われます。例えば、ページのブックマーク（_ブックマーク > このページをブックマーク_ または Firefox の URL バーのスターアイコンにて）してみると、提案されたブックマーク名として `<title>` コンテンツが記入されています。
 
-![FirefoxでブックマークされているWebページ。ブックマーク名には、 \<title> 要素の内容が自動的に付与されています。](bookmark-example.png)
+![Firefox でブックマークされているウェブページ。ブックマーク名には、\<title> 要素の内容が自動的に付与されています。](bookmark-example.png)
 
 `<title>` の内容は後述するように、コンテンツは検索結果にも使われます。
 
-## メタデータ: \<meta>要素
+## メタデータ: `<meta>` 要素
 
-メタデータはデータを説明するデータで、 HTML には文書にメタデータを追加する「公式な」方法があります — {{htmlelement("meta")}} 要素です。もちろん、この記事で話しているその他のものもメタデータと考えられます。ページの \<head> に入る `<meta>` 要素にはさまざまな種類がありますが、この段階では、ややこしすぎるため、すべては説明しません。その代わり、よく見かけるいくつかのものを説明し、理解を与えます。
+メタデータはデータを説明するデータで、HTML には文書にメタデータを追加する「公式な」方法があります — {{htmlelement("meta")}} 要素です。もちろん、この記事で解説しているその他のものもメタデータと考えられます。様々な種類の `<meta>` 要素がページの `<head>` に入りますが、この段階では、ややこしすぎるため、すべては説明しません。その代わり、よく見かけるいくつかのものを説明し、理解を与えます。
 
 ### HTML 文書の文字コードを指定する
 
 上で見てきた例では、この行が含まれていました。
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 ```
 
 この要素は文書の文字エンコーディング、つまり文書が使用することを許可されている文字セットを指定します。 `utf-8` は普遍的な文字セットで、あらゆる人間の言語のほとんどすべての文字を含みます。これは、ウェブページがあらゆる言語の表示を扱うことができることを意味しています。したがって、作成するすべてのウェブページでこれを設定するのはよい考えです。例えば、このページは英語と日本語をうまく処理することができます。
@@ -110,7 +112,7 @@ HTML のヘッド部は {{htmlelement("head")}} 要素の内容です。 {{htmle
 <p>Japanese example: ご飯が熱い。</p>
 ```
 
-### 作成者と説明を追加する
+### 作成者と説明の追加
 
 多くの `<meta>` 要素は `name` と `content` 属性が含まれます。
 
@@ -120,13 +122,15 @@ HTML のヘッド部は {{htmlelement("head")}} 要素の内容です。 {{htmle
 ページに入れるのが便利な 2 つのメタ要素は、ページの著者 (author) を定義するものと、ページの説明 (description) を与えるものです。例を見てみます。
 
 ```html
-<meta name="author" content="Chris Mills">
-<meta name="description" content="The MDN Web Docs Learning Area aims to provide
+<meta name="author" content="Chris Mills" />
+<meta
+  name="description"
+  content="The MDN Web Docs Learning Area aims to provide
 complete beginners to the Web with all they need to know to get
-started with developing web sites and applications.">
+started with developing websites and applications." />
 ```
 
-作者 (author) を指定することは多くの点で有益です。内容に関して質問がある場合、誰がそのページを書いたのかを把握することができ、連絡を取りたい場合に便利だからです。コンテンツ管理システムの中には、ページの作者情報を自動的に抽出して、そのために利用できるようにする機能があるものもあります。
+作者 (author) を明示することは多くの点で有益です。内容に関して質問がある場合、誰がそのページを書いたのかを把握することができ、連絡を取りたい場合に便利だからです。コンテンツ管理システムの中には、ページの作者情報を自動的に抽出して、そのために利用できるようにする機能があるものもあります。
 
 ページの内容に関連したキーワードを含む説明 (description) を指定すると、検索エンジンで行われる関連検索で、ページをより上位にできる可能性があるため役立ちます（この行為に対する用語は [Search Engine Optimization](/ja/docs/Glossary/SEO) （検索エンジン最適化）または {{glossary("SEO")}}といいます）。
 
@@ -139,20 +143,22 @@ description は検索エンジンの結果ページにも使われます。練�
 
 3. description の meta タグを見てみます。このようなものです（変わっているかもしれませんが）。
 
-    ```html
-    <meta name="description" content="The MDN Web Docs site
-      provides information about Open Web technologies
-      including HTML, CSS, and APIs for both Web sites and
-      progressive web apps.">
-    ```
+   ```html
+   <meta
+     name="description"
+     content="The MDN Web Docs site
+     provides information about Open Web technologies
+     including HTML, CSS, and APIs for both websites and
+     progressive web apps." />
+   ```
 
 4. ここでお好きな検索エンジンで "MDN Web Docs" を検索します（ここでは Google を使っています）。 description の `<meta>` と `<title>` 要素のコンテンツが検索結果で使われています。確かに値打ちがあります。
 
-    ![A Yahoo search result for "Mozilla Developer Network"](mdn-search-result.png)
+   ![Yahoo での "Mozilla Developer Network" の検索結果](mdn-search-result.png)
 
-> **メモ:** Google ではメインの MDN ホームページリンクの下にいくつか MDN Web Docs のサブページが見えるでしょう。これはサイトリンクと呼ばれ、[Google ウェブマスターツール](https://search.google.com/search-console/about) で設定されます。これは Google 検索エンジンでサイトの検索結果を良くする方法です。
+> **メモ:** Google ではメインの MDN ホームページリンクの下にいくつか MDN Web Docs のサブページが見えるでしょう。これはサイトリンクと呼ばれ、[Google ウェブマスターツール](https://search.google.com/search-console/about) で設定されます。これは Google 検索エンジンでサイトの検索結果を改善する方法です。
 
-> **メモ:** 多くの `<meta>` 機能はもう使われていません。例えば、 keyword の `<meta>` 要素 (`<meta name="keywords" content="fill, in, your, keywords, here">`) — 検索エンジンが色々な検索用語と関連するページを決めるためのキーワードを与えると考えられています — は、スパマーが結果にバイアスをかける多数のキーワードを埋めるだけなので、検索エンジンから無視されます。
+> **メモ:** 多くの `<meta>` 機能はもう使われていません。例えば、`<meta>` 要素の keyword (`<meta name="keywords" content="fill, in, your, keywords, here">`) — 検索エンジンが色々な検索用語と関連するページを決めるためのキーワードを与えると考えられています — は、スパマーが結果にバイアスをかける多数のキーワードを埋めるだけなので、検索エンジンから無視されます。
 
 ### メタデータの他の種類
 
@@ -161,11 +167,15 @@ description は検索エンジンの結果ページにも使われます。練�
 例えば、 [Open Graph Data](https://ogp.me/) は Facebook が開発した、ウェブサイトにより豊富なメタデータを与えるメタデータプロトコルです。 MDN Web Docs のソースコードでは、次のようなものがあります。
 
 ```html
-<meta property="og:image" content="https://developer.mozilla.org/mdn-social-share.png">
-<meta property="og:description" content="The Mozilla Developer Network (MDN) provides
-information about Open Web technologies including HTML, CSS, and APIs for both Web sites
-and HTML Apps. It also documents Mozilla products, like Firefox OS.">
-<meta property="og:title" content="Mozilla Developer Network">
+<meta
+  property="og:image"
+  content="https://developer.mozilla.org/mdn-social-share.png" />
+<meta
+  property="og:description"
+  content="The Mozilla Developer Network (MDN) provides
+information about Open Web technologies including HTML, CSS, and APIs for both websites
+and HTML Apps." />
+<meta property="og:title" content="Mozilla Developer Network" />
 ```
 
 この効果として、 Facebook で MDN Web Docs にリンクしたとき、リンクに画像と説明が表示されます。ユーザーにとってより便利になります。
@@ -175,7 +185,7 @@ and HTML Apps. It also documents Mozilla products, like Firefox OS.">
 Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards) という独自のメタデータを持っており、サイトの URL が twitter.com で表示されたときに同様の効果を実現しています。例えばこのようになります。
 
 ```html
-<meta name="twitter:title" content="Mozilla Developer Network">
+<meta name="twitter:title" content="Mozilla Developer Network" />
 ```
 
 ## サイトに自分の好きなアイコンをつける
@@ -186,30 +196,43 @@ Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/tw
 
 ページにファビコンを追加するには次のようにします。
 
-1. サイトのインデックスページと同じディレクトリーに、 `.ico` 形式で保存します（大半のブラウザーは `.gif` や `.png` のような、より一般的な形式のファビコンにも対応していますが、 ICO 形式を使えば Internet Explorer 6 以降の古いブラウザーでも動作することが保証されます）。
-2. HTML の {{HTMLElement("head")}} ブロックに下記の行を入れて参照します。
+1. サイトのインデックスページと同じディレクトリーに、 `.ico` 形式で保存します（多くのブラウザーは `.gif` や `.png` のような、より一般的な形式のファビコンにも対応しています）。
+2. HTML の {{HTMLElement("head")}} ブロックに次の行を入れて参照します。
 
-    ```html
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    ```
+   ```html
+   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+   ```
 
-ブックマークパネルでファビコンが表示される例です。
+ブックマークパネルでファビコンが表示されている例です。
 
 ![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](bookmark-favicon.png)
 
 最近では考慮するべきアイコンの種類がほかにもたくさんあります。例えば、 MDN Web Docs ホームページのソースコードには以下の行があります。
 
 ```html
-<!-- third-generation iPad with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.mozilla.org/static/img/favicon144.png">
-<!-- iPhone with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.mozilla.org/static/img/favicon114.png">
-<!-- first- and second-generation iPad: -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.mozilla.org/static/img/favicon72.png">
-<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon-precomposed" href="https://developer.mozilla.org/static/img/favicon57.png">
-<!-- basic favicon -->
-<link rel="icon" href="https://developer.mozilla.org/static/img/favicon32.png">
+<!-- 第 3 世代の iPad の高解像度レティナ画面 -->
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="https://developer.mozilla.org/static/img/favicon144.png" />
+<!-- iPhone の高解像度レティナ画面 -->
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="https://developer.mozilla.org/static/img/favicon114.png" />
+<!-- 第 1、2 世代の iPad -->
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="72x72"
+  href="https://developer.mozilla.org/static/img/favicon72.png" />
+<!-- レティナではない iPhone、iPod Touch、Android 2.1 以降の端末 -->
+<link
+  rel="apple-touch-icon-precomposed"
+  href="https://developer.mozilla.org/static/img/favicon57.png" />
+<!-- 基本的なファビコン -->
+<link
+  rel="icon"
+  href="https://developer.mozilla.org/static/img/favicon32.png" />
 ```
 
 コメントはそれぞれのアイコンの用途を説明しています。 — この要素は、ウェブサイトが iPad のホーム画面に保存された時のすばらしい高解像度なアイコンの提供といったことをカバーしています。
@@ -225,7 +248,7 @@ Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/tw
 - {{htmlelement("link")}} 要素は必ず HTML 文書のヘッド部の中に置きます。二つの属性をとり、 rel="stylesheet" はこれが文書のスタイルシートであることを示し、 href はスタイルシートファイルへのパスを表します。
 
   ```html
-  <link rel="stylesheet" href="my-css-file.css">
+  <link rel="stylesheet" href="my-css-file.css" />
   ```
 
 - {{htmlelement("script")}} 要素もヘッド部に入れるべきであり、読み込みたいJavaScriptのパスを含む `src` 属性と、基本的にページが HTML の解析を完了した後にJavaScriptを読み込むようにブラウザーに指示する `defer` を記載する必要があります。これは、JavaScriptを実行する前に HTML がすべて読み込まれていることを確認し、 JavaScript がまだページ上に存在しない HTML 要素にアクセスしようとした結果、エラーが発生しないようにするために有用なものです。ページでの JavaScript の読み込みを処理する方法は実際にはいくつかありますが、現代のブラウザーではこれが最も信頼できる方法です（他にも、[スクリプトの読み込み方針](/ja/docs/Learn/JavaScript/First_steps/What_is_JavaScript#スクリプトの読み込み方針)を参照してください）。
@@ -234,7 +257,7 @@ Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/tw
   <script src="my-js-file.js" defer></script>
   ```
 
-  > **メモ:** `<script>` 要素は空要素のように見えるかもしれませんが、そうではありませんので、終了タグが必要です。また、外部のスクリプトファイルを読み込むのではなく、 `<script>` 要素の中にスクリプトを置くこともできます。
+  > **メモ:** `<script>` 要素は{{glossary("void element", "空要素")}}のように見えるかもしれませんが、そうではありませんので、終了タグが必要です。また、外部のスクリプトファイルを読み込むのではなく、 `<script>` 要素の中にスクリプトを置くこともできます。
 
 ### アクティブラーニング: ページに CSS と JavaScript を追加する
 
@@ -249,7 +272,7 @@ Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/tw
 - JavaScript が空のリストをページに追加しました。リスト内のどこかをクリックすると、ダイアログボックスが現れてリストの新しい要素となるテキストを入力するように求められます。 OK ボタンを押すと。リストに新しい要素が加わります。リストに既にある要素をクリックすると、ダイアログボックスが現れ要素の名前を変えることができます。
 - CSS によって背景は緑になり文字が大きくなっています。 JavaScript によってページに加えられたいくつかのコンテンツもスタイルが適用されます（黒い境界線の付いた赤いバーは、 JS が生成したリストに CSS が追加したスタイルです）。
 
-> **メモ:** このアクティブラーニングで行きづまって CSS/JS が適用できなくなってしまった場合は、 [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) サンプルページをチェックしてみてください。
+> **メモ:** このアクティブラーニングで行き詰まって CSS/JS が適用できなくなってしまった場合は、 [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) サンプルページをチェックしてみてください。
 
 ## 文書の主要な言語の設定
 
@@ -257,6 +280,8 @@ Twitter も同様に、 [Twitter Cards](https://developer.twitter.com/en/docs/tw
 
 ```html
 <html lang="en-US">
+  …
+</html>
 ```
 
 これは様々なところで役に立ちます。言語が設定されていれば、 検索エンジンによる HTML 文書のタグ付けがより効果的になりますし（たとえば、言語固有の結果を正しく表示できるようになるなど）、読み上げソフトを使用している視覚障碍者にとっても有用です （"six" はフランス語と英語の両方に存在しますが、発音が異なります）。

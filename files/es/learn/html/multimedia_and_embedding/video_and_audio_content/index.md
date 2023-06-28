@@ -61,9 +61,9 @@ El elemento {{htmlelement("video")}} nos permite incrustar video fácilmente. Un
 
 Las características a notar son:
 
-- {{htmlattrxref("src","video")}}
+- [`src`](/es/docs/Web/HTML/Element/video#src)
   - : De la misma manera que para el elemento [`<img>`](/es/docs/Web/HTML/Element/img), el atributo `src` (source) contiene una ruta al video que deseas incrustar. Funciona de la misma manera.
-- {{htmlattrxref("controls","video")}}
+- [`controls`](/es/docs/Web/HTML/Element/video#controls)
   - : Los usuarios deben ser capaces de controlar la reproducción de video y audio (esto es especialmente crítico en personas que padecen [epilepsia](https://en.wikipedia.org/wiki/Epilepsy#Epidemiology)). Se debe utilizar el atributo `controls` para incluir la interfaz de control del browser, o construir la nuestra utilizando la [JavaScript API](/es/docs/Web/API/HTMLMediaElement) apropiada. Como mínimo la interfaz debe incluir una manera de empezar y terminar la reproducción, y ajustar el volumen.
 - El párrafo dentro de la etiqueta `<video>`
   - : Se lo llama **fallback content** (contenido de reserva) — y será mostrado si el browser desde el que se está accediendo a la página no soporta el elemento `<video>`, permitiéndonos proveer un fallback para browsers más antiguos. Puede ser de la manera que se quiera; en este caso proporcionamos un link directo al archivo de video, por lo que el usuario puede al menos acceder de alguna manera, independientemente del browser que esté usando.
@@ -102,7 +102,7 @@ Los formatos anteriores existen para comprimir los archivos de audio y video vol
 
 > **Nota:** Debes estar preguntándote por qué sucede esto. El **MP3** (para audio) y el **MP4/H.264** (para video) son ampliamente compatibles y de buena calidad, sin embargo, también están patentados — sus patentes cubren MP3 al menos hasta 2017 y a H.264 hasta 2027, lo que significa que los browsers que no tienen la patente tienen que pagar grandes sumas de dinero para soportar estos formatos. Además, mucha gente no permite el software con restricciones, por estar a favor de formatos abiertos. Por todo esto es que tenemos que proveer múltiples formatos para los diferentes browsers.
 
-Está bien, ¿pero cómo lo hacemos? Miremos el siguiente [ejemplo actualizado](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)[pruébalo en vivo aquí](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)), o acá:
+Está bien, ¿pero cómo lo hacemos? Miremos el siguiente [ejemplo actualizado](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html) ([pruébalo en vivo aquí](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html)):
 
 ```html
 <video controls>
@@ -138,17 +138,17 @@ Esto nos dará un resultado que se parece a esto:
 
 Las nuevas características son:
 
-- {{htmlattrxref("width","video")}} y {{htmlattrxref("height","video")}}
+- [`width`](/es/docs/Web/HTML/Element/video#width) y [`height`](/es/docs/Web/HTML/Element/video#height)
   - : Puede controlar el tamanño con estos atributos o con [CSS](/es/docs/Glossary/CSS). En ambos casos, los vídeos mantienen su relación **anchura - altura nativa**. Si la relación de aspecto no se mantiene con los tamañis establecidos, el vídeo crecerá para rellenar el espacio horizontalmente y el el espacio sin rellenar sólo recibirá un color de fondo sólido de forma predeterminada.
-- {{htmlattrxref("autoplay","video")}}
+- [`autoplay`](/es/docs/Web/HTML/Element/video#autoplay)
   - : Hace que el audio o el vídeo empiece a reproducirse de inmediato, mientras se carga el resto de la página. Le aconsejamos que no utilice vídeo (o audio) de reproducción automática en sus sitios, ya que los usuarios pueden encontralo molesto.
-- {{htmlattrxref("loop","video")}}
+- [`loop`](/es/docs/Web/HTML/Element/video#loop)
   - : Hace que el vídeo (o audio) comience a reproducirse cada vez que finaliza.Esto puede en ocasiones resultar molesto, así que utilizalo solo si es realmente necesario.
-- {{htmlattrxref("muted","video")}}
+- [`muted`](/es/docs/Web/HTML/Element/video#muted)
   - : Hace que los medios se reproduzcan con el sonido apagado de forma predeterminada.
-- {{htmlattrxref("poster","video")}}
+- [`poster`](/es/docs/Web/HTML/Element/video#poster)
   - : La URL de una imagen que se mostrará antes de reproducir el vídeo. Está destinado a ser utilizado para una pantalla de presentación o pantalla publicitaria (miniatura del vídeo).
-- {{htmlattrxref("preload","video")}}
+- [`preload`](/es/docs/Web/HTML/Element/video#preload)
 
   - : Se utiliza para almacenar en búfer archivos grandes; Puede tomar uno de estos tres valores:
 
@@ -245,7 +245,7 @@ Este es el segundo.
 Para que esto se muestre junto con la reproducción multimedia HTML, es necesario:
 
 1. Guárdelo como archivo `.vtt` en un lugar adecuado.
-2. Enlace el archivo `.vtt` con el elemento {{htmlelement("track")}}. `<track>` debe colocarse dentro de `<audio>` o `<video>`, pero después de todos los elementos `<source>`. Utilice el atributo {{htmlattrxref("kind", "track")}} para especificar si las pistas son "subtítulos", " leyendas" o "descripciones". Además, utilice {{htmlattrxref("srclang", "track")}} para indicar al navegador en qué idioma ha escrito los subtítulos.
+2. Enlace el archivo `.vtt` con el elemento {{htmlelement("track")}}. `<track>` debe colocarse dentro de `<audio>` o `<video>`, pero después de todos los elementos `<source>`. Utilice el atributo [`kind`](/es/docs/Web/HTML/Element/track#kind) para especificar si las pistas son "subtítulos", " leyendas" o "descripciones". Además, utilice [`srclang`](/es/docs/Web/HTML/Element/track#srclang) para indicar al navegador en qué idioma ha escrito los subtítulos.
 
 He aquí un ejemplo:
 

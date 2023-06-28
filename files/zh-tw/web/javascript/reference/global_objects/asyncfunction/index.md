@@ -10,12 +10,12 @@ slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 注意 `AsyncFunction` 不是一個全域物件。 它可以以下程式碼獲得。
 
 ```js
-Object.getPrototypeOf(async function(){}).constructor
+const AsyncFunction = async function () {}.constructor;
 ```
 
 ## 語法
 
-```plain
+```js-nolint
 new AsyncFunction([arg1[, arg2[, ...argN]],] functionBody)
 ```
 
@@ -49,20 +49,22 @@ All arguments passed to the function are treated as the names of the identifiers
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
   });
 }
 
-var AsyncFunction = Object.getPrototypeOf(async function(){}).constructor
+var AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
 
-var a = new AsyncFunction('a',
-                          'b',
-                          'return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);');
+var a = new AsyncFunction(
+  "a",
+  "b",
+  "return await resolveAfter2Seconds(a) + await resolveAfter2Seconds(b);"
+);
 
-a(10, 20).then(v => {
+a(10, 20).then((v) => {
   console.log(v); // prints 30 after 4 seconds
 });
 ```

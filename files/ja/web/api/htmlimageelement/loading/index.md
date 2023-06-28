@@ -1,6 +1,9 @@
 ---
-title: HTMLImageElement.loading
+title: "HTMLImageElement: loading プロパティ"
+short-title: loading
 slug: Web/API/HTMLImageElement/loading
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -72,4 +75,3 @@ function addImageToList(url) {
 - {{HTMLElement("img")}} 要素
 - [ウェブパフォーマンス](/ja/docs/Learn/Performance)（MDN 学習領域）
 - [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading)（MDN ウェブパフォーマンスガイド）
-- [画像の遅延読み込みを使用する](/ja/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages#use_lazy_loading_for_images)

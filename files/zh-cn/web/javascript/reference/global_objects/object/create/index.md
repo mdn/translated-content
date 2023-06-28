@@ -34,7 +34,7 @@ Object.create(proto, propertiesObject)
 
 ## 示例
 
-### 用 `Object.create()` 实现类式继承
+### 用 Object.create() 实现类式继承
 
 下面的例子演示了如何使用 `Object.create()` 来实现类式继承。这是一个所有版本 JavaScript 都支持的单继承。
 
@@ -81,7 +81,7 @@ rect.move(1, 1); // 打印 'Shape moved.'
 
 ### 使用 Object.create() 的 propertyObject 参数
 
-`Object.create()` 方法允许对对象创建过程进行精细的控制。实际上，[对象初始化语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)是 `Object.create()` 的一种语法糖。使用 `Object.create()`，我们可以创建具有指定原型和某些属性的对象。请注意，第二个参数将键映射到*属性描述符*，这意味着你还可以控制每个属性的可枚举性、可配置性等，而这在对象初始化语法中是做不到的。
+`Object.create()` 方法允许对对象创建过程进行精细的控制。实际上，[字面量初始化对象语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)是 `Object.create()` 的一种语法糖。使用 `Object.create()`，我们可以创建具有指定原型和某些属性的对象。请注意，第二个参数将键映射到*属性描述符*，这意味着你还可以控制每个属性的可枚举性、可配置性等，而这在字面量初始化对象语法中是做不到的。
 
 ```js
 o = {};
@@ -111,7 +111,7 @@ o = Object.create(Object.prototype, {
 o = Object.create({}, { p: { value: 42 } });
 ```
 
-使用 `Object.create()`，我们可以创建一个[原型为 `null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象) 的对象。在对象初始化器中，相当于使用 [`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer) 键。
+使用 `Object.create()`，我们可以创建一个[原型为 `null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象) 的对象。在字面量初始化对象语法中，相当于使用 [`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer) 键。
 
 ```js
 o = Object.create(null);
@@ -135,7 +135,7 @@ delete o.p;
 // false；在严格模式下会报错
 ```
 
-如果要指定与初始化器中相同的属性，请显式指定 `writable`、`enumerable` 和 `configurable`。
+如果要指定与字面量对象中相同的属性，请显式指定 `writable`、`enumerable` 和 `configurable`。
 
 ```js
 o2 = Object.create(

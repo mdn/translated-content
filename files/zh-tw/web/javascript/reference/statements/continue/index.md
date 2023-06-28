@@ -22,10 +22,9 @@ original_slug: Web/JavaScript/Obsolete_Pages/Obsolete_Pages/Obsolete_Pages/循�
 i = 0;
 n = 0;
 while (i < 5) {
-   i++;
-   if (i == 3)
-      continue;
-   n += i;
+  i++;
+  if (i == 3) continue;
+  n += i;
 }
 ```
 
@@ -36,21 +35,18 @@ while (i < 5) {
 如果 `continue` 有一個 `checkiandj` 標籤，程式就會從 `checkiandj` 語句的開始處繼續執行。
 
 ```js
-checkiandj :
-   while (i < 4) {
-      document.write(i + "<br/>");
-      i += 1;
-      checkj :
-         while (j > 4) {
-            document.write(j + "<br/>");
-            j -= 1;
-            if ((j % 2) == 0)
-               continue checkj;
-            document.write(j + " is odd.<br/>");
-         }
-      document.write("i = " + i + "<br/>");
-      document.write("j = " + j + "<br/>");
-   }
+checkiandj: while (i < 4) {
+  document.write(i + "<br/>");
+  i += 1;
+  checkj: while (j > 4) {
+    document.write(j + "<br/>");
+    j -= 1;
+    if (j % 2 == 0) continue checkj;
+    document.write(j + " is odd.<br/>");
+  }
+  document.write("i = " + i + "<br/>");
+  document.write("j = " + j + "<br/>");
+}
 ```
 
 {{ PreviousNext("Core_JavaScript_1.5_教學:循環語法:break_語法", "Core_JavaScript_1.5_教學:物件的操作語法") }}

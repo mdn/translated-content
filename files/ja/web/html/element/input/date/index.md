@@ -62,7 +62,7 @@ l10n:
 
 ## 値
 
-入力欄に入力された日付を表す文字列です。日付は ISO8601 に従って書式化されており、これは[日付の文字列](/ja/docs/Web/HTML/Date_and_time_formats#date_strings)で説明されています。
+入力欄に入力された日付を表す文字列です。日付は ISO8601 に従って書式化されており、これは[日付文字列](/ja/docs/Web/HTML/Date_and_time_formats#日付文字列)で説明されています。
 
 次のように、日付の入力欄の既定値を [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に設定することができます。
 

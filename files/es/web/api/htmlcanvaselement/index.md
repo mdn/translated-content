@@ -12,11 +12,11 @@ La interfaz **`HTMLCanvasElement`** provee propiedades y métodos para manipular
 _Hereda propiedades de la interfaz padre,_ _{{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLCanvasElement.height")}}
-  - : Un entero positivo que se asocia al atributo HTML {{htmlattrxref("height", "canvas")}} del elemento {{HTMLElement("canvas")}} interpretada en píxeles CSS. Cuando el atributo no está especificado, o si este se inicializa a un valor inválido, como un negativo, el valor 150 es usado por defecto.
+  - : Un entero positivo que se asocia al atributo HTML [`height`](/es/docs/Web/HTML/Element/canvas#height) del elemento {{HTMLElement("canvas")}} interpretada en píxeles CSS. Cuando el atributo no está especificado, o si este se inicializa a un valor inválido, como un negativo, el valor 150 es usado por defecto.
 - {{domxref("HTMLCanvasElement.mozOpaque")}} {{non-standard_inline}}
-  - : Un {{jsxref("Boolean")}} asociado al atributo HTML {{htmlattrxref("moz-opaque", "canvas")}} del elemento {{HTMLElement("canvas")}} . Proporciona al canvas una forma de saber si la transparencia será considerada un factor. Si el canvas conoce que no hay transparencia, el desempeño de renderezación será optimizado.
+  - : Un {{jsxref("Boolean")}} asociado al atributo HTML [`moz-opaque`](/es/docs/Web/HTML/Element/canvas#moz-opaque) del elemento {{HTMLElement("canvas")}} . Proporciona al canvas una forma de saber si la transparencia será considerada un factor. Si el canvas conoce que no hay transparencia, el desempeño de renderezación será optimizado.
 - {{domxref("HTMLCanvasElement.width")}}
-  - : Un entero positivo asociado al atributo HTML {{htmlattrxref("width", "canvas")}} del elemento canvas {{HTMLElement("canvas")}} interpretado en píxeles CSS. Cuando el atributo no está especificado, o si se inicializa a un valor inválido, como un negativo, se utiliza el valor 300 por defecto.
+  - : Un entero positivo asociado al atributo HTML [`width`](/es/docs/Web/HTML/Element/canvas#width) del elemento canvas {{HTMLElement("canvas")}} interpretado en píxeles CSS. Cuando el atributo no está especificado, o si se inicializa a un valor inválido, como un negativo, se utiliza el valor 300 por defecto.
 
 ## Métodos
 

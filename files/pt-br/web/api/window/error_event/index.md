@@ -43,7 +43,7 @@ element.onerror = function(event) { ... }
 
 ## Notas
 
-Quando um erro de sintaxe**(?)** ocorre em um script, carregado de uma [origem diferente](/pt-BR/docs/Web/Security/Same-origin_policy), os detalhes do erro de sintaxe não são reportados para previnir vazamento de informações (veja {{bug("363897")}}). Ao invés de exibir simplesmente **`"Script error." (erro de script)`**, este comportamento pode ser sobrescrito em alguns navegadores usando o atributo `{{htmlattrxref("crossorigin","script")}}` no {{HTMLElement("script")}} e tendo o servidor enviado os cabeçalhos HTTP CORS apropriados. Uma solução alternativa é isolar o "Script error." e manipulá-lo sabendo que o detalhe do erro é visível somente no console do navegador e não acessível através do JavaScript.
+Quando um erro de sintaxe**(?)** ocorre em um script, carregado de uma [origem diferente](/pt-BR/docs/Web/Security/Same-origin_policy), os detalhes do erro de sintaxe não são reportados para previnir vazamento de informações (veja {{bug("363897")}}). Ao invés de exibir simplesmente **`"Script error." (erro de script)`**, este comportamento pode ser sobrescrito em alguns navegadores usando o atributo [`crossorigin`](/pt-BR/docs/Web/HTML/Element/script#crossorigin) no {{HTMLElement("script")}} e tendo o servidor enviado os cabeçalhos HTTP CORS apropriados. Uma solução alternativa é isolar o "Script error." e manipulá-lo sabendo que o detalhe do erro é visível somente no console do navegador e não acessível através do JavaScript.
 
 ```js
 window.onerror = function (msg, url, lineNo, columnNo, error) {

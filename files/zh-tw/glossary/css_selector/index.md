@@ -3,6 +3,8 @@ title: CSS 選擇器
 slug: Glossary/CSS_Selector
 ---
 
+{{GlossarySidebar}}
+
 **CSS 選擇器**是 CSS 規則的一部分。它能讓你選定要調整哪個（或哪些）元素的樣式。
 
 ## 範例

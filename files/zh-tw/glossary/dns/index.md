@@ -3,6 +3,8 @@ title: DNS
 slug: Glossary/DNS
 ---
 
+{{GlossarySidebar}}
+
 DNS (域名系統)將便於記憶的需要查找 {{Glossary("Internet")}} 上特定的計算機服務或私人網路{{glossary("domain name","域名")}}轉換為數字{{Glossary("IP address","IP addresses")}}。
 
 ## 了解更多

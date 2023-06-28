@@ -43,10 +43,10 @@ navigator.mediaDevices.getUserMedia(constraints)
   video.srcObject = stream;
 })
 .catch(function(error) {
-  if (error.name === 'ConstraintNotSatisfiedError') {
+  if (error.name === 'OverconstrainedError') {
     errorMsg('The resolution ' + constraints.video.width.exact + 'x' +
         constraints.video.width.exact + ' px is not supported by your device.');
-  } else if (error.name === 'PermissionDeniedError') {
+  } else if (error.name === 'NotAllowedError') {
     errorMsg('Permissions have not been granted to use your camera and ' +
       'microphone, you need to allow the page access to your devices in ' +
       'order for the demo to work.');
