@@ -1,6 +1,7 @@
 ---
 title: レスポンシブサイトのグラフィックデザイン
-slug: Web/Progressive_web_apps/Responsive/Graphics_for_responsive_sites
+slug: conflicting/Learn/CSS/CSS_layout/Responsive_Design
+original_slug: Web/Progressive_web_apps/Responsive/Graphics_for_responsive_sites
 ---
 
 1996 年当時、ウェブ構築に携わっていた多くの人々は、 20 年も経たないうちに、携帯電話やタブレット、テレビ、さらには自動車や家庭用照明でも機能するウェブサイトが開発されるようになると言ったら、笑っていたでしょう。しかし、今日、それは非常に現実的なものとなっています。この記事では、グラフィックニーズに最適なオプションを選択するための高水準の議論を行います。

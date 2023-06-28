@@ -1,6 +1,8 @@
 ---
 title: モバイルファースト
-slug: Web/Progressive_web_apps/Responsive/Mobile_first
+slug: >-
+  conflicting/Learn/CSS/CSS_layout/Responsive_Design_aac58370cbd325930c90e9b084fdc19a
+original_slug: Web/Progressive_web_apps/Responsive/Mobile_first
 ---
 
 この記事では、**モバイルファースト**の原則に従ったウェブサイトのレイアウトを実装するためのガイドを提供します。これは、既定の構成が狭い画面/モバイル端末用であり、広いビューポート用のレイアウト機能がその上に重ねられているレイアウトを作成することを意味します。
