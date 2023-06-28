@@ -1607,7 +1607,7 @@
 /es/docs/Web/API/Blob.Blob	/es/docs/Web/API/Blob/Blob
 /es/docs/Web/API/BlobBuilder	/es/docs/web/api/blob
 /es/docs/Web/API/CSSStyleSheet.insertRule	/es/docs/Web/API/CSSStyleSheet/insertRule
-/es/docs/Web/API/CanvasImageSource	/es/docs/conflicting/Web/API/CanvasRenderingContext2D
+/es/docs/Web/API/CanvasImageSource	/es/docs/web/api/canvasrenderingcontext2d
 /es/docs/Web/API/Canvas_API/A_basic_ray-caster	/es/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /es/docs/Web/API/Canvas_API/Tutorial/Compositing/Ejemplo	/es/docs/Web/API/Canvas_API/Tutorial/Compositing/Example
 /es/docs/Web/API/Console/tabla	/es/docs/Web/API/console/table
@@ -2930,6 +2930,7 @@
 /es/docs/XSLT:when	/es/docs/Web/XSLT/Element/when
 /es/docs/XSLT:with-param	/es/docs/Web/XSLT/Element/with-param
 /es/docs/Zoom_a_página_completa	/es/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
+/es/docs/conflicting/Web/API/CanvasRenderingContext2D	/es/docs/web/api/canvasrenderingcontext2d
 /es/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries	/es/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /es/docs/conflicting/web/api/blob	/es/docs/web/api/blob
 /es/docs/conflicting/web/api/element/clientheight	/es/docs/web/api/element/clientheight

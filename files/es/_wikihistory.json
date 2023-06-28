@@ -14427,10 +14427,6 @@
     "modified": "2019-03-23T22:26:11.317Z",
     "contributors": ["SoftwareRVG"]
   },
-  "conflicting/Web/API/CanvasRenderingContext2D": {
-    "modified": "2019-03-23T22:09:10.185Z",
-    "contributors": ["alinarezrangel"]
-  },
   "conflicting/Web/API/Canvas_API/Tutorial": {
     "modified": "2019-03-23T23:19:53.719Z",
     "contributors": ["teoli", "rubencidlara"]
