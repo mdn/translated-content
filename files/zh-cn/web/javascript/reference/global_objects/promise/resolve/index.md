@@ -20,11 +20,11 @@ Promise.resolve(value)
 ### 参数
 
 - `value`
-  - : 该 `Promise` 对象要被解决的参数。也可以是一个 `Promise` 对象或一个 thenable 对象。
+  - : 要被该 `Promise` 对象解决的参数。也可以是一个 `Promise` 对象或一个 thenable 对象。
 
 ### 返回值
 
-一个由给定值解决的 {{jsxref("Promise")}}，或者如果该值为一个 Promise 对象，则返回该对象。一个已解决的 Promise 可以处于已兑现、已拒绝或待定状态中的任何一种。例如，对一个已拒绝的 Promise 进行调用仍将返回一个已拒绝的 Promise。
+一个由给定值解决的 {{jsxref("Promise")}}，或者如果该值为一个 Promise 对象，则返回该对象。用于解决的 Promise 可以处于已兑现、已拒绝或待定状态中的任何一种。例如，对一个已拒绝的 Promise 进行调用仍将返回一个已拒绝的 Promise。
 
 ## 描述
 
@@ -80,7 +80,7 @@ console.log(`original === cast ? ${original === cast}`);
 // 值：33
 ```
 
-日志输出顺序颠倒其实是由于异步地调用 `then` 方法。请参见 {{jsxref("Promise/then", "then()")}} 参考文档获取更多信息。
+日志输出顺序颠倒其实是由于异步地调用 `then` 处理器。请参见 {{jsxref("Promise/then", "then()")}} 参考文档获取更多信息。
 
 ### resolve thenable 对象并抛出错误
 
@@ -121,8 +121,7 @@ p2.then(
   },
 );
 
-// Thenable 在回调之后抛出异常
-// Promise 被解决
+// Thenable 在回调 Promise 被解决之后抛出异常
 const thenable = {
   then(onFulfilled) {
     onFulfilled("解决");
