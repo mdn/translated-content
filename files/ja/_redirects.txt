@@ -4425,6 +4425,10 @@
 /ja/docs/Web/Progressive_web_apps/Offline_Service_workers	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
 /ja/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 /ja/docs/Web/Progressive_web_apps/Responsive	/ja/docs/Web/Progressive_web_apps
+/ja/docs/Web/Progressive_web_apps/Responsive/Graphics_for_responsive_sites	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
+/ja/docs/Web/Progressive_web_apps/Responsive/Mobile_first	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
+/ja/docs/Web/Progressive_web_apps/Responsive/Responsive_navigation_patterns	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
+/ja/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
 /ja/docs/Web/Progressive_web_apps/Structural_overview	/ja/docs/Web/Progressive_web_apps/Guides/Structural_overview
 /ja/docs/Web/Reference	/ja/docs/Web
 /ja/docs/Web/Reference/API	/ja/docs/Web/API
