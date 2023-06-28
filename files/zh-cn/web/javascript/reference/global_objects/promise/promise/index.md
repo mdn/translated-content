@@ -20,11 +20,11 @@ new Promise(executor)
 ### 参数
 
 - `executor`
-  - : 在构造函数中执行的 {{jsxref("function")}}。它接收两个函数作为参数：`resolveFunc` 和 `rejectFunc`。`executor` 中抛出的任何错误都会导致 Promise 被拒绝，并且返回值将被忽略。`executor` 的语义如下所述。
+  - : 在构造函数中执行的 {{jsxref("function")}}。它接收两个函数作为参数：`resolveFunc` 和 `rejectFunc`。`executor` 中抛出的任何错误都会导致 Promise 被拒绝，并且返回值将被忽略。`executor` 的语义将在下文详细介绍。
 
 ### 返回值
 
-当通过 `new` 关键字调用 `Promise` 构造函数时，它会返回一个 Promise 对象。当 `resolutionFunc` 或者 `rejectionFunc` 被调用时，该 Promise 对象就会变为*已解决*（resolved）。请注意，如果你调用 `resolveFunc` 或 `rejectFunc` 并传入另一个 Promise 对象作为参数，可以说该 Promise 对象已“解决（resolved）”，但仍未“敲定（settled）”。有关更多解释，请参阅 [Promise 描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#描述)。
+当通过 `new` 关键字调用 `Promise` 构造函数时，它会返回一个 Promise 对象。当 `resolutionFunc` 或者 `rejectionFunc` 被调用时，该 Promise 对象就会变为*已解决*（resolved）。请注意，如果你调用 `resolveFunc` 或 `rejectFunc` 并传入另一个 Promise 对象作为参数，可以说该 Promise 对象“已解决”，但仍未“敲定（settled）”。有关更多解释，请参阅 [Promise 描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#描述)。
 
 ## 描述
 
@@ -65,7 +65,7 @@ rejectFunc(reason); // 拒绝时调用
 - `executor` 函数的返回值会被忽略。`executor` 函数中的 `return` 语句仅影响控制流程，调整函数某个部分是否执行，但不会影响 Promise 的履行值。如果 `executor` 函数退出，且未来不可能调用 `resolveFunc` 或 `rejectFunc`（例如，没有安排异步任务），那么 Promise 将永远保持待定状态。
 - 如果在 `executor` 函数中抛出错误，则 Promise 将被拒绝，除非 `resolveFunc` 或 `rejectFunc` 已经被调用。
 
-> **备注：** 待定的 Promise 的存在并不会防止程序退出。如果事件循环为空，则程序会退出，尽管存在待定的 Promise（因为它们必然永远处于待定状态）。
+> **备注：** 待定的 Promise 的存在并不会阻止程序退出。如果事件循环为空，则程序会退出，尽管存在待定的 Promise（因为它们必然永远处于待定状态）。
 
 以下是典型的 Promise 流程概述：
 
@@ -73,7 +73,7 @@ rejectFunc(reason); // 拒绝时调用
 2. `executor` 通常会封装某些提供基于回调的 API 的异步操作。回调函数（传给原始回调 API 的函数）在 `executor` 代码中定义，因此它可以访问 `resolveFunc` 和 `rejectFunc`。
 3. `executor` 是同步调用的（在构造 `Promise` 时立即调用），并将 `resolveFunc` 和 `rejectFunc` 函数作为传入参数。
 4. `executor` 中的代码有机会执行某些操作。异步任务的最终完成通过 `resolveFunc` 或 `rejectFunc` 引起的副作用与 Promise 实例进行通信。这个副作用让 `Promise` 对象变为“已解决”状态。
-   - 如果先调用 `resolveFunc`，则传入的值将[解决](#resolver_函数)。Promise 可能会保持处于待定状态（如果传入了另一个 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 对象），变为已兑现状态（在传入非 thenable 值的大多数情况下），或者变为已拒绝状态（在无效的解析值的情况下）。
+   - 如果先调用 `resolveFunc`，则传入的值将[解决](#resolver_函数)。Promise 可能会保持待定状态（如果传入了另一个 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 对象），变为已兑现状态（在传入非 thenable 值的大多数情况下），或者变为已拒绝状态（在解析值无效的情况下）。
    - 如果先调用 `rejectFunc`，则 Promise 立即变为已拒绝状态。
    - 一旦 `resolveFunc` 或 `rejectFunc` 中的一个被调用，Promise 将保持解决状态。只有第一次调用 `resolveFunc` 或 `rejectFunc` 会影响 Promise 的最终状态，随后对任一函数的调用都不能更改兑现值或拒绝原因，也不能将其最终状态从“已兑现”转换为“已拒绝”或相反。
    - 如果 `executor` 抛出错误，则 Promise 被拒绝。但是，如果 resolveFunc 或 rejectFunc 中的一个已经被调用（因此 Promise 已经被解决），则忽略该错误。
@@ -101,7 +101,7 @@ readFilePromise("./data.txt")
 
 ### Resolver 函数
 
-`resolveFunc` 解析函数有以下行为：
+`resolveFunc` 解决函数有以下行为：
 
 - 如果它被调用时传入了新建的 `Promise` 对象本身（即它所“绑定”的 Promise 对象），则 `Promise` 对象会被拒绝并抛出一个 {{jsxref("TypeError")}} 错误。
 - 如果它使用一个非 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 的值（基本类型，或一个没有 `then` 属性或 `then` 属性不可调用的对象），则该 Promise 对象会被立即以该值兑现。
@@ -135,7 +135,7 @@ new Promise((resolve, reject) => {
 1. `resolve` 函数是同步调用的，因此再次调用 `resolve` 或 `reject` 函数没有任何影响，即使通过 `anotherPromise.then()` 绑定的处理程序尚未被调用。
 2. `then` 方法是异步调用的，因此如果传入 thenable 对象，则该 `Promise` 对象不会被立即解决。
 
-因为 `resolve` 函数再次调用时使用 `thenable.then()` 传递给它的任何值作为 `value` 参数，所以解析函数能够展开嵌套的 thenable 对象，其中一个 thenable 对象调用其 `onFulfilled` 处理程序并返回另一个 thenable 对象。这样做的效果是，真实的 `Promise` 对象的兑现处理程序永远不会接收到 thenable 对象作为其兑现值。
+因为 `resolve` 函数再次调用时使用 `thenable.then()` 传递给它的任何值作为 `value` 参数，所以解决函数能够展开嵌套的 thenable 对象，其中一个 thenable 对象调用其 `onFulfilled` 处理程序并返回另一个 thenable 对象。这样做的效果是，真实的 `Promise` 对象的兑现处理器永远不会接收到 thenable 对象作为其兑现值。
 
 ## 示例
 
@@ -173,7 +173,7 @@ const pendingResolved = new Promise((resolveOuter, rejectOuter) => {
 });
 ```
 
-`fulfilledResolved` Promise 对象在被解决时立即变为已兑现状态，因为它被解决为一个非 thenable 值。然而，在它被创建时，它是未解决的，因为 `resolve` 或 `reject` 函数还没有被调用。未解决的 Promise 对象必然是待定状态：
+`fulfilledResolved` Promise 对象在被解决时立即变为已兑现状态，因为它以非 thenable 值解决。然而，在它被创建时，它是未解决的，因为 `resolve` 或 `reject` 函数还没有被调用。未解决的 Promise 对象必然是待定状态：
 
 ```js
 const fulfilledResolved = new Promise((resolve, reject) => {
