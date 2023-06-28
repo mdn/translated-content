@@ -235,10 +235,6 @@ El operador `typeof` te puede ayudar a encontrar el tipo de tu variable.
 
 Lee la [página de referencia](/es/docs/Web/JavaScript/Reference/Operators/typeof) para obtener más detalles y casos extremos.
 
-## Especificaciones
-
-{{Specifications}}
-
 ## Ve también
 
 - [Colección de estructura de datos común y algoritmos comunes en JavaScript de Nicholas Zakas.](https://github.com/nzakas/computer-science-in-javascript/)
