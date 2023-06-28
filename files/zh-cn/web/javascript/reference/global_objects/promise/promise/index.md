@@ -1,5 +1,5 @@
 ---
-title: Promise() 构造器
+title: Promise() 构造函数
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 ---
 
