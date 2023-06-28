@@ -1676,8 +1676,6 @@
 /es/docs/Web/API/HTMLElement/transitioncancel_event	/es/docs/Web/API/Element/transitioncancel_event
 /es/docs/Web/API/HTMLElement/transitionend_event	/es/docs/Web/API/Element/transitionend_event
 /es/docs/Web/API/HTMLOrForeignElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
-/es/docs/Web/API/HTMLShadowElement	/es/docs/orphaned/Web/API/HTMLShadowElement
-/es/docs/Web/API/HTMLShadowElement/getDistributedNodes	/es/docs/orphaned/Web/API/HTMLShadowElement/getDistributedNodes
 /es/docs/Web/API/IDBObjectStore.add	/es/docs/Web/API/IDBObjectStore/add
 /es/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/es/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /es/docs/Web/API/KeyboardEvent/which	/es/docs/Web/API/UIEvent/which
