@@ -14659,16 +14659,6 @@
     "modified": "2019-03-23T23:50:19.746Z",
     "contributors": ["teoli", "FredB", "HenryGR"]
   },
-  "conflicting/Web/CSS/outline": {
-    "modified": "2019-03-23T22:35:49.017Z",
-    "contributors": [
-      "BubuAnabelas",
-      "teoli",
-      "Simplexible",
-      "Prinz_Rana",
-      "pekechis"
-    ]
-  },
   "conflicting/Web/CSS/outline_114f9fa8b3569c03001b69bd5bf197b2": {
     "modified": "2019-03-23T22:35:52.557Z",
     "contributors": ["pekechis"]
