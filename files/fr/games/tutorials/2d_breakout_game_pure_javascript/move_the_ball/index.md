@@ -1,16 +1,7 @@
 ---
 title: Déplacer la balle
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-tags:
-  - 2D
-  - Boucle
-  - Canevas
-  - Débutant
-  - JavaScript
-  - Mouvement
-  - Tutoriel
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
 
 {{GamesSidebar}}

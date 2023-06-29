@@ -1,10 +1,6 @@
 ---
 title: Bloc (script)
 slug: Glossary/Block/Scripting
-tags:
-  - Glossaire
-  - JavaScript
-  - Script
 translation_of: Glossary/Block/Scripting
 ---
 

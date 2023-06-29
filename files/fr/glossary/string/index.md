@@ -1,13 +1,7 @@
 ---
 title: Chaîne de caractères
 slug: Glossary/String
-tags:
-  - Chaîne de caractères
-  - Débutant
-  - Glossaire
-  - String
 translation_of: Glossary/String
-original_slug: Glossaire/String
 ---
 
 Dans les langages de programmation, le terme chaîne de {{Glossary("character","caractères")}} _(String_) est utilisé pour représenter du texte.

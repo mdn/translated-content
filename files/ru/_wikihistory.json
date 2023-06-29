@@ -8756,6 +8756,10 @@
     "modified": "2019-07-22T11:08:23.191Z",
     "contributors": ["a-bodrova", "sandmanisdancing", "fscholz", "ldone"]
   },
+  "Web/CSS/CSS_paged_media": {
+    "modified": "2020-10-12T15:00:21.800Z",
+    "contributors": ["at940266"]
+  },
   "Web/CSS/CSS_positioned_layout": {
     "modified": "2019-03-23T22:44:29.790Z",
     "contributors": ["davidhbrown"]
@@ -8892,10 +8896,6 @@
   "Web/CSS/Layout_mode": {
     "modified": "2019-03-23T23:09:42.012Z",
     "contributors": ["idoru", "BychekRU", "ldone"]
-  },
-  "Web/CSS/Paged_Media": {
-    "modified": "2020-10-12T15:00:21.800Z",
-    "contributors": ["at940266"]
   },
   "Web/CSS/Pseudo-classes": {
     "modified": "2019-03-23T22:51:08.664Z",

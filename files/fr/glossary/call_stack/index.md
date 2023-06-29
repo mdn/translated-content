@@ -1,12 +1,7 @@
 ---
 title: Pile d'exécution
 slug: Glossary/Call_stack
-tags:
-  - Encodage
-  - Glossaire
-  - Pile d'exécution
 translation_of: Glossary/Call_stack
-original_slug: Glossaire/Pile_d_exécution
 ---
 
 Une **pile d'exécution** est le mécanisme d'un interpréteur (comme l'interpréteur de JavaScript sur un navigateur web) pour conserver la trace de son emplacement dans un script qui appelle plusieurs {{glossary("Function","fonctions")}} depuis d'autres fonctions — quelle fonction est en cours d'exécution, quelles fonctions sont appelées depuis cette fonction et doivent être appelées ensuite, etc.
