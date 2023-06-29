@@ -18,7 +18,7 @@ slug: Web/API/Element/cut_event
 
 事件处理器不可以*读取*剪贴板数据。
 
-可以构建和调度一个[合成](/zh-CN/docs/Web/Events/Creating_and_triggering_events) `cut` 事件，但这不会影响系统剪贴板或文档内容。
+可以构建和派发一个[合成](/zh-CN/docs/Web/Events/Creating_and_triggering_events) `cut` 事件，但这不会影响系统剪贴板或文档内容。
 
 ## 语法
 

@@ -14,7 +14,7 @@ slug: Web/API/Element/paste_event
 
 要覆盖默认行为（例如插入一些不同的数据或转换剪贴板内容），事件处理程序必须使用 {{domxref("Event/preventDefault", "event.preventDefault()")}} 取消默认动作，然后手动插入其想要的数据。
 
-可以构建和调度一个[合成](/zh-CN/docs/Web/Events/Creating_and_triggering_events) `paste` 事件，但这不会影响系统剪贴板或文档内容。
+可以构建和派发一个[合成](/zh-CN/docs/Web/Events/Creating_and_triggering_events) `paste` 事件，但这不会影响系统剪贴板或文档内容。
 
 ## 语法
 
