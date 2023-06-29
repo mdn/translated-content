@@ -10,7 +10,7 @@ slug: Web/API/EyeDropper
 ## 构造函数
 
 - {{DOMxRef("EyeDropper.EyeDropper", "EyeDropper()")}} {{Experimental_Inline}}
-  - : 返回一个新的 EyeDropper 实例。
+  - : 返回一个新的 `EyeDropper` 实例。
 
 ## 实例方法
 
