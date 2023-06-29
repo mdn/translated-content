@@ -60,7 +60,7 @@ myPromise
   .then(handleFulfilledC, handleRejectedC);
 ```
 
-即使 `.then()` 缺少返回 Promise 对象的回调函数，处理程序仍会继续到链的下一个链式调用。因此，在最终的 `.catch()` 之前，可以安全地省略每个链式调用中处理已拒绝状态的回调函数。
+即使 `.then()` 缺少返回 Promise 对象的回调函数，处理程序仍会继续到链的下一个链式调用。因此，在最终的 `.catch()` 之前，可以安全地省略每个链式调用中处理*已拒绝*状态的回调函数。
 
 在每个 `.then()` 中处理被拒绝的 Promise 对于 Promise 链的下游有重要的影响。有时候别无选择，因为有的错误必须立即被处理。在这种情况下，必须抛出某种类型的错误以维护链中的错误状态。另一方面，在没有迫切需要的情况下，最好将错误处理留到最后一个 `.catch()` 语句。`.catch()` 其实就是一个没有为 Promise 时的回调函数留出空位的 `.then()`。
 
@@ -118,7 +118,7 @@ const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 const promiseA = new Promise((resolve, reject) => {
   resolve(777);
 });
-// 此时，“promiseA” 已经敲定了
+// 此时，“promiseA”已经敲定了
 promiseA.then((val) => console.log("异步日志记录有值：", val));
 console.log("立即记录");
 
@@ -178,28 +178,13 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 ## 静态方法
 
 - {{jsxref("Promise.all()")}}
-
-  - : 等待所有的 Promise 被兑现，或者有任何一个被拒绝。
-
-    如果返回的 Promise 被兑现，那么它将以一个聚合数组的形式返回已兑现的 Promise 的值，顺序与包含多个 Promise 的可迭代对象中定义的顺序相同。
-
-    如果有任何一个 Promise 被拒绝，那么返回的 Promise 就会被拒绝，并且拒绝的原因是可迭代对象中第一个被拒绝的 Promise 的原因。
-
+  - : 接受一个 Promise 可迭代对象作为输入，并返回单个 `Promise`。返回的 Promise 在所有输入的 Promise 都兑现时（包括传入的可迭代对象为空时）被兑现，其值为一个包含所有兑现值的数组。如果输入的任何 Promise 被拒绝，返回的 Promise 也会被拒绝，并返回第一个拒绝的原因。
 - {{jsxref("Promise.allSettled()")}}
-
-  - : 等待所有 Promise 都已敲定（可能是成功兑现或被拒绝）。
-
-    返回一个 Promise，该 Promise 在所有给定的 Promise 都已成功兑现或被拒绝后被兑现，并且返回一个描述每个 Promise 结果的对象数组。
-
+  - : 接受一个 Promise 可迭代对象作为输入，并返回单个 `Promise`。返回的 Promise 在所有输入的 Promise 都敲定时兑现（包括传入的可迭代对象为空时），其值为一个描述每个 Promise 结果的对象数组。
 - {{jsxref("Promise.any()")}}
-  - : 接受一个 Promise 对象的可迭代对象，一旦可迭代对象中的任意一个 Promise 对象成功兑现，就会返回一个新的 Promise 对象，该新的 Promise 对象兑现该 Promise 的兑现值。
+  - : 接受一个 Promise 可迭代对象作为输入，并返回单个 `Promise`。返回的 Promise 在任何输入的 Promise 兑现时兑现，其值为第一个兑现的值。如果所有输入的 Promise 都被拒绝（包括传入的可迭代对象为空时），返回的 Promise 将被拒绝，并包含一个包含拒绝原因的 {{jsxref("AggregateError")}} 数组。
 - {{jsxref("Promise.race()")}}
-  - : 等待直到任意一个 Promise 被成功兑现或被拒绝。
-
-    如果返回的 Promise 被兑现，它将以第一个兑现的 Promise 的值作为兑现值。
-
-    如果返回的 Promise 被拒绝，它将以第一个被拒绝的 Promise 的原因作为拒绝原因。
-
+  - : 接受一个 Promise 可迭代对象作为输入，并返回单个 `Promise`。返回的 Promise 与第一个敲定的 Promise 的最终状态保持一致。
 - {{jsxref("Promise.reject()")}}
   - : 返回一个新的 `Promise` 对象，该对象以给定的原因拒绝。
 - {{jsxref("Promise.resolve()")}}
