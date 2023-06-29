@@ -103,8 +103,8 @@ new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
 
 ```js
 var today = new Date();
-var birthday = new Date('December 17, 1995 03:24:00');
-var birthday = new Date('1995-12-17T03:24:00');
+var birthday = new Date("December 17, 1995 03:24:00");
+var birthday = new Date("1995-12-17T03:24:00");
 var birthday = new Date(1995, 11, 17);
 var birthday = new Date(1995, 11, 17, 3, 24, 0);
 ```
@@ -117,9 +117,9 @@ var birthday = new Date(1995, 11, 17, 3, 24, 0);
 var date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
 // 過時的方法，98 在這裡對應到 1998 年
-date.setYear(98);           // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+date.setYear(98); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
-date.setFullYear(98);       // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
+date.setFullYear(98); // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
 ```
 
 ### 計算執行時間
@@ -152,10 +152,12 @@ var elapsed = end.getTime() - start.getTime(); // 執行程式經過的毫秒數
 // 測試一個函數執行時間，並返回其回傳值
 function printElapsedTime(fTest) {
   var nStartTime = Date.now(),
-      vReturn = fTest(),
-      nEndTime = Date.now();
+    vReturn = fTest(),
+    nEndTime = Date.now();
 
-  console.log('Elapsed time: ' + String(nEndTime - nStartTime) + ' milliseconds');
+  console.log(
+    "Elapsed time: " + String(nEndTime - nStartTime) + " milliseconds"
+  );
   return vReturn;
 }
 

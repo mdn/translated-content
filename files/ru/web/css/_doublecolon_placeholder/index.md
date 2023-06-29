@@ -110,7 +110,7 @@ input::placeholder {
 
 ### Метки
 
-Placeholder не является заменой элемента {{htmlelement("label")}}. Без метки, которая программно связывается с формой с помощью {{htmlattrxref("for", "label")}} и {{htmlattrxref("id")}} атрибутов, такие программы, как скринридеры не смогут анализировать элементы {{htmlelement("input")}}.
+Placeholder не является заменой элемента {{htmlelement("label")}}. Без метки, которая программно связывается с формой с помощью [`for`](/ru/docs/Web/HTML/Element/label#for) и [`id`](/ru/docs/Web/HTML/Global_attributes#id) атрибутов, такие программы, как скринридеры не смогут анализировать элементы {{htmlelement("input")}}.
 
 - [MDN Basic form hints](/ru/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)

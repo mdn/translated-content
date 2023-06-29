@@ -13,7 +13,7 @@ tags:
 translation_of: Web/HTML/Element/datalist
 ---
 
-**HTML-элемент `<datalist>`** содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом {{htmlattrxref("list", "input")}}.
+**HTML-элемент `<datalist>`** содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом [`list`](/ru/docs/Web/HTML/Element/input#list).
 
 {{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
 
@@ -62,7 +62,7 @@ translation_of: Web/HTML/Element/datalist
 
 ## Смотрите также
 
-- Элемент {{HTMLElement("input")}} , в особенности его атрибут {{htmlattrxref("list", "input")}};
+- Элемент {{HTMLElement("input")}} , в особенности его атрибут [`list`](/ru/docs/Web/HTML/Element/input#list);
 - Элемент {{HTMLElement("option")}}.
 
 {{HTMLSidebar}}

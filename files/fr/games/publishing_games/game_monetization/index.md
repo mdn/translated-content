@@ -1,18 +1,7 @@
 ---
 title: Monétisation du jeu
 slug: Games/Publishing_games/Game_monetization
-tags:
-  - Games
-  - HTML5
-  - JavaScript
-  - Jeux
-  - Licence
-  - Monétisation
-  - annonces
-  - iap
-  - image de marque
 translation_of: Games/Publishing_games/Game_monetization
-original_slug: Jeux/Publier_jeux/Game_monetization
 ---
 
 {{GamesSidebar}}

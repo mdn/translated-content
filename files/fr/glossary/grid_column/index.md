@@ -1,12 +1,7 @@
 ---
 title: Colonne de grille
 slug: Glossary/Grid_Column
-tags:
-  - CSS
-  - Glossaire
-  - Grilles
 translation_of: Glossary/Grid_Column
-original_slug: Glossaire/Colonne_de_grille
 ---
 
 Une **colonne de grille** est une piste verticale dans une [grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout), et est l'espace entre deux lignes de grille verticales. Elle est définie par la propriété {{cssxref("grid-template-columns")}} ou les propriétés raccourcies {{cssxref("grid")}} ou {{cssxref("grid-template")}}.

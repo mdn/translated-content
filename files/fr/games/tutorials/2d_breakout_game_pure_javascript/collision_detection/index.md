@@ -1,15 +1,7 @@
 ---
 title: Détection de collisions
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
-tags:
-  - Canvas
-  - JavaScript
-  - Jeu
-  - collision
-  - detection
-  - totoriel
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
-original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions
 ---
 
 {{GamesSidebar}}

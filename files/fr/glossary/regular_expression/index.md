@@ -1,12 +1,7 @@
 ---
 title: Expression Régulière
 slug: Glossary/Regular_expression
-tags:
-  - CodingScripting
-  - Glossary
-  - Regular Expression
 translation_of: Glossary/Regular_expression
-original_slug: Glossaire/Regular_expression
 ---
 
 Les **expressions régulières** (ou *regex* en anglais) sont des règles qui gouvernent quelles séquences de caractères ressortent dans une recherche.
