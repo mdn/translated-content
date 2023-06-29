@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 
 ## 語法
 
-```plain
+```js-nolint
 Object.keys(obj)
 ```
 
@@ -29,23 +29,28 @@ Object.keys(obj)
 ## 範例
 
 ```js
-var arr = ['a', 'b', 'c'];
+var arr = ["a", "b", "c"];
 console.log(Object.keys(arr)); // console: ['0', '1', '2']
 
 // 類似陣列的物件
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
+var obj = { 0: "a", 1: "b", 2: "c" };
 console.log(Object.keys(obj)); // console: ['0', '1', '2']
 
 // 擁有隨機 key 排序，類似陣列的物件
-var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
+var an_obj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.keys(an_obj)); // console: ['2', '7', '100']
 
 // getFoo 不是可列舉的屬性
-var my_obj = Object.create({}, {
-  getFoo: {
-    value: function() { return this.foo; }
+var my_obj = Object.create(
+  {},
+  {
+    getFoo: {
+      value: function () {
+        return this.foo;
+      },
+    },
   }
-});
+);
 my_obj.foo = 1;
 
 console.log(Object.keys(my_obj)); // console: ['foo']
@@ -72,27 +77,32 @@ Object.keys("foo");
 ```js
 // From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
-  Object.keys = (function() {
-    'use strict';
+  Object.keys = (function () {
+    "use strict";
     var hasOwnProperty = Object.prototype.hasOwnProperty,
-        hasDontEnumBug = !({ toString: null }).propertyIsEnumerable('toString'),
-        dontEnums = [
-          'toString',
-          'toLocaleString',
-          'valueOf',
-          'hasOwnProperty',
-          'isPrototypeOf',
-          'propertyIsEnumerable',
-          'constructor'
-        ],
-        dontEnumsLength = dontEnums.length;
+      hasDontEnumBug = !{ toString: null }.propertyIsEnumerable("toString"),
+      dontEnums = [
+        "toString",
+        "toLocaleString",
+        "valueOf",
+        "hasOwnProperty",
+        "isPrototypeOf",
+        "propertyIsEnumerable",
+        "constructor",
+      ],
+      dontEnumsLength = dontEnums.length;
 
-    return function(obj) {
-      if (typeof obj !== 'object' && (typeof obj !== 'function' || obj === null)) {
-        throw new TypeError('Object.keys called on non-object');
+    return function (obj) {
+      if (
+        typeof obj !== "object" &&
+        (typeof obj !== "function" || obj === null)
+      ) {
+        throw new TypeError("Object.keys called on non-object");
       }
 
-      var result = [], prop, i;
+      var result = [],
+        prop,
+        i;
 
       for (prop in obj) {
         if (hasOwnProperty.call(obj, prop)) {
@@ -109,7 +119,7 @@ if (!Object.keys) {
       }
       return result;
     };
-  }());
+  })();
 }
 ```
 

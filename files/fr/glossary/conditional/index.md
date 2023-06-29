@@ -1,12 +1,7 @@
 ---
 title: Condition
 slug: Glossary/Conditional
-tags:
-  - Débutant
-  - Glossaire
-  - scripts
 translation_of: Glossary/Conditional
-original_slug: Glossaire/Conditionnel
 ---
 
 Une **condition** est un ensemble de règles qui peut interrompre ou modifier l'exécution normale du code, selon que la condition est remplie ou non.

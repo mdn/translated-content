@@ -5,11 +5,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/call
 
 {{JSRef}}
 
-## 概述
+使用給定的 `this` 參數以及分別給定的參數來呼叫某個函數
 
-使用給定的`this`參數以及分別給定的參數來呼叫某個函數
-
-> **備註：** 此函數的所有語法大致上與[`apply()`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/apply)相同，他們基本上不同處只有 `call()` 接受一連串的參數，而 `apply()` 單一的 array 作為參數
+> **備註：** 此函數的所有語法大致上與 [`apply()`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/apply) 相同，他們基本上不同處只有 `call()` 接受一連串的參數，而 `apply()` 單一的 array 作為參數
 
 <table class="standard-table">
   <thead>
@@ -35,7 +33,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/call
 
 ## 語法
 
-```plain
+```js-nolint
 fun.call(thisArg[, arg1[, arg2[, ...]]])
 ```
 
@@ -48,15 +46,15 @@ fun.call(thisArg[, arg1[, arg2[, ...]]])
 
 ## 描述
 
-你可以在呼叫一個現存的函數時，使用不一樣的 `this` 物件。 `this` 會參照到目前的物件，呼叫的物件上
+你可以在呼叫一個現存的函數時，使用不一樣的 `this` 物件。`this` 會參照到目前的物件，呼叫的物件上
 
-使用 `call，` 你可以實作函數一次，然後在其他的物件上直接繼承它，而不用在新的物件上重寫該函數
+使用 `call`，你可以實作函數一次，然後在其他的物件上直接繼承它，而不用在新的物件上重寫該函數
 
 ## 範例
 
 ### 使用 `call` 來串接物件上的建構子
 
-你可以使用 `call` 來串接其他物件的建構子，就像 Java. 下面的例子中，`Product` 物件的建構子定義了兩個參數 `name` 以及 `price`. 其他函數`Food` 及 `Toy` 引用了 `Product` 並傳入 `this` 、 `name` 和 `price`。 Product 初始化它的屬性 `name` 和 `price`, 而兩個子函數則定義了`category。`
+你可以使用 `call` 來串接其他物件的建構子，就像 Java。下面的例子中，`Product` 物件的建構子定義了兩個參數 `name` 以及 `price`。其他函數 `Food` 及 `Toy` 引用了 `Product` 並傳入 `this`、`name` 和 `price`。Product 初始化它的屬性 `name` 和 `price`，而兩個子函數則定義了 `category`。
 
 ```js
 function Product(name, price) {
@@ -64,24 +62,26 @@ function Product(name, price) {
   this.price = price;
 
   if (price < 0)
-    throw RangeError('Cannot create product "' + name + '" with a negative price');
+    throw RangeError(
+      'Cannot create product "' + name + '" with a negative price'
+    );
   return this;
 }
 
 function Food(name, price) {
   Product.call(this, name, price);
-  this.category = 'food';
+  this.category = "food";
 }
 Food.prototype = new Product();
 
 function Toy(name, price) {
   Product.call(this, name, price);
-  this.category = 'toy';
+  this.category = "toy";
 }
 Toy.prototype = new Product();
 
-var cheese = new Food('feta', 5);
-var fun = new Toy('robot', 40);
+var cheese = new Food("feta", 5);
+var fun = new Toy("robot", 40);
 ```
 
 ### 使用 `call` 來呼叫匿名的函數
@@ -90,15 +90,15 @@ var fun = new Toy('robot', 40);
 
 ```js
 var animals = [
-  {species: 'Lion', name: 'King'},
-  {species: 'Whale', name: 'Fail'}
+  { species: "Lion", name: "King" },
+  { species: "Whale", name: "Fail" },
 ];
 
 for (var i = 0; i < animals.length; i++) {
   (function (i) {
     this.print = function () {
-      console.log('#' + i  + ' ' + this.species + ': ' + this.name);
-    }
+      console.log("#" + i + " " + this.species + ": " + this.name);
+    };
     this.print();
   }).call(animals[i], i);
 }

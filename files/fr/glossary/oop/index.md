@@ -1,12 +1,7 @@
 ---
 title: POO
 slug: Glossary/OOP
-tags:
-  - Débutant
-  - Glossaire
-  - Script
 translation_of: Glossary/OOP
-original_slug: Glossaire/POO
 ---
 
 La **POO** (Programmation Orientée Objet) est un paradigme de programmation qui consiste à encapsuler les données et les traitements en relation avec ces données dans des **{{glossary("object","objets")}}**. Les algorithmes consistent alors à orchestrer les opérations sur ces objets et non plus sur ce qui les compose.

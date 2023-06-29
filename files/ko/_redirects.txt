@@ -627,6 +627,7 @@
 /ko/docs/Web/CSS/Media_Queries	/ko/docs/Web/CSS/CSS_media_queries
 /ko/docs/Web/CSS/Media_Queries/Using_Media_Queries_for_Accessibility	/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
 /ko/docs/Web/CSS/Media_Queries/Using_media_queries	/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries
+/ko/docs/Web/CSS/Paged_Media	/ko/docs/conflicting/Web/CSS/CSS_paged_media
 /ko/docs/Web/CSS/Scaling_background_images	/ko/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 /ko/docs/Web/CSS/Understanding_z-index	/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /ko/docs/Web/CSS/Understanding_z-index/Adding_z-index	/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index

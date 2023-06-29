@@ -36,7 +36,7 @@ original_slug: Web/HTML/Applying_color
 - {{cssxref("text-emphasis-color")}}
   - : Цвет, который используется для выделения диакритических знаков, прилегающих к каждому текстовому символу. Это свойство используется преимущественно для восточноазиатских языков.
 - {{cssxref("caret-color")}}
-  - : Цвет, который используется для каретки ({{Glossary("caret")}}) (курсора ввода текста). Применимо только к редактируемым элементам, таким как {{HTMLElement ("input")}} и {{HTMLElement ("textarea")}} или элементам , для которых установлен атрибут {{htmlattrxref ("contenteditable")}}.
+  - : Цвет, который используется для каретки ({{Glossary("caret")}}) (курсора ввода текста). Применимо только к редактируемым элементам, таким как {{HTMLElement ("input")}} и {{HTMLElement ("textarea")}} или элементам , для которых установлен атрибут [`contenteditable`](/ru/docs/Web/HTML/Global_attributes#contenteditable).
 
 ### Блоки
 
@@ -310,7 +310,7 @@ CSS мы рассмотрим более детально, чтобы по оч�
 
 ## Предоставляем возможность пользователю выбрать цвет
 
-There are many situations in which your web site may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own color picker, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its {{htmlattrxref("type", "input")}} attribute.
+There are many situations in which your web site may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own color picker, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its [`type`](/ru/docs/Web/HTML/Element/input#type) attribute.
 
 The `<input>` element represents a color only in the [hexadecimal string notation](#hexadecimal_string_notation) covered above.
 
