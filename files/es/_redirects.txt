@@ -2930,8 +2930,8 @@
 /es/docs/XSLT:when	/es/docs/Web/XSLT/Element/when
 /es/docs/XSLT:with-param	/es/docs/Web/XSLT/Element/with-param
 /es/docs/Zoom_a_página_completa	/es/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
-/es/docs/conflicting/Web/API/CustomElementRegistry/define	/es/docs/Web/API/CustomElementRegistry/define
 /es/docs/conflicting/Web/API/CanvasRenderingContext2D	/es/docs/web/api/canvasrenderingcontext2d
+/es/docs/conflicting/Web/API/CustomElementRegistry/define	/es/docs/Web/API/CustomElementRegistry/define
 /es/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries	/es/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /es/docs/conflicting/web/api/blob	/es/docs/web/api/blob
 /es/docs/conflicting/web/api/element/clientheight	/es/docs/web/api/element/clientheight
