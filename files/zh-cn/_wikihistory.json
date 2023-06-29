@@ -32180,6 +32180,16 @@
     "modified": "2019-11-13T02:27:54.714Z",
     "contributors": ["JC-Ge"]
   },
+  "Web/Progressive_web_apps/Tutorials/js13kGames": {
+    "modified": "2019-08-21T09:58:46.102Z",
+    "contributors": [
+      "jackupdown",
+      "zjffun",
+      "chrisdavidmills",
+      "eightHundreds",
+      "yijie_sun"
+    ]
+  },
   "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
     "modified": "2020-05-31T18:38:01.454Z",
     "contributors": [
@@ -32204,16 +32214,6 @@
       "Miahui",
       "HDUCC",
       "deping_chen"
-    ]
-  },
-  "Web/Progressive_web_apps/Tutorials/js13kGames/Introduction": {
-    "modified": "2019-08-21T09:58:46.102Z",
-    "contributors": [
-      "jackupdown",
-      "zjffun",
-      "chrisdavidmills",
-      "eightHundreds",
-      "yijie_sun"
     ]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames/Loading": {
