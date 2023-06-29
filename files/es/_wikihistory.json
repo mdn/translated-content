@@ -14435,10 +14435,6 @@
     "modified": "2019-03-23T22:25:15.548Z",
     "contributors": ["Jeremie"]
   },
-  "conflicting/Web/API/CustomElementRegistry/define": {
-    "modified": "2019-03-23T22:58:15.536Z",
-    "contributors": ["SphinxKnight", "AlePerez92", "mclo", "chrisdavidmills"]
-  },
   "conflicting/Web/API/Document_Object_Model": {
     "modified": "2019-03-24T00:02:47.149Z",
     "contributors": ["fscholz", "Mgjbot", "Nathymig", "Jorolo"]

@@ -1625,7 +1625,7 @@
 /es/docs/Web/API/Document/height	/es/docs/web/api/element/clientheight
 /es/docs/Web/API/Document/keydown_event	/es/docs/Web/API/Element/keydown_event
 /es/docs/Web/API/Document/keyup_event	/es/docs/Web/API/Element/keyup_event
-/es/docs/Web/API/Document/registerElement	/es/docs/conflicting/Web/API/CustomElementRegistry/define
+/es/docs/Web/API/Document/registerElement	/es/docs/Web/API/CustomElementRegistry/define
 /es/docs/Web/API/Document/selectstart_event	/es/docs/Web/API/Node/selectstart_event
 /es/docs/Web/API/DocumentOrShadowRoot/getSelection	/es/docs/Web/API/Document/getSelection
 /es/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/es/docs/Web/API/Document/pointerLockElement
@@ -2931,6 +2931,7 @@
 /es/docs/XSLT:with-param	/es/docs/Web/XSLT/Element/with-param
 /es/docs/Zoom_a_página_completa	/es/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
 /es/docs/conflicting/Web/API/CanvasRenderingContext2D	/es/docs/web/api/canvasrenderingcontext2d
+/es/docs/conflicting/Web/API/CustomElementRegistry/define	/es/docs/Web/API/CustomElementRegistry/define
 /es/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries	/es/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /es/docs/conflicting/web/api/blob	/es/docs/web/api/blob
 /es/docs/conflicting/web/api/element/clientheight	/es/docs/web/api/element/clientheight
