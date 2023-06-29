@@ -1770,7 +1770,7 @@
 /es/docs/Web/Accessibility/ARIA/forms/consejos_basicos_para_formularios	/es/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
 /es/docs/Web/Accessibility/Community	/es/docs/conflicting/Web/Accessibility
 /es/docs/Web/Aplicaciones/Progressive	/es/docs/Web/Progressive_web_apps
-/es/docs/Web/Aplicaciones/Progressive/Introduction	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+/es/docs/Web/Aplicaciones/Progressive/Introduction	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /es/docs/Web/CSS/-moz-appearance	/es/docs/Web/CSS/appearance
 /es/docs/Web/CSS/-moz-box-flex	/es/docs/Web/CSS/box-flex
 /es/docs/Web/CSS/-moz-box-ordinal-group	/es/docs/Web/CSS/box-ordinal-group
@@ -2733,11 +2733,12 @@
 /es/docs/Web/Progressive_web_apps/Developer_guide/Installing	/es/docs/Web/Progressive_web_apps/Guides/Installing
 /es/docs/Web/Progressive_web_apps/Installable_PWAs	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 /es/docs/Web/Progressive_web_apps/Installing	/es/docs/Web/Progressive_web_apps/Guides/Installing
-/es/docs/Web/Progressive_web_apps/Introduction	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+/es/docs/Web/Progressive_web_apps/Introduction	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /es/docs/Web/Progressive_web_apps/Loading	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading
 /es/docs/Web/Progressive_web_apps/Offline_Service_workers	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
 /es/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 /es/docs/Web/Progressive_web_apps/Responsive/Media_types	/es/docs/Web/CSS/CSS_media_queries/Using_media_queries
+/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /es/docs/Web/Reference/Events	/es/docs/Web/Events
 /es/docs/Web/Reference/Events/animationend	/es/docs/Web/API/Element/animationend_event
 /es/docs/Web/Reference/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event

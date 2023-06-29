@@ -13750,15 +13750,7 @@
     "modified": "2020-09-20T03:25:41.762Z",
     "contributors": ["Nachec"]
   },
-  "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
-    "modified": "2020-09-20T03:39:21.273Z",
-    "contributors": ["Nachec", "NicolasKuhn"]
-  },
-  "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs": {
-    "modified": "2020-09-20T03:54:28.154Z",
-    "contributors": ["Nachec"]
-  },
-  "Web/Progressive_web_apps/Tutorials/js13kGames/Introduction": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames": {
     "modified": "2020-09-20T03:34:06.424Z",
     "contributors": [
       "Nachec",
@@ -13767,6 +13759,14 @@
       "santi324",
       "chrisdavidmills"
     ]
+  },
+  "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
+    "modified": "2020-09-20T03:39:21.273Z",
+    "contributors": ["Nachec", "NicolasKuhn"]
+  },
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs": {
+    "modified": "2020-09-20T03:54:28.154Z",
+    "contributors": ["Nachec"]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames/Loading": {
     "modified": "2020-09-20T04:08:37.661Z",
