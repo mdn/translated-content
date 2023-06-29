@@ -1999,7 +1999,7 @@
 /es/docs/Web/HTML/Element/basefont	/es/docs/conflicting/Web/CSS/CSS_Fonts
 /es/docs/Web/HTML/Element/bgsound	/es/docs/Web/HTML/Element/audio
 /es/docs/Web/HTML/Element/blink	/es/docs/orphaned/Web/HTML/Element/blink
-/es/docs/Web/HTML/Element/content	/es/docs/conflicting/Web/HTML/Element/slot
+/es/docs/Web/HTML/Element/content	/es/docs/Web/HTML/element/slot
 /es/docs/Web/HTML/Element/input/datetime	/es/docs/Web/HTML/Element/input/datetime-local
 /es/docs/Web/HTML/Element/keygen	/es/docs/orphaned/Web/HTML/Element/keygen
 /es/docs/Web/HTML/Elemento	/es/docs/Web/HTML/Element
@@ -2034,7 +2034,7 @@
 /es/docs/Web/HTML/Elemento/code	/es/docs/Web/HTML/Element/code
 /es/docs/Web/HTML/Elemento/col	/es/docs/Web/HTML/Element/col
 /es/docs/Web/HTML/Elemento/colgroup	/es/docs/Web/HTML/Element/colgroup
-/es/docs/Web/HTML/Elemento/content	/es/docs/conflicting/Web/HTML/Element/slot
+/es/docs/Web/HTML/Elemento/content	/es/docs/Web/HTML/element/slot
 /es/docs/Web/HTML/Elemento/data	/es/docs/Web/HTML/Element/data
 /es/docs/Web/HTML/Elemento/datalist	/es/docs/Web/HTML/Element/datalist
 /es/docs/Web/HTML/Elemento/dd	/es/docs/Web/HTML/Element/dd
@@ -2115,7 +2115,7 @@
 /es/docs/Web/HTML/Elemento/script	/es/docs/Web/SVG/Element/script
 /es/docs/Web/HTML/Elemento/section	/es/docs/Web/HTML/Element/section
 /es/docs/Web/HTML/Elemento/select	/es/docs/Web/HTML/Element/select
-/es/docs/Web/HTML/Elemento/slot	/es/docs/Web/HTML/Element/slot
+/es/docs/Web/HTML/Elemento/slot	/es/docs/Web/HTML/element/slot
 /es/docs/Web/HTML/Elemento/small	/es/docs/Web/HTML/Element/small
 /es/docs/Web/HTML/Elemento/source	/es/docs/Web/HTML/Element/source
 /es/docs/Web/HTML/Elemento/span	/es/docs/Web/HTML/Element/span
@@ -2936,6 +2936,7 @@
 /es/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries	/es/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /es/docs/conflicting/Web/CSS/outline	/es/docs/Web/CSS/outline
 /es/docs/conflicting/Web/HTML/Element/audio	/es/docs/Web/HTML/Element/audio
+/es/docs/conflicting/Web/HTML/Element/slot	/es/docs/Web/HTML/element/slot
 /es/docs/conflicting/web/api/blob	/es/docs/web/api/blob
 /es/docs/conflicting/web/api/element/clientheight	/es/docs/web/api/element/clientheight
 /es/docs/conflicting/web/api/file/name	/es/docs/web/api/file/name
