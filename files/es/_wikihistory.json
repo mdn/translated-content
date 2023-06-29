@@ -14492,10 +14492,6 @@
     "modified": "2019-03-23T23:01:31.642Z",
     "contributors": ["fscholz"]
   },
-  "conflicting/Web/API/Geolocation/getCurrentPosition": {
-    "modified": "2019-03-23T23:16:28.831Z",
-    "contributors": ["fscholz", "LeoHirsch", "lupomontero"]
-  },
   "conflicting/Web/API/HTMLElement/change_event": {
     "modified": "2019-03-23T22:18:11.571Z",
     "contributors": ["gama"]
