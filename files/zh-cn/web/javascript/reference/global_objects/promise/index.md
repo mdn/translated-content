@@ -240,7 +240,7 @@ myFirstPromise.then((successMessage) => {
 
 请注意，函数 `troubleWithGetNumber()` 以 `throw()` 结束。这是强制的做法，因为 ES6 的 promise 会遍历所有的 `.then` promise，在遇到错误时，如果不使用 `throw()`，这个错误会被当作“已修复”。这很麻烦，因此，通常会在 `.then()` promise 调用链中忽略 `rejectionFunc`，而仅在最后的 `.catch()` 中保留一个 `rejectionFunc`。另一种方法是抛出一个特殊值（本例使用了 `-999`，但使用自定义错误类型更合适）。
 
-示例代码可以在 NodeJS 下运行。请通过查看实际发生的错误来理解代码。若要提高错误发生的概率，请该改变 `threshold` 的值。
+此代码可在 NodeJS 下运行。通过看到错误的实际发生，可以加深理解。若要提高错误发生的概率，请更改 `threshold` 值。
 
 ```js
 // 为了尝试错误处理，使用“阈值”值会随机地引发错误。
@@ -253,7 +253,7 @@ function tetheredGetNumber(resolve, reject) {
     if (value < THRESHOLD_A) {
       resolve(value);
     } else {
-      reject(`太大了: ${value}`);
+      reject(`太大了：${value}`);
     }
   }, 500);
 }
@@ -273,7 +273,7 @@ function promiseGetWord(parityInfo) {
   return new Promise((resolve, reject) => {
     const { value, isOdd } = parityInfo;
     if (value >= THRESHOLD_A - 1) {
-      reject(`还是太大了: ${value}`);
+      reject(`还是太大了：${value}`);
     } else {
       parityInfo.wordEvenOdd = isOdd ? "奇数" : "偶数";
       resolve(parityInfo);
@@ -302,7 +302,7 @@ new Promise(tetheredGetNumber)
 
 本例展示了 `Promise` 的一些机制。`testPromise()` 方法在每次点击 {{HTMLElement("button")}} 按钮时被调用，该方法会创建一个 promise 对象，使用 {{domxref("setTimeout()")}} 让 `Promise` 等待 1-3 秒不等的时间来兑现计数结果（从 1 开始的数字）。使用 `Promise` 构造函数来创建 promise。
 
-promise 的值的兑现过程都被日志记录（logged，使用 {{JSxRef("Promise.prototype.then()","p1.then()")}}）下来。这些日志信息展示了方法中的同步代码和异步代码是如何通过 promise 完成解耦的。
+通过使用 {{jsxref("Promise.prototype.then()","p1.then()")}} 设置兑现回调函数，并在其中记录 Promise 的兑现，这些日志显示了方法的同步部份是如何与 Promise 的异步完成是如何解耦的。
 
 通过在短时间内多次点击按钮，你可以看到不同的 promise 被一个接一个地兑现。
 
