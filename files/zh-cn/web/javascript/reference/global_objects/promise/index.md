@@ -302,7 +302,7 @@ new Promise(tetheredGetNumber)
 
 本例展示了 `Promise` 的一些机制。`testPromise()` 方法在每次点击 {{HTMLElement("button")}} 按钮时被调用，该方法会创建一个 promise 对象，使用 {{domxref("setTimeout()")}} 让 `Promise` 等待 1-3 秒不等的时间来兑现计数结果（从 1 开始的数字）。使用 `Promise` 构造函数来创建 promise。
 
-通过使用 {{jsxref("Promise.prototype.then()","p1.then()")}} 设置兑现回调函数，并在其中记录 Promise 的兑现，这些日志显示了方法的同步部份是如何与 Promise 的异步完成是如何解耦的。
+通过使用 {{jsxref("Promise.prototype.then()","p1.then()")}} 设置兑现回调函数，并在其中记录 Promise 的兑现，这些日志显示了方法的同步代码是如何与 Promise 的异步完成是如何解耦的。
 
 通过在短时间内多次点击按钮，你可以看到不同的 promise 被一个接一个地兑现。
 
