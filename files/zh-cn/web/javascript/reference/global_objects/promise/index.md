@@ -98,13 +98,13 @@ myPromise
 (promise D, (promise C, (promise B, (promise A) ) ) )
 ```
 
-当存在一个 `nextValue` 是 promise 时，就会出现一种动态的替换效果。`return` 会导致一个 promise 被弹出，但这个 `nextValue` promise 则会被推入被弹出 promise 原来的位置。对于上面所示的嵌套场景，假设与 "promise B" 相关的 `.then()` 返回了一个值为 "promise X" 的 `nextValue` 。那么嵌套的结果看起来就会是这样：
+当存在一个 `nextValue` 是 promise 时，就会出现一种动态的替换效果。`return` 会导致一个 promise 被弹出，但这个 `nextValue` promise 则会被推入被弹出 promise 原来的位置。对于上面所示的嵌套场景，假设与“promise B”相关的 `.then()` 返回了一个值为“promise X”的 `nextValue` 。那么嵌套的结果看起来就会是这样：
 
 ```plain
 (promise D, (promise C, (promise X) ) )
 ```
 
-一个 promise 可能会参与不止一次的嵌套。对于下面的代码，`promiseA` 向“已敲定”状态的过渡会导致两个实例的 `.then` 都被调用。
+一个 promise 可能会参与不止一次的嵌套。对于下面的代码，`promiseA` 向“已敲定”状态的过渡会导致两个实例的 `.then()` 都被调用。
 
 ```js
 const promiseA = new Promise(myExecutorFunc);
@@ -238,7 +238,7 @@ myFirstPromise.then((successMessage) => {
 
 示例函数 `tetheredGetNumber()` 会在设置同步调用或者函数内部抛出异常时调用 `reject()`。函数 `promiseGetWord()` 展示了如何在 API 函数内部创建并返回一个 promise。
 
-请注意，函数 `troubleWithGetNumber()` 以 `throw()` 结束。这是强制的做法，因为 ES6 的 promise 会遍历所有的 `.then` promise，在遇到错误时，如果不使用 `throw()`，这个错误会被当作“已修复”。这很麻烦，因此，通常会在 `.then()` promise 调用链中忽略 `rejectionFunc`，而仅在最后的 `.catch()` 中保留一个 `rejectionFunc`。另一种方法是抛出一个特殊值（本例使用了 `-999`，但使用自定义错误类型更合适）。
+请注意，函数 `troubleWithGetNumber()` 以 `throw()` 结束。这是强制的做法，因为 ES6 的 promise 会遍历所有的 `.then()` promise，在遇到错误时，如果不使用 `throw()`，这个错误会被当作“已修复”。这很麻烦，因此，通常会在 `.then()` promise 调用链中忽略 `rejectionFunc`，而仅在最后的 `.catch()` 中保留一个 `rejectionFunc`。另一种方法是抛出一个特殊值（本例使用了 `-999`，但使用自定义错误类型更合适）。
 
 此代码可在 NodeJS 下运行。通过看到错误的实际发生，可以加深理解。若要提高错误发生的概率，请更改 `threshold` 值。
 
@@ -384,17 +384,17 @@ btn.addEventListener("click", testPromise);
 </script>
 ```
 
-同样的概念也适用与 promise。如果我们稍加修改上面的示例，我们就能得到这个：
+同样的概念也适用于 promise。如果我们稍加修改上面的示例，我们就能得到这个：
 
 ```html
 <!DOCTYPE html> <iframe></iframe>
-<!-- 在这里有一个 realm -->
+<!-- 在这里有一个领域 -->
 <script>
-  // 这里也有一个 realm
+  // 这里也有一个领域
   const bound = frames[0].postMessage.bind(frames[0], "一些数据", "*");
-  // bound 是一个内置函数，栈中没有用户代码，因此我们应该使用哪个 realm 呢？
+  // bound 是一个内置函数，栈中没有用户代码，所以我们应该使用哪个领域？
   Promise.resolve(undefined).then(bound);
-  // 这仍然可以工作，因为我们在栈上使用最新的 realm（即现有的 realm）
+  // 这仍然可以工作，因为我们在栈上使用最新的领域（即现有领域）
 </script>
 ```
 
