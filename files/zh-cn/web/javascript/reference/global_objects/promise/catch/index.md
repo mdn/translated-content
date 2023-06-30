@@ -28,14 +28,14 @@ catch(onRejected)
 
 ## 描述
 
-`catch` 方法用于在 Promise 链进行错误处理，因为它总是会返回一个 {{jsxref("Promise")}}，所以它可以和 {{jsxref("Promise/then", "then()")}} 方法一样被[链式调用](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#链式调用)。
+`catch` 方法用于在 Promise 链进行错误处理，因为它总是会返回一个 {{jsxref("Promise")}}，所以它可以和 {{jsxref("Promise/then", "then()")}} 方法一样被[链式调用](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#catch_的后续链式操作)。
 
 如果一个 promise 被拒绝并且没有可调用的拒绝处理器（处理器可以是 {{jsxref("Promise.prototype.then()")}}、{{jsxref("Promise.prototype.catch()")}} 或 {{jsxref("Promise.prototype.finally()")}}），则拒绝事件由宿主环境来提供。在浏览器中，这将触发 [`unhandledrejection`](/zh-CN/docs/Web/API/Window/unhandledrejection_event) 事件。如果将一个处理器附加到一个已被拒绝，且已导致未处理的拒绝事件的 promise，将会触发 [`rejectionhandled`](/zh-CN/docs/Web/API/Window/rejectionhandled_event) 事件。
 
 `catch()` 方法内部会调用当前 promise 对象的 `then()` 方法，并将 `undefined` 和 `onRejected` 作为参数传递给 `then()`。该调用的返回值直接被返回。如果你对这些方法进行封装，这一点是可以观察到的。
 
 ```js
-// 重写原本的 Promise.prototype.then/catch 方法，只是为了添加一些日志记。
+// 重写原本的 Promise.prototype.then/catch 方法，只是为了添加一些日志
 ((Promise) => {
   const originalThen = Promise.prototype.then;
   const originalCatch = Promise.prototype.catch;
@@ -127,7 +127,7 @@ p2.catch((e) => {
 });
 ```
 
-在调用 `resolve` 之后抛出的错误会被忽略“
+在调用 `resolve` 之后抛出的错误会被忽略：
 
 ```js
 const p3 = new Promise((resolve, reject) => {
