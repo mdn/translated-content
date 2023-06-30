@@ -9,7 +9,7 @@ slug: Web/HTML/Element/details
 
 展现组件通常在屏幕上使用一个小三角形，旋转（或扭曲）以表示打开/关闭的状态，三角形旁边有一个标签。`<summary>` 元素的内容被用来作为展示小部件的标签。
 
-{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-standard")}}
+{{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-shorter")}}
 
 一个 `<details>` 小组件可以处于两种状态之一。默认的*关闭*状态只显示三角形和 `<summary>` 内的标签（如果没有 `<summary>` 则显示{{Glossary("user agent", "用户代理")}}定义的默认字符串）。
 
