@@ -182,16 +182,16 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 - {{jsxref("Promise.allSettled()")}}
   - : 接受一个 Promise 可迭代对象作为输入，并返回单个 `Promise`。返回的 Promise 在所有输入的 Promise 都敲定时兑现（包括传入的可迭代对象为空时），其值为一个描述每个 Promise 结果的对象数组。
 - {{jsxref("Promise.any()")}}
-  - : 接受一个 Promise 可迭代对象作为输入，并返回单个 `Promise`。返回的 Promise 在任何输入的 Promise 兑现时兑现，其值为第一个兑现的值。如果所有输入的 Promise 都被拒绝（包括传入的可迭代对象为空时），返回的 Promise 将被拒绝，并包含一个包含拒绝原因的 {{jsxref("AggregateError")}} 数组。
+  - : 接受一个 Promise 可迭代对象作为输入，并返回单个 `Promise`。返回的 Promise 在任何输入的 Promise 兑现时兑现，其值为第一个兑现的值。如果所有输入的 Promise 都被拒绝（包括传入的可迭代对象为空时），返回的 Promise 将以带有一个包含拒绝原因的数组的 {{jsxref("AggregateError")}} 拒绝。
 - {{jsxref("Promise.race()")}}
   - : 接受一个 Promise 可迭代对象作为输入，并返回单个 `Promise`。返回的 Promise 与第一个敲定的 Promise 的最终状态保持一致。
 - {{jsxref("Promise.reject()")}}
   - : 返回一个新的 `Promise` 对象，该对象以给定的原因拒绝。
 - {{jsxref("Promise.resolve()")}}
 
-  - : 返回一个新的 `Promise` 对象，该对象以给定的值而兑现。如果值是一个 thenable 对象（即具有`then`方法），则返回的 Promise 对象会“跟随”该 thenable 对象，采用其最终的状态；否则，返回的 Promise 对象会以该值兑现。
+  - : 返回一个新的 `Promise` 对象，该对象以给定的值兑现。如果值是一个 thenable 对象（即具有 `then` 方法），则返回的 Promise 对象会“跟随”该 thenable 对象，采用其最终的状态；否则，返回的 Promise 对象会以该值兑现。
 
-    通常，如果您不知道一个值是否是 Promise，那么最好使用 {{jsxref("Promise.resolve", "Promise.resolve(value)")}} 将其转换成Promise 对象，并将返回值作为 Promise 来处理。
+    通常，如果你不知道一个值是否是 Promise，那么最好使用 {{jsxref("Promise.resolve", "Promise.resolve(value)")}} 将其转换成 Promise 对象，并将返回值作为 Promise 来处理。
 
 ## 实例属性
 
@@ -207,9 +207,9 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 - {{jsxref("Promise.prototype.catch()")}}
   - : 将一个拒绝处理回调函数附加到 Promise 上，并返回一个新的 Promise，如果回调被调用，则解析为回调的返回值，如果 Promise 被兑现，解析为其原始完成值。
 - {{jsxref("Promise.prototype.finally()")}}
-  - : 将一个处理程序附加到 Promise 上，并返回一个新的 Promise，当原始 Promise 被解决时解析。无论 Promise 是否被兑现，处理程序都会在 Promise 解决时被调用。
+  - : 将一个处理器附加到 Promise 上，并返回一个新的 Promise，当原始 Promise 被解决时解决。无论 Promise 是否被兑现还是被拒绝，处理器都会在 Promise 敲定时被调用。
 - {{jsxref("Promise.prototype.then()")}}
-  - : 将一个完成处理和拒绝处理附加到 Promise 上，并返回一个新的 Promise，解析为调用处理程序的返回值，或者如果 Promise 没有被处理（即相关处理程序 `onFulfilled` 或 `onRejected` 不是函数），则解析为其原始解决值。
+  - : 将一个兑现处理器和拒绝处理器附加到 Promise 上，并返回一个新的 Promise，解决为调用处理器得到的返回值，或者如果 Promise 没有被处理（即相关处理器 `onFulfilled` 或 `onRejected` 不是函数），则以原始敲定值解决。
 
 ## 示例
 
@@ -219,16 +219,16 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 const myFirstPromise = new Promise((resolve, reject) => {
   // 当异步操作成功时，我们调用 resolve(...)，当其失败时，调用 reject(...)。
   // 在这个例子中，我们使用 setTimeout(...) 来模拟异步代码。
-  // 在实际情况中，你可能会使用类似 XHR 或 HTML API 等其他工具。
+  // 在实际情况中，你可能会使用类似 XHR 或 HTML API 等。
   setTimeout(() => {
-    resolve("Success!"); // Yay! Everything went well!
+    resolve("成功！"); // 耶！一切顺利！
   }, 250);
 });
 
 myFirstPromise.then((successMessage) => {
   // successMessage 是我们在上面的 resolve(...) 函数中传入的任何内容。
-  // 它不一定是一个字符串，但如果它只是一个成功的消息，那么它可能是一个字符串。
-  console.log(`Yay! ${successMessage}`);
+  // 它不一定是字符串，但如果它只是一个成功的消息，那么它大概率是字符串。
+  console.log(`耶！${successMessage}`);
 });
 ```
 
