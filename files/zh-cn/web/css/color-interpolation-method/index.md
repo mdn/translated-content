@@ -5,7 +5,7 @@ slug: Web/CSS/color-interpolation-method
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<color-interpolation-method>`** 表示用于在 {{CSSXref("&lt;color&gt;")}} 值之间插值的颜色空间。此数据类型可用于改写例如 {{CSSXref("color_value/color-mix", "color-mix()")}} 和 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} 等与颜色相关的函数记号所用的默认插值颜色空间。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<color-interpolation-method>`** 表示用于在 {{CSSXref("&lt;color&gt;")}} 值之间插值的颜色空间。此数据类型可用于覆盖例如 {{CSSXref("color_value/color-mix", "color-mix()")}} 和 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} 等与颜色相关的函数记号所用的默认插值颜色空间。
 
 在对 `<color>` 值插值时，插值颜色空间默认为 Oklab。
 
