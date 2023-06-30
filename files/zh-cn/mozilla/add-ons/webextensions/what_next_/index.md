@@ -1,11 +1,11 @@
 ---
-title: What next?
+title: 下一步是什么？
 slug: Mozilla/Add-ons/WebExtensions/What_next_
 ---
 
 {{AddonSidebar}}
 
-You will now be ready to start turning your idea for a browser extension into reality. Before you start that journey, it's worth being aware of a few things that will help to make it a smooth one.
+现在你可以将你对浏览器扩展的想法变成现实了。在开始这个过程之前 ，值得了解一些有助于使其顺利进行的事情。
 
 ## 你的开发环境
 
@@ -15,40 +15,40 @@ You will now be ready to start turning your idea for a browser extension into re
 
 [学习更多关于构建工具](/zh-CN/Add-ons/Source_Code_Submission#About_build_tools)
 
-## Third-party libraries
+## 第三方库
 
-Third-party libraries are a great way to add complex features or functionality to your browser extensions quickly. When you submit an extension to the [AMO review process](#The_review_processv), the process will also consider any third-party libraries used. To streamline the review, make sure you always download third-party libraries from their official website or repository, and if the library is minified provide a link to the source code. Please note that third-party libraries cannot be modified in any way.
+第三方库是快速为你的浏览器扩展添加复杂的特性或功能的一个好方法。当你向[AMO审查程序](#The_review_processv)提交扩展时，AMO审查程序也会考虑任何使用的第三方库。为了简化审查，请确保你总是从第三方库的官方网站或仓库下载，如果该库已被压缩，请提供源代码的链接。请注意，第三方库不能以任何方式修改。
 
-[Learn more about submitting source code](/zh-CN/Add-ons/Source_Code_Submission)
+[了解更多关于提交源代码的信息](/zh-CN/Add-ons/Source_Code_Submission)
 
-## The Firefox Add-on Distribution Agreement
+## 火狐浏览器附加组件分发协议
 
-Browser extensions need to be signed to install into the release or beta versions of Firefox. Signing takes place in addons.mozilla.org (AMO) and is subject to the terms and conditions of the Firefox Add-on Distribution Agreement. The goal of the agreement is to ensure Firefox users get access to well supported, quality add-ons that enhance the Firefox experience.
+浏览器扩展需要经过签名才能安装到Firefox的发行版或测试版。签名是在addons.mozilla.org（AMO）进行的，并且要遵守《火狐浏览器附加组件分发协议》的条款和条件。该协议的目的是确保火狐用户能够获得支持良好的优质附加组件，以提高火狐的体验。
 
-[Read the agreement](https://extensionworkshop.com/documentation/publish/firefox-add-on-distribution-agreement/)
+[阅读协议](https://extensionworkshop.com/documentation/publish/firefox-add-on-distribution-agreement/)
 
-[Learn more about signing](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/)
+[了解更多关于签名的信息](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/)
 
-## The review process
+## 审查过程
 
-When a browser extension is submitted for signing, it's subject to automated review. It may also be subject to a manual review, when the automated review determines that a manual review is needed. Your browser extension won't be signed until it's passed the automated review and may have its signing revoked if it fails to pass the manual review. The review process follows a strict set of guidelines, so it's easy to check and avoid any likely review problems.
+当一个浏览器扩展被提交签名时，它将接受自动审查。当自动审查决定需要进行人工审查时，它也可能会受到人工审查。你的浏览器扩展在通过自动审查之前不会被签名，而且如果未能通过人工审查，可能会被撤销签名。审查过程遵循一套严格的准则，因此很容易检查和避免任何可能的审查问题。
 
-[Check out the review policy and guidelines](/zh-CN/Add-ons/AMO/Policy/Reviews)
+[查看审查政策和指南](/zh-CN/Add-ons/AMO/Policy/Reviews)
 
-## AMO featured browser extensions
+## AMO 特色浏览器扩展
 
-If you choose to list your browser extension on AMO, your extension could be featured on the AMO website, in the Firefox browser's add-on manager, or elsewhere on a Mozilla website. We've compiled a list of guidelines about how extensions are selected for featuring, by following these guidelines you give your extension the best chance of being featured.
+如果你选择在AMO上公开你的浏览器扩展，你的扩展可能会在AMO网站、火狐浏览器的附加组件管理器或Mozilla网站的其他地方出现。我们已经编撰了一份关于如何选择扩展程序进行推荐的指南，通过遵循这些指南，你的扩展程序会有最好的机会被推荐。
 
-[Learn more about getting your add-ons featured](/zh-CN/Add-ons/AMO/Policy/Featured)
+[了解更多关于让您的附加组件获得推荐的信息](/zh-CN/Add-ons/AMO/Policy/Featured)
 
-## Continue your learning experience
+## 继续您的学习经历
 
-Now you know what lies ahead, it's time to dive into more details about browser extension development. In the sections that follow, you'll discover:
+现在您知道接下来会发生什么，是时候深入了解有关浏览器扩展开发的更多细节了。在接下来的部分中，您将发现：
 
-- More about the fundamental concepts behind browser extensions, starting with details on how to [use the JavaScript APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs).
-- A guide to the [user interface components](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface) available to your browser extensions.
-- A collection of how-to guides on achieving key tasks in your extensions or making use of the JavaScript APIs.
-- Information on how to port other browser extensions to Firefox.
-- Details about the Firefox specific workflows you can use to develop browser extensions.
-- A full reference guide to the JavaScript APIs.
-- A full reference guide to the Manifest keys.
+- 更多关于浏览器扩展背后的基本概念，从如何[使用JavaScript APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs)的细节开始。
+- 可供浏览器扩展使用的[用户界面组件](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface)的指南。
+- 在你的扩展中实现关键任务或使用JavaScript APIs的方法指南的集合。
+- 如何将其他浏览器扩展移植到Firefox的有关信息。
+- 关于你可以用来开发浏览器扩展的Firefox的特定工作流程的详细信息。
+- JavaScript APIs的完整参考指南。
+- Manifest键的完整参考指南。
