@@ -19,11 +19,6 @@ then(onFulfilled, onRejected)
 ### 参数
 
 - `onFulfilled` {{optional_inline}}
-  - : 当 Promise 变成接受状态（fulfilled）时调用的{{jsxref("Function", "函数")}}。该函数有一个参数，即接受的最终结果（the fulfillment value）。如果该参数不是函数，则会在内部被替换为 `(x) => x`，即原样返回 promise 最终结果的函数
-- `onRejected` {{optional_inline}}
-  - : 当 Promise 变成拒绝状态（rejected）时调用的{{jsxref("Function", "函数")}}。该函数有一个参数，即拒绝的原因（`rejection reason`）。如果该参数不是函数，则会在内部被替换为一个 "Thrower" 函数 (it throws an error it received as argument)。
-
-- `onFulfilled` {{optional_inline}}
 
   - : 一个在此 Promise 对象被兑现时异步执行的函数。它的返回值将成为 `then()` 返回的 Promise 对象的兑现值。此函数被调用时将传入以下参数：
 
