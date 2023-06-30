@@ -11,7 +11,7 @@ slug: Web/HTML/Element/details
 
 {{EmbedInteractiveExample("pages/tabbed/details.html", "tabbed-standard")}}
 
-一个 `<details>` 小组件可以处于两种状态之一。默认的*关闭*状态只显示三角形和 `<summary>` 内的标签（如果没有`<summary>`则显示{{Glossary("user agent"，"用户代理")}}定义的默认字符串）。
+一个 `<details>` 小组件可以处于两种状态之一。默认的*关闭*状态只显示三角形和 `<summary>` 内的标签（如果没有 `<summary>` 则显示{{Glossary("user agent", "用户代理")}}定义的默认字符串）。
 
 当用户点击小组件或聚焦它然后按空格键时，它就会“扭曲”展开，显示出其中的内容。通常使用一个旋转或扭曲的三角形来代表打开或关闭小组件，这就是为什么这些小组件有时被称为“扭曲的”。
 
