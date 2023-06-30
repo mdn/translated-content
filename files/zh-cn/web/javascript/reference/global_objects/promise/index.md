@@ -205,7 +205,7 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 ## 实例方法
 
 - {{jsxref("Promise.prototype.catch()")}}
-  - : 将一个拒绝处理回调函数附加到 Promise 上，并返回一个新的 Promise，如果回调被调用，则解析为回调的返回值，如果 Promise 被兑现，解析为其原始完成值。
+  - : 将一个拒绝处理回调函数附加到 Promise 上，并返回一个新的 Promise，如果回调被调用，则解决为回调的返回值，如果 Promise 被兑现，解决为其原始兑现值。
 - {{jsxref("Promise.prototype.finally()")}}
   - : 将一个处理器附加到 Promise 上，并返回一个新的 Promise，当原始 Promise 被解决时解决。无论 Promise 是否被兑现还是被拒绝，处理器都会在 Promise 敲定时被调用。
 - {{jsxref("Promise.prototype.then()")}}
