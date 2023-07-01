@@ -2,7 +2,7 @@
 title: margin-left
 slug: Web/CSS/margin-left
 l10n:
-  sourceCommit: 2a23f650d86d4f5d948614a607224a2bd52cca33
+  sourceCommit: c5dd9c3b9d503a56dc04b6b8f88e89194dc82d7f
 ---
 
 {{CSSRef}}
@@ -134,6 +134,8 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 
 ## Exemples
 
+Les valeurs en pourcentage pour `margin-left` sont relatives à la taille en ligne du conteneur.
+
 ### CSS
 
 ```css
@@ -145,7 +147,7 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 ### HTML
 
 ```html
-<p>Un grand rosier se trouvait à l'entrée du jardin ;
+<p>Un grand rosier se trouvait à l'entrée du jardin&nbsp;;
    les roses qu'il portait étaient blanches, mais
    trois jardiniers étaient en train de les peindre
    en rouge.
