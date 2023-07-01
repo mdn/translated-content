@@ -17,11 +17,10 @@ slug: Web/HTML/Quirks_Mode_and_Standards_Mode
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset=UTF-8>
+    <meta charset="UTF-8" />
     <title>Hello World!</title>
   </head>
-  <body>
-  </body>
+  <body></body>
 </html>
 ```
 

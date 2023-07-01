@@ -35,7 +35,7 @@ concat(value0, value1, /* … ,*/ valueN)
 
 如果任何源数组是[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，`concat()` 方法会保留空槽。
 
-`concat()` 方法是[通用数组方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。`this` 值的处理方式与其他参数相同（除了它会先转换为对象），这意味着普通对象将直接添加到结果数组中，而 `@@isConcatSpreadable` 属性为真值的类数组对象将展开并添加到数组中。
+`concat()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。`this` 值的处理方式与其他参数相同（除了它会先转换为对象），这意味着普通对象将直接添加到结果数组中，而 `@@isConcatSpreadable` 属性为真值的类数组对象将展开并添加到数组中。
 
 ## 示例
 
@@ -44,7 +44,7 @@ concat(value0, value1, /* … ,*/ valueN)
 以下代码将两个数组合并为一个新数组：
 
 ```js
-const letters = ['a', 'b', 'c'];
+const letters = ["a", "b", "c"];
 const numbers = [1, 2, 3];
 
 const alphaNumeric = letters.concat(numbers);
@@ -72,7 +72,7 @@ console.log(numbers);
 以下代码将三个值连接到数组：
 
 ```js
-const letters = ['a', 'b', 'c'];
+const letters = ["a", "b", "c"];
 
 const alphaNumeric = letters.concat(1, [2, 3]);
 
@@ -116,13 +116,13 @@ console.log([0].concat(obj1, obj2));
 如果任何源数组是稀疏的，则结果数组也将是稀疏的：
 
 ```js
-console.log([1, , 3].concat([4, 5])); // [ 1, <1 empty item>, 3, 4, 5 ]
-console.log([1, 2].concat([3, , 5])); // [ 1, 2, 3, <1 empty item>, 5 ]
+console.log([1, , 3].concat([4, 5])); // [1, empty, 3, 4, 5]
+console.log([1, 2].concat([3, , 5])); // [1, 2, 3, empty, 5]
 ```
 
 ### 在非数组对象上调用 concat()
 
-如果 this 值不是数组，它会被转换为一个对象，然后以与 concat() 的参数相同的方式处理。在这种情况下，返回值始终是一个普通的新数组。
+如果 `this` 值不是数组，它会被转换为一个对象，然后以与 `concat()` 的参数相同的方式处理。在这种情况下，返回值始终是一个普通的新数组。
 
 ```js
 console.log(Array.prototype.concat.call({}, 1, 2, 3)); // [{}, 1, 2, 3]
@@ -141,9 +141,11 @@ console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 
 ## 参见
 
-- [在 “core-js” 中对 “Array.prototype.concat” 进行复用，并修复和实现新特性，如支持 “Symbol.isConcatSpreadable”](https://github.com/zloirock/core-js#ecmascript-array)
-- {{jsxref("Array/push", "push()")}} / {{jsxref("Array/pop", "pop()")}}——从数组末尾添加/删除元素
-- {{jsxref("Array/unshift", "unshift()")}} / {{jsxref("Array/shift", "shift()")}}——从数组开头添加/删除元素
-- {{jsxref("Array/splice", "splice()")}}——从数组的指定位置添加/删除元素
+- [在 `core-js` 中实现 `Array.prototype.concat` 的 Polyfill，修复其中的问题并实现新特性，例如支持 `Symbol.isConcatSpreadable`](https://github.com/zloirock/core-js#ecmascript-array)
+- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- {{jsxref("Array")}}
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.unshift()")}}
+- {{jsxref("Array.prototype.splice()")}}
 - {{jsxref("String.prototype.concat()")}}
-- {{jsxref("Symbol.isConcatSpreadable")}}——控制扁平化。
+- {{jsxref("Symbol.isConcatSpreadable")}}

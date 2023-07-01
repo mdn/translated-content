@@ -1,8 +1,9 @@
 ---
 title: 基本形状
 slug: Web/SVG/Tutorial/Basic_Shapes
-original_slug: SVG/Tutorial/Basic_Shapes
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("SVG/Tutorial/Positions", "SVG/Tutorial/Paths") }}
 

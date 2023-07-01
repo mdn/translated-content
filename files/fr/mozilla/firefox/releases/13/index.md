@@ -16,16 +16,16 @@ Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume l
 
 ### HTML
 
-- L'attribut {{htmlattrxref("cellspacing", "table")}} de {{htmlelement("table")}} est désormais analysé de la manière qu'il soit en mode quirks ou non. Autrement dit, si une valeur est spécifiée en pourcentage, elle est traitée comme un certain nombre de pixels, puisque les valeurs en pourcentage ne sont pas réellement autorisée selon la spécification.
+- L'attribut [`cellspacing`](/fr/docs/Web/HTML/Element/table#cellspacing) de {{htmlelement("table")}} est désormais analysé de la manière qu'il soit en mode quirks ou non. Autrement dit, si une valeur est spécifiée en pourcentage, elle est traitée comme un certain nombre de pixels, puisque les valeurs en pourcentage ne sont pas réellement autorisée selon la spécification.
 - L'élément {{htmlelement("wbr")}} a vu son comportement bi-directionnel corrigé. Il se comporte à présent comme l'Unicode `U+200B ZERO-WIDTH SPACE` et n'affecte donc plus la bi-directionnalité de son élément parent.
 - La peusdo-classe {{Cssxref(":invalid")}} peut à présent être appliquée à l'élément {{htmlelement("form")}}.
 
 ### CSS
 
 - L'unité `turn` de la propriété {{cssxref("&lt;angle&gt;")}} est désormais supportée (à utiliser avec la fonction CSS `rotate()`).
-- Le support d'une syntaxe de 3 à 4 valeurs pour la propriété {{cssxref("background-position")}} a été ajouté. Vous pour décaler une image de fond à partir de n'importe quel coin en écrivant par exemple "`right 10px bottom 20px`". Voir {{bug(522607)}}
+- Le support d'une syntaxe de 3 à 4 valeurs pour la propriété {{cssxref("background-position")}} a été ajouté. Vous pour décaler une image de fond à partir de n'importe quel coin en écrivant par exemple "`right 10px bottom 20px`". Voir [bug Firefox 522607](https://bugzil.la/522607)
 - Le support d'une syntaxe à 2 valeurs pour la propriété {{cssxref("background-repeat")}} a été ajouté.
-- Les propriétés {{cssxref("border-radius","-moz-border-radius*")}} et {{cssxref("box-shadow","-moz-box-shadow")}} n'ont plus de préfixe (`border-radius` ou `box-shadow`). Voir {{bug(693510)}}
+- Les propriétés {{cssxref("border-radius","-moz-border-radius*")}} et {{cssxref("box-shadow","-moz-box-shadow")}} n'ont plus de préfixe (`border-radius` ou `box-shadow`). Voir [bug Firefox 693510](https://bugzil.la/693510)
 - La propriété {{cssxref("column-fill")}} a été implémentée (prefixée).
 
 ### JavaScript
@@ -55,7 +55,7 @@ Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume l
 
 ### SVG
 
-- L'interface DOM {{domxref("SVGStringList")}} est désormais indexable comme [`Array`](/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/Array) (voir {{bug(722071)}}).
+- L'interface DOM {{domxref("SVGStringList")}} est désormais indexable comme [`Array`](/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/Array) (voir [bug Firefox 722071](https://bugzil.la/722071)).
 
 ### WebGL
 
@@ -63,7 +63,7 @@ Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume l
 
 ### MathML
 
-- Le support pour l'attribut `width` sur l'élément {{MathMLElement("mtable")}} a été ajouté ({{bug(722880)}}).
+- Le support pour l'attribut `width` sur l'élément {{MathMLElement("mtable")}} a été ajouté ([bug Firefox 722880](https://bugzil.la/722880)).
 - La [police MathJax](http://www.mathjax.org/demos/tex-samples/) est désormais utilisée comme police par défaut pour le texte mathématique are now used as the default fonts for mathematical text. Voir [les polices pour le moteur MathML de Mozilla](/fr/docs/Mozilla_MathML_Project/Fonts) pour plus d'informations.
 
 ### Réseau
@@ -110,7 +110,7 @@ A partir de Firefox 13, Firefox pour Windows requiert au minimum Windows XP Serv
 ### Interfaces
 
 - L'interface `nsIScreen` supporte à présent le contrôle de la rotation via le nouvel attribut `rotation`.
-- L'interface `nsIPrefBranch2` a été intégrée dans `nsIPrefBranch` ({{bug(718255)}}).
+- L'interface `nsIPrefBranch2` a été intégrée dans `nsIPrefBranch` ([bug Firefox 718255](https://bugzil.la/718255)).
 - Les alias `MozOpacity`, `MozOutline`, `MozOutlineStyle`, `MozOutlineWidth`, `MozOutlineOffset` et `MozOutlineColor`, qui ont tous été retirés des précédentes versions de Gecko, ont été supprimés de `nsIDOMCSS2Properties`, qui aurait dû avoir ces alias.
 - L'attribut `excludeItemIfParentHasAnnotation` de `nsINavHistoryQueryOptions` a été retiré, avec l'opération de requête correspondante. Il existait les livemarks, qui n'existent plus.
 

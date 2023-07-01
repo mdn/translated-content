@@ -34,7 +34,7 @@ toLocaleString(locales, options)
 
 如果一个元素是 `undefined`、`null`，它会被转换为空字符串，而不是 `"null"` 或者 `"undefined"`。
 
-当用于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时，`toLocaleString()` 方法会把空槽当作 `undefined` 值一样迭代它。
+当用于[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)时，`toLocaleString()` 方法迭代时会把空槽当作 `undefined` 一样处理它。
 
 `toLocaleString()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
@@ -42,7 +42,7 @@ toLocaleString(locales, options)
 
 ### 使用 locales 和 options
 
-通过使用 `toLocaleString` 方法将数组元素转换为字符串。
+数组元素通过使用它们的 `toLocaleString` 方法转换为字符串。
 
 - `Object`：{{jsxref("Object.prototype.toLocaleString()")}}
 - `Number`：{{jsxref("Number.prototype.toLocaleString()")}}

@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Accept
 
 **`Accept`** HTTP 請求標頭（以 [MIME type](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 標示）會對伺服器告知用戶端可解讀的內容類型。伺服器可以透過 [content negotiation](/zh-TW/docs/Web/HTTP/Content_negotiation) 來選用可行的協定，並以 {{HTTPHeader("Content-Type")}} 標頭告知用戶端。針對本標頭，瀏覽器可以根據完成請求的脈絡，來決定適合的數值：像是擷取 CSS 時，給予的值就會和圖片、影像、腳本不一樣。
 
-| 標頭類型                                                     | {{Glossary("Request header")}}                                                                                                                               |
-| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name")}}             | no                                                                                                                                                                     |
+| 標頭類型                                       | {{Glossary("Request header")}}                                                                                                                                         |
+| ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{Glossary("Forbidden header name")}}          | no                                                                                                                                                                     |
 | {{Glossary("CORS-safelisted request header")}} | yes, with the additional restriction that values can't contain a _CORS-unsafe request header byte_: `"():<>?@[\]{}`, Delete, Tab and control characters: 0x00 to 0x19. |
 
 ## 語法

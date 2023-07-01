@@ -5,49 +5,73 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/values
 
 {{JSRef}}
 
-**`Object.values()`** 方法返回一个给定对象自身的所有可枚举属性值的数组，值的顺序与使用 {{jsxref("Statements/for...in", "for...in")}} 循环的顺序相同（区别在于 for-in 循环枚举原型链中的属性）。
+**`Object.values()`** 静态方法返回一个给定对象的自有可枚举字符串键属性值组成的数组。
+
+{{EmbedInteractiveExample("pages/js/object-values.html")}}
 
 ## 语法
 
-```plain
+```js-nolint
 Object.values(obj)
 ```
 
 ### 参数
 
 - `obj`
-  - : 被返回可枚举属性值的对象。
+  - : 一个对象。
 
 ### 返回值
 
-一个包含对象自身的所有可枚举属性值的数组。
+一个包含了给定对象的自有可枚举字符串键属性值的数组。
 
 ## 描述
 
-`Object.values()` 返回一个数组，其元素是在对象上找到的可枚举属性值。属性的顺序与通过手动循环对象的属性值所给出的顺序相同。
+`Object.values()` 返回一个数组，其元素是直接在 `object` 上找到的可枚举字符串键属性值。这与使用 {{jsxref("Statements/for...in", "for...in")}} 循环迭代相同，只是 `for...in` 循环还枚举原型链中的属性。`Object.values()` 返回的数组顺序和 {{jsxref("Statements/for...in", "for...in")}} 循环提供的数组顺序相同。
+
+如果需要属性键，请使用 {{jsxref("Object.keys()")}}。如果属性的键和值都需要，请使用 {{jsxref("Object.entries()")}}。
 
 ## 示例
 
+### 使用 Object.values()
+
 ```js
-var obj = { foo: 'bar', baz: 42 };
+const obj = { foo: "bar", baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
-// array like object
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
-console.log(Object.values(obj)); // ['a', 'b', 'c']
+// 类数组对象
+const arrayLikeObj1 = { 0: "a", 1: "b", 2: "c" };
+console.log(Object.values(arrayLikeObj1)); // ['a', 'b', 'c']
 
-// array like object with random key ordering
-// when we use numeric keys, the value returned in a numerical order according to the keys
-var an_obj = { 100: 'a', 2: 'b', 7: 'c' };
-console.log(Object.values(an_obj)); // ['b', 'c', 'a']
+// 具有随机键排序的类数组对象
+// 使用数字键时，将按键的数字顺序返回值
+const arrayLikeObj2 = { 100: "a", 2: "b", 7: "c" };
+console.log(Object.values(arrayLikeObj2)); // ['b', 'c', 'a']
 
-// getFoo is property which isn't enumerable
-var my_obj = Object.create({}, { getFoo: { value: function() { return this.foo; } } });
-my_obj.foo = 'bar';
-console.log(Object.values(my_obj)); // ['bar']
+// getFoo 是一个不可枚举的属性
+const myObj = Object.create(
+  {},
+  {
+    getFoo: {
+      value() {
+        return this.foo;
+      },
+    },
+  },
+);
+myObj.foo = "bar";
+console.log(Object.values(myObj)); // ['bar']
+```
 
-// non-object argument will be coerced to an object
-console.log(Object.values('foo')); // ['f', 'o', 'o']
+### 在基本类型中使用 Object.values()
+
+非对象参数会[强制转换为对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#对象强制转换)。只有字符串可以有自己的可枚举属性，而其他所有基本类型都返回一个空数组。
+
+```js
+// 字符串具有索引作为可枚举的自有属性
+console.log(Object.values("foo")); // ['f', 'o', 'o']
+
+// 其他基本类型没有自有属性
+console.log(Object.values(100)); // []
 ```
 
 ## 规范
@@ -60,10 +84,11 @@ console.log(Object.values('foo')); // ['f', 'o', 'o']
 
 ## 参见
 
-- [`core-js` 中 `Object.values` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability and ownership of properties](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [`core-js` 中 `Object.values` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-object)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
-- {{jsxref("Object.entries()")}} {{experimental_inline}}
+- {{jsxref("Object.entries()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Map.prototype.values()")}}

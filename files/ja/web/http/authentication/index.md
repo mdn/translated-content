@@ -147,7 +147,7 @@ location /status {
 
 多くのクライアントでは次のように、ユーザー名とパスワードを含むエンコードされた URL を使用してログインプロンプトを回避できます。
 
-```example-bad
+```http example-bad
 https://username:password@www.example.com/
 ```
 

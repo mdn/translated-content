@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 {{JSRef}}
 
-**`sort()`** 方法[原地](https://zh.wikipedia.org/wiki/原地算法)对数组的元素进行排序，并返回相同数组的引用。默认排序顺序是升序，将元素转换为字符串，然后比较它们的 UTF-16 代码单元值序列。
+**`sort()`** 方法[_就地_](https://zh.wikipedia.org/wiki/原地算法)对数组的元素进行排序，并返回对相同数组的引用。默认排序是将元素转换为字符串，然后按照它们的 UTF-16 码元值升序排序。
 
 由于它取决于具体实现，因此无法保证排序的时间和空间复杂度。
 
@@ -31,7 +31,7 @@ sort(compareFn)
     - `b`
       - : 第二个用于比较的元素。不会是 `undefined`。
 
-    如果省略该函数，数组元素会被转换为字符串，然后根据每个字符的 Unicode 码点值进行排序。
+    如果省略该函数，数组元素会被转换为字符串，然后根据每个字符的 Unicode 码位值进行排序。
 
 ### 返回值
 
@@ -39,7 +39,7 @@ sort(compareFn)
 
 ## 描述
 
-如果没有提供 `compareFn`，所有非 `undefined` 的数组元素都会被转换为字符串，并按照 UTF-16 码点顺序比较字符串进行排序。例如“banana”会被排列到“cherry”之前。在数值排序中，9 出现在 80 之前，但因为数字会被转换为字符串，在 Unicode 顺序中“80”要比“9”要靠前。所有的 `undefined` 元素都会被排序到数组的末尾。
+如果没有提供 `compareFn`，所有非 `undefined` 的数组元素都会被转换为字符串，并按照 UTF-16 码元顺序比较字符串进行排序。例如“banana”会被排列到“cherry”之前。在数值排序中，9 出现在 80 之前，但因为数字会被转换为字符串，在 Unicode 顺序中“80”排在“9”之前。所有的 `undefined` 元素都会被排序到数组的末尾。
 
 `sort()` 方法保留空槽。如果源数组是[稀疏的](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)，则空槽会被移动到数组的末尾，并始终排在所有 `undefined` 元素的后面。
 
@@ -168,16 +168,15 @@ items.sort(function (a, b) {
 // items 是 ['adieu', 'café', 'cliché', 'communiqué', 'premier', 'réservé']
 ```
 
-### 使用映射改善排序
+### 使用 map 改善排序
 
-`compareFunction` 可能需要对元素做多次映射以实现排序，尤其当 `compareFunction` 较为复杂，且元素较多的时候，某些 `compareFunction` 可能会导致很高的负载。使用 map 辅助排序将会是一个好主意。基本思想是首先将数组中的每个元素比较的实际值取出来，排序后再将数组恢复。
 `compareFn` 可能会在数组中的每个元素上调用多次。根据 `compareFn` 的性质，这可能会产生很高的开销。如果 `compareFn` 执行的工作更多，需要排序的元素更多，使用 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 进行排序可能更有效率。其思路是遍历数组一次，将用于排序的实际值提取到一个临时数组中，对临时数组进行排序，然后遍历临时数组以获得正确的顺序。
 
 ```js
 // 需要被排序的数组
-var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
+const data = ["delta", "alpha", "charlie", "bravo"];
 
-// 对需要排序的数字和位置的临时存储
+// 用于存放位置和排序值的对象数组
 const mapped = data.map((v, i) => {
   return { i, value: someSlowOperation(v) };
 });
@@ -332,6 +331,6 @@ console.log(Array.prototype.sort.call(arrayLike));
 - {{jsxref("Array.prototype.toSorted()")}}
 - {{jsxref("String.prototype.localeCompare()")}}
 - {{jsxref("TypedArray.prototype.sort()")}}
-- [Getting things sorted in V8](https://v8.dev/blog/array-sort) （v8.dev，2018 年 9 月 28 日）
-- [Stable `Array.prototype.sort`](https://v8.dev/features/stable-sort)
-- [Mathias Bynens' sort stability demo](https://mathiasbynens.be/demo/sort-stability)
+- [在 V8 中进行排序](https://v8.dev/blog/array-sort) （v8.dev，2018 年 9 月 28 日）
+- [稳定的 `Array.prototype.sort` 方法](https://v8.dev/features/stable-sort)
+- [Mathias Bynens 的排序稳定性演示](https://mathiasbynens.be/demo/sort-stability)

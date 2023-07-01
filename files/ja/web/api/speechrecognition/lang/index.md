@@ -6,7 +6,7 @@ l10n:
 ---
 
 {{APIRef("Web Speech API")}}
-**`lang`** は {{domxref("SpeechRecognition")}} インターフェイスのプロパティで、現在の `SpeechRecognition` の言語を返します。指定されていない場合、 HTML の {{htmlattrxref("lang","html")}} 属性を返し、またそれも指定されていない場合、ユーザーエージェントの言語の設定を返します。
+**`lang`** は {{domxref("SpeechRecognition")}} インターフェイスのプロパティで、現在の `SpeechRecognition` の言語を返します。指定されていない場合、 HTML の [`lang`](/ja/docs/Web/HTML/Element/html#lang) 属性を返し、またそれも指定されていない場合、ユーザーエージェントの言語の設定を返します。
 
 ### 値
 

@@ -48,8 +48,8 @@ Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit
 
 ### WebSocket
 
-- L'API [WebSocket](/fr/docs/WebSockets) supporte désormais les messages binaires (voir {{bug("676439")}}).
-- Le protocole et l'API ont été mis à jour suivant la dernière version de la spécification et l'API n'a plus de préfixe (voir {{bug("666349")}} et {{bug("695635")}}).
+- L'API [WebSocket](/fr/docs/WebSockets) supporte désormais les messages binaires (voir [bug Firefox 676439](https://bugzil.la/676439)).
+- Le protocole et l'API ont été mis à jour suivant la dernière version de la spécification et l'API n'a plus de préfixe (voir [bug Firefox 666349](https://bugzil.la/666349) et [bug Firefox 695635](https://bugzil.la/695635)).
 - Auparavant, les messages envoyés et reçus à l'aide de WebSockets dans Firefox été limités à 16 Mo en taille, désormais ils peuvent aller jusqu'à 2 Go (bien que les limitations de capacité de mémoire peut les empêcher d'être plus grand, Firefox le supporte).
 
 ### IndexedDB
@@ -92,7 +92,7 @@ Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit
 Les interfaces suivantes ont été supprimées car elles n'étaient plus indispensables :
 
 - `nsICharsetResolver`
-- `nsIDOMNSElement`, voir {{bug("707576")}} ; utilisez `nsIDOMElement` à la place.
+- `nsIDOMNSElement`, voir [bug Firefox 707576](https://bugzil.la/707576) ; utilisez `nsIDOMElement` à la place.
 
 ### Changement lié au thème
 

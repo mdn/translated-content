@@ -16,12 +16,12 @@ Firefox 59 は、米国時間 2018 年 3 月 13 日にリリースされまし�
 - [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) の応答タブで、応答が HTML である場合に [描画された HTML のプレビュー](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#html-preview) を表示するようになりました ([Firefox バグ 1353319](https://bugzil.la/1353319))。
 - ストレージインスペクターで表示する Cookie の情報 ([Cookie](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html#cookies) をご覧ください) で、それぞれの Cookie が same-site 状態であるかを示す _sameSite_ 列を追加しました ([Firefox バグ 1298370](https://bugzil.la/1298370))。
 - [定規](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) ツールで、ビューポートの現在の寸法を示す情報を表示するようになりました ([Firefox バグ 1402633](https://bugzil.la/1402633))。
-- [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で、カーソルキーを使用して画面の寸法を設定できるようにになりました ([Firefox バグ 1421663](https://bugzil.la/1421663))。詳しくは [画面のサイズを設定する](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#setting-screen-size) をご覧ください。
+- [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で、カーソルキーを使用して画面の寸法を設定できるようになりました ([Firefox バグ 1421663](https://bugzil.la/1421663))。詳しくは [画面のサイズを設定する](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#setting-screen-size) をご覧ください。
 - [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) の _ヘッダー_ タブに表示する*生ヘッダー*で、応答のステータスコードを表示するようになりました ([Firefox バグ 1419401](https://bugzil.la/1419401))。
 
 ### HTML
 
-- {{HTMLElement("textarea")}} 要素の {{htmlattrxref("autocomplete", "textarea")}} 属性を実装しました。要素でフォームのオートフィル機能を有効化または無効化できます。
+- {{HTMLElement("textarea")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/textarea#autocomplete) 属性を実装しました。要素でフォームのオートフィル機能を有効化または無効化できます。
 
 ### CSS
 
@@ -108,7 +108,7 @@ _変更なし。_
 
 ### HTML
 
-- {{htmlelement("script")}} 要素の {{htmlattrxref("type","script")}} 属性の非標準パラメーターである `version` (例えば `type="application/javascript;version=1.8"`) を削除しました ([Firefox バグ 1428745](https://bugzil.la/1428745))。
+- {{htmlelement("script")}} 要素の [`type`](/ja/docs/Web/HTML/Element/script#type) 属性の非標準パラメーターである `version` (例えば `type="application/javascript;version=1.8"`) を削除しました ([Firefox バグ 1428745](https://bugzil.la/1428745))。
 
 ### CSS
 

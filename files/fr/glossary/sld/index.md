@@ -1,11 +1,7 @@
 ---
 title: SLD
 slug: Glossary/SLD
-tags:
-  - Glossaire
-  - Infrastructure
 translation_of: Glossary/SLD
-original_slug: Glossaire/SLD
 ---
 
 Un SLD (Second Level Domain) est un domaine qui est hiérarchiquement directement sous un {{Glossary("TLD")}}.

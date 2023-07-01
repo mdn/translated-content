@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/length
 
 {{JSRef}}
 
-**`length`** 是 `Array` 的实例属性，表示该数组中元素的个数。该值是一个无符号 32 位整数，并且其数值总是大于数组最大索引。
+**`length`** 是 {{jsxref("Array")}} 的实例属性，表示该数组中元素的个数。该值是一个无符号 32 位整数，并且其数值总是大于数组最大索引。
 
 {{EmbedInteractiveExample("pages/js/array-length.html","shorter")}}
 
@@ -75,7 +75,7 @@ for (let i = 0; i < length; i++) {
 // 遍历后的结果 [2, 4, 6, 8, 10]
 ```
 
-### 缩短数组
+### 截断数组
 
 在下面的示例中，如果当前长度大于 3，数组 `numbers` 将会缩短为 3。
 

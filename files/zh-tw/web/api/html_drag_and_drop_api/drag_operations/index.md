@@ -17,14 +17,16 @@ In HTML, apart from the default behavior for images, links, and selections, no o
 
 除了文字選擇、圖片或超連結之外，沒有元素預設是可拖曳的。所以要讓一個元素可以拖曳，有幾件事必須要做：
 
-- 在想要拖曳的元素上設定 `[`draggable`](/zh-TW/docs/Web/HTML/Global_attributes#draggable)` 屬性為 `true`。
-- 註冊 `[`dragstart`](/zh-TW/docs/Web/API/HTMLElement/dragstart_event)` 事件之事件處理器。
+- 在想要拖曳的元素上設定 [`draggable`](/zh-TW/docs/Web/HTML/Global_attributes#draggable) 屬性為 `true`。
+- 註冊 {{domxref("HTMLElement/dragstart_event", "dragstart")}} 事件之事件處理器。
 - {{domxref("DataTransfer.setData","Set the drag data")}} within the listener defined above.
 
 以下是一段簡單的範例。
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
   This text <strong>may</strong> be dragged.
 </div>
 ```
@@ -36,7 +38,9 @@ draggable 為 true 後，該 DIV 元素便可以拖曳，反之，倘若 draggab
 至於 XUL 元素則是預設皆可拖曳。
 
 ```html
-<button label="Drag Me" ondragstart="event.dataTransfer.setData('text/plain', 'Drag Me Button');">
+<button
+  label="Drag Me"
+  ondragstart="event.dataTransfer.setData('text/plain', 'Drag Me Button');"></button>
 ```
 
 ## 開始拖曳
@@ -44,7 +48,9 @@ draggable 為 true 後，該 DIV 元素便可以拖曳，反之，倘若 draggab
 下方範例在 dragstart 註冊一個事件處理器。
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
   This text <strong>may</strong> be dragged.
 </div>
 ```
@@ -94,7 +100,7 @@ event.dataTransfer.clearData("text/uri-list");
 
 ## 設定拖曳圖片
 
-當拖曳進行中，以拖曳元素為基礎，一個半透明的圖片會自動產生出來，並且跟著滑鼠移動。如果想要，我們也可以呼叫[`setDragImage()來指定我們自己的拖曳使用圖片。`](/zh-TW/docs/DragDrop/DataTransfer#setDragImage.28.29)
+當拖曳進行中，以拖曳元素為基礎，一個半透明的圖片會自動產生出來，並且跟著滑鼠移動。如果想要，我們也可以呼叫 {{domxref("DataTransfer.setDragImage","setDragImage()")}} 來指定我們自己的拖曳使用圖片。
 
 ```js
 event.dataTransfer.setDragImage(image, xOffset, yOffset);
@@ -106,7 +112,10 @@ setDragImage 需要三個參數，一是圖片來源(通常是圖片元素，但
 
 ```js
 function dragWithCustomImage(event) {
-  var canvas = document.createElementNS("http://www.w3.org/1999/xhtml","canvas");
+  var canvas = document.createElementNS(
+    "http://www.w3.org/1999/xhtml",
+    "canvas"
+  );
   canvas.width = canvas.height = 50;
 
   var ctx = canvas.getContext("2d");
@@ -118,7 +127,7 @@ function dragWithCustomImage(event) {
   ctx.stroke();
 
   var dt = event.dataTransfer;
-  dt.setData('text/plain', 'Data to Drag');
+  dt.setData("text/plain", "Data to Drag");
   dt.setDragImage(canvas, 25, 25);
 }
 ```
@@ -184,7 +193,8 @@ dragenter 和 dragover 事件就是用來指定拖曳目標區，也就是放置
 
 ```html
 <div ondragover="return false">
-<div ondragover="event.preventDefault()">
+  <div ondragover="event.preventDefault()"></div>
+</div>
 ```
 
 通常我們只有在適當的時機點才需要呼叫 event.preventDefault 方法、取消預設事件行為，比如說被拖曳進來的是連結。所以檢查被拖曳進來的物件，當符合條件後再來取消預設事件行為。
@@ -192,11 +202,9 @@ dragenter 和 dragover 事件就是用來指定拖曳目標區，也就是放置
 藉由檢查拖曳資料型態來決定是否允許放置，是最常見的作法。dataTransfer 物件的[types](/zh-TW/docs/DragDrop/DataTransfer#types.28.29)屬性是一個拖曳資料型態的列表，其中順序按照資料被加入之先後排序。
 
 ```js
-function doDragOver(event)
-{
+function doDragOver(event) {
   var isLink = event.dataTransfer.types.contains("text/uri-list");
-  if (isLink)
-    event.preventDefault();
+  if (isLink) event.preventDefault();
 }
 ```
 
@@ -211,7 +219,7 @@ Note that the latest spec now dictates that {{domxref("DataTransfer.types")}} sh
 As a result, the [contains](/zh-TW/docs/Web/API/Node/contains) method no longer works on the property; the [includes](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method should be used instead to check if a specific type of data is provided, using code like the following:
 
 ```js
-if ([...event.dataTransfer.types].includes('text/html')) {
+if ([...event.dataTransfer.types].includes("text/html")) {
   // Do something
 }
 ```
@@ -245,8 +253,7 @@ You could always use some feature detection to determine which method is support
 要取出被丟入的資料，那就要呼叫 dataTransfer 物件的[getData](/zh-TW/docs/DragDrop/DataTransfer#getData.28.29)方法。getData 方法接受資料型態的參數，它會回傳[setData](/zh-TW/docs/DragDrop/DataTransfer#setData.28.29)所存入的對應資料型態的資料，倘若沒有對應型態資料，那空字串就會被回傳。
 
 ```js
-function onDrop(event)
-{
+function onDrop(event) {
   var data = event.dataTransfer.getData("text/plain");
   event.target.textContent = data;
   event.preventDefault();

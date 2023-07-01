@@ -148,7 +148,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
       <code>\p{<em>UnicodeProperty</em>}</code>，<code>\P{<em>UnicodeProperty</em>}</code>
     </td>
     <td>
-      根据字符的 <a href="/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes">Unicode 字符属性</a>匹配字符（例如，仅匹配表情符号字符、日文<em>片假名</em>字符、中文汉字字符或日文汉字字符等）。
+      根据字符的 <a href="/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape">Unicode 字符属性</a>匹配字符（例如，仅匹配表情符号字符、日文<em>片假名</em>字符、中文汉字字符或日文汉字字符等）。
     </td>
   </tr>
   <tr>
@@ -239,7 +239,7 @@ console.log("元音数：", aliceExcerpt.match(regexpVowels).length);
 
   - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)
-  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes)
+  - [Unicode 属性转义](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
   - [组和后向引用](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
 
 - [`RegExp()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

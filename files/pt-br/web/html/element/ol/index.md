@@ -42,7 +42,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
     - `'I'` indica algarismos romanos maiúsculos,
     - e `'1'` indica números (padrão).
 
-    O tipo de marcação é usado na lista inteira, a menos que um atributo {{htmlattrxref("type", "li")}} diferente seja utilizado dentro do elemento {{HTMLElement("li")}}.
+    O tipo de marcação é usado na lista inteira, a menos que um atributo [`type`](/pt-BR/docs/Web/HTML/Element/li#type) diferente seja utilizado dentro do elemento {{HTMLElement("li")}}.
 
     > **Nota:** Este atributo, obsoleto na HTML4, foi reintroduzido na HTML5. A menos que o valor do número na lista seja importante, a propriedade CSS {{cssxref("list-style-type")}} deve ser usada em seu lugar.
 
@@ -147,7 +147,7 @@ A saída HTML acima será:
 
   - a propriedade {{cssxref("list-style")}}, conveniente para escolher a forma como os ordinais são exibidos,
   - [contadores CSS](/pt-BR/docs/CSS_Counters), útil para gerenciar listas complexas aninhadas,
-  - a propriedade {{cssxref("line-height")}}, proficiente para simular o atributo obsoleto {{htmlattrxref("compact", "ol")}},
+  - a propriedade {{cssxref("line-height")}}, proficiente para simular o atributo obsoleto [`compact`](/pt-BR/docs/Web/HTML/Element/ol#compact),
   - a propriedade {{cssxref("margin")}}, aplicável para controlar a indentação da lista.
 
 {{HTMLSidebar}}

@@ -1,12 +1,7 @@
 ---
 title: Identificateur
 slug: Glossary/Identifier
-tags:
-  - Débutant
-  - Glossaire
-  - Partage
 translation_of: Glossary/Identifier
-original_slug: Glossaire/Identifiant
 ---
 
 Une séquence de caractères dans le code qui identifie une **{{glossary("Variable","variable")}}, une {{glossary("Function","fonction")}}, ou une {{glossary("Property","propriété")}}**.

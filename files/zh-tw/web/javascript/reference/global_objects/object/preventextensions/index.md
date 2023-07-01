@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/preventExtensions
 
 ## 語法
 
-```plain
+```js-nolint
 Object.preventExtensions(obj)
 ```
 
@@ -45,12 +45,12 @@ Object.isExtensible(empty); // === false
 // Object.defineProperty throws 當為無法擴充的物件增加屬性
 var nonExtensible = { removable: true };
 Object.preventExtensions(nonExtensible);
-Object.defineProperty(nonExtensible, 'new', { value: 8675309 }); // throws a TypeError
+Object.defineProperty(nonExtensible, "new", { value: 8675309 }); // throws a TypeError
 
 // 在 strict mode 中，嘗試去新增屬性給無法擴充物件，將 throws 出一個 TypeError。
 function fail() {
-  'use strict';
-  nonExtensible.newProperty = 'FAIL'; // throws a TypeError
+  "use strict";
+  nonExtensible.newProperty = "FAIL"; // throws a TypeError
 }
 fail();
 
@@ -58,7 +58,7 @@ fail();
 // (which is deprecated. Use Object.getPrototypeOf instead)):
 // A non-extensible object's prototype is immutable.
 var fixed = Object.preventExtensions({});
-fixed.__proto__ = { oh: 'hai' }; // throws a TypeError
+fixed.__proto__ = { oh: "hai" }; // throws a TypeError
 ```
 
 ## 筆記
@@ -81,7 +81,7 @@ Object.preventExtensions(1);
 
 {{Compat}}
 
-## 閱讀更多
+## 參見
 
 - {{jsxref("Object.isExtensible()")}}
 - {{jsxref("Object.seal()")}}

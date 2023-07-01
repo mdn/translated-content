@@ -1,11 +1,7 @@
 ---
 title: Élément
 slug: Glossary/Element
-tags:
-  - Glossaire
-  - HTML
 translation_of: Glossary/Element
-original_slug: Glossaire/Élément
 ---
 
 Un élément est une partie d'une page web. En {{glossary("XML")}} et {{glossary("HTML")}}, un élément peut contenir une donnée, un morceau de texte ou une image, ou même parfois ne rien contenir du tout. Un élément est typiquement constitué d'une balise ouvrante ayant quelques attributs, du contenu textuel et d'une balise fermante.

@@ -2,7 +2,7 @@
 
 ## 메타데이터 사용
 
-문서의 상단에 있는 메타데이터는 `title`, `slug`, `original_slug` 그리고 `l10n.*`만 사용합니다. (참고: [#7412](https://github.com/mdn/translated-content/issues/7412))
+문서의 상단에 있는 메타데이터는 `title`, `short-title`, `slug` 그리고 `l10n.*`만 사용합니다. (참고: [#7412](https://github.com/mdn/translated-content/issues/7412))
 
 영어 원문
 
@@ -39,6 +39,14 @@ l10n:
 **`Proxy`** 객체는 기본적인 동작(속성 접근, 할당, 순회, 열거, 함수 ...
   :
 ```
+
+<details>
+<summary>참고 문서</summary>
+
+- 2023.05.01: `original_slug` 필수 항목에서 제거 ([링크](https://github.com/mdn/translated-content/issues/7412#issuecomment-1518546547))
+- 2023.05.01: `short-title` 필수 항목에 추가 ([링크](https://github.com/mdn/yari/issues/8647#issuecomment-1520722736))
+
+</details>
 
 ## 문서 갱신 표시
 

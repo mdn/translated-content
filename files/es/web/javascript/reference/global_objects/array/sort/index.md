@@ -34,15 +34,15 @@ El array ordenado.
 Si no se provee `compareFunction`, los elementos son ordenados convirtiéndolos a strings y comparando la posición del valor Unicode de dichos strings. Por ejemplo, "Cherry" viene antes que "banana" (porque las mayúsculas van antes que las minúsculas en la codificación Unicode) . En un ordenamiento numérico, 9 está antes que 80, pero dado que los números son convertidos a strings y ordenados según el valor Unicode, el resultado será "80" antes que "9".
 
 ```js
-var frutas = ['guindas', 'manzanas', 'bananas'];
+const frutas = ['guindas', 'manzanas', 'bananas'];
 frutas.sort(); // ['bananas', 'guindas', 'manzanas']
 
-var puntos = [1, 10, 2, 21];
+const puntos = [1, 10, 2, 21];
 puntos.sort(); // [1, 10, 2, 21]
 // Tenga en cuenta que 10 viene antes que 2
 // porque '10' viene antes que '2' según la posición del valor Unicode.
 
-var cosas = ['word', 'Word', '1 Word', '2 Words'];
+const cosas = ['word', 'Word', '1 Word', '2 Words'];
 cosas.sort(); // ['1 Word', '2 Words', 'Word', 'word']
 // En Unicode, los números vienen antes que las letras mayúsculas
 // y estas vienen antes que las letras minúsculas.
@@ -73,15 +73,13 @@ function compare(a, b) {
 Para comparar números en lugar de strings, la función de comparación puede simplemente restar `b` de `a`. La siguiente función ordena el array de modo ascendente:
 
 ```js
-function compareNumbers(a, b) {
-  return a - b;
-}
+const compareNumbers = (a, b) => a - b;
 ```
 
 El metodo `sort` puede ser usado convenientemente con {{jsxref("Operators/function", "function expressions", "", 1)}} (y [closures](/es/docs/Web/JavaScript/Guide/Closures)):
 
 ```js
-var numbers = [4, 2, 5, 1, 3];
+const numbers = [4, 2, 5, 1, 3];
 numbers.sort(function(a, b) {
   return a - b;
 });
@@ -91,7 +89,7 @@ console.log(numbers); // [1, 2, 3, 4, 5]
 Los objectos pueden ser ordenados por el valor de una de sus propiedades.
 
 ```js
-var items = [
+const items = [
   { name: 'Edward', value: 21 },
   { name: 'Sharpe', value: 37 },
   { name: 'And', value: 45 },
@@ -118,36 +116,36 @@ items.sort(function (a, b) {
 Un array de elementos string, sin especificar una función de comparación:
 
 ```js
-var arr = [ 'a', 'b', 'Z', 'Aa', 'AA' ];
+const arr = [ 'a', 'b', 'Z', 'Aa', 'AA' ];
 arr.sort();  //[ 'AA', 'Aa', 'Z', 'a', 'b' ]
 ```
 
 Un array de elementos numéricos, sin función de comparación:
 
 ```js
-var arr = [ 40, 1, 5, 200 ];
+const arr = [ 40, 1, 5, 200 ];
 arr.sort();  //[ 1, 200, 40, 5 ]
 ```
 
 Un array de elementos numéricos, usando una función de comparación:
 
 ```js
-var arr = [ 40, 1, 5, 200 ];
+const arr = [40, 1, 5, 200];
 function comparar ( a, b ){ return a - b; }
-arr.sort( comparar );  // [ 1, 5, 40, 200 ]
+arr.sort(comparar);  // [1, 5, 40, 200]
 ```
 
 Lo mismo pero usando una función anónima normal:
 
 ```js
-var arr = [ 40, 1, 5, 200 ];
+const arr = [ 40, 1, 5, 200 ];
 arr.sort(function(a,b){return a - b;});  // [ 1, 5, 40, 200 ]
 ```
 
 Lo mismo escrito más compacto mediante una [función flecha](/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions):
 
 ```js
-var arr = [ 40, 1, 5, 200 ];
+const arr = [ 40, 1, 5, 200 ];
 arr.sort((a,b)=>a-b);  // [ 1, 5, 40, 200 ]
 ```
 
@@ -156,10 +154,11 @@ arr.sort((a,b)=>a-b);  // [ 1, 5, 40, 200 ]
 El siguiente ejemplo abunda en la idea de ordenar con y sin función de comparación. Además, ilustra una manera de mostrar un array una vez creado. El método [join](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/join) es usado para convertir el array en una cadena de texto que imprimir. Al no pasarle un argumento que indique el separador, usará la coma por defecto para separar los elementos del array dentro de la cadena.
 
 ```js
-var arr = ['80', '9', '700', 40, 1, 5, 200];
+const arr = ['80', '9', '700', 40, 1, 5, 200];
 function comparar(a, b) {
   return a - b;
 }
+
 console.log('original:', arr.join());
 console.log('ordenado sin función:', arr.sort());
 console.log('ordenado con función:', arr.sort(comparar));
@@ -178,7 +177,7 @@ ordenado con función: 1,5,9,40,80,200,700
 Para ordenar strings con characters no ASCII, i.e. strings con caracteres con acento (e, é, è, a, ä, etc.), strings de lenguajes diferentes al inglés: use {{jsxref("String.localeCompare")}}. Esta función puede comparar esos caracteres para que aparezcan en el orden correcto.
 
 ```js
-var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
+const items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });
@@ -192,10 +191,10 @@ La `compareFunction` puede ser invocada múltiples veces por elemento dentro del
 
 ```js
 // el array a ordenar
-var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
+const list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
 
 // array temporal contiene objetos con posición y valor de ordenamiento
-var mapped = list.map(function(el, i) {
+const mapped = list.map(function(el, i) {
   return { index: i, value: el.toLowerCase() };
 })
 
@@ -211,7 +210,7 @@ mapped.sort(function(a, b) {
 });
 
 // contenedor para el orden resultante
-var result = mapped.map(function(el){
+const result = mapped.map(function(el){
   return list[el.index];
 });
 ```

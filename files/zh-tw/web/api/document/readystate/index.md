@@ -45,7 +45,9 @@ switch (document.readyState) {
     break;
   case "complete":
     // 頁面已經完成讀取。
-    console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
+    console.log(
+      "The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText
+    );
     break;
 }
 ```
@@ -58,7 +60,7 @@ document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
     initApplication();
   }
-}
+};
 ```
 
 ### readystatechange 替代 load
@@ -69,7 +71,7 @@ document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     initApplication();
   }
-}
+};
 ```
 
 ## 規範

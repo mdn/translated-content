@@ -68,8 +68,8 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
   - : HTML 元素都含有**属性**。这些额外的属性值可以通过各种途径对元素进行配置或调整其行为。
 - [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
   - : 全局属性可以在所有 [HTML 元素](/zh-CN/docs/Web/HTML/Element)上进行设置，*包括那些没有在相关标准中出现的元素*。这意味着即使这些非标准元素使得文档并不符合 HTML5 标准，它们也必须允许这些属性存在。
-- [内联元素](/zh-CN/docs/Web/HTML/Inline_elements)和[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)
-  - : HTML 元素通常是"内联"或"块级"元素。一个内联元素仅会占用由定义它的标签所包裹起来的空间。而一个块级元素将会占用其父元素（容器）的全部空间，也就是创建一个“块”。
+- [行级元素](/zh-CN/docs/Glossary/Inline-level_content)和[块级元素](/zh-CN/docs/Glossary/Block-level_content)
+  - : HTML 元素通常是“行级”或“块级”元素。一个行级元素仅会占用由定义它的标签所包裹起来的空间。而一个块级元素将会占用其父元素（容器）的全部空间，也就是创建一个“块”。
 - [链接类型](/zh-CN/docs/Web/HTML/Link_types)
   - : 在 HTML 中，各种各样的链接类型被用来确立和定义两个文档之间的关系。可以设置链接类型的链接元素包括 {{HTMLElement("a")}}、{{HTMLElement("area")}} 和 {{HTMLElement("link")}}。
 - [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
@@ -81,5 +81,5 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
 
 ## 相关主题
 
-- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color)
+- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
   - : 这篇文章涵盖了大多数使用 CSS 为 HTML 内容增加颜色的方式，并列举了 HTML 文档里哪些部分可以进行上色以及这一操作需要使用哪些 CSS 属性。它包含了一些示例，配色建构工具的链接，以及其他内容。

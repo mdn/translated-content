@@ -35,12 +35,12 @@ var element = document.createElement(tagName[, options]);
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-  <title>||Working with elements||</title>
-</head>
-<body>
-  <div id="div1">The text above has been created dynamically.</div>
-</body>
+  <head>
+    <title>||Working with elements||</title>
+  </head>
+  <body>
+    <div id="div1">The text above has been created dynamically.</div>
+  </body>
 </html>
 ```
 
@@ -49,7 +49,7 @@ var element = document.createElement(tagName[, options]);
 ```js
 document.body.onload = addElement;
 
-function addElement () {
+function addElement() {
   // create a new div element
   // and give it some content
   var newDiv = document.createElement("div");

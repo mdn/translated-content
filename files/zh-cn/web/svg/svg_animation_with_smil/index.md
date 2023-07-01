@@ -91,7 +91,7 @@ Firefox 4 利用 [Synchronized Multimedia Integration Language](https://www.w3.o
 
 {{ EmbedLiveSample('示例 1：线性运动', '100%', 120) }}
 
-[查看示例](https://media.prod.mdn.mozit.cloud/samples/svg/svganimdemo1.html)
+[查看示例](https://mdn.dev/archives/media/samples/svg/svganimdemo1.html)
 
 ### 示例 2：曲线运动
 

@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-**`HTMLMediaElement.mediaGroup`** プロパティは HTML の {{htmlattrxref("mediaGroup", "video")}} 属性を反映し、所属する要素のグループの名前を示します。メディア要素のグループは、共通の `controller` を共有します。
+**`HTMLMediaElement.mediaGroup`** プロパティは HTML の [`mediaGroup`](/ja/docs/Web/HTML/Element/video#mediaGroup) 属性を反映し、所属する要素のグループの名前を示します。メディア要素のグループは、共通の `controller` を共有します。
 
 ## 値
 

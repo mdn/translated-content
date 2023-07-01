@@ -1,5 +1,5 @@
 ---
-title: '<picture>: The Picture element'
+title: "<picture>: The Picture element"
 slug: Web/HTML/Element/picture
 ---
 
@@ -26,14 +26,14 @@ slug: Web/HTML/Element/picture
 
 如果是要為高 DPI （Retina）螢幕提供圖片的高解析度版本時，可改在使用 `<img>` 上使用 [`srcset`](/zh-TW/docs/Web/HTML/Element/img#srcset) 屬性。這會讓瀏覽器在 data-saving 模式選擇低解析度的版本，這樣你就不用特地指定 `media` 條件。
 
-| [Content categories](/zh-TW/docs/Web/HTML/Content_categories) | [Flow content](/zh-TW/docs/Web/HTML/Content_categories#Flow_content), phrasing content, embedded content                                                             |
-| ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Content categories](/zh-TW/docs/Web/HTML/Content_categories) | [Flow content](/zh-TW/docs/Web/HTML/Content_categories#Flow_content), phrasing content, embedded content                                                |
+| ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Permitted content                                             | Zero or more {{HTMLElement("source")}} elements, followed by one {{HTMLElement("img")}} element, optionally intermixed with script-supporting elements. |
-| Tag omission                                                  | {{no_tag_omission}}                                                                                                                                             |
-| Permitted parents                                             | Any element that allows embedded content.                                                                                                                            |
-| Implicit ARIA role                                            | [No corresponding role](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                                  |
-| Permitted ARIA roles                                          | No `role` permitted                                                                                                                                                  |
-| DOM interface                                                 | {{domxref("HTMLPictureElement")}}                                                                                                                         |
+| Tag omission                                                  | {{no_tag_omission}}                                                                                                                                     |
+| Permitted parents                                             | Any element that allows embedded content.                                                                                                               |
+| Implicit ARIA role                                            | [No corresponding role](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role)                                                                     |
+| Permitted ARIA roles                                          | No `role` permitted                                                                                                                                     |
+| DOM interface                                                 | {{domxref("HTMLPictureElement")}}                                                                                                                       |
 
 ## 屬性
 
@@ -57,8 +57,8 @@ slug: Web/HTML/Element/picture
 
 ```html
 <picture>
-  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
-  <img src="mdn-logo-narrow.png" alt="MDN">
+  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)" />
+  <img src="mdn-logo-narrow.png" alt="MDN" />
 </picture>
 ```
 
@@ -74,9 +74,9 @@ slug: Web/HTML/Element/picture
 
 ```html
 <picture>
-  <source srcset="logo-768.png 768w, logo-768-1.5x.png 1.5x">
-  <source srcset="logo-480.png, logo-480-2x.png 2x">
-  <img src="logo-320.png" alt="logo">
+  <source srcset="logo-768.png 768w, logo-768-1.5x.png 1.5x" />
+  <source srcset="logo-480.png, logo-480-2x.png 2x" />
+  <img src="logo-320.png" alt="logo" />
 </picture>
 ```
 
@@ -86,8 +86,8 @@ slug: Web/HTML/Element/picture
 
 ```html
 <picture>
-  <source srcset="logo.webp" type="image/webp">
-  <img src="logo.png" alt="logo">
+  <source srcset="logo.webp" type="image/webp" />
+  <img src="logo.png" alt="logo" />
 </picture>
 ```
 

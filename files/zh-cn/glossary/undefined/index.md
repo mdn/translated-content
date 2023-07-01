@@ -3,6 +3,8 @@ title: undefined
 slug: Glossary/Undefined
 ---
 
+{{GlossarySidebar}}
+
 一个声明未定义的变量的初始值，或没有实际参数的形式参数。
 
 ## 示例

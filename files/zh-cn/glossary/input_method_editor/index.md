@@ -3,6 +3,8 @@ title: Input method editor
 slug: Glossary/Input_method_editor
 ---
 
+{{GlossarySidebar}}
+
 输入法编辑器 (IME) 是一种程序，可为文本输入提供专门的用户界面。输入法编辑器在许多情况下使用：
 
 - 使用拉丁键盘输入中文，日文或韩文文本

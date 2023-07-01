@@ -1,12 +1,7 @@
 ---
 title: TOFU
 slug: Glossary/TOFU
-tags:
-  - Glossaire
-  - HTTP
-  - Sécurité
 translation_of: Glossary/TOFU
-original_slug: Glossaire/TOFU
 ---
 
 **Trust On First Use** **(TOFU**) (_confiance à la première utilisation_) est un modèle de sécurité dans lequel un client doit créer une relation avec un serveur inconnu. Pour ce faire, les clients rechercheront des identifiants (par exemple des clés publiques) stockés localement. Si un identifiant est trouvé, le client peut établir la connexion. Si aucun identifiant n'est trouvé, le client peut demander à l'utilisateur de déterminer si le client doit approuver l'identifiant.

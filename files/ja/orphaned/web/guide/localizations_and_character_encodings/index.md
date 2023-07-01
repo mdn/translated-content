@@ -6,7 +6,7 @@ original_slug: Web/Guide/Localizations_and_character_encodings
 
 ブラウザは内部的にテキストを Unicode として処理します。ただし、ネットワークを介してブラウザにテキストを転送するには、文字をバイトで表現する方法 (文字エンコーディング) が使用されます。[HTML 仕様](http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#charset)では、UTF-8 エンコーディング (これはすべての Unicode を表すことができます) の使用を推奨しています。使用されるエンコーディングにかかわらず、Web コンテンツがどのエンコーディングを使用するかを宣言する必要があります。
 
-ページの文字エンコーディングを指定するためには、{{HTMLElement("meta")}} 要素の {{htmlattrxref("charset", "meta")}} 属性を使用します。これは {{HTMLElement("head")}} ブロックの中で使用する**必要があります**。
+ページの文字エンコーディングを指定するためには、{{HTMLElement("meta")}} 要素の [`charset`](/ja/docs/Web/HTML/Element/meta#charset) 属性を使用します。これは {{HTMLElement("head")}} ブロックの中で使用する**必要があります**。
 
 例えばページが (推奨されている通りに) UTF-8 文字エンコーディングを使用していることを指定するには、{{HTMLElement("head")}} ブロックの中に次の行を記述します:
 

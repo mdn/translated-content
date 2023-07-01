@@ -48,7 +48,7 @@ HTML 文档结构非常的简单，这个游戏将整个被渲染在框架生成
 
 ## 捋一捋我们干了些啥
 
-这个时候我们在 {{htmlelement("header")}} 里定义了 {{htmlelement("charset")}} ，{{htmlelement("title")}} 和一些基础的 css 来重置默认的 margin 和 padding. 我们也用 {{htmlelement("script")}} 标签向页面引入了 Phaser 源码。{{htmlelement("body ")}} 里也有一个 {{htmlelement("script")}} 标签，我们将在里面写 JavaScript 代码来渲染和控制游戏。
+这个时候我们在 {{htmlelement("header")}} 里定义了 `charset`、{{htmlelement("title")}} 和一些基础的 css 来重置默认的 margin 和 padding。我们也用 {{htmlelement("script")}} 标签向页面引入了 Phaser 源码。{{htmlelement("body ")}} 里也有一个 {{htmlelement("script")}} 标签，我们将在里面写 JavaScript 代码来渲染和控制游戏。
 
 {{htmlelement("canvas")}} 元素是由框架自动生成的。我们是通过 `Phaser.Game` 创建一个对象并赋给了 game 变量来完成初始化的。参数的含义是：
 

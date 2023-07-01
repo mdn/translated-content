@@ -59,7 +59,7 @@ slug: Web/HTML/Element/tfoot
 
 以下の属性は非推奨であり、使用すべきではありません。これらの属性は、既存のコードを更新する際の参考として、また歴史的な興味のためだけに、以下に文書化されています。
 
-- {{htmlattrdef("align")}} {{deprecated_inline}}
+- `align` {{deprecated_inline}}
 
   - : この列挙属性は、各セルの内容物について、水平方向の配置方法を制御します。以下の値が指定可能です。
 
@@ -67,26 +67,26 @@ slug: Web/HTML/Element/tfoot
     - `center`: 内容物をセル内で中央揃えにします。
     - `right`: 内容物をセルの右側に揃えます。
     - `justify`: 内容物がセル内で両端揃えになるように、テキストコンテンツに空白を挿入します。
-    - `char`: テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は {{htmlattrxref("char", "tfoot")}} 属性および {{htmlattrxref("charoff", "tfoot")}} 属性で定義します。
+    - `char`: テキストコンテンツを特定の文字に対して、最小のオフセットで揃えます。特定の文字は [`char`](/ja/docs/Web/HTML/Element/tfoot#char) 属性および [`charoff`](/ja/docs/Web/HTML/Element/tfoot#charoff) 属性で定義します。
 
     この属性が設定されていない場合は、`left` 値であるものとします。
 
     > **メモ:**
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
-    > - CSS3 で `char` の値と同様の効果を得るには、 {{htmlattrxref("char", "tfoot")}} の値を {{cssxref("text-align")}} プロパティの値として使用することができます。 {{unimplemented_inline}}
+    > - CSS3 で `char` の値と同様の効果を得るには、 [`char`](/ja/docs/Web/HTML/Element/tfoot#char) の値を {{cssxref("text-align")}} プロパティの値として使用することができます。 {{unimplemented_inline}}
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : 表の背景色です。この属性は、列の各セルの背景色を定義します。 [6 桁の 16 進数の RGB コード](/ja/docs/Web/CSS/color_value#rgb_colors)の前に '`#`' が付いた形です。定義済みの[色キーワード](/ja/docs/Web/CSS/color_value#color_keywords)の一つを使用することもできます。
 
     同様の効果を得るには、 CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
-- {{htmlattrdef("char")}} {{deprecated_inline}}
-  - : この属性は、列内のセルの内容をある文字へ整列することを指定します。典型的な値としては、数字や金額を整列させようとするときのピリオド (.) があります。 {{htmlattrxref("align", "tfoot")}} が `char` に設定されていない場合、この属性は無視されます。
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `char` {{deprecated_inline}}
+  - : この属性は、列内のセルの内容をある文字へ整列することを指定します。典型的な値としては、数字や金額を整列させようとするときのピリオド (.) があります。 [`align`](/ja/docs/Web/HTML/Element/tfoot#align) が `char` に設定されていない場合、この属性は無視されます。
+- `charoff` {{deprecated_inline}}
   - : この属性は、`char` 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
 
   - : この属性は、表本体の各行のセルにおける垂直方向のテキスト配置方法を指定します。以下の値が指定可能です。
 

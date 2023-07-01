@@ -1,6 +1,6 @@
 ---
 title: CSS Containment
-slug: Web/CSS/CSS_Containment
+slug: Web/CSS/CSS_containment
 ---
 
 {{CSSRef}}
@@ -9,7 +9,7 @@ CSS 局限规范的目标在于通过允许浏览器从页面的其余部分中�
 
 此外，此规范允许开发者标示元素究竟是否应当渲染其内容，以及在屏外时是否应当渲染其内容。由此允许用户代理在恰当的时候在元素上应用局限，并有望将布局和渲染推迟至需要时再进行。
 
-此规范定义了 CSS 属性 {{CSSXref("contain")}} 和 {{CSSXref("content-visibility")}}。本文档描述了此规范的基本目标。CSS 容器查询的细节见 [CSS 容器查询](/zh-CN/docs/Web/CSS/CSS_Container_Queries)。
+此规范定义了 CSS 属性 {{CSSXref("contain")}} 和 {{CSSXref("content-visibility")}}。本文档描述了此规范的基本目标。CSS 容器查询的细节见 [CSS 容器查询](/zh-CN/docs/Web/CSS/CSS_container_queries)。
 
 ## 基本示例
 
@@ -100,7 +100,7 @@ article {
 }
 ```
 
-尽管名称如此，但是样式局限不提供如由 [Shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 可得的域限（scoped）样式。其主要用途为防止 [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)可在元素中被更改的情形出现，此情形可影响树的其余部分。
+尽管名称如此，但是样式局限不提供如由 [Shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 可得的域限（scoped）样式。其主要用途为防止 [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)可在元素中被更改的情形出现，此情形可影响树的其余部分。
 
 使用 `contain: style` 将确保由 {{CSSXref("counter-increment")}} 和 {{CSSXref("counter-set")}} 属性所创建的新计数器的作用域被限制为此子树。
 
@@ -131,18 +131,18 @@ contain: strict;
 
 ### 与用户相关
 
-此规范提及了[与用户相关](https://w3c.github.io/csswg-drafts/css-contain/#relevant-to-the-user)这一概念。与用户相关的元素因为可见或用户正在交互所以应被渲染。
+此规范提及了[与用户相关](https://drafts.csswg.org/css-contain/#relevant-to-the-user)这一概念。与用户相关的元素因为可见或用户正在交互所以应被渲染。
 
 确切而言，若下列任意条件为真则元素与用户相关：
 
 - 元素出现于视口或视口周围由用户代理所定义的外边距（视口尺度的 50%，给予应用在元素可见性改变时做准备的时间）内。
 - 元素或其内容获得焦点。
 - 元素或其内容被选中，例如用鼠标光标在文本上拖拽或进行其他突显操作。
-- 元素或其内容被置于[顶层](https://w3c.github.io/csswg-drafts/css-position-4/#top-layer)。
+- 元素或其内容被置于[顶层](https://drafts.csswg.org/css-position-4/#top-layer)。
 
 ### 跳过其内容
 
-此规范提及了[跳过其内容](https://w3c.github.io/csswg-drafts/css-contain/#skips-its-contents)这一概念。此概念意味着所指元素与用户无关，且为改善性能将不被渲染。
+此规范提及了[跳过其内容](https://drafts.csswg.org/css-contain/#skips-its-contents)这一概念。此概念意味着所指元素与用户无关，且为改善性能将不被渲染。
 
 确切而言，在元素跳过其内容时：
 

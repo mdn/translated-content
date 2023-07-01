@@ -5,7 +5,7 @@ slug: Web/API/NDEFReader/scan
 
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
-`scan()` は {{DOMxRef("NDEFReader")}} インターフェイスのメソッドで、読み取り機器を起動し、 {{jsxref("Promise")}} を返します。このプロミスは NFC タグが読み取れたときに解決し、ハードウェアや権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
+`scan()` は {{DOMxRef("NDEFReader")}} インターフェイスのメソッドで、読み取り機器を起動し、 {{jsxref("Promise")}} を返します。このプロミスは NFC タグの読み取りを開始したときに解決し、ハードウェアや権限のエラーが発生したときは拒否されます。このメソッドは、 "nfc" の権限が事前に許可されていない場合は、許可を問い合わせるプロンプトを起動します。
 
 ## 構文
 
@@ -23,7 +23,7 @@ var readerPromise = NDEFReader.scan(options);
 
 ### 返値
 
-{{JSxRef("Promise")}} で、 NFC アダプターのスケジュール済みの読み取り操作が終わると直ちに解決します。
+{{JSxRef("Promise")}} で、 NFC アダプターで読み取り操作のスケジューリングが終わると直ちに解決します。
 
 ## 例外
 

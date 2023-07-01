@@ -21,7 +21,7 @@ toString()
 
 ## 描述
 
-{{jsxref("Array")}} 对象覆盖了 {{jsxref("Object")}} 的 `toString` 方法。数组的 `toString` 方法实际上在内部调用了 [`join()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 方法来拼接数组并返回一个包含所有数组元素的字符串，元素之间用逗号分隔。如果 `join` 方法不可用或者不是函数，则会使用 [`Object.prototype.toString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 来代替, 并返回 `[object Array]`。
+{{jsxref("Array")}} 对象覆盖了 {{jsxref("Object")}} 的 `toString` 方法。数组的 `toString` 方法实际上在内部调用了 [`join()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 方法来拼接数组并返回一个包含所有数组元素的字符串，元素之间用逗号分隔。如果 `join` 方法不可用或者不是函数，则会使用 [`Object.prototype.toString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 来代替，并返回 `[object Array]`。
 
 ```js
 const arr = [];

@@ -1,6 +1,6 @@
 ---
 title: CSS 动画
-slug: Web/CSS/CSS_Animations
+slug: Web/CSS/CSS_animations
 ---
 
 {{CSSRef}}
@@ -59,9 +59,9 @@ CSS 动画模块（CSS Animation）可以让你通过使用关键帧对 CSS 属�
 
 ## 指南
 
-- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : 关于如何使用 CSS 创建动画的分步教程，本文介绍每个相关的 CSS 属性和规则，并解释它们如何交互。
-- [CSS 动画提示和技巧](/zh-CN/docs/Web/CSS/CSS_Animations/Tips)
+- [CSS 动画提示和技巧](/zh-CN/docs/Web/CSS/CSS_animations/Tips)
   - : 帮助你充分利用 CSS 动画的技巧和窍门。
 
 ## 相关概念
@@ -75,13 +75,9 @@ CSS 动画模块（CSS Animation）可以让你通过使用关键帧对 CSS 属�
 
 {{Specifications}}
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - {{Experimental_Inline}} CSS 滚动时间线 {{cssxref('scroll-timeline-name')}} 和 {{cssxref('scroll-timeline-axis')}} 属性，以及 {{cssxref('scroll-timeline')}} 简写属性，创建与滚动容器的滚动偏移相关的动画。
-- [CSS 变换](/zh-CN/docs/Web/CSS/CSS_Transitions)模块中的属性根据用户的动作触发动画。
+- [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transitions)模块中的属性根据用户的动作触发动画。
 - HTML {{htmlelement("canvas")}} 元素与 [canvas API](/zh-CN/docs/Web/API/Canvas_API) 和 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)一起用来绘制图形和动画。
 - 所有动画相关元素的 {{domxref("SVGAnimationElement")}} 接口，包括 {{domxref("SVGAnimateElement")}}、{{domxref("SVGSetElement")}}、{{domxref("SVGAnimateColorElement")}}、{{domxref("SVGAnimateMotionElement")}} 以及 {{domxref("SVGAnimateTransformElement")}}。

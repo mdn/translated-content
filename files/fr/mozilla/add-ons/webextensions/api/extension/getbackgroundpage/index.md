@@ -18,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
 
 Alias de {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
 
-> **Note :** Cette méthode ne peut pas être utilisée en mode Navigation privée - elle renvoie toujours un tableau vide. Pour plus d'informations, voir {{bug(1329304)}}.
+> **Note :** Cette méthode ne peut pas être utilisée en mode Navigation privée - elle renvoie toujours un tableau vide. Pour plus d'informations, voir le [bug Firefox 1329304](https://bugzil.la/1329304).
 
 ## Syntaxe
 

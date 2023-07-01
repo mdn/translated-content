@@ -62,7 +62,7 @@ function updateProgress(percentComplete) {
 ## 単純な ARIA の強化
 
 - [Enhancing page navigation with ARIA landmarks](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
-  - : 画面リーダーの利用者向けにウェブページのナビゲーションを向上させるための、 ARIA landmark の使用法を紹介します。 [ARIA landmark の実装状況の覚え書き](https://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/)や実際のサイトでの例もご覧ください (2011 年 7 月更新)。
+  - : スクリーンリーダーの利用者向けにウェブページのナビゲーションを向上させるための、 ARIA landmark の使用法を紹介します。 [ARIA landmark の実装状況の覚え書き](https://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/)や実際のサイトでの例もご覧ください (2011 年 7 月更新)。
 - [フォームのアクセシビリティ向上](/ja/docs/Web/Accessibility/ARIA/forms)
   - : ARIA は動的コンテンツのためだけのものではありません! 付加的な ARIA の属性を使用して HTML フォームのアクセシビリティを向上させる方法を学びましょう。
 
@@ -71,9 +71,9 @@ function updateProgress(percentComplete) {
 - [キーボードで操作可能な JavaScript ウィジェットを書く](/ja/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : \<input> や \<button> などのような組み込み要素は、キーボードのアクセシビリティが組み込まれています。これらを \<div> と ARIA で「偽装」する場合は、ウィジェットがキーボードでアクセシブルであることを保証する必要があります。
 - [ライブリージョン](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-  - : ライブリージョンは、ページのコンテンツが変更された場合に、画面リーダーにどのように対処すべきかを提案します。
+  - : ライブリージョンは、ページのコンテンツが変更された場合に、スクリーンリーダーにどのように対処すべきかを提案します。
 - [Using ARIA Live Regions to announce content changes](https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)
-  - : 画面リーダーソフトウェア JAWS のメーカーによる、ライブリージョンについての簡単なまとめです。ライブリージョンは、 Firefox と NVDA、 Safari と VoiceOver でも対応しています。
+  - : スクリーンリーダーソフトウェア JAWS のメーカーによる、ライブリージョンについての簡単なまとめです。ライブリージョンは、 Firefox と NVDA、 Safari と VoiceOver でも対応しています。
 
 ## リファレンス
 

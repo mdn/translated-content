@@ -1,5 +1,5 @@
 ---
-title: 'Express 教學 7: 佈署到生產環境'
+title: "Express 教學 7: 佈署到生產環境"
 slug: Learn/Server-side/Express_Nodejs/deployment
 ---
 
@@ -108,21 +108,19 @@ slug: Learn/Server-side/Express_Nodejs/deployment
 在生產環境中，最小化“調試”日誌記錄的一種方法，是使用類似調試 [debug](https://www.npmjs.com/package/debug) 的模塊，允許您通過設置環境變量，來控制執行的日誌記錄。例如，下面的代碼片段，顯示如何設置 “author” 日誌記錄。調試變量使用名稱 “author” 聲明，並且將自動顯示，來自此對象的所有日誌的前綴 “author”。
 
 ```js
-var debug = require('debug')('author');
+var debug = require("debug")("author");
 
 // Display Author update form on GET
-exports.author_update_get = function(req, res, next) {
-
-    req.sanitize('id').escape().trim();
-    Author.findById(req.params.id, function(err, author) {
-        if (err) {
-            debug('update error:' + err);
-            return next(err);
-        }
-        //On success
-        res.render('author_form', { title: 'Update Author', author: author });
-    });
-
+exports.author_update_get = function (req, res, next) {
+  req.sanitize("id").escape().trim();
+  Author.findById(req.params.id, function (err, author) {
+    if (err) {
+      debug("update error:" + err);
+      return next(err);
+    }
+    //On success
+    res.render("author_form", { title: "Update Author", author: author });
+  });
 };
 ```
 
@@ -248,10 +246,10 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
 2. 登錄後，單擊頂部工具欄中的 + 號鏈接，然後選擇新建儲存庫 **New repository**。
 3. 填寫此表單上的所有字段。雖然這些不是強制性的，但強烈建議使用它們。
 
-    - 輸入新的存儲庫名稱（例如，express-locallibrary-tutorial）和描述（例如 “以 Express（node）編寫的本地圖書館網站”）。
-    - 在 Add .gitignore 選擇列表中選擇 **Node**。
-    - 在添加許可證 Add license 選擇列表中，選擇您偏好的許可證。
-    - 點選 使用自述文件初始化此儲存庫 **Initialize this repository with a README**.
+   - 輸入新的存儲庫名稱（例如，express-locallibrary-tutorial）和描述（例如 “以 Express（node）編寫的本地圖書館網站”）。
+   - 在 Add .gitignore 選擇列表中選擇 **Node**。
+   - 在添加許可證 Add license 選擇列表中，選擇您偏好的許可證。
+   - 點選 使用自述文件初始化此儲存庫 **Initialize this repository with a README**.
 
 4. 按 **Create repository**.
 5. 單擊新倉庫頁面上的綠色“克隆或下載”按鈕 "**Clone or download**" 。
@@ -263,50 +261,50 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
 
 2. 打開命令提示符/終端，並使用您在上面複製的 URL ，克隆儲存庫：
 
-    ```bash
-    git clone https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git
-    ```
+   ```bash
+   git clone https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git
+   ```
 
-    這將在當前時間點之後，創建儲存庫。
+   這將在當前時間點之後，創建儲存庫。
 
 3. 到新的儲存庫。
 
-    ```bash
-    cd express-locallibrary-tutorial
-    ```
+   ```bash
+   cd express-locallibrary-tutorial
+   ```
 
 最後一步，是複制你的應用程序，然後使用 git ，將文件添加到你的倉庫：
 
 1. 將 Express 應用程序，複製到此文件夾中（不包括 **/node_modules**，其中包含您應根據需要，從 NPM 獲取的依賴項文件）。
 2. 打開命令提示符/終端，並使用 `add` 命令，將所有文件添加到 git。
 
-    ```bash
-    git add -A
-    ```
+   ```bash
+   git add -A
+   ```
 
 3. 使用 status 命令，檢查要添加的所有文件是否正確（您希望包含源文件，而不是二進製文件，臨時文件等）。它應該看起來有點像下面的列表。
 
-    ```plain
-    > git status
-    On branch master
-    Your branch is up-to-date with 'origin/master'.
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
+   ```plain
+   > git status
+   On branch master
+   Your branch is up-to-date with 'origin/master'.
+   Changes to be committed:
+     (use "git reset HEAD <file>..." to unstage)
 
-            new file:   ...
-    ```
+           new file:   ...
+   ```
 
 4. 如果您滿意，請將文件提交到本地儲存庫：
 
-    ```bash
-    git commit -m "First version of application moved into github"
-    ```
+   ```bash
+   git commit -m "First version of application moved into github"
+   ```
 
 5. 然後使用以下內容，將本地儲存庫同步到 Github 網站：
 
-    ```bash
-    git push origin master
-    ```
+   ```bash
+   git push origin master
+   ```
 
 完成此操作後，您應該可以返回創建儲存庫的 Github 上的頁面，刷新頁面，並查看您的整個應用程序現已上傳。使用此添加/提交/推送循環，您可以在文件更改時，繼續更新儲存庫。
 
@@ -351,13 +349,16 @@ v8.9.1
 打開 **app.js**，並找到設置 mongoDB 連接變量的行。它看起來像這樣：
 
 ```js
-var mongoDB = 'mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library';
+var mongoDB =
+  "mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library";
 ```
 
 使用以下代碼替換該行，該代碼使用 `process.env.MONGODB_URI` 從名為 `MONGODB_URI` 的環境變量中，獲取連接字符串（如果已設置）（使用您自己的數據庫 URL，而不是下面的佔位符。）
 
 ```js
-var mongoDB = process.env.MONGODB_URI || 'mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library';
+var mongoDB =
+  process.env.MONGODB_URI ||
+  "mongodb://your_user_id:your_password@ds119748.mlab.com:19748/local_library";
 ```
 
 #### 安裝依賴並重新測試

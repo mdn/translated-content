@@ -19,8 +19,8 @@ Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article four
 - La propriété `profile` de {{domxref("HTMLHeadElement")}} a été supprimée, cette propriété est obsolète depuis Gecko 2.0.
 - Les propriétés `x` et `y` de {{domxref("HTMLImageElement")}} ont été supprimées.
 - Le paramètre `before` de la méthode `add()` de {{domxref("HTMLSelectElement")}} est désormais optionnel.
-- L'attribut {{htmlattrxref("background", "body")}} de l'élément {{HTMLElement("body")}} n'est plus résolu en tant qu'URI, ce qui est conforme à la spécification HTML courante.
-- L'attribut {{htmlattrxref("label", "option")}} de l'élément {{HTMLElement("option")}} reflète désormais la valeur du contenu texte de l'élément si l'attribut n'est pas spécifié.
+- L'attribut [`background`](/fr/docs/Web/HTML/Element/body#background) de l'élément {{HTMLElement("body")}} n'est plus résolu en tant qu'URI, ce qui est conforme à la spécification HTML courante.
+- L'attribut [`label`](/fr/docs/Web/HTML/Element/option#label) de l'élément {{HTMLElement("option")}} reflète désormais la valeur du contenu texte de l'élément si l'attribut n'est pas spécifié.
 
 #### Canvas
 
@@ -138,7 +138,7 @@ Ajout du support pour le multi-reporters, c'est le rapporteur de mémoire qui ra
 - L'interface `nsIDOMWindow_2_0_BRANCH` a été intégrée dans l'interface `nsIDOMWindowInternal`.
 - Les méthodes `nsINavHistoryObserver` avec des paramètres d'URI exigent désormais un GUID.
 - L'interface `nsISHistory_2_0_BRANCH` a été intégrée dans l'interface `nsISHistory`.
-- `nsITelemetry` a une nouvelle méthode, `nsITelemetry.getHistogramById()` qui retourne un histogramme par son ID, et un nouvel attribut `canRecord` qui, lorsqu'il est défini sur `false` désactive l'enregistrement des statistiques de télémétrie. Les statistiques de télémétrie ne sont plus enregistrées lorsque l'on est en mode de navigation privée. (voir {{bug("661574")}} et {{bug("661573")}})
+- `nsITelemetry` a une nouvelle méthode, `nsITelemetry.getHistogramById()` qui retourne un histogramme par son ID, et un nouvel attribut `canRecord` qui, lorsqu'il est défini sur `false` désactive l'enregistrement des statistiques de télémétrie. Les statistiques de télémétrie ne sont plus enregistrées lorsque l'on est en mode de navigation privée. (voir [bug Firefox 661574](https://bugzil.la/661574) et [bug Firefox 661573](https://bugzil.la/661573))
   Les histogrammes de télémétrie définis avec `nsITelemetry.newHistogram()` ne seront pas rapportés dans le ping de télémétrie.
 - L'interface `nsIMemoryReporter` a été sensiblement modifiée, si vous l'utilisez, vous devez faire quelques ajustements à votre code.
 - Les en-têtes `nsIXMLHttpRequest` fixées par `nsIXMLHttpRequest.setRequestHeader()` sont envoyées à la demande lorsque l'on suit une redirection. Auparavant, ces en-têtes n'auraient pas été envoyées.

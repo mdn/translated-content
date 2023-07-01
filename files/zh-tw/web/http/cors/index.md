@@ -29,7 +29,7 @@ slug: Web/HTTP/CORS
 - 網頁字體（跨網域 CSS 的 `@font-face` 的字體用途），[所以伺服器可以佈署 TrueType 字體，並限制只讓信任的網站跨站載入](http://www.webfonts.info/wiki/index.php?title=%40font-face_support_in_Firefox)。
 - [WebGL 紋理](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - 以 [`drawImage`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/drawImage) 繪製到 Canvas 畫布上的圖形／影片之影格。
-- CSS 樣式表（讓 [CSSOM](/zh-TW/docs/Web/CSS/CSSOM_View) 存取）。
+- CSS 樣式表（讓 [CSSOM](/zh-TW/docs/Web/CSS/CSSOM_view) 存取）。
 - 指令碼（for unmuted exceptions）。
 
 本文主要討論跨來源資源共用與相關必要的 HTTP 標頭。
@@ -87,11 +87,11 @@ slug: Web/HTTP/CORS
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/public-data/';
+var url = "http://bar.other/resources/public-data/";
 
 function callOtherDomain() {
-  if(invocation) {
-    invocation.open('GET', url, true);
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.onreadystatechange = handler;
     invocation.send();
   }
@@ -323,11 +323,11 @@ CORS 通訊協定最初要求此預檢請求重新導向的行為，但[在隨�
 
 ```js
 var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/credentialed-content/';
+var url = "http://bar.other/resources/credentialed-content/";
 
-function callOtherDomain(){
-  if(invocation) {
-    invocation.open('GET', url, true);
+function callOtherDomain() {
+  if (invocation) {
+    invocation.open("GET", url, true);
     invocation.withCredentials = true;
     invocation.onreadystatechange = handler;
     invocation.send();

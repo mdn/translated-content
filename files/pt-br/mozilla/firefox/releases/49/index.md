@@ -35,12 +35,12 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 ### HTML
 
 - Adicionado suporte para estes elementros: {{HTMLElement("details")}} e {{HTMLElement("summary")}} ({{bug(1226455)}}).
-- O {{htmlattrxref("pattern", "input")}} atribuido para {{HTMLElement("input")}} agora usa o parâmetro `'u'` no JavaScript base {{jsxref("RegExp")}} ({{bug(1227906)}}).
-- Para corresponder a uma mudança específica, de um valor inválido {{htmlattrxref("kind", "track")}} atributo do elemento {{HTMLElement('track')}} é agora tratado como `"metadata"` ao invés de`"subtitles"` ({{bug(1269712)}}).
-- O atributo {{htmlattrxref("sandbox", "iframe")}} do elemento {{HTMLElement("iframe")}} agora suporta os valores 'allow-popups-to-escape-sandbox' e 'allow-modals' ({{bug(1190641)}}).
+- O [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) atribuido para {{HTMLElement("input")}} agora usa o parâmetro `'u'` no JavaScript base {{jsxref("RegExp")}} ({{bug(1227906)}}).
+- Para corresponder a uma mudança específica, de um valor inválido [`kind`](/pt-BR/docs/Web/HTML/Element/track#kind) atributo do elemento {{HTMLElement('track')}} é agora tratado como `"metadata"` ao invés de`"subtitles"` ({{bug(1269712)}}).
+- O atributo [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#sandbox) do elemento {{HTMLElement("iframe")}} agora suporta os valores 'allow-popups-to-escape-sandbox' e 'allow-modals' ({{bug(1190641)}}).
 - Suporte para atributos microdata e a Microdata API foram removidas ({{bug(909633)}}).
-- O atributo {{htmlattrxref("referrerpolicy", "a")}} do elemento {{HTMLElement("a")}} agora suporta esses atributos `'no-referrer-when-downgrade`' e `'origin-when-cross-origin'` ({{bug(1178337)}}).
-- O {{htmlattrxref("form", "label")}} que é atributo do elemento {{HTMLElement("label")}} foi removido. A propriedade {{domxref("HTMLLabelElement.form")}} ainda existe, mas agora retorna o formulário na qual o controle do label's está associado , se houver um controle (e se esse controle for associado ao formulário) ({{bug(1268852)}}).
+- O atributo [`referrerpolicy`](/pt-BR/docs/Web/HTML/Element/a#referrerpolicy) do elemento {{HTMLElement("a")}} agora suporta esses atributos `'no-referrer-when-downgrade`' e `'origin-when-cross-origin'` ({{bug(1178337)}}).
+- O [`form`](/pt-BR/docs/Web/HTML/Element/label#form) que é atributo do elemento {{HTMLElement("label")}} foi removido. A propriedade {{domxref("HTMLLabelElement.form")}} ainda existe, mas agora retorna o formulário na qual o controle do label's está associado , se houver um controle (e se esse controle for associado ao formulário) ({{bug(1268852)}}).
 
 ### CSS
 
@@ -90,8 +90,8 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 - Adicionado o _metodo experimental_ e _non-standard_ do metodo {{domxref("HTMLMediaElement.seekToNextFrame()")}}, que permite bucar quadro a quadro no conteúdo do vídeo ({{bug(1235301)}}). Equanto você é incentivado a expertimentar, dessar forma você nos ajuda a entender o quão útil ele é, _não use ele em produção de código!_
 - A propriedade {{domxref("HTMLLabelElement.form")}} agora retorna a forma com que o controle de label's foi assiciado, se houver um controle (e se esse controle for associado ao formulário). Anteriormente, labels eram diretamente associados com formulários usando essa propriedade ({{bug(1268852)}}).
 - Suporte ao paramtro third de {{domxref("EventTarget.addEventListener()")}}, ou um {{jsxref("Boolean")}} ou a `EventListenerOptions` foi adicionado ({{bug(1266164)}} and {{bug(1266066)}}).
-- O volume do áudio relativo a {{domxref("KeyboardEvent.key")}} foram renomeados. `"VolumeDown"` é agora `"AudioVolumeDown"`, `"VolumeUp"` é agora `"AudioVolumeUp"`, e `"VolumeMute"` e agora `"AudioVolumeMute".` Isso traz Firefox para alinhamento com os últimos rascunhos de especificações de UI Events* ({{bug(1272578)}}). Veja {{SectionOnPage("/pt-BR/docs/Web/API/KeyboardEvent/code", "Code values")}} para uma lista completa de possibilidades de códigos.
-- Os códigos ateriormente referidos a `"MozHomeScreen"`, `"MozCameraFocusAdjust"`, e `"MozPhoneCall"` agora tem nomes oficiais na especificação UI Events: `"GoHome"`, `"CameraFocus"`, e `"Call"`. Firefox 49 foi atualizado para utilizar os novos nomes ({{bug(1272599)}}). Veja {{SectionOnPage("/pt-BR/docs/Web/API/KeyboardEvent/code", "Code values")}} para uma lista completa de possilidades de códigos
+- O volume do áudio relativo a {{domxref("KeyboardEvent.key")}} foram renomeados. `"VolumeDown"` é agora `"AudioVolumeDown"`, `"VolumeUp"` é agora `"AudioVolumeUp"`, e `"VolumeMute"` e agora `"AudioVolumeMute".` Isso traz Firefox para alinhamento com os últimos rascunhos de especificações de UI Events* ({{bug(1272578)}}). Veja [Code values](/pt-BR/docs/Web/API/KeyboardEvent/code#code_values) para uma lista completa de possibilidades de códigos.
+- Os códigos ateriormente referidos a `"MozHomeScreen"`, `"MozCameraFocusAdjust"`, e `"MozPhoneCall"` agora tem nomes oficiais na especificação UI Events: `"GoHome"`, `"CameraFocus"`, e `"Call"`. Firefox 49 foi atualizado para utilizar os novos nomes ({{bug(1272599)}}). Veja [Code values](/pt-BR/docs/Web/API/KeyboardEvent/code#code_values) para uma lista completa de possilidades de códigos
 - O valor dos códigos `"Separator"` e `"MediaSkip"` foram removidos, por serem desatualizados e não utilizados ({{bug(1232919)}}).
 - Valor do código e a correspondencia dos códigos `"Hyper"` e `"Super"`foi adicionado para representar os modificadores de herança dos códigos ({{bug(1232919)}}).
 - _Duas teclas do teclado numérico multimídia foram adicionados_: `"Key11"` e `"Key12"` ({{bug(1232919)}}).

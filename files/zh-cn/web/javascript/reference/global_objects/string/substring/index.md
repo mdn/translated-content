@@ -66,7 +66,7 @@ console.log(anyString.substring(0,7));
 console.log(anyString.substring(0,10));
 ```
 
-### **运用 length 属性来使用 substring()**
+### 运用 length 属性来使用 substring()
 
 下面一个例子运用了 String.length 属性去获取指定字符串的倒数元素。显然这个办法更容易记住，因为你不再像上面那个例子那样去记住起始位置和最终位置。
 
@@ -118,7 +118,7 @@ function replaceString(oldS, newS,fullS){
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("String.prototype.substr()")}}
 - {{jsxref("String.prototype.slice()")}}

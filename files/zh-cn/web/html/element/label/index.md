@@ -174,7 +174,6 @@ slug: Web/HTML/Element/label
 - {{HTMLElement("optgroup")}}
 - {{HTMLElement("option")}}
 - {{HTMLElement("textarea")}}
-- {{HTMLElement("keygen")}}
 - {{HTMLElement("fieldset")}}
 - {{HTMLElement("output")}}
 - {{HTMLElement("progress")}}

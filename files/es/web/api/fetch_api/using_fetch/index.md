@@ -347,14 +347,6 @@ if (self.fetch) {
 
 Para utilizar `fetch()` en un explorador no soportado, hay disponible un [Fetch Polyfill](https://github.com/github/fetch) que recrea la funcionalidad para navegadores no soportados.
 
-## Especificaciones
-
-{{Specifications}}
-
-## Compatibilidad en navegadores
-
-{{Compat}}
-
 ## Vea también
 
 - [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API)

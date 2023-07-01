@@ -13,7 +13,7 @@ slug: Web/CSS/-webkit-line-clamp
 
 当应用于锚（anchor）元素时，截断可以发生在文本中间，而不必在末尾。
 
-> **备注：** 该属性最初在 WebKit 中实现的，但存在一些问题。由于需要支持旧版本的浏览器，该属性已在 [CSS Overflow Module Level 4](https://w3c.github.io/csswg-drafts/css-overflow-4/#propdef--webkit-line-clamp) 中被标准化。[CSS Overflow Module Level 4](https://w3c.github.io/csswg-drafts/css-overflow-4/#propdef-line-clamp) 规范还定义了一个 {{cssxref("line-clamp")}} 属性，用来代替此属性并避免一些问题。
+> **备注：** 该属性最初在 WebKit 中实现的，但存在一些问题。由于需要支持旧版本的浏览器，该属性已在 [CSS Overflow Module Level 4](https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp) 中被标准化。[CSS Overflow Module Level 4](https://drafts.csswg.org/css-overflow-4/#propdef-line-clamp) 规范还定义了一个 {{cssxref("line-clamp")}} 属性，用来代替此属性并避免一些问题。
 
 ## 语法
 

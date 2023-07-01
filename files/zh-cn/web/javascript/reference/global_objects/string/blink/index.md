@@ -5,9 +5,9 @@ slug: Web/JavaScript/Reference/Global_Objects/String/blink
 
 {{JSRef}} {{deprecated_header}}
 
-**`blink()`** 方法创建使字符串闪烁的 {{HTMLElement("blink")}} HTML 元素。
+**`blink()`** 方法创建一个字符串，其在 `<blink>str</blink>` 中嵌入字符串，这使得字符串在旧版浏览器中闪烁。
 
-> **警告：** 闪烁文本被多种普及标准否决。 `<blink>`元素自身是非标准的，并且已废弃！
+> **警告：** 闪烁文本被多种普及标准否决。`<blink>` 元素自身是非标准的，并且已废弃！
 
 ## 语法
 
@@ -17,11 +17,11 @@ str.blink()
 
 ### 返回值
 
-包含 {{HTMLElement("blink")}} HTML 元素的字符串。
+包含 `<blink>` HTML 元素的字符串。
 
 ## 描述
 
-`blink()`方法将字符串嵌入 `<blink>` 标签中： `"<blink>str</blink>"`.
+`blink()`方法将字符串嵌入 `<blink>` 标签中：`"<blink>str</blink>"`。
 
 ## 示例
 
@@ -46,7 +46,7 @@ console.log(worldString.strike());  // <strike>Hello, world</strike>
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("String.prototype.bold()")}}
 - {{jsxref("String.prototype.italics()")}}

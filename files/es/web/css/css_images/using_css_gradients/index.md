@@ -1,8 +1,6 @@
 ---
 title: Usando degradados con CSS
-slug: Web/CSS/CSS_Images/Using_CSS_gradients
-l10n:
-  sourceCommit: 71c4bc0b6329ec40ddbefd8d3124547e91cfa612
+slug: Web/CSS/CSS_images/Using_CSS_gradients
 ---
 
 {{CSSRef}}

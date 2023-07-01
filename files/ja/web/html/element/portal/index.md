@@ -15,9 +15,9 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-- {{htmlattrdef("referrerpolicy")}}
+- `referrerpolicy`
   - : [リファラーポリシー](/ja/docs/Web/HTTP/Headers/Referrer-Policy)を設定します。これは、 `src` 属性の値で指定された URL のページをリクエストする際に使用されます。
-- {{htmlattrdef("src")}}
+- `src`
   - : 埋め込むページの URL です。
 
 ## 例

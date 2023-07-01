@@ -1,12 +1,7 @@
 ---
 title: API
 slug: Glossary/API
-tags:
-  - Encodage
-  - Glossaire
-  - Infrastructure
 translation_of: Glossary/API
-original_slug: Glossaire/API
 ---
 
 Une API (Application Programming Interface) est un ensemble de fonctionnalités et de règles existant dans un logiciel permettant d'intéragir avec celui-ci de manière automatisée (plutôt que de passer par une interface utilisateur). L'API peut être vue comme un contrat simple passé entre le logiciel qui la propose et d'autres entités, telles que des logiciels ou matériels tiers.

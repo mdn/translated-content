@@ -59,7 +59,7 @@ if ("geolocation" in navigator) {
 
 你可以通过在 JavaScript 中测试 [*element.style.property*](/zh-CN/docs/Web/API/HTMLElement/style)（例如 `paragraph.style.rotate`）的存在来编写 CSS 特性测试。
 
-一个经典的例子可能是测试浏览器是否支持 [Subgrid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Subgrid)；对于支持 [`grid-template-columns`](/zh-CN/docs/Web/CSS/grid-template-columns) 和 [`grid-template-rows`](/zh-CN/docs/Web/CSS/grid-template-rows) 的 subgrid 值的浏览器，我们可以在布局上使用 subgrid。对于不使用 subgrid 的浏览器，我们可以使用普通的网格，它可以正常工作，但没有那么酷的外观。
+一个经典的例子可能是测试浏览器是否支持 [Subgrid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Subgrid)；对于支持 [`grid-template-columns`](/zh-CN/docs/Web/CSS/grid-template-columns) 和 [`grid-template-rows`](/zh-CN/docs/Web/CSS/grid-template-rows) 的 subgrid 值的浏览器，我们可以在布局上使用 subgrid。对于不使用 subgrid 的浏览器，我们可以使用普通的网格，它可以正常工作，但没有那么酷的外观。
 
 以此为例，如果支持该值，我们可以包含一个 subgrid 样式表，如果不支持，则包含一个普通网格样式表。为此，我们可以在 HTML 文件的头部包含两个样式表：一个是所有的样式表，另一个在不支持 subgrid 的情况下实现默认布局：
 
@@ -85,7 +85,7 @@ if ("geolocation" in navigator) {
 
 #### @supports
 
-CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。这与[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)的工作方式类似，只是它不是根据分辨率、屏幕宽度或长宽比等媒体特性选择性地应用 CSS，而是根据是否支持某个 CSS 特性来选择性地应用 CSS，类似于 `CSS.supports()`。
+CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。这与[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)的工作方式类似，只是它不是根据分辨率、屏幕宽度或长宽比等媒体特性选择性地应用 CSS，而是根据是否支持某个 CSS 特性来选择性地应用 CSS，类似于 `CSS.supports()`。
 
 例如，我们可以使用 `@supports` 重写我们之前的例子：
 
