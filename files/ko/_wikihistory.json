@@ -6099,27 +6099,6 @@
       "Yongsuhb.e"
     ]
   },
-  "Web/Guide/AJAX/Community": {
-    "modified": "2020-12-04T12:27:43.895Z",
-    "contributors": ["movegun1027", "dink95"]
-  },
-  "Web/Guide/AJAX/Getting_Started": {
-    "modified": "2020-11-05T10:30:21.696Z",
-    "contributors": [
-      "alattalatta",
-      "naduhy2",
-      "mgcation",
-      "chrisdavidmills",
-      "kidkkr",
-      "dayoungles",
-      "SpikeYou",
-      "Channy",
-      "Nam-Hyung Kim",
-      "Sebuls",
-      "Eunseo.choi",
-      "Yongsuhb.e"
-    ]
-  },
   "Web/Guide/API": {
     "modified": "2019-08-26T12:28:16.871Z",
     "contributors": ["NoFence", "alattalatta", "Sheppy"]
@@ -10225,16 +10204,16 @@
     "modified": "2020-01-26T15:58:32.379Z",
     "contributors": ["alattalatta", "chrisdavidmills", "cs09g"]
   },
+  "Web/Progressive_web_apps/Tutorials/js13kGames": {
+    "modified": "2019-03-18T20:52:13.104Z",
+    "contributors": ["chrisdavidmills", "cs09g"]
+  },
   "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
     "modified": "2020-05-31T18:37:47.885Z",
     "contributors": ["chrisdavidmills", "cs09g"]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs": {
     "modified": "2020-05-31T18:37:46.514Z",
-    "contributors": ["chrisdavidmills", "cs09g"]
-  },
-  "Web/Progressive_web_apps/Tutorials/js13kGames/Introduction": {
-    "modified": "2019-03-18T20:52:13.104Z",
     "contributors": ["chrisdavidmills", "cs09g"]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers": {
@@ -10850,6 +10829,27 @@
   "conflicting/Web/CSS/CSS_paged_media": {
     "modified": "2019-03-23T22:33:25.305Z",
     "contributors": ["Netaras"]
+  },
+  "conflicting/Web/Guide/AJAX": {
+    "modified": "2020-12-04T12:27:43.895Z",
+    "contributors": ["movegun1027", "dink95"]
+  },
+  "conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e": {
+    "modified": "2020-11-05T10:30:21.696Z",
+    "contributors": [
+      "alattalatta",
+      "naduhy2",
+      "mgcation",
+      "chrisdavidmills",
+      "kidkkr",
+      "dayoungles",
+      "SpikeYou",
+      "Channy",
+      "Nam-Hyung Kim",
+      "Sebuls",
+      "Eunseo.choi",
+      "Yongsuhb.e"
+    ]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal": {
     "modified": "2020-03-12T19:44:24.834Z",
