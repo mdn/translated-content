@@ -134,7 +134,7 @@ Promise.resolve("foo")
 // foobarbaz
 ```
 
-`then()` 方法返回的值的解决方式与 {{jsxref("Promise.resolve()")}} 相同。这意味着该方法支持 [thenable 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable)，如果返回值不是一个 Promise 对象，则会自动将其封装在一个 Promise 对象中，然后解决。
+`then()` 方法返回的值的解决方式与 {{jsxref("Promise.resolve()")}} 相同。这意味着该方法支持 [thenable 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable)，如果返回值不是一个 Promise 对象，则会隐式地将其包装在 `Promise` 中，然后解决。
 
 ```js
 const p2 = new Promise((resolve, reject) => {
