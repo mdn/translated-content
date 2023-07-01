@@ -7,11 +7,11 @@ slug: Web/API/Request
 
 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 的 **`Request`** 接口用来表示资源请求。
 
-你可以使用 {{domxref("Request.Request","Request()")}} 构造函数创建一个新的 `Request` 对象，但是你可能会遇到作为其他 API 操作结果返回的 Request 对象，比如 `service worker` 的 {{domxref("FetchEvent.request")}}。
+你可以使用 {{domxref("Request.Request","Request()")}} 构造函数创建一个新的 `Request` 对象，但是你更可能会遇到作为其他 API 操作结果返回的 Request 对象，比如 service worker 的 {{domxref("FetchEvent.request")}}。
 
 ## 构造函数
 
-- {{domxref("Request.Request()")}}
+- {{domxref("Request.Request","Request()")}}
   - : 创建一个新的 `Request` 对象。
 
 ## 实例属性
@@ -131,5 +131,5 @@ fetch(request)
 ## 参见
 
 - [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)
