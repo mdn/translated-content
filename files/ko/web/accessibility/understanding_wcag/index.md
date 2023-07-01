@@ -32,14 +32,13 @@ WCAG 2.1 은 다음을 포함합니다.
 
 - WCAG 2.0 의 모든 것 (문자 그대로)
 - A / AA / AAA 수준의 17가지 새로운 기준은 주로 아래 사용자들의 요구 사항에 대한 내용입니다.
+
   - 모바일 접근성
   - 낮은 시력을 가진 사용자
   - 인지 장애를 가진 사용자
 
 - WCAG 2.1 더 알아보기
 
-  - Deque: [WCAG 2.1: 접근성 지침의 다음 단계](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)
-  - TPG: [웹 컨텐츠 접근성 지침 (WCAG) 2.1](https://developer.paciellogroup.com/blog/2018/06/web-content-accessibility-guidelines-wcag-2-1/)
   - Deque: [WCAG 2.1: 접근성 지침의 다음 단계](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)
   - TPG: [웹 컨텐츠 접근성 지침 (WCAG) 2.1](https://developer.paciellogroup.com/blog/2018/06/web-content-accessibility-guidelines-wcag-2-1/)
 
