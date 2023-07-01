@@ -11,7 +11,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_next_
 
 你不需要任何特殊的开发或构建环境工具来创建浏览器扩展：只需要一个简单的文本编辑器就可以创建出很好的浏览器扩展。当然，你可能一直在做 web 开发，有一套你想去配置的开发工具和环境。如果是这样，你需要意识到一些事情。
 
-如果你使用了打包压缩工具来交付你最终的代码，你需要提交你的源码到 [AMO 审查程序](#审查程序)。此外，用于压缩、混淆、构建的工具需要是开源的 (或提供无限的免费使用), 并且可以在审阅者的计算机（Windows、Mac 或 Linux）上运行。主要是，我们的审查员无法使用商业或基于 Web 的工具。
+如果你使用了打包压缩工具来交付你最终的代码，你需要提交你的源码到 [AMO 审查程序](#审查程序)。此外，用于压缩、混淆、构建的工具需要是开源的 (或提供无限的免费使用), 并且可以在审阅者的计算机（Windows、Mac 或 Linux）上运行。主要是，我们的审查员无法使用商业或基于 web 的工具。
 
 [在 Extension Workshop 上了解更多关于开发工具的信息](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/)
 
@@ -47,8 +47,5 @@ slug: Mozilla/Add-ons/WebExtensions/What_next_
 
 - 更多关于浏览器扩展背后的基本概念，从如何[使用 JavaScript API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API) 的细节开始。
 - 可供浏览器扩展使用的[用户界面组件](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface)的指南。
-- 在你的扩展中实现关键任务或使用 JavaScript API 的方法指南的集合。
-- 如何将其他浏览器扩展移植到 Firefox 的有关信息。
-- 关于你可以用来开发浏览器扩展的 Firefox 的特定工作流程的详细信息。
-- JavaScript APIs 的完整参考指南。
-- Manifest 键的完整参考指南。
+- [JavaScript API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) 的完整参考指南。
+- [Manifest 键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)的完整参考指南。
