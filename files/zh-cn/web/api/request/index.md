@@ -48,17 +48,17 @@ slug: Web/API/Request
 ## 实例方法
 
 - {{domxref("Body.arrayBuffer()")}}
-  - : 返回 promise，使用请求主体的 {{domxref("ArrayBuffer")}} 表示来兑现。
+  - : 返回 promise，其兑现值为请求主体的 {{jsxref("ArrayBuffer")}} 表示形式。
 - {{domxref("Body.blob()")}}
-  - : 返回 promise，使用请求主体的 {{domxref("Blob")}} 表示来兑现。
+  - : 返回 promise，其兑现值为请求主体的 {{domxref("Blob")}} 表示形式。
 - {{domxref("Request.clone()")}}
   - : 创建一个当前 `Request` 对象的副本。
 - {{domxref("Body.formData()")}}
-  - : 返回 promise，使用请求主体的 {{domxref("FormData")}} 表示来兑现。
+  - : 返回 promise，其兑现值为请求主体的 {{domxref("FormData")}} 表示形式。
 - {{domxref("Body.json()")}}
-  - : 返回 promise，使用解析请求体的结果作为 {{JSxRef("JSON")}} 来兑现。
+  - : 返回 promise，其兑现值为请求主体经过 {{JSxRef("JSON")}} 解析的结果。
 - {{domxref("Body.text()")}}
-  - : 返回 promise，使用请求主体的文本表示来兑现。
+  - : 返回 promise，其兑现值为请求主体的文本表示形式。
 
 >**备注：** 这些请求主体上的函数只能运行一次，随后的调用将兑现为空字符串或空的 ArrayBuffer。
 
