@@ -42,8 +42,8 @@ then(onFulfilled, onRejected)
 
 `onFulfilled` 和 `onRejected` 处理函数之一将被执行，以处理当前 Promise 对象的兑现或拒绝。即使当前 Promise 对象已经敲定，这个调用也总是异步发生的。返回的 Promise 对象（称之为 `p`）的行为取决于处理函数的执行结果，遵循一组特定的规则。如果处理函数：
 
-- 返回一个值：`p` 以该返回值作为其值被兑现。
-- 没有返回任何值：`p` 以 `undefined` 作为其值被兑现。
+- 返回一个值：`p` 以该返回值作为其兑现值。
+- 没有返回任何值：`p` 以 `undefined` 作为其兑现值。
 - 抛出一个错误：`p` 以抛出的错误作为其值被拒绝。
 - 返回一个已兑现的 Promise 对象：`p` 以该 Promise 的值作为其值被兑现。
 - 返回一个已拒绝的 Promise 对象：`p` 以该 Promise 的值作为其值被拒绝。
@@ -51,13 +51,13 @@ then(onFulfilled, onRejected)
 
 ## 描述
 
-`then()` 方法用于为 Promise 对象的完成（兑现或拒绝）安排回调函数。它是 Promise 的基本方法：[thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 协议要求所有类 Promise 对象都提供一个 `then()` 方法，并且 `catch()` 和 `finally()` 方法都会通过调用该对象的 `then()` 方法来工作。
+`then()` 方法用于为 Promise 对象的完成（兑现或拒绝）设置回调函数。它是 Promise 的基本方法：[thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 协议要求所有类 Promise 对象都提供一个 `then()` 方法，并且 `catch()` 和 `finally()` 方法都会通过调用该对象的 `then()` 方法来工作。
 
 有关 `onRejected` 处理函数的更多信息，请参阅 {{jsxref("Promise/catch", "catch()")}} 参考文档。
 
-`then()` 方法返回一个新的 Promise 对象。如果在同一 Promise 对象上两次调用 `then()` 方法（而不是链式调用），则该 Promise 对象将具有两对处理方法。附加到同一 Promise 对象的所有处理方法总是按照它们添加的顺序调用。此外，每次调用 `then()` 方法返回的两个 Promise 对象开始了独立的链，不会等待彼此的解决。
+`then()` 方法返回一个新的 Promise 对象。如果在同一 Promise 对象上两次调用 `then()` 方法（而不是链式调用），则该 Promise 对象将具有两对处理方法。附加到同一 Promise 对象的所有处理方法总是按照它们添加的顺序调用。此外，每次调用 `then()` 方法返回的两个 Promise 对象开始了独立的链，不会等待彼此的敲定。
 
-沿着 `then()` 链产生的 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 对象总是会被[解决](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_函数)——`onFulfilled` 处理函数永远不会收到 thenable 对象，并且任何由处理函数返回的 thenable 对象在传递给下一个处理函数之前总是被解决。这是因为在构造新的 Promise 对象时，由 `executor` 传递的 `resolve` 和 `reject` 函数被保存下来，当当前 Promise 对象敲定时，相应的函数将被调用，并传递兑现值或拒绝原因。解析逻辑来自 {{jsxref("Promise/Promise", "Promise()")}} 构造函数传递的解析函数。
+沿着 `then()` 链产生的 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 对象总是会被[解决](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_函数)——`onFulfilled` 处理函数永远不会收到 thenable 对象，并且任何由处理函数返回的 thenable 对象在传递给下一个处理函数之前总是被解决。这是因为在构造新的 Promise 对象时，由 `executor` 传递的 `resolve` 和 `reject` 函数被保存下来，在当前 Promise 对象敲定时，相应的函数将被调用，并传递兑现值或拒绝原因。解决逻辑来自 {{jsxref("Promise/Promise", "Promise()")}} 构造函数传递的解决函数。
 
 `then()` 方法支持子类化，这意味着它可以在 `Promise` 子类的实例上调用，并且结果将是子类类型的 Promise 对象。你可以通过 [`@@species`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/@@species) 属性自定义返回值类型。
 
@@ -187,7 +187,7 @@ Promise.resolve()
   });
 ```
 
-在其他所有情况下，返回的 Promise 最终都会被兑现。在下面的示例中，即使链中的前一个 Promise 被拒绝，第一个 `then()` 返回一个封装着 `42` 的已兑现的 Promise。
+在其他所有情况下，返回的 Promise 最终都会被兑现。在下面的示例中，即使链中的前一个 Promise 被拒绝，第一个 `then()` 返回一个包装着 `42` 的已兑现的 Promise。
 
 ```js
 Promise.reject()
@@ -266,10 +266,10 @@ function fetchCurrentData() {
 以下是一个示例，用于演示 `then` 方法的异步性。
 
 ```js
-// 用一个已解决的 Promise——'resolvedProm' 为例，
-// 函数调用 'resolvedProm.then(...)' 立即返回一个新的 Promise，
-// 但是其中的处理函数 '(value) => {...}' 将会异步调用，正如打印输出所示。
-// 新的 Promise 被赋值给 'thenProm'，
+// 用一个已解决的 Promise——“resolvedProm”为例，
+// 函数调用“resolvedProm.then(...)”立即返回一个新的 Promise，
+// 但是其中的处理器“(value) => {...}”将被异步调用，正如打印输出所示。
+// 新的 Promise 被赋值给“thenProm”，
 // 并且 thenProm 将被解决为处理函数返回的值。
 const resolvedProm = Promise.resolve(33);
 console.log(resolvedProm);
