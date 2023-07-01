@@ -25,7 +25,7 @@ then(onFulfilled, onRejected)
     - `value`
       - : Promise 对象的兑现值。
 
-    如果 `onFulfilled` 不是一个函数，则内部会被替换为一个*恒等*函数 (`(x) => x`)，它只是简单地将兑现值向前传递。
+    如果 `onFulfilled` 不是一个函数，则内部会被替换为一个*恒等*函数（`(x) => x`），它只是简单地将兑现值向前传递。
 
 - `onRejected` {{optional_inline}}
 
@@ -34,7 +34,7 @@ then(onFulfilled, onRejected)
     - `reason`
       - : Promise 对象被拒绝的原因。
 
-    如果 `onRejected` 不是一个函数，则内部会被替换为一个*抛出器*函数 (`(x) => { throw x; }`)，它会抛出它收到的拒绝原因。
+    如果 `onRejected` 不是一个函数，则内部会被替换为一个*抛出器*函数（`(x) => { throw x; }`），它会抛出它收到的拒绝原因。
 
 ### 返回值
 
@@ -44,10 +44,10 @@ then(onFulfilled, onRejected)
 
 - 返回一个值：`p` 以该返回值作为其兑现值。
 - 没有返回任何值：`p` 以 `undefined` 作为其兑现值。
-- 抛出一个错误：`p` 以抛出的错误作为其值被拒绝。
-- 返回一个已兑现的 Promise 对象：`p` 以该 Promise 的值作为其值被兑现。
-- 返回一个已拒绝的 Promise 对象：`p` 以该 Promise 的值作为其值被拒绝。
-- 返回另一个待定的 Promise 对象：`p` 保持待定状态，并在该 Promise 对象被兑现/拒绝后立即以该 Promise 的值作为其值被兑现/拒绝。
+- 抛出一个错误：`p` 抛出的错误作为其拒绝值。
+- 返回一个已兑现的 Promise 对象：`p` 以该 Promise 的值作为其兑现值。
+- 返回一个已拒绝的 Promise 对象：`p` 以该 Promise 的值作为其拒绝值。
+- 返回另一个待定的 Promise 对象：`p` 保持待定状态，并在该 Promise 对象被兑现/拒绝后立即以该 Promise 的值作为其兑现/拒绝值。
 
 ## 描述
 
