@@ -5,8 +5,8 @@
 #
 # FROM-URL	TO-URL
 /ko/docs/AJAX	/ko/docs/Web/Guide/AJAX
-/ko/docs/AJAX/Getting_Started	/ko/docs/Web/Guide/AJAX/Getting_Started
-/ko/docs/AJAX:Getting_Started	/ko/docs/Web/Guide/AJAX/Getting_Started
+/ko/docs/AJAX/Getting_Started	/ko/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
+/ko/docs/AJAX:Getting_Started	/ko/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
 /ko/docs/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_overview
 /ko/docs/About_JavaScript	/ko/docs/Web/JavaScript
 /ko/docs/About_the_Document_Object_Model	/ko/docs/Web/API/Document_Object_Model
@@ -20,7 +20,7 @@
 /ko/docs/Apps/Progressive/Installable_PWAs	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 /ko/docs/Apps/Progressive/Offline_Service_workers	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
 /ko/docs/Apps/Progressive/Re-engageable_Notifications_Push	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
-/ko/docs/Apps/Progressive/소개	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+/ko/docs/Apps/Progressive/소개	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ko/docs/CSS	/ko/docs/Web/CSS
 /ko/docs/CSS/@font-face	/ko/docs/Web/CSS/@font-face
 /ko/docs/CSS/Getting_Started	/en-US/docs/Learn/CSS/First_steps
@@ -674,6 +674,8 @@
 /ko/docs/Web/Events/scroll	/ko/docs/Web/API/Document/scroll_event
 /ko/docs/Web/Events/timeout	/ko/docs/Web/API/XMLHttpRequest/timeout_event
 /ko/docs/Web/Events/visibilitychange	/ko/docs/Web/API/Document/visibilitychange_event
+/ko/docs/Web/Guide/AJAX/Community	/ko/docs/conflicting/Web/Guide/AJAX
+/ko/docs/Web/Guide/AJAX/Getting_Started	/ko/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
 /ko/docs/Web/Guide/API/Vibration/Vibration	/ko/docs/Web/API/Vibration_API
 /ko/docs/Web/Guide/CSS	/ko/docs/Learn/CSS
 /ko/docs/Web/Guide/CSS/Media_queries	/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries
@@ -818,11 +820,12 @@
 /ko/docs/Web/Progressive_web_apps/Add_to_home_screen	/ko/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /ko/docs/Web/Progressive_web_apps/App_structure	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 /ko/docs/Web/Progressive_web_apps/Installable_PWAs	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
-/ko/docs/Web/Progressive_web_apps/Introduction	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+/ko/docs/Web/Progressive_web_apps/Introduction	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ko/docs/Web/Progressive_web_apps/Offline_Service_workers	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
 /ko/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 /ko/docs/Web/Progressive_web_apps/Responsive/Media_types	/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries
-/ko/docs/Web/Progressive_web_apps/소개	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames
+/ko/docs/Web/Progressive_web_apps/소개	/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ko/docs/Web/Reference/Events/DOMContentLoaded	/ko/docs/Web/API/Window/DOMContentLoaded_event
 /ko/docs/Web/Reference/Events/blur	/ko/docs/Web/API/Element/blur_event
 /ko/docs/Web/Reference/Events/canplay	/ko/docs/Web/API/HTMLMediaElement/canplay_event
