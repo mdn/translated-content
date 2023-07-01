@@ -1,6 +1,7 @@
 ---
 title: 开始使用
-slug: Web/Guide/AJAX/Getting_Started
+slug: conflicting/Web/Guide/AJAX
+original_slug: Web/Guide/AJAX/Getting_Started
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Guide/AJAX")}}
