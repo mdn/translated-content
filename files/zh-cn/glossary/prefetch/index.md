@@ -1,8 +1,9 @@
 ---
 title: Link prefetching FAQ
 slug: Glossary/Prefetch
-original_slug: Web/HTTP/Link_prefetching_FAQ
 ---
+
+{{GlossarySidebar}}
 
 ### 什么是链接预取？
 
