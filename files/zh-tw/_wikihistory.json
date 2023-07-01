@@ -5030,18 +5030,5 @@
   "WebAssembly": {
     "modified": "2020-10-15T22:04:56.309Z",
     "contributors": ["Aries0d0f"]
-  },
-  "conflicting/Web/Guide/AJAX": {
-    "modified": "2020-08-21T06:49:10.440Z",
-    "contributors": [
-      "timjtchang",
-      "jackblackevo",
-      "chrisdavidmills",
-      "luxun",
-      "happysadman",
-      "Cpthk",
-      "Mgjbot",
-      "BobChao"
-    ]
   }
 }

@@ -5,9 +5,9 @@
 #
 # FROM-URL	TO-URL
 /zh-TW/docs/AJAX	/zh-TW/docs/Web/Guide/AJAX
-/zh-TW/docs/AJAX/Getting_Started	/zh-TW/docs/conflicting/Web/Guide/AJAX
-/zh-TW/docs/AJAX/上手篇	/zh-TW/docs/conflicting/Web/Guide/AJAX
-/zh-TW/docs/AJAX:上手篇	/zh-TW/docs/conflicting/Web/Guide/AJAX
+/zh-TW/docs/AJAX/Getting_Started	/zh-TW/docs/Web/Guide/AJAX
+/zh-TW/docs/AJAX/上手篇	/zh-TW/docs/Web/Guide/AJAX
+/zh-TW/docs/AJAX:上手篇	/zh-TW/docs/Web/Guide/AJAX
 /zh-TW/docs/CSS	/zh-TW/docs/Web/CSS
 /zh-TW/docs/CSS/-moz-border-image	/zh-TW/docs/Web/CSS/border-image
 /zh-TW/docs/CSS/@font-face	/zh-TW/docs/Web/CSS/@font-face
@@ -649,7 +649,7 @@
 /zh-TW/docs/Web/Events/scroll	/zh-TW/docs/Web/API/Document/scroll_event
 /zh-TW/docs/Web/Events/submit	/zh-TW/docs/Web/API/HTMLFormElement/submit_event
 /zh-TW/docs/Web/Events/touchcancel	/zh-TW/docs/Web/API/Element/touchcancel_event
-/zh-TW/docs/Web/Guide/AJAX/Getting_Started	/zh-TW/docs/conflicting/Web/Guide/AJAX
+/zh-TW/docs/Web/Guide/AJAX/Getting_Started	/zh-TW/docs/Web/Guide/AJAX
 /zh-TW/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Manipulating_the_browser_history	/zh-TW/docs/Web/API/History_API
 /zh-TW/docs/Web/Guide/API/WebRTC	/zh-TW/docs/Web/API/WebRTC_API
 /zh-TW/docs/Web/Guide/CSS	/zh-TW/docs/Learn/CSS
