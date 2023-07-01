@@ -1,6 +1,7 @@
 ---
 title: 預先取回連結 (Prefetch) 問答集
-slug: Web/HTTP/Link_prefetching_FAQ
+slug: Glossary/Prefetch
+original_slug: Web/HTTP/Link_prefetching_FAQ
 ---
 
 {{HTTPSidebar}}
