@@ -365,6 +365,6 @@ TIME: 312.15
 - {{domxref("FileReader")}} API
   - : `FileReader` API 允许 Web 应用程序异步读取存储在用户计算机上的文件（或原始数据缓存）的内容，使用 {{domxref("File")}} 或 {{domxref("Blob")}} 对象指定要读取的文件或数据。文件对象可以从用户选择文件后的 {{HTMLElement("input")}} 元素的 {{domxref("FileList")}} 对象中获取，也可以从拖放操作的 {{domxref("DataTransfer")}} 对象获取。
 - [XMLHttpRequest 对 HTML 的支持](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-  - : W3C [XMLHttpRequest](https://xhr.spec.whatwg.org/)规范向 {{domxref("XMLHttpRequest")}} 添加了 HTML 解析支持，XMLHttpRequest 原本只支持 XML 解析。此功能允许 Web 应用程序使用 `XMLHttpRequest` 获取 HTML 资源作为解析的 DOM。
+  - : W3C [XMLHttpRequest](https://xhr.spec.whatwg.org/) 规范向 {{domxref("XMLHttpRequest")}} 添加了 HTML 解析支持，XMLHttpRequest 原本只支持 XML 解析。此功能允许 Web 应用程序使用 `XMLHttpRequest` 获取 HTML 资源作为解析的 DOM。
 - [XMLHttpRequest 规范](https://xhr.spec.whatwg.org/)
   - : WHATWG 动态标准
