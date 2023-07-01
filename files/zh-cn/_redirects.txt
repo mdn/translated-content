@@ -6,10 +6,10 @@
 # FROM-URL	TO-URL
 /zh-CN/docs/2332	/zh-CN/docs/Web/API/Element/attributes
 /zh-CN/docs/AJAX	/zh-CN/docs/Web/Guide/AJAX
-/zh-CN/docs/AJAX/Getting_Started	/zh-CN/docs/conflicting/Web/Guide/AJAX
-/zh-CN/docs/AJAX/开始	/zh-CN/docs/conflicting/Web/Guide/AJAX
-/zh-CN/docs/AJAX:Getting_Started	/zh-CN/docs/conflicting/Web/Guide/AJAX
-/zh-CN/docs/AJAX:开始	/zh-CN/docs/conflicting/Web/Guide/AJAX
+/zh-CN/docs/AJAX/Getting_Started	/zh-CN/docs/Web/Guide/AJAX
+/zh-CN/docs/AJAX/开始	/zh-CN/docs/Web/Guide/AJAX
+/zh-CN/docs/AJAX:Getting_Started	/zh-CN/docs/Web/Guide/AJAX
+/zh-CN/docs/AJAX:开始	/zh-CN/docs/Web/Guide/AJAX
 /zh-CN/docs/API	/zh-CN/docs/Web/API
 /zh-CN/docs/API/Pointer_Lock_API	/zh-CN/docs/Web/API/Pointer_Lock_API
 /zh-CN/docs/A_re-introduction_to_JavaScript	/zh-CN/docs/Web/JavaScript/Language_overview
@@ -2280,7 +2280,7 @@
 /zh-CN/docs/Web/Events/提交	/zh-CN/docs/Web/API/HTMLFormElement/submit_event
 /zh-CN/docs/Web/Events/滚轮事件	/zh-CN/docs/Web/API/Element/wheel_event
 /zh-CN/docs/Web/Events/进度条	/zh-CN/docs/Web/API/XMLHttpRequest/progress_event
-/zh-CN/docs/Web/Guide/AJAX/Getting_Started	/zh-CN/docs/conflicting/Web/Guide/AJAX
+/zh-CN/docs/Web/Guide/AJAX/Getting_Started	/zh-CN/docs/Web/Guide/AJAX
 /zh-CN/docs/Web/Guide/API/DOM/The_structured_clone_algorithm	/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm
 /zh-CN/docs/Web/Guide/API/DOM/Whitespace_in_the_DOM	/zh-CN/docs/Web/API/Document_Object_Model/Whitespace
 /zh-CN/docs/Web/Guide/CSS	/zh-CN/docs/Learn/CSS
