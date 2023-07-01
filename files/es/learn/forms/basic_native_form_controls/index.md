@@ -43,8 +43,8 @@ Los campos de texto {{htmlelement ("input")}} son los controles de formulario m�
 
 Todos los controles de texto básicos comparten algunos comportamientos comunes:
 
-- Se pueden marcar como {{htmlattrxref ("readonly","input")}} (el usuario no puede modificar el valor de entrada, pero este se envía con el resto de los datos del formulario) o {{htmlattrxref ("disabled","input")}} (el valor de entrada no se puede modificar y nunca se envía con el resto de los datos del formulario).
-- Pueden tener un {{htmlattrxref ("placeholder","input")}}; se trata de un texto que aparece dentro de la caja de entrada de texto y que se usa para describir brevemente el propósito de la caja de texto.
+- Se pueden marcar como [`readonly`](/es/docs/Web/HTML/Element/input#readonly) (el usuario no puede modificar el valor de entrada, pero este se envía con el resto de los datos del formulario) o [`disabled`](/es/docs/Web/HTML/Element/input#disabled) (el valor de entrada no se puede modificar y nunca se envía con el resto de los datos del formulario).
+- Pueden tener un [`placeholder`](/es/docs/Web/HTML/Element/input#placeholder); se trata de un texto que aparece dentro de la caja de entrada de texto y que se usa para describir brevemente el propósito de la caja de texto.
 - Pueden presentar una limitación de [tamaño](/es/docs/Web/HTML/Attributes/size) (el tamaño físico de la caja de texto) y de la [extensión máxima](/es/docs/Web/HTML/Attributes/maxlength) (el número máximo de caracteres que se pueden poner en la caja de texto).
 - Admiten [corrección ortográfica](/es/docs/HTML/Element/input#attr-spellcheck) (utilizando el atributo [`spellcheck`](/es/docs/Web/HTML/Attributes/spellcheck)), si el navegador la admite.
 
@@ -52,7 +52,7 @@ Todos los controles de texto básicos comparten algunos comportamientos comunes:
 
 ### Campos de texto de una sola línea
 
-Un campo de texto de una sola línea se crea utilizando un elemento {{HTMLElement ("input")}} cuyo valor de atributo {{htmlattrxref ("type","input")}} se establece en `text`, u omitiendo por completo el atributo {{htmlattrxref ( "type","input")}} (`text` es el valor predeterminado). El valor `text` de este atributo también es el valor alternativo si el navegador no reconoce el valor que has especificado para el atributo {{htmlattrxref ("type","input")}} (por ejemplo, si especificas `type="color"` y el navegador no está dotado en origen de un control de selección de colores).
+Un campo de texto de una sola línea se crea utilizando un elemento {{HTMLElement ("input")}} cuyo valor de atributo [`type`](/es/docs/Web/HTML/Element/input#type) se establece en `text`, u omitiendo por completo el atributo [`type`](/es/docs/Web/HTML/Element/input#type) (`text` es el valor predeterminado). El valor `text` de este atributo también es el valor alternativo si el navegador no reconoce el valor que has especificado para el atributo [`type`](/es/docs/Web/HTML/Element/input#type) (por ejemplo, si especificas `type="color"` y el navegador no está dotado en origen de un control de selección de colores).
 
 > **Nota:** Puedes encontrar ejemplos de todos los tipos de campo de texto de una sola línea en GitHub en [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/single-line-text-fields.html) ([o consultarlo en vivo](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
 
@@ -68,7 +68,7 @@ _La captura de pantalla siguiente muestra los tipos de entrada de texto predeter
 
 ![Captura de pantalla del atributo deshabilitado y predeterminado: estilo para una entrada de texto activa (con el foco) en Firefox, Safari, Chrome y Edge.](disabled.png)
 
-> **Nota:** HTML5 ha mejorado el campo de texto básico original de una sola línea al añadir valores especiales para el atributo {{htmlattrxref ("type", "input")}} que imponen restricciones de validación específicas y otras características, por ejemplo, específicas para introducir direcciones URL o números. Los expondremos en el artículo siguiente: [Los tipos de entrada en HTML5](/es/docs/Learn/Forms/HTML5_input_types).
+> **Nota:** HTML5 ha mejorado el campo de texto básico original de una sola línea al añadir valores especiales para el atributo [`type`](/es/docs/Web/HTML/Element/input#type) que imponen restricciones de validación específicas y otras características, por ejemplo, específicas para introducir direcciones URL o números. Los expondremos en el artículo siguiente: [Los tipos de entrada en HTML5](/es/docs/Learn/Forms/HTML5_input_types).
 
 #### Campo de contraseña
 
@@ -126,13 +126,13 @@ Debido a su naturaleza activa-inactiva, las casillas de verificación se conside
 
 ### Botón de opción
 
-Un botón de opción se crea estableciendo el atributo {{htmlattrxref ("type", "input")}} del elemento {{HTMLElement ("input")}} en el valor `radio`:
+Un botón de opción se crea estableciendo el atributo [`type`](/es/docs/Web/HTML/Element/input#type) del elemento {{HTMLElement ("input")}} en el valor `radio`:
 
 ```html
 <input type="radio" id="soup" name="meal" checked>
 ```
 
-Es posible asociar diversos botones de opción. Si comparten el mismo valor de atributo {{htmlattrxref ("name", "input")}}, se considera que están en el mismo grupo de botones. Solo un botón dentro de un grupo puede estar activado en cada momento. Esto significa que cuando uno de ellos se selecciona, todos los demás se deseleccionan automáticamente. Al enviar el formulario, solo se envía el valor del botón de opción seleccionado. Si ninguno de ellos está seleccionado, se considera que el conjunto completo de botones de opción está en un estado desconocido y no se envía ningún valor con el formulario. Cuando en un grupo de botones con el mismo nombre se selecciona uno de los botones de opción, no es posible deseleccionar todos los botones sin reiniciar el formulario.
+Es posible asociar diversos botones de opción. Si comparten el mismo valor de atributo [`name`](/es/docs/Web/HTML/Element/input#name), se considera que están en el mismo grupo de botones. Solo un botón dentro de un grupo puede estar activado en cada momento. Esto significa que cuando uno de ellos se selecciona, todos los demás se deseleccionan automáticamente. Al enviar el formulario, solo se envía el valor del botón de opción seleccionado. Si ninguno de ellos está seleccionado, se considera que el conjunto completo de botones de opción está en un estado desconocido y no se envía ningún valor con el formulario. Cuando en un grupo de botones con el mismo nombre se selecciona uno de los botones de opción, no es posible deseleccionar todos los botones sin reiniciar el formulario.
 
 ```html
 <fieldset>
@@ -217,7 +217,7 @@ Los ejemplos siguientes muestran los tipos de entrada de botones predeterminados
 
 El control **botón de imagen** se muestra exactamente como un elemento {{HTMLElement ("img")}}, excepto que cuando el usuario hace clic en él, se comporta como un botón de envío.
 
-Se crea un botón de imagen usando un elemento {{HTMLElement ("input")}} con su atributo {{htmlattrxref ("type","input")}} establecido en el valor `image`. Este elemento admite exactamente el mismo conjunto de atributos que el elemento {{HTMLElement ("img")}}, además de todos los atributos que admiten el resto de botones de formulario.
+Se crea un botón de imagen usando un elemento {{HTMLElement ("input")}} con su atributo [`type`](/es/docs/Web/HTML/Element/input#type) establecido en el valor `image`. Este elemento admite exactamente el mismo conjunto de atributos que el elemento {{HTMLElement ("img")}}, además de todos los atributos que admiten el resto de botones de formulario.
 
 ```html
 <input type="image" alt="¡Púlsame!" src="my-img.png" width="80" height="30">
@@ -225,8 +225,8 @@ Se crea un botón de imagen usando un elemento {{HTMLElement ("input")}} con su 
 
 Si el botón de imagen se usa para enviar un formulario, este control no envía su valor; en lugar de ello se envían las coordenadas X e Y del clic que se ha hecho sobre la imagen (las coordenadas son relativas a la imagen, lo que significa que la esquina superior izquierda de la imagen representa la coordenada (0, 0)). Las coordenadas se envían como dos pares clave/valor:
 
-- La clave del valor X es el valor del atributo {{htmlattrxref ("name","input")}} seguido de la cadena de caracteres «_.x_».
-- La clave del valor Y es el valor del atributo {{htmlattrxref ("name","input")}} seguido de la cadena de caracteres «_.y_».
+- La clave del valor X es el valor del atributo [`name`](/es/docs/Web/HTML/Element/input#name) seguido de la cadena de caracteres «_.x_».
+- La clave del valor Y es el valor del atributo [`name`](/es/docs/Web/HTML/Element/input#name) seguido de la cadena de caracteres «_.y_».
 
 Por ejemplo, cuando haces clic en las coordenadas (123, 456) de la imagen y se hace el envío por el método `get`, verás los valores añadidos a la URL de la manera siguiente:
 
@@ -240,7 +240,7 @@ Esta es una forma muy cómoda de construir un «mapa dinámico». La forma en qu
 
 Hay un último tipo de `<input>` que nos llegó a principios del HTML: el tipo entrada de archivo. Los formularios pueden enviar archivos a un servidor (esta acción específica también se detalla en el artículo [Enviar los datos del formulario](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)). El control de selección de archivos se puede usar para elegir uno o más archivos para enviar.
 
-Para crear un [control de selección de archivos](/es/docs/Web/HTML/Element/input/file), utilizas el elemento {{HTMLElement ("input")}} con su atributo {{htmlattrxref ("type","input")}} establecido en `file`. Es posible restringir los tipos de archivos que se aceptan utilizando el atributo {{htmlattrxref ("accept","input")}}. Además, puedes permitir que el usuario elija más de un archivo añadiendo el atributo {{htmlattrxref ("multiple","input")}}.
+Para crear un [control de selección de archivos](/es/docs/Web/HTML/Element/input/file), utilizas el elemento {{HTMLElement ("input")}} con su atributo [`type`](/es/docs/Web/HTML/Element/input#type) establecido en `file`. Es posible restringir los tipos de archivos que se aceptan utilizando el atributo [`accept`](/es/docs/Web/HTML/Element/input#accept). Además, puedes permitir que el usuario elija más de un archivo añadiendo el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple).
 
 #### Ejemplo
 

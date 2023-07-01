@@ -11,7 +11,7 @@ Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`**
 
 ## Valeur
 
-L'attribut {{htmlattrxref("value", "input")}} contient une chaîne de caractères ({{domxref("DOMString")}}) qui représente le chemin du/des fichier(s) sélectionné(s). Les autres fichiers peuvent être identifiés grâce à la propriété `HTMLInputElement.files`.
+L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) contient une chaîne de caractères ({{domxref("DOMString")}}) qui représente le chemin du/des fichier(s) sélectionné(s). Les autres fichiers peuvent être identifiés grâce à la propriété `HTMLInputElement.files`.
 
 > **Note :**
 >
@@ -30,7 +30,7 @@ En complément des attributs partagés par l'ensemble des éléments {{HTMLEleme
 | [`files`](#files)     | Un objet {{domxref("FileList")}} qui liste les fichiers choisis                                  |
 | [`multiple`](#multiple) | Un attribut booléen qui, lorsqu'il est présent, indique que plusieurs fichiers peuvent être sélectionnés. |
 
-### {{htmlattrdef("accept")}}
+### `accept`
 
 Une chaîne de caractères qui définit les types de fichier qui devraient être acceptés. Cette chaîne est une liste d'identifiants de type de fichier (cf. ci-après) séparés par des virgules. Un fichier pouvant avoir un format selon différentes extensions et types MIME, il est souvent utile de cibler plusieurs identifiants pour la bonne sélection du fichier.
 
@@ -41,17 +41,17 @@ Les fichiers Microsoft Word, par exemple, peuvent être identifiés de différen
   accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
 ```
 
-### {{htmlattrdef("capture")}}
+### `capture`
 
 Une chaîne de caractères qui indique la caméra à utiliser pour capturer des photos et des vidéos si l'attribut `accept` indique que le fichier est de ce type. Lorsque `capture` vaut `"user"`, cela indique que la caméra qui fait face à l'utilisateur devrait être utilisée. Si l'attribut vaut `"environment"`, c'est la caméra qui est tournée vers l'extérieur devrait être utilisée. Si l'attribut est absent, l'agent utilisateur pourra décider de laquelle utiliser. Si la caméra souhaitée par l'attribut n'est pas disponible, l'agent utilisateur pourra utiliser une autre caméra de l'appareil.
 
 > **Note :** `capture` était auparavant un attribut booléen qui, lorsqu'il était présent, indiquait que les capteurs de l'appareil (caméra/micro) devaient être utilisés plutôt qu'un fichier.
 
-### {{htmlattrdef("files")}}
+### `files`
 
-Un objet {{domxref("FileList")}} qui liste chaque fichier sélectionné. Cette liste n'a qu'un seul élément, sauf si {{htmlattrxref("multiple", "input/file")}} est indiqué.
+Un objet {{domxref("FileList")}} qui liste chaque fichier sélectionné. Cette liste n'a qu'un seul élément, sauf si [`multiple`](/fr/docs/Web/HTML/Element/input/file#multiple) est indiqué.
 
-### {{htmlattrdef("multiple")}}
+### `multiple`
 
 Lorsque cet attribut booléen est indiqué, le champ peut être utilisé afin de sélectionner plus d'un fichier.
 
@@ -63,7 +63,7 @@ En complément des attributs précédents, les éléments `<input type="file">` 
 | -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | [`webkitdirectory`](#webkitdirectory) | Un attribut booléen qui indique si l'utilisateur peut choisir un répertoire (ou plusieurs si [`multiple`](#multiple) est présent). |
 
-### {{htmlattrdef("webkitdirectory")}} {{non-standard_inline}}
+### `webkitdirectory` {{non-standard_inline}}
 
 L'attribut booléen `webkitdirectory`, lorsqu'il est présent, indique que le contrôle permet de sélectionner un/des répertoires plutôt qu'un/des fichiers. Voir {{domxref("HTMLInputElement.webkitdirectory")}} pour plus de détails et d'exemples.
 
@@ -115,7 +115,7 @@ Ce fragment de code HTML produira le résultat suivant :
 
 Quel que soit l'appareil ou le système d'exploitation de l'utilisateur, l'élément `<input type="file">` fournit un bouton qui ouvre un sélecteur de fichier permettant de choisir un fichier.
 
-Lorsque l'attribut {{htmlattrxref("multiple", "input")}} est utilisé (comme dans l'exemple précédent), cela signifie que plusieurs fichiers peuvent être sélectionnés de façon simultanée. L'utilisateur doit alors pouvoir choisir plusieurs fichiers depuis le sélecteur de fichier (par exemple en maintenant la touche <kbd>Shift</kbd> ou <kbd>Control</kbd> puis en cliquant). Si on souhaite qu'un seul fichier puisse être envoyé, il suffit de ne pas utiliser l'attribut `multiple`.
+Lorsque l'attribut [`multiple`](/fr/docs/Web/HTML/Element/input#multiple) est utilisé (comme dans l'exemple précédent), cela signifie que plusieurs fichiers peuvent être sélectionnés de façon simultanée. L'utilisateur doit alors pouvoir choisir plusieurs fichiers depuis le sélecteur de fichier (par exemple en maintenant la touche <kbd>Shift</kbd> ou <kbd>Control</kbd> puis en cliquant). Si on souhaite qu'un seul fichier puisse être envoyé, il suffit de ne pas utiliser l'attribut `multiple`.
 
 Lorsqu'on envoie le formulaire de l'exemple, le nom de chaque fichier sera ajouté aux paramètres de l'URL de la façon suivante : `?file=fichier1.txt&file=fichier2.txt`
 
@@ -130,15 +130,15 @@ Chaque objet `File` contient les informations suivantes :
 - `lastModifiedDate` : un objet {{domxref("Date")}} qui représente la date et l'heure à laquelle le fichier a été modifié pour la dernière fois.
 - `size` : un nombre qui représente la taille du fichier en octets.
 - `type` : une chaîne de caractères ({{domxref("DOMString")}}) qui représente [le type MIME](/fr/docs/Glossaire/Type_MIME) du fichier.
-- `webkitRelativePath`{{non-standard_inline}} : une chaîne de caractères qui indique l'emplacement relatif du fichier par rapport au dossier de base indiqué par l'attribut {{htmlattrxref("webkitdirectory", "input")}}. _Attention, cette fonctionnalité est non-standard et doit être utilisée avec précaution._
+- `webkitRelativePath`{{non-standard_inline}} : une chaîne de caractères qui indique l'emplacement relatif du fichier par rapport au dossier de base indiqué par l'attribut [`webkitdirectory`](/fr/docs/Web/HTML/Element/input#webkitdirectory). _Attention, cette fonctionnalité est non-standard et doit être utilisée avec précaution._
 
-> **Note :** Dans la plupart des navigateurs récents, il est possible de récupérer et de modifier l'attribut IDL `HTMLInputElement.files`. Pour Firefox, cela a été ajouté avec la version 57 (cf. {{bug(1384030)}}).
+> **Note :** Dans la plupart des navigateurs récents, il est possible de récupérer et de modifier l'attribut IDL `HTMLInputElement.files`. Pour Firefox, cela a été ajouté avec la version 57 (cf. [bug Firefox 1384030](https://bugzil.la/1384030)).
 
 ### Restreindre les types de fichiers acceptés
 
 Il arrive souvent qu'on souhaite sélectionner certains types de fichiers. Par exemple, si on souhaite fournir une image de profil, on restreindra probablemnt les formats à ceux des formats d'image compatibles pour le Web comme [JPEG](/fr/docs/Glossaire/jpeg) ou [PNG](/fr/docs/Glossaire/PNG).
 
-Pour cela, on peut utiliser l'attribut {{htmlattrxref("accept","input")}} afin d'indiquer les formats de fichier acceptés (sous la forme d'une liste d'extensions de fichier ou de types MIME séparés par des virgules). Par exemple :
+Pour cela, on peut utiliser l'attribut [`accept`](/fr/docs/Web/HTML/Element/input#accept) afin d'indiquer les formats de fichier acceptés (sous la forme d'une liste d'extensions de fichier ou de types MIME séparés par des virgules). Par exemple :
 
 - `accept="image/png"` ou `accept=".png"` permettra de n'accepter que les fichiers PNG.
 - `accept="image/png, image/jpeg"` ou `accept=".png, .jpg, .jpeg"` permettra de n'accepter que les fichiers PNG ou JPEG.
@@ -401,10 +401,10 @@ Et voici le résultat :
     <tr>
       <td><strong>Attributs pris en charge</strong></td>
       <td>
-        {{htmlattrxref("accept", "input/file")}},
-        {{htmlattrxref("capture", "input/file")}},
-        {{htmlattrxref("files", "input/file")}},
-        {{htmlattrxref("multiple", "input/file")}}
+        <a href="/fr/docs/Web/HTML/Element/input/file#accept"><code>accept</code></a>,
+        <a href="/fr/docs/Web/HTML/Element/input/file#capture"><code>capture</code></a>,
+        <a href="/fr/docs/Web/HTML/Element/input/file#files"><code>files</code></a>,
+        <a href="/fr/docs/Web/HTML/Element/input/file#multiple"><code>multiple</code></a>
       </td>
     </tr>
     <tr>

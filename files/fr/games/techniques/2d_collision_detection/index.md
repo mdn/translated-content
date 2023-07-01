@@ -1,12 +1,6 @@
 ---
 title: Détection de collisions en 2D
 slug: Games/Techniques/2D_collision_detection
-tags:
-  - 2D
-  - Algorithmes
-  - Détection de collisions
-  - JavaScript
-  - Jeux
 translation_of: Games/Techniques/2D_collision_detection
 ---
 

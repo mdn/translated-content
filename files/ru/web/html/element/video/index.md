@@ -12,10 +12,10 @@ translation_of: Web/HTML/Element/video
 
 ## Контекст Использования
 
-- Допустимое содержимое. Если элемент имеет атрибут {{htmlattrxref("src", "video")}}: 0 или более элементов {{HTMLElement("track")}}, за которым следует прозрачный контент, который не содержит элементов мультимедиа: {{HTMLElement("audio")}} или {{HTMLElement("video")}}
+- Допустимое содержимое. Если элемент имеет атрибут [`src`](/ru/docs/Web/HTML/Element/video#src): 0 или более элементов {{HTMLElement("track")}}, за которым следует прозрачный контент, который не содержит элементов мультимедиа: {{HTMLElement("audio")}} или {{HTMLElement("video")}}
   Иначе: 0 или более элементов {{HTMLElement("source")}}, за которыми следует 0 или более элементов {{HTMLElement("track")}}, затем прозрачным содержимым, которое не содержит элементы мультимедиа: {{HTMLElement("audio")}} или {{HTMLElement("video")}}.
 
-| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), содержание фраз, встроенный контент. Если имеет атрибут {{htmlattrxref("controls", "video")}}: становится интерактивным элементом с осязаемым содержанием. |
+| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), содержание фраз, встроенный контент. Если имеет атрибут [`controls`](/ru/docs/Web/HTML/Element/video#controls): становится интерактивным элементом с осязаемым содержанием. |
 | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Tag omission                                               | {{no_tag_omission}}                                                                                                                                                                                                                 |
 | Допустимые родительские элементы                           | Любой элемент, который принимает встроенный контент.                                                                                                                                                                                     |

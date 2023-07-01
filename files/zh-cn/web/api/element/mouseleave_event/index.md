@@ -67,8 +67,6 @@ _此接口也从其父接口 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 继
   - : 鼠标指针在全局（屏幕）坐标系中的 Y 坐标。
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : 在鼠标事件触发时，如果 <kbd>shift</kbd> 键被按下，则返回 `true`。
-- {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{deprecated_inline}} {{ReadOnlyInline}}
-  - : 在产生这个事件时，施加到触控或平板设备的压力量；该值介于 `0.0`（最小压力）和 `1.0`（最大压力）之间。你应该使用 {{domxref("PointerEvent")}} 并查看 {{domxref("PointerEvent.pressure", "pressure")}} 属性，而不是使用此废弃的（且非标准）的属性。
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
   - : 产生该事件的设备类型（`MOZ_SOURCE_*` 常量之一）。例如，你可以确定鼠标事件是由实际的鼠标还是由触摸事件生成的（这可能会影响你判断与事件关联的坐标时的准确度）。
 - {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}

@@ -79,17 +79,17 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
     > **Note :** Le comportement de la propriété `text-align` équivalent à `align="char"` n'est pas implémenté par les navigateurs à l'heure actuelle. Voir [le tableau de compatibilité des navigateurs `text-align`](/fr/docs/Web/CSS/text-align#browser_compatibility) à propos de l'alignement basé sur les une valeur `<string>`.
 
-- {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
+- `bgcolor` {{Deprecated_inline}}
 
   - : Cet attribut définit la couleur d'arrière-plan de toutes les cellules. C'est un [code hexadécimal à 6 chiffres RGB](/fr/docs/Web/CSS/color_value#couleurs_rgb) précédé d'un `#`. Un des [mots-clés prédéfinis pour les couleurs](/fr/docs/Web/CSS/color_value#les_mots-clés) peut également être utilisé.
 
     Cet attribut étant déprécié, on utilisera la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color) à la place.
 
-- {{htmlattrdef("char")}} {{Deprecated_inline}}
+- `char` {{Deprecated_inline}}
   - : Cet attribut est utilisé pour définir le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point (`.`) pour aligner des nombres ou des valeurs monétaires. Si l'attribut [`align`](#align) ne vaut pas `char`, l'attribut est ignoré.
-- {{htmlattrdef("charoff")}} {{deprecated_inline}}
+- `charoff` {{deprecated_inline}}
   - : Cet attribut est utilisé pour indiquer le décalage, en nombre de caractères, depuis le caractère définit par l'attribut `char` à appliquer au contenu des cellules.
-- {{htmlattrdef("valign")}} {{deprecated_inline}}
+- `valign` {{deprecated_inline}}
   - : Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles de cet attribut sont&nbsp;:
 
     - `baseline`

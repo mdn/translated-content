@@ -276,11 +276,11 @@ La page web de votre application locale devrait ressembler à celle ci-dessous :
 
 ![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
-> **Note :** Vous pouvez aussi utiliser l'attribut `exclude` pour identifier des attributs du modèle que vous souhaitez exclure de l'affichage (les autres attributs seront alors affichés). Pour plus de détails vous pouvez consulter la documentation Django sur l'attribut [exclude](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.exclude).
+> **Note :** Vous pouvez aussi utiliser l'attribut `exclude` pour identifier des attributs du modèle que vous souhaitez exclure de l'affichage (les autres attributs seront alors affichés). Pour plus de détails vous pouvez consulter la documentation Django sur l'attribut [`exclude`](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.exclude).
 
 #### Organiser des sections dans votre vue de détail
 
-Vous avez la possibilité de créer des sections à l'affichage pour regrouper des éléments à renseigner en utilisant l'attribut [fieldsets](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets).
+Vous avez la possibilité de créer des sections à l'affichage pour regrouper des éléments à renseigner en utilisant l'attribut [`fieldsets`](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets).
 
 Nous allons utiliser l'objet `BookInstance` pour mettre en avant cette possibilité. Nous avons à afficher des informations sur l'ouvrage (nom, édition, id) et sur sa disponibilité actuelle ou à venir (statut et retour de prêt). Nous choisissons d'afficher ces éléments dans deux sections différentes, l'une nommée et l'autre pas. Modifiez l'objet BookInstanceAdmin avec le texte en gras comme ci-dessous :
 

@@ -2,7 +2,6 @@
 title: Locale
 slug: Glossary/Locale
 translation_of: Glossary/Locale
-original_slug: Glossaire/Locale
 ---
 
 Les **locales** sont un ensemble de paramètres régionaux pour l'interface utilisateur basés sur la langue ou le pays.

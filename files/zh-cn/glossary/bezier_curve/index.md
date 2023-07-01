@@ -3,6 +3,8 @@ title: 贝塞尔曲线
 slug: Glossary/Bezier_curve
 ---
 
+{{GlossarySidebar}}
+
 **贝塞尔曲线**是一种使用数学方法描述的曲线，被广泛用于计算机图形学和动画中。在矢量图中，贝塞尔曲线用于定义可无限放大的光滑曲线。
 
 贝塞尔曲线由至少两个控制点进行描述。Web 技术中使用的是三次贝塞尔曲线，即使用四个控制点 P<sub>0</sub>、P<sub>1</sub>、P<sub>2</sub> 和 P<sub>3</sub> 描述的曲线。

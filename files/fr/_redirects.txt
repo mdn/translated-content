@@ -6130,7 +6130,6 @@
 /fr/docs/WebAPI/Battery_Status	/fr/docs/Web/API/Battery_status_API
 /fr/docs/WebAPI/Network_Information	/fr/docs/Web/API/Network_Information_API
 /fr/docs/WebAPI/Pointer_Lock	/fr/docs/Web/API/Pointer_Lock_API
-/fr/docs/WebAPI/Proximity	/fr/docs/Web/API/Proximity_Events
 /fr/docs/WebGL	/fr/docs/Web/API/WebGL_API
 /fr/docs/WebGL/Adding_2D_content_to_a_WebGL_context	/fr/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /fr/docs/WebGL/Ajouter_des_couleurs_avec_les_shaders	/fr/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL

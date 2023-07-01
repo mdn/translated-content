@@ -16,7 +16,7 @@ element.setAttribute(name, value);
 
 ## Пример
 
-В следующем примере, `setAttribute()` используется, чтобы установить атрибут {{htmlattrxref("disabled")}} кнопки {{htmlelement("button")}}, делая её отключённой.
+В следующем примере, `setAttribute()` используется, чтобы установить атрибут [`disabled`](/ru/docs/Web/HTML/Global_attributes#disabled) кнопки {{htmlelement("button")}}, делая её отключённой.
 
 ```html
 <button>Hello World</button>

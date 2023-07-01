@@ -41,8 +41,9 @@ My cat is very grumpy
 ![class 属性 class=editor-note が強調された段落の開始タグ](grumpy-cat-attribute-small.png)
 
 属性には、実際のコンテンツには表示させたくない、要素に関する追加情報が含まれています。ここでは、 `class` が属性の**名前**で、 `editor-note` が属性の**値**です。 `class` 属性では、要素に一意ではない識別子を与えることができ、それを使って要素（および同じ `class` 値を持つ他の要素）にスタイル情報などのターゲットを設定することができます。
+一部の属性、たとえば [`required`](/ja/docs/Web/HTML/Attributes/required) には値がありません。
 
-属性は常に次のような形式になります。
+値を設定する属性は常に次のような形式になります。
 
 1. 要素名（すでにいくつか属性がある場合はひとつ前の属性）との間の空白
 2. 属性名とそれに続く等号
@@ -60,7 +61,7 @@ My cat is very grumpy
 
 しかしながら要素は正しく入れ子にしなければなりません。上記の例では、まず始めに {{htmlelement("p")}} 要素が開始され、その次に {{htmlelement("strong")}} 要素が開始されています。その場合は、必ず {{htmlelement("strong")}} 要素、 {{htmlelement("p")}} 要素の順で終了しなければなりません。次の例は間違いです。
 
-```html example-bad
+```html-nolint example-bad
 <p>My cat is <strong>very grumpy.</p></strong>
 ```
 
@@ -68,10 +69,10 @@ My cat is very grumpy
 
 ### 空要素
 
-コンテンツを持たない要素もあります。そのような要素を**空要素** (empty element) と呼びます。すでに HTML ページにある {{htmlelement("img")}} 要素を例に見ていきましょう。
+コンテンツを持たない要素もあります。そのような要素を **{{glossary("void element", "空要素")}}** (void element) と呼びます。すでに HTML ページにある {{htmlelement("img")}} 要素を例に見ていきましょう。
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="My test image" />
 ```
 
 この要素は 2 つの属性を持っていますが、終了タグ `</img>` がありませんし、内部にコンテンツもありません。これは画像要素は、その機能を果たすためにコンテンツを囲むものではないからです。画像要素の目的は、画像を HTML ページの表示させたいところに埋め込むことです。
@@ -82,14 +83,14 @@ My cat is very grumpy
 
 ```html
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="ja">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>My test page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>テストページ</title>
   </head>
   <body>
-    <img src="images/firefox-icon.png" alt="My test image">
+    <img src="images/firefox-icon.png" alt="テスト画像" />
   </body>
 </html>
 ```
@@ -109,19 +110,19 @@ My cat is very grumpy
 もう一度 {{htmlelement("img")}} 要素について見ていくことにしましょう。
 
 ```html
-<img src="images/firefox-icon.png" alt="My test image">
+<img src="images/firefox-icon.png" alt="テスト画像" />
 ```
 
 前に説明したように、ページのこれが現れたところに画像を埋め込みます。画像ファイルのパスを値に持つ `src` (source) 属性を指定することによってその画像を表示できます。
 
 また、 `alt` (alternative; 代替) 属性も指定しています。 [`alt` 属性](/ja/docs/Web/HTML/Element/img#意味のある代替説明を書く)は、以下のような理由で画像を見られない人に向けて説明するテキストを指定するものです。
 
-1. 目が不自由な人。著しく目の不自由な人はよく画面リーダーと呼ばれるツールを使っていて、それが画像の `alt` 属性の内容を読み上げます。
+1. 目が不自由な人。著しく目の不自由な人はよくスクリーンリーダーと呼ばれるツールを使っていて、それが画像の `alt` 属性の内容を読み上げます。
 2. 何らかの理由で画像の表示に失敗した場合。例えば、 `src` 属性の中のパスをわざと正しくないものに変更してみてください。ページを保存したり再読み込みしたりすると、画像の場所に下記のようなものが表示されるでしょう。
 
-![My test image という言葉](alt-text-example.png)
+![テスト画像という言葉](alt-text-example.png)
 
-alt テキストのキーワードは「説明文」です。 alt テキストは、その画像が何を伝えているのかを読者が十分に理解できるような情報を提供する必要があります。この例では、現在のテキストである「My test image」は全く意味がありません。 Firefox のロゴであれば、「Firefox のロゴ: 地球の周りを燃えるような狐が囲んでいる。」の方がずっと良いでしょう。
+alt テキストのキーワードは「説明文」です。 alt テキストは、その画像が何を伝えているのかを読者が十分に理解できるような情報を提供する必要があります。この例では、現在のテキストである「テスト画像」は全く意味がありません。 Firefox のロゴであれば、「Firefox のロゴ: 地球の周りを燃えるような狐が囲んでいる。」の方がずっと良いでしょう。
 
 画像に良い代替文字列を付けてみましょう。
 
@@ -171,7 +172,10 @@ alt テキストのキーワードは「説明文」です。 alt テキスト�
 例えば、次の段落の一部をリストにしたい場合、
 
 ```html
-<p>At Mozilla, we're a global community of technologists, thinkers, and builders working together… </p>
+<p>
+  At Mozilla, we're a global community of technologists, thinkers, and builders
+  working together…
+</p>
 ```
 
 以下のようにマークアップします。
@@ -185,7 +189,7 @@ alt テキストのキーワードは「説明文」です。 alt テキスト�
   <li>builders</li>
 </ul>
 
-<p>working together… </p>
+<p>working together…</p>
 ```
 
 ページに番号付きリストと番号なしリストを追加してみましょう。
@@ -197,21 +201,23 @@ alt テキストのキーワードは「説明文」です。 alt テキスト�
 1. リンクにしたい文字を選びます。今回は "Mozilla Manifesto" を選びました。
 2. 選んだ文字を {{htmlelement("a")}} 要素で囲みます。
 
-    ```html
-    <a>Mozilla Manifesto</a>
-    ```
+   ```html
+   <a>Mozilla Manifesto</a>
+   ```
 
 3. このように {{htmlelement("a")}} 要素に `href` 属性を追加します。
 
-    ```html
-    <a href="">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="">Mozilla Manifesto</a>
+   ```
 
     このリンクのリンク先になるウェブアドレスを、この属性の値に書き込みます。
 
-    ```html
-    <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a>
-    ```
+   ```html
+   <a href="https://www.mozilla.org/en-US/about/manifesto/">
+     Mozilla Manifesto
+   </a>
+   ```
 
 アドレスの先頭にある `https://` や `http://` の部分（*プロトコル*と言います）を書き忘れると、予期せぬ結果となってしまうかもしれません。リンクを作ったら、ちゃんとそれが遷移したいところに行ってくれるかを確かめましょう。
 

@@ -3,6 +3,8 @@ title: Grid Areas
 slug: Glossary/Grid_Areas
 ---
 
+{{GlossarySidebar}}
+
 **网格区域**是网格中由一个或者多个{{glossary("grid cell", "网格单元格")}}组成的一个矩形区域。当你使用[基于网格线位置](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)放置一个项目或者使用[命名的网格区域](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)定义区域时，网格区域被创建。
 
 ![Image showing a highlighted grid area](1_grid_area.png)

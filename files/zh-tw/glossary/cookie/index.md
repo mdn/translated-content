@@ -3,6 +3,8 @@ title: Cookie
 slug: Glossary/Cookie
 ---
 
+{{GlossarySidebar}}
+
 Cookie 是一個網站通過瀏覽器訪問在訪客電腦裏留下的一小段信息。
 
 Cookies 被網站用於個性化用戶個人的網頁體驗。訪問該網站時它可能覆蓋了用戶的喜好或輸入。用戶可以自定義他們的瀏覽器是個接受或是刪除 cookies.
