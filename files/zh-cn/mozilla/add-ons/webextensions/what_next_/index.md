@@ -9,9 +9,9 @@ slug: Mozilla/Add-ons/WebExtensions/What_next_
 
 ## 你的开发环境
 
-你不需要任何特殊的开发或构建环境工具来创建浏览器扩展：只需要一个简单的文本编辑器就可以创建出很好的浏览器扩展。当然，你可能一直在做 web 开发有一套你想去配置的开发工具和环境。如果是这样，你需要意识到一些事情。
+你不需要任何特殊的开发或构建环境工具来创建浏览器扩展：只需要一个简单的文本编辑器就可以创建出很好的浏览器扩展。当然，你可能一直在做 web 开发，有一套你想去配置的开发工具和环境。如果是这样，你需要意识到一些事情。
 
-如果你使用了打包压缩工具来交付你最终的代码，你需要提交你的源码到 [AMO](#审查程序) 审查。此外，用于压缩、混淆、构建的工具需要是开源的 (或提供无限的免费使用), 并且可以在审阅者的计算机（Windows、Mac 或 Linux）上运行。主要是，我们的审阅者无法使用商业或基于 Web 的工具。
+如果你使用了打包压缩工具来交付你最终的代码，你需要提交你的源码到 [AMO 审查程序](#审查程序)。此外，用于压缩、混淆、构建的工具需要是开源的 (或提供无限的免费使用), 并且可以在审阅者的计算机（Windows、Mac 或 Linux）上运行。主要是，我们的审查员无法使用商业或基于 Web 的工具。
 
 [在 Extension Workshop 上了解更多关于开发工具的信息](https://extensionworkshop.com/documentation/develop/browser-extension-development-tools/)
 
@@ -23,7 +23,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_next_
 
 ## 火狐浏览器附加组件分发协议
 
-浏览器扩展需要经过签名才能安装到 Firefox 的发行版或测试版。签名是在 addons.mozilla.org（AMO）进行的，并且要遵守《火狐浏览器附加组件分发协议》的条款和条件。该协议的目的是确保火狐用户能够获得支持良好的优质附加组件，以提高火狐的体验。
+浏览器扩展需要经过签名才能安装到火狐（Firefox）的发行版或测试版。签名是在 addons.mozilla.org（AMO）进行的，并且要遵守《火狐浏览器附加组件分发协议》的条款和条件。该协议的目的是确保火狐用户能够获得支持良好的优质附加组件，以提高火狐的体验。
 
 [在 Extension Workshop 上阅读协议](https://extensionworkshop.com/documentation/publish/firefox-add-on-distribution-agreement/)
 
