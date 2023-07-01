@@ -60,7 +60,7 @@ slug: Web/API/Request
 - {{domxref("Body.text()")}}
   - : 返回 promise，使用请求主体的文本表示来兑现。
 
->**备注：** 这些 Body 上的函数只能运行一次; 随后的调用将通过空 strings/ArrayBuffers 解析。
+>**备注：** 这些请求主体上的函数只能运行一次，随后的调用将兑现为空字符串或空的 ArrayBuffer。
 
 ## 示例
 
