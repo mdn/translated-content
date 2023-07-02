@@ -1,6 +1,7 @@
 ---
 title: リンク先読みの FAQ
-slug: Web/HTTP/Link_prefetching_FAQ
+slug: conflicting/Glossary/Prefetch
+original_slug: Web/HTTP/Link_prefetching_FAQ
 ---
 
 ### リンクの先読みとは?

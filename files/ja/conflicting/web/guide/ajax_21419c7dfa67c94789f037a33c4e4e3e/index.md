@@ -1,8 +1,7 @@
 ---
 title: 始めましょう
-slug: Web/Guide/AJAX/Getting_Started
-l10n:
-  sourceCommit: 20bbabd48da81dda9d79d123cb1c880c43925719
+slug: conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
+original_slug: Web/Guide/AJAX/Getting_Started
 ---
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Guide/AJAX")}}

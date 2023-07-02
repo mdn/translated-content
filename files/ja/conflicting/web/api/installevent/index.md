@@ -1,8 +1,7 @@
 ---
 title: InstallEvent.activeWorker
-slug: Web/API/InstallEvent/activeWorker
-l10n:
-  sourceCommit: 21d3e89589aaf9e5cfa667de679134513ab833f3
+slug: conflicting/Web/API/InstallEvent
+original_slug: Web/API/InstallEvent/activeWorker
 ---
 
 {{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_Header}}

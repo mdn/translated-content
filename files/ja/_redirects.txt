@@ -5,10 +5,10 @@
 #
 # FROM-URL	TO-URL
 /ja/docs/AJAX	/ja/docs/Web/Guide/AJAX
-/ja/docs/AJAX/Community	/ja/docs/Web/Guide/AJAX/Community
-/ja/docs/AJAX/Getting_Started	/ja/docs/Web/Guide/AJAX/Getting_Started
-/ja/docs/AJAX:Community	/ja/docs/Web/Guide/AJAX/Community
-/ja/docs/AJAX:Getting_Started	/ja/docs/Web/Guide/AJAX/Getting_Started
+/ja/docs/AJAX/Community	/ja/docs/conflicting/Web/Guide/AJAX
+/ja/docs/AJAX/Getting_Started	/ja/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
+/ja/docs/AJAX:Community	/ja/docs/conflicting/Web/Guide/AJAX
+/ja/docs/AJAX:Getting_Started	/ja/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
 /ja/docs/API	/ja/docs/Web/API
 /ja/docs/API/Document	/ja/docs/Web/API/Document
 /ja/docs/API/Document/Document	/ja/docs/Web/API/Document/Document
@@ -2136,7 +2136,7 @@
 /ja/docs/Learn/Performance/Populating_the_page:_how_browsers_work	/ja/docs/Web/Performance/How_browsers_work
 /ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async	/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data
 /ja/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry	/ja/docs/orphaned/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry
-/ja/docs/Link_prefetching_FAQ	/ja/docs/Web/HTTP/Link_prefetching_FAQ
+/ja/docs/Link_prefetching_FAQ	/ja/docs/conflicting/Glossary/Prefetch
 /ja/docs/Localization	/ja/docs/Glossary/Localization
 /ja/docs/Localizing_extension_descriptions	/ja/docs/orphaned/Localizing_extension_descriptions
 /ja/docs/MDN/About	/ja/docs/MDN/Writing_guidelines
@@ -2913,6 +2913,7 @@
 /ja/docs/Web/API/Index	/ja/docs/Web/API
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
 /ja/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria	/ja/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria
+/ja/docs/Web/API/InstallEvent/activeWorker	/ja/docs/conflicting/Web/API/InstallEvent
 /ja/docs/Web/API/LocalFileSystem	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/LocalFileSystemSync	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/Location/password	/ja/docs/Web/API/Location
@@ -3475,7 +3476,7 @@
 /ja/docs/Web/Apps/Progressive/Add_to_home_screen	/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /ja/docs/Web/Apps/Progressive/App_structure	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
 /ja/docs/Web/Apps/Progressive/Installable_PWAs	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
-/ja/docs/Web/Apps/Progressive/Introduction	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+/ja/docs/Web/Apps/Progressive/Introduction	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ja/docs/Web/Apps/Progressive/Offline_Service_workers	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
 /ja/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 /ja/docs/Web/CSP_(Content_Security_Policy)	/ja/docs/Web/HTTP/CSP
@@ -3833,6 +3834,9 @@
 /ja/docs/Web/Events/vrdisplaydisconnected	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/Events/vrdisplaypresentchange	/ja/docs/Web/API/Window/vrdisplaypresentchange_event
 /ja/docs/Web/Events/waiting	/ja/docs/Web/API/HTMLMediaElement/waiting_event
+/ja/docs/Web/Guide/AJAX/Community	/ja/docs/conflicting/Web/Guide/AJAX
+/ja/docs/Web/Guide/AJAX/Getting_Started	/ja/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
+/ja/docs/Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support	/ja/docs/Mozilla/Firefox/Releases/3/WAI_ARIA_Live_Regions_API_Support
 /ja/docs/Web/Guide/API/Gamepad	/ja/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
 /ja/docs/Web/Guide/API/Vibration	/ja/docs/Web/API/Vibration_API
 /ja/docs/Web/Guide/Audio_and_video_delivery/H.264_support_in_Firefox	/ja/docs/Web/Guide/Audio_and_video_delivery
@@ -4088,6 +4092,7 @@
 /ja/docs/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking	/ja/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking
 /ja/docs/Web/HTTP/Headers/Set-Cookie2	/ja/docs/Web/HTTP/Headers/Set-Cookie
 /ja/docs/Web/HTTP/Index	/ja/docs/Web/HTTP
+/ja/docs/Web/HTTP/Link_prefetching_FAQ	/ja/docs/conflicting/Glossary/Prefetch
 /ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /ja/docs/Web/HTTP/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
 /ja/docs/Web/HTTP/Response_codes	/ja/docs/Web/HTTP/Status
@@ -4417,10 +4422,11 @@
 /ja/docs/Web/MathML/Index	/ja/docs/Web/MathML
 /ja/docs/Web/Media/images/aspect_ratio_mapping	/ja/docs/Learn/Performance/Multimedia
 /ja/docs/Web/Progressive_web_apps/Add_to_home_screen	/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
-/ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+/ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ja/docs/Web/Progressive_web_apps/App_structure	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
+/ja/docs/Web/Progressive_web_apps/Guides/Structural_overview	/ja/docs/conflicting/Web/Progressive_web_apps
 /ja/docs/Web/Progressive_web_apps/Installable_PWAs	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
-/ja/docs/Web/Progressive_web_apps/Introduction	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+/ja/docs/Web/Progressive_web_apps/Introduction	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ja/docs/Web/Progressive_web_apps/Loading	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading
 /ja/docs/Web/Progressive_web_apps/Offline_Service_workers	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
 /ja/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
@@ -4429,7 +4435,8 @@
 /ja/docs/Web/Progressive_web_apps/Responsive/Mobile_first	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
 /ja/docs/Web/Progressive_web_apps/Responsive/Responsive_navigation_patterns	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
 /ja/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
-/ja/docs/Web/Progressive_web_apps/Structural_overview	/ja/docs/Web/Progressive_web_apps/Guides/Structural_overview
+/ja/docs/Web/Progressive_web_apps/Structural_overview	/ja/docs/conflicting/Web/Progressive_web_apps
+/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ja/docs/Web/Reference	/ja/docs/Web
 /ja/docs/Web/Reference/API	/ja/docs/Web/API
 /ja/docs/Web/Reference/Events	/ja/docs/Web/Events
