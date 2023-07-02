@@ -13,7 +13,7 @@ slug: Learn/Accessibility/Mobile
       <th scope="row">前提：</th>
       <td>
         具备基本的计算机知识，对 HTML、CSS 和 JavaScript
-        基本的了解，并理解<a href="/en-US/docs/Learn/Accessibility"
+        基本的了解，并理解<a href="/zh-CN/docs/Learn/Accessibility"
           >之前课程中的文章</a
         >。
       </td>
@@ -31,7 +31,7 @@ slug: Learn/Accessibility/Mobile
 
 现代移动设备对无障碍和大多数 web 标准有很好的支持。那个因为移动设备和桌面设备使用了完全不同的技术而强制要求开发者使用浏览器嗅探并为它们提供不同网站的时代已经结束了（虽然现在还有许多公司仍然在检测用户移动设备的使用，并为这些设备提供一个独立的移动端域名）。
 
-如今，移动设备一般都可以处理特性齐全的网站了，同时，为了能够让盲人成功的使用网站，主流平台甚至还内置了屏幕阅读器。移动设备也倾向于对“[WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics)”有很好的支持。
+如今，移动设备一般都可以处理特性齐全的网站了，同时，为了能够让盲人成功的使用网站，主流平台甚至还内置了屏幕阅读器。移动设备也倾向于对“[WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)”有很好的支持。
 
 你只要需要遵守良好的 web 设计规范和最佳的无障碍实践，就可以让你的网站在手机上无障碍地使用。
 
@@ -106,11 +106,11 @@ TalkBack 允许你使用全局和本地菜单，无论你已经导航到哪个�
    - 手指按在虚拟键盘上，选择你想要的字符，松开手指输入它，重复上述操作输入完所有的字符。
    - 输入完之后，找到 Enter 键并按下
 
-4. 向左右滑动在页面上不同的项目之间切换。
+4. 向左右滑动，以在页面上不同的项目之间切换。
 5. 向上然后向右滑动进入本地内容菜单。
 6. 向右滑动直到你找到“标题和标识”选项。
 7. 双击选择它。现在你就可以通过左右滑动在标题和 ARIA 标识之间切换。
-8. 向右向上滑动之后，进去本地上下文菜单，选择“默认”，就可以返回默认模式。
+8. 向右向上滑动之后，进入本地上下文菜单，选择“默认”，就可以返回默认模式。
 
 > **备注：** 查看[开始在 Android 设备上使用 TalkBack](https://support.google.com/accessibility/android/answer/6283677?ref_topic=3529932) 以获取更完整的文档。
 
@@ -160,16 +160,16 @@ iOS 操作系统内置了移动版旁白（VoiceOver）。
    - 对于每一个字符，手指在虚拟键盘上长按，直到找到你想要的字符，然后释放手指来选择它。双击即可输入。
    - 完成后，找到 Enter 键并按下。
 
-4. 向左右滑动来在页面上切换不同的项目。你可以通过双击来选择他（例如，按住链接）。
+4. 向左右滑动来在页面上切换不同的项目。你可以通过双击来选择它（例如，跟随链接）。
 5. 默认情况下，被选中的转子选项应该是说话频率，你可以通过上下滑动来增加或减少讲话速率。
 6. 现在像拨号盘一样围绕屏幕转动两根手指，以显示转子并在其选项之间移动。以下是可用选项的一些示例：
 
-   - _说话速率_：改变说话速率。
+   - _语速_：改变语速。
    - _容器_：在页面不同予以的容器间切换。
    - _标题_：在页面上的标题之间切换。
    - _链接_：在页面上的链接之间切换。
    - _表单控件_：在页面上的表单控件之间切换。
-   - 语言_：在不同的翻译之间切换，如果可用的话。
+   - _语言_：在不同的翻译之间切换，如果这些翻译可用。
 
 7. 选择*标题*，现在你可以通过上下滑动在页面的不同标题中切换。
 
@@ -220,7 +220,7 @@ panel.ontouchend = stopMove;
 
 - 移动端设备布局的适用性。例如，在窄屏上多列布局不能很好的工作，需要增加文字大小以提高可读性。这些问题可以通过[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)、[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag)、[弹性盒子](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)来解决。
 - 节省下载的图片大小。一般来说，小屏幕设备不需要与桌面设备一样大的图像，而且它们将更可能在慢速网络连接上。因此，适当地缩小屏幕设备以缩小图像是明智的。你可以使用[响应式图像技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)处理此问题。
-- 考虑高分辨率。许多移动设备具有高分辨率屏幕，因此需要更高分辨率的图像，使得显示器可以继续看起来清晰和锐利。再次，你可以使用响应式图像技术来适当地提供图像。此外，使用 SVG 矢量图像格式可以满足许多图像要求，这些格式在目前的浏览器中得到了很好的支持。SVG 文件较小，且不论以何种大小显示，它都会保持清晰（请参阅[向网页中添加矢量图形](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)一些更多的细节）。
+- 考虑高分辨率。许多移动设备具有高分辨率屏幕，因此需要更高分辨率的图像，使得显示器可以继续看起来清晰和锐利。再次，你可以使用响应式图像技术来适当地提供图像。此外，使用 SVG 矢量图像格式可以满足许多图像要求，这些格式在目前的浏览器中得到了很好的支持。SVG 文件较小，且不论以何种大小显示，它都会保持清晰（请参阅[向网页中添加矢量图形](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)以了解更多的细节）。
 
 > **备注：** 我们不会在这里对响应式设计进行完整的讨论，因为它们在 MDN 其他地方都有涉及（参考上面的链接）。
 
@@ -242,7 +242,7 @@ panel.ontouchend = stopMove;
 
 因为移动设备上的屏幕非常窄，所以使用媒体查询和其他技术使得导航菜单缩小到显示屏顶部的一个小图标，只有在需要的时候才展示菜单，这种方式在移动设备上很常见的。这通常由“三横线”图标表示，并且设计模式因此被称为“汉堡菜单”。
 
-在实现这样的菜单时，需要确保显示控件的控件可以通过适当的控制机制（通常为移动触摸）进行访问，如上面的[控制机制](#控制机制)中所讨论的，并且页面的其余部分被移开 或在菜单被访问时以某种方式隐藏，以避免与导航混淆。
+在实现这样的菜单时，需要确保显示控件的控件可以通过适当的控制机制（移动端通常为触摸）进行访问，如上面的[控制机制](#控制机制)中所讨论的那样，并且在访问菜单时页面的其他部分以某种方式移开或隐藏，以避免与导航混淆。
 
 让我们来看一个很好的[“汉堡包菜单”的示例](https://fritz-weisshart.de/meg_men/)。
 
@@ -252,7 +252,7 @@ panel.ontouchend = stopMove;
 
 出于这个原因，值得尽量减少所需的输入量。例如，与其让用户每次使用常规文本输入来填写他们的工作标题，而是可以提供一个 {{htmlelement("select")}} 菜单，其中包含最常见的选项（这也有助于数据输入的一致性），并提供一个“其他”选项，显示一个文本字段来输入任何异常值。你可以在 [common-job-types.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/common-job-types.html)中看到这个想法的一个简单示例（查看[常见任务实时示例](https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)）。
 
-也值得考虑在移动平台上使用 HTML5 格式输入类型（如日期），因为它们可以很好地处理它们。例如，Android 和 iOS 都会显示可用于设备体验的可用控件。有关示例，请参阅 [html5-form-examples.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/html5-form-examples.html)（请查看 [HTML5 表单实时示例](https://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)）——尝试加载这些内容并在移动设备上对其进行操作。例如：
+也值得考虑在移动平台上使用 HTML 格式输入类型（如日期），因为它们可以得到很好的处理。例如，Android 和 iOS 都会显示可用于设备体验的可用控件。有关示例，请参阅 [html5-form-examples.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/html5-form-examples.html)（请查看 [HTML5 表单实时示例](https://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)）——尝试加载这些内容并在移动设备上对其进行操作。例如：
 
 - 在输入数字（`number`）、电话（`tel`）和邮件（`email`）时，展示合适的虚拟键盘来输入数字。
 - 在输入时间（`time`）和日期（`date`）时展示合适的选择器来选择时间和日期。
