@@ -2,7 +2,6 @@
 title: Macros usuelles
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 translation_of: MDN/Structures/Macros/Commonly-used_macros
-original_slug: MDN/Structures/Macros/Commonly-used_macros
 ---
 
 {{MDNSidebar}}
