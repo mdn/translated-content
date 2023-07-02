@@ -15,7 +15,7 @@ slug: Web/API/Notification/tag
 
 ## 示例
 
-我们的[使用通知 API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API#dealing_with_repeated_notifications) 文章有一个很好的标签属性的使用示例。
+我们的[使用通知 API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API#replacing_existing_notifications) 文章有一个很好的标签属性的使用示例。
 
 ## 规范
 
