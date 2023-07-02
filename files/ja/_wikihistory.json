@@ -30446,25 +30446,6 @@
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
-  "conflicting/Glossary/Prefetch": {
-    "modified": "2020-01-12T13:11:34.893Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "SphinxKnight",
-      "yumetodo",
-      "hamasaki",
-      "jigs12",
-      "ethertank",
-      "Marsf",
-      "Potappo",
-      "Kohei",
-      "Mgjbot",
-      "Taken",
-      "Shimono",
-      "Yama"
-    ]
-  },
   "conflicting/Glossary/Scroll_container": {
     "modified": "2019-03-18T20:53:07.981Z",
     "contributors": ["mfuji09"]
@@ -30700,39 +30681,6 @@
   "conflicting/Web/CSS/transform-function/skewX": {
     "modified": "2020-11-30T10:28:22.488Z",
     "contributors": ["chrisdavidmills", "mfuji09", "inkusu"]
-  },
-  "conflicting/Web/Guide/AJAX": {
-    "modified": "2019-03-30T16:54:59.132Z",
-    "contributors": [
-      "silverskyvicto",
-      "bestinterviewquestion",
-      "SphinxKnight",
-      "chrisdavidmills",
-      "Marsf",
-      "Mgjbot",
-      "Okome",
-      "Shimono"
-    ]
-  },
-  "conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e": {
-    "modified": "2020-07-28T22:57:33.766Z",
-    "contributors": [
-      "eltociear",
-      "mfuji09",
-      "Uemmra3",
-      "chrisdavidmills",
-      "ethertank",
-      "maco81",
-      "Mgjbot",
-      "Shoot",
-      "Marsf",
-      "Taken",
-      "Okome",
-      "Taken Bot",
-      "Diskostu",
-      "Yu-raku-an",
-      "Shimono"
-    ]
   },
   "conflicting/Web/HTTP/Headers/Feature-Policy/xr-spatial-tracking": {
     "modified": "2020-08-12T12:42:41.854Z",
