@@ -2,12 +2,6 @@
 title: contentScripts.RegisteredContentScript.unregister()
 slug: >-
   Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
-tags:
-  - API
-  - Extensions
-  - Reference
-  - RegisteredContentScript.unregister
-  - contentScripts
 translation_of: >-
   Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
 ---

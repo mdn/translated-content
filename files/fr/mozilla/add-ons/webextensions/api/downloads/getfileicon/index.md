@@ -1,16 +1,6 @@
 ---
 title: downloads.getFileIcon()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - getFileIcon
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
 ---
 

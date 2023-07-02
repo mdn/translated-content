@@ -1,16 +1,6 @@
 ---
 title: webRequest.onCompleted
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onCompleted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCompleted
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onCompleted
 ---
 

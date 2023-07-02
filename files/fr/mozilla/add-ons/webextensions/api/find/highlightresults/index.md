@@ -1,15 +1,6 @@
 ---
 title: find.highlightResults()
 slug: Mozilla/Add-ons/WebExtensions/API/find/highlightResults
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - find
-  - highlightResults
 translation_of: Mozilla/Add-ons/WebExtensions/API/find/highlightResults
 ---
 

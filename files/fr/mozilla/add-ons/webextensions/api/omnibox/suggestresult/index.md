@@ -1,15 +1,6 @@
 ---
 title: omnibox.SuggestResult
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/SuggestResult
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - SuggestResult
-  - Type
-  - WebExtensions
-  - omnibox
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/SuggestResult
 ---
 

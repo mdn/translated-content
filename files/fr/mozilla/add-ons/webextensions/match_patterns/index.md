@@ -1,10 +1,6 @@
 ---
 title: Motifs (Match patterns)
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
-tags:
-  - Match pattern
-  - Modèle de correspondance
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Match_patterns
 ---
 

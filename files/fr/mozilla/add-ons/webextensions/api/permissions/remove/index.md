@@ -1,14 +1,6 @@
 ---
 title: permissions.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/remove
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Permissions
-  - Reference
-  - WebExtensions
-  - remove
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/remove
 ---
 

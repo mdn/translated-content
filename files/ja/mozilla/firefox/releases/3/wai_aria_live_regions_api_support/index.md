@@ -1,8 +1,7 @@
 ---
 title: WAI ARIA ライブリージョン/API 対応
-slug: Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support
-l10n:
-  sourceCommit: 9b38f886d21c5d0a428f58acb20c4d0fc6c2e098
+slug: Mozilla/Firefox/Releases/3/WAI_ARIA_Live_Regions_API_Support
+original_slug: Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support
 ---
 
 > **警告:** これらの注釈は、スクリーンリーダーの開発者向けです。 開発者は、[ARIA ライブリージョン開発者のドキュメント](/ja/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)を使用する必要があります。

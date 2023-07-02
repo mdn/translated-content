@@ -1,17 +1,7 @@
 ---
 title: devtools.panels.ExtensionSidebarPane.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onShown
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ExtesionsSidebarPane
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - onShown
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onShown
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onShown
 ---
 
 {{AddonSidebar()}}

@@ -1,15 +1,6 @@
 ---
 title: bookmarks.BookmarkTreeNodeType
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType
-tags:
-  - API
-  - Add-ons
-  - BookmarkTreeNodeType
-  - Bookmarks
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType
 ---
 

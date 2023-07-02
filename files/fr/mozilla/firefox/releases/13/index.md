@@ -1,11 +1,7 @@
 ---
 title: Firefox 13 pour les développeurs
 slug: Mozilla/Firefox/Releases/13
-tags:
-  - Firefox
-  - Firefox 13
 translation_of: Mozilla/Firefox/Releases/13
-original_slug: Mozilla/Firefox/Versions/13
 ---
 
 {{FirefoxSidebar}}

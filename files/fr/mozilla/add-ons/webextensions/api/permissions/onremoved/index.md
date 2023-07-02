@@ -1,14 +1,6 @@
 ---
 title: permissions.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Permissions
-  - Reference
-  - WebExtensions
-  - onRemoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
 ---
 

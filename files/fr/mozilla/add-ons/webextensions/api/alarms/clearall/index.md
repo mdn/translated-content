@@ -1,16 +1,6 @@
 ---
 title: alarms.clearAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - clearAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
 ---
 

@@ -1,16 +1,6 @@
 ---
 title: bookmarks.get()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
-tags:
-  - API
-  - Add-ons
-  - Bookmraks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
 ---
 

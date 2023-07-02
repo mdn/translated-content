@@ -1,16 +1,6 @@
 ---
 title: tabs.get()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - get
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/get
 ---
 

@@ -1,16 +1,6 @@
 ---
 title: cookies.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 ---
 
