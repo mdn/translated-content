@@ -4424,7 +4424,7 @@
 /ja/docs/Web/Progressive_web_apps/Add_to_home_screen	/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /ja/docs/Web/Progressive_web_apps/Advantages	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ja/docs/Web/Progressive_web_apps/App_structure	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/App_structure
-/ja/docs/Web/Progressive_web_apps/Guides/Structural_overview	/ja/docs/conflicting/Web/Progressive_web_apps
+/ja/docs/Web/Progressive_web_apps/Guides/Structural_overview	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web/Progressive_web_apps/Installable_PWAs	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs
 /ja/docs/Web/Progressive_web_apps/Introduction	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ja/docs/Web/Progressive_web_apps/Loading	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Loading
@@ -4435,7 +4435,7 @@
 /ja/docs/Web/Progressive_web_apps/Responsive/Mobile_first	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
 /ja/docs/Web/Progressive_web_apps/Responsive/Responsive_navigation_patterns	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
 /ja/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks	/ja/docs/Learn/CSS/CSS_layout/Responsive_Design
-/ja/docs/Web/Progressive_web_apps/Structural_overview	/ja/docs/conflicting/Web/Progressive_web_apps
+/ja/docs/Web/Progressive_web_apps/Structural_overview	/ja/docs/Web/Progressive_web_apps
 /ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ja/docs/Web/Reference	/ja/docs/Web
 /ja/docs/Web/Reference/API	/ja/docs/Web/API
