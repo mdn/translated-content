@@ -17,7 +17,7 @@ slug: Web/API/IdleDeadline
 ## 实例方法
 
 - {{domxref("IdleDeadline.timeRemaining()")}}
-  - : 返回一个 {{domxref("DOMHighResTimeStamp")}}，其为浮点数，用来表示当前闲置周期的预估剩余毫秒数。如果闲置期已经结束，则其值为 0。你的回调函数可以重复的调用该函数，以判断目前是否有足够的时间来执行更多的任务。
+  - : 返回一个 {{domxref("DOMHighResTimeStamp")}}，其为浮点数，用来表示当前闲置周期的预估剩余毫秒数。如果闲置期已经结束，则其值为 0。你的回调函数可以重复调用该函数，以判断目前是否有足够的时间来执行更多的任务。
 
 ## 示例
 
