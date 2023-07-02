@@ -1,12 +1,7 @@
 ---
 title: Incompatibilités avec Chrome
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-tags:
-  - Guide
-  - WebExtensions
-  - google chrome
 translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-original_slug: Mozilla/Add-ons/WebExtensions/Incompatibilités_Chrome
 ---
 
 {{AddonSidebar}}

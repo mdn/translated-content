@@ -1,16 +1,7 @@
 ---
 title: Travailler avec des identités contextuelles
 slug: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
-tags:
-  - Add-ons
-  - Comment
-  - Contextual identities
-  - Débutant
-  - Extensions
-  - Hox-to
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
-original_slug: Mozilla/Add-ons/WebExtensions/travailler_avec_des_identites_contextuelles
 ---
 
 {{AddonSidebar}}

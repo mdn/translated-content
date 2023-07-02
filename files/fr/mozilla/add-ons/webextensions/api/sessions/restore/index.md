@@ -1,15 +1,6 @@
 ---
 title: sessions.restore()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/restore
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Methode(2)
-  - Non-standard
-  - WebExtensions
-  - restaure
-  - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/restore
 ---
 

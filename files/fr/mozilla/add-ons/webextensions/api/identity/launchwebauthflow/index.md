@@ -1,15 +1,6 @@
 ---
 title: identity.launchWebAuthFlow
 slug: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Identity
-  - Method
-  - Reference
-  - WebExtensions
-  - launchWebAuthFlow
 translation_of: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 ---
 

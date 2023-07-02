@@ -1,16 +1,6 @@
 ---
 title: storage.StorageChange
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageChange
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Storage
-  - StorageChange
-  - Type
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageChange
 ---
 

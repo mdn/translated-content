@@ -1,16 +1,6 @@
 ---
 title: tabs.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/connect
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - connect
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/connect
 ---
 

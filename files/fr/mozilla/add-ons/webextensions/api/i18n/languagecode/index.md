@@ -1,17 +1,6 @@
 ---
 title: i18n.LanguageCode
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/LanguageCode
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - LanguageCode
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - i18n
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/LanguageCode
 ---
 

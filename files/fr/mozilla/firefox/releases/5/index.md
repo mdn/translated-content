@@ -1,11 +1,7 @@
 ---
 title: Firefox 5 pour les développeurs
 slug: Mozilla/Firefox/Releases/5
-tags:
-  - Firefox
-  - Firefox 5
 translation_of: Mozilla/Firefox/Releases/5
-original_slug: Mozilla/Firefox/Versions/5
 ---
 
 {{FirefoxSidebar}}

@@ -1,11 +1,7 @@
 ---
 title: Firefox 9 pour les développeurs
 slug: Mozilla/Firefox/Releases/9
-tags:
-  - Firefox
-  - Firefox 9
 translation_of: Mozilla/Firefox/Releases/9
-original_slug: Mozilla/Firefox/Versions/9
 ---
 
 1. Notes de versions pour développeurs

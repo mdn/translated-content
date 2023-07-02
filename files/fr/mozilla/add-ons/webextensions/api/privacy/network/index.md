@@ -1,15 +1,6 @@
 ---
 title: privacy.network
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/network
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Network
-  - Pricavy
-  - Property
-  - Reference
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/network
 ---
 

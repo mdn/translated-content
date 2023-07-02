@@ -1,16 +1,6 @@
 ---
 title: webRequest.onResponseStarted
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onResponseStarted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onResponseStarted
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onResponseStarted
 ---
 

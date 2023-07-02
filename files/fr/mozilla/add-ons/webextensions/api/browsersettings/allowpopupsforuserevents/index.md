@@ -1,14 +1,6 @@
 ---
 title: browserSettings.allowPopupsForUserEvents
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents
-tags:
-  - API
-  - Add-ons
-  - BrowserSetting
-  - Extensions
-  - Property
-  - WebExtensions
-  - allowPopupsForUserEvents
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents
 ---
 
