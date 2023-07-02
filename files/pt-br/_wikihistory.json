@@ -5765,20 +5765,6 @@
       "PedroFelipe"
     ]
   },
-  "Web/Guide/AJAX/Getting_Started": {
-    "modified": "2019-03-23T23:09:35.656Z",
-    "contributors": [
-      "chrisdavidmills",
-      "darnosls",
-      "DiogoFontes",
-      "renatogalvones",
-      "devLopez",
-      "flaviomicheletti",
-      "Alakazam",
-      "xanfox",
-      "robinsonsantos"
-    ]
-  },
   "Web/Guide/API": {
     "modified": "2019-09-11T09:42:23.112Z",
     "contributors": ["SphinxKnight", "Sheppy"]
@@ -10460,7 +10446,7 @@
     "modified": "2020-04-06T10:15:30.355Z",
     "contributors": ["R-Santtos", "chrisdavidmills", "mfuji09"]
   },
-  "Web/Progressive_web_apps/Tutorials/js13kGames/Introduction": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames": {
     "modified": "2019-03-18T20:52:09.829Z",
     "contributors": ["chrisdavidmills", "rodolfo.ghiggi"]
   },
@@ -11121,6 +11107,20 @@
   "conflicting/Web/Guide": {
     "modified": "2019-03-23T23:28:22.836Z",
     "contributors": ["talitagoulart"]
+  },
+  "conflicting/Web/Guide/AJAX": {
+    "modified": "2019-03-23T23:09:35.656Z",
+    "contributors": [
+      "chrisdavidmills",
+      "darnosls",
+      "DiogoFontes",
+      "renatogalvones",
+      "devLopez",
+      "flaviomicheletti",
+      "Alakazam",
+      "xanfox",
+      "robinsonsantos"
+    ]
   },
   "conflicting/Web/Guide/Mobile": {
     "modified": "2019-03-23T23:28:19.402Z",
