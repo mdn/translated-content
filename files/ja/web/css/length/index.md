@@ -25,13 +25,13 @@ browser-compat: css.types.length
 
 > **メモ:** 負の `<length>` を許容するプロパティとそうでないプロパティがあります。
 
-The [specified value](/en-US/docs/Web/CSS/specified_value) of a length (_specified length_) is represented by its quantity and unit. The [computed value](/en-US/docs/Web/CSS/computed_value) of a length (_computed length_) is the specified length resolved to an absolute length, and its unit is not distinguished.
+長さ (_specified length_) の [指定値](/ja/docs/Web/CSS/specified_value) はその量と単位で表現されます。長さ (_computed length_) の [計算値](/ja/docs/Web/CSS/computed_value) は指定された長さを絶対長に換算したものであり、その単位は区別されません。
 
- `<length>` 単位は相対的にも絶対的にもなり得ます。相対的な長さとは、他の長さに従って長さを指定することです。単位によって、これは特定の文字の寸法であったり、[行の高さ](/ja/docs/Web/CSS/line-height)であったり、{{glossary("viewport", "ビューポート")}}の寸法であったりします。Style sheets that use relative length units can more easily scale from one output environment to another.
+ `<length>` 単位は相対的にも絶対的にもなり得ます。相対的な長さとは、他の長さに従って長さを指定することです。単位によって、これは特定の文字の寸法であったり、[行の高さ](/ja/docs/Web/CSS/line-height)であったり、{{glossary("viewport", "ビューポート")}}の寸法であったりします。相対的な長さの単位を使用するスタイルシートは、ある出力環境から別の出力環境への拡張がより容易になります。
 
-> **Note:** Child elements do not inherit the relative values as specified for their parent; they inherit the computed values.
+> **メモ:** 子要素は、親要素に指定された相対値は継承せずに、計算値を継承します。
 
-The relative length units listed here are based on font and viewport.
+ここに記載されている相対的な長さの単位は、フォントとビューポートに基にしたものです。
 
 ##### フォントを基にした相対長
 
@@ -59,82 +59,82 @@ The relative length units listed here are based on font and viewport.
 
 ### ビューポートを基にした相対長
 
-The viewport-percentage length units are based on four different viewport sizes: small, large, dynamic, and default. The allowance for the different viewport sizes is in response to browser interfaces expanding and retracting dynamically and hiding and showing the content underneath.
+ビューポート割合長 (viewport-percentage length) の単位は、small、large、dynamic、default の4種類のビューポートサイズを基にしています。これは、ブラウザのインターフェイスが動的に拡大・縮小し、含まれるコンテンツを隠したり見せたりすることに対応するためです。
 
-- **Small**
+- **小さい（Small）**
 
-  - : When you want the smallest possible viewport in response to browser interfaces expanding dynamically, you should use the small viewport size. The small viewport size allows the content you design to fill the entire viewport when browser interfaces are expanded. Choosing this size might also possibly leave empty spaces when browser interfaces retract.
+  - : ブラウザのインターフェイスが動的に拡張されるのに対応して可能な限り小さいビューポートが必要な場合は、小さいビューポートのサイズを使用する必要があります。小さいビューポートのサイズは、ブラウザのインターフェイスが拡張されたときに、デザインしたコンテンツがビューポート全体を埋めることができます。また、このサイズを選択すると、ブラウザのインターフェイスが収縮したときに、空白ができる可能性があります。
 
-    For example, an element that is sized using viewport-percentage units based on the small viewport size, the element will fill the screen perfectly without any of its content being obscured when all the dynamic browser interfaces are shown. When those browser interfaces are hidden, however, there might be extra space visible around the element. Therefore, the small viewport-percentage units are "safer" to use in general, but might not produce the most attractive layout after a user starts interacting with the page.
+    例えば、小さいビューポートサイズ基準でのビューポート割合の単位を使用してサイズを設定した要素は、すべての動的なブラウザのインターフェイスで表示された時に、その内容が隠れることなく完全に画面全体に表示されるでしょう。しかし、これらのブラウザのインターフェイスが隠される時は、余分な余白がその要素の周囲にできる可能性があります。したがって、小さいビューポート割合の単位は、一般的には「より安全」ですが、ユーザーがページとやりとりを始めた後では、最も魅力的なレイアウトを生成しないかもしれません。
 
-    The small viewport size is represented by the `sv` prefix and results in the `sv*` viewport-percentage length units. The sizes of the small viewport-percentage units are fixed, and therefore stable, unless the viewport itself is resized.
+    小さいビューポートのサイズは `sv` 接頭詞で表され、 `sv*` というビューポート割合長の単位となります。小さいビューポート割合長の単位のサイズは固定されているため、ビューポート自体のサイズが変更されない限り安定しています。
 
-- **Large**
+- **大きい（Large）**
 
-  - : When you want the largest possible viewport in response to browser interfaces retracting dynamically, you should use the large viewport size. The large viewport size allows the content you design to fill the entire viewport when browser interfaces are retracting. You need to be aware though that the content might get hidden when browser interfaces expand.
+  - : ブラウザのインターフェイスが動的に引き込まれることに対応して、できるだけ大きなビューポートを確保したい場合は、大きなビューポートサイズを使用する必要があります。大きなビューポートサイズを使用すると、ブラウザのインターフェイスが格納された（隠された）ときに、デザインしたコンテンツがビューポート全体を満たすことができます。ただし、ブラウザのインターフェイスが拡大すると、コンテンツが隠れてしまう可能性があることに注意する必要があります。
 
-    For example, on mobile phones where the screen real-estate is at a premium, browsers often hide part or all of the title and address bar after a user starts scrolling the page. When an element is sized using a viewport-percentage unit based on the large viewport size, the content of the element will fill the entire visible page when these browser interfaces are hidden. However, when these retractable browser interfaces are shown, they can hide the content that is sized or positioned using the _large_ viewport-percentage units.
+    例えば、画面占有率がとても高い携帯電話では、ユーザーがページをスクロールし始めると、ブラウザはタイトルバーやアドレスバーの一部または全部を隠すことがよくあります。ある要素が、大きいビューポートサイズに基づくビューポート割合長の単位を使用してサイズ設定されている場合、これらのブラウザのインタフェースが非表示になっていると、その要素のコンテンツは可視ページ全体を満たします。しかし、これらの格納式のブラウザ・インターフェイスが表示されると、_大きな_ ビューポート割合長の単位を使用してサイズ設定または配置されたコンテンツを隠すことができます。
 
-    The large viewport unit is represented by the `lv` prefix and results in the `lv*` viewport-percentage units. The sizes of the large viewport-percentage units are fixed, and therefore stable, unless the viewport itself is resized.
+    大きいビューポート単位は `lv` 接頭詞で表され、`lv*` というビューポート割合長の単位となります。大きいビューポート割合長の単位のサイズは固定されているため、ビューポート自体のサイズが変更されない限り安定しています。
 
-- **Dynamic**
+- **動的（Dynamic）**
 
-  - : When you want the viewport to be automatically sized in response to browser interfaces dynamically expanding or retracting, you can use the dynamic viewport size. The dynamic viewport size allows the content you design to fit exactly within the viewport, irrespective of the presence of dynamic browser interfaces.
+  - : ブラウザのインターフェイスが動的に拡大または縮小するのに応じて、ビューポートのサイズを自動的に調整したい場合は、動的なビューポートサイズを使用できます。動的なビューポートサイズは、動的なブラウザインターフェイスの存在に関係なく、デザインしたコンテンツがビューポート内に正確に収まるようにします。
 
-    The dynamic viewport unit is represented by the `dv` prefix and results in the `dv*` viewport-percentage units. The sizes of the dynamic viewport-percentage units are not stable, even when the viewport itself is unchanged.
+    動的なビューポート単位は `dv` 接頭詞で表され、`dv*` というビューポート割合長の単位となります。ビューポート自体が変更されていなくても、動的なビューポート割合長は安定しません。
 
-    > **Note:** While the dynamic viewport size can give you more control and flexibility, using viewport-percentage units based on the dynamic viewport size can cause the content to resize while a user is scrolling a page. This can lead to degradation of the user interface and cause a performance hit.
+    > **メモ:** 動的なビューポートサイズは、より多くの制御と柔軟性を与えることができますが、動的なビューポートサイズに基づいてビューポート割合の単位を使用すると、ユーザーがページをスクロールしている間にコンテンツのサイズが変更される可能性があります。これは、ユーザー・インターフェースの劣化につながり、パフォーマンスを低下させる可能性があります。
 
-- **Default**
+- **デフォルト**
 
-  - : The default viewport size is defined by the browser. The behavior of the resulting viewport-percentage unit could be equivalent to the viewport-percentage unit based on the small viewport size, the large viewport size, an intermediate size between the two, or the dynamic viewport size.
+  - : デフォルトのビューポートサイズはブラウザによって定義されます。結果として得られるビューポート割合長の単位は、小さいビューポートサイズ、大きいビューポートサイズ、両者の中間のサイズ、または動的なビューポートサイズに基づくビューポート割合長の単位でのに等しい可能性があります。
 
-    > **Note:** For example, a browser might implement the default viewport-percentage unit for height (`vh`) that is equivalent to the large viewport-percentage height unit (`lvh`). If so, this could obscure content on a full-page display while the browser interface is expanded.
+    > **メモ:** 例えば、ブラウザのデフォルトのビューポート割合長の単位（`vh`）は、大きなビューポート割合長の単位（`lvh`）と等しいかもしれません。もしそうであれば、ブラウザのインターフェイスが拡張されている間、全ページ表示のコンテンツが見えなくなる可能性があります。
 
-Viewport-percentage lengths define `<length>` values in percentage relative to the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), which in turn is based on either the size of the {{Glossary("viewport")}} or the page area, i.e., the visible portion of the document. When the height or width of the initial containing block is changed, the elements that are sized based on them are scaled accordingly. There is a viewport-percentage length unit variant corresponding to each of the viewport sizes, as described below.　ビューポートのパーセント値による寸法は、{{glossary("viewport", "ビューポート")}}、つまり文書の見える範囲の寸法に対する相対的な `<length>` 値を定義します。ビューポートの寸法は {{cssxref("@page")}} で宣言されたブロックでは無効です。
+ビューポート割合長は、最初の[包含ブロック](/ja/docs/Web/CSS/Containing_block)のサイズに対する割合で`<length>`値を定義します。これは、{{glossary("viewport", "ビューポート")}}またはページ領域、つまりドキュメントの表示部分のいずれかのサイズに基づきます。最初の包含ブロックの高さや幅が変更されると、それに基づいてサイズ調整される要素も拡大縮小されます。以下に説明するように、各ビューポートサイズに対応するビューポート割合長の単位のバリアントがあります。
 
-> **Note:** Viewport lengths are invalid in {{cssxref("@page")}} declaration blocks.
+> **Note:** ビューポートの寸法は {{cssxref("@page")}} で宣言されたブロックでは無効です。
 
 - `vh`
 
-  - : Represents a percentage of the height of the viewport's initial [containing block](/en-US/docs/Web/CSS/Containing_block). `1vh` is 1% of the viewport height. For example, if the viewport height is `300px`, then a value of `70vh` on a property will be `210px`.　- : ビューポートの初期値の[包含ブロック](/ja/docs/Web/CSS/Containing_block)における高さの 1% と同じです。
+  - : ビューポートの初期値の[包含ブロック](/ja/docs/Web/CSS/Containing_block)の高さの割合を表します。`1vh`は ビューポートの高さの 1% です。例えば、ビューポートの高さが`300px`の場合、あるプロパティでの`70vh`という値は`210px`となります。
 
-    For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svh`, `lvh`, and `dvh`. `vh` represents the viewport-percentage length unit based on the browser default viewport size.
+    小さいビューポートサイズ、大きいビューポートサイズ、ダイナミックビューポートサイズの場合、それぞれのビューポート割合の単位は`svh`、`lvh`、`dvh`となります。`vh`はブラウザのデフォルトのビューポートサイズに基づくビューポート割当長の単位です。
 
 - `vw`
   
-  - : Represents a percentage of the width of the viewport's initial [containing block](/en-US/docs/Web/CSS/Containing_block). `1vw` is 1% of the viewport width. For example, if the viewport width is `800px`, then a value of `50vw` on a property will be `400px`.<!-- - : ビューポートの初期値の[包含ブロック](/ja/docs/Web/CSS/Containing_block)における幅の 1% と同じです。 -->
+  - : ビューポートの初期値の[包含ブロック](/ja/docs/Web/CSS/Containing_block)の幅の割合を表します。`1vw`はビューポートの幅の 1% です。例えば、ビューポートの幅が`800px`の場合、あるプロパティでの`50vw`という値は`400px`となります。
 
-    For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svw`, `lvw`, and `dvw`.
-    `vw` represents the viewport-percentage length unit based on the browser default viewport size.
+    小さいビューポートサイズ、大きいビューポートサイズ、ダイナミックビューポートサイズの場合、それぞれのビューポート割合の単位は `svw`、`lvw`、`dvw` となります。
+    `vw`はブラウザのデフォルトのビューポートサイズに基づくビューポート割合長の単位です。
 
 - `vmax`
 
-  - : Represents in percentage the largest of `vw` and `vh`.
+  - : `vw`と`vh`の最大値を割合を表します。
 
-    For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svmax`, `lvmax`, and `dvmax`.
-    `vmax` represents the viewport-percentage length unit based on the browser default viewport size.
+    小さいビューポートサイズ、大きいビューポートサイズ、およびダイナミックビューポートサイズでは、それぞれのビューポート割合の単位は`svmax`、`lvmax`、`dvmax`です。
+    `vmax`はブラウザのデフォルトのビューポートサイズに基づくビューポート割合長の単位です。
 
 - `vmin`
 
-  - : Represents in percentage the smallest of `vw` and `vh`.
+  - : `vw`と`vh`の最小値を割合を表します。
 
-    For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svmin`, `lvmin`, and `dvmin`.
-    `vmin` represents the viewport-percentage length unit based on the browser default viewport size.
+    小さいビューポートサイズ、大きいビューポートサイズ、およびダイナミックビューポートサイズでは、それぞれのビューポート割合の単位は`svmin`、`lvmin`、`dvmin`です。
+    `vmin`はブラウザのデフォルトのビューポートサイズに基づくビューポート割合長の単位です。
 
 - `vb`
 
-  - : Represents percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [block axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).<!-- - : 初期値の[包含ブロック](/ja/docs/Web/CSS/Containing_block)における、ルート要素の[ブロック軸](/ja/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline)の寸法の 1% と同じです。 -->
+  - : 初期値の[包含ブロック](/ja/docs/Web/CSS/Containing_block)における、ルート要素の[ブロック軸](/ja/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline)のサイズの割合を表します。
 
-    For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svb`, `lvb`, and `dvb`, respectively.
-    `vb` represents the viewport-percentage length unit based on the browser default viewport size.
+    小さいビューポートサイズ、大きいビューポートサイズ、およびダイナミックビューポートサイズでは、それぞれのビューポート割合の単位は `svb`、`lvb`、`dvb`です。
+    `vb`はブラウザのデフォルトのビューポートサイズに基づくビューポート割合長の単位です。
 
 - `vi`
 
-  - : Represents a percentage of the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), in the direction of the root element's [inline axis](/en-US/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline).<!-- 　- : 初期値の[包含ブロック](/ja/docs/Web/CSS/Containing_block)における、ルート要素の[インライン軸](/ja/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline)の寸法の 1% と同じです。 -->
+  - : 初期値の[包含ブロック](/ja/docs/Web/CSS/Containing_block)における、ルート要素の[インライン軸](/ja/docs/Web/CSS/CSS_Logical_Properties#block_vs._inline)のサイズの割合を表します。
 
-    For small, large, and dynamic viewport sizes, the respective viewport-percentage units are `svi`, `lvi`, and `dvi`.
-    `vi` represents the viewport-percentage length unit based on the browser default viewport size.
+    小さいビューポートサイズ、大きいビューポートサイズ、およびダイナミックビューポートサイズでは、それぞれのビューポート割合の単位は `svi`、`lvi`、`dvi`です。
+    `vi`はブラウザのデフォルトのビューポートサイズに基づくビューポート割合長の単位です。
 
 ### Container query length units
 
