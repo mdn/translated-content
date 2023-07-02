@@ -5,7 +5,7 @@ slug: Web/API/IdleDeadline
 
 {{APIRef("Background Tasks")}}
 
-`IdleDeadline` 接口在 {{domxref("Window.requestIdleCallback()")}} 被调用时创建的闲置回调的输入参数的数据类型。它提供了一个 {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} 方法，可以让你判断用户代理预计还剩余多少闲置时间；以及 {{domxref("IdleDeadline.didTimeout", "didTimeout")}} 属性，用来判断当前的回调函数是否因超时而被执行。
+`IdleDeadline` 接口是在调用 {{domxref("Window.requestIdleCallback()")}} 时创建的闲置回调的输入参数的数据类型。它提供了 {{domxref("IdleDeadline.timeRemaining", "timeRemaining()")}} 方法，用来判断用户代理预计还剩余多少闲置时间；以及 {{domxref("IdleDeadline.didTimeout", "didTimeout")}} 属性，用来判断当前的回调函数是否因超时而被执行。
 
 想要学习更多有关请求回调工作原理的知识，请参考[后台任务协作调度](/zh-CN/docs/Web/API/Background_Tasks_API)。
 
