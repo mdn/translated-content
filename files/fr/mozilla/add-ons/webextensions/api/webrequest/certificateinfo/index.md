@@ -1,15 +1,6 @@
 ---
 title: webRequest.CertificateInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
-tags:
-  - API
-  - Add-ons
-  - CertificateInfo
-  - Extensions
-  - Reference
-  - Type
-  - WebExtensions
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
 ---
 

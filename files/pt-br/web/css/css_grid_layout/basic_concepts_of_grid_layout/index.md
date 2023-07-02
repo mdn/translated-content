@@ -1,6 +1,6 @@
 ---
 title: Conceitos básicos de Grid Layout
-slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
 
 [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_Grid_Layout) introduz um sistema bi-dimensional de grid (literalmente "grades") para CSS. Grids podem ser usados para o design de layouts de grandes seções de uma webpage, assim como de pequenos elementos de interface. Esse artigo apresenta o CSS Grid Layout e a terminologia que é parte da especificação CSS Grid Layout Level 1. As funcionalidades demonstradas neste resumo serão posteriormente explicadas em maiores detalhes nas demais seções desse guia.

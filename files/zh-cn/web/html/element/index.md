@@ -69,7 +69,7 @@ slug: Web/HTML/Element
 | {{HTMLElement("li")}}         | 表示列表里的条目。它必须包含在一个父元素里：有序列表（{{HTMLElement("ol")}}）、无序列表（{{HTMLElement("ul")}}）或者菜单（{{HTMLElement("menu")}}）。在菜单或者无序列表里，列表条目通常用点排列显示；在有序列表里，列表条目通常在左边显示按升序排列的计数，例如数字或者字母。 |
 | {{HTMLElement("menu")}}       | {{HTMLElement("ul")}} 的语意替换，但被浏览器视为（并向无障碍树暴露为）与 {{HTMLElement("ul")}} 没有区别。它表示了条目的无序列表（使用 {{HTMLElement("li")}} 表示）。                                                                                          |
 | {{HTMLElement("ol")}}         | 表示有序列表，通常渲染为一个带编号的列表。                                                                                                                                                                                                            |
-| {{HTMLElement("p")}}          | 表示文本的一个段落。该元素通常表现为通过空行和/或首航缩进与相邻块分隔的文本块。但 HTML 段落可以与任何相关内容（例如，图像或表单字段）构成结构分组。                                                                                                                  |
+| {{HTMLElement("p")}}          | 表示文本的一个段落。该元素通常表现为通过空行和/或首行缩进与相邻块分隔的文本块。但 HTML 段落可以与任何相关内容（例如，图像或表单字段）构成结构分组。                                                                                                                  |
 | {{HTMLElement("pre")}}        | 表示预定义格式文本。在该元素中的文本通常按照 HTML 文件中的编排，以非比例或[等宽](https://zh.wikipedia.org/wiki/等宽字体)字体的形式展现出来，文本中的空白符都会显示出来。                                                                                           |
 | {{HTMLElement("ul")}}         | 表示一系列无序的列表项目，通常渲染为项目符号列表。                                                                                                                                                                                                      |
 
@@ -133,7 +133,7 @@ HTML 支持各种多媒体资源，例如图像、音频和视频。
 | {{HTMLElement("object")}}  | 表示引入一个外部资源，这个资源可能是一张图片、嵌入的浏览上下文，亦或是一个插件所使用的资源。                                                                                                           |
 | {{HTMLElement("picture")}} | 通过包含零或多个 {{HTMLElement("source")}} 元素和一个 {{HTMLElement("img")}} 元素来为不同的显示/设备场景提供图像版本。                                                                             |
 | {{HTMLElement("portal")}}  | 允许将另一个 HTML 页面嵌入到当前页面中，以便更流畅地导航到新页面。                                                                                                                                 |
-| {{HTMLElement("source")}}  | 为 picture、audio 或 video 元素指定多个媒体资源。这是一个空元素，这意味这它没有内容，也没有封闭标签。它通常用于以多种格式提供相同的媒体内容，以提供不同浏览器的兼容性，因为浏览器对图像文件和媒体文件格式的支持不同。 |
+| {{HTMLElement("source")}}  | 为 picture、audio 或 video 元素指定多个媒体资源。这是一个空元素，这意味着它没有内容，也没有封闭标签。它通常用于以多种格式提供相同的媒体内容，以提供不同浏览器的兼容性，因为浏览器对图像文件和媒体文件格式的支持不同。 |
 
 ## SVG 和 MathML
 
@@ -229,7 +229,6 @@ Web 组件是一种与 HTML 相关联的技术，简单来说，它允许开发�
 | {{HTMLElement("acronym")}}   | 允许作者明确地声明一个字符序列，它们构成一个单词的首字母缩写或简略语。                                                                                                                                                                                              |
 | {{HTMLElement("bgsound")}}   | 设置一个音频文件，以在使用页面时在后台播放；请使用 {{HTMLElement("audio")}} 代替。                                                                                                                                                                                |
 | {{HTMLElement("big")}}       | 以比周围文本大一号的字体渲染其封闭的文本（例如，`medium` 变 `large`）。最大不超过浏览器允许的最大字体。                                                                                                                                                               |
-| {{HTMLElement("blink")}}     | 使包含其中的文本缓慢闪烁。                                                                                                                                                                                                                                   |
 | {{HTMLElement("center")}}    | 以水平居中的形式显示包含在元素中的块级或内联内容。                                                                                                                                                                                                              |
 | {{HTMLElement("content")}}   | [Web 组件](/zh-CN/docs/Web/API/Web_components)技术套件的废弃部分——用于 [Shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 内部作为插入点，并且不可用于任何正常的 HTML。现在已被 {{HTMLElement("slot")}} 元素代替，它在 DOM 中创建一个位置，Shadow DOM 会插入这里。 |
 | {{HTMLElement("dir")}}       | 被作为一个文件和/或文件夹的目录的容器，可能还有用户代理应用的样式与图标。请不要使用此过时的元素；请使用用于列表的 {{HTMLElement("ul")}} 元素代替，包含文件列表。                                                                                                             |
@@ -237,7 +236,6 @@ Web 组件是一种与 HTML 相关联的技术，简单来说，它允许开发�
 | {{HTMLElement("frame")}}     | 定义一个特定区域，另一个 HTML 文档可以在里面展示。frame 应该在 {{HTMLElement("frameset")}} 中使用。                                                                                                                                                               |
 | {{HTMLElement("frameset")}}  | 用于包含 {{HTMLElement("frame")}} 元素。                                                                                                                                                                                                                   |
 | {{HTMLElement("image")}}     | {{HTMLElement("img")}} 元素古老而又缺乏支持的前身。它不应被使用。                                                                                                                                                                                              |
-| {{HTMLElement("keygen")}}    | 是为了方便生成密钥材料和提交作为 [HTML 表单](/zh-CN/docs/Learn/Forms)的一部分的公钥。这种机制被用于设计基于 Web 的证书管理系统。按照预想，`<keygen>` 元素将用于 HTML 表单与其他的所需信息一起构造一个证书请求，该处理的结果将是一个带有签名的证书。                                  |
 | {{HTMLElement("marquee")}}   | 用来插入一段滚动的文字。你可以使用它的属性控制当文本到达容器边缘发生的事情。                                                                                                                                                                                        |
 | {{HTMLElement("menuitem")}}  | 表示一个用户可以通过弹出式菜单来执行的命令。这包括上下文菜单，以及按钮可能附带的菜单。                                                                                                                                                                                |
 | {{HTMLElement("nobr")}}      | 阻止文本自动拆分成新行，可能导致用户必须水平滚动才能看到文本的所有内容。                                                                                                                                                                                            |
@@ -248,7 +246,6 @@ Web 组件是一种与 HTML 相关联的技术，简单来说，它允许开发�
 | {{HTMLElement("rb")}}        | 用于分隔 ruby 注解的基本文本组件（即正在注解的文本）。一个 `<rb>` 元素应该包装基本文本的每个单独的原子段。                                                                                                                                                            |
 | {{HTMLElement("rtc")}}       | 包含文字的语义注解，用于在 {{HTMLElement("rb")}} 元素中展示。{{HTMLElement("rb")}} 元素可以拥有发音（{{HTMLElement("rt")}}）和语义（{{HTMLElement("rtc")}}）注解。                                                                                                  |
 | {{HTMLElement("shadow")}}    | [Web 组件](/zh-CN/docs/Web/API/Web_components)技术套件的废弃部分——目的是用作 Shadow DOM 插入点。如果你在 shadow host 下面创建了多个 shadow root，你就可能已经使用了它。                                                                                                  |
-| {{HTMLElement("spacer")}}    | 它可以向页面插入空白间隔。它由 Netscape 设计，用于实现单像素布局图像的相同效果，Web 设计师用它来向页面添加空白，而不需要实际使用图片。但是，`<spacer>` 不再受任何主流浏览器支持，并且相同效果可以简单由 CSS 实现。                                                                 |
 | {{HTMLElement("strike")}}    | 在文本上放置水平的删除线。                                                                                                                                                                                                                                  |
 | {{HTMLElement("tt")}}        | 创建内联文本，使用用户代理默认的等宽字体渲染。这个元素用于给文本排版，使其等宽展示，就像电报、纯文本屏幕或行式打印机那样。                                                                                                                                                |
 | {{HTMLElement("xmp")}}       | 渲染在开始和结束标签之间的文本，而不解释中间的 HTML 内容，并使用等宽字体。HTML2 规范建议它应该渲染得足够宽以允许每行 80 个字符。                                                                                                                                         |

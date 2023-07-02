@@ -1,16 +1,6 @@
 ---
 title: cookies.getAllCookieStores()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAllCookieStores
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getAllCookieStores
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/getAllCookieStores
 ---
 

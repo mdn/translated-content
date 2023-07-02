@@ -1,11 +1,7 @@
 ---
 title: Firefox 12 pour les développeurs
 slug: Mozilla/Firefox/Releases/12
-tags:
-  - Firefox
-  - Firefox 12
 translation_of: Mozilla/Firefox/Releases/12
-original_slug: Mozilla/Firefox/Versions/12
 ---
 
 {{FirefoxSidebar}}
@@ -51,8 +47,8 @@ Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume
 
 ### SVG
 
-- Firefox implémente désormais l'API DOM {{domxref("SVGTests")}}, voir {{bug(607854)}}
-- L'interface DOM {{domxref("SVGStringList")}} supporte la propriété non-standard `length`, voir {{bug(711958)}}
+- Firefox implémente désormais l'API DOM {{domxref("SVGTests")}}, voir [bug Firefox 607854](https://bugzil.la/607854)
+- L'interface DOM {{domxref("SVGStringList")}} supporte la propriété non-standard `length`, voir [bug Firefox 711958](https://bugzil.la/711958)
 
 ### MathML
 

@@ -1,6 +1,6 @@
 ---
 title: 基本シェイプ
-slug: Web/CSS/CSS_Shapes/Basic_Shapes
+slug: Web/CSS/CSS_shapes/Basic_shapes
 ---
 
 {{CSSRef}}

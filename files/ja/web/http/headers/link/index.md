@@ -9,7 +9,7 @@ HTTP の **`Link`** エンティティヘッダーフィールドは、 HTTP ヘ
 
 ## 構文
 
-```
+```http
 Link: <uri-reference>; param1=value1; param2="value2"
 ```
 
@@ -24,11 +24,11 @@ Link: <uri-reference>; param1=value1; param2="value2"
 
 URI （絶対または相対）は `<` と `>` で囲む必要があります。
 
-```example-good
+```http example-good
 Link: <https://example.com>; rel="preconnect"
 ```
 
-```example-bad
+```http example-bad
 Link: https://bad.example; rel="preconnect"
 ```
 
@@ -36,7 +36,7 @@ Link: https://bad.example; rel="preconnect"
 
 カンマで区切られた複数のリンクを指定できます。次に例を示します。
 
-```
+```http
 Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; rel="preconnect", <https://three.example.com>; rel="preconnect"
 ```
 

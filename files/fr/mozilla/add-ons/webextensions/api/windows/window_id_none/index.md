@@ -1,16 +1,6 @@
 ---
 title: windows.WINDOW_ID_NONE
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_NONE
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Propriété
-  - Référence(2)
-  - WINDOWS_ID_NONE
-  - WebExtensions
-  - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_NONE
 ---
 

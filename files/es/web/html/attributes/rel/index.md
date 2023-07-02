@@ -23,13 +23,13 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
       <td><code>alternate</code></td>
       <td>
        <ul>
-        <li>Si el elemento es {{HTMLElement("link")}} y el atributo {{htmlattrxref("rel", "link")}} tambien contiene el tipo <code>stylesheet</code>, el enlace define una <a href="/en-US/docs/Alternative_style_sheets">hoja de estilo alternativa</a>; en ese caso el atributo {{htmlattrxref("title", "link")}} deberá estar presente y no ser una cadena vacia.</li>
-        <li>Si el atributo {{htmlattrxref("type","link")}} es puesto a <code>application/rss+xml</code> o <code>application/atom+xml</code>, el enlace define un <a href="/en-US/docs/RSS/Getting_Started/Syndicating">feed de distribución</a>. El primero de ellos definido en la pagina es el tomado por default.</li>
+        <li>Si el elemento es {{HTMLElement("link")}} y el atributo <a href="/es/docs/Web/HTML/Element/link#rel"><code>rel</code></a> tambien contiene el tipo <code>stylesheet</code>, el enlace define una <a href="/en-US/docs/Alternative_style_sheets">hoja de estilo alternativa</a>; en ese caso el atributo <a href="/es/docs/Web/HTML/Element/link#title"><code>title</code></a> deberá estar presente y no ser una cadena vacia.</li>
+        <li>Si el atributo <a href="/es/docs/Web/HTML/Element/link#type"><code>type</code></a> es puesto a <code>application/rss+xml</code> o <code>application/atom+xml</code>, el enlace define un <a href="/en-US/docs/RSS/Getting_Started/Syndicating">feed de distribución</a>. El primero de ellos definido en la pagina es el tomado por default.</li>
         <li>De otra forma, el enlace define una pagina alternativa, de uno de los siguientes tipos:
          <ul>
-          <li>para otros medios, como un dispositivo portatil (si el atributo {{htmlattrxref("media","link")}} esta indicado)</li>
-          <li>en otro lenguaje (si el atributo {{htmlattrxref("hreflang","link")}} esta indicado),</li>
-          <li>en otro formato, como un PDF (si el atributo {{htmlattrxref("type","link")}} esta indicado)</li>
+          <li>para otros medios, como un dispositivo portatil (si el atributo <a href="/es/docs/Web/HTML/Element/link#media"><code>media</code></a> esta indicado)</li>
+          <li>en otro lenguaje (si el atributo <a href="/es/docs/Web/HTML/Element/link#hreflang"><code>hreflang</code></a> esta indicado),</li>
+          <li>en otro formato, como un PDF (si el atributo <a href="/es/docs/Web/HTML/Element/link#type"><code>type</code></a> esta indicado)</li>
           <li>una combinacion de los anteriores.</li>
          </ul>
         </li>
@@ -52,7 +52,7 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
        <br>
        <strong>Nota:</strong> Este puede ser un hipervinculo <code>mailto:</code>, pero esto no es recomendable en paginas públicas por que robots cosechadores podrian rápidamente llevar una gran cantidad de span a esa dirección. En ese caso, es mejor mandarlos a una página con un formulario de contacto.<br>
        <br>
-       Aunque reconocido, el atributo {{htmlattrxref("rev", "link")}} en elementos {{HTMLElement("a")}}, {{HTMLElement("area")}} o {{HTMLElement("link")}} con un enlace de tipo <code>made</code> es incorrecto y debiera ser reemplazado por el atributo {{htmlattrxref("rel", "link")}} con este tipo de enlace.</td>
+       Aunque reconocido, el atributo <a href="/es/docs/Web/HTML/Element/link#rev"><code>rev</code></a> en elementos {{HTMLElement("a")}}, {{HTMLElement("area")}} o {{HTMLElement("link")}} con un enlace de tipo <code>made</code> es incorrecto y debiera ser reemplazado por el atributo <a href="/es/docs/Web/HTML/Element/link#rel"><code>rel</code></a> con este tipo de enlace.</td>
       <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
       <td><em>None.</em></td>
      </tr>
@@ -96,9 +96,9 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
       <td><code>icon</code></td>
       <td>Defines a resource for representing the page in the user interface, usually an icon (auditory or visual).<br>
        <br>
-       The {{htmlattrxref("media","link")}}, {{htmlattrxref("type","link")}} and {{htmlattrxref("sizes","link")}} attributes allow the browser to select the most appropriate icon for its context. If several resources match, the browser will select the last one declared, in tree order. As these attributes are merely hints, and the resources may be inappropriate upon further inspection, the browser will then select another one, if appropriate.<br>
+       The <a href="/es/docs/Web/HTML/Element/link#media"><code>media</code></a>, <a href="/es/docs/Web/HTML/Element/link#type"><code>type</code></a> and <a href="/es/docs/Web/HTML/Element/link#sizes"><code>sizes</code></a> attributes allow the browser to select the most appropriate icon for its context. If several resources match, the browser will select the last one declared, in tree order. As these attributes are merely hints, and the resources may be inappropriate upon further inspection, the browser will then select another one, if appropriate.<br>
        <br>
-       <strong>Note:</strong> Apple's iOS does not use this link type, nor the {{htmlattrxref("sizes","link")}} attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder. Instead it uses the non-standard <a href="http://edr.euro.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> and <a href="http://edr.euro.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> respectively.<br>
+       <strong>Note:</strong> Apple's iOS does not use this link type, nor the <a href="/es/docs/Web/HTML/Element/link#sizes"><code>sizes</code></a> attribute, like others mobile browsers do, to select a webpage icon for Web Clip or a start-up placeholder. Instead it uses the non-standard <a href="http://edr.euro.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4"><code>apple-touch-icon</code></a> and <a href="http://edr.euro.apple.com/library/safari/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6"><code>apple-touch-startup-image</code></a> respectively.<br>
        <br>
        The <code>shortcut</code> link type is often seen before <code>icon</code>, but this link type is non-conforming, ignored and <strong>web authors must not use it anymore</strong>.</td>
       <td>{{HTMLElement("link")}}</td>
@@ -203,7 +203,7 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
       <td><code>search</code></td>
       <td>Indicates that the hyperlink reference a document whose interface is specially designing for searching in this document, or site, and its resources.<br>
        <br>
-       If the {{htmlattrxref("type","link")}} attribute is set to <code>application/opensearchdescription+xml </code>the resource is an <a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox">OpenSearch plugin</a> that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</td>
+       If the <a href="/es/docs/Web/HTML/Element/link#type"><code>type</code></a> attribute is set to <code>application/opensearchdescription+xml </code>the resource is an <a href="/en-US/docs/Creating_OpenSearch_plugins_for_Firefox">OpenSearch plugin</a> that can be easily added to the interface of some browsers like Firefox or Internet Explorer.</td>
       <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("link")}}</td>
       <td><em>None.</em></td>
      </tr>
@@ -211,7 +211,7 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
       <td><code>stylesheet</code></td>
       <td>Defines an external resource to be used as a stylesheet. If the <code>type</code> is not set, the browser should assume it is a <code>text/css</code> stylesheet until further inspection.<br>
        <br>
-       If used in combination with the <code>alternate</code> keyword, it defines an <a href="/en-US/docs/Alternative_style_sheets">alternative style sheet</a>; in that case the {{htmlattrxref("title", "link")}} attribute must be present and not be the empty string.</td>
+       If used in combination with the <code>alternate</code> keyword, it defines an <a href="/en-US/docs/Alternative_style_sheets">alternative style sheet</a>; in that case the <a href="/es/docs/Web/HTML/Element/link#title"><code>title</code></a> attribute must be present and not be the empty string.</td>
       <td>{{HTMLElement("link")}}</td>
       <td>{{HTMLElement("a")}}, {{HTMLElement("area")}}</td>
      </tr>

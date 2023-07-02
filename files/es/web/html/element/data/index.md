@@ -19,7 +19,7 @@ El **Elemento HTML `<data>`** vincula un contenido dado con una traducción legi
 
 Este elemento incluye [Atributos globales](/es/docs/HTML/Global_attributes)
 
-- {{htmlattrdef("value")}}
+- `value`
   - : This attribute specifies the machine-readable translation of the content of the element.
 
 ## Ejemplo

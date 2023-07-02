@@ -1,16 +1,6 @@
 ---
 title: browserAction.disable()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - disable
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
 ---
 

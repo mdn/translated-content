@@ -1,12 +1,6 @@
 ---
 title: Arbre d'accessibilité (MOA)
 slug: Glossary/Accessibility_tree
-tags:
-  - AOM
-  - Accessibilité
-  - DOM
-  - Glossaire
-  - Reference
 translation_of: Glossary/Accessibility_tree
 ---
 

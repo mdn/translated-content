@@ -1,17 +1,7 @@
 ---
 title: Insérer en toute sécurité du contenu externe dans une page
 slug: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
-tags:
-  - Add-ons
-  - Comment
-  - Débutant
-  - Extensions
-  - How-to
-  - Sécurité
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
-original_slug: >-
-  Mozilla/Add-ons/WebExtensions/inserer_en_toute_securite_du_contenu_externe_dans_une_page
 ---
 
 {{AddonSidebar}}

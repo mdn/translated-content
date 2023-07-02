@@ -1,6 +1,6 @@
 ---
 title: 将 WebAssembly 文本格式转换为 wasm
-slug: WebAssembly/Text_format_to_wasm
+slug: WebAssembly/Text_format_to_Wasm
 ---
 
 {{WebAssemblySidebar}}

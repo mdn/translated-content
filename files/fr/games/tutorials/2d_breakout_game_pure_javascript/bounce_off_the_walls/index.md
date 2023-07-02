@@ -1,20 +1,7 @@
 ---
 title: Faire rebondir la balle sur les murs
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-tags:
-  - Animation
-  - Canvas
-  - Débutant
-  - Exemple
-  - JavaScript
-  - Jeux
-  - Tuto
-  - Tutoriel
-  - detection
-  - graphique
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-original_slug: >-
-  Games/Workflows/2D_Breakout_game_pure_JavaScript/Faire_rebondir_la_balle_sur_les_murs
 ---
 
 {{GamesSidebar}}

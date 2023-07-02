@@ -1,15 +1,6 @@
 ---
 title: sidebarAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setTitle
-  - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
 ---
 

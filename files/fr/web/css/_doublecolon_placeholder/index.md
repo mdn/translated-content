@@ -99,7 +99,7 @@ Lorsque le [mode de contraste élevé de Windows](/fr/docs/Web/CSS/@media/-ms-hi
 
 ### Libellés ({{HTMLElement("&lt;label&gt;")}})
 
-Les textes de substitution ne doivent pas remplacer les éléments {{htmlelement("label")}}. Sans libellé associé grâce à {{htmlattrxref("for", "label")}} et à {{htmlattrxref("id")}}, les outils d'assistance tels que les lecteurs d'écran ne peuvent pas correctement analyser les éléments {{htmlelement("input")}}.
+Les textes de substitution ne doivent pas remplacer les éléments {{htmlelement("label")}}. Sans libellé associé grâce à [`for`](/fr/docs/Web/HTML/Element/label#for) et à [`id`](/fr/docs/Web/HTML/Global_attributes#id), les outils d'assistance tels que les lecteurs d'écran ne peuvent pas correctement analyser les éléments {{htmlelement("input")}}.
 
 - [Fournir des indications simples dans un formulaire](/fr/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
 - [_Placeholders in Form Fields Are Harmful_ — Nielsen Norman Group (en anglais)](https://www.nngroup.com/articles/form-design-placeholders/)

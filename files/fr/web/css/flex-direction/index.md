@@ -14,7 +14,7 @@ La propriété **`flex-direction`** définit la façon dont les éléments flexi
 
 {{EmbedInteractiveExample("pages/css/flex-direction.html")}}
 
-On notera que les valeurs `row` et `row-reverse` sont impactées par la direction du conteneur. Si {{htmlattrxref("dir")}} vaut `ltr`, `row` représente l'axe horizontal allant de la gauche vers la droite et `row-reverse` représente le même axe allant de la droite vers la gauche. Si `dir` vaut `rtl`, `row` correspondra à l'axe horizontal orienté de la droite vers la gauche et `row-reverse` de la gauche vers la droite.
+On notera que les valeurs `row` et `row-reverse` sont impactées par la direction du conteneur. Si [`dir`](/fr/docs/Web/HTML/Global_attributes#dir) vaut `ltr`, `row` représente l'axe horizontal allant de la gauche vers la droite et `row-reverse` représente le même axe allant de la droite vers la gauche. Si `dir` vaut `rtl`, `row` correspondra à l'axe horizontal orienté de la droite vers la gauche et `row-reverse` de la gauche vers la droite.
 
 Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Utilisation_des_flexbox_en_CSS).
 

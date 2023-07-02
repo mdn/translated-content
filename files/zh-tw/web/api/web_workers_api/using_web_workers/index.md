@@ -48,15 +48,15 @@ var myWorker = new Worker("worker.js");
 {{domxref("Worker.postMessage", "postMessage()")}} 方法以及 {{domxref("Worker.onmessage", "onmessage")}} 事件處理器就是和 worker 發送訊息的關鍵 ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
 
 ```js
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 
-second.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+second.onchange = function () {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("Message posted to worker");
+};
 ```
 
 範例中有兩個 {{htmlelement("input")}} 元素，first 和 second，當元素值改變時，我們會利用 postMessage() 方法告訴 worker 改變的值 (這邊用陣列，也可以用其他類別)。
@@ -64,12 +64,12 @@ second.onchange = function() {
 然後在 worker 裡我們從 `onmessage` 接收訊息 ([worker.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/worker.js)):
 
 ```js
-onmessage = function(e) {
-  console.log('Message received from main script');
-  var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
-  console.log('Posting message back to main script');
+onmessage = function (e) {
+  console.log("Message received from main script");
+  var workerResult = "Result: " + e.data[0] * e.data[1];
+  console.log("Posting message back to main script");
   postMessage(workerResult);
-}
+};
 ```
 
 `onmessage` 事件物件的 data 屬性存有傳送過來的訊息資料，也就是 input 值；worker 收到後將傳過來的兩個值相乘，再 postMessage 傳回去。
@@ -77,10 +77,10 @@ onmessage = function(e) {
 回到主執行，同樣透過 `onmessage` 事件，收到 worker 回傳還來的計算值 :
 
 ```js
-myWorker.onmessage = function(e) {
+myWorker.onmessage = function (e) {
   result.textContent = e.data;
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 拿到存在事件 data 中的計算值後，我們接著將值以 `textContent` 顯示出來。
@@ -129,9 +129,9 @@ worker 可以產生其他 worker (subworker)，subworker 的來源也必須和�
 Worker 執行緒能存取一個全域函數 (global function), importScripts()。importScripts() 可以讓 worker 端引入相同網域的程式碼腳本與 libraries，importScripts()可接收零到數個要被輸入資源的 URI，底下為幾個範例:
 
 ```js
-importScripts();                        /* imports nothing */
-importScripts('foo.js');                /* imports just "foo.js" */
-importScripts('foo.js', 'bar.js');      /* imports two scripts */
+importScripts(); /* imports nothing */
+importScripts("foo.js"); /* imports just "foo.js" */
+importScripts("foo.js", "bar.js"); /* imports two scripts */
 ```
 
 瀏覽器會載入並執行每個程式碼腳本，然後 worker 能夠存取程式碼腳本內定義的全域變數，若是腳本無法載入，會產生一個 NETWORK_ERROR，後續的程式碼不會被執行，但是先前執行過的程式碼或用 [window.setTimeout()](/zh-TW/docs/Web/API/window.setTimeout) 延遲執行的程式碼依然有效，而 importScripts() 之後宣告的函數也一樣存在，因為這些程式碼總是在其他程式碼之前就解析過了。
@@ -163,11 +163,11 @@ var myWorker = new SharedWorker("worker.js");
 當使用 start() 開啟 port 連線，那麼雙向溝通便需要主執行緒和 worker 兩端都呼叫 start()。
 
 ```js
-myWorker.port.start();  // called in parent thread
+myWorker.port.start(); // called in parent thread
 ```
 
 ```js
-port.start();  // called in worker thread, assuming the port variable references a port
+port.start(); // called in worker thread, assuming the port variable references a port
 ```
 
 ### 和 shared worker 發送訊息
@@ -175,23 +175,23 @@ port.start();  // called in worker thread, assuming the port variable references
 如同前面，現在可以呼叫 `postMessage()` 發送訊息，只不過這次需要透過 port 物件 (一樣請參考 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) 和 [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)):
 
 ```js
-squareNumber.onchange = function() {
-  myWorker.port.postMessage([squareNumber.value,squareNumber.value]);
-  console.log('Message posted to worker');
-}
+squareNumber.onchange = function () {
+  myWorker.port.postMessage([squareNumber.value, squareNumber.value]);
+  console.log("Message posted to worker");
+};
 ```
 
 worker 方面也增加了一些程式碼 ([worker.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/worker.js)):
 
 ```js
-onconnect = function(e) {
+onconnect = function (e) {
   var port = e.ports[0];
-  port.onmessage = function(e) {
-    var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+  port.onmessage = function (e) {
+    var workerResult = "Result: " + e.data[0] * e.data[1];
     port.postMessage(workerResult);
-  }
-  port.start();  // not necessary since onmessage event handler is being used
-}
+  };
+  port.start(); // not necessary since onmessage event handler is being used
+};
 ```
 
 首先，先監聽連線建立的 onconnect 事件，例如當主執行緒建立 onmessage 事件或呼叫 `start()`。
@@ -203,10 +203,10 @@ onconnect = function(e) {
 最後在主執行緒端，我們同樣由 onmessage 事件取回回傳過來的訊息 (一樣請參考 [multiply.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/multiply.js) 和 [square.js](https://github.com/mdn/simple-shared-worker/blob/gh-pages/square.js)):
 
 ```js
-myWorker.port.onmessage = function(e) {
+myWorker.port.onmessage = function (e) {
   result2.textContent = e.data[0];
-  console.log('Message received from worker');
-}
+  console.log("Message received from worker");
+};
 ```
 
 ## 執行緒 (Thread) 安全
@@ -222,8 +222,8 @@ myWorker.port.onmessage = function(e) {
 下面的 `emulateMessage() 會模擬和 worker 傳遞訊息時，複製資料的行為。`
 
 ```js
-function emulateMessage (vVal) {
-    return eval("(" + JSON.stringify(vVal) + ")");
+function emulateMessage(vVal) {
+  return eval("(" + JSON.stringify(vVal) + ")");
 }
 
 // Tests
@@ -245,16 +245,16 @@ console.log(typeof emulateMessage(example3)); // string
 
 // test #4
 var example4 = {
-    "name": "John Smith",
-    "age": 43
+  name: "John Smith",
+  age: 43,
 };
 console.log(typeof example4); // object
 console.log(typeof emulateMessage(example4)); // object
 
 // test #5
-function Animal (sType, nAge) {
-    this.type = sType;
-    this.age = nAge;
+function Animal(sType, nAge) {
+  this.type = sType;
+  this.age = nAge;
 }
 var example5 = new Animal("Cat", 3);
 alert(example5.constructor); // Animal
@@ -278,7 +278,7 @@ myWorker.postMessage("ali");
 **my_task.js** (the worker):
 
 ```js
-postMessage("I\'m working before postMessage(\'ali\').");
+postMessage("I'm working before postMessage('ali').");
 
 onmessage = function (oEvent) {
   postMessage("Hi " + oEvent.data);
@@ -297,18 +297,23 @@ onmessage = function (oEvent) {
 // Syntax: asyncEval(code[, listener])
 
 var asyncEval = (function () {
-  var aListeners = [], oParser = new Worker("data:text/javascript;charset=US-ASCII,onmessage%20%3D%20function%20%28oEvent%29%20%7B%0A%09postMessage%28%7B%0A%09%09%22id%22%3A%20oEvent.data.id%2C%0A%09%09%22evaluated%22%3A%20eval%28oEvent.data.code%29%0A%09%7D%29%3B%0A%7D");
+  var aListeners = [],
+    oParser = new Worker(
+      "data:text/javascript;charset=US-ASCII,onmessage%20%3D%20function%20%28oEvent%29%20%7B%0A%09postMessage%28%7B%0A%09%09%22id%22%3A%20oEvent.data.id%2C%0A%09%09%22evaluated%22%3A%20eval%28oEvent.data.code%29%0A%09%7D%29%3B%0A%7D"
+    );
 
   oParser.onmessage = function (oEvent) {
-    if (aListeners[oEvent.data.id]) { aListeners[oEvent.data.id](oEvent.data.evaluated); }
+    if (aListeners[oEvent.data.id]) {
+      aListeners[oEvent.data.id](oEvent.data.evaluated);
+    }
     delete aListeners[oEvent.data.id];
   };
 
   return function (sCode, fListener) {
     aListeners.push(fListener || null);
     oParser.postMessage({
-      "id": aListeners.length - 1,
-      "code": sCode
+      id: aListeners.length - 1,
+      code: sCode,
     });
   };
 })();
@@ -319,10 +324,10 @@ var asyncEval = (function () {
 ```js
 onmessage = function (oEvent) {
   postMessage({
-    "id": oEvent.data.id,
-    "evaluated": eval(oEvent.data.code)
+    id: oEvent.data.id,
+    evaluated: eval(oEvent.data.code),
   });
-}
+};
 ```
 
 應用範例:
@@ -330,16 +335,18 @@ onmessage = function (oEvent) {
 ```js
 // asynchronous alert message...
 asyncEval("3 + 2", function (sMessage) {
-    alert("3 + 2 = " + sMessage);
+  alert("3 + 2 = " + sMessage);
 });
 
 // asynchronous print message...
-asyncEval("\"Hello World!!!\"", function (sHTML) {
-    document.body.appendChild(document.createTextNode(sHTML));
+asyncEval('"Hello World!!!"', function (sHTML) {
+  document.body.appendChild(document.createTextNode(sHTML));
 });
 
 // asynchronous void...
-asyncEval("(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open(\"get\", \"http://www.mozilla.org/\", false);\n\toReq.send(null);\n\treturn oReq.responseText;\n})()");
+asyncEval(
+  '(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open("get", "http://www.mozilla.org/", false);\n\toReq.send(null);\n\treturn oReq.responseText;\n})()'
+);
 ```
 
 #### 範例 2: JSON 資料進階傳遞與呼叫系統
@@ -349,13 +356,13 @@ asyncEval("(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open(\"get
 **example.html** (主頁面):
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8"  />
-<title>MDN Example - Queryable worker</title>
-<script type="text/javascript">
-  /*
+  <head>
+    <meta charset="UTF-8" />
+    <title>MDN Example - Queryable worker</title>
+    <script type="text/javascript">
+      /*
     QueryableWorker instances methods:
      * sendQuery(queryable function name, argument to pass 1, argument to pass 2, etc. etc): calls a Worker's queryable function
      * postMessage(string or JSON Data): see Worker.prototype.postMessage()
@@ -365,60 +372,98 @@ asyncEval("(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open(\"get
     QueryableWorker instances properties:
      * defaultListener: the default listener executed only when the Worker calls the postMessage() function directly
   */
-  function QueryableWorker (sURL, fDefListener, fOnError) {
-    var oInstance = this, oWorker = new Worker(sURL), oListeners = {};
-    this.defaultListener = fDefListener || function () {};
-    oWorker.onmessage = function (oEvent) {
-      if (oEvent.data instanceof Object && oEvent.data.hasOwnProperty("vo42t30") && oEvent.data.hasOwnProperty("rnb93qh")) {
-        oListeners[oEvent.data.vo42t30].apply(oInstance, oEvent.data.rnb93qh);
-      } else {
-        this.defaultListener.call(oInstance, oEvent.data);
+      function QueryableWorker(sURL, fDefListener, fOnError) {
+        var oInstance = this,
+          oWorker = new Worker(sURL),
+          oListeners = {};
+        this.defaultListener = fDefListener || function () {};
+        oWorker.onmessage = function (oEvent) {
+          if (
+            oEvent.data instanceof Object &&
+            oEvent.data.hasOwnProperty("vo42t30") &&
+            oEvent.data.hasOwnProperty("rnb93qh")
+          ) {
+            oListeners[oEvent.data.vo42t30].apply(
+              oInstance,
+              oEvent.data.rnb93qh
+            );
+          } else {
+            this.defaultListener.call(oInstance, oEvent.data);
+          }
+        };
+        if (fOnError) {
+          oWorker.onerror = fOnError;
+        }
+        this.sendQuery =
+          function (/* queryable function name, argument to pass 1, argument to pass 2, etc. etc */) {
+            if (arguments.length < 1) {
+              throw new TypeError(
+                "QueryableWorker.sendQuery - not enough arguments"
+              );
+              return;
+            }
+            oWorker.postMessage({
+              bk4e1h0: arguments[0],
+              ktp3fm1: Array.prototype.slice.call(arguments, 1),
+            });
+          };
+        this.postMessage = function (vMsg) {
+          //I just think there is no need to use call() method
+          //how about just oWorker.postMessage(vMsg);
+          //the same situation with terminate
+          //well,just a little faster,no search up the prototye chain
+          Worker.prototype.postMessage.call(oWorker, vMsg);
+        };
+        this.terminate = function () {
+          Worker.prototype.terminate.call(oWorker);
+        };
+        this.addListener = function (sName, fListener) {
+          oListeners[sName] = fListener;
+        };
+        this.removeListener = function (sName) {
+          delete oListeners[sName];
+        };
       }
-    };
-    if (fOnError) { oWorker.onerror = fOnError; }
-    this.sendQuery = function (/* queryable function name, argument to pass 1, argument to pass 2, etc. etc */) {
-      if (arguments.length < 1) { throw new TypeError("QueryableWorker.sendQuery - not enough arguments"); return; }
-      oWorker.postMessage({ "bk4e1h0": arguments[0], "ktp3fm1": Array.prototype.slice.call(arguments, 1) });
-    };
-    this.postMessage = function (vMsg) {
-      //I just think there is no need to use call() method
-      //how about just oWorker.postMessage(vMsg);
-      //the same situation with terminate
-      //well,just a little faster,no search up the prototye chain
-      Worker.prototype.postMessage.call(oWorker, vMsg);
-    };
-    this.terminate = function () {
-      Worker.prototype.terminate.call(oWorker);
-    };
-    this.addListener = function (sName, fListener) {
-      oListeners[sName] = fListener;
-    };
-    this.removeListener = function (sName) {
-      delete oListeners[sName];
-    };
-  };
 
-  // your custom "queryable" worker
-  var oMyTask = new QueryableWorker("my_task.js" /* , yourDefaultMessageListenerHere [optional], yourErrorListenerHere [optional] */);
+      // your custom "queryable" worker
+      var oMyTask = new QueryableWorker(
+        "my_task.js" /* , yourDefaultMessageListenerHere [optional], yourErrorListenerHere [optional] */
+      );
 
-  // your custom "listeners"
+      // your custom "listeners"
 
-  oMyTask.addListener("printSomething", function (nResult) {
-    document.getElementById("firstLink").parentNode.appendChild(document.createTextNode(" The difference is " + nResult + "!"));
-  });
+      oMyTask.addListener("printSomething", function (nResult) {
+        document
+          .getElementById("firstLink")
+          .parentNode.appendChild(
+            document.createTextNode(" The difference is " + nResult + "!")
+          );
+      });
 
-  oMyTask.addListener("alertSomething", function (nDeltaT, sUnit) {
-    alert("Worker waited for " + nDeltaT + " " + sUnit + " :-)");
-  });
-</script>
-</head>
-<body>
-  <ul>
-    <li><a id="firstLink" href="javascript:oMyTask.sendQuery('getDifference', 5, 3);">What is the difference between 5 and 3?</a></li>
-    <li><a href="javascript:oMyTask.sendQuery('waitSomething');">Wait 3 seconds</a></li>
-    <li><a href="javascript:oMyTask.terminate();">terminate() the Worker</a></li>
-  </ul>
-</body>
+      oMyTask.addListener("alertSomething", function (nDeltaT, sUnit) {
+        alert("Worker waited for " + nDeltaT + " " + sUnit + " :-)");
+      });
+    </script>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a
+          id="firstLink"
+          href="javascript:oMyTask.sendQuery('getDifference', 5, 3);"
+          >What is the difference between 5 and 3?</a
+        >
+      </li>
+      <li>
+        <a href="javascript:oMyTask.sendQuery('waitSomething');"
+          >Wait 3 seconds</a
+        >
+      </li>
+      <li>
+        <a href="javascript:oMyTask.terminate();">terminate() the Worker</a>
+      </li>
+    </ul>
+  </body>
 </html>
 ```
 
@@ -427,11 +472,11 @@ asyncEval("(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open(\"get
 ```js
 // your custom PRIVATE functions
 
-function myPrivateFunc1 () {
+function myPrivateFunc1() {
   // do something
 }
 
-function myPrivateFunc2 () {
+function myPrivateFunc2() {
   // do something
 }
 
@@ -442,28 +487,40 @@ function myPrivateFunc2 () {
 var queryableFunctions = {
   // example #1: get the difference between two numbers:
   getDifference: function (nMinuend, nSubtrahend) {
-      reply("printSomething", nMinuend - nSubtrahend);
+    reply("printSomething", nMinuend - nSubtrahend);
   },
   // example #2: wait three seconds
   waitSomething: function () {
-      setTimeout(function() { reply("alertSomething", 3, "seconds"); }, 3000);
-  }
+    setTimeout(function () {
+      reply("alertSomething", 3, "seconds");
+    }, 3000);
+  },
 };
 
 // system functions
 
-function defaultQuery (vMsg) {
+function defaultQuery(vMsg) {
   // your default PUBLIC function executed only when main page calls the queryableWorker.postMessage() method directly
   // do something
 }
 
-function reply (/* listener name, argument to pass 1, argument to pass 2, etc. etc */) {
-  if (arguments.length < 1) { throw new TypeError("reply - not enough arguments"); return; }
-  postMessage({ "vo42t30": arguments[0], "rnb93qh": Array.prototype.slice.call(arguments, 1) });
+function reply(/* listener name, argument to pass 1, argument to pass 2, etc. etc */) {
+  if (arguments.length < 1) {
+    throw new TypeError("reply - not enough arguments");
+    return;
+  }
+  postMessage({
+    vo42t30: arguments[0],
+    rnb93qh: Array.prototype.slice.call(arguments, 1),
+  });
 }
 
 onmessage = function (oEvent) {
-  if (oEvent.data instanceof Object && oEvent.data.hasOwnProperty("bk4e1h0") && oEvent.data.hasOwnProperty("ktp3fm1")) {
+  if (
+    oEvent.data instanceof Object &&
+    oEvent.data.hasOwnProperty("bk4e1h0") &&
+    oEvent.data.hasOwnProperty("ktp3fm1")
+  ) {
     queryableFunctions[oEvent.data.bk4e1h0].apply(self, oEvent.data.ktp3fm1);
   } else {
     defaultQuery(oEvent.data);
@@ -477,7 +534,7 @@ Google Chrome 17+ 以及 Firefox 18+ 能夠和 worker 高效能地傳送另外�
 
 ```js
 // Create a 32MB "file" and fill it.
-var uInt8Array = new Uint8Array(1024*1024*32); // 32MB
+var uInt8Array = new Uint8Array(1024 * 1024 * 32); // 32MB
 for (var i = 0; i < uInt8Array.length; ++i) {
   uInt8Array[i] = i;
 }
@@ -494,51 +551,63 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8" />
-<title>MDN Example - Embedded worker</title>
-<script type="text/js-worker">
-  // This script WON'T be parsed by JS engines because its mime-type is text/js-worker.
-  var myVar = "Hello World!";
-  // Rest of your worker code goes here.
-</script>
-<script type="text/javascript">
-  // This script WILL be parsed by JS engines because its mime-type is text/javascript.
-  function pageLog (sMsg) {
-    // Use a fragment: browser will only render/reflow once.
-    var oFragm = document.createDocumentFragment();
-    oFragm.appendChild(document.createTextNode(sMsg));
-    oFragm.appendChild(document.createElement("br"));
-    document.querySelector("#logDisplay").appendChild(oFragm);
-  }
-</script>
-<script type="text/js-worker">
-  // This script WON'T be parsed by JS engines because its mime-type is text/js-worker.
-  onmessage = function (oEvent) {
-    postMessage(myVar);
-  };
-  // Rest of your worker code goes here.
-</script>
-<script type="text/javascript">
-  // This script WILL be parsed by JS engines because its mime-type is text/javascript.
+  <head>
+    <meta charset="UTF-8" />
+    <title>MDN Example - Embedded worker</title>
+    <script type="text/js-worker">
+      // This script WON'T be parsed by JS engines because its mime-type is text/js-worker.
+      var myVar = "Hello World!";
+      // Rest of your worker code goes here.
+    </script>
+    <script type="text/javascript">
+      // This script WILL be parsed by JS engines because its mime-type is text/javascript.
+      function pageLog(sMsg) {
+        // Use a fragment: browser will only render/reflow once.
+        var oFragm = document.createDocumentFragment();
+        oFragm.appendChild(document.createTextNode(sMsg));
+        oFragm.appendChild(document.createElement("br"));
+        document.querySelector("#logDisplay").appendChild(oFragm);
+      }
+    </script>
+    <script type="text/js-worker">
+      // This script WON'T be parsed by JS engines because its mime-type is text/js-worker.
+      onmessage = function (oEvent) {
+        postMessage(myVar);
+      };
+      // Rest of your worker code goes here.
+    </script>
+    <script type="text/javascript">
+      // This script WILL be parsed by JS engines because its mime-type is text/javascript.
 
-  // In the past...:
-  // blob builder existed
-  // ...but now we use Blob...:
-  var blob = new Blob(Array.prototype.map.call(document.querySelectorAll("script[type=\"text\/js-worker\"]"), function (oScript) { return oScript.textContent; }),{type: "text/javascript"});
+      // In the past...:
+      // blob builder existed
+      // ...but now we use Blob...:
+      var blob = new Blob(
+        Array.prototype.map.call(
+          document.querySelectorAll('script[type="text\/js-worker"]'),
+          function (oScript) {
+            return oScript.textContent;
+          }
+        ),
+        { type: "text/javascript" }
+      );
 
-  // Creating a new document.worker property containing all our "text/js-worker" scripts.
-  document.worker = new Worker(window.URL.createObjectURL(blob));
+      // Creating a new document.worker property containing all our "text/js-worker" scripts.
+      document.worker = new Worker(window.URL.createObjectURL(blob));
 
-  document.worker.onmessage = function (oEvent) {
-    pageLog("Received: " + oEvent.data);
-  };
+      document.worker.onmessage = function (oEvent) {
+        pageLog("Received: " + oEvent.data);
+      };
 
-  // Start the worker.
-  window.onload = function() { document.worker.postMessage(""); };
-</script>
-</head>
-<body><div id="logDisplay"></div></body>
+      // Start the worker.
+      window.onload = function () {
+        document.worker.postMessage("");
+      };
+    </script>
+  </head>
+  <body>
+    <div id="logDisplay"></div>
+  </body>
 </html>
 ```
 
@@ -570,7 +639,7 @@ function errorReceiver(event) {
   throw event.data;
 }
 
-onmessage = function(event) {
+onmessage = function (event) {
   var n = parseInt(event.data);
 
   if (n == 0 || n == 1) {
@@ -584,7 +653,7 @@ onmessage = function(event) {
     worker.onerror = errorReceiver;
     worker.postMessage(n - i);
   }
- };
+};
 ```
 
 worker 程式碼中註冊了一個 `onmessage` 事件處理器用來接收另一端 `postMessage 過來的訊息` (請注意這並非定義一個全域變數或函數，`var onmessage` 或 `function onmessage` 會定義全域變數，但不會註冊事件處理器)，然後開始進行遞迴運算。
@@ -595,30 +664,27 @@ worker 程式碼中註冊了一個 `onmessage` 事件處理器用來接收另一
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8"  />
+    <meta charset="UTF-8" />
     <title>Test threads fibonacci</title>
   </head>
   <body>
+    <div id="result"></div>
 
-  <div id="result"></div>
+    <script language="javascript">
+      var worker = new Worker("fibonacci.js");
 
-  <script language="javascript">
+      worker.onmessage = function (event) {
+        document.getElementById("result").textContent = event.data;
+        dump("Got: " + event.data + "\n");
+      };
 
-    var worker = new Worker("fibonacci.js");
+      worker.onerror = function (error) {
+        dump("Worker error: " + error.message + "\n");
+        throw error;
+      };
 
-    worker.onmessage = function(event) {
-      document.getElementById("result").textContent = event.data;
-      dump("Got: " + event.data + "\n");
-    };
-
-    worker.onerror = function(error) {
-      dump("Worker error: " + error.message + "\n");
-      throw error;
-    };
-
-    worker.postMessage("5");
-
-  </script>
+      worker.postMessage("5");
+    </script>
   </body>
 </html>
 ```

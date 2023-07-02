@@ -32,10 +32,7 @@ build/
 /files/ru/**/*.md
 
 # zh-cn
-/docs/zh-cn/**/*.md
 /files/zh-cn/**/*.md
 
 # zh-tw
-/docs/zh-tw/**/*.md
-/files/zh-tw/web/api/**/*.md
-/files/zh-tw/web/javascript/**/*.md
+/files/zh-tw/web/javascript/reference/global_objects/[p-t]*/**/*.md

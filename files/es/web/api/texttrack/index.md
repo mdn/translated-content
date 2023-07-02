@@ -28,9 +28,9 @@ _Esta interfaz también hereda propiedades de {{domxref("EventTarget")}}._
 - {{domxref("TextTrack.label")}} {{ReadOnlyInline}}
   - : Una cadena legible por humanos que contiene la etiqueta de la pista de texto, si está presente; de lo contrario, se trata de una cadena vacía (`""`), en cuyo caso es posible que su código deba generar una etiqueta personalizada utilizando otros atributos de la pista, si la etiqueta de la pista debe exponerse al usuario.
 - {{domxref("TextTrack.language")}} {{ReadOnlyInline}}
-  - : Una cadena que especifica el idioma del texto en el que se escribe el contenido de la pista de texto. El valor debe cumplir con el formato especificado en {{RFC(5646, "Etiquetas para identificar idiomas (también conocido como BCP 47)")}}, al igual que el atributo HTML {{htmlattrxref("lang")}}. Por ejemplo, puede ser `"en-US"` para inglés de Estados Unidos o `"pt-BR"` para portugués de Brasil.
+  - : Una cadena que especifica el idioma del texto en el que se escribe el contenido de la pista de texto. El valor debe cumplir con el formato especificado en {{RFC(5646, "Etiquetas para identificar idiomas (también conocido como BCP 47)")}}, al igual que el atributo HTML [`lang`](/es/docs/Web/HTML/Global_attributes#lang). Por ejemplo, puede ser `"en-US"` para inglés de Estados Unidos o `"pt-BR"` para portugués de Brasil.
 - {{domxref("TextTrack.mode")}}
-  - : Una cadena que especifica el modo actual de la pista, que debe ser uno de los valores permitidos. Cambiar el valor de esta propiedad cambia el modo actual de la pista para que coincida. El valor predeterminado es `disabled`, a menos que el atributo booleano {{htmlattrxref("default", "track")}} del elemento {{HTMLElement("track")}} esté establecido en `true`, en cuyo caso el modo predeterminado es `showing`.
+  - : Una cadena que especifica el modo actual de la pista, que debe ser uno de los valores permitidos. Cambiar el valor de esta propiedad cambia el modo actual de la pista para que coincida. El valor predeterminado es `disabled`, a menos que el atributo booleano [`default`](/es/docs/Web/HTML/Element/track#default) del elemento {{HTMLElement("track")}} esté establecido en `true`, en cuyo caso el modo predeterminado es `showing`.
 
 ## Métodos de instancia
 

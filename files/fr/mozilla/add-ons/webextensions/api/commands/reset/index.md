@@ -1,15 +1,6 @@
 ---
 title: commands.reset()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/reset
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - commands
-  - reset
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/reset
 ---
 

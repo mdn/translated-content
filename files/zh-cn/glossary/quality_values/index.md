@@ -3,6 +3,8 @@ title: Quality values
 slug: Glossary/Quality_values
 ---
 
+{{GlossarySidebar}}
+
 **质量价值**（Quality values）亦称作 q 值，其与 q 因子以逗号分隔的方式来描述值的优先级顺序，是 HTTP 消息头以及 HTML 中的特殊语法。值的重要性以一种后缀表示：`';q='`。该后缀紧接`0`到`1`间的值 (值可达小数点后三位)，最高值表明最高优先级。无此后缀时，默认值为`1`。
 
 ## 示例

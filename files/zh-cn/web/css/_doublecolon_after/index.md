@@ -7,24 +7,17 @@ slug: Web/CSS/::after
 
 CSS[伪元素](/zh-CN/CSS/Pseudo-elements)`::after`用来创建一个伪元素，作为已选中元素的最后一个子元素。通常会配合{{ cssxref("content") }}属性来为该元素添加装饰内容。这个虚拟元素默认是行内元素。
 
-```
-/* Add an arrow after links */
-a::after {
-  content: "→";
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-after.html", "tabbed-standard")}}
 
 ## 语法
 
+```css
+::after {
+  /* ... */
+}
 ```
-element:after  { style properties }  /* CSS2 语法 */
 
-element::after { style properties }  /* CSS3 语法 */
-```
-
-`::after` 表示法是在`CSS 3 中引入的，`::` 符号是用来区分[伪类](/zh-CN/CSS/Pseudo-classes)和伪元素的。支持 CSS3 的浏览器同时也都支持 CSS2 中引入的表示法 `:after`。
-
-> **备注：** IE8 仅支持 `:after`。
+> **备注：** CSS 引入 `::after` 表示法（两个引号）是用来区分[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的。同时为了向后兼容，浏览器也支持前文介绍的 `:after`。
 
 ## 示例
 

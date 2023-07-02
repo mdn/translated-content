@@ -1,16 +1,7 @@
 ---
 title: Publier des jeux
 slug: Games/Publishing_games
-tags:
-  - HTML5
-  - JavaScript
-  - Jeux
-  - Monétisation
-  - Promotion
-  - distribution
-  - publication
 translation_of: Games/Publishing_games
-original_slug: Jeux/Publier_jeux
 ---
 
 {{GamesSidebar}}

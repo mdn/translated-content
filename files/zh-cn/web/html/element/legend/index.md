@@ -60,5 +60,5 @@ slug: Web/HTML/Element/legend
 
 ## 参见
 
-- 其他与表单相关的元素：{{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
+- 其他与表单相关的元素：{{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}。
 - [ARIA: Form role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Form_Role)

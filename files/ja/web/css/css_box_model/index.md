@@ -1,6 +1,6 @@
 ---
 title: CSS ボックスモデル
-slug: Web/CSS/CSS_Box_Model
+slug: Web/CSS/CSS_box_model
 ---
 
 {{CSSRef}}

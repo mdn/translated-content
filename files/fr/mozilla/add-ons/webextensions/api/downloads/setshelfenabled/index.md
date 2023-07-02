@@ -1,16 +1,6 @@
 ---
 title: downloads.setShelfEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/setShelfEnabled
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - setShelfEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/setShelfEnabled
 ---
 

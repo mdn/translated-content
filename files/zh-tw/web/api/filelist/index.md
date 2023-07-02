@@ -14,13 +14,13 @@ slug: Web/API/FileList
 所有 `<input>` 元素節點的 {{domxref("Document_Object_Model", "DOM")}} 物件都擁有 `files` 屬性（{{Glossary("property/JavaScript", "property")}}），此屬性即為 `FileList`，是一個可藉此存取使用者選取之檔案的類陣列物件。以下範例展示了一個 `type` 屬性（{{Glossary("attribute")}}）值為 `file` 的 HTML `<input>` 元素：
 
 ```html
-<input id="fileItem" type="file">
+<input id="fileItem" type="file" />
 ```
 
 下面範例演示了如何取得 `<input>` 元素節點中所包含的第一個 {{domxref("File")}} 型別物件：
 
 ```js
-var file = document.getElementById('fileItem').files[0];
+var file = document.getElementById("fileItem").files[0];
 ```
 
 ## 方法概觀
@@ -69,54 +69,49 @@ var file;
 
 // loop through files
 for (var i = 0; i < files.length; i++) {
+  // get item
+  file = files.item(i);
+  //or
+  file = files[i];
 
-    // get item
-    file = files.item(i);
-    //or
-    file = files[i];
-
-    alert(file.name);
+  alert(file.name);
 }
 ```
 
 以下是更完整的範例：
 
 ```html
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-<head>
-</head>
-<body>
-<!--multiple is set to allow multiple files to be selected-->
+  <head> </head>
+  <body>
+    <!--multiple is set to allow multiple files to be selected-->
 
-<input id="myfiles" multiple type="file">
+    <input id="myfiles" multiple type="file" />
+  </body>
 
-</body>
+  <script>
+    var pullfiles = function () {
+      // love the query selector
+      var fileInput = document.querySelector("#myfiles");
+      var files = fileInput.files;
+      // cache files.length
+      var fl = files.length;
+      var i = 0;
 
-<script>
-
-var pullfiles=function(){
-    // love the query selector
-    var fileInput = document.querySelector("#myfiles");
-    var files = fileInput.files;
-    // cache files.length
-    var fl = files.length;
-    var i = 0;
-
-    while ( i < fl) {
+      while (i < fl) {
         // localize file var in the loop
         var file = files[i];
         alert(file.name);
         i++;
-    }
-}
+      }
+    };
 
-// set the input element onchange to call pullfiles
-document.querySelector("#myfiles").onchange=pullfiles;
+    // set the input element onchange to call pullfiles
+    document.querySelector("#myfiles").onchange = pullfiles;
 
-//a.t
-</script>
-
+    //a.t
+  </script>
 </html>
 ```
 

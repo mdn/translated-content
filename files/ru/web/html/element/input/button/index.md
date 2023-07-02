@@ -20,13 +20,13 @@ translation_of: Web/HTML/Element/input/button
 | **[Значение](#значение)**         | {{domxref("DOMString")}} используется в качестве метки кнопки                       |
 | --------------------------------- | ------------------------------------------------------------------------------------------- |
 | **Событие**                       | {{event("click")}}                                                                    |
-| **Поддерживаемые общие атрибуты** | {{htmlattrxref("type", "input")}} и {{htmlattrxref("value", "input")}} |
+| **Поддерживаемые общие атрибуты** | [`type`](/ru/docs/Web/HTML/Element/input#type) и [`value`](/ru/docs/Web/HTML/Element/input#value) |
 | **Атрибуты IDL**                  | `value`                                                                                     |
 | **Методы**                        | None                                                                                        |
 
 ## Значение
 
-Атрибут значения элементов `<input type="button">` elements' {{htmlattrxref("value", "input")}} содержит строку {{domxref("DOMString")}} , которая используется в качестве метки кнопки.
+Атрибут значения элементов `<input type="button">` elements' [`value`](/ru/docs/Web/HTML/Element/input#value) содержит строку {{domxref("DOMString")}} , которая используется в качестве метки кнопки.
 
 ```html
 <input type="button" value="Нажми на меня">
@@ -80,7 +80,7 @@ function updateButton() {
 
 ### Добавление сочетаний клавиш на кнопки
 
-Сочетания клавиш, также известные как клавиши доступа и их эквиваленты на клавиатуре, позволяют пользователю активировать кнопку с помощью клавиши или комбинации клавиш на клавиатуре. Чтобы добавить сочетание клавиш к кнопке — точно так же, как вы сделали бы с любым {{HTMLElement("input")}}, для которого это имеет смысл, — вы используете глобальный атрибут {{htmlattrxref("accesskey")}}.
+Сочетания клавиш, также известные как клавиши доступа и их эквиваленты на клавиатуре, позволяют пользователю активировать кнопку с помощью клавиши или комбинации клавиш на клавиатуре. Чтобы добавить сочетание клавиш к кнопке — точно так же, как вы сделали бы с любым {{HTMLElement("input")}}, для которого это имеет смысл, — вы используете глобальный атрибут [`accesskey`](/ru/docs/Web/HTML/Global_attributes#accesskey).
 
 В этом примере, <kbd>s</kbd> это специфичная клавиша доступа (ты должен нажать <kbd>s</kbd> плюс конкретные клавиши-модификаторы для вашей комбинации браузера и операционной системы; вы можете увидеть полный список на странице [accesskey](/ru/docs/Web/HTML/Global_attributes/accesskey)).
 
@@ -114,7 +114,7 @@ function updateButton() {
 
 ### Выключенные / Включённые кнопки
 
-Чтобы выключить кнопку необходимо просто добавить на неё глобальный атрибут {{htmlattrxref("disabled")}}, вот так:
+Чтобы выключить кнопку необходимо просто добавить на неё глобальный атрибут [`disabled`](/ru/docs/Web/HTML/Global_attributes#disabled), вот так:
 
 ```html
 <input type="button" value="Я выключена" disabled>
@@ -172,7 +172,7 @@ function disableButton() {
 
 {{EmbedLiveSample("Hidden_code_2", 650, 60)}}
 
-> **Примечание:** Firefox, в отличие от других браузеров, по умолчанию [сохраняет динамическое отключенние состояния](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) из одного {{HTMLElement("button")}} при загрузке разных страниц. Используйте атрибут {{htmlattrxref("autocomplete","button")}} для управления этой функцией.
+> **Примечание:** Firefox, в отличие от других браузеров, по умолчанию [сохраняет динамическое отключенние состояния](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) из одного {{HTMLElement("button")}} при загрузке разных страниц. Используйте атрибут [`autocomplete`](/ru/docs/Web/HTML/Element/button#autocomplete) для управления этой функцией.
 
 ## Валидация
 

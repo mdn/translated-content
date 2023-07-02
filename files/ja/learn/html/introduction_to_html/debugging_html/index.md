@@ -2,7 +2,7 @@
 title: HTML のデバッグ
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 l10n:
-  sourceCommit: 358158b18ad8c2b90b83fe4dc03bdd7fd2e423da
+  sourceCommit: 65b9418c7d0e3a331ac50249adf0024f44789923
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
@@ -60,32 +60,32 @@ HTML 自体は構文エラーに悩まされません。ブラウザーが構文
 
 > **メモ:** ウェブの世界が最初に構築されたとき、 HTML はそれほど厳格には解析されませんでした。これは、構文が絶対的に正しいことを確認するよりも、人々がコンテンツを公開できることのほうが重要であると判断されたためです。ウェブは、最初からもっと厳密なものであったなら、おそらく今日のような人気はなかったでしょう。
 
-### アクティブラーニング: 許容コードの学習
+### アクティブラーニング: 寛容なコードの学習
 
 HTML コードの寛容な性質を学習する時が来ました。
 
-1. まず、　[debug-example のデモ](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html)をダウンロードしてローカルに保存します。このデモは、調査するために意図的にエラーを含むように書かれています（HTML マークアップは**整形式ではない**と言われており、**整形式**とは対照的です）。
+1. まず、[debug-example のデモ](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html)をダウンロードしてローカルに保存します。このデモは、調査するために意図的にエラーを含むように書かれています（この HTML マークアップは**整形式ではない**と呼ばれ、**整形式**とは対照的です）。
 2. 次にブラウザーで開きます。 このようなものが表示されるでしょう。![HTML のデバッグ例のタイトルと、閉じられていない要素、不適切に入れ子にされた要素、閉じられていない属性などの一般的な HTML エラーに関する情報を含む、シンプルな HTML 文書です。](badly-formed-html.png)
 3. これはすぐには良く見えません。ソースコードを調べて、問題が解決できるかどうか確認しましょう（本文の内容だけが表示されます）。
 
-    ```html
-    <h1>HTML debugging examples</h1>
+   ```html
+   <h1>HTML debugging examples</h1>
 
-    <p>What causes errors in HTML?
+   <p>What causes errors in HTML?
 
-    <ul>
-      <li>Unclosed elements: If an element is <strong>not closed properly,
-          then its effect can spread to areas you didn't intend
+   <ul>
+     <li>Unclosed elements: If an element is <strong>not closed properly,
+         then its effect can spread to areas you didn't intend
 
-      <li>Badly nested elements: Nesting elements properly is also very important
-          for code behaving correctly. <strong>strong <em>strong emphasized?</strong>
-          what is this?</em>
+     <li>Badly nested elements: Nesting elements properly is also very important
+         for code behaving correctly. <strong>strong <em>strong emphasized?</strong>
+         what is this?</em>
 
-      <li>Unclosed attributes: Another common source of HTML problems. Let's
-          look at an example: <a href="https://www.mozilla.org/>link to Mozilla
-          homepage</a>
-    </ul>
-    ```
+     <li>Unclosed attributes: Another common source of HTML problems. Let's
+         look at an example: <a href="https://www.mozilla.org/>link to Mozilla
+         homepage</a>
+   </ul>
+   ```
 
 4. 問題を見てみましょう。
 
@@ -94,29 +94,32 @@ HTML コードの寛容な性質を学習する時が来ました。
     - `<strong>strong <em>strong emphasized?</strong> what is this?</em>` の部分は入れ子構造が間違っています。前の問題もあって、これがどのように解釈されたかを見分けるのは容易ではありません。
     - [`href`](/ja/docs/Web/HTML/Element/a#href) 属性値に、閉じる二重引用符がありません。これが最大の問題を引き起こしているようです。リンクはまったくレンダリングされていません。
 
-5. それでは、ソースコードのマークアップに対して、ブラウザーがレンダリングしたマークアップを見てみましょう。これを行うには、ブラウザーの開発者ツールを使用できます。ブラウザーの開発者ツールの使い方に慣れていない場合は、[ブラウザー開発者ツールを見る](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)をちょっと確認してください。
+5. それでは、ソースコードのマークアップに対して、ブラウザーがレンダリングしたマークアップを見てみましょう。これを行うには、ブラウザーの開発者ツールを使用できます。ブラウザーの開発者ツールの使い方に慣れていない場合は、[ブラウザー開発者ツールを見る](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)をちょっと確認してください。
 6. DOM インスペクターでは、レンダリングされたマークアップがどのように見えるかを見ることができます。![Firefox の HTML インスペクターで、例の段落がハイライトされ、 "What causes errors in HTML?" というテキストが表示されています。ここでは、段落要素がブラウザーによって閉じられていることがわかります。](html-inspector.png)
 7. DOM インスペクターを使用して、ブラウザーが HTML エラーを修正しようとしている方法を確認するためにコードを詳しく調べてみましょう（もちろん Firefox で確認していますが、他の現代のブラウザーでも同じ結果が得られる*はず*です）。
 
-    - 段落とリスト項目には終了タグが付けられています。
-    - 最初の `<strong>` 要素がどこで閉じられるべきかは明確ではないので、ブラウザーはそれぞれ別々のテキストブロックをそれぞれの strong タグで、ドキュメントの一番下まで閉じています。
-    - 不正確な入れ子はブラウザーによってこのように修正されました。
+   - 段落とリスト項目には終了タグが付けられています。
+   - 最初の `<strong>` 要素がどこで閉じられるべきかは明確ではないので、ブラウザーはそれぞれ別々のテキストブロックをそれぞれの strong タグで、ドキュメントの一番下まで閉じています。
+   - 不正確な入れ子はブラウザーによってこのように修正されました。
 
-      ```html
-      <strong>strong
-        <em>strong emphasized?</em>
-      </strong>
-      <em> what is this?</em>
-      ```
+     ```html
+     <strong>
+       strong
+       <em>strong emphasized?</em>
+     </strong>
+     <em> what is this?</em>
+     ```
 
-    - 二重引用符がないリンクは完全に削除されました。 最後のリスト項目は次のようになります。
+   - 二重引用符がないリンクは完全に削除されました。 最後のリスト項目は次のようになります。
 
-      ```html
-      <li>
-        <strong>Unclosed attributes: Another common source of HTML problems.
-        Let's look at an example: </strong>
-      </li>
-      ```
+     ```html
+     <li>
+       <strong>
+         Unclosed attributes: Another common source of HTML problems. Let's look
+         at an example:
+       </strong>
+     </li>
+     ```
 
 ### HTML の検証
 

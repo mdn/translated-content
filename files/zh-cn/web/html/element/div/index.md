@@ -46,7 +46,7 @@ slug: Web/HTML/Element/div
 
 该元素支持所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 
-> **备注：** `align` 属性已废弃；不要再使用它了。你应当使用 [CSS Grid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 或 [CSS Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox) 来对齐、定位页面上的 `<div>` 元素。
+> **备注：** `align` 属性已废弃；不要再使用它了。你应当使用 [CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) 或 [CSS Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox) 来对齐、定位页面上的 `<div>` 元素。
 
 ## 使用说明
 

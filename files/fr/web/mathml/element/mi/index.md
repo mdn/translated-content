@@ -32,7 +32,7 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
     - Une [longueur quelconque](/fr/docs/CSS/longueur).
     - ou une valeur sans unité qui multiplie la taille par défaut.
 
-- mathvariant (implémenté en partie : voir {{ bug("114365") }} et {{ bug("162405") }})
+- mathvariant (implémenté en partie : voir [bug Firefox 114365](https://bugzil.la/114365) et [bug Firefox 162405](https://bugzil.la/162405))
 
   - : La classe logique des identifiants, variant selon la typographie. Cela veut dire que, bien que les noms suggèrent une certaine mise en forme, les éléments d'une même classe seront traités de la même manière au sein d'une même expression. Cela peut, ou pas, impliquer un affichage avec la typographie mentionnée. Les valeurs suivantes sont autorisées :
 

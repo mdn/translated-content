@@ -1,17 +1,6 @@
 ---
 title: userScripts.onBeforeScript
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
-tags:
-  - Add-ons
-  - Addons
-  - Customisation
-  - Extensions
-  - Firefox
-  - Mozilla
-  - Reference
-  - User Scripts API
-  - WebExtensions
-  - userScripts
 translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
 ---
 

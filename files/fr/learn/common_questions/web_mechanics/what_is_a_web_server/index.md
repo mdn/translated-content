@@ -98,7 +98,7 @@ Sur un serveur web, le serveur HTTP est responsable du traitement des requêtes 
 
 1. Une fois qu'il a reçu une requête, le serveur HTTP vérifie que l'URL demandée correspond à un fichier existant.
 2. Si c'est le cas, le serveur envoie le fichier vers le navigateur du client. Sinon, le serveur d'applications génère le fichier nécessaire.
-3. Si le fichier n'existe pas ou que le traitement est impossible, le serveur web renvoie un message d'erreur au navigateur. Le message d'erreur le plus fréquemment rencontré est {{HTTPStatus("404", "404 Page non trouvée")}} (cette erreur étant plutôt fréquente, certains ont même personnalisé et adapté [les pages d'erreurs 404](http://www.404notfound.fr/) de leurs sites).
+3. Si le fichier n'existe pas ou que le traitement est impossible, le serveur web renvoie un message d'erreur au navigateur. Le message d'erreur le plus fréquemment rencontré est {{HTTPStatus("404", "404 Page non trouvée")}} (cette erreur étant plutôt fréquente, certains ont même personnalisé et adapté les pages d'erreurs 404 de leurs sites).
 
 ![Une page d'erreur HTTP, en l'occurrence la page 404 de MDN](Capture.PNG)
 

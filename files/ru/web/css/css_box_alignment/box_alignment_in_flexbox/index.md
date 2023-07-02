@@ -1,12 +1,13 @@
 ---
 title: Выравнивание блоков в разметке Flexbox
-slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
+slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 tags:
   - CSS
   - flexbox
   - выравнивание блоков
 translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox
 ---
+
 {{CSSRef}}
 
 Спецификация [Выравнивание Блоков](/ru/docs/Web/CSS/CSS_Box_Alignment) подробно описывает, как выравнивание работает при использовании различных способов разметки. На этой странице мы рассмотрим, как работает выравнивание блоков в контексте разметки flexbox. Поскольку эта страница предназначена для подробного описания вещей, относящихся к разметке flexbox и выравниванию блоков, её следует читать вместе с основной страницей [выравнивания блоков](/ru/docs/Web/CSS/CSS_Box_Alignment), в которой подробно описываются общие характеристики выравнивания блоков при использовании разных методах разметки.

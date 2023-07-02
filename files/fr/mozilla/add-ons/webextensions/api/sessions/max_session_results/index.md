@@ -1,16 +1,6 @@
 ---
 title: sessions.MAX_SESSION_RESULTS
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/MAX_SESSION_RESULTS
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - MAX_SESSION_RESULTS
-  - Non-standard
-  - Propriété
-  - Reference
-  - WebExtensions
-  - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/MAX_SESSION_RESULTS
 ---
 

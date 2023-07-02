@@ -3,6 +3,8 @@ title: CDN
 slug: Glossary/CDN
 ---
 
+{{GlossarySidebar}}
+
 **CDN** (内容分发网络) 指的是一组分布在各个地区的服务器。这些服务器存储着数据的副本，因此服务器可以根据哪些服务器与用户距离最近，来满足数据的请求。CDNs 提供快速服务，较少受高流量影响。
 
 CDNs 被广泛用于传输 stylesheets 和 JavaScript 等静态资源，像 Bootstrap，Jquery 等。对这些库文件使用 CDN 技术，有以下几点好处：

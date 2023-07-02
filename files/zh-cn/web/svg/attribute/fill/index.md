@@ -3,9 +3,9 @@ title: fill
 slug: Web/SVG/Attribute/fill
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-`fill`属性根据它的使用环境，拥有两个意义。
+`fill` 属性根据它的使用环境，拥有两个意义。
 
 默认地，当动画元素结束时，目标元素的外观属性不再应用该效果。在动画元素结束后，要还保持这个动画的的值，就需要用到`fill`属性。
 

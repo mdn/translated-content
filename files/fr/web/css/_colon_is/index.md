@@ -249,7 +249,7 @@ L'exemple ci-dessus ne sera pas appliqué par les navigateurs qui ne prennent pa
 
 ### Problèmes de performances avec `any():` et la spécificité
 
-{{Bug(561154)}} suit un problème de spécificité relatif à `:-moz-any()`. L'implémentation place `:-moz-any()` dans la catégorie des règles universelles, ce qui signifie que si on l'utilise comme sélecteur le plus à droite, ce sera plus lent que d'utiliser un sélecteur d'identifiant, de classe ou de balise comme premier sélecteur.
+[bug Firefox 561154](https://bugzil.la/561154) suit un problème de spécificité relatif à `:-moz-any()`. L'implémentation place `:-moz-any()` dans la catégorie des règles universelles, ce qui signifie que si on l'utilise comme sélecteur le plus à droite, ce sera plus lent que d'utiliser un sélecteur d'identifiant, de classe ou de balise comme premier sélecteur.
 
 Ainsi :
 

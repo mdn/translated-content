@@ -3,6 +3,8 @@ title: Call stack（调用栈）
 slug: Glossary/Call_stack
 ---
 
+{{GlossarySidebar}}
+
 调用栈是解释器（比如浏览器中的 JavaScript 解释器）追踪函数执行流的一种机制。当执行环境中调用了多个{{glossary("function","函数")}}时，通过这种机制，我们能够追踪到哪个函数正在执行，执行的函数体中又调用了哪个函数。
 
 - 每调用一个函数，解释器就会把该函数添加进调用栈并开始执行。

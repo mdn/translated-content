@@ -44,11 +44,18 @@ Line 15 actually initiates the request. The callback routine is called whenever 
 In some cases you must read many external files. This is a standard function which uses the `XMLHttpRequest` object asynchronously in order to switch the content of the read file to a specified listener.
 
 ```js
-function xhrSuccess () { this.callback.apply(this, this.arguments); }
+function xhrSuccess() {
+  this.callback.apply(this, this.arguments);
+}
 
-function xhrError () { console.error(this.statusText); }
+function xhrError() {
+  console.error(this.statusText);
+}
 
-function loadFile (sURL, fCallback /*, argumentToPass1, argumentToPass2, etc. */) {
+function loadFile(
+  sURL,
+  fCallback /*, argumentToPass1, argumentToPass2, etc. */
+) {
   var oReq = new XMLHttpRequest();
   oReq.callback = fCallback;
   oReq.arguments = Array.prototype.slice.call(arguments, 2);
@@ -62,7 +69,7 @@ function loadFile (sURL, fCallback /*, argumentToPass1, argumentToPass2, etc. */
 Usage:
 
 ```js
-function showMessage (sMsg) {
+function showMessage(sMsg) {
   alert(sMsg + this.responseText);
 }
 
@@ -107,7 +114,7 @@ Notice the addition of code to handle the "timeout" event by setting the `ontime
 Usage:
 
 ```js
-function showMessage (sMsg) {
+function showMessage(sMsg) {
   alert(sMsg + this.responseText);
 }
 
@@ -130,7 +137,7 @@ This example demonstrates how to make a simple synchronous request.
 
 ```js
 var request = new XMLHttpRequest();
-request.open('GET', '/bar/foo.txt', false);  // `false` makes the request synchronous
+request.open("GET", "/bar/foo.txt", false); // `false` makes the request synchronous
 request.send(null);
 
 if (request.status === 200) {
@@ -182,7 +189,7 @@ Hello World!!
 self.onmessage = (event) => {
   if (event.data === "Hello") {
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "myFile.txt", false);  // synchronous request
+    xhr.open("GET", "myFile.txt", false); // synchronous request
     xhr.send(null);
     self.postMessage(xhr.responseText);
   }
@@ -200,7 +207,7 @@ There are some cases in which the synchronous usage of {{domxref('XMLHttpRequest
 The following example shows theoretical analytics code that attempts to submit data to a server by using a synchronous {{domxref('XMLHttpRequest')}} in an unload handler. This results in the unloading of the page to be delayed.
 
 ```js
-window.addEventListener('unload', logData, false);
+window.addEventListener("unload", logData, false);
 
 function logData() {
   const client = new XMLHttpRequest();
@@ -215,7 +222,7 @@ Using the **`sendBeacon()`** method, the data will be transmitted asynchronously
 The following example shows a theoretical analytics code pattern that submits data to a server by using the **`sendBeacon()`** method.
 
 ```js
-window.addEventListener('unload', logData, false);
+window.addEventListener("unload", logData, false);
 
 function logData() {
   navigator.sendBeacon("/log", analyticsData);

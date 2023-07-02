@@ -104,7 +104,7 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 实践中，使用最小值和最大值对响应式设计有很多的用处，所以你会很少见到`width`或`height` 单独使用的情况。
 
-还有许多其他媒体特征可以供你测试，尽管于 4 级和 5 级媒体查询规范中引入了一些新特征，它们受浏览器支持仍然有限。在 MDN 上，每个特征都已经同浏览器支持信息一同记载下来，你可以在[使用媒体查询：媒体特征](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features)中找到一张完整的列表。
+还有许多其他媒体特征可以供你测试，尽管于 4 级和 5 级媒体查询规范中引入了一些新特征，它们受浏览器支持仍然有限。在 MDN 上，每个特征都已经同浏览器支持信息一同记载下来，你可以在[使用媒体查询：媒体特征](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#Media_features)中找到一张完整的列表。
 
 #### 朝向
 

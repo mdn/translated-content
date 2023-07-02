@@ -62,7 +62,7 @@ l10n:
 
 ## 値
 
-入力欄に入力された日付を表す文字列です。日付は ISO8601 に従って書式化されており、これは[日付の文字列](/ja/docs/Web/HTML/Date_and_time_formats#date_strings)で説明されています。
+入力欄に入力された日付を表す文字列です。日付は ISO8601 に従って書式化されており、これは[日付文字列](/ja/docs/Web/HTML/Date_and_time_formats#日付文字列)で説明されています。
 
 次のように、日付の入力欄の既定値を [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に設定することができます。
 
@@ -91,13 +91,13 @@ console.log(dateControl.valueAsNumber); // 1496275200000 と JavaScript タイ�
 
 ### max
 
-受け付ける最も遅い日付です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれ以降になった場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。 `max` 属性の値が `yyyy-mm-dd` の書式のありうる日付ではない場合、要素は最大の日付値を持ちません。
+受け付ける最も遅い日付です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれ以降になった場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `max` 属性の値が `yyyy-mm-dd` の書式のありうる日付ではない場合、要素は最大の日付値を持ちません。
 
 `max` と `min` の両方の属性を設定する場合、この値は `min` 属性にあるもの**より遅いか、同じ**日付文字列でなければなりません。
 
 ### min
 
-受け付ける最も早い日付です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれ以前になった場合、要素は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。 `min` 属性の値が `yyyy-mm-dd` の書式のありうる日付でない場合、要素は最小の日付値を持ちません。
+受け付ける最も早い日付です。要素に入力された [`value`](/ja/docs/Web/HTML/Element/input#value) がこれ以前になった場合、要素は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。 `min` 属性の値が `yyyy-mm-dd` の書式のありうる日付でない場合、要素は最小の日付値を持ちません。
 
 `max` と `min` の両方の属性を設定する場合、この値は `max` 属性で指定されたもの**より早いか、同じ**日付である必要があります。
 

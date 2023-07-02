@@ -22,7 +22,7 @@ var intervalID = scope.setInterval(code, delay);
 - `code`
   - : Uma sintaxe opcional permite você incuir uma string ao invés de uma função, no qual é compilado e executada a cada `delay` em milisegundos. Esta sintaxe _não é recomendada_ pelos mesmos motivos que envolvem riscos de segurança de {{jsxref("eval", "eval()")}}.
 - `delay`
-  - : O tempo, em milisegundos (milésimos de segundo), o temporizador deve atrasar entre cada execução de uma especifica função ou código. Se esse parâmetro for menos que 10, um valor de 10 é usado. Note que o atraso pode vir a ser mais longo; veja {{SectionOnPage("/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout", "Reasons for delays longer than specified")}} para exemplos.
+  - : O tempo, em milisegundos (milésimos de segundo), o temporizador deve atrasar entre cada execução de uma especifica função ou código. Se esse parâmetro for menos que 10, um valor de 10 é usado. Note que o atraso pode vir a ser mais longo; veja [Razões para atrasos maiores do que o especificado](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#reasons_for_delays_longer_than_specified) para exemplos.
 - `param1, ..., paramN` {{optional_inline}}
   - : Parâmetros adicionais que são passados através da função especificada pela _func_ quando o temporizador expirar.
 

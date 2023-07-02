@@ -1,12 +1,7 @@
 ---
 title: Que faire ensuite ?
 slug: Mozilla/Add-ons/WebExtensions/What_next_
-tags:
-  - Débutant
-  - Extensions
-  - WebExtension
 translation_of: Mozilla/Add-ons/WebExtensions/What_next_
-original_slug: Mozilla/Add-ons/WebExtensions/que_faire_ensuite
 ---
 
 {{AddonSidebar}}

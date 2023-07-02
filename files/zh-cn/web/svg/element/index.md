@@ -193,11 +193,11 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 
 ### 文本内容元素
 
-{{SVGElement("altGlyph")}}、{{SVGElement("altGlyphDef")}}、{{SVGElement("altGlyphItem")}}、{{SVGElement("glyph")}}、{{SVGElement("glyphRef")}}、{{SVGElement("textPath")}}、{{SVGElement("text")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}}
+{{SVGElement("glyph")}}、{{SVGElement("glyphRef")}}、{{SVGElement("textPath")}}、{{SVGElement("text")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}}
 
 ### 文本子内容元素
 
-{{SVGElement("altGlyph")}}、{{SVGElement("textPath")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}}
+{{SVGElement("textPath")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}}
 
 ### 未分类元素
 
@@ -206,10 +206,6 @@ SVG 图像是使用各种元素创建的，这些元素分别应用于矢量图�
 ## 过时和弃用的元素
 
 > **警告：** 这些是旧的 SVG 元素，已弃用且不应使用。**你绝不应在新项目中使用它们，并应尽快在旧项目中替换它们**。在此列出，仅供参考。
-
-### A
-
-{{SVGElement("altGlyph")}}、{{SVGElement("altGlyphDef")}}、{{SVGElement("altGlyphItem")}}、{{SVGElement("animateColor")}}
 
 ### C
 

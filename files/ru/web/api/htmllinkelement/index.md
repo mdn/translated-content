@@ -28,13 +28,13 @@ _Наследует свойства от своего родителя, {{domxr
 - {{domxref("HTMLLinkElement.media")}}
   - : Is a {{domxref("DOMString")}} representing a list of one or more media formats to which the resource applies.
 - {{domxref("HTMLLinkElement.referrerPolicy")}} {{experimental_inline}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerpolicy", "link")}} HTML attribute indicating which referrer to use.
+  - : Is a {{domxref("DOMString")}} that reflects the [`referrerpolicy`](/ru/docs/Web/HTML/Element/link#referrerpolicy) HTML attribute indicating which referrer to use.
 - {{domxref("HTMLLinkElement.rel")}}
   - : Is a {{domxref("DOMString")}} representing the forward relationship of the linked resource from the document to the resource.
 - {{domxref("HTMLLinkElement.relList")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "link")}} HTML attribute, as a list of tokens.
+  - : Is a {{domxref("DOMTokenList")}} that reflects the [`rel`](/ru/docs/Web/HTML/Element/link#rel) HTML attribute, as a list of tokens.
 - {{domxref("HTMLLinkElement.sizes")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMSettableTokenList")}} that reflects the {{htmlattrxref("sizes", "link")}} HTML attribute, as a list of tokens.
+  - : Is a {{domxref("DOMSettableTokenList")}} that reflects the [`sizes`](/ru/docs/Web/HTML/Element/link#sizes) HTML attribute, as a list of tokens.
 - {{domxref("LinkStyle.sheet")}} {{readonlyInline}}
   - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none.
 - {{domxref("HTMLLinkElement.type")}}

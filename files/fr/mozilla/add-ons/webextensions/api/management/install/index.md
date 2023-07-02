@@ -1,15 +1,6 @@
 ---
 title: management.install()
 slug: Mozilla/Add-ons/WebExtensions/API/management/install
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - Theme
-  - WebExtensions
-  - install
-  - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/install
 ---
 

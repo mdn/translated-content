@@ -39,7 +39,7 @@ App Shell 概念试图尽快加载最小用户界面，然后缓存它，以便�
 
 - 可链接（Linkable）：即使行为类似于原生应用，它仍然是一个网站：您可以点击页面内的链接，也可以通过发送 URL 的方式分享网站给别人。
 - 渐进式（Progressive）：从“美好的旧式基础网站”开始，逐步添加新功能，在过程中检测其在浏览器上的可用性，并且优雅地处理不支持案例下发生的报错。举个例子，service workers 辅助下的离线模式只是提升网站体验的额外特性，但没有它网站也仍然完全可用。
-- 响应式（Responsive）：响应式网页设计也适用于渐进式网络应用程序，因为它们都主要用于移动设备。拥有浏览器的设备太多太杂，所以确保网站在不同屏幕宽度、视口和像素密度上都可以访问就变得尤为重要。[viewport meta tag](/zh-CN/docs/Web/HTML/Viewport_meta_tag)、[CSS 媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)、[Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout) 和 [CSS Grid](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 等技术都可以助你实现这个目标。
+- 响应式（Responsive）：响应式网页设计也适用于渐进式网络应用程序，因为它们都主要用于移动设备。拥有浏览器的设备太多太杂，所以确保网站在不同屏幕宽度、视口和像素密度上都可以访问就变得尤为重要。[viewport meta tag](/zh-CN/docs/Web/HTML/Viewport_meta_tag)、[CSS 媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout) 和 [CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) 等技术都可以助你实现这个目标。
 
 ## 另一种概念：流
 

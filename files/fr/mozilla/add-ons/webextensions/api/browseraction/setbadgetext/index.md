@@ -1,16 +1,6 @@
 ---
 title: browserAction.setBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setBadgeText
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
 ---
 

@@ -185,7 +185,7 @@ O elemento de citação — `<q>` — é "destinado a citações curtas que não
 
 ### Citações
 
-O conteúdo do atributo {{htmlattrxref("cite","blockquote")}} parece útil, mas, infelizmente, navegadores, leitores de tela etc. não fazem muito uso dele. Não há como fazer com que o navegador exiba o conteúdo de `cite`, sem escrever sua própria solução usando JavaScript ou CSS. Se você deseja disponibilizar a fonte da citação na página, uma maneira melhor de marcá-la é colocar o elemento {{htmlelement("cite")}} próximo ao elemento quote. Isso realmente tem o objetivo de conter o nome da fonte da citação — ou seja, o nome do livro ou o nome da pessoa que disse a citação — mas não há razão para que você não possa vincular o texto dentro de `<cite>` à citação fonte de alguma forma:
+O conteúdo do atributo [`cite`](/pt-BR/docs/Web/HTML/Element/blockquote#cite) parece útil, mas, infelizmente, navegadores, leitores de tela etc. não fazem muito uso dele. Não há como fazer com que o navegador exiba o conteúdo de `cite`, sem escrever sua própria solução usando JavaScript ou CSS. Se você deseja disponibilizar a fonte da citação na página, uma maneira melhor de marcá-la é colocar o elemento {{htmlelement("cite")}} próximo ao elemento quote. Isso realmente tem o objetivo de conter o nome da fonte da citação — ou seja, o nome do livro ou o nome da pessoa que disse a citação — mas não há razão para que você não possa vincular o texto dentro de `<cite>` à citação fonte de alguma forma:
 
 ```html
 <p>According to the <a href="/en-US/docs/Web/HTML/Element/blockquote">
@@ -279,7 +279,7 @@ window.addEventListener("load", drawOutput);
 
 ## Abreviações
 
-Outro elemento bastante comum que você encontrará ao olhar na Web é o {{htmlelement("abbr")}} — usado para contornar uma abreviação ou sigla e fornecer uma expansão completa do termo (incluído em um atributo {{htmlattrxref("title")}}.) Vejamos alguns exemplos
+Outro elemento bastante comum que você encontrará ao olhar na Web é o {{htmlelement("abbr")}} — usado para contornar uma abreviação ou sigla e fornecer uma expansão completa do termo (incluído em um atributo [`title`](/pt-BR/docs/Web/HTML/Global_attributes#title).) Vejamos alguns exemplos
 
 ```
 <p>Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para estruturar nossos documentos da web.</p>

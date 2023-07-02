@@ -1,10 +1,6 @@
 ---
 title: Le projet MDN
 slug: MDN
-tags:
-  - Accueil
-  - MDN
-  - MDN Meta
 translation_of: MDN
 ---
 

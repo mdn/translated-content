@@ -2,7 +2,7 @@
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
 l10n:
-  sourceCommit: 8507170b71a6612358bdf2d9ec47b4e9b825bd78
+  sourceCommit: 76600240fbe75e083e964bc3707cce81e99999c2
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
@@ -10,45 +10,6 @@ l10n:
 **`<menuitem>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーがポップアップメニューから呼び出すことができるコマンドを表します。メニューボタンに割り当てるメニューはもちろん、コンテキストメニューも含みます。
 
 コマンドはテキストのラベルと任意で外観を表すアイコン、あるいは代わりに別の要素で動作を定義する*インダイレクトコマンド*で明示的に定義できます。また、任意でコマンドにチェックボックスを含めたり、ラジオボタンを共有するグループにすることができます (インダイレクトコマンドのメニュー項目を `<input type="checkbox">` および `<input type="radio">` 要素に対して定義するとき、チェックボックスまたはラジオボタンを持ちます)。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
-      </th>
-      <td>なし。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>なし。これは{{Glossary("void element", "空要素")}}です。</td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>開始タグが必須で、終了タグはあってはいけません。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>
-        <em>ポップアップメニュー</em>状態である {{HTMLElement("menu")}}
-        要素。({{HTMLElement("menu")}} 要素の
-        <code>type</code> 属性を指定する場合は
-        <code>popup</code> にしなければなりません。属性がない場合は
-        {{HTMLElement("menu")}}
-        の親要素自体が<em>ポップアップメニュー</em>状態の
-        {{HTMLElement("menu")}} であることが必要です。)
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{DOMxRef("HTMLMenuItemElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 属性
 
@@ -119,13 +80,54 @@ div {
 
 {{EmbedLiveSample("Example", '100%', 80)}}
 
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+      </th>
+      <td>なし。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>なし。これは{{Glossary("void element", "空要素")}}です。</td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>開始タグが必須で、終了タグはあってはいけません。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <em>ポップアップメニュー</em>状態である {{HTMLElement("menu")}}
+        要素。（{{HTMLElement("menu")}} 要素の
+        <code>type</code> 属性を指定する場合は
+        <code>popup</code> にしなければなりません。属性がない場合は
+        {{HTMLElement("menu")}}
+        の親要素自体が<em>ポップアップメニュー</em>状態の
+        {{HTMLElement("menu")}} であることが必要です。）
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{DOMxRef("HTMLMenuItemElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
 ## 仕様書
 
 現行のどの仕様書にも含まれていません。
 
 ## ブラウザーの互換性
 
-{{Compat}}
+どのブラウザーでも対応していません。この要素を唯一対応していたブラウザー Firefox は、85 で対応を削除しました。
 
 ## 関連情報
 

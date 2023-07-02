@@ -23,4 +23,4 @@ var result = selectElt.checkValidity();
 
 ## 関連情報
 
-- [フォームの検証](/ja/docs/Web/Guide/HTML/Constraint_validation)
+- [フォームの検証](/ja/docs/Web/HTML/Constraint_validation)

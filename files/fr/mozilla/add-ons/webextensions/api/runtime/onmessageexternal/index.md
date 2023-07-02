@@ -1,16 +1,6 @@
 ---
 title: runtime.onMessageExternal
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onMessageExternal
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
 ---
 

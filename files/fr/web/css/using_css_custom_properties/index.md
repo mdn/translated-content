@@ -43,7 +43,7 @@ Les propriétés personnalisées ont actuellement deux formes :
 - les variables, qui sont des associations entre un identifiant et une valeur utilisables à la place de n'importe quelle valeur normale, en utilisant la notation fonctionnelle `var()`&nbsp;: `var(--example-variable)` retourne la valeur de `--example-variable`.
 - les propriétés personnalisées, qui sont des propriétés spéciales notées `--*` où `*` représente le nom de la variable. Elles sont utilisées pour définir la valeur d'une variable donnée : `--example-variable: 20px;` est une déclaration en CSS, utilisant la propriété personnalisée `--*` pour initialiser la valeur de la variable CSS `--example-variable` à `20px`.
 
-> **Note :** Le préfixe de propriété personnalisée était noté `var-` dans les précédentes spécifications, mais a ensuite été changé pour `--`. Firefox 31 et supérieurs respectent cette nouvelle notation. ({{bug(985838)}})
+> **Note :** Le préfixe de propriété personnalisée était noté `var-` dans les précédentes spécifications, mais a ensuite été changé pour `--`. Firefox 31 et supérieurs respectent cette nouvelle notation. ([bug Firefox 985838](https://bugzil.la/985838))
 
 Les propriétés personnalisées sont similaires aux propriétés ordinaires. Elles sont sujettes à la cascade et héritent leur valeur de leur parent si elles ne sont pas redéfinies.
 
@@ -280,7 +280,7 @@ element.style.setProperty("--ma-variable", varJS + 4);
 
 {{Compat}}
 
-> **Note :** Dans les versions antérieures de la spécification, le préfixe indiquant les propriétés personnalisées était `var-`. Ce préfixe a ensuite été modifié en `--`. et Firefox 31 et les versions ultérieures respectent cette spécification (cf. {{bug(985838)}})
+> **Note :** Dans les versions antérieures de la spécification, le préfixe indiquant les propriétés personnalisées était `var-`. Ce préfixe a ensuite été modifié en `--`. et Firefox 31 et les versions ultérieures respectent cette spécification (cf. [bug Firefox 985838](https://bugzil.la/985838))
 
 ## Voir aussi
 
