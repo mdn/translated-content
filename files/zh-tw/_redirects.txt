@@ -465,13 +465,14 @@
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome	https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/作者	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author
+/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/側邊欄	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/工具列按鈕	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
+/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/工具列按鈕	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/快捷選單項	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/開發工具面板	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/側邊欄	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-/zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/工具列按鈕	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
+/zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/工具列按鈕	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/快捷選單項	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/開發工具面板	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶體驗最佳實踐	https://extensionworkshop.com/documentation/develop/user-experience-best-practices/
