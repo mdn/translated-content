@@ -1586,16 +1586,16 @@
     "modified": "2019-04-23T05:01:36.148Z",
     "contributors": ["jackblackevo", "0711kps"]
   },
-  "Mozilla/Add-ons/WebExtensions/user_interface/Browser_action": {
-    "modified": "2019-04-23T05:01:57.057Z",
-    "contributors": ["jackblackevo", "0711kps"]
-  },
   "Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items": {
     "modified": "2019-04-23T05:04:17.208Z",
     "contributors": ["jackblackevo", "0711kps"]
   },
   "Mozilla/Add-ons/WebExtensions/user_interface/Sidebars": {
     "modified": "2019-04-23T05:02:36.826Z",
+    "contributors": ["jackblackevo", "0711kps"]
+  },
+  "Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button": {
+    "modified": "2019-04-23T05:01:57.057Z",
     "contributors": ["jackblackevo", "0711kps"]
   },
   "Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels": {
