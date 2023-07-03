@@ -28,7 +28,7 @@ slug: Web/API/File_System_Access_API
 
 ### 域私有文件系统
 
-[域私有文件系统](https://fs.spec.whatwg.org/#origin-private-file-system)（下文简称“OPFS”）页面所属的域专用的存储端点，它提供对一种经过高度性能优化的特殊文件的访问能力选择，例如，对文件内容的原地、专有写入访问。
+[域私有文件系统](https://fs.spec.whatwg.org/#origin-private-file-system)（下文简称“OPFS”）是页面所属的域专用的存储端点，它提供对一种经过高度性能优化的特殊文件的访问能力的选择，例如，对文件内容的原地、独占写入访问。
 *[OPFS]:域私有文件系统
 
 在 OPFS 中存储数据近似于浏览器提供的其他页面域私有存储机制（如 {{domxref("IndexedDB API", "IndexedDB API", "", "nocode")}}）。其意味着，在 OPFS 中的文件相较于用选择器选择的文件有以下不同点：
@@ -40,8 +40,8 @@ slug: Web/API/File_System_Access_API
 在 OPFS 内可以通过以下三步来操作文件：
 
 1. {{domxref("StorageManager.getDirectory()")}} 方法，可以在 worker 线程或主线程中调用 [`navigator.storage.getDirectory()`](/zh-CN/docs/Web/API/Navigator/storage)，返回一个允许你访问某个目录以及其内容的 {{domxref("FileSystemDirectoryHandle")}} 对象——代表 OPFS 的根目录。
-2. 调用 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 方法获得一个 {{domxref('FileSystemFileHandle')}} 对象，其表示目录中指定文件的句柄。 
-3. 调用文件句柄的 {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}} 方法，获得一个 {{domxref('FileSystemSyncAccessHandle')}} 对象，用于读写文件。这是一种用于高性能<span style="font-style:italic">同步</span>读写操作的句柄（其他类型的句柄是异步的）。此类的同步特性带来了性能优势，可用于异步操作开销较大的情境（例如 [WebAssembly](/zh-CN/docs/WebAssembly)）。注意：此方法为 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 专用。
+2. 调用 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 方法获得一个 {{domxref('FileSystemFileHandle')}} 对象，其表示目录中指定文件的句柄。
+3. 调用文件句柄的 {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}} 方法，获得一个 {{domxref('FileSystemSyncAccessHandle')}} 对象，用于读写文件。这是一种用于高性能 _同步_ 读写操作的句柄（其他类型的句柄是异步的）。此类的同步特性带来了性能优势，可用于异步操作开销较大的情境（例如 [WebAssembly](/zh-CN/docs/WebAssembly)）。注意：此方法为 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 专用。
 
 虽然浏览器一般通过将 OPFS 的内容持久化到磁盘的某个位置来实现这一特性，但并非意在让用户可以轻易访问。虽然浏览器会让人产生文件是真实存在的感觉，但它们可能被存储在数据库或者其他数据结构中，你是不能指望能一一对应地找到那些被创建出来的文件的。
 
@@ -52,18 +52,18 @@ slug: Web/API/File_System_Access_API
 此 API 也提供“保存”功能：
 
 - 对于异步句柄，使用 {{domxref('FileSystemWritableFileStream')}} 接口。当你想要保存的数据是 {{domxref('Blob')}}、{{jsxref("String")}} 对象、字符串或 {{jsxref('ArrayBuffer', 'buffer')}} 形式的时候，你可以打开一个写入流把数据保存到文件。可以是已经存在的文件，也可以是新文件。
-- 对于同步的 {{domxref('FileSystemSyncAccessHandle')}}，使用 {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} 方法写入更改。你还可以选择调用 {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}} 以使更改在指定的时间点写入磁盘（或者你也可以让底层操作系统在其认为合适的时间点执行写入，这么做大多数情况应该都不会有问题）。
+- 对于同步的 {{domxref('FileSystemSyncAccessHandle')}}，使用 {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} 方法写入更改。你还可以选择调用 {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}} 以使更改在指定的时间点写入磁盘（或者你也可以让底层操作系统在其认为合适的时间点执行写入，这么做大多数情况下应该都不会有问题）。
 
 ## 接口
 
 - {{domxref("FileSystemHandle")}}
-  **`FileSystemHandle`** 接口的对象代表一个条目。多个句柄可以指向同一个条目。大多数情况你都不会直接用到 `FileSystemHandle`，而是会用到它的两个子接口 {{domxref('FileSystemFileHandle')}} 和 {{domxref('FileSystemDirectoryHandle')}}。
+  **`FileSystemHandle`** 接口的对象代表一个条目。多个句柄可以指代同一个条目。大多数情况你都不会直接用到 `FileSystemHandle`，而是会用到它的两个子接口 {{domxref('FileSystemFileHandle')}} 和 {{domxref('FileSystemDirectoryHandle')}}。
 - {{domxref("FileSystemFileHandle")}}
   提供一个文件系统条目的句柄。
 - {{domxref("FileSystemDirectoryHandle")}}
   提供一个文件系统目录的句柄。
 - {{domxref("FileSystemSyncAccessHandle")}}
-  提供一个文件系统条目的同步句柄，用于在磁盘上原地操作单个文件。其在文件读写上的同步特性可在异步操作开销较大的情境中使关键方法拥有更优秀的性能，例如 [WebAssembly](/en-US/docs/WebAssembly)。此类只能在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中操作[域私有文件系统](#origin_private_file_system)上的文件时访问。
+  提供一个文件系统条目的同步句柄，用于在磁盘上原地操作单个文件。其在文件读写上的同步特性可在异步操作开销较大的情境中使关键方法拥有更优秀的性能，例如 [WebAssembly](/zh-CN/docs/WebAssembly)。此类只能在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中操作[域私有文件系统](#origin_private_file_system)上的文件时访问。
 - {{domxref("FileSystemWritableFileStream")}}
   属于 {{domxref('WritableStream')}} 对象，附加了便于操作磁盘上单个文件的方法。
 
@@ -225,7 +225,7 @@ onmessage = async (e) => {
 };
 ```
 
-> **备注：** 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle")}} 的 {{domxref("FileSystemSyncAccessHandle.close()"、"close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()"、"getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被不合逻辑地指定为异步方法。此问题现已被[修正](https://github.com/whatwg/fs/issues/7)，但某些浏览器依然支持异步版本。
+> **备注：** 在规范早期版本中，{{domxref("FileSystemSyncAccessHandle")}} 的 {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}、{{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}、{{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}} 和 {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} 被不合逻辑地指定为异步方法。此问题现已被[修正](https://github.com/whatwg/fs/issues/7)，但某些浏览器依然支持异步版本。
 
 ## 规范
 
