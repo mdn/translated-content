@@ -2,7 +2,6 @@
 title: Exemple 2
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_2
 translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_2
-  Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Exemple_2
 ---
 
 Ceci est le deuxième exemple expliquant comment [construire un formulaire personnalisé](/fr/docs/HTML/Forms/How_to_build_custom_form_widgets).
