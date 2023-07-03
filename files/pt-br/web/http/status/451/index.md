@@ -15,7 +15,7 @@ O código de erro HTTP para o cliente **`451 Unavailable For Legal Reasons`** in
 
 ## Exemplo
 
-Este exemplo de resposta foi obtida da RFC do IETF (veja abaixo) e contém uma referência à {{interwiki("wikipedia", "Monty_Python's_Life_of_Brian", "Monty Python's Life of Brian")}}.
+Este exemplo de resposta foi obtida da RFC do IETF (veja abaixo) e contém uma referência à [Monty Python's Life of Brian](https://pt.wikipedia.org/wiki/A_Vida_de_Brian).
 
 **Nota:** o cabeçalho {{HTTPHeader("Link")}} também pode conter uma relação `rel="blocked-by"` identificando a entidade que solicitou o bloqueio, e não qualquer outra entidade.
 
