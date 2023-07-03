@@ -10,7 +10,7 @@ slug: Learn/CSS/Styling_text/Styling_lists
 <table>
   <tbody>
     <tr>
-      <th scope="row">前置知识：</th>
+      <th scope="row">前提：</th>
       <td>
         基本的计算机知识，HTML 基础（已学习
         <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
@@ -230,9 +230,9 @@ ul li {
 
 ![一个无序列表，其项目符号设置为了小星星的图片](list_formatting.png)
 
-### list-style 速记
+### list-style 简写
 
-上述提到的三种属性可以用一个单独的速记属性 {{cssxref("list-style")}} 来设置。例如，以下 CSS：
+上述提到的三种属性可以用一个单独的简写属性 {{cssxref("list-style")}} 来设置。例如，以下 CSS：
 
 ```css
 ul {
@@ -277,7 +277,7 @@ ul {
 
 ### reversed
 
-[`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed) 属性将启动列表倒计数。以下示例：
+[`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed) 属性将使列表反向计数。以下示例：
 
 ```html
 <ol start="4" reversed>
@@ -317,7 +317,7 @@ ul {
 
 > **备注：** 即使使用非数字的 {{cssxref("list-style-type")}}，仍需要在 `value` 属性中使用等效的数值。
 
-## 主动学习：为嵌套式列表添加样式
+## 动手练习：为嵌套式列表添加样式
 
 在该学习环节，我们希望你使用如上所学尝试为一个嵌套式列表添加样式。我们已经提供了 HTML 代码，在此之上请完成如下任务：
 
