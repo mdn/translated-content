@@ -1,16 +1,6 @@
 ---
 title: cookies.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/remove
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - remove
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/remove
 ---
 

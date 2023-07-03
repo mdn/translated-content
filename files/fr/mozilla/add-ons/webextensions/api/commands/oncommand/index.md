@@ -1,16 +1,6 @@
 ---
 title: onCommand
 slug: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - commands
-  - onCommand
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
 ---
 

@@ -1,13 +1,7 @@
 ---
 title: Certifié
 slug: Glossary/Certified
-tags:
-  - Applications
-  - Firefox OS
-  - Glossaire
-  - Sécurité
 translation_of: Glossary/Certified
-original_slug: Glossaire/Certifié
 ---
 
 **Certifié** signifie qu'un contenu, une application ou une transmission de données a passé avec succès une évaluation faite par des professionnels ayant une expertise dans le domaine concerné, indiquant ainsi l'exhaustivité, la sécurité et la fiabilité.

@@ -1,14 +1,6 @@
 ---
 title: management.getSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getSelf
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - WebExtensions
-  - getSelf
-  - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/getSelf
 ---
 

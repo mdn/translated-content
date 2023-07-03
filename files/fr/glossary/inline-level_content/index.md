@@ -1,17 +1,7 @@
 ---
 title: Éléments en ligne
 slug: Glossary/Inline-level_content
-tags:
-  - Beginner
-  - Débutant
-  - Elements
-  - Guide
-  - HTML
-  - HTML Elements
-  - Layout
-  - Reference
 translation_of: Web/HTML/Inline_elements
-original_slug: Web/HTML/Inline_elements
 ---
 
 Les éléments HTML (**Hypertext Markup Language**) étaient historiquement catégorisés comme des éléments de type « bloc » (_block_ en anglais) ou de type « en ligne » (_inline_ en anglais). Comme il s'agit d'une caractéristique de présentation, elle est aujourd'hui spécifiée par CSS dans le module de spécification [_Flow Layout_](/fr/docs/Web/CSS/CSS_Flow_Layout) qui définit l'organisation visuelle par défaut des éléments (le « flux » normal). Les éléments en lignes n'occupent que l'espace entre leurs balises et s'insèrent dans le flux du contenu plutôt que de créer un nouveau « bloc » visuel. Dans cet article, nous verrons en détails ces éléments en ligne et leurs différences par rapport aux [éléments de bloc](/fr/docs/Web/HTML/Block-level_elements).

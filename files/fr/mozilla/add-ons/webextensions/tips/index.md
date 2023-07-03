@@ -1,12 +1,6 @@
 ---
 title: Trucs et astuces
 slug: Mozilla/Add-ons/WebExtensions/Tips
-tags:
-  - Astuces
-  - ECMAScript
-  - Trucs
-  - Trucs et Astuces
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Tips
 ---
 

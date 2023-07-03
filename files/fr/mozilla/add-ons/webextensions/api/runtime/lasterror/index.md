@@ -1,16 +1,6 @@
 ---
 title: runtime.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - lastError
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
 ---
 

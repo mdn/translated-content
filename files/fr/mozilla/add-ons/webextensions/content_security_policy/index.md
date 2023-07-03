@@ -1,8 +1,6 @@
 ---
 title: Content Security Policy
 slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
-tags:
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 ---
 

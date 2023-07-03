@@ -1,16 +1,6 @@
 ---
 title: menus.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
-  - onClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 ---
 

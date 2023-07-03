@@ -1,12 +1,7 @@
 ---
 title: ECMA
 slug: Glossary/ECMA
-tags:
-  - Glossaire
-  - JavaScript
-  - Mécanismes web
 translation_of: Glossary/ECMA
-original_slug: Glossaire/ECMA
 ---
 
 **Ecma International** (_European Computer Manufacturers Association_) est une organisation à but non lucratif qui développe des standards sur le matériel informatique, les communications, et les langages de programmation.

@@ -1,10 +1,7 @@
 ---
 title: Mise à jour des extensions pour Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
-tags:
-  - Firefox 3
 translation_of: Mozilla/Firefox/Releases/3/Updating_extensions
-original_slug: Mise_à_jour_des_extensions_pour_Firefox_3
 ---
 
 1. Notes de versions pour développeurs

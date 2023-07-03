@@ -1,16 +1,6 @@
 ---
 title: notifications.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/clear
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - clear
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/clear
 ---
 

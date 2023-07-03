@@ -1,15 +1,6 @@
 ---
 title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
-tags:
-  - API
-  - Add-os
-  - Extensions
-  - Interface
-  - Non-standard
-  - Référence(2)
-  - WebExtensions
-  - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 ---
 

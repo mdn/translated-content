@@ -1,10 +1,6 @@
 ---
 title: Techniques pour le développement de jeux vidéo
 slug: Games/Techniques
-tags:
-  - Guide
-  - JavaScript
-  - Jeux
 translation_of: Games/Techniques
 ---
 

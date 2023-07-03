@@ -1237,6 +1237,10 @@
     "modified": "2019-03-18T21:26:23.322Z",
     "contributors": ["zsxeee"]
   },
+  "Glossary/Prefetch": {
+    "modified": "2019-10-09T13:08:42.395Z",
+    "contributors": ["Yayure", "vivaxy", "iamyy", "xgqfrms-GitHub"]
+  },
   "Glossary/Preflight_request": {
     "modified": "2019-03-18T21:47:05.943Z",
     "contributors": ["daixinye"]
@@ -21536,22 +21540,6 @@
       "Noly1990"
     ]
   },
-  "Web/Guide/AJAX/Getting_Started": {
-    "modified": "2020-05-09T09:42:30.390Z",
-    "contributors": [
-      "Mookiepiece",
-      "JiLiangLai",
-      "HCSkatana",
-      "realchoi",
-      "Mew_MDN",
-      "SalmonDaze",
-      "zazaliu",
-      "chrisdavidmills",
-      "shifengchen",
-      "tangc1",
-      "RogerShen"
-    ]
-  },
   "Web/Guide/API": {
     "modified": "2019-03-23T23:17:06.067Z",
     "contributors": ["RainSlide", "Sheppy"]
@@ -24110,10 +24098,6 @@
       "oopsguy",
       "xgqfrms-GitHub"
     ]
-  },
-  "Web/HTTP/Link_prefetching_FAQ": {
-    "modified": "2019-10-09T13:08:42.395Z",
-    "contributors": ["Yayure", "vivaxy", "iamyy", "xgqfrms-GitHub"]
   },
   "Web/HTTP/Messages": {
     "modified": "2020-04-19T05:44:17.609Z",
@@ -32180,9 +32164,15 @@
     "modified": "2019-11-13T02:27:54.714Z",
     "contributors": ["JC-Ge"]
   },
-  "Web/Progressive_web_apps/Responsive/responsive_design_building_blocks": {
-    "modified": "2020-11-17T04:04:41.165Z",
-    "contributors": ["DingGuangbo"]
+  "Web/Progressive_web_apps/Tutorials/js13kGames": {
+    "modified": "2019-08-21T09:58:46.102Z",
+    "contributors": [
+      "jackupdown",
+      "zjffun",
+      "chrisdavidmills",
+      "eightHundreds",
+      "yijie_sun"
+    ]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
     "modified": "2020-05-31T18:38:01.454Z",
@@ -32208,16 +32198,6 @@
       "Miahui",
       "HDUCC",
       "deping_chen"
-    ]
-  },
-  "Web/Progressive_web_apps/Tutorials/js13kGames/Introduction": {
-    "modified": "2019-08-21T09:58:46.102Z",
-    "contributors": [
-      "jackupdown",
-      "zjffun",
-      "chrisdavidmills",
-      "eightHundreds",
-      "yijie_sun"
     ]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames/Loading": {

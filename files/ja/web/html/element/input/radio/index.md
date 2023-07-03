@@ -2,7 +2,7 @@
 title: <input type="radio">
 slug: Web/HTML/Element/input/radio
 l10n:
-  sourceCommit: a03b4b0e9aaac7409ff1ce974ab1bf2f40c81e03
+  sourceCommit: fa8a44b8bff24a4032181c4fd155c459c0dc9161
 ---
 
 {{HTMLSidebar}}
@@ -16,43 +16,6 @@ l10n:
 ![古い時代のラジオボタンの外観を示します。](old-radio.jpg)
 
 > **メモ:** [チェックボックス](/ja/docs/Web/HTML/Element/input/checkbox)はラジオボタンに似ていますが、重要な違いがあります。ラジオボタンは一組の中で一つの値を選択するように設計されているのに対し、チェックボックスは個別に値をオンまたはオフに設定できます。複数のコントロールが存在するところでは、ラジオボタンは全体の中で一つを選択できますが、チェックボックスは複数の値を選択することができます。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">値</a></strong></td>
-      <td>
-        ラジオボタンの値を表す文字列です。
-      </td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>{{domxref("HTMLElement/change_event", "change")}} および {{domxref("HTMLElement/input_event", "input")}}</td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        <code><a href="#attr-checked">checked</a></code
-        >,
-        <code><a href="#attr-value">value</a></code>,
-        <code><a href="/ja/docs/Web/HTML/Attributes/required">required</a></code>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td><code>checked</code> および <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## 値
 
@@ -308,13 +271,60 @@ button:active {
 }
 ```
 
-ここで最も注目すべきは、{{cssxref("appearance")}}プロパティ（一部のブラウザーで対応しているために必要な接頭辞付き）を使用している点です。既定で、ラジオボタン（と [チェックボックス](/ja/docs/Web/HTML/Element/input/checkbox)）は、それらのコントロールのためのオペレーティングシステムのネイティブスタイルでスタイル設定されています。 `appearance: none` を指定することで、ネイティブのスタイル設定を完全に削除し、自分自身でスタイルを作成することができます。ここでは、 {{cssxref("border")}} と {{cssxref("border-radius")}} と {{cssxref("transition")}} を使用して、ラジオ選択のアニメーションがあるように作成しています。また、 {{cssxref(":checked")}} 擬似クラスが、選択時のラジオボタンの外観のスタイルを指定するために使用されていることに注目してください。
+ここで最も注目すべきは、{{cssxref("appearance")}} プロパティ（一部のブラウザーで対応しているために必要な接頭辞付き）を使用している点です。既定で、ラジオボタン（と[チェックボックス](/ja/docs/Web/HTML/Element/input/checkbox)）は、それらのコントロールのためのオペレーティングシステムのネイティブスタイルでスタイル設定されています。 `appearance: none` を指定することで、ネイティブのスタイル設定を完全に削除し、自分自身でスタイルを作成することができます。ここでは、 {{cssxref("border")}} と {{cssxref("border-radius")}} と {{cssxref("transition")}} を使用して、ラジオ選択のアニメーションがあるように作成しています。また、 {{cssxref(":checked")}} 擬似クラスが、選択時のラジオボタンの外観のスタイルを指定するために使用されていることに注目してください。
 
 > **メモ:** もし {{cssxref("appearance")}} プロパティを使用したい場合は、とても慎重にテストする必要があります。このプロパティはほとんどの現代のブラウザーで対応していますが、その実装は大きく異なっています。古いブラウザーでは、キーワード `none` でさえ異なる形で同じ効果を持たず、まったく対応していないブラウザーもあります。最新のブラウザーでは、そのような違いは小さくなっています。
 
 {{EmbedLiveSample('Styling_radio_inputs', 600, 120)}}
 
 ラジオボタンをクリックすると、 2 つのボタンの状態が変わるときに、きれいで滑らかなフェードアウト/イン効果があることに注意してください。さらに、凡例と送信ボタンのスタイルと色は、強いコントラストを保有するようにカスタマイズされています。これは、実際のウェブアプリケーションで使用したい外観ではないかもしれませんが、その可能性を示していることは間違いありません。
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">値</a></strong></td>
+      <td>
+        ラジオボタンの値を表す文字列です。
+      </td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>{{domxref("HTMLElement/change_event", "change")}} および {{domxref("HTMLElement/input_event", "input")}}</td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <code><a href="#checked">checked</a></code
+        >, <code><a href="#value">value</a></code>,
+        <code
+          ><a href="/ja/docs/Web/HTML/Attributes/required">required</a></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>checked</code> および <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}}
+      </td>
+    </tr>
+     <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 
