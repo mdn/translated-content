@@ -29,7 +29,6 @@ slug: Web/API/File_System_Access_API
 ### 域私有文件系统
 
 [域私有文件系统](https://fs.spec.whatwg.org/#origin-private-file-system)（下文简称“OPFS”）是页面所属的域专用的存储端点，它提供对一种经过高度性能优化的特殊文件的访问能力的选择，例如，对文件内容的原地、独占写入访问。
-*[OPFS]:域私有文件系统
 
 在 OPFS 中存储数据近似于浏览器提供的其他页面域私有存储机制（如 {{domxref("IndexedDB API", "IndexedDB API", "", "nocode")}}）。其意味着，在 OPFS 中的文件相较于用选择器选择的文件有以下不同点：
 
