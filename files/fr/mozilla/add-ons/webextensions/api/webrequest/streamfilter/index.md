@@ -1,17 +1,6 @@
 ---
 title: webRequest.StreamFilter
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - NeedsTranslation
-  - Reference
-  - StreamFilter
-  - TopicStub
-  - Type
-  - WebExtensions
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
 ---
 

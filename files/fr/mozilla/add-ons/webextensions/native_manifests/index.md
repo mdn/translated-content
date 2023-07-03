@@ -1,11 +1,7 @@
 ---
 title: manifests Natif
 slug: Mozilla/Add-ons/WebExtensions/Native_manifests
-tags:
-  - Extensions
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Native_manifests
-original_slug: Mozilla/Add-ons/WebExtensions/manifests_native
 ---
 
 {{AddonSidebar}}

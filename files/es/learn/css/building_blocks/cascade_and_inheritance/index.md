@@ -167,7 +167,7 @@ Ahora vamos a echar un vistazo a cómo el navegador calcula la especificidad. Ya
 
 La cantidad de especificidad de un selector se mide usando cuatro valores diferentes (o componentes), que pueden describirse como millares, centenas, decenas y unidades (cuatro dígitos individuales dispuestos en cuatro columnas):
 
-1. **Millares**: Se suma un punto en esta columna si la declaración está en un atributo de {{htmlattrxref ("style")}} o, como suelen denominarse, estilos en línea. Tales declaraciones no tienen selectores, por lo que su especificidad siempre es 1000.
+1. **Millares**: Se suma un punto en esta columna si la declaración está en un atributo de [`style`](/es/docs/Web/HTML/Global_attributes#style) o, como suelen denominarse, estilos en línea. Tales declaraciones no tienen selectores, por lo que su especificidad siempre es 1000.
 2. **Centenas**: Se suma un punto en esta columna por cada selector con ID particular que esté contenido en el selector general.
 3. **Decenas**: Se suma un punto en esta columna por cada selector de clase, de atributo o pseudoclase que estén contenidos en el selector general.
 4. **Unidades**: Se suma un punto en esta columna por cada selector o pseudoelemento que esté contenido en el selector general.
@@ -182,7 +182,7 @@ La tabla siguiente muestra algunos ejemplos concretos para ayudarte a entenderlo
 | `h1 + p::first-letter`                                                                     | 0         | 0         | 0        | 3         | 0003                |
 | `li > a[href*="en-US"] > .inline-warning`                                                  | 0         | 0         | 2        | 2         | 0022                |
 | `#identifier`                                                                              | 0         | 1         | 0        | 0         | 0100                |
-| Sin selector, con una regla en el atributo de un elemento {{htmlattrxref("style")}} | 1         | 0         | 0        | 0         | 1000                |
+| Sin selector, con una regla en el atributo de un elemento [`style`](/es/docs/Web/HTML/Global_attributes#style) | 1         | 0         | 0        | 0         | 1000                |
 
 Antes de continuar, vamos a ver un ejemplo:
 
@@ -210,7 +210,7 @@ Vamos a observarlo con detenimiento para ver qué sucede. Elimina algunas de las
 
 1. Verás que se han aplicado los valores de {{cssxref("color")}} y {{cssxref("padding")}} de la tercera regla pero no el de {{cssxref("background-color")}}. ¿Por qué? Deberían haberse aplicado para los tres porque las reglas que se encuentran más adelante en el orden en el código fuente prevalecen sobre las reglas anteriores.
 2. Sin embargo, ganan las reglas que están antes porque los selectores de clase tienen mayor especificidad que selectores de elemento.
-3. En ambos bloques de código hay una clase {{htmlattrxref("class")}} con el valor `better`, pero en el segundo bloque de código hay un {{htmlattrxref("id")}} con el valor `winning`. Puesto que los identificadores tienen una especificidad _incluso mayor_ que las clases (solo puede haber un elemento con un determinado ID en cada página, mientras que puede haber muchos elementos de la misma clase: los selectores ID son _muy específicos_ con lo que delimitan), el primer bloque de código tendría un fondo de color gris y ningún borde, según lo que especifica la clase, mientras que al segundo bloque de código se aplicarían tanto el color de fondo rojo como el borde negro de 1 píxel.
+3. En ambos bloques de código hay una clase [`class`](/es/docs/Web/HTML/Global_attributes#class) con el valor `better`, pero en el segundo bloque de código hay un [`id`](/es/docs/Web/HTML/Global_attributes#id) con el valor `winning`. Puesto que los identificadores tienen una especificidad _incluso mayor_ que las clases (solo puede haber un elemento con un determinado ID en cada página, mientras que puede haber muchos elementos de la misma clase: los selectores ID son _muy específicos_ con lo que delimitan), el primer bloque de código tendría un fondo de color gris y ningún borde, según lo que especifica la clase, mientras que al segundo bloque de código se aplicarían tanto el color de fondo rojo como el borde negro de 1 píxel.
 4. El segundo elemento, en cambio, se muestra con el fondo de color rojo pero sin borde. ¿Por qué? Porque la declaración `!important` que hay en la segunda regla, después de `border: none` significa que esta declaración tendrá más valor que la regla anterior, aunque el ID de esta tenga mayor especificidad.
 
 > **Nota:** La única manera de anular la declaración `!important` sería incluir otra declaración `!important` en una declaración con la _misma especificidad_ que aparezca más adelante en el orden del código fuente, o con una especificidad superior.

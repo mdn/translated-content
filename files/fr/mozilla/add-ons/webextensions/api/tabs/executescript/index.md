@@ -1,17 +1,6 @@
 ---
 title: tabs.executeScript()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - executeScript
-  - onglets
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 ---
 

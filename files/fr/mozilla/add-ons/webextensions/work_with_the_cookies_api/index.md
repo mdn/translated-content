@@ -1,16 +1,7 @@
 ---
 title: Travailler avec l'API Cookies
 slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API
-tags:
-  - Add-ons
-  - Comment
-  - Cookies
-  - Débutant
-  - Extensions
-  - How-to
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API
-original_slug: Mozilla/Add-ons/WebExtensions/travailler_avec_l_API_cookies
 ---
 
 {{AddonSidebar}}

@@ -1,11 +1,7 @@
 ---
 title: Firefox 15 pour les développeurs
 slug: Mozilla/Firefox/Releases/15
-tags:
-  - Firefox
-  - Firefox 15
 translation_of: Mozilla/Firefox/Releases/15
-original_slug: Mozilla/Firefox/Versions/15
 ---
 
 {{FirefoxSidebar}}

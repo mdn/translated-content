@@ -1,50 +1,15 @@
 ---
-title: '<optgroup>: 選択肢グループ要素'
+title: "<optgroup>: 選択肢グループ要素"
 slug: Web/HTML/Element/optgroup
+l10n:
+  sourceCommit: c302e71520c9df718363d8ce81d93568ff84be14
 ---
 
 {{HTMLSidebar}}
 
-**`<optgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("select")}} 要素内の選択肢 ({{HTMLElement("option")}}) のグループを作成します。
+**`<optgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("select")}} 要素内の選択肢のグループを作成します。
 
 {{EmbedInteractiveExample("pages/tabbed/optgroup.html", "tabbed-standard")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
-      </th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>0 個以上の {{HTMLElement("option")}} 要素</td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>
-        開始タグは必須。要素の直後に他の <code>&#x3C;optgroup></code> 要素が接続する場合、または親要素が他の内容を持たない場合、終了タグが省略可能となる。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>{{HTMLElement("select")}} 要素</td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code></td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>許可されている <code>role</code> なし</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLOptGroupElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 > **メモ:** optgroup 要素を入れ子にすることはできません。
 
@@ -80,6 +45,45 @@ slug: Web/HTML/Element/optgroup
 
 {{EmbedLiveSample("Examples")}}
 
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+      </th>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>0 個以上の {{HTMLElement("option")}} 要素</td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>
+        開始タグは必須。要素の直後に他の <code>&#x3C;optgroup></code> 要素が接続する場合、または親要素が他の内容を持たない場合、終了タグが省略可能となる。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>{{HTMLElement("select")}} 要素</td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>許可されている <code>role</code> なし</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLOptGroupElement")}}</td>
+    </tr>
+  </tbody>
+</table>
+
 ## 仕様書
 
 {{Specifications}}
@@ -90,4 +94,4 @@ slug: Web/HTML/Element/optgroup
 
 ## 関連情報
 
-- 他のフォーム関連要素: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("meter")}}
+- 他のフォーム関連要素: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("option")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("meter")}}

@@ -3,6 +3,8 @@ title: 网格轴
 slug: Glossary/Grid_Axis
 ---
 
+{{GlossarySidebar}}
+
 CSS 网格布局是一种二维布局方法，能够按*行*和*列*对内容布局。因此在任何网格中都有两个轴——*块向或列轴*（block or column axis），及*行向或行轴*（inline or row axis）。
 
 沿着这些轴可以使用[盒对齐规范](/zh-CN/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)中定义的属性对元素按块向轴或行向轴对齐。

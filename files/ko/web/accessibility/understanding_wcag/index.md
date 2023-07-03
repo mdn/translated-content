@@ -1,47 +1,49 @@
 ---
-title: Understanding the Web Content Accessibility Guidelines
+title: 웹 컨텐츠 접근성 지침 이해하기
 slug: Web/Accessibility/Understanding_WCAG
+l10n:
+  sourceCommit: b0870830e4c02596ca6c501f8f8b468a917eafc2
 ---
 
-This set of articles provides quick explanations to help you understand the steps that need to be taken to conform to the recommendations outlined in the W3C Web Content Accessibility Guidelines 2.0 or 2.1 (or just WCAG, for the purposes of this writing).
+이 문서에서는 W3C 웹 컨텐츠 접근성 지침 2.0 또는 2.1(이 글에서는 WCAG)에 설명된 권장 사항들을 준수하기 위한 단계들을 이해하는 데에 도움이 되는 간략한 설명을 제공합니다.
 
-The WCAG 2.0 and 2.1 provide a detailed set of guidelines for making web content more accessible to people with a wide variety of disabilities. It is comprehensive but incredibly detailed, and quite difficult to gain a rapid understanding of. For this reason, we have summarised the practical steps you need to take to satisfy the different recommendations, with further links to more details where required.
+WCAG 2.0과 2.1은 다양한 장애를 가진 사람들이 웹 컨텐츠에 더 쉽게 접근할 수 있게 하는 자세한 지침을 제공합니다. 포괄적이지만 매우 구체적이며, 빠르게 이해하기엔 다소 어려울 수 있습니다. 이런 복잡하고 어려운 권장 사항들을 충족하기 위한 단계들을 요약해 놓았으며, 상세 정보가 필요한 경우 링크를 제공합니다.
 
-## The four principles
+## 4대 원칙
 
-WCAG is broadly broken down into four principles — major things that web content **must be** to be considered accessible (see [Understanding the Four Principles of Accessibility](https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html#introduction-fourprincs-head) for the WCAG definitions).
+WCAG는 크게 네 가지 원칙으로 분류할 수 있습니다. 이는 웹 컨텐츠의 접근성을 위해 **반드시** 고려해야 하는 사항들입니다 (WCAG의 정의는 [접근성 4대 원칙의 이해](https://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html#introduction-fourprincs-head) 참조).
 
-Each of the links below will take you to pages that further expand on these areas, giving you practical advice on how to write your web content so it conforms to the success criteria outlined in each of the WCAG 2.0 and 2.1 guidelines that further sub-divides each principle.
+아래의 링크들을 클릭하면 해당 영역에 대해 더 자세히 설명하는 페이지로 이동하며, 각 원칙들을 더욱 세분화 한 WCAG 2.0과 2.1의 지침을 준수할 수 있는 실용적인 조언들을 통해 웹 컨텐츠를 작성할 수 있도록 합니다.
 
-- [Perceivable:](/ko/docs/user:chrisdavidmills/Understanding_WCAG/Perceivable) Users must be able to perceive it in some way, using one or more of their senses.
-- [Operable](/ko/docs/user:chrisdavidmills/Understanding_WCAG/Operable): Users must be able to control UI elements (e.g. buttons must be clickable in some way — mouse, keyboard, voice command, etc.).
-- [Understandable](/ko/docs/user:chrisdavidmills/Understanding_WCAG/Understandable): The content must be understandable to its users.
-- [Robust](/ko/docs/user:chrisdavidmills/Understanding_WCAG/Robust): The content must be developed using well-adopted web standards that will work across different browsers, now and in the future.
+- [인식의 용이성:](/ko/docs/user:chrisdavidmills/Understanding_WCAG/Perceivable) 사용자가 하나 또는 다수의 감각을 사용해 어떤 방식으로든 인지할 수 있어야 합니다.
+- [운용의 용이성](/ko/docs/user:chrisdavidmills/Understanding_WCAG/Operable): 사용자가 UI 요소들을 컨트롤 할 수 있어야 합니다(예를 들어, 버튼은 마우스, 키보드, 음성 명령 등등의 어떠한 방식을 통해서라도 클릭이 가능해야 합니다).
+- [이해의 용이성](/ko/docs/user:chrisdavidmills/Understanding_WCAG/Understandable): 컨텐츠를 사용자가 이해할 수 있어야 합니다.
+- [견고성](/ko/docs/user:chrisdavidmills/Understanding_WCAG/Robust): 컨텐츠는 각기 다른 브라우저에서, 현재와 미래에 모두 동작할 수 있도록 웹 표준을 준수하여 개발되어야 합니다.
 
-## Should I use WCAG 2.0 or 2.1?
+## WCAG 2.0과 2.1 중 어떤 것을 사용해야 하나요?
 
-WCAG 2.1 is the most recent and relevant accessibility standard. Use WCAG 2.1 to help more people with disabilities and reduce the future legal risk for web site owners. Target WCAG 2.0 first when allocating resources. Then step up to WCAG 2.1.
+WCAG 2.1 은 가장 최신화된 접근성 표준입니다. WCAG 2.1 을 사용해 장애를 가진 사람들을 돕고, 웹 사이트 소유자에게 생길 법적인 위험을 줄일 수 있습니다. 자원을 할당할 때에는 WCAG 2.0 을 목표로 하고, 단계적으로 WCAG 2.1로 나아가세요.
 
-### What is WCAG 2.1?
+### WCAG 2.1이 뭔가요?
 
-WCAG 2.1 was published as an official recommendation on 05 June 2018. The European Union (EU) adopted WCAG 2.1 as the digital accessibility standard in September 2018. W3C published a press release [WCAG 2.1 Adoption in Europe](https://www.w3.org/blog/2018/09/wcag-2-1-adoption-in-europe/).
+WCAG 2.1 은 2018년 1월 5일에 공식 권장 사항으로 발표되었습니다. 유럽 연합 (EU) 는 디지털 접근성 표준으로 2018년 9월에 WCAG 2.1을 채택했습니다. W3C 는 [WCAG 2.1 Adoption in Europe](https://www.w3.org/blog/2018/09/wcag-2-1-adoption-in-europe/) 라는 게시글을 발행했습니다.
 
-WCAG 2.1 includes:
+WCAG 2.1 은 다음을 포함합니다.
 
-- all of WCAG 2.0 (verbatim, word-for-word)
-- 17 new Success Criteria at the A / AA / AAA levels primarily addressing user needs in these areas:
+- WCAG 2.0 의 모든 것 (문자 그대로)
+- A / AA / AAA 수준의 17가지 새로운 기준은 주로 아래 사용자들의 요구 사항에 대한 내용입니다.
 
-  - Mobile Accessibility
-  - Low Vision
-  - Cognitive
+  - 모바일 접근성
+  - 낮은 시력을 가진 사용자
+  - 인지 장애를 가진 사용자
 
-- Read more about WCAG 2.1:
+- WCAG 2.1 더 알아보기
 
-  - Deque: [WCAG 2.1: What is Next for Accessibility Guidelines](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)
-  - TPG: [Web Content Accessibility Guidelines (WCAG) 2.1](https://developer.paciellogroup.com/blog/2018/06/web-content-accessibility-guidelines-wcag-2-1/)
+  - Deque: [WCAG 2.1: 접근성 지침의 다음 단계](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)
+  - TPG: [웹 컨텐츠 접근성 지침 (WCAG) 2.1](https://developer.paciellogroup.com/blog/2018/06/web-content-accessibility-guidelines-wcag-2-1/)
 
-## Legal standing
+## 법적 유효성
 
-This guide is intended to provide practical information to help you build better, more accessible websites. However, we are not lawyers, and none of this constitutes legal advice. If you are worried about the legal implications of web accessibility, we'd recommend that you check the specific legislation governing accessibility for the web/public resources in your country or locale, and seek the advice of a qualified lawyer.
+이 가이드는 접근성이 높은 웹 사이트를 만들기 위한 실용적인 정보들을 제공하는 것을 목표합니다. 하지만 우리는 법조인이 아니기 때문에, 이 문서를 법률 자문으로 받아들여서는 안됩니다. 웹 접근성에 대한 법적 문제가 우려된다면, 해당 국가나 지역의 웹/공공 자원에 대한 접근성에 관련된 법률을 확인하고, 전문 변호사의 자문을 구하는 것이 좋습니다.
 
-[What is accessibility?](/ko/docs/Learn/Accessibility/What_is_accessibility) and particularity the [Accessibility guidelines and the law](/ko/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law) section provide more related information.
+[접근성이란 무엇인가?](/ko/docs/Learn/Accessibility/What_is_accessibility) 와, 특히 [접근성 지침과 관련 법률](/ko/docs/Learn/Accessibility/What_is_accessibility#Accessibility_guidelines_and_the_law) 섹션에서 관련된 추가 정보들을 제공합니다.

@@ -3,6 +3,8 @@ title: 事件
 slug: Glossary/Event
 ---
 
+{{GlossarySidebar}}
+
 事件（Event）是由 [DOM](/zh-CN/docs/Glossary/DOM) 元素产生的资源，它可以由 JavaScript 代码操作。
 
 ## 参见

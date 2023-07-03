@@ -1,13 +1,7 @@
 ---
 title: panneaux devtools
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-tags:
-  - Débutant
-  - Guide
-  - WebExtensions
-  - interface utilisateur
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
-original_slug: Mozilla/Add-ons/WebExtensions/user_interface/panneaux_devtools
 ---
 
 {{AddonSidebar}}

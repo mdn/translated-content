@@ -1,7 +1,6 @@
 ---
 title: Règles pour la mise en forme des exemples de code
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
-original_slug: MDN/Guidelines/Code_guidelines/General
 l10n:
   sourceCommit: b88cde84dd8596f6a56ee509d2a6b754a3e05ba0
 ---

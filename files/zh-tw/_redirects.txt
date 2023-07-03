@@ -5,9 +5,9 @@
 #
 # FROM-URL	TO-URL
 /zh-TW/docs/AJAX	/zh-TW/docs/Web/Guide/AJAX
-/zh-TW/docs/AJAX/Getting_Started	/zh-TW/docs/Web/Guide/AJAX/Getting_Started
-/zh-TW/docs/AJAX/上手篇	/zh-TW/docs/Web/Guide/AJAX/Getting_Started
-/zh-TW/docs/AJAX:上手篇	/zh-TW/docs/Web/Guide/AJAX/Getting_Started
+/zh-TW/docs/AJAX/Getting_Started	/zh-TW/docs/Web/Guide/AJAX
+/zh-TW/docs/AJAX/上手篇	/zh-TW/docs/Web/Guide/AJAX
+/zh-TW/docs/AJAX:上手篇	/zh-TW/docs/Web/Guide/AJAX
 /zh-TW/docs/CSS	/zh-TW/docs/Web/CSS
 /zh-TW/docs/CSS/-moz-border-image	/zh-TW/docs/Web/CSS/border-image
 /zh-TW/docs/CSS/@font-face	/zh-TW/docs/Web/CSS/@font-face
@@ -158,7 +158,7 @@
 /zh-TW/docs/HTTP	/zh-TW/docs/Web/HTTP
 /zh-TW/docs/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
 /zh-TW/docs/HTTP/Browser_detection_using_the_user_agent	/zh-TW/docs/Web/HTTP/Browser_detection_using_the_user_agent
-/zh-TW/docs/HTTP/Link_prefetching_FAQ	/zh-TW/docs/Web/HTTP/Link_prefetching_FAQ
+/zh-TW/docs/HTTP/Link_prefetching_FAQ	/zh-TW/docs/Glossary/Prefetch
 /zh-TW/docs/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Status
 /zh-TW/docs/HTTP/X-Frame-Options	/zh-TW/docs/Web/HTTP/Headers/X-Frame-Options
 /zh-TW/docs/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
@@ -465,13 +465,14 @@
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome	https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/作者	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author
+/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/側邊欄	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/工具列按鈕	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
+/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/工具列按鈕	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/快捷選單項	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/開發工具面板	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/側邊欄	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-/zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/工具列按鈕	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
+/zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/工具列按鈕	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/快捷選單項	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶介面/開發工具面板	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/用戶體驗最佳實踐	https://extensionworkshop.com/documentation/develop/user-experience-best-practices/
@@ -649,6 +650,7 @@
 /zh-TW/docs/Web/Events/scroll	/zh-TW/docs/Web/API/Document/scroll_event
 /zh-TW/docs/Web/Events/submit	/zh-TW/docs/Web/API/HTMLFormElement/submit_event
 /zh-TW/docs/Web/Events/touchcancel	/zh-TW/docs/Web/API/Element/touchcancel_event
+/zh-TW/docs/Web/Guide/AJAX/Getting_Started	/zh-TW/docs/Web/Guide/AJAX
 /zh-TW/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Manipulating_the_browser_history	/zh-TW/docs/Web/API/History_API
 /zh-TW/docs/Web/Guide/API/WebRTC	/zh-TW/docs/Web/API/WebRTC_API
 /zh-TW/docs/Web/Guide/CSS	/zh-TW/docs/Learn/CSS
@@ -705,6 +707,7 @@
 /zh-TW/docs/Web/HTML/區塊級元素	/zh-TW/docs/Glossary/Block-level_content
 /zh-TW/docs/Web/HTTP/Access_control_CORS	/zh-TW/docs/Web/HTTP/CORS
 /zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
+/zh-TW/docs/Web/HTTP/Link_prefetching_FAQ	/zh-TW/docs/Glossary/Prefetch
 /zh-TW/docs/Web/HTTP/Response_codes	/zh-TW/docs/Web/HTTP/Status
 /zh-TW/docs/Web/HTTP/Server-Side_Access_Control	/zh-TW/docs/Web/HTTP/CORS
 /zh-TW/docs/Web/HTTP/Status/418_I_m_a_teapot	/zh-TW/docs/Web/HTTP/Status/418

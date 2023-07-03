@@ -40,14 +40,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/from
 ### 從字串產生陣列
 
 ```js
-Array.from('foo');
+Array.from("foo");
 // ["f", "o", "o"]
 ```
 
 ### 從集合產生陣列
 
 ```js
-var s = new Set(['foo', window]);
+var s = new Set(["foo", window]);
 Array.from(s);
 // ["foo", window]
 ```
@@ -55,7 +55,11 @@ Array.from(s);
 ### 從映射產生陣列
 
 ```js
-var m = new Map([[1, 2], [2, 4], [4, 8]]);
+var m = new Map([
+  [1, 2],
+  [2, 4],
+  [4, 8],
+]);
 Array.from(m);
 // [[1, 2], [2, 4], [4, 8]]
 ```
@@ -77,13 +81,13 @@ f(1, 2, 3);
 ```js
 // 使用箭頭函式作為 map 函式來
 // 操作元素
-Array.from([1, 2, 3], x => x + x);
+Array.from([1, 2, 3], (x) => x + x);
 // [2, 4, 6]
 
 // 產生數值序列
 // 因為陣列中的每個位置都會被初始化為 `undefined`，
 // 下方 `v` 會是 `undefined`
-Array.from({length: 5}, (v, i) => i);
+Array.from({ length: 5 }, (v, i) => i);
 // [0, 1, 2, 3, 4]
 ```
 
@@ -97,12 +101,16 @@ if (!Array.from) {
   Array.from = (function () {
     var toStr = Object.prototype.toString;
     var isCallable = function (fn) {
-      return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
+      return typeof fn === "function" || toStr.call(fn) === "[object Function]";
     };
     var toInteger = function (value) {
       var number = Number(value);
-      if (isNaN(number)) { return 0; }
-      if (number === 0 || !isFinite(number)) { return number; }
+      if (isNaN(number)) {
+        return 0;
+      }
+      if (number === 0 || !isFinite(number)) {
+        return number;
+      }
       return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
     };
     var maxSafeInteger = Math.pow(2, 53) - 1;
@@ -112,7 +120,7 @@ if (!Array.from) {
     };
 
     // The length property of the from method is 1.
-    return function from(arrayLike/*, mapFn, thisArg */) {
+    return function from(arrayLike /*, mapFn, thisArg */) {
       // 1. Let C be the this value.
       var C = this;
 
@@ -121,17 +129,21 @@ if (!Array.from) {
 
       // 3. ReturnIfAbrupt(items).
       if (arrayLike == null) {
-        throw new TypeError('Array.from requires an array-like object - not null or undefined');
+        throw new TypeError(
+          "Array.from requires an array-like object - not null or undefined"
+        );
       }
 
       // 4. If mapfn is undefined, then let mapping be false.
       var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
       var T;
-      if (typeof mapFn !== 'undefined') {
+      if (typeof mapFn !== "undefined") {
         // 5. else
         // 5. a If IsCallable(mapfn) is false, throw a TypeError exception.
         if (!isCallable(mapFn)) {
-          throw new TypeError('Array.from: when provided, the second argument must be a function');
+          throw new TypeError(
+            "Array.from: when provided, the second argument must be a function"
+          );
         }
 
         // 5. b. If thisArg was supplied, let T be thisArg; else let T be undefined.
@@ -157,7 +169,10 @@ if (!Array.from) {
       while (k < len) {
         kValue = items[k];
         if (mapFn) {
-          A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
+          A[k] =
+            typeof T === "undefined"
+              ? mapFn(kValue, k)
+              : mapFn.call(T, kValue, k);
         } else {
           A[k] = kValue;
         }
@@ -168,7 +183,7 @@ if (!Array.from) {
       // 20. Return A.
       return A;
     };
-  }());
+  })();
 }
 ```
 

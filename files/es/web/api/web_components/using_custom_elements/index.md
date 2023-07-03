@@ -50,7 +50,7 @@ Aprenderás más sobre estos callbacks en la sección [Using the lifecycle callb
 Hay dos tipos de elementos personalizados :
 
 - **Elementos personalizados autónomos** — estos no heredan de elementos estándar HTML. Se usan estos elementos en una página escribiéndolos literalmente como un elemento HTML nuevo. Por ejemplo `<popup-info>`, o `document.createElement("popup-info")`.
-- **Elementos preconstruidos** **personalizados** heredan de elementos HTML básicos. Para crear un elemento de este tipo, tienes que especificar qué elemento extiende (como se verá en los ejemplos de abajo), y se usan escribiendo el nombre del elemento básico, pero añadiendo un atributo (o propiedad) {{htmlattrxref("is")}} y dándole como valor el nombre del elemento personalizado que se ha desarrollado. Por ejemplo `<p is="word-count">`, o `document.createElement("p", { is: "word-count" })`.
+- **Elementos preconstruidos** **personalizados** heredan de elementos HTML básicos. Para crear un elemento de este tipo, tienes que especificar qué elemento extiende (como se verá en los ejemplos de abajo), y se usan escribiendo el nombre del elemento básico, pero añadiendo un atributo (o propiedad) [`is`](/es/docs/Web/HTML/Global_attributes#is) y dándole como valor el nombre del elemento personalizado que se ha desarrollado. Por ejemplo `<p is="word-count">`, o `document.createElement("p", { is: "word-count" })`.
 
 ## Trabajando mediante algunos ejemplos sencillos
 

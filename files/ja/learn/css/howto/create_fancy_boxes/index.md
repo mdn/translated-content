@@ -1,8 +1,6 @@
 ---
 title: 装飾的なボックスの作成
-slug: Learn/CSS/Howto/create_fancy_boxes
-l10n:
-  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
+slug: Learn/CSS/Howto/Create_fancy_boxes
 ---
 
 {{LearnSidebar}}

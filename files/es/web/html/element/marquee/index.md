@@ -12,39 +12,39 @@ La etiqueta html `<marquee>` se utiliza para insertar un area de texto en movimi
 
 ## Atributos
 
-- {{htmlattrdef("behavior")}}
+- `behavior`
   - : Establece cómo se desplazará el texto en la etiqueta marquee. Los valores posibles son scroll, slide, y alternate. Si no hay un valor especificado, el valor por defecto establecido es scroll.
     Scroll: Hara que lo que este en la marquesina se mueva de derecha a izquierda, de manera ininterrumpida.
     Slide: Una vez que completa el recorrido de derecha a izquierda(por defecto) se detiene.
     Alternate: Se movera de una esquina a la otra, dando el efecto de rebote.
-- {{htmlattrdef("bgcolor")}}
+- `bgcolor`
   - : Establece el color de fondo, puede utilizarse el nombre, o su valor hexadecimal.
-- {{htmlattrdef("direction")}}
+- `direction`
   - : Establece la dirección en la que el texto contenido se desplazará. Los valores posibles son left (para moverse hacia la izquierda), right (para moverse a la derecha), up (hacia arriba) y down (hacia abajo). Si no se especifica un valor, por defecto será left.
-- {{htmlattrdef("height")}}
+- `height`
   - : Establece la altura de la etiqueta en pixeles, o en un valor porcentual.
-- {{htmlattrdef("hspace")}}
+- `hspace`
   - : Establece el margen horizontal.
-- {{htmlattrdef("loop")}}
+- `loop`
   - : Establece el número de veces que la marquesina realizará el desplazamiento. Sino se especifica esta propiedad, por defecto es -1, lo que quiere decir que la marquesina se desplazará continuamente.
-- {{htmlattrdef("scrollamount")}}
+- `scrollamount`
   - : Establece el valor de movimiento para cada intervalo en pixeles. Por defecto su valor es 6.
-- {{htmlattrdef("scrolldelay")}}
+- `scrolldelay`
   - : Establece el intervalo entre cada desplazamiento, en milisegundos. El valor por defecto es 85. Nota: Cualquier valor inferior a 60 será ignorado, (puesto que el valor minimo es 60) y se establecerá 60 en su lugar. Salvo que se especifique `truespeed`.
-- {{htmlattrdef("truespeed")}}
+- `truespeed`
   - : Por defecto, si los valores de `scrolldelay son inferiores a 60 serán ignorados. Pero si truespeed está presente, esos valores inferiores a 60 serán aceptados.`
-- {{htmlattrdef("vspace")}}
+- `vspace`
   - : Establece el margen vertical en pixeles o en un valor porcentual.
-- {{htmlattrdef("width")}}
+- `width`
   - : Establece el ancho de la etiqueta en pixeles o un valor porcentual.
 
 ## Controladores de eventos
 
-- {{htmlattrdef("onbounce")}}
+- `onbounce`
   - : Este evento se lanza cuando la marquesina llegó al final del desplazamiento. Ésto solo se activa cuando el atributo `behavior` está establecido en `alternate`.
-- {{htmlattrdef("onfinish")}}
+- `onfinish`
   - : Este evento se lanza cuando la marquesina repitió el desplazamiento la cantidad de veces establecidas en el atributo `loop`. El evento se lanza solo si el atributo `loop` tiene un valor mayor a 0.
-- {{htmlattrdef("onstart")}}
+- `onstart`
   - : Este evento se lanza cuando la marquesina comienza su desplazamiento.
 
 ## Métodos

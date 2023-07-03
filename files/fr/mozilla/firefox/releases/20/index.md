@@ -1,11 +1,7 @@
 ---
 title: Firefox 20 pour les développeurs
 slug: Mozilla/Firefox/Releases/20
-tags:
-  - Firefox
-  - Firefox 20
 translation_of: Mozilla/Firefox/Releases/20
-original_slug: Mozilla/Firefox/Versions/20
 ---
 
 {{FirefoxSidebar}}

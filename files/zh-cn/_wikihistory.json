@@ -1237,6 +1237,10 @@
     "modified": "2019-03-18T21:26:23.322Z",
     "contributors": ["zsxeee"]
   },
+  "Glossary/Prefetch": {
+    "modified": "2019-10-09T13:08:42.395Z",
+    "contributors": ["Yayure", "vivaxy", "iamyy", "xgqfrms-GitHub"]
+  },
   "Glossary/Preflight_request": {
     "modified": "2019-03-18T21:47:05.943Z",
     "contributors": ["daixinye"]
@@ -5539,10 +5543,6 @@
     "modified": "2019-03-18T20:52:33.784Z",
     "contributors": ["Apricot", "876843240", "jinnchen"]
   },
-  "Mozilla/Add-ons/WebExtensions/user_interface/Browser_action": {
-    "modified": "2019-03-18T21:03:41.863Z",
-    "contributors": ["kyle2003"]
-  },
   "Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles": {
     "modified": "2020-10-15T22:25:56.457Z",
     "contributors": ["DarthVaderrr"]
@@ -5558,6 +5558,10 @@
   "Mozilla/Add-ons/WebExtensions/user_interface/Sidebars": {
     "modified": "2019-03-18T21:02:29.279Z",
     "contributors": ["dfchong"]
+  },
+  "Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button": {
+    "modified": "2019-03-18T21:03:41.863Z",
+    "contributors": ["kyle2003"]
   },
   "Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels": {
     "modified": "2019-03-18T21:02:57.359Z",
@@ -18330,6 +18334,10 @@
     "modified": "2019-03-23T23:28:24.667Z",
     "contributors": ["Bayes", "xgqfrms-GitHub", "fscholz", "Nightingale"]
   },
+  "Web/CSS/CSS_paged_media": {
+    "modified": "2020-03-18T05:04:22.843Z",
+    "contributors": ["RainSlide", "Princess_Knight"]
+  },
   "Web/CSS/CSS_positioned_layout": {
     "modified": "2019-03-23T22:16:58.595Z",
     "contributors": ["ZZES_REN"]
@@ -18599,10 +18607,6 @@
   "Web/CSS/Layout_mode": {
     "modified": "2019-03-23T22:27:53.945Z",
     "contributors": ["wh1msy", "xgqfrms-GitHub", "xgqfrms"]
-  },
-  "Web/CSS/Paged_Media": {
-    "modified": "2020-03-18T05:04:22.843Z",
-    "contributors": ["RainSlide", "Princess_Knight"]
   },
   "Web/CSS/Privacy_and_the_:visited_selector": {
     "modified": "2019-03-23T23:07:40.024Z",
@@ -20869,22 +20873,6 @@
     "modified": "2020-11-27T01:35:52.693Z",
     "contributors": ["EryouHao"]
   },
-  "Web/CSS/scroll-snap-coordinate": {
-    "modified": "2019-01-16T21:50:21.410Z",
-    "contributors": ["rockywen"]
-  },
-  "Web/CSS/scroll-snap-destination": {
-    "modified": "2019-03-23T22:42:44.523Z",
-    "contributors": ["rockywen"]
-  },
-  "Web/CSS/scroll-snap-points-x": {
-    "modified": "2019-03-23T22:42:35.765Z",
-    "contributors": ["rockywen"]
-  },
-  "Web/CSS/scroll-snap-points-y": {
-    "modified": "2019-03-23T22:42:33.911Z",
-    "contributors": ["rockywen"]
-  },
   "Web/CSS/scroll-snap-type": {
     "modified": "2020-10-15T21:40:51.208Z",
     "contributors": ["suyanhanx", "RoXoM", "rockywen"]
@@ -21550,22 +21538,6 @@
       "zjhch123",
       "XiaoyaoChen",
       "Noly1990"
-    ]
-  },
-  "Web/Guide/AJAX/Getting_Started": {
-    "modified": "2020-05-09T09:42:30.390Z",
-    "contributors": [
-      "Mookiepiece",
-      "JiLiangLai",
-      "HCSkatana",
-      "realchoi",
-      "Mew_MDN",
-      "SalmonDaze",
-      "zazaliu",
-      "chrisdavidmills",
-      "shifengchen",
-      "tangc1",
-      "RogerShen"
     ]
   },
   "Web/Guide/API": {
@@ -24126,10 +24098,6 @@
       "oopsguy",
       "xgqfrms-GitHub"
     ]
-  },
-  "Web/HTTP/Link_prefetching_FAQ": {
-    "modified": "2019-10-09T13:08:42.395Z",
-    "contributors": ["Yayure", "vivaxy", "iamyy", "xgqfrms-GitHub"]
   },
   "Web/HTTP/Messages": {
     "modified": "2020-04-19T05:44:17.609Z",
@@ -32196,9 +32164,15 @@
     "modified": "2019-11-13T02:27:54.714Z",
     "contributors": ["JC-Ge"]
   },
-  "Web/Progressive_web_apps/Responsive/responsive_design_building_blocks": {
-    "modified": "2020-11-17T04:04:41.165Z",
-    "contributors": ["DingGuangbo"]
+  "Web/Progressive_web_apps/Tutorials/js13kGames": {
+    "modified": "2019-08-21T09:58:46.102Z",
+    "contributors": [
+      "jackupdown",
+      "zjffun",
+      "chrisdavidmills",
+      "eightHundreds",
+      "yijie_sun"
+    ]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
     "modified": "2020-05-31T18:38:01.454Z",
@@ -32224,16 +32198,6 @@
       "Miahui",
       "HDUCC",
       "deping_chen"
-    ]
-  },
-  "Web/Progressive_web_apps/Tutorials/js13kGames/Introduction": {
-    "modified": "2019-08-21T09:58:46.102Z",
-    "contributors": [
-      "jackupdown",
-      "zjffun",
-      "chrisdavidmills",
-      "eightHundreds",
-      "yijie_sun"
     ]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames/Loading": {

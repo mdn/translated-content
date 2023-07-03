@@ -132,8 +132,6 @@ There are various specific rules to follow when writing about HTML elements, in 
   - : Use the [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) macro, which creates a link to the page for that element. For example, writing \\{{HTMLElement("title")}} produces "{{HTMLElement("title")}}". If you don't want to create a link, **enclose the name in angle brackets** and use "Code (inline)" style (e.g., `<title>`).
 - Attribute names
   - : Use **bold face**.
-- Attribute definitions
-  - : Use the [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) macro (e.g., \\{{htmlattrdef("type")}}) for the definition term, so that it can be linked to from other pages, then use the [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) macro (e.g., \\{{htmlattrxref("attr","element")}}) to reference attribute definitions.
 - Attribute values
   - : Use "Code (inline)" style, and do not use quotation marks around strings, unless needed by the syntax of a code sample. E.g.: When the **type** attribute of an `<input>` element is set to `email` or `tel` ...
 - Labeling attributes

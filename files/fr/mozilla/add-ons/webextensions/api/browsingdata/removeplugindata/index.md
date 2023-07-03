@@ -1,15 +1,6 @@
 ---
 title: browsingData.removePluginData()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removePluginData
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removePluginData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removePluginData
 ---
 

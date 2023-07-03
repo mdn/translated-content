@@ -36,7 +36,7 @@ Sempre que um elemento é renderizado, essas propriedades são usadas para deter
 - {{cssxref("text-emphasis-color")}}
   - : A cor a ser usada ao desenhar símbolos de ênfase adjacentes a cada caractere no texto. Isso é usado principalmente ao desenhar texto para idiomas do Leste Asiático.
 - {{cssxref("caret-color")}}
-  - : A cor a ser usada ao desenhar o {{Glossary("caret")}} (às vezes chamado de cursor de entrada de texto) dentro do elemento. Isso só é útil em elementos que são editáveis, como {{HTMLElement("input")}} e {{HTMLElement("textarea")}} ou elementos cujo atributo HTML {{htmlattrxref("contenteditable")}} está definido.
+  - : A cor a ser usada ao desenhar o {{Glossary("caret")}} (às vezes chamado de cursor de entrada de texto) dentro do elemento. Isso só é útil em elementos que são editáveis, como {{HTMLElement("input")}} e {{HTMLElement("textarea")}} ou elementos cujo atributo HTML [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable) está definido.
 
 ### Caixas
 
@@ -329,7 +329,7 @@ Finalmente, a classe `.boxRight` descreve as propriedades únicas da caixa que �
 
 ## Deixando o usuário escolher uma cor
 
-Há muitas situações em que seu site pode precisar permitir que o usuário selecione uma cor. Talvez você tenha uma interface de usuário personalizável ou esteja implementando um aplicativo de desenho. Talvez você tenha texto editável e precise deixar o usuário escolher a cor do texto. Ou talvez seu aplicativo permita que o usuário atribua cores a pastas ou itens. Embora historicamente tenha sido necessário implementar seu próprio [seletor de cores](https://en.wikipedia.org/wiki/Color_picker), o HTML agora oferece suporte para navegadores fornecerem um para seu uso por meio do {{HTMLElement("input" )}}, usando `"color"` como o valor de seu atributo {{htmlattrxref("type", "input")}}.
+Há muitas situações em que seu site pode precisar permitir que o usuário selecione uma cor. Talvez você tenha uma interface de usuário personalizável ou esteja implementando um aplicativo de desenho. Talvez você tenha texto editável e precise deixar o usuário escolher a cor do texto. Ou talvez seu aplicativo permita que o usuário atribua cores a pastas ou itens. Embora historicamente tenha sido necessário implementar seu próprio [seletor de cores](https://en.wikipedia.org/wiki/Color_picker), o HTML agora oferece suporte para navegadores fornecerem um para seu uso por meio do {{HTMLElement("input" )}}, usando `"color"` como o valor de seu atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type).
 
 O elemento `<input>` representa uma cor apenas na [notação de string hexadecimal](#hexadecimal_string_notation) abordada acima.
 

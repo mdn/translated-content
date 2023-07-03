@@ -1,12 +1,7 @@
 ---
 title: Éléments flexibles
 slug: Glossary/Flex_Item
-tags:
-  - CSS
-  - Glossaire
-  - flexbox
 translation_of: Glossary/Flex_Item
-original_slug: Glossaire/Flex_Item
 ---
 
 Les enfants directs d'un {{glossary("Flex Container","conteneur flexible")}} (éléments définis avec `display: flex` ou `display: inline-flex`) deviennent des **éléments flexibles** (_flex items_).

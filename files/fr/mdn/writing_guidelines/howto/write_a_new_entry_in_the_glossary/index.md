@@ -2,7 +2,6 @@
 title: Écrire et référencer une entrée de glossaire
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 translation_of: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
-original_slug: MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary
 ---
 
 {{MDNSidebar}}

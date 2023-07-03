@@ -5,7 +5,7 @@ slug: Web/API/HTMLCanvasElement/height
 
 {{APIRef("Canvas API")}}
 
-A propriedade **`HTMLCanvasElement.height`** é um `inteiro` positivo que reflete o atributo {{htmlattrxref("height", "canvas")}} do elemento HTML {{HTMLElement("canvas")}} interpretado em pixels no CSS. Quando o atributo não é especificado, ou se for definido como um valor inválido, como um `inteiro` negativo, o valor padrão de `150` será usado.
+A propriedade **`HTMLCanvasElement.height`** é um `inteiro` positivo que reflete o atributo [`height`](/pt-BR/docs/Web/HTML/Element/canvas#height) do elemento HTML {{HTMLElement("canvas")}} interpretado em pixels no CSS. Quando o atributo não é especificado, ou se for definido como um valor inválido, como um `inteiro` negativo, o valor padrão de `150` será usado.
 
 Essa é uma de duas propriedades, que controla o tamanho do canvas, sendo a outra {{domxref("HTMLCanvasElement.width")}}.
 

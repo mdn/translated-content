@@ -77,7 +77,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
-    > **Note:** Use the global attribute {{HTMLAttrxRef("id")}} instead.
+    > **Note:** Use the global attribute [`id`](/pt-BR/docs/Web/HTML/Global_attributes#id) instead.
 
 - {{HTMLAttrDef("rev")}}
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
@@ -381,7 +381,7 @@ People experiencing low vision conditions, navigating with the aid of screen rea
 <a href="2017-annual-report.ppt"> 2017 Annual Report (PowerPoint) </a>
 ```
 
-If an icon is used to signify link behavior, make sure it has {{HTMLAttrxRef("alt", "img", "alt text", "true")}}:
+If an icon is used to signify link behavior, make sure it has [alt text](/pt-BR/docs/Web/HTML/Element/img#alt):
 
 ```html
 <a target="_blank" href="https://www.wikipedia.org">
