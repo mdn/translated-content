@@ -54,5 +54,5 @@ A informação exibida acima está sendo servida do MDN's GitHub (<https://githu
 
 ## Veja também
 
-- {{interwiki("wikipedia", "HTTP_451", "Wikipedia: HTTP 451")}}
-- {{interwiki("wikipedia", "Fahrenheit_451", "Wikipedia: Fahrenheit 451")}} (which gave this status code its number)
+- [Wikipedia: HTTP 451](https://pt.wikipedia.org/wiki/HTTP_451)
+- [Wikipedia: Fahrenheit 451](https://pt.wikipedia.org/wiki/Fahrenheit_451) (which gave this status code its number)

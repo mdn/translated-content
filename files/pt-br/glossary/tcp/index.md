@@ -10,4 +10,4 @@ TCP (_Transmission Control Protocol_, em português, Protocolo de Controle de Tr
 
 ### Conhecimento Geral
 
-- {{Interwiki("wikipedia", "Transmission Control Protocol")}} na Wikipedia
+- [Transmission Control Protocol](https://pt.wikipedia.org/wiki/Transmission_Control_Protocol) na Wikipedia
