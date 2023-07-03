@@ -518,6 +518,10 @@
     "modified": "2019-03-23T22:26:13.956Z",
     "contributors": ["petercpg"]
   },
+  "Glossary/Prefetch": {
+    "modified": "2019-03-23T22:49:36.623Z",
+    "contributors": ["imrobinized", "jwhitlock", "foxbrush"]
+  },
   "Glossary/Presto": {
     "modified": "2019-03-23T22:26:12.268Z",
     "contributors": ["petercpg"]
@@ -1582,16 +1586,16 @@
     "modified": "2019-04-23T05:01:36.148Z",
     "contributors": ["jackblackevo", "0711kps"]
   },
-  "Mozilla/Add-ons/WebExtensions/user_interface/Browser_action": {
-    "modified": "2019-04-23T05:01:57.057Z",
-    "contributors": ["jackblackevo", "0711kps"]
-  },
   "Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items": {
     "modified": "2019-04-23T05:04:17.208Z",
     "contributors": ["jackblackevo", "0711kps"]
   },
   "Mozilla/Add-ons/WebExtensions/user_interface/Sidebars": {
     "modified": "2019-04-23T05:02:36.826Z",
+    "contributors": ["jackblackevo", "0711kps"]
+  },
+  "Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button": {
+    "modified": "2019-04-23T05:01:57.057Z",
     "contributors": ["jackblackevo", "0711kps"]
   },
   "Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels": {
@@ -3306,19 +3310,6 @@
       "BobChao"
     ]
   },
-  "Web/Guide/AJAX/Getting_Started": {
-    "modified": "2020-08-21T06:49:10.440Z",
-    "contributors": [
-      "timjtchang",
-      "jackblackevo",
-      "chrisdavidmills",
-      "luxun",
-      "happysadman",
-      "Cpthk",
-      "Mgjbot",
-      "BobChao"
-    ]
-  },
   "Web/Guide/API": {
     "modified": "2019-09-11T09:35:56.658Z",
     "contributors": ["SphinxKnight", "shing0608"]
@@ -3634,10 +3625,6 @@
   "Web/HTTP/Headers/X-Frame-Options": {
     "modified": "2019-06-17T05:41:08.405Z",
     "contributors": ["jackblackevo", "jwhitlock", "allenown", "foxbrush"]
-  },
-  "Web/HTTP/Link_prefetching_FAQ": {
-    "modified": "2019-03-23T22:49:36.623Z",
-    "contributors": ["imrobinized", "jwhitlock", "foxbrush"]
   },
   "Web/HTTP/Methods": {
     "modified": "2020-10-15T22:04:23.999Z",

@@ -8,7 +8,7 @@ En HTML, cualquier elemento puede ser editable. Con el uso de algunos manejadore
 
 ## ¿Cómo funciona?
 
-Todo lo que debes hacer es definir el atributo {{htmlattrxref("contenteditable")}} en cualquier elemento HTML que quieras hacer editable.
+Todo lo que debes hacer es definir el atributo [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable) en cualquier elemento HTML que quieras hacer editable.
 
 Este es un ejemplo simple con el cual puedes crear elementos {{HTMLElement("div")}} cuyo contenido pueda ser editado por el usuario.
 
@@ -213,6 +213,6 @@ img.intLink { border: 0; }
 ## Véase también
 
 - {{domxref("HTMLElement.contentEditable")}}
-- El atributo global {{htmlattrxref("contenteditable")}}
+- El atributo global [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable)
 - [Midas](/es/docs/Mozilla/Projects/Midas) (el componente de editor de texto programable)
 - Browser Support <http://caniuse.com/#feat=contenteditable>

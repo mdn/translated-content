@@ -3,6 +3,8 @@ title: CalDAV
 slug: Glossary/CalDAV
 ---
 
+{{GlossarySidebar}}
+
 CalDAV（{{Glossary("WebDAV")}} 的日历扩展 (Calendaring extensions to WebDAV)）是一种由 {{Glossary("IETF")}} 标准化的{{glossary("protocol", "协议")}}，用于远程访问{{glossary("server", "服务器")}}上的日历数据。
 
 ## 参见

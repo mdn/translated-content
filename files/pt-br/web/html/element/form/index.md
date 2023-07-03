@@ -23,13 +23,13 @@ Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes).
 
   - : A comma-separated list of content types that the server accepts.
 
-    > **Note:** **Usage note:** This attribute has been removed in HTML5 and should no longer be used. Instead, use the {{htmlattrxref("accept", "input")}} attribute of the specific {{HTMLElement("input")}} element.
+    > **Note:** **Usage note:** This attribute has been removed in HTML5 and should no longer be used. Instead, use the [`accept`](/pt-BR/docs/Web/HTML/Element/input#accept) attribute of the specific {{HTMLElement("input")}} element.
 
 - {{htmlattrdef("accept-charset")}}
   - : A list of character encodings that the server accepts. The list can be delimited by spaces or commas. The browser uses in the order in which they are listed. The default value is the reserved string "UNKNOWN", in which case the encoding corresponds to the encoding of the document containing the form element.
     HTML 4: In previous versions of HTML, the different character encodings could be delimited by spaces or commas. This is no longer the case in HTML5, where only spaces are correct.
 - {{htmlattrdef("action")}}
-  - : The URI of a program that processes the information submitted via the form. This value can be overridden by a {{htmlattrxref("formaction", "button")}} attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.
+  - : The URI of a program that processes the information submitted via the form. This value can be overridden by a [`formaction`](/pt-BR/docs/Web/HTML/Element/button#formaction) attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.
 - {{htmlattrdef("autocomplete")}}
 
   - : Indicates whether controls in this form can by default have their values automatically completed by the browser. This setting can be overridden by an `autocomplete` attribute on an element belonging to the form. Possible values are:
@@ -47,7 +47,7 @@ Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes).
     - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the `type` attribute set to "file".
     - `text/plain (HTML5)`
 
-    This value can be overridden by a {{htmlattrxref("formenctype", "button")}} attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.
+    This value can be overridden by a [`formenctype`](/pt-BR/docs/Web/HTML/Element/button#formenctype) attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.
 
 - {{htmlattrdef("method")}}
 
@@ -56,12 +56,12 @@ Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes).
     - `post`: Corresponds to the HTTP [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) ; the data from the form is included in the body of the form and is sent to the server.
     - `get`: Corresponds to the HTTP [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); the data from the form are appended to the `action` attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.
 
-    This value can be overridden by a {{htmlattrxref("formmethod", "button")}} attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.
+    This value can be overridden by a [`formmethod`](/pt-BR/docs/Web/HTML/Element/button#formmethod) attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.
 
 - {{htmlattrdef("name")}}
   - : The name of the form. In HTML 4 its use is deprecated (`id` should be used instead). It must be unique among the forms in a document and not the empty string in HTML 5.
 - {{htmlattrdef("novalidate")}}
-  - : This Boolean attribute indicates that the form is not to be validated when it is submitted. If this attribute is missing (and therefore the form is validated), this default setting can be overridden by a {{htmlattrxref("formnovalidate", "button")}} attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element belonging to the form.
+  - : This Boolean attribute indicates that the form is not to be validated when it is submitted. If this attribute is missing (and therefore the form is validated), this default setting can be overridden by a [`formnovalidate`](/pt-BR/docs/Web/HTML/Element/button#formnovalidate) attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element belonging to the form.
 - {{htmlattrdef("target")}}
 
   - : A name or keyword indicating where to display the response that is received after submitting the form. In HTML 4, this is the name of, or a keyword for, a frame. In HTML5, it is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). The following keywords have special meanings:
@@ -72,7 +72,7 @@ Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes).
     - `_top`: HTML 4: Load the response into the full, original window, canceling all other frames. HTML5: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
     - _iframename_: The response is displayed in a named {{HTMLElement("iframe")}}.
 
-    HTML5: This value can be overridden by a {{htmlattrxref("formtarget", "button")}} attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.
+    HTML5: This value can be overridden by a [`formtarget`](/pt-BR/docs/Web/HTML/Element/button#formtarget) attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.
 
 ## Exemplos
 

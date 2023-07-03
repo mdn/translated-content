@@ -1,14 +1,6 @@
 ---
 title: management.getPermissionWarningsById()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsById
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - WebExtensions
-  - getPermissionWarningsById
-  - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsById
 ---
 

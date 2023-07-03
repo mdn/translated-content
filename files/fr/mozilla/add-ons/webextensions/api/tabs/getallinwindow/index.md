@@ -1,17 +1,6 @@
 ---
 title: tabs.getAllInWindow()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getAllInWindow
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getAllInWindow
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getAllInWindow
 ---
 

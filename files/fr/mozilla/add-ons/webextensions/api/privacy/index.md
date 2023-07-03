@@ -1,13 +1,6 @@
 ---
 title: privacy
 slug: Mozilla/Add-ons/WebExtensions/API/privacy
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Privacy
-  - Reference
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/privacy
 ---
 

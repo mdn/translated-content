@@ -105,7 +105,7 @@ Para começar, faça uma cópia de `fruit-start.html` em um novo diretório em s
 
 ### O atributo obrigatório
 
-O recurso de validação HTML5 mais simples de usar é o atributo {{htmlattrxref("required", "input")}} — se você quiser tornar uma entrada obrigatória, você pode marcar o elemento usando este atributo. Quando este atributo estiver definido, o formulário não será enviado (e exibirá uma mensagem de erro) quando a entrada estiver vazia (a entrada também será considerada inválida).
+O recurso de validação HTML5 mais simples de usar é o atributo [`required`](/pt-BR/docs/Web/HTML/Element/input#required) — se você quiser tornar uma entrada obrigatória, você pode marcar o elemento usando este atributo. Quando este atributo estiver definido, o formulário não será enviado (e exibirá uma mensagem de erro) quando a entrada estiver vazia (a entrada também será considerada inválida).
 
 Adicione um atributo `required` à sua entrada, conforme mostrado abaixo:
 
@@ -135,7 +135,7 @@ Isso faz com que a entrada tenha uma borda tracejada vermelha brilhante quando f
 
 ### Validando com uma expressão regular
 
-Outro recurso de validação muito comum é o atributo {{htmlattrxref("pattern", "input")}} que espera uma [Expressão Regular](/pt-BR/docs/JavaScript/Guide/Regular_Expressions) como seu valor. Uma expressão regular (regex) é um padrão que pode ser usado para identificar combinações de caracteres em strings de texto, então elas são ideais para validação de formulários (assim como uma variedade de outros usos em JavaScript)
+Outro recurso de validação muito comum é o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) que espera uma [Expressão Regular](/pt-BR/docs/JavaScript/Guide/Regular_Expressions) como seu valor. Uma expressão regular (regex) é um padrão que pode ser usado para identificar combinações de caracteres em strings de texto, então elas são ideais para validação de formulários (assim como uma variedade de outros usos em JavaScript)
 
 Regexes são bastante complexas e não pretendemos ensiná-las exaustivamente neste artigo. Abaixo estão alguns exemplos para dar uma ideia básica de como eles funcionam:
 
@@ -171,15 +171,15 @@ Neste exemplo, o elemento {{HTMLElement("input")}} aceita um dos dois valores po
 
 Neste ponto, tente alterar o valor dentro do atributo `pattern` para igualar alguns dos exemplos que você viu anteriormente e veja como isso afeta os valores que você pode inserir para tornar o valor de entrada válido. Tente escrever alguns dos seus próprios, e veja como você se sai! Tente torná-los relacionados a frutas sempre que possível, para que seus exemplos façam sentido!
 
-> **Nota:** Alguns tipos de elemento {{HTMLElement("input")}} não precisam de um atributo {{htmlattrxref("pattern","input")}} para serem validados. Especificar o tipo `email`, por exemplo, valida o valor inserido em relação a uma expressão regular que corresponde a um endereço de e-mail bem formado (ou uma lista de endereços de e-mail separados por vírgula se tiver o {{htmlattrxref("multiple","input")}} atributo). Como outro exemplo, os campos com o tipo `url` requerem automaticamente um URL devidamente formado.
+> **Nota:** Alguns tipos de elemento {{HTMLElement("input")}} não precisam de um atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) para serem validados. Especificar o tipo `email`, por exemplo, valida o valor inserido em relação a uma expressão regular que corresponde a um endereço de e-mail bem formado (ou uma lista de endereços de e-mail separados por vírgula se tiver o [`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) atributo). Como outro exemplo, os campos com o tipo `url` requerem automaticamente um URL devidamente formado.
 
-> **Nota:** O elemento {{HTMLElement("textarea")}} não suporta o atributo {{htmlattrxref("pattern","input")}}.
+> **Nota:** O elemento {{HTMLElement("textarea")}} não suporta o atributo [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern).
 
 ### Restringindo o comprimento de suas entradas
 
-Todos os campos de texto criados por {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} podem ser restringidos em tamanho usando {{htmlattrxref("minlength","input")}} e {{ htmlattrxref("maxlength","input")}} atributos. Um campo é inválido se seu valor for menor que o valor {{htmlattrxref("minlength","input")}} ou maior que o valor {{htmlattrxref("maxlength","input")}}. Os navegadores geralmente não permitem que o usuário digite um valor maior do que o esperado nos campos de texto, mas é útil ter esse controle refinado disponível.
+Todos os campos de texto criados por {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} podem ser restringidos em tamanho usando [`minlength`](/pt-BR/docs/Web/HTML/Element/input#minlength) e [`maxlength`](/pt-BR/docs/Web/HTML/Element/input#maxlength) atributos. Um campo é inválido se seu valor for menor que o valor [`minlength`](/pt-BR/docs/Web/HTML/Element/input#minlength) ou maior que o valor [`maxlength`](/pt-BR/docs/Web/HTML/Element/input#maxlength). Os navegadores geralmente não permitem que o usuário digite um valor maior do que o esperado nos campos de texto, mas é útil ter esse controle refinado disponível.
 
-Para campos numéricos (ou seja, `<input type="number">`), os atributos {{htmlattrxref("min","input")}} e {{htmlattrxref("max","input")}} também fornecem uma restrição de validação. Se o valor do campo for menor que o atributo {{htmlattrxref("min","input")}} ou maior que o atributo {{htmlattrxref("max","input")}}, o campo será inválido.
+Para campos numéricos (ou seja, `<input type="number">`), os atributos [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [`max`](/pt-BR/docs/Web/HTML/Element/input#max) também fornecem uma restrição de validação. Se o valor do campo for menor que o atributo [`min`](/pt-BR/docs/Web/HTML/Element/input#min) ou maior que o atributo [`max`](/pt-BR/docs/Web/HTML/Element/input#max), o campo será inválido.
 
 Vejamos outro exemplo. Crie uma nova cópia do arquivo [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html).
 
@@ -222,7 +222,7 @@ Aqui está o exemplo rodando ao vivo:
 
 {{EmbedLiveSample("Constraining_the_length_of_your_entries", "100%", 100)}}
 
-> **Nota:** `<input type="number">` (e outros tipos, como `range`) também podem receber um atributo {{htmlattrxref("step", "input")}}, que especifica o que incrementar o valor aumentará ou diminuirá quando os controles de entrada forem usados (como os botões numéricos para cima e para baixo).
+> **Nota:** `<input type="number">` (e outros tipos, como `range`) também podem receber um atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step), que especifica o que incrementar o valor aumentará ou diminuirá quando os controles de entrada forem usados (como os botões numéricos para cima e para baixo).
 
 ### Exemplo completo
 
@@ -417,7 +417,7 @@ Vamos ver como usar essa API para criar mensagens de erro personalizadas. Primei
 </form>
 ```
 
-Este formulário simples usa o atributo {{htmlattrxref("novalidate","form")}} para desativar a validação automática do navegador; isso permite que nosso script assuma o controle sobre a validação. No entanto, isso não desativa o suporte para a API de validação de restrição nem a aplicação da pseudoclasse CSS {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref( ":in-range")}} e {{cssxref(":out-of-range")}} classes. Isso significa que, embora o navegador não verifique automaticamente a validade do formulário antes de enviar seus dados, você ainda pode fazer isso sozinho e estilizar o formulário de acordo.
+Este formulário simples usa o atributo [`novalidate`](/pt-BR/docs/Web/HTML/Element/form#novalidate) para desativar a validação automática do navegador; isso permite que nosso script assuma o controle sobre a validação. No entanto, isso não desativa o suporte para a API de validação de restrição nem a aplicação da pseudoclasse CSS {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref( ":in-range")}} e {{cssxref(":out-of-range")}} classes. Isso significa que, embora o navegador não verifique automaticamente a validade do formulário antes de enviar seus dados, você ainda pode fazer isso sozinho e estilizar o formulário de acordo.
 
 O atributo [`aria-live`](/pt-BR/docs/Accessibility/ARIA/ARIA_Live_Regions) garante que nossa mensagem de erro personalizada seja apresentada a todos, incluindo aqueles que usam tecnologias assistivas, como leitores de tela.
 

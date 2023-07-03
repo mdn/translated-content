@@ -3,6 +3,8 @@ title: SQL 注入
 slug: Glossary/SQL_Injection
 ---
 
+{{GlossarySidebar}}
+
 SQL 注入（SQL Injection）利用了未能验证用户输入的 Web 应用程序。黑客可以通过 Web 应用程序传递恶意 SQL 命令，以便由后端数据库执行。
 
 SQL 注入可以获得对数据库的未经授权的访问，或直接从数据库检索信息。许多数据泄露事件都是由于 SQL 注入造成的。

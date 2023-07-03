@@ -1,14 +1,6 @@
 ---
 title: permissions.contains()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/contains
-tags:
-  - API
-  - Add-ons
-  - Contains
-  - Method
-  - Permissions
-  - Reference
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/contains
 ---
 

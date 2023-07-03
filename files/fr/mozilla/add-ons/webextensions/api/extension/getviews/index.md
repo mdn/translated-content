@@ -1,16 +1,6 @@
 ---
 title: extension.getViews()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getViews
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getViews
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getViews
 ---
 

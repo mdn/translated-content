@@ -45,7 +45,7 @@ Como puedes deducir a partir del breve ejemplo anterior, el título debe contene
 
 Los subtítulos se colocan directamente debajo de la etiqueta `<table>`.
 
-> **Nota:** El atributo {{htmlattrxref("summary","table")}} también se puede usar en el elemento `table` para proporcionar una descripción; los lectores de pantalla también lo leen. Sin embargo, recomendamos usar el elemento `caption`, porque {{htmlattrxref("summary","table")}} está {{glossary("obsoleto")}} conforme a la especificación HTML5 y porque los usuarios sin discapacidad visual no pueden leerlo (no aparece en la página).
+> **Nota:** El atributo [`summary`](/es/docs/Web/HTML/Element/table#summary) también se puede usar en el elemento `table` para proporcionar una descripción; los lectores de pantalla también lo leen. Sin embargo, recomendamos usar el elemento `caption`, porque [`summary`](/es/docs/Web/HTML/Element/table#summary) está {{glossary("obsoleto")}} conforme a la especificación HTML5 y porque los usuarios sin discapacidad visual no pueden leerlo (no aparece en la página).
 
 ### Aprendizaje activo: Añadir un subtítulo
 
@@ -79,7 +79,7 @@ Pongamos en acción estos elementos nuevos.
 2. Intenta abrirlo en un navegador: observarás que se ve bien, pero podría mejorarse. La fila «SUM», que contiene una suma de las cantidades gastadas, parece estar en el lugar equivocado, y faltan algunos detalles del código.
 3. Coloca la fila de encabezados dentro de un elemento `<thead>`, la fila «SUM» dentro de un elemento `<tfoot>`, y el resto del contenido dentro de un elemento `<tbody>`.
 4. Guarda y actualiza, y observa que añadir el elemento `<tfoot>` ha provocado que la fila «SUM» pase al final de la tabla.
-5. Luego, añade un atributo {{htmlattrxref ("colspan", "td")}} para que la celda «SUM» abarque las primeras cuatro columnas, de modo que el número aparezca en la parte inferior de la columna «Costes».
+5. Luego, añade un atributo [`colspan`](/es/docs/Web/HTML/Element/td#colspan) para que la celda «SUM» abarque las primeras cuatro columnas, de modo que el número aparezca en la parte inferior de la columna «Costes».
 6. Vamos a añadir un estilo adicional sencillo a la tabla para que veas cuán útiles son estos elementos para aplicar CSS. Dentro del encabezado del documento HTML hay un elemento {{htmlelement ("style")}} vacío. Añade a este elemento las líneas de código CSS siguientes:
 
     ```css
@@ -371,7 +371,7 @@ Ya expusimos los encabezados en nuestro artículo anterior; consulta [Añadir en
 
 ### El atributo scope
 
-Un nuevo tema para este artículo es el atributo {{htmlattrxref ("scope", "th")}}, que se puede añadir al elemento `<th>` para indicar a los lectores de pantalla exactamente para qué celdas es el encabezado. Volviendo a nuestro ejemplo anterior de registro de gastos, podrías definir los encabezados de columna inequívocamente como encabezados de columna de este modo:
+Un nuevo tema para este artículo es el atributo [`scope`](/es/docs/Web/HTML/Element/th#scope), que se puede añadir al elemento `<th>` para indicar a los lectores de pantalla exactamente para qué celdas es el encabezado. Volviendo a nuestro ejemplo anterior de registro de gastos, podrías definir los encabezados de columna inequívocamente como encabezados de columna de este modo:
 
 ```html
 <thead>
@@ -405,7 +405,7 @@ El atributo `scope` tiene dos valores posibles más: `colgroup` y `rowgroup`. Se
 
 ### Los atributos de id y encabezados
 
-Una alternativa al uso del atributo `scope` es usar los atributos {{htmlattrxref ("id")}} y {{htmlattrxref ("headers", "td")}} para crear asociaciones entre encabezados y celdas. La forma en que se usan es la siguiente:
+Una alternativa al uso del atributo `scope` es usar los atributos [`id`](/es/docs/Web/HTML/Global_attributes#id) y [`headers`](/es/docs/Web/HTML/Element/td#headers) para crear asociaciones entre encabezados y celdas. La forma en que se usan es la siguiente:
 
 1. Añades un `id` único a cada elemento `<th>`.
 2. Añades un atributo `headers` a cada elemento `<td>`. Cada atributo `headers` debe contener una lista de los `id` de todos los elementos `<th>` que actúan como encabezado de esa celda, separados por espacios.

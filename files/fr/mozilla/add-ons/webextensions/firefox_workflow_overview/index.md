@@ -1,17 +1,6 @@
 ---
 title: Aperçu du flux de travail Firefox
 slug: Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview
-tags:
-  - Add-ons
-  - Code
-  - Extensions
-  - Firefox
-  - WebExtensions
-  - enhance
-  - prepare
-  - publish
-  - retire
-  - workflow
 translation_of: Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: webRequest.StreamFilter.onstart
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onstart
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.onstart
-  - WebExtensions
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onstart
 ---
 

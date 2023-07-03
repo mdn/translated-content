@@ -1,16 +1,6 @@
 ---
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
-tags:
-  - Add-ons
-  - Browser
-  - Customization
-  - Customize
-  - Design
-  - Look and Feel
-  - Themes
-  - colors
-  - theme manifest
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 ---
 

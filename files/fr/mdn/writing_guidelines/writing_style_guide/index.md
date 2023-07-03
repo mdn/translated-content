@@ -1,18 +1,7 @@
 ---
 title: Guide stylistique
 slug: MDN/Writing_guidelines/Writing_style_guide
-tags:
-  - Documentation
-  - Guide
-  - Guidelines
-  - MDN
-  - MDN Meta
-  - MDN Web Docs
-  - MDN style guide
-  - Style guide
-  - Writing style guide
 translation_of: MDN/Guidelines/Writing_style_guide
-original_slug: MDN/Guidelines/Writing_style_guide
 ---
 
 {{MDNSidebar}}

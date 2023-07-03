@@ -1,13 +1,7 @@
 ---
 title: Extension pages
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
-tags:
-  - Débutant
-  - User Interface
-  - WebExtensions
-  - interface utilisateur
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
-original_slug: Mozilla/Add-ons/WebExtensions/user_interface/pages_web_incluses
 ---
 
 {{AddonSidebar()}}

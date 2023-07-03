@@ -104,17 +104,17 @@ console.log(square.area); //100
 
 ```js
 class Point {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
-    }
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
 
-    static distance(a, b) {
-        const dx = a.x - b.x;
-        const dy = a.y - b.y;
+  static distance(a, b) {
+    const dx = a.x - b.x;
+    const dy = a.y - b.y;
 
-        return Math.sqrt(dx*dx + dy*dy);
-    }
+    return Math.sqrt(dx * dx + dy * dy);
+  }
 }
 
 const p1 = new Point(5, 5);
@@ -203,7 +203,7 @@ obj.speak(); // Animal {}
 let speak = obj.speak;
 speak(); // undefined
 
-Animal.eat() // class Animal
+Animal.eat(); // class Animal
 let eat = Animal.eat;
 eat(); // undefined
 ```
@@ -211,15 +211,15 @@ eat(); // undefined
 若我們將上述程式用傳統的函式基礎類別(function based classes)表達，自動裝箱則會依據 this 在其被呼叫的函式中所綁定的值發生。
 
 ```js
-function Animal() { }
+function Animal() {}
 
-Animal.prototype.speak = function() {
+Animal.prototype.speak = function () {
   return this;
-}
+};
 
-Animal.eat = function() {
+Animal.eat = function () {
   return this;
-}
+};
 
 let obj = new Animal();
 let speak = obj.speak;
@@ -240,17 +240,17 @@ class Animal {
   }
 
   speak() {
-    console.log(this.name + ' makes a noise.');
+    console.log(this.name + " makes a noise.");
   }
 }
 
 class Dog extends Animal {
   speak() {
-    console.log(this.name + ' barks.');
+    console.log(this.name + " barks.");
   }
 }
 
-var d = new Dog('Mitzie');
+var d = new Dog("Mitzie");
 d.speak(); // Mitzie barks.
 ```
 
@@ -259,21 +259,21 @@ d.speak(); // Mitzie barks.
 你也可以擴充(extends)傳統的函式基礎"類別"。
 
 ```js
-function Animal (name) {
+function Animal(name) {
   this.name = name;
 }
 
 Animal.prototype.speak = function () {
-  console.log(this.name + ' makes a noise.');
-}
+  console.log(this.name + " makes a noise.");
+};
 
 class Dog extends Animal {
   speak() {
-    console.log(this.name + ' barks.');
+    console.log(this.name + " barks.");
   }
 }
 
-var d = new Dog('Mitzie');
+var d = new Dog("Mitzie");
 d.speak(); // Mitzie barks.
 ```
 
@@ -282,8 +282,8 @@ d.speak(); // Mitzie barks.
 ```js
 var Animal = {
   speak() {
-    console.log(this.name + ' makes a noise.');
-  }
+    console.log(this.name + " makes a noise.");
+  },
 };
 
 class Dog {
@@ -295,7 +295,7 @@ class Dog {
 // 如果你沒有用以下的方法，當你呼叫speak時會出現TypeError
 Object.setPrototypeOf(Dog.prototype, Animal);
 
-var d = new Dog('Mitzie');
+var d = new Dog("Mitzie");
 d.speak(); // Mitzie makes a noise.
 ```
 
@@ -308,14 +308,16 @@ d.speak(); // Mitzie makes a noise.
 ```js
 class MyArray extends Array {
   // Overwrite species to the parent Array constructor
-  static get [Symbol.species]() { return Array; }
+  static get [Symbol.species]() {
+    return Array;
+  }
 }
 
-var a = new MyArray(1,2,3);
-var mapped = a.map(x => x * x);
+var a = new MyArray(1, 2, 3);
+var mapped = a.map((x) => x * x);
 
 console.log(mapped instanceof MyArray); // false
-console.log(mapped instanceof Array);   // true
+console.log(mapped instanceof Array); // true
 ```
 
 ## 用 `super` 呼叫父類別
@@ -329,18 +331,18 @@ class Cat {
   }
 
   speak() {
-    console.log(this.name + ' makes a noise.');
+    console.log(this.name + " makes a noise.");
   }
 }
 
 class Lion extends Cat {
   speak() {
     super.speak();
-    console.log(this.name + ' roars.');
+    console.log(this.name + " roars.");
   }
 }
 
-var l = new Lion('Fuzzy');
+var l = new Lion("Fuzzy");
 l.speak();
 // Fuzzy makes a noise.
 // Fuzzy roars.

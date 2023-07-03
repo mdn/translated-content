@@ -104,7 +104,7 @@ _Без изменений._
 
 - Поддержка событий {{event("userproximity")}}, {{event("deviceproximity")}} (см. {{domxref("UserProximityEvent")}} и {{domxref("DeviceProximityEvent")}}) отключена по умолчанию и управляется настройкой `device.sensors.proximity.enabled` ({{bug(1462308)}}).
 - Поддержка события {{event("devicelight")}} (см. также {{domxref("DeviceLightEvent")}}) отключена по умолчанию и управляется настройкой `device.sensors.ambientLight.enabled` ({{bug(1462308)}}).
-- [События мутации](/ru/docs/Web/Guide/Events/Mutation_events) {{event("DOMSubtreeModified")}} и {{event("DOMAttrModified")}} больше не выбрасываются, когда атрибут {{htmlattrxref("style")}} изменяется с помощью CSSOM ({{bug(1460295)}}).
+- [События мутации](/ru/docs/Web/Guide/Events/Mutation_events) {{event("DOMSubtreeModified")}} и {{event("DOMAttrModified")}} больше не выбрасываются, когда атрибут [`style`](/ru/docs/Web/HTML/Global_attributes#style) изменяется с помощью CSSOM ({{bug(1460295)}}).
 - Прекращена поддержка {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} ({{bug(1408301)}}).
 - Прекращена поддержка {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}} и {{domxref("CSSValueList")}} ({{bug(1459871)}}).
 - {{domxref("window.getComputedStyle()")}} больше не возвращает `null`, если вызван на `Window`, у которого нет представления ({{bug(1467722)}}).

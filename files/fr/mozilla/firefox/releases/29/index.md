@@ -1,10 +1,6 @@
 ---
 title: Firefox 29 pour les développeurs
 slug: Mozilla/Firefox/Releases/29
-tags:
-  - TopicStub
-  - firefox developers
-  - firefox29
 translation_of: Mozilla/Firefox/Releases/29
 ---
 

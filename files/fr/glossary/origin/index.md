@@ -1,12 +1,7 @@
 ---
 title: Origine
 slug: Glossary/Origin
-tags:
-  - Glossaire
-  - Mécanismes web
-  - origine
 translation_of: Glossary/Origin
-original_slug: Glossaire/Origine
 ---
 
 L'**origine** d'une application web est définie par le schéma (protocole), l'hôte (domaine) et le port de l'{{Glossary("URL")}} utilisée pour y accéder. Deux objets ont la même origine seulement quand le schéma, l'hôte et le port correspondent.
