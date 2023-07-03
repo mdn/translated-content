@@ -5,9 +5,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 
 {{JSRef}}
 
-{{jsxref("Promise")}} 实例的 **`finally()`** 方法用于注册一个在 promise 敲定（兑现或拒绝）时调用的函数。它会立即返回一个等效的 {{jsxref("Promise")}} 对象，这可以允许你[链式](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#链式调用)调用其它 promise 方法。
+{{jsxref("Promise")}} 实例的 **`finally()`** 方法用于注册一个在 promise 敲定（兑现或拒绝）时调用的函数。它会立即返回一个等效的 {{jsxref("Promise")}} 对象，这可以允许你[链式](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#链式调用)调用其他 promise 方法。
 
-这可以让你避免在 promise 的 {{jsxref("Promise/then", "then()")}} 和 {{jsxref("Promise/catch", "catch()")}} 处理程序中重复编写代码。
+这可以让你避免在 promise 的 {{jsxref("Promise/then", "then()")}} 和 {{jsxref("Promise/catch", "catch()")}} 处理器中重复编写代码。
 
 {{EmbedInteractiveExample("pages/js/promise-finally.html", "taller")}}
 
@@ -32,15 +32,15 @@ finally(onFinally)
 
 `finally()` 方法类似于调用 {{jsxref("Promise/then", "then(onFinally, onFinally)")}}。然而，有几个不同之处：
 
-- 创建内联函数时，你可以将其传入一次，而不是强制声明两次或为其创建变量。
+- 创建内联函数时，你可以只将其传入一次，而不是强制声明两次或为其创建变量。
 - `onFinally` 回调函数不接收任何参数。这种情况恰好适用于你*不关心*拒绝原因或兑现值的情况，因此无需提供它。
 - `finally()` 调用通常是透明的，不会更改原始 promise 的状态。例如：
   - 与 `Promise.resolve(2).then(() => 77, () => {})` 不同，它返回一个最终会兑现为值 `77` 的 promise，而 `Promise.resolve(2).finally(() => 77)` 返回一个最终兑现为值 `2` 的 promise。
   - 类似地，与 `Promise.reject(3).then(() => {}, () => 88)` 不同，它返回一个最终兑现为值 `88` 的 promise，而 `Promise.reject(3).finally(() => 88)` 返回一个最终以原因 `3` 拒绝的 promise。
 
-> **备注：** 在 `finally` 回调函数中抛出错误（或返回被拒绝的 promise）仍然拒绝返回的 promise。例如，`Promise.reject(3).finally(() => { throw 99; })` 和 `Promise.reject(3).finally(() => Promise.reject(99))` 都以理由 `99` 拒绝返回的 promise。
+> **备注：** 在 `finally` 回调函数中抛出错误（或返回被拒绝的 promise）仍会导致返回的 promise 被拒绝。例如，`Promise.reject(3).finally(() => { throw 99; })` 和 `Promise.reject(3).finally(() => Promise.reject(99))` 都以理由 `99` 拒绝返回的 promise。
 
-与 {{jsxref("Promise/catch", "catch()")}} 一样，`finally()` 在内部调用其调用对象上的 `then` 方法。如果 `onFinally` 不是函数，则调用 `then()` 时使用 `onFinally` 同时作为两个参数——对于 {{jsxref("Promise.prototype.then()")}}，这意味着没有附加有效的处理程序。否则，`then()` 被调用时会使用两个内部创建的函数，其行为如下：
+与 {{jsxref("Promise/catch", "catch()")}} 一样，`finally()` 在内部调用其调用对象上的 `then` 方法。如果 `onFinally` 不是函数，则调用 `then()` 时使用 `onFinally` 同时作为两个参数——对于 {{jsxref("Promise.prototype.then()")}}，这意味着没有附加有效的处理器。否则，`then()` 被调用时会使用两个内部创建的函数，其行为如下：
 
 > **警告：** 这只是为了演示，而不是一个 polyfill。
 
