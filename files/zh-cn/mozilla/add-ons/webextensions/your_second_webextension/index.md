@@ -61,7 +61,7 @@ cd beastify
   "version": "1.0",
 
   "description": "在工具栏添加一个互动图标。点击按钮选择一个动物，然后当前活动的标签页的内容会被替换成被选择的动物的图片。参见 https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Examples#beastify",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify",
   "icons": {
     "48": "icons/beasts-48.png"
   },
@@ -102,7 +102,7 @@ cd beastify
 
 插件应该有一个图标。这个图标被用于显示在附加组件管理器中（可以通过"about:addons"来访问）。当前插件中 manifest.json 指定了我们插件的图标位于"icons/beasts-48.png"。
 
-创建“icons”文件夹，并将图标命名为“beasts-48.png”。你可以使用我们例子中的[图标](https://raw.githubusercontent.com/mdn/webextensions-examples/master/beastify/icons/beasts-48.png)，它是从 [Aha-Soft’s Free Retina iconset](http://www.aha-soft.com/free-icons/free-retina-icon-set/) 截取的，使用需要遵循该网站的许可证。
+创建“icons”文件夹，并将图标命名为“beasts-48.png”。你可以使用我们例子中的[图标](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-48.png)，它是从 [Aha-Soft’s Free Retina iconset](http://www.aha-soft.com/free-icons/free-retina-icon-set/) 截取的，使用需要遵循该网站的许可证。
 
 如果你使用自己的图标，它的尺寸应该是 48<math><semantics><mo>×</mo><annotation encoding="TeX">\times</annotation></semantics></math>48 像素的。同时，对于高分辨率的设备，可以提供 96<math><semantics><mo>×</mo><annotation encoding="TeX">\times</annotation></semantics></math>96 像素的图片。此时，manifest.json 应当这样配置：
 
@@ -117,7 +117,7 @@ cd beastify
 
 工具栏按钮也需要一个图标，并且我们的 manifest.json 承诺我们会为该工具栏在 "icons/beasts-32.png" 提供一个图标。
 
-将一个图标命名为为 "beasts-32.png"并保存到"icons"文件夹。你可以使用例子中的[图片](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png)，它是取自 [IconBeast Lite 图标集](http://www.iconbeast.com/free)并按其[许可协议](http://www.iconbeast.com/faq/)授权使用。
+将一个图标命名为为 "beasts-32.png"并保存到"icons"文件夹。你可以使用例子中的[图片](https://github.com/mdn/webextensions-examples/blob/main/beastify/icons/beasts-32.png)，它是取自 [IconBeast Lite 图标集](http://www.iconbeast.com/free)并按其[许可协议](http://www.iconbeast.com/faq/)授权使用。
 
 如果你没有弹出窗，用户点击的事件会直接分派到你的插件中。如果你制作了弹出窗，用户点击会直接打开这个弹出窗，而不会被分派给插件。本例中我们需要弹出窗，因此我们现在开始写它。
 
