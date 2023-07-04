@@ -9,21 +9,21 @@ browser-compat:
 
 {{AddonSidebar}}
 
-在扩展中使用剪贴板，正在从Web API {{domxref("Document.execCommand()", "document.execCommand")}}方法（已被弃用）过渡到{{domxref("Clipboard", "navigator.clipboard")}}方法。
+在扩展中使用剪贴板，正在从 Web API {{domxref("Document.execCommand()", "document.execCommand")}} 方法（已被弃用）过渡到 {{domxref("Clipboard", "navigator.clipboard")}} 方法。
 
-> **Note:** {{domxref("Clipboard", "navigator.clipboard")}}的API是最近增加的规范，可能不会在所有浏览器中完全实现。API是最近添加到规范中的，可能不会在所有浏览器中完全实现。本文描述了一些限制，但在使用之前，请务必查看每种方法的兼容性表格，以确保API支持你的需求。
+> **Note:** {{domxref("Clipboard", "navigator.clipboard")}} 的 API 是最近增加的规范，可能不会在所有浏览器中完全实现。 API 是最近添加到规范中的，可能不会在所有浏览器中完全实现。本文描述了一些限制，但在使用之前，请务必查看每种方法的兼容性表格，以确保 API 支持你的需求。
 
-这两个API的区别在于，{{domxref("Document.execCommand()", "document.execCommand")}}这类似于键盘上的复制、剪切和粘贴动作--在网页和剪贴板之间交换数据，而{{domxref("Clipboard", "navigator.clipboard")}}是向剪贴板写入和读取任意数据。
+这两个 API 的区别在于，{{domxref("Document.execCommand()", "document.execCommand")}} 这类似于键盘上的复制、剪切和粘贴动作--在网页和剪贴板之间交换数据，而 {{domxref("Clipboard", "navigator.clipboard")}} 是向剪贴板写入和读取任意数据。
 
 {{domxref("Clipboard", "navigator.clipboard")}}提供单独的方法来读取或写入：
 
-- 文本内容，使用{{domxref("Clipboard.readText", "navigator.clipboard.readText()")}}和{{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}}。
-- 图像、富文本、HTML以及其他富内容，使用{{domxref("Clipboard.read", "navigator.clipboard.read()")}}和{{domxref("Clipboard.write", "navigator.clipboard.write()")}}。
+- 文本内容，使用 {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} 和 {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} 。
+- 图像、富文本、HTML 以及其他富内容，使用 {{domxref("Clipboard.read", "navigator.clipboard.read()")}} 和 {{domxref("Clipboard.write", "navigator.clipboard.write()")}} 。
 
-然而，虽然{{domxref("Clipboard.readText", "navigator.clipboard.readText()")}}和{{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}}在所有浏览器上都有效，但{{domxref("Clipboard.read", "navigator.clipboard.read()"}}和{{domxref("Clipboard.write", "navigator.clipboard.write()")}却不行。例如，在撰写本文时，在Firefox上，{{domxref("Clipboard.read", "navigator.clipboard.read()")}}和{{domxref("Clipboard.write", "navigator.clipboard.write()")}}并没有完全实现，这样，要：
+然而，虽然 {{domxref("Clipboard.readText", "navigator.clipboard.readText()")}} 和 {{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}} 在所有浏览器上都有效，但 {{domxref("Clipboard.read", "navigator.clipboard.read()")}} 和 {{domxref("Clipboard.write", "navigator.clipboard.write()")}} 却不行。例如，在撰写本文时，在 Firefox 上，{{domxref("Clipboard.read", "navigator.clipboard.read()")}} 和 {{domxref("Clipboard.write", "navigator.clipboard.write()")}} 并没有完全实现，这样，要：
 
-- 使用 {{WebExtAPIRef("clipboard.setImageData","browser.clipboard.setImageData()")}} 将图像写入剪贴板，使用 {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} 将图像粘贴到网页上。
-- 将富内容（如HTML、包括图像在内的富文本等）写入剪贴板，使用{{domxref("Document.execCommand()", "document.execCommand(&#34;copy&#34;)"}}或{{domxref("Document.execCommand()", "document.execCommand(&#34;cut&#34;)"}}。然后，要么{{domxref("Clipboard.read", "navigator.clipboard.read()")}}（推荐），要么{{domxref("Document.execCommand()", "document.execCommand(&#34;paste&#34;)")}}从剪切板上读取内容。
+- 使用 {{WebExtAPIRef("clipboard.setImageData", "browser.clipboard.setImageData()")}} 将图像写入剪贴板，使用 {{domxref("Document.execCommand()", "document.execCommand(&#34;paste&#34;)")}} 将图像粘贴到网页上。
+- 将富内容（如HTML、包括图像在内的富文本等）写入剪贴板，使用 {{domxref("Document.execCommand()", "document.execCommand(&#34;copy&#34;)")}} 或 {{domxref("Document.execCommand()", "document.execCommand(&#34;cut&#34;)")}} 。然后，要么使用 {{domxref("Clipboard.read", "navigator.clipboard.read()")}}（推荐），要么使用 {{domxref("Document.execCommand()", "document.execCommand(&#34;paste&#34;)")}}从剪切板上读取内容。
 
 ## 写入系统粘贴板
 
@@ -162,7 +162,7 @@ document.querySelector("#paste").addEventListener("click", paste);
 
 ### 特定浏览器注意事项
 
-Firefox 在 54 版本提供了 `"clipboardRead"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ，但是仅支持向处于 [内容可编辑模式](/zh-CN/docs/Web/Guide/HTML/Editable_content) 的元素粘贴，对于内容脚本，只能在 {{HTMLElement("textarea")}} 工作。对于后台脚本，任何元素都可被设置为内容可编辑模式。
+Firefox 在 54 版本提供了 `"clipboardRead"` [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ，但是仅支持向处于 [内容可编辑模式](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 的元素粘贴，对于内容脚本，只能在 {{HTMLElement("textarea")}} 工作。对于后台脚本，任何元素都可被设置为内容可编辑模式。
 
 ## Browser compatibility
 
