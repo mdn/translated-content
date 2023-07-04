@@ -22,7 +22,7 @@ browser-compat:
 
 然而，虽然{{domxref("Clipboard.readText", "navigator.clipboard.readText()")}}和{{domxref("Clipboard.writeText", "navigator.clipboard.writeText()")}}在所有浏览器上都有效，但{{domxref("Clipboard.read", "navigator.clipboard.read()"}}和{{domxref("Clipboard.write", "navigator.clipboard.write()")}却不行。例如，在撰写本文时，在Firefox上，{{domxref("Clipboard.read", "navigator.clipboard.read()")}}和{{domxref("Clipboard.write", "navigator.clipboard.write()")}}并没有完全实现，这样，要：
 
-- 使用{{WebExtAPIRef("clipboard.setImageData", "browser.clipboard.setImageData()")}}将图像写入剪贴板，使用{{domxref("Document.execCommand()", "document.execCommand(&#34;paste&#34;)"}}将图像粘贴到网页上。
+- 使用 {{WebExtAPIRef("clipboard.setImageData","browser.clipboard.setImageData()")}} 将图像写入剪贴板，使用 {{domxref("Document.execCommand()","document.execCommand(&#34;paste&#34;)")}} 将图像粘贴到网页上。
 - 将富内容（如HTML、包括图像在内的富文本等）写入剪贴板，使用{{domxref("Document.execCommand()", "document.execCommand(&#34;copy&#34;)"}}或{{domxref("Document.execCommand()", "document.execCommand(&#34;cut&#34;)"}}。然后，要么{{domxref("Clipboard.read", "navigator.clipboard.read()")}}（推荐），要么{{domxref("Document.execCommand()", "document.execCommand(&#34;paste&#34;)")}}从剪切板上读取内容。
 
 ## 写入系统粘贴板
