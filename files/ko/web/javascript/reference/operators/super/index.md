@@ -1,6 +1,8 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
+l10n:
+  sourceCommit: 0f3738f6b1ed1aa69395ff181207186e1ad9f4d8
 ---
 
 {{jsSidebar("Operators")}}
