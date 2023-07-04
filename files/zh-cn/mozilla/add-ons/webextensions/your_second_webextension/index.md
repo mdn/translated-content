@@ -26,7 +26,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 
 你可以想象这样的扩展的整体结构：
 
-![manifest.json 文件包含了图标、浏览器动作、弹出式窗口和网络可访问资源。Javascript 脚本 按在 beastify.js 里调用被选动物的弹出资源。](untitled-1.png)
+![manifest.json 文件包含了图标、浏览器动作、弹出式窗口和网络可访问资源。Javascript 脚本在 beastify.js 里调用被选动物的弹出资源。](untitled-1.png)
 
 这是一个非常简单的扩展，但也展示了 WebExtensions API 的许多基本概念：
 
