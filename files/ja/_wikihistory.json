@@ -4788,10 +4788,6 @@
     "modified": "2019-12-10T08:10:03.527Z",
     "contributors": ["Uemmra3"]
   },
-  "Mozilla/Add-ons/WebExtensions/user_interface/Browser_action": {
-    "modified": "2019-03-18T21:04:04.960Z",
-    "contributors": ["Uemmra3"]
-  },
   "Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items": {
     "modified": "2019-03-18T21:03:32.118Z",
     "contributors": ["Uemmra3"]
@@ -4819,6 +4815,10 @@
   "Mozilla/Add-ons/WebExtensions/user_interface/Sidebars": {
     "modified": "2019-03-18T21:03:44.150Z",
     "contributors": ["naturallucky", "Uemmra3"]
+  },
+  "Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button": {
+    "modified": "2019-03-18T21:04:04.960Z",
+    "contributors": ["Uemmra3"]
   },
   "Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels": {
     "modified": "2019-03-18T21:03:31.901Z",
