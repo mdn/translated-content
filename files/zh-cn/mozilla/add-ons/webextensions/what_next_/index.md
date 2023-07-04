@@ -7,6 +7,8 @@ slug: Mozilla/Add-ons/WebExtensions/What_next_
 
 现在你可以将你对浏览器扩展的想法变成现实了。在开始这个过程之前 ，值得了解一些有助于使其顺利进行的事情。
 
+You can find more about many of the things discussed on this page on [Extension Workshop](https://extensionworkshop.com), a website dedicated to helping you write, test, publish, and distribute extensions for Firefox.
+
 ## 你的开发环境
 
 你不需要任何特殊的开发或构建环境工具来创建浏览器扩展：只需要一个简单的文本编辑器就可以创建出很好的浏览器扩展。当然，你可能一直在做 web 开发，有一套你想去配置的开发工具和环境。如果是这样，你需要意识到一些事情。
@@ -47,5 +49,16 @@ slug: Mozilla/Add-ons/WebExtensions/What_next_
 
 - 更多关于浏览器扩展背后的基本概念，从如何[使用 JavaScript API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API) 的细节开始。
 - 可供浏览器扩展使用的[用户界面组件](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface)的指南。
+- A collection of how-to guides on achieving key tasks in your extensions or making use of the JavaScript APIs.
 - [JavaScript API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) 的完整参考指南。
 - [Manifest 键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)的完整参考指南。
+
+You'll also want to head on over to Extension Workshop where you'll find everything you need to know about creating extensions for Firefox, including:
+
+- [an overview of the Firefox extension features](https://extensionworkshop.com/#about)
+- [details of the tools and processes for developing and testing](https://extensionworkshop.com/documentation/develop/)
+- [how to publish your extension on addons.mozilla.org or distribute it yourself](https://extensionworkshop.com/documentation/publish/)
+- [how to manage your published extension](https://extensionworkshop.com/documentation/manage/)
+- [an enterprise guide for developing and using extensions](https://extensionworkshop.com/documentation/enterprise/)
+- [how to develop themes for Firefox](https://extensionworkshop.com/documentation/themes/)
+- [details about the Firefox developer communities](https://extensionworkshop.com/community/)

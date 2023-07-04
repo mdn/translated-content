@@ -19,9 +19,9 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 - [内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#内容脚本): 扩展中包含的 JavaScript，你可以注入它们到网页中。
 - [网络可访问资源](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#网络可访问资源): 使打包好的内容可用于网页与内容脚本中。
 
-![](webextension-anatomy.png)
+![The components of a web extension. The manifest.JSON must be present in all extensions. It provides pointers to background pages, content scripts, browser actions, page actions, options pages, and web accessible resources. Background pages consist of HTML and JS. Content scripts consist of JS and CSS. The user clicks on an icon to trigger browser actions and page actions and the resulting pop-up consists of HTML, CSS, and JS. Options pages consist of HTML, CSS, and JS.](webextension-anatomy.png)
 
-浏览其他的详细信息请到 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 。
+浏览其他的详细信息请到 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 。
 
 除了这些 manifest 中已经列举的项之外，扩展也可以携带额外的 [Extension pages](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) 和支持的文件。
 
