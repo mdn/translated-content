@@ -474,7 +474,6 @@
 /es/docs/Glossary/Criptografía	/es/docs/Glossary/Cryptography
 /es/docs/Glossary/DHTML	/es/docs/Glossary
 /es/docs/Glossary/Descifrado	/es/docs/Glossary/Decryption
-/es/docs/Glossary/Dynamic_programming_language	/es/docs/orphaned/Glossary/Dynamic_programming_language
 /es/docs/Glossary/Empty_element	/es/docs/Glossary/Void_element
 /es/docs/Glossary/Encriptación	/es/docs/Glossary/Encryption
 /es/docs/Glossary/Entidad	/es/docs/Glossary/Entity
