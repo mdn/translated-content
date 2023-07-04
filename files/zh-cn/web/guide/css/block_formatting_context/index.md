@@ -9,7 +9,7 @@ slug: Web/Guide/CSS/Block_formatting_context
 
 下列方式会创建块格式化上下文：
 
-- 文档级别的根元素（`<html>`）。
+- 文档的根元素（`<html>`）。
 - 浮动元素（即 {{ cssxref("float") }} 值不为 `none` 的元素）。
 - 绝对定位元素（{{ cssxref("position") }} 值为 `absolute` 或 `fixed` 的元素）。
 - 行内块元素（{{ cssxref("display") }} 值为 `inline-block` 的元素）。
@@ -30,7 +30,7 @@ slug: Web/Guide/CSS/Block_formatting_context
 - 排除外部浮动。
 - 阻止[外边距重叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)。
 
-> **备注：** flex/grid 容器（{{ cssxref("display") }}：flex/grid/inline-flex/inline-grid）建立新的 flex/grid 格式上下文，除布局之外，它与块格式上下文类似。flex/grid 容器中没有可用的浮动子级，但排除外部浮动和阻止外边距重叠仍然有效。
+> **备注：** 弹性/网格容器（{{ cssxref("display") }}：flex/grid/inline-flex/inline-grid）建立新的弹性/网格格式化上下文，除布局之外，它与区块格式化上下文类似。弹性/网格容器中没有可用的浮动子级，但排除外部浮动和阻止外边距重叠仍然有效。
 
 ## 示例
 
