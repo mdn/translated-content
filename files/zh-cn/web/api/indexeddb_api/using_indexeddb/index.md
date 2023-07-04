@@ -40,99 +40,123 @@ const request = window.indexedDB.open("MyTestDatabase", 3);
 
 open 请求不会立即打开数据库或者开始一个事务。对 `open()` 函数的调用会返回一个我们可以作为事件来处理的包含结果（result，如果成功的话）或者错误值的 [`IDBOpenDBRequest`](/en-US/docs/Web/API/IDBOpenDBRequest) 对象。在 IndexedDB 中的大部分异步方法做的都是同样的事情——返回一个包含结果或错误的 [`IDBRequest`](/en-US/docs/Web/API/IDBRequest) 对象。open 函数的结果是一个 `IDBDatabase` 对象的实例。
 
-open 方法的二个参数是数据库的版本号。数据库的版本决定了数据库架构（schema），即数据库的对象存储（object store）以及存储结构。如果数据库不存在，`open` 操作会创建该数据库，然后触发 `onupgradeneeded` 事件，你需要在该事件的处理器中创建数据库模式（schema）。如果数据库已经存在，但你指定了一个更高的数据库版本，会直接触发 `onupgradeneeded` 事件，允许你在处理函数中更新数据库模式。我们在后面的[更新数据库的版本号](#Updating_the_version_of_the_database)和 {{ domxref("IDBFactory.open") }} 中会提到更多有关这方面的内容。
+open 方法的二个参数是数据库的版本号。数据库的版本决定了数据库模式（schema），即数据库的对象存储（object store）以及存储结构。如果数据库不存在，`open` 操作会创建该数据库，然后触发 `onupgradeneeded` 事件，你需要在该事件的处理器中创建数据库模式。如果数据库已经存在，但你指定了一个更高的数据库版本，会直接触发 `onupgradeneeded` 事件，允许你在处理器中更新数据库模式。我们在后面的[创建或更新数据库的版本](#创建或更新数据库的版本)和 {{ domxref("IDBFactory.open") }} 参考页中会提到更多有关这方面的内容。
 
-> **警告：** 版本号是一个 unsigned long long 数字，这意味着它可以是一个特别大的数字，但不能使用浮点数，否则它将会被转变成离它最近的整数，这可能导致 `upgradeneeded` 事件不会被触发。例如，不要使用 2.4 作为版本号。
->
-> ```js
-> var request = indexedDB.open("MyTestDatabase", 2.4); // 不要这么做，因为版本会被置为 2。
-> ```
+> **警告：** 版本号是一个 `unsigned long long` 数字，这意味着它可以是一个特别大的数字，但不能使用浮点数，否则它将会被转变成离它最近的整数，这可能导致 `upgradeneeded` 事件不会被触发。例如，不要使用 2.4 作为版本号：`const request = indexedDB.open("MyTestDatabase", 2.4); // 不要这么做，因为版本会被取整为 2`
 
-#### 生成处理函数
+#### 生成处理器
 
-几乎所有我们产生的请求我们在处理的时候首先要做的就是添加成功和失败处理函数：
+对于我们产生的几乎所有的请求，我们首先要做的就是添加成功和失败处理器：
 
 ```js
-request.onerror = function(event) {
-  // Do something with request.errorCode!
+request.onerror = (event) => {
+  // 使用 request.errorCode 来做点什么！
 };
-request.onsuccess = function(event) {
-  // Do something with request.result!
+request.onsuccess = (event) => {
+  // 使用 request.result 来做点什么！
 };
 ```
 
-`onsuccess()` 和 `onerror()` 这两个函数哪个被调用呢？如果一切顺利的话，一个 success 事件（即一个 type 属性被设置成 `"success"` 的 DOM 事件）会被触发，`request` 会作为它的 `target`。一旦它被触发的话，相关 `request` 的 `onsuccess()` 处理函数就会被触发，使用 success 事件作为它的参数。否则，如果不是所有事情都成功的话，一个 error 事件（即 `type` 属性被设置成 `"error"` 的 DOM 事件）会在 request 上被触发。这将会触发使用 error 事件作为参数的 `onerror()` 方法。
+`onsuccess()` 和 `onerror()` 这两个函数哪个被调用呢？如果一切顺利的话，会触发 success 事件（即一个 `type` 属性被设置成 `"success"` 的 DOM 事件），并将 `request` 设置为它的 `target`。一旦它被触发，相关 `request` 的 `onsuccess()` 函数就会被触发，使用 success 事件作为它的参数。否则，如果有任何错误的话，error 事件（即 `type` 属性被设置成 `"error"` 的 DOM 事件）会在 request 上被触发。这将会触发使用 error 事件作为参数的 `onerror()` 函数。
 
-IndexedDB 的 API 被设计来尽可能地减少对错误处理的需求，所以你可能不会看到有很多的错误事件（起码，不会在你已经习惯了这些 API 之后！）。然而在打开数据库的情况下，还是有一些会产生错误事件的常见情况。最有可能出现的问题是用户决定不允许你的 web app 访问以创建一个数据库。IndexedDB 的主要设计目标之一就是允许大量数据可以被存储以供离线使用。（要了解关于针对每个浏览器你可以有多少存储空间的更多内容，请参见 [存储限制](/zh-CN/IndexedDB#Storage_limits)）。
+IndexedDB API 以满足尽可能地减少对错误处理的需求而设计，所以你可能不会看到有很多的错误事件（至少，不会在你已经习惯了这些 API 之后！）。然而在打开数据库的情况下，还是有一些会产生错误事件的常见情况。最有可能出现的问题是用户决定不允许你的 web 应用创建数据库。IndexedDB 的主要设计目标之一就是允许大量数据可以被存储以供离线使用。（要了解关于针对每个浏览器你可以有多少存储空间的更多内容，请参见[浏览器存储限制和清理标准页面的数据存储限制](/zh-CN/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#数据存储限制)）。
 
-显然，浏览器不希望允许某些广告网络或恶意网站来污染你的计算机，所以浏览器会在任意给定的 web app 首次尝试打开一个 IndexedDB 存储时对用户进行提醒。用户可以选择允许访问或者拒绝访问。还有，IndexedDB 在浏览器的隐私模式（Firefox 的 Private Browsing 模式和 Chrome 的 Incognito 模式）下是被完全禁止的。隐私浏览的全部要点在于不留下任何足迹，所以在这种模式下打开数据库的尝试就失败了。
+显然，浏览器不希望允许某些广告网络或恶意网站来污染你的计算机，所以浏览器会在任意给定的 web 应用首次尝试打开 IndexedDB 以存储数据时对用户进行提醒。用户可以选择允许访问或者拒绝访问。此外，浏览器的隐私模式（Firefox 的隐私浏览模式和 Chrome 的无痕模式，但截至 2021 年 5 月，Firefox [尚未实现](https://bugzil.la/781982)此特性，所以你仍然无法在 Firefox 的隐私浏览中使用 IndexedDB）下，IndexedDB 存储仅在内存中存在至隐私会话结束。
 
-现在，假设用户已经允许了你的要创建一个数据库的请求，同时你也已经收到了一个来触发 success 回调的 success 事件；然后呢？这里的 request 是通过调用 `indexedDB.open()` 产生的，所以 `request.result` 是一个 `IDBDatabase` 的实例，而且你肯定希望把它保存下来以供后面使用。你的代码看起来可能像这样：
+现在，假设用户已经允许了你的要创建数据库的请求，同时你也已经收到了一个触发了 success 回调的 success 事件；然后呢？这里的请求（request）是通过调用 `indexedDB.open()` 产生的，所以 `request.result` 是一个 `IDBDatabase` 的实例，而且你肯定希望将其保存下来以供后续使用。你的代码看起来可能像这样：
 
 ```js
-var db;
-var request = indexedDB.open("MyTestDatabase");
-request.onerror = function(event) {
-  alert("Why didn't you allow my web app to use IndexedDB?!");
+let db;
+const request = indexedDB.open("MyTestDatabase");
+request.onerror = (event) => {
+  console.error("为什么不允许我的 web 应用使用 IndexedDB！");
 };
-request.onsuccess = function(event) {
+request.onsuccess = (event) => {
   db = event.target.result;
 };
 ```
 
 #### 错误处理
 
-如上文所述，错误事件遵循冒泡机制。错误事件都是针对产生这些错误的请求的，然后事件冒泡到事务，然后最终到达数据库对象。如果你希望避免为所有的请求都增加错误处理程序，你可以替代性的仅对数据库对象添加一个错误处理程序，像这样：
+如上文所述，错误事件遵循冒泡机制。错误事件都是针对产生这些错误的请求的，然后事件冒泡到事务，然后最终到达数据库对象。如果你希望避免为所有的请求都增加错误处理程序，你可以仅对数据库对象添加错误处理器，像这样：
 
 ```js
-db.onerror = function(event) {
-  // Generic error handler for all errors targeted at this database's
-  // requests!
-  alert("Database error: " + event.target.errorCode);
+db.onerror = (event) => {
+  // 针对此数据库请求的所有错误的通用错误处理器！
+  console.error(`数据库错误：${event.target.errorCode}`);
 };
 ```
 
-在打开数据库时常见的可能出现的错误之一是 `VER_ERR`。这表明存储在磁盘上的数据库的版本高于你试图打开的版本。这是一种必须要被错误处理程序处理的一种出错情况。
+在打开数据库时常见的可能出现的错误之一是 `VER_ERR`。这表明存储在磁盘上的数据库的版本*高于*你试图打开的版本。这是一种必须要被错误处理器处理的一种出错情况。
 
-### 创建和更新数据库版本号
+### 创建或更新数据库的版本
 
-当你创建一个新的数据库或者增加已存在的数据库的版本号（当[打开数据库](#打开数据库)时，指定一个比之前更大的版本号）， `onupgradeneeded` 事件会被触发，[IDBVersionChangeEvent](/zh-CN/docs/Web/API/IDBVersionChangeEvent) 对象会作为参数传递给绑定在 `request.result`（例如例子中的 `db`）上的 `onversionchange` 事件处理函数，你应该在此创建该版本需要的对象仓库（object store）。
-
-要更新数据库的 schema，也就是创建或者删除对象存储空间，需要实现 `onupgradeneeded` 处理程序，这个处理程序将会作为一个允许你处理对象存储空间的 `versionchange` 事务的一部分被调用。
+当你创建一个新的数据库或者增加已存在的数据库的版本号（当[打开数据库](#打开数据库)时，指定一个比之前更大的版本号），会触发 `onupgradeneeded` 事件，[IDBVersionChangeEvent](/zh-CN/docs/Web/API/IDBVersionChangeEvent) 对象会作为参数传递给绑定在 `request.result`（例如例子中的 `db`）上的 `onversionchange` 事件处理器。在 `upgradeneeded` 事件的处理器中，你应该创建该数据库版本需要的对象存储（object store）：
 
 ```js
-// 该事件仅在较新的浏览器中实现了
-request.onupgradeneeded = function(event) {
-  // 保存 IDBDataBase 接口
-  var db = event.target.result;
+// 该事件仅在最新的浏览器中实现
+request.onupgradeneeded = (event) => {
+  // 保存 IDBDatabase 接口
+  const db = event.target.result;
 
-  // 为该数据库创建一个对象仓库
-  var objectStore = db.createObjectStore("name", { keyPath: "myKey" });
+  // 为数据库创建对象存储（objectStore）
+  const objectStore = db.createObjectStore("name", { keyPath: "myKey" });
 };
 ```
 
-在这种情况下，数据库会保留之前版本数据库的对象仓库（object store），因此你不必再次创建这些对象仓库。你需要创建新的对象仓库，或删除不再需要的上一版本中的对象仓库。如果你需要修改一个已存在的对象仓库（例如要修改 `keyPath`），你必须先删除原先的对象仓库然后使用新的设置创建。（注意，这样会丢失对象仓库里的数据，如果你需要保存这些信息，你要在数据库版本更新前读取出来并保存在别处）。
+在这种情况下，数据库会保留之前版本数据库的对象存储，因此你不必再次创建这些对象存储。你需要创建新的对象存储，或删除不再需要的上一版本中的对象存储。如果你需要修改一个已存在的对象存储（例如要修改 `keyPath`），你必须先删除原先的对象存储然后使用新的选项再次创建。（注意，这样会丢失对象存储中的数据，如果你需要保存这些信息，你要在数据库版本更新前读取出来并保存在别处）。
 
-尝试创建一个与已存在的对象仓库重名（或删除一个不存在的对象仓库）会抛出错误。
+尝试创建一个与已存在（重名）的对象存储（或删除一个不存在的对象仓库）会抛出错误。
 
-如果 `onupgradeneeded`事件成功执行完成，打开数据库请求的 `onsuccess` 处理函数会被触发。
-
-WebKit/Blink 支持当前版本的规范，同时 Chrome 23+ 、Opera 17+ 以及 IE 10+ 同样支持。其他和更旧的实现没有实现当前版本的规范，因此还不支持 `indexedDB.open(name, version).onupgradeneeded` 签名。有关如何在较旧 Webkit/Blink 上升级数据库版本的更多信息，请参见 [IDBDatabase 参考文档](<https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated>)。
+如果 `onupgradeneeded` 事件成功执行完成，打开数据库请求的 `onsuccess` 处理器会被触发。
 
 ### 构建数据库
 
-现在来构建数据库。IndexedDB 使用对象存仓库而不是表，并且一个单独的数据库可以包含任意数量的对象存储空间。每当一个值被存储进一个对象存储空间时，它会被和一个键相关联。键的提供可以有几种不同的方法，这取决于对象存储空间是使用 [key path](/zh-CN/IndexedDB#gloss_key_path) 还是 [key generator](/zh-CN/IndexedDB#gloss_key_generator)。
+现在让我们构建数据库。IndexedDB 使用对象存储而不是表，并且一个数据库可以包含任意数量的对象存储。每当一个值被存入一个对象存储时，它会与一个键相关联。键的提供可以有几种不同的方法，这取决于对象存储是使用[键路径](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#键路径) 还是[键生成器](/zh-CN/docs/Web/API/IndexedDB_API/Basic_Terminology#键生成器)。
 
 下面的表格显示了几种不同的提供键的方法。
 
-| 键路径 (`keyPath`) | 键生成器 (`autoIncrement`) | 描述                                                                                                                                                                                                         |
-| ------------------ | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| No                 | No                         | 这种对象存储空间可以持有任意类型的值，甚至是像数字和字符串这种基本数据类型的值。每当我们想要增加一个新值的时候，必须提供一个单独的键参数。                                                                   |
-| Yes                | No                         | 这种对象存储空间只能持有 JavaScript 对象。这些对象必须具有一个和 key path 同名的属性。                                                                                                                       |
-| No                 | Yes                        | 这种对象存储空间可以持有任意类型的值。键会为我们自动生成，或者如果你想要使用一个特定键的话你可以提供一个单独的键参数。                                                                                       |
-| Yes                | Yes                        | 这种对象存储空间只能持有 JavaScript 对象。通常一个键被生成的同时，生成的键的值被存储在对象中的一个和 key path 同名的属性中。然而，如果这样的一个属性已经存在的话，这个属性的值被用作键而不会生成一个新的键。 |
+<table class="no-markdown">
+  <thead>
+    <tr>
+      <th scope="col">键路径（<code>keyPath</code>）</th>
+      <th scope="col">键生成器（<code>autoIncrement</code>）</th>
+      <th scope="col">描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>禁用</td>
+      <td>禁用</td>
+      <td>
+        这种对象存储可以持有任意类型的值，甚至是像数字和字符串这种原始值。每当我们想要增加一个新值的时候，必须提供一个单独的键参数。
+      </td>
+    </tr>
+    <tr>
+      <td>启用</td>
+      <td>禁用</td>
+      <td>
+        这种对象存储只能持有 JavaScript 对象。这些对象必须具有一个和键路径同名的属性。
+      </td>
+    </tr>
+    <tr>
+      <td>禁用</td>
+      <td>启用</td>
+      <td>
+        这种对象存储可以持有任意类型的值。键会为我们自动生成，或者如果你想要使用一个特定键的话你可以提供一个单独的键参数。
+      </td>
+    </tr>
+    <tr>
+      <td>启用</td>
+      <td>启用</td>
+      <td>
+        这种对象存储只能持有 JavaScript 对象。通常一个键被生成的同时，生成的键的值会被存储在对象中的一个和键路径同名的属性中。然而，如果已存在该属性，该属性的值将被用作键而不会生成一个新的键。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-你也可以使用对象存储空间持有的对象，不是基本数据类型，在任何对象存储空间上创建索引。索引可以让你使用被存储的对象的属性的值来查找存储在对象存储空间的值，而不是用对象的键来查找。
+在使用对象存储持有的对象，不是基本数据类型的情况下，你可以在任何对象存储上创建索引。索引可以让你使用被存储的对象的属性的值来查找存储在对象存储中的值，而不是用对象的键来查找。
 
 此外，索引具有对存储的数据执行简单限制的能力。通过在创建索引时设置 unique 标记，索引可以确保不会有两个具有同样索引 key path 值的对象被储存。因此，举例来说，如果你有一个用于持有一组 people 的对象存储空间，并且你想要确保不会有两个拥有同样 email 地址的 people，你可以使用一个带有 unique 标识的索引来确保这些。
 
@@ -572,7 +596,7 @@ Since the user can exit the browser at any time, this means that you cannot rely
 
 首先，你应该始终使数据库在事务结束时处于一个稳定的状态。比如，假设你使用了一个数据库来保存一个允许用户编辑的项目列表。你通过清空对象仓库然后写入新列表来在用户编辑后保存它，这存在一个危险，那就是浏览器可能在清空数据后还没有写入数据时就关闭了，使得对象仓库变得空空如也。为了避免这种情况，你应该在同一个事务中执行清空数据和写入数据的操作。
 
-其次，你不应该把数据库事务绑定到卸载事件上。如果卸载事件被浏览器关闭所触发，卸载事件处理函数中的任何事务都不会完成。跨浏览器会话维护信息的直观的实现方法时在浏览器（或特定页）打开时从数据库读取它，在用户和浏览器交互式更新它，然后在浏览器（或页面）关闭时保存至数据库。然而，这并不会生效。这样一来，数据库事务会在卸载事件句柄中被创建，但由于它们时异步的，所以它们在它们执行之前就会被中断。
+其次，你不应该把数据库事务绑定到卸载事件上。如果卸载事件被浏览器关闭所触发，卸载事件处理器中的任何事务都不会完成。跨浏览器会话维护信息的直观的实现方法时在浏览器（或特定页）打开时从数据库读取它，在用户和浏览器交互式更新它，然后在浏览器（或页面）关闭时保存至数据库。然而，这并不会生效。这样一来，数据库事务会在卸载事件句柄中被创建，但由于它们时异步的，所以它们在它们执行之前就会被中断。
 
 实际上，这里没有办法可以确保 IndexedDB 事务可以执行完毕，即使是浏览器正常关闭的情况。参见 [Firefox bug 870645](https://bugzil.la/870645)。作为一个正常关闭通知的变通方案，你可以跟踪你的事务并添加一个 `beforeunload` 事件来提醒用户，如果此时有事务在数据库卸载时还没有完成。
 
