@@ -5543,10 +5543,6 @@
     "modified": "2019-03-18T20:52:33.784Z",
     "contributors": ["Apricot", "876843240", "jinnchen"]
   },
-  "Mozilla/Add-ons/WebExtensions/user_interface/Browser_action": {
-    "modified": "2019-03-18T21:03:41.863Z",
-    "contributors": ["kyle2003"]
-  },
   "Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles": {
     "modified": "2020-10-15T22:25:56.457Z",
     "contributors": ["DarthVaderrr"]
@@ -5562,6 +5558,10 @@
   "Mozilla/Add-ons/WebExtensions/user_interface/Sidebars": {
     "modified": "2019-03-18T21:02:29.279Z",
     "contributors": ["dfchong"]
+  },
+  "Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button": {
+    "modified": "2019-03-18T21:03:41.863Z",
+    "contributors": ["kyle2003"]
   },
   "Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels": {
     "modified": "2019-03-18T21:02:57.359Z",

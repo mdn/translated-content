@@ -1,7 +1,7 @@
 ---
 title: Primeros Pasos
-slug: Web/Guide/AJAX/Getting_Started
-original_slug: Web/Guide/AJAX/Primeros_Pasos
+slug: conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
+original_slug: Web/Guide/AJAX/Getting_Started
 ---
 
 Este artículo es una guía básica sobre AJAX e incluye dos ejemplos.
