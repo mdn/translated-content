@@ -20,7 +20,7 @@ slug: Web/API/File_System_Access_API
 - {{domxref('HTML Drag and Drop API', 'HTML 拖放 API', '', 'nocode')}} 的 {{domxref('DataTransferItem.getAsFileSystemHandle()')}} 方法。
 - [文件处理 API](https://developer.chrome.com/en/articles/file-handling/)。
 
-每种句柄都提供了其独有的功能，取决于你使用的种类，会有些许差异（详见[接口](#接口)部分）。在获得句柄后，你便可以访问文件的数据或是被选中的目录的信息。此 API 开辟了 web 此前一直缺乏的潜在功能。但不论如何，安全性是设计 API 时的首要考量，除非用户明确授权，否则就不允许访问文件和目录的数据。
+每种句柄都提供了其独有的功能，取决于你使用的种类，会有些许差异（详见[接口](#接口)部分）。在获得句柄后，你便可以访问文件的数据或是被选中的目录的信息（包含子目录）。此 API 开辟了 web 此前一直缺乏的潜在功能。但不论如何，安全性是设计 API 时的首要考量，除非用户明确授权，否则就不允许访问文件和目录的数据。
 
 > **备注：** 使用此 API 的特性时可能会抛出的各种异常已在规范定义的相关页面中列出。然而，API 与底层操作系统的交互使得实际情况更加复杂。这里提供一篇关于[在规范中列出错误对应表](https://github.com/whatwg/fs/issues/57)的提议，其中包含了一些有用的信息。
 
@@ -38,7 +38,7 @@ slug: Web/API/File_System_Access_API
 
 在 OPFS 内可以通过以下三步来操作文件：
 
-1. {{domxref("StorageManager.getDirectory()")}} 方法，可以在 worker 线程或主线程中调用 [`navigator.storage.getDirectory()`](/zh-CN/docs/Web/API/Navigator/storage)，返回一个允许你访问某个目录以及其内容的 {{domxref("FileSystemDirectoryHandle")}} 对象——代表 OPFS 的根目录。
+1. {{domxref("StorageManager.getDirectory()")}} 方法，可以在 worker 线程或主线程中调用 [`navigator.storage.getDirectory()`](/zh-CN/docs/Web/API/Navigator/storage)，返回一个允许你访问某个目录以及其内容的 {{domxref("FileSystemDirectoryHandle")}} 对象——它代表 OPFS 的根目录。
 2. 调用 {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} 方法获得一个 {{domxref('FileSystemFileHandle')}} 对象，其表示目录中指定文件的句柄。
 3. 调用文件句柄的 {{domxref('FileSystemFileHandle.createSyncAccessHandle', 'createSyncAccessHandle()')}} 方法，获得一个 {{domxref('FileSystemSyncAccessHandle')}} 对象，用于读写文件。这是一种用于高性能 _同步_ 读写操作的句柄（其他类型的句柄是异步的）。此类的同步特性带来了性能优势，可用于异步操作开销较大的情境（例如 [WebAssembly](/zh-CN/docs/WebAssembly)）。注意：此方法为 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 专用。
 
@@ -50,7 +50,7 @@ slug: Web/API/File_System_Access_API
 
 此 API 也提供“保存”功能：
 
-- 对于异步句柄，使用 {{domxref('FileSystemWritableFileStream')}} 接口。当你想要保存的数据是 {{domxref('Blob')}}、{{jsxref("String")}} 对象、字符串或 {{jsxref('ArrayBuffer', 'buffer')}} 形式的时候，你可以打开一个写入流把数据保存到文件。可以是已经存在的文件，也可以是新文件。
+- 对于异步句柄，使用 {{domxref('FileSystemWritableFileStream')}} 接口。当你想要保存的数据是 {{domxref('Blob')}}、{{jsxref("String")}} 对象、字符串字面量或 {{jsxref('ArrayBuffer', 'buffer')}} 形式的时候，你可以打开一个写入流把数据保存到文件。可以是已经存在的文件，也可以是新文件。
 - 对于同步的 {{domxref('FileSystemSyncAccessHandle')}}，使用 {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} 方法写入更改。你还可以选择调用 {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}} 以使更改在指定的时间点写入磁盘（或者你也可以让底层操作系统在其认为合适的时间点执行写入，这么做大多数情况下应该都不会有问题）。
 
 ## 接口
@@ -108,7 +108,7 @@ async function getTheFile() {
 
 ### 访问目录
 
-下面的例子能够取得指定名称的目录的句柄，如果目录不存在，则创建。
+下面的示例能够取得指定名称的目录的句柄，如果目录不存在，则创建。
 
 ```js
 const dirName = "directoryToGetName";
