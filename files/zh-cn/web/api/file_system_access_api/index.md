@@ -26,11 +26,11 @@ slug: Web/API/File_System_Access_API
 
 > **备注：** 基于 {{domxref("FileSystemHandle")}} 的对象能够被序列化存储至 {{domxref("IndexedDB API", "IndexedDB", "", "nocode")}} 数据库实例中, 也可以通过 {{domxref("window.postMessage", "postMessage()")}} 移交。
 
-### 域私有文件系统
+### 源私有文件系统
 
-[域私有文件系统](https://fs.spec.whatwg.org/#origin-private-file-system)（下文简称“OPFS”）是页面所属的域专用的存储端点，它提供对一种经过高度性能优化的特殊文件的访问能力的选择，例如，对文件内容的原地、独占写入访问。
+[源私有文件系统](https://fs.spec.whatwg.org/#origin-private-file-system)（下文简称“OPFS”）是页面所属的源专用的存储端点，它提供对一种经过高度性能优化的特殊文件的访问能力的选择，例如，对文件内容的原地、独占写入访问。
 
-在 OPFS 中存储数据近似于浏览器提供的其他页面域私有存储机制（如 {{domxref("IndexedDB API", "IndexedDB API", "", "nocode")}}）。其意味着，在 OPFS 中的文件相较于用选择器选择的文件有以下不同点：
+在 OPFS 中存储数据近似于浏览器提供的其他页面源私有存储机制（如 {{domxref("IndexedDB API", "IndexedDB API", "", "nocode")}}）。其意味着，在 OPFS 中的文件相较于用选择器选择的文件有以下不同点：
 
 - 访问 OPFS 中的文件不需要用户授权。
 - 清除站点数据会删除 OPFS。
@@ -62,7 +62,7 @@ slug: Web/API/File_System_Access_API
 - {{domxref("FileSystemDirectoryHandle")}}
   提供一个文件系统目录的句柄。
 - {{domxref("FileSystemSyncAccessHandle")}}
-  提供一个文件系统条目的同步句柄，用于在磁盘上原地操作单个文件。其在文件读写上的同步特性可在异步操作开销较大的情境中使关键方法拥有更优秀的性能，例如 [WebAssembly](/zh-CN/docs/WebAssembly)。此类只能在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中操作[域私有文件系统](#域私有文件系统)上的文件时访问。
+  提供一个文件系统条目的同步句柄，用于在磁盘上原地操作单个文件。其在文件读写上的同步特性可在异步操作开销较大的情境中使关键方法拥有更优秀的性能，例如 [WebAssembly](/zh-CN/docs/WebAssembly)。此类只能在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中操作[源私有文件系统](#源私有文件系统)上的文件时访问。
 - {{domxref("FileSystemWritableFileStream")}}
   属于 {{domxref('WritableStream')}} 对象，附加了便于操作磁盘上单个文件的方法。
 
@@ -184,7 +184,7 @@ writableStream.write({ type: "truncate", size });
 
 ### 在 OPFS 中同步读写文件
 
-这个示例展示如何在[域私有文件系统](#域私有文件系统)中同步读写文件。
+这个示例展示如何在[源私有文件系统](#源私有文件系统)中同步读写文件。
 
 以下异步事件处理函数处于 Web Worker 上下文，从主线程接收消息。
 
