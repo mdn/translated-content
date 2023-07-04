@@ -9,10 +9,10 @@ slug: Mozilla/Add-ons/WebExtensions/Examples
 
 这些示例工作在 Firefox Nightly 下：大部分示例在 Firefox 的早期版本中也能够运行，请检查扩展 manifest.json 文件中的 [strict_min_version](/zh-CN/Add-ons/WebExtensions/manifest.json/applications) 键。
 
-> **警告：** 有些示例只能在特定的域名或页面下运行。每个示例的所有限制都已在其自述文件中详述。默认情况下，这些示例都不能在浏览器的隐私浏览窗口中运行，参阅[隐私浏览窗口中的扩展](https://support.mozilla.org/zh-CN/kb/extensions-private-browsing#w_enabling-or-disabling-extensions-in-private-windows)了解详情。
+> **警告：** 有些示例只能在特定的域或页面下运行。每个示例的限制都已在其自述文件中详述。默认情况下，这些示例都不能在浏览器的隐私浏览窗口中运行，参阅[隐私浏览下的扩展](https://support.mozilla.org/zh-CN/kb/隐私浏览窗口中的扩展#w_zai-yin-si-chuang-kou-zhong-kai-qi-huo-guan-bi-kuo-zhan)了解详情。
 如果你想尝试这些示例，有下面三个选择：
 
-1. 克隆代码库，通过 ["临时载入附加组件"](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) 功能直接从源文件夹中载入扩展组件。再重启浏览器前该扩展将一直存在。
+1. 克隆代码库，通过[“临时载入附加组件”](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)功能直接从源文件夹中载入扩展组件。再重启浏览器前该扩展将一直存在。
 2. 克隆代码库，使用 [`web-ext`](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) 命令行工具运行安装了扩展的 Firefox。
 3. 克隆代码库，进入 [`build`](https://github.com/mdn/webextensions-examples/tree/main/build) 文件夹。该文件夹包含所有示例的已构建、带签名版本。你可以在 Firefox 中打开（菜单栏->文件->打开文件）并且永久安装这些扩展。这些扩展和直接从 [addons.mozilla.org](https://addons.mozilla.org/zh-CN/firefox/) 安装的扩展别无二致。
 
