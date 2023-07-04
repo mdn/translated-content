@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String
 
 ### 创建字符串
 
-字符串可以作为原始值通过字符串字面量创建，也可以通过 {{jsxref("String/String", "String()")}} 构造函数创建字符串对象：
+字符串可以通过字符串字面量创建为原始值，也可以通过 {{jsxref("String/String", "String()")}} 构造函数创建为字符串对象：
 
 ```js-nolint
 const string1 = "A string primitive";
@@ -82,7 +82,7 @@ areEqualInUpperCase("ß", "ss"); // true；应该为 false
 areEqualInLowerCase("ı", "I"); // false；应该为 true
 ```
 
-用于测试不区分大小写的相等性的区域感知且可靠的解决方案是使用 {{jsxref("Intl.Collator")}} API 或者字符串的 [`localeCompare()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) 方法——它们共享相同的接口——[`sensitivity`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#sensitivity) 选项设置为 `"accent"` 或 `"base"`。
+用于测试不区分大小写的相等性的本地化（locale-aware）且可靠的解决方案是使用 {{jsxref("Intl.Collator")}} API 或者字符串的 [`localeCompare()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare) 方法——它们共享相同的接口——[`sensitivity`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#sensitivity) 选项设置为 `"accent"` 或 `"base"`。
 
 ```js
 const areEqual = (str1, str2, locale = "en-US") =>
@@ -92,13 +92,13 @@ areEqual("ß", "ss", "de"); // false
 areEqual("ı", "I", "tr"); // true
 ```
 
-`localeCompare()` 方法使字符串比较可以像 `strcmp()` 函数一样进行——它允许以本地化感知的方式对字符串进行排序。
+`localeCompare()` 方法使字符串比较可以像 `strcmp()` 函数一样进行——它允许以本地化的方式对字符串进行排序。
 
 ### 字符串原始值和字符串对象
 
 注意，JavaScript 区分 `String` 对象和{{Glossary("Primitive", "原始字符串", "", 1)}}值（{{jsxref("Boolean")}} 和 {{jsxref("Global_Objects/Number", "Number")}} 也是如此）。
 
-字符串字面量（使用单引号或者双引号表示）和从非构造函数上下文中的 `String` 调用返回的字符串（即在不使用 {{jsxref("Operators/new", "new")}} 关键字的情况下调用）是原始字符串。在需要调用原始字符串的方法或进行属性查找的上下文中，JavaScript 将自动的包装原始字符串并在包装对象上调用方法或执行属性查找。
+字符串字面量（使用单引号或者双引号表示）和从非构造函数上下文中的 `String` 调用返回的字符串（即在不使用 {{jsxref("Operators/new", "new")}} 关键字的情况下调用）是原始字符串。在需要调用原始字符串的方法或进行属性查找的上下文中，JavaScript 将自动包装原始字符串并在包装对象上调用方法或执行属性查找。
 
 ```js
 const strPrim = "foo"; // 字面量是一个字符串原始值
@@ -152,7 +152,7 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 
 根据你使用的情况，你可能想要使用 `` `${x}` ``（模拟内置行为）或 `String(x)`（处理 symbol 值而不抛出错误），但你不应该使用 `"" + x`。
 
-### UTF-16 字符、Unicode 码位和字素簇（grapheme clusters）
+### UTF-16 字符、Unicode 码位和字素簇
 
 字符串基本上表示为 [UTF-16 码元](https://zh.wikipedia.org/wiki/UTF-16)的序列。在 UTF-16 编码中，每个码元都是 16 位长。这意味着最多有 2<sup>16</sup> 个或 65536 个可能的字符可表示为单个 UTF-16 码元。该字符集称为[基本多语言平面（BMP）](https://zh.wikipedia.org/wiki/Unicode字符平面映射)，包含最常见的字符，如拉丁字母、希腊字母、西里尔字母以及许多东亚字符。每个码元都可以用以 `\u` 开头的 4 个十六进制数字写在一个字符串中。
 
@@ -232,7 +232,7 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 - {{jsxref("String.prototype.indexOf()")}}
   - : 返回在调用 {{jsxref("String")}} 对象中第一次出现的 `searchValue` 的索引，如果未找到则返回 `-1`。
 - {{jsxref("String.prototype.isWellFormed()")}}
-  - : 返回一个布尔值，指示此字符串是否包含任何[孤项代理](#utf-16_字符、unicode_码位和字素簇（grapheme_clusters）)。
+  - : 返回一个布尔值，指示此字符串是否包含任何[孤项代理](#utf-16_字符、unicode_码位和字素簇)。
 - {{jsxref("String.prototype.lastIndexOf()")}}
   - : 返回在调用 {{jsxref("String")}} 对象中最后一次出现的 `searchValue` 的索引，如果未找到则返回 `-1`。
 - {{jsxref("String.prototype.localeCompare()")}}
