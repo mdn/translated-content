@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/super
 
 {{jsSidebar("Operators")}}
 
-**`super`** 키워드는 객체 리터럴 또는 클래스의 [[Prototype]] 속성에 액세스하거나 슈퍼클래스의 생성자를 호출하는 데 사용됩니다.
+**`super`** 키워드는 객체 리터럴 또는 클래스의 [[Prototype]] 속성에 접근하거나 슈퍼클래스의 생성자를 호출하는 데 사용됩니다.
 
 `super.prop`와 `super[expr]` 표현식은 [클래스](/ko/docs/Web/JavaScript/Reference/Classes)와 [객체 리터럴](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)의 [메서드 정의](/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions)에서 모두 사용할 수 있습니다. `super(...args)` 표현식은 클래스 생성자에서 유효합니다.
 
