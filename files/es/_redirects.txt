@@ -1756,12 +1756,12 @@
 /es/docs/Web/Accesibilidad/Understanding_WCAG/Perceivable	/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable
 /es/docs/Web/Accesibilidad/Understanding_WCAG/Perceivable/Color_contraste	/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 /es/docs/Web/Accesibilidad/Understanding_WCAG/Teclado	/es/docs/Web/Accessibility/Understanding_WCAG/Keyboard
-/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_atributo_aria-required	/es/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
+/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_atributo_aria-required	/es/docs/Web/Accessibility/ARIA/Attributes/aria-required
 /es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_el_rol_alertdialog	/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
 /es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/es/docs/Web/Accessibility/ARIA/Roles/alert_role
 /es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role	/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role
-/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/es/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
-/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute	/es/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
+/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/es/docs/Web/Accessibility/ARIA/Attributes/aria-label
+/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute	/es/docs/Web/Accessibility/ARIA/Attributes/aria-required
 /es/docs/Web/Accessibility/ARIA/forms	/es/docs/conflicting/Web/Accessibility/ARIA_44f49c8e1fe8e4c12920395d890bd793
 /es/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/es/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
 /es/docs/Web/Accessibility/ARIA/forms/Etiquetas_complejas	/es/docs/Web/Accessibility/ARIA/Multipart_labels
@@ -2958,4 +2958,6 @@
 /es/docs/orphaned/Web/API/NavigatorOnLine	/es/docs/Web/API/Navigator
 /es/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events	/es/docs/Web/API/Navigator/onLine
 /es/docs/orphaned/Web/API/NavigatorOnLine/onLine	/es/docs/Web/API/Navigator/onLine
+/es/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/es/docs/Web/Accessibility/ARIA/Attributes/aria-label
+/es/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute	/es/docs/Web/Accessibility/ARIA/Attributes/aria-required
 /es/docs/video	/es/docs/Web/HTML/Element/video
