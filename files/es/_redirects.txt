@@ -5,10 +5,10 @@
 #
 # FROM-URL	TO-URL
 /es/docs/AJAX	/es/docs/Web/Guide/AJAX
-/es/docs/AJAX/Comunidad	/es/docs/Web/Guide/AJAX/Community
-/es/docs/AJAX/Primeros_Pasos	/es/docs/Web/Guide/AJAX/Getting_Started
-/es/docs/AJAX:Comunidad	/es/docs/Web/Guide/AJAX/Community
-/es/docs/AJAX:Primeros_Pasos	/es/docs/Web/Guide/AJAX/Getting_Started
+/es/docs/AJAX/Comunidad	/es/docs/conflicting/Web/Guide/AJAX
+/es/docs/AJAX/Primeros_Pasos	/es/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
+/es/docs/AJAX:Comunidad	/es/docs/conflicting/Web/Guide/AJAX
+/es/docs/AJAX:Primeros_Pasos	/es/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
 /es/docs/Accesibilidad	/es/docs/Web/Accessibility
 /es/docs/Accesibilidad/Comunidad	/es/docs/conflicting/Web/Accessibility
 /es/docs/Accesibilidad:Comunidad	/es/docs/conflicting/Web/Accessibility
@@ -1276,7 +1276,8 @@
 /es/docs/Mozilla/Add-ons/WebExtensions/Que_son_las_WebExtensions	/es/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 /es/docs/Mozilla/Add-ons/WebExtensions/Tu_primera_WebExtension	/es/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /es/docs/Mozilla/Add-ons/WebExtensions/Tutorial	/es/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Accion_navegador	/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
+/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Accion_navegador	/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
+/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /es/docs/Plantillas_en_Firefox_3	/es/docs/Mozilla/Firefox/Releases/3/Templates
 /es/docs/Portada	/es/docs/Web
 /es/docs/Preguntas_frecuentes_sobre_CSS	/es/docs/Learn/CSS/Howto/CSS_FAQ
@@ -1937,8 +1938,10 @@
 /es/docs/Web/Events/transitioncancel	/es/docs/Web/API/Element/transitioncancel_event
 /es/docs/Web/Events/transitionend	/es/docs/Web/API/Element/transitionend_event
 /es/docs/Web/Events/wheel	/es/docs/Web/API/Element/wheel_event
-/es/docs/Web/Guide/AJAX/Comunidad	/es/docs/Web/Guide/AJAX/Community
-/es/docs/Web/Guide/AJAX/Primeros_Pasos	/es/docs/Web/Guide/AJAX/Getting_Started
+/es/docs/Web/Guide/AJAX/Community	/es/docs/conflicting/Web/Guide/AJAX
+/es/docs/Web/Guide/AJAX/Comunidad	/es/docs/conflicting/Web/Guide/AJAX
+/es/docs/Web/Guide/AJAX/Getting_Started	/es/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
+/es/docs/Web/Guide/AJAX/Primeros_Pasos	/es/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e
 /es/docs/Web/Guide/API/Vibration	/es/docs/Web/API/Vibration_API
 /es/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC	/es/docs/conflicting/Web/API/WebRTC_API
 /es/docs/Web/Guide/CSS	/es/docs/Learn/CSS

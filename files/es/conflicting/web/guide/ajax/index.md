@@ -1,7 +1,7 @@
 ---
 title: Comunidad
-slug: Web/Guide/AJAX/Community
-original_slug: Web/Guide/AJAX/Comunidad
+slug: conflicting/Web/Guide/AJAX
+original_slug: Web/Guide/AJAX/Community
 ---
 
 Si conoces alguna lista de correo, grupo de noticias, foro, o comunidad relacionada con AJAX que pueda ser de interés. Por favor, pon aquí un enlace.
