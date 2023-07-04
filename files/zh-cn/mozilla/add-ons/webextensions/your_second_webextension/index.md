@@ -26,7 +26,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 
 你可以想象这样的扩展的整体结构：
 
-![The manifest.json file includes icons, browser actions, including popups, and web accessible resources. The choose beast javascript popup resource calls in the beastify script.](untitled-1.png)
+![manifest.json 文件包含了图标、浏览器动作、弹出式窗口和网络可访问资源。Javascript 脚本 按在 beastify.js 里调用被选动物的弹出资源。](untitled-1.png)
 
 这是一个非常简单的扩展，但也展示了 WebExtensions API 的许多基本概念：
 
@@ -60,7 +60,7 @@ cd beastify
   "name": "Beastify",
   "version": "1.0",
 
-  "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Examples#beastify",
+  "description": "在工具栏添加一个互动图标。点击按钮选择一个动物，然后当前活动的标签页的内容会被替换成被选择的动物的图片。参见 https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Examples#beastify",
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
   "icons": {
     "48": "icons/beasts-48.png"
@@ -401,11 +401,11 @@ content script 做的第一件事是检查全局变量 `window.hasRun`：如果�
 
 创建"beasts"文件夹，之后将图片放入并命名。你可以从 [GitHub 仓库](https://github.com/mdn/webextensions-examples/tree/main/beastify/beasts)或这里下载图片：
 
-![A brown frog.](frog.jpg)
+![一只棕色青蛙。](frog.jpg)
 
-![An emerald tree boa with white stripes.](snake.jpg)
+![一条有白色条纹的翡翠树蚺。](snake.jpg)
 
-![A red-eared slider turtle.](turtle.jpg)
+![一只巴西龟。](turtle.jpg)
 
 ## 测试
 
@@ -440,11 +440,11 @@ Firefox 45 开始，你可以临时从硬盘中安装扩展
 
 然后你应该已经看到扩展图标出现在了 Firefox 的工具条上：
 
-![The beastify icon in the Firefox toolbar](beastify_icon.png)
+![Firefox 工具栏上的 beastify 扩展图标](beastify_icon.png)
 
 打开一个网页，然后点击图标，选择一个动物，然后观察网页的变化
 
-![A page replaced with the image of a turtle](beastify_page.png)
+![被替换成乌龟图像的页面。](beastify_page.png)
 
 ## 用命令行开发
 
@@ -455,11 +455,11 @@ cd beastify
 web-ext run
 ```
 
-## What's next?
+## 接下来做什么？
 
-Now that you've created a more advanced WebExtension for Firefox:
+你已经创建了一个更加高级的 Firefox Web 扩展，接下来可以：
 
-- [read about the anatomy of an extension](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [explore the extension examples](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [find out what you need to develop, test, and publish your extension](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_)
-- [take your learning further](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_#continue_your_learning_experience).
+- [阅读扩展剖析](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [浏览扩展示例](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)
+- [学习如何开发、测试、发布你的扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_)
+- [进一步学习](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_#continue_your_learning_experience).

@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_next_
 
 现在你可以将你对浏览器扩展的想法变成现实了。在开始这个过程之前 ，值得了解一些有助于使其顺利进行的事情。
 
-You can find more about many of the things discussed on this page on [Extension Workshop](https://extensionworkshop.com), a website dedicated to helping you write, test, publish, and distribute extensions for Firefox.
+你可以在[扩展工坊](https://extensionworkshop.com)上找到更多本页讨论的相关内容，这是一个致力于帮助编写、测试、发布和分发 Firefox 扩展的网站。
 
 ## 你的开发环境
 
@@ -49,16 +49,16 @@ You can find more about many of the things discussed on this page on [Extension 
 
 - 更多关于浏览器扩展背后的基本概念，从如何[使用 JavaScript API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API) 的细节开始。
 - 可供浏览器扩展使用的[用户界面组件](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface)的指南。
-- A collection of how-to guides on achieving key tasks in your extensions or making use of the JavaScript APIs.
+- 一系列关于如何在扩展中实现关键任务与运用 JavaScript API 的指南。
 - [JavaScript API](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) 的完整参考指南。
 - [Manifest 键](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)的完整参考指南。
 
-You'll also want to head on over to Extension Workshop where you'll find everything you need to know about creating extensions for Firefox, including:
+你还能在扩展工坊找到创建 Firefox 扩展所需要了解的所有东西，包括：
 
-- [an overview of the Firefox extension features](https://extensionworkshop.com/#about)
-- [details of the tools and processes for developing and testing](https://extensionworkshop.com/documentation/develop/)
-- [how to publish your extension on addons.mozilla.org or distribute it yourself](https://extensionworkshop.com/documentation/publish/)
-- [how to manage your published extension](https://extensionworkshop.com/documentation/manage/)
-- [an enterprise guide for developing and using extensions](https://extensionworkshop.com/documentation/enterprise/)
-- [how to develop themes for Firefox](https://extensionworkshop.com/documentation/themes/)
-- [details about the Firefox developer communities](https://extensionworkshop.com/community/)
+- [Firefox 扩展特性一览](https://extensionworkshop.com/#about)
+- [用于开发及测试的工具和工序的详细介绍](https://extensionworkshop.com/documentation/develop/)
+- [如何在 addons.mozilla.org 上发布你的扩展以及如何自行分发扩展](https://extensionworkshop.com/documentation/publish/)
+- [如何管理你发布的扩展](https://extensionworkshop.com/documentation/manage/)
+- [面向企业的开发与使用扩展的指南](https://extensionworkshop.com/documentation/enterprise/)
+- [如何为 Firefox 开发主题](https://extensionworkshop.com/documentation/themes/)
+- [Firefox 开发者社区的详细介绍](https://extensionworkshop.com/community/)
