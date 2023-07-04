@@ -1,6 +1,8 @@
 ---
 title: windows.create()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/create
+page-type: webextension-api-function
+browser-compat: webextensions.api.windows.create
 ---
 
 {{AddonSidebar()}}
@@ -29,26 +31,37 @@ var creating = browser.windows.create(
 
 - `createData`{{optional_inline}}
   - : `object`.
-    - `url`{{optional_inline}}
-      - : 字符串或字符串数组。一个 URL 或都 URL 数组要在该窗口中打开成标签页的。完整的需要包括 scheme (像。`http://www.google.com`, not `www.google.com`). 相对路径将相对于该拓展中的当前页。默认为打开新标签页。
-    - `tabId`{{optional_inline}}
-      - : `integer`. 如果设置了该值，将该 tab 从一个现有的窗口中移到新窗口中。
-    - `left`{{optional_inline}}
-      - : `integer`. 窗口左边到屏幕左边缘的距离。如果没有设定，新窗口将按上一个焦点窗口定位水平位置。对于 panel 样式窗口，该值不起作用。
-    - `top`{{optional_inline}}
-      - : 窗口顶部到屏幕的顶部距离。如果没有设定，新窗口将按上一个焦点窗口定位垂直位置。对于 panel 样式窗口，该值不起作用。
-    - `width`{{optional_inline}}
-      - : `integer`. 新窗口的宽度，包含框架。未设定则使用默认宽度。
+    - `allowScriptsToClose` {{optional_inline}}
+
+      - : `boolean`. When the window is opened, it will contain a single tab, or more than one tab if `url` is given and includes an array containing more than one URL. By default scripts running in these pages are not allowed to close their tab using [`window.close()`](/zh-CN/docs/Web/API/Window/close). If you include `allowScriptsToClose` and set it to `true`, then this default behavior is changed, so scripts can close their tabs. Note that:
+
+        - this only applies to the tabs that were opened when the window was created. If the user opens more tabs in this window, then scripts will not be able to close those new tabs.
+        - if the URL(s) given in `url` point to [extension pages](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) (that is, they are pages included with this extension and loaded with the "moz-extension:" protocol) then scripts _are_ by default allowed to close those tabs.
+
+    - `cookieStoreId` {{optional_inline}}
+      - : `integer`. If present, specifies the `CookieStoreId` for all tabs that will be created when the window is opened.
+    - `focused` {{optional_inline}}
+      - : `boolean`.如果 为`true`, 新窗口将获取焦点。否则新窗口当在后台打开并且当前焦点窗口继续保持焦点。默认为 true
     - `height`{{optional_inline}}
       - : `integer`. 新窗口的高度，包含框架。未设定则使用默认高度。
-    - `focused`{{optional_inline}}
-      - : `boolean`.如果 为`true`, 新窗口将获取焦点。否则新窗口当在后台打开并且当前焦点窗口继续保持焦点。默认为 true
     - `incognito`{{optional_inline}}
       - : `boolean`。是否打开为一个隐私窗口。如果设定为隐私窗口并且引入了 `tabId`, 则 tabId 对应的标签必须是一个隐私标签— 即不能把一个不是隐私标签的标签页移动到隐私窗口中。
-    - `type`{{optional_inline}}
-      - : 一{{WebExtAPIRef('windows.CreateType')}} 值，表示创建窗口的类型。`panel` 或者`popup` 样式将打开一个没有默认浏览器样式的窗口 (地址栏，工具栏等）。
+    - `left` {{optional_inline}}
+      - : `integer`. The number of pixels to position the new window from the left edge of the screen. If not specified, the new window is offset naturally from the last focused window. This value is ignored for panels. (In Firefox, this value currently is ignored for popups (bug 1271047) but can be set using browser.windows.update().)
     - `state`{{optional_inline}}
       - : 一个 {{WebExtAPIRef('windows.WindowState')}} 值，窗口的祲状态。最小化、最大化、全屏状态不能与`left`, `top`, `width`, or `height`属性一起使用。
+    - `tabId` {{optional_inline}}
+      - : `integer`. 如果设置了该值，将该 tab 从一个现有的窗口中移到新窗口中。
+    - `titlePreface` {{optional_inline}}
+      - : `string`. Use this to add a string to the beginning of the browser window's title. Depending on the underlying operating system, this might not work on browser windows that don't have a title (such as about:blank in Firefox).
+    - `top` {{optional_inline}}
+      - : 窗口顶部到屏幕的顶部距离。如果没有设定，新窗口将按上一个焦点窗口定位垂直位置。对于 panel 样式窗口，该值不起作用。
+    - `type` {{optional_inline}}
+      - : 一{{WebExtAPIRef('windows.CreateType')}} 值，表示创建窗口的类型。`panel` 或者`popup` 样式将打开一个没有默认浏览器样式的窗口 (地址栏，工具栏等）。
+    - `url` {{optional_inline}}
+      - : 字符串或字符串数组。一个 URL 或都 URL 数组要在该窗口中打开成标签页的。完整的需要包括 scheme (像。`http://www.google.com`, not `www.google.com`). 相对路径将相对于该拓展中的当前页。默认为打开新标签页。
+    - `width` {{optional_inline}}
+      - : `integer`. 新窗口的宽度，包含框架。未设定则使用默认宽度。
 
 ### 返回值
 
@@ -121,13 +134,13 @@ browser.browserAction.onClicked.addListener((tab) => {
 });
 ```
 
-## 浏览器兼容性
+{{WebExtExamples}}
+
+## Browser compatibility
 
 {{Compat}}
 
-{{WebExtExamples}}
-
-> **备注：** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#method-create) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+> **备注：** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#method-create) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

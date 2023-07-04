@@ -1,17 +1,19 @@
 ---
 title: webNavigation
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
+page-type: webextension-api
+browser-compat: webextensions.api.webNavigation
 ---
 
 {{AddonSidebar}}
 
-Add event listeners for the various stages of a navigation. A navigation consists of a frame in the browser transitioning from one URL to another, usually (but not always) in response to a user action like clicking a link or entering a URL in the location bar.
+为导航的各个阶段添加事件侦听器。导航由浏览器中从一个 URL 转换到另一个 URL 的框架组成，通常（但并非总是）响应用户操作，例如单击链接或在地址栏中输入 URL。
 
 Compared with the {{WebExtAPIRef("webRequest")}} API: navigations usually result in the browser making web requests, but the webRequest API is concerned with the lower-level view from the HTTP layer, while the webNavigation API is more concerned with the view from the browser UI itself.
 
 Each event corresponds to a particular stage in the navigation. The sequence of events is like this:
 
-![](we-flow.png)
+![Visualization of the primary flow and additional flows described below.](we-flow.png)
 
 - The primary flow is:
 
@@ -23,7 +25,7 @@ Each event corresponds to a particular stage in the navigation. The sequence of 
 - Additionally:
 
   - `{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}}` is fired before `onBeforeNavigate` if the browser needed to create a new tab or window for the navigation (for example, because the user opened a link in a new tab).
-  - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} is fired if a page uses the [history API](http://diveintohtml5.info/history.html) to update the URL displayed in the browser's location bar.
+  - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} is fired if a page uses the [history API (2011)](http://diveintohtml5.info/history.html) to update the URL displayed in the browser's location bar.
   - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} is fired if the [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) for a page is changed.
   - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} can be fired at any point.
 
@@ -35,30 +37,30 @@ The `onCommitted` event listener is passed two additional properties: a {{WebExt
 
 To use this API you need to have the "webNavigation" [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-## Types
+## 枚举值
 
 - {{WebExtAPIRef("webNavigation.TransitionType")}}
   - : Cause of the navigation: for example, the user clicked a link, or typed an address, or clicked a bookmark.
 - {{WebExtAPIRef("webNavigation.TransitionQualifier")}}
   - : Extra information about a transition.
 
-## Functions
+## 函数
 
 - {{WebExtAPIRef("webNavigation.getFrame()")}}
   - : Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [iframe](/zh-CN/docs/Web/HTML/Element/iframe), and is uniquely identified by a tab ID and a frame ID.
 - {{WebExtAPIRef("webNavigation.getAllFrames()")}}
   - : Given a tab ID, retrieves information about all the frames it contains.
 
-## Events
+## 事件
 
 - {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}
   - : Fired when the browser is about to start a navigation event.
 - {{WebExtAPIRef("webNavigation.onCommitted")}}
   - : Fired when a navigation is committed. At least part of the new document has been received from the server and the browser has decided to switch to the new document.
 - {{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}
-  - : Fired when the [DOMContentLoaded](/zh-CN/docs/Web/Events/DOMContentLoaded) event is fired in the page.
+  - : Fired when the [DOMContentLoaded](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event) event is fired in the page.
 - {{WebExtAPIRef("webNavigation.onCompleted")}}
-  - : Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the DOM [`load`](/zh-CN/docs/Web/Events/load) event.
+  - : Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the DOM [`load`](/zh-CN/docs/Web/API/Window/load_event) event.
 - {{WebExtAPIRef("webNavigation.onErrorOccurred")}}
   - : Fired when an error occurs and the navigation is aborted. This can happen if either a network error occurred, or the user aborted the navigation.
 - {{WebExtAPIRef("webNavigation.onCreatedNavigationTarget")}}
@@ -68,9 +70,9 @@ To use this API you need to have the "webNavigation" [permission](/zh-CN/docs/Mo
 - {{WebExtAPIRef("webNavigation.onTabReplaced")}}
   - : Fired when the contents of the tab is replaced by a different (usually previously pre-rendered) tab.
 - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}}
-  - : Fired when the page used the [history API](http://diveintohtml5.info/history.html) to update the URL displayed in the browser's location bar.
+  - : Fired when the page used the [history API (2011)](http://diveintohtml5.info/history.html) to update the URL displayed in the browser's location bar.
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
@@ -80,7 +82,7 @@ Promises are not supported in Edge. Use callbacks instead.
 
 {{WebExtExamples("h2")}}
 
-> **备注：** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+> **备注：** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,29 +1,38 @@
 ---
 title: windows.WindowState
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
+page-type: webextension-api-type
+browser-compat: webextensions.api.windows.WindowState
 ---
 
 {{AddonSidebar()}}
 
 浏览器窗口的状态。
 
-## 类型
+## 枚举值
 
-类型的值是字符串类型。可能的值如下：
+枚举值的值是字符串类型。可能的值如下：
 
 - `"normal"`
+  - : The window is at the default size or user-selected size.
 - `"minimized"`
+  - : The window is only visible as an icon in the taskbar or .
 - `"maximized"`
+  - : The window fills the screen on which it is displayed not including any screen areas reserved by the operating system.
 - `"fullscreen"`
+  - : The window is running as a full screen application or content in a tab is using the [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API)
 - `"docked"`
+  - : A docked window occupies a fixed position relative to other windows owned by the same application.
 
-## 浏览器适配
+macOS compatibility: Beginning in macOS 10.10, the default maximizing behavior for windows changed to run applications as full screen applications instead of "zoomed" windows. `fullscreen` refers to both the browser running as a full screen application and when content in a tab uses the Fullscreen API.
+
+## 浏览器兼容性
 
 {{Compat}}
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于谷歌浏览器 [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowState) API。此文档源于谷歌源码 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) .
+> **备注：** 此 API 基于谷歌浏览器 [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#type-WindowState) API。此文档源于谷歌源码 [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) .
 >
 > 微软 Edge 浏览器兼容性数据由微软公司提供，并包含在美国 Creative Commons Attribution 3.0 许可证下。
 

@@ -2,6 +2,8 @@
 title: clipboard
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard
 original_slug: Mozilla/Add-ons/WebExtensions/API/剪切板
+page-type: webextension-api
+browser-compat: webextensions.api.clipboard
 ---
 
 {{AddonSidebar}}
@@ -23,6 +25,8 @@ To use this API you need the `"clipboardWrite"` extension [permission](/zh-CN/do
 
 ## 浏览器兼容性
 
+{{WebExtExamples("h2")}}
+
 {{Compat}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.
+> **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API.

@@ -1,13 +1,14 @@
 ---
 title: 扩展开发人员工具
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
+page-type: guide
 ---
 
 {{AddonSidebar}}
 
-> **备注：** 本页介绍了火狐 Firefox 55 中存在的开发工具接口（dectools APIs)。虽然该接口 Api 基于 Chrome 开发工具 Api，仍有许多功能尚未实现在火狐中实现，因此未记录在本页内容中。产看当前缺失的功能，请参阅链接[开发工具 Api 的限制。](/zh-CN/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs)
+> **备注：** 本页介绍了火狐 Firefox 55 中存在的开发工具接口（dectools APIs)。虽然该接口 Api 基于 Chrome 开发工具 Api，仍有许多功能尚未实现在火狐中实现，因此未记录在本页内容中。产看当前缺失的功能，请参阅链接 [Limitations of the devtools APIs](#limitations_of_the_devtools_apis).
 
-您可以使用 WebExtensions API 扩展浏览器的内置开发人员工具。要创建 devtools 扩展，请在 manifest.json 中包含“devtools_page”键：
+您可以使用 WebExtensions API 扩展浏览器的内置开发人员工具。要创建 devtools 扩展，请在 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 中包含 "[devtools_page](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)" 键：
 
 ```json
 "devtools_page": "devtools/devtools-page.html"
@@ -56,8 +57,8 @@ devtools 窗口中包含许多单独的工具-JavaScript 调试器，网络监�
 ```js
 browser.devtools.panels.create(
   "My Panel",                      // title
-  "icons/star.png",                // icon
-  "devtools/panel/panel.html"      // content
+  "/icons/star.png",               // icon
+  "/devtools/panel/panel.html"     // content
 ).then((newPanel) => {
   newPanel.onShown.addListener(initialisePanel);
   newPanel.onHidden.addListener(unInitialisePanel);
@@ -72,19 +73,19 @@ browser.devtools.panels.create(
 
 ### Running code in the target window
 
-devtools.inspectedWindow\.eval（）提供了一种在检查的窗口中运行代码的方法。
+ [`devtools.inspectedWindow.eval()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval) 提供了一种在检查的窗口中运行代码的方法。
 
 这有点像使用{{WebExtAPIRef("tabs.executeScript()")}}注入内容脚本，但有一个重要区别：
 
-- 与内容脚本不同，使用 devtools.inspectedWindow\.eval（）加载的脚本不会获得“DOM 的清晰视图”：也就是说，它们可以看到页面脚本对页面所做的更改。
+- 与内容脚本不同，使用 `devtools.inspectedWindow.eval()` 加载的脚本**不会**获得[“DOM 的清晰视图”](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access)：也就是说，它们可以看到页面脚本对页面所做的更改。
 
 > **备注：** 请注意，DOM 的清晰视图是一项安全功能，旨在通过重新定义本机 DOM 功能的行为来帮助防止恶意页面欺骗扩展。这意味着您需要非常小心地使用 eval（），并应尽可能使用普通的内容脚本。
 
-devtools.inspectedWindow\.eval（）加载的脚本也看不到内容脚本定义的任何 JavaScript 变量。
+`devtools.inspectedWindow.eval()` 加载的脚本也看不到内容脚本定义的任何 JavaScript 变量。
 
 ### Working with content scripts
 
-devtools 文档无法直接访问{{WebExtAPIRef("tabs.executeScript()")}}，因此，如果需要注入内容脚本，devtools 文档必须向后台脚本发送一条消息，要求其注入剧本。devtools.inspectedWindow\.tabId 提供目标选项卡的 ID：devtools 文档可以将其传递给后台脚本，而后台脚本又可以将其传递给{{WebExtAPIRef("tabs.executeScript()")}}：
+devtools 文档无法直接访问{{WebExtAPIRef("tabs.executeScript()")}}，因此，如果需要注入内容脚本，devtools 文档必须向后台脚本发送一条消息，要求其注入剧本。[`devtools.inspectedWindow.tabId`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId) 提供目标选项卡的 ID：devtools 文档可以将其传递给后台脚本，而后台脚本又可以将其传递给{{WebExtAPIRef("tabs.executeScript()")}}：
 
 ```js
 // devtools-panel.js
@@ -111,7 +112,7 @@ function handleMessage(request, sender, sendResponse) {
 browser.runtime.onMessage.addListener(handleMessage);
 ```
 
-如果您需要在目标窗口中运行的内容脚本和 devtools 文档之间交换消息，则最好使用{{WebExtAPIRef("runtime.connect()")}}和{{WebExtAPIRef("runtime.onConnect()")}}，以在后台页面和 devtools 文档之间建立连接。然后，后台页面可以维护选项卡 ID 和{{WebExtAPIRef("runtime.Port")}}对象之间的映射，并使用此映射在两个作用域之间路由消息。
+如果您需要在目标窗口中运行的内容脚本和 devtools 文档之间交换消息，则最好使用{{WebExtAPIRef("runtime.connect()")}}和{{WebExtAPIRef("runtime.onConnect")}}，以在后台页面和 devtools 文档之间建立连接。然后，后台页面可以维护选项卡 ID 和{{WebExtAPIRef("runtime.Port")}}对象之间的映射，并使用此映射在两个作用域之间路由消息。
 
 ![](devtools-content-scripts.png)
 
@@ -129,7 +130,7 @@ The following are not supported:
 
 None of the options to `inspectedWindow.eval()` are supported.
 
-使用 inspectedWindow\.eval（）注入的脚本不能使用控制台的所有命令行帮助器功能，但是都支持$ 0 和 inspect（...）（从 Firefox 55 开始）。
+使用 `inspectedWindow.eval()` 注入的脚本不能使用控制台的所有命令行帮助器功能，但是都支持 `$0`和 `inspect()` （从 Firefox 55 开始）。
 
 ### devtools.panels
 
@@ -148,4 +149,4 @@ The following are not supported:
 
 The [webextensions-examples](https://github.com/mdn/webextensions-examples) repo on GitHub, contains several examples of extensions that use devtools panels:
 
-- [devtools-panels](https://github.com/mdn/webextensions-examples/blob/master/devtools-panels/) use devtools panels:
+- [devtools-panels](https://github.com/mdn/webextensions-examples/tree/main/devtools-panels) use devtools panels:

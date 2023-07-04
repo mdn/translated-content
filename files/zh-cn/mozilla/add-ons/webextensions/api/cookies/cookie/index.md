@@ -1,6 +1,8 @@
 ---
 title: cookies.Cookie
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
+page-type: webextension-api-type
+browser-compat: webextensions.api.cookies.Cookie
 ---
 
 {{AddonSidebar()}}
@@ -23,6 +25,13 @@ The `Cookie` type of the {{WebExtAPIRef("cookies")}} API represents information 
   - : A `boolean`, `true` if the cookie is marked as HttpOnly (i.e. the cookie is inaccessible to client-side scripts), or `false` otherwise.
 - `name`
   - : A `string` representing the name of the cookie.
+- `partitionKey` {{optional_inline}}
+
+  - : An `object` representing the description of the [storage partition](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) containing the cookie. This object is omitted (null) if the cookie is not in partitioned storage. This object contains the following properties:
+
+    - `topLevelSite`
+      - : A `string` representing the first-party URL of the cookie's storage partition, if the cookie is in storage that is partitioned by top-level site.
+
 - `path`
   - : A `string` representing the path of the cookie.
 - `secure`
@@ -62,7 +71,7 @@ gettingAll.then(logCookies);
 
 {{WebExtExamples}}
 
-> **备注：** 这 API 是基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/extensions/cookies#type-Cookie) API 的。这个文档来自于 Chromium code 中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) 。
+> **备注：** 这 API 是基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#type-Cookie) API 的。这个文档来自于 Chromium code 中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) 。
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

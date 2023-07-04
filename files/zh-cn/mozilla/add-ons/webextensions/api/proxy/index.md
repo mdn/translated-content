@@ -1,21 +1,25 @@
 ---
 title: proxy
 slug: Mozilla/Add-ons/WebExtensions/API/proxy
+page-type: webextension-api
+browser-compat: webextensions.api.proxy
 ---
 
 {{AddonSidebar}}
-
-> **警告：** 不推荐使用 {{WebExtAPIRef("proxy.register()")}} 或者 {{WebExtAPIRef("proxy.unregister()")}} 方法使用 [Proxy Auto-Configuration (PAC) file](/zh-CN/Add-ons/WebExtensions/API/proxy/register#PAC_file_specification). 这个 API 将会在 Firefox 68 中废弃并且在 Firefox 71 中删除。
 
 使用 proxy API 来代理 web 请求。你可以使用 **`{{WebExtAPIRef("proxy.onRequest")}}`** 事件监听器来拦截 web 请求，并且返回一个可以描述是否代理并且怎样代理它们的对象。
 
 {{WebExtAPIRef("proxy.onRequest")}}的好处在于，用于实现你拦截策略的代码在你的扩展的后台脚本运行，所以，它可以让 **`WebExtension APIs`** 能够完全的访问你的扩展 (举例来说，可以访问你扩展的`storage`和像 dns 等类似的网络 api)
 
-除了这个 api，扩展也能够使用**[`browserSettings.proxyConfig`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/proxyConfig)**属性来重新编辑你全局的`proxy`设置
+除了这个 api，扩展也能够使用**[`browserSettings.proxyConfig`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings)**属性来重新编辑你全局的`proxy`设置
 
-Chrome 浏览器提供了一个叫做`'proxy'的`api 扩展，它的功能跟这个 api 类似，在 chrome 的 api 中也可以用来实现一个拦截策略。然而，Chrome 的 API 的设计跟这个 API 设计完全不同。因为这个 API 跟谷歌的`proxy`的 API 完全不同，这个 API 只能通过'browser'命名空间访问
+Chrome 浏览器提供了一个叫做 ['proxy'的 API 扩展](https://developer.chrome.com/docs/extensions/reference/proxy/)，它的功能跟这个 API 类似，在 Chrome 的 API 中也可以用来实现一个拦截策略。然而，Chrome 的 API 的设计跟这个 API 设计完全不同。因为这个 API 跟谷歌的`proxy`的 API 完全不同，这个 API 只能通过'browser'命名空间访问
 
 如果你想用这个 API 你需要得到'`proxy`'的[permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).并且，如果你想拦截一个请求，你同样也需要当前拦截请求的 url 的 [host permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+
+> **Note:** The "proxy" permission requires `"strict_min_version"` to be set to "91.1.0" or above. To use this permission, add or update the [`"browser_specific_settings"`](/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in your [manifest.json](/docs/Mozilla/Add-ons/WebExtensions/manifest.json) to specify a minimum Firefox version. See [Securing the proxy API for Firefox add-ons](https://blog.mozilla.org/security/2021/10/25/securing-the-proxy-api-for-firefox-add-ons/) for more information.
+
+> **Note:** The browser can make speculative connections, where it determines that a request to a URI may be coming soon. This type of connection does not provide valid tab information, so request details such as `tabId`, `frameId`, `parentFrameId`, etc. are inaccurate. These connections have a {{WebExtAPIRef("webRequest.ResourceType")}} of `speculative`.
 
 ## Types
 
@@ -30,6 +34,8 @@ Chrome 浏览器提供了一个叫做`'proxy'的`api 扩展，它的功能跟这
   - : Get and set proxy settings.
 
 ## Functions
+
+> **警告：** 不推荐使用 {{WebExtAPIRef("proxy.register()")}} 或者 {{WebExtAPIRef("proxy.unregister()")}} 方法使用 [Proxy Auto-Configuration (PAC) file](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy/register#pac_file_specification). 这个 API 将会在 Firefox 68 中废弃并且在 Firefox 71 中删除。
 
 - {{WebExtAPIRef("proxy.register()")}} {{Deprecated_Inline}}
   - : Registers the given proxy script.

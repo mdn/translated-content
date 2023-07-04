@@ -1,16 +1,15 @@
 ---
 title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
+page-type: webextension-api
+browser-compat: webextensions.api.i18n
 ---
 
 {{AddonSidebar}}
 
 国际化扩展的函数。您可以使用这些 api 从与扩展打包在一起的本地化文件中获取本地化字符串，查找浏览器的当前语言，并查找其 [Accept-Language header](/zh-CN/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header)头的值。
 
-有关对扩展使用 i18n 的详细信息，请参阅：
-
-- [Internationalization](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Internationalization)国际化：使用 WebExtension i18n 系统的指南
-- [Locale-Specific Message reference](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference): 扩展在 `messages.json`文件中提供特定于语言环境的字符串。此网页介绍`messages.json`
+See the [Internationalization](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Internationalization) page for a guide on using this API.
 
 ## 类型
 
@@ -34,10 +33,16 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 
 {{WebExtExamples("h2")}}
 
-> **备注：** 这个 API 是基于 Chromium 的 [`chrome.i18n`](https://developer.chrome.com/extensions/i18n) API，这个文档源自 Chromium 代码中的 [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) 。
+> **备注：** 这个 API 是基于 Chromium 的 [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/i18n/) API，这个文档源自 Chromium 代码中的 [`history.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) 。
 >
 > 微软 Edge 的兼容性数据由微软公司提供，并在这里收录在《知识共享 3.0 美国许可证》中。
 
+## 参见
+
+有关对扩展使用 i18n 的详细信息，请参阅：
+
+- [Internationalization](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Internationalization)国际化：使用 WebExtension i18n 系统的指南
+- [Locale-Specific Message reference](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference): 扩展在 `messages.json`文件中提供特定于语言环境的字符串。此网页介绍`messages.json`
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
 //

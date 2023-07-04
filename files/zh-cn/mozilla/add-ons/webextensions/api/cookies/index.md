@@ -1,11 +1,13 @@
 ---
 title: cookies
 slug: Mozilla/Add-ons/WebExtensions/API/cookies
+page-type: webextension-api
+browser-compat: webextensions.api.cookies
 ---
 
 {{AddonSidebar}}
 
-使用 WebExtensions 获取或设置 cookies, 并且在修改时能够获得通知。
+使用扩展获取或设置 cookies, 并且在修改时能够获得通知。
 
 你需要在 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中开启“cookies”[API 权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，并且需要对应站点的 [主机权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 才能设置指定站点的 cookie。详细信息查看 [cookie 权限](/zh-CN/Add-ons/WebExtensions/API/cookies#Permissions).
 
@@ -17,6 +19,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
   - : 代表一个保存在浏览器中的 cookie。
 - {{WebExtAPIRef("cookies.OnChangedCause")}}
   - : 代表 cookie 改变的原因。
+- {{WebExtAPIRef("cookies.SameSiteStatus")}}
+  - : Represents the same-site status of the cookie.
 
 ## 方法
 
@@ -81,7 +85,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 
 {{WebExtExamples("h2")}}
 
-> **备注：** 这个 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/extensions/cookies) API. 这篇文档来源于 Chromium 代码的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) 。
+> **备注：** 这个 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/) API. 这篇文档来源于 Chromium 代码的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) 。
 >
 > Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并包含在 Creative Commons Attribution 3.0 United States License.
 

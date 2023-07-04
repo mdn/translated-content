@@ -1,7 +1,8 @@
 ---
 title: clipboard.setImageData()
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
-original_slug: Mozilla/Add-ons/WebExtensions/API/剪切板/setImageData
+page-type: webextension-api-function
+browser-compat: webextensions.api.clipboard.setImageData
 ---
 
 {{AddonSidebar()}}
@@ -10,7 +11,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/剪切板/setImageData
 
 图像被作为包含经过编码的图像的 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 提供。支持 JPEG 和 PNG 格式。
 
-基于 Chrome 的 [`clipboard.setImageData()`](https://developer.chrome.com/apps/clipboard) API，但存在一些差异：
+基于 Chrome 的 [`clipboard.setImageData()`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API，但存在一些差异：
 
 - Chrome API 仅适用于应用，不适用于扩展程序。
 - 此 API 需要 `"clipboardWrite"` 权限，Chrome 版本需要 `"clipboard"` 权限。
@@ -49,9 +50,9 @@ Copy a remote image:
 // * the host permission for "https://cdn.mdn.mozilla.net/*"
 // * the API permission "clipboardWrite"
 
-fetch('https://cdn.mdn.mozilla.net/static/img/favicon144.png')
-.then(response => response.arrayBuffer())
-.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+fetch("https://cdn.mdn.mozilla.net/static/img/favicon144.png")
+  .then((response) => response.arrayBuffer())
+  .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
 ```
 
 Copy an image that was bundled with the extension:
@@ -59,11 +60,11 @@ Copy an image that was bundled with the extension:
 ```js
 // requires the API permission "clipboardWrite"
 
-fetch(browser.runtime.getURL('image.png'))
-.then(response => response.arrayBuffer())
-.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+fetch(browser.runtime.getURL("image.png"))
+  .then((response) => response.arrayBuffer())
+  .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
 ```
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.
+> **备注：** 此 API 基于 Chromium 的 [`chrome.clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API.

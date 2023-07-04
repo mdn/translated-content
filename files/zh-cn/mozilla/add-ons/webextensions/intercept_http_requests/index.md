@@ -1,6 +1,7 @@
 ---
 title: 拦截 HTTP 请求
 slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -54,10 +55,22 @@ browser.webRequest.onBeforeRequest.addListener(
 
 这里我们在请求开始之前用 {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} 调用 `logURL()`函数。`logURL()` 函数 抓取从事件对象发出的请求中的 URL，然后将其打印到浏览器的控制台窗口中。[参数](/zh-CN/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` 表示拦截发往所有 URL 的 HTTP 请求。
 
-测试方法是：[安装该扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)，[打开浏览器的控制台](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/)，然后开启某个网页即可。在浏览器控制台中就能见到浏览器请求所有资源的 URL：
+测试方法是：
+
+- [安装该扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)，
+- 打开[浏览器控制台](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/) (使用<kbd>Ctrl + Shift + J</kbd>)
+- 在菜单中启用_Show Content Messages_：
+
+  ![Browser console menu: Show Content Messages](browser_console_show_content_messages.png)
+
+- 打开一些网页。
+
+在浏览器控制台，你应该看到浏览器请求的任何资源的URL。
+例如，这张截图显示了加载维基百科页面的URLs：
 
 ![Browser console menu : URLs from extension](browser_console_url_from_extension.png)
 
+<!-- {{EmbedYouTube("X3rMgkRkB1Q")}} -->
 ## 重定向请求
 
 现在让我们用 `webRequest` 来重定向 HTTP 请求。首先将 manifest.json 文件内容替换如下：
@@ -83,13 +96,17 @@ browser.webRequest.onBeforeRequest.addListener(
 }
 ```
 
-这里唯一的变化是[`权限`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)里新增了 `webRequestBlocking` 项。新增这个权限是为了随时都能修改请求。
+这里唯一的变化是：
+
+- 在[`权限`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)里新增了 `webRequestBlocking` 项。
+新增这个权限是为了能修改请求。
+- 用单独的[host permissions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)替换`<all_urls>`权限，因为这是尽量减少请求权限数量的好做法。
 
 下一步替换 `"background.js"` 文件内容如下：
 
 ```js
 let pattern = "https://developer.mozilla.org/*";
-const targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
+const targetUrl = "https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
 
 function redirect(requestDetails) {
   console.log(`Redirecting: ${requestDetails.url}`);
@@ -122,7 +139,26 @@ browser.webRequest.onBeforeRequest.addListener(
 
 最后我们将使用 `webRequest` 修改请求报头。在这个例子中我们将修改 `User-Agent` 报头，使得在浏览 `http://useragentstring.com/` 网站下的网页时可以识别浏览器 Opera 12.16。
 
-"manifest.json" 可以与上一个例子相同。
+更新 "manifest.json"，增加`http://useragentstring.com/`，像这样：
+
+```json
+{
+  "description": "Demonstrating webRequests",
+  "manifest_version": 2,
+  "name": "webRequest-demo",
+  "version": "1.0",
+
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "http://useragentstring.com/"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
+```
 
 修改"background.js" 如下：
 

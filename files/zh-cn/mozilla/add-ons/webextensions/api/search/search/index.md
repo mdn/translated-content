@@ -1,6 +1,8 @@
 ---
 title: search.search()
 slug: Mozilla/Add-ons/WebExtensions/API/search/search
+page-type: webextension-api-function
+browser-compat: webextensions.api.search.search
 ---
 
 {{AddonSidebar()}}
@@ -27,20 +29,18 @@ browser.search.search(
 
   - : `object`. 拥有以下属性的对象：
 
-    - `query`
-      - : `字符串`. 进行查询的内容。
+    - `disposition` {{optional_inline}}
+      - : `string`. The location where the search results are displayed. Valid values are `CURRENT_TAB`, `NEW_TAB`, and `NEW_WINDOW`. Defaults to `NEW_TAB`. Cannot be specified with `tabId`.
     - `engine`{{optional_inline}}
       - : `字符串。`.搜索引擎的名称。如果指定的搜索引擎名称不存在，该函数将引发错误。如果省略此属性，则使用默认的搜索引擎。
+    - `query`
+      - : `字符串`. 进行查询的内容。
     - `tabId`{{optional_inline}}
       - : 整型。用于显示搜索结果的选项卡。如果省略此属性，搜索结果将显示在新选项卡中。
 
 ### 返回值
 
 无。
-
-## 浏览器兼容性
-
-{{Compat}}
 
 ## 示例
 
@@ -84,3 +84,7 @@ browser.browserAction.onClicked.addListener(search);
 ```
 
 {{WebExtExamples}}
+
+## 浏览器兼容性
+
+{{Compat}}

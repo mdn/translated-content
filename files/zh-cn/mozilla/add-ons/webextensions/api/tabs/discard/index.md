@@ -1,6 +1,8 @@
 ---
 title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
+page-type: webextension-api-function
+browser-compat: webextensions.api.tabs.discard
 ---
 
 {{AddonSidebar()}}
@@ -11,7 +13,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 
 对于不同的浏览器，被丢弃内容的详细内容是有所不同的，但是从大体上来说，丢弃一个标签页允许浏览器释放一些该标签页所占用的内存。
 
-The {{WebExtAPIRef("tabs.discard()")}} API enables an extension to discard one or more tabs. It's not possible to discard the currently active tab, or a tab whose document contains a [`beforeunload`](/zh-CN/docs/Web/Events/beforeunload) listener that would display a prompt.
+You can control whether the browser or this API discards a tab by setting its `autoDiscardable` property to `false` in {{WebExtAPIRef("tabs.update")}}. This setting prevents the browser from discarding the tab. The tab can then only be discarded with this API.
+
+It's not possible to discard the active tab or a tab whose document contains a [`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event) listener that would display a prompt.
 
 This is an asynchronous function that returns a [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -33,10 +37,6 @@ var discarding = browser.tabs.discard(
 A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when all the specified tabs have been discarded. If any error occurs (for example, invalid tab IDs), the promise will be rejected with an error message.
 
 If the ID of the active tab is passed in, it will not be discarded, but the promise will be fulfilled and any other tabs passed in will be discarded.
-
-## 浏览器兼容性
-
-{{Compat}}
 
 ## 示例
 
@@ -72,7 +72,11 @@ discarding.then(onDiscarded, onError);
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-discard) API.
+## 浏览器兼容性
+
+{{Compat}}
+
+> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-discard) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

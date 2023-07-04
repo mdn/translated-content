@@ -1,20 +1,26 @@
 ---
 title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
+page-type: webextension-api
 ---
 
 {{AddonSidebar}}
 
 与浏览器标签系统进行交互。
 
+> **Note:** When using Manifest V3 or higher, the methods to execute scripts, insert CSS, and remove CSS are provided by the {{WebExtAPIRef("scripting")}} API through the {{WebExtAPIRef("scripting.executeScript()")}}, {{WebExtAPIRef("scripting.insertCSS()")}} and {{WebExtAPIRef("scripting.removeCSS()")}} methods.
 你可以使用该 API 获取一个已打开标签的列表并且使用各种标准过滤标签，并进行 打开，刷新，移动，重载，移除操作。该 API 不能直接访问标签中的主机内容，但是你可以使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} APIs，来插入 javascript 和 CSS。
 
-你可以在不需要任何特殊权限的情况下使用该 APIS 的大部分，除了：
+你可以在不需要任何特殊权限的情况下使用该 API 的大部分内容，除了：
 
-- 获取 `Tab.url`, `Tab.title`, and `Tab.favIconUrl`, 你需要拥有 "tabs" [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). 在火狐，这也意味着你需要 "tabs" ，来通过 URL 使用 {{WebExtAPIRef("tabs.query", "query")}}。
-- 使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} 你必须在目标标签拥有 [host permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 。
+- 获取 `Tab.url`, `Tab.title`, and `Tab.favIconUrl`, (or to filter by these properties via {{WebExtAPIRef("tabs.query()")}}) 你需要拥有 "tabs" [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)., or have [host permissions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) that match `Tab.url`.
 
-或者你可以仅仅只为当前的活动标签临时的获取这些权限并且仅仅只响应一个显示的用户行为，请查看 ["activeTab" permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
+  - Access to these properties by host permissions is supported since Firefox 86 and Chrome 50. In Firefox 85 and earlier, the "tabs" permission was required instead.
+
+- 使用 {{WebExtAPIRef("tabs.executeScript()")}} 或者 {{WebExtAPIRef("tabs.insertCSS()")}} 你必须在目标标签拥有 [host permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) 。
+
+或者你可以仅仅只为当前的活动标签临时的获取这些权限并且仅仅只响应一个显示的用户行为，请查看 ["activeTab" permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
+Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a single tab only within a browser session. If the browser is restarted, then it can and will reuse tab `id`s. To associate information with a tab across browser restarts, use {{WebExtAPIRef("sessions.setTabValue()")}}.
 
 ## 枚举值
 
@@ -22,6 +28,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
   - : 确定一个标签静音与否的原因（用户修改，扩展修改）。
 - {{WebExtAPIRef("tabs.MutedInfo")}}
   - : 该对象包含一个布尔值只是该标签是否静音，以及最近一次静音的原因。
+- {{WebExtAPIRef("tabs.PageSettings")}}
+  - : Used to control how a tab is rendered as a PDF by the [`tabs.saveAsPDF()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF) method.
 - {{WebExtAPIRef("tabs.Tab")}}
   - : 该值包含了一个标签的信息。
 - {{WebExtAPIRef("tabs.TabStatus")}}
@@ -40,16 +48,20 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 - {{WebExtAPIRef("tabs.TAB_ID_NONE")}}
   - : 给予非浏览器标签的一个特殊 ID 值（比如，在开发工具中的标签）。
 
-## 方法
+## 函数
 
+- {{WebExtAPIRef("tabs.captureTab()")}}
+  - : Creates a data URL encoding an image of the visible area of the given tab.
+- {{WebExtAPIRef("tabs.captureVisibleTab()")}}
+  - : Creates a data URL encoding an image of the visible area of the currently active tab in the specified window.
 - {{WebExtAPIRef("tabs.connect()")}}
   - : 在运行于该标签的任何 [content scripts](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) 和该扩展的后台脚本（或者其他的比如弹出菜单脚本或者设置页面脚本）间创建一个消息连接。
 - {{WebExtAPIRef("tabs.create()")}}
   - : 创建一个新标签。
-- {{WebExtAPIRef("tabs.captureVisibleTab()")}}
-  - : 创意一个数据统一资源标识符解码在规定窗口中当前活动标签的可视区域重的一个图片。
 - {{WebExtAPIRef("tabs.detectLanguage()")}}
   - : 检查在一个标签中的主要语言。
+- {{WebExtAPIRef("tabs.discard()")}}
+  - : Discards one or more tabs.
 - {{WebExtAPIRef("tabs.duplicate()")}}
   - : 复制一个标签
 - {{WebExtAPIRef("tabs.executeScript()")}}
@@ -61,25 +73,39 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 - {{WebExtAPIRef("tabs.getCurrent()")}}
   - : 返回一个 [`tabs.Tab`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/Tabs/Tab) 对象包含了该脚本当前的宿主标签的信息。
 - {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
-  - : 获取在指定窗口被选定的标签。
+  - : 获取在指定窗口被选定的标签。 **Deprecated: use [`tabs.query({active: true})`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) instead.**
 - {{WebExtAPIRef("tabs.getZoom()")}}
   - : 获取制定标签的缩放系数。
 - {{WebExtAPIRef("tabs.getZoomSettings()")}}
   - : 获取指定标签的缩放设置。
+- {{WebExtAPIRef("tabs.goForward()")}}
+  - : Go forward to the next page, if one is available.
+- {{WebExtAPIRef("tabs.goBack()")}}
+  - : Go back to the previous page, if one is available.
+- {{WebExtAPIRef("tabs.hide()")}} {{experimental_inline}}
+  - : Hides one or more tabs.
 - {{WebExtAPIRef("tabs.highlight()")}}
   - : 高亮显示一个或多个标签。
 - {{WebExtAPIRef("tabs.insertCSS()")}}
   - : 向一个页面注入 CSS。
-- {{WebExtAPIRef("tabs.removeCSS()")}}
-  - : 移除之前调用{{WebExtAPIRef("tabs.insertCSS()")}} 注入的一个 css。
 - {{WebExtAPIRef("tabs.move()")}}
   - : 移动一个或多个标签页到同一窗口的一个新的位置或是到不同窗口。
+- {{WebExtApiRef("tabs.moveInSuccession()")}}
+  - : Modifies the succession relationship for a group of tabs.
+- {{WebExtAPIRef("tabs.print()")}}
+  - : Prints the contents of the active tab.
+- {{WebExtAPIRef("tabs.printPreview()")}}
+  - : Opens print preview for the active tab.
 - {{WebExtAPIRef("tabs.query()")}}
   - : 获取所有包含指定属性的标签，如果没有属性则获取所有标签。
 - {{WebExtAPIRef("tabs.reload()")}}
   - : 重载一个标签，可选的可以绕过本地缓存。
 - {{WebExtAPIRef("tabs.remove()")}}
   - : 关闭一个或多个标签。
+- {{WebExtAPIRef("tabs.removeCSS()")}} (Manifest V2 only)
+  - : 移除之前调用{{WebExtAPIRef("tabs.insertCSS()")}} 注入的一个 css。
+- {{WebExtAPIRef("tabs.saveAsPDF()")}}
+  - : Saves the current page as a PDF.
 - {{WebExtAPIRef("tabs.sendMessage()")}}
   - : 向一个指定标签的 content script 发送单个消息。
 - {{WebExtAPIRef("tabs.sendRequest()")}} {{deprecated_inline}}
@@ -88,8 +114,14 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
   - : 缩放指定标签。
 - {{WebExtAPIRef("tabs.setZoomSettings()")}}
   - : 为一个制定标签设置缩放选项。
+- {{WebExtAPIRef("tabs.show()")}} {{experimental_inline}}
+  - : Shows one or more tabs that have been {{WebExtAPIRef("tabs.hide()", "hidden")}}.
+- {{WebExtAPIRef("tabs.toggleReaderMode()")}}
+  - : Toggles Reader mode for the specified tab.
 - {{WebExtAPIRef("tabs.update()")}}
   - : 导航一个标签到新的地址，或是修改其他的属性。
+- {{WebExtAPIRef("tabs.warmup()")}}
+  - : Prepare the tab to make a potential following switch faster.
 
 ## Events
 
@@ -124,13 +156,13 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 
 {{Compat}}
 
-> **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
+> **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
 >
-> If you need to update this content, edit [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
+> If you need to update this content, edit [https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
 
 {{WebExtExamples("h2")}}
 
-> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

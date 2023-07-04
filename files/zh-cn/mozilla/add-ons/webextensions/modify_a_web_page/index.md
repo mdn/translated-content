@@ -1,6 +1,7 @@
 ---
 title: 修改 web 页面
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -59,9 +60,7 @@ document.body.appendChild(header);
 
 现在安装这个[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), 然后浏览 [https://developer.mozilla.org/](/)：
 
-{{EmbedYouTube("lxf2Tkg6U1M")}}
-
-> **备注：** 请注意，虽然此视频显示在 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) 工作的 content scripts，但目前该网站已禁止 content scripts。
+![developer.mozilla.org page "eaten" by the script](eaten_page.png)
 
 ## 通过程序修改页面
 
@@ -123,9 +122,7 @@ modify-page/
 
 重新加载[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), 打开页面 (这次可以是任何一个页面) 激活右键菜单，然后选择 "Eat this page"：
 
-{{EmbedYouTube("zX4Bcv8VctA")}}
-
-> **备注：** 请注意，虽然此视频显示在 [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) 工作的 content scripts，但目前该网站已禁止 content scripts。
+![Option to eat a page on the context menu](eat_from_menu.png)
 
 ## 消息
 
@@ -175,6 +172,7 @@ modify-page/
   </thead>
 </table>
 
+> **Note:** In addition to this method of communication, which sends one-off messages, you can also use a [connection-based approach to exchange messages](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging). For advice on choosing between the options, see [Choosing between one-off messages and connection-based messaging](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#choosing_between_one-off_messages_and_connection-based_messaging).
 修改上面的示例，使得可以通过后台脚本来发送消息。
 
 首先，修改 "background.js" 如下：
@@ -187,21 +185,24 @@ browser.contextMenus.create({
 
 function messageTab(tabs) {
   browser.tabs.sendMessage(tabs[0].id, {
-    replacement: "Message from the add-on!"
+    replacement: "Message from the extension!"
   });
 }
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  if (info.menuItemId == "eat-page") {
-    browser.tabs.executeScript({
-      file: "page-eater.js"
-    });
-
-    var querying = browser.tabs.query({
-      active: true,
-      currentWindow: true
+function onExecuted(result) {
+    let querying = browser.tabs.query({
+        active: true,
+        currentWindow: true
     });
     querying.then(messageTab);
+}
+
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "eat-page") {
+    let executing = browser.tabs.executeScript({
+      file: "page-eater.js"
+    });
+    executing.then(onExecuted);
   }
 });
 ```
@@ -211,15 +212,13 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 接下来，修改 "page-eater.js" 如下：
 
 ```js
-function eatPage(request, sender, sendResponse) {
+function eatPageReceiver(request, sender, sendResponse) {
   document.body.textContent = "";
-
-  var header = document.createElement('h1');
+  let header = document.createElement('h1');
   header.textContent = request.replacement;
   document.body.appendChild(header);
 }
-
-browser.runtime.onMessage.addListener(eatPage);
+browser.runtime.onMessage.addListener(eatPageReceiver);
 ```
 
 现在，不再立即执行吞页，内容脚本将先通过使用 [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)来监听消息。当监听到消息时，内容脚本才开始运作，除了来自`request.replacement`的替换文本不一样以外，其他的脚本运作本质上与之前的相同。
@@ -227,6 +226,18 @@ browser.runtime.onMessage.addListener(eatPage);
 如果我们想将消息从内容脚本发送到后台页面，除了在内容脚本中使用 [`runtime.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) ，其他与上面的过程相反。
 
 > **备注：** 这些例子注入的都是 JavaScript; 想注入 CSS 可以使用 [`tabs.insertCSS()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) 函数。
+>
+> Alternatively, use [Add-on Debugger](/zh-CN/docs/Mozilla/Add-ons/Add-on_Debugger) which allows you set breakpoint. There is currently no way to [start Add-on Debugger directly from web-ext](https://github.com/mozilla/web-ext/issues/759).
+
+If we want send messages back from the content script to the background page, we would use [`runtime.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) instead of [`tabs.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage), e.g.:
+
+```js
+browser.runtime.sendMessage({
+    title: "from page-eater.js"
+});
+```
+
+> **Note:** These examples all inject JavaScript; you can also inject CSS programmatically using the [`tabs.insertCSS()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) function.
 
 ## 了解更多
 

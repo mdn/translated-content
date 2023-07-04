@@ -1,6 +1,8 @@
 ---
 title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
+page-type: webextension-api
+browser-compat: webextensions.api.browserAction
 ---
 
 {{AddonSidebar}}
@@ -11,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 如果您指定了弹出窗，它将显示——内容将在用户点击该图标时被加载。如果您没有指定一个弹出窗，用户单击该图标的事件将派发到您的扩展。
 
-您可以用 manifest.json 中的 [`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 键值声明定义大多数浏览器动作属性。
+您可以在 manifest.json 中的 [`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 键值声明定义大多数浏览器动作属性。
 
 使用 `browserAction` API，您可以：
 
@@ -61,13 +63,13 @@ slug: Mozilla/Add-ons/WebExtensions/API/browserAction
 
 {{Compat}}
 
-> **备注：** "Chrome 兼容性"是从 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) 包含，使用[WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat)宏。
+> **备注：** "Chrome 兼容性"是从 [https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) 包含，使用[WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat)宏。
 >
-> 如果你需要更新此章节，编辑 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities)，然后刷新查看更改。
+> 如果你需要更新此章节，编辑 [https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities)，然后刷新查看更改。
 
 {{WebExtExamples("h2")}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction) API。此文档派生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> **备注：** 此 API 基于 Chromium 的 [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/reference/browserAction/) API。此文档派生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
 >
 > Microsoft Edge 兼容性数据由微软公司提供，并以 知识共享 署名 3.0 美国版 许可。
 

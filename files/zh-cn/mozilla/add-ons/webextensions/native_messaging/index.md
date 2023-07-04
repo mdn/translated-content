@@ -1,11 +1,16 @@
 ---
 title: 与本地应用通信
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
+page-type: guide
 ---
 
 {{AddonSidebar}}
 
-Native messaging 可以让 extension 与安装在用户计算机上的原生应用交换信息。原生应用仅需给 extension 提供服务，而无需在网页中可访问。一个常见的例子是密码管理器：原生应用负责存储和加密你的密码，并且和 extension 通信来填充网页中的表单字段。Native messaging 可以让 extension 拥有那些 WebExtensions APIs 所没有的功能，比如访问某些特定的硬件。
+**Native messaging** 可以让 extension 与安装在用户计算机上的原生应用交换信息。原生应用仅需给 extension 提供服务，而无需在网页中可访问。
+
+一个常见的例子是密码管理器：原生应用负责存储和加密你的密码，并且和 extension 通信来填充网页中的表单字段。
+
+Native messaging 可以让 extension 拥有那些 WebExtensions APIs 所没有的功能，比如访问某些特定的硬件。
 
 原生应用的安装与管理并不是在浏览器当中的：它应该是使用操作系统进行安装，和其他的原生应用一样。然后你需要将你的原生应用安装在指定位置，并提供一个清单。清单中描述了浏览器如何连接到你的原生应用。
 
@@ -13,7 +18,7 @@ extension 必须在 manifest.json 中获得"nativeMessaging" [权限](/zh-CN/doc
 
 经过上述操作，extension 就可以通过 {{WebExtAPIRef("runtime")}} API 与原生应用进行 JSON 数据通信了。原生应用可以通过标准输入/输出来接受/返回数据与 extension 通信。
 
-![](native-messaging.png)
+![Application flow: the native app JSON file resides on the users computer, providing resource information to the native application. The read and write functions of the native application interact with the browser extension's runtime events.](native-messaging.png)
 
 和 Chrome 相比，WebExtensions 所支持的 native messaging 有 2 个主要区别：
 
@@ -36,7 +41,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 ```json
 {
 
-  "description": "Native messaging example extension",
+  "description": "Native messaging example add-on",
   "manifest_version": 2,
   "name": "Native messaging example",
   "version": "1.0",
@@ -44,7 +49,7 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
     "48": "icons/message.svg"
   },
 
-  "applications": {
+  "browser_specific_settings": {
     "gecko": {
       "id": "ping_pong@example.org",
       "strict_min_version": "50.0"
@@ -64,6 +69,10 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 }
 ```
 
+> **Note:** Chrome does not support the [browser_specific_settings](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key. You will need to use another manifest without this key to install an equivalent WebExtension on Chrome. See [Chrome incompatibilities below](#chrome_incompatibilities).
+
+> **Note:** When using optional permission, check that permission has been granted and, where necessary, request permission from the user with the {{WebExtAPIRef("permissions")}} API before communicating with the native application.
+
 ### 原生应用清单
 
 原生应用清单描述了浏览器如何与原生应用进行连接。
@@ -71,8 +80,6 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 原生应用清单需要与原生应用一起安装，浏览器仅会查阅清单而不会安装或管理原生应用。因此，何时采用何种方式来安装或更新这些文件的安全模型比起使用 WebExtensions APIs 更像原生应用。（我也搞不懂这句啥意思，原文：Thus the security model for when and how these files are installed and updated is much more like that for native applications than that for extensions using WebExtension APIs.）
 
 关于原生应用清单的详细语法和路径规则，可参考 [原生应用清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)。
-
-> **警告：** 除清单外，原生应用还**必需**配置路径规则，你可以参考 [原生应用清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) 来配置路径。
 
 这有一个例子，是关于 "ping_pong" 原生应用的清单：
 
@@ -249,7 +256,7 @@ while True:
 关闭原生应用的过程：
 
 - 在 \*nix 系统比如 OS X 和 Linux 中，浏览器会向原生应用发送 SIGTERM 信号让其可以优雅的退出，然后再发送 SIGKILL 信号。这些信号将会传递给每一个子进程，除非它们分裂成一个新的进程组。
-- 在 Windows 中，浏览器会向原生应用的进程发送一个 [Job object](<https://msdn.microsoft.com/en-us/library/windows/desktop/ms684161(v=vs.85).aspx>) 并杀死任务，如果原生应用启动任何的额外进程并希望它们能在原生应用被杀死后继续保持运行，原生应用需要在启动进程时使用 [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/en-us/library/windows/desktop/ms684863(v=vs.85).aspx>) 标记。
+- 在 Windows 中，浏览器会向原生应用的进程发送一个 [Job object](<https://msdn.microsoft.com/zh-CN/library/windows/desktop/ms684161(v=vs.85).aspx>) 并杀死任务，如果原生应用启动任何的额外进程并希望它们能在原生应用被杀死后继续保持运行，原生应用需要在启动进程时使用 [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/zh-CN/library/windows/desktop/ms684863(v=vs.85).aspx>) 标记。
 
 ## 常见问题 Troubleshooting
 

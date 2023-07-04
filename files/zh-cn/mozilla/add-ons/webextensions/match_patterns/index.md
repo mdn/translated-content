@@ -1,6 +1,8 @@
 ---
 title: 匹配模式
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
+page-type: guide
+browser-compat: webextensions.match_patterns.scheme
 ---
 
 {{AddonSidebar}}
@@ -11,13 +13,15 @@ slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 
 ## 匹配模式结构
 
-所有的匹配模式用一个字符串来定义，而且都是["\<all_urls>"](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#all_urls) 模板的一部份，匹配模板包含三个部分：_scheme_、_host_ 和 _path_。scheme 和 host 用 `://` 分隔。
+> **Note:** Some browsers don't support certain schemes.
+> Check the [Browser compatibility table](#browser_compatibility) for details.
+所有的匹配模式用一个字符串来定义，而且都是["<all_urls>"](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#all_urls) 模板的一部份，匹配模板包含三个部分：_scheme_、_host_ 和 _path_。scheme 和 host 用 `://` 分隔。
 
 ```
 <scheme>://<host><path>
 ```
 
-### 方案
+### 协议
 
 _scheme_ 可能以下两种格式之一：
 
@@ -30,11 +34,18 @@ _scheme_ 可能以下两种格式之一：
   </thead>
   <tbody>
     <tr>
-      <td>"*"</td>
-      <td>Only "http" and "https".</td>
+      <td><code>*</code></td>
+      <td>
+        Only "http" and "https" and in some browsers also
+        <a href="/zh-CN/docs/Web/API/WebSockets_API">"ws" and "wss"</a>.
+      </td>
     </tr>
     <tr>
-      <td>One of "http", "https", "file", "ftp", "app".</td>
+      <td>
+        One of <code>http</code>, <code>https</code>, <code>ws</code>,
+        <code>wss</code>, <code>ftp</code>, <code>data</code>,
+        <code>file</code>, or <code>(chrome-)extension</code>.
+      </td>
       <td>Only the given scheme.</td>
     </tr>
   </tbody>
@@ -53,11 +64,11 @@ _host_ 组件可以采取三种形式之一：:
   </thead>
   <tbody>
     <tr>
-      <td>"*"</td>
+      <td><code>*</code></td>
       <td>Any host.</td>
     </tr>
     <tr>
-      <td>"*." followed by part of the hostname.</td>
+      <td><code>*.</code> followed by part of the hostname.</td>
       <td>The given host and any of its subdomains.</td>
     </tr>
     <tr>
@@ -67,6 +78,7 @@ _host_ 组件可以采取三种形式之一：:
   </tbody>
 </table>
 
+_host_ must not include a port number.
 只有当 _scheme_ 是 "file" 是 _host_ 可选的
 
 值得注意的是通配符可能只会在开头显示。
@@ -76,6 +88,12 @@ _host_ 组件可以采取三种形式之一：:
 _path_ 组件必须以“/”开头。
 
 之后，它可能随后包含“\*”通配符和网址路径中允许的任何字符的任意组合。与 _host_ 不同，_path_ 组件可能在中间或末尾包含“\*”通配符，并且“\*”通配符可以多次出现。
+
+The value for the _path_ matches against the string which is the URL path plus the [URL query string](https://en.wikipedia.org/wiki/Query_string). This includes the `?` between the two, if the query string is present in the URL. For example, if you want to match URLs on any domain where the URL path ends with `foo.bar`, then you need to use an array of Match Patterns like `['*://*/*foo.bar', '*://*/*foo.bar?*']`. The `?*` is needed, rather than just `bar*`, in order to anchor the ending `*` as applying to the URL query string and not some portion of the URL path.
+
+Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier), nor the `#` which precedes it, are considered as part of the _path_.
+
+> **Note:** The path pattern string should not include a port number. Adding a port, as in: `http://localhost:1234/*` causes the match pattern to be ignored. However, `http://localhost:1234` will match with `http://localhost/*`.
 
 ### \<all_urls>
 
@@ -99,19 +117,40 @@ _path_ 组件必须以“/”开头。
       </td>
       <td>
         <p><code>http://example.org/</code></p>
-        <p><code>ftp://files.somewhere.org/</code></p>
         <p><code>https://a.org/some/path/</code></p>
+        <p><code>ws://sockets.somewhere.org/</code></p>
+        <p><code>wss://ws.example.com/stuff/</code></p>
+        <p><code>ftp://files.somewhere.org/</code></p>
       </td>
       <td>
         <p><code>resource://a/b/c/</code><br />(unsupported scheme)</p>
+        <p>
+          <code>ftps://files.somewhere.org/</code><br />(unsupported scheme)
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><code>*://*/*</code></p>
+        <p>Match all HTTP, HTTPS and WebSocket URLs.</p>
+      </td>
+      <td>
+        <p><code>http://example.org/</code></p>
+        <p><code>https://a.org/some/path/</code></p>
+        <p><code>ws://sockets.somewhere.org/</code></p>
+        <p><code>wss://ws.example.com/stuff/</code></p>
+      </td>
+      <td>
+        <p><code>ftp://ftp.example.org/</code><br />(unmatched scheme)</p>
+        <p><code>file:///a/</code><br />(unmatched scheme)</p>
       </td>
     </tr>
     <tr>
       <td>
         <p><code>*://*.mozilla.org/*</code></p>
         <p>
-          Match all HTTP and HTTPS URLs that are hosted at "mozilla.org" or one
-          of its subdomains.
+          Match all HTTP, HTTPS and WebSocket URLs that are hosted at
+          "mozilla.org" or one of its subdomains.
         </p>
       </td>
       <td>
@@ -120,6 +159,8 @@ _path_ 组件必须以“/”开头。
         <p><code>http://a.mozilla.org/</code></p>
         <p><code>http://a.b.mozilla.org/</code></p>
         <p><code>https://b.mozilla.org/path/</code></p>
+        <p><code>ws://ws.mozilla.org/</code></p>
+        <p><code>wss://secure.mozilla.org/something</code></p>
       </td>
       <td>
         <p><code>ftp://mozilla.org/</code><br />(unmatched scheme)</p>
@@ -131,13 +172,15 @@ _path_ 组件必须以“/”开头。
       <td>
         <p><code>*://mozilla.org/</code></p>
         <p>
-          Match all HTTP and HTTPS URLs that are hosted at exactly
+          Match all HTTP, HTTPS and WebSocket URLs that are hosted at exactly
           "mozilla.org/".
         </p>
       </td>
       <td>
         <p><code>http://mozilla.org/</code></p>
         <p><code>https://mozilla.org/</code></p>
+        <p><code>ws://mozilla.org/</code></p>
+        <p><code>wss://mozilla.org/</code></p>
       </td>
       <td>
         <p><code>ftp://mozilla.org/</code><br />(unmatched scheme)</p>
@@ -172,12 +215,19 @@ _path_ 组件必须以“/”开头。
         <p><code>https://mozilla.org/path/</code><br />(unmatched path)</p>
         <p><code>https://mozilla.org/a</code><br />(unmatched path)</p>
         <p><code>https://mozilla.org/</code><br />(unmatched path)</p>
+        <p>
+          <code>https://mozilla.org/path?foo=1</code><br />(unmatched path due
+          to URL query string)
+        </p>
       </td>
     </tr>
     <tr>
       <td>
         <p><code>https://*/path/</code></p>
-        <p>Match HTTPS URLs on any host, whose path is "path/".</p>
+        <p>
+          Match HTTPS URLs on any host, whose path is "path/" and which has no
+          URL query string.
+        </p>
       </td>
       <td>
         <p><code>https://mozilla.org/path/</code></p>
@@ -189,18 +239,26 @@ _path_ 组件必须以“/”开头。
         <p><code>https://mozilla.org/path</code><br />(unmatched path)</p>
         <p><code>https://mozilla.org/a</code><br />(unmatched path)</p>
         <p><code>https://mozilla.org/</code><br />(unmatched path)</p>
+        <p>
+          <code>https://mozilla.org/path/?foo=1</code
+          ><br />(unmatched path due to URL query string)
+        </p>
       </td>
     </tr>
     <tr>
       <td>
         <p><code>https://mozilla.org/*</code></p>
-        <p>Match HTTPS URLs only at "mozilla.org", with any path.</p>
+        <p>
+          Match HTTPS URLs only at "mozilla.org", with any URL path and URL
+          query string.
+        </p>
       </td>
       <td>
         <p><code>https://mozilla.org/</code></p>
         <p><code>https://mozilla.org/path</code></p>
         <p><code>https://mozilla.org/another</code></p>
         <p><code>https://mozilla.org/path/to/doc</code></p>
+        <p><code>https://mozilla.org/path/to/doc?foo=1</code></p>
       </td>
       <td>
         <p><code>http://mozilla.org/path</code><br />(unmatched scheme)</p>
@@ -210,9 +268,12 @@ _path_ 组件必须以“/”开头。
     <tr>
       <td>
         <p><code>https://mozilla.org/a/b/c/</code></p>
-        <p>Match only this URL.</p>
+        <p>Match only this URL, or this URL with any URL fragment.</p>
       </td>
-      <td><code>https://mozilla.org/a/b/c/</code></td>
+      <td>
+        <p><code>https://mozilla.org/a/b/c/</code></p>
+        <p><code>https://mozilla.org/a/b/c/#section1</code></p>
+      </td>
       <td>Anything else.</td>
     </tr>
     <tr>
@@ -220,17 +281,29 @@ _path_ 组件必须以“/”开头。
         <p><code>https://mozilla.org/*/b/*/</code></p>
         <p>
           Match HTTPS URLs hosted on "mozilla.org", whose path contains a
-          component "b" somewhere in the middle.
+          component "b" somewhere in the middle. Will match URLs with query
+          strings, if the string ends in a <code>/</code>.
         </p>
       </td>
       <td>
         <p><code>https://mozilla.org/a/b/c/</code></p>
         <p><code>https://mozilla.org/d/b/f/</code></p>
         <p><code>https://mozilla.org/a/b/c/d/</code></p>
+        <p><code>https://mozilla.org/a/b/c/d/#section1</code></p>
+        <p><code>https://mozilla.org/a/b/c/d/?foo=/</code></p>
+        <p>
+          <code
+            >https://mozilla.org/a?foo=21314&#x26;bar=/b/&#x26;extra=c/</code
+          >
+        </p>
       </td>
       <td>
         <p><code>https://mozilla.org/b/*/</code><br />(unmatched path)</p>
         <p><code>https://mozilla.org/a/b/</code><br />(unmatched path)</p>
+        <p>
+          <code>https://mozilla.org/a/b/c/d/?foo=bar</code><br />(unmatched path
+          due to URL query string)
+        </p>
       </td>
     </tr>
     <tr>
@@ -271,11 +344,19 @@ _path_ 组件必须以“/”开头。
     </tr>
     <tr>
       <td><code>https://*zilla.org/</code></td>
-      <td>"*" in host must by the only character or be followed by ".".</td>
+      <td>"*" in host must be the only character or be followed by ".".</td>
     </tr>
     <tr>
       <td><code>http*://mozilla.org/</code></td>
       <td>"*" in scheme must be the only character.</td>
+    </tr>
+    <tr>
+      <td><code>https://mozilla.org:80/</code></td>
+      <td>Host must not include a port number.</td>
+    </tr>
+    <tr>
+      <td><code>*://*</code></td>
+      <td>Empty path: this should be "<code>*://*/*</code>".</td>
     </tr>
     <tr>
       <td><code>file://*</code></td>
@@ -323,3 +404,7 @@ match.matches(uri); //        < true
 uri = BrowserUtils.makeURI("https://mozilla.org/path");
 match.matches(uri); //        < false
 ```
+
+## Browser compatibility
+
+{{Compat}}

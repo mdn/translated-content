@@ -1,13 +1,15 @@
 ---
 title: find
 slug: Mozilla/Add-ons/WebExtensions/API/find
+page-type: webextension-api
+browser-compat: webextensions.api.find
 ---
 
 {{AddonSidebar}}
 
 在网页中查找文本，并突出显示匹配项。
 
-要使用此 API，您需要具有“查找” [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+要使用此 API，您需要具有“查找（`find`）” [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 ## 功能
 
@@ -19,5 +21,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/find
   - : 删除所有突出显示。
 
 ## 浏览器兼容性
+
+{{WebExtExamples("h2")}}
 
 {{Compat}}

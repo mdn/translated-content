@@ -1,6 +1,7 @@
 ---
 title: 国际化
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -378,19 +379,10 @@ padding-left: 1.5em;
 
 ## 测试你的 WebExtension
 
-从 Firefox 45 开始，你可以临时安装磁盘上的 WebExtensions — 另见[从磁盘加载。](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_installation#loading_from_disk)按上述步骤操作，然后尝试我们的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) WebExtension。访问你喜欢的任何网站，然后点一下链接，查看是否有通知出现来显示所点击的链接网址。
+为了测试你的扩展的本地化，你可以使用[Firefox](https://www.mozilla.org/zh-CN/firefox/new/)或[Firefox Beta](https://www.mozilla.org/zh-CN/firefox/channel/desktop/)，这是你可以安装语言包的Firefox构建版。
 
-接下来，将 Firefox 的语言区域更改为你想测试的扩展支持的某个语言区域。
+然后，对于你想测试的扩展所支持的每个地区，按照[使用另一种语言的Firefox](https://support.mozilla.org/zh-CN/kb/use-firefox-another-language)的指示来切换Firefox用户界面语言。(如果你知道你在设置中的方法，在语言下，使用设置替代语言）。
 
-1. 在 Firefox 中打开 "about:config"，找到 `general.useragent.locale` 首选项。
-2. 双击该首选项（或按回车）以选择它，输入你想测试的语言环境的语言代码，然后点击“确定”（或按回车）。我们的示例扩展支持“en”（英语）、“de”德语（）、“nl”（荷兰语）和“ja”日语。
-3. 重启你的浏览器以完成更改。
+一旦Firefox在你的测试语言中运行，[临时安装扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)。安装完扩展后，在`about:debugging`中，如果你正确地设置了你的扩展，你会看到扩展在所选语言中列出了它的图标、名称和描述。你也可以在`about:addons`中看到本地化的扩展细节。现在行使扩展的功能，确保你需要的翻译已经到位。
 
-> **备注：** 这个方法可以用来修改浏览器的语言区域，即使你未安装过该语言区域对应的[语言包](https://addons.mozilla.org/en-US/firefox/language-tools/)。这样的话你就可以将浏览器用户界面调整显示为你的默认语言。
-
-再次从磁盘临时加载该扩展，然后测试你的新语言区域：
-
-- 再次访问 "about:addons" — 你现在应该看到该附加组件已列出其图标，以及相应语言的名称和描述。
-- 再次测试你的 WebExtension。在我们的例子中，你会转到另一个网站并点击一个链接，以查看该通知现在是否以相应语言显示。
-
-{{EmbedYouTube("R7--fp5pPGg")}}
+如果你想试试这个过程，你可以使用[notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)扩展。将火狐浏览器设置为显示本例中所支持的语言之一（德语、荷兰语或日语）。加载该扩展并进入一个网站。点击一个链接，看到通知的翻译版本，报告该链接的URL。

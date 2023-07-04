@@ -1,6 +1,8 @@
 ---
 title: permissions.contains()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/contains
+page-type: webextension-api-function
+browser-compat: webextensions.api.permissions.contains
 ---
 
 {{AddonSidebar()}}
@@ -76,6 +78,6 @@ browser.permissions.contains(testPermissions4).then((result) => {
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/extensions/permissions) API.
+> **备注：** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

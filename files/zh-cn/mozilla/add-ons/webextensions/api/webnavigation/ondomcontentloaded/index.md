@@ -1,11 +1,13 @@
 ---
 title: webNavigation.onDOMContentLoaded
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
+page-type: webextension-api-event
+browser-compat: webextensions.api.webNavigation.onDOMContentLoaded
 ---
 
 {{AddonSidebar()}}
 
-在页面中触发[DOMContentLoaded](/zh-CN/docs/Web/Events/DOMContentLoaded) 事件时触发。此时，文档被加载和解析，并且 DOM 被完全构造，但链接的资源（例如图像，样式表和子框架（subframes））可能尚未被加载。
+在页面中触发[DOMContentLoaded](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event) 事件时触发。此时，文档被加载和解析，DOM 被完全构建，但链接的资源，如图像、样式表和子框架可能还没有被加载。
 
 ## Syntax
 
@@ -36,10 +38,10 @@ browser.webNavigation.onDOMContentLoaded.hasListener(listener)
   - : 为当此事件发生是需要被调用的函数。该函数将传递以下参数：
 
     - `details`
-      - : [`object`](#details). 有关导航（navigation）事件的详细信息。
+      - : [`object`](#details). 关于导航事件的详细信息。更多信息见[details](#details_2)部分。
 
 - `filter`{{optional_inline}}
-  - : `object`. 包含单个属性 `url` 的对象，这是一个 {{WebExtAPIRef("events.UrlFilter")}} 数组对象。如果包含此参数，则该事件将仅触发转换为与数组中至少一个`UrlFilter`匹配的 URL。在数组中。如果您省略此参数，则该事件将触发所有转换。
+  - : `object`. 一个包含单一属性`url`的对象，它是{{jsxref("Array")}}的{{WebExtAPIRef("events.UrlFilter")}}对象。如果你包含这个参数，那么事件只针对与数组中至少一个`UrlFilter'相匹配的URL的转换而发生。如果你省略这个参数，事件会对所有的转换进行触发。
 
 ## Additional objects
 
@@ -52,7 +54,7 @@ browser.webNavigation.onDOMContentLoaded.hasListener(listener)
 - `processId`
   - : `integer`. The ID of the process in which this tab is being rendered.
 - `frameId`
-  - : `integer`. Frame in which the navigation is occurring. 0 indicates that navigation happens in the tab's top-level browsing context, not in a nested [iframe](/zh-CN/docs/Web/HTML/Element/iframe). A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
+  - : `integer`. Frame in which the navigation is occurring. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
 - `timeStamp`
   - : `number`. The time at which `DOMContentLoaded` was fired, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 
@@ -74,7 +76,7 @@ var filter = {
 }
 
 function logOnDOMContentLoaded(details) {
-  console.log("onDOMContentLoaded: " + details.url);
+  console.log(`onDOMContentLoaded: ${details.url}`);
 }
 
 browser.webNavigation.onDOMContentLoaded.addListener(logOnDOMContentLoaded, filter);
@@ -82,7 +84,7 @@ browser.webNavigation.onDOMContentLoaded.addListener(logOnDOMContentLoaded, filt
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/extensions/webNavigation#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+> **备注：** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,7 +1,7 @@
 ---
 title: 实现一个设置页面
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
-original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -49,9 +49,7 @@ document.body.style.border = "10px solid blue";
 
 这只是向网页加入了一一个蓝色边框
 
-现在 [安装该扩展](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) 并测试它——打开任意一个网页：
-
-{{EmbedYouTube("E-WUhihF8fw")}}
+现在 [安装该扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) 并测试它——打开任意一个网页：
 
 ## 添加设置页面
 
@@ -77,17 +75,26 @@ document.body.style.border = "10px solid blue";
     "page": "options.html"
   },
 
-  "permissions": ["storage"]
+  "permissions": ["storage"],
 
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "addon@example.com"
+    }
+  }
 }
 ```
 
-我们加入了两个 manifest 关键字：
+我们加入了三个 manifest 关键字：
 
-- [`options_ui`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui): 设置了一个 HTML 来作为设置页面。
-- [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): 我们使用 [`storage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage) API 来保存设置，所以我们需要请求权限来使用该 API。
+- [`options_ui`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui):
+  - : 设置了一个 HTML 来作为设置页面。
+- [`permissions`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions):
+  - : 我们使用 [`storage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage) API 来保存设置，所以我们需要请求权限来使用该 API。
+- [`browser_specific_settings`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)
+  - : You have to include an extension id in order to save and retrieve settings from synchronized storage.
 
-接下来，因为我们承诺提供"options.html"，让我们来创建他，在"setting"目录创建一个该文件并具有以下内容：
+接下来，因为我们承诺提供 `options.html`，让我们来创建他，在 `settings` 目录创建一个该文件并具有以下内容：
 
 ```html
 <!DOCTYPE html>
@@ -146,9 +153,13 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 - 当网页被加载它使用[`storage.local.get()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 从存贮设备中获取了名为"color”的值。如果该值未被设置其为默认值 blue。
 - 当用户点击提交按钮，使用[`storage.local.set()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set) 存贮颜色值。
 
-最后，更新"borderify.js" 来读取边框颜色：
+> **Note:** Specifying a separate `.js` file is required. You cannot use inline JavaScript.
 
-> **警告：** 因为 [browser.storage.local.get()](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 在火狐 52 版本之前的一个漏洞 ,以下代码没法起作用。为了使它生效，`onGot()` 中的 `item.color` 必须改为 `item[0].color`。
+You could store the settings values in local storage instead if you feel that local storage is preferable for your extension.
+
+> **Note:** The implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in `manifest.json`, as shown in the example manifest above. See [Firefox bug 1323228](https://bugzil.la/1323228) for related information.
+
+最后，更新"borderify.js" 来读取边框颜色：
 
 ```js
  function onError(error) {
@@ -156,18 +167,18 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 }
 
 function onGot(item) {
-  var color = "blue";
+  let color = "blue";
   if (item.color) {
     color = item.color;
   }
-  document.body.style.border = "10px solid " + color;
+  document.body.style.border = `10px solid ${color}`;
 }
 
-var getting = browser.storage.local.get("color");
+const getting = browser.storage.sync.get("color");
 getting.then(onGot, onError);
 ```
 
-最后，完整的扩展看起来是这样：
+现在，完整的扩展看起来是这样：
 
 ```
 settings/
@@ -179,14 +190,12 @@ settings/
 
 现在：
 
-- [重新载入扩展](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)
+- [重新载入扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading_a_temporary_add-on)
 - 加载一个网页
 - 打开设置页面并修改边框颜色
 - 重载网页查看变化。
 
 在火狐中你可以通过访问"about:addons"点击扩展旁边的"Preferences"按钮访问设置页面。
-
-{{EmbedYouTube("ECt9cbWh1qs")}}
 
 ## 进一步了解
 

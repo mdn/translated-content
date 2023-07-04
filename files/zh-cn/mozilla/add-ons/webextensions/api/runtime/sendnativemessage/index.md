@@ -1,6 +1,8 @@
 ---
 title: runtime.sendNativeMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
+page-type: webextension-api-function
+browser-compat: webextensions.api.runtime.sendNativeMessage
 ---
 
 {{AddonSidebar()}}
@@ -57,14 +59,14 @@ On a click on the browser action, send the app a message.
 */
 browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
-  var sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
+  let sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
   sending.then(onResponse, onError);
 });
 ```
 
 {{WebExtExamples}}
 
-> **备注：** 这个 API 基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.com/extensions/runtime#method-sendNativeMessage) API。本文来自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) 。
+> **备注：** 这个 API 基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-sendNativeMessage) API。本文来自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) 。
 >
 > 微软 Edge 的兼容性数据由 Microsoft Corporation 提供，并且包含在这里基于 Creative Commons Attribution 3.0 United States License。
 

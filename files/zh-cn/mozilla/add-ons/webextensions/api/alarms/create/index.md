@@ -1,11 +1,13 @@
 ---
 title: alarms.create()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
+page-type: webextension-api-function
+browser-compat: webextensions.api.alarms.create
 ---
 
 {{AddonSidebar()}}
 
-创建一个新的 alarm.
+为当前浏览器会话创建一个新的 alarm 。一个 alarm 可以触发一次或多次。一个 alarm 在它最后一次触发后被清除。
 
 ## 使用语法
 
@@ -35,10 +37,6 @@ browser.alarms.create(
     - `periodInMinutes`{{optional_inline}}
       - : `double` 类型。如果设置此属性，alarm 会从第一次触发开始每隔 `periodInMinutes` 分钟再次触发。如果你没有设置 when 及 delayInMinutes 属性，alarm 会在 alarm 设置好之后 periodInMinutes 分钟第一次触发。如果 periodInMinutes 属性没有设置，则 alarm 只会触发一次。
 
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 示例
 
 Create a one-time delay-based alarm with "" for the name:
@@ -47,7 +45,7 @@ Create a one-time delay-based alarm with "" for the name:
 const delayInMinutes = 5;
 
 browser.alarms.create({
-  delayInMinutes
+  delayInMinutes,
 });
 ```
 
@@ -59,7 +57,7 @@ const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   delayInMinutes,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 
@@ -71,11 +69,14 @@ const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   when,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 
-> **备注：** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/extensions/alarms) API.
+## 浏览器兼容性
+
+{{Compat}}
+> **备注：** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

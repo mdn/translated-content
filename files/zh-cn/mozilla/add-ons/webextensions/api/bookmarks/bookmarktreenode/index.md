@@ -1,6 +1,8 @@
 ---
 title: bookmarks.BookmarkTreeNode
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
+page-type: webextension-api-type
+browser-compat: webextensions.api.bookmarks.BookmarkTreeNode
 ---
 
 {{AddonSidebar()}}
@@ -36,7 +38,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#type-BookmarkTreeNode) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **备注：** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#type-BookmarkTreeNode) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

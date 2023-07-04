@@ -1,17 +1,20 @@
 ---
 title: Add a button to the toolbar
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
+page-type: guide
 ---
 
-{{AddonSidebar}}工具栏按钮是 webextensions 的一种主要 UI 组件，它在浏览器的工具栏中作为图标显示。当用户点击图标时，就会发生下面两种事件中的一样：
+{{AddonSidebar}}
+
+工具栏按钮是 webextensions 的一种主要 UI 组件，它在浏览器的工具栏中作为图标显示。当用户点击图标时，就会发生下面两种事件中的一样：
 
 - 如果按钮有弹出菜单，则显示该弹出。弹出菜单是一个临时对话，它必须使用 HTML，CSS，JavaScript 语言表示。
 - 如果没有弹出菜单，则生成一个单击事件，你可以在代码中监听该事件并执行其他响应。
 
-在 WebExtensions 中这种按钮被称为浏览器行为按钮，它们可以像下面这样生成：
+在 WebExtensions APIs 中这种按钮被称为浏览器行为按钮，它们可以像下面这样生成：
 
 - manifest.json 文件中的键 [`browser_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 被用来定义按钮。
-- JavaScript 接口 [`browserAction`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) 被用来监听单击和更改按钮，或通过代码执行操作。
+- JavaScript API [`browserAction`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) 被用来监听单击和更改按钮，或通过代码执行操作。
 
 ## 一个简单的按钮
 
@@ -41,14 +44,19 @@ slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 }
 ```
 
-上面内容显示有一个名为“background.js”后台脚本，以及在“icons”文件夹下的浏览器行为按钮图标。
-
-These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by Recep Kütük.
+上面内容显示有一个名为“background.js”的[后台脚本（background script）](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)，以及在“icons”文件夹下的浏览器行为按钮图标。
 
 接下来，在"buttons" 文件夹下创建 "icons" 文件夹，在该文件夹下存放下面的图标文件：
 
-- "page-16.png" (![](page-16.png))
-- "page-32.png" (![](page-32.png)).
+**"page-16.png":**
+
+!["16 pixel icon of a lined sheet of paper"](page-16.png)
+
+**"page-32.png":**
+
+!["32 pixel icon of a lined sheet of paper"](page-32.png)
+
+> **Note:** These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by Recep Kütük.
 
 我们有两个图标，大图标用于在高分辨率状态下显示。浏览器会自动选择合适的图标。
 
@@ -57,7 +65,7 @@ These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies)
 ```js
 function openPage() {
   browser.tabs.create({
-    url: "https://developer.mozilla.org"
+    url: "https://developer.mozilla.org",
   });
 }
 
@@ -77,9 +85,9 @@ button/
     manifest.json
 ```
 
-安装这个[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) ，然后单击按钮：
+现在 [安装这个扩展](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/) ，然后单击按钮：
 
-{{EmbedYouTube("kwwTowgT-Ys")}}
+![The toolbar button added by the extension](toolbar_button.png)
 
 ## 添加一个弹出菜单
 
@@ -137,7 +145,8 @@ button/
 在 "popup" 文件夹下，创建名为 "choose_page.css" 的文件，内容如下：
 
 ```css
-html, body {
+html,
+body {
   width: 300px;
 }
 
@@ -188,9 +197,9 @@ button/
     manifest.json
 ```
 
-重新加载附加组件，再次单击按钮，并尝试在弹出菜单中单击某个选择项：
+现在[重新加载附加组件](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/#reloading-a-temporary-extension)，再次单击按钮，并尝试在弹出菜单中单击某个选择项：
 
-{{EmbedYouTube("QPEh1L1xq0Y")}}
+![The toolbar button added by the extension with a popup](toolbar_button_with_popup.png)
 
 ## 页面行为
 
@@ -207,7 +216,6 @@ button/
   - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
   - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/main/bookmark-it)
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)
-  - [inpage-toolbar-ui](https://github.com/mdn/webextensions-examples/tree/main/inpage-toolbar-ui)
   - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/main/open-my-page-button)
 
 - [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key

@@ -1,6 +1,8 @@
 ---
 title: downloads.DownloadItem
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
+page-type: webextension-api-type
+browser-compat: webextensions.api.downloads.DownloadItem
 ---
 
 {{AddonSidebar()}}
@@ -19,6 +21,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
   - : 一个代表了在下载过程中从主机接收到的字节数的 `number` ；不考虑文件压缩。
 - `canResume`
   - : 一个标识当前中断（例如暂停）的下载是否可以从当前位置恢复的 `boolean`。
+- `cookieStoreId` {{optional_inline}}
+  - : The cookie store ID of the [contextual identity](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) in which the download took place.
 - `danger`
   - : 一个标识这个下载是否通过一个不安全的或已知的可疑的站点。可能被设置为 {{WebExtAPIRef('downloads.DangerType')}} 类型。
 - `endTime`{{optional_inline}}
@@ -58,7 +62,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#type-DownloadItem) API.
+> **备注：** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#type-DownloadItem) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

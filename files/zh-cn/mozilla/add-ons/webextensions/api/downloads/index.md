@@ -1,9 +1,13 @@
 ---
 title: downloads
 slug: Mozilla/Add-ons/WebExtensions/API/downloads
+page-type: webextension-api
+browser-compat: webextensions.api.downloads
 ---
 
-{{AddonSidebar}}启用与浏览器的下载管理器交互的扩展。你可以使用这个 API 模块来下载文件、取消、暂停、恢复下载和在文件管理器中显示下载的文件。
+{{AddonSidebar}}
+
+启用与浏览器的下载管理器交互的扩展。你可以使用这个 API 模块来下载文件、取消、暂停、恢复下载和在文件管理器中显示下载的文件。
 
 为使用此 API，你需要在你的 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中声明 "downloads" [API 权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)。
 
@@ -76,7 +80,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads
 
 {{WebExtExamples("h2")}}
 
-> **备注：** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/extensions/downloads) API.
+> **备注：** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

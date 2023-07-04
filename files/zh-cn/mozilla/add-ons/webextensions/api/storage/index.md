@@ -1,15 +1,27 @@
 ---
 title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
+page-type: webextension-api
+browser-compat: webextensions.api.storage
 ---
 
-{{AddonSidebar}}使浏览器扩展能够储存及获取数据，以及监听储存的数据的变化。
+{{AddonSidebar}}
+
+使浏览器扩展能够储存及获取数据，以及监听储存的数据的变化。
 
 此存储系统 API 基于 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API), 并有少许不同。
 
+- It's asynchronous.
+- Values are scoped to the extension, not to a specific domain (i.e. the same set of key/value pairs are available to all scripts in the background context and content scripts).
+- The values stored can be any JSON-ifiable value, not just [`String`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String). Among other things, this includes: [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) and [`Object`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object), but only when their contents can be represented as JSON, which does not include DOM nodes. You don't need to convert your values to JSON `Strings` prior to storing them, but they are represented as JSON internally, thus the requirement that they be JSON-ifiable.
+- Multiple key/value pairs can be set or retrieved in the same API call.
 为了使用该 API，您需要在[manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)文件包含"storage"[权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions)。每一个浏览器扩展有自己的储存区域，每一个储存区域又分为几种不同的存储类型。
 
-虽然此 API 类似于 {{domxref("Window.localStorage")}}，但仍建议你不要在插件中使用 `Window.localStorage`。当用户由于隐私原因清除历史浏览记录及数据时，火狐会将在浏览器扩展使用 `localStorage API` 存储的数据一并清除。而使用 `storage.localAPI` 存储的数据将会恰当保留。
+虽然此 API 类似于 {{domxref("Window.localStorage")}}，但仍建议你不要在插件中使用 `Window.localStorage`。当用户由于隐私原因清除历史浏览记录及数据时，火狐会将在浏览器扩展使用 `localStorage API` 存储的数据一并清除。而使用 [`storage.local`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) 存储的数据将会恰当保留。
+
+You can examine the stored data under the Extension Storage item in the [Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) tab of the [developer toolbox](https://extensionworkshop.com/documentation/develop/debugging/), accessible from `about:debugging`.
+
+> **Note:** The storage area is not encrypted and shouldn't be used for storing confidential user information.
 
 ## 类型
 
@@ -28,6 +40,10 @@ storage 有 3 个属性，每一个代表不同的存储区域。
   - : 表示一个本地的存储区域。此区域的数据属于其所在的插件。
 - {{WebExtAPIRef("storage.managed")}}
   - : 表示管理的存储区域。此区域的数据由本域名下的管理员设置且对该插件是只读的。试图修改此区域数据会得到一个错误。
+- {{WebExtAPIRef("storage.session")}}
+  - : Represents the `session` storage area. Items in `session` storage are stored in memory and are not persisted to disk.
+- {{WebExtAPIRef("storage.sync")}}
+  - : Represents the `sync` storage area. Items in `sync` storage are synced by the browser, and are available across all instances of that browser that the user is logged into, across different devices.
 
 ## 事件
 
@@ -38,9 +54,9 @@ storage 有 3 个属性，每一个代表不同的存储区域。
 
 {{Compat}}
 
-> **备注：** "Chrome 不兼容"这部分来源于 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) 使用[WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
+> **备注：** "Chrome 不兼容"这部分来源于 [https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) 使用[WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
 >
-> 如果需要更新这部分，请编辑 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities), 然后刷新页面即可看见所做更改。
+> 如果需要更新这部分，请编辑 [https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities), 然后刷新页面即可看见所做更改。
 
 ### 在 Edge 中的不兼容
 
@@ -48,7 +64,7 @@ Promises 在 Edge 中不被支持，使用 callbacks 代替。
 
 {{WebExtExamples("h2")}}
 
-> **备注：** 这个 API 基于 Chromium 的 [`chrome.storage`](https://developer.chrome.com/extensions/storage) API. 这篇文档也来源于 Chromium 代码中的 [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json).
+> **备注：** 这个 API 基于 Chromium 的 [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. 这篇文档也来源于 Chromium 代码中的 [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json).
 >
 > Microsoft Edge 的适配数据由 Microsoft Corporation 提供并且被包含在 Creative Commons Attribution 3.0 United States License 许可证下。
 

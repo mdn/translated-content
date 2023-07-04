@@ -1,12 +1,14 @@
 ---
 title: devtools.inspectedWindow
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
+page-type: webextension-api-property
+browser-compat: webextensions.api.devtools.inspectedWindow
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
 ---
 
 {{AddonSidebar}}
 
-> **备注：** This page describes the WebExtensions devtools APIs as they exist in Firefox 54. Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools), there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see [Limitations of the devtools APIs](/zh-CN/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs).
+> **备注：** This page describes the WebExtensions devtools APIs as they exist in Firefox 54. Although the APIs are based on the [Chrome devtools APIs](https://developer.chrome.com/extensions/devtools), there are still many features that are not yet implemented in Firefox, and therefore are not documented here. To see which features are currently missing please see [Limitations of the devtools APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools#limitations_of_the_devtools_api).
 
 The `devtools.inspectedWindow` API lets a devtools extension interact with the window that the developer tools are attached to.
 
@@ -14,21 +16,23 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 
 ## Properties
 
-- [`devtools.inspectedWindow.tabId`](/zh-CN/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId)
+- [`devtools.inspectedWindow.tabId`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId)
   - : The ID of the window that the developer tools are attached to.
 
 ## Functions
 
-- [`devtools.inspectedWindow.eval()`](/zh-CN/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval)
+- [`devtools.inspectedWindow.eval()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval)
   - : Evaluate some JavaScript in the target window.
-- [`devtools.inspectedWindow.reload()`](/zh-CN/Add-ons/WebExtensions/API/devtools.inspectedWindow/reload)
+- [`devtools.inspectedWindow.reload()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload)
   - : Reload the target window's document.
+
+{{WebExtExamples("h2")}}
 
 ## Browser compatibility
 
 {{Compat}}
 
-> **备注：** This API is based on Chromium's [`chrome.devtools.inspectedWindow`](https://developer.chrome.com/extensions/devtools_inspectedWindow) API.
+> **备注：** This API is based on Chromium's [`chrome.devtools.inspectedWindow`](https://developer.chrome.com/docs/extensions/reference/devtools_inspectedWindow/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

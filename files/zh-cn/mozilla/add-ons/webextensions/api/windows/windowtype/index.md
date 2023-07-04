@@ -1,28 +1,30 @@
 ---
 title: windows.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
+page-type: webextension-api-type
+browser-compat: webextensions.api.windows.WindowType
 ---
 
 {{AddonSidebar()}}
 
 浏览器窗口的类型。
 
-## Type
+## 枚举值
 
-类型的值是字符串类型。可能的值如下：
+枚举值的值是字符串类型。可能的值如下：
 
 - `"normal"`
 - `"popup"`
 - `"panel"`
 - `"devtools"`
 
-## 浏览器适配
+## 浏览器兼容性
 
 {{Compat}}
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowType) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+> **备注：** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#type-WindowType) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

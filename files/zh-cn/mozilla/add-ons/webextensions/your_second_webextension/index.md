@@ -1,7 +1,7 @@
 ---
 title: 你的第二个 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -26,7 +26,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 
 你可以想象这样的扩展的整体结构：
 
-![](untitled-1.png)
+![The manifest.json file includes icons, browser actions, including popups, and web accessible resources. The choose beast javascript popup resource calls in the beastify script.](untitled-1.png)
 
 这是一个非常简单的扩展，但也展示了 WebExtensions API 的许多基本概念：
 
@@ -60,7 +60,7 @@ cd beastify
   "name": "Beastify",
   "version": "1.0",
 
-  "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#beastify",
+  "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Examples#beastify",
   "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
   "icons": {
     "48": "icons/beasts-48.png"
@@ -81,7 +81,6 @@ cd beastify
     "beasts/turtle.jpg",
     "beasts/snake.jpg"
   ]
-
 }
 ```
 
@@ -95,7 +94,7 @@ cd beastify
   - **`default_title`** 是可选的，用于按钮的提示。
   - **`default_popup`** 在你想要当用户点击按钮时显示出一个弹出窗时使用。而在这里，我们需要，所以我们列入这个键并将其指向扩展中包括的一个 HTML 文件。
 
-- **`web_accessible_resources`** 列出了页面可访问的资源。例如由于当前插件使用动物图像替换了页面原有的图像，当前的动物图像要可以被页面访问。
+- [`web_accessible_resources`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) 列出了页面可访问的资源。例如由于当前插件使用动物图像替换了页面原有的图像，当前的动物图像要可以被页面访问。
 
 需要注意，所有路径是相对于 manifest.json。
 
@@ -402,7 +401,7 @@ content script 做的第一件事是检查全局变量 `window.hasRun`：如果�
 
 创建"beasts"文件夹，之后将图片放入并命名。你可以从 [GitHub 仓库](https://github.com/mdn/webextensions-examples/tree/main/beastify/beasts)或这里下载图片：
 
-![](frog.jpg)![](snake.jpg)![](turtle.jpg)
+![A brown frog.](frog.jpg)![](snake.jpg)![](turtle.jpg)
 
 ## 测试
 
@@ -437,11 +436,11 @@ Firefox 45 开始，你可以临时从硬盘中安装扩展
 
 然后你应该已经看到扩展图标出现在了 Firefox 的工具条上：
 
-{{EmbedYouTube("sAM78GU4P34")}}
+![The beastify icon in the Firefox toolbar](beastify_icon.png)
 
 打开一个网页，然后点击图标，选择一个动物，然后观察网页的变化
 
-{{EmbedYouTube("YMQXyAQSiE8")}}
+![A page replaced with the image of a turtle](beastify_page.png)
 
 ## 用命令行开发
 
@@ -451,3 +450,12 @@ Firefox 45 开始，你可以临时从硬盘中安装扩展
 cd beastify
 web-ext run
 ```
+
+## What's next?
+
+Now that you've created a more advanced WebExtension for Firefox:
+
+- [read about the anatomy of an extension](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [explore the extension examples](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)
+- [find out what you need to develop, test, and publish your extension](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_)
+- [take your learning further](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_#continue_your_learning_experience).

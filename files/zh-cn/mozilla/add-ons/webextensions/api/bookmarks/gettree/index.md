@@ -1,6 +1,8 @@
 ---
 title: bookmarks.getTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
+page-type: webextension-api-function
+browser-compat: webextensions.api.bookmarks.getTree
 ---
 
 {{AddonSidebar()}}
@@ -9,7 +11,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 
 如果它们是文件夹的话，你可以通过其 `children` 属性及其后代的 `children` 属性递归地访问整个树。
 
-这是一个异步的函数，返回 `Promise`。
+这是一个异步的函数，返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
 ## 使用格式
 
@@ -23,11 +25,7 @@ var gettingTree = browser.bookmarks.getTree()
 
 ### 返回值
 
-`Promise` 对象，该对象未来会得到一个填充代表根节点的 `bookmarks.BookmarkTreeNode` 对象的数组。
-
-## 浏览器兼容性
-
-{{Compat}}
+[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 对象，该对象未来会得到一个填充代表根节点的 `bookmarks.BookmarkTreeNode` 对象的数组。
 
 ## 示例
 
@@ -67,7 +65,10 @@ gettingTree.then(logTree, onRejected);
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks#method-getTree) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+## 浏览器兼容性
+
+{{Compat}}
+> **备注：** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#method-getTree) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

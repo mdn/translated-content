@@ -1,19 +1,23 @@
 ---
 title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
+page-type: webextension-api
+browser-compat: webextensions.api.webRequest
 ---
 
-{{AddonSidebar}}为发出的 HTTP 请求在不同阶段添加事件监听器。事件监听器可以接收到请求的详细信息，也可以修改或取消请求。
+{{AddonSidebar}}
 
-## 概况
+为发出HTTP请求的各个阶段添加事件监听器，其中包括`ws://`和`wss://`上的websocket请求。事件监听器接收关于请求的详细信息，并可以修改或取消请求。
 
 每个事件都会在请求的特定阶段触发。事件的顺序大概是这样的：
 
-在请求过程中的任意时间，{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} 可以被触发。虽然有时候触发的事件顺序不同，举个例子，在火狐浏览器中的 HSTS 过程，在 onBeforeRequest 事件执行后，onBeforeRedirect 事件会被立即触发。
+![Order of requests is onBeforeRequest, onBeforeSendHeader, onSendHeaders, onHeadersReceived, onResponseStarted, and onCompleted. The onHeadersReceived can cause an onBeforeRedirect and an onAuthRequired. Events caused by onHeadersReceived start at the beginning onBeforeRequest. Events caused by onAuthRequired start at onBeforeSendHeader.](webrequest-flow.png)
 
-所有的事件，接受 `onErrorOccurred` 事件，`addListener()` 有三个参数：
+{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}}可以在请求过程中的任何时间启动。另外，请注意，有时事件的顺序可能与此不同。例如，在Firefox中，在[HSTS](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security)升级时，`onBeforeRedirect`事件是在`onBeforeRequest`之后立即触发的。如果[Firefox Tracking Protection](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop)阻止一个请求，`onErrorOccurred`也会被触发。
 
-- 监听本身
+所有的事件 - 除了 `onErrorOccurred` - 都可以给 `addListener()`带三个参数：
+
+- 监听器本身
 - 一个 {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} 对象，所以你仅可以被特定请求或特定的资源类型提醒
 - 一个可选的`extraInfoSpec`对象。你可以使用这个对象添加特定的事件命令
 
@@ -23,7 +27,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 这个 webRequest API 不能让你进入一些安全敏感的请求，比如[update checks and OCSP checks](https://bugzilla.mozilla.org/show_bug.cgi?id=1279371).
 
-### Modifying requests
+### 修改请求
 
 在下边这些事件中，你可以修改请求。比如一些特别的操作：
 
@@ -50,32 +54,62 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
-为了完成这些操作，你需要在`extraInfoSpec`参数中添加"blocking"的值到事件的`addListener()`。这将使得监听器变成同步执行。在监听器中，你可以返回一个表明需要作修改的{{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}对象：比如说，你想要发送的修改后的请求头。
+为了完成这些操作，你需要在`extraInfoSpec`参数中添加"blocking"的值到事件的`addListener()`。这将使得监听器变成同步执行。
 
-从 Firefox 52 开始，监听器会返回一个`resolve(BlockingResponse)` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，而不是直接返回一个`BlockingResponse`。这使得监听器可以异步地处理请求。
+在监听器中，你可以返回一个表明需要作修改的{{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}对象：比如说，你想要发送的修改后的请求头。
+
+## Requests at browser startup
+
+When a listener is registered with the `"blocking"` option and is registered during the extension startup, if a request is made during the browser startup that matches the listener the extension starts early. This enables the extension to observe the request at browser startup. If you don't take these steps, requests made at startup could be missed.
+
+## Speculative requests
+
+The browser can make speculative connections, where it determines that a request to a URI may be coming soon. This type of connection does not provide valid tab information, so request details such as `tabId`, `frameId`, `parentFrameId`, etc. are inaccurate. These connections have a {{WebExtAPIRef("webRequest.ResourceType")}} of `speculative`.
+
+## Accessing security information
+
+In the {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} listener you can access the [TLS](/zh-CN/docs/Glossary/TLS) properties of a request by calling {{WebExtAPIRef("webRequest.getSecurityInfo()", "getSecurityInfo()")}}. To do this you must also pass "blocking" in the `extraInfoSpec` argument to the event's `addListener()`.
+
+You can read details of the TLS handshake, but can't modify them or override the browser's trust decisions.
+
+## Modifying responses
+
+To modify the HTTP response bodies for a request, call {{WebExtAPIRef("webRequest.filterResponseData")}}, passing it the ID of the request. This returns a {{WebExtAPIRef("webRequest.StreamFilter")}} object that you can use to examine and modify the data as it is received by the browser.
+
+To do this, you must have the `"webRequestBlocking"` API permission as well as the `"webRequest"` [API permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) and the [host permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the relevant host.
 
 ## Types
 
+- {{WebExtAPIRef("webRequest.BlockingResponse")}}
+  - : An object of this type is returned by event listeners that have set `"blocking"` in their `extraInfoSpec` argument. By setting particular properties in `BlockingResponse`, the listener can modify network requests.
+- {{WebExtAPIRef("webRequest.CertificateInfo")}}
+  - : An object describing a single X.509 certificate.
+- {{WebExtAPIRef("webRequest.HttpHeaders")}}
+  - : An array of HTTP headers. Each header is represented as an object with two properties: `name` and either `value` or `binaryValue`.
+- {{WebExtAPIRef("webRequest.RequestFilter")}}
+  - : An object describing filters to apply to `webRequest` events.
 - {{WebExtAPIRef("webRequest.ResourceType")}}
   - : Represents a particular kind of resource fetched in a web request.
 - {{WebExtAPIRef("webRequest.RequestFilter")}}
   - : An object describing filters to apply to webRequest events.
 - {{WebExtAPIRef("webRequest.HttpHeaders")}}
   - : An array of HTTP headers. Each header is represented as an object with two properties: `name` and either `value` or `binaryValue`.
-- {{WebExtAPIRef("webRequest.BlockingResponse")}}
-  - : An object of this type is returned by event listeners that have set `"blocking"` in their `extraInfoSpec` argument. By setting particular properties in `BlockingResponse`, the listener can modify network requests.
 - {{WebExtAPIRef("webRequest.UploadData")}}
   - : Contains data uploaded in a URL request.
 
 ## Properties
 
-- {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
-  - : The maximum number of times that [`handlerBehaviorChanged()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged) can be called in a 10 minute period.
+- {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
+  - : The maximum number of times that {{WebExtAPIRef("WebRequest.handlerBehaviorChanged", "handlerBehaviorChanged()")}} can be called in a 10 minute period.
 
-## Functions
+## Methods
 
 - {{WebExtAPIRef("webRequest.handlerBehaviorChanged()")}}
-  - : This function can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache.
+  - : This method can be used to ensure that event listeners are applied correctly when pages are in the browser's in-memory cache.
+- {{WebExtAPIRef("webRequest.filterResponseData()")}}
+  - : Returns a {{WebExtAPIRef("webRequest.StreamFilter")}} object for a given request.
+- {{WebExtAPIRef("webRequest.getSecurityInfo()")}}
+  - : Gets detailed information about the [TLS](/zh-CN/docs/Glossary/TLS) connection associated with a given request.
 
 ## Events
 
@@ -101,6 +135,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 ## 浏览器兼容性
 
 {{Compat}}
+[Additional notes on Chrome incompatibilities](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webrequest_api).
+
+{{WebExtExamples("h2")}}
+
+> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,6 +1,7 @@
 ---
 title: 浏览器扩展
 slug: Mozilla/Add-ons/WebExtensions
+page-type: landing-page
 ---
 
 {{AddonSidebar}}

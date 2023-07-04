@@ -1,10 +1,15 @@
 ---
 title: contextMenus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
-original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
+page-type: webextension-api
+browser-compat: webextensions.api.menus
 ---
 
-{{AddonSidebar}}在浏览器菜单中添加条目。此 API 基于 Chrome 的“contextMenus”API 构建，该 API 可让 Chrome 扩展程序将项目添加到浏览器的上下文菜单中。 `browser.menus` API 为 Chrome 的 API 添加了一些功能，特别是可以将项目添加到浏览器的“工具”菜单以及上下文菜单中。在 Firefox 55 之前，这个 API 最初也被命名为`contextMenus`，并且这个名字被保留为别名，所以你可以使用`contextMenus`编写在 Firefox 和其他浏览器中工作的代码。你需要拥有“menus”（或别名" contextMenus "）权限来使用此 API。
+{{AddonSidebar}}
+
+在浏览器菜单中添加条目。此 API 基于 Chrome 的“contextMenus”API 构建，该 API 可让 Chrome 扩展程序将项目添加到浏览器的上下文菜单中。 `browser.menus` API 为 Chrome 的 API 添加了一些功能，特别是可以将项目添加到浏览器的“工具”菜单以及上下文菜单中。在 Firefox 55 之前，这个 API 最初也被命名为`contextMenus`，并且这个名字被保留为别名，所以你可以使用`contextMenus`编写在 Firefox 和其他浏览器中工作的代码。你需要拥有“menus”（或别名" contextMenus "）[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)来使用此 API。
+
+Except for [`menus.getTargetElement()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement), this API cannot be used from content scripts.
 
 ## 创建菜单项
 
@@ -21,21 +26,23 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 
 如果您创建了多个上下文菜单项目或多个工具菜单项目，则这些项目将被放置在子菜单中。子菜单的父项将标有扩展名。例如，下面是一个名为“Menu Demo”的扩展，添加了两个上下文菜单项：
 
-![](menus-1.png)
+![Context menu with two items labeled click me, and click me too!](menus-1.png)
 
 ## 图标
 
-如果你使用 ["icons" manifest key](/zh-CN/Add-ons/WebExtensions/manifest.json/icons) 为你的扩展指定一个图标，你的菜单项的旁边就会显示一个指定的图标。浏览器会尝试在普通分辨率下使用 16 x 16 像素的图标，在高分辨率下使用 32 x 32 像素的图标：
+如果你使用 ["icons" manifest key](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 为你的扩展指定一个图标，你的菜单项的旁边就会显示一个指定的图标。浏览器会尝试在普通分辨率下使用 16 x 16 像素的图标，在高分辨率下使用 32 x 32 像素的图标：
 
-![](menus-2.png) 你可以通过调用 {{WebExtAPIRef("menus.create()")}} 时指定 icons 选项来给子菜单项设置图标。
+![Context menu with two items labeled click me, and click me too!](menus-2.png)
 
-![](menus-3.png)
+你可以通过调用 {{WebExtAPIRef("menus.create()")}} 时指定 icons 选项来给子菜单项设置图标。
+
+![Context menu with two items labeled click me, and click me too!. The click me option is labeled with a green paint can icon. The click me too option is labeled with a blue paint can icon.](menus-3.png)
 
 ## 示例
 
 下面是一个包含四个项目的菜单，他们分别是：一个普通选项，两个周围有分割线的单选，和一个复选框。单选框使用了自定义图标。
 
-![](menus-4.png)
+![Context menu with four items labeled remove me, Greenify, Bluify, and uncheck me. Greenify and Bluify are radio buttons given custom icons.](menus-4.png)
 
 你可以使用以下代码创建一个这样的子菜单：
 
@@ -95,41 +102,53 @@ browser.menus.create({
 
 ## 类型
 
-- {{WebExtAPIRef("contextMenus.ContextType")}}
+- {{WebExtAPIRef("menus.ContextType")}}
   - : 菜单里可以出现的不同内容。可能的值有："all", "audio", "browser_action", "editable", "frame", "image", "link", "page", "page_action", "password", "selection", "tab", "video".
-- {{WebExtAPIRef("contextMenus.ItemType")}}
+- {{WebExtAPIRef("menus.ItemType")}}
   - : 菜单项的类别有："normal", "checkbox", "radio", "separator".
-- {{WebExtAPIRef("contextMenus.OnClickData")}}
+- {{WebExtAPIRef("menus.OnClickData")}}
   - : 当菜单项被点击时发送的信息。
 
 ## 属性
 
-- {{WebExtAPIRef("contextMenus.ACTION_MENU_TOP_LEVEL_LIMIT")}}
+- {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}
   - : 可以被添加进上下文菜单项的顶级扩展项的最大值，其 ContextType 可以是"browser_action" 或者 "page_action".
 
 ## 函数
 
-- {{WebExtAPIRef("contextMenus.create()")}}
+- {{WebExtAPIRef("menus.create()")}}
   - : 创建一个新的上下文菜单项目。
-- {{WebExtAPIRef("contextMenus.update()")}}
-  - : 更新一个已经创建了的上下文菜单项目。
-- {{WebExtAPIRef("contextMenus.remove()")}}
+- {{WebExtApiRef("menus.getTargetElement()")}}
+  - : Returns the element for a given `info.targetElementId`.
+- {{WebExtAPIRef("menus.update()")}}
+  - : Hide all default Firefox menu items in favor of providing a custom context menu UI.
+- {{WebExtAPIRef("menus.refresh()")}}
+  - : Update a menu that's currently being displayed.
+- {{WebExtAPIRef("menus.remove()")}}
   - : 删除一个上下文菜单项目。
-- {{WebExtAPIRef("contextMenus.removeAll()")}}
+- {{WebExtAPIRef("menus.removeAll()")}}
   - : 移除该插件创建的所有上下文菜单项目。
+- {{WebExtAPIRef("menus.update()")}}
+  - : 更新一个已经创建了的上下文菜单项目。
 
 ## 事件
 
-- {{WebExtAPIRef("contextMenus.onClicked")}}
+- {{WebExtAPIRef("menus.onClicked")}}
   - : 当一个上下文菜单项被点击时触发。
+- {{WebExtAPIRef("menus.onHidden")}}
+  - : Fired when the browser hides a menu.
+- {{WebExtAPIRef("menus.onShown")}}
+  - : Fired when the browser shows a menu.
 
 ## 浏览器兼容性
 
-{{ Compat }}
-
 {{WebExtExamples("h2")}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.contextMenus`](https://developer.chrome.com/extensions/contextMenus) API. 此文档来自于 Chromium 代码中的[`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json)。
+{{Compat}}
+
+> **备注：**
+
+此 API 基于 Chromium 的 [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/) API. 此文档来自于 Chromium 代码中的[`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

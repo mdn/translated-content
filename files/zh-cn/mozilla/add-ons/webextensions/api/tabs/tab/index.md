@@ -1,18 +1,26 @@
 ---
 title: tabs.Tab
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
+page-type: webextension-api-type
+browser-compat: webextensions.api.tabs.Tab
 ---
 
 {{AddonSidebar()}}
 
-**`tabs.Tab`** 包含有关标签页的信息 . 这样可以访问有关标签页中的内容，内容有多大，特殊状态或限制有效的信息等等。
+类型**`tabs.Tab`**包含关于一个标签的信息。这提供了对标签中哪些内容的访问，内容有多大，有哪些特殊的状态或限制在起作用，等等。
 
 ## 类型
 
 这种类型的值是对象。它包含以下属性：
 
 - `active`
-  - : `boolean`. 该标签页是否在其窗口中处于活动状态。即使标签的窗口当前没有被关注，也可能是 true。
+
+  - : `boolean`. 该标签页是否在其窗口中处于活动状态。即使标签的窗口当前不在焦点上，也可能是 true。
+
+    The active tab is usually the selected one. However, on Firefox for Android, extension popups open in a new tab. When this popup tab is selected, the active tab will instead be the one in which the popup opened.
+
+- `attention` {{optional_inline}}
+  - : `boolean`. Indicates whether the tab is drawing attention. For example, when the tab displays a modal dialog, `attention` will be `true`.
 - `audible` {{optional_inline}}
   - : `boolean`. 如果标签页没有静音：标签页是否正在发出声音。如果标签页被静音：如果没有静音标签页是否会发出声音。
 - `autoDiscardable` {{optional_inline}}
@@ -25,8 +33,14 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
   - : `string`. 该标签的图标的网址。只有在扩展具有“cookies”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)的情况下才会出现。如果标签页正在加载中，该值可以为空字符串
 - `height` {{optional_inline}}
   - : `integer`. 标签页的像素单位高度。
+- `hidden`
+  - : `boolean`. Whether the tab is hidden.
 - `highlighted`
-  - : `boolean`. 标签页是否突出显示。
+
+  - : `boolean`. Whether the tab is highlighted, i.e. part of the current tab selection. An active tab is always highlighted, but some browsers may allow additional tabs to be highlighted, for example by clicking them while holding <kbd>Ctrl</kbd>, <kbd>Shift</kbd> or <kbd>⌘ Command</kbd> keys.
+
+    Firefox for Android doesn't support highlighting multiple tabs.
+
 - `id` {{optional_inline}}
   - : `integer`. 标签页的 ID. 标签 ID 在浏览器的会话中是唯一的。在浏览器窗口中不包含内容的标签页 (例如，devtools 窗口),标签 ID 也可以设置为 {{WebExtAPIRef('tabs.TAB_ID_NONE')}} 。
 - `incognito`
@@ -50,7 +64,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 - `sessionId` {{optional_inline}}
   - : `string`. 从{{WebExtAPIRef('sessions')}} API 获取的标签页的唯一标识会话 ID.
 - `status` {{optional_inline}}
-  - : `string`._加载_ 或 _完成_.
+  - : `string`. Either _loading_ or _complete_.
+- `successorTabId` {{optional_inline}}
+  - : `integer` The ID of the tab's successor.
 - `title` {{optional_inline}}
   - : `string`. 标签页的标题。只有当扩展具有 `"tabs"` [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 时才会出现。
 - `url` {{optional_inline}}
@@ -66,7 +82,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 
 {{WebExtExamples}}
 
-> **备注：** 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#type-Tab) API. 本文档来源于 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json).
+> **备注：** 此 API 基于 Chromium 的 [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#type-Tab) API. 本文档来源于 Chromium 代码中的 [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json).
 >
 > Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并包含在 Creative Commons Attribution 3.0 美国许可证下。
 

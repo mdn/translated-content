@@ -1,6 +1,8 @@
 ---
 title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
+page-type: webextension-api
+browser-compat: webextensions.api.bookmarks
 ---
 
 {{AddonSidebar}}
@@ -8,6 +10,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 此[WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API 允许一个附加组件和浏览器的书签系统交互和操作。您可以用它给页面加书签，获取已有的书签，以及编辑，移除和管理书签。
 
 欲使用此 API，一个附件组件必须请求"bookmarks" [permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)在它的[`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)文件当中。
+
+Extensions cannot create, modify, or delete bookmarks in the root node of the bookmarks tree. Doing so causes an error with the message: "_The bookmark root cannot be modified_"
 
 ## 类型
 
@@ -72,13 +76,13 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 
 {{Compat}}
 
-> **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
+> **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
 >
-> If you need to update this content, edit [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
+> If you need to update this content, edit [https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities), then shift-refresh this page to see your changes.
 
 {{WebExtExamples("h2")}}
 
-> **备注：** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> **备注：** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

@@ -1,13 +1,21 @@
 ---
 title: downloads.download()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
+page-type: webextension-api-function
+browser-compat: webextensions.api.downloads.download
 ---
 
 {{AddonSidebar()}}
 
 {{WebExtAPIRef("downloads")}} API 的 **`download()`** 函数根据给出的 URL 和其他首选项下载一个文件。
 
-- 如果指定的 `url` 使用 HTTP 或者 HTTPS 协议，那么下载请求将会包含当前为该域名所设置的所有 cookie。
+如果指定的 `url` 使用 HTTP 或者 HTTPS 协议，那么下载请求将会包含当前为该域名所设置的所有相关的 cookies。
+
+如果要使用默认的cookies，即正常浏览会话中的cookies，那就要：
+
+- the `incognito` option is used, then the private browsing cookies are used.
+- the `cookieStoreId` option is used, then the cookies from the specified store are used.
+
 - 如果`filename` 和 `saveAs` 都已经指定，那么将会弹出“保存为”对话框，并且默认名称显示为`filename`.
 
 这是一个异步函数，其返回值为 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise).
@@ -92,7 +100,7 @@ downloading.then(onStartedDownload, onFailed);
 
 {{WebExtExamples}}
 
-> **备注：** 这个 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.com/extensions/downloads#method-download) API.
+> **备注：** 这个 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-download) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

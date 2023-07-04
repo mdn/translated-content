@@ -1,6 +1,8 @@
 ---
 title: sessions.Session
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
+page-type: webextension-api-type
+browser-compat: webextensions.api.sessions.Session
 ---
 
 {{AddonSidebar()}}
@@ -33,7 +35,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 
 {{Compat}}
 
-> **备注：** 该 API 基于 Chromium 的[`chrome.sessions`](https://developer.chrome.com/extensions/sessions)API。
+> **备注：** 该 API 基于 Chromium 的[`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/)API。
 >
 > Microsoft Edge 兼容性数据由 Microsoft Corporation 提供，并在此处包含在 Creative Commons Attribution 3.0 美国许可证下。
 

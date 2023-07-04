@@ -1,9 +1,13 @@
 ---
 title: tabs.onActivated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
+page-type: webextension-api-event
+browser-compat: webextensions.api.tabs.onActivated
 ---
 
-{{AddonSidebar()}}当窗体的活动标签变化时触发。请注意事件触发时标签的 URL 可能尚未设置，但是你可以通过监听 {{WebExtAPIRef("tabs.onUpdated")}} 事件在 URL 被设置后得到通知。
+{{AddonSidebar()}}
+
+当窗体的活动标签变化时触发。请注意事件触发时标签的 URL 可能尚未设置，但是你可以通过监听 {{WebExtAPIRef("tabs.onUpdated")}} 事件在 URL 被设置后得到通知。
 
 ## 语法
 
@@ -31,20 +35,18 @@ browser.tabs.onActivated.hasListener(listener)
   - : 事件发生时被执行的方法。以下参数会被传递至该方法：
 
     - `activeInfo`
-      - : [`object`](#activeInfo). 被激活标签的 ID , 以及它的窗体的 ID。
+      - : [`object`](#activeInfo). 被激活标签的 ID , 以及它的窗体的 ID。 See the [activeInfo](#activeinfo_2) section for more details.
 
 ## 额外的对象
 
 ### activeInfo
 
+- `previousTabId`
+  - : `integer`. The ID of the previous activated tab, if that tab is still open.
 - `tabId`
   - : `integer`. 被激活的标签的 ID。
 - `windowId`
   - : `integer`. 此标签的窗体的 ID。
-
-## 浏览器兼容性
-
-{{Compat}}
 
 ## 示例
 
@@ -61,7 +63,11 @@ browser.tabs.onActivated.addListener(handleActivated);
 
 {{WebExtExamples}}
 
-> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onActivated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+## 浏览器兼容性
+
+{{Compat}}
+
+> **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onActivated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 

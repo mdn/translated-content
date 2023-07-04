@@ -1,6 +1,7 @@
 ---
 title: 原生应用清单
 slug: Mozilla/Add-ons/WebExtensions/Native_manifests
+page-type: guide
 ---
 
 {{AddonSidebar}}
@@ -341,11 +342,15 @@ browser.pkcs11.installModule("my_module");
 
 如果想要全局可见，使用下面的路径创建注册表：
 
-```plain
+```
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\NativeMessagingHosts\<name>
+```
 
+```
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\ManagedStorage\<name>
+```
 
+```
 HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
 ```
 
@@ -353,39 +358,51 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
 
 ![为原生应用通信清单建立的注册表](native-message-regkey-exaple.png)
 
-> **备注：** 对于原生应用清单，即使原生应用是 32 位的，也不能在 [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) 下创建注册表。浏览器将总会在 native 视图下寻找注册表的，而不是 32 位放在环境。确保注册表的创建在原生视图中，你可以键入 KEY_WOW64_64KEY 或 KEY_WOW64_32KEY 到 RegCreateKeyEx。请参考：[Accessing an Alternate Registry View](<https://msdn.microsoft.com/en-us/library/windows/desktop/aa384129(v=vs.85).aspx>)
+> **备注：** 对于原生应用清单，即使原生应用是 32 位的，也不能在 [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) 下创建注册表。浏览器将总会在 native 视图下寻找注册表的，而不是 32 位放在环境。确保注册表的创建在原生视图中，你可以键入 KEY_WOW64_64KEY 或 KEY_WOW64_32KEY 到 RegCreateKeyEx。请参考：[Accessing an Alternate Registry View](<https://msdn.microsoft.com/zh-CN/library/windows/desktop/aa384129(v=vs.85).aspx>)
 
 如果想要用户级别的可见，使用下面的路径创建注册表：
 
-```plain
+```
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\NativeMessagingHosts\<name>
+```
 
+```
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\ManagedStorage\<name>
+```
 
+```
 HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<name>
 ```
 
 注册表应该有单个默认值，值里存放“到清单文件的路径”。
 
-### Mac OS X
+### macOS
 
 如果想要全局可见，将清单文件存放在：
 
-```plain
+```
 /Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
+```
 
+```
 /Library/Application Support/Mozilla/ManagedStorage/<name>.json
+```
 
+```
 /Library/Application Support/Mozilla/PKCS11Modules/<name>.json
 ```
 
 如果想要用户级别的可见，将清单文件存放在：
 
-```plain
+```
 ~/Library/Application Support/Mozilla/NativeMessagingHosts/<name>.json
+```
 
+```
 ~/Library/Application Support/Mozilla/ManagedStorage/<name>.json
+```
 
+```
 ~/Library/Application Support/Mozilla/PKCS11Modules/<name>.json
 ```
 
@@ -393,30 +410,42 @@ HKEY_CURRENT_USER\SOFTWARE\Mozilla\PKCS11Modules\<name>
 
 如果想要全局可见，将清单文件存放在：
 
-```plain
+```
 /usr/lib/mozilla/native-messaging-hosts/<name>.json
+```
 
+```
 /usr/lib/mozilla/managed-storage/<name>.json
+```
 
+```
 /usr/lib/mozilla/pkcs11-modules/<name>.json
 ```
 
 或者：
 
-```plain
-/usr/lib64/mozilla/native-messaging-hosts/<name>.json
+```
+    /usr/lib64/mozilla/native-messaging-hosts/<name>.json
+```
 
-/usr/lib64/mozilla/managed-storage/<name>.json
+```
+    /usr/lib64/mozilla/managed-storage/<name>.json
+```
 
-/usr/lib64/mozilla/pkcs11-modules/<name>.json
+```
+    /usr/lib64/mozilla/pkcs11-modules/<name>.json
 ```
 
 如果想要用户级别的可见，将清单文件存放在：
 
-```plain
+```
 ~/.mozilla/native-messaging-hosts/<name>.json
+```
 
+```
 ~/.mozilla/managed-storage/<name>.json
+```
 
+```
 ~/.mozilla/pkcs11-modules/<name>.json
 ```

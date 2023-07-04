@@ -1,12 +1,15 @@
 ---
 title: contentScripts
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
+page-type: webextension-api
+browser-compat: webextensions.api.contentScripts
 ---
 
 {{AddonSidebar}}
 
 使用此 API 以注册内容脚本。“注册内容脚本”意味着浏览器会将给定的内容脚本插入到每个与给定的 URL 模式相匹配的页面中。
 
+> **Note:** When using Manifest V3 or higher, use {{WebExtAPIRef("scripting.registerContentScripts()")}} to register scripts.
 此 API 与 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 的 [`"content_scripts"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 键非常相似，但 `"content_scripts"` 键所能注册的内容脚本是固定的，自拓展安装后便不可更改。但通过 `contentScripts` API，拓展可以在运行时动态地注册或取消注册脚本。
 
 To use the API, call {{WebExtAPIRef("contentScripts.register()")}} passing in an object defining the scripts to register, the URL patterns, and other options. This returns a [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is resolved with a {{WebExtAPIRef("contentScripts.RegisteredContentScript")}} object.

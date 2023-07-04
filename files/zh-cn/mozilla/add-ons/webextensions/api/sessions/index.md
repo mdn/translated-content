@@ -1,6 +1,8 @@
 ---
 title: sessions
 slug: Mozilla/Add-ons/WebExtensions/API/sessions
+page-type: webextension-api
+browser-compat: webextensions.api.sessions
 ---
 
 {{AddonSidebar}}
@@ -13,7 +15,7 @@ You can then restore a window or tab using the {{WebExtAPIRef("sessions.restore(
 
 This API also provides a group of functions that enable an extension to store additional state associated with a tab or a window. Then, if the tab or window is closed and subsequently restored, the extension can retrieve the state. For example, a tab grouping extension might use this to remember which group a tab is in, so as to restore it into the right group if the user restores the tab.
 
-To use the sessions API you must have the "sessions" [API permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions).
+To use the sessions API you must have the "sessions" [API permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
 ## Types
 
@@ -61,7 +63,7 @@ To use the sessions API you must have the "sessions" [API permission](/zh-CN/Add
 
 {{WebExtExamples("h2")}}
 
-> **备注：** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/extensions/sessions) API.
+> **备注：** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
 >
 > Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
