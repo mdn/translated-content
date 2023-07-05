@@ -15134,17 +15134,9 @@
     "modified": "2019-03-24T00:06:07.388Z",
     "contributors": ["ibnkhaldun"]
   },
-  "orphaned/Glossary/Dynamic_programming_language": {
-    "modified": "2020-09-12T18:21:07.076Z",
-    "contributors": ["IsraFloores", "DaniNz"]
-  },
   "orphaned/Glossary/elemento": {
     "modified": "2019-01-16T19:38:18.287Z",
     "contributors": ["BubuAnabelas", "HerberWest"]
-  },
-  "orphaned/Glossary/jQuery": {
-    "modified": "2019-03-23T22:02:49.153Z",
-    "contributors": ["yancarq", "velizluisma"]
   },
   "orphaned/Guía_para_el_desarrollador_de_agregados_para_Firefox": {
     "modified": "2019-01-16T14:29:03.747Z",
@@ -15285,16 +15277,6 @@
       "BubuAnabelas",
       "SphinxKnight",
       "FranciscoImanolSuarez"
-    ]
-  },
-  "orphaned/MDN/Tools": {
-    "modified": "2020-09-30T16:48:18.728Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Jeremie",
-      "Arudb79",
-      "atlas7jean"
     ]
   },
   "orphaned/MDN/Tools/Page_regeneration": {

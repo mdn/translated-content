@@ -474,7 +474,6 @@
 /es/docs/Glossary/Criptografía	/es/docs/Glossary/Cryptography
 /es/docs/Glossary/DHTML	/es/docs/Glossary
 /es/docs/Glossary/Descifrado	/es/docs/Glossary/Decryption
-/es/docs/Glossary/Dynamic_programming_language	/es/docs/orphaned/Glossary/Dynamic_programming_language
 /es/docs/Glossary/Empty_element	/es/docs/Glossary/Void_element
 /es/docs/Glossary/Encriptación	/es/docs/Glossary/Encryption
 /es/docs/Glossary/Entidad	/es/docs/Glossary/Entity
@@ -516,7 +515,6 @@
 /es/docs/Glossary/XForm	/es/docs/Glossary/XForms
 /es/docs/Glossary/coercion	/es/docs/Glossary/Type_coercion
 /es/docs/Glossary/conjunto_de_caracteres	/es/docs/Glossary/Character_set
-/es/docs/Glossary/jQuery	/es/docs/orphaned/Glossary/jQuery
 /es/docs/Glossary/miga-de-pan	/es/docs/Glossary/Breadcrumb
 /es/docs/Glossary/propiedad	/es/docs/Glossary/Property
 /es/docs/Glossary/seguro	/es/docs/Glossary/Safe
@@ -1228,7 +1226,7 @@
 /es/docs/MDN/Contribute/Guidelines/Content_blocks	/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /es/docs/MDN/Contribute/Guidelines/Convenciones_y_definiciones	/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /es/docs/MDN/Contribute/Guidelines/Project:Guía_de_estilo	/es/docs/MDN/Writing_guidelines/Writing_style_guide
-/es/docs/MDN/Contribute/Herramientas	/es/docs/orphaned/MDN/Tools
+/es/docs/MDN/Contribute/Herramientas	https://github.com/mdn/yari/tree/main/docs
 /es/docs/MDN/Contribute/Howto	/es/docs/conflicting/MDN/Contribute
 /es/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /es/docs/MDN/Contribute/Howto/Tag	/es/docs/MDN/Writing_guidelines/Howto
@@ -1259,7 +1257,7 @@
 /es/docs/MDN/Structures/Macros/Other	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Structures/Macros/Otras	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Structures/Tablas_de_compatibilidad	/es/docs/MDN/Writing_guidelines/Page_structures
-/es/docs/MDN/Tools	/es/docs/orphaned/MDN/Tools
+/es/docs/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
 /es/docs/MDN/Tools/Introduction_to_KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /es/docs/MDN/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /es/docs/MDN/Writing_guidelines/Howto/Tag	/es/docs/MDN/Writing_guidelines/Howto
@@ -2949,6 +2947,7 @@
 /es/docs/controladores_protocolos_web	/es/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 /es/docs/en	/en-US/
 /es/docs/firefox_Web_Developer_(externo)	https://addons.mozilla.org/firefox/60/
+/es/docs/orphaned/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
 /es/docs/orphaned/MDN/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /es/docs/orphaned/MDN/Yari	/es/docs/MDN/Community/Contributing/Our_repositories
 /es/docs/orphaned/Web/API/NavigatorConcurrentHardware	/es/docs/Web/API/Navigator
