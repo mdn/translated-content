@@ -156,7 +156,7 @@ API
   - [requestIdleCallback()](/zh-CN/docs/Web/API/Window/requestIdleCallback)
 
 - [Beacon API](/zh-CN/docs/Web/API/Beacon_API)
-- Resource Hints - [dns-prefetch](/zh-CN/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/zh-CN/docs/Web/HTTP/Link_prefetching_FAQ), and prerender
+- Resource Hints - [dns-prefetch](/zh-CN/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/zh-CN/docs/Glossary/Prefetch), and prerender
 - [FetchEvent.preloadResponse](/zh-CN/docs/Web/API/FetchEvent/preloadResponse)
 - [Performance Server Timing API](/zh-CN/docs/Web/API/PerformanceServerTiming)
 

@@ -1,16 +1,6 @@
 ---
 title: history.deleteAll()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteAll
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - deleteAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteAll
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: Firefox 4 pour les développeurs
 slug: Mozilla/Firefox/Releases/4
-tags:
-  - Firefox
-  - Firefox 4
 translation_of: Mozilla/Firefox/Releases/4
-original_slug: Mozilla/Firefox/Versions/4
 ---
 
 1. Notes de versions pour développeurs

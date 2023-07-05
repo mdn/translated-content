@@ -1,15 +1,6 @@
 ---
 title: runtime.getBrowserInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getBrowserInfo
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
 ---
 

@@ -1,14 +1,7 @@
 ---
 title: Lignes directrices du CSS
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
-tags:
-  - CSS
-  - Code
-  - Guide
-  - Directives
-  - MDN Meta
 translation_of: MDN/Guidelines/Code_guidelines/CSS
-original_slug: MDN/Guidelines/Code_guidelines/CSS
 ---
 
 {{MDNSidebar}}

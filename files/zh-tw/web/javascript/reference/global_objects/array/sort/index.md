@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/sort
 
 ## 語法
 
-```plain
+```js-nolint
 arr.sort([compareFunction])
 ```
 
@@ -24,7 +24,7 @@ arr.sort([compareFunction])
 
 ### 回傳值
 
-排序後的陣列。請注意此為*[原地（in place）](https://zh.wikipedia.org/wiki/%E5%8E%9F%E5%9C%B0%E7%AE%97%E6%B3%95)*進行排序過的陣列，並且不是原陣列的拷貝。
+排序後的陣列。請注意此為[_原地_（in place）](https://zh.wikipedia.org/wiki/原地算法)進行排序過的陣列，並且不是原陣列的拷貝。
 
 ## 描述
 
@@ -64,7 +64,7 @@ function compareNumbers(a, b) {
 
 ```js
 var numbers = [4, 2, 5, 1, 3];
-numbers.sort(function(a, b) {
+numbers.sort(function (a, b) {
   return a - b;
 });
 console.log(numbers);
@@ -76,12 +76,12 @@ console.log(numbers);
 
 ```js
 var items = [
-  { name: 'Edward', value: 21 },
-  { name: 'Sharpe', value: 37 },
-  { name: 'And', value: 45 },
-  { name: 'The', value: -12 },
-  { name: 'Magnetic', value: 13 },
-  { name: 'Zeros', value: 37 }
+  { name: "Edward", value: 21 },
+  { name: "Sharpe", value: 37 },
+  { name: "And", value: 45 },
+  { name: "The", value: -12 },
+  { name: "Magnetic", value: 13 },
+  { name: "Zeros", value: 37 },
 ];
 
 // sort by value
@@ -90,7 +90,7 @@ items.sort(function (a, b) {
 });
 
 // sort by name
-items.sort(function(a, b) {
+items.sort(function (a, b) {
   var nameA = a.name.toUpperCase(); // ignore upper and lowercase
   var nameB = b.name.toUpperCase(); // ignore upper and lowercase
   if (nameA < nameB) {
@@ -112,29 +112,35 @@ items.sort(function(a, b) {
 下列範例建立了四個陣列並顯示其原本陣列內容、再進行排序。數字陣列先不使用比較函式（compare function）來排序，接著才依據比較函式進行排序。
 
 ```js
-var stringArray = ['Blue', 'Humpback', 'Beluga'];
-var numericStringArray = ['80', '9', '700'];
+var stringArray = ["Blue", "Humpback", "Beluga"];
+var numericStringArray = ["80", "9", "700"];
 var numberArray = [40, 1, 5, 200];
-var mixedNumericArray = ['80', '9', '700', 40, 1, 5, 200];
+var mixedNumericArray = ["80", "9", "700", 40, 1, 5, 200];
 
 function compareNumbers(a, b) {
   return a - b;
 }
 
-console.log('stringArray:', stringArray.join());
-console.log('Sorted:', stringArray.sort());
+console.log("stringArray:", stringArray.join());
+console.log("Sorted:", stringArray.sort());
 
-console.log('numberArray:', numberArray.join());
-console.log('Sorted without a compare function:', numberArray.sort());
-console.log('Sorted with compareNumbers:', numberArray.sort(compareNumbers));
+console.log("numberArray:", numberArray.join());
+console.log("Sorted without a compare function:", numberArray.sort());
+console.log("Sorted with compareNumbers:", numberArray.sort(compareNumbers));
 
-console.log('numericStringArray:', numericStringArray.join());
-console.log('Sorted without a compare function:', numericStringArray.sort());
-console.log('Sorted with compareNumbers:', numericStringArray.sort(compareNumbers));
+console.log("numericStringArray:", numericStringArray.join());
+console.log("Sorted without a compare function:", numericStringArray.sort());
+console.log(
+  "Sorted with compareNumbers:",
+  numericStringArray.sort(compareNumbers)
+);
 
-console.log('mixedNumericArray:', mixedNumericArray.join());
-console.log('Sorted without a compare function:', mixedNumericArray.sort());
-console.log('Sorted with compareNumbers:', mixedNumericArray.sort(compareNumbers));
+console.log("mixedNumericArray:", mixedNumericArray.join());
+console.log("Sorted without a compare function:", mixedNumericArray.sort());
+console.log(
+  "Sorted with compareNumbers:",
+  mixedNumericArray.sort(compareNumbers)
+);
 ```
 
 這個範例將產生下列結果。就如結果所示，當使用比較函式時，數字會被正確的排序，不管是數字還是數字字串。
@@ -161,7 +167,7 @@ Sorted with compareNumbers: 1,5,9,40,80,200,700
 為了排列非 ASCII 字元，即重音節字元（e、é、è、a、ä 等等），非英語字串：利用 {{jsxref("String.localeCompare")}}。此函式將比較這些字元，所以結果將會顯示正確的順序。
 
 ```js
-var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
+var items = ["réservé", "premier", "cliché", "communiqué", "café", "adieu"];
 items.sort(function (a, b) {
   return a.localeCompare(b);
 });
@@ -175,15 +181,15 @@ items.sort(function (a, b) {
 
 ```js
 // the array to be sorted
-var list = ['Delta', 'alpha', 'CHARLIE', 'bravo'];
+var list = ["Delta", "alpha", "CHARLIE", "bravo"];
 
 // temporary array holds objects with position and sort-value
-var mapped = list.map(function(el, i) {
+var mapped = list.map(function (el, i) {
   return { index: i, value: el.toLowerCase() };
-})
+});
 
 // sorting the mapped array containing the reduced values
-mapped.sort(function(a, b) {
+mapped.sort(function (a, b) {
   if (a.value > b.value) {
     return 1;
   }
@@ -194,7 +200,7 @@ mapped.sort(function(a, b) {
 });
 
 // container for the resulting order
-var result = mapped.map(function(el){
+var result = mapped.map(function (el) {
   return list[el.index];
 });
 ```

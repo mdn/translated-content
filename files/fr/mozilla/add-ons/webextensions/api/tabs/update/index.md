@@ -1,16 +1,6 @@
 ---
 title: tabs.update()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/update
 ---
 

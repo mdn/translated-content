@@ -1,16 +1,6 @@
 ---
 title: webRequest.onBeforeRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onBeforeRequest
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
 ---
 

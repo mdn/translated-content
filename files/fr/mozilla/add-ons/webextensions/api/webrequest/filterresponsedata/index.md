@@ -1,15 +1,6 @@
 ---
 title: webRequest.filterResponseData()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - filterResponseData
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
 ---
 

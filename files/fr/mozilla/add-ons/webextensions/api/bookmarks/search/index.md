@@ -1,17 +1,6 @@
 ---
 title: bookmarks.search()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Recherche
-  - Reference
-  - Search
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: Ajouter une page de paramètres
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
-tags:
-  - Paramètres
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
-original_slug: Mozilla/Add-ons/WebExtensions/Ajouter_une_page_de_paramètres
 ---
 
 {{AddonSidebar}}
