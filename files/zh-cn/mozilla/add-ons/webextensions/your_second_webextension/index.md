@@ -462,4 +462,4 @@ web-ext run
 - [阅读扩展剖析](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [浏览扩展示例](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)
 - [学习如何开发、测试、发布你的扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_)
-- [进一步学习](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_#continue_your_learning_experience).
+- [进一步学习](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_#继续你的学习经历)。
