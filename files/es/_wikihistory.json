@@ -6078,6 +6078,21 @@
     "modified": "2019-03-23T22:46:27.954Z",
     "contributors": ["chrisdavidmills"]
   },
+  "Web/Accessibility/ARIA/Attributes/aria-label": {
+    "modified": "2020-12-02T07:09:06.472Z",
+    "contributors": [
+      "AlePerez92",
+      "mitsurugi",
+      "fraboto",
+      "blanchart",
+      "ErikMj69",
+      "NelsonWF"
+    ]
+  },
+  "Web/Accessibility/ARIA/Attributes/aria-required": {
+    "modified": "2019-08-28T11:54:04.515Z",
+    "contributors": ["IsraelFloresDGA", "Karla_Glez"]
+  },
   "Web/Accessibility/ARIA/Multipart_labels": {
     "modified": "2019-11-27T15:16:55.571Z",
     "contributors": ["IsaacAaron", "IsraelFloresDGA"]
@@ -15537,21 +15552,6 @@
   "orphaned/Web/API/WindowEventHandlers": {
     "modified": "2019-03-23T23:01:29.892Z",
     "contributors": ["fscholz"]
-  },
-  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
-    "modified": "2020-12-02T07:09:06.472Z",
-    "contributors": [
-      "AlePerez92",
-      "mitsurugi",
-      "fraboto",
-      "blanchart",
-      "ErikMj69",
-      "NelsonWF"
-    ]
-  },
-  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute": {
-    "modified": "2019-08-28T11:54:04.515Z",
-    "contributors": ["IsraelFloresDGA", "Karla_Glez"]
   },
   "orphaned/Web/CSS/-moz-context-properties": {
     "modified": "2020-10-15T22:13:14.061Z",
