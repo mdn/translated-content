@@ -1,16 +1,6 @@
 ---
 title: pageAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getTitle
-  - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/getTitle
 ---
 

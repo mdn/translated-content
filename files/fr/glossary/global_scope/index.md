@@ -1,11 +1,7 @@
 ---
 title: Portée globale
 slug: Glossary/Global_scope
-tags:
-  - Encodage
-  - Glossaire
 translation_of: Glossary/Global_scope
-original_slug: Glossaire/Portée_globale
 ---
 
 Dans un environnement de programmation, la portée globale ( _global scope_ ) est la {{glossary("Scope","portée")}} qui est visible dans toutes les autres portées.

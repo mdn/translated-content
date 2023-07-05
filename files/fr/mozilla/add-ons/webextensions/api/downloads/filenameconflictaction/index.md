@@ -1,16 +1,6 @@
 ---
 title: downloads.FilenameConflictAction
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - FilenameConflitAction
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction
 ---
 

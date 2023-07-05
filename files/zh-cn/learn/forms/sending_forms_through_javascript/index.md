@@ -1,16 +1,15 @@
 ---
 title: 使用 JavaScript 发送表单
 slug: Learn/Forms/Sending_forms_through_JavaScript
-original_slug: Learn/HTML/Forms/Sending_forms_through_JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms")}}
+{{LearnSidebar}}
 
 正如在[前面的文章](/zh-CN/docs/HTML/Forms/Sending_and_retrieving_form_data)中讲到的，HTML 表单可以声明式地发送一个 HTTP 请求。但也可以通过 JavaScript 来为表单准备用于发送的 HTTP 请求。本文探讨如何做到这一点。
 
 ## 表单不总是表单
 
-在[开放式 Web 应用程序](/zh-CN/docs/Open_Web_apps_and_Web_standards)中，使用 [HTML form](/zh-CN/docs/HTML/Forms) 而不是文字表单让人们来填写变得越来越普遍了 — 越来越多的开发人员正致力于控制传输数据。
+在渐进式 Web 应用中，使用 [HTML 表单](/zh-CN/docs/Learn/Forms)而不是文字表单让人们来填写变得越来越普遍了——越来越多的开发人员正致力于控制传输数据。
 
 ### 获得整体界面的控制
 
@@ -18,33 +17,29 @@ original_slug: Learn/HTML/Forms/Sending_forms_through_JavaScript
 
 许多现代用户界面只使用 HTML 表单来收集用户的输入。当用户尝试发送数据时，应用程序将在后台采取控制并且异步地传输数据，只更新 UI 中需要更改的部分。
 
-异步地发送任何数据被称为 [AJAX](/zh-CN/docs/AJAX)，它代表 "Asynchronous JavaScript And XML"。
+异步地发送任何数据被称为 [AJAX](/zh-CN/docs/Web/Guide/AJAX)，它代表“**异步 JavaScript 和 XML**”（Asynchronous JavaScript And XML）。
 
 ### 表单提交和 AJAX 请求之间的区别？
 
-AJAX 技术主要依靠 {{domxref("XMLHttpRequest")}} (XHR) DOM 对象。它可以构造 HTTP 请求、发送它们，并获取请求结果。
+{{domxref("XMLHttpRequest")}}（XHR）DOM 对象可以构造 HTTP 请求、发送它们，并获取请求结果。创建之初，{{domxref("XMLHttpRequest")}} 被设计用于将 [XML](/zh-CN/docs/Web/XML) 作为传输数据的格式获取和发送。不过，如今 [JSON](/zh-CN/docs/Glossary/JSON) 已经取代了 XML。但是 XML 和 JSON 都不适合对表单数据请求编码。表单数据（`application/x-www-form-urlencoded`）由 URL 编码的键/值对列表组成。为了传输二进制数据，HTTP 请求被重新整合成 `multipart/form-data` 形式。
 
-> **备注：** 老旧的 AJAX 技术可能不依赖 {{domxref("XMLHttpRequest")}}。例如 [JSONP](http://en.wikipedia.org/wiki/JSONP) 加 [`eval()`](/zh-CN/docs/Core_JavaScript_1.5_Reference:Global_Functions:eval) 函数。这也行得通，但是有严重的安全问题，不推荐使用它。使用它的唯一原因是为了不支持 {{domxref("XMLHttpRequest")}} 或 [JSON](/zh-CN/docs/JSON)的过时浏览器；但是那些浏览器实在是太古老了！**避免使用这种技术。**
+AJAX 技术主要依靠 {{domxref("XMLHttpRequest")}} (XHR) DOM 对象。它
 
-创建之初，{{domxref("XMLHttpRequest")}} 被设计用来将 [XML](/zh-CN/docs/XML) 作为传输数据的格式获取和发送。不过，如今 JSON 已经取代了 XML，而且要常用的多，无论这是不是一件好事。
+> **备注：** 如今 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 常用于取代 XHR——它是 XHR 的更现代、更新的版本，其工作原理类似，但具有一些有点。你将在本文中看到的大多数 XHR 代码都可以替换为 Fetch。
 
-但是 XML 和 JSON 都不适合对表单数据请求编码。表单数据（`application/x-www-form-urlencoded`）由 URL 编码的键/值对列表组成。为了传输二进制数据，HTTP 请求被重新整合成`multipart/form-data`形式。
+如果你控制前端（在浏览器中执行的代码）和后端（在服务器上执行的代码），则可以发送 JSON/XML 并根据需要处理它们。
 
-如果您控制前端（在浏览器中执行的代码）和后端（在服务器上执行的代码），则可以发送 JSON / XML 并根据需要处理它们。
+但是，如果你想使用第三方服务，你就需要根据服务要求的格式发送数据。
 
-但是，如果你想使用第三方服务，没有那么简单。有些服务只接受表单数据。也有使用表单数据更简单的情况。如果数据是键/值对，或是原始二进制数据，以现有的后端工具不需要额外的代码就可以处理它。
-
-那么如何发送这样的数据呢？
+那么如何发送这样的数据呢？下面介绍了你需要使用的不同技术。
 
 ## 发送表单数据
 
-一共有三种方式来发送表单数据：包括两种传统的方法和一种利用 {{domxref("XMLHttpRequest/FormData","formData")}}对象的新方法。让我们仔细看一下：
+一共有三种方式来发送表单数据：包括两种传统的方法和一种利用 {{domxref("XMLHttpRequest/FormData","formData")}} 对象的新方法。让我们仔细看一下：
 
 ### 构建 XMLHttpRequest
 
-{{domxref("XMLHttpRequest")}} 是进行 HTTP 请求的最安全和最可靠的方式。要使用{{domxref("XMLHttpRequest")}}发送表单数据，请通过对其进行 URL 编码来准备数据，并遵守表单数据请求的具体细节。
-
-> **备注：** 如果想要了解更多关于 `XMLHttpRequest` 的知识，你可能会对两篇文章感兴趣：[An introductory article to AJAX](/zh-CN/docs/AJAX/Getting_Started) 和更高级点的[using XMLHttpRequest](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest).
+{{domxref("XMLHttpRequest")}} 是进行 HTTP 请求的最安全和最可靠的方式。要使用 {{domxref("XMLHttpRequest")}} 发送表单数据，请通过对其进行 URL 编码来准备数据，并遵守表单数据请求的具体细节。
 
 让我们重建之前的这个例子：
 
@@ -419,8 +414,6 @@ window.addEventListener('load', function () {
 
 取决于不同的浏览器，通过 JavaScript 发送数据可能会很简单，也可能会很困难。{{domxref("XMLHttpRequest/FormData","FormData")}} 对象是通用的答案，所以请毫不犹豫的在旧浏览器上通过 polyfill 使用它：
 
-- 此 [gist](https://gist.github.com/3120320) 通过 {{domxref("Using_web_workers","Web Workers")}} polyfill 了 `FormData`。
+- 此 [gist](https://gist.github.com/3120320) 通过 {{domxref("Using_web_workers","Web Worker")}} polyfill 了 `FormData`。
 - [HTML5-formdata](https://github.com/francois2metz/html5-formdata) 试图 polyfill `FormData` 对象，但是它需要 [File API](http://www.w3.org/TR/FileAPI/)
 - 这个 [polyfill](https://github.com/jimmywarting/FormData) 提供了 FormData 所有的大部分新方法（entries, keys, values, 以及对 `for...of` 的支持）
-
-{{PreviousMenuNext("Learn/HTML/Forms/How_to_build_custom_form_widgets", "Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms")}}

@@ -1,8 +1,6 @@
 ---
 title: Bloc
 slug: Glossary/Block
-tags:
-  - Glossaire
 translation_of: Glossary/Block
 ---
 

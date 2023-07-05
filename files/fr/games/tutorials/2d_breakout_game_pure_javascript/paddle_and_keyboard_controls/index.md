@@ -1,18 +1,7 @@
 ---
 title: Raquette et contrôle clavier
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
-tags:
-  - Canvas
-  - Clavier
-  - Débutant
-  - JavaScript
-  - Jeux
-  - Tuto
-  - Tutoriel
-  - contrôle clavier
-  - graphique
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
-original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contrôle_clavier
 ---
 
 {{GamesSidebar}}

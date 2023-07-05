@@ -1,16 +1,6 @@
 ---
 title: downloads.show()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/show
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - show
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/show
 ---
 

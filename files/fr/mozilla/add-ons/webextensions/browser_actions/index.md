@@ -1,8 +1,6 @@
 ---
 title: Actions du navigateur
 slug: Mozilla/Add-ons/WebExtensions/Browser_actions
-tags:
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Browser_actions
 ---
 

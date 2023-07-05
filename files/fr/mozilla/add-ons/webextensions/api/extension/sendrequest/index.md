@@ -1,16 +1,6 @@
 ---
 title: extension.sendRequest()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - sendRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: Type MIME
 slug: Glossary/MIME_type
-tags:
-  - Glossaire
-  - Mécanismes web
 translation_of: Glossary/MIME_type
-original_slug: Glossaire/Type_MIME
 ---
 
 Un **type MIME** (désormais correctement appelé "media type", mais aussi parfois "content type") est une chaîne de caractères envoyée avec un fichier pour en indiquer le type (par exemple, un fichier sonore sera étiqueté `audio/ogg` ou un fichier graphique `image/png`).

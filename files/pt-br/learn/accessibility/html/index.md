@@ -336,7 +336,7 @@ Adicionar tais vantagens de volta leva um pouco de trabalho (você pode ver um e
 <div data-message="Esse é do terceiro botão" tabindex="0">E em mim!</div>
 ```
 
-Basicamente, o atributo {{htmlattrxref ("tabindex")}} destina-se principalmente a permitir que elementos tabulares tenham uma ordem de tabulação personalizada (especificada em ordem numérica positiva), em vez de apenas serem tabulados em sua ordem de origem padrão. Isso é quase sempre uma má ideia, pois pode causar grandes confusões. Use-o somente se você realmente precisar, por exemplo, se o layout mostrar coisas em uma ordem visual muito diferente do código-fonte, e você quiser fazer as coisas funcionarem mais logicamente. Existem duas outras opções para `tabindex`:
+Basicamente, o atributo [`tabindex`](/pt-BR/docs/Web/HTML/Global_attributes#tabindex) destina-se principalmente a permitir que elementos tabulares tenham uma ordem de tabulação personalizada (especificada em ordem numérica positiva), em vez de apenas serem tabulados em sua ordem de origem padrão. Isso é quase sempre uma má ideia, pois pode causar grandes confusões. Use-o somente se você realmente precisar, por exemplo, se o layout mostrar coisas em uma ordem visual muito diferente do código-fonte, e você quiser fazer as coisas funcionarem mais logicamente. Existem duas outras opções para `tabindex`:
 
 - `tabindex="0"` — conforme indicado acima, esse valor permite que elementos que normalmente não podem ser tabulados se tornem tabeláveis. Este é o valor mais útil do `tabindex`.
 - `tabindex="-1"` — isso permite que elementos normalmente não tabuláveis recebam foco de maneira programática, por exemplo, via JavaScript, ou como alvo de links.

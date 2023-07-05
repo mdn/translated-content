@@ -10,7 +10,7 @@ JavaScript 中的 **`Array`** 全域物件被用於建構陣列；陣列為高�
 **建立陣列**
 
 ```js
-var fruits = ['Apple', 'Banana'];
+var fruits = ["Apple", "Banana"];
 
 console.log(fruits.length);
 // 2
@@ -29,7 +29,7 @@ var last = fruits[fruits.length - 1];
 **迭代陣列**
 
 ```js
-fruits.forEach(function(item, index, array) {
+fruits.forEach(function (item, index, array) {
   console.log(item, index);
 });
 // Apple 0
@@ -39,7 +39,7 @@ fruits.forEach(function(item, index, array) {
 **加入項目至陣列末端**
 
 ```js
-var newLength = fruits.push('Orange');
+var newLength = fruits.push("Orange");
 // ["Apple", "Banana", "Orange"]
 ```
 
@@ -60,17 +60,17 @@ var first = fruits.shift(); // 移除 (最前端的) Apple
 **加入項目至陣列前端**
 
 ```js
-var newLength = fruits.unshift('Strawberry') // 加到陣列前端
+var newLength = fruits.unshift("Strawberry"); // 加到陣列前端
 // ["Strawberry", "Banana"];
 ```
 
 **在陣列中尋找項目的索引**
 
 ```js
-fruits.push('Mango');
+fruits.push("Mango");
 // ["Strawberry", "Banana", "Mango"]
 
-var pos = fruits.indexOf('Banana');
+var pos = fruits.indexOf("Banana");
 // 1
 ```
 
@@ -85,11 +85,12 @@ var removedItem = fruits.splice(pos, 1); // 移除 pos 起的 1 個項目
 **移除指定索引位置起的多個項目**
 
 ```js
-var vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot'];
+var vegetables = ["Cabbage", "Turnip", "Radish", "Carrot"];
 console.log(vegetables);
 // ["Cabbage", "Turnip", "Radish", "Carrot"]
 
-var pos = 1, n = 2;
+var pos = 1,
+  n = 2;
 
 var removedItems = vegetables.splice(pos, n);
 // 這就是移除項目的方式，
@@ -135,9 +136,9 @@ Array（「陣列」）是類似列表（list）的物件（Object），它們�
 JavaScript 陣列是 zero-indexed：陣列元素的索引值編排從 0 開始，而最後一個元素的索引值等同於陣列的 {{jsxref("Array.length", "length")}} 屬性減 1。
 
 ```js
-var arr = ['this is the first element', 'this is the second element'];
-console.log(arr[0]);              // 紀錄出 'this is the first element'
-console.log(arr[1]);              // 記錄出 'this is the second element'
+var arr = ["this is the first element", "this is the second element"];
+console.log(arr[0]); // 紀錄出 'this is the first element'
+console.log(arr[1]); // 記錄出 'this is the second element'
 console.log(arr[arr.length - 1]); // 記錄出 'this is the second element'
 ```
 
@@ -165,18 +166,18 @@ renderer['3d'].setTexture(model, 'character.png');  // 程式正常
 注意：以這個 `'3d'` 例子來說，必須用引號將 `3d` 包起來。您也可以將 JavaScript 陣列的索引用引號包起來（例如使用 `years['2']` 而不用 `years[2]`），但這不是必要的。JavaScript 會透過隱含的 `toString`，將 `years[2]` 當中的 2 強制轉換為字串。由於這個原因，`'2'` 與 `'02'` 會參照到 `years` 物件中的不同項目，下列程式範例結果可能回傳 `true`：
 
 ```js
-console.log(years['2'] != years['02']);
+console.log(years["2"] != years["02"]);
 ```
 
 另一種類似的情況是，物件屬性剛好與保留字（！）相同的情況。這種情況下僅能透過括號表示方式當中的字串常值來存取：
 
 ```js
 var promise = {
-  'var'  : 'text',
-  'array': [1, 2, 3, 4]
+  var: "text",
+  array: [1, 2, 3, 4],
 };
 
-console.log(promise['var']);
+console.log(promise["var"]);
 ```
 
 ### `length` 與數值屬性的關係
@@ -185,7 +186,7 @@ JavaScript 陣列的 {{jsxref("Array.length", "length")}} 屬性和其數值屬�
 
 ```js
 var fruits = [];
-fruits.push('banana', 'apple', 'peach');
+fruits.push("banana", "apple", "peach");
 
 console.log(fruits.length); // 3
 ```
@@ -193,9 +194,9 @@ console.log(fruits.length); // 3
 如果給陣列設定一個數值屬性，其值為有效但超過當下範圍的陣列 index，JavaScript 引擎會依照此數值更新陣列的 {{jsxref("Array.length", "length")}} 屬性：
 
 ```js
-fruits[5] = 'mango';
+fruits[5] = "mango";
 console.log(fruits[5]); // 'mango'
-console.log(Object.keys(fruits));  // ['0', '1', '2', '5']
+console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
 console.log(fruits.length); // 6
 ```
 
@@ -227,7 +228,7 @@ console.log(fruits.length); // 2
 // 忽略大小寫
 
 var myRe = /d(b+)(d)/i;
-var myArray = myRe.exec('cdbBdbsbz');
+var myArray = myRe.exec("cdbBdbsbz");
 ```
 
 這項比對結果的屬性與元素參考如下：
@@ -353,11 +354,11 @@ var myArray = myRe.exec('cdbBdbsbz');
 
 ```js
 var msgArray = [];
-msgArray[0] = 'Hello';
-msgArray[99] = 'world';
+msgArray[0] = "Hello";
+msgArray[99] = "world";
 
 if (msgArray.length === 100) {
-  console.log('The length is 100.');
+  console.log("The length is 100.");
 }
 ```
 
@@ -367,21 +368,22 @@ if (msgArray.length === 100) {
 
 ```js
 var board = [
-  ['R','N','B','Q','K','B','N','R'],
-  ['P','P','P','P','P','P','P','P'],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  [' ',' ',' ',' ',' ',' ',' ',' '],
-  ['p','p','p','p','p','p','p','p'],
-  ['r','n','b','q','k','b','n','r'] ];
+  ["R", "N", "B", "Q", "K", "B", "N", "R"],
+  ["P", "P", "P", "P", "P", "P", "P", "P"],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  [" ", " ", " ", " ", " ", " ", " ", " "],
+  ["p", "p", "p", "p", "p", "p", "p", "p"],
+  ["r", "n", "b", "q", "k", "b", "n", "r"],
+];
 
-console.log(board.join('\n') + '\n\n');
+console.log(board.join("\n") + "\n\n");
 
 // 將士兵往前移兩步
 board[4][4] = board[6][4];
-board[6][4] = ' ';
-console.log(board.join('\n'));
+board[6][4] = " ";
+console.log(board.join("\n"));
 ```
 
 以下是輸出結果：
@@ -410,13 +412,10 @@ r,n,b,q,k,b,n,r
 
 ```js
 values = [];
-for (var x = 0; x < 10; x++){
- values.push([
-  2 ** x,
-  2 * x ** 2
- ])
-};
-console.table(values)
+for (var x = 0; x < 10; x++) {
+  values.push([2 ** x, 2 * x ** 2]);
+}
+console.table(values);
 ```
 
 結果會是

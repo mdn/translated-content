@@ -90,7 +90,7 @@ HTTP запросы - это сообщения, отправляемые кли
 
 - _Основные заголовки (General headers_), например, {{HTTPHeader("Via")}}, относящиеся к сообщению в целом.
 - _Заголовки ответа (Response headers_), например, {{HTTPHeader("Vary")}} и {{HTTPHeader("Accept-Ranges")}}, сообщающие дополнительную информацию о сервере, которая не уместилась в строку состояния.
-- _Заголовки сущности (Entity headers_), например, {{HTTPHeader("Content-Length")}}, относящиеся к телу ответа. Отсутствуют, если у запроса нет тела.
+- _Заголовки сущности (Entity headers_), например, {{HTTPHeader("Content-Length")}}, относящиеся к телу ответа. Отсутствуют, если у ответа нет тела.
 
 ![Example of headers in an HTTP response](http_response_headers2.png)
 

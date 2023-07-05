@@ -2,7 +2,6 @@
 title: Mise à jour des extensions pour Firefox 2
 slug: Mozilla/Firefox/Releases/2/Updating_extensions
 translation_of: Mozilla/Firefox/Releases/2/Updating_extensions
-original_slug: Mise_à_jour_des_extensions_pour_Firefox_2
 ---
 
 {{FirefoxSidebar}}

@@ -38,7 +38,7 @@ original_slug: Web/HTTP/Feature_Policy/Using_Feature_Policy
 Функциональная политика предлагает два способа определения политик:
 
 - Заголовок {{httpheader('Feature-Policy')}} HTTP.
-- Атрибут {{htmlattrxref("allow", "iframe")}} на элементе {{htmlelement("iframe")}}.
+- Атрибут [`allow`](/ru/docs/Web/HTML/Element/iframe#allow) на элементе {{htmlelement("iframe")}}.
 
 Основное отличие между заголовком HTTP и атрибутом `allow` в том, что атрибут определяет доступность функциональности для документов, загруженных в `iframe`. Заголовок же определяет доступность функциональности в документе и вложенных в него контекстах, направляющимся в ответе на HTTP(S) запрос.
 

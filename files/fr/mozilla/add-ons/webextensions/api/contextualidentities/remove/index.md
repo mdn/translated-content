@@ -1,16 +1,6 @@
 ---
 title: contextualIdentities.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/remove
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Reference
-  - WebExtensions
-  - contextualIdentities
-  - remove
-  - supprimer
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/remove
 ---
 

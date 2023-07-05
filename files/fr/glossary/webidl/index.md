@@ -1,12 +1,7 @@
 ---
 title: WebIDL
 slug: Glossary/WebIDL
-tags:
-  - Encodage
-  - Glossaire
-  - WebIDL
 translation_of: Glossary/WebIDL
-original_slug: Glossaire/WebIDL
 ---
 
 **WebIDL** est le langage de description d'interface utilisé pour décrire les {{Glossary("Type","types de données")}}, {{Glossary("interface","interfaces")}}, {{Glossary("Method","méthodes")}}, {{Glossary("Property","propriétés")}} et d'autres éléments qui composent une interface de programmation d'application Web ({{Glossary("API")}}). Il utilise une syntaxe quelque peu stylisée qui est indépendante de tout langage de programmation spécifique, de sorte que le code sous-jacent utilisé pour construire chaque API puisse être écrit dans le langage le plus approprié, tout en permettant de faire le plan des composants de l'API pour une construction compatible JavaScript

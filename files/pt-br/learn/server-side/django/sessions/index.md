@@ -4,7 +4,7 @@ slug: Learn/Server-side/Django/Sessions
 original_slug: Learn/Server-side/Django/Sessões
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}Esse tutorial estende nosso site [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website), adicionando um contador de visitas baseado em sessões à página inicial. Esse é um exemplo relativamente simples, mas, capaz de mostrar como você pode usar a estrutura de sessão do framework para providenciar um comportamento persistente para usuários anônimos em seu próprio site.
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}Esse tutorial estende nosso site [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website), adicionando um contador de visitas baseado em sessões à página inicial. Esse é um exemplo relativamente simples, mas capaz de mostrar como você pode usar a estrutura de sessão do framework para providenciar um comportamento persistente para usuários anônimos em seu próprio site.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -34,11 +34,11 @@ A estrutura da sessão permite implementar esse tipo de comportamento, permitind
 
 ## O que são sessões?
 
-Toda a comunicação entre os navegadores web e os servidores é feita via protocolo HTTP, qual é _stateless_ (sem estados). O fato do protocolo ser stateless significa que as mensagenns entre o cliente e o servidor são completamente independentes uma da outra — não há uma noção de "sequência" ou comportamento diferente baseado nas mensagens anteriores. Como resultado, se você quiser ter um site que monitore os relacionamentos contínuos com um cliente, é necessário implementá-lo por conta própria.
+Toda a comunicação entre os navegadores web e os servidores é feita via protocolo HTTP, qual é _stateless_ (sem estados). O fato do protocolo ser stateless significa que as mensagens entre o cliente e o servidor são completamente independentes uma da outra — não há uma noção de "sequência" ou comportamento diferente baseado nas mensagens anteriores. Como resultado, se você quiser ter um site que monitore os relacionamentos contínuos com um cliente, é necessário implementá-lo por conta própria.
 
 Sessões são o mecanismo usado pelo Django (e muitos outros na Internet) para monitorar o "estado" entre o site e um navegador web em particular. Sessões permitem que você armazene dados arbitrários por navegador web, e têm esse dado disponível no site sempre que o navegador conectar. Dados de itens individuais associados com a sessão são referenciados por uma "chave", que é usada para armazenar e recuperar os dados.
 
-O Django usa um cookie contendo um _identificador_ especial de sessão para identificar cada navegador e associar com o site. Os dados da sessão atual são armazenados na base de dados do site por padrão (é mais seguro do que armazenar os dados em cookie, onde é mais vulnerável aos usuários perigisos). Você pode configurar o Django para armazenar os dados da sessão em outros lugares (cache, arquivos, cookies "seguros"), mas o local padrão é uma opção boa e relativamente "segura".
+O Django usa um cookie contendo um _identificador_ especial de sessão para identificar cada navegador e associar com o site. Os dados da sessão atual são armazenados na base de dados do site por padrão (é mais seguro do que armazenar os dados em cookie, onde é mais vulnerável aos usuários perigosos). Você pode configurar o Django para armazenar os dados da sessão em outros lugares (cache, arquivos, cookies "seguros"), mas o local padrão é uma opção boa e relativamente "segura".
 
 ## Habilitando as Sessões
 
@@ -62,7 +62,7 @@ MIDDLEWARE = [
 
 Você pode acessar o atributo `session` na view a partir do parâmetro `request` (um `HttpRequest` passado como primeiro argumento na view). Esse atributo de sessão representa a conexão atual específica com um usuário (ou, para ser mais preciso, a conexão com o navegador atual, conforme identificado pelo id da sessão no cookie do navegador para este site).
 
-O atributo `session` é como um objeto dicionário que você pode ler e escrever quantas vezes você quiser na sua view, modificando-o como desejar. Você pode fazer todas as operações normais de um dicionário, incluindo limpar todos os dados, testar se uma chave está presente, loop em torno dos dados, etc. Na maior parte do tempo, você usará apenas a API padrão "dictionary" para obter e setar valores.
+O atributo `session` é como um objeto dicionário que você pode ler e escrever quantas vezes você quiser na sua view, modificando-o como desejar. Você pode fazer todas as operações normais de um dicionário, incluindo limpar todos os dados, testar se uma chave está presente, iterar (loop) em torno dos dados, etc. Na maior parte do tempo, você usará apenas a API padrão "dictionary" para obter e setar valores.
 
 O fragmento de código abaixo mostra como você pode obter, setar e deletar qualquer dado com com a chave "`my_car`", associada com a sessão atual (navegador).
 
@@ -82,24 +82,24 @@ request.session['my_car'] = 'mini'
 del request.session['my_car']
 ```
 
-A API também oferece um número de outros métodos que são muito usados para gerenciar a os cookies da sessão associada. Por exemplo, há metodos para testar se cookies são suportados no navegador do cliente, para setar e checar a data de validade do cookie, e para limpar sessões expiradas do armazenamento de dados. Você pode encontrar sobre a API completa em [How to use sessions](https://docs.djangoproject.com/en/2.1/topics/http/sessions/) (documentação do Django).
+A API também oferece um número de outros métodos que são muito usados para gerenciar os cookies da sessão associada. Por exemplo, há métodos para testar se cookies são suportados no navegador do cliente, para setar e checar a data de validade do cookie, e para limpar sessões expiradas do armazenamento de dados. Você pode encontrar sobre a API completa em [How to use sessions](https://docs.djangoproject.com/en/2.1/topics/http/sessions/) (documentação do Django).
 
 ## Salvando os dados da sessão
 
-Por padrão, o Django só salva na base de dados da sessão e envia o cookie da sessão para o cliente quando a sessão é _modificada_ (atribuida) ou _deletada_. Se você está atualizando alguns dados utilizando sua chave de sessão, como mostrado na seção anterior, então você não precisa se preocupar com isso! Por exemplo:
+Por padrão, o Django só salva na base de dados da sessão e envia o cookie da sessão para o cliente quando a sessão é _modificada_ (atribuída) ou _deletada_. Se você está atualizando alguns dados utilizando sua chave de sessão, como mostrado na seção anterior, então você não precisa se preocupar com isso! Por exemplo:
 
 ```python
-# This is detected as an update to the session, so session data is saved.
+# Isso é detectado como uma atualização na session, então os dados de session são salvos.
 request.session['my_car'] = 'mini'
 ```
 
 Se você está atualizando algumas informações _dentro_ dos dados da sessão, então o Django não reconhecerá que você fez uma alteração nos dados da sessão e não salvará os dados (por exemplo, se você alterasse os dados de "`wheels`" dentro dos dados do seu "`my_car`", como mostrado abaixo). Nesse caso você precisará marcar explicitamente a sessão como tendo sido modificada.
 
 ```python
-# Session object not directly modified, only data within the session. Session changes not saved!
+# Objeto session não modificado diretamente, apenas o dado de dentro da session. Mudanças na session não salvas!
 request.session['my_car']['wheels'] = 'alloy'
 
-# Set session as modified to force data updates/cookie to be saved.
+# Marcar a session como modificada para que force a atualização dos dados/cookie para que sejam salvos.
 request.session.modified = True
 ```
 
@@ -133,7 +133,7 @@ def index(request):
     return render(request, 'index.html', context=context)
 ```
 
-Aqui primeiro obtemos o valor da _session key_ `'num_visits'`, setando o valor para 0 se não tiver sido definido anteiormente. Cada vez que uma requisição é recebida, nós então incrementamos o valor e armazenamos novamente na sessão (para a próxima vez que o usuário visitar a página). A variável `num_visits` é então passada para o _template_ na nossa varável _context_.
+Aqui primeiro obtemos o valor da _session key_ `'num_visits'`, setando o valor para 0 se não tiver sido definido anteriormente. Cada vez que uma requisição é recebida, nós então incrementamos o valor e armazenamos novamente na sessão (para a próxima vez que o usuário visitar a página). A variável `num_visits` é então passada para o _template_ na nossa variável _context_.
 
 > **Nota:** Também podemos testar se os cookies são suportados no navegador (veja [Como usar sessões](https://docs.djangoproject.com/en/2.1/topics/http/sessions/) para exemplos) ou projetar nossa UI (interface do usuário) para que não se importe se os _cookies_ são ou não suportados.
 
