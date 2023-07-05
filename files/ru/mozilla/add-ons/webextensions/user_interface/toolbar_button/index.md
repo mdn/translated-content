@@ -1,10 +1,12 @@
 ---
 title: Кнопка в панели инструментов
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
+slug: Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 tags:
   - Кнопка панели инструментов
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
+original_slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 ---
+
 {{AddonSidebar}}
 
 Кнопка на панели инструментов браузера (оригинальное название [browser action](/ru/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)) - это иконка, которую можно вывести в панель инструментов. Пользователь взаимодействует с расширением нажимая на неё как на кнопку.
