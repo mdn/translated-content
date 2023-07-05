@@ -22,8 +22,12 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 - {{domxref("clearInterval", "clearInterval()")}}
 - {{domxref("clearTimeout()")}}
 - {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}
+- {{domxref("queueMicrotask()")}}
 - {{domxref("setInterval()")}}
 - {{domxref("setTimeout()")}}
+- {{domxref("structuredClone()")}}
+- {{domxref("window.requestAnimationFrame")}}（仅专用 worker）
+- {{domxref("window.cancelAnimationFrame")}}（仅专用 worker）
 
 以下函数**仅**在 worker 中可用：
 
@@ -32,7 +36,7 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 
 ## Worker 中可用的 Web API
 
-> **备注：** 下面列出的 API 若仅被某一平台的特定版本支持，也假设其在 web worker 中可用。
+> **备注：** 如果列出的 API 被某一平台的特定版本所支持，那么一般可以认为它在 web worker 中是可用的。你也可以使用网站来测试对某个特定对象/函数的支持：<https://worker-playground.glitch.me/>
 
 以下 Web API 在 worker 中可用：
 
@@ -49,11 +53,13 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 - {{domxref("FileReader")}}
 - {{domxref("FileReaderSync")}}（仅在 worker 中有效！）
 - {{domxref("FormData")}}
+- {{domxref("ImageBitmap")}}
 - {{domxref("ImageData")}}
 - {{domxref("IndexedDB_API", "IndexedDB")}}
 - {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}}（仅限专用 worker）
 - [Network Information API](/zh-CN/docs/Web/API/Network_Information_API)
 - {{domxref("Notifications_API", "Notifications API")}}
+- {{domxref("OffscreenCanvas")}}（和所有的 canvas context API）
 - {{domxref("Performance_API","Performance API")}}，包括：
   - {{domxref("Performance")}}
   - {{domxref("PerformanceEntry")}}
@@ -61,11 +67,10 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
   - {{domxref("PerformanceMark")}}
   - {{domxref("PerformanceObserver")}}
   - {{domxref("PerformanceResourceTiming")}}
-- {{jsxref("Promise")}}
 - [Server-sent 事件](/zh-CN/docs/Web/API/Server-sent_events)
 - {{domxref("ServiceWorkerRegistration")}}
 - {{domxref("URL_API","URL API")}}（例如 {{domxref("URL")}}）
-- [WebGL](/en-US/docs/Web/API/WebGL_API) 与 {{domxref("OffscreenCanvas")}}
+- {{domxref('WebCodecs_API','','','true')}}
 - {{domxref("WebSocket")}}
 - {{domxref("XMLHttpRequest")}}
 
