@@ -87,25 +87,25 @@ Abra **urls.py** y pegue la línea en negrita que aparece a continuación.
 
 ```python
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    path('', views.index, name='index'),
 ]
 ```
 
-Esta función `url()` define un patrón URL (`r'^$'`), y una función vista que será llamada si el patrón es detectado (`views.index` — una función llamada `index()` en **views.py**). El patrón URL es una [expresión regular de Python](https://docs.python.org/3/library/re.html) (ER). Hablaremos un poco más sobre ERs más adelante en este tutorial, pero para este caso todo lo que necesitas saber es que en una ER de ^$ el patrón coincidirá con una cadena vacía (^ es un marcador de inicio de cadena y $ es un marcador de fin de cadena).
+Esta función `path()` define una cadena vacía (`''`), y una función vista que será llamada si el patrón es detectado (`views.index` — una función llamada `index()` en **views.py**). Hablaremos un poco más sobre los patrones URL más adelante en este tutorial, pero para este caso todo lo que necesitas saber es que en un patron de '' coincidirá con una cadena vacía.
 
 > **Nota:** Nota que en **/locallibrary/locallibrary/urls.py**
 >
 > ```py
 > urlpatterns += [
->   url(r'^catalog/', include('catalog.urls')),
+>   path('catalog/', include('catalog.urls')),
 > ]
 > ```
 >
-> La expresión regular en este caso no tienen un `$` (caracter asignado a fin-de-cadena) pero incluye una barra diagonal. Siempre cuando Django se encuentra con `include()` ([`django.conf.urls.include()`](https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include)), corta cualquier parte de la URL que coincida hasta este punto y envía el resto de la cadena para incluir la configuración URL para el siguiente procesamiento.
+> Siempre cuando Django se encuentra con `include()` ([`django.conf.urls.include()`](https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include)), corta cualquier parte de la URL que coincida hasta este punto y envía el resto de la cadena para incluir la configuración URL para el siguiente procesamiento.
 >
 > La URL coincidente es en realidad `catalog/` + \<cadena vacía> ( `/catalog/` es asumida ya que include() fue el método usado). Nuestra primera función vista será llamada si recibimos una consulta HTTP con una URL de `/catalog/`.
 
-La función `url()` también especifica un parámetro `name`, que identifica de manera única _este_ mapeador de URL particular. Puedes usar este nombre para "revertir" el mapeador — para crear dinámicamente una URL que apunta al el recurso que el mapeador esta diseñado para manejar. Por ejemplo, con esto hecho ahora podemos enlazar nuestra página inicio creando el siguiente enlace en nuestra plantilla:
+La función `path()` también especifica un parámetro `name`, que identifica de manera única _este_ mapeador de URL particular. Puedes usar este nombre para "revertir" el mapeador — para crear dinámicamente una URL que apunta al el recurso que el mapeador esta diseñado para manejar. Por ejemplo, con esto hecho ahora podemos enlazar nuestra página inicio creando el siguiente enlace en nuestra plantilla:
 
 ```html
 <a href="{% url 'index' %}">Home</a>.
@@ -327,7 +327,7 @@ En la plantilla base de arriba se introdujo la etiqueta de plantilla `url`.
 <li><a href="{% url 'index' %}">Home</a></li>
 ```
 
-Esta etiqueta toma el nombre de una función `url()` llamada en tu archivo **urls.py,** y valores para cualquier argumento que la vista asociada recibirá desde tal función, y devuelve una URL que puedes usar para enlazar con el recurso.
+Esta etiqueta toma el nombre de una función `path()` llamada en tu archivo **urls.py,** y valores para cualquier argumento que la vista asociada recibirá desde tal función, y devuelve una URL que puedes usar para enlazar con el recurso.
 
 #### Configurando adonde buscar las plantillas
 
