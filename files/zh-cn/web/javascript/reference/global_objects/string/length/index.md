@@ -21,9 +21,9 @@ slug: Web/JavaScript/Reference/Global_Objects/String/length
 
 语言规范要求字符串的最大长度为 2<sup>53</sup> - 1 个元素，这是[精确整数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)的上限。但是，具有此长度的字符串需要 16384TB 的存储空间，这远远超出了任何合理设备的内存限制，因此实现通常会降低这个阈值，从而允许字符串的长度方便地存储在一个 32 位整数中。
 
-- 在 V8 引擎（Chrome 和 Node 使用）中，最大长度为 2<sup>29</sup> - 24（约为 1GB）。在 32 位系统上，最大长度为 2<sup>28</sup> - 16（约为 512MB）。
-- 在 Firefox 中，最大长度为 2<sup>30</sup> - 2（约为 2GB）。在 Firefox 65 之前，最大长度为 2<sup>28</sup> - 1（约为 512MB）。
-- 在 Safari 中，最大长度为 2<sup>31</sup> - 1（约为 4GB）。
+- 在 V8 引擎（Chrome 和 Node 使用）中，最大长度为 2<sup>29</sup> - 24（约为 1GiB）。在 32 位系统上，最大长度为 2<sup>28</sup> - 16（约为 512MiB）。
+- 在 Firefox 中，最大长度为 2<sup>30</sup> - 2（约为 2GiB）。在 Firefox 65 之前，最大长度为 2<sup>28</sup> - 1（约为 512MiB）。
+- 在 Safari 中，最大长度为 2<sup>31</sup> - 1（约为 4GiB）。
 
 对于空字符串，`length` 为 0。
 
