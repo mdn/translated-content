@@ -19,7 +19,7 @@ slug: Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 
 - {{domxref("atob", "atob()")}}
 - {{domxref("btoa", "btoa()")}}
-- {{domxref("clearInterval", "clearInterval()")}}
+- {{domxref("clearInterval()")}}
 - {{domxref("clearTimeout()")}}
 - {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}
 - {{domxref("queueMicrotask()")}}
