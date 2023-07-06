@@ -215,7 +215,7 @@ const anotherChild = { __proto__: parent2, myParent };
 anotherChild.myParent(); // 여전히 "1"이 로그됩니다.
 ```
 
-전체 상속 체인을 재설정해야만 super의 참조가 변경됩니다.
+전체 상속 체인을 재설정해야만 `super`의 참조가 변경됩니다.
 
 ```js
 class Base {
