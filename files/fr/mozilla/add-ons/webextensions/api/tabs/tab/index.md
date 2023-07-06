@@ -21,7 +21,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `attention` {{optional_inline}}
   - : `boolean`. Indique si l'onglet attire l'attention. Par exemple, lorsque l'onglet affiche un dialogue modal, `attention` sera à `true`.
 - `audible` {{optional_inline}}
-  - : `boolean`. Si l'onglet n'est pas coupé : si l'onglet produit du son. Si l'onglet est coupé: si l'onglet produit un son, s'il n'est pas muet.
+  - : `boolean`. Si l'onglet n'est pas coupé&nbsp;: si l'onglet produit du son. Si l'onglet est coupé&nbsp;: si l'onglet produit un son, s'il n'est pas muet.
 - `autoDiscardable` {{optional_inline}}
   - : `boolean`. Si l'onglet peut être déchargé automatiquement par le navigateur. La valeur par défaut est `true`. Si la valeur est `false`, le navigateur ne peut pas décharger automatiquement l'onglet. Cependant, l'onglet peut être déchargé par {{WebExtAPIRef("tabs.discard")}}.
 - `cookieStoreId` {{optional_inline}}
