@@ -7,9 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`animation`** [단축](/ko/docs/Web/CSS/Shorthand_properties) [CSS](/ko/docs/Web/CSS) 속성은 스타일 사이에 에니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, 그리고 {{cssxref("animation-play-state")}}의 단축 속성입니다.
-
-[애니메이션 가능한 속성에 대한 설명](/ko/docs/Web/CSS/CSS_animated_properties)은 여기서 확인하실 수 있습니다. 이 설명이 [CSS 전환](/ko/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)에도 유효하다는 점은 주목해볼만 합니다.
+**`animation`** [단축](/ko/docs/Web/CSS/Shorthand_properties) [CSS](/ko/docs/Web/CSS) 속성은 스타일 사이에 에니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, 그리고 {{cssxref("animation-play-state")}}의 단축형입니다.
 
 {{EmbedInteractiveExample("pages/css/animation.html")}}
 
@@ -56,6 +54,8 @@ animation: 3s linear slidein, 3s ease-out 5s slideout;
 
 - 애니메이션의 선택적인 이름. `none`, {{cssxref("&lt;custom-ident&gt;")}}, 또는 {{cssxref("&lt;string&gt;")}}일 수 있음.
 
+> **참고:** 현재 구현은 재설정 전용이므로 {{cssxref("animation-timeline")}}, {{cssxref("animation-range-start")}}, 그리고 {{cssxref("animation-range-end")}}가 현재 이 목록에 포함되어 있지 않습니다. 즉, `animation`을 포함하면 이전에 선언된 `animation-timeline` 값이 `auto`로 재설정되고, 이전에 선언된 `animation-range-start`와 `animation-range-end` 값은 `normal`로 재설정되지만, 이러한 속성은 애니메이션을 통해 설정할 수 없습니다. [CSS 스크롤 기반 애니메이션](/ko/docs/Web/CSS/CSS_scroll-driven_animations)을 만들 때 적용하려면 애니메이션 단축을 선언한 후 이러한 속성을 선언해야 합니다.
+
 ### 값
 
 - `<single-easing-function>`
@@ -75,7 +75,7 @@ animation: 3s linear slidein, 3s ease-out 5s slideout;
 
 각 애니메이션 정의에서 다른 값의 순서는 {{cssxref("animation-name")}} 값을 다른 값과 구별하는 데에도 중요합니다. `animation` 단축 값이 `animation-name` 이외의 `animation` 속성 값으로 파싱할 수 있는 경우, 이 값은 `animation-name`이 아닌 그 속성에 먼저 적용됩니다. 이러한 이유로 `animation` 단축을 사용할 때 `animation-name` 값을 값 목록의 마지막 값으로 지정하는 것이 좋습니다. 이는 쉼표로 구분된 여러 개의 애니메이션 단축을 지정하는 경우에도 마찬가지입니다.
 
-`animation` 단축 속성에서 `animation-name` 값을 선언할 필요는 없습니다. 이름이 없으면 속성에 적용할 애니메이션은 없습니다.
+애니메이션을 적용하려면 애니메이션 이름을 반드시 설정해야 하지만, `animation` 축약의 모든 값은 선택 사항이며, 각 `animation` 구성 요소의 초기 값이 기본값입니다. `animation-name`의 초기 값은 `none`입니다. 즉, `animation` 단축 속성에 `animation-name` 값이 선언되지 않으면 속성에 적용할 애니메이션이 없는 것입니다.
 
 `animation` 단축 속성에서 `animation-duration` 값이 생략되면 이 속성의 값은 기본적으로 `0s`로 설정됩니다. 이 경우 애니메이션은 계속 발생하지만( [`animationStart`](/ko/docs/Web/API/Element/animationstart_event)와 [`animationEnd`](/ko/docs/Web/API/Element/animationend_event) 이벤트는 발생함) 애니메이션이 표시되진 않습니다.
 
