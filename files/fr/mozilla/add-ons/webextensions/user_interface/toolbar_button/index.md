@@ -2,7 +2,6 @@
 title: Actions du navigateur
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 translation_of: Mozilla/Add-ons/WebExtensions/Browser_actions
-original_slug: Mozilla/Add-ons/WebExtensions/Browser_actions
 ---
 
 {{AddonSidebar}}

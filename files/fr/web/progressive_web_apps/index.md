@@ -14,7 +14,7 @@ Ces documents d'introduction et ces guides vous feront découvrir les différent
 
 - [Introduction aux applications web progressives](/fr/docs/Web/Progressive_web_apps/Introduction)
 - [Structure d'une application web progressive](/fr/docs/Web/Progressive_web_apps/App_structure) et [aperçu structurel](/fr/docs/Web/Progressive_web_apps/Structural_overview)
-- [Comprendre les briques de construction de la conception adaptative](/fr/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks)
+- [Comprendre les briques de construction de la conception adaptative](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
 - [Le fonctionnement hors-ligne des PWA à l'aide des <i lang="en">service workers</i>](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers)
 - [Comment rendre une PWA installable](/fr/docs/Web/Progressive_web_apps/Installable_PWAs), [activer la fonctionnalité «&nbsp;ajouter à l'écran d'accueil&nbsp;»](/fr/docs/Web/Progressive_web_apps/Add_to_home_screen), et [plus de détails sur l'installation des PWA](/fr/docs/Web/Progressive_web_apps/Installing)
 - [Comment utiliser les API Notifications et Push pour l'engagement](/fr/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push)

@@ -1,14 +1,7 @@
 ---
 title: Introduction aux progressive web apps
 slug: Web/Progressive_web_apps/Tutorials/js13kGames
-tags:
-  - Introduction
-  - PWA
-  - Service Worker
-  - application web progressive
-  - web manifest
-translation_of: Web/Progressive_web_apps/Introduction
-original_slug: Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+translation_of: Web/Progressive_web_apps/Tutorials/js13kGames
 ---
 
 {{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}
