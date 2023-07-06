@@ -11,8 +11,6 @@ l10n:
 
 {{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
 
-<!-- 이 대화형 예제의 소스는 GitHub 리포지토리에 저장되어 있습니다. 대화형 예제 프로젝트에 기여하고 싶다면 https://github.com/mdn/interactive-examples를 클론하고 풀 리퀘스트를 보내주세요. -->
-
 ## 생성자
 
 - {{jsxref("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
@@ -22,6 +20,15 @@ l10n:
 
 - {{jsxref("Intl/DisplayNames/supportedLocalesOf", "Intl.DisplayNames.supportedLocalesOf()")}}
   - : 런타임의 기본 로케일로 대체되지 않고, 제공된 로케일 중 지원되는 로케일을 포함한 배열을 반환합니다.
+
+## 인스턴스 속성
+
+이 속성은 `Intl.DisplayNames.prototype`에서 정의되며 모든 `Intl.DisplayNames` 인스턴스에서 공유됩니다.
+
+- {{jsxref("Object/constructor", "Intl.DisplayNames.prototype.constructor")}}
+  - : 인스턴스 객체를 만든 생성자 함수입니다. `Intl.DisplayNames` 인스턴스의 경우 초기 값은 {{jsxref("Intl/DisplayNames/DisplayNames", "Intl.DisplayNames")}} 생성자입니다.
+- `Intl.DisplayNames.prototype[@@toStringTag]`
+  - : [`@@toStringTag`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 속성의 초기 값은 문자열 `"Intl.DisplayNames"`입니다. 이 속성은 {{jsxref("Object.prototype.toString()")}}에서 사용됩니다.
 
 ## 인스턴스 메서드
 
