@@ -7,11 +7,9 @@ l10n:
 
 {{jsSidebar("Statements")}}
 
-**`for await...of`** 문(文)은 [동기 이터러블](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols)뿐만 아니라 [비동기 이터러블 객체](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)를 순환하는 루프를 생성합니다. 이 문은 [비동기 함수](/ko/docs/Web/JavaScript/Reference/Statements/async_function) 본문 내부 와 [모듈](/ko/docs/Web/JavaScript/Guide/Modules) 내부를 포함하여 [`await`](/ko/docs/Web/JavaScript/Reference/Operators/await)를 사용할 수 있는 맥락에서만 사용할 수 있습니다.
+**`for await...of`** 문은 [동기 이터러블](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols)뿐만 아니라 [비동기 이터러블 객체](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)를 순환하는 루프를 생성합니다. 이 문은 [비동기 함수](/ko/docs/Web/JavaScript/Reference/Statements/async_function) 본문 내부 와 [모듈](/ko/docs/Web/JavaScript/Guide/Modules) 내부를 포함하여 [`await`](/ko/docs/Web/JavaScript/Reference/Operators/await)를 사용할 수 있는 맥락에서만 사용할 수 있습니다.
 
 {{EmbedInteractiveExample("pages/js/statement-forawaitof.html", "taller")}}
-
-> **참고:** `for await...of`는 비동기 이터러블이 아닌 비동기 이터러블에서 작동하지 않습니다.
 
 ## 구문
 
@@ -21,7 +19,7 @@ for await (variable of iterable)
 ```
 
 - `variable`
-  - : 반복할 때마다 시퀀스에서 값을 받습니다. [`const`](/ko/docs/Web/JavaScript/Reference/Statements/const), [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let), 또는 [`var`](/ko/docs/Web/JavaScript/Reference/Statements/var)를 사용한 선언이거나, [할당 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Assignment)의 대상일 수 있습니다. (예: 이전에 선언된 변수 또는 객체 속성)
+  - : 반복할 때마다 시퀀스에서 값을 받습니다. [`const`](/ko/docs/Web/JavaScript/Reference/Statements/const), [`let`](/ko/docs/Web/JavaScript/Reference/Statements/let), 또는 [`var`](/ko/docs/Web/JavaScript/Reference/Statements/var)를 사용한 선언이거나, [할당 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Assignment)의 대상일 수 있습니다. (예: 이전에 선언된 변수 또는 객체 속성) `var`로 선언된 변수는 루프에 대한 로컬이 아닙니다. 즉, 해당 변수는 `for await...of` 루프가 있는 동일한 범위에 있습니다.
 - `iterable`
   - : 비동기 이터러블 또는 동기 이터러블입니다. 루프가 작동하는 값 시퀀스의 소스입니다.
 - `statement`
