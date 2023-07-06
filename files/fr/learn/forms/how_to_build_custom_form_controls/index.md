@@ -306,13 +306,7 @@ Donc, voici le résultat avec les trois états :
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample('Basic_state',120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
-      </td>
-      <td>
-        {{EmbedLiveSample("État_actif",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
-      </td>
-      <td>
-        {{EmbedLiveSample("État_ouvert",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
+       ee
       </td>
     </tr>
     <tr>

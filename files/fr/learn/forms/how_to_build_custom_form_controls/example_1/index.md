@@ -144,7 +144,7 @@ C'est le premier exemple de code qui explique [comment construire un widget de f
 
 ### Resultat pour l'état initial
 
-{{ EmbedLiveSample("Basic_state", 120, 130) }}
+{{ EmbedLiveSample("État_initial", 120, 130) }}
 
 ## État actif
 
