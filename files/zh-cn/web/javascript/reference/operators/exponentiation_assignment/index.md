@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
 
 {{jsSidebar("Operators")}}
 
-**幂赋值**（**`**=`**）运算符将左侧变量的值设置为右操作数的幂次方。
+**幂赋值**（**`**=`**）将左侧操作数取右侧操作数的幂的结果，赋值给左侧操作数。
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation-assignment.html")}}
 
