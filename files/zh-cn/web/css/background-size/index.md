@@ -40,8 +40,6 @@ background-size: unset;
 
 注意：没有被背景图片覆盖的背景区域仍然会显示用{{cssxref("background-color")}}属性设置的背景颜色。此外，如果背景图片设置了透明或者半透明属性，衬在背景图片后面的背景色也会显示出来。
 
-{{cssinfo}}
-
 ## 语法
 
 ```css
@@ -188,6 +186,8 @@ background-size: unset;
 ## 规范
 
 {{Specifications}}
+
+{{cssinfo}}
 
 ## 浏览器兼容性
 
