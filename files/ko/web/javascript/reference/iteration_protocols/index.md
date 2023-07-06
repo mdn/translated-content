@@ -94,6 +94,8 @@ console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
 // true — @@iterator 메서드는 자신(이터레이터)을 반환하므로 이터러블 이터레이터입니다.
 ```
 
+모든 내장 이터레이터는 `this`를 반환하는 `[@@iterator]()` 메서드를 구현하는 {{jsxref("Iterator", "Iterator.prototype")}}에서 상속되었기 때문에 내장 이터레이터도 이터러블입니다.
+
 그러나 가능하다면 `iterable[Symbol.iterator]`가 [`Set.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)처럼 항상 처음부터 시작하는 별개의 반복자를 반환하는 것이 좋습니다.
 
 ## 비동기 이터레이터와 비동기 이터러블 프로토콜
@@ -426,7 +428,13 @@ console.log([...someString]); // ["bye"]
 console.log(`${someString}`); // "hi"
 ```
 
+## 명세서
+
+{{Specifications}}
+
 ## 같이 보기
 
-- [`function*` 선언문](/ko/docs/Web/JavaScript/Reference/Statements/function*)
-- [ECMAScript 명세서의 이터레이션](https://tc39.es/ecma262/#sec-iteration)
+- [이터레이터와 제너레이터](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- {{jsxref("Statements/function*", "function*")}}
+- {{jsxref("Symbol.iterator")}}
+- {{jsxref("Iterator")}}
