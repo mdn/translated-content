@@ -106,7 +106,7 @@ scriptNames.of("Kana"); // "가타카나"
 로케일에 대한 `Intl.DisplayNames`를 생성하고 통화 코드의 표시 이름을 가져옵니다.
 
 ```js
-// 영어로 콩화 코드의 이름을 가져옵니다.
+// 영어로 통화 코드의 이름을 가져옵니다.
 let currencyNames = new Intl.DisplayNames(["en"], { type: "currency" });
 // 통화 이름 가져오기
 currencyNames.of("USD"); // "US Dollar"
