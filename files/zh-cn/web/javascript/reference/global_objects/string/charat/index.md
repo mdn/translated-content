@@ -32,7 +32,7 @@ charAt(index)
 
 Unicode 码位的范围从 `0` 到 `1114111` (`0x10FFFF`)。`charAt()` 方法总是返回一个其值小于 `65536` 的字符，因为更高的码位是由*一对* 16 位代理伪字符表示的。因此，为了获取值大于 `65535` 的完整字符，需要检索不仅是 `charAt(i)`，还要检索 `charAt(i + 1)`（就像操作一个由两个字符组成的字符串一样），或者使用 {{jsxref("String/codePointAt", "codePointAt(i)")}} 和 {{jsxref("String.fromCodePoint()")}} 代替。有关 Unicode 的信息，请参阅 [UTF-16 字符、Unicode 码位和字素簇](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)。
 
-`charAt()` 和使用[方括号表示法](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)访问指定索引处的字符非常相似。它们的主要区别在于：
+`charAt()` 和使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)访问指定索引处的字符非常相似。它们的主要区别在于：
 
 - `charAt()` 尝试将 `index` 转换为整数，而方括号表示法不会，直接使用 `index` 作为属性名。
 - 如果 `index` 超出范围，`charAt()` 返回一个空字符串，而方括号表示法返回 `undefined`。
@@ -41,7 +41,7 @@ Unicode 码位的范围从 `0` 到 `1114111` (`0x10FFFF`)。`charAt()` 方法总
 
 ### 使用 charAt()
 
-下例输出字符串 "`Brave new world`" 不同位置处的字符：
+下例输出字符串 `"Brave new world"` 不同位置处的字符：
 
 ```js
 const anyString = "Brave new world";
@@ -77,7 +77,15 @@ console.log(str.charAt(0)); // "\ud842"，这不是有效的 Unicode 字符
 console.log(str.charAt(1)); // "\udfb7"，这不是有效的 Unicode 字符
 ```
 
-> **备注：** 避免使用 `charAt()` 重新实现上述解决方案。检测孤立的代理项及其配对是复杂的，而内置 API 可能更高效，因为它们直接使用字符串的内部表示形式。如有必要，请安装上述 API 的 polyfill。
+要获取给定索引处的完整 Unicode 码位，请使用按 Unicode 码位拆分的索引方法，例如 {{jsxref("String.prototype.codePointAt()")}} 和将字符串[展开为 Unicode 码位数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)。
+
+```js
+const str = "𠮷𠮾";
+console.log(String.fromCodePoint(str.codePointAt(0))); // "𠮷"
+console.log([...str][0]); // "𠮷"
+```
+
+> **备注：** 避免使用 `charAt()` 重新实现上述解决方案。检测孤项代理及其配对很复杂，而内置 API 可能更高效，因为它们直接使用字符串的内部表示形式。如有必要，请安装上述 API 的 polyfill。
 
 ## 规范
 
