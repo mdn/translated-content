@@ -1,6 +1,6 @@
 ---
 title: Créer de belles boîtes
-slug: Learn/CSS/Howto/create_fancy_boxes
+slug: Learn/CSS/Howto/Create_fancy_boxes
 translation_of: Learn/CSS/Howto/create_fancy_boxes
 original_slug: Apprendre/CSS/Comment/Créer_de_belles_boîtes
 ---
