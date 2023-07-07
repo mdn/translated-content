@@ -34,7 +34,6 @@ _이 인터페이스는 부모인 {{domxref("Event")}}의 속성들도 상속받
 - {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
   - : 발신자가 보낸 메세지 데이터입니다.
 - {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
-  - : A string representing the origin of the message emitter.
   - : 발신자의 출처를 나타내는 문자열입니다.
 - {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
   - : 이벤트의 고유한 ID 값을 나타내는 문자열입니다.
