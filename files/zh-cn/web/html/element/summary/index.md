@@ -5,7 +5,7 @@ slug: Web/HTML/Element/summary
 
 {{HTMLSidebar}}
 
-[HTML](/zh-CN/docs/Web/HTML) **`<summary>` 元素** 指定了 {{HTMLElement("details")}} 元素展现盒子的内容的摘要，标题或图例。点击 `<summary>` 元素切换了亲代 `<details>` 元素开启和关闭的状态。
+[HTML](/zh-CN/docs/Web/HTML) **`<summary>` 元素** 指定了 {{HTMLElement("details")}} 元素展开盒子的内容的摘要，标题或图例。点击 `<summary>` 元素可以切换父元素 `<details>` 开启和关闭的状态。
 
 {{EmbedInteractiveExample("pages/tabbed/summary.html","tabbed-shorter")}}
 
@@ -17,7 +17,7 @@ slug: Web/HTML/Element/summary
 
 `<summary>` 元素的内容可以是任意标题内容、纯文本，或是可以在段落内使用的 HTML 代码。
 
-`<summary>` 元素*仅*可作为 `<details>` 元素的第一个子节点。当用户在 `<summary>` 元素上点击时，亲代的 `<details>` 元素切换了开启和关闭的状态，然后就会向 `<details>` 元素发送 {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} 事件，令用户得知这样的状态改变何时发生。
+`<summary>` 元素*仅*可作为 `<details>` 元素的第一个子节点。当用户在 `<summary>` 元素上点击时，父元素 `<details>` 会切换开启和关闭的状态，并会向 `<details>` 元素发送 {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} 事件，令用户得知这样的状态改变何时发生。
 
 ### 默认标签文字
 
@@ -27,11 +27,11 @@ slug: Web/HTML/Element/summary
 
 根据 HTML 规范，`<summary>` 元素的默认样式包括 `display: list-item`。这使得改变或移除显示为标签旁边的展现部件的图标成为可能，默认的图标通常是一个三角形。
 
-你也可以将样式改变为 `display: block` 来移除展现三角形。
+你也可以将样式改变为 `display: block` 来移除展开三角形。
 
 参见[浏览器兼容性](#浏览器兼容性)以了解其中的细节，因为并不是所有浏览器支持这个元素的全部功能。
 
-对于基于 Webkit 的浏览器，例如 Safari，可以通过非标准的 CSS 伪元素 `::-webkit-details-marker` 来控制图标显示。要删除展现三角形，请使用 `summary::-webkit-details-marker { display: none }`。
+对于基于 Webkit 的浏览器，例如 Safari，可以通过非标准的 CSS 伪元素 `::-webkit-details-marker` 来控制图标显示。要删除展开三角形，请使用 `summary::-webkit-details-marker { display: none }`。
 
 ## 示例
 
@@ -98,7 +98,7 @@ slug: Web/HTML/Element/summary
 
 {{EmbedLiveSample("summary_元素中的_HTML", 650, 120)}}
 
-## 技术总结
+## 技术概要
 
 <table class="properties">
   <tbody>
