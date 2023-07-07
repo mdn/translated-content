@@ -30,7 +30,7 @@ charCodeAt(index)
 
 字符串中的字符从左到右进行索引。第一个字符的索引为 `0`，而在名为 `str` 的字符串中，最后一个字符的索引为 `str.length - 1`。
 
-Unicode 码位的范围是 `0` 到 `1114111` (`0x10FFFF`)。`charCodeAt()` 方法始终返回一个小于 `65536` 的值，因为更高的码位由*一对* 16 位代理项伪字符来表示。因此，为了获取值大于 `65535` 的完整字符，不仅需要检索 `charCodeAt(i)`，而且还要使用 `charCodeAt(i + 1)`（就像操作具有两个字符的字符串一样），或者使用 {{jsxref("String/codePointAt", "codePointAt(i)")}} 方法。有关 Unicode 的信息，请参见 [UTF-16 字符、Unicode 码位和字素簇](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)。
+Unicode 码位的范围是 `0` 到 `1114111`（`0x10FFFF`）。`charCodeAt()` 方法始终返回一个小于 `65536` 的值，因为更高的码位由*一对* 16 位代理伪字符（surrogate pseudo-character）来表示。因此，为了获取值大于 `65535` 的完整字符，不仅需要检索 `charCodeAt(i)`，而且还要使用 `charCodeAt(i + 1)`（就像操作具有两个字符的字符串一样），或者使用 {{jsxref("String/codePointAt", "codePointAt(i)")}} 方法。有关 Unicode 的信息，请参见 [UTF-16 字符、Unicode 码位和字素簇](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)。
 
 ## 示例
 
@@ -46,8 +46,8 @@ Unicode 码位的范围是 `0` 到 `1114111` (`0x10FFFF`)。`charCodeAt()` 方�
 
 ```js
 const str = "𠮷𠮾";
-console.log(str.charCodeAt(0)); // 55362，或 d842，不是有效的 Unicode 字符
-console.log(str.charCodeAt(1)); // 57271，或 dfb7，不是有效的 Unicode 字符
+console.log(str.charCodeAt(0)); // 55362 或 d842，不是有效的 Unicode 字符
+console.log(str.charCodeAt(1)); // 57271 或 dfb7，不是有效的 Unicode 字符
 ```
 
 要获取给定索引处的完整 Unicode 码位，请使用 {{jsxref("String.prototype.codePointAt()")}} 方法。
