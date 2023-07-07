@@ -485,8 +485,9 @@
 /pt-BR/docs/MDN/guia_usuário	/pt-BR/docs/orphaned/MDN/Tools
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tema	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/theme
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomia_de_uma_WebExtension	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-/pt-BR/docs/Mozilla/Add-ons/WebExtensions/O_que_vem_a_seguir_	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next_
+/pt-BR/docs/Mozilla/Add-ons/WebExtensions/O_que_vem_a_seguir_	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/Passo-a-Passo	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
+/pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next_	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissões	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/pre-requisitos	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/sua_primeira_WebExtension	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
