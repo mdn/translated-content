@@ -1,11 +1,7 @@
 ---
 title: update
-slug: Web/CSS/@media/update-frequency
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
-translation_of: Web/CSS/@media/update-frequency
+slug: Web/CSS/@media/update
+translation_of: Web/CSS/@media/update
 ---
 
 {{CSSRef}}

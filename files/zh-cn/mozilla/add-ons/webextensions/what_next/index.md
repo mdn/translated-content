@@ -1,6 +1,6 @@
 ---
 title: 下一步是什么？
-slug: Mozilla/Add-ons/WebExtensions/What_next_
+slug: Mozilla/Add-ons/WebExtensions/What_next
 ---
 
 {{AddonSidebar}}
