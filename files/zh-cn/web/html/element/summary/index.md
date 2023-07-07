@@ -21,7 +21,7 @@ slug: Web/HTML/Element/summary
 
 ### 默认标签文字
 
-如果一个 `<details>` 元素的第一个子节点不是 `<summary>` 元素，{{Glossary("user agent", "用户代理")}}会使用一个默认字符串（通常为“详细信息”）作为展现盒子的标签内容。
+如果一个 `<details>` 元素的第一个子节点不是 `<summary>` 元素，{{Glossary("user agent", "用户代理")}}会使用一个默认字符串（通常为“详细信息”或“详情”）作为展开盒子的标签内容。
 
 ### 默认样式
 
