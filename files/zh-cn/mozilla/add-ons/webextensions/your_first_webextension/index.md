@@ -111,7 +111,7 @@ borderify/
 
 ### 安装
 
-打开 Firefox 的 [about:debugging](/zh-CN/docs/Tools/about:debugging) 页面，点击“This Firefox”，点击 "临时加载附加组件（Load Temporary Add-on）" 按钮，并选择你的扩展所在的目录：
+打开 Firefox 的 [about:debugging](/zh-CN/docs/Tools/about:debugging) 页面，点击“This Firefox”，点击“临时加载附加组件（Load Temporary Add-on）”按钮，并选择你的扩展所在的目录：
 
 附加组件将会被安装，直到下次重启浏览器失效。
 
@@ -133,7 +133,7 @@ borderify/
 
 ## 打包和发布
 
-为了给其他人使用你的插件，你需要打包，并将其提交给 Mozilla 进行签名。要了解更多有关，请参考 [“发布你的扩展”](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)。
+为了给其他人使用你的插件，你需要打包，并将其提交给 Mozilla 进行签名。要了解更多有关，请参考[“发布你的扩展”](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)。
 
 ## 下一步
 
@@ -142,5 +142,5 @@ borderify/
 - [写一个更加复杂的扩展](/zh-CN/Add-ons/WebExtensions/Your_second_WebExtension)
 - [阅读更多关于扩展的内容](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [探索更多关于扩展的示例](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [发现开发，测试，和发布扩展需要的知识](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_)
-- [进一步的学习](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_#Continue_your_learning_experience)
+- [发现开发，测试，和发布扩展需要的知识](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [进一步的学习](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next#继续你的学习经历)
