@@ -128,7 +128,7 @@ function logTabs(tabs) {
 }
 
 function onError(error) {
-  console.error(`Error: ${error}`);
+  console.error(`错误：${error}`);
 }
 
 browser.tabs.query({ url: "*://*.mozilla.org/*" }).then(logTabs, onError);
