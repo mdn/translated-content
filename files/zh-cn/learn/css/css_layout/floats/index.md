@@ -39,7 +39,7 @@ slug: Learn/CSS/CSS_layout/Floats
 
 ## 简单的例子
 
-让我们来探讨如何使用浮动。我们将从一个非常简单的例子开始，包括在图像周围浮动一个文本块。你可以在电脑上创建新的 `index.html` 文件，并以 [简单的 HTML 模板](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) 填充，在适当的地方插入以下代码。稍后你可以看到示例代码应该能呈现出的效果。
+让我们来探讨如何使用浮动。我们将从一个非常简单的例子开始，包括在图像周围浮动一个文本块。你可以在电脑上创建新的 `index.html` 文件，并以 [简单的 HTML 模板](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) 填充，在适当的地方插入以下代码。稍后你可以看到示例代码应该能呈现出的效果。
 
 首先，我们写一些简单的 HTML——添加以下内容到 HTML 的{{htmlelement("body")}}内，删除之前{{htmlelement("body")}}里面的东西：
 

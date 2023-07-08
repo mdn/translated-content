@@ -147,13 +147,13 @@ textarea {
 
 {{ EmbedLiveSample('示例', '100%', 200) }}
 
-> **备注：** 您还可以在 GitHub 上找到示例（请参见[源代码](https://github.com/mdn/learning-area/blob/master/html/forms/hidden-input-example/index.html)，并可以[实时运行](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)）。
+> **备注：** 您还可以在 GitHub 上找到示例（请参见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/hidden-input-example/index.html)，并可以[实时运行](https://mdn.github.io/learning-area/html/forms/hidden-input-example/index.html)）。
 
 提交后，发送到服务器的表单数据将如下所示：
 
 `title=My+excellent+blog+post&content=This+is+the+content+of+my+excellent+blog+post.+I+hope+you+enjoy+it!&postId=34657`
 
-即使根本看不到隐藏的 `{{HTMLElement("input")}}`，它所包含的数据仍然会被提交给服务器。
+即使根本看不到隐藏的 {{HTMLElement("input")}}，它所包含的数据仍然会被提交给服务器。
 
 ## 规范
 
