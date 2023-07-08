@@ -56,11 +56,9 @@ l10n:
 - JSON データを返す {{domxref("Response")}} オブジェクトを構築することを容易にする、[`Response.json()`](/ja/docs/Web/API/Response/json_static) 静的メソッドをサポートしました。
   このメソッドは [service workers](/ja/docs/Web/API/Service_Worker_API) や、JSON データを持つブラウザー要求に応答する必要があるその他のコードで役に立つでしょう ([Firefox bug 1758943](https://bugzil.la/1758943))。
 - [`URL.canParse()`](/ja/docs/Web/API/URL/canParse_static) 静的メソッドを使用して、絶対 URL または相対 URL とベース URL の解析や検証が可能になりました。
-  これは `try...catch` ブロックや例外処理で構築するよりも高速かつ簡単に、URL が有効であるかを確認する手段を提供します 
-  ([Firefox bug 1823354](https://bugzil.la/1823354))。
+  これは `try...catch` ブロックや例外処理で構築するよりも高速かつ簡単に、URL が有効であるかを確認する手段を提供します ([Firefox bug 1823354](https://bugzil.la/1823354))。
 - [`URLSearchParams.has()`](/ja/docs/Web/API/URLSearchParams/has) および [`URLSearchParams.delete()`](/ja/docs/Web/API/URLSearchParams/delete) メソッドで、省略可能な引数 `value` をサポートしました。
-  これは `name` および `value` の両方で検索パラメーターとマッチングさせることができ、同じ名前で複数の検索パラメーターを持つクエリー文字列を操作できます 
-  ([Firefox bug 1831587](https://bugzil.la/1831587))。
+  これは `name` および `value` の両方で検索パラメーターとマッチングさせることができ、同じ名前で複数の検索パラメーターを持つクエリー文字列を操作できます ([Firefox bug 1831587](https://bugzil.la/1831587))。
 
 #### DOM
 
