@@ -1,15 +1,6 @@
 ---
 title: topSites
 slug: Mozilla/Add-ons/WebExtensions/API/topSites
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - topSites
 translation_of: Mozilla/Add-ons/WebExtensions/API/topSites
 ---
 

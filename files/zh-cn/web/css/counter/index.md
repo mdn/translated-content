@@ -16,7 +16,7 @@ counter(计数器名称);
 counter(countername, upper-roman)
 ```
 
-一个[计数器](/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)本身没有可见的效果，而是通过`counter()`函数（和[`counters()`](/zh-CN/docs/Web/CSS/counters)函数）返回开发人员定义的字符串（或图像）从而使计数器拥有很棒的作用。
+一个[计数器](/zh-CN/docs/Web/CSS/CSS_lists/Using_CSS_counters)本身没有可见的效果，而是通过`counter()`函数（和[`counters()`](/zh-CN/docs/Web/CSS/counters)函数）返回开发人员定义的字符串（或图像）从而使计数器拥有很棒的作用。
 
 > **备注：** `counter()`函数可以与任何 CSS 属性一起使用，但是对[`"content"`](/zh-CN/docs/Web/CSS/content)以外的属性的支持是试验性的，对 type-or-unit 参数的支持很少。
 >
@@ -29,7 +29,7 @@ counter(countername, upper-roman)
 - `<custom-ident> 自定义标识`
   - : 一个标识计数器的名称，区分大小写，并且与{{cssxref("counter-reset")}}和{{cssxref("counter-increment")}}中的“名称”相同。名称不能以两个破折号开头，并且不能为`none`, `unset`, `initial`, 或 `inherit`。
 - `<counter-style> 计数器样式`
-  - : 计数器样式名称或 [`symbols()`](/zh-CN/docs/Web/CSS/symbols) 函数，其中计数器样式名称是数字，字母或符号的简单预定义计数器样式，复杂的东亚或埃塞俄比亚长手预定义计数器样式，或其他[预定义计数器样式](/zh-CN/docs/Web/CSS/CSS_Counter_Styles)。如果省略，则计数器样式默认为十进制。
+  - : 计数器样式名称或 [`symbols()`](/zh-CN/docs/Web/CSS/symbols) 函数，其中计数器样式名称是数字，字母或符号的简单预定义计数器样式，复杂的东亚或埃塞俄比亚长手预定义计数器样式，或其他[预定义计数器样式](/zh-CN/docs/Web/CSS/CSS_counter_styles)。如果省略，则计数器样式默认为十进制。
 
 ### 形式语法
 
@@ -117,7 +117,7 @@ li::after {
 
 ## 参见
 
-- [使用 CSS 计数器](/zh-CN/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+- [使用 CSS 计数器](/zh-CN/docs/Web/CSS/CSS_lists/Using_CSS_counters)
 - {{cssxref("counter-reset")}}
 - {{cssxref("counter-set")}}
 - {{cssxref("counter-increment")}}

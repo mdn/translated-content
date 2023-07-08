@@ -1,13 +1,7 @@
 ---
 title: Chrome
 slug: Glossary/Chrome
-tags:
-  - Chrome
-  - Glossaire
-  - Mécaniques web
-  - Navigateur
 translation_of: Glossary/Chrome
-original_slug: Glossaire/Chrome
 ---
 
 ## Résumé

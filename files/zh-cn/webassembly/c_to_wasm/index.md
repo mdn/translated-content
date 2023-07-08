@@ -1,11 +1,11 @@
 ---
 title: 编译 C/C++ 为 WebAssembly
-slug: WebAssembly/C_to_wasm
+slug: WebAssembly/C_to_Wasm
 ---
 
 {{WebAssemblySidebar}}
 
-当你在用 C/C++ 之类的语言编写模块时，你可以使用[Emscripten](/zh-CN/docs/Mozilla/Projects/Emscripten)来将它编译到 WebAssembly。让我们来看看它是如何工作的。
+当你在用 C/C++ 之类的语言编写模块时，你可以使用 [Emscripten](https://emscripten.org/) 来将它编译到 WebAssembly。让我们来看看它是如何工作的。
 
 ## Emscripten 环境安装
 
@@ -106,11 +106,11 @@ emsdk_env.bat
 
 ### 运行你的例子
 
-现在使用一个支持 WebAssembly 的浏览器，加载生成的 `hello.html` 。
+现在使用一个支持 WebAssembly 的浏览器，加载生成的 `hello.html`。自从 Firefox 版本 52、Chrome 版本 57 和 Opera 版本 44 开始，已经默认启用了 WebAssembly。
 
-> **备注：** Firefox 52+ 和 Chrome 57+ 和最新版本的 Opera 已经默认启用，你也可以在 Firefox 47+ 中通过在 _about:config_ 页面启用 `javascript.options.wasm` 字段获得支持，Chrome 51+ 和 Opera 38+ 可以在 _chrome://flags 页面启用 Experimental WebAssembly 选项以支持_ WebAssembly*。*
+> **备注：** 如果你试图直接从本地硬盘打开生成的 HTML 文件（`hello.html`）（例如 `file://your_path/hello.html`），你会得到一个错误信息，大意是 _`both async and sync fetching of the wasm failed`_。 你需要通过 HTTP 服务器（`http://`）运行你的 HTML 文件——参见[如何设置本地测试服务器](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)获取更多信息。
 
-如果一切顺利，你应该可以在页面上的 `Emscripten 控制台`和 `浏览器控制台` 中看到 "Hello World" 的输出。
+如果一切顺利，你应该可以在页面上的 Emscripten 控制台和浏览器控制台中看到 "Hello World" 的输出。
 
 恭喜！你已经成功将 C 代码编译成 JavaScript 并且在浏览器中执行了！
 

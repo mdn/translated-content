@@ -1,8 +1,6 @@
 ---
 title: WebAssembly テキスト形式から wasm への変換
-slug: WebAssembly/Text_format_to_wasm
-i10n:
-  sourceCommit: 0160aac0e623dacdce4019205f32f7b3d3e58019
+slug: WebAssembly/Text_format_to_Wasm
 ---
 
 {{WebAssemblySidebar}}

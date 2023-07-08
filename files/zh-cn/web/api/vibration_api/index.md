@@ -22,7 +22,7 @@ window.navigator.vibrate([200]);
 
 以上两个例子都可以使设备振动 200 ms.
 
-### **振动模式**
+### 振动模式
 
 一组数值描述了设备振动并且不振动的交替时间段。数组中的每个值都将转换成一个整数，然后交替解释为设备应该振动的毫秒数和不振动的毫秒数。例如：
 
@@ -76,6 +76,6 @@ function startPeristentVibrate(duration, interval) {
 
 {{Compat}}
 
-## 也可以参考
+## 参见
 
 - {{domxref("Navigator.vibrate()")}}

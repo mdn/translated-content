@@ -79,7 +79,7 @@ Utilice la semántica del texto en línea HTML para definir el significado, estr
 | Elemento | Descripción |
 | ------- | ----------- |
 | {{HTMLElement("a")}}      | El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de internet, archivos o ubicaciones dentro de la misma página, direcciones de correo, o cualquier otra URL. |
-| {{HTMLElement("abbr")}}   | El **elemento HTML `<abbr>`** (_o Elemento de Abreviación HTML_) representa una abreviación o acrónimo; el atributo opcional {{htmlattrxref("title")}} puede ampliar o describir la abreviatura. Si está presente, el atributo `title` debe contener la descripción completa y nada más. |
+| {{HTMLElement("abbr")}}   | El **elemento HTML `<abbr>`** (_o Elemento de Abreviación HTML_) representa una abreviación o acrónimo; el atributo opcional [`title`](/es/docs/Web/HTML/Global_attributes#title) puede ampliar o describir la abreviatura. Si está presente, el atributo `title` debe contener la descripción completa y nada más. |
 | {{HTMLElement("b")}}      | **b** de bold=negrita. |
 | {{HTMLElement("bdi")}}    | El elemento _HTML `<bdi>`_ (o elemento de aislamiento Bi-Direccional) aisla un trozo de texto para que pueda ser formateado con una dirección diferente al texto que hay fuera de él. |
 | {{HTMLElement("bdo")}}    | **bdo** Bi-Directional Overriding=Anulación de bidireccionalidad. |
@@ -130,7 +130,7 @@ Además de los contenidos multimedia habituales, HTML puede incluir otra varieda
 | {{HTMLElement("embed")}}   | El _Elemento HTML Embed_ ( `<embed>` ) representa un punto de integración para una aplicación externa o de contenido interactivo (en otras palabras, un plug-in). |
 | {{HTMLElement("iframe")}}  | El **elemento HTML `<iframe>`** (de inline frame) representa un contexto de navegación anidado, el cual permite incrustar otra página HTML en la página actual. |
 | {{HTMLElement("object")}}  | El **elemento HTML `<object>`** representa un recurso externo, que puede ser tratado como una imagen, un contexto de navegación anidado, o como un recurso que debe ser manejado por un plugin. |
-| {{HTMLElement("picture")}} | El **elemento HTML `<picture>`** es un contenedor usado para especificar múltiples elementos {{HTMLElement("source")}} y un elemento {{HTMLElement("img")}} contenido en él para proveer versiones de una imagen para diferentes escenarios de dispositivos. Si no hay coincidencias con los elementos `<source>`, el archivo especificado en los atributos {{htmlattrxref("src", "img")}} del elemento `<img>` es utilizado. La imagen seleccionada es entonces presentada en el espacio ocupado por el elemento `<img>`. |
+| {{HTMLElement("picture")}} | El **elemento HTML `<picture>`** es un contenedor usado para especificar múltiples elementos {{HTMLElement("source")}} y un elemento {{HTMLElement("img")}} contenido en él para proveer versiones de una imagen para diferentes escenarios de dispositivos. Si no hay coincidencias con los elementos `<source>`, el archivo especificado en los atributos [`src`](/es/docs/Web/HTML/Element/img#src) del elemento `<img>` es utilizado. La imagen seleccionada es entonces presentada en el espacio ocupado por el elemento `<img>`. |
 | {{HTMLElement("portal")}}  | Habilita la incrustación de otra página HTML en la actual con el fin de permitir una navegación más fluida en nuevas páginas. |
 | {{HTMLElement("source")}}  | El **elemento HTML `<source>`** especifica recursos de medios múltiples para los elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}}, o {{HTMLElement("video")}}. Es un elemento vacío. Normalmente se utiliza para servir el mismo contenido multimedia en [varios formatos soportados por diferentes navegadores](/es/docs/Media_formats_supported_by_the_audio_and_video_elements). |
 
@@ -175,7 +175,7 @@ Estos elementos son usados para crear y manejar datos tabulados.
 | {{HTMLElement("tbody")}}    | Encapsula un conjunto de filas de una tabla (elementos {{HTMLElement("tr")}}), lo que indica que abarcan el cuerpo de la tabla ({{HTMLElement("table")}}). |
 | {{HTMLElement("td")}}       | El elemento [HTML](/es/docs/Web/HTML) _Celda de tabla_ (**`<td>`**) define la celda de una tabla que contiene datos. Esta participa en el _modelo de tablas_. |
 | {{HTMLElement("tfoot")}}    | Define un conjunto de filas que resumen las columnas de la tabla. |
-| {{HTMLElement("th")}}       | El elemento **HTML `<th>`** define una celda como encabezado de un grupo de celdas en una tabla. La naturaleza exacta de este grupo está definida por los atributos {{htmlattrxref("scope", "th")}} y {{htmlattrxref("headers", "th")}}. |
+| {{HTMLElement("th")}}       | El elemento **HTML `<th>`** define una celda como encabezado de un grupo de celdas en una tabla. La naturaleza exacta de este grupo está definida por los atributos [`scope`](/es/docs/Web/HTML/Element/th#scope) y [`headers`](/es/docs/Web/HTML/Element/th#headers). |
 | {{HTMLElement("thead")}}    | Define un conjunto de filas que definen el encabezado de las columnas de la tabla. |
 | {{HTMLElement("tr")}}       | El elemento HTML _fila de tabla_ (_table row_) `<tr>` define una fila de celdas en una tabla. Estas pueden ser una mezcla de elementos {{HTMLElement("td")}} y {{HTMLElement("th")}}. |
 

@@ -19,7 +19,7 @@ cadena.link(atributoHref)
 ### Parámetros
 
 - `atributoHref`
-  - : Cualquier cadena que especifique el atributo {{htmlattrxref("href", "a")}} de la etiqueta {{HTMLElement("a")}}; debería ser una URL válida (relativa o absoluta).
+  - : Cualquier cadena que especifique el atributo [`href`](/es/docs/Web/HTML/Element/a#href) de la etiqueta {{HTMLElement("a")}}; debería ser una URL válida (relativa o absoluta).
 
 ## Descripción
 

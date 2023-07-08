@@ -1,10 +1,6 @@
 ---
 title: name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/name
 ---
 

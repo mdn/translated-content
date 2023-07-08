@@ -12,24 +12,35 @@ original_slug: >-
 以下範例使用 `try...catch` 語法。本範例呼叫函數，這個函數是用來在陣列裡根據傳給函數的值來查詢月份的名稱。如果傳入的值不符合月份的數字 (1-12)，就會拋出值為 `InvalidMonthNo` 的例外，而且在 `catch` 區塊裡的語句會把 `monthName` 變數設定為 `unknown`。
 
 ```js
-function getMonthName (mo) {
-    mo=mo-1; // 針對陣列索引調整月份的數字 (1=Jan, 12=Dec)
-    var months=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul",
-          "Aug","Sep","Oct","Nov","Dec");
-    if (months[mo] != null) {
-       return months[mo]
-    } else {
-       throw "InvalidMonthNo"
-    }
+function getMonthName(mo) {
+  mo = mo - 1; // 針對陣列索引調整月份的數字 (1=Jan, 12=Dec)
+  var months = new Array(
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  );
+  if (months[mo] != null) {
+    return months[mo];
+  } else {
+    throw "InvalidMonthNo";
+  }
 }
 
 try {
-// 需要測試的語句
-    monthName=getMonthName(myMonth) // 可拋出例外的函數
-}
-catch (e) {
-    monthName="unknown"
-    logMyErrors(e) // 把例外物件傳給錯誤處理器
+  // 需要測試的語句
+  monthName = getMonthName(myMonth); // 可拋出例外的函數
+} catch (e) {
+  monthName = "unknown";
+  logMyErrors(e); // 把例外物件傳給錯誤處理器
 }
 ```
 
@@ -54,11 +65,10 @@ catch (catchID) {
 
 ```js
 try {
-   throw "myException" // 產生例外
-}
-catch (e) {
-// 用來處理任何例外的語句
-   logMyErrors(e) // 把例外物件傳給錯誤處理器
+  throw "myException"; // 產生例外
+} catch (e) {
+  // 用來處理任何例外的語句
+  logMyErrors(e); // 把例外物件傳給錯誤處理器
 }
 ```
 
@@ -68,24 +78,17 @@ catch (e) {
 舉例來說，以下函數呼叫三個其他的函數（已在別處定義了）來檢驗自己的參數。如果檢驗函數判斷出他所要檢驗的元素是無效的話，他就返回 0，導致呼叫者拋出對應的例外。
 
 ```js
-function getCustInfo(name, id, email)
-{
-   var n, i, e;
+function getCustInfo(name, id, email) {
+  var n, i, e;
 
-   if (!validate_name(name))
-       throw "InvalidNameException"
-   else
-       n = name;
-       if (!validate_id(id))
-          throw "InvalidIdException"
-       else
-          i = id;
-       if (!validate_email(email))
-          throw "InvalidEmailException"
-       else
-          e = email;
-       cust = (n + " " + i + " " + e);
-       return (cust);
+  if (!validate_name(name)) throw "InvalidNameException";
+  else n = name;
+  if (!validate_id(id)) throw "InvalidIdException";
+  else i = id;
+  if (!validate_email(email)) throw "InvalidEmailException";
+  else e = email;
+  cust = n + " " + i + " " + e;
+  return cust;
 }
 ```
 
@@ -127,11 +130,11 @@ catch (e){
 ```js
 openMyFile();
 try {
-   writeMyFile(theData); // 這裡有可能拋出錯誤
-}catch(e){
-   handleError(e); // 如果我們得到錯誤，就處理他
-}finally {
-   closeMyFile(); // 永遠會關閉這項資源
+  writeMyFile(theData); // 這裡有可能拋出錯誤
+} catch (e) {
+  handleError(e); // 如果我們得到錯誤，就處理他
+} finally {
+  closeMyFile(); // 永遠會關閉這項資源
 }
 ```
 

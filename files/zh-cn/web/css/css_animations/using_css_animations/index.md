@@ -1,6 +1,6 @@
 ---
 title: 使用 CSS 动画
-slug: Web/CSS/CSS_Animations/Using_CSS_animations
+slug: Web/CSS/CSS_animations/Using_CSS_animations
 ---
 
 {{SeeCompatTable}}{{CSSRef}}

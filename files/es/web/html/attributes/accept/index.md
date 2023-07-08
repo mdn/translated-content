@@ -102,7 +102,7 @@ La inclusión del atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple), 
 
 A menudo, no querrás que el usuario pueda elegir cualquier tipo de archivo arbitrario; en su lugar, quieres que seleccionen archivos de un tipo o tipos específicos. Por ejemplo, si la entrada de tu archivo permite a los usuarios cargar una imagen de perfil, probablemente desees que seleccionen formatos de imagen compatibles con la web, como {{Glossary("JPEG")}} o {{Glossary("PNG")}}.
 
-Los tipos de archivo aceptables se pueden especificar con el atributo {{HTMLAttrxRef("accept", "input/file")}}, que toma una lista separada por comas de extensiones de archivo permitidas o tipos MIME. Algunos ejemplos:
+Los tipos de archivo aceptables se pueden especificar con el atributo [`accept`](/es/docs/Web/HTML/Element/input/file#accept), que toma una lista separada por comas de extensiones de archivo permitidas o tipos MIME. Algunos ejemplos:
 
 - `accept="image/png"` o `accept=".png"` — Acepta archivos PNG.
 - `accept="image/png, image/jpeg"` o `accept=".png, .jpg, .jpeg"` — Acepta archivos PNG o JPEG.

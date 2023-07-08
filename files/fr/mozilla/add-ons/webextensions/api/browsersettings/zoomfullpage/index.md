@@ -1,15 +1,6 @@
 ---
 title: browserSettings.zoomFullPage
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomFullPage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - zoomFullPage
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomFullPage
 ---
 

@@ -22,7 +22,7 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
   - : 我们完整的 CSS 指南将带你从头开始，学习如何给文字添加样式、创建布局等更多内容。
 - [CSS 布局指南](/zh-CN/docs/Web/Guide/CSS/CSS_Layout)
   - : MDN 上包含了很多有关 CSS 布局的指南，这个页面将它们收集到了一起。
-- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [使用 CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations)
   - : CSS 动画使得从一个 CSS 样式配置到另一个样式配置的动画过渡成为可能。本指南将帮助你开始使用动画属性。
 
 ## JavaScript
@@ -62,7 +62,7 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
 
 ## 字体
 
-- [可变字体指南](/zh-CN/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+- [可变字体指南](/zh-CN/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
   - : 了解如何在你的设计中使用可变字体。
 - [网络开放字体格式（The Web Open Font Format，简称 WOFF）](/zh-CN/docs/Web/Guide/WOFF)
   - : WOFF（网络开放字体格式）是在网络上开放给任何人免费使用的字体文件格式。

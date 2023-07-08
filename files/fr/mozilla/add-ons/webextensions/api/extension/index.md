@@ -1,15 +1,6 @@
 ---
 title: extension
 slug: Mozilla/Add-ons/WebExtensions/API/extension
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension
 ---
 

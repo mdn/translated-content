@@ -1,6 +1,6 @@
 ---
 title: Разбираемся с обёртыванием Flex элементов
-slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+slug: Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
 tags:
   - CSS
   - Flex
@@ -11,6 +11,7 @@ tags:
   - флексбокс
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
 ---
+
 {{CSSRef}}
 
 Flexbox был разработан как однонаправленный макет, то есть он подразумевает укладывание элементов либо в строчку, либо в столбец, но не одновременно и то и другое. Тем не менее, есть возможность завернуть элементы в несколько строк, создавая новые строки. Это делается с помощью установки свойства {{cssxref("flex-direction")}} (flex-направление) в значение `row` (строки) или создавая новые столбцы, устанавливая свойство `flex-direction` в значение `column` (столбец). В этой статье я объясню, как это работает, зачем это придумали и в каких случаях лучше использовать технологию [CSS Grid Layout](/ru/docs/Web/CSS/CSS_Grid_Layout) вместо флекс-боксов.

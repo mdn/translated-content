@@ -2,7 +2,7 @@
 title: 動画と音声のコンテンツ
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 l10n:
-  sourceCommit: 4b57879ba126b492feae036c321ad7a7ee8c8138
+  sourceCommit: af0e71822122feda89495ab9215c131bbe34d65c
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
@@ -53,7 +53,9 @@ l10n:
 
 ```html
 <video src="rabbit320.webm" controls>
-  <p>お使いのブラウザーは HTML5 動画をサポートしていません。その代わりに<a href="rabbit320.webm">動画へのリンク</a>があります。</p>
+  <p>
+    お使いのブラウザーは HTML 動画をサポートしていません。その代わりに<a href="rabbit320.webm">動画へのリンク</a>があります。
+  </p>
 </video>
 ```
 
@@ -89,7 +91,7 @@ l10n:
 例えば、
 
 - WebM コンテナーは、通常、 Vorbis または Opus の音声と VP8/VP9 映像をパッケージ化します。これはすべての現代のブラウザーが対応していますが、古いバージョンでは動作しません。
-- MP4 コンテナーは、 AAC または MP3 音声を H.264 映像とパッケージ化することがよくあります。これはすべての現代のブラウザーが対応しており、 Internet Explorer も対応しています。
+- MP4 コンテナーは、 AAC または MP3 音声を H.264 映像とパッケージ化することがよくあります。これはすべての現代のブラウザーが対応しています。
 - Ogg コンテナーは、g Vorbis 音声と Theora 映像を使用する傾向があります。これは Firefox と Chrome が最もよく対応していますが、基本的により質の良い WebM 形式に取って代わられつつあります。
 
 いくつかの特殊なケースもあります。例えば、音声の種類によっては、コーデックのデータはコンテナーなしで、または簡易的なコンテナーで格納されることがよくあります。そのような例の 1 つが FLAC コーデックで、最も一般的には、生の FLAC トラックだけの FLAC ファイルに格納されます。
@@ -98,7 +100,7 @@ l10n:
 
 オーディオプレーヤーは、 MP3 または Ogg ファイルの音声トラックを直接再生する傾向があります。これらはコンテナーを必要としません。
 
-#### ブラウザーで対応しているメディアファイル
+#### ブラウザーが対応しているメディアファイル
 
 > **メモ:** MP3 や MP4/H.264 などの一般的な形式は優れていますが、特許に阻まれています。つまり、ベースとなっている技術の一部または全部に応じた特許が存在するのです。米国では、 MP3 は 2017 年まで、 H.264 は少なくとも 2027 年までの特許が適用されています。
 >
@@ -108,7 +110,7 @@ l10n:
 
 ブラウザーの対応するコンテナーファイル形式がそれぞれ異なるだけでなく、コーデックの選択もそれぞれ異なるため、事態は少し複雑になります。ウェブサイトや アプリがユーザーのブラウザで動作する可能性を最大限に高めるには、使用する それぞれのメディアファイルを複数の形式で提供する必要があるかもしれません。自分のサイトとユーザーのブラウザーで共通の形式がない場合、メディアは再生されません。
 
-アプリのメディアを、リーチしたいブラウザー、プラットフォーム、機器のあらゆる組み合わせで表示できるようにすることは複雑なため、コーデックとコンテナーの最適な組み合わせを選ぶことは、複雑な作業になる可能性があります。ニーズに合ったコンテナーファイル形式の選択については、[正しいコンテナーの選択](/ja/docs/Web/Media/Formats/Containers)を参照してください。同様に、コンテンツや対象となる視聴者に合わせて最初に使用するメディアコーデックの選択については、[映像コーデックの選択](/ja/docs/Web/Media/Formats/Video_codecs)や[音声コーデックの選択](/ja/docs/Web/Media/Formats/Audio_codecs)が参考になります。
+アプリのメディアを、リーチしたいブラウザー、プラットフォーム、機器のあらゆる組み合わせで表示できるようにすることは複雑なため、コーデックとコンテナーの最適な組み合わせを選ぶことは、複雑な作業になる可能性があります。ニーズに合ったコンテナーファイル形式の選択については、[正しいコンテナーの選択](/ja/docs/Web/Media/Formats/Containers#正しいコンテナーの選択)を参照してください。同様に、コンテンツや対象となる視聴者に合わせて最初に使用するメディアコーデックの選択については、[映像コーデックの選択](/ja/docs/Web/Media/Formats/Video_codecs#choosing_a_video_codec)や[音声コーデックの選択](/ja/docs/Web/Media/Formats/Audio_codecs#choosing_an_audio_codec)が参考になります。
 
 もう一つ覚えておいていただきたいのは、モバイル用のブラウザーは、デスクトップ版と同じ形式をすべて対応しているわけではない場合があるのと同様、デスクトップ版で対応していない形式にも追加で対応している場合があるということです。さらに、デスクトップとモバイルのブラウザーは、メディア再生の処理をオフロードするように設計されている場合があります（すべてのメディアに対して、または内部で処理できない特定の型に対してのみ、オフロードする）。つまり、メディアへの対応は、ユーザーがインストールしているソフトウェアに部分的に依存しているのです。
 
@@ -116,9 +118,11 @@ l10n:
 
 ```html
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>お使いのブラウザーはこの動画に対応していません。こちらは代わりの<a href="rabbit320.mp4">動画へのリンク</a>です。</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    お使いのブラウザーはこの動画に対応していません。こちらは代わりの<a href="rabbit320.mp4">動画へのリンク</a>です。
+  </p>
 </video>
 ```
 
@@ -133,12 +137,20 @@ l10n:
 HTML 動画に含めることができる他の多くの機能があります。以下の 3 番目の例を見てください。
 
 ```html
-<video controls width="400" height="400"
-       autoplay loop muted preload="auto"
-       poster="poster.png">
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>お使いのブラウザーは HTML5 動画をサポートしていません。その代わりに<a href="rabbit320.mp4">動画へのリンク</a>があります。</p>
+<video
+  controls
+  width="400"
+  height="400"
+  autoplay
+  loop
+  muted
+  preload="auto"
+  poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    お使いのブラウザーはこの動画に対応していません。代わりに<a href="rabbit320.mp4">動画へのリンク</a>をお使いください。
+  </p>
 </video>
 ```
 
@@ -174,9 +186,11 @@ HTML 動画に含めることができる他の多くの機能があります。
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
-  <p>お使いのブラウザーはこの音声ファイルに対応していません。その代わりに<a href="viper.mp3">音声へのリンク</a>があります。</p>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    お使いのブラウザーはこの音声ファイルに対応していません。代わりに<a href="viper.mp3">音声へのリンク</a>をお使いください。
+  </p>
 </audio>
 ```
 
@@ -234,15 +248,15 @@ WEBVTT
 これを HTML メディアの再生と一緒に表示するには、以下を行う必要があります。
 
 1. 適切な場所に `.vtt` ファイルとして保存します。
-2. {{htmlelement("track")}} 要素で `.vtt` ファイルにリンクします。`<track>` は `<audio>` または `<video>` 内に配置する必要がありますが、すべての `<source>` 要素の後に配置する必要があります。[`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性を使用して、キューが `subtitles`、`captions`、または `descriptions` のいずれであるかを指定します。さらに、 [`srclang`](/ja/docs/Web/HTML/Element/track#srclang) 属性を使用して、字幕が書かれた言語をブラウザーに伝えます。
+2. {{htmlelement("track")}} 要素で `.vtt` ファイルにリンクします。`<track>` は `<audio>` または `<video>` 内に配置する必要がありますが、すべての `<source>` 要素の後に配置する必要があります。[`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性を使用して、キューが `subtitles`、`captions`、または `descriptions` のいずれであるかを指定します。さらに、[`srclang`](/ja/docs/Web/HTML/Element/track#srclang) 属性を使用して、字幕が書かれた言語をブラウザーに伝えます。最後に、[`label`](/en-US/docs/Web/HTML/Element/track#label) を追加して、読み手が検索している言語を識別しやすくします。
 
 ここに例があります。
 
 ```html
 <video controls>
-    <source src="example.mp4" type="video/mp4">
-    <source src="example.webm" type="video/webm">
-    <track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_es.vtt" srclang="es" label="Spanish" />
 </video>
 ```
 
@@ -272,7 +286,7 @@ WEBVTT
 
 ## スキルをテストしましょう
 
-この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [Test your skills: Multimedia and embedding](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding) を見てください。 なお、このテストの 3 番目の評価問題は、[次の記事](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)で取り上げられるいくつかの技術の知識を前提としますので、挑戦する前にそれを読んでおくとよいでしょう。
+この記事の終わりまで到達しましたが、最も大事な情報を覚えていますか？移動する前に、この情報を取得したかのテストを見ることができます — [スキルテスト: マルチメディアと埋め込み](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding) を見てください。 なお、このテストの 3 番目の評価問題は、[次の記事](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)で取り上げられるいくつかの技術の知識を前提としますので、挑戦する前にそれを読んでおくとよいでしょう。
 
 ## まとめ
 

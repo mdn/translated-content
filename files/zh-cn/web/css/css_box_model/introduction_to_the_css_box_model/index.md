@@ -1,6 +1,6 @@
 ---
 title: CSS 基础框盒模型介绍
-slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
+slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 ---
 
 {{CSSRef}}
@@ -42,13 +42,6 @@ slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 - [布局与包含块](/zh-CN/docs/Web/CSS/Containing_block)
 - [CSS 层叠介绍](/zh-CN/docs/Web/CSS/Cascade)
 - [层叠和继承](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
-
-## 规范
-
-{{Specifications}}
-
-## 参见
-
 - CSS 重要概念：
 
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)
@@ -56,10 +49,10 @@ slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
   - [注释](/zh-CN/docs/Web/CSS/Comments)
   - [优先级](/zh-CN/docs/Web/CSS/Specificity)
   - [继承](/zh-CN/docs/Web/CSS/inheritance)
-  - [盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
   - [布局模式](/zh-CN/docs/Web/CSS/Layout_mode)
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/Visual_formatting_model)
-  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
 
     - [初始值](/zh-CN/docs/Web/CSS/initial_value)

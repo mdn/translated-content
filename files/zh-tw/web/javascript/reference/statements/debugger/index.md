@@ -19,8 +19,8 @@ debugger;
 
 ```js
 function potentiallyBuggyCode() {
-    debugger;
-    // 執行並驗證一些潛在的問題、或是單步執行之類的。
+  debugger;
+  // 執行並驗證一些潛在的問題、或是單步執行之類的。
 }
 ```
 

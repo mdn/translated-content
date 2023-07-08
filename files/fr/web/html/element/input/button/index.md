@@ -13,7 +13,7 @@ Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comm
 
 ## Valeur
 
-L'attribut {{htmlattrxref("value", "input")}} d'un t'el élément contient une chaîne de caractères qui est utilisée comme étiquette pour le bouton (autrement dit, comme texte affiché sur le bouton).
+L'attribut [`value`](/fr/docs/Web/HTML/Element/input#value) d'un t'el élément contient une chaîne de caractères qui est utilisée comme étiquette pour le bouton (autrement dit, comme texte affiché sur le bouton).
 
 ### Exemple 1
 
@@ -105,7 +105,7 @@ function updateBtn() {
 
 ### Désactiver et activer un bouton
 
-Pour désactiver un bouton, il suffit d'ajouter l'attribut universel {{htmlattrxref("disabled")}} :
+Pour désactiver un bouton, il suffit d'ajouter l'attribut universel [`disabled`](/fr/docs/Web/HTML/Global_attributes#disabled) :
 
 ```html
 <input type="button" value="Je suis désactivé" disabled>
@@ -167,7 +167,7 @@ function disableBtn() {
 
 {{EmbedLiveSample("Exemple_2", 650, 60)}}
 
-> **Note :** À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut {{htmlattrxref("autocomplete","button")}} peut être utilisé afin de contrôler cette fonctionnalité.
+> **Note :** À la différence des autres navigateurs, [Firefox conservera un état désactivé obtenu de façon dynamique lorsque la page est rechargée](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing). L'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/button#autocomplete) peut être utilisé afin de contrôler cette fonctionnalité.
 
 ## Validation
 
@@ -298,10 +298,9 @@ draw();
       <td><a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a></td>
     </tr>
     <tr>
-      <td><strong>Attributs pris en Supported common attributes</strong></td>
+      <td><strong>Attributs pris en charge</strong></td>
       <td>
-        {{htmlattrxref("type", "input")}}, and
-        {{htmlattrxref("value", "input")}}
+        <a href="/fr/docs/Web/HTML/Element/input#type"><code>type</code></a> et <a href="/fr/docs/Web/HTML/Element/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>

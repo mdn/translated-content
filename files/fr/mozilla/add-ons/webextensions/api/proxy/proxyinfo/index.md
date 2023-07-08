@@ -1,13 +1,6 @@
 ---
 title: proxy.ProxyInfo
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/ProxyInfo
-tags:
-  - Add-ons
-  - Extensions
-  - Proxy
-  - ProxyInfo
-  - Type
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/ProxyInfo
 ---
 

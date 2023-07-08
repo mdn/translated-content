@@ -1,13 +1,7 @@
 ---
 title: Sémantique
 slug: Glossary/Semantics
-tags:
-  - Glossaire
-  - HTML
-  - Programmation
-  - sémantique
 translation_of: Glossary/Semantics
-original_slug: Glossaire/Sémantique
 ---
 
 En programmation, la **sémantique** fait référence au sens d'une partie de code — par exemple "quel effet aura l'exécution de cette ligne de JavaScript ?", ou "quel est le rôle ou le but de cet élément HTML" (plutôt que "à quoi ressemble-t-il ?".)

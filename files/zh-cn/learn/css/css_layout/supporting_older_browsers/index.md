@@ -197,7 +197,7 @@ CSS 规范包含了在一个物件上同时应用两种布局的时候，解释�
 
 CSS 网格规范最初成形于 IE10，也就是说尽管 IE10 和 IE11 不支持*现代的*网格，虽然这种网格和本站记载的现代布局不同，它们还是有一个很堪用的网格布局版本。IE10 和 IE11 的实现是以`-ms-`为前缀的，也就是说你可以给这两个浏览器用，而在非微软浏览器上，这种属性会被忽略。不过 Edge 仍然能理解旧语法，所以小心点，让每个东西都安全地在你的现代网格 CSS 中覆写。
 
-[网格布局渐进增强](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)指导能帮你理解 IE 版的网格，我们在这节课的末尾加入了一些额外的有用的链接。不过，除非你有很多使用旧版 IE 的访客，你可能发现专注于建立一个由所有不支持的浏览器共用的回滚版本是一个更好的选择。
+[网格布局渐进增强](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)指导能帮你理解 IE 版的网格，我们在这节课的末尾加入了一些额外的有用的链接。不过，除非你有很多使用旧版 IE 的访客，你可能发现专注于建立一个由所有不支持的浏览器共用的回滚版本是一个更好的选择。
 
 ## 测试旧浏览器
 
@@ -209,11 +209,11 @@ CSS 网格规范最初成形于 IE10，也就是说尽管 IE10 和 IE11 不支�
 
 你现在有了自信地使用例如网格和弹性盒技术、建立面向旧浏览器的回滚以及利用任何可能会在未来出现的 新技术所需的知识。
 
-## 另见
+## 参见
 
 - [在 CSS 中使用媒体查询](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
-- [弹性盒的后向兼容性](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox)
-- [CSS 网格布局和渐进优化](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [弹性盒的后向兼容性](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Backwards_compatibility_of_flexbox)
+- [CSS 网格布局和渐进优化](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [使用 CSS 网格：支持没有网格的浏览器](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/)
 - [使用 IE10 和 IE11 版网格的教程](https://24ways.org/2012/css3-grid-layout/)
 - [我应该尽力使用 IE10 的网格布局实现吗？](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/)

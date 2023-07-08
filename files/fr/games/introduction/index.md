@@ -1,13 +1,7 @@
 ---
 title: Introduction au développement de jeux vidéo
 slug: Games/Introduction
-tags:
-  - Firefox OS
-  - Guide
-  - Jeux
-  - Mobile
 translation_of: Games/Introduction
-original_slug: Jeux/Introduction
 ---
 
 {{GamesSidebar}}

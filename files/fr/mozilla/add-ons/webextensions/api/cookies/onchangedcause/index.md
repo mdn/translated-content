@@ -1,16 +1,6 @@
 ---
 title: cookies.OnChangedCause
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Non-standard
-  - OnChangedCause
-  - Reference
-  - Type
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 ---
 

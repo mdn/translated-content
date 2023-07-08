@@ -36,5 +36,4 @@ build/
 /docs/zh-cn/glossary.md
 
 # zh-tw
-/files/zh-tw/web/api/[a-o]*/**/*.md
-/files/zh-tw/web/javascript/**/*.md
+/files/zh-tw/web/javascript/reference/global_objects/[p-t]*/**/*.md

@@ -73,9 +73,9 @@ L'élément {{htmlelement("video")}} vous permet d'intégrer de la vidéo très 
 
 Les fonctionnalités de ce code sont :
 
-- {{htmlattrxref("src","video")}}
+- [`src`](/fr/docs/Web/HTML/Element/video#src)
   - : De la même manière que pour l'élément {{htmlelement("img")}}, l'attribut `src` (source) contient le chemin vers la vidéo que vous voulez intégrer. Cela fonctionne de la même manière.
-- {{htmlattrxref("controls","video")}}
+- [`controls`](/fr/docs/Web/HTML/Element/video#controls)
   - : Les utilisateurs doivent avoir un contrôle sur la lecture de la vidéo ou de l'audio. (c'est particulièrement crucial pour les gens ayant de l'[épilepsie](https://fr.wikipedia.org/wiki/%C3%89pilepsie).) Vous devez vous servir de l'attribut `controls` pour appeler l'interface de contrôle du navigateur ou construire votre propre interface en utilisant l'[API JavaScript](/fr/docs/Web/API/HTMLMediaElement) adéquat. Au minimum, l'interface doit avoir un contrôle de démarrage et d'arrêt (start/stop) du média et un pour ajuster le volume.
 - Le paragraphe dans la balise `<video>`
   - : Cela peut s'appeler solution de repli ou contenu de secours (fallback content) — si le navigateur accédant à la page ne supporte pas l'élément `<video>`, cela offre un texte alternatif qui peut être ce que vous voulez&nbsp;; dans ce cas nous avons mis un lien direct au fichier vidéo, afin que l'utilisateur puisse au moins y accéder sans avoir à se soucier du navigateur qu'il utilise.
@@ -144,17 +144,17 @@ Cela produit une sortie du type suivant&nbsp;:
 
 Voici les nouvelles fonctionnalités&nbsp;:
 
-- {{htmlattrxref("width","video")}} et {{htmlattrxref("height","video")}}
+- [`width`](/fr/docs/Web/HTML/Element/video#width) et [height](/fr/docs/Web/HTML/Element/video#height)
   - : Il est possible de contrôler la taille de la vidéo soit avec ces attributs, soit avec le {{Glossary("CSS")}}. Dans les deux cas, les vidéos conservent le rapport largeur‑hauteur natif — désigné sous le vocable **rapport de proportions**. Si ce dernier ne correspond pas aux tailles indiquées, la vidéo occupera tout l'espace horizontal et l'espace non rempli sera de la couleur d'arrière plan unie par défaut.
-- {{htmlattrxref("autoplay","video")}}
+- [`autoplay`](/fr/docs/Web/HTML/Element/video#autoplay)
   - : Cet attribut permet de lancer immédiatement la lecture de l'audio ou de la vidéo pendant que le reste de la page se charge. Nous vous déconseillons d'utiliser la lecture automatique de vidéos (ou audio) sur vos sites, car les utilisateurs peuvent trouver cela vraiment ennuyeux.
-- {{htmlattrxref("loop","video")}}
+- [`loop`](/fr/docs/Web/HTML/Element/video#loop)
   - : Cet attribut permet de relancer en boucle la lecture de la vidéo (ou de l'audio). Cette façon de procéder pouvant être mal perçue, ne l'utilisez que si c'est vraiment nécessaire.
-- {{htmlattrxref("muted","video")}}
+- [`muted`](/fr/docs/Web/HTML/Element/video#muted)
   - : Cet attribut coupe le son de la vidéo par défaut.
-- {{htmlattrxref("poster","video")}}
+- [`poster`](/fr/docs/Web/HTML/Element/video#poster)
   - : Cet attribut prend comme valeur l'URL d'une image affichée avant la lecture de la vidéo. Il s'utilise en tant que logo de démarrage ou de publicité.
-- {{htmlattrxref("preload","video")}}
+- [`preload`](/fr/docs/Web/HTML/Element/video#preload)
 
   - : Cet attribut s'utilise pour mettre en tampon les gros fichiers. Il peut prendre 3 valeurs&nbsp;:
 
@@ -229,7 +229,7 @@ Ceci est le deuxième.
 Pour qu'il soit affiché avec la diffusion du média HTML, il faut&nbsp;:
 
 1. Enregistrer le fichier avec l'extension `.vtt` dans un endroit sensé.
-2. Lier le fichier `.vtt` avec l'élément {{htmlelement("track")}}. `<track>` doit être placé entre les balises `<audio>` ou `<video>`, mais après tous les éléments `<source>`. Utilisez l'attribut {{htmlattrxref("kind","track")}} pour préciser si les marqueurs sont `subtitles`, `captions` ou `descriptions`. Plus loin, utilisez l'attribut {{htmlattrxref("srclang","track")}} pour indiquer au navigateur la langue dans laquelle sont écrit les sous‑titres.
+2. Lier le fichier `.vtt` avec l'élément {{htmlelement("track")}}. `<track>` doit être placé entre les balises `<audio>` ou `<video>`, mais après tous les éléments `<source>`. Utilisez l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#kind) pour préciser si les marqueurs sont `subtitles`, `captions` ou `descriptions`. Plus loin, utilisez l'attribut [`srclang`](/fr/docs/Web/HTML/Element/track#srclang) pour indiquer au navigateur la langue dans laquelle sont écrit les sous‑titres.
 
 Voici un exemple&nbsp;:
 

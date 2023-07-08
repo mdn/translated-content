@@ -359,11 +359,11 @@ Nous utilisons également {{cssxref("background-size")}} pour indiquer à quelle
 
 Enfin, nous avons mis un peu de {{cssxref("padding-right")}} sur les liens pour faire de la place afin que l'image d'arrière-plan se place à l'intérieur, de sorte que nous ne la faisions chevaucher le texte.
 
-Un dernier mot : comment avons-nous sélectionné uniquement les liens externes ? Eh bien, si vous écrivez vos liens HTML correctement, vous ne devriez utiliser des URL absolues que pour les liens externes : il est plus efficace d'utiliser des liens relatifs pour la redirection vers d'autres parties de votre propre site. Le texte "http" ne devrait donc apparaître que dans les liens externes, et nous pouvons le sélectionner avec un [sélecteur d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors#sélecteurs_dattribut) : `a[href*="http]` sélectionne les éléments {{htmlelement("a")}}, mais seulement s'ils ont un attribut {{htmlattrxref ("href","a")}} ayant une valeur contenant "http" quelque part à l'intérieur.
+Un dernier mot : comment avons-nous sélectionné uniquement les liens externes ? Eh bien, si vous écrivez vos liens HTML correctement, vous ne devriez utiliser des URL absolues que pour les liens externes : il est plus efficace d'utiliser des liens relatifs pour la redirection vers d'autres parties de votre propre site. Le texte "http" ne devrait donc apparaître que dans les liens externes, et nous pouvons le sélectionner avec un [sélecteur d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors#sélecteurs_dattribut) : `a[href*="http]` sélectionne les éléments {{htmlelement("a")}}, mais seulement s'ils ont un attribut [`href`](/fr/docs/Web/HTML/Element/a#href) ayant une valeur contenant "http" quelque part à l'intérieur.
 
 Alors voilà, essayez de revoir la section d'apprentissage actif ci-dessus et d'explorer cette nouvelle technique !
 
-> **Note :** Ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/docs/Learn/CSS/Building_blocks) et le [design adaptif _(responsive web design)_](/fr/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) ; ceux-ci sont expliqués par ailleurs.
+> **Note :** Ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/docs/Learn/CSS/Building_blocks) et le [design adaptif _(responsive web design)_](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design) ; ceux-ci sont expliqués par ailleurs.
 
 ## Mise en forme de liens comme des boutons
 

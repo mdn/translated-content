@@ -1,6 +1,6 @@
 ---
 title: CSS彈性盒子用法
-slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
 ---
 
@@ -80,7 +80,7 @@ Recall that while the display order of the elements is independent of their orde
 
 由於彈性盒子使用不同的排版演算法，所以有些屬性不太適合用在彈性容器內：
 
-- [multiple column 模組](/zh-TW/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)的 `column-*` 屬性對彈性項目無效。
+- [multiple column 模組](/zh-TW/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)的 `column-*` 屬性對彈性項目無效。
 - {{cssxref("clear")}} 對彈性項目無效。
 - {{cssxref("float")}} causes the `display` property of the element to compute to `block`.
 - {{cssxref("vertical-align")}} 對已對齊的彈性項目無效。

@@ -1,16 +1,7 @@
 ---
 title: Créer les briques
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
-tags:
-  - Canvas
-  - Casse-Brique
-  - Débutant
-  - JavaScript
-  - Jeu
-  - Tutoriel
-  - graphique
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
-original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 ---
 
 {{GamesSidebar}}

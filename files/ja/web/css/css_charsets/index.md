@@ -1,6 +1,6 @@
 ---
 title: CSS 文字セット
-slug: Web/CSS/CSS_Charsets
+slug: Web/CSS/CSS_charsets
 ---
 
 {{CSSRef}}

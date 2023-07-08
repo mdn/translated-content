@@ -13,13 +13,13 @@ translation_of: Web/HTML/Element/input/search
 | **[Value](#value)**             | A {{domxref("DOMString")}} representing the value contained in the search field.                                                                                                                                                                                                                                                                                                                                    |
 | ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Events**                      | {{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}}                                                                                                                                                                                                                                                                                       |
-| **Supported Common Attributes** | {{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("maxlength", "input")}}, {{htmlattrxref("minlength", "input")}}, {{htmlattrxref("pattern", "input")}}, {{htmlattrxref("placeholder", "input")}}, {{htmlattrxref("required", "input")}}, {{htmlattrxref("size", "input")}}. |
+| **Supported Common Attributes** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`maxlength`](/ru/docs/Web/HTML/Element/input#maxlength), [`minlength`](/ru/docs/Web/HTML/Element/input#minlength), [`pattern`](/ru/docs/Web/HTML/Element/input#pattern), [`placeholder`](/ru/docs/Web/HTML/Element/input#placeholder), [`required`](/ru/docs/Web/HTML/Element/input#required), [`size`](/ru/docs/Web/HTML/Element/input#size). |
 | **IDL attributes**              | `value`                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | **Methods**                     | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}, {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.                                                                                                                                                               |
 
 ## Value
 
-The {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} representing the value contained in the search field. You can retrieve this using the {{domxref("HTMLInputElement.value")}} property in JavaScript.
+The [`value`](/ru/docs/Web/HTML/Element/input#value) attribute contains a {{domxref("DOMString")}} representing the value contained in the search field. You can retrieve this using the {{domxref("HTMLInputElement.value")}} property in JavaScript.
 
 ```js
 searchTerms = mySearch.value;
@@ -126,7 +126,7 @@ This renders like so:
 
 `q` is the most common `name` given to search inputs, although it's not mandatory. When submitted, the data name/value pair sent to the server will be `q=searchterm`.
 
-> **Примечание:** You must remember to set a {{htmlattrxref("name", "input")}} for your input, otherwise nothing will be submitted.
+> **Примечание:** You must remember to set a [`name`](/ru/docs/Web/HTML/Element/input#name) for your input, otherwise nothing will be submitted.
 
 ### Differences between search and text types
 
@@ -140,7 +140,7 @@ In addition, modern browsers also tend to automatically store search terms previ
 
 ### Setting placeholders
 
-You can provide a useful placeholder inside your search input that could give a hint on what to do using the {{htmlattrxref("placeholder","input")}} attribute. Look at the following example:
+You can provide a useful placeholder inside your search input that could give a hint on what to do using the [`placeholder`](/ru/docs/Web/HTML/Element/input#placeholder) attribute. Look at the following example:
 
 ```html
 <form>
@@ -188,7 +188,7 @@ There is no visual difference from the previous example, but screenreader users 
 
 ### Physical input element size
 
-The physical size of the input box can be controlled using the {{htmlattrxref("size", "input")}} attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the search box is 30 characters wide:
+The physical size of the input box can be controlled using the [`size`](/ru/docs/Web/HTML/Element/input#size) attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the search box is 30 characters wide:
 
 ```html
 <form>
@@ -232,7 +232,7 @@ The technique also requires a {{htmlelement("span")}} element to be placed after
 
 ### Making input required
 
-You can use the {{htmlattrxref("required", "input")}} attribute as an easy way of making entering a value required before form submission is allowed:
+You can use the [`required`](/ru/docs/Web/HTML/Element/input#required) attribute as an easy way of making entering a value required before form submission is allowed:
 
 ```html
 <form>
@@ -275,7 +275,7 @@ Different messages will be shown when you try to submit the form with different 
 
 ### Input value length
 
-You can specify a minimum length, in characters, for the entered value using the {{htmlattrxref("minlength", "input")}} attribute; similarly, use {{htmlattrxref("maxlength", "input")}} to set the maximum length of the entered value.
+You can specify a minimum length, in characters, for the entered value using the [`minlength`](/ru/docs/Web/HTML/Element/input#minlength) attribute; similarly, use [`maxlength`](/ru/docs/Web/HTML/Element/input#maxlength) to set the maximum length of the entered value.
 
 The example below requires that the entered value be 4–8 characters in length.
 
@@ -318,7 +318,7 @@ If you try to submit the form with less than 4 characters, you'll be given an ap
 
 ### Specifying a pattern
 
-You can use the {{htmlattrxref("pattern", "input")}} attribute to specify a regular expression that the inputted value must follow to be considered valid (see [Validating against a regular expression](/ru/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression) for a simple crash course).
+You can use the [`pattern`](/ru/docs/Web/HTML/Element/input#pattern) attribute to specify a regular expression that the inputted value must follow to be considered valid (see [Validating against a regular expression](/ru/docs/Learn/HTML/Forms/Form_validation#Validating_against_a_regular_expression) for a simple crash course).
 
 Let's look at an example. Say we wanted to provide a product ID search form, and the IDs were all codes of two letters followed by four numbers. The following example covers it:
 

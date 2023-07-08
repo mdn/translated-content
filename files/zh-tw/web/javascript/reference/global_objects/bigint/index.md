@@ -36,7 +36,9 @@ const hugeString = BigInt("9007199254740991");
 const hugeHex = BigInt("0x1fffffffffffff");
 // ↪ 9007199254740991n
 
-const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111");
+const hugeBin = BigInt(
+  "0b11111111111111111111111111111111111111111111111111111"
+);
 // ↪ 9007199254740991n
 ```
 
@@ -51,17 +53,17 @@ const hugeBin = BigInt("0b11111111111111111111111111111111111111111111111111111"
 當使用 `typeof` 測試時，一個 `BigInt` 會回傳 "bigint"：
 
 ```js
-typeof 1n === 'bigint'; // true
-typeof BigInt('1') === 'bigint'; // true
+typeof 1n === "bigint"; // true
+typeof BigInt("1") === "bigint"; // true
 ```
 
 當使用 `Object` 來包裹時，`BigInt` 會被看成是普通的 "object" 型態：
 
 ```js
-typeof Object(1n) === 'object'; // true
+typeof Object(1n) === "object"; // true
 ```
 
-### Operators
+### Operator
 
 下列的運算子可以被用在 `BigInt` 上 (或由 object 包裹的 `BigInt`): `+`, `*`, `-`, `**`, `%`.
 
@@ -108,29 +110,29 @@ const rounded = 5n / 2n;
 一個 `BigInt` 並不嚴格等於一個 {{JSxRef("Global_Objects/Number", "Number")}}，但他們會一般相等。
 
 ```js
-0n === 0
+0n === 0;
 // ↪ false
 
-0n == 0
+0n == 0;
 // ↪ true
 ```
 
 一個 {{JSxRef("Global_Objects/Number", "Number")}} 和 `BigInt` 可以像普通運算一樣比較。
 
 ```js
-1n < 2
+1n < 2;
 // ↪ true
 
-2n > 1
+2n > 1;
 // ↪ true
 
-2 > 2
+2 > 2;
 // ↪ false
 
-2n > 2
+2n > 2;
 // ↪ false
 
-2n >= 2
+2n >= 2;
 // ↪ true
 ```
 
@@ -151,38 +153,38 @@ Note that comparisons with `Object`-wrapped `BigInt`s act as with other objects,
 Object(0n) === Object(0n); // false
 
 const o = Object(0n);
-o === o // true
+o === o; // true
 ```
 
-### Conditionals
+### Conditional
 
 A `BigInt` behaves like a {{JSxRef("Global_Objects/Number", "Number")}} in cases where it is converted to a {{JSxRef("Global_Objects/Boolean", "Boolean")}}: via the {{JSxRef("Global_Objects/Boolean", "Boolean")}} function; when used with logical operators {{JSxRef("Operators/Logical_Operators", "Logical Operators")}} `||`, `&&`, and `!`; or within a conditional test like an {{JSxRef("Statements/if...else", "if statement")}}.
 
 ```js
 if (0n) {
-  console.log('Hello from the if!');
+  console.log("Hello from the if!");
 } else {
-  console.log('Hello from the else!');
+  console.log("Hello from the else!");
 }
 
 // ↪ "Hello from the else!"
 
-0n || 12n
+0n || 12n;
 // ↪ 12n
 
-0n && 12n
+0n && 12n;
 // ↪ 0n
 
-Boolean(0n)
+Boolean(0n);
 // ↪ false
 
-Boolean(12n)
+Boolean(12n);
 // ↪ true
 
-!12n
+!12n;
 // ↪ false
 
-!0n
+!0n;
 // ↪ true
 ```
 
@@ -249,7 +251,7 @@ function nthPrime(nth) {
   return prime;
 }
 
-nthPrime(20n)
+nthPrime(20n);
 // ↪ 73n
 ```
 
@@ -261,6 +263,6 @@ nthPrime(20n)
 
 {{Compat}}
 
-## 另見
+## 參見
 
 - {{JSxRef("Number")}}

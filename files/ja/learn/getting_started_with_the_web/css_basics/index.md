@@ -25,9 +25,9 @@ p {
 
 1. `index.html` ファイルを開き、先頭（{{HTMLElement("head")}} タグと `</head>` タグの間）に以下の行を貼り付けてください。
 
-    ```html
-    <link href="styles/style.css" rel="stylesheet">
-    ```
+   ```html
+   <link href="styles/style.css" rel="stylesheet" />
+   ```
 
 2. `index.html` を保存し、ブラウザーで読み込んでください。次のように表示されるはずです。
 
@@ -37,7 +37,7 @@ p {
 
 赤い段落テキストの CSS コードを分解して、その仕組みを理解してみましょう。
 
-![CSS p declaration color red](css-declaration-small.png)
+![CSS の p の宣言で、color を red にする](css-declaration-small.png)
 
 全体の構造は**ルールセット**と呼びます (*ルールセット*という語はよく、単に*ルール*とも呼ばれます)。それぞれの部分の名前にも注意してください。
 
@@ -71,7 +71,9 @@ p {
 複数の要素を選択して、そのすべてに一つのルールセットを適用することもできます。複数のセレクターはカンマで区切ります。たとえば、以下のようになります。
 
 ```css
-p, li, h1 {
+p,
+li,
+h1 {
   color: red;
 }
 ```
@@ -144,38 +146,41 @@ CSS の基本をいくつか勉強しましたので、`style.css` ファイル�
 
 1. まず、以前に[ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)で保存した、 [Google フォントの出力](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#font)を探します。 {{htmlelement("link")}} 要素を `index.html` の先頭のどこか（{{HTMLElement("head")}} タグと `</head>` タグの間）に追加します。それは次のようなものです。
 
-    ```html
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    ```
+   ```html
+   <link
+     href="https://fonts.googleapis.com/css?family=Open+Sans"
+     rel="stylesheet" />
+   ```
 
-    このコードは、ウェブページに Open Sans フォントファミリーを読み込むスタイルシートにページをリンクします。
+   このコードは、ウェブページに Open Sans フォントファミリーを読み込むスタイルシートにページをリンクします。
 
 2. 次に `style.css` ファイルにある既存のルールを削除します。試験としては良いものでしたが、赤いテキストだらけにするのはもうやめましょう。
 3. 以下の行（下記参照）を追加し、 `font-family` の割り当てを[ウェブサイトをどんな外見にするか](/ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)で選択した `font-family` に置き換えます。 `font-family` というプロパティは、テキストに使用するフォントを指します。このルールでは、ページ全体の基本フォントとフォントの大きさを定義します。 {{HTMLElement("html")}} はページ全体の親要素なので、その中のすべての要素は同じ `font-size` と `font-family` を継承します。
 
-    ```css
-    html {
-      font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
-      font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google fonts */
-    }
-    ```
+   ```css
+   html {
+     font-size: 10px; /* px は「ピクセル」 (pixels) の意味。ベースフォントサイズは 10 ピクセルの高さになった */
+     font-family: "Open Sans", sans-serif; /* これが Google フォントから取得した残りの出力になるはず。 */
+   }
+   ```
 
     > **メモ:** CSS の `/*` と `*/` の間にあるものは何でも **CSS コメント**になります。ブラウザーはコードをレンダリングするときにこれを無視します。 CSS コメントはコードや論理について役立つメモを書くための方法です。
 
-4. 次に、 HTML 本文内にテキストを配置する要素 ({{htmlelement("h1")}}, {{htmlelement("li")}}, {{htmlelement("p")}}) のフォントの大きさを設定します。また、見出しを中央揃えにします。最後に、 2 つ目のルールセット (下記) を展開して、行の高さや文字の間隔などの設定を行い、本文のコンテンツを読みやすくしましょう。
+4. 次に、 HTML 本文内にテキストを配置する要素 ({{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("li")}}, {{htmlelement("p")}}) のフォントの大きさを設定します。また、見出しを中央揃えにします。最後に、 2 つ目のルールセット (下記) を展開して、行の高さや文字の間隔などの設定を行い、本文のコンテンツを読みやすくしましょう。
 
-    ```css
-    h1 {
-      font-size: 60px;
-      text-align: center;
-    }
+   ```css
+   h1 {
+     font-size: 60px;
+     text-align: center;
+   }
 
-    p, li {
-      font-size: 16px;
-      line-height: 2;
-      letter-spacing: 1px;
-    }
-    ```
+   p,
+   li {
+     font-size: 16px;
+     line-height: 2;
+     letter-spacing: 1px;
+   }
+   ```
 
 `px` の値はお好みで調整してください。進行中の作品は、このようになるはずです。
 
@@ -211,7 +216,7 @@ CSS のレイアウトは、主に*ボックスモデル*に基づいていま�
 
 ```css
 html {
-  background-color: #00539F;
+  background-color: #00539f;
 }
 ```
 
@@ -223,7 +228,7 @@ html {
 body {
   width: 600px;
   margin: 0 auto;
-  background-color: #FF9500;
+  background-color: #ff9500;
   padding: 0 20px 20px 20px;
   border: 5px solid black;
 }
@@ -243,12 +248,12 @@ body {
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #00539F;
+  color: #00539f;
   text-shadow: 3px 3px 1px black;
 }
 ```
 
-body の上部にひどい隙間があることに気づいたかもしれません。これは CSS をまったく適用していなくても、ブラウザーが（他のものの中で） {{htmlelement("h1")}} 要素に既定のスタイルを適用するためです。それは悪い考えのように見えるかもしれませんが、スタイルのないページにも一定の読みやすさを求めるためのものです。隙間をなくすために、 `margin: 0;` を設定して既定のスタイルを上書きします。
+body の上部にひどい隙間があることに気づいたかもしれません。これは CSS をまったく適用していなくても、ブラウザーが（他のものの中で） {{htmlelement("Heading_Elements", "h1")}} 要素に既定のスタイルを適用するためです。それは悪い考えのように見えるかもしれませんが、スタイルのないページにも一定の読みやすさを求めるためのものです。隙間をなくすために、 `margin: 0;` を設定して既定のスタイルを上書きします。
 
 次に見出しの上下のパディングを 20 ピクセルに設定します。
 
@@ -284,7 +289,7 @@ img {
 
 この記事のすべての手順に従っている場合は、次のようなページが表示されます。
 
-![Mozilla のロゴを中央に配置し、ヘッダーと段落を配置しています。これで、ページ全体の背景が青くになり、中央に配置されたメインコンテンツストリップの背景がオレンジになるなど、きれいなスタイルになりました。](website-screenshot-final.png)
+![Mozilla のロゴを中央に配置し、ヘッダーと段落を配置しています。これで、ページ全体の背景が青くなり、中央に配置されたメインコンテンツストリップの背景がオレンジになるなど、きれいなスタイルになりました。](website-screenshot-final.png)
 
 ([作成した結果はこちらから見ることができます](https://mdn.github.io/beginner-html-site-styled/)。) もしわからなくなった場合、[Github の完成したサンプルコード](https://github.com/mdn/beginner-html-site-styled/blob/gh-pages/styles/style.css)と作業内容を常に比較することができます。
 

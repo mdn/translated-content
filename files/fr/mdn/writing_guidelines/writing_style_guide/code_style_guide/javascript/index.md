@@ -1,14 +1,7 @@
 ---
 title: Lignes directrices pour JavaScript
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
-tags:
-  - Code
-  - Guide
-  - Directives
-  - JavaScript
-  - MDN Meta
 translation_of: MDN/Guidelines/Code_guidelines/JavaScript
-original_slug: MDN/Guidelines/Code_guidelines/JavaScript
 ---
 
 {{MDNSidebar}}
@@ -353,7 +346,7 @@ switch(expr) {
     // résultat attendu : "Les mangues et les papayes sont à 5,24 € le kilo."
     break;
   default:
-    console.log('Désolé, nous n'avons plus de ' + expr + '.');
+    console.log(`Désolé, nous n'avons plus de ${expr}.`);
 }
 ```
 

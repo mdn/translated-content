@@ -1,15 +1,7 @@
 ---
 title: devtools.panels.ExtensionPanel
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionPanel
 ---
 
 {{AddonSidebar()}}

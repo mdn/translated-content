@@ -181,7 +181,7 @@ Reserve um tempo para examinar o código e entendê-lo - os comentários dentro 
 
 ### Elementos de layout não-semânticos
 
-Às vezes, você se depara numa situação em que não consegue encontrar um elemento semântico ideal para agrupar alguns itens ou agrupar algum conteúdo. Nesses momentos, convém agrupar um conjunto de elementos para afetá-los todos como uma única entidade com alguns {{glossary("CSS")}} ou {{glossary("JavaScript")}}. Para casos como esses, HTML oferece os elementos {{HTMLElement("div")}} e {{HTMLElement("span")}}. Você deve usá-los preferencialmente com um atributo {{htmlattrxref('class')}} adequado, para fornecer a eles algum tipo de rótulo para que possam ser facilmente referenciados.
+Às vezes, você se depara numa situação em que não consegue encontrar um elemento semântico ideal para agrupar alguns itens ou agrupar algum conteúdo. Nesses momentos, convém agrupar um conjunto de elementos para afetá-los todos como uma única entidade com alguns {{glossary("CSS")}} ou {{glossary("JavaScript")}}. Para casos como esses, HTML oferece os elementos {{HTMLElement("div")}} e {{HTMLElement("span")}}. Você deve usá-los preferencialmente com um atributo [`class`](/pt-BR/docs/Web/HTML/Global_attributes#class) adequado, para fornecer a eles algum tipo de rótulo para que possam ser facilmente referenciados.
 
 {{HTMLElement("span")}} é um elemento não-semântico embutido, que você deve usar apenas se não conseguir pensar em um elemento de texto semântico melhor para agrupar seu conteúdo ou se não quiser adicionar um significado específico. Por exemplo:
 

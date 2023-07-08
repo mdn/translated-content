@@ -30,7 +30,7 @@ slug: Web/Guide/Mobile
 [响应式网页设计](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)是一项让你的网站在手持设备上通过不同的使用环境进行自动适应的技术，通常来说体现在尺寸和屏幕的排列方向上。它包含下面的技术：
 
 - 流动的 CSS 布局设计，保证当浏览器窗口的尺寸变化时网页也能流畅地适应
-- 根据设备屏幕的[宽](/zh-CN/docs/Web/CSS/@media/width)[高](/zh-CN/docs/Web/CSS/@media/height)，合理使用 CSS [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)规则
+- 根据设备屏幕的[宽](/zh-CN/docs/Web/CSS/@media/width)[高](/zh-CN/docs/Web/CSS/@media/height)，合理使用 CSS [媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)规则
 
 [viewport meta 标签](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design#viewport_meta_标签)指示浏览器以适合用户设备的比例显示你的网站。
 
@@ -44,7 +44,7 @@ slug: Web/Guide/Mobile
 
 为了解决那些带宽小或者流量费用昂贵的用户，你可以通过根据用户的屏幕尺寸和分辨率加载合适的图片来优化图片的加载。你可以通过媒体查询来获取屏幕的[高度](/zh-CN/docs/Web/CSS/@media/height)、[宽度](/zh-CN/docs/Web/CSS/@media/width)以及[像素比](/zh-CN/docs/Web/CSS/@media/resolution)。
 
-你也可以利用 CSS 属性，如[渐变](/zh-CN/docs/Web/CSS/CSS_Images/Using_CSS_gradients)和[阴影](/zh-CN/docs/Web/CSS/box-shadow)来实现视觉效果，而无需图像。
+你也可以利用 CSS 属性，如[渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)和[阴影](/zh-CN/docs/Web/CSS/box-shadow)来实现视觉效果，而无需图像。
 
 ### 移动端 API
 

@@ -1,6 +1,6 @@
 ---
 title: Usando CSS transforms
-slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
+slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 ---
 
 {{CSSRef}}

@@ -1,16 +1,6 @@
 ---
 title: cookies.get()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/get
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/get
 ---
 

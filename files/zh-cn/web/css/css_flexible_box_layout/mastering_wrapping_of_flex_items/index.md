@@ -1,11 +1,11 @@
 ---
 title: 掌握弹性物件的包装
-slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+slug: Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
 ---
 
 {{CSSRef}}
 
-Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方式时只能设计为行或者设计为列— 两者不能兼顾。然而 Flex 拥有一种将 flex 元素包围在新的一行内的特性，创建一个新的行如果设置了{{cssxref("flex-direction")}} 为 `row` 以及创建新的一列如果设置了 `flex-direction` 为 `column`。在这篇教程中，我将解释这个特性的内部工作原理，以及它设计的目的是什么和在什么情况下要使用 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 而不是 flexbox.
+Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方式时只能设计为行或者设计为列——两者不能兼顾。然而 Flex 拥有一种将 flex 元素包围在新的一行内的特性，创建一个新的行如果设置了 {{cssxref("flex-direction")}} 为 `row` 以及创建新的一列如果设置了 `flex-direction` 为 `column`。在这篇教程中，我将解释这个特性的内部工作原理，以及它设计的目的是什么和在什么情况下要使用 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)而不是弹性盒子。
 
 ## 把物件包装起来
 

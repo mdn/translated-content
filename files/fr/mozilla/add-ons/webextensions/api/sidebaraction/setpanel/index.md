@@ -1,15 +1,6 @@
 ---
 title: sidebarAction.setPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setPanel
-  - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
 ---
 

@@ -11,25 +11,25 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 **提升或者补充网站功能**: 利用扩展来实现额外的浏览器内特性或者来自你网站的信息。允许用户搜集他们访问过的页面细节来提升你所提供的服务。
 
-![](amazon_add_on.png)
+![Amazon 附加组件示例提供比价功能](amazon_add_on.png)
 
 示例：[亚马逊助手](https://addons.mozilla.org/zh-CN/firefox/addon/amazon-browser-bar/)，[OneNote Web Clipper](https://addons.mozilla.org/zh-CN/firefox/addon/onenote-clipper/)，[Grammarly for Firefox](https://addons.mozilla.org/zh-CN/firefox/addon/grammarly-1/)
 
 **让用户展现他们的个性**: 浏览器扩展可以操控网页的内容；例如，让用户在每个他们访问的页面上添加最喜欢的 logo 或者图片作为背景。扩展也可以让用户更新 Firefox 的界面，就像独立的[主题扩展](https://extensionworkshop.com/documentation/themes/)一样。
 
-![](myweb_new_tab_add_on.png)
+![My Web New Tab 附加组件展现蝙蝠侠主题](myweb_new_tab_add_on.png)
 
 示例：[MyWeb New Tab](https://addons.mozilla.org/zh-CN/firefox/addon/myweb-new-tab/), [Tabliss](https://addons.mozilla.org/zh-CN/firefox/addon/tabliss/), 和 [VivaldiFox](https://addons.mozilla.org/zh-CN/firefox/addon/vivaldifox/)
 
 **从网页中添加或者删除内容**: 你可能想要帮助用户从网页中阻止一些侵扰的广告，当网页中提到一个国家或者城市的时候提供旅游指南，或者重组页面的内容来提供一个连续的阅读体验。利用可以访问和更新一个页面里的 HTML 和 CSS 的能力，扩展可以帮助用户以他们想要的形式来查看网页。
 
-![](ublock_origin_add_on.png)
+![uBlock origin 附加组件示例和拦截跟踪器统计](ublock_origin_add_on.png)
 
 示例：[uBlock Origin](https://addons.mozilla.org/zh-CN/firefox/addon/ublock-origin/), [Reader](https://addons.mozilla.org/zh-CN/firefox/addon/reader/), 和 [Toolbox for Google Play Store™](https://addons.mozilla.org/zh-CN/firefox/addon/toolbox-google-play-store/)
 
 **添加工具和新的浏览特性**: 给任务面板添加新特性，或者从 URL 地址，超链接，或者页面文字生成二维码。有了灵活的界面选项和 [WebExtensions APIs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions) 的能力，你可以很容易的向浏览器添加新的特性。并且，你可以改善几乎任何网站的特性和功能，而不必是你自己的网站。
 
-![](qr_code_image_generator_add_on.png)
+![二维码生成器附加组件示例](qr_code_image_generator_add_on.png)
 
 示例：[Swimlanes for Trello](https://addons.mozilla.org/zh-CN/firefox/addon/swimlanes-for-trello/) and [Tomato Clock](https://addons.mozilla.org/zh-CN/firefox/addon/tomato-clock/)
 
@@ -41,7 +41,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 **添加开发工具**: 你可以为你的业务提供网站开发工具或者开发一个有用的技术或者你想分享的网站开发方法。无论如何，你可以通过在开发者工具栏上添加一个新的标签来增强内置的 Firefox 开发者工具。
 
-![](axe_developer_tools_add_on.png)
+![axe 无障碍功能测试附加组件示例](axe_developer_tools_add_on.png)
 
 示例：[Web Developer](https://addons.mozilla.org/zh-CN/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/react-devtools/), 和 [aXe Developer Tools](https://addons.mozilla.org/zh-CN/firefox/addon/axe-devtools/)
 

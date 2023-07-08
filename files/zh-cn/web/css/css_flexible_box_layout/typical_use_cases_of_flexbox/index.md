@@ -1,6 +1,6 @@
 ---
 title: Flexbox 典型用例
-slug: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
+slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox
 ---
 
@@ -10,7 +10,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox
 
 **为什么选择 flexbox？**
 
-在浏览器完美支持的环境中，你选择使用 flexbox 的原因是你希望把一堆元素不是放在这个方向就是那个方向。因为在放置元素过程中，你想控制元素在那个方向的维度，或者控制他们彼此之间的间距。flexbox 就是为此设计的。. 又可以阅读[Relationship of Flexbox to other layout methods](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)来了解更多关于 flexbox 和 CSS Grid 布局的区别，在这篇文章里面，我们会讨论 flexbox 如何运用与 CSS 整体布局。
+在浏览器完美支持的环境中，你选择使用 flexbox 的原因是你希望把一堆元素不是放在这个方向就是那个方向。因为在放置元素过程中，你想控制元素在那个方向的维度，或者控制他们彼此之间的间距。flexbox 就是为此设计的。. 又可以阅读[Relationship of Flexbox to other layout methods](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)来了解更多关于 flexbox 和 CSS Grid 布局的区别，在这篇文章里面，我们会讨论 flexbox 如何运用与 CSS 整体布局。
 
 在现实中，为了便于对齐，我们通常会选择用 Flexbox 作为替代品，来完成即使用 Grid 布局更好的情况。一旦盒子对齐（Box Alignment）被盒模型所实行，这种情况就会得到改善。在这个教程中，我们会介绍一些会在现在使用 flexbox 的用例。
 
@@ -22,7 +22,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox
 
 ### 在元素外部处理空间分布
 
-为了让多余的空间分布在多个元素之间或周围，我们使用 flexbox 中相应的对齐属性以及 {{cssxref("justify-content")}} 属性。你可以通过 [Aligning Items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container) 来阅读更多关于这个专门用来处理主轴（main axis）对齐的属性。
+为了让多余的空间分布在多个元素之间或周围，我们使用 flexbox 中相应的对齐属性以及 {{cssxref("justify-content")}} 属性。你可以通过 [Aligning Items in a flex container](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container) 来阅读更多关于这个专门用来处理主轴（main axis）对齐的属性。
 
 在下面的示例中，我们让各元素都展示为其自身的尺寸，通过使用 `justify-content: space-between` 使元素之间拥有相同的空间。你可以通过 `space-around` 的值来改变空间分布的方式，在浏览器支持的环境下还可以使用 `space-evenly`。你也可以使用 `flex-start` 让空间展示在所有元素末尾。使用 `flex-end` 让空间展示在所有元素之前， `center` 可以剧中所有元素。
 
@@ -30,7 +30,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox
 
 ### 让元素自己处理空间分布
 
-导航的另一个不同模式是让元素自己去决定如何处理额外的空间，而不是将空间分布在它们之间。在这种情况下，我们使用 {{cssxref("flex")}} 属性来允许各元素彼此成比例的拉伸和收缩，正如 [Controlling ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax) 所描述。
+导航的另一个不同模式是让元素自己去决定如何处理额外的空间，而不是将空间分布在它们之间。在这种情况下，我们使用 {{cssxref("flex")}} 属性来允许各元素彼此成比例的拉伸和收缩，正如 [Controlling ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis) 所描述。
 
 如果我想让导航中的所有元素都等宽，会使用 `flex: auto`，这是 `flex: 1 1 auto` 的简写形式。所有元素都在它们的 flex-basis 尺寸上进行自动的收缩。这意味着，较长的元素会获得更多的空间。因为 flex-basis 的值被设置为 0，所以所有空间都会被平均分配。
 
@@ -40,7 +40,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox
 
 另一种在主轴上对齐元素的方式就是使用自动边距。这种方式将创造出一部分元素左对齐而另一部分右对齐的导航栏设计。
 
-这儿我们使用在 [Using auto margins for main axis alignment](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container#Using_auto_margins_for_main_axis_alignment) 这篇文章中介绍的自动边距技术。所有的元素在主轴上按照弹性盒布局的默认设定 `flex-start` 进行对齐，同时我们给那个需要右对齐的元素添加 `margin-left: auto;` 样式。你可以尝试将那个类名转移到其他元素上以改变（向右）分割作用的位置。
+这儿我们使用在 [Using auto margins for main axis alignment](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container#Using_auto_margins_for_main_axis_alignment) 这篇文章中介绍的自动边距技术。所有的元素在主轴上按照弹性盒布局的默认设定 `flex-start` 进行对齐，同时我们给那个需要右对齐的元素添加 `margin-left: auto;` 样式。你可以尝试将那个类名转移到其他元素上以改变（向右）分割作用的位置。
 
 在这个例子里我们也为每个元素启用了 `margin` 属性来控制元素间的间隔，并给容器添加负边距以保证元素与容器的接洽处没有缝隙。在弹性盒布局实现盒式对齐规范中的 `gap` 属性前，如果我们想要控制元素的间隔就不得不使用使用边距属性。
 
@@ -97,7 +97,7 @@ Some things that you might want to try in this live example relate to the differ
 }
 ```
 
-You could also give each side different {{cssxref("flex-grow")}} factors, for example setting the side with the image to `flex: 1` and the content side to `flex: 3`. This will mean they use a `flex-basis` of `auto` but distribute that space at different rates according to the `flex-grow` factor you have assigned. The flex properties we use to do this are described in detail in the guide [Controlling ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax).
+You could also give each side different {{cssxref("flex-grow")}} factors, for example setting the side with the image to `flex: 1` and the content side to `flex: 3`. This will mean they use a `flex-basis` of `auto` but distribute that space at different rates according to the `flex-grow` factor you have assigned. The flex properties we use to do this are described in detail in the guide [Controlling ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis).
 
 ```css
 .media .content {

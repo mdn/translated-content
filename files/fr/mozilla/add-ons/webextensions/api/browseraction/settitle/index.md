@@ -1,16 +1,6 @@
 ---
 title: browserAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setTitle
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setTitle
 ---
 

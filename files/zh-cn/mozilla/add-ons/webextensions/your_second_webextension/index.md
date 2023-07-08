@@ -26,7 +26,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 
 你可以想象这样的扩展的整体结构：
 
-![](untitled-1.png)
+![manifest.json 文件包含了图标、浏览器动作、弹出式窗口和网络可访问资源。Javascript 脚本在 beastify.js 里调用被选动物的弹出资源。](untitled-1.png)
 
 这是一个非常简单的扩展，但也展示了 WebExtensions API 的许多基本概念：
 
@@ -60,8 +60,8 @@ cd beastify
   "name": "Beastify",
   "version": "1.0",
 
-  "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#beastify",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+  "description": "在工具栏添加一个互动图标。点击按钮选择一个动物，然后当前活动的标签页的内容会被替换成被选择的动物的图片。参见 https://developer.mozilla.org/zh-CN/Add-ons/WebExtensions/Examples#beastify",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify",
   "icons": {
     "48": "icons/beasts-48.png"
   },
@@ -81,7 +81,6 @@ cd beastify
     "beasts/turtle.jpg",
     "beasts/snake.jpg"
   ]
-
 }
 ```
 
@@ -95,7 +94,7 @@ cd beastify
   - **`default_title`** 是可选的，用于按钮的提示。
   - **`default_popup`** 在你想要当用户点击按钮时显示出一个弹出窗时使用。而在这里，我们需要，所以我们列入这个键并将其指向扩展中包括的一个 HTML 文件。
 
-- **`web_accessible_resources`** 列出了页面可访问的资源。例如由于当前插件使用动物图像替换了页面原有的图像，当前的动物图像要可以被页面访问。
+- [`web_accessible_resources`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) 列出了页面可访问的资源。例如由于当前插件使用动物图像替换了页面原有的图像，当前的动物图像要可以被页面访问。
 
 需要注意，所有路径是相对于 manifest.json。
 
@@ -103,7 +102,7 @@ cd beastify
 
 插件应该有一个图标。这个图标被用于显示在附加组件管理器中（可以通过"about:addons"来访问）。当前插件中 manifest.json 指定了我们插件的图标位于"icons/beasts-48.png"。
 
-创建“icons”文件夹，并将图标命名为“beasts-48.png”。你可以使用我们例子中的[图标](https://raw.githubusercontent.com/mdn/webextensions-examples/master/beastify/icons/beasts-48.png)，它是从 [Aha-Soft’s Free Retina iconset](http://www.aha-soft.com/free-icons/free-retina-icon-set/) 截取的，使用需要遵循该网站的许可证。
+创建“icons”文件夹，并将图标命名为“beasts-48.png”。你可以使用我们例子中的[图标](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-48.png)，它是从 [Aha-Soft’s Free Retina iconset](http://www.aha-soft.com/free-icons/free-retina-icon-set/) 截取的，使用需要遵循该网站的许可证。
 
 如果你使用自己的图标，它的尺寸应该是 48<math><semantics><mo>×</mo><annotation encoding="TeX">\times</annotation></semantics></math>48 像素的。同时，对于高分辨率的设备，可以提供 96<math><semantics><mo>×</mo><annotation encoding="TeX">\times</annotation></semantics></math>96 像素的图片。此时，manifest.json 应当这样配置：
 
@@ -118,7 +117,7 @@ cd beastify
 
 工具栏按钮也需要一个图标，并且我们的 manifest.json 承诺我们会为该工具栏在 "icons/beasts-32.png" 提供一个图标。
 
-将一个图标命名为为 "beasts-32.png"并保存到"icons"文件夹。你可以使用例子中的[图片](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png)，它是取自 [IconBeast Lite 图标集](http://www.iconbeast.com/free)并按其[许可协议](http://www.iconbeast.com/faq/)授权使用。
+将一个图标命名为为 "beasts-32.png"并保存到"icons"文件夹。你可以使用例子中的[图片](https://github.com/mdn/webextensions-examples/blob/main/beastify/icons/beasts-32.png)，它是取自 [IconBeast Lite 图标集](http://www.iconbeast.com/free)并按其[许可协议](http://www.iconbeast.com/faq/)授权使用。
 
 如果你没有弹出窗，用户点击的事件会直接分派到你的插件中。如果你制作了弹出窗，用户点击会直接打开这个弹出窗，而不会被分派给插件。本例中我们需要弹出窗，因此我们现在开始写它。
 
@@ -402,7 +401,11 @@ content script 做的第一件事是检查全局变量 `window.hasRun`：如果�
 
 创建"beasts"文件夹，之后将图片放入并命名。你可以从 [GitHub 仓库](https://github.com/mdn/webextensions-examples/tree/main/beastify/beasts)或这里下载图片：
 
-![](frog.jpg)![](snake.jpg)![](turtle.jpg)
+![一只棕色青蛙。](frog.jpg)
+
+![一条有白色条纹的翡翠树蚺。](snake.jpg)
+
+![一只巴西龟。](turtle.jpg)
 
 ## 测试
 
@@ -437,11 +440,11 @@ Firefox 45 开始，你可以临时从硬盘中安装扩展
 
 然后你应该已经看到扩展图标出现在了 Firefox 的工具条上：
 
-{{EmbedYouTube("sAM78GU4P34")}}
+![Firefox 工具栏上的 beastify 扩展图标](beastify_icon.png)
 
 打开一个网页，然后点击图标，选择一个动物，然后观察网页的变化
 
-{{EmbedYouTube("YMQXyAQSiE8")}}
+![被替换成乌龟图像的页面。](beastify_page.png)
 
 ## 用命令行开发
 
@@ -451,3 +454,12 @@ Firefox 45 开始，你可以临时从硬盘中安装扩展
 cd beastify
 web-ext run
 ```
+
+## 接下来做什么？
+
+你已经创建了一个更加高级的 Firefox Web 扩展，接下来可以：
+
+- [阅读扩展剖析](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
+- [浏览扩展示例](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)
+- [学习如何开发、测试、发布你的扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [进一步学习](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next#继续你的学习经历)。
