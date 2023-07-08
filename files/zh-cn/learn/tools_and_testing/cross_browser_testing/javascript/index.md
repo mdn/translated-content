@@ -31,7 +31,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 从历史上看，JavaScript 早就已经受到跨浏览器兼容性问题的困扰。早在 20 世纪 90 年代，当时的主要浏览器选择（Internet Explorer 和 Netscape）的脚本以不同的语言风格实现（Netscape 使用 JavaScript，IE 使用 JScript，还提供 VBScript 作为选项），虽然至少 JavaScript 和 JScript 在某种程度上是兼容的（都基于 {{glossary("ECMAScript")}} 规范），但往往以相互冲突、不兼容的方式实现，给开发者带来很多恶梦。
 
-这种不兼容问题一直持续到 21 世纪初，因为旧的浏览器仍然在使用，仍然需要支持。这也是 [jQuery](https://jquery.com/) 这样的库出现的主要原因之一——抽象出浏览器实现的差异（例如见[如何进行 HTTP 请求](/zh-CN/docs/Web/Guide/AJAX/Getting_Started#第一步——发送_http_请求)中的代码片段），所以开发人员只需要写一点简单的代码（见 [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/)），jQuery（或你使用的任何库）将在底层处理这些差异，而无需开发人员考虑这些。
+这种不兼容问题一直持续到 21 世纪初，因为旧的浏览器仍然在使用，仍然需要支持。这也是 [jQuery](https://jquery.com/) 这样的库出现的主要原因之一——抽象出浏览器实现的差异（例如见[如何进行 HTTP 请求](/zh-CN/docs/Web/Guide/AJAX#第一步——发送_http_请求)中的代码片段），所以开发人员只需要写一点简单的代码（见 [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/)），jQuery（或你使用的任何库）将在底层处理这些差异，而无需开发人员考虑这些。
 
 从那时起，情况有了明显的改善；现代浏览器在支持“经典的 JavaScript 功能”方面做得很好，而且随着支持老式浏览器的要求降低，使用这种代码的要求也在减少（尽管这样，请记住，它们并没有完全消失）。
 
@@ -53,7 +53,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
   > **备注：** 最简单的解决方案是用 `let` 而不是 `var` 来声明迭代变量，这样与函数相关的 `i` 的值对每个迭代都是唯一的。不幸的是，这在 IE11 中不能正常工作，这就是为什么我们没有在“好的” for 循环中使用这种方法。
 
-- 在试图使用它们返回的值之前，确保异步操作已经返回。例如，[这个 Ajax 例子](/zh-CN/docs/Web/Guide/AJAX/Getting_Started#第三步——简单的示例)在尝试使用响应之前，会检查以确保请求已经完成，响应已经返回。由于 JavaScript 语言中引入了 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，这种操作变得更加容易处理。
+- 在试图使用它们返回的值之前，确保异步操作已经返回。例如，[这个 Ajax 例子](/zh-CN/docs/Web/Guide/AJAX#第三步——简单的示例)在尝试使用响应之前，会检查以确保请求已经完成，响应已经返回。由于 JavaScript 语言中引入了 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，这种操作变得更加容易处理。
 
 > **备注：** [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) 对这些常见的错误和其他问题有一些不错的讨论。
 

@@ -1,16 +1,6 @@
 ---
 title: tabs.getZoom()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getZoom
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getZoom
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/getZoom
 ---
 

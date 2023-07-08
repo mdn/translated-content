@@ -1,13 +1,7 @@
 ---
 title: Type
 slug: Glossary/Type
-tags:
-  - Encodage
-  - Glossaire
-  - JavaScript
-  - Programmation
 translation_of: Glossary/Type
-original_slug: Glossaire/Type
 ---
 
 Le **type** (ou _type de donnée_) est une caractéristique d'une {{glossary("Value","valeur")}} qui détermine le genre de données qu'elle peut stocker - par exemple, en JavaScript, un {{domxref("Boolean")}} ne contient que des valeurs true (_vrai_) / false (_faux_), alors qu'une {{domxref("String")}} _(chaîne de caractères)_ contient des chaînes de texte, un {{domxref("Number")}} contient toute sorte de nombres, etc.

@@ -189,7 +189,7 @@ navigator.mediaDevices.ondevicechange = (event) => {
 
 ### 結果
 
-{{ EmbedLiveSample('Example', 600, 460) }}
+{{ EmbedLiveSample('Example', 600, 460, "", "", "", "camera;microphone") }}
 
 ## 仕様書
 

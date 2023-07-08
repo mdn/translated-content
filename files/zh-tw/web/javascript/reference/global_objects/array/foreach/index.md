@@ -64,22 +64,22 @@ The range of elements processed by `forEach()` is set before the first invocatio
 before
 
 ```js
-const items = ['item1', 'item2', 'item3'];
+const items = ["item1", "item2", "item3"];
 const copy = [];
 
-for (let i=0; i<items.length; i++) {
-  copy.push(items[i])
+for (let i = 0; i < items.length; i++) {
+  copy.push(items[i]);
 }
 ```
 
 after
 
 ```js
-const items = ['item1', 'item2', 'item3'];
+const items = ["item1", "item2", "item3"];
 const copy = [];
 
-items.forEach(function(item){
-  copy.push(item)
+items.forEach(function (item) {
+  copy.push(item);
 });
 ```
 
@@ -89,7 +89,7 @@ The following code logs a line for each element in an array:
 
 ```js
 function logArrayElements(element, index, array) {
-  console.log('a[' + index + '] = ' + element);
+  console.log("a[" + index + "] = " + element);
 }
 
 // Notice that index 2 is skipped since there is no item at
@@ -110,8 +110,8 @@ function Counter() {
   this.sum = 0;
   this.count = 0;
 }
-Counter.prototype.add = function(array) {
-  array.forEach(function(entry) {
+Counter.prototype.add = function (array) {
+  array.forEach(function (entry) {
     this.sum += entry;
     ++this.count;
   }, this);
@@ -139,7 +139,7 @@ function copy(obj) {
   const copy = Object.create(Object.getPrototypeOf(obj));
   const propNames = Object.getOwnPropertyNames(obj);
 
-  propNames.forEach(function(name) {
+  propNames.forEach(function (name) {
     const desc = Object.getOwnPropertyDescriptor(obj, name);
     Object.defineProperty(copy, name, desc);
   });
@@ -156,10 +156,10 @@ const obj2 = copy(obj1); // obj2 looks like obj1 now
 The following example logs "one", "two", "four". When the entry containing the value "two" is reached, the first entry of the whole array is shifted off, which results in all remaining entries moving up one position. Because element "four" is now at an earlier position in the array, "three" will be skipped. `forEach()` does not make a copy of the array before iterating.
 
 ```js
-var words = ['one', 'two', 'three', 'four'];
-words.forEach(function(word) {
+var words = ["one", "two", "three", "four"];
+words.forEach(function (word) {
   console.log(word);
-  if (word === 'two') {
+  if (word === "two") {
     words.shift();
   }
 });
@@ -176,13 +176,11 @@ words.forEach(function(word) {
 // Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: http://es5.github.io/#x15.4.4.18
 if (!Array.prototype.forEach) {
-
-  Array.prototype.forEach = function(callback/*, thisArg*/) {
-
+  Array.prototype.forEach = function (callback /*, thisArg*/) {
     var T, k;
 
     if (this == null) {
-      throw new TypeError('this is null or not defined');
+      throw new TypeError("this is null or not defined");
     }
 
     // 1. Let O be the result of calling toObject() passing the
@@ -196,8 +194,8 @@ if (!Array.prototype.forEach) {
 
     // 4. If isCallable(callback) is false, throw a TypeError exception.
     // See: http://es5.github.com/#x9.11
-    if (typeof callback !== 'function') {
-      throw new TypeError(callback + ' is not a function');
+    if (typeof callback !== "function") {
+      throw new TypeError(callback + " is not a function");
     }
 
     // 5. If thisArg was supplied, let T be thisArg; else let
@@ -211,7 +209,6 @@ if (!Array.prototype.forEach) {
 
     // 7. Repeat while k < len.
     while (k < len) {
-
       var kValue;
 
       // a. Let Pk be ToString(k).
@@ -221,7 +218,6 @@ if (!Array.prototype.forEach) {
       //    This step can be combined with c.
       // c. If kPresent is true, then
       if (k in O) {
-
         // i. Let kValue be the result of calling the Get internal
         // method of O with argument Pk.
         kValue = O[k];

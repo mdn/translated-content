@@ -1,12 +1,7 @@
 ---
 title: Structure de contrôle
 slug: Glossary/Control_flow
-tags:
-  - Encodage
-  - Glossaire
-  - JavaScript
 translation_of: Glossary/Control_flow
-original_slug: Glossaire/Structure_de_contrôle
 ---
 
 Les _structures de contrôle_ déterminent l'ordre dans lequel l'ordinateur exécute les instructions d'un script.

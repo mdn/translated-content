@@ -1,16 +1,6 @@
 ---
 title: webNavigation.onCommitted
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCommitted
-  - webNavigations
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted
 ---
 

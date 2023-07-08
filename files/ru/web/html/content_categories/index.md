@@ -36,7 +36,7 @@ original_slug: Web/Guide/HTML/Content_categories
 - {{HTMLElement("area")}}, только внутри элемента {{HTMLElement("map")}}
 - {{HTMLElement("link")}}, при наличии атрибута [`itemprop`](/ru/docs/HTML/Global_attributes#attr-itemprop)
 - {{HTMLElement("meta")}}, при наличии атрибута [`itemprop`](/ru/docs/HTML/Global_attributes#attr-itemprop)
-- {{HTMLElement("style")}}, при наличии атрибута {{htmlattrxref("scoped","style")}}
+- {{HTMLElement("style")}}, при наличии атрибута [`scoped`](/ru/docs/Web/HTML/Element/style#scoped)
 
 ### Секционный контент
 
@@ -81,12 +81,12 @@ original_slug: Web/Guide/HTML/Content_categories
 К интерактивному контенту относятся элементы, который специально разработаны для взаимодействия с пользователем. В данную категорию входят {{HTMLElement("a")}}, {{HTMLElement("button")}}, {{HTMLElement("details")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{deprecated_inline()}}{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}} и {{HTMLElement("textarea")}}.
 Некоторые элементы считаются интерактивным контентом только при соблюдении определённых условий:
 
-- {{HTMLElement("audio")}}, если указан атрибут {{htmlattrxref("controls", "audio")}}
-- {{HTMLElement("img")}}, если указан атрибут {{htmlattrxref("usemap", "img")}}
-- {{HTMLElement("input")}}, если атрибут {{htmlattrxref("type", "input")}} не скрыт
-- {{HTMLElement("menu")}}, если атрибут {{htmlattrxref("type", "menu")}} имеет значение `toolbar`
-- {{HTMLElement("object")}}, если указан атрибут {{htmlattrxref("usemap", "object")}}
-- {{HTMLElement("video")}}, если указан атрибут {{htmlattrxref("controls", "video")}}
+- {{HTMLElement("audio")}}, если указан атрибут [`controls`](/ru/docs/Web/HTML/Element/audio#controls)
+- {{HTMLElement("img")}}, если указан атрибут [`usemap`](/ru/docs/Web/HTML/Element/img#usemap)
+- {{HTMLElement("input")}}, если атрибут [`type`](/ru/docs/Web/HTML/Element/input#type) не скрыт
+- {{HTMLElement("menu")}}, если атрибут [`type`](/ru/docs/Web/HTML/Element/menu#type) имеет значение `toolbar`
+- {{HTMLElement("object")}}, если указан атрибут [`usemap`](/ru/docs/Web/HTML/Element/object#usemap)
+- {{HTMLElement("video")}}, если указан атрибут [`controls`](/ru/docs/Web/HTML/Element/video#controls)
 
 ### Явный контент
 

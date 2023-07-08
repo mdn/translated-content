@@ -1,13 +1,7 @@
 ---
 title: HTTP
 slug: Glossary/HTTP
-tags:
-  - Débutant
-  - Glossaire
-  - HTTP
-  - Infrastructure
 translation_of: Glossary/HTTP
-original_slug: Glossaire/HTTP
 ---
 
 L'*Hypertext Transfer Protocol* (**HTTP**) (_Protocole de transfert hypertexte_) est un {{glossary("Protocol","protocole")}} de base qui autorise le transfert de fichiers sur le {{glossary("World Wide Web","web")}}, typiquement entre un navigateur web et un serveur afin que des utilisateurs puissent les consulter. La version actuelle de la spécification HTTP s'appelle {{glossary("HTTP_2", "HTTP/2")}}.

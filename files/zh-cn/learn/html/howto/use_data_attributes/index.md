@@ -5,7 +5,7 @@ slug: Learn/HTML/Howto/Use_data_attributes
 
 {{LearnSidebar}}
 
-[HTML5](/zh-CN/docs/Web/Guide/HTML/HTML5)是具有扩展性的设计，它初衷是数据应与特定的元素相关联，但不需要任何定义。[data-\* 属性](/zh-CN/docs/Web/HTML/Global_attributes#data-*)允许我们在标准内于 HTML 元素中存储额外的信息，而不需要使用类似于 [classList](/zh-CN/docs/Web/API/Element.classList)，标准外属性，DOM 额外属性或是 [setUserData](/zh-CN/docs/Web/API/Node.setUserData) 之类的技巧。
+HTML 是具有扩展性的设计，它初衷是数据应与特定的元素相关联，但不需要任何定义。[data-\* 属性](/zh-CN/docs/Web/HTML/Global_attributes/data-*)允许我们在标准、语义化的 HTML 元素中存储额外的信息，而不需要使用类似于非标准属性或者 DOM 额外属性之类的技巧。
 
 ## HTML 语法
 

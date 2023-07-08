@@ -1,14 +1,6 @@
 ---
 title: search.get()
 slug: Mozilla/Add-ons/WebExtensions/API/search/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Search
-  - WebExtensions
-  - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/search/get
 ---
 

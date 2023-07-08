@@ -1,8 +1,6 @@
 ---
 title: Votre deuxième WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-tags:
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
 

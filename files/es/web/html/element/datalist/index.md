@@ -92,7 +92,7 @@ Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs
 
 ## Ver también
 
-- El elemento {{HTMLElement("input")}}, y más especificamente este atributo {{htmlattrxref("list", "input")}};
+- El elemento {{HTMLElement("input")}}, y más especificamente este atributo [`list`](/es/docs/Web/HTML/Element/input#list);
 - El elemento {{HTMLElement("option")}}.
 
 {{HTMLSidebar}}

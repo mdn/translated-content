@@ -1,15 +1,6 @@
 ---
 title: contextualIdentities.query()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/query
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Reference
-  - WebExtensions
-  - contextualIdentities
-  - query
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/query
 ---
 

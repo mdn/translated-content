@@ -1,16 +1,6 @@
 ---
 title: history.deleteUrl()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteUrl
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - deleteUrl
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteUrl
 ---
 
