@@ -64,7 +64,7 @@ insertAdjacentHTML(position, text)
 
 ### 보안 고려 사항
 
-`insertAdjacentHTML()`을 사용하여 페이지에 HTML을 삽입할 때, 빠져나오지 못한 사용자 입력을 사용하지 않도록 조심해야 합니다.
+`insertAdjacentHTML()`을 사용하여 페이지에 HTML을 삽입할 때, 이스케이프 문자열이 아닌 사용자 입력을 사용하지 않도록 조심해야 합니다.
 
 일반 텍스트를 삽입할 때 `insertAdjacentHTML()`을 사용해서는 안됩니다. 대신, {{domxref("Node.textContent")}} 속성 혹은 {{domxref("Element.insertAdjacentText()")}} 메서드를 사용합니다. 이는 전달된 콘텐츠를 HTML로 해석하지 않습니다. 대신 원시 텍스트로 삽입합니다.
 
