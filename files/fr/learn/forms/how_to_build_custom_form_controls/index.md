@@ -785,7 +785,6 @@ Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_
 
 {{ EmbedLiveSample('Sans_JS', 120, 130) }}
 
-
 #### Avec JS
 
 Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#avec_js).
@@ -948,7 +947,6 @@ window.addEventListener("load", function () {
 ```
 
 {{ EmbedLiveSample('Avec_JS', 120, 130) }}
-
 
 > **Note :** Si vous voulez vraiment rendre votre code générique et réutilisable, au lieu de faire un changement de classe, il est préférable d'ajouter la classe widget pour cacher les éléments {{HTMLElement("select")}} et d'ajouter dynamiquement l'arbre DOM représentant le widget personnalisé après chaque élément {{HTMLElement("select")}} dans la page.
 
@@ -1346,7 +1344,6 @@ window.addEventListener('load', function () {
 ```
 
 {{ EmbedLiveSample('Exemple_en_direct',120,130) }}
-
 
 ### Gérer la valeur du widget
 
@@ -1787,7 +1784,6 @@ function updateValue(select, index) {
 
 Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleur ressenti en les testant avec une technique d'assistance comme [NVDA](http://www.nvda-project.org/) ou [VoiceOver](http://www.apple.com/accessibility/voiceover/)). Consultez le [code complet source ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5) :
 
-
 ```html hidden
 <form class="no-widget">
   <select name="myFruit">
@@ -1810,6 +1806,7 @@ Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleu
   </div>
 </form>
 ```
+
 ```css hidden
 .widget select,
 .no-widget .select {
