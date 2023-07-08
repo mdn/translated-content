@@ -31,7 +31,7 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 >
 > 这种解决方案使用了更加复杂的选择器，但所需规则较少。你可以自由选择更想要的解决方案。
 
-## 做出的选择
+## 做出选择
 
 这种模式使用一个简单的弹性布局摆布，展示了一行 CSS 如何为我们提供导航。分隔符是由 CSS 内容生成属性添加的，你也可以将其换成其他想要的分隔符（样式）。
 
@@ -47,6 +47,6 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 ## 参见
 
-- [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)
 - [提供面包屑路径](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
 - [使用 aria-current 属性](https://tink.uk/using-the-aria-current-attribute/)
