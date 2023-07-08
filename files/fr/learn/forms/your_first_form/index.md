@@ -268,7 +268,85 @@ Du côté du serveur, le script à l'URL « `/my-handling-form-page` » recevra 
 
 Félicitations ! Vous avez construit votre premier formulaire HTML. Il ressemble à ceci&nbsp;:
 
-{{EmbedLiveSample("Un_formulaire_simple", "100%", "240", "", "Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML/Exemple")}}
+```html hidden
+<form action="/my-handling-form-page" method="post">
+  <div>
+    <label for="name">Nom&nbsp;:</label>
+    <input type="text" id="name" name="user_name" />
+  <div>
+  <div>
+    <label for="mail">E-mail&nbsp;:</label>
+    <input type="email" id="mail" name="user_email" />
+  </div>
+  <div>
+    <label for="msg">Message :</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </div>
+</form>
+  ...
+```
+
+```css hidden
+form {
+  /* Uniquement centrer le formulaire sur la page */
+  margin: 0 auto;
+  width: 400px;
+  /* Encadré pour voir les limites du formulaire */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input, textarea {
+  /* Pour s'assurer que tous les champs texte ont la même police.
+     Par défaut, les textarea ont une police monospace */
+  font: 1em sans-serif;
+
+  /* Pour que tous les champs texte aient la même dimension */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Pour harmoniser le look & feel des bordures des champs texte */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* Pour souligner légèrement les éléments actifs */
+  border-color: #000;
+}
+
+textarea {
+  /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+  vertical-align: top;
+
+  /* Pour donner assez de place pour écrire du texte */
+  height: 5em;
+}
+
+.button {
+  /* Pour placer le bouton à la même position que les champs texte */
+  padding-left: 90px; /* même taille que les étiquettes */
+}
+
+button {
+  /* Cette marge supplémentaire représente grosso modo le même espace que celui
+     entre les étiquettes et les champs texte */
+  margin-left: .5em;
+}
+```
+
+{{EmbedLiveSample("Resume", "100%", "240")}}
 
 Toutefois, ce n'est qu'un début — il est désormais temps de regarder plus en détail. Les formulaires HTML sont bien plus puissants que ce que vous avez pu voir ici et les autres articles de ce guide vous aiderons à maîtriser le reste.
 
