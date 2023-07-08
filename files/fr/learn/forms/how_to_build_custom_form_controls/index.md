@@ -302,38 +302,373 @@ Pour les options, nous devons ajouter une classe `highlight` pour pouvoir identi
 }
 ```
 
-Donc, voici le résultat avec les trois états :
+Donc, voici le résultat avec les trois états ([consultez le code source ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1)):
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">État initial</th>
-      <th scope="col">État actif</th>
-      <th scope="col">État ouvert</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{EmbedLiveSample('État_initial',120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
-      </td>
-      <td>
-        {{EmbedLiveSample("État_actif",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
-      </td>
-      <td>
-        {{EmbedLiveSample("État_ouvert",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
-      </td>
-    </tr>
-    <tr>
-      <td colspan="3">
-        <a
-          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1"
-          >Voir le code source</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+#### État initial
+
+```html hidden
+<div class="select">
+  <span class="value">Cerise</span>
+  <ul class="optList hidden">
+    <li class="option">Cerise</li>
+    <li class="option">Citron</li>
+    <li class="option">Banane</li>
+    <li class="option">Fraise</li>
+    <li class="option">Pomme</li>
+  </ul>
+</div>
+```
+
+```css hidden
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline: none;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select:after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+{{EmbedLiveSample("État_initial",120,130)}}
+
+#### État actif
+
+```html hidden
+<div class="select active">
+  <span class="value">Cerise</span>
+  <ul class="optList hidden">
+    <li class="option">Cerise</li>
+    <li class="option">Citron</li>
+    <li class="option">Banane</li>
+    <li class="option">Fraise</li>
+    <li class="option">Pomme</li>
+  </ul>
+</div>
+```
+
+```css hidden
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline: none;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select:after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+{{EmbedLiveSample("État_actif",120,130)}}
+
+#### État ouvert
+
+```html hidden
+<div class="select active">
+  <span class="value">Cerise</span>
+  <ul class="optList">
+    <li class="option highlight">Cerise</li>
+    <li class="option">Citron</li>
+    <li class="option">Banane</li>
+    <li class="option">Fraise</li>
+    <li class="option">Pomme</li>
+  </ul>
+</div>
+```
+
+```css hidden
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline: none;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select:after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #fff;
+}
+```
+
+{{EmbedLiveSample("État_ouvert",120,130)}}
 
 ## Donnez vie à votre widget avec JavaScript
 
@@ -411,32 +746,209 @@ window.addEventListener("load", function () {
 });
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Sans JavaScript</th>
-      <th scope="col">Avec JavaScript</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{EmbedLiveSample("Sans_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
-      </td>
-      <td>
-        {{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <a
-          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2"
-          >Voir le code source</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+#### Sans JS
+
+Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#sans_js).
+
+```html hidden
+<form class="no-widget">
+  <select name="myFruit">
+      <option>Cerise</option>
+      <option>Citron</option>
+      <option>Banane</option>
+      <option>Fraise</option>
+      <option>Pomme</option>
+  </select>
+
+  <div class="select">
+    <span class="value">Cerise</span>
+    <ul class="optList hidden">
+      <li class="option">Cerise</li>
+      <li class="option">Citron</li>
+      <li class="option">Banane</li>
+      <li class="option">Fraise</li>
+      <li class="option">Pomme</li>
+    </ul>
+  </div>
+<form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position : absolute;
+  left     : -5000em;
+  height   : 0;
+  overflow : hidden;
+}
+```
+
+{{ EmbedLiveSample('Sans_JS', 120, 130) }}
+
+
+#### Avec JS
+
+Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2#avec_js).
+
+```html hidden
+<form class="no-widget">
+  <select name="myFruit">
+      <option>Cerise</option>
+      <option>Citron</option>
+      <option>Banane</option>
+      <option>Fraise</option>
+      <option>Pomme</option>
+  </select>
+
+  <div class="select">
+    <span class="value">Cerise</span>
+    <ul class="optList hidden">
+      <li class="option">Cerise</li>
+      <li class="option">Citron</li>
+      <li class="option">Banane</li>
+      <li class="option">Fraise</li>
+      <li class="option">Pomme</li>
+    </ul>
+  </div>
+<form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position : absolute;
+  left     : -5000em;
+  height   : 0;
+  overflow : hidden;
+}
+
+/* --------------- */
+/* Styles requis   */
+/* --------------- */
+
+.select {
+  position: relative;
+  display : inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline: none;
+}
+
+.select .optList {
+  position: absolute;
+  top     : 100%;
+  left    : 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+/* ------------ */
+/* Styles décor */
+/* ------------ */
+
+.select {
+  font-size   : 0.625em; /* 10px */
+  font-family : Verdana, Arial, sans-serif;
+
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+
+  padding : 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width   : 10em; /* 100px */
+
+  border        : 0.2em solid #000; /* 2px */
+  border-radius : 0.4em; /* 4px */
+
+  box-shadow : 0 0.1em 0.2em rgba(0,0,0,.45); /* 0 1px 2px */
+
+  background : #F0F0F0;
+  background : -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+  background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display  : inline-block;
+  width    : 100%;
+  overflow : hidden;
+
+  white-space   : nowrap;
+  text-overflow : ellipsis;
+  vertical-align: top;
+}
+
+.select:after {
+  content : "▼";
+  position: absolute;
+  z-index : 1;
+  height  : 100%;
+  width   : 2em; /* 20px */
+  top     : 0;
+  right   : 0;
+
+  padding-top : .1em;
+
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+
+  text-align : center;
+
+  border-left  : .2em solid #000;
+  border-radius: 0 .1em .1em 0;
+
+  background-color : #000;
+  color : #FFF;
+}
+
+.select .optList {
+  z-index : 2;
+
+  list-style: none;
+  margin : 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: .2em solid #000;
+  border-top-width : .1em;
+  border-radius: 0 0 .4em .4em;
+
+  box-shadow: 0 .2em .4em rgba(0,0,0,.4);
+
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+
+  min-width : 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: .2em .3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #FFFFFF;
+}
+```
+
+```js hidden
+window.addEventListener("load", function () {
+  var form = document.querySelector('form');
+
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+});
+```
+
+{{ EmbedLiveSample('Avec_JS', 120, 130) }}
+
 
 > **Note :** Si vous voulez vraiment rendre votre code générique et réutilisable, au lieu de faire un changement de classe, il est préférable d'ajouter la classe widget pour cacher les éléments {{HTMLElement("select")}} et d'ajouter dynamiquement l'arbre DOM représentant le widget personnalisé après chaque élément {{HTMLElement("select")}} dans la page.
 
@@ -598,28 +1110,243 @@ window.addEventListener('load', function () {
 
 A ce stade, notre widget change d'état comme nous l'avons conçu, mais sa valeur n'est pas encore mise à jour. On s'en occupera après.
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Exemple en direct</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3"
-          >Voir le code source</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+#### Exemple en direct
+
+Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3).
+
+```html hidden
+<form class="no-widget">
+  <select name="myFruit" tabindex="-1">
+      <option>Cerise</option>
+      <option>Citron</option>
+      <option>Banane</option>
+      <option>Fraise</option>
+      <option>Pomme</option>
+  </select>
+
+  <div class="select" tabindex="0">
+    <span class="value">Cerise</span>
+    <ul class="optList hidden">
+      <li class="option">Cerise</li>
+      <li class="option">Citron</li>
+      <li class="option">Banane</li>
+      <li class="option">Fraise</li>
+      <li class="option">Pomme</li>
+    </ul>
+  </div>
+</form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position : absolute;
+  left     : -5000em;
+  height   : 0;
+  overflow : hidden;
+}
+
+/* --------------- */
+/* Styles Requis   */
+/* --------------- */
+
+.select {
+  position: relative;
+  display : inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline: none;
+}
+
+.select .optList {
+  position: absolute;
+  top     : 100%;
+  left    : 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+/* ------------ */
+/* Style chic  */
+/* ------------ */
+
+.select {
+  font-size   : 0.625em; /* 10px */
+  font-family : Verdana, Arial, sans-serif;
+
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+
+  padding : 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width   : 10em; /* 100px */
+
+  border        : 0.2em solid #000; /* 2px */
+  border-radius : 0.4em; /* 4px */
+
+  box-shadow : 0 0.1em 0.2em rgba(0,0,0,.45); /* 0 1px 2px */
+
+  background : #F0F0F0;
+  background : -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+  background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display  : inline-block;
+  width    : 100%;
+  overflow : hidden;
+
+  white-space   : nowrap;
+  text-overflow : ellipsis;
+  vertical-align: top;
+}
+
+.select:after {
+  content : "▼";
+  position: absolute;
+  z-index : 1;
+  height  : 100%;
+  width   : 2em; /* 20px */
+  top     : 0;
+  right   : 0;
+
+  padding-top : .1em;
+
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+
+  text-align : center;
+
+  border-left  : .2em solid #000;
+  border-radius: 0 .1em .1em 0;
+
+  background-color : #000;
+  color : #FFF;
+}
+
+.select .optList {
+  z-index : 2;
+
+  list-style: none;
+  margin : 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: .2em solid #000;
+  border-top-width : .1em;
+  border-radius: 0 0 .4em .4em;
+
+  box-shadow: 0 .2em .4em rgba(0,0,0,.4);
+
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+
+  min-width : 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: .2em .3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #FFFFFF;
+}
+```
+
+```js hidden
+// ----------- //
+// UTILITAIRES //
+// ----------- //
+
+NodeList.prototype.forEach = function (callback) {
+  Array.prototype.forEach.call(this, callback);
+}
+
+// ------------------------- //
+// Définitions des fonctions //
+// ------------------------- //
+
+function deactivateSelect(select) {
+  if (!select.classList.contains('active')) return;
+
+  var optList = select.querySelector('.optList');
+
+  optList.classList.add('hidden');
+  select.classList.remove('active');
+}
+
+function activeSelect(select, selectList) {
+  if (select.classList.contains('active')) return;
+
+  selectList.forEach(deactivateSelect);
+  select.classList.add('active');
+};
+
+function toggleOptList(select, show) {
+  var optList = select.querySelector('.optList');
+
+  optList.classList.toggle('hidden');
+}
+
+function highlightOption(select, option) {
+  var optionList = select.querySelectorAll('.option');
+
+  optionList.forEach(function (other) {
+    other.classList.remove('highlight');
+  });
+
+  option.classList.add('highlight');
+};
+
+// ------------------- //
+// Lien aux événements //
+// ------------------- //
+
+window.addEventListener("load", function () {
+  var form = document.querySelector('form');
+
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+});
+
+window.addEventListener('load', function () {
+  var selectList = document.querySelectorAll('.select');
+
+  selectList.forEach(function (select) {
+    var optionList = select.querySelectorAll('.option');
+
+    optionList.forEach(function (option) {
+      option.addEventListener('mouseover', function () {
+        highlightOption(select, option);
+      });
+    });
+
+    select.addEventListener('click', function (event) {
+      toggleOptList(select);
+    },  false);
+
+    select.addEventListener('focus', function (event) {
+      activeSelect(select, selectList);
+    });
+
+    select.addEventListener('blur', function (event) {
+      deactivateSelect(select);
+    });
+  });
+});
+```
+
+{{ EmbedLiveSample('Exemple_en_direct',120,130) }}
+
 
 ### Gérer la valeur du widget
 
@@ -717,30 +1444,286 @@ window.addEventListener('load', function () {
 
 Dans le code ci-dessus, il faut noter l'utilisation de la propriété [`tabIndex`](/fr/docs/Web/API/HTMLElement/tabIndex). Utiliser cette propriété est nécessaire pour être sûr que le widget natif n'obtiendra jamais le focus et que le widget personnalisé l'obtiendra quand l'utilisateur utilise le clavier ou la souris.
 
-Et voilà, nous avons terminé ! Voici le résultat :
+Et voilà, nous avons terminé ! Voici le résultat ([consultez le code source ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)) :
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Exemple en direct</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4"
-          >Voir le code source</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+```html hidden
+<form class="no-widget">
+  <select name="myFruit">
+    <option>Cerise</option>
+    <option>Citron</option>
+    <option>Banane</option>
+    <option>Fraise</option>
+    <option>Pomme</option>
+  </select>
+
+  <div class="select">
+    <span class="value">Cerise</span>
+    <ul class="optList hidden">
+      <li class="option">Cerise</li>
+      <li class="option">Citron</li>
+      <li class="option">Banane</li>
+      <li class="option">Fraise</li>
+      <li class="option">Pomme</li>
+    </ul>
+  </div>
+</form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position : absolute;
+  left     : -5000em;
+  height   : 0;
+  overflow : hidden;
+}
+
+/* --------------- */
+/* Styles Requis   */
+/* --------------- */
+
+.select {
+  position: relative;
+  display : inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline: none;
+}
+
+.select .optList {
+  position: absolute;
+  top     : 100%;
+  left    : 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+/* ------------ */
+/* Styles chic  */
+/* ------------ */
+
+.select {
+  font-size   : 0.625em; /* 10px */
+  font-family : Verdana, Arial, sans-serif;
+
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+
+  padding : 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width   : 10em; /* 100px */
+
+  border        : 0.2em solid #000; /* 2px */
+  border-radius : 0.4em; /* 4px */
+
+  box-shadow : 0 0.1em 0.2em rgba(0,0,0,.45); /* 0 1px 2px */
+
+  background : #F0F0F0;
+  background : -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+  background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display  : inline-block;
+  width    : 100%;
+  overflow : hidden;
+
+  white-space   : nowrap;
+  text-overflow : ellipsis;
+  vertical-align: top;
+}
+
+.select:after {
+  content : "▼";
+  position: absolute;
+  z-index : 1;
+  height  : 100%;
+  width   : 2em; /* 20px */
+  top     : 0;
+  right   : 0;
+
+  padding-top : .1em;
+
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+
+  text-align : center;
+
+  border-left  : .2em solid #000;
+  border-radius: 0 .1em .1em 0;
+
+  background-color : #000;
+  color : #FFF;
+}
+
+.select .optList {
+  z-index : 2;
+
+  list-style: none;
+  margin : 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: .2em solid #000;
+  border-top-width : .1em;
+  border-radius: 0 0 .4em .4em;
+
+  box-shadow: 0 .2em .4em rgba(0,0,0,.4);
+
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+
+  min-width : 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: .2em .3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #FFFFFF;
+}
+```
+
+```js hidden
+// ----------- //
+// UTILITAIRES //
+// ----------- //
+
+NodeList.prototype.forEach = function (callback) {
+  Array.prototype.forEach.call(this, callback);
+}
+
+// ------------------------- //
+// Définitions des fonctions //
+// ------------------------- //
+
+function deactivateSelect(select) {
+  if (!select.classList.contains('active')) return;
+
+  var optList = select.querySelector('.optList');
+
+  optList.classList.add('hidden');
+  select.classList.remove('active');
+}
+
+function activeSelect(select, selectList) {
+  if (select.classList.contains('active')) return;
+
+  selectList.forEach(deactivateSelect);
+  select.classList.add('active');
+};
+
+function toggleOptList(select, show) {
+  var optList = select.querySelector('.optList');
+
+  optList.classList.toggle('hidden');
+}
+
+function highlightOption(select, option) {
+  var optionList = select.querySelectorAll('.option');
+
+  optionList.forEach(function (other) {
+    other.classList.remove('highlight');
+  });
+
+  option.classList.add('highlight');
+};
+
+function updateValue(select, index) {
+  var nativeWidget = select.previousElementSibling;
+  var value = select.querySelector('.value');
+  var optionList = select.querySelectorAll('.option');
+
+  nativeWidget.selectedIndex = index;
+  value.innerHTML = optionList[index].innerHTML;
+  highlightOption(select, optionList[index]);
+};
+
+function getIndex(select) {
+  var nativeWidget = select.previousElementSibling;
+
+  return nativeWidget.selectedIndex;
+};
+
+// -------------------- //
+// Liens aux événements //
+// -------------------- //
+
+window.addEventListener("load", function () {
+  var form = document.querySelector('form');
+
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+});
+
+window.addEventListener('load', function () {
+  var selectList = document.querySelectorAll('.select');
+
+  selectList.forEach(function (select) {
+    var optionList = select.querySelectorAll('.option');
+
+    optionList.forEach(function (option) {
+      option.addEventListener('mouseover', function () {
+        highlightOption(select, option);
+      });
+    });
+
+    select.addEventListener('click', function (event) {
+      toggleOptList(select);
+    });
+
+    select.addEventListener('focus', function (event) {
+      activeSelect(select, selectList);
+    });
+
+    select.addEventListener('blur', function (event) {
+      deactivateSelect(select);
+    });
+  });
+});
+
+window.addEventListener('load', function () {
+  var selectList = document.querySelectorAll('.select');
+
+  selectList.forEach(function (select) {
+    var optionList = select.querySelectorAll('.option'),
+        selectedIndex = getIndex(select);
+
+    select.tabIndex = 0;
+    select.previousElementSibling.tabIndex = -1;
+
+    updateValue(select, selectedIndex);
+
+    optionList.forEach(function (option, index) {
+      option.addEventListener('click', function (event) {
+        updateValue(select, index);
+      });
+    });
+
+    select.addEventListener('keyup', function (event) {
+      var length = optionList.length,
+          index  = getIndex(select);
+
+      if (event.keyCode === 40 && index < length - 1) { index++; }
+      if (event.keyCode === 38 && index > 0) { index--; }
+
+      updateValue(select, index);
+    });
+  });
+});
+```
+
+{{EmbedLiveSample("Gérer_la_valeur_du_widget",120,130)}}
 
 Mais attendez, avons‑nous vraiment terminé ?
 
@@ -802,30 +1785,282 @@ function updateValue(select, index) {
 };
 ```
 
-Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleur ressenti en les testant avec une technique d'assistance comme [NVDA](http://www.nvda-project.org/) ou [VoiceOver](http://www.apple.com/accessibility/voiceover/)) :
+Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleur ressenti en les testant avec une technique d'assistance comme [NVDA](http://www.nvda-project.org/) ou [VoiceOver](http://www.apple.com/accessibility/voiceover/)). Consultez le [code complet source ici](/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5) :
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">Exemple en direct</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{EmbedLiveSample("Changement_détat",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a
-          href="/fr/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5"
-          >Voir le code source</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+
+```html hidden
+<form class="no-widget">
+  <select name="myFruit">
+    <option>Cerise</option>
+    <option>Citron</option>
+    <option>Banane</option>
+    <option>Fraise</option>
+    <option>Pomme</option>
+  </select>
+
+  <div class="select" role="listbox">
+    <span class="value">Cerise</span>
+    <ul class="optList hidden" role="presentation">
+      <li class="option" role="option" aria-selected="true">Cerise</li>
+      <li class="option" role="option">Citron</li>
+      <li class="option" role="option">Banane</li>
+      <li class="option" role="option">Fraise</li>
+      <li class="option" role="option">Pomme</li>
+    </ul>
+  </div>
+</form>
+```
+```css hidden
+.widget select,
+.no-widget .select {
+  position : absolute;
+  left     : -5000em;
+  height   : 0;
+  overflow : hidden;
+}
+
+/* --------------- */
+/* Styles Requis   */
+/* --------------- */
+
+.select {
+  position: relative;
+  display : inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline: none;
+}
+
+.select .optList {
+  position: absolute;
+  top     : 100%;
+  left    : 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+/* ------------ */
+/* Styles Chic  */
+/* ------------ */
+
+.select {
+  font-size   : 0.625em; /* 10px */
+  font-family : Verdana, Arial, sans-serif;
+
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+
+  padding : 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width   : 10em; /* 100px */
+
+  border        : 0.2em solid #000; /* 2px */
+  border-radius : 0.4em; /* 4px */
+
+  box-shadow : 0 0.1em 0.2em rgba(0,0,0,.45); /* 0 1px 2px */
+
+  background : #F0F0F0;
+  background : -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+  background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display  : inline-block;
+  width    : 100%;
+  overflow : hidden;
+
+  white-space   : nowrap;
+  text-overflow : ellipsis;
+  vertical-align: top;
+}
+
+.select:after {
+  content : "▼";
+  position: absolute;
+  z-index : 1;
+  height  : 100%;
+  width   : 2em; /* 20px */
+  top     : 0;
+  right   : 0;
+
+  padding-top : .1em;
+
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+
+  text-align : center;
+
+  border-left  : .2em solid #000;
+  border-radius: 0 .1em .1em 0;
+
+  background-color : #000;
+  color : #FFF;
+}
+
+.select .optList {
+  z-index : 2;
+
+  list-style: none;
+  margin : 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: .2em solid #000;
+  border-top-width : .1em;
+  border-radius: 0 0 .4em .4em;
+
+  box-shadow: 0 .2em .4em rgba(0,0,0,.4);
+
+  -moz-box-sizing : border-box;
+  box-sizing : border-box;
+
+  min-width : 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: .2em .3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #FFFFFF;
+}
+```
+
+```js hidden
+// ----------- //
+// UTILITAIRES //
+// ----------- //
+
+NodeList.prototype.forEach = function (callback) {
+  Array.prototype.forEach.call(this, callback);
+}
+
+// ------------------------- //
+// Définitions des fonctions //
+// ------------------------- //
+
+function deactivateSelect(select) {
+  if (!select.classList.contains('active')) return;
+
+  var optList = select.querySelector('.optList');
+
+  optList.classList.add('hidden');
+  select.classList.remove('active');
+}
+
+function activeSelect(select, selectList) {
+  if (select.classList.contains('active')) return;
+
+  selectList.forEach(deactivateSelect);
+  select.classList.add('active');
+};
+
+function toggleOptList(select, show) {
+  var optList = select.querySelector('.optList');
+
+  optList.classList.toggle('hidden');
+}
+
+function highlightOption(select, option) {
+  var optionList = select.querySelectorAll('.option');
+
+  optionList.forEach(function (other) {
+    other.classList.remove('highlight');
+  });
+
+  option.classList.add('highlight');
+};
+
+function updateValue(select, index) {
+  var nativeWidget = select.previousElementSibling;
+  var value = select.querySelector('.value');
+  var optionList = select.querySelectorAll('.option');
+
+  optionList.forEach(function (other) {
+    other.setAttribute('aria-selected', 'false');
+  });
+
+  optionList[index].setAttribute('aria-selected', 'true');
+
+  nativeWidget.selectedIndex = index;
+  value.innerHTML = optionList[index].innerHTML;
+  highlightOption(select, optionList[index]);
+};
+
+function getIndex(select) {
+  var nativeWidget = select.previousElementSibling;
+
+  return nativeWidget.selectedIndex;
+};
+
+// -------------------- //
+// Liens aux événements //
+// -------------------- //
+
+window.addEventListener("load", function () {
+  var form = document.querySelector('form');
+
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+});
+
+window.addEventListener('load', function () {
+  var selectList = document.querySelectorAll('.select');
+
+  selectList.forEach(function (select) {
+    var optionList = select.querySelectorAll('.option'),
+        selectedIndex = getIndex(select);
+
+    select.tabIndex = 0;
+    select.previousElementSibling.tabIndex = -1;
+
+    updateValue(select, selectedIndex);
+
+    optionList.forEach(function (option, index) {
+      option.addEventListener('mouseover', function () {
+        highlightOption(select, option);
+      });
+
+      option.addEventListener('click', function (event) {
+        updateValue(select, index);
+      });
+    });
+
+    select.addEventListener('click', function (event) {
+      toggleOptList(select);
+    });
+
+    select.addEventListener('focus', function (event) {
+      activeSelect(select, selectList);
+    });
+
+    select.addEventListener('blur', function (event) {
+      deactivateSelect(select);
+    });
+
+    select.addEventListener('keyup', function (event) {
+      var length = optionList.length,
+          index  = getIndex(select);
+
+      if (event.keyCode === 40 && index < length - 1) { index++; }
+      if (event.keyCode === 38 && index > 0) { index--; }
+
+      updateValue(select, index);
+    });
+  });
+});
+```
+
+{{EmbedLiveSample("#lattribut_aria-selected",120,130)}}
 
 ## Conclusion
 
