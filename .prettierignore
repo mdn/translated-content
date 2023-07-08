@@ -33,6 +33,7 @@ build/
 
 # zh-cn
 /files/zh-cn/**/*.md
+/docs/zh-cn/glossary.md
 
 # zh-tw
 /files/zh-tw/web/api/[a-o]*/**/*.md
