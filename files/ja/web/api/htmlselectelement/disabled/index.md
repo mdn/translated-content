@@ -1,26 +1,27 @@
 ---
-title: HTMLSelectElement.disabled
+title: "HTMLSelectElement: disabled プロパティ"
+short-title: disabled
 slug: Web/API/HTMLSelectElement/disabled
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLSelectElement.disabled`** は論理値で、HTML の [`disabled`](/ja/docs/Web/HTML/Element/select#attr-disabled) 属性を反映し、このコントロールが無効であるかどうかを示します。無効であった場合、クリックを受け付けません。無効な要素は使用できず、クリックできません。
+**`HTMLSelectElement.disabled`** プロパティは論理値で、HTML の [`disabled`](/ja/docs/Web/HTML/Element/select#disabled) 属性を反映し、このコントロールが無効であるかどうかを示します。無効であった場合、クリックを受け付けません。無効な要素は使用できず、クリックできません。
 
-## 構文
+## 値
 
-```js
-aSelectElement.disabled = aBool;
-```
+論理値です。
 
-<h2 id="Example">例</h2>
+## 例
 
 ### HTML
 
 ```html
 <label>
   飲み物はいかが？
-  <input id="allow-drinks" type="checkbox"/>
+  <input id="allow-drinks" type="checkbox" />
 </label>
 
 <label for="drink-select">飲み物の選択:</label>
@@ -35,21 +36,21 @@ aSelectElement.disabled = aBool;
 ### JavaScript
 
 ```js
-var allowDrinksCheckbox = document.getElementById("allow-drinks");
-var drinkSelect = document.getElementById("drink-select");
+const allowDrinksCheckbox = document.getElementById("allow-drinks");
+const drinkSelect = document.getElementById("drink-select");
 
-allowDrinksCheckbox.addEventListener("change", function(event) {
-  if (event.target.checked) {
-    drinkSelect.disabled = false;
-  } else {
-    drinkSelect.disabled = true;
-  }
-}, false);
+allowDrinksCheckbox.addEventListener(
+  "change",
+  (event) => {
+    drinkSelect.disabled = !event.target.checked;
+  },
+  false
+);
 ```
 
 ### 結果
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('Examples')}}
 
 ## 仕様書
 
