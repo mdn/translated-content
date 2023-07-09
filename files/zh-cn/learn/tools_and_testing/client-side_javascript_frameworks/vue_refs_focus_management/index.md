@@ -155,7 +155,7 @@ Vue 让你在这个生命周期的不同阶段使用**生命周期方法**运行
 9. `activated()`：只用于用特殊的 `keep-alive` 标签包装的组件。在组件被激活后运行。
 10. `deactivated()`：只用于用特殊的 `keep-alive` 标签包装的组件。在组件被停止激活后运行。
 
-> **备注：** Vue文档提供了一个[很好的图表，可以直观地看到这些钩子何时发生](https://cn.vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram)。这篇文章来自 [Digital Ocean 社区博客，更深入地探讨了生命周期方法](https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle)。
+> **备注：** Vue 文档提供了一个[很好的图表，可以直观地看到这些钩子何时发生](https://cn.vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram)。这篇文章来自 [Digital Ocean 社区博客，更深入地探讨了生命周期方法](https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle)。
 
 现在我们已经了解了生命周期方法，让我们用一个方法在我们的 `ToDoItemEditForm` 组件被安装时触发焦点。
 
@@ -170,7 +170,7 @@ Vue 让你在这个生命周期的不同阶段使用**生命周期方法**运行
   v-model.lazy.trim="newName" />
 ```
 
-接下来，在你的组件对象中添加一个 `mounted()` 属性——**注意，这不应该放在 `methods` 属性里面，而应该与 `props'、`data()` 和 `methods` 处于同一个层次。**生命周期方法是独立的特殊方法，不应与用户定义方法放在一起。这些方法不接受参数。注意，你不能在这里使用箭头函数，因为我们需要访问 `this` 来访问我们的 `labelInput`。
+接下来，在你的组件对象中添加一个 `mounted()` 属性——**注意，这不应该放在 `methods` 属性里面，而应该与 `props`、`data()` 和 `methods` 处于同一个层次。**生命周期方法是独立的特殊方法，不应与用户定义方法放在一起。这些方法不接受参数。注意，你不能在这里使用箭头函数，因为我们需要访问 `this` 来访问我们的 `labelInput`。
 
 ```js
 mounted() {
