@@ -90,8 +90,8 @@ slug: Mozilla/Add-ons/WebExtensions/Native_manifests
       <td>
         <p>原生应用的路径。</p>
         <p>
-          在 Windows 中，这可以是一个相对路径（相对于 manifest ）。
-          在 MacOS 和 Linux中，必须是绝对路径。
+          在 Windows 中，这可以是一个相对路径（相对于 manifest）。在 MacOS 和 Linux
+          中，必须是绝对路径。
         </p>
       </td>
     </tr>
