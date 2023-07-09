@@ -381,7 +381,6 @@
 /pt-BR/docs/JavaScript/Reference/Statements/let	/pt-BR/docs/Web/JavaScript/Reference/Statements/let
 /pt-BR/docs/JavaScript/uma_reintroduction_ao_JavaScript	/pt-BR/docs/Web/JavaScript/Language_overview
 /pt-BR/docs/Learn/Accessibility/Acessibilidade_problemas	/pt-BR/docs/Learn/Accessibility/Accessibility_troubleshooting
-/pt-BR/docs/Learn/Accessibility/CSS_e_JavaScript	/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript
 /pt-BR/docs/Learn/CSS/CSS_layout/Fluxo_Normal	/pt-BR/docs/Learn/CSS/CSS_layout/Normal_Flow
 /pt-BR/docs/Learn/CSS/CSS_layout/Intro_leiaute_CSS	/pt-BR/docs/Learn/CSS/CSS_layout/Introduction
 /pt-BR/docs/Learn/CSS/CSS_layout/Layout_de_varias_colunas	/pt-BR/docs/Learn/CSS/CSS_layout/Multiple-column_Layout
@@ -442,7 +441,6 @@
 /pt-BR/docs/Localização	/pt-BR/docs/Glossary/Localization
 /pt-BR/docs/MDN/About	/pt-BR/docs/MDN/Writing_guidelines
 /pt-BR/docs/MDN/Contribute/Content	/pt-BR/docs/conflicting/MDN/Writing_guidelines
-/pt-BR/docs/MDN/Contribute/Content/Style_guide	/pt-BR/docs/MDN/Writing_guidelines/Writing_style_guide
 /pt-BR/docs/MDN/Contribute/Estruturas	/pt-BR/docs/conflicting/MDN/Writing_guidelines/Page_structures
 /pt-BR/docs/MDN/Contribute/Estruturas/Compatibility_tables	/pt-BR/docs/MDN/Writing_guidelines/Page_structures
 /pt-BR/docs/MDN/Contribute/Estruturas/Macros	/pt-BR/docs/conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
@@ -469,8 +467,6 @@
 /pt-BR/docs/MDN/Contribute/guia/Create_an_interactive_exercise_to_help_learning_the_web/distant_example	/pt-BR/docs/conflicting/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 /pt-BR/docs/MDN/Feedback	/pt-BR/docs/MDN/Community
 /pt-BR/docs/MDN/Guidelines	/pt-BR/docs/conflicting/MDN/Writing_guidelines
-/pt-BR/docs/MDN/Guidelines/Style_guide	/pt-BR/docs/MDN/Writing_guidelines/Writing_style_guide
-/pt-BR/docs/MDN/Guidelines/Writing_style_guide	/pt-BR/docs/MDN/Writing_guidelines/Writing_style_guide
 /pt-BR/docs/MDN/Kuma	/pt-BR/docs/orphaned/MDN/Yari
 /pt-BR/docs/MDN/Primeiros_Passos	/pt-BR/docs/MDN/Community/Contributing/Getting_started
 /pt-BR/docs/MDN/Structures	/pt-BR/docs/conflicting/MDN/Writing_guidelines/Page_structures
@@ -491,7 +487,6 @@
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/pre-requisitos	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/sua_primeira_WebExtension	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Itens_do_menu_de_contexto	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-/pt-BR/docs/Mozilla/Firefox/Novas_funcionalidades	/pt-BR/docs/Mozilla/Firefox/Experimental_features
 /pt-BR/docs/Mozilla/Firefox/Releases/3/Zoom_de_página_inteira	/pt-BR/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
 /pt-BR/docs/Quirks_Mode_and_Standards_Mode	/pt-BR/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /pt-BR/docs/SVG	/pt-BR/docs/Web/SVG
