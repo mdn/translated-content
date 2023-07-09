@@ -84,7 +84,7 @@ JavaScript 有许多内置的函数，可以让您做很多有用的事情，而
 
 ## 自定义函数
 
-您在过去的课程中还看到很多定制功能 - 在代码中定义的功能，而不是在浏览器中。每当您看到一个自定义名称后面都带有括号，那么您使用的是自定义函数。在我们的[循环文章中](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)的[random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html)示例（另见完整的[源代码](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)）中，我们包括一个如下所示的自定义函数：`draw()`
+您在过去的课程中还看到很多定制功能 - 在代码中定义的功能，而不是在浏览器中。每当您看到一个自定义名称后面都带有括号，那么您使用的是自定义函数。在我们的[循环文章中](/zh-CN/docs/Learn/JavaScript/Building_blocks/Looping_code)的[random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html)示例（另见完整的[源代码](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)）中，我们包括一个如下所示的自定义函数：`draw()`
 
 ```js
 function draw() {
@@ -290,7 +290,7 @@ function greeting() {
 
 我们来看一个真正的例子来展示范围
 
-1. 首先，制作我们的[function-scope.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html)示例的本地副本。它包含两个函数`a()`和`b()`，和三个变量—— `x`，`y`和`z`——其中两个在函数中被定义，另一个被定义在全局作用域内。它还包含一个名为`output()`的函数，它接收一个参数，并将其输出到页面的一个段落中。
+1. 首先，制作我们的[function-scope.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-scope.html)示例的本地副本。它包含两个函数`a()`和`b()`，和三个变量—— `x`，`y`和`z`——其中两个在函数中被定义，另一个被定义在全局作用域内。它还包含一个名为`output()`的函数，它接收一个参数，并将其输出到页面的一个段落中。
 2. 在浏览器和文本编辑器中打开示例。
 3. 在浏览器开发工具中打开 JavaScript 控制台。在 JavaScript 控制台中，输入以下命令：
 

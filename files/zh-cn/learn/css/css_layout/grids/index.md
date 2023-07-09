@@ -377,7 +377,7 @@ body {
 
 注意开始与结束的线的序号要使用`/`符号分开。
 
-下载[这个文件](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/8-placement-starting-point.html)（或者查看[在线预览](https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html)）。文件中已经定义了一个网格以及一篇简单的文章位于网格之外。你可以看到元素已经被自动放置到了我们创建的网格中。
+下载[这个文件](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/8-placement-starting-point.html)（或者查看[在线预览](https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html)）。文件中已经定义了一个网格以及一篇简单的文章位于网格之外。你可以看到元素已经被自动放置到了我们创建的网格中。
 
 接下来，尝试用定义网格线的方法将所有元素放置到网格中。将以下规则加入到你的 css 的末尾：
 
@@ -581,7 +581,7 @@ aside {
 
 网格排版框架一般由 12 到 16 列的网格构成，你可以用 CSS 网格系统直接实现而不需要任何第三方的工具，毕竟这是标准定义好了的。
 
-下载这个[初始文件](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/11-grid-system-starting-point.html)，文件中包含了一个定义了 12 列网格的容器。文件中的一些内容我们曾在前两个示例中使用过，我们暂时可以先用基于线的元素放置模式来将我们的内容放到这个 12 列的网格中。
+下载这个[初始文件](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/11-grid-system-starting-point.html)，文件中包含了一个定义了 12 列网格的容器。文件中的一些内容我们曾在前两个示例中使用过，我们暂时可以先用基于线的元素放置模式来将我们的内容放到这个 12 列的网格中。
 
 ```css
 header {

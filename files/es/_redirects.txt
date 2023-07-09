@@ -1274,6 +1274,7 @@
 /es/docs/Mozilla/Add-ons/WebExtensions/Que_son_las_WebExtensions	/es/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 /es/docs/Mozilla/Add-ons/WebExtensions/Tu_primera_WebExtension	/es/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /es/docs/Mozilla/Add-ons/WebExtensions/Tutorial	/es/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
+/es/docs/Mozilla/Add-ons/WebExtensions/What_next_	/es/docs/Mozilla/Add-ons/WebExtensions/What_next
 /es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Accion_navegador	/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /es/docs/Plantillas_en_Firefox_3	/es/docs/Mozilla/Firefox/Releases/3/Templates
