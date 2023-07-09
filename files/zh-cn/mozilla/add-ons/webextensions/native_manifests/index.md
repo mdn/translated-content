@@ -16,10 +16,8 @@ slug: Mozilla/Add-ons/WebExtensions/Native_manifests
         <a href="#native_messaging_manifests">原生应用通信清单</a>
       </td>
       <td>
-        开启一个叫
-        <a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_messaging"
-            >原生通信</a
-          > 的功能：使 extension 可以与本机的原生应用交换信息。
+        开启一个叫<a href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">原生通信</a>的功能：使
+        extension 可以与本机的原生应用交换信息。
       </td>
     </tr>
     <tr>
@@ -70,12 +68,12 @@ slug: Mozilla/Add-ons/WebExtensions/Native_manifests
         <p>
           在 MacOS 和 Linux 中，它还必须和清单文件的文件名保持一致（除 <code>.json</code> 文件扩展名外）。
         </p>
-        <p>在Windows上，它必须与你创建的注册表键的名称相匹配，该注册表键包含本地信息传递清单的位置。
+        <p>在 Windows 上，它必须与你创建的注册表键的名称相匹配，该注册表键包含本地信息传递清单的位置。
         </p>
         <p>
-          它必须符合正则表达式 <code>"^\w+(\.\w+)*$"</code>。
-          这意味着它只能包含大小写字母、数字、下划线和 <code>.</code> 。
-          开头或结束不能是是 <code>.</code> ，并且 <code>.</code> 后面不能是 <code>.</code> 。
+          它必须符合正则表达式
+          <code>"^\w+(\.\w+)*$"</code>。这意味着它只能包含大小写字母、数字、下划线和
+          <code>.</code> 。开头或结束不能是是 <code>.</code> ，并且 <code>.</code> 后面不能是 <code>.</code> 。
         </p>
       </td>
     </tr>
@@ -90,8 +88,8 @@ slug: Mozilla/Add-ons/WebExtensions/Native_manifests
       <td>
         <p>原生应用的路径。</p>
         <p>
-          在 Windows 中，这可以是一个相对路径（相对于 manifest ）。
-          在 MacOS 和 Linux中，必须是绝对路径。
+          在 Windows 中，这可以是一个相对路径（相对于 manifest ）。在 MacOS 和
+          Linux 中，必须是绝对路径。
         </p>
       </td>
     </tr>
@@ -101,8 +99,8 @@ slug: Mozilla/Add-ons/WebExtensions/Native_manifests
       <td>
         <p>描述 extension 和原生应用的连接方法。</p>
         <p>
-          目前只支持一种值，那就是 <code>"stdio"</code>。
-          该值表示应用使用标准输入（<code>stdin</code>）来接受消息，用标准输出（<code>stdout</code>）来发送消息。
+          目前只支持一种值，那就是
+          <code>"stdio"</code>。该值表示应用使用标准输入（<code>stdin</code>）来接受消息，用标准输出（<code>stdout</code>）来发送消息。
         </p>
       </td>
     </tr>
@@ -246,13 +244,12 @@ PKCS #11 清单中包含单个 JSON 对象，对象具有如下属性：
         <p>
           在 MacOS 和 Linux 中，它必须和清单文件的文件名保持一致（除文件扩展名外）
         </p>
-        <p>在 Windows 中，它必须与你创建的注册表键的名称相匹配，该注册表键包含本地 ·manifest· 的位置
+        <p>在 Windows 中，它必须与你创建的注册表键的名称相匹配，该注册表键包含本地·manifest·的位置
         </p>
         <p>
           它必须符合正则表达式
-          <code>"^\w+(\.\w+)*$"</code>。
-          这意味着它只能包含小写字母、数字、下划线和 <code>.</code> 。
-          开头或结束不能是是 <code>.</code> ，并且 <code>.</code> 后面不能是 <code>.</code> 。
+          <code>"^\w+(\.\w+)*$"</code>。这意味着它只能包含小写字母、数字、下划线和
+          <code>.</code> 。开头或结束不能是是 <code>.</code> ，并且 <code>.</code> 后面不能是 <code>.</code> 。
         </p>
       </td>
     </tr>
