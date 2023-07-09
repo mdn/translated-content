@@ -117,7 +117,7 @@ browser.tabs
   .then(logTabs, onError);
 ```
 
-获取 `"mozilla.org"` 极其任何子域下所有 HTTP 和 HTTPS URL 的标签页：
+获取 `"mozilla.org"` 及其任何子域下所有 HTTP 和 HTTPS URL 的标签页：
 
 ```js
 function logTabs(tabs) {
