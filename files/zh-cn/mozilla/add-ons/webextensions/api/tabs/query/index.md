@@ -60,7 +60,7 @@ let querying = browser.tabs.query(queryObj)
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 将被兑现为一个包含 {{WebExtAPIRef('tabs.Tab')}} 对象（其中包含有关每个匹配的标签页的信息）的数组。
+一个将兑现为包含 {{WebExtAPIRef('tabs.Tab')}} 对象（其中包含有关每个匹配的标签页的信息）的数组的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 对象。
 
 如果发生任何错误，promise 将以一条错误消息被拒绝。
 
