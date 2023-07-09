@@ -58,7 +58,7 @@ Vue 和其他一些框架一样，使用一个虚拟 DOM（VDOM）来管理元�
 
 由于读写实际的 DOM 节点通常比虚拟节点更昂贵，这可以带来更好的性能。然而，这也意味着在使用框架时，你往往不应该直接通过本地浏览器 API（如 [`Document.getElementById`](/zh-CN/docs/Web/API/Document/getElementById)）来编辑你的 HTML 元素，因为这会导致 VDOM 和真实 DOM 不同步。
 
-相反，如果你需要访问底层DOM节点（比如设置焦点时），你可以使用 [Vue 模板引用](https://cn.vuejs.org/guide/essentials/template-refs.html)。对于自定义的 Vue 组件，你也可以使用 refs 来直接访问子组件的内部结构，然而这样做应该是谨慎的，因为这会使代码更难推理和理解。
+相反，如果你需要访问底层 DOM 节点（比如设置焦点时），你可以使用 [Vue 模板引用](https://cn.vuejs.org/guide/essentials/template-refs.html)。对于自定义的 Vue 组件，你也可以使用 refs 来直接访问子组件的内部结构，然而这样做应该是谨慎的，因为这会使代码更难推理和理解。
 
 要在一个组件中使用 ref，你需要在你想访问的元素上添加一个 `ref` 属性，并为该属性的值添加一个字符串标识符。值得注意的是，在一个组件中，引用必须是唯一的。在同一时间呈现的两个元素不应该有相同的引用。
 
