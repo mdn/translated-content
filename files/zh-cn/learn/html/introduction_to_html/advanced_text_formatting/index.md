@@ -644,7 +644,7 @@ HTML 有个用于标记联系方式的元素——{{htmlelement("address")}}。�
 - {{htmlelement("kbd")}}：用于标记输入电脑的键盘（或其他类型）输入。
 - {{htmlelement("samp")}}：用于标记计算机程序的输出。
 
-让我们看看一些例子。你应该尝试运行一下（尝试运行一下 [other-semantics.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/advanced-text-formatting/other-semantics.html) 样例文件的拷贝）：
+让我们看看一些例子。你应该尝试运行一下（尝试运行一下 [other-semantics.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/advanced-text-formatting/other-semantics.html) 样例文件的拷贝）：
 
 ```html
 <pre><code>const para = document.querySelector('p');

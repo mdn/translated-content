@@ -78,7 +78,7 @@ span {
 
 在我们阅读本文时，我们将多次重复这个例子，因为我们要展示不同定位选项的效果。
 
-如果可能，我们希望你在本地计算机上跟随练习——从 GitHub 仓库下载一个 [`0_basic-flow.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/0_basic-flow.html) ([源代码](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html)) 然后用它作为我们的起步点。
+如果可能，我们希望你在本地计算机上跟随练习——从 GitHub 仓库下载一个 [`0_basic-flow.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/0_basic-flow.html) ([源代码](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/1_static-positioning.html)) 然后用它作为我们的起步点。
 
 ## 介绍定位
 
@@ -107,7 +107,7 @@ span {
 
 如果现在保存和刷新，除了第 2 段的更新的背景颜色，根本没有差别。这很好——正如我们之前所说，静态定位是默认行为！
 
-> **备注：** 你可以在 [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/1_static-positioning.html))。
+> **备注：** 你可以在 [`1_static-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/1_static-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/1_static-positioning.html))。
 
 ### 相对定位
 
@@ -174,7 +174,7 @@ span {
 
 酷，是吗？好吧，所以这个结果这可能不是你期待的——为什么它移动到底部和右边，但我们指定顶部和左边？听起来不合逻辑，但这只是相对定位工作的方式——你需要考虑一个看不见的力，推动定位的盒子的一侧，移动它的相反方向。所以例如，如果你指定 `top: 30px;`一个力推动框的顶部，使它向下移动 30px。
 
-> **备注：** 你可以在 [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/2_relative-positioning.html))。
+> **备注：** 你可以在 [`2_relative-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/2_relative-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/2_relative-positioning.html))。
 
 ### 绝对定位
 
@@ -234,7 +234,7 @@ span {
 
 > **备注：** 是的，margins 仍会影响定位的元素。然而 margin collapsing 不会。
 
-> **备注：** 你可以在[`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/3_absolute-positioning.html))。
+> **备注：** 你可以在[`3_absolute-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/3_absolute-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/3_absolute-positioning.html))。
 
 ### 定位上下文
 
@@ -293,7 +293,7 @@ span {
 
 定位的元素现在相对于{{htmlelement("body")}}元素。
 
-> **备注：** 你可以在这里看到这个例子 [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/4_positioning-context.html)).
+> **备注：** 你可以在这里看到这个例子 [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/4_positioning-context.html)).
 
 ### 介绍 z-index
 
@@ -375,7 +375,7 @@ p:nth-of-type(1) {
 
 请注意，z-index 只接受无单位索引值；你不能指定你想要一个元素是 Z 轴上 23 像素—— 它不这样工作。较高的值将高于较低的值，这取决于你使用的值。使用 2 和 3 将产生与 300 和 40000 相同的效果。
 
-> **备注：** 你可以在这里看到这个例子 [`5_z-index.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/5_z-index.html)).
+> **备注：** 你可以在这里看到这个例子 [`5_z-index.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/5_z-index.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/5_z-index.html)).
 
 ### 固定定位
 
@@ -465,7 +465,7 @@ p:nth-of-type(1) {
 
 {{ EmbedLiveSample('固定定位', '100%', 400) }}
 
-> **备注：** 你可以在这里看到这个例子[`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/6_fixed-positioning.html)).
+> **备注：** 你可以在这里看到这个例子[`6_fixed-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/6_fixed-positioning.html) ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/6_fixed-positioning.html)).
 
 ### position: sticky
 
@@ -602,7 +602,7 @@ body {
 
 {{ EmbedLiveSample('滚动索引', '100%', 200) }}
 
-> **备注：** 你可以在 [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/master/css/css-layout/positioning/7_sticky-positioning.html))。
+> **备注：** 你可以在 [`7_sticky-positioning.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/7_sticky-positioning.html) 查看这个例子 ([see source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/7_sticky-positioning.html))。
 
 ## 试试你的技术！
 

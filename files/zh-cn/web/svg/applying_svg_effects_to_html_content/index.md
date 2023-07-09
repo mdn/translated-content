@@ -197,8 +197,6 @@ pre.target:hover { filter:url(#f3); }
 
 {{EmbedLiveSample('示例：Filtering', 650, 200)}}
 
-[View this example live](/files/3329/filterdemo.xhtml)
-
 ### 示例：Blurred Text
 
 为了模糊文本，基于 Webkit 的浏览器有一个名为 blur 的（前缀）CSS 过滤器，（另见 [CSS filter](/zh-CN/docs/Web/CSS/filter#blur%28%29_2)）。你可以使用 SVG 过滤器获得相同的效果。

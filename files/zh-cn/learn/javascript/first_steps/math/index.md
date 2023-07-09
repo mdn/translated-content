@@ -200,7 +200,7 @@ num2 + num1 / 8 + 2;
 guessCount++;
 ```
 
-> **备注：** 它们最常用于 [循环](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration) 中，您将在以后的课程中了解。例如，假设您想循环查看价格表，并为每个价格增加销售税。您可以使用循环依次查看每个值，并在每种情况下进行必要的计算，以添加销售税。当需要时，增量器用于移动到下一个值。我们实际上提供了一个简单的例子，显示了如何完成 —— [在线查看效果](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html)，并 [查看源代码](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html)，看看是否可以发现增量器！我们稍后将会详细介绍循环。
+> **备注：** 它们最常用于 [循环](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration) 中，您将在以后的课程中了解。例如，假设您想循环查看价格表，并为每个价格增加销售税。您可以使用循环依次查看每个值，并在每种情况下进行必要的计算，以添加销售税。当需要时，增量器用于移动到下一个值。我们实际上提供了一个简单的例子，显示了如何完成 —— [在线查看效果](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html)，并 [查看源代码](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/maths/loop.html)，看看是否可以发现增量器！我们稍后将会详细介绍循环。
 
 我们来试试看你们的控制台。首先，请注意，您不能将这些直接应用于一个数字，这可能看起来很奇怪，但是我们为变量赋值一个新的更新值，而不是对该值进行操作。以下将返回错误：
 
