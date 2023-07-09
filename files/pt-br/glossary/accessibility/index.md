@@ -11,7 +11,7 @@ _Acessibilidade na Web (Web Accessibility)_ (**A11Y**) refere-se às melhores pr
 ### Conhecimento Geral
 
 - [Accessibility resources at MDN](/pt-BR/docs/Web/Accessibility)
-- {{Interwiki("wikipedia", "Web accessibility")}} na Wikipedia
+- [Web accessibility](https://pt.wikipedia.org/wiki/Acessibilidade_web) na Wikipedia
 
 ### Aprenda sobre acessibilidade na web
 

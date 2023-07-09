@@ -12,4 +12,4 @@ O sistema pode ser qualquer produto ou aplicativo com o qual um usuário final d
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Experiência do Usuário")}} na Wikipédia
+- [Experiência do Usuário](https://pt.wikipedia.org/wiki/Experiência_do_usuário) na Wikipédia

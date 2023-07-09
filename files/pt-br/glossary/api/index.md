@@ -19,7 +19,7 @@ No desenvolvimento Web, uma API é geralmente um conjunto de {{glossary("method"
 
 ## Conhecimento geral
 
-- {{Interwiki("wikipedia", "Application_programming_interface", "API")}} no Wikipedia
+- [API](https://pt.wikipedia.org/wiki/Application_programming_interface) no Wikipedia
 
 ### Referência técnica
 
