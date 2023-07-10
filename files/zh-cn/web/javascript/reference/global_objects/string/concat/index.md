@@ -32,13 +32,13 @@ concat(str1, str2, /* …, */ strN)
 
 如果参数不是字符串类型，它们在连接之前将会被转换成字符串。
 
-`concat()` 方法与 [加号/字符串连接运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)（`+`，`+=`）非常相似，不同之处在于 `concat()` 直接将其参数强制转换为字符串进行连接，而加号运算符首先将其操作数强制转换为原始值，然后再进行连接。有关更多信息，请参阅[`+`运算符的参考页面](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)。
+`concat()` 方法与[加号/字符串连接运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)（`+`，`+=`）非常相似，不同之处在于 `concat()` 直接将其参数强制转换为字符串进行连接，而加号运算符首先将其操作数强制转换为原始值，然后再进行连接。有关更多信息，请参阅 [`+` 运算符的参考页面](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)。
 
 ## 示例
 
 ### 使用 concat()
 
-下面的例子演示如何将多个字符串与原字符串合并为一个新字符串
+下面的示例将多个字符串组合为一个新字符串。
 
 ```js
 const hello = "Hello, ";
