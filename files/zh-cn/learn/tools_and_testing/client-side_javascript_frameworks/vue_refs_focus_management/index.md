@@ -56,7 +56,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_m
 
 Vue 和其他一些框架一样，使用一个虚拟 DOM（VDOM）来管理元素。这意味着 Vue 在内存中保留了我们应用程序中所有节点的表示。任何更新首先在内存中的节点上执行，然后所有需要对页面上的实际节点进行的更改都会被批量同步。
 
-由于读写实际的 DOM 节点通常比虚拟节点开销更大，虚拟 DOM 可以带来更好的性能。然而，这也意味着在使用框架时，你往往不应该直接通过本地浏览器 API（如 [`Document.getElementById`](/zh-CN/docs/Web/API/Document/getElementById)）来编辑你的 HTML 元素，因为这会导致 VDOM 和真实 DOM 不同步。
+由于读写实际的 DOM 节点通常比虚拟节点开销更大，虚拟 DOM 可以带来更好的性能。然而，这也意味着在使用框架时，你往往不应该直接通过原生浏览器 API（如 [`Document.getElementById`](/zh-CN/docs/Web/API/Document/getElementById)）来编辑你的 HTML 元素，因为这会导致 VDOM 和真实 DOM 不同步。
 
 相反，如果你需要访问底层 DOM 节点（比如设置焦点时），你可以使用 [Vue 模板引用](https://cn.vuejs.org/guide/essentials/template-refs.html)。对于自定义的 Vue 组件，你也可以使用 refs 来直接访问子组件的内部结构，然而这样做应该是谨慎的，因为这会使代码更难推理和理解。
 
@@ -115,7 +115,7 @@ editCancelled() {
 },
 ```
 
-试着编辑，然后通过键盘保存/取消一个待办事项。你会注意到焦点没有被设置，所以我们仍然有一个问题要解决。如果你打开你的控制台，你会看到一个错误，大意是*“不能访问属性 "focus"，editButtonRef 是 undefined 的”*。这看起来很奇怪。当你激活“Edit”按钮时，你的按钮参考是被定义的，但现在它不是了。这到底是怎么回事？
+试着编辑，然后通过键盘保存/取消一个待办事项。你会注意到焦点没有被设置，所以我们仍然有一个问题要解决。如果你打开你的控制台，你会看到一个错误，大意是“_不能访问属性 "focus"，editButtonRef 是 undefined 的_”。这看起来很奇怪。当你激活“Edit”按钮时，你的按钮参考是被定义的，但现在它不是了。这到底是怎么回事？
 
 记住，当我们把 `isEditing` 改为 `true` 时，我们不再渲染“Edit”按钮的组件部分。这意味着没有元素可以绑定引用，所以它变成了 `undefined`。
 
@@ -170,7 +170,7 @@ Vue 让你在这个生命周期的不同阶段使用**生命周期方法**运行
   v-model.lazy.trim="newName" />
 ```
 
-接下来，在你的组件对象中添加一个 `mounted()` 属性——**注意，这不应该放在 `methods` 属性里面，而应该与 `props`、`data()` 和 `methods` 处于同一个层次。**生命周期方法是独立的特殊方法，不应与用户定义方法放在一起。这些方法不接受参数。注意，你不能在这里使用箭头函数，因为我们需要访问 `this` 来访问我们的 `labelInput`。
+接下来，在你的组件对象中添加一个 `mounted()` 属性——**注意，这不应该放在 `methods` 属性里面，而应该与 `props`、`data()` 和 `methods` 处于同一个层次**。生命周期方法是独立的特殊方法，不应与用户定义方法放在一起。这些方法不接受参数。注意，你不能在这里使用箭头函数，因为我们需要访问 `this` 来访问我们的 `labelInput` ref。
 
 ```js
 mounted() {
