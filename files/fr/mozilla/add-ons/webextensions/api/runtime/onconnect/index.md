@@ -1,16 +1,6 @@
 ---
 title: runtime.onConnect
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onconnect
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
 ---
 

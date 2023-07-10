@@ -110,7 +110,7 @@ input:optional {
 
 これまでの記事で、[生成コンテンツ](/ja/docs/Web/CSS/CSS_Generated_Content)の使い方を見てきましたが、今こそもう少し詳しく話をする良い機会だと思い、今回はその内容を紹介します。
 
-これは、 [`::before`](/ja/docs/Web/CSS/::before) と [`::after`](/ja/docs/Web/CSS/::after) という擬似要素と [`content`](/ja/docs/Web/CSS/content) というプロパティを使用して、影響を受ける要素の前または後にコンテンツの塊を表示させることができるというものです。コンテンツの塊は DOM に追加されないので、画面リーダーからは見えません。それは文書のスタイルの一部なのです。それは擬似要素なので、実際の DOM ノードができるのと同じ方法でスタイルの対象にすることができます。
+これは、 [`::before`](/ja/docs/Web/CSS/::before) と [`::after`](/ja/docs/Web/CSS/::after) という擬似要素と [`content`](/ja/docs/Web/CSS/content) というプロパティを使用して、影響を受ける要素の前または後にコンテンツの塊を表示させることができるというものです。コンテンツの塊は DOM に追加されないので、スクリーンリーダーからは見えません。それは文書のスタイルの一部なのです。それは擬似要素なので、実際の DOM ノードができるのと同じ方法でスタイルの対象にすることができます。
 
 これは、ラベルやアイコンのような視覚的なインジケータを要素に追加したいが、支援技術に拾われたくない場合に、実に有用な方法です。たとえば、[カスタムラジオボタンの例](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html)では、ラジオボタンが選択されたときに内側の円の配置とアニメーションを処理するために生成されたコンテンツを使用しています。
 
@@ -134,7 +134,7 @@ input[type="radio"]:checked::before {
 }
 ```
 
-これは実に有用です。画面リーダーでは、遭遇したラジオボタンやチェックボックスがチェックまたは選択されているかをすでにユーザーに知らせているので、選択を示す別の DOM 要素を読み上げさせたくはないでしょう。紛らわしくなる可能性があるからで宇s。純粋に視覚的なインジケーターを置くことで、この問題は解決されます。
+これは実に有用です。スクリーンリーダーでは、遭遇したラジオボタンやチェックボックスがチェックまたは選択されているかをすでにユーザーに知らせているので、選択を示す別の DOM 要素を読み上げさせたくはないでしょう。紛らわしくなる可能性があるからで宇s。純粋に視覚的なインジケーターを置くことで、この問題は解決されます。
 
 > **メモ:** これは、必要に応じて擬似クラスと擬似要素を組み合わせる方法も示しています。
 
@@ -197,7 +197,7 @@ input:required + span::after {
 
 ## データが妥当が否かでコントロールをスタイル設定する
 
-フォーム検証におけるもう一つの実に重要で基本的な概念は、フォームコントロールのデータが有効か無効か（数値データの場合、範囲内と範囲外のデータという言い方もできる）です。[制約制限](/ja/docs/Web/Guide/HTML/Constraint_validation)を持つフォームコントロールは、これらの状態に基づいて対象とすることができます。
+フォーム検証におけるもう一つの実に重要で基本的な概念は、フォームコントロールのデータが有効か無効か（数値データの場合、範囲内と範囲外のデータという言い方もできる）です。[制約制限](/ja/docs/Web/HTML/Constraint_validation)を持つフォームコントロールは、これらの状態に基づいて対象とすることができます。
 
 ### :valid と :invalid
 
@@ -206,7 +206,7 @@ input:required + span::after {
 - 制約検証を行わないコントロールは常に有効であり、したがって `:valid` と一致します。
 - `required` が設定されているコントロールで、値がないものは無効とみなされ、 `:invalid` および `:required` と一致します。
 - 組み込みの検証機能を持つコントロール、たとえば `<input type="email">` や `<input type="url">` は、入力されたデータが検索するパターンと一致しない場合、 `:invalid` に一致します（ただし、空の場合は有効になります）。
-- 現在の値が {{htmlattrxref("min", "input")}} と {{htmlattrxref("max", "input")}} 属性で指定した範囲の外にあるコントロールは、後述するように `:invalid` と一致しますが {{cssxref(":out-of-range")}} によっても一致させることができます。
+- 現在の値が [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) 属性で指定した範囲の外にあるコントロールは、後述するように `:invalid` と一致しますが {{cssxref(":out-of-range")}} によっても一致させることができます。
 - 他にも `:valid`/`:invalid` に一致する要素を作る方法はいくつかありますが、それは[クライアントサイドのフォーム検証](/ja/docs/Learn/Forms/Form_validation) の記事で見てください。しかし、今は事をシンプルにすることにしましょう。
 
 それでは、 `:valid`/`:invalid` の簡単な例を見てみましょう（ライブ版は [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) を、また[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)も参照してください）。
@@ -261,7 +261,7 @@ input:valid + span::before {
 
 ### 範囲内と範囲外のデータ
 
-上で触れたように、他にも2つの関連する擬似クラスがあります。 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}} です。これらは、 {{htmlattrxref("min", "input")}} と {{htmlattrxref("max", "input")}} によって範囲指定された数値入力に対して、そのデータがそれぞれ指定した範囲内または範囲外にあるときに一致させます。
+上で触れたように、他にも2つの関連する擬似クラスがあります。 {{cssxref(":in-range")}} と {{cssxref(":out-of-range")}} です。これらは、 [`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) によって範囲指定された数値入力に対して、そのデータがそれぞれ指定した範囲内または範囲外にあるときに一致させます。
 
 > **メモ:** 数値の入力型とは、 `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` のことです。
 

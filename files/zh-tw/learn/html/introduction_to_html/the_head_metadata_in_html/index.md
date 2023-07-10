@@ -36,7 +36,7 @@ HTML 文件的 {{glossary("Head", "head")}} 是網頁在加載完畢之後，不
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My test page</title>
   </head>
   <body>
@@ -49,7 +49,7 @@ HTML 的 head 就是 {{htmlelement("head")}} 元素裡面的內容 — 跟 {{htm
 
 ```html
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title>My test page</title>
 </head>
 ```
@@ -67,18 +67,18 @@ HTML 的 head 就是 {{htmlelement("head")}} 元素裡面的內容 — 跟 {{htm
 
 1. 在開始這次主動學習之前，請你先到我們的 GitHub repo 中下載一份 [title-example.html page](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)。要做到這件事情，你可以：
 
-    1. 用你的文字編輯器開一個新檔案，並將原始碼複製到裡面，然後再儲存在一個合適的地方。
-    2. 按下網頁上的 Raw 按鈕，它就會將原始碼以純文字的形式顯示在你瀏覽器的新分頁上。接著點按右鍵，將檔案儲存在你喜歡的地方。
+   1. 用你的文字編輯器開一個新檔案，並將原始碼複製到裡面，然後再儲存在一個合適的地方。
+   2. 按下網頁上的 Raw 按鈕，它就會將原始碼以純文字的形式顯示在你瀏覽器的新分頁上。接著點按右鍵，將檔案儲存在你喜歡的地方。
 
 2. 現在在你的瀏覽器中開啟檔案，你看到的東西應該會長這樣：
 
-    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)這樣子你應該可以很清楚地看到哪裡是 `<h1>`，而哪裡是 `<title>` 了！
+   ![A simple web page with the title set to 'title' element, and the 'h1' set to 'h1' element.](title-example.png)這樣子你應該可以很清楚地看到哪裡是 `<h1>`，而哪裡是 `<title>` 了！
 
 3. 試著開啟文字編輯器，修改兩元素的內容，儲存後再重整網頁，看看有什麼不同。
 
 `<title>` 元素中的內容也被用在其他地方。舉個例子，如果你想要收藏這個網頁，(在 Firefox 上是 _書籤 > 將本頁加入書籤_ 或按下 URL 列的星星符號)，你就會看到 `<title>` 的內容被設為建議的書籤名稱。
 
-![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](bookmark-example.png)
+![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the 'title' element](bookmark-example.png)
 
 接下來你就會看到，`<title>` 的內容也會被用在搜尋當中。
 
@@ -91,7 +91,7 @@ Metadata is data that describes data, and HTML has an "official" way of adding m
 In the example we saw above, this line was included:
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 ```
 
 This element simply specifies the document's character encoding — the character set that the document is permitted to use. `utf-8` is a universal character set that includes pretty much any character from any human language. This means that your web page will be able to handle displaying any language; it's therefore a good idea to set this on every web page you create! For example, your page could handle English and Japanese just fine:
@@ -118,10 +118,12 @@ Many `<meta>` elements include `name` and `content` attributes:
 Two such meta elements that are useful to include on your page define the author of the page, and provide a concise description of the page. Let's look at an example:
 
 ```html
-<meta name="author" content="Chris Mills">
-<meta name="description" content="The MDN Learning Area aims to provide
+<meta name="author" content="Chris Mills" />
+<meta
+  name="description"
+  content="The MDN Learning Area aims to provide
 complete beginners to the Web with all they need to know to get
-started with developing web sites and applications.">
+started with developing web sites and applications." />
 ```
 
 Specifying an author is useful in a few ways: it is useful to be able to work out who wrote the page, if you want to contact them with questions about the content. Some content management systems have facilities to automatically extract page author information and make it available for such purposes.
@@ -135,21 +137,23 @@ The description is also used on search engine result pages. Let's go through an 
 1. Go to the [front page of The Mozilla Developer Network](/zh-TW/).
 2. View the page's source (Right/
 
-    <kbd>Ctrl</kbd>
+   <kbd>Ctrl</kbd>
 
-    \+ click on the page, choose _View Page Source_ from the context menu.)
+   \+ click on the page, choose _View Page Source_ from the context menu.)
 
 3. Find the description meta tag. It will look like this:
 
-    ```html
-    <meta name="description" content="The Mozilla Developer Network (MDN) provides
-    information about Open Web technologies including HTML, CSS, and APIs for both
-    Web sites and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
-    ```
+   ```html
+   <meta
+     name="description"
+     content="The Mozilla Developer Network (MDN) provides
+   information about Open Web technologies including HTML, CSS, and APIs for both
+   Web sites and HTML5 Apps. It also documents Mozilla products, like Firefox OS." />
+   ```
 
 4. Now search for "Mozilla Developer Network" in your favorite search engine (We used Yahoo.) You'll notice the description `<meta>` and `<title>` element content used in the search result — definitely worth having!
 
-    ![A Yahoo search result for "Mozilla Developer Network"](mdn-search-result.png)
+   ![A Yahoo search result for "Mozilla Developer Network"](mdn-search-result.png)
 
 > **備註：** In Google, you will see some relevant subpages of MDN listed below the main MDN homepage link — these are called sitelinks, and are configurable in [Google's webmaster tools](http://www.google.com/webmasters/tools/) — a way to make your site's search results better in the Google search engine.
 
@@ -162,11 +166,15 @@ As you travel around the web, you'll find other types of metadata, too. A lot of
 For example, [Open Graph Data](http://ogp.me/) is a metadata protocol that Facebook invented to provide richer metadata for websites. In the MDN sourcecode, you'll find this:
 
 ```html
-<meta property="og:image" content="https://developer.mozilla.org/static/img/opengraph-logo.png">
-<meta property="og:description" content="The Mozilla Developer Network (MDN) provides
+<meta
+  property="og:image"
+  content="https://developer.mozilla.org/mdn-social-share.png" />
+<meta
+  property="og:description"
+  content="The Mozilla Developer Network (MDN) provides
 information about Open Web technologies including HTML, CSS, and APIs for both Web sites
-and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
-<meta property="og:title" content="Mozilla Developer Network">
+and HTML5 Apps. It also documents Mozilla products, like Firefox OS." />
+<meta property="og:title" content="Mozilla Developer Network" />
 ```
 
 One effect of this is that when you link to MDN on facebook, the link appears along with an image and description: a richer experience for users.
@@ -174,7 +182,7 @@ One effect of this is that when you link to MDN on facebook, the link appears al
 ![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)Twitter also has its own similar proprietary metadata, which has a similar effect when the site's URL is displayed on twitter.com. For example:
 
 ```html
-<meta name="twitter:title" content="Mozilla Developer Network">
+<meta name="twitter:title" content="Mozilla Developer Network" />
 ```
 
 ## 加入屬於自己的網頁 icon
@@ -188,9 +196,9 @@ A favicon can be added to your page by:
 1. Saving it in the same directory as the site's index page, saved in `.ico` format (most browsers will support favicons in more common formats like `.gif` or `.png`, but using the ICO format will ensure it works as far back as Internet Explorer 6.)
 2. Adding the following line into your HTML `<head>` to reference it:
 
-    ```html
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    ```
+   ```html
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+   ```
 
 Here is an example of a favicon in a bookmarks panel:
 
@@ -200,15 +208,28 @@ There are lots of other icon types to consider these days as well. For example, 
 
 ```html
 <!-- third-generation iPad with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.mozilla.org/static/img/favicon144.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="https://developer.mozilla.org/static/img/favicon144.png" />
 <!-- iPhone with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.mozilla.org/static/img/favicon114.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="https://developer.mozilla.org/static/img/favicon114.png" />
 <!-- first- and second-generation iPad: -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.mozilla.org/static/img/favicon72.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="72x72"
+  href="https://developer.mozilla.org/static/img/favicon72.png" />
 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon-precomposed" href="https://developer.mozilla.org/static/img/favicon57.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  href="https://developer.mozilla.org/static/img/favicon57.png" />
 <!-- basic favicon -->
-<link rel="shortcut icon" href="https://developer.mozilla.org/static/img/favicon32.png">
+<link
+  rel="shortcut icon"
+  href="https://developer.mozilla.org/static/img/favicon32.png" />
 ```
 
 The comments explain what each icon is used for — these elements cover things like providing a nice high resolution icon to use when the website is saved to an iPad's home screen.
@@ -222,7 +243,7 @@ Just about all websites you'll use in the modern day will employ {{glossary("CSS
 - The {{htmlelement("link")}} element always goes inside the head of your document. This takes two attributes, rel="stylesheet", which indicates that it is the document's stylesheet, and href, which contains the path to the stylesheet file:
 
   ```html
-  <link rel="stylesheet" href="my-css-file.css">
+  <link rel="stylesheet" href="my-css-file.css" />
   ```
 
 - The {{htmlelement("script")}} element does not have to go in the head; in fact, often it is better to put it at the bottom of the document body (just before the closing `</body>` tag), to make sure that all the HTML content has been read by the browser before it tries to apply JavaScript to it (if JavaScript tries to access an element that doesn't yet exist, the browser will throw an error.)
@@ -254,6 +275,8 @@ Finally, it's worth mentioning that you can (and really should) set the language
 
 ```html
 <html lang="en-US">
+  …
+</html>
 ```
 
 This is useful in many ways. Your HTML document will be indexed more effectively by search engines if its language is set (allowing it to appear correctly in language-specific results, for example), and it is useful to people with visual impairments using screen readers (for example, the word "six" exists in both French and English, but is pronounced differently.)

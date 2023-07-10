@@ -5,7 +5,7 @@ slug: Web/CSS/padding
 
 {{CSSRef}}
 
-**`padding`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)控制元素所有四条边的[内边距区域](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#padding-area)。
+**`padding`** [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)控制元素所有四条边的[内边距区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding-area)。
 
 {{EmbedInteractiveExample("pages/css/padding.html")}}
 
@@ -124,6 +124,6 @@ padding: 1em 3px 30px 5px;  /* 上边：1em  的内边距*/
 
 ## 参阅
 
-- [CSS 基础框盒模型介绍](/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [CSS 基础框盒模型介绍](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}，和 {{cssxref("padding-left")}}。
 - 逻辑相关的属性：{{cssxref("padding-block-start")}}，{{cssxref("padding-block-end")}}，{{cssxref("padding-inline-start")}}，和 {{cssxref("padding-inline-end")}} 与其简称 {{cssxref("padding-block")}} 和 {{cssxref("padding-inline")}}

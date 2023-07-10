@@ -33,13 +33,13 @@ slug: Learn/Forms/HTML5_input_types
 
 ## E-mail 地址字段
 
-将 {{htmlattrxref("type","input")}} 属性设置为 `email` 就可以使用这种控件：
+将 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性设置为 `email` 就可以使用这种控件：
 
 ```html
 <input type="email" id="email" name="email">
 ```
 
-当使用了这种 {{htmlattrxref("type","input")}} 类型时，用户需要输入一个合法的电子邮件地址，任何其他输入都会使得浏览器在表单提交时显示错误信息。你可以在下面的截图中看到这个行为：
+当使用了这种 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 类型时，用户需要输入一个合法的电子邮件地址，任何其他输入都会使得浏览器在表单提交时显示错误信息。你可以在下面的截图中看到这个行为：
 
 ![An invalid email input showing the message "Please enter an email address."](email_address_invalid.png)
 
@@ -69,7 +69,7 @@ slug: Learn/Forms/HTML5_input_types
 
 ## 查询字段
 
-查询字段（Search fields）旨在用于在页面和应用程序上创建搜索框。将 {{htmlattrxref("type","input")}} 属性设置为 `search` 就可以使用这种控件：
+查询字段（Search fields）旨在用于在页面和应用程序上创建搜索框。将 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性设置为 `search` 就可以使用这种控件：
 
 ```html
 <input type="search" id="search" name="search">
@@ -85,7 +85,7 @@ slug: Learn/Forms/HTML5_input_types
 
 ## 电话号码字段
 
-在 {{htmlattrxref("type","input")}} 属性中使用 `tel` 值，即可创建一个专门用于输入电话号码的文本域：
+在 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性中使用 `tel` 值，即可创建一个专门用于输入电话号码的文本域：
 
 ```html
 <input type="tel" id="tel" name="tel">
@@ -103,7 +103,7 @@ slug: Learn/Forms/HTML5_input_types
 
 ## URL 字段
 
-在 {{htmlattrxref("type","input")}} 属性值中使用 `url`，即可创建一个用于输入网址的文本字段：
+在 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值中使用 `url`，即可创建一个用于输入网址的文本字段：
 
 ```html
 <input type="url" id="url" name="url">
@@ -119,13 +119,13 @@ slug: Learn/Forms/HTML5_input_types
 
 ## 数字字段
 
-用于输入数字的控件可以由 {{htmlattrxref("type","input")}} 为 `number` 的 {{HTMLElement("input")}} 元素创建。这个控件外观与文本域类似，但只允许浮点数输入，并通常以旋转器（spinner）的形式提供按钮来增加和减少控件的值。在有动态键盘的设备上，一般会显示数字键盘。
+用于输入数字的控件可以由 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 为 `number` 的 {{HTMLElement("input")}} 元素创建。这个控件外观与文本域类似，但只允许浮点数输入，并通常以旋转器（spinner）的形式提供按钮来增加和减少控件的值。在有动态键盘的设备上，一般会显示数字键盘。
 
 看看下面这个例子（取自于 Android 上的 Firefox 浏览器)：
 
 ![Firefox for Android email keyboard, with ampersand displayed by default.](fx-android-number-type-keyboard.jpg)
 
-使用 `number` input 类型，你可以使用 {{htmlattrxref("min","input")}} 和 {{htmlattrxref("max","input")}} 属性控制允许输入的最小值和最大值。
+使用 `number` input 类型，你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性控制允许输入的最小值和最大值。
 
 你也可以使用 `step` 属性来设定每次按下 spinner 按钮增加或减少的值。默认情况下，number input 类型只允许整数值输入，为了允许浮点数输入，要指定 [`step="any"`](/zh-CN/docs/Web/HTML/Attributes/step)。如果省略了此值，`step` 会默认为 `1`，意味着只有自然数是有效的输入。
 
@@ -151,7 +151,7 @@ slug: Learn/Forms/HTML5_input_types
 
 从使用上来说，滑块的准确性不如文本字段。因此，它们被用来挑选*精确值*不一定那么重要的数字。
 
-在 {{HTMLElement("input")}} 元素中使用 `range` 作为属性 {{htmlattrxref("type","input")}} 的值，就可以创建一个滑块，滑块可以通过鼠标、触摸，或用键盘的方向键移动。
+在 {{HTMLElement("input")}} 元素中使用 `range` 作为属性 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 的值，就可以创建一个滑块，滑块可以通过鼠标、触摸，或用键盘的方向键移动。
 
 正确配置滑块组件非常重要。推荐分别配置 [`min`](/zh-CN/docs/Web/HTML/Attributes/min)、[`max`](/zh-CN/docs/Web/HTML/Attributes/max) 和 [`step`](/zh-CN/docs/Web/HTML/Attributes/step) 属性来设置滑块的最小值、最大值和增量值。
 
@@ -190,7 +190,7 @@ price.addEventListener('input', () => {
 
 HTML 日期控件可用于处理这种特定的数据，提供日历控件并使数据统一。
 
-日期和时间控件可由 {{HTMLElement("input")}} 元素和一个合适的 {{htmlattrxref("type","input")}} 属性值来创建，该值取决于要收集的类型（日期、时间、还是以上全部）。这里有一个示例，在浏览器不支持的情况下会自动回退为 {{htmlelement("select")}} 元素：
+日期和时间控件可由 {{HTMLElement("input")}} 元素和一个合适的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值来创建，该值取决于要收集的类型（日期、时间、还是以上全部）。这里有一个示例，在浏览器不支持的情况下会自动回退为 {{htmlelement("select")}} 元素：
 
 {{EmbedGHLiveSample("learning-area/html/forms/datetime-local-picker-fallback/index.html", '100%', 200)}}
 
@@ -243,7 +243,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 
 颜色总是有点难处理。有许多方法来表达它们，如 RGB 值（十进制或十六进制）、HSL 值、关键词等。
 
-用于输入颜色的控件可以由 {{htmlattrxref("type","input")}} 为 `color` 的 {{HTMLElement("input")}} 元素创建：
+用于输入颜色的控件可以由 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 为 `color` 的 {{HTMLElement("input")}} 元素创建：
 
 ```html
 <input type="color" name="color" id="color">

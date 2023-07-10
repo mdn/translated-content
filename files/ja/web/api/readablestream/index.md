@@ -82,9 +82,9 @@ fetch('https://www.example.org')
   });
 ```
 
-### 非同期反復子をストリームへ変換
+### 非同期イテレーターをストリームへ変換
 
-[（非同期）反復子](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)を読み取り可能なストリームへ変換します。
+[（非同期）イテレーター](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)を読み取り可能なストリームへ変換します。
 
 ```js
 function iteratorToStream(iterator) {
@@ -102,7 +102,7 @@ function iteratorToStream(iterator) {
 }
 ```
 
-これは、反復子が非同期でも非同期でなくても動作します。
+これは、イテレーターが非同期でも非同期でなくても動作します。
 
 ## 仕様書
 

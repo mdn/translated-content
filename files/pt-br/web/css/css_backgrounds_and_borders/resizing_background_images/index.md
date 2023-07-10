@@ -1,6 +1,6 @@
 ---
 title: Alterando a escala das imagens de background
-slug: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 original_slug: Web/Guide/CSS/Scaling_background_images
 ---
 

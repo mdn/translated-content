@@ -1,6 +1,6 @@
 ---
 title: Entendiendo el colapso de margen
-slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
+slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 original_slug: Web/CSS/CSS_Modelo_Caja/Mastering_margin_collapsing
 ---
 
@@ -57,10 +57,6 @@ p {
 ### Result
 
 {{EmbedLiveSample('Ejemplos', 'auto', 350)}}
-
-## Especificaciones
-
-{{Specifications}}
 
 ## También puedes ver
 

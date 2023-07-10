@@ -1,16 +1,6 @@
 ---
 title: i18n.detectLanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - detectLanguage
-  - i18n
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage
 ---
 

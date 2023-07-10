@@ -52,7 +52,7 @@ Dans l'exemple ci-dessus; essayez d'ajouter du texte à l'intérieur de l'élém
 
 ## Spécifier une taille
 
-Nous pouvons bien entendu donner une taille spécifique aux éléments. Quand une taille est ainsi donnée à un élément (et que son contenu est adapté à cette taille), nous parlons de **taille extrinsèque**. Reprenons notre `<div>` de l'exemple précédent — nous pouvons lui donner une [`width`](/fr/docs/Web/CSS/width) spécifique et une [`height`](/fr/docs/Web/CSS/height) spécifique, l'élément a désormais une taille définie peu importe ce qui est placé à l'intérieur de celui-ci. Comme nous l'avons appris dans [notre précédente leçon sur le concept d'overflow,](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content) une hauteur définie peut générer un débordement du contenu si celui-ci est plus important que l'espace alloué par son conteneur.
+Nous pouvons bien entendu donner une taille spécifique aux éléments. Quand une taille est ainsi donnée à un élément (et que son contenu est adapté à cette taille), nous parlons de **taille extrinsèque**. Reprenons notre `<div>` de l'exemple précédent — nous pouvons lui donner une [`width`](/fr/docs/Web/CSS/width) spécifique et une [`height`](/fr/docs/Web/CSS/height) spécifique, l'élément a désormais une taille définie peu importe ce qui est placé à l'intérieur de celui-ci. Comme nous l'avons appris dans [notre précédente leçon sur le concept d'overflow,](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content) une hauteur définie peut générer un débordement du contenu si celui-ci a plus de contenu que l'espace alloué par son conteneur.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/height.html", '100%', 600)}}
 
@@ -121,24 +121,3 @@ Nous avons abordé beaucoup de choses dans cet article, mais pouvez-vous vous so
 Cette leçon a voulu vous sensibiliser aux difficultés principales qu'on rencontre dès qu'on veut donner une dimension aux objets sur le Web. Lorsque vous verrez [les dispositions en CSS](/fr/docs/Learn/CSS/CSS_layout), le dimensionnement deviendra crucial pour maîtriser les différents modes de disposition : autant en comprendre les concepts avant d'aller plus loin.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
-
-## Dans ce module
-
-1. [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Sélecteurs de type, de classe et d'ID](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Sélecteurs d'attributs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Arrière-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Gestion de différentes directions de texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Débordements de contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Définir la taille des éléments en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, médias et éléments de formulaire](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Mise en page de tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Débogage de CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organiser votre CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

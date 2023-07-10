@@ -1,16 +1,6 @@
 ---
 title: windows.onFocusChanged
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
-  - onFocusChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
 ---
 

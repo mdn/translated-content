@@ -78,7 +78,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 > **备注：** 像{{htmlelement("img")}}和{{htmlelement("video")}}这样的元素有时被称之为**替换元素**，因为这样的元素的内容和尺寸由外部资源（像是一个图片或视频文件）所定义，而不是元素自身。
 
-> **备注：** 你可以在[GitHub 上的这个网页](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)看到这个例子的运行结果（也可以看到[源码](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)）。
+> **备注：** 你可以在[GitHub 上的这个网页](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)看到这个例子的运行结果（也可以看到[源码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)）。
 
 ### 备选文本
 
@@ -307,7 +307,7 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
 
 这个 {{htmlelement("figcaption")}} 元素 告诉浏览器和其他辅助的技术工具这段说明文字描述了 {{htmlelement("figure")}} 元素的内容。
 
-> **备注：** 从无障碍的角度来说，说明文字和 {{htmlattrxref('alt','img')}} 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 {{htmlattrxref('alt','img')}} 文字只有在图片无法显示时才这样。所以，说明文字和 `alt` 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试让你的图片不显示，看看效果如何。
+> **备注：** 从无障碍的角度来说，说明文字和 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文字只有在图片无法显示时才这样。所以，说明文字和 `alt` 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试让你的图片不显示，看看效果如何。
 
 注意 {{htmlelement("figure")}} 里不一定要是一张图片，只要是一个这样的独立内容单元：
 

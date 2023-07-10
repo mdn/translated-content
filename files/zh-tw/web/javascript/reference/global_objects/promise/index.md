@@ -35,7 +35,7 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 一個處於擱置狀態的 promise 能以一個值被實現（fulfilled），或是以一個原因或錯誤而被拒絕（rejected）。當上述任一狀態轉換發生時，那些透過 `then` 方法所繫結（associated）的處理函式列隊就會依序被調用。（若一個 promise 已被實現或拒絕，繫結（attached）於它的處理函式將立即被呼叫，因此完成非同步操作與繫結處理函式之間不存在競爭條件（race condition）。）
 
-由於 `{{jsxref("Promise.then", "Promise.prototype.then()")}}` 以及 `{{jsxref("Promise.catch", "Promise.prototype.catch()")}}` 方法都回傳 promise，它們可以被串接。
+由於 {{jsxref("Promise.then", "Promise.prototype.then()")}} 以及 {{jsxref("Promise.catch", "Promise.prototype.catch()")}} 方法都回傳 promise，它們可以被串接。
 
 ![](https://cdn.rawgit.com/Vectaio/a76330b025baf9bcdf07cb46e5a9ef9e/raw/26c4213a93dee1c39611dcd0ec12625811b20a26/js-promise.svg)
 
@@ -104,7 +104,7 @@ function myAsyncFunction(url) {
     xhr.onerror = () => reject(xhr.statusText);
     xhr.send();
   });
-};
+}
 ```
 
 ## 範例
@@ -116,7 +116,7 @@ let myFirstPromise = new Promise((resolve, reject) => {
   // 當非同步作業成功時，呼叫 resolve(...),而失敗時則呼叫 reject(...)。
   // 在這個例子中，使用 setTimeout(...) 來模擬非同步程式碼。
   // 在實務中，您將可能使用像是 XHR 或者一個 HTML5 API.
-  setTimeout(function(){
+  setTimeout(function () {
     resolve("Success!"); // Yay！非常順利！
   }, 250);
 });
@@ -140,48 +140,58 @@ myFirstPromise.then((successMessage) => {
 promise 的實現值單純地經由一個實現回呼函式 {{jsxref("Promise.prototype.then()","p1.then()")}} 被印出。下以一些文字紀錄來展現方法中同步的與非同步處理 promise 的部分是如何分離彼此。
 
 ```js
-'use strict';
+"use strict";
 var promiseCount = 0;
 
 function testPromise() {
-    let thisPromiseCount = ++promiseCount;
+  let thisPromiseCount = ++promiseCount;
 
-    let log = document.getElementById('log');
-    log.insertAdjacentHTML('beforeend', thisPromiseCount +
-        ') Started (<small>Sync code started</small>)<br/>');
+  let log = document.getElementById("log");
+  log.insertAdjacentHTML(
+    "beforeend",
+    thisPromiseCount + ") Started (<small>Sync code started</small>)<br/>"
+  );
 
-    // 建立一個新的 promise：此 promise 承諾一個數值計數, 由 1 開始（等待約 2 秒）
-    let p1 = new Promise(
-        // 這個解決器函數（resolver function）呼叫實現或
-        // 拒絕 promise。
-        (resolve, reject) => {
-            log.insertAdjacentHTML('beforeend', thisPromiseCount +
-                ') Promise started (<small>Async code started</small>)<br/>');
-            // 在此例子單純用來產生非同步特性。
-            window.setTimeout(
-                function() {
-                    // 實現這個 promise!
-                    resolve(thisPromiseCount);
-                }, Math.random() * 2000 + 1000);
-        }
-    );
+  // 建立一個新的 promise：此 promise 承諾一個數值計數, 由 1 開始（等待約 2 秒）
+  let p1 = new Promise(
+    // 這個解決器函數（resolver function）呼叫實現或
+    // 拒絕 promise。
+    (resolve, reject) => {
+      log.insertAdjacentHTML(
+        "beforeend",
+        thisPromiseCount +
+          ") Promise started (<small>Async code started</small>)<br/>"
+      );
+      // 在此例子單純用來產生非同步特性。
+      window.setTimeout(function () {
+        // 實現這個 promise!
+        resolve(thisPromiseCount);
+      }, Math.random() * 2000 + 1000);
+    }
+  );
 
-    // 接著透過呼叫 then() 來決定 promise 進入 resolved 時，要透過 then() 做什麼，
-    // 或是進入 rejected 時，要透過 catch() 方法要做什麼。
-    p1.then(
-        // 印出實現值（fulfillment value）
-        function(val) {
-            log.insertAdjacentHTML('beforeend', val +
-                ') Promise fulfilled (<small>Async code terminated</small>)<br/>');
-        })
-    .catch(
-        // 印出失敗訊息（rejection reason）
-        (reason) => {
-            console.log('Handle rejected promise ('+reason+') here.');
-        });
+  // 接著透過呼叫 then() 來決定 promise 進入 resolved 時，要透過 then() 做什麼，
+  // 或是進入 rejected 時，要透過 catch() 方法要做什麼。
+  p1.then(
+    // 印出實現值（fulfillment value）
+    function (val) {
+      log.insertAdjacentHTML(
+        "beforeend",
+        val + ") Promise fulfilled (<small>Async code terminated</small>)<br/>"
+      );
+    }
+  ).catch(
+    // 印出失敗訊息（rejection reason）
+    (reason) => {
+      console.log("Handle rejected promise (" + reason + ") here.");
+    }
+  );
 
-    log.insertAdjacentHTML('beforeend', thisPromiseCount +
-        ') Promise made (<small>Sync code terminated</small>)<br/>');
+  log.insertAdjacentHTML(
+    "beforeend",
+    thisPromiseCount +
+      ") Promise made (<small>Sync code terminated</small>)<br/>"
+  );
 }
 ```
 
@@ -190,10 +200,11 @@ function testPromise() {
 ```js
 if ("Promise" in window) {
   let btn = document.getElementById("btn");
-  btn.addEventListener("click",testPromise);
+  btn.addEventListener("click", testPromise);
 } else {
-  log = document.getElementById('log');
-  log.innerHTML = "Live example not available as your browser doesn't support the <code>Promise<code> interface.";
+  log = document.getElementById("log");
+  log.innerHTML =
+    "Live example not available as your browser doesn't support the <code>Promise<code> interface.";
 }
 ```
 

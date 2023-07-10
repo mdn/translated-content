@@ -1,13 +1,7 @@
 ---
 title: Codage des caractères
 slug: Glossary/Character_encoding
-tags:
-  - Composition
-  - Glossaire
-  - Internationalisation
-  - Langues
 translation_of: Glossary/character_encoding
-original_slug: Glossaire/codage_caracteres
 ---
 
 Un encodage définit une correspondance entre les octets et le texte. Une séquence d'octets permet différentes interprétations textuelles. En spécifiant un codage particulier (tel que UTF-8), nous spécifions comment la séquence d'octets doit être interprétée.

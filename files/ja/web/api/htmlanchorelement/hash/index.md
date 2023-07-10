@@ -1,14 +1,16 @@
 ---
-title: HTMLAnchorElement.hash
+title: "HTMLAnchorElement: hash プロパティ"
 slug: Web/API/HTMLAnchorElement/hash
 original_slug: Web/API/HTMLHyperlinkElementUtils/hash
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{ APIRef("HTML DOM") }}
 
 **`HTMLAnchorElement.hash`** プロパティは、`'#'` の後に URL のフラグメント識別子が続く文字列を返します。
 
-フラグメントは[パーセントデコード](/ja/docs/Glossary/percent-encoding)されません。 URL にフラグメント識別子がない場合、このプロパティには空の文字列 `""` が含まれます。
+フラグメントは [URL デコード](https://ja.wikipedia.org/wiki/パーセントエンコーディング)されません。 URL にフラグメント識別子がない場合、このプロパティには空の文字列 `""` が含まれます。
 
 ## 値
 

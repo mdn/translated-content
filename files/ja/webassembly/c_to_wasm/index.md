@@ -1,8 +1,6 @@
 ---
 title: C/C++ から WebAssembly へのコンパイル
-slug: WebAssembly/C_to_wasm
-l10n:
-  sourceCommit: 1bd75874286233173bdf69e5ec8e5ec4052fb0a6
+slug: WebAssembly/C_to_Wasm
 ---
 
 {{WebAssemblySidebar}}
@@ -30,7 +28,7 @@ Emscripten SDK を取得します。以下の指示に従ってください。<h
 
 最も簡単なケースを見てみましょう。コードを WebAssembly としてブラウザーで実行するための全てを Emscripten で生成するようにします。
 
-1. まずはコンパイルするためのサンプルコードを用意します。以下の C のサンプルコードをコピーして `hello.c` としてローカルドライブの新しいディレクトリーに保存してください:
+1. まずはコンパイルするためのサンプルコードを用意します。以下の C のサンプルコードをコピーして `hello.c` としてローカルドライブの新しいディレクトリーに保存してください。
 
     ```cpp
     #include <stdio.h>
@@ -59,7 +57,7 @@ Emscripten SDK を取得します。以下の指示に従ってください。<h
 
 ### サンプルコードを実行する
 
-WebAssembly に対応しているブラウザーで `hello.html` を読み込むるだけです。既定で有効なのは Firefox 52, Chrome 57, Opera 44 以降です。
+WebAssembly に対応しているブラウザーで `hello.html` を読み込むだけです。既定で有効なのは Firefox 52, Chrome 57, Opera 44 以降です。
 
 > **メモ:** 生成された HTML ファイル (`hello.html`) をローカルのハードドライブから直接開こうとすると（例: `file://your_path/hello.html`）、 _`both async and sync fetching of the wasm failed` という複数行のエラーメッセージが表示されます。 HTML ファイルを HTTP サーバー (`http://`) で実行する必要があります。詳しくは [ローカルのテストサーバーを設定するには](/ja/docs/Learn/Common_questions/set_up_a_local_testing_server) を参照してください。
 
@@ -91,6 +89,7 @@ WebAssembly に対応しているブラウザーで `hello.html` を読み込む
     今回渡したオプションは少しだけ異なります。
 
     - `-o hello2.html` と指定したことで、今回コンパイラーは JavaScript グルーコードと `.html` を出力します。
+    - `-O3` はコードを最適化するために使用されます。 Emcc には他の C コンパイラと同様に、最適化レベルとして `-O0`（最適化しない）、`-O1`、`-O2`、`-Os`、`-Oz`、`-Og`、`-O3` があります。 `-O3` は、リリースビルドに適した設定です。
     - さらに `--shell-file html_template/shell_minimal.html` と指定しました — これは例を実行する HTML を生成するための、HTML テンプレートパスです。
 
 4. この例を実行してみましょう。上記のコマンドで hello2.html が生成されます。これは生成された wasm コードに対してロード、実行などを行うグルーコードを含むテンプレートと同じ内容を持ちます。ブラウザーを開いて最後の例と同じ出力であることを確認してください。

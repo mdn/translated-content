@@ -62,7 +62,7 @@ slug: Web/HTML/Element/i
 
   - 音声またはムードが変わるところ
   - 分類学上の表記（"_Homo sapiens_" のような属や種など）
-  - 他言語の慣用語（"_et cetera_"など）。言語を識別するには {{htmlattrxref("lang")}} 属性を指定する必要があります。
+  - 他言語の慣用語（"_et cetera_"など）。言語を識別するには [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性を指定する必要があります。
   - 専門用語
   - 音訳
   - 感想（「彼女は不思議に思った、_ところでこの作家は何を話しているのだろう_」など）

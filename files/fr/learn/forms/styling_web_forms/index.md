@@ -46,7 +46,7 @@ Ceci inclut aussi tous les widgets de champs textuels (qu'ils soient mono ou mul
 
 L'apparence de certains éléments ne peut être modifiée que rarement et peut nécessiter quelques astuces complexes, et parfois une connaissance avancée des CSS3.
 
-Ceci inclut l'élément {{HTMLElement("legend")}}. Ce dernier ne peut pas être positionné correctement sur toutes les plateformes. De plus, l'apparence des cases à cocher et des boutons radio ne peut pas être modifiée directement. Toutefois, grâce à CSS3 c'est possible de contourner cette limitation. L'apparence du contenu {{htmlattrxref("placeholder", "input")}} ne peut pas être modifiée d'une manière standard. Mais tous les navigateurs qui sont compatible avec cet attribut ont aussi implémenté des pseudo-classes ou pseudo-élément propriétaires qui permettent de modifier son apparence.
+Ceci inclut l'élément {{HTMLElement("legend")}}. Ce dernier ne peut pas être positionné correctement sur toutes les plateformes. De plus, l'apparence des cases à cocher et des boutons radio ne peut pas être modifiée directement. Toutefois, grâce à CSS3 c'est possible de contourner cette limitation. L'apparence du contenu [`placeholder`](/fr/docs/Web/HTML/Element/input#placeholder) ne peut pas être modifiée d'une manière standard. Mais tous les navigateurs qui sont compatible avec cet attribut ont aussi implémenté des pseudo-classes ou pseudo-élément propriétaires qui permettent de modifier son apparence.
 
 Nous allons voir comment gérer ces cas particuliers dans l'article [Apparence avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms).
 
@@ -392,17 +392,3 @@ Comme vous pouvez le voir, tant que nous voulons construire des formulaires avec
 Dans le [prochain article](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms), nous verrons comment gérer les widgets des catégories « brutes » et « truands ».
 
 {{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
-
-## Dans ce module
-
-- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML)
-- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/Comment_structurer_un_formulaire_HTML)
-- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs)
-- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)
-- [Validation des données de formulaire](/fr/docs/Learn/Forms/Validation_donnees_formulaire)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- Mise en forme des formulaires HTML
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)

@@ -43,7 +43,7 @@ function getUint64(dataview, byteOffset, littleEndian) {
 }
 ```
 
-或者，如果你需要完整的 64 位的范围，你可以创建 {{jsxref("BigInt")}}。此外，尽管原生 BigInt 比等效的用户态的库快得多，但由于其大小可变的性质，BitInt 始终比 JavaScript 中的 32 位整数要慢得多。
+或者，如果你需要完整的 64 位的范围，你可以创建 {{jsxref("BigInt")}}。此外，尽管原生 BigInt 比等效的用户态的库快得多，但由于其大小可变的性质，BigInt 始终比 JavaScript 中的 32 位整数要慢得多。
 
 ```js
 const BigInt = window.BigInt, bigThirtyTwo = BigInt(32), bigZero = BigInt(0);

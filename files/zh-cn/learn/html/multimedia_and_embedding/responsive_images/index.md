@@ -19,7 +19,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
     <tr>
       <th scope="row">学习目标：</th>
       <td>
-        学习使用 {{htmlattrxref("srcset", "img")}}、{{htmlelement("picture")}} 元素等特性来实现网页中响应式图像的解决方案。
+        学习使用 <a href="zh-CN/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a>、{{htmlelement("picture")}} 元素等特性来实现网页中响应式图像的解决方案。
       </td>
     </tr>
   </tbody>
@@ -31,7 +31,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 ![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)
 
-这个网页在宽屏设备上表现良好，例如笔记本电脑或台式机（你可以[查看在线演示](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html)并且在 GitHub 上查看[源代码](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html)）。我们不会在这节课中详细讨论它的 CSS，只说以下几个要点：
+这个网页在宽屏设备上表现良好，例如笔记本电脑或台式机（你可以[查看在线演示](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html)并且在 GitHub 上查看[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/not-responsive.html)）。我们不会在这节课中详细讨论它的 CSS，只说以下几个要点：
 
 - 正文内容设置了 1200 像素的最大宽度——在大于该宽度的视口中，正文会保持 1200 像素，并将其本身置于可用空间的中间；在小于该宽度的视口中，正文的宽度是视口宽度的 100%。
 - 头部图片已经被设置为，无论头部宽度如何变化，它的中心始终处于头部的中间，这样如果网站显示在窄屏上，图片中心的重要细节（里面的人）仍然可以看到，而两边超出的部分就消失了。图片的高度是 200px。
@@ -53,7 +53,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 当 web 面世时，这样的问题并不存在，在上世纪 90 年代中期，仅仅可以通过笔记本电脑和台式机来浏览 web 页面，所以浏览器开发者和规范制定者甚至没有想到要实现这种解决方式（响应式开发）。最近应用的响应式图片技术，通过让浏览器提供多个图像文件来解决上述问题，比如使用相同显示效果的图片但包含多个不同的分辨率（分辨率切换），或者使用不同的图片以适应不同的空间分配（美术设计）。
 
-> **备注：** 在这篇文章中讨论的新特性——{{htmlattrxref("srcset", "img")}}/{{htmlattrxref("sizes", "img")}}/{{htmlelement("picture")}}——都已经被新版本的现代浏览器和移动浏览器所支持（包括 Edge，而不是 IE）。
+> **备注：** 在这篇文章中讨论的新特性——[`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset)/[`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}}——都已经被新版本的现代浏览器和移动浏览器所支持（包括 Edge，而不是 IE）。
 
 ## 如何创建响应式图片？
 
@@ -67,7 +67,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 <img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy" />
 ```
 
-我们可以使用两个新的属性——{{htmlattrxref("srcset", "img")}} 和 {{htmlattrxref("sizes", "img")}}——来提供更多额外的资源图像和提示，帮助浏览器选择合适的一个资源。你可以从 Github 上的 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 中查看示例（也可以查看它的[源代码](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)）：
+我们可以使用两个新的属性——[`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes)——来提供更多额外的资源图像和提示，帮助浏览器选择合适的一个资源。你可以从 Github 上的 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 中查看示例（也可以查看它的[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/responsive.html)）：
 
 ```html
 <img
@@ -113,13 +113,13 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 > **备注：** 在桌面端浏览器测试上面的示例时，如果你把浏览器设到最小宽度，却没有加载更小的图片，请检查一下此时的视口是什么（你可以打开浏览器的 JavaScript 控制台，输入 `document.querySelector('html').clientWidth` 来获得近似视口宽度）。不同的浏览器设置了窗口可以缩小到的最小宽度，它可能比你想的更宽一点。使用移动端浏览器测试时，可以使用类似 Firefox 的 `about:debugging` 页这样的工具，使用桌面端开发者工具检查在移动端加载的页面。你可以在 Firefox 开发者工具中的 [Network 标签](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)中查看加载了哪张图片。
 
-不支持这些特性的旧版本浏览器，会忽略这些属性，它们直接越过并按常规加载 {{htmlattrxref("src", "img")}} 属性引用的图像文件。
+不支持这些特性的旧版本浏览器，会忽略这些属性，它们直接越过并按常规加载 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性引用的图像文件。
 
 > **备注：** 在 HTML 文件中的 {{htmlelement("head")}} 标签里，你将会找到这一行代码 `<meta name="viewport" content="width=device-width">`：这行代码会强制让手机浏览器采用它们真实可视窗口的宽度来加载网页（有些手机浏览器会提供不真实的可视窗口宽度，用比真实视口更大的宽度加载网页，然后再缩小加载的页面，这样的做法对响应式图片或其他响应式设计，没有任何帮助）。
 
 ### 分辨率切换：相同的尺寸，不同的分辨率
 
-如果你要支持多分辨率显示，但希望每个人在屏幕上看到的图片的实际尺寸是相同的，你可以使用 `srcset` 结合 x 语法——一种更简单的语法——而不用 `sizes`，来让浏览器选择合适分辨率的图片。你可以参考这个示例 [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)（或查看[源代码](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)）：
+如果你要支持多分辨率显示，但希望每个人在屏幕上看到的图片的实际尺寸是相同的，你可以使用 `srcset` 结合 x 语法——一种更简单的语法——而不用 `sizes`，来让浏览器选择合适分辨率的图片。你可以参考这个示例 [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)（或查看[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)）：
 
 ```html
 <img srcset="elva-fairy-320w.jpg, elva-fairy-480w.jpg 1.5x, elva-fairy-640w.jpg 2x"
@@ -206,7 +206,7 @@ img {
 这章节中充满了响应式图像——希望你享受学习新技术的过程。总而言之，我们讨论了两个不同的问题：
 
 - **美术设计**：当你想为不同布局提供不同剪裁的图片——比如在桌面布局上显示完整的、横向图片，而在手机布局上显示一张剪裁过的、突出重点的纵向图片，可以用 {{htmlelement("picture")}} 元素来实现。
-- **分辨率切换**：当你想要为窄屏提供更小的图片时，因为小屏幕不需要像桌面端显示那么大的图片；以及你想为高/低分辨率屏幕提供不同分辨率的图片时，都可以通过[矢量图](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)（SVG 图片）、{{htmlattrxref("srcset", "img")}} 以及 {{htmlattrxref("sizes", "img")}} 属性来实现。
+- **分辨率切换**：当你想要为窄屏提供更小的图片时，因为小屏幕不需要像桌面端显示那么大的图片；以及你想为高/低分辨率屏幕提供不同分辨率的图片时，都可以通过[矢量图](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)（SVG 图片）、[`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 以及 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes) 属性来实现。
 
 此时整个[多媒体与嵌入](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding)模块接近尾声！在继续下一个模块之前，你现在唯一要做的就是进行一次[多媒体与嵌入的测试](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)，看看你学得怎样。希望你玩得开心！
 

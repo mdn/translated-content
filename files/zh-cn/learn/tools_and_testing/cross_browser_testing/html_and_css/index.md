@@ -170,7 +170,7 @@ HTML5 表单元素也表现出了后备素质--HTML5 引入了一些特殊的 [`
 
 {{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}
 
-> **备注：** 您也可以在 GitHub 上以[forms-test.html 的形式直接](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html)看到这个运行（参见[源代码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/forms-test.html)）。
+> **备注：** 您也可以在 GitHub 上以[forms-test.html 的形式直接](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html)看到这个运行（参见[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)）。
 
 如果您在支持的浏览器（如桌面/ Android Chrome 或 iOS Safari）上查看该示例，则会在尝试输入数据时看到特殊的小部件/功能。在一个非支持的平台上，例如 Firefox 或 Internet Explorer，输入只会回退到正常的文本输入，所以至少用户仍然可以输入一些信息。
 
@@ -184,7 +184,7 @@ CSS 的情况可以说比 HTML 更好一些。如果一个浏览器遇到一个�
 
 ![](blingy-button.png)
 
-> **备注：** 你也可以在 GitHub 上浏览这个例子：[button-with-fallback.html 的形式运行](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)（另见[源代码](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)）。
+> **备注：** 你也可以在 GitHub 上浏览这个例子：[button-with-fallback.html 的形式运行](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)（另见[源代码](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)）。
 
 该按钮有一些样式声明，但我们最感兴趣的两个如下：
 
@@ -214,7 +214,7 @@ button:active {
 
 为了解决这个问题，我们添加了第二个 background-color 声明，它只是指定了一个十六进制颜色 - 这在旧版本的浏览器中得到了支持，并且在现代闪亮功能无法使用的情况下作为后备。访问此页面的浏览器首先应用第一个 background-color 值，当它到达第二个 background-color 声明时，如果它支持 RGBA 颜色，它将用这个值覆盖初始值。如果不是的话，它会忽略整个声明，继续前进。
 
-> **备注：** 这同样适用于其他 CSS 功能，如真正的[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)，[@font-face](/zh-CN/docs/Web/CSS/@font-face) 以及 [@supports](/zh-CN/docs/Web/CSS/@supports) 块 - 如果不支持他们，浏览器只是忽略它们。
+> **备注：** 这同样适用于其他 CSS 功能，如真正的[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)，[@font-face](/zh-CN/docs/Web/CSS/@font-face) 以及 [@supports](/zh-CN/docs/Web/CSS/@supports) 块 - 如果不支持他们，浏览器只是忽略它们。
 
 #### IE 条件注释
 
@@ -266,7 +266,7 @@ form > #date
 
 然而，出现在 IE 9 比旧的版本的另一个问题是，没有任何新的选择（主要是伪类和伪元素如 [:nth-of-type](/zh-CN/docs/Web/CSS/:nth-of-type)，[:not](/zh-CN/docs/Web/CSS/:not)，[::selection](/zh-CN/docs/Web/CSS/::selection)，等）的工作。如果你想在你的 CSS 中使用这些，并且需要支持较老的 IE 版本，那么一个好的方法就是使用 Keith Clark 的 [Selectivizr](http://selectivizr.com/) 库 - 这是一个小型的 JavaScript 库，可以在现有的 JavaScript 库（如 [jQuery](http://jquery.com/) 或 [MooTools](http://mootools.net/)）上工作。
 
-1. 要尝试此示例，请创建 [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html) 的本地副本。如果你看看这个现场直播，你会发现它包含两个段落，其中一个是风格。我们已经选择了这个段落 `p:first-child`，这在老版本的 IE 中不起作用。
+1. 要尝试此示例，请创建 [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html) 的本地副本。如果你看看这个现场直播，你会发现它包含两个段落，其中一个是风格。我们已经选择了这个段落 `p:first-child`，这在老版本的 IE 中不起作用。
 2. 现在下载 [MooTools](http://mootools.net/)和[Selectivizr](http://selectivizr.com/)，并将它们保存在与示例 HTML 相同的目录中。
 3. 将下面的代码放到 HTML 文档的开头，就在开始 `<style>` 标记之前：
 
@@ -407,7 +407,7 @@ body {
 
 #### 响应式设计问题
 
-响应式设计是创建网页布局以适应不同设备形式因素（例如不同的屏幕宽度，方向（纵向或横向）或分辨率）的做法。例如桌面布局在移动设备上看起来会很糟糕，所以您需要使用[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries)来提供合适的移动布局，并确保使用[视口](/zh-CN/docs/Mozilla/Mobile/Viewport_meta_tag)正确应用它。您可以在[响应式设计的构建模块中](/zh-CN/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks)找到这些实践的详细说明。
+响应式设计是创建网页布局以适应不同设备形式因素（例如不同的屏幕宽度，方向（纵向或横向）或分辨率）的做法。例如桌面布局在移动设备上看起来会很糟糕，所以您需要使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)来提供合适的移动布局，并确保使用[视口](/zh-CN/docs/Mozilla/Mobile/Viewport_meta_tag)正确应用它。您可以在[响应式设计的构建模块中](/zh-CN/docs/Web/Apps/Progressive/Responsive/responsive_design_building_blocks)找到这些实践的详细说明。
 
 解决方案也是一个大问题 - 例如，移动设备不太可能需要比台式电脑大的图像，并且更可能具有较慢的互联网连接，并且甚至可能使昂贵的数据计划浪费带宽成为更多的问题。另外，不同的设备可以具有一系列不同的分辨率，这意味着较小的图像可以出现像素化。有许多技术可以让您解决这些问题，从简单的[移动第一媒体查询](/zh-CN/Apps/Progressive/Responsive/Mobile_first)到更复杂的[响应式图像技术](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#Resolution_switching_Different_sizes)。
 

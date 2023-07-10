@@ -46,7 +46,7 @@ HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("vid
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-你可以点击上面的文章链接来查看相关 HTML 元素的所有特性；但在这篇文章中，主要目的是学习我们最感兴趣的{{htmlattrxref("controls", "video")}}属性，它会启用默认的播放设置。如果没有指定该属性，则播放器中不会显示相关控件：
+你可以点击上面的文章链接来查看相关 HTML 元素的所有特性；但在这篇文章中，主要目的是学习我们最感兴趣的[`controls`](/zh-CN/docs/Web/HTML/Element/video#controls)属性，它会启用默认的播放设置。如果没有指定该属性，则播放器中不会显示相关控件：
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 
@@ -64,9 +64,9 @@ HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("vid
 
 ### 入门
 
-想要使用这个示例的代码来入门，请下载[media-player-start.zip](https://github.com/mdn/learning-area/raw/master/javascript/apis/video-audio/start/media-player-start.zip) 并解压到您的硬盘上的一个新建目录里。如果想要下载[examples repo](https://github.com/mdn/learning-area)，它位于 `javascript/apis/video-audio/start/` 路径下。
+想要使用这个示例的代码来入门，请下载 [media-player-start.zip](https://github.com/mdn/learning-area/raw/main/javascript/apis/video-audio/start/media-player-start.zip) 并解压到你的硬盘上的一个新建目录里。如果想要下载[示例仓库](https://github.com/mdn/learning-area)，它位于 `javascript/apis/video-audio/start/` 路径下。
 
-下载并解压之后，如果您加载这个 HTML，你将会看到一个通过浏览器原生播放控件渲染的非常一般的 HTML5 视频播放器。
+下载并解压之后，如果你加载这个 HTML，你将会看到一个通过浏览器原生播放控件渲染的非常一般的 HTML5 视频播放器。
 
 #### 探索 HTML
 
@@ -456,7 +456,7 @@ clearInterval(intervalFwd);
     }
     ```
 
-## 另请参阅
+## 参见
 
 - {{domxref("HTMLMediaElement")}}
 - [视频和音频内容](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)— \<video>和\<audio>的简单指南。

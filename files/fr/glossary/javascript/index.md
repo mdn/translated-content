@@ -1,13 +1,7 @@
 ---
 title: JavaScript
 slug: Glossary/JavaScript
-tags:
-  - Encodage
-  - Glossaire
-  - JavaScript
-  - l10n:priority
 translation_of: Glossary/JavaScript
-original_slug: Glossaire/JavaScript
 ---
 
 JavaScript (JS) est un langage de programmation principalement utilisé côté client pour générer des pages web dynamiquement, mais également côté {{Glossary("Server","serveur")}}, depuis l'arrivée de [Node JS](https://nodejs.org/fr/).

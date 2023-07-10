@@ -102,4 +102,4 @@ main()
 - [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("GeneratorFunction", "生成器函数", "", 1)}}
 - {{jsxref("AsyncGeneratorFunction", "异步生成器函数", "", 1)}}
-- [迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)

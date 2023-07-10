@@ -67,7 +67,7 @@ loop(food = 0; foodNeeded = 10) {
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Random canvas circles</title>
     <style>
       html {
@@ -92,41 +92,37 @@ loop(food = 0; foodNeeded = 10) {
     </style>
   </head>
   <body>
+    <button>Update</button>
 
-  <button>Update</button>
-
-  <canvas></canvas>
-
+    <canvas></canvas>
 
     <script>
-    var btn = document.querySelector('button');
-    var canvas = document.querySelector('canvas');
-    var ctx = canvas.getContext('2d');
+      var btn = document.querySelector("button");
+      var canvas = document.querySelector("canvas");
+      var ctx = canvas.getContext("2d");
 
-    var WIDTH = document.documentElement.clientWidth;
-    var HEIGHT = document.documentElement.clientHeight;
+      var WIDTH = document.documentElement.clientWidth;
+      var HEIGHT = document.documentElement.clientHeight;
 
-    canvas.width = WIDTH;
-    canvas.height = HEIGHT;
+      canvas.width = WIDTH;
+      canvas.height = HEIGHT;
 
-    function random(number) {
-      return Math.floor(Math.random()*number);
-    }
-
-    function draw() {
-      ctx.clearRect(0,0,WIDTH,HEIGHT);
-      for (var i = 0; i < 100; i++) {
-        ctx.beginPath();
-        ctx.fillStyle = 'rgba(255,0,0,0.5)';
-        ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-        ctx.fill();
+      function random(number) {
+        return Math.floor(Math.random() * number);
       }
-    }
 
-    btn.addEventListener('click',draw);
+      function draw() {
+        ctx.clearRect(0, 0, WIDTH, HEIGHT);
+        for (var i = 0; i < 100; i++) {
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(255,0,0,0.5)";
+          ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+          ctx.fill();
+        }
+      }
 
+      btn.addEventListener("click", draw);
     </script>
-
   </body>
 </html>
 ```
@@ -138,7 +134,7 @@ loop(food = 0; foodNeeded = 10) {
 ```js
 for (var i = 0; i < 100; i++) {
   ctx.beginPath();
-  ctx.fillStyle = 'rgba(255,0,0,0.5)';
+  ctx.fillStyle = "rgba(255,0,0,0.5)";
   ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
   ctx.fill();
 }
@@ -153,7 +149,7 @@ for (var i = 0; i < 100; i++) {
 
 ```js
 ctx.beginPath();
-ctx.fillStyle = 'rgba(255,0,0,0.5)';
+ctx.fillStyle = "rgba(255,0,0,0.5)";
 ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ctx.fill();
 ```
@@ -165,7 +161,7 @@ ctx.fill();
 讓我們開始探索一些特定的循環結構。 第一個是 for 循環，您將在大多數時候使用它，它具有以下語法：
 
 ```js
-for (initializer; exit-condition; final-expression) {
+for (initializer; exit - condition; final - expression) {
   // code to run
 }
 ```
@@ -175,21 +171,21 @@ for (initializer; exit-condition; final-expression) {
 1. 關鍵字“ for”，即跟隨其後的一些括號。
 2. 在括號內，我們有三個項目，以 ; 分隔：
 
-    1. 初始化程序-通常是一個設置為數字的變量，該變量將遞增以計算循環運行的次數。 有時也稱為計數器變量。
-    2. 退出條件-如前所述，它定義了循環何時應停止循環。 通常，這是一個具有比較運算符的表達式，該測試用於檢驗是否滿足退出條件。
-    3. 最終表達式—每當循環經過完整的迭代時，總是對它進行評估（或運行）。 它通常用於遞增（或在某些情況下遞減）計數器變量，以使其更接近退出條件值。
+   1. 初始化程序-通常是一個設置為數字的變量，該變量將遞增以計算循環運行的次數。 有時也稱為計數器變量。
+   2. 退出條件-如前所述，它定義了循環何時應停止循環。 通常，這是一個具有比較運算符的表達式，該測試用於檢驗是否滿足退出條件。
+   3. 最終表達式—每當循環經過完整的迭代時，總是對它進行評估（或運行）。 它通常用於遞增（或在某些情況下遞減）計數器變量，以使其更接近退出條件值。
 
 3. 一些花括號包含一個代碼塊-每次循環迭代時都將運行此代碼。
 
 讓我們看一個真實的例子，以便我們可以更清楚地看到它們的作用。
 
 ```js
-var cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
-var info = 'My cats are called ';
-var para = document.querySelector('p');
+var cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+var info = "My cats are called ";
+var para = document.querySelector("p");
 
 for (var i = 0; i < cats.length; i++) {
-  info += cats[i] + ', ';
+  info += cats[i] + ", ";
 }
 
 para.textContent = info;
@@ -201,30 +197,24 @@ para.textContent = info;
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Basic for loop example</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
-
-  <p></p>
-
+    <p></p>
 
     <script>
-    var cats = ['Bill', 'Jeff', 'Pete', 'Biggles', 'Jasmin'];
-    var info = 'My cats are called ';
-    var para = document.querySelector('p');
+      var cats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+      var info = "My cats are called ";
+      var para = document.querySelector("p");
 
-    for (var i = 0; i < cats.length; i++) {
-      info += cats[i] + ', ';
-    }
+      for (var i = 0; i < cats.length; i++) {
+        info += cats[i] + ", ";
+      }
 
-    para.textContent = info;
-
+      para.textContent = info;
     </script>
-
   </body>
 </html>
 ```
@@ -239,9 +229,9 @@ para.textContent = info;
 2. 它被告知運行，直到它不再小於 cats 數組的長度為止。 這很重要,退出條件顯示了循環仍將運行的條件。 因此，在這種情況下，儘管 i \<cats.length 仍然為 true，循環仍將運行。
 3. 在循環內部，我們將當前循環項（cats \[i]是 cats \[無論 i 當時是什麼]）與一個逗號和一個空格連接到 info 變量的末尾。 所以：
 
-    1. 在第一次運行中，i = 0，因此 cats \[0] +'，'將連接到 info（“ Bill，”）上。
-    2. 在第二次運行中，i = 1，因此 cats \[1] +'，'將連接到 info（“ Jeff，”）上
-    3. 等等。 每次循環運行後，將 1 加到 i（i ++），然後該過程將再次開始。
+   1. 在第一次運行中，i = 0，因此 cats \[0] +'，'將連接到 info（“ Bill，”）上。
+   2. 在第二次運行中，i = 1，因此 cats \[1] +'，'將連接到 info（“ Jeff，”）上
+   3. 等等。每次循環運行後，將 1 加到 i（i ++），然後該過程將再次開始。
 
 4. 當 i 等於 cats.length 時，循環將停止，瀏覽器將繼續循環下方的下一段代碼。
 
@@ -258,9 +248,9 @@ para.textContent = info;
 ```js
 for (var i = 0; i < cats.length; i++) {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 }
 ```
@@ -279,7 +269,7 @@ for (var i = 0; i < cats.length; i++) {
 
 ```html
 <label for="search">Search by contact name: </label>
-<input id="search" type="text">
+<input id="search" type="text" />
 <button>Search</button>
 
 <p></p>
@@ -288,22 +278,29 @@ for (var i = 0; i < cats.length; i++) {
 Now on to the JavaScript:
 
 ```js
-var contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-var para = document.querySelector('p');
-var input = document.querySelector('input');
-var btn = document.querySelector('button');
+var contacts = [
+  "Chris:2232322",
+  "Sarah:3453456",
+  "Bill:7654322",
+  "Mary:9998769",
+  "Dianne:9384975",
+];
+var para = document.querySelector("p");
+var input = document.querySelector("input");
+var btn = document.querySelector("button");
 
-btn.addEventListener('click', function() {
+btn.addEventListener("click", function () {
   var searchName = input.value;
-  input.value = '';
+  input.value = "";
   input.focus();
   for (var i = 0; i < contacts.length; i++) {
-    var splitContact = contacts[i].split(':');
+    var splitContact = contacts[i].split(":");
     if (splitContact[0] === searchName) {
-      para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+      para.textContent =
+        splitContact[0] + "'s number is " + splitContact[1] + ".";
       break;
     } else {
-      para.textContent = 'Contact not found.';
+      para.textContent = "Contact not found.";
     }
   }
 });
@@ -313,42 +310,44 @@ btn.addEventListener('click', function() {
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Simple contact search example</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
+    <label for="search">Search by contact name: </label>
+    <input id="search" type="text" />
+    <button>Search</button>
 
-  <label for="search">Search by contact name: </label>
-  <input id="search" type="text">
-  <button>Search</button>
-
-  <p></p>
-
+    <p></p>
 
     <script>
-    var contacts = ['Chris:2232322', 'Sarah:3453456', 'Bill:7654322', 'Mary:9998769', 'Dianne:9384975'];
-    var para = document.querySelector('p');
-    var input = document.querySelector('input');
-    var btn = document.querySelector('button');
+      var contacts = [
+        "Chris:2232322",
+        "Sarah:3453456",
+        "Bill:7654322",
+        "Mary:9998769",
+        "Dianne:9384975",
+      ];
+      var para = document.querySelector("p");
+      var input = document.querySelector("input");
+      var btn = document.querySelector("button");
 
-    btn.addEventListener('click', function() {
-      var searchName = input.value;
-      input.value = '';
-      input.focus();
-      for (var i = 0; i < contacts.length; i++) {
-        var splitContact = contacts[i].split(':');
-        if (splitContact[0] === searchName) {
-          para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
-          break;
-        } else if (i === contacts.length-1)
-              para.textContent = 'Contact not found.';
+      btn.addEventListener("click", function () {
+        var searchName = input.value;
+        input.value = "";
+        input.focus();
+        for (var i = 0; i < contacts.length; i++) {
+          var splitContact = contacts[i].split(":");
+          if (splitContact[0] === searchName) {
+            para.textContent =
+              splitContact[0] + "'s number is " + splitContact[1] + ".";
+            break;
+          } else if (i === contacts.length - 1)
+            para.textContent = "Contact not found.";
         }
-    });
+      });
     </script>
-
   </body>
 </html>
 ```
@@ -360,9 +359,9 @@ btn.addEventListener('click', function() {
 3. 我們將輸入到文本輸入中的值存儲在一個名為 searchName 的變量中，然後清空文本輸入並再次對其進行聚焦，以準備進行下一次搜索。
 4. 現在到有趣的部分，for 循環：
 
-    1. 我們從 0 開始啟動計數器，運行循環直到計數器不再小於 contact.length，然後在每次循環之後將 i 遞增 1。
-    2. 在循環內部，我們首先將當前觸點（contacts \[i]）分割為冒號字符，並將得到的兩個值存儲在名為 splitContact 的數組中。
-    3. 然後，我們使用條件語句來測試 splitContact \[0]（聯繫人的姓名）是否等於輸入的 searchName。 如果是這樣，我們在段落中輸入一個字符串以報告聯繫人的電話號碼，然後使用 break 結束循環。
+   1. 我們從 0 開始啟動計數器，運行循環直到計數器不再小於 contact.length，然後在每次循環之後將 i 遞增 1。
+   2. 在循環內部，我們首先將當前觸點（contacts \[i]）分割為冒號字符，並將得到的兩個值存儲在名為 splitContact 的數組中。
+   3. 然後，我們使用條件語句來測試 splitContact \[0]（聯繫人的姓名）是否等於輸入的 searchName。 如果是這樣，我們在段落中輸入一個字符串以報告聯繫人的電話號碼，然後使用 break 結束循環。
 
 5. 在（contacts.length-1）迭代之後，如果聯繫人姓名與輸入的搜索不匹配，則將段落文本設置為“找不到聯繫人。”，然後循環繼續進行迭代。
 
@@ -383,7 +382,7 @@ for (var i = 1; i <= num; i++) {
     continue;
   }
 
-  para.textContent += i + ' ';
+  para.textContent += i + " ";
 }
 ```
 
@@ -393,42 +392,37 @@ Here's the output:
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Integer squares generator</title>
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
+    <label for="number">Enter number: </label>
+    <input id="number" type="text" />
+    <button>Generate integer squares</button>
 
-  <label for="number">Enter number: </label>
-  <input id="number" type="text">
-  <button>Generate integer squares</button>
-
-  <p>Output: </p>
-
+    <p>Output:</p>
 
     <script>
-    var para = document.querySelector('p');
-    var input = document.querySelector('input');
-    var btn = document.querySelector('button');
+      var para = document.querySelector("p");
+      var input = document.querySelector("input");
+      var btn = document.querySelector("button");
 
-    btn.addEventListener('click', function() {
-      para.textContent = 'Output: ';
-      var num = input.value;
-      input.value = '';
-      input.focus();
-      for (var i = 1; i <= num; i++) {
-        var sqRoot = Math.sqrt(i);
-        if (Math.floor(sqRoot) !== sqRoot) {
-          continue;
+      btn.addEventListener("click", function () {
+        para.textContent = "Output: ";
+        var num = input.value;
+        input.value = "";
+        input.focus();
+        for (var i = 1; i <= num; i++) {
+          var sqRoot = Math.sqrt(i);
+          if (Math.floor(sqRoot) !== sqRoot) {
+            continue;
+          }
+
+          para.textContent += i + " ";
         }
-
-        para.textContent += i + ' ';
-      }
-    });
+      });
     </script>
-
   </body>
 </html>
 ```
@@ -468,9 +462,9 @@ var i = 0;
 
 while (i < cats.length) {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 
   i++;
@@ -501,9 +495,9 @@ var i = 0;
 
 do {
   if (i === cats.length - 1) {
-    info += 'and ' + cats[i] + '.';
+    info += "and " + cats[i] + ".";
   } else {
-    info += cats[i] + ', ';
+    info += cats[i] + ", ";
   }
 
   i++;
@@ -537,12 +531,12 @@ If you make a mistake, you can always reset the example with the "Reset" button.
 
 ```html hidden
 <h2>Live output</h2>
-<div class="output" style="height: 410px;overflow: auto;">
-
-</div>
+<div class="output" style="height: 410px;overflow: auto;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
 var output = document.querySelector('.output');
 output.innerHTML = '';
@@ -555,8 +549,8 @@ output.innerHTML = '';
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -583,9 +577,9 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -593,38 +587,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var jsSolution = 'var output = document.querySelector(\'.output\');\noutput.innerHTML = \'\';\n\nvar i = 10;\n\nwhile(i >= 0) {\n var para = document.createElement(\'p\');\n if(i === 10) {\n para.textContent = \'Countdown \' + i;\n } else if(i === 0) {\n  para.textContent = \'Blast off!\';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}';
+var jsSolution =
+  "var output = document.querySelector('.output');\noutput.innerHTML = '';\n\nvar i = 10;\n\nwhile(i >= 0) {\n var para = document.createElement('p');\n if(i === 10) {\n para.textContent = 'Countdown ' + i;\n } else if(i === 0) {\n  para.textContent = 'Blast off!';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -636,8 +631,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -648,10 +646,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -688,12 +686,14 @@ If you make a mistake, you can always reset the example with the "Reset" button.
 ```html hidden
 <h2>Live output</h2>
 <div class="output" style="height: 100px;overflow: auto;">
-  <p class="admitted">Admit: </p>
-  <p class="refused">Refuse: </p>
+  <p class="admitted">Admit:</p>
+  <p class="refused">Refuse:</p>
 </div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 var people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
 
@@ -710,8 +710,8 @@ refused.textContent = 'Refuse: '
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -738,9 +738,9 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -748,38 +748,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var jsSolution = 'var people = [\'Chris\', \'Anne\', \'Colin\', \'Terri\', \'Phil\', \'Lola\', \'Sam\', \'Kay\', \'Bruce\'];\n\nvar admitted = document.querySelector(\'.admitted\');\nvar refused = document.querySelector(\'.refused\');\n\nadmitted.textContent = \'Admit: \';\nrefused.textContent = \'Refuse: \'\nvar i = 0;\n\ndo {\n if(people[i] === \'Phil\' || people[i] === \'Lola\') {\n refused.textContent += people[i] + \', \';\n } else {\n admitted.textContent += people[i] + \', \';\n }\n i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + \'.\';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + \'.\';';
+var jsSolution =
+  "var people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];\n\nvar admitted = document.querySelector('.admitted');\nvar refused = document.querySelector('.refused');\n\nadmitted.textContent = 'Admit: ';\nrefused.textContent = 'Refuse: '\nvar i = 0;\n\ndo {\n if(people[i] === 'Phil' || people[i] === 'Lola') {\n refused.textContent += people[i] + ', ';\n } else {\n admitted.textContent += people[i] + ', ';\n }\n i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -791,8 +792,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -803,10 +807,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

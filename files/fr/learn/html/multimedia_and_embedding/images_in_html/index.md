@@ -344,7 +344,7 @@ Une meilleure solution consiste en l'utilisation des éléments HTML5 {{htmlelem
 
 L'élément {{htmlelement("figcaption")}} dit au navigateur et aux technologies d'assistance que la légende décrit le contenu de l'autre élément {{htmlelement("figure")}}.
 
-> **Note :** D'un point de vue accessibilité, les légendes ont un rôle différent du texte {{htmlattrxref('alt','img')}}. Le texte {{htmlattrxref('alt','img')}} ne sert qu'en absence d'image tandis que les légendes servent en même temps aux utilisateurs qui voient l'image. Les légendes et le texte `alt` devraient cependant être différents car ils apparaissent tout deux quand l'image est absente. Essayez d'enlever les images dans votre navigateur et voyez à quoi ça ressemble.
+> **Note :** D'un point de vue accessibilité, les légendes ont un rôle différent du texte [`alt`](/fr/docs/Web/HTML/Element/img#alt). Le texte [`alt`](/fr/docs/Web/HTML/Element/img#alt) ne sert qu'en absence d'image tandis que les légendes servent en même temps aux utilisateurs qui voient l'image. Les légendes et le texte `alt` devraient cependant être différents car ils apparaissent tout deux quand l'image est absente. Essayez d'enlever les images dans votre navigateur et voyez à quoi ça ressemble.
 
 Un objet \<figure> n'est pas forcé de contenir une image. C'est une unité de contenu indépendante qui :
 
@@ -504,12 +504,3 @@ En résumé : si une image a du sens, en terme de contenu, vous devriez utiliser
 C'est tout pour l'instant. Nous avons découvert en détails les images et légendes. Dans le prochain article, nous monterons en régime pour aborder la manière d'utiliser HTML pour intégrer des vidéos et de l'audio dans une page web.
 
 {{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
-
-## Dans ce module :
-
-- [Images in HTML](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Video and audio content](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [From \<object> to \<iframe> — other embedding technologies](/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Adding vector graphics to the Web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Responsive images](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Mozilla splash page](/fr/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)

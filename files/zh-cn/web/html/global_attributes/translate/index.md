@@ -37,4 +37,4 @@ slug: Web/HTML/Global_attributes/translate
 - 所有[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)。
 - 反映该属性的 {{domxref("HTMLElement.translate")}} 属性。
 - [使用 HTML 的 translate 属性](https://www.w3.org/International/questions/qa-translate-flag)。
-- HTML {{htmlattrxref("lang")}} 属性
+- HTML [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性

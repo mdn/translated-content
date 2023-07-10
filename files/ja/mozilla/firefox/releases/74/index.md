@@ -13,7 +13,7 @@ Firefox 74 は、米国時間 2020 年 3 月 10 日にリリースされまし�
 
 #### ウェブコンソール
 
-- `$x()` [ウェブコンソールヘルパー](/ja/docs/Tools/Web_Console/Helpers) の第 3 引数 (結果の型) が、[`XPathResult` 定数](/ja/docs/Web/API/XPathResult#Constants) と同様に単純な文字列値を受け入れるようになりました ([Firefox バグ 1602591](https://bugzil.la/1602591))。
+- `$x()` [ウェブコンソールヘルパー](https://firefox-source-docs.mozilla.org/devtools-user/web_console/helpers/index.html) の第 3 引数 (結果の型) が、[`XPathResult` 定数](/ja/docs/Web/API/XPathResult#Constants) と同様に単純な文字列値を受け入れるようになりました ([Firefox バグ 1602591](https://bugzil.la/1602591))。
 - コンソールのオートコンプリートでも使用可能な、optional chaining 演算子 "?." を新たにサポートしました ([Firefox バグ 1594009](https://bugzil.la/1594009))。
 - デバッガーで [入れ子の worker](/ja/docs/Web/API/Web_Workers_API/Using_web_workers) を調査およびデバッグできるようになりました ([Firefox バグ 1590766](https://bugzil.la/1590766))。
 
@@ -67,13 +67,13 @@ _変更なし。_
 
 ### HTTP
 
-- Feature Policy をデフォルトで有効にしました! フレームの許可を設定するには {{HTMLElement("iframe")}} 要素の {{htmlattrxref("allow", "iframe")}} 属性 (および {{domxref("HTMLIFrameElement")}} の {{domxref("HTMLIFrameElement.allow", "allow")}} プロパティ) を使用してください ([Firefox バグ 1617219](https://bugzil.la/1617219))。
+- Feature Policy をデフォルトで有効にしました! フレームの許可を設定するには {{HTMLElement("iframe")}} 要素の [`allow`](/ja/docs/Web/HTML/Element/iframe#allow) 属性 (および {{domxref("HTMLIFrameElement")}} の {{domxref("HTMLIFrameElement.allow", "allow")}} プロパティ) を使用してください ([Firefox バグ 1617219](https://bugzil.la/1617219))。
 - [`Cross-Origin-Resource-Policy`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy) ヘッダーをデフォルトで有効にしました ([Firefox バグ 1602363](https://bugzil.la/1602363))。
 
 ### セキュリティ
 
 - TLS 1.0 および 1.1 のサポートを Firefox から削除しました。今後はサーバーで TLS 1.2 または 1.3 をサポートすることが必要です。今後は古いバージョンの TLS を使用するサーバーに接続すると、[Secure Connection Failed](https://support.mozilla.org/en-US/kb/secure-connection-failed-firefox-did-not-connect) エラーが発生します ([Firefox バグ 1606734](https://bugzil.la/1606734))。
-- Firefox 74 から、サイトが {{htmlattrxref("allow", "iframe")}} 属性を使用して {{HTMLElement("iframe")}} 内の埋め込みコンテンツにリソースへのアクセス許可を与えて、埋め込まれたページがそのリソースの使用許可を要求したとき、埋め込まれたドメインにリソースの使用許可や共有許可を与えるかを、外側のページと内側のページの両方が許可を確認するのではなく、親ページがユーザーへ確認するようになりました。外側のぺーが `allow` 属性で要求された許可を得ていない場合は、`<iframe>` がユーザーへ確認することなく直ちにアクセスを拒否されます ([Firefox バグ 1483631](https://bugzil.la/1483631))。
+- Firefox 74 から、サイトが [`allow`](/ja/docs/Web/HTML/Element/iframe#allow) 属性を使用して {{HTMLElement("iframe")}} 内の埋め込みコンテンツにリソースへのアクセス許可を与えて、埋め込まれたページがそのリソースの使用許可を要求したとき、埋め込まれたドメインにリソースの使用許可や共有許可を与えるかを、外側のページと内側のページの両方が許可を確認するのではなく、親ページがユーザーへ確認するようになりました。外側のぺーが `allow` 属性で要求された許可を得ていない場合は、`<iframe>` がユーザーへ確認することなく直ちにアクセスを拒否されます ([Firefox バグ 1483631](https://bugzil.la/1483631))。
 
 ### プラグイン
 

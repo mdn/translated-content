@@ -20,7 +20,7 @@ Promise.race(iterable)
 ### 引数
 
 - `iterable`
-  - : [反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)（プロミスの {{jsxref("Array")}} など）です。
+  - : [反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)（プロミスの {{jsxref("Array")}} など）です。
 
 ### 返値
 

@@ -295,13 +295,3 @@ Il y a bien d'autres fonctionnalités que vous pouvez utiliser pour manipuler vo
 (Voir notre [Référence Web API](/fr/docs/Web/API) pour une liste complète des API web documentées sur MDN&nbsp;!)
 
 {{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
-
-## Dans ce module
-
-- [Introduction aux API du Web](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- **Manipuler des documents**
-- [Récupérer des données du serveur](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Les API tierces](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
-- [Dessiner des éléments graphiques](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Les API vidéo et audio](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Le stockage côté client](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)

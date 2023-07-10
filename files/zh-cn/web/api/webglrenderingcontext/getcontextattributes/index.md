@@ -65,6 +65,6 @@ canvas.getContext('webgl',
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{domxref("WebGLRenderingContext")}}

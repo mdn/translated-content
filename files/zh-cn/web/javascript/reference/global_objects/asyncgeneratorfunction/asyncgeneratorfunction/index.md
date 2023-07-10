@@ -61,5 +61,5 @@ asyncGen.next().then((res) => console.log(res.value)); // 20
 - [`async function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)
 - [`async function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function*)
 - [`Function()` 构造函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
-- [迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)
 - {{jsxref("Functions", "函数", "", 1)}}

@@ -1,5 +1,6 @@
 ---
-title: HTMLIFrameElement.referrerPolicy
+title: "HTMLIFrameElement: referrerPolicy プロパティ"
+short-title: referrerPolicy
 slug: Web/API/HTMLIFrameElement/referrerPolicy
 l10n:
   sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
@@ -8,7 +9,7 @@ l10n:
 {{APIRef}}
 
 **`HTMLIFrameElement.referrerPolicy`** プロパティは HTML の
-{{HTMLElement("iframe")}} 要素の {{htmlattrxref("referrerpolicy","iframe")}} 属性を反映し、リソースの取得時にどのリファラーを送信するかを定義します。
+{{HTMLElement("iframe")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Element/iframe#referrerpolicy) 属性を反映し、リソースの取得時にどのリファラーを送信するかを定義します。
 
 ## 値
 

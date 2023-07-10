@@ -42,6 +42,6 @@ key2, value2
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - 其他 URL 相关接口：{{domxref("URL")}}, {{domxref("URLUtils")}}.

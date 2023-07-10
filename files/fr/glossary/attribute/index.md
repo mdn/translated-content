@@ -1,12 +1,7 @@
 ---
 title: Attribut
 slug: Glossary/Attribute
-tags:
-  - Encodage
-  - Glossaire
-  - HTML
 translation_of: Glossary/Attribute
-original_slug: Glossaire/Attribut
 ---
 
 Un _attribut_ vient compléter un {{Glossary("tag")}}. Sa présence peut être requise ou facultative. Il peut fournir des méta-informations ou changer le comportement du tag. La syntaxe est `name=value` où _name_ est l'identificateur de l'attribut et _value_ sa valeur attribuée.

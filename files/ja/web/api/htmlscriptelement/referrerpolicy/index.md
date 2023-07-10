@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-**`referrerPolicy`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、 {{HTMLElement("script")}} 要素の {{htmlattrxref("referrerpolicy","script")}} とそのスクリプトによって行われるフェッチを反映し、リソースをフェッチする際にどのリファラーを送信するか定義しています。
+**`referrerPolicy`** は {{domxref("HTMLScriptElement")}} インターフェイスのプロパティで、 {{HTMLElement("script")}} 要素の [`referrerpolicy`](/ja/docs/Web/HTML/Element/script#referrerpolicy) とそのスクリプトによって行われるフェッチを反映し、リソースをフェッチする際にどのリファラーを送信するか定義しています。
 
 ## 値
 

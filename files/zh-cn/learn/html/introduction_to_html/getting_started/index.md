@@ -225,7 +225,7 @@ textarea.onkeyup = () => {
 
 > **备注：** 在这篇文章中提到的“块”和“内联”，不应该与 [CSS 盒子的类型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#块级盒子（block_box）_和_内联盒子（inline_box）)中的同名术语相混淆。尽管它们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
 
-> **备注：** 你可以查阅包含了块级元素和内联元素列表的参考页面。参见[块级元素](/zh-CN/docs/Web/HTML/Block-level_elements)和[内联元素](/zh-CN/docs/Web/HTML/Inline_elements)页面。
+> **备注：** 你可以查阅包含了块级元素和内联元素列表的参考页面。参见[块级元素](/zh-CN/docs/Glossary/Block-level_content)和[内联元素](/zh-CN/docs/Glossary/Inline-level_content)页面。
 
 ### 空元素
 
@@ -402,7 +402,7 @@ textarea.onkeyup = () => {
 
 ### 布尔属性
 
-有时你会看到没有值的属性，这也是完全可以接受的。这些属性被称为布尔属性。布尔属性只能有一个值，这个值一般与属性名称相同。例如，考虑 {{htmlattrxref("disabled", "input")}} 属性，你可以将其分配给表单输入元素。用它来禁用表单输入元素，这样用户就不能输入了。被禁用的元素通常有一个灰色的外观。示例如下：
+有时你会看到没有值的属性，这也是完全可以接受的。这些属性被称为布尔属性。布尔属性只能有一个值，这个值一般与属性名称相同。例如，考虑 [`disabled`](/zh-CN/docs/Web/HTML/Element/input#disabled) 属性，你可以将其分配给表单输入元素。用它来禁用表单输入元素，这样用户就不能输入了。被禁用的元素通常有一个灰色的外观。示例如下：
 
 ```html
 <input type="text" disabled="disabled" />
@@ -505,7 +505,7 @@ textarea.onkeyup = () => {
 
 2. `<html></html>`: {{htmlelement("html")}} 元素。这个元素包裹了页面中所有的内容，有时被称为根元素。
 3. `<head></head>`: {{htmlelement("head")}} 元素。这个元素是一个容器，它包含了所有你想包含在 HTML 页面中但**不在 HTML 页面中显示**的内容。这些内容包括你想在搜索结果中出现的关键字和页面描述、CSS 样式、字符集声明等等。以后的章节中会学到更多相关的内容。
-4. `<meta charset="utf-8">`: {{htmlelement("meta")}} 元素。这个元素代表了不能由其他 HTML 元相关元素表示的元数据，比如 {{htmlelement("base")}}、{{htmlelement("link")}}、{{htmlelement("script")}}、{{htmlelement("style")}} 或 {{htmlelement("title")}}。{{htmlattrxref("charset", "meta")}} 属性将你的文档的字符集设置为 UTF-8，其中包括绝大多数人类书面语言的大多数字符。有了这个设置，页面现在可以处理它可能包含的任何文本内容。没有理由不对它进行设置，它可以帮助避免以后的一些问题。
+4. `<meta charset="utf-8">`: {{htmlelement("meta")}} 元素。这个元素代表了不能由其他 HTML 元相关元素表示的元数据，比如 {{htmlelement("base")}}、{{htmlelement("link")}}、{{htmlelement("script")}}、{{htmlelement("style")}} 或 {{htmlelement("title")}}。[`charset`](/zh-CN/docs/Web/HTML/Element/meta#charset) 属性将你的文档的字符集设置为 UTF-8，其中包括绝大多数人类书面语言的大多数字符。有了这个设置，页面现在可以处理它可能包含的任何文本内容。没有理由不对它进行设置，它可以帮助避免以后的一些问题。
 5. `<title></title>`: {{htmlelement("title")}} 元素。这设置了页面的标题，也就是出现在该页面加载的浏览器标签中的内容。当页面被加入书签时，页面标题也被用来描述该页面。
 6. `<body></body>`: {{htmlelement("body")}} 元素。包含了你访问页面时*所有*显示在页面上的内容，包含文本、图片、视频、游戏、可播放音频轨道等等。
 
@@ -738,6 +738,6 @@ HTML 拥有在代码中写注释的机制。浏览器会忽略注释，有效地
 
 ## 参见
 
-- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_Colors/Applying_color)
+- [使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)
 
 {{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}

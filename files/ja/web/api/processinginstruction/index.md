@@ -1,6 +1,8 @@
 ---
 title: ProcessingInstruction
 slug: Web/API/ProcessingInstruction
+l10n:
+  sourceCommit: 95dff5ec1195f072b8e48a2273294933670b1e99
 ---
 
 {{APIRef("DOM")}}
@@ -23,14 +25,17 @@ slug: Web/API/ProcessingInstruction
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 _このインターフェイスは親インターフェイスである {{domxref("CharacterData")}}, {{domxref("Node")}}, {{domxref("EventTarget")}} からプロパティを継承しています。_
 
-- {{domxref("ProcessingInstruction.target")}} {{readonlyInline}}
+- {{domxref("ProcessingInstruction.sheet")}} {{ReadOnlyInline}}
+  - : 存在すれば、関連付けられた {{domxref("StyleSheet")}} オブジェクトを返します。なければ `null` を返します。
+
+- {{domxref("ProcessingInstruction.target")}} {{ReadOnlyInline}}
   - : この命令が対象とするアプリケーションを識別する名前です。
 
-## メソッド
+## インスタンスメソッド
 
 _このインターフェイスには固有のメソッドはありませんが、親インターフェイスである {{domxref("CharacterData")}}, {{domxref("Node")}}, {{domxref("EventTarget")}} からメソッドを継承しています。_
 

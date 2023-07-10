@@ -19,10 +19,10 @@ slug: Web/CSS/margin-block
 ## 语法
 
 ```css
-/* 长度值 */
+/* <length> 值 */
 margin-block: 10px 20px; /* 绝对长度 */
 margin-block: 1em 2em; /* 相对于文本尺寸 */
-margin-block: 5% 2%; /* 相对于最近包含块的宽度 */
+margin-block: 5% 2%; /* 相对于最近区块容器的宽度 */
 margin-block: 10px; /* 同时设置块首和块末值 */
 
 /* 关键词值 */
@@ -105,6 +105,6 @@ p {
 
 ## 参见
 
-- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)
+- [CSS 逻辑属性与逻辑值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)
 - 对应的实体属性：{{CSSXref("margin-top")}}、{{CSSXref("margin-right")}}、{{CSSXref("margin-bottom")}} 和 {{CSSXref("margin-left")}}
 - {{CSSXref("writing-mode")}}、{{CSSXref("direction")}}、{{CSSXref("text-orientation")}}

@@ -1,8 +1,9 @@
 ---
 title: 대열 레이아웃과 대열이탈
-slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
+slug: Web/CSS/CSS_flow_layout/Flow_layout_and_overflow
 original_slug: Web/CSS/CSS_Flow_Layout/흐름_레이아웃과_오버플로
 ---
+
 컨테이너에 채울 수 없을 만큼 더 많은 내용물이 있을 때 오버플로 상황이 발생한다. CSS에서 크기 제한이 있는 요소를 다루려면 오버플로의 동작 방식을 이해하는 것이 중요하다. 이 안내서는 일반 플로우에 해당하는 작업 중에 오버플로이 작동하는 방식을 설명한다.
 
 ## 오버플로은 무엇인가?

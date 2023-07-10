@@ -8,21 +8,23 @@ slug: Web/HTML/Element/script
 | [內容類型](/zh-TW/docs/Web/HTML/Content_categories) | [元資料內容](/zh-TW/docs/Web/HTML/Content_categories#Metadata_content)、[流型內容](/zh-TW/docs/Web/HTML/Content_categories#Flow_content)、[Phrasing content](/zh-TW/docs/Web/HTML/Content_categories#Phrasing_content). |
 | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 允許的內容                                          | 動態腳本如 `text/javascript`.                                                                                                                                                                                           |
-| 標籤省略                                            | {{no_tag_omission}}                                                                                                                                                                                                |
+| 標籤省略                                            | {{no_tag_omission}}                                                                                                                                                                                                     |
 | 允許的父元素                                        | 任何可接受 [元資料內容](/zh-TW/docs/Web/HTML/Content_categories#Metadata_content)或 [phrasing content](/zh-TW/docs/Web/HTML/Content_categories#Phrasing_content) 的元素。                                               |
 | 允許的 ARIA role                                    | None                                                                                                                                                                                                                    |
-| DOM 介面                                            | {{domxref("HTMLScriptElement")}}                                                                                                                                                                            |
+| DOM 介面                                            | {{domxref("HTMLScriptElement")}}                                                                                                                                                                                        |
 
 ## 屬性
 
 此元素包含了[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)。
 
 - `async`
+
   - : 這個布林屬性告訴瀏覽器說：如果可以，就以非同步的方法執行腳本。
 
     > **警告：** 如果沒有 `src` 屬性的話，就不能用這個屬性（例如行內腳本）：在這種情況下，它將失去作用。
 
 - `async`
+
   - : 在 HTML 解析時，瀏覽器通常會假定最壞的情況，並同步地載入腳本（例如 `async=false`）。
 
     動態插入的腳本（例如 `document.createElement`）一般來說是非同步執行的。因此，如果設定同步的話（腳本按照被插入的順序執行），會被設為 `async=false`。
@@ -32,6 +34,7 @@ slug: Web/HTML/Element/script
 - `crossorigin`
   - : 針對沒有通過標準 [CORS](/zh-TW/docs/HTTP_access_control) 的一般 `script` 元素，會把最少的資訊傳給 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}。若要允許另一個域名站點的靜態內容，列出錯誤訊息，請使用此屬性。請參見 [CORS settings attributes](/zh-TW/docs/Web/HTML/CORS_settings_attributes) 以以取得對其有效參數的，更具描述性的解釋。
 - `defer`
+
   - : 設置此 Boolean attribute 是為了指示瀏覽器，script 應在 document 解析後，但在 firing [`DOMContentLoaded`](/zh-TW/docs/Web/API/Window/DOMContentLoaded_event) 之前被執行。具有 `defer` 屬性的 scripts 將阻止觸發`DOMContentLoaded` 事件，直到 scripts load 完成並且 finished evaluating。<
 
     > **警告：** 如果沒有 `src` 屬性的話，就不能用這個屬性（例如行內腳本）：在這種情況下，它將失去作用。The `defer` attribute has no effect on [module scripts](/zh-TW/docs/Web/JavaScript/Guide/Modules)— they defer by default.
@@ -45,6 +48,7 @@ slug: Web/HTML/Element/script
 - `nonce`
   - : A cryptographic nonce (number used once) to whitelist inline scripts in a [script-src Content-Security-Policy](/zh-TW/docs/Web/HTTP/Headers/Content-Security-Policy/script-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
 - `src`
+
   - : 此屬性指定外部程式的 URI，可以用來取代直接在文件內中嵌入腳本。
 
     > **警告：** 如果 `script` 元素有指定 `src` 屬性的話，標籤內就不能有嵌入的腳本。
@@ -52,6 +56,7 @@ slug: Web/HTML/Element/script
 - `text`
   - : Like the `textContent` attribute, this attribute sets the text content of the element. Unlike the `textContent` attribute, however, this attribute is evaluated as executable code after the node is inserted into the DOM.
 - `type`
+
   - : 此屬性指定程式碼應該表示的類型。此屬性的值會屬於以下類別之一：**省略或 JavaScript MIME 類型**：針對相容 HTML5 的瀏覽器來說，元素內會執行 JavaScript。HTML5 規範敦促作者省略此屬性，不需要寫冗長的 MIME 類型。在早期的瀏覽器中，這確定了嵌入或引入（透過 `src` 屬性）腳本的語言。JavaScript MIME 類型[有列在規範內](/zh-TW/docs/Web/HTTP/Basics_of_HTTP/MIME_types)。
 
     - **`module`**：針對相容 HTML5 的瀏覽器來說，這段程式碼會當成 JavaScript 模組（module）。腳本內容的處理不受 `charset` 與 `defer` 屬性影響。針對 `module` 的資訊，請參閱 [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)。在使用 `module` 關鍵字時，程式碼的行為會有所不同。

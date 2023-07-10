@@ -13,7 +13,7 @@ original_slug: Web/API/File/Using_files_from_web_applications
 HTML 語法：
 
 ```html
-<input type="file" id="input">
+<input type="file" id="input" />
 ```
 
 File API 可以從 {{ domxref("File") }} 物件中讀取 {{ domxref("FileList") }} ，{{domxref("FileList") }} 內包含使用者所選取的檔案。
@@ -23,15 +23,15 @@ File API 可以從 {{ domxref("File") }} 物件中讀取 {{ domxref("FileList") 
 使用 DOM 獲取選擇的檔案：
 
 ```js
-var selectedFile = document.getElementById('input').files[0];
+var selectedFile = document.getElementById("input").files[0];
 ```
 
 使用 [jQuery](http://jquery.com/) 獲取選擇的檔案：
 
 ```js
-var selectedFile = $('#input').get(0).files[0];
+var selectedFile = $("#input").get(0).files[0];
 
-var selectedFile = $('#input')[0].files[0];
+var selectedFile = $("#input")[0].files[0];
 ```
 
 > **備註：** 如果獲取 "files is undefined" 錯誤: 代表未選擇正確的 HTML 元素, 這時忘記 jQuery 回傳符合 DOM 元素的清單. 改使用 DOM 元素呼叫 "files" 方法.
@@ -41,15 +41,19 @@ var selectedFile = $('#input')[0].files[0];
 使用 File API 選擇單一檔案是非常簡單的，如下
 
 ```html
-<input type="file" id="input" onchange="handleFiles(this.files)">
+<input type="file" id="input" onchange="handleFiles(this.files)" />
 ```
 
-當使用者選取一個檔案，呼叫 `handleFiles()` 會得到一個 {{domxref("FileList") }} 的物件。{{domxref("FileList") }} 裡面還會有一個 `{{domxref("File")}}` 的物件，裡面的東西就是使用者選取的檔案。
+當使用者選取一個檔案，呼叫 `handleFiles()` 會得到一個 {{domxref("FileList") }} 的物件。{{domxref("FileList") }} 裡面還會有一個 {{domxref("File")}} 的物件，裡面的東西就是使用者選取的檔案。
 
 如果你想要讓使用者一次選擇多個檔案，可以在 `input` 元素中使用 `multiple` 的屬性：
 
 ```html
-<input type="file" id="input" multiple="true" onchange="handleFiles(this.files)">
+<input
+  type="file"
+  id="input"
+  multiple="true"
+  onchange="handleFiles(this.files)" />
 ```
 
 在上述這個例子中，檔案名單會傳遞到 `handleFiles()` 函數，其中包含了使用者選的每個檔案 {{domxref("File")}} 物件。
@@ -73,7 +77,7 @@ function handleFiles() {
 
 ## 獲得選取檔案的資訊
 
-由 DOM 提供的 {{domxref("FileList") }} 物件代表使用者選取的所有檔案，每個又是 `{{domxref("File")}}` 物件。可以藉由 {{domxref("FileList") }} 的 length 屬性得知使用者選取的檔案數量：
+由 DOM 提供的 {{domxref("FileList") }} 物件代表使用者選取的所有檔案，每個又是 {{domxref("File")}} 物件。可以藉由 {{domxref("FileList") }} 的 length 屬性得知使用者選取的檔案數量：
 
 ```js
 var numFiles = files.length;
@@ -106,7 +110,13 @@ for (var i = 0; i < files.length; i++) {
 HTML 如下：
 
 ```html
-<input type="file" id="fileElem" multiple="true" accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<input
+  type="file"
+  id="fileElem"
+  multiple="true"
+  accept="image/*"
+  style="display:none"
+  onchange="handleFiles(this.files)" />
 <a href="#" id="fileSelect">Select some files</a>
 ```
 
@@ -116,12 +126,16 @@ HTML 如下：
 var fileSelect = document.getElementById("fileSelect"),
   fileElem = document.getElementById("fileElem");
 
-fileSelect.addEventListener("click", function (e) {
-  if (fileElem) {
-    fileElem.click();
-  }
-  e.preventDefault(); // prevent navigation to "#"
-}, false);
+fileSelect.addEventListener(
+  "click",
+  function (e) {
+    if (fileElem) {
+      fileElem.click();
+    }
+    e.preventDefault(); // prevent navigation to "#"
+  },
+  false
+);
 ```
 
 很明顯的，可以使用 CSS 來設計新的上傳檔案的按鈕。
@@ -191,7 +205,11 @@ function handleFiles(files) {
     preview.appendChild(img);
 
     var reader = new FileReader();
-    reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+    reader.onload = (function (aImg) {
+      return function (e) {
+        aImg.src = e.target.result;
+      };
+    })(img);
     reader.readAsDataURL(file);
   }
 }
@@ -228,7 +246,13 @@ window.URL.revokeObjectURL(objectURL);
 HTML：
 
 ```html
-<input type="file" id="fileElem" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)">
+<input
+  type="file"
+  id="fileElem"
+  multiple
+  accept="image/*"
+  style="display:none"
+  onchange="handleFiles(this.files)" />
 <a href="#" id="fileSelect">Select some files</a>
 <div id="fileList">
   <p>No files selected!</p>
@@ -244,18 +268,21 @@ var fileSelect = document.getElementById("fileSelect"),
   fileElem = document.getElementById("fileElem"),
   fileList = document.getElementById("fileList");
 
-fileSelect.addEventListener("click", function (e) {
-  if (fileElem) {
-    fileElem.click();
-  }
-  e.preventDefault(); // prevent navigation to "#"
-}, false);
+fileSelect.addEventListener(
+  "click",
+  function (e) {
+    if (fileElem) {
+      fileElem.click();
+    }
+    e.preventDefault(); // prevent navigation to "#"
+  },
+  false
+);
 
 function handleFiles(files) {
   if (!files.length) {
     fileList.innerHTML = "<p>No files selected!</p>";
-  }
-  else {
+  } else {
     var list = document.createElement("ul");
     for (var i = 0; i < files.length; i++) {
       var li = document.createElement("li");
@@ -266,7 +293,7 @@ function handleFiles(files) {
       img.height = 60;
       img.onload = function () {
         window.URL.revokeObjectURL(this.src);
-      }
+      };
       li.appendChild(img);
 
       var info = document.createElement("span");
@@ -286,12 +313,12 @@ If the {{ domxref("FileList") }} object passed to `handleFiles()` is `null`, we 
 2. The new list element is inserted into the {{ HTMLElement("div") }} block by calling its {{ domxref("element.appendChild()") }} method.
 3. For each {{ domxref("File") }} in the {{ domxref("FileList") }} represented by `files`:
 
-    1. Create a new list item ({{ HTMLElement("li") }}) element and insert it into the list.
-    2. Create a new image ({{ HTMLElement("img") }}) element.
-    3. Set the image's source to a new object URL representing the file, using {{ domxref("window.URL.createObjectURL()") }} to create the blob URL.
-    4. Set the image's height to 60 pixels.
-    5. Set up the image's load event handler to release the object URL, since it's no longer needed once the image has been loaded. This is done by calling the {{ domxref("window.URL.revokeObjectURL()") }} method, passing in the object URL string as specified by `img.src`.
-    6. Append the new list item to the list.
+   1. Create a new list item ({{ HTMLElement("li") }}) element and insert it into the list.
+   2. Create a new image ({{ HTMLElement("img") }}) element.
+   3. Set the image's source to a new object URL representing the file, using {{ domxref("window.URL.createObjectURL()") }} to create the blob URL.
+   4. Set the image's height to 60 pixels.
+   5. Set up the image's load event handler to release the object URL, since it's no longer needed once the image has been loaded. This is done by calling the {{ domxref("window.URL.revokeObjectURL()") }} method, passing in the object URL string as specified by `img.src`.
+   6. Append the new list item to the list.
 
 ## 範例：上傳檔案
 
@@ -325,21 +352,32 @@ function FileUpload(img, file) {
   this.xhr = xhr;
 
   var self = this;
-  this.xhr.upload.addEventListener("progress", function(e) {
-        if (e.lengthComputable) {
-          var percentage = Math.round((e.loaded * 100) / e.total);
-          self.ctrl.update(percentage);
-        }
-      }, false);
+  this.xhr.upload.addEventListener(
+    "progress",
+    function (e) {
+      if (e.lengthComputable) {
+        var percentage = Math.round((e.loaded * 100) / e.total);
+        self.ctrl.update(percentage);
+      }
+    },
+    false
+  );
 
-  xhr.upload.addEventListener("load", function(e){
-          self.ctrl.update(100);
-          var canvas = self.ctrl.ctx.canvas;
-          canvas.parentNode.removeChild(canvas);
-      }, false);
-  xhr.open("POST", "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php");
-  xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
-  reader.onload = function(evt) {
+  xhr.upload.addEventListener(
+    "load",
+    function (e) {
+      self.ctrl.update(100);
+      var canvas = self.ctrl.ctx.canvas;
+      canvas.parentNode.removeChild(canvas);
+    },
+    false
+  );
+  xhr.open(
+    "POST",
+    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php"
+  );
+  xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
+  reader.onload = function (evt) {
     xhr.sendAsBinary(evt.target.result);
   };
   reader.readAsBinaryString(file);
@@ -373,22 +411,27 @@ function fileUpload(file) {
     xhr = new XMLHttpRequest();
 
   xhr.open("POST", uri, true);
-  xhr.setRequestHeader("Content-Type", "multipart/form-data, boundary="+boundary); // simulate a file MIME POST request.
+  xhr.setRequestHeader(
+    "Content-Type",
+    "multipart/form-data, boundary=" + boundary
+  ); // simulate a file MIME POST request.
   xhr.setRequestHeader("Content-Length", fileSize);
 
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
     if (xhr.readyState == 4) {
       if ((xhr.status >= 200 && xhr.status <= 200) || xhr.status == 304) {
-
         if (xhr.responseText != "") {
           alert(xhr.responseText); // display response.
         }
       }
     }
-  }
+  };
 
   var body = "--" + boundary + "\r\n";
-  body += "Content-Disposition: form-data; name='fileId'; filename='" + fileName + "'\r\n";
+  body +=
+    "Content-Disposition: form-data; name='fileId'; filename='" +
+    fileName +
+    "'\r\n";
   body += "Content-Type: application/octet-stream\r\n\r\n";
   body += fileData + "\r\n";
   body += "--" + boundary + "--";
@@ -402,9 +445,9 @@ _使用二進制數據時，這些程式碼還需要修改。_
 
 ## 你也可以參考這些文章
 
-- `{{domxref("File")}}`
+- {{domxref("File")}}
 - {{domxref("FileList")}}
 - {{domxref("FileReader") }}
 - [Using XMLHttpRequest](/zh-TW/DOM/XMLHttpRequest/Using_XMLHttpRequest)
 - [Using the DOM File API in chrome code](/zh-TW/Extensions/Using_the_DOM_File_API_in_chrome_code)
-- `{{domxref("XMLHttpRequest")}}`
+- {{domxref("XMLHttpRequest")}}

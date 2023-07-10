@@ -118,7 +118,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
 
 #### SameSite 属性
 
-[`SameSite`](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 属性允许服务器指定是否/何时通过跨站点请求发送（其中{{Glossary("Site","站点")}}由注册的域和*方案*定义：http 或 https）。这提供了一些针对跨站点请求伪造攻击（{{Glossary("CSRF")}}）的保护。它采用三个可能的值：`Strict`、`Lax` 和 `None`。
+[`SameSite`](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 属性允许服务器指定是否/何时通过跨站点请求发送（其中{{Glossary("Site","站点")}}由注册的域和*方案*定义：http 或 https）。这提供了一些针对跨站点请求伪造攻击（{{Glossary("CSRF")}}）的保护。它采用三个可能的值：`Strict`、`Lax` 和 `None`。
 
 使用 `Strict`，cookie 仅发送到它来源的站点。`Lax` 与 Strict 相似，只是在用户*导航*到 cookie 的源站点时发送 cookie。例如，通过跟踪来自外部站点的链接。`None` 指定浏览器会在同站请求和跨站请求下继续发送 cookie，但*仅在安全的上下文中*（即，如果 `SameSite=None`，且还必须设置 `Secure` 属性）。如果没有设置 `SameSite` 属性，则将 cookie 视为 `Lax`。
 
@@ -128,7 +128,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
 Set-Cookie: mykey=myvalue; SameSite=Strict
 ```
 
-> **备注：** 与 `SameSite` 相关的标准最近发生了变化（MDN 记录了上面的新行为）。有关在特定浏览器版本中如何处理属性的信息，请参阅 cookie [浏览器兼容性](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility)表：
+> **备注：** 与 `SameSite` 相关的标准最近发生了变化（MDN 记录了上面的新行为）。有关在特定浏览器版本中如何处理属性的信息，请参阅 cookie [浏览器兼容性](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#浏览器兼容性)表：
 >
 > - 如果 `SameSite` 未指定，则 `SameSite=Lax` 时新的默认值。以前，默认情况下会为有请求发送 cookie。
 > - `SameSite=None` 的 cookie 还必须指定 `Secure` 属性（它们需要安全上下文）。
@@ -187,7 +187,7 @@ Cookie 与特定域和方案（例如，`http` 或 `https`）相关联，如果�
 
 第三方服务器可以基于同一浏览器在访问多个站点时发送给它的 cookie 来建立用户浏览历史和习惯的配置文件。Firefox 默认情况下会阻止已知包含跟踪器的第三方 cookie。第三方 cookie（或仅跟踪 cookie）也可能被其他浏览器设置或扩展程序阻止。阻止 Cookie 会导致某些第三方组件（例如社交媒体窗口小部件）无法正常运行。
 
->**备注：** 服务器可以（并且应该）设置 cookie [SameSite 属性](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite)以指定是否可以将 cookie 发送到第三方站点。
+>**备注：** 服务器可以（并且应该）设置 cookie [SameSite 属性](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)以指定是否可以将 cookie 发送到第三方站点。
 
 ### Cookie 相关规定
 
@@ -219,7 +219,7 @@ Cookie 与特定域和方案（例如，`http` 或 `https`）相关联，如果�
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - {{domxref("Navigator.cookieEnabled")}}
-- [SameSite cookie](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
+- [SameSite cookie](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)
 - [使用 Storage Inspector 检查 cookie](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)
 - [Cookie 规范：RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265)
 - [HTTP cookie on Wikipedia](https://en.wikipedia.org/wiki/HTTP_cookie)

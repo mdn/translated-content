@@ -2,7 +2,6 @@
 title: Contenu vidéo sur MDN
 slug: MDN/Writing_guidelines/Howto/Images_media
 translation_of: MDN/Guidelines/Video
-original_slug: MDN/Guidelines/Video
 ---
 
 {{MDNSidebar}}

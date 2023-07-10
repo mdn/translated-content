@@ -56,7 +56,7 @@ if (elem.requestFullscreen) {
 
 ### 全螢幕要求失敗
 
-並不是所有情況下都保證可以進入全螢幕模式。例如，{{ HTMLElement("iframe") }} 元素含有 {{ HTMLAttrXRef("allowfullscreen", "iframe") }} 屬性來選擇是否容許其內容能以全螢幕方式呈現。而且，例如視窗式外掛程式等的某些內容並不可以在全螢幕模式中顯示。把無法呈現為全螢幕的元素設定為全螢幕模式的嘗試都沒有作用，而要求顯示為全螢幕的元素會接收到 `mozfullscreenerror` 事件。當全螢幕要求失敗時，Firefox 會在網頁主控台上紀錄一則錯誤訊息，解釋要求失敗的原因。但在 Chrome 以及新版的 Opera 上，則不會產生這些錯誤訊息。
+並不是所有情況下都保證可以進入全螢幕模式。例如，{{ HTMLElement("iframe") }} 元素含有 [`allowfullscreen`](/zh-TW/docs/Web/HTML/Element/iframe#allowfullscreen) 屬性來選擇是否容許其內容能以全螢幕方式呈現。而且，例如視窗式外掛程式等的某些內容並不可以在全螢幕模式中顯示。把無法呈現為全螢幕的元素設定為全螢幕模式的嘗試都沒有作用，而要求顯示為全螢幕的元素會接收到 `mozfullscreenerror` 事件。當全螢幕要求失敗時，Firefox 會在網頁主控台上紀錄一則錯誤訊息，解釋要求失敗的原因。但在 Chrome 以及新版的 Opera 上，則不會產生這些錯誤訊息。
 
 > **備註：** 全螢幕要求必須在事件處理常式中呼叫，否則將會被拒絕。
 
@@ -90,11 +90,15 @@ In this example, a video is presented in a web page. Pressing the Return or Ente
 When the page is loaded, this code is run to set up an event listener to watch for the 'enter' key.
 
 ```js
-document.addEventListener("keydown", function(e) {
-  if (e.keyCode == 13) {
-    toggleFullScreen();
-  }
-}, false);
+document.addEventListener(
+  "keydown",
+  function (e) {
+    if (e.keyCode == 13) {
+      toggleFullScreen();
+    }
+  },
+  false
+);
 ```
 
 ### Toggling fullscreen mode
@@ -103,8 +107,13 @@ This code is called when the user hits the Enter key, as seen above.
 
 ```js
 function toggleFullScreen() {
-  if (!document.fullscreenElement &&    // alternative standard method
-      !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+  if (
+    !document.fullscreenElement && // alternative standard method
+    !document.mozFullScreenElement &&
+    !document.webkitFullscreenElement &&
+    !document.msFullscreenElement
+  ) {
+    // current working methods
     if (document.documentElement.requestFullscreen) {
       document.documentElement.requestFullscreen();
     } else if (document.documentElement.msRequestFullscreen) {
@@ -112,7 +121,9 @@ function toggleFullScreen() {
     } else if (document.documentElement.mozRequestFullScreen) {
       document.documentElement.mozRequestFullScreen();
     } else if (document.documentElement.webkitRequestFullscreen) {
-      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+      document.documentElement.webkitRequestFullscreen(
+        Element.ALLOW_KEYBOARD_INPUT
+      );
     }
   } else {
     if (document.exitFullscreen) {
@@ -159,5 +170,5 @@ These are some of the methods that browsers implemented before the standard was 
 - {{ domxref("document.mozFullScreenEnabled") }}
 - {{ cssxref(":-moz-full-screen") }}
 - {{ cssxref(":-moz-full-screen-ancestor") }}
-- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- [`allowfullscreen`](/zh-TW/docs/Web/HTML/Element/iframe#allowfullscreen)
 - [Blog post: Firefox's HTML full-screen API enabled in Nightly builds](http://blog.pearce.org.nz/2011/11/firefoxs-html-full-screen-api-enabled.html)

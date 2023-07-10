@@ -9,13 +9,13 @@ slug: Web/HTTP/Headers/Cookie
 
 `Cookie` 標頭不是必要的，比如瀏覽器可能會因為隱私設定而直接省略 Cookie 不傳。
 
-| Header type                                      | {{Glossary("Request header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | yes                                      |
+| Header type                           | {{Glossary("Request header")}} |
+| ------------------------------------- | ------------------------------ |
+| {{Glossary("Forbidden header name")}} | yes                            |
 
 ## Syntax
 
-```html
+```http
 Cookie: <cookie-list>
 Cookie: name=value
 Cookie: name=value; name2=value2; name3=value3

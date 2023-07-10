@@ -1,16 +1,6 @@
 ---
 title: menus.create()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/create
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/create
 ---
 

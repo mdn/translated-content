@@ -1,6 +1,6 @@
 ---
 title: Maîtriser le passage à la ligne des éléments flexibles
-slug: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
+slug: Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
 tags:
   - CSS
   - Grille

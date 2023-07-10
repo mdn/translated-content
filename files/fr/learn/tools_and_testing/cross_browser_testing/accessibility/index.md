@@ -687,14 +687,3 @@ Espérons que cet article vous aura donné des bonnes connaissances concernant l
 Dans le prochain article nous nous tournerons vers la fonctionnalité de détection dans plus de détail.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## Dans ce module
-
-- [Introduction au test en navigateur croisé](/fr/docs/)
-- [Stratégies pour mener à bien vos tests](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Gérer les problèmes courants en HTML et CSS](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_et_CSS)
-- [Gérer les problèmes courants en JavaScript](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

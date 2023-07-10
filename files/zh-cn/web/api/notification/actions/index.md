@@ -1,23 +1,26 @@
 ---
-title: Notification.actions
+title: Notification：actions 属性
 slug: Web/API/Notification/actions
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}{{SeeCompatTable}}
 
-{{domxref("Notification")}}接口的只读属性 **`actions`** 返回使用{{domxref("Notification.Notification","Notification()")}}构造函数创建通知时使用 actions 选项设置的{{domxref("NotificationAction")}}对象列表。这是用户可以在通知上下文中选择立即执行的应用定义的操作列表。
+{{domxref("Notification")}} 接口的只读属性 **`actions`** 提供了可供用户选择的以与通知交互的操作。
 
-{{AvailableInWorkers}}
+使用 [`showNotification()`](/zh-CN/docs/Web/API/ServiceWorkerRegistration/showNotification) 方法和 [`Notification()`](/zh-CN/docs/Web/API/Notification/Notification) 构造函数的第二个参数的 `actions` 选项设置操作。
 
-## 语法
+> **备注：** 浏览器通常会限制它们为特定通知显示的最大操作数。检测 {{DOMxRef("Notification.maxActions")}} 静态属性以确定限制的操作的数量。
 
-```plain
-var actions[] = Notification.actions;
-```
+## 值
 
-### 值
+一个只读的操作数组。 数组中的每个元素都是一个具有以下成员的对象：
 
-{{domxref("NotificationAction")}}对象的只读数组。用户在通知中选择每项的单一的功能。
+- `action`
+  - : 一个标识要在通知上显示的用户操作的字符串。
+- `title`
+  - : 一个包含要向用户显示的操作文本的字符串。
+- `icon`
+  - : 一个包含与操作一起显示的图标 URL 的字符串。
 
 ## 规范
 
@@ -27,6 +30,7 @@ var actions[] = Notification.actions;
 
 {{Compat}}
 
-## 更多
+## 参见
 
-- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- {{DOMxRef("Notification.maxActions")}}

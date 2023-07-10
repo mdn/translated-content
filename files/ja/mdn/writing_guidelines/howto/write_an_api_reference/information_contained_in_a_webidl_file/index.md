@@ -419,43 +419,43 @@ serializer; // 標準版
 
 > **メモ:** WebIDL 仕様では、`jsonifier` の代わりに `serializer` を使用しています。これは Gecko では使われていません。非標準的な、おそらく初期の提案である `jsonifier` だけが mozilla-central で見つかりました。
 
-### 反復子風のメソッド
+### イテレーター風のメソッド
 
 インターフェイスは _iterable_ として定義することができます。これは、 `entries()`, `keys()`, `values()`, `forEach()` といったメソッドを持つことを意味します。また、このインターフェイスを実装したオブジェクトに対して {{jsxref("Statements/for...of", "for...of")}} を使用することに対応しています。
 
-反復処理には、*値反復子*と*組反復子*の 2 種類があります。
+反復処理には、*値イテレーター*と*組イテレーター*の 2 種類があります。
 
-#### 値反復子
+#### 値イテレーター
 
 ```js
 iterable<valueType>
 ```
 
-この反復子は _valueType_ 型の値に対して反復処理を行います。生成されるメソッドは次のようになります。
+このイテレーターは _valueType_ 型の値に対して反復処理を行います。生成されるメソッドは次のようになります。
 
-- `entries()` は添字（すなわち `unsigned long`）の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。
-- `values()` は値の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。
-- `keys()` はキー、すなわち添字（`unsigned long`）の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。値反復子の場合、 `keys()` と `entries()` は等価です。
-- `forEach()` はキーで、リストの各項目に対応するコールバック関数を呼び出す[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。
+- `entries()` は添字（すなわち `unsigned long`）の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。
+- `values()` は値の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。
+- `keys()` はキー、すなわち添字（`unsigned long`）の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。値イテレーターの場合、 `keys()` と `entries()` は等価です。
+- `forEach()` はキーで、リストの各項目に対応するコールバック関数を呼び出す[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。
 
-このような反復子は，`for (var p in object)` という構文を `for (var p in object.entries())` の省略形として使うことを可能にします。インターフェイスの説明の中に、このことに関する文を追加しています。
+このようなイテレーターは，`for (var p in object)` という構文を `for (var p in object.entries())` の省略形として使うことを可能にします。インターフェイスの説明の中に、このことに関する文を追加しています。
 
 > **メモ:** 以下の場合、反復処理する値の組は 2 つの異なる方法で定義することができます。
 >
 > 1. webidl ファイルの外側で、それに付随する散文で。このような散文は仕様書にあり、通常、次のように始まります。_"[反復処理する値](https://heycam.github.io/webidl/#dfn-values-to-iterate-over)..."_.
 > 2. webidl ファイルでは、インターフェイスがインデックス付きプロパティに対応している場合、つまり、インターフェイスが `unsigned long` 型の引数を持つ `getter` メソッドを持つ場合、暗黙のうちに、インデックス付きプロパティに対応するようにします。
 
-#### 組反復子
+#### 組イテレーター
 
 ```js
 iterable<keyType, valueType>
 ```
 
-この反復子は、_valueType_ 型の値と _keyType_ 型のキーを反復処理します。生成されるメソッドは次のようになります。
+このイテレーターは、_valueType_ 型の値と _keyType_ 型のキーを反復処理します。生成されるメソッドは次のようになります。
 
-- `entries()` は（_keyType_ 型の）索引の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: E{{domxref('FormData.entries()')}}
-- `values()` は値の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.values()')}}
-- `keys()` はキーの[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.keys()')}}
+- `entries()` は（_keyType_ 型の）索引の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: E{{domxref('FormData.entries()')}}
+- `values()` は値の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.values()')}}
+- `keys()` はキーの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('FormData.keys()')}}
 - Once [Firefox バグ 1216751](https://bugzil.la/1216751) lands, `forEach()`.
 
 このようなイテレータを使うと，`for (var p in object)` という構文を， `for (var p in object.entries())` の省略形として使うことができます．インターフェイスの説明の中に、それに関する文を追加します。例: {{domxref('FormData')}}.
@@ -474,9 +474,9 @@ setlike<valueType>
 
 生成されるプロパティは以下の通りです。
 
-- `entries()` はインデックスの[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.entries()')}}
-- `values()` は値の[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.values()')}}
-- `keys()` はキーの[反復子](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.keys()')}}
+- `entries()` はインデックスの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.entries()')}}
+- `values()` は値の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.values()')}}
+- `keys()` はキーの[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。例: {{domxref('NodeList.keys()')}}
 - `forEach()`
 
 set-like 宣言の前に read-only が付かない場合、以下のメソッドも生成されます。

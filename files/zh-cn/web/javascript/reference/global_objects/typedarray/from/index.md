@@ -9,8 +9,9 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 
 ## 语法
 
-```js
-TypedArray.from(source[, mapFn[, thisArg]])
+```js-nolint
+TypedArray.from(arrayLike, mapFn)
+TypedArray.from(arrayLike, mapFn, thisArg)
 ```
 
 上面代码中的 `TypedArray` 需要替换为下面的任何一个构造函数：

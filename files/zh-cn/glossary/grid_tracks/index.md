@@ -3,6 +3,8 @@ title: Grid Tracks
 slug: Glossary/Grid_Tracks
 ---
 
+{{GlossarySidebar}}
+
 **网格轨道** 是两条{{glossary("grid lines","网格线")}}之间的空间。它们通过使用属性 {{cssxref("grid-template-columns")}} 和 {{cssxref("grid-template-rows")}} 或者简写属性 {{cssxref("grid")}} 和 {{cssxref("grid-template")}} 在显式网格中定义。网格轨道也可以在隐式网格中创建，通过将一个网格项目定位到显式网格中创建的轨道外面。
 
 下图展示该网格中的第一个行轨道（上色部分的空间）。
@@ -65,5 +67,5 @@ slug: Glossary/Grid_Tracks
 
 ### 扩展阅读
 
-- CSS Grid Layout Guide: [Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
+- CSS Grid Layout Guide: [Basic concepts of grid layout](/zh-CN/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [Definition of Grid Tracks in the CSS Grid Layout specification](https://drafts.csswg.org/css-grid/#grid-track-concept)

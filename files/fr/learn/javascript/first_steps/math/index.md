@@ -387,15 +387,3 @@ Dans l'article suivant, nous étudierons le texte et les façons dont JavaScript
 > **Note :** Si les maths vous plaisent et que vous souhaitez en savoir plus sur la manière dont elles sont implémentées en JavaScript, vous trouverez plus de précisions dans la section principale JavaScript de MDN. Pour commencer, nous vous conseillons [Nombres et dates](/fr/docs/Web/JavaScript/Guide/Numbers_and_dates) et [Expressions et opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators).
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
-
-## Dans ce module
-
-- [Qu'est-ce que JavaScript&nbsp;?](/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [Un premier plongeon dans JavaScript](/fr/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [Qu'est-ce qui s'est passé&nbsp;? Déboguer du JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Enregistrer les informations nécessaires&nbsp;: les variables](/fr/docs/Learn/JavaScript/First_steps/Variables)
-- **Mathématiques de base en JavaScript — nombres et opérateurs**
-- [Manipuler du texte&nbsp;: les chaînes de caractères en JavaScript](/fr/docs/Learn/JavaScript/First_steps/Strings)
-- [Les méthodes utiles pour les chaînes de caractères](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Les tableaux](/fr/docs/Learn/JavaScript/First_steps/Arrays)
-- [Évaluation&nbsp;: un générateur d'histoire loufoque](/fr/docs/Learn/JavaScript/First_steps/Silly_story_generator)

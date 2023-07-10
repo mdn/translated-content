@@ -49,7 +49,7 @@ flex-basis: unset;
     >
     > - 最初，"flex-basis:auto" 的含义是 "参照我的`width`和`height`属性".
     > - 在此之后，"flex-basis:auto" 的含义变成了自动尺寸，而 "main-size" 变成了 "参照我的`width`和`height`属性"。实际执行于 [bug 1032922](https://bugzilla.mozilla.org/show_bug.cgi?id=1032922).
-    > - 然后呢，这个更改又在 [bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316) 中被撤销了，所以 "auto" 变回了原来的含义; 而一个新的关键字 'content' 变成了自动尺寸。 ({{bug("1105111")}} 包括了增加这个关键字).
+    > - 然后呢，这个更改又在 [bug 1093316](https://bugzilla.mozilla.org/show_bug.cgi?id=1093316) 中被撤销了，所以 "auto" 变回了原来的含义; 而一个新的关键字 'content' 变成了自动尺寸。 ([Firefox bug 1105111](https://bugzil.la/1105111) 包括了增加这个关键字).
 
 ### 规范
 
@@ -172,6 +172,6 @@ flex-basis: unset;
 
 ## 参见
 
-- CSS 弹性盒子指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS 弹性盒子指南：_[Controlling Ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS 弹性盒子指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS 弹性盒子指南：_[Controlling Ratios of flex items along the main axis](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
 - {{cssxref("width")}}

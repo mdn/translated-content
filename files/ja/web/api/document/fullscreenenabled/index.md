@@ -5,7 +5,7 @@ slug: Web/API/Document/fullscreenEnabled
 
 {{APIRef("Fullscreen API")}}
 
-{{domxref("Document")}} インターフェイスの **`fullscreenEnabled`** プロパティは読み取り専用で、全画面モードが使用できるかを示します。全画面モードは文書内にウィンドウ化されたプラグインを含まないページ、および文書内のすべての {{HTMLElement("iframe")}} 要素が {{HTMLAttrXRef("allowfullscreen", "iframe")}} 属性を持つページに限り使用することができます。
+{{domxref("Document")}} インターフェイスの **`fullscreenEnabled`** プロパティは読み取り専用で、全画面モードが使用できるかを示します。全画面モードは文書内にウィンドウ化されたプラグインを含まないページ、および文書内のすべての {{HTMLElement("iframe")}} 要素が [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性を持つページに限り使用することができます。
 
 このプロパティは読み取り専用ですが、変更されても (strict モードでも) 例外を投げません。セッターは何もしないので、無視されます。
 
@@ -49,4 +49,4 @@ function requestFullScreen() {
 - {{domxref("Document.exitFullscreen()")}}
 - {{domxref("Document.fullscreenElement")}}
 - {{cssxref(":fullscreen")}} および {{cssxref("::backdrop")}}
-- {{HTMLElement("iframe")}} 要素の {{HTMLAttrXRef("allowfullscreen", "iframe")}} 属性
+- {{HTMLElement("iframe")}} 要素の [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性

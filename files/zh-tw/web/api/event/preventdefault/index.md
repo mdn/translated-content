@@ -22,23 +22,27 @@ Toggling a checkbox is the default action of clicking on a checkbox. This exampl
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-<title>preventDefault example</title>
-</head>
+  <head>
+    <title>preventDefault example</title>
+  </head>
 
-<body>
+  <body>
     <p>Please click on the checkbox control.</p>
     <form>
-        <label for="id-checkbox">Checkbox</label>
-        <input type="checkbox" id="id-checkbox"/>
+      <label for="id-checkbox">Checkbox</label>
+      <input type="checkbox" id="id-checkbox" />
     </form>
     <script>
-        document.querySelector("#id-checkbox").addEventListener("click", function(event){
-            alert("preventDefault will stop you from checking this checkbox!")
-            event.preventDefault();
-        }, false);
+      document.querySelector("#id-checkbox").addEventListener(
+        "click",
+        function (event) {
+          alert("preventDefault will stop you from checking this checkbox!");
+          event.preventDefault();
+        },
+        false
+      );
     </script>
-</body>
+  </body>
 </html>
 ```
 
@@ -56,22 +60,25 @@ The following example demonstrates how invalid text input can be stopped from re
 ```
 
 ```js hidden
-function Init () {
-    var myTextbox = document.getElementById('my-textbox');
-    myTextbox.addEventListener( 'keypress', checkName, false );
+function Init() {
+  var myTextbox = document.getElementById("my-textbox");
+  myTextbox.addEventListener("keypress", checkName, false);
 }
 
 function checkName(evt) {
-    var charCode = evt.charCode;
-    if (charCode != 0) {
-        if (charCode < 97 || charCode > 122) {
-            evt.preventDefault();
-            alert(
-                "Please use lowercase letters only."
-                + "\n" + "charCode: " + charCode + "\n"
-            );
-        }
+  var charCode = evt.charCode;
+  if (charCode != 0) {
+    if (charCode < 97 || charCode > 122) {
+      evt.preventDefault();
+      alert(
+        "Please use lowercase letters only." +
+          "\n" +
+          "charCode: " +
+          charCode +
+          "\n"
+      );
     }
+  }
 }
 ```
 

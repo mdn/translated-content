@@ -39,7 +39,7 @@ expression;
 - `function`：这将是 [`function` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)或者 [`function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)，而不是 [`function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)或者 [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
 - `async function`：这将是 [`async function` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)或者 [`async function*` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)，而不是 [`async function` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function)或者 [`async function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function*)
 - `class`：这将是 [`class` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)，而不是 [`class` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)
-- `let[`：这将是带有[数组解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)的 [`let` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)，而不是称为 `let` 变量的[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)（`let` 仅可以是在[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#extra_reserved_words)下的标识符）
+- `let[`：这将是带有[数组解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)的 [`let` 声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)，而不是称为 `let` 变量的[属性访问器](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)（`let` 仅可以是在[非严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode#extra_reserved_words)下的标识符）
 - `{`：这将是一个[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)，而不是[对象字面量](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer)
 
 因此，以下所有内容均无效：
@@ -93,7 +93,7 @@ console.log(let); // [1, 2, 3]
 
 ### 避免控制流语句
 
-你可以使用表达式语句来避免几乎所有控制流语句的使用。例如，可以使用[三元运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)和[逻辑运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#二元逻辑运算符)替换 `if...else`。像 `for` 或者 `for...of` 可以使用[数组方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#实例方法)来替换。
+你可以使用表达式语句来避免几乎所有控制流语句的使用。例如，可以使用[三元运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Conditional_operator)和[逻辑运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators#二元逻辑运算符)替换 `if...else`。像 `for` 或者 `for...of` 可以使用[数组方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#实例方法)来替换。
 
 ```js
 // 使用控制流语句

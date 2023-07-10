@@ -26,8 +26,6 @@ ARIA is implemented in most popular browsers and screen readers. However, implem
 
 - [Enhancing Page Navigation with ARIA Landmarks](http://www.paciellogroup.com/blog/2010/10/using-wai-aria-landmark-roles/)
   - : A nice intro to using ARIA landmarks to improve web page navigation for screen reader users. [See also, ARIA landmark implementation notes](http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) and examples on real sites (updated as of July '11).
-- [Improving Form Accessibility](/zh-TW/docs/ARIA/forms)
-  - : ARIA is not just for dynamic content! Learn how to improve accessibility of HTML forms using additional ARIA attributes.
 - [Live regions (work-in-progress)](/zh-TW/docs/Accessibility/ARIA/ARIA_Live_Regions)
   - : Live regions provide suggestions to screen readers about how to handle changes to the contents of a page.
 - [Using ARIA Live Regions to Announce Content Changes](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)

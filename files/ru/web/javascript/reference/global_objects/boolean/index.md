@@ -73,13 +73,9 @@ var s = new Boolean(myString);       // начальное значение ра
 - {{jsxref("Boolean.prototype")}}
   - : Представляет прототип конструктора объекта `Boolean`.
 
-{{jsOverrides("Function", "Properties", "prototype")}}
-
 ## Методы
 
 Глобальный объект `Boolean` не содержит собственных методов, однако, он наследует некоторые методы из цепочки прототипов:
-
-{{jsOverrides("Function", "Methods")}}
 
 ## Экземпляры объекта `Boolean`
 

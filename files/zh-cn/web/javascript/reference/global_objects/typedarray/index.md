@@ -94,8 +94,6 @@ new TypedArray(buffer, byteOffset, length)
 
 - {{jsxref("TypedArray.BYTES_PER_ELEMENT")}}
   - : 返回不同的 `TypedArray` 对象元素字节数的数值。
-- {{jsxref("TypedArray.name")}}
-  - : 返回构造函数 [name](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/name) 的字符串值（例如 `"Int8Array"`）。
 
 ## 静态方法
 

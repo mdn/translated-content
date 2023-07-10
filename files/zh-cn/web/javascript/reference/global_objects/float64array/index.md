@@ -24,8 +24,6 @@ new Float64Array(buffer [, byteOffset [, length]]);
   - : 返回元素字节数。在 `Float64Array` 的情况下返回 8。
 - Float64Array.length
   - : 长度属性的值为 3。关于其实际长度 (元素数量) 参见 {{jsxref("TypedArray.prototype.length", "Float64Array.prototype.length")}}。
-- {{jsxref("TypedArray.name", "Float64Array.name")}}
-  - : 返回构造函数名字的字符串值。在 `Float64Array` 类型的情况下为："Float64Array"。
 - {{jsxref("TypedArray.prototype", "Float64Array.prototype")}}
   - : *TypedArray*对象的原型。
 

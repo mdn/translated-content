@@ -1,15 +1,6 @@
 ---
 title: browserAction.isEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browserAction
-  - isEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled
 ---
 

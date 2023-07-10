@@ -17,7 +17,7 @@ ReferenceError: reference to undefined property "x" (Firefox)
 
 ## 哪里出错了？
 
-脚本尝试去访问一个不存在的对象属性。[property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors) 页面描述了两种访问属性的方法。
+脚本尝试去访问一个不存在的对象属性。[property accessors](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors) 页面描述了两种访问属性的方法。
 
 引用未定义属性的错误仅出现在 [strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode) 代码中。在非严格代码中，对不存在的属性的访问将被忽略。
 

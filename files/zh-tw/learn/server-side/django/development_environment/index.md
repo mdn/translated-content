@@ -128,11 +128,11 @@ python3 -V
 
 1. 下載所需的安裝程序:
 
-    1. 點擊<https://www.python.org/downloads/>
-    2. 選擇**Download Python 3.7.0**按鈕(確切的版本號可能不同).
+   1. 點擊<https://www.python.org/downloads/>
+   2. 選擇**Download Python 3.7.0**按鈕(確切的版本號可能不同).
 
 2. 使用 Finder 找到文件，然後雙擊包文件。遵循安裝提示。
-    （一般能拖拽就拖拽）
+   （一般能拖拽就拖拽）
 
 你現在可以檢查 Pyhon 3 來確認成功安裝，如下所示:
 
@@ -153,9 +153,9 @@ windows 默認不安裝,但你可以從[python.org](https://www.python.org/)輕�
 
 1. 下載所需版本:
 
-    1. 點擊<https://www.python.org/downloads/>
-    2. 選擇**Download Python 3.7.0** 按鈕(確切的版本號可能不同).
-    3. 通過雙擊下載的文件並按照提示安裝 Python
+   1. 點擊 <https://www.python.org/downloads/>
+   2. 選擇 **Download Python 3.7.0** 按鈕(確切的版本號可能不同).
+   3. 通過雙擊下載的文件並按照提示安裝 Python
 
 你可以通過在命令提示符中輸入以下文本來驗證是否安裝了 Python:
 
@@ -291,14 +291,14 @@ pip3 install virtualenvwrapper-win
 
 現在，您可以使用`mkvirtualenv`命令創建新的虛擬環境。當此命令運行時，您將看到正在設置的環境（您看到的是略微特定 於平台的）。當命令完成時，新的虛擬環境，將處於活動狀態 - 您可以看到這一點，因為提示的開頭，將是括號中環境的名稱（如下所示）。
 
-  ```
-  $ mkvirtualenv my_django_environment
+```
+$ mkvirtualenv my_django_environment
 
-  Running virtualenv with interpreter /usr/bin/python3
-  ...
-  virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
-  (my_django_environment) ubuntu@ubuntu:~$
-  ```
+Running virtualenv with interpreter /usr/bin/python3
+...
+virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
+(my_django_environment) ubuntu@ubuntu:~$
+```
 
 現在，您可以在虛擬環境中，安裝 Django，並開始開發。
 

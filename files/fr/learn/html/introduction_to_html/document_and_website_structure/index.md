@@ -194,7 +194,7 @@ La compréhension détaillée de la signification globale de tous les éléments
 
 ### Enveloppes non‑sémantiques
 
-Parfois, vous êtes dans la situation où vous ne trouvez pas l'élément sémantique idéal pour regrouper certaines entités ou envelopper certains contenus. D'autres fois, vous souhaitez simplement regrouper un ensemble d'éléments pour en faire une entité unique pour des {{glossary("CSS")}} ou des {{glossary("JavaScript")}}. Pour de tels cas, HTML met à votre disposition les éléments {{HTMLElement("div")}} et {{HTMLElement("span")}}}. Utilisez‑les de préférence avec un attribut {{htmlattrxref('class')}} approprié, en quelque sorte étiquetez‑les pour pouvoir les cibler plus facilement.
+Parfois, vous êtes dans la situation où vous ne trouvez pas l'élément sémantique idéal pour regrouper certaines entités ou envelopper certains contenus. D'autres fois, vous souhaitez simplement regrouper un ensemble d'éléments pour en faire une entité unique pour des {{glossary("CSS")}} ou des {{glossary("JavaScript")}}. Pour de tels cas, HTML met à votre disposition les éléments {{HTMLElement("div")}} et {{HTMLElement("span")}}}. Utilisez‑les de préférence avec un attribut [`class`](/fr/docs/Web/HTML/Global_attributes#class) approprié, en quelque sorte étiquetez‑les pour pouvoir les cibler plus facilement.
 
 {{HTMLElement("span")}} est un élément en ligne non-semantique&nbsp;; vous l'utiliserez seulement si vous ne trouvez pas de meilleur élément de sémantique textuelle pour envelopper votre contenu, ou bien si vous ne voulez pas ajouter de signification particulière. Par exemple&nbsp;:
 
@@ -287,15 +287,3 @@ Vous devriez avoir maintenant une meilleure idée de la façon de structurer une
 - [Using HTML sections and outlines](/fr/docs/Web/HTML/Element/Heading_Elements)&nbsp;: Guide avancé des éléments de la sémantique et des algorithmes descriptifs du HTML5.
 
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting", "Apprendre/HTML/Introduction_à_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_à_HTML")}}
-
-## Dans ce module
-
-- [Commencer avec le HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fondamentaux du texte HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Création d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formatage avancé du texte](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- Structure de Site Web et de document
-- [Déboguer de l'HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Faire une lettre](/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structurer une page de contenu](/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

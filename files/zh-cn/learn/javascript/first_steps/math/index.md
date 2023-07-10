@@ -190,7 +190,7 @@ num2 + num1 / 8 + 2;
 
 尝试看看。
 
-> **备注：** 注意：可以在[表达式和运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#运算符优先级)中找到所有 JavaScript 运算符的完整列表及其优先级。
+> **备注：** 注意：可以在[表达式和运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#运算符优先级)中找到所有 JavaScript 运算符的完整列表及其优先级。
 
 ## 自增和自减运算符
 
@@ -200,7 +200,7 @@ num2 + num1 / 8 + 2;
 guessCount++;
 ```
 
-> **备注：** 它们最常用于 [循环](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration) 中，您将在以后的课程中了解。例如，假设您想循环查看价格表，并为每个价格增加销售税。您可以使用循环依次查看每个值，并在每种情况下进行必要的计算，以添加销售税。当需要时，增量器用于移动到下一个值。我们实际上提供了一个简单的例子，显示了如何完成 —— [在线查看效果](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html)，并 [查看源代码](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/maths/loop.html)，看看是否可以发现增量器！我们稍后将会详细介绍循环。
+> **备注：** 它们最常用于 [循环](/zh-CN/docs/Web/JavaScript/Guide/Loops_and_iteration) 中，您将在以后的课程中了解。例如，假设您想循环查看价格表，并为每个价格增加销售税。您可以使用循环依次查看每个值，并在每种情况下进行必要的计算，以添加销售税。当需要时，增量器用于移动到下一个值。我们实际上提供了一个简单的例子，显示了如何完成 —— [在线查看效果](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/loop.html)，并 [查看源代码](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/maths/loop.html)，看看是否可以发现增量器！我们稍后将会详细介绍循环。
 
 我们来试试看你们的控制台。首先，请注意，您不能将这些直接应用于一个数字，这可能看起来很奇怪，但是我们为变量赋值一个新的更新值，而不是对该值进行操作。以下将返回错误：
 
@@ -260,11 +260,11 @@ let y = 4; // y 包含值 4
 x *= y; // x 现在包含值 12
 ```
 
-> **备注：** 虽然有很多可用的[赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators), 但是这些是你现在应该学习的基本的一类。
+> **备注：** 虽然有很多可用的[赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#Assignment_operators)，但是这些是你现在应该学习的基本的一类。
 
 ## 主动学习：调整画布框的大小
 
-在这个练习中，我们将让你填写一些数字和操作符来操纵一个框的大小。该框使用称为{{domxref("Canvas API", "", "", "true")}}的浏览器 API 绘制。没有必要担心这是如何工作的 - 现在只关注数学。盒子的宽度和高度（以像素为单位）由变量 `x` 和 `y` 定义，变量 `x` 和 `y` 最初都被赋值为 50。
+在这个练习中，我们将让你填写一些数字和操作符来操纵一个框的大小。该框使用称为 {{domxref("Canvas API", "", "", 1)}} 的浏览器 API 绘制。没有必要担心这是如何工作的——现在只关注数学。盒子的宽度和高度（以像素为单位）由变量 `x` 和 `y` 定义，变量 `x` 和 `y` 最初都被赋值为 50。
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html", '100%', 620)}}
 
@@ -341,6 +341,6 @@ function updateBtn() {
 
 在下一篇文章中，我们将探讨文本，以及 JavaScript 如何让我们操纵它。
 
-> **备注：** 如果您喜欢数学，并希望阅读更多关于它如何在 JavaScript 中实现的，那么你可以在 MDN's main JavaScript 部分读到更多关于它的内容。对于学习[数字与日期](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates) 和 [表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#运算符优先级) 来说，那是一个不错的地方。
+> **备注：** 如果您喜欢数学，并希望阅读更多关于它如何在 JavaScript 中实现的，那么你可以在 MDN's main JavaScript 部分读到更多关于它的内容。对于学习[数字与日期](/zh-CN/docs/Web/JavaScript/Guide/Numbers_and_dates)和[表达式与运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#运算符优先级)来说，那是一个不错的地方。
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

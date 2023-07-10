@@ -119,7 +119,7 @@ function notifyMe() {
   }
 
   // 否則，我們會需要詢問使用者是否開放權限
-  else if (Notification.permission !== 'denied') {
+  else if (Notification.permission !== "denied") {
     Notification.requestPermission(function (permission) {
       // 如果使用者同意了就來新增一個 Notification 打聲招呼吧
       if (permission === "granted") {
@@ -144,12 +144,12 @@ Notification.requestPermission();
 然後我們只需要在要新增 Notfication 時執行這個 `spawnNotification()` — 透過傳入指定的 body、icon、title，然後它就會產生我們所需的 options 參數並透過 {{domxref("Notification.Notification","Notification()")}} 建構子發送 Notification.
 
 ```js
-function spawnNotification(theBody,theIcon,theTitle) {
+function spawnNotification(theBody, theIcon, theTitle) {
   var options = {
-      body: theBody,
-      icon: theIcon
-  }
-  var n = new Notification(theTitle,options);
+    body: theBody,
+    icon: theIcon,
+  };
+  var n = new Notification(theTitle, options);
 }
 ```
 

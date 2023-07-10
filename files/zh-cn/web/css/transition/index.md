@@ -52,7 +52,7 @@ transition: unset;
 - 零或一个 {{cssxref("&lt;single-transition-timing-function&gt;")}} 值表示要使用的过渡函数
 - 零，一或两个 {{cssxref("&lt;time&gt;")}} 值。可以解析为时间的第一个值被分配给 {{cssxref("transition-duration")}}，并且可以解析为时间的第二个值被分配给{{cssxref("transition-delay")}}。
 
-请查看“[如何处理](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions#When_property_value_lists_are_of_different_lengths)”以了解当`transition`属性的值个数超过可以接收的值的个数时该如何处理。简而言之，当`transition`属性的值个数超过可以接收的值的个数时，多余的值都会被忽略掉，不再进行解析。
+请查看“[如何处理](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#When_property_value_lists_are_of_different_lengths)”以了解当`transition`属性的值个数超过可以接收的值的个数时该如何处理。简而言之，当`transition`属性的值个数超过可以接收的值的个数时，多余的值都会被忽略掉，不再进行解析。
 
 ### 标准语法
 
@@ -60,7 +60,7 @@ transition: unset;
 
 ## 示例
 
-“[使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)”一文中还包含了几个 CSS 过渡示例。
+“[使用 CSS 过渡](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)”一文中还包含了几个 CSS 过渡示例。
 
 ## 规范
 
@@ -74,5 +74,5 @@ transition: unset;
 
 ## 参见
 
-- [Using CSS transitions](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

@@ -1,6 +1,8 @@
 ---
-title: '<dl>: 説明リスト要素'
+title: "<dl>: 説明リスト要素"
 slug: Web/HTML/Element/dl
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
@@ -13,10 +15,10 @@ slug: Web/HTML/Element/dl
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、<code>&#x3C;dl></code> 要素の子要素が 1 つの名前と値のグループの場合は知覚可能コンテンツ
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、<code>&#x3C;dl></code> 要素の子要素が 1 つの名前と値のグループの場合は知覚可能コンテンツ
       </td>
     </tr>
     <tr>
@@ -35,7 +37,7 @@ slug: Web/HTML/Element/dl
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素
       </td>
     </tr>
     <tr>
@@ -47,7 +49,12 @@ slug: Web/HTML/Element/dl
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>,
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role"
+            >list</a
+          ></code
+        >, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -59,7 +66,7 @@ slug: Web/HTML/Element/dl
 
 ## 属性
 
-この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
 ## 例
 
@@ -69,15 +76,15 @@ slug: Web/HTML/Element/dl
 <dl>
   <dt>Firefox</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
 
   <!-- Other terms and descriptions -->
 </dl>
 ```
+
+#### 結果
 
 {{EmbedLiveSample("Single_term_and_description")}}
 
@@ -89,15 +96,15 @@ slug: Web/HTML/Element/dl
   <dt>Mozilla Firefox</dt>
   <dt>Fx</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
 
   <!-- Other terms and descriptions -->
 </dl>
 ```
+
+#### 結果
 
 {{EmbedLiveSample("Multiple_terms_single_description")}}
 
@@ -107,21 +114,19 @@ slug: Web/HTML/Element/dl
 <dl>
   <dt>Firefox</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
   <dd>
-    The Red Panda also known as the Lesser
-    Panda, Wah, Bear Cat or Firefox, is a
-    mostly herbivorous mammal, slightly larger
-    than a domestic cat (60 cm long).
+    The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox, is a
+    mostly herbivorous mammal, slightly larger than a domestic cat (60 cm long).
   </dd>
 
   <!-- Other terms and descriptions -->
 </dl>
 ```
+
+#### 結果
 
 {{EmbedLiveSample("Single_term_multiple_descriptions")}}
 
@@ -145,6 +150,10 @@ slug: Web/HTML/Element/dl
   <dd>Green</dd>
 </dl>
 ```
+
+#### 結果
+
+{{EmbedLiveSample('Metadata')}}
 
 ヒント: CSS でキーと値のセパレーターを定義すると便利でしょう。
 
@@ -179,6 +188,10 @@ dt::after {
 </dl>
 ```
 
+#### 結果
+
+{{EmbedLiveSample('Wrapping name-value groups in `div` elements')}}
+
 ## メモ
 
 単なる字下げの目的でこの要素（あるいは {{HTMLElement("ul")}} 要素）を使用するのは誤りです。そのように機能しますが、これは悪い慣習であり説明リストの意味を不明瞭にします。
@@ -187,10 +200,11 @@ dt::after {
 
 ## アクセシビリティの考慮
 
-画面リーダーによって `<dl>` の内容の読み上げは異なります。 iOS 14 では、 VoiceOver は仮想カーソルで操作する際に、 `<dl>` の内容がリストであることをアナウンスします（read-all コマンドを使用しなくても）。このため、リストグループ内の他のリスト項目との関係が分かるような形でリスト項目の内容が書かれていることを確認してください。
+スクリーンリーダーによって、`<dl>` コンテンツの合計数、用語/定義のコンテキスト、ナビゲーション方法の公開方法は様々です。これらの違いは、必ずしもバグではありません。
+iOS 14 では、VoiceOver は仮想カーソルで操作する際に、 `<dl>` の内容がリストであることをアナウンスします（read-all コマンドを使用しなくても）。VoiceOver は `<dl>` を使ったリストナビゲーションコマンドには対応していません。ARIA の `term` と `definition` のロールを `<dl>` 構造に適用すると、VoiceOver（macOS と iOS）がそのアナウンス方法を調整するので、注意が必要です。
 
-- [CodePen - HTML Buddies: dt & dd](https://codepen.io/aardrian/debug/NzGaKP)
 - [VoiceOver on iOS 14 Supports Description Lists](https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html)
+- [Brief Note on Description List Support](https://adrianroselli.com/2022/12/brief-note-on-description-list-support.html)
 
 ## 仕様書
 

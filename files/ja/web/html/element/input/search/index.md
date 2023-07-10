@@ -2,7 +2,7 @@
 title: <input type="search">
 slug: Web/HTML/Element/input/search
 l10n:
-  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
+  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
 {{HTMLSidebar}}
@@ -11,90 +11,43 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/input-search.html", "tabbed-standard")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#値">値</a></strong></td>
-      <td>
-        検索フィールドに入っている値を表す文字列。
-      </td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("maxlength", "input")}},
-        {{htmlattrxref("minlength", "input")}},
-        {{htmlattrxref("pattern", "input")}},
-        {{htmlattrxref("placeholder", "input")}},
-        {{htmlattrxref("required", "input")}},
-        {{htmlattrxref("size", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## 値
 
-{{htmlattrxref("value", "input")}} 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では {{domxref("HTMLInputElement.value")}} プロパティを使ってこれを受け取ることができます。
+[`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では {{domxref("HTMLInputElement.value")}} プロパティを使ってこれを受け取ることができます。
 
 ```js
 searchTerms = mySearch.value;
 ```
 
-入力欄に検証の制約がない場合（詳しくは[検証](#検証)を参照)、値は任意の文字列又は空文字列（`""`) になることがあります。
+入力欄に検証の制約がない場合（詳しくは[検証](#検証)を参照)、値は任意の文字列又は空文字列 (`""`) になることがあります。
 
 ## 追加の属性
 
-型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、 `search` 型の入力欄は次の属性にも対応しています。
+型に関係なくすべての {{HTMLElement("input")}} 要素を操作する属性に加え、`search` 型の入力欄は次の属性にも対応しています。
 
 ### list
 
-list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち {{htmlattrxref("type", "input")}} と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
+list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} です。 {{HTMLElement("datalist")}} は、この入力欄でユーザーに提案するための事前定義された値のリストを提供します。リストの中の値のうち [`type`](/ja/docs/Web/HTML/Element/input#type) と互換性のないものは、提案されるオプションには含まれません。提供される値は提案であり、要件ではありません。ユーザーはこの定義済みリストから選択することも、異なる値を提供することもできます。
 
 ### maxlength
 
 ユーザーが検索フィールドに入力することができる（UTF-16 コード単位での) 最大文字数です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、検索フィールドには最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
-フィールドに入力されたテキストの長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。
+フィールドに入力されたテキストの長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 
 ### minlength
 
 ユーザーが検索フィールドに入力することができる（UTF-16 コード単位での) 最小文字数です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、検索フィールドには最小文字数が設定されません。
 
-入力欄のテキスト値の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その検索フィールドは[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に失敗します。
+入力欄のテキスト値の長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その検索フィールドは[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 
 ### pattern
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の {{htmlattrxref("value")}} が[制約検証](/ja/docs/Web/Guide/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
-> **メモ:** {{htmlattrxref("title", "input")}} 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
+> **メモ:** [`title`](/ja/docs/Web/HTML/Element/input#title) 属性を使用してテキストを指定すると、多くのブラウザーでパターンに一致する要件が何であるかを説明するツールチップを表示することができます。近くに他の説明テキストを配置する必要があります。
 
 詳細や例については[パターンの指定](#パターンの指定)を参照してください。
 
@@ -104,7 +57,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 コントロールの内容がある書字方向（{{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
-> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[\<input>: 入力欄（フォーム入力) 要素](/ja/docs/Web/HTML/Element/input)の[プレイスホルダーはアクセシブルではない](/ja/docs/Web/HTML/Element/input#プレイスホルダーはアクセシブルではない)を参照してください。
+> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Element/input#ラベル)を参照してください。
 
 ### readonly
 
@@ -158,7 +111,7 @@ Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこ�
 
 Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。
 
-この属性は非推奨です。代わりにグローバル属性 {{htmlattrxref("enterkeyhint")}} を使用してください。
+この属性は非推奨です。代わりにグローバル属性 [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes#enterkeyhint) を使用してください。
 
 ### results
 
@@ -187,7 +140,7 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 `q` は検索入力に与えられる最も一般的な `name` ですが、そうする必要があるわけではありません。送信すると、サーバーに送信されるデータの名前と値の組は `q=searchterm` となります。
 
-入力欄に {{htmlattrxref("name", "input")}} を設定することを忘れないでください。そうしないと送信されません。
+入力欄に [`name`](/ja/docs/Web/HTML/Element/input#name) を設定することを忘れないでください。そうしないと送信されません。
 
 ### search 型と text 型の違い
 
@@ -201,7 +154,7 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 ### プレイスホルダーの設定
 
-{{htmlattrxref("placeholder","input")}} 属性を使用して、テキスト入力欄の内部に有用なプレイスホルダーを提供することで、何を入力すればよいかのヒントを提供することができます。次の例を見てください。
+[`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) 属性を使用して、テキスト入力欄の内部に有用なプレイスホルダーを提供することで、何を入力すればよいかのヒントを提供することができます。次の例を見てください。
 
 ```html
 <form>
@@ -224,10 +177,10 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 検索フォームの一つの問題はアクセシビリティです。一般的なデザインの慣例では、検索フィールドにハラベルがなく（虫眼鏡のアイコンや同類のものはあります）、よく見えるユーザーには、その配置から検索フォームの目的が明確に分かります（[この例ではよくあるパターンを示しています](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/))。
 
-しかし、これは、検索入力が何であるかを言葉で示していないため、画面リーダーの利用者に混乱を引き起こす可能性があります。 ビジュアルデザインに影響を与えないでこれを解決する方法として、 [WAI-ARIA](/ja/docs/Learn/Accessibility/WAI-ARIA_basics) の機能を使用することができます。
+しかし、これは、検索入力が何であるかを言葉で示していないため、スクリーンリーダーの利用者に混乱を引き起こす可能性があります。 ビジュアルデザインに影響を与えないでこれを解決する方法として、 [WAI-ARIA](/ja/docs/Learn/Accessibility/WAI-ARIA_basics) の機能を使用することができます。
 
-- `<form>` フォームの `role` 属性の値が `search` であると、画面リーダーがフォームが検索フォームであることをアナウンスします。
-- これで十分ではない場合、 {{HTMLElement("input")}} 自身の [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を使用することができます。これは画面リーダーによって読み上げられ説明的なテキストラベルです。これは非視覚的な `<label>` と同等のものです。
+- `<form>` フォームの `role` 属性の値が `search` であると、スクリーンリーダーがフォームが検索フォームであることをアナウンスします。
+- これで十分ではない場合、 {{HTMLElement("input")}} 自身の [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性を使用することができます。これはスクリーンリーダーによって読み上げられ説明的なテキストラベルです。これは非視覚的な `<label>` と同等のものです。
 
 例を見てみましょう。
 
@@ -249,13 +202,13 @@ Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kb
 
 {{EmbedLiveSample("Search_form_labels_and_accessibility", 600, 40)}}
 
-前回の例から見かけ上の違いはありませんが、画面リーダーのユーザーは追加情報を得る方法があります。
+前回の例から見かけ上の違いはありませんが、スクリーンリーダーのユーザーは追加情報を得る方法があります。
 
 > **メモ:** このようなアクセシビリティ機能の詳細ついては、 [Signposts/Landmarks](/ja/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) をご覧ください。
 
 ### 物理的な入力要素の寸法
 
-入力ボックスの物理的な寸法は、 {{htmlattrxref("size", "input")}} 属性を使って制御することができます。これによって、テキスト入力欄が一度に表示できる文字数を指定することができます。これは要素の幅に影響し、幅をピクセル数ではなく文字数で指定することができます。例えば、この例の中では、入力欄は30文字の幅です。
+入力ボックスの物理的な寸法は、 [`size`](/ja/docs/Web/HTML/Element/input#size) 属性を使って制御することができます。これによって、テキスト入力欄が一度に表示できる文字数を指定することができます。これは要素の幅に影響し、幅をピクセル数ではなく文字数で指定することができます。例えば、この例の中では、入力欄は30文字の幅です。
 
 ```html
 <form>
@@ -303,7 +256,7 @@ input:valid ~ span::after {
 
 ### 入力を必須にする
 
-入力を行わないとフォームの送信が許可されないようにするための簡単な方法として、 {{htmlattrxref("required", "input")}} 属性を使うことができます。
+入力を行わないとフォームの送信が許可されないようにするための簡単な方法として、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使うことができます。
 
 ```html
 <form>
@@ -344,13 +297,13 @@ input:valid ~ span::after {
 
 加えて、何も検索語を入力せずに送信しようとすると、ブラウザーがメッセージを表示します。以下のものは Firefox の例です。
 
-![form field with attached message that says Please fill out this field](firefox-required-message.png)
+![このフィールドは入力必須です。と言うメッセージが添付されたフォームフィールド](firefox-required-message.png)
 
 入力欄の中に無効な異なるデータ型を持つフォームを送信しようとすれば、下記の例のように、異なるメッセージが表示されるでしょう。
 
 ### 入力値の長さ
 
-{{htmlattrxref("minlength", "input")}} 属性を使用して入力された値の最小の長さ（文字数) を指定することができます。同様に、 {{htmlattrxref("maxlength", "input")}} を使用して入力された値の最大長を文字数で設定します。
+[`minlength`](/ja/docs/Web/HTML/Element/input#minlength) 属性を使用して入力された値の最小の長さ（文字数) を指定することができます。同様に、 [`maxlength`](/ja/docs/Web/HTML/Element/input#maxlength) を使用して入力された値の最大長を文字数で設定します。
 
 以下の例では、入力値が4～8文字の長さであることが求められます。
 
@@ -399,7 +352,7 @@ This renders like so:
 
 ### パターンの指定
 
-{{htmlattrxref("pattern", "input")}} 属性を使用して、入力値が妥当と判断されるために一致しなければならない正規表現を指定することができます（入力値を検証するために正規表現を使うための短期コースは[正規表現による検証](/ja/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression)をご覧ください)。
+[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用して、入力値が妥当と判断されるために一致しなければならない正規表現を指定することができます（入力値を検証するために正規表現を使うための短期コースは[正規表現による検証](/ja/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression)をご覧ください）。
 
 例を見てみましょう。製品 ID の検索フォームを提供し、 ID はすべてが2文字の英字に続いて4桁の番号です。以下の例でそれに対応します。
 
@@ -446,6 +399,60 @@ input:valid ~ span::after {
 ## 例
 
 [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) の例ので使用した検索フォーム（[ライブで見る](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）が良い例です。
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#値">値</a></strong></td>
+      <td>
+        検索フィールドに入っている値を表す文字列。
+      </td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} および
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
+        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
+      </td>
+    </tr>
+     <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><code>list</code> 属性がない場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role">searchbox</a></code></td>
+      <td><code>list</code> 属性がある場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

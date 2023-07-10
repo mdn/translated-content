@@ -3,6 +3,8 @@ title: 属性（JavaScript）
 slug: Glossary/Property/JavaScript
 ---
 
+{{GlossarySidebar}}
+
 **JavaScript 属性**是一个[对象](/zh-CN/docs/Web/JavaScript/Data_structures#object)的成员，它将键与值联系起来。JavaScript 对象是一种数据结构，它存储了属性的集合。
 
 属性包含以下组成部分：
@@ -28,7 +30,7 @@ const obj = {
 
 在[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的概念中，属性可以分为*实例属性*和*静态属性*，前者由每个实例拥有，后者由类拥有，持有所有实例共有的数据。在[继承](/zh-CN/docs/Web/JavaScript/Reference/Classes)的概念下，属性也可以分为*自有属性*和*继承属性*，前者由对象本身拥有，后者由对象的原型链中的对象拥有。
 
-关于读写属性的更多信息，请参见[使用对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects)。
+关于读写属性的更多信息，请参见[使用对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects)。
 
 ## 参见
 

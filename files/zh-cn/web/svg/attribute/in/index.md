@@ -3,7 +3,7 @@ title: in
 slug: Web/SVG/Attribute/in
 ---
 
-« [SVG Attribute reference home](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 in 属性标识输入的原语。
 

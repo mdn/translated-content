@@ -23,7 +23,7 @@ Gecko 25 を搭載した Firefox 25 は米国時間 2013 年 10 月 29 日にリ
 
 ### HTML
 
-- {{HTMLElement("iframe")}} の {{htmlattrxref("srcdoc", "iframe")}} 属性をサポートしました。これは、{{HTMLElement("iframe")}} のコンテンツをインラインで記載できる属性です ([Firefox バグ 802895](https://bugzil.la/802895))。
+- {{HTMLElement("iframe")}} の [`srcdoc`](/ja/docs/Web/HTML/Element/iframe#srcdoc) 属性をサポートしました。これは、{{HTMLElement("iframe")}} のコンテンツをインラインで記載できる属性です ([Firefox バグ 802895](https://bugzil.la/802895))。
 - `"image/jpeg"` タイプとともに使用するとき `HTMLCanvasElement.toBlob` メソッドは、画像の品質を指定する第 3 引数を受け入れます ([Firefox バグ 891884](https://bugzil.la/891884))。
 
 ### JavaScript

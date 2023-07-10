@@ -23,7 +23,7 @@ Elementos de **cabeçalho** são implementados em seis níveis, `<h1>` é o mais
 
 Esses elementos incluem os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
-O atributo **align** está {{deprecated_inline}} no {{HTMLVersionInline(4.01)}} e no {{HTMLVersionInline(5)}}.
+O atributo **align** está {{deprecated_inline}} no HTML 4 e no HTML 5.
 
 ## Exemplos
 
@@ -74,7 +74,7 @@ Aqui está o resultado deste código:
 
 Evite pular níveis de cabeçalhos: sempre comece com `<h1>`, depois `<h2>` e assim por diante. Tente, também, ter pelo menos um cabeçalho de primeiro nível em uma página..
 
-Em {{HTMLVersionInline(5)}}, use o elemento {{HTMLElement("section")}} para definir o outline de um documento. Cabeçalhos fornecem títulos para secções e subsecções. Você também pode agrupar um cabeçalho e seu conteúdo usando o elemento {{HTMLElement("div")}} .
+Em HTML 5, use o elemento {{HTMLElement("section")}} para definir o outline de um documento. Cabeçalhos fornecem títulos para secções e subsecções. Você também pode agrupar um cabeçalho e seu conteúdo usando o elemento {{HTMLElement("div")}} .
 
 ## Especificações
 

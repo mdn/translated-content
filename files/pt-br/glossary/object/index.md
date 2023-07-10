@@ -9,6 +9,6 @@ original_slug: Glossario/Objeto
 
 ### Conhecimentos gerais
 
-- {{Interwiki("wikipedia", "Object-oriented programming")}} on Wikipedia
+- [Object-oriented programming](https://pt.wikipedia.org/wiki/Programação_orientada_a_objetos) on Wikipedia
 - {{jsxref("Object")}} in the [JavaScript reference](/pt-BR/docs/Web/JavaScript/Reference)
 - [Object data structures in JavaScript](/pt-BR/docs/Web/JavaScript/Data_structures#Objects)

@@ -13,10 +13,10 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 | Name                               | Type                                     | Description                                                                                         |
 | ---------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| `accessKey`                        | {{domxref("DOMString")}}         | Reflects the {{htmlattrxref("accesskey", "label")}} HTML attribute.                   |
+| `accessKey`                        | {{domxref("DOMString")}}         | Reflects the [`accesskey`](/zh-CN/docs/Web/HTML/Element/label#accesskey) HTML attribute.                   |
 | `control` {{readonlyInline}} | {{domxref("HTMLElement")}}     | The labeled control.                                                                                |
 | `form` {{readonlyInline}}    | {{domxref("HTMLFormElement")}} | The form owner of this label.                                                                       |
-| `htmlFor`                          | {{domxref("DOMString")}}         | The ID of the labeled control. Reflects the {{htmlattrxref("for", "label")}} attribute. |
+| `htmlFor`                          | {{domxref("DOMString")}}         | The ID of the labeled control. Reflects the [`for`](/zh-CN/docs/Web/HTML/Element/label#for) attribute. |
 
 ## Methods
 

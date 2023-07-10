@@ -314,7 +314,7 @@ function createLink(testItem) {
 
 Chaque lien a un double objectif — il vous dit quelle est l’erreur, vous pouvez aussi cliquer dessus / l’activer pour passer directement à l’élément d’entrée en question et corriger votre saisie.
 
-> **Note :** La partie `focus()` de cet exemple est un peu délicate. Chrome et Edge (et les versions plus récentes d'IE) focalisent l'élément lorsque l'utilisateur clique sur le lien, sans avoir besoin du bloc `onclick`/`focus()`. Safari ne mettra en évidence que l'élément de formulaire avec le lien, il a donc besoin du bloc `onclick`/`focus()` pour le focaliser. Firefox ne focalise pas les entrées correctement dans ce contexte, les utilisateurs de Firefox ne peuvent donc pas en profiter pour le moment (bien que tout le reste fonctionne bien). Le problème de Firefox devrait bientôt être résolu - des efforts sont en cours pour donner la parité des comportements de Firefox aux autres navigateurs (voir {{bug(277178)}}).
+> **Note :** La partie `focus()` de cet exemple est un peu délicate. Chrome et Edge (et les versions plus récentes d'IE) focalisent l'élément lorsque l'utilisateur clique sur le lien, sans avoir besoin du bloc `onclick`/`focus()`. Safari ne mettra en évidence que l'élément de formulaire avec le lien, il a donc besoin du bloc `onclick`/`focus()` pour le focaliser. Firefox ne focalise pas les entrées correctement dans ce contexte, les utilisateurs de Firefox ne peuvent donc pas en profiter pour le moment (bien que tout le reste fonctionne bien). Le problème de Firefox devrait bientôt être résolu - des efforts sont en cours pour donner la parité des comportements de Firefox aux autres navigateurs (voir [bug Firefox 277178](https://bugzil.la/277178)).
 
 De plus, le champ `errorField` est placé en haut de l'ordre source (bien qu'il soit positionné différemment dans UI à l'aide de CSS), ce qui signifie que les utilisateurs peuvent savoir exactement ce qui ne va pas avec les soumissions de formulaire et accéder aux éléments d'entrée en question en remontant au début de la page
 
@@ -366,13 +366,3 @@ Nous espérons que cet article vous a fourni beaucoup de détails et de compréh
 Ensuite, WAI-ARIA !
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## Dans ce module
-
-- [Qu'est ce que l'accessibilité?](/fr/docs/Apprendre/a11y/What_is_accessibility)
-- [HTML : une bonne base pour l'accessibilité](/fr/docs/Apprendre/a11y/HTML#Building_keyboard_accessibility_back_in)
-- [Meilleures pratiques d'accessibilité CSS et JavaScript](/fr/docs/Apprendre/a11y/CSS_and_JavaScript)
-- [WAI-ARIA basics](/fr/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/fr/docs/Apprendre/a11y/Multimedia)
-- [Mobile accessibility](/fr/docs/Learn/Accessibility/Mobile)
-- [Évaluation: dépannage d'accessibilité](/fr/docs/Apprendre/a11y/Accessibility_troubleshooting)

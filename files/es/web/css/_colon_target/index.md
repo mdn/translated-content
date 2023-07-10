@@ -4,7 +4,7 @@ slug: Web/CSS/:target
 ---
 {{CSSRef}}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:target`** de [CSS](/es/docs/Web/CSS) representa un elemento único (el _elemento objetivo_) con un {{htmlattrxref("id")}} que coincide con el fragmento de la URL.
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:target`** de [CSS](/es/docs/Web/CSS) representa un elemento único (el _elemento objetivo_) con un [`id`](/es/docs/Web/HTML/Global_attributes#id) que coincide con el fragmento de la URL.
 
 ```css
 /* Selecciona un elemento con una ID que coincida con el fragmento de la URL actual */

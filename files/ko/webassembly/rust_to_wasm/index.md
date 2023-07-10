@@ -1,7 +1,8 @@
 ---
 title: Rust를 WebAssembly로 컴파일하기
-slug: WebAssembly/Rust_to_wasm
+slug: WebAssembly/Rust_to_Wasm
 ---
+
 {{WebAssemblySidebar}}
 
 여러분이 Rust 코드를 가지고 있다면 WebAssembly로 컴파일 할 수 있습니다. 이 튜토리얼은 Rust 프로젝트를 컴파일하여 기존 웹 애플리케이션에서 사용하기 위해 알아야 할 모든 것을 설명합니다.
@@ -97,7 +98,7 @@ npm 계정을 만드려면 [npm 가입 페이지](https://www.npmjs.com/signup) 
 
 `src/lib.rs`에 다음 코드를 적어봅시다.
 
-```rs
+```rust
     use wasm_bindgen::prelude::*;
 
     #[wasm_bindgen]
@@ -117,7 +118,7 @@ npm 계정을 만드려면 [npm 가입 페이지](https://www.npmjs.com/signup) 
 
 첫 부분은 다음과 같습니다.
 
-```rs
+```rust
     use wasm_bindgen::prelude::*;
 ```
 
@@ -137,7 +138,7 @@ Rust에서 라이브러리는 크레이트(crate)라고 합니다.
 
 다음 부분은 이렇게 되어있을 것입니다.
 
-```rs
+```rust
     #[wasm_bindgen]
     extern {
         pub fn alert(s: &str);
@@ -156,7 +157,7 @@ JavaScript 함수를 호출하고 싶을 때면 언제든지 이들을 파일에
 
 마지막 부분은 여기 있습니다.
 
-```rs
+```rust
     #[wasm_bindgen]
     pub fn greet(name: &str) {
         alert(&format!("Hello, {}!", name));

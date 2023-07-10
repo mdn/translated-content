@@ -2,7 +2,6 @@
 title: Conventions et définitions relatives à MDN
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
 translation_of: MDN/Guidelines/Conventions_definitions
-original_slug: MDN/Guidelines/Conventions_definitions
 ---
 
 {{MDNSidebar}}

@@ -3,7 +3,7 @@ title: end
 slug: Web/SVG/Attribute/end
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 这个属性定义了一个动画的结束值，可以约束激活持续时间。
 

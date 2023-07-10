@@ -2,7 +2,7 @@
 title: Firefox 111 for developers
 slug: Mozilla/Firefox/Releases/111
 l10n:
-  sourceCommit: 8675dfc40818fe6f779ce823ee7c44ca856f0c90
+  sourceCommit: 1b4f28b8a92b0839dc7cb0af67166385764a8585
 ---
 
 {{FirefoxSidebar}}
@@ -67,7 +67,7 @@ l10n:
 
 - [`RTCInboundRtpStreamStats.trackIdentifier`](/ja/docs/Web/API/RTCInboundRtpStreamStats#trackidentifier) をサポートしました。
   これにより開発者は、{{domxref("RTCPeerConnection.getStats()")}} を使用しているときに `inbound-rtp` 統計値と特定のトラックを関連づけることができます。
-  (詳しくは [Firefox bug 1680606](https://bugzil.la/1680606) をご覧ください)
+  (詳しくは [Firefox bug 1804676](https://bugzil.la/1804676) をご覧ください)
 
 #### 廃止
 

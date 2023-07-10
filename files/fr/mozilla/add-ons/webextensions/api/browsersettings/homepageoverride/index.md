@@ -1,15 +1,6 @@
 ---
 title: browserSettings.homepageOverride
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - homepageOverride
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride
 ---
 

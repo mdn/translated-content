@@ -99,7 +99,7 @@ _変更なし。_
 
 - `userproximity` および `deviceproximity` イベント (UserProximityEvent` および `DeviceProximityEvent` もご覧ください) を設定項目 `device.sensors.proximity.enabled` で、デフォルトで無効化しました ([Firefox バグ 1462308](https://bugzil.la/1462308))。
 - `devicelight` イベント (`DeviceLightEvent` もご覧ください) を設定項目 `device.sensors.ambientLight.enabled` で、デフォルトで無効化しました ([Firefox バグ 1462308](https://bugzil.la/1462308))。
-- `DOMSubtreeModified` および `DOMAttrModified` [ミューテーションイベント](/ja/docs/Web/API/MutationEvent) は、CSSOM によって {{htmlattrxref("style")}} 属性が変更されたときに発生しないようになりました ([Firefox バグ 1460295](https://bugzil.la/1460295)).
+- `DOMSubtreeModified` および `DOMAttrModified` [ミューテーションイベント](/ja/docs/Web/API/MutationEvent) は、CSSOM によって [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性が変更されたときに発生しないようになりました ([Firefox バグ 1460295](https://bugzil.la/1460295)).
 - {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} のサポートを廃止しました ([Firefox バグ 1408301](https://bugzil.la/1408301))。
 - {{domxref("CSSValue")}}、{{domxref("CSSPrimitiveValue")}}、{{domxref("CSSValueList")}} のサポートを廃止しました ([Firefox バグ 1459871](https://bugzil.la/1459871))。
 - {{domxref("window.getComputedStyle()")}} が表示するものがない `Window` で呼び出されたときに、`null` を返さないようになりました ([Firefox バグ 1467722](https://bugzil.la/1467722))。

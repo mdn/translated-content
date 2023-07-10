@@ -21,13 +21,13 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 
 ### Attributs dépréciés ou obsolètes
 
-- {{htmlattrdef("compact")}}{{Deprecated_inline}}
+- `compact`{{Deprecated_inline}}
 
   - : Cet attribut booléen fournit une indication pour afficher la liste en mode compact. L'interprétation de cet attribut est laissée à la discrétion de l'agent utilisateur et ne fonctionne pas pour tous les navigateurs.
 
     > **Attention :** Cet attribut a été déprécié et ne doit pas être utilisé. Pour obtenir le même effet, on pourra utiliser la propriété {{cssxref("line-height")}} avec la valeur `80%` pour l'élément `<ul>`.
 
-- {{htmlattrdef("type")}}{{Deprecated_inline}}
+- `type`{{Deprecated_inline}}
 
   - : Cet attribut permet de définir le style de puce utilisé pour la liste. Les valeurs définies au sein des spécifications pour HTML3.2 et HTML 4.0/4.01 sont :
 
@@ -194,5 +194,5 @@ L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre partic
 
   - La propriété {{cssxref("list-style")}} qui permet de choisir la façon dont l'indicateur ordinal est affiché,
   - [Les compteurs CSS](/fr/docs/Web/CSS/Compteurs_CSS), qui permettent de gérer des listes imbriquées complexes,
-  - La propriété {{cssxref("line-height")}} qui permet de simuler l'attribut {{htmlattrxref("compact", "ul")}} désormais déprécié,
+  - La propriété {{cssxref("line-height")}} qui permet de simuler l'attribut [`compact`](/fr/docs/Web/HTML/Element/ul#compact) désormais déprécié,
   - La propriété {{cssxref("margin")}} peut être utilisée pour contrôler l'indentation de la liste.

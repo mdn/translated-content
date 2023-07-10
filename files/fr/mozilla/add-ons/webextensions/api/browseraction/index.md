@@ -1,15 +1,6 @@
 ---
 title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 ---
 

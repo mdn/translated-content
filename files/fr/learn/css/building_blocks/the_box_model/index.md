@@ -341,24 +341,3 @@ Vous pouvez rencontrer cette astuce sur bon nombre de menus de navigation dans l
 Dans la leçon suivante, ce sont les arrières-plans et les bordures qui capteront notre attention, afin de rendre votre mise en page plus attrayante.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
-
-## Dans ce module
-
-1. [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Sélecteurs de classe, de type et d'identifiant](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. Le modèle de boîte
-4. [Arrières-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Gérer la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Le dépassement du contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Valeurs et unités](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Dimensionnement des objets en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, médias, et formulaires](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Mettre en forme les tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Déboguer CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organiser son code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

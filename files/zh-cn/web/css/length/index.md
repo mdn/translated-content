@@ -54,9 +54,9 @@ slug: Web/CSS/length
 - `vw`
   - : 视口的初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)的宽度的 1%。
 - `vi` {{experimental_inline}}
-  - : 等于初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)大小的 1%，在根元素的[行内轴](/zh-CN/docs/Web/CSS/CSS_Logical_Properties#inline-dimension)方向上。
+  - : 等于初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)大小的 1%，在根元素的[行内轴](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values#行向尺度)方向上。
 - `vb` {{experimental_inline}}
-  - : 等于初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)大小的 1%，在根元素的[区块轴](/zh-CN/docs/Web/CSS/CSS_Logical_Properties#block-dimension)方向上。
+  - : 等于初始[包含块](/zh-CN/docs/Web/CSS/All_About_The_Containing_Block)大小的 1%，在根元素的[区块轴](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values#块向尺度)方向上。
 - `vmin`
   - : 视口高度 `vw` 和宽度 `vh` 两者之间的最小值。
 - `vmax`
@@ -213,4 +213,4 @@ inputElem.addEventListener('change', () => {
 
 - [CSS 属性值与单位教程](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
 - [CSS 属性值与单位参考](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)
-- [框盒模型](/zh-CN/docs/Web/CSS/CSS_Box_Model)
+- [框盒模型](/zh-CN/docs/Web/CSS/CSS_box_model)

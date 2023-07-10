@@ -323,7 +323,7 @@ awesome_instance.save( function(err) {
 });
 ```
 
-#### 搜索纪录
+#### 搜索记录
 
 可以使用查询方法搜索记录，查询条件可列在 JSON 文档中。以下代码展示了如何在数据库中找到所有网球运动员，并返回运动员姓名和年龄字段。这里只指定了一个匹配字段（运动项目，`sport`），也可以添加更多条件，指定正则表达式，或去除所有条件以返回所有运动员。
 
@@ -760,7 +760,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 
 本文最后（使用独立运行的脚本）创建了一些测试实例。下一节将关注如何创建页面以显示这些对象。
 
-## 另请参阅
+## 参见
 
 - [数据库集成](http://expressjs.com.cn/guide/database-integration.html) (Express 文档)
 - [Mongoose 站点](http://mongoosejs.com/) (Mongoose 文档)

@@ -416,7 +416,7 @@ textarea.onkeyup = function(){
 
 ### Les attributs booléens
 
-Vous verrez parfois des attributs sans valeur définie : c'est tout à fait autorisé. Ils sont appelés attributs booléens ; ils ne peuvent avoir qu'une seule valeur, généralement la même que le nom de l'attribut. Par exemple, prenez l'attribut {{htmlattrxref("disabled", "input")}}, que vous pouvez affecter aux éléments `input` (éléments de saisie d'un formulaire) si vous voulez les _désactiver_ (ils seront alors grisés) afin que l'utilisateur ne puisse pas y saisir de données.
+Vous verrez parfois des attributs sans valeur définie : c'est tout à fait autorisé. Ils sont appelés attributs booléens ; ils ne peuvent avoir qu'une seule valeur, généralement la même que le nom de l'attribut. Par exemple, prenez l'attribut [`disabled`](/fr/docs/Web/HTML/Element/input#disabled), que vous pouvez affecter aux éléments `input` (éléments de saisie d'un formulaire) si vous voulez les _désactiver_ (ils seront alors grisés) afin que l'utilisateur ne puisse pas y saisir de données.
 
 ```html
 <input type="text" disabled="disabled">
@@ -748,15 +748,3 @@ Vous avez atteint la fin de l'article — nous espérons que vous avez appréci�
 - [Appliquer une couleur aux éléments HTML avec les CSS](/fr/docs/Web/HTML/Applying_color)
 
 {{NextMenu("Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML", "Apprendre/HTML/Introduction_à_HTML")}}
-
-## Dans ce module
-
-- [Commencer avec le HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [Qu'y a-t-il dans l'en-tête ? Métadonnées en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fondamentaux du texte HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Création d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formatage avancé du texte](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Structure de Site Web et de document](/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Déboguer de l'HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Faire une lettre](/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structurer une page de contenu](/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

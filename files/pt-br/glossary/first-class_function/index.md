@@ -92,4 +92,4 @@ Estamos usando parênteses duplo `()()` pra chamar também a função retornada.
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "First-class_function", "First-class functions")}} na Wikipedia
+- [First-class functions](https://pt.wikipedia.org/wiki/Função_de_primeira_classe) na Wikipedia

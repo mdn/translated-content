@@ -177,14 +177,3 @@ Juste pour redire ce qui a déjà été dit au-dessus, si vous découvrez des bu
 Cet article devrez vous avoir donné un haut niveau de compréhension des concepts les plus importants que vous devez connaître à propos du test en navigateur croisé. Armé de ce savoir, vous êtes maintenant prêt à démarrer et à commencer à apprendre à propos des stratégies de test multi-navigateur.
 
 {{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## Sur ce module
-
-- [Introduction to cross browser testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

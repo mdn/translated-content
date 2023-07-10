@@ -12,7 +12,7 @@ Estas caracteristicas pueden ser un problema de privacidad para los usuarios, ya
 
 ## Desactivar autocompletado
 
-Para desactivar el autocompletado en los formularios, un sitio web puede establecer el atributo {{htmlattrxref("autocomplete", "input")}} a "off":
+Para desactivar el autocompletado en los formularios, un sitio web puede establecer el atributo [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete) a "off":
 
 ```html
 autocomplete="off"

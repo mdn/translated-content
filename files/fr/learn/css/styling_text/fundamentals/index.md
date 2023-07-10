@@ -103,7 +103,9 @@ avait beaucoup d'histoires à raconter. Mais il ne le faisait qu'en de rares
 occasions, comme maintenant.</p>
 ```
 
-{{ EmbedLiveSample('Couleur', '100%', 220) }}
+#### Résultat
+
+{{ EmbedLiveSample('', '100%', 250)}}
 
 ### Familles de fontes
 
@@ -179,8 +181,6 @@ p {
 }
 ```
 
-Cela donne le résultat suivant :
-
 ```html hidden
 <h1>Tommy le Chat</h1>
 
@@ -195,7 +195,9 @@ avait beaucoup d'histoires à raconter. Mais il ne le faisait qu'en de rares
 occasions, comme maintenant.</p>
 ```
 
-{{ EmbedLiveSample('Un_exemple_de_font-family', '100%', 220) }}
+#### Résultat
+
+{{ EmbedLiveSample('', '100%', 250) }}
 
 ### Taille de la police de caractères
 
@@ -254,7 +256,9 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Un_simple_exemple_de_dimensionnement', '100%', 220) }}
+##### Résultat
+
+{{ EmbedLiveSample('', '100%', 250) }}
 
 ### Style de fonte, graisse, transformation et décoration de texte
 
@@ -328,7 +332,9 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Style_de_fonte_graisse_transformation_et_décoration_de_texte', '100%', 220) }}
+#### Résultat
+
+{{ EmbedLiveSample('', '100%', 250) }}
 
 ### Ombres du texte
 
@@ -399,7 +405,9 @@ p {
   }
 ```
 
-{{ EmbedLiveSample('Ombres_du_texte', '100%', 220) }}
+#### Résultat
+
+{{ EmbedLiveSample('', '100%', 250) }}
 
 > **Note :** Vous pouvez voir plus d'exemples intéressants de `text-shadow` dans l'article de Sitepoint [Moonlighting with CSS text-shadow](http://www.sitepoint.com/moonlighting-css-text-shadow/) (Clair de lune avec text-shadow).
 
@@ -458,7 +466,9 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Alignement_du_texte', '100%', 220) }}
+#### Résultat
+
+{{ EmbedLiveSample('', '100%', 220) }}
 
 ### Hauteur de ligne
 
@@ -510,6 +520,8 @@ p {
 }
 ```
 
+#### Résultat
+
 {{ EmbedLiveSample('Hauteur_de_ligne', '100%', 250) }}
 
 ### Espacement entre les lettres et les mots
@@ -524,8 +536,6 @@ p::first-line {
   word-spacing: 4px;
 }
 ```
-
-Nous obtiendrons :
 
 ```html hidden
 <h1>Tommy le Chat</h1>
@@ -573,7 +583,9 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Espacement_entre_les_lettres_et_les_mots', '100%', 250) }}
+#### Résultat
+
+{{ EmbedLiveSample('', '100%', 250) }}
 
 ### D'autres propriétés intéressantes
 
@@ -683,11 +695,3 @@ window.addEventListener("load", drawOutput);
 Nous espérons que vous avez aimé jouer avec le texte dans cet article ! Le prochain article vous donnera tout ce que vous devez savoir sur le style des listes HTML.
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
-
-## Dans ce module
-
-- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte)
-- [Style de listes](/fr/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens)
-- [Polices de caractères web](/fr/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Composition d'une page d'accueil d'une école communale](/fr/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

@@ -1,6 +1,6 @@
 ---
 title: CSS ボックス配置
-slug: Web/CSS/CSS_Box_Alignment
+slug: Web/CSS/CSS_box_alignment
 ---
 
 {{CSSRef}}

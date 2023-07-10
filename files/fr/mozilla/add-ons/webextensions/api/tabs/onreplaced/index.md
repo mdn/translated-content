@@ -1,16 +1,6 @@
 ---
 title: tabs.onReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onReplaced
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onReplaced
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onReplaced
 ---
 

@@ -1,7 +1,8 @@
 ---
 title: CSS 변형 사용하기
-slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
+slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 ---
+
 {{CSSRef}}
 
 **CSS 변형**(transform)은 좌표공간을 변형함으로써 일반적인 문서 흐름을 방해하지 않고 콘텐츠의 형태와 위치를 바꿉니다. 본 가이드는 변형 사용법의 기초를 제시합니다.

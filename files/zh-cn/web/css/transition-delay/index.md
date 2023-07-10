@@ -5,7 +5,7 @@ slug: Web/CSS/transition-delay
 
 {{CSSRef}}{{SeeCompatTable}}
 
-CSS 的**transition-delay**属性规定了在[过渡效果](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)开始作用之前需要等待的时间。
+CSS 的**transition-delay**属性规定了在[过渡效果](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)开始作用之前需要等待的时间。
 
 值以秒（s）或毫秒（ms）为单位，表明动画过渡效果将在何时开始。取值为正时会延迟一段时间来响应过渡效果；取值为负时会导致过渡立即开始。
 
@@ -118,5 +118,5 @@ changeButton.addEventListener("click", change);
 
 ## 参见
 
-- [Using CSS transitions](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}}

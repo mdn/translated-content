@@ -1,15 +1,6 @@
 ---
 title: notifications.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onShown
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Reference
-  - WebExtensions
-  - events
-  - onShown
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onShown
 ---
 

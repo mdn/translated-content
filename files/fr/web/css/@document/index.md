@@ -35,7 +35,7 @@ Les valeurs fournies aux fonctions `url()`, `url-prefix()`, `media-document()` e
 
 Les valeurs échappées fournies à la fonction `regexp()` doivent être en outre échappées pour le CSS. Par exemple, un `.` (point) correspond à n'importe quel caractère dans les expressions régulières. Pour établir une correspondance avec un point littéral, vous aurez d'abord besoin de l'échapper en utilisant les règles des expressions rationnelles (en `\.`), puis d'échapper cette chaîne en utilisant les règles CSS (en `\\.`).
 
-> **Note :** Il existe une version préfixée de cette propriété pour Mozilla : `@-moz-document`. Cette propriété a été restreinte aux feuilles de style utilisateur ou à celles de l'agent utilisateur à partir de Firefox 59 afin d'expérimenter une méthode de réduction des risques d'injections CSS (cf. {{bug(1035091)}}).
+> **Note :** Il existe une version préfixée de cette propriété pour Mozilla : `@-moz-document`. Cette propriété a été restreinte aux feuilles de style utilisateur ou à celles de l'agent utilisateur à partir de Firefox 59 afin d'expérimenter une méthode de réduction des risques d'injections CSS (cf. [bug Firefox 1035091](https://bugzil.la/1035091)).
 
 ### Syntaxe formelle
 

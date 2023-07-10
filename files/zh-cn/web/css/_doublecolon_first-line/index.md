@@ -3,7 +3,7 @@ title: '::first-line (:first-line)'
 slug: Web/CSS/::first-line
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 **`::first-line`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-element](/zh-CN/docs/Web/CSS/Pseudo-elements) （CSS 伪元素）在某 [block-level element](/zh-CN/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes) （块级元素）的第一行应用样式。第一行的长度取决于很多因素，包括元素宽度，文档宽度和文本的文字大小。
 

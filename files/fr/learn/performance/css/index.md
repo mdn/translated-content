@@ -63,21 +63,6 @@ Enfin, les outils de développement du navigateur sont à votre disposition pour
 
 {{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
 
-## Dans ce module
-
-- [Le « pourquoi » des performances web](/fr/docs/Learn/Performance/why_web_performance)
-- [Que sont les performances web ?](/fr/docs/Learn/Performance/What_is_web_performance)
-- [Comment les internautes perçoivent-ils les performances ?](/fr/docs/Learn/Performance/Perceived_performance)
-- [Mesurer les performances](/fr/docs/Learn/Performance/Measuring_performance)
-- [Multimédia : images](/fr/docs/Learn/Performance/Multimedia)
-- [Multimédia : vidéos](/fr/docs/Learn/Performance/video)
-- [Bonnes pratiques Javascript en matière de performance](/fr/docs/Learn/Performance/JavaScript)
-- [Fonctionnalité HTML pour la performance](/fr/docs/Learn/Performance/HTML)
-- [Optimisation des performances en CSS](/fr/docs/Learn/Performance/CSS)
-- [Performance et polices](/fr/docs/Learn/Performance/Fonts)
-- [Performance sur mobile](/fr/docs/Learn/Performance/Mobile)
-- [Placer le focus sur les performances](/fr/docs/Learn/Performance/business_case_for_performance)
-
 ## Voir aussi
 
 - [CSS animation performance](/fr/docs/Web/Performance/CSS_JavaScript_animation_performance)

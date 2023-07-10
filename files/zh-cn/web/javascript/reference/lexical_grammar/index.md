@@ -32,7 +32,7 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 
 ## 行终止符
 
-除了空白符之外，行终止符也可以提高源码的可读性。不同的是，行终止符可以影响 JavaScript 代码的执行。行终止符也会影响[自动分号补全](#Automatic_semicolon_insertion)的执行。在[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)中，行终止符会被 **\s** 匹配。
+除了空白符之外，行终止符也可以提高源码的可读性。不同的是，行终止符可以影响 JavaScript 代码的执行。行终止符也会影响[自动分号补全](#Automatic_semicolon_insertion)的执行。在[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中，行终止符会被 **\s** 匹配。
 
 在 ECMAScript 中，只有下列 Unicode 字符会被当成行终止符，其他的行终止符（比如 Next Line、NEL、U+0085 等）都会被当成空白符。
 

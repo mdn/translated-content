@@ -40,8 +40,8 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
     - `verify`：密钥可用于{{domxref("SubtleCrypto.verify()", "验证", "", 1)}}签名。
     - `deriveKey`：密钥可用于{{domxref("SubtleCrypto.deriveKey()", "派生新的密钥", "", 1)}}。
     - `deriveBits`：密钥可用于{{domxref("SubtleCrypto.deriveBits()", "派生比特序列", "", 1)}}。
-    - `wrapKey`：密钥可被{{domxref("SubtleCrypto.wrapKey()", "包装", "", 1)}}。
-    - `unwrapKey`：密钥可被{{domxref("SubtleCrypto.unwrapKey()", "解包装", "", 1)}}。
+    - `wrapKey`：密钥可用于{{domxref("SubtleCrypto.wrapKey()", "包装一个密钥", "", 1)}}。
+    - `unwrapKey`：密钥可用于{{domxref("SubtleCrypto.unwrapKey()", "解开一个密钥的包装", "", 1)}}。
 
 ### 返回值
 

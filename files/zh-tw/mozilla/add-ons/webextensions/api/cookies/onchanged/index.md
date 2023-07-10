@@ -15,9 +15,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
 ## 語法
 
 ```js
-browser.cookies.onChanged.addListener(listener)
-browser.cookies.onChanged.removeListener(listener)
-browser.cookies.onChanged.hasListener(listener)
+browser.cookies.onChanged.addListener(listener);
+browser.cookies.onChanged.removeListener(listener);
+browser.cookies.onChanged.hasListener(listener);
 ```
 
 此 API 也能以 `browser.cookies.onChanged.*` 運行。
@@ -59,11 +59,16 @@ browser.cookies.onChanged.hasListener(listener)
 本範例監聽 `onChanged` 事件並紀錄由 `changeInfo` 參數傳來的資訊：
 
 ```js
-browser.cookies.onChanged.addListener(function(changeInfo) {
-  console.log('Cookie changed: ' +
-              '\n * Cookie: ' + JSON.stringify(changeInfo.cookie) +
-              '\n * Cause: ' + changeInfo.cause +
-              '\n * Removed: ' + changeInfo.removed);
+browser.cookies.onChanged.addListener(function (changeInfo) {
+  console.log(
+    "Cookie changed: " +
+      "\n * Cookie: " +
+      JSON.stringify(changeInfo.cookie) +
+      "\n * Cause: " +
+      changeInfo.cause +
+      "\n * Removed: " +
+      changeInfo.removed
+  );
 });
 ```
 

@@ -1,16 +1,6 @@
 ---
 title: bookmarks.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onMoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
 ---
 

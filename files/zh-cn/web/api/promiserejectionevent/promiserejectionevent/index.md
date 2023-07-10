@@ -44,7 +44,7 @@ var myRejectionEvent = new PromiseRejectionEvent('unhandledrejection', {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{jsxref("Promise")}}
 - {{domxref("PromiseRejectionEvent")}}

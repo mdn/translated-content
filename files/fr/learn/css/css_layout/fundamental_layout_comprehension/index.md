@@ -66,18 +66,3 @@ Vous pouvez réaliser certaines de ces tâches de plusieurs manières et il n’
 ## Evaluation
 
 Si vous suivez cette évaluation dans le cadre d'un cours organisé, vous devriez pouvoir donner votre travail à votre enseignant / mentor pour qu'il la corrige. Si vous vous auto-apprenez, vous pouvez obtenir le guide de notation assez facilement en vous renseignant sur le [fil de discussion relatif à cet exercice](https://discourse.mozilla.org/t/fundamental-layout-comprehension-assessment/29982) ou sur le [canal](irc://irc.mozilla.org/mdn) IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC) . Essayez d’abord l’exercice - il n’ya aucun avantage à tricher!
-
-## Dans ce module Section
-
-- [Introduction à la mise en page CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Débit normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [la grille](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Flotteurs](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Mise en page à plusieurs colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Conception sensible](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Guide du débutant aux questions des médias](/fr/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Méthodes de mise en page héritées](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Soutenir les anciens navigateurs](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Évaluation fondamentale de la compréhension de la mise en page.](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

@@ -40,9 +40,9 @@ arr.indexOf(searchElement[, fromIndex])
 
 ```js
 var array = [2, 9, 9];
-array.indexOf(2);     // 0
-array.indexOf(7);     // -1
-array.indexOf(9, 2);  // 2
+array.indexOf(2); // 0
+array.indexOf(7); // -1
+array.indexOf(9, 2); // 2
 array.indexOf(2, -1); // -1
 array.indexOf(2, -3); // 0
 ```
@@ -51,8 +51,8 @@ array.indexOf(2, -3); // 0
 
 ```js
 var indices = [];
-var array = ['a', 'b', 'a', 'c', 'a', 'd'];
-var element = 'a';
+var array = ["a", "b", "a", "c", "a", "d"];
+var element = "a";
 var idx = array.indexOf(element);
 while (idx != -1) {
   indices.push(idx);
@@ -65,20 +65,20 @@ console.log(indices);
 ### 尋找元素是否存在於陣列中，若沒有則加入到陣列裡。
 
 ```js
-function updateVegetablesCollection (veggies, veggie) {
-    if (veggies.indexOf(veggie) === -1) {
-        veggies.push(veggie);
-        console.log('New veggies collection is : ' + veggies);
-    } else if (veggies.indexOf(veggie) > -1) {
-        console.log(veggie + ' already exists in the veggies collection.');
-    }
+function updateVegetablesCollection(veggies, veggie) {
+  if (veggies.indexOf(veggie) === -1) {
+    veggies.push(veggie);
+    console.log("New veggies collection is : " + veggies);
+  } else if (veggies.indexOf(veggie) > -1) {
+    console.log(veggie + " already exists in the veggies collection.");
+  }
 }
 
-var veggies = ['potato', 'tomato', 'chillies', 'green-pepper'];
+var veggies = ["potato", "tomato", "chillies", "green-pepper"];
 
-updateVegetablesCollection(veggies, 'spinach');
+updateVegetablesCollection(veggies, "spinach");
 // New veggies collection is : potato,tomato,chillies,green-pepper,spinach
-updateVegetablesCollection(veggies, 'spinach');
+updateVegetablesCollection(veggies, "spinach");
 // spinach already exists in the veggies collection.
 ```
 
@@ -96,11 +96,12 @@ if (!Array.prototype.indexOf) {
     `TypeError` is thrown.
     */
     if (this == null) {
-      throw new TypeError("Array.prototype.indexOf() - can't convert `" + this + "` to object");
+      throw new TypeError(
+        "Array.prototype.indexOf() - can't convert `" + this + "` to object"
+      );
     }
 
-    var
-      index = isFinite(startFrom) ? Math.floor(startFrom) : 0,
+    var index = isFinite(startFrom) ? Math.floor(startFrom) : 0,
       that = this instanceof Object ? this : new Object(this),
       length = isFinite(that.length) ? Math.floor(that.length) : 0;
 
@@ -141,8 +142,7 @@ However, if you are more interested in all the little technical bits defined by 
 // Production steps of ECMA-262, Edition 5, 15.4.4.14
 // Reference: http://es5.github.io/#x15.4.4.14
 if (!Array.prototype.indexOf) {
-  Array.prototype.indexOf = function(searchElement, fromIndex) {
-
+  Array.prototype.indexOf = function (searchElement, fromIndex) {
     var k;
 
     // 1. Let o be the result of calling ToObject passing

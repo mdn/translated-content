@@ -108,7 +108,7 @@ CSS 中的书写模式是指文本的排列方向是横向还是纵向的。{{cs
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
 
-对于每一个普通边距，都有许多属性可以参考，你可以在 MDN 页面（[Logical Properties and Values](/zh-CN/docs/Web/CSS/CSS_Logical_Properties)）查看所有映射属性。
+对于每一个普通边距，都有许多属性可以参考，你可以在 MDN 页面（[Logical Properties and Values](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)）查看所有映射属性。
 
 ### 逻辑值
 

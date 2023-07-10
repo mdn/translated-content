@@ -76,7 +76,7 @@ slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ::pseudo-element-name
 ```
 
-> **备注：**一些早期的伪元素曾使用单冒号的语法，所以你可能会在代码或者示例中看到。现代的浏览器为了保持后向兼容，支持早期的带有单双冒号语法的伪元素。
+> **备注：** 一些早期的伪元素曾使用单冒号的语法，所以你可能会在代码或者示例中看到。现代的浏览器为了保持后向兼容，支持早期的带有单双冒号语法的伪元素。
 
 例如，如果你想选中一段的第一行，你可以把它用一个`<span>`元素包起来，然后使用元素选择器；不过，如果包起来的单词/字符数目长于或者短于父元素的宽度，这样做会失败。由于我们一般不会知道一行能放下多少单词/字符——因为屏幕宽度或者字体大小改变的时候这也会变——通过改变 HTML 的方式来可预测地这么做是不可能的。
 
@@ -139,7 +139,7 @@ article p:first-child::first-line {
 | {{ Cssxref(":disabled") }}             | 匹配处于关闭状态的用户界面元素                                                                                                                                                                            |
 | {{ Cssxref(":empty") }}                 | 匹配除了可能存在的空格外，没有子元素的元素。                                                                                                                                                              |
 | {{ Cssxref(":enabled") }}                 | 匹配处于开启状态的用户界面元素。                                                                                                                                                                          |
-| {{ Cssxref(":first") }}                 | 匹配[分页媒体](/zh-CN/docs/Web/CSS/Paged_Media)的第一页。                                                                                                                                                 |
+| {{ Cssxref(":first") }}                 | 匹配[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)的第一页。                                                                                                                                                 |
 | {{ Cssxref(":first-child") }}         | 匹配兄弟元素中的第一个元素。                                                                                                                                                                              |
 | {{ Cssxref(":first-of-type") }}         | 匹配兄弟元素中第一个某种类型的元素。                                                                                                                                                                      |
 | {{ Cssxref(":focus") }}                 | 当一个元素有焦点的时候匹配。                                                                                                                                                                              |
@@ -153,7 +153,7 @@ article p:first-child::first-line {
 | {{ Cssxref(":lang") }}                     | 基于语言（HTML[lang](/zh-CN/docs/Web/HTML/Global_attributes/lang)属性的值）匹配元素。                                                                                                                     |
 | {{ Cssxref(":last-child") }}             | 匹配兄弟元素中最末的那个元素。                                                                                                                                                                            |
 | {{ Cssxref(":last-of-type") }}         | 匹配兄弟元素中最后一个某种类型的元素。                                                                                                                                                                    |
-| {{ Cssxref(":left") }}                     | 在[分页媒体](/zh-CN/docs/Web/CSS/CSS_Pages)中，匹配左手边的页。                                                                                                                                           |
+| {{ Cssxref(":left") }}                     | 在[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)中，匹配左手边的页。                                                                                                                                           |
 | {{ Cssxref(":link")}}                     | 匹配未曾访问的链接。                                                                                                                                                                                      |
 | {{ Cssxref(":local-link")}}             | 匹配指向和当前文档同一网站页面的链接。                                                                                                                                                                    |
 | {{ Cssxref(":is", ":is()")}}             | 匹配传入的选择器列表中的任何选择器。                                                                                                                                                                      |
@@ -173,7 +173,7 @@ article p:first-child::first-line {
 | {{ Cssxref(":read-only") }}             | 匹配用户不可更改的元素。                                                                                                                                                                                  |
 | {{ Cssxref(":read-write") }}             | 匹配用户可更改的元素。                                                                                                                                                                                    |
 | {{ Cssxref(":required") }}             | 匹配必填的 form 元素。                                                                                                                                                                                    |
-| {{ Cssxref(":right") }}                 | 在[分页媒体](/zh-CN/docs/Web/CSS/CSS_Pages)中，匹配右手边的页。                                                                                                                                           |
+| {{ Cssxref(":right") }}                 | 在[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)中，匹配右手边的页。                                                                                                                                           |
 | {{ Cssxref(":root") }}                     | 匹配文档的根元素。                                                                                                                                                                                        |
 | {{ Cssxref(":scope") }}                 | 匹配任何为参考点元素的的元素。                                                                                                                                                                            |
 | {{ Cssxref(":valid") }}                 | 匹配诸如`<input>`元素的处于可用状态的元素。                                                                                                                                                               |

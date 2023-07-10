@@ -6,7 +6,7 @@ original_slug: Web/API/HTMLElement/contextMenu
 
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
-**`HTMLElement.contextMenu`** プロパティは、{{htmlattrxref("contextmenu")}} 属性を使用して要素に割り当てられたコンテキストメニューを参照します。 メニュー自体は、{{HTMLElement("menu")}} 要素を使用して作成されます。
+**`HTMLElement.contextMenu`** プロパティは、[`contextmenu`](/ja/docs/Web/HTML/Global_attributes#contextmenu) 属性を使用して要素に割り当てられたコンテキストメニューを参照します。 メニュー自体は、{{HTMLElement("menu")}} 要素を使用して作成されます。
 
 ## 値
 
@@ -27,6 +27,6 @@ contextMenu.firstElementChild.label = "新しいラベル";
 
 ## 関連情報
 
-- {{htmlattrxref("contextmenu")}}
+- [`contextmenu`](/ja/docs/Web/HTML/Global_attributes#contextmenu)
 - {{HTMLElement("menu")}}
 - {{HTMLElement("menuitem")}}
