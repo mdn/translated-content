@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("DOM") }}
 
-읽기 전용인 **`children`** 속성은 호출된 요소의 모든 자식 {{domxref("Element", "elements")}}을 포함하는 동적인 {{domxref("HTMLCollection")}}을 반환합니다.
+읽기 전용인 **`children`** 속성은 호출된 요소의 모든 자식 {{domxref("Element", "요소")}}를 포함하는 동적인 {{domxref("HTMLCollection")}}을 반환합니다.
 
 `Element.children`은 요소 노드만을 포함합니다. 텍스트 및 주석 노드와 같이 요소가 아닌 노드를 포함한 모든 자식 노드를 가져오기 위해서는 {{domxref("Node.childNodes")}}를 사용합니다.
 
