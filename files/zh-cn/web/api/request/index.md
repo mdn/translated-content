@@ -130,6 +130,6 @@ fetch(request)
 
 ## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
 - [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)
