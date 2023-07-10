@@ -76,4 +76,4 @@ Não faz parte de nenhuma especificação. Implementado no JavaScript 1.5.
 
 ## Ver também
 
-- Implementation bug for SpiderMonkey {{bug(65683)}}
+- Implementation bug for SpiderMonkey [Erro do Firefox 65683](https://bugzil.la/65683)
