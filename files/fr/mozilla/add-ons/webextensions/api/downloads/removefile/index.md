@@ -1,16 +1,6 @@
 ---
 title: downloads.removeFile()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - removeFile
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
 ---
 

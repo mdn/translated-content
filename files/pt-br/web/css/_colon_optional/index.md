@@ -5,7 +5,7 @@ slug: Web/CSS/:optional
 
 {{ CSSRef }}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:optional`** representa qualquer elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} que não contenha o atributo {{ htmlattrxref("required", "input") }}.
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:optional`** representa qualquer elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} que não contenha o atributo [`required`](/pt-BR/docs/Web/HTML/Element/input#required).
 
 ```css
 /* Selects qualquer <input> opcional */
@@ -28,7 +28,7 @@ Veja {{cssxref(":invalid")}} como exemplo.
 
 ## Referências de acessibilidade
 
-Se um [formulário](/pt-BR/docs/Web/HTML/Element/form) contém {{htmlelement("input")}} opcionais, inputs requeridos devem ser indicados utilizando o atriuto {{ htmlattrxref("required", "input") }}. Isto garantirá que usuários que navegam com tecnologia de acessibilidade, como um leitor de tela, possam entender quais entradas devem ter o conteúdo validado para submeter o formulário com êxito.
+Se um [formulário](/pt-BR/docs/Web/HTML/Element/form) contém {{htmlelement("input")}} opcionais, inputs requeridos devem ser indicados utilizando o atriuto [`required`](/pt-BR/docs/Web/HTML/Element/input#required). Isto garantirá que usuários que navegam com tecnologia de acessibilidade, como um leitor de tela, possam entender quais entradas devem ter o conteúdo validado para submeter o formulário com êxito.
 
 Entradas requeridas devem ser indicadas visualmente, utilizando um tratamento que não seja apenas a cor para passar o significado. Usualmente, textos descritivos e/ou um ícone são utilizados.
 

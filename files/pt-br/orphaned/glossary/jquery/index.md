@@ -34,7 +34,7 @@ window.onload = function() {
 
 ### General knowledge
 
-- {{Interwiki("wikipedia", "jQuery")}} on Wikipedia
+- [jQuery](https://pt.wikipedia.org/wiki/jQuery) on Wikipedia
 - Web site oficial [jQuery](https://jquery.com/)
 
 ### Technical information

@@ -1,16 +1,6 @@
 ---
 title: tabs.onActivated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onActivated
-  - tavs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: Pixel
 slug: Glossary/Pixel
-tags:
-  - Glossaire
-  - Graphismes
 translation_of: Glossary/Pixel
-original_slug: Glossaire/Pixel
 ---
 
 Un pixel est le plus petit bloc qu'un affichage graphique comme un écran d'ordinateur puisse afficher.

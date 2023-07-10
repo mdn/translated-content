@@ -1,13 +1,6 @@
 ---
 title: management
 slug: Mozilla/Add-ons/WebExtensions/API/management
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management
 ---
 

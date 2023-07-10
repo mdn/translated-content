@@ -1,15 +1,6 @@
 ---
 title: browserSettings.newTabPageOverride
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - newTabPageOverride
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
 ---
 

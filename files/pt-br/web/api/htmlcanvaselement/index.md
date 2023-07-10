@@ -14,11 +14,11 @@ The **`HTMLCanvasElement`** interface provides properties and methods for manipu
 _Inherits properties from its parent,_ _{{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLCanvasElement.height")}}
-  - : Is a positive `integer` reflecting the {{htmlattrxref("height", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `150` is used.
+  - : Is a positive `integer` reflecting the [`height`](/pt-BR/docs/Web/HTML/Element/canvas#height) HTML attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `150` is used.
 - {{domxref("HTMLCanvasElement.mozOpaque")}} {{non-standard_inline}}
-  - : Is a {{jsxref("Boolean")}} reflecting the {{htmlattrxref("moz-opaque", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized.
+  - : Is a {{jsxref("Boolean")}} reflecting the [`moz-opaque`](/pt-BR/docs/Web/HTML/Element/canvas#moz-opaque) HTML attribute of the {{HTMLElement("canvas")}} element. It lets the canvas know whether or not translucency will be a factor. If the canvas knows there's no translucency, painting performance can be optimized.
 - {{domxref("HTMLCanvasElement.width")}}
-  - : Is a positive `integer` reflecting the {{htmlattrxref("width", "canvas")}} HTML attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `300` is used.
+  - : Is a positive `integer` reflecting the [`width`](/pt-BR/docs/Web/HTML/Element/canvas#width) HTML attribute of the {{HTMLElement("canvas")}} element interpreted in CSS pixels. When the attribute is not specified, or if it is set to an invalid value, like a negative, the default value of `300` is used.
 - {{domxref("HTMLCanvasElement.mozPrintCallback")}}{{non-standard_inline}}
   - : Is a `function` that is Initially null, Web content can set this to a JavaScript function that will be called if the page is printed. This function can then redraw the canvas at a higher resolution that is suitable for the printer being used. [See this blog post.](https://blog.mozilla.org/labs/2012/09/a-new-way-to-control-printing-output/)
 

@@ -1,12 +1,7 @@
 ---
 title: Grille
 slug: Glossary/Grid
-tags:
-  - CSS
-  - Glossaire
-  - Grilles
 translation_of: Glossary/Grid
-original_slug: Glossaire/Grid
 ---
 
 Une grille _CSS_ est définie en utilisant la valeur `grid` de la propriété `display` ; vous pouvez définir les colonnes et les lignes de votre grille en utilisant les propriétés {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}}.

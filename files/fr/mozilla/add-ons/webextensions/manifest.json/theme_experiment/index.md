@@ -1,19 +1,7 @@
 ---
 title: theme expérimentation
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
-tags:
-  - Add-ons
-  - Browser
-  - Customisation
-  - Customise
-  - Design
-  - Look and Feel
-  - Themes
-  - colors
-  - navigatuer
-  - theme manifest
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
-original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experimentation
 ---
 
 {{AddonSidebar}}

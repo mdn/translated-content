@@ -12,9 +12,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 ### ES6 版本
 
 ```js
-const words = ["spray", "limit", "elite", "exuberant", "destruction", "present", "happy"];
+const words = [
+  "spray",
+  "limit",
+  "elite",
+  "exuberant",
+  "destruction",
+  "present",
+  "happy",
+];
 
-let longWords = words.filter(word => word.length > 6);
+let longWords = words.filter((word) => word.length > 6);
 
 // Filtered array longWords is ["exuberant", "destruction", "present"]
 ```
@@ -87,16 +95,16 @@ var arr = [
   { id: 0 },
   { id: 3 },
   { id: 12.2 },
-  { },
+  {},
   { id: null },
   { id: NaN },
-  { id: 'undefined' }
+  { id: "undefined" },
 ];
 
 var invalidEntries = 0;
 
 function isNumber(obj) {
-  return obj!== undefined && typeof(obj) === 'number' && !isNaN(obj);
+  return obj !== undefined && typeof obj === "number" && !isNaN(obj);
 }
 
 function filterByID(item) {
@@ -109,11 +117,11 @@ function filterByID(item) {
 
 var arrByID = arr.filter(filterByID);
 
-console.log('過濾好的陣列\n', arrByID);
+console.log("過濾好的陣列\n", arrByID);
 // 過濾好的陣列
 // [{ id: 15 }, { id: -1 }, { id: 0 }, { id: 3 }, { id: 12.2 }]
 
-console.log('無效的元素數量 = ', invalidEntries);
+console.log("無效的元素數量 = ", invalidEntries);
 // 無效的元素數量 = 4
 ```
 
@@ -122,37 +130,37 @@ console.log('無效的元素數量 = ', invalidEntries);
 下面範例使用 `filter()` 去過濾符合搜尋條件的陣列內容。
 
 ```js
-var fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+var fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
  * 陣列透過搜尋條件（查詢）過濾物件
  */
 function filterItems(query) {
-  return fruits.filter(function(el) {
-      return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
-  })
+  return fruits.filter(function (el) {
+    return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
+  });
 }
 
-console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+console.log(filterItems("ap")); // ['apple', 'grapes']
+console.log(filterItems("an")); // ['banana', 'mango', 'orange']
 ```
 
 ### ES2015 實作方式
 
 ```js
-const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+const fruits = ["apple", "banana", "grapes", "mango", "orange"];
 
 /**
  * 陣列透過搜尋條件（查詢）過濾物件
  */
 const filterItems = (query) => {
-  return fruits.filter((el) =>
-    el.toLowerCase().indexOf(query.toLowerCase()) > -1
+  return fruits.filter(
+    (el) => el.toLowerCase().indexOf(query.toLowerCase()) > -1
   );
-}
+};
 
-console.log(filterItems('ap')); // ['apple', 'grapes']
-console.log(filterItems('an')); // ['banana', 'mango', 'orange']
+console.log(filterItems("ap")); // ['apple', 'grapes']
+console.log(filterItems("an")); // ['banana', 'mango', 'orange']
 ```
 
 ## Polyfill
@@ -161,26 +169,24 @@ console.log(filterItems('an')); // ['banana', 'mango', 'orange']
 
 ```js
 if (!Array.prototype.filter)
-  Array.prototype.filter = function(func, thisArg) {
-    'use strict';
-    if ( ! ((typeof func === 'Function') && this) )
-        throw new TypeError();
+  Array.prototype.filter = function (func, thisArg) {
+    "use strict";
+    if (!(typeof func === "Function" && this)) throw new TypeError();
 
     var len = this.length >>> 0,
-        res = new Array(len), // 預先配置陣列
-        c = 0, i = -1;
+      res = new Array(len), // 預先配置陣列
+      c = 0,
+      i = -1;
     if (thisArg === undefined)
       while (++i !== len)
         // 確認物件的鍵值i是否有被設置
         if (i in this)
-          if (func(t[i], i, t))
-            res[c++] = t[i];
-    else
-      while (++i !== len)
-        // 確認物件的鍵值i是否有被設置
-        if (i in this)
-          if (func.call(thisArg, t[i], i, t))
-            res[c++] = t[i];
+          if (func(t[i], i, t)) res[c++] = t[i];
+          else
+            while (++i !== len)
+              // 確認物件的鍵值i是否有被設置
+              if (i in this)
+                if (func.call(thisArg, t[i], i, t)) res[c++] = t[i];
 
     res.length = c; // 將陣列縮至適當大小
     return res;

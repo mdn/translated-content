@@ -1,12 +1,7 @@
 ---
 title: Internationalisation
 slug: Glossary/Internationalization_and_localization
-tags:
-  - Glossaire
-  - Internationalisation
-  - Reference
 translation_of: Glossary/Internationalization_and_localization
-original_slug: Glossaire/Internationalisation_et_localisation
 ---
 
 **L'internationalisation**, souvent abrégée en "[i18n](/fr/docs/Glossary/I18N)", est l'adaptation d'un site web ou d'une application web à différentes langues, différences régionales et exigences techniques pour différentes régions et pays. L'internationalisation est le processus d'architecture de votre application web afin qu'elle puisse être rapidement et facilement adaptée à diverses langues et régions sans trop d'efforts d'ingénierie lorsque de nouvelles langues et régions sont prises en charge. Aussi pour qu'un utilisateur puisse parcourir les fonctionnalités pour traduire ou localiser l'application pour accéder à tout le contenu sans casser la mise en page.

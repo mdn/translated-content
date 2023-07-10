@@ -1,16 +1,6 @@
 ---
 title: bookmarks.CreateDetails
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - CreateDetails
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
 ---
 

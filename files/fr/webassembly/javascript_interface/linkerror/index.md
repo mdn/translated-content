@@ -1,15 +1,7 @@
 ---
 title: WebAssembly.LinkError()
 slug: WebAssembly/JavaScript_interface/LinkError
-tags:
-  - API
-  - Constructeur
-  - JavaScript
-  - LinkError
-  - Reference
-  - WebAssembly
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 ---
 
 {{WebAssemblySidebar}}

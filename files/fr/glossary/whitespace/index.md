@@ -1,13 +1,7 @@
 ---
 title: Whitespace
 slug: Glossary/Whitespace
-tags:
-  - Glossaire
-  - Grammaire lexicale
-  - espace blanc
-  - whitespace
 translation_of: Glossary/Whitespace
-original_slug: Glossaire/Whitespace
 ---
 
 **Whitespace** sont un ensemble de {{Glossary("Character", "characters")}} qui est utilisé pour afficher des espaces horizontaux ou verticaux entre d'autres caractères. Ils sont souvent utilisés pour séparer les jetons dans {{Glossary("HTML")}}, {{Glossary("CSS")}}, {{Glossary("JavaScript")}}, et dans d'autres langages informatiques. Les caractères whitespace et leur utilisation varient selon les langages.

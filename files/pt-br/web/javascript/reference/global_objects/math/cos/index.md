@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 
 {{JSRef}}
 
-A função **`Math.cos()`** ,que é estatica, retorna o {{interwiki("wikipedia", "cosseno")}} de um ângulo, que deve estar em {{interwiki("wikipedia", "radianos")}}. A expressão é <math style="display: inline;"><mstyle displaystyle="true"><mfrac><msub><mrow><mtext>length</mtext> </mrow><mrow><mrow><mtext>adjacent</mtext> </mrow></mrow></msub><msub><mrow><mtext>length</mtext> </mrow><mrow><mrow><mtext>hypotenuse</mtext> </mrow></mrow></msub></mfrac></mstyle></math>.
+A função **`Math.cos()`** ,que é estatica, retorna o [cosseno](https://pt.wikipedia.org/wiki/cosseno) de um ângulo, que deve estar em [radianos](https://pt.wikipedia.org/wiki/radianos). A expressão é <math style="display: inline;"><mstyle displaystyle="true"><mfrac><msub><mrow><mtext>length</mtext> </mrow><mrow><mrow><mtext>adjacent</mtext> </mrow></mrow></msub><msub><mrow><mtext>length</mtext> </mrow><mrow><mrow><mtext>hypotenuse</mtext> </mrow></mrow></msub></mfrac></mstyle></math>.
 
 {{EmbedInteractiveExample("pages/js/math-cos.html")}}
 

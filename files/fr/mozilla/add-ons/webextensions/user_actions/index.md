@@ -1,10 +1,6 @@
 ---
 title: actions utilisateurs
 slug: Mozilla/Add-ons/WebExtensions/User_actions
-tags:
-  - Add-ons
-  - Guide
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/User_actions
 ---
 

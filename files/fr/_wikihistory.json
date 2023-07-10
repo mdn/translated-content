@@ -1473,6 +1473,20 @@
     "modified": "2019-03-23T22:58:43.599Z",
     "contributors": ["loella16", "Porkepix", "Lulamay", "Jeremie"]
   },
+  "Glossary/Prefetch": {
+    "modified": "2019-03-23T23:46:22.581Z",
+    "contributors": [
+      "SphinxKnight",
+      "Goofy",
+      "cdromain",
+      "jigs12",
+      "wakka27",
+      "BenoitL",
+      "Fredchat",
+      "Kyodev",
+      "Bellerophon"
+    ]
+  },
   "Glossary/Preflight_request": {
     "modified": "2019-03-23T22:14:22.077Z",
     "contributors": ["Porkepix", "elias551", "loella16", "Yves_ASTIER"]
@@ -2418,6 +2432,10 @@
       "laurent-thuy"
     ]
   },
+  "Learn/CSS/Howto/Create_fancy_boxes": {
+    "modified": "2020-07-16T22:25:49.335Z",
+    "contributors": ["SphinxKnight"]
+  },
   "Learn/CSS/Howto/Generated_content": {
     "modified": "2020-07-16T22:25:47.662Z",
     "contributors": [
@@ -2428,10 +2446,6 @@
       "Verruckt",
       "BenoitL"
     ]
-  },
-  "Learn/CSS/Howto/create_fancy_boxes": {
-    "modified": "2020-07-16T22:25:49.335Z",
-    "contributors": ["SphinxKnight"]
   },
   "Learn/CSS/Styling_text": {
     "modified": "2020-07-16T22:25:57.902Z",
@@ -5889,10 +5903,6 @@
       "Lamri"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/Browser_actions": {
-    "modified": "2019-03-18T21:02:11.294Z",
-    "contributors": ["hellosct1"]
-  },
   "Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json": {
     "modified": "2020-10-15T22:06:59.369Z",
     "contributors": ["hellosct1"]
@@ -6244,10 +6254,6 @@
     "modified": "2019-05-19T16:33:54.438Z",
     "contributors": ["hellosct1", "rebloor"]
   },
-  "Mozilla/Add-ons/WebExtensions/user_interface/Browser_action": {
-    "modified": "2019-07-03T12:02:27.727Z",
-    "contributors": ["hellosct1"]
-  },
   "Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles": {
     "modified": "2020-10-15T22:06:57.625Z",
     "contributors": ["hellosct1"]
@@ -6283,6 +6289,10 @@
   "Mozilla/Add-ons/WebExtensions/user_interface/Sidebars": {
     "modified": "2020-06-21T16:36:44.213Z",
     "contributors": ["hellosct1", "Eonm"]
+  },
+  "Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button": {
+    "modified": "2019-03-18T21:02:11.294Z",
+    "contributors": ["hellosct1"]
   },
   "Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels": {
     "modified": "2019-07-03T14:11:08.292Z",
@@ -15006,7 +15016,7 @@
     "modified": "2020-10-15T22:21:05.763Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/CSS/@media/update-frequency": {
+  "Web/CSS/@media/update": {
     "modified": "2020-10-15T21:47:29.603Z",
     "contributors": ["SphinxKnight"]
   },
@@ -15842,10 +15852,6 @@
       "Fredchat",
       "Goofy"
     ]
-  },
-  "Web/CSS/Paged_Media": {
-    "modified": "2019-04-06T13:19:25.688Z",
-    "contributors": ["SphinxKnight", "xdelatour"]
   },
   "Web/CSS/Privacy_and_the_:visited_selector": {
     "modified": "2019-04-06T13:09:09.164Z",
@@ -18743,22 +18749,6 @@
     "modified": "2020-10-15T22:11:32.358Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/CSS/scroll-snap-coordinate": {
-    "modified": "2020-10-15T21:42:48.115Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/CSS/scroll-snap-destination": {
-    "modified": "2020-10-15T21:42:40.512Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/CSS/scroll-snap-points-x": {
-    "modified": "2020-10-15T21:42:45.133Z",
-    "contributors": ["SphinxKnight", "teoli"]
-  },
-  "Web/CSS/scroll-snap-points-y": {
-    "modified": "2020-10-15T21:42:38.109Z",
-    "contributors": ["SphinxKnight", "teoli"]
-  },
   "Web/CSS/scroll-snap-stop": {
     "modified": "2020-10-15T22:10:03.086Z",
     "contributors": ["SphinxKnight"]
@@ -18766,14 +18756,6 @@
   "Web/CSS/scroll-snap-type": {
     "modified": "2020-10-15T21:42:50.969Z",
     "contributors": ["SphinxKnight", "jide"]
-  },
-  "Web/CSS/scroll-snap-type-x": {
-    "modified": "2020-10-15T21:42:38.724Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/CSS/scroll-snap-type-y": {
-    "modified": "2020-10-15T21:42:39.974Z",
-    "contributors": ["SphinxKnight"]
   },
   "Web/CSS/scrollbar-color": {
     "modified": "2020-10-15T22:10:04.861Z",
@@ -19505,41 +19487,6 @@
       "Chbok",
       "VincentN",
       "Dria"
-    ]
-  },
-  "Web/Guide/AJAX/Community": {
-    "modified": "2019-01-16T16:10:44.992Z",
-    "contributors": [
-      "chrisdavidmills",
-      "Fredchat",
-      "Mgjbot",
-      "VincentN",
-      "Chbok"
-    ]
-  },
-  "Web/Guide/AJAX/Getting_Started": {
-    "modified": "2020-05-07T07:49:40.639Z",
-    "contributors": [
-      "grandoc",
-      "VictorLequin",
-      "Watilin",
-      "GregMorel",
-      "CyrilKrylatov",
-      "chrisdavidmills",
-      "Jibec",
-      "P_MO",
-      "arena",
-      "Mgjbot",
-      "Fredchat",
-      "Rbories",
-      "BenoitL",
-      "Cbi1net",
-      "Rodolphe",
-      "Chbok",
-      "VincentN",
-      "Taken",
-      "Oumar",
-      "Diskostu"
     ]
   },
   "Web/Guide/API": {
@@ -21446,20 +21393,6 @@
       "callmemagnus",
       "aymericsorek",
       "mmahouachi"
-    ]
-  },
-  "Web/HTTP/Link_prefetching_FAQ": {
-    "modified": "2019-03-23T23:46:22.581Z",
-    "contributors": [
-      "SphinxKnight",
-      "Goofy",
-      "cdromain",
-      "jigs12",
-      "wakka27",
-      "BenoitL",
-      "Fredchat",
-      "Kyodev",
-      "Bellerophon"
     ]
   },
   "Web/HTTP/Methods": {
@@ -26309,9 +26242,9 @@
       "LaNamandine"
     ]
   },
-  "Web/Progressive_web_apps/Responsive/responsive_design_building_blocks": {
-    "modified": "2019-03-18T20:52:18.105Z",
-    "contributors": ["chrisdavidmills", "Hell_Carlito", "JeffD"]
+  "Web/Progressive_web_apps/Tutorials/js13kGames": {
+    "modified": "2019-09-19T07:57:58.235Z",
+    "contributors": ["Kuzcoo"]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
     "modified": "2020-08-05T10:07:41.167Z",
@@ -26320,10 +26253,6 @@
   "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs": {
     "modified": "2020-05-31T18:38:21.807Z",
     "contributors": ["poum"]
-  },
-  "Web/Progressive_web_apps/Tutorials/js13kGames/Introduction": {
-    "modified": "2019-09-19T07:57:58.235Z",
-    "contributors": ["Kuzcoo"]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames/Loading": {
     "modified": "2019-11-10T21:06:38.811Z",

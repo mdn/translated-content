@@ -1,11 +1,7 @@
 ---
 title: Firefox 17 pour les développeurs
 slug: Mozilla/Firefox/Releases/17
-tags:
-  - Firefox
-  - Firefox 17
 translation_of: Mozilla/Firefox/Releases/17
-original_slug: Mozilla/Firefox/Versions/17
 ---
 
 {{FirefoxSidebar}}

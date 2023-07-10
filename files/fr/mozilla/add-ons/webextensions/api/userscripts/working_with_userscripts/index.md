@@ -1,14 +1,7 @@
 ---
 title: Travailler avec userScripts
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
-tags:
-  - API
-  - Extensions
-  - How-to
-  - Tutorial
-  - userScripts
 translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
-original_slug: Mozilla/Add-ons/WebExtensions/API/userScripts/travailler_avec_userScripts
 ---
 
 {{AddonSidebar}}

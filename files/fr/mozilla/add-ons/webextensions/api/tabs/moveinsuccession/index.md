@@ -1,15 +1,6 @@
 ---
 title: tabs.moveInSuccession()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - onglets
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
 ---
 

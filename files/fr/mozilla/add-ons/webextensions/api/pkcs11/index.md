@@ -1,13 +1,6 @@
 ---
 title: Approvisionnement PKCS
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - pkcs11
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: Référence d'objet
 slug: Glossary/Object_reference
-tags:
-  - Glossaire
-  - Programmation
 translation_of: Glossary/Object_reference
-original_slug: Glossaire/Référence_d_objet
 ---
 
 Un lien vers un **{{glossary("objet")}}**. Les références d'objet peuvent s'utiliser exactement comme des objets liés.
