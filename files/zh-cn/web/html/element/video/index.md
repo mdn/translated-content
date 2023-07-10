@@ -24,7 +24,7 @@ slug: Web/HTML/Element/video
 - `controls`
   - : 加上这个属性，浏览器会在视频底部提供一个控制面板，允许用户控制视频的播放，包括音量，跨帧，暂停/恢复播放。
 - `controlslist` {{experimental_inline}}
-  - : 当浏览器显示视频底部的播放控制面板（例如，指定了 `controls` 属性）时，[`controlslist`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist) 属性会帮助浏览器选择在控制面板上显示哪些控件。允许接受的值有 `nodownload`, `nofullscreen` 和 `noremoteplayback`。如果要禁用画中画模式（和控件），请使用 [disablePictureInPicture](#disablepictureinpicture) 属性。
+  - : 当浏览器显示视频底部的播放控制面板（例如，指定了 `controls` 属性）时，[`controlslist`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist) 属性会帮助浏览器选择在控制面板上显示哪些控件。允许接受的值有 `nodownload`、`nofullscreen` 和 `noremoteplayback`。如果要禁用画中画模式（和控件），请使用 [disablePictureInPicture](#disablepictureinpicture) 属性。
 - `crossorigin`
   - : 该枚举属性指明是否使用 CORS（跨域资源共享）来获取相关视频。[允许 CORS 的资源](/zh-CN/docs/Web/HTML/CORS_enabled_image) 可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被*污染*。允许的值如下：
     - anonymous
