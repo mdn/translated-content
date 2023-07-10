@@ -1,13 +1,6 @@
 ---
 title: menus.getTargetElement()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebExtensions
-  - getTargetElement
-  - menus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 ---
 

@@ -1,16 +1,6 @@
 ---
 title: webRequest.onErrorOccurred
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onErrorOccurred
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
 ---
 

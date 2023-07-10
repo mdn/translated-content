@@ -166,7 +166,7 @@ slug: Web/HTML/Attributes/rel
 - `preconnect`
   - : 向浏览器提供提示，建议它提前打开与链接网站的连接，而不透露任何私人信息或下载任何内容，以便在跟踪链接时能更快地获取链接内容。
 - `prefetch`
-  - : 指定用户代理应预先获取并缓存目标资源，因为后续导航可能需要该资源。[链接预取常见问题](/zh-CN/docs/Web/HTTP/Link_prefetching_FAQ)有关于哪些链接可以被预取以及替代方法的详细信息
+  - : 指定用户代理应预先获取并缓存目标资源，因为后续导航可能需要该资源。参见{{Glossary("prefetch", "链接预取")}}以了解详细信息
 - `preload`
   - : 指定用户代理必须根据 [`as`](/zh-CN/docs/Web/HTML/Element/link#attr-as) 属性给出的潜在目的地（以及与相应目的地相关的优先级），为当前导航预先获取和缓存目标资源。参见 [`preload`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 值的页面。
 - `prerender`

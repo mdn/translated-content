@@ -10,7 +10,7 @@ Em {{Glossary("HTML")}} a tag é usada para criar um {{Glossary("element", "elem
 
 ### Conhecimentos gerais
 
-- {{ Interwiki("wikipedia", "HTML element" )}} no Wikipedia (em inglês)
+- [HTML element](https://pt.wikipedia.org/wiki/HTML_element) no Wikipedia (em inglês)
 - [Tags de HTML no W3 (em inglês)](https://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
 
 ### Referência técnica

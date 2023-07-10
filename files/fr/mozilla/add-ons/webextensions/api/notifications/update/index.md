@@ -1,16 +1,6 @@
 ---
 title: notifications.update()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Notifications
-  - Reference
-  - Update
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/update
 ---
 

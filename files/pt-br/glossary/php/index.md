@@ -48,6 +48,6 @@ Conheça mais sobre [variáveis](/pt-BR/docs/Glossario/PHP) em PHP
 ## Saber mais
 
 - [Website oficial](http://php.net/)
-- {{Interwiki ("wikipedia", "PHP")}} na Wikipedia
+- [PHP](https://pt.wikipedia.org/wiki/PHP) na Wikipedia
 - [PHP](https://en.wikibooks.org/wiki/PHP_Programming) no Wikilivros
 - [Introdução ao PHP W3Schools](https://www.w3schools.com/PhP/php_intro.asp)

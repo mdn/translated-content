@@ -2,7 +2,7 @@
 title: <input type="password">
 slug: Web/HTML/Element/input/password
 l10n:
-  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
+  sourceCommit: 35f56647dea855306800c124d99c4cd0962505dd
 ---
 
 {{HTMLSidebar}}
@@ -18,64 +18,13 @@ l10n:
 どちらの手法も、ユーザーが意図したとおりのパスワードが入力されたかどうかを調べるのに役立ちますが、モバイル端末では特に難しい場合があります。
 
 > **メモ:** パスワードのような機密情報が含まれているフォーム（ログインフォームなど）は、 HTTPS で送信するべきです。
-> 現在では多くのブラウザーで、安全ではないログインフォームの場合に警告を行う仕組みが実装されています。詳細は[安全でないパスワード](/ja/docs/Web/Security/Insecure_passwords)を参照してください。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#値">値</a></strong></td>
-      <td>
-        パスワードを表す文字列、または空欄
-      </td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#inputmode"><code>inputmode</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td>
-        <code>selectionStart</code>, <code>selectionEnd</code>,
-        <code>selectionDirection</code>, <code>value</code>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+> 多くのブラウザーで、安全ではないログインフォームに対して警告を行う仕組みが実装されています。詳細は[安全でないパスワード](/ja/docs/Web/Security/Insecure_passwords)を参照してください。
 
 ## 値
 
 [`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、パスワードを入力するために使われているテキスト編集コントロールの、現在の内容である文字列を格納します。ユーザーが何も入力していない場合、この値は空文字列 (`""`) です。[`required`](/ja/docs/Web/HTML/Element/input#required) プロパティが指定されている場合、パスワード編集ボックスが妥当となるためには、空文字列以外の値を含まなければなりません。
 
-[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性が指定されている場合、`password` コントロールの内容は、その値が検証をパスした場合のみ、妥当とみなされます。詳細は[検証](#検証)を参照してください。
+[`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性が指定されている場合、`password` コントロールの内容は、その値が検証に合格した場合のみ、妥当とみなされます。詳細は[検証](#検証)を参照してください。
 
 > **メモ:** 改行文字の LF (U+000A) と CR (U+000D) は `password` の値には許容されません。パスワードコントロールに値がセットされるとき、LF および CR は値から取り除かれます。
 
@@ -85,19 +34,19 @@ l10n:
 
 ### maxlength
 
-ユーザーがパスワード入力欄に入力することができる（UTF-16 コード単位での）最大文字数です。 0 以上の整数値である必要があります。 `maxlength` が指定されていないか、無効な値が指定されていると、パスワード入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
+ユーザーがパスワード入力欄に入力することができる（UTF-16 コード単位での）最大文字数です。 0 以上の整数値である必要があります。`maxlength` が指定されていないか、無効な値が指定されていると、パスワード入力欄には最大文字数が設定されません。この値は `minlength` の値以上である必要もあります。
 
 フィールドに入力されたテキストの長さが UTF-16 コード単位で `maxlength` の長さを超えていると、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 
 ### minlength
 
-ユーザーがパスワード入力欄に入力することができる (UTF-16 コード単位での) 最小文字数です。これは非負の整数値で、 `maxlength` で指定された値以下である必要があります。 `minlength` が指定されていないか、無効な値が指定されていると、パスワード入力欄には最小文字数が設定されません。
+ユーザーがパスワード入力欄に入力することができる (UTF-16 コード単位での) 最小文字数です。これは非負の整数値で、`maxlength` で指定された値以下である必要があります。`minlength` が指定されていないか、無効な値が指定されていると、パスワード入力欄には最小文字数が設定されません。
 
 入力欄のテキストの長さが UTF-16 コード単位で `minlength` の長さよりも短いと、その入力欄は[制約検証](/ja/docs/Web/HTML/Constraint_validation)に失敗します。
 
 ### pattern
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
@@ -111,7 +60,7 @@ l10n:
 
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
-> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[\<input>: 入力欄 (フォーム入力) 要素](/ja/docs/Web/HTML/Element/input)の[プレイスホルダーはアクセシブルではない](/ja/docs/Web/HTML/Element/input#プレイスホルダーはアクセシブルではない)を参照してください。
+> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のラベル](/ja/docs/Web/HTML/Element/input#ラベル)を参照してください。
 
 ### readonly
 
@@ -140,7 +89,7 @@ l10n:
 
 {{EmbedLiveSample("A_simple_password_input", 600, 40)}}
 
-### オートコンプリートを許可する
+### オートコンプリートの許可
 
 パスワードを自動的に入力するため、ユーザーのパスワードマネージャを許可するには、[`autocomplete`](/ja/docs/Web/HTML/Element/input#autocomplete) 属性を指定します。パスワードの場合、通常は次のいずれかの値をとります。
 
@@ -217,7 +166,7 @@ l10n:
 ```js
 document.getElementById("selectAll").onclick = () => {
   document.getElementById("userPassword").select();
-}
+};
 ```
 
 #### 結果
@@ -282,12 +231,69 @@ const current = document.getElementById("current");
 
 ssn.oninput = (event) => {
   current.textContent = ssn.value;
-}
+};
 ```
 
 #### 結果
 
 {{EmbedLiveSample("Requesting_a_Social_Security_number", 600, 60)}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#値">値</a></strong></td>
+      <td>
+        パスワードを表す文字列、または空欄
+      </td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} および
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#inputmode"><code>inputmode</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td>
+        <code>selectionStart</code>, <code>selectionEnd</code>,
+        <code>selectionDirection</code>, <code>value</code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
+        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>対応するロールなし</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

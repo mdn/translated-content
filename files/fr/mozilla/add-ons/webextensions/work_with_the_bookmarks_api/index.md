@@ -1,14 +1,6 @@
 ---
 title: Travailler avec l'API Bookmarks
 slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
-tags:
-  - Add-ons
-  - Bookmarks
-  - Comment
-  - Débutant
-  - Extensions
-  - How-to
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
 ---
 

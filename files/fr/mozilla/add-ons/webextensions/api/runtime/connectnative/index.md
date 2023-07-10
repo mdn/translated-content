@@ -1,16 +1,6 @@
 ---
 title: runtime.connectNative()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - connectNative
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 ---
 

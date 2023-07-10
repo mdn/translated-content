@@ -1,16 +1,6 @@
 ---
 title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - query
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
 

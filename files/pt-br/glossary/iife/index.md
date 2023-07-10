@@ -42,4 +42,4 @@ result; // "Felipe"
 
 ### Conhecimentos Gerais
 
-- {{interwiki("wikipedia", "Immediately-invoked function expression", "IIFE")}} on Wikipedia
+- [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) on Wikipedia

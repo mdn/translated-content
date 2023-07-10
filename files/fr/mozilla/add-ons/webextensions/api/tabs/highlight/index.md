@@ -1,16 +1,6 @@
 ---
 title: tabs.highlight()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - highlight
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
 ---
 

@@ -1,15 +1,6 @@
 ---
 title: pkcs11.isModuleInstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/isModuleInstalled
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - isModuleInstalled
-  - pkcs11
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/isModuleInstalled
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: Firefox 19 pour les développeurs
 slug: Mozilla/Firefox/Releases/19
-tags:
-  - Firefox
-  - Firefox 19
 translation_of: Mozilla/Firefox/Releases/19
-original_slug: Mozilla/Firefox/Versions/19
 ---
 
 {{FirefoxSidebar}}

@@ -1,16 +1,6 @@
 ---
 title: windows.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Référence(2)
-  - WebExtensions
-  - Windows
-  - onRemoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onRemoved
 ---
 

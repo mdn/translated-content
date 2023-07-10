@@ -1,15 +1,6 @@
 ---
 title: browsingData.settings()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
-tags:
-  - API
-  - Extensions
-  - Method
-  - Reference
-  - Settings
-  - WebExtensions
-  - add-on
-  - browsingData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
 ---
 

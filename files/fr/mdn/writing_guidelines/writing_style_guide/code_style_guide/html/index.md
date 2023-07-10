@@ -1,14 +1,7 @@
 ---
 title: Lignes directrices pour le HTML
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/HTML
-tags:
-  - Code
-  - Guide
-  - Directives
-  - HTML
-  - MDN Meta
 translation_of: MDN/Guidelines/Code_guidelines/HTML
-original_slug: MDN/Guidelines/Code_guidelines/HTML
 ---
 
 {{MDNSidebar}}

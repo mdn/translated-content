@@ -1,11 +1,6 @@
 ---
 title: dictionaries
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries
 ---
 

@@ -12,5 +12,5 @@ Os primeiros 128 caracteres UTF-8 correspondem exatamente aos primeiros 128 cara
 
 ### Conhecimento Geral
 
-- {{Interwiki("wikipedia", "UTF-8")}} no Wikipedia
+- [UTF-8](https://pt.wikipedia.org/wiki/UTF-8) no Wikipedia
 - [Perguntas frequentes sobre o UTF-8 no site Unicode](http://www.unicode.org/faq/utf_bom.html#UTF8)

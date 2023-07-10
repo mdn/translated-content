@@ -1,14 +1,7 @@
 ---
 title: devtools.network.getHAR()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - devtools.network
-  - getHAR
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR
 ---
 
 {{AddonSidebar()}}

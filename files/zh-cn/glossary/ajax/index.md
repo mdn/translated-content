@@ -11,17 +11,11 @@ AJAX 允许只更新一个 {{glossary("HTML")}} 页面的部分 {{glossary("DOM"
 
 通过交互式网站和现代 Web 标准，AJAX 正在逐渐被 JavaScript 框架中的函数和官方的 {{domxref("Fetch API")}} 标准取代。
 
-## 深入了解
+## 参见
 
-### 基础知识
-
-- 维基百科上的 [AJAX](https://zh.wikipedia.org/wiki/AJAX)
-- [MDN 上的 AJAX - Getting started](/zh-CN/docs/Web/Guide/AJAX/Getting_Started)
-- [Synchronous vs. Asynchronous Communications](http://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)
-
-### 技术资讯
-
-- {{DOMxRef("XMLHttpRequest")}} 对象
+- [Ajax](/zh-CN/docs/Web/Guide/AJAX)
+- {{DOMxRef("XMLHttpRequest")}}
 - {{DOMxRef("Fetch API")}}
-- [MDN 上的 AJAX 文档](/zh-CN/docs/Web/Guide/AJAX)
 - [使用 Fetch API](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
+- 维基百科上的 [AJAX](https://zh.wikipedia.org/wiki/AJAX)
+- [同步与异步通信](https://peoplesofttutorial.com/difference-between-synchronous-and-asynchronous-messaging/)（2014）

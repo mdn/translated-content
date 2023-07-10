@@ -1,15 +1,7 @@
 ---
 title: devtools.inspectedWindow
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
-tags:
-  - API
-  - Add-ons
-  - Devtools.inspectedWindows
-  - Extensions
-  - Reference
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
 ---
 
 {{AddonSidebar}}

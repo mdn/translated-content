@@ -2,8 +2,6 @@
 title: Constructeur WebAssembly.Memory()
 slug: WebAssembly/JavaScript_interface/Memory/Memory
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory
-browser-compat: javascript.builtins.WebAssembly.Memory.Memory
 ---
 
 {{WebAssemblySidebar}}

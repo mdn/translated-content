@@ -1,16 +1,6 @@
 ---
 title: tabs.onDetached
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onDetached
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onDetached
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onDetached
 ---
 
