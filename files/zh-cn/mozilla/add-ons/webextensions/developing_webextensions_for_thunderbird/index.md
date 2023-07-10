@@ -1,21 +1,21 @@
 ---
-title: Îª Thunderbird ¿ª·¢ WebExtensions
+title: ä¸º Thunderbird å¼€å‘ WebExtensions
 slug: Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 ---
 
 {{AddonSidebar}}
 
-Äã½«²ÉÓÃÓë Firefox À©Õ¹ÏàÍ¬µÄ·½Ê½¶Ô Thunderbird À©Õ¹½øĞĞ±àĞ´´úÂë£»Ê¹ÓÃÄãÑ¡ÔñµÄÎÄ±¾±à¼­Æ÷Õß¹¤¾ßÀ´±àĞ´´úÂë¡£
+ä½ å°†é‡‡ç”¨ä¸ Firefox æ‰©å±•ç›¸åŒçš„æ–¹å¼å¯¹ Thunderbird æ‰©å±•è¿›è¡Œç¼–å†™ä»£ç ï¼›ä½¿ç”¨ä½ é€‰æ‹©çš„æ–‡æœ¬ç¼–è¾‘å™¨è€…å·¥å…·æ¥ç¼–å†™ä»£ç ã€‚
 
-## API ²îÒì
+## API å·®å¼‚
 
-> **±¸×¢£º** ²é¿´ [Thunderbird µÄ WebExtension API ÎÄµµ](https://webextension-api.thunderbird.net/en/latest/) ÁË½â Thunderbird ÌØ¶¨µÄ WebExtension API ÎÄµµ¡£
+> **å¤‡æ³¨ï¼š** æŸ¥çœ‹ [Thunderbird çš„ WebExtension API æ–‡æ¡£](https://webextension-api.thunderbird.net/en/latest/) äº†è§£ Thunderbird ç‰¹å®šçš„ WebExtension API æ–‡æ¡£ã€‚
 
-ÒòÎª¶¼ÊÇ»ùÓÚ Gecko £¬Thunderbird Ö§³ÖĞí¶à Firefox Ö§³ÖµÄ API£¬µ«ÓĞÒ»Ğ©Çø±ğ£¬²é¿´ [manifest.json µÄä¯ÀÀÆ÷¼æÈİĞÔ]£¨/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json£©ºÍ [JavaScript API µÄä¯ÀÀÆ÷Ö§³Ö]£¨/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs£©ÁË½âÏêÇé¡£
+å› ä¸ºéƒ½æ˜¯åŸºäº Gecko ï¼ŒThunderbird æ”¯æŒè®¸å¤š Firefox æ”¯æŒçš„ APIï¼Œä½†æœ‰ä¸€äº›åŒºåˆ«ï¼ŒæŸ¥çœ‹ [manifest.json çš„æµè§ˆå™¨å…¼å®¹æ€§]ï¼ˆ/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.jsonï¼‰å’Œ [JavaScript API çš„æµè§ˆå™¨æ”¯æŒ]ï¼ˆ/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIsï¼‰äº†è§£è¯¦æƒ…ã€‚
 
-## ²Î¼û
+## å‚è§
 
-- [Thunderbird ¸½¼Ó×é¼ş¿ª·¢µÄ½éÉÜ](https://developer.thunderbird.net/add-ons/about-add-ons)
-- [Thunderbird µÄ WebExtension API ÎÄµµ](https://webextension-api.thunderbird.net/en/latest/)
-- [JavaScript API µÄä¯ÀÀÆ÷Ö§³Ö](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
-- [manifest.json µÄä¯ÀÀÆ÷¼æÈİĞÔ](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [Thunderbird é™„åŠ ç»„ä»¶å¼€å‘çš„ä»‹ç»](https://developer.thunderbird.net/add-ons/about-add-ons)
+- [Thunderbird çš„ WebExtension API æ–‡æ¡£](https://webextension-api.thunderbird.net/en/latest/)
+- [JavaScript API çš„æµè§ˆå™¨æ”¯æŒ](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
+- [manifest.json çš„æµè§ˆå™¨å…¼å®¹æ€§](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)

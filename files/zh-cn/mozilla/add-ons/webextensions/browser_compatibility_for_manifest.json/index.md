@@ -1,10 +1,10 @@
 ---
-title: manifest.json µÄä¯ÀÀÆ÷¼æÈİĞÔ
+title: manifest.json çš„æµè§ˆå™¨å…¼å®¹æ€§
 slug: Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json
 ---
 
 {{AddonSidebar}}{{Compat}}
 
-## ²Î¼û
+## å‚è§
 
-- [JavaScript API µÄä¯ÀÀÆ÷Ö§³Ö](/zh_CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
+- [JavaScript API çš„æµè§ˆå™¨æ”¯æŒ](/zh_CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
