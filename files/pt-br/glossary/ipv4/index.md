@@ -11,4 +11,4 @@ Formalizada primeiramente em 1981, o IPv4 traça suas raízes para o trabalho de
 
 ### Conhecimento Geral
 
-{{interwiki("wikipedia", "IPv4", "IPv4")}} na Wikipedia
+[IPv4](https://pt.wikipedia.org/wiki/IPv4) na Wikipedia

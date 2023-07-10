@@ -91,7 +91,7 @@ HTML5 视频和音频共享 API — HTML Media Element — 允许您将自定义
 
 #### 基本设置
 
-首先，获取我们的[custom-controls-start.html](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls-start.html)、[custom-controls.css](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls.css)、 [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4) 和 [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm)文件的副本，并将它们保存在硬盘上的新目录中。
+首先，获取我们的[custom-controls-start.html](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/custom-controls-start.html)、[custom-controls.css](https://github.com/mdn/learning-area/blob/main/accessibility/multimedia/custom-controls.css)、 [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/multimedia/rabbit320.mp4) 和 [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/multimedia/rabbit320.webm)文件的副本，并将它们保存在硬盘上的新目录中。
 
 创建一个名为 main.js 的新文件并将其保存在同一目录中。
 

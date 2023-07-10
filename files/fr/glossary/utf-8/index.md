@@ -1,14 +1,7 @@
 ---
 title: UTF-8
 slug: Glossary/UTF-8
-tags:
-  - Encodage
-  - Glossaire
-  - HTML
-  - JavaScript
-  - Utf-8
 translation_of: Glossary/UTF-8
-original_slug: Glossaire/UTF-8
 ---
 
 UTF-8 (UCS Transformation Format 8) est le {{Glossary("Character encoding","codage de caractères")}} le plus répandu sur le world wide web. Chaque caractère est représenté par un à quatre octets. UTF-8 est rétro-compatible avec l'{{Glossary("ASCII")}} et peut représenter n'importe quel caractère Unicode.

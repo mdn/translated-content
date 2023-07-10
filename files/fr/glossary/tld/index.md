@@ -1,12 +1,7 @@
 ---
 title: TLD
 slug: Glossary/TLD
-tags:
-  - Glossaire
-  - Web
-  - WebMechanics
 translation_of: Glossary/TLD
-original_slug: Glossaire/TLD
 ---
 
 Un domaine de premier niveau ou TLD (_top-level domain_) est le {{Glossary("domaine")}} le plus générique de toute la hiérarchie {{Glossary("DNS")}} (système de noms de domaine) d'Internet. Un TLD est la composante finale d'un {{Glossary("nom de domaine")}}, par exemple, le "org" dans `developer.mozilla.org`.

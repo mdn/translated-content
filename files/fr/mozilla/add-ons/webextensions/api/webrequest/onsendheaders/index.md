@@ -1,16 +1,6 @@
 ---
 title: webRequest.onSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onSendHeaders
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onSendHeaders
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onSendHeaders
 ---
 

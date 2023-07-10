@@ -1,14 +1,6 @@
 ---
 title: onConnectivityAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onConnectivityAvailable
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - captivePortal
 translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/onConnectivityAvailable
 ---
 

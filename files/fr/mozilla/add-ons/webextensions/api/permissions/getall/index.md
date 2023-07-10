@@ -1,14 +1,6 @@
 ---
 title: permissions.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/getAll
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Permissions
-  - Reference
-  - WebExtensions
-  - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/getAll
 ---
 

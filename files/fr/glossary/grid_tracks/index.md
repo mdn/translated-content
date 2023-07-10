@@ -1,12 +1,7 @@
 ---
 title: Piste de grille
 slug: Glossary/Grid_Tracks
-tags:
-  - CSS
-  - Glossaire
-  - Grilles
 translation_of: Glossary/Grid_Tracks
-original_slug: Glossaire/Pistes_de_grille
 ---
 
 Une **piste de grille** est l'espace entre deux {{glossary("grid lines","lignes de grille (lines)")}}. Elle est définie dans la _grille explicite_ avec les propriétés {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}} ou les propriétés raccourcies {{cssxref("grid")}} ou {{cssxref("grid-template")}}. Les pistes sont aussi créées dans une _grille implicite_ en positionnant un élément de grille en dehors des pistes créées dans la grille explicite.

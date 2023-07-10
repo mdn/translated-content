@@ -1,8 +1,6 @@
 ---
 title: contextualIdentities
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
-tags:
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
 ---
 

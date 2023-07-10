@@ -339,7 +339,7 @@ O `h-event` é para evento na web. O h-event é frequentemente usado com listage
 
 See also
 
-- {{Interwiki("wikipedia", "Microformat")}} na Wikipedia
+- [Microformat](https://pt.wikipedia.org/wiki/Microformat) na Wikipedia
 - [Site oficial dos Microformatos](http://microformats.org/)
 - [Motores de busca suportados](http://microformats.org/wiki/search_engines) no site oficial do Microformats
 - [Microformatos no IndieWebCamp](https://indiewebcamp.com/microformats)

@@ -1,16 +1,6 @@
 ---
 title: webNavigation.onReferenceFragmentUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragmentUpdated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onReferenceFragmentUpdated
-  - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragmentUpdated
 ---
 

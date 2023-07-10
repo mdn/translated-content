@@ -1,11 +1,6 @@
 ---
 title: Chiffrement par clé symétrique
 slug: Glossary/Symmetric-key_cryptography
-tags:
-  - Cryptography
-  - Glossary
-  - Security
-  - Symmetric-key cryptography
 translation_of: Glossary/Symmetric-key_cryptography
 ---
 

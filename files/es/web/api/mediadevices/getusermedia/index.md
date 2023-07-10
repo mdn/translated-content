@@ -5,7 +5,7 @@ slug: Web/API/MediaDevices/getUserMedia
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-El método **`MediaDevices.getUserMedia()`** solicita al usuario permisos para usar un dispositivo de entrada de vídeo y/o uno de audio como una cámara o compartir la pantalla y/o micrófono. Si el usuario proporciona los permisos, entonces le retornará un {{domxref("Promise")}} que es resuelto por el resultado del objeto [`MediaStream`](/en-US/docs/WebRTC/MediaStream_API#LocalMediaStream). Si el usuario niega el permiso, o si el recurso multimedia no es válido, entonces el promise es rechazado con `PermissionDeniedError` o `NotFoundError` respectivamente. Nótese que es posible que el promise retornado no sea ni resuelto ni rechazado, ya que no se requiere que el usuario tome una decisión.
+El método **`MediaDevices.getUserMedia()`** solicita al usuario permisos para usar un dispositivo de entrada de vídeo y/o uno de audio como una cámara o compartir la pantalla y/o micrófono. Si el usuario proporciona los permisos, entonces le retornará un {{domxref("Promise")}} que es resuelto por el resultado del objeto [`MediaStream`](/en-US/docs/WebRTC/MediaStream_API#LocalMediaStream). Si el usuario niega el permiso, o si el recurso multimedia no es válido, entonces el promise es rechazado con `NotAllowedError` o `NotFoundError` respectivamente. Nótese que es posible que el promise retornado no sea ni resuelto ni rechazado, ya que no se requiere que el usuario tome una decisión.
 
 ## Sintaxis
 

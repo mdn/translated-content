@@ -883,7 +883,6 @@ var oReq = new XMLHttpRequest();
 
 ## 參見
 
-- [MDN AJAX 介紹](/zh-TW/docs/Web/Guide/AJAX/Getting_Started)
 - [XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
 - [HTTP 存取控制](/zh-TW/docs/Web/HTTP/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)

@@ -135,7 +135,7 @@ img {
 
 URL (Uniform Resource Locator) は、何かがウェブ上のどこにあるのかを定義するテキストの文字列です。たとえば、 Mozilla の日本語のホームページは `https://www.mozilla.org/ja/` にあります。
 
-URL はファイルを見つけるためにパスを使います。パスはファイルシステム内の目的のファイルが存在する場所を指定します。ディレクトリー構造の簡単な例を見てみましょう（[creating-hyperlinks](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/creating-hyperlinks) ディレクトリーを参照してください９。
+URL はファイルを見つけるためにパスを使います。パスはファイルシステム内の目的のファイルが存在する場所を指定します。ディレクトリー構造の簡単な例を見てみましょう（[creating-hyperlinks](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/creating-hyperlinks) ディレクトリーを参照してください。
 
 ![シンプルなディレクトリー構造です。親ディレクトリーは creating-hyperlinks という名前で、 index.html と contacts.html という 2 つのファイルと、 projects と pdfs という 2 つのディレクトリーがあり、それぞれ index.html と project-brief.pdf ファイルが含まれています。](simple-directory.png)
 

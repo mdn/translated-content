@@ -1,14 +1,6 @@
 ---
 title: webRequest.StreamFilter.suspend()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/suspend
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - StreamFilter.suspend()
-  - WebExtensions
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/suspend
 ---
 

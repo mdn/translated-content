@@ -11,7 +11,7 @@ slug: Web/API/XMLHttpRequest
 
 尽管名称如此，`XMLHttpRequest` 可以用于获取任何类型的数据，而不仅仅是 XML。它甚至支持 [HTTP](/zh-CN/docs/Web/HTTP) 以外的协议（包括 file:// 和 FTP），尽管可能受到更多出于安全等原因的限制。
 
-如果您的通信流程需要从服务器端接收事件或消息数据，请考虑通过 {{domxref("EventSource")}} 接口使用 [server-sent events](/zh-CN/docs/Web/API/Server-sent_events)。对于全双工的通信， [WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 可能是更好的选择。
+如果您的通信流程需要从服务器端接收事件或消息数据，请考虑通过 {{domxref("EventSource")}} 接口使用[服务器发送事件](/zh-CN/docs/Web/API/Server-sent_events)。对于全双工的通信，[WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 可能是更好的选择。
 
 ## 构造函数
 
@@ -123,9 +123,9 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 - {{domxref("XMLSerializer")}}：将 DOM 树解析为 XML 对象
 - MDN 教程中的 `XMLHttpRequest`：
 
-  - [Ajax — Getting Started](/zh-CN/docs/AJAX/Getting_Started)
-  - [Using XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-  - [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+  - [Ajax](/zh-CN/docs/Web/Guide/AJAX)
+  - [使用 XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+  - [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+  - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
 
-- [HTML5 Rocks — New Tricks in XMLHttpRequest2](http://www.html5rocks.com/en/tutorials/file/xhr2/)
-- HTTP Permissions-Policy 指令 {{httpheader("Permissions-Policy/sync-xhr", "sync-xhr")}}
+- [XMLHttpRequest2 中的新技巧（2011）](https://web.dev/xhr2/)

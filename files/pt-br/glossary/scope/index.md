@@ -12,4 +12,4 @@ Uma {{glossary("function")}} serve como um procedimento em {{glossary("JavaScrip
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "Escopo (computação)")}} em Wikipedia
+- [Escopo (computação)](<https://pt.wikipedia.org/wiki/Escopo_(computação)>) em Wikipedia

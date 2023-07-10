@@ -363,7 +363,7 @@ Un dernier mot : comment avons-nous sélectionné uniquement les liens externes 
 
 Alors voilà, essayez de revoir la section d'apprentissage actif ci-dessus et d'explorer cette nouvelle technique !
 
-> **Note :** Ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/docs/Learn/CSS/Building_blocks) et le [design adaptif _(responsive web design)_](/fr/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks) ; ceux-ci sont expliqués par ailleurs.
+> **Note :** Ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/docs/Learn/CSS/Building_blocks) et le [design adaptif _(responsive web design)_](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design) ; ceux-ci sont expliqués par ailleurs.
 
 ## Mise en forme de liens comme des boutons
 

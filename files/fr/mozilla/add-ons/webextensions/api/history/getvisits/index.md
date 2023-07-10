@@ -1,16 +1,6 @@
 ---
 title: history.getVisits()
 slug: Mozilla/Add-ons/WebExtensions/API/history/getVisits
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getVisits
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/getVisits
 ---
 

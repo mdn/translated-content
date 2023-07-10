@@ -1,9 +1,6 @@
 ---
 title: Feuille de style
 slug: Glossary/Stylesheet
-tags:
-  - Glossary
-  - StyleSheet
 translation_of: Glossary/Stylesheet
 ---
 

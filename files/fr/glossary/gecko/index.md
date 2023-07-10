@@ -2,7 +2,6 @@
 title: Gecko
 slug: Glossary/Gecko
 translation_of: Glossary/Gecko
-original_slug: Glossaire/Gecko
 ---
 
 **Gecko** est le moteur de rendu développé par Mozilla et utilisé dans beaucoup d'applications/appareils, dont [Firefox](/fr/docs/Glossary/Mozilla_Firefox).
