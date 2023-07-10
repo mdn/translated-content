@@ -1,15 +1,6 @@
 ---
 title: tabs.goBack()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/goBack
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - hoBack
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/goBack
 ---
 

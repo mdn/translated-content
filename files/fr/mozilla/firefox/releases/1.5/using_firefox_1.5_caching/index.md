@@ -1,14 +1,7 @@
 ---
 title: Utilisation du cache de Firefox 1.5
 slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
-tags:
-  - DOM
-  - Développement_Web
-  - Extensions
-  - HTML
-  - JavaScript
 translation_of: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
-original_slug: Utilisation_du_cache_de_Firefox_1.5
 ---
 
 {{FirefoxSidebar}}

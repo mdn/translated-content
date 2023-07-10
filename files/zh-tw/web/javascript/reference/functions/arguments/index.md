@@ -7,37 +7,33 @@ slug: Web/JavaScript/Reference/Functions/arguments
 
 **`arguments`** 物件是一個對應傳入函式之引數的類陣列（`Array-like`）物件。
 
-## 語法
-
-```plain
-arguments
-```
+{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
 
 ## 描述
 
 > **備註：** 如果你有在使用 ES6 語法，建議參考[其餘參數](/zh-TW/docs/Web/JavaScript/Reference/Functions/rest_parameters)。
 
-> **備註：** 「類陣列 (Array-like)」 的意思是 `arguments` 一樣擁有 `length`這項屬性，以及從 0 開始的索引，但是它沒有陣列內建的方法像是 `forEach()` ，或是 `map()` 。
+> **備註：** 「類陣列（Array-like）」的意思是 `arguments` 一樣擁有 `length`這項屬性，以及從 0 開始的索引，但是它沒有陣列內建的方法像是 `forEach()`，或是 `map()`。
 
 The `arguments` object is a local variable available within all (non-arrow) functions. You can refer to a function's arguments within the function by using the `arguments` object. This object contains an entry for each argument passed to the function, the first entry's index starting at 0.
 
 For example, if a function is passed three arguments, you can refer to them as follows:
 
 ```js
-arguments[0]
-arguments[1]
-arguments[2]
+arguments[0];
+arguments[1];
+arguments[2];
 ```
 
 arguments 也可以被指定：
 
 ```js
-arguments[1] = 'new value';
+arguments[1] = "new value";
 ```
 
 `arguments` 物件不是陣列。它與陣列非常相似，但是它沒有除了 `length` 這個屬性以外的其他陣列屬性。舉例，它沒有 `pop` 這個陣列方法。
 
-然而，它依然可以被轉換為真正的陣列(Array)。
+然而，它依然可以被轉換為真正的陣列（Array）。
 
 ```js
 var args = Array.prototype.slice.call(arguments);
@@ -50,7 +46,8 @@ const args = Array.from(arguments);
 > **警告：** Using slice on arguments prevents optimizations in some JavaScript engines (V8 for example - [more information](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments)). If you care for them, try constructing a new array by iterating through the arguments object instead. An alternative would be to use the despised `Array` constructor as a function:
 >
 > ```js
-> var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
+> var args =
+>   arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments);
 > ```
 
 You can use the `arguments` object if you call a function with more arguments than it is formally declared to accept. This technique is useful for functions that can be passed a variable number of arguments. Use [`arguments.length`](/zh-TW/docs/JavaScript/Reference/Functions_and_function_scope/arguments/length) to determine the number of arguments passed to the function, and then process each argument by using the `arguments` object. To determine the number of parameters in the function [signature](/zh-TW/docs/Glossary/Signature/Function), use the [`Function.length`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Function/length) property.
@@ -59,13 +56,13 @@ You can use the `arguments` object if you call a function with more arguments th
 
 The typeof arguments returns 'object'.
 
-```plain
+```js
 console.log(typeof arguments); // 'object'
 ```
 
 The typeof individual arguments can be determined with the use of indexing.
 
-```plain
+```js
 console.log(typeof arguments[0]); //this will return the typeof individual arguments.
 ```
 
@@ -106,13 +103,13 @@ You can pass any number of arguments to this function, and it creates a list usi
 
 ```js
 // returns "red, orange, blue"
-myConcat(', ', 'red', 'orange', 'blue');
+myConcat(", ", "red", "orange", "blue");
 
 // returns "elephant; giraffe; lion; cheetah"
-myConcat('; ', 'elephant', 'giraffe', 'lion', 'cheetah');
+myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 
 // returns "sage. basil. oregano. pepper. parsley"
-myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
+myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 ```
 
 ### Defining a function that creates HTML lists
@@ -121,10 +118,10 @@ This example defines a function that creates a string containing HTML for a list
 
 ```js
 function list(type) {
-  var result = '<' + type + 'l><li>';
+  var result = "<" + type + "l><li>";
   var args = Array.prototype.slice.call(arguments, 1);
-  result += args.join('</li><li>');
-  result += '</li></' + type + 'l>'; // end list
+  result += args.join("</li><li>");
+  result += "</li></" + type + "l>"; // end list
 
   return result;
 }
@@ -133,7 +130,7 @@ function list(type) {
 You can pass any number of arguments to this function, and it adds each argument as an item to a list of the type indicated. For example:
 
 ```js
-var listHTML = list('u', 'One', 'Two', 'Three');
+var listHTML = list("u", "One", "Two", "Three");
 
 /* listHTML is:
 

@@ -17,5 +17,5 @@ O GRUTTAH mantém especificações para {{Glossary("HTML")}}, {{Glossary("DOM")}
 
 ### Conhecimentos gerais
 
-- {{Interwiki("wikipedia", "WHATWG")}} na Wikipedia
+- [WHATWG](https://pt.wikipedia.org/wiki/WHATWG) na Wikipedia
 - [Site Oficial da WHATWG.org](http://wiki.whatwg.org/)

@@ -11,7 +11,7 @@ original_slug: Glossario/degradação_graciosa
 É uma técnica útil que permite aos desenvolvedores da Web se concentrarem no desenvolvimento dos melhores sites possíveis, uma vez que esses sites são acessados por vários user-agents desconhecidos.
 {{Glossary("Progressive enhancement")}} está relacionado, mas é diferente - geralmente visto como na direção oposta à degradação graciosa. Na realidade, ambas as abordagens são válidas e geralmente podem se complementar.
 
-1. {{Interwiki("wikipedia", "Graceful degradation")}} on Wikipedia
+1. [Graceful degradation](https://en.wikipedia.org/wiki/Graceful_degradation) on Wikipedia
 2. [Handling common HTML and CSS problems](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
 3. [Implementing feature detection](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
 4. [MDN Web Docs Glossary](/pt-BR/docs/Glossary)

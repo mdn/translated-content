@@ -1,9 +1,6 @@
 ---
 title: Les APIs JavaScript
 slug: Mozilla/Add-ons/WebExtensions/API
-tags:
-  - API
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: permissions.request()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/request
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Permissions
-  - Reference
-  - WebExtensions
-  - request
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/request
 ---
 

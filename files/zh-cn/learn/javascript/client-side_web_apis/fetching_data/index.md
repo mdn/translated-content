@@ -254,7 +254,7 @@ try {
 
 虽然本文中讨论了许多不同的主题，但是这些主题仅是触及了表面。有关这些主题的更多详细信息，请尝试阅读以下文章：
 
-- [Ajax——入门](/zh-CN/docs/Web/Guide/AJAX/Getting_Started)
+- [Ajax](/zh-CN/docs/Web/Guide/AJAX)
 - [使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [使用 JSON 数据](/zh-CN/docs/Learn/JavaScript/Objects/JSON)

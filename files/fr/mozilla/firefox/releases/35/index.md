@@ -1,12 +1,7 @@
 ---
 title: Firefox 35 pour les développeurs
 slug: Mozilla/Firefox/Releases/35
-tags:
-  - Firefox
-  - Guide
-  - Mozilla
 translation_of: Mozilla/Firefox/Releases/35
-original_slug: Mozilla/Firefox/Versions/35
 ---
 
 1. Notes de versions pour développeurs

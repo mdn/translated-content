@@ -1,6 +1,8 @@
 ---
-title: '<link>: 外部リソースへのリンク要素'
+title: "<link>: 外部リソースへのリンク要素"
 slug: Web/HTML/Element/link
+l10n:
+  sourceCommit: dd0bad5bc3ac640307eee5f5689dd436c287b7f4
 ---
 
 {{HTMLSidebar}}
@@ -8,28 +10,30 @@ slug: Web/HTML/Element/link
 **`<link>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在の文書と外部のリソースとの関係を指定します。
 この要素は{{Glossary("CSS", "スタイルシート")}}へのリンクに最もよく使用されますが、サイトのアイコン（"favicon" スタイルのアイコンと、モバイル端末のホーム画面やアプリのアイコンの両方）の確立や、その他のことにも使用されます。
 
-{{EmbedInteractiveExample("pages/tabbed/link.html")}}
+{{EmbedInteractiveExample("pages/tabbed/link.html", "tabbed-shorter")}}
 
 外部スタイルシートへリンクするには、 {{HTMLElement("head")}} の中に次のような `<link>` 要素を入れてください。
 
 ```html
-<link href="main.css" rel="stylesheet">
+<link href="main.css" rel="stylesheet" />
 ```
 
-この単純な例では、 `href` 属性内にスタイルシートへのパスを提供し、 `rel` 属性の値を `stylesheet` にしています。 `rel` は "relationship" を意味し、おそらく `<link>` 要素の重要な機能の一つです。 — 値はこれを含んでいる文書にどのように関係するかを示します。
-[リンク種別](/ja/docs/Web/HTML/Link_types)で見られるように、様々な種類の関係があります。
+この単純な例では、`href` 属性内にスタイルシートへのパスを提供し、[`rel`](/ja/docs/Web/HTML/Attributes/rel) 属性の値を `stylesheet` にしています。`rel` は "relationship" を意味し、おそらく `<link>` 要素の重要な機能の一つです。 — 値はこれを含んでいる文書にどのように関係するかを示します。
 
 他にも見かけるであろう他の一般的な種別はたくさんあります。例えば、サイトのファビコンへのリンクがあります。
 
 ```html
-<link rel="icon" href="favicon.ico">
+<link rel="icon" href="favicon.ico" />
 ```
 
 他にもアイコンの `rel` 値はいくつもあり、以下のように主に様々なモバイルプラットフォーム上で特殊なアイコンの種別を示すために使用されます。
 
 ```html
-<link rel="apple-touch-icon-precomposed" sizes="114x114"
-      href="apple-icon-114.png" type="image/png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="apple-icon-114.png"
+  type="image/png" />
 ```
 
 `sizes` 属性はアイコンの寸法を表し、 `type` はリンクされようとしているリソースの MIME タイプが入ります。これらはブラウザーが利用できる最も適切なアイコンを選択するための有益なヒントを提供します。
@@ -37,18 +41,25 @@ slug: Web/HTML/Element/link
 `media` 属性でメディア種別やクエリーを指定することもできます。このリソースはメディアの条件が真になった場合のみ読み込まれます。
 
 ```html
-<link href="print.css" rel="stylesheet" media="print">
-<link href="mobile.css" rel="stylesheet" media="screen and (max-width: 600px)">
+<link href="print.css" rel="stylesheet" media="print" />
+<link
+  href="mobile.css"
+  rel="stylesheet"
+  media="screen and (max-width: 600px)" />
 ```
 
 `<link>` 要素には、興味深いパフォーマンスやセキュリティの機能もいくつか追加されています。以下の例を見てみましょう。
 
 ```html
-<link rel="preload" href="myFont.woff2" as="font"
-      type="font/woff2" crossorigin="anonymous">
+<link
+  rel="preload"
+  href="myFont.woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous" />
 ```
 
-`rel` が `preload` の値であることは、ブラウザーがこのリソースを先読みすることを指示しており (詳しくは [rel="preload" によるコンテンツの先読み](/ja/docs/Web/HTML/Link_types/preload)を参照)、 `as` 属性がコンテンツが読み込まれるされる特定のクラスを示します。
+`rel` が `preload` の値であることは、ブラウザーがこのリソースを先読みすることを指示しており (詳しくは [rel="preload" によるコンテンツの先読み](/ja/docs/Web/HTML/Attributes/rel/preload)を参照)、 `as` 属性がコンテンツが読み込まれるされる特定のクラスを示します。
 `crossorigin` 属性はリソースが {{Glossary("CORS")}} リクエストによって読み込まれるかどうかを示します。
 
 その他の使い方のメモです。
@@ -56,7 +67,7 @@ slug: Web/HTML/Element/link
 - `<link>` 要素は[リンク種別](https://html.spec.whatwg.org/multipage/links.html#body-ok)が **body-ok** であるかどうかによって、 {{HTMLElement("head")}} 要素または {{HTMLElement("body")}} 要素のどちらかに置くことができます。例えば `stylesheet` リンク種別は body-ok であり、`<link rel="stylesheet">` を body 要素内に置くことができます。しかし、これは従うべき良い方法ではありません。 `<link>` 要素は `<head>` に入れて本文から離した方が分かりやすくなります。
 - サイトにファビコンを設定するために `<link>` を使用する場合で、サイトがセキュリティの強化のためにコンテンツセキュリティポリシー (CSP) を使用している場合、ファビコンにポリシーが適用されます。ファビコンが読み込まれないという問題が発生したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)がアクセスを禁止していないかどうか確認してください。
 - HTML および XHTML の仕様では `<link>` 要素向けのイベントハンドラーを定義していますが、それらがどのように使用されるかは不明確です。
-- XHTML 1.0 では `<link>` のような空要素では、 `<link />` のように末尾のスラッシュが必要です。
+- XHTML 1.0 では `<link>` のような{{glossary("void element", "空要素")}}では、 `<link />` のように末尾のスラッシュが必要です。
 - WebTV は `rel` に `next` の値を使用して、一連の文書の次のページを先読みすることに対応しています。
 
 ## 属性
@@ -144,7 +155,7 @@ slug: Web/HTML/Element/link
 
 - `crossorigin`
 
-  - : 列挙型の属性で、関連リソースを取得する際に {{Glossary("CORS")}} を使用しなければならないかを示します。
+  - : [列挙型](/ja/docs/Glossary/Enumerated)の属性で、関連リソースを取得する際に {{Glossary("CORS")}} を使用しなければならないかを示します。
     [CORS が有効な画像](/ja/docs/Web/HTML/CORS_enabled_image)は、<em>汚染</em>されることなく {{HTMLElement("canvas")}} 要素で再利用できます。次の値が使用できます。
 
     - `anonymous`
@@ -157,13 +168,13 @@ slug: Web/HTML/Element/link
     この属性が存在しない場合、リソースは {{Glossary("CORS")}} リクエストなしで (`Origin` HTTP ヘッダーを送信せずに) 取得され、汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワード **anonymous** が指定されたものとして扱われます。
     それ以上の情報は [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin) を参照してください。
 
-- `disabled`
+- `disabled` {{Non-standard_Inline}}
 
   - : `rel="stylesheet"` の場合のみ、 `disabled` は論理属性であり、指定されたスタイルシートを読み込んで文書に適用するかどうかを示します。 `disabled` が HTML に読み込み時点で指定されていた場合、そのスタイルシートはページ読み込み処理の間に読み込まれません。代わりに、そのスタイルシートは `disabled` 属性が `false` に変更されたか削除された場合にオンデマンドで読み込まれます。
 
     DOM から `disabled` プロパティの値を変更すると、そのスタイルシートを文書の {{domxref("Document.styleSheets")}} の一覧から削除します。
 
-- `fetchpriority`
+- `fetchpriority` {{Experimental_Inline}}
 
   - : 先読みされたリソースを取得する際に使用する相対的な優先度のヒントを 提供します。使用できる値は次の通りです。
 
@@ -180,22 +191,22 @@ slug: Web/HTML/Element/link
   - : この属性は、リンク先のリソースの言語を示します。
     これは単なる助言です。
     許容される値は {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} で定めています。
-    この属性は、 [`href`](/ja/docs/Web/HTML/Element/a#href) 属性が提供されている場合にのみ使用します。
+    この属性は、[`href`](/ja/docs/Web/HTML/Element/a#href) 属性が提供されている場合にのみ使用します。
 - `imagesizes`
-  - : `rel="preload"` および `as="image"` において、 `imagesizes` 属性は、 `img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示す [sizes 属性](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute)です。
+  - : `rel="preload"` および `as="image"` において、 `imagesizes` 属性は、`img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示す [sizes 属性](https://html.spec.whatwg.org/multipage/images.html#sizes-attribute)です。
 - `imagesrcset`
   - : `rel="preload"` および `as="image"` において、 `imagesrcset` 属性は `img` 要素によって使用される適切なリソースを、その `srcset` および `sizes` 属性に対応する値で先読みすることを示す [sourceset 属性](https://html.spec.whatwg.org/multipage/images.html#srcset-attribute)です。
 - `integrity` {{Experimental_Inline}}
-  - : この属性は、取得したリソースが予期せぬ改ざんを受けずに提供されたかを、ユーザーエージェントが検証するために使用できるメタデータである、ブラウザーに取得させたリソース (ファイル) の暗号学的ハッシュを BASE64 でエンコードしたデータを含みます。[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity) をご覧ください。
+  - : この属性は、取得したリソースが予期せぬ改ざんを受けずに提供されたかを、ユーザーエージェントが検証するために使用できるメタデータである、ブラウザーに取得させたリソース (ファイル) の暗号学的ハッシュを BASE64 でエンコードしたデータを含みます。[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)をご覧ください。
 - `media`
 
-  - : この属性は、リンク先のリソースが適用されるメディアを指定します。この値は[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)でなければなりません。この属性は主に外部のスタイルシートから、実行中のデバイスに最適なものをユーザーエージェントが選択できるようにリンクするときに役立ちます。
+  - : この属性は、リンク先のリソースが適用されるメディアを指定します。この値は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)でなければなりません。この属性は主に外部のスタイルシートから、実行中のデバイスに最適なものをユーザーエージェントが選択できるようにリンクするときに役立ちます。
 
     > **メモ:**
     >
     > - HTML 4 では、単純なホワイトスペースで区切られたメディアリテラルのリストのみ記述できます。これは[メディア種別とグループ](/ja/docs/Web/CSS/@media) で、`print`, `screen`, `aural`, `braille` などの使用可能な値が定義されています。
-    >   HTML5 ではこれがあらゆる[メディアクエリー](/ja/docs/Web/CSS/Media_Queries)に拡張され、 HTML 4 で使用できる値の上位互換となっています。
-    > - [CSS3 メディアクエリー](/ja/docs/Web/CSS/Media_Queries)に対応していないブラウザーは、リンクを適切に理解するとは限りません。 HTML 4 で定義されたメディアクエリーのセットに制限されるので、フォールバックリンクを設定することを忘れないでください。
+    >   HTML5 ではこれがあらゆる[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)に拡張され、 HTML 4 で使用できる値の上位互換となっています。
+    > - [CSS3 メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)に対応していないブラウザーは、リンクを適切に理解するとは限りません。 HTML 4 で定義されたメディアクエリーのセットに制限されるので、フォールバックリンクを設定することを忘れないでください。
 
 - `prefetch` {{secureContext_inline}} {{experimental_inline}}
   - : この属性は、おそらく次のナビゲーション先で必要でありユーザーエージェントが取得すべきであるリソースを特定します。これは将来リソースがリクエストされたときに、ユーザーエージェントが早く応答することを可能にします。
@@ -210,10 +221,10 @@ slug: Web/HTML/Element/link
     - `unsafe-url` は、リファラーにオリジンとパスを含めることを表します (ただし、フラグメント、パスワード、ユーザー名は含めません)。これはオリジンやパスの情報が TLS で保護されたリソースからセキュアでないオリジンへ漏えいしますので、安全ではありません。
 
 - `rel`
-  - : この属性は現在の文書に対する、リンクされた文書の関係を示します。属性値は、空白で区切られた[リンク種別の値](/ja/docs/Web/HTML/Link_types)のリストでなければなりません。
-- `sizes`
+  - : この属性は現在の文書に対する、リンクされた文書の関係を示します。属性値は、空白で区切られた[リンク種別の値](/ja/docs/Web/HTML/Attributes/rel)のリストでなければなりません。
+- `sizes` {{Experimental_Inline}}
 
-  - : この属性は、リソースに含まれる映像メディア向けのアイコンのサイズを定義します。これは、 [`rel`](/ja/docs/Web/HTML/Element/link#rel) の値が `icon` または Apple の `apple-touch-icon` のような標準外の種別が含まれている場合にのみ指定することができます。以下の値を指定できます。
+  - : この属性は、リソースに含まれる映像メディア向けのアイコンのサイズを定義します。これは、 [`rel`](#rel) の値が `icon` または Apple の `apple-touch-icon` のような標準外の種別が含まれている場合にのみ指定することができます。以下の値を指定できます。
 
     - `any`: `image/svg+xml` のようなベクター画像であるため、どのようなサイズにも調整可能であることを示します。
     - ホワイトスペースで区切られたサイズのリスト。サイズはそれぞれ `<幅のピクセル数>x<高さのピクセル数>` または `<幅のピクセル数>X<高さのピクセル数>` という形式です。それぞれのサイズがリソースに含まれていることが必要です。
@@ -225,18 +236,21 @@ slug: Web/HTML/Element/link
   - : `title` 属性は、`<link>` 要素では特別な意味があります。`<link rel="stylesheet">` で使用すると、[優先スタイルシートか代替スタイルシートか](/ja/docs/Web/CSS/Alternative_style_sheets) を定義します。
 - `type`
   - : この属性は、リンク先コンテンツの種類を定義します。この属性の値は **text/html** や **text/css** などの MIME タイプにします。
-    この属性の一般的な使用法は、参照されるスタイルシートのタイプ (**text/css** など) の定義ですが、 CSS はウェブ上の唯一のスタイルシート言語であるため、 `type` 属性を省略できるばかりでなく、それが実際に推奨される習慣になっています。
+    この属性の一般的な使用法は、参照されるスタイルシートのタイプ（**text/css** など）の定義ですが、 CSS はウェブ上の唯一のスタイルシート言語であるため、`type` 属性を省略できるばかりでなく、それが実際に推奨される習慣になっています。
     また `rel="preload"` リンク種別で、ブラウザーが対応するファイルタイプのみダウンロードさせるためにも使用します。
+- `blocking` {{Experimental_Inline}}
+  - : この属性は、外部リソースの読み取り時に特定の処理をブロックすべきであることを明示的に示します。ブロックされる操作は、下記のブロック属性をスペースで区切った一覧でなければなりません。
+    - `render`: 画面に描画するコンテンツがブロックされます。
 
 ### 標準外の属性
 
-- `methods` {{Non-standard_Inline}}
+- `methods` {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : この属性の値は、オブジェクト上で動作する関数についての情報を提供します。
     この値は基本的に HTTP プロトコルが利用されたときに与えられますが、(**title** 属性と同じような理由で) リンク先の情報を前もって含めるときに役立ちます。
     例えば定義されたメソッドの機能によって、異なるリンクの描画をブラウザーが選択します。
     検索可能なリンクで異なるアイコンを取得したり、外部リンクには現在のサイトから去ることを示す描画にしたりできます。
     この属性は、定義された Internet Explorer 4 ですら、あまり理解されておらず対応もされていません。
-- `target` {{Non-standard_Inline}}
+- `target` {{Deprecated_Inline}}
   - : 定義されたリンク関係を持つ、またはリンクしたリソースを表示するフレームまたはウィンドウの名前を定義します。
 
 ### 廃止された属性
@@ -250,10 +264,11 @@ slug: Web/HTML/Element/link
 
 - `rev` {{deprecated_inline}}
 
-  - : この属性の値は、[`href`](/ja/docs/Web/HTML/Element/link#href) 属性で定義したリンク先文書に対する、現在の文書の関係を示します。従って、この属性は `rel` 属性の値と比べたときに逆向きの関係を定義します。
-    この属性向けの[リンク種別の値](/ja/docs/Web/HTML/Link_types)は、[`rel`](/ja/docs/Web/HTML/Element/link#rel) 向けの値と似ています。
+  - : この属性の値は、[`href`](#href) 属性で定義したリンク先文書に対する、現在の文書の関係を示します。
+    従って、この属性は `rel` 属性の値と比べたときに逆向きの関係を定義します。
+    この属性向けの[リンク種別の値](/ja/docs/Web/HTML/Attributes/rel)は、[`rel`](#rel) 向けの値と似ています。
 
-    > **メモ:** 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Link_types)を与えた [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
+    > **メモ:** 代わりに、逆の意味の[リンク種別の値](/ja/docs/Web/HTML/Attributes/rel)を与えた [`rel`](#rel) 属性を使用してください。例えば `made` は `author` に置き換えます。また、この属性は「リビジョン」 (revision) を表すものではないので、バージョン番号を指定してはいけませんが、残念ながらいくつものサイトでそのように使用されています。
 
 ## 例
 
@@ -262,7 +277,7 @@ slug: Web/HTML/Element/link
 ページにスタイルシートを読み込むには、以下の構文を使用します。
 
 ```html
-<link href="style.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
 ```
 
 ### 代替スタイルシートの提供
@@ -273,9 +288,9 @@ slug: Web/HTML/Element/link
 これは、ユーザーがページをさまざまなバージョンで閲覧する手段を提供します。
 
 ```html
-<link href="default.css" rel="stylesheet" title="Default Style">
-<link href="fancy.css" rel="alternate stylesheet" title="Fancy">
-<link href="basic.css" rel="alternate stylesheet" title="Basic">
+<link href="default.css" rel="stylesheet" title="Default Style" />
+<link href="fancy.css" rel="alternate stylesheet" title="Fancy" />
+<link href="basic.css" rel="alternate stylesheet" title="Basic" />
 ```
 
 ### 異なる利用場面のアイコンの提供
@@ -283,16 +298,22 @@ slug: Web/HTML/Element/link
 同じページにいくつかの異なるアイコンへのリンクを含めて、ブラウザーが `rel` や `sizes` の値をヒントとして使用し、特定の場面で最適に動作する一つを選択するようにすることができます。
 
 ```html
-<!-- 高解像度ディスプレイの第三世代 iPad -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon144.png">
+<!-- 高解像度ディスプレイの第 3 世代 iPad -->
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="favicon144.png" />
 <!-- 高解像度ディスプレイの iPhone -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon114.png">
-<!-- 第一、第二世代の iPad: -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="114x114"
+  href="favicon114.png" />
+<!-- 第 1、第 2 世代の iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- 高解像度でない iPhone, iPod Touch, Android 2.1 以降の端末 -->
-<link rel="apple-touch-icon-precomposed" href="favicon57.png">
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- 基本的なファビコン -->
-<link rel="icon" href="favicon32.png">
+<link rel="icon" href="favicon32.png" />
 ```
 
 ### メディアクエリーのついた条件付きのリソース読み込み
@@ -300,10 +321,16 @@ slug: Web/HTML/Element/link
 以下のように、メディア種別やクエリーを `media` 属性で指定することができます。このリソースはメディア条件が真の場合にのみ読み込まれます。
 
 ```html
-<link href="print.css" rel="stylesheet" media="print">
-<link href="mobile.css" rel="stylesheet" media="all">
-<link href="desktop.css" rel="stylesheet" media="screen and (min-width: 600px)">
-<link href="highres.css" rel="stylesheet" media="screen and (min-resolution: 300dpi)">
+<link href="print.css" rel="stylesheet" media="print" />
+<link href="mobile.css" rel="stylesheet" media="all" />
+<link
+  href="desktop.css"
+  rel="stylesheet"
+  media="screen and (min-width: 600px)" />
+<link
+  href="highres.css"
+  rel="stylesheet"
+  media="screen and (min-resolution: 300dpi)" />
 ```
 
 ### スタイルシートの load イベント
@@ -312,25 +339,34 @@ slug: Web/HTML/Element/link
 
 ```html
 <script>
-var myStylesheet = document.querySelector('#my-stylesheet');
+  const stylesheet = document.querySelector("#my-stylesheet");
 
-myStylesheet.onload = function() {
-  // Do something interesting; the sheet has been loaded
-}
+  stylesheet.onload = () => {
+    // Do something interesting; the sheet has been loaded
+  };
 
-myStylesheet.onerror = function() {
-  console.log("An error occurred loading the stylesheet!");
-}
+  stylesheet.onerror = () => {
+    console.log("An error occurred loading the stylesheet!");
+  };
 </script>
 
-<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet">
+<link rel="stylesheet" href="mystylesheet.css" id="my-stylesheet" />
 ```
 
 > **メモ:** `load` イベントはスタイルシートとスタイルシートがインポートするすべてのコンテンツの読み込みと解析が行われた後、スタイルシートがコンテンツに適用される直前に発生します。
 
 ### 先読みの例
 
-`<link rel="preload">` の例は、 [`rel="preload"` によるコンテンツの先読み](/ja/docs/Web/HTML/Link_types/preload)にいくつかあります。
+`<link rel="preload">` の例は、 [`rel="preload"` によるコンテンツの先読み](/ja/docs/Web/HTML/Attributes/rel/preload)にいくつかあります。
+
+### リソースが読み込まれるまで描画をブロック
+
+`render` トークンを `blocking` 属性に設定することができます。
+指定すると、リソースが取り込まれるまでページのレンダリングがブロックされます。
+
+```html
+<link blocking="render" href="critical-font.woff2" as="font" />
+```
 
 ## 技術的概要
 
@@ -338,16 +374,16 @@ myStylesheet.onerror = function() {
   <tbody>
     <tr>
       <th>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
         メタデータコンテンツ。
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> が存在する場合は、<a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>および<a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>。
+        <code><a href="/ja/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code> が存在する場合は、<a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>および<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>。
       </td>
     </tr>
     <tr>
       <th>許可されている内容</th>
-      <td>なし。これは{{Glossary("empty element", "空要素")}}です。</td>
+      <td>なし。これは{{Glossary("void element", "空要素")}}です。</td>
     </tr>
     <tr>
       <th>タグの省略</th>
@@ -357,12 +393,12 @@ myStylesheet.onerror = function() {
       <th>許可されている親要素</th>
       <td>
         メタデータ要素を受け入れるすべての要素。
-        <a href="/ja/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> 属性がある場合は<a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
+        <a href="/ja/docs/Web/HTML/Global_attributes/itemprop">itemprop</a> 属性がある場合は<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td><code>href</code> 属性つきの <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code></td>
+      <td><code>href</code> 属性つきの <a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

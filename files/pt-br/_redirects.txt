@@ -5,7 +5,7 @@
 #
 # FROM-URL	TO-URL
 /pt-BR/docs/AJAX	/pt-BR/docs/Web/Guide/AJAX
-/pt-BR/docs/AJAX/Getting_Started	/pt-BR/docs/Web/Guide/AJAX/Getting_Started
+/pt-BR/docs/AJAX/Getting_Started	/pt-BR/docs/conflicting/Web/Guide/AJAX
 /pt-BR/docs/API_Web_Audio	/pt-BR/docs/Web/API/Web_Audio_API
 /pt-BR/docs/Aprender	/pt-BR/docs/Learn
 /pt-BR/docs/Aprender/CSS	/pt-BR/docs/Learn/CSS
@@ -381,7 +381,6 @@
 /pt-BR/docs/JavaScript/Reference/Statements/let	/pt-BR/docs/Web/JavaScript/Reference/Statements/let
 /pt-BR/docs/JavaScript/uma_reintroduction_ao_JavaScript	/pt-BR/docs/Web/JavaScript/Language_overview
 /pt-BR/docs/Learn/Accessibility/Acessibilidade_problemas	/pt-BR/docs/Learn/Accessibility/Accessibility_troubleshooting
-/pt-BR/docs/Learn/Accessibility/CSS_e_JavaScript	/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript
 /pt-BR/docs/Learn/CSS/CSS_layout/Fluxo_Normal	/pt-BR/docs/Learn/CSS/CSS_layout/Normal_Flow
 /pt-BR/docs/Learn/CSS/CSS_layout/Intro_leiaute_CSS	/pt-BR/docs/Learn/CSS/CSS_layout/Introduction
 /pt-BR/docs/Learn/CSS/CSS_layout/Layout_de_varias_colunas	/pt-BR/docs/Learn/CSS/CSS_layout/Multiple-column_Layout
@@ -442,7 +441,6 @@
 /pt-BR/docs/Localização	/pt-BR/docs/Glossary/Localization
 /pt-BR/docs/MDN/About	/pt-BR/docs/MDN/Writing_guidelines
 /pt-BR/docs/MDN/Contribute/Content	/pt-BR/docs/conflicting/MDN/Writing_guidelines
-/pt-BR/docs/MDN/Contribute/Content/Style_guide	/pt-BR/docs/MDN/Writing_guidelines/Writing_style_guide
 /pt-BR/docs/MDN/Contribute/Estruturas	/pt-BR/docs/conflicting/MDN/Writing_guidelines/Page_structures
 /pt-BR/docs/MDN/Contribute/Estruturas/Compatibility_tables	/pt-BR/docs/MDN/Writing_guidelines/Page_structures
 /pt-BR/docs/MDN/Contribute/Estruturas/Macros	/pt-BR/docs/conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
@@ -469,8 +467,6 @@
 /pt-BR/docs/MDN/Contribute/guia/Create_an_interactive_exercise_to_help_learning_the_web/distant_example	/pt-BR/docs/conflicting/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 /pt-BR/docs/MDN/Feedback	/pt-BR/docs/MDN/Community
 /pt-BR/docs/MDN/Guidelines	/pt-BR/docs/conflicting/MDN/Writing_guidelines
-/pt-BR/docs/MDN/Guidelines/Style_guide	/pt-BR/docs/MDN/Writing_guidelines/Writing_style_guide
-/pt-BR/docs/MDN/Guidelines/Writing_style_guide	/pt-BR/docs/MDN/Writing_guidelines/Writing_style_guide
 /pt-BR/docs/MDN/Kuma	/pt-BR/docs/orphaned/MDN/Yari
 /pt-BR/docs/MDN/Primeiros_Passos	/pt-BR/docs/MDN/Community/Contributing/Getting_started
 /pt-BR/docs/MDN/Structures	/pt-BR/docs/conflicting/MDN/Writing_guidelines/Page_structures
@@ -485,13 +481,13 @@
 /pt-BR/docs/MDN/guia_usuário	/pt-BR/docs/orphaned/MDN/Tools
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tema	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/theme
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomia_de_uma_WebExtension	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-/pt-BR/docs/Mozilla/Add-ons/WebExtensions/O_que_vem_a_seguir_	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next_
+/pt-BR/docs/Mozilla/Add-ons/WebExtensions/O_que_vem_a_seguir_	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/Passo-a-Passo	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
+/pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next_	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissões	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/pre-requisitos	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/sua_primeira_WebExtension	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Itens_do_menu_de_contexto	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
-/pt-BR/docs/Mozilla/Firefox/Novas_funcionalidades	/pt-BR/docs/Mozilla/Firefox/Experimental_features
 /pt-BR/docs/Mozilla/Firefox/Releases/3/Zoom_de_página_inteira	/pt-BR/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
 /pt-BR/docs/Quirks_Mode_and_Standards_Mode	/pt-BR/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /pt-BR/docs/SVG	/pt-BR/docs/Web/SVG
@@ -714,7 +710,7 @@
 /pt-BR/docs/Web/Acessibilidade/Entendendo_WCAG	/pt-BR/docs/Web/Accessibility/Understanding_WCAG
 /pt-BR/docs/Web/Acessibilidade/Entendendo_WCAG/Keyboard	/pt-BR/docs/Web/Accessibility/Understanding_WCAG/Keyboard
 /pt-BR/docs/Web/Apps/Progressive	/pt-BR/docs/Web/Progressive_web_apps
-/pt-BR/docs/Web/Apps/Progressive/Introdução	/pt-BR/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+/pt-BR/docs/Web/Apps/Progressive/Introdução	/pt-BR/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /pt-BR/docs/Web/CSS/-moz-box-ordinal-group	/pt-BR/docs/Web/CSS/box-ordinal-group
 /pt-BR/docs/Web/CSS/-moz-context-properties	/pt-BR/docs/orphaned/Web/CSS/-moz-context-properties
 /pt-BR/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support	/pt-BR/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
@@ -803,6 +799,7 @@
 /pt-BR/docs/Web/Events/readystatechange	/pt-BR/docs/Web/API/Document/readystatechange_event
 /pt-BR/docs/Web/Events/resize	/pt-BR/docs/Web/API/Window/resize_event
 /pt-BR/docs/Web/Events/touchstart	/pt-BR/docs/Web/API/Element/touchstart_event
+/pt-BR/docs/Web/Guide/AJAX/Getting_Started	/pt-BR/docs/conflicting/Web/Guide/AJAX
 /pt-BR/docs/Web/Guide/CSS/CSS_Media_queries	/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /pt-BR/docs/Web/Guide/CSS/Scaling_background_images	/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 /pt-BR/docs/Web/Guide/CSS/Understanding_z_index	/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
@@ -943,8 +940,9 @@
 /pt-BR/docs/Web/JavaScript/Typed_arrays	/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays
 /pt-BR/docs/Web/MathML/Exemplos	/pt-BR/docs/Web/MathML/Examples
 /pt-BR/docs/Web/Performance/caminho_de_renderizacao_critico	/pt-BR/docs/Web/Performance/Critical_rendering_path
-/pt-BR/docs/Web/Progressive_web_apps/Introduction	/pt-BR/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
-/pt-BR/docs/Web/Progressive_web_apps/Introdução	/pt-BR/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction
+/pt-BR/docs/Web/Progressive_web_apps/Introduction	/pt-BR/docs/Web/Progressive_web_apps/Tutorials/js13kGames
+/pt-BR/docs/Web/Progressive_web_apps/Introdução	/pt-BR/docs/Web/Progressive_web_apps/Tutorials/js13kGames
+/pt-BR/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/pt-BR/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /pt-BR/docs/Web/SVG/Compatibility_sources	/pt-BR/docs/conflicting/Web/SVG
 /pt-BR/docs/Web/SVG/Element/altGlyph	/pt-BR/docs/orphaned/Web/SVG/Element/altGlyph
 /pt-BR/docs/Web/SVG/Element/altGlyphDef	/pt-BR/docs/orphaned/Web/SVG/Element/altGlyphDef

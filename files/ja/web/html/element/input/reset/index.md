@@ -2,7 +2,7 @@
 title: <input type="reset">
 slug: Web/HTML/Element/input/reset
 l10n:
-  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
+  sourceCommit: f6d04a43eadf5ab26a3488942dfb318b58234eb5
 ---
 
 {{HTMLSidebar}}
@@ -11,39 +11,7 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/input-reset.html", "tabbed-standard")}}
 
-> **メモ:** 通常、フォームにリセットボタンを配置するべきではありません。このようなボタンは便利なものではなく、間違ってボタンをクリックしてしまったユーザーをイライラさせる可能性が高くなります ([送信ボタン](/ja/docs/Web/HTML/Element/input/submit)をクリックしようとしているときにクリックしてしまうことが多いです)。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#value">値</a></strong></td>
-      <td>ボタンのラベルとして使用する文字列</td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>{{domxref("Element/click_event", "click")}}</td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> および
-        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td><code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>なし</td>
-    </tr>
-  </tbody>
-</table>
+> **メモ:** 通常、フォームにリセットボタンを配置するべきではありません。このようなボタンは便利なものではなく、間違ってボタンをクリックしてしまったユーザーをイライラさせる可能性が高くなります（[送信ボタン](/ja/docs/Web/HTML/Element/input/submit)をクリックしようとしているときにクリックしてしまうことが多いです）。
 
 ## 値
 
@@ -57,7 +25,7 @@ l10n:
 
 {{EmbedLiveSample("Setting_the_value_attribute", 650, 30)}}
 
-`value` を指定しなかった場合は、既定のラベルが付いたボタンが表示されます (通常は「リセット」ですが、{{Glossary("user agent", "ユーザーエージェント")}}によって異なります)。
+`value` を指定しなかった場合は、既定のラベルが付いたボタンが表示されます（通常は「リセット」ですが、{{Glossary("user agent", "ユーザーエージェント")}}によって異なります）。
 
 ```html
 <input type="reset" />
@@ -111,7 +79,7 @@ l10n:
 
 {{EmbedLiveSample("Adding_a_reset_keyboard_shortcut", 650, 100)}}
 
-上記の例の問題点は、アクセスキーが何であるかをユーザーが知る方法がないことです。これは特に、一般的には競合を避けるために修飾キーが標準的ではないために特に問題になります。サイトを構築する際には、サイトデザインの邪魔にならないような方法でこの情報を提供するようにしてください (例えば、サイトのアクセスキーについての情報を指す簡単にアクセスできるリンクを提供するなど)。ボタンにツールチップを追加する ([`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性を使う) ことも役立ちますが、アクセシビリティのためには完全な解決策ではありません。
+上記の例の問題点は、アクセスキーが何であるかをユーザーが知る方法がないことです。これは特に、一般的には競合を避けるために修飾キーが標準的ではないために特に問題になります。サイトを構築する際には、サイトデザインの邪魔にならないような方法でこの情報を提供するようにしてください（例えば、サイトのアクセスキーについての情報を指す簡単にアクセスできるリンクを提供するなど）。ボタンにツールチップを追加する（[`title`](/ja/docs/Web/HTML/Global_attributes#title) 属性を使う）ことも役立ちますが、アクセシビリティのためには完全な解決策ではありません。
 
 ### リセットボタンの無効化と有効化
 
@@ -133,6 +101,44 @@ l10n:
 
 上記に簡単な例を挙げました。リセットボタンについては、これ以上言うことはありません。
 
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#value">値</a></strong></td>
+      <td>ボタンのラベルとして使用する文字列</td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>{{domxref("Element/click_event", "click")}}</td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> および
+        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>なし</td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+    </tr>
+  </tbody>
+</table>
+
 ## 仕様書
 
 {{Specifications}}
@@ -145,7 +151,6 @@ l10n:
 
 - {{HTMLElement("input")}} およびそれが実装している {{domxref("HTMLInputElement")}} インターフェイス
 - [フォームとボタン](/ja/docs/Learn/Forms/Basic_native_form_controls#実際のボタン)
-- [フォーム (アクセシビリティ)](/ja/docs/Web/Accessibility/ARIA/forms)
 - [HTML フォーム](/ja/docs/Learn/Forms)
 - {{HTMLElement("button")}} 要素
 - [CSS プロパティの互換性](/ja/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

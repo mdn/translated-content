@@ -1,11 +1,7 @@
 ---
 title: Firefox 12 pour les développeurs
 slug: Mozilla/Firefox/Releases/12
-tags:
-  - Firefox
-  - Firefox 12
 translation_of: Mozilla/Firefox/Releases/12
-original_slug: Mozilla/Firefox/Versions/12
 ---
 
 {{FirefoxSidebar}}

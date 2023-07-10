@@ -1,16 +1,6 @@
 ---
 title: tabs.onAttached
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onAttached
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onAttached
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onAttached
 ---
 

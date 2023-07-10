@@ -12,7 +12,7 @@ translation_of: Web/API/HTMLCanvasElement/height
 {{APIRef("Canvas API")}}
 
 Свойство **`HTMLCanvasElement.height`** — это положительное
-`целое число`, отображающее значение HTML атрибута {{htmlattrxref("height", "canvas")}} элемента {{HTMLElement("canvas")}} в CSS пикселях. Если атрибут не указан или
+`целое число`, отображающее значение HTML атрибута [`height`](/ru/docs/Web/HTML/Element/canvas#height) элемента {{HTMLElement("canvas")}} в CSS пикселях. Если атрибут не указан или
 для него задано недопустимое значение, например отрицательное, то используется значение по умолчанию `150`
 
 Одно из двух свойств (другое — {{domxref("HTMLCanvasElement.width")}}), контролирующих размер холста.

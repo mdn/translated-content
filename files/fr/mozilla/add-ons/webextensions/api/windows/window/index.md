@@ -1,8 +1,6 @@
 ---
 title: windows.Window
 slug: Mozilla/Add-ons/WebExtensions/API/windows/Window
-tags:
-  - Fenêtre
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/Window
 ---
 

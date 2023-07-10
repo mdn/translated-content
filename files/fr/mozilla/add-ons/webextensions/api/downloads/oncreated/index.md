@@ -1,16 +1,6 @@
 ---
 title: downloads.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onCreated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downlaods
-  - onCreated
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onCreated
 ---
 

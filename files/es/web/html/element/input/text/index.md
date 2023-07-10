@@ -6,7 +6,7 @@ original_slug: Web/HTML/Elemento/input/text
 
 {{HTMLSidebar}}
 
-Los elementos {{HTMLElement("input")}} de tipo {{HTMLAttrDef("text")}} crean campos de texto básicos de una sola línea.
+Los elementos {{HTMLElement("input")}} de tipo `text` crean campos de texto básicos de una sola línea.
 
 {{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
 
@@ -45,7 +45,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
       <td><strong>IDL attributes</strong></td>
       <td>
         <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        {{HTMLAttrDef("value")}}
+        <code>value</code>
       </td>
     </tr>
     <tr>
@@ -85,25 +85,25 @@ Además de los atributos que operan en todos los elementos {{HTMLElement("input"
 | [`size`](#size)               | Un número que indica cuántos caracteres de ancho debe tener el campo de entrada.                                                                         |
 | [`spellcheck`](#spellcheck)   | Controla si se habilita o no la revisión ortográfica para el campo de entrada, o si se debe usar la configuración de revisión ortográfica predeterminada |
 
-### {{HTMLAttrDef("list")}}
+### `list`
 
-Los valores del atributo {{HTMLAttrDef("list")}} son el {{DOMxRef("Element.id", "id")}} de un elemento {{HTMLElement("datalist")}} ubicado en el mismo documento. El {{HTMLElement("datalist")}} proporciona una lista de valores predefinidos para sugerir al usuario para esta entrada. Cualquier valor de la lista que no sea compatible con [`type`](/es/docs/Web/HTML/Element/input#type) no se incluye en las opciones sugeridas. Los valores proporcionados son sugerencias, no requisitos: los usuarios pueden seleccionar de esta lista predefinida o proporcionar un valor diferente.
+Los valores del atributo `list` son el {{DOMxRef("Element.id", "id")}} de un elemento {{HTMLElement("datalist")}} ubicado en el mismo documento. El {{HTMLElement("datalist")}} proporciona una lista de valores predefinidos para sugerir al usuario para esta entrada. Cualquier valor de la lista que no sea compatible con [`type`](/es/docs/Web/HTML/Element/input#type) no se incluye en las opciones sugeridas. Los valores proporcionados son sugerencias, no requisitos: los usuarios pueden seleccionar de esta lista predefinida o proporcionar un valor diferente.
 
-### {{HTMLAttrDef("maxlength")}}
+### `maxlength`
 
-El número máximo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada de {{HTMLAttrDef("text")}}. Debe ser un valor entero 0 o superior. Si no se especifica {{HTMLAttrDef("maxlength")}}, o se especifica un valor no válido, el {{HTMLAttrDef("text")}} de la entrada no tiene una longitud máxima. Este valor también debe ser mayor o igual que el valor de [`minlength`](/es/docs/Web/HTML/Element/input#minlength).
+El número máximo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada de `text`. Debe ser un valor entero 0 o superior. Si no se especifica `maxlength`, o se especifica un valor no válido, el `text` de la entrada no tiene una longitud máxima. Este valor también debe ser mayor o igual que el valor de [`minlength`](/es/docs/Web/HTML/Element/input#minlength).
 
 La entrada fallará [restricción de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation) si la longitud del valor de texto del campo es mayor que [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength) Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
 
-### {{HTMLAttrDef("minlength")}}
+### `minlength`
 
-El número mínimo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada de {{HTMLAttrDef("texto")}}. Debe ser un valor entero no negativo menor o igual al valor especificado por [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength). Si no se especifica {{HTMLAttrDef("minlength")}}, o se especifica un valor no válido, la entrada de {{HTMLAttrDef("text")}} no tiene una longitud mínima.
+El número mínimo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada de `texto`. Debe ser un valor entero no negativo menor o igual al valor especificado por [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength). Si no se especifica `minlength`, o se especifica un valor no válido, la entrada de `text` no tiene una longitud mínima.
 
-La entrada fallará [restricción de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation) si la longitud del texto ingresado en el campo es menor que {{HTMLAttrDef("minlength")}} Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
+La entrada fallará [restricción de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation) si la longitud del texto ingresado en el campo es menor que `minlength` Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.
 
-### {{HTMLAttrDef("pattern")}}
+### `pattern`
 
-El atributo {{HTMLAttrDef("pattern")}}, cuando se especifica, es una expresión regular que el [`value`](/es/docs/Web/HTML/Global_attributes#value) de la entrada debe coincidir para que el valor pase [restricciones de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation). Debe ser una expresión regular de JavaScript válida, como la usada por el tipo {{JSxRef("RegExp")}} y como se documenta en la [guía sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions); el indicador `'u'` se especifica al compilar la expresión regular, de modo que el patrón se trata como una secuencia de puntos de código Unicode, en lugar de ASCII. No se deben especificar barras diagonales alrededor del texto del patrón.
+El atributo `pattern`, cuando se especifica, es una expresión regular que el [`value`](/es/docs/Web/HTML/Global_attributes#value) de la entrada debe coincidir para que el valor pase [restricciones de validación](/es/docs/Web/Guide/HTML/HTML5/Constraint_validation). Debe ser una expresión regular de JavaScript válida, como la usada por el tipo {{JSxRef("RegExp")}} y como se documenta en la [guía sobre expresiones regulares](/es/docs/Web/JavaScript/Guide/Regular_Expressions); el indicador `'u'` se especifica al compilar la expresión regular, de modo que el patrón se trata como una secuencia de puntos de código Unicode, en lugar de ASCII. No se deben especificar barras diagonales alrededor del texto del patrón.
 
 Si el patrón especificado no se especifica o no es válido, no se aplica ninguna expresión regular y este atributo se ignora por completo.
 
@@ -111,29 +111,29 @@ Si el patrón especificado no se especifica o no es válido, no se aplica ningun
 
 Consulta [Especificación de un patrón](#especificación_de_un_patrón) para obtener más detalles y un ejemplo.
 
-### {{HTMLAttrDef("placeholder")}}
+### `placeholder`
 
-El atributo {{HTMLAttrDef("placeholder")}} es una cadena que proporciona una breve pista al usuario sobre el tipo de información que se espera en el campo. Debe ser una palabra o frase corta que demuestre el tipo de datos esperado, en lugar de un mensaje explicativo. El texto _no debe_ incluir retornos de carro o saltos de línea.
+El atributo `placeholder` es una cadena que proporciona una breve pista al usuario sobre el tipo de información que se espera en el campo. Debe ser una palabra o frase corta que demuestre el tipo de datos esperado, en lugar de un mensaje explicativo. El texto _no debe_ incluir retornos de carro o saltos de línea.
 
 Si el contenido del control tiene una direccionalidad ({{Glossary("LTR")}} o {{Glossary("RTL")}}) pero necesitas presentar el marcador de posición en la direccionalidad opuesta, puedes usar caracteres de formato de algoritmo bidireccional Unicode para anular la direccionalidad dentro del marcador de posición; consulta [Anulación de BiDi mediante caracteres de control Unicode](/es/docs/Web/Localization/Unicode_Bidirectional_Text_Algorithm#anulación_de_bidi_mediante_caracteres_de_control_unicode) para esos caracteres.
 
-> **Nota:** Evita utilizar el atributo {{HTMLAttrDef("placeholder")}} si puedes. No es tan útil semánticamente como otras formas de explicar tu formulario y puede causar problemas técnicos inesperados con tu contenido. Consulta [Etiquetas y marcadores de posición](/es/docs/Web/HTML/Element/input#etiquetas_y_marcadores_de_posición) para obtener más información.
+> **Nota:** Evita utilizar el atributo `placeholder` si puedes. No es tan útil semánticamente como otras formas de explicar tu formulario y puede causar problemas técnicos inesperados con tu contenido. Consulta [Etiquetas y marcadores de posición](/es/docs/Web/HTML/Element/input#etiquetas_y_marcadores_de_posición) para obtener más información.
 
-### {{HTMLAttrDef("readonly")}}
+### `readonly`
 
-Un atributo booleano que, si está presente, significa que el usuario no puede editar este campo. Su {{HTMLAttrDef("value")}}, sin embargo, aún se puede cambiar mediante el código JavaScript configurando directamente la propiedad {{DOMxRef("HTMLInputElement.value")}}.
+Un atributo booleano que, si está presente, significa que el usuario no puede editar este campo. Su `value`, sin embargo, aún se puede cambiar mediante el código JavaScript configurando directamente la propiedad {{DOMxRef("HTMLInputElement.value")}}.
 
-> **Nota:** Debido a que un campo de solo lectura no puede tener un valor, {{HTMLAttrDef("required")}} no tiene ningún efecto en las entradas con el atributo {{HTMLAttrDef("readonly")}} también especificado.
+> **Nota:** Debido a que un campo de solo lectura no puede tener un valor, `required` no tiene ningún efecto en las entradas con el atributo `readonly` también especificado.
 
-### {{HTMLAttrDef("size")}}
+### `size`
 
-El atributo {{HTMLAttrDef("size")}} es un valor numérico que indica cuántos caracteres de ancho debe tener el campo de entrada. El valor debe ser un número mayor que cero, y el valor predeterminado es 20. Dado que el ancho de los caracteres varía, esto puede ser exacto o no y no se debe confiar en que lo sea; la entrada resultante puede ser más estrecha o más ancha que el número especificado de caracteres, dependiendo de los caracteres y la fuente (configuración de {{CSSxRef("fuente")}} en uso).
+El atributo `size` es un valor numérico que indica cuántos caracteres de ancho debe tener el campo de entrada. El valor debe ser un número mayor que cero, y el valor predeterminado es 20. Dado que el ancho de los caracteres varía, esto puede ser exacto o no y no se debe confiar en que lo sea; la entrada resultante puede ser más estrecha o más ancha que el número especificado de caracteres, dependiendo de los caracteres y la fuente (configuración de {{CSSxRef("fuente")}} en uso).
 
 Esto _no_ establece un límite en la cantidad de caracteres que el usuario puede ingresar en el campo. Solo especifica aproximadamente cuántos se pueden ver a la vez. Para establecer un límite superior en la longitud de los datos de entrada, utiliza el atributo [maxlength](#maxlength).
 
-### {{HTMLAttrDef("spellcheck")}}
+### `spellcheck`
 
-{{HTMLAttrDef("spellcheck")}} es un atributo global que se utiliza para indicar si se habilita o no la revisión ortográfica de un elemento. Se puede usar en cualquier contenido editable, pero aquí consideramos los detalles relacionados con el uso del corrector ortográfico ([`spellcheck`](/es/docs/Web/HTML/Global_attributes#spellcheck) en elementos {{HTMLElement("input")}}. Los valores permitidos para el corrección ortográfica son:
+`spellcheck` es un atributo global que se utiliza para indicar si se habilita o no la revisión ortográfica de un elemento. Se puede usar en cualquier contenido editable, pero aquí consideramos los detalles relacionados con el uso del corrector ortográfico ([`spellcheck`](/es/docs/Web/HTML/Global_attributes#spellcheck) en elementos {{HTMLElement("input")}}. Los valores permitidos para el corrección ortográfica son:
 
 - `false`
   - : Desactive la corrección ortográfica de este elemento.
@@ -155,16 +155,16 @@ Los siguientes atributos no estándar también están disponibles en algunos nav
 | [`autocorrect`](#autocorrect)     | Una cadena que indica si la autocorrección está activa (`on`) o (`off`). **Solo Safari.**                                                                                                                                                                                            |
 | [`mozactionhint`](#mozactionhint) | Una cadena que indica el tipo de acción que se realizará cuando el usuario presione la tecla <kbd>Intro</kbd> o <kbd>Retorno</kbd> mientras editas el campo; esto se usa para determinar una etiqueta apropiada para esa tecla en un teclado virtual. **Solo Firefox para Android.** |
 
-### {{HTMLAttrDef("autocorrect")}} {{non-standard_inline}}
+### `autocorrect` {{non-standard_inline}}
 
-Una extensión de Safari, el atributo {{HTMLAttrDef("autocorrect")}} es una cadena que indica si activar o no la corrección automática mientras el usuario está editando este campo. Los valores permitidos son:
+Una extensión de Safari, el atributo `autocorrect` es una cadena que indica si activar o no la corrección automática mientras el usuario está editando este campo. Los valores permitidos son:
 
 - `on`
   - : Habilita la corrección automática de errores tipográficos, así como el procesamiento de sustituciones de texto, si los hay.
 - `off`
   - : Desactiva la corrección automática y las sustituciones de texto.
 
-### {{HTMLAttrDef("mozactionhint")}} {{non-standard_inline}}
+### `mozactionhint` {{non-standard_inline}}
 
 Una extensión de Mozilla, compatible con Firefox para Android, que proporciona una pista sobre qué tipo de acción se realizará si el usuario presiona la tecla <kbd>Intro</kbd> o <kbd>Retorno</kbd> mientras edita el campo. Esta información se usa para decidir qué tipo de etiqueta usar en la tecla <kbd>Intro</kbd> del teclado virtual.
 
@@ -174,7 +174,7 @@ Los valores permitidos son: `go`, `done`, `next`, `search` y `send`. El navegado
 
 ## Usar entradas de texto
 
-Los elementos {{HTMLElement("input")}} de tipo {{HTMLAttrDef("text")}} crean entradas básicas de una sola línea. Los debes usar en cualquier lugar donde desees que el usuario ingrese un valor de una sola línea y no hay un tipo de entrada más específico disponible para recopilar ese valor (por ejemplo, si es un [date](/es/docs/Web/HTML/Element/input/datetime-local), [URL](/es/docs/Web/HTML/Element/input/url), [email](/es/docs/Web/HTML/Element/input/email), o [término de búsqueda](/es/docs/Web/HTML/Element/input/search), tiene mejores opciones disponibles).
+Los elementos {{HTMLElement("input")}} de tipo `text` crean entradas básicas de una sola línea. Los debes usar en cualquier lugar donde desees que el usuario ingrese un valor de una sola línea y no hay un tipo de entrada más específico disponible para recopilar ese valor (por ejemplo, si es un [date](/es/docs/Web/HTML/Element/input/datetime-local), [URL](/es/docs/Web/HTML/Element/input/url), [email](/es/docs/Web/HTML/Element/input/email), o [término de búsqueda](/es/docs/Web/HTML/Element/input/search), tiene mejores opciones disponibles).
 
 ### Ejemplo básico
 
@@ -217,7 +217,7 @@ Puedes ver cómo se representa el marcador de posición a continuación:
 
 {{EmbedLiveSample("Establecer_marcadores_de_posición", 600, 50)}}
 
-El marcador de posición generalmente se representa en un color más claro que el color de primer plano del elemento y desaparece automáticamente cuando el usuario comienza a ingresar texto en el campo (o siempre que el campo tiene un valor establecido programáticamente al establecer su atributo {{HTMLAttrDef("value")}}.
+El marcador de posición generalmente se representa en un color más claro que el color de primer plano del elemento y desaparece automáticamente cuando el usuario comienza a ingresar texto en el campo (o siempre que el campo tiene un valor establecido programáticamente al establecer su atributo `value`.
 
 ### Tamaño físico del elemento de entrada
 
@@ -241,7 +241,7 @@ El tamaño físico del cuadro de entrada se puede controlar mediante el atributo
 
 ## Validación
 
-Los elementos {{HTMLElement("input")}} de tipo {{HTMLAttrDef("text")}} no tienen validación automática aplicada (ya que una entrada de texto básica debe ser capaz de aceptar cualquier cadena arbitraria), pero hay algunas opciones de validación de lado del cliente disponibles, que verás a continuación.
+Los elementos {{HTMLElement("input")}} de tipo `text` no tienen validación automática aplicada (ya que una entrada de texto básica debe ser capaz de aceptar cualquier cadena arbitraria), pero hay algunas opciones de validación de lado del cliente disponibles, que verás a continuación.
 
 > **Nota:** La validación del formulario HTML _no_ sustituye a la de los scripts del servidor que garantizan que los datos introducidos tengan el formato adecuado. Es demasiado fácil para alguien realizar ajustes en el HTML que le permitan omitir la validación o eliminarla por completo. También es posible que alguien simplemente omita tu HTML por completo y envíe los datos directamente a tu servidor. Si tu código del lado del servidor no valida los datos que recibe, podría ocurrir un desastre cuando se ingresen en tu base de datos datos con formato incorrecto (o datos que son demasiado grandes, son del tipo incorrecto, etc.).
 
@@ -331,7 +331,7 @@ Esto se renderiza así:
 
 Si intentas enviar el formulario con menos de 4 caracteres, se te dará un mensaje de error apropiado (que difiere entre los navegadores). Si intentas ingresar más de 8 caracteres, el navegador no te lo permitirá.
 
-> **Nota:** Si especificas un {{HTMLAttrDef("minlength")}} pero no especificas {{HTMLAttrDef("required")}}, la entrada se considera válida, ya que no se requiere que el usuario especifique un valor.
+> **Nota:** Si especificas un `minlength` pero no especificas `required`, la entrada se considera válida, ya que no se requiere que el usuario especifique un valor.
 
 ### Especificación de un patrón
 

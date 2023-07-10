@@ -1,16 +1,6 @@
 ---
 title: extension.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getBackgroundPage
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
 ---
 

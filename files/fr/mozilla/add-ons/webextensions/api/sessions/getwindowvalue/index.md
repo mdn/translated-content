@@ -1,15 +1,6 @@
 ---
 title: sessions.getWindowValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getWindowValue
-  - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue
 ---
 
