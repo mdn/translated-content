@@ -270,11 +270,11 @@ fish.type = "Fishes";
 fish.displayType(); // Output:Fishes
 ```
 
-## **继承**
+## 继承
 
 所有的 JavaScript 对象至少继承于一个对象。被继承的对象被称作原型，并且继承的属性可通过构造函数的 `prototype` 对象找到。查看更多详细 [Inheritance and the prototype chain](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 
-## **对象属性索引**
+## 对象属性索引
 
 在 JavaScript 1.0 中，你可以通过名称或序号访问一个属性。但是在 JavaScript 1.1 及之后版本中，如果你最初使用名称定义了一个属性，则你必须通过名称来访问它；而如果你最初使用序号来定义一个属性，则你必须通过索引来访问它。
 

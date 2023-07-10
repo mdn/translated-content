@@ -430,18 +430,10 @@ if (window.fetch) {
 
 如果要在不支持的浏览器中使用 Fetch，可以使用 [Fetch Polyfill](https://github.com/github/fetch)。
 
-## 规范
-
-{{Specifications}}
-
-## 浏览器兼容性
-
-{{Compat}}
-
 ## 参见
 
 - {{domxref("Service_Worker_API", "ServiceWorker API")}}
 - [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch examples on Github](https://github.com/mdn/fetch-examples/)
+- [Fetch examples on GitHub](https://github.com/mdn/fetch-examples/)

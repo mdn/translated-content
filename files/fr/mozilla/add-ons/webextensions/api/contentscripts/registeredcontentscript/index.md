@@ -1,15 +1,6 @@
 ---
 title: contentScripts.RegisteredContentScript
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript
-tags:
-  - API
-  - Extensions
-  - NeedsTranslation
-  - Reference
-  - RegisteredContentScript
-  - TopicStub
-  - Type
-  - contentScripts
 translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript
 ---
 

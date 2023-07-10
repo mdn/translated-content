@@ -1,16 +1,6 @@
 ---
 title: webRequest.BlockingResponse
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
-tags:
-  - API
-  - Add-ons
-  - BlockingResponse
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
 ---
 
@@ -41,7 +31,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 
   - : `string`. Il s'agit d'une URL, et si elle est définie, la requête originale est redirigée vers cette URL. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} ou {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}.
 
-    Les redirections vers des schémas non-HTTP tels que data : sont autorisées, mais elles ne sont pas prises en charge actuellement ({{bug("707624")}}). Les redirections utilisent la même méthode de requête que la requête originale à moins qu'elle ne soit initiée à partir de l'étape `onHeadersReceived`, auquel cas la redirection utilise la méthode GET.
+    Les redirections vers des schémas non-HTTP tels que data : sont autorisées, mais elles ne sont pas prises en charge actuellement ([bug Firefox 707624](https://bugzil.la/707624)). Les redirections utilisent la même méthode de requête que la requête originale à moins qu'elle ne soit initiée à partir de l'étape `onHeadersReceived`, auquel cas la redirection utilise la méthode GET.
 
     Si une extension veut rediriger une URL publique (par exemple HTTPS) vers une [page d'extension](/fr/Add-ons/WebExtensions/user_interface/Extension_pages), le fichier manifest.json de l'extension doit contenir une clé [web_accessible_resources](/fr/Add-ons/WebExtensions/manifest.json/web_accessible_resources) qui liste l'URL de la page d'extension.
 

@@ -1,11 +1,6 @@
 ---
 title: Bouton de la barre d'adresse
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-tags:
-  - AddresseBarButton
-  - Page Action
-  - User Interface
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
 

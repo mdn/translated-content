@@ -121,5 +121,5 @@ translation_of: Web/HTML/Element/ul
 
   - свойство [list-style](/ru/docs/Web/CSS/list-style), полезное для выбора способа отображения маркеров,
   - [CSS счётчики](/ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters), для более сложных вложенных списков,
-  - свойство [line-height](/ru/docs/Web/CSS/line-height), для замены убранного свойства {{ htmlattrxref("compact", "ul") }},
+  - свойство [line-height](/ru/docs/Web/CSS/line-height), для замены убранного свойства [`compact`](/ru/docs/Web/HTML/Element/ul#compact),
   - свойство [margin](/ru/docs/Web/CSS/margin), для контроля отступа в списке.

@@ -2165,7 +2165,7 @@
     "modified": "2019-03-18T21:05:24.593Z",
     "contributors": ["fthiagogv", "Mostard"]
   },
-  "Mozilla/Add-ons/WebExtensions/What_next_": {
+  "Mozilla/Add-ons/WebExtensions/What_next": {
     "modified": "2019-03-18T21:01:38.952Z",
     "contributors": ["jefersonnavarro"]
   },
@@ -4771,54 +4771,6 @@
     "modified": "2020-10-15T22:02:16.544Z",
     "contributors": ["EvertonTomalok"]
   },
-  "Web/CSS/CSS_Grid_Layout": {
-    "modified": "2020-11-17T10:35:18.965Z",
-    "contributors": [
-      "leandro2",
-      "Camila-Isabela",
-      "btd1337",
-      "alessandroHenrique",
-      "davioliveiira",
-      "Maujor"
-    ]
-  },
-  "Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout": {
-    "modified": "2019-10-10T16:31:58.386Z",
-    "contributors": [
-      "petrikuzman",
-      "EdilsonSilva",
-      "felipecesr",
-      "marcosdourado",
-      "salomes",
-      "cslaviero",
-      "Nichtdeutsch",
-      "hernanimattos",
-      "Wanderleymuniz",
-      "magnonp",
-      "MatheusNtg",
-      "simoneas02",
-      "thiago-hs",
-      "FernandaBernardo",
-      "guigrecco",
-      "Maujor"
-    ]
-  },
-  "Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout": {
-    "modified": "2019-03-18T21:30:25.562Z",
-    "contributors": ["lzerror"]
-  },
-  "Web/CSS/CSS_Images": {
-    "modified": "2019-03-18T21:39:59.884Z",
-    "contributors": ["mfluehr"]
-  },
-  "Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS": {
-    "modified": "2019-03-18T21:40:05.241Z",
-    "contributors": ["williamxavierdecastro"]
-  },
-  "Web/CSS/CSS_Lists_and_Counters": {
-    "modified": "2019-03-23T22:45:37.305Z",
-    "contributors": ["teoli"]
-  },
   "Web/CSS/CSS_Selectors": {
     "modified": "2019-03-22T08:21:56.189Z",
     "contributors": ["Arlon", "Lukff", "kelvyncosta"]
@@ -4927,6 +4879,54 @@
   "Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox": {
     "modified": "2020-11-08T18:33:11.137Z",
     "contributors": ["Eduardo-Santos"]
+  },
+  "Web/CSS/CSS_grid_layout": {
+    "modified": "2020-11-17T10:35:18.965Z",
+    "contributors": [
+      "leandro2",
+      "Camila-Isabela",
+      "btd1337",
+      "alessandroHenrique",
+      "davioliveiira",
+      "Maujor"
+    ]
+  },
+  "Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout": {
+    "modified": "2019-10-10T16:31:58.386Z",
+    "contributors": [
+      "petrikuzman",
+      "EdilsonSilva",
+      "felipecesr",
+      "marcosdourado",
+      "salomes",
+      "cslaviero",
+      "Nichtdeutsch",
+      "hernanimattos",
+      "Wanderleymuniz",
+      "magnonp",
+      "MatheusNtg",
+      "simoneas02",
+      "thiago-hs",
+      "FernandaBernardo",
+      "guigrecco",
+      "Maujor"
+    ]
+  },
+  "Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods": {
+    "modified": "2019-03-18T21:30:25.562Z",
+    "contributors": ["lzerror"]
+  },
+  "Web/CSS/CSS_images": {
+    "modified": "2019-03-18T21:39:59.884Z",
+    "contributors": ["mfluehr"]
+  },
+  "Web/CSS/CSS_images/Implementing_image_sprites_in_CSS": {
+    "modified": "2019-03-18T21:40:05.241Z",
+    "contributors": ["williamxavierdecastro"]
+  },
+  "Web/CSS/CSS_lists": {
+    "modified": "2019-03-23T22:45:37.305Z",
+    "contributors": ["teoli"]
   },
   "Web/CSS/CSS_media_queries": {
     "modified": "2019-03-23T22:21:43.734Z",
@@ -5763,20 +5763,6 @@
       "flaviomicheletti",
       "gigantebsb",
       "PedroFelipe"
-    ]
-  },
-  "Web/Guide/AJAX/Getting_Started": {
-    "modified": "2019-03-23T23:09:35.656Z",
-    "contributors": [
-      "chrisdavidmills",
-      "darnosls",
-      "DiogoFontes",
-      "renatogalvones",
-      "devLopez",
-      "flaviomicheletti",
-      "Alakazam",
-      "xanfox",
-      "robinsonsantos"
     ]
   },
   "Web/Guide/API": {
@@ -10460,7 +10446,7 @@
     "modified": "2020-04-06T10:15:30.355Z",
     "contributors": ["R-Santtos", "chrisdavidmills", "mfuji09"]
   },
-  "Web/Progressive_web_apps/Tutorials/js13kGames/Introduction": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames": {
     "modified": "2019-03-18T20:52:09.829Z",
     "contributors": ["chrisdavidmills", "rodolfo.ghiggi"]
   },
@@ -11121,6 +11107,20 @@
   "conflicting/Web/Guide": {
     "modified": "2019-03-23T23:28:22.836Z",
     "contributors": ["talitagoulart"]
+  },
+  "conflicting/Web/Guide/AJAX": {
+    "modified": "2019-03-23T23:09:35.656Z",
+    "contributors": [
+      "chrisdavidmills",
+      "darnosls",
+      "DiogoFontes",
+      "renatogalvones",
+      "devLopez",
+      "flaviomicheletti",
+      "Alakazam",
+      "xanfox",
+      "robinsonsantos"
+    ]
   },
   "conflicting/Web/Guide/Mobile": {
     "modified": "2019-03-23T23:28:19.402Z",

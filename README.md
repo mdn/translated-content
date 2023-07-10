@@ -82,5 +82,5 @@ Over in the translated-content repo, decide what change you want to make, and th
 
 For more information, we'd like to suggest that you go to the [content repo](https://github.com/mdn/content) and read its contribution guide, particularly to learn about [how to get started](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#getting-started), [pull request etiquette](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#pull-request-etiquette), and common actions such as [adding](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#adding-a-new-document), [moving](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#moving-documents), or [deleting](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#deleting-a-document) documents.
 
-[Guidelines document]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines
-[Writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
+[Guidelines document]: https://developer.mozilla.org/docs/MDN/Writing_guidelines
+[Writing style guide]: https://developer.mozilla.org/docs/MDN/Writing_guidelines/Writing_style_guide

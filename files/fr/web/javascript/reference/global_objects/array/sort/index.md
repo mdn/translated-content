@@ -108,7 +108,7 @@ items.sort(function (a, b) {
 
 Certaines implémentations de JavaScript utilisent un tri stable&nbsp;: l'ordre partiel de `a` et `b` ne change pas si `a` et `b` sont égaux. Si l'indice de `a` était inférieur à celui de `b` avant le tri, il le sera toujours après, quels que soient les mouvements de `a` et `b` dus au tri.
 
-Le tri est stable dans [SpiderMonkey](/fr/docs/SpiderMonkey) et tous les navigateurs basés sur Mozilla à partir de [Gecko](/fr/docs/Gecko) 1.9 (voir le {{ Bug(224128) }}).
+Le tri est stable dans [SpiderMonkey](/fr/docs/SpiderMonkey) et tous les navigateurs basés sur Mozilla à partir de [Gecko](/fr/docs/Gecko) 1.9 (voir le [bug Firefox 224128](https://bugzil.la/224128)).
 
 Le comportement de la méthode `sort()` a changé entre JavaScript 1.1 et JavaScript 1.2.
 

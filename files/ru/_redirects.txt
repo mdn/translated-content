@@ -5,8 +5,8 @@
 #
 # FROM-URL	TO-URL
 /ru/docs/AJAX	/ru/docs/Web/Guide/AJAX
-/ru/docs/AJAX/С_чего_начать	/ru/docs/Web/Guide/AJAX/Getting_Started
-/ru/docs/AJAX:С_чего_начать	/ru/docs/Web/Guide/AJAX/Getting_Started
+/ru/docs/AJAX/С_чего_начать	/ru/docs/conflicting/Web/Guide/AJAX
+/ru/docs/AJAX:С_чего_начать	/ru/docs/conflicting/Web/Guide/AJAX
 /ru/docs/Accessibility	/ru/docs/Web/Accessibility
 /ru/docs/Accessibility/Keyboard-navigable_JavaScript_widgets	/ru/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 /ru/docs/Apps/Progressive	/ru/docs/Web/Progressive_web_apps
@@ -327,6 +327,7 @@
 /ru/docs/MDN/Tools/Unsupported_GET_API	/ru/docs/conflicting/MDN
 /ru/docs/MDN/Yari	/ru/docs/orphaned/MDN/Yari
 /ru/docs/MDN_at_ten	/ru/docs/MDN/At_ten
+/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/ru/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 /ru/docs/Plugins/Roadmap	/ru/docs/Glossary/Plugin
@@ -592,16 +593,25 @@
 /ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax	/ru/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
 /ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере	/ru/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
 /ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Контролирование_соотношения_элементов_вдоль_главной_оси	/ru/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
-/ru/docs/Web/CSS/CSS_Flow_Layout/Введение_в_контексты_форматирования	/ru/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
-/ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
-/ru/docs/Web/CSS/CSS_Grid_Layout/Грид-области	/ru/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
-/ru/docs/Web/CSS/CSS_Grid_Layout/Расположение_элементов_по_грид-линиям_с_помощью_CSS_Grid	/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
+/ru/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts	/ru/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
+/ru/docs/Web/CSS/CSS_Flow_Layout/Введение_в_контексты_форматирования	/ru/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
+/ru/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout	/ru/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout
+/ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes	/ru/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
+/ru/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes	/ru/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
+/ru/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines	/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
+/ru/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid	/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
+/ru/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout	/ru/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids
+/ru/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout	/ru/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
+/ru/docs/Web/CSS/CSS_Grid_Layout/Грид-области	/ru/docs/Web/CSS/CSS_grid_layout/Grid_template_areas
+/ru/docs/Web/CSS/CSS_Grid_Layout/Расположение_элементов_по_грид-линиям_с_помощью_CSS_Grid	/ru/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
+/ru/docs/Web/CSS/CSS_Lists_and_Counters	/ru/docs/Web/CSS/CSS_lists
 /ru/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters	/ru/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters
 /ru/docs/Web/CSS/CSS_Positioning	/ru/docs/Web/CSS/CSS_positioned_layout
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 /ru/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
+/ru/docs/Web/CSS/CSS_Ruby	/ru/docs/Web/CSS/CSS_ruby_layout
 /ru/docs/Web/CSS/CSS_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/conflicting/Web/CSS/cursor
 /ru/docs/Web/CSS/CSS_Variables	/ru/docs/Web/CSS/CSS_cascading_variables
 /ru/docs/Web/CSS/CSS_animated_properties	/ru/docs/Web/CSS
@@ -615,6 +625,7 @@
 /ru/docs/Web/CSS/Media_Queries/Testing_media_queries	/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries
 /ru/docs/Web/CSS/Media_Queries/Using_media_queries	/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /ru/docs/Web/CSS/Media_Queries/Тестирование_медиа_запросы	/ru/docs/Web/CSS/CSS_media_queries/Testing_media_queries
+/ru/docs/Web/CSS/Paged_Media	/ru/docs/Web/CSS/CSS_paged_media
 /ru/docs/Web/CSS/Reference/background-blend-mode	/ru/docs/Web/CSS/background-blend-mode
 /ru/docs/Web/CSS/Using_CSS_variables	/ru/docs/Web/CSS/Using_CSS_custom_properties
 /ru/docs/Web/CSS/attr()	/ru/docs/Web/CSS/attr
@@ -661,7 +672,8 @@
 /ru/docs/Web/Events/transitionend	/ru/docs/Web/API/Element/transitionend_event
 /ru/docs/Web/Events/unhandledrejection	/ru/docs/Web/API/Window/unhandledrejection_event
 /ru/docs/Web/Events/стримится	/ru/docs/Web/API/HTMLMediaElement/seeking_event
-/ru/docs/Web/Guide/AJAX/С_чего_начать	/ru/docs/Web/Guide/AJAX/Getting_Started
+/ru/docs/Web/Guide/AJAX/Getting_Started	/ru/docs/conflicting/Web/Guide/AJAX
+/ru/docs/Web/Guide/AJAX/С_чего_начать	/ru/docs/conflicting/Web/Guide/AJAX
 /ru/docs/Web/Guide/CSS/Getting_started/SVG_и_CSS	/ru/docs/Web/SVG/Tutorial/SVG_and_CSS
 /ru/docs/Web/Guide/CSS/Understanding_z_index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index
 /ru/docs/Web/Guide/CSS/Understanding_z_index/Adding_z-index	/ru/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index

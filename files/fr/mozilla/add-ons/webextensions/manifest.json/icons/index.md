@@ -1,10 +1,6 @@
 ---
 title: icons
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/icons
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/icons
 ---
 

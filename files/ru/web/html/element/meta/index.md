@@ -7,11 +7,11 @@ translation_of: Web/HTML/Element/meta
 
 **HTML-элемент `<meta>`** представляет такие {{Glossary("Metadata","метаданные")}}, которые не могут быть представлены другими HTML-метатегами, такими как {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} или {{HTMLElement("title")}}.
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | Мета данные. Если задан {{htmlattrxref("itemprop")}} атрибут: [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                               |
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | Мета данные. Если задан [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop) атрибут: [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#Phrasing_content).                                                               |
 | ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                      | Отсутствует - это {{Glossary("empty element","пустой элемент")}}.                                                                                                                                                                               |
 | Пропуск тегов                                              | Так как это пустой элемент, то открывающий тег должен присутствовать, а закрывающий - отсутствовать.                                                                                                                                                                              |
-| Допустимые родители                                        | `<meta charset>`, `<meta http-equiv>`: {{HTMLElement("head")}} элемент. Если {{htmlattrxref("http-equiv", "meta")}} это не заявленная декларация, то может быть внутри элемента {{HTMLElement("noscript")}} или {{HTMLElement("head")}}. |
+| Допустимые родители                                        | `<meta charset>`, `<meta http-equiv>`: {{HTMLElement("head")}} элемент. Если [`http-equiv`](/ru/docs/Web/HTML/Element/meta#http-equiv) это не заявленная декларация, то может быть внутри элемента {{HTMLElement("noscript")}} или {{HTMLElement("head")}}. |
 | Допустимые ARIA-роли                                       | Отсутствуют                                                                                                                                                                                                                                                                       |
 | DOM-интерфейс                                              | {{domxref("HTMLMetaElement")}}                                                                                                                                                                                                                                          |
 
@@ -19,7 +19,7 @@ translation_of: Web/HTML/Element/meta
 
 Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
 
-> **Примечание:** атрибут {{htmlattrxref("name", "meta")}} имеет особое значение для элемента `<meta>` и атрибут {{htmlattrxref("itemprop")}} не должен быть задан в `<meta>` элементе в котором уже определены какие-либо {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} или {{htmlattrxref("charset", "meta")}} атрибуты.
+> **Примечание:** атрибут [`name`](/ru/docs/Web/HTML/Element/meta#name) имеет особое значение для элемента `<meta>` и атрибут [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop) не должен быть задан в `<meta>` элементе в котором уже определены какие-либо [`name`](/ru/docs/Web/HTML/Element/meta#name), [`http-equiv`](/ru/docs/Web/HTML/Element/meta#http-equiv) или [`charset`](/ru/docs/Web/HTML/Element/meta#charset) атрибуты.
 
 - {{htmlattrdef("charset")}}
   - : Этот атрибут задаёт кодировку символов, используемую на странице. Он должен содержать [стандартное имя IANA MIME для кодировки символов](https://www.iana.org/assignments/character-sets). Хотя стандарт не требует определённой кодировки, он рекомендует:
@@ -38,13 +38,13 @@ translation_of: Web/HTML/Element/meta
       > - `<meta>` элемент должен находиться внутри элемента {{HTMLElement("head")}} и задаваться в **1024 первых байтах** HTML страницы, поскольку некоторые браузеры смотрят только эти байты перед выбором кодировки.
       > - Этот `<meta>` элемент - часть алгоритма, определяющего набор символов ([algorithm to determine the character set](https://www.whatwg.org/specs/web-apps/current-work/multipage/parsing.html#encoding-sniffing-algorithm)) страницы, который браузер поддерживает. Заголовок {{HTTPHeader("Content-Type")}} и любые {{Glossary("Byte-Order Mark","Byte-Order Marks")}} элементы переопределяют данный элемент.
       > - Настоятельно рекомендуется определить кодировку символов. Если для страницы не определён набор символов, то некоторые cross-scripting технологии могут повредить страницу, например такие как [UTF-7 fallback cross-scripting technique](https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7). Постоянная установка этого элемента будет защищать вас от этого риска.
-      > - Этот {{HTMLElement("meta")}} элемент это синоним для pre-HTML5 `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` где *`IANAcharset` *соответствует значению эквивалентного {{htmlattrxref("charset", "meta")}} атрибута.
+      > - Этот {{HTMLElement("meta")}} элемент это синоним для pre-HTML5 `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` где *`IANAcharset` *соответствует значению эквивалентного [`charset`](/ru/docs/Web/HTML/Element/meta#charset) атрибута.
       >   Этот синтаксис по-прежнему разрешён, хотя и устарел и больше не рекомендуется.
 
 - {{htmlattrdef("content")}}
-  - : Этот атрибут содержит значение для {{htmlattrxref("http-equiv", "meta")}} или {{htmlattrxref("name", "meta")}} атрибута, в зависимости от контекста.
+  - : Этот атрибут содержит значение для [`http-equiv`](/ru/docs/Web/HTML/Element/meta#http-equiv) или [`name`](/ru/docs/Web/HTML/Element/meta#name) атрибута, в зависимости от контекста.
 - {{htmlattrdef("http-equiv")}}
-  - : Этот атрибут определяет прагму, которая может изменять поведение серверов и пользователей. Значение прагмы определяется с помощью {{htmlattrxref("content", "meta")}} и может быть следующим:
+  - : Этот атрибут определяет прагму, которая может изменять поведение серверов и пользователей. Значение прагмы определяется с помощью [`content`](/ru/docs/Web/HTML/Element/meta#content) и может быть следующим:
     - `"content-language"`
       - : Эта прагма определяет значение языка страницы по умолчанию.
 
@@ -57,24 +57,24 @@ translation_of: Web/HTML/Element/meta
 
         > **Примечание:**
         >
-        > - Не используйте эту прагму, так как она устарела. Используйте атрибут{{htmlattrxref("charset", "meta")}} в элементе {{HTMLElement("meta")}} вместо этого.
+        > - Не используйте эту прагму, так как она устарела. Используйте атрибут[`charset`](/ru/docs/Web/HTML/Element/meta#charset) в элементе {{HTMLElement("meta")}} вместо этого.
         > - {{HTMLElement("meta")}} не может быть использована для выбора типа документа в XHTML документе, или в HTML5 документе, за которым следует XHTML синтаксис, никогда не задавайте MIME тип как XHTML MIME. Это будет некорректно.
-        > - Только HTML документ может использовать контент-тип, так что большинство из них являются неиспользуемыми, поэтому они являются устаревшими и заменяются {{htmlattrxref("charset", "meta")}} атрибутом.
+        > - Только HTML документ может использовать контент-тип, так что большинство из них являются неиспользуемыми, поэтому они являются устаревшими и заменяются [`charset`](/ru/docs/Web/HTML/Element/meta#charset) атрибутом.
         >
     - `"default-style"`
-      - : Специализация этой прагмы - предпочтительный стиль таблиц, используемый на странице. {{htmlattrxref("content", "meta")}} атрибут должен содержать заголовок {{HTMLElement("link")}} элемента который {{htmlattrxref("href", "link")}} связывает атрибут с CSS таблцей стилей, или заголовок {{HTMLElement("style")}} элемента, который содержит [CSS](/ru/docs/Web/CSS) таблицу стилей.
+      - : Специализация этой прагмы - предпочтительный стиль таблиц, используемый на странице. [`content`](/ru/docs/Web/HTML/Element/meta#content) атрибут должен содержать заголовок {{HTMLElement("link")}} элемента который [`href`](/ru/docs/Web/HTML/Element/link#href) связывает атрибут с CSS таблцей стилей, или заголовок {{HTMLElement("style")}} элемента, который содержит [CSS](/ru/docs/Web/CSS) таблицу стилей.
     - `"refresh"`
       - : Эта прагма определяет:
-        - Количество секунд перезагрузки таблицы, если {{htmlattrxref("content", "meta")}} атрибут содержит только целое положительное число;
-        - Время, в количестве секунд, за которое страница должна быть перенаправлена на другую, если {{htmlattrxref("content", "meta")}} атрибут содержит целое положительное число, заканчивающийся строкой '`;url=`' и корректный URL.
+        - Количество секунд перезагрузки таблицы, если [`content`](/ru/docs/Web/HTML/Element/meta#content) атрибут содержит только целое положительное число;
+        - Время, в количестве секунд, за которое страница должна быть перенаправлена на другую, если [`content`](/ru/docs/Web/HTML/Element/meta#content) атрибут содержит целое положительное число, заканчивающийся строкой '`;url=`' и корректный URL.
     - `"set-cookie"`
       - : Эта прагма определяет [cookie](/ru/docs/cookie) для страницы. Её содержимое должно заканчиваться синтаксисом, определяемым [IETF HTTP Cookie Specification](https://tools.ietf.org/html/draft-ietf-httpstate-cookie-14).
         > **Примечание:** Не используете эту прагму, так как она устарела. Используйте HTTP header set-cookie вместо этого.
 - {{htmlattrdef("name")}}
 
   - : Этот атрибут определяет имя уровня документа метаданных.
-    Его не следует устанавливать, если один из атрибутов {{htmlattrxref("itemprop", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} или {{htmlattrxref("charset", "meta")}} также указан в наборе.
-    Имя этого документального уровня метаданных связано со значением, которое содержится в {{htmlattrxref("content", "meta")}} атрибуте.Допустимые значения для имени элемента, со связанными с ними значениями, хранятся посредством {{htmlattrxref("content", "meta")}} атрибута:
+    Его не следует устанавливать, если один из атрибутов [`itemprop`](/ru/docs/Web/HTML/Element/meta#itemprop), [`http-equiv`](/ru/docs/Web/HTML/Element/meta#http-equiv) или [`charset`](/ru/docs/Web/HTML/Element/meta#charset) также указан в наборе.
+    Имя этого документального уровня метаданных связано со значением, которое содержится в [`content`](/ru/docs/Web/HTML/Element/meta#content) атрибуте.Допустимые значения для имени элемента, со связанными с ними значениями, хранятся посредством [`content`](/ru/docs/Web/HTML/Element/meta#content) атрибута:
 
     - `application-name`, определяет имя веб-приложения, запущенного на веб-странице;
 
@@ -151,7 +151,7 @@ translation_of: Web/HTML/Element/meta
 
 - {{htmlattrdef("scheme")}}
   - : Этот атрибут определяет схему, которая описывает метаданные.
-    Схема - это контекст, ведущий к правильной интерпретации {{htmlattrxref("content", "meta")}} значения, например формата.
+    Схема - это контекст, ведущий к правильной интерпретации [`content`](/ru/docs/Web/HTML/Element/meta#content) значения, например формата.
 
     > **Примечание:** Не используйте этот атрибут, так как он устарел. Для него нет никакой замены, поскольку реально он не использовался. Опустите его.
 
@@ -159,12 +159,12 @@ translation_of: Web/HTML/Element/meta
 
 В зависимости от установленных атрибутов, тип метаданных может быть одним из следующих:
 
-- Если в наборе {{htmlattrxref("name", "meta")}}, то это _document-level metadata_, применяемая ко всей странице.
-- Если в наборе{{htmlattrxref("http-equiv", "meta")}} , то это _pragma directive_,
+- Если в наборе [`name`](/ru/docs/Web/HTML/Element/meta#name), то это _document-level metadata_, применяемая ко всей странице.
+- Если в наборе[`http-equiv`](/ru/docs/Web/HTML/Element/meta#http-equiv) , то это _pragma directive_,
   то есть информация, веб-сервер предоставляет информацию о том, как должна обслуживаться веб-страница.
-- Если в наборе {{htmlattrxref("charset", "meta")}}, то это _charset declaration_,
+- Если в наборе [`charset`](/ru/docs/Web/HTML/Element/meta#charset), то это _charset declaration_,
   то есть кодировка, используемая для сериализованной формы веб-страницы.
-- Если в наборе {{htmlattrxref("itemprop", "meta")}}, то это _user-defined metadata_,
+- Если в наборе [`itemprop`](/ru/docs/Web/HTML/Element/meta#itemprop), то это _user-defined metadata_,
   прозрачна для агента пользователя, поскольку семантика метаданных зависит от пользователя. {{experimental_inline}}
 
 ## Пример

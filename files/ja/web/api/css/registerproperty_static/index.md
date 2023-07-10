@@ -4,7 +4,7 @@ slug: Web/API/CSS/registerProperty_static
 original_slug: Web/API/CSS/registerProperty
 ---
 
-{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 **`CSS.registerProperty()`** メソッドは{{cssxref('--*', 'カスタムプロパティ')}}を登録し、プロパティ型のチェック、既定値、値の継承の有無の指定を行うことができます。
 
@@ -12,8 +12,8 @@ original_slug: Web/API/CSS/registerProperty
 
 ## 構文
 
-```js
-CSS.registerProperty(PropertyDefinition);
+```js-nolint
+CSS.registerProperty(PropertyDefinition)
 ```
 
 ### 引数
@@ -21,13 +21,13 @@ CSS.registerProperty(PropertyDefinition);
 次のメンバーを設定することができる `PropertyDefinition` 辞書オブジェクトです。
 
 - `name`
-  - : 定義しているプロパティの名前を示す [`DOMString`](/ja/docs/Web/API/DOMString)。
+  - : 定義するプロパティの名前を示す文字列です。
 - `syntax` {{optional_inline}}
-  - : 定義されたプロパティの期待される構文を表す [`DOMString`](/ja/docs/Web/API/DOMString)。 既定値は `"*"` です。
+  - : 定義されたプロパティの期待される構文を表す文字列です。 既定値は `"*"` です。
 - `inherits`
-  - : 定義されたプロパティを継承する必要があるか (`true`)、否か (`false`) を定義する論理値。 既定値は `false` です。
+  - : 定義されたプロパティを継承するか (`true`)、否か (`false`) を定義する論理値。 既定値は `false` です。
 - `initialValue` {{optional_inline}}
-  - : 定義されたプロパティの初期値を表す [`DOMString`](/ja/docs/Web/API/DOMString)。
+  - : 定義されたプロパティの初期値を表す文字列です。
 
 ### 返値
 
@@ -35,11 +35,11 @@ CSS.registerProperty(PropertyDefinition);
 
 ### 例外
 
-- `InvalidModificationError`
+- `InvalidModificationError` {{domxref("DOMException")}}
   - : 指定された `name` がすでに登録されている場合。
-- `SyntaxError`
+- `SyntaxError` {{domxref("DOMException")}}
   - : 指定された `name` が（`--foo` のように、 2 つのダッシュで始まる）有効なカスタムプロパティ名ではない場合。
-- `TypeError`
+- {{jsxref("TypeError")}}
   - : 必須の辞書メンバーの `name` または `inherits`、あるいはその両方が指定されていない場合。
 
 ## 例
@@ -48,10 +48,10 @@ CSS.registerProperty(PropertyDefinition);
 
 ```js
 window.CSS.registerProperty({
-  name: '--my-color',
-  syntax: '<color>',
+  name: "--my-color",
+  syntax: "<color>",
   inherits: false,
-  initialValue: '#c0ffee',
+  initialValue: "#c0ffee",
 });
 ```
 
@@ -103,8 +103,8 @@ button {
 
 ## 関連情報
 
-- [CSS properties and values API の使用](/ja/docs/Web/API/CSS_Properties_and_Values_API/guide)
+- [CSS プロパティと値 API の使用](/ja/docs/Web/API/CSS_Properties_and_Values_API/guide)
 - {{DOMxRef("CSS")}}
-- {{DOMxRef("CSS.supports()")}}
-- {{DOMxRef("CSS.escape()")}}
-- {{DOMxRef("CSS.factory_functions", 'CSS ファクトリー関数')}}
+- {{DOMxRef("CSS.supports_static")}}
+- {{DOMxRef("CSS.escape_static")}}
+- {{DOMxRef("CSS/factory_functions_static", 'CSS ファクトリー関数', '', 1)}}

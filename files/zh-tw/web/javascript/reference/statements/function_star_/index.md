@@ -41,8 +41,7 @@ function* name([param[, param[, ... param]]]) {
 ```js
 function* idMaker() {
   var index = 0;
-  while (index < index+1)
-    yield index++;
+  while (index < index + 1) yield index++;
 }
 
 var gen = idMaker();
@@ -92,10 +91,10 @@ var gen = logGenerator();
 
 // the first call of next executes from the start of the function
 // until the first yield statement
-gen.next();             // 0
-gen.next('pretzel');    // 1 pretzel
-gen.next('california'); // 2 california
-gen.next('mayonnaise'); // 3 mayonnaise
+gen.next(); // 0
+gen.next("pretzel"); // 1 pretzel
+gen.next("california"); // 2 california
+gen.next("mayonnaise"); // 3 mayonnaise
 ```
 
 ### 生成器中的回傳陳述式
@@ -107,7 +106,7 @@ function* yieldAndReturn() {
   yield "unreachable";
 }
 
-var gen = yieldAndReturn()
+var gen = yieldAndReturn();
 console.log(gen.next()); // { value: "Y", done: false }
 console.log(gen.next()); // { value: "R", done: true }
 console.log(gen.next()); // { value: undefined, done: true }
@@ -117,7 +116,7 @@ console.log(gen.next()); // { value: undefined, done: true }
 
 ```js example-bad
 function* f() {}
-var obj = new f; // throws "TypeError: f is not a constructor"
+var obj = new f(); // throws "TypeError: f is not a constructor"
 ```
 
 ### 以表達式定義生成器

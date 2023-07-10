@@ -1,10 +1,6 @@
 ---
 title: manifest_version
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
 ---
 

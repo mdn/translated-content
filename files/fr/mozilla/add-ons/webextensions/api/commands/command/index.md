@@ -1,16 +1,6 @@
 ---
 title: Command
 slug: Mozilla/Add-ons/WebExtensions/API/commands/Command
-tags:
-  - API
-  - Add-ons
-  - Command
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - commands
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/Command
 ---
 

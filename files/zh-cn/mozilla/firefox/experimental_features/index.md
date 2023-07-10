@@ -631,7 +631,7 @@ See also [ECMAScript Next support](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/
       <td>
         <strong>Layout side panel</strong><br />The Layout side panel allows to
         inspect and manage different CSS layout types like
-        <a href="/zh-CN/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>.
+        <a href="/zh-CN/docs/Web/CSS/CSS_grid_layout">CSS Grid Layout</a>.
       </td>
       <td>Disabled<br /><sub>(available since 52)</sub></td>
       <td>Disabled<br /><sub>(available since 52)</sub></td>

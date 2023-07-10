@@ -1,16 +1,6 @@
 ---
 title: bookmarks.create()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Create
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 ---
 

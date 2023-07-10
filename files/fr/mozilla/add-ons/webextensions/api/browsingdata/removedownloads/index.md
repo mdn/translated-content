@@ -1,15 +1,6 @@
 ---
 title: browsingData.removeDownloads()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeDownloads
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeDownloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeDownloads
 ---
 

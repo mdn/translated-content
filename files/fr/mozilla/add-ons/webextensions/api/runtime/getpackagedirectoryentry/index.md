@@ -1,16 +1,6 @@
 ---
 title: runtime.getPackageDirectoryEntry()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getPackageDirectoryEntry
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry
 ---
 

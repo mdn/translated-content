@@ -33,7 +33,3 @@ build/
 
 # zh-cn
 /files/zh-cn/**/*.md
-
-# zh-tw
-/files/zh-tw/web/api/[a-o]*/**/*.md
-/files/zh-tw/web/javascript/**/*.md

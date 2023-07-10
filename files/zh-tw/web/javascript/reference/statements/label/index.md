@@ -38,15 +38,15 @@ label :
 ```js
 var i, j;
 
-loop1:
-for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
-   loop2:
-   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
-      if (i === 1 && j === 1) {
-         continue loop1;
-      }
-      console.log('i = ' + i + ', j = ' + j);
-   }
+loop1: for (i = 0; i < 3; i++) {
+  //The first for statement is labeled "loop1"
+  loop2: for (j = 0; j < 3; j++) {
+    //The second for statement is labeled "loop2"
+    if (i === 1 && j === 1) {
+      continue loop1;
+    }
+    console.log("i = " + i + ", j = " + j);
+  }
 }
 
 // Output is:
@@ -68,8 +68,7 @@ for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
 var itemsPassed = 0;
 var i, j;
 
-top:
-for (i = 0; i < items.length; i++) {
+top: for (i = 0; i < items.length; i++) {
   for (j = 0; j < tests.length; j++) {
     if (!tests[j].pass(items[i])) {
       continue top;
@@ -85,15 +84,15 @@ for (i = 0; i < items.length; i++) {
 ```js
 var i, j;
 
-loop1:
-for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
-   loop2:
-   for (j = 0; j < 3; j++) {   //The second for statement is labeled "loop2"
-      if (i === 1 && j === 1) {
-         break loop1;
-      }
-      console.log('i = ' + i + ', j = ' + j);
-   }
+loop1: for (i = 0; i < 3; i++) {
+  //The first for statement is labeled "loop1"
+  loop2: for (j = 0; j < 3; j++) {
+    //The second for statement is labeled "loop2"
+    if (i === 1 && j === 1) {
+      break loop1;
+    }
+    console.log("i = " + i + ", j = " + j);
+  }
 }
 
 // Output is:
@@ -112,8 +111,7 @@ for (i = 0; i < 3; i++) {      //The first for statement is labeled "loop1"
 var allPass = true;
 var i, j;
 
-top:
-for (i = 0; items.length; i++)
+top: for (i = 0; items.length; i++)
   for (j = 0; j < tests.length; i++)
     if (!tests[j].pass(items[i])) {
       allPass = false;
@@ -127,11 +125,11 @@ for (i = 0; items.length; i++)
 
 ```js
 foo: {
-  console.log('face');
+  console.log("face");
   break foo;
-  console.log('this will not be executed');
+  console.log("this will not be executed");
 }
-console.log('swap');
+console.log("swap");
 
 // this will log:
 
@@ -150,7 +148,7 @@ L: function F() {}
 在[嚴格模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)中，這會拋出 {{jsxref("SyntaxError")}} 例外：
 
 ```js
-'use strict';
+"use strict";
 L: function F() {}
 // SyntaxError: functions cannot be labelled
 ```

@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
 ## 語法
 
-```plain
+```js-nolint
 Object.defineProperty(obj, prop, descriptor)
 ```
 
@@ -68,37 +68,37 @@ data 和 accessor descriptors 皆為物件，兩者共享下面提及的 key：
 ```js
 // using __proto__
 var obj = {};
-Object.defineProperty(obj, 'key', {
+Object.defineProperty(obj, "key", {
   __proto__: null, // no inherited properties
-  value: 'static'  // not enumerable
-                   // not configurable
-                   // not writable
-                   // as defaults
+  value: "static", // not enumerable
+  // not configurable
+  // not writable
+  // as defaults
 });
 
 // being explicit
-Object.defineProperty(obj, 'key', {
+Object.defineProperty(obj, "key", {
   enumerable: false,
   configurable: false,
   writable: false,
-  value: 'static'
+  value: "static",
 });
 
 // recycling same object
 function withValue(value) {
-  var d = withValue.d || (
-    withValue.d = {
+  var d =
+    withValue.d ||
+    (withValue.d = {
       enumerable: false,
       writable: false,
       configurable: false,
-      value: null
-    }
-  );
+      value: null,
+    });
   d.value = value;
   return d;
 }
 // ... and ...
-Object.defineProperty(obj, 'key', withValue('static'));
+Object.defineProperty(obj, "key", withValue("static"));
 
 // if freeze is available, prevents adding or
 // removing the object prototype properties
@@ -118,30 +118,36 @@ When the property specified doesn't exist in the object, `Object.defineProperty(
 var o = {}; // Creates a new object
 
 // Example of an object property added with defineProperty with a data property descriptor
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 37,
   writable: true,
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 // 'a' property exists in the o object and its value is 37
 
 // Example of an object property added with defineProperty with an accessor property descriptor
 var bValue = 38;
-Object.defineProperty(o, 'b', {
-  get: function() { return bValue; },
-  set: function(newValue) { bValue = newValue; },
+Object.defineProperty(o, "b", {
+  get: function () {
+    return bValue;
+  },
+  set: function (newValue) {
+    bValue = newValue;
+  },
   enumerable: true,
-  configurable: true
+  configurable: true,
 });
 o.b; // 38
 // 'b' property exists in the o object and its value is 38
 // The value of o.b is now always identical to bValue, unless o.b is redefined
 
 // You cannot try to mix both:
-Object.defineProperty(o, 'conflict', {
+Object.defineProperty(o, "conflict", {
   value: 0x9f91102,
-  get: function() { return 0xdeadbeef; }
+  get: function () {
+    return 0xdeadbeef;
+  },
 });
 // throws a TypeError: value appears only in data descriptors, get appears only in accessor descriptors
 ```
@@ -161,9 +167,9 @@ Object.defineProperty(o, 'conflict', {
 ```js
 var o = {}; // Creates a new object
 
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 37,
-  writable: false
+  writable: false,
 });
 
 console.log(o.a); // logs 37
@@ -179,9 +185,9 @@ The `enumerable` property attribute defines whether the property shows up in a {
 
 ```js
 var o = {};
-Object.defineProperty(o, 'a', { value: 1, enumerable: true });
-Object.defineProperty(o, 'b', { value: 2, enumerable: false });
-Object.defineProperty(o, 'c', { value: 3 }); // enumerable defaults to false
+Object.defineProperty(o, "a", { value: 1, enumerable: true });
+Object.defineProperty(o, "b", { value: 2, enumerable: false });
+Object.defineProperty(o, "c", { value: 3 }); // enumerable defaults to false
 o.d = 4; // enumerable defaults to true when creating a property by setting it
 
 for (var i in o) {
@@ -191,9 +197,9 @@ for (var i in o) {
 
 Object.keys(o); // ['a', 'd']
 
-o.propertyIsEnumerable('a'); // true
-o.propertyIsEnumerable('b'); // false
-o.propertyIsEnumerable('c'); // false
+o.propertyIsEnumerable("a"); // true
+o.propertyIsEnumerable("b"); // false
+o.propertyIsEnumerable("c"); // false
 ```
 
 #### 可設定 attribute
@@ -202,16 +208,22 @@ The `configurable` attribute controls at the same time whether the property can 
 
 ```js
 var o = {};
-Object.defineProperty(o, 'a', {
-  get: function() { return 1; },
-  configurable: false
+Object.defineProperty(o, "a", {
+  get: function () {
+    return 1;
+  },
+  configurable: false,
 });
 
-Object.defineProperty(o, 'a', { configurable: true }); // throws a TypeError
-Object.defineProperty(o, 'a', { enumerable: true }); // throws a TypeError
-Object.defineProperty(o, 'a', { set: function() {} }); // throws a TypeError (set was undefined previously)
-Object.defineProperty(o, 'a', { get: function() { return 1; } }); // throws a TypeError (even though the new get does exactly the same thing)
-Object.defineProperty(o, 'a', { value: 12 }); // throws a TypeError
+Object.defineProperty(o, "a", { configurable: true }); // throws a TypeError
+Object.defineProperty(o, "a", { enumerable: true }); // throws a TypeError
+Object.defineProperty(o, "a", { set: function () {} }); // throws a TypeError (set was undefined previously)
+Object.defineProperty(o, "a", {
+  get: function () {
+    return 1;
+  },
+}); // throws a TypeError (even though the new get does exactly the same thing)
+Object.defineProperty(o, "a", { value: 12 }); // throws a TypeError
 
 console.log(o.a); // logs 1
 delete o.a; // Nothing happens
@@ -229,22 +241,21 @@ var o = {};
 
 o.a = 1;
 // is equivalent to:
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
   writable: true,
   configurable: true,
-  enumerable: true
+  enumerable: true,
 });
 
-
 // On the other hand,
-Object.defineProperty(o, 'a', { value: 1 });
+Object.defineProperty(o, "a", { value: 1 });
 // is equivalent to:
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
   writable: false,
   configurable: false,
-  enumerable: false
+  enumerable: false,
 });
 ```
 
@@ -257,18 +268,20 @@ function Archiver() {
   var temperature = null;
   var archive = [];
 
-  Object.defineProperty(this, 'temperature', {
-    get: function() {
-      console.log('get!');
+  Object.defineProperty(this, "temperature", {
+    get: function () {
+      console.log("get!");
       return temperature;
     },
-    set: function(value) {
+    set: function (value) {
       temperature = value;
       archive.push({ val: temperature });
-    }
+    },
   });
 
-  this.getArchive = function() { return archive; };
+  this.getArchive = function () {
+    return archive;
+  };
 }
 
 var arc = new Archiver();
@@ -282,22 +295,20 @@ or
 
 ```js
 var pattern = {
-    get: function () {
-        return 'I always return this string, whatever you have assigned';
-    },
-    set: function () {
-        this.myname = 'this is my name string';
-    }
+  get: function () {
+    return "I always return this string, whatever you have assigned";
+  },
+  set: function () {
+    this.myname = "this is my name string";
+  },
 };
 
-
 function TestDefineSetAndGet() {
-    Object.defineProperty(this, 'myproperty', pattern);
+  Object.defineProperty(this, "myproperty", pattern);
 }
 
-
 var instance = new TestDefineSetAndGet();
-instance.myproperty = 'test';
+instance.myproperty = "test";
 console.log(instance.myproperty); // I always return this string, whatever you have assigned
 
 console.log(instance.myname); // this is my name string

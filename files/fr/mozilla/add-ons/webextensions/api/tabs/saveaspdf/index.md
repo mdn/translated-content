@@ -1,15 +1,6 @@
 ---
 title: tabs.saveAsPDF()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Reference
-  - WebExtensions
-  - saveAsPDF
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF
 ---
 

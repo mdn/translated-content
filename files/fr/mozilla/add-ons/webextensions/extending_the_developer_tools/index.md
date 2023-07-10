@@ -1,15 +1,7 @@
 ---
 title: Extension des outils de développement
 slug: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
-tags:
-  - Add-ons
-  - DevTools
-  - Extensions
-  - Guide
-  - Needs Privileges
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
-original_slug: Mozilla/Add-ons/WebExtensions/extension_des_outils_de_developpement
 ---
 
 {{AddonSidebar}}

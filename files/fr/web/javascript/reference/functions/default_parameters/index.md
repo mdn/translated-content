@@ -156,7 +156,7 @@ sansDéfaut.call({value:"=^_^="});
 
 ### Les fonctions définies dans le corps d'une fonction
 
-À partir de Gecko 33, les fonctions déclarées dans le corps de la fonction ne peuvent pas servir comme valeurs par défaut, cela lèvera une exception {{jsxref("ReferenceError")}} (plus précisément une {{jsxref("TypeError")}} avec SpiderMonkey, voir le {{bug(1022967)}}). Les paramètres par défaut sont exécutés en premier, les déclarations de fonctions présentes dans le corps de la fonction sont évaluées ensuite.
+À partir de Gecko 33, les fonctions déclarées dans le corps de la fonction ne peuvent pas servir comme valeurs par défaut, cela lèvera une exception {{jsxref("ReferenceError")}} (plus précisément une {{jsxref("TypeError")}} avec SpiderMonkey, voir le [bug Firefox 1022967](https://bugzil.la/1022967)). Les paramètres par défaut sont exécutés en premier, les déclarations de fonctions présentes dans le corps de la fonction sont évaluées ensuite.
 
 ```js
 // Ne fonctionnera pas, entraîne une ReferenceError.
@@ -167,7 +167,7 @@ function f(a = go()) {
 
 ### Utilisation de paramètres sans valeur par défaut après les paramètres par défaut
 
-Avant Gecko 26, le code suivant aurait entraîné une exception {{jsxref("SyntaxError")}}. Cela a été corrigé avec le bug {{bug(777060)}}. Les paramètres sont toujours ordonnés de gauche à droite et les valeurs par défaut sont surchargées s'ils viennent avant les autres paramètres :
+Avant Gecko 26, le code suivant aurait entraîné une exception {{jsxref("SyntaxError")}}. Cela a été corrigé avec le [bug Firefox 777060](https://bugzil.la/777060). Les paramètres sont toujours ordonnés de gauche à droite et les valeurs par défaut sont surchargées s'ils viennent avant les autres paramètres :
 
 ```js
 function f(x=1, y) {

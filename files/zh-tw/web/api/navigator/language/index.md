@@ -6,11 +6,11 @@ original_slug: Web/API/NavigatorLanguage/language
 
 {{APIRef("HTML DOM")}}
 
-**`Navigator.language`** 是一個唯讀的屬性，回傳使用者偏好的語言字串，通常是瀏覽器UI的文字
+**`Navigator.language`** 是一個唯讀的屬性，回傳使用者偏好的語言字串，通常是瀏覽器 UI 的文字
 
 ## 語法
 
-```js
+```js-nolint
 const lang = navigator.language
 ```
 

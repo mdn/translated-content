@@ -21,13 +21,13 @@ original_slug: Web/HTML/Elemento/input/hidden
 | **[Value](#value)**             | {{domxref("DOMString")}} representando el valor de un campo oculto que se espetra pasar al servidor. |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | **Events**                      | Ninguno.                                                                                                     |
-| **Supported Common Attributes** | {{htmlattrxref("autocomplete", "input")}}                                                     |
+| **Supported Common Attributes** | [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete)                                                     |
 | **IDL attributes**              | `value`                                                                                                      |
 | **Methods**                     | Ninguno.                                                                                                     |
 
 ## Valor (Value)
 
-El atributo {{htmlattrxref("value", "input")}} del elemento {{HTMLElement("input")}} tiene un {{domxref("DOMString")}} que contiene la información oculta que se desea incluir en el formulario cuando sea remitido al servidor. Específicamente no puede ser editado por el usuario o mostrado a éste por medio la interfaz de usuario, aunque puede ser editado por medio de las herramientas para desarrolladores del navegador.
+El atributo [`value`](/es/docs/Web/HTML/Element/input#value) del elemento {{HTMLElement("input")}} tiene un {{domxref("DOMString")}} que contiene la información oculta que se desea incluir en el formulario cuando sea remitido al servidor. Específicamente no puede ser editado por el usuario o mostrado a éste por medio la interfaz de usuario, aunque puede ser editado por medio de las herramientas para desarrolladores del navegador.
 
 > **Advertencia:** Mientras que el valor no es desplegado al usuario en el contenido de la página, si es visible —y puede ser modificado—usando las herramientas para desarrolladores de cualquier navegador o la funcionalidad "Ver código fuente" (View Source). No confíe en `hidden` inputs como una forma de seguridad.
 

@@ -1,10 +1,6 @@
 ---
 title: browser_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 ---
 

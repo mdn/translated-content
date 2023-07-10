@@ -1,16 +1,6 @@
 ---
 title: tabs.sendRequest()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - sendRequest
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendRequest
 ---
 
