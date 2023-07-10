@@ -19,7 +19,7 @@ endsWith(searchString, endPosition)
 ### 参数
 
 - `searchString`
-  - : 要搜索的作为结尾的字符串，[不能是正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)。所有非正则表达式的值都会被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，因此如果该参数被省略或传入 `undefined`，`endsWith()` 方法会在字符串中搜索`"undefined"`，这通常不是你想要的。
+  - : 要搜索的作为结尾的字符串，[不能是正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)。所有非正则表达式的值都会被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，因此如果该参数被省略或传入 `undefined`，`endsWith()` 方法会在字符串中搜索 `"undefined"`，这通常不是你想要的。
 - `endPosition` {{optional_inline}}
   - : 预期找到 `searchString` 的末尾位置（即 `searchString` 最后一个字符的索引加 1）。默认为 `str.length`。
 
