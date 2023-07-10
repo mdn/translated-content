@@ -21,7 +21,7 @@ endsWith(searchString, endPosition)
 - `searchString`
   - : 要搜索的作为结尾的字符串，[不能是正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)。所有非正则表达式的值都会被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，因此如果该参数被省略或传入 `undefined`，`endsWith()` 方法会在字符串中搜索`"undefined"`，这通常不是你想要的。
 - `endPosition` {{optional_inline}}
-  - : 预期找到 `searchString` 的末尾位置（即 `searchString` 最后一个字符的索引加 1 ）。默认为 `str.length`。
+  - : 预期找到 `searchString` 的末尾位置（即 `searchString` 最后一个字符的索引加 1）。默认为 `str.length`。
 
 ### 返回值
 
@@ -41,11 +41,11 @@ endsWith(searchString, endPosition)
 ### 使用 endsWith()
 
 ```js
-const str = "大家好，我是练习时长两年半的个人练习生。";
+const str = "生存还是毁灭，这是一个问题。";
 
-console.log(str.endsWith("练习生。")); // true
-console.log(str.endsWith("练习")); // false
-console.log(str.endsWith("练习", 8)); // true
+console.log(str.endsWith("问题。")); // true
+console.log(str.endsWith("毁灭")); // false
+console.log(str.endsWith("毁灭", 6)); // true
 ```
 
 ## 规范
