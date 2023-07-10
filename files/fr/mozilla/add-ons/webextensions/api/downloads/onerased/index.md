@@ -1,16 +1,6 @@
 ---
 title: downloads.onErased
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - onErased
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
 ---
 

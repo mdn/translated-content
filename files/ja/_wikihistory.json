@@ -2424,13 +2424,13 @@
     "modified": "2020-07-16T22:25:45.204Z",
     "contributors": ["silverskyvicto", "mfuji09", "yyss"]
   },
+  "Learn/CSS/Howto/Create_fancy_boxes": {
+    "modified": "2020-07-16T22:25:49.512Z",
+    "contributors": ["Wind1808"]
+  },
   "Learn/CSS/Howto/Generated_content": {
     "modified": "2020-07-16T22:25:47.914Z",
     "contributors": ["silverskyvicto", "chrisdavidmills", "teoli", "ethertank"]
-  },
-  "Learn/CSS/Howto/create_fancy_boxes": {
-    "modified": "2020-07-16T22:25:49.512Z",
-    "contributors": ["Wind1808"]
   },
   "Learn/CSS/Styling_text": {
     "modified": "2020-07-16T22:25:58.768Z",
@@ -4598,7 +4598,7 @@
     "modified": "2020-02-22T10:39:55.799Z",
     "contributors": ["Uemmra3", "SphinxKnight", "meganetaaan", "hashedhyphen"]
   },
-  "Mozilla/Add-ons/WebExtensions/What_next_": {
+  "Mozilla/Add-ons/WebExtensions/What_next": {
     "modified": "2019-12-03T06:14:22.142Z",
     "contributors": ["Uemmra3", "dskmori", "karakol2017"]
   },
@@ -4788,10 +4788,6 @@
     "modified": "2019-12-10T08:10:03.527Z",
     "contributors": ["Uemmra3"]
   },
-  "Mozilla/Add-ons/WebExtensions/user_interface/Browser_action": {
-    "modified": "2019-03-18T21:04:04.960Z",
-    "contributors": ["Uemmra3"]
-  },
   "Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items": {
     "modified": "2019-03-18T21:03:32.118Z",
     "contributors": ["Uemmra3"]
@@ -4819,6 +4815,10 @@
   "Mozilla/Add-ons/WebExtensions/user_interface/Sidebars": {
     "modified": "2019-03-18T21:03:44.150Z",
     "contributors": ["naturallucky", "Uemmra3"]
+  },
+  "Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button": {
+    "modified": "2019-03-18T21:04:04.960Z",
+    "contributors": ["Uemmra3"]
   },
   "Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels": {
     "modified": "2019-03-18T21:03:31.901Z",
@@ -5144,6 +5144,10 @@
       "Shoot",
       "Taken"
     ]
+  },
+  "Mozilla/Firefox/Releases/3/WAI_ARIA_Live_Regions_API_Support": {
+    "modified": "2019-03-18T21:27:30.169Z",
+    "contributors": ["silverskyvicto"]
   },
   "Mozilla/Firefox/Releases/30": {
     "modified": "2019-03-23T23:19:52.782Z",
@@ -20475,43 +20479,6 @@
       "Dria"
     ]
   },
-  "Web/Guide/AJAX/Community": {
-    "modified": "2019-03-30T16:54:59.132Z",
-    "contributors": [
-      "silverskyvicto",
-      "bestinterviewquestion",
-      "SphinxKnight",
-      "chrisdavidmills",
-      "Marsf",
-      "Mgjbot",
-      "Okome",
-      "Shimono"
-    ]
-  },
-  "Web/Guide/AJAX/Getting_Started": {
-    "modified": "2020-07-28T22:57:33.766Z",
-    "contributors": [
-      "eltociear",
-      "mfuji09",
-      "Uemmra3",
-      "chrisdavidmills",
-      "ethertank",
-      "maco81",
-      "Mgjbot",
-      "Shoot",
-      "Marsf",
-      "Taken",
-      "Okome",
-      "Taken Bot",
-      "Diskostu",
-      "Yu-raku-an",
-      "Shimono"
-    ]
-  },
-  "Web/Guide/AJAX/WAI_ARIA_Live_Regions_API_Support": {
-    "modified": "2019-03-18T21:27:30.169Z",
-    "contributors": ["silverskyvicto"]
-  },
   "Web/Guide/API": {
     "modified": "2019-11-24T06:54:13.469Z",
     "contributors": ["mfuji09", "silverskyvicto", "Uemmra3", "Sheppy"]
@@ -22422,25 +22389,6 @@
   "Web/HTTP/Headers/X-XSS-Protection": {
     "modified": "2020-10-15T22:05:39.038Z",
     "contributors": ["mfuji09", "pcw", "kurimaru"]
-  },
-  "Web/HTTP/Link_prefetching_FAQ": {
-    "modified": "2020-01-12T13:11:34.893Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "SphinxKnight",
-      "yumetodo",
-      "hamasaki",
-      "jigs12",
-      "ethertank",
-      "Marsf",
-      "Potappo",
-      "Kohei",
-      "Mgjbot",
-      "Taken",
-      "Shimono",
-      "Yama"
-    ]
   },
   "Web/HTTP/Messages": {
     "modified": "2020-07-11T01:20:50.882Z",
@@ -29264,15 +29212,7 @@
       "k-kuwahara"
     ]
   },
-  "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
-    "modified": "2020-08-07T03:55:19.974Z",
-    "contributors": ["mfuji09", "Wind1808", "chrisdavidmills", "silverskyvicto"]
-  },
-  "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs": {
-    "modified": "2020-08-07T04:55:28.888Z",
-    "contributors": ["mfuji09", "Wind1808", "chrisdavidmills"]
-  },
-  "Web/Progressive_web_apps/Tutorials/js13kGames/Introduction": {
+  "Web/Progressive_web_apps/Tutorials/js13kGames": {
     "modified": "2020-02-27T11:44:15.897Z",
     "contributors": [
       "Uemmra3",
@@ -29283,6 +29223,14 @@
       "chrisdavidmills",
       "szk0u"
     ]
+  },
+  "Web/Progressive_web_apps/Tutorials/js13kGames/App_structure": {
+    "modified": "2020-08-07T03:55:19.974Z",
+    "contributors": ["mfuji09", "Wind1808", "chrisdavidmills", "silverskyvicto"]
+  },
+  "Web/Progressive_web_apps/Tutorials/js13kGames/Installable_PWAs": {
+    "modified": "2020-08-07T04:55:28.888Z",
+    "contributors": ["mfuji09", "Wind1808", "chrisdavidmills"]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames/Loading": {
     "modified": "2019-11-04T15:24:56.030Z",

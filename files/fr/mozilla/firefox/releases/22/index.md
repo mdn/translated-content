@@ -2,7 +2,6 @@
 title: Firefox 22 pour les développeurs
 slug: Mozilla/Firefox/Releases/22
 translation_of: Mozilla/Firefox/Releases/22
-original_slug: Mozilla/Firefox/Versions/22
 ---
 
 {{FirefoxSidebar}}

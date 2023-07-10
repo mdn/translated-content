@@ -1,17 +1,6 @@
 ---
 title: downloads.showDefaultFolder()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Refernce
-  - ShwoDefaultFolder
-  - Téléchargement
-  - WebExtensions
-  - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder
 ---
 

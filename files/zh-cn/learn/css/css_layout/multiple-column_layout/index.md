@@ -32,7 +32,7 @@ slug: Learn/CSS/CSS_layout/Multiple-column_Layout
 
 ## 一个简单的例子
 
-我们将学习怎么使用多列布局，通常也简写为 _multicol_。你可以从这里开始 [downloading the multicol starting point file](https://github.com/mdn/learning-area/blob/master/css/css-layout/multicol/0-starting-point.html) 然后在合适的地方加入 CSS。在这一小节的结尾，你可以看到最终代码的效果。
+我们将学习怎么使用多列布局，通常也简写为 _multicol_。你可以从这里开始 [downloading the multicol starting point file](https://github.com/mdn/learning-area/blob/main/css/css-layout/multicol/0-starting-point.html) 然后在合适的地方加入 CSS。在这一小节的结尾，你可以看到最终代码的效果。
 
 ### 三列布局
 

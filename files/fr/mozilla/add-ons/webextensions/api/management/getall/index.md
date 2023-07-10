@@ -1,14 +1,6 @@
 ---
 title: management.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getAll
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - WebExtensions
-  - getAll
-  - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/getAll
 ---
 

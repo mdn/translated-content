@@ -2,8 +2,6 @@
 title: Constructeur WebAssembly.Instance()
 slug: WebAssembly/JavaScript_interface/Instance/Instance
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance
-browser-compat: javascript.builtins.WebAssembly.Instance.Instance
 ---
 
 {{WebAssemblySidebar}}

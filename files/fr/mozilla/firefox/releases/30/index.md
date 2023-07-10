@@ -1,10 +1,6 @@
 ---
 title: Firefox 30 for developers
 slug: Mozilla/Firefox/Releases/30
-tags:
-  - Firefox
-  - Firefox for Developers
-  - TopicStub
 translation_of: Mozilla/Firefox/Releases/30
 ---
 

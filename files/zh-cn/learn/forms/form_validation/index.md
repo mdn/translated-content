@@ -80,7 +80,7 @@ slug: Learn/Forms/Form_validation
 
 在这一节，我们将会看到一些用于{{HTMLElement("input")}}元素校验的 HTML5 的特性。
 
-让我们用一个简单的例子开始 — 一个可以让你从香蕉或樱桃中选择你最喜欢的水果的 input。这个包含了一个简单的文本{{HTMLElement("input")}} 和一个与之匹配的 label，还有一个 submit {{htmlelement("button")}}。你可以在 GitHub [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html)找到源码，在线例子如下：
+让我们用一个简单的例子开始 — 一个可以让你从香蕉或樱桃中选择你最喜欢的水果的 input。这个包含了一个简单的文本{{HTMLElement("input")}} 和一个与之匹配的 label，还有一个 submit {{htmlelement("button")}}。你可以在 GitHub [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html)找到源码，在线例子如下：
 
 ```html hidden
 <form>
@@ -201,7 +201,7 @@ input:valid {
 
 在数字条目中 (i.e. `<input type="number">`), 该 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性同样提供校验约束。如果字段的值小于[`min`](/zh-CN/docs/Web/HTML/Element/input#min) 属性的值或大于 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性的值，该字段则无效。
 
-让我来看看另外一个例子。创建一个 [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html) 文件副本。
+让我来看看另外一个例子。创建一个 [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) 文件副本。
 
 现在删除 `<body>` 元素中的内容，替换成下面的代码：
 

@@ -1,14 +1,7 @@
 ---
 title: Lignes directrices pour JavaScript
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
-tags:
-  - Code
-  - Guide
-  - Directives
-  - JavaScript
-  - MDN Meta
 translation_of: MDN/Guidelines/Code_guidelines/JavaScript
-original_slug: MDN/Guidelines/Code_guidelines/JavaScript
 ---
 
 {{MDNSidebar}}

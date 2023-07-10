@@ -1,16 +1,6 @@
 ---
 title: events.Rule
 slug: Mozilla/Add-ons/WebExtensions/API/events/Rule
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Rule
-  - Type
-  - WebExtensions
-  - events
 translation_of: Mozilla/Add-ons/WebExtensions/API/events/Rule
 ---
 

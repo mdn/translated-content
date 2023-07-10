@@ -78,7 +78,6 @@ window.addEventListener('load', drawCanvas);
 - {{domxref("HTMLCanvasElement")}}
 - {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasGradient")}}
-- {{domxref("CanvasImageSource")}}
 - {{domxref("CanvasPattern")}}
 - {{domxref("ImageBitmap")}}
 - {{domxref("ImageData")}}

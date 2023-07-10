@@ -1,15 +1,6 @@
 ---
 title: update
 slug: Mozilla/Add-ons/WebExtensions/API/theme/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Refernce
-  - Theme
-  - Update
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/update
 ---
 

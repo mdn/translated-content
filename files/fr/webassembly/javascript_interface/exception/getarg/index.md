@@ -2,8 +2,6 @@
 title: WebAssembly.Exception.prototype.getArg()
 slug: WebAssembly/JavaScript_interface/Exception/getArg
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/getArg
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/getArg
-browser-compat: javascript.builtins.WebAssembly.Exception.getArg
 ---
 
 {{WebAssemblySidebar}}

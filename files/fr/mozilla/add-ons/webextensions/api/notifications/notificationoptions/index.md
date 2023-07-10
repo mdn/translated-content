@@ -1,15 +1,6 @@
 ---
 title: notifications.NotificationOptions
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
-tags:
-  - AP
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - NotificationOptions
-  - Refere
-  - Type
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
 ---
 

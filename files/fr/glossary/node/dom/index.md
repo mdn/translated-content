@@ -1,9 +1,6 @@
 ---
 title: Nœud (DOM)
 slug: Glossary/Node/DOM
-tags:
-  - Glossaire
-  - Programmation
 translation_of: Glossary/Node/DOM
 ---
 

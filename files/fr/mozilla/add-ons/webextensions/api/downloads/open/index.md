@@ -1,16 +1,6 @@
 ---
 title: downloads.open()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/open
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - open
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/open
 ---
 

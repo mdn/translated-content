@@ -2,18 +2,7 @@
 title: devtools.panels.ExtensionSidebarPane.onHidden
 slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden
-tags:
-  - API
-  - Add-ons
-  - ExtensionSidebarPane
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - onHidden
 translation_of: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onHidden
-original_slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onHidden
 ---
 

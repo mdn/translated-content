@@ -1,16 +1,6 @@
 ---
 title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - runtime
-  - sendMessage
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
 

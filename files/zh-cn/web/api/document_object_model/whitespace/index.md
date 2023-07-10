@@ -124,7 +124,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 4. 之后，任何紧跟在另一个空格之后的空格（甚至跨越两个独立的行内元素）都会被忽略，所以我们会得到：
 
    ```html-nolint
-   <h1>Hello◦<span>World!</span></h1>
+   <h1>◦Hello◦<span>World!</span></h1>
    ```
 
 5. 最后，元素开头和结尾的空格序列被删除，所以我们最终得到了：
