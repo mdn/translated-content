@@ -9,7 +9,7 @@ slug: Web/HTML/Element/hr
 
 {{EmbedInteractiveExample("pages/tabbed/hr.html", "tabbed-shorter")}}
 
-在 HTML 的早期版本中，它是一个水平线。现在它仍能在可视化浏览器中表现为水平线，但目前被定义为语义上的，而不是表现层面上。所以如果想画一条水平线，请使用适当的 CSS 样式来修饰。
+在 HTML 的早期版本中，它是一个水平线。现在它仍能在可视化浏览器中表现为水平线，但它目前被定义为是语义上而非表现层面上的术语。所以如果想画一条水平线，请使用适当的 CSS 样式来实现。
 
 ## 属性
 
