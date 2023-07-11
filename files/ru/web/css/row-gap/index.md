@@ -1,8 +1,8 @@
 ---
 title: row-gap
 slug: Web/CSS/row-gap
-translation_of: Web/CSS/row-gap
 page-type: css-property
+translation_of: Web/CSS/row-gap
 browser-compat: css.properties.row-gap
 ---
 
@@ -85,7 +85,7 @@ row-gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample('Флексбокс-раскладка', "auto", "120px")}}
+{{EmbedLiveSample('Flex_layout', "auto", "120px")}}
 
 ### Грид-раскладка
 
@@ -118,7 +118,7 @@ row-gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample('Грид-раскладка', 'auto', 120)}}
+{{EmbedLiveSample('Grid_layout', 'auto', 120)}}
 
 ## Спецификации
 
@@ -131,4 +131,4 @@ row-gap: unset;
 ## Смотрите также
 
 - Похожие CSS-свойства: {{CSSxRef("column-gap")}}, {{CSSxRef("gap")}}
-- Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)_
+- Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_

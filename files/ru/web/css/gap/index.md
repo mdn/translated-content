@@ -1,14 +1,14 @@
 ---
 title: gap (grid-gap)
 slug: Web/CSS/gap
-translation_of: Web/CSS/gap
 page-type: css-property
+translation_of: Web/CSS/gap
 browser-compat: css.properties.gap
 ---
 
 {{CSSRef}}
 
-Свойство **`gap`** [CSS](/ru/docs/Web/CSS) задаёт отступы ({{glossary("gutters")}}) между колонками и рядами. Является [сокращением](/ru/docs/Web/CSS/Shorthand_properties) для свойств {{CSSxRef("row-gap")}} и {{CSSxRef("column-gap")}}.
+Свойство **`gap`** [CSS](/ru/docs/Web/CSS) задаёт {{glossary("gutters","отступы")}} между колонками и рядами. Является [сокращением](/ru/docs/Web/CSS/Shorthand_properties) для свойств {{CSSxRef("row-gap")}} и {{CSSxRef("column-gap")}}.
 
 {{EmbedInteractiveExample("pages/css/gap.html")}}
 
@@ -106,7 +106,7 @@ gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample("Флекс-раскладка", "auto", 250)}}
+{{EmbedLiveSample("Flex_layout", "auto", 250)}}
 
 ### Грид-раскладка
 
@@ -144,7 +144,7 @@ gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample("Грид-раскладка", "auto", "120px")}}
+{{EmbedLiveSample("Grid_layout", "auto", "250")}}
 
 ### Многоколоночная раскладка
 
@@ -168,7 +168,7 @@ gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample("Многоколоночная_раскладка", "auto", "120px")}}
+{{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
 
 ## Спецификации
 
@@ -181,4 +181,4 @@ gap: unset;
 ## Смотрите также
 
 - Похожие CSS-свойства: {{CSSxRef("row-gap")}}, {{CSSxRef("column-gap")}}
-- Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#Gutters)_
+- Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_

@@ -1,18 +1,18 @@
 ---
 title: column-gap
 slug: Web/CSS/column-gap
-translation_of: Web/CSS/column-gap
 page-type: css-property
+translation_of: Web/CSS/column-gap
 browser-compat: css.properties.column-gap
 ---
 
 {{CSSRef}}
 
-Свойство [CSS](/ru/docs/Web/CSS) **`column-gap`** задаёт отступ ({{glossary("Gutters","gutter")}}) между колонками.
+Свойство [CSS](/ru/docs/Web/CSS) **`column-gap`** задаёт {{glossary("gutters","отступ")}} между колонками.
 
 {{EmbedInteractiveExample("pages/css/column-gap.html")}}
 
-Изначально свойство появилось в [многоколоночной раскладке](/ru/docs/Web/CSS/CSS_Columns). Позже оно перекочевало в другие методы раскладки, и теперь `column-gap` определено в спецификации [Box Alignment](/ru/docs/Web/CSS/CSS_Box_Alignment). А значит может использоваться в многоколоночной, флексбокс- и грид-раскладках.
+Изначально свойство появилось в [многоколоночной раскладке](/ru/docs/Web/CSS/CSS_multicol_layout). Позже оно перекочевало в другие методы раскладки, и теперь `column-gap` определено в спецификации [Box Alignment](/ru/docs/Web/CSS/CSS_box_alignment). А значит может использоваться в многоколоночной, флексбокс- и грид-раскладках.
 
 Обратите внимание, что `grid-column-gap` является псевдонимом для этого свойства.
 
@@ -88,7 +88,7 @@ column-gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample("Флексбокс-раскладка", "auto", "120px")}}
+{{EmbedLiveSample("Flex_layout", "auto", "120px")}}
 
 ### Грид-раскладка
 
@@ -121,7 +121,7 @@ column-gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample("Грид-раскладка", "auto", "120px")}}
+{{EmbedLiveSample("Grid_layout", "auto", "120px")}}
 
 ### Многоколоночная раскладка
 
@@ -145,7 +145,7 @@ column-gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample("Многоколоночная_раскладка", "auto", "120px")}}
+{{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
 
 ## Спецификации
 
@@ -158,5 +158,5 @@ column-gap: unset;
 ## Смотрите также
 
 - Похожие CSS-свойства: {{CSSxRef("row-gap")}}, {{CSSxRef("gap")}}
-- Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#gutters)_
-- Руководство по многоколоночной раскладке: _[Стилизация колонок](/ru/docs/Web/CSS/CSS_Columns/Styling_Columns)_
+- Руководство по грид-раскладке: _[Основы грид-раскладки - Отступы](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#gutters)_
+- Руководство по многоколоночной раскладке: _[Стилизация колонок](/en-US/docs/Web/CSS/CSS_multicol_layout/Styling_columns)_
