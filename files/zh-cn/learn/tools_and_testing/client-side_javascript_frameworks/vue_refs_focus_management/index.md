@@ -5,7 +5,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_m
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-使用 Vue 所做的事情快要结束了。最后一个需要讲述的内容是焦点管理，换句话说，也是如何提升我们应用的键盘无障碍性。我们将看看使用 **Vue refs** 来处理这个问题——这是一个进阶功能，允许你直接访问虚拟 DOM 之下的底层 DOM 节点，或者从一个组件直接访问一个子组件的内部 DOM 结构。
+使用 Vue 所做的事情快要结束了。最后一个需要讲述的内容是焦点管理，换句话说，也是如何提升我们应用的键盘无障碍性。我们将看看如何使用 **Vue 模板引用** 来处理这个问题——这是一个进阶功能，允许你直接访问虚拟 DOM 之下的底层 DOM 节点，或者从一个组件直接访问一个子组件的内部 DOM 结构。
 
 <table>
   <tbody>
@@ -60,7 +60,7 @@ Vue 和其他一些框架一样，使用一个虚拟 DOM（VDOM）来管理元�
 
 相反，如果你需要访问底层 DOM 节点（比如设置焦点时），你可以使用 [Vue 模板引用](https://cn.vuejs.org/guide/essentials/template-refs.html)。对于自定义的 Vue 组件，你也可以使用 refs 来直接访问子组件的内部结构，然而这样做应该是谨慎的，因为这会使代码更难推理和理解。
 
-要在一个组件中使用 ref，你需要在你想访问的元素上添加一个 `ref` 属性，并为该属性的值添加一个字符串标识符。值得注意的是，在一个组件中，引用必须是唯一的。在同一时间呈现的两个元素不应该有相同的引用。
+要在一个组件中使用模板引用，你需要在你想访问的元素上添加一个 `ref` 属性，并为该属性的值添加一个字符串标识符。值得注意的是，在一个组件中，引用必须是唯一的。在同一时间呈现的两个元素不应该有相同的引用。
 
 ### 向我们的应用添加模板引用
 
@@ -92,7 +92,7 @@ toggleToItemEditForm() {
 
 我们想在用户保存或取消他们的编辑时将焦点设置在“Edit”按钮上。要做到这一点，我们需要在 `ToDoItem` 组件的 `itemEdited()` 和 `editCancelled()` 方法中处理焦点。
 
-为了方便起见，创建一个不需要参数的新方法，叫做 `focusOnEditButton()`。在这个方法中，把你的 `ref` 分配给一个变量，然后在这个 ref 上调用 `focus()` 方法。
+为了方便起见，创建一个不需要参数的新方法，叫做 `focusOnEditButton()`。在这个方法中，把你的 `ref` 分配给一个变量，然后在这个模板引用上调用 `focus()` 方法。
 
 ```js
 focusOnEditButton() {
@@ -119,7 +119,7 @@ editCancelled() {
 
 记住，当我们把 `isEditing` 改为 `true` 时，我们不再渲染“Edit”按钮的组件部分。这意味着没有元素可以绑定引用，所以它变成了 `undefined`。
 
-你现在可能在想：“我们在访问 `ref` 之前不是设置了 `isEditing=false` 吗，所以 `v-if` 现在不是应该显示这个按钮吗？”这就是虚拟 DOM 起作用的地方。因为 Vue 试图优化和批处理变化，当我们把 `isEditing` 设置为 `false`时，它不会立即更新 DOM。所以当我们调用 `focusOnEditButton()` 时，“Edit”按钮还没有被渲染。
+你现在可能在想：“我们在访问 `ref` 之前不是设置了 `isEditing=false` 吗，现在 `v-if` 不是应该显示这个按钮吗？”这就是虚拟 DOM 起作用的地方。因为 Vue 试图优化和批处理变化，当我们把 `isEditing` 设置为 `false` 时，它不会立即更新 DOM。所以当我们调用 `focusOnEditButton()` 时，“Edit”按钮还没有被渲染。
 
 相反，我们需要等到 Vue 经历了下一个 DOM 更新周期之后。为了做到这一点，Vue 组件有一个特殊的方法，叫做 `$nextTick()`。这个方法接受一个回调函数，然后在 DOM 更新后执行。
 
@@ -170,7 +170,7 @@ Vue 让你在这个生命周期的不同阶段使用**生命周期方法**运行
   v-model.lazy.trim="newName" />
 ```
 
-接下来，在你的组件对象中添加一个 `mounted()` 属性——**注意，这不应该放在 `methods` 属性里面，而应该与 `props`、`data()` 和 `methods` 处于同一个层次**。生命周期方法是独立的特殊方法，不应与用户定义方法放在一起。这些方法不接受参数。注意，你不能在这里使用箭头函数，因为我们需要访问 `this` 来访问我们的 `labelInput` ref。
+接下来，在你的组件对象中添加一个 `mounted()` 属性——**注意，这不应该放在 `methods` 属性里面，而应该与 `props`、`data()` 和 `methods` 处于同一个层次**。生命周期方法是独立的特殊方法，不应与用户定义方法放在一起。这些方法不接受参数。注意，你不能在这里使用箭头函数，因为我们需要访问 `this` 来访问我们的 `labelInput` 模板引用。
 
 ```js
 mounted() {
