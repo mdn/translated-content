@@ -60,7 +60,7 @@ new Notification(title, options)
 
 ## 示例
 
-在我们的 [`Emogotchi 演示`](https://chrisdavidmills.github.io/emogotchi/)（[查看源代码](https://github.com/chrisdavidmills/emogotchi)）中，当我们想要触发通知时，我们运行 `spawnNotification() `。该函数传递参数来指定我们想要的正文、图标和标题，然后它创建必要的 `options` 对象并使用 `Notification()` 构造函数触发通知。
+在我们的 [`Emogotchi 演示`](https://chrisdavidmills.github.io/emogotchi/)（[查看源代码](https://github.com/chrisdavidmills/emogotchi)）中，当我们想要触发通知时，我们运行 `spawnNotification()`。该函数传递参数来指定我们想要的正文、图标和标题，然后它创建必要的 `options` 对象并使用 `Notification()` 构造函数触发通知。
 
 ```js
 function spawnNotification(body, icon, title) {
