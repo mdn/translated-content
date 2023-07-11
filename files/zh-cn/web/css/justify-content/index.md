@@ -5,7 +5,15 @@ slug: Web/CSS/justify-content
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/CSS) **`justify-content`** 属性定义了浏览器之间，如何分配顺着弹性容器主轴 (或者网格行轴) 的元素之间及其周围的空间。
+[CSS](/zh-CN/docs/CSS) **`justify-content`** 属性定义浏览器如何沿着弹性容器的{{Glossary("主轴")}}和网格容器的内联轴分配内容项之间和周围的空间。
+
+下面的互动示例演示了使用网格布局的一些值。
+
+{{EmbedInteractiveExample("pages/css/justify-content.html")}}
+
+当 length 属性和自动外边距属性（margin: auto）生效之后，对齐已经完成了。也就是说，如果存在至少一个弹性元素，而且这个元素的 {{cssxref("flex-grow")}} 属性不等于 0，那么对齐方式不会生效，就像没有多余空间的情况。
+
+## Syntax
 
 ```css
 /* Positional alignment */
@@ -42,12 +50,6 @@ justify-content: initial;
 justify-content: unset;
 ```
 
-当 length 属性和自动外边距属性（margin: auto）生效之后，对齐已经完成了。也就是说，如果存在至少一个弹性元素，而且这个元素的 {{cssxref("flex-grow")}} 属性不等于 0，那么对齐方式不会生效，就像没有多余空间的情况。
-
-{{cssinfo}}
-
-可以参考 [使用 CSS 弹性框](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes)获取更多信息。
-
 ## 语法
 
 ### 值
@@ -81,7 +83,13 @@ justify-content: unset;
 - `unsafe`
   - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
 
-### 形式语法
+## 形式定义
+
+{{cssinfo}}
+
+可以参考 [使用 CSS 弹性框](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Using_CSS_flexible_boxes)获取更多信息。
+
+## 形式语法
 
 {{csssyntax}}
 
