@@ -23,8 +23,14 @@ slug: Web/HTML/Element/video
     > **备注：** 自动播放音频（或有声视频）可能会破坏用户体验，所以应该尽可能避免。如果你一定要提供自动播放功能，你应该加入开关（让用户主动打开自动播放）。然而，如果需要创建一些媒体元素，其播放源由用户在稍后设置，自动播放就会很有用。想了解如何正确使用自动播放，可参见我们的 [自动播放指南](/zh-CN/docs/Web/Media/Autoplay_guide)。如果使用 `autoplay="false"` 来关闭视频的自动播放功能，会不起作用；只要 `<video>` 标签中有 autoplay 属性，视频就会自动播放。要移除自动播放，需要完全删除该属性。在某些浏览器（例如 Chrome 70.0）中，如果没有设置 `muted` 属性，autoplay 将不会生效。
 - `controls`
   - : 加上这个属性，浏览器会在视频底部提供一个控制面板，允许用户控制视频的播放，包括音量，跨帧，暂停/恢复播放。
-- `controlslist` {{experimental_inline}}
-  - : 当浏览器显示视频底部的播放控制面板（例如，指定了 `controls` 属性）时，[`controlslist`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist) 属性会帮助浏览器选择在控制面板上显示哪些控件。允许接受的值有 `nodownload`, `nofullscreen` 和 `noremoteplayback`。如果要禁用画中画模式（和控件），请使用 [disablePictureInPicture](#attr-disablepictureinpicture) 属性。
+- `controlslist` {{experimental_inline}}{{non-standard_inline}}
+
+  - : 当浏览器显示视频底部的播放控制面板（例如，指定了 `controls` 属性）时，[`controlslist`](https://wicg.github.io/controls-list/explainer.html) 属性会帮助浏览器选择在控制面板上显示哪些控件。
+
+    允许的值有 `nodownload`、`nofullscreen` 和 `noremoteplayback`。
+
+    如果要禁用画中画模式（和控件），请使用 [disablePictureInPicture](#disablepictureinpicture) 属性。
+
 - `crossorigin`
   - : 该枚举属性指明是否使用 CORS（跨域资源共享）来获取相关视频。[允许 CORS 的资源](/zh-CN/docs/Web/HTML/CORS_enabled_image) 可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被*污染*。允许的值如下：
     - anonymous
