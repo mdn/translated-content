@@ -56,15 +56,15 @@ slug: Web/API/File_System_Access_API
 ## 接口
 
 - {{domxref("FileSystemHandle")}}
-  - **`FileSystemHandle`** 接口的对象代表一个条目。多个句柄可以指代同一个条目。大多数情况你都不会直接用到 `FileSystemHandle`，而是会用到它的两个子接口 {{domxref('FileSystemFileHandle')}} 和 {{domxref('FileSystemDirectoryHandle')}}。
+  - : **`FileSystemHandle`** 接口的对象代表一个条目。多个句柄可以指代同一个条目。大多数情况你都不会直接用到 `FileSystemHandle`，而是会用到它的两个子接口 {{domxref('FileSystemFileHandle')}} 和 {{domxref('FileSystemDirectoryHandle')}}。
 - {{domxref("FileSystemFileHandle")}}
-  - 提供一个文件系统条目的句柄。
+  - : 提供一个文件系统条目的句柄。
 - {{domxref("FileSystemDirectoryHandle")}}
-  - 提供一个文件系统目录的句柄。
+  - : 提供一个文件系统目录的句柄。
 - {{domxref("FileSystemSyncAccessHandle")}}
-  - 提供一个文件系统条目的同步句柄，用于在磁盘上原地操作单个文件。其在文件读写上的同步特性可在异步操作开销较大的情景中使关键方法拥有更优秀的性能，例如 [WebAssembly](/zh-CN/docs/WebAssembly)。此类只能在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中操作[源私有文件系统](#源私有文件系统)上的文件时访问。
+  - : 提供一个文件系统条目的同步句柄，用于在磁盘上原地操作单个文件。其在文件读写上的同步特性可在异步操作开销较大的情景中使关键方法拥有更优秀的性能，例如 [WebAssembly](/zh-CN/docs/WebAssembly)。此类只能在 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中操作[源私有文件系统](#源私有文件系统)上的文件时访问。
 - {{domxref("FileSystemWritableFileStream")}}
-  - 属于 {{domxref('WritableStream')}} 对象，附加了便于操作磁盘上单个文件的方法。
+  - : 属于 {{domxref('WritableStream')}} 对象，附加了便于操作磁盘上单个文件的方法。
 
 ## 示例
 
