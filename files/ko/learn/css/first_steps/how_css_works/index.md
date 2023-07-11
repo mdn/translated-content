@@ -67,10 +67,10 @@ DOM 은 CSS 와 문서의 내용이 만나는 곳이기 때문에 DOM 을 이해
 
 ```html
 <p>
-  Let's use:
-  <span>Cascading</span>
-  <span>Style</span>
-  <span>Sheets</span>
+  사용해 봅시다:
+  <span>계단식</span>
+  <span>스타일</span>
+  <span>시트들</span>
 </p>
 ```
 
@@ -78,13 +78,13 @@ DOM 에서, `<p>` 요소에 해당하는 노드는 부모입니다. 자식은 �
 
 ```
 P
-├─ "Let's use:"
+├─ "사용해 봅시다:"
 ├─ SPAN
-|  └─ "Cascading"
+|  └─ "계단식"
 ├─ SPAN
-|  └─ "Style"
+|  └─ "스타일"
 └─ SPAN
-   └─ "Sheets"
+   └─ "시트들"
 ```
 
 브라우저가 이전 HTML 을 해석하는 방법입니다 — 위의 DOM 트리를 렌더링 한 다음 브라우저에서 다음과 같이 출력합니다:
@@ -101,10 +101,10 @@ CSS 를 문서에 추가하여 스타일을 지정했다고 가정해 봅시다.
 
 ```html
 <p>
-  Let's use:
-  <span>Cascading</span>
-  <span>Style</span>
-  <span>Sheets</span>
+  사용해 봅시다:
+  <span>계단식</span>
+  <span>스타일</span>
+  <span>시트들</span>
 </p>
 ```
 
