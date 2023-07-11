@@ -5,7 +5,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_m
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-使用 Vue 所做的事情快要结束了。最后一个需要讲述的内容是焦点管理，换句话说，也是如何提升我们应用的键盘无障碍性。我们将看看如何使用 **Vue 模板引用** 来处理这个问题——这是一个进阶功能，允许你直接访问虚拟 DOM 之下的底层 DOM 节点，或者从一个组件直接访问一个子组件的内部 DOM 结构。
+使用 Vue 所做的事情快要结束了。最后一个需要讲述的内容是焦点管理，换句话说，也是如何提升我们应用的键盘无障碍性。我们将看看如何使用 **Vue 模板引用**来处理这个问题——这是一个进阶功能，允许你直接访问虚拟 DOM 之下的底层 DOM 节点，或者从一个组件直接访问一个子组件的内部 DOM 结构。
 
 <table>
   <tbody>
