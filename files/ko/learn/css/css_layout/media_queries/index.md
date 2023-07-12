@@ -57,7 +57,6 @@ original_slug: Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서
 - `all`
 - `print`
 - `screen`
-- `speech`
 
 다음 미디어 쿼리는 페이지가 인쇄된 경우에만 본문을 12pt로 설정합니다. 페이지가 브라우저에 로드될 때에는 적용되지 않습니다.
 
