@@ -54,7 +54,7 @@ slug: Web/HTML/Element/html
 - `manifest` {{deprecated_inline}} {{Non-standard_Inline}}
   - : 指定一个资源清单的 {{glossary("URI")}}，指示应在本地缓存的资源。
 - `version` {{deprecated_inline}}
-  - : 指定控制当前文档的 HTML 版本{{glossary("Doctype", "文档类型定义")}} 。这个属性已不再需要，因为这在文档类型声明中是多余的版本信息。
+  - : 指定控制当前文档的 HTML 版本{{glossary("Doctype", "文档类型定义")}}。这个属性已不再需要，因为这在文档类型声明中是多余的版本信息。
 - `xmlns`
   - : 指派文档的 {{glossary("XML")}} {{glossary("Namespace", "命名空间")}}。默认的值是`"http://www.w3.org/1999/xhtml"`。这在由 XML {{glossary("parser", "解析器")}}解析的文档中是必需的，而在 text/html 文档中是可选的。
 
@@ -74,9 +74,9 @@ slug: Web/HTML/Element/html
 
 ## 无障碍考虑
 
-虽然 HTML 并不要求作者指定 `<html>` 元素的开始和结束标记，但作者必须这样做，因为这将允许他们为网页指定 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang)。根据{{RFC(5646, "识别语言的标签（也称为 BCP 47）")}}，在 `<html>` 元素上提供一个带有有效语言标记的 `lang` 属性，将有助于屏幕阅读技术确定要发布的适当语言。标识语言标签应描述页面大部分内容所使用的语言。如果没有它，屏幕阅读器通常会默认使用操作系统设置的语言，这可能会导致发音错误。
+虽然 HTML 并不要求作者指定 `<html>` 元素的开始和结束标记，但作者必须这样做，因为这将允许他们为网页指定 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang)。根据 {{RFC(5646, "识别语言的标签（也称为 BCP 47）")}}，在 `<html>` 元素上提供一个带有有效语言标记的 `lang` 属性，将有助于屏幕阅读技术确定要发布的适当语言。标识语言标签应描述页面大部分内容所使用的语言。如果没有它，屏幕阅读器通常会默认使用操作系统设置的语言，这可能会导致发音错误。
 
-在 `<html>` 元素中包含一个有效的 `lang` 声明，还可以确保页面的 {{HTMLElement("head")}} 中包含的重要元数据，如页面的 {{HTMLElement("title")}}，也会被正确地公布。
+在 `<html>` 元素中包含一个有效的 `lang` 声明，还可以确保页面的 {{HTMLElement("head")}} 中包含的重要元数据，如页面的 {{HTMLElement("title")}}，也会被正确地声明。
 
 - [MDN | 理解 WCAG，指引 3.1 的解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.1_%e2%80%94_readable_make_text_content_readable_and_understandable)
 - [理解成功准则 3.1.1 | W3C 理解 WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/language-of-page.html)
