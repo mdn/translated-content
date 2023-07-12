@@ -1,8 +1,6 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
-page-type: css-property
-browser-compat: css.properties.justify-content
 ---
 
 {{CSSRef}}
