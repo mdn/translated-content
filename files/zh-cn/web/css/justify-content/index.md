@@ -50,8 +50,6 @@ justify-content: initial;
 justify-content: unset;
 ```
 
-## 语法
-
 ### 值
 
 - `start`
