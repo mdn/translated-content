@@ -81,9 +81,9 @@ justify-content: unset;
 - `stretch`
   - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.
 - `safe`
-  - : 与对齐关键字一起使用，如果选定的关键字会导致元素溢出容器造成数据丢失，那么将会使用 `start` 代替它。
+  - : 如果项目溢出对齐容器，则项目将按照对齐模式为 `start` 进行对齐。所期望的对齐将不会被实现。
 - `unsafe`
-  - : Regardless of the relative sizes of the item and alignment container, the given alignment value is honored.
+  - : 即使项目溢出对齐容器，也会实现所需的对齐方式。与 `safe` 不同，`safe` 会忽略所需的对齐方式以防止溢出。
 
 ## 形式定义
 
