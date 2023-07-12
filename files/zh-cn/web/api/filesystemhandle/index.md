@@ -5,7 +5,7 @@ slug: Web/API/FileSystemHandle
 
 {{securecontext_header}}{{APIRef("File System Access API")}}
 
-{{domxref('文件系统访问 API')}} 的 **`FileSystemHandle`** 接口是代表一个文件或一个目录的对象。多个句柄可以代表同一个条目。大多数情况你不会直接用到 `FileSystemHandle`，而是会用到它的两个子接口 {{domxref('FileSystemFileHandle')}} 和 {{domxref('FileSystemDirectoryHandle')}}。
+{{domxref('File System Access API')}} 的 **`FileSystemHandle`** 接口是代表一个文件或一个目录的对象。多个句柄可以代表同一个条目。大多数情况你不会直接用到 `FileSystemHandle`，而是会用到它的两个子接口 {{domxref('FileSystemFileHandle')}} 和 {{domxref('FileSystemDirectoryHandle')}}。
 
 ## 基于 FileSystemHandle 的接口
 
