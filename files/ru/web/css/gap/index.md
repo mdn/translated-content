@@ -70,7 +70,7 @@ gap: unset;
 
 ## Примеры
 
-### Флекс-раскладка
+### Флексбокс-раскладка
 
 #### HTML
 
@@ -106,7 +106,7 @@ gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample("Flex_layout", "auto", 250)}}
+{{EmbedLiveSample("Флексбокс-раскладка", "auto", 250)}}
 
 ### Грид-раскладка
 
@@ -144,7 +144,7 @@ gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample("Grid_layout", "auto", "250")}}
+{{EmbedLiveSample("Грид-раскладка", "auto", 250)}}
 
 ### Многоколоночная раскладка
 
@@ -168,7 +168,7 @@ gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
+{{EmbedLiveSample("Многоколоночная_раскладка", "auto", "120px")}}
 
 ## Спецификации
 

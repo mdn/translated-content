@@ -85,7 +85,7 @@ row-gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample('Flex_layout', "auto", "120px")}}
+{{EmbedLiveSample('Флексбокс-раскладка', "auto", "120px")}}
 
 ### Грид-раскладка
 
@@ -118,7 +118,7 @@ row-gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample('Grid_layout', 'auto', 120)}}
+{{EmbedLiveSample('Грид-раскладка', 'auto', 120)}}
 
 ## Спецификации
 
