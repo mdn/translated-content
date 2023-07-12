@@ -68,10 +68,6 @@ justify-content: unset;
   - : 伸缩元素一个挨一个在对齐容器得左边缘，如果属性的轴与内联轴不平行，则`left`的行为类似于`start`。
 - `right`
   - : 元素以容器右边缘为基准，一个挨着一个对齐，如果属性轴与内联轴不平行，则`right`的行为类似于`end`。
-- `baseline first baseline`
-  `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
-    The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `space-between`
   - : 在每行上均匀分配弹性元素。相邻元素间距离相同。每行第一个元素与行首对齐，每行最后一个元素与行尾对齐。
 - `space-around`
@@ -79,7 +75,11 @@ justify-content: unset;
 - `space-evenly`
   - : flex 项都沿着主轴均匀分布在指定的对齐容器中。相邻 flex 项之间的间距，主轴起始位置到第一个 flex 项的间距，主轴结束位置到最后一个 flex 项的间距，都完全一样。
 - `stretch`
-  - : If the combined size of the items is less than the size of the alignment container, any `auto`-sized items have their size increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size exactly fills the alignment container along the main axis.
+
+  - : 如果项目沿主轴的组合尺寸小于对齐容器的尺寸，任何 auto-sized 项目都会等比例地增加其尺寸（而不是按比例增加），同时仍然遵守由 {{cssxref("max-height")}}/{{cssxref("max-width")}}（或相应功能）施加的约束, 以便沿主轴完全填充对齐容器的组合尺寸。
+
+    > **注意:** 虽然在弹性盒子（flexbox）中支持 `stretch` 属性，但当应用于弹性盒子时，由于拉伸是由 {{CSSXref("flex")}} 属性控制的, 所以 `stretch` 的行为与 `start` 相同。
+
 - `safe`
   - : 如果项目溢出对齐容器，则项目将按照对齐模式为 `start` 进行对齐。所期望的对齐将不会被实现。
 - `unsafe`
