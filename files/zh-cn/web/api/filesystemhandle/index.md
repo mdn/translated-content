@@ -75,7 +75,7 @@ async function verifyPermission(fileHandle, withWrite) {
     return true;
   }
 
-  // 给文件请求权限，如果用户授予了权限，返回 true。
+  // 为文件请求权限，如果用户授予了权限，返回 true。
   if ((await fileHandle.requestPermission(opts)) === "granted") {
     return true;
   }
