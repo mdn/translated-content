@@ -152,7 +152,6 @@ The `width` property controls the size of the viewport. It should preferably be 
 
 ## 関連情報
 
-- [@viewport CSS at-rule](/ja/docs/Web/CSS/@viewport)
 - [Visual Viewport API](/ja/docs/Web/API/Visual_Viewport_API)
 - {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
 - [Using the viewport meta tag to control layout on mobile browsers](/ja/docs/Mobile/Viewport_meta_tag)
