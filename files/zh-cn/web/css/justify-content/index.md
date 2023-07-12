@@ -13,7 +13,7 @@ slug: Web/CSS/justify-content
 
 当 length 属性和自动外边距属性生效之后，对齐已经完成了。也就是说，如果[弹性布局](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)中存在至少一个弹性元素，而且这个元素的 {{cssxref("flex-grow")}} 属性不等于 `0`，那么对齐方式不会生效，就像没有多余空间的情况。
 
-## Syntax
+## 语法
 
 ```css
 /* Positional alignment */
