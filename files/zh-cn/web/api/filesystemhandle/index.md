@@ -58,7 +58,7 @@ async function getFile() {
 
 ### 查询与请求权限
 
-以下异步函数会在用户对文件句柄授予了读写权限时返回 `true`，若无权限则请求权限。
+以下异步函数会在用户对文件句柄授予了只读或读写权限时返回 `true`，若无权限则请求权限。
 
 ```js
 // fileHandle 是一个 FileSystemFileHandle
