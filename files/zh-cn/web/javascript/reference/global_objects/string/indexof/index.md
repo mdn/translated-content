@@ -20,7 +20,7 @@ indexOf(searchString, position)
 
 - `searchValue`
 
-- : 要搜索的子字符串。所有传入值都会被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，因此如果该参数被省略或传入 `undefined`，`indexOf()` 方法会在字符串中搜索 `"undefined"`，这通常不是你想要的。
+  - : 要搜索的子字符串。所有传入值都会被[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，因此如果该参数被省略或传入 `undefined`，`indexOf()` 方法会在字符串中搜索 `"undefined"`，这通常不是你想要的。
 
 - `position` {{optional_inline}}
 
