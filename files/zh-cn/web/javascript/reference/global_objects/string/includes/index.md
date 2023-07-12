@@ -30,7 +30,7 @@ includes(searchString, position)
 
 ### 返回值
 
-如果在给定的字符串中找到了被搜索到字符串（包括 `searchString` 为空字符串的情况），则返回 **`true`**，否则返回 **`false`**。
+如果在给定的字符串中找到了要搜索的字符串（包括 `searchString` 为空字符串的情况），则返回 **`true`**，否则返回 **`false`**。
 
 ### 异常
 
