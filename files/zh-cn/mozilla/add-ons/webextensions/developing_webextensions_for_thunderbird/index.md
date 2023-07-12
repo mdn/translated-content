@@ -1,5 +1,5 @@
 ---
-title: 为 Thunderbird 开发 "WebExtensions"
+title: 为 Thunderbird 开发 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 ---
 
