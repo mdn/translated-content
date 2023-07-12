@@ -7,7 +7,7 @@ slug: Web/CSS/justify-content
 
 [CSS](/zh-CN/docs/Web/CSS) **`justify-content`** 属性定义浏览器如何沿着弹性容器的{{Glossary("Main Axis", "主轴")}}和网格容器的内联轴分配内容项之间和周围的空间。
 
-下面的互动示例演示了使用网格布局的一些值。
+下面的交互示例演示了使用网格布局的一些值。
 
 {{EmbedInteractiveExample("pages/css/justify-content.html")}}
 
