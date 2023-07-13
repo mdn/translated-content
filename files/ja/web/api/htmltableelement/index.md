@@ -33,7 +33,7 @@ _親である {{DOMxRef("HTMLElement")}} から継承したプロパティがあ
 - {{DOMxRef("HTMLTableElement.align")}} {{deprecated_inline}}
   - : 文字列で、 [`align`](/ja/docs/Web/HTML/Element/table#align) 属性を反映した列挙型の値が入ります。これは、周囲のコンテキストに対する要素の内容物の配置を示します。利用可能な値は `"left"`, `"right"`, `"center"` です。
 - {{DOMxRef("HTMLTableElement.bgColor")}} {{deprecated_inline}}
-  - : 文字列で、セルの背景色が入ります。これは廃止された [`bgColor`](/ja/docs/Web/HTML/Element/table#bgColor) 属性を反映します。
+  - : 文字列で、セルの背景色が入ります。これは廃止された [`bgColor`](/ja/docs/Web/HTML/Element/table#bgcolor) 属性を反映します。
 - {{DOMxRef("HTMLTableElement.border")}} {{deprecated_inline}}
   - : 文字列で、表の境界の幅がピクセル数で入ります。これは廃止された [`border`](/ja/docs/Web/HTML/Element/table#border) 属性を反映します。
 - {{DOMxRef("HTMLTableElement.cellPadding")}} {{deprecated_inline}}
