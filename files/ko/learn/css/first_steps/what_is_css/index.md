@@ -7,13 +7,13 @@ slug: Learn/CSS/First_steps/What_is_CSS
 
 {{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
-**{{Glossary("CSS")}}** (Cascading Style Sheets) 를 사용하면 멋진 웹 페이지를 만들 수 있지만, 어떻게 작동합니까? 이 기사에서는 간단한 구문 예제를 통해 CSS가 무엇인지 설명하고 CSS에 대한 몇 가지 주요 용어를 다룹니다.
+**{{Glossary("CSS")}}** (Cascading Style Sheets) 를 사용하면 멋진 웹 페이지를 만들 수 있지만, 어떻게 작동할까요? 이 기사에서는 간단한 구문 예제를 통해 CSS가 무엇인지 설명하고 CSS에 대한 몇 가지 주요 용어를 다룹니다.
 
 | 전제조건:|컴퓨터 기본 활용 능력, [기본 소프트웨어 설치](/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software), [파일 작업](/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files) 에 대한 기본 지식 및 HTML 기본 사항 ([HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML) 학습) |
 |--|--
 |**목적:** | CSS가 무엇인지 배우기.
 
-[HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)단원에서는 HTML 이 무엇인지, 그리고 문서를 마크 업하는 데 사용되는 방법에 대해 설명했습니다. 이 문서는 웹 브라우저에서 읽을 수 있습니다. 제목은 일반 텍스트보다 크게 보이며, 단락은 줄바꿈이 되고 공백이 있습니다. 링크는 텍스트의 나머지 부분과 구분하기 위해 색상과 밑줄이 표시됩니다. 현재 보고 있는 것은 브라우저의 기본 스타일입니다. 페이지 작성자가 명시적인 스타일을 지정하지 않은 경우에도 기본적으로 읽을 수 있도록 브라우저가 HTML에 적용하는 매우 기본적인 스타일입니다.
+[HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)단원에서는 HTML이 무엇인지, 그리고 문서를 마크 업하는 데 사용되는 방법에 대해 설명했습니다. 이 문서는 웹 브라우저에서 읽을 수 있습니다. 제목은 일반 텍스트보다 크게 보이며, 단락은 줄바꿈이 되고 공백이 있습니다. 링크는 텍스트의 나머지 부분과 구분하기 위해 색상과 밑줄이 표시됩니다. 현재 보고 있는 것은 브라우저의 기본 스타일입니다. 페이지 작성자가 명시적인 스타일을 지정하지 않은 경우에도 기본적으로 읽을 수 있도록 브라우저가 HTML에 적용하는 매우 기본적인 스타일입니다.
 
 ![The default styles used by a browser](html-example.png)
 
@@ -33,7 +33,7 @@ slug: Learn/CSS/First_steps/What_is_CSS
 > 브라우저는 CSS 에 대해 이야기 할 때, 우리가 생각하는 주요 유형의 user agent 이지만, 유일한 user agent는 아닙니다.
 > HTML 및 CSS 문서를 인쇄할 PDF로 변환하는 것과 같은 사용 가능한 다른 user agent 가 있습니다.
 
-CSS 는 매우 기본적인 텍스트 문서 스타일링에 사용될 수 있습니다 — 예를 들어, 제목 및 링크의 [색상](/ko/docs/Web/CSS/color_value)과 [크기](/ko/docs/Web/CSS/font-size) 변경. 또한, 레이아웃을 만드는 데 사용 할 수 있습니다 — 예를 들어, [단일 텍스트 열을 변환](/ko/docs/Web/CSS/Layout_cookbook/Column_layouts) (기본 콘텐츠 영역과 관련 정보에 대한 사이드 바가 있는 레이아웃으로) 하는 등 레이아웃을 만드는 데 사용 할 수 있습니다. [애니메이션](/ko/docs/Web/CSS/CSS_Animations) 과 같은 효과에도 사용 할 수 있습니다. 구체적인 예는 이 단락의 링크를 살펴 보십시오.
+CSS 는 매우 기본적인 텍스트 문서 스타일링에 사용될 수 있습니다 — 예를 들어, 제목 및 링크의 [색상](/ko/docs/Web/CSS/color_value)과 [크기](/ko/docs/Web/CSS/font-size) 변경. 또한, 레이아웃을 만드는 데 사용 할 수 있습니다 — 예를 들어, [단일 텍스트 열을 변환](/ko/docs/Web/CSS/Layout_cookbook/Column_layouts) (기본 콘텐츠 영역과 관련 정보에 대한 사이드 바가 있는 레이아웃으로) 하는 등 레이아웃을 만드는 데 사용 할 수 있습니다. [애니메이션](/ko/docs/Web/CSS/CSS_Animations) 과 같은 효과에도 사용 할 수 있습니다. 구체적인 예는 이 단락의 링크를 살펴보세요.
 
 ## CSS 구문
 
@@ -85,21 +85,21 @@ CSS 를 사용하여 스타일을 지정할 수 있는 것이 너무 많으므�
 
 ### CSS Specifications
 
-모든 웹 표준 기술 (HTML, CSS, JavaScript 등.) 은 표준 조직 ({{glossary("W3C")}}, {{glossary("WHATWG")}}, {{glossary("ECMA")}} 또는 {{glossary("Khronos")}} 와 같은) 이 게시한 specifications (또는 단순히 "specs") 이라는 거대한 문서로 정의됩니다. 이러한 기술의 작동 방식을 정확하게 정의하십시오.
+모든 웹 표준 기술 (HTML, CSS, JavaScript 등.) 은 표준 조직 ({{glossary("W3C")}}, {{glossary("WHATWG")}}, {{glossary("ECMA")}} 또는 {{glossary("Khronos")}} 와 같은) 이 게시한 specifications (또는 단순히 "specs") 이라는 거대한 문서로 정의됩니다. 그리고 해당 기술들이 어떻게 동작해야 하는지 자세하게 정의합니다.
 
 CSS 는 다르지 않습니다 — W3C 내에서 [CSS Working Group](https://www.w3.org/Style/CSS/) 이라는 곳에서 개발 했습니다. 이 그룹은 브라우저 공급 업체 및 CSS 에 관심이 있는 다른 회사의 대표로 구성됩니다. 독립적인 목소리로 행동하는 ***초청된 전문가*** 로 알려진 다른 사람들도 있습니다. 그들은 회원 조직에 연결되어 있지 않습니다.
 
 새로운 CSS 기능은 CSS Working Group 에 의해 개발되거나 지정됩니다. 때로는 특정 브라우저가 일부 기능에 관심이 있기 때문에 웹 디자이너와 개발자가 기능을 요구하고, 때로는 실무 그룹 자체가 요구 사항을 식별했기 때문입니다. CSS 는 지속적으로 개발 중이며 새로운 기능을 사용할 수 있습니다. 그러나 CSS 의 중요한 점은 모든 사람이 오래된 웹 사이트를 망가뜨릴 수 있는 방식으로 변경하지 않도록 매우 열심히 노력한다는 것입니다. 현재 사용 가능한 제한된 CSS 를 사용하여 2000년에 구축된 웹 사이트는 여전히 브라우저에서 사용 할 수 있습니다!
 
-CSS 를 처음 첩하는 사람들은, CSS specs 이 압도적이라고 생각할 것입니다 — 웹 개발자가 CSS 를 이해하기 위해 읽는 것이 아니라 엔지니어가 user agents 의 기능에 대한 지원을 구현하는 데 사용하기 위한 것입니다. 많은 숙련된 개발자가 MDN 설명서나 기타 자습서를 참조하는 것이 좋습니다. 그러나 사용중인 CSS, 브라우저 지원 (아래 참조) 및 specs 간의 관계를 이해하고 존재한다는 것을 아는 것이 좋습니다.
+CSS 를 처음 접하는 사람들은, CSS specs 이 압도적이라고 생각할 것입니다 — 웹 개발자가 CSS 를 이해하기 위해 읽는 것이 아니라 엔지니어가 user agents 의 기능에 대한 지원을 구현하는 데 사용하기 위한 것입니다. 많은 숙련된 개발자는 MDN 설명서나 기타 자습서를 참조하는 것이 좋습니다. 그러나 사용중인 CSS, 브라우저 지원 (아래 참조) 및 specs 간의 관계를 이해하고 존재한다는 것을 아는 것이 좋습니다.
 
 ## 브라우저 지원
 
 CSS 가 지정되면 하나 이상의 브라우저가 이를 구현한 경우에만 웹 페이지를 개발하는 데 유용합니다. 이것은 CSS 파일의 명령을 화면에 출력할 수 있는 것으로 바꾸도록 코드가 작성되었음을 의미합니다. [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works) 수업에서 이것에 대해 자세히 살펴보겠습니다. 모든 브라우저가 동시에 기능을 구현하는 것은 드문 일이므로 일반적으로 일부 브라우저에서는 CSS 의 일부를 사용할 수 있고, 다른 브라우저에서는 사용할 수 없는 경우가 있습니다. 이러한 이유로, 구현 상태를 확인할 수 있는 것이 유용합니다. MDN 의 각 속성 페이지에서 관심있는 속성의 상태를 볼 수 있으므로 웹 사이트에서 해당 속성을 사용할 수 있는지 알 수 있습니다.
 
-다음은 CSS [`font-family`](/ko/docs/Web/CSS/font-family) 속성에 대한 데이터 차트입니다.
+브라우저 지원 상태는 모든 MDN CSS 속성 페이지에 "브라우저 호환성" 이라는 이름을 가진 표에 표시됩니다. 해당 표를 이용해서 속성을 당신의 웹사이트에서 사용할 수 있는지 확인하세요. [CSS `font-family` 속성을 위한 브라우저 호환성](/ko/docs/Web/CSS/font-family#브라우저_호환성)에서 예시를 확인할 수 있습니다.
 
-{{Compat}}
+요구사항에 따라 브라우저 호환 표를 사용할 수 있습니다. 이것을 이용해 얼마나 이 속성이 다양한 브라우저에서 지원되는지 또는 당신이 사용중인 특정 브라우저와 버전이 이 속성을 지원하는지 또는 사용중인 브라우저와 버전에 대해서 유의해야할 사항이 있는지 확인할 수 있습니다.
 
 ## 다음은 뭐죠
 
