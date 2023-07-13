@@ -14,7 +14,7 @@ slug: Web/MathML/Element/msub
 该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)和以下已弃用的属性：
 
 - `subscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : [`<length-percentage>`](/zh-CN/docs/Web/CSS/length-percentage)，表示下标基线向下移动的最小距离。
+  - : [`<length-percentage>`](/zh-CN/docs/Web/CSS/length-percentage) 值，表示下标基线向下移动的最小距离。
 
 > **备注：** 对于 `subscriptshift` 属性，一些浏览器可能也会接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
 
