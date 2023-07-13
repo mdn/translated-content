@@ -3,7 +3,7 @@ title: Unicode property escapes
 slug: Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape
 original_slug: Web/JavaScript/Guide/Regular_expressions/Unicode_property_escapes
 ---
-
+@sammyfilly
 {{jsSidebar("JavaScript Guide")}}
 
 **Unicode property escapes** [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions) 支持根据 Unicode 属性进行匹配，例如我们可以用它来匹配出表情、标点符号、字母（甚至适用特定语言或文字）等。同一符号可以拥有多种 Unicode 属性，属性则有 binary ("boolean-like") 和 non-binary 之分。
