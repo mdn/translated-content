@@ -190,7 +190,7 @@ var oGetVars = new (function (sSearch) {
 // alert(oGetVars.yourVar);
 ```
 
-#### Nestle the variables obtained through the `window.location.search` string in an object named `oGetVars`, also attempting to recognize their [`typeof`](/zh-TW/JavaScript/Reference/Operators/typeof)
+#### Nestle the variables obtained through the `window.location.search` string in an object named `oGetVars`, also attempting to recognize their `typeof`
 
 ```js
 var oGetVars = {};
