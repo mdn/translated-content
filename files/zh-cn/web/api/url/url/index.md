@@ -60,7 +60,7 @@ new URL("/en-US/docs", A);
 new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
 // => 'https://developer.mozilla.org/en-US/docs'
 
-// Invalid URLs:
+// 无效 URL：
 
 new URL("/en-US/docs", "");
 // Raises a TypeError exception as '' is not a valid URL
