@@ -95,7 +95,7 @@ slug: Web/HTML/Element/meta
 > **备注：** [`name`](/zh-CN/docs/Web/HTML/Element/meta#name) 属性在 {{HTMLElement("meta")}} 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 [`name`](/zh-CN/docs/Web/HTML/Element/meta#name)、[`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 或者 [`charset`](/zh-CN/docs/Web/HTML/Element/meta#charset) 三者中任何一个属性时，[`itemprop`](/zh-CN/docs/Web/HTML/Element/meta#itemprop) 属性不能被使用。
 
 - `charset`
-  - : 这个属性声明了文档的字符编码。如果使用了这个属性，其值必须是与 ASCII 大小写无关（ASCII case-insensitive）的 `utf-8`。
+  - : 该属性声明了文档的字符编码。如果存在该属性，则其值必须与字符串" utf-8 "进行ASCII不区分大小写的匹配，因为UTF-8是HTML5文档的唯一有效编码。声明字符编码的 <meta> 元素必须完全位于文档的前1024个字节内。
 - `content`
   - : 此属性包含 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 或 [`name`](/zh-CN/docs/Web/HTML/Element/meta#name) 属性的值，具体取决于所使用的值。
 - `http-equiv`
@@ -103,21 +103,23 @@ slug: Web/HTML/Element/meta
   - : 属性定义了一个编译指示指令。这个属性叫做 `http-equiv(alent)` 是因为所有允许的值都是特定 HTTP 标头的名称，如下：
 
     - `content-security-policy`
-      它允许页面作者定义当前页的[内容策略](/zh-CN/docs/Web/Security/CSP/CSP_policy_directives)。内容策略主要指定允许的服务器源和脚本端点，这有助于防止跨站点脚本攻击。
+      允许页面作者定义当前页面的[内容策略](/zh-CN/docs/Web/Security/CSP/CSP_policy_directives)。内容策略常用来指定允许的服务器源和脚本端点，这有助于防止跨站点脚本攻击。
 
     - `content-type`
-      如果使用这个属性，其值必须是"`text/html; charset=utf-8`"。注意：该属性只能用于 [MIME type](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 为 `text/html` 的文档，不能用于 MIME 类型为 XML 的文档。
+      声明 [MIME type](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 和文档的字符编码。如果使用 `content-type` 属性，与之在同一个 `<meta>` 元素中使用的 [`content`](/zh-CN/docs/Web/HTML/Element/meta#content) 属性的值必须是"`text/html; charset=utf-8`"。这相当于一个具有指定 `charset` 属性的 `<meta>` 元素，并对其在文档中的放置位置有相同的限制。**注意**：该属性只能用于 [MIME type](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 为 `text/html` 的文档，不能用于 MIME 类型为 XML 的文档。
+      
     - `default-style`
 
       设置默认 [CSS 样式表](/zh-CN/docs/Web/CSS)组的名称。
 
     - `x-ua-compatible`
       如果指定，则 `content` 属性必须具有值 "`IE=edge`"。用户代理必须忽略此指示。
+      
     - `refresh`
       这个属性指定：
 
-      - 如果 [`content`](/zh-CN/docs/Web/HTML/Element/meta#content) 只包含一个正整数，则为重新载入页面的时间间隔 (秒)；
-      - 如果 [`content`](/zh-CN/docs/Web/HTML/Element/meta#content) 包含一个正整数，并且后面跟着字符串 '`;url=`' 和一个合法的 URL，则是重定向到指定链接的时间间隔 (秒) 无障碍相关考虑：设置了 `refresh` 值的页面可能有时间间隔太短的风险。使用诸如屏幕朗读这样的辅助技术来浏览网页的人可能会由于自动跳转而来不及读完或理解网页的内容。这样不经提示而突然进行的页面刷新也可能会让有视力障碍的人群感到迷惑。
+      - 页面重新加载的秒数 - 仅当 [`content`](/zh-CN/docs/Web/HTML/Element/meta#content) 属性包含非负整数时。
+      - 页面重定向到指定链接的秒数 - 仅当 content 属性包含非负整数后跟字符串 '`;url=`' 和有效的URL时。
 
       > **警告：**
       >
