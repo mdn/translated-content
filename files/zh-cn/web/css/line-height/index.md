@@ -36,22 +36,18 @@ line-height: unset;
 - 一个 [`<number>`](#number) 值
 - 一个 [`<length>`](#length) 值
 - 一个 [`<percentage>`](#percentage) 值
-- 关键词 [`normal`](#normal)。
+- 关键字 [`normal`](#normal)。
 
 ### 取值
 
 - `normal`
-
-  - : 取决于用户端。桌面浏览器（包括 Firefox）使用默认值，约为`1.2`，这取决于元素的 `font-family`。
-
-- `<number>`
-  - : 该属性的应用值是这个无单位数字{{cssxref("&lt;number&gt;", "&lt;数字&gt;")}}乘以该元素的字体大小。计算值与指定值相同。大多数情况下，这是设置`line-height`的**推荐方法**，不会在继承时产生不确定的结果。
+  - : 取决于用户代理。桌面浏览器（包括 Firefox）使用默认值，约为 **`1.2`***，这取决于元素的 `font-family`。
+- `<number>`（无单位）
+  - : 该属性的应用值是这个无单位{{cssxref("&lt;number&gt;", "&lt;数字&gt;")}}乘以该元素的字体大小。计算值与指定的 `<number>` 值相同。大多数情况下，这是设置 `line-height` 的**推荐方法**，不会在继承时产生不确定的结果。
 - `<length>`
-  - : 指定{{cssxref("&lt;length&gt;", "&lt;长度&gt;")}}用于计算 line box 的高度。参考{{cssxref("&lt;length&gt;", "&lt;长度&gt;")}}了解可使用的单位。以 **em** 为单位的值可能会产生不确定的结果（见下面的例子）。
+  - : 指定用于计算行向盒高度的{{cssxref("&lt;length&gt;", "&lt;长度&gt;")}}值。以 **em** 为单位的值可能会产生不确定的结果（见下面的示例）。
 - `<percentage>`
-  - : 与元素自身的字体大小有关。计算值是给定的百分比值乘以元素计算出的字体大小。**百分比**值可能会带来不确定的结果（见下面第二个例子）。
-- `-moz-block-height` {{non-standard_inline}}
-  - : 将行高设置为当前块的内容区域高度。
+  - : 与元素自身的字体大小有关。计算值是给定的百分比值乘以元素计算出的字体大小。{{cssxref("&lt;percentage&gt;")}} 值可能会带来不确定的结果（见下面第二个示例）。
 
 ### 形式化语法
 
