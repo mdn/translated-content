@@ -151,7 +151,7 @@ const obj1 = { a: 1, b: 2 };
 const obj2 = copy(obj1); // obj2 looks like obj1 now
 ```
 
-### If the array is modified during iteration, other elements might be skipped.
+### If the array is modified during iteration, other elements might be skipped
 
 The following example logs "one", "two", "four". When the entry containing the value "two" is reached, the first entry of the whole array is shifted off, which results in all remaining entries moving up one position. Because element "four" is now at an earlier position in the array, "three" will be skipped. `forEach()` does not make a copy of the array before iterating.
 
