@@ -52,14 +52,10 @@ translation_of: Web/Manifest/display
 "display": "standalone"
 ```
 
-## Specification
+## Спецификации
 
-| Specification                                                            | Status                       | Comment             | Feedback                                                                         |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('Manifest', '#display-member', 'display')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
+{{Specifications}}
 
-## Browser compatibility
-
-> **Примечание:** Firefox version 47 supports only `browser` value of `display`; `minimal-ui`, `standalone` , and `fullscreen` were added in Firefox 57.
+## Совместимость с браузерами
 
 {{Compat}}
