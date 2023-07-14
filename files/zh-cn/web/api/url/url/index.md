@@ -36,7 +36,7 @@ new URL(url, base)
 ## 示例
 
 ```js
-// Base URLs:
+// 基准 URL：
 let baseUrl = "https://developer.mozilla.org";
 
 let A = new URL("/", baseUrl);
