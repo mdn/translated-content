@@ -66,7 +66,7 @@ new URL("/en-US/docs", "");
 // 抛出 TypeError 异常：'' is not a valid URL
 
 new URL("/en-US/docs");
-// Raises a TypeError exception as '/en-US/docs' is not a valid URL
+// 抛出 TypeError 异常：'/en-US/docs' is not a valid URL
 
 // 其他示例：
 
