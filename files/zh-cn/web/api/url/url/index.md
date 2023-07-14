@@ -96,5 +96,5 @@ new URL("//foo.com", "https://example.com");
 
 ## 参见
 
-- [Polyfill of `URL` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [`core-js` 中 `URL` 的 polyfill](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - 接口：{{domxref("URL")}}
