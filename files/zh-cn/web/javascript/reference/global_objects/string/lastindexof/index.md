@@ -26,11 +26,11 @@ lastIndexOf(searchString, position)
 
   - : 该方法返回指定子字符串在小于或等于 `position` 的位置中的最后一次出现的索引，默认为 `+Infinity`。如果 `position` 大于调用字符串的长度，则该方法将搜索整个字符串。如果 `position` 小于 `0`，则行为与 `0` 相同，即该方法只在索引 `0` 处查找指定的子字符串。
 
-    - `'hello world hello'.lastIndexOf('world', 4)` 返回 `-1` — 因为虽然子字符串 `world` 在索引 `6` 处出现，但该位置不小于或等于 `4`。
+    - `'hello world hello'.lastIndexOf('world', 4)` 返回 `-1`——因为虽然子字符串 `world` 在索引 `6` 处出现，但该位置不小于或等于 `4`。
 
-    - `'hello world hello'.lastIndexOf('hello', 99)` 返回 `12` — 因为小于或等于 `99` 的位置中，最后一次出现 `hello` 的位置是索引 `12`。
+    - `'hello world hello'.lastIndexOf('hello', 99)` 返回 `12`——因为小于或等于 `99` 的位置中，最后一次出现 `hello` 的位置是索引 `12`。
 
-    - `'hello world hello'.lastIndexOf('hello', 0)` 和 `'hello world hello'.lastIndexOf('hello', -5)` 都返回 `0` — 因为两者都导致该方法只在索引 `0` 处查找 `hello`。
+    - `'hello world hello'.lastIndexOf('hello', 0)` 和 `'hello world hello'.lastIndexOf('hello', -5)` 都返回 `0`——因为两者都导致该方法只在索引 `0` 处查找 `hello`。
 
 ### 返回值
 
@@ -63,7 +63,7 @@ lastIndexOf(searchString, position)
 
 ### 使用 indexOf() 和 lastIndexOf()
 
-以下示例使用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 和 `lastIndexOf()` 在字符串 "`Brave, Brave New World`" 中查找值。
+以下示例使用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 和 `lastIndexOf()` 在字符串 `"Brave, Brave New World"` 中查找值。
 
 ```js
 const anyString = "Brave, Brave New World";
