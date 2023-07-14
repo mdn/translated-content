@@ -138,7 +138,7 @@ touch choose_beast.html choose_beast.css choose_beast.js
 HTML 內容長得像這樣：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>

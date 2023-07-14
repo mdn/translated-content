@@ -26,7 +26,7 @@ function getMonthName(mo) {
     "Sep",
     "Oct",
     "Nov",
-    "Dec"
+    "Dec",
   );
   if (months[mo] != null) {
     return months[mo];

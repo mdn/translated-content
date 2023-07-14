@@ -83,7 +83,7 @@ p1.then(
   },
   (reason) => {
     console.log(reason); // Error!
-  }
+  },
 );
 ```
 
@@ -121,7 +121,7 @@ Promise.resolve("foo")
     console.log(
       "Last Then:  oops... didn't bother to instantiate and return " +
         "a promise in the prior then so the sequence may be a bit " +
-        "surprising"
+        "surprising",
     );
 
     // Note that `string` will not have the 'baz' bit of it at this point. This
@@ -163,7 +163,7 @@ Promise.resolve()
     },
     (reason) => {
       console.error("onRejected function called: ", reason);
-    }
+    },
   );
 ```
 
@@ -173,7 +173,7 @@ Promise.resolve()
 Promise.reject()
   .then(
     () => 99,
-    () => 42
+    () => 42,
   ) // onRejected returns 42 which is wrapped in a resolving Promise
   .then((solution) => console.log("Resolved with " + solution)); // Resolved with 42
 ```
@@ -240,7 +240,7 @@ p2.then(
   function (e) {
     // not called
     console.log("rejected", e);
-  }
+  },
 );
 
 var p3 = p1.then(function () {
@@ -254,7 +254,7 @@ p3.then(
   },
   function (e) {
     console.log("rejected", e); // "rejected", 20
-  }
+  },
 );
 ```
 

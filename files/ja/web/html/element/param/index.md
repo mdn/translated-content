@@ -1,17 +1,39 @@
 ---
-title: '<param>: オブジェクト引数要素'
+title: "<param>: オブジェクト引数要素"
 slug: Web/HTML/Element/param
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
 
-**HTML の `<param>` 要素**は、{{HTMLElement("object")}} 要素の引数を定義します。
+**`<param>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("object")}} 要素の引数を定義します。
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+
+- `name` {{deprecated_inline}}
+  - : 引数の名称。
+- `value` {{deprecated_inline}}
+  - : 引数の値を指定します。
+- `type` {{deprecated_inline}}
+  - : `valuetype` が `ref` に設定されている場合にのみ指定可能。`value` の値で指定された URI に存在するオブジェクトの MIME タイプを指定します。
+- `valuetype` {{deprecated_inline}}
+
+  - : `value` 属性の型を指定します。指定可能な値は以下の通りです。
+
+    - `data`: 既定値。値は文字列としてオブジェクトの実装に渡されます。
+    - `ref`: 値は、実行時の値が格納されているリソースへの URI です。
+    - `object`: 同一文書内の他の {{HTMLElement("object")}} 要素の ID です。
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -19,10 +41,7 @@ slug: Web/HTML/Element/param
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
-      <td>
-        なし。これは {{Glossary("empty element", "空要素")}}
-        です。
-      </td>
+      <td>なし。これは{{Glossary("void element", "空要素")}}です。</td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
@@ -34,7 +53,7 @@ slug: Web/HTML/Element/param
       <th scope="row">許可されている親要素</th>
       <td>
         {{HTMLElement("object")}} の子として、他の<a
-          href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+          href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >より前に配置可能。
       </td>
@@ -58,38 +77,13 @@ slug: Web/HTML/Element/param
   </tbody>
 </table>
 
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
-
-- `name`
-  - : 引数の名称。
-- `value`
-  - : 引数の値
-
-### 非推奨の属性
-
-- `type` {{deprecated_inline}}
-  - : `valuetype` が `ref` に設定されている場合にのみ指定可能。`value` の値で指定された URI に存在するオブジェクトの MIME タイプを指定します。
-- `valuetype` {{deprecated_inline}}
-
-  - : `value` 属性の型を指定します。指定可能な値は以下の通りです。
-
-    - `data`: 既定値。値は文字列としてオブジェクトの実装に渡されます。
-    - `ref`: 値は、実行時の値が格納されているリソースへの URI です。
-    - `object`: 同一文書内の他の {{HTMLElement("object")}} 要素の ID です。
-
-## 例
-
-`<param>` の使用例については、{{HTMLElement("object")}} のページを参照してください。
-
 ## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.param")}}
+{{Compat}}
 
 ## 関連情報
 
