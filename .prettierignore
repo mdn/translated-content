@@ -1,20 +1,30 @@
+# This .prettierignore file uses .gitignore syntax
+# see https://prettier.io/docs/en/ignore.html#ignoring-files-prettierignore
+
+# Generated content
 build/
 /files/**/_wikihistory.json
 /files/**/_githistory.json
+
+# Conflicting/orphaned files
+/files/**/conflicting/**/*.md
+/files/**/orphaned/**/*.md
 
 # A full pass on all Markdown files is being performed.
 # The following folders still need a full pass:
 
 # es
 /docs/es/**/*.md
-/files/es/conflicting/**/*.md
 /files/es/games/**/*.md
 /files/es/glossary/**/*.md
 /files/es/learn/**/*.md
 /files/es/mdn/**/*.md
 /files/es/mozilla/**/*.md
-/files/es/orphaned/**/*.md
-/files/es/web/**/*.md
+/files/es/web/api/**/*.md
+/files/es/web/css/**/*.md
+/files/es/web/html/**/*.md
+/files/es/web/http/**/*.md
+/files/es/web/javascript/**/*.md
 /files/es/webassembly/**/*.md
 
 # fr
@@ -27,49 +37,41 @@ build/
 /files/fr/webassembly/**/*.md
 
 # ja
-/files/ja/conflicting/**/*.md
 /files/ja/games/**/*.md
 /files/ja/glossary/**/*.md
 /files/ja/learn/**/*.md
 /files/ja/mdn/**/*.md
 /files/ja/mozilla/**/*.md
-/files/ja/orphaned/**/*.md
 /files/ja/related/**/*.md
 /files/ja/web/**/*.md
 /files/ja/webassembly/**/*.md
 
 # ko
 /docs/ko/**/*.md
-/files/ko/conflicting/**/*.md
 /files/ko/games/**/*.md
 /files/ko/glossary/**/*.md
 /files/ko/learn/**/*.md
 /files/ko/mdn/**/*.md
 /files/ko/mozilla/**/*.md
-/files/ko/orphaned/**/*.md
 /files/ko/web/**/*.md
 /files/ko/webassembly/**/*.md
 
 # pt-br
-/files/pt-br/conflicting/**/*.md
 /files/pt-br/games/**/*.md
 /files/pt-br/glossary/**/*.md
 /files/pt-br/learn/**/*.md
 /files/pt-br/mdn/**/*.md
 /files/pt-br/mozilla/**/*.md
-/files/pt-br/orphaned/**/*.md
 /files/pt-br/web/**/*.md
 /files/pt-br/webassembly/**/*.md
 
 # ru
 /docs/ru/**/*.md
-/files/ru/conflicting/**/*.md
 /files/ru/games/**/*.md
 /files/ru/glossary/**/*.md
 /files/ru/learn/**/*.md
 /files/ru/mdn/**/*.md
 /files/ru/mozilla/**/*.md
-/files/ru/orphaned/**/*.md
 /files/ru/web/**/*.md
 /files/ru/webassembly/**/*.md
 
@@ -81,3 +83,4 @@ build/
 /files/zh-cn/mozilla/**/*.md
 /files/zh-cn/web/**/*.md
 /files/zh-cn/webassembly/**/*.md
+/docs/zh-cn/glossary.md
