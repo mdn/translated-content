@@ -80,7 +80,7 @@ new URL("", "https://example.com/?query=1");
 // => 'https://example.com/?query=1' (Edge before 79 removes query arguments)
 
 new URL("/a", "https://example.com/?query=1");
-// => 'https://example.com/a' (see relative URLs)
+// => 'https://example.com/a'（见相对 URL）
 
 new URL("//foo.com", "https://example.com");
 // => 'https://foo.com/'（见相对 URL）
