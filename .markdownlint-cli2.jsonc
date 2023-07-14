@@ -22,11 +22,9 @@
     "MD025": {
       "front_matter_title": "^\\s*title\\s*[:=]"
     },
-    "MD026": false,
-    // XXX Replace with the following when ready:
-    // "MD026": {
-    //   "punctuation": ".,;:"
-    // },
+    "MD026": {
+      "punctuation": ".,;:"
+    },
     // Consecutive Notes/Callouts currently don't conform with this rule
     "MD028": false,
     // Force ordered numbering to catch accidental list ending from indenting
