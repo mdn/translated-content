@@ -5,7 +5,7 @@ slug: Web/API/FileSystemHandle/isSameEntry
 
 {{securecontext_header}}{{APIRef("File System Access API")}}
 
-{{domxref("FileSystemHandle")}} 接口的 **`isSameEntry()`** 方法用于比对两个{{domxref("FileSystemHandle", "句柄")}}以查看两者关联的条目（文件或目录）是否相符。
+{{domxref("FileSystemHandle")}} 接口的 **`isSameEntry()`** 方法用于比对两个{{domxref("FileSystemHandle", "句柄", "", 1)}}以查看两者关联的条目（文件或目录）是否相符。
 
 ## 语法
 

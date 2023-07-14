@@ -11,8 +11,8 @@ slug: Web/API/FileSystemHandle/kind
 
 可能为以下字符串值：
 
-- `'file'`：若句柄是一个 {{domxref('FileSystemFileHandle')}}.
-- `'directory'`：若句柄是一个 {{domxref('FileSystemDirectoryHandle')}}.
+- `'file'`：若句柄是一个 {{domxref('FileSystemFileHandle')}}。
+- `'directory'`：若句柄是一个 {{domxref('FileSystemDirectoryHandle')}}。
 
 ## 示例
 

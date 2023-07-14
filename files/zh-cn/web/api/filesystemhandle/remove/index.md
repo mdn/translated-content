@@ -9,7 +9,7 @@ slug: Web/API/FileSystemHandle/remove
 
 `remove()` 方法允许你用对应的句柄直接移除一个文件或一个目录。如果没有这个方法，你就必须先获取句柄的父目录，然后调用其上的 {{domxref("FileSystemDirectoryHandle.removeEntry()")}} 来移除文件或目录。
 
-你也可以在[源私有文件系统](/zh-CN/docs/Web/API/File_System_Access_API#origin_private_file_system)的根目录上调用 `remove()` 来清除其内容，此后一个新的空源私有文件系统会被创建。
+你也可以在[源私有文件系统](/zh-CN/docs/Web/API/File_System_Access_API#源私有文件系统)的根目录上调用 `remove()` 来清除其内容，此后一个新的空源私有文件系统会被创建。
 
 ## 语法
 

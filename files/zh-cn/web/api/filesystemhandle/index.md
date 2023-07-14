@@ -5,7 +5,7 @@ slug: Web/API/FileSystemHandle
 
 {{securecontext_header}}{{APIRef("File System Access API")}}
 
-{{domxref('File System Access API')}} 的 **`FileSystemHandle`** 接口是代表一个文件或一个目录的对象。多个句柄可以代表同一个条目。大多数情况你不会直接用到 `FileSystemHandle`，而是会用到它的两个子接口 {{domxref('FileSystemFileHandle')}} 和 {{domxref('FileSystemDirectoryHandle')}}。
+{{domxref('File System Access API')}} 的 **`FileSystemHandle`** 接口是代表一个文件或一个目录的对象。多个句柄可以代表同一个条目。在大多数情况下，你不会直接使用 `FileSystemHandle`，而是会用到它的 {{domxref('FileSystemFileHandle')}} 和 {{domxref('FileSystemDirectoryHandle')}} 子接口。
 
 ## 基于 FileSystemHandle 的接口
 
@@ -26,7 +26,7 @@ slug: Web/API/FileSystemHandle
 ## 实例方法
 
 - {{domxref('FileSystemHandle.isSameEntry()', 'isSameEntry()')}}
-  - : 比对两个{{domxref("FileSystemHandle", "句柄")}}以查看两者关联的条目（文件或目录）是否相符。
+  - : 比对两个{{domxref("FileSystemHandle", "句柄", "", 1)}}以查看两者关联的条目（文件或目录）是否相符。
 - {{domxref('FileSystemHandle.queryPermission()', 'queryPermission()')}} {{Experimental_Inline}}
   - : 查询当前句柄目前的权限状态。
 - {{domxref('FileSystemHandle.remove', 'remove()')}} {{Experimental_Inline}} {{Non-standard_Inline}}
