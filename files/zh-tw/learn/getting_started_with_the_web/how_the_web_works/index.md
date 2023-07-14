@@ -62,7 +62,7 @@ _〈網路如何運作〉將簡單介紹_，當你透過電腦或手機瀏覽器
 
 - [How the Internet works](/zh-TW/docs/Learn/Common_questions/How_does_the_Internet_work)
 - [HTTP — an Application-Level Protocol](https://dev.opera.com/articles/http-basic-introduction/)
-- [HTTP: Let’s GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
+- [HTTP: Let's GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: Response Codes](https://dev.opera.com/articles/http-response-codes/)
 
 ## 製作群

@@ -110,7 +110,7 @@ With that in mind lets start looking at how to define and run tests.
 
 Before we go into the detail of "what to test", let's first briefly look at _where_ and _how_ tests are defined.
 
-Django uses the unittest module’s [built-in test discovery](https://docs.python.org/3/library/unittest.html#unittest-test-discovery), which will discover tests under the current working directory in any file named with the pattern **test\*.py**. Provided you name the files appropriately, you can use any structure you like. We recommend that you create a module for your test code, and have separate files for models, views, forms, and any other types of code you need to test. For example:
+Django uses the unittest module's [built-in test discovery](https://docs.python.org/3/library/unittest.html#unittest-test-discovery), which will discover tests under the current working directory in any file named with the pattern **test\*.py**. Provided you name the files appropriately, you can use any structure you like. We recommend that you create a module for your test code, and have separate files for models, views, forms, and any other types of code you need to test. For example:
 
 ```
 catalog/

@@ -247,5 +247,5 @@ When using spread syntax for function calls, be aware of the possibility of exce
 
 ## See also
 
-- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}} (also ‘`...`’)
-- {{jsxref("Function.prototype.apply()")}} (also ‘`...`’)
+- {{jsxref("Functions/rest_parameters", "Rest parameters", "", 1)}} (also '`...`')
+- {{jsxref("Function.prototype.apply()")}} (also '`...`')

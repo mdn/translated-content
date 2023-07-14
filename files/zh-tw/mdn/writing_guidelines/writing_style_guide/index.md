@@ -22,8 +22,8 @@ original_slug: MDN/Guidelines/Writing_style_guide
 
 頁面標題與章節標題應使用一般句子的大小寫形式（只對句首字母和專有名詞大寫），而非新聞式標題：
 
-- **正確**：“A new method for creating JavaScript rollovers”
-- **錯誤**：“A New Method for Creating JavaScript Rollovers”
+- **正確**："A new method for creating JavaScript rollovers"
+- **錯誤**："A New Method for Creating JavaScript Rollovers"
 
 有些舊的頁面編寫於本樣式規則定版之前。若你願意，可隨時更新它們。我們會逐漸完善它們。
 
@@ -421,7 +421,7 @@ _A confirmation dialog box appears, which asks the user for permission to use th
 2. 如果彎引號或撇號被寫入程式碼片段中——即便是行內——讀者都有可能把它們複製貼上到其他地方並期待可以正常運作（事實上不行）。
 
 - **正確**： Please don't use "curly quotes."
-- **不正確**： Please don’t use “curly quotes.”
+- **不正確**： Please don't use "curly quotes."
 
 ### 拼寫
 

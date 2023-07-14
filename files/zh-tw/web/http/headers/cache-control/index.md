@@ -102,7 +102,7 @@ Cache-Control: stale-if-error=<秒數>
 ### 其他
 
 - `no-transform`
-  - : 位於中間的快取軟體或代理軟體不能修改回應內容、{{HTTPHeader("Content-Encoding")}}、{{HTTPHeader("Content-Range")}}、{{HTTPHeader("Content-Type")}}。因此它可能造成某些代理軟體或瀏覽器的功能失效，比如說 [Google’s Web Light](https://support.google.com/webmasters/answer/6211428)可以替很慢的網路事先壓縮圖片。
+  - : 位於中間的快取軟體或代理軟體不能修改回應內容、{{HTTPHeader("Content-Encoding")}}、{{HTTPHeader("Content-Range")}}、{{HTTPHeader("Content-Type")}}。因此它可能造成某些代理軟體或瀏覽器的功能失效，比如說 [Google's Web Light](https://support.google.com/webmasters/answer/6211428)可以替很慢的網路事先壓縮圖片。
 - `only-if-cached`
   - : 由*客戶端*設定，表示不想經由網路得到回應。所以快取軟體可能會回傳先前儲存的回應，或者是 {{HTTPStatus("504")}} 狀態碼。使用驗證標頭如 `If-None-Match` 是沒有意義的。由伺服器在 HTTP 回應中設定 `only-if-cached` 指令也沒有意義。
 

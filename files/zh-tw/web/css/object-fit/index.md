@@ -30,13 +30,13 @@ object-fit: unset;
 ### Values
 
 - `fill`
-  - : The replaced content is sized to fill the element’s content box: the object’s concrete object size is the element’s used width and height.
+  - : The replaced content is sized to fill the element's content box: the object's concrete object size is the element's used width and height.
 - `contain`
-  - : The replaced content is sized to maintain its aspect ratio while fitting within the element’s content box: its concrete object size is resolved as a contain constraint against the element’s used width and height.
+  - : The replaced content is sized to maintain its aspect ratio while fitting within the element's content box: its concrete object size is resolved as a contain constraint against the element's used width and height.
 - `cover`
-  - : The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box: its concrete object size is resolved as a cover constraint against the element’s used width and height.
+  - : The replaced content is sized to maintain its aspect ratio while filling the element's entire content box: its concrete object size is resolved as a cover constraint against the element's used width and height.
 - `none`
-  - : The replaced content is not resized to fit inside the element’s content box: the object’s concrete object size is determined using the default sizing algorithm with no specified size, and a default object size equal to the replaced element’s used width and height.
+  - : The replaced content is not resized to fit inside the element's content box: the object's concrete object size is determined using the default sizing algorithm with no specified size, and a default object size equal to the replaced element's used width and height.
 - `scale-down`
   - : The content is sized as if `none` or `contain` were specified, whichever would result in a smaller concrete object size.
 
