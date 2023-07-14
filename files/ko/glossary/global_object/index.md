@@ -23,7 +23,7 @@ foo === window.foo; // Returns: true
 
 전역 객체로 `foo` 변수를 선언한 뒤, 우리는 `foo` 변수명을 사용해 전역 객체인 `window.foo` 의 프로퍼티로 `window` 객체에서 그것의 값에 직접 접근할 수 있습니다.,
 
-#### 설명:
+#### 설명
 
 전역 객체 `foo` 는 `window` 객체에 아래와 같이 저장됩니다:
 
@@ -43,7 +43,7 @@ window.greeting(); // It is the same as the normal invoking: greeting();
 
 위의 예는 `window` 객체의 프로퍼티로서 어떻게 전역 함수가 저장되는지를 보여주고 있습니다 . 우리가 `greeting` 을 전역 함수로써 호출하면 내부적으로는 `window` 객체를 사용해 호출됨을 보여주고 있습니다.
 
-#### 설명:
+#### 설명
 
 전역 함수 `greeting` 은 아래와 같이 `window` 객체에 저장됩니다:
 

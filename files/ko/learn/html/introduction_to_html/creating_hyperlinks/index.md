@@ -78,7 +78,7 @@ A basic link is created by wrapping the text (or other content, see [Block level
 
 > **참고:** 링크 제목은 마우스 호버시에만 공개 된다. 이것은 웹 페이지를 탐색하기 위해 키보드에만 의존하는 사람들이 타이틀 정보에 접근하는데 어려움을 겪게 된다는 것을 의미한다. 만약 title의 정보가 페이지 사용에 있어서 정말로 중요하다면, 해당하는 정보를 일반 텍스트에 넣어줌으로써 모든 사용자가 접근할 수 있는 방식으로 제시해주어야한다.
 
-### 능동학습: 링크를 만들어봅시다.
+### 능동학습: 링크를 만들어봅시다
 
 적극적으로 학습해 봅시다: local code 편집기를 사용해서 하나의 HTML document 를 만드세요. ([소스코드: 템플릿 시작하기](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)가 잘 될거에요.)
 

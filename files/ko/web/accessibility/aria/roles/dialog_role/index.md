@@ -117,7 +117,7 @@ To support browsers or AT products that do not support ARIA mark up, it's also p
 </fieldset>
 ```
 
-#### 작업된 예제:
+#### 작업된 예제
 
 - [jQuery-UI Dialog](http://jqueryui.com/demos/dialog/)
 

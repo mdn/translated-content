@@ -51,7 +51,7 @@ function reloadPageWithHash() {
 
 > **참고:** The example above works in situations where `location.hash` does not need to be retained. However, in Gecko-based browsers, setting `location.pathname` in this manner will erase any information in `location.hash`, whereas in WebKit (and possibly other browsers), setting the pathname will not alter the hash. If you need to change pathname but keep the hash as is, use the `replace()` method instead, which should work consistently across browsers.
 
-### 예제 #4: Display the properties of the current URL in an alert dialog:
+### 예제 #4: Display the properties of the current URL in an alert dialog
 
 ```js
 function showLoc() {
@@ -65,7 +65,7 @@ function showLoc() {
 // in html: <button onclick="showLoc();">Show location properties</button>
 ```
 
-### 예제 #5: Send a string of data to the server by modifying the `search` property:
+### 예제 #5: Send a string of data to the server by modifying the `search` property
 
 ```js
 function sendData (sData) {
@@ -77,7 +77,7 @@ function sendData (sData) {
 
 The current URL with "?Some%20data" appended is sent to the server (if no action is taken by the server, the current document is reloaded with the modified search string).
 
-### 예제 #6: Using bookmarks without changing the `hash` property:
+### 예제 #6: Using bookmarks without changing the `hash` property
 
 ```html
 <!doctype html>

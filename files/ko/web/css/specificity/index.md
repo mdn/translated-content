@@ -127,7 +127,7 @@ p.awesome {
 
 ID를 ID 선택자 대신 속성 선택자로 선택하면 클래스 1개와 같은 명시도가 됩니다. 두 선택자의 명시도가 같아졌으므로 나중에 오는 규칙이 우선합니다.
 
-#### 아래에서 자세한 정보를 확인하세요:
+#### 아래에서 자세한 정보를 확인하세요
 
 - <https://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css>
 - <https://stackoverflow.com/questions/9245353/what-does-important-in-css-mean>

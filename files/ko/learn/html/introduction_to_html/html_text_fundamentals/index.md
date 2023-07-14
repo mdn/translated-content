@@ -612,7 +612,7 @@ window.addEventListener("load", drawOutput);
 
 {{ EmbedLiveSample('Playable_code_5', 700, 500) }}
 
-### Italic, bold, underline...
+### Italic, bold, underline
 
 우리가 지금까지 얘기했던 요소들은 관련된 의미들을 명확히 구분했습니다. {{htmlelement("b")}}, {{htmlelement("i")}}, {{htmlelement("u")}}의 상황들은 좀 복잡하죠. 이 요소들은 CSS가 형편없이 지원되거나 완전히 지원되지 않는 경우에 이탤릭체 또는 밑줄 등을 표현할 수 있도록 고안되었습니다. 의미론적이 아닌 표현에만 영향을 주는 이와 같은 요소들은 **현재적 요소**로 알려져 있으며, 더 이상 사용되어서는 안됩니다. 앞에서 살펴본 바와 같이 의미론은 접근성, SEO 등에 매우 중요하기 때문이죠.
 

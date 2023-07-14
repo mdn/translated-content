@@ -48,7 +48,7 @@ For a full example, see our[Basic dedicated worker example](https://github.com/m
 
 This example shows a Firefox add-on that transfers an `ArrayBuffer` from the main thread to the `ChromeWorker`, and then the `ChromeWorker` transfers it back to the main thread.
 
-#### Main thread code:
+#### Main thread code
 
 ```js
 var myWorker = new ChromeWorker(self.path + 'myWorker.js');

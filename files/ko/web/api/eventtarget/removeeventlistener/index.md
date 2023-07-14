@@ -39,7 +39,7 @@ removeEventListener(type, listener, useCapture);
 - `useCapture` {{optional_inline}}
   - : 제거할 {{domxref("EventListener")}}가 캡처링 수신기로 등록됐는지에 대한 여부를 나타내는 불리언 값입니다. 기본 값은 `false`입니다.
 
-### 반환 값.
+### 반환 값
 
 없음.
 
