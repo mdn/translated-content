@@ -13,7 +13,7 @@ slug: Web/API/URL/URL
 
 ## 语法
 
-```js
+```js-nolint
 new URL(url)
 new URL(url, base)
 ```
