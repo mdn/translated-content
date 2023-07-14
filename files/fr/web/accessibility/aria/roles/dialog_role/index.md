@@ -30,12 +30,20 @@ Bien qu’il ne soit pas obligatoire que la boîte de dialogue elle-même reçoi
 Si une boîte de dialogue a une barre de titre visible, le texte de cette barre peut être utilisé comme label pour la boîte elle-même. La meilleure façon de le faire est d’utiliser l’attribut `aria-labelledby` pour l’élément `role="dialog"`. De plus, si la boîte de dialogue contient une description supplémentaire, en plus du titre de la boîte, le texte de la description peut être associé avec la boîte de dialogue à l’aide de l’attribut `aria-describedby`. Cette approche est illustrée dans l’extrait de code ci-dessous&nbsp;:
 
 ```html
-<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
-    <h2 id="dialog1Title">Vos informations personnelles ont correctement été actualisées.</h2>
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
+  <h2 id="dialog1Title">
+    Vos informations personnelles ont correctement été actualisées.
+  </h2>
 
-    <p id="dialog1Desc">Vous pouvez modifier vos informations personnelles à n’importe quel moment depuis la section « Compte utilisateur. »</p>
+  <p id="dialog1Desc">
+    Vous pouvez modifier vos informations personnelles à n’importe quel moment
+    depuis la section « Compte utilisateur. »
+  </p>
 
-    <button>Fermer</button>
+  <button>Fermer</button>
 </div>
 ```
 
@@ -66,36 +74,41 @@ Lorsque la boîte de dialogue est correctement labélisée et que le focus est d
 #### Exemple 1&nbsp;: une boîte de dialogue contenant un formulaire
 
 ```html
-<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
-    <h2 id="dialog1Title">Formulaire de souscription</h2>
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
+  <h2 id="dialog1Title">Formulaire de souscription</h2>
 
-    <p id="dialog1Desc">Nous ne partageons pas ces informations avec des tierces parties.</p>
+  <p id="dialog1Desc">
+    Nous ne partageons pas ces informations avec des tierces parties.
+  </p>
 
-    <form>
-        <p>
-            <label for="firstName">Prénom</label>
-            <input id="firstName" type="text" />
-        </p>
+  <form>
+    <p>
+      <label for="firstName">Prénom</label>
+      <input id="firstName" type="text" />
+    </p>
 
-        <p>
-            <label for="lastName">Nom</label>
-            <input id="lastName" type="text" />
-        </p>
+    <p>
+      <label for="lastName">Nom</label>
+      <input id="lastName" type="text" />
+    </p>
 
-        <p>
-            <label for="interests">Intérêts</label>
-            <textarea id="interests"></textarea>
-        </p>
+    <p>
+      <label for="interests">Intérêts</label>
+      <textarea id="interests"></textarea>
+    </p>
 
-        <p>
-            <input type="checkbox" id="autoLogin" />
-            <label for="autoLogin">Intérêts</label>
-        </p>
+    <p>
+      <input type="checkbox" id="autoLogin" />
+      <label for="autoLogin">Intérêts</label>
+    </p>
 
-        <p>
-            <input type="submit" value="Enregistrer les informations"/>
-            </p>
-    </form>
+    <p>
+      <input type="submit" value="Enregistrer les informations" />
+    </p>
+  </form>
 </div>
 ```
 
@@ -104,13 +117,21 @@ Lorsque la boîte de dialogue est correctement labélisée et que le focus est d
 Pour prendre en charge les navigateurs ou les produits de technologies d’assistance qui ne prennent pas ARIA en charge, il est également possible d’appliquer le balisage `dialog` à un élément `fieldset` comme contenu alternatif. Ainsi le titre de la boîte de dialogue sera toujours annoncé correctement&nbsp;:
 
 ```html
-<fieldset role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
-    <legend>
-        <span id="dialog1Title">Vos informations personnelles ont correctement été actualisées.</span>
-        <span id="dialog1Desc">Vous pouvez modifier vos informations personnelles à n’importe quel moment depuis la section « Compte utilisateur ».</span>
-    </legend>
+<fieldset
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
+  <legend>
+    <span id="dialog1Title"
+      >Vos informations personnelles ont correctement été actualisées.</span
+    >
+    <span id="dialog1Desc"
+      >Vous pouvez modifier vos informations personnelles à n’importe quel
+      moment depuis la section « Compte utilisateur ».</span
+    >
+  </legend>
 
-    <button>Fermer</button>
+  <button>Fermer</button>
 </fieldset>
 ```
 

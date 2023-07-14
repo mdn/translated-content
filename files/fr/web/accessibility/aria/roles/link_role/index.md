@@ -38,7 +38,7 @@ Les technologies d’assistance devraient être à l’écoute de tels événeme
 L’extrait de code ci-dessous montre comment le rôle `link` est ajouté dans le code source HTML.
 
 ```html
-<div role=”link”>Un lien</div>
+<div role="link">Un lien</div>
 ```
 
 #### Exemple 2&nbsp;: Lien accessible créé depuis une application à l'aide d'un \<span>

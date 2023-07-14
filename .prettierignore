@@ -23,7 +23,12 @@ build/
 /files/fr/learn/**/*.md
 /files/fr/mdn/**/*.md
 /files/fr/mozilla/**/*.md
-/files/fr/web/**/*.md
+/files/fr/web/api/**/*.md
+/files/fr/web/css/**/*.md
+/files/fr/web/html/**/*.md
+/files/fr/web/http/**/*.md
+/files/fr/web/javascript/**/*.md
+/files/fr/web/svg/**/*.md
 /files/fr/webassembly/**/*.md
 
 # ja

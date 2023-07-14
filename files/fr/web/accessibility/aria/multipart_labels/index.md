@@ -25,10 +25,16 @@ La solution se trouve dans l'attribut ARIA `aria-labelledby`. Son paramètre est
 Exemple&nbsp;:
 
 ```html
-    <input aria-labelledby="labelShutdown shutdownTime shutdownUnit" type="checkbox" />
-    <span id="labelShutdown">Éteindre l’ordinateur après</span>
-    <input aria-labelledby="labelShutdown shutdownTime shutdownUnit" id="shutdownTime" type="text" value="10" />
-    <span id="shutdownUnit"> minutes</span>
+<input
+  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
+  type="checkbox" />
+<span id="labelShutdown">Éteindre l’ordinateur après</span>
+<input
+  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
+  id="shutdownTime"
+  type="text"
+  value="10" />
+<span id="shutdownUnit"> minutes</span>
 ```
 
 ### Pour les utilisateurs de JAWS 8
