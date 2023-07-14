@@ -13,7 +13,6 @@ build/
 /README.md
 
 # es
-/docs/es/**/*.md
 /files/es/**/*.md
 
 # fr
@@ -23,14 +22,12 @@ build/
 /files/ja/**/*.md
 
 # ko
-/docs/ko/**/*.md
 /files/ko/**/*.md
 
 # pt-br
 /files/pt-br/**/*.md
 
 # ru
-/docs/ru/**/*.md
 /files/ru/**/*.md
 
 # zh-cn
