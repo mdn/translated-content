@@ -118,7 +118,7 @@ Reference to [Live sample macros](/en-US/docs/MDN/Structures/Live_samples#live_s
 | ------ | ---- | ------- |
 | 括号   | （） | ()      |
 | 冒号   | ：   | :       |
-| 引号   | ""   | ""      |
+| 引号   | “”   | ""      |
 | 破折号 | ——   | -- 、 — |
 
 简体中文标点符号参考资源：
