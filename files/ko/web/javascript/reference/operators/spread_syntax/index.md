@@ -231,5 +231,5 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 ## 같이 보기
 
-- [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters) (또한 ‘`...`’)
-- [fn.apply](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) (또한 ‘`...`’)
+- [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters) (또한 '`...`')
+- [fn.apply](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) (또한 '`...`')

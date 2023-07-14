@@ -4,7 +4,7 @@ slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 ---
 `XMLHttpRequest` 는 동기적 통신과 비동기적 통신을 모두 지원합니다. 하지만, 일반적으로는 성능상의 이유로 인하여 비동기적 요청이 동기적 요청보다 우선시 되어야 합니다.
 
-동기 요청은 코드 실행을 차단하여 화면에 “얼어붙어” 버리고 응답하지 없는 사용자 경험을 만듭니다.
+동기 요청은 코드 실행을 차단하여 화면에 "얼어붙어" 버리고 응답하지 없는 사용자 경험을 만듭니다.
 
 ## Asynchronous request
 

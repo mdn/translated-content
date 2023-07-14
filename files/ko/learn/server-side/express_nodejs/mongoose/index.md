@@ -65,7 +65,7 @@ NPM 패키지 매니저 사이트에는 사용가능한 많은 ODM/ORM 솔루션
 
 ### Using Mongoose and MongoDb for the LocalLibrary
 
-For the _Local Library_ example (and the rest of this topic) we're going to use the [Mongoose ODM](https://www.npmjs.com/package/mongoose) to access our library data. Mongoose acts as a front end to [MongoDB](https://www.mongodb.com/what-is-mongodb), an open source [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database that uses a document-oriented data model. A “collection” of “documents”, in a MongoDB database, [is analogous to](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) a “table” of “rows” in a relational database.
+For the _Local Library_ example (and the rest of this topic) we're going to use the [Mongoose ODM](https://www.npmjs.com/package/mongoose) to access our library data. Mongoose acts as a front end to [MongoDB](https://www.mongodb.com/what-is-mongodb), an open source [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database that uses a document-oriented data model. A "collection" of "documents", in a MongoDB database, [is analogous to](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) a "table" of "rows" in a relational database.
 
 This ODM and database combination is extremely popular in the Node community, partially because the document storage and query system looks very much like JSON, and is hence familiar to JavaScript developers.
 
@@ -205,7 +205,7 @@ var schema = new Schema(
 })
 ```
 
-Most of the [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) (the descriptors after “type:” or after field names) are self explanatory. The exceptions are:
+Most of the [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) (the descriptors after "type:" or after field names) are self explanatory. The exceptions are:
 
 - `ObjectId`: Represents specific instances of a model in the database. For example, a book might use this to represent its author object. This will actually contain the unique ID (`_id`) for the specified object. We can use the `populate()` method to pull in the associated information when needed.
 - [Mixed](http://mongoosejs.com/docs/schematypes.html#mixed): 임의의 스키마 타입입니다.(어떤 타입도 될 수 있음)

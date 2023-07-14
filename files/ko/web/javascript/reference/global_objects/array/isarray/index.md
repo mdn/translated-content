@@ -33,7 +33,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 
 객체가 {{jsxref("Array")}}라면 `true`를 반환하고, 아니라면 `false`를 반환합니다.
 
-자세한 정보는 [“Determining with absolute accuracy whether or not a JavaScript object is an array”](http://web.mit.edu/jwalden/www/isArray.html)(자바스크립트 객체가 배열인지 정확히 판별하는 방법) 문서를 참조하세요.
+자세한 정보는 ["Determining with absolute accuracy whether or not a JavaScript object is an array"](http://web.mit.edu/jwalden/www/isArray.html)(자바스크립트 객체가 배열인지 정확히 판별하는 방법) 문서를 참조하세요.
 
 ## 예제
 

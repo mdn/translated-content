@@ -99,7 +99,7 @@ cd beastify
 
 확장 기능은 아이콘을 가져야 합니다. 이 아이콘은 애드온 매니저("about:addons" url을 통해 열 수 있습니다)에서 확장 기능의 목록에서 보여집니다. 이번에 만든 manifest.json는 "icons / beasts-48.png" 아이콘을 정의했습니다.
 
-"icons"라는 디렉토리를 만들고 "beasts-48.png" 파일을 그 아래에 저장하겠습니다. 우리 예제는 [Aha-Soft’s Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set)에서 가져온 이미지를 [라이센스](http://www.aha-soft.com/free-icons/free-retina-icon-set/) 조건에 따라 사용했습니다.
+"icons"라는 디렉토리를 만들고 "beasts-48.png" 파일을 그 아래에 저장하겠습니다. 우리 예제는 [Aha-Soft's Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set)에서 가져온 이미지를 [라이센스](http://www.aha-soft.com/free-icons/free-retina-icon-set/) 조건에 따라 사용했습니다.
 
 자신만의 아이콘을 사용하려면 48x48 픽셀이어야 합니다. 또한 고해상도를 위한 96x96 픽셀도 지원합니다. 만약 고해상도를 지원하게 하고싶다면 manifest.json의 아이콘 부분을 아래처럼 작성하면 됩니다.
 

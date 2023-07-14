@@ -299,7 +299,7 @@ console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 
 {{jsxref("Collator")}}개체는 문자열을 비교하고 구분하는 것에 대해 유용합니다.
 
-예를 들어, 실제로 독일에선 phonebook과 dictionary라는 2개의 다른 종류의 명령어들이 있습니다. 전화기록부류는 소리를 강조합니다. 그리고 구분에 앞서 다른것들은 “ä”, “ö”인것처럼 "ae", "oe"로 확장됐습니다.
+예를 들어, 실제로 독일에선 phonebook과 dictionary라는 2개의 다른 종류의 명령어들이 있습니다. 전화기록부류는 소리를 강조합니다. 그리고 구분에 앞서 다른것들은 "ä", "ö"인것처럼 "ae", "oe"로 확장됐습니다.
 
 ```js
 var names = ["Hochberg", "Hönigswald", "Holzman"];

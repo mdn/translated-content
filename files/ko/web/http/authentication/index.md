@@ -103,7 +103,7 @@ location /status {
 https://username:password@www.example.com/
 ```
 
-**이러한 방식의 URL은 더 이상 사용되지 않습니다**. Chrome에서, URL의 `username:password@` 부분은 보안 상의 이유로 [제거](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7)됩니다. Firefox에서는, 해당 사이트가 진짜로 인증이 필요한지를 체크하며, 그렇지 않으면 Firefox는 프롬프트로 "You are about to log in to the site “www\.example.com” with the username “username”, but the website does not require authentication. This may be an attempt to trick you."와 같이 경고합니다.
+**이러한 방식의 URL은 더 이상 사용되지 않습니다**. Chrome에서, URL의 `username:password@` 부분은 보안 상의 이유로 [제거](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7)됩니다. Firefox에서는, 해당 사이트가 진짜로 인증이 필요한지를 체크하며, 그렇지 않으면 Firefox는 프롬프트로 "You are about to log in to the site "www\.example.com" with the username "username", but the website does not require authentication. This may be an attempt to trick you."와 같이 경고합니다.
 
 ## 함께 보기
 

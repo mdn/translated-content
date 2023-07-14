@@ -705,7 +705,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
       <td>{{ HTMLElement("img") }}</td>
       <td>
         This attribute tells the browser to ignore the actual intrinsic size of
-        the image and pretend it’s the size specified in the attribute.
+        the image and pretend it's the size specified in the attribute.
       </td>
     </tr>
     <tr>
@@ -1162,7 +1162,7 @@ HTML의 요소들은 **특성**을 가지고 있습니다. 특성은 사용자�
       </td>
       <td><a href="/ko/docs/Web/HTML/Global_attributes">전역 특성</a></td>
       <td>
-        Specify whether an element’s attribute values and the values of its
+        Specify whether an element's attribute values and the values of its
         <code
           ><a href="https://dom.spec.whatwg.org/#text" id="ref-for-text①⑦"
             >Text</a

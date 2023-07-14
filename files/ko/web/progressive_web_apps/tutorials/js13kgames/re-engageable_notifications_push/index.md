@@ -133,7 +133,7 @@ const vapidPublicKey = await response.text();
 const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 ```
 
-앱은 서버의 공개 키를 패치하고 응답을 텍스트로 변환합니다. 그 후 Uint8Array(Chrome 지원을 위해)로 변환이 필요합니다. VAPID 키에 대한 자세한 내용은 [Sending VAPID identified WebPush Notifications via Mozilla’s Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) 블로그 포스트를 읽어보시기 바랍니다.
+앱은 서버의 공개 키를 패치하고 응답을 텍스트로 변환합니다. 그 후 Uint8Array(Chrome 지원을 위해)로 변환이 필요합니다. VAPID 키에 대한 자세한 내용은 [Sending VAPID identified WebPush Notifications via Mozilla's Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) 블로그 포스트를 읽어보시기 바랍니다.
 
 앱은 이제 새로운 사용자를 구독하기 위해 {{domxref("PushManager")}}를 사용합니다. 두 옵션이 {{domxref("PushManager.subscribe()")}} 메소드로 전달됩니다. 첫 번째는 `userVisibleOnly: true`이며 사용자에게 전송되는 모든 알림이 보여진다는 것을 의미하며, 두 번째 것은 `applicationServerKey`이며 성공적으로 획득하고 변환된 VAPID 키를 포함합니다.
 

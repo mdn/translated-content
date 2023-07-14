@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 
 {{JSRef}}
 
-**`toLocaleString()`** 메서드는 배열의 요소를 나타내는 문자열을 반환합니다. 요소는 `toLocaleString` 메서드를 사용하여 문자열로 변환되고 이 문자열은 locale 고유 문자열(가령 쉼표 “,”)에 의해 분리됩니다.
+**`toLocaleString()`** 메서드는 배열의 요소를 나타내는 문자열을 반환합니다. 요소는 `toLocaleString` 메서드를 사용하여 문자열로 변환되고 이 문자열은 locale 고유 문자열(가령 쉼표 ",")에 의해 분리됩니다.
 
 {{EmbedInteractiveExample("pages/js/array-tolocalestring.html")}}
 

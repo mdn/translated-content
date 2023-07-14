@@ -22,7 +22,7 @@ flexbox가 웹 개발자들의 관심 받게된 이유 중 하나는 웹 최초�
 - {{cssxref("justify-content")}} — 주축에 대해 flex 항목들을 정렬하는 방식을 제어. flex 컨테이너에 지정하는 속성.
 - {{cssxref("align-items")}} — 교차축에 대해 flex 항목들을 정렬하는 방식을 제어. flex 컨테이너에 지정하는 속성.
 - {{cssxref("align-self")}} — 개별 flex 항목을 교차 축에 대해 정렬 하는 방식을 제어. flex 항목에 지정하는 속성.
-- {{cssxref("align-content")}} — described in the spec as for “packing flex lines”; controls space between flex lines on the cross axis.
+- {{cssxref("align-content")}} — described in the spec as for "packing flex lines"; controls space between flex lines on the cross axis.
 
 또한, 이글에서 flexbox기반 정렬에서 margin 속성 값이 어떨게 쓰이는지 살펴볼 것입니다.
 
@@ -168,7 +168,7 @@ If you change flex-direction to one of the reverse values, then they will lay th
 
 ## Using auto margins for main axis alignment
 
-We don’t have a `justify-items` or `justify-self` property available to us on the main axis as our items are treated as a group on that axis. However it is possible to do some individual alignment in order to separate an item or a group of items from others by using auto margins along with flexbox.
+We don't have a `justify-items` or `justify-self` property available to us on the main axis as our items are treated as a group on that axis. However it is possible to do some individual alignment in order to separate an item or a group of items from others by using auto margins along with flexbox.
 
 A common pattern is a navigation bar where some key items are aligned to the right, with the main group on the left. You might think that this should be a use case for a `justify-self` property, however consider the image below. I have three items on one side and two on the other. If I were able to use `justify-self` on item _d_, it would also change the alignment of item _e_ that follows, which may or may not be my intention.
 
