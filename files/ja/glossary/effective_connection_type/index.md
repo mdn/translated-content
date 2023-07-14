@@ -20,7 +20,7 @@ slug: Glossary/Effective_connection_type
 navigator.connection.effectiveType;
 ```
 
-## See Also:
+## See Also
 
 - [Network Information API](/ja/docs/Web/API/Network_Information_API)
 - {{domxref('NetworkInformation')}}
