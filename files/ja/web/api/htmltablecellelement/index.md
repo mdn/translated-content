@@ -53,7 +53,7 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
 - {{domxref("HTMLTableCellElement.axis")}} {{deprecated_inline}}
   - : 仮想的にセルをグループ化する名前を含む文字列。これは、廃止された [`axis`](/ja/docs/Web/HTML/Element/td#axis) 属性を反映しています。
 - {{domxref("HTMLTableCellElement.bgColor")}} {{deprecated_inline}}
-  - : 文字列で、セルの背景色です。これは、廃止された [`bgColor`](/ja/docs/Web/HTML/Element/td#bgColor) 属性を反映したものです。
+  - : 文字列で、セルの背景色です。これは、廃止された [`bgColor`](/ja/docs/Web/HTML/Element/td#bgcolor) 属性を反映したものです。
 - {{domxref("HTMLTableCellElement.ch")}} {{deprecated_inline}}
   - : 文字列で、 1 つの文字を含みます。この文字は、列の全てのセルを揃えるための文字です。これは [`char`](/ja/docs/Web/HTML/Element/td#char) を反映し、既定では言語に関連付けられた小数点の値、例えば英語なら `'.'`、フランス語なら `','` となります。このプロパティはオプションであり、あまり対応されていませんでした。
 - {{domxref("HTMLTableCellElement.chOff")}} {{deprecated_inline}}
