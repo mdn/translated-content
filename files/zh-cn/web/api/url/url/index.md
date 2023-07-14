@@ -68,7 +68,7 @@ new URL("/en-US/docs", "");
 new URL("/en-US/docs");
 // Raises a TypeError exception as '/en-US/docs' is not a valid URL
 
-// Other cases:
+// 其他示例：
 
 new URL("http://www.example.com");
 // => 'http://www.example.com/'
