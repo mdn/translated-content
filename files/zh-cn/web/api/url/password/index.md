@@ -1,5 +1,5 @@
 ---
-title: URL.密码
+title: URL：password 属性
 slug: Web/API/URL/password
 ---
 
@@ -13,7 +13,7 @@ slug: Web/API/URL/password
 
 ## 语法
 
-```plain
+```js
 string = object.password;
 object.password = string;
 ```
