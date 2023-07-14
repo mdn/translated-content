@@ -7,7 +7,7 @@ slug: Web/API/URL/URL
 
 **`URL()`** 构造函数返回一个新创建的 {{domxref("URL")}} 对象，该对象表示由参数定义的 URL。
 
-如果给定的基本 URL 或生成的 URL 不是有效的 URL，则会抛出 {{jsxref("TypeError")}} 异常。
+如果给定的基本 URL 或生成的 URL 不是有效的 URL，则会抛出 JavaScript {{jsxref("TypeError")}} 异常。
 
 {{AvailableInWorkers}}
 
