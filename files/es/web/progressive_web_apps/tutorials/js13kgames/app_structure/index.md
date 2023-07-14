@@ -242,10 +242,10 @@ self.addEventListener("install", function (e) {
   e.waitUntil(
     caches.open(cacheName).then(function (cache) {
       console.log(
-        "[Servicio Worker] Almacena todo en caché: contenido e intérprete de la aplicación",
+        "[Servicio Worker] Almacena todo en caché: contenido e intérprete de la aplicación
       );
       return cache.addAll(contentToCache);
-    }),
+    })
   );
 });
 ```
@@ -262,14 +262,14 @@ self.addEventListener("fetch", function (e) {
         fetch(e.request).then(function (response) {
           return caches.open(cacheName).then(function (cache) {
             console.log(
-              "[Servicio Worker] Almacena el nuevo recurso: " + e.request.url,
+              "[Servicio Worker] Almacena el nuevo recurso: " + e.request.url
             );
             cache.put(e.request, response.clone());
             return response;
           });
         })
       );
-    }),
+    })
   );
 });
 ```
