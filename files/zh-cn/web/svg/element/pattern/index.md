@@ -13,7 +13,34 @@ slug: Web/SVG/Element/pattern
 
 ## 示例
 
-» [pattern.svg](/files/3268/pattern.svg)
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="star" viewBox="0,0,10,10" width="10%" height="10%">
+      <polygon points="0,0 2,5 0,10 5,8 10,10 8,5 10,0 5,2" />
+    </pattern>
+  </defs>
+
+  <circle cx="50" cy="50" r="50" fill="url(#star)" />
+  <circle
+    cx="180"
+    cy="50"
+    r="40"
+    fill="none"
+    stroke-width="20"
+    stroke="url(#star)" />
+</svg>
+```
+
+{{EmbedLiveSample('示例', 150, '100%')}}
 
 ## 属性
 

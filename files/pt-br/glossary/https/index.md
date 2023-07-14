@@ -10,4 +10,4 @@ original_slug: Glossario/https
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "HTTPS")}} na Wikipedia
+- [HTTPS](https://pt.wikipedia.org/wiki/HTTPS) na Wikipedia

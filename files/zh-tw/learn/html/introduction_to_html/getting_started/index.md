@@ -162,7 +162,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -424,7 +424,7 @@ window.addEventListener("load", drawOutput);
 以上講述了 HTML 中個別元素的基礎知識，但是單獨使用它們，並沒有多大用處。所以現在就讓我們來看看如何將這些元素組成一個 HTML 網頁吧：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />

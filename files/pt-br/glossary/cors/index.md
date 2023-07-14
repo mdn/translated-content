@@ -13,7 +13,7 @@ A [same-origin security policy](/pt-BR/docs/Web/Security/Same-origin_policy) pro
 ### Conhecimento geral
 
 - [Cross-Origin Resource Sharing (CORS)](/pt-BR/docs/Web/HTTP/CORS) na MDN
-- {{Interwiki("wikipedia", "Cross-origin resource sharing")}} na Wikipedia
+- [Cross-origin resource sharing](https://pt.wikipedia.org/wiki/Cross-origin_resource_sharing) na Wikipedia
 
 ### Cabeçalhos CORS
 

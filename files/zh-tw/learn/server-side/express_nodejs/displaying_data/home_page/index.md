@@ -38,7 +38,7 @@ The index controller function needs to fetch information about how many `Book`, 
 >   function (err, count) {
 >     // ... do something if there is an err
 >     // ... do something with the count if there was no error
->   }
+>   },
 > );
 > ```
 
@@ -87,7 +87,7 @@ exports.index = function (req, res) {
         error: err,
         data: results,
       });
-    }
+    },
   );
 };
 ```

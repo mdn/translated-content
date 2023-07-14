@@ -5,40 +5,31 @@ slug: Web/MathML/Element/msup
 
 {{MathMLRef}}
 
-MathML **`<msup>`** 元素用于为表达式加上标。
+[MathML](/zh-CN/docs/Web/MathML) **`<msup>`** 元素用于为表达式附加上标。
 
-语法如下：`<msup> base superscript </msup>`。
+使用语法如下：`<msup> base superscript </msup>`。
 
 ## 属性
 
-- `class`, `id`, `style`
-  - : 用来供[样式表](/zh-CN/docs/Web/CSS)使用。
-- `href`
-  - : 用来设置标签点击后跳转的链接。
-- `mathbackground`
-  - : 用来设置背景色，可以使用 `#rgb`、`#rrggbb` 或者 [HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
-- `mathcolor`
-  - : 用来设置文字颜色，同样可以使用 `#rgb`、`#rrggbb` 或者 [HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
-- `superscriptshift` {{deprecated_inline}}
-  - : 用来设置上标相对于表达式的基线的最小距离，它是一个[长度值](/zh-CN/docs/MathML/Attributes/Values#Lengths)。
-    此属性已被弃用，且将在未来被删除。
+该元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Global_attributes)和以下已弃用的属性：
 
-## 例子
+- `superscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
+  - : [`<length-percentage>`](/zh-CN/docs/Web/CSS/length-percentage) 值，表示上标基线向上移动的最小距离。
 
-下述代码表示：![x1](/files/3203/msup.png)
+> **备注：** 对于 `superscriptshift` 属性，一些浏览器可能也会接受[旧版 MathML 长度](/zh-CN/docs/Web/MathML/Values#旧版_mathml_长度)。
 
-您的浏览器的渲染结果：<math> <msup><mi>X</mi> <mn>2</mn></msup></math>
+## 示例
 
 ```html
-<math>
-
+<math display="block">
   <msup>
     <mi>X</mi>
     <mn>2</mn>
   </msup>
-
 </math>
 ```
+
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 
@@ -47,10 +38,6 @@ MathML **`<msup>`** 元素用于为表达式加上标。
 ## 浏览器兼容性
 
 {{Compat}}
-
-### Gecko 说明
-
-- 从 Gecko 26.0 开始，不再支持使用 \<none /> 作为子元素。并且渲染结果和 {{MathMLElement("msub")}} 和 {{MathMLElement("mmultiscripts")}} 这些等价配置更加接近，同时修复了一个关于 superscriptshift 属性错误使用的问题 (参阅 [Firefox bug 827713](https://bugzil.la/827713)).
 
 ## 参见
 

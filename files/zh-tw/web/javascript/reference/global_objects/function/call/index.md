@@ -63,7 +63,7 @@ function Product(name, price) {
 
   if (price < 0)
     throw RangeError(
-      'Cannot create product "' + name + '" with a negative price'
+      'Cannot create product "' + name + '" with a negative price',
     );
   return this;
 }

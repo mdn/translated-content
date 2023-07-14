@@ -53,7 +53,7 @@ var treeWalker = document.createTreeWalker(
       return NodeFilter.FILTER_ACCEPT;
     },
   },
-  false
+  false,
 );
 
 var nodeList = [];

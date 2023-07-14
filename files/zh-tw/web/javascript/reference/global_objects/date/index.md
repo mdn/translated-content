@@ -156,7 +156,7 @@ function printElapsedTime(fTest) {
     nEndTime = Date.now();
 
   console.log(
-    "Elapsed time: " + String(nEndTime - nStartTime) + " milliseconds"
+    "Elapsed time: " + String(nEndTime - nStartTime) + " milliseconds",
   );
   return vReturn;
 }

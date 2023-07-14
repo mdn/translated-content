@@ -48,7 +48,7 @@ Alguns estudos mostraram que até 60% das notificações por push não chegam ao
 
 Por causa dos abusos da utilização das notificações por push no passado, os desenvolvedores de navegadores começaram a implementar estratégias para ajudar a mitigar esse problema. Por exemplo, o Safari 12.1 agora exige - e outros navegadores já o fazem ou estão planejando[\[1\]](#mitigations-footnote-1) fazer—que o usuário interaja com a página de alguma forma antes que ela possa solicitar permissão para executar notificações por push, assim como já acontece com os popups. Isso pelo menos impede que o usuário receba espontaneamente essa pergunta em páginas da Web que apenas olharam de uma só vez, raramente ou nunca mais.
 
-\[1] No caso do Firefox, veja {{bug(1524619)}}, podemos observar que Firefox 68 implementa isso, desabilitado por padrão, usando a preferência `dom.webnotifications.requireuserinteraction`.
+\[1] No caso do Firefox, veja [Erro do Firefox 1524619](https://bugzil.la/1524619), podemos observar que Firefox 68 implementa isso, desabilitado por padrão, usando a preferência `dom.webnotifications.requireuserinteraction`.
 
 ## Veja também
 

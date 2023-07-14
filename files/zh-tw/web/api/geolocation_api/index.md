@@ -79,7 +79,7 @@ var geo_options = {
 var wpid = navigator.geolocation.watchPosition(
   geo_success,
   geo_error,
-  geo_options
+  geo_options,
 );
 ```
 
@@ -220,7 +220,7 @@ function prompt(window, pref, message, callback) {
         }
       },
       persistWhileVisible: true,
-    }
+    },
   );
 }
 
@@ -230,7 +230,7 @@ prompt(
   "Foo Add-on wants to know your location.",
   function callback(allowed) {
     alert(allowed);
-  }
+  },
 );
 ```
 

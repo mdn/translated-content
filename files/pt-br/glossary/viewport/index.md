@@ -10,7 +10,7 @@ A porção da viewport que está visível no momento é chamada de **visual view
 
 1. Conhecimentos gerais
 
-    1. {{Interwiki("wikipedia", "Viewport")}} na Wikipedia (em inglês)
+    1. [Viewport](https://en.wikipedia.org/wiki/Viewport) na Wikipedia (em inglês)
     2. [O que é viewport ?](https://pt.stackoverflow.com/questions/272210/o-que-%C3%A9-view-port) em Stackoverflow (em português)
     3. [Como obter a largura e altura da viewport com Javascript](https://andylangton.co.uk/blog/development/get-viewportwindow-size-width-and-height-javascript) (em inglês)
     4. [O conto de duas viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode - em inglês)

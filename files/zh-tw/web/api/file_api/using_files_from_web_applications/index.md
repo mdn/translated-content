@@ -134,7 +134,7 @@ fileSelect.addEventListener(
     }
     e.preventDefault(); // prevent navigation to "#"
   },
-  false
+  false,
 );
 ```
 
@@ -276,7 +276,7 @@ fileSelect.addEventListener(
     }
     e.preventDefault(); // prevent navigation to "#"
   },
-  false
+  false,
 );
 
 function handleFiles(files) {
@@ -360,7 +360,7 @@ function FileUpload(img, file) {
         self.ctrl.update(percentage);
       }
     },
-    false
+    false,
   );
 
   xhr.upload.addEventListener(
@@ -370,11 +370,11 @@ function FileUpload(img, file) {
       var canvas = self.ctrl.ctx.canvas;
       canvas.parentNode.removeChild(canvas);
     },
-    false
+    false,
   );
   xhr.open(
     "POST",
-    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php"
+    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
   );
   xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = function (evt) {
@@ -413,7 +413,7 @@ function fileUpload(file) {
   xhr.open("POST", uri, true);
   xhr.setRequestHeader(
     "Content-Type",
-    "multipart/form-data, boundary=" + boundary
+    "multipart/form-data, boundary=" + boundary,
   ); // simulate a file MIME POST request.
   xhr.setRequestHeader("Content-Length", fileSize);
 

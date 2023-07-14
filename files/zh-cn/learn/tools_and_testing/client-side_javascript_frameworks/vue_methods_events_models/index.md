@@ -43,9 +43,9 @@ slug: >-
 
 我们的 app 可以展示待办事项列表，但是我们不能更新该列表，除非手动更改代码。让我们新建一个组件来允许我们添加新的待办项。
 
-在 components 目录下，新建文件 `ToDoForm.vue`.
+1. 在 components 目录下，新建文件 `ToDoForm.vue`。
 
-1. 创建一个空的 `<template>` 和 `<script>` ：
+2. 创建一个空的 `<template>` 和 `<script>`：
 
     ```html
     <template></template>
@@ -55,7 +55,7 @@ slug: >-
     </script>
     ```
 
-2. 新建一个 HTML 表单来允许我们输入新的待办项并把它提交到 app。我们需要一个 [`<form>`](/zh-CN/docs/Web/HTML/Element/form) ，它里面包含 [`<label>`](/zh-CN/docs/Web/HTML/Element/label)，一个 [`<input>`](/zh-CN/docs/Web/HTML/Element/input)，一个 [`<button>`](/zh-CN/docs/Web/HTML/Element/button)。更新后的模版如下：
+3. 新建一个 HTML 表单来允许我们输入新的待办项并把它提交到 app。我们需要一个 [`<form>`](/zh-CN/docs/Web/HTML/Element/form)，它里面包含一个 [`<label>`](/zh-CN/docs/Web/HTML/Element/label)、一个 [`<input>`](/zh-CN/docs/Web/HTML/Element/input)、一个 [`<button>`](/zh-CN/docs/Web/HTML/Element/button)。更新后的模版如下：
 
     ```html
     <template>
@@ -76,15 +76,15 @@ slug: >-
     </template>
     ```
 
-    现在我们有一个可以 form 组件可以用来输入新的待办项的标题，它最终会渲染成`ToDoItem`的 label。
+    因此，现在我们有一个 form 组件可以用来输入新的待办项的标题，它最终会渲染成 `ToDoItem` 的 label。
 
-3. 我们把这个组件添加到 app 中，返回 `App.vue` 然后在 `<script>` 添加下面的语句：
+4. 我们把这个组件添加到 app 中，返回 `App.vue` 然后在 `<script>` 添加下面的语句：
 
     ```js
     import ToDoForm from './components/ToDoForm';
     ```
 
-4. 在你的 App 组件中注册它
+5. 在你的 App 组件中注册它
 
     ```js
     components: {
@@ -93,7 +93,7 @@ slug: >-
     }
     ```
 
-5. 最后将 `ToDoForm` 组件添加到 App 中的`<template>` 中，像下面这样：
+6. 最后将 `ToDoForm` 组件添加到 App 中的 `<template>` 中，像下面这样：
 
     ```html
     <template>
@@ -131,7 +131,7 @@ slug: >-
     }
     ```
 
-2. 接下来我们需要将该方法绑定到我们的 `<form>` 元素的 `submit` 事件处理程序。就像 Vue 如何使用 [`v-bind`](https://vuejs.org/v2/api/#v-bind) 语法来绑定属性，Vue 有 用于事件处理的特殊指令：[`v-on`](https://vuejs.org/v2/api/#v-on)。 `v-on` 指令通过 `v-on:event="method"` 语法工作。和 `v-bind` 很像，还有一个简写语法：`@event="method"`。为了保持一致性，我们将在此处使用简写语法。将 `submit` 处理程序添加到你的 `<form>` 元素，如下所示：
+2. 接下来我们需要将该方法绑定到我们的 `<form>` 元素的 `submit` 事件处理程序。就像 Vue 如何使用 [`v-bind`](https://vuejs.org/v2/api/#v-bind) 语法来绑定属性，Vue 有用于事件处理的特殊指令：[`v-on`](https://vuejs.org/v2/api/#v-on)。`v-on` 指令通过 `v-on:event="method"` 语法工作。和 `v-bind` 很像，还有一个简写语法：`@event="method"`。为了保持一致性，我们将在此处使用简写语法。将 `submit` 处理程序添加到你的 `<form>` 元素，如下所示：
 
     ```html
     <form @submit="onSubmit">
@@ -164,7 +164,7 @@ slug: >-
 
 我们首先需要的是表单中的 `data` 属性来跟踪待办事项的值。
 
-1. 向我们的 `ToDoForm` 组件对象添加一个 `data()` 方法，该方法返回一个 `label` 字段。我们可以将`label`的初始值设置为空字符串。
+1. 向我们的 `ToDoForm` 组件对象添加一个 `data()` 方法，该方法返回一个 `label` 字段。我们可以将 `label` 的初始值设置为空字符串。
 
     你的组件对象现在应该如下所示：
 
@@ -183,7 +183,7 @@ slug: >-
     };
     ```
 
-2. 我们现在需要一些方法将 `new-todo-input` `<input>` 字段的值附加到 `label` 字段。Vue 对此有一个特殊的指令：[`v-model`](https://vuejs.org/v2/api/#v-model)。`v-model` 绑定到你在其上设置的数据属性，并使其与 `<input>` 保持同步。`v-model` 适用于所有不同的输入类型，包括复选框、单选框和选择输入。要使用 `v-model`，你需要向 `<input>` 添加一个结构为 `v-model="variable"` 的属性。
+2. 我们现在需要一些方法将 `new-todo-input` 元素字段的值附加到 `label` 字段。Vue 对此有一个特殊的指令：[`v-model`](https://vuejs.org/v2/api/#v-model)。`v-model` 绑定到你在其上设置的数据属性，并使其与 `<input>` 保持同步。`v-model` 适用于所有不同的输入类型，包括复选框、单选框和选择输入。要使用 `v-model`，你需要向 `<input>` 添加一个结构为 `v-model="variable"` 的属性。
 
     所以在我们的例子中，我们会将它添加到我们的 `new-todo-input` 字段中，如下所示。现在就这样做：
 
@@ -220,13 +220,13 @@ slug: >-
 
 与事件修饰符类似，我们也可以添加修饰符来改变 `v-model` 的行为。在我们的案例中，有两个值得考虑。第一个，`.trim`，将删除输入之前或之后的空格。我们可以将修饰符添加到我们的 `v-model` 语句中，如下所示：`v-model.trim="label"`。
 
-我们应该考虑的第二个修饰符称为 `.lazy`。当 `v-model` 同步文本输入的值时，此修饰符会发生变化。如前所述，`v-model` 同步通过使用事件更新变量来工作。对于文本输入，此同步使用 [`input` 事件](/zh-CN/docs/Web/API/HTMLElement/input_event)进行。通常，这意味着 Vue 在每次击键后都会同步数据。`.lazy` 修饰符导致 `v-model` 使用 [`change` 事件](/zh-CN/docs/Web/API/HTMLElement/change_event) 代替。这意味着 Vue 只会在输入失去焦点或提交表单时同步数据。就我们的目的而言，这更合理，因为我们只需要最终数据。
+我们应该考虑的第二个修饰符称为 `.lazy`。当 `v-model` 同步文本输入的值时，此修饰符会发生变化。如前所述，`v-model` 同步通过使用事件更新变量来工作。对于文本输入，此同步使用 [`input` 事件](/zh-CN/docs/Web/API/HTMLElement/input_event)进行。通常，这意味着 Vue 在每次击键后都会同步数据。`.lazy` 修饰符导致 `v-model` 使用 [`change` 事件](/zh-CN/docs/Web/API/HTMLElement/change_event)代替。这意味着 Vue 只会在输入失去焦点或提交表单时同步数据。就我们的目的而言，这更合理，因为我们只需要最终数据。
 
 要同时使用 `.lazy` 修饰符和 `.trim` 修饰符，我们可以将它们链接起来，例如 `v-model.lazy.trim="label"`。
 
 如上所示更新你的 `v-model` 属性以链接 `lazy` 和 `trim`，然后再次测试你的应用。例如，尝试提交一个两端都有空格的值。
 
-## 使用自定义事件将数据传递给父母
+## 使用自定义事件将数据传递给父级
 
 我们现在非常接近能够将新的待办事项添加到我们的列表中。接下来我们需要做的是将新创建的待办事项传递给我们的 `App` 组件。为此，我们可以让我们的 `ToDoForm` 发出一个传递数据的自定义事件，并让 `App` 监听它。这与 HTML 元素上的原生事件非常相似：子组件可以发出可以通过 `v-on` 监听的事件。
 
@@ -265,7 +265,7 @@ slug: >-
     };
     ```
 
-3. 接下来，将 `todo-added` 事件的事件监听器添加到 `<to-do-form></to-do-form>`，它 事件触发时调用 `addToDo()` 方法。使用 `@` 简写，监听器看起来像这样：`@todo-added="addToDo"`:
+3. 接下来，将 `todo-added` 事件的事件监听器添加到 `<to-do-form></to-do-form>`，它在事件触发时调用 `addToDo()` 方法。使用 `@` 简写，监听器看起来像这样：`@todo-added="addToDo"`:
 
     ```html
     <to-do-form @todo-added="addToDo"></to-do-form>
@@ -283,9 +283,7 @@ slug: >-
     }
     ```
 
-5. 要真正在 `App.vue` 中获取这些数据，我们需要向我们的 `addToDo()` 方法添加一个参数，其中包含 `label` 新的待办事项。
-
-    返回 `App.vue` 并立即更新：
+5. 要真正在 `App.vue` 中获取这些数据，我们需要向我们的 `addToDo()` 方法添加一个参数，其中包含 `label` 新的待办事项。返回 `App.vue` 并立即更新：
 
     ```js
     methods: {
@@ -295,11 +293,11 @@ slug: >-
     }
     ```
 
-如果你再次测试你的表单，你将在提交时看到你在控制台中输入的任何文本。Vue 自动将 `this.$emit()` 中事件名称后面的参数传递给你的事件处理程序。
+如果你再次测试你的表单，你将看到在提交时输入的任何文本都已记录到控制台中。Vue 自动将 `this.$emit()` 中事件名称后面的参数传递给你的事件处理程序。
 
 ## 将新的待办事项添加到我们的数据中
 
-现在我们在 `App.vue` 中获得了来自 `ToDoForm` 的数据，我们需要在 `ToDoItems` 数组中添加一个表示它的项目 . 这可以通过将新的待办事项对象推送到包含我们新数据的数组来完成。
+现在我们在 `App.vue` 中获得了来自 `ToDoForm` 的数据，我们需要在 `ToDoItems` 数组中添加一个表示它的项目。这可以通过将新的待办事项对象推送到包含我们新数据的数组来完成。
 
 1. 像这样更新你的 `addToDo()` 方法：
 

@@ -43,7 +43,7 @@ Content scripts 只能使用 can only access [一小部分的擴充套件 APIs](
 舉例來說，有這樣一個網頁：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -406,7 +406,7 @@ window.postMessage(
   {
     message: "check",
   },
-  "*"
+  "*",
 );
 ```
 
