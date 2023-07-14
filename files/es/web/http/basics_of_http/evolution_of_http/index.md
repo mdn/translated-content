@@ -78,7 +78,7 @@ Content-Type: text/gif
 
 Estas innovaciones, no se desarrollaron de forma planeada, sino más bien con una aproximación de prueba y error, entre los años 1991 y 1995: un servidor y un navegador, añadían una nueva funcionalidad y se evaluaba su aceptación. Debido a esto, en ese periodo eran muy comunes los problemas de interoperatividad. En Noviembre de 1996, para poner fin a estos problemas se publicó un documento informativo que describía las prácticas adecuadas, {{RFC(1945)}}. Esté documento es la definición del protocolo HTTP/1.0. Resulta curioso, que realmente no es un estándar oficial.
 
-## HTTP/1.1 – El protocolo estándar.
+## HTTP/1.1 – El protocolo estándar
 
 En paralelo al uso, un poco desordenado, y las diversas implementaciones de HTTP/1.0, y desde el año 1995, un año antes de la publicación del documento del HTTP/1.0, un proceso de estandarización formal ya estaba en curso. La primera versión estandarizada de HTTP: el protocolo HTTP/1.1, se publicó en 1997, tan solo unos meses después del HTTP/1.0
 

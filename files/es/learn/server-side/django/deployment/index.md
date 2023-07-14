@@ -457,7 +457,7 @@ python-3.5.2
 
 > **Nota:** Heroku sólo soporta un número pequeño de [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes). Tú puedes especificar valores de runtime de Python 3, pero en el momento de esta redacción la versión anterior será soportada como definida.
 
-#### Guardar los cambios en Github y volver a probar.
+#### Guardar los cambios en Github y volver a probar
 
 A continuacion, guardemos nuestros cambios en Github. En el terminal (dentro de nuestro respositorio), introduce los comandos siguientes:
 

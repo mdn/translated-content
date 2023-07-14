@@ -83,7 +83,7 @@ subclass.prototype = Object.create(
 
 {{Compat}}
 
-## Ver también:
+## Ver también
 
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
 - {{jsxref("Object.defineProperty()")}}
