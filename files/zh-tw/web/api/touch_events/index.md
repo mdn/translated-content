@@ -121,7 +121,7 @@ function handleMove(evt) {
           ongoingTouches[idx].pageX +
           ", " +
           ongoingTouches[idx].pageY +
-          ");"
+          ");",
       );
       ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
       log("ctx.lineTo(" + touches[i].pageX + ", " + touches[i].pageY + ");");
@@ -316,7 +316,7 @@ function onTouch(evt) {
     evt.shiftKey,
     evt.metaKey,
     0,
-    null
+    null,
   );
   evt.originalTarget.dispatchEvent(newEvt);
 }

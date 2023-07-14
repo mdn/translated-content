@@ -67,7 +67,7 @@ function show_props(obj, objName) {
 }
 
 alert(
-  show_props(o, "o")
+  show_props(o, "o"),
 ); /* alerts (in different lines): o.a = 1 o.b = 2 o.c = 3 */
 ```
 

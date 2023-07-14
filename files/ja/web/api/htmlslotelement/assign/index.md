@@ -1,15 +1,16 @@
 ---
-title: HTMLSlotElement.assign()
+title: "HTMLSlotElement: assign() メソッド"
+short-title: assign()
 slug: Web/API/HTMLSlotElement/assign
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("Shadow DOM API")}}
 
-**`assign()`** は {{domxref("HTMLSlotElement")}} インターフェイスのメソッドで、このスロットの**手動で割り当てられたノード**をスロットテーブルの順序付きリストに設定します。手動で割り当てられたノードは初期状態では、ノードに `assign()` を使用して割り当てられるまで空です。
+**`assign()`** は {{domxref("HTMLSlotElement")}} インターフェイスのメソッドで、このスロットの手動で割り当てられたノードをスロットテーブルの順序付きリストに設定します。手動で割り当てられたノードは初期状態では、ノードに `assign()` を使用して割り当てられるまで空です。
 
-宣言的なスロット割り当てと命令的なスロット割り当てを混在させることはできないことに注意してください。したがって、これを動作させるには、シャドウツリーを `slotAssignment: "manual"` オプションで作成する必要があります。
+> **メモ:** 手動の（命令的な）スロットと名前付き（宣言的、自動的な）スロットの割り当てを混在させることはできません。したがって、このメソッドを動作させるには、シャドウツリーを[作成](/ja/docs/Web/API/Element/attachShadow)するのに `slotAssignment: "manual"` オプションを使用する必要があります。
 
 ## 構文
 
@@ -26,7 +27,12 @@ assign(node1, node2, /* … ,*/ nodeN)
 
 ### 返値
 
-undefined
+なし ({{jsxref("undefined")}})。
+
+### 例外
+
+- `NotAllowedError` {{domxref("DOMException")}}
+  -: 自動的に割り当てられるスロットでこのメソッドを呼び出すと発生します。
 
 ## 例
 
@@ -36,9 +42,9 @@ undefined
 function UpdateDisplayTab(elem, tabIdx) {
   const shadow = elem.shadowRoot;
   const slot = shadow.querySelector("slot");
-  const panels = elem.querySelectorAll('tab-panel');
-  if (panels.length && tabIdx && tabIdx <= panels.length ) {
-    slot.assign(panels[tabIdx-1]);
+  const panels = elem.querySelectorAll("tab-panel");
+  if (panels.length && tabIdx && tabIdx <= panels.length) {
+    slot.assign(panels[tabIdx - 1]);
   } else {
     slot.assign();
   }
@@ -52,3 +58,7 @@ function UpdateDisplayTab(elem, tabIdx) {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{domxref("Element.attachShadow()")}}

@@ -39,7 +39,7 @@ Promise.resolve("Success").then(
   },
   function (value) {
     // not called
-  }
+  },
 );
 ```
 
@@ -86,7 +86,7 @@ p1.then(
   },
   function (e) {
     // not called
-  }
+  },
 );
 
 // Thenable throws before callback
@@ -105,7 +105,7 @@ p2.then(
   },
   function (e) {
     console.log(e); // TypeError: Throwing
-  }
+  },
 );
 
 // Thenable throws after callback
@@ -124,7 +124,7 @@ p3.then(
   },
   function (e) {
     // not called
-  }
+  },
 );
 ```
 

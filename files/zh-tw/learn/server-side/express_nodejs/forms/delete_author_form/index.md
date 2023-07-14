@@ -37,7 +37,7 @@ exports.author_delete_get = function (req, res, next) {
         author: results.author,
         author_books: results.authors_books,
       });
-    }
+    },
   );
 };
 ```
@@ -93,7 +93,7 @@ exports.author_delete_post = function (req, res, next) {
           res.redirect("/catalog/authors");
         });
       }
-    }
+    },
   );
 };
 ```
