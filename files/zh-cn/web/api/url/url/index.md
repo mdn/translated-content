@@ -63,7 +63,7 @@ new URL("/en-US/docs", "https://developer.mozilla.org/fr-FR/toto");
 // 无效 URL：
 
 new URL("/en-US/docs", "");
-// Raises a TypeError exception as '' is not a valid URL
+// 抛出 TypeError 异常：'' is not a valid URL
 
 new URL("/en-US/docs");
 // Raises a TypeError exception as '/en-US/docs' is not a valid URL
