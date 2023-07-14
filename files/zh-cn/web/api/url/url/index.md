@@ -21,11 +21,11 @@ new URL(url, base)
 ### 参数
 
 - `url`
-  - : 一个表示绝对或相对 URL 的 {{domxref("DOMString")}} 或任何具有字符串化方法的对象，如 <a>， <area> 元素。如果 `url` 是相对 URL，则会将 `base` 用作基准 URL。如果 `url` 是绝对 URL，则无论参数`base`是否存在，都将被忽略。
+  - : 一个表示绝对或相对 URL 的 {{domxref("DOMString")}} 或任何具有字符串化方法的对象，如 <a>， <area> 元素。如果 `url` 是相对 URL，则会将 `base` 用作基准 URL。如果 `url` 是绝对 URL，则无论参数 `base` 是否存在，都将被忽略。
 - `base` {{optional_inline}}
   - : 一个表示基准 URL 的 {{domxref("DOMString")}}，当 url 为相对 URL 时，它才会生效。如果未指定，它默认为 `undefined`。
 
-> **备注：** `url` 和 `base` 参数将从任意对象转换为字符串，就像其他接受字符串的 Web API 一样。特别地，您可以为任一参数使用现有的 {{domxref("URL")}} 对象，它将被转换为该对象的{{domxref("URL.href", "href")}} 属性。
+> **备注：** `url` 和 `base` 参数将从任意对象转换为字符串，就像其他接受字符串的 Web API 一样。特别地，您可以为任一参数使用现有的 {{domxref("URL")}} 对象，它将被转换为该对象的 {{domxref("URL.href", "href")}} 属性。
 
 ### 异常
 
