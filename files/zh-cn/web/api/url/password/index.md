@@ -1,5 +1,5 @@
 ---
-title: URL.password
+title: URL：password 属性
 slug: Web/API/URL/password
 ---
 
