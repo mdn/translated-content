@@ -75,25 +75,8 @@ translation_of: Web/MathML/Element/maction
 
 ## Спецификации
 
-| Спецификация                                                                             | Статус                       | Комментарий            |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ---------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.maction', 'maction') }} | {{ Spec2('MathML3') }} | Текущая спецификация   |
-| {{ SpecName('MathML2', 'chapter3.html#presm.maction', 'maction') }} | {{ Spec2('MathML2') }} | Начальная спецификация |
+{{Specifications}}
 
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Специфика Gecko
-
-- До Gecko 9.0 была поддержка нестандартного значения `restyle` для атрибута `actiontype`. Это значение было удалено.
-- До Gecko 14.0 значение `statusline` для атрибута `actiontype` использовало нестандартный синтаксис. Это было исправлено в соответствии со спецификацией MathML.
-
-  ```html
-  <maction actiontype="statusline#(message)">
-  (expression)
-  </maction>
-  ```
-
-- В Gecko 15.0 атрибут `selection` учитывается только со значением actiontype `"toggle"`.
-- Начиная с Gecko 16.0 атрибут `selection` учитывается с произвольным значением `actiontype`. Если `actiontype` не указан (пуст) или атрибут `selection` недопустимый, возникнет ошибка MathML (недопустимая разметка).
