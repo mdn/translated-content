@@ -95,7 +95,7 @@ slug: Web/HTML/Element/meta
 > **备注：** [`name`](/zh-CN/docs/Web/HTML/Element/meta#name) 属性在 {{HTMLElement("meta")}} 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 [`name`](/zh-CN/docs/Web/HTML/Element/meta#name)、[`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 或者 [`charset`](/zh-CN/docs/Web/HTML/Element/meta#charset) 三者中任何一个属性时，[`itemprop`](/zh-CN/docs/Web/HTML/Element/meta#itemprop) 属性不能被使用。
 
 - `charset`
-  - : 该属性声明了文档的字符编码。如果存在该属性，则其值必须与字符串" utf-8 "进行ASCII不区分大小写的匹配，因为UTF-8是HTML5文档的唯一有效编码。声明字符编码的 <meta> 元素必须完全位于文档的前1024个字节内。
+  - : 该属性声明了文档的字符编码。如果存在该属性，则其值必须与字符串" utf-8 "进行ASCII不区分大小写的匹配，因为UTF-8是HTML5文档的唯一有效编码。声明字符编码的 `<meta>` 元素必须完全位于文档的前1024个字节内。
 - `content`
   - : 此属性包含 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 或 [`name`](/zh-CN/docs/Web/HTML/Element/meta#name) 属性的值，具体取决于所使用的值。
 - `http-equiv`
