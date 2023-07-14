@@ -18,9 +18,9 @@ A primera vista, un elemento {{HTMLElement("canvas")}} es parecido al elemento {
 
 > **Nota:** Si su renderizado se ve distorsionado, pruebe especificar los atributos width y height explícitamente en los atributos del `<canvas>` , y no usando CSS.
 
-El atributo [id](/es/docs/Web/HTML/Atributos_Globales/id) no está especificado para el elemento `<canvas>` pero es uno de los [atributos globales de HTML](/es/docs/Web/HTML/Atributos_Globales) el cual puede ser aplicado a cualquier elemento HTML (como [class](/en-US/docs/Web/HTML/Global_attributes/class) por ejemplo). Siempre es buena idea proporcionar un `id` porque esto hace más fácil identificarlo en un script.
+El atributo [id](/es/docs/Web/HTML/Atributos_Globales/id) no está especificado para el elemento `<canvas>` pero es uno de los [atributos globales de HTML](/es/docs/Web/HTML/Atributos_Globales) el cual puede ser aplicado a cualquier elemento HTML (como [class](/es/docs/Web/HTML/Global_attributes/class) por ejemplo). Siempre es buena idea proporcionar un `id` porque esto hace más fácil identificarlo en un script.
 
-El elemento `<canvas>` puede ser estilizado como a cualquier imagen normal (margin, border, background, etc). Estas reglas, sin embargo, no afectan a lo dibujado sobre el canvas. Mas adelante veremos cómo se hace esto en un [capítulo dedicado](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) en este tutorial. Cuando no tenemos reglas de estilo aplicadas al canvas, este será completamente transparente.
+El elemento `<canvas>` puede ser estilizado como a cualquier imagen normal (margin, border, background, etc). Estas reglas, sin embargo, no afectan a lo dibujado sobre el canvas. Mas adelante veremos cómo se hace esto en un [capítulo dedicado](/es/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) en este tutorial. Cuando no tenemos reglas de estilo aplicadas al canvas, este será completamente transparente.
 
 ### Contenido alternativo
 
