@@ -47,12 +47,10 @@ translation_of: Web/Manifest/short_name
 "short_name": "رائع"
 ```
 
-## Specification
+## Спецификации
 
-| Specification                                                                    | Status                       | Comment             | Feedback                                                                         |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName('Manifest', '#short_name-member', 'short_name')}} | {{Spec2('Manifest')}} | Initial definition. | [Web App Manifest Working Group drafts](https://github.com/w3c/manifest/issues/) |
+{{Specifications}}
 
-## Поддержка браузерами
+## Совместимость с браузерами
 
 {{Compat}}

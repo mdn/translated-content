@@ -2,6 +2,8 @@
 
 system:
   - .github/**/*
+  - .husky/**/*
+  - .*
 
 l10n-de:
   - files/de/**/*
