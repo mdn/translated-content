@@ -43,7 +43,7 @@ slug: Learn/JavaScript/First_steps/A_first_splash
 在本文中，我們將向您展示如何構建您可以在下面看到的簡單遊戲：
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -292,7 +292,7 @@ JavaScript 運算子可以讓我們執行比較、數學運算、連接字符串
 如果你不能快速打開瀏覽器開發工具， 你可以使用内嵌的應用程式中輸入以下範例：
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />

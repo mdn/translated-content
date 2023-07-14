@@ -17,7 +17,7 @@ slug: >-
 當整個遊戲透過{{htmlelement("canvas")}} 元件渲染時，HTML 檔案結構就會相當簡單。用你最喜歡的文字編輯器打開新的 HTML 檔，將它命名為`index.html並存在適當的位置上，再將下面的的程式碼貼到index.html中`:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
