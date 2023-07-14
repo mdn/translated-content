@@ -46,7 +46,7 @@ var testDivs = Array.prototype.filter.call(
   testElements,
   function (testElement) {
     return testElement.nodeName === "DIV";
-  }
+  },
 );
 ```
 

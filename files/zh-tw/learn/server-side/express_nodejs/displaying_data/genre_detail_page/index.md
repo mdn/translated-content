@@ -45,7 +45,7 @@ exports.genre_detail = function (req, res, next) {
         genre: results.genre,
         genre_books: results.genre_books,
       });
-    }
+    },
   );
 };
 ```
