@@ -108,7 +108,7 @@ function showLoc() {
         " (" +
         typeof oLocation[sProp] +
         "): " +
-        (oLocation[sProp] || "n/a")
+        (oLocation[sProp] || "n/a"),
     );
   }
   alert(aLog.join("\n"));
@@ -139,10 +139,10 @@ function loadPageVar(sVar) {
         "^(?:.*[&\\?]" +
           escape(sVar).replace(/[\.\+\*]/g, "\\$&") +
           "(?:\\=([^&]*))?)?.*$",
-        "i"
+        "i",
       ),
-      "$1"
-    )
+      "$1",
+    ),
   );
 }
 
@@ -268,7 +268,7 @@ var oGetVars = new (function (sSearch) {
 #### Using bookmars without changing the `window.location.hash` property:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
@@ -585,10 +585,10 @@ var showBookmark = (function () {
     }
     _isBot = true;
     document.documentElement.scrollTop = Math.round(
-      _scrollY + ((_nodeY - _scrollY) * _itFrame) / nFrames
+      _scrollY + ((_nodeY - _scrollY) * _itFrame) / nFrames,
     );
     document.documentElement.scrollLeft = Math.round(
-      _scrollX + ((_nodeX - _scrollX) * _itFrame) / nFrames
+      _scrollX + ((_nodeX - _scrollX) * _itFrame) / nFrames,
     );
     if (_useHash && _itFrame === nFrames) {
       location.hash = _bookMark;

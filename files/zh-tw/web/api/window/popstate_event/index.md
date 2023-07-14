@@ -31,7 +31,10 @@ window.onpopstate = funcRef;
 ```js
 window.onpopstate = function (event) {
   alert(
-    "location: " + document.location + ", state: " + JSON.stringify(event.state)
+    "location: " +
+      document.location +
+      ", state: " +
+      JSON.stringify(event.state),
   );
 };
 

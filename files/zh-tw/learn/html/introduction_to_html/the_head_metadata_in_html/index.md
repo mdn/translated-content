@@ -33,7 +33,7 @@ HTML 文件的 {{glossary("Head", "head")}} 是網頁在加載完畢之後，不
 讓我們再看一次之前所看過的 [HTML 文件](/zh-TW/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_document)：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />

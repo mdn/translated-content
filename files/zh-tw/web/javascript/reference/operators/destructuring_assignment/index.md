@@ -181,7 +181,7 @@ function parseProtocol(url) {
 }
 
 console.log(
-  parseProtocol("https://developer.mozilla.org/en-US/Web/JavaScript")
+  parseProtocol("https://developer.mozilla.org/en-US/Web/JavaScript"),
 ); // "https"
 ```
 

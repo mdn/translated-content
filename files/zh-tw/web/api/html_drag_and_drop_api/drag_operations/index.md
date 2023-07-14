@@ -114,7 +114,7 @@ setDragImage 需要三個參數，一是圖片來源(通常是圖片元素，但
 function dragWithCustomImage(event) {
   var canvas = document.createElementNS(
     "http://www.w3.org/1999/xhtml",
-    "canvas"
+    "canvas",
   );
   canvas.width = canvas.height = 50;
 

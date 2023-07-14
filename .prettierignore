@@ -1,35 +1,86 @@
+# This .prettierignore file uses .gitignore syntax
+# see https://prettier.io/docs/en/ignore.html#ignoring-files-prettierignore
+
+# Generated content
 build/
+/files/**/_wikihistory.json
+/files/**/_githistory.json
+
+# Conflicting/orphaned files
+/files/**/conflicting/**/*.md
+/files/**/orphaned/**/*.md
 
 # A full pass on all Markdown files is being performed.
-# When starting a new folder, please expand the glob pattern
-# and remove the corresponding line from this file.
 # The following folders still need a full pass:
-
-# system files
-/.github/**/*.md
-/docs/README.md
-/README.md
 
 # es
 /docs/es/**/*.md
-/files/es/**/*.md
+/files/es/games/**/*.md
+/files/es/glossary/**/*.md
+/files/es/learn/**/*.md
+/files/es/mdn/**/*.md
+/files/es/mozilla/**/*.md
+/files/es/web/api/**/*.md
+/files/es/web/css/**/*.md
+/files/es/web/html/**/*.md
+/files/es/web/http/**/*.md
+/files/es/web/javascript/**/*.md
+/files/es/webassembly/**/*.md
 
 # fr
-/files/fr/**/*.md
+/files/fr/games/**/*.md
+/files/fr/glossary/**/*.md
+/files/fr/learn/**/*.md
+/files/fr/mdn/**/*.md
+/files/fr/mozilla/**/*.md
+/files/fr/web/**/*.md
+/files/fr/webassembly/**/*.md
 
 # ja
-/files/ja/**/*.md
+/files/ja/games/**/*.md
+/files/ja/glossary/**/*.md
+/files/ja/learn/**/*.md
+/files/ja/mdn/**/*.md
+/files/ja/mozilla/**/*.md
+/files/ja/related/**/*.md
+/files/ja/web/**/*.md
+/files/ja/webassembly/**/*.md
 
 # ko
 /docs/ko/**/*.md
-/files/ko/**/*.md
+/files/ko/games/**/*.md
+/files/ko/glossary/**/*.md
+/files/ko/learn/**/*.md
+/files/ko/mdn/**/*.md
+/files/ko/mozilla/**/*.md
+/files/ko/web/**/*.md
+/files/ko/webassembly/**/*.md
 
 # pt-br
-/files/pt-br/**/*.md
+/files/pt-br/games/**/*.md
+/files/pt-br/glossary/**/*.md
+/files/pt-br/learn/**/*.md
+/files/pt-br/mdn/**/*.md
+/files/pt-br/mozilla/**/*.md
+/files/pt-br/web/**/*.md
+/files/pt-br/webassembly/**/*.md
 
 # ru
 /docs/ru/**/*.md
-/files/ru/**/*.md
+/files/ru/games/**/*.md
+/files/ru/glossary/**/*.md
+/files/ru/learn/**/*.md
+/files/ru/mdn/**/*.md
+/files/ru/mozilla/**/*.md
+/files/ru/web/**/*.md
+/files/ru/webassembly/**/*.md
 
 # zh-cn
-/files/zh-cn/**/*.md
+/files/zh-cn/games/**/*.md
+/files/zh-cn/glossary/**/*.md
+/files/zh-cn/learn/**/*.md
+/files/zh-cn/mdn/**/*.md
+/files/zh-cn/mozilla/**/*.md
+/files/zh-cn/web/**/*.md
+/files/zh-cn/webassembly/**/*.md
+/docs/zh-cn/glossary.md

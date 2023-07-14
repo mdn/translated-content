@@ -94,7 +94,7 @@ The `style` object represents an individual style statement. Unlike the individu
 More important than the two properties noted here is the use of the `style` object to set individual style properties on an element:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>style Property Example</title>

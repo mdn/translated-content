@@ -133,7 +133,3 @@ translation_of: Web/MathML/Element/mn
 ## Совместимость с браузерами
 
 {{Compat}}
-
-## Особенности ядра Gecko
-
-- Некоторые значения `mathvariant` реализованы только начиная с Gecko 28.0 и требуют соответствующих [математических шрифтов](/ru/docs/Mozilla/MathML_Project/Fonts).

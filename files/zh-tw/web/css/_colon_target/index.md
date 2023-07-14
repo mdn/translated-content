@@ -32,7 +32,10 @@ The _anchor_ can be any element with an`id`attribute, e.g. `<h1 id="section2">` 
 }
 
 :target:before {
-  font: 70% Arial, "Nimbus Sans L", sans-serif !important;
+  font:
+    70% Arial,
+    "Nimbus Sans L",
+    sans-serif !important;
   content: "\25ba"; /* ► */
   color: red;
   background: gold;
@@ -49,7 +52,7 @@ The _anchor_ can be any element with an`id`attribute, e.g. `<h1 id="section2">` 
 The `:target` pseudo-class also works fine with **undisplayed elements**:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -83,7 +86,7 @@ The `:target` pseudo-class also works fine with **undisplayed elements**:
 The `:target` pseudo-class is useful to switch on/off some invisible elements. In this way you can create a pure-CSS lightbox ([live demo](/files/4607/lightbox.html)).
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
