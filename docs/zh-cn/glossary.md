@@ -60,7 +60,7 @@
 | Conclusion | 总结 |  | <https://github.com/mdn/translated-content/pull/13329#discussion_r1199677894> |
 | Examples  | 示例 |  |  |
 | Exceptions | 异常 |  |  |
-| Formal Definition | 形式定义     |  | <https://zh.wikipedia.org/zh-cn/形式文法> |
+| Formal Definition | 形式定义 |  | <https://zh.wikipedia.org/zh-cn/形式文法> |
 | Formal syntax | 形式语法 |  | <https://zh.wikipedia.org/zh-cn/形式文法> |
 | Objective | 目标 | 在学习区表格中使用 |  |
 | Parameters | 参数 |  |  |
@@ -68,6 +68,7 @@
 | See also | 参见 |  |  |
 | Specifications | 规范 |  |  |
 | Technical summary | 技术概要 |  | <https://github.com/mdn/translated-content/issues/11456> |
+| Test your skills | 技能测试 |  |  |
 | Usage notes | 使用说明 |  | <https://github.com/mdn/translated-content/pull/12600#discussion_r1161045585> |
 
 ## 通用术语
