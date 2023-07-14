@@ -20,8 +20,12 @@ cursor: auto;
 cursor: url(hand.cur), pointer;
 
 /* URL and coordinates, with a keyword fallback */
-cursor: url(cursor1.png) 4 12, auto;
-cursor: url(cursor2.png) 2 2, pointer;
+cursor:
+  url(cursor1.png) 4 12,
+  auto;
+cursor:
+  url(cursor2.png) 2 2,
+  pointer;
 
 /* 全域值 */
 cursor: inherit;
@@ -36,7 +40,10 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
 For example, this specifies two images using `<url>` values, providing `<x><y>` coordinates for the second one, and falling back to the `progress` keyword value if neither image can be loaded:
 
 ```css
-cursor: url(one.svg), url(two.svg) 5 5, progress;
+cursor:
+  url(one.svg),
+  url(two.svg) 5 5,
+  progress;
 ```
 
 ### 數值

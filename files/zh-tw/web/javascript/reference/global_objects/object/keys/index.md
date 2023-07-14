@@ -49,7 +49,7 @@ var my_obj = Object.create(
         return this.foo;
       },
     },
-  }
+  },
 );
 my_obj.foo = 1;
 

@@ -125,7 +125,7 @@ Promise.race([p3, p4]).then(
   },
   function (reason) {
     // Not called
-  }
+  },
 );
 
 var p5 = new Promise(function (resolve, reject) {
@@ -142,7 +142,7 @@ Promise.race([p5, p6]).then(
   function (reason) {
     console.log(reason); // "six"
     // p6 is faster, so it rejects
-  }
+  },
 );
 ```
 

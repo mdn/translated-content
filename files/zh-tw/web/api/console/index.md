@@ -143,7 +143,7 @@ You can use the `%c` directive to apply a CSS style to console output:
 ```js
 console.log(
   "This is %cMy stylish message",
-  "color: yellow; font-style: italic; background-color: blue;padding: 2px"
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px",
 );
 ```
 
