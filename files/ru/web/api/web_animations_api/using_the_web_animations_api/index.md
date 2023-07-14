@@ -378,5 +378,5 @@ aliceChange.onfinish = endGame;
 ## Посмотрите также
 
 - [Полный набор Алиса в Стране Чудес демки](http://codepen.io/collection/bpEza/) на сайт codepen для вас, чтобы играть, развиваться и делиться
-- [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) — отличная статья, чтобы прочитать, где объясняется больше на фоне веб-анимации API, и поэтому он является более эффективным, чем другие методы веб-анимации
+- [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) — отличная статья, чтобы прочитать, где объясняется больше на фоне веб-анимации API, и поэтому он является более эффективным, чем другие методы веб-анимации
 - [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill
