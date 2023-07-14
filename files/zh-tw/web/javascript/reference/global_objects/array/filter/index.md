@@ -155,7 +155,7 @@ const fruits = ["apple", "banana", "grapes", "mango", "orange"];
  */
 const filterItems = (query) => {
   return fruits.filter(
-    (el) => el.toLowerCase().indexOf(query.toLowerCase()) > -1
+    (el) => el.toLowerCase().indexOf(query.toLowerCase()) > -1,
   );
 };
 

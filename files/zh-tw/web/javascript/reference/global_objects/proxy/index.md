@@ -108,7 +108,7 @@ A function proxy could easily extend a constructor with a new constructor. This 
 function extend(sup, base) {
   var descriptor = Object.getOwnPropertyDescriptor(
     base.prototype,
-    "constructor"
+    "constructor",
   );
   base.prototype = Object.create(sup.prototype);
   var handler = {
@@ -172,7 +172,7 @@ let view = new Proxy(
       // Indicate success
       return true;
     },
-  }
+  },
 );
 
 let i1 = (view.selected = document.getElementById("item-1"));
@@ -220,7 +220,7 @@ let products = new Proxy(
       // Indicate success
       return true;
     },
-  }
+  },
 );
 
 console.log(products.browsers); // ['Internet Explorer', 'Netscape']
@@ -286,7 +286,7 @@ let products = new Proxy(
 
       return undefined;
     },
-  }
+  },
 );
 
 console.log(products[0]); // { name: 'Firefox', type: 'browser' }

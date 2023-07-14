@@ -123,7 +123,7 @@ Extract information from a form element and set some of its attributes:
 Submit a form in a [popup window](/zh-TW/docs/Web/API/Window/open):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -170,7 +170,7 @@ Submit a form in a [popup window](/zh-TW/docs/Web/API/Window/open):
         open(
           oFormElement.action.replace(/(?:\?.*)?$/, sSearch.replace(/^&/, "?")),
           "submit-" + (oFormElement.name || Math.floor(Math.random() * 1e6)),
-          "resizable=yes,scrollbars=yes,status=yes"
+          "resizable=yes,scrollbars=yes,status=yes",
         );
       }
     </script>

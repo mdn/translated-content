@@ -65,7 +65,7 @@ httpRequest.send();
 ```js
 httpRequest.setRequestHeader(
   "Content-Type",
-  "application/x-www-form-urlencoded"
+  "application/x-www-form-urlencoded",
 );
 ```
 

@@ -54,7 +54,7 @@ function xhrError() {
 
 function loadFile(
   sURL,
-  fCallback /*, argumentToPass1, argumentToPass2, etc. */
+  fCallback /*, argumentToPass1, argumentToPass2, etc. */,
 ) {
   var oReq = new XMLHttpRequest();
   oReq.callback = fCallback;
@@ -156,7 +156,7 @@ One of the few cases in which a synchronous request does not usually block execu
 **`example.html`** (the main page):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
