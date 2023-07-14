@@ -54,7 +54,7 @@ p {
 
 {{EmbedLiveSample('length-percentage_示例', '100%', 320)}}
 
-## 在 `calc()` 中使用
+## 在 calc() 中使用
 
 当 `<length-percentage>` 被指定为允许类型时，这意味着百分比解析为长度，因此可以在 {{cssxref("calc", "calc()")}} 表达式中使用。因此，{{cssxref("width")}} 可以接受以下所有值：
 
