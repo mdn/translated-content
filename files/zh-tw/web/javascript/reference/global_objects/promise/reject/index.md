@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 
 ## 語法
 
-```plain
+```js
 Promise.reject(reason);
 ```
 
@@ -31,22 +31,25 @@ Promise.reject(reason);
 ### 使用靜態方法 Promise.reject()
 
 ```js
-Promise.reject(new Error('fail')).then(function(error) {
-  // not called
-}, function(error) {
-  console.log(error); // Stacktrace
-});
+Promise.reject(new Error("fail")).then(
+  function (error) {
+    // not called
+  },
+  function (error) {
+    console.log(error); // Stacktrace
+  },
+);
 ```
 
-## Specifications
+## 規範
 
 {{Specifications}}
 
-## Browser compatibility
+## 瀏覽器相容性
 
 {{Compat}}
 
-## See also
+## 參見
 
 - {{jsxref("Promise")}}
 - [Selective error catching using the BlueBird Promise library](https://github.com/petkaantonov/bluebird#error-handling)

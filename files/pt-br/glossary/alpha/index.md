@@ -16,9 +16,9 @@ Como você pode notar, a cor sem o canal alfa bloqueia completamente o texto ao 
 
 ### Conhecimento geral
 
-- {{interwiki("wikipedia", "Alpha compositing")}} na Wikipedia
-- {{interwiki("wikipedia", "RGBA color model")}} na Wikipedia
-- {{interwiki("wikipedia", "Channel (digital image)")}} na Wikipedia
+- [Alpha compositing](https://en.wikipedia.org/wiki/Alpha_compositing) na Wikipedia
+- [RGBA color model](https://pt.wikipedia.org/wiki/RGBA) na Wikipedia
+- [Channel (digital image)](<https://en.wikipedia.org/wiki/Channel_(digital_image)>) na Wikipedia
 
 ### Referência técnica
 

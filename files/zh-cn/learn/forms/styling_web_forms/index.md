@@ -159,7 +159,7 @@ textarea {
 
 ![This is what we want to achieve with HTML and CSS](/files/4149/screenshot.png)
 
-如果你想继续关注这个例子，复制我们的 [postcard-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/postcard-example/postcard-start.html) 文件，并遵循接下来的指导操作。
+如果你想继续关注这个例子，复制我们的 [postcard-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/postcard-start.html) 文件，并遵循接下来的指导操作。
 
 ### The HTML
 
