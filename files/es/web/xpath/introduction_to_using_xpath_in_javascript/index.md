@@ -18,7 +18,7 @@ var xpathResult = document.evaluate(
   contextNode,
   namespaceResolver,
   resultType,
-  result
+  result,
 );
 ```
 
@@ -49,7 +49,7 @@ Nosotros creamos un solucionador de namespace usando el método `createNSResolve
 var nsResolver = document.createNSResolver(
   contextNode.ownerDocument == null
     ? contextNode.documentElement
-    : contextNode.ownerDocument.documentElement
+    : contextNode.ownerDocument.documentElement,
 );
 ```
 
@@ -96,13 +96,13 @@ var paragraphCount = document.evaluate(
   document,
   null,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 
 alert(
   "This document contains " +
     paragraphCount.numberValue +
-    " paragraph elements"
+    " paragraph elements",
 );
 ```
 
@@ -114,13 +114,13 @@ var paragraphCount = document.evaluate(
   document,
   null,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 
 alert(
   "This document contains " +
     paragraphCount.stringValue +
-    " paragraph elements"
+    " paragraph elements",
 );
 ```
 
@@ -155,7 +155,7 @@ var iterator = document.evaluate(
   documentNode,
   null,
   XPathResult.UNORDERED_NODE_ITERATOR_TYPE,
-  null
+  null,
 );
 
 try {
@@ -189,7 +189,7 @@ var nodesSnapshot = document.evaluate(
   documentNode,
   null,
   XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
-  null
+  null,
 );
 
 for (var i = 0; i < nodesSnapshot.snapshotLength; i++) {
@@ -216,12 +216,12 @@ var firstPhoneNumber = document.evaluate(
   documentNode,
   null,
   XPathResult.FIRST_ORDERED_NODE_TYPE,
-  null
+  null,
 );
 
 dump(
   "The first phone number found is " +
-    firstPhoneNumber.singleNodeValue.textContent
+    firstPhoneNumber.singleNodeValue.textContent,
 );
 ```
 
@@ -247,7 +247,7 @@ var headings = document.evaluate(
   document,
   null,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 ```
 
@@ -305,7 +305,7 @@ var xmlDoc = req.responseXML;
 var nsResolver = xmlDoc.createNSResolver(
   xmlDoc.ownerDocument == null
     ? xmlDoc.documentElement
-    : xmlDoc.ownerDocument.documentElement
+    : xmlDoc.ownerDocument.documentElement,
 );
 
 var personIterator = xmlDoc.evaluate(
@@ -313,7 +313,7 @@ var personIterator = xmlDoc.evaluate(
   xmlDoc,
   nsResolver,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 ```
 
@@ -323,7 +323,7 @@ When the XPathResult object is not defined, the constants can be retreived in pr
 
 ```js
 Components.classes["@mozilla.org/dom/xpath-evaluator;1"].createInstance(
-  Components.interfaces.nsIDOMXPathEvaluator
+  Components.interfaces.nsIDOMXPathEvaluator,
 );
 ```
 
@@ -359,7 +359,7 @@ document.evaluate(
   document,
   nsResolver,
   XPathResult.ANY_TYPE,
-  null
+  null,
 );
 ```
 
