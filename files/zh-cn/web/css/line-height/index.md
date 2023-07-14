@@ -34,7 +34,7 @@ line-height: unset;
 `line-height` 属性被指定为以下任何一个：
 
 - 一个 [`<number>`](#number) 值
-- 一个 [`<percentage>`](#length) 值
+- 一个 [`<length>`](#length) 值
 - 一个 [`<percentage>`](#percentage) 值
 - 关键词 [`normal`](#normal)。
 
