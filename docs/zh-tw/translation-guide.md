@@ -93,7 +93,7 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 | ------ | -------- | -------- |
 | 夾注號 | （）     | ()       |
 | 冒號   | ：       | :        |
-| 引號   | 「『』」 | "" 、 "" |
+| 引號   | 「『』」 | “” 、 "" |
 | 破折號 | ——       | -- 、 —  |
 
 #### 如何輸入全形標點符號
