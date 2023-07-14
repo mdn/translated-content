@@ -228,7 +228,7 @@ JavaScript 有一个内置对象的标准库。发现更多关于内置对象，
 
 ### 强制原始值转换
 
-[强制原始值转换](https://tc39.es/ecma262/#sec-toprimitive)用于得到一个期望的原始值，但对实际类型应该是什么并没有强烈的偏好。通常情况下可以接受[字符串](#string_类型)、[数值](#number_类型)或 [BigInt](#bigint_类型)。
+[强制原始值转换](https://tc39.es/ecma262/#sec-toprimitive)用于得到一个期望的原始值，但对实际类型应该是什么并没有强烈的偏好。通常情况下可以接受[字符串](#string_类型)、[数值](#number_类型)或 [BigInt](#bigint_类型)。例如：
 
 - [`Date()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) 构造函数，当它收到一个不是 `Date` 实例的参数时——字符串表示日期字符串，而数值表示时间戳。
 - [`+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) 运算符——如果运算对象是字符串，执行字符串串联；否则，执行数值相加。
