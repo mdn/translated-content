@@ -538,7 +538,7 @@ The first five components are required; everything from `cp` (color primaries) o
         <p>
           A two-digit value indicating which chroma subsampling format to use.
           The following table lists permitted values; see
-          {{SectionOnPage("en-US/docs/Web/Media/Formats/Video_concepts", "Chroma subsampling")}}
+          {{SectionOnPage("/en-US/docs/Web/Media/Formats/Video_concepts", "Chroma subsampling")}}
           for additional information about this topic and others.
         </p>
         <table class="standard-table">

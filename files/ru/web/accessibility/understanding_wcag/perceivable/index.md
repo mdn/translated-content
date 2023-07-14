@@ -625,7 +625,7 @@ This guideline relates to making sure core content is easy to discern from backg
 
 ## See also
 
-- [WCAG](en-US/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 
   1. Perceivable
   2. [Operable](/ru/docs/Web/Accessibility/Understanding_WCAG/Operable)

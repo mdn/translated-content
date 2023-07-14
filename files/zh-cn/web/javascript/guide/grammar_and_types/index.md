@@ -86,7 +86,7 @@ JavaScript 有三种声明方式。
 
 用 `var` 或 `let` 语句声明的变量，如果没有赋初始值，则其值为 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。
 
-如果访问一个未声明的变量会导致抛出一个[`引用错误`](zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)（ReferenceError）异常：
+如果访问一个未声明的变量会导致抛出一个[`引用错误`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)（ReferenceError）异常：
 
 ```js
 var a;

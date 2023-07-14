@@ -387,7 +387,7 @@ f("a", "b"); // 'a+b'
 
 本节提供一些 JavaScript 中常见的数组操作示例。
 
-> **备注：** 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)，它解释了[数组是什么](zh-CN/docs/Learn/JavaScript/First_steps/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
+> **备注：** 如果你还不熟悉数组的基础知识，可以考虑先读一下 [JavaScript 第一步：数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)，它解释了[数组是什么](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays#数组是什么？)，还包括其他常见的数组操作示例。
 
 ### 创建数组
 
@@ -721,7 +721,7 @@ const inventory = [
 
 要使用 `group()`，你需要提供一个回调函数，该回调函数与当前元素、可选的当前索引和数组一起调用，并返回指示元素组的字符串。
 
-下面的例子使用一个箭头函数返回每个数组元素的 `type`（此处使用[函数参数的对象解构语法](zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#从作为函数实参的对象中提取数据)从传递的对象中提取 `type` 元素)。结果是一个对象，其属性以回调返回的唯一字符串命名。为每个属性分配一个数组，其中包含数组中的元素。
+下面的例子使用一个箭头函数返回每个数组元素的 `type`（此处使用[函数参数的对象解构语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#从作为函数实参的对象中提取数据)从传递的对象中提取 `type` 元素)。结果是一个对象，其属性以回调返回的唯一字符串命名。为每个属性分配一个数组，其中包含数组中的元素。
 
 ```js
 const result = inventory.group(({ type }) => type);

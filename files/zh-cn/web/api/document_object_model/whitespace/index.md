@@ -139,7 +139,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 ### 在块格式化上下文的空白符
 
-上面我们只是看了包含行内元素的元素，以及行内格式化上下文。如果一个元素至少包含一个块元素，那么它就会建立所谓的[块格式化上下文](zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。
+上面我们只是看了包含行内元素的元素，以及行内格式化上下文。如果一个元素至少包含一个块元素，那么它就会建立所谓的[块格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。
 
 这种情况下，空白符的处理方式非常不同。
 

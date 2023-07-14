@@ -126,7 +126,7 @@ CSS документы, используемые для стилизации web
 
 Лишь несколько типов изображений достаточно распространены, чтобы безопасно использоваться на веб-страницах.
 
-{{page("ru/docs/Web/Media/Formats/Image_types", "table-of-image-file-types")}}
+{{page("/ru/docs/Web/Media/Formats/Image_types", "table-of-image-file-types")}}
 
 ### Аудио и видео типы
 
