@@ -1,6 +1,6 @@
 # Contributing to the translated content of MDN Web Docs
 
-:tada: First of all, thanks for taking the time to contribute to [MDN Web Docs](https://developer.mozilla.org)’ translated content! :tada:
+:tada: First of all, thanks for taking the time to contribute to [MDN Web Docs](https://developer.mozilla.org)' translated content! :tada:
 
 The following is a set of guidelines for contributing to the [translated content of MDN Web Docs](https://github.com/mdn/translated-content), which is hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 
@@ -50,7 +50,7 @@ Now you need to fork and clone both the [content repo](https://github.com/mdn/co
 
 2. Run the command `yarn install` to fetch the latest packages and get the local MDN testing environment set up. It is also recommended that you run `yarn install` before every update you do to the source, to make sure you have the latest packages.
 
-3. Next, create an environment variable called `CONTENT_TRANSLATED_ROOT` containing the path to the _translated-content_ repo’s `files` directory. You could do this for a single session like so:
+3. Next, create an environment variable called `CONTENT_TRANSLATED_ROOT` containing the path to the _translated-content_ repo's `files` directory. You could do this for a single session like so:
 
    ```bash
    export CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files

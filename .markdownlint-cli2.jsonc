@@ -141,21 +141,20 @@
     "MD052": false,
     "search-replace": {
       "rules": [
-        // XXX Many instances still found in translated content
-        // {
-        //   "name": "curly-double-quotes",
-        //   "message": "Don't use curly double quotes",
-        //   "searchPattern": "/“|”/g",
-        //   "replace": "\"",
-        //   "searchScope": "text"
-        // },
-        // {
-        //   "name": "curly-single-quotes",
-        //   "message": "Don't use curly single quotes",
-        //   "searchPattern": "/‘|’/g",
-        //   "replace": "'",
-        //   "searchScope": "text"
-        // },
+        {
+          "name": "curly-double-quotes",
+          "message": "Don't use curly double quotes",
+          "searchPattern": "/“|”/g",
+          "replace": "\"",
+          "searchScope": "text"
+        },
+        {
+          "name": "curly-single-quotes",
+          "message": "Don't use curly single quotes",
+          "searchPattern": "/‘|’/g",
+          "replace": "'",
+          "searchScope": "text"
+        },
         {
           "name": "nbsp",
           "message": "Don't use no-break spaces",
