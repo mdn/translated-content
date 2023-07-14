@@ -77,7 +77,7 @@ new URL("http://www.example.com", B);
 // => 'http://www.example.com/'
 
 new URL("", "https://example.com/?query=1");
-// => 'https://example.com/?query=1' (Edge before 79 removes query arguments)
+// => 'https://example.com/?query=1'（Edge 早于 79 的版本会移除查询参数）
 
 new URL("/a", "https://example.com/?query=1");
 // => 'https://example.com/a'（见相对 URL）
