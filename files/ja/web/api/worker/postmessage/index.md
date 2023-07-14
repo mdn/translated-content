@@ -64,7 +64,7 @@ second.onchange = () => {
 
 この最小限の例では、 `main` が `ArrayBuffer` を作成して `myWorker` に移転し、次に `myWorker` がそれを `main` に再移転して、それぞれの段階で大きさを記録します。
 
-#### main.js のコード:
+#### main.js のコード
 
 ```js
 // ワーカーの生成
