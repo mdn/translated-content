@@ -55,7 +55,7 @@ L’extrait de code ci-dessous présente la façon de baliser une boîte de dial
 </div>
 ```
 
-#### Exemples concrets&nbsp;:
+#### Exemples concrets
 
 À définir
 

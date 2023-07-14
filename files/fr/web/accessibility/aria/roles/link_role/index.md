@@ -66,7 +66,7 @@ function navigateLink(evt) {
 </body>
 ```
 
-#### Exemples concrets&nbsp;:
+#### Exemples concrets
 
 - <http://codetalks.org/source/widgets/link/link.html>
 - <http://codetalks.org/source/widgets/link/link.sample.html>

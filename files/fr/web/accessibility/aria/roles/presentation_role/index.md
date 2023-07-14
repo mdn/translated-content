@@ -31,7 +31,7 @@ Une des recommandations d'accessibilité propose que les couleurs ou les représ
 <i class="icon-user" role="presentation"></i>
 ```
 
-#### Exemples concrets&nbsp;:
+#### Exemples concrets
 
 Par exemple, en reprenant le bouton de la navigation principale de ce site web, nous pourrions écrire.
 

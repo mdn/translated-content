@@ -114,7 +114,7 @@ Pour prendre en charge les navigateurs ou les produits de technologies d’assis
 </fieldset>
 ```
 
-#### Exemples concrets&nbsp;:
+#### Exemples concrets
 
 - [jQuery-UI Dialog](http://jqueryui.com/demos/dialog/)
 

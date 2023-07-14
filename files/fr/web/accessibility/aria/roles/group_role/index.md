@@ -93,7 +93,7 @@ L’extrait de code ci-dessous montre comment le rôle `group` est ajouté direc
 </div>
 ```
 
-#### Exemples concrets&nbsp;:
+#### Exemples concrets
 
 - <http://test.cita.illinois.edu/aria/tree/tree2.php>
 

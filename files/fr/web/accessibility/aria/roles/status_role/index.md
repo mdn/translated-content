@@ -43,7 +43,7 @@ L’extrait de code ci-dessous montre comment le rôle `status` est ajouté dire
 <p role="status">Vos modifications ont été automatiquement enregistrées.</p>
 ```
 
-#### Exemples concrets&nbsp;:
+#### Exemples concrets
 
 ### Notes
 

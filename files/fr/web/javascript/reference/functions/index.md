@@ -558,7 +558,7 @@ Une déclaration de fonction peut très facilement (et souvent involontairement)
     }
     ```
 
-### Exemples :
+### Exemples
 
 ```js
   // déclaration de fonction

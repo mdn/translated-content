@@ -47,7 +47,7 @@ Les lecteurs devraient annoncer les mises à jour de la progression dès qu’el
 </div>
 ```
 
-#### Exemples concrets&nbsp;:
+#### Exemples concrets
 
 ### Notes
 

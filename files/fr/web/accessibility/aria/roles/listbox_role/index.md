@@ -54,7 +54,7 @@ L’extrait de code ci-dessous montre comment le rôle `listbox` est ajouté dir
 
 Voir l’[exemple](http://codetalks.org/source/widgets/listbox/listbox.html) CodeTalks pour plus de détails.
 
-#### Exemples concrets&nbsp;:
+#### Exemples concrets
 
 - <https://www.w3.org/TR/wai-aria-practices/examples/listbox/listbox.html>
 

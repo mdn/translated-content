@@ -21,7 +21,7 @@ var movingBookmark = browser.bookmarks.move(
 )
 ```
 
-### Paramètres :
+### Paramètres
 
 - `id`
   - : Un {{jsxref("string")}} contenant l'ID du signet ou du dossier à déplacer.
