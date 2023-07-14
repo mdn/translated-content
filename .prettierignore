@@ -1,4 +1,6 @@
 build/
+/files/**/_wikihistory.json
+/files/**/_githistory.json
 
 # A full pass on all Markdown files is being performed.
 # When starting a new folder, please expand the glob pattern
