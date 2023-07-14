@@ -41,7 +41,7 @@ doSomething.name;  // "doSomething"
 
 ### 构造函数的名称
 
-使用`new Function(...)`语法创建的函数或只是 `Function(...) create` {{jsxref("Function")}}对象及其名称为“anonymous”。
+使用`new Function(...)`语法创建的函数或只是 `Function(...) create` {{jsxref("Function")}}对象及其名称为"anonymous"。
 
 ```js
 (new Function).name; // "anonymous"
@@ -123,7 +123,7 @@ descriptor.set.name; // "set foo";
 
 ### 类中的函数名称
 
-你可以使用`obj.constructor.name`来检查对象的“类”（但请务必阅读以下警告）：
+你可以使用`obj.constructor.name`来检查对象的"类"（但请务必阅读以下警告）：
 
 ```js
 function Foo() {}  // ES2015 Syntax: class Foo {}

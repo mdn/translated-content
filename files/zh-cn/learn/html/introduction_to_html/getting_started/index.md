@@ -221,9 +221,9 @@ textarea.onkeyup = () => {
 
 {{ EmbedLiveSample('块级元素和内联元素', 700, 200, "", "") }}
 
-> **备注：** HTML5 重新定义了元素的类别：见[元素内容分类](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories)。尽管这些新的定义更精确，但却比上述的“块级元素”和“内联元素”更难理解，因此在之后的讨论中仍使用旧的定义。
+> **备注：** HTML5 重新定义了元素的类别：见[元素内容分类](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories)。尽管这些新的定义更精确，但却比上述的"块级元素"和"内联元素"更难理解，因此在之后的讨论中仍使用旧的定义。
 
-> **备注：** 在这篇文章中提到的“块”和“内联”，不应该与 [CSS 盒子的类型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#块级盒子（block_box）_和_内联盒子（inline_box）)中的同名术语相混淆。尽管它们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
+> **备注：** 在这篇文章中提到的"块"和"内联"，不应该与 [CSS 盒子的类型](/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model#块级盒子（block_box）_和_内联盒子（inline_box）)中的同名术语相混淆。尽管它们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
 
 > **备注：** 你可以查阅包含了块级元素和内联元素列表的参考页面。参见[块级元素](/zh-CN/docs/Glossary/Block-level_content)和[内联元素](/zh-CN/docs/Glossary/Inline-level_content)页面。
 
@@ -245,7 +245,7 @@ textarea.onkeyup = () => {
 
 元素也可以拥有属性，属性看起来像这样：
 
-![含有‘class="editor-note"’属性的段落标签](grumpy-cat-attribute-small.png)
+![含有'class="editor-note"'属性的段落标签](grumpy-cat-attribute-small.png)
 
 属性包含元素的额外信息，这些信息不会出现在实际的内容中。在上述例子中，这个 **`class`** 属性是一个识别名称，以后为元素设置样式信息时更加方便。
 
@@ -696,7 +696,7 @@ textarea.onkeyup = () => {
 | '        | `&apos;`     |
 | &        | `&amp;`      |
 
-等价字符引用可以很容易记住，因为它使用的文本可以被看作是小于“\&lt;”，引号是“\&quot;”，其他的也是如此。要找到更多关于实体引用的信息，请参见 [XML 和 HTML 字符实体引用列表](https://zh.wikipedia.org/wiki/XML与HTML字符实体引用列表)（维基百科）。
+等价字符引用可以很容易记住，因为它使用的文本可以被看作是小于"\&lt;"，引号是"\&quot;"，其他的也是如此。要找到更多关于实体引用的信息，请参见 [XML 和 HTML 字符实体引用列表](https://zh.wikipedia.org/wiki/XML与HTML字符实体引用列表)（维基百科）。
 
 在下面的示例中，有两个自然段：
 

@@ -165,22 +165,22 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
       <td><code>String</code></td>
       <td>
         <p>
-          此选项指定在<a href="#js">“js”键</a
+          此选项指定在<a href="#js">"js"键</a
           >中的脚本何时被注入。您可以使用下列的三个字符串之一，每个字符串都代表加载文档过程中的不同状态。状态直接对应于{{domxref("Document/readyState", "Document.readyState")}}：
         </p>
         <ul>
           <li>
-            “<code>document_start</code>”：对应于正在加载。DOM 仍在加载中。
+            "<code>document_start</code>"：对应于正在加载。DOM 仍在加载中。
           </li>
           <li>
-            “<code>document_end</code>”：对应于可交互。DOM
+            "<code>document_end</code>"：对应于可交互。DOM
             已完成加载，但脚本和图像等资源可能仍在加载。
           </li>
           <li>
-            “<code>document_idle</code>”：对应完成。文档及其所有资源已完成加载。
+            "<code>document_idle</code>"：对应完成。文档及其所有资源已完成加载。
           </li>
         </ul>
-        <p>默认值为“document_idle”。</p>
+        <p>默认值为"document_idle"。</p>
         <p>
           在所有情况下，<a href="#js">js 键</a>中的文件都会在<a href="#css"
             >css 键</a
@@ -193,7 +193,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
 
 ## 匹配 URL 格式
 
-“content_scripts”键基于 URL 匹配将 content scripts 注入到网页上：如果网页的 URL 与键中的规则匹配，则将注入脚本。“content_scripts”中有四个属性，可以用于此规则：
+"content_scripts"键基于 URL 匹配将 content scripts 注入到网页上：如果网页的 URL 与键中的规则匹配，则将注入脚本。"content_scripts"中有四个属性，可以用于此规则：
 
 - `matches`: 一个关于[match patterns](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的数组
 - `exclude_matches`: 一个关于[match patterns](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)的数组
@@ -237,7 +237,7 @@ glob 只是一个可以包含通配符的字符串。有两种类型的通配符
 ]
 ```
 
-这会将 content 脚本“borderify.js”插入到“mozilla.org”或其任何子域下的所有页面，无论是 HTTP 还是 HTTPS。
+这会将 content 脚本"borderify.js"插入到"mozilla.org"或其任何子域下的所有页面，无论是 HTTP 还是 HTTPS。
 
 ```json
   "content_scripts": [
@@ -249,9 +249,9 @@ glob 只是一个可以包含通配符的字符串。有两种类型的通配符
   ]
 ```
 
-这会将两个 content 脚本插入到“mozilla.org”及其任何子域（除“developer.mozilla.org”外）的所有页面中，无论是通过 HTTP 还是 HTTPS。
+这会将两个 content 脚本插入到"mozilla.org"及其任何子域（除"developer.mozilla.org"外）的所有页面中，无论是通过 HTTP 还是 HTTPS。
 
-content 脚本有相同的 DOM 视图，并按照它们在数组中出现的顺序注入，因此“borderify.js”可以访问由“jquery.js”添加的全局变量。
+content 脚本有相同的 DOM 视图，并按照它们在数组中出现的顺序注入，因此"borderify.js"可以访问由"jquery.js"添加的全局变量。
 
 ## Browser compatibility
 

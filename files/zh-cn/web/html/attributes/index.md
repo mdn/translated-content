@@ -905,7 +905,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
       <td>
         {{ HTMLElement("video") }}
       </td>
-      <td>布尔属性，指示视频是否要“内嵌”播放；也就是说，在元素的播放区域内播放。请注意，该属性的缺失并不意味着视频将始终以全屏模式播放。</td>
+      <td>布尔属性，指示视频是否要"内嵌"播放；也就是说，在元素的播放区域内播放。请注意，该属性的缺失并不意味着视频将始终以全屏模式播放。</td>
     </tr>
     <tr>
       <td>
@@ -1261,7 +1261,7 @@ HTML 中的元素拥有**属性**（attribute）；这些额外的值可以配�
 
 IDL 属性（attribute）也就是 JavaScript 属性（property）。你可以使用 JavaScript 属性如 `element.foo` 来设置这些属性。当你需要获取 IDL 属性的值时，IDL 属性总会使用隐含的内容属性的值（可能先经过转换）来返回一个值。同样地，当你设置这个值时，这个值会保存在内容属性中。换句话说，IDL 属性本质上反映了内容属性。
 
-大多数时候，IDL 属性会返回元素实际使用的值。例如，{{HTMLElement("input")}} 的默认 `type` 是“text”，所以如果你设置 `input.type="foobar"`，`<input>` 元素仍然会是文本类型（在外观上和表现上），但 `type` 内容属性的值是“foobar”。然而，`type` IDL 属性依旧会返回字符串“text”。
+大多数时候，IDL 属性会返回元素实际使用的值。例如，{{HTMLElement("input")}} 的默认 `type` 是"text"，所以如果你设置 `input.type="foobar"`，`<input>` 元素仍然会是文本类型（在外观上和表现上），但 `type` 内容属性的值是"foobar"。然而，`type` IDL 属性依旧会返回字符串"text"。
 
 IDL 属性并不总是字符串；例如 `input.maxlength` 是一个数字（有符号长整型）。使用 IDL 属性时，你读取或设置值的类型都是要求的类型。所以 `input.maxlength` 总会返回一个数字，而如果你要设置 `input.maxlength`，也需要使用数字。如果你传入了别的类型，则会根据标准 JavaScript 的类型转换规则被转换为数字。
 

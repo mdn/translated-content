@@ -91,7 +91,7 @@ MDN Web 文档需要你的帮助！我们有大量需要完成的工作，比如
 - [写一篇文章分享你熟悉的技术领域](https://github.com/mdn/content#adding-a-new-document)（需时：1 小时或更长）
 - [添加或更新参考页面列出的浏览器兼容性](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)（需时：30 分钟到 1 小时）
 
-> **备注：** 如果你在使用 MDN 时发现了一些错误，却不知道怎么改正，你可以[提交一个 issue](https://github.com/mdn/content/issues/new/choose)。记得写个合适的标题（使用“Dead link”而不说明这个链接在哪里是没有太大帮助的）。如果你发现的问题属于翻译上的错误，[向 translated-content 仓库提交一个 issue](https://github.com/mdn/translated-content/issues/new/choose) 会更加合适。
+> **备注：** 如果你在使用 MDN 时发现了一些错误，却不知道怎么改正，你可以[提交一个 issue](https://github.com/mdn/content/issues/new/choose)。记得写个合适的标题（使用"Dead link"而不说明这个链接在哪里是没有太大帮助的）。如果你发现的问题属于翻译上的错误，[向 translated-content 仓库提交一个 issue](https://github.com/mdn/translated-content/issues/new/choose) 会更加合适。
 
 ## 其他有用的页面
 

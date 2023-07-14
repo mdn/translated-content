@@ -18,7 +18,7 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 在火狐中，满足以下条件则 `reduce` 会生效：
 
-- 在 GTK/Gnome 中，可以通过 _GNOME Tweaks_（在“通用”或“外观”菜单中，取决于具体版本）的配置，设置 `gtk-enable-animations` 的值为 `false`。
+- 在 GTK/Gnome 中，可以通过 _GNOME Tweaks_（在"通用"或"外观"菜单中，取决于具体版本）的配置，设置 `gtk-enable-animations` 的值为 `false`。
 
   - 可以在 [GTK 3 的配置文件](https://wiki.archlinux.org/index.php/GTK#Configuration)中的 `[Settings]` 模块下设置 `gtk-enable-animations = false`。
 
@@ -30,7 +30,7 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 ## 例子
 
-下面的例子将会展示一组令人心烦的动画，不过当你开启了系统的“减少运动”后就能看到动画减弱的效果了。
+下面的例子将会展示一组令人心烦的动画，不过当你开启了系统的"减少运动"后就能看到动画减弱的效果了。
 
 ### HTML
 

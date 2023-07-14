@@ -62,7 +62,7 @@ splice(start, deleteCount, item1, item2, itemN)
 
 ## 示例
 
-### 移除索引 2 之前的 0（零）个元素，并插入“drum”
+### 移除索引 2 之前的 0（零）个元素，并插入"drum"
 
 ```js
 const myFish = ["angel", "clown", "mandarin", "sturgeon"];
@@ -72,7 +72,7 @@ const removed = myFish.splice(2, 0, "drum");
 // removed 是 []，没有元素被删除
 ```
 
-### 移除索引 2 之前的 0（零）个元素，并插入“drum”和“guitar”
+### 移除索引 2 之前的 0（零）个元素，并插入"drum"和"guitar"
 
 ```js
 const myFish = ["angel", "clown", "mandarin", "sturgeon"];
@@ -92,7 +92,7 @@ const removed = myFish.splice(3, 1);
 // removed 是 ["mandarin"]
 ```
 
-### 在索引 2 处移除 1 个元素，并插入“trumpet”
+### 在索引 2 处移除 1 个元素，并插入"trumpet"
 
 ```js
 const myFish = ["angel", "clown", "drum", "sturgeon"];
@@ -102,7 +102,7 @@ const removed = myFish.splice(2, 1, "trumpet");
 // removed 是 ["drum"]
 ```
 
-### 从索引 0 处移除 2 个元素，并插入“parrot”、“anemone”和“blue”
+### 从索引 0 处移除 2 个元素，并插入"parrot"、"anemone"和"blue"
 
 ```js
 const myFish = ["angel", "clown", "trumpet", "sturgeon"];

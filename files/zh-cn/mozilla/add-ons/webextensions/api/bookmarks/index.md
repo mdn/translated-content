@@ -41,7 +41,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
 - {{WebExtAPIRef("bookmarks.move()")}}
   - : 将指定的书签树节点移到指定位置
 - {{WebExtAPIRef("bookmarks.update()")}}
-  - : 更新书签或文件夹的属性。只需要指定您需要更改的属性，未指定的属性不会更改。注意：目前只支持“title”和“url”属性。
+  - : 更新书签或文件夹的属性。只需要指定您需要更改的属性，未指定的属性不会更改。注意：目前只支持"title"和"url"属性。
 - {{WebExtAPIRef("bookmarks.remove()")}}
   - : 删除书签或者空文件夹。
 - {{WebExtAPIRef("bookmarks.removeTree()")}}

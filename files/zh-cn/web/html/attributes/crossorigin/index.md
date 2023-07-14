@@ -32,7 +32,7 @@ original_slug: Web/HTML/CORS_settings_attributes
     <tr>
       <td><code>img</code>、<code>audio</code>、<code>video</code></td>
       <td>
-        当资源被放置在 {{HTMLElement("canvas")}} 中时，元素会标记为<a href="/zh-CN/docs/Web/HTML/CORS_enabled_image#安全性和“被污染”的_canvas"><em>被污染的</em></a>。
+        当资源被放置在 {{HTMLElement("canvas")}} 中时，元素会标记为<a href="/zh-CN/docs/Web/HTML/CORS_enabled_image#安全性和"被污染"的_canvas"><em>被污染的</em></a>。
       </td>
     </tr>
     <tr>

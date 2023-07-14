@@ -24,7 +24,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling
         <p>
           Vue 组件是由管理应用程序数据的 JavaScript 对象和映射到基础 DOM
           结构的基于 HTML 的模板语法组成的。为了进行安装并使用 Vue
-          的一些更高级的功能（例如“单文件组件（SFC）”或渲染功能），你将需要一个装有
+          的一些更高级的功能（例如"单文件组件（SFC）"或渲染功能），你将需要一个装有
           node + npm 的终端。
         </p>
       </td>

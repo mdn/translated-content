@@ -19,7 +19,7 @@ super[expression]
 
 ## 描述
 
-`super` 关键字有两种使用方式：作为“函数调用”（`super(...args)`），或作为“属性查询”（`super.prop` 和 `super[expr]`）。
+`super` 关键字有两种使用方式：作为"函数调用"（`super(...args)`），或作为"属性查询"（`super.prop` 和 `super[expr]`）。
 
 > **备注：** `super` 是一个关键字，并且有一些特殊的语法结构。`super` 不是一个指向原型对象的变量。试图读取 `super` 本身会导致 {{jsxref("SyntaxError")}}。
 >
@@ -31,9 +31,9 @@ super[expression]
 > };
 > ```
 
-在派生类的构造函数体中（使用 `extends`），`super` 关键字可以作为“函数调用”（`super(...args)`）出现，它必须在使用 `this` 关键字之前和构造函数返回之前被调用。它调用父类的构造函数并绑定父类的公共字段，之后派生类的构造函数可以进一步访问和修改 `this`。
+在派生类的构造函数体中（使用 `extends`），`super` 关键字可以作为"函数调用"（`super(...args)`）出现，它必须在使用 `this` 关键字之前和构造函数返回之前被调用。它调用父类的构造函数并绑定父类的公共字段，之后派生类的构造函数可以进一步访问和修改 `this`。
 
-“属性查询”形式可以用来访问一个对象字面或类的 [[Prototype]] 的方法和属性。在一个类的主体中，`super` 的引用可以是父类的构造函数本身，也可以是构造函数的 `prototype`，这取决于执行环境是实例创建还是类的初始化。更多细节请参见示例部分。
+"属性查询"形式可以用来访问一个对象字面或类的 [[Prototype]] 的方法和属性。在一个类的主体中，`super` 的引用可以是父类的构造函数本身，也可以是构造函数的 `prototype`，这取决于执行环境是实例创建还是类的初始化。更多细节请参见示例部分。
 
 注意，`super` 的引用是由 `super` 声明的类或对象字面决定的，而不是方法被调用的对象。因此，取消绑定或重新绑定一个方法并不会改变其中 `super` 的引用（尽管它们会改变 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的引用）。你可以把 `super` 看作是类或对象字面范围内的一个变量，这些方法在它上面创建了一个闭包。(但也要注意，它实际上并不是一个变量，正如上面所解释的那样)。
 
@@ -229,7 +229,7 @@ console.log(Extended.staticGetX()); //现在打印 "4"
 
 ### 设置 super.prop 将在此基础上设置属性。
 
-设置 `super` 的属性，比如 `super.x = 1`，就像 `Reflect.set(Object.getPrototypeOf(objectLiteral), "x", 1, this)` 的行为。这是一个将 `super` 简单理解为“原型对象的引用”的情况，因为它实际上是在 `this` 上设置属性。
+设置 `super` 的属性，比如 `super.x = 1`，就像 `Reflect.set(Object.getPrototypeOf(objectLiteral), "x", 1, this)` 的行为。这是一个将 `super` 简单理解为"原型对象的引用"的情况，因为它实际上是在 `this` 上设置属性。
 
 ```js
 class A {}

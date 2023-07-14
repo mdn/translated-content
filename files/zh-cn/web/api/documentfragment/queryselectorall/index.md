@@ -24,7 +24,7 @@ elementList = documentframgment.querySelectorAll(selectors);
 
 ## 示例
 
-此示例返回 DocumentFragment 中所有 div 元素的列表，其中包含一个类“note”或“alert”:
+此示例返回 DocumentFragment 中所有 div 元素的列表，其中包含一个类"note"或"alert":
 
 ```js
 var matches = documentfrag.querySelectorAll("div.note, div.alert");

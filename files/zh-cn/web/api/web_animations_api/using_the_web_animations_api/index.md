@@ -91,7 +91,7 @@ var aliceTiming = {
 - 一个，持续时间是毫秒，而不是秒 - 3000 不是 3 秒.。像{{domxref("WindowTimers.setTimeout()")}} 和{{domxref("Window.requestAnimationFrame()")}}, Web 动画 API 只支持毫秒。
 - The other thing you'll notice is that it's `iterations`, not `iteration-count`.
 
-> **备注：** CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串“infinite”，而是使用 Javascript 的关键字 Infinity。以及我们用 `easing` 来代替`timing-function`。我们不必在这列出`easing`的值，因为不像在 CSS 动画里，默认的"[animation-timing-function](/zh-CN/docs/Web/CSS/animation-timing-function)"是`ease`。页面动画 API 的默认 easing 是`linear`— 而这就是我们想要的。
+> **备注：** CSS 动画中使用的属性值与 Web 动画中使用的属性值存在一些小的差异。比如，Web 动画中不能使用字符串"infinite"，而是使用 Javascript 的关键字 Infinity。以及我们用 `easing` 来代替`timing-function`。我们不必在这列出`easing`的值，因为不像在 CSS 动画里，默认的"[animation-timing-function](/zh-CN/docs/Web/CSS/animation-timing-function)"是`ease`。页面动画 API 的默认 easing 是`linear`— 而这就是我们想要的。
 
 #### 整合这些特性
 
@@ -255,7 +255,7 @@ document.getAnimations().forEach(
 
 使用 Web 动画 API，您需要更改的只是一个小的属性！
 
-另一件与 CSS 动画有关的难点就是创建依赖于其他动画提供的值。例如，在“成长和收缩爱丽丝”游戏的例子中，您可能会注意到蛋糕的持续时间有些奇怪：
+另一件与 CSS 动画有关的难点就是创建依赖于其他动画提供的值。例如，在"成长和收缩爱丽丝"游戏的例子中，您可能会注意到蛋糕的持续时间有些奇怪：
 
 ```js
 duration: aliceChange.effect.timing.duration / 2
@@ -281,7 +281,7 @@ var aliceChange = document.getElementById('alice').animate(
 aliceChange.pause();
 ```
 
-如果我们在动画开始时已经把她暂停了，那么她的全部尺寸将从一半开始，就像她已经把整个瓶子都喝完了一样！我们想把动画的“播放头”放在中间，所以她已经中途了。我们可以通过将她的 {{domxref("Animation.currentTime")}}设置为 4 秒，如下所示：
+如果我们在动画开始时已经把她暂停了，那么她的全部尺寸将从一半开始，就像她已经把整个瓶子都喝完了一样！我们想把动画的"播放头"放在中间，所以她已经中途了。我们可以通过将她的 {{domxref("Animation.currentTime")}}设置为 4 秒，如下所示：
 
 ```js
 aliceChange.currentTime = 4000;
@@ -368,10 +368,10 @@ Prefer promises? The Web Animations API also specifies two promises: [`onfinish`
 
 ## 结论
 
-这些是 Web 动画 API 的基本功能，其中大部分功能已在最新版本的 Firefox 和 Chrome 中得到支持。到目前为止，您应该准备好在浏览器中“跳下兔子洞”，动画制作动画实验！如果您正在使用 API 并要共享，请尝试使用#WAAPI 主题标签。我们将会观看并且将编写更多的教程来涵盖更多的功能，支持传播！
+这些是 Web 动画 API 的基本功能，其中大部分功能已在最新版本的 Firefox 和 Chrome 中得到支持。到目前为止，您应该准备好在浏览器中"跳下兔子洞"，动画制作动画实验！如果您正在使用 API 并要共享，请尝试使用#WAAPI 主题标签。我们将会观看并且将编写更多的教程来涵盖更多的功能，支持传播！
 
 ## See also
 
 - The [full suite of Alice in Wonderland demos](http://codepen.io/collection/bpEza/) on CodePen for you to play with, fork, and share
-- [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) — a great article to read that explains more on the background of the Web Animations API, and why it is more performant than other web animation methods
+- [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) — a great article to read that explains more on the background of the Web Animations API, and why it is more performant than other web animation methods
 - [web-animations-js](https://github.com/web-animations/web-animations-js) — the Web Animations API polyfill

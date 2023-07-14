@@ -260,7 +260,7 @@ const commandEncoder = device.createCommandEncoder();
 下一步，我们通过调用 {{domxref("GPUCommandEncoder.beginRenderPass()")}} 创建 {{domxref("GPURenderPassEncoder")}} 实例来开始运行渲染通道。该方法采用一个描述符对象作为参数，唯一的必须属性是 `colorAttachments` 数组。在该实例中，我们指定了：
 
 1. 要渲染到的纹理视图；我们通过 {{domxref("GPUTexture.createView", "context.getCurrentTexture().createView()")}} 从 `<canvas>` 创建一个新视图。
-2. 纹理视图一旦加载并且在任何绘制发生之前，将“清除”视图到一个指定的颜色。这就是导致三角形后面出现蓝色背景的原因。
+2. 纹理视图一旦加载并且在任何绘制发生之前，将"清除"视图到一个指定的颜色。这就是导致三角形后面出现蓝色背景的原因。
 3. 我们还要在当前的渲染通道中存储这个颜色附件的值。
 
 ```js
@@ -464,13 +464,13 @@ console.log(new Float32Array(data));
 
 ## GPU 错误处理
 
-WebGPU 调用在 GPU 进程中以异步的方式进行验证。如果发现错误，有问题的调用会在 GPU 端标记为无效。如果依赖于一个无效调用返回值的另一个调用被执行，那么该对象将也被标记为无效，以此类推。因此，WebGPU 的错误被称为“传染性错误”。
+WebGPU 调用在 GPU 进程中以异步的方式进行验证。如果发现错误，有问题的调用会在 GPU 端标记为无效。如果依赖于一个无效调用返回值的另一个调用被执行，那么该对象将也被标记为无效，以此类推。因此，WebGPU 的错误被称为"传染性错误"。
 
 每个 {{domxref("GPUDevice")}} 实例都维护这自己的错误作用域栈。这个栈最初是空的，但是你可以通过调用 {{domxref("GPUDevice.pushErrorScope()")}} 来开始推入错误作用域到栈，以捕获特定类型的错误。
 
 一旦完成错误捕获，你可以通过调用 {{domxref("GPUDevice.popErrorScope()")}} 来结束捕获。这会从栈中弹出作用域并返回一个 {{jsxref("Promise")}}，该 Promise 兑现为一个对象（{{domxref("GPUInternalError")}}、{{domxref("GPUOutOfMemoryError")}} 或 {{domxref("GPUValidationError")}}），描述在作用域内捕获的第一个错误，如果没有错误捕获，则是 `null`。
 
-在适当的“验证”部分，我们试图去提供帮助你理解为什么你的 WebGPU 代码发生错误的有用信息，其中列出了避免错误的条件。例如，参见 [`GPUDevice.createBindGroup()` 检验部分](/zh-CN/docs/Web/API/GPUDevice/createBindGroup#检验)。其中一些信息很复杂，我们决定仅列出以下错误标准，而不是重复规范：
+在适当的"验证"部分，我们试图去提供帮助你理解为什么你的 WebGPU 代码发生错误的有用信息，其中列出了避免错误的条件。例如，参见 [`GPUDevice.createBindGroup()` 检验部分](/zh-CN/docs/Web/API/GPUDevice/createBindGroup#检验)。其中一些信息很复杂，我们决定仅列出以下错误标准，而不是重复规范：
 
 - 不明显的错误标准，例如导致验证错误的描述符属性的组合。没有必要告诉你确保使用正确的描述符对象结构。这既是显而易见的又是模糊的。
 - 由开发者控制的错误标准。一些错误标准仅基于内部因素，对于 web 开发者并不真正相关。

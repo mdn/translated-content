@@ -33,7 +33,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 这种不兼容问题一直持续到 21 世纪初，因为旧的浏览器仍然在使用，仍然需要支持。这也是 [jQuery](https://jquery.com/) 这样的库出现的主要原因之一——抽象出浏览器实现的差异（例如见[如何进行 HTTP 请求](/zh-CN/docs/Web/Guide/AJAX#第一步——发送_http_请求)中的代码片段），所以开发人员只需要写一点简单的代码（见 [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/)），jQuery（或你使用的任何库）将在底层处理这些差异，而无需开发人员考虑这些。
 
-从那时起，情况有了明显的改善；现代浏览器在支持“经典的 JavaScript 功能”方面做得很好，而且随着支持老式浏览器的要求降低，使用这种代码的要求也在减少（尽管这样，请记住，它们并没有完全消失）。
+从那时起，情况有了明显的改善；现代浏览器在支持"经典的 JavaScript 功能"方面做得很好，而且随着支持老式浏览器的要求降低，使用这种代码的要求也在减少（尽管这样，请记住，它们并没有完全消失）。
 
 这些天来，大多数的跨浏览器 JavaScript 问题是这样的：
 
@@ -48,10 +48,10 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 - 基本的语法和逻辑问题（再次重申，请参阅[如何查找 JavaScript 代码的错误](/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong)）。
 - 确保变量等被定义在正确的范围内，并且你不会遇到在不同地方声明的项目之间的冲突（见[函数作用域和冲突](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#函数作用域和冲突)）。
-- 对 [this](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的困惑，表现在它适用于什么范围，因此它的值是否是你所期望的。你可以阅读[“this”的含义](/zh-CN/docs/Learn/JavaScript/Objects/Basics#this的含义)，它做了一点浅显的介绍；你还应该研究像[这样](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143)的例子，它显示了一个典型的模式，即把 `this` 作用域保存到一个单独的变量中，然后在嵌套函数中使用这个变量，这样你就可以确定你把功能应用到正确的 `this` 作用域。
-- 在使用全局变量进行迭代的循环中不正确地使用函数（更普遍的是“弄错作用域”）。例如，在 [bad-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) 中（见[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)），我们使用一个用 `var` 定义的变量循环了 10 次，每次都创建一个段落并给它添加一个 [onclick](/zh-CN/docs/Web/API/Element/click_event) 事件处理器。当点击时，我们希望每个段落都能显示一个包含其编号（创建时的 `i` 值）的警告信息。但是，它们都报告 `i` 为 11，因为 `for` 循环在调用嵌套函数之前就完成了所有的迭代。
+- 对 [this](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 的困惑，表现在它适用于什么范围，因此它的值是否是你所期望的。你可以阅读["this"的含义](/zh-CN/docs/Learn/JavaScript/Objects/Basics#this的含义)，它做了一点浅显的介绍；你还应该研究像[这样](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143)的例子，它显示了一个典型的模式，即把 `this` 作用域保存到一个单独的变量中，然后在嵌套函数中使用这个变量，这样你就可以确定你把功能应用到正确的 `this` 作用域。
+- 在使用全局变量进行迭代的循环中不正确地使用函数（更普遍的是"弄错作用域"）。例如，在 [bad-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) 中（见[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)），我们使用一个用 `var` 定义的变量循环了 10 次，每次都创建一个段落并给它添加一个 [onclick](/zh-CN/docs/Web/API/Element/click_event) 事件处理器。当点击时，我们希望每个段落都能显示一个包含其编号（创建时的 `i` 值）的警告信息。但是，它们都报告 `i` 为 11，因为 `for` 循环在调用嵌套函数之前就完成了所有的迭代。
 
-  > **备注：** 最简单的解决方案是用 `let` 而不是 `var` 来声明迭代变量，这样与函数相关的 `i` 的值对每个迭代都是唯一的。不幸的是，这在 IE11 中不能正常工作，这就是为什么我们没有在“好的” for 循环中使用这种方法。
+  > **备注：** 最简单的解决方案是用 `let` 而不是 `var` 来声明迭代变量，这样与函数相关的 `i` 的值对每个迭代都是唯一的。不幸的是，这在 IE11 中不能正常工作，这就是为什么我们没有在"好的" for 循环中使用这种方法。
 
 - 在试图使用它们返回的值之前，确保异步操作已经返回。例如，[这个 Ajax 例子](/zh-CN/docs/Web/Guide/AJAX#第三步——简单的示例)在尝试使用响应之前，会检查以确保请求已经完成，响应已经返回。由于 JavaScript 语言中引入了 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，这种操作变得更加容易处理。
 
@@ -75,11 +75,11 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 
 1. 安装 Atom（如果你没有已经安装的最新版本）——从上述 Atom 网页链接中下载它。
 2. 前往 Atom 的 _Preferences..._ 对话框（也就是说，在 Mac 中选择 _Atom > Preferences..._，或在 Windows/Linux 中选择 _File > Preferences..._）并选择左侧菜单中的 _Install_ 选项。
-3. 在 _Search packages_ 文本字段，输入“jslint”并按下回车/换行键来查找 linting 相关软件包。
+3. 在 _Search packages_ 文本字段，输入"jslint"并按下回车/换行键来查找 linting 相关软件包。
 4. 你可以在列表最顶部看到 **lint**。首先使用 _Install_ 按钮安装这个软件包，因为其他 linter 都依赖它工作。然后安装 **linter-jshint** 插件。
 5. 在软件包安装完成后，试着加载一个 JavaScript 文件：你会看到任何问题都在行号旁边用绿色（警告）和红色（错误）的圆圈突出显示，底部的一个单独面板提供了行号、错误信息，有时还提供了建议值或其他修复方法。
 
-![JSHint 程序的屏幕截图。狭窄的左边面板是一个文件浏览器或树形。右边的面板有两个部分。顶部有一个标签，打开一个彩色编码和行数的 JavaScript 文件。最下面是错误和警告。错误是红色的，而警告是橙色的。如果某一行有错误或警告，在行号旁边会有一个红色或橙色的点。](jshint-linter.png)其他流行的编辑器也有类似的 linting 包可用。例如，见 [JSHint 安装页面](https://jshint.com/install/)的“文本编辑器和 IDE 的插件”部分。
+![JSHint 程序的屏幕截图。狭窄的左边面板是一个文件浏览器或树形。右边的面板有两个部分。顶部有一个标签，打开一个彩色编码和行数的 JavaScript 文件。最下面是错误和警告。错误是红色的，而警告是橙色的。如果某一行有错误或警告，在行号旁边会有一个红色或橙色的点。](jshint-linter.png)其他流行的编辑器也有类似的 linting 包可用。例如，见 [JSHint 安装页面](https://jshint.com/install/)的"文本编辑器和 IDE 的插件"部分。
 
 #### 其他方式
 
@@ -105,7 +105,7 @@ npm install -g jshint
 
 下载示例文件 [broken-ajax.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/broken-ajax.html) 到本地（也可以在线阅读[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/broken-ajax.html)）。
 
-如果你打开控制台面板，你将会看到错误提示“Uncaught TypeError: can't access property "length", heroes is undefined”，标示出问题出现在代码的第 49 行。如果你看了源代码，相关的代码如下面所示：
+如果你打开控制台面板，你将会看到错误提示"Uncaught TypeError: can't access property "length", heroes is undefined"，标示出问题出现在代码的第 49 行。如果你看了源代码，相关的代码如下面所示：
 
 ```js
 function showHeroes(jsonObj) {
@@ -144,7 +144,7 @@ showHeroes(superHeroes);
 console.log('Response value: ' + superHeroes);
 ```
 
-在浏览器中刷新页面，你将在控制台中得到“Response value:”的输出，以及我们之前看到的相同的错误信息。
+在浏览器中刷新页面，你将在控制台中得到"Response value:"的输出，以及我们之前看到的相同的错误信息。
 
 `console.log()` 输出显示，`superHeroes` 对象似乎没有包含任何东西。像这样的异步请求的一个非常常见的问题是，当你试图在 `response` 对象真正从网络上返回之前对它做一些事情。让我们通过在 `load` 事件被触发后运行代码来解决这个问题。删除 `console.log()` 行，并更新这个代码块：
 
@@ -277,7 +277,7 @@ JavaScript 库往往有几个主要的种类（有些库包含其中的一个以
 
 - 实用程序库：提供一堆功能，使平凡的任务更容易管理，不那么枯燥。例如，[jQuery](https://jquery.com/) 提供了自己的全功能选择器和 DOM 操作库，允许在 JavaScript 中进行 CSS 选择器类型的元素选择，并更容易建立 DOM。现在我们有了现代的特性，如 {{domxref("Document.querySelector()")}}、{{domxref("Document.querySelectorAll()")}}、{{domxref("Node")}} 方法，在各浏览器中可用，这就不那么重要了，但在旧的浏览器需要支持时，它仍然有用。
 - 方便性库：让困难的事情更容易做。例如，直接使用 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 很复杂且很有挑战性，而 [Three.js](https://threejs.org/) 库（和其他类似的库）是建立在 WebGL 之上的，为创建普通 3D 对象、照明、纹理等提供了更容易的 API。[Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API) 的使用也非常复杂，所以代码库已经开始出现，以使常见的 Service Worker 用例更容易实现（参见 [Service Worker 指导书](https://github.com/mdn/serviceworker-cookbook)，以获得一些有用的代码示例）。
-- 效果库：这些库的设计是为了让你能够轻松地在你的网站上添加特殊效果。在“DHTML”是一个流行的流行语的时候，这是很有用的，实现一个效果需要很多复杂的 JavaScript，但现在的浏览器有很多内置的 CSS 功能和 API，可以更容易地实现效果。
+- 效果库：这些库的设计是为了让你能够轻松地在你的网站上添加特殊效果。在"DHTML"是一个流行的流行语的时候，这是很有用的，实现一个效果需要很多复杂的 JavaScript，但现在的浏览器有很多内置的 CSS 功能和 API，可以更容易地实现效果。
 - UI 库： 提供实现复杂的 UI 功能的方法，否则这些功能的实现和跨浏览器的工作会很困难，例如 [Foundation](https://get.foundation/)、[Bootstrap](https://getbootstrap.com/) 和[Material-UI](https://mui.com/)（后者是一套用于 React 框架的组件）。这些往往被用作整个网站布局的基础；仅仅为了一个 UI 功能而把它们放入其中往往是很困难的。
 - 标准化库：给你一个简单的语法，让你轻松完成一个任务，而不必担心跨浏览器的差异。该库将在后台操作适当的 API，所以无论什么浏览器，该功能都可以使用（理论上）。例如， [LocalForage](https://github.com/localForage/localForage) 是一个用于客户端数据存储的库，它为存储和检索数据提供了一个简单的语法。在后台，它使用浏览器可用的最好的 API 来存储数据，无论是 [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)、[Web Storage](/zh-CN/docs/Web/API/Web_Storage_API)，甚至是 Web SQL（现在已经废弃了，但在基于 Chromium 的浏览器安全上下文中仍然支持）。
 
@@ -325,7 +325,7 @@ Modernizr 的 [HTML5 Cross Browser Polyfill](https://github.com/Modernizr/Modern
 
 > **备注：** 在此重申，有许多不同的方法来利用你将遇到的不同的 polyfill——具体请查阅每个 polyfill 的单独文档。
 
-你可能会想，“为什么我们总是要加载 polyfill 代码，即使我们不需要它？”这是一个很好的观点——随着你的网站变得越来越复杂，你开始使用更多的库、polyfill 等，你可能开始加载很多额外的代码，这可能开始影响性能，特别是在性能较差的设备上。只在需要时加载文件是有意义的。
+你可能会想，"为什么我们总是要加载 polyfill 代码，即使我们不需要它？"这是一个很好的观点——随着你的网站变得越来越复杂，你开始使用更多的库、polyfill 等，你可能开始加载很多额外的代码，这可能开始影响性能，特别是在性能较差的设备上。只在需要时加载文件是有意义的。
 
 做到这一点需要在你的 JavaScript 中进行一些额外的设置。你需要某种特性检测测试，检测浏览器是否支持我们要使用的特性：
 
@@ -377,7 +377,7 @@ function loadScript(src, done) {
 
 对于现在想使用现代 JavaScript 功能的人来说，另一个选择是将利用 ECMAScript 6/ECMAScript 2015 功能的代码转换为能在旧版浏览器中使用的版本。
 
-> **备注：** 这被称为“转译”——这不是在将代码编译成一个较低的层次，以便在计算机上运行（就像 C 代码那样）；相反，这是在将它改变成一种存在于类似抽象层次的语法，因此它可以以同样的方式使用，但情况略有不同（在这种情况下，将 JavaScript 的一种风格转变为另一种）。
+> **备注：** 这被称为"转译"——这不是在将代码编译成一个较低的层次，以便在计算机上运行（就像 C 代码那样）；相反，这是在将它改变成一种存在于类似抽象层次的语法，因此它可以以同样的方式使用，但情况略有不同（在这种情况下，将 JavaScript 的一种风格转变为另一种）。
 
 例如，我们在文章前面谈到了箭头函数（在线示例见 [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html)，也可以看看[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/arrow-function.html)），它只在最新的浏览器上工作：
 

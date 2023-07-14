@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 **`reduce()`** 方法对数组中的每个元素按序执行一个提供的 **reducer** 函数，每一次运行 **reducer** 会将先前元素的计算结果作为参数传入，最后将其结果汇总为单个返回值。
 
-第一次执行回调函数时，不存在“上一次的计算结果”。如果需要回调函数从数组索引为 0 的元素开始执行，则需要传递初始值。否则，数组索引为 0 的元素将被用作初始值，迭代器将从第二个元素开始执行（即从索引为 1 而不是 0 的位置开始）。
+第一次执行回调函数时，不存在"上一次的计算结果"。如果需要回调函数从数组索引为 0 的元素开始执行，则需要传递初始值。否则，数组索引为 0 的元素将被用作初始值，迭代器将从第二个元素开始执行（即从索引为 1 而不是 0 的位置开始）。
 
 下面的例子能够帮助你理解 `reduce()` 的用处——计算数组所有元素的总和：
 
@@ -39,7 +39,7 @@ reduce(callbackFn, initialValue)
 
 ### 返回值
 
-使用“reducer”回调函数遍历整个数组后的结果。
+使用"reducer"回调函数遍历整个数组后的结果。
 
 ### 异常
 
@@ -48,7 +48,7 @@ reduce(callbackFn, initialValue)
 
 ## 描述
 
-`reduce()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它按升序对数组中的所有元素运行一个“reducer”回调函数，并将它们累积到一个单一的值中。每次调用时，`callbackFn` 的返回值都作为 `accumulator` 参数传递到下一次调用中。`accumulator` 的最终值（也就是在数组的最后一次迭代中从 `callbackFn` 返回的值）将作为 `reduce()` 的返回值。
+`reduce()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它按升序对数组中的所有元素运行一个"reducer"回调函数，并将它们累积到一个单一的值中。每次调用时，`callbackFn` 的返回值都作为 `accumulator` 参数传递到下一次调用中。`accumulator` 的最终值（也就是在数组的最后一次迭代中从 `callbackFn` 返回的值）将作为 `reduce()` 的返回值。
 
 `callbackFn` 仅对已分配值的数组索引进行调用。不会对[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽进行调用。
 

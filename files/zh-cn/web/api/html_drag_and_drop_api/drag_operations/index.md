@@ -69,7 +69,7 @@ slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 event.dataTransfer.setData("text/plain", "Text to drag");
 ```
 
-在这个例子中，数据值是“Text to drag”，数据类型是 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text) 格式。
+在这个例子中，数据值是"Text to drag"，数据类型是 [`text/plain`](/zh-CN/docs/DragDrop/Recommended_Drag_Types#text) 格式。
 
 你可以提供多种格式的数据。要做到这一点，可以用不同的格式多次调用 {{domxref("DataTransfer.setData","setData()")}} 方法。你应该传入尽量具体的格式。
 
@@ -227,7 +227,7 @@ function doDragOver(event) {
 
 在这个例子中，当带有 `droparea` 类的元素是一个有效的放置目标时，即在该元素的 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法时，元素会出现一个 1 像素的黑色轮廓。
 
-> **备注：** 要使这个伪类生效，你必须在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法，因为这个伪类状态不会检查 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件（译者注：即在 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法也不会使伪类生效，尽管这个伪类叫做“-moz-drag-over”）。
+> **备注：** 要使这个伪类生效，你必须在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法，因为这个伪类状态不会检查 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件（译者注：即在 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件中调用 {{domxref("Event.preventDefault","preventDefault()")}} 方法也不会使伪类生效，尽管这个伪类叫做"-moz-drag-over"）。
 
 对于更复杂的视觉效果，你可以在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 事件中执行其他操作。例如在放置位置插入一个元素，这样的元素可以表示一个插入标记，或表示被拖拽的元素移动到了新位置。为此你可以在 {{domxref("HTMLElement/dragenter_event", "dragenter")}} 事件中创建一个新元素，然后将其插入到文档中。
 

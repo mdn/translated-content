@@ -13,7 +13,7 @@ slug: Glossary/Property/JavaScript
 - 一个*值*，它可以是任何 JavaScript 值。具有函数值的属性也可以称为[方法](/zh-CN/docs/Glossary/Method)。
 - 一些*特性*，它们指定了属性的读取和写入方式。属性可能具有 `configurable`、`enumerable` 和 `writable` 特性。
 
-[访问器属性](/zh-CN/docs/Web/JavaScript/Data_structures#访问器属性)没有实际的“值”。值是通过一对函数间接表示的，其中一个（getter）在读取值时调用，另一个（setter）在设置值时调用。但是，访问器属性在表面上表现得像常规数据属性，因为 getter 和 setter 函数会自动调用，并且通常对 JavaScript 代码是透明的。
+[访问器属性](/zh-CN/docs/Web/JavaScript/Data_structures#访问器属性)没有实际的"值"。值是通过一对函数间接表示的，其中一个（getter）在读取值时调用，另一个（setter）在设置值时调用。但是，访问器属性在表面上表现得像常规数据属性，因为 getter 和 setter 函数会自动调用，并且通常对 JavaScript 代码是透明的。
 
 属性的值（包括 getter 和 setter）及其特性被存储在一个叫做*属性描述符*的数据记录中。许多方法，例如 {{jsxref("Object.getOwnPropertyDescriptor()")}} 和 {{jsxref("Object.defineProperty()")}}，都与属性描述符一起工作。
 

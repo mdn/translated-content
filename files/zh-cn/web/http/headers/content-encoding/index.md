@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Content-Encoding
 
 {{Glossary("representation header", "实体消息首部")}} **`Content-Encoding`** 列出了对当前实体消息（消息荷载）应用的任何编码类型，以及编码的顺序。它让接收者知道需要以何种顺序解码该实体消息才能获得原始荷载格式。Content-Encoding 主要用于在不丢失原媒体类型内容的情况下压缩消息数据。
 
-请注意原始媒体/内容的类型通过 {{HTTPHeader("Content-Type")}} 首部给出，而 `Content-Encoding` 应用于数据的表示，或“编码形式”。如果原始媒体以某种方式编码（例如 zip 文件），则该信息不应该被包含在 `Content-Encoding` 首部内。
+请注意原始媒体/内容的类型通过 {{HTTPHeader("Content-Type")}} 首部给出，而 `Content-Encoding` 应用于数据的表示，或"编码形式"。如果原始媒体以某种方式编码（例如 zip 文件），则该信息不应该被包含在 `Content-Encoding` 首部内。
 
 一般建议服务器应对数据尽可能地进行压缩，并在适当情况下对内容进行编码。对一种压缩过的媒体类型如 zip 或 jpeg 进行额外的压缩并不合适，因为这反而有可能会使荷载增大。
 

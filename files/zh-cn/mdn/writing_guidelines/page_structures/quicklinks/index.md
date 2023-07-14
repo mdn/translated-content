@@ -9,7 +9,7 @@ MDN 支持在页面中添加快速链接；这些框是包含到 MDN 上的其�
 
 ## 快速链接语法
 
-页面的快速链接是通过创建一个 ID 为“Quick_links”的 {{HTMLElement("section")}} 块来提供的。然后，将要放入快速链接框中的内容放在 section 内。这些链接需要格式化为 {{HTMLElement("ol")}} 有序列表（可以嵌套）。你可以通过使用编辑器工具栏中的编号列表按钮来实现这一点。例如，你的快速链接 HTML 可能如下所示：
+页面的快速链接是通过创建一个 ID 为"Quick_links"的 {{HTMLElement("section")}} 块来提供的。然后，将要放入快速链接框中的内容放在 section 内。这些链接需要格式化为 {{HTMLElement("ol")}} 有序列表（可以嵌套）。你可以通过使用编辑器工具栏中的编号列表按钮来实现这一点。例如，你的快速链接 HTML 可能如下所示：
 
 ```html
 <section id="Quick_links">

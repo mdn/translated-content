@@ -157,8 +157,8 @@ button:before {
 接下来，我们使用这些内容来显示每个按钮上的图标：
 
 - 我们使用 {{cssxref("::before")}} 选择器在每个 {{htmlelement("button")}} 元素之前显示内容。
-- 我们使用 {{cssxref("content")}} 属性将各情况下要显示的内容设置为 [`data-icon`](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes) 属性的内容。例如在播放按钮的情况下，[`data-icon`](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes) 包含大写的“P”。
-- 我们使用 {{cssxref("font-family")}} 将自定义 Web 字体应用于我们的按钮上。在该字体中“P”对应的是“播放”图标，因此播放按钮上显示“播放”图标。
+- 我们使用 {{cssxref("content")}} 属性将各情况下要显示的内容设置为 [`data-icon`](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes) 属性的内容。例如在播放按钮的情况下，[`data-icon`](/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes) 包含大写的"P"。
+- 我们使用 {{cssxref("font-family")}} 将自定义 Web 字体应用于我们的按钮上。在该字体中"P"对应的是"播放"图标，因此播放按钮上显示"播放"图标。
 
 图标字体非常酷有很多原因 —— 减少 HTTP 请求，因为您不需要将这些图标作为图像文件下载。同时具有出色的可扩展性，以及您可以使用文本属性来设置它们的样式 —— 例如 {{cssxref("color")}} 和 {{cssxref("text-shadow")}}。
 
@@ -284,7 +284,7 @@ button:before {
 
     在 HTMLMediaElement API 中没有 `stop()` 方法——等效的办法是先用 `pause()` 暂停视频，然后设置{{domxref("HTMLMediaElement.currentTime","currentTime")}} 属性为 0。设置 `currentTime` 的值（单位：秒）将会立刻使视频跳到该位置。
 
-    之后要做的事是把显示的图标设置成“播放”图标。无论视频使暂停还是正在播放，您都希望它随后可以播放。
+    之后要做的事是把显示的图标设置成"播放"图标。无论视频使暂停还是正在播放，您都希望它随后可以播放。
 
 #### 探索快进和快退
 
@@ -419,7 +419,7 @@ function setTime() {
 4. 要显示的实际时间值设置为`minuteValue`加上冒号字符加`secondValue`。
 5. 计时器的{{domxref("Node.textContent")}}值设置为时间值，因此它显示在 UI 中。
 6. 我们应该设置内部`<div>`的长度是通过首先计算外部`<div>`的宽度来计算出来的（任何元素的{{domxref("HTMLElement.clientWidth", "clientWidth")}} 属性将包含它的长度），然后乘以{{domxref("HTMLMediaElement.currentTime")}}除以媒体的总{{domxref("HTMLMediaElement.duration")}}。
-7. 我们将内部`<div>`的宽度设置为等于计算的条形长度加上“px”，因此它将设置为该像素数
+7. 我们将内部`<div>`的宽度设置为等于计算的条形长度加上"px"，因此它将设置为该像素数
 
 #### 修复播放和暂停
 
@@ -442,7 +442,7 @@ clearInterval(intervalFwd);
 
 ## 小结
 
-我想我们已经在这篇文章中教过你足够多了。使用{{domxref("HTMLMediaElement")}} API 可以为创建简单的视频和音频播放器提供丰富的可用功能，然而这只是冰山一角。有关更复杂和有趣功能的链接，请参阅下面的“另请参阅”部分。
+我想我们已经在这篇文章中教过你足够多了。使用{{domxref("HTMLMediaElement")}} API 可以为创建简单的视频和音频播放器提供丰富的可用功能，然而这只是冰山一角。有关更复杂和有趣功能的链接，请参阅下面的"另请参阅"部分。
 
 以下是一些有关如何增强我们构建的现有示例的建议：
 

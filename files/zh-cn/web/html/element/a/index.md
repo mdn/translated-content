@@ -71,7 +71,7 @@ slug: Web/HTML/Element/a
     - `_self`：当前页面加载。（默认）
     - `_blank`：通常在新标签页打开，但用户可以通过配置选择在新窗口打开。
     - `_parent`：当前浏览环境的父级浏览上下文。如果没有父级框架，行为与 `_self` 相同。
-    - `_top`：最顶级的浏览上下文（当前浏览上下文中最“高”的祖先）。如果没有祖先，行为与 `_self` 相同。
+    - `_top`：最顶级的浏览上下文（当前浏览上下文中最"高"的祖先）。如果没有祖先，行为与 `_self` 相同。
 
       > **备注：** 在 `<a>` 元素上使用 `target="_blank"` 隐式提供了与使用 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener) 相同的 `rel` 行为，即不会设置 `window.opener`。
 
@@ -270,7 +270,7 @@ document
 
 #### 无障碍性差的链接文本
 
-一个通常的错误在于只链接了“点击这里”或“这里”词语：
+一个通常的错误在于只链接了"点击这里"或"这里"词语：
 
 ```html example-bad
 <p><a href="/products">在这里</a>了解到有关产品的更多信息。</p>
@@ -292,7 +292,7 @@ document
 
 {{EmbedLiveSample('强调链接文本')}}
 
-辅助软件有快捷键来列出页面上的所有链接。然而，强大的链接文本对所有用户都有好处。“列出所有链接”的快捷方式模仿了视力正常的用户快速扫描页面的方式。
+辅助软件有快捷键来列出页面上的所有链接。然而，强大的链接文本对所有用户都有好处。"列出所有链接"的快捷方式模仿了视力正常的用户快速扫描页面的方式。
 
 ### onclick 事件
 
@@ -383,7 +383,7 @@ document
 
 跳转链接对于借助辅助技术（如开关控制、语音命令或口棒/头棒）进行导航的人来说特别有用，因为在这种情况下，在重复的链接中移动的行为可能很费力。
 
-- [WebAIM：“跳过导航”链接](https://webaim.org/techniques/skipnav/)
+- [WebAIM："跳过导航"链接](https://webaim.org/techniques/skipnav/)
 - [如何使用跳过导航链接](https://www.a11yproject.com/posts/skip-nav-links/)
 - [MDN / 理解 WCAG，准则 2.4](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [理解成功标准 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
@@ -406,7 +406,7 @@ document
 
 间隔可以使用 CSS 属性来创建，如 {{CSSxRef("margin")}}。
 
-- [Hand tremors 和“巨大按钮问题”](https://axesslab.com/hand-tremors/)
+- [Hand tremors 和"巨大按钮问题"](https://axesslab.com/hand-tremors/)
 
 ## 技术概要
 

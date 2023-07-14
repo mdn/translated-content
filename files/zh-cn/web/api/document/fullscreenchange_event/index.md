@@ -31,7 +31,7 @@ onfullscreenchange = (event) => {};
 
 在此示例中，向 {{domxref("Document")}} 添加了 `fullscreenchange` 事件处理程序。
 
-如果用户单击“切换全屏模式”按钮，`click` 处理程序将切换 `div` 的全屏模式。如果 `document.fullscreenElement` 具有值，则会退出全屏模式。否则，div 将被置于全屏模式。
+如果用户单击"切换全屏模式"按钮，`click` 处理程序将切换 `div` 的全屏模式。如果 `document.fullscreenElement` 具有值，则会退出全屏模式。否则，div 将被置于全屏模式。
 
 请记住，在处理 `fullscreenchange` 事件时，元素的状态已经发生了变化。因此，如果更改是为了全屏模式，`document.fullscreenElement` 将指向现在处于全屏模式的元素。另一方面，如果 `document.fullscreenElement` 为 `null`，则全屏模式已被取消。
 

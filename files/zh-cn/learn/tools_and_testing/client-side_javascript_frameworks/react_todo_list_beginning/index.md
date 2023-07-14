@@ -225,7 +225,7 @@ function App(props) {
 >
 ```
 
-`role` 属性帮助辅助技术解释一个标签代表哪种元素。默认情况下，`<ul>` 被视为一个列表，但我们即将添加的样式将改变它。添加 `role` 将恢复 `ul` 元素的“列表”含义。如果你想了解更多关于为什么要这样做，你可以看看 [Scott O'Hara's article, "Fixing Lists"](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html).
+`role` 属性帮助辅助技术解释一个标签代表哪种元素。默认情况下，`<ul>` 被视为一个列表，但我们即将添加的样式将改变它。添加 `role` 将恢复 `ul` 元素的"列表"含义。如果你想了解更多关于为什么要这样做，你可以看看 [Scott O'Hara's article, "Fixing Lists"](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html).
 
 `aria-labelledby` 属性告诉辅助技术，我们把列表标题当作标签，用来描述它下面的列表的目的。这种关联能让列表包含更多信息，这可以帮助屏幕阅读器用户更好地理解它的目的。
 

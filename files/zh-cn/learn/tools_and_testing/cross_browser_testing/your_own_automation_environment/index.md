@@ -32,7 +32,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environm
 
 ## Selenium
 
-[Selenium](https://www.selenium.dev/) 是最流行的浏览器自动化测试工具。最易使用的方法是使用基于 Selenium 的 WebDriver API，它通过调用浏览器接口实现自动化，执行诸如“打开网页”、“移动网页上的元素”、“点击链接”、“查看链接是否打开 URL”等。对于运行自动化测试来说是一个十分理想的方法。
+[Selenium](https://www.selenium.dev/) 是最流行的浏览器自动化测试工具。最易使用的方法是使用基于 Selenium 的 WebDriver API，它通过调用浏览器接口实现自动化，执行诸如"打开网页"、"移动网页上的元素"、"点击链接"、"查看链接是否打开 URL"等。对于运行自动化测试来说是一个十分理想的方法。
 
 安装和使用 WebDriver 的方式取决于你的编程环境。常见的环境都提供有安装 WebDriver 的包或框架，并且支持与 WebDriver 通信的多语言绑定，如 Java、C#、Ruby、Python、JavaScript（Node）等。查看[建立一个 Selenium-WebDriver 的工程](https://www.selenium.dev/zh-cn/documentation/webdriver/getting_started/)来了解 Selenium 在不同语言下建立的更多细节。
 
@@ -131,7 +131,7 @@ OK，现在我们来做一个快速的测试来验证一下一切是否正常。
    node google_test
    ```
 
-你会看到 Firefox 自动打开了一个窗口！Google 自动加载到标签页中，“webdriver”被输入到搜索框，然后搜索按钮被点击。然后，WebDriver 等待 2 秒，然后获取文本标题，如果标题是“webdriver - Google Search”, 将返回测试成功的消息。然后 WebDriver 关闭 Firefox 窗口并结束。
+你会看到 Firefox 自动打开了一个窗口！Google 自动加载到标签页中，"webdriver"被输入到搜索框，然后搜索按钮被点击。然后，WebDriver 等待 2 秒，然后获取文本标题，如果标题是"webdriver - Google Search", 将返回测试成功的消息。然后 WebDriver 关闭 Firefox 窗口并结束。
 
 ## 一次测试多个浏览器
 
@@ -187,7 +187,7 @@ OK，现在我们来做一个快速的测试来验证一下一切是否正常。
    node google_test_multiple
    ```
 
-4. 如果你用的是 Mac，并决定测试 Safari 浏览器，可能会产生一个错误信息：“Could not create a session: You must enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver.”如果是这样，根据指示重新尝试一遍。
+4. 如果你用的是 Mac，并决定测试 Safari 浏览器，可能会产生一个错误信息："Could not create a session: You must enable the 'Allow Remote Automation' option in Safari's Develop menu to control Safari via WebDriver."如果是这样，根据指示重新尝试一遍。
 
 现在，我们像上次一样完成了测试，这一次浏览器的测试代码放到了 `searchTest()` 函数中。我们对多个浏览器创建了新的浏览器实例，然后将每一个实例传递给函数，这样就可以在 3 个浏览器下执行测试！
 
@@ -779,7 +779,7 @@ driver.quit();
 如果你不想使用 Sauce Labs 或 BrowserStack 之类的服务，你也可以设置自己的远程测试服务器。具体操作如下：
 
 1. Selenium 的远端服务器要求运行 Java，从 [Java SE 下载页面](https://www.oracle.com/java/technologies/downloads/)下载适合你平台的最新 JDK 并安装。
-2. 接着，下载最新的 [Selenium 单机服务器](http://selenium-release.storage.googleapis.com/index.html)，它作为你的脚本和浏览器驱动之间的一个代理。选择最新的稳定版本（最好不要选 beta 版本），从列表中选择以“selenium-server-standalone”开头的文件。下载完成后，放到一个靠谱的地方，比如家目录下。如果你还没有将位置添加到 `PATH`，现在就需要添加了（查看[在 Node 中创建 Selenium](#在_node_下建立_selenium) 小节）。
+2. 接着，下载最新的 [Selenium 单机服务器](http://selenium-release.storage.googleapis.com/index.html)，它作为你的脚本和浏览器驱动之间的一个代理。选择最新的稳定版本（最好不要选 beta 版本），从列表中选择以"selenium-server-standalone"开头的文件。下载完成后，放到一个靠谱的地方，比如家目录下。如果你还没有将位置添加到 `PATH`，现在就需要添加了（查看[在 Node 中创建 Selenium](#在_node_下建立_selenium) 小节）。
 3. 在作为服务器的电脑终端上执行如下代码，安装单机版服务器
 
    ```bash

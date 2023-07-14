@@ -43,7 +43,7 @@ a[class~="logo"] {
 - `[attr~=value]`
   - : 表示带有以 _attr_ 命名的属性的元素，并且该属性是一个以空格作为分隔的值列表，其中至少有一个值为 _value_。
 - `[attr|=value]`
-  - : 表示带有以 _attr_ 命名的属性的元素，属性值为“value”或是以“value-”为前缀（`-` 为连字符，Unicode 编码为 U+002D）开头。典型的应用场景是用来匹配语言简写代码（如 zh-CN、zh-TW 可以用 zh 作为 value）。
+  - : 表示带有以 _attr_ 命名的属性的元素，属性值为"value"或是以"value-"为前缀（`-` 为连字符，Unicode 编码为 U+002D）开头。典型的应用场景是用来匹配语言简写代码（如 zh-CN、zh-TW 可以用 zh 作为 value）。
 - `[attr^=value]`
   - : 表示带有以 _attr_ 命名的属性，且属性值是以 _value_ 开头的元素。
 - `[attr$=value]`

@@ -25,11 +25,11 @@ JavaScript 相当简洁，却非常灵活。开发者们基于 JavaScript 核心
 
 下面对语言核心做一个不完整介绍，期间还可以接触到一些浏览器 API 特性。
 
-## “Hello World!”示例
+## "Hello World!"示例
 
 读到这里你一定很激动，诚然 —— JavaScript 是最振奋人心的 Web 技术之一，而且在娴熟驾驭之后，你的网站在功能和创新力上将达到一个新的维度。
 
-然而，JavaScript 比 HTML 和 CSS 学习起来更加复杂一点，所以必须一步一个脚印地学习。首先，来看看如何在页面中添加一些基本的 JavaScript 脚本来建造一个“Hello world!”示例（[一切始于 Hello World](https://zh.wikipedia.org/wiki/Hello_World)）。
+然而，JavaScript 比 HTML 和 CSS 学习起来更加复杂一点，所以必须一步一个脚印地学习。首先，来看看如何在页面中添加一些基本的 JavaScript 脚本来建造一个"Hello world!"示例（[一切始于 Hello World](https://zh.wikipedia.org/wiki/Hello_World)）。
 
 > **警告：** 如果你没有完成之前的课程实践，可下载 [上一章节示例的压缩包](https://github.com/roy-tian/learning-area/raw/master/extras/getting-started-web/beginner-html-site-styled.zip) 并在本地解压作出发点。
 
@@ -54,9 +54,9 @@ JavaScript 相当简洁，却非常灵活。开发者们基于 JavaScript 核心
 
 ### 发生了什么？
 
-JavaScript 把页面的标题改成了“Hello world!” 。首先用 {{domxref("Document.querySelector", "querySelector()")}} 函数获取标题的引用，并把它储存在 `myHeading` 变量中。这与 CSS 选择器的用法非常相像：若要对某个元素进行操作，首先得选择它。
+JavaScript 把页面的标题改成了"Hello world!" 。首先用 {{domxref("Document.querySelector", "querySelector()")}} 函数获取标题的引用，并把它储存在 `myHeading` 变量中。这与 CSS 选择器的用法非常相像：若要对某个元素进行操作，首先得选择它。
 
-之后，把 `myHeading` 变量的属性 {{domxref("Node.textContent", "textContent")}} （标题内容）修改为“Hello world!” 。
+之后，把 `myHeading` 变量的属性 {{domxref("Node.textContent", "textContent")}} （标题内容）修改为"Hello world!" 。
 
 > **备注：** 上面用到的两个函数都来自 [文档对象模型 (DOM) API](/zh-CN/docs/Web/API/Document_Object_Model)，均用于控制文档。
 
@@ -183,7 +183,7 @@ myVariable = '韩梅梅';
 
 {{Glossary("Operator","运算符")}} 是一类数学符号，可以根据两个值（或变量）产生结果。以下表格中介绍了一些最简单的运算符，可以在浏览器控制台里尝试一下后面的示例。
 
-> **备注：** 这里说“根据**两个**值（或变量）产生结果”是不严谨的，计算两个变量的运算符称为“二元运算符”，还有一元运算符和三元运算符，下表中的“取非”就是一元运算符。
+> **备注：** 这里说"根据**两个**值（或变量）产生结果"是不严谨的，计算两个变量的运算符称为"二元运算符"，还有一元运算符和三元运算符，下表中的"取非"就是一元运算符。
 
 <table>
   <thead>
@@ -371,7 +371,7 @@ document.querySelector('html').addEventListener('click', () => {
 
 下面来添加另一段代码，在用户初次进入站点时将网页的标题改成一段个性化欢迎信息（即在标题中添加用户的名字）。名字信息会由 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API) 保存下来，即使用户关闭页面之后再重新打开，仍可得到之前的信息。还会添加一个选项，可以根据需要改变用户名字以更新欢迎信息。
 
-1. 打开 `index.html`，在 {{htmlelement("script")}} 标签**前**添加以下代码，将在页面底部显示一个“切换用户”字样的按钮：
+1. 打开 `index.html`，在 {{htmlelement("script")}} 标签**前**添加以下代码，将在页面底部显示一个"切换用户"字样的按钮：
 
     ```html
     <button>切换用户</button>
@@ -421,9 +421,9 @@ document.querySelector('html').addEventListener('click', () => {
 
 ### 用户名为 null?
 
-运行示例代码，弹出输入用户名的对话框，试着按下 <kbd>取消</kbd> 按钮。此时标题会显示为“Mozilla 酷毙了，null”。这是因为取消提示对话框后值将设置为 `null`，这是 JavaScript 中的一个特殊值，表示引用不存在。
+运行示例代码，弹出输入用户名的对话框，试着按下 <kbd>取消</kbd> 按钮。此时标题会显示为"Mozilla 酷毙了，null"。这是因为取消提示对话框后值将设置为 `null`，这是 JavaScript 中的一个特殊值，表示引用不存在。
 
-也可以不输入任何名字直接按 <kbd>确认</kbd>，你的标题会显示为“Mozilla 酷毙了，”，原因么显而易见。
+也可以不输入任何名字直接按 <kbd>确认</kbd>，你的标题会显示为"Mozilla 酷毙了，"，原因么显而易见。
 
 要避免这些问题，应该更新 `setUserName()` 来检查用户是否输入了 `null` 或者空名字：
 

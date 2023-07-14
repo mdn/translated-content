@@ -70,9 +70,9 @@ Web 最常用的图像格式是：
     将图像复制并粘贴为文本，或是将图像的链接保存为浏览器书签时，也会用到此属性。
 
 - `crossorigin`
-  - : 这个枚举属性表明是否必须使用 {{glossary("CORS")}} 完成相关图像的抓取。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会被标记为“[污染](/zh-CN/docs/Web/HTML/CORS_enabled_image#安全性和“被污染”的_canvas)（tainted）”。
+  - : 这个枚举属性表明是否必须使用 {{glossary("CORS")}} 完成相关图像的抓取。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会被标记为"[污染](/zh-CN/docs/Web/HTML/CORS_enabled_image#安全性和"被污染"的_canvas)（tainted）"。
 
-    如果*未指定* `crossorigin` 属性，则会发送不启用 CORS 的请求（不会携带 {{httpheader("Origin")}} 请求标头），且浏览器会将图像标记为“被污染”并拒绝对图像数据的访问，阻止其在 {{HTMLElement("canvas")}} 元素中的使用。
+    如果*未指定* `crossorigin` 属性，则会发送不启用 CORS 的请求（不会携带 {{httpheader("Origin")}} 请求标头），且浏览器会将图像标记为"被污染"并拒绝对图像数据的访问，阻止其在 {{HTMLElement("canvas")}} 元素中的使用。
 
     如果*指定*了 `crossorigin` 属性，则会发送启用 CORS 的请求（会携带 {{httpheader("Origin")}} 请求标头）；但是如果服务器不选择允许源站点对图像数据进行跨源访问（不发送任何 {{httpheader("Access-Control-Allow-Origin")}} 响应标头，或发送的 {{httpheader("Access-Control-Allow-Origin")}} 标头中不包含源站点），浏览器则会阻止图像的加载，并在开发者工具的控制台中记录 CORS 错误。
 
@@ -270,7 +270,7 @@ Web 最常用的图像格式是：
 
 ### 使用有实际意义的备用描述
 
-`alt` 属性的值应该清晰、简洁地描述图像的内容。它不应该描述“图像的存在”，或仅仅包含图像的文件名。如果因为图像没有等价的文本描述，`alt` 属性只得不写或留白，那么可以考虑使用其他方法来呈现图像试图传递的内容。
+`alt` 属性的值应该清晰、简洁地描述图像的内容。它不应该描述"图像的存在"，或仅仅包含图像的文件名。如果因为图像没有等价的文本描述，`alt` 属性只得不写或留白，那么可以考虑使用其他方法来呈现图像试图传递的内容。
 
 #### 不要
 

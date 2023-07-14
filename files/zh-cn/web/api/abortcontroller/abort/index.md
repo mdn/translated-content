@@ -17,7 +17,7 @@ abort(reason)
 ### 参数
 
 - `reason` {{optional_inline}}
-  - : 操作中止的原因，可以是各种 JavaScript 值。如果没有指定，则将原因设置为“AbortError”{{domxref("DOMException")}}。
+  - : 操作中止的原因，可以是各种 JavaScript 值。如果没有指定，则将原因设置为"AbortError"{{domxref("DOMException")}}。
 
 ### 返回值
 

@@ -257,7 +257,7 @@ false
 
 #### 二进制
 
-二进制表示为开头是 0 后接大写或小写的 B（`0b`或者`0B`）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果`0b`之后有除了 0 或 1 以外的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Missing binary digits after 0b”。
+二进制表示为开头是 0 后接大写或小写的 B（`0b`或者`0B`）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果`0b`之后有除了 0 或 1 以外的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)："Missing binary digits after 0b"。
 
 ```js
 var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
@@ -267,7 +267,7 @@ var FLT_MANTISSA = 0B00000000011111111111111111111111; // 8388607
 
 #### 八进制
 
-八进制表示为开头是 0 后接大写或小写的 O（`0o`或`0O`）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果有不在（01234567）中的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Missing octal digits after 0o”。
+八进制表示为开头是 0 后接大写或小写的 O（`0o`或`0O`）。这是 ECMAScript 6 中的新语法，可以参考下面的浏览器兼容性表格。如果有不在（01234567）中的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)："Missing octal digits after 0o"。
 
 ```js
 var n = 0O755; // 493
@@ -280,7 +280,7 @@ var m = 0o644; // 420
 
 #### 十六进制
 
-十六进制表示为开头是 0 后接大写或小写的 X（`0x`或`0X`）。如果有不在（0123456789ABCDEF）中的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)：“Identifier starts immediately after numeric literal”。
+十六进制表示为开头是 0 后接大写或小写的 X（`0x`或`0X`）。如果有不在（0123456789ABCDEF）中的数字，将会抛出[`SyntaxError`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)："Identifier starts immediately after numeric literal"。
 
 ```js
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000
@@ -386,7 +386,7 @@ tag `string text ${expression} string text`
 
 ECMAScript 规格提到[自动分号补全的三个规则](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-rules-of-automatic-semicolon-insertion)。
 
-1. 当出现一个不允许的[行终止符](#Line_terminators)或“}”时，会在其之前插入一个分号。
+1. 当出现一个不允许的[行终止符](#Line_terminators)或"}"时，会在其之前插入一个分号。
 
     ```js
     { 1 2 } 3
@@ -410,7 +410,7 @@ ECMAScript 规格提到[自动分号补全的三个规则](http://people.mozilla
     ++c;
     ```
 
-3. 当语句中包含语法中的限制产品后跟一个行终止符的时候，将会在结尾插入一个分号。带“这里没有行终止符”规则的语句有：
+3. 当语句中包含语法中的限制产品后跟一个行终止符的时候，将会在结尾插入一个分号。带"这里没有行终止符"规则的语句有：
 
     - 后置运算符（`++` 和 `--`）
     - `continue`

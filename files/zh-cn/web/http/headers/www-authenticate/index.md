@@ -5,15 +5,15 @@ slug: Web/HTTP/Headers/WWW-Authenticate
 
 {{HTTPSidebar}}
 
-HTTP **`WWW-Authenticate`** 响应标头定义了 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Authentication)的方法（“质询”），它用于获取特定资源的访问权限。
+HTTP **`WWW-Authenticate`** 响应标头定义了 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Authentication)的方法（"质询"），它用于获取特定资源的访问权限。
 
-> **备注：** 该标头是[通用的 HTTP 认证框架](/zh-CN/docs/Web/HTTP/Authentication#通用的_http_认证框架)的一部分，可用于多种[身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。每个“质询”都列出了服务器支持的方案以及为该方案类型添加的额外参数。
+> **备注：** 该标头是[通用的 HTTP 认证框架](/zh-CN/docs/Web/HTTP/Authentication#通用的_http_认证框架)的一部分，可用于多种[身份验证方案](/zh-CN/docs/Web/HTTP/Authentication#身份验证方案)。每个"质询"都列出了服务器支持的方案以及为该方案类型添加的额外参数。
 
 使用 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Authentication)的服务器将以 {{HTTPStatus("401")}} `Unauthorized` 响应去响应受保护资源的请求。该响应必须包含至少一个 `WWW-Authenticate` 标头和至少一个{{Glossary("challenge","质询")}}，以指示使用哪些身份验证方案访问资源（以及每个特定方案的任意额外的数据）。
 
 一个 `WWW-Authenticate` 标头中允许多个质询，并且一个响应中允许多个 `WWW-Authenticate` 标头。服务器也可以在其他的响应消息中包含 `WWW-Authenticate` 标头，以指示提供的凭据可能会影响响应。
 
-客户端在接收 `WWW-Authenticate` 标头之后，通常会提示用户接收凭据，然后重新请求资源。这个新的请求会使用 {{HTTPHeader("Authorization")}} 标头向服务器提供凭据，并针对所选择的“质询”身份验证方法进行合适的编码。客户端应该选择它理解的最安全的质询（注意，在某些情况下，“最安全”方法是有争议的）。
+客户端在接收 `WWW-Authenticate` 标头之后，通常会提示用户接收凭据，然后重新请求资源。这个新的请求会使用 {{HTTPHeader("Authorization")}} 标头向服务器提供凭据，并针对所选择的"质询"身份验证方法进行合适的编码。客户端应该选择它理解的最安全的质询（注意，在某些情况下，"最安全"方法是有争议的）。
 
 <table class="properties">
   <tbody>
@@ -84,7 +84,7 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 - `<realm>` {{optional_inline}}
   - : 见上方。
 - `charset="UTF-8"` {{optional_inline}}
-  - : 当提交用户名和密码时，告诉客户端服务器的首选编码方案。仅允许的值是不区分大小写的“UTF-8”字符串。这与 realm 字符串的编码无关。
+  - : 当提交用户名和密码时，告诉客户端服务器的首选编码方案。仅允许的值是不区分大小写的"UTF-8"字符串。这与 realm 字符串的编码无关。
 
 ### Digest
 
@@ -105,7 +105,7 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
     - `"auth"`：身份验证
     - `"auth-int"`：有完整保护的身份验证
 - `charset="UTF-8"` {{optional_inline}}
-  - : 当提交用户名和密码时，告诉客户端服务器的首选编码方案。仅允许的值是不区分大小写的“UTF-8”字符串。
+  - : 当提交用户名和密码时，告诉客户端服务器的首选编码方案。仅允许的值是不区分大小写的"UTF-8"字符串。
 - `userhash` {{optional_inline}}
   - : 服务器可能指定为 `"true"`，以指示它支持用户名哈希（默认是 `"false"`）。
 
@@ -131,9 +131,9 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 ### 使用 SHA-256 和 MD5 的 Digest 身份验证
 
-> **备注：** 该示例取自 {{RFC("7616")}}“HTTP Digest Access Authentication”（在规范中的其他示例，展示了 `SHA-512`、`charset` 和 `userhash` 的使用）。
+> **备注：** 该示例取自 {{RFC("7616")}}"HTTP Digest Access Authentication"（在规范中的其他示例，展示了 `SHA-512`、`charset` 和 `userhash` 的使用）。
 
-客户端试图访问“`http://www.example.org/dir/index.html`”处的文档，该文档受到 digest 身份验证的保护。这个文档的用户名是“Mufsas”，并且它的密码是“Circle of Life”（注意，每个单词之间的单个空格）。
+客户端试图访问"`http://www.example.org/dir/index.html`"处的文档，该文档受到 digest 身份验证的保护。这个文档的用户名是"Mufsas"，并且它的密码是"Circle of Life"（注意，每个单词之间的单个空格）。
 
 客户端第一次请求该文档时，不会发送 {{HTTPHeader("Authorization")}} 标头字段。在这里，服务器使用 HTTP 401 消息响应，其中包括对它支持的每个摘要算法的质询，按照其优先顺序（`SHA256`，然后是 `MD5`）。
 

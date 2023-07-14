@@ -40,7 +40,7 @@ x == y
 
 该运算符与[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)（`===`）运算符之间最显著的区别是，严格相等运算符不尝试类型转换。相反，严格相等运算符总是认为不同类型的操作数是不同的。严格相等运算符本质上只执行第 1 步，然后对所有其他情况返回 `false`。
 
-上面的算法有一个“故意违反”：如果其中一个操作数是 [`document.all`](/zh-CN/docs/Web/API/Document/all)，则它被视为 `undefined`。这意味着 `document.all == null` 是 `true`，但 `document.all === undefined && document.all === null` 是 `false`。
+上面的算法有一个"故意违反"：如果其中一个操作数是 [`document.all`](/zh-CN/docs/Web/API/Document/all)，则它被视为 `undefined`。这意味着 `document.all == null` 是 `true`，但 `document.all === undefined && document.all === null` 是 `false`。
 
 ## 示例
 

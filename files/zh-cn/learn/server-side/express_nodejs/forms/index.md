@@ -41,7 +41,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 ### HTML 表单
 
-首先简要概述[HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms)。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些“团队”的名称，及其相关标签：
+首先简要概述[HTML 表单](/zh-CN/docs/Web/Guide/HTML/Forms)。考虑一个简单的 HTML 表单，其中包含一个文本字段，用于输入某些"团队"的名称，及其相关标签：
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
@@ -57,7 +57,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 </form>
 ```
 
-虽然这里，我们只包含一个（文本）字段，用于输入团队名称，但表单可能包含任意数量的其他输入元素，及其相关标签。字段的 `type` 属性，定义将显示哪种窗口小部件。该字段的名称 `name` 和 `id` ，用于标识 JavaScript/CSS/HTML 中的字段，而 `value`定义字段首次显示时的初始值。匹配团队标签使用 `label` 标签，指定（请参阅上面的“输入名称” "Enter name"），其中 `for` 字段，包含 `input` 相关输入的 `id` 值。
+虽然这里，我们只包含一个（文本）字段，用于输入团队名称，但表单可能包含任意数量的其他输入元素，及其相关标签。字段的 `type` 属性，定义将显示哪种窗口小部件。该字段的名称 `name` 和 `id` ，用于标识 JavaScript/CSS/HTML 中的字段，而 `value`定义字段首次显示时的初始值。匹配团队标签使用 `label` 标签，指定（请参阅上面的"输入名称" "Enter name"），其中 `for` 字段，包含 `input` 相关输入的 `id` 值。
 
 另外，有必要说一下，HTML 中 form 表单默认就是以 post 提交的。它比 get 方式存储量更大、传输更安全。
 
@@ -119,11 +119,11 @@ const { body,validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
 ```
 
-有许多可用的功能，允许您一次检查和清理请求参数，正文，标头，cookie 等数据，或所有数据。对于本教程，我们主要使用`body`， `sanitizeBody`，和 `validationResult`（如上面“导入”的）。
+有许多可用的功能，允许您一次检查和清理请求参数，正文，标头，cookie 等数据，或所有数据。对于本教程，我们主要使用`body`， `sanitizeBody`，和 `validationResult`（如上面"导入"的）。
 
 功能定义如下：
 
-- [`body(fields[, message])`](https://github.com/ctavan/express-validator#bodyfields-message): 指定请求本文中的一组字段（`POST`参数）以及可选的错误消息，如果测试失败，则可以显示该字段。验证标准以菊花链形式连接到 `body()`方法。例如，下面的第一个检查测试，“name”字段不为空，如果不是，则设置错误消息“Empty name”。第二个测试，检查 age 字段是否为有效日期，并使用`optional()`指定 null 和空字符串不会验证失败。
+- [`body(fields[, message])`](https://github.com/ctavan/express-validator#bodyfields-message): 指定请求本文中的一组字段（`POST`参数）以及可选的错误消息，如果测试失败，则可以显示该字段。验证标准以菊花链形式连接到 `body()`方法。例如，下面的第一个检查测试，"name"字段不为空，如果不是，则设置错误消息"Empty name"。第二个测试，检查 age 字段是否为有效日期，并使用`optional()`指定 null 和空字符串不会验证失败。
 
   ```js
   body('name', 'Empty name').isLength({ min: 1 }),
@@ -182,7 +182,7 @@ const { sanitizeBody } = require('express-validator/filter');
 
 让我们看看更高级的内容吧：
 
-我们通常会在“后台”接收 form 表单提交的数据。显而易见，这里应该是 express！
+我们通常会在"后台"接收 form 表单提交的数据。显而易见，这里应该是 express！
 
 首先我们可以知道（也许你会知道）应该先引入 express：
 
@@ -192,9 +192,9 @@ const { sanitizeBody } = require('express-validator/filter');
 
 那么既然是 post 提交，给大家推荐一款中间件：body-parser。它能让你轻松地处理 body 数据。
 
-哦，如果你涉及文件上传，那么你可能需要“[multer](https://blog.csdn.net/qq_43624878/article/details/103607944)”中间件，你大概听说过“formidable”，但 multer 比它更强大！
+哦，如果你涉及文件上传，那么你可能需要"[multer](https://blog.csdn.net/qq_43624878/article/details/103607944)"中间件，你大概听说过"formidable"，但 multer 比它更强大！
 
-> **备注：** 更“牢固”的实现，可能允许您在创建新对象时创建依赖对象，并随时删除任何对象（例如，通过删除依赖对象，或从数据库中，删除对已删除对象的引用） 。
+> **备注：** 更"牢固"的实现，可能允许您在创建新对象时创建依赖对象，并随时删除任何对象（例如，通过删除依赖对象，或从数据库中，删除对已删除对象的引用） 。
 
 ### 路由
 
@@ -228,7 +228,7 @@ router.post('/genre/create', genre_controller.genre_create_post);
 实现`Book`, `BookInstance`, 和 `Genre`模型的删除页面，以与我们的作者删除页面相同的方式，将它们与关联的详细信息页面，链接起来。页面应遵循相同的设计方法：
 
 - 如果有来自其他对象的、对于对象的引用，则应显示注释，列出这些对象，并说明在删除列出的对象之前，无法删除此记录。
-- 如果没有对该对象的其他引用，则视图应提示删除它。如果用户按下“删除”按钮，则应删除该记录。
+- 如果没有对该对象的其他引用，则视图应提示删除它。如果用户按下"删除"按钮，则应删除该记录。
 
 一些提示：
 
@@ -241,7 +241,7 @@ router.post('/genre/create', genre_controller.genre_create_post);
 一些提示：
 
 - 我们刚刚实施的图书更新页面是最难的！相同的模式可用于其他对象的更新页面。
-- 作者死亡日期和出生日期字段以及书本实例 due_date 字段，是输入到表单上日期输入字段的错误格式（它需要“YYYY-MM-DD”形式的数据）。解决此问题的最简单方法，是为适当格式化的日期，定义新的虚拟属性，然后在关联的视图模板中，使用此字段。
+- 作者死亡日期和出生日期字段以及书本实例 due_date 字段，是输入到表单上日期输入字段的错误格式（它需要"YYYY-MM-DD"形式的数据）。解决此问题的最简单方法，是为适当格式化的日期，定义新的虚拟属性，然后在关联的视图模板中，使用此字段。
 - 如果您遇到困难，此处示例中的更新页面有一些[示例](https://github.com/mdn/express-locallibrary-tutorial)。
 
 ## 总结

@@ -5,7 +5,7 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
 
-**CSS 媒体查询**为你提供了一种应用 CSS 的方法，仅在浏览器和设备的环境与你指定的规则相匹配的时候 CSS 才会真的被应用，例如“视口宽于 480 像素”的时候。媒体查询是响应式 Web 设计的关键部分，因为它允许你按照视口的尺寸创建不同的布局，不过它也可以用来探测和你的站点运行的环境相关联的其他条件，比如用户是在使用触摸屏还是鼠标。在本节课，你将会先学习到媒体查询的语法，然后继续在一个被安排好的示例中使用它，这个示例还会告诉你一个简单的设计是可以怎么被弄成响应式的。
+**CSS 媒体查询**为你提供了一种应用 CSS 的方法，仅在浏览器和设备的环境与你指定的规则相匹配的时候 CSS 才会真的被应用，例如"视口宽于 480 像素"的时候。媒体查询是响应式 Web 设计的关键部分，因为它允许你按照视口的尺寸创建不同的布局，不过它也可以用来探测和你的站点运行的环境相关联的其他条件，比如用户是在使用触摸屏还是鼠标。在本节课，你将会先学习到媒体查询的语法，然后继续在一个被安排好的示例中使用它，这个示例还会告诉你一个简单的设计是可以怎么被弄成响应式的。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -146,7 +146,7 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 有了所有不同的可用的媒体查询，你可能想要把它们混合起来，或者建立查询列表——其中的任何一个都可以匹配生效。
 
-### 媒体查询中的“与”逻辑
+### 媒体查询中的"与"逻辑
 
 为了混合媒体特征，你可以以与在上面使用`and`很相同的方式，用`and`来混合媒体类型和特征。例如，我们可能会想要测得`min-width`和`orientation`，而 body 的文字只会在视口至少为 400 像素宽，且设备横放时变为蓝色。
 
@@ -160,7 +160,7 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 在浏览器中[打开此示例](https://mdn.github.io/css-examples/learn/media-queries/and.html)，或者[查看源代码](https://github.com/mdn/css-examples/blob/master/learn/media-queries/and.html)。
 
-### 媒体查询中的“或”逻辑
+### 媒体查询中的"或"逻辑
 
 如果你有一组查询，且要其中的任何一个都可以匹配的话，那么你可以使用逗号分开这些查询。在下面的示例中，文本会在视口至少为 400 像素宽的时候**或者**设备处于横放状态的时候变为蓝色。如果其中的任何一项成立，那么查询就匹配上了。
 
@@ -174,7 +174,7 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 在浏览器中[打开此示例](https://mdn.github.io/css-examples/learn/media-queries/or.html)，或者[查看源代码](https://github.com/mdn/css-examples/blob/master/learn/media-queries/or.html)。
 
-### 媒体查询中的“非”逻辑
+### 媒体查询中的"非"逻辑
 
 你可以用`not`操作符让整个媒体查询失效。这就直接反转了整个媒体查询的含义。因而在下面的例子中，文本只会在朝向为竖着的时候变成蓝色。
 

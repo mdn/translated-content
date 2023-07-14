@@ -17,7 +17,7 @@ constructor([arguments]) { ... }
 
 ## 描述
 
-在一个类中只能有一个名为“constructor”的特殊方法。一个类中出现多次构造函数 (`constructor)`方法将会抛出一个 {{jsxref("SyntaxError")}} 错误。
+在一个类中只能有一个名为"constructor"的特殊方法。一个类中出现多次构造函数 (`constructor)`方法将会抛出一个 {{jsxref("SyntaxError")}} 错误。
 
 在一个构造方法中可以使用`super`关键字来调用一个父类的构造方法。
 

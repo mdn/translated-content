@@ -24,7 +24,7 @@ new Promise(executor)
 
 ### 返回值
 
-当通过 `new` 关键字调用 `Promise` 构造函数时，它会返回一个 Promise 对象。当 `resolutionFunc` 或者 `rejectionFunc` 被调用时，该 Promise 对象就会变为*已解决*（resolved）。请注意，如果你调用 `resolveFunc` 或 `rejectFunc` 并传入另一个 Promise 对象作为参数，可以说该 Promise 对象“已解决”，但仍未“敲定（settled）”。有关更多解释，请参阅 [Promise 描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#描述)。
+当通过 `new` 关键字调用 `Promise` 构造函数时，它会返回一个 Promise 对象。当 `resolutionFunc` 或者 `rejectionFunc` 被调用时，该 Promise 对象就会变为*已解决*（resolved）。请注意，如果你调用 `resolveFunc` 或 `rejectFunc` 并传入另一个 Promise 对象作为参数，可以说该 Promise 对象"已解决"，但仍未"敲定（settled）"。有关更多解释，请参阅 [Promise 描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#描述)。
 
 ## 描述
 
@@ -58,7 +58,7 @@ resolveFunc(value); // 解决时调用
 rejectFunc(reason); // 拒绝时调用
 ```
 
-传入 `resolveFunc` 的 `value` 参数可以是另一个 Promise 对象，在这种情况下，新构造的 Promise 对象的状态将“锁定”到传入的 Promise 对象（作为 [resolution](#resolver_函数) Promise 的一部分）。`rejectFunc` 的语义类似于 [`throw`](/zh-CN/docs/Web/JavaScript/Reference/Statements/throw) 语句，因此 `reason` 通常是一个 [`Error`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error) 实例。如果 `value` 或 `reason` 中有任意一个被省略，Promise 将会被兑现（fulfilled）或拒绝（rejected）为 `undefined`。
+传入 `resolveFunc` 的 `value` 参数可以是另一个 Promise 对象，在这种情况下，新构造的 Promise 对象的状态将"锁定"到传入的 Promise 对象（作为 [resolution](#resolver_函数) Promise 的一部分）。`rejectFunc` 的语义类似于 [`throw`](/zh-CN/docs/Web/JavaScript/Reference/Statements/throw) 语句，因此 `reason` 通常是一个 [`Error`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error) 实例。如果 `value` 或 `reason` 中有任意一个被省略，Promise 将会被兑现（fulfilled）或拒绝（rejected）为 `undefined`。
 
 `executor` 的完成状态对 Promise 的状态影响有限：
 
@@ -69,13 +69,13 @@ rejectFunc(reason); // 拒绝时调用
 
 以下是典型的 Promise 流程概述：
 
-1. 在构造函数生成新的 `Promise` 对象时，它还会生成一对相应的 `resolveFunc` 和 `rejectFunc` 函数；它们与 `Promise` 对象“绑定”在一起。
+1. 在构造函数生成新的 `Promise` 对象时，它还会生成一对相应的 `resolveFunc` 和 `rejectFunc` 函数；它们与 `Promise` 对象"绑定"在一起。
 2. `executor` 通常会封装某些提供基于回调的 API 的异步操作。回调函数（传给原始回调 API 的函数）在 `executor` 代码中定义，因此它可以访问 `resolveFunc` 和 `rejectFunc`。
 3. `executor` 是同步调用的（在构造 `Promise` 时立即调用），并将 `resolveFunc` 和 `rejectFunc` 函数作为传入参数。
-4. `executor` 中的代码有机会执行某些操作。异步任务的最终完成通过 `resolveFunc` 或 `rejectFunc` 引起的副作用与 Promise 实例进行通信。这个副作用让 `Promise` 对象变为“已解决”状态。
+4. `executor` 中的代码有机会执行某些操作。异步任务的最终完成通过 `resolveFunc` 或 `rejectFunc` 引起的副作用与 Promise 实例进行通信。这个副作用让 `Promise` 对象变为"已解决"状态。
    - 如果先调用 `resolveFunc`，则传入的值将[解决](#resolver_函数)。Promise 可能会保持待定状态（如果传入了另一个 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 对象），变为已兑现状态（在传入非 thenable 值的大多数情况下），或者变为已拒绝状态（在解析值无效的情况下）。
    - 如果先调用 `rejectFunc`，则 Promise 立即变为已拒绝状态。
-   - 一旦 `resolveFunc` 或 `rejectFunc` 中的一个被调用，Promise 将保持解决状态。只有第一次调用 `resolveFunc` 或 `rejectFunc` 会影响 Promise 的最终状态，随后对任一函数的调用都不能更改兑现值或拒绝原因，也不能将其最终状态从“已兑现”转换为“已拒绝”或相反。
+   - 一旦 `resolveFunc` 或 `rejectFunc` 中的一个被调用，Promise 将保持解决状态。只有第一次调用 `resolveFunc` 或 `rejectFunc` 会影响 Promise 的最终状态，随后对任一函数的调用都不能更改兑现值或拒绝原因，也不能将其最终状态从"已兑现"转换为"已拒绝"或相反。
    - 如果 `executor` 抛出错误，则 Promise 被拒绝。但是，如果 resolveFunc 或 rejectFunc 中的一个已经被调用（因此 Promise 已经被解决），则忽略该错误。
    - 解决 Promise 不一定会导致 Promise 变为已兑现或已拒绝（即已敲定）。Promise 可能仍处于待定状态，因为它可能是用另一个 thenable 对象解决的，但它的最终状态将与已解决的 thenable 对象一致。
 5. 一旦 Promise 敲定，它会（异步地）调用任何通过 {{jsxref("Promise/then", "then()")}}、{{jsxref("Promise/catch", "catch()")}} 或 {{jsxref("Promise/finally", "finally()")}} 关联的进一步处理程序。最终的兑现值或拒绝原因在调用时作为输入参数传给兑现和拒绝处理程序（请参阅 [promise 的链式调用](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_的链式调用)）。
@@ -103,7 +103,7 @@ readFilePromise("./data.txt")
 
 `resolveFunc` 解决函数有以下行为：
 
-- 如果它被调用时传入了新建的 `Promise` 对象本身（即它所“绑定”的 Promise 对象），则 `Promise` 对象会被拒绝并抛出一个 {{jsxref("TypeError")}} 错误。
+- 如果它被调用时传入了新建的 `Promise` 对象本身（即它所"绑定"的 Promise 对象），则 `Promise` 对象会被拒绝并抛出一个 {{jsxref("TypeError")}} 错误。
 - 如果它使用一个非 [thenable](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenable) 的值（基本类型，或一个没有 `then` 属性或 `then` 属性不可调用的对象），则该 Promise 对象会被立即以该值兑现。
 - 如果它被调用时传入了一个 thenable 对象（包括另一个 `Promise` 实例），则该 thenable 对象的 `then` 方法将被保存并在未来被调用（它总是异步调用）。`then` 方法将被调用并传入两个回调函数，这两个函数的行为与传递给 `executor` 函数的 `resolveFunc` 和 `rejectFunc` 函数完全相同。如果调用 `then` 方法时出现错误，则当前的 `Promise` 对象会被拒绝并抛出这个错误。
 
@@ -159,7 +159,7 @@ function myAsyncFunction(url) {
 
 调用 `resolveFunc` 函数会使 Promise 对象变为已解决状态，因此再次调用 `resolveFunc` 或 `rejectFunc` 函数没有任何效果。然而，Promise 对象可能处于以下任何状态之一：待定、已兑现或已拒绝。
 
-在下面这个例子中，`pendingResolved` Promise 对象在创建时就已经被解决，因为它已经“锁定”以匹配内部 Promise 对象的最终状态，后续在 executor 函数中调用 `resolveOuter` 或 `rejectOuter` 或抛出错误对其最终状态没有影响。然而，内部 Promise 对象仍然处于待定状态，直到 100 毫秒后才被解决，因此外部 Promise 对象也处于待定状态：
+在下面这个例子中，`pendingResolved` Promise 对象在创建时就已经被解决，因为它已经"锁定"以匹配内部 Promise 对象的最终状态，后续在 executor 函数中调用 `resolveOuter` 或 `rejectOuter` 或抛出错误对其最终状态没有影响。然而，内部 Promise 对象仍然处于待定状态，直到 100 毫秒后才被解决，因此外部 Promise 对象也处于待定状态：
 
 ```js
 const pendingResolved = new Promise((resolveOuter, rejectOuter) => {

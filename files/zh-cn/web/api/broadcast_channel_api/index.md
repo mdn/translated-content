@@ -11,7 +11,7 @@ slug: Web/API/Broadcast_Channel_API
 
 广播频道会被命名和绑定到指定的源。
 
-通过创建一个监听某个频道下的 {{domxref("BroadcastChannel")}} 对象，你可以接收发送给该频道的所有消息。一个有意思的点是，你不需要再维护需要通信的 iframe 或 worker 的索引。它们可以通过构造 {{domxref("BroadcastChannel")}} 来简单地“订阅”特定频道，并在它们之间进行全双工（双向）通信。
+通过创建一个监听某个频道下的 {{domxref("BroadcastChannel")}} 对象，你可以接收发送给该频道的所有消息。一个有意思的点是，你不需要再维护需要通信的 iframe 或 worker 的索引。它们可以通过构造 {{domxref("BroadcastChannel")}} 来简单地"订阅"特定频道，并在它们之间进行全双工（双向）通信。
 
 ![The principle of the Broadcast Channel API](broadcastchannel.png)
 

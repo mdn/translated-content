@@ -228,7 +228,7 @@ track.connect(gainNode).connect(panner).connect(audioContext.destination);
 
 ## 摘要
 
-好的，我们拥有一个音箱播放我们的“磁带”，我们可以调整音量和立体声声像，给我们提供了一个相当基本的工作音频图表。
+好的，我们拥有一个音箱播放我们的"磁带"，我们可以调整音量和立体声声像，给我们提供了一个相当基本的工作音频图表。
 
 这构成了开始向你的网站或 Web 应用添加音频所需的很少的几个基础知识。Web Audio API 还有很多功能，但一旦你掌握了节点的概念及将音频节点图联系在一起，我们可以继续研究更加复杂的功能。
 
@@ -493,7 +493,7 @@ biquad filter 拥有很多可选择的方法，通过 {{ domxref("AudioContext.c
 var biquadFilter = audioCtx.createBiquadFilter();
 ```
 
-在 Voice-change-o-matic 的演示中，运用的制定选项是“lowshelf”过滤器，它提供了低音的基本增幅方法：
+在 Voice-change-o-matic 的演示中，运用的制定选项是"lowshelf"过滤器，它提供了低音的基本增幅方法：
 
 ```js
 biquadFilter.type = "lowshelf";

@@ -18,7 +18,7 @@ _继承自父节点 {{domxref("Node")}}, 并实现了 {{domxref("ChildNode")}} �
 - {{domxref("DocumentType.internalSubset")}} {{readonlyInline}} {{Deprecated_Inline}}
   - : 一个表示内部子集的{{domxref("DOMString")}}，如果没有的话则为`null` ，例：`"<!ELEMENT foo (bar)>"`
 - {{domxref("DocumentType.name")}} {{readonlyInline}}
-  - : {{domxref("DOMString")}}，文档类型的名称，例：`<!DOCTYPE HTML>`中的“`html`”
+  - : {{domxref("DOMString")}}，文档类型的名称，例：`<!DOCTYPE HTML>`中的"`html`"
 - {{domxref("DocumentType.notations")}} {{readonlyInline}} {{Deprecated_Inline}}
   - : 在文档类型定义（DTD）中声明符号的{{domxref("NamedNodeMap")}}，在这个映射（map）中的所有节点实现了{{domxref("Notation")}}接口
 - {{domxref("DocumentType.publicId")}} {{readonlyInline}}

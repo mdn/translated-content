@@ -70,7 +70,7 @@ _图片来自：[Overloaded plug socket](https://www.flickr.com/photos/easy-pics
 特别地，您将使用的最常见的浏览器 API 类别（以及我们将更详细地介绍的）是：
 
 - **操作文档的 API**内置于浏览器中。最明显的例子是[DOM（文档对象模型）](/zh-CN/docs/Web/API/Document_Object_Model)API，它允许您操作 HTML 和 CSS — 创建、移除以及修改 HTML，动态地将新样式应用到您的页面，等等。每当您看到一个弹出窗口出现在一个页面上，或者显示一些新的内容时，这都是 DOM 的行为。您可以在在[Manipulating documents](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)中找到关于这些类型的 API 的更多信息。
-- **从服务器获取数据的 API** 用于更新网页的一小部分是相当好用的。这个看似很小的细节能对网站的性能和行为产生巨大的影响 — 如果您只是更新一个股票列表或者一些可用的新故事而不需要从服务器重新加载整个页面将使网站或应用程序感觉更加敏感和“活泼”。使这成为可能的 API 包括[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)和[Fetch API](/zh-CN/docs/Web/API/Fetch_API)。您也可能会遇到描述这种技术的术语**Ajax**。您可以在[Fetching data from the server](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)找到关于类似的 API 的更多信息。
+- **从服务器获取数据的 API** 用于更新网页的一小部分是相当好用的。这个看似很小的细节能对网站的性能和行为产生巨大的影响 — 如果您只是更新一个股票列表或者一些可用的新故事而不需要从服务器重新加载整个页面将使网站或应用程序感觉更加敏感和"活泼"。使这成为可能的 API 包括[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)和[Fetch API](/zh-CN/docs/Web/API/Fetch_API)。您也可能会遇到描述这种技术的术语**Ajax**。您可以在[Fetching data from the server](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)找到关于类似的 API 的更多信息。
 - **用于绘制和操作图形的 API**目前已被浏览器广泛支持 — 最流行的是允许您以编程方式更新包含在 HTML {{htmlelement("canvas")}} 元素中的像素数据以创建 2D 和 3D 场景的[Canvas](/zh-CN/docs/Web/API/Canvas_API)和[WebGL](/zh-CN/docs/Web/API/WebGL_API)。例如，您可以绘制矩形或圆形等形状，将图像导入到画布上，然后使用 Canvas API 对其应用滤镜（如棕褐色滤镜或灰度滤镜），或使用 WebGL 创建具有光照和纹理的复杂 3D 场景。这些 API 经常与用于创建动画循环的 API（例如{{domxref("window.requestAnimationFrame()")}}）和其他 API 一起不断更新诸如动画和游戏之类的场景。
 - **音频和视频 API** 例如 {{domxref("HTMLMediaElement")}}、[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 和 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) 允许你使用多媒体来做一些非常有趣的事情，比如创建用于播放音频和视频的自定义 UI 控件，显示字幕字幕和你的视频，从网络摄像机抓取视频，通过画布操纵（见上），或在网络会议中显示在别人的电脑上，或者添加效果到音轨（如增益、失真、平移等） 。
 - **设备 API**基本上是以对网络应用程序有用的方式操作和检索现代设备硬件中的数据的 API。我们已经讨论过访问设备位置数据的地理定位 API，因此您可以在地图上标注您的位置。其他示例还包括通过系统通知（参见[Notifications API](/zh-CN/docs/Web/API/Notifications_API)）或振动硬件（参见[Vibration API](/zh-CN/docs/Web/API/Vibration_API)）告诉用户 Web 应用程序有用的更新可用。
@@ -138,14 +138,14 @@ myGeo.getCurrentPosition(function(position) { ... });
 
 > **备注：** 由另一个函数作为参数的函数称为 ([callback function](/zh-CN/docs/Glossary/Callback_function) "回调函数").
 
-仅在操作完成时调用函数的模式在 JavaScript API 中非常常见 - 确保一个操作已经完成，然后在另一个操作中尝试使用该操作返回的数据。这些被称为 **[asynchronous](/zh-CN/docs/Glossary/Asynchronous) **“异步”操作。由于获取设备的当前位置依赖于外部组件（设备的 GPS 或其他地理定位硬件），我们不能保证会立即使用返回的数据。因此，这样子是行不通的：
+仅在操作完成时调用函数的模式在 JavaScript API 中非常常见 - 确保一个操作已经完成，然后在另一个操作中尝试使用该操作返回的数据。这些被称为 **[asynchronous](/zh-CN/docs/Glossary/Asynchronous) **"异步"操作。由于获取设备的当前位置依赖于外部组件（设备的 GPS 或其他地理定位硬件），我们不能保证会立即使用返回的数据。因此，这样子是行不通的：
 
 ```js
 var position = navigator.geolocation.getCurrentPosition();
 var myLatitude = position.coords.latitude;
 ```
 
-如果第一行还没有返回结果，则第二行将会出现错误，因为位置数据还不可用。出于这个原因，涉及同步操作的 API 被设计为使用 {{glossary("callback function")}}s“回调函数”，或更现代的 [Promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 系统，这些系统在 ECMAScript 6 中可用，并被广泛用于较新的 API。
+如果第一行还没有返回结果，则第二行将会出现错误，因为位置数据还不可用。出于这个原因，涉及同步操作的 API 被设计为使用 {{glossary("callback function")}}s"回调函数"，或更现代的 [Promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 系统，这些系统在 ECMAScript 6 中可用，并被广泛用于较新的 API。
 
 我们将 Geolocation API 与第三方 API（Google Maps API）相结合， — 我们正在使用它来绘制 Google 地图上由 `getCurrentPosition()`返回的位置。我们通过链接到页面上使这个 API 可用。 — 你会在 HTML 中找到这一行：
 
@@ -215,7 +215,7 @@ Ball.prototype.draw = function() {
 
 我们之前已经在课程中讨论了事件，在我们的 [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)文章中 - 详细介绍了客户端 Web 事件是什么以及它们在代码中的用法。如果您还不熟悉客户端 Web API 事件的工作方式，则应继续阅读。
 
-一些 Web API 不包含事件，但有些包含一些事件。当事件触发时，允许我们运行函数的处理程序属性通常在单独的“Event handlers”(事件处理程序) 部分的参考资料中列出。作为一个简单的例子，[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 对象的实例（每一个实例都代表一个到服务器的 HTTP 请求，来取得某种新的资源）都有很多事件可用，例如 `onload` 事件在成功返回时就触发包含请求的资源，并且现在就可用。
+一些 Web API 不包含事件，但有些包含一些事件。当事件触发时，允许我们运行函数的处理程序属性通常在单独的"Event handlers"(事件处理程序) 部分的参考资料中列出。作为一个简单的例子，[`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest) 对象的实例（每一个实例都代表一个到服务器的 HTTP 请求，来取得某种新的资源）都有很多事件可用，例如 `onload` 事件在成功返回时就触发包含请求的资源，并且现在就可用。
 
 下面的代码提供了一个简单的例子来说明如何使用它：
 

@@ -5,11 +5,11 @@ slug: Web/CSS/text-overflow
 
 {{CSSRef}}
 
-**`text-overflow`** [CSS](/zh-CN/docs/Web/CSS) 属性用于确定如何提示用户存在隐藏的溢出内容。其形式可以是裁剪、显示一个省略号（“`…`”）或显示一个自定义字符串。
+**`text-overflow`** [CSS](/zh-CN/docs/Web/CSS) 属性用于确定如何提示用户存在隐藏的溢出内容。其形式可以是裁剪、显示一个省略号（"`…`"）或显示一个自定义字符串。
 
 {{EmbedInteractiveExample("pages/css/text-overflow.html")}}
 
-`text-overflow` 属性并不会强制“溢出”事件的发生，因此为了能让文本能够溢出容器，你需要在元素上添加几个额外的属性：{{cssxref("overflow")}} 和 {{cssxref("white-space")}}。例如：
+`text-overflow` 属性并不会强制"溢出"事件的发生，因此为了能让文本能够溢出容器，你需要在元素上添加几个额外的属性：{{cssxref("overflow")}} 和 {{cssxref("white-space")}}。例如：
 
 ```css
 overflow: hidden;

@@ -139,7 +139,7 @@ console.log(sortArguments(5, 3, 7, 1)); // shows 1, 3, 5, 7
 
 ## 相关链接
 
-- [Spread operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator) (also ‘`...`’)
+- [Spread operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator) (also '`...`')
 - [Arguments object](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)
 - [Array](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)
 - [Functions](/zh-CN/docs/Web/JavaScript/Reference/Functions)

@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Objects/向“弹跳球”演示程序添加新�
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
-在此次测验中，你需要将上一节中的“弹球”演示程序作为模板，添加一些新的有趣的功能。
+在此次测验中，你需要将上一节中的"弹球"演示程序作为模板，添加一些新的有趣的功能。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -29,7 +29,7 @@ original_slug: Learn/JavaScript/Objects/向“弹跳球”演示程序添加新�
 
 ## 项目简介
 
-我们的弹球 demo 很有趣，但是现在我们想让它更具有互动性，我们为它添加一个由玩家控制的“恶魔圈”，如果恶魔圈抓到弹球会把它会吃掉。我们还想测验你面向对象的水平，首先创建一个通用 `Shape()` 对象，然后由它派生出弹球和恶魔圈。最后，我们为 demo 添加一个计分器来记录剩下的球数。
+我们的弹球 demo 很有趣，但是现在我们想让它更具有互动性，我们为它添加一个由玩家控制的"恶魔圈"，如果恶魔圈抓到弹球会把它会吃掉。我们还想测验你面向对象的水平，首先创建一个通用 `Shape()` 对象，然后由它派生出弹球和恶魔圈。最后，我们为 demo 添加一个计分器来记录剩下的球数。
 
 程序最终会像这样：
 

@@ -94,9 +94,9 @@ console.log(42 / +0); // Infinity
 console.log(42 / -0); // -Infinity
 ```
 
-{{jsxref("NaN")}}（“**N**ot **a** **N**umber”）是一个特殊种类的数值，当算术运算的结果不表示数值时，通常会遇到它。它也是 JavaScript 中唯一不等于自身的值。
+{{jsxref("NaN")}}（"**N**ot **a** **N**umber"）是一个特殊种类的数值，当算术运算的结果不表示数值时，通常会遇到它。它也是 JavaScript 中唯一不等于自身的值。
 
-虽然 number 在概念上是一个“数学的值”，并且总是隐式的编码为浮点类型，但是 JavaScript 提供了[位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#Assignment_operators)。当应用位运算符时，number 首先转换为 32 位整数。
+虽然 number 在概念上是一个"数学的值"，并且总是隐式的编码为浮点类型，但是 JavaScript 提供了[位运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#Assignment_operators)。当应用位运算符时，number 首先转换为 32 位整数。
 
 > **备注：** 尽管位运算符*可以*使用[位掩码](https://zh.wikipedia.org/wiki/掩码)来表示单个数值中的几个布尔值，但通常这不是一个好的做法。JavaScript 提供了表示一组布尔值的其他方法（如布尔数组，或将布尔值分配给命名属性的对象）。位掩码也往往会使代码更难读取、理解和维护。
 
@@ -132,7 +132,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 - 使用 [`substring()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/substring) 获取原始的子字符串。
 - 使用串联运算符（`+`）或 [`concat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/concat) 将两个字符串串联。
 
-#### 注意代码中的“字符串类型”！
+#### 注意代码中的"字符串类型"！
 
 使用字符串来表示复杂的数据可能很诱人。这样做会带来短期的好处：
 
@@ -146,7 +146,7 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 
 ### Symbol 类型
 
-{{jsxref("Symbol")}} 是**唯一**并且**不可变**的原始值并且可以用来作为对象属性的键（如下）。在某些程序语言当中，Symbol 也被称作“原子类型”（atom）。symbol 的目的是去创建一个唯一属性键，保证不会与其他代码中的键产生冲突。
+{{jsxref("Symbol")}} 是**唯一**并且**不可变**的原始值并且可以用来作为对象属性的键（如下）。在某些程序语言当中，Symbol 也被称作"原子类型"（atom）。symbol 的目的是去创建一个唯一属性键，保证不会与其他代码中的键产生冲突。
 
 ## Object
 
@@ -202,13 +202,13 @@ JavaScript 字符串是不可变的。这意味着一旦字符串被创建，就
 
 此外，数组对象还继承了 `Array.prototype` 的一些操作数组的便捷方法。例如，[`indexOf()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)（搜索数组中的一个值）或 [`push()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/push)（向数组中添加一个元素），等等。这使得数组是表示列表或集合的最优选择。
 
-[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)表示底层二进制缓冲区的类数组视图，并且提供了与数组相对应的类似语义的方法。“类型化数组”是一系列数据结构的总话术语，包括 `Int8Array`、`Float32Array` 等等。获取更多细节，请查看[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)页。类型化数组通常与 {{jsxref("ArrayBuffer")}} 和 {{jsxref("DataView")}} 一起使用。
+[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)表示底层二进制缓冲区的类数组视图，并且提供了与数组相对应的类似语义的方法。"类型化数组"是一系列数据结构的总话术语，包括 `Int8Array`、`Float32Array` 等等。获取更多细节，请查看[类型化数组](/zh-CN/docs/Web/JavaScript/Typed_arrays)页。类型化数组通常与 {{jsxref("ArrayBuffer")}} 和 {{jsxref("DataView")}} 一起使用。
 
 ### 带键的集合：Map、Set、WeakMap、WeakSet
 
 这些数据结构把对象的引用当作键。{{jsxref("Set")}} 和 {{jsxref("WeakSet")}} 表示唯一值的集合，而 {{jsxref("Map")}} 和 {{jsxref("WeakMap")}} 表示键值相关联的集合。
 
-你也可以自己实现 `Map` 和 `Set`。然而，因为对象不能被比较（例如，在 `<`“小于”的意义上），另一方面，引擎也没有暴露出它的哈希函数，因此查找性能必定是线性的。它们的原始实现（包括 `WeakMap`）的查找性能大致为对数到相对恒定的时间。
+你也可以自己实现 `Map` 和 `Set`。然而，因为对象不能被比较（例如，在 `<`"小于"的意义上），另一方面，引擎也没有暴露出它的哈希函数，因此查找性能必定是线性的。它们的原始实现（包括 `WeakMap`）的查找性能大致为对数到相对恒定的时间。
 
 通常，可以通过直接在对象上设置属性或使用 `data-*` 属性，将绑定数据到 DOM 节点。然而缺陷是在任何的脚本内，数据都运行在同样的上下文中。`Map` 和 `WeakMap` 能够方便地将数据*私密*地绑定到一个对象。
 

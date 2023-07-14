@@ -41,7 +41,7 @@ Function.prototype.toString.call('foo'); // throws TypeError
 
 > **备注：** 这意味着对原生函数的字符串调用 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval) 将始终产生语法错误。
 
-若是在由 `Function` 构造函数生成的函数上调用 `toString()`，则 `toString()` 返回创建后的函数源码，包括形参和函数体，函数名为“anonymous”。例如：对于 `Function("a", "b", "return a + b").toString()`，则会返回：
+若是在由 `Function` 构造函数生成的函数上调用 `toString()`，则 `toString()` 返回创建后的函数源码，包括形参和函数体，函数名为"anonymous"。例如：对于 `Function("a", "b", "return a + b").toString()`，则会返回：
 
 ```js
 "function anonymous(a,b\n) {\nreturn a + b\n}"

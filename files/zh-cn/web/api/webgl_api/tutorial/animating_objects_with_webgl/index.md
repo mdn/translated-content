@@ -44,7 +44,7 @@ var squareRotation = 0.0;
   requestAnimationFrame(render);
 ```
 
-该代码用于 `requestAnimationFrame` 要求浏览器在每一帧上调用函数“`render`”。`requestAnimationFrame` 自页面加载以来经过的时间（以毫秒为单位）。我们将其转换为秒，然后从中减去，以计算 `deltaTime` 自渲染最后一帧以来的秒数。在 drawscene 的结尾，我们添加了要更新的代码 `squareRotation`。
+该代码用于 `requestAnimationFrame` 要求浏览器在每一帧上调用函数"`render`"。`requestAnimationFrame` 自页面加载以来经过的时间（以毫秒为单位）。我们将其转换为秒，然后从中减去，以计算 `deltaTime` 自渲染最后一帧以来的秒数。在 drawscene 的结尾，我们添加了要更新的代码 `squareRotation`。
 
 ```js
 squareRotation += deltaTime;

@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 
 {{jsSidebar}}
 
-为什么会有这一篇“重新介绍”呢？因为 {{Glossary("JavaScript")}} 堪称[世界上被人误解最深的编程语言](http://javascript.crockford.com/javascript.html)。虽然常被嘲为“玩具语言”，但在它看似简洁的外衣下，还隐藏着强大的语言特性。JavaScript 目前广泛应用于众多知名应用中，对于网页和移动开发者来说，深入理解 JavaScript 就尤为必要。
+为什么会有这一篇"重新介绍"呢？因为 {{Glossary("JavaScript")}} 堪称[世界上被人误解最深的编程语言](http://javascript.crockford.com/javascript.html)。虽然常被嘲为"玩具语言"，但在它看似简洁的外衣下，还隐藏着强大的语言特性。JavaScript 目前广泛应用于众多知名应用中，对于网页和移动开发者来说，深入理解 JavaScript 就尤为必要。
 
 我们有必要先从这门语言的历史谈起。在 1995 年 Netscape 一位名为 Brendan Eich 的工程师创造了 JavaScript，随后在 1996 年初，JavaScript 首先被应用于 Netscape 2 浏览器上。最初的 JavaScript 名为 LiveScript，但是因为一个糟糕的营销策略而被重新命名，该策略企图利用 Sun Microsystem 的 Java 语言的流行性，将它的名字从最初的 LiveScript 更改为 JavaScript——尽管两者之间并没有什么共同点。这便是之后混淆产生的根源。
 
@@ -20,7 +20,7 @@ original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 
 JavaScript 是一种多范式的动态语言，它包含类型、运算符、标准内置（built-in）对象和方法。它的语法来源于 Java 和 C，所以这两种语言的许多语法特性同样适用于 JavaScript。JavaScript 通过原型链而不是类来支持面向对象编程（有关 ES6 类的内容参考这里{{jsxref("Classes")}}，有关对象原型参考见此[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)）。JavaScript 同样支持函数式编程——因为它们也是对象，函数也可以被保存在变量中，并且像其他对象一样被传递。
 
-先从任何编程语言都不可缺少的组成部分——“类型”开始。JavaScript 程序可以修改值（value），这些值都有各自的类型。JavaScript 中的类型包括：
+先从任何编程语言都不可缺少的组成部分——"类型"开始。JavaScript 程序可以修改值（value），这些值都有各自的类型。JavaScript 中的类型包括：
 
 - {{jsxref("Number")}}（数字）
 - {{jsxref("String")}}（字符串）
@@ -49,7 +49,7 @@ JavaScript 还有一种内置的 {{jsxref("Error")}}（错误）类型。但是�
 
 ## 数字
 
-根据语言规范，JavaScript 采用“遵循 IEEE 754 标准的双精度 64 位格式”（"double-precision 64-bit format IEEE 754 values"）表示数字。——在 JavaScript（除了{{jsxref("BigInt")}}）当中，**并不存在整数/整型 (Integer)。**因此在处理如下的场景时候，您一定要小心：
+根据语言规范，JavaScript 采用"遵循 IEEE 754 标准的双精度 64 位格式"（"double-precision 64-bit format IEEE 754 values"）表示数字。——在 JavaScript（除了{{jsxref("BigInt")}}）当中，**并不存在整数/整型 (Integer)。**因此在处理如下的场景时候，您一定要小心：
 
 ```plain
 console.log(3 / 2);             // 1.5,not 1
@@ -80,7 +80,7 @@ parseInt("123", 10); // 123
 parseInt("010", 10); // 10
 ```
 
-一些老版本的浏览器会将首字符为“0”的字符串当做八进制数字，2013 年以前的 JavaScript 实现会返回一个意外的结果：
+一些老版本的浏览器会将首字符为"0"的字符串当做八进制数字，2013 年以前的 JavaScript 实现会返回一个意外的结果：
 
 ```js
 parseInt("010");  //  8
@@ -146,7 +146,7 @@ isFinite("0"); // true
 Number.isFinite("0"); // false
 ```
 
-> **备注：** {{jsxref("Global_Objects/parseInt", "parseInt()")}} 和 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 函数会尝试逐个解析字符串中的字符，直到遇上一个无法被解析成数字的字符，然后返回该字符前所有数字字符组成的数字。但是运算符 "+"对字符串的转换方式与之不同，只要字符串含有无法被解析成数字的字符，该字符串就将被转换成 `NaN`。可分别使用这两种方法解析“10.2abc”这一字符串，并比较得到的结果，来理解这两种方法的区别。
+> **备注：** {{jsxref("Global_Objects/parseInt", "parseInt()")}} 和 {{jsxref("Global_Objects/parseFloat", "parseFloat()")}} 函数会尝试逐个解析字符串中的字符，直到遇上一个无法被解析成数字的字符，然后返回该字符前所有数字字符组成的数字。但是运算符 "+"对字符串的转换方式与之不同，只要字符串含有无法被解析成数字的字符，该字符串就将被转换成 `NaN`。可分别使用这两种方法解析"10.2abc"这一字符串，并比较得到的结果，来理解这两种方法的区别。
 
 ## 字符串
 
@@ -170,7 +170,7 @@ JavaScript 中的字符串是一串[Unicode 字符](/zh-CN/docs/Web/JavaScript/G
 
 ## 其他类型
 
-与其他类型不同，JavaScript 中的 {{jsxref("null")}} 表示一个空值（non-value），必须使用 null 关键字才能访问，{{jsxref("undefined")}} 是一个“undefined（未定义）”类型的对象，表示一个未初始化的值，也就是还没有被分配的值。我们之后再具体讨论变量，但有一点可以先简单说明一下，JavaScript 允许声明变量但不对其赋值，一个未被赋值的变量就是 `undefined` 类型。还有一点需要说明的是，`undefined` 实际上是一个不允许修改的常量。
+与其他类型不同，JavaScript 中的 {{jsxref("null")}} 表示一个空值（non-value），必须使用 null 关键字才能访问，{{jsxref("undefined")}} 是一个"undefined（未定义）"类型的对象，表示一个未初始化的值，也就是还没有被分配的值。我们之后再具体讨论变量，但有一点可以先简单说明一下，JavaScript 允许声明变量但不对其赋值，一个未被赋值的变量就是 `undefined` 类型。还有一点需要说明的是，`undefined` 实际上是一个不允许修改的常量。
 
 JavaScript 包含布尔类型，这个类型的变量有两个可能的值，分别是 `true` 和 `false`（两者都是关键字）。根据具体需要，JavaScript 按照如下规则将变量转换成布尔类型：
 
@@ -184,7 +184,7 @@ Boolean(''); // false
 Boolean(234); // true
 ```
 
-不过一般没必要这么做，因为 JavaScript 会在需要一个布尔变量时隐式完成这个转换操作（比如在 `if` 条件语句中）。所以，有时我们可以把转换成布尔值后的变量分别称为 真值（true values）——即值为 true 和 假值（false values）——即值为 false；也可以分别称为“真的”（truthy）和“假的”（falsy）。
+不过一般没必要这么做，因为 JavaScript 会在需要一个布尔变量时隐式完成这个转换操作（比如在 `if` 条件语句中）。所以，有时我们可以把转换成布尔值后的变量分别称为 真值（true values）——即值为 true 和 假值（false values）——即值为 false；也可以分别称为"真的"（truthy）和"假的"（falsy）。
 
 JavaScript 支持包括 `&&`（逻辑与）、`||` （逻辑或）和`!`（逻辑非）在内的一些逻辑运算符。下面会有所提到。
 
@@ -266,14 +266,14 @@ x += 5; // 等价于 x = x + 5;
 
 这里不难看出一个实用的技巧——通过与空字符串相加，可以将某个变量快速转换成字符串类型。
 
-JavaScript 中的[比较操作](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)使用 `<`、`>`、`<=` 和 `>=`，这些运算符对于数字和字符串都通用。相等的比较稍微复杂一些。由两个“`=`（等号）”组成的相等运算符有类型自适应的功能，具体例子如下：
+JavaScript 中的[比较操作](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)使用 `<`、`>`、`<=` 和 `>=`，这些运算符对于数字和字符串都通用。相等的比较稍微复杂一些。由两个"`=`（等号）"组成的相等运算符有类型自适应的功能，具体例子如下：
 
 ```js
 123 == "123" // true
 1 == true; // true
 ```
 
-如果在比较前不需要自动类型转换，应该使用由三个“`=`（等号）”组成的相等运算符：
+如果在比较前不需要自动类型转换，应该使用由三个"`=`（等号）"组成的相等运算符：
 
 ```js
 1 === true; //false
@@ -397,7 +397,7 @@ switch(1 + 3){
 
 ## 对象
 
-JavaScript 中的对象，Object，可以简单理解成“名称 - 值”对（而不是键值对：现在，ES 2015 的映射表（Map），比对象更接近键值对），不难联想 JavaScript 中的对象与下面这些概念类似：
+JavaScript 中的对象，Object，可以简单理解成"名称 - 值"对（而不是键值对：现在，ES 2015 的映射表（Map），比对象更接近键值对），不难联想 JavaScript 中的对象与下面这些概念类似：
 
 - Python 中的字典（Dictionary）
 - Perl 和 Ruby 中的散列/哈希（Hash）
@@ -407,7 +407,7 @@ JavaScript 中的对象，Object，可以简单理解成“名称 - 值”对（
 
 这样的数据结构设计合理，能应付各类复杂需求，所以被各类编程语言广泛采用。正因为 JavaScript 中的一切（除了核心类型，core object）都是对象，所以 JavaScript 程序必然与大量的散列表查找操作有着千丝万缕的联系，而散列表擅长的正是高速查找。
 
-“名称”部分是一个 JavaScript 字符串，“值”部分可以是任何 JavaScript 的数据类型——包括对象。这使用户可以根据具体需求，创建出相当复杂的数据结构。
+"名称"部分是一个 JavaScript 字符串，"值"部分可以是任何 JavaScript 的数据类型——包括对象。这使用户可以根据具体需求，创建出相当复杂的数据结构。
 
 有两种简单方法可以创建一个空对象：
 
@@ -421,9 +421,9 @@ var obj = new Object();
 var obj = {};
 ```
 
-这两种方法在语义上是相同的。第二种更方便的方法叫作“对象字面量（object literal）”法。这种也是 JSON 格式的核心语法，一般我们优先选择第二种方法。
+这两种方法在语义上是相同的。第二种更方便的方法叫作"对象字面量（object literal）"法。这种也是 JSON 格式的核心语法，一般我们优先选择第二种方法。
 
-“对象字面量”也可以用来在对象实例中定义一个对象：
+"对象字面量"也可以用来在对象实例中定义一个对象：
 
 ```js
 var obj = {
@@ -649,7 +649,7 @@ function avg(...args) {
 avg(2, 3, 4, 5); // 3.5
 ```
 
-> **备注：** 在上面这段代码中，所有被传入该函数的参数都被变量 **args** 所持有。需要注意的是，无论“剩余参数操作符”被放置到函数声明的哪里，它都会把除了自己之前的所有参数存储起来。比如函数：function avg(**firstValue**, ...args) 会把传入函数的第一个值存入 **firstValue**，其他的参数存入 **args**。虽然这是一个很有用的语言特性，却也会带来新的问题。`avg()` 函数只接受逗号分开的参数列表 -- 但是如果你想要获取一个数组的平均值怎么办？一种方法是将函数按照如下方式重写：
+> **备注：** 在上面这段代码中，所有被传入该函数的参数都被变量 **args** 所持有。需要注意的是，无论"剩余参数操作符"被放置到函数声明的哪里，它都会把除了自己之前的所有参数存储起来。比如函数：function avg(**firstValue**, ...args) 会把传入函数的第一个值存入 **firstValue**，其他的参数存入 **args**。虽然这是一个很有用的语言特性，却也会带来新的问题。`avg()` 函数只接受逗号分开的参数列表 -- 但是如果你想要获取一个数组的平均值怎么办？一种方法是将函数按照如下方式重写：
 
 ```js
 function avgArray(arr) {
@@ -736,7 +736,7 @@ var charsInBody = (function counter(elm) {
 
 > **备注：** 关于 JavaScript 中面向对象编程更详细的信息，请参考 [JavaScript 面向对象简介](/zh-CN/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)。
 
-在经典的面向对象语言中，对象是指数据和在这些数据上进行的操作的集合。与 C++ 和 Java 不同，JavaScript 是一种基于原型的编程语言，并没有 class 语句，而是把函数用作类。那么让我们来定义一个人名对象，这个对象包括人的姓和名两个域（field）。名字的表示有两种方法：“名 姓（First Last）”或“姓，名（Last, First）”。使用我们前面讨论过的函数和对象概念，可以像这样完成定义：
+在经典的面向对象语言中，对象是指数据和在这些数据上进行的操作的集合。与 C++ 和 Java 不同，JavaScript 是一种基于原型的编程语言，并没有 class 语句，而是把函数用作类。那么让我们来定义一个人名对象，这个对象包括人的姓和名两个域（field）。名字的表示有两种方法："名 姓（First Last）"或"姓，名（Last, First）"。使用我们前面讨论过的函数和对象概念，可以像这样完成定义：
 
 ```js
 function makePerson(first, last) {
@@ -777,7 +777,7 @@ s.fullName(); // "Simon Willison"
 s.fullNameReversed(); // Willison, Simon
 ```
 
-上面的代码里有一些我们之前没有见过的东西：关键字 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)。当使用在函数中时，`this` 指代当前的对象，也就是调用了函数的对象。如果在一个对象上使用[点或者方括号](/zh-CN/JavaScript/Reference/Operators/Member_Operators)来访问属性或方法，这个对象就成了 `this`。如果并没有使用“点”运算符调用某个对象，那么 `this` 将指向全局对象（global object）。这是一个经常出错的地方。例如：
+上面的代码里有一些我们之前没有见过的东西：关键字 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)。当使用在函数中时，`this` 指代当前的对象，也就是调用了函数的对象。如果在一个对象上使用[点或者方括号](/zh-CN/JavaScript/Reference/Operators/Member_Operators)来访问属性或方法，这个对象就成了 `this`。如果并没有使用"点"运算符调用某个对象，那么 `this` 将指向全局对象（global object）。这是一个经常出错的地方。例如：
 
 ```js
 s = makePerson("Simon", "Willison");
@@ -942,7 +942,7 @@ function parentFunc() {
 
 如果某个函数依赖于其他的一两个函数，而这一两个函数对你其余的代码没有用处，你可以将它们嵌套在会被调用的那个函数内部，这样做可以减少全局作用域下的函数的数量，这有利于编写易于维护的代码。
 
-这也是一个减少使用全局变量的好方法。当编写复杂代码时，程序员往往试图使用全局变量，将值共享给多个函数，但这样做会使代码很难维护。内部函数可以共享父函数的变量，所以你可以使用这个特性把一些函数捆绑在一起，这样可以有效地防止“污染”你的全局命名空间——你可以称它为“局部全局（local global）”。虽然这种方法应该谨慎使用，但它确实很有用，应该掌握。
+这也是一个减少使用全局变量的好方法。当编写复杂代码时，程序员往往试图使用全局变量，将值共享给多个函数，但这样做会使代码很难维护。内部函数可以共享父函数的变量，所以你可以使用这个特性把一些函数捆绑在一起，这样可以有效地防止"污染"你的全局命名空间——你可以称它为"局部全局（local global）"。虽然这种方法应该谨慎使用，但它确实很有用，应该掌握。
 
 ## 闭包
 
@@ -960,11 +960,11 @@ add5(6); // ?
 add20(7); // ?
 ```
 
-`makeAdder` 这个名字本身，便应该能说明函数是用来做什么的：它会用一个参数来创建一个新的“adder”函数，再用另一个参数来调用被创建的函数时，`makeAdder` 会将一前一后两个参数相加。
+`makeAdder` 这个名字本身，便应该能说明函数是用来做什么的：它会用一个参数来创建一个新的"adder"函数，再用另一个参数来调用被创建的函数时，`makeAdder` 会将一前一后两个参数相加。
 
 从被创建的函数的视角来看的话，这两个参数的来源问题会更显而易见：新函数自带一个参数——在新函数被创建时，便钦定、钦点了前一个参数（如上方代码中的 a、5 和 20，参考 `makeAdder` 的结构，它应当位于新函数外部）；新函数被调用时，又接收了后一个参数（如上方代码中的 b、6 和 7，位于新函数内部）。最终，新函数被调用的时候，前一个参数便会和由外层函数传入的后一个参数相加。
 
-这里发生的事情和前面介绍过的内嵌函数十分相似：一个函数被定义在了另外一个函数的内部，内部函数可以访问外部函数的变量。唯一的不同是，外部函数已经返回了，那么常识告诉我们局部变量“应该”不再存在。但是它们却仍然存在——否则 `adder` 函数将不能工作。也就是说，这里存在 `makeAdder` 的局部变量的两个不同的“副本”——一个是 `a` 等于 5，另一个是 `a` 等于 20。那些函数的运行结果就如下所示：
+这里发生的事情和前面介绍过的内嵌函数十分相似：一个函数被定义在了另外一个函数的内部，内部函数可以访问外部函数的变量。唯一的不同是，外部函数已经返回了，那么常识告诉我们局部变量"应该"不再存在。但是它们却仍然存在——否则 `adder` 函数将不能工作。也就是说，这里存在 `makeAdder` 的局部变量的两个不同的"副本"——一个是 `a` 等于 5，另一个是 `a` 等于 20。那些函数的运行结果就如下所示：
 
 ```js
 add5(6); // 返回 11

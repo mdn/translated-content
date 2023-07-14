@@ -113,7 +113,7 @@ slug: Web/HTML/Element/script
 
   - : 该属性表示所代表的脚本类型。该属性的值可能为以下类型：
     - **属性未设置（默认），一个空字符串，或一个 JavaScript MIME 类型**
-      - : 代表脚本为包含 JavaScript 代码的“传统的脚本”。如果脚本指的是 JavaScript 代码，我们鼓励作者省略这个属性，而不是指定一个 MIME 类型。所有的 JavaScript MIME 类型都列在 [IANA 的媒体类型规范](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript)中。
+      - : 代表脚本为包含 JavaScript 代码的"传统的脚本"。如果脚本指的是 JavaScript 代码，我们鼓励作者省略这个属性，而不是指定一个 MIME 类型。所有的 JavaScript MIME 类型都列在 [IANA 的媒体类型规范](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript)中。
     - `module`
       - : 此值导致代码被视为 JavaScript 模块。其中的代码内容会延后处理。`charset` 和 `defer` 属性不会生效。对于使用 `module` 的更多信息，请参见 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)指南。与传统代码不同的是，模块代码需要使用 CORS 协议来跨源获取。
     - [`importmap`](/zh-CN/docs/Web/HTML/Element/script/type/importmap)
@@ -128,7 +128,7 @@ slug: Web/HTML/Element/script
 ### 废弃的属性
 
 - `charset` {{Deprecated_inline}}
-  - : 如果存在，它的值必须是 ASCII 大小写不敏感的“`utf-8`”的匹配。没有必要指定 `charset` 属性，因为文档必须使用 UTF-8，而且 `script` 元素从文档继承其字符编码。
+  - : 如果存在，它的值必须是 ASCII 大小写不敏感的"`utf-8`"的匹配。没有必要指定 `charset` 属性，因为文档必须使用 UTF-8，而且 `script` 元素从文档继承其字符编码。
 - `language` {{Deprecated_inline}} {{Non-standard_Inline}}
   - : 和 `type` 属性类似，这个属性定义脚本使用的语言。但是与 `type` 不同的是，这个属性的可能值从未被标准化过。请用 `type` 属性代替这个属性。
 
@@ -167,14 +167,14 @@ slug: Web/HTML/Element/script
 
 ### 使用导入映射导入模块
 
-在脚本中导入模块时，如果你不使用 [`type=importmap`](#importmap) 特性，那么每个模块都必须使用模块指定符来导入，该指定符可以是绝对的也可以是相对的 URL。在下面的例子中，第一个模块标识符（“./shapes/square.js”）是相对于文档的根 URL 解析的，而第二个是绝对 URL。
+在脚本中导入模块时，如果你不使用 [`type=importmap`](#importmap) 特性，那么每个模块都必须使用模块指定符来导入，该指定符可以是绝对的也可以是相对的 URL。在下面的例子中，第一个模块标识符（"./shapes/square.js"）是相对于文档的根 URL 解析的，而第二个是绝对 URL。
 
 ```js
 import { name as squareName, draw } from "./shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
 ```
 
-导入映射允许你提供一个映射，当匹配的时候，可以替换模块标识符文本。下面的导入映射定义了“square”和“circle”键，可以作为上述模块指定的别名。
+导入映射允许你提供一个映射，当匹配的时候，可以替换模块标识符文本。下面的导入映射定义了"square"和"circle"键，可以作为上述模块指定的别名。
 
 ```html
 <script type="importmap">
@@ -236,5 +236,5 @@ import { name as circleName } from "circle";
 ## 参见
 
 - {{domxref("document.currentScript")}}
-- [Flavio Copes 关于“高效加载 JavaScript”的文章，解释了 `async` 和 `defer` 之间的区别](https://flaviocopes.com/javascript-async-defer/)
+- [Flavio Copes 关于"高效加载 JavaScript"的文章，解释了 `async` 和 `defer` 之间的区别](https://flaviocopes.com/javascript-async-defer/)
 - [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)指南

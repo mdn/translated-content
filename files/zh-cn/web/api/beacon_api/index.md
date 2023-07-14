@@ -17,7 +17,7 @@ Beacon API 主要的使用场景是将分析数据发送给服务器，如：客
 
 Beacon API 定义了一个独立的方法：{{domxref("navigator.sendBeacon()")}}。
 
-该方法接受 2 个参数，URL 和要在请求中发送的数据（data）。data 参数是可选的，其类型可以是 {{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("Blob")}}、字符串字面量、普通对象或 {{domxref("FormData")}} 对象。如果浏览器成功地将请求排队交付，则该方法返回“`true`”，否则返回“`false`”。
+该方法接受 2 个参数，URL 和要在请求中发送的数据（data）。data 参数是可选的，其类型可以是 {{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("Blob")}}、字符串字面量、普通对象或 {{domxref("FormData")}} 对象。如果浏览器成功地将请求排队交付，则该方法返回"`true`"，否则返回"`false`"。
 
 ## 规范
 

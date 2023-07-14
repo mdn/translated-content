@@ -48,7 +48,7 @@ uint8.slice(0,1); // Uint8Array [ 1 ]
 
 ## Polyfill
 
-由于没有叫做*TypedArray* 的全局对象，必须在“按需”的基础上实现 Polyfill。
+由于没有叫做*TypedArray* 的全局对象，必须在"按需"的基础上实现 Polyfill。
 
 ```plain
 if (!Uint8Array.prototype.slice) {

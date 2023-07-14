@@ -83,7 +83,7 @@ fetch('simple.wasm')
 
 ### 在开发者工具查看 wasm
 
-在 Firefox 54+, Developer Tool Debugger Panel 有用于公开网页中包含的任何 wasm 代码的文本表示的功能。为了查看它们，要查看它，您可以转到 Debugger Panel 然后单击“xxx > wasm”。
+在 Firefox 54+, Developer Tool Debugger Panel 有用于公开网页中包含的任何 wasm 代码的文本表示的功能。为了查看它们，要查看它，您可以转到 Debugger Panel 然后单击"xxx > wasm"。
 
 ![](wasm-debug.png)
 
@@ -132,7 +132,7 @@ memory.grow(1);
 
 如果在创建内存实例时提供了最大值，则尝试超过此最大值将抛出 {{jsxref("WebAssembly.RangeError")}} 异常。引擎利用这个提供的上限来提前预留内存，这样可以使调整大小更有效率。
 
-Note: 由于 {{domxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以在成功 {{jsxref("Memory.prototype.grow()")}} 操作之后，缓冲区 getter 将返回一个新的 ArrayBuffer 对象 新的 byteLength）和任何先前的 ArrayBuffer 对象变成“分离”，或者与先前指向的底层内存断开连接。
+Note: 由于 {{domxref("ArrayBuffer")}} 的 byteLength 是不可变的，所以在成功 {{jsxref("Memory.prototype.grow()")}} 操作之后，缓冲区 getter 将返回一个新的 ArrayBuffer 对象 新的 byteLength）和任何先前的 ArrayBuffer 对象变成"分离"，或者与先前指向的底层内存断开连接。
 
 和函数一样，线性内存可以在模块内部进行定义或者导入。类似地，模块还可以可选地导出其内存。这这意味着 JavaScript 可以通过创建`new WebAssembly.Memory` 并将其作为导入或通过接收内存导出传递给 WebAssembly 实例的内存来访问 (通过 [`Instance.prototype.exports`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports)).
 
@@ -227,8 +227,8 @@ WebAssembly 表格是一个可变大小的带类型的引用数组，其中的�
 现在，我们已经展示了 WebAssembly 的主要组成模块的使用，这里是提到多样性概念的好地方。这为 WebAssembly 提供了大量的关于架构效率的优势：
 
 - 一个模块可以有 N 个实例，这与一个函数可以产生 N 个闭包值一样。
-- 一个模块实例可以使用 0-1 个内存实例，它为这个实例提供了“地址空间”。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个内存实例（参考[多表格与内存](http://webassembly.org/docs/future-features/#multiple-tables-and-memories)）。
-- 一个模块实例可以使用 0-1 个表格实例——这是该实例的“函数地址空间”，可以用来实现 C 函数指针。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个表格实例。
+- 一个模块实例可以使用 0-1 个内存实例，它为这个实例提供了"地址空间"。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个内存实例（参考[多表格与内存](http://webassembly.org/docs/future-features/#multiple-tables-and-memories)）。
+- 一个模块实例可以使用 0-1 个表格实例——这是该实例的"函数地址空间"，可以用来实现 C 函数指针。将来的 WebAssembly 版本可能允许每个模块实例拥有 0-N 个表格实例。
 - 一个内存或表格实例能够被 0-N 个模块实例使用——这些实例全部共享相同的地址空间，这使得[动态链接](http://webassembly.org/docs/dynamic-linking)成为可能。
 
 你可以在我们的理解文本格式一本中看到多样性的应用——参考修改表格和动态链接部分（TBD）。

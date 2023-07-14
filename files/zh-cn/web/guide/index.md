@@ -37,14 +37,14 @@ MDN 文档中有大量的指南，这些文章意在增加用例，或教你如�
 - [Web 图形开发](/zh-CN/docs/Web/Guide/Graphics)
   - : 现代 Web 站点和应用通常需要展示复杂的图片。
 - [音视频传输](/zh-CN/docs/Web/Guide/Audio_and_video_delivery)
-  - : 我们可以通过多种方式在 Web 上传递音频和视频，从“静态”媒体文件到自适应实时流。本文旨在作为探索基于网络的媒体的各种传输机制以及与流行浏览器的兼容性的起点。
+  - : 我们可以通过多种方式在 Web 上传递音频和视频，从"静态"媒体文件到自适应实时流。本文旨在作为探索基于网络的媒体的各种传输机制以及与流行浏览器的兼容性的起点。
 - [音视频操作](/zh-CN/docs/Web/Guide/Audio_and_video_manipulation)
   - : Web 的魅力在于你可以结合各种技术来创造新的形式。在浏览器中拥有原生音频和视频意味着我们可以使用这些诸如 {{htmlelement("canvas")}}、[WebGL](/zh-CN/docs/Web/API/WebGL_API) 或 [Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API) 的数据流技术来直接修改音视频，例如向音频添加混响或压缩效果，或向视频添加灰度或褐色滤镜。本篇文章提供了一个参考，解释了你需要做些什么。
 
 ## API 接口
 
 - [表单数据对象](/zh-CN/docs/Web/Guide/Using_FormData_Objects)
-  - : [`FormData`](/zh-CN/DOM/XMLHttpRequest/FormData) 对象允许你配置一组键值对并通过 `XMLHttpRequest` 发送它们。虽然它主要用来发送表单数据，但它也可以独立地用于传输其他带键值的数据。若将表单的编码类型设置为“multipart/form-data”，则传输的格式与表单的 `submit()` 方法用于发送数据的格式相同。
+  - : [`FormData`](/zh-CN/DOM/XMLHttpRequest/FormData) 对象允许你配置一组键值对并通过 `XMLHttpRequest` 发送它们。虽然它主要用来发送表单数据，但它也可以独立地用于传输其他带键值的数据。若将表单的编码类型设置为"multipart/form-data"，则传输的格式与表单的 `submit()` 方法用于发送数据的格式相同。
 - [渐进式 Web 应用](/zh-CN/docs/Web/Progressive_web_apps)
   - : 渐进式 Web 应用（PWA）通过使用现代 Web API 和传统的渐进式策略来开发跨平台的 Web 应用程序。这些应用程序可以在任何设备上运行并提供接近原生应用程序的体验。这是一些教程来告诉你一些你需要知道的关于 PWA 的知识。
 - [XML 解析和序列化](/zh-CN/docs/Web/Guide/Parsing_and_serializing_XML)

@@ -161,7 +161,7 @@ gl.uniformMatrix4fv(nUniform, false, new WebGLFloatArray(normalMatrix.flatten())
 </script>
 ```
 
-和先前我们做的例子一样，我们获取纹理的颜色（原文“color of the texel”? 此处个人觉得应该就是指纹理的颜色），不同的是在设置片段颜色之前，我们将纹理的颜色乘以光照值来调整纹理以达到我们光源的效果。
+和先前我们做的例子一样，我们获取纹理的颜色（原文"color of the texel"? 此处个人觉得应该就是指纹理的颜色），不同的是在设置片段颜色之前，我们将纹理的颜色乘以光照值来调整纹理以达到我们光源的效果。
 
 效果就是这样！
 

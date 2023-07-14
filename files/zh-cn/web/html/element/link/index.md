@@ -5,7 +5,7 @@ slug: Web/HTML/Element/link
 
 {{HTMLSidebar}}
 
-**HTML 外部资源链接元素** (**`<link>`**) 规定了当前文档与外部资源的关系。该元素最常用于链接[样式表](/zh-CN/docs/Glossary/CSS)，此外也可以被用来创建站点图标 (比如 PC 端的“favicon”图标和移动设备上用以显示在主屏幕的图标) 。
+**HTML 外部资源链接元素** (**`<link>`**) 规定了当前文档与外部资源的关系。该元素最常用于链接[样式表](/zh-CN/docs/Glossary/CSS)，此外也可以被用来创建站点图标 (比如 PC 端的"favicon"图标和移动设备上用以显示在主屏幕的图标) 。
 
 {{EmbedInteractiveExample("pages/tabbed/link.html")}}
 
@@ -15,7 +15,7 @@ slug: Web/HTML/Element/link
 <link href="main.css" rel="stylesheet">
 ```
 
-在这个简单的例子中，使用了 `href` 属性设置外部资源的路径，并设置 `rel` 属性的值为“`stylesheet`”(样式表)。`rel` 表示“关系 (relationship) ”，它可能是`<link>`元素其中一个关键的特性——属性值表示`<link>`项的链接方式与包含它的文档之间的关系。你将在我们的[链接类型](/zh-CN/docs/Web/HTML/Link_types)中看到很多不同类型的关系。
+在这个简单的例子中，使用了 `href` 属性设置外部资源的路径，并设置 `rel` 属性的值为"`stylesheet`"(样式表)。`rel` 表示"关系 (relationship) "，它可能是`<link>`元素其中一个关键的特性——属性值表示`<link>`项的链接方式与包含它的文档之间的关系。你将在我们的[链接类型](/zh-CN/docs/Web/HTML/Link_types)中看到很多不同类型的关系。
 
 这里有一些你经常遇到的其他类型。例如，这里是一个网站图标的链接：
 
@@ -93,7 +93,7 @@ slug: Web/HTML/Element/link
 - `importance` {{Experimental_Inline}}
   - : 指示资源的相对重要性。优先级提示使用以下值委托：**`auto`**: 表示**没有偏好**。浏览器可以使用其自己的启发式方法来确定资源的优先级。**`high`**: 向浏览器指示资源具有高优先级。**`low`**: 向浏览器指示资源的优先级较低。
 
-    > **备注：** 只有存在 rel=“preload”或 rel=“prefetch”时，importance 属性才能用于\<link>元素。
+    > **备注：** 只有存在 rel="preload"或 rel="prefetch"时，importance 属性才能用于\<link>元素。
 - `integrity` {{experimental_inline}}
   - : 包含行内元数据，它是一个你用浏览器获取的资源文件的哈希值，以 base64 编码的方式加的密，这样用户能用它来验证一个获取到的资源，在传送时未被非法篡改，详情查看[Subresource Integrity](/zh-CN/docs/Web/Security/Subresource_Integrity)。
 - `media`
@@ -127,7 +127,7 @@ slug: Web/HTML/Element/link
 ### 非标准属性
 
 - `methods` {{Non-standard_Inline}}
-  - : 此属性的值提供有关可能在对象上执行的功能的信息。这些值通常在使用时由 HTTP 协议给出，但是（出于与“**title**”属性类似的原因）将其预先包含在链接中可能是有用的。例如，浏览器可能根据指定的方法选择不同的链接呈现方式。可搜索的内容可能会得到其他图标，或者外部链接可能会显示离开当前站点的指示。即使定义的浏览器 Internet Explorer 4 也无法很好地理解或支持此属性。
+  - : 此属性的值提供有关可能在对象上执行的功能的信息。这些值通常在使用时由 HTTP 协议给出，但是（出于与"**title**"属性类似的原因）将其预先包含在链接中可能是有用的。例如，浏览器可能根据指定的方法选择不同的链接呈现方式。可搜索的内容可能会得到其他图标，或者外部链接可能会显示离开当前站点的指示。即使定义的浏览器 Internet Explorer 4 也无法很好地理解或支持此属性。
 - `prefetch` {{Non-standard_Inline}} {{secureContext_inline}}
   - : 此属性标识下一个导航可能需要的资源，用户代理应检索该资源。这允许用户代理在将来请求资源时更快地做出响应。
 - `target` {{Non-standard_Inline}}
@@ -142,7 +142,7 @@ slug: Web/HTML/Element/link
 - `rev`{{Deprecated_Inline}}
   - : 此属性的值显示了 [`href`](/zh-CN/docs/Web/HTML/Element/link#href) 属性所定义的当前文档与链接文档的关系。因此，该属性定义了与 rel 属性的值相比的反向关系。该属性的[Link type value](/zh-CN/docs/Web/HTML/Link_types)类似于[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)的可能值。
 
-    > **备注：** WHATWG HTML 生活标准（MDN 将其视为规范的规范）认为该属性已过时。但是，值得注意的是，rev 在 W3C 规范中并未过时。就是说，鉴于不确定性，依靠 rev 是不明智的。相反，您应该使用具有相反链接类型值的[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)属性。例如，要建立反向链接，请指定作者。而且，即使许多站点都以这种方式滥用此属性，该属性也不代表“修订”，并且不得与版本号一起使用。
+    > **备注：** WHATWG HTML 生活标准（MDN 将其视为规范的规范）认为该属性已过时。但是，值得注意的是，rev 在 W3C 规范中并未过时。就是说，鉴于不确定性，依靠 rev 是不明智的。相反，您应该使用具有相反链接类型值的[`rel`](/zh-CN/docs/Web/HTML/Element/link#rel)属性。例如，要建立反向链接，请指定作者。而且，即使许多站点都以这种方式滥用此属性，该属性也不代表"修订"，并且不得与版本号一起使用。
 
 ## 示例
 

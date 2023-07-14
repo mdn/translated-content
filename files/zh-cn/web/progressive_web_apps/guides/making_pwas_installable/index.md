@@ -18,11 +18,11 @@ Mobile Chrome / Android Webview 从 31 版开始支持 A2HS，Opera for Android 
 
 我们已经编写了一个非常简单的示例网站（[观看我们的在线演示](https://mdn.github.io/pwa-examples/a2hs/)，并[查看源代码](https://github.com/mdn/pwa-examples/tree/main/a2hs)），该网站虽然功能不多，但是实现 A2HS 所必须的代码都有包含，Service Worker 也使其可以脱机使用。这个示例展示了一系列的狐狸图片。
 
-如果您有适用于 Android 的 Firefox，使用它打开我们的示例：`https://mdn.github.io/pwa-examples/a2hs/`。你将会看到狐狸图片，但更重要的是，你将会看到一个带有加号（+）的“主页”图标——这是为具有必要功能的任何站点显示的“添加到主屏幕”图标。
+如果您有适用于 Android 的 Firefox，使用它打开我们的示例：`https://mdn.github.io/pwa-examples/a2hs/`。你将会看到狐狸图片，但更重要的是，你将会看到一个带有加号（+）的"主页"图标——这是为具有必要功能的任何站点显示的"添加到主屏幕"图标。
 
-![地址栏的“添加到主屏幕”图标](add-to-home-screen-icon.png)
+![地址栏的"添加到主屏幕"图标](add-to-home-screen-icon.png)
 
-点击此按钮将显示一个确认横幅，按下大大的“添加到主屏幕”按钮即可将应用添加到主屏幕。（注意：在 Android 8 及更高版本中，将首先显示系统级的“添加到主屏幕”权限对话框。）
+点击此按钮将显示一个确认横幅，按下大大的"添加到主屏幕"按钮即可将应用添加到主屏幕。（注意：在 Android 8 及更高版本中，将首先显示系统级的"添加到主屏幕"权限对话框。）
 
 ![确认横幅](fx-a2hs-banner.png)
 
@@ -30,7 +30,7 @@ Mobile Chrome / Android Webview 从 31 版开始支持 A2HS，Opera for Android 
 
 ![Mobile Chrome 上的 A2HS 提示](chrome-a2hs-banner.png)
 
-> **备注：** 您可以在“[Web App 安装横幅](https://developers.google.com/web/fundamentals/app-install-banners/)”一文中找到有关 Chrome 安装横幅的更多信息。
+> **备注：** 您可以在"[Web App 安装横幅](https://developers.google.com/web/fundamentals/app-install-banners/)"一文中找到有关 Chrome 安装横幅的更多信息。
 
 如果您选择不将其添加到主屏幕，则可以稍后使用 Chrome 主菜单中的添加到主屏幕图标添加。
 
@@ -53,7 +53,7 @@ Mobile Chrome / Android Webview 从 31 版开始支持 A2HS，Opera for Android 
 
 Web manifest 以标准 JSON 格式编写，应放置在应用程序目录中的某个位置（最好是在根目录中），名称为 `somefilename.webmanifest`（这里我们将其命名为 `manifest.webmanifest`）。它包含多个字段，这些字段定义有关 Web 应用程序及其行为的某些信息。
 
-> **备注：** .webmanifest 扩展名是在规范的“[媒体类型注册](https://w3c.github.io/manifest/#media-type-registration)”部分中指定的，但通常浏览器也支持带有其他适当扩展名的清单，例如 .json。
+> **备注：** .webmanifest 扩展名是在规范的"[媒体类型注册](https://w3c.github.io/manifest/#media-type-registration)"部分中指定的，但通常浏览器也支持带有其他适当扩展名的清单，例如 .json。
 
 A2HS 所需的字段如下：
 
@@ -188,11 +188,11 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
 ![应用安装提示](chrome-desktop-a2hs-banner.png)
 
-如果用户选择安装，则将安装该应用程序（可作为独立的桌面应用程序使用），并且不再显示“安装”按钮（如果已经安装了该应用程序，则将不再触发 `onbeforeinstallprompt` 事件）。当您打开应用程序时，它将显示在其自己的窗口中：
+如果用户选择安装，则将安装该应用程序（可作为独立的桌面应用程序使用），并且不再显示"安装"按钮（如果已经安装了该应用程序，则将不再触发 `onbeforeinstallprompt` 事件）。当您打开应用程序时，它将显示在其自己的窗口中：
 
 ![安装后的应用界面](a2hs-installed-desktop.png)
 
-如果用户选择“取消”，则应用程序的状态将返回到单击按钮之前的状态。
+如果用户选择"取消"，则应用程序的状态将返回到单击按钮之前的状态。
 
 > **备注：** 本部分的代码主要来自 Pete LaPage 的[应用安装横幅/添加到主屏幕](https://developers.google.com/web/fundamentals/app-install-banners/)。
 

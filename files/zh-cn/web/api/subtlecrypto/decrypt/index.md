@@ -5,7 +5,7 @@ slug: Web/API/SubtleCrypto/decrypt
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-{{domxref("SubtleCrypto")}} 接口的 **`decrypt()`** 方法用于解密加密数据。它以用于解密的{{glossary("key", "密钥")}}、一些可选的额外参数，以及待解密的数据（也称为“密文”）为参数；返回一个 {{jsxref("Promise")}}，会兑现解密后的数据（也称为“明文”）。
+{{domxref("SubtleCrypto")}} 接口的 **`decrypt()`** 方法用于解密加密数据。它以用于解密的{{glossary("key", "密钥")}}、一些可选的额外参数，以及待解密的数据（也称为"密文"）为参数；返回一个 {{jsxref("Promise")}}，会兑现解密后的数据（也称为"明文"）。
 
 ## 语法
 

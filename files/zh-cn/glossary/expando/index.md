@@ -15,7 +15,7 @@ window.document.foo = 5; // foo 是一个自定义属性
 
 **注：**
 expando 可能是 expandable object 的缩写，表示可扩展的对象。expando property 表示可扩展对象的动态属性，可以在运行时动态添加到对象中的属性。
-“JavaScript 中的所有对象均支持 expando 属性和方法，这些属性和方法可在运行时动态添加和移除。”（来源：MSDN）
+"JavaScript 中的所有对象均支持 expando 属性和方法，这些属性和方法可在运行时动态添加和移除。"（来源：MSDN）
 
 ### 例子：二维数组的创建
 

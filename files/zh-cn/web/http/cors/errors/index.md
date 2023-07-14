@@ -30,7 +30,7 @@ additional information here).
 
 ## CORS 错误信息
 
-当请求因 CORS 失败时，Firefox 的控制台会在其控制台中显示消息。错误文本的一部分是“原因”消息，它提供了对出错的更深入的了解。下面列出了原因的消息；点击消息以打开一篇文章，更详细地阐述了错误以及提供可能的解决方案。
+当请求因 CORS 失败时，Firefox 的控制台会在其控制台中显示消息。错误文本的一部分是"原因"消息，它提供了对出错的更深入的了解。下面列出了原因的消息；点击消息以打开一篇文章，更详细地阐述了错误以及提供可能的解决方案。
 
 - [原因：CORS disabled](/zh-CN/docs/Web/HTTP/CORS/Errors/CORSDisabled)
 - [原因：CORS request did not succeed](/zh-CN/docs/Web/HTTP/CORS/Errors/CORSDidNotSucceed)

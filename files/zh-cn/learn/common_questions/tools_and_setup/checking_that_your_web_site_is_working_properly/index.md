@@ -45,13 +45,13 @@ _当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/
 
 让我们看下我们的个人网站，`http://demozilla.examplehostingprovider.net/`。没有出现我们预期的图片！
 
-![Oops, the ‘unicorn’ image is missing](image-missing.png)
+![Oops, the 'unicorn' image is missing](image-missing.png)
 
 打开 Firefox 的 Network tool (**Tools ➤ Web Developer ➤ Network**) 并重新加载页面：
 
 ![The image has a 404 error](error404.png)
 
-这就是问题所在，位于底部的“404”。“404”意味着“资源未找到”，也就是我们无法看到图片的原因。
+这就是问题所在，位于底部的"404"。"404"意味着"资源未找到"，也就是我们无法看到图片的原因。
 
 #### HTTP 状态
 
@@ -82,7 +82,7 @@ _当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/
 
 乍一看，我们请求的图片似乎在正确的位置... 但是网络工具却出现了"404"的报错。事实证明我们的 HTML 代码中出现了错别字：`unicorn_pics.png` 而不是 `unicorn_pic.png`。所以，通过在你的代码编辑器中改变图片的 `src` 属性来纠正错别字。
 
-![Deleting the ‘s’](code-correct.png)
+![Deleting the 's'](code-correct.png)
 
 保存，[推送到服务器](/zh-CN/docs/Learn/Upload_files_to_a_web_server)，并在你的浏览器中重现加载网页。
 
@@ -101,7 +101,7 @@ _当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/
 
 #### 地址中的错别字
 
-我们想要输入 `http://demozilla.examplehostingprovider.net/` 但输入得太快而遗漏了一个“l”：
+我们想要输入 `http://demozilla.examplehostingprovider.net/` 但输入得太快而遗漏了一个"l"：
 
 ![Address unreachable](cannot-find-server.png)
 
@@ -151,7 +151,7 @@ PING mozilla.org (63.245.215.20): 56 data bytes
 round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 ```
 
-记住一个方便的键盘快捷键：**Ctrl+C** 。Ctrl+C 给运行发送了一个“中断”信号并令其中止。如果你不中止运行， `ping` 将会不断地 ping 服务器。
+记住一个方便的键盘快捷键：**Ctrl+C** 。Ctrl+C 给运行发送了一个"中断"信号并令其中止。如果你不中止运行， `ping` 将会不断地 ping 服务器。
 
 ### 一份简易清单
 

@@ -40,7 +40,7 @@ all: revert;
     - [User origin](/zh-CN/docs/Web/CSS/Cascade#User_stylesheets)
       - : 将层叠回滚到用户代理级别，以便计算指定的值，就好像没有为该元素指定作者级别或用户级别规则。
     - [Author origin](/zh-CN/docs/Web/CSS/Cascade#Author_stylesheets)
-      - : 将层叠回滚到用户级别，以便计算指定的值，就好像没有为元素指定作者级规则。出于`revert`的目的，“作者”原点包括“覆盖”和“动画”原点。
+      - : 将层叠回滚到用户级别，以便计算指定的值，就好像没有为元素指定作者级规则。出于`revert`的目的，"作者"原点包括"覆盖"和"动画"原点。
 
 ### 正式语法
 

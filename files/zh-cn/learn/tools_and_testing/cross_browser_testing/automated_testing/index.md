@@ -326,7 +326,7 @@ exports.watch = watch;
 
 现在试着在你的终端输入 `gulp watch` 命令。现在，Gulp 会监视你的目录，并在你保存 HTML、CSS 或 JavaScript 文件的改动时运行相应的任务。
 
-> **备注：** `*` 字符是一个通配符，这里的含义是“当任何这些类型的文件被保存时运行这些任务”。你也可以在你的主要任务中使用通配符，例如 `gulp.src('src/*.css')` 会抓取你所有的 CSS 文件，然后对它们运行管道任务。
+> **备注：** `*` 字符是一个通配符，这里的含义是"当任何这些类型的文件被保存时运行这些任务"。你也可以在你的主要任务中使用通配符，例如 `gulp.src('src/*.css')` 会抓取你所有的 CSS 文件，然后对它们运行管道任务。
 
 你还可以用 Gulp 做很多事情。在 [Gulp 插件目录](https://gulpjs.com/plugins/)中，有成千上万的插件可供搜索。
 
@@ -368,7 +368,7 @@ exports.watch = watch;
    [![Mark as bug](mark-as-bug-2.png)](https://web.archive.org/web/20210608014707if_/https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png)
    如果你注意到用户界面的问题，那么你可以用截图按钮捕捉虚拟机的截图，与你的同事分享。你还可以通过点击测试会话中的录音机按钮来录制你的测试会话的视频。
 4. 有了内置的图像编辑器，在推送给同事之前，可以以问题所在之处标记你的屏幕截图。![强调问题所在](mark-as-bug-3.png)
-5. 使用“标记为bug”的按钮，你可以将 bug 推送到许多第三方工具，如 Jira、Asana、Trello 等。这样，你就可以直接从 LambdaTest 的测试会话中记录一个 bug 到你的项目管理实例中。查看所有的[第三方 LambdaTest 集成](https://www.lambdatest.com/integrations)。
+5. 使用"标记为bug"的按钮，你可以将 bug 推送到许多第三方工具，如 Jira、Asana、Trello 等。这样，你就可以直接从 LambdaTest 的测试会话中记录一个 bug 到你的项目管理实例中。查看所有的[第三方 LambdaTest 集成](https://www.lambdatest.com/integrations)。
 
 > **备注：** 所有在测试会话中捕获的视频和图像都被捕获在 LambdaTest 的图库、测试日志和问题跟踪器中。
 
@@ -387,7 +387,7 @@ exports.watch = watch;
 
 1. 点击 _Start a new manual session_。
 2. 在下一个屏幕中，输入你要测试的页面的 URL（例如使用 <https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>），然后通过不同的按钮和列表选择你要测试的浏览器/操作系统组合。有很多选择，你会看到！！![选择 sauce manual session](sauce-manual-session.png)
-3. 当你点击“Start session”时，就会出现一个加载屏幕，它启动了一个虚拟机，运行你选择的组合。
+3. 当你点击"Start session"时，就会出现一个加载屏幕，它启动了一个虚拟机，运行你选择的组合。
 4. 当加载完成后，你就可以开始远程测试在所选浏览器中运行的网站。![Sauce 测试正在运行](sauce-test-running.png)
 5. 在这里，你可以看到你正在测试的浏览器中的布局，移动鼠标并尝试点击按钮，等等。顶部的菜单允许你：
 
@@ -467,7 +467,7 @@ Sauce Labs 有一个 [restful API](https://docs.saucelabs.com/dev/api/)，允许
 1. 创建一个 [BrowserStack 试用账号](https://www.browserstack.com/users/sign_up)。
 2. 登录账号。在验证邮箱后，这应该是自动的。
 3. 当你第一次登录时，你应该在实时测试页面；如果不是，请点击顶部导航菜单中的 _Live_ 链接。
-4. 如果你使用的是 Firefox 或 Chrome，你会被提示在一个名为“启用本地测试”的对话框中安装一个浏览器扩展，点击*安装*按钮继续。在其他浏览器上，你仍然能够使用一些功能（一般通过 Flash），但你可能无法获得完整的体验。
+4. 如果你使用的是 Firefox 或 Chrome，你会被提示在一个名为"启用本地测试"的对话框中安装一个浏览器扩展，点击*安装*按钮继续。在其他浏览器上，你仍然能够使用一些功能（一般通过 Flash），但你可能无法获得完整的体验。
 
 #### 基础：手动测试
 

@@ -17,7 +17,7 @@ SOURCE X-[targetX](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/fil
 }
 ) / [divisor](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute) + [bias](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementBiasAttribute) \* ALPHAX,Y
 
-其中“orderX”和"orderY"表示[‘order’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute) 的 x 和 y 值，"targetX"表示[‘targetX’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute) 属性的值，"targetY"表示[‘targetY’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute) 的值，"kernelMatrix" 表示 [‘kernelMatrix’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementKernelMatrixAttribute)属性的值，"divisor"表示 [‘divisor’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute)属性的值， "bias" 表示 [‘bias’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementBiasAttribute)属性的值。
+其中"orderX"和"orderY"表示['order'](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementOrderAttribute) 的 x 和 y 值，"targetX"表示['targetX'](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute) 属性的值，"targetY"表示['targetY'](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute) 的值，"kernelMatrix" 表示 ['kernelMatrix'](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementKernelMatrixAttribute)属性的值，"divisor"表示 ['divisor'](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute)属性的值， "bias" 表示 ['bias'](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementBiasAttribute)属性的值。
 
 注意上述公式中内核矩阵的值是被旋转 180 度后被使用，这是为了符合许多计算机图形学教科书中的理论。
 
@@ -39,7 +39,7 @@ SOURCE X-[targetX](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/fil
   7 8 9
 ```
 
-让我们专注于图像的第二行和第二列的颜色值（源像素值为 120）。最简单的情况（输入图像的像素网格与内核像素网格完全对齐）,[‘divisor’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute), [‘targetX’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute) 和[‘targetY’](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute)都是默认值，那么输出色值将是：
+让我们专注于图像的第二行和第二列的颜色值（源像素值为 120）。最简单的情况（输入图像的像素网格与内核像素网格完全对齐）,['divisor'](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementDivisorAttribute), ['targetX'](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetXAttribute) 和['targetY'](http://link.zhihu.com/?target=https%3A//www.w3.org/TR/SVG/filters.html%23feConvolveMatrixElementTargetYAttribute)都是默认值，那么输出色值将是：
 
 ```plain
 (9*  0 + 8* 20 + 7* 40 +

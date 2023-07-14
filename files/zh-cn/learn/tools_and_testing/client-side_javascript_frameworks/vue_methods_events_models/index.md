@@ -6,7 +6,7 @@ slug: >-
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-我们现在已经有了样本数据，还有一个循环，它获取每一位数据并将其呈现在我们应用程序的 `ToDoItem` 中。接下来我们真正需要的是允许我们的用户在应用程序中输入他们自己的待办事项的能力，为此我们需要一个“text”类型的 `<input>`，当数据输入时触发的事件提交，一个在提交时触发以添加数据并重新呈现列表的方法，以及一个控制数据的模型。这就是我们将在本文中介绍的内容。
+我们现在已经有了样本数据，还有一个循环，它获取每一位数据并将其呈现在我们应用程序的 `ToDoItem` 中。接下来我们真正需要的是允许我们的用户在应用程序中输入他们自己的待办事项的能力，为此我们需要一个"text"类型的 `<input>`，当数据输入时触发的事件提交，一个在提交时触发以添加数据并重新呈现列表的方法，以及一个控制数据的模型。这就是我们将在本文中介绍的内容。
 
 <table>
   <tbody>
@@ -113,7 +113,7 @@ slug: >-
 
 ![Our todo list app rendered with a text input to enter new todos](rendered-form-with-text-input.png)
 
-如果你填写并单击“添加”按钮，页面会将表单发送回服务器，但这并不是我们真正想要的。我们真正想要做的是在 [`submit` 事件](/zh-CN/docs/Web/API/HTMLFormElement/submit_event)上运行一个方法，该方法将添加 `App` 中定义的 `ToDoItem` 数据列表的新待办事项。为此，我们需要向组件实例添加一个方法。
+如果你填写并单击"添加"按钮，页面会将表单发送回服务器，但这并不是我们真正想要的。我们真正想要做的是在 [`submit` 事件](/zh-CN/docs/Web/API/HTMLFormElement/submit_event)上运行一个方法，该方法将添加 `App` 中定义的 `ToDoItem` 数据列表的新待办事项。为此，我们需要向组件实例添加一个方法。
 
 ## 创建一个方法并用 v-on 绑定这个方法到一个事件上
 
@@ -210,7 +210,7 @@ slug: >-
     },
     ```
 
-4. 现在回到你正在运行的应用程序，在 `<input>` 字段中添加一些文本，然后单击“添加”按钮。你应该会看到你输入的值已记录到控制台，例如：
+4. 现在回到你正在运行的应用程序，在 `<input>` 字段中添加一些文本，然后单击"添加"按钮。你应该会看到你输入的值已记录到控制台，例如：
 
     ```plain
     Label value: My value
@@ -339,7 +339,7 @@ onSubmit() {
 }
 ```
 
-现在，当你单击“添加”按钮时，“new-todo-input”将自行清除。
+现在，当你单击"添加"按钮时，"new-todo-input"将自行清除。
 
 ## 总结
 

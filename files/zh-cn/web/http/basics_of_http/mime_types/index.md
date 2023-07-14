@@ -61,7 +61,7 @@ multipart/form-data
 multipart/byteranges
 ```
 
-_Multipart_ 类型表示细分领域的文件类型的种类，经常对应不同的 MIME 类型。这是*复合*文件的一种表现方式。`multipart/form-data` 可用于联系 [HTML Forms](/zh-CN/docs/Web/Guide/HTML/Forms) 和 {{HTTPMethod("POST")}} 方法，此外 `multipart/byteranges`使用状态码{{HTTPStatus("206")}} `Partial Content`来发送整个文件的子集，而 HTTP 对不能处理的复合文件使用特殊的方式：将信息直接传送给浏览器（这时可能会建立一个“另存为”窗口，但是却不知道如何去显示内联文件。）
+_Multipart_ 类型表示细分领域的文件类型的种类，经常对应不同的 MIME 类型。这是*复合*文件的一种表现方式。`multipart/form-data` 可用于联系 [HTML Forms](/zh-CN/docs/Web/Guide/HTML/Forms) 和 {{HTTPMethod("POST")}} 方法，此外 `multipart/byteranges`使用状态码{{HTTPStatus("206")}} `Partial Content`来发送整个文件的子集，而 HTTP 对不能处理的复合文件使用特殊的方式：将信息直接传送给浏览器（这时可能会建立一个"另存为"窗口，但是却不知道如何去显示内联文件。）
 
 ## 重要的 MIME 类型
 
@@ -83,7 +83,7 @@ _Multipart_ 类型表示细分领域的文件类型的种类，经常对应不�
 
 所有的 HTML 内容都应该使用这种类型。XHTML 的其他 MIME 类型（如`application/xml+html`）现在基本不再使用（HTML5 统一了这些格式）。
 
-> **备注：** You still need to use `application/xml` or `application/xhtml+xml` if you intend to make use of XML’s strict parsing rules, use [`<![CDATA[…]]>`](/en-US/docs/Web/API/CDATASection) or elements from non‑HTML, non‑SVG or non‑MathML XML namespaces, as `text/html`’s parsing semantics are subtly incompatible with those of `application/xml`.
+> **备注：** You still need to use `application/xml` or `application/xhtml+xml` if you intend to make use of XML's strict parsing rules, use [`<![CDATA[…]]>`](/en-US/docs/Web/API/CDATASection) or elements from non‑HTML, non‑SVG or non‑MathML XML namespaces, as `text/html`'s parsing semantics are subtly incompatible with those of `application/xml`.
 
 ### text/javascript
 
@@ -242,7 +242,7 @@ Content-Range: bytes 300-400/1270
 
 - RAR 编码文件。在这种情况，理想状态是，设置真实的编码文件类型；但这通常不可能（可能是服务器所未知的类型或者这个文件包含许多其他的不同的文件类型）。这种情况服务器将发送 `application/x-rar-compressed` 作为 MIME 类型，用户不会将其定义为有用的默认操作。
 - 音频或视频文件。只有正确设置了 MIME 类型的文件才能被 {{ HTMLElement("video") }} 或{{ HTMLElement("audio") }} 识别和播放。可参照 [use the correct type for audio and video](/En/Media_formats_supported_by_the_audio_and_video_elements)。
-- 专有文件类型。是专有文件时需要特别注意。使用 `application/octet-stream` 作为特殊处理是不被允许的：对于一般的 MIME 类型浏览器不允许定义默认行为（比如“在 Word 中打开”）
+- 专有文件类型。是专有文件时需要特别注意。使用 `application/octet-stream` 作为特殊处理是不被允许的：对于一般的 MIME 类型浏览器不允许定义默认行为（比如"在 Word 中打开"）
 
 ## MIME 嗅探
 

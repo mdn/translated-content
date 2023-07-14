@@ -24,7 +24,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_li
         <p>
           Vue 组件是由管理应用程序数据的 JavaScript 对象和映射到基础 DOM
           结构的基于 HTML 的模板语法组成的。为了进行安装并使用 Vue
-          的一些更高级的功能（例如“单文件组件（SFC）”或渲染功能），你将需要一个装有
+          的一些更高级的功能（例如"单文件组件（SFC）"或渲染功能），你将需要一个装有
           node + npm 的终端。
         </p>
       </td>
@@ -73,7 +73,7 @@ export default {
 
 ### Key 属性
 
-在进行数据传递之前，我们要了解下 `key` 属性，它和 `v-for` 一起使用，用来帮助 Vue 标识列表中的元素，这样 Vue 就不需要在列表变化时重新创建它们。为了确保它适当地重新使用列表元素，它需要在你附加 `v-for` 的同一个元素上有一个独特的“key”。
+在进行数据传递之前，我们要了解下 `key` 属性，它和 `v-for` 一起使用，用来帮助 Vue 标识列表中的元素，这样 Vue 就不需要在列表变化时重新创建它们。为了确保它适当地重新使用列表元素，它需要在你附加 `v-for` 的同一个元素上有一个独特的"key"。
 
 为了确保 Vue 能够准确地比较 `key` 属性，它们需要是字符串或数字值。虽然使用名字字段很好，但这个字段最终将由用户输入控制，这意味着我们不能保证名字是唯一的。然而，我们可以使用 `lodash.uniqueid()`，就像我们在上一篇文章中做的那样。
 
@@ -122,7 +122,7 @@ export default {
    </ul>
    ```
 
-    这样修改后，`<li>` 标签中的 JavaScript 表达式就可以访问 `item` 了，这意味着我们可以使用 `v-bind` 来传递 `item` 对象的字段给 `ToDoItem` 组件了。这非常有用，我们想让列表中的待办事项的 `label` 值展示到它的 label 中，而不是显示一个静态的“My Todo Item”。此外，我们想让它们的 checked 状态反映它们的 `done` 字段，而不是总设置为 `done="true"`。
+    这样修改后，`<li>` 标签中的 JavaScript 表达式就可以访问 `item` 了，这意味着我们可以使用 `v-bind` 来传递 `item` 对象的字段给 `ToDoItem` 组件了。这非常有用，我们想让列表中的待办事项的 `label` 值展示到它的 label 中，而不是显示一个静态的"My Todo Item"。此外，我们想让它们的 checked 状态反映它们的 `done` 字段，而不是总设置为 `done="true"`。
 
 4. 把 `label="My ToDo Item"` 改成 `:label="item.label"`, `:done="false"` 改成 `:done="item.done"`，像下面这样：
 

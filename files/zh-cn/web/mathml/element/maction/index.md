@@ -30,7 +30,7 @@ MathML **`<maction>`** 元素提供了一种让表达式（或子表达式）具
 
 ## 例子
 
-下面的例子演示了如何使用“toggle”这个**`actiontype`**：
+下面的例子演示了如何使用"toggle"这个**`actiontype`**：
 
 ```html
 <math>

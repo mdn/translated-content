@@ -68,7 +68,7 @@ new Uint8Array([12, 5, 8, 1, 4]).some(elem => elem > 10); // true
 
 ## Polyfill
 
-由于没有名为 _TypedArray 的全局对象_, 必须在“as needed”的基础上进行填充。
+由于没有名为 _TypedArray 的全局对象_, 必须在"as needed"的基础上进行填充。
 
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.some

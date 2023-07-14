@@ -32,7 +32,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows
 - {{WebExtAPIRef("windows.getCurrent()")}}
   - : 获取当前窗口。
 - {{WebExtAPIRef("windows.getLastFocused()")}}
-  - : 获取最近获得焦点的窗口，通常它是“顶部”的窗口。
+  - : 获取最近获得焦点的窗口，通常它是"顶部"的窗口。
 - {{WebExtAPIRef("windows.getAll()")}}
   - : 获取所有窗口。
 - {{WebExtAPIRef("windows.create()")}}

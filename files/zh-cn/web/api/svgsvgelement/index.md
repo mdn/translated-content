@@ -32,14 +32,14 @@ _此接口还从其父_ _{{domxref("SVGGraphicsElement")}}_ _继承属性，并�
 - {{domxref("SVGSVGElement.pixelUnitToMillimeterY")}} {{deprecated_inline}}
   - : 浮点数，表示沿视口 y 轴的像素单位大小。
 - {{domxref("SVGSVGElement.screenPixelToMillimeterX")}} {{deprecated_inline}}
-  - : DOM 级别 2 中的用户界面（UI）事件指示给定 UI 事件发生的屏幕位置。当浏览器实际知道“屏幕单元”的物理尺寸时，此浮动属性将表示该信息; 否则，用户代理将提供合适的默认值，例如.28mm。
+  - : DOM 级别 2 中的用户界面（UI）事件指示给定 UI 事件发生的屏幕位置。当浏览器实际知道"屏幕单元"的物理尺寸时，此浮动属性将表示该信息; 否则，用户代理将提供合适的默认值，例如.28mm。
 - {{domxref("SVGSVGElement.screenPixelToMillimeterY")}} {{deprecated_inline}}
   - : 沿着视口的 y 轴的屏幕像素的对应大小。
 - {{domxref("SVGSVGElement.useCurrentView")}}
-  - : 当前最内层 SVG 文档片段的初始视图（即放大和平移之前）可以是“标准”视图，即基于{{SVGElement("svg")}}元素的属性，例如{{SVGAttr ("viewBox")}}）或“自定义”视图（即指向特定{{SVGElement("view")}}或其他元素的超链接）。如果初始视图是“标准”视图，则此属性为`false`。如果初始视图是“自定义”视图，则此属性为`true`。
+  - : 当前最内层 SVG 文档片段的初始视图（即放大和平移之前）可以是"标准"视图，即基于{{SVGElement("svg")}}元素的属性，例如{{SVGAttr ("viewBox")}}）或"自定义"视图（即指向特定{{SVGElement("view")}}或其他元素的超链接）。如果初始视图是"标准"视图，则此属性为`false`。如果初始视图是"自定义"视图，则此属性为`true`。
 - {{domxref("SVGSVGElement.currentView")}}
 
-  - : {{domxref("SVGViewSpec")}}定义当前最里面的 SVG 文档片段的初始视图（即，放大和平移之前）。意义取决于具体情况：如果初始视图是“标准”视图，则：
+  - : {{domxref("SVGViewSpec")}}定义当前最里面的 SVG 文档片段的初始视图（即，放大和平移之前）。意义取决于具体情况：如果初始视图是"标准"视图，则：
 
     - {{SVGAttr("viewBox")}}，{{SVGAttr("preserveAspectRatio")}}和{{SVGAttr("currentView")}}中的{{SVGAttr("zoomAndPan")}}的值将与值匹配对于`SVGSVGElement`直接打开的相应 DOM 属性
     - } {{SVGAttr("currentView")}}中的{{SVGAttr("transform")}}和{{SVGAttr("viewTarget")}}的值将为 null

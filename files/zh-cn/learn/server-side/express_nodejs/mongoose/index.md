@@ -65,11 +65,11 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 - [Node ORM2](https://node-orm.readthedocs.io/en/latest/)：一款 Node.js 对象关系管理系统。支持 MySQL、SQLite 以及 Progress，可以帮助你用面向对象的方法操作数据库。
 - [JugglingDB](http://1602.github.io/jugglingdb/)：一款 Node.js 版跨数据库的 ORM。它为多数流行数据库提供了统一接口，当前支持 MySQL、SQLite3、Postgres、MongoDB、Redis 和 js-memory-storage（自写引擎，仅供测试用）。
 
-一般来说，选择解决方案应该考虑功能和“社区活跃度”（下载量、贡献数、bug 报告、文档质量，等）。在撰写本文时，Mongoose 是最受欢迎的 ODM，选用 MongoDB 数据库时，它是一个合理的选择。
+一般来说，选择解决方案应该考虑功能和"社区活跃度"（下载量、贡献数、bug 报告、文档质量，等）。在撰写本文时，Mongoose 是最受欢迎的 ODM，选用 MongoDB 数据库时，它是一个合理的选择。
 
 ### 在 LocalLibrary 中使用 Mongoose 和 MongoDb
 
-我们将在本地图书馆示例（以及本主题的其余部分）中使用 [Mongoose ODM](https://www.npmjs.com/package/mongoose) 来访问图书馆数据。Mongoose 作为 [MongoDB](https://www.mongodb.com/what-is-mongodb)（面向文档数据模型的开源 [NoSQL](https://en.wikipedia.org/wiki/NoSQL) 数据库）的前端。MongoDB 数据库里，“集合”中的“文档” [类似于](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) 关系数据库里“表”中的“行”。
+我们将在本地图书馆示例（以及本主题的其余部分）中使用 [Mongoose ODM](https://www.npmjs.com/package/mongoose) 来访问图书馆数据。Mongoose 作为 [MongoDB](https://www.mongodb.com/what-is-mongodb)（面向文档数据模型的开源 [NoSQL](https://en.wikipedia.org/wiki/NoSQL) 数据库）的前端。MongoDB 数据库里，"集合"中的"文档" [类似于](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) 关系数据库里"表"中的"行"。
 
 这种 ODM 和数据库的结合方式在 Node 社区中非常流行，一定程度上是因为文档存储和查询系统与 JSON 十分相似，因此 JavaScript 开发人员会非常熟悉。
 
@@ -83,7 +83,7 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 
 图书馆需要存储藏书信息（书名、摘要、作者、种类、ISBN），藏书副本信息（全站唯一 ID，借出状态，等）。还可能需要存储作者姓名之外的更多信息，以及多个作者的信息。还希望数据库内容能够根据书名、作者姓名、种类和编目进行排序。
 
-有必要为每个“对象”（一组相关信息）设计独立的模型。本示例的关键对象包括书籍、书籍副本和作者。
+有必要为每个"对象"（一组相关信息）设计独立的模型。本示例的关键对象包括书籍、书籍副本和作者。
 
 也许还希望使用模型而不是站点代码来表示选项表（比如下拉列表），在选项无法预知或可能更改时更推荐模型方式。很明显，藏书类型（比如科幻小说、法语诗歌，等）就是这种情况。
 
@@ -101,7 +101,7 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 
 这一段将简要介绍如何将 Mongoose 连接到 MongoDB 数据库，如何定义模式和模型，以及如何进行基本查询。
 
-> **备注：** 本入门受到 npm 上的 [Mongoose 快速入门](https://www.npmjs.com/package/mongoose) 和 [Mongoose 官方文档](http://mongoosejs.com/docs/guide.html) 的“深度影响”。
+> **备注：** 本入门受到 npm 上的 [Mongoose 快速入门](https://www.npmjs.com/package/mongoose) 和 [Mongoose 官方文档](http://mongoosejs.com/docs/guide.html) 的"深度影响"。
 
 ### 安装 Mongoose 和 MongoDB
 
@@ -113,7 +113,7 @@ npm install mongoose
 
 安装 Mongoose 会添加所有依赖项，包括 MongoDB 数据库驱动程序，但不会安装 MongoDB 本身。要安装 MongoDB 服务器，可以 [点击下载](https://www.mongodb.com/download-center) 各操作系统的安装程序在本地安装。也可以使用云端 MongoDB 实例。
 
-> **备注：** 本教程选用 mLab 提供的 [沙箱级](https://mlab.com/plans/pricing/) 云端“数据库即服务”（Database as a Service，DBaaS）。它适用于开发环境，且部署过程与操作系统无关（DBaaS 也适用于生产环境）。
+> **备注：** 本教程选用 mLab 提供的 [沙箱级](https://mlab.com/plans/pricing/) 云端"数据库即服务"（Database as a Service，DBaaS）。它适用于开发环境，且部署过程与操作系统无关（DBaaS 也适用于生产环境）。
 
 ### 连接到 MongoDB
 
@@ -143,7 +143,7 @@ db.on('error', console.error.bind(console, 'MongoDB 连接错误：'));
 
 模型使用 `Schema` 接口进行定义。 `Schema` 可以定义每个文档中存储的字段，及字段的验证要求和默认值。还可以通过定义静态和实例辅助方法来更轻松地处理各种类型的数据，还可以像使用普通字段一样使用数据库中并不存在的虚拟属性（稍后讨论）。
 
-`mongoose.model()` 方法将模式“编译”为模型。模型就可以用来查找、创建、更新和删除特定类型的对象。
+`mongoose.model()` 方法将模式"编译"为模型。模型就可以用来查找、创建、更新和删除特定类型的对象。
 
 > **备注：** MongoDB 数据库中，每个模型都映射至一组文档。这些文档包含 `Schema` 模型定义的字段名/模式类型。
 
@@ -185,7 +185,7 @@ const SomeModel = mongoose.model('SomeModel', SomeModelSchema);
 
 第一个参数是为模型所创建集合的别名（Mongoose 将为 SomeModel 模型创建数据库集合），第二个参数是创建模型时使用的模式。
 
-> **备注：** 定义模型类后，可以使用它们来创建、更新或删除记录，以及通过查询来获取所有记录或特定子集。我们将在以下“[使用模型](#)”部分展示，包括创建视图的情况。
+> **备注：** 定义模型类后，可以使用它们来创建、更新或删除记录，以及通过查询来获取所有记录或特定子集。我们将在以下"[使用模型](#)"部分展示，包括创建视图的情况。
 
 #### 模式类型（字段）
 
@@ -267,7 +267,7 @@ const breakfastSchema = new Schema({
 
 #### 方法和查询助手
 
-模式支持 [实例方法](http://mongoosejs.com/docs/guide.html#methods)、[静态方法](http://mongoosejs.com/docs/guide.html#statics) 和 [查询助手](http://mongoosejs.com/docs/guide.html#query-helpers)。实例方法和静态方法外表很相似，但有本质区别，实例方法针对特定记录，且可以访问当前对象。查询助手可用于扩展 Mongoose 的 [链式查询 API](http://mongoosejs.com/docs/queries.html)（例如，在 `find()`、`findOne()` 和 `findById()` 方法外还可以添加一个“`byName`”查询）。
+模式支持 [实例方法](http://mongoosejs.com/docs/guide.html#methods)、[静态方法](http://mongoosejs.com/docs/guide.html#statics) 和 [查询助手](http://mongoosejs.com/docs/guide.html#query-helpers)。实例方法和静态方法外表很相似，但有本质区别，实例方法针对特定记录，且可以访问当前对象。查询助手可用于扩展 Mongoose 的 [链式查询 API](http://mongoosejs.com/docs/queries.html)（例如，在 `find()`、`findOne()` 和 `findById()` 方法外还可以添加一个"`byName`"查询）。
 
 ### 使用模型
 
@@ -308,7 +308,7 @@ SomeModel.create(
 
 每个模型都有一个相关的连接（使用 `mongoose.model()` 时将做为默认连接）。可以通过创建新连接并对其调用 `.model()`，从而在另一个数据库上创建文档。
 
-可以使用“圆点”加字段名来访问、修改新记录中的字段。操作后必须调用 `save()` 或 `update()` 以将改动保存回数据库。
+可以使用"圆点"加字段名来访问、修改新记录中的字段。操作后必须调用 `save()` 或 `update()` 以将改动保存回数据库。
 
 ```js
 // 使用圆点来访问模型的字段值
@@ -396,7 +396,7 @@ Athlete.
 
 可以使用 `ObjectId` 模式字段来创建两个文档/模型实例间一对一的引用，（一组 `ObjectIds` 可创建一对多的引用）。该字段存储相关模型的 id。如果需要相关文档的实际内容，可以在查询中使用 [`populate()`](http://mongoosejs.com/docs/api.html#query_Query-populate) 方法，将 id 替换为实际数据。
 
-例如，以下模式定义了作者和简介。每个作者可以有多条简介，我们将其表示为一个 `ObjectId` 数组。每条简介只对应一个作者。“`ref`”（黑体字）告知模式分配哪个模型给该字段。
+例如，以下模式定义了作者和简介。每个作者可以有多条简介，我们将其表示为一个 `ObjectId` 数组。每条简介只对应一个作者。"`ref`"（黑体字）告知模式分配哪个模型给该字段。
 
 ```js
 const mongoose = require('mongoose');
@@ -469,7 +469,7 @@ Story
 >   });
 > ```
 
-以上是本教程中“项目间协同”需要了解的所有内容。更多详细信息请参阅 [Population](http://mongoosejs.com/docs/populate.html)（Mongoose 英文文档）。
+以上是本教程中"项目间协同"需要了解的所有内容。更多详细信息请参阅 [Population](http://mongoosejs.com/docs/populate.html)（Mongoose 英文文档）。
 
 ### 一模式（模型）一文件
 
@@ -507,7 +507,7 @@ SomeModel.find(callback_function);
 
 我们已经初步了解了 Mongoose 以及设计模型的方法，现在该开始搭建 LocalLibrary 网站了。第一件事就是设置 MongoDB 数据库，来存储图书馆的数据。
 
-本教程将使用 [mLab](https://mlab.com/welcome/) 免费版“[沙盒](https://mlab.com/plans/pricing/)”云数据库。这一版不适用于生产环境，因为它没有冗余设计，但非常适合进行开发和原型设计。选用它是因为它免费且易于设置，并且 mLab 是一家流行的数据库服务供应商，也是生产环境数据库的理想选择（撰写本文时（2019 年 1 月），国内流行的云数据库解决方案有 [阿里云](https://www.aliyun.com/product/mongodb?spm=5176.10695662.778269.1.2e5b8cb3Hw9HUr)、[腾讯云](https://cloud.tencent.com/product/mongodb)、[百度云](https://cloud.baidu.com/product/mongodb.html) 等）。
+本教程将使用 [mLab](https://mlab.com/welcome/) 免费版"[沙盒](https://mlab.com/plans/pricing/)"云数据库。这一版不适用于生产环境，因为它没有冗余设计，但非常适合进行开发和原型设计。选用它是因为它免费且易于设置，并且 mLab 是一家流行的数据库服务供应商，也是生产环境数据库的理想选择（撰写本文时（2019 年 1 月），国内流行的云数据库解决方案有 [阿里云](https://www.aliyun.com/product/mongodb?spm=5176.10695662.778269.1.2e5b8cb3Hw9HUr)、[腾讯云](https://cloud.tencent.com/product/mongodb)、[百度云](https://cloud.baidu.com/product/mongodb.html) 等）。
 
 > **备注：** 也可以下载并安装 [对应系统的安装包](https://www.mongodb.com/download-center)，设置本地版 MongoDB 数据库。多数指令和使用云数据库是一样的，除了连接时数据库的 URL。
 
@@ -675,7 +675,7 @@ module.exports = mongoose.model('Book', BookSchema);
 
 ### 藏书副本模型（BookInstance）
 
-最后将 `BookInstance` 模式代码复制粘贴至 **./models/bookinstance.js** 文件中。 `BookInstance` 表示可供借阅的藏书的特定副本，其中包含该副本是否可用、还书期限，“出版批次”或版本详细信息。
+最后将 `BookInstance` 模式代码复制粘贴至 **./models/bookinstance.js** 文件中。 `BookInstance` 表示可供借阅的藏书的特定副本，其中包含该副本是否可用、还书期限，"出版批次"或版本详细信息。
 
 ```js
 const mongoose = require('mongoose');
@@ -736,7 +736,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 
     > **备注：** 无需深究 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)，它只是为数据库添加一些示例数据。
     >
-    > 译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”，请对[populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)源码酌情修改，否则会报错而添加数据失败。
+    > 译注：针对 node.js3.0 及以后版本，mlab 使用"mongodb+srv://"链接而非"mongodb://"，请对[populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)源码酌情修改，否则会报错而添加数据失败。
 
 2. 在项目根目录运行以下命令，以安装脚本所需的异步模块（后续教程再展开讲）
 

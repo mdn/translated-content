@@ -48,7 +48,7 @@ slug: Learn/Accessibility/HTML
 
 1. **更便于开发** — 如上所述，你可以使 HTML 更易于理解，并且可以毫不费力的获得一些功能。
 2. **更适配移动端** — 语义化的 HTML 文件比非语义化的 HTML 文件更加轻便，并且更易于响应式开发。
-3. **更便于 SEO 优化** — 比起使用非语义化的\<div>标签，搜索引擎更加重视在“标题、链接等”里面的关键字，使用语义化可使网页更容易被用户搜索到。
+3. **更便于 SEO 优化** — 比起使用非语义化的\<div>标签，搜索引擎更加重视在"标题、链接等"里面的关键字，使用语义化可使网页更容易被用户搜索到。
 
 让我们来继续学习 HTML 语义化实现细则。
 
@@ -62,7 +62,7 @@ slug: Learn/Accessibility/HTML
 
 话虽如此，但是有些情况我们往往不能摆脱错误的标签，例如一个网页是从服务端的框架生成的，或者网页上存在第三方的内容（如广告），这些都是我们所不能控制的。
 
-我们的目标并不是“全有或全无”，实际上，你所做的每一个改进都可以提升网页的无障碍。
+我们的目标并不是"全有或全无"，实际上，你所做的每一个改进都可以提升网页的无障碍。
 
 ### 文本内容
 
@@ -131,7 +131,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 - 如果可以避免的话，不要用破折号。写 5 到 7，来替代 5-7。
 - 展开缩写 — 写 January，来替代 Jan。
-- 展开首字母缩略词，至少一次或两次。例如写明“超文本标记语言”（Hypertext Markup Language），而不是直接用缩写 HTML。
+- 展开首字母缩略词，至少一次或两次。例如写明"超文本标记语言"（Hypertext Markup Language），而不是直接用缩写 HTML。
 
 ### 页面布局
 
@@ -208,7 +208,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 如果您尝试使用屏幕阅读器浏览此内容，它可能会告诉您需要查看一个表格（尽管某些屏幕阅读器可以猜测表格布局和数据表格之间的区别）。然后，您可能（取决于您使用的屏幕阅读器）必须需要进入到表格对象中，并单独地查看表格的内容，然后再次离开表格，以继续浏览其他内容。
 
-用表格布局网页是过去旧时代的遗迹 - 在“CSS”在浏览器中并不普遍被支持时，它们是有意义的，但是它们会为屏幕阅读器用户造成混淆，并且由于许多其他原因变得很糟糕（滥用表格，可能因此需要更多的标记，使设计更不灵活）。不要这样做！
+用表格布局网页是过去旧时代的遗迹 - 在"CSS"在浏览器中并不普遍被支持时，它们是有意义的，但是它们会为屏幕阅读器用户造成混淆，并且由于许多其他原因变得很糟糕（滥用表格，可能因此需要更多的标记，使设计更不灵活）。不要这样做！
 
 您可以通过将您之前的体验与 [更现代的网站结构示例](http://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/) 进行比较，来验证这些声明，该示例如下所示：
 
@@ -256,7 +256,7 @@ This is the second subsection of my content. I think is more interesting than th
 
 通过 UI 控件，我们指的是与用户交互的 Web 文档的主要部分 - 通常是按钮，链接和表单控件。在本节中，我们将介绍创建此类控件时要注意的基本无障碍问题。稍后关于 WAI-ARIA 和多媒体的文章将着眼于 UI 无障碍的其他方面。
 
-UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许用户通过键盘操作它们。您可以使用我们的 [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 示例（请参阅 [源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) ）。尝试此操作 - 在新选项卡中打开此项，然后尝试按 Tab 键; 几次按下后，您应该看到标签焦点开始移动到不同的元素; 在每个浏览器中，获得焦点元素都会有一个“突出显示“的默认样式（它在不同浏览器之间略有不同），以便您可以确定当前哪些元素获得焦点。
+UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许用户通过键盘操作它们。您可以使用我们的 [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 示例（请参阅 [源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) ）。尝试此操作 - 在新选项卡中打开此项，然后尝试按 Tab 键; 几次按下后，您应该看到标签焦点开始移动到不同的元素; 在每个浏览器中，获得焦点元素都会有一个"突出显示"的默认样式（它在不同浏览器之间略有不同），以便您可以确定当前哪些元素获得焦点。
 
 ![](button-focused-unfocused.png)
 
@@ -353,7 +353,7 @@ document.onkeydown = function(e) {
 
 用户界面控件的 文本标签 对所有用户都非常有用，但是对于残疾用户来说，让他们正确使用尤其重要。
 
-你应该确保你的按钮和链接文本标签是可以理解和独特的。不要使用“点击这里”（"Click here"）此类的标签，因为屏幕阅读器用户有时会列出按钮和表格控件列表。以下屏幕截图显示了我们的控件在 Mac 上由 VoiceOver 列出。
+你应该确保你的按钮和链接文本标签是可以理解和独特的。不要使用"点击这里"（"Click here"）此类的标签，因为屏幕阅读器用户有时会列出按钮和表格控件列表。以下屏幕截图显示了我们的控件在 Mac 上由 VoiceOver 列出。
 
 ![](voiceover-formcontrols.png)
 
@@ -377,7 +377,7 @@ document.onkeydown = function(e) {
 Fill in your name: <input type="text" id="name" name="name">
 ```
 
-但是，这对于残疾用户来说并不是那么有用。在上面的示例中，没有任何内容将标签与表单输入明确关联。因此如果看不到它，请让用户明确该如何填写。如果您使用某些屏幕阅读器访问该屏幕，则只能按照“编辑文本”（“edit text”）的方式给出说明。
+但是，这对于残疾用户来说并不是那么有用。在上面的示例中，没有任何内容将标签与表单输入明确关联。因此如果看不到它，请让用户明确该如何填写。如果您使用某些屏幕阅读器访问该屏幕，则只能按照"编辑文本"（"edit text"）的方式给出说明。
 
 以下是一个更好的例子：
 
@@ -388,7 +388,7 @@ Fill in your name: <input type="text" id="name" name="name">
 </div>
 ```
 
-通过这样的代码，标签将清晰地与输入相关联; 描述将更像如下这种形式：“填写你的姓名：编辑文本”。
+通过这样的代码，标签将清晰地与输入相关联; 描述将更像如下这种形式："填写你的姓名：编辑文本"。
 
 ![](voiceover-good-form-label.png)
 
@@ -398,7 +398,7 @@ Fill in your name: <input type="text" id="name" name="name">
 
 ## 可访问的表格
 
-基本的表格（译者注：“data table”被翻译成“表格”）可以用非常简单的标记来编写，例如：
+基本的表格（译者注："data table"被翻译成"表格"）可以用非常简单的标记来编写，例如：
 
 ```html
 <table>
@@ -456,11 +456,11 @@ Fill in your name: <input type="text" id="name" name="name">
 <p id="dino-label">The Mozilla red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.</p>
 ```
 
-第一张图片，当用屏幕阅读器查看时，并不真正为用户提供很多帮助 - 例如 VoiceOver 会读出“/dinosaur.png，image” 。它读出文件名以尝试提供一些帮助。在这个例子中，用户至少知道它是某种恐龙，但通常文件可以用机器生成的文件名（例如来自数码相机）上传，这些文件名可能不会提供图像内容的信息。
+第一张图片，当用屏幕阅读器查看时，并不真正为用户提供很多帮助 - 例如 VoiceOver 会读出"/dinosaur.png，image" 。它读出文件名以尝试提供一些帮助。在这个例子中，用户至少知道它是某种恐龙，但通常文件可以用机器生成的文件名（例如来自数码相机）上传，这些文件名可能不会提供图像内容的信息。
 
 > **备注：** 这就是为什么你不应该在图像中包含文本内容 - 屏幕阅读器根本无法访问它。还有其他的缺点 - 你不能选择它并复制/粘贴它。不要这样做！
 
-当屏幕阅读器遇到第二张图像时，它会读出完整的 `alt` 属性 - “红色霸王龙雷克斯：一只像人一样直立的双腿恐龙，手臂小，头部大而锋利。”
+当屏幕阅读器遇到第二张图像时，它会读出完整的 `alt` 属性 - "红色霸王龙雷克斯：一只像人一样直立的双腿恐龙，手臂小，头部大而锋利。"
 
 这突出了不仅在所谓的替代文本不可用的情况下使用有意义的文件名的重要性，而且还确保尽可能地在替换属性 `alt` 中提供替代文本。请注意，`alt` 属性的内容应始终提供图像的直接表示以及它在视觉上传达的内容。任何个人知识或额外描述都不应该包含在这里，因为它对以前没有碰到过这个图像的人没有用处。
 
@@ -468,7 +468,7 @@ Fill in your name: <input type="text" id="name" name="name">
 
 > **备注：** 请阅读 [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) 和 [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) 以获得更多关于图片实施和最佳做法的信息。
 
-如果您确实想要提供额外的上下文信息，则应该将其放在图像周围的文本中，或放置在“标题” `title` 属性中，如上所示。在这种情况下，大多数屏幕阅读器会读出替代文本，标题属性和文件名。此外，鼠标滑过时，浏览器会将 `title` 的内容作为工具提示的形式显示出来。
+如果您确实想要提供额外的上下文信息，则应该将其放在图像周围的文本中，或放置在"标题" `title` 属性中，如上所示。在这种情况下，大多数屏幕阅读器会读出替代文本，标题属性和文件名。此外，鼠标滑过时，浏览器会将 `title` 的内容作为工具提示的形式显示出来。
 
 ![](title-attribute.png)
 
@@ -480,9 +480,9 @@ Fill in your name: <input type="text" id="name" name="name">
 <p id="dino-label">The Mozilla red Tyrannosaurus ... </p>
 ```
 
-在这种情况下，我们不使用“alt”属性 —— 相反，我们已经将图像的描述作为常规文本段落给出，并给出它的“id”，然后使用“`aria-labelledby`”属性并链接到对应“`id`”，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果您想将相同的文本用作多个图像的标签，这是特别有用的 - 这是使用“`alt`”不可能实现的。
+在这种情况下，我们不使用"alt"属性 —— 相反，我们已经将图像的描述作为常规文本段落给出，并给出它的"id"，然后使用"`aria-labelledby`"属性并链接到对应"`id`"，它使屏幕阅读器将该段落用作该图像的替代文本/标签。如果您想将相同的文本用作多个图像的标签，这是特别有用的 - 这是使用"`alt`"不可能实现的。
 
-> **备注：** “`aria-labelledby`”是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的无障碍。要了解更多关于它是如何工作的，请阅读我们的 [WAI-ARIA Basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics) 文章。
+> **备注：** "`aria-labelledby`"是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 规范的一部分，它允许开发人员在其标记中添加额外的语义，以提高屏幕阅读器的无障碍。要了解更多关于它是如何工作的，请阅读我们的 [WAI-ARIA Basics](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics) 文章。
 
 ### 其他文字替代机制
 
@@ -514,9 +514,9 @@ HTML5 包含两个新元素 - `{{htmlelement("figure")}}` 和`{{htmlelement("fig
 </h3>
 ```
 
-可能有时候图像被包含在页面的设计中，但其主要目的是用于视觉装饰。在上面的代码示例中，您会注意到图像的“alt”属性为空 - 这是为了让屏幕阅读器识别图像，但不试图描述图像（阅读器只是说“图像”等类似的语句）。
+可能有时候图像被包含在页面的设计中，但其主要目的是用于视觉装饰。在上面的代码示例中，您会注意到图像的"alt"属性为空 - 这是为了让屏幕阅读器识别图像，但不试图描述图像（阅读器只是说"图像"等类似的语句）。
 
-使用空白“alt”而不包含它的原因是因为如果没有提供“alt”，许多屏幕阅读器会公布整个图像 URL。在上面的示例中，图像充当与其关联的标题的视觉装饰。在这种情况下，以及在图像只是装饰并且没有内容值的情况下，您应该在图像上放置一个空白的“alt”。另一种选择是使用 aria role 属性 `role =“presentation”` - 这也会阻止屏幕阅读器读出替代文本。
+使用空白"alt"而不包含它的原因是因为如果没有提供"alt"，许多屏幕阅读器会公布整个图像 URL。在上面的示例中，图像充当与其关联的标题的视觉装饰。在这种情况下，以及在图像只是装饰并且没有内容值的情况下，您应该在图像上放置一个空白的"alt"。另一种选择是使用 aria role 属性 `role =“presentation”` - 这也会阻止屏幕阅读器读出替代文本。
 
 > **备注：** 如果可能的话，你应该使用 CSS 来显示只有装饰的图像。
 

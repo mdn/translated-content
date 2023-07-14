@@ -26,9 +26,9 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 ## 现代工具概述
 
-随着时间的推移，为网络编写软件已经变得越来越复杂。尽管“手工”编写 HTML、CSS 和 JavaScript 仍然是完全合理的，但现在有大量的工具可供开发人员使用，以加快构建 web 站点或应用程序的过程。
+随着时间的推移，为网络编写软件已经变得越来越复杂。尽管"手工"编写 HTML、CSS 和 JavaScript 仍然是完全合理的，但现在有大量的工具可供开发人员使用，以加快构建 web 站点或应用程序的过程。
 
-有一些非常完善的工具已经成为开发社区中常见的“家喻户晓的名字”，并且每天都在编写和发布新的工具来解决特定的问题。你甚至可能发现自己正在编写一个软件来帮助你自己的开发过程，以解决现有工具似乎无法处理的特定问题。
+有一些非常完善的工具已经成为开发社区中常见的"家喻户晓的名字"，并且每天都在编写和发布新的工具来解决特定的问题。你甚至可能发现自己正在编写一个软件来帮助你自己的开发过程，以解决现有工具似乎无法处理的特定问题。
 
 单个项目中包含的大量工具很容易让人不知所措。同样，像 Webpack 这样的工具的一个配置文件可能有数百行之长，其中大多数都是神奇的咒语，似乎可以完成工作，但只有大神级工程师才能完全理解
 
@@ -38,7 +38,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 ## 现代工具系统
 
-当今的现代开发人员工具生态系统非常庞大，因此对这些工具正在解决的主要问题有一个大致的概念是非常有用的。如果你跳到你最喜欢的搜索引擎上，搜索“前端开发工具”，你会得到一系列的结果，从文本编辑器到浏览器，再到你可以用来做笔记的笔。
+当今的现代开发人员工具生态系统非常庞大，因此对这些工具正在解决的主要问题有一个大致的概念是非常有用的。如果你跳到你最喜欢的搜索引擎上，搜索"前端开发工具"，你会得到一系列的结果，从文本编辑器到浏览器，再到你可以用来做笔记的笔。
 
 虽然你选择的代码编辑器肯定是一种工具选择，但本系列文章将不止于此，重点关注帮助你更有效地生成 web 代码的开发人员工具。
 
@@ -64,7 +64,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 **Linter** 是检查你的代码并告诉你存在任何错误的工具，它们是什么类型的错误，以及它们出现在哪些代码行上。通常，linters 不仅可以被配置为报告错误，还可以报告任何违反你的团队可能正在使用的指定样式指南的行为 (例如代码使用了错误的缩进空格数，或者使用了[template literals](/zh-CN/docs/Web/JavaScript/Reference/Template_literals) 而不是常规的字符串文本)。
 
-[eslint](https://eslint.org/) 业界标准的 JavaScript linter 是一种高度可配置的工具，用于捕获潜在的语法错误，并在代码中鼓励“最佳实践”。一些公司和项目也是这样 [shared their eslint configs](https://www.npmjs.com/search?q=keywords:eslintconfig)。
+[eslint](https://eslint.org/) 业界标准的 JavaScript linter 是一种高度可配置的工具，用于捕获潜在的语法错误，并在代码中鼓励"最佳实践"。一些公司和项目也是这样 [shared their eslint configs](https://www.npmjs.com/search?q=keywords:eslintconfig)。
 
 你还可以找到用于其他语言的 linting 工具，比如[csslint](http://csslint.net/)。
 
@@ -72,7 +72,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 #### 源代码控制
 
-也称为版本控制系统（VCS），源代码控制对于备份工作和在团队中工作至关重要。典型的 VCS 包括拥有你要对其进行更改的代码的本地版本。然后将更改“推”到存储在某个服务器上的远程存储库中的代码的“主”版本。通常有一种方法来控制和协调对代码的“主”副本做了什么更改，以及什么时候做更改，这样开发团队就不会一直覆盖彼此的工作。
+也称为版本控制系统（VCS），源代码控制对于备份工作和在团队中工作至关重要。典型的 VCS 包括拥有你要对其进行更改的代码的本地版本。然后将更改"推"到存储在某个服务器上的远程存储库中的代码的"主"版本。通常有一种方法来控制和协调对代码的"主"副本做了什么更改，以及什么时候做更改，这样开发团队就不会一直覆盖彼此的工作。
 
 [Git](https://git-scm.com/) 是现在大多数人使用的源代码控制系统。它主要通过命令行访问，但也可以通过友好的用户界面访问。使用 git 存储库中的代码，你可以将其推到自己的服务器实例中，或者使用托管的源代码控制网站，如[GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [BitBucket](https://bitbucket.org/product/features).
 
@@ -86,7 +86,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 #### 打包工具
 
-这些工具让你的代码准备生产，例如，通过 tree-shaking 来确保只有实际使用的代码库的部分被放到最终的生产代码中，或“缩减”删除所有空格在生产代码中，使其尽可能小之前上传到服务器。
+这些工具让你的代码准备生产，例如，通过 tree-shaking 来确保只有实际使用的代码库的部分被放到最终的生产代码中，或"缩减"删除所有空格在生产代码中，使其尽可能小之前上传到服务器。
 
 [Parcel](https://parceljs.org/) 是一个特别好用的工具，都属于这个类别可以完成上面的任务，但也有助于资产包像 HTML, CSS 和图像文件方便的包，你可以继续部署，也为你自动添加依赖项当你试着使用它们。它甚至可以为你处理一些代码转换任务。
 
@@ -94,7 +94,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 
 ### 转换
 
-web 应用程序生命周期的这个阶段通常允许你编写“未来代码”(比如最新的 CSS 或 JavaScript 特性，这些特性可能还没有得到浏览器的本地支持)，或者完全使用另一种语言编写代码，比如 [TypeScript](https://www.typescriptlang.org/)。转换工具将为你生成与浏览器兼容的代码，以用于生产。
+web 应用程序生命周期的这个阶段通常允许你编写"未来代码"(比如最新的 CSS 或 JavaScript 特性，这些特性可能还没有得到浏览器的本地支持)，或者完全使用另一种语言编写代码，比如 [TypeScript](https://www.typescriptlang.org/)。转换工具将为你生成与浏览器兼容的代码，以用于生产。
 
 通常 web 开发被认为是三种语言：[HTML](/zh-CN/docs/Learn/HTML)、[CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript)，所有这些语言都有转换工具。转换提供了两个主要好处（还有其他好处）
 
@@ -149,8 +149,8 @@ web 应用程序生命周期的这个阶段通常允许你编写“未来代码�
 - 有经验的老师、导师、同学或有一定经验的同事以前解决过这类问题，并能提出建议。
 - 一个有用的特定地方搜索。对前端开发人员工具的一般 web 搜索通常是无用的，除非你已经知道你正在搜索的工具的名称。
 
-  - 例如，如果你正在使用 npm 包管理器来管理依赖项，那么转到[npm homepage](https://www.npmjs.com/) 并搜索你正在寻找的工具的类型，例如，如果你想要日期格式化实用程序，请尝试搜索“date”，如果你想要搜索通用代码格式化程序，则尝试搜索“formatter”。请注意流行度、质量和维护分数，以及软件包最近更新的时间。还可以点击工具页面，了解每个包每月有多少下载，以及它是否有好的文档，可以用来了解它是否完成了你需要它做的事情。以这些标准为基础[date-fns library](https://www.npmjs.com/package/date-fns) 看起来是一个很好的日期格式化工具。在本模块的第 3 章中，你将看到这个工具的实际应用，并了解更多关于包管理器的信息。
-  - 如果你正在寻找将工具功能集成到代码编辑器中的插件，请查看代码编辑器的“插件/扩展名”页面 - 请参阅 [Atom packages](https://atom.io/packages) and [VSCode extensions](https://marketplace.visualstudio.com/VSCode),为例。看一看首页上的特色扩展，然后再次尝试搜索你想要的扩展类型 (或者工具名称，例如在 VSCode 扩展页面上搜索“eslint”)。当你得到结果的时候，看看这个扩展有多少颗星或者下载了多少，作为它质量的一个指标。
+  - 例如，如果你正在使用 npm 包管理器来管理依赖项，那么转到[npm homepage](https://www.npmjs.com/) 并搜索你正在寻找的工具的类型，例如，如果你想要日期格式化实用程序，请尝试搜索"date"，如果你想要搜索通用代码格式化程序，则尝试搜索"formatter"。请注意流行度、质量和维护分数，以及软件包最近更新的时间。还可以点击工具页面，了解每个包每月有多少下载，以及它是否有好的文档，可以用来了解它是否完成了你需要它做的事情。以这些标准为基础[date-fns library](https://www.npmjs.com/package/date-fns) 看起来是一个很好的日期格式化工具。在本模块的第 3 章中，你将看到这个工具的实际应用，并了解更多关于包管理器的信息。
+  - 如果你正在寻找将工具功能集成到代码编辑器中的插件，请查看代码编辑器的"插件/扩展名"页面 - 请参阅 [Atom packages](https://atom.io/packages) and [VSCode extensions](https://marketplace.visualstudio.com/VSCode),为例。看一看首页上的特色扩展，然后再次尝试搜索你想要的扩展类型 (或者工具名称，例如在 VSCode 扩展页面上搜索"eslint")。当你得到结果的时候，看看这个扩展有多少颗星或者下载了多少，作为它质量的一个指标。
 
 - 与开发相关的论坛，询问关于使用什么工具的问题，例如 [MDN Learn Discourse](https://discourse.mozilla.org/c/mdn/learn) 或 [Stack Overflow](https://stackoverflow.com/)。
 

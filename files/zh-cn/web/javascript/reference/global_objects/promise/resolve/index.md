@@ -28,7 +28,7 @@ Promise.resolve(value)
 
 ## 描述
 
-`Promise.resolve()` 方法用于*解决*（resolve）一个 Promise 对象，但这与“兑现”（fulfill）或“拒绝”（reject）Promise 对象并不相同。有关术语的定义，请参见 [Promise 描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#描述)。简而言之，`Promise.resolve()` 返回一个 Promise 对象，其最终状态取决于另一个 Promise 对象、thenable 对象或其他值。
+`Promise.resolve()` 方法用于*解决*（resolve）一个 Promise 对象，但这与"兑现"（fulfill）或"拒绝"（reject）Promise 对象并不相同。有关术语的定义，请参见 [Promise 描述](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#描述)。简而言之，`Promise.resolve()` 返回一个 Promise 对象，其最终状态取决于另一个 Promise 对象、thenable 对象或其他值。
 
 `Promise.resolve()` 方法是一个通用方法，支持子类化，这意味着它可以在 `Promise` 的子类上调用，并且结果会是该子类类型的 Promise 对象。为此，子类的构造函数必须实现与 [`Promise()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) 构造函数相同的签名，即接受一个 `executor` 函数，该函数可以用 `resolve` 和 `reject` 回调函数作为参数进行调用。
 
@@ -140,7 +140,7 @@ p3.then(
 );
 ```
 
-嵌套的 thenable 对象将被“深度展平”为单个 Promise 对象。
+嵌套的 thenable 对象将被"深度展平"为单个 Promise 对象。
 
 ```js
 const thenable = {

@@ -5,11 +5,11 @@ slug: Web/API/SubtleCrypto/unwrapKey
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-{{domxref("SubtleCrypto")}} 接口的 **`unwrapKey()`** 方法“解开密钥的包装”。这意味着它将一个已导出且加密（也被称为“包装”）的密钥作为输入。它会解密这个密钥然后导入它，返回一个可用于 [Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 {{domxref("CryptoKey")}} 对象。
+{{domxref("SubtleCrypto")}} 接口的 **`unwrapKey()`** 方法"解开密钥的包装"。这意味着它将一个已导出且加密（也被称为"包装"）的密钥作为输入。它会解密这个密钥然后导入它，返回一个可用于 [Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API) 的 {{domxref("CryptoKey")}} 对象。
 
 与 [`SubtleCrypto.importKey()`](/zh-CN/docs/Web/API/SubtleCrypto/importKey) 一样，你需要指定密钥的[导入格式](/zh-CN/docs/Web/API/SubtleCrypto/importKey#supported_formats)及其他属性以导入详细信息（如是否可导出、可用于哪些操作等等）。
 
-但因为 `unwrapKey()` 还需要解密导入的密钥，所以还需要传入解密时必须使用的密钥。这有时也被称为“解包密钥”（unwrapping key）。
+但因为 `unwrapKey()` 还需要解密导入的密钥，所以还需要传入解密时必须使用的密钥。这有时也被称为"解包密钥"（unwrapping key）。
 
 `unwrapKey()` 的逆函数是 {{domxref("SubtleCrypto.wrapKey()")}}：`unwrapKey` 由解密+导入组成，而 `wrapKey` 由加密+导出组成。
 
@@ -82,9 +82,9 @@ unwrapKey(format, wrappedKey, unwrappingKey, unwrapAlgo, unwrappedKeyAlgo, extra
 
 > **备注：** 你可以在 Github 上[尝试可用的示例](https://mdn.github.io/dom-examples/web-crypto/unwrap-key/index.html)。
 
-### 解包装“raw”格式的密钥
+### 解包装"raw"格式的密钥
 
-在这个示例中，我们解包了一个 AES-GCM 对称加密密钥。密钥以“raw”格式导出，并使用 AES-KW 算法加密，加密密钥派生自密码。
+在这个示例中，我们解包了一个 AES-GCM 对称加密密钥。密钥以"raw"格式导出，并使用 AES-KW 算法加密，加密密钥派生自密码。
 
 要解包密钥，我们要求用户输入密码，并使用 PBKDF2 和盐来派生 AES-KW 解包密钥。解包使用的盐需要与用于派生原始 AES-KW 包装密钥的盐相同。
 
@@ -183,9 +183,9 @@ async function unwrapSecretKey(wrappedKey) {
 }
 ```
 
-### 解包装“pkcs8”格式的密钥
+### 解包装"pkcs8"格式的密钥
 
-在这个示例中，我们解包了 RSA-PSS 私有签名密钥。原密钥被导出为“pkcs8”格式，且使用 AES-GCM 算法加密，加密密钥派生自密码。
+在这个示例中，我们解包了 RSA-PSS 私有签名密钥。原密钥被导出为"pkcs8"格式，且使用 AES-GCM 算法加密，加密密钥派生自密码。
 
 要解包密钥，我们要求用户输入密码，并使用 PBKDF2 和盐来派生 AES-GCM 解包密钥。解包使用的盐需要与用于派生原始 AES-GCM 包装密钥的盐相同。
 

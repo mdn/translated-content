@@ -18,7 +18,7 @@ String.raw`templateString`
 ### 参数
 
 - `callSite`
-  - : 一个模板字符串的“调用点对象”。类似 `{ raw: ['foo', 'bar', 'baz'] }`。
+  - : 一个模板字符串的"调用点对象"。类似 `{ raw: ['foo', 'bar', 'baz'] }`。
 - `...substitutions`
   - : 任意个可选的参数，表示任意个内插表达式对应的值。
 - `templateString`

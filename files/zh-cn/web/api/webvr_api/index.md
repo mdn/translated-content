@@ -17,7 +17,7 @@ Any VR devices attached to your computer will be returned by the {{domxref("Navi
 
 **连接到电脑的所有 VR 设备都将由 {{domxref("Navigator.getVRDevices()")}} 方法返回。这个方法将返回一个包含了所有已连接设备的对象数组，每个设备对应一个对象，该对象继承自 {{domxref("VRDevice")}} — 通常一个头显将包含两个设备 — 头显自身由 {{domxref("HMDVRDevice")}} 表示，和一个跟踪头部位置的位置捕捉传感器，由 {{domxref("PositionSensorVRDevice")}} 表示。**
 
-The {{domxref("PositionSensorVRDevice")}} object contains the {{domxref("PositionSensorVRDevice.getState","getState()")}} method, which returns a {{domxref("VRPositionState")}} object — this represents the sensor’s state at a given timestamp, and includes properties containing useful data such as current velocity, acceleration, and orientation, useful for updating the rendering of a scene on each frame according to the movement of the VR head mounted display.
+The {{domxref("PositionSensorVRDevice")}} object contains the {{domxref("PositionSensorVRDevice.getState","getState()")}} method, which returns a {{domxref("VRPositionState")}} object — this represents the sensor's state at a given timestamp, and includes properties containing useful data such as current velocity, acceleration, and orientation, useful for updating the rendering of a scene on each frame according to the movement of the VR head mounted display.
 
 **{{domxref("PositionSensorVRDevice")}} 对象有一个 {{domxref("PositionSensorVRDevice.getState","getState()")}} 方法，该方法返回一个{{domxref("VRPositionState")}} 对象 — 这个对象代表位置传感器在指定时刻的状态，包含了一些十分有用的信息，例如速度、加速度以及运动方向，可用于根据头部运动刷新画面显示。**
 

@@ -81,7 +81,7 @@ Other hardware that complements the VR experience includes:
 - An eye tracking sensor (experimental): The FOVE project is the first headset that reads subtle eye movements.
 - **眼部追踪传感器（实验产品）：FOVE 项目是第一个研究用于追踪和读取人眼运动设备的项目。**
 - A facial expression tracker (experimental): Researchers at the University of Southern California and Facebook's Oculus division have been testing new ways of tracking facial expressions and transferring them to a virtual character.
-- **面部表情追踪设备（实验产品）：位于南加州大学和 Facebook’s Oculus 部门的研究人员，已经开始测试更多新的追踪人类面部表情并且能把他们转换成虚拟现实角色的方法。**
+- **面部表情追踪设备（实验产品）：位于南加州大学和 Facebook's Oculus 部门的研究人员，已经开始测试更多新的追踪人类面部表情并且能把他们转换成虚拟现实角色的方法。**
 - A more complex positional sensor system: The SteamVR controller, combined with the [Lighthouse](http://www.roadtovr.com/steamvr-beta-update-brings-lighthouse-support-and-vr-tracking-app/) tracking system aims to achieve an experience in which you can move through a space of 10x10 square feet in a VR world.
 - **更加复杂的位置传感系统：SteamVR 控制器，结合了[Lighthouse](http://www.roadtovr.com/steamvr-beta-update-brings-lighthouse-support-and-vr-tracking-app/)追踪系统，旨在实现帮助我们能在一个 10x10 square feet 的 VR 空间范围内自由活动的目的。**
 

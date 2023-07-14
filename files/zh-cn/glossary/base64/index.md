@@ -13,8 +13,8 @@ Base64 编码在网络上的一个常见应用是对二进制数据进行编码�
 
 在 JavaScript 中，有两个函数被分别用来处理解码和编码 Base64 字符串：
 
-- [`btoa()`](/zh-CN/docs/Web/API/btoa)：从二进制数据“字符串”创建一个 Base-64 编码的 ASCII 字符串（“btoa”应读作“binary to ASCII”）
-- [`atob()`](/zh-CN/docs/Web/API/atob)：解码通过 Base-64 编码的字符串数据（“atob”应读作“ASCII to binary”）
+- [`btoa()`](/zh-CN/docs/Web/API/btoa)：从二进制数据"字符串"创建一个 Base-64 编码的 ASCII 字符串（"btoa"应读作"binary to ASCII"）
+- [`atob()`](/zh-CN/docs/Web/API/atob)：解码通过 Base-64 编码的字符串数据（"atob"应读作"ASCII to binary"）
 
 `atob()` 和 `btoa()` 使用的算法在 [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648) 第四节中给出。
 
@@ -26,7 +26,7 @@ Base64 编码在网络上的一个常见应用是对二进制数据进行编码�
 
 这意味着 Base64 格式的字符串或文件的尺寸约是原始尺寸的 133%（增加了大约 33%）。如果编码的数据很少，增加的比例可能会更高。例如：长度为 1 的字符串 `"a"` 进行 Base64 编码后是 `"YQ=="`，长度为 4，尺寸增加了 3 倍。
 
-## “Unicode 问题”
+## "Unicode 问题"
 
 由于 JavaScript 字符串是 16 位编码的字符串，在大多数浏览器中，在 Unicode 字符串上调用 `window.btoa`，如果一个字符超过了 8 位 ASCII 编码字符的范围，就会引起 `Character Out Of Range` 异常。有两种可能的方法来解决这个问题：
 

@@ -52,7 +52,7 @@ slug: Web/SVG/Tutorial/Gradients
  <stop offset="100%" stop-color="yellow" stop-opacity="0.5"/>
 ```
 
-使用渐变时，我们需要在一个对象的属性`fill`或属性`stroke`中引用它，这跟你在 CSS 中使用`url`引用元素的方法一样。在本例中，url 只是一个渐变的引用，我们已经给这个渐变一个 ID——“Gradient”。要想附加它，将属性`fill`设置为`url(#Gradient)`即可。现在对象就变成多色的了，也可以用同样的方式处理`stroke`。
+使用渐变时，我们需要在一个对象的属性`fill`或属性`stroke`中引用它，这跟你在 CSS 中使用`url`引用元素的方法一样。在本例中，url 只是一个渐变的引用，我们已经给这个渐变一个 ID——"Gradient"。要想附加它，将属性`fill`设置为`url(#Gradient)`即可。现在对象就变成多色的了，也可以用同样的方式处理`stroke`。
 
 `<linearGradient>` 元素还需要一些其他的属性值，它们指定了渐变的大小和出现范围。渐变的方向可以通过两个点来控制，它们分别是属性 x1、x2、y1 和 y2，这些属性定义了渐变路线走向。渐变色默认是水平方向的，但是通过修改这些属性，就可以旋转该方向。下例中的 Gradient2 创建了一个垂直渐变。
 

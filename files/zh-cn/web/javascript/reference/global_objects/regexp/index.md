@@ -144,7 +144,7 @@ s.match(/yes[^]*day/);
 
 ### 使用带有 sticky 标志的正则表达式
 
-带有{{JSxRef("Global_Objects/RegExp/sticky", "sticky")}}标志的正则表达式将会从源字符串的{{jsxref("RegExp.prototype.lastIndex")}}位置开始匹配，也就是进行“粘性匹配”。
+带有{{JSxRef("Global_Objects/RegExp/sticky", "sticky")}}标志的正则表达式将会从源字符串的{{jsxref("RegExp.prototype.lastIndex")}}位置开始匹配，也就是进行"粘性匹配"。
 
 ```js
 let str = '#foo#'

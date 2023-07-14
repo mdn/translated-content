@@ -7,7 +7,7 @@ slug: Glossary/XHTML
 
 **XHTML**（eXtensible HyperText Markup Language，可扩展超文本标记语言）是在历史上被用来描述 [HTML](/zh-CN/docs/Web/HTML)文档的术语，这些文档是按照 {{Glossary("XML")}} 语法规则编写的。
 
-下面的例子显示了一个 HTML 文档和相应的“XHTML”文档，以及应当搭配使用的 {{Glossary("HTTP")}} {{HTTPHeader("Content-Type")}} 标头。
+下面的例子显示了一个 HTML 文档和相应的"XHTML"文档，以及应当搭配使用的 {{Glossary("HTTP")}} {{HTTPHeader("Content-Type")}} 标头。
 
 ### HTML 文档
 
@@ -42,7 +42,7 @@ slug: Glossary/XHTML
 </html>
 ```
 
-在实践中，很少有“XHTML”文档在网络上以 `Content-Type: application/xhtml+xml` 标头提供。即使这些文件是按照 XML 语法规则编写的，它们也是以 `Content-Type: text/html` 标头提供的——因此浏览器使用 HTML 解析器而不是 XML 解析器来解析这些文件。
+在实践中，很少有"XHTML"文档在网络上以 `Content-Type: application/xhtml+xml` 标头提供。即使这些文件是按照 XML 语法规则编写的，它们也是以 `Content-Type: text/html` 标头提供的——因此浏览器使用 HTML 解析器而不是 XML 解析器来解析这些文件。
 
 ## 参见
 

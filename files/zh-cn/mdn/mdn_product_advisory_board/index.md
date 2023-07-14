@@ -44,7 +44,7 @@ Mozilla 对 MDN 产品咨询委员会的愿景是建立协作，帮助 MDN 社�
   - : Sheila 是 [Bocoup](https://bocoup.com/about) 的主要负责人，她领导的团队致力于开发 HTML 和 CSS 等的 Web 标准，以及诸如 [Scratch](https://www.scratchfoundation.org/) 这样的无代码编程工具。Sheila 负责推动将 Bocoup 的 Web 标准纳入到 W3C 中，并热衷于使得 Web 标准更加公平、在标准化的流程与 Web 开发者间建立更加紧密的联系。在她的有关科技的职业生涯（以及先前的健康平等和残疾司法）中，她一直专注于培养有效的、以正义为导向的组织和工作空间。
 - **Robert Nyman**
   计划和倡议全球负责人、Web 开发者关系，谷歌
-  - : Robert Nyman 是谷歌开发者反馈与社区、Web 平台的全球负责人。他致力于使得 Web 称为开发者最佳的平台。在加入谷歌之前，Robert 是 Mozilla 的技术布道者，专注于更加开放的 Web 以及公司的各种产品和计划。他住在斯德哥尔摩，热衷于旅行和结识新朋友。他曾在 42 个国家发表过演讲，并在 Lanyrd 上获得了“Most Well-Traveled Speaker”（最受游客欢迎的演讲者）称号。
+  - : Robert Nyman 是谷歌开发者反馈与社区、Web 平台的全球负责人。他致力于使得 Web 称为开发者最佳的平台。在加入谷歌之前，Robert 是 Mozilla 的技术布道者，专注于更加开放的 Web 以及公司的各种产品和计划。他住在斯德哥尔摩，热衷于旅行和结识新朋友。他曾在 42 个国家发表过演讲，并在 Lanyrd 上获得了"Most Well-Traveled Speaker"（最受游客欢迎的演讲者）称号。
 - **Kyle Pflug**
   高级产品经理、微软 Edge 浏览器开发者体验
   - : Kyle Pflug 是微软 项目经理，负责领导微软 Edge 浏览器的开发者关系和社区外展项目。在过去的五年中，他致力于在微软内部提倡收集 Web 开发者和合作伙伴的观点。他热衷于让 Web 对于开发者变得更具包容性和无障碍。

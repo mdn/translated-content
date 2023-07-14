@@ -60,7 +60,7 @@ slug: Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders
 1. 可借助 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/)、[Glitch](https://glitch.com/) 等在线编程实用工具完成任务。在那里你可以自行编写代码，也可以使用上文中所给的初始代码。
 2. 在 [MDN 论坛学习区](https://discourse.mozilla.org/c/mdn/learn/)发帖寻求他人的评估和帮助。你发表的文章应包括：
 
-   - 一个描述性的标题，比如“Assessment wanted for backgrounds and borders skill test 1”。
+   - 一个描述性的标题，比如"Assessment wanted for backgrounds and borders skill test 1"。
    - 讲清你已经做出的努力，以及需要我们做什么，比如你遇到了困难并需要帮助，或者期望得到评估。
    - 一个链接指向你需要得到评估或帮助的实例，步骤 1 中三个在线编程工具之一均可。我们对希望得到帮助但由不提供代码的求助也很无奈。
    - 一个链接指向 MDN 测试的原始页面，在那里我们可以找到你需要获得帮助的原始信息。

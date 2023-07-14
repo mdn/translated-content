@@ -5,7 +5,7 @@ slug: Web/HTML/Element/input/month
 
 {{HTMLSidebar}}
 
-类型为 **`month`** 的 {{htmlelement("input")}} 可以让你容易地创建一个方便输入年份或月份的一个 {{htmlelement("input")}}。输入的值是一个经过“`YYYY-MM`”格式化的字符串，其中 `YYYY` 是四位数的年份，而 `MM` 是月份的数值表示。
+类型为 **`month`** 的 {{htmlelement("input")}} 可以让你容易地创建一个方便输入年份或月份的一个 {{htmlelement("input")}}。输入的值是一个经过"`YYYY-MM`"格式化的字符串，其中 `YYYY` 是四位数的年份，而 `MM` 是月份的数值表示。
 
 {{EmbedInteractiveExample("pages/tabbed/input-month.html", "tabbed-shorter")}}
 

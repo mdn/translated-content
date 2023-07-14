@@ -35,14 +35,14 @@
 
 | 英文词汇 | 翻译 | 备注 | 引用来源 |
 | ------- | --- | ---- | ------ |
-| CORS | 跨源资源共享 | 使用“域”并不准确，来源包括协议、域名和端口。 | <https://github.com/mdn/translated-content/pull/3096#issuecomment-1114015297> |
+| CORS | 跨源资源共享 | 使用"域"并不准确，来源包括协议、域名和端口。 | <https://github.com/mdn/translated-content/pull/3096#issuecomment-1114015297> |
 | Header | 标头 | HTTP 消息中的附加信息。 | 来自 Google Chrome 控制台 |
 
 ### JavaScript
 
 | 英文词汇 | 翻译 | 备注 | 引用来源 |
 | ------- | --- | ---- | ------ |
-| bare module | 裸模块 | Vite.js 官方将其翻译为“裸模块”，其意为“没有任何路径的模块”。 | <https://github.com/mdn/translated-content/pull/12852#discussion_r1174339277> |
+| bare module | 裸模块 | Vite.js 官方将其翻译为"裸模块"，其意为"没有任何路径的模块"。 | <https://github.com/mdn/translated-content/pull/12852#discussion_r1174339277> |
 | brand check | 特定类型检查 | 通过一段代码来对特定的数据类型进行检查。 | <https://github.com/mdn/translated-content/pull/13381#discussion_r1205437483> |
 | exotic object | 特异对象 |  |  |
 | normative optional | 可选标准 |  | <https://github.com/mdn/translated-content/pull/13627#discussion_r1224014687> |
@@ -75,4 +75,4 @@
 
 | 英文词汇 | 翻译 | 备注 | 引用来源 |
 | ------- | --- | ---- | ------ |
-| repository | 仓库 | 用于存储代码的“仓库”。 | <https://github.com/progit/progit2-zh/issues/98> |
+| repository | 仓库 | 用于存储代码的"仓库"。 | <https://github.com/progit/progit2-zh/issues/98> |

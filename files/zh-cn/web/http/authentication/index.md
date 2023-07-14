@@ -5,7 +5,7 @@ slug: Web/HTTP/Authentication
 
 {{HTTPSidebar}}
 
-HTTP 提供一个用于权限控制和认证的通用框架。本页介绍了通用的 HTTP 认证框架，并且展示了如何通过 HTTP “Basic”模式限制对你服务器的访问。
+HTTP 提供一个用于权限控制和认证的通用框架。本页介绍了通用的 HTTP 认证框架，并且展示了如何通过 HTTP "Basic"模式限制对你服务器的访问。
 
 ## 通用的 HTTP 认证框架
 
@@ -21,7 +21,7 @@ HTTP 提供一个用于权限控制和认证的通用框架。本页介绍了通
 
 上述整体的信息流程，对于大多数（并非是全部）[身份验证方案](#身份验证方案)都是相同的。标头中的真实信息和编码的方式确实发生了变化。
 
-> **警告：** 上图使用的“Basic”身份验证方案会对凭据进行编码，但是并不会进行加密。除非信息交换通过安全的连接（HTTPS/TLS），否则这件事极其不安全的。
+> **警告：** 上图使用的"Basic"身份验证方案会对凭据进行编码，但是并不会进行加密。除非信息交换通过安全的连接（HTTPS/TLS），否则这件事极其不安全的。
 
 ### 代理认证
 
@@ -56,7 +56,7 @@ WWW-Authenticate: <type> realm=<realm>
 Proxy-Authenticate: <type> realm=<realm>
 ```
 
-在这里，`<type>` 指的是验证的方案（“Basic”是最常见的验证方案，[会在下面进行介绍](/zh-CN/docs/Web/HTTP/Authentication#Basic_authentication_scheme)）。realm 用来描述进行保护的区域，或者指代保护的范围。它可以是类似于“Access to the staging site”的消息，这样用户就可以知道他们正在试图访问哪一空间。
+在这里，`<type>` 指的是验证的方案（"Basic"是最常见的验证方案，[会在下面进行介绍](/zh-CN/docs/Web/HTTP/Authentication#Basic_authentication_scheme)）。realm 用来描述进行保护的区域，或者指代保护的范围。它可以是类似于"Access to the staging site"的消息，这样用户就可以知道他们正在试图访问哪一空间。
 
 ### Authorization 与 Proxy-Authorization 标头
 
@@ -96,11 +96,11 @@ IANA 维护了[一系列的验证方案](http://www.iana.org/assignments/http-au
 
 方案在安全强度以及在客户端或服务器软件中的可用性方面可能有所不同。
 
-“Basic”身份验证方案安全性很差，但得到了广泛的支持且易于设置。下文将更详细地介绍它。
+"Basic"身份验证方案安全性很差，但得到了广泛的支持且易于设置。下文将更详细地介绍它。
 
 ## Basic 验证方案
 
-“Basic” HTTP 验证方案是在 {{rfc(7617)}} 中规定的，在该方案中，使用用户的 ID/密码作为凭据信息，并且使用 base64 算法进行编码。
+"Basic" HTTP 验证方案是在 {{rfc(7617)}} 中规定的，在该方案中，使用用户的 ID/密码作为凭据信息，并且使用 base64 算法进行编码。
 
 ### Basic 验证方案的安全性
 

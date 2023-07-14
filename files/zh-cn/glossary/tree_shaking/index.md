@@ -15,7 +15,7 @@ slug: Glossary/Tree_shaking
 
 #### 常识
 
-- ["捆绑过程中死代码消除的好处"](https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling) 在 Axel Rauschmayer 的书中:“探索 JS:模块”
+- ["捆绑过程中死代码消除的好处"](https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling) 在 Axel Rauschmayer 的书中:"探索 JS:模块"
 
 #### 技术参数资料
 

@@ -49,13 +49,13 @@ slug: Web/SVG/Tutorial/SVG_fonts
 
 {{ SVGElement("font-face") }}元素在 SVG 中等同于 CSS 的 [`@font-face`](/zh-CN/CSS/@font-face) 声明。它定义了最终字体的基本属性，比如说 weight、style，等等。在上面这个示例中，最重要的是定义`font-family`，后面的 CSS 和 SVG `font-family`属性可以引用它的值。属性`font-weight`和`font-style`跟 CSS 中的描述符有同样的目的。所有后面的属性都是字体布局引擎的呈现指令，举个例子，字形的全部高度可以[提升](http://en.wikipedia.org/wiki/Ascender_%28typography%29)多少。
 
-它的子元素，{{ SVGElement("font-face-src") }}元素，相对于 CSS 的`@font-face`描述符中的`src`描述符。你可以利用它的子元素 {{ SVGElement("font-face-name") }}和{{ SVGElement("font-face-uri") }}把字体声明指向外源。以上示例表达了如果渲染器有一个名为“Super Sans Bold”的本地字体可用，它将使用这个本地字体。
+它的子元素，{{ SVGElement("font-face-src") }}元素，相对于 CSS 的`@font-face`描述符中的`src`描述符。你可以利用它的子元素 {{ SVGElement("font-face-name") }}和{{ SVGElement("font-face-uri") }}把字体声明指向外源。以上示例表达了如果渲染器有一个名为"Super Sans Bold"的本地字体可用，它将使用这个本地字体。
 
 紧跟着{{ SVGElement("font-face-src") }}元素的是一个{{ SVGElement("missing-glyph") }}元素。它定义了如果一个特定的字形在字体中找不到，而且也没有回调机制的话，该如何显示。它同时还显示了如何创建字形：在里面简单添加任一个图形化 SVG 内容。你可以在这里使用任何其他的 SVG 元素，甚至是 {{ SVGElement("filter") }}元素、{{ SVGElement("a") }}元素或者 {{ SVGElement("script") }}元素。然而，为了简化字形，你可以简单添加一个属性`d`——它精确定义了字形的形状，就像标准 SVG 路径所做的那样。
 
 真正的字形是用{{ SVGElement("glyph") }}元素定义的。它最重要的属性是`unicode`。它定义了表达这个字形的 unicode 代码点。如果你还在一个字形上指定了[`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang)属性，你可以更进一步专门限定它为特定的语言（由目标上的`xml:lang`属性表达）。而且，你可以使用任意的 SVG 来定义这个字形，它允许用户代理所支持的很多效果。
 
-有两个进一步的元素，可以定义在`font`元素里面：{{ SVGElement("hkern") }}元素和{{ SVGElement("vkern") }}元素。这两个元素每个引用到至少两个字符（属性 u1 和属性 u2）以及一个属性 k。属性 k 决定了那些字符之间的距离应该减少多少。下面的示例指示用户代理把“A”和“V”字符放得比标准的字符间距更靠近一些。
+有两个进一步的元素，可以定义在`font`元素里面：{{ SVGElement("hkern") }}元素和{{ SVGElement("vkern") }}元素。这两个元素每个引用到至少两个字符（属性 u1 和属性 u2）以及一个属性 k。属性 k 决定了那些字符之间的距离应该减少多少。下面的示例指示用户代理把"A"和"V"字符放得比标准的字符间距更靠近一些。
 
 ```html
 <hkern u1="A" u2="V" k="20" />

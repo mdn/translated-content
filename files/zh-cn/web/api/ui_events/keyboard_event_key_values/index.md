@@ -169,7 +169,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
       <td><code>"FnLock"</code></td>
       <td>
         <kbd>FnLock</kbd
-        >或<kbd>F-Lock</kbd>（功能锁定）键。打开和关闭“<kbd>Fn</kbd>”描述的功能键模式。
+        >或<kbd>F-Lock</kbd>（功能锁定）键。打开和关闭"<kbd>Fn</kbd>"描述的功能键模式。
         通常在硬件中处理，以便不为此密钥生成事件。
       </td>
       <td></td>

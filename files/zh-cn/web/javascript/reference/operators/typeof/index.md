@@ -147,7 +147,7 @@ typeof (someData + " Wisen"); // "string"
 typeof undeclaredVariable; // "undefined"
 ```
 
-但在加入了块级作用域的 [let](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 之后，在其被声明之前对块中的 `let` 和 `const` 变量使用 `typeof` 会抛出一个 [ReferenceError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)。块作用域变量在块的头部处于“[暂存死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)”，直至其被初始化，在这期间，访问变量将会引发错误。
+但在加入了块级作用域的 [let](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [const](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 之后，在其被声明之前对块中的 `let` 和 `const` 变量使用 `typeof` 会抛出一个 [ReferenceError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)。块作用域变量在块的头部处于"[暂存死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)"，直至其被初始化，在这期间，访问变量将会引发错误。
 
 ```js example-bad
 typeof newLetVariable; // ReferenceError
@@ -167,7 +167,7 @@ class newClass {}
 typeof document.all === 'undefined';
 ```
 
-虽然 `document.all` 也是[假值](/zh-CN/docs/Glossary/falsy)，与 `undefined` [非严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)，但它不是 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。在 Web 标准中，`document.all` 具有 `"undefined"` 类型的情况被归类为“故意违反”原始 ECMAScript Web 兼容性标准。
+虽然 `document.all` 也是[假值](/zh-CN/docs/Glossary/falsy)，与 `undefined` [非严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)，但它不是 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。在 Web 标准中，`document.all` 具有 `"undefined"` 类型的情况被归类为"故意违反"原始 ECMAScript Web 兼容性标准。
 
 ### 获取具体类型的自定义方法
 

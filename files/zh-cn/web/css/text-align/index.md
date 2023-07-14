@@ -111,7 +111,7 @@ text-align 属性指定为从以下值列表中选择的单个关键字。
 
 {{EmbedLiveSample("文本居中","100%","100%")}}
 
-### 使用“justify”的示例
+### 使用"justify"的示例
 
 #### HTML
 
@@ -134,7 +134,7 @@ text-align 属性指定为从以下值列表中选择的单个关键字。
 
 #### 结果
 
-{{EmbedLiveSample('使用“justify”的示例',"100%","100%")}}
+{{EmbedLiveSample('使用"justify"的示例',"100%","100%")}}
 
 ## 规范
 

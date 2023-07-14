@@ -28,7 +28,7 @@ Django 是使用 Python 语言编写的一个广受欢迎且功能完整的服�
 - [Django 教程 3:使用模型](/zh-CN/docs/Learn/Server-side/Django/Models)
   - : 这篇文章会为 _本地图书馆_ 网站定义数据模板—数据模板是我们为应用存储的数据结构。并且允许 Django 在数据库中存储数据 (以后可以修改).文章解释了什么是数据模板，怎样声明它和一些主要的数据种类。文章还简要的介绍了一些你可以获得数据模板的方法。
 - [Django Tutorial Part 4: Django 管理站点](/zh-CN/docs/Learn/Server-side/Django/Admin_site)
-  - : 现在我们已经为本地图书馆网站创建了模型，我们将使用 Django 管理站点 添加一些‘真实的’的图书数据。首先，我们将向你介绍如何使用管理站点注册模型，然后我们介绍如何登录和创建一些数据。最后我们展示一些进一步改进管理站点的演示方法。
+  - : 现在我们已经为本地图书馆网站创建了模型，我们将使用 Django 管理站点 添加一些'真实的'的图书数据。首先，我们将向你介绍如何使用管理站点注册模型，然后我们介绍如何登录和创建一些数据。最后我们展示一些进一步改进管理站点的演示方法。
 - [Django Tutorial Part 5: 创建我们的主页](/zh-CN/docs/Learn/Server-side/Django/Home_page)
   - : 我们现在可以添加代码来展示我们的第一次完整页面—本地图书馆主页，来显示我们对每个模型类型有多少条记录，并提供我们其他页面的侧边栏导航链接。一路上，我们将获得编写基本 URL 地图和视图，从数据库获取记录以及使用模版的实践经验。
 - [Django Tutorial Part 6: 通用列表和详细视图](/zh-CN/docs/Learn/Server-side/Django/Generic_views)

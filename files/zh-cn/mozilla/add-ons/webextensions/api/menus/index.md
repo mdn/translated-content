@@ -4,7 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/menus
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 ---
 
-{{AddonSidebar}}在浏览器菜单中添加条目。此 API 基于 Chrome 的“contextMenus”API 构建，该 API 可让 Chrome 扩展程序将项目添加到浏览器的上下文菜单中。 `browser.menus` API 为 Chrome 的 API 添加了一些功能，特别是可以将项目添加到浏览器的“工具”菜单以及上下文菜单中。在 Firefox 55 之前，这个 API 最初也被命名为`contextMenus`，并且这个名字被保留为别名，所以你可以使用`contextMenus`编写在 Firefox 和其他浏览器中工作的代码。你需要拥有“menus”（或别名" contextMenus "）权限来使用此 API。
+{{AddonSidebar}}在浏览器菜单中添加条目。此 API 基于 Chrome 的"contextMenus"API 构建，该 API 可让 Chrome 扩展程序将项目添加到浏览器的上下文菜单中。 `browser.menus` API 为 Chrome 的 API 添加了一些功能，特别是可以将项目添加到浏览器的"工具"菜单以及上下文菜单中。在 Firefox 55 之前，这个 API 最初也被命名为`contextMenus`，并且这个名字被保留为别名，所以你可以使用`contextMenus`编写在 Firefox 和其他浏览器中工作的代码。你需要拥有"menus"（或别名" contextMenus "）权限来使用此 API。
 
 ## 创建菜单项
 
@@ -15,11 +15,11 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 你可以根据在调用`create()`时所传递的参数中使用不同的`type`值来创建四种不同类型的菜单：
 
 - "normal"：只显示为一个标签的菜单项
-- "checkbox"：一个表示二进制状态的菜单项。它在菜单项旁边显示一个复选标记。点击该菜单项切换复选标记。监听器会被传递两个额外的属性：“checked”，指示当前是否被选中，以及“wasChecked”，指示在此点击事件发生前是否被选中。
-- "radio"：表示一组选项之一的上下文菜单项。类似于复选框，它也在菜单项旁边显示一个复选标记，监听它的监听器也会被传递“checked”和“wasChecked”。但是，如果您创建多个单选项，则这些项目将作为一组单选：组内只能选择一项，点击菜单项来选中它。
+- "checkbox"：一个表示二进制状态的菜单项。它在菜单项旁边显示一个复选标记。点击该菜单项切换复选标记。监听器会被传递两个额外的属性："checked"，指示当前是否被选中，以及"wasChecked"，指示在此点击事件发生前是否被选中。
+- "radio"：表示一组选项之一的上下文菜单项。类似于复选框，它也在菜单项旁边显示一个复选标记，监听它的监听器也会被传递"checked"和"wasChecked"。但是，如果您创建多个单选项，则这些项目将作为一组单选：组内只能选择一项，点击菜单项来选中它。
 - "separator"：用于分割菜单的分割线。
 
-如果您创建了多个上下文菜单项目或多个工具菜单项目，则这些项目将被放置在子菜单中。子菜单的父项将标有扩展名。例如，下面是一个名为“Menu Demo”的扩展，添加了两个上下文菜单项：
+如果您创建了多个上下文菜单项目或多个工具菜单项目，则这些项目将被放置在子菜单中。子菜单的父项将标有扩展名。例如，下面是一个名为"Menu Demo"的扩展，添加了两个上下文菜单项：
 
 ![](menus-1.png)
 

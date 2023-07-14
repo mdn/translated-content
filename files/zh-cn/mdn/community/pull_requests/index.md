@@ -29,9 +29,9 @@ slug: MDN/Community/Pull_requests
 
 **拉取请求必须解决或部分解决现有的议题**。我们之所以有此限制，是为了避免你开始任何其他人可能已经在做的任务。在你想要贡献的 [MDN 仓库](https://github.com/orgs/mdn/repositories)中搜索议题和拉取请求，并确认你想要开始的工作尚未有其他人正在进行。当寻求为 MDN 项目做出贡献时，你会发现自己处于以下情况之一：
 
-- **如果你希望为该项目做出贡献**，你可以在任意 [MDN GitHub 仓库](https://github.com/orgs/mdn/repositories)的“议题（Issues）”（例如 [`mdn/content` 仓库的议题](https://github.com/mdn/content/issues)）下以及我们[公开的 GitHub 项目看板](https://github.com/orgs/mdn/projects)中找到任务。请确保议题未被分配给其他人，并且没有人已经为该任务创建拉取请求。标记为 `good first issue` 的议题是一个很好的起点。
+- **如果你希望为该项目做出贡献**，你可以在任意 [MDN GitHub 仓库](https://github.com/orgs/mdn/repositories)的"议题（Issues）"（例如 [`mdn/content` 仓库的议题](https://github.com/mdn/content/issues)）下以及我们[公开的 GitHub 项目看板](https://github.com/orgs/mdn/projects)中找到任务。请确保议题未被分配给其他人，并且没有人已经为该任务创建拉取请求。标记为 `good first issue` 的议题是一个很好的起点。
 - **如果你在 MDN 上发现了问题**，你应该首先创建一个议题。**在开始工作之前，议题需要维护者的回复**，以便你知道拉取请求所解决的问题是有效的，并且你的拉取请求将被接受。有关议题的更多信息，请参阅我们的 [GitHub 议题的社区页面](https://github.com/mdn/mdn/issues/new?labels=proposal%2Cneeds+triage&template=content-or-feature-suggestion.yml&title=Enter+your+proposal+here)。
-- **如果你想提议新内容或新特性**，请通过 [GitHub 议题模板](https://github.com/mdn/mdn/issues/new/choose)“New content or feature suggestion”提交提议。
+- **如果你想提议新内容或新特性**，请通过 [GitHub 议题模板](https://github.com/mdn/mdn/issues/new/choose)"New content or feature suggestion"提交提议。
 
 如果你不确定从哪里开始，请在 [Discord 服务器](/zh-CN/docs/MDN/Community/Communication_channels#discord_服务器)上与我们联系并寻求反馈。
 
@@ -41,8 +41,8 @@ slug: MDN/Community/Pull_requests
 
 - **拉取请求应该简短且集中于一个议题**：如果可以，请将相关的一组更改分成多个小的拉取请求。如果拉取请求变得太大，审查者可能会关闭它，并要求你为每个逻辑上属于一组的更改提交拉取请求。
 - **添加更改的描述**：尽可能提供拉取请求的上下文和理由。
-- **添加指向你要关闭的议题的链接**：在拉取请求的描述中，如果拉取请求完全解决了某个议题，请添加“Fixes”，如果它是一个相关的议题，请添加“Relates to”。有关在拉取请求中链接到议题的更多信息，请参阅 [GitHub 文档](https://docs.github.com/zh/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)。
-- **添加“依赖”**：如果有必须先合并的拉取请求（例如，其他仓库中的代码示例），请添加依赖的链接。
+- **添加指向你要关闭的议题的链接**：在拉取请求的描述中，如果拉取请求完全解决了某个议题，请添加"Fixes"，如果它是一个相关的议题，请添加"Relates to"。有关在拉取请求中链接到议题的更多信息，请参阅 [GitHub 文档](https://docs.github.com/zh/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)。
+- **添加"依赖"**：如果有必须先合并的拉取请求（例如，其他仓库中的代码示例），请添加依赖的链接。
 - **将代码示例更改和内容更改放在一起**：这对于确保更新后的示例能够正确运行非常重要。如果你正在进行的内容更改会影响示例的使用方式，则应同时更新相关的代码示例。
 - **添加审查员**：如果你已经知道谁应该审查你的拉取请求，你可以添加审查员，例如团队成员或主题所有者。
 - **不要仅进行语法更改**：MDN Web 文档包含技术文档；除非语法不正确，否则你不应提议散文风格的更改。
@@ -87,7 +87,7 @@ MDN Web 文档团队使用审查员（reviewer）和受理人（assignee）来�
 - **寻求帮助**，如果你需要审查方面的技术帮助，请添加 `review-help-needed` 标签。
 - **关闭包含不相关更改的拉取请求**，如果拉取请求过于复杂或包含多个不相关的更改。在这种情况下，请要求拉取请求的作者将其更改拆分成更细粒度的更改以提交。
 - **平衡请求负载**，如果你的工作量已满，而没有时间进行审查。通知 `@core-yari-content` 团队，并询问是否有其他人可以接手。
-- **不要在“依赖”未合并的情况下合并**拉取请求。
+- **不要在"依赖"未合并的情况下合并**拉取请求。
 
 如果除了小的拼写错误和其他小问题之外，拉取请求看起来不错，你可能需要直接修复问题。如果拉取请求[已设置为允许更改](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)，你就可以这样做。建议使用[带有建议的评论](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/commenting-on-a-pull-request#adding-comments-to-a-pull-request)来修复小问题，因为它们可以一次性批量提交。
 

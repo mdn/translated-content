@@ -27,7 +27,7 @@ const arr3 = [element0, element1, /* … ,*/ elementN];
 
 `element0, element1, …, elementN` 是数组元素的值列表。当指定这些值时，数组将用它们作为数组的元素初始化。数组的 `length` 属性被设置为参数的数量。
 
-括号语法称为“数组字面量”或“数组初始化式”。它比其他形式的数组创建更短，因此通常是首选。详见[数组字面量](zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#数组字面量_array_literals)。
+括号语法称为"数组字面量"或"数组初始化式"。它比其他形式的数组创建更短，因此通常是首选。详见[数组字面量](zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#数组字面量_array_literals)。
 
 为了创建一个长度不为 0，但是又没有任何元素的数组，可选以下任何一种方式：
 
@@ -487,7 +487,7 @@ console.log(total); // 60
 
 ## 稀疏数组
 
-数组可以包含“空槽”，这与用值 `undefined` 填充的槽不一样。空槽可以通过以下方式之一创建：
+数组可以包含"空槽"，这与用值 `undefined` 填充的槽不一样。空槽可以通过以下方式之一创建：
 
 ```js
 // Array 构造函数：

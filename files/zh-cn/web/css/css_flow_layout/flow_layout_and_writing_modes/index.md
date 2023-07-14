@@ -13,7 +13,7 @@ CSS 2.1 规范详细描述了正常流的行为，它采用了水平书写模式
 
 CSS 编写模式级别 3 规范定义了文档编写模式更改对流布局的影响。在书写模式介绍中，[规范提到](https://drafts.csswg.org/css-writing-modes-3/#text-flow)：
 
-> “CSS 中的书写模式由 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 属性决定。它主要是根据其内联基础方向和块流方向来定义的。”
+> "CSS 中的书写模式由 {{cssxref("writing-mode")}}、{{cssxref("direction")}} 和 {{cssxref("text-orientation")}} 属性决定。它主要是根据其内联基础方向和块流方向来定义的。"
 
 规范将*行基本方向*定义为内容在行上的排序方向。这定义了内联方向的开始和结束。开始是句子开始的地方，结束是一行文本在开始换行之前结束的地方。
 
@@ -51,7 +51,7 @@ CSS 编写模式级别 3 规范定义了文档编写模式更改对流布局的�
 
 ## 替换的元素
 
-替换的元素（如图像）不会根据“写入模式”属性更改其方向。但是，替换的元素（如包含文本的表单控件）应与使用中的写入模式匹配。
+替换的元素（如图像）不会根据"写入模式"属性更改其方向。但是，替换的元素（如包含文本的表单控件）应与使用中的写入模式匹配。
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/replaced.html", '100%', 720)}}
 

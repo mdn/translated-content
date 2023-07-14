@@ -5,11 +5,11 @@ slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 
 {{learnsidebar}}
 
-这篇文章提供了一些有用的 Web 背景知识——它是如何产生的，什么是 Web 标准技术，它们是如何协同工作的，为什么“Web 开发人员”是一个很好的职业选择，以及您将在本课程中学习哪些最佳做法。
+这篇文章提供了一些有用的 Web 背景知识——它是如何产生的，什么是 Web 标准技术，它们是如何协同工作的，为什么"Web 开发人员"是一个很好的职业选择，以及您将在本课程中学习哪些最佳做法。
 
 ## Web 简史
 
-我们会简单叙述，因为别处已有很多关于 Web 历史的详尽说明，稍后我们会链接到它们（如果那您对更多细节内容感兴趣，也请试着在您惯用的搜索引擎中搜索“Web 的历史”以获取相关内容。）
+我们会简单叙述，因为别处已有很多关于 Web 历史的详尽说明，稍后我们会链接到它们（如果那您对更多细节内容感兴趣，也请试着在您惯用的搜索引擎中搜索"Web 的历史"以获取相关内容。）
 
 在 20 世纪 60 年代末期，美国军方开发了一个名为 [ARPANET](/zh-CN/docs/Glossary/Arpanet) 的通信网络。这可以认为是 Web 的先驱，因为它基于 [分组交换（packet switching）](https://en.wikipedia.org/wiki/Packet_switching) 进行工作，并且首次实现了 [TCP/IP 协议族（TCP/IP protocol suite）](https://en.wikipedia.org/wiki/Internet_protocol_suite) 。这两种技术构成了互联网基础设施的基础。
 
@@ -31,7 +31,7 @@ slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 
 Web 标准是由标准机构创建的——这些机构邀请不同技术公司的人员聚集在一起，并就如何以最佳方式实现所有用例达成共识。W3C 是最著名的 Web 标准组织，但还有其他组织，例如[WHATWG](https://whatwg.org/)（负责 HTML 语言的现代化），[ECMA](https://www.ecma-international.org/)（发布基于 JavaScript 的 ECMAScript 标准），[Khronos](https://www.khronos.org/)（发布 3D 图形技术，例如 Web GL）等。
 
-### “开放”标准
+### "开放"标准
 
 Web 标准的关键方面之一，TimBL 和 W3C 从一开始就认同的一点，Web（和 Web 技术）应该自由地贡献和使用，并且不受专利/许可的约束。因此，任何人都可以编写代码免费建立网站，并且任何人都可以为编写规范的标准创建过程做出贡献。
 
@@ -41,7 +41,7 @@ Web 标准的关键方面之一，TimBL 和 W3C 从一开始就认同的一点�
 
 ### 不要破坏 Web
 
-关于开放式 Web 标准，您将听到的另一句话是“不要破坏 Web”——这句话是说，引入的任何新 Web 技术都应向后兼容以前的版本（即旧网站仍将继续工作），并向前兼容（将未来的技术与我们目前拥有的技术兼容）。在阅读此处介绍的学习材料时，您将开始学习如何通过一些非常精妙的设计和做法来实现这一点。
+关于开放式 Web 标准，您将听到的另一句话是"不要破坏 Web"——这句话是说，引入的任何新 Web 技术都应向后兼容以前的版本（即旧网站仍将继续工作），并向前兼容（将未来的技术与我们目前拥有的技术兼容）。在阅读此处介绍的学习材料时，您将开始学习如何通过一些非常精妙的设计和做法来实现这一点。
 
 ## Web 开发者是一个很好的选择
 
@@ -114,12 +114,12 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 
 ### 开发工具
 
-一旦了解了可用于构建网页的“原始”技术（例如 HTML，CSS 和 JavaScript），您很快就会发现各种可用于使工作更轻松或更有效的工具。例如：
+一旦了解了可用于构建网页的"原始"技术（例如 HTML，CSS 和 JavaScript），您很快就会发现各种可用于使工作更轻松或更有效的工具。例如：
 
 - 现代浏览器中的 [开发人员工具（developer tools）](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)可用于调试代码。
 - 可用于运行测试以显示您的代码是否按预期运行的 [测试工具（Testing tools）](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
 - 建立在 JavaScript 之上的库和框架，使您可以更快，更有效地构建某些类型的网站。
-- 所谓的“Linters” ，它包含了一组规则，检查您的代码之后，会突出显示您未正确遵循规则的地方。
+- 所谓的"Linters" ，它包含了一组规则，检查您的代码之后，会突出显示您未正确遵循规则的地方。
 - Minifiers，它将代码文件中的所有空格删除以使其更小，从而可以更快地从服务器下载。
 
 ### 服务器端语言和框架

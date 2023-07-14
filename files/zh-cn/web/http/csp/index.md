@@ -83,7 +83,7 @@ Content-Security-Policy: default-src 'self'; img-src *; media-src media1.com med
 
 在这里，各种内容默认仅允许从文档所在的源获取，但存在如下例外：
 
-- 图片可以从任何地方加载 (注意“\*”通配符)。
+- 图片可以从任何地方加载 (注意"\*"通配符)。
 - 多媒体文件仅允许从 media1.com 和 media2.com 加载（不允许从这些站点的子域名）。
 - 可运行脚本仅允许来自于 userscripts.example.com。
 

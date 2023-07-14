@@ -13,7 +13,7 @@ slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 该项目使用了 [glMatrix](https://glmatrix.net/) 库来执行其矩阵操作，因此需要引入它。本次示例通过 CDN 形式引入使用。
 
-> **备注：** 更新“index.html”文件，让它看起来像这样：
+> **备注：** 更新"index.html"文件，让它看起来像这样：
 
 ```html
 <!DOCTYPE html>
@@ -97,7 +97,7 @@ const fsSource = `
 
 现在我们已经定义了两个着色器，我们需要将它们传递给 WebGL，编译并将它们连接在一起。下面的代码通过调用 `loadShader()`，为着色器传递类型和来源，创建了两个着色器。然后创建一个附加着色器的程序，将它们连接在一起。如果编译或链接失败，代码将弹出 alert。
 
-> **备注：** 将下面两个函数添加到“webgl-demo.js”文件中：
+> **备注：** 将下面两个函数添加到"webgl-demo.js"文件中：
 
 ```js
 //
@@ -189,7 +189,7 @@ const programInfo = {
 
 在画正方形前，我们需要创建一个缓冲器来存储它的顶点。我们会用到名字为 initBuffers() 的函数。当我们了解到更多 WebGL 的高级概念时，这段代码会将有更多参数，变得更加复杂，并且用来创建更多的三维物体。
 
-> **备注：** 创建一个新文件叫“init-buffers.js”，并填写如下内容：
+> **备注：** 创建一个新文件叫"init-buffers.js"，并填写如下内容：
 
 ```js
 function initBuffers(gl) {
@@ -230,7 +230,7 @@ export { initBuffers };
 
 当着色器和物体都创建好后，我们可以开始渲染这个场景了。因为我们这个例子不会产生动画，所以 drawScene() 方法非常简单。它还使用了几个工具函数，稍后我们会介绍。
 
-> **备注：** 创建一个新文件叫“draw-scene.js”，并填写如下内容：
+> **备注：** 创建一个新文件叫"draw-scene.js"，并填写如下内容：
 
 ```js
 function drawScene(gl, programInfo, buffers) {
@@ -348,7 +348,7 @@ export { drawScene };
 
 最后，让我们引入 `initBuffers()` 和 `drawScene()`。
 
-> **备注：** 在“webgl-demo.js”文件头部添加如下代码：
+> **备注：** 在"webgl-demo.js"文件头部添加如下代码：
 
 ```js
 import { initBuffers } from "./init-buffers.js";

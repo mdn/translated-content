@@ -29,16 +29,16 @@ HTML `autocomplete` 属性允许 web 开发人员指定{{Glossary("user agent","
 
   - : 浏览器不允许为此字段自动输入或选择一个值。文档或应用程序可能提供其自己的自动完成功能，或者出于安全方面的考虑，要求不要自动输入该字段的值。
 
-    > **备注：** 在大多数现代浏览器中，`autocomplete` 设置为“`off`”不会阻止密码管理器询问用户是否要保存用户名和密码信息，或者自动在网站的登录表单中填写这些值。请参阅 [autocomplete 属性与登录表单](/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#autocomplete_属性和登录字段)一文。
+    > **备注：** 在大多数现代浏览器中，`autocomplete` 设置为"`off`"不会阻止密码管理器询问用户是否要保存用户名和密码信息，或者自动在网站的登录表单中填写这些值。请参阅 [autocomplete 属性与登录表单](/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#autocomplete_属性和登录字段)一文。
 
 - "`on`"
   - : 允许浏览器自动完成输入。没有提供有关该字段中期望的数据类型的指导，因此浏览器可以使用自己的判断。
 - "`name`"
 
-  - : 该字段期望该值是一个人的全名。通常首选使用“`name`”而不是将名称分解为各个组成部分，因为这样可以避免处理各种各样的人类名称及其结构。但是，如果需要将名称分解为各个组成部分，则可以使用以下 `autocomplete` 值：
+  - : 该字段期望该值是一个人的全名。通常首选使用"`name`"而不是将名称分解为各个组成部分，因为这样可以避免处理各种各样的人类名称及其结构。但是，如果需要将名称分解为各个组成部分，则可以使用以下 `autocomplete` 值：
 
     - "`honorific-prefix`"
-      - : 前缀或头衔，例如“Mrs.”、“Mr.”、“Miss”、“Ms.”、“Dr.”或“Mlle.”。
+      - : 前缀或头衔，例如"Mrs."、"Mr."、"Miss"、"Ms."、"Dr."或"Mlle."。
     - "`given-name`"
       - : 名字。
     - "`additional-name`"
@@ -46,7 +46,7 @@ HTML `autocomplete` 属性允许 web 开发人员指定{{Glossary("user agent","
     - "`family-name`"
       - : 姓氏。
     - "`honorific-suffix`"
-      - : 后缀，例如“Jr.”、“B.Sc.”、“PhD.”、“MBASW”或“IV”。
+      - : 后缀，例如"Jr."、"B.Sc."、"PhD."、"MBASW"或"IV"。
     - "`nickname`"
       - : 昵称或绰号。
 
@@ -55,19 +55,19 @@ HTML `autocomplete` 属性允许 web 开发人员指定{{Glossary("user agent","
 - "`username`"
   - : 用户名或账户名。
 - "`new-password`"
-  - : 新密码。创建新账户或更改密码时，应将其用于“输入新密码”或“确认新密码”字段，而不是通常出现的“输入当前密码”字段。浏览器可以使用它来避免意外填写现有密码，并在创建安全密码时提供帮助（参见[使用 autocomplete="new-password" 阻止自动填充](/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#使用_autocompletenew-password_阻止自动填充)）。
+  - : 新密码。创建新账户或更改密码时，应将其用于"输入新密码"或"确认新密码"字段，而不是通常出现的"输入当前密码"字段。浏览器可以使用它来避免意外填写现有密码，并在创建安全密码时提供帮助（参见[使用 autocomplete="new-password" 阻止自动填充](/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#使用_autocompletenew-password_阻止自动填充)）。
 - "`current-password`"
   - : 用户的当前密码。
 - "`one-time-code`"
   - : 用于验证用户身份的一次性代码。
 - "`organization-title`"
-  - : 职务或组织内某人的职务，例如“高级技术作家”、“总裁”或“助理部队负责人”。
+  - : 职务或组织内某人的职务，例如"高级技术作家"、"总裁"或"助理部队负责人"。
 - "`organization`"
-  - : 公司或组织名称，例如“Acme Widget Company”或“American Girl Scouts of America”。
+  - : 公司或组织名称，例如"Acme Widget Company"或"American Girl Scouts of America"。
 - "`street-address`"
   - : 街道地址。它可以是多行文本，应在第二个行政级别（通常是城市或城镇）内完全标识地址的位置，但不应包括城市名称，邮政编码或邮政编码或国家/地区名称。
 - "`address-line1`", "`address-line2`", `"address-line3"`
-  - : 街道地址的每一行。仅在“`street-address`”不存在的情况下，才应提供这些内容。
+  - : 街道地址的每一行。仅在"`street-address`"不存在的情况下，才应提供这些内容。
 - "`address-level4`"
   - : 在具有四个行政级别的地址中，粒度最细的[地址的行政级别](#地址的行政级别)。
 - "`address-level3`"
@@ -93,7 +93,7 @@ HTML `autocomplete` 属性允许 web 开发人员指定{{Glossary("user agent","
 - "`cc-number`"
   - : 信用卡号码或其他标识付款方式的号码，例如账号。
 - "`cc-exp`"
-  - : 付款方式的到期日期，通常为“月份 / 两位年份”或“月份 / 四位年份”形式。
+  - : 付款方式的到期日期，通常为"月份 / 两位年份"或"月份 / 四位年份"形式。
 - "`cc-exp-month`"
   - : 付款方式到期的月份。
 - "`cc-exp-year`"
@@ -101,11 +101,11 @@ HTML `autocomplete` 属性允许 web 开发人员指定{{Glossary("user agent","
 - "`cc-csc`"
   - : 付款工具的安全码；在信用卡上，这是信用卡背面的 3 位数验证码。
 - "`cc-type`"
-  - : 付款方式的类型（例如“Visa”或“Master Card”）。
+  - : 付款方式的类型（例如"Visa"或"Master Card"）。
 - "`transaction-currency`"
   - : 进行交易的货币。
 - "`transaction-amount`"
-  - : 以“`transaction-currency`”指定的货币表示的金额，用于支付形式。
+  - : 以"`transaction-currency`"指定的货币表示的金额，用于支付形式。
 - "`language`"
   - : 首选语言，由有效的 [BCP 47 语言标记](https://zh.wikipedia.org/wiki/IETF語言標籤)给出。
 - "`bday`"
@@ -117,24 +117,24 @@ HTML `autocomplete` 属性允许 web 开发人员指定{{Glossary("user agent","
 - "`bday-year`"
   - : 出生日期的年份。
 - "`sex`"
-  - : 性别身份（例如“女性”、“Fa'afafine”、“海吉拉”、“男性”、“非二元性别”），不带换行符的自由格式文本。
+  - : 性别身份（例如"女性"、"Fa'afafine"、"海吉拉"、"男性"、"非二元性别"），不带换行符的自由格式文本。
 - "`tel`"
 
   - : 完整的电话号码，包括国家/地区代码。如果需要将电话号码分为几个部分，则可以将以下值用于这些字段：
 
     - "`tel-country-code`"
-      - : 国家/地区代码，例如美国、加拿大和北美其他地区以及加勒比海部分地区使用“1”。
+      - : 国家/地区代码，例如美国、加拿大和北美其他地区以及加勒比海部分地区使用"1"。
     - "`tel-national`"
-      - : 不含国家/地区代码部分的完整电话号码，包括国家/地区内部前缀。对于电话号码“1-855-555-6502”，该字段的值为“855-555-6502”。
+      - : 不含国家/地区代码部分的完整电话号码，包括国家/地区内部前缀。对于电话号码"1-855-555-6502"，该字段的值为"855-555-6502"。
     - "`tel-area-code`"
       - : 区号，如果适用，可应用任何国家或地区内部前缀。
     - "`tel-local`"
-      - : 不带国家或地区代码的电话号码。这可以进一步分为两部分，分别是具有交换号码的电话号码，然后是交换局中的号码。对于电话号码“555-6502”，对于“555”使用“`tel-local-prefix`”，对于“6502”使用“`tel-local-suffix`”。
+      - : 不带国家或地区代码的电话号码。这可以进一步分为两部分，分别是具有交换号码的电话号码，然后是交换局中的号码。对于电话号码"555-6502"，对于"555"使用"`tel-local-prefix`"，对于"6502"使用"`tel-local-suffix`"。
 
 - "`tel-extension`"
   - : 电话号码中的电话分机代码，例如旅馆中的房间或套房号或公司中的办公室分机号。
 - "`impp`"
-  - : 即时消息协议端点的 URL，例如“xmpp：username\@example.net”。
+  - : 即时消息协议端点的 URL，例如"xmpp：username\@example.net"。
 - "`url`"
   - : 在给定表单中其他字段的上下文的情况下的主页或公司网站地址等情况下给定的 URL。
 - "`photo`"
@@ -174,9 +174,9 @@ HTML `autocomplete` 属性允许 web 开发人员指定{{Glossary("user agent","
 432 Anywhere St
 Exampleville CA 95555
 
-在美国，地址中最不明确的部分是州，在这种情况下为“CA”（美国邮政服务的正式缩写为“California”）。因此，`address-level1` 是州，在这种情况下为“CA”。
+在美国，地址中最不明确的部分是州，在这种情况下为"CA"（美国邮政服务的正式缩写为"California"）。因此，`address-level1` 是州，在这种情况下为"CA"。
 
-地址的倒数第二个特定部分是城市或城镇名称，因此在此示例地址中， `address-level2` 为“Exampleville”。
+地址的倒数第二个特定部分是城市或城镇名称，因此在此示例地址中， `address-level2` 为"Exampleville"。
 
 美国地址不使用 3 级及更高级别。
 
@@ -191,9 +191,9 @@ TN99 8ZZ
 
 地址级别为：
 
-- `address-level1`: 邮镇名——在这种情况下，为“Winchelsea”。
-- `address-level2`: 地方——在这种情况下，为“Upper-Wapping”。
-- `address-line1`: 房屋/街道详情——“103 Frogmarch Street”
+- `address-level1`: 邮镇名——在这种情况下，为"Winchelsea"。
+- `address-level2`: 地方——在这种情况下，为"Upper-Wapping"。
+- `address-line1`: 房屋/街道详情——"103 Frogmarch Street"
 
 邮政编码是分开的。请注意，实际上可以仅使用邮政编码和 `address-line1` 在英国成功发送邮件，因此它们应该是唯一的必填项，但通常人们会提供更多详细信息。
 
@@ -213,9 +213,9 @@ TN99 8ZZ
 〒 381-0000
 長野県長野市某町 123
 
-“〒”和紧随的七位数字是邮政编码。
+"〒"和紧随的七位数字是邮政编码。
 
-`address-level1` 用于各县或东京都，如本例的“長野県”。`address-level2` 通常用于市、县、镇和村，如本例的“長野市”。“某町 123”属于 `address-line1` 字段，其中包括区域名称和地段编号。
+`address-level1` 用于各县或东京都，如本例的"長野県"。`address-level2` 通常用于市、县、镇和村，如本例的"長野市"。"某町 123"属于 `address-line1` 字段，其中包括区域名称和地段编号。
 
 ## 规范
 

@@ -11,7 +11,7 @@ slug: Web/CSS/grid-column
 
 ## 语法
 
-如果给出两个`<grid-line>`值，它们之间用“ /”分隔。将`grid-column-start`的正手设置为斜线之前的值，并将`grid-column-end`的正手设置为斜线之后的值。
+如果给出两个`<grid-line>`值，它们之间用" /"分隔。将`grid-column-start`的正手设置为斜线之前的值，并将`grid-column-end`的正手设置为斜线之后的值。
 
 每个`<grid-line>`值可以指定为：
 

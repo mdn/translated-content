@@ -529,7 +529,7 @@ CSS 网格规范加入了用 {{cssxref("column-gap")}} 和 {{cssxref("row-gap")}
 
 ## 使用 `span` 关键字
 
-除了”起始线与结束线“的定位方法，你还可以使用”起始线与跨越轨道数量“的定位方法
+除了"起始线与结束线"的定位方法，你还可以使用"起始线与跨越轨道数量"的定位方法
 
 ```css hidden
 * {box-sizing: border-box;}

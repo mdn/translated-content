@@ -41,7 +41,7 @@ slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 }
 ```
 
-上面内容显示有一个名为“background.js”后台脚本，以及在“icons”文件夹下的浏览器行为按钮图标。
+上面内容显示有一个名为"background.js"后台脚本，以及在"icons"文件夹下的浏览器行为按钮图标。
 
 These icons are from the [bitsies!](https://www.iconfinder.com/iconsets/bitsies) iconset created by Recep Kütük.
 
@@ -107,7 +107,7 @@ button/
 
 我们把原文件做了三处改变：
 
-- 我们不需要引用“background.js”文件，因为会在弹出菜单的脚本中处理该行为 (你也可以使用“background.js“来运行一个弹出窗口，只是现在我们不需要这么做).
+- 我们不需要引用"background.js"文件，因为会在弹出菜单的脚本中处理该行为 (你也可以使用"background.js"来运行一个弹出窗口，只是现在我们不需要这么做).
 - 我们添加了`"browser_style": true`, 使弹出样式看上去更像是浏览器的一部分。
 - 最后，我们添加 `"default_popup": "popup/choose_page.html"`, 告诉浏览器按钮被单击时弹出菜单，菜单的内容则在"popup/choose_page.html"页面中。
 

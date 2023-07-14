@@ -252,7 +252,7 @@ console.log(Object.hasOwn(obj4, "__proto__")); // false
 
 在对象字面值中，仅允许有一个原型 setter；多个原型 setter 会被视为语法错误。
 
-不使用“冒号”标记法的属性定义不是原型 setter。它们是属性定义，其行为与使用任何其他名称的类似定义相同。
+不使用"冒号"标记法的属性定义不是原型 setter。它们是属性定义，其行为与使用任何其他名称的类似定义相同。
 
 ```js
 const __proto__ = "variable";

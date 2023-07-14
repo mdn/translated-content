@@ -100,7 +100,7 @@ panel.setAttribute('class', 'msgBox');
 html.appendChild(panel);
 ```
 
-下面这两段使用了我们之前使用过的方法`createElement()`和`appendChild()` — 创建了一个 {{htmlelement("p")}} 元素和一个{{htmlelement("button")}}元素 — 并且把他们追加到了 panel`<div>`之下。我们使用元素的 {{domxref("Node.textContent")}}（Node 泛指一个元素并不是说是某个元素是叫 Node）属性— 表示一个元素的文本属性 — 给一个 p 元素赋值，同样按钮也有这个属性，该属性就是按钮显示的‘X’。这个按钮的功能就是关闭消息提示框。
+下面这两段使用了我们之前使用过的方法`createElement()`和`appendChild()` — 创建了一个 {{htmlelement("p")}} 元素和一个{{htmlelement("button")}}元素 — 并且把他们追加到了 panel`<div>`之下。我们使用元素的 {{domxref("Node.textContent")}}（Node 泛指一个元素并不是说是某个元素是叫 Node）属性— 表示一个元素的文本属性 — 给一个 p 元素赋值，同样按钮也有这个属性，该属性就是按钮显示的'X'。这个按钮的功能就是关闭消息提示框。
 
 ```js
 const msg = document.createElement('p');
@@ -168,13 +168,13 @@ closeBtn.onclick = function() {
 
 6. 保存好以后刷新页面 — 现在你应该能看到当你点击按钮的时候提示框弹出来。
 
-你会想“怎么函数名后面没有括号呢？”. 这是因为我们不想直接调用这个函数 — 而是只有当按钮被点击的时候才调用这个函数。试试把代码改成这样：
+你会想"怎么函数名后面没有括号呢？". 这是因为我们不想直接调用这个函数 — 而是只有当按钮被点击的时候才调用这个函数。试试把代码改成这样：
 
 ```js
 btn.onclick = displayMessage();
 ```
 
-保存刷新，你会发现按钮都还没点击提示框就出来了！在函数名后面的这个括号叫做“函数调用运算符”（function invocation operator）。你只有在想直接调用函数的地方才这么写。同样要重视的是，匿名函数里面的代码也不是直接运行的，只要代码在函数作用域内。
+保存刷新，你会发现按钮都还没点击提示框就出来了！在函数名后面的这个括号叫做"函数调用运算符"（function invocation operator）。你只有在想直接调用函数的地方才这么写。同样要重视的是，匿名函数里面的代码也不是直接运行的，只要代码在函数作用域内。
 
 如果你做了这个函数括号的实验，在继续之前把代码恢复到之前的状态。
 

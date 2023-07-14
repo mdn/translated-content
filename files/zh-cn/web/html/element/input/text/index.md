@@ -154,7 +154,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 
 {{EmbedLiveSample("基础示例", 600, 50)}}
 
-提交后，发送到服务器的键/值对的数据将为 `name=Chris`（如果在提交之前输入了“Chris”作为输入值）。你必须记住在 {{HTMLElement("input")}} 元素上包含 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性，否则文本字段的值将不包含在提交的数据中。
+提交后，发送到服务器的键/值对的数据将为 `name=Chris`（如果在提交之前输入了"Chris"作为输入值）。你必须记住在 {{HTMLElement("input")}} 元素上包含 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性，否则文本字段的值将不包含在提交的数据中。
 
 ### 设置占位符
 

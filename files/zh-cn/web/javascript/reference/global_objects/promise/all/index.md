@@ -139,7 +139,7 @@ setTimeout(() => {
 
 ### 将 Promise.all() 与异步函数一起使用
 
-在 [async 函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)中，“过度 await”代码非常普遍。例如，给定以下函数：
+在 [async 函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)中，"过度 await"代码非常普遍。例如，给定以下函数：
 
 ```js
 function promptForDishChoice() {

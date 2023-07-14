@@ -55,7 +55,7 @@ function updateProgress(percentComplete) {
 - [ARIA 简介](/zh-CN/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
   - : 快速介绍如何使用 ARIA 访问动态内容。另请参阅 2008 年的经典 [ARIA intro by Gez Lemon](https://dev.opera.com/articles/view/introduction-to-wai-aria/)。
 - [Videos of screen readers using ARIA](https://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/)
-  - : 查看来自网络的真实和简化示例，视频包括 ARIA“之前”和 ARIA“之后”。
+  - : 查看来自网络的真实和简化示例，视频包括 ARIA"之前"和 ARIA"之后"。
 - [Using ARIA](https://w3c.github.io/using-aria/)
   - : 开发人员实用指南。它建议在 HTML 元素上使用哪些 ARIA 属性。建议是基于实施的实际情况。
 
@@ -67,7 +67,7 @@ function updateProgress(percentComplete) {
 ## 脚本小部件的 ARIA
 
 - [编写可通过键盘导航的 JavaScript 小部件](/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  - : {{HTMLElement("input")}}、{{HTMLElement("button")}} 等内置元素具有内置键盘辅助功能。如果您使用 {{HTMLElement("div")}} 和 ARIA 来“伪造”这些，则必须确保您的小部件可通过键盘访问。
+  - : {{HTMLElement("input")}}、{{HTMLElement("button")}} 等内置元素具有内置键盘辅助功能。如果您使用 {{HTMLElement("div")}} 和 ARIA 来"伪造"这些，则必须确保您的小部件可通过键盘访问。
 - [实时区域](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
   - : 实时区域向屏幕阅读器提供有关如何处理页面内容更改的建议。
 - [Using ARIA Live Regions to announce content changes](https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)

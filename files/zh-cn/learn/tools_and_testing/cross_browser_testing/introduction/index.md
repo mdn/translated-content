@@ -5,7 +5,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-本文是对跨浏览器测试的入门概述，帮助了解“什么是跨浏览器测试？”，“常见的问题都有哪些？”，以及“应该怎么测试，识别和修复问题？”
+本文是对跨浏览器测试的入门概述，帮助了解"什么是跨浏览器测试？"，"常见的问题都有哪些？"，以及"应该怎么测试，识别和修复问题？"
 
 <table class="learn-box standard-table">
   <tbody>
@@ -36,11 +36,11 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 
 > **备注：** [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) 文章列出了浏览器的市场份额，使用情况和相关兼容性问题。
 
-我们先解释下术语。首先，我们所讨论的“跨浏览器使用（working cross browser）”，应该在不同浏览器中提供可接受的用户体验。虽然无法在所有浏览器上提供相同的体验，但确保核心功能使用顺畅就算可以。比如在现代浏览器上，能显示动画、3D 或闪光效果，而在较旧的浏览器上，可以呈现出相同信息的平面图片。只要网站主满意，你的工作就算完成了。
+我们先解释下术语。首先，我们所讨论的"跨浏览器使用（working cross browser）"，应该在不同浏览器中提供可接受的用户体验。虽然无法在所有浏览器上提供相同的体验，但确保核心功能使用顺畅就算可以。比如在现代浏览器上，能显示动画、3D 或闪光效果，而在较旧的浏览器上，可以呈现出相同信息的平面图片。只要网站主满意，你的工作就算完成了。
 
 另一方面，视力正常的用户能正常浏览内容，但视力障碍的用户却因为屏幕阅读器无法读取信息而无法阅读内容。这是糟糕的体验，需要您能兼容屏幕阅读器软件。
 
-其次，当我们说“可接受数量的浏览器（across an acceptable number of web browsers）” ，并不是说世界上 100% 的浏览器，这也是不可能。您可以通过信息收集了解用户都在使用哪些浏览器和设备，但也不能保证全都采集到（也是本专题第二篇所讨论的——参见[是否需要测试？](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#是否需要测试？)）。作为 web 开发者，您自然要确保网站主要求的浏览器都能正常工作，但除此之外，您需要防御性编程（code defensively），尽可能让其他浏览器也能正常查看内容。这是 Web 开发的重大挑战之一！
+其次，当我们说"可接受数量的浏览器（across an acceptable number of web browsers）" ，并不是说世界上 100% 的浏览器，这也是不可能。您可以通过信息收集了解用户都在使用哪些浏览器和设备，但也不能保证全都采集到（也是本专题第二篇所讨论的——参见[是否需要测试？](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#是否需要测试？)）。作为 web 开发者，您自然要确保网站主要求的浏览器都能正常工作，但除此之外，您需要防御性编程（code defensively），尽可能让其他浏览器也能正常查看内容。这是 Web 开发的重大挑战之一！
 
 > **备注：** 后面会详细介绍防御性编程（code defensively）
 

@@ -27,7 +27,7 @@ DNT: 1
 
 ## 示例
 
-### 使用 JavaScript 读取“不追踪”（Do Not Track）状态
+### 使用 JavaScript 读取"不追踪"（Do Not Track）状态
 
 用户对 DNT 的设置还可以使用 {{domxref("Navigator.doNotTrack")}} 属性进行读取：
 

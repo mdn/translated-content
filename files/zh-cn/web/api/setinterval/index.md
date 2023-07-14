@@ -117,7 +117,7 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 参见：[`clearInterval()`](/zh-CN/docs/Web/API/clearInterval)。
 
-## “this”的问题
+## "this"的问题
 
 当你给 `setInterval()` 传递一个方法或者函数的时候，方法/函数 在被调用时会绑定错误的 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值。这个问题在 [JavaScript 参考](/zh-CN/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method) 进行了详细解释。
 

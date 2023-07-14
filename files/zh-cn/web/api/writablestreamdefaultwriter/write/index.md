@@ -7,7 +7,7 @@ slug: Web/API/WritableStreamDefaultWriter/write
 
 {{domxref("WritableStreamDefaultWriter")}} 接口的 **`write()`** 方法将传递的数据块写入 {{domxref("WritableStream")}} 和它的底层接收器，然后返回一个 {{jsxref("Promise")}}，promise 的状态由写入操作是否成功来决定。
 
-请注意，“成功”的含义取决于底层接收器；它可能表示该分块已被接收，但不一定安全地保存到它最终的目的地。
+请注意，"成功"的含义取决于底层接收器；它可能表示该分块已被接收，但不一定安全地保存到它最终的目的地。
 
 ## 语法
 

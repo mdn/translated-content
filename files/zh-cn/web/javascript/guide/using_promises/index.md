@@ -46,7 +46,7 @@ createAudioFileAsync(audioSettings).then(successCallback, failureCallback);
 
 ## 约定
 
-不同于“老式”的传入回调，在使用 Promise 时，会有以下约定：
+不同于"老式"的传入回调，在使用 Promise 时，会有以下约定：
 
 - 在本轮 [事件循环](/zh-CN/docs/Web/JavaScript/Event_loop#执行至完成) 运行完成之前，回调函数是不会被调用的。
 - 即使异步操作已经完成（成功或失败），在这之后通过 [`then()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 添加的回调函数也会被调用。

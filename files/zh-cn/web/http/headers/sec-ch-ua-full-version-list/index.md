@@ -28,7 +28,7 @@ slug: Web/HTTP/Headers/Sec-CH-UA-Full-Version-List
 
 因此，标头允许服务器根据共享品牌及其各自特定版本中的特定自定义项（particular customizations）来自定义其响应。
 
-标头可能包含任何位置和任何名称的“假冒”品牌。此功能旨在防止服务器直接拒绝未知用户代理，迫使用户代理在其品牌标识上撒谎。
+标头可能包含任何位置和任何名称的"假冒"品牌。此功能旨在防止服务器直接拒绝未知用户代理，迫使用户代理在其品牌标识上撒谎。
 
 > **备注：** 这类似于 {{HTTPHeader("Sec-CH-UA")}}，但包含完整的版本号，而不是每个品牌的重要版本号。
 
@@ -43,7 +43,7 @@ Sec-CH-UA-Full-Version-List: "<brand>";v="<full version>", ...
 ### 指令
 
 - `<brand>`
-  - : 与用户代理相关的品牌，如“Chromium”和“Google Chrome”。
+  - : 与用户代理相关的品牌，如"Chromium"和"Google Chrome"。
      这可能是一个故意不正确的品牌，如 `" Not A;Brand"` 或 `"(Not(A:Brand"`（实际值是预期随时间变化且不可预测的）。
 - `<full version>`
   - : 完整的版本号，例如 98.0.4750.0。

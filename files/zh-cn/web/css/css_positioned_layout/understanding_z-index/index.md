@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
 
 通常情况下，[HTML](/zh-CN/docs/Glossary/HTML)页面可以被认为是二维的，因为文本，图像和其他元素被排列在页面上而不重叠。在这种情况下，只有一个渲染进程，所有元素都知道其他元素所占用的空间。 {{cssxref("z-index")}}属性可让你在渲染内容时调整对象分层的顺序。
 
-> _在 CSS 2.1 中，所有的盒模型元素都处于三维坐标系中。除了我们常用的横坐标和纵坐标，盒模型元素还可以沿着“z 轴”层叠摆放，当他们相互覆盖时，z 轴顺序就变得十分重要。_
+> _在 CSS 2.1 中，所有的盒模型元素都处于三维坐标系中。除了我们常用的横坐标和纵坐标，盒模型元素还可以沿着"z 轴"层叠摆放，当他们相互覆盖时，z 轴顺序就变得十分重要。_
 
 (参见 [CSS 2.1 Section 9.9.1 - Layered presentation](http://www.w3.org/TR/CSS21/visuren.html#z-index))
 

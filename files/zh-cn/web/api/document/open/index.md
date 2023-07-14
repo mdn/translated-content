@@ -75,7 +75,7 @@ document.open('https://www.github.com','', 'noopener=true')
 document.open(type, replace)
 ```
 
-`type`指定了所需写入的数据的 MIME 类型，`replace`（如有设置，值为一个字符串“replace”）指定了新文档的历史写入会代替现有的例如写入。
+`type`指定了所需写入的数据的 MIME 类型，`replace`（如有设置，值为一个字符串"replace"）指定了新文档的历史写入会代替现有的例如写入。
 
 这种形式现在已经弃用；它不会抛出错误，但会直接调用`document.open()`（相当于无参数形式的调用）。这种历史写入替换行为现在一定会发生。
 

@@ -24,9 +24,9 @@ slug: Web/SVG/Attribute/baseline-shift
 - super
   - : `dominant-baseline`切换到上标的默认位置
 - \<percentage>
-  - : 该属性的结果值是这个百分数乘以 {{ SVGElement("text") }}元素的{{ SVGAttr("line-height") }}。如果是正值，dominant-baseline 向 shift 同方向移动结果值；如果是负值，dominant-baseline 向 shift 反方向移动结果值，相对于父文本内容元素。值“0%”等于”baseline“。
+  - : 该属性的结果值是这个百分数乘以 {{ SVGElement("text") }}元素的{{ SVGAttr("line-height") }}。如果是正值，dominant-baseline 向 shift 同方向移动结果值；如果是负值，dominant-baseline 向 shift 反方向移动结果值，相对于父文本内容元素。值"0%"等于"baseline"。
 - [\<length>](/zh-CN/SVG/Content_type#Length)
-  - : 如果是正值，dominant-baseline 向 shift 同方向移动[\<length>](/zh-CN/SVG/Content_type#Length)距离；如果是负值，dominant-baseline 向 shift 反方向移动[\<length>](/zh-CN/SVG/Content_type#Length)距离。值”0cm“等于”baseline“。
+  - : 如果是正值，dominant-baseline 向 shift 同方向移动[\<length>](/zh-CN/SVG/Content_type#Length)距离；如果是负值，dominant-baseline 向 shift 反方向移动[\<length>](/zh-CN/SVG/Content_type#Length)距离。值"0cm"等于"baseline"。
 
 ## 示例
 

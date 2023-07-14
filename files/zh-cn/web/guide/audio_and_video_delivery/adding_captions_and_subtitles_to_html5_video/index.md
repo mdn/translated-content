@@ -12,7 +12,7 @@ slug: >-
 
 在本篇文章中，我们将参考带字幕的视频播放器的示例。本实例使用了来自 [Blender 基金会](https://www.blender.org/about/foundation/)的 [Sintel open movie](https://durian.blender.org/)。
 
-![带有播放、停止、音量和字幕的开启和关闭控制按钮的播放器。正在播放的视频显示了一个男人手持长矛状武器的场景，标题为“Esta hoja tiene pasado oscuro”](video-player-with-captions.png)
+![带有播放、停止、音量和字幕的开启和关闭控制按钮的播放器。正在播放的视频显示了一个男人手持长矛状武器的场景，标题为"Esta hoja tiene pasado oscuro"](video-player-with-captions.png)
 
 > **备注：** 你可以[查看 Github 源码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)，或者[浏览在线示例](https://iandevlin.github.io/mdn/video-player-with-captions/)。
 
@@ -282,7 +282,7 @@ WebVTT 的一个不太为人所知和支持的功能是通过 [CSS 扩展](https
 }
 ```
 
-如果 WebVTT 文件使用 [voice span](https://w3c.github.io/webvtt/#dfn-webvtt-cue-voice-span)，它允许将提示定义为具有特定的“声音”：
+如果 WebVTT 文件使用 [voice span](https://w3c.github.io/webvtt/#dfn-webvtt-cue-voice-span)，它允许将提示定义为具有特定的"声音"：
 
 ```
 0
@@ -290,7 +290,7 @@ WebVTT 的一个不太为人所知和支持的功能是通过 [CSS 扩展](https
 <v Test>[Test]</v>
 ```
 
-这种特定的“声音”可以像这样施加样式：
+这种特定的"声音"可以像这样施加样式：
 
 ```css
 ::cue(v[voice="Test"]) {
@@ -307,12 +307,12 @@ WebVTT 的一个不太为人所知和支持的功能是通过 [CSS 扩展](https
 
 ### Safari
 
-在 Safari 6.1 以上版本中，字幕是默认启用的，默认控件包含一个按钮和一个菜单，提供与我们刚刚建立的菜单相同的功能，还有一个“自动”选项，允许浏览器进行选择。`default` 属性也被支持。
+在 Safari 6.1 以上版本中，字幕是默认启用的，默认控件包含一个按钮和一个菜单，提供与我们刚刚建立的菜单相同的功能，还有一个"自动"选项，允许浏览器进行选择。`default` 属性也被支持。
 
 ### Chrome 和 Opera
 
-这些浏览器也有类似的实现方式：默认启用字幕，默认控制集包含一个“cc”按钮，可以打开和关闭字幕。Chrome 和 Opera 忽略了 `<track>` 元素上的 `default` 属性，而是会尝试将浏览器的语言与字幕的语言相匹配。
+这些浏览器也有类似的实现方式：默认启用字幕，默认控制集包含一个"cc"按钮，可以打开和关闭字幕。Chrome 和 Opera 忽略了 `<track>` 元素上的 `default` 属性，而是会尝试将浏览器的语言与字幕的语言相匹配。
 
 ## 插件
 
-也有许多开源和商业的 HTML 视频播放器插件提供字幕支持，你可以用它们来代替自己制作。你可以在网上使用“_HTML 视频播放器插件_”等搜索词来搜索这些插件。
+也有许多开源和商业的 HTML 视频播放器插件提供字幕支持，你可以用它们来代替自己制作。你可以在网上使用"_HTML 视频播放器插件_"等搜索词来搜索这些插件。

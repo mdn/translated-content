@@ -44,7 +44,7 @@ HTML 优雅明了，但要是出了错，你会不会一头雾水呢，本节将
 
 ## HTML 和调试
 
-HTML 并不像 Rust 那么难以理解，浏览器并不会将 HTML 编译成其他形式，而是直接解析并显示结果（称之为解释，而非编译）。可以说 HTML 的 {{glossary("element", "元素")}} 语法比 Rust、{{glossary("JavaScript")}} 或 {{glossary("Python")}} 这样“真正的编程语言”更容易理解。浏览器解析 HTML 的过程比编程语言的编译运行的过程要**宽松**得多，但这是一把双刃剑。
+HTML 并不像 Rust 那么难以理解，浏览器并不会将 HTML 编译成其他形式，而是直接解析并显示结果（称之为解释，而非编译）。可以说 HTML 的 {{glossary("element", "元素")}} 语法比 Rust、{{glossary("JavaScript")}} 或 {{glossary("Python")}} 这样"真正的编程语言"更容易理解。浏览器解析 HTML 的过程比编程语言的编译运行的过程要**宽松**得多，但这是一把双刃剑。
 
 ### 宽松的代码
 
@@ -87,7 +87,7 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
     - [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性缺少了一个双引号。从而导致了一个最严重的问题：整个链接完全没有渲染出来。
 
 5. 下面暂时忽略源代码中的标记，先看一下浏览器渲染出的标记。打开浏览器的开发者工具。如果不太熟悉，请先阅读 [浏览器开发工具概览](/zh-CN/docs/Learn/Discover_browser_developer_tools)。
-6. 在 DOM 查看器中可以看到渲染的标记：![Firefox 控制台中的 HTML 检查器，可标亮元素，（图中标亮了“什么使得 HTML 出错？”）可以看到浏览器自动补齐了</p>关闭标签](html-inspector.png)
+6. 在 DOM 查看器中可以看到渲染的标记：![Firefox 控制台中的 HTML 检查器，可标亮元素，（图中标亮了"什么使得 HTML 出错？"）可以看到浏览器自动补齐了</p>关闭标签](html-inspector.png)
 7. 通过 DOM 查看器可以清楚地看到，浏览器已经尝试修补代码错误（我们尝试了 Firefox，其他现代浏览器也应给出同样结果）：
 
     - 段落和列表元素加上了关闭标签。
@@ -158,6 +158,6 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
 
 ## 小结
 
-以上就是 HTML 调试的一篇入门介绍，同时对于调试 CSS 和 JavaScript 也有帮助，或者你职业生涯中的任一门语言。这也是 HTML 学习一章的最后一节，接下来是两个小测试，点击“下一页”来小试牛刀吧。
+以上就是 HTML 调试的一篇入门介绍，同时对于调试 CSS 和 JavaScript 也有帮助，或者你职业生涯中的任一门语言。这也是 HTML 学习一章的最后一节，接下来是两个小测试，点击"下一页"来小试牛刀吧。
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}

@@ -32,7 +32,7 @@ slug: Learn/Server-side/Django/skeleton_website
 
 这篇文章会展示怎样创建一个网站的"框架"，在这个框架的基础上，你可以继续填充整站使用的 settings，urls，模型 (models)，视图 (views) 和模板 (templates)（我们会在接下来的文章里讨论）。
 
-搭建“框架”的过程很直接：
+搭建"框架"的过程很直接：
 
 1. 使用 django-admin 工具创建工程的文件夹，基本的文件模板和工程管理脚本（**manage.py**）。
 2. 用**manage.py** 创建一个或多个应用。
@@ -120,7 +120,7 @@ locallibrary/
 
 除上面所说的文件外，我们还有：
 
-- 一个*migration*文件夹，用来存储“migrations”——当你修改你的数据模型时，这个文件会自动升级你的数据库。
+- 一个*migration*文件夹，用来存储"migrations"——当你修改你的数据模型时，这个文件会自动升级你的数据库。
 - **\_\_init\_\_.py** — 一个空文件，Django/Python 会将这个文件作为[Python 包](https://docs.python.org/3/tutorial/modules.html#packages)并允许你在项目的其他部分使用它。
 
 > **备注：** 你注意到上面的文件里有些缺失嘛？尽管有 views 和 models 文件，可是 url 映射，网站模板，静态文件在哪里呢？我们会在接下来的部分展示如何创建它们（并不是每个网站都需要，不过这个例子需要）
@@ -207,7 +207,7 @@ urlpatterns = [
 ]
 ```
 
-URL 映射通过`urlpatterns` 变量管理，它是`path()` 函数的一个 Python 列表结构。每个`path()`函数要么将 URL 式样 (URL pattern) 关联到特定视图 (_specific view)_，将在模式匹配时显示；要么关联到某个 URL 式样列表的测试代码。 (第二种情况下，URL 式样是目标模型里的“base URL”). `urlpatterns` 列表最开始定义了一个函数，这个函数将所有带有模型 _admin/_ 的 URL 映射到模块`admin.site.urls`。这个函数包含了 Administration 应用自己的 URL 映射定义。
+URL 映射通过`urlpatterns` 变量管理，它是`path()` 函数的一个 Python 列表结构。每个`path()`函数要么将 URL 式样 (URL pattern) 关联到特定视图 (_specific view)_，将在模式匹配时显示；要么关联到某个 URL 式样列表的测试代码。 (第二种情况下，URL 式样是目标模型里的"base URL"). `urlpatterns` 列表最开始定义了一个函数，这个函数将所有带有模型 _admin/_ 的 URL 映射到模块`admin.site.urls`。这个函数包含了 Administration 应用自己的 URL 映射定义。
 
 > **备注：** path() 中的路由是一个字符串，用于定义要匹配的 URL 模式。该字符串可能包括一个命名变量（尖括号中）
 >

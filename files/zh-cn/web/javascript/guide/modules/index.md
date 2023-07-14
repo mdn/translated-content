@@ -64,7 +64,7 @@ modules 目录下的两个模块的描述如下：
 - 比较清晰，这可以指出哪些文件是模块，哪些是常规的 JavaScript。
 - 这能保证你的模块可以被运行时环境和构建工具识别，比如 [Node.js](https://nodejs.org/api/esm.html#esm_enabling) 和 [Babel](https://babeljs.io/docs/en/options#sourcetype)。
 
-但是我们决定继续使用 `.js` 扩展名，未来可能会更改。为了使模块可以在浏览器中正常地工作，你需要确保你的服务器能够正常地处理 `Content-Type` 头，其应该包含 JavaScript 的 MIME 类型 `text/javascript`。如果没有这么做，你可能会得到 一个严格 MIME 类型检查错误：“The server responded with a non-JavaScript MIME type（服务器返回了非 JavaScript MIME 类型）”，并且浏览器会拒绝执行相应的 JavaScript 代码。多数服务器可以正确地处理 `.js` 文件的类型，但是 `.mjs` 还不行。已经可以正常响应 `.mjs` 的服务器有 [GitHub 页面](https://pages.github.com/) 和 Node.js 的 [`http-server`](https://github.com/http-party/http-server#readme)。
+但是我们决定继续使用 `.js` 扩展名，未来可能会更改。为了使模块可以在浏览器中正常地工作，你需要确保你的服务器能够正常地处理 `Content-Type` 头，其应该包含 JavaScript 的 MIME 类型 `text/javascript`。如果没有这么做，你可能会得到 一个严格 MIME 类型检查错误："The server responded with a non-JavaScript MIME type（服务器返回了非 JavaScript MIME 类型）"，并且浏览器会拒绝执行相应的 JavaScript 代码。多数服务器可以正确地处理 `.js` 文件的类型，但是 `.mjs` 还不行。已经可以正常响应 `.mjs` 的服务器有 [GitHub 页面](https://pages.github.com/) 和 Node.js 的 [`http-server`](https://github.com/http-party/http-server#readme)。
 
 如果你已经在使用相应的环境了，那么一切正常。或者如果你还没有，但你知道你在做什么（比如你可以配置服务器以为 `.mjs` 设置正确的 `Content-Type`）。但如果你不能控制提供服务，或者用于公开文件发布的服务器，这可能会导致混乱。
 
@@ -117,7 +117,7 @@ import { name, draw, reportArea, reportPerimeter } from '/js-examples/modules/ba
 
 使用 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，然后你被花括号包围的用逗号分隔的你想导入的功能列表，然后是关键字 from，然后是模块文件的路径。模块文件的路径是相对于站点根目录的相对路径，对于我们的 `basic-modules` 应该是 `/js-examples/modules/basic-modules`。
 
-当然，我们写的路径有一点不同 -- 我们使用点语法意味“当前路径”，跟随着包含我们想要找的文件的路径。这比每次都要写下整个相对路径要好得多，因为它更短，使得 URL 可移植 -- 如果在站点层中你把它移动到不同的路径下面仍然能够工作（修订版 1889482）。
+当然，我们写的路径有一点不同 -- 我们使用点语法意味"当前路径"，跟随着包含我们想要找的文件的路径。这比每次都要写下整个相对路径要好得多，因为它更短，使得 URL 可移植 -- 如果在站点层中你把它移动到不同的路径下面仍然能够工作（修订版 1889482）。
 
 那么看看例子吧：
 
@@ -156,7 +156,7 @@ reportPerimeter(square1.length, reportList);
 <script type="module" src="main.js"></script>
 ```
 
-你导入模块功能的脚本基本是作为顶级模块。如果省略它，Firefox 就会给出错误“SyntaxError: import declarations may only appear at top level of a module。
+你导入模块功能的脚本基本是作为顶级模块。如果省略它，Firefox 就会给出错误"SyntaxError: import declarations may only appear at top level of a module。
 
 你只能在模块内部使用 `import` 和`export` 语句；不是普通脚本文件。
 
@@ -173,7 +173,7 @@ reportPerimeter(square1.length, reportList);
 
 到目前为止我们导出的功能都是由 **named exports** 组成 —- 每个项目（无论是函数，常量等）在导出时都由其名称引用，并且该名称也用于在导入时引用它。
 
-还有一种导出类型叫做 **default export** —- 这样可以很容易地使模块提供默认功能，并且还可以帮助 JavaScript 模块与现有的 CommonJS 和 AMD 模块系统进行互操作（正如 [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) by Jason Orendorff 的模块中所解释的那样；搜索“默认导出”）。
+还有一种导出类型叫做 **default export** —- 这样可以很容易地使模块提供默认功能，并且还可以帮助 JavaScript 模块与现有的 CommonJS 和 AMD 模块系统进行互操作（正如 [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) by Jason Orendorff 的模块中所解释的那样；搜索"默认导出"）。
 
 看个例子来解释它如何工作。在我们的基本模块 `square.js` 中，您可以找到一个名为 `randomSquare()` 的函数，它创建一个具有随机颜色，大小和位置的正方形。我们想作为默认导出，所以在文件的底部我们这样写：
 
@@ -251,7 +251,7 @@ import { name, draw, reportArea, reportPerimeter } from './modules/circle.js';
 import { name, draw, reportArea, reportPerimeter } from './modules/triangle.js';
 ```
 
-浏览器会抛出一个错误，例如“SyntaxError: redeclaration of import name”（Firefox）。
+浏览器会抛出一个错误，例如"SyntaxError: redeclaration of import name"（Firefox）。
 
 相反，我们需要重命名导入，使它们是唯一的：
 
@@ -380,7 +380,7 @@ export * from 'x.js'
 export { name } from 'x.js'
 ```
 
-> **备注：** 这实际上是导入后跟导出的简写，即“我导入模块 `x.js`，然后重新导出部分或全部导出”。
+> **备注：** 这实际上是导入后跟导出的简写，即"我导入模块 `x.js`，然后重新导出部分或全部导出"。
 
 有关示例，请参阅我们的 [module-aggregation](https://github.com/mdn/js-examples/tree/main/module-examples/module-aggregation)。在这个例子中（基于我们之前的类示例），我们有一个名为 `shapes.js` 的额外模块，它将 `circle.js`，`square.js` 和 `riangle.mjs` 中的所有功能聚合在一起。我们还将子模块移动到名为 shapes 的 modules 目录中的子目录中。所以模块结构现在是这样的：
 
@@ -441,7 +441,7 @@ import('/modules/mymodule.js')
   });
 ```
 
-我们来看一个例子。在 [dynamic-module-imports](https://github.com/mdn/js-examples/tree/main/module-examples/dynamic-module-imports) 目录中，我们有另一个基于类示例的示例。但是这次我们在示例加载时没有在画布上绘制任何东西。相反，我们包括三个按钮 -- “圆形”，“方形”和“三角形” -- 按下时，动态加载所需的模块，然后使用它来绘制相关的形状。
+我们来看一个例子。在 [dynamic-module-imports](https://github.com/mdn/js-examples/tree/main/module-examples/dynamic-module-imports) 目录中，我们有另一个基于类示例的示例。但是这次我们在示例加载时没有在画布上绘制任何东西。相反，我们包括三个按钮 -- "圆形"，"方形"和"三角形" -- 按下时，动态加载所需的模块，然后使用它来绘制相关的形状。
 
 在这个例子中，我们只对 [index.html](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) 和 [main.js](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js) 文件进行了更改 -- 模块导出保持与以前相同。
 

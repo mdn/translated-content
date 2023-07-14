@@ -73,7 +73,7 @@ function fetchVideo() {
 }
 ```
 
-> **备注：** 当调用 `abort()` 时，`fetch()` promise 会以“`AbortError`”`DOMException` 拒绝。
+> **备注：** 当调用 `abort()` 时，`fetch()` promise 会以"`AbortError`"`DOMException` 拒绝。
 
 你可以[在 GitHub 上找到一个完整、可运行的示例](https://github.com/mdn/dom-examples/tree/main/abort-api)；你也可以参见[在线演示](https://mdn.github.io/dom-examples/abort-api/)。
 
@@ -81,7 +81,7 @@ function fetchVideo() {
 
 如果你需要中止一个超时的操作，你可以使用 {{domxref("AbortSignal.timeout()")}} 静态方法。该方法返回一个 `AbortSignal` 并在指定的毫秒时间后后自动超时。
 
-以下代码片段展示了如何成功地下载一个文件或者在五秒钟后处理一个超时的错误。注意，当出现超时时，`fetch()` promise 会以“`TimeoutError`”`DOMException` 拒绝。这允许代码区分超时（可能需要通知用户）和用户中止。
+以下代码片段展示了如何成功地下载一个文件或者在五秒钟后处理一个超时的错误。注意，当出现超时时，`fetch()` promise 会以"`TimeoutError`"`DOMException` 拒绝。这允许代码区分超时（可能需要通知用户）和用户中止。
 
 ```js
 const url = 'video.mp4';

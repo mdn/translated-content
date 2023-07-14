@@ -27,7 +27,7 @@ slug: Web/API/MediaStream
 ## 方法
 
 - {{domxref("MediaStream.addTrack()")}}
-  - : 存储传入参数 {{domxref("MediaStreamTrack")}} 的一个副本。如果这个轨道已经被添加到了这个媒体流，什么也不会发生; 如果目标轨道为“完成”状态（也就是已经到尾部了），一个 INVALID_STATE_RAISE 异常会产生。
+  - : 存储传入参数 {{domxref("MediaStreamTrack")}} 的一个副本。如果这个轨道已经被添加到了这个媒体流，什么也不会发生; 如果目标轨道为"完成"状态（也就是已经到尾部了），一个 INVALID_STATE_RAISE 异常会产生。
 
 - {{domxref("MediaStream.clone()")}}
   - 返回这个 `MediaStream 对象的克隆版本。返回的版本会有一个新的 ID`。
@@ -47,7 +47,7 @@ slug: Web/API/MediaStream
 
 - {{domxref("MediaStream.removeTrack()")}}
   - : 移除作为参数传入的 {{domxref("MediaStreamTrack")}}。如果这个轨道不在 `MediaStream` 对象中什么也不会发生；
-    如果目标轨道为“完成”状态，一个 INVALID_STATE_RAISE 异常会产生。
+    如果目标轨道为"完成"状态，一个 INVALID_STATE_RAISE 异常会产生。
 
 ## 规范
 

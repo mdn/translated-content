@@ -295,7 +295,7 @@ History API 接口允许你访问有关浏览器历史记录的信息，并通�
 
 ## 示例
 
-在这个示例中，{{HTMLElement("input")}} 元素的 {{domxref("HTMLElement/input_event", "input")}} 事件被监听，以便根据给定字段当前是否有值，来更新表单“提交”按钮的状态。
+在这个示例中，{{HTMLElement("input")}} 元素的 {{domxref("HTMLElement/input_event", "input")}} 事件被监听，以便根据给定字段当前是否有值，来更新表单"提交"按钮的状态。
 
 ### JavaScript
 
@@ -321,11 +321,11 @@ nameField.addEventListener("input", event => {
 
 这段代码使用 {{domxref("Document")}} 接口的 {{domxref("Document.getElementById", "getElementById()")}} 方法，获取 ID 为 `userName` 和 `sendButton` 的 {{HTMLElement("input")}} 元素的 DOM 对象。通过这些对象，我们可以访问提供信息的属性和方法，并获得对这些元素的控制权。
 
-“发送” 按钮的 {{domxref("HTMLInputElement")}} 对象的 {{domxref("HTMLInputElement.disabled", "disabled")}} 属性被设置为 `true`，这将禁用 “发送” 按钮，使其无法点击。此外，通过调用继承自 {{domxref("HTMLElement")}} 的 {{domxref("HTMLElement/focus", "focus()")}} 方法，用户名输入字段成为活动焦点。
+"发送" 按钮的 {{domxref("HTMLInputElement")}} 对象的 {{domxref("HTMLInputElement.disabled", "disabled")}} 属性被设置为 `true`，这将禁用 "发送" 按钮，使其无法点击。此外，通过调用继承自 {{domxref("HTMLElement")}} 的 {{domxref("HTMLElement/focus", "focus()")}} 方法，用户名输入字段成为活动焦点。
 
-然后调用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 来为用户名输入添加一个 `input` 事件的处理器。这段代码检测当前输入值的长度；如果它是零，则禁用“发送”按钮（如果尚未禁用）。否则，该代码确保按钮已启用。
+然后调用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 来为用户名输入添加一个 `input` 事件的处理器。这段代码检测当前输入值的长度；如果它是零，则禁用"发送"按钮（如果尚未禁用）。否则，该代码确保按钮已启用。
 
-有了这个设置，只要用户名输入框中有值，“发送”按钮就会一直处于启用状态，当为空时则禁用。
+有了这个设置，只要用户名输入框中有值，"发送"按钮就会一直处于启用状态，当为空时则禁用。
 
 ### HTML
 

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 
 {{JSRef}}
 
-**`Number.isSafeInteger()`** 方法用来判断传入的参数值是否是一个“安全整数”（safe integer）。
+**`Number.isSafeInteger()`** 方法用来判断传入的参数值是否是一个"安全整数"（safe integer）。
 
 一个安全整数是一个符合下面条件的整数：
 

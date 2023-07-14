@@ -21,7 +21,7 @@ const sharePromise = window.navigator.share(data);
     - `url`: 要共享的 URL（ {{domxref("USVString")}} ）
     - `text`: 要共享的文本（ {{domxref("USVString")}} ）
     - `title`: 要共享的标题（ {{domxref("USVString")}}）
-    - `files`: 要共享的文件（“FrozenArray”）
+    - `files`: 要共享的文件（"FrozenArray"）
 
 ### 返回值
 

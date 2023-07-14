@@ -54,7 +54,7 @@ original_slug: learn/JavaScript/Building_blocks/相片走廊
 以下是本例中 CSS 文件最值得关注的部分：
 
 - `full-img <div>` 中有三个绝对定位的元素：一个显示全尺寸图片的 `<img>`，一个空 `<div>`（覆盖于 `<img>` 之上，且与之大小相同，用来设置半透明背景色来使图片变暗），和一个用来控制变暗效果的 `<button>`。
-- 将 `thumb-bar <div>` 中图片（即“缩略图”）的宽度设置为 20%，并且将它们沿左侧浮动，使得它们在同一行上依次排列。
+- 将 `thumb-bar <div>` 中图片（即"缩略图"）的宽度设置为 20%，并且将它们沿左侧浮动，使得它们在同一行上依次排列。
 
 JavaScript 部分则需要实现：
 
@@ -79,7 +79,7 @@ JavaScript 部分则需要实现：
 
 你需要：
 
-1. 将“Looping through images”注释下方的代码放到一个循环之中，这个循环会迭代数组中所有的文件名。
+1. 将"Looping through images"注释下方的代码放到一个循环之中，这个循环会迭代数组中所有的文件名。
 2. 对于每一次循环迭代，将占位符 `xxx` 替换为代表图像路径的字符串。我们需要设置每一个图像的 `src` 属性。请注意，每一张图像都在 `images` 文件夹内，文件名为 `pic1.jpg`、`pic2.jpg`，等等。
 
 ### 为每一个缩略图添加 click 事件监听器
@@ -93,7 +93,7 @@ JavaScript 部分则需要实现：
 最后还剩变亮/变暗的 `<button>`。我们已经提供了一个名为 `btn` 的变量来存储 `<button>` 的引用。需要添加一个 click 事件监听器：
 
 1. 检查当前 `<button>` 按钮的类名称，你可以使用 `getAttribute()` 方法获得。
-2. 如果类名是 `"dark"`，则将 `<button>` 的类名变为 `"light"`（使用 [`setAttribute()`](/zh-CN/docs/Web/API/Element/setAttribute)），文本内容变为“Lighten”，然后将蒙板 `<div>` 的 {{cssxref("background-color")}} 设为 `"rgba(0,0,0,0.5)"`。
+2. 如果类名是 `"dark"`，则将 `<button>` 的类名变为 `"light"`（使用 [`setAttribute()`](/zh-CN/docs/Web/API/Element/setAttribute)），文本内容变为"Lighten"，然后将蒙板 `<div>` 的 {{cssxref("background-color")}} 设为 `"rgba(0,0,0,0.5)"`。
 3. 如果类名不是 `"dark"`，则将 `<button>` 的类名变为 `"dark"`，文本内容变为 "Darken"，然后将蒙板 `<div>` 的 {{cssxref("background-color")}} 设为 `"rgba(0,0,0,0)"`。
 
 以下是实现上述 2、3 点所提功能的基本代码：
@@ -115,7 +115,7 @@ overlay.style.backgroundColor = xxx;
 1. 将你完成的内容放到在线、可分享的编辑器，如：[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)。
 2. 在 [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250) 中发贴寻求打分评估或帮助。你的贴子需要包含：
 
-    - 一个描述的标题，如：“Assessment wanted for Image gallery”。
+    - 一个描述的标题，如："Assessment wanted for Image gallery"。
     - 你尝试的详细过程，以及你希望我们能够做什么，例如：你遇到了困难，想要寻求帮助；或希望得到打分评估。
     - 一个指向用于打分评估或寻求帮助的示例代码的链接（使用上文中提到的任意一种在线的、可分享的编辑器）。这是一种很好的形式——如果别人没法看到你的代码，他们很难对你提供代码上的帮助。
     - 一个指向实际任务或评估页面的链接，以便我们找到你需要得到帮助的问题。

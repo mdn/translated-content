@@ -37,7 +37,7 @@ some(callbackFn, thisArg)
 
 `some()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的每个元素调用一次指定的 `callbackFn` 函数，直到 `callbackFn` 返回一个[真值](/zh-CN/docs/Glossary/Truthy)。如果找到这样的元素，`some()` 方法将会立即返回 `true` 并停止遍历数组。否则，如果 `callbackFn` 对所有元素都返回[假值](/zh-CN/docs/Glossary/Falsy)，`some()` 就会返回 `false`。
 
-`some()` 类似于数学中的“存在量词（∃）”。特别地，在对于一个空数组，任何条件下它都返回 `false`。
+`some()` 类似于数学中的"存在量词（∃）"。特别地，在对于一个空数组，任何条件下它都返回 `false`。
 
 `callbackFn` 仅针对已分配值的数组索引调用。它不会为[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽调用。
 

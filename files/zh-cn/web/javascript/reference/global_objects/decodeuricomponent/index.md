@@ -24,7 +24,7 @@ decodeURIComponent(encodedURI)
 
 ### 异常
 
-当该方法使用不当时，将会抛出一个{{jsxref("URIError")}}（“格式错误的 URI 序列”）异常。
+当该方法使用不当时，将会抛出一个{{jsxref("URIError")}}（"格式错误的 URI 序列"）异常。
 
 ## 描述
 

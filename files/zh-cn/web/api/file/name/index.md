@@ -9,7 +9,7 @@ slug: Web/API/File/name
 
 ## 值
 
-一个字符串，包含不带路径的文件名，例如“My Resume.rtf”。
+一个字符串，包含不带路径的文件名，例如"My Resume.rtf"。
 
 ## 示例
 

@@ -5,7 +5,7 @@ slug: Web/HTTP/CORS
 
 {{HTTPSidebar}}
 
-**跨源资源共享**（{{Glossary("CORS")}}，或通俗地译为跨域资源共享）是一种基于 {{Glossary("HTTP")}} 头的机制，该机制通过允许服务器标示除了它自己以外的其他{{glossary("origin","源")}}（域、协议或端口），使得浏览器允许这些源访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的“预检”请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。
+**跨源资源共享**（{{Glossary("CORS")}}，或通俗地译为跨域资源共享）是一种基于 {{Glossary("HTTP")}} 头的机制，该机制通过允许服务器标示除了它自己以外的其他{{glossary("origin","源")}}（域、协议或端口），使得浏览器允许这些源访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的"预检"请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。
 
 跨源 HTTP 请求的一个例子：运行在 `https://domain-a.com` 的 JavaScript 代码使用 {{domxref("XMLHttpRequest")}} 来发起一个到 `https://domain-b.com/data.json` 的请求。
 
@@ -72,7 +72,7 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
 - 如果请求是使用 {{domxref("XMLHttpRequest")}} 对象发出的，在返回的 {{domxref("XMLHttpRequest.upload")}} 对象属性上没有注册任何事件监听器；也就是说，给定一个 {{domxref("XMLHttpRequest")}} 实例 `xhr`，没有调用 `xhr.upload.addEventListener()`，以监听该上传请求。
 - 请求中没有使用 {{domxref("ReadableStream")}} 对象。
 
-> **备注：** WebKit Nightly 和 Safari Technology Preview 为 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 和 {{HTTPHeader("Content-Language")}} 标头字段的值添加了额外的限制。如果这些标头字段的值是“非标准”的，WebKit/Safari 就不会将这些请求视为“简单请求”。WebKit/Safari 并没有在文档中列出哪些值是“非标准”的，不过我们可以在这里找到相关讨论：
+> **备注：** WebKit Nightly 和 Safari Technology Preview 为 {{HTTPHeader("Accept")}}、{{HTTPHeader("Accept-Language")}} 和 {{HTTPHeader("Content-Language")}} 标头字段的值添加了额外的限制。如果这些标头字段的值是"非标准"的，WebKit/Safari 就不会将这些请求视为"简单请求"。WebKit/Safari 并没有在文档中列出哪些值是"非标准"的，不过我们可以在这里找到相关讨论：
 >
 > - [Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language](https://bugs.webkit.org/show_bug.cgi?id=165178)
 > - [Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS](https://bugs.webkit.org/show_bug.cgi?id=165566)
@@ -137,11 +137,11 @@ Access-Control-Allow-Origin: *
 Access-Control-Allow-Origin: https://foo.example
 ```
 
-> **备注：** 当响应的是[附带身份凭证的请求](#附带身份凭证的请求)时，服务端**必须**明确 `Access-Control-Allow-Origin` 的值，而不能使用通配符“`*`”。
+> **备注：** 当响应的是[附带身份凭证的请求](#附带身份凭证的请求)时，服务端**必须**明确 `Access-Control-Allow-Origin` 的值，而不能使用通配符"`*`"。
 
 ### 预检请求
 
-与[简单请求](#简单请求)不同，“需预检的请求”要求必须首先使用 {{HTTPMethod("OPTIONS")}} 方法发起一个预检请求到服务器，以获知服务器是否允许该实际请求。"预检请求“的使用，可以避免跨域请求对服务器的用户数据产生未预期的影响。
+与[简单请求](#简单请求)不同，"需预检的请求"要求必须首先使用 {{HTTPMethod("OPTIONS")}} 方法发起一个预检请求到服务器，以获知服务器是否允许该实际请求。"预检请求"的使用，可以避免跨域请求对服务器的用户数据产生未预期的影响。
 
 如下是一个需要执行预检请求的 HTTP 请求：
 
@@ -154,7 +154,7 @@ xhr.onreadystatechange = handler;
 xhr.send('<person><name>Arun</name></person>');
 ```
 
-上面的代码使用 `POST` 请求发送一个 XML 请求体，该请求包含了一个非标准的 HTTP `X-PINGOTHER` 请求标头。这样的请求标头并不是 HTTP/1.1 的一部分，但通常对于 web 应用很有用处。另外，该请求的 `Content-Type` 为 `application/xml`，且使用了自定义的请求标头，所以该请求需要首先发起“预检请求”。
+上面的代码使用 `POST` 请求发送一个 XML 请求体，该请求包含了一个非标准的 HTTP `X-PINGOTHER` 请求标头。这样的请求标头并不是 HTTP/1.1 的一部分，但通常对于 web 应用很有用处。另外，该请求的 `Content-Type` 为 `application/xml`，且使用了自定义的请求标头，所以该请求需要首先发起"预检请求"。
 
 ![](preflight_correct.png)
 
@@ -287,7 +287,7 @@ function callOtherDomain() {
 }
 ```
 
-第 7 行将 {{domxref("XMLHttpRequest")}} 的 `withCredentials` 标志设置为 `true`，从而向服务器发送 Cookies。因为这是一个简单 `GET` 请求，所以浏览器不会对其发起“预检请求”。但是，如果服务器端的响应中未携带 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true`，浏览器将**不会**把响应内容返回给请求的发送者。
+第 7 行将 {{domxref("XMLHttpRequest")}} 的 `withCredentials` 标志设置为 `true`，从而向服务器发送 Cookies。因为这是一个简单 `GET` 请求，所以浏览器不会对其发起"预检请求"。但是，如果服务器端的响应中未携带 {{HTTPHeader("Access-Control-Allow-Credentials")}}`: true`，浏览器将**不会**把响应内容返回给请求的发送者。
 
 ![](cred-req-updated.png)
 
@@ -337,15 +337,15 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 在响应附带身份凭证的请求时：
 
-- 服务器**不能**将 `Access-Control-Allow-Origin` 的值设为通配符“`*`”，而应将其设置为特定的域，如：`Access-Control-Allow-Origin: https://example.com`。
+- 服务器**不能**将 `Access-Control-Allow-Origin` 的值设为通配符"`*`"，而应将其设置为特定的域，如：`Access-Control-Allow-Origin: https://example.com`。
 
-- 服务器**不能**将 `Access-Control-Allow-Headers` 的值设为通配符“`*`”，而应将其设置为标头名称的列表，如：`Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
+- 服务器**不能**将 `Access-Control-Allow-Headers` 的值设为通配符"`*`"，而应将其设置为标头名称的列表，如：`Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
 
-- 服务器**不能**将 `Access-Control-Allow-Methods` 的值设为通配符“`*`”，而应将其设置为特定请求方法名称的列表，如：`Access-Control-Allow-Methods: POST, GET`
+- 服务器**不能**将 `Access-Control-Allow-Methods` 的值设为通配符"`*`"，而应将其设置为特定请求方法名称的列表，如：`Access-Control-Allow-Methods: POST, GET`
 
 对于附带身份凭证的请求（通常是 `Cookie`），
 
-这是因为请求的标头中携带了 `Cookie` 信息，如果 `Access-Control-Allow-Origin` 的值为“`*`”，请求将会失败。而将 `Access-Control-Allow-Origin` 的值设置为 `https://example.com`，则请求将成功执行。
+这是因为请求的标头中携带了 `Cookie` 信息，如果 `Access-Control-Allow-Origin` 的值为"`*`"，请求将会失败。而将 `Access-Control-Allow-Origin` 的值设置为 `https://example.com`，则请求将成功执行。
 
 另外，响应标头中也携带了 `Set-Cookie` 字段，尝试对 Cookie 进行修改。如果操作失败，将会抛出异常。
 
@@ -369,7 +369,7 @@ Cookie 策略受 [SameSite](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesame
 Access-Control-Allow-Origin: <origin> | *
 ```
 
-`Access-Control-Allow-Origin` 参数指定了单一的源，告诉浏览器允许该源访问资源。或者，对于**不需要携带**身份凭证的请求，服务器可以指定该字段的值为通配符“`*`”，表示允许来自任意源的请求。
+`Access-Control-Allow-Origin` 参数指定了单一的源，告诉浏览器允许该源访问资源。或者，对于**不需要携带**身份凭证的请求，服务器可以指定该字段的值为通配符"`*`"，表示允许来自任意源的请求。
 
 例如，为了允许来自 `https://mozilla.org` 的代码访问资源，你可以指定：
 
@@ -378,7 +378,7 @@ Access-Control-Allow-Origin: https://mozilla.org
 Vary: Origin
 ```
 
-如果服务端指定了具体的单个源（作为允许列表的一部分，可能会根据请求的来源而动态改变）而非通配符“`*`”，那么响应标头中的 {{HTTPHeader("Vary")}} 字段的值必须包含 `Origin`。这将告诉客户端：服务器对不同的 {{HTTPHeader("Origin")}} 返回不同的内容。
+如果服务端指定了具体的单个源（作为允许列表的一部分，可能会根据请求的来源而动态改变）而非通配符"`*`"，那么响应标头中的 {{HTTPHeader("Vary")}} 字段的值必须包含 `Origin`。这将告诉客户端：服务器对不同的 {{HTTPHeader("Origin")}} 返回不同的内容。
 
 ### Access-Control-Expose-Headers
 
@@ -494,5 +494,5 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 - [Stack Overflow 面对常见问题的解答](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
 
   - 如何避免 CORS 预检请求
-  - 如何利用 CORS 代理避免“_No Access-Control-Allow-Origin header_”
-  - 如何修复“_Access-Control-Allow-Origin header must not be the wildcard_”
+  - 如何利用 CORS 代理避免"_No Access-Control-Allow-Origin header_"
+  - 如何修复"_Access-Control-Allow-Origin header must not be the wildcard_"

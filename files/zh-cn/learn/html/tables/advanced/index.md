@@ -74,10 +74,10 @@ slug: Learn/HTML/Tables/Advanced
 让我们动手使用这些新元素。
 
 1. 首先，把 [spending-record.html](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/spending-record.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/advanced/minimal-table.css) 复制到你的本地环境。
-2. 尝试在浏览器中打开它，你会发现看起来不错，但是它可以被改善得更好。“SUM”行包含了已经使用的金额的总和，不过它出现在了错误的位置，以及代码中还遗失了一些细节。
-3. 将明显的标题行改为使用 `<thead>` 元素，“SUM”行使用 `<tfoot>` 元素，剩余的内容使用 `<tbody>` 元素。
-4. 先保存，再刷新。你会看到，添加了 `<tfoot>` 元素后，“SUM”行跑到了表格的底部。
-5. 接着，添加一个 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，使“SUM”单元格占 4 个单元格的位置，所以实际数字是显示在“Cost”列的底部。
+2. 尝试在浏览器中打开它，你会发现看起来不错，但是它可以被改善得更好。"SUM"行包含了已经使用的金额的总和，不过它出现在了错误的位置，以及代码中还遗失了一些细节。
+3. 将明显的标题行改为使用 `<thead>` 元素，"SUM"行使用 `<tfoot>` 元素，剩余的内容使用 `<tbody>` 元素。
+4. 先保存，再刷新。你会看到，添加了 `<tfoot>` 元素后，"SUM"行跑到了表格的底部。
+5. 接着，添加一个 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，使"SUM"单元格占 4 个单元格的位置，所以实际数字是显示在"Cost"列的底部。
 6. 让我们为表格添加一些简单的额外属性，能够让你理解这些属性是如何帮助更好地让表格应用 CSS 的。在你的 HTML 文件的 head 标签部分，你会看到一个空的 {{htmlelement("style")}} 元素。在 style 元素中添加下列 CSS 代码：
 
    ```css
@@ -369,7 +369,7 @@ th {
 
 屏幕阅读器会识别这种结构化的标记，并一次读出整列或整行。
 
-`scope` 还有两个可选的值： `colgroup` 和 `rowgroup`。这些用于位于多个列或行的顶部的标题。如果你回顾这部分文章开始部分的“2016 年 8 月出售的物品”表格，你会看到“衣物”单元格在“长裤”、“衬衫”和“裙子”单元格的上面。这几个单元格都应该被标记为表头（`<th>`），但是“衣物”是一个位于顶部且定义了其他三个子标题的表头。因此“衣物”应该有一个 `scope="colgroup"` 属性，而另外三个子标题应该有 `scope="col"` 属性。
+`scope` 还有两个可选的值： `colgroup` 和 `rowgroup`。这些用于位于多个列或行的顶部的标题。如果你回顾这部分文章开始部分的"2016 年 8 月出售的物品"表格，你会看到"衣物"单元格在"长裤"、"衬衫"和"裙子"单元格的上面。这几个单元格都应该被标记为表头（`<th>`），但是"衣物"是一个位于顶部且定义了其他三个子标题的表头。因此"衣物"应该有一个 `scope="colgroup"` 属性，而另外三个子标题应该有 `scope="col"` 属性。
 
 ### id 和标题属性
 

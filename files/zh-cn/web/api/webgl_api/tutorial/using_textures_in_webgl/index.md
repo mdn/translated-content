@@ -13,7 +13,7 @@ slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 
 > **备注：** 值得注意的一点是对纹理的加载同样需要遵循[跨域访问规则](/zh-CN/docs/Web/HTTP/CORS)；也就是说你只能从允许跨域访问的网址加载你需要的纹理。见[下方跨域纹理](#跨域纹理)小节以了解详情。
 
-> **备注：** 在你的“webgl-demo.js”脚本中添加下面的两个函数：
+> **备注：** 在你的"webgl-demo.js"脚本中添加下面的两个函数：
 
 ```js
 //
@@ -127,7 +127,7 @@ gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 
 现在，纹理已加载并准备就绪。但在我们使用它之前，我们需要建立纹理坐标到立方体上的面的顶点的映射。这将取代 `initBuffers()` 中为设置每个立方体面颜色而存在的所有先前的代码。
 
-> **备注：** 添加这个函数到“init-buffer.js”模块：
+> **备注：** 添加这个函数到"init-buffer.js"模块：
 
 ```js
 function initTextureBuffer(gl) {
@@ -169,13 +169,13 @@ function initTextureBuffer(gl) {
 
 接下来，我们需要更新 `initBuffers()` 来创建并返回纹理坐标缓冲区代替颜色缓冲区。
 
-> **备注：** 在“init-buffers.js”模块的 `initBuffers()` 函数中，将 `initColorBuffer()` 的调用替换为下面的这行：
+> **备注：** 在"init-buffers.js"模块的 `initBuffers()` 函数中，将 `initColorBuffer()` 的调用替换为下面的这行：
 
 ```js
 const textureCoordBuffer = initTextureBuffer(gl);
 ```
 
-> **备注：** 在“init-buffers.js”模块的 `initBuffers()` 函数中，将 `return` 语句替换为以下内容：
+> **备注：** 在"init-buffers.js"模块的 `initBuffers()` 函数中，将 `return` 语句替换为以下内容：
 
 ```js
 return {
@@ -257,7 +257,7 @@ const programInfo = {
 
 对 `drawScene()` 函数的更改很简单。
 
-> **备注：** 在“draw-scene.js”模块的 `drawScene()` 函数中添加以下函数：
+> **备注：** 在"draw-scene.js"模块的 `drawScene()` 函数中添加以下函数：
 
 ```js
 // 告诉 WebGL 如何从缓冲区中提取纹理坐标
@@ -280,7 +280,7 @@ function setTextureAttribute(gl, buffers, programInfo) {
 }
 ```
 
-> **备注：** 在你的“draw-scene.js”模块的 `drawScene()` 函数中，用下面一行替换 `setColorAttribute()` 的调用：
+> **备注：** 在你的"draw-scene.js"模块的 `drawScene()` 函数中，用下面一行替换 `setColorAttribute()` 的调用：
 
 ```js
 setTextureAttribute(gl, buffers, programInfo);
@@ -329,6 +329,6 @@ drawScene(gl, programInfo, buffers, texture, cubeRotation);
 
 [这篇文章](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/)也对跨域加载纹理到 WebGL 做出了解释。而且文章里面还包含了一个使用的[例子](https://people.mozilla.org/~bjacob/webgltexture-cors-js.html)。
 
-被污染过的（只写）画布是不能拿来当作 WebGL 纹理来使用的。举个例子来说，当把一张跨域的图片画到一个 2D 的 {{ HTMLElement("canvas") }} 中时，这个画布就是“被污染过的”。
+被污染过的（只写）画布是不能拿来当作 WebGL 纹理来使用的。举个例子来说，当把一张跨域的图片画到一个 2D 的 {{ HTMLElement("canvas") }} 中时，这个画布就是"被污染过的"。
 
 {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

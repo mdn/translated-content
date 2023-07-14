@@ -33,13 +33,13 @@ toBlob(callback, type, quality)
 ### 异常
 
 - `SecurityError`
-  - : canvas“[被污染](/zh-CN/docs/Web/HTML/CORS_enabled_image)”的情况下不能使用此方法。
+  - : canvas"[被污染](/zh-CN/docs/Web/HTML/CORS_enabled_image)"的情况下不能使用此方法。
 
 ## 示例
 
 ### 将 canvas 图像转换为文件
 
-当一个内容画到 canvas 上时，我们可以将它生成任何一个格式支持的图片文件。比如，下面的代码段获得了 id 为“canvas”的 {{HTMLElement("canvas")}} 元素中的图像，复制成一个 PNG 图，在文档中加入一个新的 {{HTMLElement("img")}} 元素，这个 {{HTMLElement("img")}} 元素的源图就是使用 canvas 创建的那个图像。
+当一个内容画到 canvas 上时，我们可以将它生成任何一个格式支持的图片文件。比如，下面的代码段获得了 id 为"canvas"的 {{HTMLElement("canvas")}} 元素中的图像，复制成一个 PNG 图，在文档中加入一个新的 {{HTMLElement("img")}} 元素，这个 {{HTMLElement("img")}} 元素的源图就是使用 canvas 创建的那个图像。
 
 ```js
 var canvas = document.getElementById("canvas");

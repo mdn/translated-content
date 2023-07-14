@@ -121,7 +121,7 @@ counter-reset: reversed(section);
 
 ### 基础示例
 
-以下示例会在每一个标题前添加一个“Section \[the value of the counter]:”字符串。
+以下示例会在每一个标题前添加一个"Section \[the value of the counter]:"字符串。
 
 #### CSS
 

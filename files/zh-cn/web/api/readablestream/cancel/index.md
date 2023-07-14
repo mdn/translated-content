@@ -32,7 +32,7 @@ cancel(reason)
 
 ## 示例
 
-在 Jake Archibald 的[取消一个 fetch](https://jsbin.com/gameboy/edit?js,console) 示例中，流用于逐块获取 WHATWG HTML 规范；并在每个块中搜索“service workers”字符串。当找到搜索词时，使用 `cancel()` 取消流——作业已被完成，因此不再需要它。
+在 Jake Archibald 的[取消一个 fetch](https://jsbin.com/gameboy/edit?js,console) 示例中，流用于逐块获取 WHATWG HTML 规范；并在每个块中搜索"service workers"字符串。当找到搜索词时，使用 `cancel()` 取消流——作业已被完成，因此不再需要它。
 
 ```js
 var searchTerm = "service workers";

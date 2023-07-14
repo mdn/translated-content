@@ -66,7 +66,7 @@ When doing x it is imperative to do y before proceeding.
 
 ### Emphasis vs. Strong
 
-在 HTML4 时，Strong 简单地表示一个更强的强调 (emphasis)，而在 HTML5 中，这个元素被描述为表征“内容强烈的重要性 (strong importance for its contents) ”。这是一个重要的区别。Em 标签 (Emphasis) 用于改变一个句子的意思 (比如"我\<em>*喜欢\</em>*胡萝卜" 和"我喜欢\<em>_胡萝卜\</em>_"，分别强调喜欢和胡萝卜), Strong 用来对一个句子的部分增加重要性 (比如 "**警告！** 这**非常危险**。") Strong 和 Emphasis 都可以分别通过嵌套来增加相对重要性或强调重点。
+在 HTML4 时，Strong 简单地表示一个更强的强调 (emphasis)，而在 HTML5 中，这个元素被描述为表征"内容强烈的重要性 (strong importance for its contents) "。这是一个重要的区别。Em 标签 (Emphasis) 用于改变一个句子的意思 (比如"我\<em>*喜欢\</em>*胡萝卜" 和"我喜欢\<em>_胡萝卜\</em>_"，分别强调喜欢和胡萝卜), Strong 用来对一个句子的部分增加重要性 (比如 "**警告！** 这**非常危险**。") Strong 和 Emphasis 都可以分别通过嵌套来增加相对重要性或强调重点。
 
 ## 规范
 

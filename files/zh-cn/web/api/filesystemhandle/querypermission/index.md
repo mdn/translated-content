@@ -25,7 +25,7 @@ queryPermission(fileSystemHandlePermissionDescriptor)
 
 {{domxref('PermissionStatus.state')}}，值为 `'granted'`、`'denied'` 或 `'prompt'` 三者之一。
 
-如果此方法返回了“prompt”，则站点必须在对句柄进行任何操作前调用 requestPermission() 请求授权。如果此方法返回了“denied”，则任何操作都会被拒绝。从本地文件系统句柄构造器返回的句柄通常会在初始时对只读权限状态返回“granted”。但是，除开用户收回了权限的情况，从 IndexedDB 获取的句柄也有可能会返回“prompt”。
+如果此方法返回了"prompt"，则站点必须在对句柄进行任何操作前调用 requestPermission() 请求授权。如果此方法返回了"denied"，则任何操作都会被拒绝。从本地文件系统句柄构造器返回的句柄通常会在初始时对只读权限状态返回"granted"。但是，除开用户收回了权限的情况，从 IndexedDB 获取的句柄也有可能会返回"prompt"。
 
 ### 异常
 

@@ -9,7 +9,7 @@ slug: Web/API/DataTransfer/clearData
 
 如果调用此方法时没有传入参数，或者参数为空{{domxref("DOMString","字符串")}}，则将删除所有类型的数据。
 
-此方法不会从拖动操作中删除文件，因此如果有任何文件包含在对象的 {{domxref("DataTransfer.types")}} 列表中，仍然可能有一个类型为“Files”的条目在拖动。
+此方法不会从拖动操作中删除文件，因此如果有任何文件包含在对象的 {{domxref("DataTransfer.types")}} 列表中，仍然可能有一个类型为"Files"的条目在拖动。
 
 > **备注：** 该方法只能在 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件的处理程序中使用，因为这是拖动操作的数据存储唯一能写入的时间。
 

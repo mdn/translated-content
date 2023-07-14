@@ -41,7 +41,7 @@ remove(options)
 
 ## 示例
 
-我们的 [FileSystemHandle.remove() 演示](https://filesystemhandle-remove.glitch.me/)（参阅[源代码](https://glitch.com/edit/#!/filesystemhandle-remove)）是个用于创建文件的应用。你可以在 {{htmlelement("textarea")}} 中输入文本然后按下“Save file” {{htmlelement("button")}}，然后应用会打开一个文件选择器以允许你将输入的文本保存到你在你的本地文件系统中选择的文件。你还可以删除你创建的文件。
+我们的 [FileSystemHandle.remove() 演示](https://filesystemhandle-remove.glitch.me/)（参阅[源代码](https://glitch.com/edit/#!/filesystemhandle-remove)）是个用于创建文件的应用。你可以在 {{htmlelement("textarea")}} 中输入文本然后按下"Save file" {{htmlelement("button")}}，然后应用会打开一个文件选择器以允许你将输入的文本保存到你在你的本地文件系统中选择的文件。你还可以删除你创建的文件。
 
 这个应用不能让你查看创建出的文件的内容，也无法在重载或关闭页面后仍然保持与底层文件系统同步。也就是说，如果你不在重载或关闭标签页前删除你创建的文件，那这些文件仍然会存留于你的文件系统中。
 
@@ -50,9 +50,9 @@ remove(options)
 一旦在文件系统上创建了一个文件，应用便会创建一个条目（参阅源代码中的 `processNewFile()`）：
 
 - 对文件句柄的引用存放在一个名为 `savedFileRefs` 的数组中，以便此后引用。
-- UI 中的“Saved files”标题下会添加一个列表项，上面会显示文件名，旁边还有一个“Delete”按钮。
+- UI 中的"Saved files"标题下会添加一个列表项，上面会显示文件名，旁边还有一个"Delete"按钮。
 
-当按下“Delete”按钮时，会执行 `deleteFile()` 函数，其内容如下：
+当按下"Delete"按钮时，会执行 `deleteFile()` 函数，其内容如下：
 
 ```js
 async function deleteFile(e) {

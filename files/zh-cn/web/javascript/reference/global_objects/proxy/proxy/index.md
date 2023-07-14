@@ -29,7 +29,7 @@ new Proxy(target, handler)
 
 ### 处理函数
 
-本节列出了所有你可以自定义的处理函数。处理函数有时候也被成为“劫持”（traps），这是由于它们会对底层被代理对象的调用进行劫持。
+本节列出了所有你可以自定义的处理函数。处理函数有时候也被成为"劫持"（traps），这是由于它们会对底层被代理对象的调用进行劫持。
 
 - {{JSxRef("Global_Objects/Proxy/Proxy/apply", "handler.apply()")}}
   - : 函数调用劫持。

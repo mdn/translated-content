@@ -92,7 +92,7 @@ web 开发者们一直以来想在 Web 中使用音频和视频，自 21 世纪�
 
 有一些特殊情况。例如，对于某些类型的音频，通常编解码器的数据存储没有容器或简化容器。其中一个例子就是 FLAC 编解码器，它通常存储在 FLAC 文件中，FLAC 文件只是 FLAC 的原始轨迹。
 
-另一种情况是一直流行的 MP3 文件。“MP3 文件”实际上是存储在 MPEG 或 MPEG-2 容器中的 MPEG-1 音频层 III（MPEG-1 Audio Layer III，MP3）音频轨道。这一点特别有趣，因为尽管大多数浏览器不支持在{{HTMLElement("video")}}和{{HTMLElement("audio")}}元素中使用 MPEG 媒体，但由于 MP3 的流行，它们可能仍然支持 MP3。
+另一种情况是一直流行的 MP3 文件。"MP3 文件"实际上是存储在 MPEG 或 MPEG-2 容器中的 MPEG-1 音频层 III（MPEG-1 Audio Layer III，MP3）音频轨道。这一点特别有趣，因为尽管大多数浏览器不支持在{{HTMLElement("video")}}和{{HTMLElement("audio")}}元素中使用 MPEG 媒体，但由于 MP3 的流行，它们可能仍然支持 MP3。
 
 音频播放器将会直接播放音频文件，例如 MP3 和 Ogg 文件。这些不需要容器。
 
@@ -221,7 +221,7 @@ mediaElem.audioTracks.onaddtrack = function(event) {
 
 给那些听不懂音频语言的人们提供一个音频内容的副本岂不是一件很棒的事情吗？所以，感谢 HTML5 `<video>` 使之成为可能，有了 [WebVTT](/zh-CN/docs/Web/API/Web_Video_Text_Tracks_Format) 格式，你可以使用 {{htmlelement("track")}} 标签。
 
-> **备注：** “副本”的意思是指，用文本记录下音频的内容。
+> **备注：** "副本"的意思是指，用文本记录下音频的内容。
 
 WebVTT 是一个格式，用来编写文本文件，这个文本文件包含了众多的字符串，这些字符串会带有一些元数据，它们可以用来描述这个字符串将会在视频中显示的时间，甚至可以用来描述这些字符串的样式以及定位信息。这些字符串叫做 **cues** ，你可以根据不同的需求来显示不同的样式，最常见的如下：
 

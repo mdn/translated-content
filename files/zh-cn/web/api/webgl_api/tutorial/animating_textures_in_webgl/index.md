@@ -11,14 +11,14 @@ slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 
 第一步是创建将用于检索视频帧的 {{ HTMLElement("video") }} 元素：
 
-> **备注：** 请将以下声明添加到“webgl-demo.js”脚本的开头：
+> **备注：** 请将以下声明添加到"webgl-demo.js"脚本的开头：
 
 ```js
 // 当视频可以复制到纹理中时将被设置为 true
 let copyVideo = false;
 ```
 
-> **备注：** 请将以下函数添加到“webgl-demo.js”脚本中：
+> **备注：** 请将以下函数添加到"webgl-demo.js"脚本中：
 
 ```js
 function setupVideo(url) {
@@ -73,7 +73,7 @@ function setupVideo(url) {
 
 接下来的更改是初始化纹理，这很简单，因为它不再需要加载图像文件。相反，它所做的只是创建一个空的纹理对象，在其中放置一个像素，然后设置其过滤条件以供后续使用：
 
-> **备注：** 请将“webgl-demo.js”中的 `loadTexture()` 函数替换为以下代码：
+> **备注：** 请将"webgl-demo.js"中的 `loadTexture()` 函数替换为以下代码：
 
 ```js
 function initTexture(gl) {
@@ -114,7 +114,7 @@ function initTexture(gl) {
 }
 ```
 
-> **备注：** 请将以下函数添加到“webgl-demo.js”中：
+> **备注：** 请将以下函数添加到"webgl-demo.js"中：
 
 ```js
 function updateTexture(gl, texture, video) {

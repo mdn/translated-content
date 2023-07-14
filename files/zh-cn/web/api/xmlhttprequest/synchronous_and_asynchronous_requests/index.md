@@ -5,7 +5,7 @@ slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 
 `XMLHttpRequest` 支持同步和异步通信。但是，一般来说，出于性能原因，异步请求应优先于同步请求。
 
-同步请求阻止代码的执行，这会导致屏幕上出现“冻结”和无响应的用户体验。
+同步请求阻止代码的执行，这会导致屏幕上出现"冻结"和无响应的用户体验。
 
 ## 异步请求
 
@@ -73,9 +73,9 @@ function showMessage(message) {
 loadFile("message.txt", showMessage, "New message!\n\n");
 ```
 
-实用函数 loadFile 的签名声明（i）要读取的目标 URL（通过 HTTP GET），（ii）成功完成 XHR 操作时执行的函数，以及（iii）任意列表的附加参数“通过“XHR 对象到成功回调函数。
+实用函数 loadFile 的签名声明（i）要读取的目标 URL（通过 HTTP GET），（ii）成功完成 XHR 操作时执行的函数，以及（iii）任意列表的附加参数"通过"XHR 对象到成功回调函数。
 
-第 1 行声明 XHR 操作成功完成时调用的函数。它又调用已经分配给 XHR 对象（第 7 行）属性的 loadFile 函数（本例中为函数 showMessage）的调用中指定的回调函数。提供给调用函数 loadFile 的附加参数（如果有的话）被“应用”到回调函数的运行中。
+第 1 行声明 XHR 操作成功完成时调用的函数。它又调用已经分配给 XHR 对象（第 7 行）属性的 loadFile 函数（本例中为函数 showMessage）的调用中指定的回调函数。提供给调用函数 loadFile 的附加参数（如果有的话）被"应用"到回调函数的运行中。
 
 第 5 行声明 XHR 操作无法成功完成时调用的函数。
 

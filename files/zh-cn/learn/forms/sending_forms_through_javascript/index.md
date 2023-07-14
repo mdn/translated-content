@@ -17,7 +17,7 @@ slug: Learn/Forms/Sending_forms_through_JavaScript
 
 许多现代用户界面只使用 HTML 表单来收集用户的输入。当用户尝试发送数据时，应用程序将在后台采取控制并且异步地传输数据，只更新 UI 中需要更改的部分。
 
-异步地发送任何数据被称为 [AJAX](/zh-CN/docs/Web/Guide/AJAX)，它代表“**异步 JavaScript 和 XML**”（Asynchronous JavaScript And XML）。
+异步地发送任何数据被称为 [AJAX](/zh-CN/docs/Web/Guide/AJAX)，它代表"**异步 JavaScript 和 XML**"（Asynchronous JavaScript And XML）。
 
 ### 表单提交和 AJAX 请求之间的区别？
 
@@ -96,7 +96,7 @@ function sendData(data) {
 
 手动建立一个 HTTP 请求非常困难。幸运的是，最近的 [XMLHttpRequest 规范](http://www.w3.org/TR/XMLHttpRequest/)提供了一种方便简单的方法 — 利用{{domxref("XMLHttpRequest/FormData","FormData")}}对象来处理表单数据请求。
 
-{{domxref("XMLHttpRequest/FormData","FormData")}} 对象可以用来构建用于传输的表单数据，或是获取表单元素中的数据来管理它的发送方式。请注意，{{domxref("XMLHttpRequest/FormData","FormData")}} 对象是“只写”的，这意味着您可以更改它们，但不能检索其内容。
+{{domxref("XMLHttpRequest/FormData","FormData")}} 对象可以用来构建用于传输的表单数据，或是获取表单元素中的数据来管理它的发送方式。请注意，{{domxref("XMLHttpRequest/FormData","FormData")}} 对象是"只写"的，这意味着您可以更改它们，但不能检索其内容。
 
 使用这个对象在[Using FormData Objects](/zh-CN/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)中有详细的介绍，不过这里有两个例子：
 
@@ -284,7 +284,7 @@ function sendData(data) {
 </form>
 ```
 
-如你所见，这个 HTML 只是一个标准的 `<form>`。没有什么神奇的事情发生。“魔法”都在 JavaScript 里：
+如你所见，这个 HTML 只是一个标准的 `<form>`。没有什么神奇的事情发生。"魔法"都在 JavaScript 里：
 
 ```js
 // 因为我们想获取 DOM 节点，

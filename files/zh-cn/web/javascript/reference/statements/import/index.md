@@ -42,7 +42,7 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
 
 ## 描述
 
-`name` 参数是“导入模块对象”的名称，它将用一种名称空间来引用导入模块的接口。export 参数指定单个的命名导出，而 `import * as name` 语法导入所有导出接口，即导入模块整体。以下示例阐明该语法。
+`name` 参数是"导入模块对象"的名称，它将用一种名称空间来引用导入模块的接口。export 参数指定单个的命名导出，而 `import * as name` 语法导入所有导出接口，即导入模块整体。以下示例阐明该语法。
 
 ### 导入整个模块的内容
 
@@ -52,7 +52,7 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
 import * as myModule from '/modules/my-module.js';
 ```
 
-在这里，访问导出接口意味着使用模块名称（在本例为“myModule”）作为命名空间。例如，如果上面导入的模块包含一个接口 `doAllTheAmazingThings()`，你可以这样调用：
+在这里，访问导出接口意味着使用模块名称（在本例为"myModule"）作为命名空间。例如，如果上面导入的模块包含一个接口 `doAllTheAmazingThings()`，你可以这样调用：
 
 ```js
 myModule.doAllTheAmazingThings();

@@ -47,7 +47,7 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 
 ### 登入
 
-在这个示例中，我们假设我们的托管提供商（将托管我们的 HTTP Web 服务器的服务）是一个虚构的公司“Example Hosting Provider”，其 URL 如下所示：`mypersonalwebsite.examplehostingprovider.net`。
+在这个示例中，我们假设我们的托管提供商（将托管我们的 HTTP Web 服务器的服务）是一个虚构的公司"Example Hosting Provider"，其 URL 如下所示：`mypersonalwebsite.examplehostingprovider.net`。
 
 我们刚刚开通了一个帐户，并从他们那里收到了这些信息：
 
@@ -69,7 +69,7 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 
 ![我们的 demozilla 个人网站，在浏览器中看起来是空的](demozilla-empty.png)
 
-> **备注：** 根据你的托管服务提供商的不同，大部分时间你会看到一个页面，内容如下：“此网站由 \[托管服务] 托管”。
+> **备注：** 根据你的托管服务提供商的不同，大部分时间你会看到一个页面，内容如下："此网站由 \[托管服务] 托管"。
 
 要将 SFTP 客户端连接到远程服务器，请执行以下步骤：
 
@@ -123,7 +123,7 @@ slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
 rsync [-options] SOURCE user@x.x.x.x:DESTINATION
 ```
 
-- `-options` 破折号后根一个或多个字母，例如 `-v` 用于详细展示错误消息，而 `-b` 用于进行备份你可用在 [rsync 手册页](https://linux.die.net/man/1/rsync)中查看完整的列表（搜索“Options summary”）。
+- `-options` 破折号后根一个或多个字母，例如 `-v` 用于详细展示错误消息，而 `-b` 用于进行备份你可用在 [rsync 手册页](https://linux.die.net/man/1/rsync)中查看完整的列表（搜索"Options summary"）。
 - `SOURCE` 是要从中复制文件的本地文件或目录的路径。
 - `user@` 是你要将文件复制到远程服务器上的用户的凭据。
 - `x.x.x.x` 是远程服务器的 IP 地址。

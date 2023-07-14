@@ -99,7 +99,7 @@ appearance: unset;
       <td><code>checkbox</code></td>
       <td>Firefox Chrome Safari Edge</td>
       <td>
-        该元素曾经被绘制为一个复选框，包括实际的“复选框”部分。
+        该元素曾经被绘制为一个复选框，包括实际的"复选框"部分。
       </td>
     </tr>
     <tr>
@@ -131,7 +131,7 @@ appearance: unset;
       <td><code>radio</code></td>
       <td>Firefox Chrome Safari Edge</td>
       <td>
-       该元素曾经被绘制为单选按钮，包括实际的“单选按钮”部分。
+       该元素曾经被绘制为单选按钮，包括实际的"单选按钮"部分。
       </td>
     </tr>
     <tr>

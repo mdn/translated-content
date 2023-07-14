@@ -39,7 +39,7 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 如果你看不到调试器，
 
-- 点击“检查”选项卡。
+- 点击"检查"选项卡。
 - 在 Internet Explorer 中，点击 DOM Explorer，或按 Ctrl + 1。
 - 在 Safari 中，控制就不是很清楚了，但是你如果你没有选择的东西出现在窗口看到 HTML。按下按钮查看 CSS 样式。
 
@@ -74,7 +74,7 @@ slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 
 - _计算：显示当前所选元素的计算样式（浏览器应用的最终归一化值）。_
 - _盒子模型：这可以直观地表示当前元素的框模型，所以您可以一目了然地看到应用了什么填充，边框和边距，以及它的内容有多大。_
-- 字体：在 Firefox 中，“字体”选项卡显示应用于当前元素的字体。
+- 字体：在 Firefox 中，"字体"选项卡显示应用于当前元素的字体。
 
 ### 了解更多
 
@@ -113,7 +113,7 @@ Safari：开打开发者工具，然后选择 "Debugger" 标签。
 
 ![](source_code.png)
 
-#### “监视表达式”和“断点”
+#### "监视表达式"和"断点"
 
 右边的面板会显示你添加的监视表达式与断点。
 

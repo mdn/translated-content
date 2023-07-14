@@ -65,7 +65,7 @@ slug: Web/HTML/Element/th
 
     > **备注：** 不要使用这个属性，因为它已经在最新标准中过时。应该使用 [`scope`](/zh-CN/docs/Web/HTML/Element/th#scope) 属性代替。
 - `bgcolor` {{Non-standard_inline}}
-  - : 这个属性定义了每列中每单元格的背景色。它由带有‘#’前缀的 6 位数的十六进制码组成，并在[sRGB](https://www.w3.org/Graphics/Color/sRGB)中被定义。这个属性可能会用到十六个预定义的颜色字符串儿之一。
+  - : 这个属性定义了每列中每单元格的背景色。它由带有'#'前缀的 6 位数的十六进制码组成，并在[sRGB](https://www.w3.org/Graphics/Color/sRGB)中被定义。这个属性可能会用到十六个预定义的颜色字符串儿之一。
 
     > **备注：** 不要使用这个属性，它不是标准属性且仅在某些版本的 Microsoft Internet Explorer 支持：{{HTMLElement("th")}} 元素应当用[CSS](/zh-CN/docs/CSS)来样式化。为了创造出同样的效果只需要使用[CSS](/zh-CN/docs/CSS)中的{{cssxref("background-color")}}属性就可以啦。
 

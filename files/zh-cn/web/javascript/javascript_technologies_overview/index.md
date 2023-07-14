@@ -7,11 +7,11 @@ slug: Web/JavaScript/JavaScript_technologies_overview
 
 [HTML](/zh-CN/docs/Web/HTML) 定义网页的结构与内容，[CSS](/zh-CN/docs/Web/CSS) 定义其格式与样式，而 [JavaScript](/zh-CN/docs/Web/JavaScript) 则为网页增加可交互性，创作功能丰富的 Web 应用。
 
-但是，如果从浏览器的范畴去理解“JavaScript”这个术语，它包含了截然不同的两个方面。一方面是 JavaScript 的核心语言（ECMAScript），另一方面是大量的 [Web API](/zh-CN/docs/Web/Reference/API)，包括 DOM（文档对象模型）。
+但是，如果从浏览器的范畴去理解"JavaScript"这个术语，它包含了截然不同的两个方面。一方面是 JavaScript 的核心语言（ECMAScript），另一方面是大量的 [Web API](/zh-CN/docs/Web/Reference/API)，包括 DOM（文档对象模型）。
 
 ## JavaScript 核心语言（ECMAScript）
 
-JavaScript 的核心语言是 ECMAScript，是一门由 ECMA TC39 委员会标准化的编程语言。“ECMAScript”是语言标准的术语，但“ECMAScript”和“JavaScript”是可以互换使用的。
+JavaScript 的核心语言是 ECMAScript，是一门由 ECMA TC39 委员会标准化的编程语言。"ECMAScript"是语言标准的术语，但"ECMAScript"和"JavaScript"是可以互换使用的。
 
 该核心语言同样可以被用在非浏览器环境之中，例如 [Node.js](https://nodejs.org)。
 
@@ -70,7 +70,7 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 - [DOM 事件](https://w3c.github.io/uievents/)中包括对于 DOM 事件架构的一个不太严格的定义，以及一些特殊事件。
 - [DOM 元素遍历](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html)以及 [DOM 范围](https://dom.spec.whatwg.org/#ranges)对象等其他内容。
 
-从 ECMAScript 的角度来看，DOM 规范中定义的对象被称作“宿主对象”。
+从 ECMAScript 的角度来看，DOM 规范中定义的对象被称作"宿主对象"。
 
 ### HTML DOM
 
@@ -104,9 +104,9 @@ mozilla.org 上托管了两个 JavaScript 实现。**首个** JavaScript 由网�
 - Google 的 [V8](http://code.google.com/p/v8/)，在 Google Chrome 浏览器和较新的 Opera 浏览器中使用。这同时也是[Node.js](https://nodejs.org/en/)使用的引擎。
 - [JavaScriptCore](http://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro)，被用在了一些 WebKit 浏览器如 Apple Safari。
 - [Carakan](http://my.opera.com/ODIN/blog/carakan-faq)，用在旧版本 Opera 中。
-- [Chakra](http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) 引擎，用在 Internet Explorer 中（尽管它实现的语言被正式地称作为“JScript”来避免商标问题）。
+- [Chakra](http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) 引擎，用在 Internet Explorer 中（尽管它实现的语言被正式地称作为"JScript"来避免商标问题）。
 
-每个 mozilla.org 的 JavaScript 引擎都提供了 公用 API 使程序开发者能将其 JavaScript 嵌入自己的软件中。目前最常见的 JavaScript 宿主环境是网页浏览器。浏览器一般通过 API 创建“宿主对象”来负责将[DOM](http://www.w3.org/DOM/) 反射到 JavaScript 中。
+每个 mozilla.org 的 JavaScript 引擎都提供了 公用 API 使程序开发者能将其 JavaScript 嵌入自己的软件中。目前最常见的 JavaScript 宿主环境是网页浏览器。浏览器一般通过 API 创建"宿主对象"来负责将[DOM](http://www.w3.org/DOM/) 反射到 JavaScript 中。
 
 另一个常见的 JavaScript 应用是作为服务端脚本语言。JavaScript 服务器提供宿主对象代表 HTTP 请求和响应，随后可以通过 JavaScript 程序来动态的生成 Web 页面。[Node.js](https://nodejs.org/en/)便是一个流行的例子。
 

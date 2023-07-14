@@ -9,7 +9,7 @@ slug: Web/API/KeyboardEvent/keyCode
 
 你应该尽量避免使用它；它已经被弃用了一段时间。相反的，如果它在你的浏览器中被实现了的话，你应该使用{{domxref("KeyboardEvent.code")}}。不幸的是，有一些浏览器还是没有实现它，所以你在使用之前必须要小心，确认你所使用的那个被所有目标浏览器所支持。
 
-> **备注：** 在处理 keydown 和 keyup 事件时，Web 开发人员不应使用可打印字符的 keycode 属性。如上所述，keycode 属性对可打印字符不有用，尤其是那些按下 shift 或 alt 键的输入。在实现快捷键处理程序时，事件（“keypress”）事件通常更好（至少当 gecko 是正在使用的运行时）。详情请参见 Gecko 按键事件。
+> **备注：** 在处理 keydown 和 keyup 事件时，Web 开发人员不应使用可打印字符的 keycode 属性。如上所述，keycode 属性对可打印字符不有用，尤其是那些按下 shift 或 alt 键的输入。在实现快捷键处理程序时，事件（"keypress"）事件通常更好（至少当 gecko 是正在使用的运行时）。详情请参见 Gecko 按键事件。
 
 ## Example
 
@@ -48,7 +48,7 @@ window.addEventListener("keydown", function (event) {
 在标准位置按下或释放可打印键导致的按键事件值在浏览器之间不兼容。
 IE 只将本机虚拟密钥代码值公开为 keyboardvent.keycode。
 Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果输入字符可以用 US 键盘布局输入，则使用 US 键盘布局上的 keycode 值。
-从 gecko 15 geckore lease（“15.0”）开始，gecko 从一个可由键输入的 ASCII 字符（即使具有移位修饰符或支持 ASCII 的键盘布局）决定键码值。有关详细信息，请参见以下规则：
+从 gecko 15 geckore lease（"15.0"）开始，gecko 从一个可由键输入的 ASCII 字符（即使具有移位修饰符或支持 ASCII 的键盘布局）决定键码值。有关详细信息，请参见以下规则：
 
 1. 如果系统是 Windows，并且按下键的本机键代码指示键是 A-Z 或 0-9，请使用 keycode。
 2. 如果系统是 Mac，并且按下键的本机键码指示键为 0-9，则使用 keycode。
@@ -1370,9 +1370,9 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
   </tbody>
 </table>
 
-1. 在 Windows 上，“altgraph”键导致“controlLeft”键事件和“altRight”键事件。
-2. 当日语键盘布局处于活动状态时，“capslock”键没有 <kbd>Shift</kbd> 会导致 0xf0（240）。该键作为“`Alphanumeric`”键工作，其标签为“英数”。
-3. 当日语键盘布局处于活动状态时，“capslock”键没有 <kbd>Shift</kbd> 会导致 0x00（0）。该键作为“`Alphanumeric`”键工作，其标签为“英数”。
+1. 在 Windows 上，"altgraph"键导致"controlLeft"键事件和"altRight"键事件。
+2. 当日语键盘布局处于活动状态时，"capslock"键没有 <kbd>Shift</kbd> 会导致 0xf0（240）。该键作为"`Alphanumeric`"键工作，其标签为"英数"。
+3. 当日语键盘布局处于活动状态时，"capslock"键没有 <kbd>Shift</kbd> 会导致 0x00（0）。该键作为"`Alphanumeric`"键工作，其标签为"英数"。
 
 由不可打印的键引起的每个浏览器的 keydown 事件的 keycode 值：
 
@@ -1665,11 +1665,11 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
 </table>
 
 1. keypress 事件被激发，其 keypcode 和 charcode 为 0x10（16），但文本未输入编辑器。
-2. 在 Mac 电脑上，“`Help`”键映射到电脑键盘的“`Insert`”键。这些`keyCode` 值与“`Insert`”键的`keyCode`值相同。
+2. 在 Mac 电脑上，"`Help`"键映射到电脑键盘的"`Insert`"键。这些`keyCode` 值与"`Insert`"键的`keyCode`值相同。
 3. 在 Fedora 20 上测试。
 4. 仅激发 keyup 事件。
-5. PC 的“`PrintScreen`”、“`ScrollLock`”和“`Pause`”映射到 Mac 的“F13”、“F14”和“F15”。Chrome 和 Safari 用 Mac 的键映射相同的`keyCode`值。
-6. “`Pause`”键加上 <kbd>Control</kbd> 导致 0x03（3）。
+5. PC 的"`PrintScreen`"、"`ScrollLock`"和"`Pause`"映射到 Mac 的"F13"、"F14"和"F15"。Chrome 和 Safari 用 Mac 的键映射相同的`keyCode`值。
+6. "`Pause`"键加上 <kbd>Control</kbd> 导致 0x03（3）。
 
 由功能键引起的每个浏览器的 keydown 事件的 keycode 值：
 
@@ -2029,7 +2029,7 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
 </table>
 
 1. 在 Fedora 20 上测试。
-2. PC 的“`PrintScreen`”、“`ScrollLock`”和“`Pause`”映射到 Mac 的“F13”、“F14”和“F15”。火狐映射到和 PC 相同的`keyCode`。
+2. PC 的"`PrintScreen`"、"`ScrollLock`"和"`Pause`"映射到 Mac 的"F13"、"F14"和"F15"。火狐映射到和 PC 相同的`keyCode`。
 3. 在 Fedora 20 上测试。这些键不会导致`GDK_Fxx` 按键符号。如果键产生正确的按键符号，这些值必须与 IE 相同。
 4. 在 Fedora 20 上测试。这些键不会在 chromium 上引起 dom 键事件。
 5. keyup 事件的 keycode 值为 0x83（131）。
@@ -2367,7 +2367,7 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
   </tbody>
 </table>
 
-1. “numlock”键在 Mac 上作为“clear”键工作。
+1. "numlock"键在 Mac 上作为"clear"键工作。
 
 由处于无 numlock 状态的 numpad 中的键引起的每个浏览器的 keydown 事件的 keycode 值
 
@@ -2500,7 +2500,7 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
   </tbody>
 </table>
 
-最近的 Mac 没有“numlock”键和状态。因此，未锁定状态不可用。
+最近的 Mac 没有"numlock"键和状态。因此，未锁定状态不可用。
 
 ## 常数值的键码
 

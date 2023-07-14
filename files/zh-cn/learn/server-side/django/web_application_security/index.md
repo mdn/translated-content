@@ -33,19 +33,19 @@ slug: Learn/Server-side/Django/web_application_security
 
 [web 安全](/zh-CN/docs/Web/Security)主題提供一个概述，说明了网站安全对于服务器端设计的意义，以及以及一些需要应对的常见威胁。本文中包含一个关键的概念：如果网站信任任何来自浏览器的数据，几乎所有的攻击方法都会成功。
 
-> **警告：** 切记，对于网站安全来说最重要一点就是“**永远不要相信浏览器端提交的数据**”。这些数据包括使用 `GET` 方式请求时 URL 中的参数，`POST` 方式请求的数据，HTTP headers 和 cookies，以及用户上传的文件等等。请确保一定要检查和清洗这些提交的数据。对于网站安全来说，总是要做好最坏的打算。
+> **警告：** 切记，对于网站安全来说最重要一点就是"**永远不要相信浏览器端提交的数据**"。这些数据包括使用 `GET` 方式请求时 URL 中的参数，`POST` 方式请求的数据，HTTP headers 和 cookies，以及用户上传的文件等等。请确保一定要检查和清洗这些提交的数据。对于网站安全来说，总是要做好最坏的打算。
 
 对 Django 用户来说，好消息是 Django 框架已经处理了大量的常见威胁。请阅读 Django 官方文档中的"[Security in Django](https://docs.djangoproject.com/en/2.0/topics/security/)"部分来了解 Django 的安全细节，以及如何确保基于 Django 的网站的安全。
 
 ## 常见威胁及保护
 
-在本文中，我们将使用前面章节中的“[本地图书馆](/zh-CN/docs/learn/Server-side/Django/Tutorial_local_library_website)”项目作为示范来演示一些 Django 的安全特性。
+在本文中，我们将使用前面章节中的"[本地图书馆](/zh-CN/docs/learn/Server-side/Django/Tutorial_local_library_website)"项目作为示范来演示一些 Django 的安全特性。
 
 ### 跨站脚本 (XSS)
 
 XSS(英语：Cross site scripting，通常简称：XSS) 是指一类恶意攻击者将代码通过网站注入到其他用户浏览器中的攻击方式。一般攻击者会把恶意代码作为普通数据放入到网站数据库中，这样其他用户在获取和展示数据的过程中就会受到攻击。此外，攻击者还可以通过引诱用户点击某些链接来执行恶意的 JavaScript 代码。
 
-Django 的模板系统可以帮您抵挡大部分的 XSS 攻击，实现的方式在于转义对于 HTML 来说比较**“危险”**的特殊字符 (可参考官方文档：[escaping specific characters](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping))。现在，我们用[Django Tutorial Part 9: Working with forms](/zh-CN/docs/learn/Server-side/Django/Forms) 这一章中的“创建作者”表单来做个演示，尝试向我们的本地图书馆网站注入一些 JavaScript 脚本。
+Django 的模板系统可以帮您抵挡大部分的 XSS 攻击，实现的方式在于转义对于 HTML 来说比较**"危险"**的特殊字符 (可参考官方文档：[escaping specific characters](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping))。现在，我们用[Django Tutorial Part 9: Working with forms](/zh-CN/docs/learn/Server-side/Django/Forms) 这一章中的"创建作者"表单来做个演示，尝试向我们的本地图书馆网站注入一些 JavaScript 脚本。
 
 1. 使用开发服务器启动网站 (参考命令：`python3 manage.py runserver`)。
 2. 在浏览器中打开网站，并用超级用户身份登录。

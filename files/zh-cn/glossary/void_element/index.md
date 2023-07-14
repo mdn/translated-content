@@ -28,4 +28,4 @@ slug: Glossary/Void_element
 - {{HTMLElement("track")}}
 - {{HTMLElement("wbr")}}
 
-> **备注：** 在极少数情况下，空元素被错误地称为“无效元素”(void elements)。
+> **备注：** 在极少数情况下，空元素被错误地称为"无效元素"(void elements)。

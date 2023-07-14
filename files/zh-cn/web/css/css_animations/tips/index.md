@@ -9,13 +9,13 @@ CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或�
 
 ## 重新播放动画
 
-[CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)的规范并没有提供使得动画重新激活的方法。在元素上调用`resetAnimation()` 并不生效，您也不能直接通过设置元素的 {{cssxref("animation-play-state")}}使得动画重新“跑起来”。事实上，你必须使用一些技巧使得已经停止的动画重新播放。
+[CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)的规范并没有提供使得动画重新激活的方法。在元素上调用`resetAnimation()` 并不生效，您也不能直接通过设置元素的 {{cssxref("animation-play-state")}}使得动画重新"跑起来"。事实上，你必须使用一些技巧使得已经停止的动画重新播放。
 
 这有一种我们认为足够稳定和可靠的方法推荐给您。
 
 ### HTML
 
-首先，让我们定义一个我们想要添加动画的元素{{HTMLElement("div")}} 以及一个“播放”或“重播”动画的按钮。
+首先，让我们定义一个我们想要添加动画的元素{{HTMLElement("div")}} 以及一个"播放"或"重播"动画的按钮。
 
 ```html
 <div class="box">
@@ -26,7 +26,7 @@ CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或�
 
 ### CSS
 
-现在我们将使用 CSS 定义动画本身。为了简洁，有些并不重要的 CSS（如“播放”按钮的样式）并没有显示在这里。
+现在我们将使用 CSS 定义动画本身。为了简洁，有些并不重要的 CSS（如"播放"按钮的样式）并没有显示在这里。
 
 ```css hidden
 .runButton {
@@ -67,7 +67,7 @@ CSS 动画使得您能够实现一些难以置信的效果点缀您的页面或�
 
 ### JavaScript
 
-接下来我们将看看 JavaScript 的部分如何工作。这里关键的部分在 `play()` 方法中，他在用户点击“播放”按钮时被触发。
+接下来我们将看看 JavaScript 的部分如何工作。这里关键的部分在 `play()` 方法中，他在用户点击"播放"按钮时被触发。
 
 ```js
 function play() {
@@ -88,7 +88,7 @@ function play() {
 2. 为了确保样式被重新计算我们使用 {{domxref("window.requestAnimationFrame()")}}，同时设置了一个回调。我们的回调在下一次重绘页面之前被调用。问题是由于它在重绘之前被调用，而此时样式还没有被真正重新计算。
 3. 我们的回调聪明地调用了 `requestAnimationFrame()` 方法！这一次，回调在下一次重绘之前被调用，这发成在样式被重新计算之后。回调在 box 元素上添加 `"changing"` 类，使得重绘后重新触发动画。
 
-当然，我们同样需要在“播放”按钮上添加事件处理方法使其生效：
+当然，我们同样需要在"播放"按钮上添加事件处理方法使其生效：
 
 ```js
 document.querySelector(".runButton").addEventListener("click", play, false);

@@ -9,7 +9,7 @@ HTML 规范为图片提供了 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/img#c
 
 查看 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)来了解更多 `crossorigin` 属性的用法。
 
-## 安全性和“被污染”的 canvas
+## 安全性和"被污染"的 canvas
 
 由于在 {{HTMLElement("canvas")}} 位图中的像素可能来自多种来源，包括从其他主机检索的图像或视频，因此不可避免的会出现安全问题。
 
@@ -57,7 +57,7 @@ HTML 规范为图片提供了 [`crossorigin`](/zh-CN/docs/Web/HTML/Element/img#c
 
 #### 开始下载图片
 
-以下代码会（例如，在用户点击“下载”按钮时）开始下载：
+以下代码会（例如，在用户点击"下载"按钮时）开始下载：
 
 ```js
 function startDownload() {
@@ -72,7 +72,7 @@ function startDownload() {
 }
 ```
 
-在这里，我们使用了“硬编码”的图片网址（`imageURL`）和相关描述文字（`imageDescription`），当然这些可以很方便地从任何地方获取。当开始下载图片时，我们使用 {{domxref("HTMLImageElement.Image", "Image()")}} 构造器创建新的 {{domxref("HTMLImageElement")}} 对象，将图片的 `crossOrigin` 属性设置为 `"Anonymous"`（即允许对未经过验证的图像进行跨源下载）。为图片添加 {{domxref("Window/load_event", "load")}} 事件的监听来判断图片数据是否已接收。我们为图片添加了替代性文字，当 `<canvas>` 不支持 `alt` 属性时，该值可以用于设置 `aria-label` 或 canvas 的内部内容。
+在这里，我们使用了"硬编码"的图片网址（`imageURL`）和相关描述文字（`imageDescription`），当然这些可以很方便地从任何地方获取。当开始下载图片时，我们使用 {{domxref("HTMLImageElement.Image", "Image()")}} 构造器创建新的 {{domxref("HTMLImageElement")}} 对象，将图片的 `crossOrigin` 属性设置为 `"Anonymous"`（即允许对未经过验证的图像进行跨源下载）。为图片添加 {{domxref("Window/load_event", "load")}} 事件的监听来判断图片数据是否已接收。我们为图片添加了替代性文字，当 `<canvas>` 不支持 `alt` 属性时，该值可以用于设置 `aria-label` 或 canvas 的内部内容。
 
 最后，将图片的 {{domxref("HTMLImageElement.src", "src")}} 属性设置为图片的 URL 以触发图片下载。
 

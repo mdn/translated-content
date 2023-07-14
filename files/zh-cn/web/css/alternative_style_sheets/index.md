@@ -33,7 +33,7 @@ The alternate stylesheets are commonly specified using a {{HTMLElement("link")}}
 
 In this example, the styles "Default Style", "Fancy", and "Basic" will be listed in the _Page Style_ submenu, with "Default Style" pre-selected. When the user selects a different style, the page will immediately be re-rendered using that style sheet.
 
-在此例中，“页面样式”菜单中会出现“Default Style”、“Fancy”和“Basic”的选项。“Default Style”默认选中。如果用户选择一个不同的样式，浏览器就使用用户选择的样式。
+在此例中，"页面样式"菜单中会出现"Default Style"、"Fancy"和"Basic"的选项。"Default Style"默认选中。如果用户选择一个不同的样式，浏览器就使用用户选择的样式。
 
 No matter what style is selected, the rules from the reset.css stylesheet will always be applied.
 

@@ -26,7 +26,7 @@ new Intl.ListFormat([locales[, options]])
     - `localeMatcher`
       指定要使用的本地匹配算法。可选的值有`"lookup"` 和 `"best fit"`；默认情况下使用`"best fit"`。该参数的更多信息，请参考[`Intl` page](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation).
     - `type`
-      消息输出的格式。可选的值有用于替代基于“且”关系列表的`"conjunction"` (默认值，例如： `A, B, and C`)，或者用于替代基于“或”关系列表的 `"disjunction"`(例如： `A, B, or C`)，以及用于替代带计量单位的值列表的`"unit"` (例如： `5 pounds, 12 ounces`).
+      消息输出的格式。可选的值有用于替代基于"且"关系列表的`"conjunction"` (默认值，例如： `A, B, and C`)，或者用于替代基于"或"关系列表的 `"disjunction"`(例如： `A, B, or C`)，以及用于替代带计量单位的值列表的`"unit"` (例如： `5 pounds, 12 ounces`).
     - `style`
       被格式化消息的长度。可选值有：`"long"` (默认值，例如：`A, B, and C`)、`"short"` 或者 `"narrow"` (例如：`A, B, C`)。当`style` 的值为`narrow` 时，type 属性的值只能取值`unit`。
 

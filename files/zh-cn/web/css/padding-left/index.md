@@ -9,7 +9,7 @@ CSS 属性 **`padding-left`** 是指一个元素在内边距区域（padding are
 
 {{EmbedInteractiveExample("pages/css/padding-left.html")}}
 
-元素的“填充区域”是其内容和边框之间的空间。
+元素的"填充区域"是其内容和边框之间的空间。
 
 > **备注：** {{cssxref("padding")}} 属性可用于通过一个声明在元素的四个边（上、下、左、右）上设置填充。
 
@@ -49,7 +49,7 @@ padding-left: unset;
 
 ## 样例
 
-### 使用“px”单位和百分比设置 padding-left 的样例
+### 使用"px"单位和百分比设置 padding-left 的样例
 
 ```css
 .content { padding-left: 5%; }

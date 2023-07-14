@@ -17,7 +17,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics
 
 ### 等待和通知
 
-`wait()` 和 `notify()` 方法采用的是 Linux 上的 futexes 模型（“快速用户空间互斥量”），可以让进程一直等待直到某个特定的条件为真，主要用于实现阻塞。
+`wait()` 和 `notify()` 方法采用的是 Linux 上的 futexes 模型（"快速用户空间互斥量"），可以让进程一直等待直到某个特定的条件为真，主要用于实现阻塞。
 
 ## 方法
 

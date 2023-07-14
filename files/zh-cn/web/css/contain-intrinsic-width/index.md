@@ -37,7 +37,7 @@ contain-intrinsic-width: unset;
 - `<length>`
   - : 元素具有指定宽度（{{CSSXref("&lt;length&gt;")}}）。
 - `auto <length>`
-  - : 若存在“正常渲染”的元素宽度且元素正在跳过其内容（例如在屏外时），则为此宽度的记忆值；否则为指定的 `<length>`。
+  - : 若存在"正常渲染"的元素宽度且元素正在跳过其内容（例如在屏外时），则为此宽度的记忆值；否则为指定的 `<length>`。
 
 ## 描述
 
@@ -45,7 +45,7 @@ contain-intrinsic-width: unset;
 
 尺寸局限允许用户代理将元素视为具有固定尺寸进行布局。由此避免为确定实际尺寸而重渲子元素，阻止不必要的重排（进而改善用户体验）。尺寸局限默认将元素视为不包含内容，且可按与内容无宽度或高度相同的方式折叠布局。`contain-intrinsic-width` 允许作者为布局所用的宽度指定合适的值。
 
-`auto <length>` 值允许元素“被正常渲染”（包括其子元素）后存储其宽度，再在元素不包含任何内容时使用此宽度而非指定宽度。由此允许有 {{CSSXref("content-visibility", "content-visibility: auto")}} 的屏外元素无需开发者精确估计元素尺寸即可受益于尺寸局限。在子元素渲染时，不使用记忆值（若启用尺寸局限，则将使用 `<length>`）。
+`auto <length>` 值允许元素"被正常渲染"（包括其子元素）后存储其宽度，再在元素不包含任何内容时使用此宽度而非指定宽度。由此允许有 {{CSSXref("content-visibility", "content-visibility: auto")}} 的屏外元素无需开发者精确估计元素尺寸即可受益于尺寸局限。在子元素渲染时，不使用记忆值（若启用尺寸局限，则将使用 `<length>`）。
 
 ## 形式定义
 
@@ -61,7 +61,7 @@ contain-intrinsic-width: unset;
 
 ### 设置固有宽度
 
-下列 HTML 代码定义了将受尺寸限制的元素“contained_element”，此元素包含一个子元素。
+下列 HTML 代码定义了将受尺寸限制的元素"contained_element"，此元素包含一个子元素。
 
 ```html
 <div id="contained_element">

@@ -3,7 +3,7 @@ title: 函数
 slug: Web/JavaScript/Reference/Functions
 ---
 
-{{jsSidebar("Functions")}}一般来说，一个函数是可以通过外部代码调用的一个“子程序”（或在递归的情况下由内部函数调用）。像程序本身一样，一个函数由称为函数体的一系列语句组成。值可以传递给一个函数，函数将返回一个值。在 JavaScript 中，函数是**头等 (**first-class**)**对象，因为它们可以像任何其他**对象**一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是[`Function`](/zh-CN/JavaScript/Reference/Global_Objects/Function)对象。
+{{jsSidebar("Functions")}}一般来说，一个函数是可以通过外部代码调用的一个"子程序"（或在递归的情况下由内部函数调用）。像程序本身一样，一个函数由称为函数体的一系列语句组成。值可以传递给一个函数，函数将返回一个值。在 JavaScript 中，函数是**头等 (**first-class**)**对象，因为它们可以像任何其他**对象**一样具有属性和方法。它们与其他对象的区别在于函数可以被调用。简而言之，它们是[`Function`](/zh-CN/JavaScript/Reference/Global_Objects/Function)对象。
 
 有关更多示例和说明，请参阅[有关函数的 JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide/Functions)。
 
@@ -69,7 +69,7 @@ function name([param[, param[, ... param]]]) { statements }
 
 ### 函数表达式 (`function` expression)
 
-函数表达式和函数声明非常相似，它们甚至有相同的语法（查看[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)了解详情）。一个函数表达式可能是一个更大的表达式的一部分。可以定义函数“名字”（例如可以在调用堆栈时使用）或者使用“匿名”函数。函数表达式不会提升，所以不能在定义之前调用。
+函数表达式和函数声明非常相似，它们甚至有相同的语法（查看[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)了解详情）。一个函数表达式可能是一个更大的表达式的一部分。可以定义函数"名字"（例如可以在调用堆栈时使用）或者使用"匿名"函数。函数表达式不会提升，所以不能在定义之前调用。
 
 ```plain
 var myFunction = function name([param[, param[, ... param]]]) { statements }
@@ -166,7 +166,7 @@ new Function (arg1, arg2, ... argN, functionBody)
 ```
 
 - `arg1, arg2, ... argN`
-  - : 函数使用零个或多个名称作为正式的参数名称。每一个必须是一个符合有效的 JavaScript 标识符规则的字符串或用逗号分隔的字符串列表，例如“x”,“theValue”或“a,b”。
+  - : 函数使用零个或多个名称作为正式的参数名称。每一个必须是一个符合有效的 JavaScript 标识符规则的字符串或用逗号分隔的字符串列表，例如"x","theValue"或"a,b"。
 - `functionBody`
   - : 一个构成的函数定义的，包含 JavaScript 声明语句的字符串。
 
@@ -185,7 +185,7 @@ new GeneratorFunction (arg1, arg2, ... argN, functionBody)
 ```
 
 - `arg1, arg2, ... argN`
-  - : 函数使用零个或多个名称作为正式的参数名称。每一个必须是一个符合有效的 JavaScript 标识符规则的字符串或用逗号分隔的字符串列表，例如“x”,“theValue”或“a,b”。
+  - : 函数使用零个或多个名称作为正式的参数名称。每一个必须是一个符合有效的 JavaScript 标识符规则的字符串或用逗号分隔的字符串列表，例如"x","theValue"或"a,b"。
 - `functionBody`
   - : 一个构成的函数定义的，包含 JavaScript 声明语句的字符串。
 
@@ -320,7 +320,7 @@ foo(); // 函数体字符串"function() {\n\talert(bar);\n}"的这一部分不�
 函数声明非常容易（经常是意外地）转换为函数表达式。当它不再是一个函数声明：
 
 - 成为表达式的一部分
-- 不再是函数或者脚本自身的“源元素”（source element）。“源元素”是脚本或函数体中的非嵌套语句。
+- 不再是函数或者脚本自身的"源元素"（source element）。"源元素"是脚本或函数体中的非嵌套语句。
 
 ```js
 var x = 0;               // source element
@@ -456,7 +456,7 @@ if ('function' === typeof window.noFunc) {
  }
 ```
 
-注意在 if 语句中，使用了 noFunc 的引用 -- 在函数名的后面没有括号“（）”，所以实际函数并没有被调用。
+注意在 if 语句中，使用了 noFunc 的引用 -- 在函数名的后面没有括号"（）"，所以实际函数并没有被调用。
 
 ## 规范
 

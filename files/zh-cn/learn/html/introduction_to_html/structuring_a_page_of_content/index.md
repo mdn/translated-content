@@ -37,7 +37,7 @@ slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 
 ## 项目简介
 
-本项目的任务是为“观鸟网”的主页添加结构化的元素，使其可以进行布局设计。需要添加的有：
+本项目的任务是为"观鸟网"的主页添加结构化的元素，使其可以进行布局设计。需要添加的有：
 
 - 页眉（`<header>`），应充满页面宽度，并包含网站主标题、网站 logo 和导航栏菜单。样式生效后标题和 logo 应显示在在两边，导航栏在它们下方。
 - 主内容区域（`<main>`），应有两栏，其中主区域显示欢迎信息，侧边栏包含一些缩略图。
@@ -58,7 +58,7 @@ slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 
 ## 提示
 
-- 可用 [W3C HTML 验证器](https://validator.w3.org/) 来验证 HTML；验证通过有额外加分。(有两行包含“googleapis”的 `<link>` 元素用于从 Google Fonts 服务引入自定义字体到页面；它们不会被验证，所以不用担心。)
+- 可用 [W3C HTML 验证器](https://validator.w3.org/) 来验证 HTML；验证通过有额外加分。(有两行包含"googleapis"的 `<link>` 元素用于从 Google Fonts 服务引入自定义字体到页面；它们不会被验证，所以不用担心。)
 - 本测验不需要任何 CSS 知识；只需用 HTML 元素添加现成的 CSS 即可。
 - 现成的 CSS 已经设计好布局，使用正确的结构元素，页面就会渲染成绿色。
 - 如果你遇到困难不知道应该把添加元素到哪里，通常一个好的做法是：画一个简单的页面布局模块图，然后为每个块记录下恰当的元素。
@@ -67,7 +67,7 @@ slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 
 以下截图展示了添加标记后主页可能的外观：（可 [在线查看](https://roy-tian.github.io/learning-area/html/introduction-to-html/structuring-a-page-of-content-finished/)）
 
-![测试示例。一个简单的“观鸟网”主页，由页眉、页脚、欢迎信息、收藏照片等部分组成。](example-page.png)
+![测试示例。一个简单的"观鸟网"主页，由页眉、页脚、欢迎信息、收藏照片等部分组成。](example-page.png)
 
 ## 测验
 

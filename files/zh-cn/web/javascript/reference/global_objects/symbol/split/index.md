@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 ## 示例
 
-\[Symbol.split] 指向‘aba’.split(/a/)
+\[Symbol.split] 指向'aba'.split(/a/)
 
 ```js
 /a/[Symbol.split]('aba',3)

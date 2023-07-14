@@ -255,7 +255,7 @@ PKCS #11 清单中包含单个 JSON 对象，对象具有如下属性：
         <p>模块的描述。</p>
         <p>
           它将被用在浏览器界面中为模块设置一个友好的名字（比如，在 Firefox
-          的“安全设备”对话框中）
+          的"安全设备"对话框中）
         </p>
       </td>
     </tr>
@@ -346,9 +346,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
 
 注册表应该有单个默认值，值里存放到清单文件的路径。
 
-> **警告：** 从 Firefox 64 开始，将首先检查 32 位注册表视图 [Wow6432Node](https://zh.wikipedia.org/wiki/WoW64#Registry_and_file_system) 的键，然后是“native”注册表视图。请使用适合你的应用程序的那一个。
+> **警告：** 从 Firefox 64 开始，将首先检查 32 位注册表视图 [Wow6432Node](https://zh.wikipedia.org/wiki/WoW64#Registry_and_file_system) 的键，然后是"native"注册表视图。请使用适合你的应用程序的那一个。
 >
-> **对于 Firefox 63 和更早的版本**：这个键不应该在 [Wow6432Node](https://zh.wikipedia.org/wiki/WoW64#Registry_and_file_system) 下创建，即使应用程序是 32 位的。以前版本的浏览器总是在注册表的“native”视图下寻找该键，而不是在 32 位模拟视图下寻找。为了确保在“native”视图中创建键，你可以在 `RegCreateKeyEx` 中传递 `KEY_WOW64_64KEY` 或 `KEY_WOW64_32KEY` 标志。参见[访问备用注册表视图](https://docs.microsoft.com/windows/win32/winprog64/accessing-an-alternate-registry-view)。
+> **对于 Firefox 63 和更早的版本**：这个键不应该在 [Wow6432Node](https://zh.wikipedia.org/wiki/WoW64#Registry_and_file_system) 下创建，即使应用程序是 32 位的。以前版本的浏览器总是在注册表的"native"视图下寻找该键，而不是在 32 位模拟视图下寻找。为了确保在"native"视图中创建键，你可以在 `RegCreateKeyEx` 中传递 `KEY_WOW64_64KEY` 或 `KEY_WOW64_32KEY` 标志。参见[访问备用注册表视图](https://docs.microsoft.com/windows/win32/winprog64/accessing-an-alternate-registry-view)。
 
 如果想要用户级别可见，使用下面的路径创建注册表：
 

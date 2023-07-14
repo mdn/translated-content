@@ -29,7 +29,7 @@ slug: Web/HTML/Attributes/rel
 | [`nofollow`](#attr-nofollow)                                         | 表示当前文档的原作者或出版商不认可被引用的文件。                                                                                                       | 不允许                  | 注解                                             | 注解                    |
 | [`noopener`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener)           | 创建一个顶级浏览上下文。如果该超链接一开始就会创建其中之一，则该浏览上下文不是一个辅助浏览上下文（即有一个适当的 `target` 属性值）。                              | 不允许                  | 不允许                                           | 注解                    |
 | [`noreferrer`](#attr-noreferrer)                                     | 不会包含 `Referer` 标头。和 `noopener` 效果类似。                                                                                                   | 不允许                  | 注解                                             | 注解                    |
-| [`opener`](#attr-opener)                                             | 如果超链接会创建一个非辅助浏览上下文的顶级浏览上下文（即以“`_blank`”作为 `target` 属性值），则创建一个辅助浏览上下文。                                        | 不允许                   | 注解                                            | 注解                    |
+| [`opener`](#attr-opener)                                             | 如果超链接会创建一个非辅助浏览上下文的顶级浏览上下文（即以"`_blank`"作为 `target` 属性值），则创建一个辅助浏览上下文。                                        | 不允许                   | 注解                                            | 注解                    |
 | [`pingback`](#attr-pingback)                                         | 给出处理当前文档 pingback 的 pingback 服务器的地址。                                                                                                 | 外部资源                 | 不允许                                          | 不允许                   |
 | [`preconnect`](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect)       | 指定用户代理应预先连接到目标资源的来源。                                                                                                              | 外部资源                 | 不允许                                          | 不允许                   |
 | [`prefetch`](/zh-CN/docs/Web/HTML/Attributes/rel/prefetch)           | 指定用户代理应预先获取并缓存目标资源，因为后续的导航可能需要它。                                                                                         | 外部资源                 | 不允许                                          | 不允许                   |
@@ -160,7 +160,7 @@ slug: Web/HTML/Attributes/rel
 - `noreferrer`
   - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，包括这个值使得 referrer 未知（不会包含 `Referer` 标头），并创建一个顶级的浏览上下文，就像 `noopener` 也被设置一样。
 - `opener`
-  - : 如果超链接会创建一个非辅助浏览上下文的顶级浏览上下文（即以“`_blank`”作为 `target` 属性值），则创建一个辅助浏览上下文。与 [noopener](#noopener) 作用相反。
+  - : 如果超链接会创建一个非辅助浏览上下文的顶级浏览上下文（即以"`_blank`"作为 `target` 属性值），则创建一个辅助浏览上下文。与 [noopener](#noopener) 作用相反。
 - `pingback`
   - : 给出处理当前文档的 pingback 的 pingback 服务器地址。详见 [Pingback 规范](https://www.hixie.ch/specs/pingback/pingback)。
 - `preconnect`

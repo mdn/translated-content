@@ -111,7 +111,7 @@ article {
 - `content`
 - `strict`
 
-在上述示例中见到了第一个值。使用 `contain: content` 将启用布局（`layout`）和绘制（`paint`）局限。规范将此值描述为“对于广泛应用而言相当保险”。由于此值不应用尺寸（`size`）局限，故不会面临盒子尺寸因为依赖于其子元素尺寸而变为零的风险。
+在上述示例中见到了第一个值。使用 `contain: content` 将启用布局（`layout`）和绘制（`paint`）局限。规范将此值描述为"对于广泛应用而言相当保险"。由于此值不应用尺寸（`size`）局限，故不会面临盒子尺寸因为依赖于其子元素尺寸而变为零的风险。
 
 为获得尽可能多的局限，请使用 `contain: strict`，此值效果与 `contain: size layout paint style` 相同：
 

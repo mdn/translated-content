@@ -26,9 +26,9 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
       </td>
       <td>
         <p>
-          将前面的项“x”匹配 0 次或更多次。例如，/bo*/匹配“A ghost
-          booooed”中的“boooo”和“A bird warbled”中的“b”，但在“A goat
-          grunt”中没有匹配。
+          将前面的项"x"匹配 0 次或更多次。例如，/bo*/匹配"A ghost
+          booooed"中的"boooo"和"A bird warbled"中的"b"，但在"A goat
+          grunt"中没有匹配。
         </p>
       </td>
     </tr>
@@ -38,8 +38,8 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
       </td>
       <td>
         <p>
-          将前一项“x”匹配 1
-          次或更多次。等价于{1,}。例如，/a+/匹配“candy”中的“a”和“caaaaaaandy”中的“a”。
+          将前一项"x"匹配 1
+          次或更多次。等价于{1,}。例如，/a+/匹配"candy"中的"a"和"caaaaaaandy"中的"a"。
         </p>
       </td>
     </tr>
@@ -49,7 +49,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
       </td>
       <td>
         <p>
-          将前面的项“x”匹配 0 或 1 次。例如，/e?le?/匹配 angel 中的 el 和 angle
+          将前面的项"x"匹配 0 或 1 次。例如，/e?le?/匹配 angel 中的 el 和 angle
           中的 le。
         </p>
         <p>
@@ -64,8 +64,8 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
       </td>
       <td>
         <p>
-          其中“n”是一个正整数，与前一项“x”的 n 次匹配。例如，<code>/a{2}/ </code
-          >不匹配“candy”中的“a”，但它匹配“caandy”中的所有“a”，以及“caaandy”中的前两个“a”。
+          其中"n"是一个正整数，与前一项"x"的 n 次匹配。例如，<code>/a{2}/ </code
+          >不匹配"candy"中的"a"，但它匹配"caandy"中的所有"a"，以及"caaandy"中的前两个"a"。
         </p>
       </td>
     </tr>
@@ -75,7 +75,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
       </td>
       <td>
         <p>
-          其中，“n”是一个正整数，与前一项“x”至少匹配“n”次。例如，<code>/a{2，}/</code>不匹配“candy”中的“a”，但匹配“caandy”和“caaaaaaandy”中的所有
+          其中，"n"是一个正整数，与前一项"x"至少匹配"n"次。例如，<code>/a{2，}/</code>不匹配"candy"中的"a"，但匹配"caandy"和"caaaaaaandy"中的所有
           a。
         </p>
       </td>
@@ -86,8 +86,8 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
       </td>
       <td>
         <p>
-          其中，“n”是 0 或一个正整数，“m”是一个正整数，而 m > n
-          至少与前一项“x”匹配，最多与“m”匹配。例如，/a{1,3}/不匹配“cndy”中的“a”，“candy”中的“a”，“caandy”中的两个“a”，以及“caaaaaaandy”中的前三个“a”。注意，当匹配“caaaaaaandy”时，匹配的是“aaa”，即使原始字符串中有更多的“a”。
+          其中，"n"是 0 或一个正整数，"m"是一个正整数，而 m > n
+          至少与前一项"x"匹配，最多与"m"匹配。例如，/a{1,3}/不匹配"cndy"中的"a"，"candy"中的"a"，"caandy"中的两个"a"，以及"caaaaaaandy"中的前三个"a"。注意，当匹配"caaaaaaandy"时，匹配的是"aaa"，即使原始字符串中有更多的"a"。
         </p>
       </td>
     </tr>
@@ -104,8 +104,8 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
         <p>
           默认情况下，像 <code>* </code>和
           <code>+ </code
-          >这样的量词是“贪婪的”，这意味着它们试图匹配尽可能多的字符串。?量词后面的字符使量词“非贪婪”：意思是它一旦找到匹配就会停止。例如，给定一个字符串“some
-          &#x3C;foo> &#x3C;bar> new &#x3C;/bar> &#x3C;/foo> thing”:
+          >这样的量词是"贪婪的"，这意味着它们试图匹配尽可能多的字符串。?量词后面的字符使量词"非贪婪"：意思是它一旦找到匹配就会停止。例如，给定一个字符串"some
+          &#x3C;foo> &#x3C;bar> new &#x3C;/bar> &#x3C;/foo> thing":
         </p>
         <ul>
           <li>

@@ -20,7 +20,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 
 首先，我们写一个向用户访问的所有页面添加一个蓝色边框的扩展。
 
-创建一个新的文件夹命名为“setting”，然后创建文件“manifest.json”它包含以下内容：
+创建一个新的文件夹命名为"setting"，然后创建文件"manifest.json"它包含以下内容：
 
 ```json
 {
@@ -39,7 +39,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/实现一个设置页面
 }
 ```
 
-该扩展指示浏览器在用户访问的网站上加载一个名为"borderify.js“的 Content Script。
+该扩展指示浏览器在用户访问的网站上加载一个名为"borderify.js"的 Content Script。
 
 接下来，在"setting"目录下创建"borderify.js"，然后给予他以下内容：
 
@@ -143,7 +143,7 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 
 它做了两件事：
 
-- 当网页被加载它使用[`storage.local.get()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 从存贮设备中获取了名为"color”的值。如果该值未被设置其为默认值 blue。
+- 当网页被加载它使用[`storage.local.get()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get) 从存贮设备中获取了名为"color"的值。如果该值未被设置其为默认值 blue。
 - 当用户点击提交按钮，使用[`storage.local.set()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set) 存贮颜色值。
 
 最后，更新"borderify.js" 来读取边框颜色：

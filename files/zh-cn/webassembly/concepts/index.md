@@ -92,7 +92,7 @@ WebAssembly 生态系统处在初始阶段；更多的工具会毫无疑问得�
 Emscripten 工具能够将一段 C/C++代码，编译出：
 
 - 一个.wasm 模块
-- 用来加载和运行该模块的 JavaScript”胶水“代码
+- 用来加载和运行该模块的 JavaScript"胶水"代码
 - 一个用来展示代码运行结果的 HTML 文档
 
 ![](emscripten-diagram.png)

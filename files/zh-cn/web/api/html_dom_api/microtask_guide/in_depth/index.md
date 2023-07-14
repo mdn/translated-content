@@ -20,7 +20,7 @@ JavaScript 本质上是一门单线程语言。对于在它被设计出来的那
 当一段 JavaScript 代码在运行的时候，它实际上是运行在**执行上下文**中。下面 3 种类型的代码会创建一个新的执行上下文：
 
 - 全局上下文是为运行代码主体而创建的执行上下文，也就是说，它是为那些存在于 JavaScript 函数之外的任何代码而创建的。
-- 每个函数会在执行的时候创建自己的执行上下文。这个上下文就是通常说的“本地上下文”。
+- 每个函数会在执行的时候创建自己的执行上下文。这个上下文就是通常说的"本地上下文"。
 - 使用 {{jsxref("Global_Objects/eval", "eval()")}} 函数也会创建一个新的执行上下文。
 
 每一个上下文在本质上都是一种作用域层级。每个代码段开始执行的时候都会创建一个新的上下文来运行它，并且在代码退出的时候销毁掉。看看下面这段 JavaScript 程序：
@@ -101,11 +101,11 @@ greetUser("Veronica");
 - Window 事件循环
   - : window 事件循环驱动所有共享同源的窗口（尽管这有进一步的限制，如下所述）。
 - Worker 事件循环
-  - : worker 事件循环驱动 worker 的事件循环。这包括所有形式的 worker，包括基本的 [web worker](/zh-CN/docs/Web/API/Web_Workers_API)、[shared worker](/zh-CN/docs/Web/API/SharedWorker) 和 [service worker](/zh-CN/docs/Web/API/Service_Worker_API)。Worker 被保存在一个或多个与“主”代码分开的代理中；浏览器可以对所有特定类型的工作者使用一个事件循环，也可以使用多个事件循环来处理它们。
+  - : worker 事件循环驱动 worker 的事件循环。这包括所有形式的 worker，包括基本的 [web worker](/zh-CN/docs/Web/API/Web_Workers_API)、[shared worker](/zh-CN/docs/Web/API/SharedWorker) 和 [service worker](/zh-CN/docs/Web/API/Service_Worker_API)。Worker 被保存在一个或多个与"主"代码分开的代理中；浏览器可以对所有特定类型的工作者使用一个事件循环，也可以使用多个事件循环来处理它们。
 - Worklet 事件循环
   - : [worklet](/zh-CN/docs/Web/API/Worklet) 事件循环驱动运行 worklet 的代理。这包含了 {{domxref("Worklet")}}、{{domxref("AudioWorklet")}} 以及 {{domxref("PaintWorklet")}}。
 
-多个同{{Glossary("origin", "源")}}窗口可能运行在相同的事件循环中，每个队列任务进入到事件循环中以便处理器能够轮流对它们进行处理。记住这里的网络术语“window”实际上指的是“用于运行网页内容的浏览器级容器”，包括实际的 window、标签页或者一个 frame。
+多个同{{Glossary("origin", "源")}}窗口可能运行在相同的事件循环中，每个队列任务进入到事件循环中以便处理器能够轮流对它们进行处理。记住这里的网络术语"window"实际上指的是"用于运行网页内容的浏览器级容器"，包括实际的 window、标签页或者一个 frame。
 
 在特定情况下，同源窗口之间共享事件循环，例如：
 

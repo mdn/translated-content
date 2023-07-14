@@ -55,4 +55,4 @@ var FileSystemEntry = window.FileSystemEntry || window.Entry;
 - [文件和目录 API 条目](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
 - [介绍文件和目录 API 条目](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - [文件和目录 API 条目](https://wicg.github.io/entries-api/)的最新规范，但仍然是早期规范。
-- 文件 API 的原始规范：[目录和系统](https://dev.w3.org/2009/dap/file-system/file-dir-sys.html)(通常称为“FileSystem API”);谷歌 Chrome 是唯一一个实现这个废弃 API 的浏览器。
+- 文件 API 的原始规范：[目录和系统](https://dev.w3.org/2009/dap/file-system/file-dir-sys.html)(通常称为"FileSystem API");谷歌 Chrome 是唯一一个实现这个废弃 API 的浏览器。

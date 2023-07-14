@@ -349,9 +349,9 @@ f("a", "b"); // 'a+b'
 - {{jsxref("Array.prototype.push()")}}
   - : 在数组末尾添加一个或多个元素，并返回数组新的 `length`。
 - {{jsxref("Array.prototype.reduce()")}}
-  - : 对数组的每个元素（从左到右）执行用户提供的“reducer”回调函数，将其简化为单个值。
+  - : 对数组的每个元素（从左到右）执行用户提供的"reducer"回调函数，将其简化为单个值。
 - {{jsxref("Array.prototype.reduceRight()")}}
-  - : 对数组的每个元素（从右到左）执行用户提供的“reducer”回调函数，将其简化为单个值。
+  - : 对数组的每个元素（从右到左）执行用户提供的"reducer"回调函数，将其简化为单个值。
 - {{jsxref("Array.prototype.reverse()")}}
   - : *就地*反转数组中元素的顺序。（前面变成后面，后面变成前面。）
 - {{jsxref("Array.prototype.shift()")}}

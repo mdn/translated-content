@@ -7,11 +7,11 @@ slug: Web/HTTP/Methods/PATCH
 
 **HTTP `PATCH` 请求方法**用于对资源进行部分修改。
 
-`PATCH` 有点类似于 {{Glossary("CRUD")}} 中的“更新”概念（一般来说，HTTP 与 {{Glossary("CRUD")}} 不同，两者不应混淆）。
+`PATCH` 有点类似于 {{Glossary("CRUD")}} 中的"更新"概念（一般来说，HTTP 与 {{Glossary("CRUD")}} 不同，两者不应混淆）。
 
 `PATCH` 请求是一组关于如何修改资源的指令，与 {{HTTPMethod("PUT")}} 形成对比；后者是一个资源的完整表述。
 
-`PATCH` 并不需要是幂等的，这与 {{HTTPMethod("PUT")}} 形成鲜明对比；后者始终是幂等的。“幂等（idempotent）”一词意味着，任何数量的重复、相同的请求都会使资源处于相同的状态。例如，如果一个自动递增的计数器字段是资源的一个组成部分，那么 {{HTTPMethod("PUT")}} 将自然地覆盖它（因为它覆盖一切），但对于 `PATCH` 则不一定如此。
+`PATCH` 并不需要是幂等的，这与 {{HTTPMethod("PUT")}} 形成鲜明对比；后者始终是幂等的。"幂等（idempotent）"一词意味着，任何数量的重复、相同的请求都会使资源处于相同的状态。例如，如果一个自动递增的计数器字段是资源的一个组成部分，那么 {{HTTPMethod("PUT")}} 将自然地覆盖它（因为它覆盖一切），但对于 `PATCH` 则不一定如此。
 
 `PATCH` 像 {{HTTPMethod("POST")}} 一样，*可能*会对其他资源产生副作用。
 

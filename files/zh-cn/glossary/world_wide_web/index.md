@@ -9,7 +9,7 @@ _万维网_（World Wide Web）——一般称其为 **WWW**、**W3** 或 **the 
 
 Tim Berners-Lee 提出了被称为万维网的架构。他在 1990 年在 CERN 物理研究实验室的计算机上创建了第一个 web {{Glossary("server","服务器")}}、web {{Glossary("Browser","浏览器")}}和网页。1991 年，他在 alt.hypertext 新闻组上宣布了他的创作，那一刻标志着 Web 的首次公开。
 
-我们今天认为的“Web”系统由几个组件组成：
+我们今天认为的"Web"系统由几个组件组成：
 
 - **{{Glossary("HTTP")}}** 协议，管理服务器和客户端之间的数据传输。
 - 要访问 Web 组件，客户端提供唯一的通用标识符，称为 **{{Glossary("URL")}}**（统一资源定位符）或 {{Glossary("URI")}}（统一资源标识符）（正式称为通用文档标识符（UDI））。

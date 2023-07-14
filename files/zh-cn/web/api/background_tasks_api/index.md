@@ -79,7 +79,7 @@ window.cancelIdleCallback = window.cancelIdleCallback || function(id) {
 
 ### HTML 内容
 
-为了了解我们的目标，看一下 HTML。这里创建了一个盒子 (ID `"Container"`) 来显示操作进度（因为毕竟我们没法知道解码“量子丝极谱发射”会用多长时间），还创建了一个次要的盒子 (ID `"logBox"`) 来展示文本输出。
+为了了解我们的目标，看一下 HTML。这里创建了一个盒子 (ID `"Container"`) 来显示操作进度（因为毕竟我们没法知道解码"量子丝极谱发射"会用多长时间），还创建了一个次要的盒子 (ID `"logBox"`) 来展示文本输出。
 
 ```
 <p>
@@ -418,7 +418,7 @@ function logTaskHandler(data) {
 
 #### 主程序
 
-当用户点击“开始”按钮，会触发所有操作，也会导致调用`decodeTechnoStuff()`函数。
+当用户点击"开始"按钮，会触发所有操作，也会导致调用`decodeTechnoStuff()`函数。
 
 ```js hidden
 function getRandomIntInclusive(min, max) {
@@ -449,7 +449,7 @@ function decodeTechnoStuff() {
 document.getElementById("startButton").addEventListener("click", decodeTechnoStuff, false);
 ```
 
-`decodeTechnoStuff()`开始执行时会将任务总数（到现在为止添加到队列中的任务数）清零，并随后调用`updateDisplay()`以重置显示为“没有任何事发生”的状态。
+`decodeTechnoStuff()`开始执行时会将任务总数（到现在为止添加到队列中的任务数）清零，并随后调用`updateDisplay()`以重置显示为"没有任何事发生"的状态。
 
 这个示例去创建一个随机数量（100 到 200 之间）的任务。为此，我们使用{{jsxref("Math.random()")}}文档中作为示例提供的[`getRandomIntInclusive()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive)以获得要创建的任务数。
 

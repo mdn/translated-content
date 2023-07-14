@@ -7,7 +7,7 @@ slug: Web/Guide/AJAX
   {{ListSubpagesForSidebar("/zh-CN/docs/Web/Guide")}}
 </section>
 
-**异步 JavaScript 和 XML**，或 [**Ajax**](https://www.semanticscholar.org/paper/Ajax%3A-A-New-Approach-to-Web-Applications-Garrett/c440ae765ff19ddd3deda24a92ac39cef9570f1e?p2df) 本身不是一种技术，而是一种将一些现有技术结合起来使用的方法，包括：[HTML](/zh-CN/docs/Web/HTML) 或 [XHTML](/zh-CN/docs/Glossary/XHTML)、[CSS](/zh-CN/docs/Web/CSS)、[JavaScript](/zh-CN/docs/Web/JavaScript)、[DOM](/zh-CN/docs/Web/API/Document_Object_Model)、[XML](/zh-CN/docs/Web/XML)、[XSLT](/zh-CN/docs/Web/XSLT)、以及最重要的 {{domxref("XMLHttpRequest")}} 对象。当使用结合了这些技术的 Ajax 模型以后，网页应用能够快速地将增量更新呈现在用户界面上，而不需要重载（刷新）整个页面。这使得程序能够更快地回应用户的操作。Ajax 最吸引人的特性是它的“异步”性质，这意味着它可以与服务器通信、交换数据并更新页面，而无需刷新页面。
+**异步 JavaScript 和 XML**，或 [**Ajax**](https://www.semanticscholar.org/paper/Ajax%3A-A-New-Approach-to-Web-Applications-Garrett/c440ae765ff19ddd3deda24a92ac39cef9570f1e?p2df) 本身不是一种技术，而是一种将一些现有技术结合起来使用的方法，包括：[HTML](/zh-CN/docs/Web/HTML) 或 [XHTML](/zh-CN/docs/Glossary/XHTML)、[CSS](/zh-CN/docs/Web/CSS)、[JavaScript](/zh-CN/docs/Web/JavaScript)、[DOM](/zh-CN/docs/Web/API/Document_Object_Model)、[XML](/zh-CN/docs/Web/XML)、[XSLT](/zh-CN/docs/Web/XSLT)、以及最重要的 {{domxref("XMLHttpRequest")}} 对象。当使用结合了这些技术的 Ajax 模型以后，网页应用能够快速地将增量更新呈现在用户界面上，而不需要重载（刷新）整个页面。这使得程序能够更快地回应用户的操作。Ajax 最吸引人的特性是它的"异步"性质，这意味着它可以与服务器通信、交换数据并更新页面，而无需刷新页面。
 
 尽管 Ajax 中的 X 代表 XML，但是 {{glossary("JSON")}} 才是首选，因为它更加轻量，而且是用 JavaScript 编写的。在 Ajax 模型中，JSON 和 XML 都被用来包装信息。
 
@@ -116,7 +116,7 @@ if (httpRequest.status === 200) {
 
 ## 第三步——简单的示例
 
-让我们把所有的知识都集中起来做一个简单的 HTTP 请求。这个 JavaScript 会请求一个 HTML 文档 `test.html`，包含文本内容“I'm a test”。然后我们 `alert()` 响应的内容。注意这个例子我们只是用了原生 JavaScript，没有用 jQuery。而且，HTML、XML 和 PHP 文件都要放在同一个目录下。
+让我们把所有的知识都集中起来做一个简单的 HTTP 请求。这个 JavaScript 会请求一个 HTML 文档 `test.html`，包含文本内容"I'm a test"。然后我们 `alert()` 响应的内容。注意这个例子我们只是用了原生 JavaScript，没有用 jQuery。而且，HTML、XML 和 PHP 文件都要放在同一个目录下。
 
 ```html
 <button id="ajaxButton" type="button">发送请求</button>
@@ -152,7 +152,7 @@ if (httpRequest.status === 200) {
 
 在这个示例中：
 
-- 用户点击“发送请求”按钮；
+- 用户点击"发送请求"按钮；
 - 事件处理器调用 `makeRequest()` 函数；
 - 请求已通过然后（`onreadystatechange`）传给 `alertContents()` 执行。
 - `alertContents()` 检查返回的响应是否 OK，然后 `alert()` 文件 `test.html` 的内容。
@@ -208,7 +208,7 @@ alert(root_node.firstChild.data);
 
 ## 第五步——处理数据
 
-最后，我们发送一个数据给服务器并收到响应。这次我们用 JavaScript 请求动态页面 `test.php` 并返回一个计算后的字符串——“你好，\[user data]”，并 `alert()` 出来。
+最后，我们发送一个数据给服务器并收到响应。这次我们用 JavaScript 请求动态页面 `test.php` 并返回一个计算后的字符串——"你好，\[user data]"，并 `alert()` 出来。
 
 首先要添加一个文本到 HTML 中以方便用户输入名字：
 
@@ -247,7 +247,7 @@ function makeRequest(url, userName) {
 }
 ```
 
-`alertContents()` 函数可以使用第三步中的相同函数写，而服务器会返回计算后的内容和原内容。所以，如果用户在输入框中输入“Jane”，那服务器就会返回如下内容：
+`alertContents()` 函数可以使用第三步中的相同函数写，而服务器会返回计算后的内容和原内容。所以，如果用户在输入框中输入"Jane"，那服务器就会返回如下内容：
 
 ```json
 { "userData": "Jane", "computedString": "Hi, Jane!" }

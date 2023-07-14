@@ -5,11 +5,11 @@ slug: Web/API/SubtleCrypto/wrapKey
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-{{domxref("SubtleCrypto")}} 接口的 **`wrapKey()`** 方法用于“包装”（wrap）密钥。这一味着它以外部可移植的格式导出密钥，然后对其进行加密。包装密钥有助于在不受信任的环境中保护它，例如在未受保护的数据存储，或在未受保护的网络上进行传输。
+{{domxref("SubtleCrypto")}} 接口的 **`wrapKey()`** 方法用于"包装"（wrap）密钥。这一味着它以外部可移植的格式导出密钥，然后对其进行加密。包装密钥有助于在不受信任的环境中保护它，例如在未受保护的数据存储，或在未受保护的网络上进行传输。
 
 与 {{DOMxRef("SubtleCrypto.exportKey()")}} 一样，你需要指定密钥的[导出格式](/zh-CN/docs/Web/API/SubtleCrypto/importKey#支持的格式)。要导出密钥，必须将 {{DOMxRef("CryptoKey.extractable")}} 设置为 `true`。
 
-但是，由于 `wrapKey()` 还会对要导出的密钥进行加密，因此还需要传入用于加密的密钥。这有时被称为“包装密钥”（wrapping key）。
+但是，由于 `wrapKey()` 还会对要导出的密钥进行加密，因此还需要传入用于加密的密钥。这有时被称为"包装密钥"（wrapping key）。
 
 `wrapKey()` 的逆运算是 {{domxref("SubtleCrypto.unwrapKey()")}}：`wrapKey` 由导出 + 加密组成，而 `unwrapKey` 由导入 + 解密组成。
 
@@ -60,7 +60,7 @@ wrapKey(format, key, wrappingKey, wrapAlgo)
 
 ## 支持的算法
 
-所有[可用于加密的算法](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#支持的算法)，只要设置了“wrapKey”用途，也都可以用于密钥包装。对于密钥包装，你还可以使用 [AES-KW](#aes-kw)。
+所有[可用于加密的算法](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#支持的算法)，只要设置了"wrapKey"用途，也都可以用于密钥包装。对于密钥包装，你还可以使用 [AES-KW](#aes-kw)。
 
 ### AES-KW
 
@@ -76,7 +76,7 @@ AES-KW 规定于 [RFC 3394](https://datatracker.ietf.org/doc/html/rfc3394) 中�
 
 ### Raw 包装
 
-以下示例包装了一个 AES 密钥。它使用“raw”作为导出格式，并使用 AES-KW 和密码派生密钥对其进行加密。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/raw.js)
+以下示例包装了一个 AES 密钥。它使用"raw"作为导出格式，并使用 AES-KW 和密码派生密钥对其进行加密。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/raw.js)
 
 ```js
 let salt;
@@ -145,7 +145,7 @@ window.crypto.subtle
 
 ### PKCS #8 包装
 
-以下示例包装了一个 RSA 私有签名密钥。它使用“pkcs8”作为导出格式，并使用 AES-GCM 和密码派生密钥对其进行加密。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/pkcs8.js)
+以下示例包装了一个 RSA 私有签名密钥。它使用"pkcs8"作为导出格式，并使用 AES-GCM 和密码派生密钥对其进行加密。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/pkcs8.js)
 
 ```js
 let salt;
@@ -224,7 +224,7 @@ window.crypto.subtle
 
 ### SubjectPublicKeyInfo 包装
 
-以下示例包装了一个 RSA 公开加密密钥。它使用“spki”作为导出格式，并使用 AES-CBC 算法和密码派生密钥对其进行加密。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/spki.js)
+以下示例包装了一个 RSA 公开加密密钥。它使用"spki"作为导出格式，并使用 AES-CBC 算法和密码派生密钥对其进行加密。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/spki.js)
 
 ```js
 let salt;
@@ -301,7 +301,7 @@ window.crypto.subtle
 
 ### JSON Web Key 包装
 
-以下示例包装了一个 ECDSA 私有签名密钥。它使用“jwk”作为导出格式，并使用 AES-GCM 和密码派生密钥对其进行加密。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/jwk.js)
+以下示例包装了一个 ECDSA 私有签名密钥。它使用"jwk"作为导出格式，并使用 AES-GCM 和密码派生密钥对其进行加密。[在 GitHub 中查看完整的代码。](https://github.com/mdn/dom-examples/blob/main/web-crypto/wrap-key/jwk.js)
 
 ```js
 let salt;

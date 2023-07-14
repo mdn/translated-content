@@ -50,9 +50,9 @@ let querying = browser.tabs.query(queryObj)
     - `status` {{optional_inline}}
       - : {{WebExtAPIRef('tabs.TabStatus')}}。标签页是否已完成加载。
     - `title` {{optional_inline}}
-      - : `string`。将页面标题与模式进行匹配。需要“tabs”权限或匹配标签的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
+      - : `string`。将页面标题与模式进行匹配。需要"tabs"权限或匹配标签的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
     - `url` {{optional_inline}}
-      - : `string` 或 `string` 数组。将标签页与一个或多个[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)进行匹配。请注意，不会匹配片段标识符。需要“tabs”权限或匹配标签的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
+      - : `string` 或 `string` 数组。将标签页与一个或多个[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)进行匹配。请注意，不会匹配片段标识符。需要"tabs"权限或匹配标签的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
     - `windowId` {{optional_inline}}
       - : `integer`。父窗口的 ID，或 {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}}（用于当前窗口）。
     - `windowType` {{optional_inline}}

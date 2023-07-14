@@ -99,7 +99,7 @@ remoteConnection = new RTCPeerConnection();
 remoteConnection.ondatachannel = receiveChannelCallback;
 ```
 
-远程端的建立过程类似“local”端，但它无需自己创建 {{domxref("RTCDataChannel")}} ，因为我们将通过上面建立的渠道进行连接。我们创建对 {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} 的事件处理回调；数据通道打开时该逻辑将被执行，该回调处理将接收到一个 `RTCDataChannel` 对象，此过程将在文章后面部分描述。
+远程端的建立过程类似"local"端，但它无需自己创建 {{domxref("RTCDataChannel")}} ，因为我们将通过上面建立的渠道进行连接。我们创建对 {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} 的事件处理回调；数据通道打开时该逻辑将被执行，该回调处理将接收到一个 `RTCDataChannel` 对象，此过程将在文章后面部分描述。
 
 #### 设立 ICE 候选人
 
@@ -238,7 +238,7 @@ local 节点和 remote 节点采用同样的方法处理表示通道连接状态
 
 ### 接收消息
 
-当远程通道发生“message”事件时，我们的 handleReceiveMessage() 方法被调用来处理事件。
+当远程通道发生"message"事件时，我们的 handleReceiveMessage() 方法被调用来处理事件。
 
 ```js
   function handleReceiveMessage(event) {

@@ -28,7 +28,7 @@ slug: Web/API/File_System_Access_API
 
 ### 源私有文件系统
 
-[源私有文件系统](https://fs.spec.whatwg.org/#origin-private-file-system)（下文简称“OPFS”）是页面所属的源专用的存储端点，它提供对一种经过高度性能优化的特殊文件的访问能力的选择，例如，对文件内容的原地、独占写入访问。
+[源私有文件系统](https://fs.spec.whatwg.org/#origin-private-file-system)（下文简称"OPFS"）是页面所属的源专用的存储端点，它提供对一种经过高度性能优化的特殊文件的访问能力的选择，例如，对文件内容的原地、独占写入访问。
 
 在 OPFS 中存储数据近似于浏览器提供的其他页面源私有存储机制（如 {{domxref("IndexedDB API", "IndexedDB API", "", "nocode")}}）。其意味着，在 OPFS 中的文件相较于用选择器选择的文件有以下不同点：
 
@@ -48,7 +48,7 @@ slug: Web/API/File_System_Access_API
 
 ### 保存文件
 
-此 API 也提供“保存”功能：
+此 API 也提供"保存"功能：
 
 - 对于异步句柄，使用 {{domxref('FileSystemWritableFileStream')}} 接口。当你想要保存的数据是 {{domxref('Blob')}}、{{jsxref("String")}} 对象、字符串字面量或 {{jsxref('ArrayBuffer', 'buffer')}} 形式的时候，你可以打开一个写入流把数据保存到文件。可以是已经存在的文件，也可以是新文件。
 - 对于同步的 {{domxref('FileSystemSyncAccessHandle')}}，使用 {{domxref('FileSystemSyncAccessHandle.write', 'write()')}} 方法写入更改。你还可以选择调用 {{domxref('FileSystemSyncAccessHandle.flush', 'flush()')}} 以使更改在指定的时间点写入磁盘（或者你也可以让底层操作系统在其认为合适的时间点执行写入，这么做大多数情况下应该都不会有问题）。

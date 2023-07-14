@@ -5,7 +5,7 @@ slug: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 
 此子文档显示，如何定义页面以删除`Author`对象。
 
-正如[表单设计](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms#form_design)部分所讨论的那样，我们的策略是，只允许删除“未被其他对象引用”的对象（在这种情况下，这意味着如果作者`Author`被一本书`Book`引用，我们将不允许删除作者）。在实现方面，这意味着，表单需要在删除作者之前，先确认没有关联的书籍。如果存在关联的书籍，则应显示它们，并说明在删除`Author`对象之前，必须删除它们。
+正如[表单设计](/zh-CN/docs/Learn/Server-side/Express_Nodejs/forms#form_design)部分所讨论的那样，我们的策略是，只允许删除"未被其他对象引用"的对象（在这种情况下，这意味着如果作者`Author`被一本书`Book`引用，我们将不允许删除作者）。在实现方面，这意味着，表单需要在删除作者之前，先确认没有关联的书籍。如果存在关联的书籍，则应显示它们，并说明在删除`Author`对象之前，必须删除它们。
 
 ## 控制器—get 路由
 
@@ -36,7 +36,7 @@ exports.author_delete_get = function(req, res, next) {
 
 控制器从 URL 参数（`req.params.id`）中，获取要删除的`Author`实例的 id。它使用`async.parallel()` 方法，并行获取作者记录和所有相关书本。当两个操作都完成后，它将呈现 **author_delete.pug** 视图，为 `title`、`author` 和 `author_books` 传递变量。
 
-> **备注：** 如果`findById()`返回“没有结果”，则作者不在数据库中。在这种情况下，没有什么可以删除，所以我们立即呈现所有作者的列表。
+> **备注：** 如果`findById()`返回"没有结果"，则作者不在数据库中。在这种情况下，没有什么可以删除，所以我们立即呈现所有作者的列表。
 >
 > ```js
 > }, function(err, results) {
@@ -123,7 +123,7 @@ block content
 视图扩展了布局模板，覆盖了名为 `content` 的区块。在顶部显示作者详细信息。然后它包含一个，基于**`author_books`**（`if`和`else`子句）数量的条件语句。
 
 - 如果存在与作者相关联的书本，则该页面列出书本，并说明在删除该作者 `Author` 之前，必须删除这些书籍。
-- 如果没有书本，则页面会显示确认提示。如果单击“删除”**Delete**按钮，则会在`POST`请求中，将作者 ID 发送到服务器，并且将删除该作者的记录。
+- 如果没有书本，则页面会显示确认提示。如果单击"删除"**Delete**按钮，则会在`POST`请求中，将作者 ID 发送到服务器，并且将删除该作者的记录。
 
 ## 加入一个删除控制器
 

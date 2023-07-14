@@ -9,7 +9,7 @@ slug: Web/CSS/font-variant-caps
 
 {{EmbedInteractiveExample("pages/css/font-variant-caps.html")}}
 
-如果项目的字体库中包含不同大小的大写字母特殊字符，该属性将选择其中最接近指定大小的字符。例如，如果字体中没有“特小”(petite) 型大写字母，该字符将会被以“小”(small) 型大写字母进行渲染。如果这些字符均不存在，浏览器将用默认大写字符集进行尺寸加工。
+如果项目的字体库中包含不同大小的大写字母特殊字符，该属性将选择其中最接近指定大小的字符。例如，如果字体中没有"特小"(petite) 型大写字母，该字符将会被以"小"(small) 型大写字母进行渲染。如果这些字符均不存在，浏览器将用默认大写字符集进行尺寸加工。
 
 字体库中有时会包含无大小写的特殊字符（例如标点符号）的不同写法来适应在文本中临近的大写字母。但是，小型大写字母永远不会被用来加工无大小写的字符。
 
@@ -17,9 +17,9 @@ slug: Web/CSS/font-variant-caps
 
 这一属性被用来指定各种语言特定的映射规则。例如：
 
-- 在突厥语系中 - 比如土耳其语（[ISO 639-1](https://zh.wikipedia.org/wiki/ISO_639-1)代码‘tr’）、阿塞拜疆语（[ISO 639-1](https://zh.wikipedia.org/wiki/ISO_639-1)代码‘az’）、克里米亚鞑靼语（[ISO 639-3](https://zh.wikipedia.org/wiki/ISO_639-3)代码‘crh’）、鞑靼语（[ISO 639-1](https://zh.wikipedia.org/wiki/ISO_639-1)代码‘tt’）和巴什基尔语（[ISO 639-1](https://zh.wikipedia.org/wiki/ISO_639-1)代码‘ba’），有两种发音近似的“i”字母（区别在于一种有顶部的“.”，另一种没有），而它们的大小写写法也有区别：一种是`i`/`İ`，另一种是 `ı`/`I`。
-- 在德语（[ISO 639-1](https://zh.wikipedia.org/wiki/ISO_639-1)代码‘de’）中，`ß` 的大写可能会被写作`ẞ`（收录于通用字符集 U+1E9E）。
-- 在希腊语（[ISO 639-1](https://zh.wikipedia.org/wiki/ISO_639-1)代码‘el’）中，如果整个单词是大写的（`ά`/`Α`），元音将失去重音。（分离字母 eta（`ή`/`Ή`）除外。）除此之外，重音在第一个元音的双元音将失去重音，并被在第二个元音上加上一个变音符（`άι`/`ΑΪ`）.
+- 在突厥语系中 - 比如土耳其语（[ISO 639-1](https://zh.wikipedia.org/wiki/ISO_639-1)代码'tr'）、阿塞拜疆语（[ISO 639-1](https://zh.wikipedia.org/wiki/ISO_639-1)代码'az'）、克里米亚鞑靼语（[ISO 639-3](https://zh.wikipedia.org/wiki/ISO_639-3)代码'crh'）、鞑靼语（[ISO 639-1](https://zh.wikipedia.org/wiki/ISO_639-1)代码'tt'）和巴什基尔语（[ISO 639-1](https://zh.wikipedia.org/wiki/ISO_639-1)代码'ba'），有两种发音近似的"i"字母（区别在于一种有顶部的"."，另一种没有），而它们的大小写写法也有区别：一种是`i`/`İ`，另一种是 `ı`/`I`。
+- 在德语（[ISO 639-1](https://zh.wikipedia.org/wiki/ISO_639-1)代码'de'）中，`ß` 的大写可能会被写作`ẞ`（收录于通用字符集 U+1E9E）。
+- 在希腊语（[ISO 639-1](https://zh.wikipedia.org/wiki/ISO_639-1)代码'el'）中，如果整个单词是大写的（`ά`/`Α`），元音将失去重音。（分离字母 eta（`ή`/`Ή`）除外。）除此之外，重音在第一个元音的双元音将失去重音，并被在第二个元音上加上一个变音符（`άι`/`ΑΪ`）.
 
 ## 语法
 

@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 
 这些废弃的特性仍然可以使用，但是使用时一定要保持谨慎，因为它们很可能会在未来的某个时间点被移除。应当将其从需要使用的代码中移除。
 
-ECMAScript 规范的 [Annex B](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers) 部分列出了其中的一些废弃功能。这一部分被描述为规范性的可选功能，也就是说，web 浏览器主机必须实现这些功能，而非 web 主机可以不实现。这些功能很可能是稳定的，因为删除它们会导致向下兼容的问题，并破坏传统的网站（JavaScript 的设计目标是“不要破坏 web”）。尽管如此，它们还是不能跨平台移植，而且可能不被所有的分析工具所支持，所以建议你不要使用它们，正如 Annex B 的介绍所说：
+ECMAScript 规范的 [Annex B](https://tc39.es/ecma262/#sec-additional-ecmascript-features-for-web-browsers) 部分列出了其中的一些废弃功能。这一部分被描述为规范性的可选功能，也就是说，web 浏览器主机必须实现这些功能，而非 web 主机可以不实现。这些功能很可能是稳定的，因为删除它们会导致向下兼容的问题，并破坏传统的网站（JavaScript 的设计目标是"不要破坏 web"）。尽管如此，它们还是不能跨平台移植，而且可能不被所有的分析工具所支持，所以建议你不要使用它们，正如 Annex B 的介绍所说：
 
 > … All of the language features and behaviors specified in this annex have one or more undesirable characteristics and in the absence of legacy usage would be removed from this specification.（本附录中规定的所有语言特性和行为都有一个或多个不理想的特性，在没有遗留使用的情况下，将从本规范中删除。） …
 >

@@ -291,7 +291,7 @@ Child.prototype.getOffsetByInitialPosition = function () {
 console.log(new Child(1, 1).getOffsetByInitialPosition()); // { offsetX: -1, offsetY: -1 }
 ```
 
-再次强调，使用 `Object.setPrototypeOf()` 可能会对性能产生不利影响，因此请确保它仅在必要时使用，并在构造函数声明后立即使用，并在创建任何实例之前使用，以避免对象被“污染”。
+再次强调，使用 `Object.setPrototypeOf()` 可能会对性能产生不利影响，因此请确保它仅在必要时使用，并在构造函数声明后立即使用，并在创建任何实例之前使用，以避免对象被"污染"。
 
 > **备注：** 设置或更新构造函数可能会导致结果不同且令人困惑的结果。为了防止它，只需在特定情况下定义 `constructor`。多数情况，不使用 `constructor`，并且不需要重新对其赋值。
 

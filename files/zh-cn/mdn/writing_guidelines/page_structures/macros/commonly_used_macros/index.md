@@ -19,7 +19,7 @@ slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 
 [`Glossary`](https://github.com/mdn/yari/blob/main/kumascript/macros/Glossary.ejs) 这个宏可用于创建指向 MDN 中[术语库](/zh-CN/docs/Glossary)内一个具体词条的链接。调用这个宏时，有一个必需的参数和一个可选参数。
 
-1. 术语的名字（比如“HTML”）：`\{{Glossary("HTML")}}` 会指向 {{Glossary("HTML")}}。
+1. 术语的名字（比如"HTML"）：`\{{Glossary("HTML")}}` 会指向 {{Glossary("HTML")}}。
 2. 可选参数：使用参数中的文本内容，替代术语的名字显示在页面中：`\{{Glossary("CSS", "层叠样式表")}}` 会生成{{Glossary("CSS", "层叠样式表")}}。
 
 ### 链接到 MDN 的参考文档页面

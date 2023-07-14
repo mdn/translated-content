@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/idle
 
 找出用户系统何时处于空闲，锁定或活动状态。
 
-要使用此 API，您需要具有“空闲”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
+要使用此 API，您需要具有"空闲"[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
 ## 类型
 
@@ -17,7 +17,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/idle
 ## 函数
 
 - {{WebExtAPIRef("idle.queryState()")}}
-  - : 如果系统被锁定则返回“已锁定”，如果用户未在指定的秒数内生成任何输入，则返回“空闲”，否则返回“活动”。
+  - : 如果系统被锁定则返回"已锁定"，如果用户未在指定的秒数内生成任何输入，则返回"空闲"，否则返回"活动"。
 - {{WebExtAPIRef("idle.setDetectionInterval()")}}
   - : 设置用于确定系统何时处于 {{WebExtAPIRef("idle.onStateChanged")}} 事件的空闲状态的时间间隔。
 

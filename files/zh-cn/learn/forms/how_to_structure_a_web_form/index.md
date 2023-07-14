@@ -70,7 +70,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 > **备注：** 你可以在 [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) (你也可以看[预览版](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)) 看到该例。
 
-当阅读上述表格时，屏幕阅读器将会读第一个小部件“Fruit juice size small”，“Fruit juice size medium”为第二个，“Fruit juice size large”为第三个。
+当阅读上述表格时，屏幕阅读器将会读第一个小部件"Fruit juice size small"，"Fruit juice size medium"为第二个，"Fruit juice size large"为第三个。
 
 本例中的用例是最重要的。每当您有一组单选按钮时，您应该将它们嵌套在{{HTMLElement("fieldset")}}元素中。还有其他用例，一般来说，{{HTMLElement("fieldset")}}元素也可以用来对表单进行分段。理想情况下，长表单应该在拆分为多个页面，但是如果表单很长，却必须在单个页面上，那么将以不同的关联关系划分的分段，分别放在不同的 fieldset 里，可以提高可用性。
 
@@ -84,9 +84,9 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 <label for="name">Name:</label> <input type="text" id="name" name="user_name">
 ```
 
-`<label>` 标签与 `<input>` 通过他们各自的`for` 属性和 `id` 属性正确相关联（label 的 for 属性和它对应的小部件的 id 属性），这样，屏幕阅读器会读出诸如“Name, edit text”之类的东西。
+`<label>` 标签与 `<input>` 通过他们各自的`for` 属性和 `id` 属性正确相关联（label 的 for 属性和它对应的小部件的 id 属性），这样，屏幕阅读器会读出诸如"Name, edit text"之类的东西。
 
-如果标签没有正确设置，屏幕阅读器只会读出“Edit text blank”之类的东西，这样会没什么帮助。
+如果标签没有正确设置，屏幕阅读器只会读出"Edit text blank"之类的东西，这样会没什么帮助。
 
 注意，一个小部件可以嵌套在它的{{HTMLElement("label")}}元素中，就像这样：
 
@@ -151,11 +151,11 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 </div>
 ```
 
-顶部的段落定义了所需元素的规则。它必须在开始时确保像屏幕阅读器这样的辅助技术在用户找到必需的元素之前显示或念出它们。这样，他们就知道星号表达的是什么意思了。根据屏幕阅读器的设置，屏幕阅读器会把星号读为“star”或“required”，取决于屏幕阅读器的设置——不管怎样，要念出来的都会在第一段清楚的呈现出来。
+顶部的段落定义了所需元素的规则。它必须在开始时确保像屏幕阅读器这样的辅助技术在用户找到必需的元素之前显示或念出它们。这样，他们就知道星号表达的是什么意思了。根据屏幕阅读器的设置，屏幕阅读器会把星号读为"star"或"required"，取决于屏幕阅读器的设置——不管怎样，要念出来的都会在第一段清楚的呈现出来。
 
-- 在第一个例子中，标签根本没有和`input`一起被念出来——读出来的只是“edit the blank”，和单独被念出的标签。多个`<label>`元素会使屏幕阅读器迷惑。
-- 在第二个例子中，事情变得清晰一点了——标签和输入一起，读出的是“name star name edit text”，但标签仍然是单独读出的。这还是有点令人困惑，但这次还是稍微好一点了，因为`input`和`label`联系起来了。
-- 第三个例子是最好的——标签是一起读出的，标签和输入读出的是“name star edit text”。
+- 在第一个例子中，标签根本没有和`input`一起被念出来——读出来的只是"edit the blank"，和单独被念出的标签。多个`<label>`元素会使屏幕阅读器迷惑。
+- 在第二个例子中，事情变得清晰一点了——标签和输入一起，读出的是"name star name edit text"，但标签仍然是单独读出的。这还是有点令人困惑，但这次还是稍微好一点了，因为`input`和`label`联系起来了。
+- 第三个例子是最好的——标签是一起读出的，标签和输入读出的是"name star edit text"。
 
 > **备注：** 你可能会得到一些不同的结果，这取决于你的屏幕阅读器。这是在 VoiceOver 上测试的（NVDA 的行为也类似）。我们也乐于听听你的试验结果。
 

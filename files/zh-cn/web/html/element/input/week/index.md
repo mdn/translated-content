@@ -11,7 +11,7 @@ slug: Web/HTML/Element/input/week
 
 控件的用户界面因浏览器而异；跨浏览器的支持目前受到限制，目前只有 Chrome/Opera 和 Microsoft Edge 支持。在不支持的浏览器中，该控件会优雅降级至与 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/Input/text) 相同的功能。
 
-在 Chrome/Opera 中，`week` 控件提供了用于填写星期和年的插槽，弹出式日历界面（可以更直观地选择它们）以及“X”按钮以清除控件的值。
+在 Chrome/Opera 中，`week` 控件提供了用于填写星期和年的插槽，弹出式日历界面（可以更直观地选择它们）以及"X"按钮以清除控件的值。
 
 ![An input reading 'week 01, 2017'. The background of the 2017 is the same blue as the focus ring. There are 3 icons in the input: x or clear, a spinner with small up and down arrows, and a larger down arrow. A calendar is a pop-up below the input set to January 2017. The first column of the calendar is the week: 52, 1, 2, 3, 4, 5. the full month calendar is to the right of that. The row with Week 1 and January 2 to 8 is highlighted. On the same line as the month, there are buttons to move right and left for the next and previous months.](week-control-chrome.png)
 

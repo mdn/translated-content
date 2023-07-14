@@ -17,7 +17,7 @@ string = attribute.prefix
 
 ## 示例
 
-下例在控制台中输出“x”。
+下例在控制台中输出"x"。
 
 ```xml
 <div x:id="example" onclick="console.log(this.attributes[0].prefix)"/>

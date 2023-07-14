@@ -9,7 +9,7 @@ HTTP 协议范围请求允许服务器只发送 HTTP 消息的一部分到客户
 
 ## 检测服务器端是否支持范围请求
 
-假如在响应中存在 {{HTTPHeader("Accept-Ranges")}} 首部（并且它的值不为“none”），那么表示该服务器支持范围请求。例如，你可以使用 cURL 发送一个 {{HTTPMethod("HEAD")}} 请求来进行检测。
+假如在响应中存在 {{HTTPHeader("Accept-Ranges")}} 首部（并且它的值不为"none"），那么表示该服务器支持范围请求。例如，你可以使用 cURL 发送一个 {{HTTPMethod("HEAD")}} 请求来进行检测。
 
 ```plain
 curl -I http://i.imgur.com/z4d4kWk.jpg

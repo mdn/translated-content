@@ -58,7 +58,7 @@ return;
 a + b;
 ```
 
-控制台会警告“unreachable code after return statement”。
+控制台会警告"unreachable code after return statement"。
 
 > **备注：** 从 Firefox 40 开始，如果在 `return` 语句后发现不可达的代码，控制台会显示一个警告。
 

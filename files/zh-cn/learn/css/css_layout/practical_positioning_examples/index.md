@@ -37,7 +37,7 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 
 > **备注：** 你能看完整的示例，可运行在 [info-box.html](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html))。检出它以理解你在本文章里要建立什么。
 
-你可能会想：”为什么不仅仅做独立的选项卡为一个独立的网页，然后通过点击不同的标签来在不同的页面跳转来达到这个效果？“这样代码可能会简单一些，是的。但是这样每个独立的”页面“视图将会实际上是一个新加载的网页，跨视图更难保存信息，并把这个特征融入一个更大的 UI 设计。另外，所谓的”单页应用“正在变得非常流行——尤其是移动网页 UI——因为把一切的服务放在一个单独的文件上可以减少 HTTP 请求的数量来浏览所有内容，从而提高性能。
+你可能会想："为什么不仅仅做独立的选项卡为一个独立的网页，然后通过点击不同的标签来在不同的页面跳转来达到这个效果？"这样代码可能会简单一些，是的。但是这样每个独立的"页面"视图将会实际上是一个新加载的网页，跨视图更难保存信息，并把这个特征融入一个更大的 UI 设计。另外，所谓的"单页应用"正在变得非常流行——尤其是移动网页 UI——因为把一切的服务放在一个单独的文件上可以减少 HTTP 请求的数量来浏览所有内容，从而提高性能。
 
 > **备注：** 一些网络开发者甚至更超前，每次只加载一页的信息，并且使用 JavaScript 诸如 [XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest)特征动态改变信息显示。但是，在你此时的学习中，我们希望尽可能保持简单。接下来会有一些 JavaScript，但是只有一点。
 
@@ -391,7 +391,7 @@ aside {
 - 然后，我们在面板上设置一个固定的 {{cssxref("width")}} ，让它的 {{cssxref("height")}} 充满整个浏览器窗口的视口。
 - 我们同样包括一些 {{cssxref("padding")}} 来组成我们想要的总的高度和宽度的值（如果我们没有设置 `box-sizing: border-box;` ，那就很有必要，正如这个例子）
 - 然后，我们在面板上设置 {{cssxref("position")}}`: fixed;`，即使页面的内容在滚动，也总是显示在同一个位置。我们设置 {{cssxref("top")}} 属性，使其粘在视口顶部，设置 {{cssxref("right")}} 属性使其默认情况下位于屏幕的右边。
-- 最后我们在元素上设置 {{cssxref("transition")}} 属性，Transitions 是一个有意思的特性，允许你在状态改变的时候平滑的过渡，而不是粗暴的“开”或“关”。在这个例子中我们尝试在 checkbox 被选中时让面板平滑的滚动。（或者换句话说，当问题标记图标被点击以后——记住，点击 `<label>` 标签也会选择相对应的 checkbox！我们已经告诉你这是一种 hack 了）你也将会学到更多……
+- 最后我们在元素上设置 {{cssxref("transition")}} 属性，Transitions 是一个有意思的特性，允许你在状态改变的时候平滑的过渡，而不是粗暴的"开"或"关"。在这个例子中我们尝试在 checkbox 被选中时让面板平滑的滚动。（或者换句话说，当问题标记图标被点击以后——记住，点击 `<label>` 标签也会选择相对应的 checkbox！我们已经告诉你这是一种 hack 了）你也将会学到更多……
 
 ### 设置选择后的状态
 

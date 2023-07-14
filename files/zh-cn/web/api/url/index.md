@@ -21,7 +21,7 @@ slug: Web/API/URL
 - {{domxref("URL.hash", "hash")}}
   - : 包含`'#'`的{{domxref("USVString")}}，后跟 URL 的片段标识符。
 - {{domxref("URL.host", "host")}}
-  - : 一个{{domxref("USVString")}}，其中包含域（即主机名），后跟（如果指定了端口）“：”和 URL 的端口。
+  - : 一个{{domxref("USVString")}}，其中包含域（即主机名），后跟（如果指定了端口）"："和 URL 的端口。
 - {{domxref("URL.hostname", "hostname")}}
   - : 包含 URL 域名的 {{domxref("USVString")}}。
 - {{domxref("URL.href", "href")}}
@@ -37,7 +37,7 @@ slug: Web/API/URL
 - {{domxref("URL.protocol", "protocol")}}
   - : 包含 URL 协议名的 {{domxref("USVString")}}，末尾带 `':'`。
 - {{domxref("URL.search", "search")}}
-  - : 一个{{domxref("USVString")}} ，指示 URL 的参数字符串；如果提供了任何参数，则此字符串包括所有参数，并以开头的“？”开头 字符。
+  - : 一个{{domxref("USVString")}} ，指示 URL 的参数字符串；如果提供了任何参数，则此字符串包括所有参数，并以开头的"？"开头 字符。
 - {{domxref("URL.searchParams", "searchParams")}} {{readonlyInline}}
   - : {{domxref("URLSearchParams")}}对象，可用于访问`search`中找到的各个查询参数。
 - {{domxref("URL.username","username")}}

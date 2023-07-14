@@ -40,7 +40,7 @@ let myNotification = new Notification(title, options);
     - `silent`: 一个 {{domxref("Boolean")}} 指明通知是否应该是无声的，即，不需要发出声音或振动，无论设备设置如何。默认值为 false，这意味着它不会保持静默。
     - `sound`:一个 {{domxref("USVString")}} 包含通知触发时要播放的音频文件的 URL。
     - `noscreen`: 一个 {{domxref("Boolean")}} 指定通知触发是否应启用设备的屏幕。默认值为 false，这意味着它将启用屏幕。
-    - `sticky`: 一个 {{domxref("Boolean")}} 指明通知是否应该是“粘”, 即不易被用户清理。默认值为 false，这意味着它不会粘。
+    - `sticky`: 一个 {{domxref("Boolean")}} 指明通知是否应该是"粘", 即不易被用户清理。默认值为 false，这意味着它不会粘。
 
 ## 示例
 

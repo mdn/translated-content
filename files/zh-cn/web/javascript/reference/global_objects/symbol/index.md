@@ -32,7 +32,7 @@ var sym2 = Symbol('foo');
 var sym3 = Symbol('foo');
 ```
 
-上面的代码创建了三个新的 symbol 类型。注意，`Symbol("foo")` 不会强制将字符串“foo”转换成 symbol 类型。它每次都会创建一个新的 symbol 类型：
+上面的代码创建了三个新的 symbol 类型。注意，`Symbol("foo")` 不会强制将字符串"foo"转换成 symbol 类型。它每次都会创建一个新的 symbol 类型：
 
 ```js
 Symbol("foo") === Symbol("foo"); // false

@@ -53,7 +53,7 @@ ctx.stroke();
 
 ### 更多示例
 
-有关此属性的更多示例和说明，请参阅在“画布教程”中的[使用样式和颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)。
+有关此属性的更多示例和说明，请参阅在"画布教程"中的[使用样式和颜色](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)。
 
 ## 规范描述
 

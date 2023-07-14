@@ -43,7 +43,7 @@ script.textContent = "code()";
 document.body.appendChild(script);
 ```
 
-两者都被视为“内联”脚本，阻塞其余所有任务，进行编译，编译完成后立即执行。
+两者都被视为"内联"脚本，阻塞其余所有任务，进行编译，编译完成后立即执行。
 
 如果你的代码是一个 JS 字符串呢？你应该使用带有对象 URL（object URL）的 Blob 对象，而不是使用 `eval` 或 `innerHTML`，这两者都会触发同步编译：
 

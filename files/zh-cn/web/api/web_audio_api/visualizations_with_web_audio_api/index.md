@@ -150,7 +150,7 @@ function draw() {
 
 另一种小巧的可视化方法是创建频率条形图，在 [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L123-L167) 中已经有一个做好的，现在让我们来看看它是如何实现的。
 
-首先，我们设置好解析器和空数组，之后用 [clearRect()](/zh-CN/docs/Web/API/CanvasRenderingContext2D/clearRect) 清空画布。与之前的唯一区别是我们这次大大减小了 FFT 的大小，这样做的原因是为了使得每个频率条足够宽，让它们看着像“条”而不是“细杆”。
+首先，我们设置好解析器和空数组，之后用 [clearRect()](/zh-CN/docs/Web/API/CanvasRenderingContext2D/clearRect) 清空画布。与之前的唯一区别是我们这次大大减小了 FFT 的大小，这样做的原因是为了使得每个频率条足够宽，让它们看着像"条"而不是"细杆"。
 
 ```js
     analyser.fftSize = 256;

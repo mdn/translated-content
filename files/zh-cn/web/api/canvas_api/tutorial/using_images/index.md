@@ -84,7 +84,7 @@ img.src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAs
 
 ### 使用视频帧
 
-你还可以使用{{HTMLElement("video")}} 中的视频帧（即便视频是不可见的）。例如，如果你有一个 ID 为“myvideo”的{{HTMLElement("video")}} 元素，你可以这样做：
+你还可以使用{{HTMLElement("video")}} 中的视频帧（即便视频是不可见的）。例如，如果你有一个 ID 为"myvideo"的{{HTMLElement("video")}} 元素，你可以这样做：
 
 ```js
 function getMyVideo() {
@@ -236,7 +236,7 @@ function draw() {
 
 我这一章最后的示例是弄一个小画廊。画廊由挂着几张画作的格子组成。当页面装载好之后，为每张画创建一个 canvas 元素并用加上画框然后插入到画廊中去。
 
-在我这个例子里面，所有“画”都是固定宽高的，画框也是。你可以做些改进，通过脚本用画的宽高来准确控制围绕它的画框的大小。
+在我这个例子里面，所有"画"都是固定宽高的，画框也是。你可以做些改进，通过脚本用画的宽高来准确控制围绕它的画框的大小。
 
 下面的代码应该是蛮简单易懂的了。就是遍历图像对象数组，依次创建新的 canvas 元素并添加进去。可能唯一需要注意的，对于那些并不熟悉 DOM 的朋友来说，是 {{domxref("Node.insertBefore")}} 方法的用法。`insertBefore` 是父节点（单元格）的方法，用于将新节点（canvas 元素）插入到我们想要插入的节点之前。
 

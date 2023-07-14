@@ -68,7 +68,7 @@ class BookListView(generic.ListView):
     model = Book
 ```
 
-就是这样！通用视图将查询数据库，以获取指定模型（`Book`）的所有记录，然后呈现位于 **/locallibrary/catalog/templates/catalog/book_list.html** 的模板（我们将在下面创建）。在模板中，您可以使用名为`object_list` 或 `book_list`的模板变量（即通常为“`the_model_name_list`”），以访问书本列表。
+就是这样！通用视图将查询数据库，以获取指定模型（`Book`）的所有记录，然后呈现位于 **/locallibrary/catalog/templates/catalog/book_list.html** 的模板（我们将在下面创建）。在模板中，您可以使用名为`object_list` 或 `book_list`的模板变量（即通常为"`the_model_name_list`"），以访问书本列表。
 
 > **备注：** 模板位置的这个尴尬路径不是印刷错误 - 通用视图在应用程序的`/application_name/templates/`目录中`（/catalog/templates/`），查找模板`/application_name/the_model_name_list.html`（在本例中为`catalog/book_list.html`）。
 
@@ -96,7 +96,7 @@ class BookListView(generic.ListView):
         return Book.objects.filter(title__icontains='war')[:5] # Get 5 books containing the title war
 ```
 
-我们还可以覆盖`get_context_data()` ，以将其他上下文变量传递给模板（例如，默认情况下传递书本列表）。下面的片段，显示了如何将一个名为“`some_data`”的变量添加到上下文中（然后它将作为一个模板变量，而被提供）。
+我们还可以覆盖`get_context_data()` ，以将其他上下文变量传递给模板（例如，默认情况下传递书本列表）。下面的片段，显示了如何将一个名为"`some_data`"的变量添加到上下文中（然后它将作为一个模板变量，而被提供）。
 
 ```python
 class BookListView(generic.ListView):
@@ -182,15 +182,15 @@ class BookListView(generic.ListView):
 <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
 ```
 
-我们使用“点符号”（例如 `book.title` 和 `book.author`）访问相关书本记录的字段，其中书本项目`book`后面的文本是字段名称（如同在模型中定义的）。
+我们使用"点符号"（例如 `book.title` 和 `book.author`）访问相关书本记录的字段，其中书本项目`book`后面的文本是字段名称（如同在模型中定义的）。
 
 我们还可以在模板中，调用模型中的函数 - 在这里，我们调用`Book.get_absolute_url()`，来获取可用于显示关联详细记录的 URL。这项工作提供的函数没有任何参数（没有办法传递参数！）
 
-> **备注：** 在模板中调用函数时，我们必须要小心“副作用”。在这里我们只需要显示一个 URL，但是一个函数几乎可以做任何事情 - 我们不想仅仅通过渲染模板，而删除了我们的数据库（例如）！
+> **备注：** 在模板中调用函数时，我们必须要小心"副作用"。在这里我们只需要显示一个 URL，但是一个函数几乎可以做任何事情 - 我们不想仅仅通过渲染模板，而删除了我们的数据库（例如）！
 
 #### 更新基本模板
 
-打开基本模板（**/locallibrary/catalog/templates/base_generic.html**）并将 **{% url 'books' %}** 插入所有书本 **All books** 的 URL 链接，如下所示。这将启用所有页面中的链接（由于我们已经创建了“books”的 url 映射器，我们可以成功地将其设置到位）。
+打开基本模板（**/locallibrary/catalog/templates/base_generic.html**）并将 **{% url 'books' %}** 插入所有书本 **All books** 的 URL 链接，如下所示。这将启用所有页面中的链接（由于我们已经创建了"books"的 url 映射器，我们可以成功地将其设置到位）。
 
 ```python
 <li><a href="{% url 'index' %}">Home</a></li>
@@ -208,7 +208,7 @@ class BookListView(generic.ListView):
 
 ### URL 映射
 
-打开 **/catalog/urls.py** ，并添加下面粗体显示的 **“book-detail”** URL 映射器。这个 `path()` 函数定义了一个模式，关联到基于通用类的详细信息视图和名称。
+打开 **/catalog/urls.py** ，并添加下面粗体显示的 **"book-detail"** URL 映射器。这个 `path()` 函数定义了一个模式，关联到基于通用类的详细信息视图和名称。
 
 ```python
 urlpatterns = [
@@ -218,7 +218,7 @@ urlpatterns = [
 ]
 ```
 
-对于书本详细信息路径，URL 模式使用特殊语法，来捕获我们想要查看的书本的特定 id。语法非常简单：尖括号定义要捕获的 URL 部分，包含视图可用于访问捕获数据的变量的名称。例如，<**something**> 将捕获标记的模式，并将值作为变量“something” ，传递给视图。您可以选择在变量名称前，加上一个定义数据类型的[转换器规范](https://docs.djangoproject.com/en/2.0/topics/http/urls/#path-converters)（int，str，slug，uuid，path）。
+对于书本详细信息路径，URL 模式使用特殊语法，来捕获我们想要查看的书本的特定 id。语法非常简单：尖括号定义要捕获的 URL 部分，包含视图可用于访问捕获数据的变量的名称。例如，<**something**> 将捕获标记的模式，并将值作为变量"something" ，传递给视图。您可以选择在变量名称前，加上一个定义数据类型的[转换器规范](https://docs.djangoproject.com/en/2.0/topics/http/urls/#path-converters)（int，str，slug，uuid，path）。
 
 在这里，我们使用 `'<int:pk>'` 来捕获 book id，它必须是一个整数，并将其作为名为 `pk` 的参数（主键的缩写）传递给视图。
 
@@ -277,7 +277,7 @@ re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail
     <tr>
       <td>+</td>
       <td>
-        匹配前面一个或多个字符。例如，要匹配一个或多个位数的数字，您将使用<code>\d+</code>。要匹配一个或多个“a”字符，您可以使用
+        匹配前面一个或多个字符。例如，要匹配一个或多个位数的数字，您将使用<code>\d+</code>。要匹配一个或多个"a"字符，您可以使用
         <code>a+</code>
       </td>
     </tr>
@@ -298,7 +298,7 @@ re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail
     <tr>
       <td>(?P&#x3C;<em>name</em>>...)</td>
       <td>
-        捕获模式（由...表示）作为命名变量（在本例中为“name”）。捕获的值，将传递给具有指定名称的视图。因此，您的视图，必须声明具有相同名称的参数！
+        捕获模式（由...表示）作为命名变量（在本例中为"name"）。捕获的值，将传递给具有指定名称的视图。因此，您的视图，必须声明具有相同名称的参数！
       </td>
     </tr>
     <tr>
@@ -353,10 +353,10 @@ re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail
         <p>
           这匹配一个字符串，该字符串在行（<strong>^book/</strong>）的开头具有<code>book/</code>，然后有一个或多个字符，可以是
           ' - '
-          或单词字符（(<strong>[-\w]+</strong>），然后结束。它还捕获这组字符，并将它们传递给名为“stub”的参数中的视图。
+          或单词字符（(<strong>[-\w]+</strong>），然后结束。它还捕获这组字符，并将它们传递给名为"stub"的参数中的视图。
         </p>
         <p>
-          这是“stub”的一种相当典型的模式。存根 stub 是用于数据的、URL
+          这是"stub"的一种相当典型的模式。存根 stub 是用于数据的、URL
           友好的、基于单词的主键。如果您希望本书网址提供更多信息，则可以使用
           stub。例如
           <code>/catalog/book/the-secret-garden</code>
@@ -393,13 +393,13 @@ class BookDetailView(generic.DetailView):
     model = Book
 ```
 
-就是这样！您现在需要做的就是创建一个名为 **/locallibrary/catalog/templates/catalog/book_detail.html** 的模板，该视图将向此模板，传递 URL 映射器提取的特定 `Book` 记录的数据库信息。在模板中，您可以使用名为 `object` 或 `book`的模板变量（即通常为“`the_model_name`”），以访问书本列表。
+就是这样！您现在需要做的就是创建一个名为 **/locallibrary/catalog/templates/catalog/book_detail.html** 的模板，该视图将向此模板，传递 URL 映射器提取的特定 `Book` 记录的数据库信息。在模板中，您可以使用名为 `object` 或 `book`的模板变量（即通常为"`the_model_name`"），以访问书本列表。
 
 如果需要，可以更改使用的模板，以及用于在模板中，引用该书本的上下文对象的名称。您还可以覆盖方法，例如，向上下文添加其他信息。
 
 #### 如果记录不存在会怎样？
 
-如果请求的记录不存在，那么基于类的通用详细信息视图，将自动为您引发 `Http404` 异常 - 在生产环境中，这将自动显示适当的“未找到资源”页面，您可以根据需要自定义该页面。
+如果请求的记录不存在，那么基于类的通用详细信息视图，将自动为您引发 `Http404` 异常 - 在生产环境中，这将自动显示适当的"未找到资源"页面，您可以根据需要自定义该页面。
 
 为了让您了解其工作原理，下面的代码片段，演示了如何在**不使用**基于类的详细信息视图的情况下，将基于类的视图实现为函数。
 
@@ -419,7 +419,7 @@ def book_detail_view(request,pk):
     )
 ```
 
-视图首先尝试从模型中，获取特定的书本记录。如果失败，则视图应引发 `Http404`异常，以指示该书本“未找到”。然后，最后一步是使用模板名称，和上下文参数`context`中的书本数据（作为字典）调用`render()`。
+视图首先尝试从模型中，获取特定的书本记录。如果失败，则视图应引发 `Http404`异常，以指示该书本"未找到"。然后，最后一步是使用模板名称，和上下文参数`context`中的书本数据（作为字典）调用`render()`。
 
 > **备注：** `get_object_or_404()`（如上所示）是一个方便的快捷方式，用于在未找到记录时，引发 `Http404` 异常。
 
@@ -461,12 +461,12 @@ def book_detail_view(request,pk):
 
 虽然有点大，但此模板中的几乎所有内容，都已在前面描述过：
 
-- 我们扩展基本模板，并覆盖“内容”区块 content。
+- 我们扩展基本模板，并覆盖"内容"区块 content。
 - 我们使用条件处理，来确定是否显示特定内容。
 - 我们使用 `for` 循环遍历对象列表。
-- 我们使用 "点表示法" 访问上下文字段（因为我们使用了详细的通用视图，上下文被命名为`book`；我们也可以使用“`object`”）。
+- 我们使用 "点表示法" 访问上下文字段（因为我们使用了详细的通用视图，上下文被命名为`book`；我们也可以使用"`object`"）。
 
-我们以前没见过的一件有趣的事情是函数`book.bookinstance_set.all()`。此方法由 Django“自动”构造，以便返回与特定 `Book` 相关联的 `BookInstance`记录集合。
+我们以前没见过的一件有趣的事情是函数`book.bookinstance_set.all()`。此方法由 Django"自动"构造，以便返回与特定 `Book` 相关联的 `BookInstance`记录集合。
 
 ```python
 {% for copy in book.bookinstance_set.all %}
@@ -474,7 +474,7 @@ def book_detail_view(request,pk):
 {% endfor %}
 ```
 
-需要此方法，是因为您仅在关系的“一”侧声明 `ForeignKey`（一对多）字段。由于您没有做任何事情，来声明其他（“多”）模型中的关系，因此它没有任何字段，来获取相关记录集。为了解决这个问题，Django 构造了一个适当命名的“反向查找”函数，您可以使用它。函数的名称，是通过对声明 `ForeignKey` 的模型名称，转化为小写来构造的，然后是`_set`（即，在 `Book`中创建的函数是 `bookinstance_set()`）。
+需要此方法，是因为您仅在关系的"一"侧声明 `ForeignKey`（一对多）字段。由于您没有做任何事情，来声明其他（"多"）模型中的关系，因此它没有任何字段，来获取相关记录集。为了解决这个问题，Django 构造了一个适当命名的"反向查找"函数，您可以使用它。函数的名称，是通过对声明 `ForeignKey` 的模型名称，转化为小写来构造的，然后是`_set`（即，在 `Book`中创建的函数是 `bookinstance_set()`）。
 
 > **备注：** 这里我们使用`all()`来获取所有记录（默认值）。虽然您可以使用`filter()`方法获取代码中的记录子集，但您无法直接在模板中执行此操作，因为您无法指定函数的参数。
 >
@@ -602,7 +602,7 @@ URL 映射器和视图所需的代码，应与我们上面创建的`Book`列表�
 
 > **备注：**
 >
-> - 为作者列表页面，创建 URL 映射器之后，还需要更新基本模板中的所有作者 **All authors** 链接。按照我们更新“所有图书”**All books** 链接时，所做的相同过程。
+> - 为作者列表页面，创建 URL 映射器之后，还需要更新基本模板中的所有作者 **All authors** 链接。按照我们更新"所有图书"**All books** 链接时，所做的相同过程。
 > - 为作者详细信息页面，创建 URL 映射器之后，还应更新书本详细信息视图模板（**/locallibrary/catalog/templates/catalog/book_detail.html**），以便作者链接，指向新的作者详细信息页面（而不是一个空的 URL）。该行将更改为添加下面以粗体显示的模板标记。
 >
 >   ```html

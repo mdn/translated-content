@@ -214,7 +214,7 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 ## 剩余语法（剩余参数）
 
-剩余语法 (Rest syntax) 看起来和展开语法完全相同，不同点在于，剩余参数用于解构数组和对象。从某种意义上说，剩余语法与展开语法是相反的：展开语法将数组展开为其中的各个元素，而剩余语法则是将多个元素收集起来并“凝聚”为单个元素。请参考：[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)。
+剩余语法 (Rest syntax) 看起来和展开语法完全相同，不同点在于，剩余参数用于解构数组和对象。从某种意义上说，剩余语法与展开语法是相反的：展开语法将数组展开为其中的各个元素，而剩余语法则是将多个元素收集起来并"凝聚"为单个元素。请参考：[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters)。
 
 ## 规范
 

@@ -15,7 +15,7 @@ slug: Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 
 ## 哪里错了？
 
-`Access-Control-Allow-Headers` 标头由服务端发送，让客户端知道它支持哪些标头用于 {{Glossary("CORS")}} 请求。`Access-Control-Allow-Headers` 的值应该是逗号分隔的标头名称列表，例如“`X-Custom-Information`”或任何标准但非基本的标头名称（始终允许）。
+`Access-Control-Allow-Headers` 标头由服务端发送，让客户端知道它支持哪些标头用于 {{Glossary("CORS")}} 请求。`Access-Control-Allow-Headers` 的值应该是逗号分隔的标头名称列表，例如"`X-Custom-Information`"或任何标准但非基本的标头名称（始终允许）。
 
 尝试预检未明确允许的标头时会发生此错误（即，它不包含在服务器发送的 `Access-Control-Allow-Headers` 标头指定的列表中）。要解决此问题，需要更新服务器以允许指定的标头，或者需要避免使用该标头。
 

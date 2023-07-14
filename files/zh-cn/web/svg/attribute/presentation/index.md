@@ -113,7 +113,7 @@ SVG 表现属性是能够被用在 SVG 元素属性上的 CSS 属性。
   - : It allows to control the rendering of graphical or container elements.
     _Value_: see css {{cssxref('display')}}; _Animatable_: **Yes**
 - {{SVGAttr('dominant-baseline')}}
-  - : It defines the baseline used to align the box’s text and inline-level contents.
+  - : It defines the baseline used to align the box's text and inline-level contents.
     _Value_: `auto`|`text-bottom`|`alphabetic`|`ideographic`|`middle`|`central`| `mathematical`|`hanging`|`text-top`; _Animatable_: **Yes**
 - {{SVGAttr('enable-background')}} {{deprecated_inline}}
   - : It tells the browser how to manage the accumulation of the background image.

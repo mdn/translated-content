@@ -298,8 +298,8 @@ for short quotations that don't require paragraph breaks.</q> — <a href="/en-U
 
 你需要的引用源：
 
-- `http://www.brainyquote.com/quotes/authors/c/confucius.html` 对应“孔子曰”。
-- `http://example.com/affirmationsforpositivethinking` 对应“不要说泄气的话”。
+- `http://www.brainyquote.com/quotes/authors/c/confucius.html` 对应"孔子曰"。
+- `http://example.com/affirmationsforpositivethinking` 对应"不要说泄气的话"。
 
 如果你做错了，你可以随时点击*重置*按钮。如果实在进行不下去，可以点击*显示答案*。
 

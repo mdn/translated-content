@@ -18,4 +18,4 @@ slug: Learn/Common_questions/Web_mechanics
 - [什么是域名？](/zh-CN/docs/Learn/Common_questions/What_is_a_domain_name)
   - : 域名是互联网基础架构的关键部分。它们为互联网上任何可用的网络服务器提供了人类可读的地址。
 - [什么是 web 服务器？](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)
-  - : 术语“Web 服务器”可以指在 Web 上向客户端提供网站的硬件或软件，或者两者一起工作。在本文中，我们将讨论 Web 服务器如何工作，以及为什么它们是重要的。
+  - : 术语"Web 服务器"可以指在 Web 上向客户端提供网站的硬件或软件，或者两者一起工作。在本文中，我们将讨论 Web 服务器如何工作，以及为什么它们是重要的。

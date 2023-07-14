@@ -22,7 +22,7 @@ let windowObjectReference = window.open(strUrl, strWindowName, [strWindowFeature
 ## 参数与返回值
 
 - `WindowObjectReference`
-  - : 打开的新窗口对象的引用。如果调用失败，返回值会是 `null`。如果父子窗口满足“[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)”，你可以通过这个引用访问新窗口的属性或方法。
+  - : 打开的新窗口对象的引用。如果调用失败，返回值会是 `null`。如果父子窗口满足"[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)"，你可以通过这个引用访问新窗口的属性或方法。
 - `strUrl`
   - : 新窗口需要载入的 url 地址。*strUrl*可以是 web 上的 html 页面也可以是图片文件或者其他任何浏览器支持的文件格式。
 - `strWindowName`

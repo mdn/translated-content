@@ -73,7 +73,7 @@ Stream API 允许 JavaScript 以编程方式访问从网络接收的数据流，
 ### 字节流相关的接口
 
 - {{domxref("ReadableStreamBYOBReader")}}
-  - : 表示一个 BYOB（“带你自己的缓冲区”）reader，它可以用于读取由开发人员提供的流数据（例如一个自定义的 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}）。
+  - : 表示一个 BYOB（"带你自己的缓冲区"）reader，它可以用于读取由开发人员提供的流数据（例如一个自定义的 {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}）。
 - {{domxref("ReadableByteStreamController")}}
   - : 表示一个 controller，用于控制 {{domxref("ReadableStream")}} 的状态及内部队列。字节流 controller 用于处理字节流。
 - {{domxref("ReadableStreamBYOBRequest")}}

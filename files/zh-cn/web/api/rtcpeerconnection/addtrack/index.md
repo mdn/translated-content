@@ -123,13 +123,13 @@ pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream);
 - 没有与发送方关联的跟踪。
 - 与发送方关联的{domxref("RTCRtpTransceiver")}}有一个{domxref("RTCRtpReceiver")}}，它的{{domxref("RTCRtpReceiver.track", "track")}}属性指定了一个{{domxref("MediaStreamTrack")}}它的{{domxref("MediaStreamTrack.kind", "kind")}}与调用 **`RTCPeerConnection.addTrack()`** 时指定的 track 参数的 kind 相同。这确保了收发器只能处理音频或视频，而不能同时处理二者。
 - **`RTCRtpTransceiver`** 的{{domxref("RTCRtpTransceiver.stopped", "stopped")}}属性为**`false`**。
-- 正在考虑的 **`RTCRtpSender`** 从未被用于发送数据。如果收发器的{{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} 曾经是“**`sendrecv`**”或“**`sendonly`**”，发送方不能被重用。
+- 正在考虑的 **`RTCRtpSender`** 从未被用于发送数据。如果收发器的{{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} 曾经是"**`sendrecv`**"或"**`sendonly`**"，发送方不能被重用。
 
 如果所有这些条件都满足，发送方会被重用，这将导致现有 **`RTCRtpSender`** 和它的 **`RTCRtpTransceiver`** 发生这些变化：
 
 - **`RTCRtpSender`** 的{{domxref("RTCRtpSender.track", "track")}}被设置为指定的 track。
 - 发送方的相关流集被设置为传递到这个方法的流列表，**`stream…`**
-- 关联的{{domxref("RTCRtpTransceiver")}}更新了它的当前方向，包括发送;如果它的当前值是“**`recvonly`**”，它就变成“**`sendrecv`**”，如果它的当前值是“**`inactive`**”，它就变成“**`sendonly`**”。
+- 关联的{{domxref("RTCRtpTransceiver")}}更新了它的当前方向，包括发送;如果它的当前值是"**`recvonly`**"，它就变成"**`sendrecv`**"，如果它的当前值是"**`inactive`**"，它就变成"**`sendonly`**"。
 
 ### 新发送方
 

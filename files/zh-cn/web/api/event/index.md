@@ -21,7 +21,7 @@ slug: Web/API/Event
 
 下面是基于 `Event` 主接口的接口列表，每一个接口都设置了指向各自的 MDN API 参考中相应文档的链接。
 
-需要注意的是，所有的事件接口名称都是以“Event”结尾的。
+需要注意的是，所有的事件接口名称都是以"Event"结尾的。
 
 - {{domxref("AnimationEvent")}}
 - {{domxref("AudioProcessingEvent")}} {{Deprecated_Inline}}

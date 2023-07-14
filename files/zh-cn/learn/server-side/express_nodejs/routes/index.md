@@ -45,7 +45,7 @@ slug: Learn/Server-side/Express_Nodejs/routes
 
 因此我们需要页面来显示藏书、藏书种类、作者、藏书副本的列表和详细信息，还需要页面来创建、更新和删除记录。这些内容对于本节来说不算少，因此本节将主要集中在路由和控制器设置。本节编写的这些函数都只有框架，后续章节再扩展控制器方法，以使用模型数据。
 
-第一段提供了 Express 的 [Router](http://expressjs.com/en/4x/api.html#router) 中间件的“入门”知识。后续设置 LocalLibrary 路由时将用到这些知识。
+第一段提供了 Express 的 [Router](http://expressjs.com/en/4x/api.html#router) 中间件的"入门"知识。后续设置 LocalLibrary 路由时将用到这些知识。
 
 ## 路由入门
 
@@ -84,7 +84,7 @@ module.exports = router;
 
 > **备注：** 上面的路由处理回调直接定义在了路由函数中。LocalLibrary 的回调将定义在单独的控制器模块中。
 
-要在主应用中使用该路由模块，首先应 `require` 它（**wiki.js**），然后对 Express 应用对象调用 `use()`（指定路径‘/wiki’），即可将其添加到中间件处理路径。
+要在主应用中使用该路由模块，首先应 `require` 它（**wiki.js**），然后对 Express 应用对象调用 `use()`（指定路径'/wiki'），即可将其添加到中间件处理路径。
 
 ```js
 const wiki = require('./wiki.js');
@@ -96,7 +96,7 @@ app.use('/wiki', wiki);
 
 ### 路由函数
 
-上述模块定义了两个典型的路由函数。`Router.get()` 方法定义的“about”路由（下方重现的）仅响应 HTTP GET 请求。第一个参数是 URL 路径，第二个参数是一个回调，在收到带有路径的 HTTP GET 请求将调用之。
+上述模块定义了两个典型的路由函数。`Router.get()` 方法定义的"about"路由（下方重现的）仅响应 HTTP GET 请求。第一个参数是 URL 路径，第二个参数是一个回调，在收到带有路径的 HTTP GET 请求将调用之。
 
 ```js
 router.get('/about', (req, res) => {
@@ -110,7 +110,7 @@ router.get('/about', (req, res) => {
 >
 > 上述路由函数只需要一个回调，可以根据需要指定任意数量的回调参数，或一个回调函数数组。每个函数都将加入中间件链，并且将按添加顺序调用（若有回调完成请求则中止当前周期）。
 
-此处的回调对响应对象调用 [`send()`](https://expressjs.com/en/4x/api.html#res.send)，当收到带有路径（'`/about'`）的 GET 请求时将返回字符串“关于此维基”。还有许多其他可以结束请求/响应周期 [响应方法](https://expressjs.com/en/guide/routing.html#response-methods)，例如，可调用 [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) 来发送 JSON 响应，或调用 [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) 来发送文件。构建 LocalLibrary 最常使用的响应方法是 [`render()`](https://expressjs.com/en/4x/api.html#res.render)，它使用模板和数据创建并返回 HTML 文件。后续章节进一步讨论。
+此处的回调对响应对象调用 [`send()`](https://expressjs.com/en/4x/api.html#res.send)，当收到带有路径（'`/about'`）的 GET 请求时将返回字符串"关于此维基"。还有许多其他可以结束请求/响应周期 [响应方法](https://expressjs.com/en/guide/routing.html#response-methods)，例如，可调用 [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) 来发送 JSON 响应，或调用 [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) 来发送文件。构建 LocalLibrary 最常使用的响应方法是 [`render()`](https://expressjs.com/en/4x/api.html#res.render)，它使用模板和数据创建并返回 HTML 文件。后续章节进一步讨论。
 
 ### HTTP 动词
 
@@ -145,7 +145,7 @@ app.get(/.*fish$/, (req, res) => {
 });
 ```
 
-> **备注：** LocalLibrary 的大部分路由都只使用字符串，很少用字符串模式和正则表达式。接下来将讨论“路由参数”。
+> **备注：** LocalLibrary 的大部分路由都只使用字符串，很少用字符串模式和正则表达式。接下来将讨论"路由参数"。
 
 ### 路由参数
 
@@ -161,7 +161,7 @@ app.get('/users/:userId/books/:bookId', (req, res) => {
 });
 ```
 
-路由参数名必须由“单词字符”（/`[A-Za-z0-9_]`/）组成。
+路由参数名必须由"单词字符"（/`[A-Za-z0-9_]`/）组成。
 
 > **备注：** URL `/book/create` 会匹配 `/book/:bookId` 这样的路由（将提取值为'`create`' 的 '`bookId`'）。第一个与传入 URL 相匹配的路由会被使用，因此 `/book/create` 的路由处理器必须定义在 `/book/:bookId` 路由之前，才能妥善处理。
 
@@ -188,7 +188,7 @@ app.get('/users/:userId/books/:bookId', (req, res) => {
 
 ## 创建路由处理器回调函数
 
-定义路由之前应先使用单独的“控制器”模块创建回调的结构骨架。（文件/模块结构没有限制，但以下结构很适合当前项目的规模）。
+定义路由之前应先使用单独的"控制器"模块创建回调的结构骨架。（文件/模块结构没有限制，但以下结构很适合当前项目的规模）。
 
 首先在项目根目录新建一个存放控制器的文件夹（**/controllers**），然后为每个模型创建单独的控制器文件（模块）：
 
@@ -334,7 +334,7 @@ router.get('/', (req, res) => {
 });
 ```
 
-> **备注：** 这是我们第一次使用 [redirect()](https://expressjs.com/en/4x/api.html#res.redirect) 响应方法。它会使路由重定向到指定的页面，默认发送 HTTP 状态代码“302 Found”。可以根据需要更改返回的状态代码、设置绝对或相对路径。
+> **备注：** 这是我们第一次使用 [redirect()](https://expressjs.com/en/4x/api.html#res.redirect) 响应方法。它会使路由重定向到指定的页面，默认发送 HTTP 状态代码"302 Found"。可以根据需要更改返回的状态代码、设置绝对或相对路径。
 
 ### 更新 app.js
 

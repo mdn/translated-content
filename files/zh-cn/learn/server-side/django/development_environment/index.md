@@ -354,7 +354,7 @@ mkdir django_test
 cd django_test
 ```
 
-然后，您可以像所展示的一样使用 django-admin 工具创建一个名为“_mytestsite_”的新框架站点。创建网站后，您可以 CD 到此文件夹，并将在其中找到管理项目的主要脚本，名为**manage.py**。
+然后，您可以像所展示的一样使用 django-admin 工具创建一个名为"_mytestsite_"的新框架站点。创建网站后，您可以 CD 到此文件夹，并将在其中找到管理项目的主要脚本，名为**manage.py**。
 
 ```bash
 django-admin startproject mytestsite
@@ -378,7 +378,7 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-> **备注：** 上面的命令显示了 Linux /macOS 命令。您可以忽略关于“15 unapplied migration(s)”的警告！
+> **备注：** 上面的命令显示了 Linux /macOS 命令。您可以忽略关于"15 unapplied migration(s)"的警告！
 
 一旦服务器运行，您可以通过本地 Web 浏览器打开`http://127.0.0.1:8000/`来查看该站点。你应该看到一个如下所示的网站：
 

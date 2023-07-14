@@ -44,7 +44,7 @@ addonElement.innerHTML = "<div class='" + data.className + "'>" +
 
 jQuery
 
-当使用 jQuery 的方法如 `attr()` 和 `text()` ，会清洗添加到 DOM 的内容。所以，上面“favorite color”例子采用 jQuery 实现会形如：
+当使用 jQuery 的方法如 `attr()` 和 `text()` ，会清洗添加到 DOM 的内容。所以，上面"favorite color"例子采用 jQuery 实现会形如：
 
 ```js example-good
 var node = $("</div>");
@@ -79,7 +79,7 @@ var cleanHTML = DOMPurify.sanitize(externalHTML);
 elem.innerHTML = cleanHTML;
 ```
 
-你可以使用任何方法添加净化后的 HTML 到 DOM，例如 jQuery’s `.html()` 方法。注意这种情况需要使用 Remember though that the `SAFE_FOR_JQUERY` 标记：
+你可以使用任何方法添加净化后的 HTML 到 DOM，例如 jQuery's `.html()` 方法。注意这种情况需要使用 Remember though that the `SAFE_FOR_JQUERY` 标记：
 
 ```js
 var elem = $("<div/>");

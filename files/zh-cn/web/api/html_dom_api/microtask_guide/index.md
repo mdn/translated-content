@@ -220,7 +220,7 @@ log("After enqueueing the microtask");
 
 ### timeout 和微任务的示例
 
-在这个例子中，一个 timeout 在 0 毫秒后被触发（或者 "尽可能快"）。这演示了当调用一个新任务（如通过使用 `setTimeout()`）时的“尽可能快”意味着什么，以及比之于使用一个微任务的不同。
+在这个例子中，一个 timeout 在 0 毫秒后被触发（或者 "尽可能快"）。这演示了当调用一个新任务（如通过使用 `setTimeout()`）时的"尽可能快"意味着什么，以及比之于使用一个微任务的不同。
 
 ```html hidden
 <pre id="log">

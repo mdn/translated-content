@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 **`ArrayBuffer`** 对象用来表示通用的、固定长度的原始二进制数据缓冲区。
 
-它是一个字节数组，通常在其他语言中称为“byte array”。你不能直接操作 `ArrayBuffer` 中的内容；而是要通过[类型化数组对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)或 {{jsxref("DataView")}} 对象来操作，它们会将缓冲区中的数据表示为特定的格式，并通过这些格式来读写缓冲区的内容。
+它是一个字节数组，通常在其他语言中称为"byte array"。你不能直接操作 `ArrayBuffer` 中的内容；而是要通过[类型化数组对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)或 {{jsxref("DataView")}} 对象来操作，它们会将缓冲区中的数据表示为特定的格式，并通过这些格式来读写缓冲区的内容。
 
 [`ArrayBuffer()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer) 构造函数创建一个以字节为单位的给定长度的新 `ArrayBuffer`。你也可以从现有的数据（例如，从 [Base64](/zh-CN/docs/Glossary/Base64) 字符串或者[从本地文件](/zh-CN/docs/Web/API/FileReader/readAsArrayBuffer)）获取数组缓冲区。
 

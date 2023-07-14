@@ -30,7 +30,7 @@ Content Script 只能访问 WebExtension APIS 的一个小的子集，但是它�
 
 Content scripts 可以访问和修改页面的 DOM，就像普通的页面脚本一样。他们也可以察觉页面脚本对页面做出的任何修改。
 
-不过，content scripts 得到的是一个“干净的 DOM 视图”，这意味着：
+不过，content scripts 得到的是一个"干净的 DOM 视图"，这意味着：
 
 - content scripts 不能看见页面脚本定义的 javascript 变量。
 - 如果一个页面脚本重定义了一个 DOM 内置属性，content scripts 将获取到这个属性的原始版本，而不是重定义版本。
@@ -52,7 +52,7 @@ Content scripts 可以访问和修改页面的 DOM，就像普通的页面脚本
 </html>
 ```
 
-脚本文件“page-script.js”如下：
+脚本文件"page-script.js"如下：
 
 ```js
 // page-script.js
@@ -365,7 +365,7 @@ window.addEventListener("message", function(event) {
 
 ### Xray vision in Firefox
 
-在 Firefox 中，隔离 content script 和页面脚本通过使用一种称为“Xray vision”的功能实现。当一个处于更高权限的脚本访问一个被定义于一个更低权限版本的域中时，它将只能看见这个对象的原始版本。
+在 Firefox 中，隔离 content script 和页面脚本通过使用一种称为"Xray vision"的功能实现。当一个处于更高权限的脚本访问一个被定义于一个更低权限版本的域中时，它将只能看见这个对象的原始版本。
 
 任何 [expando](/zh-CN/docs/Glossary/Expando) 属性都是不可见得，而且如果对象的任何属性被重定义，他也只能能看见原始的实现而不是重定义的实现。
 
@@ -377,7 +377,7 @@ window.addEventListener("message", function(event) {
 
 ### 从 content script 中访问 页面脚本对象
 
-在 Firefox 中，content script 中的 DOM 对象会获得一个额外的属性 wrappedJSObject。这是一个会包含任何由页面脚本所造成修改的”未包裹“对象。
+在 Firefox 中，content script 中的 DOM 对象会获得一个额外的属性 wrappedJSObject。这是一个会包含任何由页面脚本所造成修改的"未包裹"对象。
 
 让我们来看一个简单的例子，假定一个页面载入脚本如下：
 

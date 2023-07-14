@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Functions/arguments/callee
 
 ## 描述
 
-**`callee`** 是 `arguments` 对象的一个属性。它可以用于引用该函数的函数体内当前正在执行的函数。这在函数的名称是未知时很有用，例如在没有名称的函数表达式 (也称为“匿名函数”) 内。
+**`callee`** 是 `arguments` 对象的一个属性。它可以用于引用该函数的函数体内当前正在执行的函数。这在函数的名称是未知时很有用，例如在没有名称的函数表达式 (也称为"匿名函数") 内。
 
 > **警告：** 在[严格模式](/zh-CN/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode)下，第 5 版 ECMAScript (**ES5**) 禁止使用 `arguments.callee()`。当一个函数必须调用自身的时候，避免使用 `arguments.callee()`，通过`要么`给函数表达式一个名字，要么使用一个函数声明。
 

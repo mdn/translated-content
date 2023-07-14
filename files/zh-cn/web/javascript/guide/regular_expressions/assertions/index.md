@@ -89,7 +89,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Assertions
           匹配非单词边界。这是上一个字符和下一个字符属于同一类型的位置：要么两者都必须是单词，要么两者都必须是非单词，例如在两个字母之间或两个空格之间。字符串的开头和结尾被视为非单词。与匹配的词边界相同，匹配的非词边界也不包含在匹配中。例如，<code
             >/\Bon/</code
           >
-          在“at noon”中匹配“on” ，<code>/ye\B/</code> 在 "possibly
+          在"at noon"中匹配"on" ，<code>/ye\B/</code> 在 "possibly
           yesterday"中匹配"ye" 。
         </p>
       </td>
@@ -119,11 +119,11 @@ slug: Web/JavaScript/Guide/Regular_expressions/Assertions
             <tr>
               <td>
                 <strong>先行断言：</strong> x 被 y 跟随时匹配
-                x。例如，对于/<code>Jack(?=Sprat)</code>/，“Jack”在跟有“Sprat”的情况下才会得到匹配．<code
+                x。例如，对于/<code>Jack(?=Sprat)</code>/，"Jack"在跟有"Sprat"的情况下才会得到匹配．<code
                   >/Jack(?=Sprat|Frost)/</code
                 >
-                “Jack”后跟有“Sprat”或“Frost”的情况下才会得到匹配。不过，
-                匹配结果不包括“Sprat”或“Frost”。
+                "Jack"后跟有"Sprat"或"Frost"的情况下才会得到匹配。不过，
+                匹配结果不包括"Sprat"或"Frost"。
               </td>
             </tr>
           </tbody>
@@ -138,7 +138,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Assertions
             <tr>
               <td>
                 <strong>先行否定断言：</strong> x 没有被 y 紧随时匹配
-                x。例如，对于<code>/\d+(?!\.)/</code>，数字后没有跟随小数点的情况下才会得到匹配。对于<code>/\d+(?!\.)/.exec(3.141)</code>，匹配‘141’而不是‘3’。
+                x。例如，对于<code>/\d+(?!\.)/</code>，数字后没有跟随小数点的情况下才会得到匹配。对于<code>/\d+(?!\.)/.exec(3.141)</code>，匹配'141'而不是'3'。
               </td>
             </tr>
           </tbody>
@@ -153,7 +153,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Assertions
             <tr>
               <td>
                 <strong>后行断言：</strong> x 跟随 y 的情况下匹配
-                x。例如，对于<code>/(?&#x3C;=Jack)Sprat/</code>，“Sprat”紧随“Jack”时才会得到匹配。对于<code>/(?&#x3C;=Jack|Tom)Sprat</code>，“Sprat”在紧随“Jack”或“Tom”的情况下才会得到匹配。不过，匹配结果中不包括“Jack”或“Tom”。
+                x。例如，对于<code>/(?&#x3C;=Jack)Sprat/</code>，"Sprat"紧随"Jack"时才会得到匹配。对于<code>/(?&#x3C;=Jack|Tom)Sprat</code>，"Sprat"在紧随"Jack"或"Tom"的情况下才会得到匹配。不过，匹配结果中不包括"Jack"或"Tom"。
               </td>
             </tr>
           </tbody>
@@ -172,7 +172,7 @@ slug: Web/JavaScript/Guide/Regular_expressions/Assertions
                 符号的情况下才会得到匹配。对于<code
                   >/(?&#x3C;!-)\d+/.exec(3)</code
                 >
-                ，“3”得到匹配。
+                ，"3"得到匹配。
                 而<code>/(?&#x3C;!-)\d+/.exec(-3)</code>的结果无匹配，这是由于数字之前有
                 - 符号。
               </td>

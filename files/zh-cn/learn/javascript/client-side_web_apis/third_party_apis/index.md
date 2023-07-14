@@ -98,9 +98,9 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
 
     1. 跳转到 [Google Cloud Platform API Manager dashboard](https://console.cloud.google.com/apis/dashboard).
     2. 如果你还没有新项目，请创建一个新项目。
-    3. 单击“启用 API”按钮。
+    3. 单击"启用 API"按钮。
     4. 选择*Google Maps JavaScript API*.
-    5. 单击“启用”按钮。
+    5. 单击"启用"按钮。
     6. 单击创建凭据，然后选择 API 密钥。
     7. 复制你的 API 密钥并将示例中的第一个{{htmlelement("script")}}元素中的现有密钥替换为你自己的密钥。（位于`?key=`和属性结束引号标记 (`"`) 之间的位置。)
 
@@ -213,7 +213,7 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
 出于安全性和问责制的原因，大多数 API 都要求您使用某种开发人员密钥。要注册 NYTimes API 密钥，您需要访问 <https://developer.nytimes.com/signup>。
 
-1. 申请 "Article Search API" 的 API key ——新建一个应用，选择这个 API，(填写名称和描述，打开 "Article Search API" 下面的开关，然后点击“创建 (Create)”)
+1. 申请 "Article Search API" 的 API key ——新建一个应用，选择这个 API，(填写名称和描述，打开 "Article Search API" 下面的开关，然后点击"创建 (Create)")
 2. 从结果页面获取 API。
 3. 现在开始构建这个应用，下载 [nytimes_start.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/nytimes_start.html) 和 [nytimes.css](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/nytimes.css) 到一个新的本地目录。如果已经克隆过这个仓库 [cloned the examples repository](/zh-CN/docs/Learn#Getting_our_code_examples), 里面就已经有这 2 个文件了，它们存放在 _javascript/apis/third-party-apis/nytimes_ 目录下。HTML 文件里的 `<script>` 标签下已经包含了构建这个应用需要用到的变量；下面我们来填写函数。
 

@@ -62,7 +62,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry
 
 Cookie 的生命周期可以通过两种方式定义：
 
-- _会话期_ Cookie 会在当前的会话结束之后删除。浏览器定义了“当前会话”结束的时间，一些浏览器重启时会使用*会话恢复*。这可能导致会话 cookie 无限延长。
+- _会话期_ Cookie 会在当前的会话结束之后删除。浏览器定义了"当前会话"结束的时间，一些浏览器重启时会使用*会话恢复*。这可能导致会话 cookie 无限延长。
 - _持久性_ Cookie 在过期时间（`Expires`）指定的日期或有效期（`Max-Age`）指定的一段时间后被删除。
 
 例如：
@@ -101,7 +101,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
 
 #### Path 属性
 
-`Path` 属性指定了一个 URL 路径，该 URL 路径必须存在于请求的 URL中，以便发送 `Cookie` 标头。以字符 `%x2F` (“/”) 作为路径分隔符，并且子路径也会被匹配。
+`Path` 属性指定了一个 URL 路径，该 URL 路径必须存在于请求的 URL中，以便发送 `Cookie` 标头。以字符 `%x2F` ("/") 作为路径分隔符，并且子路径也会被匹配。
 
 例如，设置 `Path=/docs`，则以下地址都会匹配：
 
@@ -143,7 +143,7 @@ cookie 的机制使得服务器无法确认 cookie 是在安全来源上设置�
 但是，作为[深度防御措施](<https://en.wikipedia.org/wiki/Defense_in_depth_(computing)>)，可以使用 *cookie 前缀*来断言有关 cookie 的特定事实。有两个前缀可用：
 
 - `__Host-`
-  - : 如果 cookie 名称具有此前缀，则仅当它也用 `Secure` 属性标记、从安全来源发送、不包括 `Domain` 属性，并将 `Path` 属性设置为 `/` 时，它才在 {{HTTPHeader("Set-Cookie")}} 标头中接受。这样，这些 cookie 可以被视为“domain-locked”。
+  - : 如果 cookie 名称具有此前缀，则仅当它也用 `Secure` 属性标记、从安全来源发送、不包括 `Domain` 属性，并将 `Path` 属性设置为 `/` 时，它才在 {{HTTPHeader("Set-Cookie")}} 标头中接受。这样，这些 cookie 可以被视为"domain-locked"。
 - `__Secure-`
   - : 如果 cookie 名称具有此前缀，则仅当它也用 `Secure` 属性标记，是从安全来源发送的，它才在 {{HTTPHeader("Set-Cookie")}} 标头中接受。该前缀限制要弱于 `__Host-` 前缀。
 
@@ -205,13 +205,13 @@ Cookie 与特定域和方案（例如，`http` 或 `https`）相关联，如果�
 - 允许用户选择不接收某些或所有 cookie。
 - 允许用户在不接收 Cookie 的情况下使用大部分服务。
 
-可能还存在其他法规来管理你当地的 Cookie。你有责任了解并遵守这些规定。有些公司提供“cookie banner”代码，可帮助你遵守这些法规。
+可能还存在其他法规来管理你当地的 Cookie。你有责任了解并遵守这些规定。有些公司提供"cookie banner"代码，可帮助你遵守这些法规。
 
 ## 在浏览器中存储信息的其他方式
 
 在浏览器中存储数据的另一种方法是 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)。[window.sessionStorage](/zh-CN/docs/Web/API/Window/sessionStorage) 和 [window.localStorage](/zh-CN/docs/Web/API/Window/localStorage) 属性与持续时间中的会话和永久 cookie 相对应，但是存储限制比 cookie 大，并且永远不会发送到服务器。可以使用 [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API) 或基于它构建的库来存储更多结构化的数据。
 
-有一些技术旨在在 cookie 被删除后重新创建它们。这些被称为“僵尸”cookie。这些技术违反了用户的隐私和用户控制原则，可能违反数据隐私法规，并可能使使用它们的网站承担法律责任。
+有一些技术旨在在 cookie 被删除后重新创建它们。这些被称为"僵尸"cookie。这些技术违反了用户的隐私和用户控制原则，可能违反数据隐私法规，并可能使使用它们的网站承担法律责任。
 
 ## 参见
 

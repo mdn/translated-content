@@ -144,7 +144,7 @@ JavaScript 还具有内置的 API，用于生成 `null` 原型对象，特别是
 - [`import.meta`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import.meta) 对象
 - 通过 [`import * as ns from "module"`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入命名空间) 或 [`import()`](/zh-CN/docs/Web/JavaScript/Reference/Operators/import) 获取的模块命名空间对象
 
-“`null` 原型对象”这个术语通常也包括其原型链中没有 `Object.prototype` 的任何对象。当使用类时，可以通过 [`extends null`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends#扩展_null) 来创建这样的对象。
+"`null` 原型对象"这个术语通常也包括其原型链中没有 `Object.prototype` 的任何对象。当使用类时，可以通过 [`extends null`](/zh-CN/docs/Web/JavaScript/Reference/Classes/extends#扩展_null) 来创建这样的对象。
 
 ### 对象强制转换
 

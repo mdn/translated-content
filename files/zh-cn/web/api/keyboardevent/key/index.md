@@ -12,7 +12,7 @@ slug: Web/API/KeyboardEvent/key
 - 如果按下的键拥有可打印的内容，则返回一个非空的 Unicode 字符来代表这个键的可打印内容。
 - 如果按下的键是一个控制键或特殊字符，则返回一个事先定义好的值，见[预定义键值列表](/zh-CN/docs/Web/API/KeyboardEvent/key/Key_Values)。
 - 如果 `KeyboardEvent` 显示按下的键是一个死键（dead key），则键值为 `"Dead"`。
-- 有些特殊键盘的键（比如多媒体键盘上用来控制媒体播放的扩展按键）在 Windows 下会触发 `WM_APPCOMMAND` 事件，而不会产生按键代码。虽然没有按键代码，这些事件将映射到 DOM 键盘事件中，并将列入 Windows 的“虚拟按键码”列表中。
+- 有些特殊键盘的键（比如多媒体键盘上用来控制媒体播放的扩展按键）在 Windows 下会触发 `WM_APPCOMMAND` 事件，而不会产生按键代码。虽然没有按键代码，这些事件将映射到 DOM 键盘事件中，并将列入 Windows 的"虚拟按键码"列表中。
 - 如果按键无法识别，则返回 `"Unidentified"`。
 
 ## KeyboardEvent 次序

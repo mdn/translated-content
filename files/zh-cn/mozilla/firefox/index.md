@@ -5,7 +5,7 @@ slug: Mozilla/Firefox
 
 {{FirefoxSidebar}}
 
-[Firefox](https://www.mozilla.org/firefox/all/)（非正式中文名称“火狐”）是 Mozilla 出品的网页浏览器，可用于 Windows、Mac OS X、Linux 等桌面操作系统，也可以用于 Android 和 iOS 移动操作系统。得益于对最新的网络标准的广泛兼容和强有力的开发工具，Firefox 对终端用户和开发者而言都是优秀的浏览器。
+[Firefox](https://www.mozilla.org/firefox/all/)（非正式中文名称"火狐"）是 Mozilla 出品的网页浏览器，可用于 Windows、Mac OS X、Linux 等桌面操作系统，也可以用于 Android 和 iOS 移动操作系统。得益于对最新的网络标准的广泛兼容和强有力的开发工具，Firefox 对终端用户和开发者而言都是优秀的浏览器。
 
 Firefox 是一个开源项目，许多代码都是由志愿者社群提供的。在此你将了解如何为 Firefox 项目做贡献，你也可以找到关于制作附加组件、使用 Firefox 开发者工具等内容。
 

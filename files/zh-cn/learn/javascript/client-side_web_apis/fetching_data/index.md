@@ -53,7 +53,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 - 页面更新更加迅速，你不必等待页面刷新，这意味这网站的体验更加流畅、响应更加迅速。
 - 每次更新时下载的数据更少，这意味着浪费的带宽更少。这在使用宽带连接的台式机上可能不是什么问题，但在移动设备或没有高速互联网连接的国家/地区则是一个主要问题。
 
-> **备注：** 在早期，这种通用技术被称为[异步](/zh-CN/docs/Glossary/Asynchronous)的 JavaScript 与 XML 技术（[Ajax](/zh-CN/docs/Glossary/AJAX)），因为倾向于请求 XML 数据。但现在通常不是这种情况（你更有可能请求 JSON），但结果依然相同，并通常依旧使用术语“Ajax”来描述该技术。
+> **备注：** 在早期，这种通用技术被称为[异步](/zh-CN/docs/Glossary/Asynchronous)的 JavaScript 与 XML 技术（[Ajax](/zh-CN/docs/Glossary/AJAX)），因为倾向于请求 XML 数据。但现在通常不是这种情况（你更有可能请求 JSON），但结果依然相同，并通常依旧使用术语"Ajax"来描述该技术。
 
 为了进一步加快速度，某些网站还会在首次请求时将资源和数据存储在用户的计算机上，这意味这在后续的访问中，会使用这些内容的本地版本，而不是在每次重新加载页面时都下载新的副本。内容仅在更新后才会从服务器重新加载。
 
@@ -89,9 +89,9 @@ function updateDisplay(verse) {
 }
 ```
 
-让我们将通过构造一个指向我们要加载的文本文件的相对 URL 来开始编写函数，因为我们稍后需要它。任何时候 {{htmlelement("select")}} 元素的值都与所选的 {{htmlelement("option")}} 内的文本相同（除非在值属性中指定了不同的值）——例如“Verse 1”。相应的诗歌文本文件是“verse1.txt”，并与 HTML 文件位于同一目录中，因此只需要文件名即可。
+让我们将通过构造一个指向我们要加载的文本文件的相对 URL 来开始编写函数，因为我们稍后需要它。任何时候 {{htmlelement("select")}} 元素的值都与所选的 {{htmlelement("option")}} 内的文本相同（除非在值属性中指定了不同的值）——例如"Verse 1"。相应的诗歌文本文件是"verse1.txt"，并与 HTML 文件位于同一目录中，因此只需要文件名即可。
 
-但是，web 服务器往往是区分大小写的，且文件名没有空格。要将“Verse 1”转换为“verse1.txt”，我们需要将 `V` 转换为小写、删除空格，并在末尾添加“.txt”。这可以通过 {{jsxref("String.replace", "replace()")}}、{{jsxref("String.toLowerCase", "toLowerCase()")}} 和[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)来完成。在 `updateDisplay()` 函数中添加以下代码：
+但是，web 服务器往往是区分大小写的，且文件名没有空格。要将"Verse 1"转换为"verse1.txt"，我们需要将 `V` 转换为小写、删除空格，并在末尾添加".txt"。这可以通过 {{jsxref("String.replace", "replace()")}}、{{jsxref("String.toLowerCase", "toLowerCase()")}} 和[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)来完成。在 `updateDisplay()` 函数中添加以下代码：
 
 ```js
 verse = verse.replace(' ', '').toLowerCase();
@@ -191,8 +191,8 @@ fetch('products.json')
 
 1. 创建示例文件的本地副本。
 2. 通过 web 服务器运行代码（如上所述，[在服务端运行示例](#在服务端运行示例)）。
-3. 修改要获取的文件的路径，比如“produc.json”（确保你拼写的是错误的）。
-4. 现在在你的浏览器上加载索引文件（通过 `localhost:8000`）然后查看你浏览器的开发者控制台。你将看到一条类似于“Fetch 错误：HTTP 错误：404”的消息。
+3. 修改要获取的文件的路径，比如"produc.json"（确保你拼写的是错误的）。
+4. 现在在你的浏览器上加载索引文件（通过 `localhost:8000`）然后查看你浏览器的开发者控制台。你将看到一条类似于"Fetch 错误：HTTP 错误：404"的消息。
 
 第二个 Fetch 块可以在 `fetchBlob()` 函数中找到：
 
@@ -208,13 +208,13 @@ fetch(url)
   .catch((err) => console.error(`Fetch 错误：${err.message}`));
 ```
 
-它的工作原理和前一个差不多，除了我们放弃 {{domxref("Response.json","json()")}} 而使用 {{domxref("Response.blob","blob()")}}——在本例中，我们希望以图像文件的形式返回响应，为此使用的数据格式是 [Blob](/zh-CN/docs/Web/API/Blob)——这个词是“二进制大对象”的缩写，基本上可以用来表示大型类文件对象——比如图像或视频文件。
+它的工作原理和前一个差不多，除了我们放弃 {{domxref("Response.json","json()")}} 而使用 {{domxref("Response.blob","blob()")}}——在本例中，我们希望以图像文件的形式返回响应，为此使用的数据格式是 [Blob](/zh-CN/docs/Web/API/Blob)——这个词是"二进制大对象"的缩写，基本上可以用来表示大型类文件对象——比如图像或视频文件。
 
 一旦我们成功地接收到我们的 blob，我们将其传入到用于显示图像的 `showProduct()` 函数中。
 
 ## XMLHttpRequest API
 
-有时，尤其是在旧的代码中，你会看到另一个名为 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)（经常会被简写为“XHR”）的 API，它也用于发送 HTTP 请求。其早于 Fetch API，而且是第一个广泛用于实现 AJAX 的 API。如果可以，我们建议你使用 Fetch：它是一个更简单的 API，而且比 `XMLHttpRequest` 的特性更多。我们不再详细介绍使用 `XMLHttpRequest` 的示例，但我们将向你展示罐头商店示例的第一个请求的 `XMLHttpRequest` 版本：
+有时，尤其是在旧的代码中，你会看到另一个名为 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)（经常会被简写为"XHR"）的 API，它也用于发送 HTTP 请求。其早于 Fetch API，而且是第一个广泛用于实现 AJAX 的 API。如果可以，我们建议你使用 Fetch：它是一个更简单的 API，而且比 `XMLHttpRequest` 的特性更多。我们不再详细介绍使用 `XMLHttpRequest` 的示例，但我们将向你展示罐头商店示例的第一个请求的 `XMLHttpRequest` 版本：
 
 ```js
 const request = new XMLHttpRequest();

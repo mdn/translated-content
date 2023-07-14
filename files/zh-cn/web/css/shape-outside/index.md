@@ -60,7 +60,7 @@ shape-outside: unset;
 
   - : 提取并且计算指定 {{cssxref("&lt;image&gt;")}} 的 alpha 通道得出浮动区域（译者：即根据图片的非透明区域进行包裹）。就跟通过 {{cssxref("shape-image-threshold")}}来定义一样。
 
-    > **备注：** {{glossary("User agent", "用户代理")}} 必须使用由 HTML5 规范定义的 CORS-enabled fetch 方法来处理 `shape-outside` 的值中的所有 URL。当捕获的时候，用户代理必须使用“匿名”模式来设置层叠样式表的 URL 的 referrer source 和设置所在文档的 URL 的 origin。如果这导致出现没有有效的备份图像这样的网络错误，产生的影响就跟指定了值 `none` 一样。
+    > **备注：** {{glossary("User agent", "用户代理")}} 必须使用由 HTML5 规范定义的 CORS-enabled fetch 方法来处理 `shape-outside` 的值中的所有 URL。当捕获的时候，用户代理必须使用"匿名"模式来设置层叠样式表的 URL 的 referrer source 和设置所在文档的 URL 的 origin。如果这导致出现没有有效的备份图像这样的网络错误，产生的影响就跟指定了值 `none` 一样。
 
 ### 正式语法
 

@@ -204,7 +204,7 @@ background-position: 10px 20px, top right;
 这里有一些规则，需要在简写背景图像属性时遵循，例如：
 
 - `background-color` 只能在最后一个逗号之后指定。
-- `background-size` 值只能立即包含在 `background-position` 之后，用“/”字符分隔，例如：`center/80%`。
+- `background-size` 值只能立即包含在 `background-position` 之后，用"/"字符分隔，例如：`center/80%`。
 
 查看 {{cssxref("background")}} 的 MDN 页面，以查看所有的注意事项。
 

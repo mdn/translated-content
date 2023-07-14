@@ -24,13 +24,13 @@ slug: Learn/JavaScript/Objects
 - [对象原型](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)
   - : 通过原型 (prototype) 这种机制，JavaScript 中的对象从其他对象继承功能特性；这种继承机制与经典的面向对象编程语言不同。本文将探讨这些差别，解释原型链如何工作，并了解如何通过 `prototype` 属性向已有的构造器添加方法。
 - [JavaScript 中的继承](/zh-CN/docs/Learn/JavaScript/Objects/Inheritance)
-  - : 了解了 OOJS 的大多数细节之后，本文将介绍如何创建“子”对象类别（构造器）并从“父”类别中继承功能。此外，我们还会针对何时何处使用 OOJS 给出建议。
+  - : 了解了 OOJS 的大多数细节之后，本文将介绍如何创建"子"对象类别（构造器）并从"父"类别中继承功能。此外，我们还会针对何时何处使用 OOJS 给出建议。
 - [使用 JSON 数据](/zh-CN/docs/Learn/JavaScript/Objects/JSON)
   - : JavaScript Object Notation (JSON) 是一种将结构化数据表达为 JavaScript 对象的标准格式，其常用于在网站上表达或传输数据（比如：从服务器向客户端发送数据，使之显示在网页上）。你会经常遇到它，因此本文将告诉你如何在 JavaScript 中使用 JSON 数据，包括访问 JSON 对象中的数据条目、编写自己的 JSON 数据等等。
 - [构建对象实战](/zh-CN/docs/Learn/JavaScript/Objects/Object_building_practice)
-  - : 在前面的文章中我们了解了 JavaScript 对象基本理论和语法，为你打下坚实的基础。本文中你需要进行实战练习，通过构建自定义 JavaScript 对象的实践过程，编写一个有趣而又多彩的程序——“彩色弹跳球”。
+  - : 在前面的文章中我们了解了 JavaScript 对象基本理论和语法，为你打下坚实的基础。本文中你需要进行实战练习，通过构建自定义 JavaScript 对象的实践过程，编写一个有趣而又多彩的程序——"彩色弹跳球"。
 
 ## 学习评估
 
-- [向“弹跳球”演示程序添加新功能](/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
-  - : 在这个评估中，你需要以上一篇文章中的“弹跳球”演示为起点，向这个演示程序新增一些有趣的功能。
+- [向"弹跳球"演示程序添加新功能](/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
+  - : 在这个评估中，你需要以上一篇文章中的"弹跳球"演示为起点，向这个演示程序新增一些有趣的功能。

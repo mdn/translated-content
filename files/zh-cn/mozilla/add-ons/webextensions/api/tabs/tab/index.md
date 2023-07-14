@@ -18,11 +18,11 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 - `autoDiscardable` {{optional_inline}}
   - : `boolean`. 资源不足时浏览器是否可以自动丢弃该标签页。
 - `cookieStoreId` {{optional_inline}}
-  - : `string`. 该标签页的 Cookie 存储。如果不同的标签可以有不同的 cookie 存储 (例如，支持 [contextual identity](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)), 你可以将此作为 `storeId` 选项传递给 {{WebExtAPIRef("cookies")}} API 的各种方法，设置和获取与此标签页的 Cookie 存储关联的 Cookie。只有在扩展具有“cookies”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)的情况下才会出现。
+  - : `string`. 该标签页的 Cookie 存储。如果不同的标签可以有不同的 cookie 存储 (例如，支持 [contextual identity](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)), 你可以将此作为 `storeId` 选项传递给 {{WebExtAPIRef("cookies")}} API 的各种方法，设置和获取与此标签页的 Cookie 存储关联的 Cookie。只有在扩展具有"cookies"[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)的情况下才会出现。
 - `discarded` {{optional_inline}}
   - : `boolean`. 是否丢弃的标签页。被丢弃的标签页是其内容已经从内存中卸载的标签页，但在标签页条中仍可见。它的内容在下一次被激活时被重新加载。
 - `favIconUrl` {{optional_inline}}
-  - : `string`. 该标签的图标的网址。只有在扩展具有“cookies”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)的情况下才会出现。如果标签页正在加载中，该值可以为空字符串
+  - : `string`. 该标签的图标的网址。只有在扩展具有"cookies"[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)的情况下才会出现。如果标签页正在加载中，该值可以为空字符串
 - `height` {{optional_inline}}
   - : `integer`. 标签页的像素单位高度。
 - `highlighted`

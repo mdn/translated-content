@@ -15,17 +15,17 @@ MDN Web 文档的内容是免费的，并在开源协议下提供。
 
 > **备注：** MDN Web 文档中的内容来自于包括 Mozilla 基金会内部与外部编辑者的贡献。除非另有说明，文档基于[知识共享 署名-相同方式共享](https://creativecommons.org/licenses/by-sa/2.5/deed.zh)（CC-BY-SA）V2.5 及以上版本发布。
 
-你复用的内容是在与内容相同的许可协议（CC-BY-SA v2.5 及以上的版本）下发布的。在复用 MDN Web 文档的内容时，你需要确保对属于“Mozilla 贡献者”的原始内容进行署名。包括源文档的超链接（在线内容）或 URL（印刷内容）。以*本*文为例，你可以这样署名：
+你复用的内容是在与内容相同的许可协议（CC-BY-SA v2.5 及以上的版本）下发布的。在复用 MDN Web 文档的内容时，你需要确保对属于"Mozilla 贡献者"的原始内容进行署名。包括源文档的超链接（在线内容）或 URL（印刷内容）。以*本*文为例，你可以这样署名：
 
 > 归属于 [Mozilla 贡献者](/zh-CN/docs/MDN/About/contributors.txt)的[署名和版权许可](MDN/Writing_guidelines/Attrib_copyright_license)在[知识共享 署名-相同方式共享 2.5](https://creativecommons.org/licenses/by-sa/2.5/deed.zh) 许可下提供。
 
-在上述示例中，“Mozilla 贡献者”链接了被引用页面的历史记录。参见[署名的推荐做法](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)以获取更为详细的信息。
+在上述示例中，"Mozilla 贡献者"链接了被引用页面的历史记录。参见[署名的推荐做法](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)以获取更为详细的信息。
 
 ### 代码示例
 
 2010 年 8 月 20 日或之后添加的代码示例都属于[公有领域 CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.zh)。不需要有意添加许可信息。如果你需要的话，可以使用：`版权属于公有领域：https://creativecommons.org/publicdomain/zero/1.0/deed.zh`
 
-2010 年 8 月 20 日之前的代码示例基于 [MIT 许可证](https://opensource.org/license/mit/)，你应该在 MIT 模板中插入以下署名信息：“© \<date of last wiki page revision> \<name of person who put it in the wiki>”
+2010 年 8 月 20 日之前的代码示例基于 [MIT 许可证](https://opensource.org/license/mit/)，你应该在 MIT 模板中插入以下署名信息："© \<date of last wiki page revision> \<name of person who put it in the wiki>"
 
 自 2020 年 12 月 14 日推出新的 Yari MDN 平台以来，目前还无法确定你需要哪一个署名信息。我们正在进行这方面的工作，并将很快更新此内容。
 

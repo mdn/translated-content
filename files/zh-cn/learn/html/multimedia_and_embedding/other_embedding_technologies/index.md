@@ -68,15 +68,15 @@ slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 
 1. 首先，去 Bilibili 找一个喜欢的视频。
 2. 在视频下方，你会看到一个*分享*按钮（样式为一个向右箭头），鼠标停留在那个按钮上，可以看到一些分享选项。
-3. 选择“嵌入代码”选项，会出现“成功复制到剪贴板”的提示。
+3. 选择"嵌入代码"选项，会出现"成功复制到剪贴板"的提示。
 4. 将复制的代码粘贴到下面的*输入*框里，看看*输出*结果是什么。
 
 此外，你还可以试试在示例中嵌入 [Bing 地图](https://cn.bing.com/maps)：
 
 1. 去 Bing 地图找一个喜欢的地图。
-2. 鼠标移动到 UI 上方的“更多”处。
+2. 鼠标移动到 UI 上方的"更多"处。
 3. 选择*嵌入地图*选项。
-4. 在新打开的网页中，指定你喜欢的地图大小、类型、风格和链接，点击“生成代码”按钮，代码会复制到剪贴板中。
+4. 在新打开的网页中，指定你喜欢的地图大小、类型、风格和链接，点击"生成代码"按钮，代码会复制到剪贴板中。
 5. 将复制的代码粘贴到下面的*输入*框，看看*输出*结果是什么。
 
 如果你犯了某些错误，你可以点击*重置*按钮以重置编辑器。如果你确实被卡住了，按下*显示答案*按钮以借鉴答案。
@@ -242,14 +242,14 @@ textarea.onkeyup = function () {
 > 嵌入到你的文档中（或将你的文档嵌入到他们自己的恶意网站），并使用它来捕获用户的交互。这是误导用户或窃取敏感数据的常见方式。
 
 一个快速的例子——尝试在浏览器中加载上面的例子——你也可以 [在 Github 上找到它](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)（[参见源代码](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html)）。你将不会看到任何内容，但如果你点击[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)中的*控制台*，你会看到一条消息，告诉你为什么没有显示内容。在
-Firefox 中，你会*被告知：“X-Frame-Options 拒绝加载 `https://developer.mozilla.org/zh-CN/docs/Glossary`*。这是因为构建 MDN
+Firefox 中，你会*被告知："X-Frame-Options 拒绝加载 `https://developer.mozilla.org/zh-CN/docs/Glossary`*。这是因为构建 MDN
 的开发人员已经在网站页面的服务器上设置了一个不允许被嵌入到`<iframe>`的设置（请参阅[配置 CSP 指令](#配置_csp_指令)）这是有必要的——整个
 MDN 页面被嵌入在其他页面中没有多大意义，除非你想要将其嵌入到你的网站上并将其声称为自己的内容，或尝试通过单击劫持来窃取数据，这都是非常糟糕的事情。此外，如果每个人都这样做，所有额外的带宽将花费 Mozilla
 很多资金。
 
 #### 只有在必要时嵌入
 
-有时嵌入第三方内容（例如 YouTube 视频和地图）是有意义的，但如果你只在完全需要时嵌入第三方内容，你可以省去很多麻烦。网络安全的一个很好的经验法则是“_你怎么谨慎都不为过，如果你决定要做这件事，多检查一遍；如果是别人做的，在被证明是安全的之前，都假设这是危险的。_”
+有时嵌入第三方内容（例如 YouTube 视频和地图）是有意义的，但如果你只在完全需要时嵌入第三方内容，你可以省去很多麻烦。网络安全的一个很好的经验法则是"_你怎么谨慎都不为过，如果你决定要做这件事，多检查一遍；如果是别人做的，在被证明是安全的之前，都假设这是危险的。_"
 
 除了安全问题，你还应该意识到知识产权问题。无论在线内容还是离线内容，绝大部分内容都是有版权的，甚至是一些你没想到有版权的内容（例如，[Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page) 上的大多数图片）。不要在网页上展示一些不属于你的内容，除非你是所有者或所有者给了你明确的、书面的许可。对于侵犯版权的惩罚是严厉的。再说一次，你再小心也不为过。
 

@@ -36,7 +36,7 @@ slug: Web/HTML/Element/script/type/importmap
 
 ## 描述
 
-当导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)时，[`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)和 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)都有一个“模块标识符”，其指示要导入的模块。浏览器必须能够将此标识符解析为绝对路径，才能导入模块。
+当导入 [JavaScript 模块](/zh-CN/docs/Web/JavaScript/Guide/Modules)时，[`import` 语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)和 [`import()` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/import)都有一个"模块标识符"，其指示要导入的模块。浏览器必须能够将此标识符解析为绝对路径，才能导入模块。
 
 例如，以下语句从模块标识符 `"./modules/shapes/square.js"` 导入元素，其是一个相对于文档的基础 URL 路径，而模块标识符 `"https://example.com/shapes/circle.js"` 是一个绝对路径。
 
@@ -49,7 +49,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 
 ### 裸模块
 
-下面的导入映射定义了一个 `imports` 键，该键具有属性为 `square` 和 `circle` 的“模块标识符映射”。
+下面的导入映射定义了一个 `imports` 键，该键具有属性为 `square` 和 `circle` 的"模块标识符映射"。
 
 ```html
 <script type="importmap">
@@ -62,7 +62,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 </script>
 ```
 
-使用导入映射，我们可以导入以上相同的模块，但在我们的模块标识符要使用“裸模块（bare module）”。
+使用导入映射，我们可以导入以上相同的模块，但在我们的模块标识符要使用"裸模块（bare module）"。
 
 ```js
 import { name as squareName, draw } from "square";
@@ -92,7 +92,7 @@ import { name as squareName, draw } from "shapes/circle.js";
 
 ### 模块标识符映射键中的路径
 
-模块标识符键不必是单个单词名称（“裸模块的名称”）。它们也可以包含路径分隔符或者以路径分隔符结尾，或者是绝对 URL，或者以 `/`、`./` 或 `../` 开始的相对 URL。
+模块标识符键不必是单个单词名称（"裸模块的名称"）。它们也可以包含路径分隔符或者以路径分隔符结尾，或者是绝对 URL，或者以 `/`、`./` 或 `../` 开始的相对 URL。
 
 ```json
 {
@@ -113,7 +113,7 @@ import { name as squareName, draw } from "shapes/circle.js";
 
 你可以使用 `scopes` 键提供映射，仅当导入模块的脚本包含特定的 URL 路径时才使用。仅当导入模块的脚本包含一个指定的 URL 路径时，你才可以使用 `scopes` 键去提供映射。如果加载的脚本 URL 匹配提供的路径，则将使用与作用域相关联的映射。这允许根据正在导入的代码使用不同版本的模块。
 
-例如，仅有加载的模块包含以下路径的 URL：“/modules/customshapes/”，映射才会使用作用域映射。
+例如，仅有加载的模块包含以下路径的 URL："/modules/customshapes/"，映射才会使用作用域映射。
 
 ```html
 <script type="importmap">
@@ -134,7 +134,7 @@ import { name as squareName, draw } from "shapes/circle.js";
 
 ## 导入映射 JSON 表示
 
-以下是导入映射 JSON 表示的“正式”定义。
+以下是导入映射 JSON 表示的"正式"定义。
 
 导入映射必须是有效的 JSON 对象，最多可以定义两个可选键：`imports` 和 `scopes`。每个键值必须是对象，可以是空。
 
@@ -146,14 +146,14 @@ import { name as squareName, draw } from "shapes/circle.js";
 
     - `<module specifier map>`
 
-      - : “模块标识符映射”是一个有效的 JSON 对象，其中*键*是在导入模块时，模块标识符可能存在的文本，并且相应的*值*时模块标识符解析为地址时将替换词文本的 URL 或路径。
+      - : "模块标识符映射"是一个有效的 JSON 对象，其中*键*是在导入模块时，模块标识符可能存在的文本，并且相应的*值*时模块标识符解析为地址时将替换词文本的 URL 或路径。
 
         模块标识符映射 JSON 对象有以下要求：
 
         - 没有键可以是空的。
         - 所有的值必须是字符串。定义有效的绝对 URL 或者以 `/`、`./` 或 `../` 开始的相对 URL。
         - 如果一个键以 `/` 结尾，那么相应的值也必须以 `/` 结尾。带有尾随的 `/` 键可以用作映射（或重新映射）模块地址的前缀。
-        - 对象属性的顺序无关紧要：如果多个键可以匹配模块标识符，则使用最具体的键（换句话说，标识符“olive/branch/”将在“olive/”之前匹配）。
+        - 对象属性的顺序无关紧要：如果多个键可以匹配模块标识符，则使用最具体的键（换句话说，标识符"olive/branch/"将在"olive/"之前匹配）。
 
 - `scopes` {{optional_inline}}
 

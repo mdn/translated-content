@@ -22,7 +22,7 @@ var analyser = audioCtx.createAnalyser();
 
 ## 例子
 
-下面的例子展示了 AudioContext 创建分析器节点的基本用法，然后用 requestAnimationFrame() 来反复获取时域数据，并绘制出当前音频输入的“示波器风格”输出。更多完整例子请查看[Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (中[app.js 的 128–205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)代码)
+下面的例子展示了 AudioContext 创建分析器节点的基本用法，然后用 requestAnimationFrame() 来反复获取时域数据，并绘制出当前音频输入的"示波器风格"输出。更多完整例子请查看[Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) demo (中[app.js 的 128–205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)代码)
 
 ```js
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();

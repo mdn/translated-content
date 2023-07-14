@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/DPR
 
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
-**`DPR`**请求头是“ [客户端提示”](/zh-CN/docs/Glossary/Client_hints)消息头，它代表客户端设备的像素比 ({{Glossary("DPR")}})，该比例是与每个 CSS 像素相对应的物理设备像素的数量。
+**`DPR`**请求头是" [客户端提示"](/zh-CN/docs/Glossary/Client_hints)消息头，它代表客户端设备的像素比 ({{Glossary("DPR")}})，该比例是与每个 CSS 像素相对应的物理设备像素的数量。
 
 | Header type                                      | {{Glossary("Request header")}} |
 | ------------------------------------------------ | ---------------------------------------- |

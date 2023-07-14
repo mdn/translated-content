@@ -143,7 +143,7 @@ slug: Web/HTML/Element/Heading_Elements
         4. `h3` Wings
         5. `h3` Abdomen
 
-当小节中嵌套子标题时，若关闭了某个小节，则其中的嵌套的子标题可能会被“跳过”。
+当小节中嵌套子标题时，若关闭了某个小节，则其中的嵌套的子标题可能会被"跳过"。
 
 - [Headings • Page Structure • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/page-structure/headings/)
 - [MDN Understanding WCAG, Guideline 1.3 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_—_Create_content_that_can_be_presented_in_different_ways)

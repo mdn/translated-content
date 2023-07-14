@@ -80,7 +80,7 @@ browser.runtime.getURL("images/my-image.png");
 
 ### 通配符
 
-`web_accessible_resources` 中的条目还可以有通配符。比如，下面的条目匹配“images/my-image.png”：
+`web_accessible_resources` 中的条目还可以有通配符。比如，下面的条目匹配"images/my-image.png"：
 
 ```json
   "web_accessible_resources": ["images/*.png"]

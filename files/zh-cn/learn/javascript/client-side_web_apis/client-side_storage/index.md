@@ -174,7 +174,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
     });
     ```
 
-5. 现在我们需要添加一个事件监听器，当单击“Say hello”按钮时，它的处理函数将会运行。这些注释详细解释了每一处都做了什么，但实际上我们在这里获取用户输入到文本输入框中的名字并使用`setItem()`将它保存在网络存储中，然后运行一个名为`nameDisplayCheck()`的函数来处理实际的网站文本的更新。将此添加到代码的底部：
+5. 现在我们需要添加一个事件监听器，当单击"Say hello"按钮时，它的处理函数将会运行。这些注释详细解释了每一处都做了什么，但实际上我们在这里获取用户输入到文本输入框中的名字并使用`setItem()`将它保存在网络存储中，然后运行一个名为`nameDisplayCheck()`的函数来处理实际的网站文本的更新。将此添加到代码的底部：
 
     ```js
     // run function when the 'Say hello' button is clicked
@@ -187,7 +187,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
     });
     ```
 
-6. 此时，我们还需要一个事件处理程序，以便在单击“Forget”按钮时运行一个函数——且仅在单击“Say hello”按钮（两种表单状态来回切换）后才显示。在这个功能中，我们使用`removeItem()`从网络存储中删除项目`name`，然后再次运行`nameDisplayCheck()`以更新显示。将其添加到底部：
+6. 此时，我们还需要一个事件处理程序，以便在单击"Forget"按钮时运行一个函数——且仅在单击"Say hello"按钮（两种表单状态来回切换）后才显示。在这个功能中，我们使用`removeItem()`从网络存储中删除项目`name`，然后再次运行`nameDisplayCheck()`以更新显示。将其添加到底部：
 
     ```js
     // run function when the 'Forget' button is clicked
@@ -200,7 +200,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
     });
     ```
 
-7. 现在是时候定义`nameDisplayCheck()`函数本身了。在这里，我们通过使用`localStorage.getItem('name')`作为测试条件来检查 name 数据项是否已经存储在 Web Storage 中。如果它已被存储，则该调用的返回值为`true`; 如果没有，它会是`false`。如果是`true`，我们会显示个性化问候语，显示表格的“forget”部分，并隐藏表格的“Say hello”部分。如果是`false`，我们会显示一个通用问候语，并做相反的事。再次将下面的代码添到底部：
+7. 现在是时候定义`nameDisplayCheck()`函数本身了。在这里，我们通过使用`localStorage.getItem('name')`作为测试条件来检查 name 数据项是否已经存储在 Web Storage 中。如果它已被存储，则该调用的返回值为`true`; 如果没有，它会是`false`。如果是`true`，我们会显示个性化问候语，显示表格的"forget"部分，并隐藏表格的"Say hello"部分。如果是`false`，我们会显示一个通用问候语，并做相反的事。再次将下面的代码添到底部：
 
     ```js
     // define the nameDisplayCheck() function

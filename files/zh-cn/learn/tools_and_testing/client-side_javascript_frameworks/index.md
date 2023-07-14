@@ -14,11 +14,11 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 - 为什么要使用框架？他们为我解决了什么问题？
 - 当我尝试选择一个框架时，我应该问什么问题？我甚至需要使用框架吗？
 - 框架有什么特性？它们一般是如何工作的？框架对这些特性的实现有何不同？
-- 它们与“普通的”JavaScript 或 HTML 有什么关系？
+- 它们与"普通的"JavaScript 或 HTML 有什么关系？
 
 在此之后，我们将提供一些教程，介绍一些主要框架的基本内容，为您提供足够的上下文和熟悉感，以便您自己开始更深入地学习。我们希望你以一种实用的方式来学习框架，不要忘记 web 平台的基本最佳实践，比如无障碍。
 
-**[通过“客户端框架介绍”即刻开始](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)**
+**[通过"客户端框架介绍"即刻开始](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)**
 
 ## 前提条件
 
@@ -31,7 +31,7 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 - [1. 客户端框架介绍](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
   - : 我们首先从以下话题开始研究框架，框架领域的总览，JavaScript 和框架历史的简介，为什么需要框架以及框架能带给我们什么，如何考虑选择一个框架开始学习，有什么其他的客户端框架可供选择。
 - [2. 框架的主要特性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-  - : 每种 JavaScript 框架都有自己不同的方式更新 DOM，处理浏览器事件，为开发者提供愉悦的使用体验，这篇文章将探索“四大”框架的主要特性，从高级角度探讨框架的工作方式以及它们之间的区别。
+  - : 每种 JavaScript 框架都有自己不同的方式更新 DOM，处理浏览器事件，为开发者提供愉悦的使用体验，这篇文章将探索"四大"框架的主要特性，从高级角度探讨框架的工作方式以及它们之间的区别。
 
 ## React 教程
 
@@ -67,7 +67,7 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 - [3. Ember 交互：事件，类和状态](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
   - : 至此，我们将添加一些交互行为到我们的应用，使其能够添加和显示新的待办事项。在此过程中，我们将研究如何在 Ember 中使用事件，创建包含 JavaScript 代码的组件类来控制交互功能，并且设置服务来跟踪我们的应用的数据状态。
 - [4. Ember 交互：页脚功能，条件渲染](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - : 现在是时候开始在我们的应用中处理页脚功能了。这里我们将更新待办事项计数器以正确显示待完成待办事项的数量，并正确地为已完成事项应用样式（i.e. 对应列表项的复选框处于选中状态）。我们还将实装我们的“Clear completed”按钮。在这个过程中，我们将学习在我们的模板中使用条件渲染。
+  - : 现在是时候开始在我们的应用中处理页脚功能了。这里我们将更新待办事项计数器以正确显示待完成待办事项的数量，并正确地为已完成事项应用样式（i.e. 对应列表项的复选框处于选中状态）。我们还将实装我们的"Clear completed"按钮。在这个过程中，我们将学习在我们的模板中使用条件渲染。
 - [5. Ember 路由](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
   - : 在此章节我们学习路由，有时也称为 URL-based 过滤。我们将使用它来为三个待办视图------"All","Active"和"Completed"提供全局唯一的 URL。
 - [6. Ember 资源和疑难解答](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)

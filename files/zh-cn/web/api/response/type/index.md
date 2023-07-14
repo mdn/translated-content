@@ -7,13 +7,13 @@ slug: Web/API/Response/type
 
 {{domxref("Response")}} 接口的 **`type`** 只读属性包含一种响应的类型。它可以是以下某一种值：
 
-- `basic`：标准值，同源响应，暴露除了“Set-Cookie”之外的所有标头。
+- `basic`：标准值，同源响应，暴露除了"Set-Cookie"之外的所有标头。
 - `cors`：从有效的跨源请求接收到响应。[某些标头和主体](https://fetch.spec.whatwg.org/#concept-filtered-response-cors)可以被访问。
 - `error`：网络错误。没有有用的描述错误的信息。响应的状态为 0，header 为空且不可变。这是从 `Response.error()` 中获得的响应的类型。
-- `opaque`：对跨源资源的“no-cors”请求的响应。[严格限制](https://fetch.spec.whatwg.org/#concept-filtered-response-opaque)。
+- `opaque`：对跨源资源的"no-cors"请求的响应。[严格限制](https://fetch.spec.whatwg.org/#concept-filtered-response-opaque)。
 - `opaqueredirect`：fetch 请求是通过 `redirect: "manual"` 发出的。响应的状态是 0，标头是空的，主体是 null，trailer 是空的。
 
-> **备注：** “错误”响应从来没有真正暴露于脚本：这样的响应，{{domxref("GlobalFetch.fetch","fetch()")}} 将被 promise 拒绝。
+> **备注：** "错误"响应从来没有真正暴露于脚本：这样的响应，{{domxref("GlobalFetch.fetch","fetch()")}} 将被 promise 拒绝。
 
 ## 值
 

@@ -29,7 +29,7 @@ slug: Learn/Server-side/Django/Deployment
 
 ## 概述
 
-一旦您的网站完成（或完成“足够”开始公开测试），您将需要将其托管在比您的个人开发计算机更公开和可访问的地方。
+一旦您的网站完成（或完成"足够"开始公开测试），您将需要将其托管在比您的个人开发计算机更公开和可访问的地方。
 
 到目前为止，您一直在开发环境中工作，使用 Django 开发 Web 服务器将您的站点共享到本地浏览器/网络，并使用暴露调试和其他私人信息的（不安全）开发设置运行您的网站。在您可以从外部托管网站之前，您首先必须：
 
@@ -48,12 +48,12 @@ slug: Learn/Server-side/Django/Deployment
 - 操作系统 (例如 Linux, Windows).
 - 编程语言运行库和框架库，在其上编写您的网站。
 - 用于提供页面和其他内容的 Web 服务器（例如 Nginx，Apache）。
-- 在 Django 网站和 Web 服务器之间，传递“动态”请求的应用程序服务器。
+- 在 Django 网站和 Web 服务器之间，传递"动态"请求的应用程序服务器。
 - 您的网站所依赖的数据库。
 
 > **备注：** 根据您的生产配置方式，您可能还有反向代理，负载均衡器等。
 
-服务器计算机可以位于您的场所，并通过快速链接连接到 Internet，但使用托管“在云中”的计算机更为常见。这实际上意味着，您的代码在托管公司的数据中心的某台远程计算机（或可能是“虚拟”计算机）上运行。远程服务器通常会以特定价格，提供一些保证级别的计算资源（例如 CPU，RAM，存储器等）和互联网连接。
+服务器计算机可以位于您的场所，并通过快速链接连接到 Internet，但使用托管"在云中"的计算机更为常见。这实际上意味着，您的代码在托管公司的数据中心的某台远程计算机（或可能是"虚拟"计算机）上运行。远程服务器通常会以特定价格，提供一些保证级别的计算资源（例如 CPU，RAM，存储器等）和互联网连接。
 
 这种可远程访问的计算/网络硬件，称为基础架构即服务（IaaS）。许多 IaaS 供应商，提供预安装特定操作系统的选项，您必须在其上安装生产环境的其他组件。其他供应商允许您选择功能更全面的环境，可能包括完整的 Django，和 Web 服务器设置。
 
@@ -77,13 +77,13 @@ slug: Learn/Server-side/Django/Deployment
 - 主机的历史正常运行时间，和停机时间的表现。
 - 用于管理站点的工具 - 易于使用且安全（例如 SFTP 相比于 FTP）。
 - 用于监控服务器的内置框架。
-- 已知限制。有些主机会故意阻止某些服务（例如电子邮件）。其他在某些价格层中，仅提供一定时数的“实时时间”，或者仅提供少量存储空间。
+- 已知限制。有些主机会故意阻止某些服务（例如电子邮件）。其他在某些价格层中，仅提供一定时数的"实时时间"，或者仅提供少量存储空间。
 - 额外的好处。一些提供商将提供免费域名和 SSL 证书支持，否则您将不得不为此支付费用。
-- 您所依赖的“免费”等级，是否会随着时间的推移而过期，以及迁移到更昂贵等级的成本，是否意味着，您最好一开始就使用其他服务！
+- 您所依赖的"免费"等级，是否会随着时间的推移而过期，以及迁移到更昂贵等级的成本，是否意味着，您最好一开始就使用其他服务！
 
-当你刚开始时，好消息是，有很多网站提供了“免费”的“评估”、“开发者”或“爱好者”计算环境。这些始终是资源相当受限/有限的环境，您需要注意，它们可能会在广告期限后过期。然而，它们非常适合在真实环境中，测试低流量站点，并且可以在您的站点变得更加繁忙时，付费取得更多资源，并轻松迁移。此类别中的热门选择包括[Heroku](https://www.heroku.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 等。
+当你刚开始时，好消息是，有很多网站提供了"免费"的"评估"、"开发者"或"爱好者"计算环境。这些始终是资源相当受限/有限的环境，您需要注意，它们可能会在广告期限后过期。然而，它们非常适合在真实环境中，测试低流量站点，并且可以在您的站点变得更加繁忙时，付费取得更多资源，并轻松迁移。此类别中的热门选择包括[Heroku](https://www.heroku.com/), [Python Anywhere](https://www.pythonanywhere.com/), [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 等。
 
-许多提供商还有“基本”层，可提供更多有用的计算能力和更少的限制。[Digital Ocean](https://www.digitalocean.com/) 和 [Python Anywhere](https://www.pythonanywhere.com/) ，就是流行的托管服务提供商的例子，提供相对便宜的基本计算等级（每月 5 美元到 10 美元不等）。
+许多提供商还有"基本"层，可提供更多有用的计算能力和更少的限制。[Digital Ocean](https://www.digitalocean.com/) 和 [Python Anywhere](https://www.pythonanywhere.com/) ，就是流行的托管服务提供商的例子，提供相对便宜的基本计算等级（每月 5 美元到 10 美元不等）。
 
 > **备注：** 请记住，价格不是唯一的选择标准。如果您的网站成功，可能会发现，可扩展性是最重要的考虑因素。
 
@@ -112,7 +112,7 @@ slug: Learn/Server-side/Django/Deployment
 
 让我们更改 LocalLibrary 应用程序，以便我们从环境变量中，读取`SECRET_KEY` 和 `DEBUG`变量（如果已定义），否则使用配置文件中的默认值。
 
-打开 **/locallibrary/settings.py**，禁用原始的`SECRET_KEY`配置，并加入如下以**粗体**显示的几行。在开发过程中，不会为密钥指定环境变量，因此将使用默认值（在此处使用的密钥，或密钥“泄漏”无关紧要，因为您不会在生产环境中使用它）。
+打开 **/locallibrary/settings.py**，禁用原始的`SECRET_KEY`配置，并加入如下以**粗体**显示的几行。在开发过程中，不会为密钥指定环境变量，因此将使用默认值（在此处使用的密钥，或密钥"泄漏"无关紧要，因为您不会在生产环境中使用它）。
 
 ```python
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -131,7 +131,7 @@ DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 默认情况下，`DEBUG`的值为`True`，但如果`DJANGO_DEBUG`环境变量的值，设置为空字符串，则为`False`，例如，`DJANGO_DEBUG=''`。
 
-> **备注：** 如果我们可以直接将`DJANGO_DEBUG`环境变量设置为`True`或`False`，而不是分别使用“any string”或“empty string”，那将更直观。不幸的是，环境变量值存储为 Python 字符串，计算结果为 `False` 的唯一字符串，是空字符串（例如`bool('')==False`）。
+> **备注：** 如果我们可以直接将`DJANGO_DEBUG`环境变量设置为`True`或`False`，而不是分别使用"any string"或"empty string"，那将更直观。不幸的是，环境变量值存储为 Python 字符串，计算结果为 `False` 的唯一字符串，是空字符串（例如`bool('')==False`）。
 
 [部署清单（Django 文档）](https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/)中，提供了您可能要更改的完整设置清单。您还可以使用下面的终端命令，列出其中的一些：
 
@@ -155,7 +155,7 @@ Heroku 是运行时间最长，且最受欢迎的基于云的 PaaS 服务之一�
 
   - Heroku 只提供短期储存，因此用户上传的文件无法安全地存储在 Heroku 本身。
   - 如果半小时内没有请求，免费套餐将使不活动的网络应用程序进入睡眠。然后，该网站可能需要几秒钟才能被唤醒。
-  - 免费套餐将您网站运行的时间，限制为每月一定的小时数（不包括网站“睡着”的时间）。这对于低使用/演示站点来说很好，但如果需要 100％的正常运行时间则不适用。
+  - 免费套餐将您网站运行的时间，限制为每月一定的小时数（不包括网站"睡着"的时间）。这对于低使用/演示站点来说很好，但如果需要 100％的正常运行时间则不适用。
   - 在 [Limits](https://devcenter.heroku.com/articles/limits) (Heroku 文档) 中列出了其他限制。
 
 - 大多数情况下它只是能工作，如果你最终喜欢它，扩展你的应用程序非常容易。
@@ -164,9 +164,9 @@ Heroku 是运行时间最长，且最受欢迎的基于云的 PaaS 服务之一�
 
 ### Heroku 是如何工作的？
 
-Heroku 在一个或多个“[Dynos](https://devcenter.heroku.com/articles/dynos)”中，运行 Django 网站，这是一个独立的虚拟化 Unix 容器，提供运行应用程序所需的环境。[Dynos](https://devcenter.heroku.com/articles/dynos) 是完全隔离的，并且有一个短暂的文件系统（一个短暂的文件系统，每次 dyno 重新启动时，都会清理/清空）。Dynos 默认共享的唯一内容，是应用程序配置变量。Heroku 内部使用负载均衡器，将 Web 流量分配给所有“web”dynos。由于他们之间没有任何共享，Heroku 可以通过添加更多 dynos，来水平扩展应用程序（当然，您可能还需要扩展数据库，以接受其他连接）。
+Heroku 在一个或多个"[Dynos](https://devcenter.heroku.com/articles/dynos)"中，运行 Django 网站，这是一个独立的虚拟化 Unix 容器，提供运行应用程序所需的环境。[Dynos](https://devcenter.heroku.com/articles/dynos) 是完全隔离的，并且有一个短暂的文件系统（一个短暂的文件系统，每次 dyno 重新启动时，都会清理/清空）。Dynos 默认共享的唯一内容，是应用程序配置变量。Heroku 内部使用负载均衡器，将 Web 流量分配给所有"web"dynos。由于他们之间没有任何共享，Heroku 可以通过添加更多 dynos，来水平扩展应用程序（当然，您可能还需要扩展数据库，以接受其他连接）。
 
-由于文件系统是暂时的，因此无法直接安装应用程序所需的服务（例如数据库，队列，缓存系统，存储，电子邮件服务等）。取代的是，Heroku Web 应用程序，使用 Heroku 或第三方作为独立“附加组件”提供的支持服务。一旦连接到 Web 应用程序，dynos 就会使用应用程序配置变量中包含的信息，来访问服务。
+由于文件系统是暂时的，因此无法直接安装应用程序所需的服务（例如数据库，队列，缓存系统，存储，电子邮件服务等）。取代的是，Heroku Web 应用程序，使用 Heroku 或第三方作为独立"附加组件"提供的支持服务。一旦连接到 Web 应用程序，dynos 就会使用应用程序配置变量中包含的信息，来访问服务。
 
 为了执行您的应用程序，Heroku 需要能够设置适当的环境，和依赖关系，并了解它是如何启动的。对于 Django 应用程序而言，我们在一些文本文件中提供此信息：
 
@@ -187,7 +187,7 @@ Heroku 在一个或多个“[Dynos](https://devcenter.heroku.com/articles/dynos)
 
 ### 在 Github 中创建应用程序储存库
 
-Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/同步您对实时系统所做的任何更改。它通过添加一个名为 heroku 的新的 heroku“远程”储存库，来指向 Heroku 云上的源储存库。在开发期间，您使用 git 在“主”储存库中储存更改。如果要部署站点，请将更改同步到 Heroku 储存库。
+Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/同步您对实时系统所做的任何更改。它通过添加一个名为 heroku 的新的 heroku"远程"储存库，来指向 Heroku 云上的源储存库。在开发期间，您使用 git 在"主"储存库中储存更改。如果要部署站点，请将更改同步到 Heroku 储存库。
 
 > **备注：** 如果您习惯于遵循良好的软件开发实践，那么您可能已经在使用 git，或其他一些 SCM 系统。如果您已有 git 储存库，则可以跳过此步骤。
 
@@ -197,16 +197,16 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 2. 登录后，点击顶部工具栏中的 + 链接，然后选择新建储存库 **New repository**。
 3. 填写此表单上的所有字段。虽然这些不是强制性的，但强烈建议使用它们。
 
-    - 输入新的储存库名称（例如 django_local_library）和描述（例如“用 Django 编写的本地图书馆网站”）。
+    - 输入新的储存库名称（例如 django_local_library）和描述（例如"用 Django 编写的本地图书馆网站"）。
     - 在 Add .gitignore 选择列表中，选择 **Python**。
     - 在添加许可证选择列表中，选择您想要的许可证。
     - 选中使用自述文件初始化此储存库（**Initialize this repository with a README）**。
 
 4. 点击 **Create repository**.
-5. 点击新仓库页面上的绿色“克隆或下载”（**Clone or download**）按钮。
+5. 点击新仓库页面上的绿色"克隆或下载"（**Clone or download**）按钮。
 6. 从显示的对话框中的文本字段中复制 URL 值（它应该类似于： `https://github.com/<your_git_user_id>/django_local_library.git`）。
 
-现在创建了储存库（“repo”），我们将要在本地计算机上克隆它：
+现在创建了储存库（"repo"），我们将要在本地计算机上克隆它：
 
 1. 为您的本地计算机安装 git（您可以在[此处](https://git-scm.com/downloads)找到不同平台的版本）。
 2. 打开命令提示符/终端，并使用您在上面复制的 URL 克隆储存库：
@@ -273,9 +273,9 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 
 完成此操作后，您应该可以返回创建储存库的 Github 上的页面，刷新页面，并看到您的整个应用程序已经上传。使用此添加/提交/推送循环，您可以在文件更改时，继续更新储存库。
 
-> **备注：** 这是备份您的“vanilla”项目的一个好时机 - 虽然我们将在以下部分中，进行的一些更改，可能对有些人在任何平台（或开发）上的部署有用，对其他人可能没有用。
+> **备注：** 这是备份您的"vanilla"项目的一个好时机 - 虽然我们将在以下部分中，进行的一些更改，可能对有些人在任何平台（或开发）上的部署有用，对其他人可能没有用。
 >
-> 执行此操作的最佳方法，是使用 git 来管理您的修订。使用 git，您不仅可以回到特定的旧版本，而且可以在生产变更的单独“分支”中进行维护，并选择在生产和开发分支之间移动的任何更改。[学习 Git](https://help.github.com/articles/good-resources-for-learning-git-and-github/) 非常值得，但超出了本主题的范围。
+> 执行此操作的最佳方法，是使用 git 来管理您的修订。使用 git，您不仅可以回到特定的旧版本，而且可以在生产变更的单独"分支"中进行维护，并选择在生产和开发分支之间移动的任何更改。[学习 Git](https://help.github.com/articles/good-resources-for-learning-git-and-github/) 非常值得，但超出了本主题的范围。
 >
 > 最简单的方法是将文件复制到另一个位置。使用最符合您对 git 了解的方法！
 
@@ -291,7 +291,7 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 web: gunicorn locallibrary.wsgi --log-file -
 ```
 
-“`web:`”告诉 Heroku，这是一个 web dyno，可以发送 HTTP 流量。在这个 dyno 中启动的进程，是 gunicorn，这是 Heruko 推荐的一种流行的 Web 应用程序服务器。我们使用模块 `locallibrary.wsgi`（使用我们的应用程序框架创建：**/locallibrary/wsgi.py** ）中的配置信息启动 Gunicorn。
+"`web:`"告诉 Heroku，这是一个 web dyno，可以发送 HTTP 流量。在这个 dyno 中启动的进程，是 gunicorn，这是 Heruko 推荐的一种流行的 Web 应用程序服务器。我们使用模块 `locallibrary.wsgi`（使用我们的应用程序框架创建：**/locallibrary/wsgi.py** ）中的配置信息启动 Gunicorn。
 
 #### Gunicorn
 
@@ -363,7 +363,7 @@ pip3 install psycopg2
 相关的设置变量是：
 
 - `STATIC_URL`: 这是将提供静态文件的基本 URL 位置，例如，在 CDN 上。这用于在我们的基本模板中访问的静态模板变量（请参阅 [Django 教程 5：创建我们的主页](/zh-CN/docs/Learn/Server-side/Django/Home_page)）。
-- `STATIC_ROOT`: 这是 Django 的“collectstatic”工具将收集模板中引用的任何静态文件的目录的绝对路径。收集完成后，可以将这些文件，作为一个组上载到托管文件的任何位置。
+- `STATIC_ROOT`: 这是 Django 的"collectstatic"工具将收集模板中引用的任何静态文件的目录的绝对路径。收集完成后，可以将这些文件，作为一个组上载到托管文件的任何位置。
 - `STATICFILES_DIRS`: 这列出了 Django 的 collectstatic 工具应该搜索静态文件的其他目录。
 
 ##### settings.py
@@ -496,13 +496,13 @@ heroku help
 
 ### 创建并上传网站
 
-要创建应用程序，我们在储存库的根目录中，运行“create”命令。这将在我们的本地 git 环境中，创建一个名为 heroku 的 git remote（“指向远程储存库的指标”）。
+要创建应用程序，我们在储存库的根目录中，运行"create"命令。这将在我们的本地 git 环境中，创建一个名为 heroku 的 git remote（"指向远程储存库的指标"）。
 
 ```bash
 heroku create
 ```
 
-> **备注：** 如果您愿意，可以通过在“创建”之后指定值来命名远程。如果你不这样做，你会得到一个随机的名字。该名称用于默认 URL。
+> **备注：** 如果您愿意，可以通过在"创建"之后指定值来命名远程。如果你不这样做，你会得到一个随机的名字。该名称用于默认 URL。
 
 然后我们可以将应用程序，推送到 Heroku 储存库，如下所示。这将上传应用程序，将其打包到 dyno 中，运行 collectstatic，然后启动该站点。
 
@@ -510,7 +510,7 @@ heroku create
 git push heroku master
 ```
 
-如果我们很幸运，该应用程序现在在网站上“运行”，但它将无法正常工作，因为我们尚未设置数据库表，以供我们的应用程序使用。为此，我们需要使用 heroku run 命令，并启动“[one off dyno](https://devcenter.heroku.com/articles/deploying-python#one-off-dynos)”来执行迁移操作。在终端中输入以下命令：
+如果我们很幸运，该应用程序现在在网站上"运行"，但它将无法正常工作，因为我们尚未设置数据库表，以供我们的应用程序使用。为此，我们需要使用 heroku run 命令，并启动"[one off dyno](https://devcenter.heroku.com/articles/deploying-python#one-off-dynos)"来执行迁移操作。在终端中输入以下命令：
 
 ```bash
 heroku run python manage.py migrate
@@ -583,7 +583,7 @@ DJANGO_SECRET_KEY: eu09(ilk6@4sfdofb=b_2ht@vad*$ehh9-)3u_83+y%(+phh
 Setting DJANGO_DEBUG and restarting locallibrary... done, v8
 ```
 
-如果您现在访问该站点，您将收到“错误请求”（Bad request）错误，因为如果您有 `DEBUG=False`（作为安全措施），则需要[ALLOWED_HOSTS](https://docs.djangoproject.com/en/2.0/ref/settings/#allowed-hosts) 设置。打开 **/locallibrary/settings.py**，并更改`ALLOWED_HOSTS`设置，以包含您的基本应用程序 URL（例如'locallibrary1234.herokuapp.com'），以及您通常在本地开发服务器上使用的 URL。
+如果您现在访问该站点，您将收到"错误请求"（Bad request）错误，因为如果您有 `DEBUG=False`（作为安全措施），则需要[ALLOWED_HOSTS](https://docs.djangoproject.com/en/2.0/ref/settings/#allowed-hosts) 设置。打开 **/locallibrary/settings.py**，并更改`ALLOWED_HOSTS`设置，以包含您的基本应用程序 URL（例如'locallibrary1234.herokuapp.com'），以及您通常在本地开发服务器上使用的 URL。
 
 ```python
 ALLOWED_HOSTS = ['<your app URL without the https:// prefix>.herokuapp.com','127.0.0.1']
@@ -600,7 +600,7 @@ git push origin master
 git push heroku master
 ```
 
-> **备注：** 完成 Heroku 的站点更新后，输入一个不存在的 URL（例如，**/catalog/doesnotexist/**）。以前这会显示一个详细的调试页面，但现在，您应该只看到一个简单的“未找到”页面。
+> **备注：** 完成 Heroku 的站点更新后，输入一个不存在的 URL（例如，**/catalog/doesnotexist/**）。以前这会显示一个详细的调试页面，但现在，您应该只看到一个简单的"未找到"页面。
 
 ### 除错调试
 

@@ -49,7 +49,7 @@ exports.genre_detail = function(req, res, next) {
 
 所需种类记录的 ID，在 URL 的末尾编码，并根据路由定义（**/genre/:id**）自动提取。通过请求参数（`req.params.id`）在控制器内访问 ID。它在 `Genre.findById()` 中用于获取当前种类。它还用于获取符合当前种类的所有`Book`对象，就是在种类字段中具有种类 ID 的那些 `Book.find({ 'genre': req.params.id })`。
 
-> **备注：** 如果数据库中不存在该类型（即它可能已被删除），则`findById()`将成功返回，但没有结果。在这种情况下，我们想要显示一个“未找到”页面，因此我们创建一个`Error`对象，并将其传递给链中的下一个中间件函数`next`。
+> **备注：** 如果数据库中不存在该类型（即它可能已被删除），则`findById()`将成功返回，但没有结果。在这种情况下，我们想要显示一个"未找到"页面，因此我们创建一个`Error`对象，并将其传递给链中的下一个中间件函数`next`。
 >
 > ```js
 > if (results.genre==null) { // No results.

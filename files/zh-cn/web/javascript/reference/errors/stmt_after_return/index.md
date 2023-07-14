@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Errors/Stmt_after_return
 
 {{jsSidebar("Errors")}}
 
-当在 {{jsxref("Statements/return", "return")}} 语句之后使用别的语句，或在无分号返回语句之后直接在后面跟随表达式，会出现 JavaScript 警告“unreachable code after return statement”。
+当在 {{jsxref("Statements/return", "return")}} 语句之后使用别的语句，或在无分号返回语句之后直接在后面跟随表达式，会出现 JavaScript 警告"unreachable code after return statement"。
 
 ## 信息
 

@@ -19,7 +19,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法
 
 之所以在 flexbox 规范和 box alignment 模块规范中都有对对齐属性的详细描述，是为了确保 flexbox 规范的完成不会受 box alignment 模块规范的影响，因为后者需要详细说明所有的布局类型中的对齐方法。flexbox 规范中有一条注释指出将来一旦 Box Alignment Level 3 完成，它将会取代 flexbox 规范中的相关定义：
 
-> “注意：虽然对齐属性是在 CSS Box Alignment \[CSS-ALIGN-3] 中定义的，但“Flexible Box Layout”在此处重现了相关属性的定义，以免形成规范性的依赖关系，而这可能会减慢规范的发展。这些属性仅适用于 Flex 布局，直到 CSS Box Alignment Level 3 完成并定义其对其他布局模式的效果；此外，在 Box Alignment 模块中定义的任何新值都将应用于 Flexible Box Layout；换句话说，一旦 Box Alignment 模块完成，其中的相关定义将取代此处的定义。”
+> "注意：虽然对齐属性是在 CSS Box Alignment \[CSS-ALIGN-3] 中定义的，但"Flexible Box Layout"在此处重现了相关属性的定义，以免形成规范性的依赖关系，而这可能会减慢规范的发展。这些属性仅适用于 Flex 布局，直到 CSS Box Alignment Level 3 完成并定义其对其他布局模式的效果；此外，在 Box Alignment 模块中定义的任何新值都将应用于 Flexible Box Layout；换句话说，一旦 Box Alignment 模块完成，其中的相关定义将取代此处的定义。"
 
 在本系列的后续文章（在 flex 容器中对齐元素）中，我们将彻底研究 Box Alignment 属性如何应用于 flex 元素。
 
@@ -91,7 +91,7 @@ For more comparisons of grid and flexbox see the article [Relationship of Grid L
 
 The `contents` value of the {{cssxref("display")}} property is a new value that is described in the spec as follows:
 
-> “The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree.”
+> "The element itself does not generate any boxes, but its children and pseudo-elements still generate boxes as normal. For the purposes of box generation and layout, the element must be treated as if it had been replaced with its children and pseudo-elements in the document tree."
 
 This value of `display` controls box generation, and whether the element should generate a box that we can style and see on the page, or whether instead the box it would normally create should be removed and the child elements essentially moved up to participate in whatever layout method the parent would have been part of. This is much easier to see with an example.
 

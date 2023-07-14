@@ -59,7 +59,7 @@ Intl.Collator(locales, options)
         该选项也可通过 `options` 的 `collation` 属性设置。
 
     - `kn`
-      - : 是否应使用数字对照，使得“1”<“2”<“10”。可能的值为 `"true"` 和 `"false"`。该选项也可通过 `options` 的 `numeric` 属性设置。
+      - : 是否应使用数字对照，使得"1"<"2"<"10"。可能的值为 `"true"` 和 `"false"`。该选项也可通过 `options` 的 `numeric` 属性设置。
     - `kf`
       - : 是否应该首先根据大小写排序。可能的值为 `"upper"`、`"lower"` 和 `"false"`（使用区域的默认设置）。该选项也可通过 `options` 的 `caseFirst` 属性设置。
 
@@ -88,7 +88,7 @@ Intl.Collator(locales, options)
       - : 是否应忽略标点。可能的值为 `true` 和 `false`；默认值为 `false`。
     - `numeric`
 
-      - : 是否应使用数字对照，使得“1”<“2”<“10”。可能的值为 `true` 和 `false`；默认值为 `false`。此选项也可以通过 Unicode 扩展键 `kn` 设置；当两者同时设置时，`options` 属性的优先级更高。
+      - : 是否应使用数字对照，使得"1"<"2"<"10"。可能的值为 `true` 和 `false`；默认值为 `false`。此选项也可以通过 Unicode 扩展键 `kn` 设置；当两者同时设置时，`options` 属性的优先级更高。
 
     - `caseFirst`
 

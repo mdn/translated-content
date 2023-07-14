@@ -61,9 +61,9 @@ console.log(x);                // 1
 console.log('still going...'); // still going...
 ```
 
-在全局上下文中，使用 `var` 声明的变量将作为全局对象的**不可配置**属性被添加。这意味着它的属性描述符无法被修改，也无法使用 {{JSxRef("Operators/delete", "delete")}} 删除。其对应的名字也将被添加到 [全局环境记录（global environment record）](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-global-environment-records)（它构成了全局词法环境 (global lexical environment) 的一部分）的 `[[VarNames]]` 插槽内的列表中。`[[VarNames]]` 中的命名列表使运行时能够区分“全局变量”和“全局对象的直接属性”。
+在全局上下文中，使用 `var` 声明的变量将作为全局对象的**不可配置**属性被添加。这意味着它的属性描述符无法被修改，也无法使用 {{JSxRef("Operators/delete", "delete")}} 删除。其对应的名字也将被添加到 [全局环境记录（global environment record）](https://www.ecma-international.org/ecma-262/10.0/index.html#sec-global-environment-records)（它构成了全局词法环境 (global lexical environment) 的一部分）的 `[[VarNames]]` 插槽内的列表中。`[[VarNames]]` 中的命名列表使运行时能够区分"全局变量"和"全局对象的直接属性"。
 
-全局变量（以全局对象的属性的形式被创建）不可配置的原因是：该标识符被视为一个变量，而不是全局对象的**直接属性**。JavaScript 具有自动化的内存管理机制，因此“能够使用 `delete` 删除全局变量”是没有意义的。
+全局变量（以全局对象的属性的形式被创建）不可配置的原因是：该标识符被视为一个变量，而不是全局对象的**直接属性**。JavaScript 具有自动化的内存管理机制，因此"能够使用 `delete` 删除全局变量"是没有意义的。
 
 ```js
 'use strict';
@@ -106,7 +106,7 @@ globalThis.hasOwnProperty('foo') // true
 
 ### 变量提升
 
-由于变量声明（以及其他声明）总是在任意代码执行之前处理的，所以在代码中的任意位置声明变量总是等效于在代码开头声明。这意味着变量可以在声明之前使用，这个行为叫做“hoisting”。“hoisting”就像是把所有的变量声明移动到函数或者全局代码的开头位置。
+由于变量声明（以及其他声明）总是在任意代码执行之前处理的，所以在代码中的任意位置声明变量总是等效于在代码开头声明。这意味着变量可以在声明之前使用，这个行为叫做"hoisting"。"hoisting"就像是把所有的变量声明移动到函数或者全局代码的开头位置。
 
 ```js
 bla = 2
@@ -165,7 +165,7 @@ var x = y, y = 'A';
 console.log(x + y); // undefinedA
 ```
 
-在这里，`x` 和 `y` 在代码执行前就已经创建了，而赋值操作发生在创建之后。当“`x = y`”执行时，`y` 已经存在，所以不会抛出 `ReferenceError`，并且它的值是 `undefined`。所以，`x` 被赋予 `undefined` 值。然后，`y` 被赋予 `'A'`。于是，在执行完第一行之后，才出现了这样的结果：`x === undefined && y === 'A'`。
+在这里，`x` 和 `y` 在代码执行前就已经创建了，而赋值操作发生在创建之后。当"`x = y`"执行时，`y` 已经存在，所以不会抛出 `ReferenceError`，并且它的值是 `undefined`。所以，`x` 被赋予 `undefined` 值。然后，`y` 被赋予 `'A'`。于是，在执行完第一行之后，才出现了这样的结果：`x === undefined && y === 'A'`。
 
 ### 多个变量的初始化
 

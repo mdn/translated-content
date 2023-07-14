@@ -46,7 +46,7 @@ slug: Web/JavaScript/Reference/Operators/Logical_NOT
 
 ### 双非运算符（`!!`）
 
-可以使用几个非运算符串联起来，明确地强制将任何值转换为相应的[布尔基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#boolean_类型)。这种转换是基于值的“真实性”或“虚假性”（详见{{Glossary("truthy","真值")}}和{{Glossary("falsy","假值")}}）。
+可以使用几个非运算符串联起来，明确地强制将任何值转换为相应的[布尔基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#boolean_类型)。这种转换是基于值的"真实性"或"虚假性"（详见{{Glossary("truthy","真值")}}和{{Glossary("falsy","假值")}}）。
 
 也可以使用 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 函数完成转换。
 

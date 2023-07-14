@@ -28,7 +28,7 @@ Array.isArray(value)
 
 `Array.isArray()` 检查传递的值是否为 {{jsxref("Array")}}。它不检查值的原型链，也不依赖于它所附加的 `Array` 构造函数。对于使用数组字面量语法或 `Array` 构造函数创建的任何值，它都会返回 `true`。这使得它可以安全地使用跨领域（cross-realm）对象，其中 `Array` 构造函数的标识是不同的，因此会导致 [`instanceof Array`](/zh-CN/docs/Web/JavaScript/Reference/Operators/instanceof) 失败。
 
-有关更多细节，请参阅文章[“确定 JavaScript 对象是否为数组”](https://web.mit.edu/jwalden/www/isArray.html)。
+有关更多细节，请参阅文章["确定 JavaScript 对象是否为数组"](https://web.mit.edu/jwalden/www/isArray.html)。
 
 `Array.isarray()` 也拒绝原型链中带有 `Array.prototype`，而实际不是数组的对象，但 `instanceof Array` 会接受。
 

@@ -9,11 +9,11 @@ slug: Web/JavaScript/Reference/Classes
 
 ## 定义类
 
-实际上，类是“特殊的[函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)”，就像你能够定义的[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)和[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)一样，类语法有两个组成部分：[类表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)和[类声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)。
+实际上，类是"特殊的[函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)"，就像你能够定义的[函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function)和[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)一样，类语法有两个组成部分：[类表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/class)和[类声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)。
 
 ### 类声明
 
-定义类的一种方法是使用**类声明**。要声明一个类，你可以使用带有`class`关键字的类名（这里是“Rectangle”）。
+定义类的一种方法是使用**类声明**。要声明一个类，你可以使用带有`class`关键字的类名（这里是"Rectangle"）。
 
 ```js
 class Rectangle {
@@ -72,7 +72,7 @@ console.log(Rectangle.name);
 
 ### 构造函数
 
-[constructor](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)方法是一个特殊的方法，这种方法用于创建和初始化一个由`class`创建的对象。一个类只能拥有一个名为“constructor”的特殊方法。如果类包含多个`constructor`的方法，则将抛出 一个{{jsxref("SyntaxError")}} 。
+[constructor](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)方法是一个特殊的方法，这种方法用于创建和初始化一个由`class`创建的对象。一个类只能拥有一个名为"constructor"的特殊方法。如果类包含多个`constructor`的方法，则将抛出 一个{{jsxref("SyntaxError")}} 。
 
 一个构造函数可以使用 `super` 关键字来调用一个父类的构造函数。
 
@@ -281,7 +281,7 @@ d.speak();// 'Mitzie barks.'
 
 如果子类中定义了构造函数，那么它必须先调用 `super()` 才能使用 `this` 。
 
-也可以继承传统的基于函数的“类”：
+也可以继承传统的基于函数的"类"：
 
 ```js
 function Animal (name) {
@@ -401,7 +401,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
 
 无法重新定义类。尝试这样做会产生一个 `SyntaxError`.
 
-如果您正在使用 Web 浏览器（例如 Firefox Web 控制台， (**Tools** > **Web Developer** > **Web Console**) 并且您两次“运行”具有相同名称的类的定义，您将收到一个 `SyntaxError: redeclaration of let ClassName;`. (请参阅中有关此问题的进一步讨论 [Firefox bug 1428672](https://bugzil.la/1428672).) 在 Chrome 开发者工具中执行类似的操作会给您一个以下信息： `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
+如果您正在使用 Web 浏览器（例如 Firefox Web 控制台， (**Tools** > **Web Developer** > **Web Console**) 并且您两次"运行"具有相同名称的类的定义，您将收到一个 `SyntaxError: redeclaration of let ClassName;`. (请参阅中有关此问题的进一步讨论 [Firefox bug 1428672](https://bugzil.la/1428672).) 在 Chrome 开发者工具中执行类似的操作会给您一个以下信息： `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
 
 ## 参见
 

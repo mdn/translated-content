@@ -7,7 +7,7 @@ slug: Web/API/WebGLRenderingContext
 
 **`WebGLRenderingContext`** 接口提供基于 OpenGL ES 2.0 的绘图上下文，用于在 HTML {{HTMLElement("canvas")}} 元素内绘图。
 
-要获得这个接口的对象以用于 2D 和 3D 的图形渲染，可以通过在 `<canvas>` 元素上调用 {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 函数，调用时传入“webgl”参数：
+要获得这个接口的对象以用于 2D 和 3D 的图形渲染，可以通过在 `<canvas>` 元素上调用 {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 函数，调用时传入"webgl"参数：
 
 ```js
 const canvas = document.getElementById('myCanvas');

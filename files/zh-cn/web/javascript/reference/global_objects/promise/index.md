@@ -23,9 +23,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise
 
 如果一个 Promise 已经被兑现或拒绝，即不再处于待定状态，那么则称之为已*敲定（settled）*。
 
-![流程图展示了 Promise 状态在 `pending`、`fulfilled` 和 `rejected` 之间如何通过 `then()` 和 `catch()` 处理程序进行转换。一个待定的 Promise 可以变成已兑现或已拒绝的状态。如果 Promise 已经兑现，则会执行“on fulfillment”处理程序（即 `then()` 方法的第一个参数），并继续执行进一步的异步操作。如果 Promise 被拒绝，则会执行错误处理程序，可以将其作为 `then()` 方法的第二个参数或 `catch()` 方法的唯一参数来传递。](promises.png)
+![流程图展示了 Promise 状态在 `pending`、`fulfilled` 和 `rejected` 之间如何通过 `then()` 和 `catch()` 处理程序进行转换。一个待定的 Promise 可以变成已兑现或已拒绝的状态。如果 Promise 已经兑现，则会执行"on fulfillment"处理程序（即 `then()` 方法的第一个参数），并继续执行进一步的异步操作。如果 Promise 被拒绝，则会执行错误处理程序，可以将其作为 `then()` 方法的第二个参数或 `catch()` 方法的唯一参数来传递。](promises.png)
 
-你还会听到使用*已解决*（resolved）这个术语来描述 Promise——这意味着该 Promise 已经敲定（settled），或为了匹配另一个 Promise 的最终状态而被“锁定（lock-in）”，进一步解决或拒绝它都没有影响。原始 Promise 提案中的 [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 文档包含了更多关于 Promise 术语的细节。在口语中，“已解决”的 Promise 通常等价于“已兑现”的 Promise，但是正如“States and fates”所示，已解决的 Promise 也可以是待定或拒绝的。例如：
+你还会听到使用*已解决*（resolved）这个术语来描述 Promise——这意味着该 Promise 已经敲定（settled），或为了匹配另一个 Promise 的最终状态而被"锁定（lock-in）"，进一步解决或拒绝它都没有影响。原始 Promise 提案中的 [States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 文档包含了更多关于 Promise 术语的细节。在口语中，"已解决"的 Promise 通常等价于"已兑现"的 Promise，但是正如"States and fates"所示，已解决的 Promise 也可以是待定或拒绝的。例如：
 
 ```js
 new Promise((resolveOuter) => {
@@ -37,9 +37,9 @@ new Promise((resolveOuter) => {
 });
 ```
 
-此 Promise 在创建时已经被解决（因为 `resolveOuter` 是同步调用的），但它是用另一个 Promise 解决的，因此在内部 Promise 兑现的 1 秒之后才会*被兑现*。在实践中，“解决”过程通常是在幕后完成的，不可观察，只有其兑现或拒绝是可观察的。
+此 Promise 在创建时已经被解决（因为 `resolveOuter` 是同步调用的），但它是用另一个 Promise 解决的，因此在内部 Promise 兑现的 1 秒之后才会*被兑现*。在实践中，"解决"过程通常是在幕后完成的，不可观察，只有其兑现或拒绝是可观察的。
 
-> **备注：** 其他几种语言也有一些机制来实现惰性求值和延迟计算，它们也称之为“promise”，例如 Scheme。在 JavaScript 中，Promise 代表已经在进行中的进程，而且可以通过回调函数实现链式调用。如果你想要实现惰性求值，考虑使用不带参数的函数，例如 `f = () => expression` 来创建惰性求值表达式，然后使用 `f()` 立即求值。
+> **备注：** 其他几种语言也有一些机制来实现惰性求值和延迟计算，它们也称之为"promise"，例如 Scheme。在 JavaScript 中，Promise 代表已经在进行中的进程，而且可以通过回调函数实现链式调用。如果你想要实现惰性求值，考虑使用不带参数的函数，例如 `f = () => expression` 来创建惰性求值表达式，然后使用 `f()` 立即求值。
 
 ### Promise 的链式调用
 
@@ -90,7 +90,7 @@ myPromise
 
 > **备注：** 为了更快的执行，最好将所有同步操作都放在一个处理程序中，否则如果将它们拆分为多个处理程序，执行所有处理程序将需要几个时钟周期。
 
-一个 Promise 的终止条件决定了链中下一个 Promise 的“已敲定”状态。“已兑现”状态表示 Promise 成功完成，而“已拒绝”状态表示 Promise 执行失败。链中每个已兑现的 Promise 的返回值会传递给下一个 `.then()`，而已拒绝的 Promise 会把失败原因传递给链中下一个拒绝处理函数。
+一个 Promise 的终止条件决定了链中下一个 Promise 的"已敲定"状态。"已兑现"状态表示 Promise 成功完成，而"已拒绝"状态表示 Promise 执行失败。链中每个已兑现的 Promise 的返回值会传递给下一个 `.then()`，而已拒绝的 Promise 会把失败原因传递给链中下一个拒绝处理函数。
 
 链式调用中的 promise 们就像俄罗斯套娃一样，是嵌套起来的，但又像是一个栈，每个都必须从顶端被弹出。链式调用中的第一个 promise 是嵌套最深的一个，也将是第一个被弹出的。
 
@@ -98,13 +98,13 @@ myPromise
 (promise D, (promise C, (promise B, (promise A) ) ) )
 ```
 
-当存在一个 `nextValue` 是 promise 时，就会出现一种动态的替换效果。`return` 会导致一个 promise 被弹出，但这个 `nextValue` promise 则会被推入被弹出 promise 原来的位置。对于上面所示的嵌套场景，假设与“promise B”相关的 `.then()` 返回了一个值为“promise X”的 `nextValue` 。那么嵌套的结果看起来就会是这样：
+当存在一个 `nextValue` 是 promise 时，就会出现一种动态的替换效果。`return` 会导致一个 promise 被弹出，但这个 `nextValue` promise 则会被推入被弹出 promise 原来的位置。对于上面所示的嵌套场景，假设与"promise B"相关的 `.then()` 返回了一个值为"promise X"的 `nextValue` 。那么嵌套的结果看起来就会是这样：
 
 ```plain
 (promise D, (promise C, (promise X) ) )
 ```
 
-一个 promise 可能会参与不止一次的嵌套。对于下面的代码，`promiseA` 向“已敲定”状态的过渡会导致两个实例的 `.then()` 都被调用。
+一个 promise 可能会参与不止一次的嵌套。对于下面的代码，`promiseA` 向"已敲定"状态的过渡会导致两个实例的 `.then()` 都被调用。
 
 ```js
 const promiseA = new Promise(myExecutorFunc);
@@ -112,7 +112,7 @@ const promiseB = promiseA.then(handleFulfilled1, handleRejected1);
 const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 ```
 
-一个已经处于“已敲定”状态的 promise 也可以接收操作。在那种情况下，（如果没有问题的话）这个操作会被作为第一个异步操作被执行。注意，所有的 promise 都一定是异步的。因此，一个已经处于“已敲定”状态的 promise 中的操作只有 promise 链式调用的栈被清空且一个时间片段过去之后才会被执行。这种效果跟 `setTimeout(action, 10)` 特别相似。
+一个已经处于"已敲定"状态的 promise 也可以接收操作。在那种情况下，（如果没有问题的话）这个操作会被作为第一个异步操作被执行。注意，所有的 promise 都一定是异步的。因此，一个已经处于"已敲定"状态的 promise 中的操作只有 promise 链式调用的栈被清空且一个时间片段过去之后才会被执行。这种效果跟 `setTimeout(action, 10)` 特别相似。
 
 ```js
 const promiseA = new Promise((resolve, reject) => {
@@ -189,7 +189,7 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
   - : 返回一个新的 `Promise` 对象，该对象以给定的原因拒绝。
 - {{jsxref("Promise.resolve()")}}
 
-  - : 返回一个新的 `Promise` 对象，该对象以给定的值兑现。如果值是一个 thenable 对象（即具有 `then` 方法），则返回的 Promise 对象会“跟随”该 thenable 对象，采用其最终的状态；否则，返回的 Promise 对象会以该值兑现。
+  - : 返回一个新的 `Promise` 对象，该对象以给定的值兑现。如果值是一个 thenable 对象（即具有 `then` 方法），则返回的 Promise 对象会"跟随"该 thenable 对象，采用其最终的状态；否则，返回的 Promise 对象会以该值兑现。
 
     通常，如果你不知道一个值是否是 Promise，那么最好使用 {{jsxref("Promise.resolve", "Promise.resolve(value)")}} 将其转换成 Promise 对象，并将返回值作为 Promise 来处理。
 
@@ -238,7 +238,7 @@ myFirstPromise.then((successMessage) => {
 
 示例函数 `tetheredGetNumber()` 会在设置同步调用或者函数内部抛出异常时调用 `reject()`。函数 `promiseGetWord()` 展示了如何在 API 函数内部创建并返回一个 promise。
 
-请注意，函数 `troubleWithGetNumber()` 以 `throw()` 结束。这是强制的做法，因为 ES6 的 promise 会遍历所有的 `.then()` promise，在遇到错误时，如果不使用 `throw()`，这个错误会被当作“已修复”。这很麻烦，因此，通常会在 `.then()` promise 调用链中忽略 `rejectionFunc`，而仅在最后的 `.catch()` 中保留一个 `rejectionFunc`。另一种方法是抛出一个特殊值（本例使用了 `-999`，但使用自定义错误类型更合适）。
+请注意，函数 `troubleWithGetNumber()` 以 `throw()` 结束。这是强制的做法，因为 ES6 的 promise 会遍历所有的 `.then()` promise，在遇到错误时，如果不使用 `throw()`，这个错误会被当作"已修复"。这很麻烦，因此，通常会在 `.then()` promise 调用链中忽略 `rejectionFunc`，而仅在最后的 `.catch()` 中保留一个 `rejectionFunc`。另一种方法是抛出一个特殊值（本例使用了 `-999`，但使用自定义错误类型更合适）。
 
 此代码可在 NodeJS 下运行。通过看到错误的实际发生，可以加深理解。若要提高错误发生的概率，请更改 `threshold` 值。
 
@@ -368,7 +368,7 @@ btn.addEventListener("click", testPromise);
 
 设置对象（settings object）是 JavaScript 代码运行时用于提供附加信息的[环境](https://html.spec.whatwg.org/multipage/webappapis.html#environment-settings-object)。它包含了领域（realm）和模块映射（module map），以及 HTML 的特定信息，如来源（origin）等。对现有设置对象的追踪保证了浏览器知道用户给定的哪些代码片段需要使用。
 
-为了更好地说明这一点，我们在这里进一步探讨领域是如何引发问题的。我们可以粗略地认为**领域**是一个全局对象。其独特之处在于，它拥有运行 JavaScript 代码所需的所有信息。这包括像 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 和 [`Error`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error) 这样的对象。每一个设置对象都有自己的“副本”，而且它们与副本之间是不共享的。这可能会导致一些与 promise 相关的意外行为。为了解决这个问题，我们需要追踪**现有设置对象**（incumbent settings object）。它表示负责用户某个函数调用工作的特定信息。
+为了更好地说明这一点，我们在这里进一步探讨领域是如何引发问题的。我们可以粗略地认为**领域**是一个全局对象。其独特之处在于，它拥有运行 JavaScript 代码所需的所有信息。这包括像 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 和 [`Error`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error) 这样的对象。每一个设置对象都有自己的"副本"，而且它们与副本之间是不共享的。这可能会导致一些与 promise 相关的意外行为。为了解决这个问题，我们需要追踪**现有设置对象**（incumbent settings object）。它表示负责用户某个函数调用工作的特定信息。
 
 我们可以尝试在文档中嵌入 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)，并让其与父级上下文通信。由于所有的 web API 都有现有设置对象，下面的代码能够在所有的浏览器中运行：
 

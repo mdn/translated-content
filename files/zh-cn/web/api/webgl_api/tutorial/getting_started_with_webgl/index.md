@@ -49,11 +49,11 @@ function main() {
 }
 ```
 
-我们所要做的第一件事就是是获取 canvas 的引用，把它保存在‘canvas’变量里。
+我们所要做的第一件事就是是获取 canvas 的引用，把它保存在'canvas'变量里。
 
 当我们获取到 canvas 之后，我们会调用[getContext](/zh-CN/docs/Web/API/HTMLCanvasElement/getContext) 函数并向它传递 `"webgl"` 参数，来尝试获取[WebGLRenderingContext](/zh-CN/docs/Web/API/WebGLRenderingContext)。如果浏览器不支持 webgl, `getContext` 将会返回 `null`，我们就可以显示一条消息给用户然后退出。
 
-如果 WebGL 上下文成功初始化，变量‘gl’会用来引用该上下文。在这个例子里，我们用黑色清除上下文内已有的元素。（用背景颜色重绘 canvas）。
+如果 WebGL 上下文成功初始化，变量'gl'会用来引用该上下文。在这个例子里，我们用黑色清除上下文内已有的元素。（用背景颜色重绘 canvas）。
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 

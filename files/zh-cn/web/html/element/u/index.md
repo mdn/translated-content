@@ -7,7 +7,7 @@ slug: Web/HTML/Element/u
 
 [HTML](/zh-CN/docs/Web/HTML) **`<u>`** 元素表示行内文本拥有一个非文本形式的注释，该注释需要以某种方式渲染出来。默认情况下渲染为一个实线下划线，可以用 CSS 替换。
 
-> **警告：** 此元素以前在旧版本的 HTML 中称为“下划线”元素，但有时仍会以这种方式被滥用。要为文本加下划线，你应该应用包含 CSS {{cssxref("text-decoration")}} 属性设置为 `underline` 的样式。
+> **警告：** 此元素以前在旧版本的 HTML 中称为"下划线"元素，但有时仍会以这种方式被滥用。要为文本加下划线，你应该应用包含 CSS {{cssxref("text-decoration")}} 属性设置为 `underline` 的样式。
 
 {{EmbedInteractiveExample("pages/tabbed/u.html", "tabbed-shorter")}}
 
@@ -56,7 +56,7 @@ slug: Web/HTML/Element/u
 <p>This paragraph includes a <u class="spelling">wrnogly</u> spelled word.</p>
 ```
 
-在 HTML 中，我们用 `<u>` 元素及 `spelling` 类来表示“wrnogly”一词的拼写错误。
+在 HTML 中，我们用 `<u>` 元素及 `spelling` 类来表示"wrnogly"一词的拼写错误。
 
 #### CSS
 

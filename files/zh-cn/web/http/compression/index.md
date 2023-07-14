@@ -36,7 +36,7 @@ slug: Web/HTTP/Compression
 
 为了选择要采用的压缩算法，浏览器和服务器之间会使用[主动协商机制](/zh-CN/docs/Web/HTTP/Content_negotiation)。浏览器发送 {{HTTPHeader("Accept-Encoding")}} 标头，其中包含有它所支持的压缩算法，以及各自的优先级，服务器则从中选择一种，使用该算法对响应的消息主体进行压缩，并且发送 {{HTTPHeader("Content-Encoding")}} 标头来告知浏览器它选择了哪一种算法。由于该内容协商过程是基于编码类型来选择资源的展现形式的，在响应时，服务器至少发送一个包含 {{HTTPHeader("Accept-Encoding")}} 的 {{HTTPHeader("Vary")}} 标头以及该标头；这样的话，缓存服务器就可以对资源的不同展现形式进行缓存。
 
-![客户端使用“Accept-Encoding:br, gzip”标头请求内容。服务器使用 Brotli 算法压缩的主体以及所需的“Content-Encoding”和“Vary”标头进行响应。](httpcompression1.png)
+![客户端使用"Accept-Encoding:br, gzip"标头请求内容。服务器使用 Brotli 算法压缩的主体以及所需的"Content-Encoding"和"Vary"标头进行响应。](httpcompression1.png)
 
 由于压缩技术可以带来很大的性能提升，建议对除了已经经过压缩的文件如图片、音频和视频文件之外的其他类型的文件均进行压缩。
 
@@ -46,7 +46,7 @@ Apache 服务器支持数据压缩，有 [mod_deflate](http://httpd.apache.org/d
 
 逐跳压缩技术尽管与端到端压缩技术有些类似，但是它们在一点上有着本质的区别：即这里的压缩指的不是对源头服务器上的资源的压缩，以此来创建一份特定的展现形式然后进行传输，而是对客户端与服务器端之间的任意两个节点之间传递的消息的主体的压缩。在两个相邻的中间节点之间的连接上，可能会应用*不同*的压缩方式。
 
-![服务器通过网络节点向客户端发送一个未经压缩的 HTTP 主体。该主体在到达客户端之前，由网络上的节点根据“Transfer-Encoding”标头进行压缩和解压缩。](httpte1.png)
+![服务器通过网络节点向客户端发送一个未经压缩的 HTTP 主体。该主体在到达客户端之前，由网络上的节点根据"Transfer-Encoding"标头进行压缩和解压缩。](httpte1.png)
 
 为了实现这个目的，HTTP 协议中采用了与端到端压缩技术所使用的内容协商机制相类似的机制：节点发送请求，使用 {{HTTPHeader("TE")}} 标头来宣告它的意愿，另外一个节点则从中选择合适的方法，进行应用，然后在 {{HTTPHeader("Transfer-Encoding")}} 标头中指出它所选择的方法。
 

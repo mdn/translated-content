@@ -119,7 +119,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
       > 2. 现在，携带 `SameSite=None` 属性的 cookie 必须同时设置 `Secure` 属性（换句话说，其仅能用于安全上下文）
       > 3. 来自同一域的 cookie 若使用了不同的协议（`http:` 或 `HTTPS:`），将不再被视为来自同一站点。
       >
-      > 参见[浏览器兼容性](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#浏览器兼容性)表以了解不同浏览器的实线情况（行：“`SameSite`: Defaults to `Lax`”、“`SameSite`: Secure context required”和“`SameSite`: URL scheme-aware ("schemeful")”）。
+      > 参见[浏览器兼容性](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#浏览器兼容性)表以了解不同浏览器的实线情况（行："`SameSite`: Defaults to `Lax`"、"`SameSite`: Secure context required"和"`SameSite`: URL scheme-aware ("schemeful")"）。
 
 ## 示例
 

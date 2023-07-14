@@ -18,7 +18,7 @@ String.fromCodePoint(num1[, ...[, numN]])
 ### 参数
 
 - `num1, ..., numN`
-  - : 一串 Unicode 编码位置，即“代码点”。
+  - : 一串 Unicode 编码位置，即"代码点"。
 
 ### 返回值
 

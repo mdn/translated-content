@@ -15,7 +15,7 @@ slug: Web/HTML/Element/input/time
 
 ### Chrome 和 Opera
 
-在 Chrome 或 Opera 中，`time` 选择控件很简单，根据操作系统区域设置，插槽以 12 或 24 小时格式输入小时和分钟，上下箭头用于递增和递减当前选定的组件。在某些版本中，会提供一个“x”按钮来清除控件的值。
+在 Chrome 或 Opera 中，`time` 选择控件很简单，根据操作系统区域设置，插槽以 12 或 24 小时格式输入小时和分钟，上下箭头用于递增和递减当前选定的组件。在某些版本中，会提供一个"x"按钮来清除控件的值。
 
 ![12 小时制输入格式](chrome_time.png) 12 小时制
 
@@ -23,7 +23,7 @@ slug: Web/HTML/Element/input/time
 
 ### Firefox
 
-Firefox 的 `time` 选择控件和 Chrome 非常相似，只是它没有上下箭头。它还基于系统区域设置使用 12 或 24 小时格式输入时间，也提供“X”按钮以清除控件的值。
+Firefox 的 `time` 选择控件和 Chrome 非常相似，只是它没有上下箭头。它还基于系统区域设置使用 12 或 24 小时格式输入时间，也提供"X"按钮以清除控件的值。
 
 ![Firefox 的 12 小时制输入格式](firefox-time.png) 12 小时制
 

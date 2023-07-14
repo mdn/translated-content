@@ -10,7 +10,7 @@ slug: Web/CSS/color_value
 一个`<color>`可以以如下方式定义：
 
 - 使用一个关键字（比如`blue`或`transparent`）
-- 使用[RGB 立体坐标（RGB cubic-coordinate）](http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation)系统（以“#”加十六进制或者 `rgb()` 和 `rgba()` 函数表达式的形式）
+- 使用[RGB 立体坐标（RGB cubic-coordinate）](http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation)系统（以"#"加十六进制或者 `rgb()` 和 `rgba()` 函数表达式的形式）
 - 使用[HSL 圆柱坐标（HSL cylindrical-coordinate）](http://en.wikipedia.org/wiki/HSL_and_HSV)系统（以 `hsl()` 和 `hsla()` 函数表达式的形式）
 
 > **备注：** 本文章详细描述了`<color>`数据类型。如要了解更多关于在 HTML 中使用颜色的信息，请参阅[使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/HTML/Applying_color)。
@@ -114,7 +114,7 @@ HSL colors are expressed through the functional `hsl()` and `hsla()` notations.
 
 - Functional notation: `hsl[a](H, S, L[, A])`
   - : `H` (hue) is an {{cssxref("&lt;angle&gt;")}} of the color circle given in `deg`s, `rad`s, `grad`s, or `turn`s in [CSS Color Module Level 4](https://drafts.csswg.org/css-color/#the-hsl-notation). When written as a unitless {{cssxref("&lt;number&gt;")}}, it is interpreted as degrees, as specified in [CSS Color Module Level 3](https://drafts.csswg.org/css-color-3/#hsl-color). By definition, red=0deg=360deg, with the other colors spread around the circle, so green=120deg, blue=240deg, etc. As an `<angle>`, it implicitly wraps around such that -120deg=240deg, 480deg=120deg, -1turn=1turn, etc.
-    `S` (saturation) and `L` (lightness) are percentages. `100%` **saturation** is completely saturated, while `0%` is completely unsaturated (gray). `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is “normal.”
+    `S` (saturation) and `L` (lightness) are percentages. `100%` **saturation** is completely saturated, while `0%` is completely unsaturated (gray). `100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is "normal."
     `A` (alpha) can be a {{cssxref("&lt;number&gt;")}} between `0` and `1`, or a {{cssxref("&lt;percentage&gt;")}}, where the number `1` corresponds to `100%` (full opacity).
 - Functional notation: `hsl[a](H S L[ / A])`
   - : CSS Colors Level 4 adds support for space-separated values in the functional notation.

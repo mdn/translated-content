@@ -42,7 +42,7 @@ slug: >-
 
 如其官方口号所示，[React](https://reactjs.org/) 是一个用于构建用户界面的库。React 不是一个框架 —— 它的应用甚至不局限于 Web 开发，它可以与其他库一起使用以渲染到特定环境。例如，[React Native](https://reactnative.dev/) 可用于构建移动应用程序；[React 360](https://facebook.github.io/react-360/) 可用于构建虚拟现实应用程序……
 
-为了构建 Web 应用，开发人员将 React 与 [ReactDOM 结合使用](https://reactjs.org/docs/react-dom.html)。React 和 ReactDOM 通常被与其他真正的 Web 开发框架相提并论，并用于解决相同的问题。当我们将 React 称为“框架”时，就是在进行口语化的理解。
+为了构建 Web 应用，开发人员将 React 与 [ReactDOM 结合使用](https://reactjs.org/docs/react-dom.html)。React 和 ReactDOM 通常被与其他真正的 Web 开发框架相提并论，并用于解决相同的问题。当我们将 React 称为"框架"时，就是在进行口语化的理解。
 
 React 的主要目标是最大程度地减少开发人员构建 UI 时发生的错误。它通过使用组件——描述部分用户界面的、自包含的逻辑代码段——来实现此目的。这些组件可以组合在一起以创建完整的 UI，React 将许多渲染工作进行抽象化，使您可以专注于 UI 设计 (译者注：显而易见，此设计不等于视觉稿的设计)。
 
@@ -50,7 +50,7 @@ React 的主要目标是最大程度地减少开发人员构建 UI 时发生的�
 
 与本模块中涵盖的其他框架不同，React 不会对代码约定或文件组织实施严格的规则。这使团队可以设置最适合自己的约定，并以他们希望的任何方式采用 React。React 可以处理一个按钮，一个界面的几个部分或应用程序的整个用户界面。
 
-尽管 React 可以用于[界面的小片段](https://reactjs.org/docs/add-react-to-a-website.html)中，但要和 jQuery 这样的库，甚至是像 Vue 这样的框架那样“引入”应用程序并不容易 —— 当你使用 React 构建整个应用程序时更容易上手。
+尽管 React 可以用于[界面的小片段](https://reactjs.org/docs/add-react-to-a-website.html)中，但要和 jQuery 这样的库，甚至是像 Vue 这样的框架那样"引入"应用程序并不容易 —— 当你使用 React 构建整个应用程序时更容易上手。
 
 另外，许多开发人员的经验对于 React 应用程序也是有用处的，例如使用 JSX 编写界面是需要编译过程的。在网站上添加类似于 Babel 的编译器会让网站上代码的运行速度变慢，因此开发人员通常会在构建项目的时候设置这样的工具。React 对于工具的要求可以说是很高的，但这是能够学习解决的。
 
@@ -242,7 +242,7 @@ import './App.css';
 
 ### `App` 组件
 
-在 import 所需资源之后，我们定义了一个名为 App 的函数，尽管大部分 JavaScript 社区推崇使用驼峰式命名法，如：“helloWorld”。但 React 组件使用帕斯卡命名法，如“HelloWorld”，来帮助用户辨认一个 JSX 元素是 React 组件而非普通的 HTML 标签。如果您将函数名“App”改为“app”，您的浏览器会显示错误。
+在 import 所需资源之后，我们定义了一个名为 App 的函数，尽管大部分 JavaScript 社区推崇使用驼峰式命名法，如："helloWorld"。但 React 组件使用帕斯卡命名法，如"HelloWorld"，来帮助用户辨认一个 JSX 元素是 React 组件而非普通的 HTML 标签。如果您将函数名"App"改为"app"，您的浏览器会显示错误。
 
 让我们进一步看下 App 方法。
 

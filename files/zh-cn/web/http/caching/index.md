@@ -43,7 +43,7 @@ Cache-Control: private
 
 除了访问控制的功能外，一些代理还实现了缓存以减少网络流量。这通常不由服务开发人员管理，因此必须由恰当的 HTTP 标头等控制。然而，在过去，过时的代理缓存实现——例如没有正确理解 HTTP 缓存标准的实现——经常给开发人员带来问题。
 
-**Kitchen-sink 标头**如下所示，用于尝试解决不理解当前 HTTP 缓存规范指令（如 `no-store`）的“旧且未更新的代理缓存”的实现。
+**Kitchen-sink 标头**如下所示，用于尝试解决不理解当前 HTTP 缓存规范指令（如 `no-store`）的"旧且未更新的代理缓存"的实现。
 
 ```http
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
@@ -51,7 +51,7 @@ Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 
 然而，近年来，随着 HTTPS 变得越来越普遍，客户端/服务器通信变得加密，在许多情况下，路径中的代理缓存只能传输响应而不能充当缓存。因此，在这种情况下，无需担心甚至无法看到响应的过时代理缓存的实现。
 
-另一方面，如果 {{Glossary("TLS")}} 桥接代理通过在 PC 上安装来自组织管理的 {{Glossary("Certificate_authority", "CA")}} 证书，以中间人方式解密所有通信，并执行访问控制等，则可以查看响应的内容并将其缓存。但是，由于[证书透明度（certificate transparency）](/zh-CN/docs/Web/Security/Certificate_Transparency)在最近几年变得很普遍，并且一些浏览器只允许使用证书签署时间戳（signed certificate timestamp）颁发的证书，因此这种方法需要应用于企业策略。在这样的受控环境中，无需担心代理缓存“已过时且未更新”。
+另一方面，如果 {{Glossary("TLS")}} 桥接代理通过在 PC 上安装来自组织管理的 {{Glossary("Certificate_authority", "CA")}} 证书，以中间人方式解密所有通信，并执行访问控制等，则可以查看响应的内容并将其缓存。但是，由于[证书透明度（certificate transparency）](/zh-CN/docs/Web/Security/Certificate_Transparency)在最近几年变得很普遍，并且一些浏览器只允许使用证书签署时间戳（signed certificate timestamp）颁发的证书，因此这种方法需要应用于企业策略。在这样的受控环境中，无需担心代理缓存"已过时且未更新"。
 
 #### 托管缓存
 
@@ -69,7 +69,7 @@ Cache-Control: no-store
 
 例如，Varnish Cache 使用 VCL（Varnish Configuration Language，一种 {{Glossary("DSL/Domain_specific_language", "DSL")}}）逻辑来处理缓存存储，而 service worker 结合缓存 API 允许你在 JavaScript 中创建该逻辑。
 
-这意味着如果托管缓存故意忽略 `no-store` 指令，则无需将其视为“不符合”标准。你应该做的是，避免使用 kitchen-sink 标头，但请仔细阅读你正在使用的任何托管缓存机制的文档，并确保你选择的方式可以正确的控制缓存。
+这意味着如果托管缓存故意忽略 `no-store` 指令，则无需将其视为"不符合"标准。你应该做的是，避免使用 kitchen-sink 标头，但请仔细阅读你正在使用的任何托管缓存机制的文档，并确保你选择的方式可以正确的控制缓存。
 
 请注意，某些 CDN 提供自己的标头，这些标头仅对该 CDN 有效（例如，`Surrogate-Control`）。目前，正在努力定义一个 [`CDN-Cache-Control`](https://httpwg.org/specs/rfc9213.html) 标头来标准化这些标头。
 
@@ -162,7 +162,7 @@ Expires: Tue, 28 Feb 2022 22:22:22 GMT
 
 但是响应的内容并不总是相同的，即使它们具有相同的 URL。特别是在执行内容协商时，来自服务器的响应可能取决于 `Accept`、`Accept-Language` 和 `Accept-Encoding` 请求标头的值。
 
-例如，对于带有 `Accept-Language: en` 标头并已缓存的英语内容，不希望再对具有 `Accept-Language: ja` 请求标头的请求重用该缓存响应。在这种情况下，你可以通过在 `Vary` 标头的值中添加“`Accept-Language`”，根据语言单独缓存响应。
+例如，对于带有 `Accept-Language: en` 标头并已缓存的英语内容，不希望再对具有 `Accept-Language: ja` 请求标头的请求重用该缓存响应。在这种情况下，你可以通过在 `Vary` 标头的值中添加"`Accept-Language`"，根据语言单独缓存响应。
 
 ```http
 Vary: Accept-Language
@@ -172,7 +172,7 @@ Vary: Accept-Language
 
 ![使用 url 和语言作为键](keyed-with-url-and-language.png)
 
-此外，如果你基于用户代理提供内容优化（例如，响应式设计），你可能会想在 `Vary` 标头的值中包含“`User-Agent`”。但是，`User-Agent` 请求标头通常具有非常多的变体，这大大降低了缓存被重用的机会。因此，如果可能，请考虑一种基于特征检测而不是基于 `User-Agent` 请求标头来改变行为的方法。
+此外，如果你基于用户代理提供内容优化（例如，响应式设计），你可能会想在 `Vary` 标头的值中包含"`User-Agent`"。但是，`User-Agent` 请求标头通常具有非常多的变体，这大大降低了缓存被重用的机会。因此，如果可能，请考虑一种基于特征检测而不是基于 `User-Agent` 请求标头来改变行为的方法。
 
 对于使用 cookie 来防止其他人重复使用缓存的个性化内容的应用程序，你应该指定 `Cache-Control: private` 而不是为 `Vary` 指定 cookie。
 
@@ -209,7 +209,7 @@ If-Modified-Since: Tue, 22 Feb 2022 22:00:00 GMT
 
 如果内容自指定时间以来没有更改，服务器将响应 `304 Not Modified`。
 
-由于此响应仅表示“没有变化”，因此没有响应主体——只有一个状态码——因此传输大小非常小。
+由于此响应仅表示"没有变化"，因此没有响应主体——只有一个状态码——因此传输大小非常小。
 
 ```http
 HTTP/1.1 304 Not Modified
@@ -299,7 +299,7 @@ Cache-Control: max-age=0, must-revalidate
 Cache-Control: no-store
 ```
 
-但是，一般来说，实践中“不缓存”的原因满足以下情况：
+但是，一般来说，实践中"不缓存"的原因满足以下情况：
 
 - 出于隐私原因，不希望特定客户以外的任何人存储响应。
 - 希望始终提供最新信息。
@@ -381,7 +381,7 @@ If-Modified-Since: Tue, 22 Feb 2022 20:20:20 GMT
 
 （来自 Chrome、Edge 和 Firefox 的请求看起来很像上面的；来自 Safari 的请求看起来会有点不同。）
 
-请求中的 `max-age=0` 指令指定“重用 age 为 0 或更少的响应”——因此，中间存储的响应不会被重用。
+请求中的 `max-age=0` 指令指定"重用 age 为 0 或更少的响应"——因此，中间存储的响应不会被重用。
 
 请求通过 `If-None-Match` 和 `If-Modified-Since` 进行验证。
 
@@ -478,7 +478,7 @@ Cache-Control: max-age=31536000
 
 ### 默认设置
 
-如上所述，缓存的默认行为（即对于没有 `Cache-Control` 的响应）不是简单的“不缓存”，而是根据所谓的“启发式缓存”进行隐式缓存。
+如上所述，缓存的默认行为（即对于没有 `Cache-Control` 的响应）不是简单的"不缓存"，而是根据所谓的"启发式缓存"进行隐式缓存。
 
 为了避免这种启发式缓存，最好显式地为所有响应提供一个默认的 `Cache-Control` 标头。
 
@@ -555,11 +555,11 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 如果你选择其中一个编号选项，则可以在通过 HTTP3 传输时将值压缩为 1 个字节。
 
-数字“37”、“38”和“41”分别代表一周、一个月和一年。
+数字"37"、"38"和"41"分别代表一周、一个月和一年。
 
 因为缓存会在保存新条目时删除旧条目，所以一周后存储的响应仍然存在的可能性并不高——即使 `max-age` 设置为 1 周。因此，在实践中，你选择哪一种并没有太大的区别。
 
-请注意，数字“41”具有最长的 `max-age`（1 年），但具有 `public`。
+请注意，数字"41"具有最长的 `max-age`（1 年），但具有 `public`。
 
 `public` 值具有使响应可存储的效果，即使存在 `Authorization` 标头。
 

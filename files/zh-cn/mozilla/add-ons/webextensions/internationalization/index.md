@@ -49,7 +49,7 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 
 你可以使用[Language subtag lookup page](https://r12a.github.io/app-subtags/)上的查找工具查询语言子标签。请注意，你需要搜索语言的英语名称。
 
-每个 i18n 系统都需要你提供想支持的各语言区域的已翻译字符串。在 WebExtensions 中，这些字符串放在一个名为 `_locales` 的目录中，`_locales` 目录则位于扩展的根目录。每个语言区域都有一个名叫 `messages.json` 的文件，其中包含相应的字符串（在 WebExtension 中称作“消息”），这个文件放在 `_locales` 的子目录下，子目录以对应语言区域的语言子标签来命名。
+每个 i18n 系统都需要你提供想支持的各语言区域的已翻译字符串。在 WebExtensions 中，这些字符串放在一个名为 `_locales` 的目录中，`_locales` 目录则位于扩展的根目录。每个语言区域都有一个名叫 `messages.json` 的文件，其中包含相应的字符串（在 WebExtension 中称作"消息"），这个文件放在 `_locales` 的子目录下，子目录以对应语言区域的语言子标签来命名。
 
 注意，如果子标签包含一个基本语言和一个区域变种，那么语言与变种之间通常会以连字号隔开，例如 "en-US"。但作为 `_locales` 的子目录，**它必须采用下划线来分隔**，如 "en_US"。
 
@@ -383,7 +383,7 @@ padding-left: 1.5em;
 接下来，将 Firefox 的语言区域更改为你想测试的扩展支持的某个语言区域。
 
 1. 在 Firefox 中打开 "about:config"，找到 `general.useragent.locale` 首选项。
-2. 双击该首选项（或按回车）以选择它，输入你想测试的语言环境的语言代码，然后点击“确定”（或按回车）。我们的示例扩展支持“en”（英语）、“de”德语（）、“nl”（荷兰语）和“ja”日语。
+2. 双击该首选项（或按回车）以选择它，输入你想测试的语言环境的语言代码，然后点击"确定"（或按回车）。我们的示例扩展支持"en"（英语）、"de"德语（）、"nl"（荷兰语）和"ja"日语。
 3. 重启你的浏览器以完成更改。
 
 > **备注：** 这个方法可以用来修改浏览器的语言区域，即使你未安装过该语言区域对应的[语言包](https://addons.mozilla.org/en-US/firefox/language-tools/)。这样的话你就可以将浏览器用户界面调整显示为你的默认语言。

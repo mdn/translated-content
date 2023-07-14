@@ -7,7 +7,7 @@ slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
 
-本节将演示如何创建一个可添加路由、模板/视图、和数据库调用的“骨架”站点。
+本节将演示如何创建一个可添加路由、模板/视图、和数据库调用的"骨架"站点。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -29,7 +29,7 @@ slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 ## 概览
 
-本节演示了如何使用 [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) 创建一个可添加路由、模板/视图和数据库调用的“骨架”网站。这里我们将使用该生成器为 [本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 创建框架，以便在以后章节添加其他代码。过程非常简单，只需要在命令行运行“生成器 + 项目名称”即可，此外还可以指定站点的模板引擎和 CSS 生成器。
+本节演示了如何使用 [Express 应用生成器](http://www.expressjs.com.cn/starter/generator.html) 创建一个可添加路由、模板/视图和数据库调用的"骨架"网站。这里我们将使用该生成器为 [本地图书馆网站](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 创建框架，以便在以后章节添加其他代码。过程非常简单，只需要在命令行运行"生成器 + 项目名称"即可，此外还可以指定站点的模板引擎和 CSS 生成器。
 
 以下内容介绍了应用生成器的用法，以及视图 / CSS 的一些不同选项。还介绍了骨架站点的组织结构。最后，我们将介绍站点的运行方法，从而对其进行验证。
 
@@ -41,7 +41,7 @@ slug: Learn/Server-side/Express_Nodejs/skeleton_website
 >
 > - 自己弄懂 cmd/PowerShell 与 bash 的区别。
 > - 使用 [Git](https://git-scm.com/) 或 [MSYS2](http://www.msys2.org/) 为 Windows 提供的 bash。（推荐）
-> - 使用 Windows 的 Linux 子系统。（到 Microsoft Store 中搜索“Linux”，安装喜欢的版本（Ubuntu 18.04、openSUSE 42、Debian 等），仅限 Windows 10，使用前需要先安装 [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)）
+> - 使用 Windows 的 Linux 子系统。（到 Microsoft Store 中搜索"Linux"，安装喜欢的版本（Ubuntu 18.04、openSUSE 42、Debian 等），仅限 Windows 10，使用前需要先安装 [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10)）
 
 > **备注：** 你可能已经发现国内用 NPM 太慢了！这是由众所周知的不可抗力造成的。可用淘宝提供的 [CNPM](https://npm.taobao.org/) 代替之，功能和用法基本一致（只是不能上传自己的包）。
 
@@ -96,12 +96,12 @@ Express 应用生成器支持多款流行的视图/模板引擎，包括 [EJS](h
 
 - 进入生产状态的时间——如果你的团队已经有某个模板语言的经验，那么用它可能更快进入生产状态。否则你应该考虑所选模板引擎的学习曲线。
 - 流行度和活跃度——要评估所选引擎的流行程度，以及它是否拥有活跃的社区。在网站的生命周期中遇到问题时，是否能够获得相关支持非常重要。
-- 风格——某些模板引擎使用特定标记，来标识插入“普通”HTML 中的内容，而另一些模板引擎使用不同的语法（例如使用缩进和块名称）构造 HTML。
+- 风格——某些模板引擎使用特定标记，来标识插入"普通"HTML 中的内容，而另一些模板引擎使用不同的语法（例如使用缩进和块名称）构造 HTML。
 - 性能/渲染时间。
 - 功能——你应该考虑所选引擎是否具有以下功能：
 
-  - 布局继承：可以定义基本模板，然后“继承”它的一部分，使不同页面可以有不同的呈现。这通常比包含大量所需组件，或每次从头开始构建模板更好。
-  - “包含”支持：可以通过包含其他模板来构建新模板。
+  - 布局继承：可以定义基本模板，然后"继承"它的一部分，使不同页面可以有不同的呈现。这通常比包含大量所需组件，或每次从头开始构建模板更好。
+  - "包含"支持：可以通过包含其他模板来构建新模板。
   - 简明的变量和循环控制语法。
   - 能够在模板级别过滤变量值（例如，将变量设置为大写，或格式化日期值）。
   - 能够生成 HTML 以外的输出格式（例如 JSON 或 XML）。
@@ -162,7 +162,7 @@ Express 应用生成器支持最常见的 CSS 引擎：[LESS](http://lesscss.org
 
 只有重启服务器才能看到 Express 网站所做的改动。每次改动后手动启停服务器实在太烦人了，有必要花点时间让这项工作自动化。
 
-[nodemon](https://github.com/remy/nodemon) 是最简便的自动化工具之一。通常将其全局安装（因为它是一个“工具”）：
+[nodemon](https://github.com/remy/nodemon) 是最简便的自动化工具之一。通常将其全局安装（因为它是一个"工具"）：
 
 ```bash
 sudo npm install -g nodemon
@@ -197,9 +197,9 @@ npm install --save-dev nodemon
 DEBUG=express-locallibrary-tutorial:* npm run devstart
 ```
 
-现在，如果编辑项目中的任何文件，服务器将自动重启（或者可以随时使用 rs 命令来重启）。查看更新后的页面需要点击浏览器的“刷新”按钮。
+现在，如果编辑项目中的任何文件，服务器将自动重启（或者可以随时使用 rs 命令来重启）。查看更新后的页面需要点击浏览器的"刷新"按钮。
 
-> **备注：** 这里必须使用“`npm run <scriptname>`”命令，而不是 `npm start`，因为“start”本质上是映射到脚本的一条 NPM 命令。我们可以在 `start` 脚本中替换它，但我们只想在开发期间使用 nodemon，因此有必要创建一条新的脚本命令。
+> **备注：** 这里必须使用"`npm run <scriptname>`"命令，而不是 `npm start`，因为"start"本质上是映射到脚本的一条 NPM 命令。我们可以在 `start` 脚本中替换它，但我们只想在开发期间使用 nodemon，因此有必要创建一条新的脚本命令。
 
 ## 生成的项目
 
@@ -207,7 +207,7 @@ DEBUG=express-locallibrary-tutorial:* npm run devstart
 
 ### 目录结构
 
-安装好依赖项的生成项目具有如下文件结构（**不**带“/”前缀的是文件）：
+安装好依赖项的生成项目具有如下文件结构（**不**带"/"前缀的是文件）：
 
 ```plain
 /express-locallibrary-tutorial
@@ -280,7 +280,7 @@ DEBUG=express-locallibrary-tutorial:* npm run devstart
 
 ### www 文件
 
-文件 **/bin/www** 是应用入口！它做的第一件事是 `require()` “真实”的应用入口（即项目根目录中的 **app.js** ），**app.js** 会设置并返回 [`express()`](http://expressjs.com/en/api.html)应用对象。
+文件 **/bin/www** 是应用入口！它做的第一件事是 `require()` "真实"的应用入口（即项目根目录中的 **app.js** ），**app.js** 会设置并返回 [`express()`](http://expressjs.com/en/api.html)应用对象。
 
 ```js
 #!/usr/bin/env node
@@ -320,7 +320,7 @@ var cookieParser = require('cookie-parser');
 var path = require('path');
 ```
 
-然后 `require()` 的是用户路由目录中的模块。这些模块/文件用于处理特定的“路由”（URL 路径）。可以通过添加新文件来扩展骨架应用，比如添加图书相关的路由来列出所有馆藏书目。
+然后 `require()` 的是用户路由目录中的模块。这些模块/文件用于处理特定的"路由"（URL 路径）。可以通过添加新文件来扩展骨架应用，比如添加图书相关的路由来列出所有馆藏书目。
 
 ```js
 var indexRouter = require('./routes/index');
@@ -329,7 +329,7 @@ var usersRouter = require('./routes/users');
 
 > **备注：** 此时我们刚刚导入了模块；还没有真正使用过其中的路由（稍后会使用）。
 
-下面我们用导入的 `express` 模块来创建 `app` 对象，然后使用它来设置视图（模板）引擎。设置引擎分两步：首先设置 '`views`' 以指定模板的存储文件夹（此处设为子文件夹 **/views**）。然后设置 '`view engine`' 以指定模板库（本例中设为“pug” ）。
+下面我们用导入的 `express` 模块来创建 `app` 对象，然后使用它来设置视图（模板）引擎。设置引擎分两步：首先设置 '`views`' 以指定模板的存储文件夹（此处设为子文件夹 **/views**）。然后设置 '`view engine`' 以指定模板库（本例中设为"pug" ）。
 
 ```js
 var app = express();

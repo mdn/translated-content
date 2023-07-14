@@ -85,7 +85,7 @@ font-size: unset;
 
 ### Em
 
-使用 `em` 值创建动态或计算字体大小（历史上，`em` 单位是从给定字体中大写字母 “M” 的宽度派生的）。 数字值作为当前元素的 `font-size` 属性的乘数。考虑以下示例：
+使用 `em` 值创建动态或计算字体大小（历史上，`em` 单位是从给定字体中大写字母 "M" 的宽度派生的）。 数字值作为当前元素的 `font-size` 属性的乘数。考虑以下示例：
 
 ```css
 p {
@@ -126,7 +126,7 @@ span {
 
 {{EmbedLiveSample("Em", 400, 100)}}
 
-假设浏览器的默认 `font-size` 为 16px，则单词“outer”将渲染为 25.6px，但单词“inner”将渲染为 40.96px。这是因为内部 {{HTMLElement("span")}} 的 `font-size` 为 1.6em，相对于其父级的 `font-size`，而其父级又相对于其父级的 `font-size`。这通常被称为复合。
+假设浏览器的默认 `font-size` 为 16px，则单词"outer"将渲染为 25.6px，但单词"inner"将渲染为 40.96px。这是因为内部 {{HTMLElement("span")}} 的 `font-size` 为 1.6em，相对于其父级的 `font-size`，而其父级又相对于其父级的 `font-size`。这通常被称为复合。
 
 ### Rem
 
@@ -151,7 +151,7 @@ span {
 
 {{EmbedLiveSample("Rem", 400, 100)}}
 
-在这个例子中，“outer inner outer”这些单词都以 25.6 像素的大小显示（假设浏览器的 `font-size` 已保留默认值 16px）。
+在这个例子中，"outer inner outer"这些单词都以 25.6 像素的大小显示（假设浏览器的 `font-size` 已保留默认值 16px）。
 
 ### Ex
 

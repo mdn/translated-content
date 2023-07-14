@@ -268,7 +268,7 @@ console.log(products.latestBrowser); // 'Chrome'
 
 ### 通过属性查找数组中的特定对象
 
-以下代理为数组扩展了一些实用工具。如你所见，通过 Proxy，我们可以灵活地“定义”属性，而不需要使用 {{jsxref("Object.defineProperties")}} 方法。以下例子可以用于通过单元格来查找表格中的一行。在这种情况下，target 是 [`table.rows`](/zh-CN/docs/DOM/table.rows)。
+以下代理为数组扩展了一些实用工具。如你所见，通过 Proxy，我们可以灵活地"定义"属性，而不需要使用 {{jsxref("Object.defineProperties")}} 方法。以下例子可以用于通过单元格来查找表格中的一行。在这种情况下，target 是 [`table.rows`](/zh-CN/docs/DOM/table.rows)。
 
 ```js
 let products = new Proxy([
@@ -329,7 +329,7 @@ console.log(products.number); // 3
 
 ### 一个完整的 `traps` 列表示例
 
-出于教学目的，这里为了创建一个完整的 traps 列表示例，我们将尝试代理化一个非原生对象，这特别适用于这类操作：由 [发布在 document.cookie 页面上的“小型框架”](/zh-CN/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support)创建的`docCookies`全局对象。
+出于教学目的，这里为了创建一个完整的 traps 列表示例，我们将尝试代理化一个非原生对象，这特别适用于这类操作：由 [发布在 document.cookie 页面上的"小型框架"](/zh-CN/docs/DOM/document.cookie#A_little_framework.3A_a_complete_cookies_reader.2Fwriter_with_full_unicode_support)创建的`docCookies`全局对象。
 
 ```js
 /*

@@ -54,7 +54,7 @@ console.log(greeting(null));             // "Howdy, stranger"
 
 ### 条件链
 
-三元运算符是右结合的，这意味着它可以按以下方式“链接”起来，类似于 `if … else if … else if … else` 链：
+三元运算符是右结合的，这意味着它可以按以下方式"链接"起来，类似于 `if … else if … else if … else` 链：
 
 ```js
 function example() {

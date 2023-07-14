@@ -103,7 +103,7 @@ slug: Learn/HTML/Tables/Basics
 
 不要幻想；为了能够让表格在网页上有效，你需要提供一些 CSS 的样式信息，以及尽可能好的 HTML 固定结构。在这个模块中，我们将专注于 HTML 部分；在你完成这里的内容之后，你可以浏览 [样式化表格](/zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables) 来了解 CSS 的部分。
 
-虽然在这个模块中我们不会专注于 CSS，但是我们提供了一个较小的 CSS 样式表让你使用，和默认的没有采用任何 CSS 样式的表相比，表格会更加可读。你可以在[这里](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css)获取样式表，以及在 [HTML template](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) 获取 HTML 文件来应用样式表，这些会让你在“测试 HTML 表格”中有一个好的起点。
+虽然在这个模块中我们不会专注于 CSS，但是我们提供了一个较小的 CSS 样式表让你使用，和默认的没有采用任何 CSS 样式的表相比，表格会更加可读。你可以在[这里](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css)获取样式表，以及在 [HTML template](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) 获取 HTML 文件来应用样式表，这些会让你在"测试 HTML 表格"中有一个好的起点。
 
 > **备注：** 也可以看下 [personal_pronouns table with this styling applied](http://mdn.github.io/learning-area/html/tables/basic/personal-pronouns-styled.html) 这个版本，这个是应用了 CSS 以后表格看上去的样子。
 
@@ -123,7 +123,7 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 1. 首先，将 [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) 文件拷贝到你的本地环境上。
 2. 每一个表格的内容都包含在这两个标签中：**[`<table></table>`](/zh-CN/docs/Web/HTML/Element/table)**。在你的 HTML 的 {{htmlelement("body")}} 中添加这些内容。
-3. 在表格中，最小的内容容器是单元格，是通过 **[`<td>`](/zh-CN/docs/Web/HTML/Element/td)** 元素创建的（其中“td”代表“table data”）。把下面的内容添加到你的表格标签中：
+3. 在表格中，最小的内容容器是单元格，是通过 **[`<td>`](/zh-CN/docs/Web/HTML/Element/td)** 元素创建的（其中"td"代表"table data"）。把下面的内容添加到你的表格标签中：
 
     ```html
     <td>Hi, I'm your first cell.</td>
@@ -140,7 +140,7 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 你会看到，单元格不会放置在彼此的下方，而是自动与同一行上的其他单元格对齐。每个 `<td>` 元素 创建一个单独单元格，它们共同组成了第一行。我们添加的每个单元格都使行的长度变长。
 
-如果想让这一行停止增加，并让单元格从第二行开始，我们需要使用 **[`<tr>`](/zh-CN/docs/Web/HTML/Element/tr)** 元素（其中“tr”代表“table row”）。让我们现在来证实一下。
+如果想让这一行停止增加，并让单元格从第二行开始，我们需要使用 **[`<tr>`](/zh-CN/docs/Web/HTML/Element/tr)** 元素（其中"tr"代表"table row"）。让我们现在来证实一下。
 
 1. 把你已经创建好的 4 个单元格放入 `<tr>` 标签，就像这样：
 
@@ -372,7 +372,7 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 </table>
 ```
 
-我们使用了两个 `<col>` 来定义“列的样式”，每一个 `<col>` 都会指定每列的样式，对于第一列，我们没有采取任何样式，但是我们仍然需要添加一个空的 `<col>` 元素，如果不这样做，那么我们的样式就会应用到第一列上，这和我们预想的不一样。
+我们使用了两个 `<col>` 来定义"列的样式"，每一个 `<col>` 都会指定每列的样式，对于第一列，我们没有采取任何样式，但是我们仍然需要添加一个空的 `<col>` 元素，如果不这样做，那么我们的样式就会应用到第一列上，这和我们预想的不一样。
 
 如果你想把这种样式信息应用到每一列，我们可以只使用一个 `<col>` 元素，不过需要包含 span 属性，像这样：
 

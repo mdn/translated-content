@@ -88,4 +88,4 @@ p {
 ## Specifications
 
 - [CSS Text Module Level 3 (Working Draft, 10-Oct-2013)](https://www.w3.org/TR/css-text-3/#hanging-punctuation-property)
-- [CSS Text Module Level 3 (Editor’s Draft, 03-May-2017)](https://drafts.csswg.org/css-text-3/#hanging-punctuation-property)
+- [CSS Text Module Level 3 (Editor's Draft, 03-May-2017)](https://drafts.csswg.org/css-text-3/#hanging-punctuation-property)

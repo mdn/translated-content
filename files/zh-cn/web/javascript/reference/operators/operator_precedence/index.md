@@ -157,7 +157,7 @@ Evaluating the right side
 
 在下表中，**分组（Grouping）** 具有最高优先级。然而，这并不意味着总是优先对分组符号 `( … )` 内的表达式进行求值，尤其是涉及短路时。
 
-短路是条件求值的术语。例如，在表达式 `a && (b + c)` 中，如果 `a` 为虚值（{{Glossary("falsy")}}），那么即使 `(b + c)` 在圆括号中，也不会被求值。我们可以说逻辑或运算符（“OR”）是“短路的”。除了逻辑或运算符外，其他短路运算符还包括逻辑与（“AND”）、空值合并、可选链和条件（三元）运算符。下面有更多例子：
+短路是条件求值的术语。例如，在表达式 `a && (b + c)` 中，如果 `a` 为虚值（{{Glossary("falsy")}}），那么即使 `(b + c)` 在圆括号中，也不会被求值。我们可以说逻辑或运算符（"OR"）是"短路的"。除了逻辑或运算符外，其他短路运算符还包括逻辑与（"AND"）、空值合并、可选链和条件（三元）运算符。下面有更多例子：
 
 ```js
 a || (b * c);  // 首先对 `a` 求值，如果 `a` 为真值则直接返回 `a`
@@ -182,7 +182,7 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
 
 下面的表格将所有运算符按照优先级的不同从高（19）到低（1）排列。
 
-请注意，下表中故意不包含[展开语法（Spread syntax）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax) —— 原因可以引用[Stack Overflow 上的一个回答](https://stackoverflow.com/a/48656377)，“[展开语法不是一个运算符](https://stackoverflow.com/q/44934828/1048572)，因此没有优先级。它是数组字面量和函数调用（和对象字面量）语法的一部分。”
+请注意，下表中故意不包含[展开语法（Spread syntax）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax) —— 原因可以引用[Stack Overflow 上的一个回答](https://stackoverflow.com/a/48656377)，"[展开语法不是一个运算符](https://stackoverflow.com/q/44934828/1048572)，因此没有优先级。它是数组字面量和函数调用（和对象字面量）语法的一部分。"
 
 <table class="fullwidth-table">
     <tbody>

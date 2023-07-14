@@ -21,7 +21,7 @@ slug: Mozilla/Firefox/Releases/3
   - : Firefox 3 支持 CSS 层叠式样式表 API.
 - [基于 web 的协议处理](/zh-CN/DOM/window.navigator.registerProtocolHandler)
   - : 你现在可以使用 `navigator.registerProtocolHandler()` 方法注册 web 应用
-- [在画布（canvas）中“绘”出文字](/zh-CN/%E5%9C%A8%E7%94%BB%E7%94%BB%E5%B8%83%EF%BC%88canvas%EF%BC%89%E4%B8%AD%E2%80%9C%E7%BB%98%E2%80%9D%E5%87%BA%E6%96%87%E5%AD%97)
+- [在画布（canvas）中"绘"出文字](/zh-CN/%E5%9C%A8%E7%94%BB%E7%94%BB%E5%B8%83%EF%BC%88canvas%EF%BC%89%E4%B8%AD%E2%80%9C%E7%BB%98%E2%80%9D%E5%87%BA%E6%96%87%E5%AD%97)
   - : 您可以使用 Firefox 3 支持的非标准 API 在 canvas 上绘制文字。
 - [支持画布变换](/zh-CN/Canvas_tutorial/Transformations#Transforms)
   - : Firefox 现在的 canvas 支持 `transform()` 和 `setTransform()` 方法。
@@ -107,7 +107,7 @@ slug: Mozilla/Firefox/Releases/3
 - **扩展管理。** 用户可以在附件组件管理器中单独显示插件。
 - **与 Windows Vista 的整合**。火狐菜单用一个 Vista 本地主题显示。
 - **与 Mac OS X 的整合**。Firefox 现在使用 Mac OS X 拼写检查器并使用 [Growl](http://growl.info/) 来通知下载完成或有可用更新。
-- **星按钮。** 地址栏上的“星”按钮使你通过一个点击添加一个新书签。一次双击保存并编辑你的新书签。
+- **星按钮。** 地址栏上的"星"按钮使你通过一个点击添加一个新书签。一次双击保存并编辑你的新书签。
 - **标签。** 可以为你的书签指定关键词，并按主题排序。
 - **地址栏和自动地址补全。** 在地址栏键入页面标题或标签可以快速找到你在书签中的或是历史页面。图标、书签、标签可以帮助你判断结果的来源。
 - **智能书签菜单。** Firefox 的智能书签会按照最新，访问频率来排序书签。
@@ -134,7 +134,7 @@ slug: Mozilla/Firefox/Releases/3
 
 - **可靠性。**Firefox 3 使用安全的数据库格式保存书签，历史记录，cookies，及偏好。这意味着，即使系统崩溃，您的数据也免受损失。
 - **速度。** Firefox 3 有了较大的性能提升，完全取代了部分软件：包括图形屏幕处理，以及页面布局工作的处理等。
-- **更少的内存占用。** Firefox 3 的内存使用比以往任何时候都有效，有超过 300 个内存“泄漏”漏洞得以修复，以及可帮助自动查找和处置泄漏内存的新功能被添加进来。
+- **更少的内存占用。** Firefox 3 的内存使用比以往任何时候都有效，有超过 300 个内存"泄漏"漏洞得以修复，以及可帮助自动查找和处置泄漏内存的新功能被添加进来。
 
 ### 参见
 

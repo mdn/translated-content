@@ -16,7 +16,7 @@ slug: Web/Progressive_web_apps
 - [什么是渐进式 web 应用？](/zh-CN/docs/Web/Progressive_web_apps/Guides/What_is_a_progressive_web_app)
   - : PWA 的介绍，将其与传统网站和特定平台的应用程序进行比较，并概述了其主要特点。
 - [让 PWA 易于安装](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
-  - : PWA 的一个决定性方面是它可以安装在设备上，然后作为一个平台特定的应用出现在用户面前，是他们设备的一个永久功能。PWA 应用可以像其他应用一样直接从操作系统中启动。在本指南中，我们将探讨“可安装”意味着什么，PWA 需要提供什么才能被安装，以及如何定制安装体验。
+  - : PWA 的一个决定性方面是它可以安装在设备上，然后作为一个平台特定的应用出现在用户面前，是他们设备的一个永久功能。PWA 应用可以像其他应用一样直接从操作系统中启动。在本指南中，我们将探讨"可安装"意味着什么，PWA 需要提供什么才能被安装，以及如何定制安装体验。
 - [离线与后台操作](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
   - : 在本指南中，我们将介绍一组技术，使 PWA 即使在设备有间歇性网络连接时也能提供良好的用户体验，并在后台执行操作，即使主应用程序没有运行。
 - [PWA 的最佳实践](/zh-CN/docs/Web/Progressive_web_apps/Guides/Best_practices)

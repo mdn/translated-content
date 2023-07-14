@@ -51,9 +51,9 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
         </p>
         <p>
           例如，<code>[\w-]</code> 是字符集 \w 和
-          “-”（连字符）的并集，与这种写法一样：
-          <code>[A-Za-z0-9_-]</code>.。他们都会 在 "brisket"中匹配“b”, 在
-          "chop"中匹配“c”, 在 "non-profit" 中匹配 "n"。
+          "-"（连字符）的并集，与这种写法一样：
+          <code>[A-Za-z0-9_-]</code>.。他们都会 在 "brisket"中匹配"b", 在
+          "chop"中匹配"c", 在 "non-profit" 中匹配 "n"。
         </p>
       </td>
     </tr>
@@ -66,7 +66,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
       <td>
         <p>
           一个否定的或被补充的字符集。也就是说，它匹配任何没有包含在括号中的字符。可以通过使用连字符来指定字符范围，但是如果连字符作为方括号中的第一个或最后一个字符出现，那么它将被视为作为普通字符包含在字符集中。例如，[^abc]
-          和 [^a-c] 一样。它们最初匹配“bacon”中的“o”和“chop”中的“h”。
+          和 [^a-c] 一样。它们最初匹配"bacon"中的"o"和"chop"中的"h"。
         </p>
         <div class="note">
           <p>
@@ -84,7 +84,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
       <td>
         <p>
           <strong>捕获组：</strong>匹配 x
-          并记住匹配项。例如，/(foo)/匹配并记住“foo bar”中的“foo”
+          并记住匹配项。例如，/(foo)/匹配并记住"foo bar"中的"foo"
         </p>
         <p>
           正则表达式可以有多个捕获组。结果，匹配通常在数组中捕获的组，该数组的成员与捕获组中左括号的顺序相同。这通常只是捕获组本身的顺序。当捕获组被嵌套时，这一点非常重要。使用结果元素的索引
@@ -127,7 +127,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
           括号匹配的最后一个子字符串的反向引用 (计算左括号)。例如，<code
             >/apple(,)\sorange\1/</code
           >
-          匹配“apple, orange, cherry, peach”中的 "apple, orange,"，其中
+          匹配"apple, orange, cherry, peach"中的 "apple, orange,"，其中
           <code>\1</code> 引用了 之前使用 <code>()</code> 捕获的
           <code>,</code>
         </p>
@@ -144,8 +144,8 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
           和 <code>></code>) 用于组名。
         </p>
         <p>
-          例如，使用正则 <code>/-(?&#x3C;customName>\w)/</code> 匹配“web-doc”
-          中的“d”
+          例如，使用正则 <code>/-(?&#x3C;customName>\w)/</code> 匹配"web-doc"
+          中的"d"
         </p>
         <p>
           <code
@@ -159,7 +159,7 @@ original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
       <td><code>(?:<em>x</em>)</code></td>
       <td>
         <strong>非捕获组：</strong>匹配
-        “x”，但不记得匹配。不能从结果数组的元素中收回匹配的子字符串 (<code
+        "x"，但不记得匹配。不能从结果数组的元素中收回匹配的子字符串 (<code
           >[1], ..., [n]</code
         >) or from the predefined <code>RegExp</code> object's properties (<code
           >$1, ..., $9</code

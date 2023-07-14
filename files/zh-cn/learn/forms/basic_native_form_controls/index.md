@@ -93,7 +93,7 @@ HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/searc
 
 ## 可选中项：复选框和单选按钮
 
-可选中项是可以通过单击它们来更改状态的小部件。有两种可选中项：复选框和单选按钮。两者都使用 [`checked`](/zh-CN/docs/Web/HTML/Element/Input/checkbox#attr-checked) 属性，以指示该部件的默认状态：“选中”或“未选中”。
+可选中项是可以通过单击它们来更改状态的小部件。有两种可选中项：复选框和单选按钮。两者都使用 [`checked`](/zh-CN/docs/Web/HTML/Element/Input/checkbox#attr-checked) 属性，以指示该部件的默认状态："选中"或"未选中"。
 
 值得注意的是，这些小部件与其他表单小部件不一样。对于大多数表单部件，一旦表单提交，所有具有 [`name`](/zh-CN/docs/Web/HTML/Element/Input#name) 属性的小部件都会被发送，即使没有任何值被填。对于可选中项，只有在勾选时才发送它们的值。如果他们没有被勾选，就不会发送任何东西，甚至连他们的名字也没有。而在它们被勾选且没有提供值（value）时，将会发送名字和缺省值 `on`。
 
@@ -242,8 +242,8 @@ HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/searc
 
 如果使用图像按钮来提交表单，这个小部件不会提交它的值；而是提交在图像上单击处的 X 和 Y 坐标（坐标是相对于图像的，这意味着图像的左上角表示坐标 (0, 0)），坐标被发送为两个键/值对：
 
-- X 值键是 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的值，后面是字符串“.x”。
-- Y 值键是 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的值，后面是字符串“.y”。
+- X 值键是 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的值，后面是字符串".x"。
+- Y 值键是 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的值，后面是字符串".y"。
 
 例如，当您点击这个小部件图像坐标为 (123,456) 的位置时，它将会通过 `get` 方法提交。你可以看到类似的 URL：
 
@@ -251,7 +251,7 @@ HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/searc
 http://foo.com?pos.x=123&pos.y=456
 ```
 
-这是构建“热图”的一种非常方便的方式。如何发送和检索这些值在[发送和检索表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)文章中详细说明。
+这是构建"热图"的一种非常方便的方式。如何发送和检索这些值在[发送和检索表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)文章中详细说明。
 
 ## 文件选择器
 

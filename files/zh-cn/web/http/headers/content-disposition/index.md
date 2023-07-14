@@ -31,7 +31,7 @@ slug: Web/HTTP/Headers/Content-Disposition
 
 ### 作为消息主体的标头
 
-在 HTTP 场景中，第一个参数或者是 `inline`（默认值，表示回复中的消息体会以页面的一部分或者整个页面的形式展示），或者是 `attachment`（意味着消息体应该被下载到本地；大多数浏览器会呈现一个“保存为”的对话框，将 `filename` 的值预填为下载后的文件名，假如它存在的话）。
+在 HTTP 场景中，第一个参数或者是 `inline`（默认值，表示回复中的消息体会以页面的一部分或者整个页面的形式展示），或者是 `attachment`（意味着消息体应该被下载到本地；大多数浏览器会呈现一个"保存为"的对话框，将 `filename` 的值预填为下载后的文件名，假如它存在的话）。
 
 ```http
 Content-Disposition: inline
@@ -65,7 +65,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 
 ## 示例
 
-以下是一则可以触发“保存为”对话框的服务器应答：
+以下是一则可以触发"保存为"对话框的服务器应答：
 
 ```http
 200 OK

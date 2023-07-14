@@ -267,7 +267,7 @@ function handleFiles(files) {
 }
 ```
 
-这里我们循环处理用户选择的文件，看每个文件的 `type` 属性是不是以“`image/`”开头。对每个文件而言，如果它是图片，我们就创建一个新的 `img` 元素。可以使用 CSS 来创建一个漂亮的边框或阴影来显示图片的具体大小，在这儿就不具体做了。
+这里我们循环处理用户选择的文件，看每个文件的 `type` 属性是不是以"`image/`"开头。对每个文件而言，如果它是图片，我们就创建一个新的 `img` 元素。可以使用 CSS 来创建一个漂亮的边框或阴影来显示图片的具体大小，在这儿就不具体做了。
 
 为了在 DOM 树中更容易地找到他们，每个图片元素都被添加了一个名为 `obj` 的 CSS 类。我们还给每个图片添加了 `file` 属性以指定其 {{DOMxRef("File")}} 属性；这样做可以让我们拿到稍后需要实际上传的图片。我们在预览页中使用 {{DOMxRef("Node.appendChild()")}} 来添加新的缩略图。
 
@@ -358,7 +358,7 @@ function handleFiles() {
 
 首先，获取 ID 为 `fileList` 的 {{HTMLElement("div")}} 。这个区块里我们会插入我们的文件列表，包括缩略图。
 
-如果传入 `handleFiles()` 的 {{DOMxRef("FileList")}} 对象值为 `null` 时，我们只要简单将这块的内部 HTML 为显示“没有选择任何文件！”。否则，我们就需要像下面这样编写我们的文件列表：
+如果传入 `handleFiles()` 的 {{DOMxRef("FileList")}} 对象值为 `null` 时，我们只要简单将这块的内部 HTML 为显示"没有选择任何文件！"。否则，我们就需要像下面这样编写我们的文件列表：
 
 1. 创建一个无序列表（{{HTMLElement("ul")}}）元素。
 2. 通过调用列表的 {{DOMxRef("Node.appendChild()")}} 方法来将新的列表元素插入到 {{HTMLElement("div")}} 块。
@@ -464,7 +464,7 @@ function createThrobber(img) {
 }
 ```
 
-上面的 `FileUpload()` 函数创建了一个“加载中”指示器，用于显示进度信息，然后创建了一个 {{DOMxRef("XMLHttpRequest")}} 来处理上传数据。
+上面的 `FileUpload()` 函数创建了一个"加载中"指示器，用于显示进度信息，然后创建了一个 {{DOMxRef("XMLHttpRequest")}} 来处理上传数据。
 
 实际传输数据前，采取了几道准备步骤：
 

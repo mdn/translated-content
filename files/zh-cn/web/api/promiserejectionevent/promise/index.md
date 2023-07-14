@@ -19,7 +19,7 @@ promise = PromiseRejectionEvent.promise
 
 ## Examples
 
-下面的例子监听了未被处理的 promise，如果{{domxref("PromiseRejectionEvent.reason", "reason")}} 是一个对象，并且其`code`属性包含了一段文本“Module not read.”，一个空闲的回调函数被声明，当任务执行错误时会进行重试
+下面的例子监听了未被处理的 promise，如果{{domxref("PromiseRejectionEvent.reason", "reason")}} 是一个对象，并且其`code`属性包含了一段文本"Module not read."，一个空闲的回调函数被声明，当任务执行错误时会进行重试
 
 {{domxref("event.preventDefault()")}} 用来表明该 promise 已被处理
 

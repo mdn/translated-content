@@ -298,7 +298,7 @@ foo(3);
 
 你可以在一个函数里面嵌套另外一个函数。嵌套（内部）函数对其容器（外部）函数是私有的。它自身也形成了一个闭包。一个闭包是一个可以自己拥有独立的环境与变量的表达式（通常是函数）。
 
-既然嵌套函数是一个闭包，就意味着一个嵌套函数可以”继承“容器函数的参数和变量。换句话说，内部函数包含外部函数的作用域。
+既然嵌套函数是一个闭包，就意味着一个嵌套函数可以"继承"容器函数的参数和变量。换句话说，内部函数包含外部函数的作用域。
 
 可以总结如下：
 
@@ -446,7 +446,7 @@ pet.getSex();                   // male
 pet.getName();                  // Oliver
 ```
 
-在上面的代码中，外部函数的`name`变量对内嵌函数来说是可取得的，而除了通过内嵌函数本身，没有其他任何方法可以取得内嵌的变量。内嵌函数的内嵌变量就像内嵌函数的保险柜。它们会为内嵌函数保留“稳定”——而又安全——的数据参与运行。而这些内嵌函数甚至不会被分配给一个变量，或者不必一定要有名字。
+在上面的代码中，外部函数的`name`变量对内嵌函数来说是可取得的，而除了通过内嵌函数本身，没有其他任何方法可以取得内嵌的变量。内嵌函数的内嵌变量就像内嵌函数的保险柜。它们会为内嵌函数保留"稳定"——而又安全——的数据参与运行。而这些内嵌函数甚至不会被分配给一个变量，或者不必一定要有名字。
 
 ```js
 var getCode = (function(){
@@ -484,7 +484,7 @@ arguments[i]
 
 使用 arguments 对象，你可以处理比声明的更多的参数来调用函数。这在你事先不知道会需要将多少参数传递给函数时十分有用。你可以用`arguments.length`来获得实际传递给函数的参数的数量，然后用`arguments`对象来取得每个参数。
 
-例如，设想有一个用来连接字符串的函数。唯一事先确定的参数是在连接后的字符串中用来分隔各个连接部分的字符（译注：比如例子里的分号“；”）。该函数定义如下：
+例如，设想有一个用来连接字符串的函数。唯一事先确定的参数是在连接后的字符串中用来分隔各个连接部分的字符（译注：比如例子里的分号"；"）。该函数定义如下：
 
 ```js
 function myConcat(separator) {
@@ -498,7 +498,7 @@ function myConcat(separator) {
 }
 ```
 
-你可以给这个函数传递任意数量的参数，它会将各个参数连接成一个字符串“列表”：
+你可以给这个函数传递任意数量的参数，它会将各个参数连接成一个字符串"列表"：
 
 ```js
 // returns "red, orange, blue, "
@@ -511,7 +511,7 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 ```
 
-> **备注：** `arguments` 变量只是“**类数组对象**”，并不是一个数组。称其为类数组对象是说它有一个索引编号和`length`属性。尽管如此，它并不拥有全部的 Array 对象的操作方法。
+> **备注：** `arguments` 变量只是"**类数组对象**"，并不是一个数组。称其为类数组对象是说它有一个索引编号和`length`属性。尽管如此，它并不拥有全部的 Array 对象的操作方法。
 
 更多信息请阅读 JavaScript 参考里的{{jsxref("Function")}}一文。
 
@@ -562,7 +562,7 @@ console.log(arr); // [2, 4, 6]
 
 ## 箭头函数
 
-[箭头函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)（也称胖箭头函数）相比函数表达式具有较短的语法并以词法的方式绑定 `this`。箭头函数总是匿名的。另见 hacks.mozilla.org 的博文：“[深度了解 ES6：箭头函数](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)”。
+[箭头函数表达式](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)（也称胖箭头函数）相比函数表达式具有较短的语法并以词法的方式绑定 `this`。箭头函数总是匿名的。另见 hacks.mozilla.org 的博文："[深度了解 ES6：箭头函数](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)"。
 
 有两个因素会影响引入箭头函数：更简洁的函数和 `this`。
 
@@ -589,7 +589,7 @@ console.log(a3); // logs [ 8, 6, 7, 9 ]
 
 ### `this` 的词法
 
-在箭头函数出现之前，每一个新函数都重新定义了自己的 [this](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值（在构造函数中是一个新的对象；在严格模式下是未定义的；在作为“对象方法”调用的函数中指向这个对象；等等）。以面向对象的编程风格，这样着实有点恼人。
+在箭头函数出现之前，每一个新函数都重新定义了自己的 [this](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值（在构造函数中是一个新的对象；在严格模式下是未定义的；在作为"对象方法"调用的函数中指向这个对象；等等）。以面向对象的编程风格，这样着实有点恼人。
 
 ```js
 function Person() {
@@ -659,9 +659,9 @@ JavaScript 语言有好些个顶级的内建函数：
 - {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
   - : **`decodeURIComponent()`** 方法对先前经过 {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} 函数或者其他类似方法编码过的字符串进行解码。
 - {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-  - : **`encodeURI()`** 方法通过用以一个、两个、三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的某些字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。
+  - : **`encodeURI()`** 方法通过用以一个、两个、三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的某些字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个"替代"字符）。
 - {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-  - : **`encodeURIComponent()`** 方法通过用以一个，两个，三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的每个字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。
+  - : **`encodeURIComponent()`** 方法通过用以一个，两个，三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的每个字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个"替代"字符）。
 - {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}
   - : 已废弃的 **`escape()`** 方法计算生成一个新的字符串，其中的某些字符已被替换为十六进制转义序列。使用 {{jsxref("Global_Objects/encodeURI", "encodeURI")}}或者{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}替代本方法。
 - {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}

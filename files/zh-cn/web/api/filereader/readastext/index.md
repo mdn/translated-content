@@ -24,7 +24,7 @@ slug: Web/API/FileReader/readAsText
 - `二进制对象`
   - : [Blob](/zh-CN/docs/Web/API/Blob)类型 或 [File](/zh-CN/docs/Web/API/File)类型
 - 编码类型 (可选)
-  - : 传入一个字符串类型的编码类型，如缺省，则默认为“utf-8”类型
+  - : 传入一个字符串类型的编码类型，如缺省，则默认为"utf-8"类型
 
 ## 规范
 

@@ -27,7 +27,7 @@ Firefox 4 利用 [Synchronized Multimedia Integration Language](https://www.w3.o
 - to
   - : 结束值。
 - dur
-  - : 动画的持续时间（例如，写“5s”代表 5 秒钟）。
+  - : 动画的持续时间（例如，写"5s"代表 5 秒钟）。
 
 如果你想在同一个元素里变动更多的属性，只要添加更多的 {{SVGElement("animate")}} 元素。
 

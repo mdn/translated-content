@@ -21,7 +21,7 @@ slug: Web/API/Document_Object_Model/Whitespace
   <h1>      Hello      World!     </h1>
 ```
 
-这段源代码在 `DOCTYPE` 后面有几个换行符，在 `<h1>` 元素前后和里面有很多空格字符，但浏览器似乎根本不在乎，只是显示“Hello World!”，好像这些字符根本不存在：
+这段源代码在 `DOCTYPE` 后面有几个换行符，在 `<h1>` 元素前后和里面有很多空格字符，但浏览器似乎根本不在乎，只是显示"Hello World!"，好像这些字符根本不存在：
 
 {{EmbedLiveSample('HTML 会大幅度忽略空白符吗？')}}
 
@@ -60,11 +60,11 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 ### CSS 如何处理空白符？
 
-大多数空白字符会被忽略，但不是所有的都会被忽略。在前面的示例中，“Hello”和“World!”之间的一个空格在浏览器中渲染时仍然存在。浏览器引擎中有一些规则来决定哪些空白字符是有用的，哪些是没用的——这些规则至少在 [CSS 文本模块第 3 级](https://www.w3.org/TR/css-text-3/)中作了部分说明，特别是关于 [CSS `white-space` 属性](https://www.w3.org/TR/css-text-3/#white-space-property)和[空白符处理细节](https://www.w3.org/TR/css-text-3/#white-space-processing)的部分，但我们也在下面提供一个更简单的解释。
+大多数空白字符会被忽略，但不是所有的都会被忽略。在前面的示例中，"Hello"和"World!"之间的一个空格在浏览器中渲染时仍然存在。浏览器引擎中有一些规则来决定哪些空白字符是有用的，哪些是没用的——这些规则至少在 [CSS 文本模块第 3 级](https://www.w3.org/TR/css-text-3/)中作了部分说明，特别是关于 [CSS `white-space` 属性](https://www.w3.org/TR/css-text-3/#white-space-property)和[空白符处理细节](https://www.w3.org/TR/css-text-3/#white-space-processing)的部分，但我们也在下面提供一个更简单的解释。
 
 #### 示例
 
-让我们看看其他示例，为了使它看起来更简单，我们添加了一个注释，将所有的空格显示为“◦”，所有的制表符显示为“⇥”，所有的换行符显示为“⏎”：
+让我们看看其他示例，为了使它看起来更简单，我们添加了一个注释，将所有的空格显示为"◦"，所有的制表符显示为"⇥"，所有的换行符显示为"⏎"：
 
 这个示例
 
@@ -86,8 +86,8 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 `<h1>` 元素只包含行内元素，实际上包含：
 
-- 一个文本节点（包含一些空格，单词“Hello”和一些制表符）。
-- 一个行内元素（`<span>`，包含一个空格和单词“Hello”）。
+- 一个文本节点（包含一些空格，单词"Hello"和一些制表符）。
+- 一个行内元素（`<span>`，包含一个空格和单词"Hello"）。
 - 另外一个文本节点（只包含制表符和空格）。
 
 正因为如此，它建立了所谓的[行内格式化上下文](/zh-CN/docs/Web/CSS/Inline_formatting_context)。这是浏览器引擎可能使用的布局渲染上下文之一。
@@ -133,9 +133,9 @@ slug: Web/API/Document_Object_Model/Whitespace
    <h1>Hello◦<span>World!</span></h1>
    ```
 
-这就是为什么人们在访问网页时，会看到“Hello World!”这句话很好地写在页面的顶部，而不是一个奇怪的缩进的“Hello”，但在下面一行有一个更奇怪的缩进的“World!”。
+这就是为什么人们在访问网页时，会看到"Hello World!"这句话很好地写在页面的顶部，而不是一个奇怪的缩进的"Hello"，但在下面一行有一个更奇怪的缩进的"World!"。
 
-> **备注：** 从版本 52 开始，[Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)支持高亮文本节点，使得观察包含节点中包含的空白字符变得更加容易。纯的空白符节点会有一个“whitespace”标记。
+> **备注：** 从版本 52 开始，[Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)支持高亮文本节点，使得观察包含节点中包含的空白字符变得更加容易。纯的空白符节点会有一个"whitespace"标记。
 
 ### 在块格式化上下文的空白符
 
@@ -173,7 +173,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 我们可以将这里的空白符处理方式总结如下（不同的浏览器在具体行为上可能有一些细微的差别，但这基本上是可行的）：
 
-1. 因为我们在块格式化上下文内，所有部分必须是一个块，所以我们的 3 个文本节点也会组成各自的“块”，就像这 2 个 `<div>` 一样。块占据了可用的全部宽度，并且相互堆叠，这意味着，从上面的示例开始：
+1. 因为我们在块格式化上下文内，所有部分必须是一个块，所以我们的 3 个文本节点也会组成各自的"块"，就像这 2 个 `<div>` 一样。块占据了可用的全部宽度，并且相互堆叠，这意味着，从上面的示例开始：
 
    ```html-nolint
    <body>⏎
@@ -183,7 +183,7 @@ slug: Web/API/Document_Object_Model/Whitespace
    </body>
    ```
 
-   我们会得到一个由多个“块”组成的布局：
+   我们会得到一个由多个"块"组成的布局：
 
    ```html
    <block>⏎⇥</block>
@@ -203,7 +203,7 @@ slug: Web/API/Document_Object_Model/Whitespace
    <block></block>
    ```
 
-3. 我们现在拥有的 3 个空块不会在最终的布局中占据任何空间，因为它们不包含任何东西，所以我们最终将只有 2 个块在页面中占据空间。人们在浏览网页时，会看到“Hello”和“World!”这两个词分别出现在两行上，就像你所期望的那样，两个 `<div>` 被排列出来。浏览器引擎基本上忽略了在源代码中添加的所有空白符处。
+3. 我们现在拥有的 3 个空块不会在最终的布局中占据任何空间，因为它们不包含任何东西，所以我们最终将只有 2 个块在页面中占据空间。人们在浏览网页时，会看到"Hello"和"World!"这两个词分别出现在两行上，就像你所期望的那样，两个 `<div>` 被排列出来。浏览器引擎基本上忽略了在源代码中添加的所有空白符处。
 
 ## 在行内和行内块元素之间的空格
 
@@ -464,7 +464,7 @@ function data_of(txt) {
 
 ## 示例
 
-下面的代码演示了上面这些工具函数的使用方法。具体操作是，遍历一个子节点全部为元素节点的元素，找到所包含的第一个节点为一个文本内容为“`This is the third paragraph`”的文本节点的那个子元素，并修改该子元素的 class 属性及其第一个文本节点的文字内容。
+下面的代码演示了上面这些工具函数的使用方法。具体操作是，遍历一个子节点全部为元素节点的元素，找到所包含的第一个节点为一个文本内容为"`This is the third paragraph`"的文本节点的那个子元素，并修改该子元素的 class 属性及其第一个文本节点的文字内容。
 
 ```js
 let cur = first_child(document.getElementById("test"));

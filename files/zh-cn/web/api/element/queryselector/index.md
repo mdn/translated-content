@@ -36,7 +36,7 @@ element = baseElement.querySelector(selectors);
 
 ### 查找一个具有特殊属性值的元素
 
-在第一个例子中，会返回 HTML 文档里第一个没有 type 属性或者有值为“text/css”的 type 属性的{{HTMLElement("style")}}元素：
+在第一个例子中，会返回 HTML 文档里第一个没有 type 属性或者有值为"text/css"的 type 属性的{{HTMLElement("style")}}元素：
 
 ```js
 let el = document.body.querySelector("style[type='text/css'], style:not([type])");

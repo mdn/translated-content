@@ -220,7 +220,7 @@ customElements.define('element-details',
 
 关于以上代码片段，请注意以下几点：
 
-- 该代码片段有 2 个 **`<element-details>`** 标签，他们都使用了“slot”属性来引用名为`"element-name"`和`"description"`的槽，并把他们都放在根下。
+- 该代码片段有 2 个 **`<element-details>`** 标签，他们都使用了"slot"属性来引用名为`"element-name"`和`"description"`的槽，并把他们都放在根下。
 - 只有第一个 **`<element-details>`** 元素 引用了名为 `"attributes"` 的槽，而第二个 `<element-details>` 标签没有引用名为`"attributes"`的槽。
 - 只有第一个 **`<element-details>`** 标签中的"dl"使用了名为 `"attributes"`的槽，他包含子元素："dt"和"dd"元素。
 

@@ -17,7 +17,7 @@ ReferenceError: invalid assignment left-hand side
 
 ## What went wrong?
 
-有时会出现不可预料的赋值情况。这可能是因为[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)或[比较运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)不匹配的缘故。正确的是，使用“=”号将值赋给一个变量，使用“==”或者“===”来比较一个值。
+有时会出现不可预料的赋值情况。这可能是因为[赋值运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators)或[比较运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)不匹配的缘故。正确的是，使用"="号将值赋给一个变量，使用"=="或者"==="来比较一个值。
 
 ## Examples
 

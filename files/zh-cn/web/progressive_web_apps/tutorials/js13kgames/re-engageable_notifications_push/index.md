@@ -133,7 +133,7 @@ const vapidPublicKey = await response.text();
 const convertedVapidKey = urlBase64ToUint8Array(vapidPublicKey);
 ```
 
-App 会从服务器请求一个公钥并且把响应结果转化成文本，最后它还需要转化成一个 Uint8Array（为了兼容 Chrome）。如果你想学习更多关于 VAPID 的内容可以阅读 [Sending VAPID identified WebPush Notifications via Mozilla’s Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) 这篇文章。
+App 会从服务器请求一个公钥并且把响应结果转化成文本，最后它还需要转化成一个 Uint8Array（为了兼容 Chrome）。如果你想学习更多关于 VAPID 的内容可以阅读 [Sending VAPID identified WebPush Notifications via Mozilla's Push Service](https://blog.mozilla.org/services/2016/08/23/sending-vapid-identified-webpush-notifications-via-mozillas-push-service/) 这篇文章。
 
 App 现在可以使用 {{domxref("PushManager")}} 来订阅新用户。这个方法支持传递两个参数：第一个是 `userVisibleOnly: true`，意思是发送给用户的所有通知对他们都是可见的，第二个是 `applicationServerKey`，这个参数包含我们之前从服务端取得并转化的 VAPID key。
 
@@ -158,7 +158,7 @@ fetch('./register', {
 });
 ```
 
-接着给“注册”按钮绑定了一个函数：
+接着给"注册"按钮绑定了一个函数：
 
 ```js
 document.getElementById('doIt').onclick = function() {

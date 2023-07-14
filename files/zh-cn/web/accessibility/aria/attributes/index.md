@@ -11,7 +11,7 @@ ARIA 属性用于修改无障碍树中定义的元素的状态和属性。
 
 ## ARIA 特性类别
 
-ARIA 的状态和属性（合称为“特性”）共有 4 类：
+ARIA 的状态和属性（合称为"特性"）共有 4 类：
 
 1. ### 小部件（widget）特性
 
@@ -74,9 +74,9 @@ ARIA 的状态和属性（合称为“特性”）共有 4 类：
 
 ## 全局 ARIA 特性
 
-无论是否应用了 ARIA 角色，某些状态和属性始终适用于所有的 HTML 元素。它们被定义为“全局”特性。所有角色和基本标记元素都支持全局状态和属性。
+无论是否应用了 ARIA 角色，某些状态和属性始终适用于所有的 HTML 元素。它们被定义为"全局"特性。所有角色和基本标记元素都支持全局状态和属性。
 
-上面所列出的许多特性都是全局的，这意味着除非被“特别禁止”，它们可以被包含在任意的元素中：
+上面所列出的许多特性都是全局的，这意味着除非被"特别禁止"，它们可以被包含在任意的元素中：
 
 - [`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
 - [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
@@ -101,7 +101,7 @@ ARIA 的状态和属性（合称为“特性”）共有 4 类：
 - [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 - [`aria-roledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription)
 
-除了 `aria-label` 和 `aria-labelledby` 这两个被“特别禁止”的属性，其他属性是全局适用的。这两个被“特别禁止”的属性无法在具有 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role) 角色或与其同义的 [`none`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role) 角色的元素上使用。
+除了 `aria-label` 和 `aria-labelledby` 这两个被"特别禁止"的属性，其他属性是全局适用的。这两个被"特别禁止"的属性无法在具有 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role) 角色或与其同义的 [`none`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role) 角色的元素上使用。
 
 ## MDN 上介绍的状态和属性
 

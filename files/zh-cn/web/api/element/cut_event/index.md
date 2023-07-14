@@ -6,7 +6,7 @@ slug: Web/API/Element/cut_event
 
 {{APIRef}}
 
-当用户通过浏览器的用户界面发起“剪切”动作时，将触发 **`cut`** 事件。
+当用户通过浏览器的用户界面发起"剪切"动作时，将触发 **`cut`** 事件。
 
 如果用户尝试对不可编辑内容执行剪切操作，则 `cut` 事件仍会触发，但事件对象不包含任何数据。
 
@@ -14,7 +14,7 @@ slug: Web/API/Element/cut_event
 
 事件处理器可以通过调用 {{domxref("ClipboardEvent.clipboardData")}} 属性上的 {{domxref("DataTransfer.setData", "setData(format, data)")}} *修改*剪贴板内容，并通过 {{domxref("Event/preventDefault", "event.preventDefault()")}} 取消默认行为。
 
-但是请注意，取消默认动作也会阻止文档被更新。所以一个事件处理器想要在修改剪贴板时模仿默认动作“剪切”，也必须手动从文档中删除选择。
+但是请注意，取消默认动作也会阻止文档被更新。所以一个事件处理器想要在修改剪贴板时模仿默认动作"剪切"，也必须手动从文档中删除选择。
 
 事件处理器不可以*读取*剪贴板数据。
 

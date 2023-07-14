@@ -11,7 +11,7 @@ slug: Web/API/Service_Worker_API/Using_Service_Workers
 
 有一个困扰 web 用户多年的难题——丢失网络连接。即使是世界上最好的 web app，如果下载不了它，也是非常糟糕的体验。如今虽然已经有各种尝试来创造技术去尝试着解决这个问题，并且其中一些问题已经被解决。但是，最重要的问题是，仍然没有一个好的统筹机制对资源缓存和自定义的网络请求进行控制。
 
-Service worker 修复了这个问题。使用 service worker，你可以将 app 设置为首先使用缓存资源，从而即使在离线状态，也可以提供默认的体验，然后从网络获取更多数据（通常称为“离线优先”）。这已经在原生 app 中可用，这是经常选择原生 app，而不是选择 web app 的主要原因之一。
+Service worker 修复了这个问题。使用 service worker，你可以将 app 设置为首先使用缓存资源，从而即使在离线状态，也可以提供默认的体验，然后从网络获取更多数据（通常称为"离线优先"）。这已经在原生 app 中可用，这是经常选择原生 app，而不是选择 web app 的主要原因之一。
 
 service worker 的功能类似于代理服务器，允许你去修改请求和响应，将其替换成来自其自身缓存的项目。
 
@@ -99,7 +99,7 @@ registerServiceWorker();
 - service worker 只能在 service worker 作用域内捕获客户端发出的请求。
 - service worker 最大的作用域是 worker 所在的位置（换句话说，如果脚本 `sw.js` 位于 `/js/sw.js` 中，默认情况下它只能控制 `/js/` 下的 URL）。可以使用 [`Service-Worker-Allowed`](/zh-CN/docs/Web/HTTP/Header/Service-Worker-Allowed) 标头指定 worker 的最大作用域列表。
 - 在 Firefox 中，若用户处于[无痕浏览模式](https://support.mozilla.org/zh-CN/kb/private-browsing-use-firefox-without-history)、禁用了历史记录或者启用了在 Firefox 关闭时清除历史记录，Service Worker API 将被隐藏而无法使用。
-- 在 Chrome 中，当启用“阻止所有 Cookie（不建议）”选项时，注册将会失败。
+- 在 Chrome 中，当启用"阻止所有 Cookie（不建议）"选项时，注册将会失败。
 
 ### 安装和激活：填充你的缓存
 
@@ -377,7 +377,7 @@ self.addEventListener("fetch", (event) => {
 });
 ```
 
-注意，在此示例中，无论资源是“正常”下载还是预加载，我们都会下载和缓存相同的数据。相反，你可以选择在预加载时下载和缓存其他资源。请参阅 [`NavigationPreloadManager` > 自定义响应](/zh-CN/docs/Web/API/NavigationPreloadManager#custom_responses) 以了解详情。
+注意，在此示例中，无论资源是"正常"下载还是预加载，我们都会下载和缓存相同的数据。相反，你可以选择在预加载时下载和缓存其他资源。请参阅 [`NavigationPreloadManager` > 自定义响应](/zh-CN/docs/Web/API/NavigationPreloadManager#custom_responses) 以了解详情。
 
 ## 更新你的 service worker
 
@@ -441,7 +441,7 @@ self.addEventListener("activate", (event) => {
 
 - [Chrome](https://www.chromium.org/blink/serviceworker/service-worker-faq/)
 - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/application/service_workers/index.html)
-  - [Firefox 工具栏自定义选项](https://support.mozilla.org/zh-CN/kb/customize-firefox-controls-buttons-and-toolbars)中的“Forget about this site”按钮可用于清除 service worker 及其缓存。
+  - [Firefox 工具栏自定义选项](https://support.mozilla.org/zh-CN/kb/customize-firefox-controls-buttons-and-toolbars)中的"Forget about this site"按钮可用于清除 service worker 及其缓存。
 - [Edge](https://learn.microsoft.com/zh-CN/microsoft-edge/devtools-guide-chromium/service-workers/)
 
 ## 参见

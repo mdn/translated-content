@@ -17,7 +17,7 @@ var synthDelay = audioCtx.createDelay(maxDelayTime);
 ### 参数
 
 - _maxDelayTime_
-  - : 设置最大允许延迟的时间，以“秒”为单位
+  - : 设置最大允许延迟的时间，以"秒"为单位
 
 ### 返回
 

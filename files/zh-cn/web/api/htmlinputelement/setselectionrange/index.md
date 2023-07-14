@@ -11,7 +11,7 @@ slug: Web/API/HTMLInputElement/setSelectionRange
 
 每次调用这个这个方法都会更新 `HTMLInputElement` 的 `selectionStart`, `selectionEnd` 和 `selectionDirection` 属性。
 
-要注意的是，在 [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) 中，`selectionStart`, `selectionEnd` 属性和 `setSelectionRange` 方法只能应用于类型为文本、搜索、链接、电话号码和密码的输入。Chrome 从版本 33 开始会在访问其余类型的这些属性和方法时抛出异常。例如，输入类型为数字时会抛出：“不能从'HTMLInputElement'中读取'selectionStart'属性：输入元素的类型 ('number') 不支持选择（Failed to read the 'selectionStart' property from 'HTMLInputElement': The input element's type ('number') does not support selection）”。
+要注意的是，在 [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) 中，`selectionStart`, `selectionEnd` 属性和 `setSelectionRange` 方法只能应用于类型为文本、搜索、链接、电话号码和密码的输入。Chrome 从版本 33 开始会在访问其余类型的这些属性和方法时抛出异常。例如，输入类型为数字时会抛出："不能从'HTMLInputElement'中读取'selectionStart'属性：输入元素的类型 ('number') 不支持选择（Failed to read the 'selectionStart' property from 'HTMLInputElement': The input element's type ('number') does not support selection）"。
 
 如果你希望**全选**输入元素中的文本，你可以使用 [HTMLInputElement.select()](/zh-CN/docs/Web/API/HTMLInputElement/select) 方法。
 
@@ -38,7 +38,7 @@ element.setSelectionRange(selectionStart, selectionEnd [, selectionDirection]);
 
 ## 示例
 
-在这个示例中，按下按钮以选择文本框中第三、四、五个字符（即“Mozilla”中的“zil”）。
+在这个示例中，按下按钮以选择文本框中第三、四、五个字符（即"Mozilla"中的"zil"）。
 
 ### HTML
 

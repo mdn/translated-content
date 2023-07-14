@@ -26,7 +26,7 @@ decodeURI(encodedURI)
 
 ### 异常
 
-当`encodedURI` 包含无效字符序列时，引发{{jsxref("URIError")}}（“格式错误的 URI 序列”）异常。
+当`encodedURI` 包含无效字符序列时，引发{{jsxref("URIError")}}（"格式错误的 URI 序列"）异常。
 
 ## 描述
 

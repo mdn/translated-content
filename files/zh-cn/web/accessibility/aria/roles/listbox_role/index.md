@@ -43,7 +43,7 @@ slug: Web/Accessibility/ARIA/Roles/listbox_role
 - aria-labelledby
   - : 标识以空格分隔的元素 ID 列表中的一个或多个可见元素，这些元素标识 listbox。如果没有可见标签，则应该使用 `aria-label` 来包含标签。（注意：带有两个 L 的 "labelled" 是基于辅助功能 API 约定的正确拼写。）
 - aria-roledescription
-  - : 一个可供人类阅读的字符串，可以更清楚地标识 listbox 的作用。屏幕阅读器通常会在阅读标签（如果存在）后向用户阅读此值，而不是说“listbox”。
+  - : 一个可供人类阅读的字符串，可以更清楚地标识 listbox 的作用。屏幕阅读器通常会在阅读标签（如果存在）后向用户阅读此值，而不是说"listbox"。
 
 （有关更多详细信息以及 ARIA 状态和属性的完整列表，请参阅 [ARIA `listbox` (role)](https://www.w3.org/TR/wai-aria-1.1/#listbox) 文档。 )
 

@@ -23,7 +23,7 @@ toString()
 
 {{jsxref("Date")}} 对象覆盖了 {{jsxref("Object")}} 对象的 `toString()` 方法。`Date.prototype.toString()` 返回一个字符串，并以本地时区表示该 Date 对象，包含日期和时间——将 [`toDateString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString) 和 [`toTimeString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toTimeString) 通过一个空格拼接起来。
 
-例如：“Thu Jan 01 1970 12:42:04 GMT+0800 (中国标准时间)”。
+例如："Thu Jan 01 1970 12:42:04 GMT+0800 (中国标准时间)"。
 
 当 Date 被强制转换为字符串时，`toString()` 方法会被自动调用，例如：`const today = 'Today is ' + new Date()`。
 

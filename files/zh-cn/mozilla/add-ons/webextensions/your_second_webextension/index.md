@@ -18,11 +18,11 @@ original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
   - 一个文件名为 "beasts-32.png" 的图标
   - 按钮被按下时要打开的弹出窗。该弹出窗将包含 HTML、CSS 和 JavaScript。
 
-- **为扩展定义一个图标**，叫做“beasts-48.png”。这个将会在 Add-ons 管理器中显示。
+- **为扩展定义一个图标**，叫做"beasts-48.png"。这个将会在 Add-ons 管理器中显示。
 - **写一个内容脚本 "beastify.js"，用于注入到网页中。**
   这是用来实际修改页面的代码。
 - **打包一些动物的图像，用以替换网页中的图像。**
-  我们让图像成为“Web 可访问资源”（web accessible resources），以便页面可以引用它们。
+  我们让图像成为"Web 可访问资源"（web accessible resources），以便页面可以引用它们。
 
 你可以想象这样的扩展的整体结构：
 
@@ -102,7 +102,7 @@ cd beastify
 
 插件应该有一个图标。这个图标被用于显示在附加组件管理器中（可以通过"about:addons"来访问）。当前插件中 manifest.json 指定了我们插件的图标位于"icons/beasts-48.png"。
 
-创建“icons”文件夹，并将图标命名为“beasts-48.png”。你可以使用我们例子中的[图标](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-48.png)，它是从 [Aha-Soft’s Free Retina iconset](http://www.aha-soft.com/free-icons/free-retina-icon-set/) 截取的，使用需要遵循该网站的许可证。
+创建"icons"文件夹，并将图标命名为"beasts-48.png"。你可以使用我们例子中的[图标](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-48.png)，它是从 [Aha-Soft's Free Retina iconset](http://www.aha-soft.com/free-icons/free-retina-icon-set/) 截取的，使用需要遵循该网站的许可证。
 
 如果你使用自己的图标，它的尺寸应该是 48<math><semantics><mo>×</mo><annotation encoding="TeX">\times</annotation></semantics></math>48 像素的。同时，对于高分辨率的设备，可以提供 96<math><semantics><mo>×</mo><annotation encoding="TeX">\times</annotation></semantics></math>96 像素的图片。此时，manifest.json 应当这样配置：
 
@@ -125,7 +125,7 @@ cd beastify
 
 该弹出窗的函数是让用户选择三种动物的其中一种。
 
-在根目录下创建“popup”文件夹，用于存放弹出窗的代码。弹出窗由以下文件组成：
+在根目录下创建"popup"文件夹，用于存放弹出窗的代码。弹出窗由以下文件组成：
 
 - **`choose_beast.html`** 定义了界面的主面板
 - **`choose_beast.css`** 美化内容
@@ -326,12 +326,12 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 
 - 将被点击的按钮映射到一个指向特定动物图片的 URL
 - 通过[`browser.tabs.insertCSS()`](/zh-CN/Add-ons/WebExtensions/API/tabs/insertCSS) API 向页面注入一些 CSS 来隐藏整个页面的内容
-- 通过[`browser.tabs.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) API 向 content script 发送“beastify”信息，要求其 beastify 页面，同时向其传递一个指向动物图片的 URL
+- 通过[`browser.tabs.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) API 向 content script 发送"beastify"信息，要求其 beastify 页面，同时向其传递一个指向动物图片的 URL
 
 `reset()` 函数实际上就是撤销 beastify :
 
 - 通过 [`browser.tabs.removeCSS()`](/zh-CN/Add-ons/WebExtensions/API/tabs/removeCSS) API 移除我们添加的 CSS
-- 向 content script 发送“reset”信息要求其重置页面
+- 向 content script 发送"reset"信息要求其重置页面
 
 ### The content script
 
@@ -436,7 +436,7 @@ beastify/
 
 Firefox 45 开始，你可以临时从硬盘中安装扩展
 
-在 Firefox 地址栏中输入：about:debugging，单击“临时载入附加组件”，然后选择你的 manifest.json 文件。
+在 Firefox 地址栏中输入：about:debugging，单击"临时载入附加组件"，然后选择你的 manifest.json 文件。
 
 然后你应该已经看到扩展图标出现在了 Firefox 的工具条上：
 

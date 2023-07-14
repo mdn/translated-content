@@ -7,13 +7,13 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 
 该`Session`对象表示用户在当前浏览会话中已关闭的选项卡或窗口。
 
-如果关闭了选项卡但未关闭其窗口，则会话以{{WebExtAPIRef("tabs.Tab", "Tab")}}对象表示：例如，因为用户单击了“关闭选项卡”按钮，并且此选项卡不是其窗口中的唯一选项卡。
+如果关闭了选项卡但未关闭其窗口，则会话以{{WebExtAPIRef("tabs.Tab", "Tab")}}对象表示：例如，因为用户单击了"关闭选项卡"按钮，并且此选项卡不是其窗口中的唯一选项卡。
 
-如果关闭窗口，则会话表示为{{WebExtAPIRef("windows.Window", "Window")}}对象：例如，由于用户单击“关闭窗口”按钮，或关闭了窗口中唯一打开的选项卡。
+如果关闭窗口，则会话表示为{{WebExtAPIRef("windows.Window", "Window")}}对象：例如，由于用户单击"关闭窗口"按钮，或关闭了窗口中唯一打开的选项卡。
 
 请注意，不同的浏览器可能对会话何时为 Tab 和何时为 Window 有不同的想法。例如：
 
-- 在 Chrome 中，如果用户关闭包含多个标签的窗口，则会话将记录为“窗口”。如果用户关闭了仅包含一个选项卡的窗口，则该窗口将记录为一个选项卡。
+- 在 Chrome 中，如果用户关闭包含多个标签的窗口，则会话将记录为"窗口"。如果用户关闭了仅包含一个选项卡的窗口，则该窗口将记录为一个选项卡。
 - 在 Firefox 中，如果用户关闭窗口（或该窗口中最后一个选项卡的选项卡），则将会话记录为窗口，如果用户关闭窗口中最后一个选项卡中的选项卡，则将会话记录为一个 Tab。
 
 打开的选项卡的 Tab 对象没有`sessionId`。关闭选项卡时，它将具有一个`sessionId`但没有选项卡`id`。如果恢复了该标签页，它将获得一个新的标签页，`id`并且会丢失`sessionId`。
@@ -25,7 +25,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 - `lastModified`
   - : `number`。选项卡或窗口关闭的时间，[自 epoch 以来的毫秒数](https://en.wikipedia.org/wiki/Unix_time)。
 - `tab`{{optional_inline}}
-  - : `object`。如果对象表示已关闭的选项卡，则此属性存在，并且将是 {{WebExtAPIRef("tabs.Tab")}} 对象。仅当扩展具有“tabs” [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)时，它才会包含 `url`，`title` 和 `favIconUrl`。
+  - : `object`。如果对象表示已关闭的选项卡，则此属性存在，并且将是 {{WebExtAPIRef("tabs.Tab")}} 对象。仅当扩展具有"tabs" [权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)时，它才会包含 `url`，`title` 和 `favIconUrl`。
 - `window`{{optional_inline}}
   - : `object`。如果对象表示一个关闭的窗口，则此属性存在并且将是{{WebExtAPIRef("windows.Window")}}对象。
 

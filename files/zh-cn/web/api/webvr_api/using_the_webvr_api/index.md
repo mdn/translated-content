@@ -18,7 +18,7 @@ You also need to have [Firefox Nightly](https://nightly.mozilla.org/) (or [Devel
 安装好 [Firefox Nightly](https://nightly.mozilla.org/) (或 [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/))，以及 [WebVR Enabler Add-on](http://www.mozvr.com/downloads/webvr-addon-0.1.0.xpi)
 
 Once your environment is set up, try visiting one of our [MozVR projects](http://mozvr.com/projects/) and clicking on the "Enter VR" button to test it out.
-设置好环境后，请尝试访问我们直接可在线运行的工程项目 [MozVR projects](http://mozvr.com/projects/) ，点击“Enter VR”按钮，就可以开始测试你的环境了。
+设置好环境后，请尝试访问我们直接可在线运行的工程项目 [MozVR projects](http://mozvr.com/projects/) ，点击"Enter VR"按钮，就可以开始测试你的环境了。
 
 > **备注：** For more in depth information, be sure to check out [WebVR environment setup](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup).
 > 注意：更深层次的信息，请 check out [WebVR environment setup](/zh-CN/docs/Web/API/WebVR_API/WebVR_environment_setup) 以获取更详细的内容。

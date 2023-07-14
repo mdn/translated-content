@@ -37,7 +37,7 @@ split(separator, limit)
 
 > **备注：** `"".split("")` 是唯一一种字符串作为 `separator` 参数传入的生成空数组的方法。
 
-> **警告：** 当空字符串（`""`）被用作分隔符时，字符串**不是**由*用户感知的字符*（[grapheme cluster](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)）或 unicode 字符（码位）分割，而是由 UTF-16 代码单位分割。这破坏了[代理对](https://unicode.org/faq/utf_bom.html#utf16-2)。请参阅 [StackOverflow 上的“How do you get a string to a character array in JavaScript?”](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402)。
+> **警告：** 当空字符串（`""`）被用作分隔符时，字符串**不是**由*用户感知的字符*（[grapheme cluster](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)）或 unicode 字符（码位）分割，而是由 UTF-16 代码单位分割。这破坏了[代理对](https://unicode.org/faq/utf_bom.html#utf16-2)。请参阅 [StackOverflow 上的"How do you get a string to a character array in JavaScript?"](https://stackoverflow.com/questions/4547609/how-to-get-character-array-from-a-string/34717402#34717402)。
 
 如果 `separator` 是一个匹配空字符串的正则表达式，匹配是由 UTF-16 码元（code unit）还是 Unicode 码位（code point）分割，取决于是否设置了 [`u`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) 标志。
 
@@ -115,7 +115,7 @@ splitString(monthString, comma);
 
 ### 移除字符串中的空格
 
-下例中，`split()` 方法会查找“0 或多个空白字符接着分号，再接着 0 或多个空白字符”模式的字符串，找到后，就将空白符和分号从字符串中移除，`nameList` 是 `split` 的返回数组。
+下例中，`split()` 方法会查找"0 或多个空白字符接着分号，再接着 0 或多个空白字符"模式的字符串，找到后，就将空白符和分号从字符串中移除，`nameList` 是 `split` 的返回数组。
 
 ```js
 const names = "Harry Trump ;Fred Barney; Helen Rigby ; Bill Abel ;Chris Hand ";
@@ -196,7 +196,7 @@ const myString = "a1bc2c5d3e4f";
 console.log(myString.split(splitByNumber)); // [ "a", "bc", "c5d", "e", "f" ]
 ```
 
-下面的示例使用一个内部状态来强制执行某些行为，并确保产生一个“有效”的结果。
+下面的示例使用一个内部状态来强制执行某些行为，并确保产生一个"有效"的结果。
 
 ```js
 const DELIMITER = ";";

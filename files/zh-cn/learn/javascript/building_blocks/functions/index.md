@@ -307,7 +307,7 @@ function greeting() {
     output(z);
     ```
 
-    这两个都应该返回错误沿“ [ReferenceError：y 未定义](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined) ”。这是为什么？由于函数作用域 - `y` 和 `z` 被锁定在函数 `a()` 和 `b()` 函数中，所以 `output()` 从全局作用域调用时无法访问它们。
+    这两个都应该返回错误沿" [ReferenceError：y 未定义](/zh-CN/docs/Web/JavaScript/Reference/Errors/Not_defined) "。这是为什么？由于函数作用域 - `y` 和 `z` 被锁定在函数 `a()` 和 `b()` 函数中，所以 `output()` 从全局作用域调用时无法访问它们。
 
 5. 但是，从另一个函数里面调用什么呢？尝试编辑 `a()`，`b()`所以他们看起来像这样：
 

@@ -24,7 +24,7 @@ URLSearchParams.get(name)
 
 ## 示例
 
-如果一个页面的 URL 是 `https://example.com/?name=Jonathan&age=18` ，你可以这样解析参数“name”和“age”:
+如果一个页面的 URL 是 `https://example.com/?name=Jonathan&age=18` ，你可以这样解析参数"name"和"age":
 
 ```
 let params = new URLSearchParams(document.location.search.substring(1));

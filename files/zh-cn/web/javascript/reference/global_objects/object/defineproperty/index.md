@@ -164,7 +164,7 @@ Object.defineProperty(o, "conflict", {
 
 #### Writable 特性
 
-当 `writable` 特性设置为 `false` 时，该属性被称为“不可写的”。它不能被重新赋值。尝试对一个不可写的属性进行写入不会改变它，在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下还会导致错误。
+当 `writable` 特性设置为 `false` 时，该属性被称为"不可写的"。它不能被重新赋值。尝试对一个不可写的属性进行写入不会改变它，在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下还会导致错误。
 
 ```js
 const o = {}; // 创建一个新对象

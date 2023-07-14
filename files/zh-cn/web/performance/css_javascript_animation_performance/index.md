@@ -161,7 +161,7 @@ function animate(time) {
 
 {{ EmbedLiveSample("运行性能测试", "100%", "480") }}
 
-动画可以通过点击“切换”按钮切换到 `requestAnimationFrame()`。
+动画可以通过点击"切换"按钮切换到 `requestAnimationFrame()`。
 
 试着两个都运行一下，比较两者的 FPS 值（第一个紫色框），可以看到 CSS 动画和 `requestAnimationFrame()` 是非常接近的。
 

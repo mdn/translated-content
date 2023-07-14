@@ -71,7 +71,7 @@ p {
 }
 ```
 
-{{cssxref("animation-duration")}} 属性指定 {{HTMLElement("p")}} 上的动画从开始到结束耗费 3 秒，{{cssxref("@keyframes")}} 指定使用名字为“slidein”的关键帧。
+{{cssxref("animation-duration")}} 属性指定 {{HTMLElement("p")}} 上的动画从开始到结束耗费 3 秒，{{cssxref("@keyframes")}} 指定使用名字为"slidein"的关键帧。
 
 如果希望在不支持 CSS 动画的浏览器中使用自定义样式，应该将其写在这里；然而，在该例中，我们不需要除动画效果以外的任何自定义样式。
 

@@ -11,7 +11,7 @@ slug: Web/API/TextDecoder/fatal
 
 ## 值
 
-一个{{jsxref("boolean", '布尔值', '', '1')}}，如果错误模式设置为 `fatal`，它将返回 `true`。否则返回 `false`，表示错误模式是“replacement”。
+一个{{jsxref("boolean", '布尔值', '', '1')}}，如果错误模式设置为 `fatal`，它将返回 `true`。否则返回 `false`，表示错误模式是"replacement"。
 
 ## 规范
 

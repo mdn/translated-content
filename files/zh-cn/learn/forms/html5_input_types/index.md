@@ -75,7 +75,7 @@ slug: Learn/Forms/HTML5_input_types
 <input type="search" id="search" name="search">
 ```
 
-`text` 字段和 `search` 字段的主要区别是浏览器赋予它们的外观显示。通常情况下，`search` 字段拥有圆角边框，有时会显示“Ⓧ”标志，当点击它时会清除输入框。另外，在动态键盘设备上，键盘的回车键会显示“**search**”，或显示为放大镜图标。
+`text` 字段和 `search` 字段的主要区别是浏览器赋予它们的外观显示。通常情况下，`search` 字段拥有圆角边框，有时会显示"Ⓧ"标志，当点击它时会清除输入框。另外，在动态键盘设备上，键盘的回车键会显示"**search**"，或显示为放大镜图标。
 
 下面的截图显示了 macOS 上的 Firefox 71、Safari 13 和 Chrome 79，以及 Windows 10 上的 Edge 18 和 Chrome 79 的非空查询字段，请注意，清除图标仅当在输入框中存在值得时候才会显示，且与 Safari 不同的是，仅当聚焦状态时才会显示此图标。
 

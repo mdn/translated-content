@@ -40,7 +40,7 @@ slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 - 用户必须通过其浏览器或页面操作，上下文菜单或快捷键与扩展进行交互。
 - 它仅在活动选项卡中授予权限。
 
-这种方法的好处是用户不会收到权限警告，也就是说您的扩展程序可以“访问所有网站的数据”。这是因为`<all_urls>`权限使扩展能够在任何选项卡中随时执行脚本，而[`"activeTab"`](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)仅限于允许扩展在当前选项卡中执行用户请求的操作。
+这种方法的好处是用户不会收到权限警告，也就是说您的扩展程序可以"访问所有网站的数据"。这是因为`<all_urls>`权限使扩展能够在任何选项卡中随时执行脚本，而[`"activeTab"`](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission)仅限于允许扩展在当前选项卡中执行用户请求的操作。
 
 ## Discovering more about tabs and their properties
 
@@ -48,7 +48,7 @@ There will be occasions when you want to get a list of all the tabs in all the b
 
 This is where {{WebExtAPIRef("tabs.query")}} comes in. Used alone to get all tabs or taking the `queryInfo` object—to specify query criteria such as whether the tab is active, in the current window, or one or more of 17 criteria—{{WebExtAPIRef("tabs.query")}} returns an array of {{WebExtAPIRef("tabs.Tab")}} objects containing information about the tabs.
 
-Where you want information about the current tab only, you can get a {{WebExtAPIRef("tabs.Tab")}} object for that tab using {{WebExtAPIRef("tabs.getCurrent")}}. If you have a tab’s ID, you can get its {{WebExtAPIRef("tabs.Tab")}} object using {{WebExtAPIRef("tabs.get")}}.
+Where you want information about the current tab only, you can get a {{WebExtAPIRef("tabs.Tab")}} object for that tab using {{WebExtAPIRef("tabs.getCurrent")}}. If you have a tab's ID, you can get its {{WebExtAPIRef("tabs.Tab")}} object using {{WebExtAPIRef("tabs.get")}}.
 
 > **备注：**
 >
@@ -57,7 +57,7 @@ Where you want information about the current tab only, you can get a {{WebExtAPI
 
 ### How to example
 
-To see how {{WebExtAPIRef("tabs.query")}} and {{WebExtAPIRef("tabs.Tab")}} are used, let’s walk through how the [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) example adds the list of "switch to tabs" to its toolbar button popup.
+To see how {{WebExtAPIRef("tabs.query")}} and {{WebExtAPIRef("tabs.Tab")}} are used, let's walk through how the [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/main/tabs-tabs-tabs) example adds the list of "switch to tabs" to its toolbar button popup.
 
 ![The tabs tabs tabs toolbar menu showing the switch to tap area](switch_to_tab.png)
 
@@ -141,7 +141,7 @@ Here is a summary of the above does:
 
 ### tabs.js
 
-In [tabs.js](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js), we’ll see how the list of tabs is built and added to the popup.
+In [tabs.js](https://github.com/mdn/webextensions-examples/blob/main/tabs-tabs-tabs/tabs.js), we'll see how the list of tabs is built and added to the popup.
 
 #### Creating the popup
 
@@ -184,8 +184,8 @@ Next, we'll create the links for each tab:
 1. Loops through the first 5 items from the {{WebExtAPIRef("tabs.Tab")}} object.
 2. For each item, add a hyperlink to the document fragment.
 
-    - The link’s label—that is, its text—is set using the tab’s title (or the ID, if it has no title).
-    - The link’s address is set using the tab’s ID.
+    - The link's label—that is, its text—is set using the tab's title (or the ID, if it has no title).
+    - The link's address is set using the tab's ID.
 
     ```js
     for (let tab of tabs) {
@@ -337,7 +337,7 @@ It's worth noting the use of `console.log()`. This enables you to output informa
 
 ![Example of the console.log output, from the move tabs feature, in the debugging console](console.png)
 
-The move code first calls `callOnActiveTab()` which in turn calls `getCurrentWindowTabs()` to get a {{WebExtAPIRef("tabs.Tab")}} object containing the active window’s tabs. It then loops through the object to find and return the active tab object:
+The move code first calls `callOnActiveTab()` which in turn calls `getCurrentWindowTabs()` to get a {{WebExtAPIRef("tabs.Tab")}} object containing the active window's tabs. It then loops through the object to find and return the active tab object:
 
 ```js
  function callOnActiveTab(callback) {
@@ -375,7 +375,7 @@ The remaining functions to duplicate, reload, create, and remove tabs are implem
 
 ## Manipulating a tab's zoom level
 
-The next set of functions enable you to get ({{WebExtAPIRef("tabs.getZoom")}}) and set ({{WebExtAPIRef("tabs.setZoom")}}) the zoom level within a tab. You can also retrieve the zoom settings ({{WebExtAPIRef("tabs.getZoomSettings")}}) but, at the time of writing, the ability to set the settings ({{WebExtAPIRef("tabs.setZoomSettings")}}) wasn’t available in Firefox.
+The next set of functions enable you to get ({{WebExtAPIRef("tabs.getZoom")}}) and set ({{WebExtAPIRef("tabs.setZoom")}}) the zoom level within a tab. You can also retrieve the zoom settings ({{WebExtAPIRef("tabs.getZoomSettings")}}) but, at the time of writing, the ability to set the settings ({{WebExtAPIRef("tabs.setZoomSettings")}}) wasn't available in Firefox.
 
 The level of zoom can be between 30% and 300% (represented as decimals `0.3` to `3`).
 
@@ -436,7 +436,7 @@ For the zoom in feature, this runs:
  }
 ```
 
-This code uses `callOnActiveTab()` to get the details of the active tab, then {{WebExtAPIRef("tabs.getZoom")}} gets the tab’s current zoom factor. The current zoom is compared to the defined maximum (`MAX_ZOOM`) and an alert issued if the tab is already at the maximum zoom. Otherwise, the zoom level is incremented but limited to the maximum zoom, then the zoom is set with {{WebExtAPIRef("tabs.getZoom")}}.
+This code uses `callOnActiveTab()` to get the details of the active tab, then {{WebExtAPIRef("tabs.getZoom")}} gets the tab's current zoom factor. The current zoom is compared to the defined maximum (`MAX_ZOOM`) and an alert issued if the tab is already at the maximum zoom. Otherwise, the zoom level is incremented but limited to the maximum zoom, then the zoom is set with {{WebExtAPIRef("tabs.getZoom")}}.
 
 ## Manipulating a tab's CSS
 
@@ -459,7 +459,7 @@ To use the CSS features you need either:
 - `"tabs"` permission and [host permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) or
 - `"activeTab"` permission.
 
-The latter is the most useful, as it allows an extension to use {{WebExtAPIRef("tabs.insertCSS")}} and {{WebExtAPIRef("tabs.removeCSS")}} in the active tab when run from the extension’s browser or page action, context menu, or a shortcut.
+The latter is the most useful, as it allows an extension to use {{WebExtAPIRef("tabs.insertCSS")}} and {{WebExtAPIRef("tabs.removeCSS")}} in the active tab when run from the extension's browser or page action, context menu, or a shortcut.
 
 ```json
 {
@@ -482,12 +482,12 @@ The latter is the most useful, as it allows an extension to use {{WebExtAPIRef("
 }
 ```
 
-You will note that `"tabs"` permission is requested in addition to `"activeTab"`. This additional permission is needed to enable the extension’s script to access the tab’s URL, the importance of which we’ll see in a moment.
+You will note that `"tabs"` permission is requested in addition to `"activeTab"`. This additional permission is needed to enable the extension's script to access the tab's URL, the importance of which we'll see in a moment.
 
 The other main features in the manifest.json file are the definition of:
 
 - **a background script**, which starts running as soon as the extension is loaded.
-- **a "page action"**, which defines an icon to be added to the browser’s address bar.
+- **a "page action"**, which defines an icon to be added to the browser's address bar.
 
 #### background.js
 
@@ -522,7 +522,7 @@ function protocolIsApplicable(url) {
 }
 ```
 
-Then, if the example can act on the tab, `initializePageAction()` sets the tab's `pageAction` (navigation bar) icon and title to use the “off” versions before making the `pageAction` visible:
+Then, if the example can act on the tab, `initializePageAction()` sets the tab's `pageAction` (navigation bar) icon and title to use the "off" versions before making the `pageAction` visible:
 
 ```js
 function initializePageAction(tab) {
@@ -589,7 +589,7 @@ browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
 There are a couple of other Tabs API features that don't fit into one of the earlier sections:
 
 - Capture the visible tab content with {{WebExtAPIRef("tabs.captureVisibleTab")}}.
-- Detect the primary language of the content in a tab using {{WebExtAPIRef("tabs.detectLanguage")}}. This could be used, for example, to match the language in your extension’s UI with that of the page it’s running in.
+- Detect the primary language of the content in a tab using {{WebExtAPIRef("tabs.detectLanguage")}}. This could be used, for example, to match the language in your extension's UI with that of the page it's running in.
 
 ## Learn more
 

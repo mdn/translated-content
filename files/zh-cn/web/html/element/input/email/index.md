@@ -15,7 +15,7 @@ slug: Web/HTML/Element/input/email
 
 {{HTMLElement("input")}} 元素的 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性包含会自动验证是否为正确邮件地址形式的字符串。具体来说，此处有三种格式可以通过验证：
 
-1. 一个空字符串（“”），表示用户未输入值或该值已被删除。
+1. 一个空字符串（""），表示用户未输入值或该值已被删除。
 2. 单个符合格式的电子邮件地址。并不代表该邮件地址存在，而是说它至少在格式上是正确的，简单地讲就是 `username@domain` 或者 `username@domain.tld`，当然并不局限于此，关于匹配电子邮件地址验证算法的{{Glossary("regular expression","正则表达式")}}，参见[验证](#验证)一节。
 3. 当且仅当指定了 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性时，值可以是一个列表，该列表包含一串符合格式的电子邮件地址，且每个地址之间用逗号分隔。列表中，位于每个地址之前和之后的任何空白字符都会被移除。
 
@@ -216,7 +216,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### 模式验证
 
-如果你需要进一步限制输入的邮件地址，不仅仅需要“任何看起来像邮件地址的字符串”，你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性来指定一个{{Glossary("regular expression","正则表达式")}}，该值必须与之匹配才有效。如果指定了 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性，每个由逗号分开的值必须满足该{{Glossary("regular expression","正则表达式")}}。
+如果你需要进一步限制输入的邮件地址，不仅仅需要"任何看起来像邮件地址的字符串"，你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性来指定一个{{Glossary("regular expression","正则表达式")}}，该值必须与之匹配才有效。如果指定了 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性，每个由逗号分开的值必须满足该{{Glossary("regular expression","正则表达式")}}。
 
 例如，假设你正在为 Best Startup Ever, Inc. 公司的员工建立一个支持页面，如果他们的某个页面出现问题，他们可以联系 IT 部门寻求帮助。在我们的简化表单中，用户需要输入出现他们的邮箱地址，以及描述遇到的问题。为了安全起见，我们希望用户不仅提供了有效的邮箱地址，而且还是一个内部邮件地址。
 
@@ -260,13 +260,13 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ![Invalid email address in error state with a popout from the input reading 'please enter an email address'.](enter-valid-email-address.png)
 
-如果我们让事情停留在这个阶段，我们至少会在合法的电子邮件地址上进行验证。但我们想走得更远：我们想确保电子邮件地址实际上是“_username_@beststartupever.com”的形式。这就是我们要使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 的地方。我们将 `pattern` 设置为 `.+@beststartupever.com`。这个简单的正则表达式要求一个至少由一个任何类型的字符组成的字符串，然后是“@”，后面是域名“beststartupever.com”。
+如果我们让事情停留在这个阶段，我们至少会在合法的电子邮件地址上进行验证。但我们想走得更远：我们想确保电子邮件地址实际上是"_username_@beststartupever.com"的形式。这就是我们要使用 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 的地方。我们将 `pattern` 设置为 `.+@beststartupever.com`。这个简单的正则表达式要求一个至少由一个任何类型的字符组成的字符串，然后是"@"，后面是域名"beststartupever.com"。
 
-请注意，这根本不是一个有效的电子邮件地址过滤器；它允许诸如“ @beststartupever.com”（注意前面的空格）或“@@beststartupever.com”这样的内容，它们都是无效的。然而，浏览器对指定的文本同时运行标准的电子邮件地址过滤器*和*我们的自定义模式。结果，我们的验证结果是：“确保这类似于一个有效的电子邮件地址，如果是的话，确保它也是一个 beststartupever.com 的地址。”
+请注意，这根本不是一个有效的电子邮件地址过滤器；它允许诸如" @beststartupever.com"（注意前面的空格）或"@@beststartupever.com"这样的内容，它们都是无效的。然而，浏览器对指定的文本同时运行标准的电子邮件地址过滤器*和*我们的自定义模式。结果，我们的验证结果是："确保这类似于一个有效的电子邮件地址，如果是的话，确保它也是一个 beststartupever.com 的地址。"
 
-建议在使用 `pattern` 属性的同时使用 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title)。如果你这样做，`title` *必须*描述该模式。也就是说，它应该解释数据应该采取什么格式，而不是任何其他信息。这是因为 `title` 可以作为验证错误信息的一部分被显示或说出。例如，浏览器可能会显示“输入的文本不符合要求的模式。”，随后是你指定的 `title`。如果你的 `title` 是类似于“Email address”的字符串，结果将是“输入的文本不符合要求的模式。Email address”，这不太通顺。
+建议在使用 `pattern` 属性的同时使用 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title)。如果你这样做，`title` *必须*描述该模式。也就是说，它应该解释数据应该采取什么格式，而不是任何其他信息。这是因为 `title` 可以作为验证错误信息的一部分被显示或说出。例如，浏览器可能会显示"输入的文本不符合要求的模式。"，随后是你指定的 `title`。如果你的 `title` 是类似于"Email address"的字符串，结果将是"输入的文本不符合要求的模式。Email address"，这不太通顺。
 
-这就是为什么我们指定字符串“请只提供 Best Startup Ever 公司的电子邮件地址”。通过这样做，所产生的完整错误信息可能是这样的：“输入的文本不符合要求的模式。请只提供 Best Startup Ever 公司的电子邮件地址”。
+这就是为什么我们指定字符串"请只提供 Best Startup Ever 公司的电子邮件地址"。通过这样做，所产生的完整错误信息可能是这样的："输入的文本不符合要求的模式。请只提供 Best Startup Ever 公司的电子邮件地址"。
 
 ![A valid email address, but the input is in error state with a popout from the input reading 'The entered text doesn't match the required pattern. Please provide only a Best Startup Ever corporate email address.'](email-pattern-match-bad.png)
 

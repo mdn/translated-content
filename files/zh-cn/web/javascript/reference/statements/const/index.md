@@ -26,7 +26,7 @@ const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
 
 **`const` 声明**创建一个值的只读引用。但这并不意味着它所持有的值是不可变的，只是变量标识符不能重新分配。例如，在引用内容是对象的情况下，这意味着可以改变对象的内容（例如，其参数）。
 
-关于“[暂存死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)”的所有讨论都适用于[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)和`const`。
+关于"[暂存死区](/zh-CN/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let)"的所有讨论都适用于[`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)和`const`。
 
 一个常量不能和它所在作用域内的其他变量或函数拥有相同的名称。
 

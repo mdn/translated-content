@@ -38,7 +38,7 @@ Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 
 ### 使用 toStringTag 自定义标签
 
-当创建你自己的类时，JavaScript 默认用“Object”标签：
+当创建你自己的类时，JavaScript 默认用"Object"标签：
 
 ```js
 class ValidatorClass {}

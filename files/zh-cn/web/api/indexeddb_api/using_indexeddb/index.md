@@ -208,9 +208,9 @@ request.onupgradeneeded = function(event) {
 
 正如前面提到的，`onupgradeneeded` 是我们唯一可以修改数据库结构的地方。在这里面，我们可以创建和删除对象存储空间以及构建和删除索引。
 
-对象仓库仅调用 `createObjectStore()` 就可以创建。这个方法使用仓库的名称，和一个参数对象。即便这个参数对象是可选的，它还是非常重要的，因为它可以让你定义重要的可选属性，并完善你希望创建的对象存储空间的类型。在我们的示例中，我们创建了一个名为“customers”的对象仓库并且定义了一个使得每个仓库中每个对象都独一无二的 `keyPath` 。在这个示例中的属性是“ssn”，因为社会安全号码被确保是唯一的。被存储在该仓库中的所有对象都必须存在“ssn”。
+对象仓库仅调用 `createObjectStore()` 就可以创建。这个方法使用仓库的名称，和一个参数对象。即便这个参数对象是可选的，它还是非常重要的，因为它可以让你定义重要的可选属性，并完善你希望创建的对象存储空间的类型。在我们的示例中，我们创建了一个名为"customers"的对象仓库并且定义了一个使得每个仓库中每个对象都独一无二的 `keyPath` 。在这个示例中的属性是"ssn"，因为社会安全号码被确保是唯一的。被存储在该仓库中的所有对象都必须存在"ssn"。
 
-我们也请求了一个名为“name”的着眼于存储的对象的 `name` 属性的索引。如同 `createObjectStore()`，`createIndex()` 提供了一个可选地 `options` 对象，该对象细化了我们希望创建的索引类型。新增一个不带 `name` 属性的对象也会成功，但是这个对象不会出现在 "name" 索引中。
+我们也请求了一个名为"name"的着眼于存储的对象的 `name` 属性的索引。如同 `createObjectStore()`，`createIndex()` 提供了一个可选地 `options` 对象，该对象细化了我们希望创建的索引类型。新增一个不带 `name` 属性的对象也会成功，但是这个对象不会出现在 "name" 索引中。
 
 我们现在可以使用存储的用户对象的 `ssn` 直接从对象存储空间中把它们提取出来，或者通过使用索引来使用他们的 name 进行提取。要了解这些是如何实现的，请参见 [使用索引](/zh-CN/IndexedDB/Using_IndexedDB#Using_an_index) 章节。
 
@@ -330,7 +330,7 @@ request.onsuccess = function(event) {
 };
 ```
 
-对于一个“简单”的提取这里的代码有点多了。下面看我们怎么把它再缩短一点，假设你在数据库的级别上来进行的错误处理：
+对于一个"简单"的提取这里的代码有点多了。下面看我们怎么把它再缩短一点，假设你在数据库的级别上来进行的错误处理：
 
 ```js
 db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = function(event) {
@@ -441,7 +441,7 @@ index.get("Donna").onsuccess = function(event) {
 };
 ```
 
-“name”游标不是唯一的，因此 `name` 被设成 `"Donna"` 的记录可能不止一条。在这种情况下，你总是得到键值最小的那个。
+"name"游标不是唯一的，因此 `name` 被设成 `"Donna"` 的记录可能不止一条。在这种情况下，你总是得到键值最小的那个。
 
 如果你需要访问带有给定 `name` 的所有的记录你可以使用一个游标。你可以在索引上打开两个不同类型的游标。一个常规游标映射索引属性到对象存储空间中的对象。一个键索引映射索引属性到用来存储对象存储空间中的对象的键。不同之处被展示如下：
 
@@ -468,7 +468,7 @@ index.openKeyCursor().onsuccess = function(event) {
 
 ### 指定游标的范围和方向
 
-如果你想要限定你在游标中看到的值的范围，你可以使用一个 key range 对象然后把它作为第一个参数传给 `openCursor()` 或是 `openKeyCursor()`。你可以构造一个只允许一个单一 key 的 key range，或者一个具有下限或上限，或者一个既有上限也有下限。边界可以是“闭合的”（也就是说 key range 包含给定的值）或者是“开放的”（也就是说 key range 不包括给定的值）。这里是它如何工作的：
+如果你想要限定你在游标中看到的值的范围，你可以使用一个 key range 对象然后把它作为第一个参数传给 `openCursor()` 或是 `openKeyCursor()`。你可以构造一个只允许一个单一 key 的 key range，或者一个具有下限或上限，或者一个既有上限也有下限。边界可以是"闭合的"（也就是说 key range 包含给定的值）或者是"开放的"（也就是说 key range 不包括给定的值）。这里是它如何工作的：
 
 ```js
 // 仅匹配 "Donna"
@@ -520,7 +520,7 @@ objectStore.openCursor(null, "prev").onsuccess = function(event) {
 };
 ```
 
-因为“name”索引不是唯一的，那就有可能存在具有相同 `name` 的多条记录。要注意的是这种情况不可能发生在对象存储空间上，因为键必须永远是唯一的。如果你想要在游标在索引迭代过程中过滤出重复的，你可以传递 `nextunique` （或 `prevunique` 如果你正在向后寻找）作为方向参数。当 `nextunique` 或是 `prevunique` 被使用时，被返回的那个总是键最小的记录。
+因为"name"索引不是唯一的，那就有可能存在具有相同 `name` 的多条记录。要注意的是这种情况不可能发生在对象存储空间上，因为键必须永远是唯一的。如果你想要在游标在索引迭代过程中过滤出重复的，你可以传递 `nextunique` （或 `prevunique` 如果你正在向后寻找）作为方向参数。当 `nextunique` 或是 `prevunique` 被使用时，被返回的那个总是键最小的记录。
 
 ```js
 index.openKeyCursor(null, IDBCursor.nextunique).onsuccess = function(event) {
@@ -532,7 +532,7 @@ index.openKeyCursor(null, IDBCursor.nextunique).onsuccess = function(event) {
 };
 ```
 
-请查看”[IDBCursor 常量](/zh-CN/docs/Web/API/IDBCursor?redirectlocale=en-US&redirectslug=IndexedDB%2FIDBCursor#Constants)“获取合法的方向参数。
+请查看"[IDBCursor 常量](/zh-CN/docs/Web/API/IDBCursor?redirectlocale=en-US&redirectslug=IndexedDB%2FIDBCursor#Constants)"获取合法的方向参数。
 
 ## 当一个 web app 在另一个标签页中被打开时的版本变更
 

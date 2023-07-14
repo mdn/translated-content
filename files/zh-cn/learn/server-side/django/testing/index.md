@@ -22,11 +22,11 @@ slug: Learn/Server-side/Django/Testing
 
 ## 概览
 
-LocalLibrary 目前有页面显示所有书本和作者的列表，书本和作者项目的详细视图，续借`BookInstances`的页面，以及创建，更新和删除作者项目的页面（如果您完成了**Django 教程 9：使用表单**中的自我挑战，也可以创建，更新和删除书本记录）。即使使用这个相对较小的站点，手动导航到每个页面，并且表面地检查一切是否按预期工作，可能需要几分钟。当我们进行更改，并扩展网站时，手动检查所有内容“正常”工作所需的时间只会增长。如果我们继续这样做，最终我们将花费大部分时间进行测试，并且很少有时间来改进我们的代码。
+LocalLibrary 目前有页面显示所有书本和作者的列表，书本和作者项目的详细视图，续借`BookInstances`的页面，以及创建，更新和删除作者项目的页面（如果您完成了**Django 教程 9：使用表单**中的自我挑战，也可以创建，更新和删除书本记录）。即使使用这个相对较小的站点，手动导航到每个页面，并且表面地检查一切是否按预期工作，可能需要几分钟。当我们进行更改，并扩展网站时，手动检查所有内容"正常"工作所需的时间只会增长。如果我们继续这样做，最终我们将花费大部分时间进行测试，并且很少有时间来改进我们的代码。
 
 自动化测试可以真正帮助解决这个问题！显而易见的好处，是它们可以比手动测试运行得更快，可以测试更底层级别的细节，并且每次都测试完全相同的功能（人类测试员远远没有这么可靠！）因为它们很快速，自动化的测试可以更频繁地执行，如果测试失败，他们会指出代码未按预期执行的位置。
 
-此外，自动化测试可以充当代码的第一个真实“用户”，迫使您严格定义和记录网站的行为方式。它们通常是您的代码示例，和文档的基础。由于这些原因，一些软件开发过程，从测试定义和实现开始，之后编写代码以匹配所需的行为（例如，测试驱动[test-driven](https://en.wikipedia.org/wiki/Test-driven_development) 和行为驱动 [behaviour-driven](https://en.wikipedia.org/wiki/Behavior-driven_development)的开发）。
+此外，自动化测试可以充当代码的第一个真实"用户"，迫使您严格定义和记录网站的行为方式。它们通常是您的代码示例，和文档的基础。由于这些原因，一些软件开发过程，从测试定义和实现开始，之后编写代码以匹配所需的行为（例如，测试驱动[test-driven](https://en.wikipedia.org/wiki/Test-driven_development) 和行为驱动 [behaviour-driven](https://en.wikipedia.org/wiki/Behavior-driven_development)的开发）。
 
 本教程通过向 LocalLibrary 网站添加大量测试，来演示如何为 Django 编写自动化测试。
 
@@ -49,7 +49,7 @@ LocalLibrary 目前有页面显示所有书本和作者的列表，书本和作�
 
 Django 提供了一个测试框架，其中包含基于 Python 标准[`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest)库的小型层次结构。尽管名称如此，但该测试框架适用于单元测试和集成测试。Django 框架添加了 API 方法和工具，以帮助测试 Web 和 Django 特定的行为。这允许您模拟请求，插入测试数据以及检查应用程序的输出。Django 还提供了一个 API（[LiveServerTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#liveservertestcase)）和[使用不同测试框架](https://docs.djangoproject.com/en/2.0/topics/testing/advanced/#other-testing-frameworks)的工具，例如，您可以与流行的 [Selenium](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) 框架集成，以模拟用户与实时浏览器交互。
 
-要编写测试，您可以从任何 Django（或 unittest）测试基类（[SimpleTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#simpletestcase), [TransactionTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#transactiontestcase), [TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase), [LiveServerTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#liveservertestcase)）派生，然后编写单独的方法，来检查特定功能，是否按预期工作（测试使用“assert”方法来测试表达式导致 `True`或 `False`值，或者两个值相等，等等。）当您开始测试运行时，框架将在派生类中执行所选的测试方法。测试方法独立运行，具有在类中定义的常见设置和/或拆卸行为，如下所示。
+要编写测试，您可以从任何 Django（或 unittest）测试基类（[SimpleTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#simpletestcase), [TransactionTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#transactiontestcase), [TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase), [LiveServerTestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#liveservertestcase)）派生，然后编写单独的方法，来检查特定功能，是否按预期工作（测试使用"assert"方法来测试表达式导致 `True`或 `False`值，或者两个值相等，等等。）当您开始测试运行时，框架将在派生类中执行所选的测试方法。测试方法独立运行，具有在类中定义的常见设置和/或拆卸行为，如下所示。
 
 ```python
 class YourTestClass(TestCase):
@@ -103,7 +103,7 @@ class Author(models.Model):
 
 ## 测试结构概述
 
-在我们详细讨论“测试内容”之前，让我们先简要介绍一下测试的定位和方式。
+在我们详细讨论"测试内容"之前，让我们先简要介绍一下测试的定位和方式。
 
 Django 使用 unittest 模块的[内置测试查找](https://docs.python.org/3/library/unittest.html#unittest-test-discovery)，它将在任何使用模式**test\*.py** 命名的文件中，查找当前工作目录下的测试。如果您正确命名文件，则可以使用您喜欢的任何结构。我们建议您为测试代码创建一个模块，并为模型，视图，表单和您需要测试的任何其他类型的代码，分别创建文件。例如：
 
@@ -118,7 +118,7 @@ catalog/
 
 在 LocalLibrary 项目中，创建如上所示的文件结构。**\_\_init\_\_.py** 应该是一个空文件（这告诉 Python 该目录是一个套件包）。您可以通过复制和重命名框架测试文件 **/catalog/tests.py**，来创建三个测试文件。
 
-> **备注：** 我们构建 Django 骨架网站时，会自动创建骨架测试文件 **/catalog/tests.py**。将所有测试放入其中是完全“合法的”，但如果测试正确，您将很快得到一个非常庞大且难以管理的测试文件。
+> **备注：** 我们构建 Django 骨架网站时，会自动创建骨架测试文件 **/catalog/tests.py**。将所有测试放入其中是完全"合法的"，但如果测试正确，您将很快得到一个非常庞大且难以管理的测试文件。
 >
 > 删除骨架文件，因为我们不需要它。
 
@@ -162,7 +162,7 @@ class YourTestClass(TestCase):
 新的类别定义了两个可用于测试之前的配置的方法（例如，创建测试所需的任何模型或其他对象）：
 
 - `setUpTestData()` 用于类级别设置，在测试运行开始的时侯，会调用一次。您可以使用它来创建在任何测试方法中，都不会修改或更改的对象。
-- `setUp()` 在每个测试函数之前被调用，以设置可能被测试修改的任何对象（每个测试函数，都将获得这些对象的“新”版本）。
+- `setUp()` 在每个测试函数之前被调用，以设置可能被测试修改的任何对象（每个测试函数，都将获得这些对象的"新"版本）。
 
 > **备注：** 测试类别还有一个我们还没有使用的`tearDown()`方法。此方法对数据库测试不是特别有用，因为`TestCase`基类会为您处理数据库拆卸。
 
@@ -228,13 +228,13 @@ Destroying test database for alias 'default'...
 
 ### 显示更多测试信息
 
-如果您想获得有关测试运行的更多信息，可以更改详细程度。例如，要列出测试成功和失败（以及有关如何设置测试数据库的大量信息），您可以将详细程度设置为“2”，如下所示：
+如果您想获得有关测试运行的更多信息，可以更改详细程度。例如，要列出测试成功和失败（以及有关如何设置测试数据库的大量信息），您可以将详细程度设置为"2"，如下所示：
 
 ```bash
 python3 manage.py test --verbosity 2
 ```
 
-允许的详细级别为 0, 1 ,2 和 3，默认值为“1”。
+允许的详细级别为 0, 1 ,2 和 3，默认值为"1"。
 
 ### 运行特定测试
 
@@ -333,7 +333,7 @@ self.assertEquals(field_label,'first name')  # Compare the value to the expected
 
 > **备注：** 已省略对`last_name` 和 `date_of_birth`标签的测试，以及 `last_name`字段长度的测试。现在按照上面显示的命名约定和方法，添加您自己的版本。
 
-我们还需要测试我们的自定义方法。这些基本上只是检查对象名称，是否按照我们的预期，使用“姓氏”，“名字”格式构建，并且我们为`Author`获取的 URL，是我们所期望的。
+我们还需要测试我们的自定义方法。这些基本上只是检查对象名称，是否按照我们的预期，使用"姓氏"，"名字"格式构建，并且我们为`Author`获取的 URL，是我们所期望的。
 
 ```python
 def test_object_name_is_last_name_comma_first_name(self):
@@ -365,7 +365,7 @@ AssertionError: 'Died' != 'died'
 
 这是一个非常小的错误，但它确实强调了，编写测试如何能够更彻底地检查，您可能做出的任何假设。
 
-> **备注：** 将 date_of_death 字段（/catalog/models.py）的标签更改为“death”并重新运行测试。
+> **备注：** 将 date_of_death 字段（/catalog/models.py）的标签更改为"death"并重新运行测试。
 
 用于测试其他模型的模式，也类似于此，因此我们不会继续进一步讨论这些模式。请随意为其他模型，创建您自己的测试。
 
@@ -458,7 +458,7 @@ class RenewBookFormTest(TestCase):
 
 为了验证我们的视图行为，我们使用 [Django 的测试客户端](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#django.test.Client)。这个类，就像一个虚拟的 Web 浏览器，我们可以使用它，来模拟 URL 上的`GET`和`POST`请求，并观察响应。我们几乎可以看到，关于响应的所有内容，从低层级的 HTTP（结果标头和状态代码），到我们用来呈现 HTML 的模板，以及我们传递给它的上下文数据。我们还可以看到重定向链（如果有的话），并在每一步检查 URL，和状态代码。这允许我们验证每个视图，是否正在执行预期的操作。
 
-让我们从最简单的视图开始，它提供了所有作者的列表。它显示在 URL **/catalog/authors/** 当中（URL 配置中，名为“authors”的 URL）。
+让我们从最简单的视图开始，它提供了所有作者的列表。它显示在 URL **/catalog/authors/** 当中（URL 配置中，名为"authors"的 URL）。
 
 ```python
 class AuthorListView(generic.ListView):
@@ -530,7 +530,7 @@ resp = self.client.get(reverse('authors'))
 
 #### 仅限登录用户的视图
 
-在某些情况下，您需要测试仅限登录用户的视图。例如，我们的`LoanedBooksByUserListView`与我们之前的视图非常相似，但仅供登录用户使用，并且仅显示当前用户借用的`BookInstance`记录，具有出借中“on loan”状态，并且排序方式为“旧的优先”。
+在某些情况下，您需要测试仅限登录用户的视图。例如，我们的`LoanedBooksByUserListView`与我们之前的视图非常相似，但仅供登录用户使用，并且仅显示当前用户借用的`BookInstance`记录，具有出借中"on loan"状态，并且排序方式为"旧的优先"。
 
 ```python
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -547,7 +547,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
         return BookInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')
 ```
 
-将以下测试代码，添加到 **/catalog/tests/test_views.py**。这里我们首先使用`SetUp()`创建一些用户登录帐户，和`BookInstance`对象（以及它们的相关书本，和其他记录），我们稍后将在测试中使用它们。每个测试用户都借用了一半的书本，但我们最初，将所有书本的状态设置为“维护”。我们使用了`SetUp()`而不是`setUpTestData()`，因为我们稍后会修改其中的一些对象。
+将以下测试代码，添加到 **/catalog/tests/test_views.py**。这里我们首先使用`SetUp()`创建一些用户登录帐户，和`BookInstance`对象（以及它们的相关书本，和其他记录），我们稍后将在测试中使用它们。每个测试用户都借用了一半的书本，但我们最初，将所有书本的状态设置为"维护"。我们使用了`SetUp()`而不是`setUpTestData()`，因为我们稍后会修改其中的一些对象。
 
 > **备注：** 下面的`setUp()`代码，会创建一个具有指定语言`Language`的书本，但您的代码可能不包含语言模型`Language`，因为它是作为挑战创建的。如果是这种情况，只需注释掉创建或导入语言对象的代码部分。您还应该在随后的`RenewBookInstancesViewTest`部分中，执行此操作。
 
@@ -711,7 +711,7 @@ def renew_book_librarian(request, pk):
     return render(request, 'catalog/book_renew_librarian.html', {'form': form, 'bookinst':book_inst})
 ```
 
-我们需要测试该视图，仅供具有`can_mark_returned`权限的用户使用，并且如果用户尝试续借不存在的`BookInstance`，则会将用户重定向到 HTTP 404 错误页面。我们应该检查表单的初始值，是否以未来三周的日期为参考值，如果验证成功，我们将被重定向到“所有借阅的书本”视图。作为验证 - 失败测试的一部分，我们还将检查我们的表单，是否发送了相应的错误消息。
+我们需要测试该视图，仅供具有`can_mark_returned`权限的用户使用，并且如果用户尝试续借不存在的`BookInstance`，则会将用户重定向到 HTTP 404 错误页面。我们应该检查表单的初始值，是否以未来三周的日期为参考值，如果验证成功，我们将被重定向到"所有借阅的书本"视图。作为验证 - 失败测试的一部分，我们还将检查我们的表单，是否发送了相应的错误消息。
 
 将测试类的第一部分（如下所示），添加到 **/catalog/tests/test_views.py** 的底部。这将创建两个用户和两个书本实例，但只为一个用户提供访问该视图所需的权限。在测试期间，授予权限的代码以**粗体**显示：
 

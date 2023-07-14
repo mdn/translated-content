@@ -62,7 +62,7 @@ JavaScript 的 `Number` 类型是一个[双精度 64 位二进制格式 IEEE 754
 - 如果它们包含[数字字面量](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#数字字面量)，字符串通过解析它们来转换。如果解析失败，返回的结果为 `NaN`。与实际数字字面量相比，它们有一些细微的差别。
   - 忽略前导和尾随空格/行终止符。
   - 前导数值 `0` 不会导致该数值成为八进制文本（或在严格模式下被拒绝）。
-  - `+` 和 `-` 允许在字符串的开头指示其符号。（在实际代码中，它们“看起来像”文字的一部分，但实际上是单独的一元运算符。）然而，该标志只能出现一次，不得后跟空格。
+  - `+` 和 `-` 允许在字符串的开头指示其符号。（在实际代码中，它们"看起来像"文字的一部分，但实际上是单独的一元运算符。）然而，该标志只能出现一次，不得后跟空格。
   - `Infinity` 和 `-Infinity` 被当作是字面量。在实际代码中，它们是全局变量。
   - 空字符串或仅空格字符串转换为 `0`。
   - 不允许使用[数字分隔符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators)。
@@ -118,7 +118,7 @@ new Uint8Array([257, -257]); // Uint8Array(1) [ 1, 255 ]
 - {{jsxref("Number.MIN_VALUE")}}
   - : 能表示的最小正数即最接近 0 的正数（实际上不会变成 0）。
 - {{jsxref("Number.NaN")}}
-  - : 特殊的“**N**ot **a** **N**umber”（非数字）值。
+  - : 特殊的"**N**ot **a** **N**umber"（非数字）值。
 - {{jsxref("Number.NEGATIVE_INFINITY")}}
   - : 特殊的负无穷大值，在溢出时返回该值。
 - {{jsxref("Number.POSITIVE_INFINITY")}}

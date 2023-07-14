@@ -13,7 +13,7 @@ JavaScript 的动态特性包括运行时对象的构造、变量参数列表、
 
 [ECMAScript 语言规范（ECMAScript Language Specification）](https://tc39.es/ecma262/)（ECMA-262）和[ECMAScript 国际化 API 规范（ECMAScript Internationalization API specification）](https://tc39.es/ecma262/)（ECMA-402）是 Javascript 的标准。当某个 [ECMAScript 新特性的提案](https://github.com/tc39/proposals)已经被一些浏览器实现时，MDN 上的文档或示例就可能会涉及到这些新特性。大多数时候，处在 [stages](https://tc39.es/process-document/) 3 和 4 的新特性会被收录到文档中，且收录时间通常早于其正式发布的时间。
 
-不要将 JavaScript 与 [Java 编程语言](https://zh.wikipedia.org/wiki/Java)混淆——**JavaScript 不是“解释型 Java”**。虽然“Java”和“JavaScript”都是 Oracle 公司在美国和其他国家注册（或未注册）的商标，但是这两门语言在语法、语义与用途方面有相当大的不同。
+不要将 JavaScript 与 [Java 编程语言](https://zh.wikipedia.org/wiki/Java)混淆——**JavaScript 不是"解释型 Java"**。虽然"Java"和"JavaScript"都是 Oracle 公司在美国和其他国家注册（或未注册）的商标，但是这两门语言在语法、语义与用途方面有相当大的不同。
 
 JavaScript 的核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)）的文档包括以下内容：
 
@@ -37,7 +37,7 @@ JavaScript 的核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/
 如果你想学习 JavaScript，却从未接触过 JavaScript 或编程，你可以投入到我们的 [JavaScript 主题学习区](/zh-CN/docs/Learn/JavaScript)。下面列出了这部分的所有章节：
 
 - [JavaScript 第一步](/zh-CN/docs/Learn/JavaScript/First_steps)
-  - : 回答了一些基本问题，比如“JavaScript 是什么？”、“它长什么样子？”、“它可以用来做什么？”等，同时还谈及了如变量、字符串、数值、数组等 JavaScript 的关键特性。
+  - : 回答了一些基本问题，比如"JavaScript 是什么？"、"它长什么样子？"、"它可以用来做什么？"等，同时还谈及了如变量、字符串、数值、数组等 JavaScript 的关键特性。
 - [JavaScript 基本结构](/zh-CN/docs/Learn/JavaScript/Building_blocks)
   - : 继介绍了 JavaScript 关键的基本特性后，我们需要关注常见的代码组成部分，如条件语句、循环、函数、事件等。
 - [介绍 JavaScript 对象](/zh-CN/docs/Learn/JavaScript/Objects)
@@ -76,7 +76,7 @@ JavaScript 的核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/
 - [内存管理](/zh-CN/docs/Web/JavaScript/Memory_management)
   - : JavaScript 中的内存生命周期和垃圾回收机制。
 - [并发模型以及事件循环](/zh-CN/docs/Web/JavaScript/Event_loop)
-  - : JavaScript 具有基于“事件循环”的并发模型。
+  - : JavaScript 具有基于"事件循环"的并发模型。
 
 ## 参考
 

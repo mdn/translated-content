@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 
 ## 示例
 
-下列的代码可兼容 ES5 及以下版本。然而，在 ECMAScript 2015 (ES6) 或其后续版本中，{{jsxref("Array.prototype.keys()")}} 方法才会出现。意味着内部 `with` 环境“关键字”存在该方法，但变量中不会存在。也就是说，当 `unscopable`s symbol 被展示时，内置的`unscopables` 设置是由 {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} 展示并实现的，一些 Array 的方法 将作为 scoped 放入 `with` 语句中。
+下列的代码可兼容 ES5 及以下版本。然而，在 ECMAScript 2015 (ES6) 或其后续版本中，{{jsxref("Array.prototype.keys()")}} 方法才会出现。意味着内部 `with` 环境"关键字"存在该方法，但变量中不会存在。也就是说，当 `unscopable`s symbol 被展示时，内置的`unscopables` 设置是由 {{jsxref("Array.@@unscopables", "Array.prototype[@@unscopables]")}} 展示并实现的，一些 Array 的方法 将作为 scoped 放入 `with` 语句中。
 
 ```js
 var keys = [];

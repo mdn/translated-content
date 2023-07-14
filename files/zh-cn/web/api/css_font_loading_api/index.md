@@ -33,7 +33,7 @@ const font = new FontFace("myfont", "url(myfont.woff)", {
 });
 ```
 
-> **备注：** 与 `@font-face` 一样，一些描述符表示期望的字体属性并用于字体匹配，而其他描述符为设置、定义生成的字体的属性。例如，将 `style` 设置为“斜体”表示文件包含斜体字体，将由开发者指定一个符合此条件的文件。
+> **备注：** 与 `@font-face` 一样，一些描述符表示期望的字体属性并用于字体匹配，而其他描述符为设置、定义生成的字体的属性。例如，将 `style` 设置为"斜体"表示文件包含斜体字体，将由开发者指定一个符合此条件的文件。
 
 对于*二进制*字体，如果字体定义有效并且成功加载会把 {{domxref('FontFace.status')}} 设置为 `loaded`，否则会设置为 `failed`。对于 URL 字体，字体有效，且未被加载时 `FontFace.status` 会被设置为 `unloaded`，若字体无效则设置为 `failed`。
 
@@ -234,7 +234,7 @@ document.fonts.ready.then(function () {
 
 #### 结果
 
-下面的页面显示了用“Oxygen”字体绘制的文本。还显示了事件的日志以及 `document.fonts.ready` 返回的 promise 兑现时的输出。
+下面的页面显示了用"Oxygen"字体绘制的文本。还显示了事件的日志以及 `document.fonts.ready` 返回的 promise 兑现时的输出。
 
 {{ EmbedLiveSample('使用事件加载字体', 700, 520) }}
 

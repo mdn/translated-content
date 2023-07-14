@@ -11,7 +11,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 > **备注：** 本指南的语言方面主要适用于英语文档。其他语言可能有（并且欢迎创建）他们自己的风格指南。这些应该作为各自的本地化团队页面的子页面发布。然而，在格式化和组织内容时，仍应参考本指南。
 
-> **备注：** 简体中文翻译时的规范请参见《[简体中文翻译指南](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md)》，当然“简体中文翻译指南”仅列出了常见的规范，这份文档较为详细一点，在翻译时，参考一些相关内容也是有益的。
+> **备注：** 简体中文翻译时的规范请参见《[简体中文翻译指南](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md)》，当然"简体中文翻译指南"仅列出了常见的规范，这份文档较为详细一点，在翻译时，参考一些相关内容也是有益的。
 
 在列出一般的写作准则后，本指南介绍了 MDN Web 文档的推荐写作风格，然后介绍了如何对页面上的不同组件进行格式化，如列表和标题。
 
@@ -22,7 +22,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 以下各小节提供了实现这一目标的建议：
 
 - [考虑你的目标受众](#考虑你的目标受众)
-- [考虑写作的“3C”准则](#考虑写作的“3c”准则)
+- [考虑写作的"3C"准则](#考虑写作的"3c"准则)
 - [包含相关的示例](#包含相关的示例)
 - [提供描述性的介绍](#提供描述性的介绍)
 - [使用包容性语言](#使用包容性语言)
@@ -32,9 +32,9 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 牢记你所写内容的目标受众。例如，一个关于高级网络技术的页面可能不需要像典型的网络页面那样详细介绍基本的网络概念。请记住，这些是指导方针。其中一些提示不一定适用于每一种情况。
 
-### 考虑写作的“3C”准则
+### 考虑写作的"3C"准则
 
-好文章的“3C”准则是指清晰性（clearly）、简洁性（concisely）和一致性（consistently）。
+好文章的"3C"准则是指清晰性（clearly）、简洁性（concisely）和一致性（consistently）。
 
 - **清晰性**：确保你的行文清晰而简单。一般来说，使用主动语态和不含糊的代词。写短句子，每句坚持一个观点。在使用新的术语之前，要对其进行定义，保持目标受众。
 - **简洁性**：在撰写任何文档时，知道该说多少是很重要的。如果你提供了过多的细节，页面就会变得乏味难读，而且很少会被使用。
@@ -52,7 +52,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 在指南或教程中，介绍性段落应该告诉读者将涵盖的主题，以及读者应该具备的先决知识（如果有的话）。开头一段应该提到正在记录或讨论的技术和/或 API，并提供相关信息的链接，还应该对文章内容可能有用的情况提供提示。
 
-- **过于简短的简介示例**：下面这个例子中的简介太过于简短，很多信息都没有包含进来，比如“stroke”文本意味着什么，文本会在哪里等。
+- **过于简短的简介示例**：下面这个例子中的简介太过于简短，很多信息都没有包含进来，比如"stroke"文本意味着什么，文本会在哪里等。
 
   > **`CanvasRenderingContext2D.strokeText()`** draws a string.
 
@@ -86,13 +86,13 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本的包容性。以下是文档中使用的常用术语的一些替代方案：
 
-- 不使用“**master**”和“**slave**”，而使用“**main**”和“**replica**”
-- 不使用“**whitelist**”和“**blacklist**”，而使用“**allowlist**”和“**denylist**”
-- 不使用“**Sanity**”而使用“**coherence**”
-- 不使用“**dummy**”而使用“**placeholder**”
-- 不要在文档中使用“**crazy**”和“**insane**”，如果真的需要的话，考虑使用“**fantastic**”代替
+- 不使用"**master**"和"**slave**"，而使用"**main**"和"**replica**"
+- 不使用"**whitelist**"和"**blacklist**"，而使用"**allowlist**"和"**denylist**"
+- 不使用"**Sanity**"而使用"**coherence**"
+- 不使用"**dummy**"而使用"**placeholder**"
+- 不要在文档中使用"**crazy**"和"**insane**"，如果真的需要的话，考虑使用"**fantastic**"代替
 
-在任何性别无关的场合使用性别中立的表述方式是一种比较好的做法，这样可以使你的文章具有普适性。举个例子，如果你正在写的是关于某个男人的行为，那么使用“he”或“his”来指代是没问题的；但如果内容并没有特指是男还是女，那么再使用“he”或“his”就不太恰当了。
+在任何性别无关的场合使用性别中立的表述方式是一种比较好的做法，这样可以使你的文章具有普适性。举个例子，如果你正在写的是关于某个男人的行为，那么使用"he"或"his"来指代是没问题的；但如果内容并没有特指是男还是女，那么再使用"he"或"his"就不太恰当了。
 
 让我们再看几个例子：
 
@@ -103,9 +103,9 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
 - **正确**：A confirmation dialog appears, asking the user if they allow the Web page to make use of their Web cam.
 
-> **备注：** MDN 允许在这里使用第三人称复数，也就是通常所说的“[单数形式的‘they’](https://zh.wikipedia.org/wiki/单数they)”。中性代名词包括：“they”、“them”、“their”和“theirs”。
+> **备注：** MDN 允许在这里使用第三人称复数，也就是通常所说的"[单数形式的'they'](https://zh.wikipedia.org/wiki/单数they)"。中性代名词包括："they"、"them"、"their"和"theirs"。
 
-或者使用复数形式的“users”：
+或者使用复数形式的"users"：
 
 - **正确**：A confirmation dialog appears, asking the users if they allow the web page to make use of their web cams.
 
@@ -134,11 +134,11 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
   如果时间允许，避免过于相似的最简单方法当然是从头开始写每一篇文章。
 
-- **确保页面不会太短**：如果一个页面上的内容太少（在 SEO 术语中称为“薄页（thin page）”），搜索引擎将不会对这种页面进行准确的分类。内容过短的页面很难找到。作为一个指导原则，确保 MDN Web 文档上的页面内容不少于 300 字左右。不要人为地撑满一个页面，但在可能的情况下，将这一准则作为一个最小的目标长度。
+- **确保页面不会太短**：如果一个页面上的内容太少（在 SEO 术语中称为"薄页（thin page）"），搜索引擎将不会对这种页面进行准确的分类。内容过短的页面很难找到。作为一个指导原则，确保 MDN Web 文档上的页面内容不少于 300 字左右。不要人为地撑满一个页面，但在可能的情况下，将这一准则作为一个最小的目标长度。
 
   这里有一些基本准则，可以帮助你创建有足够内容的页面，使其可以正常搜索，而不至于用不必要的文字把它们弄得很乱：
 
-  - **避免占位符**：很明显，如果文章存在占位符或缺少内容，请补充上相应的内容。我们尽量避免在 MDN Web 文档上出现直接的“占位符”页面，尽管它们确实存在，但有很多页面缺少大量的内容。
+  - **避免占位符**：很明显，如果文章存在占位符或缺少内容，请补充上相应的内容。我们尽量避免在 MDN Web 文档上出现直接的"占位符"页面，尽管它们确实存在，但有很多页面缺少大量的内容。
   - **审查页面结构**：审查页面以确保它的结构对于[页面类型](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types)来说是正确的。要确保它应该有的每一节都存在，并有适当的内容。
   - **确保完整性**：审查各节以确保没有遗漏任何信息。确保所有的参数都被列出并解释。确保涵盖任何例外情况——这是一个特别常见的内容缺失的地方。
   - **确保所有的概念都得到充实**：对某件事进行快速解释很容易，但要确保涵盖所有的细微差别。是否有特殊情况？是否有读者可能需要了解的任何已知限制？
@@ -173,7 +173,7 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
   - **正确**："XUL (XML User Interface Language) is Mozilla's XML-based language..."
   - **错误**："XUL is Mozilla's XML-based language..."
 
-- **大写形式及句点：** 在这两种缩写中（包括国家和组织的缩写，如“US”、“UN”），请使用全大写且不要添加句号。
+- **大写形式及句点：** 在这两种缩写中（包括国家和组织的缩写，如"US"、"UN"），请使用全大写且不要添加句号。
 
   - **正确**：XUL
   - **错误**：X.U.L.; Xul
@@ -207,14 +207,14 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
   > **备注：** 在使用前请仔细思考使用拉丁文缩写是否真的能带来好处。上面列出的某些缩写很少用到，很多读者可能不知道其意思，还有一些读者可能会分不清其中的某些缩写。
   >
-  > 另外，如果你决定使用缩写，那么请确保*你*的用法是正确的。比如，一个很多人经常会犯的错误是将“e.g.”和“i.e.”弄混。
+  > 另外，如果你决定使用缩写，那么请确保*你*的用法是正确的。比如，一个很多人经常会犯的错误是将"e.g."和"i.e."弄混。
 
 - **缩写和缩略语的复数形式**：当需要使用复数形式的缩写或缩略语时，直接在后面加上 _s_ 即可，请务必不要加撇号。
 
   - **正确**：CD-ROMs
   - **错误**：CD-ROM's
 
-- **“Versus”、“vs.”和“v.”**：如果使用缩略语，“vs.”比“v.”更好，可以在标题中使用。在文本的其他地方，使用全拼形式“versus”。
+- **"Versus"、"vs."和"v."**：如果使用缩略语，"vs."比"v."更好，可以在标题中使用。在文本的其他地方，使用全拼形式"versus"。
 
   - **正确**：this vs. that
   - **错误**：this v. that
@@ -222,11 +222,11 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
 ### 大写
 
-在文章内容中请使用标准英文大写规则，比如对于“World Wide Web”需大写每个单词的首字母。如果“web”和“internet”是单独使用或作为修饰词使用，那么将其全小写也可以。
+在文章内容中请使用标准英文大写规则，比如对于"World Wide Web"需大写每个单词的首字母。如果"web"和"internet"是单独使用或作为修饰词使用，那么将其全小写也可以。
 
-> **备注：** 这一指导原则是后来修改过的，所以在 MDN 中你也许会看到很多首字母大写的“Web”和“Internet”。当你编辑文章的时候遇到这种情况，可以随它去，也可以随手修改一下。但是仅仅只是为了修改一下大写的话就没必要专门去编辑一下了。
+> **备注：** 这一指导原则是后来修改过的，所以在 MDN 中你也许会看到很多首字母大写的"Web"和"Internet"。当你编辑文章的时候遇到这种情况，可以随它去，也可以随手修改一下。但是仅仅只是为了修改一下大写的话就没必要专门去编辑一下了。
 
-对于键盘按键，应该使用普通的大写规则，而不是全大写。比如，是“<kbd>Enter</kbd>”而不是“<kbd>ENTER</kbd>”。不过你可以使用“<kbd>ESC</kbd>”作为“<kbd>EScape</kbd>”的缩写。
+对于键盘按键，应该使用普通的大写规则，而不是全大写。比如，是"<kbd>Enter</kbd>"而不是"<kbd>ENTER</kbd>"。不过你可以使用"<kbd>ESC</kbd>"作为"<kbd>EScape</kbd>"的缩写。
 
 某些单词应始终大写（例如商标中的大写字母），或源自某人姓名的单词（除非它在代码中使用，并且代码的语法要求小写）。以下是一些例子：
 
@@ -236,7 +236,7 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
 ### 口头缩略
 
-我们倾向于宽松的写作风格，所以你可以按你的喜好来决定是否使用简写（如“don't”、“can't”、“shouldn't”）。
+我们倾向于宽松的写作风格，所以你可以按你的喜好来决定是否使用简写（如"don't"、"can't"、"shouldn't"）。
 
 ### 数字和数词
 
@@ -245,22 +245,22 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
   - **正确**：4000、54,000
   - **错误**：4,000、54000
 
-- **日期**：请用“January 1, 1990”这样的形式来表达日期（不包括代码示例中的日期）。
+- **日期**：请用"January 1, 1990"这样的形式来表达日期（不包括代码示例中的日期）。
 
   - **正确**：February 24, 1906
   - **错误**：February 24th, 1906、24 February, 1906、24/02/1906
 
-  或者你也可以使用“YYYY/MM/DD”的形式：
+  或者你也可以使用"YYYY/MM/DD"的形式：
 
   - **正确**：1906/02/24
   - **错误**：02/24/1906、24/02/1906、02/24/06
 
-- **年代**：请使用“1990s”这种形式来表示年代，但不要使用撇号：
+- **年代**：请使用"1990s"这种形式来表示年代，但不要使用撇号：
 
   - **正确**：1920s
   - **错误**：1920's
 
-- **数词的复数**：数词的复数直接在后面加“s”，同样不要使用撇号：
+- **数词的复数**：数词的复数直接在后面加"s"，同样不要使用撇号：
 
   - **正确**：486s
   - **错误**：486's
@@ -277,7 +277,7 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 不要使用弯引号。在 MDN Web 文档中，我们只使用直角引号和直角撇号。这是因为我们需要选择一个或另一个来保证一致性。如果大括号或撇号进入代码片段，甚至是内联的代码片段，读者可能会复制和粘贴它们，期望它们能发挥作用（其实不会）。
 
 - **正确**：Please don't use "curly quotes."
-- **错误**：Please don’t use “curly quotes.”
+- **错误**：Please don't use "curly quotes."
 
 > **备注：** 中文与英文的使用习惯是不同的，在翻译时，应该遵循[简体中文翻译指南 - 标点符号](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号)中的有关说明。
 
@@ -297,17 +297,17 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
     - **正确**："On mobile platforms, you tend to get a numeric keypad for entering data."
     - **错误**："On mobile platforms you tend to get a numeric keypad for entering data."
 
-- **在连接词之前**：串行逗号（也称为“牛津逗号”）是指在三个或更多项目的系列中出现在连词前的逗号。在 MDN Web 文档上，我们使用串行逗号。逗号还可以分隔列表中的每个项目。
+- **在连接词之前**：串行逗号（也称为"牛津逗号"）是指在三个或更多项目的系列中出现在连词前的逗号。在 MDN Web 文档上，我们使用串行逗号。逗号还可以分隔列表中的每个项目。
 
   - **正确**：I will travel on trains, planes, and automobiles.
   - **错误**：I will travel on trains, planes and automobiles.
 
-  在包含两个项目的列表中，不要在“and”或“or”之前使用逗号。
+  在包含两个项目的列表中，不要在"and"或"or"之前使用逗号。
 
   - **正确**："My dog is cute and smart."
   - **错误**："My dog is cute, and smart."
 
-  如果连词“and”、“but”和“or”连接两个独立分句，则在其前面使用逗号。但是，如果句子在连词的作用下变得很长或很复杂，可以考虑将其改写成两个句子。
+  如果连词"and"、"but"和"or"连接两个独立分句，则在其前面使用逗号。但是，如果句子在连词的作用下变得很长或很复杂，可以考虑将其改写成两个句子。
 
   - 示例 1：
     - **正确**："You can perform this step, but you need to pay attention to the file setting."
@@ -316,24 +316,24 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
     - **正确**："My father is strict but loving."
     - **错误**："My father is strict, but loving."
 
-  > **备注：** 这种情况在翻译成简体中文时应将逗号翻译为顿号。“简体中文翻译指南”一文的[标点符号](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号)”一节中也提到了这个问题。
+  > **备注：** 这种情况在翻译成简体中文时应将逗号翻译为顿号。"简体中文翻译指南"一文的[标点符号](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号)"一节中也提到了这个问题。
 
-- **在“that”和“which”之前：** 限制性从句对句子的意义至关重要，不需要用逗号将其与其余句子隔开。限制性从句通常由“that”引入，**不应**在其前面加逗号。
+- **在"that"和"which"之前：** 限制性从句对句子的意义至关重要，不需要用逗号将其与其余句子隔开。限制性从句通常由"that"引入，**不应**在其前面加逗号。
 
   - **正确**："We have put together a course that includes all the essential information you need to work towards your goal."
   - **错误**："We have put together a course, that includes all the essential information you need to work towards your goal."
 
-  非限制性从句提供额外的信息，对句子的意思不是至关重要的。非限制性从句通常由“which”引入，前面应加一个逗号。
+  非限制性从句提供额外的信息，对句子的意思不是至关重要的。非限制性从句通常由"which"引入，前面应加一个逗号。
 
   - **正确**："You write a policy, which is an allowed list of origins for each feature."
   - **错误**："You write a policy which is an allowed list of origins for each feature."
 
-- **在“such as”之前**：如果“such as”是一个非限制性从句的一部分，而剩下的句子是一个独立的从句，在“such as”前使用逗号。
+- **在"such as"之前**：如果"such as"是一个非限制性从句的一部分，而剩下的句子是一个独立的从句，在"such as"前使用逗号。
 
   - **正确：** "The Array object has methods for manipulating arrays in various ways, such as joining, reversing, and sorting them."
   - **错误：** "The Array object has methods for manipulating arrays in various ways such as joining, reversing, and sorting them."
 
-  下面的例子显示了什么时候不能用逗号与“such as”搭配。在这里，包含“such as”的句子对句子的意义至关重要。
+  下面的例子显示了什么时候不能用逗号与"such as"搭配。在这里，包含"such as"的句子对句子的意义至关重要。
 
   - **正确**："Web applications are becoming more powerful by adding features such as audio and video manipulation and allowing access to raw data using WebSockets."
   - **错误**："Web applications are becoming more powerful by adding features, such as audio and video manipulation, and allowing access to raw data using WebSockets."
@@ -349,21 +349,21 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 
 请使用美式英语拼写。
 
-一般来说，使用 [Dictionary.com](https://www.dictionary.com/) 中的第一个条目，除非该条目被列为变体拼写或主要用于非美国形式的英语中。例如，如果你[查找“behaviour”一词](https://www.dictionary.com/browse/behaviour)（在美式英语基础上增加了一个字母 _u_），你会发现“Chiefly British”（通常是英式英语）这个短语，后面还有一个链接到美式英语标准形式，[“behavior”](https://www.dictionary.com/browse/behavior)的链接。不要使用变体拼写。
+一般来说，使用 [Dictionary.com](https://www.dictionary.com/) 中的第一个条目，除非该条目被列为变体拼写或主要用于非美国形式的英语中。例如，如果你[查找"behaviour"一词](https://www.dictionary.com/browse/behaviour)（在美式英语基础上增加了一个字母 _u_），你会发现"Chiefly British"（通常是英式英语）这个短语，后面还有一个链接到美式英语标准形式，["behavior"](https://www.dictionary.com/browse/behavior)的链接。不要使用变体拼写。
 
 - **正确**：localize、behavior、color
 - **错误**：localise、behaviour、colour
 
 ### 术语
 
-- **HTML 元素**：请使用“element”来表示 HTML 和 XML 元素，不要使用“tag”。另外，请在元素名称两边使用尖括号“<>”括起来，并使用 {{HTMLElement("code")}} 样式。
+- **HTML 元素**：请使用"element"来表示 HTML 和 XML 元素，不要使用"tag"。另外，请在元素名称两边使用尖括号"<>"括起来，并使用 {{HTMLElement("code")}} 样式。
 
   当文章中第一次出现某个元素的时候，应该用 [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) 宏创建一个指向该元素文档的链接（除非你正在撰写的恰好是该元素的文档页面）。
 
   - **正确**：{{HTMLElement("span")}} element
   - **错误**：span tag
 
-- **Parameters 和 arguments**：MDN Web 文档上推荐使用 **parameters** 术语，为了保持一致性，如果可能的话请尽量避免使用“arguments”。
+- **Parameters 和 arguments**：MDN Web 文档上推荐使用 **parameters** 术语，为了保持一致性，如果可能的话请尽量避免使用"arguments"。
 
 - **用户界面操作**：在说明一系列操作步骤时，应使用祈使语气来描述用户的操作，并用 UI 组件的名称和其元素类型来标识操作对象。
 
@@ -384,7 +384,7 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 - [标题级别](#标题级别)
 - [图片及其他媒体](#图片及其他媒体)
 - [列表](#列表)
-- [“参见”部分](#“参见”部分)
+- ["参见"部分](#"参见"部分)
 - [子页面](#子页面)
 - [路径名](#路径名)
 - [标题](#标题)
@@ -394,8 +394,8 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
 MDN Web 文档上的一个页面可以包含一个以上的代码示例。以下列表介绍了为 MDN Web 文档编写代码范例时的一些推荐做法：
 
 - 每一段示例代码应包括：
-  - **标题**：一个简短的 `###`（`<h3>`）标题，用来描述通过代码实例演示的情景。例如，“Using offset printing”和“Reverting to style in previous layer”。
-  - **描述**：在示例代码前的简短描述，说明你想引起读者注意的示例的具体内容。例如，“In the example below, two cascade layers are defined in the CSS, `base` and `special`.”。
+  - **标题**：一个简短的 `###`（`<h3>`）标题，用来描述通过代码实例演示的情景。例如，"Using offset printing"和"Reverting to style in previous layer"。
+  - **描述**：在示例代码前的简短描述，说明你想引起读者注意的示例的具体内容。例如，"In the example below, two cascade layers are defined in the CSS, `base` and `special`."。
   - **结果解释**：在示例代码之后的解释，描述结果和代码的工作原理。
 - 一般来说，代码示例不仅要展示该功能的语法和使用方法，而且要强调 web 开发人员可能想要或需要使用该功能的目的和情况。
 - 如果你正在处理一大段示例代码，把它分解成较小的逻辑部分，以便对它们进行单独描述，这可能是有意义的。
@@ -439,7 +439,7 @@ MDN Web 文档上的一个页面可以包含一个以上的代码示例。以下
 
 ### 短链接
 
-URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小的、更容易记住的 URL（也称为“短链接”）。然而，它们也混淆了 URL 的目的地址。此外，在某些缩短器中，目的地址可以在创建后被改变，这一功能可能被用于恶意目的。
+URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小的、更容易记住的 URL（也称为"短链接"）。然而，它们也混淆了 URL 的目的地址。此外，在某些缩短器中，目的地址可以在创建后被改变，这一功能可能被用于恶意目的。
 
 不要使用通过第三方（用户生成的）URL 缩短器创建的链接。例如，如果 `https://myshort.link/foobar` 是一个由随机用户生成的短网址，并重定向到 `https://example.com/somelongURL/details/show?page_id=foobar`，则使用较长的 `example.com` 网址。
 
@@ -456,7 +456,7 @@ URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小�
 在创建分节的标题时，请记住以下注意事项：
 
 - **不要创建只包含一个小节的子级别**。如果只有一个小节，那么拆分主题就是没有意义的。至少包含两个小节，要么就不要拆分。
-- **不要在标题中使用内联样式、类或宏调用**。然而你可以使用反引号指示代码术语（例如“Using `FooBar` interface”）。
+- **不要在标题中使用内联样式、类或宏调用**。然而你可以使用反引号指示代码术语（例如"Using `FooBar` interface"）。
 - **不要让两个小节标题紧挨在一起**。这是标题后面紧跟着一个副标题，中间没有内容文字的情况，看起来很丑。每个小节标题的下面至少要放上一段对后面各子小节的简短说明，这会对阅读的人很有帮助。
 
 ### 图片及其他媒体
@@ -506,13 +506,13 @@ URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小�
 
   请注意有序列表中的项目如何像简短的段落一样阅读。因为有序列表通常用于教学目的或引导人们完成一个有序的程序，所以要确保每个项目都有重点：每个步骤有一个编号的项目。
 
-### “参见”部分
+### "参见"部分
 
-MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章的结尾处包含一个*参见*部分。这是一个参考部分，包含了 MDN 内相关主题的交叉引用，有时还包含了相关外部文章的链接。例如，这是 `@layer` 页面的[“参见”部分](/zh-CN/docs/Web/CSS/@layer#参见)。
+MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章的结尾处包含一个*参见*部分。这是一个参考部分，包含了 MDN 内相关主题的交叉引用，有时还包含了相关外部文章的链接。例如，这是 `@layer` 页面的["参见"部分](/zh-CN/docs/Web/CSS/@layer#参见)。
 
-一般来说，在“参见”部分的链接以[项目符号列表](#列表)格式呈现，列表中的每一项都是一个短语。然而，在 MDN 的[学习网页开发](/zh-CN/docs/Learn)区域，“参见”部分遵循[定义列表](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定义列表)格式。
+一般来说，在"参见"部分的链接以[项目符号列表](#列表)格式呈现，列表中的每一项都是一个短语。然而，在 MDN 的[学习网页开发](/zh-CN/docs/Learn)区域，"参见"部分遵循[定义列表](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定义列表)格式。
 
-为了保持整个 MDN Web 文档的一致性，在添加或更新“参见”部分时，请记住以下准则。
+为了保持整个 MDN Web 文档的一致性，在添加或更新"参见"部分时，请记住以下准则。
 
 #### 链接文字
 
@@ -530,9 +530,9 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 
 - 保持链接周围的描述性文字尽量少。如果有描述，就在链接文本和冒号之后添加。把描述写成一个短语，没有结尾的标点符号。将所有的链接文本放在开头，有助于粗读链接列表。
   - **正确**：{{cssxref(":checked")}}, {{cssxref(":indeterminate")}}: CSS selectors for styling checkboxes
-- 不要在系列的最后一个项目前使用连词“and”。
+- 不要在系列的最后一个项目前使用连词"and"。
   - **正确**：{{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("color")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}: Other color-related properties
-- 在外部链接和源网站之后，在括号内提及文章发表的日期或年份。使用“January 1, 1900”的格式来指定日期。出版日期不仅有助于告知读者所链接内容的相关性，而且还有助于作者审查那些非常古老的链接。例如，要链接到 [Top-level await](https://v8.dev/features/top-level-await) 的外部文章，参照会这样书写：
+- 在外部链接和源网站之后，在括号内提及文章发表的日期或年份。使用"January 1, 1900"的格式来指定日期。出版日期不仅有助于告知读者所链接内容的相关性，而且还有助于作者审查那些非常古老的链接。例如，要链接到 [Top-level await](https://v8.dev/features/top-level-await) 的外部文章，参照会这样书写：
   - [Top-level await](https://v8.dev/features/top-level-await) on v8.dev (October 8, 2019)
 
 #### 链接顺序
@@ -581,11 +581,11 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
   - **由浅入深**：如[标题级别](#标题级别)部分所述，从较高的 `##` 到较低的 `####` 排布内容，中间不要跳级。使用较高层次的标题作为广泛的介绍性标题，并在进入较低层次的标题时使用更具体的标题。
   - **按逻辑分组**：确保所有相关的小节都在一个较高层次的标题下有逻辑地组合在一起。命名各部分的标题可以帮助你完成这项工作。
   - **保持标题简短**：较短的标题更容易在文本和目录中粗读。
-  - **保持标题具体**：使用标题来表达本节将涉及的具体信息。例如，对于介绍 HTML 元素的章节，使用标题“HTML 元素”，而不是“介绍”或“概述”。
-  - **保持标题的重点**：使用标题来表达一个目标——该部分将涉及的一个想法或概念。为此，尽可能不要在标题中使用连词“and”。
-  - **使用平行结构**：在同一标题层次上，使用类似的语言作为标题。例如，如果一个 `###` 标题级别的标题使用动名词，即以“-ing”结尾的词，如“Installing”，那么尽量将该标题级别的所有标题都使用动名词。如果一个标题以祈使动词开头，如“Use”、“Configure”，那么该标题层的所有标题都以祈使动词开头。
-  - **避免在较低层次的标题中使用普通术语**：不要在下级标题中重复上级标题中的文字。例如，在一个标题为“Commas”的章节中，将一个小节的标题命名为“After introductory clauses”，而不是“Commas after introductory clauses”。
-  - **不要以冠词开头**：避免以冠词“a”、“an”或“the”开始标题。
+  - **保持标题具体**：使用标题来表达本节将涉及的具体信息。例如，对于介绍 HTML 元素的章节，使用标题"HTML 元素"，而不是"介绍"或"概述"。
+  - **保持标题的重点**：使用标题来表达一个目标——该部分将涉及的一个想法或概念。为此，尽可能不要在标题中使用连词"and"。
+  - **使用平行结构**：在同一标题层次上，使用类似的语言作为标题。例如，如果一个 `###` 标题级别的标题使用动名词，即以"-ing"结尾的词，如"Installing"，那么尽量将该标题级别的所有标题都使用动名词。如果一个标题以祈使动词开头，如"Use"、"Configure"，那么该标题层的所有标题都以祈使动词开头。
+  - **避免在较低层次的标题中使用普通术语**：不要在下级标题中重复上级标题中的文字。例如，在一个标题为"Commas"的章节中，将一个小节的标题命名为"After introductory clauses"，而不是"Commas after introductory clauses"。
+  - **不要以冠词开头**：避免以冠词"a"、"an"或"the"开始标题。
   - **添加引导性信息**：在标题之后，添加一些介绍性的文字，解释该部分将涉及的内容。
 
 ## 其他参考资料

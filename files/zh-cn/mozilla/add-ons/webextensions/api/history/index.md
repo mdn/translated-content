@@ -16,7 +16,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/history
 - [向浏览器历史记录中添加页面](/zh-CN/Add-ons/WebExtensions/API/history/addUrl)
 - [移除所有浏览器历史记录中的页面](/zh-CN/Add-ons/WebExtensions/API/history/deleteAll)
 
-然而，用户可能多次访问单个页面，因此 API 中有访问集合“visits”的概念。所以，该 API 还可以做如下使用：
+然而，用户可能多次访问单个页面，因此 API 中有访问集合"visits"的概念。所以，该 API 还可以做如下使用：
 
 - [获取用户对单个页面的所有访问记录的集合](/zh-CN/Add-ons/WebExtensions/API/history/getVisits)
 - [移除给定期间内任意页面的访问记录的集合](/zh-CN/Add-ons/WebExtensions/API/history/deleteRange)

@@ -33,7 +33,7 @@ p {
 
 ![一个 Mozilla 徽标和一些段落，段落文字通过 css 设置为红色](website-screenshot-styled.png)如果段落文字变红，那么祝贺你，CSS 样式已经生效了。
 
-### “CSS 规则集”详解
+### "CSS 规则集"详解
 
 让我们来剖析一下红色段落文字的 CSS 代码，了解它是如何工作的：
 
@@ -220,7 +220,7 @@ html {
 }
 ```
 
-这条规则为整个页面设置了背景颜色。将颜色代码修改为设置为[在“我的网站将会是什么样子？”中所选择的颜色](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#主题颜色)。
+这条规则为整个页面设置了背景颜色。将颜色代码修改为设置为[在"我的网站将会是什么样子？"中所选择的颜色](/zh-CN/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like#主题颜色)。
 
 ### 文档体样式
 

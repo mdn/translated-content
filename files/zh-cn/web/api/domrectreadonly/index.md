@@ -10,7 +10,7 @@ slug: Web/API/DOMRectReadOnly
 ## 构造函数
 
 - {{domxref("DOMRectReadOnly.DOMRectReadOnly","DOMRectReadOnly()")}}
-  - : 用来创建新的 `DOMRectReadOnly` 对象，但请注意，该构造函数不能由第三方 JavaScript 调用：这样做将返回“Illegal constructor”类型错误。
+  - : 用来创建新的 `DOMRectReadOnly` 对象，但请注意，该构造函数不能由第三方 JavaScript 调用：这样做将返回"Illegal constructor"类型错误。
 
 ## 属性
 

@@ -5,9 +5,9 @@ slug: Learn/CSS/Building_blocks/The_box_model
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
 
-在 CSS 中，所有的元素都被一个个的“盒子（box）”包围着，理解这些“盒子”的基本原理，是我们使用 CSS 实现准确布局、处理元素排列的关键。
+在 CSS 中，所有的元素都被一个个的"盒子（box）"包围着，理解这些"盒子"的基本原理，是我们使用 CSS 实现准确布局、处理元素排列的关键。
 
-本文围绕“盒模型”为主题展开。旨在于完成学习后，您能够在“理解盒装模型原理”的基础上，完成更加复杂的布局任务。
+本文围绕"盒模型"为主题展开。旨在于完成学习后，您能够在"理解盒装模型原理"的基础上，完成更加复杂的布局任务。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -40,14 +40,14 @@ slug: Learn/CSS/Building_blocks/The_box_model
 
 ## 块级盒子（Block box）和 内联盒子（Inline box）
 
-在 CSS 中我们广泛地使用两种“盒子” —— **块级盒子** (**block box**) 和 **内联盒子** (**inline box**)。这两种盒子会在**页面流**（page flow）和元素之间的关系方面表现出不同的行为：
+在 CSS 中我们广泛地使用两种"盒子" —— **块级盒子** (**block box**) 和 **内联盒子** (**inline box**)。这两种盒子会在**页面流**（page flow）和元素之间的关系方面表现出不同的行为：
 
 一个被定义成块级的（block）盒子会表现出以下行为：
 
 - 盒子会在内联的方向上扩展并占据父容器在该方向上的所有可用空间，在绝大数情况下意味着盒子会和父容器一样宽
 - 每个盒子都会换行
 - {{cssxref("width")}} 和 {{cssxref("height")}} 属性可以发挥作用
-- 内边距（padding）, 外边距（margin）和 边框（border）会将其他元素从当前盒子周围“推开”
+- 内边距（padding）, 外边距（margin）和 边框（border）会将其他元素从当前盒子周围"推开"
 
 除非特殊指定，诸如标题 (`<h1>`等) 和段落 (`<p>`) 默认情况下都是块级的盒子。
 

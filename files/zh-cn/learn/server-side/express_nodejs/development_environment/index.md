@@ -67,7 +67,7 @@ Express 应选用最新版本。
 1. 下载安装包：
 
     1. 访问 <https://nodejs.org/zh-cn/>
-    2. 左侧按钮上写着“推荐多数用户使用（LTS）”，点击下载。
+    2. 左侧按钮上写着"推荐多数用户使用（LTS）"，点击下载。
 
 2. 双击下载的安装包，按照提示即可安装。
 
@@ -98,7 +98,7 @@ $ npm -v
 6.7.0
 ```
 
-下面的测试也许会带来小小激动：创建一个非常基础的“纯 Node”服务器，在浏览器中访问正确的 URL 地址时将直接打印 "Hello world"：
+下面的测试也许会带来小小激动：创建一个非常基础的"纯 Node"服务器，在浏览器中访问正确的 URL 地址时将直接打印 "Hello world"：
 
 1. 以下代码使用了纯 Node 的特性（与 Express 无关）和一些 ES6 的语法，把它复制到 **hellonode.js** 文件中：
 
@@ -129,7 +129,7 @@ $ npm -v
 
     > **备注：** 现在看不懂这些代码请不要担心，开始使用 Express 后候会进行更加详细的解释。
 
-2. 在命令行工具中进入 hellonode.js 文件所在的目录，输入“node + 文件名”并运行，服务器就启动了：
+2. 在命令行工具中进入 hellonode.js 文件所在的目录，输入"node + 文件名"并运行，服务器就启动了：
 
     ```bash
     $ node hellonode.js
@@ -144,7 +144,7 @@ $ npm -v
 
 > **备注：** 以 Node 的角度来看，Express 只是一个用 NPM 安装、供人使用的包而已。
 
-可以用 NPM 手动逐个安装所需包。但通常可用 [package.json](https://docs.npmjs.com/files/package.json) 文件来管理依赖。把每个依赖以一个 JavaScript“包”的形式（其中包括名称、版本、描述，初始执行文件、生产依赖，开发依赖、支持的 _Node_ 版本，等等）罗列在这个文件中。package.json 文件包含 NPM 获取和运行应用程序所需的所有内容（在编写可重用的库时，可以用它把包上传到 NPM 仓库中供其他用户使用）。
+可以用 NPM 手动逐个安装所需包。但通常可用 [package.json](https://docs.npmjs.com/files/package.json) 文件来管理依赖。把每个依赖以一个 JavaScript"包"的形式（其中包括名称、版本、描述，初始执行文件、生产依赖，开发依赖、支持的 _Node_ 版本，等等）罗列在这个文件中。package.json 文件包含 NPM 获取和运行应用程序所需的所有内容（在编写可重用的库时，可以用它把包上传到 NPM 仓库中供其他用户使用）。
 
 ### 添加依赖项
 
@@ -236,7 +236,7 @@ $ npm -v
 
 ### 开发依赖（Development dependencies）
 
-如果一个依赖只在开发过程中用到，应该将其保存为“开发依赖”（这样，包的用户便无需在生产环境中安装它们）。比如，如果要使用 [eslint](http://eslint.org/)（一款流行的 JavaScript lint 工具）可以这样调用 NPM：
+如果一个依赖只在开发过程中用到，应该将其保存为"开发依赖"（这样，包的用户便无需在生产环境中安装它们）。比如，如果要使用 [eslint](http://eslint.org/)（一款流行的 JavaScript lint 工具）可以这样调用 NPM：
 
 ```bash
 npm install eslint --save-dev
@@ -286,7 +286,7 @@ npm run lint
 
 ## 安装 Express 应用生成器
 
-[Express 应用生成器](https://expressjs.com/en/starter/generator.html) 工具可以生成一个 Express 应用的“框架”。可以用 NPM 这样安装它（-g 参数可以把该工具全局安装，那样就可以在任意应用中使用了）：
+[Express 应用生成器](https://expressjs.com/en/starter/generator.html) 工具可以生成一个 Express 应用的"框架"。可以用 NPM 这样安装它（-g 参数可以把该工具全局安装，那样就可以在任意应用中使用了）：
 
 ```bash
 npm install express-generator -g

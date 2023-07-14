@@ -54,7 +54,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持
 
 ### 浮动元素
 
-> “浮动和清除浮动不会在 flex item 上触发浮动和清除行为，并且不会脱离当前文档流。” - [3. Flex Containers](https://www.w3.org/TR/css-flexbox-1/#flex-containers)
+> "浮动和清除浮动不会在 flex item 上触发浮动和清除行为，并且不会脱离当前文档流。" - [3. Flex Containers](https://www.w3.org/TR/css-flexbox-1/#flex-containers)
 
 在下面的示例中，我将两个块级元素浮动，然后给容器设置了 `display: flex`。这两个元素现在变成了弹性盒子元素，意味着它们会伸展使得高度相同，并且没有应用任何浮动行为。
 
@@ -78,7 +78,7 @@ CSS 中表格相关的系列属性可能是非常有用的向下支持技术，�
 
 如果你在父元素上设置了 `display: flex`，这些匿名盒子将不会被创建，这样你的元素就保留直接的子元素并成为了一个弹性盒子元素 — 失去所有表格元素的特性。
 
-> “注意：display 的某些属性值通常会在初始盒子周围触发匿名盒子的创建行为。如果该盒子是一个弹性盒子元素，那么它会先被块级化，使得匿名盒子不会被创建。例如，两个连续的弹性盒子元素设置了 display: table-cell 后，将会成为两个独立分开的 display: block 弹性盒子元素，而不是被包裹近单独的一个匿名表格中。” - [4. Flex Items](https://www.w3.org/TR/css-flexbox-1/#flex-items)
+> "注意：display 的某些属性值通常会在初始盒子周围触发匿名盒子的创建行为。如果该盒子是一个弹性盒子元素，那么它会先被块级化，使得匿名盒子不会被创建。例如，两个连续的弹性盒子元素设置了 display: table-cell 后，将会成为两个独立分开的 display: block 弹性盒子元素，而不是被包裹近单独的一个匿名表格中。" - [4. Flex Items](https://www.w3.org/TR/css-flexbox-1/#flex-items)
 
 {{EmbedGHLiveSample("css-examples/flexbox/browsers/table-cell.html", '100%', 550)}}
 

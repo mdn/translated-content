@@ -19,7 +19,7 @@ ReferenceError: "x" is not defined
 
 在某些地方引用一个不存在的变量的时候。当你使用变量的时候，这个变量必须是已经被声明的，或者你可以确保它在你当前的脚本或作用域 ({{Glossary("scope")}}) 中可用。
 
-> **备注：** 当你加载一个库的时候（例如 jQuery），请确保你在这个库加载完毕后再使用这个库中的变量，如“$”。将你想加载的库的 {{HTMLElement("script")}} 标签放置在你的代码前面。
+> **备注：** 当你加载一个库的时候（例如 jQuery），请确保你在这个库加载完毕后再使用这个库中的变量，如"$"。将你想加载的库的 {{HTMLElement("script")}} 标签放置在你的代码前面。
 
 ## 示例
 
@@ -29,7 +29,7 @@ ReferenceError: "x" is not defined
 foo.substring(1); // ReferenceError: foo is not defined
 ```
 
-“foo”变量没有在任何地方被声明。它需要是某种字符串，这样 {{jsxref("String.prototype.substring()")}} 方法才可以正常工作。
+"foo"变量没有在任何地方被声明。它需要是某种字符串，这样 {{jsxref("String.prototype.substring()")}} 方法才可以正常工作。
 
 ```js example-good
 var foo = 'bar';

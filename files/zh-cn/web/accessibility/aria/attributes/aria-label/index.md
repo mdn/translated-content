@@ -19,7 +19,7 @@ string
 
 #### 示例 1：多标签（Multiple Labels）
 
-在下面的示例中，按钮（button）元素被定义为一个关闭（close）按钮，按钮中间有一个“X”字符。辅助软件并不能知道 X 是什么意思，所以需要 aria-label 标签来为辅助设备提供相应的标识来告诉它这个 button 是 close 的作用。
+在下面的示例中，按钮（button）元素被定义为一个关闭（close）按钮，按钮中间有一个"X"字符。辅助软件并不能知道 X 是什么意思，所以需要 aria-label 标签来为辅助设备提供相应的标识来告诉它这个 button 是 close 的作用。
 
 ```html
 <button aria-label="Close" onclick="myDialog.close()">X</button>

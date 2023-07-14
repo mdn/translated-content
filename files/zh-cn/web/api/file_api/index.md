@@ -18,7 +18,7 @@ slug: Web/API/File_API
 ## 接口
 
 - {{domxref("Blob")}}
-  - : Blob 代表“二进制大对象”（类似于文件的不可变的原始数据对象）；{{domxref("Blob")}} 可以作为文本或二进制数据被读取，或者转换为 {{domxref("ReadableStream")}}，其方法可以用来处理数据。
+  - : Blob 代表"二进制大对象"（类似于文件的不可变的原始数据对象）；{{domxref("Blob")}} 可以作为文本或二进制数据被读取，或者转换为 {{domxref("ReadableStream")}}，其方法可以用来处理数据。
 - {{domxref("File")}}
   - : 提供文件的信息并允许网页中的 JavaScript 代码访问其中的内容。
 - {{domxref("FileList")}}

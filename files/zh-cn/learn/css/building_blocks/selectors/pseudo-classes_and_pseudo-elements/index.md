@@ -119,7 +119,7 @@ article p:first-child::first-line {
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/before-styled.html", '100%', 500)}}
 
-`::before`和`::after`伪元素与`content`属性的共同使用，在 CSS 中被叫做“生成内容”，而且你会见到这种技术被用于完成各种任务。[CSS Arrow Please](http://www.cssarrowplease.com/)网站就是一个著名的示例，它帮你用 CSS 生成一个箭头。在你创建你的箭头的时候看下 CSS，你将会看到实际使用的{{cssxref("::before")}}和{{cssxref("::after")}}伪元素。无论什么时候你看到了这些选择器，都要看下{{cssxref("content")}}属性，以了解文档中添加了什么。
+`::before`和`::after`伪元素与`content`属性的共同使用，在 CSS 中被叫做"生成内容"，而且你会见到这种技术被用于完成各种任务。[CSS Arrow Please](http://www.cssarrowplease.com/)网站就是一个著名的示例，它帮你用 CSS 生成一个箭头。在你创建你的箭头的时候看下 CSS，你将会看到实际使用的{{cssxref("::before")}}和{{cssxref("::after")}}伪元素。无论什么时候你看到了这些选择器，都要看下{{cssxref("content")}}属性，以了解文档中添加了什么。
 
 ## 参考节
 
@@ -168,8 +168,8 @@ article p:first-child::first-line {
 | {{ Cssxref(":out-of-range") }}         | 按区间匹配元素，当值不在区间内的的时候匹配。                                                                                                                                                              |
 | {{ Cssxref(":past") }}                     | 匹配当前元素之前的元素。                                                                                                                                                                                  |
 | {{ Cssxref(":placeholder-shown") }} | 匹配显示占位文字的 input 元素。                                                                                                                                                                           |
-| {{ Cssxref(":playing") }}                 | 匹配代表音频、视频或者相似的能“播放”或者“暂停”的资源的，且正在“播放”的元素。                                                                                                                              |
-| {{ Cssxref(":paused") }}                 | 匹配代表音频、视频或者相似的能“播放”或者“暂停”的资源的，且正在“暂停”的元素。                                                                                                                              |
+| {{ Cssxref(":playing") }}                 | 匹配代表音频、视频或者相似的能"播放"或者"暂停"的资源的，且正在"播放"的元素。                                                                                                                              |
+| {{ Cssxref(":paused") }}                 | 匹配代表音频、视频或者相似的能"播放"或者"暂停"的资源的，且正在"暂停"的元素。                                                                                                                              |
 | {{ Cssxref(":read-only") }}             | 匹配用户不可更改的元素。                                                                                                                                                                                  |
 | {{ Cssxref(":read-write") }}             | 匹配用户可更改的元素。                                                                                                                                                                                    |
 | {{ Cssxref(":required") }}             | 匹配必填的 form 元素。                                                                                                                                                                                    |

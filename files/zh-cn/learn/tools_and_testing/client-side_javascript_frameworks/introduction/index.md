@@ -33,7 +33,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/介绍
 
 ## 有哪些框架？
 
-有很多框架可供你选择，但以下主要介绍目前公认的“四大框架”。
+有很多框架可供你选择，但以下主要介绍目前公认的"四大框架"。
 
 ### Ember
 
@@ -51,7 +51,7 @@ Angular 是一种基于组件的框架，使用声明式的 HTML 模板。在应
 
 ### Vue
 
-在学习了 [AngularJS](https://angularjs.org/) 的源码之后，Evan You（尤雨溪）在 2014 年第一次发布 [Vue](https://vuejs.org/) 。Vue 是“四大框架”中最年轻的，但在最近，它的人气迅速上升。
+在学习了 [AngularJS](https://angularjs.org/) 的源码之后，Evan You（尤雨溪）在 2014 年第一次发布 [Vue](https://vuejs.org/) 。Vue 是"四大框架"中最年轻的，但在最近，它的人气迅速上升。
 
 Vue，就像 [AngularJS](https://angularjs.org/)，用它自己的代码拓展了 HTML。除此之外，它还主要依赖于现代的、标准化的 JavaScript。
 
@@ -257,7 +257,7 @@ _可以使用_ JavaScript 和浏览器的原生功能来实现路由功能，但
 | Vue       | IE9+                                | 基于 HTML    | 基于 HTML、JSX、Pug   |
 | Ember     | 现代的浏览器（IE9+ in Ember version 2.18）| Handlebars    | Handlebars、TypeScript |
 
-> **备注：** 我们描述为“基于 HTML”的 DSL 没有官方名称。它们并不是真正的 DSL，但它们是非标准的 HTML，所以我们认为它们值得强调。
+> **备注：** 我们描述为"基于 HTML"的 DSL 没有官方名称。它们并不是真正的 DSL，但它们是非标准的 HTML，所以我们认为它们值得强调。
 
 参考来源：
 
@@ -296,7 +296,7 @@ Vue 团队[详尽地将 Vue 与其他流行框架进行了比较](https://vuejs.
 
 本模块中介绍的所有框架都支持服务端渲染和客户端渲染。给 React 的 [Next.js](https://nextjs.org/)，给 Vue 的 [Nuxt.js](https://nuxtjs.org/)（是的，这很令人困惑，它们没有关系），给 Ember 的 [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot) 还有给 Angular 的 [Angular Universal](https://angular.io/guide/universal) 。
 
-> **备注：** 有些 SSR 解决方案是由社区编写和维护的，而有些是由框架的维护者提供的“官方”解决方案。
+> **备注：** 有些 SSR 解决方案是由社区编写和维护的，而有些是由框架的维护者提供的"官方"解决方案。
 
 ### 静态站点生成器
 

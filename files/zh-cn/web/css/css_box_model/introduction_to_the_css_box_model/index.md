@@ -13,7 +13,7 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 ## 内容区域
 
-**内容区域**（content area）由内容边界限制，容纳着元素的“真实”内容，例如文本、图像，或是一个视频播放器。它的尺寸为内容宽度（或称 _content-box 宽度_）和内容高度（或称 _content-box 高度_）。它通常含有一个背景颜色（默认颜色为透明）或背景图像。
+**内容区域**（content area）由内容边界限制，容纳着元素的"真实"内容，例如文本、图像，或是一个视频播放器。它的尺寸为内容宽度（或称 _content-box 宽度_）和内容高度（或称 _content-box 高度_）。它通常含有一个背景颜色（默认颜色为透明）或背景图像。
 
 如果 {{cssxref("box-sizing")}} 为 `content-box`（默认），则内容区域的大小可明确地通过 {{cssxref("width")}}、{{cssxref("min-width")}}、{{cssxref("max-width")}}、{{cssxref("height")}}、{{cssxref("min-height")}} 和 {{cssxref("max-height")}} 控制。
 

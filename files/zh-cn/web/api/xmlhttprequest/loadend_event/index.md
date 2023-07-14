@@ -3,7 +3,7 @@ title: loadend
 slug: Web/API/XMLHttpRequest/loadend_event
 ---
 
-loadend 事件总是在一个资源的加载进度停止之后被触发 (例如，在已经触发“error”，“abort”或“load”事件之后)。这适用于 {{domxref("XMLHttpRequest")}} 调用，以及 {{htmlelement("img")}} 或 {{htmlelement("video")}} 之类元素的内容。
+loadend 事件总是在一个资源的加载进度停止之后被触发 (例如，在已经触发"error"，"abort"或"load"事件之后)。这适用于 {{domxref("XMLHttpRequest")}} 调用，以及 {{htmlelement("img")}} 或 {{htmlelement("video")}} 之类元素的内容。
 
 ## General info
 

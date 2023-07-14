@@ -8,7 +8,7 @@ original_slug: Web/API/AbortSignal/timeout
 
 静态方法 **`AbortSignal.timeout()`** 返回一个指定时间后将自动中止的 {{domxref("AbortSignal")}}。
 
-信号在超时时使用 `TimeoutError` {{domxref("DOMException")}} 中止，或者由于按下一个浏览器停止按钮（或者一些内置的“停止”操作）而使用 `AbortError` {{domxref("DOMException")}} 中止。这允许 UI 区分超时错误（通常需要通知用户）和用户触发的错误（不需要通知用户）。
+信号在超时时使用 `TimeoutError` {{domxref("DOMException")}} 中止，或者由于按下一个浏览器停止按钮（或者一些内置的"停止"操作）而使用 `AbortError` {{domxref("DOMException")}} 中止。这允许 UI 区分超时错误（通常需要通知用户）和用户触发的错误（不需要通知用户）。
 
 超时将基于活动的时间，而不是经过的时间，如果代码在指定的的 worker 中运行或者文档在往返缓存时（[bfcache](https://web.dev/bfcache/)），将有效地暂停。
 
@@ -23,7 +23,7 @@ timeout(time)
 ### 参数
 
 - `time`
-  - : 返回的 {{domxref("AbortSignal")}} 将中止之前的“活动”时间（以毫秒为单位）。
+  - : 返回的 {{domxref("AbortSignal")}} 将中止之前的"活动"时间（以毫秒为单位）。
 
 ### 返回值
 
@@ -33,7 +33,7 @@ signal 中止，并且 {{domxref("AbortSignal.reason")}} 属性将在超时时�
 
 ## 示例
 
-以下简单示例展示了一个 fetch 操作，如果其在 5 秒后不成功，则超时。注意，如果不支持该方法、按下浏览器的“停止”按钮或其他原因，也可能失败。
+以下简单示例展示了一个 fetch 操作，如果其在 5 秒后不成功，则超时。注意，如果不支持该方法、按下浏览器的"停止"按钮或其他原因，也可能失败。
 
 ```js
 const url = "https://path_to_large_file.mp4";

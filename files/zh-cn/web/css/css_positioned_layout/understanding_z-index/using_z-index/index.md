@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
 
 在第一个例子 [Stacking without z-index](/zh-CN/CSS/Understanding_z-index/Stacking_without_z-index)中，我们描述了默认的摆放顺序。当你需要指定不同的排列顺序时，只要给元素指定一个 z-index 的数值就可以了。
 
-该属性必须是整数 (正负均可)，它体现了元素在 z 轴的位置。如果你对 z 轴体系不了解，你也可以把它理解成“层叠”，每个层都有一个顺序数，顺序数大的层在上面，小的在下面。
+该属性必须是整数 (正负均可)，它体现了元素在 z 轴的位置。如果你对 z 轴体系不了解，你也可以把它理解成"层叠"，每个层都有一个顺序数，顺序数大的层在上面，小的在下面。
 
 **注意！z-index 只对指定了** [positioned](/zh-CN/CSS/position)**属性的元素有效。**
 

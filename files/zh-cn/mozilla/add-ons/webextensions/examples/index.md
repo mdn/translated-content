@@ -13,7 +13,7 @@ slug: Mozilla/Add-ons/WebExtensions/Examples
 
 如果你想尝试这些示例，有下面三个选择：
 
-1. 克隆代码库，通过[“临时载入附加组件”](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)功能直接从源文件夹中载入扩展组件。在重启浏览器前，该扩展将一直存在。
+1. 克隆代码库，通过["临时载入附加组件"](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)功能直接从源文件夹中载入扩展组件。在重启浏览器前，该扩展将一直存在。
 2. 克隆代码库，使用 [`web-ext`](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) 命令行工具运行安装了扩展的 Firefox。
 3. 克隆代码库，在 Firefox 中使用**文件**>**打开文件**，在 [`build`](https://github.com/mdn/webextensions-examples/tree/main/build) 文件夹中找到这些例子。`build` 文件夹包含所有例子的构建和签名版本。这样就可以永久地安装这些例子了。
 

@@ -5,7 +5,7 @@ slug: Web/API/Window/pagehide_event
 
 {{APIRef("HTML DOM")}}
 
-当浏览器在显示与会话历史记录不同的页面的过程中隐藏当前页面时，**`pagehide`**(页面隐藏) 事件会被发送到一个{{domxref("Window")}} 。例如，当用户单击浏览器的“后退”按钮时，当前页面在显示上一页之前会收到一个`pagehide`(页面隐藏) 事件。
+当浏览器在显示与会话历史记录不同的页面的过程中隐藏当前页面时，**`pagehide`**(页面隐藏) 事件会被发送到一个{{domxref("Window")}} 。例如，当用户单击浏览器的"后退"按钮时，当前页面在显示上一页之前会收到一个`pagehide`(页面隐藏) 事件。
 
 <table class="properties">
   <tbody>

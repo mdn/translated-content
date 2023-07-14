@@ -24,7 +24,7 @@ original_slug: MDN/Contribute/Getting_started
 
 为了做出贡献，你需要拥有一个 GitHub 账号，如果没有，你可以[创建一个](https://github.com/signup)。对于 GitHub 新手，我们鼓励你学习以下由 GitHub 提供的免费课程和阅读资料。当充分补充了这方面的知识后，你可以专心做贡献，而不必同时学习新的技能。
 
-> 注意：没必要为完成*所有*的课程任务和阅读资料而不知所措。在了解了“GitHub 简介”课程后，你应该拥有了足够的知识来为我们贡献。
+> 注意：没必要为完成*所有*的课程任务和阅读资料而不知所措。在了解了"GitHub 简介"课程后，你应该拥有了足够的知识来为我们贡献。
 
 - [GitHub 简介](https://github.com/skills/introduction-to-github)
 - [安装并配置 Git](https://docs.github.com/cn/get-started/quickstart/set-up-git)
@@ -41,7 +41,7 @@ original_slug: MDN/Contribute/Getting_started
 
 一旦你决定了你所做的任务种类，就可以前往[贡献者任务面板](https://github.com/orgs/mdn/projects/25/views/1)中挑选议题，并在评论区中留下评论和提及 `@mdn/mdn-community-engagement` 团队。我们队伍中的成员会回应，且将议题分配给你。
 
-这保证两个人的工作不会“撞车”，并且可以知道在工作遇到困难的时候，你该联系的人。
+这保证两个人的工作不会"撞车"，并且可以知道在工作遇到困难的时候，你该联系的人。
 
 ### 贡献
 

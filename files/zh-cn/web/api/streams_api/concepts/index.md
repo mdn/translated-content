@@ -28,7 +28,7 @@ slug: Web/API/Streams_API/Concepts
 
 一个流一次只能被一个 reader 读取；当一个 reader 被创建并开始读一个流（一个活跃的 reader）时，我们说，它被**锁定**（locked）在该流上。如果你想让另一个 reader 读这个流，则通常需要先取消第一个 reader，再执行其他操作（你也可以**拷贝**该流，请参阅下面的拷贝部分）。
 
-注意，有两种不同类型的可读流。除了传统的可读流之外，还有一种类型叫做字节流——这是传统流的扩展版本，用于读取底层字节源。相比于传统的可读流，字节流被允许通过 BYOB reader 读取（BYOB，“带上你自己的缓冲区”）。这种 reader 可以直接将流读入开发者提供的缓冲区，从而最大限度地减少所需的复制。你的代码将使用哪种底层流（以及使用哪种 reader 和 controller）取决于流最初是如何创建的（请参阅 {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} 构造函数页面）。
+注意，有两种不同类型的可读流。除了传统的可读流之外，还有一种类型叫做字节流——这是传统流的扩展版本，用于读取底层字节源。相比于传统的可读流，字节流被允许通过 BYOB reader 读取（BYOB，"带上你自己的缓冲区"）。这种 reader 可以直接将流读入开发者提供的缓冲区，从而最大限度地减少所需的复制。你的代码将使用哪种底层流（以及使用哪种 reader 和 controller）取决于流最初是如何创建的（请参阅 {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} 构造函数页面）。
 
 你可以使用现成的可读流，例如来自 fetch 请求的 {{domxref("Response.body")}}，也可以使用 {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} 构造函数生成自定义的流。
 

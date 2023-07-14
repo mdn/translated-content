@@ -52,7 +52,7 @@ slug: Web/API/Attr
 - `firstChild` {{Deprecated_Inline}}
   - : `当前该属性总是返回 NULL`
 - `isId` {{readOnlyInline}}
-  - : 表明该属性是否一个“ID 属性”。“ID 属性”的值在整个 DOM 文档中应当是唯一。在 HTML DOM 文档中属性“id”是一个 ID 属性，也是唯一一个 ID 属性；但是在 XML 文档中可以定义其他 ID 属性。一个属性是否是唯一的，通常由{{Glossary("DTD")}}或其他文档模式描述文件决定。
+  - : 表明该属性是否一个"ID 属性"。"ID 属性"的值在整个 DOM 文档中应当是唯一。在 HTML DOM 文档中属性"id"是一个 ID 属性，也是唯一一个 ID 属性；但是在 XML 文档中可以定义其他 ID 属性。一个属性是否是唯一的，通常由{{Glossary("DTD")}}或其他文档模式描述文件决定。
 - `lastChild`
   - : `当前该属性总是返回 NULL`
 - `nextSibling`

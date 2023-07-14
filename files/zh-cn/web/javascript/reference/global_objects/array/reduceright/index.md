@@ -39,7 +39,7 @@ reduceRight(callbackFn, initialValue)
 
 ## 描述
 
-`reduceRight()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的所有元素降序调用“reducer”回调函数，并将它们累积到一个单一的值中。
+`reduceRight()` 方法是一个[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它为数组中的所有元素降序调用"reducer"回调函数，并将它们累积到一个单一的值中。
 
 `callbackFn` 仅为已分配值的数组索引调用。它不会为[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)中的空槽调用。
 

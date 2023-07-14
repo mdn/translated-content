@@ -27,7 +27,7 @@ btoa(stringToEncode)
 ### 异常
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : 该字符串包含非单字节的字符。参见下方的“Unicode 字符串”。
+  - : 该字符串包含非单字节的字符。参见下方的"Unicode 字符串"。
 
 ## 示例
 

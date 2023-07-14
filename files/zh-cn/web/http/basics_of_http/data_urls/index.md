@@ -5,7 +5,7 @@ slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 
 {{HTTPSidebar}}
 
-**Data URL**，即前缀为 `data:` 协议的 URL，其允许内容创建者向文档中嵌入小文件。它们之前被称作“data URI”，直到这个名字被 WHATWG 弃用。
+**Data URL**，即前缀为 `data:` 协议的 URL，其允许内容创建者向文档中嵌入小文件。它们之前被称作"data URI"，直到这个名字被 WHATWG 弃用。
 
 > **备注：** 现代浏览器将 Data URL 视作唯一的不透明来源，而不是可以用于导航的 URL。
 
@@ -19,7 +19,7 @@ data:[<mediatype>][;base64],<data>
 
 `mediatype` 是个 [MIME 类型](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)的字符串，例如 `'image/jpeg'` 表示 JPEG 图像文件。如果被省略，则默认值为 `text/plain;charset=US-ASCII`。
 
-如果数据包含 [RFC 3986 中定义为保留字符](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2)的字符或包含空格符、换行符或者其他非打印字符，这些字符必须进行[百分号编码](/zh-CN/docs/Glossary/percent-encoding)（又名“URL 编码”）。
+如果数据包含 [RFC 3986 中定义为保留字符](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2)的字符或包含空格符、换行符或者其他非打印字符，这些字符必须进行[百分号编码](/zh-CN/docs/Glossary/percent-encoding)（又名"URL 编码"）。
 
 如果数据是文本类型，你可以直接将文本嵌入（根据文档类型，使用合适的实体字符或转义字符）。否则，你可以指定 `base64` 来嵌入 base64 编码的二进制数据。你可以在[这里](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types)和[这里](/zh-CN/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)找到更多关于 MIME 类型的信息。
 
@@ -88,7 +88,7 @@ lots of text…
 ```
 
 - 语法
-  - : `data` URL 的格式很简单，但很容易会忘记把逗号加在“data”协议名后面，在对数据进行 base64 编码时也很容易发生错误。
+  - : `data` URL 的格式很简单，但很容易会忘记把逗号加在"data"协议名后面，在对数据进行 base64 编码时也很容易发生错误。
 - HTML 代码格式化
   - : 一个 `data` URL 是一个文件中的文件，相对于文档来说这个文件可能就非常的长。因为 data URL 也是 URL，所以 data 会用空白符（换行符、制表符或空格）来对它进行格式化，[但使用 base64 编码](https://bugzilla.mozilla.org/show_bug.cgi?id=73026#c12)时会出现一些实际问题。
 - 长度限制

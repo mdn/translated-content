@@ -48,7 +48,7 @@ new Uint8Array([1, 2, 3]).fill(4, -3, -2); // Uint8Array [4, 2, 3]
 
 ## 兼容实现
 
-由于并没有一个名为 _TypedArray_ 的全局变量，我们必须“按需添加”兼容实现。请配合{{jsxref("Array.prototype.fill()")}}的兼容实现使用以下的“兼容实现”
+由于并没有一个名为 _TypedArray_ 的全局变量，我们必须"按需添加"兼容实现。请配合{{jsxref("Array.prototype.fill()")}}的兼容实现使用以下的"兼容实现"
 
 ```js
 // https://tc39.github.io/ecma262/#sec-%typedarray%.prototype.fill

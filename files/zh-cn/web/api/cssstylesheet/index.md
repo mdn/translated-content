@@ -17,7 +17,7 @@ h1, h2 {
 }
 ```
 
-另一条规则可能是一条“@”规则（_at-rule_），例如 {{cssxref("@import")}} 或 {{cssxref("@media")}} 等等。
+另一条规则可能是一条"@"规则（_at-rule_），例如 {{cssxref("@import")}} 或 {{cssxref("@media")}} 等等。
 
 在[说明](#说明)部分中查看 `CSSStyleSheet` 对象的多种获取方式。
 

@@ -83,9 +83,9 @@ bold <length> , thin
 - `bold 1em thin`因为所有元素都必须出现，包括逗号。
 - `bold 0.5ms, thin`因为`ms`是时间值，不是长度值：{{cssxref("&lt;length&gt;")}}
 
-### “与”组合符：&&
+### "与"组合符：&&
 
-*“与”组合符*连接的各个部分都**必须出现，但是顺序任意**。例如：
+*"与"组合符*连接的各个部分都**必须出现，但是顺序任意**。例如：
 
 ```
 bold && <length>
@@ -103,11 +103,11 @@ bold && <length>
 - `bold`因为长度值没有出现。
 - `bold 1em bold`因为各部分必须恰好出现一次。
 
-> **备注：** 并置的优先级高于“与”组合符。例如 `bold thin && <length>` 等价于 `[ bold thin ] && <length>`。它们的合法取值是：`bold thin <length>` 或 `<length> bold thin` 但不是 `bold <length> thin`。
+> **备注：** 并置的优先级高于"与"组合符。例如 `bold thin && <length>` 等价于 `[ bold thin ] && <length>`。它们的合法取值是：`bold thin <length>` 或 `<length> bold thin` 但不是 `bold <length> thin`。
 
-### “或”组合符：||
+### "或"组合符：||
 
-*“或”组合符*表示其连接的所有组成元素是可选的，**次序任意，但是至少其中一个要出现**。“或”组合符通常用来描述[属性缩写](/zh-CN/docs/CSS/Shorthand_properties)中的各部分。
+*"或"组合符*表示其连接的所有组成元素是可选的，**次序任意，但是至少其中一个要出现**。"或"组合符通常用来描述[属性缩写](/zh-CN/docs/CSS/Shorthand_properties)中的各部分。
 
 ```
 <'border-width'> || <'border-style'> || <'border-color'>
@@ -124,11 +124,11 @@ bold && <length>
 - `blue yellow`因为一个组成部分最多出现一次。
 - `bold`因为它不允许出现。
 
-> **备注：** “与”组合符的优先级高于“或”组合符，比如 `bold || thin && <length>` 等价于 `bold || [ thin && <length> ]`。它们的合法取值是：`bold`, `thin <length>`, `bold thin <length>`, 或者 `thin <length> bold` ，但不是：`<length> bold thin` 因为 bold 若出现，则必须出现在 `thin && <length>` 整体的前面或后面。
+> **备注：** "与"组合符的优先级高于"或"组合符，比如 `bold || thin && <length>` 等价于 `bold || [ thin && <length> ]`。它们的合法取值是：`bold`, `thin <length>`, `bold thin <length>`, 或者 `thin <length> bold` ，但不是：`<length> bold thin` 因为 bold 若出现，则必须出现在 `thin && <length>` 整体的前面或后面。
 
-### “互斥”组合符：|
+### "互斥"组合符：|
 
-*“互斥”组合符*表示各组成部分中只能**恰好出现一个**，通常用来分隔一个属性的所有可选值。例如：
+*"互斥"组合符*表示各组成部分中只能**恰好出现一个**，通常用来分隔一个属性的所有可选值。例如：
 
 ```
 <percentage> | <length> | left | center | right | top | bottom
@@ -150,7 +150,7 @@ bold && <length>
 - `center 3%` 因为最多只能出现一个组成部分
 - `3em 4.5em` 因为每个组成部分最多只能出现一次
 
-> **备注：** “或”组合符的优先级高于“互斥”组合符，比如`bold | thin || <length>`等价于`bold | [ thin || <length> ]`。它们的合法取值是：`bold`, `thin`, `<length>`, `<length> thin`, 或 `thin <length>`，但不能是 `bold <length>`，因为“互斥”组合符所连接的数个部分中，只有一个能出现。
+> **备注：** "或"组合符的优先级高于"互斥"组合符，比如`bold | thin || <length>`等价于`bold | [ thin || <length> ]`。它们的合法取值是：`bold`, `thin`, `<length>`, `<length> thin`, 或 `thin <length>`，但不能是 `bold <length>`，因为"互斥"组合符所连接的数个部分中，只有一个能出现。
 
 ## 数量符号
 
@@ -297,13 +297,13 @@ bold smaller#
     </tr>
     <tr>
       <td><code>&#x26;&#x26;</code></td>
-      <td>“与”组合符</td>
+      <td>"与"组合符</td>
       <td>各部分必须出现，但可以不按顺序</td>
       <td><code>&#x3C;length> &#x26;&#x26; &#x3C;string></code></td>
     </tr>
     <tr>
       <td><code>||</code></td>
-      <td>“或”组合符</td>
+      <td>"或"组合符</td>
       <td>各部分至少出现一个，可以不按顺序</td>
       <td>
         <code>&#x3C;'border-image-outset'> || &#x3C;'border-image-slice'></code>
@@ -311,7 +311,7 @@ bold smaller#
     </tr>
     <tr>
       <td><code>|</code></td>
-      <td>“互斥”组合符</td>
+      <td>"互斥"组合符</td>
       <td>各部分恰好出现一个</td>
       <td><code>smaller | small | normal | big | bigger</code></td>
     </tr>

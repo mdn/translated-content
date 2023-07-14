@@ -13,7 +13,7 @@ slug: Web/CSS/Privacy_and_the_:visited_selector
 
 为了保护用户隐私，火狐和其他浏览器会在特定情况下向网站应用撒谎：
 
-- `window.getComputedStyle` 方法和其他类似的功能（例如 {{ domxref("element.querySelector") }}）将总是将所有链接都看待为“未访问过”的。
+- `window.getComputedStyle` 方法和其他类似的功能（例如 {{ domxref("element.querySelector") }}）将总是将所有链接都看待为"未访问过"的。
 - 使用形如 `:visited + span` 的兄弟选择器时，指定的元素（本例中的 `span`）总是会按照链接未访问过显示。
 - 在一些特殊的情况下，例如链接元素嵌套，且选中的元素不是检查历史记录的链接元素。对应元素同样会按照链接未访问过渲染。
 

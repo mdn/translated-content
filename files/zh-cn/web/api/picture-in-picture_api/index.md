@@ -74,7 +74,7 @@ _画中画 API 定义了三个事件，它们可以用来检测画中画模式�
 
 ### 切换画中画模式
 
-当使用者点击“Toggle Picture-in-Picture”按钮时，这段代码将会由一个点击处理程序调用：
+当使用者点击"Toggle Picture-in-Picture"按钮时，这段代码将会由一个点击处理程序调用：
 
 ```js
 function togglePictureInPicture() {

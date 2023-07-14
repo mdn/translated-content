@@ -208,7 +208,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 - {{domxref("Window.postMessage()")}}
   - : 为一个窗口向另一个窗口发送一串数据提供了安全的手段，该窗口不需要与第一个窗口在同一域内。
 - {{domxref("Window.print()")}}
-  - : 打开“打印”对话框，打印当前文档。
+  - : 打开"打印"对话框，打印当前文档。
 - {{domxref("Window.prompt()")}}
   - : 返回用户在提示对话框中输入的文本。
 - {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}}
@@ -332,7 +332,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 - {{domxref("Window/hashchange_event", "hashchange")}}
   - : 当 URL 的片段标识符（URL 中以 `#` 符号开头及其后面的部分）发生变化时，触发该事件。
 - {{domxref("Window/pagehide_event", "pagehide")}}
-  - : 当浏览器隐藏了当前的文档，而在切换到显示会话历史中的另一个文档时触发该事件。例如，当用户点击“后退”按钮或点击“前进”按钮在会话历史中移动时，就会发生这种情况。
+  - : 当浏览器隐藏了当前的文档，而在切换到显示会话历史中的另一个文档时触发该事件。例如，当用户点击"后退"按钮或点击"前进"按钮在会话历史中移动时，就会发生这种情况。
 - {{domxref("Window/pageshow_event", "pageshow")}}
   - : 当浏览器因导航任务而使文件可见时触发该事件，不仅包括页面首次加载时，还包括用户在同一标签内导航到另一个页面后再返回该页面等情况。
 - {{domxref("Window/popstate_event", "popstate")}}

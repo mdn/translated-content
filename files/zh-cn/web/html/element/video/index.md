@@ -38,7 +38,7 @@ slug: Web/HTML/Element/video
     - use-credentials
       - : 在发送跨域请求时携带凭证（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 请求首部时将会携带 cookie、安全令牌、并且执行 HTTP 基本身份验证。如果服务器没有给予源站点信任（通过设置 `Access-Control-Allow-Credentials:` HTTP 响应首部），图像会被 _污染_，并且它的使用会受到限制。不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 `Origin:` HTTP 请求首部），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定非法值，会被当作指定了枚举关键字 **anonymous** 一样使用。查看 [CORS 设置属性](/zh-CN/docs/HTML/CORS_settings_attributes) 获取更多信息。
 - `disablepictureinpicture` {{experimental_inline}}
-  - : 防止浏览器显示画中画上下文菜单或在某些情况下自动请求画中画模式。该属性可以禁用 `video` 元素的画中画特性，右键菜单中的“画中画”选项会被禁用
+  - : 防止浏览器显示画中画上下文菜单或在某些情况下自动请求画中画模式。该属性可以禁用 `video` 元素的画中画特性，右键菜单中的"画中画"选项会被禁用
 - `disableRemotePlayback` {{experimental_inline}}
   - : 布尔属性，用于在使用有线（HDMI、DVI 等）和无线技术（Miracast、Chromecast、DLNA、AirPlay 等）连接设备时，禁用远程播放功能。在 Safari 中，您可以使用 [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) 作为兜底方案。
 - `height`
@@ -111,7 +111,7 @@ slug: Web/HTML/Element/video
 - 你可以用 CSS 属性 {{cssxref("object-position")}} 来调整视频在元素内部的位置，它可以控制视频尺寸适应于元素外框的方式。
 - 如果想在视频里展示字幕或者标题，你可以在 {{htmlelement("track")}} 元素和 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 格式的基础上使用 JavaScript 来实现。详情请见 [Adding captions and subtitles to HTML5 video](/zh-CN/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。
 
-此外这里还有一份很棒的关于[“视频和音频内容”](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)的初学者材料，收集了很多的基本知识。
+此外这里还有一份很棒的关于["视频和音频内容"](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)的初学者材料，收集了很多的基本知识。
 
 ## 例子
 
@@ -137,7 +137,7 @@ slug: Web/HTML/Element/video
 
 如果视频的 MIME 类型设置不正确，视频可能不会显示，或者显示包含一个 X 的灰色盒子（如果启用了 JavaScript 的话）。
 
-如果你提供的视频是 Ogg Theora 格式的，在 Apache Web 服务器上，你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的“AddType 的”配置指令，把视频文件的扩展名 (最常见的是".ogm", ".ogv", or ".ogg") 添加到 MIME 类型 "video/ogg"，来解决这个问题。
+如果你提供的视频是 Ogg Theora 格式的，在 Apache Web 服务器上，你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的"AddType 的"配置指令，把视频文件的扩展名 (最常见的是".ogm", ".ogv", or ".ogg") 添加到 MIME 类型 "video/ogg"，来解决这个问题。
 
 ```plain
 AddType video/ogg .ogm
@@ -145,7 +145,7 @@ AddType video/ogg .ogv
 AddType video/ogg .ogg
 ```
 
-如果你以 WebM 格式提供视频，在 Apache Web 服务器上，你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的“AddType 的”配置指令，把视频文件的扩展名 (最常见的是".webm") 添加到 MIME 类型 "video/webm"，来解决这个问题。
+如果你以 WebM 格式提供视频，在 Apache Web 服务器上，你可以通过 "/etc/apache" 中的 "mime.types" 文件 或者通过在 httpd.conf 中的"AddType 的"配置指令，把视频文件的扩展名 (最常见的是".webm") 添加到 MIME 类型 "video/webm"，来解决这个问题。
 
 ```plain
 AddType video/webm .webm

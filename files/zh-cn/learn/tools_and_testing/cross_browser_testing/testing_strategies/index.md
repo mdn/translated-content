@@ -6,7 +6,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
-这篇文章主要是讨论如何进行跨浏览器测试，回答一些比较常见的疑惑，譬如：“什么是跨浏览器测试？”，“会遇到哪些常见的问题？”以及“如何测试、区分以及修复问题？”
+这篇文章主要是讨论如何进行跨浏览器测试，回答一些比较常见的疑惑，譬如："什么是跨浏览器测试？"，"会遇到哪些常见的问题？"以及"如何测试、区分以及修复问题？"
 
 <table>
   <tbody>
@@ -48,7 +48,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 ### 有根据地假设
 
-您可以称之为“假设”或“直觉”。这不是一种准确、科学的方法，但作为具有网络行业经验的人，您应该要清晰地了解您所想测试的一些浏览器，这将形成一个良好的初级浏览器分级支持系统。
+您可以称之为"假设"或"直觉"。这不是一种准确、科学的方法，但作为具有网络行业经验的人，您应该要清晰地了解您所想测试的一些浏览器，这将形成一个良好的初级浏览器分级支持系统。
 
 例如，如果您居住在西欧或北美，您会发现许多人使用 Windows 和 Mac 的台式机或笔记本电脑，常用浏览器是 Chrome，Firefox，Safari，IE 和 Edge。您可以测试前三个浏览器的最新版本，因为它们会定期更新。对于 Edge 和 IE，您应当测试它们近期的几个版本。以上这些浏览器都属于 A 级别。
 
@@ -66,7 +66,7 @@ original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 
 如果您居住在其他地方，或者正在开发其他地方（例如某些国家或地区）的网站，那您可能需要对不同的常用浏览器进行测试。
 
-> **备注：** “我老板用 Blackberry，所以我们最好确保它看起来很好”也是一个很有说服力的理由。
+> **备注：** "我老板用 Blackberry，所以我们最好确保它看起来很好"也是一个很有说服力的理由。
 
 ### 浏览器份额统计
 
@@ -190,7 +190,7 @@ You may notice from the text in the example that it won't work in IE8 — this i
 
 仿真器基本上是在计算机内运行并模拟某种设备或特定设备条件的程序，允许您比查找要测试的特定硬件/软件组合更方便地执行某些测试。
 
-仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的[Responsive Design Mode](/zh-CN/docs/Tools/Responsive_Design_Mode)。Safari 也有类似的模式，可以通过访问“*Safari > 首选项”*和"显示开发"菜单，然后选择"开发"\&gt;"输入响应式设计模式"来启用。Chrome 也有类似的功能：设备模式 (请参阅[Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/))。
+仿真器可能与测试设备条件一样简单。例如，如果要对宽度/高度媒体查询进行一些快速而粗劣的测试以进行响应式设计，则可以使用 Firefox 的[Responsive Design Mode](/zh-CN/docs/Tools/Responsive_Design_Mode)。Safari 也有类似的模式，可以通过访问"*Safari > 首选项"*和"显示开发"菜单，然后选择"开发"\&gt;"输入响应式设计模式"来启用。Chrome 也有类似的功能：设备模式 (请参阅[Simulate Mobile Devices with Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/))。
 
 不过，您经常必须安装某种仿真器。要测试的最常见设备/浏览器如下所示：
 
@@ -216,7 +216,7 @@ You may notice from the text in the example that it won't work in IE8 — this i
 1. 获取要模拟的操作系统的安装程序磁盘或映像（例如 ISO 文件）。Virtual Box 无法提供这些;大多数，如 Windows 操作系统，是无法自由分发的商业产品。
 2. [下载](https://www.virtualbox.org/wiki/Downloads)适用于您的操作系统的相应安装程序并进行安装。
 3. 打开应用程序;您将看到如下视图： ![](virtualbox.png)
-4. 要创建新虚拟机，请按左上角的“新建”按钮。
+4. 要创建新虚拟机，请按左上角的"新建"按钮。
 5. 按照说明进行操作，并根据需要填写以下对话框。你会：
 
     1. 为新虚拟机提供名称
@@ -276,7 +276,7 @@ You may notice from the text in the example that it won't work in IE8 — this i
 - 尽可能设置单独的浏览器配置文件，禁用浏览器扩展和其他此类操作，并在该配置文件中运行测试（例如，请参阅[Use the Profile Manager to create and remove Firefox profiles](https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles)和[Share Chrome with others or add personas](https://support.google.com/chrome/answer/2364824)）
 - 在可用的情况下运行测试时使用浏览器的私有模式功能（例如，Firefox 中的[Private Browsing](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history)，Chrome 中的[Incognito Mode](https://support.google.com/chrome/answer/95464)），因此不会保存 cookie 和临时文件等内容。
 
-这些步骤旨在确保您正在测试的浏览器尽可能“纯粹（pure）”，即没有安装任何可能影响测试结果的内容。
+这些步骤旨在确保您正在测试的浏览器尽可能"纯粹（pure）"，即没有安装任何可能影响测试结果的内容。
 
 > **备注：** 如果您有可用的硬件，另一个有用的低功耗选项是在低端手机/其他设备上测试您的网站 - 随着网站变得更大并且具有更多效果，网站放慢速度的可能性更高，因此您需要开始给予表现更多考虑。尝试在低端设备上运行您的功能将使更高端设备的体验更有可能。
 

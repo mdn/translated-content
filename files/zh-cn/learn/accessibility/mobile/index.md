@@ -31,7 +31,7 @@ slug: Learn/Accessibility/Mobile
 
 现代移动设备对无障碍和大多数 web 标准有很好的支持。那个因为移动设备和桌面设备使用了完全不同的技术而强制要求开发者使用浏览器嗅探并为它们提供不同网站的时代已经结束了（虽然现在还有许多公司仍然在检测用户移动设备的使用，并为这些设备提供一个独立的移动端域名）。
 
-如今，移动设备一般都可以处理特性齐全的网站了，同时，为了能够让盲人成功的使用网站，主流平台甚至还内置了屏幕阅读器。移动设备也倾向于对“[WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)”有很好的支持。
+如今，移动设备一般都可以处理特性齐全的网站了，同时，为了能够让盲人成功的使用网站，主流平台甚至还内置了屏幕阅读器。移动设备也倾向于对"[WAI-ARIA](/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics)"有很好的支持。
 
 你只要需要遵守良好的 web 设计规范和最佳的无障碍实践，就可以让你的网站在手机上无障碍地使用。
 
@@ -60,7 +60,7 @@ TalkBack 屏幕阅读器是内置于 Android 操作系统中的。
 1. 点击一个应用将会选择它，同时，你的设备将会告诉你这个应用程序是什么。
 2. 在控制栏中左右滑动，将会在应用、按钮或控件之间切换。设备将会读出每一项。
 3. 双击任何地方将会打开某个应用或者选择某个选项。
-4. 你也可以“通过触摸来探索”——将手指按在屏幕上并拖拽，然后你的设备将会读出你移动经过的不同的应用或项目。
+4. 你也可以"通过触摸来探索"——将手指按在屏幕上并拖拽，然后你的设备将会读出你移动经过的不同的应用或项目。
 
 如果你想关闭 TalkBack：
 
@@ -108,9 +108,9 @@ TalkBack 允许你使用全局和本地菜单，无论你已经导航到哪个�
 
 4. 向左右滑动，以在页面上不同的项目之间切换。
 5. 向上然后向右滑动进入本地内容菜单。
-6. 向右滑动直到你找到“标题和标识”选项。
+6. 向右滑动直到你找到"标题和标识"选项。
 7. 双击选择它。现在你就可以通过左右滑动在标题和 ARIA 标识之间切换。
-8. 向右向上滑动之后，进入本地上下文菜单，选择“默认”，就可以返回默认模式。
+8. 向右向上滑动之后，进入本地上下文菜单，选择"默认"，就可以返回默认模式。
 
 > **备注：** 查看[开始在 Android 设备上使用 TalkBack](https://support.google.com/accessibility/android/answer/6283677?ref_topic=3529932) 以获取更完整的文档。
 
@@ -138,7 +138,7 @@ iOS 操作系统内置了移动版旁白（VoiceOver）。
 
 #### 使用转子
 
-当旁白打开时，你可以使用一种名为“转子”（Rotor）的导航功能，该功能可让你快速从多种常用选项中进行选择。要使用它：
+当旁白打开时，你可以使用一种名为"转子"（Rotor）的导航功能，该功能可让你快速从多种常用选项中进行选择。要使用它：
 
 1. 像转动拨号盘一样在屏幕上扭动两根手指。当你扭动更多的时候，每个选项都会被朗读。你可以来回循环浏览选项。
 2. 一旦你找到你想要的选项：
@@ -240,17 +240,17 @@ panel.ontouchend = stopMove;
 
 #### 保持菜单无障碍
 
-因为移动设备上的屏幕非常窄，所以使用媒体查询和其他技术使得导航菜单缩小到显示屏顶部的一个小图标，只有在需要的时候才展示菜单，这种方式在移动设备上很常见的。这通常由“三横线”图标表示，并且设计模式因此被称为“汉堡菜单”。
+因为移动设备上的屏幕非常窄，所以使用媒体查询和其他技术使得导航菜单缩小到显示屏顶部的一个小图标，只有在需要的时候才展示菜单，这种方式在移动设备上很常见的。这通常由"三横线"图标表示，并且设计模式因此被称为"汉堡菜单"。
 
 在实现这样的菜单时，需要确保显示控件的控件可以通过适当的控制机制（移动端通常为触摸）进行访问，如上面的[控制机制](#控制机制)中所讨论的那样，并且在访问菜单时页面的其他部分以某种方式移开或隐藏，以避免与导航混淆。
 
-让我们来看一个很好的[“汉堡包菜单”的示例](https://fritz-weisshart.de/meg_men/)。
+让我们来看一个很好的["汉堡包菜单"的示例](https://fritz-weisshart.de/meg_men/)。
 
 ## 用户输入
 
 在移动设备上，输入数据往往比在台式计算机上的同等体验更令用户恼火。使用桌面或笔记本电脑键盘输入文本到表单输入比触摸屏虚拟键盘或微小的移动物理键盘更方便。
 
-出于这个原因，值得尽量减少所需的输入量。例如，与其让用户每次使用常规文本输入来填写他们的工作标题，而是可以提供一个 {{htmlelement("select")}} 菜单，其中包含最常见的选项（这也有助于数据输入的一致性），并提供一个“其他”选项，显示一个文本字段来输入任何异常值。你可以在 [common-job-types.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/common-job-types.html)中看到这个想法的一个简单示例（查看[常见任务实时示例](https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)）。
+出于这个原因，值得尽量减少所需的输入量。例如，与其让用户每次使用常规文本输入来填写他们的工作标题，而是可以提供一个 {{htmlelement("select")}} 菜单，其中包含最常见的选项（这也有助于数据输入的一致性），并提供一个"其他"选项，显示一个文本字段来输入任何异常值。你可以在 [common-job-types.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/common-job-types.html)中看到这个想法的一个简单示例（查看[常见任务实时示例](https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)）。
 
 也值得考虑在移动平台上使用 HTML 格式输入类型（如日期），因为它们可以得到很好的处理。例如，Android 和 iOS 都会显示可用于设备体验的可用控件。有关示例，请参阅 [html5-form-examples.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/html5-form-examples.html)（请查看 [HTML5 表单实时示例](https://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)）——尝试加载这些内容并在移动设备上对其进行操作。例如：
 
@@ -265,7 +265,7 @@ panel.ontouchend = stopMove;
 
 ## 参见
 
-- [移动 Web 开发指南](https://www.smashingmagazine.com/2012/07/guidelines-for-mobile-web-development/)——“Smashing”杂志的文章列表，涵盖移动网页设计的不同技术。
+- [移动 Web 开发指南](https://www.smashingmagazine.com/2012/07/guidelines-for-mobile-web-development/)——"Smashing"杂志的文章列表，涵盖移动网页设计的不同技术。
 - [使你的网站在触摸设备上工作](https://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644)——有关使用触摸事件来获得在移动设备上进行交互的有用文章。
 
 {{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}

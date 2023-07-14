@@ -129,7 +129,7 @@ margin-bottom: 10px;
 margin-left: 5px;
 ```
 
-和下面的声明是一样的（注意，值是从 top 顺时针开始的：top、right、bottom、接着是 left，与“trouble”的辅音字母顺序相同）。
+和下面的声明是一样的（注意，值是从 top 顺时针开始的：top、right、bottom、接着是 left，与"trouble"的辅音字母顺序相同）。
 
 ```css
 margin: 10px 5px 10px 5px;

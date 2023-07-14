@@ -5,7 +5,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
-在您的开发过程中，您无疑需要在终端上运行一些命令 (或者在“命令行”上，它们实际上是相同的)。本文介绍了终端、需要输入的基本命令、如何将命令链接在一起，以及如何添加自己的命令行接口 (CLI) 工具。
+在您的开发过程中，您无疑需要在终端上运行一些命令 (或者在"命令行"上，它们实际上是相同的)。本文介绍了终端、需要输入的基本命令、如何将命令链接在一起，以及如何添加自己的命令行接口 (CLI) 工具。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -50,7 +50,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 
 下面你可以看到一些不同口味的程序，你可以得到一个终端。
 
-下面的图片显示了 Windows 中可用的命令提示，有很多种选项，从“cmd”程序到“powershell”，可以在开始菜单中输入程序名称运行。
+下面的图片显示了 Windows 中可用的命令提示，有很多种选项，从"cmd"程序到"powershell"，可以在开始菜单中输入程序名称运行。
 
 ![A vanilla windows cmd line window, and a windows powershell window](win-terminals.png)
 
@@ -70,7 +70,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 
 macOS 有一个名为 Darwin 的系统，它位于图形用户界面的下方。Darwin 是类 unix 系统，它提供了终端和对底层工具的访问。macOS Darwin 在很大程度上与 Unix 不相上下，当然在阅读本文时不会给我们带来任何担忧。
 
-终端可在 macOS 的“应用程序/实用程序/终端”上使用。
+终端可在 macOS 的"应用程序/实用程序/终端"上使用。
 
 #### Windows
 
@@ -122,7 +122,7 @@ macOS 有一个名为 Darwin 的系统，它位于图形用户界面的下方。
 
 ### 在命令行中导航
 
-当您访问命令行时，您将不可避免地需要导航到一个特定的目录“做一些事情”。所有的操作系统 (假设是默认设置) 都将在您的“home”目录中启动它们的终端程序，从那里您可能想要移动到另一个地方。
+当您访问命令行时，您将不可避免地需要导航到一个特定的目录"做一些事情"。所有的操作系统 (假设是默认设置) 都将在您的"home"目录中启动它们的终端程序，从那里您可能想要移动到另一个地方。
 
 `cd` 命令允许您更改目录。从技术上讲，cd 不是一个程序，而是内置的。这意味着您的操作系统可以开箱即用地提供它，而且您也不会意外地删除它，感谢上帝！您不需要过多地担心某个命令是否是内置的，但是要记住，内置的命令会在所有基于 unix 的系统上出现。
 
@@ -144,7 +144,7 @@ cd ..
 
 > **备注：** 一个非常有用的终端快捷方式是使用<kbd>tab</kbd> 键自动完成你知道的名字，而不是必须键入整个东西。例如，在键入以上两个命令后，尝试键入 `cd D` 并按下<kbd>tab</kbd> — 它应该自动完成目录名称 `Desktop` 对于您，只要它存在于当前目录中。在你前进的过程中记住这一点。
 
-如果要转到的目录嵌套得很深，则需要知道访问该目录的路径。当您更加熟悉文件系统的结构时，这通常会变得更容易，但是如果您不确定路径，通常可以使用 ls 命令（请参见下文）的组合并在其中单击来确定它的路径。 “资源管理器/查找器”窗口可查看目录相对于当前位置的位置。
+如果要转到的目录嵌套得很深，则需要知道访问该目录的路径。当您更加熟悉文件系统的结构时，这通常会变得更容易，但是如果您不确定路径，通常可以使用 ls 命令（请参见下文）的组合并在其中单击来确定它的路径。 "资源管理器/查找器"窗口可查看目录相对于当前位置的位置。
 
 例如，如果您想进入一个名为 src 的目录，该目录位于桌面的一个名为 project 的目录中，您可以从您的主文件夹键入这三个命令来到达该目录
 
@@ -160,7 +160,7 @@ cd src
 cd Desktop/project/src
 ```
 
-例如，请注意，在路径上包含一个前斜线将使路径成为绝对路径 `/Users/your-user-name/Desktop`. 像我们上面做的那样，省略前导斜杠可以使路径相对于当前的工作目录。这与您在 web 浏览器中看到的 url 完全相同。前面的斜杠意味着“在网站的根”，而省略斜杠意味着“这个 URL 是相对于我当前页面的”。
+例如，请注意，在路径上包含一个前斜线将使路径成为绝对路径 `/Users/your-user-name/Desktop`. 像我们上面做的那样，省略前导斜杠可以使路径相对于当前的工作目录。这与您在 web 浏览器中看到的 url 完全相同。前面的斜杠意味着"在网站的根"，而省略斜杠意味着"这个 URL 是相对于我当前页面的"。
 
 > **备注：** 在 windows 中，你使用反斜杠而不是正斜杠。`cd Desktop\project\src` — 他的可能看起来很奇怪，但是如果你感兴趣的话，[watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) 微软的一位主要工程师对此进行了解释。
 
@@ -186,7 +186,7 @@ ls
 ls -l
 ```
 
-至于 `ls`, the `-l` 选项为您提供每行一个文件或目录的清单，并显示更多信息。可以通过查找行最左边的字母“d”来识别目录。这些是我们可以做到的 `cd` 进入。
+至于 `ls`, the `-l` 选项为您提供每行一个文件或目录的清单，并显示更多信息。可以通过查找行最左边的字母"d"来识别目录。这些是我们可以做到的 `cd` 进入。
 
 下面是一个屏幕截图，顶部是一个普通的 macOS 终端，还有一个定制的终端，添加了一些额外的图标和颜色，让它看起来生动，都显示了运行的结果`ls -l`:
 
@@ -218,7 +218,7 @@ ls -l
   `cp mdn-example.txt mdn-example.txt.bak`创建一个副本`mdn-example.txt` 叫做 `mdn-example.txt.bak`（当然，如果你愿意，你也可以叫它别的名字)。
 - `rm` —删除指定的文件。例如，`rm mdn-example.txt` 删除单个文件叫做 `mdn-example.txt`.请注意，此删除是永久性的，不能通过桌面用户界面上的回收站撤消。
 
-> **备注：** 许多终端命令允许您使用星号作为“通配符”字符，意思是“任何字符序列”。这允许您一次对可能大量的文件运行操作，所有这些文件都匹配指定的模式。作为一个例子，`rm mdn-*` 将删除所有文件开头`mdn-`. `rm mdn-*.bak` 会删除所有文件的开头`mdn-` 结束 `.bak`.
+> **备注：** 许多终端命令允许您使用星号作为"通配符"字符，意思是"任何字符序列"。这允许您一次对可能大量的文件运行操作，所有这些文件都匹配指定的模式。作为一个例子，`rm mdn-*` 将删除所有文件开头`mdn-`. `rm mdn-*.bak` 会删除所有文件的开头`mdn-` 结束 `.bak`.
 
 ## 考虑终端有害吗？
 
@@ -262,13 +262,13 @@ ls | wc -l
 
 因为 `ls` 在自己的行上打印每个文件或目录，这有效地为我们提供了目录和文件计数。
 
-这是怎么回事？(unix) 命令行工具的一般原理是，它们将文本打印到终端 (也称为“打印到标准输出”或`STDOUT`). 很多命令也可以从流输入 (称为“标准输入”o) 中读取内容 `STDIN`).
+这是怎么回事？(unix) 命令行工具的一般原理是，它们将文本打印到终端 (也称为"打印到标准输出"或`STDOUT`). 很多命令也可以从流输入 (称为"标准输入"o) 中读取内容 `STDIN`).
 
 管道操作符可以将这些输入和输出连接在一起，允许我们构建越来越复杂的操作，以满足我们的需要。一个命令的输出可以成为下一个命令的输入。在这种情况下，`ls` 通常会将其输出到`STDOUT`, 但是相反 `ls`输出被制成`wc`, 它将该输出作为输入，计算它包含的行数，然后将该计数输出到 STDOUT。
 
 ## 一个稍微复杂一点的例子
 
-让我们看一些更复杂的东西。我们将首先尝试获取 MDN 的“获取”页面的内容 `curl` 命令 (可用于从 url 请求内容)[https://developer.mozilla.org/en-US/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
+让我们看一些更复杂的东西。我们将首先尝试获取 MDN 的"获取"页面的内容 `curl` 命令 (可用于从 url 请求内容)[https://developer.mozilla.org/en-US/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
 
 但是，这个 URL 是页面的旧位置。如果您在一个新的浏览器标签中输入它，您将 (最终) 被重定向到[https://developer.mozilla.org/enUS/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
 
@@ -280,7 +280,7 @@ curl https://developer.mozilla.org/en-US/docs/Web/API/fetch
 
 我们想精确的告诉 `curl` 遵循重定向使用`-L` 标签。
 
-让我们也看看标题 `developer.mozilla.org` 返回使用 `curl`'s `-I` 标签，并打印它发送到终端的所有位置重定向，通过管道输出 `curl` 到`grep` (我们将要求 grep 返回包含单词“location”的所有行)。
+让我们也看看标题 `developer.mozilla.org` 返回使用 `curl`'s `-I` 标签，并打印它发送到终端的所有位置重定向，通过管道输出 `curl` 到`grep` (我们将要求 grep 返回包含单词"location"的所有行)。
 
 尝试运行以下代码，您将看到在到达最终页面之前，实际上发生了三次重定向
 
@@ -328,11 +328,11 @@ https://developer.mozilla.org/en-US/docs/Web/API/fetch
 
 ![the node.js installer on windows, showing the option to include npm](npm-install-option.png)
 
-尽管我们将在下一篇文章中讨论许多不同的工具，但我们将继续深入研究 [Prettier](https://prettier.io/). Prettier 是一种固执己见的代码格式化程序，它只有“很少的选择”。更少的选择往往意味着更简单。考虑到工具在复杂性方面有时会失控，“很少的选项”可能非常有吸引力。
+尽管我们将在下一篇文章中讨论许多不同的工具，但我们将继续深入研究 [Prettier](https://prettier.io/). Prettier 是一种固执己见的代码格式化程序，它只有"很少的选择"。更少的选择往往意味着更简单。考虑到工具在复杂性方面有时会失控，"很少的选项"可能非常有吸引力。
 
 ### 在哪里下载我们的 CLI 工具？
 
-在开始安装 Prettier 之前，有一个问题需要回答：“我们应该安装到哪里？”
+在开始安装 Prettier 之前，有一个问题需要回答："我们应该安装到哪里？"
 
 用`npm` 我们可以选择在全局安装工具，因此我们可以在任何地方或本地访问当前项目目录。
 
@@ -478,12 +478,12 @@ function printMe(obj) {
 printMe(myObj);
 ```
 
-根据您的工作流 (或您选择的工作流)，您可以将其作为流程的自动化部分。自动化确实是工具的优势所在;我们的个人偏好是那种无需配置任何东西就能“自动发生”的自动化。
+根据您的工作流 (或您选择的工作流)，您可以将其作为流程的自动化部分。自动化确实是工具的优势所在;我们的个人偏好是那种无需配置任何东西就能"自动发生"的自动化。
 
 使用 Prettier 有许多实现自动化的方法，尽管它们超出了本文的范围，但是有一些很好的在线资源可以提供帮助 (已经链接到其中一些)。您可以调用更漂亮的：
 
 - 在将代码提交到 git 存储库之前，使用[Husky](https://github.com/typicode/husky).
-- 当你在代码编辑器中点击“保存”的时候，无论是[VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Atom](https://atom.io/packages/prettier-atom), 或[Sublime Text](https://packagecontrol.io/packages/JsPrettier).
+- 当你在代码编辑器中点击"保存"的时候，无论是[VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), [Atom](https://atom.io/packages/prettier-atom), 或[Sublime Text](https://packagecontrol.io/packages/JsPrettier).
 - 作为持续集成检查的一部分，可以使用以下工具[Github Actions](https://github.com/features/actions).
 
 我们个人的偏好是第二个当使用 say VS 代码时，Prettier 会启动并清理每次我们点击保存时需要做的格式化。关于以不同方式使用 Prettier，您可以在 [Prettier docs](https://prettier.io/docs/en/).

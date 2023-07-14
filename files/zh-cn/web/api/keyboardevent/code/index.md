@@ -11,7 +11,7 @@ slug: Web/API/KeyboardEvent/code
 
 当您想要根据输入设备上的物理位置处理键而不是与这些键相关联的字符时，此属性非常有用;这在编写代码来处理游戏输入时尤为常见，这些游戏使用键盘上的键来模拟类似游戏板的环境。但请注意，您无法使用 `KeyboardEvent.code`报告的值来确定击键生成的字符，因为键码的名称可能与按键上打印的实际字符或按下键时计算机生成的字符不匹配。
 
-例如，QWERTY 布局键盘上的“<kbd>q</kbd>”键返回的`code`是“`KeyQ`”，但 Dvorak 键盘上的“<kbd>'</kbd>”键和 AZERTY 键盘上的“<kbd>a</kbd>”键也返回的相同`code`值。这使得如果用户没有使用预期的键盘布局，则无法使用`code`值来确定用户按键的名称。
+例如，QWERTY 布局键盘上的"<kbd>q</kbd>"键返回的`code`是"`KeyQ`"，但 Dvorak 键盘上的"<kbd>'</kbd>"键和 AZERTY 键盘上的"<kbd>a</kbd>"键也返回的相同`code`值。这使得如果用户没有使用预期的键盘布局，则无法使用`code`值来确定用户按键的名称。
 
 要确定哪个字符与键事件对应，请改用{{domxref("KeyboardEvent.key")}}属性。
 

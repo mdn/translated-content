@@ -26,7 +26,7 @@ browser-compat: api.Ink
 \{{DefaultAPISidebar("Ink API")}}\{{SeeCompatTable}}
 ```
 
-一个有横幅的页面通常也会有“补充性”的页面元数据。例如，一个有 `\{{SeeCompatTable}}` 的页面通常也应该添加 `experimental` 状态（如上所示），以确保它在侧边栏有合适的图标。
+一个有横幅的页面通常也会有"补充性"的页面元数据。例如，一个有 `\{{SeeCompatTable}}` 的页面通常也应该添加 `experimental` 状态（如上所示），以确保它在侧边栏有合适的图标。
 
 > **备注：** 横幅宏无需*依赖*元数据，但是其他通过宏插入的内容需要它们。例如，`\{{Compat}}` 宏依赖于元数据 `browser-compat` 的值。
 

@@ -42,9 +42,9 @@ _`PerformanceTiming` 接口不包含任何继承属性。_
 - {{domxref("PerformanceTiming.responseEnd")}} {{readonlyInline}}
   - : 是一个无符号 long long 型的毫秒数，返回浏览器从服务器收到（或从本地缓存读取，或从本地资源读取）最后一个字节时（如果在此之前 HTTP 连接已经关闭，则返回关闭时）的 Unix 毫秒时间戳。
 - {{domxref("PerformanceTiming.domLoading")}} {{readonlyInline}}
-  - : 是一个无符号 long long 型的毫秒数，返回当前网页 DOM 结构开始解析时（即{{domxref("Document.readyState")}}属性变为“loading”、相应的 [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event)事件触发时）的 Unix 毫秒时间戳。
+  - : 是一个无符号 long long 型的毫秒数，返回当前网页 DOM 结构开始解析时（即{{domxref("Document.readyState")}}属性变为"loading"、相应的 [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event)事件触发时）的 Unix 毫秒时间戳。
 - {{domxref("PerformanceTiming.domInteractive")}} {{readonlyInline}}
-  - : 是一个无符号 long long 型的毫秒数，返回当前网页 DOM 结构结束解析、开始加载内嵌资源时（即{{domxref("Document.readyState")}}属性变为“interactive”、相应的[`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event)事件触发时）的 Unix 毫秒时间戳。
+  - : 是一个无符号 long long 型的毫秒数，返回当前网页 DOM 结构结束解析、开始加载内嵌资源时（即{{domxref("Document.readyState")}}属性变为"interactive"、相应的[`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event)事件触发时）的 Unix 毫秒时间戳。
 - {{domxref("PerformanceTiming.domContentLoadedEventStart")}} {{readonlyInline}}
   - : 是一个无符号 long long 型的毫秒数，返回当解析器发送[`DOMContentLoaded`](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event) 事件，即所有需要被执行的脚本已经被解析时的 Unix 毫秒时间戳。
 - {{domxref("PerformanceTiming.domContentLoadedEventEnd")}} {{readonlyInline}}

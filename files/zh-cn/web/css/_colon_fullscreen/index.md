@@ -41,7 +41,7 @@ ID 为 `"fs-toggle"` 的 {{HTMLElement("button")}} 将根据文档是否处于�
 
 ### CSS
 
-CSS 中实现这一功能的关键在于两条规则。第一条规则用于在元素不处于全屏状态时设置“切换全屏模式”按钮的背景颜色。这里使用了 `:not(:fullscreen)` 伪类，以查找未应用 `:fullscreen` 伪类的元素。
+CSS 中实现这一功能的关键在于两条规则。第一条规则用于在元素不处于全屏状态时设置"切换全屏模式"按钮的背景颜色。这里使用了 `:not(:fullscreen)` 伪类，以查找未应用 `:fullscreen` 伪类的元素。
 
 ```css
 #fs-toggle:not(:fullscreen) {

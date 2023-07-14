@@ -102,7 +102,7 @@ This is the second subsection of my content. I think is more interesting than th
 作为测试，你可以关闭网站的 CSS，然后看看没有了 CSS 网站是否能被理解。你可以通过从代码中删除 CSS 来手动完成此操作，但是最简单的方法是使用浏览器功能，例如：
 
 - Firefox: 选择*查看 > 页面样式 > 无样式*
-- Safari: 选择*开发 > 停用样式* (需要开启“开发”菜单，点击*Safari > 偏好设置 > 高级 > 在菜单栏中显示“开发”菜单*)
+- Safari: 选择*开发 > 停用样式* (需要开启"开发"菜单，点击*Safari > 偏好设置 > 高级 > 在菜单栏中显示"开发"菜单*)
 - Chrome: 安装 Web Developer Toolbar 扩展程序，然后重启浏览器。点击图标，选择*CSS > 停用所有样式*
 - Edge: 选择*查看 > 样式 > 无样式*
 
@@ -119,7 +119,7 @@ This is the second subsection of my content. I think is more interesting than th
 请注意，不同的浏览器可能具有不同的键盘控制选项。大多数现代浏览器都遵循上述的标签模式（你也可以执行 Shift + Tab 来向后移动可聚焦元素），但是某些浏览器具有自己的特性：
 
 - Firefox for the Mac doesn't do tabbing by default. To turn it on, you have to go to _Preferences > Advanced > General_, then uncheck "Always use the cursor keys to navigate within pages". Next, you have to open your Mac's System Preferences app, then go to _Keyboard > Shortcuts_, then select the _All Controls_ radio button.
-- Safari 默认情况下不允许你按 tab 遍历链接；要启用此功能，你需要打开 Safari 的“_偏好设置_”，转到“_高级_”，然后选中“_按下 Tab 键以高亮显示网页上的每一项_”。
+- Safari 默认情况下不允许你按 tab 遍历链接；要启用此功能，你需要打开 Safari 的"_偏好设置_"，转到"_高级_"，然后选中"_按下 Tab 键以高亮显示网页上的每一项_"。
 
 > **警告：** 你应该在所写的任何新页面上执行这种测试 — 确保可以通过键盘使用功能。
 
@@ -170,7 +170,7 @@ a:focus, input:focus, button:focus, select:focus {
 
 HTML 中有某些功能和最佳实践，旨在提供元素之间的上下文和关系。三个最常见的示例是链接，表单标签和数据表。
 
-使用屏幕阅读器的人们通常会使用一项共同的功能，即他们会拉出页面上所有链接的列表。在这种情况下，链接文本需要脱离上下文。例如，标记为“单击此处”，“单击此处”等的链接列表确实对无障碍不利。链接文本最好在上下文和上下文之外都有意义。
+使用屏幕阅读器的人们通常会使用一项共同的功能，即他们会拉出页面上所有链接的列表。在这种情况下，链接文本需要脱离上下文。例如，标记为"单击此处"，"单击此处"等的链接列表确实对无障碍不利。链接文本最好在上下文和上下文之外都有意义。
 
 表单{{htmlelement("label")}}元素是允许我们使表单可访问的主要功能之一。表单的麻烦在于，你需要标签来说明应在每个表单输入中输入哪些数据。每个标签都必须包含在{{htmlelement("label")}}内，以将其明确链接到其对应的表单输入框（属性值的每个`<label>`的`for`属性值必须与表单元素`id`值匹配），即使源顺序不是完全合乎逻辑的，也能提供很好的无障碍。
 
@@ -202,7 +202,7 @@ CSS 往往提供的基本无障碍功能要比 HTML 少得多，但是如果使�
 
 #### 隐藏的内容
 
-在许多情况下，视觉设计要求并非一次显示所有内容。例如，在我们的[Tabbed info box example](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)“示例（查看[源码](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)）中，我们有三个信息面板，但是我们将它们放在彼此的顶部，用户可以通过单击以显示每个选项卡（也可以通过键盘访问 — 可以使用 Tab 键和回车键选择它们）。
+在许多情况下，视觉设计要求并非一次显示所有内容。例如，在我们的[Tabbed info box example](http://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html)"示例（查看[源码](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)）中，我们有三个信息面板，但是我们将它们放在彼此的顶部，用户可以通过单击以显示每个选项卡（也可以通过键盘访问 — 可以使用 Tab 键和回车键选择它们）。
 
 ![](20191022144107.png)
 
@@ -418,7 +418,7 @@ NVDA 有很多快捷键，我们没有全部列出来。只把测试网页无障
 
 ## 寻找帮助
 
-无障碍还会遇到许多其他问题。你要学会如何在线查找答案。请查阅 HTML 和 CSS 文章的“[寻找帮助](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#%E5%AF%BB%E6%89%BE%E5%B8%AE%E5%8A%A9)”部分，以获取一些指导。
+无障碍还会遇到许多其他问题。你要学会如何在线查找答案。请查阅 HTML 和 CSS 文章的"[寻找帮助](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#%E5%AF%BB%E6%89%BE%E5%B8%AE%E5%8A%A9)"部分，以获取一些指导。
 
 ## 总结
 

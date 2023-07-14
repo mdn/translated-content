@@ -24,7 +24,7 @@ startTime = TimeRanges.start(index)
 
 ## 示例
 
-假定页面中存在一个 ID 为“myVideo”的 video 元素：
+假定页面中存在一个 ID 为"myVideo"的 video 元素：
 
 ```js
 var v = document.getElementById("myVideo");

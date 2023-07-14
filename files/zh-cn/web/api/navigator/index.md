@@ -18,7 +18,7 @@ slug: Web/API/Navigator
 - {{domxref("Navigator.activeVRDisplays")}} {{readonlyInline}}{{experimental_inline}}
   - : 筛选所有的 {{domxref("VRDisplay")}} 对象，把其中所有 {{domxref("VRDisplay.ispresenting")}} 属性的值为 `true` 的对象以数组的形式返回。
 - {{domxref("NavigatorID.appCodeName")}} {{readonlyInline}}{{deprecated_inline}}
-  - : 返回当前浏览器的内部“开发代号”名称。不能保证此属性返回的值是正确的。
+  - : 返回当前浏览器的内部"开发代号"名称。不能保证此属性返回的值是正确的。
 - {{domxref("NavigatorID.appName")}} {{readonlyInline}}{{deprecated_inline}}
   - : 以 {{domxref("DOMString")}} 的形式返回浏览器官方名称。不能保证此属性返回的值是正确的。
 - {{domxref("NavigatorID.appVersion")}} {{readonlyInline}}{{deprecated_inline}}
@@ -96,9 +96,9 @@ slug: Web/API/Navigator
 - {{domxref("window.navigator.standalone", "navigator.standalone")}} {{non-standard_inline}}
   - : Returns a boolean indicating whether the browser is running in standalone mode. Available on Apple's iOS Safari only.
 - {{domxref("window.navigator.vendor", "navigator.vendor")}} {{non-standard_inline}}
-  - : 返回当前浏览器的供应商的名字（例如：“Netscape6”）。
+  - : 返回当前浏览器的供应商的名字（例如："Netscape6"）。
 - {{domxref("window.navigator.vendorSub", "navigator.vendorSub")}} {{non-standard_inline}}
-  - : 返回供应商版本号码（例如：“6.1”）。
+  - : 返回供应商版本号码（例如："6.1"）。
 - [`navigator.webkitPointer`](/zh-CN/docs/API/Pointer_Lock_API) {{non-standard_inline}}
   - : Returns a PointerLock object for the [Mouse Lock API](/zh-CN/docs/API/Pointer_Lock_API).
 

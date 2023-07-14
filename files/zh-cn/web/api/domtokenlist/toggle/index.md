@@ -60,7 +60,7 @@ span.addEventListener('click', () => {
 
 ### 设置 force 参数
 
-第二个参数可以用于决定是否包含 class 属性。这个例子仅在浏览器窗口宽度超过 1000 像素时才会包含‘c’属性。
+第二个参数可以用于决定是否包含 class 属性。这个例子仅在浏览器窗口宽度超过 1000 像素时才会包含'c'属性。
 
 ```js
 span.classList.toggle("c", window.innerWidth > 1000);

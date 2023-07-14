@@ -91,7 +91,7 @@ HTTP 请求由两个部分组成：一个包含关于浏览器功能的全局元
 
 ##### GET 方法
 
-`GET`方法是浏览器使用的方法，请求服务器返回给定的资源:“嘿，服务器，我想要得到这个资源。”在这种情况下，浏览器发送一个空的主体。由于主体是空的，如果使用该方法发送一个表单，那么发送到服务器的数据将被追加到 URL。
+`GET`方法是浏览器使用的方法，请求服务器返回给定的资源:"嘿，服务器，我想要得到这个资源。"在这种情况下，浏览器发送一个空的主体。由于主体是空的，如果使用该方法发送一个表单，那么发送到服务器的数据将被追加到 URL。
 
 考虑下面这个表单：
 
@@ -129,7 +129,7 @@ Host: foo.com
 
 ##### POST 方法
 
-`POST`方法略有不同。这是浏览器在询问响应时使用与服务器通信的方法，该响应考虑了 HTTP 请求正文中提供的数据:“嘿，服务器，看一下这些数据，然后给我回一个适当的结果。”如果使用该方法发送表单，则将数据追加到 HTTP 请求的主体中。
+`POST`方法略有不同。这是浏览器在询问响应时使用与服务器通信的方法，该响应考虑了 HTTP 请求正文中提供的数据:"嘿，服务器，看一下这些数据，然后给我回一个适当的结果。"如果使用该方法发送表单，则将数据追加到 HTTP 请求的主体中。
 
 让我们来看一个例子，这是我们在上面的`GET`部分中所看到的相同的形式，但是使用[`method`](/zh-CN/docs/Web/HTML/Element/form#method)属性设置为`post`。
 
@@ -231,7 +231,7 @@ if __name__ == "__main__":
 
 以上代码中引用的两个模板如下：
 
-- [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): 与我们在 [POST 方法](#post_方法) 小节中看到的相同的表单，但是将`action`设置为`\{{ url_for('hello') }}`。(这是一个[Jinja2](http://jinja.pocoo.org/docs/2.9/)模板，它基本上是 HTML，但是可以包含对运行包含在花括号中的 web 服务器的 Python 代码的调用。`url_for('hello')`基本上是在“提交表单时重定向到`/hello`”。
+- [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): 与我们在 [POST 方法](#post_方法) 小节中看到的相同的表单，但是将`action`设置为`\{{ url_for('hello') }}`。(这是一个[Jinja2](http://jinja.pocoo.org/docs/2.9/)模板，它基本上是 HTML，但是可以包含对运行包含在花括号中的 web 服务器的 Python 代码的调用。`url_for('hello')`基本上是在"提交表单时重定向到`/hello`"。
 - [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html): 这个模板只包含一行，用于呈现渲染时传递给它的两个数据块。
   这是通过前面所见的`hello()`函数完成的，该函数在`/hello`URL 被导向时运行。
 
@@ -257,7 +257,7 @@ if __name__ == "__main__":
 
 ### `enctype` 属性
 
-该属性允许您指定在提交表单时所生成的请求中的`Content-Type`的 HTTP 数据头的值。这个数据头非常重要，因为它告诉服务器正在发送什么样的数据。默认情况下，它的值是`application/x-www-form-urlencoded`。它的意思是：“这是已编码为 URL 参数的表单数据。”
+该属性允许您指定在提交表单时所生成的请求中的`Content-Type`的 HTTP 数据头的值。这个数据头非常重要，因为它告诉服务器正在发送什么样的数据。默认情况下，它的值是`application/x-www-form-urlencoded`。它的意思是："这是已编码为 URL 参数的表单数据。"
 
 如果你想要发送文件，你需要额外的三个步骤：
 

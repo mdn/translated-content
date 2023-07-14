@@ -37,7 +37,7 @@ slug: Learn/CSS/Building_blocks/Overflowing_content
 
 我们知道，CSS 中万物皆盒，因此我们可以通过给{{cssxref("width")}}和{{cssxref("height")}}（或者 {{cssxref("inline-size")}} 和 {{cssxref("block-size")}}）赋值的方式来约束盒子的尺寸。溢出是在你往盒子里面塞太多东西的时候发生的，所以盒子里面的东西也不会老老实实待着。CSS 给了你好几种工具来控制溢出，在学习的早期理解这些概念是很有用的。在你写 CSS 的时候你经常会遇到溢出的情形，尤其是当你以后更加深入到 CSS 布局的时候。
 
-## CSS 尽力减少“数据损失”
+## CSS 尽力减少"数据损失"
 
 我们从两个展示了在碰到溢出的时候，CSS 默认会如何处理的例子开始吧。
 

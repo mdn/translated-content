@@ -31,9 +31,9 @@ slug: Learn/JavaScript/Asynchronous/Sequencing_animations
 - main.js
 - style.css
 
-你需要编辑的唯一一个文件是“main.js”。
+你需要编辑的唯一一个文件是"main.js"。
 
-如果你在浏览器中打开“index.html”，你会看到三张图片呈对角排列：
+如果你在浏览器中打开"index.html"，你会看到三张图片呈对角排列：
 
 ![序列动画测验页面的屏幕截图](./sequencing-animations.png)
 
@@ -43,7 +43,7 @@ slug: Learn/JavaScript/Asynchronous/Sequencing_animations
 
 我们希望更新此页面，来将动画依次应用于所有三个图像。也就是说，当第一个动画完成时，我们开始第二个动画，当第二个完成时，我们开始第三个动画。
 
-要应用的动画已经在“main.js”中被定义：效果是旋转图像并缩小它至消失。
+要应用的动画已经在"main.js"中被定义：效果是旋转图像并缩小它至消失。
 
 请[查看完成的示例](https://mdn.github.io/learning-area/javascript/asynchronous/sequencing-animations/finished/)来更好地了解页面的预期工作方式。注意：动画只会执行一次，你需要重新加载页面来重新运行它们。
 
@@ -53,7 +53,7 @@ slug: Learn/JavaScript/Asynchronous/Sequencing_animations
 
 我们使用 [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 对图像进行动画处理，特别是 {{domxref("Element/animate", "element.animate()")}} 方法。
 
-更新“main.js”以添加对 `alice1.animate()` 的调用，就像这样：
+更新"main.js"以添加对 `alice1.animate()` 的调用，就像这样：
 
 ```js
 const aliceTumbling = [
@@ -84,7 +84,7 @@ alice1.animate(aliceTumbling, aliceTiming);
 
 我们希望你尝试一些不同的方式来实现这个功能，以便于加强对使用 Promise 的不同方式的理解。
 
-1. 首先，实现一个能够工作的代码，但它存在“回调地狱”问题（我们在[关于回调的讨论](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing#回调)中提到过）的 Promise 版本。
+1. 首先，实现一个能够工作的代码，但它存在"回调地狱"问题（我们在[关于回调的讨论](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing#回调)中提到过）的 Promise 版本。
 
 2. 接下来，使用 [Promise 链](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises#链式使用_promise)来实现它。注意：可以用[箭头函数](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#箭头函数)的不同形式来编写这个函数。尝试这些不同的形式。哪个最简洁？哪个可读性最好？
 
@@ -99,7 +99,7 @@ alice1.animate(aliceTumbling, aliceTiming);
 1. 将作品放入在线共享编辑器中，如 [CodePen](https://codepen.io/)，[jsFiddle](https://jsfiddle.net/)，或者 [Glitch](https://glitch.com/)。
 2. 在 [MDN 论坛学习分类](https://discourse.mozilla.org/c/mdn/learn/250)中写一篇文章寻求评估和/或帮助。你的文章应该包括：
 
-    - 一个描述性的标题，如“请帮助评估测序动画”。
+    - 一个描述性的标题，如"请帮助评估测序动画"。
     - 详细说明你已经尝试过的方法，以及你希望我们做的事情，例如：你遇到困难需要帮助，或者你完成了作品，需要评估。
     - 一个指向你的作品的链接（托管在在线共享编辑器中，如步骤 1 所述），这是一个很好的实践ーー如果你看不到他们的代码，就很难帮助有编码问题的人。
     - 指向实际任务或评估页面的链接，这样我们就可以找到你需要帮助的问题。

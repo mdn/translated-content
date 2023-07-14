@@ -115,7 +115,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 - 游戏配置控件，例如难度、可见性距离、世界范围等等。
 - 密码管理员生成的密码的密码长度。
 
-通常，如果用户对最小值和最大值之间的距离的百分比比实际数字本身更感兴趣，则 range 输入是一个不错的选择。例如，在家庭立体声音量控制的情况下，用户通常会想到“将音量设置为最大音量的一半”而不是“将音量设置为 0.5”。
+通常，如果用户对最小值和最大值之间的距离的百分比比实际数字本身更感兴趣，则 range 输入是一个不错的选择。例如，在家庭立体声音量控制的情况下，用户通常会想到"将音量设置为最大音量的一半"而不是"将音量设置为 0.5"。
 
 ### 指定最小值和最大值
 
@@ -141,7 +141,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 {{EmbedLiveSample("设置值的粒度", 600, 40)}}
 
-#### 设置 step 为“any”
+#### 设置 step 为"any"
 
 如果要接受任何值而不论扩展到小数点后多少位，可以为 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性指定值 `any`。
 
@@ -149,7 +149,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 <input type="range" min="0" max="3.14" step="any" />
 ```
 
-{{EmbedLiveSample("设置 step 为“any”", 600, 40)}}
+{{EmbedLiveSample("设置 step 为"any"", 600, 40)}}
 
 该示例使用户可以选择 0 到 π 之间的任何值，而对所选值的小数部分没有任何限制。
 

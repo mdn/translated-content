@@ -7,7 +7,7 @@ slug: Web/API/SubtleCrypto/encrypt
 
 {{domxref("SubtleCrypto")}} 接口的 **`encrypt()`** 方法用于加密数据。
 
-它以用于加密的{{glossary("key", "密钥")}}、一些特定于算法的参数，以及待加密的数据（也称为“明文”）为参数；返回一个 {{jsxref("Promise")}}，会兑现加密后的数据（也称为“密文”）。
+它以用于加密的{{glossary("key", "密钥")}}、一些特定于算法的参数，以及待加密的数据（也称为"明文"）为参数；返回一个 {{jsxref("Promise")}}，会兑现加密后的数据（也称为"密文"）。
 
 ## 语法
 
@@ -65,7 +65,7 @@ RSA-OAEP 公钥加密系统，规范定于 [RFC 3447](https://datatracker.ietf.o
 
 使用计数器模式的 AES 算法，规范定于 [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final)。
 
-AES 是一种分组加密算法，这意味着它将消息分成多个模块，然后逐块进行加密。在计数器模式下，每加密一个消息块，就会混入一个额外的数据块。这个额外的模块被称为“计数器模块”（counter block）。
+AES 是一种分组加密算法，这意味着它将消息分成多个模块，然后逐块进行加密。在计数器模式下，每加密一个消息块，就会混入一个额外的数据块。这个额外的模块被称为"计数器模块"（counter block）。
 
 给定的计数器模块绝不能与同一个密钥一起使用超过一次：
 
@@ -89,7 +89,7 @@ AES 是一种分组加密算法，这意味着它将消息分成多个模块，�
 
 使用伽罗瓦/计数器模式的 AES 算法，规范定于 [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final)。
 
-这种模式与上面的模式不同之处在于，GCM 是一种“认证”（authenticated）模式，意味着它包含了检测密文是否被攻击者篡改的功能。
+这种模式与上面的模式不同之处在于，GCM 是一种"认证"（authenticated）模式，意味着它包含了检测密文是否被攻击者篡改的功能。
 
 ## 示例
 

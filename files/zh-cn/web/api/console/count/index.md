@@ -19,7 +19,7 @@ count(label)
 ### 参数
 
 - `label` {{Optional_Inline}}
-  - : 一个字符串。如果给定，`count()` 会输出带有该标签的调用次数。如果未提供，调用 `count()` 的行为就像是带有“default”标签一样。
+  - : 一个字符串。如果给定，`count()` 会输出带有该标签的调用次数。如果未提供，调用 `count()` 的行为就像是带有"default"标签一样。
 
 ### 返回值
 
@@ -56,7 +56,7 @@ console.count();
 
 标签显示为 `default`，因为没有提供明确的标签。
 
-如果我们将 `user` 变量作为第一次调用 `count()` 函数时的 `label` 参数传入，并将字符串”alice“作为第二次调用的参数：
+如果我们将 `user` 变量作为第一次调用 `count()` 函数时的 `label` 参数传入，并将字符串"alice"作为第二次调用的参数：
 
 ```js
 let user = "";

@@ -226,7 +226,7 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.save()")}}
   - : 使用栈保存当前的绘画样式状态，你可以使用 **restore()** 恢复任何改变。
 - {{domxref("CanvasRenderingContext2D.restore()")}}
-  - : 恢复到最近的绘制样式状态，此状态是通过 **save()** 保存到”状态栈“中最新的元素。
+  - : 恢复到最近的绘制样式状态，此状态是通过 **save()** 保存到"状态栈"中最新的元素。
 - {{domxref("CanvasRenderingContext2D.canvas")}}
   - : 对 {{domxref("HTMLCanvasElement")}} 只读的反向引用。如果和 {{HTMLElement("canvas")}} 元素没有联系，可能为{{jsxref("null")}}。
 
@@ -277,7 +277,7 @@ ctx.stroke();
 ### 仅是临时的
 
 - {{non-standard_inline}} `CanvasRenderingContext2D.getContextAttributes()`
-  - : 受 `WebGLRenderingContext` 方法的启发，该方法会返回一个 `Canvas2DContextAttributes` 对象。在 canvas 中，这个对象包含属性”storage“，表示存储器的应用（默认”persistent“）；属性”alpha“，表示透明度的应用（默认 true）。
+  - : 受 `WebGLRenderingContext` 方法的启发，该方法会返回一个 `Canvas2DContextAttributes` 对象。在 canvas 中，这个对象包含属性"storage"，表示存储器的应用（默认"persistent"）；属性"alpha"，表示透明度的应用（默认 true）。
 - {{non-standard_inline}} `CanvasRenderingContext2D.isContextLost()`
   - : 受 `WebGLRenderingContext` 方法的启发，如果 Canvas 上下文丢失了，会返回 `true` ，否则返回 `false` 。
 

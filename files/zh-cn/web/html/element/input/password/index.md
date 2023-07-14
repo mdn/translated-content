@@ -7,7 +7,7 @@ slug: Web/HTML/Element/input/password
 
 **`"password"`** 类型的 `<input>` 元素可以让用户更加安全的输入密码。
 
-这个元素是作为单行纯文本编辑器控件呈现的，其中文本被遮蔽，无法读取。通常通过用诸如星号（“\*”）或点（“•”）等符号替换每个字符来实现。根据用户的{{Glossary("user agent","用户代理")}}和操作系统不同，显示的字符也会不同。
+这个元素是作为单行纯文本编辑器控件呈现的，其中文本被遮蔽，无法读取。通常通过用诸如星号（"\*"）或点（"•"）等符号替换每个字符来实现。根据用户的{{Glossary("user agent","用户代理")}}和操作系统不同，显示的字符也会不同。
 
 {{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}
 
@@ -95,7 +95,7 @@ slug: Web/HTML/Element/input/password
 - `current-password`
   - : 允许浏览器或密码管理器输入网站的当前密码。这提供了比 `on` 更多的信息，因为它允许浏览器或密码管理器自动在该字段中输入当前已知的网站密码，但不建议新密码。
 - `new-password`
-  - : 允许浏览器或密码管理器自动输入网站的新密码；这用于“更改密码”和“新用户”表单，在该字段询问用户新密码。新密码可能以多种方式生成，具体取决于使用的密码管理器。它可能只是填写新的建议密码，或者它可能会向用户显示创建密码的界面。
+  - : 允许浏览器或密码管理器自动输入网站的新密码；这用于"更改密码"和"新用户"表单，在该字段询问用户新密码。新密码可能以多种方式生成，具体取决于使用的密码管理器。它可能只是填写新的建议密码，或者它可能会向用户显示创建密码的界面。
 
 ```html
 <label for="userPassword">密码：</label>
@@ -192,7 +192,7 @@ document.getElementById("selectAll").onclick = () => {
 
 ### 申请社会安全号码
 
-此示例仅接受与[有效的美国社会安全号码](https://zh.wikipedia.org/zh-cn/社會安全號碼)格式相匹配的输入。这些用于美国税务和识别目的的数字的格式为“123-45-6789”。还存在针对每个组中允许的值的各种规则。
+此示例仅接受与[有效的美国社会安全号码](https://zh.wikipedia.org/zh-cn/社會安全號碼)格式相匹配的输入。这些用于美国税务和识别目的的数字的格式为"123-45-6789"。还存在针对每个组中允许的值的各种规则。
 
 #### HTML
 
@@ -212,7 +212,7 @@ document.getElementById("selectAll").onclick = () => {
 <span id="current"></span>
 ```
 
-此示例使用了 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性，限制了输入为一个合法的社会安全号码。很显然，这个正则表达式并不能保证有效的 SSN（因为我们没有访问到社会保障局的数据库），但它确实保证输入的值可能是合法值之一。它通常会避免无效的值。此外，它允许三组数字由空格、短划线（“-”）分隔，或者没有分隔符。
+此示例使用了 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性，限制了输入为一个合法的社会安全号码。很显然，这个正则表达式并不能保证有效的 SSN（因为我们没有访问到社会保障局的数据库），但它确实保证输入的值可能是合法值之一。它通常会避免无效的值。此外，它允许三组数字由空格、短划线（"-"）分隔，或者没有分隔符。
 
 [`inputmode`](/zh-CN/docs/Web/HTML/Element/input#inputmode) 被设置为 `numeric`，以鼓励有虚拟键盘的设备切换到数字键盘布局，以方便输入。[`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 和 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength)属性分别设置为 9 和 12，以要求值的长度至少为 9 个，不超过 12 个字符（前者在数字组之间没有分隔符，后者则有）。[`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性被用来表示该控件必须有一个值。最后，[`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete) 被设置为 `off`，以避免密码管理器和会话恢复功能试图设置其值，因为这根本就不是一个密码。
 

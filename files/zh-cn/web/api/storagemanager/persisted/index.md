@@ -5,7 +5,7 @@ slug: Web/API/StorageManager/persisted
 
 {{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
 
-**`persisted()`**方法是{{domxref("StorageManager")}}的一个接口，如果盒存储模式（**box mode**）的值为“**persistent**”则返回一个 resolved 状态值为`true`的{{jsxref('Promise')}}。
+**`persisted()`**方法是{{domxref("StorageManager")}}的一个接口，如果盒存储模式（**box mode**）的值为"**persistent**"则返回一个 resolved 状态值为`true`的{{jsxref('Promise')}}。
 
 ## 语法
 

@@ -28,7 +28,7 @@ var xpathResult = document.evaluate( xpathExpression, contextNode, namespaceReso
   - `null`。其可以用于 HTML 文档或者当不使用命名空间前缀时。注意，如果 `xpathExpression` 包含命名空间前缀，这将导致一个带有 `NAMESPACE_ERR` 的 `DOMException` 抛出。
   - 用户定义的函数。有关详细信息，请参阅附录中的 [使用一个用户定义的命名空间解析器](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#Implementing_a_User_Defined_Namespace_Resolver) 部分。
 
-- `resultType`：指定作为评估结果返回的所需结果类型的[常数](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#XPathResult_Defined_Constants)。最常传递的常量是 `XPathResult.ANY_TYPE`，它将返回 XPath 表达式的结果作为最自然的类型。附录中有一个部分，其中包含[可用常数](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#XPathResult_Defined_Constants)的完整列表。它们在下面“[指定返回类型](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#Specifying_the_Return_Type)”部分中进行解释。
+- `resultType`：指定作为评估结果返回的所需结果类型的[常数](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#XPathResult_Defined_Constants)。最常传递的常量是 `XPathResult.ANY_TYPE`，它将返回 XPath 表达式的结果作为最自然的类型。附录中有一个部分，其中包含[可用常数](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#XPathResult_Defined_Constants)的完整列表。它们在下面"[指定返回类型](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript#Specifying_the_Return_Type)"部分中进行解释。
 - `result`：如果指定了现有的 `XPathResult` 对象，它将被重用以返回结果。指定 `null` 将创建一个新的 `XPathResult` 对象。
 
 ### 返回值

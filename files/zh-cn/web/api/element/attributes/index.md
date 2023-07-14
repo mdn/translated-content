@@ -25,7 +25,7 @@ const attributes = paragraph.attributes;
 
 你可以使用 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 枚举一个元素的所有属性。
 
-在以下例子中会遍历文档中 id 为“paragraph”的元素的属性节点，并打印出来。
+在以下例子中会遍历文档中 id 为"paragraph"的元素的属性节点，并打印出来。
 
 ```html
 <!DOCTYPE html>

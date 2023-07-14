@@ -54,7 +54,7 @@ slug: Web/HTML/Element/input/reset
 
 ### 省略 value 属性
 
-如果你未指定 `value`，则会获得一个带有默认标签的按钮（通常为“重置”，但这将根据{{Glossary("user agent", "用户代理")}}而有所不同）：
+如果你未指定 `value`，则会获得一个带有默认标签的按钮（通常为"重置"，但这将根据{{Glossary("user agent", "用户代理")}}而有所不同）：
 
 ```html
 <input type="reset" />

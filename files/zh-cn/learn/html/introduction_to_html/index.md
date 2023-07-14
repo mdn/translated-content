@@ -24,11 +24,11 @@ slug: Learn/HTML/Introduction_to_HTML
 - [HTML 文本处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
   - : HTML 的主要工作之一就是给予文本意义（也被叫做{{glossary("Semantics", "语义")}}），以让浏览器知道如何正确的显示文本。这篇文章关注于如何用 HTML 将文本块分解为结构化的标题和段落、强调和加粗单词、创建列表以及其他内容。
 - [创建超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-  - : 超链接真的很重要——它们是“web”的意义所在。本文展示了创建超链接所需的语法，并讨论了创建超链接的最佳做法。
+  - : 超链接真的很重要——它们是"web"的意义所在。本文展示了创建超链接所需的语法，并讨论了创建超链接的最佳做法。
 - [高级文本排版](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
   - : HTML 中还有许多没有在 [HTML 文本处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)页面中提到的其他元素可以用于排版文本。这里的元素不太为人所知，但了解这些元素仍然很有用。在这篇文章里，你将学习如何标记引文、描述列表、计算机代码和其他类似的文本、下标和上标、联系信息等。
 - [文档和网站结构](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-  - : 除了定义页面的个别部分（例如“段落”或“图像”）外，HTML 也被用于定义网站的区域（例如“标题”、“导航菜单”和“主要内容”）。本文将探讨如何规划一个基本的网站结构，以及如何编写 HTML 来表示这个结构。
+  - : 除了定义页面的个别部分（例如"段落"或"图像"）外，HTML 也被用于定义网站的区域（例如"标题"、"导航菜单"和"主要内容"）。本文将探讨如何规划一个基本的网站结构，以及如何编写 HTML 来表示这个结构。
 - [调试 HTML](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
   - : 光是编写 HTML 还好，但如果出了什么问题，而你找不到问题的来源怎么办？本文将介绍一些可以帮上忙的工具。
 

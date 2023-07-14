@@ -31,7 +31,7 @@ const ext =
 
 ## 命名约定
 
-WebGL 扩展以“ANGLE”、“OES”、“EXT”、“WEBGL”为前缀。这些前缀反映了来源和意图：
+WebGL 扩展以"ANGLE"、"OES"、"EXT"、"WEBGL"为前缀。这些前缀反映了来源和意图：
 
 - `ANGLE_`：由 [ANGLE library](https://en.wikipedia.org/wiki/ANGLE_%28software%29) 的作者编写的扩展。
 - `OES_` 和 `KHR_`：由各自的架构审查委员会（Khronos)批准的对 OpenGL ES（OES）或 OpenGL API 扩展的功能的镜像。

@@ -50,7 +50,7 @@ slug: Web/HTML/Element/input/submit
 
 ### 省略 value 属性
 
-如果没有指定一个 `value` 值，按钮将会有一个通过用户代理选择的默认标签值。这个标签可能是“提交”或者“提交查询”，这里有一个默认 label 的提交按钮：
+如果没有指定一个 `value` 值，按钮将会有一个通过用户代理选择的默认标签值。这个标签可能是"提交"或者"提交查询"，这里有一个默认 label 的提交按钮：
 
 ```html
 <input type="submit" />
@@ -88,7 +88,7 @@ slug: Web/HTML/Element/input/submit
 一个字符串，指示提交表单数据时要使用的 HTTP 方法；此值将覆盖所属表单上给出的任何 [`method`](/zh-CN/docs/Web/HTML/Element/form#method) 属性。允许的值为：
 
 - `get`
-  - : URL 通过 `formaction` 或 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性给出的 URL 开始，加上一个问号（“?”）字符，然后加上表单的数据，按照 `formenctype` 或表单的[`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) 属性的描述进行编码。然后使用 HTTP {{HTTPMethod("get")}} 请求将这个 URL 发送到服务器。这种方法对于只包含 ASCII 字符且没有副作用的简单表单很有效。这是默认值。
+  - : URL 通过 `formaction` 或 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性给出的 URL 开始，加上一个问号（"?"）字符，然后加上表单的数据，按照 `formenctype` 或表单的[`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) 属性的描述进行编码。然后使用 HTTP {{HTTPMethod("get")}} 请求将这个 URL 发送到服务器。这种方法对于只包含 ASCII 字符且没有副作用的简单表单很有效。这是默认值。
 - `post`
   - : 表单的数据包含在请求的正文中，该请求的正文使用 HTTP {{HTTPMethod("post")}} 请求发送到由 `formaction` 或 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性指定的 URL 请求。此方法支持复杂的数据和文件附件。
 - `dialog`
@@ -123,7 +123,7 @@ slug: Web/HTML/Element/input/submit
 
 `<input type="submit">` 按钮用于提交表单。如果你想要创建一个自定义的按钮，并通过 JavaScript 自定义按钮的行为，你需要使用 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button)，或者，使用更优解的 {{htmlelement("button")}} 元素。
 
-如果你选择使用 `<button>` 在表单里创建按钮，请记住：如果 {{HTMLElement("form")}} 中只有一个 `<button>`，那个按钮将被视为“提交”按钮。你应该随时保证指定哪一个是提交按钮的习惯。
+如果你选择使用 `<button>` 在表单里创建按钮，请记住：如果 {{HTMLElement("form")}} 中只有一个 `<button>`，那个按钮将被视为"提交"按钮。你应该随时保证指定哪一个是提交按钮的习惯。
 
 ### 一个简单的提交按钮
 
@@ -147,7 +147,7 @@ slug: Web/HTML/Element/input/submit
 
 试着输入一些文字到文本字段，然后提交表单。
 
-在提交时，键值对数据将会被发送到服务端。在此列子中，字符串将会是 `text=usertext`，其中“usertext”是用户输入的字符，它转换为保留的特殊字符。数据提交的方式和位置都由 `<form>` 的设置决定，参阅[发送表单数据](/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)文章以获取更多细节。
+在提交时，键值对数据将会被发送到服务端。在此列子中，字符串将会是 `text=usertext`，其中"usertext"是用户输入的字符，它转换为保留的特殊字符。数据提交的方式和位置都由 `<form>` 的设置决定，参阅[发送表单数据](/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)文章以获取更多细节。
 
 ### 添加提交的快捷键
 
@@ -169,7 +169,7 @@ slug: Web/HTML/Element/input/submit
 </form>
 ```
 
-例如，在 Mac 版 Firefox 中，按 <kbd>Control</kbd>-<kbd>Option</kbd>-<kbd>S</kbd> 会触发“发送”按钮，而 Windows 上的 Chrome 使用 <kbd>Alt</kbd>+<kbd>S</kbd>。
+例如，在 Mac 版 Firefox 中，按 <kbd>Control</kbd>-<kbd>Option</kbd>-<kbd>S</kbd> 会触发"发送"按钮，而 Windows 上的 Chrome 使用 <kbd>Alt</kbd>+<kbd>S</kbd>。
 
 {{EmbedLiveSample("添加提交的快捷键", 650, 100)}}
 
@@ -193,7 +193,7 @@ slug: Web/HTML/Element/input/submit
 
 ## 例子
 
-我们在上面提供了一些简单的示例。关于提交按钮，实际上没有什么可说的。有时将这种控件称为“简单按钮”是有原因的。
+我们在上面提供了一些简单的示例。关于提交按钮，实际上没有什么可说的。有时将这种控件称为"简单按钮"是有原因的。
 
 ## 规范
 

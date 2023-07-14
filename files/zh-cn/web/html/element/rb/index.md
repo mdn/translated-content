@@ -48,7 +48,7 @@ slug: Web/HTML/Element/rb
 
 ## 示例
 
-在此示例中，我们提供了与“hanzi”等效的原始字符的注释：
+在此示例中，我们提供了与"hanzi"等效的原始字符的注释：
 
 ```html
 <ruby>

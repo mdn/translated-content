@@ -25,7 +25,7 @@ Animation.cancel();
 
 ### 异常
 
-这个方法不会直接抛出异常; 但是，如果动画的 {{domxref("Animation.playState", "playState")}} 取消时是除了“空闲”之外的任何东西，{{domxref("Animation.finished", "current finished promise", "", 1)}} 被拒绝与一个 {{domxref("DOMException")}} 命名的`AbortError`.
+这个方法不会直接抛出异常; 但是，如果动画的 {{domxref("Animation.playState", "playState")}} 取消时是除了"空闲"之外的任何东西，{{domxref("Animation.finished", "current finished promise", "", 1)}} 被拒绝与一个 {{domxref("DOMException")}} 命名的`AbortError`.
 
 ## 规范
 

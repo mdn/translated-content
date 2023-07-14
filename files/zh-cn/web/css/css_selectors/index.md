@@ -58,7 +58,7 @@ slug: Web/CSS/CSS_Selectors
 ## 组合器（Combinator）
 
 - [后代组合器](/zh-CN/docs/Web/CSS/Descendant_combinator)
-  - : “ ”（空格）组合器选择前一个元素的后代节点。
+  - : " "（空格）组合器选择前一个元素的后代节点。
 
     **语法：**`A B`
 

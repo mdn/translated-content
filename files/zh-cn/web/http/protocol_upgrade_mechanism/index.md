@@ -76,7 +76,7 @@ Sec-WebSocket-Extensions: superspeed, colormode; depth=16
 
 #### {{HTTPHeader("Sec-WebSocket-Key")}}
 
-该标头向服务器提供确认客户端有权请求升级到 WebSocket 的所需信息。当不安全（HTTP）客户端希望升级时，可以使用该标头，以提供一定程度防止滥用的保护。密钥的值是使用 WebSocket 规范中定义的算法计算的，因此*不提供安全性*。相反，它有助于防止非 WebSocket 客户端无意中或滥用请求 WebSocket 连接。那么，从本质上讲，这个密钥是为了确认“是的，我真的是要打开一个 WebSocket 连接。”
+该标头向服务器提供确认客户端有权请求升级到 WebSocket 的所需信息。当不安全（HTTP）客户端希望升级时，可以使用该标头，以提供一定程度防止滥用的保护。密钥的值是使用 WebSocket 规范中定义的算法计算的，因此*不提供安全性*。相反，它有助于防止非 WebSocket 客户端无意中或滥用请求 WebSocket 连接。那么，从本质上讲，这个密钥是为了确认"是的，我真的是要打开一个 WebSocket 连接。"
 
 该标头由选择使用它的客户端自动添加；它不能使用 {{domxref("XMLHttpRequest.setRequestHeader()")}} 方法添加。
 
@@ -137,7 +137,7 @@ Sec-WebSocket-Accept: hash
 ```
 
 - `hash`
-  - : 如果提供了 {{HTTPHeader("Sec-WebSocket-Key")}} 标头，那么将通过以下流程计算此标头的值：首先取密钥的值，然后将该值与“258EAFA5-E914-47DA-95CA-C5AB0DC85B11”进行拼接，再取拼接后的字符串的 [SHA-1](https://zh.wikipedia.org/wiki/SHA-1) 哈希。最后对得出的 20 字节的值进行 [base64](/zh-CN/docs/Glossary/Base64) 编码以获得该属性的值。
+  - : 如果提供了 {{HTTPHeader("Sec-WebSocket-Key")}} 标头，那么将通过以下流程计算此标头的值：首先取密钥的值，然后将该值与"258EAFA5-E914-47DA-95CA-C5AB0DC85B11"进行拼接，再取拼接后的字符串的 [SHA-1](https://zh.wikipedia.org/wiki/SHA-1) 哈希。最后对得出的 20 字节的值进行 [base64](/zh-CN/docs/Glossary/Base64) 编码以获得该属性的值。
 
 ## 参见
 

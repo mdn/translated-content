@@ -9,7 +9,7 @@ slug: Web/CSS/caret-color
 
 {{EmbedInteractiveExample("pages/css/caret-color.html")}}
 
-附注：上面说的“插入光标”（insertion caret）只是光标（caret）的其中一种。比如一些浏览器有一种光标叫做“导航光标“（navigation caret），它可以在不可编辑区域内来回移动。此外，当鼠标指针移动到一段 {{cssxref("cursor")}} 属性是 `auto` 的文本上方时，或移动到 {{cssxref("cursor")}} 属性是 `text`、 `vertical-text` 的內容上方時，虽然看起来有点像插入光标，但它不是插入光标（caret），而是鼠标指针光标（cursor）。
+附注：上面说的"插入光标"（insertion caret）只是光标（caret）的其中一种。比如一些浏览器有一种光标叫做"导航光标"（navigation caret），它可以在不可编辑区域内来回移动。此外，当鼠标指针移动到一段 {{cssxref("cursor")}} 属性是 `auto` 的文本上方时，或移动到 {{cssxref("cursor")}} 属性是 `text`、 `vertical-text` 的內容上方時，虽然看起来有点像插入光标，但它不是插入光标（caret），而是鼠标指针光标（cursor）。
 
 ## 语法
 

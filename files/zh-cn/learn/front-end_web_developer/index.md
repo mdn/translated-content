@@ -32,7 +32,7 @@ slug: Learn/Front-end_web_developer
 
 我们尽量让 Web 前端开发学习尽可能的轻松，但是你仍可能因为一些难以理解的点、或某段无法像预期中的那样工作的代码等原因而止步不前。
 
-无论是新手还是富有经验的开发者都经常遇到困难，但是不要慌。“[如何学习](/zh-CN/docs/Learn/Learning_and_getting_help)”章节提供了一些实用的有关如何查找信息和自行解决问题的提示，如果仍然上述提示仍然无法解决你的问题，大胆的在[讨论区](https://discourse.mozilla.org/c/mdn/learn/250)提出你的问题。
+无论是新手还是富有经验的开发者都经常遇到困难，但是不要慌。"[如何学习](/zh-CN/docs/Learn/Learning_and_getting_help)"章节提供了一些实用的有关如何查找信息和自行解决问题的提示，如果仍然上述提示仍然无法解决你的问题，大胆的在[讨论区](https://discourse.mozilla.org/c/mdn/learn/250)提出你的问题。
 
 让我们开始吧，祝你好运！
 

@@ -68,7 +68,7 @@ Content-Security-Policy: default-src https:; report-uri /csp-violation-report-en
 - `original-policy`
   - : `Content-Security-Policy` HTTP 头部所指定的原始策略。
 - disposition
-  - : “执行”或“报告”取决于是使用{{HTTPHeader("Content-Security-Policy")}} 头还是使用 `Content-Security-Header-Report-Only` 头。
+  - : "执行"或"报告"取决于是使用{{HTTPHeader("Content-Security-Policy")}} 头还是使用 `Content-Security-Header-Report-Only` 头。
 
 ## 违规报告样例
 

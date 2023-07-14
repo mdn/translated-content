@@ -82,7 +82,7 @@ JavaScript 文档描述了适合 JavaScript 程序员的语言方面。
 
 [Web 控制台](/zh-CN/docs//Tools/Web_Console) 不仅可以展示当前已加载页面的信息，还包含一个可以在当前页面执行 Javascript 表达式的 [命令行。](/zh-CN/docs/Tools/Web_Console#The_command_line_interpreter)
 
-在火狐浏览器菜单栏的“工具" => "浏览器工具" => "Web 开发者工具"( 在 Windows 和 Linux 上<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> ，Mac 上<kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>K</kbd>)，选择"Web 开发者工具栏"的控制台选项卡，它会如期出现在浏览器窗口的底部。如图，最下一行就是可以执行输入的命令行，面板上可以显示执行结果：
+在火狐浏览器菜单栏的"工具" => "浏览器工具" => "Web 开发者工具"( 在 Windows 和 Linux 上<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> ，Mac 上<kbd>Cmd</kbd>+<kbd>Option</kbd>+<kbd>K</kbd>)，选择"Web 开发者工具栏"的控制台选项卡，它会如期出现在浏览器窗口的底部。如图，最下一行就是可以执行输入的命令行，面板上可以显示执行结果：
 
 ![](2019-04-04_00-15-29.png)
 
@@ -98,7 +98,7 @@ Web 控制台的单行模式非常适合用来测试单个的 JavaScript 表达�
 
 ### Hello world
 
-让我们用 Web 控制台的多行模式来写一个“Hello World"程序吧！JavaScript code:
+让我们用 Web 控制台的多行模式来写一个"Hello World"程序吧！JavaScript code:
 
 ```js
 (function(){

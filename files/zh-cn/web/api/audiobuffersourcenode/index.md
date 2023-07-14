@@ -11,7 +11,7 @@ slug: Web/API/AudioBufferSourceNode
 
 `AudioBufferSourceNode` 没有输入却有一个输出，其通道数与其 {{domxref("AudioBufferSourceNode.buffer", "buffer")}} 属性所指定的 `AudioBuffer` 相同。如果没有设置 buffer，也就是说 `buffer` 属性是 `null` 的话，输出将包含一个无声的单通道（每个采样点均为 0）。
 
-一个 {{domxref("AudioBufferSourceNode")}} 只能被播放一次，也就是说，每次调用 {{domxref("AudioScheduledSourceNode.start", "start()")}} 之后，如果还想再播放一遍同样的声音，那么就需要再创建一个 `AudioBufferSourceNode`。庆幸的是，创建该节点的代价并不大，并且想要多次播放声音的话，实际上 `AudioBuffer` 也可以被重用。事实上，你可以用一种“阅后即焚”的方式来使用这些节点：创建节点，调用 `start()` 开始播放声音，然后，你甚至不需要再保留这个节点的引用了。声音播放完成之后，垃圾收集器会找个恰当的时机回收资源。
+一个 {{domxref("AudioBufferSourceNode")}} 只能被播放一次，也就是说，每次调用 {{domxref("AudioScheduledSourceNode.start", "start()")}} 之后，如果还想再播放一遍同样的声音，那么就需要再创建一个 `AudioBufferSourceNode`。庆幸的是，创建该节点的代价并不大，并且想要多次播放声音的话，实际上 `AudioBuffer` 也可以被重用。事实上，你可以用一种"阅后即焚"的方式来使用这些节点：创建节点，调用 `start()` 开始播放声音，然后，你甚至不需要再保留这个节点的引用了。声音播放完成之后，垃圾收集器会找个恰当的时机回收资源。
 
 `多次调用 AudioBufferSourceNode.stop()` 是允许的。如果这时候 `AudioBufferSourceNode` 还没有到达缓冲区末尾的话，最近一次的调用将替换上一次的调用。
 

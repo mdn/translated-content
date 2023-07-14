@@ -23,7 +23,7 @@ const MyClass = class [className] [extends otherClassName] {
 
 类表达式和{{jsxref("Statements/class", "类声明", "", 1)}}之间存在一些差异，但是：
 
-- 类表达式可以省略类名（“绑定标识符”），这在{{jsxref("Statements/class", "类声明", "", 1)}}中是不可能的。
+- 类表达式可以省略类名（"绑定标识符"），这在{{jsxref("Statements/class", "类声明", "", 1)}}中是不可能的。
 - 类表达式允许你重新定义（重新声明）类**而不会抛出** {{jsxref("Global_Objects/SyntaxError", "SyntaxError")}}。{{jsxref("Statements/class", "类声明", "", 1)}}不是这种情况。
 
 `constructor` 方法是可选的。使用类表达式生成的类将始终响应 {{jsxref("Operators/typeof", "typeof")}} 值为 `"function"`。

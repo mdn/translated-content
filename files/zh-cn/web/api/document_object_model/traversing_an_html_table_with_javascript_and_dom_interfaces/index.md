@@ -238,13 +238,13 @@ myBody.appendChild(myNewPTagNode);
 
 ### 使用 removeChild(..) 方法移除节点
 
-每一个节点都可以被移除。下面的代码从第二个 `<p>` 元素 `secondParagraph` 中移除文本节点 `myTextNode`（其中包含单词“world”）。
+每一个节点都可以被移除。下面的代码从第二个 `<p>` 元素 `secondParagraph` 中移除文本节点 `myTextNode`（其中包含单词"world"）。
 
 ```js
 secondParagraph.removeChild(myTextNode);
 ```
 
-文本节点 `myTextNode`（包含单词“world”）仍然存在。下面的代码将 `myTextNode` 附加到最近创建的 `<p>` 元素，`myNewPTagNode`。
+文本节点 `myTextNode`（包含单词"world"）仍然存在。下面的代码将 `myTextNode` 附加到最近创建的 `<p>` 元素，`myNewPTagNode`。
 
 ```js
 myNewPTagNode.appendChild(myTextNode);

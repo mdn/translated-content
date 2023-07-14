@@ -3,7 +3,7 @@ title: 实时传输 Web 音频与视频
 slug: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 ---
 
-实时流技术经常应用在一些现场输出的转播活动，类似体育活动、演唱会和更平常的电视播放及广播节目。这通常称为流媒体，实时流就是将媒体“实时”传输到计算机和设备的过程。这是一个包含多个元素的、非常复杂且较为新生的主题，所以我们会通过这篇文章，向你介绍它并让你知道如何开始。
+实时流技术经常应用在一些现场输出的转播活动，类似体育活动、演唱会和更平常的电视播放及广播节目。这通常称为流媒体，实时流就是将媒体"实时"传输到计算机和设备的过程。这是一个包含多个元素的、非常复杂且较为新生的主题，所以我们会通过这篇文章，向你介绍它并让你知道如何开始。
 
 将媒体传输到浏览器的关键考虑因素是，我们不是在播放一个大小明确的文件，而是在转播一个即时创建的文件，并且它没有预先确定的开始或结束位置。
 
@@ -79,7 +79,7 @@ RTSP 2.0 目前处于开发阶段，并且无法向后兼容 RTSP 1.0。
 
 ### MPEG-DASH
 
-DASH 意即基于 HTTP 的动态自适应流，最近已经被 Chrome、以及运行在 Window 8.1 的 IE 11 浏览器所支持。它依赖于媒体源扩展 (MSE)，这些扩展被[DASH.js](https://github.com/Dash-Industry-Forum/dash.js/)之类的 JavaScript 库所使用。这种方式允许我们通过 XHR 下载视频流的数据块，并且将它“添加”到 {{ htmlelement("video") }}元素正在播放的流中。正因如此，如果我们检测到网络缓慢，我们可以从下一段开始请求低质量（较小）的数据块。这种技术也允许添加广告片段到流中。
+DASH 意即基于 HTTP 的动态自适应流，最近已经被 Chrome、以及运行在 Window 8.1 的 IE 11 浏览器所支持。它依赖于媒体源扩展 (MSE)，这些扩展被[DASH.js](https://github.com/Dash-Industry-Forum/dash.js/)之类的 JavaScript 库所使用。这种方式允许我们通过 XHR 下载视频流的数据块，并且将它"添加"到 {{ htmlelement("video") }}元素正在播放的流中。正因如此，如果我们检测到网络缓慢，我们可以从下一段开始请求低质量（较小）的数据块。这种技术也允许添加广告片段到流中。
 
 > **备注：** 你也可以 [将 MPEG-DASH 自适应流式系统与 WebM 一起使用](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
 

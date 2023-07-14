@@ -47,9 +47,9 @@ _这个接口不继承任何方法。_
 > **备注：** 对于 `TreeWalker`，一个节点是否*可见*只取决于 `whatToShow` 和 `filter` 两个参数。（和元素是否在屏幕上可见无关。）
 
 - {{domxref("TreeWalker.parentNode()")}}
-  - : 移动当前 {{domxref("Node")}} 到文档顺序中的第一个“可见”的祖先节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
+  - : 移动当前 {{domxref("Node")}} 到文档顺序中的第一个"可见"的祖先节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
 - {{domxref("TreeWalker.firstChild()")}}
-  - : 移动当前 {{domxref("Node")}} 到当前节点的第一个“可见”子节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
+  - : 移动当前 {{domxref("Node")}} 到当前节点的第一个"可见"子节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
 
     ```html
     <!DOCTYPE html>
@@ -76,7 +76,7 @@ _这个接口不继承任何方法。_
     这同样应用于 `nextSibling()`、`previousSibling()`、`firstChild()` 和 `lastChild()`。
 
 - {{domxref("TreeWalker.lastChild()")}}
-  - : 移动当前 {{domxref("Node")}} 到当前节点的最末一个“可见”子节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
+  - : 移动当前 {{domxref("Node")}} 到当前节点的最末一个"可见"子节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
 - {{domxref("TreeWalker.previousSibling()")}}
   - : 移动当前 {{domxref("Node")}} 到当前节点的前一个兄弟节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
 - {{domxref("TreeWalker.nextSibling()")}}

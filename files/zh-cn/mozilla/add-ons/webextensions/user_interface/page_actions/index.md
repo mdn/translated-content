@@ -20,7 +20,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 
 - 可见性：
 
-  - 地址栏按钮默认是隐藏的（尽管可以通过 manifest 中“show_matches 和 hide_matches 来改变），而你可以在特定 tabs 中调用 pageAction.show() 和 pageAction.hide() 来显示或隐藏它。
+  - 地址栏按钮默认是隐藏的（尽管可以通过 manifest 中"show_matches 和 hide_matches 来改变），而你可以在特定 tabs 中调用 pageAction.show() 和 pageAction.hide() 来显示或隐藏它。
   - 工具栏按钮总是可见的。
 
 当动作（行为）与当前页面关联时，使用地址栏按钮，而当动作（行为）与浏览器相关或与多个页面相关时使用工具栏按钮。例如：

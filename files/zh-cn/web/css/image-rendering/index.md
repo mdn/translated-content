@@ -30,7 +30,7 @@ image-rendering: unset;
 - `auto`
   - : 自 Gecko 1.9（Firefox 3.0）起，Gecko 使用*双线性*（_bilinear_）算法进行重新采样（高质量）。
 - `smooth` {{Experimental_Inline}}
-  - : 应使用能最大化图像客观观感的算法来缩放图像。特别地，会“平滑”颜色的缩放算法是可以接受的，例如双线性插值。这适用于照片等类型的图像。
+  - : 应使用能最大化图像客观观感的算法来缩放图像。特别地，会"平滑"颜色的缩放算法是可以接受的，例如双线性插值。这适用于照片等类型的图像。
 - `high-quality` {{Experimental_Inline}}
   - : 与 `smooth` 相同，但更倾向于高质量的缩放。如果系统资源受到限制，在考虑降低哪些图像的质量以及降低到什么程度时，`high-quality` 的图像应该优先于任何其他值的图像。
 - `crisp-edges`

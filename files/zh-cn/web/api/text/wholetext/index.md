@@ -29,7 +29,7 @@ str = textnode.wholeText;
 para.removeChild(para.childNodes[1]);
 ```
 
-过了一会，你又决定给“Thru-hiking is great, but casting a ballot is tricky.”这句换个说法，_同时保留超链接_。所以你尝试以下代码：
+过了一会，你又决定给"Thru-hiking is great, but casting a ballot is tricky."这句换个说法，_同时保留超链接_。所以你尝试以下代码：
 
 ```js
 para.firstChild.data = "Thru-hiking is great, but ";

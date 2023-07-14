@@ -37,7 +37,7 @@ slug: MDN/Community/Learn_forum
    - 提示：如果你找不到没有回复的贴子，检查那些最近更新的，并看看能不能添加一些还没有提及过的有用的内容。
 
 2. 如果你所回复的贴子是一般性的求助，那就回复他们，并在你有时间的情况下给予他们尽可能多的帮助。
-3. 如果你所回复的贴子是请求“技能测试”或“作业”任务的评估：
+3. 如果你所回复的贴子是请求"技能测试"或"作业"任务的评估：
 
    1. 分清楚要评估的文章或任务，并找到相应的打分指南。完全可以向贴主索要相应技能评估或测试的链接。
    2. 确认提交的代码——他们可能会以 codepen、jsfiddle、jsbin 或相似链接的形式给出代码。如果他们没有以易于评估代码的方式给出代码，可以要求他们将代码附于 codepen、jsfiddle 或相似的平台上并给出链接。
@@ -67,14 +67,14 @@ slug: MDN/Community/Learn_forum
 1. 大致通读一遍页面的结构。
 2. 特别是查看一下现有的评估类型：
 
-   - 众多“测试你的技能”文章中（如 [/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#测试你的技能！](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#测试你的技能！)）
+   - 众多"测试你的技能"文章中（如 [/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#测试你的技能！](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals#测试你的技能！)）
    - 在一些模块结束时更深入的评估部分（如 [/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery#评估或进一步帮助](/zh-CN/docs/Learn/JavaScript/Building_blocks/Image_gallery#评估或进一步帮助))
 
 3. 看一眼与学习区相关的 GitHub 仓库（大部分文件都在 <https://github.com/mdn/learning-area/> 中，还有一些文件在 <https://github.com/mdn/css-examples/tree/main/learn> 中）。初学者需要帮助的大部分例子都包含在这里。
 4. 每项评估或测试都有相关的打分指南或推荐解法，可以帮助你评估他们的工作。
 5. 存在更容易找到这些资源的模式，如：
 
-   - 上述“测试你的技能”打分指南和资源可以在 <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals> 中找到。
+   - 上述"测试你的技能"打分指南和资源可以在 <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals> 中找到。
    - 上述评估打分指南和资源可以在 <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery> 中找到。
 
 开始时，浏览这些东西似乎很麻烦，但随着你对练习题目的熟悉，你会发现这个过程越来越容易。

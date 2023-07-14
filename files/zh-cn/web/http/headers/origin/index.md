@@ -31,7 +31,7 @@ Origin: <scheme>://<hostname>:<port>
 ## 指令
 
 - `null`
-  - : 请求的来源是“隐私敏感”的，或者是 HTML 规范定义的*不透明来源*（具体情况在[描述](#描述)部分列出）。
+  - : 请求的来源是"隐私敏感"的，或者是 HTML 规范定义的*不透明来源*（具体情况在[描述](#描述)部分列出）。
 - `<scheme>`
   - : 请求所使用的协议，通常是 HTTP 协议或者它的安全版本（HTTPS 协议）。
 - `<hostname>`
@@ -41,7 +41,7 @@ Origin: <scheme>://<hostname>:<port>
 
 ## 描述
 
-`Origin` 标头与 {{HTTPHeader("Referer")}} 标头类似，但前者不会暴露 URL 的 path 部分，而且其可以为 `null` 值。其用于为源站的请求提供“安全上下文”，除非源站的信息敏感或不必要的。
+`Origin` 标头与 {{HTTPHeader("Referer")}} 标头类似，但前者不会暴露 URL 的 path 部分，而且其可以为 `null` 值。其用于为源站的请求提供"安全上下文"，除非源站的信息敏感或不必要的。
 
 从广义上讲，用户代理会在以下情况中添加 {{httpheader("Origin")}} 请求标头：
 

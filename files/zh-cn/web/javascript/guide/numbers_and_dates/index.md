@@ -96,9 +96,9 @@ var notANum = Number.NaN;
 | ---------------------------------------------------- | ------------------------------------------------------------------------- |
 | {{jsxref("Number.MAX_VALUE")}}             | 可表示的最大值                                                            |
 | {{jsxref("Number.MIN_VALUE")}}             | 可表示的最小值                                                            |
-| {{jsxref("Number.NaN")}}                     | 特指”非数字“                                                              |
-| {{jsxref("Number.NEGATIVE_INFINITY")}} | 特指“负无穷”;在溢出时返回                                                 |
-| {{jsxref("Number.POSITIVE_INFINITY")}} | 特指“正无穷”;在溢出时返回                                                 |
+| {{jsxref("Number.NaN")}}                     | 特指"非数字"                                                              |
+| {{jsxref("Number.NEGATIVE_INFINITY")}} | 特指"负无穷";在溢出时返回                                                 |
+| {{jsxref("Number.POSITIVE_INFINITY")}} | 特指"正无穷";在溢出时返回                                                 |
 | {{jsxref("Number.EPSILON")}}                 | 表示 1 和比最接近 1 且大于 1 的最小{{jsxref("Number")}}之间的差别 |
 | {{jsxref("Number.MIN_SAFE_INTEGER")}}     | JavaScript 最小安全整数。                                                 |
 | {{jsxref("Number.MAX_SAFE_INTEGER")}}     | JavaScript 最大安全整数。                                                 |
@@ -192,7 +192,7 @@ var dateObjectName = new Date([parameters]);
 - "to" 方法，用于返回 Date 对象的字符串格式的值。
 - parse 和 UTC 方法，用于解析 Date 字符串。
 
-通过“get”和“set”方法，你可以分别设置和获取秒，分，时，日，星期，月份，年。这里有个 getDay 方法可以返回星期，但是没有相应的 setDay 方法用来设置星期，因为星期是自动设置的。这些方法用整数来代表以下这些值：
+通过"get"和"set"方法，你可以分别设置和获取秒，分，时，日，星期，月份，年。这里有个 getDay 方法可以返回星期，但是没有相应的 setDay 方法用来设置星期，因为星期是自动设置的。这些方法用整数来代表以下这些值：
 
 - 秒，分：0 至 59
 - 时：0 至 23

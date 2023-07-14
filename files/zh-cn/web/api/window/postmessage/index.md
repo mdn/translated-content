@@ -50,7 +50,7 @@ message 的属性有：
 - `data`
   - : 从其他 window 中传递过来的对象。
 - `origin`
-  - : 调用 `postMessage` 时消息发送方窗口的 [origin](/zh-CN/docs/Origin) . 这个字符串由 协议、“://“、域名、“ : 端口号”拼接而成。例如“`https://example.org` (隐含端口 `443`)”、“`http://example.net` (隐含端口 `80`)”、“`http://example.com:8080`”。请注意，这个 origin 不能保证是该窗口的当前或未来 origin，因为 postMessage 被调用后可能被导航到不同的位置。
+  - : 调用 `postMessage` 时消息发送方窗口的 [origin](/zh-CN/docs/Origin) . 这个字符串由 协议、"://"、域名、" : 端口号"拼接而成。例如"`https://example.org` (隐含端口 `443`)"、"`http://example.net` (隐含端口 `80`)"、"`http://example.com:8080`"。请注意，这个 origin 不能保证是该窗口的当前或未来 origin，因为 postMessage 被调用后可能被导航到不同的位置。
 - `source`
   - : 对发送消息的[窗口](/zh-CN/docs/DOM/window)对象的引用; 您可以使用此来在具有不同 origin 的两个窗口之间建立双向通信。
 

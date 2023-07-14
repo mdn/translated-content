@@ -7,11 +7,11 @@ slug: Web/HTML
 
 **HTML**（超文本标记语言——HyperText Markup Language）是构成 Web 世界的一砖一瓦。它定义了网页内容的含义和结构。除 HTML 以外的其他技术则通常用来描述一个网页的表现与展示效果（如 [CSS](/zh-CN/docs/Web/CSS)），或功能与行为（如 [JavaScript](/zh-CN/docs/Web/JavaScript)）。
 
-“超文本”（hypertext）是指连接单个网站内或多个网站间的网页的链接。链接是网络的一个基本方面。只要将内容上传到互联网，并将其与他人创建的页面相链接，你就成为了万维网的积极参与者。
+"超文本"（hypertext）是指连接单个网站内或多个网站间的网页的链接。链接是网络的一个基本方面。只要将内容上传到互联网，并将其与他人创建的页面相链接，你就成为了万维网的积极参与者。
 
-HTML 使用“标记”（markup）来注明文本、图片和其他内容，以便于在 Web 浏览器中显示。HTML 标记包含一些特殊“元素”如 {{HTMLElement("head")}}、{{HTMLElement("title")}}、{{HTMLElement("body")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("article")}}、{{HTMLElement("section")}}、{{HTMLElement("p")}}、{{HTMLElement("div")}}、{{HTMLElement("span")}}、{{HTMLElement("img")}}、{{HTMLElement("aside")}}、{{HTMLElement("audio")}}、{{HTMLElement("canvas")}}、{{HTMLElement("datalist")}}、{{HTMLElement("details")}}、{{HTMLElement("embed")}}、{{HTMLElement("nav")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("video")}}、{{HTMLElement("ul")}}、{{HTMLElement("ol")}}、{{HTMLElement("li")}} 等等。
+HTML 使用"标记"（markup）来注明文本、图片和其他内容，以便于在 Web 浏览器中显示。HTML 标记包含一些特殊"元素"如 {{HTMLElement("head")}}、{{HTMLElement("title")}}、{{HTMLElement("body")}}、{{HTMLElement("header")}}、{{HTMLElement("footer")}}、{{HTMLElement("article")}}、{{HTMLElement("section")}}、{{HTMLElement("p")}}、{{HTMLElement("div")}}、{{HTMLElement("span")}}、{{HTMLElement("img")}}、{{HTMLElement("aside")}}、{{HTMLElement("audio")}}、{{HTMLElement("canvas")}}、{{HTMLElement("datalist")}}、{{HTMLElement("details")}}、{{HTMLElement("embed")}}、{{HTMLElement("nav")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("video")}}、{{HTMLElement("ul")}}、{{HTMLElement("ol")}}、{{HTMLElement("li")}} 等等。
 
-HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在“`<`”和“`>`”中包裹的元素名组成，HTML 标签里的元素名不区分大小写。也就是说，它们可以用大写，小写或混合形式书写。例如，`<title>` 标签可以写成 `<Title>`，`<TITLE>` 或以任何其他方式。然而，习惯上与实践上都推荐将标签名全部小写。
+HTML 元素通过"标签"（tag）将文本从文档中引出，标签由在"`<`"和"`>`"中包裹的元素名组成，HTML 标签里的元素名不区分大小写。也就是说，它们可以用大写，小写或混合形式书写。例如，`<title>` 标签可以写成 `<Title>`，`<TITLE>` 或以任何其他方式。然而，习惯上与实践上都推荐将标签名全部小写。
 
 下面的文章会帮助你更好地了解 HTML。
 
@@ -69,7 +69,7 @@ HTML 元素通过“标签”（tag）将文本从文档中引出，标签由在
 - [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
   - : 全局属性可以在所有 [HTML 元素](/zh-CN/docs/Web/HTML/Element)上进行设置，*包括那些没有在相关标准中出现的元素*。这意味着即使这些非标准元素使得文档并不符合 HTML5 标准，它们也必须允许这些属性存在。
 - [行级元素](/zh-CN/docs/Glossary/Inline-level_content)和[块级元素](/zh-CN/docs/Glossary/Block-level_content)
-  - : HTML 元素通常是“行级”或“块级”元素。一个行级元素仅会占用由定义它的标签所包裹起来的空间。而一个块级元素将会占用其父元素（容器）的全部空间，也就是创建一个“块”。
+  - : HTML 元素通常是"行级"或"块级"元素。一个行级元素仅会占用由定义它的标签所包裹起来的空间。而一个块级元素将会占用其父元素（容器）的全部空间，也就是创建一个"块"。
 - [链接类型](/zh-CN/docs/Web/HTML/Link_types)
   - : 在 HTML 中，各种各样的链接类型被用来确立和定义两个文档之间的关系。可以设置链接类型的链接元素包括 {{HTMLElement("a")}}、{{HTMLElement("area")}} 和 {{HTMLElement("link")}}。
 - [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)

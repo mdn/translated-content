@@ -35,7 +35,7 @@ function FindProxyForURL(url, host)
 
 - `FindProxyForURL()` 函数返回一个字符串
 - 如果那个字符串为空，则不使用任何代理
-- 字符串中可以包含如下任意数量的“代理配置块”（building blocks），用分号分隔：
+- 字符串中可以包含如下任意数量的"代理配置块"（building blocks），用分号分隔：
 
 <!---->
 

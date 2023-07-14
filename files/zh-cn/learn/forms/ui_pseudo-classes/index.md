@@ -95,7 +95,7 @@ input:optional {
 
 你也可以尝试在不填写表单的情况下提交，观察浏览器默认给你的客户端验证错误信息。
 
-上述形式并不坏，但也不是很好。首先，我们只用颜色来表示必填和可选的状态，这对色盲的人来说不是很好。其次，网络上关于必填状态的标准惯例是一个星号（\*），或者将“必需”这个词与相关的控件联系起来。
+上述形式并不坏，但也不是很好。首先，我们只用颜色来表示必填和可选的状态，这对色盲的人来说不是很好。其次，网络上关于必填状态的标准惯例是一个星号（\*），或者将"必需"这个词与相关的控件联系起来。
 
 在下一节，我们将看一个更好的例子，使用 `:required` 表示必填字段，这也是对使用生成内容的挖掘。
 
@@ -143,7 +143,7 @@ input[type="radio"]:checked::before {
 <p>Required fields are labelled with "required".</p>
 ```
 
-当屏幕阅读器用户到达每个需要的输入时，他们会得到“required”这个额外的信息，而视力正常的用户会看到我们的标签。
+当屏幕阅读器用户到达每个需要的输入时，他们会得到"required"这个额外的信息，而视力正常的用户会看到我们的标签。
 
 由于表单输入不直接支持将生成的内容放在上面（这是因为生成的内容是相对于元素的格式化框放置的，但表单输入的工作方式更像被替换的元素，因此没有格式化框），我们将添加一个空的 [`<span>`](/zh-CN/docs/Web/HTML/Element/span) 元素来存放生成的内容：
 
@@ -188,7 +188,7 @@ input:required + span::after {
 
 我们将 `<span>` 设置为 `position: relative`，这样我们就可以将生成的内容设置为 `position: absolute`，并将其相对于 `<span>` 而不是 `<body>` 定位（出于定位需求，生成的内容就像它是生成元素的一个子节点）。
 
-然后我们给生成的内容加上“required”，也就是我们想要的标签内容，并按照我们想要的样式和位置排布。结果见下文。
+然后我们给生成的内容加上"required"，也就是我们想要的标签内容，并按照我们想要的样式和位置排布。结果见下文。
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/required-optional-generated.html", '100%', 430)}}
 
@@ -248,7 +248,7 @@ input:valid + span::before {
 
 和之前一样，我们将 `<span>` 设置为 `position: relative`，这样我们就可以将生成的内容相对于它们定位。然后，我们根据表单的数据是有效还是无效，绝对定位不同的生成内容——分别是绿色复选框或红色叉号。为了给无效数据增加一点额外的紧迫感，我们还在无效时给输入的数据加上了厚厚的红边。
 
-> **备注：** 我们使用 `::before` 来添加这些标签，因为我们已经使用 `::after` 来添加“required”标签。
+> **备注：** 我们使用 `::before` 来添加这些标签，因为我们已经使用 `::after` 来添加"required"标签。
 
 你可以在下方尝试：
 
@@ -262,7 +262,7 @@ input:valid + span::before {
 
 > **备注：** 数值输入类型包括 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range`。
 
-值得注意的是，数据在范围内的输入也会被 `:valid` 伪类匹配，而数据在范围外的输入也会被 `:invalid` 伪类匹配。那么，为什么要同时拥有这两个类呢？这个问题实际上是一个语义问题——超出范围是一种更具体的无效通信类型，所以你可能想为超出范围的输入提供一个不同的消息，这将比只说“无效”对用户更有帮助。你甚至可能想同时提供这两种信息。
+值得注意的是，数据在范围内的输入也会被 `:valid` 伪类匹配，而数据在范围外的输入也会被 `:invalid` 伪类匹配。那么，为什么要同时拥有这两个类呢？这个问题实际上是一个语义问题——超出范围是一种更具体的无效通信类型，所以你可能想为超出范围的输入提供一个不同的消息，这将比只说"无效"对用户更有帮助。你甚至可能想同时提供这两种信息。
 
 让我们看看一个正是这样做的例子。我们的 [out-of-range.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/out-of-range.html) 演示（也可参见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/out-of-range.html)）建立在前一个示例的基础上，为数字输入提供超出范围的信息，并说明它们是否是必需的。
 
@@ -310,9 +310,9 @@ input:out-of-range + span::after {
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/out-of-range.html", '100%', 430)}}
 
-数字输入有可能同时是必需的和超出范围的，那么会发生什么呢？因为 `:out-of-range` 规则在源代码中出现的时间比 `:required` 规则晚，[层叠规则](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#理解层叠)开始发挥作用，并且显示“超出范围”信息。
+数字输入有可能同时是必需的和超出范围的，那么会发生什么呢？因为 `:out-of-range` 规则在源代码中出现的时间比 `:required` 规则晚，[层叠规则](/zh-CN/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#理解层叠)开始发挥作用，并且显示"超出范围"信息。
 
-这一点做得很好——当页面第一次加载时，会显示“required”，还有一个红叉和边界。当你输入了一个有效的年龄（即在 12-120 的范围内），输入就会变成有效。然而，如果你将年龄输入改为超出范围，则会弹出“Outside allowable value range”的信息，取代了原先的“required”。
+这一点做得很好——当页面第一次加载时，会显示"required"，还有一个红叉和边界。当你输入了一个有效的年龄（即在 12-120 的范围内），输入就会变成有效。然而，如果你将年龄输入改为超出范围，则会弹出"Outside allowable value range"的信息，取代了原先的"required"。
 
 > **备注：** 要输入一个无效的/超出范围的值，你必须实际聚焦于表格，用键盘输入该值。控件提供的按钮不会让你在允许的范围之外增加/减少数值。
 
@@ -508,7 +508,7 @@ input[type="radio"]:checked::before {
 
 {{EmbedGHLiveSample("learning-area/html/forms/styling-examples/radios-styled.html", '100%', 200)}}
 
-基本上，我们使用 `::before` 伪元素建立了单选按钮“内圈”的样式，但在它上面设置了一个 `scale(0)` 的 [`transform`](/zh-CN/docs/Web/CSS/transform) 值。然后我们使用一个 [`transition`](/zh-CN/docs/Web/CSS/transition) 来使它在被选择时能有一个很好的动画效果。使用变换而不是过渡 [`width`](/zh-CN/docs/Web/CSS/width)/[`height`](/zh-CN/docs/Web/CSS/height) 的好处是，你可以使用 [`transform-origin`](/zh-CN/docs/Web/CSS/transform-origin) 来使它从圆的中心生长，而不是让它看起来从圆的角落生长。
+基本上，我们使用 `::before` 伪元素建立了单选按钮"内圈"的样式，但在它上面设置了一个 `scale(0)` 的 [`transform`](/zh-CN/docs/Web/CSS/transform) 值。然后我们使用一个 [`transition`](/zh-CN/docs/Web/CSS/transition) 来使它在被选择时能有一个很好的动画效果。使用变换而不是过渡 [`width`](/zh-CN/docs/Web/CSS/width)/[`height`](/zh-CN/docs/Web/CSS/height) 的好处是，你可以使用 [`transform-origin`](/zh-CN/docs/Web/CSS/transform-origin) 来使它从圆的中心生长，而不是让它看起来从圆的角落生长。
 
 ### :default 和 :indeterminate
 
@@ -551,7 +551,7 @@ input:default ~ span::after {
 }
 ```
 
-这为页面加载时最初选择的项目提供了一个小小的“default”标签。注意这里我们使用的是通用兄弟组合器（`~`），而不是相邻兄弟组合器（`+`）——我们需要这样做，因为在源代码中，`<span>` 并不在 `<input>` 之后。
+这为页面加载时最初选择的项目提供了一个小小的"default"标签。注意这里我们使用的是通用兄弟组合器（`~`），而不是相邻兄弟组合器（`+`）——我们需要这样做，因为在源代码中，`<span>` 并不在 `<input>` 之后。
 
 参见下方的实时结果：
 

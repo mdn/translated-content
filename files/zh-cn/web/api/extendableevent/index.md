@@ -35,7 +35,7 @@ _从他的父辈继承，{{domxref("Event")}}。_
 
 代码段还显示了对 service worker 使用的缓存进行版本控制的最佳实践。虽然在这个例子中只有一个缓存，但是相同的方法可以用于多个缓存。它将缓存的速记标识符映射到特定的、版本化的缓存名称。
 
-> **备注：** 在 chrome 中，日志记录语句通过 chrome://service worker internals 访问的相关服务工作者的“inspect”接口可见。
+> **备注：** 在 chrome 中，日志记录语句通过 chrome://service worker internals 访问的相关服务工作者的"inspect"接口可见。
 
 ```js
 var CACHE_VERSION = 1;

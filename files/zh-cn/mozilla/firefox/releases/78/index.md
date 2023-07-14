@@ -16,7 +16,7 @@ slug: Mozilla/Firefox/Releases/78
 #### 调试器
 
 - 现在，您可以从[关于：调试](/zh-CN/docs/Tools/about:debugging#Connecting_to_a_remote_device)面板更改远程设备访问的 URL。([Firefox bug 1617237](https://bugzil.la/1617237))
-- 现在，[调试器](/zh-CN/docs/Tools/Debugger/UI_Tour)中的 **禁用 JavaScript** 菜单项仅影响当前选项卡，并且在关闭“开发人员工具”后会重置。([Firefox bug 1640318](https://bugzil.la/1640318))
+- 现在，[调试器](/zh-CN/docs/Tools/Debugger/UI_Tour)中的 **禁用 JavaScript** 菜单项仅影响当前选项卡，并且在关闭"开发人员工具"后会重置。([Firefox bug 1640318](https://bugzil.la/1640318))
 - 如果在[作用域](/zh-CN/docs/Tools/Debugger/UI_Tour#Scopes)中启用**映射**，则[日志点](/zh-CN/docs/Tools/Debugger/Set_a_logpoint)可以将源映射代码中的变量名称映射回其原始名称。([Firefox bug 1536857](https://bugzil.la/1536857))
 
 #### 网络监控器
@@ -78,7 +78,7 @@ slug: Mozilla/Firefox/Releases/78
 
 - {{WebExtAPIRef("browsingData.removeCache")}} 和 {{WebExtAPIRef("browsingData.removePluginData")}} 现在支持按主机名删除。([Firefox bug 1636784](https://bugzil.la/1636784)).
 - 使用[`proxy.onRequest`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy/onRequest)时，现在可以正确应用基于选项卡 ID 或窗口 ID 限制的过滤器。这对于希望仅在一个窗口中提供代理功能的加载项很有用。
-- 现在，从“所有选项卡”下拉菜单中[单击上下文菜单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked)即可传递适当的选项卡对象。过去，活动选项卡被错误地传递了。
+- 现在，从"所有选项卡"下拉菜单中[单击上下文菜单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/menus/onClicked)即可传递适当的选项卡对象。过去，活动选项卡被错误地传递了。
 - 当使用带有另存为选项的[`downloads.download`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download)时，可以记住最近使用的目录。尽管此信息对开发人员用处不大，但对用户而言却非常方便。
 
 ## 旧版本

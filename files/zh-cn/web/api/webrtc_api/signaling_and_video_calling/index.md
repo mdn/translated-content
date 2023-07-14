@@ -348,7 +348,7 @@ function createPeerConnection() {
 - {{domxref("RTCPeerConnection.oniceconnectionstatechange")}}
   - : ICE 层发送 `iceconnectionstatechange` 事件，让你了解 ICE 连接状态的更改。这可以帮助你了解连接何时失败或丢失。我们将在下面的[ICE 连接状态](#ice_连接状态)中查看此示例的代码。
 - {{domxref("RTCPeerConnection.onicegatheringstatechange")}}
-  - : 当 ICE 代理收集候选对象的过程从一个状态切换到另一个状态（例如开始收集候选对象或完成协商）时，ICE 层将向你发送事件（“ICegulatingStateChange”）事件。见下文 [ICE 收集状态](#ice_收集状态)。
+  - : 当 ICE 代理收集候选对象的过程从一个状态切换到另一个状态（例如开始收集候选对象或完成协商）时，ICE 层将向你发送事件（"ICegulatingStateChange"）事件。见下文 [ICE 收集状态](#ice_收集状态)。
 - {{domxref("RTCPeerConnection.onsignalingstatechange")}}
   - : 当信令进程的状态更改时（或如果到信令服务器的连接更改时），WebRTC 架构将向你发送 `signalingstatechange` 消息。参见[ICE 信令状态](#ice_信令状态)查看我们的代码。
 
@@ -664,4 +664,4 @@ function handleICEGatheringStateChangeEvent(event) {
 
 现在您可以[在 Glitch 上尝试这个例子](https://webrtc-from-chat.glitch.me/)，以看到它的实际效果。打开两个设备上的 Web 控制台并查看记录的输出，尽管你在上面所示的代码中看不到它，但是服务器上（以及[GitHub](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)上）的代码有很多控制台输出，因此你可以看到信令和连接进程在工作。
 
-另一个明显的改进是添加了一个“铃声”功能，这样一来，一个"用户 X 正在呼叫。你是否要应答？" 提示会首先出现，而不仅仅是请求用户允许使用相机和麦克风。
+另一个明显的改进是添加了一个"铃声"功能，这样一来，一个"用户 X 正在呼叫。你是否要应答？" 提示会首先出现，而不仅仅是请求用户允许使用相机和麦克风。

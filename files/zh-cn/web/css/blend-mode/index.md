@@ -83,7 +83,7 @@ slug: Web/CSS/blend-mode
 
 ## 示例
 
-### 示例：使用“normal”
+### 示例：使用"normal"
 
 ```html hidden
 <div id="div"></div>
@@ -98,9 +98,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“normal”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"normal"', "300", "350") }}
 
-### 示例：使用“multiply”
+### 示例：使用"multiply"
 
 ```html hidden
 <div id="div"></div>
@@ -115,9 +115,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“multiply”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"multiply"', "300", "350") }}
 
-### 示例：使用“screen”
+### 示例：使用"screen"
 
 ```html hidden
 <div id="div"></div>
@@ -132,9 +132,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“screen”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"screen"', "300", "350") }}
 
-### 示例：使用“overlay”
+### 示例：使用"overlay"
 
 ```html hidden
 <div id="div"></div>
@@ -149,9 +149,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“overlay”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"overlay"', "300", "350") }}
 
-### 示例：使用“darken”
+### 示例：使用"darken"
 
 ```html hidden
 <div id="div"></div>
@@ -166,9 +166,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“darken”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"darken"', "300", "350") }}
 
-### 示例：使用“lighten”
+### 示例：使用"lighten"
 
 ```html hidden
 <div id="div"></div>
@@ -183,9 +183,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“lighten”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"lighten"', "300", "350") }}
 
-### 示例：使用“color-dodge”
+### 示例：使用"color-dodge"
 
 ```html hidden
 <div id="div"></div>
@@ -200,9 +200,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“color-dodge”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"color-dodge"', "300", "350") }}
 
-### 示例：使用“color-burn”
+### 示例：使用"color-burn"
 
 ```html hidden
 <div id="div"></div>
@@ -217,9 +217,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“color-burn”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"color-burn"', "300", "350") }}
 
-### 示例：使用“hard-light”
+### 示例：使用"hard-light"
 
 ```html hidden
 <div id="div"></div>
@@ -234,9 +234,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“hard-light”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"hard-light"', "300", "350") }}
 
-### 示例：使用“soft-light”
+### 示例：使用"soft-light"
 
 ```html hidden
 <div id="div"></div>
@@ -251,9 +251,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“soft-light”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"soft-light"', "300", "350") }}
 
-### 示例：使用“difference”
+### 示例：使用"difference"
 
 ```html hidden
 <div id="div"></div>
@@ -268,9 +268,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“difference”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"difference"', "300", "350") }}
 
-### 示例：使用“exclusion”
+### 示例：使用"exclusion"
 
 ```html hidden
 <div id="div"></div>
@@ -285,9 +285,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“exclusion”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"exclusion"', "300", "350") }}
 
-### 示例：使用“hue”
+### 示例：使用"hue"
 
 ```html hidden
 <div id="div"></div>
@@ -302,9 +302,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“hue”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"hue"', "300", "350") }}
 
-### 示例：使用“saturation”
+### 示例：使用"saturation"
 
 ```html hidden
 <div id="div"></div>
@@ -319,9 +319,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“saturation”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"saturation"', "300", "350") }}
 
-### 示例：使用“color”
+### 示例：使用"color"
 
 ```html hidden
 <div id="div"></div>
@@ -336,9 +336,9 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“color”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"color"', "300", "350") }}
 
-### 示例：使用“luminosity”
+### 示例：使用"luminosity"
 
 ```html hidden
 <div id="div"></div>
@@ -353,7 +353,7 @@ slug: Web/CSS/blend-mode
 }
 ```
 
-{{ EmbedLiveSample('示例：使用“luminosity”', "300", "350") }}
+{{ EmbedLiveSample('示例：使用"luminosity"', "300", "350") }}
 
 ### 混合模式比较
 

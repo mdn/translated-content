@@ -175,7 +175,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
 
 ### 所有博客文章列表
 
-这将显示所有博客帖子的列表（可从侧栏中的“所有博客”All blogs 链接访问）。注意事项：
+这将显示所有博客帖子的列表（可从侧栏中的"所有博客"All blogs 链接访问）。注意事项：
 
 - 侧栏还列出了登录用户。
 - 个人博客帖子和博主可以作为页面中的链接访问。
@@ -186,7 +186,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
 
 ### 所有博主的列表
 
-这提供了到所有博客的链接，如同来自侧栏中的“所有博客”All bloggers 链接。在这种情况下，我们可以从侧边栏看到，并没有用户登录。
+这提供了到所有博客的链接，如同来自侧栏中的"所有博客"All bloggers 链接。在这种情况下，我们可以从侧边栏看到，并没有用户登录。
 
 ![List of all bloggers](diyblog_blog_allbloggers.png)
 
@@ -246,7 +246,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
 4. 可以使用基于函数的视图（以及关联的模型和表单），或使用通用`CreateView`，以创建添加注释表单。如果您使用`CreateView`（推荐），那么：
 
     - 您还需要将博客文章的名称，传递到上下文中的评论页面（实现`get_context_data()` ，如下所述）。
-    - 表单应仅显示用户输入的注释“description”（日期和相关的博客文章，不应该是可编辑的）。由于它们本身不在表单中，因此您的代码，需要在`form_valid()` 函数中，设置注释的作者，以便将其保存到模型中（[如此处所述](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user) - Django 文档）。在同一个功能中，我们设置了相关的博客。可能的实现如下所示（`pk`是从 URL / URL 配置传入的博客 ID）。
+    - 表单应仅显示用户输入的注释"description"（日期和相关的博客文章，不应该是可编辑的）。由于它们本身不在表单中，因此您的代码，需要在`form_valid()` 函数中，设置注释的作者，以便将其保存到模型中（[如此处所述](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user) - Django 文档）。在同一个功能中，我们设置了相关的博客。可能的实现如下所示（`pk`是从 URL / URL 配置传入的博客 ID）。
 
       ```python
           def form_valid(self, form):
@@ -261,7 +261,7 @@ slug: Learn/Server-side/Django/django_assessment_blog
               return super(BlogCommentCreate, self).form_valid(form)
       ```
 
-    - 在表单验证后，您需要提供成功的 URL，以进行重新定向；这应该是原来的博客。为此，您需要覆盖 `get_success_url()`，并为原来的博客“反转”URL。您可以使用`self.kwargs`属性，获取所需的博客 ID，如上面的 `form_valid()` 方法所示。
+    - 在表单验证后，您需要提供成功的 URL，以进行重新定向；这应该是原来的博客。为此，您需要覆盖 `get_success_url()`，并为原来的博客"反转"URL。您可以使用`self.kwargs`属性，获取所需的博客 ID，如上面的 `form_valid()` 方法所示。
 
 我们简要地讨论了在[Django 教程 6：通用列表和详细信息视图](/zh-CN/docs/Learn/Server-side/Django/Generic_views#Overriding_methods_in_class-based_views)主题中，在基于类的视图中，将上下文传递给模板。要执行此操作，您需要覆盖`get_context_data()`（首先，获取现有上下文，使用要传递给模板的任何其他变量，更新它，然后返回更新的上下文）。例如，下面的代码片段，显示了如何根据`BlogAuthor` id，将 blogger 对象添加到上下文中。
 
@@ -279,7 +279,7 @@ class SomeView(generic.ListView):
 
 ## 评估
 
-这个任务的评估，可以在[Github](https://github.com/mdn/django-diy-blog/blob/master/MarkingGuide.md)上找到。此评估主要基于您的应用程序，满足上面列出要求的程度，尽管评估的某些部分，会检查您的代码是否使用了适当的模型，并且您至少编写了一些测试代码。完成后，您可以查看我们[完成的示例](https://github.com/mdn/django-diy-blog)，该示例项目的表现是“满分”。
+这个任务的评估，可以在[Github](https://github.com/mdn/django-diy-blog/blob/master/MarkingGuide.md)上找到。此评估主要基于您的应用程序，满足上面列出要求的程度，尽管评估的某些部分，会检查您的代码是否使用了适当的模型，并且您至少编写了一些测试代码。完成后，您可以查看我们[完成的示例](https://github.com/mdn/django-diy-blog)，该示例项目的表现是"满分"。
 
 完成本单元后，表示您还完成了所有 MDN 用于学习《基本 Django 服务器端网站编程》的内容！我们希望您喜欢这个模块，并感觉您已经掌握了基础知识！
 

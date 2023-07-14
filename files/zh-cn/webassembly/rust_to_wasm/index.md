@@ -24,7 +24,7 @@ Rust 和 WebAssembly 有两大主要用例：
 
 ### 安装 Rust
 
-前往 [Install Rust](https://www.rust-lang.org/install.html) 页面并跟随指示安装 Rust。这里会安装一个名为“rustup”的工具，这个工具能让你管理多个不同版本的 Rust。默认情况下，它会安装用于惯常 Rust 开发的 stable 版本 Rust Release。Rustup 会安装 Rust 的编译器 `rustc`、Rust 的包管理工具 `cargo`、Rust 的标准库 `rust-std` 以及一些有用的文档 `rust-docs`。
+前往 [Install Rust](https://www.rust-lang.org/install.html) 页面并跟随指示安装 Rust。这里会安装一个名为"rustup"的工具，这个工具能让你管理多个不同版本的 Rust。默认情况下，它会安装用于惯常 Rust 开发的 stable 版本 Rust Release。Rustup 会安装 Rust 的编译器 `rustc`、Rust 的包管理工具 `cargo`、Rust 的标准库 `rust-std` 以及一些有用的文档 `rust-docs`。
 
 > **备注：** 需要注意，在安装完成后，你需要把 cargo 的 `bin` 目录添加到你系统的 `PATH` 。一般来说它会自动添加，但需要你重启终端后才会生效。
 
@@ -126,7 +126,7 @@ extern crate wasm_bindgen;
 use wasm_bindgen::prelude::*;
 ```
 
-第一行就像在说“哇 Rust，我们在用一个叫做 wasm_bindgen 的库”。在 Rust 当中，库被称为“crates”，因为我们使用的是一个外部库，所以有 "extern"。
+第一行就像在说"哇 Rust，我们在用一个叫做 wasm_bindgen 的库"。在 Rust 当中，库被称为"crates"，因为我们使用的是一个外部库，所以有 "extern"。
 
 明白了吗？ **Cargo ships crates**.
 
@@ -309,7 +309,7 @@ js.then(js => {
 
 请注意，您需要再次填写您的 npm 用户名。
 
-这将从`node_modules`文件夹导入我们的模块。这不是最佳做法，但这里只做一个演示，因此暂时就这样用。加载后，它将从该模块调用`greet`函数，并传入字符串“WebAssembly”参数。注意这里看上去没有什么特别的，但是我们正在调用 Rust 代码！就 JavaScript 代码所知，这只是一个普通模块。
+这将从`node_modules`文件夹导入我们的模块。这不是最佳做法，但这里只做一个演示，因此暂时就这样用。加载后，它将从该模块调用`greet`函数，并传入字符串"WebAssembly"参数。注意这里看上去没有什么特别的，但是我们正在调用 Rust 代码！就 JavaScript 代码所知，这只是一个普通模块。
 
 我们已经完成了所有的文件！让我们试一下：
 

@@ -28,16 +28,16 @@ slug: Web/CSS/length
 > **备注：** 这些相对单位，尤其是 em 和 rem, 经常被用于满足即使用户更改字体大小，也可以保持页面的垂直阅读节奏可拓展布局中
 
 - `cap` {{experimental_inline}}
-  - : 表示元素字体 {{Cssxref("font")}} 的“上限高度”（cap height，大写字母的标称高度（nominal height））。
+  - : 表示元素字体 {{Cssxref("font")}} 的"上限高度"（cap height，大写字母的标称高度（nominal height））。
 - `ch`
-  - : 这一单位代表元素所用字体 {{Cssxref("font")}} 中“0”这一字形的宽度（"0"，Unicode 字符 U+0030），更准确地说，是“0”这一字形的预测尺寸（advance measure）。
-    如果无法确定“0”字形的大小，则必须假定其宽为 `0.5em`，高为 `1em`。
+  - : 这一单位代表元素所用字体 {{Cssxref("font")}} 中"0"这一字形的宽度（"0"，Unicode 字符 U+0030），更准确地说，是"0"这一字形的预测尺寸（advance measure）。
+    如果无法确定"0"字形的大小，则必须假定其宽为 `0.5em`，高为 `1em`。
 - `em`
   - : 相对长度单位，这个单位表示元素的 {{Cssxref("font-size")}} 的计算值。如果用在{{ Cssxref("font-size") }} 属性本身，它则表示元素*继承*的 `font-size` 值。
 - `ex`
-  - : 这个单位表示元素{{Cssxref("font")}}的 [x-height](http://en.wikipedia.org/wiki/X-height) 。在含有“X”字母的字体中，它是该字体的小写字母的高度；对于很多字体来说，`1ex ≈ 0.5em`。
+  - : 这个单位表示元素{{Cssxref("font")}}的 [x-height](http://en.wikipedia.org/wiki/X-height) 。在含有"X"字母的字体中，它是该字体的小写字母的高度；对于很多字体来说，`1ex ≈ 0.5em`。
 - `ic` {{experimental_inline}}
-  - : 等于在用于渲染的字体中找到的“水”（CJK 表意文字 "水"，U + 6C34）字形的使用预先测量（used advance measure）。
+  - : 等于在用于渲染的字体中找到的"水"（CJK 表意文字 "水"，U + 6C34）字形的使用预先测量（used advance measure）。
 - `lh` {{experimental_inline}}
   - : 等于使用它的元素的 {{Cssxref("line-height")}} 属性的计算值，转换为绝对长度。
 - `rem`

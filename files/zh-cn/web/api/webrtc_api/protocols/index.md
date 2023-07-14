@@ -27,9 +27,9 @@ NAT 的会话穿越功能[Session Traversal Utilities for **NAT** (STU**N**)](ht
 
 ## TURN
 
-一些路由器使用一种“对称型 NAT”的 NAT 模型。这意味着路由器只接受和对端先前建立的连接（就是下一次请求建立新的连接映射）。
+一些路由器使用一种"对称型 NAT"的 NAT 模型。这意味着路由器只接受和对端先前建立的连接（就是下一次请求建立新的连接映射）。
 
-NAT 的中继穿越方式[Traversal Using Relays around NAT (TURN)](http://en.wikipedia.org/wiki/TURN) 通过 TURN 服务器中继所有数据的方式来绕过“对称型 NAT”。你需要在 TURN 服务器上创建一个连接，然后告诉所有对端设备发包到服务器上，TURN 服务器再把包转发给你。很显然这种方式是开销很大的，所以只有在没得选择的情况下采用。
+NAT 的中继穿越方式[Traversal Using Relays around NAT (TURN)](http://en.wikipedia.org/wiki/TURN) 通过 TURN 服务器中继所有数据的方式来绕过"对称型 NAT"。你需要在 TURN 服务器上创建一个连接，然后告诉所有对端设备发包到服务器上，TURN 服务器再把包转发给你。很显然这种方式是开销很大的，所以只有在没得选择的情况下采用。
 
 ![An interaction between two users of a WebRTC application involving STUN and TURN servers.](webrtc-turn.png)
 
@@ -43,7 +43,7 @@ NAT 的中继穿越方式[Traversal Using Relays around NAT (TURN)](http://en.wi
 
 ### 结构体
 
-SDP 由一行或多行 UTF-8 文本组成，每行以一个字符的类型开头，后跟等号（“ =”），然后是包含值或描述的结构化文本，其格式取决于类型。以给定字母开头的文本行通常称为“字母行”。例如，提供媒体描述的行的类型为“m”，因此这些行称为“m 行”。
+SDP 由一行或多行 UTF-8 文本组成，每行以一个字符的类型开头，后跟等号（" ="），然后是包含值或描述的结构化文本，其格式取决于类型。以给定字母开头的文本行通常称为"字母行"。例如，提供媒体描述的行的类型为"m"，因此这些行称为"m 行"。
 
 ### 获取更多信息
 

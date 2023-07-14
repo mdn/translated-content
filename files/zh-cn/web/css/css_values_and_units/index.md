@@ -131,8 +131,8 @@ CSS 使用尺寸来指定：
 | `em`   | 元素的字号                                                                                                                            |
 | `ex`   | 字体的 X 字高（x-height）                                                                                                             |
 | `cap`  | 字体中大写字母的标称高度                                                                                                              |
-| `ch`   | Average character advance of a narrow glyph in the element’s font, as represented by the “0” (ZERO, U+0030) glyph.                    |
-| `ic`   | Average character advance of a full width glyph in the element’s font, as represented by the“水” (CJK water ideograph, U+6C34) glyph. |
+| `ch`   | Average character advance of a narrow glyph in the element's font, as represented by the "0" (ZERO, U+0030) glyph.                    |
+| `ic`   | Average character advance of a full width glyph in the element's font, as represented by the"水" (CJK water ideograph, U+6C34) glyph. |
 | `rem`  | 根元素的字体大小。                                                                                                                    |
 | `lh`   | 元素的行高。                                                                                                                          |
 | `rlh`  | 根元素的行高。                                                                                                                        |

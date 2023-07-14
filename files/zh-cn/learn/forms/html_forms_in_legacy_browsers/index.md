@@ -5,7 +5,7 @@ slug: Learn/Forms/HTML_forms_in_legacy_browsers
 
 {{LearnSidebar}}
 
-所有 web 开发者很快就会（有时候是痛苦地）发现 Web 是一个令人不快的地方。我们碰到的最恶毒的诅咒是旧式浏览器。好吧，让我们承认吧，当我们提到“旧式浏览器”时，脑海中出现就是 Safari 和 Internet Explorer……但是，这远远不是全部。那么，在移动世界呢？当浏览器和 OS（操作系统）都不能更新时？是的，有非常多老版本的 Android 手机或 iPhone 没有更新到最新的浏览器。它们同样是旧式浏览器。
+所有 web 开发者很快就会（有时候是痛苦地）发现 Web 是一个令人不快的地方。我们碰到的最恶毒的诅咒是旧式浏览器。好吧，让我们承认吧，当我们提到"旧式浏览器"时，脑海中出现就是 Safari 和 Internet Explorer……但是，这远远不是全部。那么，在移动世界呢？当浏览器和 OS（操作系统）都不能更新时？是的，有非常多老版本的 Android 手机或 iPhone 没有更新到最新的浏览器。它们同样是旧式浏览器。
 
 可悲的是，处理这些传统浏览器的问题是工作的一部分。幸运的是，有一些技巧可以帮助你解决旧式浏览器导致的大多数问题。如果浏览器不支持某种 HTML {{htmlelement('input')}} 类型，它不会停止工作，而只是回退为默认的 `type=text` 类型。
 
@@ -13,7 +13,7 @@ slug: Learn/Forms/HTML_forms_in_legacy_browsers
 
 实际上，最重要的事情是阅读那些浏览器的文档，并尝试理解通用的（解决）模式。如果你在 [MDN](/) 上阅读了本篇文档，这将是个良好的开始，只需要检查你想用的元素或 DOM 接口的支持情况即可。对于大部分 HTML 中可用的元素、属性或 API，MDN 提供了兼容性表格以供查询。
 
-由于 [HTML 表单](/zh-CN/docs/Learn/Forms)包含了复杂的交互，有一个非常重要的规则：保持简单化，也常称做“[KISS 原则](https://zh.wikipedia.org/wiki/KISS原则)”。有很多情况下，我们希望表单“更漂亮”或“具有高级功能”，但构建高效的 HTML 表单并不是一个设计或技术问题，而是一个简单直观且便利的用户互动问题。记得花时间读一下这篇文章 [forms usability on UX For The Masses](http://www.uxforthemasses.com/forms-usability/)。
+由于 [HTML 表单](/zh-CN/docs/Learn/Forms)包含了复杂的交互，有一个非常重要的规则：保持简单化，也常称做"[KISS 原则](https://zh.wikipedia.org/wiki/KISS原则)"。有很多情况下，我们希望表单"更漂亮"或"具有高级功能"，但构建高效的 HTML 表单并不是一个设计或技术问题，而是一个简单直观且便利的用户互动问题。记得花时间读一下这篇文章 [forms usability on UX For The Masses](http://www.uxforthemasses.com/forms-usability/)。
 
 ### 优雅降级 (Graceful degradation) 是 web 开发者最好的朋友
 
@@ -141,7 +141,7 @@ CSS 和 JavaScript 是了不起的技术，但重要的是确保不会破坏传�
 
 ### 非侵入式 JavaScript
 
-API 的兼容性是最大的问题。由于这个原因，与“非侵入式（unobtrusive）”JavaScript 一起工作被认为是最佳实践（译者注：此处意思是说没有或忽略 JavaScript 或 JavaScript 出了问题也能工作）。这个开发模式定义了两个需求：
+API 的兼容性是最大的问题。由于这个原因，与"非侵入式（unobtrusive）"JavaScript 一起工作被认为是最佳实践（译者注：此处意思是说没有或忽略 JavaScript 或 JavaScript 出了问题也能工作）。这个开发模式定义了两个需求：
 
 - 结构和行为之间的严格隔离
 - 如果代码出错，内容和基本功能必须保持可访问和可用状态
@@ -150,7 +150,7 @@ API 的兼容性是最大的问题。由于这个原因，与“非侵入式（u
 
 ### Modernizr 库
 
-有很多情形，好的”polyfill“能通过提供缺少的 API 以提供帮助。一个 [polyfill](http://remysharp.com/2010/10/08/what-is-a-polyfill/) 是一些用于填补旧式浏览器中缺失功能的 JavaScript 脚本。虽然它们可以用来改善对任何功能的支持，但对 JavaScript 使用它们比对 CSS 或 HTML 使用风险要小；有很多情况下 JavaScript 会崩溃（网络问题、脚本冲突等）。但是对于 JavaScript 来说，如果你在工作中考虑到非侵入式 JavaScript，如果 polyfill 缺失，那也没什么大不了的。
+有很多情形，好的"polyfill"能通过提供缺少的 API 以提供帮助。一个 [polyfill](http://remysharp.com/2010/10/08/what-is-a-polyfill/) 是一些用于填补旧式浏览器中缺失功能的 JavaScript 脚本。虽然它们可以用来改善对任何功能的支持，但对 JavaScript 使用它们比对 CSS 或 HTML 使用风险要小；有很多情况下 JavaScript 会崩溃（网络问题、脚本冲突等）。但是对于 JavaScript 来说，如果你在工作中考虑到非侵入式 JavaScript，如果 polyfill 缺失，那也没什么大不了的。
 
 最好的 polyfill 缺失 API 的方式是使用 [Modernizr](https://modernizr.com) 库以及它的子项目 [YepNope](https://yepnopejs.com)。Modernizr 库允许你测试功能可用性，以便采取相应的行动。YepNope 是一个条件加载库。
 

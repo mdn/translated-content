@@ -31,7 +31,7 @@ original_slug: Web/API/Long_Tasks_API
 
 ### 浏览上下文的罪魁容器
 
-浏览上下文的罪魁容器，简称“容器”，指任务发生在其中的顶层页面（the top level page）、iframe、嵌入插槽（embed）或对象（object）。
+浏览上下文的罪魁容器，简称"容器"，指任务发生在其中的顶层页面（the top level page）、iframe、嵌入插槽（embed）或对象（object）。
 
 ### 清单（Attributions）
 

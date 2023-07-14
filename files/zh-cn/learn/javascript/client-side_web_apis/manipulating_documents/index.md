@@ -38,7 +38,7 @@ web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 
 ## 文档对象模型
 
-目前在你的每一个浏览器标签中加载的文档是由一个文档对象模型表示的。这是一个由浏览器创建的“树状结构”表示法，使 HTML 结构能够被编程语言轻松访问。例如，浏览器本身在渲染页面时使用它将样式和其他信息应用于正确的元素，而开发者可以在页面渲染后用 JavaScript 来操作 DOM。
+目前在你的每一个浏览器标签中加载的文档是由一个文档对象模型表示的。这是一个由浏览器创建的"树状结构"表示法，使 HTML 结构能够被编程语言轻松访问。例如，浏览器本身在渲染页面时使用它将样式和其他信息应用于正确的元素，而开发者可以在页面渲染后用 JavaScript 来操作 DOM。
 
 我们在 [dom-example.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html)（[也可以看看在线的例子](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html)）上创建了一个简单的示例页面。试着在浏览器中打开它。这是一个非常简单的页面，包含一个 {{htmlelement("section")}} 元素，里面有一张图片，还有一个带链接的段落。该 HTML 源代码看起来像这样：
 
@@ -256,7 +256,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 完成后的演示程序看起来有点像这样的：
 
-![购物清单的演示布局。标题是“my shopping list”，后面是“Enter a new item”，有一个输入字段和“add item”按钮。下面是已经添加的项目的列表，每个项目都有一个相应的删除按钮](shopping-list.png)
+![购物清单的演示布局。标题是"my shopping list"，后面是"Enter a new item"，有一个输入字段和"add item"按钮。下面是已经添加的项目的列表，每个项目都有一个相应的删除按钮](shopping-list.png)
 
 要完成实验，要按照下面的步骤，确保购物单的行为如上所述。
 
@@ -267,7 +267,7 @@ linkPara.parentNode.removeChild(linkPara);
 5. 然后，为输入框元素设置空字符串 `''` 以清空它。
 6. 创建三个新元素：一个列表元素（{{htmlelement('li')}}）、{{htmlelement('span')}} 和 {{htmlelement('button')}}，并把它们存入变量之中。
 7. 将 span 和按钮附加到列表元素的子节点。
-8. 把之前保存的输入框元素的值设置为 span 的文本内容，按钮的文本内容设置为“Delete”。
+8. 把之前保存的输入框元素的值设置为 span 的文本内容，按钮的文本内容设置为"Delete"。
 9. 将列表元素附加到列表的子节点中。
 10. 为删除按钮绑定事件处理程序。当点击按钮时，删除它所在的整个列表元素（`<li>...</li>`）。
 11. 最后，使用 [`focus()`](/zh-CN/docs/Web/API/HTMLElement/focus) 方法聚焦输入框准备输入下一个购物项。

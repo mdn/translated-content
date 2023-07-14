@@ -159,7 +159,7 @@ class MyError extends Error {
 
 你可能希望自定义基于 `Error` 的异常类型，使得你能够 `throw new MyError()` 并可以使用 `instanceof MyError` 来检查某个异常的类型。这种需求的通用解决方法如下。
 
-参考 StackOverflow 上关于[“What's a good way to extend Error in JavaScript?”](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript)的讨论。
+参考 StackOverflow 上关于["What's a good way to extend Error in JavaScript?"](https://stackoverflow.com/questions/1382107/whats-a-good-way-to-extend-error-in-javascript)的讨论。
 
 #### ES6 自定义错误类
 

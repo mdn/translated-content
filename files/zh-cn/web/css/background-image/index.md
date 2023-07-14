@@ -9,7 +9,7 @@ slug: Web/CSS/background-image
 
 {{EmbedInteractiveExample("pages/css/background-image.html")}}
 
-在绘制时，图像以 z 方向堆叠的方式进行。先指定的图像会在之后指定的图像上面绘制。因此指定的第一个图像“最接近用户”。
+在绘制时，图像以 z 方向堆叠的方式进行。先指定的图像会在之后指定的图像上面绘制。因此指定的第一个图像"最接近用户"。
 
 然后元素的边框 [border](/zh-CN/CSS/border) 会在它们之上被绘制，而 {{cssxref("background-color")}} 会在它们之下绘制。图像的绘制与盒子以及盒子的边框的关系，需要在 CSS 属性{{cssxref("background-clip")}} 和 {{cssxref("background-origin")}} 中定义。
 

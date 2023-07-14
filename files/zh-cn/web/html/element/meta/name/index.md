@@ -72,7 +72,7 @@ CSS 设备适配规范（CSS Device Adaptation specification）定义了以下�
   | `maximum-scale` | 一个 `0.0` 和 `10.0` 之间的正数 | 定义缩放的最大值，必须大于等于 `minimum-scale`，否则表现将不可预测。浏览器设置可以忽略此规则；iOS 10 开始，Safari iOS 默认忽略此规则。 |
   | `minimum-scale` | 一个 `0.0` 和 `10.0` 之间的正数 | 定义缩放的最小值，必须小于等于 `maximum-scale`，否则表现将不可预测。浏览器设置可以忽略此规则；iOS 10 开始，Safari iOS 默认忽略此规则。 |
   | `user-scalable` | `yes` 或者 `no` | 默认为 `yes`，如果设置为 `no`，用户将无法缩放当前页面。浏览器设置可以忽略此规则；iOS 10 开始，Safari iOS 默认忽略此规则。 |
-  | `viewport-fit` | `auto`、`contain` 或者 `cover` | The `auto` value doesn’t affect the initial layout viewport, and the whole web page is viewable.The `contain` value means that the viewport is scaled to fit the largest rectangle inscribed within the display.The `cover` value means that the viewport is scaled to fill the device display. It is highly recommended to make use of the [safe area inset](/zh-CN/docs/Web/CSS/env) variables to ensure that important content doesn't end up outside the display. |
+  | `viewport-fit` | `auto`、`contain` 或者 `cover` | The `auto` value doesn't affect the initial layout viewport, and the whole web page is viewable.The `contain` value means that the viewport is scaled to fit the largest rectangle inscribed within the display.The `cover` value means that the viewport is scaled to fill the device display. It is highly recommended to make use of the [safe area inset](/zh-CN/docs/Web/CSS/env) variables to ensure that important content doesn't end up outside the display. |
 
   > **备注：** 虽然此元数据条目未被标准化，但是，由于此条目在事实上处于支配地位，大多数移动浏览器都遵守此条目的声明。
   >
@@ -93,7 +93,7 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
 - `creator`：当前文档的创建者，例如某个组织或者机构。如果有不止一个创建者，则应当使用多个名称为 `creator` 的 {{HTMLElement("meta")}} 元素。（而不是像关键词一样使用逗号分隔：关键词不应包含逗号，但创建者名称可能含有逗号。）
 - `googlebot`：`robots` 的替代名称，只被 Googlebot（Google 的网页爬虫/索引搜寻器）使用。
 - `publisher`：当前文档的发布者/出版者。
-- `robots`：爬虫、协作搜寻器，或者“机器人”，对此页面的处理行为，或者说，应当遵守的规则。是一个使用逗号分隔的、由下列值构成的列表：
+- `robots`：爬虫、协作搜寻器，或者"机器人"，对此页面的处理行为，或者说，应当遵守的规则。是一个使用逗号分隔的、由下列值构成的列表：
 
   | 值             | 描述                                                                        | 被用于                                                                                                                                                                                                                                                 |
   | -------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

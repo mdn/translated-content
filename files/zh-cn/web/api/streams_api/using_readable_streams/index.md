@@ -338,6 +338,6 @@ fetch('png-logo.png')
 
 ## 总结
 
-这解释了“默认”可读流的知识。
+这解释了"默认"可读流的知识。
 
 关于如何使用可读*字节*流的信息，参见[使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)：具有底层字节源的流，可以向消费者执行高效的零复制传输，绕过流的内部队列。

@@ -27,13 +27,13 @@ slug: Learn/Server-side/Django/Authentication
 
 ## 概观
 
-Django 提供了一个身份验证和授权（“权限”）系统，该系统构建在[上一个教程](/zh-CN/docs/Learn/Server-side/Django/Sessions)中讨论的会话框架之上，允许您验证用户凭据，并定义每个用户可允许执行的操作。该框架包括用户`Users`和分组`Groups`的内置模型（一次向多个用户应用权限的通用方法），用于登录用户的权限/标志，以指定用户是否可以执行任务，表单和视图，以及查看限制内容的工具。
+Django 提供了一个身份验证和授权（"权限"）系统，该系统构建在[上一个教程](/zh-CN/docs/Learn/Server-side/Django/Sessions)中讨论的会话框架之上，允许您验证用户凭据，并定义每个用户可允许执行的操作。该框架包括用户`Users`和分组`Groups`的内置模型（一次向多个用户应用权限的通用方法），用于登录用户的权限/标志，以指定用户是否可以执行任务，表单和视图，以及查看限制内容的工具。
 
 > **备注：** Django 身份验证系统的目标非常通用，因此不提供其他 Web 身份验证系统中，所提供的某些功能。某些常见问题的解决方案，可作为第三方软件包提供。例如，限制登录尝试，和针对第三方的身份验证（例如 OAuth）。
 
 在本教程中，我们将向您展示，如何在[LocalLibrary](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)网站中，启用用户身份验证，创建您自己的登录和注销页面，为模型添加权限，以及控制对页面的访问。我们将使用身份验证/权限，来显示用户和图书馆员借用图书的列表。
 
-身份验证系统非常灵活，您可以根据需要，从头开始构建 URLs，表单，视图和模板，只需调用提供的 API，即可登录用户。但是，在本文中，我们将在登录和注销页面，使用 Django 的“库存”身份验证视图和表单。我们仍然需要创建一些模板，但这很简单。
+身份验证系统非常灵活，您可以根据需要，从头开始构建 URLs，表单，视图和模板，只需调用提供的 API，即可登录用户。但是，在本文中，我们将在登录和注销页面，使用 Django 的"库存"身份验证视图和表单。我们仍然需要创建一些模板，但这很简单。
 
 我们还将向您展示如何创建权限，以及检查视图和模板中的登录状态和权限。
 
@@ -80,36 +80,36 @@ MIDDLEWARE = [
 
 下面，我们首先创建一个分组，然后创建一个用户。即使我们还没有为我们的图书馆成员添加任何权限，如果我们以后需要，将它们添加到分组中，要比单独添加到每个成员要容易得多。
 
-启动开发服务器，并到本地 Web 浏览器中的管理站点（<http://127.0.0.1:8000/admin/>）。使用超级用户帐户的凭据，登录该站点。Admin 站点的最上级显示所有模型，按“django application”排序。在“身份验证和授权” **Authentication and Authorisation** 部分，您可以单击用户 **Users**，或分组 **Groups** 链接，以查看其现有记录。
+启动开发服务器，并到本地 Web 浏览器中的管理站点（<http://127.0.0.1:8000/admin/>）。使用超级用户帐户的凭据，登录该站点。Admin 站点的最上级显示所有模型，按"django application"排序。在"身份验证和授权" **Authentication and Authorisation** 部分，您可以单击用户 **Users**，或分组 **Groups** 链接，以查看其现有记录。
 
 ![Admin site - add groups or users](admin_authentication_add.png)
 
 首先，我们为图书馆成员，创建一个新的分组。
 
-1. 单击“添加” **Add** 按钮（“分组”Group 旁边）以创建新的分组；在分组的名称 **Name** ，输入“Library Members”。![Admin site - add group](admin_authentication_add_group.png)
+1. 单击"添加" **Add** 按钮（"分组"Group 旁边）以创建新的分组；在分组的名称 **Name** ，输入"Library Members"。![Admin site - add group](admin_authentication_add_group.png)
 2. 我们不需要该组的任何权限，因此只需按**SAVE**（您将进入分组列表）。
 
 现在让我们创建一个用户：
 
 1. 回到管理站点的主页
-2. 单击“用户”旁边的“添加”按钮 **Add**，以打开“添加用户”对话框。![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
+2. 单击"用户"旁边的"添加"按钮 **Add**，以打开"添加用户"对话框。![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
 3. 为测试用户输入适当的用户名（**Username）**和密码/密码确认**（Password/Password confirmation** ）
 4. 按 **SAVE** 创建用户。
 
-    管理站点将创建新用户，并立即转到“更改用户”屏幕，您可以在其中更改用户名（**username**），并添加用户模型的可选字段的信息。这些字段包括名字，姓氏，电子邮件地址，用户状态和权限（仅应设置活动标志 **Active**）。再往下，您可以指定用户的分组和权限，并查看与用户相关的重要日期（例如，他们的加入日期和上次登录日期）。
+    管理站点将创建新用户，并立即转到"更改用户"屏幕，您可以在其中更改用户名（**username**），并添加用户模型的可选字段的信息。这些字段包括名字，姓氏，电子邮件地址，用户状态和权限（仅应设置活动标志 **Active**）。再往下，您可以指定用户的分组和权限，并查看与用户相关的重要日期（例如，他们的加入日期和上次登录日期）。
 
     ![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 
-5. 在“分组”（_Groups_）部分中，从“可用分组”（_Available groups_）列表中，选择“图书馆成员”分组 **Library Member**，然后点击这些框之间的**右箭头**，将其移动到“选择的分组”（_Chosen groups_）框中。![Admin site - add user to group](admin_authentication_user_add_group.png)
+5. 在"分组"（_Groups_）部分中，从"可用分组"（_Available groups_）列表中，选择"图书馆成员"分组 **Library Member**，然后点击这些框之间的**右箭头**，将其移动到"选择的分组"（_Chosen groups_）框中。![Admin site - add user to group](admin_authentication_user_add_group.png)
 6. 我们不需要在此处执行任何其他操作，因此只需再次选择 **SAVE** ，即可转到用户列表。
 
-就是这样！现在您有一个“普通的图书馆成员”帐户，您可以使用该帐户进行测试（一旦我们实现了页面，使他们能够登录）。
+就是这样！现在您有一个"普通的图书馆成员"帐户，您可以使用该帐户进行测试（一旦我们实现了页面，使他们能够登录）。
 
 > **备注：** 您应该尝试创建另一个图书馆用户。此外，为图书馆管理员创建一个分组，并添加一个用户！
 
 ## 设置身份验证视图
 
-Django 提供了创建身份验证页面所需的几乎所有功能，让处理登录，注销和密码管理等工作，都能“开箱即用”。这些相关功能包括了 url 映射器，视图和表单，但它不包括模板 - 我们必须创建自己的模板！
+Django 提供了创建身份验证页面所需的几乎所有功能，让处理登录，注销和密码管理等工作，都能"开箱即用"。这些相关功能包括了 url 映射器，视图和表单，但它不包括模板 - 我们必须创建自己的模板！
 
 在本节中，我们将展示如何将默认系统，集成到 LocalLibrary 网站并创建模板。我们将它们放在主项目的 URL 当中。
 
@@ -168,7 +168,7 @@ Exception Value:    registration/login.html
 > |\_templates **(new)**
 > |\_registration
 
-要使这些目录对模板加载器可见（即将此目录放在模板搜索路径中），请打开项目设置（**/locallibrary/locallibrary/settings.py**），并更新`TEMPLATES` 部分的“`DIRS`”那一行，如下所示。
+要使这些目录对模板加载器可见（即将此目录放在模板搜索路径中），请打开项目设置（**/locallibrary/locallibrary/settings.py**），并更新`TEMPLATES` 部分的"`DIRS`"那一行，如下所示。
 
 ```python
 TEMPLATES = [
@@ -386,7 +386,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 您可以使用`\{{ user }}`模板变量，以获取有关模板中，当前登录用户的信息（默认情况下，在我们在骨架中设置项目时，会将其添加到模板上下文中）。
 
-通常，您将首先针对 `\{{ user.is_authenticated }}` 模板变量进行测试，以确定用户是否有资格查看特定内容。为了展示这一点，接下来我们将更新侧边栏，以在用户登出时，显示“登录”链接，如果他们已登录，则显示“登出”链接。
+通常，您将首先针对 `\{{ user.is_authenticated }}` 模板变量进行测试，以确定用户是否有资格查看特定内容。为了展示这一点，接下来我们将更新侧边栏，以在用户登出时，显示"登录"链接，如果他们已登录，则显示"登出"链接。
 
 打开基本模板（**/locallibrary/catalog/templates/base_generic.html**），并将以下文本，复制到侧边栏区块`sidebar`中，紧接在`endblock`模板标记之前。
 
@@ -406,9 +406,9 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 如您所见，我们使用 `if`-`else`-`endif`模板标签，根据 `\{{ user.is_authenticated }}` 是否为 true，来有条件地显示文本。如果用户已通过身份验证，那么我们知道，我们拥有有效用户，因此我们会调用 **\\{{ user.get_username }}** ，来显示其名称。
 
-我们使用 `url`模板标记，和相应 URL 配置的名称，创建登录和登出链接 URL。另外请注意，我们如何将“`?next=\{{request.path}}`附加到 URL 的末尾。这样做，是将包含当前页面地址（URL）的 URL 参数，添加到链接 URL 的末尾。用户成功登录/登出后，视图将使用此“下一个”值，将用户重定向，回到他们首次单击登录/登出链接的页面。
+我们使用 `url`模板标记，和相应 URL 配置的名称，创建登录和登出链接 URL。另外请注意，我们如何将"`?next=\{{request.path}}`附加到 URL 的末尾。这样做，是将包含当前页面地址（URL）的 URL 参数，添加到链接 URL 的末尾。用户成功登录/登出后，视图将使用此"下一个"值，将用户重定向，回到他们首次单击登录/登出链接的页面。
 
-> **备注：** 试试吧！如果您在主页上，并单击侧栏中的“登录/登出”，在操作完成后，您应该返回到同一页面。
+> **备注：** 试试吧！如果您在主页上，并单击侧栏中的"登录/登出"，在操作完成后，您应该返回到同一页面。
 
 ### 在视图中测试
 
@@ -435,7 +435,7 @@ class MyView(LoginRequiredMixin, View):
     ...
 ```
 
-这与`login_required`装饰器，具有完全相同的重定向行为。如果用户未经过身份验证（`login_url`），还可以指定一个替代位置，以将用户重定向到该位置，并使用 URL 参数名称，而不是“`next`”，来插入当前绝对路径（`redirect_field_name`）。
+这与`login_required`装饰器，具有完全相同的重定向行为。如果用户未经过身份验证（`login_url`），还可以指定一个替代位置，以将用户重定向到该位置，并使用 URL 参数名称，而不是"`next`"，来插入当前绝对路径（`redirect_field_name`）。
 
 ```python
 class MyView(LoginRequiredMixin, View):
@@ -510,7 +510,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 ### 借几本书
 
-现在可以将书本借给特定用户，然后借出一些`BookInstance`记录。将他们的借用字段`borrowed`，设置为您的测试用户，将状态`status`设置为“On loan”，并在将来和过去设置截止日期。
+现在可以将书本借给特定用户，然后借出一些`BookInstance`记录。将他们的借用字段`borrowed`，设置为您的测试用户，将状态`status`设置为"On loan"，并在将来和过去设置截止日期。
 
 > **备注：** 我们不会一步一步说明这个流程，因为您已经知道如何使用管理站点！
 
@@ -535,7 +535,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
         return BookInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')
 ```
 
-为了将查询，限制为当前用户的`BookInstance`对象，我们重新实现了`get_queryset()`，如上所示。请注意，“o”是表示借出当中“on loan”的存储代码，我们按`due_back`日期排序，以便首先显示最旧的项目。
+为了将查询，限制为当前用户的`BookInstance`对象，我们重新实现了`get_queryset()`，如上所示。请注意，"o"是表示借出当中"on loan"的存储代码，我们按`due_back`日期排序，以便首先显示最旧的项目。
 
 ### 借书的 URL 设置
 
@@ -609,7 +609,7 @@ urlpatterns += [
 
 ### 模型
 
-在模型“`class Meta`”部分上，使用 `permissions`字段，完成权限定义。您可以在元组中指定所需的权限，每个权限本身，都在包含权限名称和权限显示值的嵌套元组中被定义。例如，我们可能会定义一个权限，允许用户标记已归还的图书，如下所示：
+在模型"`class Meta`"部分上，使用 `permissions`字段，完成权限定义。您可以在元组中指定所需的权限，每个权限本身，都在包含权限名称和权限显示值的嵌套元组中被定义。例如，我们可能会定义一个权限，允许用户标记已归还的图书，如下所示：
 
 ```python
 class BookInstance(models.Model):
@@ -619,11 +619,11 @@ class BookInstance(models.Model):
         permissions = (("can_mark_returned", "Set book as returned"),)
 ```
 
-然后，我们可以将权限分配给管理站点中的图书管理员“Librarian”分组。打开 **catalog/models.py**，然后添加权限，如上所示。您需要重新运行迁移（调用 `python3 manage.py makemigrations` 和 `python3 manage.py migrate`），以适当地更新数据库。
+然后，我们可以将权限分配给管理站点中的图书管理员"Librarian"分组。打开 **catalog/models.py**，然后添加权限，如上所示。您需要重新运行迁移（调用 `python3 manage.py makemigrations` 和 `python3 manage.py migrate`），以适当地更新数据库。
 
 ### 模板
 
-当前用户的权限，存在名为 `\{{ perms }}`的模板变量中。您可以使用关联的 Django“app”中的特定变量名，来检查当前用户是否具有特定权限 - 例如，如果用户具有此权限，则 `\{{ perms.catalog.can_mark_returned }}`将为 True，否则为 False。我们通常使用模板标记 `{% if %}` 测试权限，如下所示：
+当前用户的权限，存在名为 `\{{ perms }}`的模板变量中。您可以使用关联的 Django"app"中的特定变量名，来检查当前用户是否具有特定权限 - 例如，如果用户具有此权限，则 `\{{ perms.catalog.can_mark_returned }}`将为 True，否则为 False。我们通常使用模板标记 `{% if %}` 测试权限，如下所示：
 
 ```python
 {% if perms.catalog.can_mark_returned %}

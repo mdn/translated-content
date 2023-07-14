@@ -66,7 +66,7 @@ background-size: 300px 150px;
 
 正如你所看到的，CSS 实际上基本上是相同的，除了图像文件的名称。
 
-## 特殊值：“contain”和“cover”
+## 特殊值："contain"和"cover"
 
 除了 {{cssxref("&lt;length&gt;")}} 值，CSS 属性 {{ cssxref("background-size") }} 提供了两个特殊的尺寸值：`contain` 和 `cover`。让我们来看看这些。
 

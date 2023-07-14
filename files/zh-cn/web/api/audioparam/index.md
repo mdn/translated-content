@@ -36,9 +36,9 @@ AudioParam _初始化的方法来自它的父类，_`AudioNode`.
 - {{domxref("AudioParam.setValueAtTime()")}}
   - : 在一个确切的时间，即时更改 `AudioParam` 的值，按照{{domxref("AudioContext.currentTime")}} 的时间。新的值会被传递到 `value` 参数。
 - {{domxref("AudioParam.linearRampToValueAtTime()")}}
-  - : 调整 `AudioParam` 的值，使其逐渐按线性变化。这个改变会从上一个事件指定的事件开始，跟随一个线性“斜坡”到参数给的新值，并在 `endTime` 参数给定的时间到达新值。
+  - : 调整 `AudioParam` 的值，使其逐渐按线性变化。这个改变会从上一个事件指定的事件开始，跟随一个线性"斜坡"到参数给的新值，并在 `endTime` 参数给定的时间到达新值。
 - {{domxref("AudioParam.exponentialRampToValueAtTime()")}}
-  - : 调整 `AudioParam` 的值，使其逐渐按指数变化。这个改变会从上一个事件指定的事件开始，跟随一个指数“斜坡”到参数给的新值，并在 `endTime` 参数给定的时间到达新值。
+  - : 调整 `AudioParam` 的值，使其逐渐按指数变化。这个改变会从上一个事件指定的事件开始，跟随一个指数"斜坡"到参数给的新值，并在 `endTime` 参数给定的时间到达新值。
 - {{domxref("AudioParam.setTargetAtTime()")}}
   - : 将开始计划改变 `AudioParam` 的值。这个改变将从 `startTime` 指定的时间开始，并且以指定的方式向目标参数给定的值改变。指数衰减速率由 `timeConstant` 参数定义，`time` 参数使以秒作为测量单位的时间。
 - {{domxref("AudioParam.setValueCurveAtTime()")}}

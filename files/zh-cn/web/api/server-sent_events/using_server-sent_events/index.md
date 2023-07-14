@@ -59,7 +59,7 @@ evtSource.addEventListener("ping", (event) => {
 
 每当服务器发送一个 `event` 字段设置为 `ping` 的消息时，就会调用这段代码；这段代码接着解析 `data` 字段中的 JSON，并输出这些信息。
 
-> **警告：** 当**不通过 HTTP/2 使用时**，SSE（server-sent events）会受到最大连接数的限制，这在打开多个选项卡时特别麻烦，因为该限制是针对*每个浏览器*的，并且被设置为一个非常低的数字（6）。该问题在 [Chrome](https://crbug.com/275955) 和 [Firefox](https://bugzil.la/906896) 中被标记为“不会解决”。此限制是针对每个浏览器 + 域的，因此这意味着你可以跨所有选项卡打开 6 个 SSE 连接到 `www.example1.com`，并打开 6 个 SSE 连接到 `www.example2.com`。（来自 [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)）。使用 HTTP/2 时，同一时间内 *HTTP 最大连接数*由服务器和客户端之间协商（默认为 100）。
+> **警告：** 当**不通过 HTTP/2 使用时**，SSE（server-sent events）会受到最大连接数的限制，这在打开多个选项卡时特别麻烦，因为该限制是针对*每个浏览器*的，并且被设置为一个非常低的数字（6）。该问题在 [Chrome](https://crbug.com/275955) 和 [Firefox](https://bugzil.la/906896) 中被标记为"不会解决"。此限制是针对每个浏览器 + 域的，因此这意味着你可以跨所有选项卡打开 6 个 SSE 连接到 `www.example1.com`，并打开 6 个 SSE 连接到 `www.example2.com`。（来自 [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)）。使用 HTTP/2 时，同一时间内 *HTTP 最大连接数*由服务器和客户端之间协商（默认为 100）。
 
 ## 从服务器端发送事件
 
@@ -93,7 +93,7 @@ while (true) {
 }
 ```
 
-这段代码每秒钟会生成一个类型为“ping”的事件，每个事件的数据都是一个 JSON 对象，包含对应于事件生成时间的 ISO 8601 时间戳。同时，还会在随机的时间间隔内发送一个简单的消息（没有事件类型）。这个循环会一直运行，不受连接状态的影响，因此在检查到连接关闭的情况时需要手动中断循环（例如客户端关闭页面）。
+这段代码每秒钟会生成一个类型为"ping"的事件，每个事件的数据都是一个 JSON 对象，包含对应于事件生成时间的 ISO 8601 时间戳。同时，还会在随机的时间间隔内发送一个简单的消息（没有事件类型）。这个循环会一直运行，不受连接状态的影响，因此在检查到连接关闭的情况时需要手动中断循环（例如客户端关闭页面）。
 
 > **备注：** 你可以在 Github 上找到以上代码的完整示例——参见[使用 PHP 语言的简单 SSE 示例](https://github.com/mdn/dom-examples/tree/main/server-sent-events)。
 
@@ -132,7 +132,7 @@ evtSource.close();
 - `data`
   - : 消息的数据字段。当 `EventSource` 接收到多个以 `data:` 开头的连续行时，[会将它们连接起来](https://html.spec.whatwg.org/multipage/#dispatchMessage)，在它们之间插入一个换行符。末尾的换行符会被删除。
 - `id`
-  - : 事件 ID，会成为当前 [`EventSource`](/zh-CN/docs/Web/API/EventSource) 对象的内部属性“最后一个事件 ID”的属性值。
+  - : 事件 ID，会成为当前 [`EventSource`](/zh-CN/docs/Web/API/EventSource) 对象的内部属性"最后一个事件 ID"的属性值。
 - `retry`
   - : 重新连接的时间。如果与服务器的连接丢失，浏览器将等待指定的时间，然后尝试重新连接。这必须是一个整数，以毫秒为单位指定重新连接的时间。如果指定了一个非整数值，该字段将被忽略。
 
@@ -146,7 +146,7 @@ evtSource.close();
 
 下面的例子中发送了三条消息，第一条仅仅是个注释，因为它以冒号开头。正如之前提到的，如果消息可能不会定期发送，这可以作为保持连接的机制，非常有用。
 
-第二条消息只包含了一个 data 字段，值为“some text”。第三条消息包含的两个 data 字段会被解析成为一个字段，值为“another message\nwith two lines”。注意值中的换行字符。
+第二条消息只包含了一个 data 字段，值为"some text"。第三条消息包含的两个 data 字段会被解析成为一个字段，值为"another message\nwith two lines"。注意值中的换行字符。
 
 ```bash
 : this is a test stream

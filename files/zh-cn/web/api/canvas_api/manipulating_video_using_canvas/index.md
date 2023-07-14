@@ -5,7 +5,7 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 {{DefaultAPISidebar("Canvas API")}}
 
-通过在一个 canvas（画布）上结合 video 元素功能，你可以实时地操纵视频数据来合成各种视觉特效到正在呈现的视频画面中。本教程示范如何使用 JavaScript 代码执行色度键控（也被称为“绿屏效果”）。
+通过在一个 canvas（画布）上结合 video 元素功能，你可以实时地操纵视频数据来合成各种视觉特效到正在呈现的视频画面中。本教程示范如何使用 JavaScript 代码执行色度键控（也被称为"绿屏效果"）。
 
 [查看该实例](/samples/video/chroma-key/index.xhtml)。
 
@@ -88,7 +88,7 @@ slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 
 ### 计时器回调
 
-计时器回调最初在视频开始播放时（当“播放”事件发生时）被调用，然后负责设定自身定期被调用以便为每一帧启用键控效果。
+计时器回调最初在视频开始播放时（当"播放"事件发生时）被调用，然后负责设定自身定期被调用以便为每一帧启用键控效果。
 
 ```js
   processor.timerCallback = function timerCallback() {

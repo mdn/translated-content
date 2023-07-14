@@ -29,9 +29,9 @@ slug: Web/Security/Subresource_Integrity
 sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC
 ```
 
-`oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` 即“哈希”部分，`sha384` 前缀说明使用的是 sha384 哈希方法。
+`oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC` 即"哈希"部分，`sha384` 前缀说明使用的是 sha384 哈希方法。
 
-> **备注：** 严格来说，`integrity` 值的“哈希”部分是通过对一些输入（例如，一个脚本或样式表文件）应用一个特定的哈希函数而形成的**加密摘要**。但人们通常用“哈希”来表示**加密摘要**，所以本文就用了这个词。
+> **备注：** 严格来说，`integrity` 值的"哈希"部分是通过对一些输入（例如，一个脚本或样式表文件）应用一个特定的哈希函数而形成的**加密摘要**。但人们通常用"哈希"来表示**加密摘要**，所以本文就用了这个词。
 
 ### 生成 SRI 哈希的工具
 

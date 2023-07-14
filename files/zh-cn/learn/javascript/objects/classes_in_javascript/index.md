@@ -30,7 +30,7 @@ slug: Learn/JavaScript/Objects/Classes_in_JavaScript
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>理解如何使用 JavaScript 提供的特性实现“经典”的面向对象编程。</td>
+      <td>理解如何使用 JavaScript 提供的特性实现"经典"的面向对象编程。</td>
     </tr>
   </tbody>
 </table>

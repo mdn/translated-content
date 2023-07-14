@@ -100,5 +100,5 @@ p {
 
 ## 参见
 
-- [请停止“修复”字体平滑——UsabilityPost](https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)
+- [请停止"修复"字体平滑——UsabilityPost](https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)
 - [不干涉字体平滑和抗锯齿](https://www.zachleat.com/web/font-smooth/)

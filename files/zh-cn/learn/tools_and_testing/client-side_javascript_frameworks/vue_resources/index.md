@@ -20,7 +20,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources
           >知识。
         </p>
         <p>
-           Vue 组件是由管理应用程序数据的 JavaScript 对象和映射到基础 DOM 结构的基于 HTML 的模板语法组成的。为了进行安装并使用 Vue 的一些更高级的功能（例如“单文件组件（SFC）”或渲染功能），你将需要一个装有 node + npm 的终端。
+           Vue 组件是由管理应用程序数据的 JavaScript 对象和映射到基础 DOM 结构的基于 HTML 的模板语法组成的。为了进行安装并使用 Vue 的一些更高级的功能（例如"单文件组件（SFC）"或渲染功能），你将需要一个装有 node + npm 的终端。
         </p>
       </td>
     </tr>
@@ -59,7 +59,7 @@ Vue CLI 还为我们提供了准备向网络发布应用程序的工具。你可
 
 ## Vue 2
 
-Vue 2 的支持将于 2023 年 12 月 31 日结束，所有 CLI 工具的默认 Vue 版本为 3 及以上版本。[组合式 API](https://cn.vuejs.org/guide/extras/composition-api-faq.html)作为基于属性的 API 的替代，`setup()` 函数将作用于组件上。只有你从这个函数返回的东西在你的 `<template>` 中可用。在使用这个 API 时，你需要对“响应式”的属性进行明确说明。Vue 使用[选项式 API](https://cn.vuejs.org/guide/extras/composition-api-faq.html#trade-offs)为你处理这个问题。这使得新的 API 通常被认为是一个更高级的用例。
+Vue 2 的支持将于 2023 年 12 月 31 日结束，所有 CLI 工具的默认 Vue 版本为 3 及以上版本。[组合式 API](https://cn.vuejs.org/guide/extras/composition-api-faq.html)作为基于属性的 API 的替代，`setup()` 函数将作用于组件上。只有你从这个函数返回的东西在你的 `<template>` 中可用。在使用这个 API 时，你需要对"响应式"的属性进行明确说明。Vue 使用[选项式 API](https://cn.vuejs.org/guide/extras/composition-api-faq.html#trade-offs)为你处理这个问题。这使得新的 API 通常被认为是一个更高级的用例。
 
 如果要从 Vue 2 升级，建议看一下 [Vue 3 迁移指南](https://v3-migration.vuejs.org/zh/)。
 

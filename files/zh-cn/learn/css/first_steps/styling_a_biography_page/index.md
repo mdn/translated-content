@@ -77,9 +77,9 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 如果你希望测试你的页面，或者你遇到困难想要求助，你可以：
 
 1. 将你的文件提交到可网络共享的编辑器，如 CodePen、jsFiddle 或 Glitch。
-2. 在 MDN 论坛（[MDN Discourse forum](https://discourse.mozilla.org/c/mdn)）发帖请求测评或帮助。发帖时添加“学习”的标签，这样我们能够更容易找到它。你的帖子应包括以下内容：
+2. 在 MDN 论坛（[MDN Discourse forum](https://discourse.mozilla.org/c/mdn)）发帖请求测评或帮助。发帖时添加"学习"的标签，这样我们能够更容易找到它。你的帖子应包括以下内容：
 
-- 一个描述性标题，例如“CSS 的初步尝试需要测试”。
+- 一个描述性标题，例如"CSS 的初步尝试需要测试"。
 - 详细描述你希望我们做些什么——比如，你已经尝试过了，但是卡住了，需要帮助。
 - 你希望测试的例子的在网络编辑器上的链接。这是很好的做法，因为如果不让帮助你的看到你的程序，他们就很难帮助你解决程序的问题。
 - 你的网页的测评页面链接，这样我们就可以找到你所求助的问题。

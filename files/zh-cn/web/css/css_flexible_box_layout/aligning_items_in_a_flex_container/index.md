@@ -22,7 +22,7 @@ flexbox 之所以能迅速吸引开发者的注意，其中一个原因就是它
 - {{cssxref("justify-content")}} - 控制主轴（横轴）上所有 flex 项目的对齐。
 - {{cssxref("align-items")}} - 控制交叉轴（纵轴）上所有 flex 项目的对齐。
 - {{cssxref("align-self")}} - 控制交叉轴（纵轴）上的单个 flex 项目的对齐。
-- {{cssxref("align-content")}} - 控制“多条主轴”的 flex 项目在交叉轴的对齐。
+- {{cssxref("align-content")}} - 控制"多条主轴"的 flex 项目在交叉轴的对齐。
 
 我们也会了解到 flexbox 如何使用 margin: auto 来实现居中。
 

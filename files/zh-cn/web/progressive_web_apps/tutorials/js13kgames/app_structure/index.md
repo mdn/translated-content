@@ -17,7 +17,7 @@ original_slug: Web/Progressive_web_apps/App_structure
 
 将 SSR 与 CSR 混用可以获得最佳效果：您可以在服务器上渲染网站，缓存其内容，然后在客户端需要时更新渲染。因为使用了 SSR，第一页加载很快；因为客户端可以仅使用已更改的部分重新渲染页面，所以页面之间的导航也是平滑的。
 
-您可以按自己喜欢的方式构建 PWA，但有些方式更合适。最流行的是“App Shell”概念，它完全按照上述方式混用 SSR 和 CSR；此外还遵循“离线优先”方法，这个我们将在后续文章中详细解释，也会在示例应用程序中使用。我们还会简要提及另一种涉及[Streams API](/zh-CN/docs/Web/API/Streams_API)的新方法
+您可以按自己喜欢的方式构建 PWA，但有些方式更合适。最流行的是"App Shell"概念，它完全按照上述方式混用 SSR 和 CSR；此外还遵循"离线优先"方法，这个我们将在后续文章中详细解释，也会在示例应用程序中使用。我们还会简要提及另一种涉及[Streams API](/zh-CN/docs/Web/API/Streams_API)的新方法
 
 ## App Shell 概念
 
@@ -38,7 +38,7 @@ App Shell 概念试图尽快加载最小用户界面，然后缓存它，以便�
 记住 PWA 的优点并在设计应用程序时牢记这一点非常重要。app shell 方案允许网站：
 
 - 可链接（Linkable）：即使行为类似于原生应用，它仍然是一个网站：您可以点击页面内的链接，也可以通过发送 URL 的方式分享网站给别人。
-- 渐进式（Progressive）：从“美好的旧式基础网站”开始，逐步添加新功能，在过程中检测其在浏览器上的可用性，并且优雅地处理不支持案例下发生的报错。举个例子，service workers 辅助下的离线模式只是提升网站体验的额外特性，但没有它网站也仍然完全可用。
+- 渐进式（Progressive）：从"美好的旧式基础网站"开始，逐步添加新功能，在过程中检测其在浏览器上的可用性，并且优雅地处理不支持案例下发生的报错。举个例子，service workers 辅助下的离线模式只是提升网站体验的额外特性，但没有它网站也仍然完全可用。
 - 响应式（Responsive）：响应式网页设计也适用于渐进式网络应用程序，因为它们都主要用于移动设备。拥有浏览器的设备太多太杂，所以确保网站在不同屏幕宽度、视口和像素密度上都可以访问就变得尤为重要。[viewport meta tag](/zh-CN/docs/Web/HTML/Viewport_meta_tag)、[CSS 媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)、[Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout) 和 [CSS Grid](/zh-CN/docs/Web/CSS/CSS_grid_layout) 等技术都可以助你实现这个目标。
 
 ## 另一种概念：流

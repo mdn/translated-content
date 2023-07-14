@@ -60,13 +60,13 @@ slug: Web/HTML/Element/input/radio
 
 ### 单选组的数据表示
 
-当上面的表单在提交时选择了一个单选框，表单的数据就包括了 `contact=value` 项。例如，若用户点击“电话”单选按钮，然后提交表单，提交的数据中将包括 `contact=phone` 项。
+当上面的表单在提交时选择了一个单选框，表单的数据就包括了 `contact=value` 项。例如，若用户点击"电话"单选按钮，然后提交表单，提交的数据中将包括 `contact=phone` 项。
 
-如果你在 HTML 中省略了 `value` 属性，那么提交的表单数据就会将该值分配到 `on` 上。在这种情况下，如果用户选中了“电话”选项并提交了表单，提交的表单数据将是 `contact=on`，这并没有什么用。所以别忘了设置你的 `value` 属性！
+如果你在 HTML 中省略了 `value` 属性，那么提交的表单数据就会将该值分配到 `on` 上。在这种情况下，如果用户选中了"电话"选项并提交了表单，提交的表单数据将是 `contact=on`，这并没有什么用。所以别忘了设置你的 `value` 属性！
 
 > **备注：** 如果在提交表单时没有选择任何单选按钮，则提交的表单数据中根本不包括单选组，因为没有要报告的值。
 
-在没有选择任何一组单选按钮的情况下提交表单的情况并不多见，所以通常明智的做法是让一个单选按钮默认为“选中”状态。参见下面的[默认选择单选按钮](#默认选择单选按钮)。
+在没有选择任何一组单选按钮的情况下提交表单的情况并不多见，所以通常明智的做法是让一个单选按钮默认为"选中"状态。参见下面的[默认选择单选按钮](#默认选择单选按钮)。
 
 让我们给我们的例子添加一点代码，这样我们就可以检查这个表单所产生的数据。对 HTML 进行修改，增加一个 {{HTMLElement("pre")}} 块，将表单数据输出到其中：
 
@@ -90,7 +90,7 @@ slug: Web/HTML/Element/input/radio
 <pre id="log"></pre>
 ```
 
-然后我们添加一些 [JavaScript](/zh-CN/docs/Web/JavaScript) 代码，设置监听 {{domxref("HTMLFormElement/submit_event", "submit")}} 事件的监听器，当用户点击“提交”按钮时会触发该事件：
+然后我们添加一些 [JavaScript](/zh-CN/docs/Web/JavaScript) 代码，设置监听 {{domxref("HTMLFormElement/submit_event", "submit")}} 事件的监听器，当用户点击"提交"按钮时会触发该事件：
 
 ```js
 const form = document.querySelector("form");

@@ -7,7 +7,7 @@ slug: Web/API/Gamepad_API/Using_the_Gamepad_API
 
 HTML5 为丰富的交互式游戏开发引入了许多必要的组件。像 `<canvas>` 、WebGL、 `<audio>` 和 `<video>` 这样的技术，随着 JavaScript 的逐渐成熟，许多以前需要 native code 来实现的功能现在都可以实现了。Gamepad(手柄) API 是开发人员和设计者识别和使用游戏控制板和其他游戏控制器的一种方法。
 
-[Gamepad API](/zh-CN/docs/Web/API/Gamepad_API) 引入新的事件在 {{ domxref("Window") }} 对象中，来读取手柄和控制器（以下称“控制器”）的状态。除此之外，API 还添加了一个 {{ domxref("Gamepad") }} 对象，你可以用它来查询已连接控制器的状态；还有一个 {{ domxref("navigator.getGamepads()") }} 方法，你可以使用它来获取页面已知的控制器列表。
+[Gamepad API](/zh-CN/docs/Web/API/Gamepad_API) 引入新的事件在 {{ domxref("Window") }} 对象中，来读取手柄和控制器（以下称"控制器"）的状态。除此之外，API 还添加了一个 {{ domxref("Gamepad") }} 对象，你可以用它来查询已连接控制器的状态；还有一个 {{ domxref("navigator.getGamepads()") }} 方法，你可以使用它来获取页面已知的控制器列表。
 
 ## 连接控制器
 
@@ -108,7 +108,7 @@ var a = 0;
 var b = 0;
 ```
 
-接下来我们使用 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 事件来检查控制器是否连接。当有一个控制连接时，我们就使用 {{ domxref("Navigator.getGamepads()") }}`[0]` 来抓取，输出控制器信息到我们“控制器信息”的 `div` 里，并开始 `gameLoop()` 函数来启动球的运动进程。
+接下来我们使用 [`gamepadconnected`](/zh-CN/docs/Web/API/Window/gamepadconnected_event) 事件来检查控制器是否连接。当有一个控制连接时，我们就使用 {{ domxref("Navigator.getGamepads()") }}`[0]` 来抓取，输出控制器信息到我们"控制器信息"的 `div` 里，并开始 `gameLoop()` 函数来启动球的运动进程。
 
 ```js
 window.addEventListener("gamepadconnected", function(e) {

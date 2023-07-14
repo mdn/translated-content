@@ -15,7 +15,7 @@ slug: Web/API/HTMLImageElement/naturalHeight
 
 一个整数值，指示图像的固有高度（以 CSS 像素为单位）。这是在没有为图像建立约束或特定值时自然绘制图像的高度。与 {{domxref("HTMLImageElement.height","height")}} 不同，此自然高度已针对显示它的设备的像素密度进行了校正。
 
-如果固有高度不可用——要么是因为图像没有指定固有高度，要么是因为图像数据不可用于获取此信息，“naturalHeight”返回 0。
+如果固有高度不可用——要么是因为图像没有指定固有高度，要么是因为图像数据不可用于获取此信息，"naturalHeight"返回 0。
 
 ## 示例
 

@@ -17,7 +17,7 @@ slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 
 ### 继承属性
 
-JavaScript 对象是动态的属性（指**其自有属性**）“包”。JavaScript 对象有一个指向一个原型对象的链。当试图访问一个对象的属性时，它不仅仅在该对象上搜寻，还会搜寻该对象的原型，以及原型的原型，依次层层向上搜索，直到找到一个名字匹配的属性或到达原型链的末尾。
+JavaScript 对象是动态的属性（指**其自有属性**）"包"。JavaScript 对象有一个指向一个原型对象的链。当试图访问一个对象的属性时，它不仅仅在该对象上搜寻，还会搜寻该对象的原型，以及原型的原型，依次层层向上搜索，直到找到一个名字匹配的属性或到达原型链的末尾。
 
 > **备注：** 遵循 ECMAScript 标准，符号 `someObject.[[Prototype]]` 用于标识 `someObject` 的原型。内部插槽 `[[Prototype]]` 可以通过 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 函数来访问。这个等同于 JavaScript 的非标准但被许多 JavaScript 引擎实现的属性 [`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) 访问器。为在保持简洁的同时避免混淆，在我们的符号中会避免使用 `obj.__proto__`，而是使用 `obj.[[Prototype]]` 作为代替。其对应于 `Object.getPrototypeOf(obj)`。
 >
@@ -25,7 +25,7 @@ JavaScript 对象是动态的属性（指**其自有属性**）“包”。JavaS
 
 有几种可以指定对象的 `[[Prototype]]` 的方法，这些方法将在[后面的小节](#创建和改变原型链的不同方式)中列出。现在，我们将使用 [`__proto__` 语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Object_initializer#原型_setter)进行说明。值得注意的是，`{ __proto__: ... }` 语法与 `obj.__proto__` 访问器不同：前者是标准且未被弃用的。
 
-在像 `{ a: 1, b: 2, __proto__: c }` 这样的对象字面量中，`c` 值（必须为 `null` 或另一个对象）将变成字面量所表示的对象的 `[[Prototype]]`，而其他键（如 `a` 和 `b`）将变成对象的*自有属性*。这种语法读起来非常自然，因为 `[[Prototype]]` 只是对象的“内部属性”。
+在像 `{ a: 1, b: 2, __proto__: c }` 这样的对象字面量中，`c` 值（必须为 `null` 或另一个对象）将变成字面量所表示的对象的 `[[Prototype]]`，而其他键（如 `a` 和 `b`）将变成对象的*自有属性*。这种语法读起来非常自然，因为 `[[Prototype]]` 只是对象的"内部属性"。
 
 下面演示当尝试访问属性时会发生什么：
 
@@ -92,9 +92,9 @@ const o = {
 console.log(o.d); // 5
 ```
 
-### 继承“方法”
+### 继承"方法"
 
-JavaScript 并没有其他基于类的语言所定义的“[方法](/zh-CN/docs/Glossary/Method)”。在 JavaScript 中，任何函数都被可以添加到对象上作为其属性。函数的继承与其他属性的继承没有差别，包括上面的“属性遮蔽”（这种情况相当于其他语言的*方法重写*）。
+JavaScript 并没有其他基于类的语言所定义的"[方法](/zh-CN/docs/Glossary/Method)"。在 JavaScript 中，任何函数都被可以添加到对象上作为其属性。函数的继承与其他属性的继承没有差别，包括上面的"属性遮蔽"（这种情况相当于其他语言的*方法重写*）。
 
 当继承的函数被调用时，[`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值指向的是当前继承的对象，而不是拥有该函数属性的原型对象。
 
@@ -238,18 +238,18 @@ const regexp = /abc/;
 Object.getPrototypeOf(regexp) === RegExp.prototype; // true
 ```
 
-我们可以将它们“解糖（de-sugar）”为构造函数形式。
+我们可以将它们"解糖（de-sugar）"为构造函数形式。
 
 ```js
 const array = new Array(1, 2, 3);
 const regexp = new RegExp("abc");
 ```
 
-例如，像 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 这样的“数组方法”只是在 `Array.prototype` 上定义的方法，而它们又自动在所有数组实例上可用，就是因为这个原因。
+例如，像 [`map()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 这样的"数组方法"只是在 `Array.prototype` 上定义的方法，而它们又自动在所有数组实例上可用，就是因为这个原因。
 
 > **警告：** 有一个常见的错误实践（misfeature）：扩展 `Object.prototype` 或其它内置原型。这种不良特性例子是，定义 `Array.prototype.myMethod = function () {...}`，然后在所有数组实例上使用 `myMethod`。
 >
-> 这种错误实践被称为*猴子修补*（monkey patching）。使用猴子修补存在向前兼容的风险，因为如果语言在未来添加了此方法但具有不同的签名，你的代码将会出错。它已经导致了类似于 [SmooshGate](https://developer.chrome.com/blog/smooshgate/) 这样的事件，并且由于 JavaScript 致力于“不破坏 web”，因此这可能会对语言的发展造成极大的麻烦。
+> 这种错误实践被称为*猴子修补*（monkey patching）。使用猴子修补存在向前兼容的风险，因为如果语言在未来添加了此方法但具有不同的签名，你的代码将会出错。它已经导致了类似于 [SmooshGate](https://developer.chrome.com/blog/smooshgate/) 这样的事件，并且由于 JavaScript 致力于"不破坏 web"，因此这可能会对语言的发展造成极大的麻烦。
 >
 > 扩展内置原型的**唯一**理由是向后移植新的 JavaScript 引擎的特性，比如 `Array.prototype.forEach`。
 
@@ -319,7 +319,7 @@ Derived.prototype = Object.create(Base.prototype);
 
 让我们来仔细看看幕后发生了什么。
 
-如上所述，在 JavaScript 中，函数可以拥有属性。所有函数都有一个名为 `prototype` 的特殊属性。请注意，下面的代码是独立的（出于严谨，假设页面没有其他的 JavaScript 代码）。为获得最佳的学习体验，强烈建议你打开控制台，进入“console”标签页，复制并粘贴以下 JavaScript 代码，然后按回车键运行。（大多数 web 浏览器的开发者工具中都包含控制台。请参阅 [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)、[Chrome 开发者工具](https://developer.chrome.com/docs/devtools/)和 [Edge 开发者工具](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)，以了解详情。）
+如上所述，在 JavaScript 中，函数可以拥有属性。所有函数都有一个名为 `prototype` 的特殊属性。请注意，下面的代码是独立的（出于严谨，假设页面没有其他的 JavaScript 代码）。为获得最佳的学习体验，强烈建议你打开控制台，进入"console"标签页，复制并粘贴以下 JavaScript 代码，然后按回车键运行。（大多数 web 浏览器的开发者工具中都包含控制台。请参阅 [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)、[Chrome 开发者工具](https://developer.chrome.com/docs/devtools/)和 [Edge 开发者工具](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)，以了解详情。）
 
 ```js
 function doSomething() {}
@@ -738,7 +738,7 @@ Object.getPrototypeOf(g).hasOwnProperty("addVertex"); // true
 
 ## 结论
 
-对于 Java 或 C++ 的开发者来说，JavaScript 可能有点令人困惑，因为它是完全动态、完全是在执行期间确定的，而且根本没有静态类型。一切都是对象（实例）或函数（构造函数），甚至函数本身也是 `Function` 构造函数的实例。即使是语法结构中的“类”也只是运行时的构造函数。
+对于 Java 或 C++ 的开发者来说，JavaScript 可能有点令人困惑，因为它是完全动态、完全是在执行期间确定的，而且根本没有静态类型。一切都是对象（实例）或函数（构造函数），甚至函数本身也是 `Function` 构造函数的实例。即使是语法结构中的"类"也只是运行时的构造函数。
 
 JavaScript 中的所有构造函数都有一个被称为 `prototype` 的特殊属性，它与 `new` 运算符一起使用。对原型对象的引用被复制到新实例的内部属性 `[[Prototype]]` 中。例如，当你执行 `const a1 = new A()` 时，JavaScript（在内存中创建对象之后，为其定义 `this` 并执行 `A()` 之前）设置 `a1.[[Prototype]] = A.prototype`。然后，当你访问实例的属性时，JavaScript 首先检查它们是否直接存在于该对象上，如果不存在，则在 `[[Prototype]]` 中查找。会*递归*查询 `[[Prototype]]`，即 `a1.doSomething`、`Object.getPrototypeOf(a1).doSomething`、`Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething`，以此类推，直至找到或 `Object.getPrototypeOf` 返回 `null`。这意味着在 `prototype` 上定义的所有属性实际上都由所有实例共享，并且甚至可以更改 `prototype` 的部分内容，使得更改被应用到所有现有的实例中。
 

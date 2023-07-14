@@ -81,7 +81,7 @@ function updateValue(e) {
 
 \[1] 在 Gecko 12.0 之前，用户在输入法中输入时，或者 dead keys were used on Mac OS X 时，Gecko 不触发 input 事件。
 
-\[2] IE 9 在用户删除输入的文字时不触发 input 事件 (例如，按 Backspace 或者删除键，或者“剪切”文字).
+\[2] IE 9 在用户删除输入的文字时不触发 input 事件 (例如，按 Backspace 或者删除键，或者"剪切"文字).
 
 \[3] Opera 在用户把文字拖进输入框时，不触发 input 事件。
 

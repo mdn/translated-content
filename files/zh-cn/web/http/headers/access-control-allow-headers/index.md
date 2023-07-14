@@ -31,7 +31,7 @@ Access-Control-Allow-Headers: *
 
 **`*` (wildcard)**
 
-对于没有凭据的请求（没有 HTTP cookie 或 HTTP 认证信息的请求），值“ `*`”仅作为特殊的通配符值。在具有凭据的请求中，它被视为没有特殊语义的文字标头名称“ \*”。请注意，{{HTTPHeader("Authorization")}}标头不能使用通配符，并且始终需要明确列出。
+对于没有凭据的请求（没有 HTTP cookie 或 HTTP 认证信息的请求），值" `*`"仅作为特殊的通配符值。在具有凭据的请求中，它被视为没有特殊语义的文字标头名称" \*"。请注意，{{HTTPHeader("Authorization")}}标头不能使用通配符，并且始终需要明确列出。
 
 ## 示例
 

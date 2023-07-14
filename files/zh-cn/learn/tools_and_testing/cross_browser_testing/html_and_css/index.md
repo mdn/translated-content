@@ -59,7 +59,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 基本上，这是一个如何检查您的 HTML 和 CSS 代码，是否格式正确、不包含任何语法错误的问题。
 
 > **备注：** CSS 和 HTML 之间的一个常见问题，就是不同的 CSS 规则之间发生冲突。当您使用第三方代码时，问题可能大到难以修补。例如，你可能正用着一个 CSS 框架，并发现它使用的一个类名与你已经用于某处的类名冲突。或者，您可能会发现，由某种第三方 API（例如生成广告横幅的脚本）生成的 HTML 包含您已经用于别处的类名称或者 ID。
-> 为了确保不会发生这种情况，您需要首先研究一下您正在使用的工具，了解它们可能使用的类名与 ID，并围绕，或者规避着它们来设计您的代码。设法为 CSS 加上“命名空间”也是值得的，例如，如果有一个小部件，就先确保它有一个独特的类，然后基于这个类来选择元件内的这个类的选择器，这样一来，冲突的可能性就小下来了。例如 .audio-player ul a。
+> 为了确保不会发生这种情况，您需要首先研究一下您正在使用的工具，了解它们可能使用的类名与 ID，并围绕，或者规避着它们来设计您的代码。设法为 CSS 加上"命名空间"也是值得的，例如，如果有一个小部件，就先确保它有一个独特的类，然后基于这个类来选择元件内的这个类的选择器，这样一来，冲突的可能性就小下来了。例如 .audio-player ul a。
 
 ### 验证
 
@@ -73,7 +73,7 @@ CSS 有一个类似的路线——你需要检查你的属性名拼写是否正�
 
 另一个很好的选择就是所谓的 Linter 程序，它不仅可以指出错误，还可以标记关于 CSS 中不良做法的警告，以及其他一些要点。大家可以定制 Linter，以得到更严格或者更宽松的错误/警告报告。
 
-有许多在线 Linter 程序，其中最好的可能是“脏标记”[Dirty Markup](https://www.dirtymarkup.com/)（HTML，CSS，JavaScript）和 [CSS Lint](http://csslint.net/)（仅限 CSS）。它们可以让你把代码粘贴到一个窗口中，并且会用十字标记任何错误，然后可以将它们悬停，以获得错误信息，通知你问题是什么。肮脏的标记还允许您使用清理按钮修复您的标记。
+有许多在线 Linter 程序，其中最好的可能是"脏标记"[Dirty Markup](https://www.dirtymarkup.com/)（HTML，CSS，JavaScript）和 [CSS Lint](http://csslint.net/)（仅限 CSS）。它们可以让你把代码粘贴到一个窗口中，并且会用十字标记任何错误，然后可以将它们悬停，以获得错误信息，通知你问题是什么。肮脏的标记还允许您使用清理按钮修复您的标记。
 
 ![](dirty-markup.png)
 
@@ -83,7 +83,7 @@ CSS 有一个类似的路线——你需要检查你的属性名拼写是否正�
 
 1. 安装 Atom（如果您还没有安装最新版本），请从上面链接的 Atom 页面下载。
 2. 转到 Atom 的*首选项...*对话框（例如在 Mac 上选择 _Atom > Preferences..._ 或在 Windows / Linux 上选择 _File > Preferences..._），然后在左侧菜单中选择 Install 选项。
-3. 在搜索包文本字段中，输入“lint”，然后按 Enter / 回车键搜索与 lint 相关的包。
+3. 在搜索包文本字段中，输入"lint"，然后按 Enter / 回车键搜索与 lint 相关的包。
 4. 您应该在列表顶部看到一个名为 lint 的包。首先安装它（使用安装按钮），因为其他短裤依靠它工作。之后，安装用于 linting CSS 的 linter-csslint 插件，和用于 lint HTML 的 linter-tidy 插件。
 5. 软件包完成安装后，尝试加载一个 HTML 文件和一个 CSS 文件：在行号旁边会看到用绿色（警告）和红色（错误）圆圈，突出显示任何存在的问题，底部则提供行号、错误消息，有时有建议的值或者其他修复。
 
@@ -227,7 +227,7 @@ IE 条件注释是修改后的专有 HTML 注释语法，可用于将 HTML 代�
 <![endif]-->
 ```
 
-只有当浏览器查看页面是 IE 8 或更旧时，此块才会应用 IE 特定的 CSS 和 JavaScript。lte 意思是“小于或等于”，但是也可以使用 lt、gt、gte、!(NOT) 以及其他逻辑语法。
+只有当浏览器查看页面是 IE 8 或更旧时，此块才会应用 IE 特定的 CSS 和 JavaScript。lte 意思是"小于或等于"，但是也可以使用 lt、gt、gte、!(NOT) 以及其他逻辑语法。
 
 > **备注：** Sitepoint 的 [Internet Explorer 条件注释](https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/)提供了一个有用的初学者教程/参考，详细解释了条件注释语法。
 
@@ -358,7 +358,7 @@ Autoprefixer 也可用于其他更便捷的方式 - 请参阅[Autoprefixer 使�
 您也可以使用插件来编辑文本编辑器，如 Atom 或 Sublime 文本。例如，在 Atom 中：
 
 1. 您可以通过转到首选项>安装，搜索 Autoprefixer，然后安装。
-2. 您可以通过按“Autoprefixer 设置”按钮并在页面的“设置”部分的文本字段中输入查询来设置浏览器查询。
+2. 您可以通过按"Autoprefixer 设置"按钮并在页面的"设置"部分的文本字段中输入查询来设置浏览器查询。
 3. 在你的代码中，你可以选择要添加前缀的 CSS 部分，打开命令调色板（Cmd / Ctrl + Shift + P），然后输入 Autoprefixer 并选择 Autoprefixer 自动完成的结果。
 
 作为一个例子，我们输入了下面的代码：
@@ -419,7 +419,7 @@ HTML 和 CSS 还有很多其他的问题。最重要的是如何在网上找到�
 
 其中最好的支持信息来源是 Mozilla 开发者网络（你现在就在这！），[stackoverflow.com](http://stackoverflow.com/) 和 [caniuse.com](http://caniuse.com/)。
 
-为使用 Mozilla 开发者网络（MDN），大多数人会搜索他们正在尝试查找信息的技术，以及术语“mdn”，例如“mdn HTML5 video”。MDN 包含几种有用的内容类型：
+为使用 Mozilla 开发者网络（MDN），大多数人会搜索他们正在尝试查找信息的技术，以及术语"mdn"，例如"mdn HTML5 video"。MDN 包含几种有用的内容类型：
 
 - 带有客户端网络技术浏览器支持信息的参考资料，例如[\<video> 参考页面](/zh-CN/docs/Web/HTML/Element/video)。
 - 其他支持的参考资料，例如 [HTML 音频和视频元素支持的媒体格式](/zh-CN/docs/Web/HTML/Supported_media_formats)。
@@ -427,7 +427,7 @@ HTML 和 CSS 还有很多其他的问题。最重要的是如何在网上找到�
 
 [caniuse.com](http://caniuse.com/) 提供支持信息，以及一些有用的外部资源链接。例如，请参阅<http://caniuse.com/#search=video>（您只需在文本框中输入要搜索的功能）。
 
-[stackoverflow.com](http://stackoverflow.com/)（SO）是一个论坛网站，您可以提出问题，并让开发人员分享他们的解决方案，查看以前的帖子，并帮助其他开发人员。在发布新问题之前，建议您先看看是否已经回答了您的问题。例如，我们在 SO 上搜索了“cross browser html5 video”，并且很快得到了[具有完全跨浏览器兼容性的 HTML5 Video](http://stackoverflow.com/questions/16212510/html5-video-with-full-cross-browser-compatibility)。
+[stackoverflow.com](http://stackoverflow.com/)（SO）是一个论坛网站，您可以提出问题，并让开发人员分享他们的解决方案，查看以前的帖子，并帮助其他开发人员。在发布新问题之前，建议您先看看是否已经回答了您的问题。例如，我们在 SO 上搜索了"cross browser html5 video"，并且很快得到了[具有完全跨浏览器兼容性的 HTML5 Video](http://stackoverflow.com/questions/16212510/html5-video-with-full-cross-browser-compatibility)。
 
 除此之外，请尝试使用您最喜爱的搜索引擎来解决您的问题。如果有的话，搜索特定的错误信息通常很有用 - 其他开发人员可能会遇到与您一样的问题。
 

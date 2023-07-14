@@ -86,9 +86,9 @@ slug: Web/HTML/Global_attributes
 - [`itemtype`](/zh-CN/docs/Web/HTML/Global_attributes/itemtype)
   - : 指定将用于在数据结构中定义 `itemprops`（项属性）的词汇表的 URL。[`itemscope`](/zh-CN/docs/Web/HTML/Global_attributes/itemscope) 用于设置数据结构中按 `itemtype` 设置的词汇表的生效范围。
 - [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang)
-  - : 帮助定义元素的语言：不可编辑元素所在的语言，或者应该由用户编写的可编辑元素的语言。该属性包含一个“语言标记”（由用连字符分隔的“语言子标记”组成），格式在 {{RFC(5646, "Tags for Identifying Languages（也称为 BCP 47）")}} 中定义。[**xml:lang**](#xml:lang) 优先于它。
+  - : 帮助定义元素的语言：不可编辑元素所在的语言，或者应该由用户编写的可编辑元素的语言。该属性包含一个"语言标记"（由用连字符分隔的"语言子标记"组成），格式在 {{RFC(5646, "Tags for Identifying Languages（也称为 BCP 47）")}} 中定义。[**xml:lang**](#xml:lang) 优先于它。
 - [`nonce`](/zh-CN/docs/Web/HTML/Global_attributes/nonce)
-  - : 一个加密的 nonce（“只使用一次的数字”），可以被[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)使用，以确定是否允许进行给定的获取。
+  - : 一个加密的 nonce（"只使用一次的数字"），可以被[内容安全策略](/zh-CN/docs/Web/HTTP/CSP)使用，以确定是否允许进行给定的获取。
 - [`part`](/zh-CN/docs/Web/HTML/Global_attributes/part)
   - : 元素的部件名称的空格分隔列表。Part 名称允许 CSS 通过 {{CSSxRef("::part")}} 伪元素选择和设置影子树中的特定元素。
 - [`popover`](/zh-CN/docs/Web/HTML/Global_attributes/popover)

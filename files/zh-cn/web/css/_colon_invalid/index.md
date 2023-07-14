@@ -160,7 +160,7 @@ button {
 
 ### Gecko 默认设置
 
-默认情况下，Gecko 不对 `:invalid` 伪类应用样式。但是，对于 `:invalid` 的某些子集情况，它会应用样式（使用 {{Cssxref("box-shadow")}} 属性显示红色“发光”）。此时，应用的是 {{cssxref(":user-invalid")}} 伪类。
+默认情况下，Gecko 不对 `:invalid` 伪类应用样式。但是，对于 `:invalid` 的某些子集情况，它会应用样式（使用 {{Cssxref("box-shadow")}} 属性显示红色"发光"）。此时，应用的是 {{cssxref(":user-invalid")}} 伪类。
 
 ## 规范
 

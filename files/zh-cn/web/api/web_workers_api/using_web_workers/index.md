@@ -228,7 +228,7 @@ Content-Security-Policy: script-src 'self'
 
 在主页面与 worker 之间传递的数据是通过**拷贝**，而不是共享来完成的。传递给 `worker` 的对象需要经过序列化，接下来在另一端还需要反序列化。页面与 `worker` **不会共享同一个实例**，最终的结果就是在每次通信结束时生成了数据的**一个副本**。大部分浏览器使用[结构化克隆](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)来实现该特性。
 
-在往下进行之前，出于教学的目的，让我们创建一个名为 `emulateMessage()` 的函数，它将模拟在从 `worker` 到主页面（反之亦然）的通信过程中，变量的“_拷贝而非共享_”行为：
+在往下进行之前，出于教学的目的，让我们创建一个名为 `emulateMessage()` 的函数，它将模拟在从 `worker` 到主页面（反之亦然）的通信过程中，变量的"_拷贝而非共享_"行为：
 
 ```js
 function emulateMessage(vVal) {
@@ -608,7 +608,7 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 ## 嵌入式 worker
 
-目前没有一种“官方”的方法能够像 {{ HTMLElement("script") }} 元素一样将 worker 的代码嵌入道到网页中。但是如果一个 {{ HTMLElement("script") }} 元素没有 `src` 属性，并且它的 `type` 属性没有指定成一个可运行的 MIME type，那么它就会被认为是一个数据块元素，并且能够被 JavaScript 使用。“数据块”是 HTML5 中一个十分常见的特性，它可以携带几乎任何文本类型的数据。所以，你能够以如下方式嵌入一个 worker：
+目前没有一种"官方"的方法能够像 {{ HTMLElement("script") }} 元素一样将 worker 的代码嵌入道到网页中。但是如果一个 {{ HTMLElement("script") }} 元素没有 `src` 属性，并且它的 `type` 属性没有指定成一个可运行的 MIME type，那么它就会被认为是一个数据块元素，并且能够被 JavaScript 使用。"数据块"是 HTML5 中一个十分常见的特性，它可以携带几乎任何文本类型的数据。所以，你能够以如下方式嵌入一个 worker：
 
 ```html
 <!DOCTYPE html>
@@ -691,7 +691,7 @@ worker 的一个优势在于能够执行处理器密集型的运算而不会阻�
 
 #### JavaScript 代码
 
-下面的 JavaScript 代码保存在“fibonacci.js”文件中，与下一节的 HTML 文件关联。
+下面的 JavaScript 代码保存在"fibonacci.js"文件中，与下一节的 HTML 文件关联。
 
 ```js
 self.onmessage = (e) => {

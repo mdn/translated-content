@@ -16,7 +16,7 @@ slug: Web/Guide/Introduction_to_Web_development
 ### HTML
 
 - [超文本标记语言（HTML）基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started)——HTML 到底是什么？
-- [网页的基本结构](https://www.sitepoint.com/basic-structure-of-a-web-page/)——doctype 和文档“树”。
+- [网页的基本结构](https://www.sitepoint.com/basic-structure-of-a-web-page/)——doctype 和文档"树"。
 - [HTML 初学者教程](https://htmldog.com/guides/html/beginner/)——教程和练习，回顾并带领你学习上面的基础知识。
 - [HTML 元素参考](/zh-CN/docs/Web/HTML/Element)——一本关于 HTML 元素的综合指南，详细介绍了浏览器如何支持这些元素。
 - [学习 HTML](https://web.dev/learn/html)

@@ -22,7 +22,7 @@ slug: Web/Tutorials
 - [MDN 的 HTML 元素参考](/zh-CN/docs/Web/HTML/Element)
   - : 一个 HTML 元素综合性性参考，还有不同浏览器对它们的支持。
 - [HTML 挑战](http://wikiversity.org/wiki/Web_Design/HTML_Challenges)_（来自维基大学）_
-  - : 参与这些挑战来巩固你的 HTML 技能。（例如，“我到底是应该使用一个 \<h2> 元素还是用 \<strong> 呢？”）专注于有意义的小点滴。
+  - : 参与这些挑战来巩固你的 HTML 技能。（例如，"我到底是应该使用一个 \<h2> 元素还是用 \<strong> 呢？"）专注于有意义的小点滴。
 
 ### 高级课程
 

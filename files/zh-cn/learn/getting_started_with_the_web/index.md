@@ -48,4 +48,4 @@ slug: Learn/Getting_started_with_the_web
 ## 参见
 
 - [web 解密](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g): 一系列解释 web 基础原理的精彩视频，针对 web 开发的完全初学者。由 [Jérémie Patonnier](https://twitter.com/JeremiePat) 创建。
-- [web 及 web 标准](/zh-CN/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards): 这篇文章提供了一些关于 web 的背景故事——它是如何诞生的，什么是 web 标准，它们是如何一起工作的，为什么“web 开发者”是一个很好的职业选择，以及你将通过该课程了解什么样的最佳实践。
+- [web 及 web 标准](/zh-CN/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards): 这篇文章提供了一些关于 web 的背景故事——它是如何诞生的，什么是 web 标准，它们是如何一起工作的，为什么"web 开发者"是一个很好的职业选择，以及你将通过该课程了解什么样的最佳实践。

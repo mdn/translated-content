@@ -134,7 +134,7 @@ document.querySelectorAll("button").forEach((button) => {
 
 `showPicker()` 可以为一个 [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) input 开启选择器。
 
-这里，我们定义了一个 input，其采用了 autocomplete 为“name”的选项。
+这里，我们定义了一个 input，其采用了 autocomplete 为"name"的选项。
 
 ```html
 <input autocomplete="name" /> <button>Show autocomplete options</button>

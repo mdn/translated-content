@@ -36,7 +36,7 @@ var longString = "This is a very long string which needs
 // SyntaxError: unterminated string literal
 ```
 
-可以使用["+"运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition)，反斜杠，或[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)来代替多行。“+”运算符的使用如下：
+可以使用["+"运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition)，反斜杠，或[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)来代替多行。"+"运算符的使用如下：
 
 ```js example-good
 var longString = "This is a very long string which needs " +
@@ -44,7 +44,7 @@ var longString = "This is a very long string which needs " +
                  "otherwise my code is unreadable.";
 ```
 
-或者你可以使用“\”在每一行的末尾，以表示该字符串在下一行继续。要确保“\“之后没有没有空格和任何其他的字符，及缩进，否则该“\”将不会起作用。使用方法如下：
+或者你可以使用"\"在每一行的末尾，以表示该字符串在下一行继续。要确保"\"之后没有没有空格和任何其他的字符，及缩进，否则该"\"将不会起作用。使用方法如下：
 
 ```js example-good
 var longString = "This is a very long string which needs \

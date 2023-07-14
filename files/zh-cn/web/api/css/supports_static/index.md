@@ -17,7 +17,7 @@ boolValue = CSS.supports(supportCondition);
 
 ### 参数
 
-有两种不同的传值形式。第一种用来检验浏览器对于一对“属性 - 属性值”的支持：
+有两种不同的传值形式。第一种用来检验浏览器对于一对"属性 - 属性值"的支持：
 
 - _propertyName_
   - : 一个包含要检查的 CSS 属性名称的{{domxref("DOMString")}}。

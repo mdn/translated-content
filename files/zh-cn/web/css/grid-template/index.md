@@ -41,14 +41,14 @@ grid-template: unset;
 ### 可设值
 
 - `none`
-  - : 关键词，设上文“所简写属性”为`none`，即恢复默认设置。行列隐式生成，{{cssxref("grid-auto-rows")}}与{{cssxref("grid-auto-columns")}}定其尺寸。
+  - : 关键词，设上文"所简写属性"为`none`，即恢复默认设置。行列隐式生成，{{cssxref("grid-auto-rows")}}与{{cssxref("grid-auto-columns")}}定其尺寸。
 - `<'grid-template-rows'> / <'grid-template-columns'>`
   - : 指定{{cssxref("grid-template-rows")}}与{{cssxref("grid-template-columns")}}之值，并设{{cssxref("grid-template-areas")}}为`none`。
 - `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]?`
 
   - : 设{{cssxref("grid-template-areas")}}为列得`<string>`、{{cssxref("grid-template-columns")}}为\<explicit-track-list>（默认为`none`）、{{cssxref("grid-template-rows")}}为`<track-size>`（默认为`auto`）并拼接尺寸前后所定义之行。
 
-    注：轨道被用以与“ASCII art”（即字符画，此处指`<string>`）中行列逐一视觉对齐，故`<explicit-track-list>`中不允许{{cssxref("repeat()")}}。
+    注：轨道被用以与"ASCII art"（即字符画，此处指`<string>`）中行列逐一视觉对齐，故`<explicit-track-list>`中不允许{{cssxref("repeat()")}}。
 
 **注：**{{cssxref("grid")}}可如此用，但将重置隐式网格属性。Use `grid` (as opposed to `grid-template`) to prevent these values from cascading in seperately.
 

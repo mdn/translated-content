@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
 
 {{AddonSidebar}}
 
-使用此 API 以注册内容脚本。“注册内容脚本”意味着浏览器会将给定的内容脚本插入到每个与给定的 URL 模式相匹配的页面中。
+使用此 API 以注册内容脚本。"注册内容脚本"意味着浏览器会将给定的内容脚本插入到每个与给定的 URL 模式相匹配的页面中。
 
 此 API 与 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 的 [`"content_scripts"`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 键非常相似，但 `"content_scripts"` 键所能注册的内容脚本是固定的，自拓展安装后便不可更改。但通过 `contentScripts` API，拓展可以在运行时动态地注册或取消注册脚本。
 

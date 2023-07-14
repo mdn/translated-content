@@ -120,7 +120,7 @@ function log(msg) {
 log("Logging mouse events inside this container...");
 ```
 
-log() 函数通过 {{jsxref("Date")}} 对象的 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}} 方法获取当前时间，然后将消息文本和时间戳放一起构建一个字符串，最后将其追加到具有“log”类的框上。
+log() 函数通过 {{jsxref("Date")}} 对象的 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}} 方法获取当前时间，然后将消息文本和时间戳放一起构建一个字符串，最后将其追加到具有"log"类的框上。
 
 现在添加第二个方法：记录基于事件 (比如 [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event), [`click`](/zh-CN/docs/Web/API/Element/click_event), 和 [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event)) 的 {{domxref("MouseEvent")}} 的信息。
 
@@ -155,7 +155,7 @@ boxElem.addEventListener("mouseleave", logEvent);
 </div>
 ```
 
-具有“box”类的 {{HTMLElement("div")}} 容器仅仅是出于布局考虑，用一个框来展示其内容。具有“log”类的 \<div> 元素是作为消息本身的内容框。
+具有"box"类的 {{HTMLElement("div")}} 容器仅仅是出于布局考虑，用一个框来展示其内容。具有"log"类的 \<div> 元素是作为消息本身的内容框。
 
 ### CSS
 

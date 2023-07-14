@@ -41,7 +41,7 @@ slug: Web/HTML/Element/param
 - `name`
   - : 参数的名字。
 - `type` {{Deprecated_Inline}}
-  - : 仅当 valuetype 设置为“ref”时才使用。根据 URI 中给定的数据确定 MIME 类型。
+  - : 仅当 valuetype 设置为"ref"时才使用。根据 URI 中给定的数据确定 MIME 类型。
 - `value`
   - : 确定参数的值。
 - `valuetype` {{Deprecated_Inline}}

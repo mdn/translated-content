@@ -99,7 +99,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 
     你还可以看到我们使用了多个等号为多个变量进行连续赋值，这在 JavaScript 中是允许的，很适合为多个变量同时赋一个相同的值。后文中你会发现，使用 `width` 和 `height` 变量可以更快捷地访问画布的长宽（比如在画布正中央绘制一条垂直线）。
 
-4. 如果现在保存文件，浏览器中什么也不会显示，这并没有问题，但是滚动条还是可见的，这就是问题了。原因是我们的“全窗尺寸画布”包含 {{htmlelement("body")}} 元素的外边距（{{cssxref("margin")}}），使得文档比窗口略宽。为使滚动条消失，需要删除 {{htmlelement("body")}} 元素的 {{cssxref("margin")}} 并将 {{cssxref("overflow")}} 设置为 `hidden`。在文档的 {{htmlelement("head")}} 中添加以下代码即可：
+4. 如果现在保存文件，浏览器中什么也不会显示，这并没有问题，但是滚动条还是可见的，这就是问题了。原因是我们的"全窗尺寸画布"包含 {{htmlelement("body")}} 元素的外边距（{{cssxref("margin")}}），使得文档比窗口略宽。为使滚动条消失，需要删除 {{htmlelement("body")}} 元素的 {{cssxref("margin")}} 并将 {{cssxref("overflow")}} 设置为 `hidden`。在文档的 {{htmlelement("head")}} 中添加以下代码即可：
 
     ```html
     <style>
@@ -116,7 +116,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 
 ### 获取画布上下文（canvas context）并完成设置
 
-画布模板设置还有最后一步。我们需要获得一个对绘画区域的特殊的引用（称为“上下文”）用来在画布上绘图。可通过 {{domxref("HTMLCanvasElement.getContext()")}} 方法获得基础的绘画功能，需要提供一个字符串参数来表示所需上下文的类型。
+画布模板设置还有最后一步。我们需要获得一个对绘画区域的特殊的引用（称为"上下文"）用来在画布上绘图。可通过 {{domxref("HTMLCanvasElement.getContext()")}} 方法获得基础的绘画功能，需要提供一个字符串参数来表示所需上下文的类型。
 
 这里我们需要一个 2d 画布，在 `<script>` 元素内添加以下 JS 代码即可：
 
@@ -170,7 +170,7 @@ ctx.fillRect(0, 0, width, height);
 
     保存并刷新，新的矩形就会出现。这里引出了一个新问题：绘制矩形、线等操作按出现的顺序依次进行。就像粉刷墙面时，两层重叠时新层总会覆盖旧层。这一点是无法改变的，因此在绘制图形时一定要慎重考虑顺序问题。
 
-4. 你还可以通过指定半透明的颜色来绘制半透明的图形，比如使用 `rgba()`。 `a` 指定了“α 通道”的值，也就是颜色的透明度。值越高透明度越高，底层的内容就越清晰。在代码中添加以下两行：
+4. 你还可以通过指定半透明的颜色来绘制半透明的图形，比如使用 `rgba()`。 `a` 指定了"α 通道"的值，也就是颜色的透明度。值越高透明度越高，底层的内容就越清晰。在代码中添加以下两行：
 
     ```js
     ctx.fillStyle = 'rgba(255, 0, 255, 0.75)';
@@ -211,7 +211,7 @@ ctx.fillRect(0, 0, width, height);
 一些通用的方法和属性将贯穿以下全部内容：
 
 - {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}}：在钢笔当前所在位置开始绘制一条路径。在新的画布中，钢笔起始位置为 (0, 0)。
-- {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}}：将钢笔移动至另一个坐标点，不记录、不留痕迹，只将钢笔“跳”至新位置。
+- {{domxref("CanvasRenderingContext2D.moveTo", "moveTo()")}}：将钢笔移动至另一个坐标点，不记录、不留痕迹，只将钢笔"跳"至新位置。
 - {{domxref("CanvasRenderingContext2D.fill", "fill()")}}：通过为当前所绘制路径的区域填充颜色来绘制一个新的填充形状。
 - {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}：通过为当前绘制路径的区域描边，来绘制一个只有边框的形状。
 - 路径也可和矩形一样使用 `lineWidth` 和 `fillStyle` / `strokeStyle` 等功能。
@@ -481,9 +481,9 @@ ctx.fillText('Canvas text', 50, 150);
 
 **注：**动画结束后在主代码中调用 `cancelAnimationFrame()` 是良好习惯，可以确保不再有等待运行的更新。
 
-浏览器自行处理诸如“使动画匀速运行”、“避免在不可见的内容浪费资源”等复杂细节问题。
+浏览器自行处理诸如"使动画匀速运行"、"避免在不可见的内容浪费资源"等复杂细节问题。
 
-我们简单回顾一下“弹球”示例（[在线运行](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html) 或查看 [源代码](https://github.com/mdn/learning-area/tree/main/javascript/oojs/bouncing-balls)），来探究一下原理。以下是让弹球持续运行的循环代码：
+我们简单回顾一下"弹球"示例（[在线运行](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html) 或查看 [源代码](https://github.com/mdn/learning-area/tree/main/javascript/oojs/bouncing-balls)），来探究一下原理。以下是让弹球持续运行的循环代码：
 
 ```js
 function loop() {
@@ -549,7 +549,7 @@ loop();
     var posX = 0;
     ```
 
-    我们来解释一下“精灵图序列”（我们借鉴了麦克托马斯的 [使用 CSS 动画创建人物行走的精灵图](http://atomicrobotdesign.com/blog/htmlcss/create-a-sprite-sheet-walk-cycle-using-using-css-animation/)）。图片如下：
+    我们来解释一下"精灵图序列"（我们借鉴了麦克托马斯的 [使用 CSS 动画创建人物行走的精灵图](http://atomicrobotdesign.com/blog/htmlcss/create-a-sprite-sheet-walk-cycle-using-using-css-animation/)）。图片如下：
 
     ![](walk-right.png)
 
@@ -595,7 +595,7 @@ loop();
       }
     ```
 
-    将整个功能块放置在 `if (posX % 13 === 0) { ... }` 内。用“模（`%`）运算符”（即 [求余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)）来检测 `posX` 是否可以被 13 整除。如果整除，则通过增加 `sprite` 的值转至下一个精灵（到 5 号精灵时归零）。这实际上意味着每隔 13 帧才更新一次精灵，每秒大约更新 5 帧（`requestAnimationFrame()` 每秒最多调用 60 帧）。我们故意放慢了帧率，因为精灵图只有六个，且如果每秒显示 60 帧的话，这个角色就会快到起飞。
+    将整个功能块放置在 `if (posX % 13 === 0) { ... }` 内。用"模（`%`）运算符"（即 [求余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)）来检测 `posX` 是否可以被 13 整除。如果整除，则通过增加 `sprite` 的值转至下一个精灵（到 5 号精灵时归零）。这实际上意味着每隔 13 帧才更新一次精灵，每秒大约更新 5 帧（`requestAnimationFrame()` 每秒最多调用 60 帧）。我们故意放慢了帧率，因为精灵图只有六个，且如果每秒显示 60 帧的话，这个角色就会快到起飞。
 
     外部程序块中用一个 [`if ... else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句来检测 `sprite` 的值是否为 5（精灵序号在 0 - 5 间循环，因此 5 代表最后一个精灵）。如果最后一个精灵已经显示，就把 `sprite` 重置为 0，否则加 1。
 
@@ -656,7 +656,7 @@ canvas.onmouseup = function() {
 }
 ```
 
-在按下“Clear canvas”（清除画布）按钮时，我们运行一个简单的函数来清除整个画布的内容至纯黑色，和刚才的方法一致：
+在按下"Clear canvas"（清除画布）按钮时，我们运行一个简单的函数来清除整个画布的内容至纯黑色，和刚才的方法一致：
 
 ```js
 clearBtn.onclick = function() {
@@ -812,7 +812,7 @@ WebGL 基于 [OpenGL](/zh-CN/docs/Glossary/OpenGL) 图形编程语言实现，�
 - [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)：一个详尽的教程系列，更细致深入地讲解了 2D 画布所需的知识。必读。
 - [WebGL 教程](/zh-CN/docs/Web/API/WebGL_API/Tutorial)：纯 WebGL 编程教程系列。
 - [用 Three.js 创建一个简单的示例](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)：Three.js 基础教程。我们还提供 [PlayCanvas](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) 和 [Babylon.js](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js) 的基础教程。
-- [游戏开发](/zh-CN/docs/Games)：MDN web 游戏开发目录页。提供与 2D、3D 画布相关的实用教程和技术，可参考“技术”和“教程”菜单项。
+- [游戏开发](/zh-CN/docs/Games)：MDN web 游戏开发目录页。提供与 2D、3D 画布相关的实用教程和技术，可参考"技术"和"教程"菜单项。
 
 ## 示例
 

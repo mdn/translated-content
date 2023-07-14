@@ -86,13 +86,13 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 - {{HTTPHeader("Sec-CH-UA-Arch")}} {{experimental_inline}}
   - : 用户代理的底层平台架构。
 - {{HTTPHeader("Sec-CH-UA-Bitness")}} {{experimental_inline}}
-  - : 用户代理的底层 CPU 架构位数（例如“64”位）。
+  - : 用户代理的底层 CPU 架构位数（例如"64"位）。
 - {{HTTPHeader("Sec-CH-UA-Full-Version")}} {{deprecated_inline}}
   - : 用户代理的完整语义版本字符串。
 - {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} {{experimental_inline}}<!-- chrome intent to ship Nov 2021 -->
   - : 用户代理品牌（brand）列表中每个品牌的完整版本。
 - {{HTTPHeader("Sec-CH-UA-Mobile")}} {{experimental_inline}}
-  - : 用户代理是否在手机设备上运行，或者更一般地说，更偏好“手机”用户体验。
+  - : 用户代理是否在手机设备上运行，或者更一般地说，更偏好"手机"用户体验。
 - {{HTTPHeader("Sec-CH-UA-Model")}} {{experimental_inline}}
   - : 用户代理的设备模型。
 - {{HTTPHeader("Sec-CH-UA-Platform")}} {{experimental_inline}}
@@ -120,7 +120,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)是一组请求标头�
 - {{HTTPHeader("Downlink")}}
   - : 客户端连接到服务器的近似带宽，以 Mbps 为单位。这是[网络信息 API](/zh-CN/docs/Web/API/Network_Information_API) 的一部分。
 - {{HTTPHeader("ECT")}}
-  - : 最匹配连接延迟和带宽的{{Glossary("effective connection type", "有效连接类型")}}（“网络配置文件”）。这是[网络信息 API](/zh-CN/docs/Web/API/Network_Information_API) 的一部分。
+  - : 最匹配连接延迟和带宽的{{Glossary("effective connection type", "有效连接类型")}}（"网络配置文件"）。这是[网络信息 API](/zh-CN/docs/Web/API/Network_Information_API) 的一部分。
 - {{HTTPHeader("RTT")}}
   - : 应用层往返时间（RTT），以毫秒为单位，其中包括服务器处理时间。这是[网络信息 API](/zh-CN/docs/Web/API/Network_Information_API) 的一部分。
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
@@ -203,7 +203,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 ## 下载
 
 - {{HTTPHeader("Content-Disposition")}}
-  - : 指示传输的资源是否应内联显示（没有标题的默认行为），或者是否应像下载一样处理并且浏览器应显示“另存为”对话框。
+  - : 指示传输的资源是否应内联显示（没有标题的默认行为），或者是否应像下载一样处理并且浏览器应显示"另存为"对话框。
 
 ## 消息主体信息
 
@@ -294,7 +294,7 @@ _[在此处](/zh-CN/docs/Glossary/CORS)了解更多关于 CORS。_
 - {{HTTPHeader("X-Content-Type-Options")}}
   - : 禁用 MIME 嗅探并强制浏览器使用 {{HTTPHeader("Content-Type")}} 中给出的类型。
 - {{HTTPHeader("X-Download-Options")}}
-  - : [`X-Download-Options`](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj542450(v=vs.85)?#the-noopen-directive>) HTTP 标头指示浏览器（Internet Explorer）不应显示“打开”已从应用程序下载的文件的选项，以防止网络钓鱼攻击，否则该文件将获得在应用程序上下文中执行的权限。
+  - : [`X-Download-Options`](<https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj542450(v=vs.85)?#the-noopen-directive>) HTTP 标头指示浏览器（Internet Explorer）不应显示"打开"已从应用程序下载的文件的选项，以防止网络钓鱼攻击，否则该文件将获得在应用程序上下文中执行的权限。
 - {{HTTPHeader("X-Frame-Options")}} (XFO)
   - : 指示是否应允许浏览器在 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("embed")}} 或 {{HTMLElement("object")}} 中呈现页面。
 - {{HTTPHeader("X-Permitted-Cross-Domain-Policies")}}

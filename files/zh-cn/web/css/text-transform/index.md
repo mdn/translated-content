@@ -77,7 +77,7 @@ text-transform: unset;
 
 ## 示例
 
-### 使用“none”
+### 使用"none"
 
 ```html
 <p>
@@ -105,9 +105,9 @@ strong {
 
 这个示例展示了没有文字转换的情况。
 
-{{ EmbedLiveSample('使用“none”', '100%', '100px') }}
+{{ EmbedLiveSample('使用"none"', '100%', '100px') }}
 
-### 使用“capitalize”（一般情况）
+### 使用"capitalize"（一般情况）
 
 ```html
 <p>
@@ -135,9 +135,9 @@ strong {
 
 这个示例展示了首字母大写的情况。
 
-{{ EmbedLiveSample('使用“capitalize”（一般情况）', '100%', '100px') }}
+{{ EmbedLiveSample('使用"capitalize"（一般情况）', '100%', '100px') }}
 
-### 使用“capitalize”（标点）
+### 使用"capitalize"（标点）
 
 ```html
 <p>
@@ -169,9 +169,9 @@ strong {
 
 这个示例展示了一个词的初始标点是如何被忽略的。关键字的目标是第一个字母，也就是字母或数字总类中的第一个 Unicode 字符部分。
 
-{{ EmbedLiveSample('使用“capitalize”（标点）', '100%', '100px') }}
+{{ EmbedLiveSample('使用"capitalize"（标点）', '100%', '100px') }}
 
-### 使用“capitalize”（符号）
+### 使用"capitalize"（符号）
 
 ```html
 <p>
@@ -195,9 +195,9 @@ strong {
 
 这个示例展示了初始符号是如何被忽略的。关键字的目标是第一个字母，也就是字母或数字总类中的第一个 Unicode 字符部分。
 
-{{ EmbedLiveSample('使用“capitalize”（符号）', '100%', '100px') }}
+{{ EmbedLiveSample('使用"capitalize"（符号）', '100%', '100px') }}
 
-### 使用“capitalize”（荷兰语 ij 双字母字符）
+### 使用"capitalize"（荷兰语 ij 双字母字符）
 
 ```html
 <p>
@@ -216,9 +216,9 @@ strong {
 
 这个示例展示了荷兰语双字母字符 *ij* 必须像一个单一的字母一样处理。
 
-{{ EmbedLiveSample('使用“capitalize”（荷兰语 ij 双字母字符）', '100%', '100px') }}
+{{ EmbedLiveSample('使用"capitalize"（荷兰语 ij 双字母字符）', '100%', '100px') }}
 
-### 使用“uppercase”（一般情况）
+### 使用"uppercase"（一般情况）
 
 ```html
 <p>
@@ -246,9 +246,9 @@ strong {
 
 这个示例展示了如何将文本转换为大写字母。
 
-{{ EmbedLiveSample('使用“uppercase”（一般情况）', '100%', '100px') }}
+{{ EmbedLiveSample('使用"uppercase"（一般情况）', '100%', '100px') }}
 
-### 使用“uppercase”（希腊语元音）
+### 使用"uppercase"（希腊语元音）
 
 ```html
 <p>
@@ -272,9 +272,9 @@ strong { float: right; }
 
 这个示例展示了希腊元音除了不连读的 *eta* 之外，应该没有重音，而元音对中第一个元音的重音变成了第二个元音的重音。
 
-{{ EmbedLiveSample('使用“uppercase”（希腊语元音）', '100%', '100px') }}
+{{ EmbedLiveSample('使用"uppercase"（希腊语元音）', '100%', '100px') }}
 
-### 使用“lowercase”（一般情况）
+### 使用"lowercase"（一般情况）
 
 ```html
 <p>
@@ -302,9 +302,9 @@ strong {
 
 这个示例展示了如何将文本转换为小写字母。
 
-{{ EmbedLiveSample('使用“lowercase”（一般情况）', '100%', '100px') }}
+{{ EmbedLiveSample('使用"lowercase"（一般情况）', '100%', '100px') }}
 
-### 使用“lowercase”（希腊语 Σ）
+### 使用"lowercase"（希腊语 Σ）
 
 ```html
 <p>
@@ -323,9 +323,9 @@ strong {
 
 这个示例展示了希腊字母西格玛（`Σ`）是如何根据上下文转化为普通小写西格玛（`σ`）或词尾变体（`ς`）的。
 
-{{ EmbedLiveSample('使用“lowercase”（希腊语 Σ）', '100%', '100px') }}
+{{ EmbedLiveSample('使用"lowercase"（希腊语 Σ）', '100%', '100px') }}
 
-### 使用“lowercase”（立陶宛语）
+### 使用"lowercase"（立陶宛语）
 
 ```html
 <p>
@@ -349,9 +349,9 @@ strong {
 
 这个示例展示了立陶宛语字母 `Ĩ` 和 `J́` 在转换为小写时保持上方的小点。
 
-{{ EmbedLiveSample('使用“lowercase”（立陶宛语）', '100%', '100px') }}
+{{ EmbedLiveSample('使用"lowercase"（立陶宛语）', '100%', '100px') }}
 
-### 使用“full-width”（一般情况）
+### 使用"full-width"（一般情况）
 
 ```html
 <p>
@@ -382,9 +382,9 @@ strong {
 
 有些字符有两种格式：正常宽度和全宽度，它们具有不同的 Unicode 编码点。全宽版本可以用来将它们与亚洲的表意文字顺利混合。
 
-{{ EmbedLiveSample('使用“full-width”（一般情况）', '100%', '175px') }}
+{{ EmbedLiveSample('使用"full-width"（一般情况）', '100%', '175px') }}
 
-### 使用“full-width”（日语半角片假名）
+### 使用"full-width"（日语半角片假名）
 
 ```html
 <p>
@@ -409,9 +409,9 @@ strong {
 
 日语的半宽片假名被用来在 8 位字符编码中表示片假名。与普通的（全宽）片假名字符不同，一个带有 dakuten（声母标记）的字母被表示为两个码点，即字母的主体和 dakuten。在将这些字符转换为全宽时，`full-width` 将它们合并为一个代码点。
 
-{{ EmbedLiveSample('使用“full-width”（日语半角片假名）', '100%', '175px') }}
+{{ EmbedLiveSample('使用"full-width"（日语半角片假名）', '100%', '175px') }}
 
-### 使用“full-size-kana”
+### 使用"full-size-kana"
 
 ```html
 <p>ァィゥェ ォヵㇰヶ ㇱㇲッㇳ ㇴㇵㇶㇷ ㇸㇹㇺャ ュョㇻㇼ ㇽㇾㇿヮ</p>
@@ -425,7 +425,7 @@ p:nth-of-type(2) {
 }
 ```
 
-{{ EmbedLiveSample('使用“full-size-kana”', '100%', '175px') }}
+{{ EmbedLiveSample('使用"full-size-kana"', '100%', '175px') }}
 
 ## 规范
 

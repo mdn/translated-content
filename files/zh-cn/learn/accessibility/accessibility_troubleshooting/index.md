@@ -41,7 +41,7 @@ slug: Learn/Accessibility/Accessibility_troubleshooting
 
 ## 项目简要
 
-在这个项目中，你会看到一个虚构的自然网站，展示一篇关于熊的“事实”文章。就目前的情况来看，它有一些无障碍的问题。你的任务是探索现有的网站，并尽可能解决这些问题，回答下面的问题。
+在这个项目中，你会看到一个虚构的自然网站，展示一篇关于熊的"事实"文章。就目前的情况来看，它有一些无障碍的问题。你的任务是探索现有的网站，并尽可能解决这些问题，回答下面的问题。
 
 ### 颜色
 
@@ -88,7 +88,7 @@ slug: Learn/Accessibility/Accessibility_troubleshooting
 1. 将你的工作放置在可分享在线编辑器中，如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)。
 2. 在 [MDN Discourse forum Learning 分类](https://discourse.mozilla.org/c/mdn/learn/250) 中撰写帖子，寻求评估或/和帮助。你的帖子应该包含：
 
-   - 一个描述性的标题，例如“Assessment wanted for Accessibility troubleshooting”。
+   - 一个描述性的标题，例如"Assessment wanted for Accessibility troubleshooting"。
    - 你已经尝试了哪些细节，想让我们做些什么（例如获取帮助，或寻求评估）。
    - 在一个在线可共享的编辑器（例如第 1 步中提到的那些）中，提供你想要评估或需要帮助的例子的链接。这是一个很好的做法，如果你不能看到他们的代码，就很难帮助别人解决编码问题。
    - 一个链接到实际任务或测验页面的链接，通过这个链接我们可以明白你寻求帮助的问题。
