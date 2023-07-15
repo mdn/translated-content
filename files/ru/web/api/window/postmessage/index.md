@@ -47,7 +47,7 @@ function receiveMessage(event)
 - `origin`
   - : The [origin](/ru/docs/Origin) of the window that sent the message at the time `postMessage` was called. This string is the concatenation of the protocol and "://", the host name if one exists, and ":" followed by a port number if a port is present and differs from the default port for the given protocol. Examples of typical origins are `https://example.org` (implying port `443`), `http://example.net` (implying port `80`), and `http://example.com:8080`. Note that this origin is _not_ guaranteed to be the current or future origin of that window, which might have been navigated to a different location since `postMessage` was called.
 - `source`
-  - : Ссылка на объект [`window`](/en-US/docs/DOM/window) , который отправил сообщение; может быть использована для установки двустороннего соединения между окнами с разными `origins`.
+  - : Ссылка на объект [`window`](/ru/docs/DOM/window) , который отправил сообщение; может быть использована для установки двустороннего соединения между окнами с разными `origins`.
 
 ## Вопросы безопасности
 
