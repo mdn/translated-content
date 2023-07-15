@@ -14,21 +14,21 @@ El elemento de imagen HTML **`<img>`** representa una imagen en el documento.
     <tr>
       <th scope="row">
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories"
+          href="https://developer.mozilla.org/es/docs/HTML/Content_categories"
           >Cotenido de las categorias</a
         >
       </th>
       <td>
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Flow_content"
+          href="https://developer.mozilla.org/es/docs/HTML/Content_categories#Flow_content"
           >Contenido dinámico</a
         >,
         <a
-          href="https://developer.mozilla.org/en-US/docs/HTML/Content_categories#Phrasing_content"
+          href="https://developer.mozilla.org/es/docs/HTML/Content_categories#Phrasing_content"
           >contenido estático</a
         >,
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Embedded_content"
+          href="https://developer.mozilla.org/es/docs/Web/Guide/HTML/Content_categories#Embedded_content"
           >contenido incrustado</a
         >, contenido palpable. Si el elemento tiene un atributo
         <code>usemap</code>, it also is a part of the

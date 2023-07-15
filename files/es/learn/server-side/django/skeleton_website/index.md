@@ -17,7 +17,7 @@ Este segundo artículo de nuestro [Tutorial Django](/es/docs/Learn/Server-side/D
           >Poner en marcha un entorno de desarrollo Django</a
         >. Repasar el
         <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          href="https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Tutorial_local_library_website"
           >Tutorial Django</a
         >.
       </td>

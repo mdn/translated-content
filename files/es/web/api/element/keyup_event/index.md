@@ -46,7 +46,7 @@ El evento es iniciado cuando la tecla es soltada.
 - `key` - DOMString (string) {{readonlyInline}}
   - : The key value of the key represented by the event. If the value has a printed representation, this attribute's value is the same as the `char` attribute. Otherwise, it's one of the key value strings specified in [Key values](#key_values). If the key can't be identified, this is the string "Unidentified". See [key names and char values](/es/docs/Web/API/KeyboardEvent#Key_names_and_Char_values) for the detail. Read Only.
 - `charCode` - Unsigned long (int) {{readonlyInline}}
-  - : The Unicode reference number of the key; this attribute is used only by the [`keypress`](/en-US/docs/Mozilla_event_reference/keypress) event. For keys whose `char` attribute contains multiple characters, this is the Unicode value of the first character in that attribute.
+  - : The Unicode reference number of the key; this attribute is used only by the [`keypress`](/es/docs/Mozilla_event_reference/keypress) event. For keys whose `char` attribute contains multiple characters, this is the Unicode value of the first character in that attribute.
 
     > **Advertencia:** This attribute is deprecated; you should use `char` instead, if available.
 - `keyCode` - Unsigned long (int) {{readonlyInline}}

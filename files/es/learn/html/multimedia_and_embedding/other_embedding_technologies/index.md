@@ -195,10 +195,10 @@ Entonces, fue fácil y divertido ¿verdad? Los elementos {{htmlelement("iframe")
 Hay algunos serios [Security concerns](#security_concerns) a considerar con `<iframe>`s, también se discute a continuación, pero esto no significa que debas dejar de usarlos en tus sitios web — solo requiere un poco de conocimiento y pensar cuidadosamente. Vamos a explorar el código con un poco más de detalle. Supongamos que quieres incluir el glosario de MDN en una de tus páginas web — podrías intentar algo como esto:
 
 ```html
-<iframe src="https://developer.mozilla.org/en-US/docs/Glossary"
+<iframe src="https://developer.mozilla.org/es/docs/Glossary"
         width="100%" height="500" frameborder="0"
         allowfullscreen sandbox>
-  <p> <a href="https://developer.mozilla.org/en-US/docs/Glossary">
+  <p> <a href="https://developer.mozilla.org/es/docs/Glossary">
     Fallback link for browsers that don't support iframes
   </a> </p>
 </iframe>
@@ -229,7 +229,7 @@ Los creadores de navegadores y los desarrolladores web han aprendido por las mal
 
 > **Nota:** [Clickjacking](https://es.wikipedia.org/wiki/Clickjacking) es un tipo de ataque de iframe común en el que los piratas informáticos incrustan un iframe invisible en tu documento (o incrustan tu documento en su propio sitio web malicioso) y lo utilizan para capturar las interacciones de los ususarios. Esta es una forma común de engañar a los usuarios o robar datos sensibles.
 
-Primero un ejemplo rápido — intenta cargar el ejemplo anterior que mostramos arriba en tu navegador — puedes encontrarlo en [Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) (ver el [código fuente](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ) Tu no verás nada en tu navegador, pero si miras en la _Consola_ en las [herramientas de desarrollador de tu navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), tú verás un mensaje diciendote porque.En Firefox, te dirá _Load denied by X-Frame-Options: "https://developer.mozilla.org/en-US/docs/Glossary" does not permit framing_. Esto es porque los desarrolladores que construyeron MDN han incluido una configuración en el servidor que almacena la página web que impide que sean incrustados dentro de `<iframe>`s (ver [Configure CSP directives](#configure_csp_directives), abajo.) Esto tiene sentido— una página completa de MDN no tiene sentido estar incrustada en otras páginas, a menos que tu quieras hacer algo como incrustarlas en tu sitio web y reclamarlas como propias — o intentar robar datos via clickjacking, los cuales ambos son cosas realmente malas. Además de que si todo el mundo comienza a hacerlo, todo el ancho de banda adicional podría costarle mucho dinero a Mozzilla.
+Primero un ejemplo rápido — intenta cargar el ejemplo anterior que mostramos arriba en tu navegador — puedes encontrarlo en [Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) (ver el [código fuente](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ) Tu no verás nada en tu navegador, pero si miras en la _Consola_ en las [herramientas de desarrollador de tu navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), tú verás un mensaje diciendote porque.En Firefox, te dirá _Load denied by X-Frame-Options: "https://developer.mozilla.org/es/docs/Glossary" does not permit framing_. Esto es porque los desarrolladores que construyeron MDN han incluido una configuración en el servidor que almacena la página web que impide que sean incrustados dentro de `<iframe>`s (ver [Configure CSP directives](#configure_csp_directives), abajo.) Esto tiene sentido— una página completa de MDN no tiene sentido estar incrustada en otras páginas, a menos que tu quieras hacer algo como incrustarlas en tu sitio web y reclamarlas como propias — o intentar robar datos via clickjacking, los cuales ambos son cosas realmente malas. Además de que si todo el mundo comienza a hacerlo, todo el ancho de banda adicional podría costarle mucho dinero a Mozzilla.
 
 #### Solo incrusta cuando sea necesario
 

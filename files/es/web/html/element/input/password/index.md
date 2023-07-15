@@ -12,13 +12,13 @@ Los elementos `<input>` de tipo **`"password"`** proporcionan una forma para que
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">Content categories</a>
+        <a href="/es/docs/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/HTML/Content_categories#Flow_content"
           >Flow content</a
         >, listado, tabla enviable, reseteable, elementos de forma asociada,
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >, elementos etiquetables, contenido palpable.
       </td>
@@ -37,7 +37,7 @@ Los elementos `<input>` de tipo **`"password"`** proporcionan una forma para que
       <th scope="row">Elementos de parentescos</th>
       <td>
         Cualquier elemento que accepta
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
