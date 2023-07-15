@@ -65,7 +65,7 @@ Make the first letter of every paragraph red and big.
 <p>#The beginning of a special punctuation mark.</p>
 <p>「特殊的汉字标点符号开头。</p>
 <p>《特殊的汉字标点符号开头。</p>
-<p>“特殊的汉字标点符号开头。</p>
+<p>「特殊的汉字标点符号开头。</p>
 ```
 
 ### CSS Content

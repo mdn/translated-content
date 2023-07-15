@@ -48,7 +48,7 @@ function eventHandler(e) {
 // 建立事件
 var event = document.createEvent("Event");
 
-// 設定事件名稱為 “build” 。
+// 設定事件名稱為 「build」 。
 event.initEvent("build", true, true);
 
 // 監聽事件
