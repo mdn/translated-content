@@ -27,7 +27,7 @@ L’évènement **`transitionend`** est émis quand une [transition CSS](/fr/doc
       <th>Propriété gestionnaire d’évènement</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend"
+          ><a href="/fr/docs/Web/API/GlobalEventHandlers/ontransitionend"
             >ontransitionend</a
           ></code
         >

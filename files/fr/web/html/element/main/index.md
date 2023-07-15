@@ -148,7 +148,7 @@ Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence 
         Le rôle <code>main</code> est appliqué à <code>&#x3C;main></code> par
         défaut, et le rôle <code
           ><a
-            href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role"
+            href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role"
             >presentation</a
           ></code
         > est également autorisé.
