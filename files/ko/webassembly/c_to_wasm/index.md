@@ -1,6 +1,6 @@
 ---
 title: C/C++ 모듈을 웹어셈블리로 컴파일하기
-slug: WebAssembly/C_to_wasm
+slug: WebAssembly/C_to_Wasm
 ---
 
 {{WebAssemblySidebar}}

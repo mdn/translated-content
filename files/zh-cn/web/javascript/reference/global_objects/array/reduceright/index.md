@@ -45,7 +45,7 @@ reduceRight(callbackFn, initialValue)
 
 与其他[迭代方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)不同，`reduceRight()` 不接受 `thisArg` 参数。`callbackFn` 调用时始终以 `undefined` 作为 `this` 的值，如果 `callbackFn` 未处于严格模式，则该值将被替换为 `globalThis`。
 
-`reduceRighte()` 不会改变被调用的数组，但是作为 `callbackFn` 提供的函数可能会改变数组。但需要注意的是，在第一次调用 `callbackFn` _之前_，数组的长度会被保存。因此：
+`reduceRight()` 不会改变被调用的数组，但是作为 `callbackFn` 提供的函数可能会改变数组。但需要注意的是，在第一次调用 `callbackFn` _之前_，数组的长度会被保存。因此：
 
 - 当开始调用 `reduceRight()` 时，`callbackFn` 将不会访问超出数组初始长度的任何元素。
 - 对已访问索引的更改不会导致再次在这些元素上调用 `callbackFn`。

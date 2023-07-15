@@ -24,11 +24,11 @@ Se um servidor proxy recebe credenciais válidas, mas que não são adequadas pa
 
 ### Autenticação de imagens de origem cruzada
 
-Um potencial buraco de segurança que foi corrigido recentemente pelos navegadores é a autenticação de imagens cross-site (origem cruzada). Do [Firefox 59](/pt-BR/docs/Mozilla/Firefox/Releases/59) em diante, recursos de imagem carregados de diferentes origens não são mais capazes de adicionar diálogos de autenticação HTTP ({{bug(1423146)}}), impedindo que as credencias do usuário sejam roubadas se invasores conseguissem incorporar uma imagem arbitrária em uma página de terceiros.
+Um potencial buraco de segurança que foi corrigido recentemente pelos navegadores é a autenticação de imagens cross-site (origem cruzada). Do [Firefox 59](/pt-BR/docs/Mozilla/Firefox/Releases/59) em diante, recursos de imagem carregados de diferentes origens não são mais capazes de adicionar diálogos de autenticação HTTP ([Erro do Firefox 1423146](https://bugzil.la/1423146)), impedindo que as credencias do usuário sejam roubadas se invasores conseguissem incorporar uma imagem arbitrária em uma página de terceiros.
 
 ### A codificação de caracteres da autenticação HTTP
 
-Os navegadores usam a codificação `utf-8` para nomes de usuários e senhas. Firefox usava `ISO-8859-1`, mas alterou para `utf-8` por questões de compatiblidade com outros navegadores, assim como para evitar os potenciais problemas descritos em {{bug(1419658)}}.
+Os navegadores usam a codificação `utf-8` para nomes de usuários e senhas. Firefox usava `ISO-8859-1`, mas alterou para `utf-8` por questões de compatiblidade com outros navegadores, assim como para evitar os potenciais problemas descritos em [Erro do Firefox 1419658](https://bugzil.la/1419658).
 
 ### Cabeçalhos `WWW-Authenticate` e `Proxy-Authenticate`
 
@@ -58,7 +58,7 @@ O esquema mais comum de autenticação é o "Basic", que é introduzido com mais
 
 - **Basic** (veja {{rfc(7617)}}, credenciais codificadas em base64. Veja abaixo mais informações.),
 - **Bearer** (veja {{rfc(6750)}}, tokens bearer (de portador) para acessar recursos protegidos por OAuth 2.0),
-- **Digest** (veja {{rfc(7616)}}, apenas hash md5 é suportado no Firefox, veja {{bug(472823)}} para o suporte de encriptação SHA),
+- **Digest** (veja {{rfc(7616)}}, apenas hash md5 é suportado no Firefox, veja [Erro do Firefox 472823](https://bugzil.la/472823) para o suporte de encriptação SHA),
 - **HOBA** (veja {{rfc(7486)}} (esboço), **H**TTP **O**rigin-**B**ound **A**uthentication (Autenticação Vinculada à Origem HTTP), baseado em assinatura digital),
 - **Mutual** (veja [draft-ietf-httpauth-mutual](https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11)),
 - **AWS4-HMAC-SHA256** (veja [Documentação AWS](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)).

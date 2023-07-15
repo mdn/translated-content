@@ -1,12 +1,7 @@
 ---
 title: Conteneur de grille
 slug: Glossary/Grid_Container
-tags:
-  - CSS
-  - Glossaire
-  - Grille
 translation_of: Glossary/Grid_Container
-original_slug: Glossaire/grid_container
 ---
 
 Utiliser la valeur `grid` ou `inline-grid` sur un élément le transforme en un conteneur de grille utilisant [CSS Grid Layout](/fr/docs/Web/CSS/CSS_Grid_Layout), et les enfants directs de celui-ci deviennent un élément de cette grille.

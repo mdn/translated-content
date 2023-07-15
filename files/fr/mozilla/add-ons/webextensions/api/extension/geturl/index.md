@@ -1,15 +1,6 @@
 ---
 title: extension.getURL()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getURL
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getURL
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getURL
 ---
 

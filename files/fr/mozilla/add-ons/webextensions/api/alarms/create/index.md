@@ -1,16 +1,6 @@
 ---
 title: alarms.create()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
-tags:
-  - API
-  - Add-ons
-  - Créations
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/create
 ---
 

@@ -1,15 +1,7 @@
 ---
 title: Travailler avec l'API Tabs
 slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
-tags:
-  - Add-ons
-  - Comment
-  - Débutant
-  - WebExtensions
-  - onglets
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
-original_slug: Mozilla/Add-ons/WebExtensions/Travailler_avec_l_API_Tabs
 ---
 
 {{AddonSidebar}}

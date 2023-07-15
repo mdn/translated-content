@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
 ## 語法
 
-```js
+```js-nolint
 localeCompare(compareString)
 localeCompare(compareString, locales)
 localeCompare(compareString, locales, options)
@@ -29,10 +29,13 @@ localeCompare(compareString, locales, options)
 - `compareString`
   - : 要和`referenceStr`進行比較的字串
 - `locales` {{optional_inline}}
+
   - : 「BCP 47 語言標籤」的字串或是陣列。相當於`Intl.Collator()`的[`locales`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) 參數。
 
     如果使用的環境並未實現 `Intl.Collator`，此參數會被忽略，並且視同採用當前主機的語言環境
+
 - `options` {{optional_inline}}
+
   - : 一個處理輸出格式的物件。相當於`Intl.Collator()`的 [`options`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#options)參數。
 
     如果使用的環境並未實現`Intl.Collator` ，此參數會被忽略。
@@ -68,11 +71,11 @@ localeCompare(compareString, locales, options)
 
 ```js
 // "a" 在 "c" 之前，所以會回傳負數
-'a'.localeCompare('c'); // -2、-1 或是其他負數值
-// 按字母順序，“check”的順序在“against”之後，所以回傳正數
-'check'.localeCompare('against'); // 2、1 或其他正數值
+"a".localeCompare("c"); // -2、-1 或是其他負數值
+// 按字母順序，「check」的順序在「against」之後，所以回傳正數
+"check".localeCompare("against"); // 2、1 或其他正數值
 // "a" 和 "a" 相同，所以回傳 0
-'a'.localeCompare('a'); // 0
+"a".localeCompare("a"); // 0
 ```
 
 ### 陣列排序
@@ -80,8 +83,8 @@ localeCompare(compareString, locales, options)
 `localeCompare()` 用來進行「不分大小寫」的排序
 
 ```js
-let items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
-items.sort((a, b) => a.localeCompare(b, 'fr', { ignorePunctuation: true }));
+let items = ["réservé", "Premier", "Cliché", "communiqué", "café", "Adieu"];
+items.sort((a, b) => a.localeCompare(b, "fr", { ignorePunctuation: true }));
 // ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
 ```
 
@@ -94,9 +97,9 @@ items.sort((a, b) => a.localeCompare(b, 'fr', { ignorePunctuation: true }));
 ```js
 function localeCompareSupportsLocales() {
   try {
-    'foo'.localeCompare('bar', 'i');
+    "foo".localeCompare("bar", "i");
   } catch (e) {
-    return e.name === 'RangeError';
+    return e.name === "RangeError";
   }
   return false;
 }
@@ -109,8 +112,8 @@ function localeCompareSupportsLocales() {
 為了讓回傳結果依照特定語言來排序，請確保使用 `locales` 參數指定該語言（可能還要再加上其他後備語言）：
 
 ```js
-console.log('ä'.localeCompare('z', 'de')); // 回傳負數：在德文, ä 的順序在 z 之前
-console.log('ä'.localeCompare('z', 'sv')); // 回傳正數：在瑞典文， ä 的順序在 z 之後
+console.log("ä".localeCompare("z", "de")); // 回傳負數：在德文, ä 的順序在 z 之前
+console.log("ä".localeCompare("z", "sv")); // 回傳正數：在瑞典文， ä 的順序在 z 之後
 ```
 
 ### 使用 `options`
@@ -119,9 +122,9 @@ console.log('ä'.localeCompare('z', 'sv')); // 回傳正數：在瑞典文， ä
 
 ```js
 // 在德文， ä 和 a 是相同字母
-console.log('ä'.localeCompare('a', 'de', { sensitivity: 'base' })); // 0
+console.log("ä".localeCompare("a", "de", { sensitivity: "base" })); // 0
 // 在瑞典文， ä 和 a 是各自獨立的字母
-console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // 回傳正數
+console.log("ä".localeCompare("a", "sv", { sensitivity: "base" })); // 回傳正數
 ```
 
 ### 數字排序

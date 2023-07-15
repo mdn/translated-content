@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/replace
 
 ## 語法
 
-```plain
+```js-nolint
 str.replace(regexp|substr, newSubstr|function)
 ```
 
@@ -40,12 +40,12 @@ To perform a global search and replace, include the `g` switch in the regular ex
 
 The replacement string can include the following special replacement patterns:
 
-| Pattern  | Inserts                                                                                                                                                                |
-| -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `$$`     | Inserts a "$".                                                                                                                                                         |
-| `$&`     | Inserts the matched substring.                                                                                                                                         |
-| `` $` `` | Inserts the portion of the string that precedes the matched substring.                                                                                                 |
-| `$'`     | Inserts the portion of the string that follows the matched substring.                                                                                                  |
+| Pattern  | Inserts                                                                                                                                                        |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$$`     | Inserts a "$".                                                                                                                                                 |
+| `$&`     | Inserts the matched substring.                                                                                                                                 |
+| `` $` `` | Inserts the portion of the string that precedes the matched substring.                                                                                         |
+| `$'`     | Inserts the portion of the string that follows the matched substring.                                                                                          |
 | `$n`     | Where `n` is a positive integer less than 100, inserts the *n*th parenthesized submatch string, provided the first argument was a {{jsxref("RegExp")}} object. |
 
 ### 指定一個函式為參數
@@ -54,12 +54,12 @@ You can specify a function as the second parameter. In this case, the function w
 
 The arguments to the function are as follows:
 
-| Possible name | Supplied value                                                                                                                                                                                                                                                      |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `match`       | The matched substring. (Corresponds to `$&` above.)                                                                                                                                                                                                                 |
+| Possible name | Supplied value                                                                                                                                                                                                                                              |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `match`       | The matched substring. (Corresponds to `$&` above.)                                                                                                                                                                                                         |
 | `p1, p2, ...` | The *n*th parenthesized submatch string, provided the first argument to `replace()` was a {{jsxref("RegExp")}} object. (Corresponds to `$1`, `$2`, etc. above.) For example, if `/(\a+)(\b+)/`, was given, `p1` is the match for `\a+`, and `p2` for `\b+`. |
-| `offset`      | The offset of the matched substring within the whole string being examined. (For example, if the whole string was `'abcd'`, and the matched substring was `'bc'`, then this argument will be 1.)                                                                    |
-| `string`      | The whole string being examined.                                                                                                                                                                                                                                    |
+| `offset`      | The offset of the matched substring within the whole string being examined. (For example, if the whole string was `'abcd'`, and the matched substring was `'bc'`, then this argument will be 1.)                                                            |
+| `string`      | The whole string being examined.                                                                                                                                                                                                                            |
 
 (The exact number of arguments will depend on whether the first argument was a {{jsxref("RegExp")}} object and, if so, how many parenthesized submatches it specifies.)
 
@@ -68,10 +68,10 @@ The following example will set `newString` to `'abc - 12345 - #$*%'`:
 ```js
 function replacer(match, p1, p2, p3, offset, string) {
   // p1 is nondigits, p2 digits, and p3 non-alphanumerics
-  return [p1, p2, p3].join(' - ');
+  return [p1, p2, p3].join(" - ");
 }
-var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
-console.log(newString);  // abc - 12345 - #$*%
+var newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+console.log(newString); // abc - 12345 - #$*%
 ```
 
 ## 範例
@@ -81,9 +81,9 @@ console.log(newString);  // abc - 12345 - #$*%
 下例的正規表達式被定義為 `replace()`、並包含了忽略大小寫的 flag。
 
 ```js
-var str = 'Twas the night before Xmas...';
-var newstr = str.replace(/xmas/i, 'Christmas');
-console.log(newstr);  // Twas the night before Christmas...
+var str = "Twas the night before Xmas...";
+var newstr = str.replace(/xmas/i, "Christmas");
+console.log(newstr); // Twas the night before Christmas...
 ```
 
 上例會顯示「Twas the night before Christmas...」
@@ -94,9 +94,9 @@ Global replace can only be done with a regular expression. In the following exam
 
 ```js
 var re = /apples/gi;
-var str = 'Apples are round, and apples are juicy.';
-var newstr = str.replace(re, 'oranges');
-console.log(newstr);  // oranges are round, and oranges are juicy.
+var str = "Apples are round, and apples are juicy.";
+var newstr = str.replace(re, "oranges");
+console.log(newstr); // oranges are round, and oranges are juicy.
 ```
 
 上例會顯示「oranges are round, and oranges are juicy」。
@@ -107,9 +107,9 @@ console.log(newstr);  // oranges are round, and oranges are juicy.
 
 ```js
 var re = /(\w+)\s(\w+)/;
-var str = 'John Smith';
-var newstr = str.replace(re, '$2, $1');
-console.log(newstr);  // Smith, John
+var str = "John Smith";
+var newstr = str.replace(re, "$2, $1");
+console.log(newstr); // Smith, John
 ```
 
 上例會顯示「Smith, John」。
@@ -123,7 +123,7 @@ The replacement function accepts the matched snippet as its parameter, and uses 
 ```js
 function styleHyphenFormat(propertyName) {
   function upperToHyphenLower(match, offset, string) {
-    return (offset ? '-' : '') + match.toLowerCase();
+    return (offset ? "-" : "") + match.toLowerCase();
   }
   return propertyName.replace(/[A-Z]/g, upperToHyphenLower);
 }
@@ -134,7 +134,7 @@ Given `styleHyphenFormat('borderTop')`, this returns 'border-top'.
 Because we want to further transform the _result_ of the match before the final substitution is made, we must use a function. This forces the evaluation of the match prior to the {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} method. If we had tried to do this using the match without a function, the {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} would have no effect.
 
 ```js
-var newString = propertyName.replace(/[A-Z]/g, '-' + '$&'.toLowerCase());  // won't work
+var newString = propertyName.replace(/[A-Z]/g, "-" + "$&".toLowerCase()); // won't work
 ```
 
 This is because `'$&'.toLowerCase()` would be evaluated first as a string literal (resulting in the same `'$&'`) before using the characters as a pattern.
@@ -148,7 +148,7 @@ The regular expression `test` checks for any number that ends with F. The number
 ```js
 function f2c(x) {
   function convert(str, p1, offset, s) {
-    return ((p1 - 32) * 5/9) + 'C';
+    return ((p1 - 32) * 5) / 9 + "C";
   }
   var s = String(x);
   var test = /(-?\d+(?:\.\d*)?)F\b/g;
@@ -188,11 +188,15 @@ An array of objects. An `'x'` denotes an `'on'` state, a `'-'` (hyphen) denotes 
 **Snippet:**
 
 ```js
-var str = 'x-x_';
+var str = "x-x_";
 var retArr = [];
-str.replace(/(x_*)|(-)/g, function(match, p1, p2) {
-  if (p1) { retArr.push({ on: true, length: p1.length }); }
-  if (p2) { retArr.push({ on: false, length: 1 }); }
+str.replace(/(x_*)|(-)/g, function (match, p1, p2) {
+  if (p1) {
+    retArr.push({ on: true, length: p1.length });
+  }
+  if (p2) {
+    retArr.push({ on: false, length: 1 });
+  }
 });
 
 console.log(retArr);

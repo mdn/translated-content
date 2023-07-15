@@ -1,11 +1,6 @@
 ---
 title: proxy
 slug: Mozilla/Add-ons/WebExtensions/API/proxy
-tags:
-  - API
-  - Add-ons
-  - Proxy
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy
 ---
 

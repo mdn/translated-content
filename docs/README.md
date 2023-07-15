@@ -62,7 +62,7 @@ to link to from your translated page.
 In some of the article source code, you may find line breaks in the block-level
 elements that aren't strictly necessary, for example:
 
-```html
+```html-nolint
 <p>The
   <strong><code>HTMLCanvasElement.transferControlToOffscreen()</code></strong>
   method transfers control to an {{domxref("OffscreenCanvas")}} object, either on the main

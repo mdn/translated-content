@@ -23,9 +23,9 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>accept</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("accept", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#accept"><code>accept</code></a> HTML
         attribute, containing comma-separated list of file types accepted by the
-        server when {{htmlattrxref("type","input")}} is
+        server when <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> is
         <code>file</code>.
       </td>
     </tr>
@@ -43,9 +43,9 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>alt</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("alt", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#alt"><code>alt</code></a> HTML
         attribute, containing alternative text to use when
-        {{htmlattrxref("type","input")}} is <code>image.</code>
+        <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> is <code>image.</code>
       </td>
     </tr>
     <tr>
@@ -61,10 +61,10 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>autocomplete</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{htmlattrxref("autocomplete", "input")}}
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>
         HTML attribute, indicating whether the value of the control can be
         automatically completed by the browser. Ignored if the value of the
-        {{htmlattrxref("type","input")}} attribute is hidden,
+        <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> attribute is hidden,
         checkbox, radio, file, or a button type (button, submit, reset, image).
         Possible values are:
         <ul>
@@ -84,12 +84,12 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>autofocus</code></td>
       <td>{{domxref("Boolean")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("autofocus", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#autofocus"><code>autofocus</code></a> HTML
         attribute, which specifies that a form control should have input focus
         when the page loads, unless the user overrides it, for example by typing
         in a different control. Only one form element in a document can have the
-        {{htmlattrxref("autofocus","input")}} attribute. It cannot be
-        applied if the {{htmlattrxref("type","input")}} attribute is
+        <a href="/ru/docs/Web/HTML/Element/input#autofocus"><code>autofocus</code></a> attribute. It cannot be
+        applied if the <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> attribute is
         set to <code>hidden</code> (that is, you cannot automatically set focus
         to a hidden control).
       </td>
@@ -99,7 +99,7 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td>{{domxref("Boolean")}}</td>
       <td>
         The current state of the element when
-        {{htmlattrxref("type","input")}} is <code>checkbox</code> or
+        <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> is <code>checkbox</code> or
         <code>radio</code>.
       </td>
     </tr>
@@ -128,10 +128,10 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>disabled</code></td>
       <td>{{domxref("Boolean")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("disabled", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#disabled"><code>disabled</code></a> HTML
         attribute, indicating that the control is not available for interaction.
         The input values will not be submitted with the form. See also
-        {{ htmlattrxref("readOnly", "input") }}
+        <a href="/ru/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>
       </td>
     </tr>
     <tr>
@@ -148,7 +148,7 @@ _Наследует свойства своего родителя,_ _{{domxref(
         <ul>
           <li>
             this can be the
-            {{ htmlattrxref("id", "form") }} attribute of any
+            <a href="/ru/docs/Web/HTML/Element/form#id"><code>id</code></a> attribute of any
             {{ HTMLElement("form") }} element in the same document. Even
             if the attribute is set on {{ HTMLElement("input") }},
             this property will be <code>null</code>, if it isn't the id of a
@@ -164,10 +164,10 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>formAction</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("formaction", "input") }}
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>
         HTML attribute, containing the URI of a program that processes
         information submitted by the element. If specified, this attribute
-        overrides the {{ htmlattrxref("action", "form") }} attribute
+        overrides the <a href="/ru/docs/Web/HTML/Element/form#action"><code>action</code></a> attribute
         of the {{ HTMLElement("form") }} element that owns this element.
       </td>
     </tr>
@@ -175,10 +175,10 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>formEncType</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("formenctype", "input") }}
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>
         HTML attribute, containing the type of content that is used to submit
         the form to the server. If specified, this attribute overrides the
-        {{ htmlattrxref("enctype", "form") }} attribute of the
+        <a href="/ru/docs/Web/HTML/Element/form#enctype"><code>enctype</code></a> attribute of the
         {{ HTMLElement("form") }} element that owns this element.
       </td>
     </tr>
@@ -186,10 +186,10 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>formMethod</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("formmethod", "input") }}
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>
         HTML attribute, containing the HTTP method that the browser uses to
         submit the form. If specified, this attribute overrides the
-        {{ htmlattrxref("method", "form") }} attribute of the
+        <a href="/ru/docs/Web/HTML/Element/form#method"><code>method</code></a> attribute of the
         {{ HTMLElement("form") }} element that owns this element.
       </td>
     </tr>
@@ -198,10 +198,10 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td>{{domxref("Boolean")}}</td>
       <td>
         Reflects the
-        {{ htmlattrxref("formnovalidate", "input") }} HTML
+        <a href="/ru/docs/Web/HTML/Element/input#formnovalidate"><code>formnovalidate</code></a> HTML
         attribute, indicating that the form is not to be validated when it is
         submitted. If specified, this attribute overrides the
-        {{ htmlattrxref("novalidate", "form") }} attribute of the
+        <a href="/ru/docs/Web/HTML/Element/form#novalidate"><code>novalidate</code></a> attribute of the
         {{ HTMLElement("form") }} element that owns this element.
       </td>
     </tr>
@@ -209,11 +209,11 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>formTarget</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("formtarget", "input") }}
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
         HTML attribute, containing a name or keyword indicating where to display
         the response that is received after submitting the form. If specified,
         this attribute overrides the
-        {{ htmlattrxref("target", "form") }} attribute of the
+        <a href="/ru/docs/Web/HTML/Element/form#target"><code>target</code></a> attribute of the
         {{ HTMLElement("form") }} element that owns this element.
       </td>
     </tr>
@@ -221,9 +221,9 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>height</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("height", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#height"><code>height</code></a> HTML
         attribute, which defines the height of the image displayed for the
-        button, if the value of {{htmlattrxref("type","input")}} is
+        button, if the value of <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> is
         image.
       </td>
     </tr>
@@ -249,7 +249,7 @@ _Наследует свойства своего родителя,_ _{{domxref(
         {{HTMLElement("datalist")}} element in the same document. The
         browser displays only options that are valid values for this input
         element. This attribute is ignored when the
-        {{htmlattrxref("type","input")}} attribute's value is
+        <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> attribute's value is
         hidden, checkbox, radio, file, or a button type.
       </td>
     </tr>
@@ -257,7 +257,7 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>max</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("max", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#max"><code>max</code></a> HTML
         attribute, containing the maximum (numeric or date-time) value for this
         item, which must not be less than its minimum (<strong>min</strong>
         attribute) value.
@@ -267,7 +267,7 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>maxLength</code></td>
       <td><code>long</code></td>
       <td>
-        Reflects the {{ htmlattrxref("maxlength", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a> HTML
         attribute, containing the maximum length of text (in Unicode code
         points) that the value can be changed to. The constraint is evaluated
         only when the value is changed
@@ -281,17 +281,17 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>min</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("min", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#min"><code>min</code></a> HTML
         attribute, containing the minimum (numeric or date-time) value for this
         item, which must not be greater than its maximum
-        ({{htmlattrxref("max","input")}} attribute) value.
+        (<a href="/ru/docs/Web/HTML/Element/input#max"><code>max</code></a> attribute) value.
       </td>
     </tr>
     <tr>
       <td><code>multiple</code></td>
       <td></td>
       <td>
-        Reflects the {{ htmlattrxref("multiple", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#multiple"><code>multiple</code></a> HTML
         attribute, indicating whether more than one value is possible (e.g.,
         multiple files).
       </td>
@@ -300,7 +300,7 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>name</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("name", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#name"><code>name</code></a> HTML
         attribute, containing a name that identifies the element when submitting
         the form.
       </td>
@@ -309,12 +309,12 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>pattern</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("pattern", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a> HTML
         attribute, containing a regular expression that the control's value is
         checked against. The pattern must match the entire value, not just some
-        subset. Use the {{htmlattrxref("title","input")}} attribute
+        subset. Use the <a href="/ru/docs/Web/HTML/Element/input#title"><code>title</code></a> attribute
         to describe the pattern to help the user. This attribute applies when
-        the value of the {{htmlattrxref("type","input")}} attribute
+        the value of the <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> attribute
         is text, search, tel, url or email; otherwise it is ignored.
       </td>
     </tr>
@@ -322,11 +322,11 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>placeholder</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("placeholder", "input") }}
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>
         HTML attribute, containing a hint to the user of what can be entered in
         the control. The placeholder text must not contain carriage returns or
         line-feeds. This attribute applies when the value of the
-        {{htmlattrxref("type","input")}} attribute is text, search,
+        <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> attribute is text, search,
         tel, url or email; otherwise it is ignored.
       </td>
     </tr>
@@ -335,10 +335,10 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td>{{domxref("Boolean")}}</td>
       <td>
         <p>
-          Reflects the {{ htmlattrxref("readonly", "input") }} HTML
+          Reflects the <a href="/ru/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> HTML
           attribute, indicating that the user cannot modify the value of the
           control.<br />This is ignored if the
-          value of the {{htmlattrxref("type","input")}} attribute is
+          value of the <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> attribute is
           hidden, range, color, checkbox, radio, file, or a button type.
         </p>
       </td>
@@ -347,7 +347,7 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>required</code></td>
       <td>{{domxref("Boolean")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("required", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#required"><code>required</code></a> HTML
         attribute, indicating that the user must fill in a value before
         submitting a form.
       </td>
@@ -381,12 +381,12 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>size</code></td>
       <td><code>unsigned long</code></td>
       <td>
-        Reflects the {{ htmlattrxref("size", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#size"><code>size</code></a> HTML
         attribute, containing size of the control. This value is in pixels
-        unless the value of {{htmlattrxref("type","input")}} is text
+        unless the value of <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> is text
         or password, in which case, it is an integer number of characters.
         Applies only when
-        {{htmlattrxref("type","input")}} is set to text, search,
+        <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> is set to text, search,
         tel, url, email, or password; otherwise it is ignored.
       </td>
     </tr>
@@ -394,10 +394,10 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>src</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("src", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#src"><code>src</code></a> HTML
         attribute, which specifies a URI for the location of an image to display
         on the graphical submit button, if the value of
-        {{htmlattrxref("type","input")}} is image; otherwise it is
+        <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> is image; otherwise it is
         ignored.
       </td>
     </tr>
@@ -405,10 +405,10 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>step</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("step", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#step"><code>step</code></a> HTML
         attribute, which works with<strong
-        > </strong>{{htmlattrxref("min","input")}} and
-        {{htmlattrxref("max","input")}} to limit the increments at
+        > </strong><a href="/ru/docs/Web/HTML/Element/input#min"><code>min</code></a> and
+        <a href="/ru/docs/Web/HTML/Element/input#max"><code>max</code></a> to limit the increments at
         which a numeric or date-time value can be set. It can be the string any
         or a positive floating point number. If this is not set to any, the
         control accepts only values at multiples of the step value greater than
@@ -427,9 +427,9 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>type</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("type", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> HTML
         attribute, indicating the type of control to display. See
-        {{ htmlattrxref("type", "input") }} attribute of
+        <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> attribute of
         {{ HTMLElement("input") }} for possible values.
       </td>
     </tr>
@@ -445,7 +445,7 @@ _Наследует свойства своего родителя,_ _{{domxref(
         A localized message that describes the validation constraints that the
         control does not satisfy (if any). This is the empty string if the
         control is not a candidate for constraint validation
-        ({{htmlattrxref("willValidate","input")}} is
+        (<a href="/ru/docs/Web/HTML/Element/input#willvalidate"><code>willvalidate</code></a> is
         <code>false</code>), or it satisfies its constraints.
       </td>
     </tr>
@@ -493,9 +493,9 @@ _Наследует свойства своего родителя,_ _{{domxref(
       <td><code>width</code></td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        Reflects the {{ htmlattrxref("width", "input") }} HTML
+        Reflects the <a href="/ru/docs/Web/HTML/Element/input#width"><code>width</code></a> HTML
         attribute, which defines the width of the image displayed for the
-        button, if the value of {{htmlattrxref("type","input")}} is
+        button, if the value of <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> is
         image.
       </td>
     </tr>
@@ -663,27 +663,27 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
       <td><code>stepDown(n)</code></td>
       <td><code>void</code></td>
       <td>
-        Decrements the {{htmlattrxref("value","input")}} by
-        ({{htmlattrxref("step","input")}} * <code>n</code>), where
+        Decrements the <a href="/ru/docs/Web/HTML/Element/input#value"><code>value</code></a> by
+        (<a href="/ru/docs/Web/HTML/Element/input#step"><code>step</code></a> * <code>n</code>), where
         <code>n</code> defaults to <code>1</code> if not specified. Throws an
         <code>INVALID_STATE_ERR</code> exception:
         <ul>
           <li>
             if the method is not applicable to for the current
-            {{htmlattrxref("type","input")}} value.
+            <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> value.
           </li>
           <li>
-            if the element has no {{htmlattrxref("step","input")}}
+            if the element has no <a href="/ru/docs/Web/HTML/Element/input#step"><code>step</code></a>
             value.
           </li>
           <li>
-            if the {{htmlattrxref("value","input")}} cannot be
+            if the <a href="/ru/docs/Web/HTML/Element/input#value"><code>value</code></a> cannot be
             converted to a number.
           </li>
           <li>
             if the resulting value is above the
-            {{htmlattrxref("max","input")}} or below the
-            {{htmlattrxref("min","input")}}.
+            <a href="/ru/docs/Web/HTML/Element/input#max"><code>max</code></a> or below the
+            <a href="/ru/docs/Web/HTML/Element/input#min"><code>min</code></a>.
           </li>
         </ul>
       </td>
@@ -692,27 +692,27 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
       <td><code>stepUp(n)</code></td>
       <td><code>void</code></td>
       <td>
-        Increments the {{htmlattrxref("value","input")}} by
-        ({{htmlattrxref("step","input")}} * <code>n</code>), where
+        Increments the <a href="/ru/docs/Web/HTML/Element/input#value"><code>value</code></a> by
+        (<a href="/ru/docs/Web/HTML/Element/input#step"><code>step</code></a> * <code>n</code>), where
         <code>n</code> defaults to <code>1</code> if not specified. Throws an
         <code>INVALID_STATE_ERR</code> exception:
         <ul>
           <li>
             if the method is not applicable to for the current
-            {{htmlattrxref("type","input")}} value.
+            <a href="/ru/docs/Web/HTML/Element/input#type"><code>type</code></a> value.
           </li>
           <li>
-            if the element has no {{htmlattrxref("step","input")}}
+            if the element has no <a href="/ru/docs/Web/HTML/Element/input#step"><code>step</code></a>
             value.
           </li>
           <li>
-            if the {{htmlattrxref("value","input")}} cannot be
+            if the <a href="/ru/docs/Web/HTML/Element/input#value"><code>value</code></a> cannot be
             converted to a number.
           </li>
           <li>
             if the resulting value is above the
-            {{htmlattrxref("max","input")}} or below the
-            {{htmlattrxref("min","input")}}.
+            <a href="/ru/docs/Web/HTML/Element/input#max"><code>max</code></a> or below the
+            <a href="/ru/docs/Web/HTML/Element/input#min"><code>min</code></a>.
           </li>
         </ul>
       </td>

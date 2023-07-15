@@ -1,13 +1,13 @@
 ---
 title: CSS Motion Path
-slug: Web/CSS/CSS_Motion_Path
+slug: Web/CSS/CSS_motion_path
 ---
 
 {{CSSRef}}{{seecompattable}}
 
 **Motion Path** es un módulo CSS que permite animar cualquier objeto gráfico a lo largo de una ruta personalizada.
 
-La idea es que cuando se deseaba animar un elemento que se movía a lo largo de un “path”, anteriormente solo teniamos las propiedades de animación, posición, etc. a nuestra disposición, lo que no era ideal y solo permitía movimientos simples. Con {{cssxref("offset-path")}} puedes definir un "path" específico de cualquier forma que se quiera. Luego se animará a lo largo de ese "path" animando {{cssxref("offset-distance")}}, y variar la rotación en algún punto usando {{cssxref("offset-rotate")}}.
+La idea es que cuando se deseaba animar un elemento que se movía a lo largo de un "path", anteriormente solo teniamos las propiedades de animación, posición, etc. a nuestra disposición, lo que no era ideal y solo permitía movimientos simples. Con {{cssxref("offset-path")}} puedes definir un "path" específico de cualquier forma que se quiera. Luego se animará a lo largo de ese "path" animando {{cssxref("offset-distance")}}, y variar la rotación en algún punto usando {{cssxref("offset-rotate")}}.
 
 ## Ejemplo básico
 

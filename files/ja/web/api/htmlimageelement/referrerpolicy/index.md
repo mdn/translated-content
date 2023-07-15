@@ -1,6 +1,9 @@
 ---
-title: HTMLImageElement.referrerPolicy
+title: "HTMLImageElement: referrerPolicy プロパティ"
+short-title: referrerPolicy
 slug: Web/API/HTMLImageElement/referrerPolicy
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -10,7 +13,7 @@ slug: Web/API/HTMLImageElement/referrerPolicy
 
 ## 値
 
-文字列で、以下のうちの一つです。
+文字列で、以下の何れかです。
 
 - `no-referrer`
   - : {{HTTPHeader("Referer")}} ヘッダーは完全に省略されます。リクエストと共に送信されるリファラー情報はありません。
@@ -34,11 +37,11 @@ slug: Web/API/HTMLImageElement/referrerPolicy
 ## 例
 
 ```js
-var img = new Image();
-img.src = 'img/logo.png';
-img.referrerPolicy = 'origin';
+const img = new Image();
+img.src = "img/logo.png";
+img.referrerPolicy = "origin";
 
-var div = document.getElementById('divAround');
+const div = document.getElementById("divAround");
 div.appendChild(img); // オリジンをリファラーとして画像を取得する
 ```
 

@@ -1,14 +1,6 @@
 ---
 title: browserSettings
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserSettings
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings
 ---
 

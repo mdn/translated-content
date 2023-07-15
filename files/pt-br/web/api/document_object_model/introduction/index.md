@@ -134,7 +134,7 @@ A tabela a seguir descreve brevemente esses tipos de dados.
           um documento HTML, elementos são ainda mais aprimorados pelas APIs
           HTML DOM. A interface {{domxref("HTMLElement")}} bem como
           outras interfaces descrevem capacidades de tipos especifícos de
-          elementos (por exemlo, {{domxref("HTMLTableElement")}} para
+          elementos (por exemplo, {{domxref("HTMLTableElement")}} para
           elementos {{HTMLElement("table")}}).
         </p>
       </td>
@@ -169,13 +169,6 @@ A tabela a seguir descreve brevemente esses tipos de dados.
     <tr>
       <td>{{domxref("NamedNodeMap")}}</td>
       <td>
-        <p>
-          é como um array, mas os itens são acessados por nome ou índice, embora
-          este último caso seja meramente uma conveniência para enumeração, já
-          que eles não estão em uma ordem específica na lista. Um namedNodeMap
-          possui um método item () para esse propósito, e você também pode
-          adicionar e remover itens de um namedNodeMap.
-        </p>
         <p>
           Um <code>namedNodeMap</code> é como um array, mas os itens são
           acessados por nome ou índice, embora este último caso seja meramente

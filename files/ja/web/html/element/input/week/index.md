@@ -2,7 +2,7 @@
 title: <input type="week">
 slug: Web/HTML/Element/input/week
 l10n:
-  sourceCommit: e1f571eced916f60ca387ecb562271f6235beb5c
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}
@@ -13,63 +13,11 @@ l10n:
 
 コントロールのユーザーインターフェイスは、ブラウザーによって様々です。現時点ではブラウザー間の対応は限定的で、 Chrome/Opera と Microsoft Edge のみが対応しています。対応していないブラウザーでは、このコントロールは単純な [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) に格下げされます。
 
-Chrome/Opera では、 `week` コントロールは週と年の値を埋めるスロット、もっと視覚的に選択するためのポップアップカレンダーインターフェイス、コントロールの値を消去するための "X" ボタンを提供します。
-
 ![「2017年第01週」と書かれた入力欄。 2017 の背景は、フォーカスリングと同じ青色です。入力欄には、×やクリア、上下の小さな矢印がついたスピナー、大きな下矢印の 3 つのアイコンがあります。 2017 年 1 月に設定された入力の下には、カレンダーがポップアップで表示されている。カレンダーの最初の列は週番号が 1、2、3、4、5、6 と並んでいる。その右側に一か月分のカレンダーがある。第 1 週と 1 月 2 日～ 8 日がある行はハイライトされています。月と同じ行に、次の月と前の月を右と左に移動するボタンがあります。](week-control-chrome.png)
-
-Edge の `week` コントロールはもう少し凝っており、年と週を選ぶスライドするリールが開きます。
-
-!['week 01, 2017' と書かれた入力。下に2列のポップアップが開いている。左列には、第 48 週から第 52 週まで、第 01 週から第 05 週までと続く、週のリストが掲載されている。右辺には、 2012 年から 2022 年までの年号が並んでいる。 01 週と 2017 年は真ん中で、青背景で強調されている。一番下には、チェックマークと X ボタンがある。](week-control-edge.png)
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#値">値</a></strong></td>
-      <td>
-        年と週を表す文字列、または空欄
-      </td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td>
-        <code>value</code>, <code>valueAsDate</code>,
-        <code>valueAsNumber</code>, <code>list</code>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
 
 ## 値
 
-文字列で、入力欄に入力された年と週を表します。この入力型で使われる日時値の形式は、 [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)の[HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats#week_strings)で説明しています。
+文字列で、入力欄に入力された年と週を表します。この入力型で使われる日時値の形式は、[週文字列](/ja/docs/Web/HTML/Date_and_time_formats#週文字列)で説明しています。
 
 次のように [`value`](/ja/docs/Web/HTML/Element/input#value) 属性に値を入れることで、既定値を設定することができます。
 
@@ -86,7 +34,7 @@ Edge の `week` コントロールはもう少し凝っており、年と週を�
 
 ```js
 const weekControl = document.querySelector('input[type="week"]');
-weekControl.value = '2017-W45';
+weekControl.value = "2017-W45";
 ```
 
 ## 追加の属性
@@ -113,7 +61,7 @@ weekControl.value = '2017-W45';
 
 ### step
 
-`step` 属性は値が吸着する粒度を指定する数値、または後述する特殊な値 `any` です。刻みの基準値に等しい値（指定されていれば [`min`](#min)、そうでなければ [`value`](/ja/docs/Web/HTML/Element/input#value)、どちらも設定されていなければ適切な既定値）のみが妥当となります。
+`step` 属性は、値が遵守しなければならない粒度を指定する数値、または下記で記述する特別な値 `any` です。ステップの基準となる値（[`min`](#min) を指定した場合は [`value`](/ja/docs/Web/HTML/Element/input#value)、それ以外の場合は適切な既定値）と同じ値のみが有効となります。
 
 文字列値の `any` は、刻みがなく、どの値でも許可されることを意味します（[`min`](#min) や [`max`](#max) など、他の制約には制限されます）。
 
@@ -201,7 +149,7 @@ input:valid + span::after {
 
 ### 週の値を必須にする
 
-加えて、 [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用して、週の入力を必須にすることができます。結果として、対応しているブラウザーでは週の入力欄が空欄の場合にエラーを表示します。
+加えて、[`required`](/ja/docs/Web/HTML/Element/input#required) 属性を使用して、週の入力を必須にすることができます。結果として、対応しているブラウザーでは週の入力欄が空欄の場合にエラーを表示します。
 
 例を見てみましょう。週の最小値と最大値を設定し、かつフィールドを必須に設定しています。
 
@@ -238,7 +186,7 @@ input:valid + span::after {
 
 前述のように、現時点で week 入力欄を利用する上で一番の問題はブラウザーの互換性です。デスクトップでは Safari と Firefox は対応しておらず、 IE の古いバージョンも対応していません。
 
-Android や iOS のようなモバイルプラットフォームは、このような入力型が実に有効であり、タッチスクリーン環境で実に簡単に値を選択できる専用のユーザーインターフェイスコントロールを提供します。例えば、 Android 版 Chrome の `week` 選択は、次のようになっています。
+Android や iOS のようなモバイルプラットフォームは、このような入力型が完全になっており、タッチスクリーン環境で実に簡単に値を選択できる専用のユーザーインターフェイスコントロールを提供します。例えば、 Android 版 Chrome の `week` 選択は、次のようになっています。
 
 ![モーダルポップアップ。ヘッダーには「週の設定」と書かれている。 2 列あり、左は 2017 が不透明で表示されています。右側は真ん中の 36 が不透明で、その上の 35 と下の 37 が半透明であります。他にオプションはありません。下部には 3 つのテキストリンクまたはボタンがあり、左に「削除」、右に「キャンセル」「設定」と記載されています。](week-chrome-android.png)
 
@@ -326,32 +274,32 @@ input:valid + span::after {
 
 ```js
 // 変数を定義
-const nativePicker = document.querySelector('.nativeWeekPicker');
-const fallbackPicker = document.querySelector('.fallbackWeekPicker');
-const fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector(".nativeWeekPicker");
+const fallbackPicker = document.querySelector(".fallbackWeekPicker");
+const fallbackLabel = document.querySelector(".fallbackLabel");
 
-const yearSelect = document.querySelector('#year');
-const weekSelect = document.querySelector('#fallbackWeek');
+const yearSelect = document.querySelector("#year");
+const weekSelect = document.querySelector("#fallbackWeek");
 
 // 最初はフォールバックを非表示にする
-fallbackPicker.style.display = 'none';
-fallbackLabel.style.display = 'none';
+fallbackPicker.style.display = "none";
+fallbackLabel.style.display = "none";
 
 // 新しい日付入力が文字列入力にフォールバックされるかどうか
-const test = document.createElement('input');
+const test = document.createElement("input");
 
 try {
-  test.type = 'week';
+  test.type = "week";
 } catch (e) {
   console.log(e.description);
 }
 
-// もし文字列入力になるならば、 if() {} ブロックの中のコードを実行する
-if(test.type === 'text') {
+// もし文字列入力になるならば、 if () {} ブロックの中のコードを実行する
+if (test.type === "text") {
   // ネイティブの日付選択を隠してフォールバック版を表示
-  nativePicker.style.display = 'none';
-  fallbackPicker.style.display = 'block';
-  fallbackLabel.style.display = 'block';
+  nativePicker.style.display = "none";
+  fallbackPicker.style.display = "block";
+  fallbackLabel.style.display = "block";
 
   // 週を動的に生成する
   populateWeeks();
@@ -360,14 +308,66 @@ if(test.type === 'text') {
 function populateWeeks() {
   // 週の選択肢を 52 週で生成
   for (let i = 1; i <= 52; i++) {
-    const option = document.createElement('option');
-    option.textContent = (i < 10) ? `0${i}` : i;
+    const option = document.createElement("option");
+    option.textContent = i < 10 ? `0${i}` : i;
     weekSelect.appendChild(option);
   }
 }
 ```
 
 > **メモ:** 53 週ある年もあることを忘れないでください（[年あたりの週数](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year)を参照）。商品のアプリを開発するときはこれを念頭に置いておく必要があります。
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#値">値</a></strong></td>
+      <td>
+        年と週を表す文字列、または空欄
+      </td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} および
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td>
+        <code>value</code>, <code>valueAsDate</code>,
+        <code>valueAsNumber</code>, <code>list</code>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
+        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>対応するロールなし</code></a></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

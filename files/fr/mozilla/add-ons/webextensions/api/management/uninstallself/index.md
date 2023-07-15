@@ -1,14 +1,6 @@
 ---
 title: management.uninstallSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - UnintallSeft
-  - WebExtensions
-  - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 ---
 

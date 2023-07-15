@@ -10,12 +10,12 @@ El elemento HTML **`<input type="checkbox">`** es un elemento de entrada que te 
 
 Este elemento posee los "[atributos globales](/es/docs/HTML/Global_attributes)".
 
-- {{htmlattrdef("checked")}}
+- `checked`
   - : Cuando el valor del atributo **type** es **`checkbox`**, la presencia de este atributo booleano indica que el control se selecciona de forma predeterminada; de lo contrario, se ignora.
-- {{htmlattrdef("value")}}
+- `value`
   - : El valor inicial de control. Si se omite la propiedad **value**, el **resultado devuelto** al leer esta propiedad será la cadena **on**.
     Tenga en cuenta que al volver a cargar la pagina, Gecko y IE [ignorarán el valor especificado en el código HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186), si el valor se cambió antes de la recarga.
-- {{htmlattrdef("indeterminate")}}
+- `indeterminate`
   - : Indica que la casilla de verificación está en un estado indeterminado (en la mayoría de las plataformas, dibuja una línea horizontal a través del checkbox).
 
 ## Ejemplo

@@ -26,7 +26,7 @@ str.split([separator[, limit]])
     - `separator` が文字列の先頭または末尾、またはその両方に現れた場合、配列の先頭、末尾、または先頭と末尾の両方が、それぞれ空文字列になります。
     - `separator` が空文字列 (`""`) の場合、 `str` は個々の UTF-16 「文字」の配列になります。
 
-    > **警告:** 空文字列 (`""`) を区切り文字列として使用すると、文字列が*ユーザーが知覚可能な文字* ([書記素クラスター](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) に分割されるわけでは**なく**、 Unicode 文字 (コードポイント)、ただし UTF-16 コード単位です。これは[サロゲートペア](http://unicode.org/faq/utf_bom.html#utf16-2)を破壊します。 [StackOverflow の “How do you get a string to a character array in JavaScript?”](https://stackoverflow.com/a/34717402) を参照してください。
+    > **警告:** 空文字列 (`""`) を区切り文字列として使用すると、文字列が*ユーザーが知覚可能な文字* ([書記素クラスター](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) に分割されるわけでは**なく**、 Unicode 文字 (コードポイント)、ただし UTF-16 コード単位です。これは[サロゲートペア](http://unicode.org/faq/utf_bom.html#utf16-2)を破壊します。 [StackOverflow の "How do you get a string to a character array in JavaScript?"](https://stackoverflow.com/a/34717402) を参照してください。
 
 - `limit` {{optional_inline}}
 

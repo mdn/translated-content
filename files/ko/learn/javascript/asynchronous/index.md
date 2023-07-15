@@ -1,6 +1,8 @@
 ---
-title: Asynchronous JavaScript
+title: 비동기 JavaScript
 slug: Learn/JavaScript/Asynchronous
+l10n:
+  sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
 ---
 {{LearnSidebar}}
 

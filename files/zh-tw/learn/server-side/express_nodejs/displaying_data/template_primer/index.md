@@ -7,7 +7,7 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 
 ## Express 模板選擇
 
-Express 可以與許多不同的[模板渲染引擎](https://expressjs.com/zh-tw/guide/using-template-engines.html)一起使用。在本教程中，我們使用 [Pug](https://pugjs.org/api/getting-started.html)（以前稱為 _Jade_）作為模板。這是最流行的 Node 模板語言，並且官方將自身描述為 “用於編寫 HTML，語法乾淨且空格敏感，受 [Haml](http://haml.info/) 影響很大”。
+Express 可以與許多不同的[模板渲染引擎](https://expressjs.com/zh-tw/guide/using-template-engines.html)一起使用。在本教程中，我們使用 [Pug](https://pugjs.org/api/getting-started.html)（以前稱為 _Jade_）作為模板。這是最流行的 Node 模板語言，並且官方將自身描述為 「用於編寫 HTML，語法乾淨且空格敏感，受 [Haml](http://haml.info/) 影響很大」。
 
 不同的模板語言使用不同的方法，來定義佈局和標記數據的佔位符 — 一些使用 HTML 來定義佈局，而另一些則使用可以編譯為 HTML 的不同標記格式。 Pug 是第二種類型；它使用 HTML 的*表示形式*，其中任何行中的第一個單詞，通常表示 HTML 元素，後續行中的縮進，用於表示嵌套在這些元素中的任何內容。結果是一個頁面定義直接轉換為 HTML，但可以說更簡潔，更容易閱讀。
 

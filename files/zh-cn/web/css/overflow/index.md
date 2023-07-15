@@ -176,4 +176,4 @@ p.auto {
 ## 参见
 
 - 相关 CSS 属性：{{cssxref("text-overflow")}}、{{cssxref("white-space")}}、{{Cssxref("overflow-x")}}、{{Cssxref("overflow-y")}}、{{Cssxref("overflow-inline")}}、{{Cssxref("overflow-block")}}、{{Cssxref("clip")}}、{{Cssxref("display")}}
-- [CSS Overflow](/zh-CN/docs/Web/CSS/CSS_Overflow) 和 [Debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html)
+- [CSS Overflow](/zh-CN/docs/Web/CSS/CSS_overflow) 和 [Debug scrollable overflow](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/debug_scrollable_overflow/index.html)

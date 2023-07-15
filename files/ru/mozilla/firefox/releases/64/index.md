@@ -104,7 +104,7 @@ _Без изменений._
 
 ### Безопасность
 
-- Прекращено доверие сертификатам, выданным удостоверяющими центрами Symantec (см. {{bug(1409257)}}; также см. подробности в обсуждении [Mozilla’s Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion)).
+- Прекращено доверие сертификатам, выданным удостоверяющими центрами Symantec (см. {{bug(1409257)}}; также см. подробности в обсуждении [Mozilla's Plan for Symantec Roots](https://groups.google.com/forum/#!topic/mozilla.dev.security.policy/FLHRT79e3XE/discussion)).
 - Теперь можно использовать {{httpheader("Referrer-Policy")}} для управления ресурсами, полученными через таблицы стилей ({{bug(1330487)}}) — см. [Integration with CSS](/ru/docs/Web/HTTP/Headers/Referrer-Policy#integration_with_css) для получения подробных сведений.
 
 ### Плагины

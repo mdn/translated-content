@@ -12,7 +12,7 @@ Todos os navegadores atuais suportam o protocolo TLS, exigindo que o servidor fo
 
 - [Transport Layer Security](/pt-BR/docs/Web/Security/Transport_Layer_Security)
 - [OWASP: Transport Layer Protection Cheat Sheet](https://owasp.org/index.php?title=Transport_Layer_Protection_Cheat_Sheet)
-- {{Interwiki("wikipedia", "Transport Layer Security")}} na Wikipedia
+- [Transport Layer Security](https://pt.wikipedia.org/wiki/Transport_Layer_Security) na Wikipedia
 
 ### Especificações
 

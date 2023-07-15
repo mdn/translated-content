@@ -1,15 +1,6 @@
 ---
 title: search.search()
 slug: Mozilla/Add-ons/WebExtensions/API/search/search
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Recherche
-  - Reference
-  - Search
-  - SearchEngines
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/search/search
 ---
 

@@ -11,7 +11,7 @@ slug: Glossary/Whitespace
 
 ## JavaScript での使い方
 
-[ECMAScript® 2015 言語仕様書](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)では、いくつかの Unicode コードポイントをホワイトスペースとして定めています。 U+0009 CHARACTER TABULATION \<TAB>, U+000B LINE TABULATION \<VT>, U+000C FORM FEED \<FF>, U+0020 SPACE \<SP>, U+00A0 NO-BREAK SPACE \<NBSP>, U+FEFF ZERO WIDTH NO-BREAK SPACE \<ZWNBSP> および その他のカテゴリ “Zs” Unicode の他の “Separator, space” コードポイント \<USP> に属するすべての文字です。これらの文字はふつう、コードの機能性には不要なものです。
+[ECMAScript® 2015 言語仕様書](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)では、いくつかの Unicode コードポイントをホワイトスペースとして定めています。 U+0009 CHARACTER TABULATION \<TAB>, U+000B LINE TABULATION \<VT>, U+000C FORM FEED \<FF>, U+0020 SPACE \<SP>, U+00A0 NO-BREAK SPACE \<NBSP>, U+FEFF ZERO WIDTH NO-BREAK SPACE \<ZWNBSP> および その他のカテゴリ "Zs" Unicode の他の "Separator, space" コードポイント \<USP> に属するすべての文字です。これらの文字はふつう、コードの機能性には不要なものです。
 
 1. 仕様書
 

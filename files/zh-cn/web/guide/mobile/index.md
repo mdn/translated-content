@@ -44,7 +44,7 @@ slug: Web/Guide/Mobile
 
 为了解决那些带宽小或者流量费用昂贵的用户，你可以通过根据用户的屏幕尺寸和分辨率加载合适的图片来优化图片的加载。你可以通过媒体查询来获取屏幕的[高度](/zh-CN/docs/Web/CSS/@media/height)、[宽度](/zh-CN/docs/Web/CSS/@media/width)以及[像素比](/zh-CN/docs/Web/CSS/@media/resolution)。
 
-你也可以利用 CSS 属性，如[渐变](/zh-CN/docs/Web/CSS/CSS_Images/Using_CSS_gradients)和[阴影](/zh-CN/docs/Web/CSS/box-shadow)来实现视觉效果，而无需图像。
+你也可以利用 CSS 属性，如[渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)和[阴影](/zh-CN/docs/Web/CSS/box-shadow)来实现视觉效果，而无需图像。
 
 ### 移动端 API
 

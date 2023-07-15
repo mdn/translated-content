@@ -182,7 +182,7 @@ Mozilla (Firefox)、Blink (Chrome、Opera)、WebKit (Safari) では、他の言�
 
 ## アクセシビリティの考慮
 
-画面リーダーの [VoiceOver](https://help.apple.com/voiceover/info/guide/) には、 `list-style-type` の値に `none` が適用された順序なしリストをリストとして読み上げないという問題があります。リストが正しく読み上げられるようにするには、それぞれのリスト項目の前に[幅ゼロの空白](https://en.wikipedia.org/wiki/Zero-width_space)を[擬似コンテンツ](/ja/docs/Web/CSS/content)として追加する必要があります。これはデザインがバグ修正に影響されないことを保証し、リスト項目の表記が正しくなくなるわけではありません。
+スクリーンリーダーの [VoiceOver](https://help.apple.com/voiceover/info/guide/) には、 `list-style-type` の値に `none` が適用された順序なしリストをリストとして読み上げないという問題があります。リストが正しく読み上げられるようにするには、それぞれのリスト項目の前に[幅ゼロの空白](https://en.wikipedia.org/wiki/Zero-width_space)を[擬似コンテンツ](/ja/docs/Web/CSS/content)として追加する必要があります。これはデザインがバグ修正に影響されないことを保証し、リスト項目の表記が正しくなくなるわけではありません。
 
 ```css
 ul {

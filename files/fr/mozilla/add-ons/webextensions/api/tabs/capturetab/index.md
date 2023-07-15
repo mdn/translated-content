@@ -1,15 +1,6 @@
 ---
 title: tabs.captureTab()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureTab
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - captureTab
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/captureTab
 ---
 

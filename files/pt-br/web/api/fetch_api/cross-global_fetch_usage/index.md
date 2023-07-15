@@ -27,7 +27,7 @@ Isto não é um problema como tal. É que diferentes APIs que exibem esse tipo d
 
 ## A solução
 
-No Firefox 60 em diante, o Mozilla resolve a URL relativa contra o global que possui a função `fetch()` que está sendo usada (veja {{bug (1432272)}}). Portanto, no caso descrito acima, ele é resolvido em relação à localização do iframe:
+No Firefox 60 em diante, o Mozilla resolve a URL relativa contra o global que possui a função `fetch()` que está sendo usada (veja [Erro do Firefox 1432272](https://bugzil.la/1432272)). Portanto, no caso descrito acima, ele é resolvido em relação à localização do iframe:
 
 ```js
 let absolute = new URL(relative, frame.contentWindow.location.href)

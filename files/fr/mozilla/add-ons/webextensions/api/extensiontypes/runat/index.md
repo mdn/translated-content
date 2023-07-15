@@ -1,16 +1,6 @@
 ---
 title: extensionTypes.RunAt
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - RunAt
-  - Type
-  - WebExtensions
-  - extensionTypes
 translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
 ---
 

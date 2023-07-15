@@ -1,13 +1,7 @@
 ---
 title: Anatomie d'un jeu vidéo
 slug: Games/Anatomy
-tags:
-  - Boucle Principale
-  - JavaScript
-  - Jeux
-  - requestAnimationFrame
 translation_of: Games/Anatomy
-original_slug: Jeux/Anatomie
 ---
 
 {{GamesSidebar}}

@@ -46,7 +46,7 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
 
 À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("autoplay")}}
+- `autoplay`
 
   - : Un attribut booléen qui indique que la vidéo doit automatiquement être lancée dès qu'elle peut être jouée sans être arrêtée par le chargement des données.
 
@@ -56,11 +56,11 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
 
     > **Note :** Pour certains navigateurs (ex. Chrome 70), l'attribut `autoplay` ne fonctionne pas si aucun attribut `mute` n'est présent.
 
-- {{htmlattrdef("buffered")}}
+- `buffered`
   - : Un attribut qui peut être lu afin de déterminer l'intervalle temporel mis en mémoire tampon. Cet attribut contient un objet {{domxref("TimeRanges")}}.
-- {{htmlattrdef("controls")}}
+- `controls`
   - : Si cet attribut est présent, le navigateur affichera des contrôles pour permettre à l'utilisateur de contrôler la lecture de la vidéo, le volume et la mise sur pause.
-- {{htmlattrdef("controlslist")}} {{experimental_inline}}
+- `controlslist` {{experimental_inline}}
 
   - : L'attribut `controlslist`, lorsqu'il est indiqué, aide le navigateur à choisir les contrôles à afficher pour la manipulation du média lorsque l'attribut `controls` est utilisé.
 
@@ -68,7 +68,7 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
 
     On utilisera l'attribut `disablePictureInPicture` afin de désactiver ce mode et les contrôles associés.
 
-- {{htmlattrdef("crossorigin")}}
+- `crossorigin`
 
   - : Cet attribut à valeur contrainte permet d'indiquer si le CORS doit être utilisé pour récupérer la vidéo. [Les ressources avec le CORS activé](/fr/docs/Web/HTML/Images_avec_le_contr%C3%B4le_d_acc%C3%A8s_HTTP) peuvent être réutilisées dans un élément {{HTMLElement("canvas")}} sans le _corrompre_. Les valeurs autorisées sont :
 
@@ -77,19 +77,19 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
 
     Lorsque cet attribut n'est pas présent, la ressource est récupérée sans requête CORS (l'en-tête HTTP {{HTTPHeader("Origin")}}) n'est pas envoyé) et elle ne peut pas être utilisée dans un élément {{HTMLElement('canvas')}}. Si la valeur est invalide, elle sera gérée comme si le mot-clé `anonymous` était utilisé. Pour plus d'informations, consulter l'article sur [les attributs de paramétrage du CORS](/fr/docs/Web/HTML/Reglages_des_attributs_CORS).
 
-- {{htmlattrdef("height")}}
+- `height`
   - : La hauteur de la zone où afficher la vidéo, exprimée en pixels CSS (en valeur absolue uniquement).
-- {{htmlattrdef("intrinsicsize")}} {{experimental_inline}}
+- `intrinsicsize` {{experimental_inline}}
   - : Cet attribut indique au navigateur d'ignorer la taille intrinsèque de la vidéo et de la dimensionner avec la taille définie par cet attribut. La vidéo aura les dimensions indiquées et le rapport `naturalWidth`/`naturalHeight` renverra les valeurs fournies par cet attribut. [Explications](https://github.com/ojanvafai/intrinsicsize-attribute), [exemples](https://googlechrome.github.io/samples/intrinsic-size/index.html)
-- {{htmlattrdef("loop")}}
+- `loop`
   - : Un attribut booléen, qui, lorsqu'il est présent, indique que la vidéo doit être jouée en boucle.
-- {{htmlattrdef("muted")}}
+- `muted`
   - : Un attribut booléen qui indique s'il faut couper le son contenu dans la vidéo. Si cet attribut est utilisé, le son sera coupé au lancement de la vidéo. Par défaut, quand l'attribut est absent, le son sera utilisé lors de la lecture de la vidéo.
 - [`disablePictureInPicture`](https://wicg.github.io/picture-in-picture/#disable-pip) {{experimental_inline}}
   - : Empêche le navigateur de suggérer un menu contextuel pour la superposition d'une image/vidéo ("_Picture-in-picture_") ou de demander l'activation automatique pour la superposition du média.
-- {{htmlattrdef("playsinline")}}
+- `playsinline`
   - : Un attribut booléen qui indique que la vidéo doit être jouée en incise, c'est-à-dire au sein de la zone de lecture de l'élément. À noter : l'absence de cet attribut n'implique pas que la vidéo sera lancée en plein écran.
-- {{htmlattrdef("preload")}}
+- `preload`
 
   - : Cet attribut à valeur contrainte est une indication destinée au navigateur sur la meilleure façon de charger la vidéo (selon l'auteur de la page). Il peut prendre l'une des valeurs suivantes :
 
@@ -105,11 +105,11 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
     > - L'attribut `autoplay` a la priorité sur `preload`. Si `autoplay` est défini, le navigateur doit nécessairement télécharger la vidéo pour la lancer.
     > - Cet attribut est simplement une indication, la spécification ne force pas le navigateur à respecter la valeur de cet attribut.
 
-- {{htmlattrdef("poster")}}
+- `poster`
   - : Une URL qui contient une vignette à afficher tant que la vidéo est en cours de téléchargement. Si cet attribut n'est pas utilisé, rien n'est affiché jusqu'à ce que la première image de la vidéo soit disponible, ensuite, c'est cette image qui est affichée comme vignette sur la vidéo.
-- {{htmlattrdef("src")}}
+- `src`
   - : L'URL de la vidéo à intégrer. Cet attribut est optionnel, l'élément {{HTMLElement("source")}} peut également être utilisé dans l'élément `<video>` afin d'indiquer la vidéo à intégrer.
-- {{htmlattrdef("width")}}
+- `width`
   - : La largeur de la zone où afficher la vidéo, exprimée en pixels CSS (en valeur absolue uniquement).
 
 ## Évènements
@@ -291,7 +291,7 @@ Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuv
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_intégré"
           >contenu intégré</a
         >. Si l'élément a un attribut
-        {{htmlattrxref("controls", "video")}} :
+        <a href="/fr/docs/Web/HTML/Element/video#controls"><code>controls</code></a> :
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_interactif"
           >contenu interactif</a
         >,
@@ -305,7 +305,7 @@ Les sous-titres ne doivent pas masquer le sujet principal de la vidéo. Ils peuv
       <td>
         <p>
           Si l'élément a un attribut
-          {{htmlattrxref("src", "video")}} : zéro ou plusieurs
+          <a href="/fr/docs/Web/HTML/Element/video#src"><code>src</code></a> : zéro ou plusieurs
           éléments {{HTMLElement("track")}} suivi par du contenu
           transparent qui ne contient pas d'élément
           {{HTMLElement("audio")}} ou {{HTMLElement("video")}}

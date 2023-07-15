@@ -1,16 +1,6 @@
 ---
 title: pageAction.ImageDataType
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/ImageDataType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - ImageDataType
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/ImageDataType
 ---
 

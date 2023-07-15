@@ -100,7 +100,7 @@ The JavaScript glue code is not as simple as you might imagine. For a start, Ems
 
 So part of the glue code is implementing the functionality of each respective library used by the C/C++ code. The glue code also contains the logic for calling the above-mentioned WebAssembly JavaScript APIs to fetch, load and run the .wasm file.
 
-The generated HTML document loads the JavaScript glue file and writes stdout to a {{htmlelement("textarea")}}. If the application uses OpenGL, the HTML also contains a {{htmlelement("canvas")}} element that is used as the rendering target. It’s very easy to modify the Emscripten output and turn it into whatever web app you require.
+The generated HTML document loads the JavaScript glue file and writes stdout to a {{htmlelement("textarea")}}. If the application uses OpenGL, the HTML also contains a {{htmlelement("canvas")}} element that is used as the rendering target. It's very easy to modify the Emscripten output and turn it into whatever web app you require.
 
 You can find full documentation on Emscripten at [emscripten.org](https://emscripten.org), and a guide to implementing the toolchain and compiling your own C/C++ app across to wasm at [Compiling from C/C++ to WebAssembly](/es/docs/WebAssembly/C_to_wasm).
 

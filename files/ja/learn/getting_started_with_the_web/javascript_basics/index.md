@@ -2,7 +2,7 @@
 title: JavaScript の基本
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
 l10n:
-  sourceCommit: ca3bd6f9ad181ea03b5b66bd7ca294559e169d83
+  sourceCommit: b51eff9e06b5f8c2542f151f272ada1145cef92c
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
@@ -27,7 +27,7 @@ JavaScript は比較的コンパクトですが、一方でとても柔軟性が
 
 以下では、コア言語のいくつかの側面について紹介します。またブラウザーの API 機能についてもいくつか説明します。楽しみましょう！
 
-## _Hello world!_ の例
+## "Hello world!" の例
 
 JavaScript は、最も人気のある現代のウェブ技術のひとつです。 JavaScript のスキルが上がれば、ウェブサイトのパワーと創造性は新たな次元に入るでしょう。
 
@@ -38,17 +38,17 @@ JavaScript は、最も人気のある現代のウェブ技術のひとつです
 1. 最初にテストサイトに行き、 `scripts` という名前の新しいフォルダーを作成してください。それから、この scripts フォルダーの中に `main.js` という新しいファイルを作成して保存してください。
 2. `index.html` ファイルの `</body>` 終了タグの直前に新しい行で、以下の新しい要素を追加してください。
 
-    ```html
-    <script src="scripts/main.js"></script>
-    ```
+   ```html
+   <script src="scripts/main.js"></script>
+   ```
 
 3. これは CSS の {{htmlelement("link")}} 要素の時の作業と基本的に同じです。これは JavaScript をページに適用するので、（CSS の時と同じく、ページ上の何に対しても） HTML に影響を与えることができます。
 4. `main.js` ファイルに次のコードを追加してください。
 
-    ```js
-    const myHeading = document.querySelector('h1');
-    myHeading.textContent = 'Hello world!';
-    ```
+   ```js
+   const myHeading = document.querySelector("h1");
+   myHeading.textContent = "Hello world!";
+   ```
 
 5. 最後に、 HTML と JavaScript を書いたファイルを保存したことを確認し、ブラウザーで `index.html` を読み込んでください。
 
@@ -70,7 +70,7 @@ JavaScript を使用して、見出しの文字列が _Hello world!_ に変更�
 
 どのように動作するかをよりよく理解できるように、 JavaScript 言語の基本機能のいくつかを説明しましょう。これらの機能はすべてのプログラミング言語に共通しているので、これらの基本をマスターすれば、ほとんど何でもプログラムできるようになります！
 
-> **警告:** この記事では、 JavaScript コンソールにサンプルコードを入力して、何が起こるのかを確認してみます。 JavaScript コンソールの詳細については、 [ブラウザー開発ツールを探る](/ja/docs/Learn/Common_questions/What_are_browser_developer_tools)を参照してください。
+> **警告:** この記事では、 JavaScript コンソールにサンプルコードを入力して、何が起こるのかを確認してみます。 JavaScript コンソールの詳細については、 [ブラウザー開発ツールを探る](/ja/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)を参照してください。
 
 ### 変数
 
@@ -89,13 +89,13 @@ let myVariable;
 変数を宣言したら、以下のように値を割り当てることができます。
 
 ```js
-myVariable = 'Bob';
+myVariable = "Bob";
 ```
 
 好みに応じて、両方の操作を同一の行で行うことができます。
 
 ```js
-let myVariable = 'Bob';
+let myVariable = "Bob";
 ```
 
 変数の値は、名前で呼び出すだけで取得することができます。
@@ -107,8 +107,8 @@ myVariable;
 変数に値を代入した後で、変更することもできます。
 
 ```js
-let myVariable = 'Bob';
-myVariable = 'Steve';
+let myVariable = "Bob";
+myVariable = "Steve";
 ```
 
 なお、変数は様々な[データ型](/ja/docs/Web/JavaScript/Data_structures)の値を保持することもできます。
@@ -123,26 +123,26 @@ myVariable = 'Steve';
   </thead>
   <tbody>
     <tr>
-      <th scope="row">{{Glossary("String")}}</th>
+      <th scope="row">{{Glossary("String", "文字列")}}</th>
       <td>
-        一連のテキストで、文字列と呼ばれます。値が文字列であることを示すには、単一引用符で囲む必要があります。
+        一連のテキストで、文字列と呼ばれます。値が文字列であることを示すには、単一引用符または二重引用符で囲む必要があります。
       </td>
-      <td><code>let myVariable = 'Bob';</code></td>
+      <td><code>let myVariable = 'Bob';</code> または <br/><code>let myVariable = "Bob";</code></td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Number")}}</th>
-      <td>数値です。数字には引用符がありません。</td>
+      <th scope="row">{{Glossary("Number", "数値")}}</th>
+      <td>数値です。数値は引用符で囲みません。</td>
       <td><code>let myVariable = 10;</code></td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Boolean")}}</th>
+      <th scope="row">{{Glossary("Boolean", "論理型")}}</th>
       <td>
         論理値です。これは真か偽かの値です。 <code>true</code> と <code>false</code> は特別なキーワードで、引用符は必要ありません。
       </td>
       <td><code>let myVariable = true;</code></td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Array")}}</th>
+      <th scope="row">{{Glossary("Array", "配列")}}</th>
       <td>
         単一の参照で複数の値を格納できる構造です。
       </td>
@@ -152,7 +152,7 @@ myVariable = 'Steve';
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Object")}}</th>
+      <th scope="row">{{Glossary("Object", "オブジェクト")}}</th>
       <td>
          基本的には何でも格納できます。 JavaScript のすべてがオブジェクトであり、変数に格納することができます。学ぶ際にはこれを覚えておいてください。
       </td>
@@ -222,10 +222,10 @@ myVariable = 'Steve';
     <tr>
       <th scope="row">厳密等価</th>
       <td>
-        2 つの値と型が互いに等しいかどうかを調べます。
+        これは、2 つの値が等しく、かつデータ型が同じであるかどうかを調べます。
         <code>true</code>/<code>false</code> （論理値）の結果を返します。
       </td>
-      <td><code>===</code></td>
+      <td><a href="/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality"><code>===</code></a></td>
       <td>
         <code>let myVariable = 3;<br />myVariable === 4;</code>
       </td>
@@ -263,11 +263,11 @@ myVariable = 'Steve';
 条件文は、ある式が true を返すかどうかをテストし、その結果次第でそれぞれのコードを実行するコード構造です。条件文のよくある形は `if...else` 文です。例えば以下の通りです。
 
 ```js
-let iceCream = 'チョコレート';
-if (iceCream === 'チョコレート') {
-  alert('やった、チョコレートアイス大好き！');
+let iceCream = "チョコレート";
+if (iceCream === "チョコレート") {
+  alert("やった！チョコレートアイス大好き！");
 } else {
-  alert('あれれ、でもチョコレートは私のお気に入り......');
+  alert("あれれ、でもチョコレートが好きなのに......");
 }
 ```
 
@@ -278,11 +278,11 @@ if (iceCream === 'チョコレート') {
 {{Glossary("Function", "関数")}}は、再利用したい機能をパッケージ化する方法です。プロシージャが必要なときは、毎回コード全体を書くのではなく関数名を使って関数を呼び出すことができます。すでにいくつかの関数の仕様を見てきました。例えば次のようなものです。
 
 ```js
-let myVariable = document.querySelector('h1');
+let myVariable = document.querySelector("h1");
 ```
 
 ```js
-alert('hello!');
+alert("hello!");
 ```
 
 これらの関数、 `document.querySelector` と `alert` は、必要なときにいつでも使えるようブラウザーに組み込まれています。
@@ -294,7 +294,7 @@ alert('hello!');
 嬉しいことに、自分で関数を定義することができます。次の例では、引数として 2 つの数値をとり、それらを乗算するという単純な関数を記載します。
 
 ```js
-function multiply(num1,num2) {
+function multiply(num1, num2) {
   let result = num1 * num2;
   return result;
 }
@@ -312,39 +312,20 @@ multiply(0.5, 3);
 
 ### イベント
 
-ウェブサイトを実際にインタラクティブにするには、イベントが必要です。イベントは、ブラウザーの中で起きていることを検出し、その応答としてコードを実行するコード構造です。最も分かりやすい例は [click イベント](/ja/docs/Web/API/Element/click_event)で、マウスで何かをクリックするとブラウザーによって発行されるものです。これを実行するには、コンソールに以下のように入力してから、現在のウェブページ上をクリックしてください。
+ウェブサイトを本当にインタラクティブにするには、イベントが必要です。イベントは、ブラウザーの中で起きていることを検出し、その応答としてコードを実行するコード構造です。最も分かりやすい例は [click イベント](/ja/docs/Web/API/Element/click_event)で、マウスで何かをクリックするとブラウザーによって発行されるものです。これを実行するには、コンソールに以下のように入力してから、現在のウェブページ上をクリックしてください。
 
 ```js
-document.querySelector('html').addEventListener('click', function () {
-  alert('痛っ! つつかないで!');
+document.querySelector("html").addEventListener("click", function () {
+  alert("痛っ! つつかないで!");
 });
 ```
 
-要素にイベントハンドラーを取り付ける方法はいろいろあります。ここでは {{htmlelement("html")}} 要素を選択しています。そして、 [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) 関数を呼び出し、待ち受けるイベントの名前 (`'click'`) とイベントが発生したときに実行する関数を渡します。
-
-なお、
-
-```js
-document.querySelector('html').addEventListener('click', function () {
-  alert('痛っ! つつかないで!');
-});
-```
-
-は以下のものと同等です。
-
-```js
-let myHTML = document.querySelector('html');
-myHTML.addEventListener('click', function () {
-  alert('痛っ! つつかないで!');
-});
-```
-
-短くしただけです。
+要素にイベントハンドラーを取り付ける方法はいくつもあります。ここでは {{htmlelement("html")}} 要素を選択しています。そして、[`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) 関数を呼び出し、待ち受けるイベントの名前 (`'click'`) とイベントが発生したときに実行する関数を渡します。
 
 先ほど `addEventListener()` に渡した関数は、名前を持たないので**無名関数**と呼ばれます。無名関数の書き方として、**アロー関数**と呼ばれるものがあります。アロー関数は `() =>` を `function ()` の代わりに使用します。
 
 ```js
-document.querySelector('html').addEventListener('click', () => {
+document.querySelector("html").addEventListener("click", () => {
   alert('痛っ! つつかないで!');
 });
 ```
@@ -364,28 +345,28 @@ document.querySelector('html').addEventListener('click', () => {
 3. この画像の名前を _firefox2.png_ に変更してください。
 4. `main.js` ファイルに次の JavaScript を入力してください。
 
-    ```js
-    const myImage = document.querySelector('img');
+   ```js
+   const myImage = document.querySelector("img");
 
-    myImage.onclick = () => {
-      const mySrc = myImage.getAttribute('src');
-      if (mySrc === 'images/firefox-icon.png') {
-        myImage.setAttribute('src','images/firefox2.png');
-      } else {
-        myImage.setAttribute('src','images/firefox-icon.png');
-      }
-    }
-    ```
+   myImage.onclick = () => {
+     const mySrc = myImage.getAttribute("src");
+     if (mySrc === "images/firefox-icon.png") {
+       myImage.setAttribute("src", "images/firefox2.png");
+     } else {
+       myImage.setAttribute("src", "images/firefox-icon.png");
+     }
+   };
+   ```
 
-5. `index.html` をブラウザーに読み込みます。画像をクリックすると、もう一方の画像に変わります。
+5. `index.html` をブラウザーに読み込みます。画像をクリックすると、もう一方の画像に変わるでしょう。
 
-{{htmlelement("img")}} 要素への参照を変数 `myImage` に格納します。次にこの変数の `onclick` イベントハンドラープロパティに、名前のない関数（無名関数）を代入します。そうすれば、この要素がクリックされるたびに以下の動きをします。
+何が起こったのでしょうか。{{htmlelement("img")}} 要素への参照を変数 `myImage` に格納しました。次に、この変数の `onclick` イベントハンドラープロパティに、名前のない関数（「無名」関数）を代入しました。そうすれば、この要素がクリックされるたびに次の動きをします。
 
 1. 画像の `src` 属性の値を取得します。
 2. 条件文を使って、`src` の値が元の画像のパスと等しいかどうかをチェックします。
 
-    1. そうであれば、`src` の値を 2 番目の画像へのパスに変更し、もう一方の画像が強制的に {{htmlelement("img")}} 要素の中に読み込まれるようにします。
-    2. そうでない（すでに変更されている）場合、`src` の値を元の画像のパスに戻して、元の状態に戻ります。
+   1. そうであれば、`src` の値を 2 番目の画像へのパスに変更し、もう一方の画像が強制的に {{htmlelement("img")}} 要素の中に読み込まれるようにします。
+   2. そうでない（すでに変更されている）場合、`src` の値を元の画像のパスに戻して、元の状態に戻ります。
 
 ### パーソナライズされた挨拶メッセージの追加
 
@@ -393,49 +374,49 @@ document.querySelector('html').addEventListener('click', () => {
 
 1. `index.html` では、 {{htmlelement("script")}} 要素の直前に次の行を追加します。
 
-    ```html
-    <button>ユーザーを変更</button>
-    ```
+   ```html
+   <button>ユーザーを変更</button>
+   ```
 
 2. `main.js` では、次のコードを下記のとおりにファイルの最後に配置します。これは新しいボタンと見出しへの参照を変数に格納します。
 
-    ```js
-    let myButton = document.querySelector('button');
-    let myHeading = document.querySelector('h1');
-    ```
+   ```js
+   let myButton = document.querySelector("button");
+   let myHeading = document.querySelector("h1");
+   ```
 
 3. パーソナライズされた挨拶を設定する以下の関数を追加しましょう。まだ何も起こりませんが、すぐに修正します。
 
-    ```js
-    function setUserName() {
-      const myName = prompt('あなたの名前を入力してください。');
-      localStorage.setItem('name', myName);
-      myHeading.textContent = `Mozilla はかっこいいよ、${myName}`;
-    }
-    ```
+   ```js
+   function setUserName() {
+     const myName = prompt("あなたの名前を入力してください。");
+     localStorage.setItem("name", myName);
+     myHeading.textContent = `Mozilla はかっこいいよ、${myName} さん、Mozilla はかっこいいよ。`;
+   }
+   ```
 
-    この関数では [`prompt()`](/ja/docs/Web/API/Window/prompt) 関数を使用して、`alert()` のようにダイアログボックスを表示しています。しかし、`prompt()` は `alert()` とは異なり、ユーザーにデータを入力するよう求め、ユーザーが **OK** を押した後に変数にそのデータを格納します。この場合、ユーザーに名前を入力するよう求めます。次に、`localStorage` と呼ばれる API を呼び出すことで、ブラウザーにデータを格納して後で受け取ることができます。 localStorage の `setItem()` 関数を使って、`'name'` と呼ばれるデータを作成し、 `myName` に入っているユーザーから入力されたデータを格納します。最後に、見出しの `textContent` に文字列と新しく格納されたユーザーの名前を設定します。
+   `setUserName()` 関数では、[`prompt()`](/ja/docs/Web/API/Window/prompt) 関数を使用して、`alert()` のようにダイアログボックスを表示しています。しかし、`prompt()` は `alert()` とは異なり、ユーザーにデータを入力するよう求め、ユーザーが **OK** を押した後に変数にそのデータを格納します。この場合、ユーザーに名前を入力するよう求めます。次に、`localStorage` と呼ばれる API を呼び出すことで、ブラウザーにデータを格納して後で受け取ることができます。 localStorage の `setItem()` 関数を使って、`'name'` と呼ばれるデータを作成し、 `myName` に入っているユーザーから入力されたデータを格納します。最後に、見出しの `textContent` に文字列と新しく格納されたユーザーの名前を設定します。
 
 4. 以下のような条件ブロックを追加します。最初に読み込んだときにアプリを構造化するので、これを初期化コードと呼ぶこともできます。
 
-    ```js
-    if (!localStorage.getItem('name')) {
-      setUserName();
-    } else {
-      const storedName = localStorage.getItem('name');
-      myHeading.textContent = `Mozilla はかっこいいよ、${storedName}`;
-    }
-    ```
+   ```js
+   if (!localStorage.getItem("name")) {
+     setUserName();
+   } else {
+     const storedName = localStorage.getItem("name");
+     myHeading.textContent = `Mozilla はかっこいいよ、${storedName}`;
+   }
+   ```
 
-    このブロックでは、最初に `name` のデータが存在しているかどうかをチェックするために否定演算子（`!` で表される論理否定）を使用しています。存在しない場合は、作成するために `setUserName()` 関数が実行されます。存在する場合は（つまり、以前の訪問時にユーザーが設定した場合）、 `getItem()` を使用して格納された名前を受け取り、 `setUserName()` の中で行ったのと同様に、見出しの `textContent` に文字列とユーザーの名前を設定します。
+   このブロックでは、最初に `name` のデータが存在しているかどうかをチェックするために否定演算子（`!` で表される論理否定）を使用しています。存在しない場合は、作成するために `setUserName()` 関数が実行されます。存在する場合は（つまり、以前の訪問時にユーザーが設定した場合）、 `getItem()` を使用して格納された名前を受け取り、 `setUserName()` の中で行ったのと同様に、見出しの `textContent` に文字列とユーザーの名前を設定します。
 
 5. 最後に、以下の `onclick` イベントハンドラーをボタンに設定します。クリックすると、`setUserName()` 関数が実行されます。これでユーザーがボタンを押すことで、好きな時に新しい名前を設定できるようになります。
 
-    ```js
-    myButton.onclick = () => {
-      setUserName();
-    }
-    ```
+   ```js
+   myButton.onclick = () => {
+     setUserName();
+   };
+   ```
 
 ### ユーザー名か null か
 
@@ -447,12 +428,12 @@ document.querySelector('html').addEventListener('click', () => {
 
 ```js
 function setUserName() {
-  const myName = prompt('あなたの名前を入力してください。');
+  const myName = prompt("あなたの名前を入力してください。");
   if (!myName) {
     setUserName();
   } else {
-    localStorage.setItem('name', myName);
-    myHeading.textContent = `Mozilla はかっこいいよ、${myName}`;
+    localStorage.setItem("name", myName);
+    myHeading.textContent = `${myName} さん、Mozilla はかっこいいよ。`;
   }
 }
 ```

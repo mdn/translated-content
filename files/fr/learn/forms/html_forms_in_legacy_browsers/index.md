@@ -44,7 +44,7 @@ Voyons quelques exemples relatifs aux formulaires en HTML.
 
 #### Types d'entrées en HTML
 
-Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon dont ils simplifient est grandement prévisible. Si un navigateur ne connaît pas la valeur de l'attribut {{htmlattrxref("type","input")}} d'un élément {{HTMLElement("input")}}, il prendra une valeur `text` en recours.
+Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon dont ils simplifient est grandement prévisible. Si un navigateur ne connaît pas la valeur de l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) d'un élément {{HTMLElement("input")}}, il prendra une valeur `text` en recours.
 
 ```html
 <label for="myColor">
@@ -110,7 +110,7 @@ input.number {
 
 Il y a deux manières de définir un bouton dans un formulaire HTML&nbsp;:
 
-- un élément {{HTMLElement("input")}} avec un attribut {htmlattrxref("type","input")}} défini avec une des valeurs `button`, `submit`, `reset` ou `image`
+- un élément {{HTMLElement("input")}} avec un attribut [`type`](/fr/docs/HTML/Element/input#type) défini avec une des valeurs `button`, `submit`, `reset` ou `image`
 - un élément {{HTMLElement("button")}}
 
 L'élément {{HTMLElement("input")}} peut rendre les choses compliquées si vous voulez appliquer des CSS avec un sélecteur d'élément&nbsp;:
@@ -139,8 +139,8 @@ input.button {
 
 L'élément {{HTMLElement("button")}} présente deux problèmes potentiels&nbsp;:
 
-- un bogue dans certaines anciennes versions d'Internet Explorer. Lorsque l'utilisateur clique sur le bouton, ce n'est pas le contenu de l'attribut {{htmlattrxref("value", "button")}} qui est envoyé, mais le contenu HTML disponible entre balises de début et de fin de l'élément {{HTMLElement("button")}}. Ce n'est un problème que si vous voulez envoyer une telle valeur, par exemple si le traitement des données dépend du bouton sur lequel l'utilisateur clique.
-- certains navigateurs très anciens n'utilisent pas `submit` comme valeur par défaut pour l'attribut {{htmlattrxref("type","button")}}, donc il est recommandé de toujours définir l'attribut {{htmlattrxref("type","button")}} pour les éléments {{HTMLElement("button")}}.
+- un bogue dans certaines anciennes versions d'Internet Explorer. Lorsque l'utilisateur clique sur le bouton, ce n'est pas le contenu de l'attribut [`value`](/fr/docs/Web/HTML/Element/button#value) qui est envoyé, mais le contenu HTML disponible entre balises de début et de fin de l'élément {{HTMLElement("button")}}. Ce n'est un problème que si vous voulez envoyer une telle valeur, par exemple si le traitement des données dépend du bouton sur lequel l'utilisateur clique.
+- certains navigateurs très anciens n'utilisent pas `submit` comme valeur par défaut pour l'attribut [`type`](/fr/docs/Web/HTML/Element/button#type), donc il est recommandé de toujours définir l'attribut [`type`](/fr/docs/Web/HTML/Element/button#type) pour les éléments {{HTMLElement("button")}}.
 
 ```html
 <!-- Cliquer sur ce boutton envoie «&nbsp;<em>Do A</em>&nbsp;» au lieu de «&nbsp;A&nbsp;» dans certains cas -->

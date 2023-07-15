@@ -1,6 +1,9 @@
 ---
-title: HTMLLabelElement.form
+title: "HTMLLabelElement: form プロパティ"
+short-title: form
 slug: Web/API/HTMLLabelElement/form
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}

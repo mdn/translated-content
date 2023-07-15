@@ -1,10 +1,7 @@
 ---
 title: Ajouter un bouton à la barre d'outils
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
-tags:
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
-original_slug: Mozilla/Add-ons/WebExtensions/Ajouter_un_bouton_a_la_barre_d_outils
 ---
 
 {{AddonSidebar}}

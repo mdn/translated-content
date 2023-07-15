@@ -12,4 +12,4 @@ Um endereço IP é um número atribuído a cada dispositivo conectado a uma rede
 
 ### General knowledge
 
-- {{interwiki("wikipedia", "Endereço IP", "Endereço IP")}} na Wikipedia
+- [Endereço IP](https://pt.wikipedia.org/wiki/Endereço_IP) na Wikipedia

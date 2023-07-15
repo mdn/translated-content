@@ -106,7 +106,7 @@ El campo temporal puede aparecer con el mismo estilo como el texto ingresado por
 
 ### Etiquetas
 
-El texto provisional no es un reemplazo para el elemento {{htmlelement("label")}}. Sin una etiqueta que ha sido programaticamente asociada con la entrada usando una combinación de los atributos {{htmlattrxref("for", "label")}} y {{htmlattrxref("id")}}, tecnología asistiva como los lectores de pantalla no pueden leer los elementos {{htmlelement("input")}}.
+El texto provisional no es un reemplazo para el elemento {{htmlelement("label")}}. Sin una etiqueta que ha sido programaticamente asociada con la entrada usando una combinación de los atributos [`for`](/es/docs/Web/HTML/Element/label#for) y [`id`](/es/docs/Web/HTML/Global_attributes#id), tecnología asistiva como los lectores de pantalla no pueden leer los elementos {{htmlelement("input")}}.
 
 - [Sugerencias básicas de formularios (MDN Basic form hints)](/es/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
 - [Los textos provisionales en los campos del formulario son dañinos (Placeholders in Form Fields Are Harmful) — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
