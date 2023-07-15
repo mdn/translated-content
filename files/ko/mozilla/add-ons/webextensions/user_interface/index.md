@@ -21,7 +21,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action"
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action"
           >Toolbar button</a
         >
         (browser action)
@@ -41,7 +41,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
       <td>
         Toolbar button with a
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
           >popup</a
         >
       </td>
@@ -60,7 +60,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions"
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions"
           >Address bar button</a
         >
         (page action)
@@ -80,7 +80,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
       <td>
         Address bar button with a
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
           >popup</a
         >
       </td>
@@ -99,7 +99,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items"
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items"
           >Context menu item</a
         >
       </td>
@@ -119,7 +119,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
           >Sidebar</a
         >
       </td>
@@ -136,7 +136,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
           >Options page</a
         >
       </td>
@@ -155,7 +155,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages"
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages"
           >Extension page</a
         >
       </td>
@@ -173,7 +173,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications"
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications"
           >Notification</a
         >
       </td>
@@ -193,7 +193,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
           >Address bar suggestion</a
         >
       </td>
@@ -210,7 +210,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
+          href="/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
           >Developer tools panel</a
         >
       </td>
@@ -231,7 +231,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
 The following how-to guides provide step-by-step guidance to creating some of these user interface options:
 
 - [Accessibility guidelines](https://extensionworkshop.com/documentation/develop/build-an-accessible-extension/)
-- [Add a button to the toolbar](/en-US/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
-- [Browser styles](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
-- [Extending the developer tools](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
-- [Implement a settings page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
+- [Add a button to the toolbar](/ko/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
+- [Browser styles](/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
+- [Extending the developer tools](/ko/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
+- [Implement a settings page](/ko/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)

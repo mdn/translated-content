@@ -80,7 +80,7 @@ Background Tasks API 는 단 하나의 새 인터페이스를 추가합니다:
 
 ```html
 <p>
-  Demonstration of using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Tasks_API">
+  Demonstration of using <a href="https://developer.mozilla.org/ko/docs/Web/API/Background_Tasks_API">
   cooperatively scheduled background tasks</a> using the <code>requestIdleCallback()</code>
   method.
 </p>
@@ -421,7 +421,7 @@ function logTaskHandler(data) {
 
 사용자가 시작 버튼을 클릭하면 `decodeTechnoStuff()` 함수가 호출되며 모든것이 시작됩니다.
 
-The `[getRandomIntInclusive()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive)` method comes from the examples for {{jsxref("Math.random()")}}; we'll just link to it below but it needs to be included here for the example to work.
+The `[getRandomIntInclusive()](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/random?document_saved=true#Getting_a_random_integer_between_two_values_inclusive)` method comes from the examples for {{jsxref("Math.random()")}}; we'll just link to it below but it needs to be included here for the example to work.
 
 ```js
 function getRandomIntInclusive(min, max) {

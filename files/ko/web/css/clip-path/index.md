@@ -52,13 +52,13 @@ clip-path: unset;
 - `<geometry-box>`
   - : `<basic-shape>`와 함께 지정하면, `<basic-shape>`의 참조 박스를 정의합니다. 단독으로 지정한 경우, 값으로 주어진 상자와 그 상자의 모서리 형태({{cssxref("border-radius")}} 등)를 클리핑 패스로 적용합니다. 가능한 값은 다음과 같습니다.
 - `margin-box`
-  - : [바깥 여백 상자](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#margin-box)를 참조로 사용합니다.
+  - : [바깥 여백 상자](/ko/docs/Web/CSS/CSS_Shapes/From_box_values#margin-box)를 참조로 사용합니다.
 - `border-box`
-  - : [테두리 상자](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#border-box)를 참조로 사용합니다.
+  - : [테두리 상자](/ko/docs/Web/CSS/CSS_Shapes/From_box_values#border-box)를 참조로 사용합니다.
 - `padding-box`
-  - : [안쪽 여백 상자](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#padding-box)를 참조로 사용합니다.
+  - : [안쪽 여백 상자](/ko/docs/Web/CSS/CSS_Shapes/From_box_values#padding-box)를 참조로 사용합니다.
 - `content-box`
-  - : [콘텐츠 상자](/en-US/docs/Web/CSS/CSS_Shapes/From_box_values#content-box)를 참조로 사용합니다.
+  - : [콘텐츠 상자](/ko/docs/Web/CSS/CSS_Shapes/From_box_values#content-box)를 참조로 사용합니다.
 - `fill-box`
   - : 객체의 바운딩 상자를 참조로 사용합니다.
 - `stroke-box`
@@ -561,7 +561,7 @@ clipPathSelect.addEventListener("change", (evt) => {
 
 - [Shapes in clipping and masking – and how to use them](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
 - CSS properties: {{cssxref("mask")}}, {{cssxref("filter")}}
-- [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Applying SVG effects to HTML content](/ko/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
 - SVG attributes:
 
   - {{SVGAttr("clip-path")}}

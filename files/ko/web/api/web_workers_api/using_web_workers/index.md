@@ -229,7 +229,7 @@ Workers are considered to have their own execution context, distinct from the do
 Content-Security-Policy: script-src 'self'
 ```
 
-Among other things, this will prevent any scripts it includes from using [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). However, if the script constructs a worker, code running in the worker's context _will_ be allowed to use `eval()`.
+Among other things, this will prevent any scripts it includes from using [`eval()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/eval). However, if the script constructs a worker, code running in the worker's context _will_ be allowed to use `eval()`.
 
 To specify a content security policy for the worker, set a [Content-Security-Policy](/ko/docs/Web/HTTP/Headers/Content-Security-Policy) response header for the request which delivered the worker script itself.
 
@@ -798,7 +798,7 @@ The main thing you _can't_ do in a Worker is directly affect the parent page. Th
 
 ## See also
 
-- [`Worker`](/en-US/docs/Web/API/Worker) interface
-- [`SharedWorker`](/en-US/docs/Web/API/SharedWorker) interface
+- [`Worker`](/ko/docs/Web/API/Worker) interface
+- [`SharedWorker`](/ko/docs/Web/API/SharedWorker) interface
 - [Functions available to workers](/ko/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
 - [Advanced concepts and examples](/ko/docs/Web/API/Web_Workers_API/Using_web_workers)

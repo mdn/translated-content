@@ -253,7 +253,7 @@ _`Document`는 {{domxref("Node")}}와 {{domxref("EventTarget")}} 인터페이스
 `Document` 인터페이스는 {{domxref("XPathEvaluator")}} 인터페이스를 확장합니다.
 
 - {{domxref("document.createExpression()")}}
-  - : 나중에 (여러 번) 평가할 수 있도록 [`XPathExpression`](/en-US/docs/XPathExpression)을 컴파일합니다.
+  - : 나중에 (여러 번) 평가할 수 있도록 [`XPathExpression`](/ko/docs/XPathExpression)을 컴파일합니다.
 - {{domxref("document.createNSResolver()")}}
   - : {{domxref("XPathNSResolver")}} 객체를 생성합니다.
 - {{domxref("document.evaluate()")}}

@@ -156,7 +156,7 @@ Line 5 checks the status code after the transaction is completed. If the result 
 
 ### Example: Synchronous HTTP request from a `Worker`
 
-One of the few cases in which a synchronous request does not usually block execution is the use of `XMLHttpRequest` within a [`Worker`](/en-US/docs/Web/API/Worker).
+One of the few cases in which a synchronous request does not usually block execution is the use of `XMLHttpRequest` within a [`Worker`](/ko/docs/Web/API/Worker).
 
 **`example.html`** (the main page):
 
@@ -179,13 +179,13 @@ One of the few cases in which a synchronous request does not usually block execu
 </html>
 ```
 
-**`myFile.txt`** (the target of the synchronous [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) invocation):
+**`myFile.txt`** (the target of the synchronous [`XMLHttpRequest`](/ko/docs/Web/API/XMLHttpRequest) invocation):
 
 ```
 Hello World!!
 ```
 
-**`myTask.js`** (the [`Worker`](/en-US/docs/Web/API/Worker)):
+**`myTask.js`** (the [`Worker`](/ko/docs/Web/API/Worker)):
 
 ```js
 self.onmessage = function (event) {
@@ -236,4 +236,4 @@ function logData() {
 - [`XMLHttpRequest`](/ko/docs/Web/API/XMLHttpRequest)
 - [Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [AJAX](/ko/docs/Web/Guide/AJAX)
-- [`navigator.sendBeacon`](/en-US/docs/Web/API/Navigator/sendBeacon)
+- [`navigator.sendBeacon`](/ko/docs/Web/API/Navigator/sendBeacon)

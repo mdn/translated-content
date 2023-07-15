@@ -285,7 +285,7 @@ stopEvent는 이벤트 객체 메서드인 {{domxref("event.stopPropagation")}}�
 
 ## Example 7: 이벤트 객체 속성 표시
 
-이번 예제에서는 DOM 메서드를 이용해 {{domxref("window.onload")}} {{domxref("event")}} 객체의 모든 속성과 값들을 테이블에 표시하는 방법과, 객체의 속성을 반복하여 값을 가져오는 [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 루프의 유용한 사용법을 보여줍니다.
+이번 예제에서는 DOM 메서드를 이용해 {{domxref("window.onload")}} {{domxref("event")}} 객체의 모든 속성과 값들을 테이블에 표시하는 방법과, 객체의 속성을 반복하여 값을 가져오는 [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in) 루프의 유용한 사용법을 보여줍니다.
 
 이벤트 객체들의 특성은 브라우저 마다 상당히 다르며, 표준 속성은 [WHATWG DOM Standard](https://dom.spec.whatwg.org)에 있습니다. 하지만 많은 브라우저에서 이 기능을 크게 확장하고 있습니다.
 

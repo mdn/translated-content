@@ -68,6 +68,6 @@ window.addEventListener('scroll', function(e) {
 
 ## 같이 보기
 
-- [Document: `scrollend` event](/en-US/docs/Web/API/Document/scrollend_event)
-- [Element: `scroll` event](/en-US/docs/Web/API/Element/scroll_event)
-- [Element: `scrollend` event](/en-US/docs/Web/API/Element/scrollend_event)
+- [Document: `scrollend` event](/ko/docs/Web/API/Document/scrollend_event)
+- [Element: `scroll` event](/ko/docs/Web/API/Element/scroll_event)
+- [Element: `scrollend` event](/ko/docs/Web/API/Element/scrollend_event)

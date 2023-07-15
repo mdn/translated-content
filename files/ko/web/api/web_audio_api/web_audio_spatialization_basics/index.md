@@ -93,7 +93,7 @@ const distanceModel = 'linear';
 const maxDistance = 10000;
 ```
 
-또한 참조 거리 ([`refDistance`](/en-US/docs/Web/API/PannerNode/refDistance))가 있는데, 이는 거리 모델에 의해 사용됩니다. 이 또한 기본값 `1`로 설정할 수 있습니다.
+또한 참조 거리 ([`refDistance`](/ko/docs/Web/API/PannerNode/refDistance))가 있는데, 이는 거리 모델에 의해 사용됩니다. 이 또한 기본값 `1`로 설정할 수 있습니다.
 
 ```js
 const refDistance = 1;

@@ -126,7 +126,7 @@ General support for Live Regions was added to JAWS on version 10.0. In Windows E
 The Paciello Group has some [information about the state of the support of Live Regions](https://www.paciellogroup.com/blog/2014/03/screen-reader-support-aria-live-regions/)(2014). Paul J. Adam has researched [the support of Aria-Atomic and Aria-Relevant](http://pauljadam.com/demos/aria-atomic-relevant.html) in particular.
 
 1. **`aria-atomic`**: The `aria-atomic=BOOLEAN` is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes. The possible settings are: `false` or `true`. The default setting is `false`.
-2. **[`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)**
+2. **[`aria-relevant`](/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)**
 
     : The `aria-relevant=[LIST_OF_CHANGES]` is used to set what types of changes are relevant to a live region. The possible settings are one or more of: `additions`, `removals`, `text`, `all`. The default setting is: `additions text`.
 

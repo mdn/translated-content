@@ -16,7 +16,7 @@ slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 - `querySelectorAll`
   - : 노드의 하위 트리 안에서 일치하는 모든 `Element`를 포함한 {{domxref("NodeList")}}를 반환합니다. 결과가 없으면 빈 `NodeList`를 반환합니다.
 
-> **참고:** The [`NodeList`](/en-US/docs/DOM/NodeList) returned by [`querySelectorAll()`](/en-US/docs/DOM/Element.querySelectorAll) is not live, which means that changes in the DOM are not reflected in the collection. This is different from other DOM querying methods that return live node lists.
+> **참고:** The [`NodeList`](/ko/docs/DOM/NodeList) returned by [`querySelectorAll()`](/ko/docs/DOM/Element.querySelectorAll) is not live, which means that changes in the DOM are not reflected in the collection. This is different from other DOM querying methods that return live node lists.
 
 You may find examples and details by reading the documentation for the [`querySelector()`](/ko/docs/DOM/Element.querySelector) and [`querySelectorAll()`](/ko/docs/DOM/Element.querySelectorAll) methods, as well as in the article [Code snippets for querySelector](/ko/docs/Code_snippets/QuerySelector).
 

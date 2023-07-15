@@ -53,7 +53,7 @@ vertical-align: unset;
 다음 값은 요소를 부모 요소에 대해 수직으로 정렬합니다.
 
 - `baseline`
-  - : 부모의 baseline에 맞추어 해당 엘리먼트의 baseline 을 정렬합니다. 몇몇 [replaced elements](/en-US/docs/Web/CSS/Replaced_element)의 베이스라인은 예를들면{{HTMLElement("textarea")}}은 HTML 명세에 정의되어 있지 않으므로, 이 키워드는 브라우저마다 다른 결과를 보여줍니다.
+  - : 부모의 baseline에 맞추어 해당 엘리먼트의 baseline 을 정렬합니다. 몇몇 [replaced elements](/ko/docs/Web/CSS/Replaced_element)의 베이스라인은 예를들면{{HTMLElement("textarea")}}은 HTML 명세에 정의되어 있지 않으므로, 이 키워드는 브라우저마다 다른 결과를 보여줍니다.
 - `sub`
   - : 해당 엘리먼트의 baseline을 부모의 subscript-baseline으로 정렬합니다.
 - `super`

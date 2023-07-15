@@ -111,4 +111,4 @@ You can [try out](https://cors-image-example.glitch.me/) or [remix](https://glit
 - [HTML Specification - the `crossorigin` attribute](http://whatwg.org/html#attr-img-crossorigin)
 - [Web Storage API](/ko/docs/Web/API/Web_Storage_API)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML/")}}
+{{QuickLinksWithSubpages("/ko/docs/Web/HTML/")}}

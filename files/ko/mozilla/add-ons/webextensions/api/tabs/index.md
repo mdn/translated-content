@@ -34,7 +34,7 @@ You can use most of this API without any special permission. However:
 - {{WebExtAPIRef("tabs.MutedInfo")}}
   - : This object contains a boolean indicating whether the tab is muted, and the reason for the last state change.
 - {{WebExtAPIRef("tabs.PageSettings")}}
-  - : Used to control how a tab is rendered as a PDF by the [`tabs.saveAsPDF()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF) method.
+  - : Used to control how a tab is rendered as a PDF by the [`tabs.saveAsPDF()`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF) method.
 - {{WebExtAPIRef("tabs.Tab")}}
   - : This type contains information about a tab.
 - {{WebExtAPIRef("tabs.TabStatus")}}
@@ -60,7 +60,7 @@ You can use most of this API without any special permission. However:
 - {{WebExtAPIRef("tabs.captureVisibleTab()")}}
   - : Creates a data URL encoding an image of the visible area of the currently active tab in the specified window.
 - {{WebExtAPIRef("tabs.connect()")}}
-  - : Sets up a messaging connection between the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) running in the specified tab.
+  - : Sets up a messaging connection between the extension's background scripts (or other privileged scripts, such as popup scripts or options page scripts) and any [content scripts](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) running in the specified tab.
 - {{WebExtAPIRef("tabs.create()")}}
   - : Creates a new tab.
 - {{WebExtAPIRef("tabs.detectLanguage()")}}
@@ -76,9 +76,9 @@ You can use most of this API without any special permission. However:
 - {{WebExtAPIRef("tabs.getAllInWindow()")}} {{deprecated_inline}}
   - : Gets details about all tabs in the specified window.
 - {{WebExtAPIRef("tabs.getCurrent()")}}
-  - : Gets information about the tab that this script is running in, as a [`tabs.Tab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) object.
+  - : Gets information about the tab that this script is running in, as a [`tabs.Tab`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) object.
 - {{WebExtAPIRef("tabs.getSelected()")}} {{deprecated_inline}}
-  - : Gets the tab that is selected in the specified window. **Deprecated: use [`tabs.query({active: true})`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) instead.**
+  - : Gets the tab that is selected in the specified window. **Deprecated: use [`tabs.query({active: true})`](/ko/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) instead.**
 - {{WebExtAPIRef("tabs.getZoom()")}}
   - : Gets the current zoom factor of the specified tab.
 - {{WebExtAPIRef("tabs.getZoomSettings()")}}

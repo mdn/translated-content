@@ -5,7 +5,7 @@ slug: Web/API/Document/adoptNode
 
 {{ ApiRef("DOM") }}
 
-외부 문서로부터 노드를 가져온다. 해당 노드와 그 하위트리는 기존의 문서에서 지워지고 해당 노드의 [`ownerDocument`](/en-US/docs/DOM/Node.ownerDocument) 는 현재 문서로 바뀐다. 그리고 그 노드는 현재의 문서에 삽입된다.
+외부 문서로부터 노드를 가져온다. 해당 노드와 그 하위트리는 기존의 문서에서 지워지고 해당 노드의 [`ownerDocument`](/ko/docs/DOM/Node.ownerDocument) 는 현재 문서로 바뀐다. 그리고 그 노드는 현재의 문서에 삽입된다.
 
 **Gecko 1.9 (Firefox 3)부터 지원**
 

@@ -10,11 +10,11 @@ slug: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 | ------------- | ----------------------------------------------------------------------------------------- |
 | Cancelable    | No                                                                                        |
 | Interface     | {{domxref("NotificationEvent")}}                                              |
-| Event handler | [`onnotificationclick`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclick) |
+| Event handler | [`onnotificationclick`](/ko/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclick) |
 
 ## Examples
 
-[`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) 메소드 내에서 `notificationclick` 이벤트를 사용할 수 있다:
+[`addEventListener`](/ko/docs/Web/API/EventTarget/addEventListener) 메소드 내에서 `notificationclick` 이벤트를 사용할 수 있다:
 
 ```js
 self.addEventListener('notificationclick', function(event) {
@@ -37,7 +37,7 @@ self.addEventListener('notificationclick', function(event) {
 });
 ```
 
-또는 [`onnotificationclick`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclick) 이벤트 핸들러 속성을 사용할 수 있다:
+또는 [`onnotificationclick`](/ko/docs/Web/API/ServiceWorkerGlobalScope/onnotificationclick) 이벤트 핸들러 속성을 사용할 수 있다:
 
 ```js
 self.onnotificationclick = function(event) {

@@ -305,4 +305,4 @@ setCss();
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
+- [Fundamental text and font styling](/ko/docs/Learn/CSS/Styling_text/Fundamentals)

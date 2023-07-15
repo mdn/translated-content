@@ -35,7 +35,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
   </tbody>
 </table>
 
-Instructs the browser to load [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into web pages whose URL matches a given pattern.
+Instructs the browser to load [content scripts](/ko/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) into web pages whose URL matches a given pattern.
 
 This key is an array. Each item is an object which:
 
@@ -131,7 +131,7 @@ Details of all the keys you can include are given in the table below.
       <td><code>Array</code></td>
       <td>
         An array of
-        <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
+        <a href="/ko/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
           >match patterns</a
         >. See <a href="#matching_url_patterns">Matching URL patterns</a> below.
       </td>
@@ -232,7 +232,7 @@ Details of all the keys you can include are given in the table below.
       <td>
         <p>
           An array of
-          <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
+          <a href="/ko/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
             >match patterns</a
           >. See
           <a href="#matching_url_patterns">Matching URL patterns</a> below.
@@ -287,9 +287,9 @@ Details of all the keys you can include are given in the table below.
 The `"content_scripts"` key attaches content scripts to documents based on URL matching: if the document's URL matches the specification in the key, then the script will be attached. There are four properties inside `"content_scripts"` that you can use for this specification:
 
 - `matches`
-  - : an array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
+  - : an array of [match patterns](/ko/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 - `exclude_matches`
-  - : an array of [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
+  - : an array of [match patterns](/ko/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 - `include_globs`
   - : an array of [globs](#globs)
 - `exclude_globs`

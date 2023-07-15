@@ -99,4 +99,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 ## See also
 
-- Related events: [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event), [`load`](/en-US/docs/Web/API/Window/load_event), [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event), [`unload`](/en-US/docs/Web/API/Window/unload_event)
+- Related events: [`DOMContentLoaded`](/ko/docs/Web/API/Document/DOMContentLoaded_event), [`load`](/ko/docs/Web/API/Window/load_event), [`beforeunload`](/ko/docs/Web/API/Window/beforeunload_event), [`unload`](/ko/docs/Web/API/Window/unload_event)
