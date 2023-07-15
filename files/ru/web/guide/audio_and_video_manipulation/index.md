@@ -363,4 +363,4 @@ Libraries currently exist for the following formats :
 - More info on [Spatial Audio](/ru/docs/Web/API/AudioContext.createPanner)
 - [Web media technologies](/ru/docs/Web/Media)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Apps/Fundamentals/")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/Apps/Fundamentals/")}}
