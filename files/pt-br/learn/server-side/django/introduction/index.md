@@ -16,7 +16,7 @@ Neste primeiro artigo do Django, respondemos a pergunta "O que é o Django?" e d
         <p>
           Conhecimentos básicos em computação. Um entendimento geral de
               <a
-                href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps"
+                href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/First_steps"
                 >programação de websites do lado do servidor</a
               >
               e, em particular, a mecânica de

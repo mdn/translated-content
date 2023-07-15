@@ -14,7 +14,7 @@ Veremos agora, detalhadamente, a funcionalidade dos diferentes widgets dos formu
       <th scope="row">Pré-requisitos:</th>
       <td>
         Alfabetização básica em informática e um
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >entendimento básico de HTML.</a
         >
       </td>
@@ -462,7 +462,7 @@ beans.oninput = function() {
 }
 ```
 
-Here we store references to the range input and the span in two variables, then we immediately set the span's [`textContent`](/en-US/docs/Web/API/Node/textContent) to the current `value` of the input. Finally, we set up an `oninput` event handler so that every time the range slider is moved, the span `textContent` is updated to the new input value.
+Here we store references to the range input and the span in two variables, then we immediately set the span's [`textContent`](/pt-BR/docs/Web/API/Node/textContent) to the current `value` of the input. Finally, we set up an `oninput` event handler so that every time the range slider is moved, the span `textContent` is updated to the new input value.
 
 `range` inputs are not supported in versions of Internet Explorer below 10.
 

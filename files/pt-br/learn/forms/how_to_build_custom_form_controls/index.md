@@ -6,7 +6,7 @@ original_slug: Web/Guide/HTML/Forms/How_to_build_custom_form_widgets
 
 {{LearnSidebar}}
 
-There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to [perform advanced styling](/en-US/docs/Learn/Forms/Advanced_form_styling) on some controls such as the {{HTMLElement("select")}} element or if you want to provide custom behaviors, you may consider building your own controls.
+There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to [perform advanced styling](/pt-BR/docs/Learn/Forms/Advanced_form_styling) on some controls such as the {{HTMLElement("select")}} element or if you want to provide custom behaviors, you may consider building your own controls.
 
 In this article, we will discuss how to build a custom control. To that end, we will work with an example: rebuilding the {{HTMLElement("select")}} element. We will also discuss how, when, and whether building your own control makes sense, and what to consider when building a control is a requirement.
 
@@ -304,7 +304,7 @@ So here's the result with our three states:
     <tr>
       <td colspan="3">
         <a
-          href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1"
+          href="/pt-BR/docs/Learn/Forms/How_to_build_custom_form_controls/Example_1"
           >Check out the source code</a
         >
       </td>
@@ -409,7 +409,7 @@ window.addEventListener("load", () => {
     <tr>
       <td colspan="2">
         <a
-          href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2"
+          href="/pt-BR/docs/Learn/Forms/How_to_build_custom_form_controls/Example_2"
           >Check out the source code</a
         >
       </td>
@@ -570,7 +570,7 @@ At that point, our control will change state according to our design, but its va
 | Live example                                                                                                |
 | ----------------------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}} |
-| [Check out the source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)            |
+| [Check out the source code](/pt-BR/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)            |
 
 ### Handling the control's value
 
@@ -666,14 +666,14 @@ window.addEventListener('load', () => {
 });
 ```
 
-In the code above, it's worth noting the use of the [`tabIndex`](/en-US/docs/Web/API/HTMLElement/tabIndex) property. Using this property is necessary to ensure that the native control will never gain focus, and to make sure that our custom control gains focus when the user uses their keyboard or mouse.
+In the code above, it's worth noting the use of the [`tabIndex`](/pt-BR/docs/Web/API/HTMLElement/tabIndex) property. Using this property is necessary to ensure that the native control will never gain focus, and to make sure that our custom control gains focus when the user uses their keyboard or mouse.
 
 With that, we're done! Here's the result:
 
 | Live example                                                                                                |
 | ----------------------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}} |
-| [Check out the source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)            |
+| [Check out the source code](/pt-BR/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)            |
 
 But wait a second, are we really done?
 
@@ -681,15 +681,15 @@ But wait a second, are we really done?
 
 We have built something that works and though we're far from a fully-featured select box, it works nicely. But what we've done is nothing more than fiddle with the DOM. It has no real semantics, and even though it looks like a select box, from the browser's point of view it isn't one, so assistive technologies won't be able to understand it's a select box. In short, this pretty new select box isn't accessible!
 
-Fortunately, there is a solution and it's called [ARIA](/en-US/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.
+Fortunately, there is a solution and it's called [ARIA](/pt-BR/docs/Web/Accessibility/ARIA). ARIA stands for "Accessible Rich Internet Application", and it's [a W3C specification](https://www.w3.org/TR/wai-aria/) specifically designed for what we are doing here: making web applications and custom controls accessible. It's basically a set of attributes that extend HTML so that we can better describe roles, states and properties as though the element we've just devised was the native element it tries to pass for. Using these attributes can be done by editing the HTML markup. We also update the ARIA attributes via JavaScript as the user updates their selected value.
 
 ### The `role` attribute
 
-The key attribute used by [ARIA](/en-US/docs/Web/Accessibility/ARIA) is the [`role`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute. The [`role`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the `option` role).
+The key attribute used by [ARIA](/pt-BR/docs/Web/Accessibility/ARIA) is the [`role`](/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute. The [`role`](/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute accepts a value that defines what an element is used for. Each role defines its own requirements and behaviors. In our example, we will use the [`listbox`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/listbox_role) role. It's a "composite role", which means elements with that role expect to have children, each with a specific role (in this case, at least one child with the `option` role).
 
 It's also worth noting that ARIA defines roles that are applied by default to standard HTML markup. For example, the {{HTMLElement("table")}} element matches the role `grid`, and the {{HTMLElement("ul")}} element matches the role `list`. Because we use a {{HTMLElement("ul")}} element, we want to make sure the `listbox` role of our control will supersede the `list` role of the {{HTMLElement("ul")}} element. To that end, we will use the role `presentation`. This role is designed to let us indicate that an element has no special meaning, and is used solely to present information. We will apply it to our {{HTMLElement("ul")}} element.
 
-To support the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role) role, we just have to update our HTML like this:
+To support the [`listbox`](/pt-BR/docs/Web/Accessibility/ARIA/Roles/listbox_role) role, we just have to update our HTML like this:
 
 ```html
 <!-- We add the role="listbox" attribute to our top element -->
@@ -707,11 +707,11 @@ To support the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role
 </div>
 ```
 
-> **Note:** Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in your CSS .
+> **Note:** Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/pt-BR/docs/Web/CSS/Attribute_selectors) in your CSS .
 
 ### The `aria-selected` attribute
 
-Using the [`role`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute is not enough. [ARIA](/en-US/docs/Web/Accessibility/ARIA) also provides many states and property attributes. The more and better you use them, the better your control will be understood by assistive technologies. In our case, we will limit our usage to one attribute: `aria-selected`.
+Using the [`role`](/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques) attribute is not enough. [ARIA](/pt-BR/docs/Web/Accessibility/ARIA) also provides many states and property attributes. The more and better you use them, the better your control will be understood by assistive technologies. In our case, we will limit our usage to one attribute: `aria-selected`.
 
 The `aria-selected` attribute is used to mark which option is currently selected; this lets assistive technologies inform the user what the current selection is. We will use it dynamically with JavaScript to mark the selected option each time the user chooses one. To that end, we need to revise our `updateValue()` function:
 
@@ -742,7 +742,7 @@ Here is the final result of all these changes (you'll get a better feel for this
 | Live example                                                                                                |
 | ----------------------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}} |
-| [Check out the final source code](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)      |
+| [Check out the final source code](/pt-BR/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)      |
 
 If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise.
 
@@ -845,20 +845,20 @@ If you do create alternative controls via radio buttons, your own JavaScript, or
 
 ### Learning path
 
-- [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form)
-- [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [The native form widgets](/en-US/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
-- [Additional form controls](/en-US/docs/Learn/Forms/Other_form_controls)
-- [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
-- [Styling HTML forms](/en-US/docs/Learn/Forms/Styling_web_forms)
-- [Form data validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Your first HTML form](/pt-BR/docs/Learn/Forms/Your_first_form)
+- [How to structure an HTML form](/pt-BR/docs/Learn/Forms/How_to_structure_a_web_form)
+- [The native form widgets](/pt-BR/docs/Learn/Forms/Basic_native_form_controls)
+- [HTML5 input types](/pt-BR/docs/Learn/Forms/HTML5_input_types)
+- [Additional form controls](/pt-BR/docs/Learn/Forms/Other_form_controls)
+- [UI pseudo-classes](/pt-BR/docs/Learn/Forms/UI_pseudo-classes)
+- [Styling HTML forms](/pt-BR/docs/Learn/Forms/Styling_web_forms)
+- [Form data validation](/pt-BR/docs/Learn/Forms/Form_validation)
+- [Sending form data](/pt-BR/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics
 
-- [Sending forms through JavaScript](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Sending forms through JavaScript](/pt-BR/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [How to build custom form widgets](/pt-BR/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [HTML forms in legacy browsers](/pt-BR/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [Advanced styling for HTML forms](/pt-BR/docs/Learn/Forms/Advanced_form_styling)
+- [Property compatibility table for form widgets](/pt-BR/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

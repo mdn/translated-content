@@ -13,11 +13,11 @@ Nos primórdios do web design, páginas eram criadas para serem visualizadas em 
       <th scope="row">Prerrequisitos:</th>
       <td>
         HTML básico (estude
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), e uma idea de como o CSS funciona (estude
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a> e
-        <a href="/en-US/docs/Learn/CSS/Building_blocks">CSS building blocks</a
+        <a href="/pt-BR/docs/Learn/CSS/First_steps">CSS first steps</a> e
+        <a href="/pt-BR/docs/Learn/CSS/Building_blocks">CSS building blocks</a
         >.)
       </td>
     </tr>
@@ -190,7 +190,7 @@ img {
 
 There are obvious downsides to this approach. The image might be displayed a lot smaller than its intrinsic size, which is a waste of bandwidth — a mobile user may be downloading an image several times the size of what they actually see in the browser window. In addition, you may not want the same image aspect ratio on mobile as on desktop. For example, it might be nice to have a square image for mobile, but show the same scene as a landscape image on desktop. Or, acknowledging the smaller size of an image on mobile you might want to show a different image altogether, one which is more easily understood at a small screen size. These things can't be achieved by simply scaling down an image.
 
-Responsive Images, using the [`<picture>`](/en-US/docs/Web/HTML/Element/picture) element and the [`<img>`](/en-US/docs/Web/HTML/Element/img) `srcset` and `sizes` attributes solve both of these problems. You can provide multiple sizes along with "hints" (meta data that describes the screen size and resolution the image is best suited for), and the browser will choose the most appropriate image for each device, ensuring that a user will download an image size appropriate for the device they are using.
+Responsive Images, using the [`<picture>`](/pt-BR/docs/Web/HTML/Element/picture) element and the [`<img>`](/pt-BR/docs/Web/HTML/Element/img) `srcset` and `sizes` attributes solve both of these problems. You can provide multiple sizes along with "hints" (meta data that describes the screen size and resolution the image is best suited for), and the browser will choose the most appropriate image for each device, ensuring that a user will download an image size appropriate for the device they are using.
 
 You can also _art direct_ images used at different sizes, thus providing a different crop or completely different image to different screen sizes.
 
@@ -244,7 +244,7 @@ h1 {
 
 The problem with doing the above is that the user loses the ability to zoom any text set using the vw unit, as that text is always related to the size of the viewport. **Therefore you should never set text using viewport units alone**.
 
-There is a solution, and it involves using [`calc()`](/en-US/docs/Web/CSS/calc). If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
+There is a solution, and it involves using [`calc()`](/pt-BR/docs/Web/CSS/calc). If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
 
 ```css
 h1 {

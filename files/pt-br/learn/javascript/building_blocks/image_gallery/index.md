@@ -85,7 +85,7 @@ Você precisa:
 
 Em cada iteração de loop, você precisa adicionar um manipulador `onclick` ao atual `newImage` — isso deve:
 
-1. Encontre o valor do atributo `src` da imagem atual. Isto pode ser feito executando a função [`getAttribute()`](/en-US/docs/Web/API/Element/getAttribute) no `<img>` em cada caso e passando um parâmetro de `"src"` em cada caso. Mas como conseguir a imagem? O uso do `newImage.getAttribute()` não funcionará, pois o loop é concluído antes de os manipuladores de eventos serem aplicados; fazer desta forma resultaria no retorno do valor `src` do último `<img>` para todos os casos. Para resolver isso, tenha em mente que, no caso de cada manipulador de eventos, o `<img>` é o destino do manipulador. Que tal obter as informações do objeto de evento?
+1. Encontre o valor do atributo `src` da imagem atual. Isto pode ser feito executando a função [`getAttribute()`](/pt-BR/docs/Web/API/Element/getAttribute) no `<img>` em cada caso e passando um parâmetro de `"src"` em cada caso. Mas como conseguir a imagem? O uso do `newImage.getAttribute()` não funcionará, pois o loop é concluído antes de os manipuladores de eventos serem aplicados; fazer desta forma resultaria no retorno do valor `src` do último `<img>` para todos os casos. Para resolver isso, tenha em mente que, no caso de cada manipulador de eventos, o `<img>` é o destino do manipulador. Que tal obter as informações do objeto de evento?
 2. Rode uma função, passando o valor `src` retornado como um parâmetro. Você pode chamar essa função como quiser.
 3. Esta função do manipulador de eventos deve definir o valor do atributo `src` do `displayed-img <img>` para o valor `src` passado como um parâmetro. Já fornecemos uma linha que armazena uma referência ao `<img>` relevante em uma variável chamada `displayedImg`. Note que queremos uma função nomeada definida aqui.
 
@@ -94,7 +94,7 @@ Em cada iteração de loop, você precisa adicionar um manipulador `onclick` ao 
 Isso só deixa o nosso escurecer / clarear `<button>` — nós já fornecemos uma linha que armazena uma referência ao `<button>` em uma variável chamada `btn`. Você precisa adicionar um manipulador `onclick` que:
 
 1. Verifica o nome da classe atual definido no `<button>` — você pode novamente fazer isso usando `getAttribute()`.
-2. Se o nome da classe for `"dark"`, altera a classe `<button>` para `"light"` (usando [`setAttribute()`](/en-US/docs/Web/API/Element/setAttribute)), seu conteúdo de texto para "Lighten", e o {{cssxref("background-color")}} da sobreposição `<div>` para `"rgba(0,0,0,0.5)"`.
+2. Se o nome da classe for `"dark"`, altera a classe `<button>` para `"light"` (usando [`setAttribute()`](/pt-BR/docs/Web/API/Element/setAttribute)), seu conteúdo de texto para "Lighten", e o {{cssxref("background-color")}} da sobreposição `<div>` para `"rgba(0,0,0,0.5)"`.
 3. Se o nome da classe não for `"dark"`, a classe `<button>` será alterada para `"dark"`, o conteúdo de texto de volta para "Darken", e o {{cssxref("background-color")}} da sobreposição `<div>` para `"rgba(0,0,0,0)"`.
 
 As linhas seguintes fornecem uma base para alcançar as mudanças estipuladas nos pontos 2 e 3 acima.

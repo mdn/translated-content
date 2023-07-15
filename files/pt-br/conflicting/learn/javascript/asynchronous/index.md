@@ -81,7 +81,7 @@ Really good general support, although the exact support for callbacks in APIs de
 
 ## setTimeout()
 
-[`setTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) is a method that allows you to run a function after an arbitrary amount of time has passed.
+[`setTimeout()`](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) is a method that allows you to run a function after an arbitrary amount of time has passed.
 
 | Single delayed operation | Repeating operation      | Multiple sequential operations | Multiple simultaneous operations |
 | ------------------------ | ------------------------ | ------------------------------ | -------------------------------- |
@@ -129,7 +129,7 @@ When your code has the potential to take longer to run than the time interval yo
 
 ## setInterval()
 
-[`setInterval()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) is a method that allows you to run a function repeatedly with a set interval of time between each execution. Not as efficient as [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame), but allows you to choose a running rate/frame rate.
+[`setInterval()`](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) is a method that allows you to run a function repeatedly with a set interval of time between each execution. Not as efficient as [`requestAnimationFrame()`](/pt-BR/docs/Web/API/window/requestAnimationFrame), but allows you to choose a running rate/frame rate.
 
 | Single delayed operation | Repeating operation | Multiple sequential operations | Multiple simultaneous operations |
 | ------------------------ | ------------------- | ------------------------------ | -------------------------------- |
@@ -137,7 +137,7 @@ When your code has the potential to take longer to run than the time interval yo
 
 ### Code example
 
-The following function creates a new [`Date()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) object, extracts a time string out of it using [`toLocaleTimeString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString), and then displays it in the UI. We then run it once per second using `setInterval()`, creating the effect of a digital clock that updates once per second ([see this live](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html), and also [see the source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html)):
+The following function creates a new [`Date()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date) object, extracts a time string out of it using [`toLocaleTimeString()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString), and then displays it in the UI. We then run it once per second using `setInterval()`, creating the effect of a digital clock that updates once per second ([see this live](https://mdn.github.io/learning-area/javascript/asynchronous/loops-and-intervals/setinterval-clock.html), and also [see the source](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/loops-and-intervals/setinterval-clock.html)):
 
 ```js
 function displayTime() {
@@ -164,7 +164,7 @@ const createClock = setInterval(displayTime, 1000);
 
 ## requestAnimationFrame()
 
-[`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame) is a method that allows you to run a function repeatedly, and efficiently, at the best framerate available given the current browser/system. You should, if at all possible, use this instead of `setInterval()`/recursive `setTimeout()`, unless you need a specific framerate.
+[`requestAnimationFrame()`](/pt-BR/docs/Web/API/window/requestAnimationFrame) is a method that allows you to run a function repeatedly, and efficiently, at the best framerate available given the current browser/system. You should, if at all possible, use this instead of `setInterval()`/recursive `setTimeout()`, unless you need a specific framerate.
 
 | Single delayed operation | Repeating operation | Multiple sequential operations | Multiple simultaneous operations |
 | ------------------------ | ------------------- | ------------------------------ | -------------------------------- |

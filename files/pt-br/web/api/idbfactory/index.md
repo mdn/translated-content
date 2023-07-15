@@ -20,7 +20,7 @@ A interface IDBFactory, pertencente a [IndexedDB API](/pt-BR/docs/IndexedDB) , p
 
 ### Métodos Obsoletos
 
-- [`IDBFactory.open`](/en-US/docs/Web/API/IDBFactory.open-obsolete), a versão original
+- [`IDBFactory.open`](/pt-BR/docs/Web/API/IDBFactory.open-obsolete), a versão original
   - : Este método realizava [conexão com uma base de dados](/pt-BR/docs/IndexedDB#gloss_database_connection), ele ainda é usado em alguns navegadores.
 
 ## Exemplo

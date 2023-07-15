@@ -15,11 +15,11 @@ Agora vamos apresentar o Vue, o nosso terceiro frameworks. Neste artigo, examina
       <td>
         <p>
           Conhecimento com as liguagens
-          <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, e
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>, conhecimento do
+          <a href="/pt-BR/docs/Learn/HTML">HTML</a>,
+          <a href="/pt-BR/docs/Learn/CSS">CSS</a>, e
+          <a href="/pt-BR/docs/Learn/JavaScript">JavaScript</a>, conhecimento do
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/pt-BR/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
           >.
         </p>
@@ -56,7 +56,7 @@ Para uma boa comparação (mas potencialmente tendenciosa) entre o Vue e muitos 
 
 ## Installation
 
-To use Vue in an existing site, you can drop one of the following [`<script>`](/en-US/docs/Web/HTML/Element/script) elements onto a page. This allows you to start using Vue on existing sites, which is why Vue prides itself on being a progressive framework. This is a great option when migrating an existing project using a library like JQuery to Vue. With this method, you can use a lot of the core features of Vue, such as the attributes, custom components, and data-management.
+To use Vue in an existing site, you can drop one of the following [`<script>`](/pt-BR/docs/Web/HTML/Element/script) elements onto a page. This allows you to start using Vue on existing sites, which is why Vue prides itself on being a progressive framework. This is a great option when migrating an existing project using a library like JQuery to Vue. With this method, you can use a lot of the core features of Vue, such as the attributes, custom components, and data-management.
 
 - Development Script (Unoptimized, but includes console warnings. Great for development
 
@@ -233,7 +233,7 @@ If you navigate to the “local” address in a new browser tab (this should be 
 
 ## Making a couple of changes
 
-Let's make our first change to the app — we’ll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/en-US/docs/Web/HTML/Element/img) element from the template section:
+Let's make our first change to the app — we’ll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/pt-BR/docs/Web/HTML/Element/img) element from the template section:
 
 ```html
 <img alt="Vue logo" src="./assets/logo.png">
