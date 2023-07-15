@@ -93,7 +93,7 @@ FOV 是通过下列的值来定义的：
 - zNear: The distance from the middle of the user's head to the start of the visible FOV.
 - zFar: The distance from the middle of the user's head to the end of the visible FOV.
 
-更具 VR 硬件的不同，这些特性的值会略有不同，然而他们基本上分别都趋向于上下 53°，左右 47°，zNear 和 zFar 两个值可以在 0.1m 到 10000m 之间变换。
+根据 VR 硬件的不同，这些特性的值会略有不同，然而它们基本上分别都趋向于上下 53°，左右 47°，zNear 和 zFar 两个值可以在 0.1m 到 10000m 之间变换。
 
 不同的使用者将会为了达成尽量完美的视觉体验，而要求略有不同的特性数值。因此，我们有理由在使用者开始使用一个 APP 之前，对这些特性进行测算。你可以使用{{domxref("VREyeParameters")}} 接口，并使用 {{domxref("HMDVRDevice.setFieldOfView()")}} 方法设置新的值，以侦测当前的特性值。
 
