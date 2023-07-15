@@ -22,7 +22,7 @@ slug: Learn/JavaScript/First_steps/Variables
 
 ## 需要的工具
 
-在本文中，你将要输入一些代码来测试你对相关内容的理解。如果你是用的桌面浏览器，输入这些代码最好的地方是浏览器的 JavaScript 控制台，(参考[什么是浏览器开发工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)查看如何使用这些工具)。
+在本文中，你将要输入一些代码来测试你对相关内容的理解。如果你是用的桌面浏览器，输入这些代码最好的地方是浏览器的 JavaScript 控制台（参考[什么是浏览器开发工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)以查看如何使用这些工具）。
 
 当然，我们也提供了一个简单的 JavaScript 终端，嵌入在下文的页面中，以便你更容易的输入和测试这些代码。
 
