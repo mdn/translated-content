@@ -29,9 +29,9 @@ slug: Glossary/User_agent
 
 - [User agent](https://en.wikipedia.org/wiki/User_agent) on Wikipedia
 - {{domxref("Navigator/userAgent", "NavigatorID.userAgent")}}
-- [Browser detection using the user agent](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent)
+- [Browser detection using the user agent](/ko/docs/Web/HTTP/Browser_detection_using_the_user_agent)
 - {{RFC(2616, "", "14.43")}}: The `User-Agent` header
-- [Glossary:](/en-US/docs/Glossary)
+- [Glossary:](/ko/docs/Glossary)
 
   - {{Glossary("Browser")}}
 
