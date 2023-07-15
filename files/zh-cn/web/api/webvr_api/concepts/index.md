@@ -129,7 +129,7 @@ FOV 是通过下列的值来定义的：
 - 注意设定物体到摄像机之间的一般距离。OCULUS 建议的最小距离是 0.75m。
 - 如果使用者需要和场景中的物体进行互动，那么尽量使用一个指针——这将帮助他们精准和更加容易的指向那个物体。一般情况下，最少的视觉上的动作能提供给使用者最轻松的体验。
 
-In general, the path of least visual effort will give the user a less tiring experience.
+一般来说，视觉效果最好的路径会给用户带来较少的疲劳感。
 
 ### 晕动病
 
