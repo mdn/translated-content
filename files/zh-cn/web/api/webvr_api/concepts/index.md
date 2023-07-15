@@ -21,11 +21,11 @@ slug: Web/API/WebVR_API/Concepts
 
 那么有什么值得我们期待的呢？VR 硬件需要传输高精度的信息，在保证低延迟的情况下传递可接受的用户的体感信息；运行 VR 设备和程序的电脑，必需强大到足以维持这些庞大的信息。直到最近的这几年，如此高精度并且能量强大的设备，才能通过大众可以接受的价格被购买到。早期的 VR 原型设备，需要花费数万美元，然而最近出现的 [Oculus Rift](https://www.oculus.com/rift/) developer kit 却仅售 $350，并且还有更加便宜的解决方案，比如基于手机的 VR 设备像是 [Google Cardboard](https://www.google.com/get/cardboard/)。
 
-到了 2015 年，类似的 VR 设备吸引了大量的商业投资，进入到 VR 科技的研发中。SONY 正在 PS4 中开发一项针对 VR 的硬件工具（代号 [Project Morpheus](http://www.cnet.com/products/sony-project-morpheus/)），FACRBOOK 花费 20 亿美元买下了 [Oculus Rift](https://www.oculus.com/rift/)，Valve 开发了 [SteamVR](http://store.steampowered.com/universe/vr) 软件系统，能够应用于 HTC 的 [Vive VR headset](http://www.htcvr.com/)。随后，谷歌发布了能够最多支持 6 英寸手机屏幕的 CARDBOARD 的 2.0 版本（它同时完全兼容了 IOS 的设备，因为在它屏幕的背后有一块传感海绵凸起作为触碰点）。
+在软件方面，Valve 开发了 [SteamVR](http://store.steampowered.com/universe/vr) 软件系统，能够与 VIVE 和其他解决方案兼容，并提供软件访问权限，例如可用的 VR 用户界面。
 
 三星公司同 Oculus 合作，也推出了它的头戴设备 [GearVR](http://www.samsung.com/global/microsite/gearvr/gearvr_features.html)，这款设备可以连接旗下的 NOTE4 以及 6S 等手机。然而这款设备仅仅能够运行几款纯粹的 APP 应用，因而相对于 WEBVR 的特效领域而言，显得不是那么的有意思。
 
-科技已经发展到了今天，随着时间的推移，只会有更多的昂贵的头显设备变得越来越便宜，从而另更多的人在将来能够亲自体验虚拟现实的乐趣。
+科技已经发展到了今天，随着时间的推移，只会有更多的昂贵的头显设备变得越来越便宜，从而令更多的人在将来能够亲自体验虚拟现实的乐趣。
 
 ### 传入设备
 
@@ -62,7 +62,7 @@ slug: Web/API/WebVR_API/Concepts
     - y position is represented by {{domxref("VRPositionState.position")}}.y.
     - z position is represented by {{domxref("VRPositionState.position")}}.z.
 
-2. 方位——HMD 设备的协同是绕着一个 3D 坐标空间中的三个轴。PITCH 负责协同 X 轴，YAW 负责协同 Y 轴，还有 ROLL 入则系统 Z 轴。在 WEBVR 中：
+2. 方位——HMD 在三维坐标空间中绕三条轴线的旋转。Pitch 为绕 x 轴旋转，yaw 为绕 y 轴旋转，而 roll 则为绕 z 轴旋转。在 WEBVR 中：
 
     - Pitch is represented by {{domxref("VRPositionState.orientation")}}.x.
     - Yaw is represented by {{domxref("VRPositionState.orientation")}}.y.
@@ -93,7 +93,7 @@ FOV 是通过下列的值来定义的：
 - zNear: The distance from the middle of the user's head to the start of the visible FOV.
 - zFar: The distance from the middle of the user's head to the end of the visible FOV.
 
-根据 VR 硬件的不同，这些特性的值会略有不同，然而它们基本上分别都趋向于上下 53°，左右 47°，zNear 和 zFar 两个值可以在 0.1m 到 10000m 之间变换。
+根据 VR 硬件的不同，这些属性的值会略有不同，然而它们基本上分别都趋向于上下 53°，左右 47°，zNear 和 zFar 两个值可以在 0.1m 到 10000m 之间变换。
 
 不同的使用者将会为了达成尽量完美的视觉体验，而要求略有不同的特性数值。因此，我们有理由在使用者开始使用一个 APP 之前，对这些特性进行测算。你可以使用{{domxref("VREyeParameters")}} 接口，并使用 {{domxref("HMDVRDevice.setFieldOfView()")}} 方法设置新的值，以侦测当前的特性值。
 
@@ -111,7 +111,7 @@ FOV 是通过下列的值来定义的：
 
 ### 头部追踪
 
-首要的使我们能够感到置身于 360° 场景中的科技，要感谢包括在 HMD 设备中的陀螺仪、加速剂、磁力计等装置。
+首要的使我们能够感到置身于 360° 场景中的科技，要感谢包括在 HMD 设备中的陀螺仪、加速度计、磁力计等装置。
 
 这种技术对于 VR 有非常重要的关联性，因为它让我们的眼睛相信我们置身于一个球形的屏幕前，它提供给使用者一种在 APP 画布中沉浸式的体验。
 
@@ -138,7 +138,7 @@ FOV 是通过下列的值来定义的：
 为了避免带来晕动效果给我们的使用者（或者说最大限度的减小这种反应），我们可以：
 
 - 总是保证头部的追踪（这是最重要的，特别是在体验过程中头部移动的时候）
-- 使用稳定的速率；避免摄像机的加速和减速运动（使用线性加速度，同时假如有可能避免 VS EASING）
+- 使用稳定的速率；避免摄像机的加速和减速运动（使用线性加速度，同时尽量避免缓动）
 - 尽量提高帧速率（低于 30FPS 是不舒适的体验）
 - 避免尖锐的或者突然的摄像机的转动。
 - 为固定位置的物体添加固定的参照物（否者使用者会误认为他们在移动）
@@ -153,7 +153,7 @@ Oculus Rift headset 的延迟在 20ms 甚至比这更低，但是目前这都非
 
 ### 帧率
 
-根据维基百科的定义，帧率（FPS）指的是一个设备产生单一连贯的图像的速率，叫做框架。60FPS 的帧率足够提供给使用者一个平稳的体验，但是更加要取决于 APP 运行的设备的表现，或者是你想要体验的 VR 内容，也有可能大大的降低。假如帧率小于了 30FPS，通常会发生严重的颤抖，并且使使用者产生厌恶感。
+根据维基百科的定义，帧率（FPS）指的是一个设备产生单一连贯的图像（帧）的速率。60FPS 的帧率足够提供给使用者一个平稳的体验，但是更加要取决于 APP 运行的设备的表现，或者是你想要体验的 VR 内容，也有可能大大的降低。假如帧率小于了 30FPS，通常会发生严重的颤抖，并且令使用者产生厌恶感。
 
 最困难的任务之一就是保持一个稳定的和高帧率的值，所以我们必须优化代码从而使它发挥最大的功效。假如能够有一个合适的帧率并且不会规律的或者突然的改变，那将会是非常好的体验；因此你需要在一个场景中设置尽量少的物体（例如在 WEBGL 中）并且减小 DRAW CALLS 的值。
 
