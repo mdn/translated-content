@@ -1,28 +1,28 @@
 ---
-title: 如何存储你需要的信息 — 变量
+title: 如何存储你需要的信息——变量
 slug: Learn/JavaScript/First_steps/Variables
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
-在读完之前的一些文章之后，你现在应该大概知道了 JavaScript 是什么，你能用它干什么，它是怎么跟其他 web 技术（HTML，CSS）协同工作的，以及它有哪些主要特性。在本章节，我们将开始学习 JavaScript 的基础，了解如何使用 — 变量。
+在读完之前的一些文章之后，你现在应该大概知道了 JavaScript 是什么，你能用它干什么，它是怎么跟其他 web 技术协同工作的，以及从上层来看，它有哪些主要特性。在本文中，我们将深入了解真正的基础知识，学习如何使用 JavaScript 最基础的构建单元——变量。
 
 <table class="learn-box">
   <tbody>
     <tr>
-      <th scope="row">预备知识：</th>
+      <th scope="row">前提：</th>
       <td>电脑基础知识，了解基本的 HTML 和 CSS，了解 JavaScript 是什么。</td>
     </tr>
     <tr>
       <th scope="row">目标：</th>
-      <td>熟悉 JavaScript 的变量使用</td>
+      <td>熟悉 JavaScript 变量的基础知识。</td>
     </tr>
   </tbody>
 </table>
 
 ## 需要的工具
 
-在本章中，你将要输入一些代码来测试你对相关内容的理解。如果你是用的桌面浏览器，输入这些代码最好的地方是浏览器的 JavaScript 终端，(参考 [什么是浏览器开发工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools) 查看如何使用这些工具)。
+在本文中，你将要输入一些代码来测试你对相关内容的理解。如果你是用的桌面浏览器，输入这些代码最好的地方是浏览器的 JavaScript 控制台（参考[什么是浏览器开发工具](/zh-CN/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)以查看如何使用这些工具）。
 
 当然，我们也提供了一个简单的 JavaScript 终端，嵌入在下文的页面中，以便你更容易的输入和测试这些代码。
 
