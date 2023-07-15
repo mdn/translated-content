@@ -27,7 +27,7 @@ slug: Learn/Server-side/Express_Nodejs/deployment
 
 ## 概覽
 
-一旦您的站點完成（或完成 “足夠” 以開始公共測試），您將需要將其託管在比您的個人開發計算機，更公開和可訪問的地方。
+一旦您的站點完成（或完成 「足夠」 以開始公共測試），您將需要將其託管在比您的個人開發計算機，更公開和可訪問的地方。
 
 到目前為止，您一直在開發環境中工作，使用 Express / Node 作為 Web 服務器，將您的站點共享到本地瀏覽器/網路，並使用（不安全的）開發設置運行您的網站，以顯示調試和其他私人信息。在您可以在外部託管網站之前，您首先必須：
 
@@ -49,7 +49,7 @@ slug: Learn/Server-side/Express_Nodejs/deployment
 - Web 服務器基礎結構，可能包含 Web 服務器，反向代理，負載平衡器等。
 - 您的網站所依賴的數據庫。
 
-服務器計算機，可以位於您的場所，並通過快速鏈接，連接到 Internet，但使用 “託管在雲上” 的計算機更為常見。這實際上意味著，您的代碼運行在託管公司的數據中心的某台遠程計算機（或可能是“虛擬”計算機）。遠程服務器，通常會以特定價格提供互聯網連接，和一些保證級別的計算資源（例如 CPU，RAM，存儲器等）。
+服務器計算機，可以位於您的場所，並通過快速鏈接，連接到 Internet，但使用 「託管在雲上」 的計算機更為常見。這實際上意味著，您的代碼運行在託管公司的數據中心的某台遠程計算機（或可能是「虛擬」計算機）。遠程服務器，通常會以特定價格提供互聯網連接，和一些保證級別的計算資源（例如 CPU，RAM，存儲器等）。
 
 這種可遠程訪問的計算/網絡硬件，稱為基礎架構即服務（IaaS）。許多 IaaS 供應商，提供預安裝特定操作系統的選項，您必須在其上，安裝生產環境的其他組件。其他供應商，允許您選擇功能更全面的環境，可能包括完整的 node 設置。
 
@@ -75,13 +75,13 @@ slug: Learn/Server-side/Express_Nodejs/deployment
 - 主機正常運行時間和停機時間的歷史表現。
 - 用於管理站點的工具 - 易於使用且安全（例如 SFTP 與 FTP）。
 - 用於監控服務器的內置框架。
-- 已知限制。有些主機會故意阻止某些服務（例如電子郵件）。其他在某些價格層中，僅提供一定數小時的 “實時時間”，或者僅提供少量存儲空間。
+- 已知限制。有些主機會故意阻止某些服務（例如電子郵件）。其他在某些價格層中，僅提供一定數小時的 「實時時間」，或者僅提供少量存儲空間。
 - 額外的好處。一些提供商將提供免費域名和 SSL 證書支持，否則您將不得不為此另外支付費用。
-- 您所依賴的“免費”等級，是否會隨著時間的推移而過期，以及遷移到更昂貴等級的成本，是否意味著您最好在一開始就使用其他服務！
+- 您所依賴的「免費」等級，是否會隨著時間的推移而過期，以及遷移到更昂貴等級的成本，是否意味著您最好在一開始就使用其他服務！
 
-當你剛開始時，好消息是有很多網站提供“免費”的計算環境，儘管有一些條件。例如， [Heroku](https://www.heroku.com/) “永遠” 提供免費但資源有限的 PaaS 環境，而 [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 和開源選項 [PWS/Cloud Foundry](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 在您第一次加入時，提供免費信用額度。
+當你剛開始時，好消息是有很多網站提供「免費」的計算環境，儘管有一些條件。例如， [Heroku](https://www.heroku.com/) 「永遠」 提供免費但資源有限的 PaaS 環境，而 [Amazon Web Services](http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html), [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/) 和開源選項 [PWS/Cloud Foundry](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Installing_on_PWS_Cloud_Foundry) 在您第一次加入時，提供免費信用額度。
 
-許多提供商還擁有“基本”層，可提供更多有用的計算能力，和更少的限制。舉例來說， [Digital Ocean](https://www.digitalocean.com/) 是一個流行的託管服務提供商，它提供了一個相對便宜的基本計算層（在本教程寫作時，是每月 5 美元的較低範圍）。
+許多提供商還擁有「基本」層，可提供更多有用的計算能力，和更少的限制。舉例來說， [Digital Ocean](https://www.digitalocean.com/) 是一個流行的託管服務提供商，它提供了一個相對便宜的基本計算層（在本教程寫作時，是每月 5 美元的較低範圍）。
 
 > **備註：** 請記住，價格不是唯一的選擇標準。如果您的網站成功，可能會發現可擴展性是最重要的考慮因素。
 
@@ -91,11 +91,11 @@ slug: Learn/Server-side/Express_Nodejs/deployment
 
 在以下小節中，我們概述了您應該對應用進行的、最重要的更改。
 
-> **備註：** Express 文檔中還有其他有用的提示 - 請參閱“[生產最佳實踐：性能和可靠性](https://expressjs.com/en/advanced/best-practice-performance.html)”，以及“[生產最佳實踐：安全性](https://expressjs.com/en/advanced/best-practice-security.html)”。
+> **備註：** Express 文檔中還有其他有用的提示 - 請參閱「[生產最佳實踐：性能和可靠性](https://expressjs.com/en/advanced/best-practice-performance.html)」，以及「[生產最佳實踐：安全性](https://expressjs.com/en/advanced/best-practice-security.html)」。
 
 ### 設置 NODE_ENV 為 'production'
 
-我們可以通過將 `NODE_ENV` 環境變量，設置為 production ，來刪除錯誤頁面中的堆棧跟踪（默認設置為 “development” ）。除了生成較為不詳細的錯誤消息之外，還要將變量設置為生產緩存視圖模板，和從 CSS 擴展生成的 CSS 文件。測試表明，將`NODE_ENV`設置為生產，可以將應用程序性能提高三倍！
+我們可以通過將 `NODE_ENV` 環境變量，設置為 production ，來刪除錯誤頁面中的堆棧跟踪（默認設置為 「development」 ）。除了生成較為不詳細的錯誤消息之外，還要將變量設置為生產緩存視圖模板，和從 CSS 擴展生成的 CSS 文件。測試表明，將`NODE_ENV`設置為生產，可以將應用程序性能提高三倍！
 
 可以使用導出或環境文件，或使用 OS 初始化系統，以進行此更改。
 
@@ -105,7 +105,7 @@ slug: Learn/Server-side/Express_Nodejs/deployment
 
 記錄呼叫會對高流量網站產生影響。在生產環境中，您可能需要記錄網站活動（例如，跟踪流量，或記錄 API 調用），但您應嘗試最小化為調試目的而添加的日誌記錄量。
 
-在生產環境中，最小化“調試”日誌記錄的一種方法，是使用類似調試 [debug](https://www.npmjs.com/package/debug) 的模塊，允許您通過設置環境變量，來控制執行的日誌記錄。例如，下面的代碼片段，顯示如何設置 “author” 日誌記錄。調試變量使用名稱 “author” 聲明，並且將自動顯示，來自此對象的所有日誌的前綴 “author”。
+在生產環境中，最小化「調試」日誌記錄的一種方法，是使用類似調試 [debug](https://www.npmjs.com/package/debug) 的模塊，允許您通過設置環境變量，來控制執行的日誌記錄。例如，下面的代碼片段，顯示如何設置 「author」 日誌記錄。調試變量使用名稱 「author」 聲明，並且將自動顯示，來自此對象的所有日誌的前綴 「author」。
 
 ```js
 var debug = require("debug")("author");
@@ -213,7 +213,7 @@ Heroku 是運行時間最長，且最受歡迎的基於雲的 PaaS 服務之一�
 
   - Heroku 只提供短期存儲，因此用戶上傳的文件無法安全地存儲在 Heroku 本身。
   - 如果半小時內沒有請求，免費套餐將使不活動的網絡應用程序進入睡眠。然後，該網站可能需要幾秒鐘才能被喚醒。
-  - 免費套餐將您網站運行的時間，限制為每月一定的小時數（不包括網站“睡著”的時間）。這對於低使用/演示站點來說很好，但如果需要 100％的正常運行時間，則不適用。
+  - 免費套餐將您網站運行的時間，限制為每月一定的小時數（不包括網站「睡著」的時間）。這對於低使用/演示站點來說很好，但如果需要 100％的正常運行時間，則不適用。
   - Heroku 官方文檔 [Limits](https://devcenter.heroku.com/articles/limits) 中列出的其他限制。
 
 - 大多數情況下，它只是可以工作，如果你最終喜歡它，並希望升級，那麼擴展你的應用程序非常容易。
@@ -222,9 +222,9 @@ Heroku 是運行時間最長，且最受歡迎的基於雲的 PaaS 服務之一�
 
 ### Heroku 如何工作?
 
-Heroku 在一個或多個 "[Dynos](https://devcenter.heroku.com/articles/dynos)" 中運行網站，這些 “Dynos” 是獨立的虛擬化 Unix 容器，提供運行應用程序所需的環境。 Dynos 是完全隔離的，並且有一個短暫的文件系統（一個短暫的文件系統，每次 dyno 重新啟動時都會清理/清空）。 dynos 默認共享的唯一內容，是應用程序配置變量 [configuration variables](https://devcenter.heroku.com/articles/config-vars)。 Heroku 內部使用負載均衡器，將 Web 流量分配給所有 “web” dynos。由於它們之間沒有任何共享，Heroku 可以通過添加更多 dynos，來水平擴展應用程序（當然，您可能還需要擴展數據庫，以接受其他連接）。
+Heroku 在一個或多個 "[Dynos](https://devcenter.heroku.com/articles/dynos)" 中運行網站，這些 「Dynos」 是獨立的虛擬化 Unix 容器，提供運行應用程序所需的環境。 Dynos 是完全隔離的，並且有一個短暫的文件系統（一個短暫的文件系統，每次 dyno 重新啟動時都會清理/清空）。 dynos 默認共享的唯一內容，是應用程序配置變量 [configuration variables](https://devcenter.heroku.com/articles/config-vars)。 Heroku 內部使用負載均衡器，將 Web 流量分配給所有 「web」 dynos。由於它們之間沒有任何共享，Heroku 可以通過添加更多 dynos，來水平擴展應用程序（當然，您可能還需要擴展數據庫，以接受其他連接）。
 
-由於文件系統是短暫的，因此無法直接安裝應用程序所需的服務（例如數據庫，隊列，緩存系統，存儲，電子郵件服務等）。相反，Heroku Web 應用程序使用 Heroku 或第三方作為獨立“附加組件”提供的支持服務。連接到 Web 應用程序後，可以通過環境變量，在 Web 應用程序中訪問附加服務。
+由於文件系統是短暫的，因此無法直接安裝應用程序所需的服務（例如數據庫，隊列，緩存系統，存儲，電子郵件服務等）。相反，Heroku Web 應用程序使用 Heroku 或第三方作為獨立「附加組件」提供的支持服務。連接到 Web 應用程序後，可以通過環境變量，在 Web 應用程序中訪問附加服務。
 
 為了執行您的應用程序，Heroku 需要能夠設置適當的環境和依賴關係，並了解它是如何啟動的。對於 Node 應用程序，它所需的所有信息都是從 **package.json**文件中獲取的。
 
@@ -236,7 +236,7 @@ Heroku 在一個或多個 "[Dynos](https://devcenter.heroku.com/articles/dynos)"
 
 ### 在 Github 上創建一個應用倉庫
 
-Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/同步您對實時運行系統所做的任何更改。它通過添加一個名為 heroku 的新 Heroku“遠程”儲存庫，來指向您在 Heroku 雲上的源儲存庫。在開發期間，您使用 git 在“主”儲存庫 master 中儲存更改。如果要部署站點，請將更改同步到 Heroku 存儲庫。
+Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/同步您對實時運行系統所做的任何更改。它通過添加一個名為 heroku 的新 Heroku「遠程」儲存庫，來指向您在 Heroku 雲上的源儲存庫。在開發期間，您使用 git 在「主」儲存庫 master 中儲存更改。如果要部署站點，請將更改同步到 Heroku 存儲庫。
 
 > **備註：** 如果您習慣於遵循良好的軟件開發實踐，那麼您可能已經在使用 git 或其他一些 SCM 系統。如果您已有 git 儲存庫，則可以跳過此步驟。
 
@@ -246,16 +246,16 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
 2. 登錄後，單擊頂部工具欄中的 + 號鏈接，然後選擇新建儲存庫 **New repository**。
 3. 填寫此表單上的所有字段。雖然這些不是強制性的，但強烈建議使用它們。
 
-   - 輸入新的存儲庫名稱（例如，express-locallibrary-tutorial）和描述（例如 “以 Express（node）編寫的本地圖書館網站”）。
+   - 輸入新的存儲庫名稱（例如，express-locallibrary-tutorial）和描述（例如 「以 Express（node）編寫的本地圖書館網站」）。
    - 在 Add .gitignore 選擇列表中選擇 **Node**。
    - 在添加許可證 Add license 選擇列表中，選擇您偏好的許可證。
    - 點選 使用自述文件初始化此儲存庫 **Initialize this repository with a README**.
 
 4. 按 **Create repository**.
-5. 單擊新倉庫頁面上的綠色“克隆或下載”按鈕 "**Clone or download**" 。
+5. 單擊新倉庫頁面上的綠色「克隆或下載」按鈕 "**Clone or download**" 。
 6. 從顯示的對話框的文本字段，複製 URL 值（它應該類似於：`https://github.com/<your_git_user_id>/express-locallibrary-tutorial.git`）。
 
-現在創建了儲存庫（“repo”），我們將要在本地計算機上克隆它：
+現在創建了儲存庫（「repo」），我們將要在本地計算機上克隆它：
 
 1. 為您的本地計算機安裝 git（您可以在[此處找到不同平台的版本](https://git-scm.com/downloads)）。
 
@@ -308,9 +308,9 @@ Heroku 與 **git** 源代碼版本控制系統緊密集成，使用它來上傳/
 
 完成此操作後，您應該可以返回創建儲存庫的 Github 上的頁面，刷新頁面，並查看您的整個應用程序現已上傳。使用此添加/提交/推送循環，您可以在文件更改時，繼續更新儲存庫。
 
-> **備註：** 這是備份你的“vanilla”項目的好時機 - 雖然我們將在以下部分中進行的一些更改，可能對任何平台（或開發）上的部署有用，而一些其他的更改可能沒有用。
+> **備註：** 這是備份你的「vanilla」項目的好時機 - 雖然我們將在以下部分中進行的一些更改，可能對任何平台（或開發）上的部署有用，而一些其他的更改可能沒有用。
 >
-> 執行此操作的最佳方法，是使用 git 來管理您的修訂。使用 git，您不僅可以回到特定的舊版本，而且可以在生產變更的單獨“分支”中進行維護，並選擇在生產和開發分支之間移動的任何更改。[學習 Git](https://help.github.com/articles/good-resources-for-learning-git-and-github/)非常值得，但超出了本主題的範圍。
+> 執行此操作的最佳方法，是使用 git 來管理您的修訂。使用 git，您不僅可以回到特定的舊版本，而且可以在生產變更的單獨「分支」中進行維護，並選擇在生產和開發分支之間移動的任何更改。[學習 Git](https://help.github.com/articles/good-resources-for-learning-git-and-github/)非常值得，但超出了本主題的範圍。
 >
 > 最簡單的方法，是將文件複製到另一個位置。以您對 git 了解，使用最符合的方法！
 
@@ -407,13 +407,13 @@ heroku help
 
 ### 創建並上傳網站
 
-要創建應用程序，我們在儲存庫的根目錄中，運行 “create” 命令。這將在我們的本地 git 環境中，創建一個名為 heroku 的 git remote（“指向遠程儲存庫的指針”）。
+要創建應用程序，我們在儲存庫的根目錄中，運行 「create」 命令。這將在我們的本地 git 環境中，創建一個名為 heroku 的 git remote（「指向遠程儲存庫的指針」）。
 
 ```bash
 heroku create
 ```
 
-> **備註：** 如果您願意，可以在“創建”create 之後指定遠程儲存庫的命名。如果你不這樣做，你會得到一個隨機的名字。該名稱用於默認 URL。
+> **備註：** 如果您願意，可以在「創建」create 之後指定遠程儲存庫的命名。如果你不這樣做，你會得到一個隨機的名字。該名稱用於默認 URL。
 
 然後，我們可以將我們的應用程序，推送到 Heroku 儲存庫，如下所示。這將上傳應用程序，獲取所有依賴項，將其打包到 dyno 中，然後啟動該站點。
 
@@ -421,7 +421,7 @@ heroku create
 git push heroku master
 ```
 
-如果我們很幸運，該應用程序現在正在網站上“運行”。要打開瀏覽器並運行新網站，請使用以下命令：
+如果我們很幸運，該應用程序現在正在網站上「運行」。要打開瀏覽器並運行新網站，請使用以下命令：
 
 ```bash
 heroku open
