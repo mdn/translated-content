@@ -40,7 +40,7 @@ at(index)
 
 Обычной практикой является получении числа элементов массива {{jsxref("Array/length", "length")}} и последующее вычисление значения индекса — например, `array[array.length - 1]`. Метод `at()` разрешает относительную индексацию, поэтому может быть сокращено до `array.at(-1)`.
 
-Метод `at()` — это [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). Он ожидает только, что значение `this` будет иметь свойство `length` и свойства с числовыми ключом.
+Метод `at()` — это [generic](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). Он ожидает только, что значение `this` будет иметь свойство `length` и свойства с числовыми ключом.
 
 ## Примеры
 

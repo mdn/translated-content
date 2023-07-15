@@ -71,7 +71,7 @@ Here are some examples of resources which may be embedded cross-origin:
 - Media files with {{htmlelement("video")}} and {{htmlelement("audio")}}.
 - Plug-ins with [`<object>`](/ru/docs/HTML/Element/object), [`<embed>`](/ru/docs/HTML/Element/embed) and [`<applet>`](/ru/docs/HTML/Element/applet).
 - Fonts with [`@font-face`](/ru/docs/CSS/@font-face). Some browsers allow cross-origin fonts, others require same-origin fonts.
-- Anything with [`<frame>`](/ru/docs/HTML/Element/frame) and [`<iframe>`](/ru/docs/HTML/Element/iframe). A site can use the [`X-Frame-Options`](/en-US/docs/HTTP/X-Frame-Options) header to prevent this form of cross-origin interaction.
+- Anything with [`<frame>`](/ru/docs/HTML/Element/frame) and [`<iframe>`](/ru/docs/HTML/Element/iframe). A site can use the [`X-Frame-Options`](/ru/docs/HTTP/X-Frame-Options) header to prevent this form of cross-origin interaction.
 
 ### How to allow cross-origin access
 
@@ -147,4 +147,4 @@ Cookies use a separate definition of origins. A page can set a cookie for its ow
 
 - Author(s): Jesse Ruderman
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/Security")}}

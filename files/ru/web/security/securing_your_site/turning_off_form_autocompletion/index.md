@@ -13,7 +13,7 @@ It is important to know that if you turn off autocomplete, you are **breaking** 
 
 ## Disabling autocompletion
 
-To disable autocompletion in forms, you can set the [`autocomplete`](/en-US/docs/Web/HTML/Attributes/autocomplete) attribute to "off":
+To disable autocompletion in forms, you can set the [`autocomplete`](/ru/docs/Web/HTML/Attributes/autocomplete) attribute to "off":
 
 ```html
 autocomplete="off"
@@ -69,4 +69,4 @@ This is a hint, which browsers are not required to comply with. However modern b
 
 The [jquery.disableAutoFill](https://terrylinooo.github.io/jquery.disableAutoFill/) plugin randomizes an input's `name` attribute by default. When the form is submitted, the plugin restores the original name. This prevents auto-completion for all browsers (includes third-party auto-completion extensions) but doesn't necessarily help with login fields.
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/Security")}}
