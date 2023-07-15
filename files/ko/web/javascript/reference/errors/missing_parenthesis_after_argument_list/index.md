@@ -37,4 +37,4 @@ console.log('PI: ' + Math.PI);
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/ko/docs/Web/JavaScript/Guide/Functions)

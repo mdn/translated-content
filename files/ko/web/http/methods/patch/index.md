@@ -39,7 +39,7 @@ PATCH가 허용되는지 확인할 수 있는 또 다른 (암묵적인)지표로
     </tr>
     <tr>
       <th scope="row">
-        Allowed in <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a>
+        Allowed in <a href="/ko/docs/Web/Guide/HTML/Forms">HTML forms</a>
       </th>
       <td>No</td>
     </tr>

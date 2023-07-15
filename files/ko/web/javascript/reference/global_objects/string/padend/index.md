@@ -40,7 +40,7 @@ str.padEnd(targetLength [, padString])
 
 ```js
 // https://github.com/uxitten/polyfill/blob/master/string.polyfill.js
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd
+// https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/padEnd
 if (!String.prototype.padEnd) {
     String.prototype.padEnd = function padEnd(targetLength,padString) {
         targetLength = targetLength>>0; //floor if number or convert non-number to 0;
