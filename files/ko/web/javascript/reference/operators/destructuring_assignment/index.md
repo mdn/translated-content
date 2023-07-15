@@ -285,7 +285,7 @@ var metadata = {
         title: "JavaScript-Umgebung"
        }
     ],
-    url: "/en-US/docs/Tools/Scratchpad"
+    url: "/ko/docs/Tools/Scratchpad"
 };
 
 var { title: englishTitle, translations: [{ title: localeTitle }] } = metadata;
@@ -365,7 +365,7 @@ console.log(foo); // "bar"
 
 ### 객체 구조 분해에서 Rest
 
-[Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) 제안(stage 3)에서는 구조 분해에 [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) 구문을 추가하고 있습니다. rest 속성은 구조 분해 패턴으로 걸러지지 않은 열거형 속성의 키를 가진 나머지 항목들을 모읍니다.
+[Rest/Spread Properties for ECMAScript](https://github.com/tc39/proposal-object-rest-spread) 제안(stage 3)에서는 구조 분해에 [rest](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters) 구문을 추가하고 있습니다. rest 속성은 구조 분해 패턴으로 걸러지지 않은 열거형 속성의 키를 가진 나머지 항목들을 모읍니다.
 
 ```js
 let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}

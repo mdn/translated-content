@@ -159,7 +159,7 @@ t2Closure('Hello', {foo: 'World'});  // "Hello World!"
 
 ### Raw strings
 
-태그 지정된 템플릿의 첫 번째 함수 인수에서 사용할 수있는 특별한 `raw` property을 사용하면 [escape sequences](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings) 처리하지 않고 원시 문자열을 입력 한대로 액세스 할 수 있습니다.
+태그 지정된 템플릿의 첫 번째 함수 인수에서 사용할 수있는 특별한 `raw` property을 사용하면 [escape sequences](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#Using_special_characters_in_strings) 처리하지 않고 원시 문자열을 입력 한대로 액세스 할 수 있습니다.
 
 ```js
     function tag(strings) {
@@ -235,6 +235,6 @@ escape sequence 제한은 _tagged_ templates에만 적용되며 _untagged_ templ
 
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [Lexical grammar](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)
 - [Template-like strings in ES3 compatible syntax](https://gist.github.com/WebReflection/8f227532143e63649804)
 - ["ES6 in Depth: Template strings" on hacks.mozilla.org](https://hacks.mozilla.org/2015/05/es6-in-depth-template-strings-2/)

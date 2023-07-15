@@ -63,7 +63,7 @@ function f(p,) {}
 (p,) => {};
 ```
 
-Trailing comma는 클래스나 객체의 [메소드 정의](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)에도 사용할 수 있습니다.
+Trailing comma는 클래스나 객체의 [메소드 정의](/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions)에도 사용할 수 있습니다.
 
 ```js
 class C {
@@ -91,7 +91,7 @@ Math.max(10, 20,);
 
 ### 잘못된 trailing comma
 
-함수의 매개변수 정의나 호출에 쉼표만 있을 경우 {{Jsxref("SyntaxError")}}가 발생합니다. 또한, [rest 매개변수](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)를 사용할 때는 trailing comma를 사용할 수 없습니다.
+함수의 매개변수 정의나 호출에 쉼표만 있을 경우 {{Jsxref("SyntaxError")}}가 발생합니다. 또한, [rest 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters)를 사용할 때는 trailing comma를 사용할 수 없습니다.
 
 ```js example-bad
 function f(,) {} // SyntaxError: missing formal parameter
@@ -104,7 +104,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ## 구조 분해 할당에서의 trailing comma
 
-[구조 분해 할당](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)의 좌변에도 trailing comma를 사용할 수 있습니다.
+[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)의 좌변에도 trailing comma를 사용할 수 있습니다.
 
 ```js
 // Trailing comma가 있는 배열 구조 분해

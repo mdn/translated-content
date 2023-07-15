@@ -203,4 +203,4 @@ If the user selects _Cancel_, the state of the app goes back to how it was befor
 - [Web manifest reference](/ko/docs/Web/Manifest)
 - [App install banners](https://developers.google.com/web/fundamentals/app-install-banners/)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/ko/docs/Web/Progressive_web_apps/")}}

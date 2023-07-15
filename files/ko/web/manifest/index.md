@@ -12,7 +12,7 @@ slug: Web/Manifest
 
 웹 앱 매니페스트는 다음의 키를 포함할 수 있습니다. 각각의 링크를 클릭해 더 많은 정보를 알아보세요.
 
-{{ListSubpages("/en-US/docs/Web/Manifest")}}
+{{ListSubpages("/ko/docs/Web/Manifest")}}
 
 ## 예제
 

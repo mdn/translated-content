@@ -72,13 +72,13 @@ svg|a:active {
     값 유형: **\<string>** ; 기본 값: 없음; 애니메이션 가능: **아니요**
 - {{SVGAttr("href")}}
   - : 하이퍼링크가 가리키는 URL 또는 URL 조각입니다.
-    값 유형: **[\<URL>](/en-US/docs/Web/SVG/Content_type#url)** ; 기본값: 없음; 애니메이션 가능: **예**
+    값 유형: **[\<URL>](/ko/docs/Web/SVG/Content_type#url)** ; 기본값: 없음; 애니메이션 가능: **예**
 - {{htmlattrxref("hreflang", "a")}}
   - : 하이퍼링크가 가리키는 URL 또는 URL 조각의 사람 언어입니다.
     값 유형: **\<string>** ; 기본값: 없음; 애니메이션 가능: **예**
 - {{htmlattrxref("ping", "a")}} {{experimental_inline}}
   - : 공백으로 구분된 URL 목록으로, 하이퍼링크를 따라갈 때 `PING` 본문이 포함된 {{HTTPMethod("POST")}} 요청이 브라우저에서 전송됩니다(백그라운드에서). 일반적으로 추적에 사용됩니다. 동일한 사용 사례를 다루는 보다 광범위하게 지원되는 기능은 {{domxref("Navigator.sendBeacon()")}}을 참조하십시오.
-    값 유형: **[\<list-of-URLs>](/en-US/docs/Web/SVG/Content_type#list-of-ts)** ; 기본값: 없음; 애니메이션 가능: **아니요**
+    값 유형: **[\<list-of-URLs>](/ko/docs/Web/SVG/Content_type#list-of-ts)** ; 기본값: 없음; 애니메이션 가능: **아니요**
 - {{htmlattrxref("referrerpolicy", "a")}}
   - : {{Glossary("URL")}}을 가져올 때 보내는 [리퍼러](/ko/docs/Web/HTTP/Headers/Referer)입니다.
     값 유형: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; 기본 값: 없음; 애니메이션 가능: **아니요**

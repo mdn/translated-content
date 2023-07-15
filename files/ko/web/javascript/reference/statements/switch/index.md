@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Statements/switch
 
 {{jsSidebar("Statements")}}
 
-The **`switch` statement** evaluates an [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators), matching the expression's value to a `case` clause, and executes [statements](/en-US/docs/Web/JavaScript/Reference/Statements) associated with that case, as well as statements in cases that follow the matching case.
+The **`switch` statement** evaluates an [expression](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators), matching the expression's value to a `case` clause, and executes [statements](/ko/docs/Web/JavaScript/Reference/Statements) associated with that case, as well as statements in cases that follow the matching case.
 
 {{EmbedInteractiveExample("pages/js/statement-switch.html")}}
 
@@ -43,11 +43,11 @@ switch (expression) {
 
 ## 설명
 
-A switch statement first evaluates its expression. It then looks for the first `case` clause whose expression evaluates to the same value as the result of the input expression (using the [strict comparison](/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===`) and transfers control to that clause, executing the associated statements. (If multiple cases match the provided value, the first case that matches is selected, even if the cases are not equal to each other.)
+A switch statement first evaluates its expression. It then looks for the first `case` clause whose expression evaluates to the same value as the result of the input expression (using the [strict comparison](/ko/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===`) and transfers control to that clause, executing the associated statements. (If multiple cases match the provided value, the first case that matches is selected, even if the cases are not equal to each other.)
 
 If no matching `case` clause is found, the program looks for the optional `default` clause, and if found, transfers control to that clause, executing the associated statements. If no `default` clause is found, the program continues execution at the statement following the end of `switch`. By convention, the `default` clause is the last clause, but it does not need to be so.
 
-The optional [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement associated with each case label ensures that the program breaks out of switch once the matched statement is executed and continues execution at the statement following switch. If `break` is omitted, the program continues execution at the next statement in the `switch` statement.
+The optional [`break`](/ko/docs/Web/JavaScript/Reference/Statements/break) statement associated with each case label ensures that the program breaks out of switch once the matched statement is executed and continues execution at the statement following switch. If `break` is omitted, the program continues execution at the next statement in the `switch` statement.
 
 ## 예제
 
@@ -195,7 +195,7 @@ switch (foo) {
 
 ### Block-scope variables within `switch` statements
 
-With ECMAScript 2015 (ES6) support made available in most modern browsers, there will be cases where you would want to use [let](/en-US/docs/Web/JavaScript/Reference/Statements/let) and [const](/en-US/docs/Web/JavaScript/Reference/Statements/const) statements to declare block-scoped variables.
+With ECMAScript 2015 (ES6) support made available in most modern browsers, there will be cases where you would want to use [let](/ko/docs/Web/JavaScript/Reference/Statements/let) and [const](/ko/docs/Web/JavaScript/Reference/Statements/const) statements to declare block-scoped variables.
 
 Take a look at this example:
 
@@ -254,4 +254,4 @@ This code will now output `hello` in the console as it should, without any error
 
 ## 같이 보기
 
-- [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`if...else`](/ko/docs/Web/JavaScript/Reference/Statements/if...else)

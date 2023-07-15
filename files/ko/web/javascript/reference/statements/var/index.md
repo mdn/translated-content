@@ -66,7 +66,7 @@ slug: Web/JavaScript/Reference/Statements/var
     // 'b' 프로퍼티는 삭제되었고, 어디에도 존재하지 않습니다.
     ```
 
-이러한 세가지 다른점 때문에, 변수 선언 오류는 예기치않은 결과로 이어질 가능성이 높습니다. 그러므로 **함수 또는 전역 범위인지 여부와 상관없이, 항상 변수를 선언 하는 것을 추천합니다.** 그리고 ECMAScript 5 안에 [strict mode](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode), 선언되지 않은 변수에 할당하면 오류를 출력합니다.
+이러한 세가지 다른점 때문에, 변수 선언 오류는 예기치않은 결과로 이어질 가능성이 높습니다. 그러므로 **함수 또는 전역 범위인지 여부와 상관없이, 항상 변수를 선언 하는 것을 추천합니다.** 그리고 ECMAScript 5 안에 [strict mode](/ko/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode), 선언되지 않은 변수에 할당하면 오류를 출력합니다.
 
 ### var 호이스팅(hoisting)
 

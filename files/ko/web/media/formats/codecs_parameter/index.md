@@ -3,7 +3,7 @@ title: 일반 미디어 타입에서 "codecs" 파라미터 사용하기
 slug: Web/Media/Formats/codecs_parameter
 original_slug: Web/Media/Formats/코덱파라미터
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+{{QuickLinksWithSubpages("/ko/docs/Web/Media")}}
 
 기본적으로, `video/mp4`, `audio/mpeg` 처럼 {{Glossary("MIME")}} 타입을 통해 미디어 파일 포맷을 명시할 수 있습니다. 하지만 많은 미디어 타입들이-특히 비디오 트랙을 지원하는 경우-가지고 있는 데이터 포맷에 대해 더 상세하고 정확하게 명시할 수 있습니다. 예를들어 [MPEG-4](/ko/docs/Web/Media/Formats/Containers#MP4) 비디오라고 해서 MIME 타입을 `video/mp4`만 명시한다면 정확히 어떤 미디어를 가지고 있는 지 아무 정보도 알 수 없습니다.
 
@@ -143,7 +143,7 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
         한자리 숫자 모노크롬 플래그; 0인 경우 비디오는 U, V, Y 성분을 모두
         가지고 있습니다. 아닌 경우 전체 비디오 데이터는 Y(휘도) 성분 뿐으로
         모노크롬 이미지를 가집니다. 자세한 내용은
-        [YUV](/en-US/docs/Web/Media/Formats/Video_concepts#yuv)를
+        [YUV](/ko/docs/Web/Media/Formats/Video_concepts#yuv)를
         참조하여 YUV 컬러 시스템이 어떻게 동작하는지 알아보세요. 기본 값은 0
         (모노크롬 아님)입니다.
       </td>

@@ -90,4 +90,4 @@ TLS 1.3에서 재협상을 제거함으로써, 증명서(certificate)를 이용�
 - The Mozilla Operations Security (OpSec) team maintains a wiki page with [reference TLS configurations](https://wiki.mozilla.org/Security/Server_Side_TLS).
 - [Mozilla Observatory](https://observatory.mozilla.org/), [SSL Labs](https://www.ssllabs.com/ssltest/), and [Cipherscan](https://github.com/mozilla/cipherscan) can help you test a site to see how secure its TLS configuration is.
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/ko/docs/Web/Security")}}

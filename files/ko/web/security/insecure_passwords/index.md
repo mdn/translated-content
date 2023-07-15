@@ -52,4 +52,4 @@ Form action이 HTTPS URL 인 경우에도 공격자는 사용자가 받을 페�
 
 - [HTTP를 통한 비밀번호는 더 이상 안됩니다, 제발!](https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/) — 더 자세한 정보와 FAQ를 가진 블로그.
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/ko/docs/Web/Security")}}

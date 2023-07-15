@@ -399,14 +399,14 @@ AV1은 현재 세 프로파일을 제공하며:**main**, **high**, **professiona
       <td>
         ISOBMFF<sup><a href="#av1-foot-1">[1]</a></sup
         >, MPEG-TS,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a>
+        <a href="/ko/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
+        <a href="/ko/docs/Web/Media/Formats/Containers#WebM">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> 호환성
+        <a href="/ko/docs/Web/API/WebRTC_API">WebRTC</a> 호환성
       </th>
       <td>예</td>
     </tr>
@@ -576,15 +576,15 @@ AVC는 유료 포맷이지만 무수한 특허들이 개입한 여러 단체에 
     <tr>
       <th scope="row">지원 컨테이너</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a>
+        <a href="/ko/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
+        <a href="/ko/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
+        <a href="/ko/docs/Web/Media/Formats/Containers#WebM">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> 호환
+        <a href="/ko/docs/Web/API/WebRTC_API">WebRTC</a> 호환
       </th>
       <td>예</td>
     </tr>
@@ -703,9 +703,9 @@ H.263는 Telenor, Fujitsu, Motorola, Samsung, Hitachi, Polycom, Qualcomm 등 수
     <tr>
       <th scope="row">컨테이너 지원</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#QuickTime"
+        <a href="/ko/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
+        <a href="/ko/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
+        <a href="/ko/docs/Web/Media/Formats/Containers#QuickTime"
           >QuickTime</a
         >
       </td>
@@ -713,7 +713,7 @@ H.263는 Telenor, Fujitsu, Motorola, Samsung, Hitachi, Polycom, Qualcomm 등 수
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> 호환
+        <a href="/ko/docs/Web/API/WebRTC_API">WebRTC</a> 호환
       </th>
       <td>아니오</td>
     </tr>
@@ -891,7 +891,7 @@ HEVC는 상용 포맷이며 여러 특허로 보호받고 있습니다. [MPEG LA
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> 호환
+        <a href="/ko/docs/Web/API/WebRTC_API">WebRTC</a> 호환
       </th>
       <td>아니오</td>
     </tr>
@@ -1003,14 +1003,14 @@ HEVC는 상용 포맷이며 여러 특허로 보호받고 있습니다. [MPEG LA
     <tr>
       <th scope="row">지원 컨테이너</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>
+        <a href="/ko/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
+        <a href="/ko/docs/Web/Media/Formats/Containers#MP4">MP4</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> 호환
+        <a href="/ko/docs/Web/API/WebRTC_API">WebRTC</a> 호환
       </th>
       <td>아니오</td>
     </tr>
@@ -1118,7 +1118,7 @@ HEVC는 상용 포맷이며 여러 특허로 보호받고 있습니다. [MPEG LA
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> 호환
+        <a href="/ko/docs/Web/API/WebRTC_API">WebRTC</a> 호환
       </th>
       <td>아니오</td>
     </tr>
@@ -1284,10 +1284,10 @@ MPEG-2는 서로 다른 스펙을 가진 여러 프로파일이 있습니다. �
     <tr>
       <th scope="row">지원 컨테이너</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#MPEGMPEG-2">MPEG</a>,
+        <a href="/ko/docs/Web/Media/Formats/Containers#MPEGMPEG-2">MPEG</a>,
         MPEG-TS (MPEG Transport Stream),
-        <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#QuickTime"
+        <a href="/ko/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
+        <a href="/ko/docs/Web/Media/Formats/Containers#QuickTime"
           >QuickTime</a
         >
       </td>
@@ -1295,7 +1295,7 @@ MPEG-2는 서로 다른 스펙을 가진 여러 프로파일이 있습니다. �
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> 호환
+        <a href="/ko/docs/Web/API/WebRTC_API">WebRTC</a> 호환
       </th>
       <td>아니오</td>
     </tr>
@@ -1409,12 +1409,12 @@ Theora의 단점 중 하나는 오직 8 bit 컬러 모드만을 지원하여 컬
     </tr>
     <tr>
       <th scope="row">지원 컨테이너</th>
-      <td><a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a></td>
+      <td><a href="/ko/docs/Web/Media/Formats/Containers#Ogg">Ogg</a></td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> 호환
+        <a href="/ko/docs/Web/API/WebRTC_API">WebRTC</a> 호환
       </th>
       <td>아니오</td>
     </tr>
@@ -1516,15 +1516,15 @@ HTML 콘텐츠로써 특히 [WebM](/ko/docs/Web/Media/Formats/Containers#WebM) �
     <tr>
       <th scope="row">지원 컨테이너</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a>
+        <a href="/ko/docs/Web/Media/Formats/Containers#3GP">3GP</a>,
+        <a href="/ko/docs/Web/Media/Formats/Containers#Ogg">Ogg</a>,
+        <a href="/ko/docs/Web/Media/Formats/Containers#WebM">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> 호환
+        <a href="/ko/docs/Web/API/WebRTC_API">WebRTC</a> 호환
       </th>
       <td>예; VP8은 WebRTC의 필수 코덱 중 하나</td>
     </tr>
@@ -1667,15 +1667,15 @@ Safari 지원이 빠져있지만 WebM 컨테이너를 쓸 수 있고 Safari 사�
     <tr>
       <th scope="row">지원 컨테이너</th>
       <td>
-        <a href="/en-US/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#Ogg">Ogg</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#WebM">WebM</a>
+        <a href="/ko/docs/Web/Media/Formats/Containers#MP4">MP4</a>,
+        <a href="/ko/docs/Web/Media/Formats/Containers#Ogg">Ogg</a>,
+        <a href="/ko/docs/Web/Media/Formats/Containers#WebM">WebM</a>
       </td>
     </tr>
     <tr>
       <th scope="row">
         {{Glossary("RTP")}} /
-        <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> 호환
+        <a href="/ko/docs/Web/API/WebRTC_API">WebRTC</a> 호환
       </th>
       <td>예</td>
     </tr>

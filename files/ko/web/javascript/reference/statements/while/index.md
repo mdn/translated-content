@@ -51,5 +51,5 @@ while (n < 3) {
 
 ## See also
 
-- [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
+- [`do...while`](/ko/docs/Web/JavaScript/Reference/Statements/do...while)
 - {{jsxref("Statements/for", "for")}}

@@ -132,6 +132,6 @@ c == d; // true
 
 ## See also
 
-- [Inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict equality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-- [Strict inequality operator](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [Inequality operator](/ko/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict equality operator](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Strict inequality operator](/ko/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

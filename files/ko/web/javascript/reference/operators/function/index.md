@@ -30,7 +30,7 @@ slug: Web/JavaScript/Reference/Operators/function
 
 ## 설명
 
-함수 표현식(function expression)은 function 문과 매우 비슷하고 구문(syntax)이 거의 같습니다 (자세한 사항은 [function 문](/ko/docs/Web/JavaScript/Reference/Statements/function) 참조). 함수 표현식과 function 문 사이의 주요 차이점은 함수 이름으로, 함수 표현식으로 _익명_ 함수를 만들 경우 이 이름을 생략할 수 있습니다. 함수 표현식은 정의하자마자 실행되는 [IIFE (즉시 호출되는 함수 표현식)](/en-US/docs/Glossary/IIFE)로 사용될 수 있습니다. 더 자세한 정보는 [함수](/ko/docs/Web/JavaScript/Reference/Functions) 장 참조.
+함수 표현식(function expression)은 function 문과 매우 비슷하고 구문(syntax)이 거의 같습니다 (자세한 사항은 [function 문](/ko/docs/Web/JavaScript/Reference/Statements/function) 참조). 함수 표현식과 function 문 사이의 주요 차이점은 함수 이름으로, 함수 표현식으로 _익명_ 함수를 만들 경우 이 이름을 생략할 수 있습니다. 함수 표현식은 정의하자마자 실행되는 [IIFE (즉시 호출되는 함수 표현식)](/ko/docs/Glossary/IIFE)로 사용될 수 있습니다. 더 자세한 정보는 [함수](/ko/docs/Web/JavaScript/Reference/Functions) 장 참조.
 
 ### Function expression 끌어올리기
 
@@ -48,7 +48,7 @@ slug: Web/JavaScript/Reference/Operators/function
 
 ### 유명(named) 함수 표현식
 
-함수 몸통 안 쪽에서 현재 함수를 참고하고 싶다면, 유명 함수를 생성해야 합니다. ***이 함수 이름은 함수의 몸통(범위) 안에서만 사용할 수 있습니다***. 이로써 비표준 [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) 속성을 사용하는 것을 피할 수도 있습니다.
+함수 몸통 안 쪽에서 현재 함수를 참고하고 싶다면, 유명 함수를 생성해야 합니다. ***이 함수 이름은 함수의 몸통(범위) 안에서만 사용할 수 있습니다***. 이로써 비표준 [`arguments.callee`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/callee) 속성을 사용하는 것을 피할 수도 있습니다.
 
 ```js
     var math = {
@@ -63,7 +63,7 @@ slug: Web/JavaScript/Reference/Operators/function
     math.factit(3) //3;2;1;
 ```
 
-함수가 할당된 변수는 `name` 속성을 가지게됩니다. 다른 변수에 할당되더라도 그 name 속성의 값은 변하지 않습니다. 함수의 이름이 생략되었다면, name 속성의 값은 그 변수의 이름(암묵적 이름)이 될 것입니다. 함수의 이름이 있다면 name 속성의 값은 그 함수의 이름(명시적 이름)이 될 것입니다. 이는 [화살표 함수(arrow functions)](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)에도 적용됩니다 (화살표 함수는 이름을 가지지 않으므로 해당 변수에 암묵적인 이름만 줄 수 있습니다).
+함수가 할당된 변수는 `name` 속성을 가지게됩니다. 다른 변수에 할당되더라도 그 name 속성의 값은 변하지 않습니다. 함수의 이름이 생략되었다면, name 속성의 값은 그 변수의 이름(암묵적 이름)이 될 것입니다. 함수의 이름이 있다면 name 속성의 값은 그 함수의 이름(명시적 이름)이 될 것입니다. 이는 [화살표 함수(arrow functions)](/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)에도 적용됩니다 (화살표 함수는 이름을 가지지 않으므로 해당 변수에 암묵적인 이름만 줄 수 있습니다).
 
 ```js
     var foo = function() {}
