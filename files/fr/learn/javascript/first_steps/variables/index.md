@@ -249,7 +249,7 @@ C'est probablement ce que vous ferez la plupart du temps, c'est plus rapide que 
 
 A ce moment de votre apprentissage, vous vous demandez sans doute : mais quel besoin de deux mot-clé pour définir une variable ? Pourquoi `var` et `let` ?
 
-Les raisons sont d'ordre historique. A l'origine, quand Javascript fut créé, il n'y avait que `var`. Cela fonctionnait plutôt bien dans la plupart des cas, avec parfois quelques surprises -- l'implémentation étonnante du `var` peut amener à une mauvaise interprétation, voire à des soucis. Ainsi, `let` a été ajouté dans les versions plus récentes de Javascript, un nouveau mot-clé pour créer des variables, avec un fonctionnement différent de celui du `var`, réglant ainsi les difficultés évoquées ci-dessus.
+Les raisons sont d'ordre historique. A l'origine, quand Javascript fut créé, il n'y avait que `var`. Cela fonctionnait plutôt bien dans la plupart des cas, avec parfois quelques surprises — l'implémentation étonnante du `var` peut amener à une mauvaise interprétation, voire à des soucis. Ainsi, `let` a été ajouté dans les versions plus récentes de Javascript, un nouveau mot-clé pour créer des variables, avec un fonctionnement différent de celui du `var`, réglant ainsi les difficultés évoquées ci-dessus.
 
 Nous évoquons ci-dessous quelques unes de ces différences, sans pouvoir faire ici le tour complet de la question. Vous comprendrez mieux la différence entre ces deux constructions au fur et à mesure de votre progression en JavaScript (si vous ne pouvez pas attendre, consultez la page de référence du `let`).
 

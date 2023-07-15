@@ -92,7 +92,7 @@ Nas seções abaixa, exploraremos detalhadamente cada um dos recursos dentro do 
 
 #### Campos (Fields)
 
-Um modelo pode ter um número árbitrário de campos, de qualquer tipo -- cada um representa uma coluna de dados que queremos armazenar em uma de nossas tabelas de banco de dados. Cada registro do banco de dados (row - linha) consitirá em um valor de cada campo. Vamos ver o exemplo visto acima:
+Um modelo pode ter um número árbitrário de campos, de qualquer tipo — cada um representa uma coluna de dados que queremos armazenar em uma de nossas tabelas de banco de dados. Cada registro do banco de dados (row - linha) consitirá em um valor de cada campo. Vamos ver o exemplo visto acima:
 
 ```js
 my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')

@@ -59,13 +59,13 @@ urlpatterns = [
 
 Esta expresión regular coincide con URLs iguales a `books/` (`^` es un marcador de inicio de cadena y `$` es un marcador de fin de cadena). Como se discutió en el tutorial anterior, la URL debió previamente haber coincidido con `/catalog`, de modo que la vista será llamada en realidad para la URL: `/catalog/books/`.
 
-La función de vista tiene un formato diferente al anterior -- eso es porque esta vista será en realidad implementada como una clase. Heredaremos desde una función de vista genérica existente que ya hace la mayoría de lo que queremos que esta función de vista haga, en lugar de escribir la nuestra propia desde el inicio.
+La función de vista tiene un formato diferente al anterior — eso es porque esta vista será en realidad implementada como una clase. Heredaremos desde una función de vista genérica existente que ya hace la mayoría de lo que queremos que esta función de vista haga, en lugar de escribir la nuestra propia desde el inicio.
 
 Para las vistas basadas en clases de Django, accedemos a una función de vista apropiada llamando al método de clase `as_view()`. Esto hace todo el trabajo de crear una instancia de la clase, y asegurarse de que los métodos controladores correctos sean llamados para las solicitudes HTTP entrantes.
 
 ### Vista (basada en clases)
 
-Podríamos fácilmente escribir la vista de lista de libros como una función regular (tal como nuestra vista de índice anterior), la cual consultaría a la base de datos por todos los libros, y luego llamar a `render()` para pasar dicha lista a una plantilla específica. Sin embargo, en lugar de eso usaremos una vista de lista genérica basada en clases (ListView) -- una clase que hereda desde una vista existente. Debido a que la vista genérica ya implementa la mayoría de la funcionalidad que necesitamos, y sigue la práctica adecuada de Django, seremos capaces de crear una vista de lista más robusta con menos código, menos repetición, y por último menos mantenimiento.
+Podríamos fácilmente escribir la vista de lista de libros como una función regular (tal como nuestra vista de índice anterior), la cual consultaría a la base de datos por todos los libros, y luego llamar a `render()` para pasar dicha lista a una plantilla específica. Sin embargo, en lugar de eso usaremos una vista de lista genérica basada en clases (ListView) — una clase que hereda desde una vista existente. Debido a que la vista genérica ya implementa la mayoría de la funcionalidad que necesitamos, y sigue la práctica adecuada de Django, seremos capaces de crear una vista de lista más robusta con menos código, menos repetición, y por último menos mantenimiento.
 
 Abre **catalog/views.py**, y copia el siguiente código al final del archivo:
 
@@ -78,7 +78,7 @@ class BookListView(generic.ListView):
 
 ¡Eso es todo! La vista genérica consultará a la base de datos para obtener todos los registros del modelo especificado (`Book`) y renderizará una plantilla ubicada en **/locallibrary/catalog/templates/catalog/book_list.html** (que crearemos más abajo). Dentro de la plantilla puedes acceder a la lista de libros mediante la variable de plantilla llamada `object_list` O `book_list` (esto es, genéricamente, "`nombre_del_modelo_list`").
 
-> **Nota:** Esta ruta complicada para la ubicación de la plantilla no es un error de digitación -- las vistas genéricas buscan plantillas en `/application_name/the_model_name_list.html` (`catalog/book_list.html` en este caso) dentro del directorio de la aplicación `/application_name/templates/` (`/catalog/templates/`).
+> **Nota:** Esta ruta complicada para la ubicación de la plantilla no es un error de digitación — las vistas genéricas buscan plantillas en `/application_name/the_model_name_list.html` (`catalog/book_list.html` en este caso) dentro del directorio de la aplicación `/application_name/templates/` (`/catalog/templates/`).
 
 Puedes añadir atributos para cambiar el comportamiento por defecto de arriba. Por ejemplo, puedes especificar otro archivo de plantilla si necesitas tener múltiples vistas que usen el mismo modelo, o puedes querer usar un nombre diferente de variable de plantilla si `book_list` no resulta intuitivo para tu caso particular de uso de plantilla. Posiblemente la variación más útil es cambiar/filtrar el conjunto de resultados que se devuelve, así, en lugar de listar todos los libros podrías listar los 5 libros más leídos por otros usuarios.
 
@@ -192,9 +192,9 @@ El código dentro del lazo crea un ítem de lista para cada libro, que muestra t
 
 Accedemos a los _campos_ del registro del libro asociado usando la "notación de punto" (ej. `book.title` y `book.author`), donde el texto que sigue a la palabra `book` es el nombre del campo (como se definió en el modelo).
 
-También podemos invocar _funciones_ en el modelo desde dentro de nuestra plantilla -- en este caso invocamos a `book.get_absolute_url()` para obtener una URL que se podría usar para desplegar la página de detalle relacionada. Esto funciona siempre y cuando la función no tenga ningún argumento (¡no hay forma de enviar argumentos!).
+También podemos invocar _funciones_ en el modelo desde dentro de nuestra plantilla — en este caso invocamos a `book.get_absolute_url()` para obtener una URL que se podría usar para desplegar la página de detalle relacionada. Esto funciona siempre y cuando la función no tenga ningún argumento (¡no hay forma de enviar argumentos!).
 
-> **Nota:** Debemos tener cuidado de los "efectos secundarios" al invocar funciones en las plantillas. Aquí solo obtenemos una URL para desplegar, pero una función puede hacer casi cualquier cosa -- ¡no quisieramos borrar nuestra base de datos (por ejemplo) solo por renderizar nuestra plantilla!
+> **Nota:** Debemos tener cuidado de los "efectos secundarios" al invocar funciones en las plantillas. Aquí solo obtenemos una URL para desplegar, pero una función puede hacer casi cualquier cosa — ¡no quisieramos borrar nuestra base de datos (por ejemplo) solo por renderizar nuestra plantilla!
 
 #### Actualizar la plantilla base
 
@@ -208,7 +208,7 @@ Abre la plantilla base (**/locallibrary/catalog/templates/_base_generic.html_**)
 
 ### ¿Cómo se ve?
 
-Aún no podrás ver la lista de libros, porque aún nos falta una dependencia -- el mapeo URL para las páginas de detalle de libros, que se necesita para crear los hipervínculos a los libros individuales. Mostraremos tanto la lista de libros como las vistas de detalle después de la siguiente sección.
+Aún no podrás ver la lista de libros, porque aún nos falta una dependencia — el mapeo URL para las páginas de detalle de libros, que se necesita para crear los hipervínculos a los libros individuales. Mostraremos tanto la lista de libros como las vistas de detalle después de la siguiente sección.
 
 ## Página de detalle de libros
 
@@ -424,7 +424,7 @@ Si lo necesitas puedes cambiar la plantilla usada y el nombre del objeto de cont
 
 #### ¿Qué sucede si el registro no existe?
 
-Si un registro solicitado no existe, la vista de detalle genérica basada en clases lanzará automáticamente por tí una excepción de tipo Http404 -- en producción, esto desplegará automáticamente una página apropiada de "recurso no encontrado", que puedes personalizar si lo deseas.
+Si un registro solicitado no existe, la vista de detalle genérica basada en clases lanzará automáticamente por tí una excepción de tipo Http404 — en producción, esto desplegará automáticamente una página apropiada de "recurso no encontrado", que puedes personalizar si lo deseas.
 
 Solo para darte una idea sobre cómo funciona esto, el fragmento de código de abajo demuestra cómo implementarías la vista basada en clases como una función, si **no** estuvieras usando la vista de detalle genérica basada en clases.
 
@@ -546,7 +546,7 @@ Este método es necesario porque has declarado un campo `ForeignKey` (uno-a-much
 
 En este punto deberíamos haber creado todo lo necesario para desplegar tanto la lista de libros como las páginas de detalles de libros. Ejecuta el servidor (`python3 manage.py runserver`) y dirígete en tu navegador a `http://127.0.0.1:8000/`.
 
-> **Advertencia:** No hagas click aún en ningún enlace de autor o de detalles de autores -- ¡los crearás en el reto!
+> **Advertencia:** No hagas click aún en ningún enlace de autor o de detalles de autores — ¡los crearás en el reto!
 
 Haz click en el enlace **All books** para desplegar la lista de libros.
 
@@ -572,7 +572,7 @@ class BookListView(generic.ListView):
     paginate_by = 10
 ```
 
-Con esta adición, apenas tengas más de 10 registros la vista comenzará a paginar la información que envía a la plantilla. A las diferentes páginas se accede usando parámetros GET -- para acceder a la página 2 usarías la URL: `/catalog/books/?page=2`.
+Con esta adición, apenas tengas más de 10 registros la vista comenzará a paginar la información que envía a la plantilla. A las diferentes páginas se accede usando parámetros GET — para acceder a la página 2 usarías la URL: `/catalog/books/?page=2`.
 
 ### Plantillas
 
@@ -610,7 +610,7 @@ Usamos `\{{ request.path }}` para obtener la URL de la página actual para crear
 
 ### ¿Cómo se ve?
 
-La captura de pantalla de abajo muestra cómo se ve la paginación -- si no has ingresado más de 10 títulos en tu base de datos, puedes probarlo más fácilmente reduciendo el número especificado en la línea `paginate_by` en tu archivo **catalog/views.py**. Para obtener el resultado de abajo lo cambiamos a `paginate_by = 2`.
+La captura de pantalla de abajo muestra cómo se ve la paginación — si no has ingresado más de 10 títulos en tu base de datos, puedes probarlo más fácilmente reduciendo el número especificado en la línea `paginate_by` en tu archivo **catalog/views.py**. Para obtener el resultado de abajo lo cambiamos a `paginate_by = 2`.
 
 Los enlaces de paginación se muestran en la parte de abajo, con enlaces de next/previous desplegados dependiendo de en qué página estés
 

@@ -163,14 +163,14 @@
           "replace": " ",
           "searchScope": "all"
         },
+        {
+          "name": "m-dash",
+          "message": "Don't use '--'. Use m-dash — instead",
+          "search": " -- ",
+          "replace": " — ",
+          "searchScope": "text"
+        },
         // XXX Many instances still found in translated content
-        // {
-        //   "name": "m-dash",
-        //   "message": "Don't use '--'. Use m-dash — instead",
-        //   "search": " -- ",
-        //   "replace": " — ",
-        //   "searchScope": "text"
-        // },
         // {
         //   "name": "relative-link",
         //   "message": "Internal links should start with '/'",
