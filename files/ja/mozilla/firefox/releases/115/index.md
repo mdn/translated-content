@@ -2,7 +2,7 @@
 title: Firefox 115 for developers
 slug: Mozilla/Firefox/Releases/115
 l10n:
-  sourceCommit: 6b6ffd8cb303c32de2ad34d03fee6c2c83ead079
+  sourceCommit: da3834afbae2d4ceb209593458d5df3c1e2d2d20
 ---
 
 {{FirefoxSidebar}}
@@ -11,20 +11,15 @@ l10n:
 
 ## ウェブ開発者向けの変更点一覧
 
-### 開発者ツール
-
 ### HTML
 
 - {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性で [`modulepreload`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) キーワードをサポートしました。
   これは [モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules) やその依存先を早期に (非同期で) 並列で読み込むことができ、それらは文書のモジュールマップに保存されます ([Firefox bug 1425310](https://bugzil.la/1425310))。
 
-#### 廃止
-
 ### CSS
 
 - CSSの {{cssxref("animation-composition")}} プロパティを、デフォルトで有効にしました。このプロパティを使用して、複数のアニメーションが同じプロパティへ同時に影響を与えるときの合成処理を指定できます ([Firefox bug 1823862](https://bugzil.la/1823862))。
-
-#### 廃止
+- CSS {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule) の `supports()` で `supports-conditions` をデフォルトで有効にしました。この機能で、指定した機能がユーザーのブラウザーでサポートされている場合に限り、スタイルシートをインポートできます ([Firefox bug 1830779](https://bugzil.la/1830779))。
 
 ### JavaScript
 
@@ -33,22 +28,14 @@ l10n:
 - `Array` および `TypedArray` メソッドで [`Array.toReversed()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed)、[`Array.toSorted()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted)、[`Array.toSpliced()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced)、[`Array.with()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/with)、[`TypedArrays.toReversed()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toReversed)、[`TypedArrays.toSorted()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toSorted)、[`TypedArrays.with()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/with) をサポートしました。
   これらのメソッドは、シャローコピーされた要素を持つ新しい配列を返します (`to` 接頭辞がつかない似た名前のメソッドは、配列の要素を直接変更します) ([Firefox bug 1811057](https://bugzil.la/1811057))。
 
-#### 廃止
-
 ### SVG
 
-#### 廃止
+変更なし。
 
 ### HTTP
 
 - [`Sec-Purpose`](/ja/docs/Web/HTTP/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}} が、リソースを {{Glossary("Prefetch", "プリフェッチ")}} する要求に含まれるようになりました。
   これにより要求に対してキャッシュの期限を調節するなど、サーバーが必要に応じて特別な制御を行うことができます ([Firefox bug 1836328](https://bugzil.la/1836328))。
-
-#### 廃止
-
-### セキュリティ
-
-#### 廃止
 
 ### API
 
@@ -59,17 +46,9 @@ l10n:
 - [`URLSearchParams.has()`](/ja/docs/Web/API/URLSearchParams/has) および [`URLSearchParams.delete()`](/ja/docs/Web/API/URLSearchParams/delete) メソッドで、省略可能な引数 `value` をサポートしました。
   これは `name` および `value` の両方で検索パラメーターとマッチングさせることができ、同じ名前で複数の検索パラメーターを持つクエリー文字列を操作できます ([Firefox bug 1831587](https://bugzil.la/1831587))。
 
-#### DOM
-
-#### Media、WebRTC、Web Audio
-
 #### 廃止
 
 - [HTMLMediaElement.preservesPitch](/ja/docs/Web/API/HTMLMediaElement/preservesPitch) の非推奨の別名である `mozPreservesPitch` をデフォルトで無効にしました。また、将来のリリースで完全に削除する予定です ([Firefox bug 1831205](https://bugzil.la/1831205))。
-
-### WebAssembly
-
-#### 廃止
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -87,13 +66,9 @@ l10n:
 
 ## アドオン開発者向けの変更点一覧
 
-- Manifest V3 拡張機能の非推奨項目を支持するため、Manifest V3 拡張機能で [`options_ui`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) および [`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) の [`browser_style`](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) マニエストキープロパティの既定値を `false` にしました ([Firefox bug 1830710](https://bugzil.la/1830710))。Manifest V3 拡張機能の `browser_style` からの移行に関する情報は、[Manifest v3 migration](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration) をご覧ください。
+- Manifest V3 拡張機能の非推奨項目を支持するため、Manifest V3 拡張機能で [`options_ui`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) および [`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) の [`browser_style`](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) マニフェストキープロパティの既定値を `false` にしました ([Firefox bug 1830710](https://bugzil.la/1830710))。Manifest V3 拡張機能の `browser_style` からの移行に関する情報は、[Manifest v3 migration](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration) をご覧ください。
 - コマンドのショートカットが変化したことをウェブ拡張機能からリッスンできる、{{WebExtAPIRef("commands.onChanged")}} イベントを追加しました ([Firefox bug 1801531](https://bugzil.la/1801531))。
 - ブラウザーセッションの間、メモリー内にデータを保存する機能を提供する、{{WebExtAPIRef("storage.session")}} をサポートしました ([Firefox bug 18237131](https://bugzil.la/1823713))。
-
-### 廃止
-
-### その他
 
 ## 過去のバージョン
 
