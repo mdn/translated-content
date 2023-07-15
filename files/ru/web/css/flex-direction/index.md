@@ -69,6 +69,6 @@ element {
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - [Using CSS flexible boxes](/ru/docs/CSS/Using_CSS_flexible_boxes)

@@ -203,7 +203,7 @@ const webPush = require("web-push");
 if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
   console.log(
     "Debes configurar las variables de entorno VAPID_PUBLIC_KEY y " +
-      "VAPID_PRIVATE_KEY. Puedes utilizar las siguientes: "
+      "VAPID_PRIVATE_KEY. Puedes utilizar las siguientes: ",
   );
   console.log(webPush.generateVAPIDKeys());
   return;
@@ -212,7 +212,7 @@ if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
 webPush.setVapidDetails(
   "https://github.com/mdn/serviceworker-cookbook/",
   process.env.VAPID_PUBLIC_KEY,
-  process.env.VAPID_PRIVATE_KEY
+  process.env.VAPID_PRIVATE_KEY,
 );
 ```
 
@@ -260,7 +260,7 @@ self.addEventListener("push", function (event) {
   event.waitUntil(
     self.registration.showNotification("ServiceWorker Cookbook", {
       body: payload,
-    })
+    }),
   );
 });
 ```

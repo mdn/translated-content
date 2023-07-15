@@ -335,7 +335,7 @@ function preferCodec(codecs, mimeType) {
 
 Подробнее о безопасности при использовании AVC в WebRTC см. {{RFC(6184, "RTP Payload Format for H.264 Video: Security Considerations", 9)}}.
 
-## Смотрите также :
+## Смотрите также
 
 - [WebRTC API](/ru/docs/Web/API/WebRTC_API)
 - [Введение в протоколы WebRTC](/ru/docs/Web/API/WebRTC_API/Protocols)

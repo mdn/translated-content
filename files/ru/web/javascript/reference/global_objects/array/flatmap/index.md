@@ -100,7 +100,7 @@ arr1.reduce((acc, x) => acc.concat([x * 2]), []);
 
 {{Compat}}
 
-## См так же:
+## См так же
 
 - {{jsxref("Array.prototype.flat()")}}
 - {{jsxref("Array.prototype.map()")}}

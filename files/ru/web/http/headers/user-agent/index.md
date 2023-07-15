@@ -138,7 +138,7 @@ Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
 Mozilla/5.0 (compatible; YandexAccessibilityBot/3.0; +http://yandex.com/bots)
 ```
 
-## Строка UA у библиотек и net-tools.
+## Строка UA у библиотек и net-tools
 
 ### Примеры
 

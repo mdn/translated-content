@@ -36,7 +36,7 @@ Available input mechanisms depend on the capabilities of the device running the 
 
 The following is a set of recommendations and best practices for using such tools in Open Web Apps.
 
-### Decide what input mechanism you’re using
+### Decide what input mechanism you're using
 
 #### Keyboard
 
@@ -59,7 +59,7 @@ When the input device is a mouse, you can also control user input through the Po
 
 #### Finger touch
 
-When developing web applications meant to be installed on touchscreen devices, it’s a good practice to take into consideration the different capabilities in terms of screen resolution and user input. [Touch events](/ru/docs/Web/Guide/Events/Touch_events) can help you implement interactive elements and common interaction gestures on touchscreen devices.
+When developing web applications meant to be installed on touchscreen devices, it's a good practice to take into consideration the different capabilities in terms of screen resolution and user input. [Touch events](/ru/docs/Web/Guide/Events/Touch_events) can help you implement interactive elements and common interaction gestures on touchscreen devices.
 
 If you want to use touch events, you need to add event listeners and specify handler functions, which will be called when the event gets fired:
 
@@ -123,7 +123,7 @@ if (elem.requestFullscreen) {
 
 #### Drag & Drop
 
-[Drag & Drop](/ru/docs/Web/Guide/HTML/Drag_and_drop) allows your application’s users to click and hold the mouse button down over an element, drag it to another location, and release the mouse button to drop the element there.
+[Drag & Drop](/ru/docs/Web/Guide/HTML/Drag_and_drop) allows your application's users to click and hold the mouse button down over an element, drag it to another location, and release the mouse button to drop the element there.
 
 Here is an example that allows a section of content to be dragged.
 

@@ -33,7 +33,7 @@ MediaRecorder.start(timeslice)
 
 ### Ошибки
 
-An `InvalidState` error is raised if the `start()` method is called while the `MediaRecorder` object’s {{domxref("MediaRecorder.state")}} is not "inactive" — it makes no sense to start media capture if it is already happening.
+An `InvalidState` error is raised if the `start()` method is called while the `MediaRecorder` object's {{domxref("MediaRecorder.state")}} is not "inactive" — it makes no sense to start media capture if it is already happening.
 
 ## Пример
 
