@@ -53,9 +53,13 @@ El formulario es definido en HTML como una colección de elementos dentro de las
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -194,7 +198,7 @@ Antes de crear nuestra vista, agreguemos una configuración de URL para la pági
 
 ```python
 urlpatterns += [
-    url(r'^book/(?P<pk>[-\w]+)/renew/$', views.renew_book_librarian, name='renew-book-librarian'),
+    path('book/<uuid:pk>/renew/', views.renew_book_librarian, name='renew-book-librarian'),
 ]
 ```
 
@@ -345,7 +349,7 @@ def renew_book_librarian(request, pk):
 
 Crea la plantilla html referenciada en la vista dentro del directorio (**/catalog/templates/catalog/book_renew_librarian.html**) y copia el codigo a continuacion dentro del archivo que creaste:
 
-```html
+```django
 {% extends "base_generic.html" %}
 {% block content %}
 
@@ -376,9 +380,16 @@ Todo lo que queda es la variable de la plantilla `\{{form}}`, que pasamos a la p
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required />
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2016-11-08"
+      required />
     <br />
-    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+    <span class="helptext">
+      Enter date between now and 4 weeks (default 3 weeks).
+    </span>
   </td>
 </tr>
 ```
@@ -390,14 +401,21 @@ Si tuviera que ingresar una fecha no válida, también obtendría una lista de l
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
-   <td>
-      <ul class="errorlist">
-        <li>Invalid date - renewal in past</li>
-      </ul>
-      <input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required />
-      <br />
-      <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
-    </td>
+  <td>
+    <ul class="errorlist">
+      <li>Invalid date - renewal in past</li>
+    </ul>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2015-11-08"
+      required />
+    <br />
+    <span class="helptext">
+      Enter date between now and 4 weeks (default 3 weeks).
+    </span>
+  </td>
 </tr>
 ```
 
@@ -419,7 +437,7 @@ Para obtener más ejemplos de cómo reproducir manualmente los formularios en pl
 
 Si aceptó el "desafío" en [Django Tutorial Part 8: User authentication and permissions](/es/docs/Learn/Server-side/Django/authentication_and_sessions#Challenge_yourself) tendrá una lista de todos los libros prestados en la biblioteca, que solo es visible para el personal de la biblioteca. Podemos agregar un enlace a nuestra página de renovación al lado de cada artículo usando el código de plantilla a continuación.
 
-```html
+```django
 {% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}
 ```
 
@@ -544,7 +562,7 @@ Las vistas "create" y "update" utilizan la misma plantilla de forma predetermina
 
 Crea la siguiente plantilla **locallibrary/catalog/templates/catalog/author_form.html** y copia el siguiente texto:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -564,7 +582,7 @@ Esto es similar a nuestros formularios anteriores y representa los campos usando
 
 La vista "delete" espera encontrar una plantilla con el formato _model_name_**\_confirm_delete.html** (de nuevo, puedes cambiar el sufijo usando `template_name_suffix` en tu vista). Crea la siguiente plantilla **locallibrary/catalog/templates/catalog/author_confirm_delete.html** y copia en el texto a continuación.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -587,9 +605,9 @@ Abra el archivo de configuración de URL (**locallibrary/catalog/urls.py**) y ag
 
 ```python
 urlpatterns += [
-    url(r'^author/create/$', views.AuthorCreate.as_view(), name='author_create'),
-    url(r'^author/(?P<pk>\d+)/update/$', views.AuthorUpdate.as_view(), name='author_update'),
-    url(r'^author/(?P<pk>\d+)/delete/$', views.AuthorDelete.as_view(), name='author_delete'),
+    path('author/create/', views.AuthorCreate.as_view(), name='author-create'),
+    path('author/<int:pk>/update/', views.AuthorUpdate.as_view(), name='author-update'),
+    path('author/<int:pk>/delete/', views.AuthorDelete.as_view(), name='author-delete'),
 ]
 ```
 
