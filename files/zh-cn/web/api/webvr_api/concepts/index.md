@@ -62,9 +62,9 @@ There are two main types of setup, mobile or computer-connected. Their minimum h
 **主要有两种创建 VR 环境的类型，手机或者是 PC。以下是实现这两种环境所需要的最少的硬件支持：**
 
 - Mobile: A Head-mounted display (HMD) is created using a smartphone — which acts as the VR display — mounted in a VR mount such as Google Cardboard, which contains the required lenses to provide stereoscopic vision of what is projected on the mobile screen.
-- **手机：通过使用一部智能手机可以营造一部头显设备（HMD）-- 扮演 VR 显示器的角色 -- 安装在一个像谷歌 CARDBOARD 那样的 VR 框架中，其中包含了必需要有的透镜，用以提供投射在手机屏幕上的立体视觉效果。【K】**![Mobile based VR setup](mobilebasedvrsetup.png)
+- **手机：通过使用一部智能手机可以营造一部头显设备（HMD）-- 扮演 VR 显示器的角色 — 安装在一个像谷歌 CARDBOARD 那样的 VR 框架中，其中包含了必需要有的透镜，用以提供投射在手机屏幕上的立体视觉效果。【K】**![Mobile based VR setup](mobilebasedvrsetup.png)
 - Computer-connected: A VR setup is connected to your computer — this consists of a Head Mounted Display (HMD) containing a high resolution landscape-oriented screen onto which the visuals for both the left and right eye are displayed, which also includes a lens for each eye to promote separation of the left and right eye scene (stereoscopic vision.) The setup also includes a separate position sensor that works out the position/orientation/velocity/acceleration of your head and constantly passes that information the computer.
-- **电脑：将一部 VR 设备连接到你的电脑上 -- 它是由一部包含了能分别为左眼和右眼显示图像的高分辨率全景镜头所组成的头显设备所组成，同时它还包含了两块分别为双眼配备的，可以提升左右眼图像分离（立体视觉）的透镜。这套设备还包含了一套分离式的感应设备，它能够测算出你的头部的位置/方向/速度/加速度等信息，并实时的把这些信息传输给计算机。【K】**![Computer based VR Setup](computerbasedvrsetup.png)
+- **电脑：将一部 VR 设备连接到你的电脑上 — 它是由一部包含了能分别为左眼和右眼显示图像的高分辨率全景镜头所组成的头显设备所组成，同时它还包含了两块分别为双眼配备的，可以提升左右眼图像分离（立体视觉）的透镜。这套设备还包含了一套分离式的感应设备，它能够测算出你的头部的位置/方向/速度/加速度等信息，并实时的把这些信息传输给计算机。【K】**![Computer based VR Setup](computerbasedvrsetup.png)
 
 > **备注：** Computer-connected systems sometimes don't include a position sensor, but they usually do.
 >
@@ -77,7 +77,7 @@ Other hardware that complements the VR experience includes:
 - A hand recognition sensor: A sensor that tracks the position and movement of your hand, allowing it to become an interesting controller, and an object in VR gameworlds. The most advanced to date is the [Leap Motion](https://www.leapmotion.com/), which works with the computer (connected to the Oculus Rift) and can also work connected to a mobile device (the latter is in an experimental phase.)
 - **手持传感识别器：一个可以追踪你的手部位置和运动的传感器，这使得它变成了一个非常有趣的控制器，以及一件存在于 VR 游戏世界种的物体。迄今为止，最先进的这类设备首属[Leap Motion](https://www.leapmotion.com/),它可以同电脑配合使用 (同 Oculus Rift 设备连接) 并且同时还可以和手机兼容 (暂时处于实验阶段。)**
 - A gamepad: We can configurate an XBox controller or similar to work as a keyboard in the browser — this offers further possibilities of interaction with a VR webpage. There are some gamepads that work with a mobile setup — like the [MergeVR headset](http://www.mergevr.com/) — but these are connected via Bluetooth so don't work with WebVR.
-- **（手机）游戏手柄：我们可以配置一套 XBOX 控制器或者类似的设备作为浏览器的键盘 -- 这种方法提供了另一种同 VR 网页互动的形式。有一些游戏手柄更可以和手机协同使用 -- 就像**[MergeVR headset](http://www.mergevr.com/)--**但是这些方法都是通过蓝牙连接设备的方法，并不能完全等同于和 WEBVR 结合。**
+- **（手机）游戏手柄：我们可以配置一套 XBOX 控制器或者类似的设备作为浏览器的键盘 — 这种方法提供了另一种同 VR 网页互动的形式。有一些游戏手柄更可以和手机协同使用 — 就像**[MergeVR headset](http://www.mergevr.com/)--**但是这些方法都是通过蓝牙连接设备的方法，并不能完全等同于和 WEBVR 结合。**
 - An eye tracking sensor (experimental): The FOVE project is the first headset that reads subtle eye movements.
 - **眼部追踪传感器（实验产品）：FOVE 项目是第一个研究用于追踪和读取人眼运动设备的项目。**
 - A facial expression tracker (experimental): Researchers at the University of Southern California and Facebook's Oculus division have been testing new ways of tracking facial expressions and transferring them to a virtual character.
@@ -117,15 +117,15 @@ The output information falls into four categories:
 
 3. Velocity — There are two types of velocity to consider in VR:
 
-    **速度 -- 在 VR 中有两种需要被考虑的速度：**
+    **速度 — 在 VR 中有两种需要被考虑的速度：**
 
     - Linear — The speed along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPositionState.linearVelocity")}} (x, y, and z.）
     - **线速度--HMD 追踪的沿着三种轴向之一的速度。这类的信息可以被接收通过 {{domxref("VRPositionState.linearVelocity")}} (x, y, and z.)**
     - Angular — The speed at which the HMD is rotating around any one of the axes. This information can be accessed using {{domxref("VRPositionState.angularVelocity")}} (x, y, and z.)
-    - **角速度 -- 就是 HMD 设备绕着三种轴向之一旋转的速度。这类的信息可以被接收通过{{domxref("VRPositionState.angularVelocity")}} (x, y, and z.)**
+    - **角速度 — 就是 HMD 设备绕着三种轴向之一旋转的速度。这类的信息可以被接收通过{{domxref("VRPositionState.angularVelocity")}} (x, y, and z.)**
 
 4. Acceleration — There are two types of acceleration to consider in VR:
-    **加速度 -- 在 VR 中有两种需要被考虑的加速度：**
+    **加速度 — 在 VR 中有两种需要被考虑的加速度：**
 
     - Linear — The acceleration of travel along any one of the axes that the HMD is traveling. This information can be accessed using {{domxref("VRPositionState.linearAcceleration")}} (x, y, and z.)
     - **线性加速度--HMD 设备沿着轴向追踪的加速度。这类的信息可以被接收通过{{domxref("VRPositionState.linearAcceleration")}} (x, y, and z.)**
@@ -161,7 +161,7 @@ Different users will also require slightly different values for optimal viewing.
 
 > **备注：** The user can potentially see all the way around them, which is a brand new concept for apps and games. Try to give people a reason to look around and see what's behind them — make them reach out and find things that are not visible at the very beginning. Describe what's behind their backs.
 >
-> **注释：使用者潜在的可以看到所有他们身边的事物，这是一个 APP 和游戏中出现的全新的概念。那就是，试着传达给人们一个发现他们身后事物的理由 -- 引导他们去发现那些在一开始并没有出现在他们视野中的事物。描述他们身后的世界。【K】**
+> **注释：使用者潜在的可以看到所有他们身边的事物，这是一个 APP 和游戏中出现的全新的概念。那就是，试着传达给人们一个发现他们身后事物的理由 — 引导他们去发现那些在一开始并没有出现在他们视野中的事物。描述他们身后的世界。【K】**
 >
 > 【可以说这一点是 VR 概念中同其他 3D 技术区别开，非常重要的特性，就是创建和引导使用者去发现他们视野中看不见的部分】
 
@@ -177,7 +177,7 @@ This section discusses concepts to be aware of when developing VR apps that you'
 
 Stereoscopic vision is the normal vision humans and (most) animals have — the perception of two slightly differing images (one from each eye) as a single image. This results in depth perception, helping us to see the world in glorious 3D. To recreate this in VR apps, you need to render two very slightly different views side by side, which will be taken in by the left and right eyes when the user is using the HMD.
 
-**立体视觉是大多数的动物以及人类拥有的正常的视觉效果 -- 也就是将来自每只眼睛的略有差别的图像，通过大脑的处理，感知为一张立体的图片。这种对深度的感知结果，帮助我们通过一种神奇的 3D 的视角看世界。为了在 APP 中重现这种视觉效果，你需要渲染两幅略有不同的场景，当使用者在通过使用 HMD 观看时能分别被左右眼所调用。**
+**立体视觉是大多数的动物以及人类拥有的正常的视觉效果 — 也就是将来自每只眼睛的略有差别的图像，通过大脑的处理，感知为一张立体的图片。这种对深度的感知结果，帮助我们通过一种神奇的 3D 的视角看世界。为了在 APP 中重现这种视觉效果，你需要渲染两幅略有不同的场景，当使用者在通过使用 HMD 观看时能分别被左右眼所调用。**
 
 ![How to create stereoscopic 3D images](createstereoscopicimages.png)
 
@@ -194,7 +194,7 @@ It has primary relevance because it makes our eyes believe we are in front of a 
 
 A term commonly used in VR because it is a major handicap of using an HMD — we are constantly fooling the eye with what we are showing in the app canvas, and this leads to the eyes doing a lot more work than they normally would, so using VR apps for any extended period of time can lead to eye strain.
 
-**这是一个通常使用在 VR 中的术语，因为这也是使用 HMD 设备的一个副作用 -- 我们的视线历来会追踪我们在 APP 画布中被展示的内容，然而这将导致我们的眼睛超负荷的工作，因此假如我们使用 VR APP 时，有任何超时的行为，都有可能导致眼部的拉伤。**
+**这是一个通常使用在 VR 中的术语，因为这也是使用 HMD 设备的一个副作用 — 我们的视线历来会追踪我们在 APP 画布中被展示的内容，然而这将导致我们的眼睛超负荷的工作，因此假如我们使用 VR APP 时，有任何超时的行为，都有可能导致眼部的拉伤。**
 
 To minimize this unwanted effect, we need to:
 
@@ -216,7 +216,7 @@ To minimize this unwanted effect, we need to:
 
 In general, the path of least visual effort will give the user a less tiring experience.
 
-- **如果使用者需要和场景中的物体进行互动，那么尽量使用一个指针 -- 这将帮助他们精准和更加容易的指向那个物体。一般情况下，最少的视觉上的动作能提供给使用者最轻松的体验。**
+- **如果使用者需要和场景中的物体进行互动，那么尽量使用一个指针 — 这将帮助他们精准和更加容易的指向那个物体。一般情况下，最少的视觉上的动作能提供给使用者最轻松的体验。**
 
 ### Motion sickness 晕动病**【K】**
 
@@ -247,7 +247,7 @@ To avoid bringing on motion sickness in our users (or at least minimize the effe
 
 Latency is the time between the physical head movement and the visual display reaching the user's eyes from the screen of an HMD being updated. This is one of the most critical factors in providing a realistic experience. Humans can detect very small delays — we need to keep the latency below 20 milliseconds if they are to be imperceptible (for example a 60Hz monitor has a 16 ms response.)
 
-**延迟指的是，头部的物理转动动作，显示设备在接收了 HMD 的信息更新后，这两者之间的时间间隔。这是一个在提供虚拟现实体验的过程中非常关键的因素。人体能感知到非常细微的延迟 -- 如果我们要让人体感知不到这种延迟，我们需要将延迟保持在 20 微妙以下（例如一个 60HZ 的显示器拥有 16ms 的返回速度。）**
+**延迟指的是，头部的物理转动动作，显示设备在接收了 HMD 的信息更新后，这两者之间的时间间隔。这是一个在提供虚拟现实体验的过程中非常关键的因素。人体能感知到非常细微的延迟 — 如果我们要让人体感知不到这种延迟，我们需要将延迟保持在 20 微妙以下（例如一个 60HZ 的显示器拥有 16ms 的返回速度。）**
 
 The Oculus Rift headset has a letency of 20 ms or less, but woth mobile device-based setups it will depend heavily on the smartphone CPU power and other capabilities.
 
@@ -281,7 +281,7 @@ This value is returned by the HMD and its value may be around 60 to 70 mm; in th
 
 DoF refers to the movement of a rigid body inside space. There is no uniformity in creating acronyms for this term — we can find references to 3DoF in the context of sensors that detect only rotational head tracking, and 6DoF when an input allows us to control position and orientation simultaneously. We even sometimes find 9DoF references when the hardware contains three sensors like gyroscope, accelerometer and magnetometer, but the results of the 3 x 3DoF values will actually return a 6 degrees of freedom tracking.
 
-**DOF 指向的是空间中固态物体移动的自由度。并没有一个统一的对这个专业术语的缩写 -- 我们可以找到，在关于侦测头部转动的传感器的那篇文章中的 3DOF 的参考，还有当一个传入设备允许我们同时控制位置和方位信息时的 6DOF。我们有时候甚至会看到 9DOF 的案例，那就是当硬件中包含了三个感应装置时，如陀螺仪、加速计和磁力计，但是 3 x 3DoF 的值的接过实际上返回的，还是一个 6 纬的自由度跟踪结果。**
+**DOF 指向的是空间中固态物体移动的自由度。并没有一个统一的对这个专业术语的缩写 — 我们可以找到，在关于侦测头部转动的传感器的那篇文章中的 3DOF 的参考，还有当一个传入设备允许我们同时控制位置和方位信息时的 6DOF。我们有时候甚至会看到 9DOF 的案例，那就是当硬件中包含了三个感应装置时，如陀螺仪、加速计和磁力计，但是 3 x 3DoF 的值的接过实际上返回的，还是一个 6 纬的自由度跟踪结果。**
 
 DoF is directly related to the tracking of the user's head movement.
 
@@ -295,7 +295,7 @@ Although our field of view is much larger (approximately 180º), we need to be a
 
 This limitation is important to consider when deciding where place visuals on the app canvas — too far towards the edge of the cone of focus can lead to eye strain much ore quickly. There is a very interesting post about this (amongst other things) at MozVR.com — see [Quick VR Mockups with Illustrator](http://mozvr.com/posts/quick-vr-prototypes/).
 
-这样的限制对于在考虑如何在 APP 画布上设置视角的时候，是非常重要的 -- 假如太过于远离锥形焦点的边缘，就可能更快更容易的导致眼部的拉伤。想要阅读 MozVR.com 上的关于这个问题的有意思的文章（还包含其他内容）-- 请点击[Quick VR Mockups with Illustrator](http://mozvr.com/posts/quick-vr-prototypes/).
+这样的限制对于在考虑如何在 APP 画布上设置视角的时候，是非常重要的 — 假如太过于远离锥形焦点的边缘，就可能更快更容易的导致眼部的拉伤。想要阅读 MozVR.com 上的关于这个问题的有意思的文章（还包含其他内容）-- 请点击[Quick VR Mockups with Illustrator](http://mozvr.com/posts/quick-vr-prototypes/).
 
 ### 3D Positional Audio 3D 定位音效**【K】【如 ECHO 回声 APP】**
 
