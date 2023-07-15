@@ -26,7 +26,7 @@ function getMonthName(mo) {
     "Sep",
     "Oct",
     "Nov",
-    "Dec"
+    "Dec",
   );
   if (months[mo] != null) {
     return months[mo];
@@ -144,7 +144,7 @@ try {
 
 #### Error 物件的用處
 
-根據錯誤的類型，你有可能使用 “name” 和 “message” 屬性來取得更多明確的訊息。“name” 提供錯誤的一般類別（例如，“DOMException” 或 “Error”），“message” 通常提供更為簡練的訊息，如此就能把錯誤物件轉換為字串來取得訊息。
+根據錯誤的類型，你有可能使用 「name」 和 「message」 屬性來取得更多明確的訊息。「name」 提供錯誤的一般類別（例如，「DOMException」 或 「Error」），「message」 通常提供更為簡練的訊息，如此就能把錯誤物件轉換為字串來取得訊息。
 
 如果你要拋出你自己的例外，以從這些屬性取得好處（例如，如果你的 catch 區塊不區分你自己的例外和系統的例外的話），你可以使用錯誤建構子。例如︰
 

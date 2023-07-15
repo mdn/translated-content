@@ -52,7 +52,7 @@ window.IDBKeyRange =
 ```js
 if (!window.indexedDB) {
   window.alert(
-    "Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available."
+    "Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.",
   );
 }
 ```
@@ -399,7 +399,7 @@ index.openCursor().onsuccess = function (event) {
         ", SSN: " +
         cursor.value.ssn +
         ", email: " +
-        cursor.value.email
+        cursor.value.email,
     );
     cursor.continue();
   }
@@ -856,7 +856,7 @@ input {
       pub_msg.append(
         "<p>There are <strong>" +
           evt.target.result +
-          "</strong> record(s) in the object store.</p>"
+          "</strong> record(s) in the object store.</p>",
       );
     };
     req.onerror = function (evt) {
@@ -884,7 +884,7 @@ input {
               value.biblioid +
               ") " +
               value.title +
-              "</li>"
+              "</li>",
           );
           if (value.year != null) list_item.append(" - " + value.year);
 
@@ -1004,7 +1004,7 @@ input {
         console.error(
           "addPublicationFromUrl error:",
           xhr.responseText,
-          xhr.status
+          xhr.status,
         );
       }
     };
@@ -1048,7 +1048,7 @@ input {
     } catch (e) {
       if (e.name == "DataCloneError")
         displayActionFailure(
-          "This engine doesn't know how to clone a Blob, " + "use Firefox"
+          "This engine doesn't know how to clone a Blob, " + "use Firefox",
         );
       throw e;
     }

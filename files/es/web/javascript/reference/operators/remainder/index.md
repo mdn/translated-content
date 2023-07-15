@@ -12,7 +12,7 @@ El operador resto (`%`) devuelve el resto de la división entre dos operandos. S
 
 El código fuente para este ejemplo interactivo se encuentra en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interactivas, por favor clona <https://github.com/mdn/interactive-examples> y realiza un pull request.
 
-Tener en cuenta que en la mayoría de los lenguajes de programación, el operador de resto es ‘%’, pero en otros (como [Python, Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages)) es el operador módulo. Ambos son iguales para valores positivos, pero cuando el divisor y el dividendo son de signos distintos, se obtienen distintos resultados. Para obtener el módulo en JavaScript, en lugar de `a % n`, usa `((a % n ) + n ) % n`.
+Tener en cuenta que en la mayoría de los lenguajes de programación, el operador de resto es '%', pero en otros (como [Python, Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages)) es el operador módulo. Ambos son iguales para valores positivos, pero cuando el divisor y el dividendo son de signos distintos, se obtienen distintos resultados. Para obtener el módulo en JavaScript, en lugar de `a % n`, usa `((a % n ) + n ) % n`.
 
 ## Sintaxis
 

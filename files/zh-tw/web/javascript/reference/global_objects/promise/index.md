@@ -39,7 +39,7 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 ![](https://cdn.rawgit.com/Vectaio/a76330b025baf9bcdf07cb46e5a9ef9e/raw/26c4213a93dee1c39611dcd0ec12625811b20a26/js-promise.svg)
 
-> **備註：** 許多其他語言擁有機制用來惰性求值（lazy evaluation）及延遲（deferring）運算，它們也被稱作“promises” — e.g. Scheme. 然而在 JavaScript 中 Promises 代表那些（已經）發生中（happening）的程序，它們可以繫結回呼函式。若您要找的是惰性求值表示式，考慮不帶參數的 [arrow function](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)：`f = () => expression` 來建立惰性求值表示式，並透過 `f()` 進行求值.
+> **備註：** 許多其他語言擁有機制用來惰性求值（lazy evaluation）及延遲（deferring）運算，它們也被稱作「promises」 — e.g. Scheme. 然而在 JavaScript 中 Promises 代表那些（已經）發生中（happening）的程序，它們可以繫結回呼函式。若您要找的是惰性求值表示式，考慮不帶參數的 [arrow function](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)：`f = () => expression` 來建立惰性求值表示式，並透過 `f()` 進行求值.
 
 > **備註：** 一個被實現或拒絕，但不處於 pending 的 promise 被稱作被解決（settled）。您也會見到使用解決（resolved）一詞來描述 promises — 這代表 promises 被實現（fulfilled）了。[States and fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 這篇文章包含了更多 promises 的專有名詞。
 
@@ -81,7 +81,7 @@ See the [Microtask guide](/zh-TW/docs/Web/API/HTML_DOM_API/Microtask_guide) to l
 
 ## 建立 Promise
 
-一個 `Promise` 物件透過 `new` 及其建構式建立。這個建構式接收一個叫作”執行器函式（executor function）“的引數。此函式接收兩個函式作為引數。第一個函式（`resolve）`在非同步作業成功完成時，以該作業之結果值被呼叫。第二個函式（`reject`）在作業失敗時，以失敗訊息，通常是一個 error object，被呼叫。
+一個 `Promise` 物件透過 `new` 及其建構式建立。這個建構式接收一個叫作」執行器函式（executor function）「的引數。此函式接收兩個函式作為引數。第一個函式（`resolve）`在非同步作業成功完成時，以該作業之結果值被呼叫。第二個函式（`reject`）在作業失敗時，以失敗訊息，通常是一個 error object，被呼叫。
 
 ```js
 const myFirstPromise = new Promise((resolve, reject) => {
@@ -149,7 +149,7 @@ function testPromise() {
   let log = document.getElementById("log");
   log.insertAdjacentHTML(
     "beforeend",
-    thisPromiseCount + ") Started (<small>Sync code started</small>)<br/>"
+    thisPromiseCount + ") Started (<small>Sync code started</small>)<br/>",
   );
 
   // 建立一個新的 promise：此 promise 承諾一個數值計數, 由 1 開始（等待約 2 秒）
@@ -160,14 +160,17 @@ function testPromise() {
       log.insertAdjacentHTML(
         "beforeend",
         thisPromiseCount +
-          ") Promise started (<small>Async code started</small>)<br/>"
+          ") Promise started (<small>Async code started</small>)<br/>",
       );
       // 在此例子單純用來產生非同步特性。
-      window.setTimeout(function () {
-        // 實現這個 promise!
-        resolve(thisPromiseCount);
-      }, Math.random() * 2000 + 1000);
-    }
+      window.setTimeout(
+        function () {
+          // 實現這個 promise!
+          resolve(thisPromiseCount);
+        },
+        Math.random() * 2000 + 1000,
+      );
+    },
   );
 
   // 接著透過呼叫 then() 來決定 promise 進入 resolved 時，要透過 then() 做什麼，
@@ -177,20 +180,20 @@ function testPromise() {
     function (val) {
       log.insertAdjacentHTML(
         "beforeend",
-        val + ") Promise fulfilled (<small>Async code terminated</small>)<br/>"
+        val + ") Promise fulfilled (<small>Async code terminated</small>)<br/>",
       );
-    }
+    },
   ).catch(
     // 印出失敗訊息（rejection reason）
     (reason) => {
       console.log("Handle rejected promise (" + reason + ") here.");
-    }
+    },
   );
 
   log.insertAdjacentHTML(
     "beforeend",
     thisPromiseCount +
-      ") Promise made (<small>Sync code terminated</small>)<br/>"
+      ") Promise made (<small>Sync code terminated</small>)<br/>",
   );
 }
 ```

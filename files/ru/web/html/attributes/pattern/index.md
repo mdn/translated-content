@@ -24,7 +24,7 @@ When including a `pattern`, provide a description of the pattern in visible text
 
 ### Constraint validation
 
-If the input’s value is not the empty string and the value does not match the entire regular expression, there is a from a {{domxref('ValidityState.patternMismatch','patternMismatch')}}.
+If the input's value is not the empty string and the value does not match the entire regular expression, there is a from a {{domxref('ValidityState.patternMismatch','patternMismatch')}}.
 The pattern's regular expression, when matched against the value, must have its start anchored to the start of the string and its end anchored to the end of the string, which is slightly different from JavaScript regular expressions: in the case of pattern attribute, we are matching against the entire value, not just any subset, as if a `^(?:` were implied at the start of the pattern and `)$` at the end.
 
 ## Examples

@@ -1,19 +1,6 @@
 ---
 title: accent-color
 slug: Web/CSS/accent-color
-page-type: css-property
-tags:
-  - CSS
-  - CSS Property
-  - CSS User Interface
-  - HTML Colors
-  - Input
-  - Reference
-  - Styling HTML
-  - accent-color
-  - recipe:css-property
-browser-compat: css.properties.accent-color
-translation_of: Web/CSS/accent-colors
 ---
 
 {{CSSRef}}

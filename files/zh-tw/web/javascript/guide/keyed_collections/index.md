@@ -5,7 +5,7 @@ slug: Web/JavaScript/Guide/Keyed_collections
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
 
-本章介紹用 “key” 來整理的資料集合 ; Map 和 Set objects 相當於多個可重複的元素依照插入順序進行排序。
+本章介紹用 「key」 來整理的資料集合 ; Map 和 Set objects 相當於多個可重複的元素依照插入順序進行排序。
 
 ## Maps
 
