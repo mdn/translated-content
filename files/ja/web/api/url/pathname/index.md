@@ -23,8 +23,8 @@ object.pathname = string;
 ## 例
 
 ```js
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/pathname');
-var result = url.pathname; // 戻り値: "/en-US/docs/Web/API/URL/pathname"
+var url = new URL('https://developer.mozilla.org/ja/docs/Web/API/URL/pathname');
+var result = url.pathname; // 戻り値: "/ja/docs/Web/API/URL/pathname"
 ```
 
 ## 仕様

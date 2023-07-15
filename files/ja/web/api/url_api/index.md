@@ -16,12 +16,12 @@ URL 標準の大部分は、[URL の定義](/ja/docs/Learn/Common_questions/What
 所与の URL の {{domxref("URL")}} オブジェクトを作成すると、URL が解析され、そのプロパティを介して構成部分にすばやくアクセスできます。
 
 ```js
-let addr = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL_API");
+let addr = new URL("https://developer.mozilla.org/ja/docs/Web/API/URL_API");
 let host = addr.host;
 let path = addr.pathname;
 ```
 
-上記のスニペットは、今読んでいる記事の英語版の `URL` オブジェクトを作成し、{{domxref("URL.host", "host")}} プロパティと {{domxref("URL.pathname", "pathname")}} プロパティを取得します。 この場合、これらの文字列はそれぞれ `developer.mozilla.org` と `/en-US/docs/Web/API/URL_API` です。
+上記のスニペットは、今読んでいる記事の英語版の `URL` オブジェクトを作成し、{{domxref("URL.host", "host")}} プロパティと {{domxref("URL.pathname", "pathname")}} プロパティを取得します。 この場合、これらの文字列はそれぞれ `developer.mozilla.org` と `/ja/docs/Web/API/URL_API` です。
 
 ### URL の変更
 

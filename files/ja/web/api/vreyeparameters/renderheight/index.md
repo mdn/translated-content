@@ -19,7 +19,7 @@ l10n:
 
 ## 例
 
-コード例については [`VREyeParameters`](/en-US/docs/Web/API/VREyeParameters#例) を参照してください。
+コード例については [`VREyeParameters`](/ja/docs/Web/API/VREyeParameters#例) を参照してください。
 
 ## 仕様書
 

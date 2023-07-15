@@ -28,7 +28,7 @@ json = url.toJSON();
 ## 例
 
 ```
-const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+const url = new URL("https://developer.mozilla.org/ja/docs/Web/API/URL/toString");
 url.toJSON()
 ```
 

@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Storage")}}
 
-{{domxref("StorageManager")}} インターフェイスの **`getDirectory()`** メソッドは、[オリジンプライベートファイルシステム](/en-US/docs/Web/API/File_System_Access_API#origin_private_file_system) (OPFS) に保存されたディレクトリーとその中身へのアクセスを可能にする {{domxref("FileSystemDirectoryHandle")}} オブジェクトへの参照を取得するために使用されます。
+{{domxref("StorageManager")}} インターフェイスの **`getDirectory()`** メソッドは、[オリジンプライベートファイルシステム](/ja/docs/Web/API/File_System_Access_API#origin_private_file_system) (OPFS) に保存されたディレクトリーとその中身へのアクセスを可能にする {{domxref("FileSystemDirectoryHandle")}} オブジェクトへの参照を取得するために使用されます。
 
 ## 構文
 

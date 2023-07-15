@@ -33,7 +33,7 @@ const myImage = document.querySelector('img');
 const myRequest = new Request('flowers.jpg');
 
 fetch(myRequest).then((response) => {
-  console.log(response.url); // returns https://developer.mozilla.org/en-US/docs/Web/API/Response/flowers.jpg
+  console.log(response.url); // returns https://developer.mozilla.org/ja/docs/Web/API/Response/flowers.jpg
   response.blob().then((myBlob) => {
     const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;

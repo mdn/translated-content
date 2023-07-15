@@ -26,7 +26,7 @@ string = url.toString();
 ## 例
 
 ```js
-const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+const url = new URL("https://developer.mozilla.org/ja/docs/Web/API/URL/toString");
 url.toString() // URL を文字列として返します
 ```
 

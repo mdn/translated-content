@@ -18,7 +18,7 @@ l10n:
 ## 例
 
 ```js
-// 文書内に <a id="myAnchor" href="/en-US/docs/Location/href"> 要素があるとする
+// 文書内に <a id="myAnchor" href="/ja/docs/Location/href"> 要素があるとする
 const anchor = document.getElementById("myAnchor");
 const result = anchor.href; // Returns: 'https://developer.mozilla.org/en-US/Location/href'
 ```

@@ -25,7 +25,7 @@ object.password = string;
 ## 例
 
 ```js
-var url = new URL('https://anonymous:flabada@developer.mozilla.org/en-US/docs/Web/API/URL/password');
+var url = new URL('https://anonymous:flabada@developer.mozilla.org/ja/docs/Web/API/URL/password');
 var result = url.password; // 戻り値: "flabada"
 ```
 

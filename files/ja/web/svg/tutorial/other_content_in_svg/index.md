@@ -18,7 +18,7 @@ HTML における img 要素と同様に、SVG には同じ用途の `image` 要
      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
      width="200" height="200">
   <image x="90" y="-65" width="128" height="146" transform="rotate(45)"
-     xlink:href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/image/mdn_logo_only_color.png"/>
+     xlink:href="https://developer.mozilla.org/ja/docs/Web/SVG/Element/image/mdn_logo_only_color.png"/>
 </svg>
 ```
 

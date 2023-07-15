@@ -17,7 +17,7 @@ HTTP 要求の対象は「リソース」と呼ばれ、その本質は細かく
 
 ```
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
+https://developer.mozilla.org/ja/docs/Learn/
 https://developer.mozilla.org/en-US/search?q=URL
 ```
 
@@ -98,7 +98,7 @@ FTP は最上位では利用できますが (ブラウザーの URL バーに直
 ## 例
 
 ```
-https://developer.mozilla.org/en-US/docs/Learn
+https://developer.mozilla.org/ja/docs/Learn
 tel:+1-816-555-1212
 git@github.com:mdn/browser-compat-data.git
 ftp://example.org/resource.txt

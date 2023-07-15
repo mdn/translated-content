@@ -23,14 +23,14 @@ object.host = string;
 ## 例
 
 ```js
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/host');
+var url = new URL('https://developer.mozilla.org/ja/docs/Web/API/URL/host');
 var result = url.host // "developer.mozilla.org"
 
-var url = new URL('https://developer.mozilla.org:443/en-US/docs/Web/API/URL/host');
+var url = new URL('https://developer.mozilla.org:443/ja/docs/Web/API/URL/host');
 var result = url.host // "developer.mozilla.org"
 // 443 がスキームのデフォルトポートであるため、ポート番号は含まれません
 
-var url = new URL('https://developer.mozilla.org:4097/en-US/docs/Web/API/URL/host');
+var url = new URL('https://developer.mozilla.org:4097/ja/docs/Web/API/URL/host');
 var result = url.host // "developer.mozilla.org:4097"
 ```
 

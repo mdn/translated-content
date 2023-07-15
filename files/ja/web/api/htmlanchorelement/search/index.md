@@ -21,7 +21,7 @@ l10n:
 ### アンカーリンクから検索文字列を取得
 
 ```js
-// <a id="myAnchor" href="/en-US/docs/HTMLAnchorElement?q=123"> 要素が文書内にあったとします
+// <a id="myAnchor" href="/ja/docs/HTMLAnchorElement?q=123"> 要素が文書内にあったとします
 const anchor = document.getElementById("myAnchor");
 anchor.search; // '?q=123' を返す
 ```

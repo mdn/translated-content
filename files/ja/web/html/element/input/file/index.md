@@ -345,7 +345,7 @@ function updateImageDisplay() {
 独自の `validFileType()` 関数は {{domxref("File")}} オブジェクトを引数として取り、それから {{jsxref("Array.prototype.includes()")}} を使用して、 `fileTypes` の中の値にファイルの `type` プロパティに一致するものがあるかどうかをチェックします。一致するものが見つかった場合は、関数は `true` を返します。一致するものが見つからなければ、 `false` を返します。
 
 ```js
-// https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Image_types
+// https://developer.mozilla.org/ja/docs/Web/Media/Formats/Image_types
 const fileTypes = [
   "image/apng",
   "image/bmp",

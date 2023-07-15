@@ -23,8 +23,8 @@ object.href = string;
 ## 例
 
 ```js
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href');
-var result = url.href; // 戻り値: 'https://developer.mozilla.org/en-US/docs/Web/API/URL/href'
+var url = new URL('https://developer.mozilla.org/ja/docs/Web/API/URL/href');
+var result = url.href; // 戻り値: 'https://developer.mozilla.org/ja/docs/Web/API/URL/href'
 ```
 
 ## 仕様

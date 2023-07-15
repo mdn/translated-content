@@ -18,7 +18,7 @@ l10n:
 ## 例
 
 ```html
-<a id="myAnchor" href="/en-US/docs/Location.href#Examples">Examples</a>
+<a id="myAnchor" href="/ja/docs/Location.href#Examples">Examples</a>
 <script>
   const anchor = document.getElementById("myAnchor");
   console.log(anchor.hash); // '#Examples' を返す

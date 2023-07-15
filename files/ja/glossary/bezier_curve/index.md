@@ -10,7 +10,7 @@ original_slug: Glossary/Bézier_curve
 
 曲線を描くために、P<sub>0</sub> から P<sub>1</sub> までと P<sub>1</sub> から P<sub>2</sub> までの 2 本の補助線が描かれます。3 本目の補助線は、1 本目の補助線上を徐々に移動する点を始点、2 本目の補助線上を徐々に移動する点を終点として描画されます。 この 3 本目の補助線上に、始点から終点まで徐々に移動する点が描かれます。 この点が描く曲線がベジェ曲線です。下記の図は、曲線の作成方法を示すアニメーションです。
 
-![ベジェ曲線の描画](/en-US/docs/Glossary/Bezier_curve/b%C3%A9zier_2_big.gif)
+![ベジェ曲線の描画](/ja/docs/Glossary/Bezier_curve/b%C3%A9zier_2_big.gif)
 
 ## 関連情報
 

@@ -251,7 +251,7 @@ HTML には引用をマークアップするための機能もあります。ど
 ```html
 <p>こちらが引用です。</p>
 <blockquote
-  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">
   <p>
     The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
     <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
@@ -271,7 +271,7 @@ HTML には引用をマークアップするための機能もあります。ど
 ```html
 <p>
   The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+  <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">
     intended for short quotations that don't require paragraph breaks.
   </q>
 </p>
@@ -290,12 +290,12 @@ HTML には引用をマークアップするための機能もあります。ど
 ```html-nolint
 <p>
   According to the
-  <a href="/en-US/docs/Web/HTML/Element/blockquote">
+  <a href="/ja/docs/Web/HTML/Element/blockquote">
     <cite>MDN blockquote page</cite></a>:
 </p>
 
 <blockquote
-  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/blockquote">
   <p>
     The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
     <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
@@ -305,10 +305,10 @@ HTML には引用をマークアップするための機能もあります。ど
 
 <p>
   The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+  <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">
     intended for short quotations that don't require paragraph breaks.
   </q>
-  — <a href="/en-US/docs/Web/HTML/Element/q"><cite>MDN q page</cite></a>.
+  — <a href="/ja/docs/Web/HTML/Element/q"><cite>MDN q page</cite></a>.
 </p>
 ```
 

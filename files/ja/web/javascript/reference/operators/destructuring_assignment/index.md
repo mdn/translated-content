@@ -306,7 +306,7 @@ function parseProtocol(url) {
     return false;
   }
   console.log(parsedURL);
-  // ["https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  // ["https://developer.mozilla.org/ja/docs/Web/JavaScript",
   // "https", "developer.mozilla.org", "en-US/docs/Web/JavaScript"]
 
   const [, protocol, fullhost, fullpath] = parsedURL;
@@ -314,7 +314,7 @@ function parseProtocol(url) {
 }
 
 console.log(
-  parseProtocol("https://developer.mozilla.org/en-US/docs/Web/JavaScript"),
+  parseProtocol("https://developer.mozilla.org/ja/docs/Web/JavaScript"),
 );
 // "https"
 ```
@@ -505,7 +505,7 @@ const metadata = {
       title: "JavaScript-Umgebung",
     },
   ],
-  url: "/en-US/docs/Tools/Scratchpad",
+  url: "/ja/docs/Tools/Scratchpad",
 };
 
 const {

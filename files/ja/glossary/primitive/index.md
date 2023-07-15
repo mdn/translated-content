@@ -34,4 +34,4 @@ l10n:
   - {{Glossary("boolean")}}
   - {{Glossary("null")}}
   - {{Glossary("undefined")}}
-  - [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+  - [symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)

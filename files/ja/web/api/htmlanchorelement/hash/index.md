@@ -23,7 +23,7 @@ l10n:
 この HTML があったとします。
 
 ```html
-<a id="myAnchor" href="/en-US/docs/HTMLAnchorElement#Examples">Examples</a>
+<a id="myAnchor" href="/ja/docs/HTMLAnchorElement#Examples">Examples</a>
 ```
 
 このようにすると、アンカーのハッシュを取得することができます。

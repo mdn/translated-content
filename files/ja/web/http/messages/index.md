@@ -38,7 +38,7 @@ HTTP リクエストは、アクションを始めるためにクラアントか
     - 最後に `'?'` とクエリー文字列がある絶対パス。これは _origin form_ として知られているもっとも一般的な形式であり、`GET`、`POST`、`HEAD`、`OPTIONS` メソッドで使用します。
       `POST / HTTP/1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
     - _absolute form_ として知られている完全な URL は、主にプロキシへ接続する際に `GET` で使用します。
-      `GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
+      `GET http://developer.mozilla.org/ja/docs/Web/HTTP/Messages HTTP/1.1`
     - ドメイン名とポート (省略可能。`':'` を前につける) で構成される、URL の authority の部分は _authority form_ と呼ばれます。これは `CONNECT` で HTTP トンネルを設定するときに限り使用されます。
       `CONNECT developer.mozilla.org:80 HTTP/1.1`
     - 単なるアスタリスク (`'*'`) である _asterisk form_ は `OPTIONS` で使用されており、サーバー全体を表します。

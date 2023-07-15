@@ -23,7 +23,7 @@ object.protocol = string;
 ## 例
 
 ```js
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/protocol');
+var url = new URL('https://developer.mozilla.org/ja/docs/Web/API/URL/protocol');
 var result = url.protocol; // 戻り値: "https:"
 ```
 
