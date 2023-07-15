@@ -31,7 +31,7 @@ if (-Infinity)
 
 ### Оператор логического И, &&
 
-Если первый операнд истинноподобен, то [оператор логического И](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND) вернёт второй операнд:
+Если первый операнд истинноподобен, то [оператор логического И](/ru/docs/Web/JavaScript/Reference/Operators/Logical_AND) вернёт второй операнд:
 
 ```js
 true && "dog"
