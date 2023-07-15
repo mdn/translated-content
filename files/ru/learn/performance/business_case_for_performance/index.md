@@ -37,7 +37,7 @@ translation_of: Learn/Performance/business_case_for_performance
 
 {{PreviousMenu("Learn/Performance/Mobile", "Learn/Performance")}}
 
-## Смотрите также:
+## Смотрите также
 
 - [The "why" of web performance](/ru/docs/Learn/Performance/why_web_performance)
 - [What is web performance?](/ru/docs/Learn/Performance/What_is_web_performance)
