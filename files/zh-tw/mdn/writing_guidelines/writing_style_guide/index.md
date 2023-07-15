@@ -421,7 +421,7 @@ _A confirmation dialog box appears, which asks the user for permission to use th
 2. 如果彎引號或撇號被寫入程式碼片段中——即便是行內——讀者都有可能把它們複製貼上到其他地方並期待可以正常運作（事實上不行）。
 
 - **正確**： Please don't use "curly quotes."
-- **不正確**： Please don’t use 「curly quotes.」
+- **不正確**： Please don&rsquo;t use &ldquo;curly quotes.&rdquo;
 
 ### 拼寫
 

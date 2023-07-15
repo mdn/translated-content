@@ -91,7 +91,7 @@ data URL 的好處之一是立即產生影像而不用再和伺服器連線，�
 
 ### Using frames from a video
 
-我們還能夠使用{{HTMLElement("video")}}元素中的影片的影片畫格(縱使影片為隱藏)，例如，現在我們有一個 ID 為」myvideo」 的{{HTMLElement("video")}}元素:
+我們還能夠使用{{HTMLElement("video")}}元素中的影片的影片畫格(縱使影片為隱藏)，例如，現在我們有一個 ID 為「myvideo」 的{{HTMLElement("video")}}元素:
 
 ```js
 function getMyVideo() {

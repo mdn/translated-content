@@ -22,7 +22,7 @@ slug: Learn/Server-side/Django/Tutorial_local_library_website
 
 ## 概覽
 
-歡迎來到 MDN 的 」本地圖書館「 Django 教學。在教學裡，我們會開發一個網站，用來管理本地圖書館的目錄。
+歡迎來到 MDN 的「本地圖書館」Django 教學。在教學裡，我們會開發一個網站，用來管理本地圖書館的目錄。
 
 在這一系列的教學裡，你將:
 
