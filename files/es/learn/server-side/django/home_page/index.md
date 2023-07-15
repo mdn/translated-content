@@ -107,7 +107,7 @@ Esta función `path()` define una cadena vacía (`''`), y una función vista que
 
 La función `path()` también especifica un parámetro `name`, que identifica de manera única _este_ mapeador de URL particular. Puedes usar este nombre para "revertir" el mapeador — para crear dinámicamente una URL que apunta al el recurso que el mapeador esta diseñado para manejar. Por ejemplo, con esto hecho ahora podemos enlazar nuestra página inicio creando el siguiente enlace en nuestra plantilla:
 
-```html
+```django
 <a href="{% url 'index' %}">Home</a>.
 ```
 
@@ -169,7 +169,7 @@ Por ejemplo, un plantilla base **base_generic.html** podría verse como el texto
 
 > **Nota:** Las etiquetas de plantilla son como funciones que puede usar en una plantilla para recorrer listas, realizar operaciones condicionales basadas en el valor de una variable, etc. Además de las etiquetas de plantilla, la sintaxis de plantilla te permite referenciar variables de plantilla (que son pasadas en la plantilla desde la vista) y usar _filtros de plantilla_, que reformatean las variables (por ejemplo, establecer una cadena en minúsculas).
 
-```html
+```django
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -187,7 +187,7 @@ Cuando queremos definir una plantilla para una vista en particular, primero espe
 
 Por ejemplo, el fragmento de código que sigue muestra como usar la etiqueta de plantilla `extends`, y sobrescribe el bloque `content`. El HTML final producido tendrá todo el HTML y la estructura defininda en la plantilla base (incluyendo el contenido por defecto que ha definido dentro del bloque `title`), pero con tu nuevo bloque `content` insertado en lugar del que venía por defecto.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -204,7 +204,7 @@ La plantilla base que pensamos usar para el siito web _LocalLibrary_ se muestra 
 
 Crea un nuevo archivo -- **/locallibrary/catalog/templates/_base_generic.html_** -- y pon en él el siguiente contenido:
 
-```html
+```django
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -261,7 +261,7 @@ La plantilla base también hace referencia a un archivo css local (**styles.css*
 
 Crea el archivo HTML **/locallibrary/catalog/templates/_index.html_** y pon en él el contenido que se muestra abajo. Como puedes ver, extendemos nuestra plantilla base en la primera línea, y luego reemplazamos el bloque `content` por defecto con uno nuevo para esta plantilla.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -302,7 +302,7 @@ Es probable que uses recursos estáticos en tu proyecto, incluyendo JavaScript, 
 
 Dentro de la plantilla, primero llamas a la etiqueta de plantilla `load` especificando "static" para añadir esta biblioteca de plantilla (como se muestra abajo). Luego de que static se carga, puedes usar la etiqueta de plantilla `static` especificando la URL relativa del archivo de interés.
 
-```html
+```django
  <!-- Add additional CSS in static file -->
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -310,7 +310,7 @@ Dentro de la plantilla, primero llamas a la etiqueta de plantilla `load` especif
 
 Si quisieras podrías añadir una imagen a la página de forma similar. Por ejemplo:
 
-```html
+```django
 {% load static %}
 <img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="My image" style="width:555px;height:540px;"/>
 ```
