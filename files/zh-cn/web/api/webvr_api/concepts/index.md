@@ -181,4 +181,4 @@ DOF 直接和使用者的头部运动追踪相关联。
 
 3D 定位音效，指的是一组控制声音去实现怎样模拟它在一个三维空间中播放的效果。
 
-这项技术直接关系到 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)，它可以让我们将一段声音附加到，一个我们在 VANVAS 中或者 launch audio 中的物体上，并且基于一个用户在其中可以移动或者观看的场景的一部分。
+这项技术直接关系到 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)，该 API 允许我们在画布中的对象上放置声音，或者根据用户正在移动或观看的场景部分启动音频。
