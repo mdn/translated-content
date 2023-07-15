@@ -108,7 +108,7 @@ cd beastify
 
 Дополнение должно иметь иконку. Она будет показана рядом с дополнением в Менеджере Дополнений (Вы можете открыть менеджер перейдя по ссылке "about:addons"). Наш manifest.json обещает, что у нас будет иконка для панели инструментов по адресу "icons/beasts-48.png".
 
-Создайте папку "icons" и сохраните там иконку с именем "beasts-48.png". Вы можете использовать [иконку из нашего примера](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png), которая взята из [набора Aha-Soft’s Free Retina](https://www.iconfinder.com/iconsets/free-retina-icon-set) и используется на условиях этой [лицензии](http://www.aha-soft.com/free-icons/free-retina-icon-set/).
+Создайте папку "icons" и сохраните там иконку с именем "beasts-48.png". Вы можете использовать [иконку из нашего примера](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png), которая взята из [набора Aha-Soft's Free Retina](https://www.iconfinder.com/iconsets/free-retina-icon-set) и используется на условиях этой [лицензии](http://www.aha-soft.com/free-icons/free-retina-icon-set/).
 
 Если вы выберете свою иконку, она должна быть размером 48x48 пикселей. Вы также можете предоставить иконку размером 96x96 пикселей для дисплеев с высоким разрешением, определив свойство `"96"` объекта `icons` в файле manifest.json:
 

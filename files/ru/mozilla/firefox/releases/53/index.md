@@ -59,7 +59,7 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 ### DOM
 
-- {{Domxref ( "HTMLHyperLinkElementUtils.pathname", "путь")}} и {{domxref ( "HTMLHyperLinkElementUtils.search", "поиск")}} {{domxref ( "HTMLHyperLinkElementUtils")}} свойства ранее возвращено неправильные части в URL. Например, для URL из `http://z.com/x?a=true&b=false`, `pathname` будет возвращаться « `/x?a=true&b=false"` и `search` вернётся„“, а не» `/x` «и» `?a=true&b=false"` соответственно. Теперь это было исправлено ({{bug (1310483)}}).
+- {{Domxref ( "HTMLHyperLinkElementUtils.pathname", "путь")}} и {{domxref ( "HTMLHyperLinkElementUtils.search", "поиск")}} {{domxref ( "HTMLHyperLinkElementUtils")}} свойства ранее возвращено неправильные части в URL. Например, для URL из `http://z.com/x?a=true&b=false`, `pathname` будет возвращаться « `/x?a=true&b=false"` и `search` вернётся„", а не» `/x` «и» `?a=true&b=false"` соответственно. Теперь это было исправлено ({{bug (1310483)}}).
 - {{Domxref ( "URLSearchParams.URLSearchParams", "URLSearchParams ()")}} Конструктор теперь принимает на {{domxref ( "USVString")}} или последовательность {{domxref ( "USVString")}} ев в качестве инициализации объект ({{bug( "1330678")}}).
 - {{Domxref ( "Selection.setBaseAndExtent ()")}} метод [API выбора](/ru/docs/Web/API/Selection_API) теперь реализован (см {{bug (1321623)}}).
 - ["Fakepath"](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly) дополнение `file` типа {{HTMLElement ( "вход")}} `values` была реализована в Gecko, давая его соотношение с другими браузерами (см {{bug (1274596)}}).

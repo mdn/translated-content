@@ -51,7 +51,7 @@ original_slug: Learn/Common_questions/Upload_files_to_a_web_server
 
 ![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
-> **Примечание:** В зависимости от вашего хостинг-провайдера, когда вы впервые заходите на свой веб-адрес, большую часть времени вы будете видеть страницу, на которой написано что-то вроде этого: “This website is hosted by \[Hosting Service].”
+> **Примечание:** В зависимости от вашего хостинг-провайдера, когда вы впервые заходите на свой веб-адрес, большую часть времени вы будете видеть страницу, на которой написано что-то вроде этого: "This website is hosted by \[Hosting Service]."
 
 Чтобы подключить SFTP клиент к удалённому серверу, выполните следующие действия:
 
