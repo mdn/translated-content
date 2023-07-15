@@ -57,7 +57,7 @@ elem.addEventListener(
   function (e) {
     // e.target matches elem
   },
-  false
+  false,
 );
 
 // 事件對象可以是任一 HTML 元素或是 EventTarget 。

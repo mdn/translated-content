@@ -65,7 +65,7 @@ window.addEventListener("beforeunload", function (e) {
 
 ## Notas
 
-Quando este evento retorna um valor não vazio (_non-void_), é solicitada ao usuário uma confirmação para descarregar a página. Na maioria dos navegadores o valor retornado no evento é exibido como mensagem nessa confirmação. No Firefox 4 e versões anteriores a _string_ retornada não é exibida para o usuário. Ao invés disso, o Firefox exibe a mensagem "Esta página está perguntanto se você deseja sair - é possível que as alterações feitas não sejam salvas." Veja {{bug("588292")}}.
+Quando este evento retorna um valor não vazio (_non-void_), é solicitada ao usuário uma confirmação para descarregar a página. Na maioria dos navegadores o valor retornado no evento é exibido como mensagem nessa confirmação. No Firefox 4 e versões anteriores a _string_ retornada não é exibida para o usuário. Ao invés disso, o Firefox exibe a mensagem "Esta página está perguntanto se você deseja sair - é possível que as alterações feitas não sejam salvas." Veja [Erro do Firefox 588292](https://bugzil.la/588292).
 
 Desde 25 de maio de 2011 a especificação HTML5 define que chamadas aos métodos {{domxref("window.alert()")}}, {{domxref("window.confirm()")}} e {{domxref("window.prompt()")}} serão ignoradas durante este evento. Para mais detalhes veja a [especificação HTML5](https://www.w3.org/TR/html5/webappapis.html#user-prompts) (em inglês).
 

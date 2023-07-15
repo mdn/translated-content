@@ -58,7 +58,7 @@ web 表单是由一个或多个**表单控件**（有时称为**小部件**）�
 
 好了，现在我们准备进入 HTML 代码并对表单进行编码。为了构建我们的联系人表单，我们将使用以下 HTML 元素：{{HTMLElement("form")}}、{{HTMLElement("label")}}、{{HTMLElement("input")}}、{{HTMLElement("textarea")}} 和 {{HTMLElement("button")}}。
 
-在进一步讨论之前，先创建一个[简单 HTML 模板](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)的本地副本——你将在这里输入表单的 HTML。
+在进一步讨论之前，先创建一个[简单 HTML 模板](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)的本地副本——你将在这里输入表单的 HTML。
 
 ### `<form>` 元素
 

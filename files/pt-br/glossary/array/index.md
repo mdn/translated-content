@@ -24,7 +24,7 @@ var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
 ### Conhecimentos Gerais
 
-- {{Interwiki("wikipedia", "Arranjo (computação)", "Array")}} no Wikipedia
+- [Array](<https://pt.wikipedia.org/wiki/Arranjo_(computação)>) no Wikipedia
 
 ### Referência técnica
 

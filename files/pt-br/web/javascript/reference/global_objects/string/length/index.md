@@ -15,7 +15,7 @@ str.length
 
 ## Descrição
 
-Essa propriedade retorna o número de unidades de código presentes na string. {{interwiki("wikipedia", "UTF-16")}}, a codificação utilizada pelo JavaScript, utiliza uma unidade de código de 16-bits para representar os caracteres mais comuns, mas precisa usar duas unidades para caracteres menos usados, então é possível que o valor retornado por `length` não seja exatamente o número de caracteres na string.
+Essa propriedade retorna o número de unidades de código presentes na string. [UTF-16](https://pt.wikipedia.org/wiki/UTF-16), a codificação utilizada pelo JavaScript, utiliza uma unidade de código de 16-bits para representar os caracteres mais comuns, mas precisa usar duas unidades para caracteres menos usados, então é possível que o valor retornado por `length` não seja exatamente o número de caracteres na string.
 
 ECMASCript 2016 (ed. 7) estabeleceu um comprimento máximo de `2^53 - 1` elementos. Anteriormente, nenhum comprimento máximo havia sido especificado. No Firefox, as strings têm um comprimento (`length`) máximo de `2**30 - 2` (\~ 1 GB). Em versões anteriores ao Firefox 65, o comprimento máximo era `2**28 - 1` (\~ 256 MB).
 

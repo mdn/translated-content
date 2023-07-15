@@ -380,7 +380,7 @@ table.standard-table td {
 
 ### `drop-shadow()`
 
-Aplica un efecto de sombra a la imagen. Una sombra es realmente una versión desenfocada y separada de la máscara alfa de la imagen, dibujada en un color particular, debajo de la misma. La función acepta un parámetro de tipo \<shadow> (definido en CSS3 Backgrounds), con la excepción de que la palabra clave ‘inset’ no está permitida. Esta función es similar a la propiedad {{cssxref("box-shadow")}}, más establecida; la diferencia es que con filtros, algunos navegadores proveen aceleración de hardware para mayor rendimiento. Los valores para el parámetro `<shadow>` son los siguientes:
+Aplica un efecto de sombra a la imagen. Una sombra es realmente una versión desenfocada y separada de la máscara alfa de la imagen, dibujada en un color particular, debajo de la misma. La función acepta un parámetro de tipo \<shadow> (definido en CSS3 Backgrounds), con la excepción de que la palabra clave 'inset' no está permitida. Esta función es similar a la propiedad {{cssxref("box-shadow")}}, más establecida; la diferencia es que con filtros, algunos navegadores proveen aceleración de hardware para mayor rendimiento. Los valores para el parámetro `<shadow>` son los siguientes:
 
 - `<offset-x>` `<offset-y>` (requerido)
   - : Son dos valores {{cssxref("&lt;length&gt;")}} para establecer la posición de la sobra respecto a la imagen. `<offset-x>` especifica la distancia horizontal. Valores negativos establecen la sombra a la izquierda del elemento. `<offset-y>` especifica la distancia vertical. Valores negativos establecen la sombra arriba del elemento. Véase {{cssxref("&lt;length&gt;")}} para unidades posibles.
