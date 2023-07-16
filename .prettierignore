@@ -31,7 +31,6 @@ build/
 /files/es/webassembly/**/*.md
 
 # fr
-/files/fr/games/**/*.md
 /files/fr/glossary/**/*.md
 /files/fr/learn/**/*.md
 /files/fr/learn/css/**/*.md

@@ -6,7 +6,7 @@ translation_of: Games/Techniques/2D_collision_detection
 
 {{GamesSidebar}}
 
-Les algorithmes de détection de collisions dans les jeux en 2 dimensions dépendent de la forme des objets à détecter (par exemple&nbsp;: rectangle contre rectangle, cercle contre rectangle, cercle contre cercle…). Habituellement, il est préférable d'utiliser une forme générique appelée masque de collision («&nbsp;*hitbox*&nbsp;») qui couvrira l'entité. Ainsi, les collisions ne seront pas assurées au pixel près mais cela permettra d'avoir de bonnes performances pour un grand nombre d'entités à tester.
+Les algorithmes de détection de collisions dans les jeux en 2 dimensions dépendent de la forme des objets à détecter (par exemple&nbsp;: rectangle contre rectangle, cercle contre rectangle, cercle contre cercle…). Habituellement, il est préférable d'utiliser une forme générique appelée masque de collision («&nbsp;_hitbox_&nbsp;») qui couvrira l'entité. Ainsi, les collisions ne seront pas assurées au pixel près mais cela permettra d'avoir de bonnes performances pour un grand nombre d'entités à tester.
 
 Cet article donne un résumé des techniques les plus utilisées pour la détection des collisions dans les jeux en deux dimensions.
 
@@ -15,23 +15,22 @@ Cet article donne un résumé des techniques les plus utilisées pour la détect
 Une des formes les plus simples de détection de collision est une collision entre deux rectangles alignés sur les mêmes axes (c'est-à-dire sans rotation). L'algorithme suivant fonctionne en vérifiant qu'il n'y a pas d'espace vide entre les 4 côtés du rectangle. Si l'ensemble du rectangle est entouré de vide, on en conclut qu'il n'y a pas de collision.
 
 ```js
-var rect1 = {x: 5, y: 5, width: 50, height: 50}
-var rect2 = {x: 20, y: 10, width: 10, height: 10}
+var rect1 = { x: 5, y: 5, width: 50, height: 50 };
+var rect2 = { x: 20, y: 10, width: 10, height: 10 };
 
-if (rect1.x < rect2.x + rect2.width &&
-   rect1.x + rect1.width > rect2.x &&
-   rect1.y < rect2.y + rect2.height &&
-   rect1.height + rect1.y > rect2.y) {
-    // collision détectée !
+if (
+  rect1.x < rect2.x + rect2.width &&
+  rect1.x + rect1.width > rect2.x &&
+  rect1.y < rect2.y + rect2.height &&
+  rect1.height + rect1.y > rect2.y
+) {
+  // collision détectée !
 }
 
 // remplissage des valeurs =>
 
-if (5 < 30 &&
-    55 > 20 &&
-    5 < 20 &&
-    55 > 10) {
-    // collision détectée !
+if (5 < 30 && 55 > 20 && 5 < 20 && 55 > 10) {
+  // collision détectée !
 }
 ```
 
@@ -42,15 +41,15 @@ if (5 < 30 &&
 Une autre forme simple de détection de collision est la collision entre deux cercles. Cet algorithme fonctionne en prenant le point central de deux cercles puis il vérifie que la distance entre ces deux points est inférieure à la somme des rayons de ces deux cercles.
 
 ```js
-var circle1 = {radius: 20, x: 5, y: 5};
-var circle2 = {radius: 12, x: 10, y: 5};
+var circle1 = { radius: 20, x: 5, y: 5 };
+var circle2 = { radius: 12, x: 10, y: 5 };
 
 var dx = circle1.x - circle2.x;
 var dy = circle1.y - circle2.y;
 var distance = Math.sqrt(dx * dx + dy * dy);
 
 if (distance < circle1.radius + circle2.radius) {
-    // collision détectée !
+  // collision détectée !
 }
 ```
 
@@ -70,7 +69,7 @@ L'implémentation de cet algorithme est hors de propos sur cette page, nous vous
 
 ## Performances
 
-Alors que la plupart de ces algorithmes de détection de collision sont très simples à calculer, cela peut être une perte de ressources de tester _chaque entité_ avec les autres entités. Habituellement les jeux découpent les collisions en deux phases&nbsp;: large («&nbsp;*broad*&nbsp;») et étroite («&nbsp;*narrow*&nbsp;»).
+Alors que la plupart de ces algorithmes de détection de collision sont très simples à calculer, cela peut être une perte de ressources de tester _chaque entité_ avec les autres entités. Habituellement les jeux découpent les collisions en deux phases&nbsp;: large («&nbsp;_broad_&nbsp;») et étroite («&nbsp;_narrow_&nbsp;»).
 
 ### Phase large
 
@@ -78,7 +77,7 @@ La phase large sert à récupérer une liste d'entités qui _pourraient_ entrer 
 
 - Les _Quad Trees_ (exemple&nbsp;: [JavaScript QuadTree Implementation (en)](http://blogs.adobe.com/digitalmedia/2011/03/javascript-quadtree-implementation/))&nbsp;;
 - Les _R-Trees_ (voir [R-Tree sur Wikipédia (en anglais)](http://en.wikipedia.org/wiki/R-tree))&nbsp;;
-- Une «&nbsp;*hashmap*&nbsp;».
+- Une «&nbsp;_hashmap_&nbsp;».
 
 ### Phase étroite
 
