@@ -87,5 +87,4 @@ build/
 /files/zh-cn/web/http/**/*.md
 /files/zh-cn/web/javascript/**/*.md
 /files/zh-cn/web/svg/**/*.md
-/files/zh-cn/webassembly/**/*.md
 /docs/zh-cn/glossary.md

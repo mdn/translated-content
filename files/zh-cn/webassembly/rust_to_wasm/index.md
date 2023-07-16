@@ -272,24 +272,24 @@ cd site
 接下来，我们需要配置 Webpack。创建 `webpack.config.js` 并输入：
 
 ```js
-const path = require('path');
+const path = require("path");
 module.exports = {
   entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
   },
-  mode: "development"
+  mode: "development",
 };
 ```
 
 现在我们需要一个 HTML 文件。创建一个`index.html`并写入如下内容：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>hello-wasm example</title>
   </head>
   <body>
@@ -302,7 +302,7 @@ module.exports = {
 
 ```js
 const js = import("./node_modules/@yournpmusername/hello-wasm/hello_wasm.js");
-js.then(js => {
+js.then((js) => {
   js.greet("WebAssembly");
 });
 ```
