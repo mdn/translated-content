@@ -143,8 +143,8 @@ container.appendChild(secondClone);
       <td>
         <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>,
         <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#スクリプト対応要素">スクリプト対応要素</a>
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#スクリプト対応要素">スクリプト対応要素</a>
       </td>
     </tr>
     <tr>
@@ -158,9 +158,9 @@ container.appendChild(secondClone);
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#スクリプト対応要素">スクリプト対応要素</a>
+        <a href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ">メタデータコンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>,
+        <a href="/ja/docs/Web/HTML/Content_categories#スクリプト対応要素">スクリプト対応要素</a>
         を受け付けるすべての要素。また、 <a href="/ja/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> 属性を持たない {{HTMLElement("colgroup")}} 要素の子になることもできます。
       </td>
     </tr>
