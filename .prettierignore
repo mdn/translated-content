@@ -65,7 +65,6 @@ build/
 /files/pt-br/webassembly/**/*.md
 
 # ru
-/files/ru/games/**/*.md
 /files/ru/glossary/**/*.md
 /files/ru/learn/**/*.md
 /files/ru/mdn/**/*.md
