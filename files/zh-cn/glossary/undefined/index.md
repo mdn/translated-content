@@ -12,7 +12,7 @@ slug: Glossary/Undefined
 ```js
 var x; //创建一个变量，但并没有赋值
 
-console.log("X 的值是", x)  //返回 X 的值是 undefined
+console.log("X 的值是", x); //返回 X 的值是 undefined
 ```
 
 ## 更多

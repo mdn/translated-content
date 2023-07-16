@@ -15,7 +15,7 @@ Web {{glossary("browser","浏览器")}} 需要一个被称为布局引擎的软�
 
 ### 基本知识
 
-- [Gecko](https://zh.wikipedia.org/wiki/Gecko_(software)) on Wikipedia
+- [Gecko](<https://zh.wikipedia.org/wiki/Gecko_(software)>) on Wikipedia
 
 ### 技术参考
 

@@ -22,8 +22,7 @@ function Overloaded(arg1, arg2, ...,argN){
 要调用 JavaScript 中类的构造函数，请使用 `new` 操作符将新的{{glossary("object reference","对象引用")}}分配给一个{{glossary("variable","变量")}}。
 
 ```js
-function Default() {
-}
+function Default() {}
 
 // 分配给局部变量 defaultReference 的一个新的 Default 对象引用
 var defaultReference = new Default();
