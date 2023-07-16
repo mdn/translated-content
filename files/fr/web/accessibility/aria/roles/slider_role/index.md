@@ -11,7 +11,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 
 ### Description
 
-Cette technique présente l’utilisation du rôle [slider](http://www.w3.org/TR/wai-aria/roles#slider).
+Cette technique présente l'utilisation du rôle [slider](http://www.w3.org/TR/wai-aria/roles#slider).
 
 Le rôle `slider` est utilisé pour des balises qui permettent à l'utilisateur de sélectionner une valeur dans un intervalle donné. Le rôle `slider` est assigné à la «&nbsp;_molette_&nbsp;», le contrôle qui est ajusté pour modifier la valeur. Typiquement, un autre élément est stylé pour représenter visuellement l'intervalle de valeurs possibles, et le curseur est positionné visuellement pour représenter la valeur dans cet intervalle. Lorsque l'utilisateur interagit avec la molette, l'application doit programmatiquement ajuster l'attribut `aria-valuenow` du curseur de défilement (et si possible `aria-valuetext`) pour refléter la valeur courante. Voir la section [Exemples](#exemples) ci-dessous pour plus d'informations.
 
@@ -25,9 +25,9 @@ Le curseur doit pouvoir recevoir le focus et être manipulable au clavier. Lorsq
 | Flèches bas et gauche  | Baisse la valeur sélectionnée                                                                                               |
 | Page haut et Page bas  | Augmente ou baisse facultativement la valeur selon un pas prédéfini (par exemple de 10 en 10 dans un intervalle de 0 à 100) |
 
-### Effets possibles sur les agents utilisateurs et les technologies d’assistance
+### Effets possibles sur les agents utilisateurs et les technologies d'assistance
 
-> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.
+> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
 
 ### Exemples
 

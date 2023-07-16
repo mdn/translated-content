@@ -10,7 +10,7 @@ Les évènements de transition de page sont émis quand une page web est chargé
 
 ## Information du DOM
 
-### Hiérarchie d’héritage
+### Hiérarchie d'héritage
 
 [Event](/fr/docs/Web/API/Event) PageTransitionEvent
 
@@ -40,19 +40,19 @@ function myFunction(event) {
 
 ## Membres
 
-L’objet **PageTransitionEvent** possède les types de membres suivants&nbsp;:
+L'objet **PageTransitionEvent** possède les types de membres suivants&nbsp;:
 
 - [Propriétés](#Propriétés)
 
 ### Propriétés
 
-L’objet **PageTransitionEvent** possède les propriétés suivantes&nbsp;:
+L'objet **PageTransitionEvent** possède les propriétés suivantes&nbsp;:
 
 <table>
   <tbody>
     <tr>
       <th>Propriété</th>
-      <th>Type d’accès</th>
+      <th>Type d'accès</th>
       <th>Description</th>
     </tr>
     <tr>

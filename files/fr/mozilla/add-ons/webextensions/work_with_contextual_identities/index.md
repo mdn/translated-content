@@ -104,7 +104,7 @@ Le script utilise maintenant contextualIdentities.query pour déterminer s'il ex
       }
 ```
 
-Si des identités contextuelles sont présentes — Firefox a quatre identités par défaut — le script parcourt chacune d'elles en ajoutant son nom, stylisé dans la couleur choisie, à l'élément \<div>. La fonction `createOptions()` ajoute ensuite les options à “create” ou “close all” à la \<div> avant qu'elle ne soit ajoutée au popup.
+Si des identités contextuelles sont présentes — Firefox a quatre identités par défaut — le script parcourt chacune d'elles en ajoutant son nom, stylisé dans la couleur choisie, à l'élément \<div>. La fonction `createOptions()` ajoute ensuite les options à "create" ou "close all" à la \<div> avant qu'elle ne soit ajoutée au popup.
 
 ```json
      for (let identity of identities) {
