@@ -502,7 +502,6 @@
 /zh-CN/docs/DOM:window.openDialog	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Document_Object_Model_(DOM)/window.onbeforeunload	/zh-CN/docs/Web/API/Window/beforeunload_event
 /zh-CN/docs/Enumerability_and_ownership_of_properties	/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
-/zh-CN/docs/Firefox_12_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/12
 /zh-CN/docs/Firefox_14_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/14
 /zh-CN/docs/Firefox_15_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/15
 /zh-CN/docs/Firefox_16_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/16
