@@ -83,7 +83,7 @@ _Multipart_ 类型表示细分领域的文件类型的种类，经常对应不�
 
 所有的 HTML 内容都应该使用这种类型。XHTML 的其他 MIME 类型（如`application/xml+html`）现在基本不再使用（HTML5 统一了这些格式）。
 
-> **备注：** You still need to use `application/xml` or `application/xhtml+xml` if you intend to make use of XML’s strict parsing rules, use [`<![CDATA[…]]>`](/en-US/docs/Web/API/CDATASection) or elements from non‑HTML, non‑SVG or non‑MathML XML namespaces, as `text/html`’s parsing semantics are subtly incompatible with those of `application/xml`.
+> **备注：** You still need to use `application/xml` or `application/xhtml+xml` if you intend to make use of XML’s strict parsing rules, use [`<![CDATA[…]]>`](/zh-CN/docs/Web/API/CDATASection) or elements from non‑HTML, non‑SVG or non‑MathML XML namespaces, as `text/html`’s parsing semantics are subtly incompatible with those of `application/xml`.
 
 ### text/javascript
 

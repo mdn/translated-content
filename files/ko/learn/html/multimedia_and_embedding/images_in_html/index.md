@@ -21,7 +21,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일작업</a
         >에 대한 기본 지식, HTML 기초 지식 익숙 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >HTML 시작하기</a
         >에서 설명)
       </td>

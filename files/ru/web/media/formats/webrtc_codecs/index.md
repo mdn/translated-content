@@ -237,7 +237,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) => {
 function changeVideoCodec(mimeType) {
   const transceivers = peerConnection.getTransceivers();
 
-  transceivers.forEach(transceiver => {
+  transceivers.forEach((transceiver) => {
     const kind = transceiver.sender.track.kind;
     let sendCodecs = RTCRtpSender.getCapabilities(kind).codecs;
     let recvCodecs = RTCRtpReceiver.getCapabilities(kind).codecs;
@@ -271,7 +271,7 @@ function preferCodec(codecs, mimeType) {
   let sortedCodecs = [];
   let count = codecs.length;
 
-  codecs.forEach(codec => {
+  codecs.forEach((codec) => {
     if (codec.mimeType === mimeType) {
       sortedCodecs.push(codec);
     } else {
@@ -335,7 +335,7 @@ function preferCodec(codecs, mimeType) {
 
 Подробнее о безопасности при использовании AVC в WebRTC см. {{RFC(6184, "RTP Payload Format for H.264 Video: Security Considerations", 9)}}.
 
-## Смотрите также :
+## Смотрите также
 
 - [WebRTC API](/ru/docs/Web/API/WebRTC_API)
 - [Введение в протоколы WebRTC](/ru/docs/Web/API/WebRTC_API/Protocols)

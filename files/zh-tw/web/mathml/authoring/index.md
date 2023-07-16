@@ -16,7 +16,7 @@ Note that by design, MathML is well-integrated in HTML5 and in particular you ca
 You can use Presentation MathML inside HTML5 documents:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>MathML in HTML5</title>

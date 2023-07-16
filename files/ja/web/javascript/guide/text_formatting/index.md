@@ -193,7 +193,7 @@ console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一,三一四.二五
 
 {{jsxref("Collator")}} オブジェクトは文字列を比較しソートするのに便利です。
 
-例えば、ドイツ語には二つの異なるソート順、_phonebook_（電話帳順）と _dictionary_（辞書順）が存在します。電話帳順ソートは音を強調し、ソート前に “ä”、“ö” といった文字があたかも “ae”、“oe” などであるかのように解釈されます。
+例えば、ドイツ語には二つの異なるソート順、_phonebook_（電話帳順）と _dictionary_（辞書順）が存在します。電話帳順ソートは音を強調し、ソート前に "ä"、"ö" といった文字があたかも "ae"、"oe" などであるかのように解釈されます。
 
 ```js
 const names = ['Hochberg', 'Hönigswald', 'Holzman'];

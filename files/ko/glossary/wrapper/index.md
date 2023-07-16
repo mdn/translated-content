@@ -16,7 +16,7 @@ Wikipedia의 [Wrapper function](https://en.wikipedia.org/wiki/Wrapper_function)
 ## 같이 보기
 
 - [Wrapper function](https://en.wikipedia.org/wiki/Wrapper_function) (Wikipedia)
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
+- [MDN Web Docs Glossary](/ko/docs/Glossary)
 
   - {{Glossary("API")}}
   - {{Glossary("Class")}}

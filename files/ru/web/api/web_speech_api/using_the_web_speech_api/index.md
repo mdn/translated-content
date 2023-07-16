@@ -87,7 +87,7 @@ const grammar = '#JSGF V1.0; grammar colors; public <color> = ' + colorsList.joi
 
 - Линии разделены точкой с запятой, как и в JavaScript.
 - Первая строка - `#JSGF V1.0;` - указывает формат и версию. Это всегда необходимо включать в первую очередь.
-- Вторая строка указывает значение, которое мы хотим распознать. public объявляет, что это общедоступное правило, строка в угловых скобках определяет распознанное имя для этого значения (цвет), а список элементов, следующих за знаком равенства, - это альтернативные варианты, которые будут распознаны и могут быть приняты в качестве возможного значения. Обратите внимание, как каждый из них разделяется вертикальной линией (“|” - “pipe character”).
+- Вторая строка указывает значение, которое мы хотим распознать. public объявляет, что это общедоступное правило, строка в угловых скобках определяет распознанное имя для этого значения (цвет), а список элементов, следующих за знаком равенства, - это альтернативные варианты, которые будут распознаны и могут быть приняты в качестве возможного значения. Обратите внимание, как каждый из них разделяется вертикальной линией ("|" - "pipe character").
 - У вас может быть множество значений, определённых отдельно, как указано выше, и содержащих довольно сложные определения грамматики. Для нашего демонстрационного примера мы делаем все просто.
 
 #### Подключение грамматики к нашему распознаванию речи
@@ -101,7 +101,7 @@ const recognition = new SpeechRecognition();
 const speechRecognitionList = new SpeechGrammarList();
 ```
 
-Добавляем нашу “грамматику” в список, используя метод `SpeechGrammarList.addFromString()`. Он принимает в качестве параметров строку, плюс необязательное значение веса, которое указывает важность этой грамматики по отношению к другим грамматикам, доступным в списке (может быть от 0 до 1 включительно). Добавленная грамматика доступна в списке как экземпляр объекта `SpeechGrammar`.
+Добавляем нашу "грамматику" в список, используя метод `SpeechGrammarList.addFromString()`. Он принимает в качестве параметров строку, плюс необязательное значение веса, которое указывает важность этой грамматики по отношению к другим грамматикам, доступным в списке (может быть от 0 до 1 включительно). Добавленная грамматика доступна в списке как экземпляр объекта `SpeechGrammar`.
 
 ```js
 speechRecognitionList.addFromString(grammar, 1);
@@ -199,7 +199,7 @@ recognition.onerror = function(event) {
 
 Синтез речи (text-to-speech или tts) подразумевает получение синтезированного текста приложения и его речевое воспроизведение.
 
-Для этой цели Web Speech API предоставляет интерфейс - [`SpeechSynthesis`](/en-US/docs/Web/API/SpeechSynthesis) - плюс ряд близких интерфейсов для нужного нам воспроизведения текста (utterances - “дикция”), набор голосов, которыми приложение будет “говорить”, и т. д.
+Для этой цели Web Speech API предоставляет интерфейс - [`SpeechSynthesis`](/en-US/docs/Web/API/SpeechSynthesis) - плюс ряд близких интерфейсов для нужного нам воспроизведения текста (utterances - "дикция"), набор голосов, которыми приложение будет "говорить", и т. д.
 Опять же, большинство ОС имеют некоторые встроенные системы синтеза речи, которые будут задействованы нашим API для этой цели.
 
 ### Демо
@@ -290,7 +290,7 @@ let voices = [];
 
 #### Заполнение выпадающего списка
 
-Чтобы заполнить элемент [`<select>`](/ru/docs/Web/HTML/Element/select) различными вариантами голоса, доступных на устройстве, напишем функцию [`populateVoiceList()`](/en-US/docs/Web/API/SpeechSynthesis/getVoices). Сначала мы вызываем [`SpeechSynthesis.getVoices()`](/en-US/docs/Web/API/SpeechSynthesis/getVoices), который возвращает список всех доступных вариантов голосов, представленных объектами [`SpeechSynthesisVoice`](/en-US/docs/Web/API/SpeechSynthesisVoice). Затем мы проходимся по списку, создавая элемент [`<option>`](/ru/docs/Web/HTML/Element/option) для каждого отдельного случая, задаём его текстовое содержимое, соответствующее названию голоса (взято из [`SpeechSynthesisVoice.name`](/en-US/docs/Web/API/SpeechSynthesisVoice/name)), языка голоса (из [`SpeechSynthesisVoice.lang`](/en-US/docs/Web/API/SpeechSynthesisVoice/lang)), и “по умолчанию”, если голос является голосом по умолчанию для механизма синтеза (проверяется, если функция [`SpeechSynthesisVoice.default`](/en-US/docs/Web/API/SpeechSynthesisVoice/default) возвращает значение `true`.)
+Чтобы заполнить элемент [`<select>`](/ru/docs/Web/HTML/Element/select) различными вариантами голоса, доступных на устройстве, напишем функцию [`populateVoiceList()`](/en-US/docs/Web/API/SpeechSynthesis/getVoices). Сначала мы вызываем [`SpeechSynthesis.getVoices()`](/en-US/docs/Web/API/SpeechSynthesis/getVoices), который возвращает список всех доступных вариантов голосов, представленных объектами [`SpeechSynthesisVoice`](/en-US/docs/Web/API/SpeechSynthesisVoice). Затем мы проходимся по списку, создавая элемент [`<option>`](/ru/docs/Web/HTML/Element/option) для каждого отдельного случая, задаём его текстовое содержимое, соответствующее названию голоса (взято из [`SpeechSynthesisVoice.name`](/en-US/docs/Web/API/SpeechSynthesisVoice/name)), языка голоса (из [`SpeechSynthesisVoice.lang`](/en-US/docs/Web/API/SpeechSynthesisVoice/lang)), и "по умолчанию", если голос является голосом по умолчанию для механизма синтеза (проверяется, если функция [`SpeechSynthesisVoice.default`](/en-US/docs/Web/API/SpeechSynthesisVoice/default) возвращает значение `true`.)
 
 Мы также задаём `data-` атрибуты для каждого варианта, содержащие имя и язык связанного голоса, благодаря чему мы можем легко их собрать их позже, а затем вложить все варианты в качестве дочерних элементов нашего списка (`<select>`).
 
@@ -328,9 +328,9 @@ populateVoiceList();
 
 #### Озвучка введённого текста
 
-Затем мы создаём обработчик событий, чтобы начать “произносить” текст, введённый в текстовом поле, при нажатии на кнопку `Enter/Return` или на `Play`. Для этого используем обработчик [`onsubmit`](/ru/docs/Web/API/GlobalEventHandlers/onsubmit) в html-формы. В функции-обработчике `speak()` мы создаём новый экземпляр [`SpeechSynthesisUtterance()`](/en-US/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance), передавая значение текстового поля в конструктор.
+Затем мы создаём обработчик событий, чтобы начать "произносить" текст, введённый в текстовом поле, при нажатии на кнопку `Enter/Return` или на `Play`. Для этого используем обработчик [`onsubmit`](/ru/docs/Web/API/GlobalEventHandlers/onsubmit) в html-формы. В функции-обработчике `speak()` мы создаём новый экземпляр [`SpeechSynthesisUtterance()`](/en-US/docs/Web/API/SpeechSynthesisUtterance/SpeechSynthesisUtterance), передавая значение текстового поля в конструктор.
 
-Затем нам нужно выяснить, какой голос использовать. Мы используем свойство [`HTMLSelectElement`](/ru/docs/Web/API/HTMLSelectElement) `selectedOptions` для получения выбранного элемента [`<option>`](/en-US/docs/Web/HTML/Element/option), у которого берём атрибут data-name, и находим объект [`SpeechSynthesisVoice`](/en-US/docs/Web/API/SpeechSynthesisVoice), имя которого соответствует значению имеющегося атрибута. После этого устанавливаем соответствующий “голосовой” объект как значение свойства [`SpeechSynthesisUtterance.voice`](/en-US/docs/Web/API/SpeechSynthesisUtterance/voice).
+Затем нам нужно выяснить, какой голос использовать. Мы используем свойство [`HTMLSelectElement`](/ru/docs/Web/API/HTMLSelectElement) `selectedOptions` для получения выбранного элемента [`<option>`](/en-US/docs/Web/HTML/Element/option), у которого берём атрибут data-name, и находим объект [`SpeechSynthesisVoice`](/en-US/docs/Web/API/SpeechSynthesisVoice), имя которого соответствует значению имеющегося атрибута. После этого устанавливаем соответствующий "голосовой" объект как значение свойства [`SpeechSynthesisUtterance.voice`](/en-US/docs/Web/API/SpeechSynthesisUtterance/voice).
 
 Наконец, мы устанавливаем [`SpeechSynthesisUtterance.pitch`](/en-US/docs/Web/API/SpeechSynthesisUtterance/pitch) (высота тона) и [`SpeechSynthesisUtterance.rate`](/en-US/docs/Web/API/SpeechSynthesisUtterance/rate) (скорость) в соответствии со значениями соответствующих элементов формы. Затем, после всего проделанного, мы запускаем произношение речи, вызывая [`SpeechSynthesis.speak()`](/en-US/docs/Web/API/SpeechSynthesis/speak), и передавая ему экземпляр [`SpeechSynthesisUtterance`](/en-US/docs/Web/API/SpeechSynthesisUtterance) в качестве аргумента.
 

@@ -39,7 +39,7 @@ My cat is very grumpy
 ![class=editor-note가 강조되어있는 클래스 속성이 있는 여는 태그가 있는 문단](grumpy-cat-attribute-small.png)
 
 속성은 실제 콘텐츠로 표시되길 원하지 않는 추가적인 정보를 담고 있습니다. 이 예제에서, 클래스 속성을 이용해 나중에 해당 요소를 특정해 스타일이나 다른 정보를 설정할 때 사용할 수 있는 식별자를 지정할 수 있습니다.
-[`required`](/en-US/docs/Web/HTML/Attributes/required)같은 어떤 속성은 값을 가지지 않습니다.
+[`required`](/ko/docs/Web/HTML/Attributes/required)같은 어떤 속성은 값을 가지지 않습니다.
 
 속성이 항상 가져야 하는 것은 다음과 같습니다.
 
@@ -98,7 +98,7 @@ My cat is very grumpy
 - `<html></html>` — {{htmlelement("html")}} 요소. 이 요소는 페이지 전체의 콘텐츠를 감싸며, 루트(root) 요소라고도 합니다. 이것은 또한 문서의 고유 언어를 설정하는 `lang` 속성을 포함합니다.
 - `<head></head>` — {{htmlelement("head")}} 요소. 이 요소는 페이지를 조회하는 사람들에게 보여주는 콘텐츠가 _아닌_ 당신이 HTML 페이지에 포함하고 싶어하는 모든 재료들을 위한 컨테이너 역할을 합니다. 여기에는 {{Glossary("keyword", "keywords")}}와 검색 결과에 표시되길 원하는 페이지 설명, 콘텐츠를 꾸미기 위한 CSS, 문자 집합 선언 등과 같은 것들을 포함합니다.
 - `<meta charset="utf-8">` — 이 요소는 문서가 사용해야 할 문자 집합을 인간의 방대한 주류 기록언어에 있는 대부분의 문자가 포함되어 있는 utf-8으로 설정합니다. 본질적으로 여러분이 사용할 수 있는 어떠한 문자 콘텐츠도 다룰 수 있습니다. 이 문자 집합을 설정하지 않을 이유가 없으며, 그렇게 설정하면 나중에 발생할 수 있는 일부 문제를 피할 수 있습니다.
-- `<meta name="viewport" content="width=device-width">` — [뷰포트 요소](/en-US/docs/Web/CSS/Viewport_concepts#mobile_viewports)는 뷰포트의 너비에서 페이지가 렌더링하도록하며, 모바일 브라우저가 뷰포트보다 넓은 페이지를 렌더링한 후 축소하는 것을 방지합니다.
+- `<meta name="viewport" content="width=device-width">` — [뷰포트 요소](/ko/docs/Web/CSS/Viewport_concepts#mobile_viewports)는 뷰포트의 너비에서 페이지가 렌더링하도록하며, 모바일 브라우저가 뷰포트보다 넓은 페이지를 렌더링한 후 축소하는 것을 방지합니다.
 - `<title></title>` — {{htmlelement("title")}} 요소. 이것은 페이지의 제목을 설정합니다, 로드된 페이지 브라우저의 탭에 나타나는 제목입니다. 이 요소는 북마크나 즐겨찾기에서 페이지를 설명하는 것으로도 사용됩니다.
 - `<body></body>` — {{htmlelement("body")}} 요소. 이것은 페이지에 방문한 모든 웹 사용자들에게 보여주길 원하는 _모든_ 컨텐트를 담고 있으며, 그것이 텍스트일 수도, 이미지, 비디오, 게임, 플레이할 수 있는 오디오 트랙이나 다른 무엇이든 될 수 있습니다.
 
@@ -155,7 +155,7 @@ alt 텍스트에서 핵심 단어는 "설명 텍스트" 입니다. 여러분이 
 <p>This is a single paragraph</p>
 ```
 
-간단한 문자 ([_웹사이트의 외관은 어떻게 할까요?_](/en-US/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)에서 보셨을겁니다)를 하나 또는 몇 개의 문단에 추가하고, {{htmlelement("img")}} 요소 바로 아래 둡시다.
+간단한 문자 ([_웹사이트의 외관은 어떻게 할까요?_](/ko/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)에서 보셨을겁니다)를 하나 또는 몇 개의 문단에 추가하고, {{htmlelement("img")}} 요소 바로 아래 둡시다.
 
 ### 목록
 

@@ -368,7 +368,7 @@ input[type="range"] {
 
 {{EmbedLiveSample("orient_attribute", 200, 200)}}
 
-### writing-mode: bt-lr;
+### writing-mode: bt-lr
 
 Свойство {{cssxref('writing-mode')}} может быть использовано для специальных эффектов
 

@@ -88,7 +88,7 @@ column-gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample("Flex_layout", "auto", "120px")}}
+{{EmbedLiveSample("Флексбокс-раскладка", "auto", "120px")}}
 
 ### Грид-раскладка
 
@@ -121,7 +121,7 @@ column-gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample("Grid_layout", "auto", "120px")}}
+{{EmbedLiveSample("Грид-раскладка", "auto", "120px")}}
 
 ### Многоколоночная раскладка
 
@@ -145,7 +145,7 @@ column-gap: unset;
 
 #### Результат
 
-{{EmbedLiveSample("Multi-column_layout", "auto", "120px")}}
+{{EmbedLiveSample("Многоколоночная_раскладка", "auto", "120px")}}
 
 ## Спецификации
 
