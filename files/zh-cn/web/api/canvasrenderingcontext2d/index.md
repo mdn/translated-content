@@ -78,9 +78,9 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.lineWidth")}}
   - : 线的宽度。默认 `1.0`
 - {{domxref("CanvasRenderingContext2D.lineCap")}}
-  - : 线末端的类型。允许的值： `butt`（默认），`round`，`square`.
+  - : 线末端的类型。允许的值：`butt`（默认）、`round`、`square`。
 - {{domxref("CanvasRenderingContext2D.lineJoin")}}
-  - : 定义两线相交拐点的类型。允许的值：`round`，`bevel`，`miter`（默认）。
+  - : 定义两线相交拐点的类型。允许的值：`round`、`bevel`、`miter`（默认）。
 - {{domxref("CanvasRenderingContext2D.miterLimit")}}
   - : 斜接面限制比例。默认 `10`。
 - {{domxref("CanvasRenderingContext2D.getLineDash()")}}
