@@ -26,13 +26,12 @@ WebAssembly 还没有和\<script type='module'>或 ES6 的 import 语句集成�
 代码块看起来像这样：
 
 ```js
-fetch('module.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(results => {
-  // Do something with the compiled results!
-});
+fetch("module.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((results) => {
+    // Do something with the compiled results!
+  });
 ```
 
 ### 顺便说一下 instantiate() 重载
@@ -41,8 +40,8 @@ fetch('module.wasm').then(response =>
 
 ```js
 {
-  module : Module // 新编译的 WebAssembly.Module 对象，
-  instance : Instance // 新的模块对象实例
+  module: Module; // 新编译的 WebAssembly.Module 对象，
+  instance: Instance; // 新的模块对象实例
 }
 ```
 
@@ -56,13 +55,10 @@ fetch('module.wasm').then(response =>
 
 ```js
 function fetchAndInstantiate(url, importObject) {
-  return fetch(url).then(response =>
-    response.arrayBuffer()
-  ).then(bytes =>
-    WebAssembly.instantiate(bytes, importObject)
-  ).then(results =>
-    results.instance
-  );
+  return fetch(url)
+    .then((response) => response.arrayBuffer())
+    .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+    .then((results) => results.instance);
 }
 ```
 
@@ -81,7 +77,7 @@ fetchAndInstantiate('module.wasm', importObject).then(function(instance) {
 一旦在 JavaScript 中得到了可用的 WebAssembly 实例，你就可以开始使用那些通过 {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}} 属性导出的特性了。你的代码可能看起来像这样：
 
 ```js
-fetchAndInstantiate('myModule.wasm', importObject).then(function(instance) {
+fetchAndInstantiate("myModule.wasm", importObject).then(function (instance) {
   // 调用导出函数：
   instance.exports.exported_func();
 
@@ -91,7 +87,7 @@ fetchAndInstantiate('myModule.wasm', importObject).then(function(instance) {
   // 或者获取导出表格中的元素：
   var table = instance.exports.table;
   console.log(table.get(0)());
-})
+});
 ```
 
 > **备注：** 关于从 WebAssembly 模块导出是如何工作的更多信息，请阅读使[用 WebAssembly 的 JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)和[理解 WebAssembly 文本格式](/zh-CN/docs/WebAssembly/Understanding_the_text_format)。
@@ -109,13 +105,13 @@ fetchAndInstantiate('myModule.wasm', importObject).then(function(instance) {
 
 ```js
 request = new XMLHttpRequest();
-request.open('GET', 'simple.wasm');
-request.responseType = 'arraybuffer';
+request.open("GET", "simple.wasm");
+request.responseType = "arraybuffer";
 request.send();
 
-request.onload = function() {
+request.onload = function () {
   var bytes = request.response;
-  WebAssembly.instantiate(bytes, importObject).then(results => {
+  WebAssembly.instantiate(bytes, importObject).then((results) => {
     results.instance.exports.exported_func();
   });
 };
