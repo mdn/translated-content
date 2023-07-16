@@ -11,7 +11,7 @@ slug: Web/API/CanvasRenderingContext2D
 
 ## 基础示例
 
-要获得`CanvasRenderingContext2D` 实例，您必须首先具有 HTML `<canvas>` 元素才能使用：
+要获得 `CanvasRenderingContext2D` 实例，您必须首先具有 HTML `<canvas>` 元素才能使用：
 
 ```html
 <canvas id="my-house" width="300" height="300"></canvas>
