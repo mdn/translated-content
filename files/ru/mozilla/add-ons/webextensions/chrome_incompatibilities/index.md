@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 
 ## manifest.json функция
 
-### Полностью поддерживаемые ключи:
+### Полностью поддерживаемые ключи
 
 - [`applications`](/en-US/Add-ons/WebExtensions/manifest.json/applications)
 - [`browser_action`](/en-US/Add-ons/WebExtensions/manifest.json/browser_action)
@@ -28,7 +28,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 - [`version`](/en-US/Add-ons/WebExtensions/manifest.json/version)
 - [`web_accessible_resources`](/en-US/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
 
-### Частично поддерживаемые ключи:
+### Частично поддерживаемые ключи
 
 #### background
 
