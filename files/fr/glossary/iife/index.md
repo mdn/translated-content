@@ -16,18 +16,18 @@ La fonction devient une expression de fonction qui est immédiatement exécutée
 
 ```js
 (function () {
-    var aName = "Barry";
+  var aName = "Barry";
 })();
 // Le nom de la variable n'est pas accessible depuis le périmètre externe
-aName // lancement "Exception ReferenceError: aName n'est pas défini"
+aName; // lancement "Exception ReferenceError: aName n'est pas défini"
 ```
 
 Affecter l'IIFE à une variable ne la stocke pas mais reçoit son résultat.
 
 ```js
 var result = (function () {
-    var name = "Barry";
-    return name;
+  var name = "Barry";
+  return name;
 })();
 // Crée immédiatement la sortie:
 result; // "Barry"

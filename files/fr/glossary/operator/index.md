@@ -10,7 +10,7 @@ translation_of: Glossary/Operator
 
 ### Culture générale
 
-- [Opérateur](https://fr.wikipedia.org/wiki/Op%C3%A9rateur_(informatique)) sur Wikipédia
+- [Opérateur](<https://fr.wikipedia.org/wiki/Op%C3%A9rateur_(informatique)>) sur Wikipédia
 
 ### Référence technique
 

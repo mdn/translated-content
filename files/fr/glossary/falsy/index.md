@@ -13,17 +13,44 @@ Les valeurs fausses (**falsy**) sont des valeurs évaluées comme fausses quand 
 Exemples de valeurs _fausses_ en Javascript (qui sont traduites par false (_faux_) et, par ce fait, court-circuitent le bloc **if**) :
 
 ```js
-if (false)
-if (null)
-if (undefined)
-if (0)
-if (NaN)
-if ('')
-if ("")
-if (document.all) [1]
+if (false) {
+  // Not reachable
+}
+
+if (null) {
+  // Not reachable
+}
+
+if (undefined) {
+  // Not reachable
+}
+
+if (0) {
+  // Not reachable
+}
+
+if (-0) {
+  // Not reachable
+}
+
+if (0n) {
+  // Not reachable
+}
+
+if (NaN) {
+  // Not reachable
+}
+
+if ("") {
+  // Not reachable
+}
+
+if (document.all) {
+  // Not reachable
+}
 ```
 
-\[1] `document.all` a été utilisé par le passé pour détecter le navigateur et la [spécification HTML définit une infraction délibérée](http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#dom-document-all) aux standards ECMAScript afin de garder une compatibilité ascendante (`if (document.all) { // Code Internet Explorer ici (Sauf IE11) }` ou en utilisant `document.all` sans vérifier s'il existe d'abord : `document.all.foo`).
+`document.all` a été utilisé par le passé pour détecter le navigateur et la [spécification HTML définit une infraction délibérée](http://www.whatwg.org/specs/web-apps/current-work/multipage/obsolete.html#dom-document-all) aux standards ECMAScript afin de garder une compatibilité ascendante (`if (document.all) { // Code Internet Explorer ici (Sauf IE11) }` ou en utilisant `document.all` sans vérifier s'il existe d'abord : `document.all.foo`).
 
 Parfois écrit falsey, bien qu'en anglais, transformer un mot en adjectif avec un _-y_ fait disparaître tout e final (noise => noisy, ice => icy, shine => shiny) .
 

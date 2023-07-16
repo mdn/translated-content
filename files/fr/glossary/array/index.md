@@ -22,7 +22,7 @@ var catNamesArray = ["Jacqueline", "Sophia", "Autumn"];
 
 ### Culture générale
 
-- [Tableau (structure de données)](https://fr.wikipedia.org/wiki/Tableau_(structure_de_donn%C3%A9es)) sur Wikipédia
+- [Tableau (structure de données)](<https://fr.wikipedia.org/wiki/Tableau_(structure_de_donn%C3%A9es)>) sur Wikipédia
 
 ### Informations techniques
 

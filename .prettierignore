@@ -32,7 +32,6 @@ build/
 
 # fr
 /files/fr/games/**/*.md
-/files/fr/glossary/**/*.md
 /files/fr/learn/**/*.md
 /files/fr/learn/css/**/*.md
 /files/fr/learn/html/**/*.md

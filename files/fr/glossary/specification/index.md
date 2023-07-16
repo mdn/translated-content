@@ -10,7 +10,7 @@ Une **spécification** est un document qui décrit en détail les fonctionnalit�
 
 ### Culture génerale
 
-- [Spécification](https://fr.wikipedia.org/wiki/Sp%C3%A9cification_(norme_technique)) sur Wikipédia
+- [Spécification](<https://fr.wikipedia.org/wiki/Sp%C3%A9cification_(norme_technique)>) sur Wikipédia
 
 ### Référence technique
 
