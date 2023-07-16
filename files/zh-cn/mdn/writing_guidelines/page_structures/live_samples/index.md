@@ -21,7 +21,7 @@ MDN 支持将文章中的示例代码转化为读者可以实际查看的在线�
 - 如果 id 属于一个块级元素，该集合将包含此块级元素包含范围内的所有代码。
 - 如果 id 属于一个标题，该集合将包含此标题之后到下个同级标题之前的所有代码。请注意，子标题下的代码块也会被包含，如果不希望得到这样的效果，可以使用块级元素的 id。
 
-宏使用一个特殊的 URL 来取得一个分组中的代码示例，例如：`https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/animation/_sample_.Cylon_Eye.html`。总体结构是 `https://url-of-page/_sample_.group-id.html`，其中的 `group-id` 指代码所在标题或者块级元素的 id。
+宏使用一个特殊的 URL 来取得一个分组中的代码示例，例如：`https://yari-demos.prod.mdn.mozit.cloud/zh-CN/docs/Web/CSS/animation/_sample_.Cylon_Eye.html`。总体结构是 `https://url-of-page/_sample_.group-id.html`，其中的 `group-id` 指代码所在标题或者块级元素的 id。
 
 用来展示运行结果的框架（或页面）会运行在沙盒中，在安全条件下实现任何想在 web 上实现的功能。当然，在实践中，代码需要针对包含它的页面，MDN 上运行的随意的内容会被社区移除。
 

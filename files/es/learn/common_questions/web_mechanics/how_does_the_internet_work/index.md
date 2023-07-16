@@ -79,7 +79,7 @@ Entonces estamos conectados a la infraestructura telefónica. El siguiente paso 
 
 ### Encontrando ordenadores
 
-Si deseas enviar un mensaje a una computadora, debes especificar a cuál. Es por ello que todo ordenador conectado a una red cuenta con una dirección única que lo identifica, llamada “dirección IP” (siendo "IP" las siglas en inglés de _Internet Protocol_, o _Protocolo de Internet_). Esta dirección está compuesta por una serie de cuatro números separados por puntos, por ejemplo: `192.168.2.10`.
+Si deseas enviar un mensaje a una computadora, debes especificar a cuál. Es por ello que todo ordenador conectado a una red cuenta con una dirección única que lo identifica, llamada "dirección IP" (siendo "IP" las siglas en inglés de _Internet Protocol_, o _Protocolo de Internet_). Esta dirección está compuesta por una serie de cuatro números separados por puntos, por ejemplo: `192.168.2.10`.
 
 Para los ordenadores es un identificador simple, pero los humanos tenemos mayor dificultad para recordar este tipo de direcciones. Con el propósito de convertir esta serie numérica en algo que podamos asociar con mayor facilidad a la dirección IP se utiliza lo que conocemos como _nombre de dominio_. Por ejemplo, `google.com` es el nombre de dominio utilizado para la dirección IP `173.194.121.32`. Así, usar un nombre de dominio es la manera más fácil para nosotros de identificar un ordenador a través de Internet.
 

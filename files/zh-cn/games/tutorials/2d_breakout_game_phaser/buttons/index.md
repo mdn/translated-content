@@ -25,7 +25,7 @@ var startButton;
 我们可以加载按钮 spritesheet 与我们加载球的摆动动画相同的方式。将以下内容添加到`preload()`函数底部：
 
 ```js
-game.load.spritesheet('button', 'img/button.png', 120, 40);
+game.load.spritesheet("button", "img/button.png", 120, 40);
 ```
 
 单个按钮框架宽 120 像素，高 40 像素。
@@ -37,7 +37,16 @@ game.load.spritesheet('button', 'img/button.png', 120, 40);
 使用该`add.button`方法可以将新的按钮添加到游戏中。将以下行添加到`create()`函数的底部：
 
 ```js
-startButton = game.add.button(game.world.width*0.5, game.world.height*0.5, 'button', startGame, this, 1, 0, 2);
+startButton = game.add.button(
+  game.world.width * 0.5,
+  game.world.height * 0.5,
+  "button",
+  startGame,
+  this,
+  1,
+  0,
+  2,
+);
 startButton.anchor.set(0.5);
 ```
 
@@ -55,9 +64,9 @@ startButton.anchor.set(0.5);
 
 ```js
 function startGame() {
-    startButton.destroy();
-    ball.body.velocity.set(150, -150);
-    playing = true;
+  startButton.destroy();
+  ball.body.velocity.set(150, -150);
+  playing = true;
 }
 ```
 
@@ -71,11 +80,11 @@ function startGame() {
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle, ballHitPaddle);
-    game.physics.arcade.collide(ball, bricks, ballHitBrick);
-    if(playing) {
-        paddle.x = game.input.x || game.world.width*0.5;
-    }
+  game.physics.arcade.collide(ball, paddle, ballHitPaddle);
+  game.physics.arcade.collide(ball, bricks, ballHitBrick);
+  if (playing) {
+    paddle.x = game.input.x || game.world.width * 0.5;
+  }
 }
 ```
 

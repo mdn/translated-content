@@ -40,7 +40,10 @@ Cuando el díalogo de alerta es etiquetado correctamente y el foco es movido de 
 El fragmento de código siguiente muestra como marcar un díalogo de alerta que solo provee un mensaje y un botón de OK.
 
 ```html
-<div role="alertdialog" aria-labelledby="tituloDialogo1" aria-describedby="descrDialogo1">
+<div
+  role="alertdialog"
+  aria-labelledby="tituloDialogo1"
+  aria-describedby="descrDialogo1">
   <div role="document" tabindex="0">
     <h2 id="tituloDialogo1">Tu sesión esta apunto de expirar</h2>
     <p id="descrDialogo1">Para extender tu sesión de clic en el botón OK</p>

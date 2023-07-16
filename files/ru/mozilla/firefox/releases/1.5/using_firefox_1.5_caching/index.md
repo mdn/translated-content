@@ -190,6 +190,6 @@ function UnloadHandler() {
 
 ### Developing Firefox extensions
 
-Firefox 1.5 [extensions](/en/Building_an_Extension) need to allow for this caching functionality. If you are developing a Firefox extension that you want to be compatible with both 1.5 and earlier versions, make sure that it listens for the `load` event for triggers that can be cached and listens for the `pageshow` event for triggers that shouldn’t be cached.
+Firefox 1.5 [extensions](/en/Building_an_Extension) need to allow for this caching functionality. If you are developing a Firefox extension that you want to be compatible with both 1.5 and earlier versions, make sure that it listens for the `load` event for triggers that can be cached and listens for the `pageshow` event for triggers that shouldn't be cached.
 
 For instance, the Google Toolbar for Firefox should listen for the `load` event for the autolink function and to the `pageshow` event for the PageRank function in order to be compatible with both 1.5 and earlier versions.

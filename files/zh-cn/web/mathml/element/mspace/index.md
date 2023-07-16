@@ -29,11 +29,9 @@ MathML\<mspace>元素用来表示一段空白，空白的大小由它自身的�
 
 ```html
 <math>
-
   <mspace depth="40px" height="20px" />
 
   <mspace width="100px" />
-
 </math>
 ```
 

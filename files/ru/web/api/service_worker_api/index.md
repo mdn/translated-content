@@ -130,7 +130,7 @@ Service worker'ы также предназначены для таких вещ
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - Кулинарная книга [ServiceWorker](https://github.com/mdn/serviceworker-cookbook)
 - Использование[Service Workers](/ru/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
