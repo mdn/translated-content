@@ -36,14 +36,14 @@ ARIA is implemented in most popular browsers and screen readers. However, implem
 - [Keyboard Navigation and Focus for JavaScript Widgets](/zh-TW/docs/Accessibility/Keyboard-navigable_JavaScript_widgets)
   - : The first step in developing an accessible JavaScript widget is to make it keyboard navigable. This article steps through the process. The [Yahoo! focus management article](http://www.yuiblog.com/blog/2009/02/23/managing-focus/) is a great resource as well.
 - [Style Guide for Keyboard Navigation](http://access.aol.com/dhtml-style-guide-working-group/)
-  - : A challenge with ARIA is getting developers to implement consistent behavior -- clearly best for users. This style guide describes the keyboard interface for common widgets.
+  - : A challenge with ARIA is getting developers to implement consistent behavior — clearly best for users. This style guide describes the keyboard interface for common widgets.
 
 ### ARIA Resources
 
 - [Widget Techniques, Tutorials, and Examples](/zh-TW/docs/Accessibility/ARIA/widgets/overview)
   - : Need a slider, a menu, or another kind of widget? Find resources here.
 - [ARIA-Enabled JavaScript UI Libraries](http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/)
-  - : If you're starting a new project, choose a UI widget library with ARIA support already built-in. Warning: this is from 2009 -- content should be moved to an MDN page where it can be updated.
+  - : If you're starting a new project, choose a UI widget library with ARIA support already built-in. Warning: this is from 2009 — content should be moved to an MDN page where it can be updated.
 - [Accessibility of HTML5 and Rich Internet Applications - CSUN 2012 Workshop Materials](http://dl.dropbox.com/u/573324/CSUN2012/index.html)
   - : Includes slide presentations and examples.
 
@@ -83,7 +83,7 @@ ARIA information on blogs tends to get out of date quickly. Still, there is some
   - : The W3C specification itself, useful as a reference. Note that, at this stage, it is important to test compatibility, as implementations are still inconsistent.
 - [WAI-ARIA Authoring Practices](http://www.w3.org/WAI/PF/aria-practices/)
 
-  - : Like the W3C WAI-ARIA specification, the official best practices represents a future ideal -- a day when authors can rely on consistent ARIA support across browsers and screen readers. The W3C documents provide an in-depth view of ARIA.
+  - : Like the W3C WAI-ARIA specification, the official best practices represents a future ideal — a day when authors can rely on consistent ARIA support across browsers and screen readers. The W3C documents provide an in-depth view of ARIA.
 
     For now, web developers implementing ARIA should maximize compatibility. Use best practices docs and examples based on current implementations.
 

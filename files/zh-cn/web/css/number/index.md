@@ -7,7 +7,7 @@ slug: Web/CSS/number
 
 ## 语法
 
-`<数字>` [CSS](/zh-CN/docs/CSS) 数据类型代表一个数字，可为整数或小数。它的语法扩展了{{cssxref("&lt;integer&gt;")}}的数据值。要表示一个小数则加上小数部分 -- “."后跟一或多为十进制数字--到任何{{cssxref("&lt;integer&gt;")}}数据值。像{{cssxref("&lt;integer&gt;")}}数据类型一样，\<number>没有任何单位，并不是一个 CSS 尺寸。
+`<number>` [CSS](/zh-CN/docs/Web/CSS) 数据类型代表一个数字，可为整数或小数。它的语法扩展了 {{cssxref("&lt;integer&gt;")}} 的数据值。要表示一个小数则加上小数部分——“."后跟一或多为十进制数字——到任何 {{cssxref("&lt;integer&gt;")}} 数据值。像 {{cssxref("&lt;integer&gt;")}} 数据类型一样，\<number> 没有任何单位，并不是一个 CSS 尺寸。
 
 ## 插值
 
