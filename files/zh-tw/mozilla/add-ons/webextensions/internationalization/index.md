@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 
 [WebExtension](/zh-TW/docs/Mozilla/Add-ons/WebExtensions) API 有個相當方便、能用於國際化的模組：[i18n](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/API/i18n)。我們將在這篇文章內探索本功能，並提供實際做動的範例。專供 extensions 組建所使用的 i18n 系統 API，用法與坊間諸如 [i18n.js](http://i18njs.com/) 的函式庫相似。
 
-> **備註：** 本例所使用的套件：[notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) 能在 GitHub 找到。看各章節時，請配著原始碼觀看。
+> **備註：** 本例所使用的套件：[notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) 能在 GitHub 找到。看各章節時，請配著原始碼觀看。
 
 ## 剖析國際化的套件
 
@@ -53,7 +53,7 @@ Every i18n system requires the provision of strings translated into all the diff
 
 Note that if the subtag includes a basic language plus a regional variant, then the language and variant are conventionally separated using a hyphen: for example, "en-US". However, in the directories under `_locales`, **the separator must be an underscore**: "en_US".
 
-So [for example, in our sample app](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n/_locales) we have directories for "en" (English), "de" (German), "nl" (Dutch), and "ja" (Japanese). Each one of these has a `messages.json` file inside it.
+So [for example, in our sample app](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n/_locales) we have directories for "en" (English), "de" (German), "nl" (Dutch), and "ja" (Japanese). Each one of these has a `messages.json` file inside it.
 
 Let's now look at the structure of one of these files ([\_locales/en/messages.json](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/_locales/en/messages.json)):
 
@@ -150,7 +150,7 @@ So, you've got your message strings set up, and your manifest. Now you just need
 - The {{WebExtAPIRef("i18n.getAcceptLanguages()")}} and {{WebExtAPIRef("i18n.getUILanguage()")}} methods could be used if you needed to customize the UI depending on the locale — perhaps you might want to show preferences specific to the users' preferred languages higher up in a prefs list, or display cultural information relevant only to a certain language, or format displayed dates appropriately according to the browser locale.
 - The {{WebExtAPIRef("i18n.detectLanguage()")}} method could be used to detect the language of user-submitted content, and format it appropriately.
 
-In our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) example, the [background script](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js) contains the following lines:
+In our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) example, the [background script](https://github.com/mdn/webextensions-examples/blob/master/notify-link-clicks-i18n/background-script.js) contains the following lines:
 
 ```js
 var title = browser.i18n.getMessage("notificationTitle");
@@ -391,7 +391,7 @@ padding-left: 1.5em;
 
 ## Testing out your extension
 
-Starting in Firefox 45, you can install extensions temporarily from disk — see [Loading from disk](/zh-TW/Add-ons/WebExtensions/Packaging_and_installation#Loading_from_disk). Do this, and then try testing out our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) extension. Go to one of your favourite websites and click a link to see if a notification appears reporting the URL of the clicked link.
+Starting in Firefox 45, you can install extensions temporarily from disk — see [Loading from disk](/zh-TW/Add-ons/WebExtensions/Packaging_and_installation#Loading_from_disk). Do this, and then try testing out our [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n) extension. Go to one of your favourite websites and click a link to see if a notification appears reporting the URL of the clicked link.
 
 Next, change Firefox's locale to one supported in the extension that you want to test.
 

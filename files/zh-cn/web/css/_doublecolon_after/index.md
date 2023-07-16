@@ -17,7 +17,7 @@ CSS[伪元素](/zh-CN/CSS/Pseudo-elements)`::after`用来创建一个伪元素�
 }
 ```
 
-> **备注：** CSS 引入 `::after` 表示法（两个引号）是用来区分[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的。同时为了向后兼容，浏览器也支持前文介绍的 `:after`。
+> **备注：** CSS 引入 `::after` 表示法（两个冒号）是用来区分[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)的。同时为了向后兼容，浏览器也支持前文介绍的 `:after`。
 
 ## 示例
 

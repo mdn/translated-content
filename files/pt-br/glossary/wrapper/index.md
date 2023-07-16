@@ -12,4 +12,4 @@ Por exemplo, as bibliotecas do SDK para AWS são exemplos de wrappers.
 
 ### Conhecimento Geral
 
-{{Interwiki("wikipedia", "Wrapper function")}} em Wikipedia
+[Wrapper function](https://en.wikipedia.org/wiki/Wrapper_function) em Wikipedia

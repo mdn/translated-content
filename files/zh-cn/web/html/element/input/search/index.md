@@ -425,7 +425,7 @@ input:valid ~ span::after {
 
 ## 例子
 
-可以在我们的网站 [website-aria-roles](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) 示例中看到一个在上下文中使用搜索表单的一个好例子（[试试在线运行它](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）。
+可以在我们的网站 [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) 示例中看到一个在上下文中使用搜索表单的一个好例子（[试试在线运行它](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）。
 
 ## 规范
 

@@ -233,7 +233,7 @@ function notify(message) {
 }
 ```
 
-這個範例來自 GitHub 上的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)，稍微經過修改。
+這個範例來自 GitHub 上的 [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n)，稍微經過修改。
 
 ### 基於連線的訊息
 

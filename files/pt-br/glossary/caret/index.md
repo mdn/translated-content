@@ -12,7 +12,7 @@ Na web, um caret é usado para representar o ponto de inserção em {{HTMLElemen
 
 ### Conhecimento geral
 
-- {{interwiki("wikipedia", "Caret navigation")}} no Wikipedia
+- [Caret navigation](https://en.wikipedia.org/wiki/Caret_navigation) no Wikipedia
 
 ### CSS relacionado com o caret
 

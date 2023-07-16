@@ -134,7 +134,7 @@ A tabela a seguir descreve brevemente esses tipos de dados.
           um documento HTML, elementos são ainda mais aprimorados pelas APIs
           HTML DOM. A interface {{domxref("HTMLElement")}} bem como
           outras interfaces descrevem capacidades de tipos especifícos de
-          elementos (por exemlo, {{domxref("HTMLTableElement")}} para
+          elementos (por exemplo, {{domxref("HTMLTableElement")}} para
           elementos {{HTMLElement("table")}}).
         </p>
       </td>

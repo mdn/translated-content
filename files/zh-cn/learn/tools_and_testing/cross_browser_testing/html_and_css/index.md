@@ -170,7 +170,7 @@ HTML5 表单元素也表现出了后备素质--HTML5 引入了一些特殊的 [`
 
 {{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}
 
-> **备注：** 您也可以在 GitHub 上以[forms-test.html 的形式直接](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html)看到这个运行（参见[源代码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/forms-test.html)）。
+> **备注：** 您也可以在 GitHub 上以[forms-test.html 的形式直接](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html)看到这个运行（参见[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)）。
 
 如果您在支持的浏览器（如桌面/ Android Chrome 或 iOS Safari）上查看该示例，则会在尝试输入数据时看到特殊的小部件/功能。在一个非支持的平台上，例如 Firefox 或 Internet Explorer，输入只会回退到正常的文本输入，所以至少用户仍然可以输入一些信息。
 
@@ -184,7 +184,7 @@ CSS 的情况可以说比 HTML 更好一些。如果一个浏览器遇到一个�
 
 ![](blingy-button.png)
 
-> **备注：** 你也可以在 GitHub 上浏览这个例子：[button-with-fallback.html 的形式运行](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)（另见[源代码](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)）。
+> **备注：** 你也可以在 GitHub 上浏览这个例子：[button-with-fallback.html 的形式运行](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)（另见[源代码](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)）。
 
 该按钮有一些样式声明，但我们最感兴趣的两个如下：
 
@@ -266,7 +266,7 @@ form > #date
 
 然而，出现在 IE 9 比旧的版本的另一个问题是，没有任何新的选择（主要是伪类和伪元素如 [:nth-of-type](/zh-CN/docs/Web/CSS/:nth-of-type)，[:not](/zh-CN/docs/Web/CSS/:not)，[::selection](/zh-CN/docs/Web/CSS/::selection)，等）的工作。如果你想在你的 CSS 中使用这些，并且需要支持较老的 IE 版本，那么一个好的方法就是使用 Keith Clark 的 [Selectivizr](http://selectivizr.com/) 库 - 这是一个小型的 JavaScript 库，可以在现有的 JavaScript 库（如 [jQuery](http://jquery.com/) 或 [MooTools](http://mootools.net/)）上工作。
 
-1. 要尝试此示例，请创建 [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html) 的本地副本。如果你看看这个现场直播，你会发现它包含两个段落，其中一个是风格。我们已经选择了这个段落 `p:first-child`，这在老版本的 IE 中不起作用。
+1. 要尝试此示例，请创建 [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html) 的本地副本。如果你看看这个现场直播，你会发现它包含两个段落，其中一个是风格。我们已经选择了这个段落 `p:first-child`，这在老版本的 IE 中不起作用。
 2. 现在下载 [MooTools](http://mootools.net/)和[Selectivizr](http://selectivizr.com/)，并将它们保存在与示例 HTML 相同的目录中。
 3. 将下面的代码放到 HTML 文档的开头，就在开始 `<style>` 标记之前：
 

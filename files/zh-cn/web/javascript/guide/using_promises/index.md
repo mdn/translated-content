@@ -129,7 +129,7 @@ new Promise((resolve, reject) => {
 .then(() => {
     throw new Error('有哪里不对了');
 
-    console.log('执行「这个」”');
+    console.log('执行「这个」');
 })
 .catch(() => {
     console.log('执行「那个」');
@@ -143,8 +143,8 @@ new Promise((resolve, reject) => {
 
 ```plain
 初始化
-执行“那个”
-执行“这个”，无论前面发生了什么
+执行「那个」
+执行「这个」，无论前面发生了什么
 ```
 
 **注意：**因为抛出了错误 **有哪里不对了**，所以前一个 **执行「这个」** 没有被输出。

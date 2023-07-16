@@ -2840,7 +2840,7 @@
     "modified": "2020-11-23T00:59:33.889Z",
     "contributors": ["kenliten", "hecaxmmx", "13539"]
   },
-  "Mozilla/Add-ons/WebExtensions/What_next_": {
+  "Mozilla/Add-ons/WebExtensions/What_next": {
     "modified": "2019-03-18T20:43:00.251Z",
     "contributors": ["chicocoulomb"]
   },
@@ -2877,13 +2877,13 @@
     "modified": "2019-03-18T21:03:49.876Z",
     "contributors": ["rebloor"]
   },
-  "Mozilla/Add-ons/WebExtensions/user_interface/Browser_action": {
-    "modified": "2019-03-18T21:03:34.447Z",
-    "contributors": ["adderou"]
-  },
   "Mozilla/Add-ons/WebExtensions/user_interface/Page_actions": {
     "modified": "2019-08-12T17:02:44.540Z",
     "contributors": ["rayrojas"]
+  },
+  "Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button": {
+    "modified": "2019-03-18T21:03:34.447Z",
+    "contributors": ["adderou"]
   },
   "Mozilla/Firefox": {
     "modified": "2020-01-18T13:20:40.065Z",
@@ -6078,6 +6078,21 @@
     "modified": "2019-03-23T22:46:27.954Z",
     "contributors": ["chrisdavidmills"]
   },
+  "Web/Accessibility/ARIA/Attributes/aria-label": {
+    "modified": "2020-12-02T07:09:06.472Z",
+    "contributors": [
+      "AlePerez92",
+      "mitsurugi",
+      "fraboto",
+      "blanchart",
+      "ErikMj69",
+      "NelsonWF"
+    ]
+  },
+  "Web/Accessibility/ARIA/Attributes/aria-required": {
+    "modified": "2019-08-28T11:54:04.515Z",
+    "contributors": ["IsraelFloresDGA", "Karla_Glez"]
+  },
   "Web/Accessibility/ARIA/Multipart_labels": {
     "modified": "2019-11-27T15:16:55.571Z",
     "contributors": ["IsaacAaron", "IsraelFloresDGA"]
@@ -8775,28 +8790,6 @@
       "Takenbot",
       "Baluart",
       "Breaking Pitt",
-      "Seres"
-    ]
-  },
-  "Web/Guide/AJAX/Community": {
-    "modified": "2019-03-23T23:41:30.919Z",
-    "contributors": ["chrisdavidmills", "teoli", "Jorolo"]
-  },
-  "Web/Guide/AJAX/Getting_Started": {
-    "modified": "2019-03-23T23:54:11.584Z",
-    "contributors": [
-      "padrecedano",
-      "chrisdavidmills",
-      "mili01gm",
-      "Mgjbot",
-      "Luis Hidalgo",
-      "Hegael",
-      "Tatan",
-      "Takenbot",
-      "Jorolo",
-      "Puxaalonso",
-      "Nukeador",
-      "Noctuido",
       "Seres"
     ]
   },
@@ -14683,6 +14676,28 @@
     "modified": "2019-03-23T23:43:57.691Z",
     "contributors": ["Mgjbot", "Jorolo"]
   },
+  "conflicting/Web/Guide/AJAX": {
+    "modified": "2019-03-23T23:41:30.919Z",
+    "contributors": ["chrisdavidmills", "teoli", "Jorolo"]
+  },
+  "conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e": {
+    "modified": "2019-03-23T23:54:11.584Z",
+    "contributors": [
+      "padrecedano",
+      "chrisdavidmills",
+      "mili01gm",
+      "Mgjbot",
+      "Luis Hidalgo",
+      "Hegael",
+      "Tatan",
+      "Takenbot",
+      "Jorolo",
+      "Puxaalonso",
+      "Nukeador",
+      "Noctuido",
+      "Seres"
+    ]
+  },
   "conflicting/Web/Guide/Mobile": {
     "modified": "2019-03-23T23:32:51.331Z",
     "contributors": ["wbamberg"]
@@ -15134,17 +15149,9 @@
     "modified": "2019-03-24T00:06:07.388Z",
     "contributors": ["ibnkhaldun"]
   },
-  "orphaned/Glossary/Dynamic_programming_language": {
-    "modified": "2020-09-12T18:21:07.076Z",
-    "contributors": ["IsraFloores", "DaniNz"]
-  },
   "orphaned/Glossary/elemento": {
     "modified": "2019-01-16T19:38:18.287Z",
     "contributors": ["BubuAnabelas", "HerberWest"]
-  },
-  "orphaned/Glossary/jQuery": {
-    "modified": "2019-03-23T22:02:49.153Z",
-    "contributors": ["yancarq", "velizluisma"]
   },
   "orphaned/Guía_para_el_desarrollador_de_agregados_para_Firefox": {
     "modified": "2019-01-16T14:29:03.747Z",
@@ -15285,16 +15292,6 @@
       "BubuAnabelas",
       "SphinxKnight",
       "FranciscoImanolSuarez"
-    ]
-  },
-  "orphaned/MDN/Tools": {
-    "modified": "2020-09-30T16:48:18.728Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Jeremie",
-      "Arudb79",
-      "atlas7jean"
     ]
   },
   "orphaned/MDN/Tools/Page_regeneration": {
@@ -15555,21 +15552,6 @@
   "orphaned/Web/API/WindowEventHandlers": {
     "modified": "2019-03-23T23:01:29.892Z",
     "contributors": ["fscholz"]
-  },
-  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute": {
-    "modified": "2020-12-02T07:09:06.472Z",
-    "contributors": [
-      "AlePerez92",
-      "mitsurugi",
-      "fraboto",
-      "blanchart",
-      "ErikMj69",
-      "NelsonWF"
-    ]
-  },
-  "orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute": {
-    "modified": "2019-08-28T11:54:04.515Z",
-    "contributors": ["IsraelFloresDGA", "Karla_Glez"]
   },
   "orphaned/Web/CSS/-moz-context-properties": {
     "modified": "2020-10-15T22:13:14.061Z",
