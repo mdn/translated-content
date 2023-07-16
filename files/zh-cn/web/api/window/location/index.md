@@ -21,7 +21,8 @@ slug: Web/API/Window/location
 ### 简单示例
 
 ```js
-alert(location); // 弹出 "https://developer.mozilla.org/zh-CN/docs/Web/API/Window/location"
+alert(location);
+// 弹出“https://developer.mozilla.org/zh-CN/docs/Web/API/window.location”
 ```
 
 ### 示例 1：导航到一个新页面

@@ -17,8 +17,8 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
 
 ```js
 function update() {
-    ball.x += 1;
-    ball.y += 1;
+  ball.x += 1;
+  ball.y += 1;
 }
 ```
 

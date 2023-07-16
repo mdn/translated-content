@@ -36,7 +36,7 @@ slug: Web/Security
 ## 数据安全
 
 - [使用 HTTP Cookies](/zh-CN/docs/Web/HTTP/Cookies)
-  - : *HTTP cookie*（web cookie，浏览器 cookie）是服务器发送给客户端 web 浏览器的一小块数据。浏览器可能会存储它，并在后续对同一服务器的请求中将它发送回服务器。例如，通常这可以说明两个请求来自同一个浏览器，从而让用户保持登录状态。
+  - : _HTTP cookie_（web cookie，浏览器 cookie）是服务器发送给客户端 web 浏览器的一小块数据。浏览器可能会存储它，并在后续对同一服务器的请求中将它发送回服务器。例如，通常这可以说明两个请求来自同一个浏览器，从而让用户保持登录状态。
 - [Local storage](/zh-CN/docs/Web/API/Window/localStorage)
   - : `Window` 对象的 {{domxref("Window.localStorage")}} 属性是一种服务器在客户端上存储持久性数据的方法，数据可以在不同的会话中持久访问。
 

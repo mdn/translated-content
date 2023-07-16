@@ -40,7 +40,7 @@ API {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} пре
 
 Для начала нам нужно включить инструменты измерения частоты кадров (FPS Tools), чтобы иметь возможность видеть текущую частоту кадров
 
-1. В поле ввода URL наберите _about:config_; Нажмите на кнопку _I’ll be careful, I promise!, чтобы войти на страницу конфигурации_.
+1. В поле ввода URL наберите _about:config_; Нажмите на кнопку _I'll be careful, I promise!, чтобы войти на страницу конфигурации_.
     ![](pic1.png)
 
 2. В поле поиска введите `layers.acceleration.draw-fps`.
