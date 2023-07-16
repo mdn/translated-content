@@ -5,7 +5,7 @@ slug: Learn/Server-side/Django/web_application_security
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
 
-保護用戶數據是任何網站設計的重要部分。我們之前在文章 web 安全中，解釋了一些更常見的安全威脅 -- 本文提供了 Django 的內置保護如何處理這些威脅的實際演示。
+保護用戶數據是任何網站設計的重要部分。我們之前在文章 web 安全中，解釋了一些更常見的安全威脅——本文提供了 Django 的內置保護如何處理這些威脅的實際演示。
 
 <table class="learn-box standard-table">
   <tbody>
