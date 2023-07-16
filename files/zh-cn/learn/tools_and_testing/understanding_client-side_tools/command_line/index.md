@@ -305,10 +305,7 @@ curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location | aw
 最终的输出应该是这样的
 
 ```bash
-https://developer.mozilla.org/zh-CN/docs/Web/API/fetch
-https://developer.mozilla.org/zh-CN/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
-https://developer.mozilla.org/zh-CN/docs/Web/API/GlobalFetch/fetch
-https://developer.mozilla.org/zh-CN/docs/Web/API/fetch
+https://developer.mozilla.org/en-US/docs/Web/API/fetch
 ```
 
 通过组合这些命令，我们定制了输出以显示完整的 url，当我们请求时，Mozilla 服务器将通过这些 url 重定向`/docs/Web/API/fetch` URL.了解您的系统将在未来几年证明是有用的，您将了解这些单一服务工具是如何工作的，以及它们如何成为您解决小众问题的工具库的一部分。
