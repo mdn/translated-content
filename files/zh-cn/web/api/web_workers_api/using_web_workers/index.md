@@ -812,7 +812,7 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 
 在一个 worker 中最主要的你*不能*做的事情就是直接影响父页面。包括操作父页面的节点以及使用页面中的对象。你只能间接地实现，通过 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 回传消息给主脚本，然后从主脚本那里执行操作或变化。
 
-> **备注：** 你可以使用网站测试一个方法是否对 worker 可用： <https://worker-playground.glitch.me/>。例如，如果你在 Firefox 84 的网站上输入 [EventSource](/en-US/docs/Web/API/EventSource)，你会发现在 service worker 不支持这个方法，但在专用和共享 worker 中支持。
+> **备注：** 你可以使用网站测试一个方法是否对 worker 可用： <https://worker-playground.glitch.me/>。例如，如果你在 Firefox 84 的网站上输入 [EventSource](/zh-CN/docs/Web/API/EventSource)，你会发现在 service worker 不支持这个方法，但在专用和共享 worker 中支持。
 
 > **备注：** 获取 worker 中完整的方法列表，请参阅 [worker 可用的方法和接口](/zh-CN/docs/Web/Reference/Functions_and_classes_available_to_workers)。
 
