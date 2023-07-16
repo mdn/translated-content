@@ -34,11 +34,11 @@ CSS 中的 transition 和 animation 都可以用于编写动画，它们都有�
 
 在进行示例之前，请启用 FPS 工具先查看当前帧速率：
 
-1. 在地址栏中，输入 *about:config*，点击 `I'll be careful, I promise!` 按钮，以进入配置屏幕。
-    ![](pic1.png)
+1. 在地址栏中，输入 _about:config_，点击 `I'll be careful, I promise!` 按钮，以进入配置屏幕。
+   ![](pic1.png)
 2. 在搜索栏中搜索 `layers.acceleration.draw-fps` 首选项。
 3. 双击该条目将值设置为 `true`。现在您可以在 Firefox 窗口的左上角看到三个紫色的框。第一个框代表 FPS。
-    ![](pic2.png)
+   ![](pic2.png)
 
 ### 运行性能测试
 
@@ -169,7 +169,7 @@ function animate(time) {
 
 即使是上面给出的测试结果，我们仍然认为 CSS 动画是更好的选择。为什么？关键是只要动画涉及的属性不引起 reflow（重新布局）（参考 [CSS trigger](https://csstriggers.com/) 获得更多信息），我们可以把采样操作移出主线程。最常见的属性是 CSS transform。如果一个元素被提升为一个 [layer](https://wiki.mozilla.org/Gecko:Overview#Graphics)，transform 属性动画就可以在 GPU 中进行。这意味着更好地性能，特别是在移动设备上。在 [OffMainThreadCompositing](https://wiki.mozilla.org/Platform/GFX/OffMainThreadCompositing) 上寻找更多细节。
 
-要在火狐中激活 OMTA（脱离主线程的动画） ，你需要前往 *about:config* 然后搜索 `layers.offmainthreadcomposition.async-animations`，将其切换到 `true`。
+要在火狐中激活 OMTA（脱离主线程的动画） ，你需要前往 _about:config_ 然后搜索 `layers.offmainthreadcomposition.async-animations`，将其切换到 `true`。
 
 ![](pic3.png)
 
