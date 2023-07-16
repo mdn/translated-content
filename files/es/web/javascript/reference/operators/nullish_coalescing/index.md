@@ -20,11 +20,11 @@ expresionIzquierda ?? expresionDerecha
 
 ## Descripción
 
-El operador nullish coalescing puede ser visto como un caso especial del [operador lógico OR (`||`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR). Este último retorna el operando de lado derecho si el operando izquierdo es _cualquier_ valor {{Glossary("falsy")}}, no solo `null` o `undefined`. En otras palabras, si se usa `||` para proveer algún valor por defecto a otra variable `foo`, se puede encontrar comportamientos inesperados si se considera algún valor falsy como usable (por ejemplo, `''` o `0`). Véase [debajo](#asignación-de-un-valor-por-defecto-a-una-variable) para más ejemplos.
+El operador nullish coalescing puede ser visto como un caso especial del [operador lógico OR (`||`)](/es/docs/Web/JavaScript/Reference/Operators/Logical_OR). Este último retorna el operando de lado derecho si el operando izquierdo es _cualquier_ valor {{Glossary("falsy")}}, no solo `null` o `undefined`. En otras palabras, si se usa `||` para proveer algún valor por defecto a otra variable `foo`, se puede encontrar comportamientos inesperados si se considera algún valor falsy como usable (por ejemplo, `''` o `0`). Véase [debajo](#asignación-de-un-valor-por-defecto-a-una-variable) para más ejemplos.
 
 El operador nullish coalescing tiene la quinta más baja [precedencia de operadores](/es/docs/Web/JavaScript/Reference/Operators/Operator_precedence), directamente por debajo de `||` y por arriba del [operador condicional (ternario)](/es/docs/Web/JavaScript/Reference/Operators/Conditional_operator).
 
-No es posible combinar ambos operadores AND (`&&`) y OR (`||`) directamente con `??`. Un [error de sintasix](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized) será lanzado en tales casos.
+No es posible combinar ambos operadores AND (`&&`) y OR (`||`) directamente con `??`. Un [error de sintasix](/es/docs/Web/JavaScript/Reference/Errors/Cant_use_nullish_coalescing_unparenthesized) será lanzado en tales casos.
 
 ```js example-bad
 null || undefined ?? "foo"; // lanza un error de sintasix (SyntaxError)
@@ -59,7 +59,7 @@ console.log(valorC); // 42
 
 ### Asignación de un valor por defecto a una variable
 
-Antes, cuando se quería asignar un valor por defecto a una variable, un patrón común era usar el operador lógico OR ([`||`](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)):
+Antes, cuando se quería asignar un valor por defecto a una variable, un patrón común era usar el operador lógico OR ([`||`](/es/docs/Web/JavaScript/Reference/Operators/Logical_OR)):
 
 ```js
 let foo;
@@ -141,7 +141,7 @@ console.log(foo.algunaPropiedadBar?.toUpperCase() ?? "no disponible"); // "no di
 
 ## Veáse también
 
-- [Operador de asignación nullish coalescing (`??=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
+- [Operador de asignación nullish coalescing (`??=`)](/es/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
 - [Operador de encadenamiento opcional (`?.`)](/es/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [Operador lógico OR (`||`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+- [Operador lógico OR (`||`)](/es/docs/Web/JavaScript/Reference/Operators/Logical_OR)
 - [Parámetros predeterminados](/es/docs/Web/JavaScript/Reference/Functions/Default_parameters)
