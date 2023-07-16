@@ -7,7 +7,7 @@ slug: Web/API/CanvasRenderingContext2D
 
 **`CanvasRenderingContext2D`** 接口是 Canvas API 的一部分，可为 {{HTMLElement("canvas")}} 元素的绘图表面提供 2D 渲染上下文。它用于绘制形状，文本，图像和其他对象。
 
-请参阅侧边栏和下方的界面属性和方法。 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)提供了更多的信息，例子和资源。
+请参阅侧边栏和下方的界面属性和方法。[Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)提供了更多的信息，例子和资源。
 
 ## 基础示例
 
