@@ -151,7 +151,7 @@ On pourrait dire et penser que `flex-shrink` fonctionne de la même façon que `
 
 Le premier, expliqué de façon subtile dans la spécification est la différence de comportement entre `flex-shrink` et l'espace libre négatif et celui de `flex-grow` avec l'espace libre positif :
 
-> “Note : Le coefficient `flex-shrink` est multiplié par la taille de base (`flex-basis`) lors de la distribution de l'espace négatif. Ainsi, l'espace négatif est distribué proportionnellement au rétrécissement possible de l'élément. Autrement dit, un petit élément ne sera pas réduit à une taille nulle avant qu'un plus grand élément n'ait été réduit de façon notable.”
+> "Note : Le coefficient `flex-shrink` est multiplié par la taille de base (`flex-basis`) lors de la distribution de l'espace négatif. Ainsi, l'espace négatif est distribué proportionnellement au rétrécissement possible de l'élément. Autrement dit, un petit élément ne sera pas réduit à une taille nulle avant qu'un plus grand élément n'ait été réduit de façon notable."
 
 Le second argument s'explique par l'impossibilité de réduire les petits éléments à une taille nulle lors de la suppression de l'espace libre négatif. Les éléments seront au maximum rétrécis jusqu'à obtenir leur taille `min-content` — c'est-à-dire la taille qu'ils obtiennent s'ils utilisent tous les emplacements de rupture de ligne possibles.
 

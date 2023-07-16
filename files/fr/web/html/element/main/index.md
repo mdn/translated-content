@@ -11,7 +11,7 @@ translation_of: Web/HTML/Element/main
 
 {{HTMLSidebar}}
 
-L’élément HTML **`<main>`** représente le contenu majoritaire du {{HTMLElement("body")}} du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document ou de la fonctionnalité principale d'une application.
+L'élément HTML **`<main>`** représente le contenu majoritaire du {{HTMLElement("body")}} du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document ou de la fonctionnalité principale d'une application.
 
 Un document ne peut pas avoir plus d'un seul élément `<main>` sans attribut [`hidden`](/fr/docs/Web/HTML/Global_attributes#hidden).
 

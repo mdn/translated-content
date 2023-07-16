@@ -8,7 +8,7 @@ translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_ge
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Présentons Maintenant Vue, le troisième de nos cadres. Dans cet article, nous allons examiner un peu de fond Vue, apprendre à l’installer et créer un nouveau projet, étudier la structure de haut niveau de l’ensemble du projet et un composant individuel, voir comment exécuter le projet localement, et le préparer à commencer à construire notre exemple.
+Présentons Maintenant Vue, le troisième de nos cadres. Dans cet article, nous allons examiner un peu de fond Vue, apprendre à l'installer et créer un nouveau projet, étudier la structure de haut niveau de l'ensemble du projet et un composant individuel, voir comment exécuter le projet localement, et le préparer à commencer à construire notre exemple.
 
 <table class="standard-table">
   <tbody>
@@ -25,12 +25,12 @@ Présentons Maintenant Vue, le troisième de nos cadres. Dans cet article, nous 
           >.
         </p>
         <p>
-          Les composants Vue sont écrits sous la forme d’une combinaison
-          d’objets JavaScript qui gèrent les données de l’application et d’une
+          Les composants Vue sont écrits sous la forme d'une combinaison
+          d'objets JavaScript qui gèrent les données de l'application et d'une
           syntaxe de modèle html qui cartographie la structure DOM sous-jacente.
-          Pour l’installation et pour utiliser certaines des fonctionnalités les
+          Pour l'installation et pour utiliser certaines des fonctionnalités les
           plus avancées de Vue (comme les composants de fichier unique ou les
-          fonctions de rendu), vous aurez besoin d’un terminal avec nœud + npm
+          fonctions de rendu), vous aurez besoin d'un terminal avec nœud + npm
           installé.
         </p>
       </td>
@@ -47,18 +47,18 @@ Présentons Maintenant Vue, le troisième de nos cadres. Dans cet article, nous 
 
 ## Une Vue plus claire
 
-Vue est un cadre JavaScript moderne qui fournit des installations utiles pour une amélioration progressive - contrairement à beaucoup d’autres cadres, vous pouvez utiliser Vue pour améliorer html existant. Cela vous permet d’utiliser Vue comme un remplacement de drop-in pour une bibliothèque comme [JQuery](/fr/docs/Glossary/jQuery).
+Vue est un cadre JavaScript moderne qui fournit des installations utiles pour une amélioration progressive - contrairement à beaucoup d'autres cadres, vous pouvez utiliser Vue pour améliorer html existant. Cela vous permet d'utiliser Vue comme un remplacement de drop-in pour une bibliothèque comme [JQuery](/fr/docs/Glossary/jQuery).
 
-Cela étant dit, vous pouvez également utiliser Vue pour écrire des applications à page unique entières (SPA). Cela vous permet de créer un balisage géré entièrement par Vue, ce qui peut améliorer l’expérience et les performances des développeurs lors de la gestion d’applications complexes. Il vous permet également de profiter des bibliothèques pour le routage côté client et la gestion de l’État lorsque vous en avez besoin. En outre, Vue adopte une approche « intermédiaire » pour l’outillage comme le routage côté client et la gestion de l’État. Bien que l’équipe de base de Vue gère des bibliothèques suggérées pour ces fonctions, elles ne sont pas directement regroupées dans Vue. Cela vous permet de sélectionner une bibliothèque de routage/gestion d’état différente si elle correspond mieux à votre application.
+Cela étant dit, vous pouvez également utiliser Vue pour écrire des applications à page unique entières (SPA). Cela vous permet de créer un balisage géré entièrement par Vue, ce qui peut améliorer l'expérience et les performances des développeurs lors de la gestion d'applications complexes. Il vous permet également de profiter des bibliothèques pour le routage côté client et la gestion de l'État lorsque vous en avez besoin. En outre, Vue adopte une approche « intermédiaire » pour l'outillage comme le routage côté client et la gestion de l'État. Bien que l'équipe de base de Vue gère des bibliothèques suggérées pour ces fonctions, elles ne sont pas directement regroupées dans Vue. Cela vous permet de sélectionner une bibliothèque de routage/gestion d'état différente si elle correspond mieux à votre application.
 
-En plus de vous permettre d’intégrer progressivement Vue dans vos applications, Vue propose également une approche progressive du balisage de l’écriture. Comme la plupart des cadres, Vue vous permet de créer des blocs réutilisables de balisage via des composants. La plupart du temps, les composants Vue sont écrits à l’aide d’une syntaxe de modèle HTML spéciale. Lorsque vous avez besoin de plus de contrôle que ne le permet la syntaxe HTML, vous pouvez écrire des fonctions JSX ou JavaScript simples pour définir vos composants.
+En plus de vous permettre d'intégrer progressivement Vue dans vos applications, Vue propose également une approche progressive du balisage de l'écriture. Comme la plupart des cadres, Vue vous permet de créer des blocs réutilisables de balisage via des composants. La plupart du temps, les composants Vue sont écrits à l'aide d'une syntaxe de modèle HTML spéciale. Lorsque vous avez besoin de plus de contrôle que ne le permet la syntaxe HTML, vous pouvez écrire des fonctions JSX ou JavaScript simples pour définir vos composants.
 
-Au fur et à mesure que vous travaillez sur ce didacticiel, vous pouvez garder le [guide Vue](https://vuejs.org/v2/guide/) et la [documentation API](https://vuejs.org/v2/api/) ouverts dans d’autres onglets, de sorte que vous pouvez vous référer à eux si vous voulez plus d’informations sur n’importe quel sous-sujet.
+Au fur et à mesure que vous travaillez sur ce didacticiel, vous pouvez garder le [guide Vue](https://vuejs.org/v2/guide/) et la [documentation API](https://vuejs.org/v2/api/) ouverts dans d'autres onglets, de sorte que vous pouvez vous référer à eux si vous voulez plus d'informations sur n'importe quel sous-sujet.
 Pour une bonne comparaison (mais potentiellement biaisée) entre Vue et plusieurs des autres cadres, voir [Vue Docs: Comparison with Other Frameworks](https://vuejs.org/v2/guide/comparison.html).
 
 ## Installation
 
-Pour utiliser Vue dans un site existant, vous pouvez déposer l’un des éléments suivants sur une page. Cela vous permet de commencer à utiliser Vue sur les sites existants, c’est pourquoi Vue se targue d’être un cadre progressif. Il s’agit d’une excellente option lors de la migration d’un projet existant à l’aide d’une bibliothèque comme JQuery à Vue. Avec cette méthode, vous pouvez utiliser un grand nombre des fonctionnalités de base de Vue, telles que les attributs, les composants personnalisés et la gestion des données.[`<script>`](/fr/docs/Web/HTML/Element/script)
+Pour utiliser Vue dans un site existant, vous pouvez déposer l'un des éléments suivants sur une page. Cela vous permet de commencer à utiliser Vue sur les sites existants, c'est pourquoi Vue se targue d'être un cadre progressif. Il s'agit d'une excellente option lors de la migration d'un projet existant à l'aide d'une bibliothèque comme JQuery à Vue. Avec cette méthode, vous pouvez utiliser un grand nombre des fonctionnalités de base de Vue, telles que les attributs, les composants personnalisés et la gestion des données.[`<script>`](/fr/docs/Web/HTML/Element/script)
 
 - Script de développement (Non optimisé, mais inclut les avertissements de console. Idéal pour le développement
 
@@ -72,7 +72,7 @@ Pour utiliser Vue dans un site existant, vous pouvez déposer l’un des éléme
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   ```
 
-However, this approach has some limitations. To build more complex apps, you’ll want to use the [Vue NPM package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and take advantage of bundlers like WebPack. To make building apps with Vue easier, there is a CLI to streamline the development process. To use the npm package & the CLI you will need:
+However, this approach has some limitations. To build more complex apps, you'll want to use the [Vue NPM package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and take advantage of bundlers like WebPack. To make building apps with Vue easier, there is a CLI to streamline the development process. To use the npm package & the CLI you will need:
 
 1. Node.js 8.11+ installed.
 2. npm or yarn.
@@ -93,7 +93,7 @@ yarn global add @vue/cli
 
 Once installed, to initialize a new project you can then open a terminal in the directory you want to create the project in, and run . The CLI will then give you a list of project configurations you can use. There are a few preset ones, and you can make your own. These options let you configure things like TypeScript, linting, vue-router, testing, and more. `vue create <project-name>`
 
-We’ll look at using this below.
+We'll look at using this below.
 
 ## Initializing a new project
 
@@ -104,11 +104,11 @@ To explore various features of Vue, we will be building up a sample todo list ap
 
     <kbd>Enter</kbd>
 
-3. The first menu you’ll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press to proceed.
+3. The first menu you'll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press to proceed.
 
     <kbd>Enter</kbd>
 
-4. Next you’ll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit again. This will help us catch common errors, but not be overly opinionated.
+4. Next you'll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit again. This will help us catch common errors, but not be overly opinionated.
 
     <kbd>Enter</kbd>
 
