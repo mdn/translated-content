@@ -1,6 +1,8 @@
 ---
 title: CSS 란 무엇인가?
 slug: Learn/CSS/First_steps/What_is_CSS
+l10n:
+  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
 {{LearnSidebar}}
