@@ -105,7 +105,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 - `webRequestBlocking` を [`permission`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) に追加しました。
   この特別な権限は、拡張機能がリクエストを変更したいときにリクエストされます。
-- <all_urls>` 権限を個々の[ホスト権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_権限)に置き換えてください。これはリクエストされた権限数を最小限にするための良い習慣です。
+- `<all_urls>` 権限を個々の[ホスト権限](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_権限)に置き換えてください。これはリクエストされた権限数を最小限にするための良い習慣です。
 
 続いて "background.js" を以下のように書き換えます。
 
