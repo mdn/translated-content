@@ -106,7 +106,7 @@ Ensuite, remplacez le contenu de `background.js` avec&nbsp;:
 
 ```js
 let pattern = "https://developer.mozilla.org/*";
-let targetUrl = "https://developer.mozilla.org/fr/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
+let targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
 
 function redirect(requestDetails) {
   console.log("Redirection : " + requestDetails.url);
