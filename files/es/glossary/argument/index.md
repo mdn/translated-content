@@ -10,7 +10,7 @@ Un argumento es un valor (primitivo u objeto) (Véase {{glossary("value")}}, {{G
 
 ### Conocimiento general
 
-- [Diferencia entre Parámetro y Argumento](https://en.wikipedia.org/wiki/Parameter_(computer_programming)) en Wikipedia.
+- [Diferencia entre Parámetro y Argumento](<https://en.wikipedia.org/wiki/Parameter_(computer_programming)>) en Wikipedia.
 
 ### Referencia técnica
 

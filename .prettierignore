@@ -15,7 +15,6 @@ build/
 
 # es
 /files/es/games/**/*.md
-/files/es/glossary/**/*.md
 /files/es/learn/**/*.md
 /files/es/learn/css/**/*.md
 /files/es/learn/html/**/*.md
