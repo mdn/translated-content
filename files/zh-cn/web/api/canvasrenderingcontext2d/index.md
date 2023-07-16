@@ -151,8 +151,8 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.arc()")}}
   - : 绘制一段圆弧路径，圆弧路径的圆心在 _(x, y)_ 位置，半径为 _r_，根据 _anticlockwise_（默认为顺时针）指定的方向从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
 - {{domxref("CanvasRenderingContext2D.arcTo()")}}
-  - : 根据控制点和半径绘制圆弧路径，使用当前的描点 (前一个 moveTo 或 lineTo 等函数的止点)。根据当前描点与给定的控制点 1 连接的直线，和控制点 1 与控制点 2 连接的直线，作为使用指定半径的圆的**切线**，画出两条切线之间的弧线路径。
-- {{domxref("CanvasRenderingContext2D.ellipse()")}} {{experimental_inline}}
+  - : 根据控制点和半径绘制圆弧路径，使用当前的描点（前一个 moveTo 或 lineTo 等函数的止点）。根据当前描点与给定的控制点 1 连接的直线，和控制点 1 与控制点 2 连接的直线，作为使用指定半径的圆的**切线**，画出两条切线之间的弧线路径。
+- {{domxref("CanvasRenderingContext2D.ellipse()")}}
   - : 添加一个椭圆路径，椭圆的圆心在（x,y）位置，半径分别是 _radiusX_ 和 _radiusY_，按照 _anticlockwise_（默认顺时针）指定的方向，从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
 - {{domxref("CanvasRenderingContext2D.rect()")}}
   - : 创建一个矩形路径，矩形的起点位置是 _(x, y)_，尺寸为 _width_ 和 _height_。
@@ -188,7 +188,7 @@ ctx.stroke();
   - : 使用方法参数描述的矩阵多次叠加当前的变换矩阵。
 - {{domxref("CanvasRenderingContext2D.setTransform()")}}
   - : 重新设置当前的变换为单位矩阵，并使用同样的变量调用 **transform()** 方法。
-- {{domxref("CanvasRenderingContext2D.resetTransform()")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.resetTransform()")}}
   - : 使用单位矩阵重新设置当前的变换。
 
 ## 合成
@@ -216,7 +216,7 @@ ctx.stroke();
 
 ## 图像平滑
 
-- {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}
   - : 图像平滑的方式；如果禁用，缩放时，图像不会被平滑处理。
 
 ## canvas 状态
@@ -229,110 +229,6 @@ ctx.stroke();
   - : 恢复到最近的绘制样式状态，此状态是通过 **save()** 保存到“状态栈”中最新的元素。
 - {{domxref("CanvasRenderingContext2D.canvas")}}
   - : 对 {{domxref("HTMLCanvasElement")}} 只读的反向引用。如果和 {{HTMLElement("canvas")}} 元素没有联系，可能为 {{jsxref("null")}}。
-
-## 点击区域
-
-- {{domxref("CanvasRenderingContext2D.addHitRegion()")}} {{experimental_inline}}
-  - : 给 canvas 添加点击区域。
-- {{domxref("CanvasRenderingContext2D.removeHitRegion()")}} {{experimental_inline}}
-  - : 从 canvas 中删除指定 `id` 的点击区域。
-- {{domxref("CanvasRenderingContext2D.clearHitRegions()")}} {{experimental_inline}}
-  - : 从 canvas 中删除所有的点击区域。
-
-## 不标准的 API
-
-### 临时的和 WebKit 内核
-
-很多 API [不赞成使用并且将来会被删除](https://code.google.com/p/chromium/issues/detail?id=363198)。
-
-- {{non-standard_inline}} `CanvasRenderingContext2D.clearShadow()`
-  - : 删除所有的阴影设置，例如 {{domxref("CanvasRenderingContext2D.shadowColor")}} 和 {{domxref("CanvasRenderingContext2D.shadowBlur")}}。
-- {{non-standard_inline}} `CanvasRenderingContext2D.drawImageFromRect()`
-  - : 这是一个和 `drawImage` 相等的多余的方法。
-- {{non-standard_inline}} `CanvasRenderingContext2D.setAlpha()`
-  - : 使用 {{domxref("CanvasRenderingContext2D.globalAlpha")}} 替代。
-- {{non-standard_inline}} `CanvasRenderingContext2D.setCompositeOperation()`
-  - : 使用 {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}} 替代。
-- {{non-standard_inline}} `CanvasRenderingContext2D.setLineWidth()`
-  - : 使用 {{domxref("CanvasRenderingContext2D.lineWidth")}} 替代。
-- {{non-standard_inline}} `CanvasRenderingContext2D.setLineJoin()`
-  - : 使用 {{domxref("CanvasRenderingContext2D.lineJoin")}} 替代。
-- {{non-standard_inline}} `CanvasRenderingContext2D.setLineCap()`
-  - : 使用 {{domxref("CanvasRenderingContext2D.lineCap")}} 替代。
-- {{non-standard_inline}} `CanvasRenderingContext2D.setMiterLimit()`
-  - : 使用 {{domxref("CanvasRenderingContext2D.miterLimit")}} 替代。
-- {{non-standard_inline}} `CanvasRenderingContext2D.setStrokeColor()`
-  - : 使用 {{domxref("CanvasRenderingContext2D.strokeStyle")}} 替代。
-- {{non-standard_inline}} `CanvasRenderingContext2D.setFillColor()`
-  - : 使用 {{domxref("CanvasRenderingContext2D.fillStyle")}} 替代。
-- {{non-standard_inline}} `CanvasRenderingContext2D.setShadow()`
-  - : 私用 {{domxref("CanvasRenderingContext2D.shadowColor")}} 和 {{domxref("CanvasRenderingContext2D.shadowBlur")}} 替代。
-- {{non-standard_inline}} `CanvasRenderingContext2D.webkitLineDash`
-  - : 使用 {{domxref("CanvasRenderingContext2D.getLineDash()")}} 和 {{domxref("CanvasRenderingContext2D.setLineDash()")}} 替代。
-- {{non-standard_inline}} `CanvasRenderingContext2D.webkitLineDashOffset`
-  - : 使用 {{domxref("CanvasRenderingContext2D.lineDashOffset")}} 替代。
-- {{non-standard_inline}} `CanvasRenderingContext2D.webkitImageSmoothingEnabled`
-  - : 使用 {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}} 替代。
-
-### 仅是临时的
-
-- {{non-standard_inline}} `CanvasRenderingContext2D.getContextAttributes()`
-  - : 受 `WebGLRenderingContext` 方法的启发，该方法会返回一个 `Canvas2DContextAttributes` 对象。在 canvas 中，这个对象包含属性“storage”，表示存储器的应用（默认“persistent”）；属性“alpha”，表示透明度的应用（默认 true）。
-- {{non-standard_inline}} `CanvasRenderingContext2D.isContextLost()`
-  - : 受 `WebGLRenderingContext` 方法的启发，如果 Canvas 上下文丢失了，会返回 `true`，否则返回 `false`。
-
-### WebKit 特有的
-
-- {{non-standard_inline}} `CanvasRenderingContext2D.webkitBackingStorePixelRatio`
-  - : 关于 canvas 元素可支持存储的大小。参见 [High DPI Canvas](http://www.html5rocks.com/en/tutorials/canvas/hidpi/)。
-- {{non-standard_inline}} `CanvasRenderingContext2D.webkitGetImageDataHD`
-  - : 原本打算支持存储 HD，但是从 canvas 规范中删除了。
-- {{non-standard_inline}} `CanvasRenderingContext2D.webkitPutImageDataHD`
-  - : 原本打算支持存储 HD，但是从 canvas 规范中删除了。
-
-### Gecko 特有的
-
-- {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.filter")}}
-  - : CSS 和 SVG 滤镜作为 Canvas API。可能在新版本的规范中会标准化。
-
-#### 有前缀的 APIs
-
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransform`
-  - : 设置或获取当前的变换矩阵，参见 {{domxref("CanvasRenderingContext2D.currentTransform")}}。
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransformInverse`
-  - : 设置或获取当前翻转的变换矩阵。
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozFillRule`
-  - : 应用的 [填充规则](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t)。必须是 `evenodd` 或者 `nonzero`（默认）。
-- {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
-  - : 参见 {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}。
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozDash`
-  - : 描述相互交替的线段和间距长度的数组。使用 {{domxref("CanvasRenderingContext2D.getLineDash()")}} 和 {{domxref("CanvasRenderingContext2D.setLineDash()")}} 替代。
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozDashOffset`
-  - : 描述线段数组在线上从哪里开始。使用 {{domxref("CanvasRenderingContext2D.lineDashOffset")}} 替代。
-- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`
-  - : 在 Gecko 1.9 中引入，不赞成使用的 {{domxref("CanvasRenderingContext2D.font")}} 属性。
-- {{non-standard_inline}} {{Deprecated_Inline}} `CanvasRenderingContext2D.mozDrawText()`
-  - : 这个方法在 Gecko 1.9 中引入，从 Gecko 7.0. 开始删除。使用 {{domxref("CanvasRenderingContext2D.strokeText()")}} 或者 {{domxref("CanvasRenderingContext2D.fillText()")}} 替代。
-- {{non-standard_inline}} {{Deprecated_Inline}} `CanvasRenderingContext2D.mozMeasureText()`
-  - : 这个方法在 Gecko 1.9 中引入，从 Gecko 7.0. 开始未实现。使用 {{domxref("CanvasRenderingContext2D.measureText()")}} 替代。
-- {{non-standard_inline}} {{Deprecated_Inline}} `CanvasRenderingContext2D.mozPathText()`
-  - : 这个方法在 Gecko 1.9 中引入，从 Gecko 7.0. 开始删除。
-- {{non-standard_inline}} {{Deprecated_Inline}}`CanvasRenderingContext2D.mozTextAlongPath()`
-  - : 这个方法在 Gecko 1.9 中引入，从 Gecko 7.0. 开始删除。
-
-#### 内部的 API (chrome-context 特有的)
-
-- {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.asyncDrawXULElement()")}}
-  - : 在 **canvas** 内渲染一个 XUL 元素的区域。
-- {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.drawWindow()")}}
-  - : 在 **canvas** 内渲染一个窗口的区域。窗口可视区的内容被渲染，忽略窗口的剪切和滚动。
-- {{non-standard_inline}} `CanvasRenderingContext2D.demote()`
-  - : 这个方法会引起当前的上下文使用后端的硬件加速作为软件的备选方案。所有的状态都会被保留。
-
-### IE 浏览器
-
-- {{non-standard_inline}} `CanvasRenderingContext2D.msFillRule`
-  - : 应用的[填充规则](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t)。必须是 `evenodd` 或者 `nonzero`（默认）。
 
 ## 规范
 
