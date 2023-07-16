@@ -10,9 +10,9 @@ Fires when the captive portal state changes.
 ## Syntax
 
 ```js
-browser.captivePortal.onStateChanged.addListener(callback)
-browser.captivePortal.onStateChanged.removeListener(listener)
-browser.captivePortal.onStateChanged.hasListener(listener)
+browser.captivePortal.onStateChanged.addListener(callback);
+browser.captivePortal.onStateChanged.removeListener(listener);
+browser.captivePortal.onStateChanged.hasListener(listener);
 ```
 
 Events have three functions:
@@ -44,7 +44,7 @@ function handlePortalStatus(portalstatusInfo) {
   console.log("The portal status is now: " + portalstatusInfo.details);
 }
 
-browser.captivePortal.onStateChanged.addListener(handlePortalStatus)
+browser.captivePortal.onStateChanged.addListener(handlePortalStatus);
 ```
 
 {{WebExtExamples}}
