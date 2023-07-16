@@ -92,7 +92,7 @@ JavaScript 有三种声明方式。
 var a;
 console.log("The value of a is " + a); // a 的值是 undefined
 
-console.log("The value of b is " + b);// b 的值是 undefined
+console.log("The value of b is " + b); // b 的值是 undefined
 var b;
 // 在你阅读下面的‘变量声明提升’前你可能会疑惑
 
@@ -101,7 +101,7 @@ console.log("The value of c is " + c); // 未捕获的引用错误：c 未被定
 let x;
 console.log("The value of x is " + x); // x 的值是 undefined
 
-console.log("The value of y is " + y);// 未捕获的引用错误：y 未被定义
+console.log("The value of y is " + y); // 未捕获的引用错误：y 未被定义
 let y;
 ```
 
@@ -109,7 +109,7 @@ let y;
 
 ```js
 var input;
-if(input === undefined){
+if (input === undefined) {
   doThis();
 } else {
   doThat();
@@ -120,14 +120,14 @@ if(input === undefined){
 
 ```js
 var myArray = [];
-if (!myArray[0])   myFunction();
+if (!myArray[0]) myFunction();
 ```
 
 数值类型环境中 `undefined` 值会被转换为 `NaN`。
 
 ```js
 var a;
-a + 2;    // 计算为 NaN
+a + 2; // 计算为 NaN
 ```
 
 当你对一个 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null) 变量求值时，空值 `null` 在数值类型环境中会被当作 0 来对待，而布尔类型环境中会被当作 `false`。例如：
@@ -170,14 +170,13 @@ JavaScript 变量的另一个不同寻常的地方是，你可以先使用变量
 console.log(x === undefined); // true
 var x = 3;
 
-
 /**
  * 例子 2
  */
 // will return a value of undefined
 var myvar = "my value";
 
-(function() {
+(function () {
   console.log(myvar); // undefined
   var myvar = "local value";
 })();
@@ -198,7 +197,7 @@ x = 3;
  */
 var myvar = "my value";
 
-(function() {
+(function () {
   var myvar;
   console.log(myvar); // undefined
   myvar = "local value";
@@ -227,19 +226,18 @@ function foo() {
   console.log("bar");
 }
 
-
 /* 函数表达式 */
 
 baz(); // 类型错误：baz 不是一个函数
 
-var baz = function() {
+var baz = function () {
   console.log("bar2");
 };
 ```
 
 ### 全局变量
 
-实际上，全局变量是*全局对象*的属性。在网页中，（译注：缺省的）全局对象是 [`window`](/zh-CN/docs/Web/API/Window) ，所以你可以用形如 `window.`*`variable` *的语法来设置和访问全局变量。
+实际上，全局变量是*全局对象*的属性。在网页中，（译注：缺省的）全局对象是 [`window`](/zh-CN/docs/Web/API/Window) ，所以你可以用形如 `window.`_`variable`_ 的语法来设置和访问全局变量。
 
 因此，你可以通过指定 window 或 frame 的名字，在当前 window 或 frame 访问另一个 window 或 frame 中声明的变量。例如，在文档里声明一个叫 `phoneNumber` 的变量，那么你就可以在子框架里使用 `parent.phoneNumber` 的方式来引用它。
 
@@ -259,7 +257,7 @@ const PI = 3.14;
 
 ```js
 // 这会造成错误
-function f() {};
+function f() {}
 const f = 5;
 
 // 这也会造成错误
@@ -274,15 +272,15 @@ function f() {
 然而，对象属性被赋值为常量是不受保护的，所以下面的语句执行时不会产生错误。
 
 ```js
-const MY_OBJECT = {"key": "value"};
+const MY_OBJECT = { key: "value" };
 MY_OBJECT.key = "otherValue";
 ```
 
 同样的，数组的被定义为常量也是不受保护的，所以下面的语句执行时也不会产生错误。
 
 ```js
-const MY_ARRAY = ['HTML','CSS'];
-MY_ARRAY.push('JAVASCRIPT');
+const MY_ARRAY = ["HTML", "CSS"];
+MY_ARRAY.push("JAVASCRIPT");
 console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 ```
 
@@ -327,15 +325,15 @@ answer = "Thanks for all the fish...";
 在包含的数字和字符串的表达式中使用加法运算符（+），JavaScript 会把数字转换成字符串。例如，观察以下语句：
 
 ```js
-x = "The answer is " + 42 // "The answer is 42"
-y = 42 + " is the answer" // "42 is the answer"
+x = "The answer is " + 42; // "The answer is 42"
+y = 42 + " is the answer"; // "42 is the answer"
 ```
 
 在涉及其他运算符（译注：如下面的减号'-'）时，JavaScript 语言不会把数字变为字符串。例如（译注：第一例是数学运算，第二例是字符串运算）：
 
 ```js
-"37" - 7 // 30
-"37" + 7 // "377"
+"37" - 7; // 30
+"37" + 7; // "377"
 ```
 
 ### 字符串转换为数字
@@ -377,7 +375,7 @@ y = 42 + " is the answer" // "42 is the answer"
 ```js
 var coffees = ["French Roast", "Colombian", "Kona"];
 
-var a=[3];
+var a = [3];
 
 console.log(a.length); // 1
 
@@ -407,19 +405,19 @@ var fish = ["Lion", , "Angel"];
 (译注：而“现代”的浏览器似乎鼓励这种方式，这也很好解释原因。尾部逗号可以减少向数组的最后添加元素时，因为忘记为这最后一个元素加逗号 所造成的错误。)
 
 ```js
-var myList = ['home', , 'school', ];
+var myList = ["home", , "school"];
 ```
 
 在下面的例子中，数组的长度是 4，元素`myList[0]`和`myList[2]`缺失（译注：没被赋值，因而是 undefined）。
 
 ```js
-var myList = [ , 'home', , 'school'];
+var myList = [, "home", , "school"];
 ```
 
 再看一个例子。在这里，该数组的长度是 4，元素`myList[1]`和`myList[3]`被漏掉了。（但是）只有最后的那个逗号被忽略。
 
 ```js
-var myList = ['home', , 'school', , ];
+var myList = ["home", , "school", ,];
 ```
 
 理解多余的逗号（在脚本运行时会被如何处理）的含义，对于从语言层面理解 JavaScript 是十分重要的。但是，在你自己写代码时：**显式地将缺失的元素声明为`undefined`，将大大提高你的代码的清晰度和可维护性**。
@@ -478,10 +476,10 @@ JavaScript 数字字面量包括多种基数的整数字面量和以 10 为基�
 例如：
 
 ```js
-3.14
--.2345789 // -0.23456789
--3.12e+12  // -3.12*10^12
-.1e-23    // 0.1*10^(-23)=10^(-24)=1e-24
+3.14;
+-0.2345789; // -0.23456789
+-3.12e12; // -3.12*10^12
+0.1e-23; // 0.1*10^(-23)=10^(-24)=1e-24
 ```
 
 ### 对象字面量 (Object literals)
@@ -496,22 +494,20 @@ JavaScript 数字字面量包括多种基数的整数字面量和以 10 为基�
 var Sales = "Toyota";
 
 function CarTypes(name) {
-  return (name === "Honda") ?
-    name :
-    "Sorry, we don't sell " + name + "." ;
+  return name === "Honda" ? name : "Sorry, we don't sell " + name + ".";
 }
 
 var car = { myCar: "Saturn", getCar: CarTypes("Honda"), special: Sales };
 
-console.log(car.myCar);   // Saturn
-console.log(car.getCar);  // Honda
+console.log(car.myCar); // Saturn
+console.log(car.getCar); // Honda
 console.log(car.special); // Toyota
 ```
 
 更进一步的，你可以使用数字或字符串字面值作为属性的名字，或者在另一个字面值内嵌套上一个字面值。如下的示例中使用了这些可选项。
 
 ```js
-var car = { manyCars: {a: "Saab", "b": "Jeep"}, 7: "Mazda" };
+var car = { manyCars: { a: "Saab", b: "Jeep" }, 7: "Mazda" };
 
 console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
@@ -536,26 +532,26 @@ console.log(unusualPropertyNames["!"]); // Bang!
 
 ```js
 var obj = {
-    // __proto__
-    __proto__: theProtoObj,
-    // Shorthand for ‘handler: handler’
-    handler,
-    // Methods
-    toString() {
-     // Super calls
-     return "d " + super.toString();
-    },
-    // Computed (dynamic) property names
-    [ 'prop_' + (() => 42)() ]: 42
+  // __proto__
+  __proto__: theProtoObj,
+  // Shorthand for ‘handler: handler’
+  handler,
+  // Methods
+  toString() {
+    // Super calls
+    return "d " + super.toString();
+  },
+  // Computed (dynamic) property names
+  ["prop_" + (() => 42)()]: 42,
 };
 ```
 
 请注意：
 
 ```js
-var foo = {a: "alpha", 2: "two"};
-console.log(foo.a);    // alpha
-console.log(foo[2]);   // two
+var foo = { a: "alpha", 2: "two" };
+console.log(foo.a); // alpha
+console.log(foo[2]); // two
 //console.log(foo.2);  // SyntaxError: missing ) after argument list
 //console.log(foo[a]); // ReferenceError: a is not defined
 console.log(foo["a"]); // alpha
@@ -575,17 +571,17 @@ var re = /ab+c/;
 字符串字面量是由双引号（"）对或单引号（'）括起来的零个或多个字符。字符串被限定在同种引号之间；也即，必须是成对单引号或成对双引号。下面的例子都是字符串字面值：
 
 ```js
-"foo"
-'bar'
-"1234"
-"one line \n another line"
-"John's cat"
+"foo";
+"bar";
+"1234";
+"one line \n another line";
+"John's cat";
 ```
 
 你可以在字符串字面值上使用字符串对象的所有方法——JavaScript 会自动将字符串字面值转换为一个临时字符串对象，调用该方法，然后废弃掉那个临时的字符串对象。你也能用对字符串字面值使用类似 String.length 的属性：
 
 ```js
-console.log("John's cat".length)
+console.log("John's cat".length);
 // 将打印字符串中的字符个数（包括空格）
 // 结果为：10
 ```
@@ -594,15 +590,14 @@ console.log("John's cat".length)
 
 ```js
 // Basic literal string creation
-`In JavaScript '\n' is a line-feed.`
-
-// Multiline strings
+`In JavaScript '\n' is a line-feed.` // Multiline strings
 `In JavaScript this is
- not legal.`
+ not legal.`;
 
 // String interpolation
-var name = "Bob", time = "today";
-`Hello ${name}, how are you ${time}?`
+var name = "Bob",
+  time = "today";
+`Hello ${name}, how are you ${time}?`;
 
 // Construct an HTTP request prefix is used to interpret the replacements and construction
 POST`http://foo.org/bar?a=${a}&b=${b}
@@ -619,7 +614,7 @@ POST`http://foo.org/bar?a=${a}&b=${b}
 作为一般字符的扩展，你可以在字符串中使用特殊字符，如下例所示。
 
 ```js
-"one line \n another line"
+"one line \n another line";
 ```
 
 以下表格列举了你能在 JavaScript 的字符串中使用的特殊字符。
@@ -649,7 +644,7 @@ POST`http://foo.org/bar?a=${a}&b=${b}
 
 通过在引号前加上反斜线'\\'，可以在字符串中插入引号，这就是*引号转义*。例如：
 
-```js
+```js-nolint
 var quote = "He read \"The Cremation of Sam McGee\" by R.W. Service.";
 console.log(quote);
 ```
@@ -669,31 +664,31 @@ var home = "c:\\temp";
 也可以在换行之前加上反斜线以转义换行（译注：实际上就是一条语句拆成多行书写），这样反斜线和换行都不会出现在字符串的值中。
 
 ```js
-var str = "this string \
+var str =
+  "this string \
 is broken \
 across multiple\
-lines."
-console.log(str);   // this string is broken across multiplelines.
+lines.";
+console.log(str); // this string is broken across multiplelines.
 ```
 
 Javascript 没有“heredoc”语法，但可以用行末的换行符转义和转义的换行来近似实现
 
 ```js
 var poem =
-"Roses are red,\n\
+  "Roses are red,\n\
 Violets are blue.\n\
 Sugar is sweet,\n\
-and so is foo."
+and so is foo.";
 ```
 
 ECMAScript 2015 增加了一种新的字面量，叫做模板字面量 **[template literals](/zh-CN/docs/Web/JavaScript/Reference/template_strings)。**它包含一些新特征，包括了多行字符串！
 
 ```js
-var poem =
-`Roses are red,
+var poem = `Roses are red,
 Violets are blue.
 Sugar is sweet,
-and so is foo.`
+and so is foo.`;
 ```
 
 ## 更多信息
