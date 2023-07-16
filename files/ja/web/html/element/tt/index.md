@@ -1,6 +1,8 @@
 ---
-title: '<tt>: テレタイプテキスト要素'
+title: "<tt>: テレタイプテキスト要素"
 slug: Web/HTML/Element/tt
+l10n:
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}
@@ -12,6 +14,66 @@ slug: Web/HTML/Element/tt
 しかし、この要素は廃止されました。等幅フォントで表現する必要がある行内テキストには、より意味的に役立つ {{HTMLElement("code")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}}, {{HTMLElement("var")}} 要素を使用するか、中身を独自のブロックとして表現する場合は {{HTMLElement("pre")}} タグを使用してください。
 
 > **メモ:** 使用する場面に適切な意味的要素がない場合（例えば、一部のコンテンツを等幅フォントで表示する必要がある場合）は、 {{ HTMLElement("span") }} 要素を使用し、 CSS を使用して好きに整形することを検討してください。 {{cssxref("font-family")}} プロパティは始めるのにいいところです。
+
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+
+## 例
+
+### 基本的な例
+
+この例では、 `<tt>` を使って、ターミナルアプリケーションに入力したり出力したりしたテキストを表示します。
+
+```html
+<p>
+  Enter the following at the telnet command prompt:
+  <code>set localecho</code><br />
+
+  The telnet client should display: <tt>Local Echo is on</tt>
+</p>
+```
+
+#### 結果
+
+{{EmbedLiveSample("Basic_example", 650, 80)}}
+
+### 既定のフォントの上書き
+
+行う必要はありませんが、ブラウザーが許可していれば、ブラウザーの既定のフォントを上書きすることができます。 CSS を使用します。
+
+#### CSS
+
+```css
+tt {
+  font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
+}
+```
+
+#### HTML
+
+```html
+<p>
+  Enter the following at the telnet command prompt:
+  <code>set localecho</code><br />
+
+  The telnet client should display: <tt>Local Echo is on</tt>
+</p>
+```
+
+#### 結果
+
+{{EmbedLiveSample("Overriding_the_default_font", 650, 80)}}
+
+## 使用上のメモ
+
+既定では `<tt>` 要素はブラウザーの既定の等幅フォントを使って表示されます。前述の[既定のフォントの上書き](#既定のフォントの上書き)にある通り、 CSS で `tt セレクターを使用した規則を作成することで、これを上書きすることができます。
+
+> **メモ:** 既定の等幅フォントの設定を変更するユーザー設定が CSS よりも優先することがあります。
+
+この要素は HTML 4.01 では公式には非推奨にされませんでしたが、使用は避けて意味的要素や CSS を使用するとされていました。 `<tt>` 要素は HTML 5 で廃止されました。
+
+## 技術的概要
 
 <table class="properties">
   <tbody>
@@ -49,59 +111,6 @@ slug: Web/HTML/Element/tt
     </tr>
   </tbody>
 </table>
-
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
-
-## 例
-
-### 基本的な例
-
-この例では、 `<tt>` を使って、ターミナルアプリケーションに入力したり出力したりしたテキストを表示します。
-
-```html
-<p>Enter the following at the telnet command prompt: <code>set localecho</code><br />
-
-The telnet client should display: <tt>Local Echo is on</tt></p>
-```
-
-#### 結果
-
-{{EmbedLiveSample("Basic_example", 650, 80)}}
-
-### 既定のフォントの上書き
-
-行う必要はありませんが、ブラウザーが許可していれば、ブラウザーの既定のフォントを上書きすることができます。 CSS を使用します。
-
-#### CSS
-
-```css
-tt {
-  font-family: "Lucida Console", "Menlo", "Monaco", "Courier",
-               monospace;
-}
-```
-
-#### HTML
-
-```html
-<p>Enter the following at the telnet command prompt: <code>set localecho</code><br />
-
-The telnet client should display: <tt>Local Echo is on</tt></p>
-```
-
-#### 結果
-
-{{EmbedLiveSample("Overriding_the_default_font", 650, 80)}}
-
-## 使用上のメモ
-
-既定では `<tt>` 要素はブラウザーの既定の等幅フォントを使って表示されます。前述の[既定のフォントの上書き](#既定のフォントの上書き)にある通り、 CSS で `tt セレクターを使用した規則を作成することで、これを上書きすることができます。
-
-> **メモ:** 既定の等幅フォントの設定を変更するユーザー設定が CSS よりも優先することがあります。
-
-この要素は HTML 4.01 では公式には非推奨にされませんでしたが、使用は避けて意味的要素や CSS を使用するとされていました。 `<tt>` 要素は HTML 5 で廃止されました。
 
 ## 仕様書
 
