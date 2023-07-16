@@ -3,6 +3,7 @@ title: How to turn off form autocompletion
 slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 translation_of: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 ---
+
 В этой статье объясняется как можно отключить автозаполнение полей на сайте.
 
 По умолчанию браузеры запоминают информацию, которую пользователи отправляют через {{HTMLElement("input")}} поля на сайтах. Это позволяет браузеру предлагать варианты для автодополнения (то есть предлагать возможные дополнения для полей, в которые пользователь начал вводить данные) или автозаполнение (то есть предварительно заполнять определённые поля при загрузке).
@@ -22,9 +23,7 @@ autocomplete="off"
 You can do this either for an entire form, or for specific input elements in a form:
 
 ```html
-<form method="post" action="/form" autocomplete="off">
-[…]
-</form>
+<form method="post" action="/form" autocomplete="off">[…]</form>
 ```
 
 ```html
@@ -32,7 +31,7 @@ You can do this either for an entire form, or for specific input elements in a f
   […]
   <div>
     <label for="cc">Credit card:</label>
-    <input type="text" id="cc" name="cc" autocomplete="off">
+    <input type="text" id="cc" name="cc" autocomplete="off" />
   </div>
 </form>
 ```

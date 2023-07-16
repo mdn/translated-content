@@ -18,7 +18,7 @@ p {
   color: yellow;
 
   /* background-color 属性用来定义元素的背景色，这里为黑色 */
-  background-color: black
+  background-color: black;
 }
 ```
 

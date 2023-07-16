@@ -95,24 +95,24 @@ Specification: <http://www.whatwg.org/specs/web-apps/current-work/multipage/brow
 
 The following cross-origin access to `Window` properties is allowed:
 
-| Methods                                      |
-| -------------------------------------------- |
-| {{domxref("window.blur")}}         |
-| {{domxref("window.close")}}         |
-| {{domxref("window.focus")}}         |
+| Methods                           |
+| --------------------------------- |
+| {{domxref("window.blur")}}        |
+| {{domxref("window.close")}}       |
+| {{domxref("window.focus")}}       |
 | {{domxref("window.postMessage")}} |
 
-| Attributes                               |             |
-| ---------------------------------------- | ----------- |
-| {{domxref("window.closed")}}     | Read only.  |
-| {{domxref("window.frames")}}     | Read only.  |
-| {{domxref("window.length")}}     | Read only.  |
+| Attributes                     |             |
+| ------------------------------ | ----------- |
+| {{domxref("window.closed")}}   | Read only.  |
+| {{domxref("window.frames")}}   | Read only.  |
+| {{domxref("window.length")}}   | Read only.  |
 | {{domxref("window.location")}} | Read/write. |
-| {{domxref("window.opener")}}     | Read only.  |
-| {{domxref("window.parent")}}     | Read only.  |
+| {{domxref("window.opener")}}   | Read only.  |
+| {{domxref("window.parent")}}   | Read only.  |
 | {{domxref("window.self")}}     | Read only.  |
-| {{domxref("window.top")}}         | Read only.  |
-| {{domxref("window.window")}}     | Read only.  |
+| {{domxref("window.top")}}      | Read only.  |
+| {{domxref("window.window")}}   | Read only.  |
 
 Some browsers allow access to more properties than the specification allows.
 
@@ -122,12 +122,12 @@ Specification: <http://www.whatwg.org/specs/web-apps/current-work/multipage/brow
 
 The following cross-origin access to `Location` properties is allowed:
 
-| Methods                                  |
-| ---------------------------------------- |
+| Methods                         |
+| ------------------------------- |
 | {{domxref("location.replace")}} |
 
-| Attributes                           |             |
-| ------------------------------------ | ----------- |
+| Attributes                   |             |
+| ---------------------------- | ----------- |
 | {{domxref("URLUtils.href")}} | Write only. |
 
 Some browsers allow access to more properties than the specification allows.

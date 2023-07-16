@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: checkbox role'
+title: "ARIA: checkbox role"
 slug: Web/Accessibility/ARIA/Roles/checkbox_role
 translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
 ---
@@ -7,14 +7,19 @@ translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
 [checkbox role](https://www.w3.org/TR/wai-aria-1.1/#checkbox) используется для переключаемых интерактивных элементов управления. Элементы, содержащие `role="checkbox"` также должны включать `aria-checked` атрибут, чтобы продемонстрировать состояние чекбокса ассистивным технологиям.
 
 ```html
-<span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="chk1-label">
-</span> <label id="chk1-label">Remember my preferences</label>
+<span
+  role="checkbox"
+  aria-checked="false"
+  tabindex="0"
+  aria-labelledby="chk1-label">
+</span>
+<label id="chk1-label">Remember my preferences</label>
 ```
 
 Первое правило ARIA - если у нативного HTML-элемента или атрибута присутствует необходимая семантика или поведение, следует использовать его, а не использовать другой элемент не по назначению, добавляя ARIA. Вместо этого лучше использовать [HTML checkbox](/ru/docs/Web/HTML/Element/input/checkbox) [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), который изначально предоставляет необходимый функционал:
 
 ```html
-<input type="checkbox" id="chk1-label">
+<input type="checkbox" id="chk1-label" />
 <label for="chk1-label">Запомнить мои предпочтения</label>
 ```
 
@@ -69,24 +74,32 @@ translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
 #### HTML
 
 ```html
-<span role="checkbox" id="chkPref" aria-checked="false" onclick="changeCheckbox()" onKeyPress="changeCheckbox()"
-   tabindex="0" aria-labelledby="chk1-label"></span>
-<label id="chk1-label" onclick="changeCheckbox()" onKeyPress="changeCheckbox()">Запомнить мои предпочтения</label>
+<span
+  role="checkbox"
+  id="chkPref"
+  aria-checked="false"
+  onclick="changeCheckbox()"
+  onKeyPress="changeCheckbox()"
+  tabindex="0"
+  aria-labelledby="chk1-label"></span>
+<label id="chk1-label" onclick="changeCheckbox()" onKeyPress="changeCheckbox()"
+  >Запомнить мои предпочтения</label
+>
 ```
 
 #### CSS
 
 ```css
 [role="checkbox"] {
-    padding:5px;
+  padding: 5px;
 }
 
 [aria-checked="true"]::before {
-    content: "[x]";
+  content: "[x]";
 }
 
 [aria-checked="false"]::before {
-    content: "[ ]";
+  content: "[ ]";
 }
 ```
 
@@ -94,15 +107,15 @@ translation_of: Web/Accessibility/ARIA/Roles/checkbox_role
 
 ```js
 function changeCheckbox(event) {
-    let item = document.getElementById('chkPref');
-    switch(item.getAttribute('aria-checked')) {
-        case "true":
-            item.setAttribute('aria-checked', "false");
-            break;
-        case "false":
-            item.setAttribute('aria-checked', "true");
-            break;
-    }
+  let item = document.getElementById("chkPref");
+  switch (item.getAttribute("aria-checked")) {
+    case "true":
+      item.setAttribute("aria-checked", "false");
+      break;
+    case "false":
+      item.setAttribute("aria-checked", "true");
+      break;
+  }
 }
 ```
 

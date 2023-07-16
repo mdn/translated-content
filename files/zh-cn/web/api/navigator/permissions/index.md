@@ -5,7 +5,7 @@ slug: Web/API/Navigator/permissions
 
 {{APIRef("HTML DOM")}}
 
-**`Navigator.permissions`** 只读属性返回一个 {{domxref("Permissions")}} 对象，可以用于查询或更新 [Permissions API](/en-US/docs/Web/API/Permissions_API) 涵盖的 API 状态。
+**`Navigator.permissions`** 只读属性返回一个 {{domxref("Permissions")}} 对象，可以用于查询或更新 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 涵盖的 API 状态。
 
 ## 值
 

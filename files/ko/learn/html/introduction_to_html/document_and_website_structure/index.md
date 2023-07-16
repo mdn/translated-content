@@ -12,15 +12,15 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
     <tr>
       <th scope="row">선행 조건:</th>
       <td>
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >의 HTML의 기본.
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML text fundamentals</a
         >의 HTML 텍스트 형식.
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
           >Creating hyperlinks</a
         >의 하이퍼링크의 동작 방식.
       </td>

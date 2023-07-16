@@ -14,7 +14,6 @@ build/
 # The following folders still need a full pass:
 
 # es
-/docs/es/**/*.md
 /files/es/games/**/*.md
 /files/es/glossary/**/*.md
 /files/es/learn/**/*.md
@@ -66,21 +65,27 @@ build/
 /files/pt-br/webassembly/**/*.md
 
 # ru
-/docs/ru/**/*.md
 /files/ru/games/**/*.md
 /files/ru/glossary/**/*.md
 /files/ru/learn/**/*.md
 /files/ru/mdn/**/*.md
 /files/ru/mozilla/**/*.md
-/files/ru/web/**/*.md
+/files/ru/web/api/**/*.md
+/files/ru/web/css/**/*.md
+/files/ru/web/html/**/*.md
+/files/ru/web/http/**/*.md
+/files/ru/web/javascript/**/*.md
+/files/ru/web/svg/**/*.md
 /files/ru/webassembly/**/*.md
 
 # zh-cn
-/files/zh-cn/games/**/*.md
-/files/zh-cn/glossary/**/*.md
 /files/zh-cn/learn/**/*.md
 /files/zh-cn/mdn/**/*.md
-/files/zh-cn/mozilla/**/*.md
-/files/zh-cn/web/**/*.md
+/files/zh-cn/web/api/**/*.md
+/files/zh-cn/web/css/**/*.md
+/files/zh-cn/web/html/**/*.md
+/files/zh-cn/web/http/**/*.md
+/files/zh-cn/web/javascript/**/*.md
+/files/zh-cn/web/svg/**/*.md
 /files/zh-cn/webassembly/**/*.md
 /docs/zh-cn/glossary.md
