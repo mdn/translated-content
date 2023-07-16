@@ -203,4 +203,4 @@ window.addEventListener('beforeinstallprompt', (e) => {
 - [Web manifest 参考](/zh-CN/docs/Web/Manifest)
 - [应用安装横幅](https://developers.google.com/web/fundamentals/app-install-banners/)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/")}}

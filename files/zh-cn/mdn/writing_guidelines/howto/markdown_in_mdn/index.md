@@ -549,7 +549,7 @@ GFM 表格语法的主要限制是：
 文本内容可以包括对 KumaScript 宏的调用：
 
 ```md
-The **`margin`** [CSS](/en-US/docs/Web/CSS) property
+The **`margin`** [CSS](/zh-CN/docs/Web/CSS) property
 sets the margin area on all four sides of an element. It is a shorthand for
 \{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}},
 and \{{cssxref("margin-left")}}.
