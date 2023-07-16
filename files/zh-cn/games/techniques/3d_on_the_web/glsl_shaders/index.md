@@ -58,28 +58,35 @@ void main() {
 这是将用到的 HTML 结构。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>MDN Games: Shaders demo</title>
     <style>
-        body { margin: 0; padding: 0; font-size: 0; }
-        canvas { width: 100%; height: 100%; }
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 0;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
     </style>
     <script src="three.min.js"></script>
-</head>
-<body>
-  <script id="vertexShader" type="x-shader/x-vertex">
-    // 顶点着色器代码在这里
-  </script>
-  <script id="fragmentShader" type="x-shader/x-fragment">
-    // 片段着色器代码在这里
-  </script>
-  <script>
-    // 场景设置在这里
-  </script>
-</body>
+  </head>
+  <body>
+    <script id="vertexShader" type="x-shader/x-vertex">
+      // 顶点着色器代码在这里
+    </script>
+    <script id="fragmentShader" type="x-shader/x-fragment">
+      // 片段着色器代码在这里
+    </script>
+    <script>
+      // 场景设置在这里
+    </script>
+  </body>
 </html>
 ```
 
@@ -136,9 +143,9 @@ void main() {
 然后创建 [`shaderMaterial`](http://threejs.org/docs/#Reference/Materials/ShaderMaterial):
 
 ```js
-var shaderMaterial = new THREE.ShaderMaterial( {
-    vertexShader: document.getElementById( 'vertexShader' ).textContent,
-    fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+var shaderMaterial = new THREE.ShaderMaterial({
+  vertexShader: document.getElementById("vertexShader").textContent,
+  fragmentShader: document.getElementById("fragmentShader").textContent,
 });
 ```
 

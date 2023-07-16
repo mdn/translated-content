@@ -74,7 +74,6 @@ build/
 /files/ru/webassembly/**/*.md
 
 # zh-cn
-/files/zh-cn/games/**/*.md
 /files/zh-cn/glossary/**/*.md
 /files/zh-cn/learn/**/*.md
 /files/zh-cn/mdn/**/*.md
