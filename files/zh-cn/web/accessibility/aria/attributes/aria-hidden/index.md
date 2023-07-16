@@ -45,8 +45,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 ## 示例
 
 ```html
- <i class="icon" aria-hidden="true" />
-
+<i class="icon" aria-hidden="true" />
 ```
 
 ## 无障碍问题

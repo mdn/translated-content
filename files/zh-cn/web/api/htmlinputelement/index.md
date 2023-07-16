@@ -193,7 +193,7 @@ slug: Web/API/HTMLInputElement
       <td>
         <code
           ><a
-            href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select"
+            href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLInputElement/select"
             >select()</a
           ></code
         >
@@ -207,7 +207,7 @@ slug: Web/API/HTMLInputElement
       <td>
         <code
           ><a
-            href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/click"
+            href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLInputElement/click"
             >click()</a
           ></code
         >

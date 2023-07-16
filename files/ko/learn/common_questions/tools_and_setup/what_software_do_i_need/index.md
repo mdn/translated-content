@@ -11,7 +11,7 @@ original_slug: Learn/Common_questions/What_software_do_I_need
     <tr>
       <th scope="row">요구사항:</th>
       <td>
-        <a href="/en-US/docs/Learn/page_vs_site_vs_server_vs_search_engine"
+        <a href="/ko/docs/Learn/page_vs_site_vs_server_vs_search_engine"
           >웹페이지, 웹사이트, 웹서버, 검색엔진의 차이</a
         >를 알아야 한다.
       </td>
