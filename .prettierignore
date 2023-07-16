@@ -70,7 +70,12 @@ build/
 /files/ru/learn/**/*.md
 /files/ru/mdn/**/*.md
 /files/ru/mozilla/**/*.md
-/files/ru/web/**/*.md
+/files/ru/web/api/**/*.md
+/files/ru/web/css/**/*.md
+/files/ru/web/html/**/*.md
+/files/ru/web/http/**/*.md
+/files/ru/web/javascript/**/*.md
+/files/ru/web/svg/**/*.md
 /files/ru/webassembly/**/*.md
 
 # zh-cn
