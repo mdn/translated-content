@@ -97,8 +97,8 @@ section {
   float: left;
   width: 200px;
   height: 100px;
-  background-color: rgba(255, 255, 255, .5);
-  border:1px solid black;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
   padding: 10px;
 }
 ```
@@ -118,7 +118,10 @@ section {
 </section>
 <section>
   <div class="float">试试重新调整这个外部浮动元素的大小</div>
-  <div class="box" style="display:flow-root"><p><code>display:flow-root</code><p></div>
+  <div class="box" style="display:flow-root">
+    <p><code>display:flow-root</code></p>
+    <p></p>
+  </div>
 </section>
 ```
 
@@ -126,7 +129,7 @@ section {
 
 ```css
 section {
-  height:150px;
+  height: 150px;
 }
 .box {
   background-color: rgb(224, 206, 247);
@@ -140,10 +143,10 @@ section {
   float: left;
   overflow: hidden; /* resize:both 所必需的样式 */
   resize: both;
-  margin-right:25px;
+  margin-right: 25px;
   width: 200px;
   height: 100px;
-  background-color: rgba(255, 255, 255, .75);
+  background-color: rgba(255, 255, 255, 0.75);
   border: 1px solid black;
   padding: 10px;
 }
