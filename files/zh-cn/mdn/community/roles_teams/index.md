@@ -20,14 +20,14 @@ MDN Web 文档的成功和发展在很大程度上归功于我们的贡献者社
 - **Yari content**：MDN Web 文档所有的内容审查团队的总称
 
   - **Yari content MDN**：负责审查 `/en-US/docs` 下的文档
-  - **Yari content Mozilla add-ons**：负责审查 `/zh-CN/docs/Mozilla/Add-ons` 下的文档
-  - **Yari content JavaScript**：负责审查 `/zh-CN/docs/Web/JavaScript` 下的文档
-  - **Yari content HTML**：负责审查 `/zh-CN/docs/Web/HTML` 下的文档
-  - **Yari content Web API**：负责审查 `/zh-CN/docs/Web/API` 下的文档
-  - **Yari content HTTP**：负责审查 `/zh-CN/docs/Web/HTTP` 下的文档
-  - **Yari content CSS**：负责审查 `/zh-CN/docs/Web/CSS` 下的文档
-  - **Yari content accessibility**：负责审查 `/zh-CN/docs/Web/Accessibility` 下的文档
-  - **Yari content SVG**：负责审查 `/zh-CN/docs/Web/SVG` 下的文档
+  - **Yari content Mozilla add-ons**：负责审查 `/en-US/docs/Mozilla/Add-ons` 下的文档
+  - **Yari content JavaScript**：负责审查 `/en-US/docs/Web/JavaScript` 下的文档
+  - **Yari content HTML**：负责审查 `/en-US/docs/Web/HTML` 下的文档
+  - **Yari content Web API**：负责审查 `/en-US/docs/Web/API` 下的文档
+  - **Yari content HTTP**：负责审查 `/en-US/docs/Web/HTTP` 下的文档
+  - **Yari content CSS**：负责审查 `/en-US/docs/Web/CSS` 下的文档
+  - **Yari content accessibility**：负责审查 `/en-US/docs/Web/Accessibility` 下的文档
+  - **Yari content SVG**：负责审查 `/en-US/docs/Web/SVG` 下的文档
   - **Yari content Web Assembly**：负责审查与 WebAssembly 相关的文档
 
   以下团队分别对应于不同的本地化团队：
