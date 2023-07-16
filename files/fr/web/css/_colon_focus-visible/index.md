@@ -58,7 +58,7 @@ input, button {
 
 {{EmbedLiveSample('Exemple_simple', '100%', '300')}}
 
-### Choisir d'afficher l’indicateur de focus
+### Choisir d'afficher l'indicateur de focus
 
 Un contrôle personnalisé (par exemple un bouton provenant d'un _[custom element](/fr/docs/Web/Web_Components/Using_custom_elements)_) peut utiliser `:focus-visible` afin d'appliquer ou non un indicateur de focus pour la navigation au clavier afin de calquer au comportement natif de {{htmlelement("button")}}.
 
@@ -98,7 +98,7 @@ custom-button:focus-visible {
 }
 ```
 
-{{EmbedLiveSample("Choisir_d'afficher_l’indicateur_de_focus", '100%', '300')}}
+{{EmbedLiveSample("Choisir_d'afficher_l'indicateur_de_focus", '100%', '300')}}
 
 ## Accessibilité
 

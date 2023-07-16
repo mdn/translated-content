@@ -10,13 +10,13 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detec
 
 Il s'agit de la **7ème étape** sur 10 du [Gamedev Canvas tutorial](/fr/docs/Games/Workflows/Breakout_game_from_scratch). Vous pouvez trouver le code source tel qu'il devrait être après avoir complété cette leçon à : [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
 
-Les briques apparaissent à l'écran, mais le jeu n'est toujours pas intéressant car la balle les traverse. Nous devons ajouter une détection des collisions afin qu’elle puisse rebondir sur les briques et les casser.
+Les briques apparaissent à l'écran, mais le jeu n'est toujours pas intéressant car la balle les traverse. Nous devons ajouter une détection des collisions afin qu'elle puisse rebondir sur les briques et les casser.
 
 C'est notre décision, bien sûr, de mettre ça en œuvre, mais il peut être difficile de calculer si la balle touche le rectangle ou non, car il n'y a pas de fonction d'aide dans Canvas pour cela. Dans l'intérêt de ce tutoriel, nous le ferons de la manière la plus simple possible. Nous vérifierons si le centre de la balle entre en collision avec l'une des briques données. Cela ne donnera pas toujours un résultat parfait, et il existe des moyens beaucoup plus sophistiqués de détecter des collisions, mais cela fonctionnera assez bien pour vous apprendre les concepts de base.
 
 ## Une fonction de détection de collision
 
-Pour commencer, nous voulons créer une fonction de détection de collision qui va parcourir toutes les briques et comparer la position de chaque brique avec les coordonnées de la balle lorsque chaque image est dessinée. Pour une meilleure lisibilité du code, nous allons définir la variable `b` pour stocker l’objet brique dans la boucle de la détection de collision:
+Pour commencer, nous voulons créer une fonction de détection de collision qui va parcourir toutes les briques et comparer la position de chaque brique avec les coordonnées de la balle lorsque chaque image est dessinée. Pour une meilleure lisibilité du code, nous allons définir la variable `b` pour stocker l'objet brique dans la boucle de la détection de collision:
 
 ```js
 function collisionDetection() {
@@ -55,7 +55,7 @@ Ajoutez le bloc ci-dessus à votre code, sous la fonction `keyUpHandler()` .
 
 ## Faire disparaître les briques après qu'elles aient été touchées
 
-Le code ci-dessus fonctionnera comme vous le souhaitez et la balle changera de direction. Le problème est que les briques restent là où elles sont. Nous devons trouver un moyen de nous débarrasser de celles que nous avons déjà touchées avec la balle. Nous pouvons le faire en ajoutant un paramètre supplémentaire pour indiquer si nous voulons ou non afficher chaque brique à l’écran. Dans la partie du code où nous initialisons les briques, ajoutons une propriété `status` à chaque brique. Mettez à jour la partie suivante du code comme indiqué par la ligne en évidence:
+Le code ci-dessus fonctionnera comme vous le souhaitez et la balle changera de direction. Le problème est que les briques restent là où elles sont. Nous devons trouver un moyen de nous débarrasser de celles que nous avons déjà touchées avec la balle. Nous pouvons le faire en ajoutant un paramètre supplémentaire pour indiquer si nous voulons ou non afficher chaque brique à l'écran. Dans la partie du code où nous initialisons les briques, ajoutons une propriété `status` à chaque brique. Mettez à jour la partie suivante du code comme indiqué par la ligne en évidence:
 
 ```js
 var bricks = [];
@@ -111,7 +111,7 @@ function collisionDetection() {
 
 ## Activer notre détection de collision
 
-La dernière chose à faire est d’ajouter un appel à la fonction `collisionDetection ()` à notre fonction `draw()` principale. Ajoutez la ligne suivante à la fonction `draw ()`, juste en dessous de l'appel `drawPaddle()`:
+La dernière chose à faire est d'ajouter un appel à la fonction `collisionDetection ()` à notre fonction `draw()` principale. Ajoutez la ligne suivante à la fonction `draw ()`, juste en dessous de l'appel `drawPaddle()`:
 
 ```js
 collisionDetection();
