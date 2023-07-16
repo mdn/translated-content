@@ -8,7 +8,7 @@ slug: Web/API/Window/location
 
 **`Window.location`** 只读属性返回一个 {{domxref("Location")}} 对象，其中包含有关文档当前位置的信息。
 
-尽管 `Window.location` 是一个*只读* `Location` 对象，你仍然可以将字符串赋值给它。这意味着可以在大多数情况下像字符串一样处理 `location`：`location = 'http://www.example.com'` 是 `location.href = 'http://www.example.com'` 的同义词。
+尽管 `Window.location` 是一个*只读* `Location` 对象，你仍然可以将字符串赋值给它。这意味着可以在大多数情况下像字符串一样处理 `location`——`location = 'http://www.example.com'`——与 `location.href = 'http://www.example.com'` 等价。
 
 参见 {{domxref("Location")}} 的文档以查看所有可能的属性值。
 
@@ -31,8 +31,8 @@ alert(location); // 弹出 "https://developer.mozilla.org/zh-CN/docs/Web/API/Win
 请注意，[与导航相关的沙箱标志](https://html.spec.whatwg.org/multipage/browsers.html#allowed-to-navigate)可能会导致抛出异常和导航失败。
 
 ```js
-location.assign("http://www.mozilla.org"); // 或
-location = "http://www.mozilla.org";
+location.assign("https://www.mozilla.org"); // 或
+location = "https://www.mozilla.org";
 ```
 
 ### 示例 2：重新加载当前页面
@@ -47,7 +47,7 @@ location.reload();
 
 ```js
 function reloadPageWithHash() {
-  location.replace(`http://example.com/#${location.pathname}`);
+  location.replace(`https://example.com/#${location.pathname}`);
 }
 ```
 
