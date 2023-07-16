@@ -42,6 +42,7 @@ build/
 /files/ja/webassembly/**/*.md
 
 # ko
+/docs/ko/**/*.md
 /files/ko/games/**/*.md
 /files/ko/glossary/**/*.md
 /files/ko/learn/**/*.md
