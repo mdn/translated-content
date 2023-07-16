@@ -1,6 +1,8 @@
 ---
 title: HTMLTrackElement
 slug: Web/API/HTMLTrackElement
+l10n:
+  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -9,9 +11,9 @@ slug: Web/API/HTMLTrackElement
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
-_親である {{domxref("HTMLElement")}} から継承したプロパティもあります。_
+_親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{domxref("HTMLTrackElement.kind")}}
   - : HTML の [`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性を反映した文字列で、使用する予定のテキストトラックを示します。可能な値は `subtitles`, `captions`, `descriptions`, `chapters`, `metadata` です。
@@ -37,13 +39,13 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
 - {{domxref("HTMLTrackElement.track")}} {{ReadOnlyInline}}
   - : track 要素のテキストトラックデータである {{Domxref("TextTrack")}} を返します。
 
-## メソッド
+## インスタンスメソッド
 
-_固有のメソッドはありません。親である {{domxref("HTMLElement")}} からメソッドを継承しています。_
+_固有のメソッドはありません。親である {{domxref("HTMLElement")}} から継承したメソッドがあります。_
 
 ## イベント
 
-_親である {{domxref("HTMLElement")}} で発生する可能性があるイベントに加えて、以下のイベントが {{HTMLElement("track")}} 要素で発生する可能性があります。_
+_{{HTMLElement("track")}} 要素では、親である {{domxref("HTMLElement")}} で発生する可能性があるイベントに加えて、以下のイベントが発生する可能性があります。_
 
 - {{domxref("HTMLTrackElement.cuechange_event", "cuechange")}}
   - : 基礎となる {{domxref("TextTrack")}} が、現在表示されているキューを変更したときに送られます。このイベントは常に `TextTrack` に送られますが、もし `HTMLTrackElement` がトラックと関連付けられていれば、そちらにも送られます。
