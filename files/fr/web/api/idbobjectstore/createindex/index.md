@@ -57,7 +57,7 @@ objectStore.createIndex(nomIndex, nomCle, parametresIndexOptionnel);
               opérations de tri effectuées sur les données via des intervalle de clé
               obéirons aux règles locales de tri (voir
               <a
-                href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Locale-aware_sorting"
+                href="/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB#Locale-aware_sorting"
                 >trie dans localisation courante</a
               >, en). Vous pouvez spécifier sa valeur de trois façons différentes:
             </p>

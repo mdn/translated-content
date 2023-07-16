@@ -159,4 +159,4 @@ Fonctionnalité ajoutée dans Firefox 16 et retirée dans Firefox 49.
 
 - [Les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/HTML")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/HTML")}}

@@ -32,7 +32,7 @@ L'événement **`vrdisplaydisconnect`** de l'[API WebVR](/fr/docs/Web/API/WebVR_
       <th scope="row">Propriété de gestionnaire d'événements</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/Window/onvrdisplaydisconnect"
+          ><a href="/fr/docs/Web/API/Window/onvrdisplaydisconnect"
             >onvrdisplaydisconnect</a
           ></code
         >
