@@ -108,7 +108,7 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>。または <a href="/ja/docs/Web/Guide/HTML/Content_categories#見出しコンテンツ">見出しコンテンツ</a> のうちひとつの要素
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>。または <a href="/ja/docs/Web/HTML/Content_categories#見出しコンテンツ">見出しコンテンツ</a> のうちひとつの要素
       </td>
     </tr>
     <tr>
