@@ -124,7 +124,7 @@ ctx.stroke();
 ## 阴影
 
 - {{domxref("CanvasRenderingContext2D.shadowBlur")}}
-  - : 描述模糊效果。默认 `0`
+  - : 描述模糊效果。默认 `0`。
 - {{domxref("CanvasRenderingContext2D.shadowColor")}}
   - : 阴影的颜色。默认 fully-transparent black。
 - {{domxref("CanvasRenderingContext2D.shadowOffsetX")}}
@@ -149,11 +149,11 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo()")}}
   - : 添加一个 2 次贝赛尔曲线路径。
 - {{domxref("CanvasRenderingContext2D.arc()")}}
-  - : 绘制一段圆弧路径，圆弧路径的圆心在 _(x, y)_ 位置，半径为 _r_，根据 *anticlockwise*（默认为顺时针）指定的方向从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
+  - : 绘制一段圆弧路径，圆弧路径的圆心在 _(x, y)_ 位置，半径为 _r_，根据 _anticlockwise_（默认为顺时针）指定的方向从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
 - {{domxref("CanvasRenderingContext2D.arcTo()")}}
   - : 根据控制点和半径绘制圆弧路径，使用当前的描点 (前一个 moveTo 或 lineTo 等函数的止点)。根据当前描点与给定的控制点 1 连接的直线，和控制点 1 与控制点 2 连接的直线，作为使用指定半径的圆的**切线**，画出两条切线之间的弧线路径。
 - {{domxref("CanvasRenderingContext2D.ellipse()")}} {{experimental_inline}}
-  - : 添加一个椭圆路径，椭圆的圆心在（x,y）位置，半径分别是 *radiusX* 和 _radiusY_，按照 *anticlockwise*（默认顺时针）指定的方向，从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
+  - : 添加一个椭圆路径，椭圆的圆心在（x,y）位置，半径分别是 _radiusX_ 和 _radiusY_，按照 _anticlockwise_（默认顺时针）指定的方向，从 _startAngle_ 开始绘制，到 _endAngle_ 结束。
 - {{domxref("CanvasRenderingContext2D.rect()")}}
   - : 创建一个矩形路径，矩形的起点位置是 _(x, y)_，尺寸为 _width_ 和 _height_。
 
@@ -210,7 +210,7 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.createImageData()")}}
   - : 使用指定的尺寸，创建一个新的、空白的 {{domxref("ImageData")}} 对象。所有的像素在新对象中都是透明的。
 - {{domxref("CanvasRenderingContext2D.getImageData()")}}
-  - : 返回一个 {{domxref("ImageData")}} 对象，用来描述 canvas 区域隐含的像素数据，这个区域通过矩形表示，起始点为 *(sx, sy)*、宽为 *sw*、高为 *sh*。
+  - : 返回一个 {{domxref("ImageData")}} 对象，用来描述 canvas 区域隐含的像素数据，这个区域通过矩形表示，起始点为 _(sx, sy)_、宽为 _sw_、高为 _sh_。
 - {{domxref("CanvasRenderingContext2D.putImageData()")}}
   - : 将数据从已有的 {{domxref("ImageData")}} 绘制到位图上。如果提供了脏矩形，只能绘制矩形的像素。
 
