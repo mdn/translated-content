@@ -1,6 +1,8 @@
 ---
 title: CSS 작동 방식
 slug: Learn/CSS/First_steps/How_CSS_works
+l10n:
+  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
 {{LearnSidebar}}
