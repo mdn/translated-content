@@ -89,7 +89,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 ```js
 let pattern = "https://developer.mozilla.org/*";
-const targetUrl = "https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
+const targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
 
 function redirect(requestDetails) {
   console.log(`Redirecting: ${requestDetails.url}`);
