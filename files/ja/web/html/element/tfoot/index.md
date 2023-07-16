@@ -34,11 +34,11 @@ l10n:
     > **メモ:**
     >
     > - `left`, `center`, `right`, `justify` の値と同様の効果を得るには、 CSS の {{cssxref("text-align")}} プロパティを使用してください。
-    > - CSS3 で `char` の値と同様の効果を得るには、 [`char`](#char) の値を {{cssxref("text-align")}} プロパティの値として使用することができます。 {{unimplemented_inline}}
+    > - CSS で `char` の値と同様の効果を得るには、 [`char`](#char) の値を {{cssxref("text-align")}} プロパティの値として使用することができます。
 
 - `bgcolor` {{Deprecated_inline}}
 
-  - : 表の背景色です。この属性は、列の各セルの背景色を定義します。 [6 桁の 16 進数の RGB コード](/ja/docs/Web/CSS/color_value#rgb_colors)の前に '`#`' が付いた形です。定義済みの[色キーワード](/ja/docs/Web/CSS/color_value#color_keywords)の一つを使用することもできます。
+  - : 表の背景色です。この属性は、列の各セルの背景色を定義します。 [6 桁の 16 進数の RGB コード](/ja/docs/Web/CSS/hex-color)の前に '`#`' が付いた形です。定義済みの[色キーワード](/ja/docs/Web/CSS/named-color)の一つを使用することもできます。
 
     同様の効果を得るには、 CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
