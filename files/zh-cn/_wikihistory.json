@@ -5178,10 +5178,6 @@
     "modified": "2020-10-15T21:59:03.906Z",
     "contributors": ["wbamberg", "lzfxp"]
   },
-  "Mozilla/Add-ons/WebExtensions/API/runtime/onMessage": {
-    "modified": "2020-10-15T22:25:54.860Z",
-    "contributors": ["zombie110year"]
-  },
   "Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage": {
     "modified": "2020-10-15T21:52:23.869Z",
     "contributors": ["wbamberg", "wangtonghe"]
@@ -5221,18 +5217,6 @@
     "modified": "2020-10-15T22:00:50.838Z",
     "contributors": ["yuyx91"]
   },
-  "Mozilla/Add-ons/WebExtensions/API/tabs/create": {
-    "modified": "2020-10-15T22:00:41.838Z",
-    "contributors": ["yuyx91"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/tabs/discard": {
-    "modified": "2020-10-15T22:05:48.592Z",
-    "contributors": ["RainSlide"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/tabs/executeScript": {
-    "modified": "2020-10-15T22:12:43.287Z",
-    "contributors": ["wbamberg", "xgqfrms"]
-  },
   "Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS": {
     "modified": "2020-10-15T21:51:31.605Z",
     "contributors": ["wbamberg", "xfyanmeng", "Hypophrenia"]
@@ -5245,20 +5229,12 @@
     "modified": "2020-11-25T05:15:24.039Z",
     "contributors": ["qzwvinner"]
   },
-  "Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage": {
-    "modified": "2020-10-15T22:12:29.653Z",
-    "contributors": ["wbamberg", "zsgwsjj"]
-  },
   "Mozilla/Add-ons/WebExtensions/API/types": {
     "modified": "2020-07-06T02:37:08.205Z"
   },
   "Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting": {
     "modified": "2020-10-15T22:31:21.913Z",
     "contributors": ["asam49862"]
-  },
-  "Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set": {
-    "modified": "2020-07-06T02:37:10.081Z",
-    "contributors": ["baige97"]
   },
   "Mozilla/Add-ons/WebExtensions/API/webNavigation": {
     "modified": "2020-10-15T21:53:08.569Z",
@@ -5543,25 +5519,13 @@
     "modified": "2020-10-15T22:25:56.457Z",
     "contributors": ["DarthVaderrr"]
   },
-  "Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items": {
-    "modified": "2019-03-18T21:03:56.633Z",
-    "contributors": ["mengshiyue"]
-  },
   "Mozilla/Add-ons/WebExtensions/user_interface/Page_actions": {
     "modified": "2019-03-18T21:03:06.637Z",
     "contributors": ["yongm126"]
   },
-  "Mozilla/Add-ons/WebExtensions/user_interface/Sidebars": {
-    "modified": "2019-03-18T21:02:29.279Z",
-    "contributors": ["dfchong"]
-  },
   "Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button": {
     "modified": "2019-03-18T21:03:41.863Z",
     "contributors": ["kyle2003"]
-  },
-  "Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels": {
-    "modified": "2019-03-18T21:02:57.359Z",
-    "contributors": ["Jane47Zeng"]
   },
   "Mozilla/Firefox": {
     "modified": "2020-01-18T14:38:03.567Z",
