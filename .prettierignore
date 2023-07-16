@@ -81,7 +81,6 @@ build/
 # zh-cn
 /files/zh-cn/learn/**/*.md
 /files/zh-cn/mdn/**/*.md
-/files/zh-cn/mozilla/**/*.md
 /files/zh-cn/web/api/**/*.md
 /files/zh-cn/web/css/**/*.md
 /files/zh-cn/web/html/**/*.md
