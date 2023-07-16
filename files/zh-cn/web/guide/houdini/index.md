@@ -15,9 +15,7 @@ Houdini 的 CSS Typed OM 是一个包含类型和方法的 CSS 对象、并且�
 一个 CSS Houdini 的特性就是 [Worklet](/zh-CN/docs/Web/API/Worklet)。在它的帮助下，你可以通过引入一行 JavaScript 代码来引入配置化的组件，从而创建模块式的 CSS。不依赖任何前置处理器、后置处理器或者 JavaScript 框架。
 
 ```js
-<script>
-  CSS.paintWorklet.addModule('csscomponent.js');
-</script>
+<script>CSS.paintWorklet.addModule('csscomponent.js');</script>
 ```
 
 以上添加进的模块包含一个 [`registerPaint()`](/zh-CN/docs/Web/API/PaintWorklet/registerPaint)函数，这个模块是完全通过可配置的 worklets 来注册的。
@@ -26,9 +24,9 @@ Houdini 的 CSS Typed OM 是一个包含类型和方法的 CSS 对象、并且�
 
 ```css
 li {
-    background-image: paint(myComponent, stroke, 10px);
-    --hilights: blue;
-    --lowlights: green;
+  background-image: paint(myComponent, stroke, 10px);
+  --hilights: blue;
+  --lowlights: green;
 }
 ```
 

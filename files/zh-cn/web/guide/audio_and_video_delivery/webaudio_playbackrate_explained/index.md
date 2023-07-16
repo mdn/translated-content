@@ -9,9 +9,9 @@ html 元素“audio”和“video”的`playbackRate` 属性允许我们改变�
 
 让我们以一个简单的`playbackRate`用法示例开始：
 
-```java
-var myAudio = document.createElement('audio');
-myAudio.setAttribute('src','audiofile.mp3');
+```js
+var myAudio = document.createElement("audio");
+myAudio.setAttribute("src", "audiofile.mp3");
 myAudio.playbackRate = 0.5;
 ```
 
@@ -23,12 +23,16 @@ myAudio.playbackRate = 0.5;
 
 ```html
 <video id="myVideo" controls>
-  <source src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v" type='video/mp4' />
-  <source src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm" type='video/webm' />
+  <source
+    src="http://jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v"
+    type="video/mp4" />
+  <source
+    src="http://jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+    type="video/webm" />
 </video>
 
 <form>
-  <input id="pbr" type="range" value="1" min="0.5" max="4" step="0.1" >
+  <input id="pbr" type="range" value="1" min="0.5" max="4" step="0.1" />
   <p>Playback Rate <span id="currentPbr">1</span></p>
 </form>
 ```
@@ -37,16 +41,18 @@ myAudio.playbackRate = 0.5;
 
 ```js
 window.onload = function () {
-
   var v = document.getElementById("myVideo");
   var p = document.getElementById("pbr");
   var c = document.getElementById("currentPbr");
 
-  p.addEventListener('input',function(){
-    c.innerHTML = p.value;
-    v.playbackRate = p.value;
-  },false);
-
+  p.addEventListener(
+    "input",
+    function () {
+      c.innerHTML = p.value;
+      v.playbackRate = p.value;
+    },
+    false,
+  );
 };
 ```
 

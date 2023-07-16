@@ -15,7 +15,7 @@ The term **autoplay** refers to any feature that causes audio to begin to play w
 That means that both of the following are considered autoplay behavior, and are therefore subject to the browser's autoplay blocking policy:
 
 ```html
-<audio src="/music.mp4" autoplay>
+<audio src="/music.mp4" autoplay></audio>
 ```
 
 和
@@ -64,7 +64,7 @@ audioElement.play();
 
 ```html
 <audio id="musicplayer" autoplay>
-  <source src="/music/chapter1.mp4">
+  <source src="/music/chapter1.mp4" />
 </audio>
 ```
 
@@ -126,16 +126,18 @@ You might use code like this to accomplish the job:
 let startPlayPromise = videoElem.play();
 
 if (startPlayPromise !== undefined) {
-  startPlayPromise.catch(error => {
-    if (error.name === "NotAllowedError") {
-      showPlayButton(videoElem);
-    } else {
-      // Handle a load or playback error
-    }
-  }).then(() => {
-    // Start whatever you need to do only after playback
-    // has begun.
-  });
+  startPlayPromise
+    .catch((error) => {
+      if (error.name === "NotAllowedError") {
+        showPlayButton(videoElem);
+      } else {
+        // Handle a load or playback error
+      }
+    })
+    .then(() => {
+      // Start whatever you need to do only after playback
+      // has begun.
+    });
 }
 ```
 
@@ -174,9 +176,7 @@ Permissions-Policy: autoplay 'self'
 To do the same for an {{HTMLElement("iframe")}}:
 
 ```html
-<iframe src="mediaplayer.html"
-        allow="autoplay 'src'">
-</iframe>
+<iframe src="mediaplayer.html" allow="autoplay 'src'"> </iframe>
 ```
 
 ### Example: Allowing autoplay and fullscreen mode
@@ -190,9 +190,7 @@ Permissions-Policy: autoplay 'self'; fullscreen
 The same permissions, grated using the `<iframe>` element's `allow` property, look like this:
 
 ```html
-<iframe src="mediaplayer.html"
-        allow="autoplay 'src'; fullscreen">
-</iframe>
+<iframe src="mediaplayer.html" allow="autoplay 'src'; fullscreen"> </iframe>
 ```
 
 ### Example: Allowing autoplay from specific sources
@@ -206,9 +204,11 @@ Permissions-Policy: autoplay 'self' https://example.media
 An {{HTMLElement("iframe")}} can be written to specify that this autoplay policy should be applied to itself and any child frames would be written thusly:
 
 ```html
-<iframe width="300" height="200"
-        src="mediaplayer.html"
-        allow="autoplay 'src' https://example.media">
+<iframe
+  width="300"
+  height="200"
+  src="mediaplayer.html"
+  allow="autoplay 'src' https://example.media">
 </iframe>
 ```
 
@@ -223,9 +223,7 @@ Permissions-Policy: autoplay 'none'
 Using the `<iframe>`'s `allow` attribute:
 
 ```html
-<iframe src="mediaplayer.html"
-        allow="autoplay 'none'">
-</iframe>
+<iframe src="mediaplayer.html" allow="autoplay 'none'"> </iframe>
 ```
 
 ## Best practices
@@ -237,7 +235,7 @@ Tips and recommended best practices to help you make the most of working with au
 A common use case for autoplay is to automatically begin to play a video clip that goes along with an article, an advertisement, or a preview of the page's main functionality. To autoplay videos like these, you have two options: don't have an audio track, or have an audio track but configure the {{HTMLElement("video")}} element to mute the audio by default, like this:
 
 ```html
-<video src="/videos/awesomevid.webm" controls autoplay muted>
+<video src="/videos/awesomevid.webm" controls autoplay muted></video>
 ```
 
 This video element is configured to include the user controls (typically play/pause, scrubbing through the video's timeline, volume control, and muting); also, since the [`muted`](/zh-CN/docs/Web/HTML/Element/video#muted) attribute is included, the video will autoplay but with the audio muted. The user has the option, however, of re-enabling the audio by clicking on the unmute button in the controls.
