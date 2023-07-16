@@ -15,13 +15,13 @@ slug: Web/HTML/Element/title
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Content_categories"
           >コンテンツカテゴリ</a
         >
       </th>
       <td>
         <a
-          href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ"
+          href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
           >メタデータコンテンツ</a
         >
       </td>
