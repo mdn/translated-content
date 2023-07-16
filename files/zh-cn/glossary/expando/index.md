@@ -23,14 +23,16 @@ expando 可能是 expandable object 的缩写，表示可扩展的对象。expan
 var n = 5;
 var i, j;
 
-var arr = new Array(n);            //创建第一维的数组
-for (i = 0; i < n; i++)
-{
-    arr[i] = new Array(n);
-    for (j = 0; j < n; j++)        // 内循环创建第二维数组
-    {
-        arr[i][j] = i * j;         // 数组赋值
-    }
+var arr = new Array(n); //创建第一维的数组
+for (i = 0; i < n; i++) {
+  arr[i] = new Array(n);
+  for (
+    j = 0;
+    j < n;
+    j++ // 内循环创建第二维数组
+  ) {
+    arr[i][j] = i * j; // 数组赋值
+  }
 }
 console.log(arr);
 ```

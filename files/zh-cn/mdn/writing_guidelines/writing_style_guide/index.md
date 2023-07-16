@@ -77,10 +77,10 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 
 - **合适的介绍简介示例**：在这里，我们看到一个更好的 `strokeText()` 方法的概述。
 
-  > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API), strokes (draws the outlines of) the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
+  > The {{domxref("CanvasRenderingContext2D")}} method **`strokeText()`**, part of the [Canvas 2D API](/zh-CN/docs/Web/API/Canvas_API), strokes (draws the outlines of) the characters of a specified string, anchored at the position indicated by the given X and Y coordinates.
   > The text is drawn using the context's current {{domxref("CanvasRenderingContext2D.font", "font")}}, and is justified and aligned according to the {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}}, {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}}, and {{domxref("CanvasRenderingContext2D.direction", "direction")}} properties.
   >
-  > For more details and examples, see the [Text](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+  > For more details and examples, see the [Text](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics#text) section on the Drawing graphics page as well as our main article on the subject, [Drawing text](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
 ### 使用包容性语言
 
@@ -559,7 +559,7 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 显示在页面顶部的页面标题可以与页面路径名不同，后者是页面 URL 中 `<locale>/docs/` 之后的部分。在定义路径名时，请记住以下准则：
 
 - 路径名应该保持简短。当创建一个新的层次结构时，路径名中的新层次成分应该只是一两个单词。
-- 路径名应使用下划线来表示多字组件，例如 `/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started` 中的 `Getting_started`。
+- 路径名应使用下划线来表示多字组件，例如 `/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started` 中的 `Getting_started`。
 - 在其中的每一个部分也要遵循句子的大小写，如前面例子中的 `Getting_started`。
 
 ### 标题

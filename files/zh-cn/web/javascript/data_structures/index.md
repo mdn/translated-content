@@ -224,12 +224,11 @@ JavaScript 有一个内置对象的标准库。发现更多关于内置对象，
 
 ## 强制类型转换
 
-如上所述，JavaScript 是一个[弱类型](#动态和弱类型)语言。这意味值你可以经常使用一种类型的值，而另一种类型是预期的，并且该语言将为你转换它为正确的类型。为此，JavaScript 定义了少数强制规则。
+如上所述，JavaScript 是一个[弱类型](#动态和弱类型)语言。这意味着你经常可以使用与预期类型不同类型的值，并且该语言将为你转换它为正确的类型。为此，JavaScript 定义了少数强制规则。
 
 ### 强制原始值转换
 
-在期望原始值的地方使用原始强制过程，但对实际类型应该是什么没有强烈的偏好。
-在期望原始值的地方使用[强制原始值转换](https://tc39.es/ecma262/#sec-toprimitive)的过程，但对实际的类型并不是什么特殊的要求。这通常是当 [字符串](#string_类型)、[数值](#number_类型)或 [BigInt](#bigint_类型) 相同可以接受的时候。
+[强制原始值转换](https://tc39.es/ecma262/#sec-toprimitive)用于得到一个期望的原始值，但对实际类型应该是什么并没有强烈的偏好。通常情况下可以接受[字符串](#string_类型)、[数值](#number_类型)或 [BigInt](#bigint_类型)。例如：
 
 - [`Date()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/Date) 构造函数，当它收到一个不是 `Date` 实例的参数时——字符串表示日期字符串，而数值表示时间戳。
 - [`+`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition) 运算符——如果运算对象是字符串，执行字符串串联；否则，执行数值相加。

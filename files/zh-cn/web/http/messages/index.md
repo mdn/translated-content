@@ -40,7 +40,7 @@ HTTP 请求是由客户端发出的消息，用来使服务器执行动作。*�
       - `GET /background.png HTTP/1.0`
       - `HEAD /test.html?query=alibaba HTTP/1.1`
       - `OPTIONS /anypage.html HTTP/1.0`
-    - 一个完整的 URL，被称为*绝对形式*（absolute form），主要在使用 `GET` 方法连接到代理时使用。`GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1`
+    - 一个完整的 URL，被称为*绝对形式*（absolute form），主要在使用 `GET` 方法连接到代理时使用。`GET http://developer.mozilla.org/zh-CN/docs/Web/HTTP/Messages HTTP/1.1`
     - 由域名和可选端口（以 `':'` 为前缀）组成的 URL 的 authority 部分，称为 _authority form_。仅在使用 `CONNECT` 建立 HTTP 隧道时才使用。`CONNECT developer.mozilla.org:80 HTTP/1.1`
     - *星号形式*（asterisk form），一个简单的星号（`'*'`），配合 `OPTIONS` 方法使用，代表整个服务器。`OPTIONS * HTTP/1.1`
 
