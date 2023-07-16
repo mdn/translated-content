@@ -5608,10 +5608,6 @@
     "modified": "2019-03-18T21:37:27.573Z",
     "contributors": ["wbamberg", "greatbug", "Pada"]
   },
-  "Mozilla/Firefox/Releases/12": {
-    "modified": "2019-03-18T21:09:06.420Z",
-    "contributors": ["fscholz", "wbamberg", "Ende93", "ethertank", "ziyunfei"]
-  },
   "Mozilla/Firefox/Releases/14": {
     "modified": "2019-03-23T23:39:39.174Z",
     "contributors": ["wbamberg", "Ende93", "ethertank", "ziyunfei"]

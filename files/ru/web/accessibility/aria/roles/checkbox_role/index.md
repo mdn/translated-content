@@ -125,7 +125,7 @@ function changeCheckbox(event) {
 
 Первое правило ARIA - если у нативного HTML-элемента или атрибута присутствует необходимая семантика или поведение, следует использовать его, а не использовать другой элемент не по назначению, добавляя ARIA, чтобы сделать его доступным. По существу, рекомендуется использовать нативный [HTML checkbox](/ru/docs/Web/HTML/Element/input/checkbox) вместо воспроизведения функциональности чекбокса с помощью JavaScript и ARIA.
 
-## Смотрите также:
+## Смотрите также
 
 - [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
 - [ARIA: radio role](/ru/docs/Web/Accessibility/ARIA/Roles/Radio_Role)
