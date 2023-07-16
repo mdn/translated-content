@@ -17,7 +17,7 @@ var style = window.getComputedStyle(element[, pseudoElt]);
 ```
 
 - element
-  - : L’{{ domxref("Element") }} pour lequel vous voulez obtenir une valeur calculée.
+  - : L'{{ domxref("Element") }} pour lequel vous voulez obtenir une valeur calculée.
 - pseudoElt {{ optional_inline() }}
   - : Chaîne de caractère spécifiant le pseudo-élément à cibler. Doit être `null` (ou non spécifiée) pour les éléments communs.
 

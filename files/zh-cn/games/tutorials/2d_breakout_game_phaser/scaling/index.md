@@ -17,9 +17,9 @@ Phaser 中有一个特殊的对象：`scale`，它包含一些特别的方法和
 
 ```js
 function preload() {
-    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-    game.scale.pageAlignHorizontally = true;
-    game.scale.pageAlignVertically = true;
+  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+  game.scale.pageAlignHorizontally = true;
+  game.scale.pageAlignVertically = true;
 }
 ```
 
@@ -38,7 +38,7 @@ function preload() {
 我们还可以给画布设置背景颜色来替代磨人的黑色背景。通过更改`stage`对象的`backgroundColor`属性来添加，我们可以使用 CSS 颜色定义语法进行设置。我们在刚才的代码下面添加以下代码：
 
 ```js
-game.stage.backgroundColor = '#eee';
+game.stage.backgroundColor = "#eee";
 ```
 
 ## 完整的代码

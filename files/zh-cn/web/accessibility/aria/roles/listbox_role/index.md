@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: listbox role'
+title: "ARIA: listbox role"
 slug: Web/Accessibility/ARIA/Roles/listbox_role
 ---
 
@@ -149,17 +149,23 @@ slug: Web/Accessibility/ARIA/Roles/listbox_role
 
 ```html
 <p id="listbox1label" role="label">Select a color:</p>
-<div role="listbox" tabindex="0" id="listbox1" aria-labelledby="listbox1label"
+<div
+  role="listbox"
+  tabindex="0"
+  id="listbox1"
+  aria-labelledby="listbox1label"
   onclick="return listItemClick(event);"
   onkeydown="return listItemKeyEvent(event);"
   onkeypress="return listItemKeyEvent(event);"
   aria-activedescendant="listbox1-1">
-    <div role="option" id="listbox1-1" class="selected" aria-selected="true">Green</div>
-    <div role="option" id="listbox1-2">Orange</div>
-    <div role="option" id="listbox1-3">Red</div>
-    <div role="option" id="listbox1-4">Blue</div>
-    <div role="option" id="listbox1-5">Violet</div>
-    <div role="option" id="listbox1-6">Periwinkle</div>
+  <div role="option" id="listbox1-1" class="selected" aria-selected="true">
+    Green
+  </div>
+  <div role="option" id="listbox1-2">Orange</div>
+  <div role="option" id="listbox1-3">Red</div>
+  <div role="option" id="listbox1-4">Blue</div>
+  <div role="option" id="listbox1-5">Violet</div>
+  <div role="option" id="listbox1-6">Periwinkle</div>
 </div>
 ```
 
@@ -168,12 +174,12 @@ slug: Web/Accessibility/ARIA/Roles/listbox_role
 ```html
 <label for="listbox1">Select a color:</label>
 <select id="listbox1">
-   <option selected>Green</option>
-   <option>Orange</option>
-   <option>Red</option>
-   <option>Blue</option>
-   <option>Violet</option>
-   <option>Periwinkle</option>
+  <option selected>Green</option>
+  <option>Orange</option>
+  <option>Red</option>
+  <option>Blue</option>
+  <option>Violet</option>
+  <option>Periwinkle</option>
 </select>
 ```
 
@@ -211,4 +217,4 @@ TBD
 - [ARIA Best Practices – Listbox](https://www.w3.org/TR/wai-aria-practices/#Listbox)
 - [ARIA Role Model – Listbox](https://www.w3.org/TR/wai-aria-1.1/#listbox)
 
-<section id="Quick_links"><ol><li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>
+<section id="Quick_links"><ol><li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility/ARIA/Roles")}}</li></ol></section>

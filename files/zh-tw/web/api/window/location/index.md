@@ -72,7 +72,7 @@ results in:
 
 Whenever a property of the location object is modified, a document will be loaded using the URL as if `window.location.assign()` had been called with the modified URL.
 
-#### Replace the current document with the one at the given URL:
+#### Replace the current document with the one at the given URL
 
 ```js
 function goMoz() {
@@ -93,7 +93,7 @@ function reloadPageWithHash() {
 }
 ```
 
-#### Display the properties of the current URL in an alert dialog:
+#### Display the properties of the current URL in an alert dialog
 
 ```js
 function showLoc() {
@@ -117,7 +117,7 @@ function showLoc() {
 // in html: <button onclick="showLoc();">Show location properties</button>
 ```
 
-#### Send a string of data to the server by modifying the `search` property:
+#### Send a string of data to the server by modifying the `search` property
 
 ```js
 function sendData(sData) {
@@ -129,7 +129,7 @@ function sendData(sData) {
 
 The current URL with "?Some%20data" appended is sent to the server (if no action is taken by the server, the current document is reloaded with the modified search string).
 
-#### Get the value of a single `window.location.search` key:
+#### Get the value of a single `window.location.search` key
 
 ```js
 function loadPageVar(sVar) {
@@ -149,7 +149,7 @@ function loadPageVar(sVar) {
 alert(loadPageVar("name"));
 ```
 
-#### Nestle the variables obtained through the `window.location.search` string in an object named `oGetVars`:
+#### Nestle the variables obtained through the `window.location.search` string in an object named `oGetVars`
 
 ```js
 var oGetVars = {};
@@ -190,7 +190,7 @@ var oGetVars = new (function (sSearch) {
 // alert(oGetVars.yourVar);
 ```
 
-#### Nestle the variables obtained through the `window.location.search` string in an object named `oGetVars`, also attempting to recognize their [`typeof`](/zh-TW/JavaScript/Reference/Operators/typeof):
+#### Nestle the variables obtained through the `window.location.search` string in an object named `oGetVars`, also attempting to recognize their `typeof`
 
 ```js
 var oGetVars = {};
@@ -265,7 +265,7 @@ var oGetVars = new (function (sSearch) {
 // alert(oGetVars.yourVar);
 ```
 
-#### Using bookmars without changing the `window.location.hash` property:
+#### Using bookmars without changing the `window.location.hash` property
 
 ```html
 <!doctype html>

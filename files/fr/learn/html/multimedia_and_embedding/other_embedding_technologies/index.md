@@ -263,7 +263,7 @@ Si le contenu est sous licence, vous devez en respecter les termes. Par exemple,
 
 L'utilisation de HTTPS nécessite un certificat de sécurité, ce qui peut être coûteux (bien que [Let's Encrypt](https://letsencrypt.org/) facilite les choses) — si vous ne pouvez pas en obtenir un, vous pouvez charger votre document parent sur le serveur en HTTP. Cependant, en raison de la deuxième fonctionnalité de HTTPS indiquée ci-dessus, _et dans ce cas les histoires de coût n'interviennent plus, vous ne devez jamais intégrer du contenu tierce partie avec HTTP_ (dans le meilleur des cas, le navigateur Web de votre utilisateur lui affichera un avertissement effrayant). Toutes les sociétés sérieuses, rendant leur contenu disponible pour une intégration via un `<iframe>`, le rendront disponible avec HTTPS — regardez les URLs à l'intérieur de l'attribut `src` de `<iframe>` lorsque vous intégrez du contenu Google Maps ou YouTube, par exemple.
 
-> **Note :** [Github pages](/fr/docs/Learn/Common_questions/Using_Github_pages) allows content to be served via HTTPS by default, so is useful for hosting content. If you are using different hosting and are not sure, ask your hosting provider about it.
+> **Note :** [Github pages](/fr/docs/Learn/Common_questions/Using_Github_pages) permet au contenu d'être servi via HTTPS par défaut, ce qui est utile pour l'hébergement de contenu. Si vous utilisez un autre type d'hébergement et que vous n'êtes pas sûr, demandez à votre hébergeur ce qu'il en est.
 
 #### Toujours utiliser l'attribut `sandbox`
 

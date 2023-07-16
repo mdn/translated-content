@@ -21,7 +21,7 @@ Les types de sélecteurs de la liste suivante sont présentés dans l'ordre de s
 2. [Sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors) (ex. `.exemple`), sélecteurs d'attributs (ex. `[type="radio"]`) et pseudo-classes (ex. `:hover`).
 3. [Sélecteurs d'identifiant](/fr/docs/Web/CSS/ID_selectors) (ex. `#exemple`).
 
-Sélecteur universel ({{CSSxRef("Universal_selectors", "*")}}), combinateurs ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/fr/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) et pseudo-classe de négation ({{CSSxRef(":not", ":not()")}}) n'ont aucun effet sur la spécificité (cependant, les sélecteurs déclarés _à l’intérieur de_ `:not()` ont un effet).
+Sélecteur universel ({{CSSxRef("Universal_selectors", "*")}}), combinateurs ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, [" "](/fr/docs/Web/CSS/Descendant_combinator), {{CSSxRef("Column_combinator", "||")}}) et pseudo-classe de négation ({{CSSxRef(":not", ":not()")}}) n'ont aucun effet sur la spécificité (cependant, les sélecteurs déclarés _à l'intérieur de_ `:not()` ont un effet).
 
 Pour davantage d'informations, veuillez visiter&nbsp;: ["Spécificité" dans "Cascade et héritage"](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#spécificité_2), vous pouvez également visiter&nbsp;: <https://specifishity.com>
 
@@ -243,7 +243,7 @@ Les styles CSS suivants&hellip;
 
 {{EmbedLiveSample("spécificité_liée_à_la_forme")}}
 
-Cela est dû au fait qu’il corresponde au même élément mais que le sélecteur d’identifiant a une spécificité plus haute.
+Cela est dû au fait qu'il corresponde au même élément mais que le sélecteur d'identifiant a une spécificité plus haute.
 
 ### Ignorance de la proximité dans l'arborescence
 
