@@ -97,11 +97,11 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.font")}}
   - : 字体设置。默认值 `10px sans-serif`。
 - {{domxref("CanvasRenderingContext2D.textAlign")}}
-  - : 文本对齐设置。允许的值：`start`（默认），`end`，`left`，`right` 或 `center`。
+  - : 文本对齐设置。允许的值：`start`（默认）、`end`、`left`、`right` 或 `center`。
 - {{domxref("CanvasRenderingContext2D.textBaseline")}}
-  - : 基线对齐设置。允许的值：`top`，`hanging`，`middle`，`alphabetic`（默认），`ideographic`，`bottom`。
+  - : 基线对齐设置。允许的值：`top`、`hanging`、`middle`、`alphabetic`（默认）、`ideographic`、`bottom`。
 - {{domxref("CanvasRenderingContext2D.direction")}}
-  - : 文本的方向。允许的值：`ltr`，`rtl`，`inherit`（默认）。
+  - : 文本的方向。允许的值：`ltr`、`rtl`、`inherit`（默认）。
 
 ## 填充和描边样式
 
@@ -143,7 +143,7 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.moveTo()")}}
   - : 将一个新的子路径的起始点移动到 (x，y) 坐标。
 - {{domxref("CanvasRenderingContext2D.lineTo()")}}
-  - : 使用直线连接子路径的最后的点到 x,y 坐标。
+  - : 使用直线连接子路径的最后的点到 (x，y) 坐标。
 - {{domxref("CanvasRenderingContext2D.bezierCurveTo()")}}
   - : 添加一个 3 次贝赛尔曲线路径。该方法需要三个点。第一、第二个点是控制点，第三个点是结束点。起始点是当前路径的最后一个点，绘制贝赛尔曲线前，可以通过调用 `moveTo()` 进行修改。
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo()")}}
@@ -228,7 +228,7 @@ ctx.stroke();
 - {{domxref("CanvasRenderingContext2D.restore()")}}
   - : 恢复到最近的绘制样式状态，此状态是通过 **save()** 保存到“状态栈”中最新的元素。
 - {{domxref("CanvasRenderingContext2D.canvas")}}
-  - : 对 {{domxref("HTMLCanvasElement")}} 只读的反向引用。如果和 {{HTMLElement("canvas")}} 元素没有联系，可能为{{jsxref("null")}}。
+  - : 对 {{domxref("HTMLCanvasElement")}} 只读的反向引用。如果和 {{HTMLElement("canvas")}} 元素没有联系，可能为 {{jsxref("null")}}。
 
 ## 点击区域
 
@@ -246,7 +246,7 @@ ctx.stroke();
 很多 API [不赞成使用并且将来会被删除](https://code.google.com/p/chromium/issues/detail?id=363198)。
 
 - {{non-standard_inline}} `CanvasRenderingContext2D.clearShadow()`
-  - : 删除所有的阴影设置，例如 {{domxref("CanvasRenderingContext2D.shadowColor")}} 和{{domxref("CanvasRenderingContext2D.shadowBlur")}}。
+  - : 删除所有的阴影设置，例如 {{domxref("CanvasRenderingContext2D.shadowColor")}} 和 {{domxref("CanvasRenderingContext2D.shadowBlur")}}。
 - {{non-standard_inline}} `CanvasRenderingContext2D.drawImageFromRect()`
   - : 这是一个和 `drawImage` 相等的多余的方法。
 - {{non-standard_inline}} `CanvasRenderingContext2D.setAlpha()`
@@ -293,7 +293,7 @@ ctx.stroke();
 ### Gecko 特有的
 
 - {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.filter")}}
-  - : CSS 和 SVG 滤镜 作为 Canvas API。可能在新版本的规范中会标准化。
+  - : CSS 和 SVG 滤镜作为 Canvas API。可能在新版本的规范中会标准化。
 
 #### 有前缀的 APIs
 
