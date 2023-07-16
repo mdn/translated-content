@@ -195,6 +195,6 @@ l10n:
 - `<ul>` 要素の整形に有益な CSS プロパティ:
 
   - {{CSSxRef("list-style")}} プロパティ: 行頭記号の表示方法の変更
-  - [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters): 複雑に入れ子になったリストの扱い
+  - [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters): 複雑に入れ子になったリストの扱い
   - {{CSSxRef("line-height")}} プロパティ: 非推奨の [`compact`](#compact) 属性のシミュレート
   - {{CSSxRef("margin")}} プロパティ: リストのインデントの制御
