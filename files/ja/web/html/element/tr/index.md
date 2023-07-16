@@ -567,7 +567,7 @@ tbody > tr > td:last-of-type {
 
 ## ブラウザーの互換性
 
-{{Compat("html.elements.tr")}}
+{{Compat}}
 
 ## 関連情報
 
