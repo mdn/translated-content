@@ -34,7 +34,7 @@ Referer: <url>
 ## 示例
 
 ```plain
-Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Referer: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript
 ```
 
 ## 规范

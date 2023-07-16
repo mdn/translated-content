@@ -27,7 +27,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 
     <!--
       Include a third-party script.
-      See also https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity.
+      See also https://developer.mozilla.org/zh-CN/docs/Web/Security/Subresource_Integrity.
     -->
     <script
       src="https://code.jquery.com/jquery-2.2.4.js"

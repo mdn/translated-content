@@ -24,7 +24,7 @@ location = newLocation;
 
 ```js
 alert(location);
-// 弹出 "https://developer.mozilla.org/en-US/docs/Web/API/window.location"
+// 弹出 "https://developer.mozilla.org/zh-CN/docs/Web/API/window.location"
 ```
 
 ### 例子#1：导航到一个新页面

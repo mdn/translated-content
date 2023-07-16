@@ -57,7 +57,7 @@ slug: Learn/CSS/CSS_layout/Normal_Flow
 
 <p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements will <span>wrap onto a new line if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will do: <img src="/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow/long.jpg" alt="snippet of cloth" /></p>
+<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements will <span>wrap onto a new line if possible (like this one containing text)</span>, or just go on to a new line if not, much like this image will do: <img src="/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow/long.jpg" alt="snippet of cloth" /></p>
 ```
 
 ```css
