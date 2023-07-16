@@ -161,4 +161,4 @@ N'hésitez pas à faire des essais avec le code, à améliorer votre application
 
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/Progressive_web_apps/")}}

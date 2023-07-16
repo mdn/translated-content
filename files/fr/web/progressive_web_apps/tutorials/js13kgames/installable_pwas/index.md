@@ -114,4 +114,4 @@ Maintenant voyons la dernière pièce du puzzle PWA puzzle — ré-engagement vi
 
 {{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/Progressive_web_apps/")}}
