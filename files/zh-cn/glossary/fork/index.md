@@ -19,7 +19,7 @@ Fork 在自由和开源软件的开发中很常见。因为使用 Git 或 Github
 
 - 基本知识
 
-  - [Fork](https://zh.wikipedia.org/wiki/Fork_(software_development)) on Wikipedia
+  - [Fork](<https://zh.wikipedia.org/wiki/Fork_(software_development)>) on Wikipedia
   - [How to fork a GitHub repo](https://help.github.com/articles/fork-a-repo/) (fork as in a Git context)
 
 - [MDN 术语表](/zh-CN/docs/Glossary)
