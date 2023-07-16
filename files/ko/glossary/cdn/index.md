@@ -1,6 +1,8 @@
 ---
 title: CDN
 slug: Glossary/CDN
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 CDN (Content Delivery Network)는 많은 장소에 걸쳐 분산된 서버들의 그룹입니다. 이러한 서버들은 데이터의 중복 복사본들을 저장하여, 서버가 최종 사용자와 가장 가까운 서버를 기준으로 데이터 요청을 처리할 수 있습니다. CDN은 높은 트래픽에도 영향을 덜 받는 빠른 서비스를 제공할 수 있습니다.
