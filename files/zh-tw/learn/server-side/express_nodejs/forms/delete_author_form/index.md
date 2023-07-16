@@ -5,7 +5,7 @@ slug: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 
 此子文檔展示，如何定義頁面以刪除 `Author`對象。
 
-正如[表單設計](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms#form_design)部分所討論的那樣，我們的策略是，只允許刪除“未被其他對象引用” 的對象（在這種情況下，這意味著如果作者`Author`被一本書`Book`引用，我們將不允許刪除作者）。在實現方面，這意味著，表單需要在刪除作者之前，先確認沒有關聯的書籍。如果存在關聯的書籍，則應顯示它們，並說明在刪除`Author`對象之前，必須刪除它們。
+正如[表單設計](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms#form_design)部分所討論的那樣，我們的策略是，只允許刪除「未被其他對象引用」 的對象（在這種情況下，這意味著如果作者`Author`被一本書`Book`引用，我們將不允許刪除作者）。在實現方面，這意味著，表單需要在刪除作者之前，先確認沒有關聯的書籍。如果存在關聯的書籍，則應顯示它們，並說明在刪除`Author`對象之前，必須刪除它們。
 
 ## Controller—get route
 

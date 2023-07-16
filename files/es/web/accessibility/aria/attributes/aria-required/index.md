@@ -27,16 +27,16 @@ Nota que este atributo no cambiará automáticamente la presentación del campo.
 #### Ejemplo 1: Un formulario sencillo
 
 ```html
- <form action="post">
-     <label for="firstName">First name:</label>
-     <input id="firstName" type="text" aria-required="true" />
-     <br/>
-     <label for="lastName">Last name:</label>
-     <input id="lastName" type="text" aria-required="true" />
-     <br/>
-     <label for="streetAddress">Street address:</label>
-     <input id="streetAddress" type="text" />
- </form>
+<form action="post">
+  <label for="firstName">First name:</label>
+  <input id="firstName" type="text" aria-required="true" />
+  <br />
+  <label for="lastName">Last name:</label>
+  <input id="lastName" type="text" aria-required="true" />
+  <br />
+  <label for="streetAddress">Street address:</label>
+  <input id="streetAddress" type="text" />
+</form>
 ```
 
 ### Notas

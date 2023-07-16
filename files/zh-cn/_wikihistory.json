@@ -5608,10 +5608,6 @@
     "modified": "2019-03-18T21:37:27.573Z",
     "contributors": ["wbamberg", "greatbug", "Pada"]
   },
-  "Mozilla/Firefox/Releases/12": {
-    "modified": "2019-03-18T21:09:06.420Z",
-    "contributors": ["fscholz", "wbamberg", "Ende93", "ethertank", "ziyunfei"]
-  },
   "Mozilla/Firefox/Releases/14": {
     "modified": "2019-03-23T23:39:39.174Z",
     "contributors": ["wbamberg", "Ende93", "ethertank", "ziyunfei"]
@@ -21478,10 +21474,6 @@
     "modified": "2019-01-16T21:33:33.048Z",
     "contributors": ["Sheppy"]
   },
-  "Web/EXSLT/regexp/match": {
-    "modified": "2019-03-23T22:46:14.875Z",
-    "contributors": ["thanos"]
-  },
   "Web/Events": {
     "modified": "2020-08-14T06:47:09.660Z",
     "contributors": [
@@ -32140,10 +32132,6 @@
   "Web/Performance/Optimizing_startup_performance": {
     "modified": "2019-03-23T22:00:17.334Z",
     "contributors": ["chrisdavidmills", "codeofjackie"]
-  },
-  "Web/Performance/Rum-vs-Synthetic": {
-    "modified": "2020-10-13T09:51:23.567Z",
-    "contributors": ["xgqfrms"]
   },
   "Web/Performance/dns-prefetch": {
     "modified": "2020-10-13T10:51:56.349Z",

@@ -43,13 +43,13 @@ Après l'article précédent, il peut être difficile de créer des contrôles U
 
 ## Qu'est WAI-ARIA?
 
-Commençons par regarder ce que WAI-ARIA est , et ce qu’il peut faire pour nous.
+Commençons par regarder ce que WAI-ARIA est , et ce qu'il peut faire pour nous.
 
 ### Un nouvel ensemble de problèmes
 
 Car les applications web ont commencé à devenir plus complexes et dynamiques, un nouvel ensemble de fonctionnalités d'accessibilité et de problèmes ont commencé à apparaître.
 
-Par exemple, HTML5 a introduit un certain nombre d’éléments sémantiques pour définir des fonctionnalités de page communes ({{htmlelement("nav")}}, {{htmlelement("footer")}}, etc.) Avant de les utiliser, les développeurs utilisaient simplement {{htmlelement("div")}} s avec des identifiants ou des classes, par exemple `<div class="nav">` , mais ils posaient problème, car il n’existait pas de moyen facile de trouver facilement une fonctionnalité de page spécifique telle que la navigation principale par programmation. .
+Par exemple, HTML5 a introduit un certain nombre d'éléments sémantiques pour définir des fonctionnalités de page communes ({{htmlelement("nav")}}, {{htmlelement("footer")}}, etc.) Avant de les utiliser, les développeurs utilisaient simplement {{htmlelement("div")}} s avec des identifiants ou des classes, par exemple `<div class="nav">` , mais ils posaient problème, car il n'existait pas de moyen facile de trouver facilement une fonctionnalité de page spécifique telle que la navigation principale par programmation. .
 
 La solution initiale consistait à ajouter un ou plusieurs liens cachés en haut de la page pour créer un lien vers la navigation (ou autre), par exemple:
 
@@ -57,7 +57,7 @@ La solution initiale consistait à ajouter un ou plusieurs liens cachés en haut
 <a href="#hidden" class="hidden">Passer à la navigation</a>
 ```
 
-Mais ceci n’est pas encore très précis et ne peut être utilisé que lorsque le lecteur d’écran lit en haut de la page.
+Mais ceci n'est pas encore très précis et ne peut être utilisé que lorsque le lecteur d'écran lit en haut de la page.
 
 Autre exemple, les applications ont commencé à comporter des commandes complexes telles que des sélecteurs de date pour choisir les dates, des curseurs pour choisir des valeurs, etc. HTML5 fournit des types spéciaux input pour rendre de tels contrôles:
 
@@ -68,14 +68,14 @@ Autre exemple, les applications ont commencé à comporter des commandes complex
 
 Celles-ci ne sont pas bien prises en charge sur tous les navigateurs et il est également très difficile de les nommer, ce qui les rend peu utiles pour l'intégration aux conceptions de sites Web. En conséquence, les développeurs font souvent appel à des bibliothèques JavaScript qui génèrent des contrôles tels qu'une série d'éléments {{htmlelement("div")}} s imbriqués ou d'éléments de table avec des noms de classe, qui sont ensuite stylés à l'aide de CSS et contrôlés à l'aide de JavaScript.
 
-Le problème ici est que, visuellement, ils fonctionnent, mais que les lecteurs d’écran ne peuvent pas comprendre ce qu’ils sont, et on dit aux utilisateurs qu’ils peuvent voir une multitude d’éléments sans sémantique pour décrire ce qu’ils veulent dire.
+Le problème ici est que, visuellement, ils fonctionnent, mais que les lecteurs d'écran ne peuvent pas comprendre ce qu'ils sont, et on dit aux utilisateurs qu'ils peuvent voir une multitude d'éléments sans sémantique pour décrire ce qu'ils veulent dire.
 
 ### Entrez WAI-ARIA
 
 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) est une spécification écrite par le W3C et définissant un ensemble d'attributs HTML supplémentaires pouvant être appliqués aux éléments pour fournir une sémantique supplémentaire et améliorer l'accessibilité en cas de manque. Trois caractéristiques principales sont définies dans la spécification:
 
 - **Rôles** - Ceux-ci définissent ce qu'un élément est ou fait. Bon nombre de ces rôles sont des rôles de référence, qui dupliquent en grande partie la valeur sémantique des éléments structurels HTML5, par exemple role = "navigation" ({{htmlelement("nav")}}) ou `role="complementary"` ({{htmlelement("aside")}}) , mais il en existe d'autres qui décrivent différentes structures de pages, telles que `role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"`, etc., que l'on trouve couramment dans les UIs.
-- **Propriétés** — Ceux-ci définissent les propriétés des éléments, qui peuvent être utilisés pour leur donner une signification supplémentaire ou une sémantique. Par exemple, `aria-required="true"` spécifie qu'une entrée de formulaire doit être renseignée pour être valide, alors que `aria-labelledby="label"` vous permet de mettre un ID sur un élément, puis de le référencer en tant qu'étiquette pour tout autre élément de la page, y compris plusieurs éléments, ce qui n'est pas possible avec `<label for="input">`. À titre d'exemple, vous pouvez utiliser `aria-labelledby`  pour spécifier qu'une description de clé contenue dans un {{htmlelement("div")}} est le label de plusieurs cellules de tableau, ou vous pouvez l’utiliser comme alternative au texte alternatif d’image — spécifiez les informations existantes sur la page en tant que texte alternatif d’image, plutôt que de devoir les répéter à l'intérieur de l'attribut `alt`. Vous pouvez voir un exemple de celà à [Alternatives textuelles](/fr/docs/Apprendre/a11y/HTML?document_saved=true#Alternatives_textuelles).
+- **Propriétés** — Ceux-ci définissent les propriétés des éléments, qui peuvent être utilisés pour leur donner une signification supplémentaire ou une sémantique. Par exemple, `aria-required="true"` spécifie qu'une entrée de formulaire doit être renseignée pour être valide, alors que `aria-labelledby="label"` vous permet de mettre un ID sur un élément, puis de le référencer en tant qu'étiquette pour tout autre élément de la page, y compris plusieurs éléments, ce qui n'est pas possible avec `<label for="input">`. À titre d'exemple, vous pouvez utiliser `aria-labelledby`  pour spécifier qu'une description de clé contenue dans un {{htmlelement("div")}} est le label de plusieurs cellules de tableau, ou vous pouvez l'utiliser comme alternative au texte alternatif d'image — spécifiez les informations existantes sur la page en tant que texte alternatif d'image, plutôt que de devoir les répéter à l'intérieur de l'attribut `alt`. Vous pouvez voir un exemple de celà à [Alternatives textuelles](/fr/docs/Apprendre/a11y/HTML?document_saved=true#Alternatives_textuelles).
 - **États** — Propriétés spéciales qui définissent les conditions actuelles des éléments, telles que `aria-disabled="true"`, qui spécifient à un lecteur d'écran que l'entrée de formulaire est actuellement désactivée. Les états diffèrent des propriétés en ce que les propriétés ne changent pas tout au long du cycle de vie d'une application, alors que les états peuvent changer, généralement par programmation via JavaScript.
 
 Un point important sur les attributs WAI-ARIA est qu'ils n'affectent en rien la page Web, à l'exception des informations exposées par les API d'accessibilité du navigateur (où les lecteurs d'écran obtiennent leurs informations). WAI-ARIA n'affecte pas la structure de la page Web, le DOM, etc., bien que les attributs puissent être utiles pour sélectionner des éléments par CSS.
@@ -86,14 +86,14 @@ Un point important sur les attributs WAI-ARIA est qu'ils n'affectent en rien la 
 
 ### Où WAI-ARIA est supporté?
 
-Ce n’est pas une question simple. Il est difficile de trouver une ressource concluante qui explicite quelles fonctionnalités de WAI-ARIA sont supportées où, parce que:
+Ce n'est pas une question simple. Il est difficile de trouver une ressource concluante qui explicite quelles fonctionnalités de WAI-ARIA sont supportées où, parce que:
 
 1. Il y a beaucoup de fonctionnalités dans la spécification WAI-ARIA
-2. Il y a beaucoup de combinaisons de systèmes d’exploitation, navigateurs et lecteurs d’écrans à considérer
+2. Il y a beaucoup de combinaisons de systèmes d'exploitation, navigateurs et lecteurs d'écrans à considérer
 
-Ce dernier point est la clé: pour utiliser un lecteur d’écran, votre système d’exploitation a besoin d’un navigateur ayant les APIs d’accessibilité nécessaires, de manière à présenter l’information dont les lecteurs d’écran ont besoin pour faire leur travail. Les systèmes d’exploitation les plus populaires ont un à deux navigateurs avec les quels les lecteurs d’écrans peuvent travailler. Le Paciello Group a un article plutôt à jour fournissant des informations pour ceci — voir [Rough Guide: browsers, operating systems and screen reader support updated](https://www.paciellogroup.com/blog/2014/10/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/).
+Ce dernier point est la clé: pour utiliser un lecteur d'écran, votre système d'exploitation a besoin d'un navigateur ayant les APIs d'accessibilité nécessaires, de manière à présenter l'information dont les lecteurs d'écran ont besoin pour faire leur travail. Les systèmes d'exploitation les plus populaires ont un à deux navigateurs avec les quels les lecteurs d'écrans peuvent travailler. Le Paciello Group a un article plutôt à jour fournissant des informations pour ceci — voir [Rough Guide: browsers, operating systems and screen reader support updated](https://www.paciellogroup.com/blog/2014/10/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/).
 
-Ensuite, vous devez vous demander si les navigateurs en question supportent les fonctionnalités ARIA et les présenter via leurs APIs, mais aussi du fait que les lecteurs d’écrans reconnaissent ou non cette information et la présentent à leurs utilisateurs d’une manière utile.
+Ensuite, vous devez vous demander si les navigateurs en question supportent les fonctionnalités ARIA et les présenter via leurs APIs, mais aussi du fait que les lecteurs d'écrans reconnaissent ou non cette information et la présentent à leurs utilisateurs d'une manière utile.
 
 1. Browser support is generally quite good — at the time of writing, [caniuse.com](http://caniuse.com/#feat=wai-aria) stated that global browser support for WAI-ARIA was around 88%.
 2. Screenreader support for ARIA features isn't quite at this level, but the most popular screenreaders are getting there. You can get an idea of support levels by looking at Powermapper's [WAI-ARIA Screen reader compatibility](http://www.powermapper.com/tests/screen-readers/aria/) article.

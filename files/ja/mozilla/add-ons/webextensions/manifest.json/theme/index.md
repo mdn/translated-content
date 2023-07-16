@@ -1407,7 +1407,7 @@ In this screenshot, `"toolbar_vertical_separator"` is the white vertical line in
 
 | Firefox property                              | Chrome property                                                                                                                  |
 | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `images/headerURL`                            | `images/theme_frame`In Chrome, the image is anchored to the top left of the header and tiled if it doesn’t fill the header area. |
+| `images/headerURL`                            | `images/theme_frame`In Chrome, the image is anchored to the top left of the header and tiled if it doesn't fill the header area. |
 | `images/additional_backgrounds`               | Not supported                                                                                                                    |
 | `colors/accentcolor`                          | `colors/frame`                                                                                                                   |
 | `colors/textcolor`                            | Incorrectly implemented as `colors/tab_text` from Firefox 55 to 58, fixed as `colors/tab_background_text` from Firefox 59 onward |

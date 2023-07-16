@@ -976,7 +976,7 @@ textarea.onkeyup = function () {
 
 {{ EmbedLiveSample("Active learning: Let's be important", 700, 500) }}
 
-### Italic, bold, underline...
+### Italic, bold, underline
 
 The elements we've discussed so far have clearcut associated semantics. The situation with {{htmlelement("b")}}, {{htmlelement("i")}}, and {{htmlelement("u")}} is somewhat more complicated. They came about so people could write bold, italics, or underlined text in an era when CSS was still supported poorly or not at all. Elements like this, which only affect presentation and not semantics, are known as **presentational elements** and should no longer be used, because as we've seen before, semantics is so important to accessibility, SEO, etc.
 

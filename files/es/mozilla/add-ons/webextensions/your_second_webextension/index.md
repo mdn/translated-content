@@ -103,7 +103,7 @@ Nota que todas las rutas dadas son relativas a manifest.json.
 
 La extensión debería tener un íncono. Éste, será mostrado junto a la lista de complementos en el Administrador de Complementos (Pude abrirlo introduciendo en la URL "about:addons"). El manifest.json promete que se posee un ícono para la barra de herramientas en "icons/beasts-48.png".
 
-Cree el directorio "icons" y guarde un ícono ahí y nómbrelo como "beasts-48.png". Puede utilizar [uno de nuestro ejemplo](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png), el cual ha sido tomado del [conjuto de íconos Aha-Soft’s Free Retina](https://www.iconfinder.com/iconsets/free-retina-icon-set), que es utilizado bajo el término de su propia [licencia](http://www.aha-soft.com/free-icons/free-retina-icon-set/).
+Cree el directorio "icons" y guarde un ícono ahí y nómbrelo como "beasts-48.png". Puede utilizar [uno de nuestro ejemplo](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-48.png), el cual ha sido tomado del [conjuto de íconos Aha-Soft's Free Retina](https://www.iconfinder.com/iconsets/free-retina-icon-set), que es utilizado bajo el término de su propia [licencia](http://www.aha-soft.com/free-icons/free-retina-icon-set/).
 
 Si elige proporcionar su propio ícono, debería ser de 48x48 pixeles. También puede proporcionar un ícono de 96x96 pixeles, para pantallas de altas resoluciones y, si usted hace esto, deberá especificarlo como la propiedad `96` del objeto `icons` en el manifest.json:
 

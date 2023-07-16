@@ -9,7 +9,7 @@ slug: Glossary/First_contentful_paint
 
 首次內容繪製時間戳記是當瀏覽器第一次渲染任何文字、圖片（包含背景圖片），以及非空白的 canvas 標籤或 SVG 向量圖片。排除任何 iframe 裡的內容，但包含等待中的網路字體 (webfonts)。意即使用者第一次開始使用頁面內容。
 
-## 也可以看看:
+## 也可以看看
 
 - [First Meaningful Paint](/zh-TW/docs/Glossary/first_meaningful_paint)
 - [Paint Timing specification](https://w3c.github.io/paint-timing/#first-contentful-paint)

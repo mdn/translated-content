@@ -18,7 +18,7 @@ slug: Glossary/Prefetch
 浏览器会查找关系类型 (rel) 为 next 或 prefetch 的 HTML{{ HTMLElement("link") }} 或 [HTTP `Link:` header](/zh-CN/docs/Web/HTTP/Headers)。下面是一个使用 link 标签的例子：
 
 ```html
-<link rel="prefetch" href="/images/big.jpeg">
+<link rel="prefetch" href="/images/big.jpeg" />
 ```
 
 同样效果的使用 HTTP `Link:` header 的例子：

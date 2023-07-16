@@ -22,11 +22,11 @@ CSS 가 무엇인지, 그리고 CSS 의 기본 사용법에 대해 여러분은 
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습) 및
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
+        <a href="/ko/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
           >CSS 작동 방식</a
         >
         이해
@@ -251,7 +251,7 @@ p {
 
 가장 기본적인 수준에서, CSS 는 두 가지 요소로 구성됩니다:
 
-- **속성 (Properties)**: 변경할 스타일 기능 (예: [`font-size`](/en-US/docs/Web/CSS/font-size), [`width`](/en-US/docs/Web/CSS/width), [`background-color`](/en-US/docs/Web/CSS/background-color)) 을 나타내는 식별자입니다.
+- **속성 (Properties)**: 변경할 스타일 기능 (예: [`font-size`](/ko/docs/Web/CSS/font-size), [`width`](/ko/docs/Web/CSS/width), [`background-color`](/ko/docs/Web/CSS/background-color)) 을 나타내는 식별자입니다.
 - **값 (Values)**: 지정된 각 속성에는 값이 지정되어 있으며, 이는 해당 스타일 기능을 변경하는 방법 (예: 글꼴, 너비 또는 배경색을 변경하려는 항목) 을 나타냅니다.
 
 아래 이미지는 단일 속성과 값을 강조 표시합니다. 속성 이름은 `color` 이고 값은 `blue` 입니다.
@@ -335,7 +335,7 @@ CSS 속성을 특정 값으로 설정하는 것은 CSS 언어의 핵심 기능�
 
 ## @rules
 
-아직, 우리는 [`@rules`](/en-US/docs/Web/CSS/At-rule) ("at-rules" 로 발음) 가 발생하지 않았습니다. 이것들은 CSS 에 행동 방법에 대한 지침을 제공하는 특수 규칙입니다. 일부 `@rules` 는 규칙 이름과 값으로 단순합니다. 예를 들어, 추가 스타일 시트를 기본 CSS 스타일 시트로 가져오려면 `@import` 를 사용할 수 있습니다:
+아직, 우리는 [`@rules`](/ko/docs/Web/CSS/At-rule) ("at-rules" 로 발음) 가 발생하지 않았습니다. 이것들은 CSS 에 행동 방법에 대한 지침을 제공하는 특수 규칙입니다. 일부 `@rules` 는 규칙 이름과 값으로 단순합니다. 예를 들어, 추가 스타일 시트를 기본 CSS 스타일 시트로 가져오려면 `@import` 를 사용할 수 있습니다:
 
 ```css
 @import 'styles2.css';

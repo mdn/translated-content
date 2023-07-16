@@ -635,7 +635,7 @@ guessField.focus();
 
     Каждый элемент на странице имеет свойство `style`, которое само по себе содержит объект, свойства которого содержат все встроенные стили CSS, применяемые к этому элементу. Это позволяет нам динамически задавать новые стили CSS для элементов с помощью JavaScript.
 
-## Теперь можно отдохнуть...
+## Теперь можно отдохнуть
 
 Итак, на этом пример закончился - отлично, вы добрались до конца! Попробуйте свой финальный код или [поиграйте с нашей готовой версией здесь](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Если вы не можете запустить этот пример, сверьтесь с [исходным кодом.](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)
 

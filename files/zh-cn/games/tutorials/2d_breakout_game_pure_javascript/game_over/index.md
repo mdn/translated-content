@@ -16,12 +16,12 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 让我们在代码中实现，下面是第三章里的一段代码，让球从墙上反弹：
 
 ```js
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+  dx = -dx;
 }
 
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-    dy = -dy;
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+  dy = -dy;
 }
 ```
 
@@ -42,11 +42,11 @@ var interval = setInterval(draw, 10);
 然后将第二个 if 块替换为以下内容：
 
 ```js
-if(y + dy < ballRadius) {
-    dy = -dy;
-} else if(y + dy > canvas.height-ballRadius) {
-    alert("GAME OVER");
-    document.location.reload();
+if (y + dy < ballRadius) {
+  dy = -dy;
+} else if (y + dy > canvas.height - ballRadius) {
+  alert("GAME OVER");
+  document.location.reload();
 }
 ```
 
@@ -55,16 +55,15 @@ if(y + dy < ballRadius) {
 本课中最后要做的是在球和球拍之间创建一些碰撞检测，以便它可以反弹并返回到游戏区域。最简单的方法是检查球的中心是否在球拍的左边和右边之间。再次更新您修改的代码的最后一位（第二个 if 块），如下所示：
 
 ```js
-if(y + dy < ballRadius) {
+if (y + dy < ballRadius) {
+  dy = -dy;
+} else if (y + dy > canvas.height - ballRadius) {
+  if (x > paddleX && x < paddleX + paddleWidth) {
     dy = -dy;
-} else if(y + dy > canvas.height-ballRadius) {
-    if(x > paddleX && x < paddleX + paddleWidth) {
-        dy = -dy;
-    }
-    else {
-        alert("GAME OVER");
-        document.location.reload();
-    }
+  } else {
+    alert("GAME OVER");
+    document.location.reload();
+  }
 }
 ```
 
