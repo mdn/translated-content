@@ -48,12 +48,12 @@ var myWorker = new Worker("worker.js");
 {{domxref("Worker.postMessage", "postMessage()")}} 方法以及 {{domxref("Worker.onmessage", "onmessage")}} 事件處理器就是和 worker 發送訊息的關鍵 ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
 
 ```js
-first.onchange = function () {
+first.onmessage = function () {
   myWorker.postMessage([first.value, second.value]);
   console.log("Message posted to worker");
 };
 
-second.onchange = function () {
+second.onmessage = function () {
   myWorker.postMessage([first.value, second.value]);
   console.log("Message posted to worker");
 };

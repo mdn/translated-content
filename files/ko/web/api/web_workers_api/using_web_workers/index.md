@@ -51,12 +51,12 @@ var myWorker = new Worker("worker.js");
 The magic of workers happens via the {{domxref("Worker.postMessage", "postMessage()")}} method and the {{domxref("Worker.onmessage", "onmessage")}} event handler. When you want to send a message to the worker, you post messages to it like this ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
 
 ```js
-first.onchange = function() {
+first.onmessage = function() {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
 }
 
-second.onchange = function() {
+second.onmessage = function() {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
 }

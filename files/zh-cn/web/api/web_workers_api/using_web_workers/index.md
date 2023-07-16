@@ -52,12 +52,12 @@ const myWorker = new Worker('worker.js');
 你可以通过 {{domxref("Worker.postMessage", "postMessage()")}} 方法和 {{domxref("Worker.onmessage", "onmessage")}} 事件处理函数触发 worker 的方法。当你想要向一个 worker 发送消息时，你只需要这样做（[main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/worker.js)）：
 
 ```js
-first.onchange = () => {
+first.onmessage = () => {
   myWorker.postMessage([first.value, second.value]);
   console.log("Message posted to worker");
 };
 
-second.onchange = () => {
+second.onmessage = () => {
   myWorker.postMessage([first.value, second.value]);
   console.log("Message posted to worker");
 };

@@ -54,12 +54,12 @@ const myWorker = new Worker('worker.js');
 ワーカーのマジックは、{{domxref("Worker.postMessage", "postMessage()")}} メソッドと {{domxref("Worker.message_event", "onmessage")}} イベントハンドラーによって実現します。ワーカーにメッセージを送りたいときは、以下のようにしてメッセージを送信します ([main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js))。
 
 ```js
-first.onchange = () => {
+first.onmessage = () => {
   myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }
 
-second.onchange = () => {
+second.onmessage = () => {
   myWorker.postMessage([first.value, second.value]);
   console.log('Message posted to worker');
 }

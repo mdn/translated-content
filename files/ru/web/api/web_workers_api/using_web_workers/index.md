@@ -57,12 +57,12 @@ var myWorker = new Worker("worker.js");
 Магия worker-ов происходит через {{domxref("Worker.postMessage", "postMessage()")}} метод и обработчик событий {{domxref("Worker.onmessage", "onmessage")}}. Когда вы хотите отправить сообщение в worker, вы доставляете сообщение к нему вот так ([main.js](https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js)):
 
 ```js
-first.onchange = function() {
+first.onmessage = function() {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
 }
 
-second.onchange = function() {
+second.onmessage = function() {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
 }
