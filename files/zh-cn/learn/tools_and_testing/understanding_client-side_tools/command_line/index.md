@@ -291,10 +291,7 @@ curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location
 输出应该是这样的 (`curl` 首先会输出一些下载计数器之类的东西):
 
 ```bash
-location: /zh-CN/docs/Web/API/fetch
-location: /zh-CN/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
-location: /zh-CN/docs/Web/API/GlobalFetch/fetch
-location: /zh-CN/docs/Web/API/fetch
+location: /en-US/docs/Web/API/fetch
 ```
 
 尽管有些做作，我们可以把这个结果做得更深入一点，并变换 `location:` 行内容，将基本的起点添加到每个起点的开始，这样我们就可以打印出完整的 url。为此，我们将在混合中添加 awk(它是一种类似于 JavaScript、Ruby 或 Python 的编程语言，只是要老得多 !)
