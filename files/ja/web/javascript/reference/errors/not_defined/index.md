@@ -69,4 +69,4 @@ console.log(numbers()); // 5
 
 - [スコープ](/ja/docs/Glossary/Scope)
 - [変数の宣言 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#declaring_variables)
-- [関数のスコープ (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Functions#function_scope/en-us/docs/)
+- [関数のスコープ (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Functions#関数のスコープ)
