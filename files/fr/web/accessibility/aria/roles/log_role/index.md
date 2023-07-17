@@ -58,7 +58,7 @@ Cet extrait de code crée le journal dans une application de chat AJAX.
 
 Voir l'[exemple](http://codetalks.org/source/live/chat.html) sur CodeTalks pour plus d'informations.
 
-#### Exemples concrets&nbsp;:
+#### Exemples concrets
 
 - <http://test.cita.illinois.edu/aria/live/live1.php>&nbsp;;
 - <http://websiteaccessibility.donaldevans.com/2011/07/12/aria-log/>&nbsp;;

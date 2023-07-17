@@ -130,7 +130,7 @@ p.genial {
 
 Inclure un identifiant comme un sélecteur d'attribut au lieu d'un sélecteur d'identifiant (`#someElement`) lui donne la même spécificité qu'une classe. Les deux sélecteurs ci-dessus ont à présent la même importance. Lors d'une égalité de spécificité, la dernière règle définie est prise en compte.
 
-#### Pour davantage d'informations, visiter&nbsp;:
+#### Pour davantage d'informations, visiter
 
 - <https://stackoverflow.com/questions/3706819/what-are-the-implications-of-using-important-in-css>
 - <https://stackoverflow.com/questions/9245353/what-does-important-in-css-mean>

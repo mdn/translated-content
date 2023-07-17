@@ -14,7 +14,7 @@ C'est d'autant plus important pour les intranets et autres sites non-publics; s'
 
 ## JavaScript
 
-### Préfixez tous les accès à des variables globales dans les attributs `onfoo` par "`window`".
+### Préfixez tous les accès à des variables globales dans les attributs `onfoo` par "`window`"
 
 Quand un attribut de gestion d'évenement (`onclick`, `onmouseover`, etc) est utilisé sur un élément HTML, toutes les résolutions de variable dans l'attribut sont d'abord résolues sur l'élément lui-même, puis sur le formulaire contenant l'élément (si c'est un élément de formulaire), puis sur `document`, puis finalement sur `window` (là où se trouvent les variables globales que vous avez définies).Par exemple, si vous avez le balisage suivant :
 
@@ -38,11 +38,11 @@ Pour éviter ce problème, qualifiez complétement vos variables globales en uti
 <div onclick="window.nomLocal()">Cliquer ici devrait faire apparaitre un message.<div>
 ```
 
-### Ne concatenez pas les scripts dont vous n'avez pas le contrôle.
+### Ne concatenez pas les scripts dont vous n'avez pas le contrôle
 
 En ECMAScript, la directive "`use strict;`" s'applique sur la totalité du fichier. Ainsi, ajouter un script qui dépends d'un comportement non-strict à la suite d'un script en mode strict risque fortement de générer des erreurs.
 
-### Demandez aux auteurs des bibliothèques Javascript que vous utilisez de suivre ces recommandations.
+### Demandez aux auteurs des bibliothèques Javascript que vous utilisez de suivre ces recommandations
 
 Suggérez aux développeurs de vos bibliothèques favorites de suivre ces recommendations. S'ils ne le font pas, vous n'avez pas l'assurance que la bibliothèque continue de fonctionner dans le futur. Malheureusement, les bibliothèques suivent rarement ces conseils.
 
@@ -62,7 +62,7 @@ Ne cherchez donc pas à détecter une fonctionnalité ou un objet pour en dédui
 
 Ceci est une sous-catégorie très particulière de l'exemple précédent. Il ne faut pas penser qu'une certaine fonctionnalité (la présence ou non d'une certaine chaine de caractères dans l'agent utilisateur -UA-) implique la présence ou l'absence d'autres fonctionnalités.
 
-#### Si vous devez détecter l'agent utilisateur, alors ne détectez que pour les anciennes versions.
+#### Si vous devez détecter l'agent utilisateur, alors ne détectez que pour les anciennes versions
 
 Si vous devez **vraiment** détecter l'agent utilisateur, alors ne l'utilisez que pour cibler des versions déjà dépassées.
 Tout d'abord, prévoyez toujours un chemin dans votre code pour les navigateurs que vous ne connaissez pas, ainsi que pour les versions courantes et futures des navigateurs avec lesquels vous avez testé votre site. Ensuite si ce chemin par défaut ne fonctionne pas dans certaines anciennes versions de certains navigateurs et uniquement si l'erreur ne peut pas être détectée par l'absence de fonctionnalités utilisées par votre chemin par défaut, alors il est raisonnable d'ajouter des hacks qui ne ciblent que ces anciennes versions de certains navigateurs, en recourant à la détection de l'agent utilisateur.
