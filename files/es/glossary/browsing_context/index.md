@@ -9,7 +9,7 @@ Cada contexto de navegación tiene un {{glossary("origen")}} específico, el ori
 
 La comunicación entre contextos de navegación está severamente restringida. Entre un contexto de navegación del mismo origen, se puede abrir y utilizar un {{domxref("BroadcastChannel")}}}.
 
-## Aprende más...
+## Aprende más
 
 ### Referencia técnica
 
