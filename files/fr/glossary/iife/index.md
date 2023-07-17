@@ -37,8 +37,8 @@ result; // "Barry"
 
 ### Apprendre sur ce sujet
 
-- [Exemple rapide](/fr/docs/Web/JavaScript/Une_r%C3%A9introduction_%C3%A0_JavaScript#Les_fonctions) (à la fin de la section "Les fonctions", juste avant "Les objets personnalisés")
+- [Exemple rapide](/fr/docs/Web/JavaScript/Une_réintroduction_à_JavaScript#Les_fonctions) (à la fin de la section "Les fonctions", juste avant "Les objets personnalisés")
 
 ### Culture générale
 
-- [Immediately-invoked function expression (IIFE)](https://fr.wikipedia.org/wiki/JavaScript#Expressions_de_fonctions_imm%C3%A9diatement_invoqu%C3%A9es) sur Wikipédia
+- [Immediately-invoked function expression (IIFE)](https://fr.wikipedia.org/wiki/JavaScript#Expressions_de_fonctions_immédiatement_invoquées) sur Wikipédia

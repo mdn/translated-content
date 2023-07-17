@@ -12,5 +12,5 @@ Une propriété possède un nom ({{glossary("String", "une chaîne de caractère
 
 ### Culture générale
 
-- [Propriété](<https://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9_(informatique)>) sur Wikipédia
+- [Propriété](<https://fr.wikipedia.org/wiki/Propriété_(informatique)>) sur Wikipédia
 - [Introduction à JavaScript orienté objet](/fr/docs/Web/JavaScript/Introduction_à_JavaScript_orienté_objet)
