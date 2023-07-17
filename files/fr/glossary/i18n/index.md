@@ -6,7 +6,7 @@ translation_of: Glossary/I18N
 
 i18n (issu de "internationalisation", un mot de 20 lettres) est l'ensemble des bonnes pratiques pour permettre à des produits ou des services d'être lisiblement adaptés à toute culture visée.
 
-> L’**internationalisation** est la conception et le développement d’un produit, d’une application ou d’un contenu de document qui **permet** une localisation facile pour les publics ciblés de culture, région et langue différentes. (Définition du {{Glossary("W3C")}})
+> L'**internationalisation** est la conception et le développement d'un produit, d'une application ou d'un contenu de document qui **permet** une localisation facile pour les publics ciblés de culture, région et langue différentes. (Définition du {{Glossary("W3C")}})
 
 Parmi d'autres choses, i18n nécessite le support de plusieurs…
 

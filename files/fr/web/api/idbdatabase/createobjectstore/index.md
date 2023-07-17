@@ -11,7 +11,7 @@ translation_of: Web/API/IDBDatabase/createObjectStore
 
 {{APIRef("IndexedDB")}}
 
-La méthode **`createObjectStore()`**, rattachée à l'interface {{domxref("IDBDatabase")}}, permet d'ajouter un magasin d’objet ou un index à la base de donnée et renvoie un accès vers celui-ci.
+La méthode **`createObjectStore()`**, rattachée à l'interface {{domxref("IDBDatabase")}}, permet d'ajouter un magasin d'objet ou un index à la base de donnée et renvoie un accès vers celui-ci.
 
 Cette méthode utilise deux paramètres : le nom du magasin d'objets et un objet qui permettra de définir des propriétés optionnelles supplémentaires.
 
@@ -28,7 +28,7 @@ var objectStore = db.createObjectStore(name, optionalParameters);
 ## Paramètres
 
 - `name`
-  - : Le nom du magasin d'objet à ajouter. Il est possible d'ajouter un magasin d’objet dont le nom est la chaîne vide (!).
+  - : Le nom du magasin d'objet à ajouter. Il est possible d'ajouter un magasin d'objet dont le nom est la chaîne vide (!).
 - `optionalParameters` {{optional_inline}}
 
   - : Un objet qui permet de décrire plus finement le magasin d'objets avec ces propriétés :
@@ -36,7 +36,7 @@ var objectStore = db.createObjectStore(name, optionalParameters);
     | Propriété       | Description                                                                                                                                                                           |
     | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
     | `keyPath`       | Le chemin de la clé utilisé par le magasin d'objet. Si ce paramètre est vide ou non spécifié, le magasin d'objets utilisera une clé externe. Le `keyPath` peut aussi être un tableau. |
-    | `autoIncrement` | Si `true`, le magasin d’objet implémentera un générateur de clé. La valeur par défaut est `false`.                                                                                    |
+    | `autoIncrement` | Si `true`, le magasin d'objet implémentera un générateur de clé. La valeur par défaut est `false`.                                                                                    |
 
     Les autres propriétés seront ignorés.
 

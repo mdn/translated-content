@@ -34,7 +34,7 @@ captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions
 
 La [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) retournée par `getDisplayMedia()` est résolue en un objet [`MediaStream`](/fr/docs/Web/API/MediaStream) qui diffuse le média capturé.
 
-Voir l'article [Utiliser l'API Screen Capture](/fr/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) pour plus de détails sur l’utilisation de l’API pour capturer le contenu de l’écran sous forme de flux.
+Voir l'article [Utiliser l'API Screen Capture](/fr/docs/Web/API/Screen_Capture_API/Using_Screen_Capture) pour plus de détails sur l'utilisation de l'API pour capturer le contenu de l'écran sous forme de flux.
 
 ## Ajouts à l'interface actuelle
 
@@ -93,7 +93,7 @@ Les [agents utilisateurs](/fr/docs/Glossary/User_agent) qui prennent en charge l
 <iframe allow="display-capture" src="/some-other-document.html">
 ```
 
-La liste d’autorisations par défaut est `self`, ce qui permet à tout contenu du document d’utiliser Screen Capture.
+La liste d'autorisations par défaut est `self`, ce qui permet à tout contenu du document d'utiliser Screen Capture.
 
 Voir [Utiliser Feature Policy](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy) pour une explication plus en détail sur comment est utilisé Feature Policy.
 

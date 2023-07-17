@@ -40,7 +40,7 @@ L'élément HTML **`<marquee>`** est utilisé pour insérer une zone de texte d�
 - `width`
   - : Définit la largeur en pixel en ou pourcentage.
 
-## Gestionnaire d’évènements
+## Gestionnaire d'évènements
 
 - `onbounce`
   - : Se déclenche quand le `<marquee>` arrive à la fin de son défilement. Il peut seulement se déclencher quand `behavior` est mis à `alternate`.

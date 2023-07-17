@@ -19,7 +19,7 @@ Un servidor no es necesariamente una máquina física: varios servidores pueden 
 
 Por lo tanto, ¡elija uno de sus dominios como su canónico! Hay dos técnicas a continuación para permitir que el dominio no canónico funcione aún.
 
-## Técnicas para las URL canónicas.
+## Técnicas para las URL canónicas
 
 Hay diferentes maneras de elegir qué sitio web es _canónico_.
 

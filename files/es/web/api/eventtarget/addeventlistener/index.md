@@ -7,7 +7,7 @@ slug: Web/API/EventTarget/addEventListener
 
 ## Resumen
 
-`addEventListener()` Registra un evento a un objeto en específico. El [Objeto especifico](/es/docs/DOM/EventTarget) puede ser un simple [elemento](/es/docs/DOM/element) en un archivo, el mismo [`documento`](/en-US/docs/DOM/document) , una [`ventana`](/en-US/docs/DOM/window) o un [`XMLHttpRequest`](/en-US/docs/DOM/XMLHttpRequest).
+`addEventListener()` Registra un evento a un objeto en específico. El [Objeto especifico](/es/docs/DOM/EventTarget) puede ser un simple [elemento](/es/docs/DOM/element) en un archivo, el mismo [`documento`](/es/docs/DOM/document) , una [`ventana`](/es/docs/DOM/window) o un [`XMLHttpRequest`](/es/docs/DOM/XMLHttpRequest).
 
 Para registrar más de un eventListener, puedes llamar `addEventListener()` para el mismo elemento pero con diferentes tipos de eventos o parámetros de captura.
 
@@ -153,7 +153,7 @@ In the example above, the value of `this` within `modifyText()` when called from
 
 The value of `this` within `modifyText()` when called from the onclick event will be a reference to the global (window) object.
 
-> **Nota:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Note, however, that you'll need to keep a reference to the listener around so you can later remove it.
+> **Nota:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/es/docs/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Note, however, that you'll need to keep a reference to the listener around so you can later remove it.
 
 This is an example with and without `bind`:
 
@@ -253,7 +253,7 @@ for(i=0 ; i<els.length ; i++){
 }
 ```
 
-In the first case, a new (anonymous) function is created at each loop turn. In the second case, the same previously declared function is used as an event handler. This results in smaller memory consumption. Moreover, in the first case, since no reference to the anonymous functions is kept, it is not possible to call [`element.removeEventListener`](/en-US/docs/Web/API/EventTarget/removeEventListener) because we do not have a reference to the handler, while in the second case, it's possible to do `myElement.removeEventListener("click", processEvent, false)`.
+In the first case, a new (anonymous) function is created at each loop turn. In the second case, the same previously declared function is used as an event handler. This results in smaller memory consumption. Moreover, in the first case, since no reference to the anonymous functions is kept, it is not possible to call [`element.removeEventListener`](/es/docs/Web/API/EventTarget/removeEventListener) because we do not have a reference to the handler, while in the second case, it's possible to do `myElement.removeEventListener("click", processEvent, false)`.
 
 ## Especificaciones
 

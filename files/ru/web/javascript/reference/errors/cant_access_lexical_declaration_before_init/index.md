@@ -23,7 +23,7 @@ ReferenceError: 'x' is not defined (Chrome)
 
 ## Что случилось?
 
-Попытка доступа к лексической переменной до её инициализации. Это может произойти в любом блоке, если попытаться обратиться к переменной, объявленной с помощью ключевых слов [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) или [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) до того, как им было присвоено значение.
+Попытка доступа к лексической переменной до её инициализации. Это может произойти в любом блоке, если попытаться обратиться к переменной, объявленной с помощью ключевых слов [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let) или [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const) до того, как им было присвоено значение.
 
 ## Примеры
 

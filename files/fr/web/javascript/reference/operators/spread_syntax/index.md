@@ -131,7 +131,7 @@ console.log(arr2); // [1, 2, 3, 4]
 console.log(arr);  // [1, 2, 3] (inchangé)
 ```
 
-> **Note :** Lorsqu'on utilise la décomposition pour copier un tableau, celle-ci ne s'applique qu'au premier niveau de profondeur. Par conséquent, il peut ne pas convenir pour la copie des tableaux multidimensionnels (des tableaux imbriqués dans d'autres tableaux) comme le montre l’exemple suivant (il en va de même avec {{jsxref("Object.assign()")}} et la décomposition).
+> **Note :** Lorsqu'on utilise la décomposition pour copier un tableau, celle-ci ne s'applique qu'au premier niveau de profondeur. Par conséquent, il peut ne pas convenir pour la copie des tableaux multidimensionnels (des tableaux imbriqués dans d'autres tableaux) comme le montre l'exemple suivant (il en va de même avec {{jsxref("Object.assign()")}} et la décomposition).
 
 ```js
 var a = [[1], [2], [3]];

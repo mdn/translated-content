@@ -30,16 +30,13 @@ build/
 /files/es/webassembly/**/*.md
 
 # fr
-/files/fr/games/**/*.md
 /files/fr/glossary/**/*.md
 /files/fr/learn/**/*.md
 /files/fr/learn/css/**/*.md
 /files/fr/learn/html/**/*.md
 /files/fr/learn/javascript/**/*.md
 /files/fr/learn/server-side/**/*.md
-/files/fr/mdn/**/*.md
 /files/fr/mozilla/**/*.md
-/files/fr/web/**/*.md
 /files/fr/web/api/**/*.md
 /files/fr/web/css/**/*.md
 /files/fr/web/html/**/*.md
@@ -69,7 +66,6 @@ build/
 /files/ja/webassembly/**/*.md
 
 # ko
-/docs/ko/**/*.md
 /files/ko/games/**/*.md
 /files/ko/glossary/**/*.md
 /files/ko/learn/**/*.md
@@ -108,7 +104,6 @@ build/
 /files/pt-br/webassembly/**/*.md
 
 # ru
-/files/ru/games/**/*.md
 /files/ru/glossary/**/*.md
 /files/ru/learn/**/*.md
 /files/ru/learn/css/**/*.md

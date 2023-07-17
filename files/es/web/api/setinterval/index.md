@@ -179,7 +179,7 @@ Es posible anidar intervalos; Es decir, la llamada de retorno de `setInterval()`
 Los navegadores pueden imponer valores mínimos aún más estrictos para el intervalo en determinadas circunstancias, aunque no deberían ser habituales. Tenga también en cuenta que la cantidad real de tiempo que transcurre entre las llamadas a la función callback puede ser mayor que el propio retardo (delay); Ver
 [Reasons for delays longer than specified](/es/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified) para ver ejemplos.
 
-### Garantizar que la duración de la ejecución sea inferior a la frecuecia del intervalo.
+### Garantizar que la duración de la ejecución sea inferior a la frecuecia del intervalo
 
 Si existe la posibilidad de que su lógica pueda tardar más en ejecutarse que el tiempo de intervalo, se recomienda llamar recursivamente a una función nombrada utilizando {{domxref("setTimeout()")}}. Por ejemplo, si utiliza `setInterval()` para sondear un servidor remoto cada cinco segundos, la latencia de la red, un servidor que no responde y una serie de otros problemas podrían impedir que la solicitud se complete en el tiempo asignado. Debido a esto, es posible que se encuentre con peticiones XHR en cola que no necesariamente retornarán en orden.
 

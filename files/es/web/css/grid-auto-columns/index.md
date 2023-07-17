@@ -116,7 +116,7 @@ grid-auto-columns: unset;
 }
 ```
 
-### Resultado:
+### Resultado
 
 {{EmbedLiveSample("Example", "410px", "100px")}}
 

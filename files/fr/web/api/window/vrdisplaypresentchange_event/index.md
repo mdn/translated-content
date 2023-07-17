@@ -32,7 +32,7 @@ L'événement **`vrdisplaypresentchange`** de l'[API WebVR](/fr/docs/Web/API/Web
       <th scope="row">Propriété de gestionnaire d'événements</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/Window/onvrdisplaypresentchange"
+          ><a href="/fr/docs/Web/API/Window/onvrdisplaypresentchange"
             >onvrdisplaypresentchange</a
           ></code
         >

@@ -55,7 +55,7 @@ Voici le résultat obtenu :
 
 {{EmbedLiveSample('Définir_un_groupe_de_boutons_radio', 600, 130)}}
 
-### La représentation des données d’un groupe de boutons radio
+### La représentation des données d'un groupe de boutons radio
 
 Lorsqu'on envoie le formulaire précédent avec une option sélectionnée, les données du formulaire contiendront une valeur sous la forme `"contact=valeur"`. Ainsi, si l'utilisateur clique sur le bouton radio « Téléphone » et envoie le formulaire, les données du formulaire contiendront `"contact=telephone"`.
 
@@ -110,7 +110,7 @@ form.addEventListener("submit", function(event) {
 
 Vous pouvez manipuler cet exemple et voir qu'il n'y a jamais plus 'un résultat pour le groupe `"contact"`.
 
-{{EmbedLiveSample("La_représentation_des_données_d’un_groupe_de_boutons_radio", 600, 130)}}
+{{EmbedLiveSample("La_représentation_des_données_d'un_groupe_de_boutons_radio", 600, 130)}}
 
 ## Attributs supplémentaires
 

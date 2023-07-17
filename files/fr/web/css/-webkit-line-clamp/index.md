@@ -86,5 +86,5 @@ p {
 
 ## Voir aussi
 
-- [Line Clampin’ (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
+- [Line Clampin' (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
 - {{cssxref("line-clamp")}}

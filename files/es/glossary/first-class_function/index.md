@@ -95,7 +95,7 @@ Usamos paréntesis doble `()()` para invocar también a la función retornada.
 <section id="Quick_links">
  <ol>
   <li>[First-class functions](https://es.wikipedia.org/wiki/First-class_function) on Wikipedia</li>
-  <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
+  <li><a href="/es/docs/Glossary">MDN Web Docs Glossary</a>
    <ul>
     <li>{{glossary("Callback function")}}</li>
     <li>{{glossary("Function")}}</li>

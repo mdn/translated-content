@@ -108,4 +108,3 @@ A sintaxe _fallback_, como de propriedades customizadas, permite vírgulas. Mas 
 - [CSS Custom Properties for Cascading Variables](/pt-BR/docs/Web/CSS/CSS_Variables)
 - [Custom Properties (--\*)](/pt-BR/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/pt-BR/docs/Web/CSS/Using_CSS_variables)
-- {{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}

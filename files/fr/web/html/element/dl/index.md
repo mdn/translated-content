@@ -218,7 +218,7 @@ dt::after {
 
 {{EmbedLiveSample('','',240)}}
 
-### Intégration de groupes nom-valeur dans les éléments `<div>`.
+### Intégration de groupes nom-valeur dans les éléments `<div>`
 
 [WHATWG](/fr/docs/Glossary/WHATWG) HTML permet d'envelopper chaque groupe nom-valeur d'un élément [`<dl>`](/fr/docs/Web/HTML/Element/dl) dans un élément [`<div>`](/fr/docs/Web/HTML/Element/div). Cela peut être utile lors de l'utilisation de [microdonnées](/fr/docs/Web/HTML/Microdata), ou lorsque les [attributs universels](/fr/docs/Web/HTML/Global_attributes) s'appliquent à un groupe entier, ou encore à des fins de style.
 

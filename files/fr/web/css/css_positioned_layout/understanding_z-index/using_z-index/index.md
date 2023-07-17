@@ -39,9 +39,9 @@ Cette propriété, dont l'attribut est une valeur entière (positive ou négativ
 
 Dans l'exemple qui suit, l'empilement des couches a été réordonné en utilisant `z-index`. Le `z-index` du bloc DIV#5 n'a pas d'effet, l'élément n'étant pas positionné.
 
-{{EmbedLiveSample("Code_source_de_l’exemple", '468', '365')}}
+{{EmbedLiveSample("Code_source_de_l'exemple", '468', '365')}}
 
-## Code source de l’exemple
+## Code source de l'exemple
 
 ### HTML
 

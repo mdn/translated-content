@@ -114,4 +114,4 @@ original_slug: Web/Progressive_web_apps/Installable_PWAs
 
 {{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/Progressive_web_apps/")}}
