@@ -13,7 +13,7 @@ Ahora que has creado (y probado) un fantastico sitio web para la [Biblioteca Loc
       <th scope="row">Requisitos previos:</th>
       <td>
         Completar todos los tutoriales de los temas previos, incluyendo
-        <a href="/en-US/docs/Learn/Server-side/Django/Testing"
+        <a href="/es/docs/Learn/Server-side/Django/Testing"
           >Django Tutorial Part 10: Testing a Django web application</a
         >.
       </td>

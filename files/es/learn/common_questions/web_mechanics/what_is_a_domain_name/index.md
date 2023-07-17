@@ -12,7 +12,7 @@ En este artículo discutiremos acerca de los nombres de los dominios: qué son, 
       <th scope="row">Prerrequisitos:</th>
       <td>
         Primero necesitas saber
-        <a href="/en-US/docs/Learn/How_the_Internet_works"
+        <a href="/es/docs/Learn/How_the_Internet_works"
           >cómo funciona Internet</a
         >
         y entender

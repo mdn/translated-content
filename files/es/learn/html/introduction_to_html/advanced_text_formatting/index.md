@@ -280,7 +280,7 @@ Las citas en línea funcionan exactamente de la misma manera, excepto que usan e
 ```html
 <p>
   El elemento de cita — <code>&lt;q&gt;</code> — se
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+  <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q"
     >utiliza en para citas breves que no requieren saltos de párrafo.</q
   >
 </p>
@@ -316,11 +316,11 @@ Hay un elemento {{HTMLElement("cite")}}, pero está destinado a contener el tít
 
 <p>
   El elemento de cita — <code>&lt;q&gt;</code> — se
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+  <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q"
     >utiliza en citas breves que no requieren saltos de párrafo.</q
   >
   --
-  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+  <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/q">
     <cite>página q de MDN</cite></a
   >.
 </p>
