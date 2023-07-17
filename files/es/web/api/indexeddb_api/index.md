@@ -21,7 +21,7 @@ Los métodos del API Asíncrono, retornan sin bloquear el hilo de llamada. Para 
 - [`IDBCursor`](/es/docs/IndexedDB/IDBCursor) itera sobre los objetos de almacenamiento y de índices.
 - [`IDBCursorWithValue`](/es/docs/IndexedDB/IDBCursorWithValue) itera sobre los objetos de almacenamiento y de índices y retorna el valor actual del cursor.
 - [`IDBDatabase`](/es/docs/IndexedDB/IDBDatabase) representa una conexión a la base de datos. Es la única manera de realizar una transacción en la base de datos.
-- [`IDBEnvironment`](/es/docs/IndexedDB/IDBEnvironment) provee acceso a la base de datos, desde el lado del cliente. Está implementada por el objeto [window](/../es/docs/DOM/window).
+- [`IDBEnvironment`](/es/docs/IndexedDB/IDBEnvironment) provee acceso a la base de datos, desde el lado del cliente. Está implementada por el objeto [window](/es/docs/DOM/window).
 - [`IDBIndex`](/es/docs/IndexedDB/IDBIndex) provee acceso a la metadata de un índice.
 - [`IDBKeyRange`](/es/docs/IndexedDB/IDBKeyRange) define un rango de claves.
 - [`IDBObjectStore`](/es/docs/IndexedDB/IDBObjectStore) representa un objeto de almacenamiento.
@@ -32,7 +32,7 @@ Los métodos del API Asíncrono, retornan sin bloquear el hilo de llamada. Para 
 
 Una versión anterior de la especificación también define estas -ahora removidas- interfaces. Éstas son documentadas todavía, en caso de que necesite actualizar código escrito previamente:
 
-- [`IDBVersionChangeRequest`](/es/docs/IndexedDB/IDBVersionChangeRequest) representa una solicitud para cambiar la versión de una base de datos. La manera de cambiar la versión de la base de datos ahora es diferente (llamando [`IDBFactory.open()`](/es/docs/IndexedDB/IDBFactory#open) sin llamar también a [`IDBDatabase.setVersion()`](</es/docs/IndexedDB/IDBDatabase#setVersion()> "en-US/docs/IndexedDB/IDBDatabase#setVersion()")), y la interfaz [`IDBOpenDBRequest`](/es/docs/IndexedDB/IDBOpenDBRequest) tiene ahora la funcionalidad de la eliminada `IDBVersionChangeRequest`.
+- [`IDBVersionChangeRequest`](/es/docs/IndexedDB/IDBVersionChangeRequest) representa una solicitud para cambiar la versión de una base de datos. La manera de cambiar la versión de la base de datos ahora es diferente (llamando [`IDBFactory.open()`](/es/docs/IndexedDB/IDBFactory#open) sin llamar también a [`IDBDatabase.setVersion()`](/es/docs/IndexedDB/IDBDatabase#setVersion()), y la interfaz [`IDBOpenDBRequest`](/es/docs/IndexedDB/IDBOpenDBRequest) tiene ahora la funcionalidad de la eliminada `IDBVersionChangeRequest`.
 - [`IDBDatabaseException`](/es/docs/IndexedDB/IDBDatabaseException){{deprecated_inline}} representa las condiciones de excepción que se pueden encontrar mientras se ejecutan operaciones en la base de datos.
 
 Hay también una [versión sincrónica de la API](/es/docs/IndexedDB/Syncronous_API). La API síncrona no ha sido implementada en cualquier navegador. Está destinada a ser usada con [WebWorkers](/es/docs/DOM/Using_web_workers).

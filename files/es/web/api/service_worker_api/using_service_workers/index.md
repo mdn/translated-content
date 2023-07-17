@@ -317,7 +317,7 @@ Hemos optado por esta imagen alternativa porque las únicas actualizaciones que 
 
 ## Precarga de navegación del service worker
 
-Si está habilitada, la función <a href="/es/docs/Web/API/NavigationPreloadManager" class="only-in-en-us" title="Actualmente solo disponible en inglés (US)">precarga de navegación (en-US)</a> comienza a descargar recursos tan pronto como se realiza la solicitud de recuperación y en paralelo con el inicio del *service worker*.
+Si está habilitada, la función de [precarga de navegación](/es/docs/Web/API/NavigationPreloadManager) comienza a descargar recursos tan pronto como se realiza la solicitud de recuperación y en paralelo con el inicio del *service worker*.
 Esto garantiza que la descarga comience de inmediato al navegar a una página, en lugar de tener que esperar hasta que se inicie el *service worker*.
 Ese retraso ocurre en muy raras ocasiones, pero es inevitable cuando ocurre y puede ser significativo.
 
@@ -437,7 +437,7 @@ self.addEventListener("fetch", (event) => {
 
 Ten en cuenta que en este ejemplo descargamos y almacenamos en caché los mismos datos para el recurso, ya sea que se descargue "normalmente" o se precargue.
 En su lugar, puedes optar por descargar y almacenar en caché un recurso diferente en la precarga.
-Para obtener más información, consulta <a href="/es/docs/Web/API/NavigationPreloadManager#custom_responses" class="only-in-en-us" title="Actualmente solo disponible en inglés (US)">NavigationPreloadManager > Respuestas personalizadas (en-US)</a>.
+Para obtener más información, consulta [NavigationPreloadManager > Respuestas personalizadas](/es/docs/Web/API/NavigationPreloadManager#custom_responses).
 
 ## Actualizar tu service worker
 
