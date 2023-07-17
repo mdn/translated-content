@@ -38,7 +38,6 @@ build/
 /files/fr/learn/html/**/*.md
 /files/fr/learn/javascript/**/*.md
 /files/fr/learn/server-side/**/*.md
-/files/fr/mdn/**/*.md
 /files/fr/mozilla/**/*.md
 /files/fr/web/**/*.md
 /files/fr/web/api/**/*.md
