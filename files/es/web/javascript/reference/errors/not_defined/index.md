@@ -66,4 +66,3 @@ console.log(num1); // 2
 - {{Glossary("Ámbito")}}
 - [Guía; declarando variables en JavaScript](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
 - [Guía; contexto de la función en Java Script](/es/docs/Web/JavaScript/Guide/Functions#ámbito_de_function)
-
