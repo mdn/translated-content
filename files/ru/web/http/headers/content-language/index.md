@@ -60,7 +60,7 @@ Content-Language: de-DE, en-CA
 
 ### Указание использованного языка документа
 
-Глобальный атрибут [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) используется на HTML-элементах для указания языка всего HTML документа или его частей.
+Глобальный атрибут [`lang`](/ru/docs/Web/HTML/Global_attributes/lang) используется на HTML-элементах для указания языка всего HTML документа или его частей.
 
 ```html
 <html lang="de">

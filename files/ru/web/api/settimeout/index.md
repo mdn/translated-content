@@ -73,7 +73,7 @@ function clearAlert() {
 |*|  IE-specific polyfill which enables the passage of arbitrary arguments to the
 |*|  callback functions of JavaScript timers (HTML5 standard syntax).
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/window.setInterval
+|*|  https://developer.mozilla.org/ru/docs/DOM/window.setInterval
 |*|
 |*|  Syntax:
 |*|  var timeoutID = window.setTimeout(func, delay, [param1, param2, ...]);
@@ -213,11 +213,11 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2.5 s
 
 Это не нативные решения _ad hoc_ для этой проблемы.
 
-> **Примечание:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called.
+> **Примечание:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/ru/docs/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called.
 
 ## Замечания
 
-Отложенное выполнение кода можно отменить, используя [`window.clearTimeout()`](/en-US/docs/DOM/window.clearTimeout). Если функция должна вызываться неоднократно (например, каждые N миллисекунд), необходимо использовать [`window.setInterval()`](/en-US/docs/DOM/window.setInterval).
+Отложенное выполнение кода можно отменить, используя [`window.clearTimeout()`](/ru/docs/DOM/window.clearTimeout). Если функция должна вызываться неоднократно (например, каждые N миллисекунд), необходимо использовать [`window.setInterval()`](/ru/docs/DOM/window.setInterval).
 
 Важно заметить, что функция или код не могут быть выполнены, пока не завершится поток, вызвавший `setTimeout()`.
 

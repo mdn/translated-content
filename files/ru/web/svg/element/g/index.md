@@ -50,7 +50,7 @@ _Нет специфичных атрибутов._
 
 ## Интерфейс DOM
 
-Этот элемент реализует [`SVGGElement`](/en-US/docs/DOM/SVGGElement) интерес.
+Этот элемент реализует [`SVGGElement`](/ru/docs/DOM/SVGGElement) интерес.
 
 ## Спецификации
 

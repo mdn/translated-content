@@ -4,7 +4,9 @@ slug: Web/Media/Formats/codecs_parameter
 translation_of: Web/Media/Formats/codecs_parameter
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}На базовом уровне, можно задать тип медиа файла, используя простой
+{{QuickLinksWithSubpages("/ru/docs/Web/Media")}}
+
+На базовом уровне, можно задать тип медиа файла, используя простой
 
 {{Glossary("MIME")}} тип, такой как `video/mp4` или `audio/mpeg`. Однако, многие медиа типы, особенно те, которые поддерживают видео дорожки, более привлекательные из-за способности более точного описания содержащегося формата данных. Например, просто описывая видео в файле [MPEG-4](/ru/docs/Web/Media/Formats/Containers#MP4) с MIME типом `video/mp4` ничего не скажет о том, какой формат в действительности он содержит.
 
