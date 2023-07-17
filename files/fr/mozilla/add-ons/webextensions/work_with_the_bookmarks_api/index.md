@@ -128,7 +128,7 @@ Comme pour tout script d'arrière-plan, [background.js](https://github.com/mdn/w
       if (isSupportedProtocol(currentTab.url)) {
 ```
 
-`isSupportedProtocol()` determines if the URL displayed in the active tab is one that can be bookmarked. To extract the protocol from the tab’s URL, the extension takes advantage of the [HTMLHyperlinkElementUtils](/fr/docs/Web/API/HTMLHyperlinkElementUtils) by adding the tab’s URL to an `<a>` element and then getting the protocol using the `protocol` property.
+`isSupportedProtocol()` determines if the URL displayed in the active tab is one that can be bookmarked. To extract the protocol from the tab's URL, the extension takes advantage of the [HTMLHyperlinkElementUtils](/fr/docs/Web/API/HTMLHyperlinkElementUtils) by adding the tab's URL to an `<a>` element and then getting the protocol using the `protocol` property.
 
 ```js
   function isSupportedProtocol(urlString) {

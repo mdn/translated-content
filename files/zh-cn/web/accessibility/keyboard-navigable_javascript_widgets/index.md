@@ -74,22 +74,22 @@ _Example 1: A simple image-based checkbox widget using tabindex to allow keyboar
 ```html
 <!-- 没有 tabindex 属性的话，这些 <span> 元素不会被键盘 focus 中 -->
 <div>
-    <span role="checkbox" aria-checked="true" tabindex="0">
-        <img src="checked.gif" role="presentation" alt="" />
-        Include decorative fruit basket
-    </span>
+  <span role="checkbox" aria-checked="true" tabindex="0">
+    <img src="checked.gif" role="presentation" alt="" />
+    Include decorative fruit basket
+  </span>
 </div>
 <div>
-    <span role="checkbox" aria-checked="true" tabindex="0">
-        <img src="checked.gif" role="presentation" alt="" />
-        Include singing telegram
-    </span>
+  <span role="checkbox" aria-checked="true" tabindex="0">
+    <img src="checked.gif" role="presentation" alt="" />
+    Include singing telegram
+  </span>
 </div>
 <div>
-    <span role="checkbox" aria-checked="false" tabindex="0">
-        <img src="unchecked.gif" role="presentation" alt="" />
-        Require payment before delivery
-    </span>
+  <span role="checkbox" aria-checked="false" tabindex="0">
+    <img src="unchecked.gif" role="presentation" alt="" />
+    Require payment before delivery
+  </span>
 </div>
 ```
 
@@ -103,7 +103,8 @@ _范例 2: 一个使用 tabindex 控制键盘 access 的菜单控件_
 
 ```html
 <ul id="mb1" tabindex="0">
-  <li id="mb1_menu1" tabindex="-1"> Font
+  <li id="mb1_menu1" tabindex="-1">
+    Font
     <ul id="fontMenu" title="Font" tabindex="-1">
       <li id="sans-serif" tabindex="-1">Sans-serif</li>
       <li id="serif" tabindex="-1">Serif</li>
@@ -111,14 +112,16 @@ _范例 2: 一个使用 tabindex 控制键盘 access 的菜单控件_
       <li id="fantasy" tabindex="-1">Fantasy</li>
     </ul>
   </li>
-  <li id="mb1_menu2" tabindex="-1"> Style
+  <li id="mb1_menu2" tabindex="-1">
+    Style
     <ul id="styleMenu" title="Style" tabindex="-1">
       <li id="italic" tabindex="-1">Italics</li>
       <li id="bold" tabindex="-1">Bold</li>
       <li id="underline" tabindex="-1">Underlined</li>
     </ul>
   </li>
-  <li id="mb1_menu3" tabindex="-1"> Justification
+  <li id="mb1_menu3" tabindex="-1">
+    Justification
     <ul id="justificationMenu" title="Justication" tabindex="-1">
       <li id="left" tabindex="-1">Left</li>
       <li id="center" tabindex="-1">Centered</li>
@@ -201,7 +204,7 @@ IE 7 及更早版本不支持 `:focus` 伪选择器，不要用它来设置焦�
 
 #### 始终用程序为 tabindex="-1" 的项和元素设置焦点样式
 
-IE 不会自动为` tabindex="-1" `的元素绘制聚焦框。可以选择一种方法解决，比如通过 `this.style.backgroundColor="gray"` 改变选中项目的背景颜色，或通过 `this.style.border="1px dotted invert"` 添加虚线边框。如果使用虚线边框的，需要确保这些元素有隐含的一象素边框，这样，当聚焦的边框样式应用上去的时候，元素的大小才不会改变（边框会占用空间，而 IE 没有实现 CSS outline）。
+IE 不会自动为`tabindex="-1"`的元素绘制聚焦框。可以选择一种方法解决，比如通过 `this.style.backgroundColor="gray"` 改变选中项目的背景颜色，或通过 `this.style.border="1px dotted invert"` 添加虚线边框。如果使用虚线边框的，需要确保这些元素有隐含的一象素边框，这样，当聚焦的边框样式应用上去的时候，元素的大小才不会改变（边框会占用空间，而 IE 没有实现 CSS outline）。
 
 #### 阻止浏览器的按键事件处理
 
@@ -210,7 +213,7 @@ IE 不会自动为` tabindex="-1" `的元素绘制聚焦框。可以选择一种
 例如：
 
 ```html
-<span tabindex="-1" onkeydown="return handleKeyDown();">
+<span tabindex="-1" onkeydown="return handleKeyDown();"></span>
 ```
 
 如果 `handleKeyDown()` 返回 `false`，将会结束事件处理，阻止浏览器继续处理按键行为。

@@ -266,7 +266,7 @@ As previously discussed, Internet Explorer versions 9 and below do not support t
 |*|  IE-specific polyfill that enables the passage of arbitrary arguments to the
 |*|  callback functions of javascript timers (HTML5 standard syntax).
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/window.setInterval
+|*|  https://developer.mozilla.org/ru/docs/Web/API/window.setInterval
 |*|  https://developer.mozilla.org/User:fusionchess
 |*|
 |*|  Syntax:
@@ -387,7 +387,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 
 Another, more complex, solution for **the [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) problem** is [the following framework](#A_little_framework).
 
-> **Примечание:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
+> **Примечание:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
 
 ## MiniDaemon - фреймворк для управления таймерами
 
@@ -404,7 +404,7 @@ In pages requiring many timers, it can often be difficult to keep track of all o
 |*|
 |*|  Revision #2 - September 26, 2014
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/window.setInterval
+|*|  https://developer.mozilla.org/ru/docs/Web/API/window.setInterval
 |*|  https://developer.mozilla.org/User:fusionchess
 |*|  https://github.com/madmurphy/minidaemon.js
 |*|

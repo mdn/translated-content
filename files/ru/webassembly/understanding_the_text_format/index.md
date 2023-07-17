@@ -169,7 +169,7 @@ translation_of: WebAssembly/Understanding_the_text_format
 
 Если вы хотите собственноручно скомпилировать пример, сохраните ранее написанный модуль в файле с именем `add.wat`, а затем преобразуйте его в двоичный файл с именем `add.wasm`, используя wabt (подробности смотрите в разделе [Перевод текстового формата WebAssembly в wasm](/ru/docs/WebAssembly/Text_format_to_wasm)).
 
-Затем мы загрузим наш двоичный файл, скомпилируем, создадим его экземпляр и выполним нашу функцию `add` в коде JavaScript (теперь нам доступна функция `add()` в свойстве [`exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) экземпляра модуля):
+Затем мы загрузим наш двоичный файл, скомпилируем, создадим его экземпляр и выполним нашу функцию `add` в коде JavaScript (теперь нам доступна функция `add()` в свойстве [`exports`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) экземпляра модуля):
 
 ```js
 WebAssembly.instantiateStreaming(fetch('add.wasm'))
@@ -290,9 +290,9 @@ const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
 Со стороны JavaScript, линейная память как будто находится внутри одного большого (расширяющегося) объекта {{domxref("ArrayBuffer")}}.
 
 Таким образом, строка - это просто последовательность байтов где-то внутри этой линейной памяти. Давайте предположим, что мы записали нужную строку байтов в память; как мы передадим эту строку в JavaScript?
-Ключевым моментом является то, что JavaScript может создавать экземпляры(объекты) линейной памяти WebAssembly через конструктор {{jsxref("WebAssembly.Memory()")}} и получать доступ к существующему экземпляру памяти (в настоящее время вы можете иметь только один экземпляр памяти на экземпляр модуля), используя соответствующие методы экземпляра модуля. Экземпляр памяти имеет свойство [`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer), которое возвращает объект `ArrayBuffer`, предоставляя всю линейную память модуля.
+Ключевым моментом является то, что JavaScript может создавать экземпляры(объекты) линейной памяти WebAssembly через конструктор {{jsxref("WebAssembly.Memory()")}} и получать доступ к существующему экземпляру памяти (в настоящее время вы можете иметь только один экземпляр памяти на экземпляр модуля), используя соответствующие методы экземпляра модуля. Экземпляр памяти имеет свойство [`buffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer), которое возвращает объект `ArrayBuffer`, предоставляя всю линейную память модуля.
 
-Объекты памяти могут расширятся с помощью метода [`Memory.grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow) из JavaScript. Когда происходит расширение, текущий объект `ArrayBuffer` не может изменить размер и он отсоединяется. Вместо него создаётся новый объект `ArrayBuffer`, указывающий на новую, увеличенную память. Пользуясь этими возможностями можно передать строку в JavaScript, её начальный индекс и её длину в линейной памяти.
+Объекты памяти могут расширятся с помощью метода [`Memory.grow()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow) из JavaScript. Когда происходит расширение, текущий объект `ArrayBuffer` не может изменить размер и он отсоединяется. Вместо него создаётся новый объект `ArrayBuffer`, указывающий на новую, увеличенную память. Пользуясь этими возможностями можно передать строку в JavaScript, её начальный индекс и её длину в линейной памяти.
 
 Хотя есть много разных способов кодировать длину строки в самой строке (например, как в строках в C); для простоты здесь мы просто передаём смещение и длину в качестве параметров:
 
@@ -310,7 +310,7 @@ function consoleLogString(offset, length) {
 }
 ```
 
-Последний недостающий фрагмент головоломки - это место, где функция `consoleLogString` получает доступ к памяти (`memory`) WebAssembly. WebAssembly даёт нам здесь много гибкости: либо мы можем создать объект [`Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) в коде JavaScript и импортировать его в модуль WebAssembly, или мы можем создать его в модуле WebAssembly и затем экспортировать в JavaScript.
+Последний недостающий фрагмент головоломки - это место, где функция `consoleLogString` получает доступ к памяти (`memory`) WebAssembly. WebAssembly даёт нам здесь много гибкости: либо мы можем создать объект [`Memory`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) в коде JavaScript и импортировать его в модуль WebAssembly, или мы можем создать его в модуле WebAssembly и затем экспортировать в JavaScript.
 
 Для простоты, давайте создадим объект памяти в JavaScript и импортируем его в WebAssembly модуль. Напишем следующее объявление импорта `(import`):
 
@@ -470,15 +470,15 @@ WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
 
 > **Примечание:** Этот пример можно найти на GitHub в файле [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) (смотрите это также [вживую](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html))
 
-> **Примечание:** Как и в случае с памятью, таблицы также можно создавать из кода JavaScript (см. [`WebAssembly.Table()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table)).
+> **Примечание:** Как и в случае с памятью, таблицы также можно создавать из кода JavaScript (см. [`WebAssembly.Table()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table)).
 
 ### Изменяющиеся таблицы и динамическое связывание
 
-Поскольку JavaScript имеет полный доступ к ссылкам на функции, объект таблицы может быть изменён из кода JavaScript с помощью методов [`grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) и [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set). Когда WebAssembly получит [ссылочные типы](http://webassembly.org/docs/gc/), код WebAssembly сможет изменять таблицы самостоятельно с помощью инструкций `get_elem` / `set_elem`.
+Поскольку JavaScript имеет полный доступ к ссылкам на функции, объект таблицы может быть изменён из кода JavaScript с помощью методов [`grow()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) и [`set()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set). Когда WebAssembly получит [ссылочные типы](http://webassembly.org/docs/gc/), код WebAssembly сможет изменять таблицы самостоятельно с помощью инструкций `get_elem` / `set_elem`.
 
 Поскольку таблицы являются изменяемыми, их можно использовать для реализации сложных схем [динамического связывания](http://webassembly.org/docs/dynamic-linking) во время загрузки и во время выполнения. Когда программа динамически связана, несколько экземпляров могут совместно использовать линейную память и таблицу ссылок. Это похоже на поведение в обычном приложении где несколько скомпилированных `.dll` совместно используют адресное пространство одного процесса.
 
-Чтобы увидеть это в действии, мы создадим один объект импорта, содержащий объект памяти и объект таблицы. Далее мы передадим этот объект импорта при создании нескольких модулей с помощью метода [`instantiate()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate).
+Чтобы увидеть это в действии, мы создадим один объект импорта, содержащий объект памяти и объект таблицы. Далее мы передадим этот объект импорта при создании нескольких модулей с помощью метода [`instantiate()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate).
 
 Наши примеры файлов `.wat` выглядят так:
 

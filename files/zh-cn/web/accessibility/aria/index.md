@@ -12,9 +12,12 @@ slug: Web/Accessibility/ARIA
 这是进度条小部件的标记：
 
 ```html
-<div id="percent-loaded" role="progressbar" aria-valuenow="75"
-     aria-valuemin="0" aria-valuemax="100">
-</div>
+<div
+  id="percent-loaded"
+  role="progressbar"
+  aria-valuenow="75"
+  aria-valuemin="0"
+  aria-valuemax="100"></div>
 ```
 
 这个进度条是使用 {{HTMLElement("div")}} 构建的，它没有任何意义。不幸的是，HTML 4 中没有更多语义标签可供开发人员使用，因此我们需要包含 ARIA 角色和属性。这些是通过向元素添加属性来指定的。在这个例子中， `role="progressbar"` 属性通知浏览器这个元素实际上是一个 JavaScript 驱动的进度条小部件。 `aria-valuemin` 和 `aria-valuemax` 属性指定进度条的最小值和最大值，`aria-valuenow` 描述进度条的当前状态和因此必须使用 JavaScript 保持更新。

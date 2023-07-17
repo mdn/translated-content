@@ -80,7 +80,7 @@ var cleanHTML = DOMPurify.sanitize(externalHTML);
 elem.innerHTML = cleanHTML;
 ```
 
-Vous pouvez utiliser n'importe quelle méthode pour ajouter le HTML aseptisé à votre DOM, par exemple la fonction `.html()` de jQuery’s. Souvenez-vous cependant que le drapeau `SAFE_FOR_JQUERY` doit être utilisé dans ce cas :
+Vous pouvez utiliser n'importe quelle méthode pour ajouter le HTML aseptisé à votre DOM, par exemple la fonction `.html()` de jQuery's. Souvenez-vous cependant que le drapeau `SAFE_FOR_JQUERY` doit être utilisé dans ce cas :
 
 ```js
 var elem = $("<div/>");

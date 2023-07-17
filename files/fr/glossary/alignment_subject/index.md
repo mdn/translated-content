@@ -16,9 +16,9 @@ Pour {{cssxref("justify-content")}} et {{cssxref("align-content")}}, le mode d'�
   - : Les boites de colonne, avec tout espacement inséré entre les boites de colonne ajoutées aux espaces de colonne appropriés.
 - Conteneurs flex
   - : Pour {{cssxref("justify-content")}}, les éléments flexibles dans chaque ligne de flexible.
-    Pour {{cssxref("align-content")}}, les lignes flexibles. Notez que cela n’a d’effet que sur les conteneurs flexibles multilignes.
+    Pour {{cssxref("align-content")}}, les lignes flexibles. Notez que cela n'a d'effet que sur les conteneurs flexibles multilignes.
 - Conteneurs grid
-  - : La grille suit l’axe approprié, avec tout espacement inséré entre les pistes ajoutées aux gouttières correspondantes. Les gouttières fusionnées sont traitées comme une seule opportunité d'insertion d'espace.
+  - : La grille suit l'axe approprié, avec tout espacement inséré entre les pistes ajoutées aux gouttières correspondantes. Les gouttières fusionnées sont traitées comme une seule opportunité d'insertion d'espace.
 
 ## Voir aussi
 

@@ -57,9 +57,9 @@ let srcset = htmlImageElement.srcset;
 
 ```html
 <div class="box">
-  <img src="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/web/html/element/img/clock-demo-200px.png"
+  <img src="https://yari-demos.prod.mdn.mozit.cloud/zh-CN/docs/web/html/element/img/clock-demo-200px.png"
        alt="Clock"
-       srcset="https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/web/html/element/img/clock-demo-200px.png 1x, https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/web/html/element/img/clock-demo-400px.png 2x">
+       srcset="https://yari-demos.prod.mdn.mozit.cloud/zh-CN/docs/web/html/element/img/clock-demo-200px.png 1x, https://yari-demos.prod.mdn.mozit.cloud/zh-CN/docs/web/html/element/img/clock-demo-400px.png 2x">
 </div>
 ```
 

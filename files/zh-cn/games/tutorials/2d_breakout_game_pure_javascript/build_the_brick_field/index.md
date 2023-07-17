@@ -31,11 +31,11 @@ var brickOffsetLeft = 30;
 
 ```js
 var bricks = [];
-for(c=0; c<brickColumnCount; c++) {
-    bricks[c] = [];
-    for(r=0; r<brickRowCount; r++) {
-        bricks[c][r] = { x: 0, y: 0 };
-    }
+for (c = 0; c < brickColumnCount; c++) {
+  bricks[c] = [];
+  for (r = 0; r < brickRowCount; r++) {
+    bricks[c][r] = { x: 0, y: 0 };
+  }
 }
 ```
 
@@ -47,25 +47,25 @@ for(c=0; c<brickColumnCount; c++) {
 
 ```js
 function drawBricks() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            bricks[c][r].x = 0;
-            bricks[c][r].y = 0;
-            ctx.beginPath();
-            ctx.rect(0, 0, brickWidth, brickHeight);
-            ctx.fillStyle = "#0095DD";
-            ctx.fill();
-            ctx.closePath();
-        }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      bricks[c][r].x = 0;
+      bricks[c][r].y = 0;
+      ctx.beginPath();
+      ctx.rect(0, 0, brickWidth, brickHeight);
+      ctx.fillStyle = "#0095DD";
+      ctx.fill();
+      ctx.closePath();
     }
+  }
 }
 ```
 
 再次，我们遍历的行和列，给每一块砖的位置设置`X`和`Y`，我们也画布上画砖，---`brickwidth` X `brickheight` 。问题是我们都画在一个地方坐标`（0,0）`处。我们需要做的是增加一些计算，计算每个循环迭代后的砖块的 x 和 y 位置：
 
 ```js
-var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
+var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
 ```
 
 每个`brickX`位置是 `brickWidth + brickPadding`，乘以列数`C`，再加上`brickOffsetLeft`；对于砖`brickY`的逻辑相同，除了名称不同，使用行数`R`，`brickHeight`，和`brickOffsetTop`。现在，每一块砖都可以放在正确的地方，排成一排，每一块砖之间都有填充物，从左上角和顶部的帆布边缘偏移。
@@ -74,19 +74,19 @@ var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
 
 ```js
 function drawBricks() {
-    for(c=0; c<brickColumnCount; c++) {
-        for(r=0; r<brickRowCount; r++) {
-            var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
-            var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
-            bricks[c][r].x = brickX;
-            bricks[c][r].y = brickY;
-            ctx.beginPath();
-            ctx.rect(brickX, brickY, brickWidth, brickHeight);
-            ctx.fillStyle = "#0095DD";
-            ctx.fill();
-            ctx.closePath();
-        }
+  for (c = 0; c < brickColumnCount; c++) {
+    for (r = 0; r < brickRowCount; r++) {
+      var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
+      var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+      bricks[c][r].x = brickX;
+      bricks[c][r].y = brickY;
+      ctx.beginPath();
+      ctx.rect(brickX, brickY, brickWidth, brickHeight);
+      ctx.fillStyle = "#0095DD";
+      ctx.fill();
+      ctx.closePath();
     }
+  }
 }
 ```
 

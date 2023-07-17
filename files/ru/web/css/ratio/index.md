@@ -42,4 +42,4 @@ translation_of: Web/CSS/ratio
 
 ## Смотрите также
 
-- [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) медиа-функция
+- [`aspect-ratio`](/ru/docs/Web/CSS/@media/aspect-ratio) медиа-функция

@@ -21,7 +21,7 @@ tags:
 {{JSRef}}
 
 The `Proxy` object enables you to create a proxy for another ...
-  :
+:
 ```
 
 번역본
@@ -37,7 +37,7 @@ l10n:
 {{JSRef}}
 
 **`Proxy`** 객체는 기본적인 동작(속성 접근, 할당, 순회, 열거, 함수 ...
-  :
+:
 ```
 
 <details>

@@ -29,7 +29,7 @@ async function startCapture(displayMediaOptions) {
 }
 ```
 
-Можно написать этот код, используя асинхронную функцию и оператор [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) , как показано выше, или использовать тип {{jsxref("Promise")}} непосредственно, пример ниже.
+Можно написать этот код, используя асинхронную функцию и оператор [`await`](/ru/docs/Web/JavaScript/Reference/Operators/await) , как показано выше, или использовать тип {{jsxref("Promise")}} непосредственно, пример ниже.
 
 **_Запуска захвата с экрана: в стиле `Promise`_**
 
@@ -231,7 +231,7 @@ The stream is connected to the {{HTMLElement("video")}} element by storing the r
 
 The `dumpOptionsInfo()` function—which we will look at in a moment—dumps information about the stream to the log box for educational purposes.
 
-If any of that fails, the [`catch()`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) clause outputs an error message to the log box.
+If any of that fails, the [`catch()`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch) clause outputs an error message to the log box.
 
 ##### Stopping display capture
 
