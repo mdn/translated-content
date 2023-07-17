@@ -114,7 +114,7 @@ var callback = (() => {
 
 - {{jsxref("Strict_mode", "Le mode strict", "", 1)}}
 - {{jsxref("Instructions/function", "L'instruction function", "", 1)}}
-- {{jsxref("Op%C3%A9rateurs/L_op%C3%A9rateur_function", "Les expressions de fonction", "", 1)}}
-- {{jsxref("Fonctions/Valeurs_par_d%C3%A9faut_des_arguments", "Les paramètres par défaut", "", 1)}}
+- {{jsxref("Opérateurs/L_opérateur_function", "Les expressions de fonction", "", 1)}}
+- {{jsxref("Fonctions/Valeurs_par_défaut_des_arguments", "Les paramètres par défaut", "", 1)}}
 - {{jsxref("Fonctions/paramètres_du_reste", "Les paramètres du reste", "", 1)}}
 - {{jsxref("Opérateurs/Affecter_par_décomposition", "Les paramètres décomposés", "", 1)}}

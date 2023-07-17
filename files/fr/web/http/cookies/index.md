@@ -160,7 +160,7 @@ Set-Cookie: macle=mavaleur; SameSite=Strict
 
 Une application vulnérable sur un sous-domaine pourrait donc définir un cookie avec l'attribut `Domain`, ce qui donnerait accès à ce cookie sur l'ensemble des sous-domaines. Ce mécanisme pourrait être abusé lors d'une _attaque par fixation de session_. Voir [la description de ce type d'attaque](/fr/docs/Web/Security/Types_of_attacks#fixation_de_session) pour plus d'informations sur les méthodes de prévention.
 
-Comme [mesure de défense en profondeur](https://fr.wikipedia.org/wiki/D%C3%A9fense_en_profondeur), on peut utiliser des _préfixes de cookie_ pour confirmer différents aspects du cookie. Deux préfixes sont disponibles&nbsp;:
+Comme [mesure de défense en profondeur](https://fr.wikipedia.org/wiki/Défense_en_profondeur), on peut utiliser des _préfixes de cookie_ pour confirmer différents aspects du cookie. Deux préfixes sont disponibles&nbsp;:
 
 - `__Host-`
   - : Si un nom de cookie utilise ce préfixe, il sera uniquement accepté dans un en-tête [`Set-Cookie`](/fr/docs/Web/HTTP/Headers/Set-Cookie) si&nbsp;:

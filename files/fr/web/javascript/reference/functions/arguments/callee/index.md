@@ -54,7 +54,7 @@ ne fonctionnait pas. Pour que cela puisse fonctionner, on ajouta `arguments.call
 });
 ```
 
-Cependant, ce fut une mauvaise solution (avec `caller` également) car elle rendit impossible l'[extension inline](https://fr.wikipedia.org/wiki/Extension_inline) et la [récursion terminale](https://fr.wikipedia.org/wiki/R%C3%A9cursion_terminale) de façon générale (il est possible d'y arriver de certaines façons mais cela entraînerait nécessairement un code moins efficace). Le second problème que cela entraîne est que l'appel récursif aura une autre valeur `this` :
+Cependant, ce fut une mauvaise solution (avec `caller` également) car elle rendit impossible l'[extension inline](https://fr.wikipedia.org/wiki/Extension_inline) et la [récursion terminale](https://fr.wikipedia.org/wiki/Récursion_terminale) de façon générale (il est possible d'y arriver de certaines façons mais cela entraînerait nécessairement un code moins efficace). Le second problème que cela entraîne est que l'appel récursif aura une autre valeur `this` :
 
 ```js
 var global = this;
@@ -97,9 +97,9 @@ Si l'interpréteur JavaScript ne peut pas garantir que l'ensemble des arguments 
 
 ### Utiliser `arguments.callee` pour une fonction anonyme récursive
 
-Une fonction récursive, par définition, s'appelle elle-même. Elle fait donc généralement référence à elle-même grâce à son nom. Cependant, une fonction anonyme (créée grâce ) une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_function) ou au constructeur {{jsxref("Function")}}) n'a pas de nom et la seule façon d'y faire référence est donc d'utiliser `arguments.callee`.
+Une fonction récursive, par définition, s'appelle elle-même. Elle fait donc généralement référence à elle-même grâce à son nom. Cependant, une fonction anonyme (créée grâce ) une [expression de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function) ou au constructeur {{jsxref("Function")}}) n'a pas de nom et la seule façon d'y faire référence est donc d'utiliser `arguments.callee`.
 
-L'exemple qui suit illustre une fonction qui définit et renvoie une fonction factorielle. Cet exemple n'a qu'un but démonstratif et ne correspond certainement pas à ce qui serait utilisé en pratique (les expressions de fonctions pouvant être [nommées](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_function)).
+L'exemple qui suit illustre une fonction qui définit et renvoie une fonction factorielle. Cet exemple n'a qu'un but démonstratif et ne correspond certainement pas à ce qui serait utilisé en pratique (les expressions de fonctions pouvant être [nommées](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function)).
 
 ```js
 function créer() {

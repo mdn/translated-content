@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Generator
 
 {{JSRef}}
 
-L'objet **`Generator`** est renvoyé par une {{jsxref("Instructions/function*","fonction génératrice","",1)}}, c'est à la fois [un itérateur](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_%C2%AB_it%C3%A9rateur_%C2%BB) et [un itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_%C2%AB_it%C3%A9rable_%C2%BB).
+L'objet **`Generator`** est renvoyé par une {{jsxref("Instructions/function*","fonction génératrice","",1)}}, c'est à la fois [un itérateur](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérateur_») et [un itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»).
 
 ## Syntaxe
 

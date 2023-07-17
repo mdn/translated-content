@@ -10,7 +10,7 @@ translation_of: Web/CSS/@counter-style/additive-symbols
 
 {{CSSRef}}
 
-Le descripteur **`additive-symbols`**, utilisé pour la règle @ {{cssxref("@counter-style")}} est semblable au descripteur {{cssxref('symbols')}} et permet à l'utilisateur de définir les symboles qui doivent être utilisé pour représenter le compteur lorsque le descripteur {{cssxref('system')}} prend la valeur `additive`. Le descripteur `additive-symbols` définit des _tuples additifs_. Un tuple additif est une paire contenant un symbole et un entier positif qui représente un poids. Le système additif est utilisé afin de construire des systèmes [de notation additive](<https://fr.wikipedia.org/wiki/Notation_additive_(num%C3%A9ration)>) tels que les nombres romains.
+Le descripteur **`additive-symbols`**, utilisé pour la règle @ {{cssxref("@counter-style")}} est semblable au descripteur {{cssxref('symbols')}} et permet à l'utilisateur de définir les symboles qui doivent être utilisé pour représenter le compteur lorsque le descripteur {{cssxref('system')}} prend la valeur `additive`. Le descripteur `additive-symbols` définit des _tuples additifs_. Un tuple additif est une paire contenant un symbole et un entier positif qui représente un poids. Le système additif est utilisé afin de construire des systèmes [de notation additive](<https://fr.wikipedia.org/wiki/Notation_additive_(numération)>) tels que les nombres romains.
 
 ```css
 additive-symbols: 3 "0";

@@ -64,7 +64,7 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 
 ### Balisage du document
 
-L'élément `<main>` a le rôle d'une [balise `main`](/fr/docs/Web/Accessibility/ARIA/Roles/Main_role). Dans le contexte de l'accessibilité, les [balises](/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA) peuvent être utilisées par les outils d'assistance afin d'identifier et de naviguer rapidement entre les grandes sections d'un document. On privilégiera l'élément `<main>` à l'ajout du `role="main"`, à moins qu'il faille [prendre en charge d'anciens navigateurs](/fr/docs/Web/HTML/Element/main#Compatibilité_des_navigateurs).
+L'élément `<main>` a le rôle d'une [balise `main`](/fr/docs/Web/Accessibility/ARIA/Roles/Main_role). Dans le contexte de l'accessibilité, les [balises](/fr/docs/Accessibilité/ARIA/Techniques_ARIA) peuvent être utilisées par les outils d'assistance afin d'identifier et de naviguer rapidement entre les grandes sections d'un document. On privilégiera l'élément `<main>` à l'ajout du `role="main"`, à moins qu'il faille [prendre en charge d'anciens navigateurs](/fr/docs/Web/HTML/Element/main#Compatibilité_des_navigateurs).
 
 ### Navigation rapide
 

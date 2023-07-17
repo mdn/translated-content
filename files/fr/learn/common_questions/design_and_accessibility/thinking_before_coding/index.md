@@ -51,7 +51,7 @@ La technique est évidemment essentielle. Les musiciens doivent maîtriser leur 
 
 Une discussion d'une heure avec des amis est un bon début, mais ce sera insuffisant. Vous devez vous asseoir et structurer vos idées pour avoir une vision claire du chemin que vous devrez parcourir afin de concrétiser vos idées. Pour ce faire, il vous suffit d'un stylo, de quelques feuilles de papier et d'un peu de temps pour répondre au moins aux questions suivantes.
 
-> **Note :** Il existe d'innombrables moyens pour mener à bien des idées de projet. Nous ne pouvons pas tous les mentionner ici (un livre entier ne suffirait pas). Ce que nous allons présenter ici est une méthode simple pour gérer ce que les professionnels appellent [l'idéation](https://fr.wikipedia.org/wiki/Id%C3%A9ation), [la planification](https://fr.wikipedia.org/wiki/Planification) et [la gestion de projet](https://fr.wikipedia.org/wiki/Gestion_de_projet).
+> **Note :** Il existe d'innombrables moyens pour mener à bien des idées de projet. Nous ne pouvons pas tous les mentionner ici (un livre entier ne suffirait pas). Ce que nous allons présenter ici est une méthode simple pour gérer ce que les professionnels appellent [l'idéation](https://fr.wikipedia.org/wiki/Idéation), [la planification](https://fr.wikipedia.org/wiki/Planification) et [la gestion de projet](https://fr.wikipedia.org/wiki/Gestion_de_projet).
 
 ### Qu'est-ce que je veux accomplir exactement ?
 

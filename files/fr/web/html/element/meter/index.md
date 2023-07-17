@@ -98,7 +98,7 @@ On remarquera ici que l'attribut `min` est absent (ce qui est autorisé), la val
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
@@ -110,7 +110,7 @@ On remarquera ici que l'attribut `min` est absent (ce qui est autorisé), la val
       <th scope="row"><dfn>Contenu autorisé</dfn></th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >
         ne possédant pas d'élément <code>&#x3C;meter></code> parmi ses
@@ -126,7 +126,7 @@ On remarquera ici que l'attribut `min` est absent (ce qui est autorisé), la val
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >.
       </td>

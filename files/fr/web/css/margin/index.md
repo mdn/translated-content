@@ -17,7 +17,7 @@ Il est possible d'utiliser des valeurs négatives pour chacun des côtés.
 
 {{EmbedInteractiveExample("pages/css/margin.html")}}
 
-Les marges haute et basse n'ont aucun effet sur les élements en ligne (_inline_) qui ne sont pas [remplacés](/fr/docs/Web/CSS/%C3%89l%C3%A9ment_remplac%C3%A9) (par exemple les {{HTMLElement("span")}} ou {{HTMLElement("code")}}).
+Les marges haute et basse n'ont aucun effet sur les élements en ligne (_inline_) qui ne sont pas [remplacés](/fr/docs/Web/CSS/Élément_remplacé) (par exemple les {{HTMLElement("span")}} ou {{HTMLElement("code")}}).
 
 > **Note :** Les marges créent un espace supplémentaire à l'extérieur de l'élément. Le _« remplissage »_ ({{cssxref("padding")}}) permet quant à lui de créer un espace supplémentaire à l'intérieur de l'élément.
 

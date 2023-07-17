@@ -10,7 +10,7 @@ translation_of: Web/CSS/border-right
 
 {{CSSRef}}
 
-La propriété **`border-right`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de décrire la bordure droite d'un élément.
+La propriété **`border-right`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de décrire la bordure droite d'un élément.
 
 Elle définit les valeurs des propriétés suivantes :
 

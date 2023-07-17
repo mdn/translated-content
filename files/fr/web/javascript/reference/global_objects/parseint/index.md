@@ -28,7 +28,7 @@ parseInt(string, base);
   - : La valeur qu'on souhaite analyser et convertir. Si l'argument `string` n'est pas une chaîne de caractères, elle sera convertie en une chaîne (grâce à l'opération abstraite [`ToString`](https://www.ecma-international.org/ecma-262/6.0/#sec-tostring)) . Les blancs contenus au début de l'argument sont ignorés.
 - `base`
 
-  - : Un entier compris entre 2 et 36 qui représente la [base](https://fr.wikipedia.org/wiki/Base_%28arithm%C3%A9tique%29) utilisée pour la valeur représentée dans la chaîne. La base communément utilisée est la base décimale et on utilisera donc `10` dans ce cas pour ce paramètre.
+  - : Un entier compris entre 2 et 36 qui représente la [base](https://fr.wikipedia.org/wiki/Base_%28arithmétique%29) utilisée pour la valeur représentée dans la chaîne. La base communément utilisée est la base décimale et on utilisera donc `10` dans ce cas pour ce paramètre.
 
     > **Attention :** La base par défaut n'est pas 10. Ce paramètre doit toujours être utilisé, en effet s'il n'est pas spécifié, le comportement de la fonction n'est pas garanti et peut varier d'une plate-forme à une autre.
 

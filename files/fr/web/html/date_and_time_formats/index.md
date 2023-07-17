@@ -135,7 +135,7 @@ En HTML, les chaînes qui représentent des dates et des heures manipulent uniqu
 
 ### Numérotation des années
 
-La spécification HTML indique que les années doivent être exprimées selon le [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_gr%C3%A9gorien). Bien que les interfaces utilisateur permettent éventuellement de saisir des dates grâce à d'autres calendriers, la valeur sous-jacente est toujours représentée à l'aide du calendrier grégorien.
+La spécification HTML indique que les années doivent être exprimées selon le [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_grégorien). Bien que les interfaces utilisateur permettent éventuellement de saisir des dates grâce à d'autres calendriers, la valeur sous-jacente est toujours représentée à l'aide du calendrier grégorien.
 
 Bien que le calendrier grégorien ait été créé en 1582 afin de remplacer le calendrier julien, la notation grégorienne est « étendue » en HTML jusqu'à 1 après J.C. Aussi, si vous manipulez des dates antérieures à 1582, assurez-vous qu'elles soient bien exprimées selon le calendrier grégorien.
 

@@ -23,7 +23,7 @@ Une valeur de type `<frequency>` se compose d'une valeur {{cssxref("&lt;number&g
 - `kHz`
   - : Permet de représenter des fréquences exprimées en kilohertz (par exemple `0kHz`, `1.5kHz`, `10kHz`).
 
-Bien que la valeur nulle puisse être représentée avec le même littéral pour les deux unités, l'unité ne doit pas être absente sinon la valeur sera interprétée comme une valeur de longueur (type {{cssxref("length")}}) et ne représentera ni `0Hz` ni `0kHz`. Bien que les unités CSS soient insensibles à la casse, c'est une bonne pratique que d'utiliser un H majuscule pour `Hz` et `kHz` car selon le [système international](https://fr.wikipedia.org/wiki/Syst%C3%A8me_international_d%27unit%C3%A9s), [Hertz](https://fr.wikipedia.org/wiki/Heinrich_Rudolf_Hertz) est un nom de famille.
+Bien que la valeur nulle puisse être représentée avec le même littéral pour les deux unités, l'unité ne doit pas être absente sinon la valeur sera interprétée comme une valeur de longueur (type {{cssxref("length")}}) et ne représentera ni `0Hz` ni `0kHz`. Bien que les unités CSS soient insensibles à la casse, c'est une bonne pratique que d'utiliser un H majuscule pour `Hz` et `kHz` car selon le [système international](https://fr.wikipedia.org/wiki/Système_international_d%27unités), [Hertz](https://fr.wikipedia.org/wiki/Heinrich_Rudolf_Hertz) est un nom de famille.
 
 ## Exemples
 

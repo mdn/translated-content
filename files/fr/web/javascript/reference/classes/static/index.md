@@ -108,6 +108,6 @@ class StaticMethodCall{
 
 ## Voir aussi
 
-- [Expression `class`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/class)
+- [Expression `class`](/fr/docs/Web/JavaScript/Reference/Opérateurs/class)
 - [Déclaration `class`](/fr/docs/Web/JavaScript/Reference/Instructions/class)
 - [Les classes](/fr/docs/Web/JavaScript/Reference/Classes)

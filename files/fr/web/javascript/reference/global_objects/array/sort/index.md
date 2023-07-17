@@ -29,7 +29,7 @@ arr.sort(fonctionComparaison)
 ### Paramètres
 
 - `fonctionComparaison` {{optional_inline}}
-  - : Ce paramètre optionnel permet de spécifier une fonction définissant l'ordre de tri. Si absente, le tableau est trié selon la valeur de point de code [Unicode](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_litt%C3%A9raux#Unicode) de chaque caractère, d'après la conversion en chaine de caractères de chaque élément. Cette fonction prendra deux arguments : le premier élément à comparer et le deuxième élément à comparer.
+  - : Ce paramètre optionnel permet de spécifier une fonction définissant l'ordre de tri. Si absente, le tableau est trié selon la valeur de point de code [Unicode](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Unicode) de chaque caractère, d'après la conversion en chaine de caractères de chaque élément. Cette fonction prendra deux arguments : le premier élément à comparer et le deuxième élément à comparer.
 
 ### Valeur de retour
 
@@ -80,7 +80,7 @@ console.log(nombres);
 // [1, 2, 3, 4, 5]
 ```
 
-ECMAScript 2015 permet d'utiliser [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) et ainsi d'obtenir une syntaxe plus concise :
+ECMAScript 2015 permet d'utiliser [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) et ainsi d'obtenir une syntaxe plus concise :
 
 ```js
 let nombres = [4, 2, 5, 1, 3];

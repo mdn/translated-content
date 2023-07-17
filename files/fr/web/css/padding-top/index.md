@@ -12,7 +12,7 @@ translation_of: Web/CSS/padding-top
 
 La propriété **`padding-top`** d'un élément ajuste la hauteur de la boîte de remplissage (_padding_) en haut de l'élément.
 
-La [zone de remplissage](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte) correspond à l'espace entre le contenu et la bordure. Contrairement à {{cssxref("margin-top")}}, `padding-top` ne peut pas recevoir de valeurs négatives.
+La [zone de remplissage](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) correspond à l'espace entre le contenu et la bordure. Contrairement à {{cssxref("margin-top")}}, `padding-top` ne peut pas recevoir de valeurs négatives.
 
 {{EmbedInteractiveExample("pages/css/padding-top.html")}}
 

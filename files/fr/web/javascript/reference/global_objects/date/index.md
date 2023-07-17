@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Date
 
 {{JSRef}}
 
-Les objets JavaScript **`Date`** représentent un instant donné sur l'axe du temps dans un format indépendant de la plateforme utilisée. Les objets `Date` contiennent un nombre (`Number`) qui représente le nombre de millisecondes écoulées depuis le premier janvier 1970 sur l'échelle [UTC](https://fr.wikipedia.org/wiki/Temps_universel_coordonn%C3%A9).
+Les objets JavaScript **`Date`** représentent un instant donné sur l'axe du temps dans un format indépendant de la plateforme utilisée. Les objets `Date` contiennent un nombre (`Number`) qui représente le nombre de millisecondes écoulées depuis le premier janvier 1970 sur l'échelle [UTC](https://fr.wikipedia.org/wiki/Temps_universel_coordonné).
 
 > **Note :** TC39 travaille actuellement sur [Temporal](https://tc39.es/proposal-temporal/docs/index.html), une nouvelle API pour la gestion des dates, heures et données temporelles.
 > Pour en savoir plus, consultez le [blog d'Igalia](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/) et n'hésitez pas à répondre [au sondage](https://forms.gle/iL9iZg7Y9LvH41Nv8). Les retours concrets de développeurs web sont importants pour affiner cette API. Attention, elle n'est pas encore prête à être utilisée en production !

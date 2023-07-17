@@ -30,7 +30,7 @@ Des chaînes plus avancées peuvent être créées en utilisant des séquences d
 
 #### Les séquences d'échappement hexadécimales
 
-Le nombre situé après \x est interprété comme un nombre [hexadécimal](https://fr.wikipedia.org/wiki/Syst%C3%A8me_hexad%C3%A9cimal) :
+Le nombre situé après \x est interprété comme un nombre [hexadécimal](https://fr.wikipedia.org/wiki/Système_hexadécimal) :
 
 ```js
 '\xA9' // "©"
@@ -222,7 +222,7 @@ Le tableau suivant résume les méthodes des objets {{jsxref("String")}}.
 
 ### Les littéraux de modèle multi-lignes
 
-Le [littéraux de modèle](/fr/docs/Web/JavaScript/Reference/Litt%C3%A9raux_gabarits) sont des littéraux de chaîne de caractères permettant des expressions intégrées. Avec eux, vous pouvez utiliser des chaînes de caractères multi-lignes et des fonctionnalités d'interpolation de chaînes.
+Le [littéraux de modèle](/fr/docs/Web/JavaScript/Reference/Littéraux_gabarits) sont des littéraux de chaîne de caractères permettant des expressions intégrées. Avec eux, vous pouvez utiliser des chaînes de caractères multi-lignes et des fonctionnalités d'interpolation de chaînes.
 
 Les littéraux de gabarits sont délimités par des [accents graves](https://fr.wikipedia.org/wiki/Accent_grave) (ou _backticks\` \`_ en anglais), au lieu des apostrophes simples ou doubles. Les littéraux de modèle peuvent contenir des marque-places. Ceux-ci sont indiqués par le signe dollar et des accolades (`${expression}`).
 

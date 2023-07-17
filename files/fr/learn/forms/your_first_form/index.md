@@ -46,7 +46,7 @@ Les formulaires HTML sont un des vecteurs principaux d'interaction entre un util
 
 Un formulaire HTML est composé d'un ou plusieurs widgets. Ceux-ci peuvent être des zones de texte (sur une seule ligne ou plusieurs lignes), des boîtes à sélection, des boutons, des cases à cocher ou des boutons radio. La plupart du temps, ces items sont associés à un libellé qui décrit leur rôle — des étiquettes correctement implémentées sont susceptibles d'informer clairement l'utilisateur normal ou mal‑voyant sur ce qu'il convient d'entrer dans le formulaire.
 
-La principale différence entre un formulaire HTML et un document HTML habituel réside dans le fait que, généralement, les données collectées par le formulaire sont envoyées vers un serveur web. Dans ce cas, vous avez besoin de mettre en place un serveur web pour récupérer ces données et les traiter. La mise en place d'un tel serveur ne fait pas partie des sujets abordés dans ce guide. Si vous souhaitez toutefois en savoir plus, voyez «&nbsp;[Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires)&nbsp;» plus loin dans ce module.
+La principale différence entre un formulaire HTML et un document HTML habituel réside dans le fait que, généralement, les données collectées par le formulaire sont envoyées vers un serveur web. Dans ce cas, vous avez besoin de mettre en place un serveur web pour récupérer ces données et les traiter. La mise en place d'un tel serveur ne fait pas partie des sujets abordés dans ce guide. Si vous souhaitez toutefois en savoir plus, voyez «&nbsp;[Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)&nbsp;» plus loin dans ce module.
 
 ## Concevoir le formulaire
 
@@ -82,7 +82,7 @@ Cet élément définit un formulaire. C'est un élément conteneur au même titr
 - L'attribut `action` définit l'emplacement (une URL) où doivent être envoyées les données collectées par le formulaire.
 - L'attribut `method` définit la méthode HTTP utilisée pour envoyer les données (cela peut être « get » ou « post »).
 
-> **Note :** Si vous souhaitez en savoir plus sur le fonctionnement de ces attributs, cela est détaillé dans l'article [«&nbsp;Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires)&nbsp;».
+> **Note :** Si vous souhaitez en savoir plus sur le fonctionnement de ces attributs, cela est détaillé dans l'article [«&nbsp;Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)&nbsp;».
 
 Pour le moment, ajoutez l'élément {{htmlelement("form")}} ci dessus dans le corps de votre HTML.
 
@@ -262,7 +262,7 @@ Pour nommer vos données vous devez utiliser l'attribut `name` pour identifier b
 
 Dans notre exemple, le formulaire enverra trois informations nommées respectivement «&nbsp;`user_name`&nbsp;», «&nbsp;`user_email`&nbsp;» et «&nbsp;`user_message`&nbsp;». Ces informations seront envoyées à l'URL « `/my-handling-form-page` » avec la méthode HTTP POST.
 
-Du côté du serveur, le script à l'URL « `/my-handling-form-page` » recevra les données sous forme d'une liste de trois éléments clé/valeur intégrés à la requête HTTP. À vous de définir comment ce script va manipuler les données. Chacun des langages serveurs (PHP, Python, Ruby, Java, C#, etc.) a son propre mécanisme pour traiter ces données. Il n'appartient pas à ce guide d'approfondir ce sujet, mais si vous souhaitez en savoir plus, nous avons mis quelques exemples dans l'article [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires).
+Du côté du serveur, le script à l'URL « `/my-handling-form-page` » recevra les données sous forme d'une liste de trois éléments clé/valeur intégrés à la requête HTTP. À vous de définir comment ce script va manipuler les données. Chacun des langages serveurs (PHP, Python, Ruby, Java, C#, etc.) a son propre mécanisme pour traiter ces données. Il n'appartient pas à ce guide d'approfondir ce sujet, mais si vous souhaitez en savoir plus, nous avons mis quelques exemples dans l'article [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires).
 
 ## Résumé
 

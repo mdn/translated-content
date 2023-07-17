@@ -37,4 +37,4 @@ alert(window.getSelection().toString())  // Appel explicite
 
 ### Voir aussi
 
-- [Object.toString](/fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Objets_globaux/Object/toString)
+- [Object.toString](/fr/Référence_de_JavaScript_1.5_Core/Objets_globaux/Object/toString)

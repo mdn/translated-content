@@ -62,5 +62,5 @@ p {
 - [La notion de valeur initiale](/fr/docs/Web/CSS/Valeur_initiale)
 - [La notion de valeur calculée](/fr/docs/Web/CSS/Valeur_calculée)
 - [La notion de valeur utilisée](/fr/docs/Web/CSS/Valeur_utilisée)
-- [La notion de valeur résolue](/fr/docs/Web/CSS/valeur_r%C3%A9solue)
+- [La notion de valeur résolue](/fr/docs/Web/CSS/valeur_résolue)
 - [La notion de valeur réelle](/fr/docs/Web/CSS/valeur_reelle)

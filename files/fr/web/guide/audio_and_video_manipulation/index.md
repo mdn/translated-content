@@ -373,7 +373,7 @@ Des bibliothèques existent actuellement pour les formats suivants:
 - [HTML5 playbackRate expliqué](/fr/Apps/Build/Manipulating_media/HTML5_playbackRate_explained)
 - [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Les bases de la spatialisation audio Web](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [Utilisation des images vidéo comme texture WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL#Utilisation_des_images_vid%C3%A9o_comme_texture) (Vous pouvez également utiliser la bilbiothèque WebGL [THREE.js](http://threejs.org) (ou autres) pour [obtenir cet effet](http://stemkoski.github.io/Three.js/Video.html))
+- [Utilisation des images vidéo comme texture WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL#Utilisation_des_images_vidéo_comme_texture) (Vous pouvez également utiliser la bilbiothèque WebGL [THREE.js](http://threejs.org) (ou autres) pour [obtenir cet effet](http://stemkoski.github.io/Three.js/Video.html))
 - [Animation de Textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL)
 - [Developing Game Audio with the Web Audio API (Room effects and filters)](http://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
 

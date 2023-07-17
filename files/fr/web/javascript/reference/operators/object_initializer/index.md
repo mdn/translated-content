@@ -292,6 +292,6 @@ La notation utilisant un littéral objet n'est pas identique à celle utilisée 
 ## Voir aussi
 
 - [Accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres)
-- [`get`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_get) / [`set`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_set)
+- [`get`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_get) / [`set`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_set)
 - [Définitions de méthode](/fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode)
 - [Grammaire lexicale](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale) de JavaScript

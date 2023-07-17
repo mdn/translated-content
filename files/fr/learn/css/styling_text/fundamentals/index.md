@@ -79,7 +79,7 @@ Vous pouvez trouver l'[exemple (en) fini](https://mdn.github.io/learning-area/cs
 
 La propriété {{cssxref("color")}} définit la couleur du contenu d'avant‑plan des éléments sélectionnés (généralement du texte, mais peut être autre chose, comme un soulignement ou un surlignage créé avec la propriété {{cssxref("text-decoration")}}.
 
-`color` accepte toutes les [unités de couleur des CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Values_and_units#Couleurs), par exemple :
+`color` accepte toutes les [unités de couleur des CSS](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units#Couleurs), par exemple :
 
 ```css
 p {
@@ -201,7 +201,7 @@ occasions, comme maintenant.</p>
 
 ### Taille de la police de caractères
 
-Dans l'article [Valeurs et unités CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Values_and_units) de notre prédédent module, nous avons vu les [unités de longueur et taille](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Values_and_units#Longueur_et_taille). La taille des polices de caractères (définie avec la propriété {{cssxref("font-size")}}) accepte la plupart des unités de valeur (et d'autres comme les [pourcentages](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Values_and_units#Pourcentages)). Toutefois, les unités les plus couramment utilisées pour dimensionner le texte sont :
+Dans l'article [Valeurs et unités CSS](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units) de notre prédédent module, nous avons vu les [unités de longueur et taille](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units#Longueur_et_taille). La taille des polices de caractères (définie avec la propriété {{cssxref("font-size")}}) accepte la plupart des unités de valeur (et d'autres comme les [pourcentages](/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units#Pourcentages)). Toutefois, les unités les plus couramment utilisées pour dimensionner le texte sont :
 
 - `px` (pixels) : le nombre de pixels souhaités pour la hauteur du texte. C'est une unité absolue — il en résulte une même valeur finale calculée de la police sur la page dans à peu près n'importe quelle situation.
 - `em` : 1 em est égal à la taille de la police définie sur l'élément parent de l'élément courant que nous composons (plus précisément, la largeur d'un « M » majuscule de l'élément parent). Cette valeur peut devenir difficile à déterminer si vous avez beaucoup d'imbrications avec diverses tailles de police, mais cela reste faisable, comme vous le verrez ci-dessous. Pourquoi s'embêter ? C'est assez naturel, une fois que vous y êtes habitué ; vous pouvez utiliser `em` pour tout dimensionner, pas seulement du texte. Vous pouvez avoir un site web entier dimensionné avec des `em`, la maintenance en sera facilitée.

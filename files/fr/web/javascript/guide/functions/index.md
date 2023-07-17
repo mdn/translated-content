@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Guide/Functions
 original_slug: Web/JavaScript/Guide/Fonctions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Boucles_et_it%C3%A9ration", "Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Boucles_et_itération", "Web/JavaScript/Guide/Expressions_et_Opérateurs")}}
 
 Les fonctions font partie des briques fondamentales de JavaScript. Une fonction est une procédure JavaScript, un ensemble d'instructions effectuant une tâche ou calculant une valeur. Afin d'utiliser une fonction, il est nécessaire de l'avoir auparavant définie au sein de la portée dans laquelle on souhaite l'appeler.
 
@@ -489,7 +489,7 @@ var créerAnimal = function(nom) {  // La fonction externe définit une variable
 }
 ```
 
-L'opérateur [`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this) doit être traité avec précaution dans les fermetures. Attention, `this` fait référence au contexte où la fonction est appelée et non à l'endroit où il est défini.
+L'opérateur [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) doit être traité avec précaution dans les fermetures. Attention, `this` fait référence au contexte où la fonction est appelée et non à l'endroit où il est défini.
 
 ## Utiliser l'objet `arguments`
 
@@ -685,4 +685,4 @@ JavaScript possède plusieurs fonctions natives, disponibles au plus haut niveau
 - {{jsxref("Objets_globaux/unescape","unescape()")}} {{deprecated_inline}}
   - : La fonction dépréciée **`unescape()`** calcule une nouvelle chaîne de caractères pour laquelle les séquences d'échappement hexadécimales sont remplacées par les caractères qu'elles représentent. Les séquences d'échappement introduites peuvent provenir d'une fonction telle que {{jsxref("Objets_globaux/escape","escape()")}}. `unescape` est dépréciée et doit être remplacée par {{jsxref("Objets_globaux/decodeURI","decodeURI()")}} ou {{jsxref("Objets_globaux/decodeURIComponent","decodeURIComponent()")}}.
 
-{{PreviousNext("Web/JavaScript/Guide/Boucles_et_it%C3%A9ration", "Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs")}}
+{{PreviousNext("Web/JavaScript/Guide/Boucles_et_itération", "Web/JavaScript/Guide/Expressions_et_Opérateurs")}}

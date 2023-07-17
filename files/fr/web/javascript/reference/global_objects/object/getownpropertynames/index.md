@@ -143,7 +143,7 @@ Object.getOwnPropertyNames('toto')
 
 ## Voir aussi
 
-- [Énumérabilité et possession des propriétés](/fr/docs/Web/JavaScript/Caract%C3%A8re_%C3%A9num%C3%A9rable_des_propri%C3%A9t%C3%A9s_et_rattachement)
+- [Énumérabilité et possession des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}

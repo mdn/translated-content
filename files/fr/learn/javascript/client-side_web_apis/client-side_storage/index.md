@@ -690,7 +690,7 @@ C'est là qu'interviennet les [Service workers](/fr/docs/Web/API/Service_Worker_
 
 Un service worker est un fichier JavaScript qui, pour faire simple, est associé à une origine (un site web à un domaine donné) lorsque le navigateur y accède. Une fois associé, il peut contrôler les pages disponibles pour cette origine. Il le fait en s'installant entre la page chargée et le réseau, interceptant les requêtes réseau visant cette origine.
 
-Quand le service worker intercepte une requête, il peut faire tout ce que vous voulez (voir quelques [idées de cas d'utilisation](/fr/docs/Web/API/Service_Worker_API#Autres_id%C3%A9es_de_cas_d'utilisation)), mais l'exemple le plus classique est de sauvegarder les réponses réseau hors-ligne pour fournir ces réponses aux requêtes qui suivent au lieu d'utiliser le réseau. Ainsi, cela vous permet de faire fonctionner un site web complètement hors-ligne.
+Quand le service worker intercepte une requête, il peut faire tout ce que vous voulez (voir quelques [idées de cas d'utilisation](/fr/docs/Web/API/Service_Worker_API#Autres_idées_de_cas_d'utilisation)), mais l'exemple le plus classique est de sauvegarder les réponses réseau hors-ligne pour fournir ces réponses aux requêtes qui suivent au lieu d'utiliser le réseau. Ainsi, cela vous permet de faire fonctionner un site web complètement hors-ligne.
 
 L'API Cache est un autre mécanisme de stockage côté client, il a été conçu pour enregistrer les réponses HTTP et fonctionne donc très bien en synergie avec les service workers.
 

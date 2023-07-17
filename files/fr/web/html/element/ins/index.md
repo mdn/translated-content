@@ -80,11 +80,11 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
       </th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >Contenu phrasé</a
         >
         ou
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
           >contenu de flux</a
         >.
       </td>
@@ -93,7 +93,7 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Mod%C3%A8le_de_contenu_transparent"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Modèle_de_contenu_transparent"
           >Contenu transparent</a
         >.
       </td>
@@ -109,7 +109,7 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
       <td>
         Tout élément qui accepte du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>

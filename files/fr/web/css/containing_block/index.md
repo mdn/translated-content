@@ -11,7 +11,7 @@ original_slug: Web/CSS/A_Propos_Du_Bloc_Conteneur
 
 {{CSSRef}}
 
-Le **bloc englobant (_containing block_)** affecte souvent la taille et la position d'un élément. La plupart du temps, le bloc englobant est la [zone de contenu](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_propri%c3%a9t%c3%a9s_des_bo%c3%aetes) de l'ancêtre de [bloc](/fr/docs/Web/HTML/Block-level_elements) le plus proche mais cette règle n'est pas absolue. Dans cet article, nous verrons les différents facteurs qui participent à la définition du bloc englobant.
+Le **bloc englobant (_containing block_)** affecte souvent la taille et la position d'un élément. La plupart du temps, le bloc englobant est la [zone de contenu](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_propriétés_des_boîtes) de l'ancêtre de [bloc](/fr/docs/Web/HTML/Block-level_elements) le plus proche mais cette règle n'est pas absolue. Dans cet article, nous verrons les différents facteurs qui participent à la définition du bloc englobant.
 
 Lorsqu'un agent utilisateur (un navigateur web par exemple) dispose un document, il génère une boîte pour chaque élément du document. Chaque boîte est divisée en quatre zones :
 
@@ -22,7 +22,7 @@ Lorsqu'un agent utilisateur (un navigateur web par exemple) dispose un document,
 
 ![Diagram of the box model](box-model.png)
 
-> **Note :** Voir [cet article pour découvrir le modèle de boîtes](/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte) en CSS.
+> **Note :** Voir [cet article pour découvrir le modèle de boîtes](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte) en CSS.
 
 On pourrait penser que le bloc englobant d'un élément est toujours la zone de contenu de son élément parent. Toutefois, ce n'est pas toujours le cas. Voyons donc les facteurs qui déterminent ce bloc englobant.
 

@@ -17,7 +17,7 @@ L'orientation de l'écran est quelque chose de légèrement différent de [l'ori
 
 Il y a plusieurs manières de gérer l'orientation de l'écran, à la fois avec CSS et JavaScript:
 
-- La première est la [media query orientation](/fr/docs/Web/CSS/Requ%C3%AAtes_m%C3%A9dia/Utiliser_les_Media_queries#orientation). Cela permet au contenu d'ajuster sa mise en forme à l'aide de CSS, selon que la fenêtre soit en mode paysage (c'est à dire que la largeur est plus grande que la hauteur) ou en mode portrait (que sa hauteur est plus grande que sa largeur).
+- La première est la [media query orientation](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#orientation). Cela permet au contenu d'ajuster sa mise en forme à l'aide de CSS, selon que la fenêtre soit en mode paysage (c'est à dire que la largeur est plus grande que la hauteur) ou en mode portrait (que sa hauteur est plus grande que sa largeur).
 - La deuxième est l'API JavaScript d'orientation d'écran, qui peut être utilisée pour récupérer l'orientation en cours de l'écran et éventuellement de la verrouiller.
 
 ## Ajuster la mise en page selon l'orientation
@@ -164,5 +164,5 @@ Pour Firefox OS et Firefox Android (bientôt pour la version bureau de Firefox �
 - {{domxref("Screen.lockOrientation()")}}
 - {{domxref("Screen.unlockOrientation()")}}
 - {{domxref("Screen.onorientationchange")}}
-- [Media query orientation](/fr/docs/Web/CSS/Requ%C3%AAtes_m%C3%A9dia/Utiliser_les_Media_queries#orientation)
+- [Media query orientation](/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#orientation)
 - [A short introduction to media queries in Firefox 3.5](http://hacks.mozilla.org/2009/06/media-queries/)

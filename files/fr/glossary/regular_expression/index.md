@@ -10,7 +10,7 @@ Les expressions régulières (ou expressions rationnelles) sont implémentées d
 
 ## Voir aussi
 
-- [Expressions régulières](https://fr.wikipedia.org/wiki/Expression_r%C3%A9guli%C3%A8re) sur Wikipédia
+- [Expressions régulières](https://fr.wikipedia.org/wiki/Expression_régulière) sur Wikipédia
 - [Tutoriel interactif](http://regexone.com/)
 - [Visualiseur d'expressions régulières](http://regexper.com/)
-- [Ecrire des expressions régulières en JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res)
+- [Ecrire des expressions régulières en JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_régulières)

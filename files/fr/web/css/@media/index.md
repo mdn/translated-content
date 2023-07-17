@@ -13,7 +13,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) **`@media`** permet d'appliquer une part
 
 ## Syntaxe
 
-Une requête média (type `<media-query>`) est composée d'un type de média (optionnel) et/ou de différentes caractéristiques relatives au média. Une requête média peut être imbriquée dans une autre [règle conditionnelle](/fr/docs/Web/CSS/At-rule#les_r%c3%a8gles_de_groupe_conditionnelles).
+Une requête média (type `<media-query>`) est composée d'un type de média (optionnel) et/ou de différentes caractéristiques relatives au média. Une requête média peut être imbriquée dans une autre [règle conditionnelle](/fr/docs/Web/CSS/At-rule#les_règles_de_groupe_conditionnelles).
 
 ```css
 /* Au niveau le plus haut du code */

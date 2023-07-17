@@ -30,10 +30,10 @@ Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureuse
           href="/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
           >installation des outils de base</a
         >, bases de la
-        <a href="/fr/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers"
+        <a href="/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >manipulation des fichiers</a
         >, fondamentaux du HTML (comme décrit dans <a
-          href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started"
+          href="/fr/Apprendre/HTML/Introduction_à_HTML/Getting_started"
           >Commencer avec le Web).</a
         >
       </td>
@@ -53,7 +53,7 @@ Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureuse
 
 Pour mettre une image simple sur une page web, nous utiliserons l'élément {{htmlelement("img")}}. C'est un {{glossary("empty element","élément vide")}} (ce qui signifie qu'il ne contient ni texte ni balise de fermeture) qui demande au moins un attribut pour fonctionner — `src` (souvent appelé par son nom entier: *source*). L'attribut `src` contient un chemin pointant vers l'image que vous voulez intégrer, qui peut être une URL absolue ou relative, de la même manière que l'élément {{htmlelement("a")}} `href=` attribue des valeurs.
 
-> **Note :** Vous devriez lire [Une brève présentation des URL et des chemins](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks#url) pour vous rafraîchir la mémoire avant de continuer.
+> **Note :** Vous devriez lire [Une brève présentation des URL et des chemins](/fr/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks#url) pour vous rafraîchir la mémoire avant de continuer.
 
 Donc, par exemple, si votre image s'appelle `dinosaur.jpg`, et qu'elle est située dans le même répertoire que votre page HTML, vous pouvez intégrer cette image comme ceci (URL relative) :
 
@@ -111,7 +111,7 @@ La manière la plus simple de tester votre texte `alt` est de mal épeler votre 
 
 Pourquoi vous verrez partout du texte alt ? Vous en aurez besoin car c'est très pratique en maintes occasions :
 
-- L'utilisateur est un déficient visuel qui utilise un [lecteur d'écran](https://fr.wikipedia.org/wiki/Lecteur_d%27%C3%A9cran) qui s'en sert pour "lire" le web. En fait, avoir du texte alt disponible pour décrire les images est très utile à beaucoup d'utilisateurs.
+- L'utilisateur est un déficient visuel qui utilise un [lecteur d'écran](https://fr.wikipedia.org/wiki/Lecteur_d%27écran) qui s'en sert pour "lire" le web. En fait, avoir du texte alt disponible pour décrire les images est très utile à beaucoup d'utilisateurs.
 - Comme nous l'avons vu au-dessus, vous pourriez avoir mal épelé le nom ou le chemin du fichier.
 - Le navigateur ne gère pas ce type d'image. Certains utilisent encore des navigateurs en terminal, affichant seulement du texte (comme [Lynx)](<https://fr.wikipedia.org/wiki/Lynx_(navigateur)>), qui affichent le texte alt des images.
 - Vous pouvez avoir envie de fournir du texte que pourraient utiliser les moteurs de recherche. Par exemple, ils mettront en relation le texte alt avec des requêtes de recherche.
@@ -121,7 +121,7 @@ Que devriez-vous noter dans vos attributs `alt` ? En premier lieu, cela dépend 
 
 - **Decoration.** Vous devriez utiliser [des images d'arrière-plan CSS](#images_darrière-plan_css) pour les images décoratives mais si vous devez utiliser du HTML, ajoutez un `alt=""` vide. Si l'image ne fait pas vraiment partie du contenu, un lecteur d'écran ne perdra pas de temps à la lire.
 - **Contenu.** Si votre image fournit une ou plusieurs informations supplémentaires significatives, inscrivez ces mêmes informations dans un *bref* `alt` text – ou mieux, dans le texte principal, que tout le monde puisse les voir. N'écrivez pas de `alt` text redondants. Imaginez combien ce serait ennuyeux pour un lecteur si tous les paragraphes étaient écrits en double... Si l'image est décrite de manière adéquate dans le corps de texte principal, vous pouvez utiliser simplement `alt=""`.
-- **Lien.** Si vous mettez une image à l'intérieur d'une ancre {{htmlelement("a")}} pour transformer une image en lien, vous devez quand même fournir un [Lien texte accessible](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks#bplien). Dans de tels cas, vous pouvez, soit l'inclure dans le même élément `<a>`, soit dans l'attribut `alt` de l'image – utilisez ce qui marche le mieux dans votre cas.
+- **Lien.** Si vous mettez une image à l'intérieur d'une ancre {{htmlelement("a")}} pour transformer une image en lien, vous devez quand même fournir un [Lien texte accessible](/fr/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks#bplien). Dans de tels cas, vous pouvez, soit l'inclure dans le même élément `<a>`, soit dans l'attribut `alt` de l'image – utilisez ce qui marche le mieux dans votre cas.
 - **Texte.** Vous ne devez pas mettre de texte dans les images. Si votre titre principal a besoin d'un peu d'ombrage par exemple, [utilisez CSS](/fr/docs/Web/CSS/text-shadow) pour ça, plutôt que de mettre du texte dans une image. De toutes manières, si vous ne pouvez pas éviter de faire ça, vous devez ajouter le texte dans l'attribut `alt` .
 
 Le but est de livrer essentiellement une expérience de qualité, même quand les images ne peuvent être vues. Cela assure à tous les utilisateurs de ne rien manquer du contenu. Essayez de ne pas afficher les images dans votre navigateur et regardez ce qu'il se passe. Vous allez vite réaliser que le texte fourni à la place est réellement utile.
@@ -152,7 +152,7 @@ De toutes manières, vous ne devez pas altérer la taille de vos images avec les
 
 ### Titre d'images
 
-Comme décrit dans le chapitre [Création d'hyperliens](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks), vous pouvez aussi ajouter un attribut `title` aux images, pour fournir un supplément d'information si nécessaire. Dans notre exemple, nous pourrions faire ceci :
+Comme décrit dans le chapitre [Création d'hyperliens](/fr/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks), vous pouvez aussi ajouter un attribut `title` aux images, pour fournir un supplément d'information si nécessaire. Dans notre exemple, nous pourrions faire ceci :
 
 ```html
 <img src="images/dinosaur.jpg"

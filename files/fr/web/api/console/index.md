@@ -255,7 +255,7 @@ L'affichage dans la console ressemblera à ceci :
 
 - [Outils de développement](/fr/docs/Outils)
 - [Console web](/fr/docs/Outils/Console_Web) - comment la console Web de Firefox gère les appels d'API de console
-- [Débogage distant](/fr/docs/Outils/D%C3%A9bogage_distant) - comment afficher la sortie de la console lorsque la cible de débogage est un périphérique mobile
+- [Débogage distant](/fr/docs/Outils/Débogage_distant) - comment afficher la sortie de la console lorsque la cible de débogage est un périphérique mobile
 - [Journalisation console sur l'appareil](/fr/docs/Archive/B2G_OS/Debugging/Journalisation_console) - comment se connecter sur les appareils Firefox OS
 
 ### Autres implémentations

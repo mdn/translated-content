@@ -56,7 +56,7 @@ Par exemple, afin de produire la page web que vous voyez sur votre navigateur, l
 
 ## Pédagogie active
 
-_Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. [Vous pouvez néanmoins contribuer](/fr/docs/MDN/D%C3%A9buter_sur_MDN)._
+_Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. [Vous pouvez néanmoins contribuer](/fr/docs/MDN/Débuter_sur_MDN)._
 
 ## Aller plus loin
 

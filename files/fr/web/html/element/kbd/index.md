@@ -161,11 +161,11 @@ On voit ici différentes imbrications. La description de l'option du menu est in
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
@@ -177,7 +177,7 @@ On voit ici différentes imbrications. La description de l'option du menu est in
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >Contenu phrasé</a
         >.
       </td>
@@ -191,7 +191,7 @@ On voit ici différentes imbrications. La description de l'option du menu est in
       <td>
         Tout élément qui accepte du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>

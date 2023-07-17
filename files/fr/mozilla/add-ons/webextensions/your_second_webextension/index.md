@@ -456,4 +456,4 @@ Maitenant que vous avez créé une WebExtension avancée pour Firefox, vous pouv
 - [Explorer l'anatomie d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [Explorer les exemples d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples)
 - [Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_)
-- [Approfondir votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_#continuez_votre_exp%c3%a9rience_d'apprentissage).
+- [Approfondir votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_#continuez_votre_expérience_d'apprentissage).

@@ -116,7 +116,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >.
       </td>
@@ -125,7 +125,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >.
       </td>
@@ -139,7 +139,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >.
       </td>

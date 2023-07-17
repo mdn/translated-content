@@ -27,7 +27,7 @@ Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'on
       <td>
         Être familiarisé avec les bases du HTML, traitées à la page
         <a
-          href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started"
+          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Getting_started"
           >Commencer avec le HTML</a
         >
         et du formatage de texte HTML, décrit dans les

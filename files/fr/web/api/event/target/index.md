@@ -55,4 +55,4 @@ ul.addEventListener('click', hide, false);
 
 ## Voir aussi
 
-[Comparaison des cibles d'évènements](/fr/docs/Web/API/Event/Comparaison_des_cibles_d_%C3%A9v%C3%A8nements)
+[Comparaison des cibles d'évènements](/fr/docs/Web/API/Event/Comparaison_des_cibles_d_évènements)

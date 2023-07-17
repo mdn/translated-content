@@ -225,7 +225,7 @@ Ici, `no-referrer` ne sera utilisée que si `strict-origin-when-cross-origin` n'
 
 ## Voir aussi
 
-- [Référent](https://fr.wikipedia.org/wiki/R%C3%A9f%C3%A9rent_(informatique)) sur Wikipédia
+- [Référent](https://fr.wikipedia.org/wiki/Référent_(informatique)) sur Wikipédia
 - En utilisant [Fetch](/fr/docs/Web/API/Fetch_API) : {{domxref("Request.referrerPolicy")}}
 - La directive obsolète {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} de l'en-tête {{HTTPHeader("Content-Security-Policy")}}.
 - [Same-origin policy](/fr/docs/Web/Security/Same-origin_policy)

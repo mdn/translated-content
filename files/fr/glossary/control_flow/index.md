@@ -28,7 +28,7 @@ Le contrôle de flux montre que lorsque vous lisez un script, vous ne devez pas 
 
 ### Culture générale
 
-- [Structure de contrôle](https://fr.wikipedia.org/wiki/Structure_de_contr%C3%B4le) sur Wikipédia
+- [Structure de contrôle](https://fr.wikipedia.org/wiki/Structure_de_contrôle) sur Wikipédia
 
 ### Référence technique
 

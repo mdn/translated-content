@@ -110,7 +110,7 @@ table td {
       </th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_m%C3%A9ta-donn%C3%A9es"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
           >Contenu de méta-données</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
@@ -138,7 +138,7 @@ table td {
       <td>
         Tout élément qui accepte du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_m%C3%A9ta-donn%C3%A9es"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_méta-données"
           >Contenu de méta-données</a
         >, du
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"

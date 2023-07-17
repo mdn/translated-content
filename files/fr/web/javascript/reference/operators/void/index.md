@@ -27,7 +27,7 @@ Cet opérateur permet d'évaluer des expressions retournant une valeur là où o
 
 L'opérateur `void` est souvent utilisé pour obtenir la valeur `undefined`, généralement avec "`void(0)`" (qui est l'équivalent de "`void 0`"). Pour ce cas d'exemple, on aurait très bien pu utiliser la variable globale {{jsxref("undefined")}}.
 
-Attention à [la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Pr%C3%A9c%C3%A9dence_des_op%C3%A9rateurs) et notamment de celle de `void`, si besoin, on pourra utiliser des parenthèses pour clarifier la résolution de l'expression :
+Attention à [la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Opérateurs/Précédence_des_opérateurs) et notamment de celle de `void`, si besoin, on pourra utiliser des parenthèses pour clarifier la résolution de l'expression :
 
 ```js
 void 2 == '2';    // renvoie false

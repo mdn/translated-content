@@ -14,7 +14,7 @@ Si un jeu de caractères est mal utilisé (par exemple, si l'on utilise Unicode 
 
 1. Articles Wikipédia
 
-    1. [Codage des caractères](https://fr.wikipedia.org/wiki/Codage_des_caract%C3%A8res)
+    1. [Codage des caractères](https://fr.wikipedia.org/wiki/Codage_des_caractères)
     2. [Mojibake](https://fr.wikipedia.org/wiki/Mojibake)
 
 2. [Glossaire](/fr/docs/Glossary)

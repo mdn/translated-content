@@ -58,7 +58,7 @@ La fonction `callback` est appelée avec trois arguments :
 2. l'index de l'élément courant,
 3. l'objet `Array` parcouru.
 
-Si le paramètre `thisArg` est fourni, il sera utilisé comme valeur `this` lors de l'appel de la fonction `callback`. S'il n'est pas fourni, la valeur `undefined` sera utilisée à la place. La valeur de `this` qui est finalement utilisée par la fonction `callback` est déterminée selon [les règles usuelles pour déterminer la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
+Si le paramètre `thisArg` est fourni, il sera utilisé comme valeur `this` lors de l'appel de la fonction `callback`. S'il n'est pas fourni, la valeur `undefined` sera utilisée à la place. La valeur de `this` qui est finalement utilisée par la fonction `callback` est déterminée selon [les règles usuelles pour déterminer la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
 
 Noter que `filter()` ne modifie pas le tableau d'origine.
 

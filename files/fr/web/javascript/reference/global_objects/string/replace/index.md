@@ -172,7 +172,7 @@ console.log(nouvChn); // Twas the night before Christmas...
 
 Cela affiche 'Twas the night before Christmas...'.
 
-> **Note :** Voir [ce guide](/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res) pour plus d'explications concernant les expressions régulières.
+> **Note :** Voir [ce guide](/fr/docs/Web/JavaScript/Guide/Expressions_régulières) pour plus d'explications concernant les expressions régulières.
 
 ### Utilisation de `global` et `ignore` avec `replace()`
 

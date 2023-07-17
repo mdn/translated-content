@@ -8,7 +8,7 @@ translation_of: Mozilla/Firefox/Releases/3/Site_compatibility
 
 Cette page essaie de donner un aperçu des changements entre [Gecko](/fr/Gecko) 1.8 et Gecko 1.9 qui pourraient éventuellement affecter le comportement ou le rendu des sites Web.
 
-Consultez également [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_d%c3%a9veloppeurs).
+Consultez également [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_développeurs).
 
 ## Évènements
 

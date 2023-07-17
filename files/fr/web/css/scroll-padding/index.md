@@ -11,7 +11,7 @@ translation_of: Web/CSS/scroll-padding
 
 {{CSSRef}}
 
-La propriété **`scroll-padding`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de définir l'ensemble des propriétés `scroll-padding-top`, `scroll-padding-right`, `scroll-padding-bottom` et `scroll-padding-left` (de la même façon que la propriété {{cssxref("padding")}} permet de définir les propriétés détaillées associées).
+La propriété **`scroll-padding`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de définir l'ensemble des propriétés `scroll-padding-top`, `scroll-padding-right`, `scroll-padding-bottom` et `scroll-padding-left` (de la même façon que la propriété {{cssxref("padding")}} permet de définir les propriétés détaillées associées).
 
 {{EmbedInteractiveExample("pages/css/scroll-padding.html")}}
 

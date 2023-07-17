@@ -437,6 +437,6 @@ Cet article a exploré les concepts fondamentaux inhérents aux fonctions, ouvra
 ## Voir aussi
 
 - [Fonctions](/fr/docs/Web/JavaScript/Guide/Fonctions) — aborde certaines fonctionnalités avancées non incluses ici.
-- [Valeur par défaut des arguments](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_d%C3%A9faut_des_arguments), [Fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) — références avancées
+- [Valeur par défaut des arguments](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments), [Fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) — références avancées
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}

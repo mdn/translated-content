@@ -77,7 +77,7 @@ function resetStyle(elemId) {
 </html>
 ```
 
-La méthode `getComputedStyle()` de l'objet `document.defaultView` renvoie tous les styles qui ont finalement été calculés pour un élément. Consultez l'[exemple 6 : getComputedStyle](/fr/R%c3%a9f%c3%a9rence_du_DOM_Gecko/Exemples#Exemple_6_:_getComputedStyle) dans le chapitre des exemples pour plus d'informations sur l'utilisation de cette méthode.
+La méthode `getComputedStyle()` de l'objet `document.defaultView` renvoie tous les styles qui ont finalement été calculés pour un élément. Consultez l'[exemple 6 : getComputedStyle](/fr/Référence_du_DOM_Gecko/Exemples#Exemple_6_:_getComputedStyle) dans le chapitre des exemples pour plus d'informations sur l'utilisation de cette méthode.
 
 ### L'objet DOM style
 

@@ -18,9 +18,9 @@ HTML permet de résoudre de nombreux problèmes qui se posent lors de la concept
 
 En HTML, tout commence par la structure du document. Si vous débutez avec HTML, vous devriez démarrer avec :
 
-- [Comment créer un document HTML simple](/fr/docs/Apprendre/HTML/Comment/Cr%C3%A9er_un_document_HTML_simple)
-- [Comment diviser une page web en sections logiques](/fr/docs/Apprendre/HTML/Comment/D%C3%A9couper_une_page_web_en_sections_logiques)
-- [Comment organiser une hiérarchie de titres](/fr/docs/Apprendre/HTML/Comment/Mettre_en_place_une_hi%C3%A9rarchie_de_titres)
+- [Comment créer un document HTML simple](/fr/docs/Apprendre/HTML/Comment/Créer_un_document_HTML_simple)
+- [Comment diviser une page web en sections logiques](/fr/docs/Apprendre/HTML/Comment/Découper_une_page_web_en_sections_logiques)
+- [Comment organiser une hiérarchie de titres](/fr/docs/Apprendre/HTML/Comment/Mettre_en_place_une_hiérarchie_de_titres)
 
 ### Sémantique de base pour le texte
 

@@ -20,7 +20,7 @@ L'objectif est d'introduire les outils qui feront de vous un utilisateur CSS com
 Avant de commencer ce cours, nous vous recommandons :
 
 1. D'être familiarisé avec l'usage des ordinateurs et avec la navigation sur internet.
-2. De disposer d'un environnement de travail comme il est décrit dans l'article [installation des outils de base](/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base) et de savoir créer et gérer des fichiers (cf. leçon [gérer les fichiers](/fr/docs/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers)).
+2. De disposer d'un environnement de travail comme il est décrit dans l'article [installation des outils de base](/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base) et de savoir créer et gérer des fichiers (cf. leçon [gérer les fichiers](/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)).
 3. D'être suffisamment à votre aise avec HTML (voir le cours [introduction au HTML](/fr/docs/Apprendre/HTML/Introduction_à_HTML)).
 4. D'avoir compris les bases du CSS telles qu'exposées dans le cours [premiers pas avec CSS.](/fr/docs/Learn/CSS/First_steps)
 

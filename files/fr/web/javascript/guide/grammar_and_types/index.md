@@ -368,7 +368,7 @@ L'exemple suivant crée ainsi le tableau `cafés` avec trois éléments et une t
 var cafés = ["Brésilien", "Colombien", "Kona"];
 ```
 
-> **Note :** Un littéral de tableau est du type d'un initialisateur d'objets. Voir [l'utilisation d'initialisateurs d'objets](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Initialisateur_objet).
+> **Note :** Un littéral de tableau est du type d'un initialisateur d'objets. Voir [l'utilisation d'initialisateurs d'objets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet).
 
 Si un tableau est créé en utilisant un littéral dans un script du plus haut niveau, JavaScript interprète le tableau chaque fois qu'il évalue l'expression contenant le littéral. De plus, un littéral utilisé dans une fonction est créé chaque fois que la fonction est appelée.
 
@@ -537,7 +537,7 @@ console.log(toto["2"]); // deux
 
 ### Les littéraux d'expressions rationnelles
 
-Un littéral d'[expression rationnelle](/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res) est un motif encadré par deux barres obliques. Par exemple :
+Un littéral d'[expression rationnelle](/fr/docs/Web/JavaScript/Guide/Expressions_régulières) est un motif encadré par deux barres obliques. Par exemple :
 
 ```js
 var re = /ab+c/;

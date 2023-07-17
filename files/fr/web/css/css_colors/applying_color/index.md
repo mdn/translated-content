@@ -136,7 +136,7 @@ Par exemple, on pourra représenter un rouge pur à moitié opaque grâce à `rg
 
 ### La notation fonctionnelle HSL
 
-D'autres personnes préfèrent manipuler [la notation HSL ou aussi appelée « Teinte saturation luminosité »](https://fr.wikipedia.org/wiki/Teinte_saturation_luminosit%C3%A9) (NDT : HSL signifie _Hue Saturation Lightness_ en anglais). Sur le Web, les couleurs HSL sont représentées grâce à la notation fonctionnelle `hsl()` (qui fonctionne de façon analogue à la fonction `rgb()`).
+D'autres personnes préfèrent manipuler [la notation HSL ou aussi appelée « Teinte saturation luminosité »](https://fr.wikipedia.org/wiki/Teinte_saturation_luminosité) (NDT : HSL signifie _Hue Saturation Lightness_ en anglais). Sur le Web, les couleurs HSL sont représentées grâce à la notation fonctionnelle `hsl()` (qui fonctionne de façon analogue à la fonction `rgb()`).
 
 Le diagramme qui suit illustre un cylindre de couleur pour le modèle HSL : _Hue_ (la teinte) définit la couleur sur un axe radial qui parcourt les couleurs du spectre visible. La saturation est un pourcentage de la teinte entre un gris total et la couleur de la teinte vive. Enfin, la luminosité permet d'avoir des couleurs plus sombres (noir pour une luminosité nulle ou blanc pour une luminosité maximale). Cette image a été créée par [SharkD](http://commons.wikimedia.org/wiki/User:SharkD) sur [Wikipédia](https://www.wikipedia.org/) et est distribuée avec la licence [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0).
 

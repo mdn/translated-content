@@ -25,7 +25,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Debugging_HTML
       <td>
         Être familiarisé avec les bases du HTML, traitées aux pages
         <a
-          href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started"
+          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Getting_started"
           >Commencer avec le HTML,</a
         >
         <a
@@ -33,7 +33,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Debugging_HTML
           >Fondamentaux du texte HTML </a
         >et
         <a
-          href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks"
+          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks"
           >Création d'hyperliens</a
         >.
       </td>
@@ -108,7 +108,7 @@ Voici le moment venu d'étudier le caractère permissif du code HTML.
     - Cette partie est mal imbriquée&nbsp;: `<strong>caractères gras <em>ou gras et italiques ?</strong> qu'est ce ?</em>`. Pas facile de dire comment il faut interpréter cela en raison du problème précédent.
     - La valeur de l'attribut [`href`](/fr/docs/Web/HTML/Element/a#href) n'a pas de guillemet double fermant. C'est ce qui semble avoir posé le plus gros problème — le lien n'a pas été mentionné du tout.
 
-5. Revoyons maintenant comment le navigateur a vu le balisage, par comparaison au balisage du code source. Pour ce faire, utilisons les outils de développement du navigateur. Si vous n'êtes pas un familier de l'utilisation des outils de développement du navigateur, prenez quelques minutes pour revoir [Découverte des outils de développement du navigateur](/fr/docs/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs).
+5. Revoyons maintenant comment le navigateur a vu le balisage, par comparaison au balisage du code source. Pour ce faire, utilisons les outils de développement du navigateur. Si vous n'êtes pas un familier de l'utilisation des outils de développement du navigateur, prenez quelques minutes pour revoir [Découverte des outils de développement du navigateur](/fr/docs/Apprendre/Découvrir_outils_développement_navigateurs).
 6. Dans l'«&nbsp;Inspecteur&nbsp;», vous pouvez voir ce à quoi le balisage du rendu ressemble&nbsp;: ![L'inspecteur HTML dans Firefox, avec le paragraphe de l'exemple en surbrillance, montrant le texte "Quelles sont les causes d'erreurs en HTML ? Ici, vous pouvez voir que l'élément de paragraphe a été fermé par le navigateur.](fr-inspecteur.png)
 7. Avec l'«&nbsp;Inspecteur&nbsp;», explorons le code en détail pour voir comment le navigateur a essayé de corriger nos erreurs HTML (nous avons fait la revue dans Firefox&nbsp;; d'autres navigateurs modernes _devraient_ donner le même résultat)&nbsp;:
 

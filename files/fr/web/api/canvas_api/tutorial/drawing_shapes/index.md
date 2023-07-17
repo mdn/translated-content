@@ -295,7 +295,7 @@ function draw() {
 
 ### Les courbes quadratiques et de Bézier
 
-Le type suivant de trajets disponible est la [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier), disponible en deux variétés, cubique et quadratique. Elles sont généralement utilisées pour dessiner des formes naturelles complexes.
+Le type suivant de trajets disponible est la [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_Bézier), disponible en deux variétés, cubique et quadratique. Elles sont généralement utilisées pour dessiner des formes naturelles complexes.
 
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}
   - : Dessine une courbe de Bézier quadratique depuis la position courante du stylo jusqu'au point final spécifié par `x` et `y`, en utilisant le point de contrôle spécifié par `cp1x` et `cp1y`.

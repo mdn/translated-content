@@ -82,7 +82,7 @@ Si l'utilisateur entre un nom correct cela marchera comme voulu. Cependant un ut
 SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't';
 ```
 
-Le moyen pour éviter ce type d'attaque est de s'assurer que toute saisie de l'utilisateur transmise à une requête SQL ne peut pas changer la nature de cette requête. Un moyen de faire cela est d'[échapper](https://fr.wikipedia.org/wiki/Caract%C3%A8re_d%27%C3%A9chappement) tous les caractères de la saisie utilisateur quand ils ont un sens particulier en SQL.
+Le moyen pour éviter ce type d'attaque est de s'assurer que toute saisie de l'utilisateur transmise à une requête SQL ne peut pas changer la nature de cette requête. Un moyen de faire cela est d'[échapper](https://fr.wikipedia.org/wiki/Caractère_d%27échappement) tous les caractères de la saisie utilisateur quand ils ont un sens particulier en SQL.
 
 > **Note :** la requête SQL considère le symbole ' comme le début et la fin d'une chaine de texte. En ajoutant le caractère \ nous allons "échapper" ce symbole, et dire à SQL de le traiter comme une simple partie de la chaîne de caractères.
 

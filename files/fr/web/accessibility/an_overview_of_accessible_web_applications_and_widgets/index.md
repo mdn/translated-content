@@ -207,8 +207,8 @@ Pour plus de détails à propos de ces conventions de navigation au clavier, un 
 
 ## Voir aussi
 
-- [ARIA](/fr/docs/Accessibilit%C3%A9/ARIA)
-- [Des applications WEB et la FAQ ARIA](/fr/docs/Accessibilit%C3%A9/ARIA/FAQ_Applications_Web_et_ARIA)
+- [ARIA](/fr/docs/Accessibilité/ARIA)
+- [Des applications WEB et la FAQ ARIA](/fr/docs/Accessibilité/ARIA/FAQ_Applications_Web_et_ARIA)
 - [WAI-ARIA Spécification](http://www.w3.org/TR/wai-aria/)
 - [WAI-ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html)
 - [DHTML Style Guide](http://dev.aol.com/dhtml_style_guide)
