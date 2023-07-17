@@ -40,14 +40,16 @@ function handleHidden() {
   console.log("panel is being hidden");
 }
 
-browser.devtools.panels.create(
-  "My Panel",           // title
-  "icons/star.png",           // icon
-  "devtools/panel/panel.html"          // content
-).then((newPanel) => {
-  newPanel.onShown.addListener(handleShown);
-  newPanel.onHidden.addListener(handleHidden);
-});
+browser.devtools.panels
+  .create(
+    "My Panel", // title
+    "icons/star.png", // icon
+    "devtools/panel/panel.html", // content
+  )
+  .then((newPanel) => {
+    newPanel.onShown.addListener(handleShown);
+    newPanel.onHidden.addListener(handleHidden);
+  });
 ```
 
 The extension can now run code in the inspected window using [`devtools.inspectedWindow.eval()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval) or by injecting a content script via the background script by passing a message. You can find more details on how to do this in [Extending the developer tools.](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)

@@ -19,8 +19,8 @@ This is an asynchronous function that returns a [`Promise`](/zh-CN/docs/Web/Java
 
 ```js
 var discarding = browser.tabs.discard(
-  tabIds          // integer or integer array
-)
+  tabIds, // integer or integer array
+);
 ```
 
 ### Parameters

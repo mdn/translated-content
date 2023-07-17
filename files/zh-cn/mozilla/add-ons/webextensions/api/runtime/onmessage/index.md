@@ -33,9 +33,9 @@ To send an asynchronous response, there are two options:
 ## Syntax
 
 ```js
-browser.runtime.onMessage.addListener(listener)
-browser.runtime.onMessage.removeListener(listener)
-browser.runtime.onMessage.hasListener(listener)
+browser.runtime.onMessage.addListener(listener);
+browser.runtime.onMessage.removeListener(listener);
+browser.runtime.onMessage.hasListener(listener);
 ```
 
 Events have three functions:
@@ -76,7 +76,7 @@ Events have three functions:
     >
     > ```js
     > browser.runtime.onMessage.addListener(async (data, sender) => {
-    >   if (data.type === 'handle_me') return 'done';
+    >   if (data.type === "handle_me") return "done";
     > });
     > ```
     >
@@ -109,7 +109,7 @@ function notifyExtension(e) {
   if (e.target.tagName != "A") {
     return;
   }
-  browser.runtime.sendMessage({"url": e.target.href});
+  browser.runtime.sendMessage({ url: e.target.href });
 }
 ```
 
@@ -122,10 +122,10 @@ browser.runtime.onMessage.addListener(notify);
 
 function notify(message) {
   browser.notifications.create({
-    "type": "basic",
-    "iconUrl": browser.extension.getURL("link.png"),
-    "title": "You clicked a link!",
-    "message": message.url
+    type: "basic",
+    iconUrl: browser.extension.getURL("link.png"),
+    title: "You clicked a link!",
+    message: message.url,
   });
 }
 ```
@@ -146,7 +146,9 @@ function handleError(error) {
 }
 
 function sendMessage(e) {
-  var sending = browser.runtime.sendMessage({content: "message from the content script"});
+  var sending = browser.runtime.sendMessage({
+    content: "message from the content script",
+  });
   sending.then(handleResponse, handleError);
 }
 
@@ -160,7 +162,7 @@ Here is a version of the corresponding background script, that sends a response 
 
 function handleMessage(request, sender, sendResponse) {
   console.log(`content script sent a message: ${request.content}`);
-  sendResponse({response: "response from background script"});
+  sendResponse({ response: "response from background script" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
@@ -173,7 +175,7 @@ And here is another version, that uses Promise.resolve():
 
 function handleMessage(request, sender, sendResponse) {
   console.log(`content script sent a message: ${request.content}`);
-  return Promise.resolve({response: "response from background script"});
+  return Promise.resolve({ response: "response from background script" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
@@ -189,7 +191,7 @@ Here is an alternative version of the background script from the previous exampl
 function handleMessage(request, sender, sendResponse) {
   console.log(`content script sent a message: ${request.content}`);
   setTimeout(() => {
-    sendResponse({response: "async response from background script"});
+    sendResponse({ response: "async response from background script" });
   }, 1000);
   return true;
 }
@@ -212,9 +214,11 @@ function handleResponse(isBookmarked) {
   }
 }
 
-browser.runtime.sendMessage({
-  url: firstLink.href
-}).then(handleResponse);
+browser.runtime
+  .sendMessage({
+    url: firstLink.href,
+  })
+  .then(handleResponse);
 ```
 
 Here is the background script. It uses `{{WebExtAPIRef("bookmarks.search()")}}` to see if the link is bookmarked, which returns a [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise):
@@ -223,11 +227,13 @@ Here is the background script. It uses `{{WebExtAPIRef("bookmarks.search()")}}` 
 // background-script.js
 
 function isBookmarked(message, sender, response) {
-  return browser.bookmarks.search({
-    url: message.url
-  }).then(function(results) {
-    return results.length > 0;
-  });
+  return browser.bookmarks
+    .search({
+      url: message.url,
+    })
+    .then(function (results) {
+      return results.length > 0;
+    });
 }
 
 browser.runtime.onMessage.addListener(isBookmarked);
@@ -239,9 +245,9 @@ If the asynchronous handler doesn't return a promise, you can explicitly constru
 // background-script.js
 
 function handleMessage(request, sender, sendResponse) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
-      resolve({response: "async response from background script"});
+      resolve({ response: "async response from background script" });
     }, 1000);
   });
 }

@@ -13,13 +13,14 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
 
 ```js
 var creating = browser.tabs.create(
-  createProperties   // object
-)
+  createProperties, // object
+);
 ```
 
 ### 参数
 
 - `createProperties`
+
   - : `object`. Properties to give the new tab. To learn more about these properties, see the {{WebExtAPIRef("tabs.Tab")}} documentation.
 
     - `active` {{optional_inline}}
@@ -38,7 +39,9 @@ var creating = browser.tabs.create(
       - : `boolean`. Whether the tab should become the selected tab in the window. Defaults to `true`.
         > **警告：** This property is deprecated, and is not supported in Firefox. Use `active` instead.
     - `url`{{optional_inline}}
+
       - : `string`. The URL to navigate the tab to initially. Defaults to the New Tab Page. Fully-qualified URLs must include a scheme (i.e. 'http://www.google.com', not 'www.google.com'). For security reasons, in Firefox, this may not be a privileged URL. So passing any of the following URLs will fail:
+
         - chrome: URLs
         - javascript: URLs
         - data: URLs
@@ -47,6 +50,7 @@ var creating = browser.tabs.create(
         - The New Tab page (`about:newtab`) can be opened if no value for URL is provided.
 
         To load a page that's packaged with your extension, specify an absolute URL starting at the extension's manifest.json file. For example: '/path/to/my-page.html'. If you omit the leading '/', the URL is treated as a relative URL, and different browsers may construct different absolute URLs.
+
     - `windowId`{{optional_inline}}
       - : `integer`. The window to create the new tab in. Defaults to the current window.
 
@@ -64,16 +68,16 @@ A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ```js
 function onCreated(tab) {
-  console.log(`Created new tab: ${tab.id}`)
+  console.log(`Created new tab: ${tab.id}`);
 }
 
 function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var creating = browser.tabs.create({
-    url:"https://example.org"
+    url: "https://example.org",
   });
   creating.then(onCreated, onError);
 });

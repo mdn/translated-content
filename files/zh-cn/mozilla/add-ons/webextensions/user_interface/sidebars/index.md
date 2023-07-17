@@ -18,7 +18,7 @@ The browser may include a number of built-in sidebars. For example, Firefox incl
 
 ```js
 // sidebar.js
-browser.windows.getCurrent({populate: true}).then((windowInfo) => {
+browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
   myWindowId = windowInfo.id;
 });
 ```
