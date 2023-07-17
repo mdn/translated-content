@@ -87,7 +87,7 @@ JavaScript 能做的远不止这些。让我们来仔细探索。
 - 运行代码以响应网页中发生的特定事件。上文的示例中，我们用一个 {{domxref("Element/click_event", "click")}} 事件来检测按钮什么时候被点击，然后运行代码更新文本标签。
 - 以及更多！
 
-JavaScript 语言核心之上所构建的功能更令人兴奋。**应用程序接口**（**Application Programming Interfaces，API**）将为你的代码提供额外的超能力。
+JavaScript 语言核心之上所构建的功能更令人兴奋。**应用程序接口**（**Application Programming Interface，API**）将为你的代码提供额外的超能力。
 
 API 是已经建立好的一套代码组件，可以让开发者实现原本很难甚至无法实现的程序。就像现成的家具套件之于家居建设，用一些已经切好的木板组装一个书柜，显然比自己设计，寻找合适的木材，裁切至合适的尺寸和形状，找到正确尺寸的螺钉，*然后*再组装成书柜要简单得多。
 
@@ -100,7 +100,7 @@ API 通常分为两类。
 - {{domxref("Document_Object_Model","文档对象模型 API")}} 能通过创建、移除和修改 HTML，为页面动态应用新样式等手段来操作 HTML 和 CSS。比如当某个页面出现了一个弹窗，或者显示了一些新内容（像上文小 demo 中看到那样），这就是 DOM 在运行。
 - {{domxref("Geolocation","地理位置 API")}} 获取地理信息。这就是为什么[谷歌地图](https://www.google.com/maps)可以找到你的位置，而且标示在地图上。
 - {{domxref("Canvas_API","画布（Canvas）")}} 和 {{domxref("WebGL_API","WebGL")}} API 可以创建生动的 2D 和 3D 图像。人们正运用这些 web 技术制作令人惊叹的作品。参见 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) 以及 [webglsamples](https://webglsamples.org/)。
-- 诸如 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC")}} 等 [影音类 API](/zh-CN/docs/Web/Guide/Audio_and_video_delivery) 让你可以利用多媒体做一些非常有趣的事，比如在网页中直接播放音乐和影片，或用自己的网络摄像头获取录像，然后在其他人的电脑上展示（试用简易版[截图 demo](http://chrisdavidmills.github.io/snapshot/) 以理解这个概念）。
+- 诸如 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC")}} 等[影音类 API](/zh-CN/docs/Web/Guide/Audio_and_video_delivery) 让你可以利用多媒体做一些非常有趣的事，比如在网页中直接播放音乐和影片，或用自己的网络摄像头获取录像，然后在其他人的电脑上展示（试用简易版[截图 demo](http://chrisdavidmills.github.io/snapshot/) 以理解这个概念）。
 
 > **备注：** 上述很多演示都不能在旧浏览器中运行。推荐你在测试代码时使用诸如 Firefox、Chrome、Edge 或者 Opera 等现代浏览器。当代码即将交付生产环境时（也就是真实的客户即将使用真实的代码时），你还需要深入考虑[跨平台测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)。
 
@@ -109,7 +109,7 @@ API 通常分为两类。
 - [Twitter API](https://developer.twitter.com/en/docs)、[新浪微博 API](https://open.weibo.com/) 可以在网站上展示最新推文之类。
 - [谷歌地图 API](https://developers.google.com/maps/)、[OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API)、[高德地图 API](https://lbs.amap.com/) 可以在网站嵌入定制的地图等等。
 
-> **备注：** 这些 API 较为进阶，本模块中不会涉及，更多信息请参考：[客户端 web API 模块](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs).
+> **备注：** 这些 API 为进阶内容，本模块中不会涉及，更多信息请参考：[客户端 web API 模块](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs)。
 
 先稳住！你看到的只是冰山一角。你不可能仅靠学一天 JavaScript 就能构建下一个 Facebook、谷歌地图、或 Instagram——还有很多基础需要了解，这也是为什么你会在这里，让我们继续吧！
 
@@ -117,7 +117,7 @@ API 通常分为两类。
 
 现在我们实实在在的学习一些代码，与此同时，探索 JavaScript 运行时背后发生的事情。
 
-让我们简单回顾一下，浏览器在读取一个网页时都发生什么（[CSS 如何工作](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works#css_究竟是怎么工作的？) 一文中首次谈及）。浏览器在读取一个网页时，代码（HTML、CSS 和 JavaScript）将在一个运行环境（浏览器标签页）中得到执行。就像一间工厂，将原材料（代码）加工为一件产品（网页）。
+让我们简单回顾一下，浏览器在读取一个网页时都发生什么（[CSS 如何工作](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works#css_究竟是怎么工作的？)一文中首次谈及）。浏览器在读取一个网页时，代码（HTML、CSS 和 JavaScript）将在一个运行环境（浏览器标签页）中得到执行。就像一间工厂，将原材料（代码）加工为一件产品（网页）。
 
 ![当页面加载时，HTML、CSS 和 JavaScript 代码共同创建浏览器标签页中的内容](execution.png)
 
@@ -127,7 +127,7 @@ JavaScript 的一个非常常见的用途是通过文档对象模型 API（如�
 
 每个浏览器标签页就是其自身用来运行代码的独立容器（这些容器用专业术语称为“运行环境”）。大多数情况下，每个标签页中的代码完全独立运行，而且一个标签页中的代码不能直接影响另一个标签页（或者另一个网站）中的代码。这是一个好的安全措施，如果不这样，黑客就可以从其他网站盗取信息，或做一些其他坏事。
 
-> **备注：** 以安全的方式在不同网站或标签页中传送代码和数据的方法是存在的，但这些技术较为进阶，本课程不会涉及。
+> **备注：** 以安全的方式在不同网站或标签页中传送代码和数据的方法是存在的，但它们属于进阶技术，本课程不会涉及。
 
 ### JavaScript 运行次序
 
@@ -152,19 +152,19 @@ function updateName() {
 
 ### 解释代码 vs 编译代码
 
-作为程序员，你或许听说过这两个术语：**解释**（interpret）和 **编译**（compile）。在解释型语言中，代码自上而下运行，且实时返回运行结果。代码在由浏览器执行前，不需要将其转化为其他形式。代码将直接以文本格式被接收和处理。
+作为程序员，你或许听说过这两个术语：**解释**（interpret）和**编译**（compile）。在解释型语言中，代码自上而下运行，且实时返回运行结果。代码在由浏览器执行前，不需要将其转化为其他形式。代码将直接以文本格式被接收和处理。
 
 相对的，编译型语言需要先将代码转化（编译）成另一种形式才能运行。比如 C/C++ 先被编译成机器码，然后才能由计算机运行。程序将以二进制的格式运行，这些二进制内容是由程序源代码产生的。
 
-JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，并以代码自身的文本格式运行它。技术上，几乎所有 JavaScript 转换器都运用了一种叫做**即时编译（just-in-time compiling）**的技术；当 JavaScript 源代码被执行时，它会被编译成二进制的格式，使代码运行速度更快。尽管如此，JavaScript 仍然是一门解释型语言，因为编译过程发生在代码运行中，而非之前。
+JavaScript 是轻量级解释型语言。浏览器接受到 JavaScript 代码，并以代码自身的文本格式运行它。技术上，几乎所有 JavaScript 转换器都运用了一种叫做**即时编译**（just-in-time compiling）的技术；当 JavaScript 源代码被执行时，它会被编译成二进制的格式，使代码运行速度更快。尽管如此，JavaScript 仍然是一门解释型语言，因为编译过程发生在代码运行中，而非之前。
 
 两种类型的语言各有优势，这个问题我们暂且不谈。
 
 ### 服务器端代码 vs 客户端代码
 
-你或许还听说过**服务器端**（server-side）和 **客户端***（client-side）代码这两个术语，尤其是在 web 开发时。客户端代码是在用户的电脑上运行的代码，在浏览一个网页时，它的客户端代码就会被下载，然后由浏览器来运行并展示。在本模块中我们讨论的主要是**客户端 JavaScript**。
+你或许还听说过**服务器端**（server-side）和**客户端**（client-side）代码这两个术语，尤其是在 web 开发时。客户端代码是在用户的电脑上运行的代码，在浏览一个网页时，它的客户端代码就会被下载，然后由浏览器来运行并展示。在本模块中我们讨论的主要是**客户端 JavaScript**。
 
-而服务器端代码在服务器上运行，然后运行结果才由浏览器下载并展示出来。流行的服务器端 web 语言包括：PHP、Python、Ruby、ASP.NET，甚至有 JavaScript！JavaScript 也可用作服务器端语言，比如现在流行的 Node.js 环境，你可以在我们的[动态网页——服务器端编程](/zh-CN/docs/Learn/Server-side) 主题中找到更多关于服务器端 JavaScript 的知识。
+而服务器端代码在服务器上运行，然后运行结果才由浏览器下载并展示出来。流行的服务器端 web 语言包括：PHP、Python、Ruby、ASP.NET，甚至有 JavaScript！JavaScript 也可用作服务器端语言，比如现在流行的 Node.js 环境，你可以在我们的[动态网页——服务器端编程](/zh-CN/docs/Learn/Server-side)主题中找到更多关于服务器端 JavaScript 的知识。
 
 ### 动态代码 vs 静态代码
 
@@ -265,11 +265,11 @@ function createParagraph() {
 
 这个 demo 与之前的两个功能完全一致，只是在 {{htmlelement("button")}} 元素中包含了一个内联的 `onclick` 处理器，使得函数在按钮被按下时运行。
 
-**然而请不要这样做。** 这将使 JavaScript 污染到 HTML，而且效率低下。对于每个需要应用 JavaScript 的按钮，你都得手动添加 `onclick="createParagraph()"` 属性。
+**然而请不要这样做**。这将使 JavaScript 污染了 HTML，而且效率低下。对于每个需要应用 JavaScript 的按钮，你都得手动添加 `onclick="createParagraph()"` 属性。
 
 ### 请使用 addEventListener
 
-与其在 HTML 中包含 JavaScript，不如使用纯 JavaScript 结构。通过 `querySelectorAll()` 函数，可以选择页面上的所有按钮。然后可以循环遍历这些按钮，使用 `addEventListener()` 为每个按钮分配一个处理器。代码如下所示：
+与其在 HTML 中包含 JavaScript，不如使用纯 JavaScript 构造。通过 `querySelectorAll()` 函数，可以选择页面上的所有按钮。然后可以循环遍历这些按钮，使用 `addEventListener()` 为每个按钮分配一个处理器。代码如下所示：
 
 ```js
 const buttons = document.querySelectorAll('button');
@@ -313,7 +313,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 #### async 和 defer
 
-上述的脚本阻塞问题实际有两种解决方案 —— `async` 和 `defer`。我们来依次讲解。
+上述的脚本阻塞问题实际有两种解决方案——`async` 和 `defer`。我们来依次讲解。
 
 浏览器遇到 `async` 脚本时不会阻塞页面渲染，而是直接下载然后运行。但是，一旦下载完成，脚本就会执行，从而阻止页面渲染。脚本的运行次序无法控制。当页面的脚本之间彼此独立，且不依赖于本页面的其他任何脚本时，`async` 是最理想的选择。
 
@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 ![三种脚本加载方法的工作原理：默认情况下，在获取和执行 JavaScript 时，解析过程被阻塞。使用 async 时，解析暂停，仅执行。使用 defer 时，解析不会暂停，但在解析完所有其他内容后才开始执行](async-defer.jpg)
 
-_该图片来自 [HTML spec](https://html.spec.whatwg.org/images/asyncdefer.svg)，经过了复制和裁剪，以 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 授权。_
+_该图片来自 [HTML spec](https://html.spec.whatwg.org/images/asyncdefer.svg)，经过了复制和裁剪，以 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 获得授权。_
 
 比如，如果你的页面要加载以下三个脚本：
 
