@@ -22,7 +22,7 @@ l10n:
 - {{domxref("StyleSheet.parentStyleSheet")}} {{readonlyInline}}
   - : 이 시트를 포함하는 {{domxref("StyleSheet")}}를 반환합니다. 없으면 `null`을 반환합니다.
 - {{domxref("StyleSheet.title")}} {{readonlyInline}}
-  - : 현재 스타일 시트의 조언 제목을 나타내는 문자열을 반환합니다.
+  - : 현재 스타일 시트의 추가적인 제목을 나타내는 문자열을 반환합니다.
 - {{domxref("StyleSheet.type")}}{{readonlyInline}}
   - : 이 스타일 시트의 스타일 시트 언어를 나타내는 문자열을 반환합니다.
 
