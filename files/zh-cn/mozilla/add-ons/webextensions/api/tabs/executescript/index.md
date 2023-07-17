@@ -12,9 +12,9 @@ You can inject code into pages whose URL can be expressed using a [match pattern
 You can also inject code into pages packaged with your own extension:
 
 ```js
-browser.tabs.create({url: "/my-page.html"}).then(() => {
+browser.tabs.create({ url: "/my-page.html" }).then(() => {
   browser.tabs.executeScript({
-    code: `console.log('location:', window.location.href);`
+    code: `console.log('location:', window.location.href);`,
   });
 });
 ```
@@ -31,9 +31,9 @@ This is an asynchronous function that returns a [`Promise`](/zh-CN/docs/Web/Java
 
 ```js
 var executing = browser.tabs.executeScript(
-  tabId,                 // optional integer
-  details                // object
-)
+  tabId, // optional integer
+  details, // object
+);
 ```
 
 ### Parameters
@@ -64,7 +64,8 @@ A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 The result of the script is the last evaluated statement, which is similar to what would be output (the results, not any `console.log()` output) if you executed the script in the [Web Console](/zh-CN/docs/Tools/Web_Console). For example, consider a script like this:
 
 ```js
-var foo='my result';foo;
+var foo = "my result";
+foo;
 ```
 
 Here the results array will contain the the string "`my result`" as an element. The result values must be [structured clonable](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
@@ -91,7 +92,7 @@ function onError(error) {
 var makeItGreen = 'document.body.style.border = "5px solid green"';
 
 var executing = browser.tabs.executeScript({
-  code: makeItGreen
+  code: makeItGreen,
 });
 executing.then(onExecuted, onError);
 ```
@@ -109,7 +110,7 @@ function onError(error) {
 
 var executing = browser.tabs.executeScript({
   file: "/content-script.js",
-  allFrames: true
+  allFrames: true,
 });
 executing.then(onExecuted, onError);
 ```
@@ -125,9 +126,8 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var executing = browser.tabs.executeScript(
-  2, {
-    file: "/content-script.js"
+var executing = browser.tabs.executeScript(2, {
+  file: "/content-script.js",
 });
 executing.then(onExecuted, onError);
 ```

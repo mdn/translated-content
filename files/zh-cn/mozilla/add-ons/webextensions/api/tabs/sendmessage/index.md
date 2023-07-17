@@ -15,10 +15,10 @@ This is an asynchronous function that returns a [`Promise`](/zh-CN/docs/Web/Java
 
 ```js
 var sending = browser.tabs.sendMessage(
-  tabId,                   // integer
-  message,                 // any
-  options                  // optional object
-)
+  tabId, // integer
+  message, // any
+  options, // optional object
+);
 ```
 
 ### Parameters
@@ -54,21 +54,24 @@ function onError(error) {
 
 function sendMessageToTabs(tabs) {
   for (let tab of tabs) {
-    browser.tabs.sendMessage(
-      tab.id,
-      {greeting: "Hi from background script"}
-    ).then(response => {
-      console.log("Message from the content script:");
-      console.log(response.response);
-    }).catch(onError);
+    browser.tabs
+      .sendMessage(tab.id, { greeting: "Hi from background script" })
+      .then((response) => {
+        console.log("Message from the content script:");
+        console.log(response.response);
+      })
+      .catch(onError);
   }
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  browser.tabs.query({
-    currentWindow: true,
-    active: true
-  }).then(sendMessageToTabs).catch(onError);
+  browser.tabs
+    .query({
+      currentWindow: true,
+      active: true,
+    })
+    .then(sendMessageToTabs)
+    .catch(onError);
 });
 ```
 
@@ -78,10 +81,10 @@ Here's the corresponding content script:
 // content-script.js
 "use strict";
 
-browser.runtime.onMessage.addListener(request => {
+browser.runtime.onMessage.addListener((request) => {
   console.log("Message from the background script:");
   console.log(request.greeting);
-  return Promise.resolve({response: "Hi from content script"});
+  return Promise.resolve({ response: "Hi from content script" });
 });
 ```
 

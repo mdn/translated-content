@@ -27,8 +27,8 @@ The [`BrowserSetting.set()`](/zh-CN/Add-ons/WebExtensions/API/privacy/BrowserSet
 
 ```js
 var setting = setting.set(
-  details     // object
-)
+  details, // object
+);
 ```
 
 ### Parameters
@@ -62,12 +62,10 @@ function onSet(result) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-
-    var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
-      value: false
-    });
-    setting.then(onSet);
-
+  var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
+    value: false,
+  });
+  setting.then(onSet);
 });
 ```
 
