@@ -227,9 +227,9 @@ Essayez notre exemple [table-layout.html](http://mdn.github.io/learning-area/acc
     </table>
 ```
 
-Si vous essayez de naviguer à l'aide d'un lecteur d'écran, cela vous indiquera probablement qu'il existe un tableau à examiner (bien que certains lecteurs d'écran puissent deviner la différence entre les présentations de tableau et les tableaux de données). Vous devrez ensuite (en fonction du lecteur d’écran que vous utilisez) devoir accéder à la table en tant qu’objet et en examiner les caractéristiques séparément, puis sortir à nouveau de la table pour continuer à naviguer dans le contenu.
+Si vous essayez de naviguer à l'aide d'un lecteur d'écran, cela vous indiquera probablement qu'il existe un tableau à examiner (bien que certains lecteurs d'écran puissent deviner la différence entre les présentations de tableau et les tableaux de données). Vous devrez ensuite (en fonction du lecteur d'écran que vous utilisez) devoir accéder à la table en tant qu'objet et en examiner les caractéristiques séparément, puis sortir à nouveau de la table pour continuer à naviguer dans le contenu.
 
-Les structures de table sont un vestige du passé – elles semblaient logiques lorsque le support CSS n’était pas répandu dans les navigateurs, mais elles semaient la confusion chez les utilisateurs de lecteurs d’écran, tout en étant mauvaises pour de nombreuses autres raisons (utilisation abusive des tableaux, nécessite plus de balisage, design manquant de souplesse). Ne les utilisez pas !
+Les structures de table sont un vestige du passé – elles semblaient logiques lorsque le support CSS n'était pas répandu dans les navigateurs, mais elles semaient la confusion chez les utilisateurs de lecteurs d'écran, tout en étant mauvaises pour de nombreuses autres raisons (utilisation abusive des tableaux, nécessite plus de balisage, design manquant de souplesse). Ne les utilisez pas !
 
 Vous pouvez vérifier ces affirmations en comparant votre expérience antérieure avec un [exemple plus moderne de structure de site Web](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/), qui pourrait ressembler à ceci :
 
@@ -267,17 +267,17 @@ Vous pouvez vérifier ces affirmations en comparant votre expérience antérieur
 </footer>
 ```
 
-Si vous essayez notre exemple plus moderne de structure avec un lecteur d’écran, vous verrez que le balisage de présentation ne gêne plus ni ne rend la lecture du contenu confuse. Il est également beaucoup plus léger et plus petit en termes de taille de code, ce qui signifie une maintenance plus facile du code et une sollicitation moindre de la bande passante par l'utilisateur (particulièrement critique en cas de connexions lentes).
+Si vous essayez notre exemple plus moderne de structure avec un lecteur d'écran, vous verrez que le balisage de présentation ne gêne plus ni ne rend la lecture du contenu confuse. Il est également beaucoup plus léger et plus petit en termes de taille de code, ce qui signifie une maintenance plus facile du code et une sollicitation moindre de la bande passante par l'utilisateur (particulièrement critique en cas de connexions lentes).
 
-Une autre considération à prendre en compte lors de la création de dispositions consiste à utiliser des éléments sémantiques HTML5 comme dans l'exemple ci-dessus (voir [Référence des éléments HTML](/fr/docs/Web/HTML/Element#Content_sectioning)). Vous pouvez créer une disposition en utilisant uniquement des éléments {{htmlelement("div")}} imbriqués, mais il est préférable d'utiliser des éléments de sectionnement appropriés pour envelopper votre navigation principale ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), en répétant des unités de contenu ({{htmlelement("article")}}), etc. Elles fournissent une sémantique supplémentaire aux lecteurs d’écran (et à d’autres outils) pour donner à l’utilisateur des indices supplémentaires sur le contenu qu’il navigue (voir [Prise en charge du lecteur d’écran pour les nouveaux éléments de section HTML5](http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/) pour une idée de la prise en charge du lecteur d’écran).
+Une autre considération à prendre en compte lors de la création de dispositions consiste à utiliser des éléments sémantiques HTML5 comme dans l'exemple ci-dessus (voir [Référence des éléments HTML](/fr/docs/Web/HTML/Element#Content_sectioning)). Vous pouvez créer une disposition en utilisant uniquement des éléments {{htmlelement("div")}} imbriqués, mais il est préférable d'utiliser des éléments de sectionnement appropriés pour envelopper votre navigation principale ({{htmlelement("nav")}}), footer ({{htmlelement("footer")}}), en répétant des unités de contenu ({{htmlelement("article")}}), etc. Elles fournissent une sémantique supplémentaire aux lecteurs d'écran (et à d'autres outils) pour donner à l'utilisateur des indices supplémentaires sur le contenu qu'il navigue (voir [Prise en charge du lecteur d'écran pour les nouveaux éléments de section HTML5](http://www.weba11y.com/blog/2016/04/22/screen-reader-support-for-new-html5-section-elements/) pour une idée de la prise en charge du lecteur d'écran).
 
-> **Note :** Outre le fait que votre contenu présente une bonne sémantique et une présentation attrayante, il convient que son ordre source soit logique : vous pouvez toujours le placer où vous le souhaitez à l'aide de CSS par la suite, mais vous devez définir l'ordre exact des sources pour commencer. les utilisateurs de lecteur d’écran qui se liront auront du sens.
+> **Note :** Outre le fait que votre contenu présente une bonne sémantique et une présentation attrayante, il convient que son ordre source soit logique : vous pouvez toujours le placer où vous le souhaitez à l'aide de CSS par la suite, mais vous devez définir l'ordre exact des sources pour commencer. les utilisateurs de lecteur d'écran qui se liront auront du sens.
 
 ### Contrôles de l'interface utilisateur
 
-Par contrôles d'interface utilisateur, nous entendons les parties principales des documents web avec lesquelles les utilisateurs interagissent – le plus souvent des boutons, des liens et des contrôles de formulaire. Dans cette section, nous examinerons les problèmes d’accessibilité de base à prendre en compte lors de la création de tels contrôles. Des articles ultérieurs sur WAI-ARIA et le multimédia aborderont d'autres aspects de l'accessibilité de l'interface utilisateur.
+Par contrôles d'interface utilisateur, nous entendons les parties principales des documents web avec lesquelles les utilisateurs interagissent – le plus souvent des boutons, des liens et des contrôles de formulaire. Dans cette section, nous examinerons les problèmes d'accessibilité de base à prendre en compte lors de la création de tels contrôles. Des articles ultérieurs sur WAI-ARIA et le multimédia aborderont d'autres aspects de l'accessibilité de l'interface utilisateur.
 
-L'un des aspects clés de l'accessibilité des contrôles de l'interface utilisateur est que, par défaut, les navigateurs leur permettent d'être manipulés par le clavier. Vous pouvez essayer ceci en utilisant notre exemple [accessibilité du clavier natif](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) – ouvrez-le dans un nouvel onglet et essayez d’appuyer sur la touche de tabulation; après quelques appuis, vous devriez voir le focus de l'onglet commencer à se déplacer à travers les différents éléments qui peuvent être mis au point ; les éléments focalisés se voient attribuer un style par défaut en surbrillance dans chaque navigateur (il diffère légèrement d’un navigateur à l’autre) afin que vous puissiez déterminer quel élément est ciblé.
+L'un des aspects clés de l'accessibilité des contrôles de l'interface utilisateur est que, par défaut, les navigateurs leur permettent d'être manipulés par le clavier. Vous pouvez essayer ceci en utilisant notre exemple [accessibilité du clavier natif](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) – ouvrez-le dans un nouvel onglet et essayez d'appuyer sur la touche de tabulation; après quelques appuis, vous devriez voir le focus de l'onglet commencer à se déplacer à travers les différents éléments qui peuvent être mis au point ; les éléments focalisés se voient attribuer un style par défaut en surbrillance dans chaque navigateur (il diffère légèrement d'un navigateur à l'autre) afin que vous puissiez déterminer quel élément est ciblé.
 
 ![](button-focused-unfocused.png)
 
@@ -335,7 +335,7 @@ Cependant, il est encore une fois que les gens font parfois des choses étranges
 <div data-message="This is from the third button"> Et moi!</div>
 ```
 
-Il est toutefois déconseillé d’utiliser un tel code. Vous perdriez immédiatement l’accessibilité au clavier natif que vous auriez obtenue si vous aviez utilisé des éléments {{htmlelement("button")}}. De plus, vous n’obtenez aucun des styles CSS par défaut que les boutons ont.
+Il est toutefois déconseillé d'utiliser un tel code. Vous perdriez immédiatement l'accessibilité au clavier natif que vous auriez obtenue si vous aviez utilisé des éléments {{htmlelement("button")}}. De plus, vous n'obtenez aucun des styles CSS par défaut que les boutons ont.
 
 #### Remettre l'accessibilité au clavier
 
@@ -349,10 +349,10 @@ Ajouter de tels avantages en retour demande un peu de travail (vous pouvez utili
 
 Fondamentalement, l'attribut [`tabindex`](/fr/docs/Web/HTML/Global_attributes#tabindex) est principalement destiné à permettre aux éléments que l'on peut cibler avec la touche Tab d'avoir un ordre de tabulation personnalisé (spécifié dans l'ordre numérique positif), au lieu d'être simplement tabulés dans leur ordre source par défaut. C'est presque toujours une mauvaise idée, car cela peut causer une confusion majeure. Utilisez-le uniquement si vous en avez vraiment besoin, par exemple si la mise en page affiche les éléments dans un ordre visuel très différent de celui du code source et si vous souhaitez que les éléments fonctionnent de manière plus logique. Il y a deux autres options pour `tabindex` :
 
-- `tabindex="0"` – comme indiqué ci-dessus, cette valeur permet aux éléments qui ne sont pas normalement tabulables de le devenir. C’est la valeur la plus utile de `tabindex`.
+- `tabindex="0"` – comme indiqué ci-dessus, cette valeur permet aux éléments qui ne sont pas normalement tabulables de le devenir. C'est la valeur la plus utile de `tabindex`.
 - `tabindex="-1"` – cela permet aux éléments qui ne sont normalement pas tabulables d'être ciblés par le programme, par ex. via JavaScript, ou en tant que cible de liens.
 
-Bien que l’addition ci-dessus nous permette de tabuler les boutons, elle ne nous permet pas de les activer via la touche Entrée/Retour. Pour ce faire, nous avons dû ajouter le bout de code JavaScript suivant :
+Bien que l'addition ci-dessus nous permette de tabuler les boutons, elle ne nous permet pas de les activer via la touche Entrée/Retour. Pour ce faire, nous avons dû ajouter le bout de code JavaScript suivant :
 
 ```js
 document.onkeydown = function(e) {
@@ -362,11 +362,11 @@ document.onkeydown = function(e) {
 }
 ```
 
-Ici, nous ajoutons un écouteur à l’objet `document` pour détecter le moment où un bouton a été appuyé sur le clavier. Nous vérifions quel bouton a été pressé via la propriété [`keyCode`](/fr/docs/Web/API/KeyboardEvent/keyCode) de l'objet événement; s'il s'agit du code clé qui correspond Return/Enter, nous exécutons la fonction stockée dans le gestionnaire du bouton `onclick` à l'aide de `document.activeElement.onclick()`. [`activeElement`](/fr/docs/Web/API/Document/activeElement) nous donne l'élément qui est actuellement ciblé sur la page.
+Ici, nous ajoutons un écouteur à l'objet `document` pour détecter le moment où un bouton a été appuyé sur le clavier. Nous vérifions quel bouton a été pressé via la propriété [`keyCode`](/fr/docs/Web/API/KeyboardEvent/keyCode) de l'objet événement; s'il s'agit du code clé qui correspond Return/Enter, nous exécutons la fonction stockée dans le gestionnaire du bouton `onclick` à l'aide de `document.activeElement.onclick()`. [`activeElement`](/fr/docs/Web/API/Document/activeElement) nous donne l'élément qui est actuellement ciblé sur la page.
 
 > **Note :** N'oubliez pas que cette technique ne fonctionnera que si vous définissez vos gestionnaires d'événements d'origine via les propriétés du gestionnaire d'événements (par exemple, onclick), `addEventListener` ne fonctionnera pas.
 
-C’est beaucoup de tracas supplémentaire pour reconstruire la fonctionnalité. Et il y aura sûrement d’autres problèmes. **Mieux vaut utiliser le bon élément pour le bon travail en premier lieu**.
+C'est beaucoup de tracas supplémentaire pour reconstruire la fonctionnalité. Et il y aura sûrement d'autres problèmes. **Mieux vaut utiliser le bon élément pour le bon travail en premier lieu**.
 
 #### Étiquettes de texte significatives
 
@@ -396,7 +396,7 @@ Les libellés de formulaire sont également importantes pour vous donner un indi
  Remplis ton nom : <input type="text" id="name" name="name">
 ```
 
-Cependant, ce n'est pas très utile pour les utilisateurs handicapés. Dans l'exemple ci-dessus, rien n'associe de manière non équivoque l'étiquette à la saisie de formulaire et explique clairement comment la remplir si vous ne la voyez pas. Si vous y accédez avec certains lecteurs d’écran, vous ne recevrez peut-être qu’une description du type « éditer le texte".
+Cependant, ce n'est pas très utile pour les utilisateurs handicapés. Dans l'exemple ci-dessus, rien n'associe de manière non équivoque l'étiquette à la saisie de formulaire et explique clairement comment la remplir si vous ne la voyez pas. Si vous y accédez avec certains lecteurs d'écran, vous ne recevrez peut-être qu'une description du type « éditer le texte".
 
 Ce qui suit est un exemple bien meilleur :
 
@@ -444,7 +444,7 @@ Une table de données de base peut être écrite avec un balisage très simple, 
 </table>
 ```
 
-Mais cela pose des problèmes : un utilisateur de lecteur d’écran ne peut pas associer des lignes ou des colonnes en tant que groupes de données. Pour ce faire, vous devez savoir quelles sont les lignes d'en-tête et si elles sont dirigées vers le haut, des colonnes, etc. Cela ne peut être fait que visuellement pour le tableau ci-dessus (voir bad-table.html et essayez vous-même l'exemple).
+Mais cela pose des problèmes : un utilisateur de lecteur d'écran ne peut pas associer des lignes ou des colonnes en tant que groupes de données. Pour ce faire, vous devez savoir quelles sont les lignes d'en-tête et si elles sont dirigées vers le haut, des colonnes, etc. Cela ne peut être fait que visuellement pour le tableau ci-dessus (voir bad-table.html et essayez vous-même l'exemple).
 
 Regardez maintenant notre tableau d'exemple sur les groupes punk – vous pouvez voir quelques aides à l'accessibilité au travail ici :
 
@@ -474,19 +474,19 @@ Nous avons un exemple simple écrit, [accessible-image.html](http://mdn.github.i
 <p id="dino-label"> Tyrannosaure rouge Rex de Mozilla: Dinosaure à deux jambes, debout comme un être humain, avec des armes légères et une grosse tête avec beaucoup de dents acérées.</p>
 ```
 
-La première image, lorsqu'elle est visualisée par un lecteur d'écran, n'offre pas beaucoup d'aide à l'utilisateur. VoiceOver, par exemple, lit « /dinosaur.png, image&nbsp;». Il lit le nom du fichier pour essayer de fournir de l'aide. Dans cet exemple, l'utilisateur ou l’utilisatrice saura au moins qu'il s'agit d'un dinosaure, mais les fichiers peuvent souvent être chargés avec des noms de fichiers générés par une machine (par exemple, à partir d'un appareil photo numérique) et ces noms de fichiers ne fourniront probablement aucun contexte au contenu de l'image.
+La première image, lorsqu'elle est visualisée par un lecteur d'écran, n'offre pas beaucoup d'aide à l'utilisateur. VoiceOver, par exemple, lit « /dinosaur.png, image&nbsp;». Il lit le nom du fichier pour essayer de fournir de l'aide. Dans cet exemple, l'utilisateur ou l'utilisatrice saura au moins qu'il s'agit d'un dinosaure, mais les fichiers peuvent souvent être chargés avec des noms de fichiers générés par une machine (par exemple, à partir d'un appareil photo numérique) et ces noms de fichiers ne fourniront probablement aucun contexte au contenu de l'image.
 
 > **Note :** c'est pourquoi vous ne devriez jamais inclure de contenu textuel dans une image. Les lecteurs d'écran ne peuvent tout simplement pas y accéder. Il y a aussi d'autres inconvénients - vous ne pouvez pas le sélectionner et le copier/coller. Juste ne le faite pas !
 
 Quand un lecteur d'écran rencontre la deuxième image, il lit l'intégralité de l'attribut alt – « Un Tyrannosaure Rex rouge : Un dinosaure à deux pattes se tenant droit comme un humain, avec des armes de petit calibre et une grosse tête avec beaucoup de dents acérées.&nbsp;»
 
-Cela met en évidence l’importance non seulement d’utiliser des noms de fichiers significatifs au cas où ce qui est appelé **alt text** n’est pas disponible, mais aussi de s’assurer que le texte alternatif est fourni dans les attributs `alt` chaque fois que possible. Notez que le contenu de l'attribut `alt` doit toujours fournir une représentation directe de l'image et de ce qu'elle transmet visuellement. Aucune connaissance personnelle ou description supplémentaire ne devrait être incluse ici, car elle n’est pas utile pour les personnes qui n’ont jamais rencontré l’image auparavant.
+Cela met en évidence l'importance non seulement d'utiliser des noms de fichiers significatifs au cas où ce qui est appelé **alt text** n'est pas disponible, mais aussi de s'assurer que le texte alternatif est fourni dans les attributs `alt` chaque fois que possible. Notez que le contenu de l'attribut `alt` doit toujours fournir une représentation directe de l'image et de ce qu'elle transmet visuellement. Aucune connaissance personnelle ou description supplémentaire ne devrait être incluse ici, car elle n'est pas utile pour les personnes qui n'ont jamais rencontré l'image auparavant.
 
-Une chose à considérer est de savoir si vos images ont une signification dans votre contenu, ou si elles sont purement décoratives, n’ont donc aucune signification. S'ils sont décoratifs, il est préférable de les inclure dans la page en tant qu'images d'arrière-plan CSS.
+Une chose à considérer est de savoir si vos images ont une signification dans votre contenu, ou si elles sont purement décoratives, n'ont donc aucune signification. S'ils sont décoratifs, il est préférable de les inclure dans la page en tant qu'images d'arrière-plan CSS.
 
-> **Note :** Lisez [Les images en HTML](/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML) et [Images adaptatives](/fr/docs/Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page_web) pour plus d’informations sur la mise en œuvre des images et les meilleures pratiques.
+> **Note :** Lisez [Les images en HTML](/fr/docs/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML) et [Images adaptatives](/fr/docs/Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page_web) pour plus d'informations sur la mise en œuvre des images et les meilleures pratiques.
 
-Si vous souhaitez fournir des informations contextuelles supplémentaires, vous devez les insérer dans le texte entourant l'image ou dans un attribut title, comme indiqué ci-dessus. Dans ce cas, la plupart des lecteurs d’écran liront le texte alternatif, l’attribut title et le nom du fichier. En outre, les navigateurs affichent le texte du titre sous forme d’infos lors du survol de la souris.
+Si vous souhaitez fournir des informations contextuelles supplémentaires, vous devez les insérer dans le texte entourant l'image ou dans un attribut title, comme indiqué ci-dessus. Dans ce cas, la plupart des lecteurs d'écran liront le texte alternatif, l'attribut title et le nom du fichier. En outre, les navigateurs affichent le texte du titre sous forme d'infos lors du survol de la souris.
 
 ![](title-attribute.png)
 
@@ -498,7 +498,7 @@ Jetons un autre coup d'oeil à la quatrième méthode :
 <p id="dino-label"> Le Tyrannosaure rouge Mozilla  ... </p>
 ```
 
-Dans ce cas, nous n'utilisons pas du tout l'attribut `alt` Nous avons plutôt présenté notre description de l'image sous forme de paragraphe de texte normal, en lui attribuant un `id` puis nous avons utilisé l'attribut `aria-labelledby` pour : faire référence à cela `id`, ce qui amène les lecteurs d’écran à utiliser ce paragraphe comme alt text/label pour cette image. Ceci est particulièrement utile si vous souhaitez utiliser le même texte comme étiquette pour plusieurs images – quelque chose qui n’est pas possible avec `alt`.
+Dans ce cas, nous n'utilisons pas du tout l'attribut `alt` Nous avons plutôt présenté notre description de l'image sous forme de paragraphe de texte normal, en lui attribuant un `id` puis nous avons utilisé l'attribut `aria-labelledby` pour : faire référence à cela `id`, ce qui amène les lecteurs d'écran à utiliser ce paragraphe comme alt text/label pour cette image. Ceci est particulièrement utile si vous souhaitez utiliser le même texte comme étiquette pour plusieurs images – quelque chose qui n'est pas possible avec `alt`.
 
 > **Note :** `aria-labelledby` fait partie de la spécification [WAI ARIA](https://www.w3.org/TR/wai-aria-1.1/), qui permet aux développeurs d'ajouter une sémantique supplémentaire à leur balisage afin d'améliorer l'accessibilité du lecteur d'écran, le cas échéant. Pour en savoir plus sur son fonctionnement, lisez notre article [WAI-ARIA basic](/fr/docs/Learn/Accessibility/WAI-ARIA_basics).
 
@@ -510,7 +510,7 @@ Les images ont également d'autres mécanismes disponibles pour fournir un texte
 <img src="dinosaur.png" longdesc="dino-info.html">
 ```
 
-Cela semble être une bonne idée, en particulier pour les infographies telles que les grands graphiques contenant de nombreuses informations, qui pourraient peut-être être représentées sous forme de tableau de données accessible (voir section précédente). Cependant, longdesc n’est pas toujours pris en charge par les lecteurs d’écran et le contenu est totalement inaccessible aux utilisateurs autres que les lecteurs d’écran. Il est sans doute préférable d’inclure la description longue sur la même page que l’image, ou d’y accéder par un lien régulier.
+Cela semble être une bonne idée, en particulier pour les infographies telles que les grands graphiques contenant de nombreuses informations, qui pourraient peut-être être représentées sous forme de tableau de données accessible (voir section précédente). Cependant, longdesc n'est pas toujours pris en charge par les lecteurs d'écran et le contenu est totalement inaccessible aux utilisateurs autres que les lecteurs d'écran. Il est sans doute préférable d'inclure la description longue sur la même page que l'image, ou d'y accéder par un lien régulier.
 
 HTML5 comprend deux nouveaux éléments — {{htmlelement("figure")}} et {{htmlelement("figcaption")}} — qui sont supposés associer une figure quelconque (ce peut être n'importe quoi, pas nécessairement une image) à une légende de figure :
 
@@ -521,7 +521,7 @@ HTML5 comprend deux nouveaux éléments — {{htmlelement("figure")}} et {{htmle
 </figure>
 ```
 
-Malheureusement, la plupart des lecteurs d’écran ne semblent pas encore associer de légendes à leurs figures, mais la structure des éléments est utile pour le style CSS. Elle permet également de placer une description de l’image à côté de la source.
+Malheureusement, la plupart des lecteurs d'écran ne semblent pas encore associer de légendes à leurs figures, mais la structure des éléments est utile pour le style CSS. Elle permet également de placer une description de l'image à côté de la source.
 
 ### Attributs alt vides
 
@@ -540,6 +540,6 @@ La raison d'utiliser un vide `alt` au lieu de ne pas l'inclure est due au fait q
 
 ## Résumé
 
-Vous devriez maintenant bien connaître l'écriture HTML accessible pour la plupart des cas. Notre article sur les bases de WAI-ARIA comblera également certaines lacunes dans cette connaissance, mais cet article s’occupe des bases. Ensuite, nous allons explorer CSS et JavaScript, et comment l’accessibilité est affectée par leur bon ou mauvais usage.
+Vous devriez maintenant bien connaître l'écriture HTML accessible pour la plupart des cas. Notre article sur les bases de WAI-ARIA comblera également certaines lacunes dans cette connaissance, mais cet article s'occupe des bases. Ensuite, nous allons explorer CSS et JavaScript, et comment l'accessibilité est affectée par leur bon ou mauvais usage.
 
 {{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}

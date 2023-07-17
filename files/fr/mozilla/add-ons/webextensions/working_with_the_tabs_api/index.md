@@ -41,7 +41,7 @@ Cette requête vous permet d'utiliser toutes les fonctionnalités de l'API Tabs 
 - l'utilisateur doit interagir avec l'extension via son navigateur ou l'action de la page, le menu contextuel ou la touche de raccourci.
 - il accorde uniquement la permission dans l'onglet actif..
 
-L'avantage de cette approche est que l'utilisateur ne recevra pas d'avertissement d'autorisation indiquant que votre extension peut “Accéder à vos données pour tous les sites Web”. En effet, la permission `<all_urls>` permet à une extension d'exécuter des scripts dans n'importe quel onglet, à tout moment, alors que [`"activeTab"`](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) se limite à autoriser l'extension à effectuer une action demandée par l'utilisateur dans l'onglet en cours.
+L'avantage de cette approche est que l'utilisateur ne recevra pas d'avertissement d'autorisation indiquant que votre extension peut "Accéder à vos données pour tous les sites Web". En effet, la permission `<all_urls>` permet à une extension d'exécuter des scripts dans n'importe quel onglet, à tout moment, alors que [`"activeTab"`](/fr/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission) se limite à autoriser l'extension à effectuer une action demandée par l'utilisateur dans l'onglet en cours.
 
 ## En savoir plus sur les onglets et leurs propriétés
 
@@ -53,7 +53,7 @@ Lorsque vous souhaitez uniquement obtenir des informations sur l'onglet en cours
 
 ### Par exemple
 
-Pour voir comment {{WebExtAPIRef("tabs.query")}} et {{WebExtAPIRef("tabs.Tab")}} sont utilisés, voyons comment l'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) ajoute la liste de “passer aux onglets” à son popup bouton de barre d'outils.
+Pour voir comment {{WebExtAPIRef("tabs.query")}} et {{WebExtAPIRef("tabs.Tab")}} sont utilisés, voyons comment l'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) ajoute la liste de "passer aux onglets" à son popup bouton de barre d'outils.
 
 ![](switch_to_tab.png)
 
@@ -214,7 +214,7 @@ Enfin, le fragment du document est écrit dans la div `tabs-list` :
 
 #### Travailler avec l'onglet actif
 
-Un autre exemple connexe est l'option d'information “Alert active tab”qui décharge toutes les propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}} de l'onglet actif dans une alerte :
+Un autre exemple connexe est l'option d'information "Alert active tab"qui décharge toutes les propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}} de l'onglet actif dans une alerte :
 
 ```js
  else if (e.target.id === "tabs-alertinfo") {
@@ -270,7 +270,7 @@ Après avoir recueilli des informations sur les onglets, vous voudrez probableme
 
 ### Par exemple
 
-L'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) utilise toutes ces fonctionnalités sauf la mise à jour de l'URL d'un onglet. La façon dont ces API sont utilisées est similaire, nous allons donc regarder l'une des implémentations les plus impliquées, celle de l'option “Deplacer l'onglet actif vers le début de la liste des fenêtres”. Mais d'abord, voici une démonstration de la fonctionnalité en action :
+L'exemple [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs) utilise toutes ces fonctionnalités sauf la mise à jour de l'URL d'un onglet. La façon dont ces API sont utilisées est similaire, nous allons donc regarder l'une des implémentations les plus impliquées, celle de l'option "Deplacer l'onglet actif vers le début de la liste des fenêtres". Mais d'abord, voici une démonstration de la fonctionnalité en action :
 
 {{EmbedYouTube("-lJRzTIvhxo")}}
 
@@ -280,7 +280,7 @@ Aucune de ces fonctions ne nécessite de permission pour fonctionner, donc il n'
 
 #### [tabs.html](https://github.com/mdn/webextensions-examples/blob/master/tabs-tabs-tabs/tabs.html)
 
-tabs.html définit le “menu” affiché dans la fenêtre contextuelle, qui inclut l'option “Déplacer l'onglet actif au début de la liste des fenêtres”, wavec une série de balises `<a>` groupées par un séparateur visuel. Chaque élément de menu reçoit un ID, qui est utilisé dans tabs.js pour déterminer quel élément de menu est demandé.
+tabs.html définit le "menu" affiché dans la fenêtre contextuelle, qui inclut l'option "Déplacer l'onglet actif au début de la liste des fenêtres", wavec une série de balises `<a>` groupées par un séparateur visuel. Chaque élément de menu reçoit un ID, qui est utilisé dans tabs.js pour déterminer quel élément de menu est demandé.
 
 ```html
     <a href="#" id="tabs-move-beginning">Move active tab to the beginning of the window</a><br>
@@ -314,7 +314,7 @@ document.addEventListener("click", function(e) {
 }
 ```
 
-Une série d'instructions `if` cherche alors à faire correspondre l'identifiant de l'élément cliqué. Cet extrait de code est pour l'option “Déplacer l'onglet actif au début de la liste des fenêtres” :
+Une série d'instructions `if` cherche alors à faire correspondre l'identifiant de l'élément cliqué. Cet extrait de code est pour l'option "Déplacer l'onglet actif au début de la liste des fenêtres" :
 
 ```js
  if (e.target.id === "tabs-move-beginning") {
@@ -490,11 +490,11 @@ Vous noterez que la permission `"tabs"` est ajoutée en plus de `"activeTab"`. C
 Les autres caractéristiques principales du fichier manifeste sont la définition de:
 
 - **un script d'arrière-plan**, qui commence à s'exécuter dès que l'extension est chargée.
-- **une “action de page”**, qui définit une icône à ajouter à la barre d'adresse du navigateur.
+- **une "action de page"**, qui définit une icône à ajouter à la barre d'adresse du navigateur.
 
 #### [background.js](https://github.com/mdn/webextensions-examples/blob/master/apply-css/background.js)
 
-Au démarrage, background.js définit un certain nombre de constantes à utiliser dans l'extension qui définissent le CSS à appliquer, des titres pour les “actions de page”, et une liste de protocoles dans lesquels l'extension fonctionnera :
+Au démarrage, background.js définit un certain nombre de constantes à utiliser dans l'extension qui définissent le CSS à appliquer, des titres pour les "actions de page", et une liste de protocoles dans lesquels l'extension fonctionnera :
 
 ```js
 const CSS = "body { border: 20px solid red; }";
@@ -525,7 +525,7 @@ function protocolIsApplicable(url) {
 }
 ```
 
-Ensuite, si l'exemple peut agir sur l'onglet, `initializePageAction()` définit l'icône `pageAction` (barre de navigation) et le titre de l'onglet pour utiliser les versions ‘off’ avant de rendre la `pageAction` visible :
+Ensuite, si l'exemple peut agir sur l'onglet, `initializePageAction()` définit l'icône `pageAction` (barre de navigation) et le titre de l'onglet pour utiliser les versions 'off' avant de rendre la `pageAction` visible :
 
 ```js
 function initializePageAction(tab) {
@@ -546,14 +546,14 @@ browser.pageAction.onClicked.addListener(toggleCSS);
 
 `toggleCSS()` obtient le titre de la `pageAction`  puis prend l'action décrite :
 
-- **Pour "Appliquer CSS”:**
+- **Pour "Appliquer CSS":**
 
-  - Basculer l'icône `pageAction` et le titre dans les versions “supprimer”.
+  - Basculer l'icône `pageAction` et le titre dans les versions "supprimer".
   - Applique le CSS en utilisant {{WebExtAPIRef("tabs.insertCSS")}}.
 
-- **Pour “Supprimer CSS”:**
+- **Pour "Supprimer CSS":**
 
-  - Basculer l'icône `pageAction` et le titre dans les versions “apply”.
+  - Basculer l'icône `pageAction` et le titre dans les versions "apply".
   - Supprime le CSS en utilisant {{WebExtAPIRef("tabs.removeCSS")}}.
 
 ```js

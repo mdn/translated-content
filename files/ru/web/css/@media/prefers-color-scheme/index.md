@@ -77,4 +77,4 @@ translation_of: Web/CSS/@media/prefers-color-scheme
 
 - [Редизайн вашего продукта и сайта для тёмного режима](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)(en)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/CSS/@media/")}}

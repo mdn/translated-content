@@ -59,7 +59,7 @@ fetch('module.wasm').then(response =>
 }
 ```
 
-> **Примечание:** Обычно мы заботимся только об экземпляре, но полезно иметь модуль на тот случай, если мы хотим его кешировать, поделиться им с другим работником или окном через [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage), или просто создать больше экземпляров.
+> **Примечание:** Обычно мы заботимся только об экземпляре, но полезно иметь модуль на тот случай, если мы хотим его кешировать, поделиться им с другим работником или окном через [`postMessage()`](/ru/docs/Web/API/MessagePort/postMessage), или просто создать больше экземпляров.
 
 > **Примечание:** Вторая форма перегрузки принимает в качестве аргумента объект {{jsxref("WebAssembly.Module")}} и возвращает `Promise`, непосредственно содержащее объект экземпляра, в качестве результата. См. [Второй пример перегрузки](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example).
 
@@ -86,7 +86,7 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 
 ## Используя XMLHttpRequest
 
-[`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) несколько старше, чем Fetch, но всё же может успешно использоваться для получения типизированного массива. Опять же, если предположить, что наш модуль называется `simple.wasm`:
+[`XMLHttpRequest`](/ru/docs/Web/API/XMLHttpRequest) несколько старше, чем Fetch, но всё же может успешно использоваться для получения типизированного массива. Опять же, если предположить, что наш модуль называется `simple.wasm`:
 
 1. Создайте новый экземпляр {{domxref("XMLHttpRequest()")}} и используйте его метод {{domxref("XMLHttpRequest.open","open()")}} для открытия запроса, задав для метода запроса значение `GET` и указав путь к файлу, который мы хотим получить.
 2. Ключевой частью этого является установка типа ответа `'arraybuffer'` с помощью свойства {{domxref("XMLHttpRequest.responseType","responseType")}}.

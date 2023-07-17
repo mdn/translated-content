@@ -66,14 +66,14 @@ The competition ran in November 2013 and decided to take part in it. The theme f
 var gamepadAPI = {
   controller: {},
   turbo: false,
-  connect: function() {},
-  disconnect: function() {},
-  update: function() {},
-  buttonPressed: function() {},
+  connect: function () {},
+  disconnect: function () {},
+  update: function () {},
+  buttonPressed: function () {},
   buttons: [],
   buttonsCache: [],
   buttonsStatus: [],
-  axesStatus: []
+  axesStatus: [],
 };
 ```
 
@@ -208,11 +208,11 @@ buttonPressed: function(button, hold) {
 Существует два типа действий, которые следует учитывать для кнопки: одно нажатие и удержание. Логическая переменная `newPress` будет указывать, есть ли новое нажатие кнопки или нет. Затем мы проходим через массив нажатых кнопок — если данная кнопка совпадает с той, которую мы ищем, переменная `newPress` устанавливается в `true`. Чтобы проверить, является ли нажатие новым, так как игрок не держит клавишу, мы перебираем кешированные состояния кнопок из предыдущего кадра игрового цикла. Если мы находим его там, это означает, что кнопка удерживается, поэтому нового нажатия нет. В конце концов возвращается переменная `newPress`. Функция `buttonPressed` используется в цикле обновления игры следующим образом:
 
 ```js
-if(gamepadAPI.turbo) {
-  if(gamepadAPI.buttonPressed('A','hold')) {
+if (gamepadAPI.turbo) {
+  if (gamepadAPI.buttonPressed("A", "hold")) {
     this.turbo_fire();
   }
-  if(gamepadAPI.buttonPressed('B')) {
+  if (gamepadAPI.buttonPressed("B")) {
     this.managePause();
   }
 }

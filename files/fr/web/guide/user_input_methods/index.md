@@ -118,8 +118,10 @@ if (elem.requestFullscreen) {
 Voici un exemple qui permet à du contenu d'être déplacé:
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être déplacé')">
-    Ce texte <strong>peut</strong> être déplacé.
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'Ce texte peut être déplacé')">
+  Ce texte <strong>peut</strong> être déplacé.
 </div>
 ```
 
@@ -135,9 +137,7 @@ Ici, on
 Dans un Open Web App, tout élément DOM peut être rendu directement éditable en utilisant l'attribut [`contenteditable`](/fr/docs/Web/HTML/Attributs_universels#attr-class).
 
 ```html
-<div contenteditable="true">
-    Ce texte peut être édité par l'utilisateur.
-</div>
+<div contenteditable="true">Ce texte peut être édité par l'utilisateur.</div>
 ```
 
 > **Note :** Vous pouvez trouver les informations de compatibilité, des exemples et d'autres ressources dans le guide [Contenu Éditable](/fr/docs/Web/HTML/Contenu_editable).

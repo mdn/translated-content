@@ -11,16 +11,16 @@ slug: Glossary/Falsy
 
 下列表格提供了 JavaScript 的所有假值。
 
-| 值                          | 说明                                                                                                                                                                               |
-| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `false`                     | 关键字 [`false`](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#保留字)。                                                                                                     |
-| `0`                         | {{jsxref("Number")}} 零值（同理，`0.0`、`0x0` 也为零）。                                                                                                                             |
-| `-0`                        | {{jsxref("Number")}} 负零值（同理，`-0.0`、`-0x0` 也为负零）。                                                                                                                        |
-| `0n`                        | {{jsxref("BigInt")}} 零值（`0x0n` 同理）。注意没有 {{jsxref("BigInt")}} 负零值——`0n` 的相反数还是 `0n`。                                                                                |
-| `""`、`''`、` `` `          | 空[字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)值。                                                                                                          |
-| {{Glossary("null")}}        | [null](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 值——任意值缺失。                                                                                                        |
-| {{Glossary("undefined")}}   | [undefined](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 值——初始值。                                                                                             |
-| {{Glossary("NaN")}}         | [NaN](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 值——非数值。                                                                                                         |
+| 值                          | 说明                                                                                                                                                                                         |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `false`                     | 关键字 [`false`](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#保留字)。                                                                                                              |
+| `0`                         | {{jsxref("Number")}} 零值（同理，`0.0`、`0x0` 也为零）。                                                                                                                                     |
+| `-0`                        | {{jsxref("Number")}} 负零值（同理，`-0.0`、`-0x0` 也为负零）。                                                                                                                               |
+| `0n`                        | {{jsxref("BigInt")}} 零值（`0x0n` 同理）。注意没有 {{jsxref("BigInt")}} 负零值——`0n` 的相反数还是 `0n`。                                                                                     |
+| `""`、`''`、` `` `          | 空[字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)值。                                                                                                                   |
+| {{Glossary("null")}}        | [null](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 值——任意值缺失。                                                                                                                 |
+| {{Glossary("undefined")}}   | [undefined](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) 值——初始值。                                                                                                      |
+| {{Glossary("NaN")}}         | [NaN](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 值——非数值。                                                                                                                  |
 | {{domxref("document.all")}} | 当且仅当对象具有 [\[\[IsHTMLDDA\]\]](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot) 内部插槽时，它才是假值。这个槽只存在于 {{domxref("document.all")}} 中，不能用 JavaScript 来设置。 |
 
 ## 示例

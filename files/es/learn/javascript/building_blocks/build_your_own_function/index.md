@@ -12,7 +12,7 @@ Con la mayor parte de la teoría esencial tratada en el artículo anterior, este
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Objective:     | Para proporcionar algo de práctica en la construcción de una función personalizada, y explicar algunos detalles asociados más útiles.                                                                                                    |
 
-## Aprendizaje activo: construyamos una función.
+## Aprendizaje activo: construyamos una función
 
 La función personalizada que vamos a construir se llamará `displayMessage()`. Mostrará un cuadro de mensaje personalizado en una página web y actuará como un reemplazo personalizado para la función de [alert()](/es/docs/Web/API/Window/alert) incorporada de un navegador. Hemos visto esto antes, pero solo refresquemos nuestros recuerdos. Escriba lo siguiente en la consola de JavaScript de su navegador, en la página que desee:
 
@@ -161,7 +161,7 @@ y al guardar y volver a cargar, verás que aparece el cuadro de mensaje sin hace
 
 Si has intentado el último experimento, asegúrate de deshacer el último cambio antes de continuar.
 
-## Mejora de la función con parámetros.
+## Mejora de la función con parámetros
 
 Tal como está, la función aún no es muy útil, no queremos mostrar el mismo mensaje predeterminado cada vez. Mejoremos nuestra función agregando algunos parámetros, permitiéndonos llamarla con algunas opciones diferentes.
 
@@ -209,7 +209,7 @@ Tal como está, la función aún no es muy útil, no queremos mostrar el mismo m
 
 4. Vuelva a cargar e intenta el código nuevamente y verás que aún funciona bien, ¡excepto que ahora también puede variar el mensaje dentro del parámetro para obtener diferentes mensajes mostrados en el cuadro!
 
-### Un parámetro más complejo.
+### Un parámetro más complejo
 
 En el siguiente parámetro. Este va a implicar un poco más de trabajo: lo configuraremos de modo que, dependiendo de la configuración del parámetro msgType, la función mostrará un icono diferente y un color de fondo diferente.
 

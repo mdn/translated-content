@@ -25,7 +25,7 @@ myKeyRange.upperOpen;
 
 ## Exemple
 
-Dans l'exemple suivant, on récupère l'{{domxref("IDBKeyRange","intervalle de clé")}} entre "F" et "W". Puis on ouvre une {{domxref("IDBTransaction","transaction")}} sur la connexion pour avoir l’{{domxref("IDBObjectStore","accès")}} au magasin d'objets 'fThings'. On met en place un {{domxref("IDBCursor","curseur")}} sur l'intervalle pour afficher dans une liste les valeurs des propriétés fThing et fRating des objets trouvés.
+Dans l'exemple suivant, on récupère l'{{domxref("IDBKeyRange","intervalle de clé")}} entre "F" et "W". Puis on ouvre une {{domxref("IDBTransaction","transaction")}} sur la connexion pour avoir l'{{domxref("IDBObjectStore","accès")}} au magasin d'objets 'fThings'. On met en place un {{domxref("IDBCursor","curseur")}} sur l'intervalle pour afficher dans une liste les valeurs des propriétés fThing et fRating des objets trouvés.
 
 La propriété **`upperOpen`** sert ici à afficher sur la console le booléen indiquant si la valeur de la limite supérieure est comprise dans l'intervalle.
 

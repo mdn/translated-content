@@ -60,7 +60,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 - `online`
   - : Fired when the browser has gained access to the network and the value of `navigator.onLine` switched to `true`.
     Also available via the {{domxref("WorkerGlobalScope.ononline")}} property.
-- [`languagechange`](/en-US/docs/Web/API/WorkerGlobalScope/languagechange_event)
+- [`languagechange`](/ru/docs/Web/API/WorkerGlobalScope/languagechange_event)
   - : Fired at the global/worker scope object when the user's preferred languages change.
     Also available via the {{domxref("WorkerGlobalScope.onlanguagechange")}} property.
 

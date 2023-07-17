@@ -160,7 +160,7 @@ img {
 
 Этот код позволяет нам выводить отзывчивое изображение и на широких, и на узких экранах, как показано ниже:
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-narrow.png)
+![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](/ru/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-narrow.png)
 
 > **Примечание:** вам следует использовать атрибут `media` только при художественном оформлении; когда вы используете `media`, не применяйте медиа-условия с атрибутом `sizes`.
 

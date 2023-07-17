@@ -1,5 +1,6 @@
 ---
 title: ContentVisibilityAutoStateChangeEvent：ContentVisibilityAutoStateChangeEvent() 构造函数
+short-title: ContentVisibilityAutoStateChangeEvent()
 slug: Web/API/ContentVisibilityAutoStateChangeEvent/ContentVisibilityAutoStateChangeEvent
 ---
 
@@ -43,6 +44,6 @@ canvasElem.addEventListener("contentvisibilityautostatechange", (event) => {
 ## 参见
 
 - {{DOMXref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} 事件
-- [CSS 局限](/en-US/docs/Web/CSS/CSS_containment)
+- [CSS 局限](/zh-CN/docs/Web/CSS/CSS_containment)
 - {{CSSXref("content-visibility")}} 属性
 - {{CSSXref("contain")}} 属性

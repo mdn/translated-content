@@ -446,7 +446,7 @@ beans.oninput = function() {
 }
 ```
 
-Here we store references to the range input and the span in two variables, then we immediately set the span's [`textContent`](/en-US/docs/Web/API/Node/textContent) to the current `value` of the input. Finally, we set up an `oninput` event handler so that every time the range slider is moved, the span `textContent` is updated to the new input value.
+Here we store references to the range input and the span in two variables, then we immediately set the span's [`textContent`](/ru/docs/Web/API/Node/textContent) to the current `value` of the input. Finally, we set up an `oninput` event handler so that every time the range slider is moved, the span `textContent` is updated to the new input value.
 
 `range` inputs are not supported in versions of Internet Explorer below 10.
 

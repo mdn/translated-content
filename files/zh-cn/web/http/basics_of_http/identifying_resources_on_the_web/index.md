@@ -17,8 +17,8 @@ URI 的最常见形式是统一资源定位符 ({{Glossary("URL")}})，它也被
 
 ```plain
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
-https://developer.mozilla.org/en-US/search?q=URL
+https://developer.mozilla.org/zh-CN/docs/Learn/
+https://developer.mozilla.org/zh-CN/search?q=URL
 ```
 
 在浏览器的地址栏中输入上述任一地址，浏览器就会加载相应的网页（资源）。
@@ -91,7 +91,7 @@ urn:ietf:rfc:7230
 ## 示例
 
 ```plain
-https://developer.mozilla.org/en-US/docs/Learn
+https://developer.mozilla.org/zh-CN/docs/Learn
 tel:+1-816-555-1212
 git@github.com:mdn/browser-compat-data.git
 ftp://example.org/resource.txt

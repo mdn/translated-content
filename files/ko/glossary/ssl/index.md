@@ -8,8 +8,8 @@ Secure Sockets Layer(SSL)는 클라이언트와 서버 간의 안전한 링크�
 ## 같이 보기
 
 - [Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security) (Wikipedia)
-- [Transport Layer Security (TLS) protocol](/en-US/docs/Web/Security/Transport_Layer_Security)
-- [Glossary](/en-US/docs/Glossary)
+- [Transport Layer Security (TLS) protocol](/ko/docs/Web/Security/Transport_Layer_Security)
+- [Glossary](/ko/docs/Glossary)
 
   - {{Glossary("HTTPS")}}
   - {{Glossary("TLS")}}

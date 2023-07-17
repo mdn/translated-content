@@ -57,9 +57,9 @@ tags:
 
 Одной из самых важных функций [элементов форм HTML5](/ru/docs/Learn/Forms/HTML5_input_types) является способность валидировать бóльшую часть пользовательских данных без использования JavaScript. Это выполняется с помощью атрибутов валидации у элементов формы. Многие из них мы уже рассмотрели в этом курсе:
 
-- [`required`](/en-US/docs/Web/HTML/Attributes/required): Определяет, что для отправки формы данное поле предварительно должно быть заполнено.
-- [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) и [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength): Задаёт минимальную и максимальную длину текстовых данных (строк)
-- [`min`](/en-US/docs/Web/HTML/Attributes/min) и [`max`](/en-US/docs/Web/HTML/Attributes/max): Задаёт минимальное и максимальное значение для поля, расчитанного на числовой тип данных
+- [`required`](/ru/docs/Web/HTML/Attributes/required): Определяет, что для отправки формы данное поле предварительно должно быть заполнено.
+- [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) и [`maxlength`](/ru/docs/Web/HTML/Attributes/maxlength): Задаёт минимальную и максимальную длину текстовых данных (строк)
+- [`min`](/ru/docs/Web/HTML/Attributes/min) и [`max`](/ru/docs/Web/HTML/Attributes/max): Задаёт минимальное и максимальное значение для поля, расчитанного на числовой тип данных
 - `type`: Определяет тип данных, на который рассчитано поле: число, email-адрес или какой-то другой предустановленный тип
 - [`pattern`](/ru/docs/Web/HTML/Attributes/pattern): С помощью [регулярного выражения](/ru/docs/Web/JavaScript/Guide/Regular_Expressions), определяет шаблон, которому должны соответствовать вводимые данные.
 
@@ -109,7 +109,7 @@ input:valid {
 
 ### Атрибут required
 
-Самым простым в HTML5-валидации является атрибут [`required`](/en-US/docs/Web/HTML/Attributes/required). Добавьте его к элементу, чтобы сделать заполнение обязательным. Элемент с данным атрибутом соответствует CSS-псевдоклассу {{cssxref(':required')}}, а если поле ввода пустое, вместо отправки формы отобразится сообщение об ошибке. Пока поле пустое, оно также будет соответствовать CSS-псевдоклассу {{cssxref(':invalid')}}.
+Самым простым в HTML5-валидации является атрибут [`required`](/ru/docs/Web/HTML/Attributes/required). Добавьте его к элементу, чтобы сделать заполнение обязательным. Элемент с данным атрибутом соответствует CSS-псевдоклассу {{cssxref(':required')}}, а если поле ввода пустое, вместо отправки формы отобразится сообщение об ошибке. Пока поле пустое, оно также будет соответствовать CSS-псевдоклассу {{cssxref(':invalid')}}.
 
 Добавьте к полю атрибут `required`, как показано ниже.
 
@@ -202,13 +202,13 @@ input:valid {
 
 ### Ограничение длины вводимых значений
 
-Можно ограничить максимально допустимое количество символов для текстовых полей {{HTMLElement("input")}} или {{HTMLElement("textarea")}} используя атрибуты [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) и [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength). Поле будет не валидным, если количество символов его содержимого будет меньше [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) или больше [`maxlength`](/en-US/docs/Web/HTML/Attributes/maxlength).
+Можно ограничить максимально допустимое количество символов для текстовых полей {{HTMLElement("input")}} или {{HTMLElement("textarea")}} используя атрибуты [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) и [`maxlength`](/ru/docs/Web/HTML/Attributes/maxlength). Поле будет не валидным, если количество символов его содержимого будет меньше [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) или больше [`maxlength`](/ru/docs/Web/HTML/Attributes/maxlength).
 
 Зачастую браузеры не позволяют пользователям вводить в текстовое поле значение, длина которого превышает максимально допустимую. Можно существенно повысить удобство использования, если помимо ограничения в атрибуте `maxlength` добавить доступный индикатор, отображающий текущее и максимально допустимое количество символов, что даст пользователю возможность уместить содержимое в заданные рамки. Хорошим примером является окно написания твита в Twitter. Для реализации такого функционала можно использовать JavaScript, включая [решения, использующие `maxlength`](https://github.com/mimo84/bootstrap-maxlength).
 
 ### Ограничение допустимых значений
 
-В полях, предназначенных для ввода чисел (например, [`<input type="number">`](/ru/docs/Web/HTML/Element/input/number)), диапазон допустимых значений можно определить с помощью атрибутов [`min`](/en-US/docs/Web/HTML/Attributes/min) и [`max`](/en-US/docs/Web/HTML/Attributes/max). Если поле содержит значение за пределами данного диапазона, оно будет не валидным.
+В полях, предназначенных для ввода чисел (например, [`<input type="number">`](/ru/docs/Web/HTML/Element/input/number)), диапазон допустимых значений можно определить с помощью атрибутов [`min`](/ru/docs/Web/HTML/Attributes/min) и [`max`](/ru/docs/Web/HTML/Attributes/max). Если поле содержит значение за пределами данного диапазона, оно будет не валидным.
 
 Давайте рассмотрим другой пример. Создайте новую копию файла [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html).
 
@@ -356,11 +356,11 @@ input:focus:invalid {
 Большинство браузеров поддерживают [Constraint Validation API](/ru/docs/Web/API/Constraint_validation), который состоит из набора свойств и методов, доступных на DOM-интерфейсах следующих элементов форм:
 
 - [`HTMLButtonElement`](/ru/docs/Web/API/HTMLButtonElement) (представляет элемент [`<button>`](/ru/docs/Web/HTML/Element/button))
-- [`HTMLFieldSetElement`](/en-US/docs/Web/API/HTMLFieldSetElement) (представляет элемент [`<fieldset>`](/ru/docs/Web/HTML/Element/fieldset))
+- [`HTMLFieldSetElement`](/ru/docs/Web/API/HTMLFieldSetElement) (представляет элемент [`<fieldset>`](/ru/docs/Web/HTML/Element/fieldset))
 - [`HTMLInputElement`](/ru/docs/Web/API/HTMLInputElement) (представляет элемент [`<input>`](/ru/docs/Web/HTML/Element/input))
-- [`HTMLOutputElement`](/en-US/docs/Web/API/HTMLOutputElement) (представляет элемент [`<output>`](/ru/docs/Web/HTML/Element/output))
+- [`HTMLOutputElement`](/ru/docs/Web/API/HTMLOutputElement) (представляет элемент [`<output>`](/ru/docs/Web/HTML/Element/output))
 - [`HTMLSelectElement`](/ru/docs/Web/API/HTMLSelectElement) (представляет элемент [`<select>`](/ru/docs/Web/HTML/Element/select))
-- [`HTMLTextAreaElement`](/en-US/docs/Web/API/HTMLTextAreaElement) (представляет элемент [`<textarea>`](/en-US/docs/Web/HTML/Element/textarea))
+- [`HTMLTextAreaElement`](/ru/docs/Web/API/HTMLTextAreaElement) (представляет элемент [`<textarea>`](/ru/docs/Web/HTML/Element/textarea))
 
 Для перечисленных выше элементов Constraint Validation API делает доступными следующие свойства.
 
@@ -451,9 +451,9 @@ email.addEventListener("input", function (event) {
 </form>
 ```
 
-Эта простая форма использует атрибут [`novalidate`](/en-US/docs/Web/HTML/Attributes/novalidate), который отключает автоматическую валидацию браузером; это позволяет нашему скрипту взять управление валидацией на себя. Однако, это не отменяет поддержку Constraint Validation API или псевдоклассов, таких как {{cssxref(":valid")}} или ему подобных. Это значит, что хотя браузер автоматически и не проверяет валидность формы перед отправкой данных, вы можете сделать это самостоятельно и соответствующим образом стилизовать форму.
+Эта простая форма использует атрибут [`novalidate`](/ru/docs/Web/HTML/Attributes/novalidate), который отключает автоматическую валидацию браузером; это позволяет нашему скрипту взять управление валидацией на себя. Однако, это не отменяет поддержку Constraint Validation API или псевдоклассов, таких как {{cssxref(":valid")}} или ему подобных. Это значит, что хотя браузер автоматически и не проверяет валидность формы перед отправкой данных, вы можете сделать это самостоятельно и соответствующим образом стилизовать форму.
 
-Объектом валидации является обязательный для заполнения [`<input type="email">`](/en-US/docs/Web/HTML/Element/input/email), длина которого не должна быть меньше 8 символов. Давайте напишем код, проверяющий эти критерии, и покажем кастомное сообщение об ошибке в случае несоблюдения какого-то из них.
+Объектом валидации является обязательный для заполнения [`<input type="email">`](/ru/docs/Web/HTML/Element/input/email), длина которого не должна быть меньше 8 символов. Давайте напишем код, проверяющий эти критерии, и покажем кастомное сообщение об ошибке в случае несоблюдения какого-то из них.
 
 Мы хотим показывать сообщение об ошибке внутри элемента `<span>`. Данному элементу задан атрибут [`aria-live`](/ru/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), чтобы гарантировать, что наше кастомное сообщение об ошибке будет доступно всем, включая пользователей скринридеров.
 

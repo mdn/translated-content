@@ -232,7 +232,7 @@ Quotation Element</em>) указывает на то, что заключённ�
 Строчные цитаты работают точно так же, за исключением того, что они используют элемент {{htmlelement ("q")}}. Например, следующий кусочек разметки содержит цитату из страницы `<q>` MDN:
 
 ```html
-<p>Элемент цитирования — <code>&lt;q&gt;</code> — <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">предназначен
+<p>Элемент цитирования — <code>&lt;q&gt;</code> — <q cite="https://developer.mozilla.org/ru/docs/Web/HTML/Element/q">предназначен
 для коротких цитат, не требующих прерывания абзаца</q>.</p>
 ```
 
@@ -249,13 +249,13 @@ Quotation Element</em>) указывает на то, что заключённ�
 <cite>блочных цитатах</cite></a>:
 </p>
 
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+<blockquote cite="https://developer.mozilla.org/ru/docs/Web/HTML/Element/blockquote">
   <p><strong>HTML-элемент<code>&lt;blockquote&gt;</code></strong> (от англ. <em>HTML Block
   Quotation Element</em>) указывает на то, что заключённый в нем текст является развёрнутой цитатой.</p>
 </blockquote>
 
-<p>Элемент цитирования — <code>&lt;q&gt;</code> — <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">предназначен
-для коротких цитат, не требующих прерывания абзаца</q>. -- <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+<p>Элемент цитирования — <code>&lt;q&gt;</code> — <q cite="https://developer.mozilla.org/ru/docs/Web/HTML/Element/q">предназначен
+для коротких цитат, не требующих прерывания абзаца</q>. -- <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element/q">
 <cite>Строчные цитаты</cite></a>.</p>
 ```
 
