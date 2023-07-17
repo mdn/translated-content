@@ -38,7 +38,7 @@ Les technologies d'assistance devraient être à l'écoute de tels événements 
 L'extrait de code ci-dessous montre comment le rôle `log` est ajouté directement dans le code source HTML.
 
 ```html
-<div id=”liveregion” class=”region” role=”log”></div>
+<div id="liveregion" class="region" role="log"></div>
 ```
 
 #### Exemple 2&nbsp;: Extrait d'un exemple d'application
@@ -51,8 +51,10 @@ Cet extrait de code crée le journal dans une application de chat AJAX.
     <li>Veuillez choisir un pseudo pour commencer à utiliser AJAX Chat.</li>
   </ul>
 
-  <ul id="userListRegion" aria-live="off" aria-relevant="additions removals text">
-  </ul>
+  <ul
+    id="userListRegion"
+    aria-live="off"
+    aria-relevant="additions removals text"></ul>
 </div>
 ```
 

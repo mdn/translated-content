@@ -40,9 +40,16 @@ Les technologies d'assistance devraient être à l'écoute de tels événements 
 L'extrait de code ci-dessous montre comment le rôle `listbox` est ajouté directement dans le code source HTML&nbsp;:
 
 ```html
-<div role="listbox" tabindex="0" id="listbox1" onclick="return listItemClick(event);"
-  onkeydown="return listItemKeyEvent(event);" onkeypress="return listItemKeyEvent(event);"
-  onfocus="this.className='focus';" onblur="this.className='blur';" aria-activedescendant="listbox1-1">
+<div
+  role="listbox"
+  tabindex="0"
+  id="listbox1"
+  onclick="return listItemClick(event);"
+  onkeydown="return listItemKeyEvent(event);"
+  onkeypress="return listItemKeyEvent(event);"
+  onfocus="this.className='focus';"
+  onblur="this.className='blur';"
+  aria-activedescendant="listbox1-1">
   <div role="option" id="listbox1-1" class="selected">Vert</div>
   <div role="option" id="listbox1-2">Orange</div>
   <div role="option" id="listbox1-3">Rouge</div>

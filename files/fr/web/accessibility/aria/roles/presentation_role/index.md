@@ -37,8 +37,8 @@ Par exemple, en reprenant le bouton de la navigation principale de ce site web, 
 
 ```html
 <button type="button" aria-haspopup="true">
-    Technologies
-    <span class="main-menu-arrow" role="presentation">▼</span>
+  Technologies
+  <span class="main-menu-arrow" role="presentation">▼</span>
 </button>
 ```
 
@@ -47,9 +47,7 @@ Par exemple, en reprenant le bouton de la navigation principale de ce site web, 
 De plus en plus d'images sont proposées sous la forme de compositions SVG directement insérées dans le document HTML. À l'image de l'attribut `alt` vide sur un élément `img`, il est possible d'indiquer qu'un élément SVG est purement décoratif grâce au rôle `presentation`.
 
 ```html
-<svg role="presentation">
-…
-</svg>
+<svg role="presentation">…</svg>
 ```
 
 ## Autres ressources

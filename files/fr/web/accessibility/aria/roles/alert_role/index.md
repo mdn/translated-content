@@ -43,7 +43,9 @@ Les technologies d'assistance devraient être à l'écoute de tels évènements 
 L'extrait de code ci-dessous montre comment le rôle `alert` est directement ajouté dans le code source HTML. Au moment où l'élément finit de se charger, le lecteur d'écran doit être notifié de l'alerte. Si l'élément était dans le code source original lorsque la page s'est chargée, le lecteur d'écran annonce immédiatement l'erreur après la lecture du titre de la page.
 
 ```html
-<h2 role="alert">Votre formulaire ne peut être soumis à cause de 3 erreurs de validation.</h2>
+<h2 role="alert">
+  Votre formulaire ne peut être soumis à cause de 3 erreurs de validation.
+</h2>
 ```
 
 #### Exemple 2&nbsp;: Ajout dynamique d'un élément avec le rôle `alert`
@@ -54,15 +56,19 @@ Cet extrait de code crée dynamiquement un élément avec un rôle `alert` et l'
 var myAlert = document.createElement("p");
 myAlert.setAttribute("role", "alert");
 
-var myAlertText = document.createTextNode("Vous devez accepter nos conditions d’utilisation pour créer un compte.");
+var myAlertText = document.createTextNode(
+  "Vous devez accepter nos conditions d’utilisation pour créer un compte.",
+);
 myAlert.appendChild(myAlertText);
 document.body.appendChild(myAlertText);
 ```
 
-**Note&nbsp;:** le même résultat peut être obtenu avec moins de code en utilisant une bibliothèque de scripts telle que *jQuery*&nbsp;:
+**Note&nbsp;:** le même résultat peut être obtenu avec moins de code en utilisant une bibliothèque de scripts telle que _jQuery_&nbsp;:
 
 ```js
-$("<p role='alert'>Vous devez accepter nos conditions d’utilisation pour créer un compte.</p>").appendTo(document.body);
+$(
+  "<p role='alert'>Vous devez accepter nos conditions d’utilisation pour créer un compte.</p>",
+).appendTo(document.body);
 ```
 
 #### Exemple 3&nbsp;: Ajout d'un rôle `alert` à un élément existant
@@ -86,12 +92,14 @@ Si un élément possède déjà `role="alert"` et qu'il est initialement caché 
 
 ```css
 .hidden {
-  display:none;
-  }
+  display: none;
+}
 ```
 
 ```html
-<p id="expirationWarning" role="alert" class="hidden">Votre session expirera dans 2 minutes</p>
+<p id="expirationWarning" role="alert" class="hidden">
+  Votre session expirera dans 2 minutes
+</p>
 ```
 
 ```js

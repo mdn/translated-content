@@ -43,8 +43,17 @@ L'extrait de code ci-dessous montre comment le rôle `group` est ajouté directe
 
 ```html
 <div id="tree1" class="tree" role="tree" tabindex="-1">
-  <div id="animals" class="groupHeader" role="presentation" aria-owns="animalGroup" aria-expanded="true">
-    <img class="headerImg" role="presentation" tabindex="-1" src="images/treeExpanded.gif" />
+  <div
+    id="animals"
+    class="groupHeader"
+    role="presentation"
+    aria-owns="animalGroup"
+    aria-expanded="true">
+    <img
+      class="headerImg"
+      role="presentation"
+      tabindex="-1"
+      src="images/treeExpanded.gif" />
     <span role="treeitem" tabindex="0">Animaux</span>
   </div>
 
@@ -53,12 +62,21 @@ L'extrait de code ci-dessous montre comment le rôle `group` est ajouté directe
       <span role="treeitem" tabindex="-1">Oiseaux</span>
     </div>
 
-    <div id="cats" class="groupHeader" role="presentation" aria-owns="catGroup" aria-expanded="false">
-      <img class="headerImg" role="presentation" tabindex="-1" src="images/treeContracted.gif" />
+    <div
+      id="cats"
+      class="groupHeader"
+      role="presentation"
+      aria-owns="catGroup"
+      aria-expanded="false">
+      <img
+        class="headerImg"
+        role="presentation"
+        tabindex="-1"
+        src="images/treeContracted.gif" />
       <span role="treeitem" tabindex="0">Chats</span>
     </div>
 
- <div id="catGroup" class="group" role="group">
+    <div id="catGroup" class="group" role="group">
       <div id="siamese" class="treeitem" role="presentation">
         <span role="treeitem" tabindex="-1">Siamois</span>
       </div>

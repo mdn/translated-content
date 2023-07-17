@@ -55,9 +55,7 @@ Les deux textes ont leur couleur noire par défaut. La "bonne" `<div>` a un fond
 ### Bon exemple
 
 ```html
-    <div class="bon">
-      Bon contraste
-    </div>
+<div class="bon">Bon contraste</div>
 ```
 
 ```css
@@ -84,9 +82,7 @@ div {
 La "mauvaise" `<div>`, en revanche, a un fond violet très foncé, ce qui rend le texte beaucoup plus difficile à lire:
 
 ```html
-    <div class="mauvais">
-      Mauvais contraste
-    </div>
+<div class="mauvais">Mauvais contraste</div>
 ```
 
 ```css

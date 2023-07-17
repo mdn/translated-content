@@ -32,10 +32,12 @@ Pour éviter ce problème, qualifiez complétement vos variables globales en uti
 ```html
 <script>
   function nomLocal() {
-    alert('La fonction nomLocal a été appellée.');
+    alert("La fonction nomLocal a été appellée.");
   }
 </script>
-<div onclick="window.nomLocal()">Cliquer ici devrait faire apparaitre un message.<div>
+<div onclick="window.nomLocal()">
+  Cliquer ici devrait faire apparaitre un message.
+</div>
 ```
 
 ### Ne concatenez pas les scripts dont vous n'avez pas le contrôle
@@ -52,7 +54,7 @@ Suggérez aux développeurs de vos bibliothèques favorites de suivre ces recomm
 
 Si vous avez l'intention d'utiliser une fonctionnalité en particulier, utilisez autant que possible la détection d'objet pour détecter cette fonctionnalité particulière. Par exemple, ne considérez pas que si dans un navigateur `"filter" in body.style` s'évalue à `true`, alors forcément ce navigateur doit être Internet Explorer et que donc cela signifie qu'il possède un objet `window.event` disponible dans les gestionnaires d'évenement.
 
-De manière générale, ne considérez pas que si un navigateur supporte une certaine fonctionnalité DOM, alors il doit forcément en supporter une autre, particulièrement si elle est non standard. Ou, à l'inverse, que s'il ne supporte *pas* une autre fonctionnalité, alors il n'en supportera pas non plus une autre. Par exemple, ce n'est pas parce qu'un navigateur supporte `onload` sur les éléments scripts alors cela signifie qu'il ne supportera jamais `onreadystatechange` sur ces mêmes éléments.
+De manière générale, ne considérez pas que si un navigateur supporte une certaine fonctionnalité DOM, alors il doit forcément en supporter une autre, particulièrement si elle est non standard. Ou, à l'inverse, que s'il ne supporte _pas_ une autre fonctionnalité, alors il n'en supportera pas non plus une autre. Par exemple, ce n'est pas parce qu'un navigateur supporte `onload` sur les éléments scripts alors cela signifie qu'il ne supportera jamais `onreadystatechange` sur ces mêmes éléments.
 
 Les comportement des navigateurs convergent de plus en plus: des fonctionnalités sont ajoutées, supprimées, des bugs sont corrigés. Tout ceci arrive regulièrement et arrivera encore.
 
