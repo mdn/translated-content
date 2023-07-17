@@ -1,17 +1,6 @@
 ---
 title: idle.queryState()
 slug: Mozilla/Add-ons/WebExtensions/API/idle/queryState
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Idle
-  - Inactif
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - queryState
 translation_of: Mozilla/Add-ons/WebExtensions/API/idle/queryState
 ---
 

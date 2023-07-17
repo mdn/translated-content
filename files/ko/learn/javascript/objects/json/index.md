@@ -13,14 +13,14 @@ JavaScript Object Notation (JSON)은 Javascript 객체 문법으로 구조화된
       <th scope="row">사전지식:</th>
       <td>
         컴퓨터 기초, HTML과 CSS에 대한 기본 지식, Javascript 기초 (<a
-          href="/en-US/docs/Learn/JavaScript/First_steps"
+          href="/ko/docs/Learn/JavaScript/First_steps"
           >First steps</a
         >과
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/ko/docs/Learn/JavaScript/Building_blocks"
           >Building blocks</a
         >
         참조), OOJS 기초 (<a
-          href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+          href="/ko/docs/Learn/JavaScript/Object-oriented/Introduction"
           >Introduction to objects</a
         >
         참조).
@@ -199,7 +199,7 @@ JSON을 가져오기 위해서는, {{domxref("XMLHttpRequest")}} (때론 **XHR**
     var request = new XMLHttpRequest();
     ```
 
-3. 이제 [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) 메소드를 사용해 새로운 요청을 만듭니다. 아래의 코드를 추가해 주세요.
+3. 이제 [`open()`](/ko/docs/Web/API/XMLHttpRequest/open) 메소드를 사용해 새로운 요청을 만듭니다. 아래의 코드를 추가해 주세요.
 
     ```js
     request.open('GET', requestURL);
@@ -207,10 +207,10 @@ JSON을 가져오기 위해서는, {{domxref("XMLHttpRequest")}} (때론 **XHR**
 
     이것은 최소 두 개의 매개변수를 가집니다. 다른 선택적 매개변수도 가능해요. 이건 단순 예제니깐 두 가지 필수 매개변수만 취할게요.
 
-    - HTTP 메서드는 네트워크 요청을 만들 때 사용됩니다. 이 경우 [`GET`](/en-US/docs/Web/HTTP/Methods/GET) 을 사용하는게 좋겠어요. 우린 그저 데이터를 가져오면 되니깐요.
+    - HTTP 메서드는 네트워크 요청을 만들 때 사용됩니다. 이 경우 [`GET`](/ko/docs/Web/HTTP/Methods/GET) 을 사용하는게 좋겠어요. 우린 그저 데이터를 가져오면 되니깐요.
     - URL은 요청을 보낼 곳을 지정합니다. 우리가 저장해 둔 JSON 파일의 URL로 지정할게요.
 
-4. 다음으로, 아래의 두 줄을 추가해 주세요. [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) 을 JSON으로 설정했어요. XHR로 하여금 서버가 JSON 데이터를 반환할 것이며, 자바스크립트 객체로서 변환될 것이라는 걸 알게 하기 위해서죠. 이제 [`send()`](/en-US/docs/Web/API/XMLHttpRequest/send) 메서드를 이용해 요청을 보냅시다.
+4. 다음으로, 아래의 두 줄을 추가해 주세요. [`responseType`](/ko/docs/Web/API/XMLHttpRequest/responseType) 을 JSON으로 설정했어요. XHR로 하여금 서버가 JSON 데이터를 반환할 것이며, 자바스크립트 객체로서 변환될 것이라는 걸 알게 하기 위해서죠. 이제 [`send()`](/ko/docs/Web/API/XMLHttpRequest/send) 메서드를 이용해 요청을 보냅시다.
 
     ```js
     request.responseType = 'json';
@@ -227,9 +227,9 @@ JSON을 가져오기 위해서는, {{domxref("XMLHttpRequest")}} (때론 **XHR**
     }
     ```
 
-우리는 요청에 대한 응답을 `superHeroes`라는 변수에 저장할 겁니다.([`response`](/en-US/docs/Web/API/XMLHttpRequest/response) 프로퍼티로 가능) 이 변수는 이제 JSON 데이터에 기반한 자바스크립트 객체를 포함하게 됩니다! 두 개의 함수를 호출해 이 객체를 전달합시다. 하나는 <`header>` 를 적절한 데이터로 채울 것이고, 다른 하나는 팀의 각 히어로에 대한 정보 카드를 생성하여 `<section>`내에 집어넣을 겁니다.
+우리는 요청에 대한 응답을 `superHeroes`라는 변수에 저장할 겁니다.([`response`](/ko/docs/Web/API/XMLHttpRequest/response) 프로퍼티로 가능) 이 변수는 이제 JSON 데이터에 기반한 자바스크립트 객체를 포함하게 됩니다! 두 개의 함수를 호출해 이 객체를 전달합시다. 하나는 <`header>` 를 적절한 데이터로 채울 것이고, 다른 하나는 팀의 각 히어로에 대한 정보 카드를 생성하여 `<section>`내에 집어넣을 겁니다.
 
-우리는 로드 이벤트가 request 객체에 발생할 때에 작동하는 이벤트 핸들러 내에 코드를 넣었습니다. ([`onload`](/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload) 참고) 왜냐하면 응답이 성공적으로 돌아왔을 때만 로드 이벤트가 작동하기 때문입니다. 이러한 방식은 우리가 무언가를 시도하려고 할 때 `request.response` 가 확실히 가능하다는 것을 보장해 줍니다.
+우리는 로드 이벤트가 request 객체에 발생할 때에 작동하는 이벤트 핸들러 내에 코드를 넣었습니다. ([`onload`](/ko/docs/Web/API/XMLHttpRequestEventTarget/onload) 참고) 왜냐하면 응답이 성공적으로 돌아왔을 때만 로드 이벤트가 작동하기 때문입니다. 이러한 방식은 우리가 무언가를 시도하려고 할 때 `request.response` 가 확실히 가능하다는 것을 보장해 줍니다.
 
 ### 헤더 조작하기
 
@@ -247,7 +247,7 @@ function populateHeader(jsonObj) {
 }
 ```
 
-우리는 이 매개변수를 `jsonObj`라고 이름 붙였습니다. 여러분으로 하여금 이 자바스크립트 객체가 JSON으로 부터 생겨났다는 걸 상기시켜 주기 위해서죠. 첫번째로 [`createElement()`](/en-US/docs/Web/API/Document/createElement)로 {HTMLElement("h1")}} 요소를 생성하고, 이것의 [`textContent`](/en-US/docs/Web/API/Node/textContent)를 객체의 `squadName` 프로퍼티와 같도록 만들어 준 뒤, [`appendChild()`](/en-US/docs/Web/API/Node/appendChild)를 사용해서 헤더에 붙이도록 했습니다. We then do a very similar 이와 비슷한 과정을 paragraph에도 적용했죠. 생성하고,그것의 text content를 설정하고 헤더에 붙이도록요. 차이점이라면 그것의 텍스트가 객체의 `homeTown` 과 `formed` 프로퍼티를 포함한 문자열로 설정된 거예요.
+우리는 이 매개변수를 `jsonObj`라고 이름 붙였습니다. 여러분으로 하여금 이 자바스크립트 객체가 JSON으로 부터 생겨났다는 걸 상기시켜 주기 위해서죠. 첫번째로 [`createElement()`](/ko/docs/Web/API/Document/createElement)로 {HTMLElement("h1")}} 요소를 생성하고, 이것의 [`textContent`](/ko/docs/Web/API/Node/textContent)를 객체의 `squadName` 프로퍼티와 같도록 만들어 준 뒤, [`appendChild()`](/ko/docs/Web/API/Node/appendChild)를 사용해서 헤더에 붙이도록 했습니다. We then do a very similar 이와 비슷한 과정을 paragraph에도 적용했죠. 생성하고,그것의 text content를 설정하고 헤더에 붙이도록요. 차이점이라면 그것의 텍스트가 객체의 `homeTown` 과 `formed` 프로퍼티를 포함한 문자열로 설정된 거예요.
 
 ### 히어로 정보 카드 만들기
 
@@ -313,8 +313,8 @@ request.responseType = 'json';
 
 하지만 우리는 이따금 재수 없어요. 때때로 우리는 날것의 JSON 문자열을 받기도 하고, 그것을 우리 스스로가 객체로 변환시켜야 할 때도 생기거든요. 그리고 네트워크를 통해 자바스크립트 객체를 보내고 싶을 때도 우리는 전송 전에 그걸 JSON(문자열)로 변환시켜야 해요. 다행히도, 이 두가지 문제가 웹 개발에 있어서 매우 흔한 덕에 다음과 같은 두가지 방법을 포함한 JSON 내장 객체가 브라우저 내에서 이용 가능합니다.
 
-- [`parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): JSON 문자열을 매개변수로서 수용하고, 일치하는 자바스크립트 객체로서 변환합니다.
-- [`stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): 객체를 매개변수로서 수용하고, JSON 문자열 형태로 변환합니다.
+- [`parse()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): JSON 문자열을 매개변수로서 수용하고, 일치하는 자바스크립트 객체로서 변환합니다.
+- [`stringify()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): 객체를 매개변수로서 수용하고, JSON 문자열 형태로 변환합니다.
 
 당신은 예제인 [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html)에서 첫번째 동작을 확인할 수 있습니다.(아래 코드 참고-[source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) — JSON 텍스트를 반환하기 위한 추가한 XHR와 JavaScript 객체로 전환하기 위해 사용된 `parse()`제외하면 이 코드는 이전에 우리가 빌드한 것과 완전히 같은 코드입니다. 다음은중요한 코드의 일부입니다.:
 

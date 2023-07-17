@@ -35,7 +35,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 
 第三方 API 是由第三方（通常是 Facebook，Twitter 或 Google 等公司）提供的 API，允许您通过 JavaScript 访问其功能，并在您自己的站点上使用它。正如我们在 [API 介绍章节](/zh-CN/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) 所展示的，最显著的例子就是运用 [Google Maps APIs](https://developers.google.com/maps/) 在你的网页上展示自定义地图。
 
-让我们再来瞧一眼这个地图的例子 (see the [source code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html); [see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), 从这里可以知道第三方 API 和浏览器 API 的区别是怎么样的。
+让我们再来瞧一眼这个地图的例子 (see the [source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/maps-example.html); [see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), 从这里可以知道第三方 API 和浏览器 API 的区别是怎么样的。
 
 > **备注：** 您可能想要一次获得所有的代码示例，在这种情况下，您可以搜索 repo 来获取每个部分中需要的示例文件。
 
@@ -93,7 +93,7 @@ URL 末尾提供的 URL 参数是一个开发人员密钥—应用程序的开�
 
 现在我们已经检验了 Google Maps API 示例以及它的运作方式，让我们添加一些更多的功能来展示如何使用 API 的其他特性。
 
-1. 要开始这个部分，确保你已经在一个新的目录复制 [Google Maps 启动文件](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html)。如果你已经 [克隆了示例存储库](/zh-CN/docs/Learn#Getting_our_code_examples)，那么你已经拥有了一个这个文件的拷贝，你可以在*javascript/apis/third-party-apis/google-maps 目录中找到该文件。*
+1. 要开始这个部分，确保你已经在一个新的目录复制 [Google Maps 启动文件](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/google-maps/maps_start.html)。如果你已经 [克隆了示例存储库](/zh-CN/docs/Learn#Getting_our_code_examples)，那么你已经拥有了一个这个文件的拷贝，你可以在*javascript/apis/third-party-apis/google-maps 目录中找到该文件。*
 2. 接下来，用以下步骤获取你自己的开发者密钥：
 
     1. 跳转到 [Google Cloud Platform API Manager dashboard](https://console.cloud.google.com/apis/dashboard).
@@ -215,7 +215,7 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
 1. 申请 "Article Search API" 的 API key ——新建一个应用，选择这个 API，(填写名称和描述，打开 "Article Search API" 下面的开关，然后点击“创建 (Create)”)
 2. 从结果页面获取 API。
-3. 现在开始构建这个应用，下载 [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) 和 [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) 到一个新的本地目录。如果已经克隆过这个仓库 [cloned the examples repository](/zh-CN/docs/Learn#Getting_our_code_examples), 里面就已经有这 2 个文件了，它们存放在 _javascript/apis/third-party-apis/nytimes_ 目录下。HTML 文件里的 `<script>` 标签下已经包含了构建这个应用需要用到的变量；下面我们来填写函数。
+3. 现在开始构建这个应用，下载 [nytimes_start.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/nytimes_start.html) 和 [nytimes.css](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/nytimes.css) 到一个新的本地目录。如果已经克隆过这个仓库 [cloned the examples repository](/zh-CN/docs/Learn#Getting_our_code_examples), 里面就已经有这 2 个文件了，它们存放在 _javascript/apis/third-party-apis/nytimes_ 目录下。HTML 文件里的 `<script>` 标签下已经包含了构建这个应用需要用到的变量；下面我们来填写函数。
 
 下面是这个应用最终的样子，可以在搜索框里填写条目、起始日期和结束日期，作为参数向 Article Search API 接口发起查询，然后显示查询结果。
 
@@ -413,7 +413,7 @@ function displayResults(json) {
 
     第二个函数基本上执行相反的操作，不过有个额外的步骤是检测 `pageNumber` 在 -1 之前是否已经是 0 — 如果 fetch 请求的 `page` URL 参数是负数，会导致错误。如果 `pageNumber` 已经是 0，则直接执行 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 退出函数，避免多余的计算。 (如果当前页面已经是首页，就不需要重新加载)。
 
-> **备注：** 完整代码参考 [finished nytimes API example code on GitHub](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/index.html) (实例参考 [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)).
+> **备注：** 完整代码参考 [finished nytimes API example code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/index.html) (实例参考 [see it running live here](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)).
 
 ## YouTube 示例
 

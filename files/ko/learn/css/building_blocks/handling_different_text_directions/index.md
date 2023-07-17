@@ -25,11 +25,11 @@ CSS 학습에서 지금까지 경험한 많은 속성과 값은 화면의 크기
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습) 및 , CSS 작동 방식 이해 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫 번째 단계</a
         >
         학습)
@@ -50,7 +50,7 @@ CSS 쓰기 모드는 텍스트가 가로 또는 세로로 표시되는지 여부
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
 
-[`writing-mode`](/en-US/docs/Web/CSS/writing-mode) 속성에 가능한 세 가지 값은 다음과 같습니다:
+[`writing-mode`](/ko/docs/Web/CSS/writing-mode) 속성에 가능한 세 가지 값은 다음과 같습니다:
 
 - `horizontal-tb`: 블록의 표시 방향은 위에서 아래 입니다. 문장은 가로로 표시됩니다.
 - `vertical-rl`: 블록의 표시 방향은 오른쪽에서 왼쪽입니다. 문장은 수직으로 표시됩니다.

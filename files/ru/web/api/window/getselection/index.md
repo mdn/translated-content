@@ -39,7 +39,7 @@ function foo() {
 
 В JavaScript при попытке передать в функцию, принимающую строку (как на пример {{ Domxref("window.alert()") }} или же {{ Domxref("document.write()") }}), функция попробует сделать из любого параметра строку, даже если этот параметр является объектом, функцией со своими методами и свойствами.
 
-В приведённом выше примере `selObj.toString() автоматически задействуется, когда мы передаём в`{{domxref("window.alert()")}} переменную selObj как параметр, который должен быть строкой. Однако мы не можем использовать свойства и метода объекта String, как на пример : [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length), [`substr`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr). В следствии чего, вам необходимо будет применить вручную метод `toString(), как тут:`
+В приведённом выше примере `selObj.toString() автоматически задействуется, когда мы передаём в`{{domxref("window.alert()")}} переменную selObj как параметр, который должен быть строкой. Однако мы не можем использовать свойства и метода объекта String, как на пример : [`length`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/length), [`substr`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/substr). В следствии чего, вам необходимо будет применить вручную метод `toString(), как тут:`
 
 ```js
 var selectedText = selObj.toString();

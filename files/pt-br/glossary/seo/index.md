@@ -23,7 +23,7 @@ Os métodos SEO dividem-se em três grandes classes:
 
 ### Conhecimento Geral
 
-- {{Interwiki("wikipedia", "SEO")}} na Wikipedia
+- [SEO](https://pt.wikipedia.org/wiki/SEO) na Wikipedia
 
 ### Aprenda SEO
 

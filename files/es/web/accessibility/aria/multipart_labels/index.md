@@ -21,9 +21,15 @@ Tanto **aria-labelledby** y **aria-describedby** se especifican en el elemento d
 {{EmbedLiveSample('')}}
 
 ```html
-<input aria-labelledby="etiquetaApagado tiempoApagado unidadApagado" type="checkbox" />
+<input
+  aria-labelledby="etiquetaApagado tiempoApagado unidadApagado"
+  type="checkbox" />
 <span id="etiquetaApagado">Apagar computadora después de </span>
-<input aria-labelledby="etiquetaApagado tiempoApagado unidadApagado" id="tiempoApagado" type="text" value="10" />
+<input
+  aria-labelledby="etiquetaApagado tiempoApagado unidadApagado"
+  id="tiempoApagado"
+  type="text"
+  value="10" />
 <span id="unidadApagado"> minutos</span>
 ```
 

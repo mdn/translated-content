@@ -1,16 +1,6 @@
 ---
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
-tags:
-  - Add-ons
-  - Browser
-  - Customization
-  - Customize
-  - Design
-  - Look and Feel
-  - Themes
-  - colors
-  - theme manifest
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 ---
 
@@ -579,7 +569,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
       <td>
         <p>
           La couleur d'arrière-plan des éléments mis en surbrillance à l'aide du
-          clavier dans les fenêtre contextuelles (tel que l’élément sélectionné
+          clavier dans les fenêtre contextuelles (tel que l'élément sélectionné
           dans le menu déroulant de la barre d'URL).
         </p>
         <div class="note">

@@ -1,11 +1,7 @@
 ---
 title: Firefox 17 pour les développeurs
 slug: Mozilla/Firefox/Releases/17
-tags:
-  - Firefox
-  - Firefox 17
 translation_of: Mozilla/Firefox/Releases/17
-original_slug: Mozilla/Firefox/Versions/17
 ---
 
 {{FirefoxSidebar}}
@@ -52,7 +48,7 @@ Firefox 17, basé sur Gecko 17.0, est sorti le 20 novembre 2012. Cette page rés
 
 ### Agent Utilisateur
 
-La partie de Gecko sur la chaine de l'agent utilisateur a changée. La date de compilation (qui n’avait pas été mise à jour depuis 2010) a été retirée, et c'est le numéro de version de Gecko qui a été mis en place. Donc `Gecko/20100101` -> `Gecko/17.0`. Cela peut vous affecter si vous faites du reniflement.
+La partie de Gecko sur la chaine de l'agent utilisateur a changée. La date de compilation (qui n'avait pas été mise à jour depuis 2010) a été retirée, et c'est le numéro de version de Gecko qui a été mis en place. Donc `Gecko/20100101` -> `Gecko/17.0`. Cela peut vous affecter si vous faites du reniflement.
 
 ## Changements pour les développeurs de Mozilla et de modules complémentaires
 

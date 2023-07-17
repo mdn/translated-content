@@ -1,16 +1,6 @@
 ---
 title: pageAction.show()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/show
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - pageAction
-  - show
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 ---
 

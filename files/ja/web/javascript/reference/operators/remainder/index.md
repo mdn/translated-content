@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Operators/Remainder
 
 {{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}
 
-なお、多くの言語では ‘%’ はリマインダー演算子ですが、言語によっては (例えば [Python や Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages) では) モジュロ演算子になります。正の数同士の場合は、この 2 つの値は等価ですが、被除数と除数が異なる符号の場合は結果が異なります。 JavaScript でモジュロを得るには、 `a % n` の代わりに `((a % n ) + n ) % n` を使用してください。
+なお、多くの言語では '%' はリマインダー演算子ですが、言語によっては (例えば [Python や Perl](https://en.wikipedia.org/wiki/Modulo_operation#In_programming_languages) では) モジュロ演算子になります。正の数同士の場合は、この 2 つの値は等価ですが、被除数と除数が異なる符号の場合は結果が異なります。 JavaScript でモジュロを得るには、 `a % n` の代わりに `((a % n ) + n ) % n` を使用してください。
 
 ## 構文
 

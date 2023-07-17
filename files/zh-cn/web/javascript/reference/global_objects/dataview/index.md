@@ -43,7 +43,7 @@ function getUint64(dataview, byteOffset, littleEndian) {
 }
 ```
 
-或者，如果你需要完整的 64 位的范围，你可以创建 {{jsxref("BigInt")}}。此外，尽管原生 BigInt 比等效的用户态的库快得多，但由于其大小可变的性质，BitInt 始终比 JavaScript 中的 32 位整数要慢得多。
+或者，如果你需要完整的 64 位的范围，你可以创建 {{jsxref("BigInt")}}。此外，尽管原生 BigInt 比等效的用户态的库快得多，但由于其大小可变的性质，BigInt 始终比 JavaScript 中的 32 位整数要慢得多。
 
 ```js
 const BigInt = window.BigInt, bigThirtyTwo = BigInt(32), bigZero = BigInt(0);
@@ -65,7 +65,7 @@ function getUint64BigInt(dataview, byteOffset, littleEndian) {
 ## 实例属性
 
 - `DataView.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"DataView"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
+  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串 `"DataView"`。该属性用于 {{jsxref("Object.prototype.toString()")}}。
 - {{jsxref("DataView.prototype.buffer")}}
   - : {{jsxref("ArrayBuffer")}} 是引用该缓冲区的视图。在构造时会被固定，因此该属性**只读**。
 - {{jsxref("DataView.prototype.byteLength")}}

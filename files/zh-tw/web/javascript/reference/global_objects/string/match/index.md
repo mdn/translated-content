@@ -9,7 +9,7 @@ The **`match()`** method retrieves the matches when matching a _string_ against 
 
 ## Syntax
 
-```plain
+```js-nolint
 str.match(regexp)
 ```
 
@@ -41,7 +41,7 @@ If the regular expression includes the `g` flag, the method returns an {{jsxref(
 In the following example, `match()` is used to find `'Chapter'` followed by 1 or more numeric characters followed by a decimal point and numeric character 0 or more times. The regular expression includes the `i` flag so that upper/lower case differences will be ignored.
 
 ```js
-var str = 'For more information, see Chapter 3.4.5.1';
+var str = "For more information, see Chapter 3.4.5.1";
 var re = /see (chapter \d+(\.\d)*)/i;
 var found = str.match(re);
 
@@ -65,7 +65,7 @@ console.log(found);
 The following example demonstrates the use of the global and ignore case flags with `match()`. All letters A through E and a through e are returned, each its own element in the array.
 
 ```js
-var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 var regexp = /[A-E]/gi;
 var matches_array = str.match(regexp);
 
@@ -78,7 +78,7 @@ console.log(matches_array);
 ```js
 var str = "Nothing will come of nothing.";
 
-str.match();   // returns [""]
+str.match(); // returns [""]
 ```
 
 ### A non-RegExp object as the parameter
@@ -86,17 +86,18 @@ str.match();   // returns [""]
 When the parameter is a string or a number, it is implicitly converted to a {{jsxref("RegExp")}} by using new RegExp(obj). If it is a positive number with a positive sign,the RegExp() method will ignore the positive sign.
 
 ```js
-var str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
-    str2 = "My grandfather is 65 years old and My grandmother is 63 years old.",
-    str3 = "The contract was declared null and void.";
-str1.match("number");   // "number" is a string. returns ["number"]
-str1.match(NaN);        // the type of NaN is the number. returns ["NaN"]
-str1.match(Infinity);   // the type of Infinity is the number. returns ["Infinity"]
-str1.match(+Infinity);  // returns ["Infinity"]
-str1.match(-Infinity);  // returns ["-Infinity"]
-str2.match(65);         // returns ["65"]
-str2.match(+65);        // A number with a positive sign. returns ["65"]
-str3.match(null);       // returns ["null"]
+var str1 =
+    "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
+  str2 = "My grandfather is 65 years old and My grandmother is 63 years old.",
+  str3 = "The contract was declared null and void.";
+str1.match("number"); // "number" is a string. returns ["number"]
+str1.match(NaN); // the type of NaN is the number. returns ["NaN"]
+str1.match(Infinity); // the type of Infinity is the number. returns ["Infinity"]
+str1.match(+Infinity); // returns ["Infinity"]
+str1.match(-Infinity); // returns ["-Infinity"]
+str2.match(65); // returns ["65"]
+str2.match(+65); // A number with a positive sign. returns ["65"]
+str3.match(null); // returns ["null"]
 ```
 
 ## Specifications

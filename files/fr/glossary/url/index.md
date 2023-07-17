@@ -1,11 +1,7 @@
 ---
 title: URL
 slug: Glossary/URL
-tags:
-  - Glossaire
-  - Infrastructure
 translation_of: Glossary/URL
-original_slug: Glossaire/URL
 ---
 
 **Uniform Resource Locator** (**URL**) est une chaîne de texte qui spécifie où une ressource (telle qu'une page web, une image ou une vidéo) peut être trouvée sur Internet.

@@ -1,16 +1,12 @@
 ---
 title: Scripts de contenu
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
-tags:
-  - Add-ons
-  - JavaScript
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
 
 {{AddonSidebar}}
 
-Un script de contenu (_content script_ en anglais) est une partie de votre extension qui s’exécute dans le contexte d’une page web donnée (par opposition aux scripts d’arrière-plan qui font partie de l'extension, ou aux scripts qui font partie du site Web lui-même, tels que ceux chargés en utilisant l'élément {{HTMLElement("script")}}).
+Un script de contenu (_content script_ en anglais) est une partie de votre extension qui s'exécute dans le contexte d'une page web donnée (par opposition aux scripts d'arrière-plan qui font partie de l'extension, ou aux scripts qui font partie du site Web lui-même, tels que ceux chargés en utilisant l'élément {{HTMLElement("script")}}).
 
 Les [scripts d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) peuvent accéder à l'ensemble des [API WebExtension](/fr/Add-ons/WebExtensions/API) mais ils ne peuvent pas accéder directement au contenu des pages web. Aussi, si votre extension doit manipuler le contenu des pages web, vous devrez utiliser les scripts de contenu.
 
@@ -124,9 +120,9 @@ L'inverse est également vrai&nbsp;: les scripts de la page ne peuvent pas voir 
 
 Ceci signifie que le script de contenu peut compter sur un comportement prévisible des propriétés du DOM et n'a pas à se soucier d'un éventuel conflit entre les variables qu'il définit et celles des scripts de page.
 
-Une des conséquences pratiques de ce comportement est que les scripts de contenu n’ont accès à aucune des bibliothèques JavaScript chargées par la page. Par exemple, si la page inclut jQuery, le script de contenu ne pourra pas le voir.
+Une des conséquences pratiques de ce comportement est que les scripts de contenu n'ont accès à aucune des bibliothèques JavaScript chargées par la page. Par exemple, si la page inclut jQuery, le script de contenu ne pourra pas le voir.
 
-Si un script de contenu veut utiliser une bibliothèque JavaScript, alors la bibliothèque doit être injectée en tant que script de contenu aux côtés du script de contenu qui veut l’utiliser.
+Si un script de contenu veut utiliser une bibliothèque JavaScript, alors la bibliothèque doit être injectée en tant que script de contenu aux côtés du script de contenu qui veut l'utiliser.
 
 ```json
 "content_scripts": [

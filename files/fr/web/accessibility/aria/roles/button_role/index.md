@@ -276,4 +276,4 @@ Si un lien effectue l'action d'un bouton, fournir `role="button"` à l'élément
 - [Notes sur l'utilisation d'ARIA en HTML](https://www.w3.org/TR/aria-in-html/)
 - [Exemple de code officiel WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html)
 - [Rôle ARIA `menubutton`](/fr/docs/Web/Accessibility/ARIA/Roles/menubutton_role)
-- [**Rôles WAI-ARIA**](/fr/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+- [**Rôles WAI-ARIA**](/fr/docs/Web/Accessibility/ARIA/Roles){{ListSubpagesForSidebar("/fr/docs/Web/Accessibility/ARIA/Roles")}}

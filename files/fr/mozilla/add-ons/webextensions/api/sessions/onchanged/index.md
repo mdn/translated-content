@@ -1,16 +1,6 @@
 ---
 title: sessions.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onChanged
-  - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
 ---
 

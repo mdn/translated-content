@@ -1,16 +1,6 @@
 ---
 title: tabs.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onUpdated
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 ---
 

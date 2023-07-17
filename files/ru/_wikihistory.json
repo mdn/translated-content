@@ -208,10 +208,6 @@
     "modified": "2019-07-04T12:16:45.863Z",
     "contributors": ["BVaflick"]
   },
-  "Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation": {
-    "modified": "2019-03-18T21:45:23.068Z",
-    "contributors": ["wbamberg", "maxypayne"]
-  },
   "Glossary": {
     "modified": "2020-10-07T11:13:45.197Z",
     "contributors": [
@@ -3563,10 +3559,6 @@
     "modified": "2019-03-18T21:05:03.573Z",
     "contributors": ["vladimir-nikotin", "Shychara"]
   },
-  "Mozilla/Add-ons/WebExtensions/user_interface/Browser_action": {
-    "modified": "2019-03-18T21:05:13.253Z",
-    "contributors": ["vladimir-nikotin", "Shychara"]
-  },
   "Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items": {
     "modified": "2019-03-18T21:01:56.567Z",
     "contributors": ["shmel3"]
@@ -3590,6 +3582,10 @@
   "Mozilla/Add-ons/WebExtensions/user_interface/Sidebars": {
     "modified": "2019-03-18T21:05:02.475Z",
     "contributors": ["leksiq", "LumenGNU"]
+  },
+  "Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button": {
+    "modified": "2019-03-18T21:05:13.253Z",
+    "contributors": ["vladimir-nikotin", "Shychara"]
   },
   "Mozilla/Firefox": {
     "modified": "2020-01-18T14:11:55.644Z",
@@ -8756,6 +8752,10 @@
     "modified": "2019-07-22T11:08:23.191Z",
     "contributors": ["a-bodrova", "sandmanisdancing", "fscholz", "ldone"]
   },
+  "Web/CSS/CSS_paged_media": {
+    "modified": "2020-10-12T15:00:21.800Z",
+    "contributors": ["at940266"]
+  },
   "Web/CSS/CSS_positioned_layout": {
     "modified": "2019-03-23T22:44:29.790Z",
     "contributors": ["davidhbrown"]
@@ -8892,10 +8892,6 @@
   "Web/CSS/Layout_mode": {
     "modified": "2019-03-23T23:09:42.012Z",
     "contributors": ["idoru", "BychekRU", "ldone"]
-  },
-  "Web/CSS/Paged_Media": {
-    "modified": "2020-10-12T15:00:21.800Z",
-    "contributors": ["at940266"]
   },
   "Web/CSS/Pseudo-classes": {
     "modified": "2019-03-23T22:51:08.664Z",
@@ -10097,17 +10093,6 @@
       "Dionys",
       "Woodroof",
       "Zhuravlik"
-    ]
-  },
-  "Web/Guide/AJAX/Getting_Started": {
-    "modified": "2019-03-24T00:01:49.926Z",
-    "contributors": [
-      "DanilaH",
-      "chrisdavidmills",
-      "Megapotz",
-      "Apparition",
-      "Square",
-      "Kwinto"
     ]
   },
   "Web/Guide/API": {
@@ -16799,6 +16784,17 @@
   "conflicting/Web/Guide": {
     "modified": "2019-03-24T00:00:53.915Z",
     "contributors": ["Dionys"]
+  },
+  "conflicting/Web/Guide/AJAX": {
+    "modified": "2019-03-24T00:01:49.926Z",
+    "contributors": [
+      "DanilaH",
+      "chrisdavidmills",
+      "Megapotz",
+      "Apparition",
+      "Square",
+      "Kwinto"
+    ]
   },
   "conflicting/Web/Guide/Mobile": {
     "modified": "2019-03-23T23:27:06.077Z",

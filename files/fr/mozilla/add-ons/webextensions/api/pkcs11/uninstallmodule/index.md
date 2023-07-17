@@ -1,15 +1,6 @@
 ---
 title: pkcs11.uninstallModule()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/uninstallModule
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - pkcs11
-  - uninstallModule
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/uninstallModule
 ---
 

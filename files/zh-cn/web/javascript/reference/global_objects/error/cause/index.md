@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Error/cause
 
 ## 取值
 
-它通过 `options.cause` 参数被传入 [`Error()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) 构造函数，并且有可能不存在。
+它通过 `options.cause` 参数被传入 [`Error()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/Error) 构造函数，并且有可能不存在。
 
 {{js_property_attributes(1, 0, 1)}}
 

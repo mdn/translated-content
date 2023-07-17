@@ -1,17 +1,6 @@
 ---
 title: menus.removeAll()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/removeAll
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
-  - menus
-  - removeAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/removeAll
 ---
 

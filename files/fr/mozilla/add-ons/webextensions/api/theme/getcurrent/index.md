@@ -1,15 +1,6 @@
 ---
 title: theme.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/getCurrent
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Theme
-  - WebExtensions
-  - getCurrent
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/getCurrent
 ---
 

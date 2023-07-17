@@ -166,7 +166,7 @@ Teacher.prototype.greeting = function () {
       this.name.last +
       ", and I teach " +
       this.subject +
-      "."
+      ".",
   );
 };
 ```
@@ -184,7 +184,7 @@ var teacher1 = new Teacher(
   31,
   "male",
   ["football", "cookery"],
-  "mathematics"
+  "mathematics",
 );
 ```
 

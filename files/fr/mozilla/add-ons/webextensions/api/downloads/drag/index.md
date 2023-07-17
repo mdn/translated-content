@@ -1,16 +1,6 @@
 ---
 title: downloads.drag()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/drag
-tags:
-  - API
-  - Add-ons
-  - Drag
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/drag
 ---
 

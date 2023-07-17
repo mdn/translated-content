@@ -1,16 +1,6 @@
 ---
 title: runtime.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getBackgroundPage
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
 ---
 

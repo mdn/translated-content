@@ -1,11 +1,6 @@
 ---
 title: optional_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
-tags:
-  - Add-ons
-  - WebExtensions
-  - manifest.json
-  - optional_permissions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 ---
 

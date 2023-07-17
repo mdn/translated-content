@@ -1,16 +1,6 @@
 ---
 title: notifications.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClicked
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - onClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onClicked
 ---
 

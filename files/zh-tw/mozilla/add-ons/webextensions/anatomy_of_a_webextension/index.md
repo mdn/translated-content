@@ -59,7 +59,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 **background-page.html**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-tw">
   <head>
     <meta charset="utf-8" />

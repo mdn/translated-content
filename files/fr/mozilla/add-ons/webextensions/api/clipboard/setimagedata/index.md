@@ -1,15 +1,6 @@
 ---
 title: clipboard.setImageData()
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
-tags:
-  - API
-  - Add-ons
-  - Clipboard
-  - Extensions
-  - Method
-  - Referece
-  - WebExtensions
-  - setImageData
 translation_of: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 ---
 

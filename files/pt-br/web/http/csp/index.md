@@ -17,7 +17,7 @@ Alternativamente, o elemento {{HTMLElement("meta")}} pode ser usado para configu
 
 Um objetivo primário do CSP é de mitigar e reportar ataques XSS. Os ataques de XSS exploram a confiaça do navegador sobre o conteúdo recebido pelo servidor. Scripts maliciosos são executados pelo navegador da vítima porque o navegador confia na origem do conteúdo, mesmo quando sua origem não está vindo de onde parece que está vindo.
 
-O CSP faz com que seja possível para administradores de servidores reduzirem ou eliminarem os vetores em que os ataques de XSS podem ocorrer, especificando os domínios que o navegador deve considerar como origens válidas de scripts para serem executados. Um navegador comátivel com o CSP só irá executar então scripts que vierem de arquivos que estejam presentes nos domínios que foram previamente especificados como confiáveis, ignorando todos os outros scripts (incluindo scripts inline e atributos HTML de manipulação de eventos).
+O CSP faz com que seja possível para administradores de servidores reduzirem ou eliminarem os vetores em que os ataques de XSS podem ocorrer, especificando os domínios que o navegador deve considerar como origens válidas de scripts para serem executados. Um navegador compatível com o CSP só irá executar então scripts que vierem de arquivos que estejam presentes nos domínios que foram previamente especificados como confiáveis, ignorando todos os outros scripts (incluindo scripts inline e atributos HTML de manipulação de eventos).
 
 Como uma forma de proteção final, os sites que querem nunca permitir a execução de scripts podem optar para desabilitar a execução globalmente.
 

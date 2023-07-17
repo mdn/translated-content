@@ -1,14 +1,6 @@
 ---
 title: alarms
 slug: Mozilla/Add-ons/WebExtensions/API/alarms
-tags:
-  - API
-  - Besoins Privilèges
-  - Extensions
-  - Interface
-  - Reference
-  - WebExtensions
-  - alarms
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms
 ---
 

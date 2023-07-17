@@ -1,13 +1,6 @@
 ---
 title: omnibox
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - omnibox
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox
 ---
 

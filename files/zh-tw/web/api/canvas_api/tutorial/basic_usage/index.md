@@ -51,7 +51,7 @@ Let's start this tutorial by looking at the {{HTMLElement("canvas")}} {{Glossary
 
 {{HTMLElement("canvas")}}產生一個固定大小的繪圖畫布，這個畫布上有一或多個渲染環境(rendering context)，我們可以用渲染環境來產生或操作顯示內容的渲染環境(rendering context)。不同環境(context)可能會提供不同型態的渲染方式，好比說[WebGL](/zh-TW/docs/Web/WebGL)使用[OpenGL ES](http://www.khronos.org/opengles/)的 3D 環境(context)，而這裡我們主要將討論 2D 渲染環境(rendering context)。
 
-一開始 canvas 為空白，程式碼腳本需要先存取渲染環境，在上面繪圖，然後才會顯現影像。{{HTMLElement("canvas")}} 素有一個方法([method](/zh-TW/docs/Web/API/HTMLCanvasElement#Methods))叫 getContext()，透過此方法可以取得渲染環境及其繪圖函數(function)；getContext()輸入參數只有渲染環境類型一項，像本教學所討論的 2D 繪圖，就是輸入”2d”。
+一開始 canvas 為空白，程式碼腳本需要先存取渲染環境，在上面繪圖，然後才會顯現影像。{{HTMLElement("canvas")}} 素有一個[方法](/zh-TW/docs/Web/API/HTMLCanvasElement#Methods)叫 getContext()，透過此方法可以取得渲染環境及其繪圖函數（function）；getContext() 輸入參數只有渲染環境類型一項，像本教學所討論的 2D 繪圖，就是輸入「2d」。
 
 ```js
 var canvas = document.getElementById("tutorial");

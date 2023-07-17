@@ -36,7 +36,7 @@ Commençons par un aperçu rapide de ces notions avant de les détailler une à 
 
 ### Cascade
 
-Les feuilles de style forment une [**cascade**](/fr/docs/Web/CSS/Cascade). Sous une forme très simple, cela signifie que l'origine, la couche de cascade et l'ordre des règles CSS comptent. Lorsque deux règle de la même couche de cascade s'appliquent et ont la même spécificité, c'est celle qui est définie dans la dernière feuille de style qui sera utilisée.
+Les feuilles de style forment une [**cascade**](/fr/docs/Web/CSS/Cascade). Sous une forme très simple, cela signifie que l'origine, la couche de cascade et l'ordre des règles CSS comptent. Lorsque deux règles de la même couche de cascade s'appliquent et ont la même spécificité, c'est celle qui est définie dans la dernière feuille de style qui sera utilisée.
 
 Dans l'exemple qui suit, il y a deux règles qui pourraient s'appliquer à l'élément `<h1>`. Le contenu de cet élément `<h1>` est, en fin de compte, coloré en bleu. Dans cet exemple, les deux règles proviennent de la même source et ont un sélecteur identique&nbsp;: elles ont donc la même spécificité et c'est alors la dernière règle, selon l'ordre du code source, qui l'emporte.
 

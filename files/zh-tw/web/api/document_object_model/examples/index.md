@@ -10,7 +10,7 @@ slug: Web/API/Document_Object_Model/Examples
 下面的例子展示了在不同尺寸的圖片時使用其高（height）和寬（width）屬性的情況：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>width/height example</title>
@@ -77,7 +77,7 @@ slug: Web/API/Document_Object_Model/Examples
 ## 範例二：圖片屬性
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Modifying an image border</title>
@@ -119,7 +119,7 @@ slug: Web/API/Document_Object_Model/Examples
 在下面這個簡單的例子中，透過取得的 DOM 元素中的 style 物件和 style 物件中的屬性，我們可以取得 HTML 段落中的一些基本樣式屬性。在本例中，你可以直接操控各別的樣式屬性。在下一個的例子裡（見例 4），你可以使用 stylesheets 和它的規則來改變整個文檔的樣式。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Changing color and font-size example</title>
@@ -190,7 +190,7 @@ P
 然而，stopEvent 同時也會另外執行一個事件物件的方法{{domxref("event.stopPropagation")}}，這會使得該事件（點擊）無法在 DOM 中有進一步的冒泡行為。請注意，表格本身有一個 {{domxref("element.onclick","onclick")}} 事件，使得這個表格被點擊時的時候原本應該要會跳出一個訊息。但因為 stopEvent 方法已經阻止了冒泡，所以在表格中的數據更新後，該事件階段有效地結束，表格的點擊事件沒有被觸發，而是顯示一個警告框（event propagation halted）——證實了事件被有效結束而沒有進一步冒泡。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Event Propagation</title>
@@ -241,7 +241,7 @@ P
 `getComputedStyle() 返回了一個 ComputedCSSStyleDeclaration 物件，其獨立的樣式屬性可以用該物件的 getPropertyValue() 方法引用，如同下面的例子一樣：`
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>getComputedStyle example</title>
@@ -308,7 +308,7 @@ P
 將下面的代碼放到一個空白的文本文件，並將其用各種瀏覽器開啟，你一定會對各種瀏覽器之間的不一致（事件屬性的名稱及其數量）感到驚訝。你可能還喜歡在這個頁面加入一些元素，並呼叫不同的事件處理函數（event handlers）。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />

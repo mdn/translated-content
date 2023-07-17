@@ -351,7 +351,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 <img src={logo} className="App-logo" alt="logo" />
 ```
 
-可以看到， `<img />` 标签的 `src` 属性值是在大括号中的 -- `{logo}`. 这是 JSX 识别变量的方式。React 将会识别 `{logo}`，知道您在我们 app 第二行引入的 logo，然后 React 会读取这个文件它并渲染。
+可以看到，`<img />` 标签的 `src` 属性值是在大括号中的——`{logo}`。这是 JSX 识别变量的方式。React 将会识别 `{logo}`，知道你在我们 app 第二行引入的 logo，然后 React 会读取这个文件它并渲染。
 
 让我们试着设置一个我们自己的变量，在 `App` return 之前，添加 `const subject = 'React';`。您的代码现在应该如下所示：
 
@@ -449,7 +449,7 @@ function App(props) {
 
 ## 总结
 
-以上就是我们对 React 的初步认识，包括如何在本地下载它，创建一个初始 app，以及一些基本的操作。在下篇文章，我们将会开始创建我们的第一个 app -- 一个任务清单。在我们开始下篇文章之前，让我们先复习下我们现在所学的。
+以上就是我们对 React 的初步认识，包括如何在本地下载它，创建一个初始 app，以及一些基本的操作。在下篇文章，我们将会开始创建我们的第一个 app——一个任务清单。在我们开始下篇文章之前，让我们先复习下我们现在所学的。
 
 在 React 中：
 
