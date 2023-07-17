@@ -27,7 +27,6 @@ build/
 /files/es/web/html/**/*.md
 /files/es/web/http/**/*.md
 /files/es/web/javascript/**/*.md
-/files/es/webassembly/**/*.md
 
 # fr
 /files/fr/glossary/**/*.md

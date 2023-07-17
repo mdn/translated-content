@@ -24,22 +24,22 @@ La pregunta ¿cómo hacemos para tener esos bytes dentro de la memoria intermedi
 La manera más eficiente y rápida de traer un módulo wasm (WebAssembly Module) es utilizando el método actualizado {{jsxref("WebAssembly.instantiateStreaming()")}}, que puede generar una llamada al método `fetch()` como primer argumento y manejará la búsqueda, compilación e instanciación del módulo paso a paso, teniendo acceso a los bytes sin procesar mientras se transmiten (stream) del servidor:
 
 ```js
-WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
-.then(results => {
-  // Hacemos algo con el resultado aquí!
-});
+WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
+  (results) => {
+    // Hacemos algo con el resultado aquí!
+  },
+);
 ```
 
 Si usamos el método anterior {{jsxref("WebAssembly.instantiate()")}} , que no trabaja sobre una transmisión (stream) directa, necesitaremos un paso adicional para convertir el byte code buscado a un {{domxref("ArrayBuffer")}}, como se muestra a continuación:
 
 ```js
-fetch('module.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(results => {
-  // Hacemos algo con el resultado aquí!
-});
+fetch("module.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((results) => {
+    // Hacemos algo con el resultado aquí!
+  });
 ```
 
 ### Más allá de las sobrecargas de instantiate()
@@ -61,18 +61,19 @@ La función {{jsxref("WebAssembly.instantiate()")}} tiene dos formas de sobrecar
 Una vez que se tiene disponible la instancia WebAssembly en su código JavaScript, puede entonces comenzar a utilizar las funcionalidades de éste, que han sido exportadas vía la propiedad {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}}. Su código podría verse como lo que a continuación mostramos:
 
 ```js
-WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
-.then(obj => {
-  // Llamada a una función exportada:
-  obj.instance.exports.exported_func();
+WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
+  (obj) => {
+    // Llamada a una función exportada:
+    obj.instance.exports.exported_func();
 
-  // o acceso al contenido de la memoria exportada:
-  var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
+    // o acceso al contenido de la memoria exportada:
+    var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
 
-  // o acceso a los elementos de una tabla exportada:
-  var table = obj.instance.exports.table;
-  console.log(table.get(0)());
-})
+    // o acceso a los elementos de una tabla exportada:
+    var table = obj.instance.exports.table;
+    console.log(table.get(0)());
+  },
+);
 ```
 
 > **Nota:** Para mayor información sobre como funciona la exportación de módulos WebAssembly, debes leer [Utilización de la Interfaz (API) de WebAssembly JavaScript](/es/docs/WebAssembly/Using_the_JavaScript_API), y [Entendiendo el formato de texto en WebAssembly](/es/docs/WebAssembly/Understanding_the_text_format).
@@ -90,13 +91,13 @@ El código final queda:
 
 ```js
 request = new XMLHttpRequest();
-request.open('GET', 'simple.wasm');
-request.responseType = 'arraybuffer';
+request.open("GET", "simple.wasm");
+request.responseType = "arraybuffer";
 request.send();
 
-request.onload = function() {
+request.onload = function () {
   var bytes = request.response;
-  WebAssembly.instantiate(bytes, importObject).then(results => {
+  WebAssembly.instantiate(bytes, importObject).then((results) => {
     results.instance.exports.exported_func();
   });
 };
