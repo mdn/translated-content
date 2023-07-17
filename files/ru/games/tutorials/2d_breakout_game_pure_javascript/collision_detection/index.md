@@ -131,6 +131,6 @@ collisionDetection();
 
 ## Следующие шаги
 
-Мы уверенно движемся вперёд! Поехали! В восьмой главе мы будем учиться [отслеживать счёт и выигрывать](/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win).
+Мы уверенно движемся вперёд! Поехали! В восьмой главе мы будем учиться [отслеживать счёт и выигрывать](/ru/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win).
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
