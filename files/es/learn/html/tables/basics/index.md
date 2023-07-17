@@ -455,7 +455,7 @@ Usemos `colspan` y `rowspan` para mejorar esta tabla.
 
 > **Nota:** Puedes encontrar nuestro ejemplo terminado en [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) en GitHub ([o consultarlo en vivo](http://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
-## Proporcionar un estilo común a las columnas.
+## Proporcionar un estilo común a las columnas
 
 Hay una última característica de la que queremos hablar en este artículo antes de continuar. El HTML tiene un método para definir información de estilo para una columna completa de datos en un solo lugar: los elementos **[`<col>`](/es/docs/Web/HTML/Elemento/col)** y **[`<colgroup>`](/es/docs/Web/HTML/Elemento/colgroup)**. Estos atributos existen porque especificar el estilo de las columnas puede resultar enojoso e ineficiente; en general hay que especificar la información de estilo en _cada_ `<td>` o `<th>` de la columna, o utilizar un selector complejo como {{cssxref(":nth-child()")}}.
 

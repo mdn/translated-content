@@ -36,8 +36,8 @@ Pour corriger ça, nous pouvons, par exemple, ajouter `defer` aux fichiers JavaS
 Ils seront téléchargés et exécutés _après_ que le document lui-même a été analysé, si bien qu'il ne bloquera pas le rendu de la structure HTML. Nous pouvons également éclater les fichiers CSS et leur ajouter des types de média&nbsp;:
 
 ```html
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="print.css" media="print">
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="print.css" media="print" />
 ```
 
 Ceci indiquera le navigateur de ne les télécharger que si la condition est remplie.
@@ -55,7 +55,7 @@ Ceci peut être optimisé. Tout d'abord, vous devriez utiliser des outils ou des
 Plutôt que d'avoir toutes les captures d'écran des jeux référencés dans les attributs `src` des éléments `<img>`, ce qui forcera le navigateur à les télécharger automatiquement, nous pouvons le faire de manière sélective via JavaScript. L'application js13kPWA utilise à la place une image conteneur qui est petite et légère tandis que les chemins d'accès définitifs vers les images cibles sont stockées dans les attributs `data-src`:
 
 ```html
-<img src='data/img/placeholder.png' data-src='data/img/SLUG.jpg' alt='NAME'>
+<img src="data/img/placeholder.png" data-src="data/img/SLUG.jpg" alt="NAME" />
 ```
 
 Ces images seront téléchargées via JavaScript _après_ que le site aura fini de construire la structure HTML. L'image conteneur est dimensionnée de la même façon que les images originales le sont, si bien qu'elle occupera le même espace et n'obligera pas le navigateur à redessiner l'agencement quand les images sont téléchargées.
@@ -65,11 +65,11 @@ Ces images seront téléchargées via JavaScript _après_ que le site aura fini 
 Le fichier `app.js` traite les attributs `data-src` comme ceci:
 
 ```js
-let imagesToLoad = document.querySelectorAll('img[data-src]');
+let imagesToLoad = document.querySelectorAll("img[data-src]");
 const loadImages = (image) => {
-  image.setAttribute('src', image.getAttribute('data-src'));
+  image.setAttribute("src", image.getAttribute("data-src"));
   image.onload = () => {
-    image.removeAttribute('data-src');
+    image.removeAttribute("data-src");
   };
 };
 ```
@@ -116,10 +116,10 @@ Ceci est une amélioration progressive à l'exemple fonctionnel précédent — 
 Voici à quoi le code correspondant ressemble:
 
 ```js
-if('IntersectionObserver' in window) {
+if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((items, observer) => {
     items.forEach((item) => {
-      if(item.isIntersecting) {
+      if (item.isIntersecting) {
         loadImages(item.target);
         observer.unobserve(item.target);
       }
@@ -161,4 +161,4 @@ N'hésitez pas à faire des essais avec le code, à améliorer votre application
 
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/")}}
+{{QuickLinksWithSubpages("/fr/docs/Web/Progressive_web_apps/")}}

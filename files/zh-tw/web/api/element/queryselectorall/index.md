@@ -45,7 +45,7 @@ let matches = el.querySelectorAll("iframe[data-src]");
 
 ## 註
 
-If the specified “selectors” are not found inside the DOM of the page, the method `queryselectorAll` returns an empty NodeList as specified below:
+If the specified 「selectors」 are not found inside the DOM of the page, the method `queryselectorAll` returns an empty NodeList as specified below:
 
 ```js
 > let x = document.body.querySelectorAll('.highlighted'); //case: if the class highlighted doesn't exist in any attribute "class" of the DOM the result is

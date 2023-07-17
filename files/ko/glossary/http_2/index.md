@@ -9,9 +9,9 @@ HTTP/2는 HTTP의 어플리케이션 의미를 수정하지 않습니다. HTTP �
 
 ## 같이 보기
 
-- [HTTP on MDN](/en-US/docs/Web/HTTP)
+- [HTTP on MDN](/ko/docs/Web/HTTP)
 - [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) on Wikipedia
-- [Glossary](/en-US/docs/Glossary)
+- [Glossary](/ko/docs/Glossary)
 
   - {{glossary("HTTP")}}
   - {{glossary("Latency")}}

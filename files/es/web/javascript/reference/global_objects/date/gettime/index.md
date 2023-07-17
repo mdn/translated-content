@@ -24,7 +24,7 @@ El valor devuelto por el método `getTime()` es un número de milisegundos desde
 
 ## Ejemplos
 
-### Ejemplo: Uso de `getTime()` para copiar fechas.
+### Ejemplo: Uso de `getTime()` para copiar fechas
 
 Construir un objeto de fecha con el mismo valor de tiempo.
 

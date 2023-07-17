@@ -173,7 +173,7 @@ Boolean(234); // true
 
 ## Переменные
 
-Для объявления новых переменных в JavaScript используются ключевые слова [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) или [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var).
+Для объявления новых переменных в JavaScript используются ключевые слова [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let), [`const`](/ru/docs/Web/JavaScript/Reference/Statements/const) или [`var`](/ru/docs/Web/JavaScript/Reference/Statements/var).
 
 ```js
 let a;

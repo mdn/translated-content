@@ -17,9 +17,9 @@ object.pathname = string;
 ## Examples
 
 ```js
-// Let's an <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.pathname"> element be in the document
+// Let's an <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/docs/HTMLHyperlinkElementUtils.pathname"> element be in the document
 var anchor = document.getElementById("myAnchor");
-var result = anchor.pathname; // Returns:'/en-US/docs/HTMLHyperlinkElementUtils.pathname'
+var result = anchor.pathname; // Returns:'/zh-CN/docs/HTMLHyperlinkElementUtils.pathname'
 ```
 
 ## Specifications

@@ -117,7 +117,7 @@ import { name, draw, reportArea, reportPerimeter } from '/js-examples/modules/ba
 
 使用 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，然后你被花括号包围的用逗号分隔的你想导入的功能列表，然后是关键字 from，然后是模块文件的路径。模块文件的路径是相对于站点根目录的相对路径，对于我们的 `basic-modules` 应该是 `/js-examples/modules/basic-modules`。
 
-当然，我们写的路径有一点不同 -- 我们使用点语法意味“当前路径”，跟随着包含我们想要找的文件的路径。这比每次都要写下整个相对路径要好得多，因为它更短，使得 URL 可移植 -- 如果在站点层中你把它移动到不同的路径下面仍然能够工作（修订版 1889482）。
+当然，我们写的路径有一点不同——我们使用点语法意味“当前路径”，跟随着包含我们想要找的文件的路径。这比每次都要写下整个相对路径要好得多，因为它更短，使得 URL 可移植——如果在站点层中你把它移动到不同的路径下面仍然能够工作（修订版 1889482）。
 
 那么看看例子吧：
 
@@ -164,10 +164,10 @@ reportPerimeter(square1.length, reportList);
 
 ## 其他模块与标准脚本的不同
 
-- 你需要注意本地测试 -- 如果你通过本地加载 HTML 文件 (比如一个 `file://` 路径的文件), 你将会遇到 CORS 错误，因为 JavaScript 模块安全性需要。你需要通过一个服务器来测试。
+- 你需要注意本地测试——如果你通过本地加载 HTML 文件（比如一个 `file://` 路径的文件），你将会遇到 CORS 错误，因为 JavaScript 模块安全性需要。你需要通过一个服务器来测试。
 - 另请注意，你可能会从模块内部定义的脚本部分获得与标准脚本中不同的行为。这是因为模块自动使用严格模式。
 - 加载一个模块脚本时不需要使用 `defer` 属性 (see [`<script>` attributes](/zh-CN/docs/Web/HTML/Element/script#Attributes)) 模块会自动延迟加载。
-- 最后一个但不是不重要，你需要明白模块功能导入到单独的脚本文件的范围 -- 他们无法在全局获得。因此，你只能在导入这些功能的脚本文件中使用他们，你也无法通过 JavaScript console 中获取到他们，比如，在 DevTools 中你仍然能够获取到语法错误，但是你可能无法像你想的那样使用一些 debug 技术。
+- 最后一个但不是不重要，你需要明白模块功能导入到单独的脚本文件的范围——他们无法在全局获得。因此，你只能在导入这些功能的脚本文件中使用他们，你也无法通过 JavaScript console 中获取到他们，比如，在 DevTools 中你仍然能够获取到语法错误，但是你可能无法像你想的那样使用一些 debug 技术。
 
 ## 默认导出 versus 命名导出
 
@@ -441,9 +441,9 @@ import('/modules/mymodule.js')
   });
 ```
 
-我们来看一个例子。在 [dynamic-module-imports](https://github.com/mdn/js-examples/tree/main/module-examples/dynamic-module-imports) 目录中，我们有另一个基于类示例的示例。但是这次我们在示例加载时没有在画布上绘制任何东西。相反，我们包括三个按钮 -- “圆形”，“方形”和“三角形” -- 按下时，动态加载所需的模块，然后使用它来绘制相关的形状。
+我们来看一个例子。在 [dynamic-module-imports](https://github.com/mdn/js-examples/tree/main/module-examples/dynamic-module-imports) 目录中，我们有另一个基于类示例的示例。但是这次我们在示例加载时没有在画布上绘制任何东西。相反，我们包括三个按钮——“圆形”、“方形”和“三角形”——按下时，动态加载所需的模块，然后使用它来绘制相关的形状。
 
-在这个例子中，我们只对 [index.html](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) 和 [main.js](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js) 文件进行了更改 -- 模块导出保持与以前相同。
+在这个例子中，我们只对 [index.html](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) 和 [main.js](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js) 文件进行了更改——模块导出保持与以前相同。
 
 在`main.js`中，我们使用[`document.querySelector()`](/zh-CN/docs/Web/API/Document/querySelector)调用获取了对每个按钮的引用，例如：
 

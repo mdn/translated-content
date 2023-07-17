@@ -29,7 +29,12 @@ Dans le fragment HTML qui suit, si la personne doit nécessairement remplir une 
 
 ```html
 <div id="tbLabel">Adresse mail (obligatoire)</div>
-<div role="textbox" contenteditable aria-labelledby="tblabel" aria-required="true" id="email1"></div>
+<div
+  role="textbox"
+  contenteditable
+  aria-labelledby="tblabel"
+  aria-required="true"
+  id="email1"></div>
 ```
 
 Dans cet exemple, il faudrait recourir à JavaScript pour empêcher l'envoi du formulaire tant que la boîte de texte n'a pas de contenu.

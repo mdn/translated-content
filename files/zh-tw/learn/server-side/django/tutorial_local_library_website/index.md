@@ -5,7 +5,7 @@ slug: Learn/Server-side/Django/Tutorial_local_library_website
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}
 
-我們實戰教學系列的第一篇，會解釋你將學到什麼。並提供一個“本地圖書館” 的例子，作為概述。在接下來的教學裡，我們會不斷完善和改進這個網站。
+我們實戰教學系列的第一篇，會解釋你將學到什麼。並提供一個「本地圖書館」 的例子，作為概述。在接下來的教學裡，我們會不斷完善和改進這個網站。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -22,7 +22,7 @@ slug: Learn/Server-side/Django/Tutorial_local_library_website
 
 ## 概覽
 
-歡迎來到 MDN 的 ”本地圖書館“ Django 教學。在教學裡，我們會開發一個網站，用來管理本地圖書館的目錄。
+歡迎來到 MDN 的「本地圖書館」Django 教學。在教學裡，我們會開發一個網站，用來管理本地圖書館的目錄。
 
 在這一系列的教學裡，你將:
 
@@ -49,7 +49,7 @@ slug: Learn/Server-side/Django/Tutorial_local_library_website
 - 在第一篇教學裡，我們會定義一個，簡單到只能瀏覽的圖書館。圖書館的會員，可以查找哪些書可以借閱。我們得以探索那些，幾乎所有網站都會運用的操作：閱讀和展示數據庫裡的內容。
 - 接下來，圖書館會慢慢擴展，以展示更高級的 Django 特性。例如，我們會擴展功能，讓會員能夠保留圖書。這個特性會展示如何使用表單，並支持用戶認證。
 
-儘管這是一個非常容易擴展的例子，它被稱為本地圖書館是有原因的——我們希望用最少的訊息，幫助你快速創建、和運用 Django。最後，我們會存儲圖書訊息，圖書數量，作者和其他重要訊息。我們不會儲存圖書館可能會儲存的其他訊息，或是提供一個支持多個圖書館、或是 ”大型圖書館“ 功能的建構。
+儘管這是一個非常容易擴展的例子，它被稱為本地圖書館是有原因的——我們希望用最少的訊息，幫助你快速創建、和運用 Django。最後，我們會存儲圖書訊息，圖書數量，作者和其他重要訊息。我們不會儲存圖書館可能會儲存的其他訊息，或是提供一個支持多個圖書館、或是 」大型圖書館「 功能的建構。
 
 ## 我卡住了，從哪裡獲得源程式碼呢？
 

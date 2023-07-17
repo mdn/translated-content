@@ -45,13 +45,13 @@ var myDOM;
 var xmlRef = document.implementation.createDocument("", "", null);
 
 function sort() {
-  if (!xslloaded){
+  if (!xslloaded) {
     p = new XMLHttpRequest();
     p.open("GET", "example2.xsl", false);
     p.send(null);
 
     xslRef = p.responseXML;
-    xsltProcessor.importStylesheet(xslRef)
+    xsltProcessor.importStylesheet(xslRef);
     xslloaded = true;
   }
 
@@ -70,10 +70,11 @@ function sort() {
   // définition du paramètre de tri dans le fichier XSL
   var sortVal = xsltProcessor.getParameter(null, "myOrder");
 
-  if (sortVal == "" || sortVal == "descending")
+  if (sortVal == "" || sortVal == "descending") {
     xsltProcessor.setParameter(null, "myOrder", "ascending");
-  else
+  } else {
     xsltProcessor.setParameter(null, "myOrder", "descending");
+  }
 
   // initialisation de la transformation
   var fragment = xsltProcessor.transformToFragment(xmlRef, document);
@@ -83,7 +84,7 @@ function sort() {
 
   myDOM = fragment;
   // ajout du nouveau contenu depuis la transformation
-  document.getElementById("example").appendChild(fragment)
+  document.getElementById("example").appendChild(fragment);
 }
 ```
 
