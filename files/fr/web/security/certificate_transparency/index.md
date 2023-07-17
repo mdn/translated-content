@@ -28,7 +28,7 @@ Public-Key-Pins: pin-sha256="base64=="; max-age=expireTime [; includeSubdomains]
 ```
 
 - `pin-sha256`
-  - : La chaîne de caractère entre guillemets est l'empreinte du *Subject Public Key Information* (SPKI) encodé en base 64. Il est possible de spécifier plusieurs épinglage (pin) pour différentes clé publiques. Certains navigateurs pourraient autoriser dans le future d'autres algorithmes de hachage que SHA-256. Voir plus bas comment extraire cette information depuis le fichier d'un certificat ou d'une clé.
+  - : La chaîne de caractère entre guillemets est l'empreinte du _Subject Public Key Information_ (SPKI) encodé en base 64. Il est possible de spécifier plusieurs épinglage (pin) pour différentes clé publiques. Certains navigateurs pourraient autoriser dans le future d'autres algorithmes de hachage que SHA-256. Voir plus bas comment extraire cette information depuis le fichier d'un certificat ou d'une clé.
 - `max-age`
   - : Le temps, en seconde, pendant laquelle le navigateur doit mémoriser que le site ne doit être visité qu'avec l'une des clés épinglées.
 - `includeSubdomains` {{ optional_inline() }}

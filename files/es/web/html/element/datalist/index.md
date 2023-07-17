@@ -12,15 +12,15 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories"
+        <a href="/es/docs/HTML/Content_categories"
           >Contenido de las categorías</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/HTML/Content_categories#Flow_content"
           >Contenido de flujo</a
         >,
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >.
       </td>
@@ -29,7 +29,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
       <th scope="row">Contenido permitido</th>
       <td>
         O bien
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >
         o, cero o más elementos {{HTMLElement("option")}}.
@@ -43,7 +43,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
       <th scope="row">Elementos padre permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >.
       </td>

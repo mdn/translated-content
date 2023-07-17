@@ -14,12 +14,12 @@ En este artículo se analiza lo que sucede cuando un usuario envía un formulari
       <th scope="row">Requisitos previos:</th>
       <td>
         Conocimientos básicos de informática, una
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
           >comprensión de HTML</a
         >
         , y conocimientos básicos de
-        <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> y
-        <a href="/en-US/docs/Learn/Server-side/First_steps"
+        <a href="/es/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> y
+        <a href="/es/docs/Learn/Server-side/First_steps"
           >programación del lado del servidor</a
         >
         .
@@ -52,7 +52,7 @@ En el lado del cliente, un formulario HTML no es más que una manera fácil de u
 
 El elemento {{HTMLElement ( "form")}} define cómo se enviarán los datos. Todos sus atributos están diseñados para que pueda configurar la solicitud que se enviará cuando un usuario pulsa un botón de envío. Los dos atributos más importantes son [`acción`](/es/docs/Web/HTML/Element/forma#acción) y [`método`](/es/docs/Web/HTML/Element/forma#método).
 
-#### El atributo [`acción`](/es/docs/Web/HTML/Element/forma#acción).
+#### El atributo [`acción`](/es/docs/Web/HTML/Element/forma#acción)
 
 Este atributo define el lugar donde los datos se envian. Su valor debe ser una dirección URL válida. Si no se proporciona este atributo, los datos serán enviados a la dirección URL de la página que contiene el formulario.
 

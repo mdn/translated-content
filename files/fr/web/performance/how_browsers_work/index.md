@@ -1,5 +1,5 @@
 ---
-title: 'Remplir la page: comment fonctionnent les navigateurs'
+title: "Remplir la page: comment fonctionnent les navigateurs"
 slug: Web/Performance/How_browsers_work
 tags:
   - DNS
@@ -66,22 +66,22 @@ Après les 8 allers-retours, le navigateur est enfin en mesure de faire la deman
 Une fois la connexion établie avec un serveur Web établie, le navigateur envoie une [demande HTTP `GET`](/fr/docs/Web/HTTP/M%C3%A9thode) initiale au nom de l'utilisateur, qui pour les sites Web est le plus souvent un fichier HTML. Dès que le serveur reçoit la demande, il répond avec les en-têtes de réponse pertinents et le contenu du code HTML.
 
 ```html
-<!doctype HTML>
+<!doctype html>
 <html lang="fr">
- <head>
-  <meta charset="UTF-8"/>
-  <title>Une page simple</title>
-  <link rel="stylesheet" src="styles.css"/>
-  <script src="monscript.js"></script>
-</head>
-<body>
-  <h1 class="heading">Ma Page</h1>
-  <p>Un paragraph avec in <a href="https://example.com/about">lien</a></p>
-  <div>
-    <img src="monImage.jpg" alt="description de l'image"/>
-  </div>
-  <script src="unautrescript.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Une page simple</title>
+    <link rel="stylesheet" src="styles.css" />
+    <script src="monscript.js"></script>
+  </head>
+  <body>
+    <h1 class="heading">Ma Page</h1>
+    <p>Un paragraph avec in <a href="https://example.com/about">lien</a></p>
+    <div>
+      <img src="monImage.jpg" alt="description de l'image" />
+    </div>
+    <script src="unautrescript.js"></script>
+  </body>
 </html>
 ```
 
@@ -128,9 +128,9 @@ Lorsque l'analyseur trouve des ressources non bloquantes, telles qu'une image, l
 Pendant que le navigateur construit le DOM tree, ce processus occupe le thread principal. Dans ce cas, le scanner de préchargement analysera le contenu disponible et demandera des ressources hautement prioritaires telles que CSS, JavaScript et les polices. Grâce à l'analyseur de précharge, il n'est pas nécessaire d'attendre que l'analyseur trouve une référence à une ressource externe pour la demander. Il récupérera les ressources en arrière-plan, de sorte qu'au moment où l'analyseur HTML principal atteindra les actifs demandés, il se peut qu'ils soient déjà en vol ou aient été téléchargés. Les optimisations fournies par le scanner de précharge permettent de réduire les blocages.
 
 ```html
-<link rel="stylesheet" src="styles.css"/>
+<link rel="stylesheet" src="styles.css" />
 <script src="myscript.js" async></script>
-<img src="monImage.jpg" alt="description de l'image"/>
+<img src="monImage.jpg" alt="description de l'image" />
 <script src="unautrescript.js" async></script>
 ```
 

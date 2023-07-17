@@ -36,18 +36,29 @@ Les lecteurs devraient annoncer les mises à jour de la progression dès qu'elle
 #### Exemple 1&nbsp;: barre de progression simple avec pourcentage de progression
 
 ```html
-<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20 %</div>
+<div
+  role="progressbar"
+  aria-valuenow="20"
+  aria-valuemin="0"
+  aria-valuemax="100">
+  20 %
+</div>
 ```
 
 #### Exemple 2&nbsp;: Utilisation de `aria-valuetext`
 
 ```html
-<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuetext="Étape 2&nbsp;: Copie des fichiers…" aria-valuemax="100">
+<div
+  role="progressbar"
+  aria-valuenow="20"
+  aria-valuemin="0"
+  aria-valuetext="Étape 2&nbsp;: Copie des fichiers…"
+  aria-valuemax="100">
   Étape 2&nbsp;: Copie des fichiers…
 </div>
 ```
 
-#### Exemples concrets&nbsp;:
+#### Exemples concrets
 
 ### Notes
 

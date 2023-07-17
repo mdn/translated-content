@@ -237,7 +237,7 @@ Usando viewport, es posible deshabilitar el zoom, usando un código como este en
 
 Nunca debe hacer esto si es posible: muchas personas confían en el zoom para poder ver el contenido de su sitio web, por lo que eliminar esta funcionalidad es una muy mala idea. Hay ciertas situaciones en las que el zoom podría romper la interfaz de usuario; en tales casos, si cree que necesita deshabilitar el zoom, debe proporcionar algún otro tipo de equivalente, como un control para aumentar el tamaño del texto de una manera que no rompa su interfaz de usuario.
 
-#### Mantener los menús accesibles.
+#### Mantener los menús accesibles
 
 Debido a que la pantalla es mucho más estrecha en los dispositivos móviles, es muy común utilizar consultas de medios y otras tecnologías para hacer que el menú de navegación se reduzca a un pequeño icono en la parte superior de la pantalla, que se puede presionar para mostrar el menú solo si es necesario - cuando el sitio se ve en el móvil. Esto suele representarse mediante un icono de "tres líneas horizontales" y, por lo tanto, el patrón de diseño se conoce como "menú de hamburguesas".
 
