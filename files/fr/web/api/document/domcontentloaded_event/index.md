@@ -23,7 +23,7 @@ L'évènement **`DOMContentLoaded`** est déclenché quand le document HTML init
       <td>{{domxref("Event")}}</td>
     </tr>
     <tr>
-      <th scope="row">Propriété de gestion de l’évènement</th>
+      <th scope="row">Propriété de gestion de l'évènement</th>
       <td>Aucune</td>
     </tr>
   </tbody>

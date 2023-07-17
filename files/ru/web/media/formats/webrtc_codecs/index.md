@@ -237,7 +237,7 @@ peerConnection.addEventListener("icegatheringstatechange", (event) => {
 function changeVideoCodec(mimeType) {
   const transceivers = peerConnection.getTransceivers();
 
-  transceivers.forEach(transceiver => {
+  transceivers.forEach((transceiver) => {
     const kind = transceiver.sender.track.kind;
     let sendCodecs = RTCRtpSender.getCapabilities(kind).codecs;
     let recvCodecs = RTCRtpReceiver.getCapabilities(kind).codecs;
@@ -271,7 +271,7 @@ function preferCodec(codecs, mimeType) {
   let sortedCodecs = [];
   let count = codecs.length;
 
-  codecs.forEach(codec => {
+  codecs.forEach((codec) => {
     if (codec.mimeType === mimeType) {
       sortedCodecs.push(codec);
     } else {

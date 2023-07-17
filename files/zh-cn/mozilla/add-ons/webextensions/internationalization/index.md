@@ -78,9 +78,9 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }
@@ -116,7 +116,9 @@ slug: Mozilla/Add-ons/WebExtensions/Internationalization
 4. 你想调用的在 `messages.json` 中定义的消息名称，接着是
 5. 两个下划线
 
-    __MSG_ + messageName + __
+```
+ __MSG_ + messageName + __
+```
 
 ### 指定默认语言区域
 

@@ -29,7 +29,7 @@ Une {{domxref("IDBRequest","requête")}}.
 - `ReadOnlyError`
   - : Cette {{domxref("DOMException","exception")}} est levé si la transaction associé à cette requête est en {{domxref("IDBTransaction.mode","mode")}} lecture seule.
 - `TransactionInactiveError`
-  - : Cette {{domxref("DOMException","exception")}} est levé si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d’objet est inactive.
+  - : Cette {{domxref("DOMException","exception")}} est levé si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet est inactive.
 
 ## Exemple
 

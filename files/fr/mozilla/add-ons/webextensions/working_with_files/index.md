@@ -121,7 +121,7 @@ async function removeStoredImages(storedImages) {
 }
 ```
 
-`removeStoredImages` est appelé lorsque l'utilisateur clique sur "Delete" _(supprimer)_ dans la page de navigation de la collection. À nouveau, `getFileStorage` ouvre la base de données “stored-images” et `imagesStore.remove` supprime chaque image à partir de la liste filtrée des images.
+`removeStoredImages` est appelé lorsque l'utilisateur clique sur "Delete" _(supprimer)_ dans la page de navigation de la collection. À nouveau, `getFileStorage` ouvre la base de données "stored-images" et `imagesStore.remove` supprime chaque image à partir de la liste filtrée des images.
 
 Notez l'utilisation de [URL.revokeObjectURL()](/fr/docs/Web/API/URL/revokeObjectURL) pour révoquer explicitement l'URL du blob. Cela permet de libérer la mémoire allouée à l'URL. Si cela n'est pas fait, la mémoire n'est pas libérée jusqu'à ce que la page sur laquelle l'URL a été créée soit fermée. Si l'URL a été créée dans la page d'arrière-plan d'une extension, celle-ci n'est pas déchargée jusqu'à ce que l'extension soit désactivée, désinstallée ou rechargée, ce qui risque d'affecter inutilement les performances du navigateur. Si l'URL est créée dans la page d'une extension (nouvel onglet, fenêtre contextuelle ou barre latérale), la mémoire est libérée lorsque la page est fermée, mais il demeure de bonne pratique de révoquer l'URL lorsqu'elle n'est plus nécessaire.
 

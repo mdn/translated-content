@@ -38,7 +38,7 @@ slug: Glossary/IIFE
   // 初始化代码
   let firstVariable;
   let secondVariable;
-})()
+})();
 
 // firstVariable 和 secondVariable 变量在函数执行后会被丢弃
 ```
@@ -87,7 +87,7 @@ const makeWithdraw = (balance) => {
   console.log(firstAccount.balance); // undefined
   console.log(firstAccount.withdraw(20)); // 80
   console.log(firstAccount.withdraw(30)); // 50
-  console.log(firstAccount.doBadThings); // undefined; this method is private 
+  console.log(firstAccount.doBadThings); // undefined; this method is private
   const secondAccount = makeWithdraw(20); // "I will do bad things with your money"
   console.log(secondAccount.withdraw(30)); // "Insufficient money"
   console.log(secondAccount.withdraw(20)); // 0
@@ -102,7 +102,7 @@ const makeWithdraw = (balance) => {
 for (var i = 0; i < 2; i++) {
   const button = document.createElement("button");
   button.innerText = `Button ${i}`;
-  button.onclick = function() {
+  button.onclick = function () {
     console.log(i);
   };
   document.body.appendChild(button);

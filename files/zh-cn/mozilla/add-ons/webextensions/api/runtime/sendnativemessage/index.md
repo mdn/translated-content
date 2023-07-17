@@ -19,9 +19,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
 
 ```js
 var sending = browser.runtime.sendNativeMessage(
-  application,             // string
-  message                  // object
-)
+  application, // string
+  message, // object
+);
 ```
 
 ### 参数

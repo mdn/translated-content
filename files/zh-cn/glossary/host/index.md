@@ -13,4 +13,4 @@ slug: Glossary/Host
 
 ### 基本知识
 
-- [Host (network)](https://zh.wikipedia.org/wiki/Host_(network)) on Wikipedia
+- [Host (network)](<https://zh.wikipedia.org/wiki/Host_(network)>) on Wikipedia

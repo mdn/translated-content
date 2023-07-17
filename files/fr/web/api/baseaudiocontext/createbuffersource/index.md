@@ -6,7 +6,7 @@ translation_of: Web/API/BaseAudioContext/createBufferSource
 
 {{ APIRef("Web Audio API") }}
 
-La méthode `createBufferSource()` de l’interface {{ domxref("BaseAudioContext") }} est utilisée pour créer un nouveau {{ domxref("AudioBufferSourceNode") }}, qui peut être employé pour jouer des données audio contenues dans un objet {{ domxref("AudioBuffer") }}.
+La méthode `createBufferSource()` de l'interface {{ domxref("BaseAudioContext") }} est utilisée pour créer un nouveau {{ domxref("AudioBufferSourceNode") }}, qui peut être employé pour jouer des données audio contenues dans un objet {{ domxref("AudioBuffer") }}.
 
 Des {{ domxref("AudioBuffer") }} peuvent être créés en utilisant {{domxref("BaseAudioContext.createBuffer")}}, ou sont retournés par la méthode {{domxref("BaseAudioContext.decodeAudioData")}} quand elle a terminé de décoder une piste audio avec succès.
 

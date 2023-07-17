@@ -15,11 +15,11 @@ Cette page présente l'usage du rôle [`presentation`](https://www.w3.org/TR/wai
 
 Le rôle `presentation` est utilisé pour retirer toute représentation sémantique pour un élément donné ainsi que pour ses descendants. Par exemple, un tableau utilisé pour la mise en page pourrait avoir un rôle `presentation` appliqué sur l'élément `table` pour retirer la sémantique de l'élément en lui-même ainsi que tout ses sous-éléments, comme l'en-tête de tableau ou même les données de tableau elles-mêmes.
 
-## Effets possibles sur les agents utilisateurs et les technologies d’assistance
+## Effets possibles sur les agents utilisateurs et les technologies d'assistance
 
 Les agents utilisateurs ou les technologies d'assistance ne devrait normalement pas lire les éléments marqués comme étant de rôle `presentation`.
 
-> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d’assistance devraient traiter cette technique. L’information fournie ci-dessus est l’une de ces opinions et n’est pas normative.
+> **Note :** il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
 
 ## Exemples
 

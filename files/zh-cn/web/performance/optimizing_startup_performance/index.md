@@ -34,11 +34,12 @@ slug: Web/Performance/Optimizing_startup_performance
 - 在你启动的 HTML 文件中，不要包含不会在关键路径下出现的脚本或样式表。只在需要时加载他们。
 - 不要强迫 Web 引擎构建不需要的 DOM，一种简单的“hack”的方式是把你的 HTML 留在文档里，但是在外层包裹注释。
 
-  <!-- markdownlint-disable MD031 MD032 -->
   ```html
-  <div id="foo"><!--
-    <div> ...
-  --></div>
+  <div id="foo">
+    <!--
+      <div> ...
+    -->
+  </div>
   ```
 
 - 当文档的一部分需要被渲染时，加载被注释的 HTML

@@ -20,11 +20,11 @@ CSS에 포함되는 모든 요소의 외장은 박스이며, 이 박스를 이�
         <a
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업에 대한 기본 지식</a
-        >, HTML 기본기 (<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        >, HTML 기본기 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML</a
         >
         학습), CSS 작동 방식에 대한 개념 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫 단계</a
         >
         학습.) 등에 대한 기본 지식
