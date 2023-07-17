@@ -89,7 +89,7 @@ slug: Web/CSS/CSS_logical_properties_and_values
 - {{CSSXref("inset-inline-end")}}
 - {{CSSXref("inset-inline-start")}}
 
-### 用于尺寸屏蔽的属性
+### 用于尺寸局限的属性
 
 - {{CSSXref("contain-intrinsic-block-size")}}
 - {{CSSXref("contain-intrinsic-inline-size")}}
