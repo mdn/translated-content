@@ -247,7 +247,7 @@ function notify(message) {
 
 Результатом вызова этих методов будет возвращение [`runtime.Port`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) объекта.
 
-- [`runtime.onConnect`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) методу передаётся аргумент, являющийся собственным портом этого скрипта, [`runtime.Port`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) объект.
+- [`runtime.onConnect`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) методу передаётся аргумент, являющийся собственным портом этого скрипта, [`runtime.Port`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) объект.
 
 Как только обе стороны имеют порт, они могут:
 

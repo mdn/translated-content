@@ -287,8 +287,6 @@ Con la metaetiqueta `viewport` puedes usar otras configuraciones, aunque, en gen
 
 Deberías evitar el uso de `minimum-scale` y `maximum-scale`, y en particular establecer `user-scalable` en `no`. Hay que permitir a los usuarios hacer zoom tanto o tan poco como lo necesiten; evitarlo provoca problemas de accesibilidad.
 
-> **Nota:** Hay una @regla CSS establecida para reemplazar la metaetiqueta `viewport`: [@viewport](/es/docs/Web/CSS/@viewport). Sin embargo, tiene poca compatibilidad con los navegadores. Se implementó en Internet Explorer y Edge, pero una vez que se lance el navegador Edge basado en Chromium, dejará de formar parte del navegador Edge.
-
 ## Resumen
 
 El diseño responsivo se refiere a un diseño página de un sitio web o una aplicación que responde al entorno en el que se visualiza. Abarca una serie de características y técnicas de CSS y HTML, y ahora es esencialmente el modo como construimos los sitios web de forma predeterminada. Piensa en los sitios web que visitas con tu dispositivo móvil; probablemente sea inusual encontrar un sitio web que tenga la versión de escritorio reducida o en que necesites desplazarse hacia los lados para encontrar las cosas. Esto se debe a que la web se ha movido a este enfoque de diseño responsivo.

@@ -19,9 +19,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 
 ```js
 var inserting = browser.tabs.insertCSS(
-  tabId,           // optional integer
-  details          // extensionTypes.InjectDetails
-)
+  tabId, // optional integer
+  details, // extensionTypes.InjectDetails
+);
 ```
 
 ### 参数
@@ -61,12 +61,11 @@ var inserting = browser.tabs.insertCSS(
 var css = "body { border: 20px dotted pink; }";
 
 browser.browserAction.onClicked.addListener(() => {
-
   function onError(error) {
     console.log(`Error: ${error}`);
   }
 
-  var insertingCSS = browser.tabs.insertCSS({code: css});
+  var insertingCSS = browser.tabs.insertCSS({ code: css });
   insertingCSS.then(null, onError);
 });
 ```
@@ -75,12 +74,11 @@ browser.browserAction.onClicked.addListener(() => {
 
 ```js
 browser.browserAction.onClicked.addListener(() => {
-
   function onError(error) {
     console.log(`Error: ${error}`);
   }
 
-  var insertingCSS = browser.tabs.insertCSS(2, {file: "content-style.css"});
+  var insertingCSS = browser.tabs.insertCSS(2, { file: "content-style.css" });
   insertingCSS.then(null, onError);
 });
 ```

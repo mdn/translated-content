@@ -16,13 +16,13 @@ slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 在 Chrome 中，扩展通过使用 `chrome` 命名空间来访问私有 JavaScript API：
 
 ```js
-chrome.browserAction.setIcon({path: "path/to/icon.png"});
+chrome.browserAction.setIcon({ path: "path/to/icon.png" });
 ```
 
 WebExtensions 通过使用 `browser` 命名空间来访问等价的 API：
 
 ```js
-browser.browserAction.setIcon({path: "path/to/icon.png"});
+browser.browserAction.setIcon({ path: "path/to/icon.png" });
 ```
 
 许多 API 是异步的。在 Chrome 中，异步的 API 使用回调来返回值，使用 {{WebExtAPIRef("runtime.lastError")}} 来与传达错误：
@@ -36,10 +36,7 @@ function logCookie(c) {
   }
 }
 
-chrome.cookies.set(
-  {url: "https://developer.mozilla.org/"},
-  logCookie
-);
+chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
 ```
 
 在 WebExtensions 中应使用 [promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 来访问等价的 API：
@@ -53,9 +50,7 @@ function logError(e) {
   console.error(e);
 }
 
-var setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 setCookie.then(logCookie, logError);
 ```
 

@@ -14,5 +14,5 @@ URL은 파일 전송({{glossary("FTP")}}), 이메일({{glossary("SMTP")}}) 등 �
 ## 같이 보기
 
 - [URL](https://en.wikipedia.org/wiki/URL) on Wikipedia
-- [Understanding URLs and their structure](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+- [Understanding URLs and their structure](/ko/docs/Learn/Common_questions/What_is_a_URL)
 - The syntax of URLs is defined in the [URL Living Standard](https://url.spec.whatwg.org/)

@@ -257,7 +257,7 @@ Une grille peut contenir un mélange d'éléments. Certains éléments peuvent a
 
 ### Modification de l'ordre du document
 
-Le placement des éléments qui n'ont pas eu d'ordre défini sont placés selon l'algorithme décrit dans la section _“order modified document order”_. Cela signifie que si on utilise uniquement la propriété `order`, les éléments seront placés selon cet ordre plutôt que selon l'ordre indiqué par le DOM. Sinon, l'ordre des éléments sera celui décrit par le document source.
+Le placement des éléments qui n'ont pas eu d'ordre défini sont placés selon l'algorithme décrit dans la section _"order modified document order"_. Cela signifie que si on utilise uniquement la propriété `order`, les éléments seront placés selon cet ordre plutôt que selon l'ordre indiqué par le DOM. Sinon, l'ordre des éléments sera celui décrit par le document source.
 
 ### Les éléments avec des propriétés de placement
 

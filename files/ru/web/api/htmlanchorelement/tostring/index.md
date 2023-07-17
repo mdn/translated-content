@@ -26,9 +26,9 @@ string = object.toString();
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString">
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils/toString">
 var anchor = document.getElementById("myAnchor");
-var result = anchor.toString(); // Вернёт: 'https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString'
+var result = anchor.toString(); // Вернёт: 'https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils/toString'
 ```
 
 ## Спецификации

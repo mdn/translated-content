@@ -13,7 +13,7 @@ tags:
 original_slug: Learn/Forms/Your_first_form/Example
 ---
 
-This is the example code for the article [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form).
+This is the example code for the article [Your first HTML form](/ru/docs/Learn/Forms/Your_first_form).
 
 ## A simple form
 

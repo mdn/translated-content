@@ -24,25 +24,30 @@ original_slug: >-
 Структура HTML документа довольно проста, так как игра будет полностью визуализироваться в {{htmlelement("canvas")}} элементе. Используя ваш любимый текстовый редактор, создайте новый HTML документ, сохраните его как `index.html` в любом удобном месте, и скопируйте в него этот код:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-      * { padding: 0; margin: 0; }
-      canvas { background: #eee; display: block; margin: 0 auto; }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      canvas {
+        background: #eee;
+        display: block;
+        margin: 0 auto;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="480" height="320"></canvas>
 
-<canvas id="myCanvas" width="480" height="320"></canvas>
-
-<script>
-  // JavaScript-код будем писать здесь
-</script>
-
-</body>
+    <script>
+      // JavaScript-код будем писать здесь
+    </script>
+  </body>
 </html>
 ```
 
@@ -75,7 +80,7 @@ ctx.closePath();
 
 ```js
 ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.arc(240, 160, 20, 0, Math.PI * 2, false);
 ctx.fillStyle = "green";
 ctx.fill();
 ctx.closePath();

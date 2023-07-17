@@ -8,7 +8,7 @@ Este artículo ofrece consejos prácticos sobre cómo hacer que tu sitio web cum
 
 > **Nota:** Para leer las definiciones de la W3C sobre Percepción y las guías para cumplir con los criterios dirígete a [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
 
-## Pauta 1.1 — Dar alternativas de texto para contenido no textual.
+## Pauta 1.1 — Dar alternativas de texto para contenido no textual
 
 La clave aquí es convertir el texto a otros formatos que puedan ser entendidos por personas con otras capacidades; ya sea si utilizan un screen-reader, zoom o un lector de braille. El contenido no textual se refiere a elementos multimedia como imágenes, audio y vídeo.
 
@@ -125,7 +125,7 @@ La clave aquí es convertir el texto a otros formatos que puedan ser entendidos 
 
 > **Nota:** Ver también [WCAG description for Guideline 1.1: Text alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives).
 
-## Pauta 1.2 — Proporcionar alternativas para los medios tempo-dependientes.
+## Pauta 1.2 — Proporcionar alternativas para los medios tempo-dependientes
 
 Los medios tempo-dependientes se refieren a multimedia con una duración (audio y vídeo, por ejemplo). Ten en cuenta que si este contenido multimedia funciona como una alternativa a un contenido textual no necesitas proveer otra alternavtiva.
 

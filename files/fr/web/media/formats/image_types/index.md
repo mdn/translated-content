@@ -1619,10 +1619,13 @@ Par exemple, si vous affichez un diagramme mieux affiché avec SVG, mais que vou
 
 ```html
 <picture>
-  <source srcset="diagram.svg" type="image/svg+xml">
-  <source srcset="diagram.png" type="image/png">
-  <img src="diagram.gif" width="620" height="540"
-       alt="Diagramme montrant les canaux de données">
+  <source srcset="diagram.svg" type="image/svg+xml" />
+  <source srcset="diagram.png" type="image/png" />
+  <img
+    src="diagram.gif"
+    width="620"
+    height="540"
+    alt="Diagramme montrant les canaux de données" />
 </picture>
 ```
 

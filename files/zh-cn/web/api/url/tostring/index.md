@@ -26,7 +26,7 @@ string = url.toString();
 ## 参考
 
 ```js
-const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+const url = new URL("https://developer.mozilla.org/zh-CN/docs/Web/API/URL/toString");
 url.toString() // 应当返回字符串形式的 URL
 ```
 

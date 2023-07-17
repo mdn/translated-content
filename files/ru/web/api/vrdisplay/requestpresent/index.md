@@ -27,7 +27,7 @@ vrDisplayInstance.requestPresent(layers).then(function() {
 - Если {{domxref("VRDisplayCapabilities.canPresent")}} ложно или если массив объектов VRLayer содержит более чем {{domxref("VRDisplayCapabilities.maxLayers")}} слоёв, произойдёт переход в состояние "отклонено".
 - Если объект {{domxref("VRDisplay")}} уже отображает сцену, то вызов его метода `requestPresent()` обновит массив отображаемых `VRLayer` объектов.
 - Если объект `VRDisplay` уже отображает сцену, а вызов метода `requestPresent()` приведёт к возврату Promise в состоянии "отклонено", то отображение сцены прекратится.
-- If `requestPresent()` is called outside of an engagement gesture the promise will be rejected unless the `VRDisplay` was already presenting. This engagement gesture is also sufficient to allow [`requestPointerLock()`](/en-US/docs/Web/API/Element/requestPointerLock) calls until presentation has ended.
+- If `requestPresent()` is called outside of an engagement gesture the promise will be rejected unless the `VRDisplay` was already presenting. This engagement gesture is also sufficient to allow [`requestPointerLock()`](/ru/docs/Web/API/Element/requestPointerLock) calls until presentation has ended.
 
 ## Examples
 

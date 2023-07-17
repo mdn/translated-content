@@ -290,7 +290,7 @@ linkPara.parentNode.removeChild(linkPara);
 8. Установите текстовое содержимое диапазона на значение входного элемента, которое вы сохранили ранее, и текстовое содержимое кнопки «Удалить».
 9. Добавить элемент списка в качестве дочернего списка.
 10. Прикрепите обработчик события к кнопке удаления, чтобы при щелчке удалял весь элемент списка, внутри которого он находится.
-11. Наконец, используйте метод [`focus()`](/en-US/docs/Web/API/HTMLElement/focus), чтобы сфокусировать входной элемент, готовый для входа в следующий элемент списка покупок.
+11. Наконец, используйте метод [`focus()`](/ru/docs/Web/API/HTMLElement/focus), чтобы сфокусировать входной элемент, готовый для входа в следующий элемент списка покупок.
 
 > **Примечание:** Примечание: Если у вас возникла действительно сложная проблема, взгляните на наши примеры [finished shopping list](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](http://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
 
