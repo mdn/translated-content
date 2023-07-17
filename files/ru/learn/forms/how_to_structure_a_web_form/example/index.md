@@ -11,7 +11,7 @@ tags:
   - Reference
 ---
 
-This the example for a basic payment form for the article [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form).
+This the example for a basic payment form for the article [How to structure an HTML form](/ru/docs/Learn/Forms/How_to_structure_a_web_form).
 
 ## A payment form
 

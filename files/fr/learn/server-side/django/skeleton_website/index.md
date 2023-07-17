@@ -362,7 +362,7 @@ Ne vous inquitez ! Cette erreur était attendue ; elle est due à l'absence de d
 
 > **Note :** Chaque fois que vous apportez des modifications significatives, il est important d'exécuter à nouveau un migration et un test du serveur. Cela est assez rapide, pour ne pas s'en priver !
 
-## Relevez le défi...
+## Relevez le défi
 
 Le dossier **catalog/** a été créé automatiquement et contient des fichiers pour les vues, modèles de données, etc. Ouvrez-les pour les consulter.
 

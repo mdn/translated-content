@@ -85,7 +85,7 @@ translation_of: Web/Manifest
 
 > **Примечание:** Расширение `.webmanifest` указывается в разделе спецификации [Media type registration](https://w3c.github.io/manifest/#media-type-registration) section of the specification (ответ файла манифеста должен возвращать `Content-Type: application/manifest+json`). Браузеры обычно поддерживают манифесты с другими соответствующими расширениями, такими как `.json` (`Content-Type: application/json`).
 
-> **Примечание:** Если для получения манифеста требуются учётные данные - атрибут [`crossorigin`](/en-US/docs/Web/HTML/CORS_settings_attributes) должен иметь значение `"use-credentials"`, даже если файл манифеста находится в том же источнике, что и текущая страница.
+> **Примечание:** Если для получения манифеста требуются учётные данные - атрибут [`crossorigin`](/ru/docs/Web/HTML/CORS_settings_attributes) должен иметь значение `"use-credentials"`, даже если файл манифеста находится в том же источнике, что и текущая страница.
 
 ## Заставки
 

@@ -251,7 +251,7 @@ const person2 = {
 myString.split(',');
 ```
 
-Вы использовали метод доступный в экземпляре класса [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). Каждый раз создавая строку в вашем коде, эта строка автоматически создаётся как экземпляр [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), и поэтому имеет несколько общих методов/свойств, доступных на нем.
+Вы использовали метод доступный в экземпляре класса [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String). Каждый раз создавая строку в вашем коде, эта строка автоматически создаётся как экземпляр [`String`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String), и поэтому имеет несколько общих методов/свойств, доступных на нем.
 
 Когда вы обращались к объектной модели документа (DOM), используя следующие строки:
 
@@ -260,9 +260,9 @@ const myDiv = document.createElement('div');
 const myVideo = document.querySelector('video');
 ```
 
-Вы использовали методы доступные в экземпляре класса [`Document`](/en-US/docs/Web/API/Document). Для каждой загруженной веб-страницы создаётся экземпляр [`Document`](/en-US/docs/Web/API/Document), называемый `document`, который представляет всю структуру страницы, её содержимое и другие функции, такие как URL-адрес. Опять же, это означает, что он имеет несколько общих методов/свойств, доступных на нем.
+Вы использовали методы доступные в экземпляре класса [`Document`](/ru/docs/Web/API/Document). Для каждой загруженной веб-страницы создаётся экземпляр [`Document`](/ru/docs/Web/API/Document), называемый `document`, который представляет всю структуру страницы, её содержимое и другие функции, такие как URL-адрес. Опять же, это означает, что он имеет несколько общих методов/свойств, доступных на нем.
 
-То же самое относится и к любому другому встроенному объекту/API, который вы использовали — [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math), и т. д.
+То же самое относится и к любому другому встроенному объекту/API, который вы использовали — [`Array`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Math`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math), и т. д.
 
 Обратите внимание, что встроенные объекты/API не всегда создают экземпляры объектов автоматически. Как пример, [Notifications API](/ru/docs/Web/API/Notifications_API) — который позволяет новым браузерам запускать системные уведомления, требует, чтобы вы создавали новый экземпляр объекта с помощью конструктора для каждого уведомления, которое вы хотите запустить. Попробуйте ввести следующее в консоль JavaScript:
 

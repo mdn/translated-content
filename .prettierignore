@@ -31,7 +31,6 @@ build/
 /files/es/webassembly/**/*.md
 
 # fr
-/files/fr/games/**/*.md
 /files/fr/learn/**/*.md
 /files/fr/learn/css/**/*.md
 /files/fr/learn/html/**/*.md
@@ -69,7 +68,6 @@ build/
 /files/ja/webassembly/**/*.md
 
 # ko
-/docs/ko/**/*.md
 /files/ko/games/**/*.md
 /files/ko/glossary/**/*.md
 /files/ko/learn/**/*.md
@@ -108,7 +106,6 @@ build/
 /files/pt-br/webassembly/**/*.md
 
 # ru
-/files/ru/games/**/*.md
 /files/ru/glossary/**/*.md
 /files/ru/learn/**/*.md
 /files/ru/learn/css/**/*.md

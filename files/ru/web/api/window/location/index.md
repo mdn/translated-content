@@ -28,7 +28,7 @@ location = newLocation;
 ### Базовый пример
 
 ```js
-alert(location); // выведет сообщение "https://developer.mozilla.org/en-US/docs/Web/API/Window.location"
+alert(location); // выведет сообщение "https://developer.mozilla.org/ru/docs/Web/API/Window.location"
 ```
 
 ### Пример №1: Переход на новую страницу

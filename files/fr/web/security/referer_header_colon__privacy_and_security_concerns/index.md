@@ -12,7 +12,7 @@ translation_of: Web/Security/Referer_header:_privacy_and_security_concerns
 
 L'[entête HTTP Referer](/fr/docs/Web/HTTP/Headers/Referer) présente des risques de confidentialité et de sécurité[.](/fr/docs/Web/HTTP/Headers/Referer) Cet article les décrit et donne des conseils pour les minimiser.
 
-## Le problème...
+## Le problème
 
 L'en-tête `{{httpheader("Referer")}}` (sic) contient l'adresse de la page web précédente lorsqu'un lien vers la page actuelle a été suivi, ce qui offre de nombreuses possibilités légitimes comme l'analyse, la journalisation ou la mise en cache optimisée. Cependant, il existe des utilisations plus problématiques telles que le suivi ou le vol d'informations, ou même des effets secondaires tels que la fuite accidentelle d'informations sensibles.
 
@@ -42,7 +42,7 @@ Les frameworks soucieux de la sécurité employés côté serveur ont tendance �
 - La sécurité dans Django (voir notamment Cross Site Request Forgery (CSRF) protection).
 - helmet referrer-policy — middleware pour configurer l'entête Referrer-Policy dans les applications Node.js/Express (voir aussi helmet pour plus d'aménagements liés à la sécurité).
 
-## Politique et exigences.
+## Politique et exigences
 
 Il serait pertinent de rédiger pour votre (vos) équipe(s) de projet un ensemble d'exigences en matière de sécurité et de protection des renseignements personnels en en précisant l'utilisation dans le cadre de l'atténuation des risques. Vous devriez demander l'aide d'un expert en sécurité Web pour rédiger ces exigences en tenant compte à la fois des besoins et du bien-être des utilisateurs, ainsi que d'autres questions liées à la législation et la réglementation comme le [Réglement Général à la Protection des Données de l'Union Européenne](https://ec.europa.eu/info/law/law-topic/data-protection/eu-data-protection-rules_fr).
 
