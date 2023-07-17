@@ -27,7 +27,7 @@ JavaScript 的核心語言是由 ECMA TC-39 委員會統一標準，並且命名
 
 ### 瀏覽器支援
 
-根據以前的經驗，ECMAScript 的功能都有良好且互通的支援。截至 2011 年 6 月，ECMAScript 5 的支援在不同瀏覽器實作之間存在差異。[有些文件](http://kangax.github.com/es5-compat-table/)整理了各瀏覽器對 ECMAScript 5 的支援情形。
+根據以前的經驗，ECMAScript 的功能都有良好且互通的支援。截至 2011 年 6 月，ECMAScript 5 的支援在不同瀏覽器實作之間存在差異。[有些文件](https://kangax.github.io/compat-table/es5/)整理了各瀏覽器對 ECMAScript 5 的支援情形。
 
 ## DOM（文件物件模型）
 
