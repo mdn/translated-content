@@ -14,39 +14,39 @@ Exemples de valeurs _fausses_ en Javascript (qui sont traduites par false (_faux
 
 ```js
 if (false) {
-  // Not reachable
+  // Le code ici ne sera pas exécuté
 }
 
 if (null) {
-  // Not reachable
+  // Le code ici ne sera pas exécuté
 }
 
 if (undefined) {
-  // Not reachable
+  // Le code ici ne sera pas exécuté
 }
 
 if (0) {
-  // Not reachable
+  // Le code ici ne sera pas exécuté
 }
 
 if (-0) {
-  // Not reachable
+  // Le code ici ne sera pas exécuté
 }
 
 if (0n) {
-  // Not reachable
+  // Le code ici ne sera pas exécuté
 }
 
 if (NaN) {
-  // Not reachable
+  // Le code ici ne sera pas exécuté
 }
 
 if ("") {
-  // Not reachable
+  // Le code ici ne sera pas exécuté
 }
 
 if (document.all) {
-  // Not reachable
+  // Le code ici ne sera pas exécuté
 }
 ```
 
