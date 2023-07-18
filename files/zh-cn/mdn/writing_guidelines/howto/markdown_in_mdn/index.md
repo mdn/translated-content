@@ -412,7 +412,7 @@ const greeting = "I'm a bad example";
 
 也就是说，必须使用以下风格：
 
-```md
+```md example-good
 | Heading 1 | Heading 2 | Heading 3 |
 | --------- | --------- | --------- |
 | cell 1    | cell 2    | cell 3    |
@@ -421,11 +421,10 @@ const greeting = "I'm a bad example";
 
 而不是这种风格：
 
-```md-nolint
+```md-nolint example-bad
 | Heading 1 | Heading 2 | Heading 3 |
-| --------- | --------- | --------- |
-
-cell 1 | cell 2 | cell 3
+| --------- | --- |----------------------|
+| cell 1 | cell 2 | cell 3 |
 cell 4 | cell 5 | cell 6
 ```
 
