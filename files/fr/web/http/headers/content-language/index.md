@@ -70,14 +70,14 @@ Content-Language: de-DE, en-CA
 L'attribut global [`lang`](/fr/docs/Web/HTML/Global_attributes/lang) est utilisé sur des éléments HTML pour indiquer la langue d'une page HTML entière ou une partie de celle-ci.
 
 ```html
-<html lang="de">
+<html lang="de"></html>
 ```
 
 **N'utilisez pas** le meta tag comme ceci pour déclarer la langue d'un document:
 
 ```html example-bad
 <!-- /!\ C'est une mauvaise pratique -->
-<meta http-equiv="content-language" content="de">
+<meta http-equiv="content-language" content="de" />
 ```
 
 ### Indiquer un public cible pour une ressource

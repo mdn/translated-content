@@ -1,5 +1,5 @@
 ---
-title: 'CSP: frame-ancestors'
+title: "CSP: frame-ancestors"
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
 tags:
   - CSP

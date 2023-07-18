@@ -1,5 +1,5 @@
 ---
-title: 'Raison : CORS désactivé'
+title: "Raison : CORS désactivé"
 slug: Web/HTTP/CORS/Errors/CORSDisabled
 tags:
   - Authentication
@@ -27,7 +27,7 @@ original_slug: Web/HTTP/CORS/Errors/CORSDesactive
 
 ## Raison
 
-```html
+```http
 Reason: CORS disabled
 (Raison : CORS désactivé)
 ```
