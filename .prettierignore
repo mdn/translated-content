@@ -58,10 +58,8 @@ build/
 /files/ja/learn/javascript/**/*.md
 /files/ja/learn/server-side/**/*.md
 /files/ja/mdn/**/*.md
-/files/ja/mozilla/**/*.md
 /files/ja/mozilla/add-ons/**/*.md
 /files/ja/mozilla/add-ons/webextensions/api/**/*.md
-/files/ja/mozilla/firefox**/*.md
 /files/ja/related/**/*.md
 /files/ja/web/**/*.md
 /files/ja/web/api/**/*.md
