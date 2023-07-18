@@ -13,20 +13,33 @@
     "type": "git",
     "url": "git+https://github.com/mdn/translated-content.git"
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "type": "module",
   "scripts": {
+    "fix:fm": "node scripts/front-matter_linter.js --fix true",
     "fix:json": "prettier -w \"**/*.json\"",
     "fix:md": "markdownlint-cli2-fix \"**/*.md\" && prettier -w \"**/*.md\"",
     "fix:yml": "prettier -w \"**/*.yml\"",
+    "lint:fm": "node scripts/front-matter_linter.js",
     "lint:json": "prettier -c \"**/*.json\"",
     "lint:md": "markdownlint-cli2 \"**/*.md\" && prettier -c \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
     "prepare": "husky install"
   },
-  "engines": {
-    "node": ">=18.0.0"
-  },
   "dependencies": {
+    "@apideck/better-ajv-errors": "^0.3.6",
+    "@caporal/core": "^2.0.2",
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1",
+    "async": "^3.2.4",
+    "caporal": "^1.4.0",
+    "cli-progress": "^3.12.0",
+    "fdir": "^6.0.1",
+    "gray-matter": "^4.0.3",
     "husky": "8.0.3",
+    "js-yaml": "^4.1.0",
     "lint-staged": "13.2.3",
     "markdownlint-cli2": "0.8.1",
     "markdownlint-rule-search-replace": "1.1.0",
