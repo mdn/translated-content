@@ -2,7 +2,7 @@
 title: import
 slug: Web/JavaScript/Reference/Statements/import
 l10n:
-  sourceCommit: 096dd3505a1ebd8407380caf75984028d9fbee57
+  sourceCommit: 1c4869cdb1a9a9c3cafba87a2cd9469591f7aa47
 ---
 
 {{jsSidebar("Statements")}}
