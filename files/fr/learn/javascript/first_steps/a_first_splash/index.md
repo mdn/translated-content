@@ -160,7 +160,7 @@ Dans cet article, nous allons vous montrer comment construire le jeu simple que 
 </html>
 ```
 
-{{ EmbedLiveSample('', '100%', 320, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('', '100%', 320) }}
 
 Essayez de jouer et familiarisez-vous avec ce jeu avant de continuer.
 
@@ -393,7 +393,7 @@ Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affic
 </html>
 ```
 
-{{ EmbedLiveSample('Opérateurs', '100%', 300,"", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Opérateurs', '100%', 300) }}
 
 Regardons d'abord les opérateurs arithmétiques, par exemple&nbsp;:
 

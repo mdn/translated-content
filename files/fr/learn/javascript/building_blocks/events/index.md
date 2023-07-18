@@ -333,7 +333,7 @@ Le résultat est le suivant (essayez de cliquer dessus - amusez-vous)&nbsp;:
 </html>
 ```
 
-{{ EmbedLiveSample('', '100%', 430, "", "") }}
+{{ EmbedLiveSample('', '100%', 430) }}
 
 La plupart des gestionnaires d'événements que vous rencontrerez ne disposent que d'un ensemble standard de propriétés et de fonctions (méthodes) disponibles sur l'objet événement (voir la liste complète sur {{domxref("Event")}} ). Cependant, certains gestionnaires plus avancés ajoutent des propriétés spécialisées contenant des données supplémentaires dont ils ont besoin pour fonctionner. Le [Media Recorder API](/fr/docs/Web/API/MediaRecorder_API), par exemple, a un événement `dataavailable` , qui se déclenche quand un fichier audio ou vidéo a été enregistré et est disponible pour être utilisé (par exemple, pour l'enregistrer ou le lire). L'objet événement du gestionnaire [ondataavailable](/fr/docs/Web/API/MediaRecorder/ondataavailable) correspondant dispose d'une propriété `data` contenant les données audio ou vidéo enregistrées pour vous permettre d'y accéder et de l'utiliser.
 
@@ -387,7 +387,7 @@ form.onsubmit = function(e) {
 
 Évidemment, cette validation est assez faible - cela n'empêcherait pas l'utilisateur de valider le formulaire avec des espaces ou des nombres entrés dans les champs, par exemple - mais cela est acceptable. Le résultat est le suivant :
 
-{{ EmbedLiveSample('Éviter_le_comportement_par_défaut', '100%', 140, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Éviter_le_comportement_par_défaut', '100%', 140) }}
 
 > **Note :** pour le code source, voir [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/preventdefault-validation.html) (et le voir s'exécuter [ici](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html).)
 
@@ -469,7 +469,7 @@ Le dernier sujet à aborder ici est quelque chose que vous ne rencontrerez pas s
 </html>
 ```
 
-{{ EmbedLiveSample('Le_bouillonnement_et_la_capture', '100%', 500, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Le_bouillonnement_et_la_capture', '100%', 500) }}
 
 Ceci est un exemple assez simple qui montre et cache une balise {{htmlelement("div")}} avec une balise {{htmlelement("video")}} à l'intérieur:
 

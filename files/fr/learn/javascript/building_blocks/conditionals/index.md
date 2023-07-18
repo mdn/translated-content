@@ -414,7 +414,7 @@ select.onchange = function() {
 }
 ```
 
-{{ EmbedLiveSample('Exemple_opérateur_ternaire', '100%', 300, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Exemple_opérateur_ternaire', '100%', 300) }}
 
 Nous mettons un élément {{htmlelement('select')}} pour choisir un thème (noir ou blanc), plus un simple élément {{htmlelement('h1')}} pour afficher un titre de site web. Nous avons aussi une fonction `update()`, qui prend deux couleurs en paramètre (entrées). La couleur de fond du site est déterminée par la couleur indiquée dans le premier paramètre fourni, et la couleur du texte par le deuxième.
 
@@ -546,7 +546,7 @@ textarea.addEventListener('input', updateCode);
 window.addEventListener('load', updateCode);
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_un_calendrier_simple', '100%', 1110, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Apprentissage_actif_un_calendrier_simple', '100%', 1110) }}
 
 ## Activité&nbsp;: plus de choix de couleurs
 

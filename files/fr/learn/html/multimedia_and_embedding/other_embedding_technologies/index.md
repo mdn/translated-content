@@ -202,7 +202,7 @@ textarea.onkeyup = function(){
 };
 ```
 
-{{ EmbedLiveSample("Apprentissage_actif_utilisations_classiques_de_l'intégration", 700, 600, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample("Apprentissage_actif_utilisations_classiques_de_l'intégration", 700, 600) }}
 
 ## Iframes en détail
 
