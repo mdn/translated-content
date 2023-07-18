@@ -305,8 +305,8 @@ function strToUTF8Arr(sDOMStr) {
       aBytes[nIdx++] = 128 + ((nChr >>> 12) & 63);
       aBytes[nIdx++] = 128 + ((nChr >>> 6) & 63);
       aBytes[nIdx++] = 128 + (nChr & 63);
-    } /* if (nChr <= 0x7fffffff) */ else {
-      /* seis bytes */
+    } else {
+      /* seis bytes; if (nChr <= 0x7fffffff) */
       aBytes[nIdx++] = 252 + (nChr >>> 30);
       aBytes[nIdx++] = 128 + ((nChr >>> 24) & 63);
       aBytes[nIdx++] = 128 + ((nChr >>> 18) & 63);
