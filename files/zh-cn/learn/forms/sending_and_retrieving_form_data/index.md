@@ -58,25 +58,25 @@ web 基于非常基本的客户端/服务器体系结构，可以总结如下:�
 在这个例子中，数据被发送到一个绝对 URL —— `http://foo.com`：
 
 ```html
-<form action="http://foo.com"></form>
+<form action="http://foo.com">…</form>
 ```
 
 这里，我们使用相对 URL——数据被发送到服务器上的不同 URL
 
 ```html
-<form action="/somewhere_else"></form>
+<form action="/somewhere_else">…</form>
 ```
 
 在没有属性的情况下，像下面一样，{{HTMLElement("form")}}数据被发送到表单出现的相同页面上：
 
 ```html
-<form></form>
+<form>…</form>
 ```
 
 许多较老的页面使用下面的符号表示数据应该被发送到包含表单的相同页面；这是必需的，因为直到 HTML5[`action`](/zh-CN/docs/Web/HTML/Element/form#action)属性都需要该符号。现在，这不再需要了。
 
 ```html
-<form action="#"></form>
+<form action="#">…</form>
 ```
 
 > **备注：** 可以指定使用 HTTPS(安全 HTTP) 协议的 URL。当您这样做时，数据将与请求的其余部分一起加密，即使表单本身是托管在使用 HTTP 访问的不安全页面上。另一方面，如果表单是在安全页面上托管的，但是您指定了一个不安全的 HTTP URL，它带有[`action`](/zh-CN/docs/Web/HTML/Element/form#action)属性，所有的浏览器都会在每次尝试发送数据时向用户显示一个安全警告，因为数据不会被加密。
