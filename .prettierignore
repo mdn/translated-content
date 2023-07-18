@@ -117,7 +117,6 @@ build/
 /files/pt-br/webassembly/**/*.md
 
 # ru
-/files/ru/glossary/**/*.md
 /files/ru/learn/**/*.md
 /files/ru/learn/css/**/*.md
 /files/ru/learn/html/**/*.md

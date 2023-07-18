@@ -9,6 +9,7 @@ tags:
   - Справка
 translation_of: Glossary/Accessibility_tree
 ---
+
 **Дерево доступности** содержит информацию для большинства HTML-элементов, связанную с {{Glossary("Accessibility", "доступностью")}}.
 
 Браузеры преобразуют разметку во внутреннее представление, называемое [DOM-деревом](/ru/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree). DOM-дерево содержит объекты для всех элементов разметки, атрибутов, текстовых узлов. После этого, на основе DOM-дерева, браузеры создают дерево доступности, которое используется платформозависимыми API специальных возможностей для вспомогательных технологий, таких как скринридеры.
@@ -30,5 +31,5 @@ translation_of: Glossary/Accessibility_tree
 
 1. [Глоссарий](/ru/docs/Glossary)
 
-    1. {{Glossary("Accessibility", "Доступность")}}
-    2. {{Glossary("ARIA")}}
+   1. {{Glossary("Accessibility", "Доступность")}}
+   2. {{Glossary("ARIA")}}
