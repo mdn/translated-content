@@ -23,24 +23,30 @@ Three.js で開発を始める上で、必要なものはあまりありませ�
 これが今回使用する HTML のコードです。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>MDN Games: Three.js demo</title>
-  <style>
-    body { margin: 0; padding: 0; }
-    canvas { width: 100%; height: 100%; }
-  </style>
-</head>
-<body>
-<script src="three.min.js"></script>
-<script>
-  const WIDTH = window.innerWidth;
-  const HEIGHT = window.innerHeight;
-  /* すべての JavaScript コードをここに置きます */
-</script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>MDN Games: Three.js demo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="three.min.js"></script>
+    <script>
+      const WIDTH = window.innerWidth;
+      const HEIGHT = window.innerHeight;
+      /* すべての JavaScript コードをここに置きます */
+    </script>
+  </body>
 </html>
 ```
 
@@ -53,9 +59,9 @@ Three.js で開発を始める上で、必要なものはあまりありませ�
 レンダラーとは、ブラウザ上でシーンを正しく表示するためのツールです。レンダラーにはいくつかの種類があります。既定では WebGL ですが、その他に Canvas、SVG、CSS、DOM を使用することができます。これらはすべてのレンダリング方法が異なるため、 WebGL の実装と CSS の実装は異なります。目標を達成する方法はさまざまですが、ユーザーにとっての体験は同じになります。このアプローチのおかげで、希望する技術がブラウザーで対応していない場合、代替を使用することができます。
 
 ```js
-const renderer = new THREE.WebGLRenderer({antialias:true});
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
-renderer.setClearColor(0xDDDDDD, 1);
+renderer.setClearColor(0xdddddd, 1);
 document.body.appendChild(renderer.domElement);
 ```
 
@@ -78,7 +84,7 @@ const scene = new THREE.Scene();
 レンダリングされたシーンはありますが、私たちの作品を見るためにカメラを追加する必要があります。カメラのない映画のセットを想像してみてください。以下の行で、3D 座標系にカメラを設置し、シーンの方向に向けることで、ようやく何かを見ることができるようになります。
 
 ```js
-const camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
+const camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
 camera.position.z = 50;
 scene.add(camera);
 ```
@@ -126,7 +132,7 @@ const boxGeometry = new THREE.BoxGeometry(10, 10, 10);
 素材とは、オブジェクトに応じた、その表面にある色や質感を表すものです。ここでは、シンプルな青色を選んでボックスを塗装します。使用できる素材は、あらかじめ定義されているものが多数あります。基本 (Basic), フォン (Phong), ランバート (Lambert) です。後の 2 つは後で使ってみましょう。
 
 ```js
-const basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
+const basicMaterial = new THREE.MeshBasicMaterial({ color: 0x0095dd });
 ```
 
 前項で追加した定義の下にこれを追加しましょう。
@@ -179,7 +185,7 @@ cube.position.x = -25;
 
 ```js
 const torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
-const phongMaterial = new THREE.MeshPhongMaterial({color: 0xFF9500});
+const phongMaterial = new THREE.MeshPhongMaterial({ color: 0xff9500 });
 const torus = new THREE.Mesh(torusGeometry, phongMaterial);
 scene.add(torus);
 ```
@@ -190,7 +196,7 @@ scene.add(torus);
 
 ```js
 const dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
-const lambertMaterial = new THREE.MeshLambertMaterial({color: 0xEAEFF2});
+const lambertMaterial = new THREE.MeshLambertMaterial({ color: 0xeaeff2 });
 const dodecahedron = new THREE.Mesh(dodecahedronGeometry, lambertMaterial);
 dodecahedron.position.x = 25;
 scene.add(dodecahedron);
@@ -205,7 +211,7 @@ scene.add(dodecahedron);
 Three.js では様々なタイプの光源が利用できます。最も基本的なものは `PointLight` で、これは懐中電灯のように定義された方向にスポットライトを照らすように動作します。以下の行を、図形の定義の下に追加してください。
 
 ```js
-const light = new THREE.PointLight(0xFFFFFF);
+const light = new THREE.PointLight(0xffffff);
 light.position.set(-10, 15, 50);
 scene.add(light);
 ```
@@ -254,7 +260,7 @@ torus.scale.y = Math.abs(Math.sin(t));
 回転と拡大縮小の他に、オブジェクトをシーン上で移動させることもできます。 `requestAnimationFrame()` 呼び出しのすぐ下に、次のようなものを追加します。
 
 ```js
-dodecahedron.position.y = -7*Math.sin(t*2);
+dodecahedron.position.y = -7 * Math.sin(t * 2);
 ```
 
 これは、各フレームの y 軸に `sin()` 値を適用することによって、正十二面体を上下に動かし、よりクールな見た目になるように少し調整するものです。これらの値を変えてみて、アニメーションにどのような影響を与えるか見てみましょう。
