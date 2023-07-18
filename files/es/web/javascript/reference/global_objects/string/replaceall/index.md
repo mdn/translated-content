@@ -1,8 +1,8 @@
 ---
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-page-type: javascript-instance-method
-browser-compat: javascript.builtins.String.replaceAll
+l10n:
+  sourceCommit: 6e3889be77fa45d5823216d0cc61b4f7c4b99e1b
 ---
 
 {{JSRef}}
@@ -21,9 +21,9 @@ replaceAll(patrón, reemplazo)
 
 - `patrón`
 
-  - : Puede ser una cadena o un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) — el típico ejemplo es una [expresión regular](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Cualquier valor que no tenga el método `Symbol.replace` será convertido a una cadena.
+  - : Puede ser una cadena o un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) — el típico ejemplo es una [expresión regular (_regex_)](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Cualquier valor que no tenga el método `Symbol.replace` será convertido a una cadena.
 
-    Si `patrón` [es una regex](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes), entonces debe tener el flag global (`g`) establecida, o un {{jsxref("TypeError")}} es lanzado.
+    Si `patrón` [es una _regex_](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes), entonces debe tener el parámetro global (`g`) establecido, o un {{jsxref("TypeError")}} es lanzado.
 
 - `reemplazo`
 
@@ -36,11 +36,11 @@ Una nueva cadena, con todas las coincidencias de un patrón reemplazadas por un 
 ### Excepciones
 
 - {{jsxref("TypeError")}}
-  - : Lanzado si el `patrón`[es una regex](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes) que no tiene el flag global (`g`) configurado (su propiedad [`flags`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) no contiene `"g"`)
+  - : Lanzado si el `patrón` [es una _regex_](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes) que no tiene el parámetro global (`g`) configurado (su propiedad [`flags`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) no contiene `"g"`)
 
 ## Descripción
 
-Este método no muta el valor de la cadena en la que es ejecutado. Regresa una nueva cadena.
+Este método no modifica el valor de la cadena en la que es ejecutado. Regresa una nueva cadena.
 
 A diferencia de [`replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace), este método reemplazará todas las coincidencias de una cadena, no solo la primera. Esto es especialmente útil si la cadena no es estáticamente conocida, como llamando al contructor del objeto [`RegExp()`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp) sin escapar caracteres especiales podría cambiar su semántica sin intención.
 
@@ -59,7 +59,7 @@ console.log(unsafeRedactName(report, "ha.*er")); // "A [REDACTED]s in their name
 console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] used special characters in their name to breach the system."
 ```
 
-Si `patrón` es un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) (incluyendo objetos `RegExp`), ese método es llamado con la cadena objetivo y `reemplazo` como argumentos. Su valor de retorno se convierte en el valor de retorno de `replaceAll()`. En este caso el comportamiento de `replaceAll()` es enteramente codificado por el método `@@replace`, y por lo tanto tendrá el mismo resultado que `replace()` (aparte de la validación extra de que regex es global).
+Si el `patrón` es un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) (incluyendo objetos `RegExp`), ese método es llamado con la cadena objetivo y `reemplazo` como argumento. Su valor de retorno se convierte en el valor de retorno de `replaceAll()`. En este caso el comportamiento de `replaceAll()` es enteramente codificado por el método `@@replace`, y por lo tanto tendrá el mismo resultado que `replace()` (aparte de la validación extra de que _regex_ es global).
 
 Si el `patrón` es una cadena vacía, el reemplazo será insertado entre cada unidad de código UTF-16, similar al comportamiento de [`split()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/split).
 
@@ -67,7 +67,7 @@ Si el `patrón` es una cadena vacía, el reemplazo será insertado entre cada un
 "xxx".replaceAll("", "_"); // "_x_x_x_"
 ```
 
-Para más información acerca de cómo interactúan las propiedades de una regex (especialmente el flag [sticky](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)), véase [`RegExp.prototype[@@replace]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
+Para más información acerca de cómo interactúan las propiedades de una _regex_ (especialmente el paramétro [sticky](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky)), véase [`RegExp.prototype[@@replace]()`](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
 
 ## Ejemplos
 
