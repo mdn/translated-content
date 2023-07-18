@@ -172,19 +172,16 @@ If you want to follow along with the example, save the above our module into a f
 Next, we’ll load our binary into a typed array called `addCode` (as described in [Fetching WebAssembly Bytecode](/pt-BR/docs/WebAssembly/Fetching_WebAssembly_bytecode)), compile and instantiate it, and execute our `add` function in JavaScript (we can now find `add()` in the [`exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) property of the instance):
 
 ```js
-fetchAndInstantiate('add.wasm').then(function(instance) {
-   console.log(instance.exports.add(1, 2));  // "3"
+fetchAndInstantiate("add.wasm").then(function (instance) {
+  console.log(instance.exports.add(1, 2)); // "3"
 });
 
 // fetchAndInstantiate() found in wasm-utils.js
 function fetchAndInstantiate(url, importObject) {
-  return fetch(url).then(response =>
-    response.arrayBuffer()
-  ).then(bytes =>
-    WebAssembly.instantiate(bytes, importObject)
-  ).then(results =>
-    results.instance
-  );
+  return fetch(url)
+    .then((response) => response.arrayBuffer())
+    .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+    .then((results) => results.instance);
 }
 ```
 
@@ -221,8 +218,8 @@ This is functionally equivalent to including a separate function statement outsi
 The JavaScript code to call our above module looks like so:
 
 ```js
-fetchAndInstantiate('call.wasm').then(function(instance) {
-  console.log(instance.exports.getAnswerPlus1());  // "43"
+fetchAndInstantiate("call.wasm").then(function (instance) {
+  console.log(instance.exports.getAnswerPlus1()); // "43"
 });
 ```
 
@@ -253,13 +250,13 @@ This would look like the following:
 ```js
 var importObject = {
   console: {
-    log: function(arg) {
+    log: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetchAndInstantiate('logger.wasm', importObject).then(function(instance) {
+fetchAndInstantiate("logger.wasm", importObject).then(function (instance) {
   instance.exports.logIt();
 });
 ```
@@ -324,11 +321,11 @@ Our final wasm module looks like this:
 Now from JavaScript we can create a Memory with 1 page and pass it in. This results in "Hi" being printed to the console:
 
 ```js
-var memory = new WebAssembly.Memory({initial:1});
+var memory = new WebAssembly.Memory({ initial: 1 });
 
 var importObj = { console: { log: consoleLogString }, js: { mem: memory } };
 
-fetchAndInstantiate('logger2.wasm', importObj).then(function(instance) {
+fetchAndInstantiate("logger2.wasm", importObj).then(function (instance) {
   instance.exports.writeHi();
 });
 ```
@@ -443,7 +440,7 @@ The full module all together looks like this, and can be found in our [wasm-tabl
 We load it into a webpage using the following JavaScript:
 
 ```js
-fetchAndInstantiate('wasm-table.wasm').then(function(instance) {
+fetchAndInstantiate("wasm-table.wasm").then(function (instance) {
   console.log(instance.exports.callByIndex(0)); // returns 42
   console.log(instance.exports.callByIndex(1)); // returns 13
   console.log(instance.exports.callByIndex(2));
@@ -514,16 +511,16 @@ After converting to assembly, we then use `shared0.wasm` and `shared1.wasm` in J
 ```js
 var importObj = {
   js: {
-    memory : new WebAssembly.Memory({ initial: 1 }),
-    table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
-  }
+    memory: new WebAssembly.Memory({ initial: 1 }),
+    table: new WebAssembly.Table({ initial: 1, element: "anyfunc" }),
+  },
 };
 
 Promise.all([
-  fetchAndInstantiate('shared0.wasm', importObj),
-  fetchAndInstantiate('shared1.wasm', importObj)
-]).then(function(results) {
-  console.log(results[1].exports.doIt());  // prints 42
+  fetchAndInstantiate("shared0.wasm", importObj),
+  fetchAndInstantiate("shared1.wasm", importObj),
+]).then(function (results) {
+  console.log(results[1].exports.doIt()); // prints 42
 });
 ```
 
