@@ -9,10 +9,10 @@ slug: Glossary/Main_thread
 
 1. 関連情報
 
-    1. [非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)
-    2. [Web worker API](/ja/docs/Web/API/Web_Workers_API)
-    3. [Service worker API](/ja/docs/Web/API/Service_Worker_API)
+   1. [非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)
+   2. [Web worker API](/ja/docs/Web/API/Web_Workers_API)
+   3. [Service worker API](/ja/docs/Web/API/Service_Worker_API)
 
 2. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Thread", "スレッド")}}
+   1. {{Glossary("Thread", "スレッド")}}

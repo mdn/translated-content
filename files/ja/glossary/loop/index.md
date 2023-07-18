@@ -24,8 +24,8 @@ for (文1; 文2; 文3){
 #### 例
 
 ```js
-for(var i = 0; i < 10; i++){
-    console.log(i)
+for (var i = 0; i < 10; i++) {
+  console.log(i);
 }
 //このループは数字の 0-9 の数字を表示し、条件に合う (i = 10) と停止します
 ```
@@ -52,9 +52,9 @@ while (条件){
 
 ```js
 var i = 0;
-while(i < 5){
-    console.log(i)
-    i++
+while (i < 5) {
+  console.log(i);
+  i++;
 }
 //このループは 0-4 の数字を表示し、条件 (i >=5) が偽になると停止します
 ```
@@ -65,8 +65,8 @@ while(i < 5){
 
 1. General Knowledge
 
-    1. Wikipedia の [制御構造](https://ja.wikipedia.org/wiki/制御構造#ループ)
+   1. Wikipedia の [制御構造](https://ja.wikipedia.org/wiki/制御構造#ループ)
 
 2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Loop", "ループ")}}
+   1. {{Glossary("Loop", "ループ")}}

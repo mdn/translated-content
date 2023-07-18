@@ -29,14 +29,14 @@ foo === window.foo; // true を返す
 グローバル変数 `foo` は `window` オブジェクト内に、次のように格納されます。
 
 ```js
-foo: "foobar"
+foo: "foobar";
 ```
 
 ### グローバル関数へのアクセス
 
 ```js
 function greeting() {
-   console.log("Hi!");
+  console.log("Hi!");
 }
 
 window.greeting(); // ふつうに greeting(); を呼び出すのと同じ
@@ -50,7 +50,7 @@ window.greeting(); // ふつうに greeting(); を呼び出すのと同じ
 
 ```js
 greeting: function greeting() {
-   console.log("Hi!");
+  console.log("Hi!");
 }
 ```
 
