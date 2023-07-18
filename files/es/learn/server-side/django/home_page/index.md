@@ -91,7 +91,7 @@ urlpatterns = [
 ]
 ```
 
-Esta función `path()` define una cadena vacía (`''`), y una función vista que será llamada si el patrón es detectado (`views.index` — una función llamada `index()` en **views.py**). Hablaremos un poco más sobre los patrones URL más adelante en este tutorial, pero para este caso todo lo que necesitas saber es que en un patron de '' coincidirá con una cadena vacía.
+Esta función `path()` define una cadena vacía (`''`), y una función vista que será llamada si el patrón es detectado (`views.index` — una función llamada `index()` en **views.py**). Hablaremos un poco más sobre los patrones URL más adelante en este tutorial, pero para este caso todo lo que necesitas saber es que en un patron de `''` coincidirá con una cadena vacía.
 
 > **Nota:** Nota que en **/locallibrary/locallibrary/urls.py**
 >
