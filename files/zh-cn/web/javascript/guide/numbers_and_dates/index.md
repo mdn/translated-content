@@ -15,75 +15,82 @@ slug: Web/JavaScript/Guide/Numbers_and_dates
 
 JavaScript 最近添加了 {{jsxref("BigInt")}} 的支持，能够用于表示极大的数字。使用 BigInt 的时候有一些注意事项，例如，你不能让 BigInt 和 {{jsxref("Number")}} 直接进行运算，你也不能用 {{jsxref("Math")}} 对象去操作 BigInt 数字。
 
-请参见 Javascript 指南中的 [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures) ，了解其他更多的基本类型。
+请参见 Javascript 指南中的 [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)，了解其他更多的基本类型。
 
-您可以使用四种数字进制：十进制，二进制，八进制和十六进制。
+你可以使用四种数字进制：十进制、二进制、八进制和十六进制。
 
-### 十进制数字 (Decimal numbers)
+### 十进制数字
 
-```js
-1234567890;
-42;
-// 以零开头的数字的注意事项：
-0888; // 888 将被当做十进制处理
-0777; // 在非严格格式下会被当做八进制处理 (用十进制表示就是 511)
+```js-nolint
+1234567890
+42
 ```
 
 请注意，十进制可以以 0 开头，后面接其他十进制数字，但是假如下一个接的十进制数字小于 8，那么该数字将会被当做八进制处理。
 
-### 二进制数字 (Binary numbers)
-
-二进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母 B(`0b` 或者是 `0B`)。假如 0b 后面的数字不是 0 或者 1，那么就会提示这样的语法错误（ `SyntaxError`）："Missing binary digits after 0b(0b 之后缺失二有效的二进制数据)"。
-
-```js
-var FLT_SIGNBIT = 0b10000000000000000000000000000000; // 2147483648
-var FLT_EXPONENT = 0b01111111100000000000000000000000; // 2139095040
-var FLT_MANTISSA = 0b00000000011111111111111111111111; // 8388607
+```js-nolint example-bad
+0888 // 888 以十进制解析
+0777 // 以八进制解析，为十进制的 511
 ```
 
-### 八进制数字 (Octal numbers)
+### 二进制数字
+
+二进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母 B(`0b` 或者是 `0B`)。假如 0b 后面的数字不是 0 或者 1，那么就会提示这样的语法错误（`SyntaxError`）：“Missing binary digits after 0b（0b 之后缺失二有效的二进制数据）”。
+
+```js-nolint
+0b10000000000000000000000000000000 // 2147483648
+0b01111111100000000000000000000000 // 2139095040
+0B00000000011111111111111111111111 // 8388607
+```
+
+### 八进制数字
 
 八进制数字语法是以 0 为开头的。假如 0 后面的数字不在 0 到 7 的范围内，该数字将会被转换成十进制数字。
 
-```js
-var n = 0755; // 493
-var m = 0644; // 420
+```js-nolint
+0O755 // 493
+0o644 // 420
 ```
 
-在 ECMAScript 5 严格模式下禁止使用八进制语法。八进制语法并不是 ECMAScript 5 规范的一部分，但是通过在八进制数字添加一个前缀 0 就可以被所有的浏览器支持：0644 === 420 而且 "\045" === "%"。在 ECMAScript 6 中使用八进制数字是需要给一个数字添加前缀"0o"。
+在 ECMAScript 5 严格模式下禁止使用八进制语法。八进制语法并不是 ECMAScript 5 规范的一部分，但是通过在八进制数字添加一个前缀 0 就可以被所有的浏览器支持：`0644 === 420` 而且 `"\045" === "%"`。在 ECMAScript 6 中使用八进制数字是需要给一个数字添加前缀“0o”。
 
 ```js
-var a = 0o10; // ES6 :八进制
+const n = 0755; // 493
+const m = 0644; // 420
 ```
 
-### 十六进制 (Hexadecimal numbers)
+### 十六进制
 
-十六进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母 X(`0x 或者是 0X`)。假如`0x`后面的数字超出规定范围 (0123456789ABCDEF)，那么就会提示这样的语法错误 (`SyntaxError)：`"Identifier starts immediately after numeric literal".
+十六进制数字语法是以零为开头，后面接一个小写或大写的拉丁文字母 X(`0x 或者是 0X`)。假如`0x`后面的数字超出规定范围 (0123456789ABCDEF)，那么就会提示这样的语法错误（`SyntaxError`）：“Identifier starts immediately after numeric literal”。
 
-```js
-0xfffffffffffffffff; // 295147905179352830000
-0x123456789abcdef; // 81985529216486900
-0xa; // 10
+```js-nolint
+0xFFFFFFFFFFFFFFFFF // 295147905179352830000
+0x123456789ABCDEF   // 81985529216486900
+0XA                 // 10
 ```
 
-### 指数形式 (Exponentiation)
+### 指数形式
 
-```js
-1e3; // 1000
-2e6; // 2000000
-0.1e2; // 10
+```js-nolint
+0e-5   // 0
+0e+5   // 0
+5e1    // 50
+175e-2 // 1.75
+1e3    // 1000
+1e-3   // 0.001
+1E3    // 1000
 ```
 
-## `数字对象`
+## 数字对象
 
-内置的{{jsxref("Number")}}对象有一些有关数字的常量属性，如最大值、不是一个数字和无穷大的。你不能改变这些属性，但可以按下边的方式使用它们：
+内置的 {{jsxref("Number")}} 对象有一些有关数字的常量属性，如最大值、不是一个数字和无穷大的。你不能改变这些属性，但可以按下边的方式使用它们：
 
 ```js
-var biggestNum = Number.MAX_VALUE;
-var smallestNum = Number.MIN_VALUE;
-var infiniteNum = Number.POSITIVE_INFINITY;
-var negInfiniteNum = Number.NEGATIVE_INFINITY;
-var notANum = Number.NaN;
+const biggestNum = Number.MAX_VALUE;
+const smallestNum = Number.MIN_VALUE;
+const infiniteNum = Number.POSITIVE_INFINITY;
+const negInfiniteNum = Number.NEGATIVE_INFINITY;
+const notANum = Number.NaN;
 ```
 
 你永远只用从 Number 对象引用上边显示的属性，而不是你自己创建的 Number 对象的属性。
