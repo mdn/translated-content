@@ -12,10 +12,10 @@ slug: Learn/Server-side/Django/Home_page
     <tr>
       <th scope="row">사전 준비:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/Introduction"
+        <a href="/ko/docs/Learn/Server-side/Django/Introduction"
           >Django Introduction</a
         >을 읽어보세요. 이전 튜토리얼들을 완료하세요 (<a
-          href="/en-US/docs/Learn/Server-side/Django/Admin_site"
+          href="/ko/docs/Learn/Server-side/Django/Admin_site"
           >Django Tutorial Part 4: Django admin site</a
         >
         포함).

@@ -21,7 +21,11 @@ var miTexto = '<a id="a"><b id="b">Hey!</b></a>';
 var codigo = new DOMParser();
 var oDOM = codigo.parseFromString(miTexto, "text/xml");
 // Imprimir el nombre del elemento raiz o un mensaje de error
-dump(oDOM.documentElement.nodeName == "parsererror" ? "error mientras se codificaba" : oDOM.documentElement.nodeName);
+dump(
+  oDOM.documentElement.nodeName == "parsererror"
+    ? "error mientras se codificaba"
+    : oDOM.documentElement.nodeName,
+);
 ```
 
 ### Creando un documento XML empezando desde un árbol de Objetos JavaScript (JXON)
@@ -36,12 +40,12 @@ Aquí hay un código de ejemplo que lee y codifica un archivo XML con URL direcc
 
 ```js
 var xhr = new XMLHttpRequest();
-xhr.onload = function() {
+xhr.onload = function () {
   dump(xhr.responseXML.documentElement.nodeName);
-}
-xhr.onerror = function() {
+};
+xhr.onerror = function () {
   dump("Error mientras se tomaba el XML.");
-}
+};
 xhr.open("GET", "example.xml");
 xhr.responseType = "document";
 xhr.send();
@@ -67,8 +71,9 @@ var sXML = oSerializer.serializeToString(doc);
 The `new XMLSerializer()` constructor is not available from within a JS XPCOM component (or a [JS module](/en/JavaScript_code_modules)). Instead, write:
 
 ```js
-var oSerializer = Components.classes["@mozilla.org/xmlextras/xmlserializer;1"]
-                            .createInstance(Components.interfaces.nsIDOMSerializer);
+var oSerializer = Components.classes[
+  "@mozilla.org/xmlextras/xmlserializer;1"
+].createInstance(Components.interfaces.nsIDOMSerializer);
 var sXML = oSerializer.serializeToString(doc);
 ```
 
@@ -106,13 +111,17 @@ First, create a DOM tree as described in the [How to Create a DOM tree](/en/How_
 Now, let's serialize `doc`, the DOM tree, to a file. For more information about files, see [about using files in Mozilla](/en/Code_snippets/File_I//O)):
 
 ```js
-var oFOStream = Components.classes["@mozilla.org/network/file-output-stream;1"].createInstance(Components.interfaces.nsIFileOutputStream);
-var oFile = Components.classes["@mozilla.org/file/directory_service;1"].getService(Components.interfaces.nsIProperties).get("ProfD", Components.interfaces.nsILocalFile); // get profile folder
+var oFOStream = Components.classes[
+  "@mozilla.org/network/file-output-stream;1"
+].createInstance(Components.interfaces.nsIFileOutputStream);
+var oFile = Components.classes["@mozilla.org/file/directory_service;1"]
+  .getService(Components.interfaces.nsIProperties)
+  .get("ProfD", Components.interfaces.nsILocalFile); // get profile folder
 oFile.append("extensions"); // extensions sub-directory
 oFile.append("{5872365E-67D1-4AFD-9480-FD293BEBD20D}"); // GUID of your extension
 oFile.append("myXMLFile.xml"); // filename
 oFOStream.init(oFile, 0x02 | 0x08 | 0x20, 0664, 0); // write, create, truncate
-(new XMLSerializer()).serializeToStream(doc, oFOStream, ""); // rememeber, doc is the DOM tree
+new XMLSerializer().serializeToStream(doc, oFOStream, ""); // rememeber, doc is the DOM tree
 oFOStream.close();
 ```
 

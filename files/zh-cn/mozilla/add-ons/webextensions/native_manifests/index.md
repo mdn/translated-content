@@ -136,7 +136,7 @@ slug: Mozilla/Add-ons/WebExtensions/Native_manifests
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -202,8 +202,7 @@ slug: Mozilla/Add-ons/WebExtensions/Native_manifests
   "name": "favourite-color-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
-  "data":
-  {
+  "data": {
     "color": "management thinks it should be blue!"
   }
 }
@@ -212,7 +211,7 @@ slug: Mozilla/Add-ons/WebExtensions/Native_manifests
 根据给出的 JSON 清单，`favourite-color-examples@mozilla.org` 扩展可以像这样访问数据：
 
 ```js
-let storageItem = browser.storage.managed.get('color');
+let storageItem = browser.storage.managed.get("color");
 storageItem.then((res) => {
   console.log(`Managed color is: ${res.color}`);
 });

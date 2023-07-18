@@ -1,5 +1,5 @@
 ---
-title: 'Guide des types et formats de médias : contenu image, audio et vidéo'
+title: "Guide des types et formats de médias : contenu image, audio et vidéo"
 slug: Web/Media/Formats
 tags:
   - API

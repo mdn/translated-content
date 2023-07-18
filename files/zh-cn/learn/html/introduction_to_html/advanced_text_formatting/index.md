@@ -235,7 +235,7 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 ```html
 <p>Here is a blockquote:</p>
 <blockquote
-  cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+  cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
   <p>
     The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
     <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
@@ -253,7 +253,7 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 除了使用 {{htmlelement("q")}} 元素以外，行内元素用同样的方式工作。例如，下面的标记包含了从 MDN `<q>` 页面的引用：
 
 ```html
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q">intended
 for short quotations that don't require paragraph breaks.</q></p>
 ```
 
@@ -270,17 +270,17 @@ for short quotations that don't require paragraph breaks.</q></p>
 ```html
 <p>
   According to the
-  <a href="/en-US/docs/Web/HTML/Element/blockquote">
+  <a href="/zh-CN/docs/Web/HTML/Element/blockquote">
     <cite>MDN blockquote page</cite></a>:
 </p>
 
-<blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+<blockquote cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
   <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
   Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
 </blockquote>
 
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q> — <a href="/en-US/docs/Web/HTML/Element/q">
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q">intended
+for short quotations that don't require paragraph breaks.</q> — <a href="/zh-CN/docs/Web/HTML/Element/q">
 <cite>MDN q page</cite></a>.</p>
 ```
 

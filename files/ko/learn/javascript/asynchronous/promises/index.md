@@ -166,7 +166,7 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
 
     `fetch()` 메서드를 호출하여, 네트워크에서 fetch할 이미지의 URL을 매개변수로 전달합니다. 두 번째 매개변수를 사용할 수 있지만, 지금은 우선 간단하게 하나의 매개변수만 사용하겠습니다. 코드를 더 살펴보면 `promise`변수에 `fetch()` 작업으로 반환된 Promise 오브젝트를 저장하고 있습니다. 이전에 말했듯이, 지금 오브젝트는 성공도 아니고 실패도 아닌 중간 상태를 저장하고 있습니다. 공식적으로는 **pending**상태라고 부릅니다.
 
-4. 작업이 성공적으로 진행될 때를 대응하기 위해 (이번 예제에선 {{domxref("Response")}} 가 반환될 때 입니다. ), 우리는 Promise 오브젝트의 [`.then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 메서드를 호출합니다. `.then()` 블럭 안의 callback은 (**executor** 라고 부름) Promise가 성공적으로 완료되고{{domxref("Response")}} 오브젝트를 반환할 때만 실행합니다. — 이렇게 성공한 Promise의 상태를 **fulfilled**라고 부릅니다. 그리고 반환된 {{domxref("Response")}} 오브젝트를 매개변수로 전달합니다.
+4. 작업이 성공적으로 진행될 때를 대응하기 위해 (이번 예제에선 {{domxref("Response")}} 가 반환될 때 입니다. ), 우리는 Promise 오브젝트의 [`.then()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 메서드를 호출합니다. `.then()` 블럭 안의 callback은 (**executor** 라고 부름) Promise가 성공적으로 완료되고{{domxref("Response")}} 오브젝트를 반환할 때만 실행합니다. — 이렇게 성공한 Promise의 상태를 **fulfilled**라고 부릅니다. 그리고 반환된 {{domxref("Response")}} 오브젝트를 매개변수로 전달합니다.
 
     > **참고:** The way that a `.then()` block works is similar to when you add an event listener to an object using `AddEventListener()`. It doesn't run until an event occurs (when the promise fulfills). The most notable difference is that a .then() will only run once for each time it is used, whereas an event listener could be invoked multiple times.
 
@@ -217,7 +217,7 @@ If you save the HTML file you've just created and load it in your browser, you'l
 
 ### Responding to failure
 
-현재 에러가 발생했을 때 어떻게 처리를 해야할 지 작성된 코드가 없기때문에 코드를 조금만 더 추가하여 좀 더 완벽하게 작성해봅시다. (Promise에서 에러가 발생한 상태를 **rejects**라 부릅니다). 이전에 봤던대로 [`.catch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) 블럭을 추가하여 오류를 핸들링 할 수 있습니다. 아래처럼 말이죠 :
+현재 에러가 발생했을 때 어떻게 처리를 해야할 지 작성된 코드가 없기때문에 코드를 조금만 더 추가하여 좀 더 완벽하게 작성해봅시다. (Promise에서 에러가 발생한 상태를 **rejects**라 부릅니다). 이전에 봤던대로 [`.catch()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) 블럭을 추가하여 오류를 핸들링 할 수 있습니다. 아래처럼 말이죠 :
 
 ```js
 let errorCase = promise3.catch(e => {
@@ -251,7 +251,7 @@ fetch('coffee.jpg')
 
 fulfilled promise 결과에 의해 반환된 값이 다음 `.then()` 블록의 executor 함수가 가진 파라미터로 전달 된다는 것을 꼭 기억하세요.
 
-> **참고:** `.then()`/`.catch()` blocks in promises are basically the async equivalent of a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block in sync code. Bear in mind that synchronous `try...catch` won't work in async code.
+> **참고:** `.then()`/`.catch()` blocks in promises are basically the async equivalent of a [`try...catch`](/ko/docs/Web/JavaScript/Reference/Statements/try...catch) block in sync code. Bear in mind that synchronous `try...catch` won't work in async code.
 
 ## Promise terminology recap
 
@@ -267,7 +267,7 @@ fulfilled promise 결과에 의해 반환된 값이 다음 `.then()` 블록의 e
 
 위의 예제에서 Promise사용의 기초를 확인했습니다. 이제 고급 기능들을 한번 보겠습니다. 제일 먼저 확인해볼 예제는 다음과 같습니다. 연쇄적으로 일어나는 작업은 좋습니다. 그런데 모든 Promise가 fulfilled일 경우 코드를 실행하고 싶은 경우가 있을것 입니다.
 
-해당 기능을 [`Promise.all()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 이라는 스테틱 메서드를 사용하여 만들 수 있습니다. 이 메서드는 Promise의 배열을 매개변수로 삼고, 배열의 모든 Promise가 fulfil일 때만 새로운 fulfil `Promise` 오브젝트를 반환합니다. 아래처럼 말이죠 :
+해당 기능을 [`Promise.all()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) 이라는 스테틱 메서드를 사용하여 만들 수 있습니다. 이 메서드는 Promise의 배열을 매개변수로 삼고, 배열의 모든 Promise가 fulfil일 때만 새로운 fulfil `Promise` 오브젝트를 반환합니다. 아래처럼 말이죠 :
 
 ```js
 Promise.all([a, b, c]).then(values => {
@@ -376,7 +376,7 @@ Promise.all([a, b, c]).then(values => {
 
 > **참고:** If you were improving this code, you might want to loop through a list of items to display, fetching and decoding each one, and then loop through the results inside `Promise.all()`, running a different function to display each one depending on what the type of code was. This would make it work for any number of items, not just three.
 >
-> Also, you could determine what the type of file is being fetched without needing an explicit `type` property. You could, for example, check the {{HTTPHeader("Content-Type")}} HTTP header of the response in each case using [`response.headers.get("content-type")`](/en-US/docs/Web/API/Headers/get), and then react accordingly.
+> Also, you could determine what the type of file is being fetched without needing an explicit `type` property. You could, for example, check the {{HTTPHeader("Content-Type")}} HTTP header of the response in each case using [`response.headers.get("content-type")`](/ko/docs/Web/API/Headers/get), and then react accordingly.
 
 ## Running some final code after a promise fulfills/rejects
 
@@ -394,7 +394,7 @@ myPromise
 });
 ```
 
-보다 최근의 현대 브라우저에서는 [`.finally()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally) 메서드를 사용할 수 있습니다. 이 메서드를 Promise 체이닝의 끝에 배치하여 코드 반복을 줄이고 좀 더 우아하게 일을 처리할 수 있습니다. 아래와 같이 마지막 블럭에 적용할 수 있습니다. :
+보다 최근의 현대 브라우저에서는 [`.finally()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally) 메서드를 사용할 수 있습니다. 이 메서드를 Promise 체이닝의 끝에 배치하여 코드 반복을 줄이고 좀 더 우아하게 일을 처리할 수 있습니다. 아래와 같이 마지막 블럭에 적용할 수 있습니다. :
 
 ```js
 myPromise
@@ -441,9 +441,9 @@ function fetchAndDecode(url, type) {
 
 ### Using the Promise() constructor
 
-[`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) constructor를 사용하여 사용자 정의 Promise를 만들 수 있습니다. 주로 Promise기반이 아닌 구식 비동기 API코드를 Promise기반 코드로 만들고 싶을 경우 사용합니다. 이 방법은 구식 프로젝트 코드, 라이브러리, 혹은 프레임워크를 지금의 Promise 코드와 함께 사용할 때 유용합니다.
+[`Promise()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise) constructor를 사용하여 사용자 정의 Promise를 만들 수 있습니다. 주로 Promise기반이 아닌 구식 비동기 API코드를 Promise기반 코드로 만들고 싶을 경우 사용합니다. 이 방법은 구식 프로젝트 코드, 라이브러리, 혹은 프레임워크를 지금의 Promise 코드와 함께 사용할 때 유용합니다.
 
-간단한 예를 들어 살펴보겠습니다. — 여기 Promise와 함께 사용되는 [`setTimeout()`](/ko/docs/Web/API/setTimeout) 호출이 있습니다. — 이 함수는 2초 후에 "Success!"라는 문자열과 함께 resolve됩니다. (통과된 [`resolve()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 호출에 의해);
+간단한 예를 들어 살펴보겠습니다. — 여기 Promise와 함께 사용되는 [`setTimeout()`](/ko/docs/Web/API/setTimeout) 호출이 있습니다. — 이 함수는 2초 후에 "Success!"라는 문자열과 함께 resolve됩니다. (통과된 [`resolve()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) 호출에 의해);
 
 ```js
 let timeoutPromise = new Promise((resolve, reject) => {
@@ -472,13 +472,13 @@ timeoutPromise.then(alert);
 
 Try [running this live](https://mdn.github.io/learning-area/javascript/asynchronous/promises/custom-promise.html) to see the result (also see the [source code](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/custom-promise.html)).
 
-위의 예시는 유연하게 적용된 예시가 아닙니다. — Promise는 항산 하나의 문자열로만 fulfil됩니다. 그리고 [`reject()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) 조건도 정의되어있지 않습니다. (사실, `setTimeout()` 은 실패 조건이 필요없습니다, 그러니 이 예제에서는 없어도 됩니다.).
+위의 예시는 유연하게 적용된 예시가 아닙니다. — Promise는 항산 하나의 문자열로만 fulfil됩니다. 그리고 [`reject()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) 조건도 정의되어있지 않습니다. (사실, `setTimeout()` 은 실패 조건이 필요없습니다, 그러니 이 예제에서는 없어도 됩니다.).
 
 > **참고:** Why `resolve()`, and not `fulfill()`? The answer we'll give you, for now, is _it's complicated_.
 
 ### Rejecting a custom promise
 
-[`reject()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) 메서드를 사용하여 Promise가 reject상태일 때 전달할 값을 지정할 수 있습니다. — `resolve()`와 똑같습니다. 여기엔 하나의 값만 들어갈 수 있습니다. Promise가 reject 되면 에러는 `.catch()` 블럭으로 전달됩니다.
+[`reject()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject) 메서드를 사용하여 Promise가 reject상태일 때 전달할 값을 지정할 수 있습니다. — `resolve()`와 똑같습니다. 여기엔 하나의 값만 들어갈 수 있습니다. Promise가 reject 되면 에러는 `.catch()` 블럭으로 전달됩니다.
 
 이전 예시를 좀 더 확장하여 `reject()` 을 추가하고, Promise가 fulfil일 때 다른 메시지도 전달할 수 있게 만들어봅시다.
 
@@ -546,8 +546,8 @@ function promisifyRequest(request) {
 
 우리가 했던것 처럼 적절한 타이밍에 Promise를 fulfil하고 reject하는 이벤트 핸들러를 두 개 추가했습니다. :
 
-- [`request`](/en-US/docs/Web/API/IDBRequest)의 [`success` event](/ko/docs/Web/API/IDBRequest/success_event)가 실행될 때, [`onsuccess`](/en-US/docs/Web/API/IDBRequest/onsuccess) 핸들러에 의해 fulfill된 Promise의 request [`result`](/en-US/docs/Web/API/IDBRequest/result)를 반환한다.
-- 반면 [`request`](/en-US/docs/Web/API/IDBRequest)'s [`error` event](/ko/docs/Web/API/IDBRequest/error_event)가 실행되면 [`onerror`](/en-US/docs/Web/API/IDBRequest/onerror) 핸들러에 의해 reject된 Promise의 request [`error`](/en-US/docs/Web/API/IDBRequest/error)를 반환한다.
+- [`request`](/ko/docs/Web/API/IDBRequest)의 [`success` event](/ko/docs/Web/API/IDBRequest/success_event)가 실행될 때, [`onsuccess`](/ko/docs/Web/API/IDBRequest/onsuccess) 핸들러에 의해 fulfill된 Promise의 request [`result`](/ko/docs/Web/API/IDBRequest/result)를 반환한다.
+- 반면 [`request`](/ko/docs/Web/API/IDBRequest)'s [`error` event](/ko/docs/Web/API/IDBRequest/error_event)가 실행되면 [`onerror`](/ko/docs/Web/API/IDBRequest/onerror) 핸들러에 의해 reject된 Promise의 request [`error`](/ko/docs/Web/API/IDBRequest/error)를 반환한다.
 
 ## Conclusion
 
@@ -561,7 +561,7 @@ Most modern Web APIs are promise-based, so you'll need to understand promises to
 
 ## See also
 
-- [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [`Promise()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using promises](/ko/docs/Web/JavaScript/Guide/Using_promises)
 - [We have a problem with promises](https://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html) by Nolan Lawson
 

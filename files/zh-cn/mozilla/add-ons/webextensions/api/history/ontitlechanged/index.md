@@ -8,9 +8,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
 ## Syntax
 
 ```js
-browser.history.onTitleChanged.addListener(listener)
-browser.history.onTitleChanged.removeListener(listener)
-browser.history.onTitleChanged.hasListener(listener)
+browser.history.onTitleChanged.addListener(listener);
+browser.history.onTitleChanged.removeListener(listener);
+browser.history.onTitleChanged.hasListener(listener);
 ```
 
 Events have three functions:

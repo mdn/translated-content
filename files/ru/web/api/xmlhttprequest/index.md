@@ -453,11 +453,11 @@ var myRequest = new XMLHttpRequest();
           >
           Please use
           <a
-            href="/en-US/docs/Server-sent_events"
-            title="/en-US/docs/Server-sent_events"
+            href="/ru/docs/Server-sent_events"
+            title="/ru/docs/Server-sent_events"
             >Server-Sent Events</a
           >,
-          <a href="/en-US/docs/WebSockets" title="/en-US/docs/WebSockets"
+          <a href="/ru/docs/WebSockets" title="/ru/docs/WebSockets"
             >Web Sockets</a
           >, or <code>responseText</code> from progress events instead.
         </p>
@@ -680,7 +680,7 @@ Since `sendAsBinary()` is an experimental feature, here is **a polyfill** for br
 |*|
 |*|  :: XMLHttpRequest.prototype.sendAsBinary() Polyfill ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  https://developer.mozilla.org/ru/docs/DOM/XMLHttpRequest#sendAsBinary()
 |*|
 \*/
 

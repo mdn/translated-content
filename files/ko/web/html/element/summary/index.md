@@ -16,11 +16,11 @@ slug: Web/HTML/Element/summary
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
           >Phrasing content</a
         >
         or one element of
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Heading_content"
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#Heading_content"
           >Heading content</a
         >
       </td>

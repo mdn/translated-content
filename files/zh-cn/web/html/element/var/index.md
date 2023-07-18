@@ -21,7 +21,7 @@ slug: Web/HTML/Element/var
         <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
           >流式内容</a
         >、
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#短语内容"
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#短语内容"
           >短语内容</a
         >、可感知内容
       </td>

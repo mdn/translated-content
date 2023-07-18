@@ -8,7 +8,7 @@ slug: Web/JavaScript/Guide/Modules
 
 ## A background on modules
 
-자바스크립트 프로그램은 꽤 작게 시작되었습니다. 초기에 사용 된 대부분의 스크립트는 독립적인 작업을 수행하여, 필요한 경우 웹 페이지에 약간의 상호 작용을 제공하므로 일반적으로 큰 스크립트가 필요하지 않았습니다. 몇년 후 자바스크립트는 많은 브라우저에서 실행되고 있는 완전한 애플리케이션을 실행할 수 있을 뿐 아니라, 다른 컨텍스트에서 (예를들면 [Node.js](/en-US/docs/Glossary/Node.js)) 자바스크립트를 사용하게 됩니다.
+자바스크립트 프로그램은 꽤 작게 시작되었습니다. 초기에 사용 된 대부분의 스크립트는 독립적인 작업을 수행하여, 필요한 경우 웹 페이지에 약간의 상호 작용을 제공하므로 일반적으로 큰 스크립트가 필요하지 않았습니다. 몇년 후 자바스크립트는 많은 브라우저에서 실행되고 있는 완전한 애플리케이션을 실행할 수 있을 뿐 아니라, 다른 컨텍스트에서 (예를들면 [Node.js](/ko/docs/Glossary/Node.js)) 자바스크립트를 사용하게 됩니다.
 
 따라서 최근 몇 년 동안 자바스크립트 프로그램을 필요에 따라 가져올 수 있는, 별도의 모듈로 분할하기 위한 매커니즘을 제공하는 것에 대해 생각하기 시작했습니다. node.js는 오랫동안 이러한 능력을 가지고 있었고, 모듈 사용을 가능하게하는 많은 자바스크립트 라이브러리와 프레임워크가 있습니다. (예를들어 [RequireJS](https://requirejs.org/)와 같은 [CommonJS](https://en.wikipedia.org/wiki/CommonJS) 와 [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)기반 모듈 시스템, 더 최근에는 [Webpack](https://webpack.github.io/)과 [Babel](https://babeljs.io/) 같은 모듈 기반 시스템이 있습니다.)
 
@@ -56,7 +56,7 @@ modules 디렉토리의 두 모듈은 다음과 같습니다.
 
 ## Exporting module features
 
-모듈 기능을 사용하려면 먼저 함수를 export 해야 합니다. 이 작업은 [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) 문(statement)을 사용하여 수행합니다.
+모듈 기능을 사용하려면 먼저 함수를 export 해야 합니다. 이 작업은 [`export`](/ko/docs/Web/JavaScript/Reference/Statements/export) 문(statement)을 사용하여 수행합니다.
 
 이를 사용하는 가장 쉬운 방법은 모듈 밖으로 내보내려는 항목 앞에 (export를) 배치하는 것입니다. 예를들면 다음과 같습니다.
 
@@ -92,7 +92,7 @@ export { name, draw, reportArea, reportPerimeter };
 import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
 ```
 
-[`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) 문(statement)을 사용하고, 가져올 목록을 쉼표로 구분하여 나열한 뒤 괄호로 묶습니다. 그 뒤에는 from을 쓰고 모듈 파일의 경로를 작성합니다. (사이트 루트에 연관된 경로로, 우리의 `basic-modules` 예제는 `/js-examples/modules/basic-modules` 입니다) [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js)에서 이러한 코드를 볼 수 있습니다.
+[`import`](/ko/docs/Web/JavaScript/Reference/Statements/import) 문(statement)을 사용하고, 가져올 목록을 쉼표로 구분하여 나열한 뒤 괄호로 묶습니다. 그 뒤에는 from을 쓰고 모듈 파일의 경로를 작성합니다. (사이트 루트에 연관된 경로로, 우리의 `basic-modules` 예제는 `/js-examples/modules/basic-modules` 입니다) [`main.js`](https://github.com/mdn/js-examples/blob/master/module-examples/basic-modules/main.js)에서 이러한 코드를 볼 수 있습니다.
 
 그러나 우리는 경로를 조금 다르게 작성했습니다. 우리는 "현재 위치"를 의미하는 점(.) 구문을 사용하고 있으며, 그 다음에 찾고자하는 파일의 경로를 뒤에 써 줍니다. 이것은 상대적으로 전체 상대 경로를 작성하는 것보다 훨씬 빠르며, URL이 더 짧아 지므로 사이트 계층 구조의 다른 위치로 이동하더라도 이 예제가 계속 작동합니다.
 
@@ -410,7 +410,7 @@ import { Square, Circle, Triangle } from '/js-examples/modules/module-aggregatio
 
 브라우저에서 사용할 수 있는 자바스크립트 모듈 기능의 최신 부분은 동적 모듈 로딩 입니다. 이렇게 하면 모든 것을 최상위에서 불러오지 않고, 필요할 때만 모듈을 동적으로 불러올 수 있습니다. 이것은 몇 가지 분명한 성능 이점이 있습니다. 계속 읽어보고 어떻게 작동하는지 살펴봅시다.
 
-이 새로운 기능을 통해 `import()` 를 함수로 호출하여 모듈 경로를 매개 변수(parameter)로 전달할 수 있습니다. 모듈 객체([Creating a module object](#creating_a_module_object) 참조)를 사용하여 [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)를 반환하면 해당 객체의 export에 접근할 수 있습니다.
+이 새로운 기능을 통해 `import()` 를 함수로 호출하여 모듈 경로를 매개 변수(parameter)로 전달할 수 있습니다. 모듈 객체([Creating a module object](#creating_a_module_object) 참조)를 사용하여 [promise](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)를 반환하면 해당 객체의 export에 접근할 수 있습니다.
 
 ```js
 import('/modules/myModule.js')
@@ -423,7 +423,7 @@ import('/modules/myModule.js')
 
 이 예제에서 우리는 [index.html](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/index.html) 파일과 [main.js](https://github.com/mdn/js-examples/blob/master/module-examples/dynamic-module-imports/main.js) 파일만 변경했습니다. 모듈 export는 이전과 동일하게 유지됩니다.
 
-`main.js` 에서 [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) 를 사용하여 각 버튼에 대한 참조를 가져왔습니다. 예를들면 다음과 같습니다.
+`main.js` 에서 [`document.querySelector()`](/ko/docs/Web/API/Document/querySelector) 를 사용하여 각 버튼에 대한 참조를 가져왔습니다. 예를들면 다음과 같습니다.
 
 ```js
 let squareBtn = document.querySelector('.square');

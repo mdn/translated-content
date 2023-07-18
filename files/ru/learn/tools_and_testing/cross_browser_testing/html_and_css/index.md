@@ -91,7 +91,7 @@ Unrecognised HTML elements are treated by the browser as anonymous inline elemen
 
 > **Примечание:** See [IE conditional comments](#ie_conditional_comments) for the best way to do this.
 
-More complex elements like HTML [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<audio>`](/en-US/docs/Web/HTML/Element/audio), and [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) (and other features besides) have natural mechanisms for fallbacks to be added, which work on the same principle as described above. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.
+More complex elements like HTML [`<video>`](/ru/docs/Web/HTML/Element/video), [`<audio>`](/ru/docs/Web/HTML/Element/audio), and [`<canvas>`](/ru/docs/Web/HTML/Element/canvas) (and other features besides) have natural mechanisms for fallbacks to be added, which work on the same principle as described above. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.
 
 For example:
 
@@ -117,7 +117,7 @@ This example (taken from [Creating a cross-browser video player](/ru/docs/Web/Ap
 
 > **Примечание:** 3rd party libraries like [Video.js](http://videojs.com/) and [JW Player](https://www.jwplayer.com/) use such fallback mechanisms to provide cross-browser support.
 
-HTML5 form elements also exhibit fallback qualities — HTML5 introduced some special [`<input>`](/en-US/docs/Web/HTML/Element/input) types for inputting specific information into forms, such as times, dates, colors, numbers, etc. These are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Supporting platforms provide special UI widgets when these input types are used, such as a calendar widget for entering dates.
+HTML5 form elements also exhibit fallback qualities — HTML5 introduced some special [`<input>`](/ru/docs/Web/HTML/Element/input) types for inputting specific information into forms, such as times, dates, colors, numbers, etc. These are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Supporting platforms provide special UI widgets when these input types are used, such as a calendar widget for entering dates.
 
 The following example shows date and time inputs:
 
@@ -222,7 +222,7 @@ Here we are providing an [RGBA](</ru/docs/Web/CSS/color_value#rgba()>) {{cssxref
 
 To sort this out, we have added a second `background-color` declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGBA colors. If not, it will just ignore the entire declaration and move on.
 
-> **Примечание:** The same is true for other CSS features like [media queries](/ru/docs/Web/CSS/Media_Queries/Using_media_queries), [`@font-face`](/en-US/docs/Web/CSS/@font-face) and [`@supports`](/en-US/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
+> **Примечание:** The same is true for other CSS features like [media queries](/ru/docs/Web/CSS/Media_Queries/Using_media_queries), [`@font-face`](/ru/docs/Web/CSS/@font-face) and [`@supports`](/ru/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
 
 #### IE conditional comments
 
@@ -272,7 +272,7 @@ form > #date
 
 (The `date` form input isn't directly inside the `<form>`; you'd be better off using a general descendant selector instead of a child selector).
 
-However, another issue that appears in versions of IE older than 9 is that none of the newer selectors (mainly pseudo-classes and pseudo-elements like [`:nth-of-type`](/en-US/docs/Web/CSS/:nth-of-type), [`:not`](/en-US/docs/Web/CSS/:not), [`::selection`](/en-US/docs/Web/CSS/::selection), etc.) work. If you want to use these in your CSS and you need to support older IE versions, a good move is to use Keith Clark's [Selectivizr](http://selectivizr.com/) library — this is a small JavaScript library that works on top of an existing JavaScript library like [jQuery](http://jquery.com/) or [MooTools](http://mootools.net/).
+However, another issue that appears in versions of IE older than 9 is that none of the newer selectors (mainly pseudo-classes and pseudo-elements like [`:nth-of-type`](/ru/docs/Web/CSS/:nth-of-type), [`:not`](/ru/docs/Web/CSS/:not), [`::selection`](/ru/docs/Web/CSS/::selection), etc.) work. If you want to use these in your CSS and you need to support older IE versions, a good move is to use Keith Clark's [Selectivizr](http://selectivizr.com/) library — this is a small JavaScript library that works on top of an existing JavaScript library like [jQuery](http://jquery.com/) or [MooTools](http://mootools.net/).
 
 1. To try this example, make a local copy of [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html). If you look at this running live, you'll see that it contains two paragraphs, one of which is styled. We've selected the paragraph with `p:first-child`, which won't work in old versions of IE.
 2. Now download [MooTools](http://mootools.net/) and [Selectivizr](http://selectivizr.com/), and save them in the same directory as your sample HTML.
@@ -309,7 +309,7 @@ background-image: linear-gradient(to right,green,yellow);
 
 The first line shows a {{cssxref("transform")}} property with a `-webkit-` prefix — this was needed to make transforms work in Chrome, etc. until the feature was finalized and such browsers added a prefix-free version of the property (at the time of writing, Chrome supported both versions).
 
-The last three lines show three different versions of the [`linear-gradient()`](/en-US/docs/Web/CSS/linear-gradient) function, which is used to generate a linear gradient in the background of an element:
+The last three lines show three different versions of the [`linear-gradient()`](/ru/docs/Web/CSS/linear-gradient) function, which is used to generate a linear gradient in the background of an element:
 
 1. The first one has a `-moz-` prefix, and shows a slightly older version of the syntax (Firefox)
 2. The second one has a `-webkit-` prefix, and shows an even older, proprietary version of the syntax (this is actually from a really old version of the WebKit engine).
@@ -411,7 +411,7 @@ Layout features aren't as easy to provide graceful fallbacks for than simple col
 
 For example, you could apply a flexbox layout to modern browsers, then instead apply a floated layout to older browsers that don't support flexbox.
 
-> **Примечание:** There is a fairly new feature in CSS called [`@supports`](/en-US/docs/Web/CSS/@supports), which allows you to implement native feature detection tests.
+> **Примечание:** There is a fairly new feature in CSS called [`@supports`](/ru/docs/Web/CSS/@supports), which allows you to implement native feature detection tests.
 
 #### Responsive design problems
 

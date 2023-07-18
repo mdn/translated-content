@@ -11,4 +11,4 @@ slug: Glossary/Instance
 
 ### 知识
 
-- [实例](https://zh.wikipedia.org/wiki/Instance_(computer_science)) - 维基百科
+- [实例](<https://zh.wikipedia.org/wiki/Instance_(computer_science)>) - 维基百科

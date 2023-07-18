@@ -94,7 +94,7 @@ div {
 
 {{EmbedLiveSample('Exemple_simple', '640', '64')}}
 
-### Jouer sur l’opacité avec `:hover`
+### Jouer sur l'opacité avec `:hover`
 
 #### CSS
 
@@ -124,7 +124,7 @@ img.opacity:hover {
 
 #### Résultat
 
-{{EmbedLiveSample("Jouer_sur_l’opacité_avec_hover", '150', '175')}}
+{{EmbedLiveSample("Jouer_sur_l'opacité_avec_hover", '150', '175')}}
 
 ## Accessibilité
 

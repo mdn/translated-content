@@ -34,9 +34,9 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 **Eventos**: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
 
-##### Atributos Específicos - No tiene.
+##### Atributos Específicos - No tiene
 
-##### Atributos Transicionales - No tiene.
+##### Atributos Transicionales - No tiene
 
 ### Ejemplos
 

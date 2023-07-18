@@ -74,8 +74,8 @@ original_slug: Learn/JavaScript/Объекты/Adding_bouncing_balls_features
 
 Этот метод имеет ту же цель, что и метод `draw()` метода `Ball()`: он рисует экземпляр объекта на холсте. Он будет работать очень схожим образом, поэтому вы можете начать с копирования определения `Ball.prototype.draw`. Затем вы должны внести следующие изменения:
 
-- Мы хотим, чтобы злой круг не был заполнен, а скорее имел внешнюю линию (удар). Вы можете добиться этого, обновив [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) и [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) до [`strokeStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) и s [`stroke()`](/en-US/docs/Web/API/CanvasRenderingContext2D/stroke).
-- Мы также хотим сделать ход немного толще, так что вы можете увидеть злой круг немного легче. Этого можно добиться, установив значение для [`lineWidth`](/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth) где-нибудь после вызова [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) (3 будем делать).
+- Мы хотим, чтобы злой круг не был заполнен, а скорее имел внешнюю линию (удар). Вы можете добиться этого, обновив [`fillStyle`](/ru/docs/Web/API/CanvasRenderingContext2D/fillStyle) и [`fill()`](/ru/docs/Web/API/CanvasRenderingContext2D/fill) до [`strokeStyle`](/ru/docs/Web/API/CanvasRenderingContext2D/strokeStyle) и s [`stroke()`](/ru/docs/Web/API/CanvasRenderingContext2D/stroke).
+- Мы также хотим сделать ход немного толще, так что вы можете увидеть злой круг немного легче. Этого можно добиться, установив значение для [`lineWidth`](/ru/docs/Web/API/CanvasRenderingContext2D/lineWidth) где-нибудь после вызова [`beginPath()`](/ru/docs/Web/API/CanvasRenderingContext2D/beginPath) (3 будем делать).
 
 #### `checkBounds()`
 

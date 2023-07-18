@@ -631,15 +631,15 @@ function escapeRegExp(string) {
 
 正则表达式可以被用于 [`RegExp`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp) 的 [`exec`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec) 和 [`test`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/test) 方法以及 [`String`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String) 的 [`match`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String/match)、[`replace`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String/replace)、[`search`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String/search) 和 [`split`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String/split) 方法。这些方法在 [JavaScript 手册](/zh-CN/docs/JavaScript/Reference)中有详细的解释。
 
-| 方法                                                     | 描述                                                                                                   |
-| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| {{jsxref("RegExp.exec", "exec")}}             | 一个在字符串中执行查找匹配的 RegExp 方法，它返回一个数组（未匹配到则返回 null）。                      |
-| {{jsxref("RegExp.test", "test")}}             | 一个在字符串中测试是否匹配的 RegExp 方法，它返回 true 或 false。                                       |
-| {{jsxref("String.match", "match")}}         | 一个在字符串中执行查找匹配的 String 方法，它返回一个数组，在未匹配到时会返回 null。                    |
+| 方法                                      | 描述                                                                                                   |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| {{jsxref("RegExp.exec", "exec")}}         | 一个在字符串中执行查找匹配的 RegExp 方法，它返回一个数组（未匹配到则返回 null）。                      |
+| {{jsxref("RegExp.test", "test")}}         | 一个在字符串中测试是否匹配的 RegExp 方法，它返回 true 或 false。                                       |
+| {{jsxref("String.match", "match")}}       | 一个在字符串中执行查找匹配的 String 方法，它返回一个数组，在未匹配到时会返回 null。                    |
 | {{jsxref("String.matchAll", "matchAll")}} | 一个在字符串中执行查找所有匹配的 String 方法，它返回一个迭代器（iterator）。                           |
-| {{jsxref("String.search", "search")}}         | 一个在字符串中测试匹配的 String 方法，它返回匹配到的位置索引，或者在失败时返回 -1。                     |
-| {{jsxref("String.replace", "replace")}}     | 一个在字符串中执行查找匹配的 String 方法，并且使用替换字符串替换掉匹配到的子字符串。                   |
-| {{jsxref("String.split", "split")}}         | 一个使用正则表达式或者一个固定字符串分隔一个字符串，并将分隔后的子字符串存储到数组中的 `String` 方法。 |
+| {{jsxref("String.search", "search")}}     | 一个在字符串中测试匹配的 String 方法，它返回匹配到的位置索引，或者在失败时返回 -1。                    |
+| {{jsxref("String.replace", "replace")}}   | 一个在字符串中执行查找匹配的 String 方法，并且使用替换字符串替换掉匹配到的子字符串。                   |
+| {{jsxref("String.split", "split")}}       | 一个使用正则表达式或者一个固定字符串分隔一个字符串，并将分隔后的子字符串存储到数组中的 `String` 方法。 |
 
 当你想要知道在一个字符串中的一个匹配是否被找到，你可以使用 test 或 search 方法；想得到更多的信息（但是比较慢）则可以使用 exec 或 match 方法。如果你使用 exec 或 match 方法并且匹配成功了，那么这些方法将返回一个数组并且更新相关的正则表达式对象的属性和预定义的正则表达式对象（详见下）。如果匹配失败，那么 exec 方法返回 null（也就是 false）。
 
@@ -824,7 +824,8 @@ var re = new RegExp("\\w+\\s", "g");
 使用`.exec()`方法时，与'`g`'标志关联的行为是不同的。（“class”和“argument”的作用相反：在`.match()`的情况下，字符串类（或数据类型）拥有该方法，而正则表达式只是一个参数，而在`.exec()`的情况下，它是拥有该方法的正则表达式，其中字符串是参数。对比*`str.match(re)`*与*`re.exec(str)`* ), '`g`'标志与`.exec()`方法一起使用获得迭代进展。
 
 ```js
-var xArray; while(xArray = re.exec(str)) console.log(xArray);
+var xArray;
+while ((xArray = re.exec(str))) console.log(xArray);
 // produces:
 // ["fee ", index: 0, input: "fee fi fo fum"]
 // ["fi ", index: 4, input: "fee fi fo fum"]
@@ -883,14 +884,14 @@ for (i = 0, len = nameList.length; i < len; i++) {
 
 // 输出新的数组
 output.push("---------- Names Reversed");
-for (i = 0, len = bySurnameList.length; i < len; i++){
+for (i = 0, len = bySurnameList.length; i < len; i++) {
   output.push(bySurnameList[i]);
 }
 
 // 根据姓来排序，然后输出排序后的数组。
 bySurnameList.sort();
 output.push("---------- Sorted");
-for (i = 0, len = bySurnameList.length; i < len; i++){
+for (i = 0, len = bySurnameList.length; i < len; i++) {
   output.push(bySurnameList[i]);
 }
 
@@ -908,27 +909,33 @@ console.log(output.join("\n"));
 当用户按下 Enter 设置 RegExp.input，这些变化也能被激活。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
     <script type="text/javascript">
       var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/;
       function testInfo(phoneInput) {
         var OK = re.exec(phoneInput.value);
         if (!OK)
-          window.alert(phoneInput.value + ' isn\'t a phone number with area code!');
-        else
-          window.alert('Thanks, your phone number is ' + OK[0]);
+          window.alert(
+            phoneInput.value + " isn't a phone number with area code!",
+          );
+        else window.alert("Thanks, your phone number is " + OK[0]);
       }
     </script>
   </head>
   <body>
-    <p>Enter your phone number (with area code) and then click "Check".
-        <br>The expected format is like ###-###-####.</p>
+    <p>
+      Enter your phone number (with area code) and then click "Check". <br />The
+      expected format is like ###-###-####.
+    </p>
     <form action="#">
-      <input id="phone"><button onclick="testInfo(document.getElementById('phone'));">Check</button>
+      <input id="phone" /><button
+        onclick="testInfo(document.getElementById('phone'));">
+        Check
+      </button>
     </form>
   </body>
 </html>

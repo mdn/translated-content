@@ -15,12 +15,12 @@ En este artículo conoceremos React. Descubriremos algunos detalles sobre su tra
       <td>
         <p>
           Familiaridad con los lenguajes
-          <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, y
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>, conocimiento
+          <a href="/es/docs/Learn/HTML">HTML</a>,
+          <a href="/es/docs/Learn/CSS">CSS</a>, y
+          <a href="/es/docs/Learn/JavaScript">JavaScript</a>, conocimiento
           del
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/línea de comandos</a
           >.
         </p>

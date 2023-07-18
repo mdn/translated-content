@@ -78,7 +78,7 @@ Un peu plus haut dans l'article, nous avons utilisé le terme « paquet » pour 
 
 - [Comment Internet fonctionne](/fr/Apprendre/Fonctionnement_Internet)
 - [HTTP — an Application-Level Protocol](https://dev.opera.com/articles/http-basic-introduction/) (en) _(HTTP - un protocole de niveau application)_
-- [HTTP: Let’s GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/) (en) _(HTTP: Allons-y !)_
+- [HTTP: Let's GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/) (en) _(HTTP: Allons-y !)_
 - [HTTP: Response Codes](https://dev.opera.com/articles/http-response-codes/) (en) _(HTTP: Codes de réponse)_
 
 ## Crédit

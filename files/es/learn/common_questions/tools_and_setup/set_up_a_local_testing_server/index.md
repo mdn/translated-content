@@ -12,10 +12,10 @@ En este artículo explica cómo configurar un servidor de prueba local simple en
       <th scope="row">Prerrequisitos:</th>
       <td>
         Primero debes saber
-        <a href="/en-US/docs/Learn/How_the_Internet_works"
+        <a href="/es/docs/Learn/How_the_Internet_works"
           >cómo funciona internet</a
         >, y
-        <a href="/en-US/docs/Learn/What_is_a_Web_server"
+        <a href="/es/docs/Learn/What_is_a_Web_server"
           >qué es un servidor web</a
         >.
       </td>

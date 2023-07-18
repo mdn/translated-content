@@ -55,7 +55,7 @@ En el ejemplo siguiente puedes observar cómo se utilizan estos selectores.
 
 ## Selectores coincidentes con subcadenas
 
-Estos selectores permiten un tipo más avanzado de relación entre las subcadenas de caracteres que constituyen el valor del atributo. Por ejemplo, si tienes las clases `box-warning` y `box-error` y quieres encontrar todos los elementos que empiezan con la cadena de caracteres “box-”, puedes seleccionarlas ambas con `[class^="box-"]`.
+Estos selectores permiten un tipo más avanzado de relación entre las subcadenas de caracteres que constituyen el valor del atributo. Por ejemplo, si tienes las clases `box-warning` y `box-error` y quieres encontrar todos los elementos que empiezan con la cadena de caracteres "box-", puedes seleccionarlas ambas con `[class^="box-"]`.
 
 | Selector        | Ejemplo             | Descripción                                                                                                                                                  |
 | --------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |

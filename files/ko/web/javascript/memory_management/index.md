@@ -184,7 +184,7 @@ node --expose-gc --inspect index.js
 
 ### WeakMaps과 WeakSets
 
-[`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)과 [`WeakSet`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)은 각 non-weak에 대응되는 [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)과 [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)의 API를 모방한 데이터 구조입니다. `WeakMap`은 키-값 쌍의 콜렉션을 제공하는 반면, `WeakSet`은 유일한 값들로 이뤄진 콜렉션을 제공합니다. 각각은 추가, 삭제, 조회 기능을 제공합니다.
+[`WeakMap`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WeakMap)과 [`WeakSet`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)은 각 non-weak에 대응되는 [`Map`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map)과 [`Set`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set)의 API를 모방한 데이터 구조입니다. `WeakMap`은 키-값 쌍의 콜렉션을 제공하는 반면, `WeakSet`은 유일한 값들로 이뤄진 콜렉션을 제공합니다. 각각은 추가, 삭제, 조회 기능을 제공합니다.
 
 `WeakMap`과 `WeakSet`의 이름은 _weakly held_ 값이라는 개념에서 따왔습니다. 만약 `x`가 `y`에 의해 weekly held되었다라는 의미는 비록 `x`를 `y`를 통해 접근할 수 있지만 표시하고-쓸기 알고리즘은 다른 것이 `x`를 _strongly hold_ 하고 있지 않은 이상 닿을 수 있는 것으로 간주하지 않습니다. 여기서 논의되고 있는 것을 제외한, 대부분의 데이터 구조는 전달된 오브젝트를 strongly hold하기에 오브젝트에 언제든 접근할 수 있습니다. `WeakMap`과 `WeakSet`의 키는 프로그램의 어떤 것도 키를 참조하지 않는다면 가비지 콜렉션될 수 있습니다 (`WeakMap`에서 값은 그이후 가비지 콜렉션될 수 있음). 이 부분은 아래 두 가지 특성을 통해 보장됩니다:
 
@@ -229,13 +229,13 @@ class MyWeakMap {
 
 위에서와 같이, `MyWeakMap`는 키 콜렉션을 실제로 보유하지 않습니다. `MyWeakMap`은 단순히 전달받은 각 오브젝트에 메타데이터를 추가합니다. 그 오브젝트는 이후 표시하기-쓸기를 통해 가비지 콜렉션 가능하게 됩니다. 그러므로, `WeakMap`의 키를 순회하거나 `WeakMap`의 키를 모두 지우는 것(clear)은 불가능합니다 (clear 역시도 전체 키 콜렉션 정보에 의존하기에).
 
-좀 더 상세한 API는 [keyed collections](/en-US/docs/Web/JavaScript/Guide/Keyed_collections) 가이드에서 확인하실 수 있습니다.
+좀 더 상세한 API는 [keyed collections](/ko/docs/Web/JavaScript/Guide/Keyed_collections) 가이드에서 확인하실 수 있습니다.
 
 ### WeakRefs와 FinalizationRegistry
 
-> **Note:** `WeakRef`와 `FinalizationRegistry`는 가비지 콜렉션 구조에 대한 직접적인 내부 탐색을 제공합니다. 런타임 시맨틱은 완전히 보장될 수 없기에 [사용을 안할 수 있다면 안하는 것](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#avoid_where_possible)을 권장합니다.
+> **Note:** `WeakRef`와 `FinalizationRegistry`는 가비지 콜렉션 구조에 대한 직접적인 내부 탐색을 제공합니다. 런타임 시맨틱은 완전히 보장될 수 없기에 [사용을 안할 수 있다면 안하는 것](/ko/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#avoid_where_possible)을 권장합니다.
 
-값이 오브젝트인 모든 변수들은 해당 오브젝트에 대한 참조입니다. 그러나, 그러한 참조는 _strong_ 합니다 - 그런 변수가 있다면 가비지 컬렉터가 오브젝트를 마킹하는 것을 막습니다. [`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)는 오브젝트에 대한 _weak reference_ 로 오브젝트가 가비지 컬렉트 될 수 있도록 하는 동시에 오브젝트가 존재하는 동안 컨텐츠에 접근하는 것을 가능하게 합니다.
+값이 오브젝트인 모든 변수들은 해당 오브젝트에 대한 참조입니다. 그러나, 그러한 참조는 _strong_ 합니다 - 그런 변수가 있다면 가비지 컬렉터가 오브젝트를 마킹하는 것을 막습니다. [`WeakRef`](/ko/docs/Web/JavaScript/Reference/Global_Objects/WeakRef)는 오브젝트에 대한 _weak reference_ 로 오브젝트가 가비지 컬렉트 될 수 있도록 하는 동시에 오브젝트가 존재하는 동안 컨텐츠에 접근하는 것을 가능하게 합니다.
 
 `WeakRef`의 한 가지 사용례는 문자열 URLs을 큰 오브젝트에 매핑하는 캐시시스템입니다. 이런 목적을 위해 `WeakMap`를 사용할 수는 없는데, 그 이유는 `WeakMap` 오브젝트는 weakly held인 _키_ 를 가지나 _값_ 은 그렇지 않기 때문입니다 - 만약 키에 접근하면, 항상 결정적으로 값을 얻습니다 (키에 접근할 수 있다는 것이 키가 아직 존재한다는 것을 의미하기 때문에). 이 부분에서 키에 접근 시 `undefined`를 얻는 것은 (만약 상응한 값도 메모리 상에 존재하지 않는다면) 다시 계산하면 되기에 괜찮으나, 우리는 닿을 수 없는 오브젝트가 캐시 상에서 존재하기는 원하지 않습니다. 이러한 경우에, 우리는 일반적인 `Map`에 각각의 값이 오브젝트의 실제값이 아닌 `WeakRef`이 되도록 구성할 수 있습니다.
 
@@ -256,7 +256,7 @@ function cached(getter) {
 const getImage = cached((url) => fetch(url).then((res) => res.blob()));
 ```
 
-[`FinalizationRegistry`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)는 가비지 콜렉션을 관찰하기 위해 더욱 강력한 메커니즘을 제공합니다. `FinalizationRegistry`는 오브젝트를 등록하고 가비지 콜렉트되었을 때 알림을 받을 수 있도록 합니다. 예로, 위의 캐시 시스템에서 오브젝트가 실제 값을 보유하고 있는지 여부에 상관없이 `WeakRef`실제 값이 가비지 콜렉션 대상이 됩니다. 또한 시간이 흐르며 `Map`은 다량의 의미없는 엔트리를 축적하게 됩니다. `FinalizationRegistry`를 사용하여 아래와 같이 해제를 할 수 있습니다.
+[`FinalizationRegistry`](/ko/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry)는 가비지 콜렉션을 관찰하기 위해 더욱 강력한 메커니즘을 제공합니다. `FinalizationRegistry`는 오브젝트를 등록하고 가비지 콜렉트되었을 때 알림을 받을 수 있도록 합니다. 예로, 위의 캐시 시스템에서 오브젝트가 실제 값을 보유하고 있는지 여부에 상관없이 `WeakRef`실제 값이 가비지 콜렉션 대상이 됩니다. 또한 시간이 흐르며 `Map`은 다량의 의미없는 엔트리를 축적하게 됩니다. `FinalizationRegistry`를 사용하여 아래와 같이 해제를 할 수 있습니다.
 
 ```js
 function cached(getter) {

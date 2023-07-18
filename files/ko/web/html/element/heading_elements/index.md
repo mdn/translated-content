@@ -174,7 +174,7 @@ slug: Web/HTML/Element/Heading_Elements
 
 스크린 리더 사용자가 자주 사용하는 다른 기술은 [콘텐츠 구획](/ko/docs/Web/HTML/Element#콘텐츠_구획)의 목록을 생성한 후, 이를 통해 페이지 레이아웃을 파악하는 것입니다.
 
-콘텐츠 구획에는 [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)와 {{htmlattrxref("id")}} 특성을 함께 사용해 이름, 즉 레이블을 붙일 수 있습니다. 레이블은 현재 구획의 목적을 간결하게 설명해야 합니다. 레이블 기법은 한 페이지에 다수의 구획이 있을 때 유용하게 사용할 수 있습니다.
+콘텐츠 구획에는 [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)와 {{htmlattrxref("id")}} 특성을 함께 사용해 이름, 즉 레이블을 붙일 수 있습니다. 레이블은 현재 구획의 목적을 간결하게 설명해야 합니다. 레이블 기법은 한 페이지에 다수의 구획이 있을 때 유용하게 사용할 수 있습니다.
 
 #### 예제
 

@@ -50,7 +50,7 @@ Tabla de compatibilidad
 | -------------- | ------------- | ------------------- | --------------------- | ------------- | ------------- | ------------- |
 | Soporte básico | No compatible | No compatible       | Compatible            | No compatible | No compatible | No compatible |
 
-## Vea también:
+## Vea también
 
 - {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
 - {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
