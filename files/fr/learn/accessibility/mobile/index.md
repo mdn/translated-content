@@ -114,9 +114,9 @@ Par exemple, avec TalkBack activé:
 2. Activer la barre d'URL.
 3. Entrez une page Web comportant de nombreux en-têtes, telle que la page de couverture de bbc.co.uk. Pour entrer le texte de l'URL:
 
-    - Sélectionnez la barre d'URL en glissant gauche / droite jusqu'à ce que vous y arriviez, puis en double tapant .
-    - Maintenez votre doigt appuyé sur le clavier virtuel jusqu'à obtenir le caractère souhaité, puis relâchez-le pour le saisir. Répétez pour chaque caractère.
-    - Une fois que vous avez terminé, trouvez la touche Entrée et appuyez dessus.
+   - Sélectionnez la barre d'URL en glissant gauche / droite jusqu'à ce que vous y arriviez, puis en double tapant .
+   - Maintenez votre doigt appuyé sur le clavier virtuel jusqu'à obtenir le caractère souhaité, puis relâchez-le pour le saisir. Répétez pour chaque caractère.
+   - Une fois que vous avez terminé, trouvez la touche Entrée et appuyez dessus.
 
 4. Balayez vers la gauche et la droite pour vous déplacer entre différents éléments de la page. .
 5. Faites glisser votre doigt vers le haut et vers la droite avec un mouvement fluide pour accéder au menu de contenu local.
@@ -153,8 +153,8 @@ Lorsque VoiceOver est activé, vous disposez d'une fonction de navigation appel�
 1. Tournez deux doigts sur l'écran comme si vous tourniez un cadran. Chaque option sera lue à voix haute au fur et à mesure que vous tournez. Vous pouvez aller et venir pour parcourir les options.
 2. Une fois que vous avez trouvé l'option que vous voulez:
 
-    - Relâchez vos doigts pour le sélectionner.
-    - S'il s'agit d'une option dont vous pouvez parcourir la valeur (telle que le volume ou la vitesse de parole), vous pouvez effectuer un balayage vers le haut ou le bas pour augmenter ou diminuer la valeur de l'élément sélectionné.
+   - Relâchez vos doigts pour le sélectionner.
+   - S'il s'agit d'une option dont vous pouvez parcourir la valeur (telle que le volume ou la vitesse de parole), vous pouvez effectuer un balayage vers le haut ou le bas pour augmenter ou diminuer la valeur de l'élément sélectionné.
 
 Les options disponibles sous Rotor dépendent du contexte. Elles diffèrent en fonction de l'application ou de la vue dans laquelle vous vous trouvez (voir l'exemple ci-dessous).
 
@@ -166,20 +166,20 @@ Essayons la navigation Web avec VoiceOver:
 2. Activer la barre d'URL.
 3. Entrez une page Web comportant de nombreux en-têtes, telle que la page de couverture de bbc.co.uk. Pour entrer le texte de l'URL:
 
-    - Sélectionnez la barre d'URL en glissant gauche / droite jusqu'à ce que vous y arriviez, puis en double-tapant.
-    - Pour chaque caractère, maintenez votre doigt appuyé sur le clavier virtuel jusqu'à ce que vous obteniez le caractère souhaité, puis relâchez votre doigt pour le sélectionner. Appuyez deux fois pour le taper.
-    - Une fois que vous avez terminé, trouvez la touche Entrée et appuyez dessus.
+   - Sélectionnez la barre d'URL en glissant gauche / droite jusqu'à ce que vous y arriviez, puis en double-tapant.
+   - Pour chaque caractère, maintenez votre doigt appuyé sur le clavier virtuel jusqu'à ce que vous obteniez le caractère souhaité, puis relâchez votre doigt pour le sélectionner. Appuyez deux fois pour le taper.
+   - Une fois que vous avez terminé, trouvez la touche Entrée et appuyez dessus.
 
 4. Balayez vers la gauche et la droite pour vous déplacer entre les éléments de la page. Vous pouvez appuyer deux fois sur un élément pour le sélectionner (par exemple, suivre un lien).
 5. Par défaut, l'option de rotor sélectionnée sera Speaking Rate; vous pouvez actuellement balayer de haut en bas pour augmenter ou diminuer le débit.
 6. Maintenant, tournez deux doigts autour de l'écran comme un cadran pour afficher le rotor et passez d'une option à l'autre. Voici quelques exemples d'options disponibles:
 
-    - _Taux de parole_ : Modifiez le taux de parole.
-    - _Conteneurs_ : déplacez-vous entre différents conteneurs sémantiques de la page.
-    - _En-têtes_ : déplacez-vous entre les en-têtes de la page.
-    - _Liens_ : permet de se déplacer entre les liens de la page.
-    - _Contrôles de formulaire_ : déplacez-vous entre les contrôles de formulaire de la page.
-    - _Langue_ : déplacez-vous entre différentes traductions, si elles sont disponibles.
+   - _Taux de parole_ : Modifiez le taux de parole.
+   - _Conteneurs_ : déplacez-vous entre différents conteneurs sémantiques de la page.
+   - _En-têtes_ : déplacez-vous entre les en-têtes de la page.
+   - _Liens_ : permet de se déplacer entre les liens de la page.
+   - _Contrôles de formulaire_ : déplacez-vous entre les contrôles de formulaire de la page.
+   - _Langue_ : déplacez-vous entre différentes traductions, si elles sont disponibles.
 
 7. S*électionnez les en-têtes*. Vous pouvez maintenant glisser de haut en bas pour vous déplacer entre les titres de la page.
 
@@ -196,11 +196,11 @@ Sinon, des événements spécifiques à la souris, tels que [mousedown](/fr/docs
 Si vous essayez de contrôler notre exemple [simple-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/simple-box-drag.html) ([see example live](http://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)) avec un clavier ou une touche, vous verrez le problème. Cela se produit car nous utilisons un code tel que:
 
 ```js
-div.onmousedown = function() {
+div.onmousedown = function () {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   movePanel();
-}
+};
 
 document.onmouseup = stopMove;
 ```
@@ -208,19 +208,19 @@ document.onmouseup = stopMove;
 Pour activer d'autres formes de contrôle, vous devez utiliser des événements différents mais équivalents. Par exemple, les événements tactiles fonctionnent sur les périphériques à écran tactile:
 
 ```js
-div.ontouchstart = function(e) {
+div.ontouchstart = function (e) {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   positionHandler(e);
   movePanel();
-}
+};
 
 panel.ontouchend = stopMove;
 ```
 
 Nous avons fourni un exemple simple qui montre comment utiliser simultanément les événements de la souris et des événements tactiles — voir [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/master/accessibility/mobile/multi-control-box-drag.html) ([see the example live](http://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html) aussi).
 
-**Note:** Vous pouvez également voir des exemples fonctionnels montrant comment implémenter différents mécanismes de contrôle à   [Implementing game control mechanisms](/fr/docs/Games/Techniques/Control_mechanisms).
+**Note:** Vous pouvez également voir des exemples fonctionnels montrant comment implémenter différents mécanismes de contrôle à [Implementing game control mechanisms](/fr/docs/Games/Techniques/Control_mechanisms).
 
 ## Responsive design
 
@@ -230,7 +230,7 @@ En particulier, les problèmes les plus courants auxquels le mobile doit faire f
 
 - Adéquation des mises en page pour les appareils mobiles. Une mise en page à plusieurs colonnes ne fonctionnera pas aussi bien sur un écran étroit, par exemple, et il faudra peut-être augmenter la taille du texte pour le rendre lisible. Ces problèmes peuvent être résolus en créant une mise en page réactive utilisant des technologies telles que [media queries](/fr/docs/Web/CSS/Media_Queries), [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), et [flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
 - Conserver les tailles d'image téléchargées. En général, les appareils de petite taille n'auront pas besoin d'images aussi volumineuses que leurs homologues de bureau, et ils risquent davantage d'être sur des connexions réseau lentes. Par conséquent, il est sage de servir des images plus petites sur des dispositifs à écran étroit, le cas échéant. Vous pouvez gérer cela en utilisant [responsive image techniques](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
-- Penser aux hautes résolutions. De nombreux appareils mobiles ont des écrans haute résolution et ont donc besoin d'images de résolution supérieure pour que l'affichage puisse continuer à être net et net. Encore une fois, vous pouvez servir des images selon vos besoins en utilisant des techniques d'image réactives. De plus, de nombreuses exigences en matière d'images peuvent être satisfaites grâce au format d'images vectorielles SVG, bien pris en charge par les navigateurs actuels. SVG a une petite taille de fichier et restera net quelle que soit la taille affichée   (voir [Adding vector graphics to the web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) pour plus de détails ).
+- Penser aux hautes résolutions. De nombreux appareils mobiles ont des écrans haute résolution et ont donc besoin d'images de résolution supérieure pour que l'affichage puisse continuer à être net et net. Encore une fois, vous pouvez servir des images selon vos besoins en utilisant des techniques d'image réactives. De plus, de nombreuses exigences en matière d'images peuvent être satisfaites grâce au format d'images vectorielles SVG, bien pris en charge par les navigateurs actuels. SVG a une petite taille de fichier et restera net quelle que soit la taille affichée (voir [Adding vector graphics to the web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) pour plus de détails ).
 
 **Note:** Nous ne fournirons pas une analyse complète des techniques de conception réactive ici, car elles sont couvertes ailleurs au sein de MDN (voir les liens ci-dessus).
 
@@ -243,7 +243,7 @@ Il existe d'autres problèmes importants à prendre en compte lors de la créati
 En utilisant [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag), il est possible de désactiver le zoom, en utilisant un code comme celui-ci dans votre {{htmlelement("head")}}:
 
 ```html
-<meta name="viewport" content="user-scalable=no">
+<meta name="viewport" content="user-scalable=no" />
 ```
 
 Vous ne devriez jamais faire cela autant que possible - beaucoup de gens comptent sur le zoom pour voir le contenu de votre site web, aussi, enlever cette fonctionnalité est une très mauvaise idée. Il y a certaines situations où le zoom peut casser l'interface utilisateur; Dans de tels cas, si vous estimez que vous devez absolument désactiver le zoom, vous devez fournir un autre type d'équivalent, tel qu'une commande permettant d'augmenter la taille du texte de manière à ne pas endommager votre interface utilisateur.
