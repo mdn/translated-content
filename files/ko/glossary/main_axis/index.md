@@ -2,6 +2,7 @@
 title: 주축
 slug: Glossary/Main_Axis
 ---
+
 {{glossary("flexbox", "플렉스박스")}}에서, **주축**이란 {{cssxref("flex-direction")}} 속성이 지정한 방향과 수평한 축입니다. `flex-direction`은 다음과 같은 네 가지 방향이 가능합니다.
 
 - `row`

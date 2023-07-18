@@ -1,5 +1,5 @@
 ---
-title: 'MDN Web Docs 용어 사전: 웹 용어 정의'
+title: "MDN Web Docs 용어 사전: 웹 용어 정의"
 slug: Glossary
 ---
 

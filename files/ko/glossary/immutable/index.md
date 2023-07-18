@@ -2,6 +2,7 @@
 title: Immutable
 slug: Glossary/Immutable
 ---
+
 불변 [객체](/ko/docs/Glossary/Object) 는 내용을 변경할 수 없는 객체입니다.
 객체는 다양한 이유로 불변일 수 있습니다. 예를 들어 아래와 같습니다.
 

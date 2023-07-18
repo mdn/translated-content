@@ -15,11 +15,11 @@ slug: Glossary/Character_set
 
 1. Wikipedia articles
 
-    1. [Character encoding](https://en.wikipedia.org/wiki/Character_encoding)
+   1. [Character encoding](https://en.wikipedia.org/wiki/Character_encoding)
 
 2. [Glossary](/ko/docs/Glossary)
 
-    1. {{Glossary("Character")}}
-    2. {{Glossary("Unicode")}}
+   1. {{Glossary("Character")}}
+   2. {{Glossary("Unicode")}}
 
 <section id="Quick_links"></section>

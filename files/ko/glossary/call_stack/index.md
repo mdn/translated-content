@@ -14,12 +14,12 @@ slug: Glossary/Call_stack
 
 ```js
 function greeting() {
-   // [1] Some codes here
-   sayHi();
-   // [2] Some codes here
+  // [1] Some codes here
+  sayHi();
+  // [2] Some codes here
 }
 function sayHi() {
-   return "Hi!";
+  return "Hi!";
 }
 
 // Invoke the `greeting` function
@@ -34,23 +34,23 @@ greeting();
 2. `greeting()` 함수를 호출합니다.
 3. `greeting()` 함수를 호출 스택 리스트에 추가합니다.
 
-    > **참고:** 호출 스택 리스트:
-    > \- greeting
+   > **참고:** 호출 스택 리스트:
+   > \- greeting
 
 4. `greeting` 함수 내부의 모든 코드를 실행합니다.
 5. `sayHi()` 함수를 얻습니다.
 6. `sayHi()` 함수를 호출 스택 리스트에 추가합니다.
 
-    > **참고:** 호출 스택 리스트:
-    > \- greeting
-    > \- sayHi
+   > **참고:** 호출 스택 리스트:
+   > \- greeting
+   > \- sayHi
 
 7. `sayHi()` 함수의 끝에 도달할 때까지, 함수 내부의 모든 코드를 실행합니다.
 8. `sayHi()` 가 호출된 라인으로 돌아와 `greeting()` 함수의 나머지를 계속 실행합니다.
 9. 호출 스택 리스트에서 `sayHi()` 함수를 제거합니다.
 
-    > **참고:** 호출 스택 리스트:
-    > \- greeting
+   > **참고:** 호출 스택 리스트:
+   > \- greeting
 
 10. `greeting()` 함수 내부의 모든 코드가 실행되었을 때, 이를 호출한 라인으로 돌아와 JS 코드의 나머지를 계속 실행합니다.
 11. 호출 스택 리스트에서 `greeting()` 함수를 제거합니다.

@@ -8,7 +8,7 @@ slug: Glossary/Character_encoding
 예를 들어, HTML에서 우리는 일반적으로 아래 줄과 같이 UTF-8의 문자 인코딩을 선언한다 :
 
 ```html
-<meta charset="utf-8">
+<meta charset="utf-8" />
 ```
 
 이것은 당신이 당신의 HTML 문서에서 인간 언어의 문자를 사용할 수 있도록 보장하며, 그것들은 신뢰성 있게 표시될 것이다.

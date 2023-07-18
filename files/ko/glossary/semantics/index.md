@@ -2,6 +2,7 @@
 title: Semantics
 slug: Glossary/Semantics
 ---
+
 프로그래밍에서,**시맨틱**은 코드 조각의 *의미*를 나타냅니다 — 예를 들어 ("이게 어떻게 시각적으로 보여질까?" 보다)"이 Javascript 라인을 실행하는 것은 어떤 효과가 있는가?", 혹은 "이 HTML 엘리먼트가 가진 목적이나 역할은 무엇인가?"
 
 ## JavaScript 시맨틱
@@ -25,7 +26,9 @@ CSS의 경우입니다. 다양한 종류의 과일을 나타내기 위해서는 
 반면에 모든 요소를 '최상위 제목'처럼 _보이게_ 할 수 있습니다. 다음을 고려하세요:
 
 ```html
-<span style="font-size: 32px; margin: 21px 0;">Is this a top level heading?</span>
+<span style="font-size: 32px; margin: 21px 0;"
+  >Is this a top level heading?</span
+>
 ```
 
 이렇게 하면 top level heading 처럼 보이지만 의미적 가치(semantic value)가 없으므로 위에서 설명한 것처럼 추가적인 이점은 얻을 수 없습니다. 따라서 작업에 적합한 HTML 요소를 사용하는 것이 좋습니다.

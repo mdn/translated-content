@@ -14,13 +14,13 @@ slug: Glossary/Mutable
 **문자열과 숫자**는 **불변**입니다. 예제를 보고 이해해볼까요?
 
 ```js
-  var immutableString = "Hello";
+var immutableString = "Hello";
 
-  // 위의 코드에서는 문자열 값을 가진 새 개체가 생성됩니다.
+// 위의 코드에서는 문자열 값을 가진 새 개체가 생성됩니다.
 
-  immutableString = immutableString + "World";
+immutableString = immutableString + "World";
 
-  // 우리는 지금 기존 값에 "World" 를 추가하고 있습니다.
+// 우리는 지금 기존 값에 "World" 를 추가하고 있습니다.
 ```
 
 문자열 값을 사용하여 "immutableString" 을 추가하면 다음 이벤트가 발생합니다.:

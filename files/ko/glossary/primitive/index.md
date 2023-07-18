@@ -2,6 +2,7 @@
 title: 원시 값
 slug: Glossary/Primitive
 ---
+
 {{Glossary("JavaScript")}}에서 **원시 값**(primitive, 또는 원시 자료형)이란 {{Glossary("object", "객체")}}가 아니면서 {{glossary("method", "메서드")}}도 가지지 않는 데이터입니다. 원시 값에는 7종류, {{Glossary("string")}}, {{Glossary("number")}}, {{glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}}, {{Glossary("symbol")}}, 그리고 {{glossary("null")}}이 존재합니다.
 
 대부분의 경우, 원시 값은 언어 구현체의 가장 저급(low level) 단계에서 나타냅니다.
@@ -17,15 +18,15 @@ slug: Glossary/Primitive
 ```js
 // 문자열 메서드는 문자열을 변형하지 않음
 var bar = "baz";
-console.log(bar);        // baz
+console.log(bar); // baz
 bar.toUpperCase();
-console.log(bar);        // baz
+console.log(bar); // baz
 
 // 배열 메소드는 배열을 변형함
 var foo = [];
-console.log(foo);        // []
+console.log(foo); // []
 foo.push("plugh");
-console.log(foo);        // ["plugh"]
+console.log(foo); // ["plugh"]
 
 // 할당은 원시 값에 새로운 값을 부여 (변형이 아님)
 bar = bar.toUpperCase(); // BAZ
@@ -45,21 +46,21 @@ let foo = 5;
 
 // 원시 값을 변경해야 하는 함수 정의
 function addTwo(num) {
-   num += 2;
+  num += 2;
 }
 // 같은 작업을 시도하는 다른 함수
 function addTwo_v2(foo) {
-   foo += 2;
+  foo += 2;
 }
 
 // 원시 값을 인수로 전달해 첫 번째 함수를 호출
 addTwo(foo);
 // 현재 원시 값 반환
-console.log(foo);   // 5
+console.log(foo); // 5
 
 // 두 번째 함수로 다시 시도
 addTwo_v2(foo);
-console.log(foo);   // 5
+console.log(foo); // 5
 ```
 
 `5` 대신 `7` 일 것이라고 예상하였나요? 그렇다면, 이 코드의 실행 과정을 살펴보세요.
