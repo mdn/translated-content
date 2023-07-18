@@ -1,19 +1,21 @@
 ---
 title: "Element.append()"
 slug: Web/API/Element/append
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
 
 El método **`Element.append()`**
-inserta un conjunto de objetos {{domxref("Node")}} u objetos del tipo string
-después del último hijo del `Element`. Los objetos del tipo string se insertan
+inserta un conjunto de objetos {{domxref("Node")}} u objetos de tipo cadena
+después del último hijo de `Element`. Los objetos de tipo cadena se insertan
 como nodos {{domxref("Text")}} equivalentes.
 
 Diferencias respecto a {{domxref("Node.appendChild()")}}:
 
-- `Element.append()` permite añadir también objetos string, mientras que
-  `Node.appendChild()` sólo acepta objetos {{domxref("Node")}}.
+- `Element.append()` permite añadir también objetos de tipo cadena, mientras que
+  `Node.appendChild()` sólo acepta objetos de tipo {{domxref("Node")}}.
 - `Element.append()` no tiene valor de retorno, mientras que
   `Node.appendChild()` devuelve el objeto {{domxref("Node")}} añadido.
 - `Element.append()` puede añadir varios nodos y cadenas de texto, mientras que
@@ -30,11 +32,11 @@ append(param1, param2, /* … ,*/ paramN)
 ### Parámetros
 
 - `param1`, …, `paramN`
-  - : Un conjunto de objetos {{domxref("Node")}} o string para insertar.
+  - : Un conjunto de objetos de tipo {{domxref("Node")}} o cadena para insertar.
 
 ### Valor de retorno
 
-None ({{jsxref("undefined")}}).
+Ninguno ({{jsxref("undefined")}}).
 
 ### Excepciones
 
@@ -73,7 +75,7 @@ div.append("Algo de texto", p);
 console.log(div.childNodes); // NodeList [ #text "Algo de texto", <p> ]
 ```
 
-### El método append no se puede copiar
+### El método append no se puede recorrer
 
 El método `append()` no está incluido en la sentencia `with`. Véase
 {{jsxref("Symbol.unscopables")}} para más información.
@@ -87,7 +89,7 @@ with (div) {
 // ReferenceError: append is not defined
 ```
 
-## Especificación
+## Especificaciones
 
 {{Specifications}}
 
