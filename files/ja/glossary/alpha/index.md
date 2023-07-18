@@ -17,5 +17,5 @@ l10n:
 
 - ウィキペディアの記事「[アルファブレンド](https://ja.wikipedia.org/wiki/アルファブレンド)」
 - ウィキペディアの記事「[RGBA 色モデル](https://ja.wikipedia.org/wiki/色空間#RGBA)」
-- ウィキペディアの記事「[Channel (digital image)](https://en.wikipedia.org/wiki/Channel_(digital_image))」
+- ウィキペディアの記事「[Channel (digital image)](<https://en.wikipedia.org/wiki/Channel_(digital_image)>)」
 - [CSS 色](/ja/docs/Web/CSS/CSS_Colors)

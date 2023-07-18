@@ -12,4 +12,4 @@ original_slug: Glossary/Constant(定数)
 
 ### 基礎知識
 
-- Wikipedia 上の記事「[定数 (プログラミング)](https://ja.wikipedia.org/wiki/定数_(プログラミング))」
+- Wikipedia 上の記事「[定数 (プログラミング)](<https://ja.wikipedia.org/wiki/定数_(プログラミング)>)」
