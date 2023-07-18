@@ -29,25 +29,25 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 첫번째 예제로 데이터는 `http://foo.com` 로 보낼 것이다.
 
 ```html
-<form action="http://foo.com">
+<form action="http://foo.com"></form>
 ```
 
 <p class="brush: html">여기에서 데이터는 폼 페이지를 호스팅을 하는 같은 서버로 전송 되지만, 서버의 다른 URL로 전송된다.</p>
 
 ```html
-<form action="/somewhere_else">
+<form action="/somewhere_else"></form>
 ```
 
 <p class="brush: html">아래와 같이 속성을 지정하지 않으면 {{HTMLElement("form")}} 속성은 데이터를 폼을 포함한 페이지 주소로 보낼 것이다.</p>
 
 ```html
-<form>
+<form></form>
 ```
 
 <p class="brush: html">이전에 많은 페이지들은 데이터를 반드시 폼을 포함하는 페이지와 같은 페이지에 보내는 것을 나타내는 표기법을 다음과 같이 사용했다. 그러나 HTML5 이후로 속성은 필수로 지정하지 않아도 되기 떄문에 이제 더이상 필요하지 않는다.</p>
 
 ```html
-<form action="#">
+<form action="#"></form>
 ```
 
 > **참고:**HTTPS(보안 HTTP) 프로토콜을 사용하는 URL을 지정하는 것도 가능하다. 이 것을 사용하면 폼 자체가 안전하지 않은 페이지에 HTTP를 이용해서 접근하는 곳에 호스트된 경우에 데이터는 나머지 요청들과 함께 암호화된다. 반면, 만약 폼이 보안 페이지에서 호스트 된 경우라도 {{htmlattrxref("action","form")}} 속성에서 안전하지 않은 HTTP URL을 지정하면 모든 브라우저는 데이터가 암호화되지 않았기 때문에 데이터를 보낼때마다 보안 경고를 출력할 것이다
@@ -68,8 +68,8 @@ GET 방식은 브라우저에서 서버에 주어진 리소스를 전달해달�
 
 ```html
 <form action="http://foo.com" method="get">
-  <input name="say" value="Hi">
-  <input name="to" value="Mom">
+  <input name="say" value="Hi" />
+  <input name="to" value="Mom" />
   <button>Send my greetings</button>
 </form>
 ```
@@ -91,8 +91,8 @@ POST 방식은 조금 다르다. 이는 브라우저의 HTTP요청 바디안에 
 
 ```html
 <form action="http://foo.com" method="post">
-  <input name="say" value="Hi">
-  <input name="to" value="Mom">
+  <input name="say" value="Hi" />
+  <input name="to" value="Mom" />
   <button>Send my greetings</button>
 </form>
 ```
@@ -194,7 +194,7 @@ Hi Mom
 
 ```html
 <form method="post" enctype="multipart/form-data">
-  <input type="file" name="myFile">
+  <input type="file" name="myFile" />
   <button>Send the file</button>
 </form>
 ```

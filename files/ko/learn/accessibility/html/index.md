@@ -1,5 +1,5 @@
 ---
-title: 'HTML: 접근성의 좋은 기반'
+title: "HTML: 접근성의 좋은 기반"
 slug: Learn/Accessibility/HTML
 original_slug: Learn/접근성/HTML
 l10n:
@@ -89,15 +89,15 @@ HTML `<button>`은 적절한 스타일(아마 덮어쓰고 싶을지 모르지�
 <h2>My subheading</h2>
 
 <p>
-  This is the first subsection of my document.
-  I'd love people to be able to find this content!
+  This is the first subsection of my document. I'd love people to be able to
+  find this content!
 </p>
 
 <h2>My 2nd subheading</h2>
 
 <p>
-  This is the second subsection of my content,
-  which I think is more interesting than the last one.
+  This is the second subsection of my content, which I think is more interesting
+  than the last one.
 </p>
 ```
 
@@ -111,8 +111,7 @@ HTML `<button>`은 적절한 스타일(아마 덮어쓰고 싶을지 모르지�
 사람들은 종종 헤딩, 문단 등을 줄바꿈이나 스타일링만을 위한 HTML 요소를 통해 작성하기도 합니다. 다음 예시처럼요.
 
 ```html example-bad
-<span style="font-size: 3em">My heading</span>
-<br /><br />
+<span style="font-size: 3em">My heading</span> <br /><br />
 This is the first section of my document.
 <br /><br />
 I'll add another paragraph here too.
@@ -125,13 +124,13 @@ I'll add another paragraph here too.
 <br /><br />
 <span style="font-size: 2.5em">My subheading</span>
 <br /><br />
-This is the first subsection of my document.
-I'd love people to be able to find this content!
+This is the first subsection of my document. I'd love people to be able to find
+this content!
 <br /><br />
 <span style="font-size: 2.5em">My 2nd subheading</span>
 <br /><br />
-This is the second subsection of my content.
-I think is more interesting than the last one.
+This is the second subsection of my content. I think is more interesting than
+the last one.
 ```
 
 이것의 긴 버전을 스크린 리더로 읽어본다면 ([bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)을 살펴보세요) 좋지 못한 경험을 하게 될 것입니다. 스크린 리더가 표지판으로 사용할 수 있는 요소가 아무것도 없기 때문에 당신은 유용한 목차를 찾을 수 없고, 페이지 전체가 하나의 커다란 블록으로 여겨져 한번에 전부 읽어집니다.
@@ -356,7 +355,8 @@ UI 컨트롤 접근성에 대한 핵심적인 측면 중 하나는 브라우저�
 document.onkeydown = (e) => {
   // The Enter/Return key
   if (e.key === "Enter") {
-    document.activeElement.click();33
+    document.activeElement.click();
+    33;
   }
 };
 ```
@@ -371,7 +371,7 @@ UI 컨트롤에서 텍스트 라벨은 모든 사용자에게 유용하지만, �
 
 버튼과 링크의 텍스트 라벨이 이해하기 좋고 구별 가능하도록 해야합니다. 라벨에 “여기를 클릭하세요” 같은 문구만 사용하지 마세요. 스크린 리더 사용자들은 때때로 버튼과 폼 컨트롤 리스트를 만나기도 합니다. 다음 스크린샷은 Mac VoiceOver에서 우리의 컨트롤이 열거되는 방식을 보여줍니다.
 
-![Mac VoiceOver 소프트웨어에서 열거하는 폼 인풋 라벨 목록. 이 목록에는 버튼, 텍스트 필드, 링크 등의 다양한 폼 컨트롤 요소에 적용된 'happy menu button` 같은 의미없는 라벨이 포함되어 있습니다.](voiceover-formcontrols.png)
+![Mac VoiceOver 소프트웨어에서 열거하는 폼 인풋 라벨 목록. 이 목록에는 버튼, 텍스트 필드, 링크 등의 다양한 폼 컨트롤 요소에 적용된 'happy menu button' 같은 의미없는 라벨이 포함되어 있습니다.](voiceover-formcontrols.png)
 
 맥락 밖에서도 이해 가능한 라벨을 사용하세요. 혼자 읽혀졌을 때에도 속해있는 문단 맥락 안에서 읽힐 때만큼 의미를 드러내야 합니다. 다음 예시는 좋은 링크 텍스트를 보여줍니다.
 

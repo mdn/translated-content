@@ -52,10 +52,10 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 
 여기까지 잘 따라하셨다면 `ToDoItem.vue` 파일이 아래와 같은 형태가 됩니다.
 
-```html
-<template> </template>
+```vue
+<template></template>
 <script>
-  export default {};
+export default {};
 </script>
 ```
 
@@ -64,14 +64,14 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 1. 우선 템플릿 섹션에 빈 `<div>` 를 추가하세요.
 2. `<div>` 안에 체크박스와 레이블을 추가해보겠습니다. 아래와 같이 체크박스에 `id` 를 추가하고, 체크박스 id를 레이블에 매핑하는 `for` 속성을 추가합니다.
 
-    ```html
-    <template>
-      <div>
-        <input type="checkbox" id="todo-item" checked="false" />
-        <label for="todo-item">My Todo Item</label>
-      </div>
-    </template>
-    ```
+   ```vue
+   <template>
+     <div>
+       <input type="checkbox" id="todo-item" checked="false" />
+       <label for="todo-item">My Todo Item</label>
+     </div>
+   </template>
+   ```
 
 ### 앱 안에서 TodoItem 컴포넌트 사용하기
 
@@ -80,22 +80,22 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 1. `App.vue` 파일을 다시 열어주세요.
 2. `<script>` 태그 상단에 다음을 추가해 `ToDoItem` 컴포넌트를 임포트하세요:
 
-    ```js
-    import ToDoItem from './components/ToDoItem.vue';
-    ```
+   ```js
+   import ToDoItem from "./components/ToDoItem.vue";
+   ```
 
 3. 컴포넌트 오브젝트 내부에 `components` 속성을 추가하고, 여기에 `ToDoItem` 컴포넌트를 등록하세요.
 
 이제 `<script>` 내부가 이런 모양이 되었을 것입니다.
 
 ```js
-import ToDoItem from './components/ToDoItem.vue';
+import ToDoItem from "./components/ToDoItem.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    ToDoItem
-  }
+    ToDoItem,
+  },
 };
 ```
 
@@ -108,7 +108,7 @@ export default {
 
 `App.vue` `<template>` 은 아래와 같은 모양이 될 것입니다.
 
-```html
+```vue
 <div id="app">
   <h1>To-Do List</h1>
   <ul>
@@ -145,13 +145,13 @@ Vue에서는 props를 등록하는 방법이 두 가지 있습니다.
 3. 이 오브젝트 안에 `label` 과 `done` 을 키로 사용하는 속성을 추가하세요.
 4. `label` 키의 값은 두 개의 속성을 갖는 오브젝트입니다.
 
-    1. 첫 번째는 `required` 속성입니다. 이 속성의 값을 `true`로 지정하겠습니다. 이 컴포넌트의 모든 인스턴스가 레이블 필드를 반드시 가져야 한다는 의미입니다. 만약 `ToDoItem` 컴포넌트가 레이블 필드를 갖지 않으면 Vue가 경고해줄 것입니다.
-    2. 두 번째는 `type` 속성입니다. 이 속성의 값을 JavaScript `String`(대문자 S)타입으로 설정합니다. 이렇게 하면 label prop이 스트링 값을 가질 것임을 Vue에게 알려줄 수 있습니다.
+   1. 첫 번째는 `required` 속성입니다. 이 속성의 값을 `true`로 지정하겠습니다. 이 컴포넌트의 모든 인스턴스가 레이블 필드를 반드시 가져야 한다는 의미입니다. 만약 `ToDoItem` 컴포넌트가 레이블 필드를 갖지 않으면 Vue가 경고해줄 것입니다.
+   2. 두 번째는 `type` 속성입니다. 이 속성의 값을 JavaScript `String`(대문자 S)타입으로 설정합니다. 이렇게 하면 label prop이 스트링 값을 가질 것임을 Vue에게 알려줄 수 있습니다.
 
 5. 이제 `done` prop으로 넘어가겠습니다.
 
-    1. 먼저 `default` 필드를 추가하고, `false` 값을 지정합니다. 이것은 `ToDoItem` 컴포넌트가 `done` prop을 받지 못했을 때, 기본값으로 false를 갖는다는 의미입니다. his means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will will have a value of false(기본값을 항상 설정할 필요는 없습니다. 필수가 아닌 props에 대해서만 `default`를 지정하면 됩니다).
-    2. 다음으로 `type` 필드를 추가합니다. 값은 `Boolean`으로 지정합니다. 이 prop이 JavaScript 불리언 타입을 가질 것임을 Vue에게 알려주는 것입니다.
+   1. 먼저 `default` 필드를 추가하고, `false` 값을 지정합니다. 이것은 `ToDoItem` 컴포넌트가 `done` prop을 받지 못했을 때, 기본값으로 false를 갖는다는 의미입니다. his means that when no `done` prop is passed to a `ToDoItem` component, the `done` prop will will have a value of false(기본값을 항상 설정할 필요는 없습니다. 필수가 아닌 props에 대해서만 `default`를 지정하면 됩니다).
+   2. 다음으로 `type` 필드를 추가합니다. 값은 `Boolean`으로 지정합니다. 이 prop이 JavaScript 불리언 타입을 가질 것임을 Vue에게 알려주는 것입니다.
 
 이제 컴포넌트 오브젝트는 아래와 같은 모양이 될 것입니다.
 
@@ -176,11 +176,11 @@ In your `<template>`, replace the contents of the `<label>` element with `\{{lab
 
 Your component’s template section should now look like this:
 
-```html
+```vue
 <template>
   <div>
     <input type="checkbox" id="todo-item" checked="false" />
-    <label for="todo-item">\{{label}}</label>
+    <label for="todo-item">\{{ label }}</label>
   </div>
 </template>
 ```
@@ -201,7 +201,7 @@ This is because we marked the `label` as a required prop, but we never gave the 
 
 Inside your `App.vue` file, add a `label` prop to the `<to-do-item></to-do-item>` component, just like a regular HTML attribute:
 
-```html
+```vue
 <to-do-item label="My ToDo Item"></to-do-item>
 ```
 
@@ -239,13 +239,13 @@ Update the component object like so:
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
+    done: { default: false, type: Boolean },
   },
   data() {
     return {
-      isDone: this.done
+      isDone: this.done,
     };
-  }
+  },
 };
 ```
 
@@ -261,7 +261,7 @@ In other words, you prefix whatever attribute/prop you want to bind to with `v-b
 
 So in the case of the checkbox in our `ToDoItem` component, we can use `v-bind` to map the `isDone` property to the `checked` attribute on the `<input>` element. Both of the following are equivalent:
 
-```html
+```vue
 <input type="checkbox" id="todo-item" v-bind:checked="isDone" />
 
 <input type="checkbox" id="todo-item" :checked="isDone" />
@@ -305,25 +305,25 @@ npm install --save lodash.uniqueid
 We can now import this package into our `ToDoItem` component. Add the following line at the top of `ToDoItem.vue`’s `<script>` element:
 
 ```js
-import uniqueId from 'lodash.uniqueid';
+import uniqueId from "lodash.uniqueid";
 ```
 
 Next, add add an `id` field to our data property, so the component object ends up looking like so (`uniqueId()` returns the specified prefix — `todo-` — with a unique string appended to it):
 
 ```js
-import uniqueId from 'lodash.uniqueid';
+import uniqueId from "lodash.uniqueid";
 
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
+    done: { default: false, type: Boolean },
   },
   data() {
     return {
       isDone: this.done,
-      id: uniqueId('todo-')
+      id: uniqueId("todo-"),
     };
-  }
+  },
 };
 ```
 
