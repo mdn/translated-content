@@ -1,7 +1,7 @@
 ---
 title: 前提条件
-slug: Mozilla/Add-ons/WebExtensions/Prerequisites
-original_slug: Mozilla/Add-ons/WebExtensions/前提条件
+slug: orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
+original_slug: Mozilla/Add-ons/WebExtensions/Prerequisites
 ---
 
 WebExtension API を使って開発するには、いくつかの小さいセットアップが必要です。
