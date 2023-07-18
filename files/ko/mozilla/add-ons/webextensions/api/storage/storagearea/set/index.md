@@ -2,6 +2,7 @@
 title: StorageArea.set()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ---
+
 {{AddonSidebar()}}
 
 저장소 영역에 하나 이상의 항목을 저장하거나, 있는 항목을 고친다.
@@ -49,30 +50,27 @@ function gotMonster(item) {
 }
 
 function onError(error) {
-  console.log(error)
+  console.log(error);
 }
 
 // define 2 objects
 var monster = {
   name: "Kraken",
   tentacles: true,
-  eyeCount: 10
-}
+  eyeCount: 10,
+};
 
 var kitten = {
   name: "Moggy",
   tentacles: false,
-  eyeCount: 2
-}
+  eyeCount: 2,
+};
 
 // store the objects
-browser.storage.local.set({kitten, monster})
-  .then(setItem, onError);
+browser.storage.local.set({ kitten, monster }).then(setItem, onError);
 
-browser.storage.local.get("kitten")
-  .then(gotKitten, onError);
-browser.storage.local.get("monster")
-  .then(gotMonster, onError);
+browser.storage.local.get("kitten").then(gotKitten, onError);
+browser.storage.local.get("monster").then(gotMonster, onError);
 ```
 
 {{WebExtExamples}}

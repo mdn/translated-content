@@ -50,57 +50,75 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 ![](menus-4.png)이 서버메뉴는 아래 코드로 만들 수 있다:
 
 ```js
-browser.menus.create({
-  id: "remove-me",
-  title: browser.i18n.getMessage("menuItemRemoveMe"),
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "remove-me",
+    title: browser.i18n.getMessage("menuItemRemoveMe"),
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "separator-1",
-  type: "separator",
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "separator-1",
+    type: "separator",
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "greenify",
-  type: "radio",
-  title: browser.i18n.getMessage("menuItemGreenify"),
-  contexts: ["all"],
-  checked: true,
-  icons: {
-    "16": "icons/paint-green-16.png",
-    "32": "icons/paint-green-32.png"
-  }
-}, onCreated);
+browser.menus.create(
+  {
+    id: "greenify",
+    type: "radio",
+    title: browser.i18n.getMessage("menuItemGreenify"),
+    contexts: ["all"],
+    checked: true,
+    icons: {
+      16: "icons/paint-green-16.png",
+      32: "icons/paint-green-32.png",
+    },
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "bluify",
-  type: "radio",
-  title: browser.i18n.getMessage("menuItemBluify"),
-  contexts: ["all"],
-  checked: false,
-  icons: {
-    "16": "icons/paint-blue-16.png",
-    "32": "icons/paint-blue-32.png"
-  }
-}, onCreated);
+browser.menus.create(
+  {
+    id: "bluify",
+    type: "radio",
+    title: browser.i18n.getMessage("menuItemBluify"),
+    contexts: ["all"],
+    checked: false,
+    icons: {
+      16: "icons/paint-blue-16.png",
+      32: "icons/paint-blue-32.png",
+    },
+  },
+  onCreated,
+);
 
-browser.menus.create({
-  id: "separator-2",
-  type: "separator",
-  contexts: ["all"]
-}, onCreated);
+browser.menus.create(
+  {
+    id: "separator-2",
+    type: "separator",
+    contexts: ["all"],
+  },
+  onCreated,
+);
 
 var checkedState = true;
 
-browser.menus.create({
-  id: "check-uncheck",
-  type: "checkbox",
-  title: browser.i18n.getMessage("menuItemUncheckMe"),
-  contexts: ["all"],
-  checked: checkedState
-}, onCreated);
+browser.menus.create(
+  {
+    id: "check-uncheck",
+    type: "checkbox",
+    title: browser.i18n.getMessage("menuItemUncheckMe"),
+    contexts: ["all"],
+    checked: checkedState,
+  },
+  onCreated,
+);
 ```
 
 ## 타입

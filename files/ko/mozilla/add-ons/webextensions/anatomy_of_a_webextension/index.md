@@ -2,6 +2,7 @@
 title: Anatomy of an extension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
+
 {{AddonSidebar}}
 
 확장앱은 배포 및 설치를 위해 패키징 된 파일 모음으로 구성됩니다. 이 아티클은 확장앱에 있을 수 있는 파일들을 빠르게 살펴봅니다.
