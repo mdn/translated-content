@@ -104,7 +104,6 @@ build/
 /files/pt-br/mozilla/add-ons/**/*.md
 /files/pt-br/mozilla/add-ons/webextensions/api/**/*.md
 /files/pt-br/mozilla/firefox**/*.md
-/files/pt-br/web/**/*.md
 /files/pt-br/web/api/**/*.md
 /files/pt-br/web/css/**/*.md
 /files/pt-br/web/html/**/*.md
