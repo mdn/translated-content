@@ -14,7 +14,7 @@ DOM は当初、仕様書がありませんでしたが、ブラウザが{{Gloss
 3. [W3C の DOM 仕様](http://www.w3.org/DOM/DOMTR)
 4. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("API")}}
-    2. {{Glossary("HTML")}}
-    3. {{Glossary("XML")}}
-    4. {{Glossary("World Wide Web")}}
+   1. {{Glossary("API")}}
+   2. {{Glossary("HTML")}}
+   3. {{Glossary("XML")}}
+   4. {{Glossary("World Wide Web")}}

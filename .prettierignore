@@ -51,7 +51,6 @@ build/
 
 # ja
 /files/ja/games/**/*.md
-/files/ja/glossary/**/*.md
 /files/ja/learn/**/*.md
 /files/ja/learn/css/**/*.md
 /files/ja/learn/html/**/*.md

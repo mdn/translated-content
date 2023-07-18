@@ -19,8 +19,8 @@ CSS において、インラインレイアウトに関係するコンテンツ�
 <p>
   この span は<span class="highlight">インラインレベル要素</span>です。
   背景は、この要素の影響の始まりと終わりの両方を表示するように色付けされています。
-  <input type="radio" /> や <input type="checkbox" /> のような
-  input 要素もインラインレベルコンテンツです。
+  <input type="radio" /> や <input type="checkbox" /> のような input
+  要素もインラインレベルコンテンツです。
 </p>
 ```
 
