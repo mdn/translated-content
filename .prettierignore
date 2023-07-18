@@ -21,6 +21,9 @@ build/
 /files/es/learn/javascript/**/*.md
 /files/es/learn/server-side/**/*.md
 /files/es/mozilla/**/*.md
+/files/es/mozilla/add-ons/**/*.md
+/files/es/mozilla/add-ons/webextensions/api/**/*.md
+/files/es/mozilla/firefox**/*.md
 /files/es/web/api/**/*.md
 /files/es/web/css/**/*.md
 /files/es/web/html/**/*.md
@@ -35,6 +38,9 @@ build/
 /files/fr/learn/javascript/**/*.md
 /files/fr/learn/server-side/**/*.md
 /files/fr/mozilla/**/*.md
+/files/fr/mozilla/add-ons/**/*.md
+/files/fr/mozilla/add-ons/webextensions/api/**/*.md
+/files/fr/mozilla/firefox**/*.md
 /files/fr/web/api/**/*.md
 /files/fr/web/css/**/*.md
 /files/fr/web/html/**/*.md
@@ -53,6 +59,9 @@ build/
 /files/ja/learn/server-side/**/*.md
 /files/ja/mdn/**/*.md
 /files/ja/mozilla/**/*.md
+/files/ja/mozilla/add-ons/**/*.md
+/files/ja/mozilla/add-ons/webextensions/api/**/*.md
+/files/ja/mozilla/firefox**/*.md
 /files/ja/related/**/*.md
 /files/ja/web/**/*.md
 /files/ja/web/api/**/*.md
@@ -73,6 +82,9 @@ build/
 /files/ko/learn/server-side/**/*.md
 /files/ko/mdn/**/*.md
 /files/ko/mozilla/**/*.md
+/files/ko/mozilla/add-ons/**/*.md
+/files/ko/mozilla/add-ons/webextensions/api/**/*.md
+/files/ko/mozilla/firefox**/*.md
 /files/ko/web/**/*.md
 /files/ko/web/api/**/*.md
 /files/ko/web/css/**/*.md
@@ -92,6 +104,9 @@ build/
 /files/pt-br/learn/server-side/**/*.md
 /files/pt-br/mdn/**/*.md
 /files/pt-br/mozilla/**/*.md
+/files/pt-br/mozilla/add-ons/**/*.md
+/files/pt-br/mozilla/add-ons/webextensions/api/**/*.md
+/files/pt-br/mozilla/firefox**/*.md
 /files/pt-br/web/**/*.md
 /files/pt-br/web/api/**/*.md
 /files/pt-br/web/css/**/*.md
@@ -110,6 +125,9 @@ build/
 /files/ru/learn/server-side/**/*.md
 /files/ru/mdn/**/*.md
 /files/ru/mozilla/**/*.md
+/files/ru/mozilla/add-ons/**/*.md
+/files/ru/mozilla/add-ons/webextensions/api/**/*.md
+/files/ru/mozilla/firefox**/*.md
 /files/ru/web/api/**/*.md
 /files/ru/web/css/**/*.md
 /files/ru/web/html/**/*.md
