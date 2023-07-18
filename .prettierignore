@@ -60,7 +60,6 @@ build/
 /files/ja/mozilla/add-ons/**/*.md
 /files/ja/mozilla/add-ons/webextensions/api/**/*.md
 /files/ja/mozilla/firefox**/*.md
-/files/ja/related/**/*.md
 /files/ja/web/**/*.md
 /files/ja/web/api/**/*.md
 /files/ja/web/css/**/*.md
