@@ -2,12 +2,12 @@
 title: text-align
 slug: Web/CSS/text-align
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
 {{CSSRef}}
 
-La propiedad **`text-align`** [CSS](/es-US/docs/Web/CSS) establece la alineación horizontal del contenido a nivel de línea dentro de un elemento de bloque o caja de celda-tabla. Esto significa que funciona como {{cssxref("vertical-align")}} pero en dirección horizontal.
+La propiedad **`text-align`** de [CSS](/es/docs/Web/CSS) establece la alineación horizontal del contenido a nivel de línea dentro de un elemento de bloque o caja de celda-tabla. Esto significa que funciona como {{cssxref("vertical-align")}} pero en dirección horizontal.
 
 {{EmbedInteractiveExample("pages/css/text-align.html")}}
 
@@ -54,13 +54,13 @@ La propiedad `text-align` se especifica de una de las siguientes maneras:
 - `end`
   - : Lo mismo que `right` si la dirección es de izquierda a derecha e `left` si la dirección es de derecha a izquierda.
 - `left`
-  - : El contenido en línea se alinea con el borde izquierdo de la caja de línea.
+  - : El contenido en línea se alinea con el borde izquierdo de la línea de la caja.
 - `right`
-  - : El contenido en línea se alinea con el borde derecho de la caja de línea.
+  - : El contenido en línea se alinea con el borde derecho de la línea de la caja.
 - `center`
-  - : El contenido en línea se centra dentro del cuadro de línea.
+  - : El contenido en línea se centra dentro de la línea de la caja.
 - `justify`
-  - : El contenido en línea está justificado. El texto debe ser espaciado para alinear sus bordes izquierdo y derecho con los bordes izquierdo y derecho de la caja de línea, excepto la última línea.
+  - : El contenido en línea está justificado. El texto debe ser espaciado para alinear sus bordes izquierdo y derecho con los bordes izquierdo y derecho de la línea de la caja, excepto la última línea.
 - `justify-all` {{experimental_inline}}
   - : Igual que `justify`, pero también obliga a justificar la última línea.
 - `match-parent`
