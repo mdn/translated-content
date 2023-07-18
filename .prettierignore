@@ -14,7 +14,6 @@ build/
 # The following folders still need a full pass:
 
 # es
-/files/es/glossary/**/*.md
 /files/es/learn/**/*.md
 /files/es/learn/css/**/*.md
 /files/es/learn/html/**/*.md
@@ -51,7 +50,6 @@ build/
 
 # ja
 /files/ja/games/**/*.md
-/files/ja/glossary/**/*.md
 /files/ja/learn/**/*.md
 /files/ja/learn/css/**/*.md
 /files/ja/learn/html/**/*.md
@@ -60,7 +58,6 @@ build/
 /files/ja/mdn/**/*.md
 /files/ja/mozilla/add-ons/**/*.md
 /files/ja/mozilla/add-ons/webextensions/api/**/*.md
-/files/ja/related/**/*.md
 /files/ja/web/**/*.md
 /files/ja/web/api/**/*.md
 /files/ja/web/css/**/*.md
@@ -139,7 +136,6 @@ build/
 /files/zh-cn/learn/html/**/*.md
 /files/zh-cn/learn/javascript/**/*.md
 /files/zh-cn/learn/server-side/**/*.md
-/files/zh-cn/mdn/**/*.md
 /files/zh-cn/web/api/**/*.md
 /files/zh-cn/web/css/**/*.md
 /files/zh-cn/web/html/**/*.md
