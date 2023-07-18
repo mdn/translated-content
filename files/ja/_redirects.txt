@@ -2275,7 +2275,6 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 /ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
 /ja/docs/Mozilla/Add-ons/WebExtensions/デバッグ	https://extensionworkshop.com/documentation/develop/debugging/
-/ja/docs/Mozilla/Add-ons/WebExtensions/前提条件	/ja/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
 /ja/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/ja/docs/Mozilla/Firefox/Releases/47
 /ja/docs/Mozilla_Addons_FAQ_(external)	https://addons.mozilla.org/faq.php
 /ja/docs/NPAPI/Constants	/ja/docs/Glossary/Plugin

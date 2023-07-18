@@ -14,7 +14,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_rol
 
 ## 例
 
-### Example 1:
+### Example 1
 
 ```html
 Code

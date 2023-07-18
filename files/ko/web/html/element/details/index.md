@@ -43,7 +43,7 @@ Fully standards-compliant implementations automatically apply the CSS `{{cssxref
       <th scope="row">가능한 부모 요소</th>
       <td>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Flow_content"
+          href="https://developer.mozilla.org/ko/docs/Web/HTML/Content_categories#Flow_content"
           >플로우 콘텐츠</a
         >를 허용하는 모든 요소.
       </td>

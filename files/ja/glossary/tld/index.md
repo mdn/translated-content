@@ -2,6 +2,7 @@
 title: TLD (トップレベルドメイン)
 slug: Glossary/TLD
 ---
+
 TLD (トップレベルドメイン)は、インターネットの階層的な {{Glossary("DNS")}} (ドメインネームシステム) で最も一般的な {{Glossary("domain")}} です。TLD は {{Glossary("domain name")}} の最後の要素です。例えば、`developer.mozilla.org` の "org" です。
 
 {{Glossary("ICANN")}} (Internet Corporation for Assigned Names and Numbers) designates organizations to manage each TLD. Depending on how strict an administrating organization might be, TLD often serves as a clue to the purpose, ownership, or nationality of a website.

@@ -34,7 +34,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 
 ## 설명
 
-callback 함수의 상세 설명은 {{jsxref("Array.prototype.map()")}} 문서를 보시기 바랍니다. `flatMap` 메소드는 깊이 1의 [`flat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) 이 뒤따르는 [`map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 과 동일합니다.
+callback 함수의 상세 설명은 {{jsxref("Array.prototype.map()")}} 문서를 보시기 바랍니다. `flatMap` 메소드는 깊이 1의 [`flat`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/flat) 이 뒤따르는 [`map`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map) 과 동일합니다.
 
 ## 예제
 
