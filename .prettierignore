@@ -19,10 +19,6 @@ build/
 /files/es/learn/html/**/*.md
 /files/es/learn/javascript/**/*.md
 /files/es/learn/server-side/**/*.md
-/files/es/mozilla/**/*.md
-/files/es/mozilla/add-ons/**/*.md
-/files/es/mozilla/add-ons/webextensions/api/**/*.md
-/files/es/mozilla/firefox**/*.md
 /files/es/web/api/**/*.md
 /files/es/web/css/**/*.md
 /files/es/web/html/**/*.md
