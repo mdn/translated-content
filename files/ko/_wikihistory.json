@@ -4688,25 +4688,9 @@
     "modified": "2020-01-12T10:16:30.044Z",
     "contributors": ["alattalatta", "young-gratia", "teoli", "Cho.Eun"]
   },
-  "Web/Accessibility/ARIA/ARIA_Live_Regions": {
-    "modified": "2020-12-05T03:30:43.763Z",
-    "contributors": ["movegun1027"]
-  },
-  "Web/Accessibility/ARIA/ARIA_Techniques": {
-    "modified": "2020-01-12T02:25:07.876Z",
-    "contributors": ["alattalatta", "dcondrey"]
-  },
   "Web/Accessibility/ARIA/Roles": {
     "modified": "2019-03-18T21:24:18.888Z",
     "contributors": ["estelle"]
-  },
-  "Web/Accessibility/ARIA/Roles/dialog_role": {
-    "modified": "2019-03-18T21:24:31.941Z",
-    "contributors": ["seokju-na"]
-  },
-  "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
-    "modified": "2019-03-23T23:21:28.496Z",
-    "contributors": ["dotorify", "teoli", "Cho.Eun"]
   },
   "Web/Accessibility/Mobile_accessibility_checklist": {
     "modified": "2019-09-08T04:58:59.841Z",
@@ -6102,21 +6086,9 @@
   "Web/Guide/Audio_and_video_delivery": {
     "modified": "2019-04-17T05:03:01.108Z"
   },
-  "Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video": {
-    "modified": "2019-05-13T05:46:53.607Z",
-    "contributors": ["hoony"]
-  },
-  "Web/Guide/CSS/Block_formatting_context": {
-    "modified": "2020-08-05T00:58:44.120Z",
-    "contributors": ["alattalatta", "moolow", "corps99"]
-  },
   "Web/Guide/Graphics": {
     "modified": "2020-02-15T07:39:57.101Z",
     "contributors": ["Netaras", "hyeonseok", "narae_lee"]
-  },
-  "Web/Guide/Mobile": {
-    "modified": "2019-05-30T06:59:50.297Z",
-    "contributors": ["SDSkyKlouD", "Seia-Soto", "xfq"]
   },
   "Web/Guide/Parsing_and_serializing_XML": {
     "modified": "2019-03-23T22:16:47.020Z",
@@ -10195,10 +10167,6 @@
   "Web/Progressive_web_apps": {
     "modified": "2019-03-23T22:00:19.382Z",
     "contributors": ["chrisdavidmills", "cs09g"]
-  },
-  "Web/Progressive_web_apps/Guides/Making_PWAs_installable": {
-    "modified": "2020-01-26T15:58:32.379Z",
-    "contributors": ["alattalatta", "chrisdavidmills", "cs09g"]
   },
   "Web/Progressive_web_apps/Tutorials/js13kGames": {
     "modified": "2019-03-18T20:52:13.104Z",
