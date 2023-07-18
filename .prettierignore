@@ -79,7 +79,6 @@ build/
 /files/ko/learn/html/**/*.md
 /files/ko/learn/javascript/**/*.md
 /files/ko/learn/server-side/**/*.md
-/files/ko/mdn/**/*.md
 /files/ko/mozilla/**/*.md
 /files/ko/mozilla/add-ons/**/*.md
 /files/ko/mozilla/add-ons/webextensions/api/**/*.md

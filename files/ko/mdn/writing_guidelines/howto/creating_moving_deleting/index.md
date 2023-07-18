@@ -3,6 +3,7 @@ title: 페이지 생성 및 수정
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
+
 {{MDNSidebar}}
 
 신규 공헌자가 이미 있는 문서를 수정하거나 신규 문서를 생성하는 법에 대해 설명합니다.
