@@ -226,9 +226,9 @@ urlpatterns = [
 ]
 ```
 
-Para la ruta _book-detail_ el patrón URL utiliza una sintaxis especial para capturar el id específico del libro que queremos ver. 
-La sintaxis es muy sencilla: los corchetes angulares definen la parte de la URL a capturar, encerrando el nombre de la variable que la vista puede utilizar para acceder a los datos capturados. 
-Por ejemplo, **\<algo>**, capturará el patrón marcado y pasará el valor a la vista como una variable "algo". 
+Para la ruta _book-detail_ el patrón URL utiliza una sintaxis especial para capturar el id específico del libro que queremos ver.
+La sintaxis es muy sencilla: los corchetes angulares definen la parte de la URL a capturar, encerrando el nombre de la variable que la vista puede utilizar para acceder a los datos capturados.
+Por ejemplo, **\<algo>**, capturará el patrón marcado y pasará el valor a la vista como una variable "algo".
 Opcionalmente puedes añadir al nombre de la variable una [etiqueta](https://docs.djangoproject.com/en/4.0/topics/http/urls/#path-converters) que defina el tipo de datos (int, str, slug, uuid, path).
 
 En este caso utilizamos `'<int:pk>'` para capturar el id del libro, que debe ser una cadena con un formato especial y pasarlo a la vista como un parámetro llamado `pk` (abreviatura de primary key). Este es el id que se está utilizando para almacenar el libro de forma única en la base de datos, tal y como se define en el Modelo de Libros.
