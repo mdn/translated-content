@@ -14,7 +14,6 @@ build/
 # The following folders still need a full pass:
 
 # es
-/files/es/glossary/**/*.md
 /files/es/learn/**/*.md
 /files/es/learn/css/**/*.md
 /files/es/learn/html/**/*.md
