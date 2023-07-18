@@ -15,7 +15,6 @@ build/
 
 # es
 /files/es/glossary/**/*.md
-/files/es/learn/**/*.md
 /files/es/learn/css/**/*.md
 /files/es/learn/html/**/*.md
 /files/es/learn/javascript/**/*.md

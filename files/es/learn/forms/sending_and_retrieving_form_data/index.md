@@ -59,25 +59,25 @@ Este atributo define el lugar donde los datos se envian. Su valor debe ser una d
 En este ejemplo, los datos se envían a una dirección URL absoluta - `http://foo.com`:
 
 ```html
-<form action="http://foo.com">
+<form action="http://foo.com"></form>
 ```
 
 Aquí, nosotros usamos una URL relativa - los datos se envían a una dirección URL diferente en el servidor:
 
 ```html
-<form action="/ somewhere_else">
+<form action="/ somewhere_else"></form>
 ```
 
 Cuando se especifica sin atributos, como abajo, el {{HTMLElement ( "form")}} los datos se envían a la misma página en que la "forma" está presente :
 
 ```html
-<form>
+<form></form>
 ```
 
 Muchas páginas más antiguas utilizan la siguiente notación para indicar que los datos deben ser enviados a la misma página que contiene el formulario; Esto fue necesario porque hasta HTML5, el atributo [`acción`](/es/docs/Web/HTML/Element/form#acción) fue requerido . Esto ya no es necesario.
 
 ```html
-<form action="#">
+<form action="#"></form>
 ```
 
 > **Nota:** Es posible especificar una dirección URL que utiliza el protocolo HTTPS (HTTP seguro). Al hacer esto, los datos se cifran junto con el resto de la solicitud, incluso si el propio formulario está alojado en una página insegura se accede a través de HTTPS. Por otro lado, si el formulario está alojado en una página segura, pero se especifica una dirección URL HTTP insegura con el atributo [`acción`](/es/docs/Web/HTML/Element/form#acción) , todos los navegadores mostrarán una advertencia de seguridad para el usuario cada vez que intenten enviar datos, ya que estos no se pueden cifrar.
@@ -98,14 +98,14 @@ Considere la siguiente forma:
 <form action="http://foo.com" method="get">
   <div>
     <label for="decir"> ¿Qué saludo quiere decir? </label>
-    <input name="decir" id="decir" value="Hola">
+    <input name="decir" id="decir" value="Hola" />
   </div>
   <div>
     <label for="para"> ¿A quién se lo quiere decir? </label>
-    <input name="para" value="mamá">
+    <input name="para" value="mamá" />
   </div>
   <div>
-    <button> enviar mis saludos </button>
+    <button>enviar mis saludos</button>
   </div>
 </form>
 ```
@@ -137,15 +137,15 @@ Veamos un ejemplo - se trata de algo similar a como se vió en el método `GET` 
 ```html
 <form action="http://foo.com" method="post">
   <div>
-    <label for="dice"> Lo saludo qué quiere decir? </ Label>
-    <input name="decir" id="decir" value="Hola">
+    <label for="dice"> Lo saludo qué quiere decir? </label>
+    <input name="decir" id="decir" value="Hola" />
   </div>
   <div>
-    <Label for="para"> ¿Quién usted quiere decir que a? </ Label>
-    <Input name="a" value="mamá">
+    <label for="para"> ¿Quién usted quiere decir que a? </label>
+    <input name="a" value="mamá" />
   </div>
   <div>
-    <button> enviar mis saludos</button>
+    <button>enviar mis saludos</button>
   </div>
 </form>
 ```
@@ -262,11 +262,11 @@ Por ejemplo:
 ```html
 <form method="post" enctype="multipart / form-data">
   <div>
-    <Label for="archivo"> Elija un archivo </label>
-    <input type="file" id="file" name="myFile">
+    <label for="archivo"> Elija un archivo </label>
+    <input type="file" id="file" name="myFile" />
   </div>
   <div>
-    <button> Enviar el archivo </button>
+    <button>Enviar el archivo</button>
   </div>
 </form>
 ```
