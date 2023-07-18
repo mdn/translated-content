@@ -331,7 +331,6 @@
 /ko/docs/Learn/접근성	/ko/docs/Learn/Accessibility
 /ko/docs/Learn/접근성/HTML	/ko/docs/Learn/Accessibility/HTML
 /ko/docs/Learn/접근성/What_is_accessibility	/ko/docs/Learn/Accessibility/What_is_accessibility
-/ko/docs/Learn/접근성/모바일	/ko/docs/Learn/Accessibility/Mobile
 /ko/docs/Localization	/ko/docs/Glossary/Localization
 /ko/docs/MDN/About	/ko/docs/MDN/Writing_guidelines
 /ko/docs/MDN/Contribute/Content/Best_practices	/ko/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
