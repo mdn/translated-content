@@ -82,7 +82,6 @@ build/
 /files/ko/mozilla/add-ons/**/*.md
 /files/ko/mozilla/add-ons/webextensions/api/**/*.md
 /files/ko/mozilla/firefox**/*.md
-/files/ko/web/**/*.md
 /files/ko/web/api/**/*.md
 /files/ko/web/css/**/*.md
 /files/ko/web/html/**/*.md

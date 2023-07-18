@@ -2,6 +2,7 @@
 title: format-number
 slug: Web/XPath/Functions/format-number
 ---
+
 {{ XsltRef() }}
 
 `format-number` 함수는 수를 평가하고 제공한 형식으로 그 수를 나타내는 문자열을 반환합니다.

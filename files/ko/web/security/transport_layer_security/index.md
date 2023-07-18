@@ -2,6 +2,7 @@
 title: Transport Layer Security
 slug: Web/Security/Transport_Layer_Security
 ---
+
 TLS(Transport Layer Security)를 사용하는 연결의 보안은 암호 스위트(Ciper Suites)와 선택된 보안 파라메터에 강하게 의존합니다. 이 문서는 클라이언트와 서버 사이의 기밀성과 무결성 통신을 보장하기 위한 결정을 하도록 돕는 것이 목적입니다. 모질라 운영 보안(OpSec) 팀은 서버를 위한 참조용 설정이 있는 [위키](https://wiki.mozilla.org/Security/Server_Side_TLS)를 관리합니다..
 
 TLS(Transport Layer Security) 프로토콜은 네트워크로 연결된 두 개의 어플리케이션 혹은 디바이스가 비밀스럽고 강건하게 정보를 교환하도록 하는 표준입니다. TLS를 사용하는 어플리케이션은 데이터의 보안과 신뢰성에 상당한 영향을 미칠 수 있는 보안 파라메터를 선택할 수 있습니다. 이 글은 TLS에 대한 개요와 컨텐츠를 보호할 때 결정해야 할 사항에 대해 설명합니다.

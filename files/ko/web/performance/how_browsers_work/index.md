@@ -57,7 +57,7 @@ HTTPS를 이용한 보안성있는 연결을 위해서는 또 다른 "핸드셰�
 웹서버로 한 번 연결이 성립되고 나면, 브라우저는 유저 대신에 초기 [HTTP `GET` request](/ko/docs/Web/HTTP/Methods)를 보냅니다. 웹사이트는 대게 HTML 파일을 요청합니다. 서버가 요청을 받으면, 관련 응답 해더와 함께 HTML의 내용을 응답하게 됩니다.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8" />
