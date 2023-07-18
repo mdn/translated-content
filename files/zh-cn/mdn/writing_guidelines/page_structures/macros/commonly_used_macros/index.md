@@ -200,5 +200,5 @@ slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 
 ##### 示例
 
-  {{AvailableInWorkers}}
-  {{AvailableInWorkers("notservice")}}
+{{AvailableInWorkers}}
+{{AvailableInWorkers("notservice")}}

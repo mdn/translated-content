@@ -141,7 +141,6 @@ build/
 /files/zh-cn/learn/html/**/*.md
 /files/zh-cn/learn/javascript/**/*.md
 /files/zh-cn/learn/server-side/**/*.md
-/files/zh-cn/mdn/**/*.md
 /files/zh-cn/web/api/**/*.md
 /files/zh-cn/web/css/**/*.md
 /files/zh-cn/web/html/**/*.md
