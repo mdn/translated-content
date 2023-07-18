@@ -4,7 +4,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filterin
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering
 translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering
 tags:
-  - Новички 
+  - Новички
   - Фреймворки
   - JavaScript
   - Изучение
@@ -51,31 +51,31 @@ filter: 'all' | 'active' | 'done' = 'all';
 <!-- <button class="btn-primary" (click)="addItem(newItem.value)">Add</button>
  -->
 
-  <!-- Кнопки, которые меняют отображение элементов на все, только активные или только выполненные -->
-  <div class="btn-wrapper">
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'all'"
-      (click)="filter = 'all'">
-      All
-    </button>
+<!-- Кнопки, которые меняют отображение элементов на все, только активные или только выполненные -->
+<div class="btn-wrapper">
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'all'"
+    (click)="filter = 'all'">
+    All
+  </button>
 
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'active'"
-      (click)="filter = 'active'">
-      To Do
-    </button>
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'active'"
+    (click)="filter = 'active'">
+    To Do
+  </button>
 
-    <button
-      class="btn btn-menu"
-      [class.active]="filter == 'done'"
-      (click)="filter = 'done'">
-      Done
-    </button>
-  </div>
+  <button
+    class="btn btn-menu"
+    [class.active]="filter == 'done'"
+    (click)="filter = 'done'">
+    Done
+  </button>
+</div>
 
-  <!-- <h2>\{{items.length}} item(s)</h2>
+<!-- <h2>\{{items.length}} item(s)</h2>
         <ul>... -->
 ```
 

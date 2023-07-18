@@ -115,7 +115,6 @@ build/
 
 # ru
 /files/ru/glossary/**/*.md
-/files/ru/learn/**/*.md
 /files/ru/learn/css/**/*.md
 /files/ru/learn/html/**/*.md
 /files/ru/learn/javascript/**/*.md

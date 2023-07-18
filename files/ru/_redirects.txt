@@ -232,7 +232,6 @@
 /ru/docs/Learn/HTML/Forms/Валидация_формы	/ru/docs/Learn/Forms/Form_validation
 /ru/docs/Learn/HTML/Forms/Ваша_первая_HTML_форма	/ru/docs/Learn/Forms/Your_first_form
 /ru/docs/Learn/HTML/Forms/Отправка_и_Получение_данных_формы	/ru/docs/Learn/Forms/Sending_and_retrieving_form_data
-/ru/docs/Learn/HTML/Forms/Стандартные_виджеты_форм	/ru/docs/Learn/Forms/Basic_native_form_controls
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Добавление_r_graphics_to_the_Web	/ru/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML	/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 /ru/docs/Learn/HTML/Multimedia_and_embedding/Изображения_в_HTML/Проверьте_свои_знания:_Изображения_в_HTML	/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images
@@ -293,9 +292,6 @@
 /ru/docs/Learn/Доступность/Accessibility_troubleshooting	/ru/docs/Learn/Accessibility/Accessibility_troubleshooting
 /ru/docs/Learn/Доступность/CSS_and_JavaScript	/ru/docs/Learn/Accessibility/CSS_and_JavaScript
 /ru/docs/Learn/Доступность/HTML	/ru/docs/Learn/Accessibility/HTML
-/ru/docs/Learn/Доступность/Mobile	/ru/docs/Learn/Accessibility/Mobile
-/ru/docs/Learn/Доступность/Multimedia	/ru/docs/Learn/Accessibility/Multimedia
-/ru/docs/Learn/Доступность/WAI-ARIA_basics	/ru/docs/Learn/Accessibility/WAI-ARIA_basics
 /ru/docs/Learn/Доступность/What_is_accessibility	/ru/docs/Learn/Accessibility/What_is_accessibility
 /ru/docs/Learn/Фронтенд_разработчик	/ru/docs/Learn/Front-end_web_developer
 /ru/docs/Learn/Что_такое_веб_сервер	/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server
