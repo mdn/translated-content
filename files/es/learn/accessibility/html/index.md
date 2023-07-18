@@ -13,10 +13,10 @@ Se puede hacer accesible una gran cantidad de contenido web solo asegurándose d
       <th scope="row">Prerrequisitos:</th>
       <td>
         Conocimiento básico de informática, entendimiento básico de HTML (ver
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
           >Introducción a HTML</a
         >), y entendimiento de
-        <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
+        <a href="/es/docs/Learn/Accessibility/What_is_accessibility"
           >¿Qué es accesibilidad?</a
         >.
       </td>

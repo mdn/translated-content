@@ -12,7 +12,7 @@ original_slug: Web/CSS/CSS_Modelo_Caja
 
 ### Propiedades
 
-#### Propiedades que controlan el flujo del contenido en una caja.
+#### Propiedades que controlan el flujo del contenido en una caja
 
 - {{cssxref("box-decoration-break")}}
 - {{cssxref("box-sizing")}}
@@ -20,7 +20,7 @@ original_slug: Web/CSS/CSS_Modelo_Caja
 - {{cssxref("overflow-x")}}
 - {{cssxref("overflow-y")}}
 
-#### Propiedades que controlan el tamaño de una caja.
+#### Propiedades que controlan el tamaño de una caja
 
 - {{cssxref("height")}}
 - {{cssxref("width")}}
@@ -29,7 +29,7 @@ original_slug: Web/CSS/CSS_Modelo_Caja
 - {{cssxref("min-height")}}
 - {{cssxref("min-width")}}
 
-#### Propiedades que controlan los márgenes de una caja.
+#### Propiedades que controlan los márgenes de una caja
 
 - {{cssxref("margin")}}
 - {{cssxref("margin-bottom")}}

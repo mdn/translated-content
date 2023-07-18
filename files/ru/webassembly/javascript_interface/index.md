@@ -47,7 +47,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 
 ## Примеры
 
-После загрузки некоторого байт-кода WebAssembly с помощью fetch, мы компилируем и создаём экземпляр модуля с помощью функции {{jsxref("WebAssembly.instantiate()")}}, импортируя функции JavaScript в WebAssembly Module в процессе. Этот промис результирует в объект (`result`), содержащий скомпилированные [`Module`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) и объекты [`Instance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance). Мы можем вызвать [Exported WebAssembly function](/ru/docs/WebAssembly/Exported_functions), которая была экспортирована через `Instance`.
+После загрузки некоторого байт-кода WebAssembly с помощью fetch, мы компилируем и создаём экземпляр модуля с помощью функции {{jsxref("WebAssembly.instantiate()")}}, импортируя функции JavaScript в WebAssembly Module в процессе. Этот промис результирует в объект (`result`), содержащий скомпилированные [`Module`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) и объекты [`Instance`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance). Мы можем вызвать [Exported WebAssembly function](/ru/docs/WebAssembly/Exported_functions), которая была экспортирована через `Instance`.
 
 ```js
 var importObject = {

@@ -48,7 +48,7 @@ D'autres types de ressources comme les polices de caractères ou les <i lang="en
 
 ## Chargement des ressources avec du contenu mixte
 
-La plupart des navigateurs empêchent le chargement *du contenu mixte actif*. D'autres bloquent également le chargement *du contenu mixte passif*.
+La plupart des navigateurs empêchent le chargement _du contenu mixte actif_. D'autres bloquent également le chargement _du contenu mixte passif_.
 
 ### Charger des ressources mixtes locales
 

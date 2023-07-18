@@ -25,7 +25,7 @@ slug: Web/API/HTMLImageElement/naturalHeight
 
 ```html
 <div class="box">
-  <img src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png" class="image">
+  <img src="/zh-CN/docs/Web/HTML/Element/img/clock-demo-400px.png" class="image">
 </div>
 <div class="output">
 </div>

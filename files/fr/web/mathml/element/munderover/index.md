@@ -38,13 +38,17 @@ Exemple de rendu: ![integral-0-infinity](munderover.png)
 
 ```html
 <math displaystyle="true">
-
-  <munderover >
-    <mo> &#x222B; <!--INTEGRAL--> </mo>
+  <munderover>
+    <mo>
+      &#x222B;
+      <!--INTEGRAL-->
+    </mo>
     <mn> 0 </mn>
-    <mi> &#x221E; <!--INFINITY--> </mi>
+    <mi>
+      &#x221E;
+      <!--INFINITY-->
+    </mi>
   </munderover>
-
 </math>
 ```
 

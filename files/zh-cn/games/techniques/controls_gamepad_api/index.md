@@ -45,14 +45,14 @@ Game API 的动作展示与 JavaScript 的源代码公布是在完整版的 Hung
 var gamepadAPI = {
   controller: {},
   turbo: false,
-  connect: function() {},
-  disconnect: function() {},
-  update: function() {},
-  buttonPressed: function() {},
+  connect: function () {},
+  disconnect: function () {},
+  update: function () {},
+  buttonPressed: function () {},
   buttons: [],
   buttonsCache: [],
   buttonsStatus: [],
-  axesStatus: []
+  axesStatus: [],
 };
 ```
 
@@ -185,11 +185,11 @@ buttonPressed: function(button, hold) {
 在一个按钮中有两种动作：单次按下和按住。变量 `newPress` 布尔变量将会指出这个是不是一个按钮新的按下操作。下次我们再轮询已按下按钮的数组——如果有按钮是我们正在找的，那么设 `newPress` 变量为 `true` 。通过检查本次按下是不是新按下的，就能得出玩家是不是按住按钮了。我们从游戏循环中的上一帧轮询按钮的缓存状态，如果我们找到了，就说明按钮被按住了，所以就不是新的按下。最后 `newPress` 变量被返回。函数 `buttonPressed` 通常这样来更新游戏循环：
 
 ```js
-if(gamepadAPI.turbo) {
-  if(gamepadAPI.buttonPressed('A','hold')) {
+if (gamepadAPI.turbo) {
+  if (gamepadAPI.buttonPressed("A", "hold")) {
     this.turbo_fire();
   }
-  if(gamepadAPI.buttonPressed('B')) {
+  if (gamepadAPI.buttonPressed("B")) {
     this.managePause();
   }
 }
@@ -204,7 +204,7 @@ if(gamepadAPI.turbo) {
 控制器放在一边不活动时轴值也可能有一定波动 (get dusty) ，这也就是说通过判断等于绝对的 -1 或 1 来可能是会有问题的。因此对此最好是给轴值设定一个阈值来触发生效。比如说，“冰箱坦克”仅会在 `X` 值大于 `0.5` 的时候向右转：
 
 ```js
-if(gamepadAPI.axesStatus[0].x > 0.5) {
+if (gamepadAPI.axesStatus[0].x > 0.5) {
   this.player.angle += 3;
   this.turret.angle += 3;
 }

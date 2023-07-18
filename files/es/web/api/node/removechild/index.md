@@ -81,7 +81,7 @@ while (element.firstChild) {
 }
 ```
 
-## Notas:
+## Notas
 
 **`removeChild()`** se debe invocar sobre el nodo padre del nodo que se va a eliminar.
 

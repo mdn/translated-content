@@ -42,7 +42,13 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
 在下面的代码片段中，一个 span 元素已经被赋予了按钮角色。由于使用的是 `<span>` 元素，因此需要提供 `tabindex` 属性使按钮的可聚焦并成为 tab 顺序流中的一部分。注意，这段代码提供了 CSS 样式，以使 `<span>`元素看起来像一个按钮， `handleBtnClick` 和`handleBtnKeyPress` 是事件处理程序，当鼠标单击、 <kbd>Space</kbd> or <kbd>Enter</kbd> 被按下时，执行该按钮的操作。
 
 ```html
-<span role="button" tabindex="0" onclick="handleBtnClick()" onKeyPress="handleBtnKeyPress()">Save</span>
+<span
+  role="button"
+  tabindex="0"
+  onclick="handleBtnClick()"
+  onKeyPress="handleBtnKeyPress()"
+  >Save</span
+>
 ```
 
 ### ARIA Toggle Button
@@ -56,9 +62,12 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
   Native button toggle
 </button>
 
-<span role="button" tabindex="0"
- aria-pressed="false" onclick="handleBtnClick(event)"
- onKeyPress="handleBtnKeyPress(event)">
+<span
+  role="button"
+  tabindex="0"
+  aria-pressed="false"
+  onclick="handleBtnClick(event)"
+  onKeyPress="handleBtnKeyPress(event)">
   Span button toggle
 </span>
 ```
@@ -68,13 +77,13 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
 ```css
 button,
 [role="button"] {
-    padding: 3px;
-    border: 1px solid #CCC;
+  padding: 3px;
+  border: 1px solid #ccc;
 }
 
 button[aria-pressed="true"],
 [role="button"][aria-pressed="true"] {
-    border: 2px solid #000;
+  border: 2px solid #000;
 }
 ```
 
@@ -96,7 +105,7 @@ function handleBtnKeyPress(event) {
 
 function toggleButton(element) {
   // Check to see if the button is pressed
-  var pressed = (element.getAttribute("aria-pressed") === "true");
+  var pressed = element.getAttribute("aria-pressed") === "true";
   // Change aria-pressed to the opposite state
   element.setAttribute("aria-pressed", !pressed);
 }

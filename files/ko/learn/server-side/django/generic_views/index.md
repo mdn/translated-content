@@ -12,7 +12,7 @@ slug: Learn/Server-side/Django/Generic_views
     <tr>
       <th scope="row">사전 준비:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/Home_page"
+        <a href="/ko/docs/Learn/Server-side/Django/Home_page"
           >Django Tutorial Part 5: Creating our home page</a
         >를 포함한 모든 이전 튜토리얼을 완료하세요.
       </td>

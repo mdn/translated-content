@@ -12,12 +12,12 @@ slug: Learn/Server-side/Django/skeleton_website
     <tr>
       <th scope="row">사전 준비:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/development_environment"
+        <a href="/ko/docs/Learn/Server-side/Django/development_environment"
           >장고 개발 환경을 설치하세요. (Set up a Django development
           environment.)</a
         >
         <a
-          href="/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website"
+          href="/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website"
           >장고 튜토리얼</a
         >을 복습하세요.
       </td>

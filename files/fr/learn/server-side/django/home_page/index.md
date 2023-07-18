@@ -349,7 +349,7 @@ L'exemple ci-dessous introduit l'utilisation de la balise de gabarit `url`.
 
 Cette balise accepte des références enregistrées par la fonction `path()` appelée dans les fichiers **urls.py** ainsi que les valeurs pour chacun des arguments associés à une vue. Elle retourne une URL qui peut être utilisée pour lier une ressource.
 
-#### Où trouver les gabarits...
+#### Où trouver les gabarits
 
 Par défaut Django ne sait pas où sont vos gabarits, vous devez lui indiquer où les trouver. Pour ce faire, vous allez ajouter le répertoire des gabarits (templates) à la variable d'environnement du projet TEMPLATES en éditant le fichier **settings.py** comme indiqué en gras ci-dessous :
 

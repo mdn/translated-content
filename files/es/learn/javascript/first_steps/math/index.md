@@ -38,7 +38,7 @@ La segunda parte de las buenas noticias es que, a diferencia de otros lenguajes 
 
 > **Nota:** En realidad, JavaScript tiene un segundo tipo de número, {{Glossary("BigInt")}}, que se utiliza para números enteros muy, muy grandes. Pero para los propósitos de este curso, solo nos preocuparemos por los valores numéricos.
 
-### Para mí, todo son números.
+### Para mí, todo son números
 
 Juguemos un poco con algunos números para ponernos al día con la sintaxis básica que necesitamos. Coloca los comandos listados abajo en la [consola JavaScript de tus herramientas para desarrolladores](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), o utiliza la sencilla consola integrada que verás abajo si lo prefieres.
 

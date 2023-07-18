@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table
 
 ## Конструктор
 
-- [`WebAssembly.Table()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table)
+- [`WebAssembly.Table()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table)
   - : Создаёт новый объект `Table`.
 
 ## Экземпляры `Table`

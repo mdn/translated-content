@@ -66,4 +66,4 @@ var requestAnimationFrame = window.requestAnimationFrame ||
 
 ### General knowledge
 
-{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
+{{QuickLinksWithSubpages("/ru/docs/Glossary")}}

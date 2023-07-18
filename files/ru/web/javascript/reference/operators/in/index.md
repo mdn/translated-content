@@ -106,7 +106,7 @@ trees[3] = undefined;
 
 ## Смотрите также
 
-- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Reflect.has()")}}
 - [Enumerability and ownership of properties](/ru/docs/Enumerability_and_ownership_of_properties)

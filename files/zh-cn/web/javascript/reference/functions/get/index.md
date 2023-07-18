@@ -108,7 +108,7 @@ get notifier() {
 },
 ```
 
-对于 Firefox 代码，另请参阅定义[`defineLazyGetter()`](<https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>) 函数的`XPCOMUtils.jsm`代码模块。
+对于 Firefox 代码，另请参阅定义[`defineLazyGetter()`](<https://developer.mozilla.org/zh-CN/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()>) 函数的`XPCOMUtils.jsm`代码模块。
 
 ### `get` vs. `defineProperty`
 
