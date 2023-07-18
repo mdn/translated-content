@@ -122,7 +122,6 @@ build/
 /files/ru/learn/html/**/*.md
 /files/ru/learn/javascript/**/*.md
 /files/ru/learn/server-side/**/*.md
-/files/ru/mdn/**/*.md
 /files/ru/mozilla/**/*.md
 /files/ru/mozilla/add-ons/**/*.md
 /files/ru/mozilla/add-ons/webextensions/api/**/*.md
