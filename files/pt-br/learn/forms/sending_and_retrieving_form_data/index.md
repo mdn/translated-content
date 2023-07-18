@@ -31,25 +31,25 @@ Este atributo define para onde os dados são enviados. Seu valor deve ser um URL
 Neste exemplo, os dados são enviados para `http://foo.com`:
 
 ```html
-<form action="http://foo.com">
+<form action="http://foo.com"></form>
 ```
 
 Aqui, os dados são enviados para o mesmo servidor que hospeda a página do formulário, mas para um URL diferente no servidor:
 
 ```html
-<form action="/somewhere_else">
+<form action="/somewhere_else"></form>
 ```
 
 Quando especificado sem atributos, como abaixo, o atributo {{HTMLElement("form")}} faz com que os dados sejam enviados para a página que inclui o formulário:
 
 ```html
-<form>
+<form></form>
 ```
 
 Muitas páginas mais antigas usam a seguinte notação para indicar que os dados devem ser enviados para a mesma página que contém o formulário; Isso era necessário porque até HTML5, o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action) era obrigatório. Isso não é mais necessário.
 
 ```html
-<form action="#">
+<form action="#"></form>
 ```
 
 > **Nota:** **Nota: É possível especificar um URL que use o protocolo HTTPS (HTTP seguro). Quando você fizer isso, os dados são criptografados junto com o resto da solicitação, mesmo se o formulário em si é hospedado em uma página insegura acessada usando HTTP. Por outro lado, se o formulário estiver hospedado na página segura, mas você especificar um URL HTTP inseguro com o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action), todos os navegadores exibirão um aviso de segurança para o usuário cada vez que Tente enviar dados porque os dados não serão criptografados.**
@@ -70,8 +70,8 @@ O método GET é o método usado pelo navegador para pedir ao servidor para envi
 
 ```html
 <form action="http://foo.com" method="get">
-  <input name="say" value="Hi">
-  <input name="to" value="Mom">
+  <input name="say" value="Hi" />
+  <input name="to" value="Mom" />
   <button>Envie meus cumprimentos</button>
 </form>
 ```
@@ -93,8 +93,8 @@ Considere esta forma (a mesma acima):
 
 ```html
 <form action="http://foo.com" method="post">
-  <input name="say" value="Hi">
-  <input name="to" value="Mom">
+  <input name="say" value="Hi" />
+  <input name="to" value="Mom" />
   <button>Send my greetings</button>
 </form>
 ```
@@ -196,7 +196,7 @@ Por exemplo:
 
 ```html
 <form method="post" enctype="multipart/form-data">
-  <input type="file" name="myFile">
+  <input type="file" name="myFile" />
   <button>Send the file</button>
 </form>
 ```

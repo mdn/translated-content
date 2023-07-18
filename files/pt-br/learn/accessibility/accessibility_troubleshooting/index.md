@@ -1,5 +1,5 @@
 ---
-title: 'Avaliação: solucionando problemas de acessibilidade'
+title: "Avaliação: solucionando problemas de acessibilidade"
 slug: Learn/Accessibility/Accessibility_troubleshooting
 original_slug: Learn/Accessibility/Acessibilidade_problemas
 ---
