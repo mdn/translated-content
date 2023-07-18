@@ -5,7 +5,7 @@ slug: Web/CSS/position_value
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) `<position>`（或 **`<bg-position>`**）[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示用于设置相对于元素盒子的位置的 2 维空间中的坐标。
+[CSS](/zh-CN/docs/Web/CSS) `<position>`（或 **`<bg-position>`**）[数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示用于设置相对于元素盒子的位置的 2 维空间中的坐标。它被用于 {{cssxref("background-position")}} 和 {{cssxref("offset-anchor")}} 属性。
 
 > **备注：** 由 `<position>` 值表述的最终位置并不需要位于元素的盒子中。
 
@@ -42,13 +42,13 @@ keyword value keyword value /* 每个值都是其前面的关键字的偏移量 
 
 横坐标值和纵坐标值都独立进行插值。而由于两者插值速度都由同一[缓动函数](/zh-CN/docs/Web/CSS/easing-function)定义，点将沿一条直线移动。
 
-### 形式语法
+## 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### 有效位置
+### 有效位置值
 
 ```plain example-good
 center
@@ -62,7 +62,7 @@ bottom 12vmin right -6px
 8rem 14px
 ```
 
-### 无效位置
+### 无效位置值
 
 ```plain example-bad
 left right
