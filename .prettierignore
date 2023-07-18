@@ -20,7 +20,6 @@ build/
 /files/es/learn/html/**/*.md
 /files/es/learn/javascript/**/*.md
 /files/es/learn/server-side/**/*.md
-/files/es/mozilla/**/*.md
 /files/es/web/api/**/*.md
 /files/es/web/css/**/*.md
 /files/es/web/html/**/*.md
