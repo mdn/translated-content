@@ -10,7 +10,7 @@ Un _caracter_ es un símbolo (letras, números, puntuación) o un caracter de "c
 
 ### Conocimientos generales
 
-- [Character (informática)](https://es.wikipedia.org/wiki/Character_(informática)) en Wikipedia
+- [Character (informática)](<https://es.wikipedia.org/wiki/Character_(informática)>) en Wikipedia
 - [Character encoding](https://es.wikipedia.org/wiki/Character_encoding) en Wikipedia
 - [ASCII](https://es.wikipedia.org/wiki/ASCII) en Wikipedia
 - [UTF-8](https://es.wikipedia.org/wiki/UTF-8) en Wikipedia

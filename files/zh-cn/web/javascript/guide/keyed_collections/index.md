@@ -17,17 +17,17 @@ ECMAScript 2015 引入了一个新的数据结构来将一个值映射到另一�
 
 ```js
 var sayings = new Map();
-sayings.set('dog', 'woof');
-sayings.set('cat', 'meow');
-sayings.set('elephant', 'toot');
+sayings.set("dog", "woof");
+sayings.set("cat", "meow");
+sayings.set("elephant", "toot");
 sayings.size; // 3
-sayings.get('fox'); // undefined
-sayings.has('bird'); // false
-sayings.delete('dog');
-sayings.has('dog'); // false
+sayings.get("fox"); // undefined
+sayings.has("bird"); // false
+sayings.delete("dog");
+sayings.has("dog"); // false
 
 for (var [key, value] of sayings) {
-  console.log(key + ' goes ' + value);
+  console.log(key + " goes " + value);
 }
 // "cat goes meow"
 // "elephant goes toot"
@@ -110,7 +110,7 @@ for (let item of mySet) console.log(item);
 Array.from(mySet);
 [...mySet2];
 
-mySet2 = new Set([1,2,3,4]);
+mySet2 = new Set([1, 2, 3, 4]);
 ```
 
 ### `Array`和`Set`的对比

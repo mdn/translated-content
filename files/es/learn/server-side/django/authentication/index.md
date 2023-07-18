@@ -13,7 +13,7 @@ En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu
       <th scope="row">Prerequisitos:</th>
       <td>
         Completa todos los temas del tutorial anterior, incluyendo:
-        <a href="/en-US/docs/Learn/Server-side/Django/Sessions"
+        <a href="/es/docs/Learn/Server-side/Django/Sessions"
           >Django Tutorial Part 7: Sessions framework</a
         >.
       </td>

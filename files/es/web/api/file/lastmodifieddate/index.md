@@ -15,7 +15,7 @@ var time = instanceOfFile.lastModifiedDate
 
 ## Valor
 
-Un objeto [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date).
+Un objeto [`Date`](/es/docs/Web/JavaScript/Reference/Global_Objects/Date).
 
 ## Ejemplo
 

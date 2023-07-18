@@ -45,7 +45,7 @@ function sum(a = 1, b = 2) {
 }
 ```
 
-함수가 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) 모드에 있어야 하고 전체 스크립트 또는 포함된 함수가 [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)에 있어도 괜찮으면 함수 외부에서 `"use strict"` 지시문을 이동할 수 있습니다:
+함수가 [strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode) 모드에 있어야 하고 전체 스크립트 또는 포함된 함수가 [strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode)에 있어도 괜찮으면 함수 외부에서 `"use strict"` 지시문을 이동할 수 있습니다:
 
 ```js example-good
 'use strict';

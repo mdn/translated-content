@@ -18,15 +18,15 @@ original_slug: Games/Introducción_al_desarrollo_de_juegos_HTML5_(resumen)
 
 ## Tecnologías Web
 
-| Funcionalidad | Tecnología |
-| ------------- | --- |
-| Audio         | [Web Audio API](/es/docs/Web_Audio_API) |
-| Graphics      | [WebGL](/es/docs/WebGL) ([OpenGL ES](http://www.khronos.org/opengles/) 2.0) |
+| Funcionalidad | Tecnología                                                                                                                                                                                                                                                     |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Audio         | [Web Audio API](/es/docs/Web_Audio_API)                                                                                                                                                                                                                        |
+| Graphics      | [WebGL](/es/docs/WebGL) ([OpenGL ES](http://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                    |
 | Input         | [Touch events](/es/docs/DOM/Touch_events), [Gamepad API](/es/docs/API/Gamepad/Using_Gamepad_API), sensores del dispositivo, [WebRTC](/es/docs/WebRTC), [Full Screen API](/es/docs/DOM/Using_fullscreen_mode), [Pointer Lock API](/es/docs/WebAPI/Pointer_Lock) |
-| Language      | [JavaScript](/es/docs/JavaScript) (o C/C++ usando [Emscripten](https://github.com/kripken/emscripten/wiki) para compilar a JavaScript) |
-| Networking    | [WebRTC](/es/docs/WebRTC) y/o [WebSockets](/es/docs/WebSockets) |
-| Storage       | [IndexedDB](/es/docs/IndexedDB) o la "nube" |
-| Web           | [HTML](/es/docs/HTML), [CSS](/es/docs/CSS), [SVG](/es/docs/SVG), [Social API](/es/docs/Social_API) (¡y muchos más!) |
+| Language      | [JavaScript](/es/docs/JavaScript) (o C/C++ usando [Emscripten](https://github.com/kripken/emscripten/wiki) para compilar a JavaScript)                                                                                                                         |
+| Networking    | [WebRTC](/es/docs/WebRTC) y/o [WebSockets](/es/docs/WebSockets)                                                                                                                                                                                                |
+| Storage       | [IndexedDB](/es/docs/IndexedDB) o la "nube"                                                                                                                                                                                                                    |
+| Web           | [HTML](/es/docs/HTML), [CSS](/es/docs/CSS), [SVG](/es/docs/SVG), [Social API](/es/docs/Social_API) (¡y muchos más!)                                                                                                                                            |
 
 - [Full Screen API](/es/docs/DOM/Using_fullscreen_mode)
   - : Juego de pantalla completa.

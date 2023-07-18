@@ -44,4 +44,4 @@ var obj = Object.setPrototypeOf({}, null);
 
 ## 참조
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/ko/docs/Web/JavaScript/Guide/Functions)
