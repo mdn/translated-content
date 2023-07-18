@@ -65,7 +65,7 @@ En este ejemplo, los datos se envían a una dirección URL absoluta - `http://fo
 Aquí, nosotros usamos una URL relativa - los datos se envían a una dirección URL diferente en el servidor:
 
 ```html
-<form action="/ somewhere_else"></form>
+<form action="/somewhere_else"></form>
 ```
 
 Cuando se especifica sin atributos, como abajo, el {{HTMLElement ( "form")}} los datos se envían a la misma página en que la "forma" está presente :
