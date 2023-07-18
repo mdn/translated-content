@@ -13,7 +13,7 @@ Ahora que has creado (y probado) un fantastico sitio web para la [Biblioteca Loc
       <th scope="row">Requisitos previos:</th>
       <td>
         Completar todos los tutoriales de los temas previos, incluyendo
-        <a href="/en-US/docs/Learn/Server-side/Django/Testing"
+        <a href="/es/docs/Learn/Server-side/Django/Testing"
           >Django Tutorial Part 10: Testing a Django web application</a
         >.
       </td>
@@ -457,7 +457,7 @@ python-3.5.2
 
 > **Nota:** Heroku sólo soporta un número pequeño de [Python runtimes](https://devcenter.heroku.com/articles/python-support#supported-python-runtimes). Tú puedes especificar valores de runtime de Python 3, pero en el momento de esta redacción la versión anterior será soportada como definida.
 
-#### Guardar los cambios en Github y volver a probar.
+#### Guardar los cambios en Github y volver a probar
 
 A continuacion, guardemos nuestros cambios en Github. En el terminal (dentro de nuestro respositorio), introduce los comandos siguientes:
 

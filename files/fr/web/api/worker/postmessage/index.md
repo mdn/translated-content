@@ -56,7 +56,7 @@ Pour l'exemple en entier, voir [Basic dedicated worder example](https://github.c
 
 Cette exemple montre une extension pour Firefox qui transfert un `ArrarBuffer` depuis le _thread_ principal vers le `ChromeWorker`, et le `ChromeWorker` répond au le thread principal.
 
-#### Main thread code:
+#### Main thread code
 
 ```js
 var myWorker = new ChromeWorker(self.path + 'myWorker.js');

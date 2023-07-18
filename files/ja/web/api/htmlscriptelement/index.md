@@ -9,7 +9,7 @@ l10n:
 
 HTML の {{HTMLElement("script")}} 要素は **`HTMLScriptElement`** インターフェイスを公開しています。これは（通常の {{domxref("HTMLElement")}} から継承によって利用できるものに加えて） `<script>` 要素の動作や実行を操作するための特別なプロパティやメソッドを提供します。
 
-JavaScript ファイルは `application/javascript` の [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)で提供されますが、 しかし、ブラウザーは寛大で、スクリプトが画像型 (`image/*`)、動画型 (`video/*`)、音声型 (`audio/*`)、または `text/csv` で提供されている場合のみブロックされます。スクリプトがブロックされた場合、その要素は {{domxref("Element/error_event", "error")}} イベントを受け取ります。それ以外の場合は、{{domxref("Window/load_event", "load")}} イベントを受け取ります。
+JavaScript ファイルは `application/javascript` の [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)で提供されますが、 しかし、ブラウザーは寛大で、スクリプトが画像型 (`image/*`)、動画型 (`video/*`)、音声型 (`audio/*`)、または `text/csv` で提供されている場合のみブロックされます。スクリプトがブロックされた場合、その要素は {{domxref("HTMLElement/error_event", "error")}} イベントを受け取ります。それ以外の場合は、{{domxref("Window/load_event", "load")}} イベントを受け取ります。
 
 {{InheritanceDiagram}}
 
@@ -27,7 +27,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
   - : 文字列で、外部スクリプトの文字エンコーディングを表します。これは [`charset`](/ja/docs/Web/HTML/Element/script#charset) 属性を反映します。
 - {{domxref("HTMLScriptElement.async")}}, {{domxref("HTMLScriptElement.defer")}}
 
-  - : `async` および `defer` 属性は論理属性で、スクリプトの実行方法を制御します。 **`defer` および `async` 属性は `src` 属性がないときには指定しないでください。**
+  - : `async` および `defer` 属性は論理属性で、スクリプトの実行方法を制御します。 **`defer` および `async` 属性は、`src` 属性がないときには指定しないでください。**
 
     取りうる実行モードは 3 種類あります。
 
@@ -52,11 +52,11 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティもあ
 - {{domxref("HTMLScriptElement.noModule")}}
   - : 論理値で、 true ならば [ES モジュール](/ja/docs/Web/JavaScript/Guide/Modules)に対応したブラウザーにおいてスクリプトの実行を停止します。 — JavaScript モジュールに対応して*いない*古いブラウザーで代替スクリプトを実行するために使用します。
 - {{domxref("HTMLScriptElement.referrerPolicy")}}
-  - : 文字列で、 HTML 属性 [`referrerPolicy`](/ja/docs/Web/HTML/Element/script#referrerPolicy) を反映し、スクリプトを取得する際、そのスクリプトの取得が完了した時にどのリファラーを使用するかを示します。
+  - : 文字列で、 HTML 属性 [`referrerPolicy`](/ja/docs/Web/HTML/Element/script#referrerpolicy) を反映し、スクリプトを取得する際、そのスクリプトの取得が完了した時にどのリファラーを使用するかを示します。
 
 ## 静的メソッド
 
-- {{domxref("HTMLScriptElement.supports()")}}
+- {{domxref("HTMLScriptElement.supports_static")}}
   - : ブラウザーが指定された種類のスクリプトに対応している場合は `true` を、それ以外の場合は `false` を返します。
     このメソッドは、スクリプト関連の機能検出のためのシンプルで統一された方法を提供します。
 
@@ -82,8 +82,13 @@ function loadError(oError) {
 function prefixScript(url, onloadFunction) {
   const newScript = document.createElement("script");
   newScript.onerror = loadError;
-  if (onloadFunction) { newScript.onload = onloadFunction; }
-  document.currentScript.parentNode.insertBefore(newScript, document.currentScript);
+  if (onloadFunction) {
+    newScript.onload = onloadFunction;
+  }
+  document.currentScript.parentNode.insertBefore(
+    newScript,
+    document.currentScript
+  );
   newScript.src = url;
 }
 ```
@@ -98,7 +103,9 @@ function loadError(oError) {
 function affixScriptToHead(url, onloadFunction) {
   const newScript = document.createElement("script");
   newScript.onerror = loadError;
-  if (onloadFunction) { newScript.onload = onloadFunction; }
+  if (onloadFunction) {
+    newScript.onload = onloadFunction;
+  }
   document.head.appendChild(newScript);
   newScript.src = url;
 }
@@ -108,21 +115,23 @@ function affixScriptToHead(url, onloadFunction) {
 
 ```js
 affixScriptToHead("myScript1.js");
-affixScriptToHead("myScript2.js", () => { alert("The script \"myScript2.js\" has been correctly loaded."); });
+affixScriptToHead("myScript2.js", () => {
+  alert('The script "myScript2.js" has been correctly loaded.');
+});
 ```
 
 ### あるスクリプト種別に対応しているかどうかをチェック
 
-{{domxref("HTMLScriptElement.supports()")}} は、ブラウザーが特定の種類のスクリプトに対応しているかどうかをチェックする統一的な仕組みを提要します。
+{{domxref("HTMLScriptElement.supports_static")}} は、ブラウザーが特定の種類のスクリプトに対応しているかどうかをチェックする統一的な仕組みを提要します。
 
 以下の例では、 `noModule` 属性の存在を代替として使用して、モジュールの対応をチェックする方法を示しています。
 
 ```js
 function checkModuleSupport() {
-  if ('supports' in HTMLScriptElement) {
-    return HTMLScriptElement.supports('module');
+  if ("supports" in HTMLScriptElement) {
+    return HTMLScriptElement.supports("module");
   }
-  return 'noModule' in document.createElement('script');
+  return "noModule" in document.createElement("script");
 }
 ```
 

@@ -122,7 +122,7 @@ export default {
    </ul>
    ```
 
-    这样修改后，`<li>` 标签中的 JavaScript 表达式就可以访问 `item` 了，这意味着我们可以使用 `v-bind` 来传递 `item` 对象的字段给 `ToDoItem` 组件了。这非常有用，我们想让列表中的待办事项的 `label` 值展示到它的 label 中，而不是显示一个静态的“My Todo Item”。此外，我们想让它们的 checked 状态反映它们的 `done` 字段，而不是总设置为 `done="true"`。
+   这样修改后，`<li>` 标签中的 JavaScript 表达式就可以访问 `item` 了，这意味着我们可以使用 `v-bind` 来传递 `item` 对象的字段给 `ToDoItem` 组件了。这非常有用，我们想让列表中的待办事项的 `label` 值展示到它的 label 中，而不是显示一个静态的“My Todo Item”。此外，我们想让它们的 checked 状态反映它们的 `done` 字段，而不是总设置为 `done="true"`。
 
 4. 把 `label="My ToDo Item"` 改成 `:label="item.label"`, `:done="false"` 改成 `:done="item.done"`，像下面这样：
 

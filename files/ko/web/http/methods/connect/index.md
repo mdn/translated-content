@@ -35,7 +35,7 @@ slug: Web/HTTP/Methods/CONNECT
     </tr>
     <tr>
       <th scope="row">
-        Allowed in <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a>
+        Allowed in <a href="/ko/docs/Web/Guide/HTML/Forms">HTML forms</a>
       </th>
       <td>No</td>
     </tr>

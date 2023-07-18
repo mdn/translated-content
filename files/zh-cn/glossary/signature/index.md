@@ -11,4 +11,4 @@ slug: Glossary/Signature
 
 ## 了解更多
 
-- [Signature](https://zh.wikipedia.org/wiki/Signature_(disambiguation)) on Wikipedia
+- [Signature](<https://zh.wikipedia.org/wiki/Signature_(disambiguation)>) on Wikipedia

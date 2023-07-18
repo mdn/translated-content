@@ -33,7 +33,7 @@ El siguiente ejemplo HTML completo muestra la forma en que es utilizada la propi
 </html>
 ```
 
-### Ver también:
+### Ver también
 
 [window.locationbar](/en/DOM/window.locationbar), [window.personalbar](/en/DOM/window.personalbar), [window.scrollbars](/en/DOM/window.scrollbars), [window.statusbar](/en/DOM/window.statusbar), [window.toolbar](/en/DOM/window.toolbar)
 

@@ -49,7 +49,7 @@ var my_obj = Object.create(
         return this.foo;
       },
     },
-  }
+  },
 );
 my_obj.foo = 1;
 
@@ -75,7 +75,7 @@ Object.keys("foo");
 如需在原生不支援、較舊的環境中增加 `Object.keys` 的相容性，請複製以下片段：
 
 ```js
-// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+// From https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 if (!Object.keys) {
   Object.keys = (function () {
     "use strict";

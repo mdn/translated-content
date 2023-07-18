@@ -308,7 +308,7 @@ button.onclick = function() {
       typeof myString;
       ```
 
-    这些结构在某些情况下是非常有用的，例如，如果一个用户将一个数字输入到一个表单文本字段中，这将是一个字符串，但是如果你想要将这个数字添加到某些东西中时，你需要它是一个数字，所以你可以通过 `Number()` 来处理这个问题。我们在[数字猜谜游戏中第 54 行](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54)就是这么做的。
+    这些结构在某些情况下是非常有用的，例如，如果一个用户将一个数字输入到一个表单文本字段中，这将是一个字符串，但是如果你想要将这个数字添加到某些东西中时，你需要它是一个数字，所以你可以通过 `Number()` 来处理这个问题。我们在[数字猜谜游戏中第 54 行](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html#L54)就是这么做的。
 
 ## 结论
 

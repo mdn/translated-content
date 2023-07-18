@@ -120,7 +120,7 @@ var obj = Object.create(
       value: 3,
       enumerable: true, // baz 是自身可列舉的屬性。
     },
-  }
+  },
 );
 
 var copy = Object.assign({}, obj);

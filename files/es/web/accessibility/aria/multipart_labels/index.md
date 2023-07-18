@@ -16,14 +16,20 @@ La solución esta en un atributo ARIA llamado **aria-labelledby**. Su parámetro
 
 Tanto **aria-labelledby** y **aria-describedby** se especifican en el elemento de formulario que debe etiquetarse, por ejemplo un \<input>. En ambos casos, la etiqueta for/label para ligar a los controles que puedan existir son anuladas por **aria-labelledby**. Si en una página se provee **aria-labelledby**, se debería colocar también una etiqueta para también soportar navegadores antiguos que no tengan aún soperte ARIA. Con Firefox 3, los usuarios ciegos tendrán automáticamente mejor accesibilidad con el nuevo atributo, pero los usuarios de navadores antiguos de esta forma no son dejados en la oscuridad.
 
-#### Ejemplo:
+#### Ejemplo
 
 {{EmbedLiveSample('')}}
 
 ```html
-<input aria-labelledby="etiquetaApagado tiempoApagado unidadApagado" type="checkbox" />
+<input
+  aria-labelledby="etiquetaApagado tiempoApagado unidadApagado"
+  type="checkbox" />
 <span id="etiquetaApagado">Apagar computadora después de </span>
-<input aria-labelledby="etiquetaApagado tiempoApagado unidadApagado" id="tiempoApagado" type="text" value="10" />
+<input
+  aria-labelledby="etiquetaApagado tiempoApagado unidadApagado"
+  id="tiempoApagado"
+  type="text"
+  value="10" />
 <span id="unidadApagado"> minutos</span>
 ```
 

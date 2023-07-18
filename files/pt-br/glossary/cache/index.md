@@ -12,4 +12,4 @@ O **cache** ajuda a reduzir o tempo de resposta de uma página após a primeira 
 
 ### Conhecimento geral
 
-- {{interwiki("wikipedia", "Web cache")}} on Wikipedia
+- [Web cache](https://pt.wikipedia.org/wiki/Web_cache) on Wikipedia

@@ -22,7 +22,7 @@ Cookie: nombre=valor; nombre2=valor2...nombreN=valorN;
 ```
 
 - \<cookie-lista>
-  - : Una lista de pares `nombre:valor` definidos como `<nombre-de-cookie=<valor-de-cookie>`. Los pares en la lista son separados por un punto y coma seguido de un espacio `('; ')`.
+  - : Una lista de pares `nombre:valor` definidos como `<nombre-de-cookie>=<valor-de-cookie>`. Los pares en la lista son separados por un punto y coma seguido de un espacio `('; ')`.
 
 ## Ejemplos
 

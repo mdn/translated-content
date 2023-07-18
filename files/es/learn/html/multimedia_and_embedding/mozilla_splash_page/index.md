@@ -13,7 +13,7 @@ En esta evaluación, pondremos a prueba tu conocimiento de algunas de las técni
       <th scope="row">Requisitos previos:</th>
       <td>
         Antes de intentar esta evaluación, ya deberías conocer el módulo de
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding"
+        <a href="/es/docs/Learn/HTML/Multimedia_and_embedding"
           >Multimedia e inserción</a
         >.
       </td>

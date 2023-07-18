@@ -132,14 +132,14 @@ console.log("numericStringArray:", numericStringArray.join());
 console.log("Sorted without a compare function:", numericStringArray.sort());
 console.log(
   "Sorted with compareNumbers:",
-  numericStringArray.sort(compareNumbers)
+  numericStringArray.sort(compareNumbers),
 );
 
 console.log("mixedNumericArray:", mixedNumericArray.join());
 console.log("Sorted without a compare function:", mixedNumericArray.sort());
 console.log(
   "Sorted with compareNumbers:",
-  mixedNumericArray.sort(compareNumbers)
+  mixedNumericArray.sort(compareNumbers),
 );
 ```
 

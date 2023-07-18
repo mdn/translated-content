@@ -65,7 +65,7 @@ httpRequest.send();
 ```js
 httpRequest.setRequestHeader(
   "Content-Type",
-  "application/x-www-form-urlencoded"
+  "application/x-www-form-urlencoded",
 );
 ```
 
@@ -162,7 +162,7 @@ if (httpRequest.status === 200) {
 
 你可以[由此測試本例](http://www.w3clubs.com/mozdev/httprequest_test.html)，也可以參考[測試檔案](http://www.w3clubs.com/mozdev/test.html)。
 
-> **備註：** 如果你傳送一個要求到一段代碼，而這段代碼將回應 XML 而非靜態的 HTML 檔，那則必須要設定一個可以在 IE 中運作的 header。如果我們不設定 header `Content-Type: application/xml`，IE 將會在我們試圖運作的 XML 項目行下，回應一個 “Object Expected” 的錯誤。
+> **備註：** 如果你傳送一個要求到一段代碼，而這段代碼將回應 XML 而非靜態的 HTML 檔，那則必須要設定一個可以在 IE 中運作的 header。如果我們不設定 header `Content-Type: application/xml`，IE 將會在我們試圖運作的 XML 項目行下，回應一個 「Object Expected」 的錯誤。
 
 > **備註：** 如果我們沒有設定 header `Cache-Control: no-cache`，那瀏覽器將會藏匿 response 並且不再重新傳送 request，造成除錯上的挑戰。我們也可以增加一個 always-different GET 參數，像是 timestamp 或 random number（詳見[bypassing the cache](/zh-TW/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache)）
 

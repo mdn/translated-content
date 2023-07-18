@@ -26,8 +26,9 @@ _JavaScript&nbsp;:_
 ```js
 var sortVal = xsltProcessor.getParameter(null, "monOrdre");
 
-if (sortVal == "" || sortVal == "descendant")
+if (sortVal == "" || sortVal == "descendant") {
   xsltProcessor.setParameter(null, "monOrdre", "ascendant");
-else
+} else {
   xsltProcessor.setParameter(null, "monOrdre", "descendant");
+}
 ```

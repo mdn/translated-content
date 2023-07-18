@@ -28,9 +28,9 @@ original_slug: Web/HTML/Elemento/var
 
 **Eventos**: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
 
-##### Atributos Específicos - No tiene.
+##### Atributos Específicos - No tiene
 
-##### Atributos Transicionales - No tiene.
+##### Atributos Transicionales - No tiene
 
 ### Ejemplos
 

@@ -112,4 +112,4 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 - [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/CSS/@media/")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Web/CSS/@media/")}}

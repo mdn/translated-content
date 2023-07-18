@@ -146,7 +146,7 @@ req.addEventListener("loadend", loadEnd);
 
 function loadEnd(e) {
   console.log(
-    "The transfer finished (although we don't know if it succeeded or not)."
+    "The transfer finished (although we don't know if it succeeded or not).",
   );
 }
 ```
@@ -225,7 +225,7 @@ function loadEnd(e) {
 在我們提交 {{HTMLElement("form")}} 時，瀏覽器自動幫我們做了上面這些工作。假如要使用 JavaScript 達到同樣的效果就必須告訴直譯器（interpreter）要處理的*所有事*。然而，如何透過*純粹的* AJAX 來傳送表單複雜到難以在本頁解釋所有細節。基於這個理由，我們改為在這此提供**一組完整（教學用）的框架**，可用於上述四種的每一種*提交*（submit），並包括**上傳檔案**：
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -237,7 +237,7 @@ function loadEnd(e) {
 |*|
 |*|  :: XMLHttpRequest.prototype.sendAsBinary() Polyfill ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  https://developer.mozilla.org/zh-TW/docs/DOM/XMLHttpRequest#sendAsBinary()
 \*/
 
       if (!XMLHttpRequest.prototype.sendAsBinary) {
@@ -257,7 +257,7 @@ function loadEnd(e) {
 |*|
 |*|  :: AJAX Form Submit Framework ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+|*|  https://developer.mozilla.org/zh-TW/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
 |*|
 |*|  This framework is released under the GNU Public License, version 3 or later.
 |*|  https://www.gnu.org/licenses/gpl-3.0-standalone.html
@@ -286,9 +286,9 @@ function loadEnd(e) {
               "get",
               oData.receiver.replace(
                 /(?:\?.*)?$/,
-                oData.segments.length > 0 ? "?" + oData.segments.join("&") : ""
+                oData.segments.length > 0 ? "?" + oData.segments.join("&") : "",
               ),
-              true
+              true,
             );
             oAjaxReq.send(null);
           } else {
@@ -300,7 +300,7 @@ function loadEnd(e) {
                 "---------------------------" + Date.now().toString(16);
               oAjaxReq.setRequestHeader(
                 "Content-Type",
-                "multipart\/form-data; boundary=" + sBoundary
+                "multipart\/form-data; boundary=" + sBoundary,
               );
               oAjaxReq.sendAsBinary(
                 "--" +
@@ -309,13 +309,13 @@ function loadEnd(e) {
                   oData.segments.join("--" + sBoundary + "\r\n") +
                   "--" +
                   sBoundary +
-                  "--\r\n"
+                  "--\r\n",
               );
             } else {
               /* enctype is application/x-www-form-urlencoded or text/plain */
               oAjaxReq.setRequestHeader("Content-Type", oData.contentType);
               oAjaxReq.send(
-                oData.segments.join(oData.technique === 2 ? "\r\n" : "&")
+                oData.segments.join(oData.technique === 2 ? "\r\n" : "&"),
               );
             }
           }
@@ -394,7 +394,7 @@ function loadEnd(e) {
                       oFile.name +
                       '"\r\nContent-Type: ' +
                       oFile.type +
-                      "\r\n\r\n"
+                      "\r\n\r\n",
                   );
                   this.status++;
                   oSegmReq.readAsBinaryString(oFile);
@@ -408,7 +408,7 @@ function loadEnd(e) {
                   this.segments.push(
                     fFilter(oField.name) +
                       "=" +
-                      fFilter(oField.files[nFile++].name)
+                      fFilter(oField.files[nFile++].name),
                   )
                 );
               }
@@ -426,7 +426,7 @@ function loadEnd(e) {
                       oField.value +
                       "\r\n"
                   : /* enctype is application/x-www-form-urlencoded or text/plain or method is GET */
-                    fFilter(oField.name) + "=" + fFilter(oField.value)
+                    fFilter(oField.name) + "=" + fFilter(oField.value),
               );
             }
           }
@@ -602,7 +602,7 @@ AJAXSubmit(myForm);
 {{domxref("XMLHttpRequest.FormData", "FormData")}} 建構式可以讓我們收集一連串名／值對資料並透過 `XMLHttpRequest` 送出。其主要用於傳送表單資料，但也能夠單獨的由表單建立來傳輸使用者輸入的資料。若表單的編碼類型（encoding type）被設定為「multipart/form-data」，則由 `FormData` 所發送的資料格式和表單用來傳送資料的 `submit()` 方法相同。FormData 物件可以搭配 `XMLHttpRequest` 以多種方式使用。相關的範例，以及可以怎麼利用 FormData 配合 XMLHttpRequest 的說明，請參考[使用 FormData 物件](/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)頁面。為了教學使用，下方為**一個利用 `FormData` API 來改寫[先前範例](#小型原生框架)的*翻譯*版本**。注意這段精簡後的程式碼：
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="Content-Type" charset="UTF-8" />
@@ -658,9 +658,9 @@ AJAXSubmit(myForm);
             "get",
             oFormElement.action.replace(
               /(?:\?.*)?$/,
-              sSearch.replace(/^&/, "?")
+              sSearch.replace(/^&/, "?"),
             ),
-            true
+            true,
           );
           oReq.send(null);
         }
@@ -774,7 +774,7 @@ AJAXSubmit(myForm);
 ```js
 function getHeaderTime() {
   console.log(
-    this.getResponseHeader("Last-Modified")
+    this.getResponseHeader("Last-Modified"),
   ); /* A valid GMTString date or null */
 }
 
@@ -791,7 +791,7 @@ oReq.send();
 ```js
 function getHeaderTime() {
   var nLastVisit = parseFloat(
-    window.localStorage.getItem("lm_" + this.filepath)
+    window.localStorage.getItem("lm_" + this.filepath),
   );
   var nLastModif = Date.parse(this.getResponseHeader("Last-Modified"));
 
@@ -822,7 +822,7 @@ ifHasChanged("yourpage.html", function (nModif, nVisit) {
       this.filepath +
       "' has been changed on " +
       new Date(nModif).toLocaleString() +
-      "!"
+      "!",
   );
 });
 ```
@@ -868,7 +868,7 @@ oReq.send(null);
 ```js
 const XMLHttpRequest = Components.Constructor(
   "@mozilla.org/xmlextras/xmlhttprequest;1",
-  "nsIXMLHttpRequest"
+  "nsIXMLHttpRequest",
 );
 ```
 

@@ -29,4 +29,4 @@ Note, no entanto, que callbacks são normalmente utilizados para continuar a exe
 
 ### Conhecimento geral
 
-- {{interwiki("wikipedia", "Callback", "Callback")}} no Wikipedia
+- [Callback](https://pt.wikipedia.org/wiki/Callback) no Wikipedia

@@ -14,7 +14,7 @@ En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y
       <td>
         Completar todos los temas de tutoriales anteriores, incluyendo
         <a
-          href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions"
+          href="/es/docs/Learn/Server-side/Django/authentication_and_sessions"
           >Tutorial Django Parte 8: Autenticación y permisos de usuarios</a
         >.
       </td>

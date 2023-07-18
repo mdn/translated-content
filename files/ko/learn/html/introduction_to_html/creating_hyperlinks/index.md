@@ -13,11 +13,11 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
       <th scope="row">미리 알아두면 좋은 지식들:</th>
       <td>
         기본적인 HTML 에 대한 친숙함, as covered in
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >. HTML text formatting, as covered in
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML text fundamentals</a
         >.
       </td>

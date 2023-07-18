@@ -29,7 +29,7 @@ Repare que `cx` e `cy` são para definir as coordenadas x e y do círculo, `r` �
 
 ### Conhecimento Geral
 
-- {{Interwiki("wikipedia", "SVG")}} na Wikipedia
+- [SVG](https://pt.wikipedia.org/wiki/SVG) na Wikipedia
 
 ### Aprendendo SVG
 
