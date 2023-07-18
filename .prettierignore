@@ -41,7 +41,6 @@ build/
 /files/fr/web/http/**/*.md
 /files/fr/web/javascript/**/*.md
 /files/fr/web/svg/**/*.md
-/files/fr/webassembly/**/*.md
 
 # ja
 /files/ja/games/**/*.md
