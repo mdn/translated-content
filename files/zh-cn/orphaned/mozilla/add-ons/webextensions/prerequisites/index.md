@@ -1,6 +1,7 @@
 ---
 title: 前提条件
-slug: Mozilla/Add-ons/WebExtensions/Prerequisites
+slug: orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
+original_slug: Mozilla/Add-ons/WebExtensions/Prerequisites
 ---
 
 {{AddonSidebar}}
