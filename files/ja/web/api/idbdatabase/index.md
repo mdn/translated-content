@@ -33,7 +33,7 @@ IndexedDB API の `IDBDatabase` インターフェイスは、[データベー�
 - {{domxref("IDBDatabase.transaction")}}
   - : オブジェクトストアにアクセスできる{{domxref("IDBTransaction.objectStore")}}メソッドを含むトランザクションオブジェクト ({{domxref("IDBTransaction")}})を即座に返します。別スレッドで実行されます。
 
-### イベント
+## イベント
 
 `addEventListener()` を用いるか、このインターフェイスの `oneventname` プロパティにイベントリスナーを代入することで、これらのイベントを監視できます。
 
