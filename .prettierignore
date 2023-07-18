@@ -95,7 +95,6 @@ build/
 /files/ko/webassembly/**/*.md
 
 # pt-br
-/files/pt-br/games/**/*.md
 /files/pt-br/glossary/**/*.md
 /files/pt-br/learn/**/*.md
 /files/pt-br/learn/css/**/*.md
