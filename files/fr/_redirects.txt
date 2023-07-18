@@ -3128,7 +3128,6 @@
 /fr/docs/Mozilla/Add-ons/WebExtensions/Incompatibilités_Chrome	/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 /fr/docs/Mozilla/Add-ons/WebExtensions/Index	/fr/docs/Mozilla/Add-ons/WebExtensions
 /fr/docs/Mozilla/Add-ons/WebExtensions/Intercepter_requêtes_HTTP	/fr/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
-/fr/docs/Mozilla/Add-ons/WebExtensions/Prerequisites	/fr/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /fr/docs/Mozilla/Add-ons/WebExtensions/Travailler_avec_l_API_Tabs	/fr/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 /fr/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs	/fr/docs/Mozilla/Add-ons/WebExtensions/API
 /fr/docs/Mozilla/Add-ons/WebExtensions/What_next_	/fr/docs/Mozilla/Add-ons/WebExtensions/What_next
