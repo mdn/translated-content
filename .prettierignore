@@ -14,20 +14,17 @@ build/
 # The following folders still need a full pass:
 
 # es
-/files/es/games/**/*.md
 /files/es/learn/**/*.md
 /files/es/learn/css/**/*.md
 /files/es/learn/html/**/*.md
 /files/es/learn/javascript/**/*.md
 /files/es/learn/server-side/**/*.md
-/files/es/mdn/**/*.md
 /files/es/mozilla/**/*.md
 /files/es/web/api/**/*.md
 /files/es/web/css/**/*.md
 /files/es/web/html/**/*.md
 /files/es/web/http/**/*.md
 /files/es/web/javascript/**/*.md
-/files/es/webassembly/**/*.md
 
 # fr
 /files/fr/glossary/**/*.md
