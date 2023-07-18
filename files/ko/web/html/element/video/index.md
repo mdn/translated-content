@@ -114,7 +114,7 @@ AddType video/webm .webm
 
 ## DOM 인터페이스
 
-이 요소는 [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement) 인터페이스를 구현하고 있습니다.
+이 요소는 [`HTMLVideoElement`](/ko/docs/Web/API/HTMLVideoElement) 인터페이스를 구현하고 있습니다.
 
 ## 브라우저 호환성
 
