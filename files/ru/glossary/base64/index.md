@@ -48,7 +48,7 @@ original_slug: Web/API/WindowBase64/Base64_encoding_and_decoding
 
 - [`ArrayBuffer`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBuffer)
 - [Typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
-- [`ArrayBufferView`](/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBufferView)
+- [`ArrayBufferView`](/ru/docs/Web/JavaScript/Typed_arrays/ArrayBufferView)
 - [`Uint8Array`](/ru/docs/Web/JavaScript/Typed_arrays/Uint8Array)
 - [`StringView` – a C-like representation of strings based on typed arrays](/ru/docs/Web/JavaScript/Typed_arrays/StringView)
 - [`DOMString`](/ru/docs/Web/API/DOMString)

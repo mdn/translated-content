@@ -79,7 +79,7 @@ p {
 
 Pas cela :
 
-```css example-bad
+```css-nolint example-bad
 p { color: white; background-color: black; padding: 1rem; }
 ```
 
@@ -258,7 +258,7 @@ h3 {
 
 Pas ça :
 
-```css example-bad
+```css-nolint example-bad
 h1, h2, h3 {
   font-family: sans-serif;
   text-align: center;

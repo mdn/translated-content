@@ -156,7 +156,7 @@ Inside the promise `then()` block, we check whether the array length is more tha
 
 Now we have a {{domxref("VRDisplay")}} object, we can use it do a number of things. The next thing we want to do is wire up functionality to start and stop presentation of the WebGL content to the display.
 
-Continuing on with the previous code block, we now add an event listener to our start/stop button (`btn`) — when this button is clicked we want to check whether we are presenting to the display already (we do this in a fairly dumb fashion, by checking what the button [`textContent`](/en-US/docs/Web/API/Node/textContent) contains).
+Continuing on with the previous code block, we now add an event listener to our start/stop button (`btn`) — when this button is clicked we want to check whether we are presenting to the display already (we do this in a fairly dumb fashion, by checking what the button [`textContent`](/es/docs/Web/API/Node/textContent) contains).
 
 If the display is not already presenting, we use the {{domxref("VRDisplay.requestPresent()")}} method to request that the browser start presenting content to the display. This takes as a parameter an array of the {{domxref("VRLayerInit")}} objects representing the layers you want to present in the display.
 
@@ -414,7 +414,7 @@ function displayPoseStats(pose) {
   var angAcc = pose.angularAcceleration;
 ```
 
-We then write out the data into the information box, updating it on every frame. We've clamped each value to three decimal places using [`toFixed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed), as the values are hard to read otherwise.
+We then write out the data into the information box, updating it on every frame. We've clamped each value to three decimal places using [`toFixed()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed), as the values are hard to read otherwise.
 
 You should note that we've used a conditional expression to detect whether the linear acceleration and angular acceleration arrays are successfully returned before we display the data. These values are not reported by most VR hardware as yet, so the code would throw an error if we did not do this (the arrays return `null` if they are not successfully reported).
 

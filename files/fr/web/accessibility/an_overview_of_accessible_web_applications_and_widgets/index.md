@@ -72,9 +72,15 @@ _Example 3 : L'exemple ci-dessous ajoute des attributs ARIA aux balises déjà p
 
 <div>
   <!-- Remarquez les attributs role and aria-labelledby servant à décrire les tabulations. -->
-  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">Chapter 1 content goes here</div>
-  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">Chapter 2 content goes here</div>
-  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">Contenu du Quiz;/div>
+  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">
+    Chapter 1 content goes here
+  </div>
+  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">
+    Chapter 2 content goes here
+  </div>
+  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">
+    Contenu du Quiz;/div>
+  </div>
 </div>
 ```
 
@@ -107,14 +113,18 @@ Les parties pertinentes de l'exemple sont expliquées ci-dessous.Dans cet exempl
 
 ```html
 <div class="text">
-    <label id="tp1-label" for="first">First Name:</label>
-    <input type="text" id="first" name="first" size="20"
-           aria-labelledby="tp1-label"
-           aria-describedby="tp1"
-           aria-required="false" />
-    <div id="tp1" class="tooltip"
-         role="tooltip"
-         aria-hidden="true">Your first name is optional</div>
+  <label id="tp1-label" for="first">First Name:</label>
+  <input
+    type="text"
+    id="first"
+    name="first"
+    size="20"
+    aria-labelledby="tp1-label"
+    aria-describedby="tp1"
+    aria-required="false" />
+  <div id="tp1" class="tooltip" role="tooltip" aria-hidden="true">
+    Your first name is optional
+  </div>
 </div>
 ```
 
@@ -124,7 +134,7 @@ Exemple 2b. Un attribut basé sur le sélecteur indiquant l'état.*
 ```css
 div.tooltip[aria-hidden="true"] {
   display: none;
-  }
+}
 ```
 
 Le JavaScript à mettre à jour est la propriété **`aria-hidden`** du formulaire montré dans l'exemple 2c. Notez que le script met à jour seulement l'attribut **`aria-hidden`** à la (ligne 2) ; il n'y a pas besoin d'ajouter ou de supprimer un nom de classe personnalisé.
@@ -132,9 +142,9 @@ Le JavaScript à mettre à jour est la propriété **`aria-hidden`** du formulai
 _Exemple 2c. JavaScript pour mettre à jour l'attribut aria-checked._
 
 ```js
-var showTip = function(el) {
-  el.setAttribute('aria-hidden', 'false');
-}
+var showTip = function (el) {
+  el.setAttribute("aria-hidden", "false");
+};
 ```
 
 ### Les changements de rôles

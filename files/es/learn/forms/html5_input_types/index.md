@@ -14,7 +14,7 @@ En el [artículo anterior](/es/docs/Learn/Forms/Basic_native_form_controls) vimo
       <th scope="row">Requisitos previos:</th>
       <td>
         Formación básica en informática, y una
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
           >comprensión básica de HTML</a
         >.
       </td>

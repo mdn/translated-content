@@ -9,7 +9,7 @@ Las etiquetas XML ó _tags_ son muy similares a las de [HTML](/es/docs/Glossary/
 
 Esto significa que XML tiene una mayor aplicación; por ejemplo, a través de XML los servicios web pueden intercambiar peticiones y respuestas.
 
-## Para saber más...
+## Para saber más
 
 ### General knowledge
 

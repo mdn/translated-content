@@ -12,7 +12,7 @@ translation_of: Web/API/Document
 Объект **document** может быть получен из разных API:
 
 - Чаще всего используется прямой доступ к объекту **document** из сценариев [scripts](/ru/docs/HTML/Element/Script) которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)
-- Через свойство [`contentDocument`](/en-US/docs/Web/API/HTMLIFrameElement#Properties) объекта iframe.
+- Через свойство [`contentDocument`](/ru/docs/Web/API/HTMLIFrameElement#Properties) объекта iframe.
 - Как ответ [`responseXML`](/ru/docs/Web/API/XMLHttpRequest#responseXML) объекта [`XMLHttpRequest.`](/ru/docs/Web/API/XMLHttpRequest)
 - Доступ к документу может быть получен из элемента или узла через свойство {{domxref("Node.ownerDocument","ownerDocument")}}.
 
@@ -79,7 +79,7 @@ translation_of: Web/API/Document
 
 The `Document` interface is extended with the {{domxref("ParentNode")}} interface:
 
-{{page("/en-US/docs/Web/API/ParentNode","Properties")}}
+{{page("/ru/docs/Web/API/ParentNode","Properties")}}
 
 ### Extension for HTML documents
 
@@ -228,7 +228,7 @@ The `Document` interface is extended with the {{domxref("ParentNode")}} interfac
 The `Document` interface is extended with the {{domxref("XPathEvaluator")}} interface:
 
 - {{domxref("Document.createExpression","Document.createExpression(String expression, XPathNSResolver resolver)")}}
-  - : Compiles an [`XPathExpression`](/en-US/docs/XPathExpression) which can then be used for (repeated) evaluations.
+  - : Compiles an [`XPathExpression`](/ru/docs/XPathExpression) which can then be used for (repeated) evaluations.
 - {{domxref("Document.createNSResolver","Document.createNSResolver(Node resolver)")}}
   - : Creates an {{domxref("XPathNSResolver")}} object.
 - {{domxref("Document.evaluate","Document.evaluate(String expression, Node contextNode, XPathNSResolver resolver, Number type, Object result)")}}
