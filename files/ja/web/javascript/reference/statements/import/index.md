@@ -1,8 +1,6 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-page-type: javascript-statement
-browser-compat: javascript.statements.import
 l10n:
   sourceCommit: 096dd3505a1ebd8407380caf75984028d9fbee57
 ---
