@@ -421,7 +421,7 @@ const greeting = "I'm a bad example";
 
 而不是这种风格：
 
-```md
+```md-nolint
 | Heading 1 | Heading 2 | Heading 3 |
 | --------- | --------- | --------- |
 
