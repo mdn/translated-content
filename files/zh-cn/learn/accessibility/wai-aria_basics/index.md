@@ -49,8 +49,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 另一个例子：应用开始支持一些复杂的类型输入，像是日期选择器可选择日期，抑或是范围选择器可以用滑块选择值，HTML5 提供了以下的类型：
 
 ```html
-<input type="date">
-<input type="range">
+<input type="date" /> <input type="range" />
 ```
 
 他对于跨浏览器的支持并不好，而且他的样式修改也很麻烦，这使得他在网页的集成设计上难以有所用途。所以我们常常会用 JavaScript 库来做这事，所以会用一系列嵌套的 div 或者带有 class 的 table 元素，然后用 CSS 来制定样式，JavaScript 来控制行为。
@@ -118,7 +117,9 @@ WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role
 <header>
   <h1>...</h1>
   <nav>
-    <ul>...</ul>
+    <ul>
+      ...
+    </ul>
     <form>
       <!-- search form  -->
     </form>
@@ -154,7 +155,9 @@ WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role
 <header>
   <h1>...</h1>
   <nav role="navigation">
-    <ul>...</ul>
+    <ul>
+      ...
+    </ul>
     <form role="search">
       <!-- search form  -->
     </form>
@@ -172,7 +175,11 @@ WAI-ARIA 给浏览器增加了 [`role`](https://www.w3.org/TR/wai-aria-1.1/#role
 我们用了一个额外的功能：input 元素用了属性 [`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label), 它给它一个描述性标签，可以由屏幕阅读器读出，尽管我们没有 label 元素。在这些情况下，这非常有用——像这样的搜索表单是一个非常常见的，易于识别的功能，添加 label 会破坏页面设计。
 
 ```html
-<input type="search" name="q" placeholder="Search query" aria-label="Search through site content">
+<input
+  type="search"
+  name="q"
+  placeholder="Search query"
+  aria-label="Search through site content" />
 ```
 
 现在我们再用 VoiceOver，会得到以下改进：
@@ -221,7 +228,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 我们可以复制 [aria-no-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) 和 [quotes.json](https://github.com/mdn/learning-area/blob/main/accessibility/aria/quotes.json) ，然后像下面一样更新你的 `<section>` tag ：
 
 ```html
-<section aria-live="assertive">
+<section aria-live="assertive"></section>
 ```
 
 这会让你的屏幕阅读器在更新时可以读取内容。
@@ -231,7 +238,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 这里有一个附加的考虑—— 只读取更新的文本位。如果我们总是读出标题可能会很好，这样用户就可以记住正在读出的内容。为了能做到这个，我们增加了 [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) 给 section。再次更新 `<section>`，像这样：
 
 ```html
-<section aria-live="assertive" aria-atomic="true">
+<section aria-live="assertive" aria-atomic="true"></section>
 ```
 
 这个 `aria-atomic="true"` 属性告诉屏幕阅读器去读取整个元素的内容作为一个原子单位，而不是里头某个字符串更新了。
@@ -264,8 +271,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 
@@ -278,24 +284,29 @@ var intervalID = window.setInterval(showQuote, 10000);
 2. 把两个文件都用文本编辑器打开并且看看运作原理。
 3. 首先，在`<form>` 标签的正上方添加一个段落，如下，并用星号标记表单\<label>。这通常是我们为有视力的用户标记必填字段的一个常用手法。
 
-    ```html
-    <p>Fields marked with an asterisk (*) are required.</p>
-    ```
+   ```html
+   <p>Fields marked with an asterisk (*) are required.</p>
+   ```
 
 4. 这对于具备视力的人显而易见，但是对于屏幕阅读器用户而言就不友好了。所幸 WAI-ARIA 提供了 [`aria-required`](https://www.w3.org/TR/wai-aria-1.1/#aria-required) 属性来让屏幕阅读器获取提示来告诉用户这个 input 必须填写，更新你的 `<input>` 元素如下：
 
-    ```html
-    <input type="text" name="name" id="name" aria-required="true">
+   ```html
+   <input type="text" name="name" id="name" aria-required="true" />
 
-    <input type="number" name="age" id="age" aria-required="true">
-    ```
+   <input type="number" name="age" id="age" aria-required="true" />
+   ```
 
 5. 你过你保存了并且现在用屏幕阅读器测试，你会听到如下内容：「Enter your name star, required, edit text」
 6. 回到第二个关于数值范围的讨论，通常我们会用一个 tooltips 来展示，或者用 placeholder 显示提示信息。WAI-ARIA 有一个 [`aria-valuemin`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemin) 和 [`aria-valuemax`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemax) 属性来执行最大最小值，但现阶段看来支持程度并不好。另一个好办法就是用 `placeholder` 属性，当用户输入的时候，就会念出 placeholder 的内容最为信息提示。更新你的数值输入 input 如下：
 
-    ```html
-    <input type="number" name="age" id="age" placeholder="Enter 1 to 150" aria-required="true">
-    ```
+   ```html
+   <input
+     type="number"
+     name="age"
+     id="age"
+     placeholder="Enter 1 to 150"
+     aria-required="true" />
+   ```
 
 > **备注：** 你可以在这里看这个在线完成的例子 [form-validation-updated.html](http://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html).
 
@@ -313,18 +324,19 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 ```js
 function toggleMusician(bool) {
-  var instruItem = formItems[formItems.length-1];
-  if(bool) {
+  var instruItem = formItems[formItems.length - 1];
+  if (bool) {
     instruItem.input.disabled = false;
-    instruItem.label.style.color = '#000';
-    instruItem.input.setAttribute('aria-disabled', 'false');
-    hiddenAlert.textContent = 'Instruments played field now enabled; use it to tell us what you play.';
+    instruItem.label.style.color = "#000";
+    instruItem.input.setAttribute("aria-disabled", "false");
+    hiddenAlert.textContent =
+      "Instruments played field now enabled; use it to tell us what you play.";
   } else {
     instruItem.input.disabled = true;
-    instruItem.label.style.color = '#999';
-    instruItem.input.setAttribute('aria-disabled', 'true');
-    instruItem.input.removeAttribute('aria-label');
-    hiddenAlert.textContent = 'Instruments played field now disabled.';
+    instruItem.label.style.color = "#999";
+    instruItem.input.setAttribute("aria-disabled", "true");
+    instruItem.input.removeAttribute("aria-label");
+    hiddenAlert.textContent = "Instruments played field now disabled.";
   }
 }
 ```
@@ -338,7 +350,9 @@ function toggleMusician(bool) {
 依旧，WAI-ARIA 的角色可以解决一切，复制文件 [fake-div-buttons.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)，然后加上 [`role="button"`](https://www.w3.org/TR/wai-aria-1.1/#button) 到每一个 button `<div>`，如下所示
 
 ```html
-<div data-message="This is from the first button" tabindex="0" role="button">Click me!</div>
+<div data-message="This is from the first button" tabindex="0" role="button">
+  Click me!
+</div>
 ```
 
 这时候再用屏幕阅读器，这次你会听到短语 "Click me!, button" ——舒服了。
@@ -357,20 +371,38 @@ function toggleMusician(bool) {
 
 ```html
 <ul role="tablist">
-  <li class="active" role="tab" aria-selected="true" aria-setsize="3" aria-posinset="1" tabindex="0">Tab 1</li>
-  <li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="2" tabindex="0">Tab 2</li>
-  <li role="tab" aria-selected="false" aria-setsize="3" aria-posinset="3" tabindex="0">Tab 3</li>
+  <li
+    class="active"
+    role="tab"
+    aria-selected="true"
+    aria-setsize="3"
+    aria-posinset="1"
+    tabindex="0">
+    Tab 1
+  </li>
+  <li
+    role="tab"
+    aria-selected="false"
+    aria-setsize="3"
+    aria-posinset="2"
+    tabindex="0">
+    Tab 2
+  </li>
+  <li
+    role="tab"
+    aria-selected="false"
+    aria-setsize="3"
+    aria-posinset="3"
+    tabindex="0">
+    Tab 3
+  </li>
 </ul>
 <div class="panels">
   <article class="active-panel" role="tabpanel" aria-hidden="false">
     ...
   </article>
-  <article role="tabpanel" aria-hidden="true">
-    ...
-  </article>
-  <article role="tabpanel" aria-hidden="true">
-    ...
-  </article>
+  <article role="tabpanel" aria-hidden="true">...</article>
+  <article role="tabpanel" aria-hidden="true">...</article>
 </div>
 ```
 

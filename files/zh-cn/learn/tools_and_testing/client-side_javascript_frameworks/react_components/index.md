@@ -103,8 +103,7 @@ import Todo from "./components/Todo";
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">
   <Todo />
   <Todo />
   <Todo />
@@ -229,7 +228,7 @@ export default function Todo(props) {
 const DATA = [
   { id: "todo-0", name: "Eat", completed: true },
   { id: "todo-1", name: "Sleep", completed: false },
-  { id: "todo-2", name: "Repeat", completed: false }
+  { id: "todo-2", name: "Repeat", completed: false },
 ];
 ```
 
@@ -259,8 +258,7 @@ const taskList = props.tasks?.map((task) => task.name);
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">
   {taskList}
 </ul>
 ```
@@ -272,7 +270,7 @@ const taskList = props.tasks?.map((task) => task.name);
 为了解决这个问题，我们需要从 `map()` 函数 return 一个 `<Todo />` 组件——记住 JSX 允许我们将 JavaScript 和标记结构混合起来！让我们用下面的方法替代已有的试试：
 
 ```js
- const taskList = props.tasks.map((task) => <Todo />);
+const taskList = props.tasks.map((task) => <Todo />);
 ```
 
 回顾一下你的 App；现在你的任务看起来更像以前的样子，不过它们缺少自身的名字。记住，我们映射的每个任务都有 `id`、`name` 和 `checked` 属性，我们要把这些属性传递给 `<Todo />` 组件。如果你把它们放在一起，我们就会得到这样的代码：
@@ -293,14 +291,13 @@ const taskList = props.tasks.map((task) => (
 
 ```js
 const taskList = props.tasks.map((task) => (
-    <Todo
-      id={task.id}
-      name={task.name}
-      completed={task.completed}
-      key={task.id}
-    />
-  )
-);
+  <Todo
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+  />
+));
 ```
 
 **你应该传递不同的 key 给任何使用迭代方式渲染的东西**。你的浏览器中不会有什么明显变化，不过如果你不使用不同的 key，React 会在你的 console 中记录一个警告，并且你的 App 可能会表现的很奇怪！
@@ -400,13 +397,12 @@ import Todo from "./components/Todo";
 function App(props) {
   const taskList = props.tasks.map((task) => (
     <Todo
-        id={task.id}
-        name={task.name}
-        completed={task.completed}
-        key={task.id}
-      />
-    )
-  );
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+    />
+  ));
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
@@ -420,8 +416,7 @@ function App(props) {
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading"
-      >
+        aria-labelledby="list-heading">
         {taskList}
       </ul>
     </div>

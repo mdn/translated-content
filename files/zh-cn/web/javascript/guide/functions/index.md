@@ -44,14 +44,14 @@ function myFunc(theObject) {
   theObject.make = "Toyota";
 }
 
-var mycar = {make: "Honda", model: "Accord", year: 1998};
+var mycar = { make: "Honda", model: "Accord", year: 1998 };
 var x, y;
 
-x = mycar.make;     // x 获取的值为 "Honda"
+x = mycar.make; // x 获取的值为 "Honda"
 
 myFunc(mycar);
-y = mycar.make;     // y 获取的值为 "Toyota"
-                    // (make 属性被函数改变了)
+y = mycar.make; // y 获取的值为 "Toyota"
+// (make 属性被函数改变了)
 ```
 
 ### 函数表达式
@@ -59,14 +59,18 @@ y = mycar.make;     // y 获取的值为 "Toyota"
 虽然上面的函数声明在语法上是一个语句，但函数也可以由函数表达式创建。这样的函数可以是**匿名**的；它不必有一个名称。例如，函数`square`也可这样来定义：
 
 ```js
-const square = function(number) { return number * number; };
+const square = function (number) {
+  return number * number;
+};
 var x = square(4); // x gets the value 16
 ```
 
 然而，函数表达式也可以提供函数名，并且可以用于在函数内部代指其本身，或者在调试器堆栈跟踪中识别该函数：
 
 ```js
-const factorial = function fac(n) {return n<2 ? 1 : n*fac(n-1)};
+const factorial = function fac(n) {
+  return n < 2 ? 1 : n * fac(n - 1);
+};
 
 console.log(factorial(3));
 ```
@@ -74,11 +78,10 @@ console.log(factorial(3));
 当将函数作为参数传递给另一个函数时，函数表达式很方便。下面的例子演示了一个叫`map`的函数如何被定义，而后使用一个表达式函数作为其第一个参数进行调用：
 
 ```js
-function map(f,a) {
+function map(f, a) {
   let result = []; // 创建一个数组
   let i; // 声明一个值，用来循环
-  for (i = 0; i != a.length; i++)
-    result[i] = f(a[i]);
+  for (i = 0; i != a.length; i++) result[i] = f(a[i]);
   return result;
 }
 ```
@@ -89,15 +92,14 @@ function map(f,a) {
 function map(f, a) {
   let result = []; // 创建一个数组
   let i; // 声明一个值，用来循环
-  for (i = 0; i != a.length; i++)
-    result[i] = f(a[i]);
+  for (i = 0; i != a.length; i++) result[i] = f(a[i]);
   return result;
 }
-const f = function(x) {
-   return x * x * x;
-}
-let numbers = [0,1, 2, 5,10];
-let cube = map(f,numbers);
+const f = function (x) {
+  return x * x * x;
+};
+let numbers = [0, 1, 2, 5, 10];
+let cube = map(f, numbers);
 console.log(cube);
 ```
 
@@ -107,10 +109,10 @@ console.log(cube);
 
 ```js
 var myFunc;
-if (num == 0){
-  myFunc = function(theObject) {
-    theObject.make = "Toyota"
-  }
+if (num == 0) {
+  myFunc = function (theObject) {
+    theObject.make = "Toyota";
+  };
 }
 ```
 
@@ -133,7 +135,9 @@ square(5);
 ```js
 console.log(square(5));
 /* ... */
-function square(n) { return n*n }
+function square(n) {
+  return n * n;
+}
 ```
 
 函数域是指函数声明时的所在的地方，或者函数在顶层被声明时指整个程序。
@@ -145,7 +149,7 @@ console.log(square); // square is hoisted with an initial value undefined.
 console.log(square(5)); // Uncaught TypeError: square is not a function
 const square = function (n) {
   return n * n;
-}
+};
 ```
 
 函数的参数并不局限于字符串或数字。你也可以将整个对象传递给函数。函数 `show_props`（其定义参见[用对象编程](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#对象和属性)）就是一个将对象作为参数的例子。
@@ -153,11 +157,9 @@ const square = function (n) {
 函数可以被递归，就是说函数可以调用其本身。例如，下面这个函数就是用递归计算阶乘：
 
 ```js
-function factorial(n){
-  if ((n == 0) || (n == 1))
-    return 1;
-  else
-    return (n * factorial(n - 1));
+function factorial(n) {
+  if (n == 0 || n == 1) return 1;
+  else return n * factorial(n - 1);
 }
 ```
 
@@ -182,8 +184,8 @@ e = factorial(5); // 120 赋值给 e
 ```js
 // 下面的变量定义在全局作用域 (global scope) 中
 var num1 = 20,
-    num2 = 3,
-    name = "Chamahk";
+  num2 = 3,
+  name = "Chamahk";
 
 // 本函数定义在全局作用域
 function multiply() {
@@ -195,7 +197,7 @@ multiply(); // 返回 60
 // 嵌套函数的例子
 function getScore() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
 
   function add() {
     return name + " scored " + (num1 + num2);
@@ -221,7 +223,7 @@ getScore(); // 返回 "Chamahk scored 5"
 
 ```js
 var foo = function bar() {
-   // statements go here
+  // statements go here
 };
 ```
 
@@ -235,9 +237,10 @@ var foo = function bar() {
 
 ```js
 var x = 0;
-while (x < 10) { // "x < 10" 是循环条件
-   // do stuff
-   x++;
+while (x < 10) {
+  // "x < 10" 是循环条件
+  // do stuff
+  x++;
 }
 ```
 
@@ -245,7 +248,8 @@ while (x < 10) { // "x < 10" 是循环条件
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" 是退出条件（等同于 "!(x < 10)"）
+  if (x >= 10)
+    // "x >= 10" 是退出条件（等同于 "!(x < 10)"）
     return;
   // 做些什么
   loop(x + 1); // 递归调用
@@ -257,8 +261,7 @@ loop(0);
 
 ```js
 function walkTree(node) {
-  if (node == null) //
-    return;
+  if (node == null) return;
   // do something with node
   for (var i = 0; i < node.childNodes.length; i++) {
     walkTree(node.childNodes[i]);
@@ -274,11 +277,10 @@ function walkTree(node) {
 
 ```js
 function foo(i) {
-  if (i < 0)
-    return;
-  console.log('begin:' + i);
+  if (i < 0) return;
+  console.log("begin:" + i);
   foo(i - 1);
-  console.log('end:' + i);
+  console.log("end:" + i);
 }
 foo(3);
 
@@ -396,80 +398,85 @@ outside()(10); // returns 20 instead of 10
 此外，由于内部函数可以访问外部函数的作用域，因此当内部函数生存周期大于外部函数时，外部函数中定义的变量和函数的生存周期将比内部函数执行时间长。当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。
 
 ```js
-var pet = function(name) {          //外部函数定义了一个变量"name"
-  var getName = function() {
+var pet = function (name) {
+  //外部函数定义了一个变量"name"
+  var getName = function () {
     //内部函数可以访问 外部函数定义的"name"
     return name;
-  }
+  };
   //返回这个内部函数，从而将其暴露在外部函数作用域
   return getName;
 };
 myPet = pet("Vivie");
 
-myPet();                            // 返回结果 "Vivie"
+myPet(); // 返回结果 "Vivie"
 ```
 
 实际上可能会比上面的代码复杂的多。在下面这种情形中，返回了一个包含可以操作外部函数的内部变量方法的对象。
 
 ```js
-var createPet = function(name) {
+var createPet = function (name) {
   var sex;
 
   return {
-    setName: function(newName) {
+    setName: function (newName) {
       name = newName;
     },
 
-    getName: function() {
+    getName: function () {
       return name;
     },
 
-    getSex: function() {
+    getSex: function () {
       return sex;
     },
 
-    setSex: function(newSex) {
-      if(typeof newSex == "string"
-        && (newSex.toLowerCase() == "male" || newSex.toLowerCase() == "female")) {
+    setSex: function (newSex) {
+      if (
+        typeof newSex == "string" &&
+        (newSex.toLowerCase() == "male" || newSex.toLowerCase() == "female")
+      ) {
         sex = newSex;
       }
-    }
-  }
-}
+    },
+  };
+};
 
 var pet = createPet("Vivie");
-pet.getName();                  // Vivie
+pet.getName(); // Vivie
 
 pet.setName("Oliver");
 pet.setSex("male");
-pet.getSex();                   // male
-pet.getName();                  // Oliver
+pet.getSex(); // male
+pet.getName(); // Oliver
 ```
 
 在上面的代码中，外部函数的`name`变量对内嵌函数来说是可取得的，而除了通过内嵌函数本身，没有其他任何方法可以取得内嵌的变量。内嵌函数的内嵌变量就像内嵌函数的保险柜。它们会为内嵌函数保留“稳定”——而又安全——的数据参与运行。而这些内嵌函数甚至不会被分配给一个变量，或者不必一定要有名字。
 
 ```js
-var getCode = (function(){
-  var secureCode = "0]Eal(eh&2";    // A code we do not want outsiders to be able to modify...
+var getCode = (function () {
+  var secureCode = "0]Eal(eh&2"; // A code we do not want outsiders to be able to modify...
 
   return function () {
     return secureCode;
   };
 })();
 
-getCode();    // Returns the secret code
+getCode(); // Returns the secret code
 ```
 
 > **备注：** 尽管有上述优点，使用闭包时仍然要小心避免一些陷阱。如果一个闭包的函数定义了一个和外部函数的某个变量名称相同的变量，那么这个闭包将无法引用外部函数的这个变量。
 >
 > ```js
-> var createPet = function(name) {  // Outer function defines a variable called "name"
+> var createPet = function (name) {
+>   // Outer function defines a variable called "name"
 >   return {
->     setName: function(name) {    // Enclosed function also defines a variable called "name"
->       name = name;               // ??? How do we access the "name" defined by the outer function ???
->     }
->   }
-> }
+>     setName: function (name) {
+>       // Enclosed function also defines a variable called "name"
+>       name = name; // ??? How do we access the "name" defined by the outer function ???
+>     },
+>   };
+> };
 > ```
 
 ## 使用 arguments 对象
@@ -477,7 +484,7 @@ getCode();    // Returns the secret code
 函数的实际参数会被保存在一个类似数组的 arguments 对象中。在函数内，你可以按如下方式找出传入的参数：
 
 ```js
-arguments[i]
+arguments[i];
 ```
 
 其中`i`是参数的序数编号（译注：数组索引），以 0 开始。所以第一个传来的参数会是`arguments[0]`。参数的数量由`arguments.length`表示。
@@ -488,13 +495,13 @@ arguments[i]
 
 ```js
 function myConcat(separator) {
-   var result = ''; // 把值初始化成一个字符串，这样就可以用来保存字符串了！！
-   var i;
-   // iterate through arguments
-   for (i = 1; i < arguments.length; i++) {
-      result += arguments[i] + separator;
-   }
-   return result;
+  var result = ""; // 把值初始化成一个字符串，这样就可以用来保存字符串了！！
+  var i;
+  // iterate through arguments
+  for (i = 1; i < arguments.length; i++) {
+    result += arguments[i] + separator;
+  }
+  return result;
 }
 ```
 
@@ -527,9 +534,9 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 
 ```js
 function multiply(a, b) {
-  b = (typeof b !== 'undefined') ?  b : 1;
+  b = typeof b !== "undefined" ? b : 1;
 
-  return a*b;
+  return a * b;
 }
 
 multiply(5); // 5
@@ -539,7 +546,7 @@ multiply(5); // 5
 
 ```js
 function multiply(a, b = 1) {
-  return a*b;
+  return a * b;
 }
 
 multiply(5); // 5
@@ -553,7 +560,7 @@ multiply(5); // 5
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(x => multiplier * x);
+  return theArgs.map((x) => multiplier * x);
 }
 
 var arr = multiply(2, 1, 2, 3);
@@ -571,18 +578,15 @@ console.log(arr); // [2, 4, 6]
 在一些函数模式中，更简洁的函数很受欢迎。对比一下：
 
 ```js
-var a = [
-  "Hydrogen",
-  "Helium",
-  "Lithium",
-  "Beryllium"
-];
+var a = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-var a2 = a.map(function(s){ return s.length });
+var a2 = a.map(function (s) {
+  return s.length;
+});
 
 console.log(a2); // logs [ 8, 6, 7, 9 ]
 
-var a3 = a.map( s => s.length );
+var a3 = a.map((s) => s.length);
 
 console.log(a3); // logs [ 8, 6, 7, 9 ]
 ```
@@ -612,7 +616,7 @@ var p = new Person();
 ```js
 function Person() {
   var self = this; // 有的人习惯用`that`而不是`self`，
-                   // 无论你选择哪一种方式，请保持前后代码的一致性
+  // 无论你选择哪一种方式，请保持前后代码的一致性
   self.age = 0;
 
   setInterval(function growUp() {
@@ -627,7 +631,7 @@ function Person() {
 箭头函数捕捉闭包上下文的`this`值，所以下面的代码工作正常。
 
 ```js
-function Person(){
+function Person() {
   this.age = 0;
 
   setInterval(() => {
