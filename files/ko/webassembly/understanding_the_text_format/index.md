@@ -173,10 +173,9 @@ locals와 마찬가지로 함수는 기본적으로 인덱스로 식별되지만
 다음으로 바이너리를 `addCode` ([Fetching WebAssembly Bytecode](/ko/docs/WebAssembly/Fetching_WebAssembly_bytecode)에서 설명한대로)라는 형식화 된 배열에로드하고, 컴파일 및 인스턴스화 한 다음 자바 스크립트에서 `add` 함수를 실행합니다. (이제 `add()`는 인스턴스의 [`exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) 속성에서 찾을 수 있습니다)
 
 ```js
-    WebAssembly.instantiateStreaming(fetch('add.wasm'))
-    .then(obj => {
-       console.log(obj.instance.exports.add(1, 2));  // "3"
-    });
+WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
+  console.log(obj.instance.exports.add(1, 2)); // "3"
+});
 ```
 
 > **참고:** 이 예제는 GitHub에서 [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html)로 찾을 수 있습니다 ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). 인스턴스 함수에 대한 자세한 내용은 {{jsxref ( "WebAssembly.instantiate ()")}}를 참조하십시오.
@@ -212,10 +211,9 @@ In this example you’ll notice an `(export "getAnswerPlus1")` section, declared
 위의 모듈을 호출하는 JavaScript 코드는 다음과 같습니다.
 
 ```js
-    WebAssembly.instantiateStreaming(fetch('call.wasm'))
-    .then(obj => {
-       console.log(obj.instance.exports.getAnswerPlus1());  // "43"
-    });
+WebAssembly.instantiateStreaming(fetch("call.wasm")).then((obj) => {
+  console.log(obj.instance.exports.getAnswerPlus1()); // "43"
+});
 ```
 
 > **참고:** 이 예제는 GitHub에서 [call.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/call.html)로 찾을 수 있습니다 ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/call.html)).
@@ -243,18 +241,19 @@ JavaScript 함수에는 서명 개념이 없으므로 임포트의 선언 된 �
 이것은 다음과 같습니다.
 
 ```js
-    var importObject = {
-      console: {
-        log: function(arg) {
-          console.log(arg);
-        }
-      }
-    };
+var importObject = {
+  console: {
+    log: function (arg) {
+      console.log(arg);
+    },
+  },
+};
 
-    WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
-    .then(obj => {
-      obj.instance.exports.logIt();
-    });
+WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
+  (obj) => {
+    obj.instance.exports.logIt();
+  },
+);
 ```
 
 > **참고:** 이 예제는 GitHub에서 [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html)로 찾을 수 있습니다 (라이브([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html))도 참조하십시오).
@@ -281,7 +280,7 @@ WebAssembly 텍스트 형식에서는 다음과 비슷합니다 (GitHub의 [glob
 JavaScript를 사용하여 동일한 값을 만들려면 {{jsxref("WebAssembly.Global()")}} 생성자를 사용합니다.
 
 ```js
-    const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 ```
 
 ### WebAssembly Memory
@@ -305,11 +304,11 @@ JavaScript의 관점에서 볼 때 크기가 조정 가능한 큰 {{domxref("Arr
 자바 스크립트 측면에서 우리는 [TextDecoder API](/ko/docs/Web/API/TextDecoder)를 사용하여 바이트를 자바 스크립트 문자열로 쉽게 디코딩 할 수 있습니다. (여기서는 `utf8`을 지정하지만 다른 많은 인코딩이 지원됩니다.)
 
 ```js
-    function consoleLogString(offset, length) {
-      var bytes = new Uint8Array(memory.buffer, offset, length);
-      var string = new TextDecoder('utf8').decode(bytes);
-      console.log(string);
-    }
+function consoleLogString(offset, length) {
+  var bytes = new Uint8Array(memory.buffer, offset, length);
+  var string = new TextDecoder("utf8").decode(bytes);
+  console.log(string);
+}
 ```
 
 이제 남은 부분은 `consoleLogString`이 WebAssembly `memory`에 액세스하는 부분입니다. WebAssembly는 JavaScript로 [`Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) 객체를 만들고 WebAssembly 모듈에서 메모리를 가져 오거나 WebAssembly 모듈에서 메모리를 만들어 JavaScript로 내보낼 수 있는 유연성을 제공합니다.
@@ -342,14 +341,15 @@ JavaScript의 관점에서 볼 때 크기가 조정 가능한 큰 {{domxref("Arr
 자바 스크립트에서 우리는 1 페이지 메모리를 만들고 그것을 전달할 수 있습니다. 결과적으로 "Hi"가 콘솔에 출력됩니다 :
 
 ```js
-    var memory = new WebAssembly.Memory({initial:1});
+var memory = new WebAssembly.Memory({ initial: 1 });
 
-    var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
+var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
-    WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
-    .then(obj => {
-      obj.instance.exports.writeHi();
-    });
+WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
+  (obj) => {
+    obj.instance.exports.writeHi();
+  },
+);
 ```
 
 > **참고:** 깃허브에서 소스 전체버전을 확인할 수 있습니다. [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
@@ -462,12 +462,11 @@ WebAssembly는 `anyfunc` 유형을 추가 할 수 있습니다 (유형이 모든
 다음 자바 스크립트를 사용하여 웹 페이지에로드합니다.
 
 ```js
-    WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
-    .then(obj => {
-      console.log(obj.instance.exports.callByIndex(0)); // returns 42
-      console.log(obj.instance.exports.callByIndex(1)); // returns 13
-      console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
-    });
+WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
+  console.log(obj.instance.exports.callByIndex(0)); // returns 42
+  console.log(obj.instance.exports.callByIndex(1)); // returns 13
+  console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
+});
 ```
 
 > **참고:** [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html)에서 이 예제를 확인할 수 있습니다. ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
@@ -525,19 +524,19 @@ JavaScript는 함수 참조에 대한 모든 액세스 권한을 갖기 때문�
 어셈블리로 변환 한 후 다음 코드를 통해 JavaScript에서 `shared0.wasm`과 `shared1.wasm`을 사용합니다.
 
 ```js
-    var importObj = {
-      js: {
-        memory : new WebAssembly.Memory({ initial: 1 }),
-        table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
-      }
-    };
+var importObj = {
+  js: {
+    memory: new WebAssembly.Memory({ initial: 1 }),
+    table: new WebAssembly.Table({ initial: 1, element: "anyfunc" }),
+  },
+};
 
-    Promise.all([
-      WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
-      WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
-    ]).then(function(results) {
-      console.log(results[1].instance.exports.doIt());  // prints 42
-    });
+Promise.all([
+  WebAssembly.instantiateStreaming(fetch("shared0.wasm"), importObj),
+  WebAssembly.instantiateStreaming(fetch("shared1.wasm"), importObj),
+]).then(function (results) {
+  console.log(results[1].instance.exports.doIt()); // prints 42
+});
 ```
 
 컴파일되는 각 모듈은 동일한 메모리 및 테이블 객체를 가져와 동일한 선형 메모리 및 테이블 "주소 공간"을 공유 할 수 있습니다.
