@@ -24,7 +24,6 @@ build/
 /files/es/web/javascript/**/*.md
 
 # fr
-/files/fr/glossary/**/*.md
 /files/fr/learn/**/*.md
 /files/fr/learn/css/**/*.md
 /files/fr/learn/html/**/*.md
