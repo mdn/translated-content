@@ -221,10 +221,6 @@ img:nth-of-type(2) {
 
 ## 参见
 
-- [在 HTML 内容中应用 SVG 效果](/zh-CN/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
-- {{cssxref("mask")}} 属性
-- [SVG](/zh-CN/docs/Web/SVG)
-
 - CSS {{cssxref("backdrop-filter")}} 属性
 - CSS [合成和混合](/zh-CN/docs/Web/CSS/CSS_compositing_and_blending)模块，包括 CSS {{cssxref("background-blend-mode")}} 和 {{cssxref("mix-blend-mode")}} 属性。
 - CSS {{cssxref("mask")}} 属性
