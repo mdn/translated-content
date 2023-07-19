@@ -12,12 +12,12 @@ Une instruction, ou un ensemble d'instructions, est démarrée si une condition 
 
 ### Culture générale
 
-- [Structure de contrôle](https://fr.wikipedia.org/wiki/Structure_de_contrôle#Alternatives) sur Wikipédia
+- [Structure de contrôle](https://fr.wikipedia.org/wiki/Structure_de_contr%C3%B4le#Alternatives) sur Wikipédia
 
 ### Référence technique
 
-- [Contrôle de flux](/fr/docs/Glossaire/Structure_de_contrôle) sur MDN
+- [Contrôle de flux](/fr/docs/Glossaire/Structure_de_contr%C3%B4le) sur MDN
 
 ### Apprendre
 
-- [Contrôle du flux d'instructions et gestion des erreurs en JavaScript](/fr/docs/Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs) sur MDN
+- [Contrôle du flux d'instructions et gestion des erreurs en JavaScript](/fr/docs/Web/JavaScript/Guide/Contr%C3%B4le_du_flux_Gestion_des_erreurs) sur MDN

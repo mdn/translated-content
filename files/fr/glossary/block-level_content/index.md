@@ -15,17 +15,15 @@ Les navigateurs affichent généralement un élément de type bloc avec une nouv
 ### HTML
 
 ```html
-<p>
-  Ce paragraphe est un élément de bloc. Son fond a été coloré pour illustrer son
-  conteneur.
-</p>
+<p>Ce paragraphe est un élément de bloc.
+Son fond a été coloré pour illustrer son conteneur.</p>
 ```
 
 ### CSS
 
 ```css
 p {
-  background-color: #8abb55;
+  background-color: #8ABB55;
 }
 ```
 

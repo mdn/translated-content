@@ -14,11 +14,11 @@ Certains caractères spéciaux sont réservés pour une utilisation en HTML, ce 
 
 Pour afficher ces caractères comme texte, il faut les remplacer par l'entité de caractère correspondante, comme montrée dans le tableau suivant :
 
-| Caractère | Entité   | Remarque                                                                                 |
-| --------- | -------- | ---------------------------------------------------------------------------------------- |
-| &         | `&amp;`  | Interprété comme le début d'une référence d'entité ou de caractère.                      |
-| <         | `&lt;`   | Interprété comme le début d'une {{Glossary("Tag","balise")}}                             |
-| >         | `&gt;`   | Interprété comme la fin d'une {{Glossary("Tag","balise")}}                               |
+| Caractère | Entité   | Remarque                                                                                            |
+| --------- | -------- | --------------------------------------------------------------------------------------------------- |
+| &         | `&amp;`  | Interprété comme le début d'une référence d'entité ou de caractère.                                 |
+| <         | `&lt;`   | Interprété comme le début d'une {{Glossary("Tag","balise")}}                                |
+| >         | `&gt;`   | Interprété comme la fin d'une {{Glossary("Tag","balise")}}                                  |
 | "         | `&quot;` | Interprété comme le début et la fin d'une valeur d'{{Glossary('Attribute','attributs')}} |
 
 ## Voir aussi

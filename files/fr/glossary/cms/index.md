@@ -10,4 +10,4 @@ Un CMS (_Content Management System_ ou Système de gestion de contenu) est un lo
 
 ### Culture générale
 
-- [Système de gestion de contenu](https://fr.wikipedia.org/wiki/Système_de_gestion_de_contenu) sur Wikipédia
+- [Système de gestion de contenu](https://fr.wikipedia.org/wiki/Syst%C3%A8me_de_gestion_de_contenu) sur Wikipédia

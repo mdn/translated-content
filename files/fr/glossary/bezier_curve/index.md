@@ -16,7 +16,7 @@ Pour tracer la courbe, deux lignes imaginaires sont tracées l'une de P<sub>0</s
 
 ### Culture générale
 
-- [courbe de Bézier sur Wikipédia](https://fr.wikipedia.org/wiki/Courbe_de_Bézier)
+- [courbe de Bézier sur Wikipédia](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier)
 
 ### Voir aussi
 

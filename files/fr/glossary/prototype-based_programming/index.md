@@ -12,4 +12,4 @@ En termes simples, ce type de style permet de créer un {{Glossary('Object', 'ob
 
 ### Culture générale
 
-- [Programmation orientée prototype](https://fr.wikipedia.org/wiki/Programmation_orientée_prototype) sur Wikipédia
+- [Programmation orientée prototype](https://fr.wikipedia.org/wiki/Programmation_orient%C3%A9e_prototype) sur Wikipédia

@@ -10,7 +10,7 @@ Les _forks_ sont communs dans le développement des logiciels libres et _open so
 
 ## Voir aussi
 
-- [<i lang="en">Fork</i>](<https://fr.wikipedia.org/wiki/Fork_(développement_logiciel)>) sur Wikipédia
+- [<i lang="en">Fork</i>](https://fr.wikipedia.org/wiki/Fork_(d%C3%A9veloppement_logiciel)) sur Wikipédia
 - [Comment forker un dépôt GitHub](https://help.github.com/articles/fork-a-repo/) (_fork_ comme dans un contexte Git)
 - [Distributions Linux](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)
 - [Node.js et io.js (qui ont été fusionnés)](https://nodejs.org/en/blog/announcements/foundation-v4-announce/)

@@ -18,4 +18,4 @@ Si cette fonctionnalité de base échoue, il est inutile d'investir du temps dan
 
 ### Culture générale
 
-- [Article en anglais sur le <i lang="en">smoke testing</i>](<https://en.wikipedia.org/wiki/Smoke_testing_(software)>) sur Wikipédia
+- [Article en anglais sur le <i lang="en">smoke testing</i>](https://en.wikipedia.org/wiki/Smoke_testing_(software)) sur Wikipédia

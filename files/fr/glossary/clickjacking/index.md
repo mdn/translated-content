@@ -11,5 +11,5 @@ Le détournement de clic peut être évité en implémentant une [politique de s
 ## Voir aussi
 
 - [Sécurité sur le Web&nbsp;: protection contre le détournement de clic](/fr/docs/Web/Security#protection_contre_le_détournement_de_clic)
-- [Le détournement de clic](https://fr.wikipedia.org/wiki/Détournement_de_clic) sur Wikipédia
+- [Le détournement de clic](https://fr.wikipedia.org/wiki/D%C3%A9tournement_de_clic) sur Wikipédia
 - [Le détournement de clic](https://owasp.org/www-community/attacks/Clickjacking) sur OWASP (en anglais)

@@ -12,4 +12,4 @@ En utilisant la propriété CSS {{cssxref("display")}}, il est possible de défi
 
 ### Connaissances générales
 
-- [Modèle de mise en forme visuelle](/fr/docs/Web/CSS/Modèle_de_mise_en_forme_visuelle)
+- [Modèle de mise en forme visuelle](/fr/docs/Web/CSS/Mod%C3%A8le_de_mise_en_forme_visuelle)

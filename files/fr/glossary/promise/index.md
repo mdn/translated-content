@@ -14,7 +14,7 @@ Pour en apprendre plus, suivez ces liens.
 
 ### Culture générale
 
-- [Promesses](<https://fr.wikipedia.org/wiki/Futures_(informatique)>) sur Wikipédia
+- [Promesses](https://fr.wikipedia.org/wiki/Futures_(informatique)) sur Wikipédia
 
 ### Référence technique
 

@@ -14,7 +14,7 @@ Un exemple vaut mieux qu'une longue explication. Voici pour commencer la feuille
 
 ```css
 .highlight {
-  background-color: #ee3;
+  background-color:#ee3;
 }
 ```
 
@@ -23,11 +23,9 @@ Un exemple vaut mieux qu'une longue explication. Voici pour commencer la feuille
 Le fragment de code HTML qui suit utilise un élément en ligne avec la classe `highlight` :
 
 ```html
-<p>
-  L'élément span qui suit est un
-  <span class="highlight">élément en ligne</span> ; son arrière-plan est coloré
-  afin d'illustrer la zone couverte par cet élément en ligne.
-</p>
+<p>L'élément span qui suit est un <span class="highlight">élément en ligne</span> ;
+son arrière-plan est coloré afin d'illustrer la zone couverte par cet élément en
+ligne.</p>
 ```
 
 Dans cet exemple, l'élément [`<p>`](/fr/docs/Web/HTML/Element/p) (le paragraphe) est un élément de bloc qui contient du texte. Dans ce texte, on a un élément [`<span>`](/fr/docs/Web/HTML/Element/span) qui est un élément en ligne. L'élément `<span>` étant un élément en ligne, le paragraphe est bien affiché sous la forme d'un flux de texte sans rupture :
@@ -42,7 +40,7 @@ body {
 }
 
 .highlight {
-  background-color: #ee3;
+  background-color:#ee3;
 }
 ```
 
@@ -64,7 +62,7 @@ body {
 }
 
 .highlight {
-  background-color: #ee3;
+  background-color:#ee3;
 }
 ```
 

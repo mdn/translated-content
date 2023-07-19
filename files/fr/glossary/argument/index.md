@@ -10,7 +10,7 @@ Un **argument** est une {{Glossary("Value","valeur")}} ({{Glossary("Primitive", 
 
 ### Culture générale
 
-- [Argument](<https://fr.wikipedia.org/wiki/Argument_(informatique)>) sur Wikipédia
+- [Argument](https://fr.wikipedia.org/wiki/Argument_(informatique)) sur Wikipédia
 
 ### Informations techniques
 

@@ -15,10 +15,7 @@ Le code suivant vise à inclure les balises \<xi: include> et \<xi: fallback> (l
 Notez également que si vous souhaitez autoriser xml: base, vous aurez besoin de [xml:base function](/fr/docs/Archive/Add-ons/Code_snippets/XML/base_function) et la ligne de démarrage `var href = ...` doit être :
 
 ```js
-var href = getXmlBaseLink(
-  /* XLink sans xml:base */ xinclude.getAttribute("href"),
-  /* Élément à interroger à partir de */ xinclude,
-);
+var href = getXmlBaseLink (/* XLink sans xml:base */ xinclude.getAttribute('href'), /* Élément à interroger à partir de */ xinclude);
 ```
 
 ```js

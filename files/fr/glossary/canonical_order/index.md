@@ -22,4 +22,4 @@ De plus, sa syntaxe exige que, si une valeur pour {{cssxref("background-size")}}
 ## Voir aussi
 
 - [Que signifie "ordre canonique" en ce qui concerne les propriétés CSS ?](https://stackoverflow.com/questions/28963536/what-does-canonical-order-mean-with-respect-to-css-properties) (en) sur Stack Overflow qui fournit également d'autres discussions utiles.
-- La [description de la syntaxe formelle utilisée pour les valeurs CSS](/fr/docs/Web/CSS/Syntaxe_de_définition_des_valeurs) sur MDN
+- La [description de la syntaxe formelle utilisée pour les valeurs CSS](/fr/docs/Web/CSS/Syntaxe_de_d%C3%A9finition_des_valeurs) sur MDN

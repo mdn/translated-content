@@ -12,4 +12,4 @@ Lorsque vous utilisez un moteur de recherche, les mots-clés désignent ce que v
 
 ### Culture générale
 
-- [Mot-clé](https://fr.wikipedia.org/wiki/Mot_clé) sur Wikipédia
+- [Mot-clé](https://fr.wikipedia.org/wiki/Mot_cl%C3%A9) sur Wikipédia

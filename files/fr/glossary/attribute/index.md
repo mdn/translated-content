@@ -12,17 +12,17 @@ Un _attribut_ vient compléter un {{Glossary("tag")}}. Sa présence peut être r
 
 <!-- Le même tag avec un attribut -->
 <!-- Le titre apparaît désormais sur un fond jaune -->
-<h2 style="background-color:yellow;">Titre</h2>
+<h2 style="background-color:yellow";>Titre</h2>
 ```
 
 On peut aussi trouver des attributs sans valeur quand elle n'est pas nécessaire.
 
 ```html
 <!-- Un tag avec un attribut indiquant que le champ est requis -->
-<input type="text" required />
+<input type="text" required>
 
 <!-- Cette notation fonctionne aussi -->
-<input type="text" required="required" />
+<input type="text" required="required">
 ```
 
 ## Voir aussi

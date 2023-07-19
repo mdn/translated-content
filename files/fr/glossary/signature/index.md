@@ -10,4 +10,4 @@ Le terme **signature** peut avoir plusieurs significations selon le contexte. Il
 
 ## Voir aussi
 
-- [Signature](<https://fr.wikipedia.org/wiki/Signature_(homonymie)>) sur Wikipédia
+- [Signature](https://fr.wikipedia.org/wiki/Signature_(homonymie)) sur Wikipédia

@@ -16,7 +16,7 @@ Les 3 parties du modèle de conception de logiciel MVC peuvent être décrites c
 
 ### Culture générale
 
-- [Modèle-vue-contrôleur](https://fr.wikipedia.org/wiki/Modèle-vue-contrôleur) sur Wikipédia
+- [Modèle-vue-contrôleur](https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur) sur Wikipédia
 
 ### Apprentissage de MVC
 

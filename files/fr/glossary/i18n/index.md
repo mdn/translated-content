@@ -20,7 +20,7 @@ Parmi d'autres choses, i18n nécessite le support de plusieurs…
 
 ### Culture générale
 
-- [Internationalisation](<https://fr.wikipedia.org/wiki/Internationalisation_(informatique)>) sur Wikipédia
+- [Internationalisation](https://fr.wikipedia.org/wiki/Internationalisation_(informatique)) sur Wikipédia
 
 ### Référence technique
 

@@ -1,5 +1,5 @@
 ---
-title: "Null"
+title: 'Null'
 slug: Glossary/Null
 translation_of: Glossary/Null
 ---

@@ -12,5 +12,5 @@ Le type de données d'une valeur affecte également les opérations valides sur 
 
 ### Culture générale
 
-- [Type](<https://fr.wikipedia.org/wiki/Type_(informatique)>) sur Wikipédia
+- [Type](https://fr.wikipedia.org/wiki/Type_(informatique)) sur Wikipédia
 - [Types de données en JavaScript](/fr/docs/Web/JavaScript/Structures_de_données)

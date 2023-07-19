@@ -10,4 +10,4 @@ Un programme tire ses règles de locale de la langue du système hôte. Entres a
 
 ## Voir aussi
 
-- [Paramètres régionaux](http://fr.wikipedia.org/wiki/Paramètres_régionaux)
+- [Paramètres régionaux](http://fr.wikipedia.org/wiki/Param%C3%A8tres_r%C3%A9gionaux)

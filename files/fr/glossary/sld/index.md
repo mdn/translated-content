@@ -14,4 +14,4 @@ Autre exemple, dans `developer.mozilla.org`, le SLD `developer` sert à indiquer
 
 ### Culture générale
 
-- [SLD](https://fr.wikipedia.org/wiki/Domaine_de_deuxième_niveau) sur Wikipédia
+- [SLD](https://fr.wikipedia.org/wiki/Domaine_de_deuxi%C3%A8me_niveau) sur Wikipédia

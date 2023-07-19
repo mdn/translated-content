@@ -26,4 +26,4 @@ Les facteurs communs suivants sont à considérer :
 
 ## Voir aussi
 
-- [Localisation](<https://fr.wikipedia.org/wiki/Localisation_(linguistique)>) sur Wikipédia
+- [Localisation](https://fr.wikipedia.org/wiki/Localisation_(linguistique)) sur Wikipédia

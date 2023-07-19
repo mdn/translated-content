@@ -20,5 +20,5 @@ translation_of: Glossary/Whitespace
 - [ECMAScript® 2015 Language Specification](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)
 - [How whitespace is handled by HTML, CSS, and in the DOM](/fr/docs/Web/API/Document_Object_Model/Whitespace)
 - {{cssxref("white-space")}}
-- [Espace](<https://fr.wikipedia.org/wiki/Espace_(typographie)>) sur Wikipédia
+- [Espace](https://fr.wikipedia.org/wiki/Espace_(typographie)) sur Wikipédia
 - {{Glossary("Character")}}
