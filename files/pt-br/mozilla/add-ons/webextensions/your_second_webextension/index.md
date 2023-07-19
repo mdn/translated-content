@@ -99,7 +99,7 @@ Perceba que todos os caminhos são relativos ao manifest.json.
 
 O botão na barra de ferramentas precisa de um icone, e nosso manifest.json informa que nós teriamos um icone em "button/beasts.png".
 
-Crie o diretório "button" e copie o icone com o nome "beasts.png". Você poderá usar um dos nossos [exemplo,](https://github.com/mdn/webextensions-examples/blob/master/beastify/button/beasts.png) que é retirado do [Aha-Soft’s Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set) e usado sob os termos de sua [licença](http://www.iconbeast.com/faq/).
+Crie o diretório "button" e copie o icone com o nome "beasts.png". Você poderá usar um dos nossos [exemplo,](https://github.com/mdn/webextensions-examples/blob/master/beastify/button/beasts.png) que é retirado do [Aha-Soft's Free Retina iconset](https://www.iconfinder.com/iconsets/free-retina-icon-set) e usado sob os termos de sua [licença](http://www.iconbeast.com/faq/).
 
 Se você não fornecer um popup, então um evento de click é lançado para sua extensão quando o usuário clicar no botão. Se você fornecer um popup, o evento de click não envia, mas ao invés disso, o popup é aberto. Nós queremos abrir um popup, então vamos criá-lo na próxima etapa.
 

@@ -138,7 +138,7 @@ _Media queries_ são _case insensitive_. _Media queries_ envolvidas em _media ty
 
 ## Características de mídia
 
-A maioria das _media features_ podem ter prefixo “min-” ou “max-“ para expressar as restrições “maior ou igual” ou “menor ou igual”. Isto evita o uso dos símbolos “<” e “>” , que entrem em conflito com HTML e XML. Se você usar uma _media feature_ sem especificar um valor, a expressão retorna verdadeiro, se o valor da _feature_ for diferente de zero.
+A maioria das _media features_ podem ter prefixo "min-" ou "max-" para expressar as restrições "maior ou igual" ou "menor ou igual". Isto evita o uso dos símbolos "<" e ">" , que entrem em conflito com HTML e XML. Se você usar uma _media feature_ sem especificar um valor, a expressão retorna verdadeiro, se o valor da _feature_ for diferente de zero.
 
 > **Nota:** Se uma media feature não se aplicar ao dispositivo onde o navegador esta sendo executado, as expressões que envolvem essa media feature são sempre falsas. Por exemplo, consultar um aspecto de um dispositivo sonoro, sempre resulta em falso.
 
@@ -194,7 +194,7 @@ Para aplicar uma folha de estilo em um dispositivo com cores indexadas menor que
 **Mídia:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
 **Aceita prefixos min/max:** sim
 
-Descreve o aspecto da relação da área do display do dispositivo de saída. Este valor consiste de dois inteiros positivos separados por um caractere barra (“/”). Isto representa a relação entre pixels horizontais (primeiro termo) para pixels verticais (segundo termo).
+Descreve o aspecto da relação da área do display do dispositivo de saída. Este valor consiste de dois inteiros positivos separados por um caractere barra ("/"). Isto representa a relação entre pixels horizontais (primeiro termo) para pixels verticais (segundo termo).
 
 #### Exemplo
 
@@ -212,7 +212,7 @@ Isto seleciona o estilo quando a relação de aspecto seja 1:1 ou maior. Em outr
 **Mídia:** {{cssxref("Media/Visual")}}, {{cssxref("Media/Tactile")}}
 **Aceita prefixos min/max:** sim
 
-Descreve a relação de aspecto do dispositivo de saída. Este valor consiste de dois inteiros positivos separados pelo carácter barra (“/”). Isto representa a relação de pixels horizontais (primeiro termo) por pixels verticais (segundo termo).
+Descreve a relação de aspecto do dispositivo de saída. Este valor consiste de dois inteiros positivos separados pelo carácter barra ("/"). Isto representa a relação de pixels horizontais (primeiro termo) por pixels verticais (segundo termo).
 
 #### Exemplo
 
