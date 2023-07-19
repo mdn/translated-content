@@ -165,7 +165,7 @@ As importações de memória funcionam exatamente como as importações de funç
 - Eles permitem que o JavaScript busque e crie o conteúdo inicial da memória antes ou simultaneamente com a compilação do módulo.
 - Eles permitem que um único objeto de memória seja importado por várias instâncias de módulo, o que é um bloco de construção crítico para implementar a vinculação dinâmica no WebAssembly.
 
-> **Nota:** Você pode encontrar nossa demonstração completa em [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) ([ veja ao vivo também](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) .
+> **Nota:** Você pode encontrar nossa demonstração completa em [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) .
 
 ## Tabelas
 
@@ -206,7 +206,7 @@ Vejamos um exemplo de tabela simples — um módulo WebAssembly que cria e expor
 
 Este código acessa cada referência de função armazenada na tabela por sua vez e as instancia para imprimir os valores que contêm no console — observe como cada referência de função é recuperada com um [`Table.prototype.get()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table/get), adicionamos um conjunto extra de parênteses no final para realmente invocar a função.
 
-> **Nota:** você pode encontrar nossa demonstração completa em [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([ veja ao vivo também](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)).
+> **Nota:** você pode encontrar nossa demonstração completa em [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)).
 
 ## Globais
 
@@ -222,8 +222,8 @@ Você pode ver que isso requer dois parâmetros:
 
 - Um objeto que contém duas propriedades que descrevem a variável global:
 
-   - `value`: seu tipo de dados, que pode ser qualquer tipo de dados aceito nos módulos WebAssembly — `i32`, `i64`, `f32` ou `f64`.
-   - `mutável`: um booleano que define se o valor é mutável ou não.
+  - `value`: seu tipo de dados, que pode ser qualquer tipo de dados aceito nos módulos WebAssembly — `i32`, `i64`, `f32` ou `f64`.
+  - `mutável`: um booleano que define se o valor é mutável ou não.
 
 - Um valor contendo o valor real da variável. Pode ser qualquer valor, desde que seu tipo corresponda ao tipo de dados especificado.
 
