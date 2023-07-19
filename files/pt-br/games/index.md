@@ -46,6 +46,7 @@ Para uma lista de exemplos de jogos web, veja a nossa [página de exemplos](/pt-
 - [Gamedev.js Weekly](http://gamedevjsweekly.com/)
   - : Boletim de notícias semanal sobre desenvolvimento de jogos HTML5, lançado toda Sexta-Feira. Contém os últimos artigos, tutoriais, ferramentas e recursos.
 - [HTML5 Game Devs Forum](http://www.html5gamedevs.com/)
+
   - : Fóruns para desenvolvedores, criadores de framework e publicadores. Faça perguntas, obtenha retorno, ajude outras pessoas.
 
 - [HTML5 Game Engine](http://html5gameengine.com/)

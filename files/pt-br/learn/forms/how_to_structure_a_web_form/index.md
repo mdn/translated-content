@@ -99,7 +99,7 @@ Observe que um widget pode ser aninhado dentro de seu elemento \<label>, assim:
 
 Mesmo nesses casos, entretanto, é considerada a melhor prática definir o atributo 'for' porque algumas tecnologias assistivas não entendem os relacionamentos implícitos entre labels e widgets.
 
-### Labels são clicáveis também !.
+### Labels são clicáveis também!
 
 Outra vantagem de configurar 'labels' adequadamente é que você pode clicar no label para ativar o widget correspondente, em todos os navegadores. Isso é útil para exemplos como entradas de texto, onde você pode clicar no label, bem como na entrada para focalizá-lo, mas é especialmente útil para botões de opção e caixas de seleção - a área de acerto de tal controle pode ser muito pequena, então é útil para torná-lo o maior possível.
 

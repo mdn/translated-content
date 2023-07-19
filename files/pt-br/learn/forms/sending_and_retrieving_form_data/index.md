@@ -66,7 +66,9 @@ Para entender a diferença entre esses dois métodos, vamos dar um passo atrás 
 
 O método GET é o método usado pelo navegador para pedir ao servidor para enviar de volta um determinado recurso: "Hey servidor, eu quero obter este recurso." Nesse caso, o navegador envia um corpo vazio. Como o corpo está vazio, se um formulário é enviado usando esse método, os dados enviados para o servidor são anexados ao URL.
 
-###### Exemplo<br>Considere o seguinte formulário:
+###### Exemplo
+
+Considere o seguinte formulário:
 
 ```html
 <form action="http://foo.com" method="get">
