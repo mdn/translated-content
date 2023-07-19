@@ -35,9 +35,9 @@ GET /monfichier.html
 La réponse est aussi extrêmement simple, il s'agit directement du fichier demandé :
 
 ```html
-<HTML>
-Une page HTML très simple
-</HTML>
+<html>
+  Une page HTML très simple
+</html>
 ```
 
 Contrairement aux évolutions suivantes, il n'y avait pas d'en-tête HTTP. Cela signifie que seuls des fichiers HTML pouvaient être transmis, à l'exclusion de tout autre type de documents. Il n'existait pas de code d'erreur ou d'état : en cas de problème, un fichier HTML particulier, contenant la description du problème rencontré, était renvoyé afin d'être lu par l'utilisateur.

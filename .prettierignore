@@ -32,7 +32,6 @@ build/
 /files/fr/web/api/**/*.md
 /files/fr/web/css/**/*.md
 /files/fr/web/html/**/*.md
-/files/fr/web/http/**/*.md
 /files/fr/web/javascript/**/*.md
 /files/fr/web/svg/**/*.md
 
