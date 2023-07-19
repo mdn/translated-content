@@ -1,5 +1,5 @@
 ---
-title: Logical OR (||)
+title: Operador lógico OR (||)
 slug: Web/JavaScript/Reference/Operators/Logical_OR
 l10n:
   sourceCommit: 05218bd05ab482d49ca659473851a285bcb104b0
