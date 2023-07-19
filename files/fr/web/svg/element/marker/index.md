@@ -16,7 +16,11 @@ Les marqueurs sont attachés aux formes à l'aide des propriétés {{SVGAttr("ma
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

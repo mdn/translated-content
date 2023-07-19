@@ -78,7 +78,7 @@ Este exemplo é longo e um pouco complicado que alcança muito pouco, mas serve 
 
 ### Visualizando o wasm no developer tools
 
-No Firefox 54+, o painel Debugger do Developer Tool consegue exibir a representação textual do qualquer código wasm inserido em uma página web. Para visualizá-lo, abra o painel Debugger e clique em “xxx > wasm”.
+No Firefox 54+, o painel Debugger do Developer Tool consegue exibir a representação textual do qualquer código wasm inserido em uma página web. Para visualizá-lo, abra o painel Debugger e clique em "xxx > wasm".
 
 ![](wasm-debugger-output.png)
 
@@ -92,7 +92,7 @@ Ao contrário de um programa C/C++ nativo, contudo, onde a coleção de memória
 
 In JavaScript, a Memory instance can be thought of as a resizable ArrayBuffer and, just as with ArrayBuffers, a single web app can create many independent Memory objects. You can create one using the {{jsxref("WebAssembly.Memory()")}} constructor, which takes as arguments an initial size and (optionally) a maximum size.
 
-Let’s start exploring this by looking at a quick example.
+Let's start exploring this by looking at a quick example.
 
 1. Create another new simple HTML page (copy our [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)) and call it `memory.html`. Add a `<script></script>` element to the page.
 2. Now add the following line to the top of your script, to create a memory instance:
@@ -115,7 +115,7 @@ Let’s start exploring this by looking at a quick example.
    new Uint32Array(memory.buffer)[0];
    ```
 
-3. Try this now in your demo — save what you’ve added so far, load it in your browser, then try entering the above two lines in your JavaScript console.
+3. Try this now in your demo — save what you've added so far, load it in your browser, then try entering the above two lines in your JavaScript console.
 
 ### Growing memory
 
@@ -127,17 +127,17 @@ memory.grow(1);
 
 If a maximum value was supplied upon creation of the memory instance, attempts to grow past this maximum will throw a {{jsxref("WebAssembly.RangeError")}} exception. The engine takes advantage of this supplied upper-bounds to reserve memory ahead of time, which can make resizing more efficient.
 
-Note: Since an {{domxref("ArrayBuffer")}}’s byteLength is immutable, after a successful {{jsxref("Memory.prototype.grow()")}} operation the buffer getter will return a new ArrayBuffer object (with the new byteLength) and any previous ArrayBuffer objects become “detached”, or disconnected from the underlying memory they previously pointed to.
+Note: Since an {{domxref("ArrayBuffer")}}'s byteLength is immutable, after a successful {{jsxref("Memory.prototype.grow()")}} operation the buffer getter will return a new ArrayBuffer object (with the new byteLength) and any previous ArrayBuffer objects become "detached", or disconnected from the underlying memory they previously pointed to.
 
 Just like functions, linear memories can be defined inside a module or imported. Similarly, a module may also optionally export its memory. This means that JavaScript can get access to the memory of a WebAssembly instance either by creating a new `WebAssembly.Memory` and passing it in as an import or by receiving a Memory export (via [`Instance.prototype.exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports)).
 
 ### More involved memory example
 
-Let’s make the above assertions clearer by looking at a more involved memory example — a WebAssembly module that sums an array of integers. You can find this at [memory.wasm.](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm)
+Let's make the above assertions clearer by looking at a more involved memory example — a WebAssembly module that sums an array of integers. You can find this at [memory.wasm.](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm)
 
 1. make a local copy of `memory.wasm` in the same directory as before.
 
-   > **Nota:** You can see the module’s text representation at [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
+    > **Nota:** You can see the module's text representation at [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
 
 2. Go back to your `memory.html` sample file, and fetch, compile, and instantiate your wasm module as before — add the following to the bottom of your script:
 
@@ -150,7 +150,7 @@ Let’s make the above assertions clearer by looking at a more involved memory e
      });
    ```
 
-3. Since this module exports its memory, given an Instance of this module called instance we can use an exported function `accumulate()` to create and populate an input array directly in the module instance’s linear memory (`mem`). Add the following into your code, where indicated:
+3. Since this module exports its memory, given an Instance of this module called instance we can use an exported function `accumulate()` to create and populate an input array directly in the module instance's linear memory (`mem`). Add the following into your code, where indicated:
 
    ```js
    var i32 = new Uint32Array(results.instance.exports.mem.buffer);
@@ -162,7 +162,7 @@ Let’s make the above assertions clearer by looking at a more involved memory e
    console.log(sum);
    ```
 
-Note how we create the {{domxref("Uint32Array")}} view on the Memory object’s buffer ([`Memory.prototype.buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)), not on the Memory itself.
+Note how we create the {{domxref("Uint32Array")}} view on the Memory object's buffer ([`Memory.prototype.buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)), not on the Memory itself.
 
 As importações de memória funcionam como importações de função, apenas objetos de memória são passados como valores em vez de funções JavaScript. As importações de memória são úteis por dois motivos:
 
@@ -177,7 +177,7 @@ A WebAssembly Table is a resizable typed array of [references](<https://en.wikip
 
 Tables have an element type, which limits the types of reference that can be stored in the table. In the current iteration of WebAssembly, there is only one type of reference needed by WebAssembly code — functions — and thus only one valid element type. In future iterations, more element types will be added.
 
-Function references are necessary to compile languages like C/C++ that have function pointers. In a native implementation of C/C++, a function pointer is represented by the raw address of the function’s code in the process’s virtual address space and so, for the safety reasons mentioned above, cannot be stored directly in linear memory. Instead, function references are stored in a table and their indexes, which are integers and can be stored in linear memory, are passed around instead.
+Function references are necessary to compile languages like C/C++ that have function pointers. In a native implementation of C/C++, a function pointer is represented by the raw address of the function's code in the process's virtual address space and so, for the safety reasons mentioned above, cannot be stored directly in linear memory. Instead, function references are stored in a table and their indexes, which are integers and can be stored in linear memory, are passed around instead.
 
 When the time comes to call a function pointer, the WebAssembly caller supplies the index, which can then be safety bounds checked against the table before indexing and calling the indexed function reference. Thus, tables are currently a rather low-level primitive used to compile low-level programming language features safely and portably.
 
@@ -185,11 +185,11 @@ Tables can be mutated via [`Table.prototype.set()`](/en-US/docs/Web/JavaScript/R
 
 ### A table example
 
-Let’s looking at an simple table example — a WebAssembly module that creates and exports a table with two elements: element 0 returns 13 and element 1 returns 42. You can find this at [table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm).
+Let's looking at an simple table example — a WebAssembly module that creates and exports a table with two elements: element 0 returns 13 and element 1 returns 42. You can find this at [table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm).
 
 1. Make a local copy of `table.wasm` in a new directory.
 
-   > **Nota:** You can see the module’s text representation at [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
+    > **Nota:** You can see the module's text representation at [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
 
 2. Create a new copy of our [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) in the same directory and call it `table.html`.
 3. As before, fetch, compile, and instantiate your wasm module — add the following into a {{htmlelement("script")}} element at the bottom of your HTML body:
@@ -203,7 +203,7 @@ Let’s looking at an simple table example — a WebAssembly module that creates
      });
    ```
 
-4. Now let’s access the data in the tables — add the following lines to your code in the indicated place:
+4. Now let's access the data in the tables — add the following lines to your code in the indicated place:
 
    ```js
    var tbl = results.instance.exports.tbl;
@@ -217,7 +217,7 @@ This code accesses each function reference stored in the table in turn, and inst
 
 ## Multiplicity
 
-Now we’ve demonstrated usage of the main key WebAssembly building blocks, this is a good place to mention the concept of multiplicity. This provides WebAssembly with a multitude of advances in terms of architectural efficiency:
+Now we've demonstrated usage of the main key WebAssembly building blocks, this is a good place to mention the concept of multiplicity. This provides WebAssembly with a multitude of advances in terms of architectural efficiency:
 
 - One module can have N Instances, in the same way that one function literal can produce N closure values.
 - One module instance can use 0–1 memory instances, which provide the "address space" of the instance. Future versions of WebAssembly may allow 0–N memory instances per module instance (see [Multiple Tables and Memories](http://webassembly.org/docs/future-features/#multiple-tables-and-memories)).

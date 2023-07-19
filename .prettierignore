@@ -14,15 +14,9 @@ build/
 # The following folders still need a full pass:
 
 # es
-/files/es/learn/**/*.md
 /files/es/learn/css/**/*.md
-/files/es/learn/html/**/*.md
 /files/es/learn/javascript/**/*.md
 /files/es/learn/server-side/**/*.md
-/files/es/mozilla/**/*.md
-/files/es/mozilla/add-ons/**/*.md
-/files/es/mozilla/add-ons/webextensions/api/**/*.md
-/files/es/mozilla/firefox**/*.md
 /files/es/web/api/**/*.md
 /files/es/web/css/**/*.md
 /files/es/web/html/**/*.md
@@ -30,23 +24,15 @@ build/
 /files/es/web/javascript/**/*.md
 
 # fr
-/files/fr/glossary/**/*.md
-/files/fr/learn/**/*.md
 /files/fr/learn/css/**/*.md
 /files/fr/learn/html/**/*.md
 /files/fr/learn/javascript/**/*.md
 /files/fr/learn/server-side/**/*.md
-/files/fr/mozilla/**/*.md
-/files/fr/mozilla/add-ons/**/*.md
 /files/fr/mozilla/add-ons/webextensions/api/**/*.md
-/files/fr/mozilla/firefox**/*.md
 /files/fr/web/api/**/*.md
 /files/fr/web/css/**/*.md
 /files/fr/web/html/**/*.md
-/files/fr/web/http/**/*.md
 /files/fr/web/javascript/**/*.md
-/files/fr/web/svg/**/*.md
-/files/fr/webassembly/**/*.md
 
 # ja
 /files/ja/games/**/*.md
@@ -89,21 +75,15 @@ build/
 /files/ko/web/http/**/*.md
 /files/ko/web/javascript/**/*.md
 /files/ko/web/svg/**/*.md
-/files/ko/webassembly/**/*.md
 
 # pt-br
 /files/pt-br/games/**/*.md
-/files/pt-br/glossary/**/*.md
 /files/pt-br/learn/**/*.md
 /files/pt-br/learn/css/**/*.md
 /files/pt-br/learn/html/**/*.md
 /files/pt-br/learn/javascript/**/*.md
 /files/pt-br/learn/server-side/**/*.md
 /files/pt-br/mdn/**/*.md
-/files/pt-br/mozilla/**/*.md
-/files/pt-br/mozilla/add-ons/**/*.md
-/files/pt-br/mozilla/add-ons/webextensions/api/**/*.md
-/files/pt-br/mozilla/firefox**/*.md
 /files/pt-br/web/**/*.md
 /files/pt-br/web/api/**/*.md
 /files/pt-br/web/css/**/*.md

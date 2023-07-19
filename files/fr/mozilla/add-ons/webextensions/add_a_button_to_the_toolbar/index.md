@@ -24,7 +24,6 @@ Tout d'abord, créez un nouveau dossier, «&nbsp;bouton&nbsp;», et créez un fi
 
 ```json
 {
-
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
   "name": "button-demo",
@@ -40,7 +39,6 @@ Tout d'abord, créez un nouveau dossier, «&nbsp;bouton&nbsp;», et créez un fi
       "32": "icons/page-32.png"
     }
   }
-
 }
 ```
 
@@ -60,7 +58,7 @@ Ensuite, créez «&nbsp;background.js&nbsp;» dans le répertoire racine de l'ad
 ```js
 function openPage() {
   browser.tabs.create({
-    url: "https://developer.mozilla.org"
+    url: "https://developer.mozilla.org",
   });
 }
 
@@ -71,7 +69,7 @@ Cela écoute l'événement de clic de l'action du navigateur&nbsp;; Lorsque l'é
 
 A ce point, l'extension complète devrait ressembler à ceci&nbsp;:
 
-```html
+```plain
 button/
     icons/
         page-16.png
@@ -90,7 +88,6 @@ Essayons d'ajouter une fenêtre contextuelle au bouton. Remplacez manifest.json 
 
 ```json
 {
-
   "description": "Demonstrating toolbar buttons",
   "manifest_version": 2,
   "name": "button-demo",
@@ -104,7 +101,6 @@ Essayons d'ajouter une fenêtre contextuelle au bouton. Remplacez manifest.json 
       "32": "icons/page-32.png"
     }
   }
-
 }
 ```
 
@@ -117,21 +113,20 @@ Nous avons fait trois changements par rapport à l'original&nbsp;:
 Donc maintenant nous devons créer cette fenêtre contextuelle. Créez un répertoire appelé «&nbsp;popup&nbsp;» puis créez un fichier appelé «&nbsp;choose_page.html&nbsp;» à l'intérieur. Donnez‐lui les contenus suivants&nbsp;:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_page.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_page.css" />
   </head>
 
-<body>
-  <div class="page-choice">developer.mozilla.org</div>
-  <div class="page-choice">support.mozilla.org</div>
-  <div class="page-choice">addons.mozilla.org</div>
-  <script src="choose_page.js"></script>
-</body>
-
+  <body>
+    <div class="page-choice">developer.mozilla.org</div>
+    <div class="page-choice">support.mozilla.org</div>
+    <div class="page-choice">addons.mozilla.org</div>
+    <script src="choose_page.js"></script>
+  </body>
 </html>
 ```
 
@@ -140,7 +135,8 @@ Vous pouvez voir qu'il s'agit d'une page HTML normale contenant trois éléments
 Créez un fichier appelé «&nbsp;choose_page.css&nbsp;» dans le répertoire «&nbsp;popup&nbsp;» et donnez‐lui ce contenu&nbsp;:
 
 ```css
-html, body {
+html,
+body {
   width: 300px;
 }
 
@@ -153,7 +149,7 @@ html, body {
 }
 
 .page-choice:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 ```
 
@@ -162,16 +158,15 @@ C'est juste un peu d'habillage pour notre popup.
 Ensuite, créez un fichier «&nbsp;choose_page.js&nbsp;» dans le répertoire «&nbsp;popup&nbsp;» et donnez‐le à ces contenus&nbsp;:
 
 ```js
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
   if (!e.target.classList.contains("page-choice")) {
     return;
   }
 
   var chosenPage = "https://" + e.target.textContent;
   browser.tabs.create({
-    url: chosenPage
+    url: chosenPage,
   });
-
 });
 ```
 
