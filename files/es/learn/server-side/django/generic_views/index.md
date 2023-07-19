@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de Django Parte 6: Listas genéricas y vistas de detalle'
+title: "Tutorial de Django Parte 6: Listas genéricas y vistas de detalle"
 slug: Learn/Server-side/Django/Generic_views
 ---
 
@@ -496,7 +496,7 @@ Crea el archivo HTML **/locallibrary/catalog/templates/catalog/book_detail.html*
 >
 > ```django
 >  <a href="{% url 'author-detail' book.author.pk %}"><strong>\{{ book.author }}</strong></a>
->  ```
+> ```
 
 Aunque es un poco más larga, casi todo lo que existe en esta plantilla se ha descrito previamente:
 
