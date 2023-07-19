@@ -16,10 +16,10 @@ Este artigo aborda o _Fluxo Normal_ de alinhamento e acomodação do conteúdo d
       <th scope="row">Prerrequisitos:</th>
       <td>
         Introdução ao HTML (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), e uma noção de como o CSS funciona (study
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction to CSS</a
         >.)
       </td>

@@ -10,7 +10,7 @@ Este tipo de funcionalidade era obtida anteriormente utilizando {{domxref("XMLHt
 Note que a especificação `fetch()` difere de `jQuery.ajax()`, principalmente, de três formas:
 
 - A Promise retornada do `fetch()` **não rejeitará o status do erro HTTP,** mesmo que a resposta seja um HTTP 404 ou 500. Em vez disso, ela irá resolver normalmente (com o status `ok` definido como falso), e só irá rejeitar se houver falha na rede ou se algo impedir a requisição de ser completada.
-- `fetch()` **não receberá cookies cross-site;** você não pode estabelecer uma conexão cross-site usando fetch. Cabeçalhos [`Set-Cookie`](/en-US/docs/Web/HTTP/Headers/Set-Cookie) de outros sites são ignorados silenciosamente.
+- `fetch()` **não receberá cookies cross-site;** você não pode estabelecer uma conexão cross-site usando fetch. Cabeçalhos [`Set-Cookie`](/pt-BR/docs/Web/HTTP/Headers/Set-Cookie) de outros sites são ignorados silenciosamente.
 - `fetch()` **não enviará cookies**, a não ser que seja definida a opção _credentials_ do [parâmetro init](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parâmetros). (Desde [25 de agosto de 2017](https://github.com/whatwg/fetch/pull/585). A especificação alterou as políticas padrão de credenciais para `same-origin`. O Firefox mudou desde 61.0b13.)
 
 ## Situação do suporte por navegadores

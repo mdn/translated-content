@@ -22,7 +22,7 @@ Nós aprendemos o básico de CSS, porque e como escrever simples folhas de estí
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >trabalhar com arquivos</a
         >, e o básico de HTML (estude
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introdução ao HTML</a
         >.)
       </td>

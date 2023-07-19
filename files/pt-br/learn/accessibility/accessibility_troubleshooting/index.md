@@ -15,7 +15,7 @@ Na avaliação deste módulo, apresentamos a você um site simples com vários p
       <td>
         Conhecimento básico de informática, entendimento básico de HTML, CSS e
         Javascript, uma compreesão dos
-        <a href="/en-US/docs/Learn/Accessibility"
+        <a href="/pt-BR/docs/Learn/Accessibility"
           >artigos anteriores deste curso</a
         >.
       </td>
