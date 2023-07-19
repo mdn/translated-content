@@ -52,7 +52,7 @@ Pour des exemples complets d'extensions, vous pouvez consulter [ces exemples d'e
   },
 
   "background": {
-    "scripts": ["jquery.js", "mon-script-arriere-plan.js"],
+    "scripts": ["jquery.js", "mon-script-arriere-plan.js"]
   },
 
   "browser_action": {
@@ -111,7 +111,7 @@ Pour des exemples complets d'extensions, vous pouvez consulter [ces exemples d'e
   "version": "0.1",
 
   "user_scripts": {
-    "api_script": "apiscript.js",
+    "api_script": "apiscript.js"
   },
 
   "web_accessible_resources": ["images/mon-image.png"]
