@@ -207,3 +207,83 @@ Vejamos um exemplo de tabela simples — um módulo WebAssembly que cria e expor
 Este código acessa cada referência de função armazenada na tabela por sua vez e as instancia para imprimir os valores que contêm no console — observe como cada referência de função é recuperada com um [`Table.prototype.get()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table/get), adicionamos um conjunto extra de parênteses no final para realmente invocar a função.
 
 > **Nota:** você pode encontrar nossa demonstração completa em [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([ veja ao vivo também](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)).
+
+## Globais
+
+O WebAssembly tem a capacidade de criar instâncias de variáveis globais, acessíveis a partir de JavaScript e importáveis/exportáveis em uma ou mais instâncias [`WebAssembly.Module`](/pt-BR/docs/WebAssembly/JavaScript_interface/Module). Isso é muito útil, pois permite a vinculação dinâmica de vários módulos.
+
+Para criar uma instância global WebAssembly de dentro do seu JavaScript, você usa o construtor [`WebAssembly.Global()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Global), que se parece com isto:
+
+```js
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
+```
+
+Você pode ver que isso requer dois parâmetros:
+
+- Um objeto que contém duas propriedades que descrevem a variável global:
+
+   - `value`: seu tipo de dados, que pode ser qualquer tipo de dados aceito nos módulos WebAssembly — `i32`, `i64`, `f32` ou `f64`.
+   - `mutável`: um booleano que define se o valor é mutável ou não.
+
+- Um valor contendo o valor real da variável. Pode ser qualquer valor, desde que seu tipo corresponda ao tipo de dados especificado.
+
+Então, como usamos isso? No exemplo a seguir, definimos um global como um tipo `i32` mutável, com valor 0.
+
+O valor do global é então alterado, primeiro para `42` usando a propriedade `Global.value`, e então para 43 usando a função `incGlobal()` exportada do módulo `global.wasm` (isso adiciona 1 a qualquer valor que lhe for atribuído e, em seguida, retorna o novo valor).
+
+```js
+const output = document.getElementById("output");
+
+function assertEq(msg, got, expected) {
+  const result =
+    got === expected
+      ? `SUCESSO! Obteve: ${got}<br>`
+      : `FALHA!<br>Obteve: ${got}<br>Esperado: ${expected}<br>`;
+  output.innerHTML += `Testando ${msg}: ${result}`;
+}
+
+assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
+
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
+
+WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
+  ({ instance }) => {
+    assertEq(
+      "obtendo valor inicial de wasm",
+      instance.exports.getGlobal(),
+      0,
+    );
+    global.value = 42;
+    assertEq(
+      "obtendo valor atualizado por JS do wasm",
+      instance.exports.getGlobal(),
+      42,
+    );
+    instance.exports.incGlobal();
+    assertEq("obtendo valor atualizado de JS", global.value, 43);
+  },
+);
+```
+
+> **Nota:** Você pode ver o exemplo [executando ao vivo no GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html); consulte também o [código-fonte](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
+
+## Multiplicidade
+
+Agora que demonstramos o uso dos principais blocos de construção do WebAssembly, este é um bom lugar para mencionar o conceito de multiplicidade. Isso fornece ao WebAssembly uma infinidade de avanços em termos de eficiência arquitetônica:
+
+- Um módulo pode ter N instâncias, da mesma forma que um literal de função pode produzir N valores de fechamento.
+- Uma instância de módulo pode usar instâncias de memória 0–1, que fornecem o "espaço de endereço" da instância. Versões futuras do WebAssembly podem permitir instâncias de memória 0–N por instância de módulo (consulte [Múltiplas memórias](https://webassembly.org/roadmap/)).
+- Uma instância de módulo pode usar instâncias de tabela 0–1 — este é o "espaço de endereço de função" da instância, usado para implementar ponteiros de função C. Versões futuras do WebAssembly podem permitir 0–N instâncias de tabela por instância de módulo.
+- Uma instância de memória ou tabela pode ser usada por instâncias de módulo 0–N — todas essas instâncias compartilham o mesmo espaço de endereço, permitindo [vinculação dinâmica](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking .md).
+
+Você pode ver a multiplicidade em ação em nosso artigo Compreendendo o formato de texto — consulte a [seção Tabelas mutantes e vinculação dinâmica](/pt-BR/docs/WebAssembly/Understanding_the_text_format#mutating_tables_and_dynamic_linking).
+
+## Resumo
+
+Este artigo apresentou os fundamentos do uso da API WebAssembly JavaScript para incluir um módulo WebAssembly em um contexto JavaScript e fazer uso de suas funções e como usar a memória e as tabelas do WebAssembly em JavaScript. Também tocamos no conceito de multiplicidade.
+
+## Veja também
+
+- [webassembly.org](https://webassembly.org/)
+- [Conceitos do WebAssembly](/pt-BR/docs/WebAssembly/Concepts)
+- [WebAssembly no Mozilla Research](https://research.mozilla.org/)
