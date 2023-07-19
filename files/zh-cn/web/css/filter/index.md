@@ -77,9 +77,7 @@ filter: brightness(2);
 ```
 
 - {{cssxref("filter-function/contrast", "contrast()")}}
-  - : Adjusts the contrast of the input image. A value of `0%` makes the image grey, `100%` has no effect, and values over `100%` create a contrast.
-
-调整输入图像的对比度。值是 `0%` 将使图像变灰；值是 `100%`，则无影响；若值超过 `100%` 将增强对比度。
+  - : 调整输入图像的对比度。值是 `0%` 将使图像变灰；值是 `100%`，则无影响；若值超过 `100%` 将增强对比度。
 
 ```css
 filter: contrast(200%);
