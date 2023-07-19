@@ -422,7 +422,6 @@
 /zh-CN/docs/DOM/window.URL.createObjectURL	/zh-CN/docs/Web/API/URL/createObjectURL_static
 /zh-CN/docs/DOM/window.URL.revokeObjectURL	/zh-CN/docs/Web/API/URL/revokeObjectURL_static
 /zh-CN/docs/DOM/window.alert	/zh-CN/docs/Web/API/Window/alert
-/zh-CN/docs/DOM/window.applicationCache	/zh-CN/docs/Web/API/Window/applicationCache
 /zh-CN/docs/DOM/window.atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/DOM/window.btoa	/zh-CN/docs/Web/API/btoa
 /zh-CN/docs/DOM/window.cancelAnimationFrame	/zh-CN/docs/Web/API/Window/cancelAnimationFrame
@@ -502,7 +501,6 @@
 /zh-CN/docs/DOM:window.openDialog	/zh-CN/docs/Web/API/Window
 /zh-CN/docs/Document_Object_Model_(DOM)/window.onbeforeunload	/zh-CN/docs/Web/API/Window/beforeunload_event
 /zh-CN/docs/Enumerability_and_ownership_of_properties	/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
-/zh-CN/docs/Firefox_12_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/12
 /zh-CN/docs/Firefox_14_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/14
 /zh-CN/docs/Firefox_15_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/15
 /zh-CN/docs/Firefox_16_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/16
@@ -1201,7 +1199,6 @@
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/主页地址	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_action	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button
-/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/侧边栏	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/匹配模板	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/实现一个设置页面	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展插件	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
@@ -1823,7 +1820,6 @@
 /zh-CN/docs/Web/API/Web_Audio_API/基于Web_Audio_API实现的音频可视化效果	/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 /zh-CN/docs/Web/API/Web_Audio_API/最佳实践	/zh-CN/docs/Web/API/Web_Audio_API/Best_practices
 /zh-CN/docs/Web/API/Window.alert	/zh-CN/docs/Web/API/Window/alert
-/zh-CN/docs/Web/API/Window.applicationCache	/zh-CN/docs/Web/API/Window/applicationCache
 /zh-CN/docs/Web/API/Window.atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/Web/API/Window.btoa	/zh-CN/docs/Web/API/btoa
 /zh-CN/docs/Web/API/Window.cancelAnimationFrame	/zh-CN/docs/Web/API/Window/cancelAnimationFrame

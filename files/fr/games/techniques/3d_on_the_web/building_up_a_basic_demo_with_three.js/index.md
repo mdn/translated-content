@@ -13,7 +13,7 @@ Une scène 3D dans un jeu, même la plus simple qui soit, contient des élément
 
 ## Configuration de l'environnement de développement
 
-Pour commencer à développer Three.js**&nbsp;:
+Pour commencer à développer Three.js\*\*&nbsp;:
 
 - Assurez-vous d'utiliser un navigateur moderne avec une bonne prise en charge de [WebGL](/fr/docs/Web/API/WebGL_API) (la dernière version de Firefox, Safari, Chrome ou Edge devrait suffire)
 - Créez un répertoire où enregistrer vos expérimentations
@@ -25,7 +25,7 @@ Pour commencer à développer Three.js**&nbsp;:
 Voici la structure que nous allons utiliser
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr-FR">
   <head>
     <meta charset="utf-8" />

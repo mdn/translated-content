@@ -30,7 +30,6 @@ MathML `<mrow>` 元素用于对连续多行表达式的不同子表达式进行�
 
 ```html
 <math>
-
   <mrow>
     <mn> 1 </mn>
     <mo> + </mo>
@@ -46,7 +45,6 @@ MathML `<mrow>` 元素用于对连续多行表达式的不同子表达式进行�
     </mrow>
     <mo> ) </mo>
   </mrow>
-
 </math>
 ```
 

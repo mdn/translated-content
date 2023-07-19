@@ -14,7 +14,7 @@ slug: Glossary/XHTML
 ```html
 <!-- Content-Type: text/html -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />

@@ -78,7 +78,7 @@ window.onresize = reportWindowSize;
 
 > **备注：** 这里的例子是在 {{HTMLElement("iframe")}} 中输出的，所以报告的宽度和高度值是针对 `<iframe>` 的，而不是本页面所在的窗口。特别是，很难调整窗口的大小，以便看到报告高度的不同。
 >
-> [在示例本身窗口查看示例](https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/API/Window/resize_event/_sample_.window_size_logger.html)更容易观察到效果。
+> [在示例本身窗口查看示例](https://yari-demos.prod.mdn.mozit.cloud/zh-CN/docs/Web/API/Window/resize_event/_sample_.window_size_logger.html)更容易观察到效果。
 
 ### addEventListener 等价形式
 

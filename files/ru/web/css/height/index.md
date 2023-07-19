@@ -60,7 +60,7 @@ height: unset;
 
 {{csssyntax}}
 
-## Пример:
+## Пример
 
 ### HTML
 

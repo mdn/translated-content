@@ -437,7 +437,7 @@ a = b = 5;
     <tr>
       <td>
         <a
-          href="ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator"
+          href="/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator"
           >Оператор нулевого слияния (??)</a
         >
       </td>

@@ -83,7 +83,7 @@ The methods that can change how elements are laid out in CSS are as follows:
 
 ## The display property
 
-The main methods of achieving page layout in CSS are all values of the `display` property. This property allows us to change the default way something displays. Everything in normal flow has a value of `display`, used as the default way that elements they are set on behave. For example, the fact that paragraphs in English display one below the other is due to the fact that they are styled with `display: block`. If you create a link around some text inside a paragraph, that link remains inline with the rest of the text, and doesn’t break onto a new line. This is because the {{htmlelement("a")}} element is `display: inline` by default.
+The main methods of achieving page layout in CSS are all values of the `display` property. This property allows us to change the default way something displays. Everything in normal flow has a value of `display`, used as the default way that elements they are set on behave. For example, the fact that paragraphs in English display one below the other is due to the fact that they are styled with `display: block`. If you create a link around some text inside a paragraph, that link remains inline with the rest of the text, and doesn't break onto a new line. This is because the {{htmlelement("a")}} element is `display: inline` by default.
 
 You can change this default display behavior. For example, the {{htmlelement("li")}} element is `display: block` by default, meaning that list items display one below the other in our English document. If we change the display value to `inline` they now display next to each other, as words would do in a sentence. The fact that you can change the value of `display` for any element means that you can pick HTML elements for their semantic meaning, without being concerned about how they will look. The way they look is something that you can change.
 
@@ -165,7 +165,7 @@ As a simple example of this, we can add the {{cssxref("flex")}} property to all 
 
 While flexbox is designed for one-dimensional layout, Grid Layout is designed for two dimensions — lining things up in rows and columns.
 
-Once again, you can switch on Grid Layout with a specific value of display — `display: grid`. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using `display: grid`, we are also defining some row and column tracks on the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns each of `1fr` and two rows of `100px`. I don’t need to put any rules on the child elements; they are automatically placed into the cells our grid has created.
+Once again, you can switch on Grid Layout with a specific value of display — `display: grid`. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using `display: grid`, we are also defining some row and column tracks on the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns each of `1fr` and two rows of `100px`. I don't need to put any rules on the child elements; they are automatically placed into the cells our grid has created.
 
 ```css hidden
     * {box-sizing: border-box;}
@@ -307,7 +307,7 @@ p {
 
 ## Positioning techniques
 
-Positioning allows you to move an element from where it would be placed when in normal flow to another location. Positioning isn’t a method for creating your main page layouts, it is more about managing and fine-tuning the position of specific items on the page.
+Positioning allows you to move an element from where it would be placed when in normal flow to another location. Positioning isn't a method for creating your main page layouts, it is more about managing and fine-tuning the position of specific items on the page.
 
 There are however useful techniques for certain layout patterns that rely on the {{cssxref("position")}} property. Understanding positioning also helps in understanding normal flow, and what it is to move an item out of normal flow.
 
@@ -630,7 +630,7 @@ You can also see this example live at [css-tables-example.html](https://mdn.gith
 
 ## Multi-column layout
 
-The multi-column layout module gives us a way to lay out content in columns, similar to how text flows in a newspaper. While reading up and down columns is less useful in a web context as you don’t want to force users to scroll up and down, arranging content into columns can be a useful technique.
+The multi-column layout module gives us a way to lay out content in columns, similar to how text flows in a newspaper. While reading up and down columns is less useful in a web context as you don't want to force users to scroll up and down, arranging content into columns can be a useful technique.
 
 To turn a block into a multicol container we use either the {{cssxref("column-count")}} property, which tells the browser how many columns we would like to have, or the {{cssxref("column-width")}} property, which tells the browser to fill the container with as many columns of at least that width.
 

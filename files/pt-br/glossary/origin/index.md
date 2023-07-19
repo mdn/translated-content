@@ -23,8 +23,8 @@ Algumas operações são restritas para conteúdos de mesma origem, e essa restr
 
 ## Especificações
 
-| Especificação                                                    | Status                           | Comentário |
-| ---------------------------------------------------------------- | -------------------------------- | ---------- |
+| Especificação                                    | Status                   | Comentário |
+| ------------------------------------------------ | ------------------------ | ---------- |
 | {{SpecName('HTML WHATWG', '#origin', 'origin')}} | {{Spec2('HTML WHATWG')}} |            |
 
 ## Aprenda mais

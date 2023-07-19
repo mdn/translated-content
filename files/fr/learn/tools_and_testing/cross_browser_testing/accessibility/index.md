@@ -87,19 +87,20 @@ La sémantique HTML (où les éléments sont utilisés à leur fin prévues) est
 Le quick win le plus important en sémantique HTML et d'utiliser une structure de rubriques et de paragraphes pour votre contenu ; parce que les utilisateurs de lecteurs d'écran ont tendance à utiliser les rubriques d'un document comme indications pour trouver le contenu qu'il recherche plus rapidement. Si votre contenu n'a pas de rubriques, tout ce qu'ils auraient c'est un énorme mur de texte sans aucune indication pour trouver quelque chose. Exemples de bon et de mauvais HTML :
 
 ```html example-bad
-<font size="7">My heading</font>
-<br><br>
+<font size="7">My heading</font> <br /><br />
 This is the first section of my document.
-<br><br>
+<br /><br />
 I'll add another paragraph here too.
-<br><br>
+<br /><br />
 <font size="5">My subheading</font>
-<br><br>
-This is the first subsection of my document. I'd love people to be able to find this content!
-<br><br>
+<br /><br />
+This is the first subsection of my document. I'd love people to be able to find
+this content!
+<br /><br />
 <font size="5">My 2nd subheading</font>
-<br><br>
-This is the second subsection of my content. I think is more interesting than the last one.
+<br /><br />
+This is the second subsection of my content. I think is more interesting than
+the last one.
 ```
 
 ```html example-good
@@ -111,11 +112,17 @@ This is the second subsection of my content. I think is more interesting than th
 
 <h2>My subheading</h2>
 
-<p>This is the first subsection of my document. I'd love people to be able to find this content!</p>
+<p>
+  This is the first subsection of my document. I'd love people to be able to
+  find this content!
+</p>
 
 <h2>My 2nd subheading</h2>
 
-<p>This is the second subsection of my content. I think is more interesting than the last one.</p>
+<p>
+  This is the second subsection of my content. I think is more interesting than
+  the last one.
+</p>
 ```
 
 De plus, votre contenu doit avoir un sens logique dans son code source — vous pourrez toujours le placer où vous voulez en utilisant du CSS plus tard, mais vous devez avoir un bon code source avec lequel commencer.
@@ -149,8 +156,14 @@ Cet exemple souligne l'importance de l'utilisation de la sémantique correcte d'
 Un autre conseil — comme vu dans notre exemple, vous pouvez contrôler comment vos éléments focalisables paraissent quand ils sont focalisés, en utilisant la pseudo-class [:focus](/fr/docs/Web/CSS/:focus). C'est une bonne idée de doubler les styles focus et hover, comme ça vos utilisateurs auront un indice visuel qu'un contrôle fera quelque chose lorsqu'il sera activé, qu'ils utilisent la souris ou le clavier :
 
 ```css
-a:hover, input:hover, button:hover, select:hover,
-a:focus, input:focus, button:focus, select:focus {
+a:hover,
+input:hover,
+button:hover,
+select:hover,
+a:focus,
+input:focus,
+button:focus,
+select:focus {
   font-weight: bold;
 }
 ```
@@ -165,15 +178,16 @@ Parfois ça n'est pas possible d'éviter la perte de l'accessibilité clavier. V
 2. Créer des raccourcis clavier en utilisant JavaScript, les fonctions sont activés quand vous appuyez sur une certaine touche du clavier. Voir [Desktop mouse and keyboard controls](/fr/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) pour des exemples en rapport avec le jeu qui peuvent être adaptés à d'autres fins.
 3. Utilisez des approches intéressantes pour simuler le comportement d'un bouton. Prenez par exemple notre exemple [fake-div-buttons.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Nous donnons à nos faux boutons `<div>` la capacité d'être focalisé (y compris avec la tabulation) en donnant à chacun d'entre eux l'attribut `tabindex="0"` (voir l'[article tabindex](https://webaim.org/techniques/keyboard/tabindex) de WebAIM pour plus de détails utiles). Cela nous permet de tabuler sur les boutons, mais pas de les activer avec la toucher Entrée/Retour. Pour faire cela, nous devons ajouter ce petit bout de tromperie en JavaScript :
 
-    ```js
-    document.onkeydown = function(e) {
-      if(e.keyCode === 13) { // The Enter/Return key
-        document.activeElement.onclick(e);
-      }
-    };
-    ```
+   ```js
+   document.onkeydown = function (e) {
+     if (e.keyCode === 13) {
+       // The Enter/Return key
+       document.activeElement.onclick(e);
+     }
+   };
+   ```
 
-    Ici nous ajoutons un listener à l'objet `document` pour détecter quand une touche a été appuyée sur le clavier. Nous vérifions quelle touche a été pressée avec la propriété d'évènement d'objet [keyCode](/fr/docs/Web/API/KeyboardEvent/keyCode) ; si c'est le code de la touche qui retourne Entrée/Retour, on exécute la fonction stockée dans le `onclick` du bouton en utilisant `document.activeElement.onclick()`. [`activeElement`](/fr/docs/Web/API/Document/activeElement) nous donne l'élément courant qui est focalisé sur la page.
+   Ici nous ajoutons un listener à l'objet `document` pour détecter quand une touche a été appuyée sur le clavier. Nous vérifions quelle touche a été pressée avec la propriété d'évènement d'objet [keyCode](/fr/docs/Web/API/KeyboardEvent/keyCode) ; si c'est le code de la touche qui retourne Entrée/Retour, on exécute la fonction stockée dans le `onclick` du bouton en utilisant `document.activeElement.onclick()`. [`activeElement`](/fr/docs/Web/API/Document/activeElement) nous donne l'élément courant qui est focalisé sur la page.
 
 > **Note :** Cette technique ne fonctionnera que si vous configurer vos propres gestionnaires d'évènement avec les propriétés de gestion d'évènement (par ex. `onclick`). `addEventListener` ne fonctionnera pas. C'est beaucoup de prises de tête pour construire la fonctionnalité de retour. Et il y a d'autres problèmes rattachés avec. Vaut mieux commencer par utiliser les bons éléments pour leurs buts initiaux.
 

@@ -18,7 +18,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 
 L'[API Fetch](/fr/docs/Web/API/Fetch_API) fournit une interface JavaScript pour l'accès et la manipulation des parties du pipeline HTTP, comme les requêtes et les réponses. Cela fournit aussi une méthode globale {{domxref("GlobalFetch.fetch","fetch()")}} qui procure un moyen facile et logique de récupérer des ressources à travers le réseau de manière asynchrone.
 
-Ce genre de fonctionnalité était auparavant réalisé avec {{domxref("XMLHttpRequest")}}. Fetch fournit une meilleure alternative qui peut être utilisée facilement par d’autres technologies comme {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch fournit aussi un endroit unique et logique pour la définition d'autres concepts liés à HTTP comme CORS et les extensions d'HTTP.
+Ce genre de fonctionnalité était auparavant réalisé avec {{domxref("XMLHttpRequest")}}. Fetch fournit une meilleure alternative qui peut être utilisée facilement par d'autres technologies comme {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch fournit aussi un endroit unique et logique pour la définition d'autres concepts liés à HTTP comme CORS et les extensions d'HTTP.
 
 ## Détection de la fonctionnalité
 
@@ -57,7 +57,7 @@ Bien sûr, il s'agit seulement d'une réponse HTTP, pas exactement de l'image. P
 
 Un objet `objectURL` est ensuite créé à partir du {{domxref("Blob")}} extrait, puis est inseré dans {{domxref("img")}}.
 
-Les requêtes Fetch sont controllées par la directive `connect-src` du [Content Security Policy](/fr/docs/Security/CSP/CSP_policy_directives) plutôt que par la directive de la ressource dont il s’agit de la récupération.
+Les requêtes Fetch sont controllées par la directive `connect-src` du [Content Security Policy](/fr/docs/Security/CSP/CSP_policy_directives) plutôt que par la directive de la ressource dont il s'agit de la récupération.
 
 ### Fournir des options à la requête
 
@@ -105,7 +105,7 @@ fetch('flowers.jpg').then(function(response) {
 
 ### Fournir votre propre objet requête
 
-Plutôt que de transmettre le chemin de la ressource que vous souhaitez récupérer avec l'appel `fetch()`, vous pouvez créer un objet de requête en utilisant le constructeur {{domxref("Request.Request","Request()")}}, et le transmettre à la méthode `fetch()` en tant qu’argument&nbsp;:
+Plutôt que de transmettre le chemin de la ressource que vous souhaitez récupérer avec l'appel `fetch()`, vous pouvez créer un objet de requête en utilisant le constructeur {{domxref("Request.Request","Request()")}}, et le transmettre à la méthode `fetch()` en tant qu'argument&nbsp;:
 
 ```js
 var myHeaders = new Headers();
@@ -261,7 +261,7 @@ Le mixin {{domxref("Body")}} définit les méthodes suivantes pour extraire le c
 - {{domxref("Body.text","text()")}}
 - {{domxref("Body.formData","formData()")}}
 
-Ceci rend l'usage de données non textuelles plus facile qu’avec XHR.
+Ceci rend l'usage de données non textuelles plus facile qu'avec XHR.
 
 Le corps des requêtes peut être défini en passant les paramètres du corps&nbsp;:
 

@@ -311,7 +311,7 @@ const metadata = {
       title: "JavaScript-Umgebung",
     },
   ],
-  url: "/en-US/docs/Tools/Scratchpad",
+  url: "/zh-TW/docs/Tools/Scratchpad",
 };
 
 let {

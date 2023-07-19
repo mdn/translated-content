@@ -22,7 +22,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/剪切板/setImageData
 ## 语法
 
 ```js
-browser.clipboard.setImageData(imageData, imageType)
+browser.clipboard.setImageData(imageData, imageType);
 ```
 
 ### 参数
@@ -49,9 +49,9 @@ Copy a remote image:
 // * the host permission for "https://cdn.mdn.mozilla.net/*"
 // * the API permission "clipboardWrite"
 
-fetch('https://cdn.mdn.mozilla.net/static/img/favicon144.png')
-.then(response => response.arrayBuffer())
-.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+fetch("https://cdn.mdn.mozilla.net/static/img/favicon144.png")
+  .then((response) => response.arrayBuffer())
+  .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
 ```
 
 Copy an image that was bundled with the extension:
@@ -59,9 +59,9 @@ Copy an image that was bundled with the extension:
 ```js
 // requires the API permission "clipboardWrite"
 
-fetch(browser.runtime.getURL('image.png'))
-.then(response => response.arrayBuffer())
-.then(buffer => browser.clipboard.setImageData(buffer, 'png'));
+fetch(browser.runtime.getURL("image.png"))
+  .then((response) => response.arrayBuffer())
+  .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
 ```
 
 {{WebExtExamples}}

@@ -60,7 +60,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 <!---->
 
 - {{domxref("HTMLFormElement.reportValidity()")}}
-  - : Returns `true` if the element's child controls satisfy their validation constraints. When `false` is returned, cancelable [`invalid`](/en-US/docs/Web/Events/invalid) events are fired for each invalid child and validation problems are reported to the user.
+  - : Returns `true` if the element's child controls satisfy their validation constraints. When `false` is returned, cancelable [`invalid`](/ru/docs/Web/Events/invalid) events are fired for each invalid child and validation problems are reported to the user.
 
 ## Examples
 

@@ -233,7 +233,7 @@ Firefox 中：
 只有一个图标的浏览器按钮，指定了 2 种不同大小。其扩展的 background scripts 能接收用户点击其图标时的点击事件代码大概像这样：
 
 ```js
- browser.browserAction.onClicked.addListener(handleClick);
+browser.browserAction.onClicked.addListener(handleClick);
 ```
 
 ```json

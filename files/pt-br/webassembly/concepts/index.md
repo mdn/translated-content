@@ -92,13 +92,13 @@ De maneira resumida, o processo funciona da seguinte maneira:
 
 1. Emscripten primeiro alimenta o C/C++ no clang+LLVM — um maduro compilador C/C++, enviado como parte do Xcode do OSX, por exemplo.
 2. Emscripten transforma o resultado compilado do clang+LLVM em um binário .wasm
-3. Por si só, o WebAssembly atualmente não pode acessar diretamente o DOM; ele só pode chamar o JavaScript, transmitindo tipos de dados primitivos de ponto flutuante e inteiro. Portanto, para acessar qualquer API da Web, o WebAssembly precisa chamar o JavaScript, que faz a chamada da API da Web. Portanto, o Emscripten cria o código de “cola” HTML e JavaScript necessário para alcançar isso.
+3. Por si só, o WebAssembly atualmente não pode acessar diretamente o DOM; ele só pode chamar o JavaScript, transmitindo tipos de dados primitivos de ponto flutuante e inteiro. Portanto, para acessar qualquer API da Web, o WebAssembly precisa chamar o JavaScript, que faz a chamada da API da Web. Portanto, o Emscripten cria o código de "cola" HTML e JavaScript necessário para alcançar isso.
 
 > **Nota:** Existem planos futuros para [permitir o WebAssembly chamar APIs Web diretamente](https://github.com/WebAssembly/gc/blob/master/README.md).
 
 O código de "cola" JavaScript não é tão simples quanto você imagina. Para começar, o Emscripten implementa bibliotecas populares de C/C++ como SDL, OpenGL, OpenAL e partes do POSIX. Essas bibliotecas são implementadas em termos de APIs da Web e, portanto, cada uma exige algum código JavaScript para conectar o WebAssembly à API da Web subjacente.
 
-Portanto, parte do código está implementando a funcionalidade de cada biblioteca respectiva usada pelo código C/C ++. O código de “cola” também contém a lógica para chamar as APIs JavaScript do WebAssembly mencionadas acima para buscar, carregar e executar o arquivo .wasm.
+Portanto, parte do código está implementando a funcionalidade de cada biblioteca respectiva usada pelo código C/C ++. O código de "cola" também contém a lógica para chamar as APIs JavaScript do WebAssembly mencionadas acima para buscar, carregar e executar o arquivo .wasm.
 
 O documento HTML gerado carrega o arquivo JavaScript e grava stdout em um {{htmlelement("textarea")}}. Se o aplicativo usar OpenGL, o HTML também conterá um elemento {{htmlelement("canvas")}} usado como destino de renderização. É muito fácil modificar a saída do Emscripten e transformá-la em qualquer aplicativo da web que você precisar.
 

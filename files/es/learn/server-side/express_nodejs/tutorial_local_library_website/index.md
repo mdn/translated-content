@@ -21,7 +21,7 @@ El primer artículo de nuestra serie de tutoriales prácticos explica lo que apr
             >Para los siguientes artículos, también deberá haber
           </span></span
         ><a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment"
+          href="/es/docs/Learn/Server-side/Express_Nodejs/development_environment"
           >configurado un entorno de desarrollo de Node</a
         >.
       </td>

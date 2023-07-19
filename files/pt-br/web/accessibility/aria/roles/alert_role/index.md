@@ -32,7 +32,7 @@ Os produtos de tecnologias assistivas devem atender tal evento e notificar seus 
 
 ### Exemplos
 
-#### Exemplo 1: Adicionando o atributo (_role_) no código HTML:
+#### Exemplo 1: Adicionando o atributo (_role_) no código HTML
 
 O trecho abaixo mostra como o atributo _role alert_ é inserido, diretamente, no código-fonte HTML. No momento em que o elemento termina de carregar, o leitor de tela deve ser notificado do alerta. Se o elemento já estiver no código-fonte original quando a página carregar, o leitor de tela vai anunciar o erro imediatamente após a apresentação do título da página.
 
@@ -40,7 +40,7 @@ O trecho abaixo mostra como o atributo _role alert_ é inserido, diretamente, no
 <h2 role="alert">Your form could not be submitted because of 3 validation errors.(Seu formulário não pode ser submetido devido a 3 erros de validação)</h2>
 ```
 
-#### Exemplo 2: Adicionando, dinamicamente, um elemento com a função de alerta:
+#### Exemplo 2: Adicionando, dinamicamente, um elemento com a função de alerta
 
 Esta parte mostra como criar, de forma dinâmica, um elemento com uma função de alerta e como adicioná-lo à estrutura do documento:
 
@@ -58,7 +58,7 @@ document.body.appendChild(myAlertText);
 $("<p role='alert'>You must agree with our terms of service to create an account.(Você deve concordar com os nossos termos de serviço para criar uma conta)</p>").appendTo(document.body);
 ```
 
-#### Exemplo 3: Adicionando a função de alerta a um elemento existente:
+#### Exemplo 3: Adicionando a função de alerta a um elemento existente
 
 Às vezes é preferível adicionar uma função de alerta a um elemento que já está visível na página, a criar um novo elemento. Isto possibilita que os desenvolvedores reiterem a informação que virá a ser mais importante, ou urgente, para os utilizadores. Por exemplo, um controle de formulário pode ter uma instrução sobre o valor esperado. Caso um valor diferente seja inserido, o` role="alert" `pode ser adicionado ao texto de instrução e, então, o leitor de tela o anuncia como um alerta. O pseudo código, no fragmento abaixo, ilustra esta abordagem:
 
@@ -71,7 +71,7 @@ $("<p role='alert'>You must agree with our terms of service to create an account
 document.getElementById("formInstruction").setAttribute("role", "alert");
 ```
 
-#### Exemplo 4: Construindo um elemento com uma função de alerta visível:
+#### Exemplo 4: Construindo um elemento com uma função de alerta visível
 
 Se um elemento já tem o atributo` role="alert" `e é, inicialmente, escondido pelo uso da CSS, torná-lo visível o faz disparar como se estivesse adicionado à página. Isto significa que um alerta existente pode ser "utilizado" múltiplas vezes.
 
@@ -92,7 +92,7 @@ Se um elemento já tem o atributo` role="alert" `e é, inicialmente, escondido p
 document.getElementById("expirationWarning").className = "";
 ```
 
-### Notas:
+### Notas
 
 - A utilização da função alerta em um elemento implica que ele tenha a `aria-live="assertive"`.
 - O atributo _alert role_ deve ser usado, apenas, para conteúdo com texto estático. O elemento no qual a função alerta for usada não deve ser passível de receber foco, então, um leitor de tela vai, automaticamente, anunciar o alerta, independentemente de onde o foco do teclado esteja localizado no momento.

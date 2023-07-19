@@ -1042,7 +1042,7 @@ Colors can also be defined via hue, saturation, and lightness, or HSL, by using 
 
 Saturation and lightness are represented as percentages.
 `100%` is full **saturation**, and `0%` is a shade of grey.
-`100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is “normal.”
+`100%` **lightness** is white, `0%` lightness is black, and `50%` lightness is "normal."
 
 ```css
 hsl(0,  100%,50%)    /* red */

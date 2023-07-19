@@ -167,7 +167,7 @@ In the example below the flex items will each take an equal amount of space in t
 
 ### CSS grid
 
-In CSS Grid Layout the `fr` unit allows the distribution of available space across grid tracks. The next example creates a grid container with three tracks sized at `1fr`. This will create three column tracks, each taking one part of the available space in the container. You can find out more about this approach to create a grid in the Learn Layout Grids topic, under [Flexible grids with the fr unit](en-US/docs/Learn/CSS/CSS_layout/Grids#Flexible_grids_with_the_fr_unit).
+In CSS Grid Layout the `fr` unit allows the distribution of available space across grid tracks. The next example creates a grid container with three tracks sized at `1fr`. This will create three column tracks, each taking one part of the available space in the container. You can find out more about this approach to create a grid in the Learn Layout Grids topic, under [Flexible grids with the fr unit](/en-US/docs/Learn/CSS/CSS_layout/Grids#Flexible_grids_with_the_fr_unit).
 
 ```css
 .container {
@@ -283,8 +283,6 @@ There are other settings you can use with the viewport meta tag, however in gene
 - `user-scalable`: Prevents zooming if set to `no`.
 
 You should avoid using `minimum-scale`, `maximum-scale`, and in particular setting `user-scalable` to `no`. Users should be allowed to zoom as much or as little as they need to; preventing this causes accessibility problems.
-
-> **Nota:** There is a CSS @ rule designed to replace the viewport meta tag — [@viewport](/pt-BR/docs/Web/CSS/@viewport) — however it has poor browser support. It was implemented in Internet Explorer and Edge, however once the Chromium-based Edge ships it will no longer be part of the Edge browser.
 
 ## Summary
 

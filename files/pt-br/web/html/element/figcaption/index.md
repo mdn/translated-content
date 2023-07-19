@@ -55,6 +55,6 @@ Por favor, consulte a página {{HTMLElement("figure")}} para visualizar o exempl
 
 {{Compat("html.elements.figcaption")}}
 
-## Veja também:
+## Veja também
 
 - O elemento {{HTMLElement("figure")}}.

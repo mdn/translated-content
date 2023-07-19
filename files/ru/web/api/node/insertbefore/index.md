@@ -47,7 +47,7 @@ parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 
-Однако нет метода insertAfter. Он может быть заменён использованием метода insertBefore в связке с [`nextSibling`](/en-US/docs/DOM/Node.nextSibling).
+Однако нет метода insertAfter. Он может быть заменён использованием метода insertBefore в связке с [`nextSibling`](/ru/docs/DOM/Node.nextSibling).
 
 В предыдущем примере sp1 может быть вставлен после sp2 следующим образом:
 
