@@ -16,7 +16,7 @@ l10n:
 
 ## 例
 
-この例では、ID が `slider` の要素の `aria-valuetext` 属性に "Sunday" を設定し、人間が読み取り可能な範囲の値を与えています。`ariaValueText`を使用して、値を "Monday" に更新します。
+この例では、ID が `slider` の要素の `aria-valuetext` 属性に "Sunday" を設定し、人間が読み取り可能な範囲の値を与えています。`ariaValueText` を使用して、値を "Monday" に更新します。
 
 ```html
 <div
