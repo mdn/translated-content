@@ -1,5 +1,5 @@
 ---
-title: 'CSP : prefetch-src'
+title: "CSP : prefetch-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
 browser-compat: http.headers.csp.Content-Security-Policy.prefetch-src

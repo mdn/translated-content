@@ -22,5 +22,5 @@ slug: Glossary/Accessibility_tree
 
 1. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Accessibility", "アクセシビリティ")}}
-    2. {{Glossary("ARIA")}}
+   1. {{Glossary("Accessibility", "アクセシビリティ")}}
+   2. {{Glossary("ARIA")}}

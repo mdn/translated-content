@@ -10,5 +10,5 @@ Une fonction qui agit en s'appelant elle-même. Une récursion est utilisée pou
 
 ### Culture générale
 
-- [Algorithme récursif](https://fr.wikipedia.org/wiki/Algorithme_r%C3%A9cursif) sur Wikipédia
+- [Algorithme récursif](https://fr.wikipedia.org/wiki/Algorithme_récursif) sur Wikipédia
 - [Plus de détails sur la récursion en JavaScript](/fr/docs/Web/JavaScript/Guide/Fonctions#La_récursivité)

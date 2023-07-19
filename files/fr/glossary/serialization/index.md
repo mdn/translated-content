@@ -14,4 +14,4 @@ Les valeurs de {{Glossary("CSS")}} sont sérialisées par appel de la fonction {
 
 ### Culture générale
 
-- [Sérialisation](https://fr.wikipedia.org/wiki/S%C3%A9rialisation) sur Wikipédia
+- [Sérialisation](https://fr.wikipedia.org/wiki/Sérialisation) sur Wikipédia
