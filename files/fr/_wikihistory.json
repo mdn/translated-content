@@ -12726,10 +12726,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/Window/applicationCache": {
-    "modified": "2019-05-15T12:55:24.617Z",
-    "contributors": ["Lonylis", "personnel"]
-  },
   "Web/API/Window/back": {
     "modified": "2020-08-30T04:11:10.912Z",
     "contributors": ["Voulto"]
@@ -13284,10 +13280,6 @@
   "Web/API/WorkerGlobalScope": {
     "modified": "2020-10-03T00:59:22.962Z",
     "contributors": ["duduindo", "Voulto", "chrisdavidmills"]
-  },
-  "Web/API/WorkerGlobalScope/console": {
-    "modified": "2020-10-15T22:26:34.613Z",
-    "contributors": ["Eliastik"]
   },
   "Web/API/WorkerGlobalScope/dump": {
     "modified": "2020-10-15T22:27:11.681Z",
@@ -14013,10 +14005,6 @@
   "Web/CSS/:-moz-first-node": {
     "modified": "2019-04-05T07:46:35.367Z",
     "contributors": ["SphinxKnight", "teoli", "FredB", "Mgjbot", "Fredchat"]
-  },
-  "Web/CSS/:-moz-focusring": {
-    "modified": "2020-10-15T21:48:30.571Z",
-    "contributors": ["SphinxKnight", "teoli", "claudepache"]
   },
   "Web/CSS/:-moz-handler-blocked": {
     "modified": "2019-04-05T07:44:27.221Z",
