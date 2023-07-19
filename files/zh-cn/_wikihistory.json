@@ -15622,10 +15622,6 @@
     "modified": "2019-03-18T21:40:44.436Z",
     "contributors": ["Aaron_Zhung", "echoArray"]
   },
-  "Web/API/Window/applicationCache": {
-    "modified": "2019-03-23T23:31:44.274Z",
-    "contributors": ["xgqfrms-GitHub", "inJs", "teoli", "ziyunfei", "sunnylost"]
-  },
   "Web/API/Window/back": {
     "modified": "2019-03-23T22:12:59.387Z",
     "contributors": ["xilixinluo"]

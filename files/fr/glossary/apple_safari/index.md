@@ -11,12 +11,12 @@ l10n:
 
 ### Culture générale
 
-- [Safari](https://fr.wikipedia.org/wiki/Safari_(navigateur_web)) sur Wikipédia
+- [Safari](<https://fr.wikipedia.org/wiki/Safari_(navigateur_web)>) sur Wikipédia
 - [Safari](https://www.apple.com/fr/safari/) sur le site d'Apple
 
 ### Informations techniques
 
-- [Safari](https://fr.wikipedia.org/wiki/Safari_(navigateur_web)) sur Wikipédia
+- [Safari](<https://fr.wikipedia.org/wiki/Safari_(navigateur_web)>) sur Wikipédia
 - [Safari sur apple.com](https://www.apple.com/fr/safari/)
 - [Le projet WebKit (en anglais)](https://webkit.org/)
 - [Les versions nocturnes de WebKit, compilées régulièrement (en anglais)](https://webkit.org/build-archives/)

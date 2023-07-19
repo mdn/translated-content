@@ -3130,6 +3130,7 @@
 /fr/docs/Mozilla/Add-ons/WebExtensions/Intercepter_requêtes_HTTP	/fr/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 /fr/docs/Mozilla/Add-ons/WebExtensions/Travailler_avec_l_API_Tabs	/fr/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 /fr/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs	/fr/docs/Mozilla/Add-ons/WebExtensions/API
+/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_	/fr/docs/Mozilla/Add-ons/WebExtensions/What_next
 /fr/docs/Mozilla/Add-ons/WebExtensions/construction_extension_cross_browser	/fr/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 /fr/docs/Mozilla/Add-ons/WebExtensions/extension_des_outils_de_developpement	/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 /fr/docs/Mozilla/Add-ons/WebExtensions/inserer_en_toute_securite_du_contenu_externe_dans_une_page	/fr/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
@@ -3141,7 +3142,7 @@
 /fr/docs/Mozilla/Add-ons/WebExtensions/manifests_native	/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests
 /fr/docs/Mozilla/Add-ons/WebExtensions/partage_d_objets_avec_des_scripts_de_page	/fr/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
 /fr/docs/Mozilla/Add-ons/WebExtensions/prise_en_charge_du_navigateur_pour_les_api_javascript	/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
-/fr/docs/Mozilla/Add-ons/WebExtensions/que_faire_ensuite	/fr/docs/Mozilla/Add-ons/WebExtensions/What_next_
+/fr/docs/Mozilla/Add-ons/WebExtensions/que_faire_ensuite	/fr/docs/Mozilla/Add-ons/WebExtensions/What_next
 /fr/docs/Mozilla/Add-ons/WebExtensions/travailler_avec_des_identites_contextuelles	/fr/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
 /fr/docs/Mozilla/Add-ons/WebExtensions/travailler_avec_l_API_cookies	/fr/docs/Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API
 /fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Action_du_navigateur	/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action

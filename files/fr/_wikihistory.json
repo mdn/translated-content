@@ -6010,10 +6010,6 @@
       "m4ucoder"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-18T21:02:53.858Z",
-    "contributors": ["hellosct1"]
-  },
   "Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page": {
     "modified": "2019-07-03T12:00:39.099Z",
     "contributors": ["hellosct1"]
@@ -6044,7 +6040,7 @@
       "unpeudetout"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/What_next_": {
+  "Mozilla/Add-ons/WebExtensions/What_next": {
     "modified": "2020-05-24T10:03:42.606Z",
     "contributors": ["hellosct1"]
   },
