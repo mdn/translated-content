@@ -26,7 +26,7 @@ ArrayBuffer는 바이트로 구성된 배열로, 다른 언어에서는 종종 "
 ## 정적 메서드
 
 - {{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(<var>arg</var>)")}}
-  - : `arg` 유형이 [형식화 배열 객체](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)이거나 {{jsxref("DataView")}}와 같은 ArrayBuffer 중 하나인 경우, `true`를 반환합니다. 그렇지 않으면 `false`를 반환합니다.
+  - : `arg` 유형이 [형식화 배열 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)이거나 {{jsxref("DataView")}}와 같은 ArrayBuffer 중 하나인 경우, `true`를 반환합니다. 그렇지 않으면 `false`를 반환합니다.
 
 ## 인스턴스 속성
 

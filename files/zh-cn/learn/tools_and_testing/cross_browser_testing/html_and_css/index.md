@@ -131,16 +131,31 @@ CSS 有一个类似的路线——你需要检查你的属性名拼写是否正�
 
 ```html
 <video id="video" controls preload="metadata" poster="img/poster.jpg">
-  <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4">
-  <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
-  <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg">
+  <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4" />
+  <source
+    src="video/tears-of-steel-battle-clip-medium.webm"
+    type="video/webm" />
+  <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg" />
   <!-- Flash fallback -->
-  <object type="application/x-shockwave-flash" data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" width="1024" height="576">
-     <param name="movie" value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-     <param name="allowfullscreen" value="true" />
-     <param name="wmode" value="transparent" />
-     <param name="flashvars" value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-      <img alt="Tears of Steel poster image" src="img/poster.jpg" width="1024" height="428" title="No video playback possible, please download the video from the link below" />
+  <object
+    type="application/x-shockwave-flash"
+    data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4"
+    width="1024"
+    height="576">
+    <param
+      name="movie"
+      value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
+    <param name="allowfullscreen" value="true" />
+    <param name="wmode" value="transparent" />
+    <param
+      name="flashvars"
+      value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
+    <img
+      alt="Tears of Steel poster image"
+      src="img/poster.jpg"
+      width="1024"
+      height="428"
+      title="No video playback possible, please download the video from the link below" />
   </object>
   <!-- Offer download -->
   <a href="video/tears-of-steel-battle-clip-medium.mp4">Download MP4</a>
@@ -157,11 +172,11 @@ HTML5 表单元素也表现出了后备素质--HTML5 引入了一些特殊的 [`
 <form>
   <div>
     <label for="date">Enter a date:</label>
-    <input id="date" type="date">
+    <input id="date" type="date" />
   </div>
   <div>
     <label for="time">Enter a time:</label>
-    <input id="time" type="time">
+    <input id="time" type="time" />
   </div>
 </form>
 ```
@@ -170,7 +185,7 @@ HTML5 表单元素也表现出了后备素质--HTML5 引入了一些特殊的 [`
 
 {{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}
 
-> **备注：** 您也可以在 GitHub 上以[forms-test.html 的形式直接](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html)看到这个运行（参见[源代码](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/forms-test.html)）。
+> **备注：** 您也可以在 GitHub 上以[forms-test.html 的形式直接](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html)看到这个运行（参见[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html)）。
 
 如果您在支持的浏览器（如桌面/ Android Chrome 或 iOS Safari）上查看该示例，则会在尝试输入数据时看到特殊的小部件/功能。在一个非支持的平台上，例如 Firefox 或 Internet Explorer，输入只会回退到正常的文本输入，所以至少用户仍然可以输入一些信息。
 
@@ -184,7 +199,7 @@ CSS 的情况可以说比 HTML 更好一些。如果一个浏览器遇到一个�
 
 ![](blingy-button.png)
 
-> **备注：** 你也可以在 GitHub 上浏览这个例子：[button-with-fallback.html 的形式运行](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)（另见[源代码](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)）。
+> **备注：** 你也可以在 GitHub 上浏览这个例子：[button-with-fallback.html 的形式运行](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)（另见[源代码](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)）。
 
 该按钮有一些样式声明，但我们最感兴趣的两个如下：
 
@@ -223,7 +238,7 @@ IE 条件注释是修改后的专有 HTML 注释语法，可用于将 HTML 代�
 ```html
 <!--[if lte IE 8]>
   <script src="ie-fix.js"></script>
-  <link href="ie-fix.css" rel="stylesheet" type="text/css">
+  <link href="ie-fix.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 ```
 
@@ -234,7 +249,13 @@ IE 条件注释是修改后的专有 HTML 注释语法，可用于将 HTML 代�
 正如你所看到的，这对于将代码修复应用于旧版本的 IE 尤其有用。我们前面提到的用例（使旧版本的 IE 可以使用现代语义元素）可以通过使用条件注释来轻松实现，例如，您可以在 IE 样式表中添加类似这样的内容：
 
 ```css
-aside, main, article, section, nav, figure, figcaption {
+aside,
+main,
+article,
+section,
+nav,
+figure,
+figcaption {
   display: block;
 }
 ```
@@ -266,16 +287,16 @@ form > #date
 
 然而，出现在 IE 9 比旧的版本的另一个问题是，没有任何新的选择（主要是伪类和伪元素如 [:nth-of-type](/zh-CN/docs/Web/CSS/:nth-of-type)，[:not](/zh-CN/docs/Web/CSS/:not)，[::selection](/zh-CN/docs/Web/CSS/::selection)，等）的工作。如果你想在你的 CSS 中使用这些，并且需要支持较老的 IE 版本，那么一个好的方法就是使用 Keith Clark 的 [Selectivizr](http://selectivizr.com/) 库 - 这是一个小型的 JavaScript 库，可以在现有的 JavaScript 库（如 [jQuery](http://jquery.com/) 或 [MooTools](http://mootools.net/)）上工作。
 
-1. 要尝试此示例，请创建 [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html) 的本地副本。如果你看看这个现场直播，你会发现它包含两个段落，其中一个是风格。我们已经选择了这个段落 `p:first-child`，这在老版本的 IE 中不起作用。
+1. 要尝试此示例，请创建 [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html) 的本地副本。如果你看看这个现场直播，你会发现它包含两个段落，其中一个是风格。我们已经选择了这个段落 `p:first-child`，这在老版本的 IE 中不起作用。
 2. 现在下载 [MooTools](http://mootools.net/)和[Selectivizr](http://selectivizr.com/)，并将它们保存在与示例 HTML 相同的目录中。
 3. 将下面的代码放到 HTML 文档的开头，就在开始 `<style>` 标记之前：
 
-    ```html
-    <script type="text/javascript" src="MooTools-Core-1.6.0.js"></script>
-        <!--[if (gte IE 6)&(lte IE 8)]>
-          <script type="text/javascript" src="selectivizr-min.js"></script>
-        <![endif]-->
-    ```
+   ```html
+   <script type="text/javascript" src="MooTools-Core-1.6.0.js"></script>
+   <!--[if (gte IE 6)&(lte IE 8)]>
+     <script type="text/javascript" src="selectivizr-min.js"></script>
+   <![endif]-->
+   ```
 
 如果你尝试在旧版本的 IE 中运行它，它应该可以正常工作。
 
@@ -294,9 +315,15 @@ CSS 前缀带来的另外一个问题是 - 这些是一种用于允许浏览器�
 ```css
 -webkit-transform: rotate(90deg);
 
-background-image: -moz-linear-gradient(left,green,yellow);
-background-image: -webkit-gradient(linear,left center,right center,from(green),to(yellow));
-background-image: linear-gradient(to right,green,yellow);
+background-image: -moz-linear-gradient(left, green, yellow);
+background-image: -webkit-gradient(
+  linear,
+  left center,
+  right center,
+  from(green),
+  to(yellow)
+);
+background-image: linear-gradient(to right, green, yellow);
 ```
 
 第一行显示了一个[transform](/zh-CN/docs/Web/CSS/transform)带有-webkit-前缀的属性 - 这是在 Chrome 中使用变换功能所必需的，直到功能定稿，并且这些浏览器添加了该属性的前缀无版本（在撰写本文时，Chrome 支持这两个版本）。
@@ -318,16 +345,16 @@ background-image: linear-gradient(to right,green,yellow);
 3. 寻找可以用来选择该元素的功能。例如，在撰写本文时，主要的 Google 徽标的 ID 为 hplogo。
 4. 将对此元素的引用存储在变量中，例如：
 
-    ```js
-    const test = document.getElementById('hplogo');
-    ```
+   ```js
+   const test = document.getElementById("hplogo");
+   ```
 
 5. 现在尝试为您感兴趣的 CSS 属性设置一个新的值，你可以使用元素的[style](/zh-CN/docs/Web/API/HTMLElement/style)属性来做到这一点，例如尝试在 JavaScript 控制台中输入这些：
 
-    ```js
-    test.style.transform = 'rotate(90deg)'
-    test.style.webkitTransform = 'rotate(90deg)'
-    ```
+   ```js
+   test.style.transform = "rotate(90deg)";
+   test.style.webkitTransform = "rotate(90deg)";
+   ```
 
 当您开始在第二个点之后键入属性名称表示形式（请注意，在 JavaScript 中，CSS 属性名称是以较低的驼峰大小写，而不是连字符），JavaScript 控制台应该开始自动填充浏览器中存在的属性的名称并匹配到目前为止所写的内容。这对于找出在该浏览器中实现哪个版本的属性很有用。
 

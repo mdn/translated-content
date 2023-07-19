@@ -1,20 +1,20 @@
 ---
-title: HTMLSelectElement.selectedIndex
+title: "HTMLSelectElement: selectedIndex プロパティ"
+short-title: selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement.selectedIndex`** は `long` 値であり、選択されている {{HTMLElement("option")}} 要素のうち、`multiple` の値に応じて最初または最後のものを返します。`-1` の値は選択されている要素がないことを示します。
 
-## 構文
+## 値
 
-```js
-var index = selectElem.selectedIndex;
-selectElem.selectedIndex = index;
-```
+数値です。
 
-<h2 id="Example">例</h2>
+## 例
 
 ### HTML
 
@@ -33,18 +33,20 @@ selectElem.selectedIndex = index;
 ### JavaScript
 
 ```js
-var selectElem = document.getElementById('select')
-var pElem = document.getElementById('p')
+const selectElem = document.getElementById("select");
+const pElem = document.getElementById("p");
 
 // When a new <option> is selected
-selectElem.addEventListener('change', function() {
-  var index = selectElem.selectedIndex;
+selectElem.addEventListener("change", () => {
+  const index = selectElem.selectedIndex;
   // Add that data to the <p>
-  pElem.innerHTML = 'selectedIndex: ' + index;
-})
+  pElem.textContent = `selectedIndex: ${index}`;
+});
 ```
 
-{{EmbedLiveSample("Example", "200px", "80px")}}
+### 結果
+
+{{EmbedLiveSample("Examples", "200px", "120px")}}
 
 ## 仕様書
 

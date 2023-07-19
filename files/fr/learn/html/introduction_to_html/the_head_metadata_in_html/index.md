@@ -133,7 +133,7 @@ Préciser l'auteur peut être intéressant dans certains cas : il est utile de s
 
 Définir une description qui incorpore des mots-clés relatifs au contenu de la page est utile ; votre page pourra ainsi apparaître plus haut dans la liste de recherches par pertinence créée par un moteur de recherche (ce processus se nomme [Search Engine Optimization](/fr/docs/Glossary/SEO) ou {{glossary("SEO")}} — optimisation du moteur de recherche.)
 
-### Apprentissage actif : utilisation des descriptions dans les moteurs de recherche.
+### Apprentissage actif : utilisation des descriptions dans les moteurs de recherche
 
 La description est aussi utilisée dans le résultat des moteurs de recherche. Faisons un exercice pour mieux comprendre.
 

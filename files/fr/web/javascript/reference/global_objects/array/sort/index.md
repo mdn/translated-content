@@ -46,7 +46,7 @@ Si le paramètre `fonctionComparaison` est fourni, les éléments du tableau (qu
 - Si `fonctionComparaison(a, b)` est inférieur à 0, on trie `a` avec un indice inférieur à `b` (`a` sera classé avant `b`)
 - Si `fonctionComparaison(a, b)` renvoie 0, on laisse `a` et `b` inchangés l'un par rapport à l'autre, mais triés par rapport à tous les autres éléments. Note&nbsp;: la norme ECMAScript ne garantit pas ce comportement, par conséquent tous les navigateurs (par exemple les versions de Mozilla antérieures à 2003) ne respectent pas ceci.
 - Si `fonctionComparaison(a, b)` est supérieur à 0, on trie `b` avec un indice inférieur à `a`.
-- `fonctionComparaison(a, b)` doit toujours renvoyer le même résultat à partir de la même paire d'arguments. Si la fonction renvoie des résultats incohérents, alors l’ordre dans lequel sont triés les éléments n’est pas défini.
+- `fonctionComparaison(a, b)` doit toujours renvoyer le même résultat à partir de la même paire d'arguments. Si la fonction renvoie des résultats incohérents, alors l'ordre dans lequel sont triés les éléments n'est pas défini.
 
 Une fonction de comparaison aura donc généralement la forme suivante&nbsp;:
 

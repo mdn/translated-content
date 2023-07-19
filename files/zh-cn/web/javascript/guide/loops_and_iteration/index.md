@@ -13,7 +13,7 @@ slug: Web/JavaScript/Guide/Loops_and_iteration
 var step;
 for (step = 0; step < 5; step++) {
   // Runs 5 times, with values of step 0 through 4.
-  console.log('Walking east one step');
+  console.log("Walking east one step");
 }
 ```
 
@@ -54,7 +54,9 @@ for ([initialExpression]; [condition]; [incrementExpression])
 ```html
 <form name="selectForm">
   <p>
-    <label for="musicTypes">Choose some music types, then click the button below:</label>
+    <label for="musicTypes"
+      >Choose some music types, then click the button below:</label
+    >
     <select id="musicTypes" name="musicTypes" multiple="multiple">
       <option selected="selected">R&B</option>
       <option>爵士</option>
@@ -68,20 +70,20 @@ for ([initialExpression]; [condition]; [incrementExpression])
 </form>
 
 <script>
-function howMany(selectObject) {
-  var numberSelected = 0;
-  for (var i = 0; i < selectObject.options.length; i++) {
-    if (selectObject.options[i].selected) {
-      numberSelected++;
+  function howMany(selectObject) {
+    var numberSelected = 0;
+    for (var i = 0; i < selectObject.options.length; i++) {
+      if (selectObject.options[i].selected) {
+        numberSelected++;
+      }
     }
+    return numberSelected;
   }
-  return numberSelected;
-}
 
-var btn = document.getElementById("btn");
-btn.addEventListener("click", function(){
-  alert('选择选项的数量是：' + howMany(document.selectForm.musicTypes))
-});
+  var btn = document.getElementById("btn");
+  btn.addEventListener("click", function () {
+    alert("选择选项的数量是：" + howMany(document.selectForm.musicTypes));
+  });
 </script>
 ```
 
@@ -173,9 +175,8 @@ label :
 在这个例子里，标记 `markLoop` 标识了一个 `while` 循环。
 
 ```js
-markLoop:
-while (theMark == true) {
-   doSomething();
+markLoop: while (theMark == true) {
+  doSomething();
 }
 ```
 
@@ -185,12 +186,14 @@ while (theMark == true) {
 
 ```js
 var num = 0;
-for (var i = 0 ; i < 10 ; i++) {   // i 循环
-  for (var j = 0 ; j < 10 ; j++) { // j 循环
-    if( i == 5 && j == 5 ) {
-       break; // i = 5，j = 5 时，会跳出 j 循环
+for (var i = 0; i < 10; i++) {
+  // i 循环
+  for (var j = 0; j < 10; j++) {
+    // j 循环
+    if (i == 5 && j == 5) {
+      break; // i = 5，j = 5 时，会跳出 j 循环
     } // 但 i 循环会继续执行，等于跳出之后又继续执行更多次 j 循环
-  num++;
+    num++;
   }
 }
 
@@ -201,12 +204,11 @@ alert(num); // 输出 95
 
 ```js
 var num = 0;
-outPoint:
-for (var i = 0 ; i < 10 ; i++){
-  for (var j = 0 ; j < 10 ; j++){
-    if( i == 5 && j == 5 ){
+outPoint: for (var i = 0; i < 10; i++) {
+  for (var j = 0; j < 10; j++) {
+    if (i == 5 && j == 5) {
       break outPoint; // 在 i = 5，j = 5 时，跳出所有循环，
-                      // 返回到整个 outPoint 下方，继续执行
+      // 返回到整个 outPoint 下方，继续执行
     }
     num++;
   }
@@ -219,16 +221,15 @@ alert(num); // 输出 55
 
 ```js
 var num = 0;
-outPoint:
-for(var i = 0; i < 10; i++) {
-  for(var j = 0; j < 10; j++) {
-    if(i == 5 && j == 5) {
+outPoint: for (var i = 0; i < 10; i++) {
+  for (var j = 0; j < 10; j++) {
+    if (i == 5 && j == 5) {
       continue outPoint;
     }
     num++;
   }
 }
-alert(num);  // 95
+alert(num); // 95
 ```
 
 从 alert(num) 的值可以看出，continue outPoint; 语句的作用是跳出当前循环，并跳转到 outPoint（标签）下的 for 循环继续执行。
@@ -264,7 +265,7 @@ for (i = 0; i < a.length; i++) {
 
 ```js
 var x = 0;
-var z = 0
+var z = 0;
 labelCancelLoops: while (true) {
   console.log("外部循环：" + x);
   x += 1;
@@ -318,7 +319,7 @@ var n = 0;
 while (i < 5) {
   i++;
   if (i == 3) {
-     // continue;
+    // continue;
   }
   n += i;
   console.log(n);
@@ -343,22 +344,20 @@ while (i < 5) {
 ```js
 var i = 0;
 var j = 10;
-checkiandj:
-  while (i < 4) {
-    console.log(i);
-    i += 1;
-    checkj:
-      while (j > 4) {
-        console.log(j);
-        j -= 1;
-        if ((j % 2) == 0) {
-          continue checkj;
-        }
-        console.log(j + ' 是奇数。');
-      }
-      console.log('i = ' + i);
-      console.log('j = ' + j);
+checkiandj: while (i < 4) {
+  console.log(i);
+  i += 1;
+  checkj: while (j > 4) {
+    console.log(j);
+    j -= 1;
+    if (j % 2 == 0) {
+      continue checkj;
+    }
+    console.log(j + " 是奇数。");
   }
+  console.log("i = " + i);
+  console.log("j = " + j);
+}
 ```
 
 ## `for...in` 语句
@@ -388,7 +387,7 @@ function dump_props(obj, obj_name) {
 
 对于一个拥有 `make` 和 `model` 属性的 `car` 对象来说，执行结果 `result` 是：
 
-```js
+```
 car.make = Ford
 car.model = Mustang
 ```

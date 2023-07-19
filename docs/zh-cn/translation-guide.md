@@ -114,12 +114,16 @@ Reference to [Live sample macros](/en-US/docs/MDN/Structures/Live_samples#live_s
 
 #### 常见中/英文标点
 
+<!-- markdownlint-disable search-replace -->
+
 | 名称   | 中文 | 英文    |
 | ------ | ---- | ------- |
 | 括号   | （） | ()      |
 | 冒号   | ：   | :       |
 | 引号   | “”   | ""      |
 | 破折号 | ——   | -- 、 — |
+
+<!-- markdownlint-enable search-replace -->
 
 简体中文标点符号参考资源：
 
@@ -187,20 +191,15 @@ Like this.
 - 不宜：`应用程序接口（APIs）`
 - 不宜：`应用程序接口们（APIs）`
 
+### 术语表
+
+我们在仓库中维护了一个[术语表](glossary.md)，旨在统一目前还未有明确中文翻译的术语。在翻译文档时，请尽量使用术语表中的术语，以保证文档的一致性。
+
+> 如果术语表中缺少某些术语，或者你对其中的术语翻译有任何疑问，欢迎提出[议题](https://github.com/mdn/translated-content/issues/new/choose)或发起 PR。
+
 ### 常用标题
 
-英文文档中使用了一些常见标题，为了保持简体中文文档的一致性，我们作如下约定：
-
-| 英文                   | 简体中文翻译 |
-| ---------------------- | ------------ |
-| Accessibility concerns | 无障碍考虑   |
-| Active learning        | 动手练习     |
-| Browser compatibility  | 浏览器兼容性 |
-| Examples               | 示例         |
-| See also               | 参见         |
-| Specifications         | 规范         |
-| Technical summary      | 技术概要     |
-| Usage notes            | 使用说明     |
+英文文档中使用了一些常见标题，为了保持简体中文文档的一致性，请在翻译时参考术语表中的[标题和表格的翻译](glossary.md#标题表格)。
 
 [如何使用 markdown 来撰写文档]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 [**浏览器兼容性表**]: https://developer.mozilla.org/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables

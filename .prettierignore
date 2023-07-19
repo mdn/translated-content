@@ -1,38 +1,127 @@
+# This .prettierignore file uses .gitignore syntax
+# see https://prettier.io/docs/en/ignore.html#ignoring-files-prettierignore
+
+# Generated content
 build/
+/files/**/_wikihistory.json
+/files/**/_githistory.json
+
+# Conflicting/orphaned files
+/files/**/conflicting/**/*.md
+/files/**/orphaned/**/*.md
 
 # A full pass on all Markdown files is being performed.
-# When starting a new folder, please expand the glob pattern
-# and remove the corresponding line from this file.
 # The following folders still need a full pass:
 
-# system files
-/.github/**/*.md
-/docs/README.md
-/README.md
-
 # es
-/docs/es/**/*.md
-/files/es/**/*.md
+/files/es/learn/css/**/*.md
+/files/es/learn/javascript/**/*.md
+/files/es/learn/server-side/**/*.md
+/files/es/web/api/**/*.md
+/files/es/web/css/**/*.md
+/files/es/web/html/**/*.md
+/files/es/web/http/**/*.md
+/files/es/web/javascript/**/*.md
 
 # fr
-/files/fr/**/*.md
+/files/fr/learn/css/**/*.md
+/files/fr/learn/html/**/*.md
+/files/fr/learn/javascript/**/*.md
+/files/fr/learn/server-side/**/*.md
+/files/fr/mozilla/add-ons/webextensions/api/**/*.md
+/files/fr/web/api/**/*.md
+/files/fr/web/css/**/*.md
+/files/fr/web/html/**/*.md
+/files/fr/web/javascript/**/*.md
 
 # ja
-/files/ja/**/*.md
+/files/ja/games/**/*.md
+/files/ja/learn/**/*.md
+/files/ja/learn/css/**/*.md
+/files/ja/learn/html/**/*.md
+/files/ja/learn/javascript/**/*.md
+/files/ja/learn/server-side/**/*.md
+/files/ja/mdn/**/*.md
+/files/ja/mozilla/**/*.md
+/files/ja/mozilla/add-ons/**/*.md
+/files/ja/mozilla/add-ons/webextensions/api/**/*.md
+/files/ja/mozilla/firefox**/*.md
+/files/ja/web/**/*.md
+/files/ja/web/api/**/*.md
+/files/ja/web/css/**/*.md
+/files/ja/web/html/**/*.md
+/files/ja/web/http/**/*.md
+/files/ja/web/javascript/**/*.md
+/files/ja/web/svg/**/*.md
+/files/ja/webassembly/**/*.md
 
 # ko
-/docs/ko/**/*.md
-/files/ko/**/*.md
+/files/ko/games/**/*.md
+/files/ko/glossary/**/*.md
+/files/ko/learn/**/*.md
+/files/ko/learn/css/**/*.md
+/files/ko/learn/html/**/*.md
+/files/ko/learn/javascript/**/*.md
+/files/ko/learn/server-side/**/*.md
+/files/ko/mdn/**/*.md
+/files/ko/mozilla/**/*.md
+/files/ko/mozilla/add-ons/**/*.md
+/files/ko/mozilla/add-ons/webextensions/api/**/*.md
+/files/ko/mozilla/firefox**/*.md
+/files/ko/web/**/*.md
+/files/ko/web/api/**/*.md
+/files/ko/web/css/**/*.md
+/files/ko/web/html/**/*.md
+/files/ko/web/http/**/*.md
+/files/ko/web/javascript/**/*.md
+/files/ko/web/svg/**/*.md
 
 # pt-br
-/files/pt-br/**/*.md
+/files/pt-br/games/**/*.md
+/files/pt-br/learn/**/*.md
+/files/pt-br/learn/css/**/*.md
+/files/pt-br/learn/html/**/*.md
+/files/pt-br/learn/javascript/**/*.md
+/files/pt-br/learn/server-side/**/*.md
+/files/pt-br/mdn/**/*.md
+/files/pt-br/web/**/*.md
+/files/pt-br/web/api/**/*.md
+/files/pt-br/web/css/**/*.md
+/files/pt-br/web/html/**/*.md
+/files/pt-br/web/http/**/*.md
+/files/pt-br/web/javascript/**/*.md
+/files/pt-br/web/svg/**/*.md
+/files/pt-br/webassembly/**/*.md
 
 # ru
-/docs/ru/**/*.md
-/files/ru/**/*.md
+/files/ru/glossary/**/*.md
+/files/ru/learn/**/*.md
+/files/ru/learn/css/**/*.md
+/files/ru/learn/html/**/*.md
+/files/ru/learn/javascript/**/*.md
+/files/ru/learn/server-side/**/*.md
+/files/ru/mdn/**/*.md
+/files/ru/mozilla/**/*.md
+/files/ru/mozilla/add-ons/**/*.md
+/files/ru/mozilla/add-ons/webextensions/api/**/*.md
+/files/ru/mozilla/firefox**/*.md
+/files/ru/web/api/**/*.md
+/files/ru/web/css/**/*.md
+/files/ru/web/html/**/*.md
+/files/ru/web/http/**/*.md
+/files/ru/web/javascript/**/*.md
+/files/ru/web/svg/**/*.md
+/files/ru/webassembly/**/*.md
 
 # zh-cn
-/files/zh-cn/**/*.md
-
-# zh-tw
-/files/zh-tw/web/javascript/reference/global_objects/[p-t]*/**/*.md
+/files/zh-cn/learn/css/**/*.md
+/files/zh-cn/learn/html/**/*.md
+/files/zh-cn/learn/javascript/**/*.md
+/files/zh-cn/learn/server-side/**/*.md
+/files/zh-cn/web/api/**/*.md
+/files/zh-cn/web/css/**/*.md
+/files/zh-cn/web/html/**/*.md
+/files/zh-cn/web/http/**/*.md
+/files/zh-cn/web/javascript/reference/**/*.md
+/files/zh-cn/web/svg/**/*.md
+/docs/zh-cn/glossary.md

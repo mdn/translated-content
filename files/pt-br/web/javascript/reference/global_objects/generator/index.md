@@ -49,7 +49,7 @@ console.log(gen.next().value); // 2
 
 ## Objeto legacy generator
 
-Firefox (SpiderMonkey) também implementa a versão anterior do generator em [JavaScript 1.7](/pt-BR/docs/Web/JavaScript/New_in_JavaScript/1.7), onde o asterisco (\*) na declaração da função não era necessário (somente era necessário usar a palavra reservada `yield` no corpo da função). Contudo, legacy generators estão obsoletos. Não os use, eles serão removidos ({{bug(1083482)}}).
+Firefox (SpiderMonkey) também implementa a versão anterior do generator em [JavaScript 1.7](/pt-BR/docs/Web/JavaScript/New_in_JavaScript/1.7), onde o asterisco (\*) na declaração da função não era necessário (somente era necessário usar a palavra reservada `yield` no corpo da função). Contudo, legacy generators estão obsoletos. Não os use, eles serão removidos ([Erro do Firefox 1083482](https://bugzil.la/1083482)).
 
 ### Métodos legacy generator
 

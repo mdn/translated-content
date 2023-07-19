@@ -15,9 +15,9 @@ Traditionally, a web page has to send a request to the server to receive new dat
 
 ## Tools
 
-- Remy Sharp’s [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
-- Yaffle’s [EventSource polyfill](https://github.com/Yaffle/EventSource)
-- Rick Waldron’s [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
+- Remy Sharp's [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
+- Yaffle's [EventSource polyfill](https://github.com/Yaffle/EventSource)
+- Rick Waldron's [jquery plugin](https://github.com/rwldrn/jquery.eventsource)
 
 ## Related Topics
 

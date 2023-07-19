@@ -127,9 +127,10 @@ function populateHeader(jsonObj) {
 Le code casse aussitôt qu'on essaye d'accèder à `jsonObj` (ce qui comme vous pouvez vous y attendre, est supposé être un [objet JSON](/fr/docs/Learn/JavaScript/Objects/JSON)). C'est supposé aller le chercher dans un fichier externe `.json` en utilisant l'appel XMLHttpRequest suivant :
 
 ```js
-var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+var requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 var request = new XMLHttpRequest();
-request.open('GET', requestURL);
+request.open("GET", requestURL);
 request.send();
 
 var superHeroes = request.response;
@@ -146,7 +147,7 @@ Vous savez peut-être déjà ce qui ne va pas avec ce code, mais analysons-le un
 Essayer d'insérer la ligne suivante juste avant la ligne 31 (en gras au-dessus) :
 
 ```js
-console.log('Response value: ' + superHeroes);
+console.log("Response value: " + superHeroes);
 ```
 
 Rafraîchissez la page dans le navigateur, et vous obtiendrez un résultat dans la console comme celui-ci :
@@ -164,11 +165,11 @@ showHeroes(superHeroes);
 par le suivant :
 
 ```js
-request.onload = function() {
+request.onload = function () {
   var superHeroes = request.response;
   populateHeader(superHeroes);
   showHeroes(superHeroes);
-}
+};
 ```
 
 Cela résout le problème asynchrone, en garantissant que les fonctions ne sont pas exécutées et passent l'objet `superHeroes` jusqu'à ce que la réponse ait fini de charger et soit disponible.
@@ -217,7 +218,7 @@ Dès que vos applis vont devenir plus complexes vous allez commencer à utiliser
 - Eviter de charger plus de JavaSacript que nécessaire, réunissez vos scripts dans un seul fichier en utilisant une solution comme [Browserify](http://browserify.org/). En général, réduire le nombre de requêtes HTTP est très bon pour la performance.
 - S'assurer que vos fichiers sont le plus petits en les minifiant avant de les charger sur votre serveur de production. Minifier réduit tout le code en une seule et immense ligne, donnant au fichier une taille beaucoup moins importante. C'est vilain, mais vous n'avez pas besoin de la lire lorsque c'est terminé ! Cette tâche est la mieux réalisée avec un outil de minification comme [Uglify](https://github.com/mishoo/UglifyJS2) (il y aussi une version en ligne — voir [JSCompress.com](https://jscompress.com/)).
 - Lorsque que vous utilisez des APIs, assurez-vous de désactiver les fonctionnalités de l'API quand elles ne sont pas utilisées ; certains appels d'API peuvent être très coûteux en puissance de traitement. Par exemple, lorsque vous montrez un stream video, assurez-vous que s'est désactivé quand vous ne pouvez pas le voir. Quand vous tracer la localisation d'un appareil en utilisant des appels répétés de Géolocalisation, assurez-vous de le désactiver quand l'utilisateur arrête de l'utiliser.
-- Les animations peuvent être très coûteuses pour la performance. Beaucoup de librairies JavaScript fournissent des possibilités d'animation programmée avec JavaScript, mais c'est beaucoup plus rentable de faire les animations via les fonctionnalités natives des navigateurs comme [les Animations CSS](/fr/docs/Web/CSS/Animations_CSS) (ou la naissante [Web Animations API](/fr/docs/Web/API/Web_Animations_API)) qu'en JavaScript. Lisez [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) pour des théories très utiles sur l'animation coûteuse, des conseils sur comment améliorer la performance des animations, et des informations à propos de l'API Web Animations.
+- Les animations peuvent être très coûteuses pour la performance. Beaucoup de librairies JavaScript fournissent des possibilités d'animation programmée avec JavaScript, mais c'est beaucoup plus rentable de faire les animations via les fonctionnalités natives des navigateurs comme [les Animations CSS](/fr/docs/Web/CSS/Animations_CSS) (ou la naissante [Web Animations API](/fr/docs/Web/API/Web_Animations_API)) qu'en JavaScript. Lisez [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) pour des théories très utiles sur l'animation coûteuse, des conseils sur comment améliorer la performance des animations, et des informations à propos de l'API Web Animations.
 
 > **Note :** Le [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) de Addy Osmani contient beaucoup de détails et de astuces impeccables pour améliorer les performances en JavaScript.
 
@@ -261,8 +262,8 @@ Il y a plusieurs stratégies pour gérer les incompatibilités entre navigateurs
 L'idée derrière une fonctionnalité de détection est que vous pouvez exécuter un test pour déterminer si une fonctionnalité est supportée dans le navigateur courant, et ensuite exécuter conditionnellement un code pour fournir une expérience acceptable sur chaque navigateur qui supporte et ne supporte pas la fonctionnalité. A titre d'exemple rapide, l'[API Geolocalisation](/fr/docs/Using_geolocation) (qui présente des données de localisation pour l'appareil sur lequel le navigateur est en train d'être exécuté) a un point d'entrée principal pour son utilisation — une propriété `geolocation` disponible dans l'objet global [Navigator](/fr/docs/Web/API/Navigator). Par conséquent, vous pouvez détecter si le navigateur supporte la géolocalisation ou non en utilisant quelque chose comme suit :
 
 ```js
-if("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function(position) {
+if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(function (position) {
     // show the location on a map, perhaps using the Google Maps API
   });
 } else {
@@ -310,26 +311,26 @@ Observons cet exercice — dans cet exemple nous allons utiliser un polyfill Fet
 2. Ensuite, sauvegarder les copies de [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) et de [es6-promises polyfill](https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js) dans le même répertoire que le HTML.
 3. Appliquer les scripts de polyfill à la page en utilisant le code suivant — placez-les au-dessus de l'élément {{htmlelement("script")}} existant ainsi ils seront déjà disponibles sur la page quand on essaiera d'utiliser Fetch :
 
-    ```js
-    <script src="es6-promise.js"></script>
-    <script src="fetch.js"></script>
-    ```
+   ```js
+   <script src="es6-promise.js"></script>
+   <script src="fetch.js"></script>
+   ```
 
 4. Dans le {{htmlelement("script")}} original, ajoutez le code suivant :
 
-    ```js
-    var myImage = document.querySelector('.my-image');
+   ```js
+   var myImage = document.querySelector(".my-image");
 
-    fetch('flowers.jpg').then(function(response) {
-      response.blob().then(function(myBlob) {
-        var objectURL = URL.createObjectURL(myBlob);
-        myImage.src = objectURL;
-      });
-    });
-    ```
+   fetch("flowers.jpg").then(function (response) {
+     response.blob().then(function (myBlob) {
+       var objectURL = URL.createObjectURL(myBlob);
+       myImage.src = objectURL;
+     });
+   });
+   ```
 
 5. Maintenant si vous le chargez dans un navigateur qui ne supporte pas Fetch (Safari et IE sont des candidats de choix), vous devriez quand même voir l'image de la fleur apparaitre — cool !
-    ![](fetch-image.jpg)
+   ![](fetch-image.jpg)
 
 > **Note :** Vous pouvez consulter notre version terminée sur [fetch-polyfill-finished.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).
 
@@ -343,7 +344,7 @@ Faire cela nécessite un peu de code supplémentaire dans votre JavaScript. Vous
 if (browserSupportsAllFeatures()) {
   main();
 } else {
-  loadScript('polyfills.js', main);
+  loadScript("polyfills.js", main);
 }
 
 function main(err) {
@@ -363,13 +364,13 @@ Ici on vérifie si l'objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_
 
 ```js
 function loadScript(src, done) {
-  var js = document.createElement('script');
+  var js = document.createElement("script");
   js.src = src;
-  js.onload = function() {
+  js.onload = function () {
     done();
   };
-  js.onerror = function() {
-    done(new Error('Failed to load script ' + src));
+  js.onerror = function () {
+    done(new Error("Failed to load script " + src));
   };
   document.head.appendChild(js);
 }
@@ -416,9 +417,9 @@ Le code utilisé ressemble à quelque chose comme ça (bien que ça soit un exem
 ```js
 var ua = navigator.userAgent;
 
-if(ua.indexOf('Firefox') !== -1) {
+if (ua.indexOf("Firefox") !== -1) {
   // run Firefox-specific code
-} else if(ua.indexOf('Chrome') !== -1) {
+} else if (ua.indexOf("Chrome") !== -1) {
   // run Chrome-specific code
 }
 ```
@@ -463,7 +464,7 @@ Une fois encore, les fonctions préfixées n'ont jamais été supposées être u
 Par exemple, essayez d'aller dans la console de développeur de votre navigateur et commencez à taper
 
 ```js
-window.AudioContext
+window.AudioContext;
 ```
 
 Si cette fonctionnalité est supportée par votre navigateur, elle s'autocomplètera.

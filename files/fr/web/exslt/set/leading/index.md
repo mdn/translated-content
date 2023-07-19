@@ -10,7 +10,7 @@ translation_of: Web/EXSLT/set/leading
 
 ## Syntaxe
 
-```js
+```plain
 set:leading(nodeSet1, nodeSet2)
 ```
 

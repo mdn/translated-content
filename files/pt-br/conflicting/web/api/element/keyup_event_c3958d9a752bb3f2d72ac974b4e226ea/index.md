@@ -70,7 +70,7 @@ document.onkeyup = logKey;
 
 é _Input Method Editor (IME)_ é um programa que permite usuários inserir caracteres que não são suportados pelo teclado usando alguma outra combinação de tecla.
 
-Desde Firefox 65, os eventos {{domxref("Document/keydown_event", "keydown")}} e `keyup` agora são disparados durante IME composition, para melhorar a compatibildiade cross-browser para usuários CJKT {{bug(354358)}}. Para ignorar todos eventos `keyup` que são partes do composition, faça algo como isso (229 é um valor especial definido para o `keyCode` relacionando a um evento que sera processado no IME):
+Desde Firefox 65, os eventos {{domxref("Document/keydown_event", "keydown")}} e `keyup` agora são disparados durante IME composition, para melhorar a compatibildiade cross-browser para usuários CJKT [Erro do Firefox 354358](https://bugzil.la/354358). Para ignorar todos eventos `keyup` que são partes do composition, faça algo como isso (229 é um valor especial definido para o `keyCode` relacionando a um evento que sera processado no IME):
 
 ```js
 eventTarget.addEventListener("keyup", (event) => {

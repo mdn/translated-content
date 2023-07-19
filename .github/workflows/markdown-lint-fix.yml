@@ -31,14 +31,17 @@ jobs:
           cache: yarn
 
       - name: Install all yarn packages
-        env:
-          HUSKY: 0
         run: |
           yarn --frozen-lockfile
+        env:
+          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HUSKY: 0
 
       - name: Lint markdown files
         run: |
           yarn markdownlint-cli2-fix "**/${{ matrix.lang }}/**/*.md"
+          yarn prettier -w "**/${{ matrix.lang }}/**/*.md"
 
       - name: Create PR with only fixable issues
         if: success()

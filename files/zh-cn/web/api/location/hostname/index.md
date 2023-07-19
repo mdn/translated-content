@@ -17,7 +17,7 @@ object.hostname = string;
 ## Examples
 
 ```js
-// 在文档流中声明了一个元素： <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/Location.hostname">
+// 在文档流中声明了一个元素： <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/docs/Location.hostname">
 var anchor = document.getElementById("myAnchor");
 var result = anchor.hostname; // Returns:'developer.mozilla.org'
 ```

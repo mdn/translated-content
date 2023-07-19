@@ -101,8 +101,8 @@ Il faut modifier la page web pour que celle-ci pointe d'abord vers le manifeste,
 
 ```html
 <video>
-  <source src="movie.mpd">
-  <source src="movie.webm">
+  <source src="movie.mpd" />
+  <source src="movie.webm" />
   Votre navigateur ne prend pas en charge les vidéos HTML.
 </video>
 ```

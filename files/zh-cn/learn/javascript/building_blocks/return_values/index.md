@@ -47,13 +47,13 @@ console.log(newString);
 
 如果你看看替换功能 MDN 参考页面，你会看到一个[返回值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Return_value)。知道和理解函数返回的值是非常有用的，因此我们尽可能地包含这些信息。
 
-一些函数没有返回值就像 (在我们的参考页中，返回值在这种情况下被列出为空值 `void` 或未定义值 `undefined` 。).例如，我们在前面文章中创建的 [displayMessage() function](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html#L50) , 由于调用的函数的结果，没有返回特定的值。它只是让一个提示框出现在屏幕的某个地方——就是这样！
+一些函数没有返回值就像 (在我们的参考页中，返回值在这种情况下被列出为空值 `void` 或未定义值 `undefined` 。).例如，我们在前面文章中创建的 [displayMessage() function](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html#L50) , 由于调用的函数的结果，没有返回特定的值。它只是让一个提示框出现在屏幕的某个地方——就是这样！
 
 通常，返回值是用在函数在计算某种中间步骤。你想得到最终结果，其中包含一些值。那些值需要通过一个函数计算得到，然后返回结果可用于计算的下一个阶段。
 
 ### 在自定义的函数中使用返回值
 
-要从自定义函数返回值，您需要使用…等待它… [return](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 关键字。我们最近在[random-canvas-circles.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html)示例中看到了这一点。我们的 `draw()` 函数绘制 100 随机圆在 HTML 的{{htmlelement("canvas")}}:
+要从自定义函数返回值，您需要使用…等待它… [return](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 关键字。我们最近在[random-canvas-circles.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)示例中看到了这一点。我们的 `draw()` 函数绘制 100 随机圆在 HTML 的{{htmlelement("canvas")}}:
 
 ```js
 function draw() {
@@ -104,7 +104,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 让我们着手编写具有我们自己的返回值的函数。
 
-1. 首先，从 GitHub 的[function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html)文件复制一份本地副本。这是一个简单的 HTML 页面包含一个 {{htmlelement("input")}} 文本域和一个段落。还有一个 {{htmlelement("script")}} 元素，我们在两个变量中存储了对两个 HTML 元素的引用。这个小页面允许你在文本框中输入一个数字，并在下面的段落中显示不同的数字。
+1. 首先，从 GitHub 的[function-library.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library.html)文件复制一份本地副本。这是一个简单的 HTML 页面包含一个 {{htmlelement("input")}} 文本域和一个段落。还有一个 {{htmlelement("script")}} 元素，我们在两个变量中存储了对两个 HTML 元素的引用。这个小页面允许你在文本框中输入一个数字，并在下面的段落中显示不同的数字。
 2. 让我们添加一些有用的函数。在现有的两行 JavaScript 下面，添加以下函数定义：
 
     ```js
@@ -151,7 +151,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 4. 保存您的代码，将其加载到浏览器中，然后尝试。
 
-> **备注：** 如果你有麻烦让例子工作，对比[GitHub 的已完成版](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)检查你的代码（或[看它在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)），或寻求我们的帮助。
+> **备注：** 如果你有麻烦让例子工作，对比[GitHub 的已完成版](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html)检查你的代码（或[看它在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)），或寻求我们的帮助。
 
 在这一点上，我们希望您编写一个自己的几个函数，并将它们添加到库中。这个数的平方根或立方根，或一个圆的周长和半径是多少？
 

@@ -12,23 +12,22 @@ slug: Games/Techniques/2D_collision_detection
 碰撞侦测其中一种简单的形式是，在两个轴对齐的矩形之间碰撞 — 这意味着没有旋转。这个算法是确定两个矩形任意 4 边之间不再有间隔，存在间隔代表没有发生碰撞。
 
 ```js
-var rect1 = {x: 5, y: 5, width: 50, height: 50}
-var rect2 = {x: 20, y: 10, width: 10, height: 10}
+var rect1 = { x: 5, y: 5, width: 50, height: 50 };
+var rect2 = { x: 20, y: 10, width: 10, height: 10 };
 
-if (rect1.x < rect2.x + rect2.width &&
-   rect1.x + rect1.width > rect2.x &&
-   rect1.y < rect2.y + rect2.height &&
-   rect1.height + rect1.y > rect2.y) {
-    // collision detected!
+if (
+  rect1.x < rect2.x + rect2.width &&
+  rect1.x + rect1.width > rect2.x &&
+  rect1.y < rect2.y + rect2.height &&
+  rect1.height + rect1.y > rect2.y
+) {
+  // collision detected!
 }
 
 // filling in the values =>
 
-if (5 < 30 &&
-    55 > 20 &&
-    5 < 20 &&
-    55 > 10) {
-    // collision detected!
+if (5 < 30 && 55 > 20 && 5 < 20 && 55 > 10) {
+  // collision detected!
 }
 ```
 
@@ -39,15 +38,15 @@ if (5 < 30 &&
 碰撞测试的另一种形状是两个圆形间的碰撞，该算法是通过获取两个圆心点，并确定圆心距离小于两个圆形的半径和实现的。
 
 ```js
-var circle1 = {radius: 20, x: 5, y: 5};
-var circle2 = {radius: 12, x: 10, y: 5};
+var circle1 = { radius: 20, x: 5, y: 5 };
+var circle2 = { radius: 12, x: 10, y: 5 };
 
 var dx = circle1.x - circle2.x;
 var dy = circle1.y - circle2.y;
 var distance = Math.sqrt(dx * dx + dy * dy);
 
 if (distance < circle1.radius + circle2.radius) {
-    // collision detected!
+  // collision detected!
 }
 ```
 

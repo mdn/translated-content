@@ -285,8 +285,6 @@ Il existe d'autres paramètres que vous pouvez utiliser avec la balise meta view
 
 Vous devriez éviter d'utiliser `minimum-scale`, `maximum-scale`, et en particulier la définition de `user-scalable` sur `no`. Les utilisateurs devraient être autorisés à zoomer autant ou aussi peu que nécessaire; éviter cela entraîne des problèmes d'accessibilité.
 
-> **Note :** Il existe une règle @ CSS conçue pour remplacer la métabalise viewport — [@viewport](/fr/docs/Web/CSS/@viewport) — Cependant, son support par navigateur est médiocre. Il a été mis en œuvre dans Internet Explorer et Edge, mais une fois que Edgium (La version Edge basée sur Chromium) sera livré, il ne fera plus partie du navigateur Edge.
-
 ## Sommaire
 
 Le responsive design fait référence à la conception d'un site ou d'une application qui répond à l'environnement dans lequel il est vu. Elle englobe un certain nombre de caractéristiques et de techniques CSS et HTML, et c'est essentiellement la façon dont nous construisons les sites web par défaut. Considérez les sites que vous visitez sur votre téléphone - il est probablement assez inhabituel de tomber sur un site dont la version de bureau est réduite, ou sur lequel vous devez faire défiler les pages pour trouver des choses. Cela s'explique par le fait que le web a adopté cette approche de design réactif.

@@ -12,7 +12,7 @@ La méthode **`Intl.PluralRules.prototype.selectRange()`** reçoit deux valeurs 
 ## Syntaxe
 
 ```js
-formatRange(debutIntervalle, finIntervalle)
+selectRange(debutIntervalle, finIntervalle)
 ```
 
 ### Valeur de retour

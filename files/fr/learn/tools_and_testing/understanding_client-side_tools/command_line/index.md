@@ -194,7 +194,7 @@ ls -l
 
 Avec `ls`, l'option `-l` (_tiret l, "dash ell_" en anglais) vous donne une liste avec un fichier ou répertoire par ligne et pas mal d'autres informations. Les répertoires ("directories") sont repérés pas la lettre "d" au tout début de la ligne. Nous pouvons y entrer avec la commande `cd`.
 
-Voici ci-dessous une copie d'écran avec un terminal macOS “vanilla” en haut, et en bas un terminal personnalisé avec quelques icônes supplémentaires et des couleurs pour le rendre plus vivant — les deux affichent le résultat de la commande `ls -l` :
+Voici ci-dessous une copie d'écran avec un terminal macOS "vanilla" en haut, et en bas un terminal personnalisé avec quelques icônes supplémentaires et des couleurs pour le rendre plus vivant — les deux affichent le résultat de la commande `ls -l` :
 
 ![A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
 
@@ -396,9 +396,13 @@ Ensuite collez le code suivant dans un fichier que vous enregistrez dans ce rép
 
 ```js
 const myObj = {
-a:1,b:{c:2}}
-function printMe(obj){console.log(obj.b.c)}
-printMe(myObj)
+  a: 1,
+  b: { c: 2 },
+};
+function printMe(obj) {
+  console.log(obj.b.c);
+}
+printMe(myObj);
 ```
 
 Nous pouvons exécuter prettier sur un code source simplement pour vérifier s'il nécessite une correction. Passez dans votre répertoire avec `cd` et essayez de lancer cette commande :

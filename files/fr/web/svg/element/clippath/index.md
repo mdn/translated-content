@@ -16,7 +16,11 @@ Le détourage limite la zone dans laquelle l'élément sur lequel il est appliqu
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -27,7 +31,9 @@ html,body,svg { height:100% }
   </clipPath>
 
   <!-- Le coeur sans détourage, pour référence -->
-  <path id="heart" d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
+  <path
+    id="heart"
+    d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />
 
   <!--
     Le coeur avec détourage.
@@ -41,7 +47,14 @@ html,body,svg { height:100% }
 /* Animation CSS pour les navigateurs *
  * qui implémentent la propriété de géométrie r. */
 
-@keyframes openYourHeart {from {r: 0} to {r: 60px}}
+@keyframes openYourHeart {
+  from {
+    r: 0;
+  }
+  to {
+    r: 60px;
+  }
+}
 
 #myClip circle {
   animation: openYourHeart 15s infinite;

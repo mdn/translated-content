@@ -49,7 +49,7 @@ Dans le même esprit que la directive précédente, n'écrivez pas de code d'exe
 
 ### Utiliser des unités flexibles/relatives
 
-Pour une flexibilité maximale sur le plus grand nombre possible d'appareils, il est judicieux de dimensionner les conteneurs, le `padding`, etc. en utilisant des unités relatives comme les `em` et les `rem`, ou des pourcentages et des unités de « viewport » si vous souhaitez qu'ils varient en fonction de la largeur du « viewport ». Vous pouvez en savoir plus à ce sujet dans notre article [Éléments de construction d'un design adaptatif (Responsive Design)](/fr/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks#fluid_grids).
+Pour une flexibilité maximale sur le plus grand nombre possible d'appareils, il est judicieux de dimensionner les conteneurs, le `padding`, etc. en utilisant des unités relatives comme les `em` et les `rem`, ou des pourcentages et des unités de « viewport » si vous souhaitez qu'ils varient en fonction de la largeur du « viewport ». Vous pouvez en savoir plus à ce sujet dans notre article [Éléments de construction d'un design adaptatif (Responsive Design)](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design#fluid_grids).
 
 ### Ne pas utiliser de réinitialisation
 
@@ -79,7 +79,7 @@ p {
 
 Pas cela :
 
-```css example-bad
+```css-nolint example-bad
 p { color: white; background-color: black; padding: 1rem; }
 ```
 
@@ -258,7 +258,7 @@ h3 {
 
 Pas ça :
 
-```css example-bad
+```css-nolint example-bad
 h1, h2, h3 {
   font-family: sans-serif;
   text-align: center;

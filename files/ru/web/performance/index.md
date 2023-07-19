@@ -64,7 +64,7 @@ The MDN [Web Performance Learning Area](/ru/docs/Learn/Performance) contains mod
 - [User Timing API](/ru/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
   - : Create application specific timestamps using the [user timing API](/ru/docs/Web/API/User_Timing_API)'s "mark" and "measure" entry types - that are part of the browser's performance timeline.
 - [Frame Timing API](/ru/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API)
-  - : The [`PerformanceFrameTiming`](/en-US/docs/Web/API/PerformanceFrameTiming) interface provides _frame_ timing data about the browser's event loop.
+  - : The [`PerformanceFrameTiming`](/ru/docs/Web/API/PerformanceFrameTiming) interface provides _frame_ timing data about the browser's event loop.
 - [Beacon API](/ru/docs/Web/API/Beacon_API/Using_the_Beacon_API)
   - : The [Beacon](/ru/docs/Web/API/Beacon_API) interface schedules an asynchronous and non-blocking request to a web server.
 - [Intersection Observer API](/ru/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)

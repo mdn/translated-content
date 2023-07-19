@@ -205,7 +205,7 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
   });
 ```
 
-Aqui, estamos fazendo três requisições `fetch()` para três URLs diferentes. Se todas forem concluídas com sucesso, vamos imprimir no console o status da resposta de cada uma. Se qualquer uma falhar, imprimiremos o objeto de rro capturado por `.catch()`.
+Aqui, estamos fazendo três requisições `fetch()` para três URLs diferentes. Se todas forem concluídas com sucesso, vamos imprimir no console o status da resposta de cada uma. Se qualquer uma falhar, imprimiremos o objeto de erro capturado por `.catch()`.
 
 Com as URLs que fornecemos, todos as requisições devem ser conluídas com sucesso, embora para a segunda, o servidor retornará `404` (Not Found) em vez de `200` (OK) porque o arquivo solicitado não existe. Então a saída deve ser:
 

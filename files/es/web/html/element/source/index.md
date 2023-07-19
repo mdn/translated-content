@@ -14,7 +14,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Content_categories"
           >Categorías de contenido</a
         >
       </th>
@@ -36,7 +36,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
         <div>
           Un elemento multimedia—{{HTMLElement("audio")}} o
           {{HTMLelement("video")}}—y se debe colocar antes que cualquier
-          <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+          <a href="/es/docs/HTML/Content_categories#Flow_content"
             >contenido de flujo</a
           >
           o elemento {{HTMLElement("track")}}.

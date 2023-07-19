@@ -258,7 +258,7 @@ En bonus, vous pouvez chercher des textes à intégrer et ajouter des légendes 
 
 Emballez, c'est pesé ! Nous espérons que vous avez pris plaisir avec ces pages vidéo et audio. Au chapitre suivant, nous découvrirons des manières différentes d'intégrer du contenu sur le Web en se servant de technologies comme {{htmlelement("iframe")}} et {{htmlelement("object")}}.
 
-## Consultez aussi :
+## Consultez aussi
 
 - {{htmlelement("audio")}}
 - {{htmlelement("video")}}

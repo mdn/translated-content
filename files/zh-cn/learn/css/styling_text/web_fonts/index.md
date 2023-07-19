@@ -79,7 +79,7 @@ html {
 
 记住这一点，让我们从最初的原则构建一个基本的 web 字体示例。使用嵌入的 live 示例很难演示这一点，因此，我们希望您按照下面几节中详细介绍的步骤来了解这个过程。
 
-你应该使用 [web-font-start.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.html) 和 [web-font-start.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.css) 文件作为开始添加到你的代码中（又见[预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)。）现在，在你的电脑上的一个新目录中复制这些文件。在 `web-font-start.css`文件中，您将找到一些最小的 CSS 来处理这个示例的基本布局和排版。
+你应该使用 [web-font-start.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-start.html) 和 [web-font-start.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-start.css) 文件作为开始添加到你的代码中（又见[预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)。）现在，在你的电脑上的一个新目录中复制这些文件。在 `web-font-start.css`文件中，您将找到一些最小的 CSS 来处理这个示例的基本布局和排版。
 
 ### 查找字体
 
@@ -132,7 +132,7 @@ html {
 
 ![](web-font-example.png)
 
-> **备注：** 如果对于要让它正常工作您有任何问题，可以自由地将您的版本与我们完成的文件进行比较——见 [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) 和 [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) ([运行完成的示例](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html))。
+> **备注：** 如果对于要让它正常工作您有任何问题，可以自由地将您的版本与我们完成的文件进行比较——见 [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) 和 [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css) ([运行完成的示例](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html))。
 
 ## 使用在线字体服务
 
@@ -147,7 +147,7 @@ html {
 5. 在生成的屏幕中，首先需要复制所显示的 HTML 代码行，并将其粘贴到 HTML 文件的头部。将其置于现有的{{htmlelement("link")}}元素之上，使得字体是导入的，然后在你的 CSS 中使用它。
 6. 然后，您需要将 CSS 声明复制到您的 CSS 中，以便将自定义字体应用到您的 HTML。
 
-> **备注：** 如果你需要对比我们的，你可以在 [google-font.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html)和[google-font.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css)找到完整版本的。（[见预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)）
+> **备注：** 如果你需要对比我们的，你可以在 [google-font.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.html)和[google-font.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.css)找到完整版本的。（[见预览版](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)）
 
 ## 关于 @font-face 的更多细节
 

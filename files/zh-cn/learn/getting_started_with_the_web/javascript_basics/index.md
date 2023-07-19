@@ -36,17 +36,17 @@ JavaScript 相当简洁，却非常灵活。开发者们基于 JavaScript 核心
 1. 首先，打开你的测试站点，创建一个名为 `scripts` 的文件夹。然后在其中创建一个名为 main.js 的文件。
 2. 下一步，在 `index.html` 文件\</body> 标签前的新行添加以下代码。
 
-    ```html
-    <script src="scripts/main.js" defer></script>
-    ```
+   ```html
+   <script src="scripts/main.js" defer></script>
+   ```
 
 3. 与 CSS 的 {{htmlelement("link")}} 元素类似，它将 JavaScript 引入页面以作用于 HTML（以及 CSS 等页面上所有内容）：
 4. 现在将以下代码添加到 `main.js` 文件中：
 
-    ```js
-    let myHeading = document.querySelector('h1');
-    myHeading.textContent = 'Hello world!';
-    ```
+   ```js
+   let myHeading = document.querySelector("h1");
+   myHeading.textContent = "Hello world!";
+   ```
 
 5. 最后，保存 HTML 和 JavaScript 文件，用浏览器打开 `index.html`。可以看到如下内容：![](hello-world.png)
 
@@ -85,13 +85,13 @@ let myVariable;
 变量定义后可以进行赋值：
 
 ```js
-myVariable = '李雷';
+myVariable = "李雷";
 ```
 
 也可以将定义、赋值操作写在同一行：
 
 ```js
-let myVariable = '李雷';
+let myVariable = "李雷";
 ```
 
 可以直接通过变量名取得变量的值：
@@ -264,11 +264,11 @@ myVariable = '韩梅梅';
 条件语句是一种代码结构，用来测试表达式的真假，并根据测试结果运行不同的代码。一个常用的条件语句是 `if ... else`。下面是一个示例：
 
 ```js
-let iceCream = 'chocolate';
-if (iceCream === 'chocolate') {
-  alert('我最喜欢巧克力冰激淋了。');
+let iceCream = "chocolate";
+if (iceCream === "chocolate") {
+  alert("我最喜欢巧克力冰激淋了。");
 } else {
-  alert('但是巧克力才是我的最爱呀……');
+  alert("但是巧克力才是我的最爱呀……");
 }
 ```
 
@@ -279,11 +279,11 @@ if (iceCream === 'chocolate') {
 {{Glossary("Function", "函数")}} 用来封装可复用的功能。如果没有函数，一段特定的操作过程用几次就要重复写几次，而使用函数则只需写下函数名和一些简短的信息。之前已经涉及过一些函数，比如：
 
 ```js
-let myVariable = document.querySelector('h1');
+let myVariable = document.querySelector("h1");
 ```
 
 ```js
-alert('hello!');
+alert("hello!");
 ```
 
 `document.querySelector` 和 `alert` 是浏览器内置的函数，随时可用。
@@ -326,8 +326,8 @@ document.querySelector("html").addEventListener("click", function () {
 刚刚我们传递给 `addEventListener()` 的函数被称为*匿名函数*，因为它没有名字。匿名函数还有另一种我们称之为*箭头函数*的写法，箭头函数使用 `() =>` 代替 `function ()`：
 
 ```js
-document.querySelector('html').addEventListener('click', () => {
-  alert('别戳我，我怕疼。');
+document.querySelector("html").addEventListener("click", () => {
+  alert("别戳我，我怕疼。");
 });
 ```
 
@@ -344,18 +344,18 @@ document.querySelector('html').addEventListener('click', () => {
 3. 将图片重命名为'firefox2.png'（去掉引号）。
 4. 打开 `main.js` 文件，输入下面的 JavaScript 代码 ( 请删除刚才的 "hello world" 脚本)：
 
-    ```js
-    let myImage = document.querySelector('img');
+   ```js
+   let myImage = document.querySelector("img");
 
-    myImage.onclick = function() {
-        let mySrc = myImage.getAttribute('src');
-        if(mySrc === 'images/firefox-icon.png') {
-          myImage.setAttribute('src', 'images/firefox2.png');
-        } else {
-          myImage.setAttribute('src', 'images/firefox-icon.png');
-        }
-    }
-    ```
+   myImage.onclick = function () {
+     let mySrc = myImage.getAttribute("src");
+     if (mySrc === "images/firefox-icon.png") {
+       myImage.setAttribute("src", "images/firefox2.png");
+     } else {
+       myImage.setAttribute("src", "images/firefox-icon.png");
+     }
+   };
+   ```
 
 5. 保存所有文件并用浏览器打开 `index.html` 。点击图片可以发现它能够切换了！
 
@@ -364,8 +364,8 @@ document.querySelector('html').addEventListener('click', () => {
 1. 获取这张图片的 `src` 属性值。
 2. 用一个条件句来判断 `src` 的值是否等于原始图像的路径：
 
-    1. 如果是，则将 `src` 的值改为第二张图片的路径，并在 {{htmlelement("img")}} 内加载该图片。
-    2. 如果不是（意味着它已经修改过）, 则把 `src` 的值重新设置为原始图片的路径，即原始状态。
+   1. 如果是，则将 `src` 的值改为第二张图片的路径，并在 {{htmlelement("img")}} 内加载该图片。
+   2. 如果不是（意味着它已经修改过）, 则把 `src` 的值重新设置为原始图片的路径，即原始状态。
 
 ### 添加个性化欢迎信息
 
@@ -373,49 +373,49 @@ document.querySelector('html').addEventListener('click', () => {
 
 1. 打开 `index.html`，在 {{htmlelement("script")}} 标签**前**添加以下代码，将在页面底部显示一个“切换用户”字样的按钮：
 
-    ```html
-    <button>切换用户</button>
-    ```
+   ```html
+   <button>切换用户</button>
+   ```
 
 2. 将以下 JavaScript 代码原封不动添加到 `main.js` 文件底部，将获取新按钮和标题的引用，并保存至变量中：
 
-    ```js
-    let myButton = document.querySelector('button');
-    let myHeading = document.querySelector('h1');
-    ```
+   ```js
+   let myButton = document.querySelector("button");
+   let myHeading = document.querySelector("h1");
+   ```
 
 3. 然后添加以下函数来设置个性化欢迎信息。（函数需要在调用后生效，下文中提供了两种对该函数的调用方式）
 
-    ```js
-    function setUserName() {
-      let myName = prompt('请输入你的名字。');
-      localStorage.setItem('name', myName);
-      myHeading.textContent = 'Mozilla 酷毙了，' + myName;
-    }
-    ```
+   ```js
+   function setUserName() {
+     let myName = prompt("请输入你的名字。");
+     localStorage.setItem("name", myName);
+     myHeading.textContent = "Mozilla 酷毙了，" + myName;
+   }
+   ```
 
-    该函数首先调用了 [`prompt()`](/zh-CN/docs/Web/API/Window.prompt) 函数，与 `alert()` 类似会弹出一个对话框。但是这里需要用户输入数据，并在确定后将数据存储在 `myName` 变量里。接下来将调用 [`localStorage`](/zh-CN/docs/Web/API/Window/localStorage) API，它可以将数据存储在浏览器中供后续获取。这里用 `localStorage` 的 `setItem()` 函数来创建一个`'name'` 数据项，并把 `myName` 变量复制给它。最后将 `textContent` 属性设置为一个欢迎字符串加上这个新设置的名字。
+   该函数首先调用了 [`prompt()`](/zh-CN/docs/Web/API/Window.prompt) 函数，与 `alert()` 类似会弹出一个对话框。但是这里需要用户输入数据，并在确定后将数据存储在 `myName` 变量里。接下来将调用 [`localStorage`](/zh-CN/docs/Web/API/Window/localStorage) API，它可以将数据存储在浏览器中供后续获取。这里用 `localStorage` 的 `setItem()` 函数来创建一个`'name'` 数据项，并把 `myName` 变量复制给它。最后将 `textContent` 属性设置为一个欢迎字符串加上这个新设置的名字。
 
 4. 接下来，添加以下的 `if ... else` 块。我们可以称之为初始化代码，因为它在页面初次读取时进行构造工作：
 
-    ```js
-    if(!localStorage.getItem('name')) {
-      setUserName();
-    } else {
-      let storedName = localStorage.getItem('name');
-      myHeading.textContent = 'Mozilla 酷毙了，' + storedName;
-    }
-    ```
+   ```js
+   if (!localStorage.getItem("name")) {
+     setUserName();
+   } else {
+     let storedName = localStorage.getItem("name");
+     myHeading.textContent = "Mozilla 酷毙了，" + storedName;
+   }
+   ```
 
-    这里首次使用了取非运算符（逻辑非，用 `!` 表示）来检测 `'name'` 数据是否存在。若不存在，调用 `setUserName()` 创建。若存在（即用户上次访问时设置过），调用 `getItem()` 获取保存的名字，像上文的 `setUserName()` 那样设置 `textContent`。
+   这里首次使用了取非运算符（逻辑非，用 `!` 表示）来检测 `'name'` 数据是否存在。若不存在，调用 `setUserName()` 创建。若存在（即用户上次访问时设置过），调用 `getItem()` 获取保存的名字，像上文的 `setUserName()` 那样设置 `textContent`。
 
 5. 最后，为按钮设置 onclick 事件处理器。按钮按下时运行 setUserName() 函数。这样用户就可以通过按这个按钮来自由设置新名字了：
 
-    ```js
-    myButton.onclick = function() {
-       setUserName();
-    }
-    ```
+   ```js
+   myButton.onclick = function () {
+     setUserName();
+   };
+   ```
 
 第一次访问网页时，页面将询问用户名并发出一段个性化的信息。可随时点击按钮来改变用户名。告诉你一个额外的福利，因为用户名是保存在 `localStorage` 里的，网页关闭后也不会丢失，所以重新打开浏览器时所设置的名字信息将依然存在:)
 
@@ -429,12 +429,12 @@ document.querySelector('html').addEventListener('click', () => {
 
 ```js
 function setUserName() {
-  let myName = prompt('请输入你的名字。');
-  if(!myName) {
+  let myName = prompt("请输入你的名字。");
+  if (!myName) {
     setUserName();
   } else {
-    localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla 酷毙了，' + myName;
+    localStorage.setItem("name", myName);
+    myHeading.textContent = "Mozilla 酷毙了，" + myName;
   }
 }
 ```

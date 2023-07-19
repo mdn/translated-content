@@ -45,8 +45,8 @@ ball.body.velocity.set(150, 150);
 
 ```js
 function update() {
-    ball.x += 1;
-    ball.y += 1;
+  ball.x += 1;
+  ball.y += 1;
 }
 ```
 
@@ -60,22 +60,21 @@ function update() {
 var ball;
 
 function preload() {
-    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-    game.scale.pageAlignHorizontally = true;
-    game.scale.pageAlignVertically = true;
-    game.stage.backgroundColor = '#eee';
-    game.load.image('ball', 'img/ball.png');
+  game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+  game.scale.pageAlignHorizontally = true;
+  game.scale.pageAlignVertically = true;
+  game.stage.backgroundColor = "#eee";
+  game.load.image("ball", "img/ball.png");
 }
 
 function create() {
-    game.physics.startSystem(Phaser.Physics.ARCADE);
-    ball = game.add.sprite(50, 50, 'ball');
-    game.physics.enable(ball, Phaser.Physics.ARCADE);
-    ball.body.velocity.set(150, 150);
+  game.physics.startSystem(Phaser.Physics.ARCADE);
+  ball = game.add.sprite(50, 50, "ball");
+  game.physics.enable(ball, Phaser.Physics.ARCADE);
+  ball.body.velocity.set(150, 150);
 }
 
-function update() {
-}
+function update() {}
 ```
 
 Снова перезагрузите index.html. Мячик должен постоянно двигаться в направлении, которое мы задали. На данный момент в физическом движке гравитация (gravity) и трение (friction) имеют нулевое значение. Добавление гравитации заставит мячик падать вниз, пока трение будет пытаться остановить его.

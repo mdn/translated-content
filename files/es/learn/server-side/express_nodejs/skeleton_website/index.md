@@ -15,7 +15,7 @@ Este segundo artículo de nuestro [Tutorial Express](/es/docs/Learn/Server-side/
       <th scope="row">Prerequisitos:</th>
       <td>
         <a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment"
+          href="/es/docs/Learn/Server-side/Express_Nodejs/development_environment"
           >Configurar un entorno de desarrollo de Node</a
         >. Revise el Tutorial Express.
       </td>

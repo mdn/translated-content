@@ -20,7 +20,7 @@ Esta función también se utiliza para identificar si los objetos tienen el comp
 
 ## Ejemplos
 
-### Desactivar la comprobación de `isRegExp`.
+### Desactivar la comprobación de `isRegExp`
 
 El siguiente código lanzará un {{jsxref("TypeError")}}:
 

@@ -73,6 +73,6 @@ If possible avoid icon web fonts and use compressed SVGs. To further optimize in
 - Download everything
 - Use uncompressed media files
 
-## See also:
+## See also
 
 - <https://github.com/filamentgroup/loadCSS>

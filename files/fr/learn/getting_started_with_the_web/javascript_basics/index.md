@@ -36,17 +36,17 @@ Cependant, être à l'aise avec JavaScript est plus dur que de l'être avec HTML
 1. Tout d'abord, allez sur votre site de test et créez un nouveau dossier nommé «&nbsp;scripts&nbsp;» (sans guillemets). Ensuite, dans le nouveau dossier `scripts` que vous venez de créer, créez un nouveau fichier appelé main.js. Sauvegardez-le dans votre dossier scripts.
 2. Ensuite, dans votre fichier `index.html`, ajoutez l'élément suivant sur une nouvelle ligne avant la balise fermante `</body>` :
 
-    ```html
-    <script src="scripts/main.js"></script>
-    ```
+   ```html
+   <script src="scripts/main.js"></script>
+   ```
 
 3. Cet élément a le même rôle que l'élément {{htmlelement("link")}} pour le CSS — il applique le code JavaScript à la page, de sorte qu'il puisse avoir de l'effet sur le HTML (en même temps que le CSS et autres sur la page).
 4. Maintenant ajoutez le code suivant dans `main.js`&nbsp;:
 
-    ```js
-    let myHeading = document.querySelector('h1');
-    myHeading.textContent = 'Bonjour, monde !';
-    ```
+   ```js
+   let myHeading = document.querySelector("h1");
+   myHeading.textContent = "Bonjour, monde !";
+   ```
 
 5. Assurez-vous que les fichiers HTML et JavaScript soient enregistrés puis chargez `index.html` dans votre navigateur. Vous devriez obtenir quelque chose comme :![](hello-world.png)
 
@@ -83,13 +83,13 @@ let myVariable;
 Une fois une variable déclarée, vous pouvez lui donner une valeur :
 
 ```js
-myVariable = 'Bob';
+myVariable = "Bob";
 ```
 
 Vous pouvez faire les deux opérations sur une même ligne si vous le souhaitez&nbsp;:
 
 ```js
-let myVariable = 'Bob';
+let myVariable = "Bob";
 ```
 
 Vous retrouvez la valeur en appelant simplement la variable par son nom&nbsp;:
@@ -101,8 +101,8 @@ myVariable;
 Une fois qu'on a donné une valeur à une variable, on peut la changer plus loin :
 
 ```js
-let myVariable = 'Bob';
-myVariable = 'Étienne';
+let myVariable = "Bob";
+myVariable = "Étienne";
 ```
 
 Notez que les variables peuvent contenir des [types différents de données](/fr/docs/Web/JavaScript/Structures_de_données#Les_valeurs_primitives)&nbsp;:
@@ -285,8 +285,8 @@ Il y a nombre d'autres opérateurs à explorer, mais nous nous en tiendrons à c
 Les structures conditionnelles sont des éléments du code qui permettent de tester si une expression est vraie ou non et d'exécuter des instructions différentes selon le résultat. La structure conditionnelle utilisée la plus fréquemment est `if ... else`. Par exemple :
 
 ```js
-let iceCream = 'chocolat';
-if (iceCream === 'chocolat') {
+let iceCream = "chocolat";
+if (iceCream === "chocolat") {
   alert("J'adore la glace au chocolat !");
 } else {
   alert("Ooooh, mais j'aurais préféré au chocolat.");
@@ -300,11 +300,11 @@ L'expression contenue dans `if ( ... )` correspond au test — Ici, on utilise l
 Les {{Glossary("Fonction", "fonctions")}} sont un moyen de compacter des fonctionnalités en vue de leur réutilisation. Quand vous avez besoin de la procédure, vous pouvez appeler une fonction, par son nom, au lieu de ré‑écrire la totalité du code chaque fois. Nous avons déjà utilisé des fonctions plus haut, par exemple :
 
 ```js
-let myVariable = document.querySelector('h1');
+let myVariable = document.querySelector("h1");
 ```
 
 ```js
-alert('Bonjour !');
+alert("Bonjour !");
 ```
 
 Ces fonctions (`querySelector` et `alert`) sont disponibles dans le navigateur et vous pouvez les utiliser où bon vous semble.
@@ -316,7 +316,7 @@ Par exemple, la fonction `alert()` fait apparaître une fenêtre de pop-up dans 
 La bonne nouvelle est que vous pouvez définir vos propres fonctions — par exemple, vous pouvez écrire une fonction toute simple qui prend deux arguments et les multiplie :
 
 ```js
-function multiply(num1,num2) {
+function multiply(num1, num2) {
   let result = num1 * num2;
   return result;
 }
@@ -337,8 +337,8 @@ multiply(0.5, 3);
 Pour qu'un site web soit vraiment interactif, vous aurez besoin d'événements. Les événements sont des structures de code qui « écoutent » ce qui se passe dans le navigateur et déclenchent du code en réponse. Le meilleur exemple est [l'événement cliquer](/fr/docs/Web/Events/click), déclenché par le navigateur quand vous cliquez sur quelque chose avec la souris. À titre de démonstration, saisissez ces quelques lignes dans la console, puis cliquez sur la page en cours&nbsp;:
 
 ```js
-document.querySelector('html').addEventListener('click', function() {
-    alert('Aïe, arrêtez de cliquer !!');
+document.querySelector("html").addEventListener("click", function () {
+  alert("Aïe, arrêtez de cliquer !!");
 });
 ```
 
@@ -347,14 +347,14 @@ Il existe plein de méthodes pour « attacher » un événement à un élément.
 On pourra noter que :
 
 ```js
-document.querySelector('html').addEventListener('click', function() {});
+document.querySelector("html").addEventListener("click", function () {});
 ```
 
 est équivalent à :
 
 ```js
-let myHTML = document.querySelector('html');
-myHTML.addEventListener('click', function() {});
+let myHTML = document.querySelector("html");
+myHTML.addEventListener("click", function () {});
 ```
 
 La première syntaxe est simplement plus courte.
@@ -372,18 +372,18 @@ Dans cette section, nous allons incorporer une autre image au site en utilisant 
 3. Renommez cette image «&nbsp;firefox2.png&nbsp;» (sans les guillemets).
 4. Dans le fichier `main.js`, entrez ce code JavaScript (si votre code « Bonjour, monde&nbsp;» est toujours là, supprimez‑le) :
 
-    ```js
-    let myImage = document.querySelector('img');
+   ```js
+   let myImage = document.querySelector("img");
 
-    myImage.addEventListener('click', function() {
-        let mySrc = myImage.getAttribute('src');
-        if (mySrc === 'images/firefox-icon.png') {
-          myImage.setAttribute('src', 'images/firefox2.png');
-        } else {
-          myImage.setAttribute('src', 'images/firefox-icon.png');
-        }
-    });
-    ```
+   myImage.addEventListener("click", function () {
+     let mySrc = myImage.getAttribute("src");
+     if (mySrc === "images/firefox-icon.png") {
+       myImage.setAttribute("src", "images/firefox2.png");
+     } else {
+       myImage.setAttribute("src", "images/firefox-icon.png");
+     }
+   });
+   ```
 
 5. Sauvegardez tous les fichiers puis chargez `index.html` dans le navigateur. Maintenant, si vous cliquez sur l'image, elle doit changer pour l'autre !
 
@@ -392,8 +392,8 @@ Dans cet exemple, nous utilisons une référence vers l'élement {{htmlelement("
 1. nous récupèrons la valeur de l'attribut `src` de l'image.
 2. nous utilisons une structure conditionnelle pour voir si la valeur de `src` est égale au chemin de l'image originale :
 
-    1. si c'est le cas, nous changeons la valeur de `src` et indiquons le chemin vers la seconde image, forçant le chargement de cette image dans l'élément {{htmlelement("img")}}.
-    2. si ce n'est pas le cas (ce qui signifie que l'image a déjà été changée), la valeur de `src` revient à sa valeur initiale.
+   1. si c'est le cas, nous changeons la valeur de `src` et indiquons le chemin vers la seconde image, forçant le chargement de cette image dans l'élément {{htmlelement("img")}}.
+   2. si ce n'est pas le cas (ce qui signifie que l'image a déjà été changée), la valeur de `src` revient à sa valeur initiale.
 
 ### Ajouter un message d'accueil personnalisé
 
@@ -401,49 +401,49 @@ Continuons en ajoutant encore un peu de code pour changer le titre de la page af
 
 1. Dans le fichier `index.html`, ajoutons la ligne suivante avant l'élément {{htmlelement("script")}} :
 
-    ```html
-    <button>Changer d'utilisateur</button>
-    ```
+   ```html
+   <button>Changer d'utilisateur</button>
+   ```
 
 2. Dans le fichier `main.js`, ajoutons le code suivant à la fin du fichier. Cela fait référence au nouveau bouton ajouté et à l'élément de titre puis enregistrons ces références dans des variables :
 
-    ```js
-    let myButton = document.querySelector('button');
-    let myHeading = document.querySelector('h1');
-    ```
+   ```js
+   let myButton = document.querySelector("button");
+   let myHeading = document.querySelector("h1");
+   ```
 
 3. Ajoutons maintenant les fonctionnalités pour avoir ce message d'accueil personnalisé (cela ne servira pas immédiatement mais un peu plus tard) :
 
-    ```js
-    function setUserName() {
-      let myName = prompt('Veuillez saisir votre nom.');
-      localStorage.setItem('nom', myName);
-      myHeading.textContent = 'Mozilla est cool, ' + myName;
-    }
-    ```
+   ```js
+   function setUserName() {
+     let myName = prompt("Veuillez saisir votre nom.");
+     localStorage.setItem("nom", myName);
+     myHeading.textContent = "Mozilla est cool, " + myName;
+   }
+   ```
 
-    Cette fonction utilise la fonction [`prompt()`](/fr/docs/Web/API/Window/prompt) qui affiche une boîte de dialogue, un peu comme `alert()` sauf qu'elle permet à l'utilisateur de saisir des données et de les enregistrer dans une variable quand l'utilisateur clique sur *OK*. Dans notre exemple, nous demandons à l'utilisateur de saisir son nom. Ensuite, nous appelons une API appelée `localStorage`. Cette API permet de stocker des données dans le navigateur pour pouvoir les réutiliser ultérieurement. Nous utilisons la fonction `setItem()` de cette API pour stocker la donnée qui nous intéresse dans un conteneur appelé `'nom'`. La valeur stockée ici est la valeur de la variable `myName` qui contient le nom saisi par l'utilisateur. Enfin, on utilise la propriété `textContent` du titre pour lui affecter un nouveau contenu.
+   Cette fonction utilise la fonction [`prompt()`](/fr/docs/Web/API/Window/prompt) qui affiche une boîte de dialogue, un peu comme `alert()` sauf qu'elle permet à l'utilisateur de saisir des données et de les enregistrer dans une variable quand l'utilisateur clique sur _OK_. Dans notre exemple, nous demandons à l'utilisateur de saisir son nom. Ensuite, nous appelons une API appelée `localStorage`. Cette API permet de stocker des données dans le navigateur pour pouvoir les réutiliser ultérieurement. Nous utilisons la fonction `setItem()` de cette API pour stocker la donnée qui nous intéresse dans un conteneur appelé `'nom'`. La valeur stockée ici est la valeur de la variable `myName` qui contient le nom saisi par l'utilisateur. Enfin, on utilise la propriété `textContent` du titre pour lui affecter un nouveau contenu.
 
 4. Ajoutons ensuite ce bloc `if ... else`. Ce code correspond à l'étape d'initialisation car il sera utilisé la première fois que la page est chargée par l'utilisateur :
 
-    ```js
-    if (!localStorage.getItem('nom')) {
-      setUserName();
-    } else {
-      let storedName = localStorage.getItem('nom');
-      myHeading.textContent = 'Mozilla est cool, ' + storedName;
-    }
-    ```
+   ```js
+   if (!localStorage.getItem("nom")) {
+     setUserName();
+   } else {
+     let storedName = localStorage.getItem("nom");
+     myHeading.textContent = "Mozilla est cool, " + storedName;
+   }
+   ```
 
-    Ce bloc utilise l'opérateur de négation (NON logique, représenté avec le !) pour vérifier si le navigateur possède une donnée enregistrée appelée `nom`. Si non, la fonction `setUserName()` est appelée pour créer cette donnée. Si elle existe (ce qui correspond au cas où l'utilisateur est déjà venu sur la page), on la récupère avec la méthode `getItem()` et on définit le contenu de `textContent` pour le titre avec une chaîne suivie du nom de l'utilisateur, comme nous le faisons dans `setUserName().`
+   Ce bloc utilise l'opérateur de négation (NON logique, représenté avec le !) pour vérifier si le navigateur possède une donnée enregistrée appelée `nom`. Si non, la fonction `setUserName()` est appelée pour créer cette donnée. Si elle existe (ce qui correspond au cas où l'utilisateur est déjà venu sur la page), on la récupère avec la méthode `getItem()` et on définit le contenu de `textContent` pour le titre avec une chaîne suivie du nom de l'utilisateur, comme nous le faisons dans `setUserName().`
 
 5. Enfin, on associe le gestionnaire `onclick` au bouton. De cette façon, quand on clique sur le bouton, cela déclenchera l'exécution de la fonction `setUserName()`. Ce bouton permet à l'utilisateur de modifier la valeur s'il le souhaite:
 
-    ```js
-    myButton.addEventListener('click', function() {
-      setUserName();
-    });
-    ```
+   ```js
+   myButton.addEventListener("click", function () {
+     setUserName();
+   });
+   ```
 
 Récapitulons : la première fois que l'utilisateur viste le site, il sera invité à saisir un nom d'utilisateur. Ce nom sera utilisé pour afficher un message d'accueil personnalisé. Si l'utilisateur souhaite changer son nom, il peut cliquer sur le bouton. En supplément, le nom est enregistré pour plus tard grâce à l'API `localStorage`, cela permet à l'utilisateur de retrouver son nom, même s'il a fermé la page et/ou le navigateur et qu'il revient plus tard !
 
