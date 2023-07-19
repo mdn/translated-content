@@ -29,11 +29,11 @@ El siguiente código ejecuta una notificación; se crea un simple objeto `option
 
 ```js
 var options = {
-  body: 'Do you like my body?',
-  dir: 'rtl'
-}
+  body: "Do you like my body?",
+  dir: "rtl",
+};
 
-var n = new Notification('Notificación de prueba', options);
+var n = new Notification("Notificación de prueba", options);
 
 console.log(n.dir); // Deberia retornar 'rtl'
 ```
