@@ -80,7 +80,7 @@ document.getElementById("formInstruction").setAttribute("role", "alert");
 
 #### Exemplo 4: Construindo um elemento com uma função de alerta visível
 
-Se um elemento já tem o atributo`role="alert"`e é, inicialmente, escondido pelo uso da CSS, torná-lo visível o faz disparar como se estivesse adicionado à página. Isto significa que um alerta existente pode ser "utilizado" múltiplas vezes.
+Se um elemento já tem o atributo `role="alert"` e é, inicialmente, escondido pelo uso da CSS, torná-lo visível o faz disparar como se estivesse adicionado à página. Isto significa que um alerta existente pode ser "utilizado" múltiplas vezes.
 
 **Nota:** Na maioria dos casos, esta abordagem não é recomendada, porque não é a ideal para esconder erro, ou alerta de texto, que não for aplicável no momento. Utilizadores de tecnologias assistivas antigas podem, ainda, perceber o texto de alerta, mesmo quando este não devesse ser aplicado, fazendo com que acreditem, incorretamente, que há um problema.
 
