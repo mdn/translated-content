@@ -77,14 +77,14 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 </html>
 ```
 
-## Specifications
+## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
 {{Compat}}
 
-## See also
+## Véase también
 
 - HTTP status: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}
