@@ -18,7 +18,7 @@ javascript 中的对象 (物体)，和其他编程语言中的对象一样，可
 一个 javascript 对象有很多属性。一个对象的属性可以被解释成一个附加到对象上的变量。对象的属性和普通的 javascript 变量基本没什么区别，仅仅是属性属于某个对象。属性定义了对象的特征。你可以通过点符号来访问一个对象的属性。
 
 ```js
-objectName.propertyName
+objectName.propertyName;
 ```
 
 和其他 javascript 变量一样，对象的名字 (可以是普通的变量) 和属性的名字都是大小写敏感的。你可以在定义一个属性的时候就给它赋值。例如，我们创建一个 myCar 的对象然后给他三个属性，make，model，year。具体如下所示：
@@ -69,11 +69,10 @@ console.log(myObj);
 
 ```js
 var propertyName = "make";
-  myCar[propertyName] = "Ford";
+myCar[propertyName] = "Ford";
 
-  propertyName = "model";
-  myCar[propertyName] = "Mustang";
-
+propertyName = "model";
+myCar[propertyName] = "Mustang";
 ```
 
 你可以在 [for...in](/zh-CN/docs/JavaScript/Guide/Statements#for...in_Statement) 语句中使用方括号标记以枚举一个对象的所有属性。为了展示它如何工作，下面的函数当你将对象及其名称作为参数传入时，显示对象的属性：
@@ -83,7 +82,7 @@ function showProps(obj, objName) {
   var result = "";
   for (var i in obj) {
     if (obj.hasOwnProperty(i)) {
-        result += objName + "." + i + " = " + obj[i] + "\n";
+      result += objName + "." + i + " = " + obj[i] + "\n";
     }
   }
   return result;
@@ -93,9 +92,9 @@ function showProps(obj, objName) {
 因而，对于函数调用 `showProps(myCar, "myCar")` 将返回以下值：
 
 ```js
-myCar.make = Ford
-myCar.model = Mustang
-myCar.year = 1969
+myCar.make = Ford;
+myCar.model = Mustang;
+myCar.year = 1969;
 ```
 
 ## 枚举一个对象的所有属性
@@ -112,11 +111,15 @@ myCar.year = 1969
 在 ECMAScript 5 之前，没有原生的方法枚举一个对象的所有属性。然而，可以通过以下函数完成：
 
 ```js
-function listAllProperties(o){
+function listAllProperties(o) {
   var objectToInspect;
   var result = [];
 
-  for(objectToInspect = o; objectToInspect !== null; objectToInspect = Object.getPrototypeOf(objectToInspect)){
+  for (
+    objectToInspect = o;
+    objectToInspect !== null;
+    objectToInspect = Object.getPrototypeOf(objectToInspect)
+  ) {
     result = result.concat(Object.getOwnPropertyNames(objectToInspect));
   }
 
@@ -137,11 +140,13 @@ JavaScript 拥有一系列预定义的对象。另外，你可以创建你自己
 通过对象初始化器创建对象的语法如下：
 
 ```js
-var obj = { property_1:   value_1,   // property_# 可以是一个标识符...
-            2:            value_2,   // 或一个数字...
-           ["property" +3]: value_3,  //  或一个可计算的 key 名...
-            // ...,
-            "property n": value_n }; // 或一个字符串
+var obj = {
+  property_1: value_1, // property_# 可以是一个标识符...
+  2: value_2, // 或一个数字...
+  ["property" + 3]: value_3, //  或一个可计算的 key 名...
+  // ...,
+  "property n": value_n,
+}; // 或一个字符串
 ```
 
 这里 `obj` 是新对象的名称，每一个 `property_i` 是一个标识符（可以是一个名称、数字或字符串字面量），并且每个 `value_i` 是一个其值将被赋予 `property_i` 的表达式。`obj` 与赋值是可选的；如果你不需要在其他地方引用对象，你就不需要将它赋给一个变量。（注意在接受一条语句的地方，你可能需要将对象字面量括在括号里，从而避免将字面量与块语句相混淆）
@@ -151,13 +156,13 @@ var obj = { property_1:   value_1,   // property_# 可以是一个标识符...
 下面的语句只有当 `cond` 表达式的值为 `true` 时创建对象并将其赋给变量 `x`。
 
 ```js
-if (cond) var x = {hi: "there"};
+if (cond) var x = { hi: "there" };
 ```
 
 下例创建了有三个属性的 `myHonda` 对象。注意它的 `engine` 属性也是一个拥有自己属性的对象。
 
 ```js
-var myHonda = {color: "red", wheels: 4, engine: {cylinders: 4, size: 2.2}};
+var myHonda = { color: "red", wheels: 4, engine: { cylinders: 4, size: 2.2 } };
 ```
 
 你也可以用对象初始化器来创建数组。参见[数组字面量](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#数组字面量_array_literals)
@@ -236,7 +241,7 @@ var car2 = new Car("Nissan", "300ZX", 1992, ken);
 注意在创建新对象时，上面的语句将 `rand` 和 `ken` 作为 `owner` 的参数值，而不是传入字符串字面量或整数值。接下来你如果想找出 car2 的拥有者的姓名，你可以访问如下属性：
 
 ```js
-car2.owner.name
+car2.owner.name;
 ```
 
 注意你总是可以为之前定义的对象增加新的属性。例如，语句
@@ -255,10 +260,11 @@ car1.color = "black";
 // Animal properties and method encapsulation
 var Animal = {
   type: "Invertebrates", // 属性默认值
-  displayType : function() {  // 用于显示 type 属性的方法
+  displayType: function () {
+    // 用于显示 type 属性的方法
     console.log(this.type);
-  }
-}
+  },
+};
 
 // 创建一种新的动物——animal1
 var animal1 = Object.create(Animal);
@@ -363,7 +369,7 @@ JavaScript 有一个特殊的关键字 `this`，它可以在方法中使用以�
 
 ```js
 function validate(obj, lowval, hival) {
-  if ((obj.value < lowval) || (obj.value > hival)) {
+  if (obj.value < lowval || obj.value > hival) {
     alert("Invalid Value!");
   }
 }
@@ -372,8 +378,7 @@ function validate(obj, lowval, hival) {
 然后，你可以在每个元素的 `onchange` 事件处理器中调用 `validate`，并通过 `this` 传入相应元素，代码如下：
 
 ```html
-<input type="text" name="age" size="3"
-  onChange="validate(this, 18, 99)">
+<input type="text" name="age" size="3" onChange="validate(this, 18, 99)" />
 ```
 
 总的说来， `this` 在一个方法中指调用的对象。
@@ -382,10 +387,16 @@ function validate(obj, lowval, hival) {
 
 ```html
 <form name="myForm">
-<p><label>Form name:<input type="text" name="text1" value="Beluga"></label>
-<p><input name="button1" type="button" value="Show Form Name"
-     onclick="this.form.text1.value = this.form.name">
-</p>
+  <p>
+    <label>Form name:<input type="text" name="text1" value="Beluga" /></label>
+  </p>
+  <p>
+    <input
+      name="button1"
+      type="button"
+      value="Show Form Name"
+      onclick="this.form.text1.value = this.form.name" />
+  </p>
 </form>
 ```
 
@@ -402,8 +413,8 @@ var o = {
     return this.a + 1;
   },
   set c(x) {
-    this.a = x / 2
-  }
+    this.a = x / 2;
+  },
 };
 
 console.log(o.a); // 7
@@ -427,8 +438,12 @@ console.log(o.a); // 25
 ```js
 var d = Date.prototype;
 Object.defineProperty(d, "year", {
-  get: function() { return this.getFullYear() },
-  set: function(y) { this.setFullYear(y) }
+  get: function () {
+    return this.getFullYear();
+  },
+  set: function (y) {
+    this.setFullYear(y);
+  },
 });
 ```
 
@@ -452,23 +467,35 @@ console.log(now);
 ```js
 var o = {
   a: 7,
-  get b() { return this.a + 1; },
-  set c(x) { this.a = x / 2; }
+  get b() {
+    return this.a + 1;
+  },
+  set c(x) {
+    this.a = x / 2;
+  },
 };
 ```
 
 使用 Object.defineProperties 的方法，同样也可以对一个已创建的对象在任何时候为其添加 getter 或 setter 方法。这个方法的第一个参数是你想定义 getter 或 setter 方法的对象，第二个参数是一个对象，这个对象的属性名用作 getter 或 setter 的名字，属性名对应的属性值用作定义 getter 或 setter 方法的函数，下面是一个例子定义了和前面例子一样的 getter 和 setter 方法：
 
 ```js
-var o = { a:0 }
+var o = { a: 0 };
 
 Object.defineProperties(o, {
-    "b": { get: function () { return this.a + 1; } },
-    "c": { set: function (x) { this.a = x / 2; } }
+  b: {
+    get: function () {
+      return this.a + 1;
+    },
+  },
+  c: {
+    set: function (x) {
+      this.a = x / 2;
+    },
+  },
 });
 
-o.c = 10 // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
-console.log(o.b) // Runs the getter, which yields a + 1 or 6
+o.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
+console.log(o.b); // Runs the getter, which yields a + 1 or 6
 ```
 
 这两种定义方式的选择取决于你的编程风格和手头的工作量。当你定义一个原型准备进行初始化时，可以选择第一种方式，这种方式更简洁和自然。但是，当你需要添加 getter 和 setter 方法 —— 因为并没有编写原型或者特定的对象 ——使用第二种方式更好。第二种方式可能更能表现 JavaScript 语法的动态特性——但也会使代码变得难以阅读和理解。
@@ -479,7 +506,7 @@ console.log(o.b) // Runs the getter, which yields a + 1 or 6
 
 ```js
 //Creates a new object, myobj, with two properties, a and b.
-var myobj = new Object;
+var myobj = new Object();
 myobj.a = 5;
 myobj.b = 12;
 
@@ -500,23 +527,23 @@ delete g;
 
 ```js
 // 两个变量，两个具有同样的属性、但不相同的对象
-var fruit = {name: "apple"};
-var fruitbear = {name: "apple"};
+var fruit = { name: "apple" };
+var fruitbear = { name: "apple" };
 
-fruit == fruitbear // return false
-fruit === fruitbear // return false
+fruit == fruitbear; // return false
+fruit === fruitbear; // return false
 ```
 
 > **备注：** "===" 运算符用来检查数值是否相等：1 === "1"返回 false，而 1 == "1" 返回 true
 
 ```js
 // 两个变量，同一个对象
-var fruit = {name: "apple"};
-var fruitbear = fruit;  // 将 fruit 的对象引用 (reference) 赋值给 fruitbear
-                        // 也称为将 fruitbear“指向”fruit 对象
+var fruit = { name: "apple" };
+var fruitbear = fruit; // 将 fruit 的对象引用 (reference) 赋值给 fruitbear
+// 也称为将 fruitbear“指向”fruit 对象
 // fruit 与 fruitbear 都指向同样的对象
-fruit == fruitbear // return true
-fruit === fruitbear // return true
+fruit == fruitbear; // return true
+fruit === fruitbear; // return true
 ```
 
 了解更多关于比较操作符的用法，查看 [Comparison operators](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators).

@@ -16,15 +16,19 @@ Sept éléments utilisent cet attribut: {{SVGElement('altGlyph')}}, {{SVGElement
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <!-- Lignes indiquant la position des glyphes -->
-  <line x1="0"  x2="100%" y1="50%" y2="50%" />
-  <line x1="10%" x2="10%" y1="0"   y2="100%" />
-  <line x1="60%" x2="60%" y1="0"   y2="100%" />
+  <line x1="0" x2="100%" y1="50%" y2="50%" />
+  <line x1="10%" x2="10%" y1="0" y2="100%" />
+  <line x1="60%" x2="60%" y1="0" y2="100%" />
 
   <!-- Un texte de référence -->
   <text x="10%" y="50%" fill="grey">SVG</text>
@@ -37,7 +41,7 @@ html,body,svg { height:100% }
 ```css
 line {
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 3px;
 }
 ```
@@ -182,24 +186,28 @@ S'il a plusieurs valeurs, `dx` définit un décalage sur l'axe x individuellemen
 ### Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
   <!-- Linges indiquant la position des glyphes -->
-  <line x1="0"  x2="100%" y1="25%" y2="25%" />
-  <line x1="0"  x2="100%" y1="50%" y2="50%" />
-  <line x1="0"  x2="100%" y1="75%" y2="75%" />
+  <line x1="0" x2="100%" y1="25%" y2="25%" />
+  <line x1="0" x2="100%" y1="50%" y2="50%" />
+  <line x1="0" x2="100%" y1="75%" y2="75%" />
 
-  <line x1="10%" x2="10%" y1="0"   y2="100%" />
-  <line x1="30%" x2="30%" y1="0"   y2="100%" />
-  <line x1="60%" x2="60%" y1="0"   y2="100%" />
+  <line x1="10%" x2="10%" y1="0" y2="100%" />
+  <line x1="30%" x2="30%" y1="0" y2="100%" />
+  <line x1="60%" x2="60%" y1="0" y2="100%" />
 
   <!-- Le comportement change en fonction du nombre
        de valeurs de l'attribut -->
-  <text dx="20%"       x="10%" y="25%">SVG</text>
-  <text dx="0 10%"     x="10%" y="50%">SVG</text>
+  <text dx="20%" x="10%" y="25%">SVG</text>
+  <text dx="0 10%" x="10%" y="50%">SVG</text>
   <text dx="0 10% 20%" x="10%" y="75%">SVG</text>
 </svg>
 ```
@@ -207,7 +215,7 @@ html,body,svg { height:100% }
 ```css
 line {
   stroke: red;
-  stroke-width: .5px;
+  stroke-width: 0.5px;
   stroke-dasharray: 3px;
 }
 ```

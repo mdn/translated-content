@@ -24,7 +24,7 @@ object.hash = string;
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.href#youhou">
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils.href#youhou">
 var anchor = document.getElementByID("myAnchor");
 var result = anchor.hash; // Вернёт: '#youhou'
 ```

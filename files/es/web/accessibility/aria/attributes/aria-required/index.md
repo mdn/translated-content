@@ -14,7 +14,7 @@ HTML5 ahora tiene el atributo `required`, pero aria-required todavía es útil p
 
 `true` o `false` (Default: `false`)
 
-### Posibles efectos en agentes de usuario y tecnología asistente.
+### Posibles efectos en agentes de usuario y tecnología asistente
 
 Los lectores de pantalla deben anunciar el campo como requerido.
 

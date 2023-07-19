@@ -14,7 +14,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 ## 使用格式
 
 ```js
-var gettingTree = browser.bookmarks.getTree()
+var gettingTree = browser.bookmarks.getTree();
 ```
 
 ### 参数

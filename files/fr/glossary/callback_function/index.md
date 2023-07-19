@@ -10,11 +10,11 @@ Voici un rapide exemple :
 
 ```js
 function salutation(name) {
-  alert('Bonjour ' + name);
+  alert("Bonjour " + name);
 }
 
 function processUserInput(callback) {
-  var name = prompt('Entrez votre nom.');
+  var name = prompt("Entrez votre nom.");
   callback(name);
 }
 

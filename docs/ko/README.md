@@ -55,10 +55,10 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
 2. content 폴더에 들어가서 `yarn install`을 통해 yari 등 필요한 패키지를 다운받습니다.
 3. content 폴더 root에 .env 파일을 추가합니다. (translated-content/files 경로 추가, vscode editor의 경우 `EDITOR=code` 추가)
 
-    ```
-    CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files
-    EDITOR=code
-    ```
+   ```
+   CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files
+   EDITOR=code
+   ```
 
 4. `yarn start`
 

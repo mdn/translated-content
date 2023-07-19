@@ -429,7 +429,7 @@ Ball.prototype.update = function() {
 
 - [Canvas tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) —— 2D canvas 初学者指南。
 - [requestAnimationFrame()](/zh-CN/docs/Web/API/window/requestAnimationFrame)
-- [2D 碰撞检测](zh-CN/docs/Games/Techniques/2D_collision_detection)
+- [2D 碰撞检测](/zh-CN/docs/Games/Techniques/2D_collision_detection)
 - [3D 碰撞检测](/zh-CN/docs/Games/Techniques/3D_collision_detection)
 - [纯 JavaScript 编写的 2D 消除游戏](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) —— 一个很好的 2D 游戏开发初学者教程。
 - [Phaser 编写的 2D 消除游戏](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) —— JavaScript 游戏库构建 2D 游戏的基础知识。

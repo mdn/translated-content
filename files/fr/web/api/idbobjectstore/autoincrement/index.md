@@ -6,9 +6,9 @@ translation_of: Web/API/IDBObjectStore/autoIncrement
 
 {{ APIRef("IndexedDB") }}
 
-La propriété **`autoIncrement`** de l'interface {{domxref("IDBObjectStore")}} renvoie la position du drapeau d’incrémentation automatique du magasin d'objet {{domxref("IDBObjectStore","relié")}}.
+La propriété **`autoIncrement`** de l'interface {{domxref("IDBObjectStore")}} renvoie la position du drapeau d'incrémentation automatique du magasin d'objet {{domxref("IDBObjectStore","relié")}}.
 
-> **Note :** Chaque magasin d'objets à son conteur d’incrémentation automatique.
+> **Note :** Chaque magasin d'objets à son conteur d'incrémentation automatique.
 
 {{AvailableInWorkers}}
 
@@ -23,15 +23,15 @@ var myAutoIncrement = objectStore.autoIncrement;
 Un {{domxref("Boolean","booléen")}} .
 
 - `true`
-  - : Le magasin d'objet relié s’incrémente automatiquement.
+  - : Le magasin d'objet relié s'incrémente automatiquement.
 - `false`
-  - : Le magasin d'objet relié ne s’incrémente pas automatiquement.
+  - : Le magasin d'objet relié ne s'incrémente pas automatiquement.
 
 ## Exemple
 
 Dans le code suivant, on ouvre une {{domxref("IDBDatabase","connexion")}} à la base de donnée. Sur cette connexion on démarre une {{domxref("IDBTransaction","transaction")}} en lecture/écriture pour avoir un {{domxref("IDBObjectStore","accès")}} au magasin d'objet `"toDoList"` dans lequel on {{domxref("IDBObjectStore.add","ajoute")}} un enregistrement.
 
-La propriété **`autoIncrement`** de l'accès au magasin d'objet sert à affiché la position du drapeau d’incrémentation automatique de ce magasin d'objet sur la console.
+La propriété **`autoIncrement`** de l'accès au magasin d'objet sert à affiché la position du drapeau d'incrémentation automatique de ce magasin d'objet sur la console.
 
 ```js
 //Connexion à la base de données

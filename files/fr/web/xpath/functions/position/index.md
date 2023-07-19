@@ -27,20 +27,20 @@ Un nombre entier égal à la position du contenu dans le contexte d'évaluation 
 
 - Le contexte est déterminé par le reste du chemin&nbsp;:
 
-    ```xml
-    <xsl:template match="//a[position() = 5]">
-        <!-- cet exemple 'attrape' le cinquième élément "a"
-                n'importe où dans le document. -->
-    </xsl:template>
-    ```
+  ```xml
+  <xsl:template match="//a[position() = 5]">
+      <!-- cet exemple 'attrape' le cinquième élément "a"
+              n'importe où dans le document. -->
+  </xsl:template>
+  ```
 
-    ```xml
-    <xsl:template match="//div[@class='foo']/bar[position() = 1]">
-        <!-- cet exemple 'attrape' le premier
-                élément "bar" enfant d'un élément "div"
-                avec un attribut "class" valant "foo" -->
-    </xsl:template>
-    ```
+  ```xml
+  <xsl:template match="//div[@class='foo']/bar[position() = 1]">
+      <!-- cet exemple 'attrape' le premier
+              élément "bar" enfant d'un élément "div"
+              avec un attribut "class" valant "foo" -->
+  </xsl:template>
+  ```
 
 ### Définition
 

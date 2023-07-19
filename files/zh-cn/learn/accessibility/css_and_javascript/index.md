@@ -64,7 +64,8 @@ h1 {
   font-size: 5rem;
 }
 
-p, li {
+p,
+li {
   line-height: 1.5;
   font-size: 1.6rem;
 }
@@ -85,13 +86,16 @@ p, li {
 ```html
 <p>The water is <em>very hot</em>.</p>
 
-<p>Water droplets collecting on surfaces is called <strong>condensation</strong>.</p>
+<p>
+  Water droplets collecting on surfaces is called <strong>condensation</strong>.
+</p>
 ```
 
 你可能希望向强调的文本添加一些简单的颜色：
 
 ```css
-strong, em {
+strong,
+em {
   color: #a60000;
 }
 ```
@@ -103,7 +107,10 @@ strong, em {
 允许缩写、首字母缩略词或初始化与其扩展关联的元素：
 
 ```html
-<p>Web content is marked up using <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
+<p>
+  Web content is marked up using
+  <abbr title="Hypertext Markup Language">HTML</abbr>.
+</p>
 ```
 
 同样，你可能希望以某种简单方式设置样式：
@@ -131,7 +138,9 @@ a {
   color: #ff0000;
 }
 
-a:hover, a:visited, a:focus {
+a:hover,
+a:visited,
+a:focus {
   color: #a60000;
   text-decoration: none;
 }
@@ -157,7 +166,7 @@ a:active {
 ```html
 <div>
   <label for="name">Enter your name</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" />
 </div>
 ```
 
@@ -248,7 +257,7 @@ JavaScript 还可能会中断无障碍，具体取决于其使用方式。
 
 ```html
 <label for="name">Enter your name:</label>
-<input type="text" name="name" id="name">
+<input type="text" name="name" id="name" />
 ```
 
 我们仅在提交表单时执行验证。这样，我们就不会过于频繁地更新 UI，反之则可能混淆屏幕阅读器（可能还有其他）用户：
@@ -257,16 +266,16 @@ JavaScript 还可能会中断无障碍，具体取决于其使用方式。
 form.onsubmit = validate;
 
 function validate(e) {
-  errorList.innerHTML = '';
-  for(var i = 0; i < formItems.length; i++) {
+  errorList.innerHTML = "";
+  for (var i = 0; i < formItems.length; i++) {
     var testItem = formItems[i];
-    if(testItem.input.value === '') {
-      errorField.style.left = '360px';
+    if (testItem.input.value === "") {
+      errorField.style.left = "360px";
       createLink(testItem);
     }
   }
 
-  if(errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== "") {
     e.preventDefault();
   }
 }
@@ -282,11 +291,15 @@ function validate(e) {
 
 ```js
 function createLink(testItem) {
-  var listItem = document.createElement('li');
-  var anchor = document.createElement('a');
-  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
+  var listItem = document.createElement("li");
+  var anchor = document.createElement("a");
+  anchor.textContent =
+    testItem.input.name +
+    " field is empty: fill in your " +
+    testItem.input.name +
+    ".";
+  anchor.href = "#" + testItem.input.name;
+  anchor.onclick = function () {
     testItem.input.focus();
   };
   listItem.appendChild(anchor);
@@ -304,8 +317,7 @@ function createLink(testItem) {
 
 ```html
 <div class="errors" role="alert" aria-relevant="all">
-  <ul>
-  </ul>
+  <ul></ul>
 </div>
 ```
 

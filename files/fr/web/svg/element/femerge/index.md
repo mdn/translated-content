@@ -20,9 +20,7 @@ La primitive de filtre SVG **`<feMerge>`** permet d'empiler les résultats de di
 ### SVG
 
 ```html
-<svg width="200" height="200"
-  xmlns="http://www.w3.org/2000/svg">
-
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <filter id="feOffset" x="-40" y="-20" width="100" height="200">
     <feOffset in="SourceGraphic" dx="60" dy="60" />
     <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur2" />
@@ -32,7 +30,11 @@ La primitive de filtre SVG **`<feMerge>`** permet d'empiler les résultats de di
     </feMerge>
   </filter>
 
-  <rect x="40" y="40" width="100" height="100"
+  <rect
+    x="40"
+    y="40"
+    width="100"
+    height="100"
     style="stroke: #000000; fill: green; filter: url(#feOffset);" />
 </svg>
 ```

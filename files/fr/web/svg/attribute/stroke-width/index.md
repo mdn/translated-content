@@ -18,7 +18,11 @@ Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura 
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
@@ -27,12 +31,10 @@ html,body,svg { height:100% }
   <circle cx="5" cy="5" r="3" stroke="green" />
 
   <!-- Définit l'épaisseur avec un nombre -->
-  <circle cx="15" cy="5" r="3" stroke="green"
-          stroke-width="3" />
+  <circle cx="15" cy="5" r="3" stroke="green" stroke-width="3" />
 
   <!-- Définit l'épaisseur avec un pourcentage -->
-  <circle cx="25" cy="5" r="3" stroke="green"
-          stroke-width="2%" />
+  <circle cx="25" cy="5" r="3" stroke="green" stroke-width="2%" />
 </svg>
 ```
 

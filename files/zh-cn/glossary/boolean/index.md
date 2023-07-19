@@ -7,7 +7,7 @@ slug: Glossary/Boolean
 
 在计算机科学中，**布尔值**是一种取值仅能为 _真_ 或 _假_ 的数据类型，它赋予了编程语言在逻辑上表达*真* 或 _假_ 的能力。如果没有这种能力，很多功能将无法被实现。举个例子，JavaScript 中的 _if 语句_ 需要一些判断条件来决定接下来的代码会否被执行，而这些条件，本质上会被解释成一个布尔值。又如 JavaScript 中的 _for 循环_，如果没有一个能够解释成布尔值的判断条件，循环将无法知道自己什么时候该结束。
 
-***JavaScript if 语句***
+**_JavaScript if 语句_**
 
 ```js
 if(boolean conditional) {
@@ -21,7 +21,7 @@ if(true) {
 }
 ```
 
-***JavaScript for 循环***
+**_JavaScript for 循环_**
 
 ```js
 for(control variable; boolean conditional; counter) {

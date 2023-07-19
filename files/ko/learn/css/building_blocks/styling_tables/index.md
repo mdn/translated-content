@@ -12,10 +12,10 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
     <tr>
       <th scope="row">전제조건:</th>
       <td>
-        HTML 기본 사항 (<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        HTML 기본 사항 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
-        학습), <a href="/en-US/docs/Learn/HTML/Tables">HTML 표</a> 에 대한 지식
+        학습), <a href="/ko/docs/Learn/HTML/Tables">HTML 표</a> 에 대한 지식
         및 CSS 작동 방식에 대한 이해 (CSS 첫 번째 단계 학습.)
       </td>
     </tr>

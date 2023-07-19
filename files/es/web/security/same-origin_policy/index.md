@@ -146,4 +146,4 @@ Las cookies usan una definición separada de orígenes. Una página puede asigna
 
 - Autor(es): Jesse Ruderman
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/es/docs/Web/Security")}}

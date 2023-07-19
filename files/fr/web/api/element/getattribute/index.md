@@ -67,7 +67,7 @@ let nonce = script.getAttribute("nonce");
 // renvoie une chaine vide
 ```
 
-Plutôt que de tenter de lire le _nonce_ via l’attribut, utilisez la propriété {{domxref("HTMLOrForeignElement/nonce", "nonce")}} :
+Plutôt que de tenter de lire le _nonce_ via l'attribut, utilisez la propriété {{domxref("HTMLOrForeignElement/nonce", "nonce")}} :
 
 ```js
 let nonce = script.nonce;

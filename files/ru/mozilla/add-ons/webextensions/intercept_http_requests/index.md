@@ -111,7 +111,7 @@ browser.webRequest.onBeforeRequest.addListener(
 
 Также обратите внимание, что мы передаём опцию `"blocking"`: нам нужно передать это, когда мы хотим изменить запрос. Это заставляет функцию обработчика блокировать сетевой запрос, поэтому браузер ждёт, пока обработчик вернётся, прежде чем продолжить. Дополнительную информацию о `"blocking"` смотрите в документации {{WebExtAPIRef ("webRequest.onBeforeRequest")}}.
 
-Чтобы проверить это, откройте страницу в MDN, которая содержит много изображений (например, <https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor>), перезагрузите WebExtension и перезагрузите страницу MDN :
+Чтобы проверить это, откройте страницу в MDN, которая содержит много изображений (например, <https://developer.mozilla.org/ru/docs/Tools/Network_Monitor>), перезагрузите WebExtension и перезагрузите страницу MDN :
 
 {{EmbedYouTube("ix5RrXGr0wA")}}
 

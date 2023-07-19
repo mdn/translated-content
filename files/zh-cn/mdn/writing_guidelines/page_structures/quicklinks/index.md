@@ -38,9 +38,7 @@ MDN 支持在页面中添加快速链接；这些框是包含到 MDN 上的其�
             >
           </li>
           <li>
-            <a href="http://www.wsu.edu/~brians/errors/"
-              >英语中的常见错误</a
-            >
+            <a href="http://www.wsu.edu/~brians/errors/">英语中的常见错误</a>
           </li>
         </ol>
       </details>

@@ -48,16 +48,16 @@ La página de lista de libros desplegará una lista con todos los registros de l
 
 ### Mapeo URL
 
-Abre **/catalog/urls.py** y copia allí la línea que se muestra abajo en negrita. De manera muy similar al mapeo de nuestro índice, esta función `url()` define una expresión regular (RE) para comparala con la URL (**r'^books/$'**), una función de vista que será llamada si la URL coincide (`views.BookListView.as_view()`) y un nombre para este mapeo en particular.
+Abre **/catalog/urls.py** y copia allí la línea que se muestra abajo en negrita. De manera muy similar al mapeo de nuestro índice, esta función `path()` define un patrón que se comparará con la URL (**'books/'**), una función de vista a la que se llamará si la URL coincide (`views.BookListView.as_view()`) y un nombre para esta asignación concreta.
 
 ```python
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    url(r'^books/$', views.BookListView.as_view(), name='books'),
+    path('', views.index, name='index'),
+    path('books/', views.BookListView.as_view(), name='books'),
 ]
 ```
 
-Esta expresión regular coincide con URLs iguales a `books/` (`^` es un marcador de inicio de cadena y `$` es un marcador de fin de cadena). Como se discutió en el tutorial anterior, la URL debió previamente haber coincidido con `/catalog`, de modo que la vista será llamada en realidad para la URL: `/catalog/books/`.
+Como se discutió en el tutorial anterior, la URL debió previamente haber coincidido con `/catalog`, de modo que la vista será llamada en realidad para la URL: `/catalog/books/`.
 
 La función de vista tiene un formato diferente al anterior -- eso es porque esta vista será en realidad implementada como una clase. Heredaremos desde una función de vista genérica existente que ya hace la mayoría de lo que queremos que esta función de vista haga, en lugar de escribir la nuestra propia desde el inicio.
 
@@ -132,7 +132,7 @@ Crea el archivo HTML **/locallibrary/catalog/templates/catalog/book_list.html** 
 
 Las plantillas para las vistas genéricas son como cualquier otra plantilla (si bien el contexto/información enviada a la plantilla puede variar, por supuesto). Como con nuestra plantilla _índice_, extendemos nuestra plantilla base en la primera línea, y luego reemplazamos el bloque llamado `content`.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -160,7 +160,7 @@ La vista envía el contexto (lista de libros) por defecto como `object_list` y `
 
 Usamos las etiquetas de plantilla [`if`](https://docs.djangoproject.com/en/1.10/ref/templates/builtins/#if), `else` y `endif` para revisar si la `book_list` ha sido definida y no está vacía. Si `book_list` está vacía, entonces la cláusula `else` despliega un texto que explica que no existen libros a listar. Si `Book_list` no está vacía, entonces iteramos a través de la lista de libros.
 
-```html
+```django
 {% if book_list %}
   <!-- code here to list the books -->
 {% else %}
@@ -174,7 +174,7 @@ La condicional de arriba solo revisa un caso, pero puedes revisar condiciones ad
 
 La plantilla usa las etiquetas de plantilla [for](https://docs.djangoproject.com/en/1.10/ref/templates/builtins/#for) y `endfor` para iterar a través de la lista de libros, como se muestra abajo. Cada iteración asigna a la variable de plantilla `book` la información para el ítem actual de la lista.
 
-```html
+```django
 {% for book in book_list %}
   <li> <!-- code here get information from each book item --> </li>
 {% endfor %}
@@ -186,7 +186,7 @@ Si bien no se usan aquí, Django creará otras variables dentro del lazo que pue
 
 El código dentro del lazo crea un ítem de lista para cada libro, que muestra tanto el título (como un enlace hacia la vista de detalle que aún no creamos) como el autor.
 
-```html
+```django
 <a href="\{{ book.get_absolute_url }}">\{{ book.title }}</a> (\{{book.author}})
 ```
 
@@ -216,27 +216,40 @@ La página de detalle de libro desplegará información sobre un libro específi
 
 ### Mapeo URL
 
-Abre **/catalos/urls.py** y añade el mapeador URL **'book-detail'** que se muestra abajo en negrita. Esta función `url()` define un patrón, vista de detalle genérica basada en clases asociada, y un nombre.
+Abre **/catalos/urls.py** y añade el mapeador URL **'book-detail'** que se muestra abajo en negrita. Esta función `path()` define un patrón, una vista de detalle genérica basada en clases asociada, y un nombre.
 
 ```python
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-    url(r'^books/$', views.BookListView.as_view(), name='books'),
-    url(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail'),
+    path('', views.index, name='index'),
+    path('books/', views.BookListView.as_view(), name='books'),
+    path('book/<int:pk>', views.BookDetailView.as_view(), name='book-detail'),
 ]
 ```
 
-A diferencia de nuestros mapeadores anteriores, en este caso estamos usando nuestra expresión regular (RE) para comparar frente a un "patrón" real en lugar de una simple cadena. Lo que hace esta RE en particular es coincidir con cualquier URL que empiece por `book/`, seguido de uno o más _dígitos_ (números) antes del marcador de fin de línea. Mientras se realiza la comparación, se "capturan" los dígitos y son enviados a la función de vista como un parámetro llamado `pk`.
+Para la ruta _book-detail_ el patrón URL utiliza una sintaxis especial para capturar el id específico del libro que queremos ver.
+La sintaxis es muy sencilla: los corchetes angulares definen la parte de la URL a capturar, encerrando el nombre de la variable que la vista puede utilizar para acceder a los datos capturados.
+Por ejemplo, **\<algo>**, capturará el patrón marcado y pasará el valor a la vista como una variable "algo".
+Opcionalmente puedes añadir al nombre de la variable una [etiqueta](https://docs.djangoproject.com/en/4.0/topics/http/urls/#path-converters) que defina el tipo de datos (int, str, slug, uuid, path).
+
+En este caso utilizamos `'<int:pk>'` para capturar el id del libro, que debe ser una cadena con un formato especial y pasarlo a la vista como un parámetro llamado `pk` (abreviatura de primary key). Este es el id que se está utilizando para almacenar el libro de forma única en la base de datos, tal y como se define en el Modelo de Libros.
 
 > **Nota:** Como ya se discutió antes, nuestra URL coincidente es en realidad `catalog/book/<digits>` (como estamos en la aplicación **catalog**, se asume `/catalog/`).
 
 > **Advertencia:** La vista de detalle genérica basada en clases _espera_ que se le envíe un parámetro llamado pk. Si estás escribiendo tu propia vista de función, puedes usar el nombre de parámetro que quieras, o incluso enviar la información como un argumento sin nombre.
 
-#### Una breve introducción a las expresiones regulares
+#### Introducción avanzada a path/expresiones regulares
 
-Las [expresiones regulares](https://docs.python.org/3/library/re.html) son una herramienta de mapeo de patrones increíblemente poderosa. Hemos dicho poco sobre ellas hasta ahora porque estuvimos comparando con cadenas fijas en nuestras URLs (en lugar de con patrones) y porque son, francamente, bastante intuitivas e intimidantes para los principiantes.
+> **Nota:** No necesitarás esta sección para completar el tutorial. La proporcionamos porque conocer esta opción es probable que sea útil en tu futuro centrado en Django.
 
-> **Nota:** ¡No te asustes! Los tipos de patrones con los que estaremos comparando son bastante simples, ¡y en muchos casos están bien documentados!
+La combinación de patrones proporcionada por `path()` es simple y útil para los casos (muy comunes) en los que sólo desea capturar _cualquier_ cadena o entero. Si necesita un filtrado más refinado (por ejemplo, filtrar sólo cadenas que tengan un cierto número de caracteres) puede utilizar el método [re_path()](https://docs.djangoproject.com/en/4.0/ref/urls/#django.urls.re_path).
+
+Este método se utiliza igual que `path()`, salvo que permite especificar un patrón utilizando una [Expresión regular](https://docs.python.org/3/library/re.html). Por ejemplo, la ruta anterior podría haberse escrito como se muestra a continuación:
+
+```python
+re_path(r'^book/(?P<pk>\d+)$', views.BookDetailView.as_view(), name='book-detail'),
+```
+
+_Las expresiones regulares_ son una herramienta increíblemente potente para la creación de patrones. Francamente, son poco intuitivas y pueden intimidar a los principiantes. A continuación encontrará un breve manual.
 
 Lo primero que hay que saber es que las expresiones regulares deberían ser declaradas normalmente usando la sintaxis de literal de cadena sin procesar (esto es, están encerradas así: **r'\<tu expresión regular va aquí>'**).
 
@@ -400,11 +413,12 @@ Puedes capturar múltiples patrones en una sola comparación, y por tanto codifi
 
 #### Enviado opciones adicionales en tus mapeos URL
 
-Una característica que no hemos usado aquí, pero que te puede resultar valiosa, es que puedes declarar y enviar [opciones adicionales](https://docs.djangoproject.com/en/1.10/topics/http/urls/#views-extra-options) a la vista. Las opciones se declaran como un diccionario que envías como el tercer argumento sin nombre a la función `url()`. Esta estrategia puede resultar útil si quiere usar la misma vista para múltiples recursos, y enviar información para configurar su comportamiento en cada caso (abajo suministramos una plantilla diferente en cada caso).
+Una característica que no hemos utilizado aquí, pero que puede resultarte valiosa, es que puedes pasar un [diccionario que contenga opciones adicionales](https://docs.djangoproject.com/en/4.0/topics/http/urls/#views-extra-options) a la vista (utilizando el tercer argumento sin nombre de la función `path()`). Este enfoque puede ser útil si quieres usar la misma vista para múltiples recursos, y pasar datos para configurar su comportamiento en cada caso.
+
+Por ejemplo, en base al path mostrado a continuación, para una petición a `/myurl/halibut/` Django llamará a `views.my_view(request, fish='halibut', my_template_name='some_path')`.
 
 ```python
-url(r'^/url/$', views.my_reused_view, {'my_template_name': 'some_path'}, name='aurl'),
-url(r'^/anotherurl/$', views.my_reused_view, {'my_template_name': 'another_path'}, name='anotherurl'),
+path('myurl/<fish>', views.my_view, {'my_template_name': 'some_path'}, name='aurl'),
 ```
 
 > **Nota:** Tanto las opciones extra como los patrones capturados con nombre se envían a la vista como argumentos _con nombre_. Si usas el **mismo nombre** tanto para un patrón capturado como para una opción extra, solo el valor del patrón capturado será enviado a la vista (el valor especificado para la opción extra será eliminado).
@@ -452,7 +466,7 @@ Primero, la vista intenta recuperar el registro del libro específico desde el m
 
 Crea el archivo HTML **/locallibrary/catalog/templates/catalog/book_detail.html** y ponle el contenido de abajo. Como se discutió antes, este es el nombre de archivo por defecto esperado por la vista de detalle genérica basada en clases (para un modelo llamado `Book` en una aplicación llamada `catalog`).
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -480,7 +494,7 @@ Crea el archivo HTML **/locallibrary/catalog/templates/catalog/book_detail.html*
 
 > **Nota:** El enlace `author` en la plantilla de arriba tiene una URL vacía porque no hemos creado aún una página de detalle de autor. Una vez que esta exista, deberías actualizar la URL así:
 >
-> ```html
+> ```django
 >  <a href="{% url 'author-detail' book.author.pk %}"><strong>\{{ book.author }}</strong></a>
 >  ```
 
@@ -580,7 +594,7 @@ Ahora que la información está paginada, necesitamos añadir soporte a la plant
 
 Abre **/locallibrary/catalog/templates/_base_generic.html_** y copia el siguiente bloque `pagination` debajo de nuestro bloque `content` (resaltado abajo en negrita). El código primero revisa si la paginación está habilitada en la página actual. Si lo está, añade enlaces `next` y `previous` apropiados (y el número de la página actual).
 
-```html
+```django
 {% block content %}{% endblock %}
 
 {% block pagination %}
@@ -630,7 +644,7 @@ El código requerido para los mapeadores URL y las vistas debería ser virtualme
 > - Una vez que has creado el mapeador URL para la página de lista de autores, necesitarás también actualizar el enlace **All authors** en la plantilla base. Sigue el [mismo proceso](#Update_the_base_template) que hicimos cuando actualizamos el enlace **All books**.
 > - Una vez que has creado el mapeador URL para la página de detalle de autores, deberías también actualizar la [plantilla de vista de detalle de libros](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) de modo que el enlace de autor apunte a tu nueva página de detalle de autor (en lugar de ser una URL vacía). La línea cambiará para añadir la etiqueta de plantilla que se muestra en negrita abajo.
 >
-> ```html
+> ```django
 > <p><strong>Author:</strong> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a></p>
 > ```
 

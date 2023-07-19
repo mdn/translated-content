@@ -101,8 +101,7 @@ Avec ce composant importé, vous pouvez remplacer toutes les balises `<li>` dans
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">
   <Todo />
   <Todo />
   <Todo />
@@ -233,7 +232,7 @@ Dans le fichier `src/index.js`, ajoutez une nouvelle déclaration `const` sous l
 const DATA = [
   { id: "todo-0", name: "Manger", completed: true },
   { id: "todo-1", name: "Dormir", completed: false },
-  { id: "todo-2", name: "Recommencer", completed: false }
+  { id: "todo-2", name: "Recommencer", completed: false },
 ];
 ```
 
@@ -244,7 +243,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App tasks={DATA} />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 ```
 
@@ -268,8 +267,7 @@ Essayons de remplacer tous les enfants de `<ul>` par `taskList`&nbsp;:
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">
   {taskList}
 </ul>
 ```
@@ -302,14 +300,13 @@ Les clés devant être uniques, nous allons réutiliser l'identifiant (`id`) de 
 
 ```jsx
 const taskList = props.tasks.map((task) => (
-    <Todo
-      id={task.id}
-      name={task.name}
-      completed={task.completed}
-      key={task.id}
-    />
-  )
-);
+  <Todo
+    id={task.id}
+    name={task.name}
+    completed={task.completed}
+    key={task.id}
+  />
+));
 ```
 
 **Vous devez toujours passer une clé unique pour tout composant rendu de façon itérative.** Cela ne changera rien de flagrant dans le comportement du navigateur, mais si vous n'utilisez pas de clés uniques, React enregistrera des avertissements dans votre console et votre application pourra se comporter de manière étrange&nbsp;!
@@ -407,13 +404,12 @@ import Todo from "./components/Todo";
 function App(props) {
   const taskList = props.tasks.map((task) => (
     <Todo
-        id={task.id}
-        name={task.name}
-        completed={task.completed}
-        key={task.id}
-      />
-    )
-  );
+      id={task.id}
+      name={task.name}
+      completed={task.completed}
+      key={task.id}
+    />
+  ));
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
@@ -427,8 +423,7 @@ function App(props) {
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading"
-      >
+        aria-labelledby="list-heading">
         {taskList}
       </ul>
     </div>

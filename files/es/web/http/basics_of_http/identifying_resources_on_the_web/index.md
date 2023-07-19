@@ -18,8 +18,8 @@ La forma más común de URI es la ({{Glossary("URL")}}) (de las siglas en ingles
 
 ```
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
-https://developer.mozilla.org/en-US/search?q=URL
+https://developer.mozilla.org/es/docs/Learn/
+https://developer.mozilla.org/es/search?q=URL
 ```
 
 Cualquiera de estas URLs se pueden escribir en la barra de direcciones de su navegador para decirle que cargue la página asociada (recurso).
@@ -92,7 +92,7 @@ Las dos URNs corresponden a
 ## Ejemplos
 
 ```
-https://developer.mozilla.org/en-US/docs/Learn
+https://developer.mozilla.org/es/docs/Learn
 tel:+1-816-555-1212
 git@github.com:mdn/browser-compat-data.git
 ftp://example.org/resource.txt
