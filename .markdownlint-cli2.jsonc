@@ -171,13 +171,13 @@
         //   "replace": " — ",
         //   "searchScope": "text"
         // },
-        // {
-        //   "name": "relative-link",
-        //   "message": "Internal links should start with '/'",
-        //   "searchPattern": "/([\\(\"])[\\w\\-]+\\/docs/g",
-        //   "replace": "$1/en-US/docs",
-        //   "searchScope": "text"
-        // },
+        {
+          "name": "relative-link",
+          "message": "Internal links should start with '/'",
+          "searchPattern": "/([\\(\"])([\\w\\-]+)\\/docs/g",
+          "replace": "$1/$2/docs",
+          "searchScope": "text"
+        },
         {
           "name": "relative-link-path",
           "message": "Don't use relative paths",

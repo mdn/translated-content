@@ -35,7 +35,7 @@ L'élément HTML **`<blockquote>`** (qui signifie _bloc de citation_) indique qu
           >Contenu de flux</a
         >,
         <a
-          href="fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#racines_de_sectionnement"
+          href="/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#racines_de_sectionnement"
           >racine de section</a
         >,
         <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"

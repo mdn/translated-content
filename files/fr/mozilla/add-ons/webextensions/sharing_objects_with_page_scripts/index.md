@@ -29,7 +29,7 @@ Le but de cette fonctionnalité est de rendre le script moins privilégié plus 
 
 Par exemple, lorsqu'un script de contenu accède à la [fenêtre](/fr/docs/Web/API/Window) de la page, il ne voit aucune propriété ajoutée au script de la page, et si le script de la page a redéfini les propriétés de la fenêtre, le script de contenu verra la version originale .
 
-Pour l'histoire complète sur la vision Xray, voir les articles sur [Vision Xray](en-US/docs/Mozilla/Tech/Xray_vision) et la [securité des Scripts](en-US/docs/Mozilla/Gecko/Script_security).
+Pour l'histoire complète sur la vision Xray, voir les articles sur [Vision Xray](/fr/docs/Mozilla/Tech/Xray_vision) et la [securité des Scripts](/fr/docs/Mozilla/Gecko/Script_security).
 
 ## Accès aux objets de script de page à partir de scripts de contenu
 

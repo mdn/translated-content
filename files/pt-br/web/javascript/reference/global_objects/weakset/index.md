@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 ### Parâmetros
 
 - iterable
-  - : Se um[objeto interagível](pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) é passado, todos os seus elementos serão adicionados ao novo `WeakSet`.
+  - : Se um[objeto interagível](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) é passado, todos os seus elementos serão adicionados ao novo `WeakSet`.
 
 ## Descrição
 
