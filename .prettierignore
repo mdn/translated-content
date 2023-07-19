@@ -10,6 +10,15 @@ build/
 /files/**/conflicting/**/*.md
 /files/**/orphaned/**/*.md
 
+# XXX Ignored until https://github.com/prettier/prettier/issues/11828 is fixed
+/files/fr/glossary/cross_axis/index.md
+/files/fr/glossary/flex/index.md
+/files/fr/glossary/flex_container/index.md
+/files/fr/glossary/flexbox/index.md
+/files/fr/glossary/grid_axis/index.md
+/files/fr/glossary/grid_lines/index.md
+/files/fr/glossary/main_axis/index.md
+
 # A full pass on all Markdown files is being performed.
 # The following folders still need a full pass:
 
