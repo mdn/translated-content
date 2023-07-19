@@ -483,9 +483,10 @@
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomia_de_uma_WebExtension	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/O_que_vem_a_seguir_	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/Passo-a-Passo	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
+/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Prerequisites	/pt-BR/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next_	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissões	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions
-/pt-BR/docs/Mozilla/Add-ons/WebExtensions/pre-requisitos	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
+/pt-BR/docs/Mozilla/Add-ons/WebExtensions/pre-requisitos	/pt-BR/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/sua_primeira_WebExtension	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Itens_do_menu_de_contexto	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 /pt-BR/docs/Mozilla/Firefox/Releases/3/Zoom_de_página_inteira	/pt-BR/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
@@ -659,6 +660,7 @@
 /pt-BR/docs/Web/API/Window.navigator	/pt-BR/docs/Web/API/Window/navigator
 /pt-BR/docs/Web/API/Window.openDialog	/pt-BR/docs/conflicting/Web/API/Window
 /pt-BR/docs/Web/API/Window/Window.localStorage	/pt-BR/docs/Web/API/Window/localStorage
+/pt-BR/docs/Web/API/Window/applicationCache	/pt-BR/docs/orphaned/Web/API/Window/applicationCache
 /pt-BR/docs/Web/API/Window/crypto	/pt-BR/docs/Web/API/crypto_property
 /pt-BR/docs/Web/API/Window/openDialog	/pt-BR/docs/conflicting/Web/API/Window
 /pt-BR/docs/Web/API/Window/performance	/pt-BR/docs/Web/API/performance_property
