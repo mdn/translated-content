@@ -228,7 +228,7 @@ Ball.prototype.draw = function() {
 
 We already discussed events earlier on in the course, in our [Introduction to events](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events) article — this article looks in detail at what client-side web events are and how they are used in your code. If you are not already familiar with how client-side web API events work, you should go and read this article first before continuing.
 
-Some web APIs contain no events, but some contain a number of events. The handler properties that allow us to run functions when events fire are generally listed in our reference material in separate "Event handlers" sections. As a simple example, instances of the [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) object (each one represents an HTTP request to the server to retrieve a new resource of some kind) have a number of events available on them, for example the `load` event is fired when a response has been successfully returned containing the requested resource, and it is now available.
+Some web APIs contain no events, but some contain a number of events. The handler properties that allow us to run functions when events fire are generally listed in our reference material in separate "Event handlers" sections. As a simple example, instances of the [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest) object (each one represents an HTTP request to the server to retrieve a new resource of some kind) have a number of events available on them, for example the `load` event is fired when a response has been successfully returned containing the requested resource, and it is now available.
 
 O código seguinte fornece um exemplo simples de como isso seria utilizado:
 

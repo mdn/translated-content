@@ -77,21 +77,16 @@ build/
 /files/ko/web/svg/**/*.md
 
 # pt-br
-/files/pt-br/games/**/*.md
-/files/pt-br/learn/**/*.md
 /files/pt-br/learn/css/**/*.md
 /files/pt-br/learn/html/**/*.md
 /files/pt-br/learn/javascript/**/*.md
 /files/pt-br/learn/server-side/**/*.md
-/files/pt-br/mdn/**/*.md
-/files/pt-br/web/**/*.md
 /files/pt-br/web/api/**/*.md
 /files/pt-br/web/css/**/*.md
 /files/pt-br/web/html/**/*.md
 /files/pt-br/web/http/**/*.md
 /files/pt-br/web/javascript/**/*.md
 /files/pt-br/web/svg/**/*.md
-/files/pt-br/webassembly/**/*.md
 
 # ru
 /files/ru/glossary/**/*.md

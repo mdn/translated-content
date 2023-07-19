@@ -12,7 +12,7 @@ O elemento HTML de Rodapé (\<footer>) representa um rodapé para o seu sectioni
 > - Coloque informações sobre o autor em um elemento {{HTMLElement("address")}} que pode ser incluído no elemento `<footer>`.
 > - O elemento `<footer>` não é sectioning content portanto, não introduz uma nova seção no [outline](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document).
 
-## Contexto de uso:
+## Contexto de uso
 
 | Conteúdo permitido         | [Flow content](/pt-BR/docs/HTML/Content_categories#flow_content), mas não o `<footer>` ou {{HTMLElement("header")}} descendentes.                                                                                                                                |
 | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

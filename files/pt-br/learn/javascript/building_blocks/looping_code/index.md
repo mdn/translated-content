@@ -15,7 +15,7 @@ As linguagens de programação são muito úteis para concluir rapidamente taref
       <td>
         Conhecimento básico em informática, um básico entendimento de HTML e
         CSS,
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >.
       </td>
