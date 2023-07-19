@@ -33,9 +33,9 @@ for (var i=0; i < 4; i++) {
 
 ### Culture générale
 
-- [Booléen](http://fr.wikipedia.org/wiki/Bool%C3%A9en) sur Wikipédia
+- [Booléen](http://fr.wikipedia.org/wiki/Booléen) sur Wikipédia
 
 ### Informations techniques
 
 - L'objet JavaScript global : {{jsxref("Boolean")}}
-- [Structures de données JavaScript](/fr/docs/Web/JavaScript/Structures_de_donn%C3%A9es) sur MDN
+- [Structures de données JavaScript](/fr/docs/Web/JavaScript/Structures_de_données) sur MDN

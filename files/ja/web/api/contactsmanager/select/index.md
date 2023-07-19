@@ -20,7 +20,7 @@ select(properties, options)
 
 - `properties`
 
-  - : [文字列](ja/docs/Web/JavaScript/Data_structures#文字列型)の配列で、連絡先からどの情報を受け取るかを定義します。許可されている値は次の通りです。
+  - : [文字列](/ja/docs/Web/JavaScript/Data_structures#文字列型)の配列で、連絡先からどの情報を受け取るかを定義します。許可されている値は次の通りです。
 
     - `'name'`: 連絡先の名前。
     - `'tel'`: 連絡先の電話番号。

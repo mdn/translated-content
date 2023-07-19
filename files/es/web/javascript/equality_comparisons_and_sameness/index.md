@@ -185,7 +185,7 @@ El método [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object
 
 Similar a la igualdad same-value, pero +0 y -0 son considerados iguales.
 
-## Igualdad abstracta, igualdad estricta e igualdad same value en la especificación.
+## Igualdad abstracta, igualdad estricta e igualdad same value en la especificación
 
 En la especificación ES5, la comparación [`==`](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) queda descrita en [Section 11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3). La comparación [`===`](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) en [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6). (Búscala y leela, son breves y fáciles de leer. Nota: lee el algoritmo de la igualdad estricta primero.) ES5 también describe, en [Section 9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) para uso interno del motor JS. Es, en su mayoría igual que el algoritmo de igualdad estricto, excepto porque 11.9..6.4 y 9.12.4 difieren en cómo tratar los [`Numbers`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number). ES2015 simplemente propone exponer este algoritmo mediante el uso de[`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
 

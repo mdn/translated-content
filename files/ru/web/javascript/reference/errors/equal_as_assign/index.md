@@ -52,5 +52,5 @@ if (x == y) {
 
 ## Смотрите также
 
-- [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`if...else`](/ru/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Comparison operators](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)

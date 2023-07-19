@@ -15,14 +15,14 @@ translation_of: Web/API/DataTransfer
 
 | Свойство                                                          | Тип                                                                |
 | ----------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [`dropEffect`](#dropEffect.28.29)                                 | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String) |
-| [`effectAllowed`](#effectAllowed.28.29)                           | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String) |
+| [`dropEffect`](#dropEffect.28.29)                                 | [`String`](/ru/docs/JavaScript/Reference/Global_Objects/String) |
+| [`effectAllowed`](#effectAllowed.28.29)                           | [`String`](/ru/docs/JavaScript/Reference/Global_Objects/String) |
 | [`files`](#files.28.29)                                           | {{ domxref("FileList") }}                                          |
-| [`mozCursor`](#mozCursor) {{ non-standard_inline() }}             | [`String`](/en-US/docs/JavaScript/Reference/Global_Objects/String) |
+| [`mozCursor`](#mozCursor) {{ non-standard_inline() }}             | [`String`](/ru/docs/JavaScript/Reference/Global_Objects/String) |
 | [`mozItemCount`](#mozItemCount.28.29) {{ non-standard_inline() }} | `unsigned long`                                                    |
 | [`mozSourceNode`](#mozSourceNode) {{ non-standard_inline() }}     | {{ domxref("Node") }}                                              |
 | [`mozUserCancelled`](#mozUserCancelled)                           | [`Boolean`](/en/JavaScript/Reference/Global_Objects/Boolean)       |
-| [`types`](#types.28.29)                                           | [`DOMStringList`](/en-US/docs/Web/API/DOMStringList)               |
+| [`types`](#types.28.29)                                           | [`DOMStringList`](/ru/docs/Web/API/DOMStringList)               |
 
 ## Список методов
 

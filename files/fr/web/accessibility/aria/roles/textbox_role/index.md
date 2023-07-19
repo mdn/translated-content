@@ -55,7 +55,7 @@ L'extrait de code ci-dessous montre comment le rôle `textbox` est ajouté direc
 </textarea>
 ```
 
-#### Exemples concrets&nbsp;:
+#### Exemples concrets
 
 ### Notes
 

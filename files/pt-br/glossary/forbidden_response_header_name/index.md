@@ -8,6 +8,6 @@ Um _nome de cabeçalho de resposta proibido_ é um nome de [cabeçalho HTTP](/pt
 
 ## Especificações
 
-| Especificação                                                                                                        | Status                   | Comentário |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
+| Especificação                                                                            | Status             | Comentário |
+| ---------------------------------------------------------------------------------------- | ------------------ | ---------- |
 | {{SpecName('Fetch','#forbidden-response-header-name','forbidden-response-header-name')}} | {{Spec2('Fetch')}} |            |

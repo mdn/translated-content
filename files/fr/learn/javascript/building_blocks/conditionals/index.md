@@ -44,7 +44,7 @@ Dans tout langage de programmation, le code doit prendre des décisions et agir 
   </tbody>
 </table>
 
-## Vous l'aurez à une condition !..
+## Vous l'aurez à une condition !
 
 Les êtres humains (et d'autres animaux) prennent tout le temps des décisions qui affectent leur vie, de la plus insignifiante («&nbsp;Est‑ce que je devrais prendre un biscuit ou deux ?&nbsp;») à la plus importante («&nbsp;Est‑ce que je dois rester dans mon pays natal et travailler à la ferme de mon père, ou déménager aux États-Unis et étudier l'astrophysique&nbsp;?&nbsp;»)
 

@@ -248,7 +248,7 @@ ESLint 通过 npm 安装，根据第二章中的讨论，你可以选择在本�
 
 此时，我们将获取项目的代码文件（HTML、CSS、JavaScript 等），并将它们放在我们的 `src` 目录中。我们不会教你它们的工作原理，因为这不是本章的重点。我们只是在这里运行它们，教你如何使用*它们*。
 
-1. 要获取代码文件，请访问 <https://github.com/remy/mdn-will-it-miss>，下载并解压缩此仓库的内容到本地硬盘的某个位置。你可以通过选择 *Clone or download* > *Download ZIP* 下载整个项目的 zip 文件。
+1. 要获取代码文件，请访问 <https://github.com/remy/mdn-will-it-miss>，下载并解压缩此仓库的内容到本地硬盘的某个位置。你可以通过选择 _Clone or download_ > _Download ZIP_ 下载整个项目的 zip 文件。
 
    ![GitHub 上托管的“will it miss”仓库](github-will-it-miss.png)
 

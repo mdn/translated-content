@@ -11,7 +11,7 @@ La Network Information (Información de red) API provee información sobre el si
 
 ## Examples
 
-### Detectar cambios de conexiónThis example watches for changes to the user's connection.
+### Detectar cambios de conexión
 
 ```js
 var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;

@@ -470,7 +470,7 @@ drawChart({
 
 你也可以在没有该默认值的情况下编写该函数。但是，如果你省略该默认值，该函数将在调用时寻找至少一个参数来提供，而在当前形式下，你可以在不提供任何参数的情况下调用 `drawChart()`。否则，你至少需要提供一个空对象字面量。
 
-有关详细信息，请参阅[默认参数值 > 有默认值的解构参数](zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters#有默认值的解构参数)。
+有关详细信息，请参阅[默认参数值 > 有默认值的解构参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters#有默认值的解构参数)。
 
 #### 解构嵌套对象和数组
 

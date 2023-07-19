@@ -16,29 +16,29 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/es/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >;
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >;
-        <a href="/en-US/docs/Web/HTML/Content_categories#Embedded_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Embedded_content"
           >embedded content</a
         >, palpable content; if the element has a
         <a href="/es/docs/Web/HTML/Element/object#usemap"><code>usemap</code></a> attribute,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Interactive_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Interactive_content"
           >interactive content</a
         >;
-        <a href="/en-US/docs/Web/HTML/Content_categories#Form_listed">listed</a
+        <a href="/es/docs/Web/HTML/Content_categories#Form_listed">listed</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Form_submittable"
+        <a href="/es/docs/Web/HTML/Content_categories#Form_submittable"
           >submittable</a
         >
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#Form-associated_content"
+          href="/es/docs/Web/HTML/Content_categories#Form-associated_content"
           >form-associated</a
         >
         element.
@@ -49,7 +49,7 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
       <td>
         cero o más elementos {{HTMLElement("param")}} , luego
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#Transparent_content_model"
+          href="/es/docs/Web/HTML/Content_categories#Transparent_content_model"
           >transparent</a
         >.
       </td>
@@ -62,7 +62,7 @@ La fuente original de este ejemplo interactivo está almacenada en un repositori
       <th scope="row">Padres permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/en-US/docs/Web/HTML/Content_categories#Embedded_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Embedded_content"
           >embedded content</a
         >
         (contenido incrustado).

@@ -12,11 +12,11 @@ ECMAScript 2015 (ES6)에는 새로운 문법이나 built-in 뿐만이 아니라,
 
 **iterable** protocol 은 JavaScript 객체들이, 예를 들어 {{jsxref("Statements/for...of", "for..of")}} 구조에서 어떠한 value 들이 loop 되는 것과 같은 iteration 동작을 정의하거나 사용자 정의하는 것을 허용합니다. 다른 type 들({{jsxref("Object")}} 와 같은)이 그렇지 않은 반면에, 어떤 built-in type 들은 {{jsxref("Array")}} 또는 {{jsxref("Map")}} 과 같은 default iteration 동작으로 [built-in iterables](#Builtin_iterables) 입니다.
 
-**iterable** 하기 위해서 object는 **@@iterator** 메소드를 구현해야 합니다. 이것은 object (또는 [prototype chain](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) 의 오브젝트 중 하나) 가 {{jsxref("Symbol.iterator")}} `key` 의 속성을 가져야 한다는 것을 의미합니다 :
+**iterable** 하기 위해서 object는 **@@iterator** 메소드를 구현해야 합니다. 이것은 object (또는 [prototype chain](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) 의 오브젝트 중 하나) 가 {{jsxref("Symbol.iterator")}} `key` 의 속성을 가져야 한다는 것을 의미합니다 :
 
 | Property            | Value                                                                                                                                                                      |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `[Symbol.iterator]` | object를 반환하는, arguments 없는 function. [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator) 을 따른다. |
+| `[Symbol.iterator]` | object를 반환하는, arguments 없는 function. [iterator protocol](/ko/docs/Web/JavaScript/Reference/Iteration_protocols#iterator) 을 따른다. |
 
 어떠한 객체가 반복(Iterate)되어야 한다면 이 객체의 `@@iterator` 메소드가 인수없이 호출되고, 반환된 **iterator**는 반복을 통해서 획득할 값들을 얻을 때 사용됩니다.
 
@@ -98,7 +98,7 @@ iterator.next();                             // { value: "i", done: false }
 iterator.next();                             // { value: undefined, done: true }
 ```
 
-[spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)와 같은 특정 내장 구조(built-in constructs)들은 실제로는 동일한 iteration protocol을 사용한다:
+[spread operator](/ko/docs/Web/JavaScript/Reference/Operators/Spread_operator)와 같은 특정 내장 구조(built-in constructs)들은 실제로는 동일한 iteration protocol을 사용한다:
 
 ```js
 [...someString]                              // ["h", "i"]
@@ -172,7 +172,7 @@ new WeakSet(function*() {
 
 ### Iterable과 함께 사용되는 문법
 
-[`for-of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator), `yield*와` [destructuring assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)는 iterable과 함께 사용되는 구문(statements)과 표현(expressions)이다.
+[`for-of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) loops, [spread operator](/ko/docs/Web/JavaScript/Reference/Operators/Spread_operator), `yield*와` [destructuring assignment](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)는 iterable과 함께 사용되는 구문(statements)과 표현(expressions)이다.
 
 ```js
 for(let value of ["a", "b", "c"]){
@@ -284,7 +284,7 @@ console.log(gen.next().value); // '2'
 
 ## generator object 는 iterator 또는 iterable 인가?
 
-[generator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) 는 iterator 이면서 iterable 입니다.
+[generator object](/ko/docs/Web/JavaScript/Reference/Global_Objects/Generator) 는 iterator 이면서 iterable 입니다.
 
 ```js
 var aGeneratorObject = function*(){
@@ -304,4 +304,4 @@ aGeneratorObject[Symbol.iterator]() === aGeneratorObject;
 
 ## See also
 
-- ES6 제너레이터에 대한 더 상세한 정보는 [the function\*() documentation](/en-US/docs/Web/JavaScript/Reference/Statements/function*) 를 참조하시기 바랍니다.
+- ES6 제너레이터에 대한 더 상세한 정보는 [the function\*() documentation](/ko/docs/Web/JavaScript/Reference/Statements/function*) 를 참조하시기 바랍니다.

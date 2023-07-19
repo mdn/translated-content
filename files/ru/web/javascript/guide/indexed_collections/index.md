@@ -473,7 +473,7 @@ Array.prototype.forEach.call("a string", function(chr) {
 
 Название типизированного представления массива говорит само за себя. Оно представляет массив в распространённых числовых форматах, таких как `Int8`, `Uint32`, `Float64` и так далее. Среди прочих существует специальное представление `Uint8ClampedArray`. Оно ограничивает значения интервалом от 0 до 255. Это полезно, например, при [Обработке данных изображения в Canvas](/ru/docs/Web/API/ImageData).
 
-{{page("en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}
+{{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}
 
 Для получения подробных сведений смотрите [Типизированные массивы JavaScript](/ru/docs/Web/JavaScript/Typed_arrays) и справочную документацию для {{jsxref("TypedArray")}}.
 

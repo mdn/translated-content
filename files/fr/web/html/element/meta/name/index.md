@@ -167,10 +167,6 @@ Désactiver la possibilité de zoomer en utilisant `user-scalable` avec la valeu
 - [Guide MDN pour la compréhension de WCAG, règle de bonne pratique 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Guide W3C pour la compréhension de WCAG 2.0 — Comprendre les critères de succès 1.4.4](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-##### Voir aussi
-
-La règle-@ [`@viewport`](/fr/docs/Web/CSS/@viewport).
-
 ### Autres noms de métadonnées
 
 [La page wiki du WHATWG sur les MetaExtensions](https://wiki.whatwg.org/wiki/MetaExtensions) contient un large ensemble de noms de métadonnées qui n'ont pas encore été formellement acceptées, mais dont certains sont déjà utilisés en pratique et dont une partie est présentée ici&nbsp;:

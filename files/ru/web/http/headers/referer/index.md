@@ -59,7 +59,7 @@ Referer: <url>
 ## Пример
 
 ```
-Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Referer: https://developer.mozilla.org/ru/docs/Web/JavaScript
 ```
 
 ## Спецификация
