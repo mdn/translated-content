@@ -422,7 +422,7 @@
 /zh-CN/docs/DOM/window.URL.createObjectURL	/zh-CN/docs/Web/API/URL/createObjectURL_static
 /zh-CN/docs/DOM/window.URL.revokeObjectURL	/zh-CN/docs/Web/API/URL/revokeObjectURL_static
 /zh-CN/docs/DOM/window.alert	/zh-CN/docs/Web/API/Window/alert
-/zh-CN/docs/DOM/window.applicationCache	/zh-CN/docs/Web/API/Window/applicationCache
+/zh-CN/docs/DOM/window.applicationCache	/zh-CN/docs/orphaned/Web/API/Window/applicationCache
 /zh-CN/docs/DOM/window.atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/DOM/window.btoa	/zh-CN/docs/Web/API/btoa
 /zh-CN/docs/DOM/window.cancelAnimationFrame	/zh-CN/docs/Web/API/Window/cancelAnimationFrame
@@ -1821,7 +1821,7 @@
 /zh-CN/docs/Web/API/Web_Audio_API/基于Web_Audio_API实现的音频可视化效果	/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 /zh-CN/docs/Web/API/Web_Audio_API/最佳实践	/zh-CN/docs/Web/API/Web_Audio_API/Best_practices
 /zh-CN/docs/Web/API/Window.alert	/zh-CN/docs/Web/API/Window/alert
-/zh-CN/docs/Web/API/Window.applicationCache	/zh-CN/docs/Web/API/Window/applicationCache
+/zh-CN/docs/Web/API/Window.applicationCache	/zh-CN/docs/orphaned/Web/API/Window/applicationCache
 /zh-CN/docs/Web/API/Window.atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/Web/API/Window.btoa	/zh-CN/docs/Web/API/btoa
 /zh-CN/docs/Web/API/Window.cancelAnimationFrame	/zh-CN/docs/Web/API/Window/cancelAnimationFrame
@@ -1871,6 +1871,7 @@
 /zh-CN/docs/Web/API/Window.showModalDialog	/zh-CN/docs/Web/API/Window/showModalDialog
 /zh-CN/docs/Web/API/Window.top	/zh-CN/docs/Web/API/Window/top
 /zh-CN/docs/Web/API/Window/Window.blur()	/zh-CN/docs/Web/API/Window/blur
+/zh-CN/docs/Web/API/Window/applicationCache	/zh-CN/docs/orphaned/Web/API/Window/applicationCache
 /zh-CN/docs/Web/API/Window/atob	/zh-CN/docs/Web/API/atob
 /zh-CN/docs/Web/API/Window/btoa	/zh-CN/docs/Web/API/btoa
 /zh-CN/docs/Web/API/Window/caches	/zh-CN/docs/Web/API/caches

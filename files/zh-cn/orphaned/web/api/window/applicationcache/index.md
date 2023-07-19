@@ -1,6 +1,7 @@
 ---
 title: window.applicationCache
-slug: Web/API/Window/applicationCache
+slug: orphaned/Web/API/Window/applicationCache
+original_slug: Web/API/Window/applicationCache
 ---
 
 {{APIRef}}
