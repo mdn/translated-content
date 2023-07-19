@@ -13,4 +13,4 @@ Usando a propriedade {{cssxref ("display")}} você pode alterar a forma como um 
 
 - [Modelo de formatação visual](/pt-BR/docs/Web/Guide/CSS/Visual_formatting_model)
 
-{{QuickLinksWithSubpages("/en-US/docs/Glossary")}}
+{{QuickLinksWithSubpages("/pt-BR/docs/Glossary")}}

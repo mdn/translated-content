@@ -14,7 +14,7 @@ Outro conceito essencial em código é função, que permitem que você armazene
       <th scope="row">Prerequisitos:</th>
       <td>
         Infrmática básica, um entendimento básico de HTML e CSS,
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
           >Primeiros passos em JavaScript</a
         >.
       </td>

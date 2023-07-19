@@ -33,7 +33,7 @@ O evento **`keyup`** é acionado quando a tecla é liberada.
 
 Os eventos {{domxref("Document/keydown_event", "keydown")}} e `keyup` fornecem um código indicando quando a tecla é pressionada, enquanto o {{domxref("Document/keypress_event", "keypress")}} indica quando um _character_ é inserido. Por exemplo, a letra minúscula "a", sera reportado como 65 por `keydown` e `keyup`, mas é 95 por `keypress`. Uma letra maiúscula é reportado como 65 por todos os eventos.
 
-> **Nota:** Se você está procurando por uma maneira de reagir a mudanças no valor de um input, você deve usar o [`input` event](/en-US/docs/Web/API/HTMLElement/input_event). Algumas mudanças não são detectaveis por `keyup`, por exemplo, colar um texto de um contexto no input de texto.
+> **Nota:** Se você está procurando por uma maneira de reagir a mudanças no valor de um input, você deve usar o [`input` event](/pt-BR/docs/Web/API/HTMLElement/input_event). Algumas mudanças não são detectaveis por `keyup`, por exemplo, colar um texto de um contexto no input de texto.
 
 ## Exemplos
 

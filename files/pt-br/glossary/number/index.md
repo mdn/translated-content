@@ -10,7 +10,7 @@ No {{Glossary("JavaScript")}}, **Number** é um tipo de dado numérico no [doubl
 
 ### Conhecimento Geral
 
-- [Inteiro_(ciência_da_computação)](<https://pt.wikipedia.org/wiki/Inteiro_(ciência_da_computação)>) no Wikipédia
+- [Inteiro\_(ciência_da_computação)](<https://pt.wikipedia.org/wiki/Inteiro_(ciência_da_computação)>) no Wikipédia
 - [Bignum](https://pt.wikipedia.org/wiki/Bignum) no Wikipédia
 - [Ponto_flutuante](https://pt.wikipedia.org/wiki/Ponto_flutuante) no Wikipédia
 

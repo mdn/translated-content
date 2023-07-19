@@ -61,13 +61,10 @@ Ainsi, par exemple, ce code `manifest.json` rend le _polyfill_ disponible pour v
 
 ```json
 {
- // ...
- "background": {
-   "scripts": [
-     "browser-polyfill.js",
-     "background.js"
-   ]
- }
+  // ...
+  "background": {
+    "scripts": ["browser-polyfill.js", "background.js"]
+  }
 }
 ```
 

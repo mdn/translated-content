@@ -44,13 +44,13 @@ Pour chaque propriété il y a deux rendus possibles&nbsp;:
 
 ```css
 * {
-/* Ceci désactive l'aspect et le comportement natif des navigateurs basés sur WebKit. */
+  /* Ceci désactive l'aspect et le comportement natif des navigateurs basés sur WebKit. */
   -webkit-appearance: none;
 
-/* Ceci désactive l'aspect et le comportement natif des navigateurs basés sur Gecko. */
+  /* Ceci désactive l'aspect et le comportement natif des navigateurs basés sur Gecko. */
   -moz-appearance: none;
 
-/* Ceci désactive l'aspect et le comportement natif sur plusieurs divers navigateurs
+  /* Ceci désactive l'aspect et le comportement natif sur plusieurs divers navigateurs
    y compris Opera, Internet Explorer et Firefox */
   background: none;
 }

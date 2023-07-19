@@ -27,7 +27,9 @@ Por padrão, a maioria das [folhas de estilo do agente do usuário](/pt-BR/docs/
 Por outro lado, você pode fazer qualquer elemento parecer um cabeçalho de nível superior. Considere o seguinte:
 
 ```html
-<span style="font-size: 32px; margin: 21px 0;">Is this a top level heading?</span>
+<span style="font-size: 32px; margin: 21px 0;"
+  >Is this a top level heading?</span
+>
 ```
 
 Isso fará com que pareça um cabeçalho de nível superior, mas não tem valor semântico. Portanto, não obterá nenhum benefício extra, conforme descrito acima. Assim, é uma boa idéia usar o elemento HTML certo, para o trabalho certo.

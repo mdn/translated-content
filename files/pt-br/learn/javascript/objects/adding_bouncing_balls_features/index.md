@@ -86,8 +86,8 @@ Novamente, lembre-se de definir suas propriedades herdadas como parâmetros no c
 
 Este método tem o mesmo propósito que o método `draw()` de `Ball()`: Ele desenha a instância do objeto na tela. Ele funcionará de maneira muito semelhante, portanto, você pode começar copiando a definição `Ball.prototype.draw`. Você deve então fazer as seguintes alterações:
 
-- Nós queremos que o círculo do mal não seja preenchido, mas apenas tenha uma linha externa (traço). Você pode conseguir isso atualizando [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) e [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) para [`strokeStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) e [`stroke()`](/en-US/docs/Web/API/CanvasRenderingContext2D/stroke).
-- Também queremos tornar o traço um pouco mais espesso, para que você possa ver o círculo maligno com mais facilidade. Isso pode ser obtido definindo um valor para [`lineWidth`](/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth) em algum lugar após a chamada [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) (3 será suficiente).
+- Nós queremos que o círculo do mal não seja preenchido, mas apenas tenha uma linha externa (traço). Você pode conseguir isso atualizando [`fillStyle`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/fillStyle) e [`fill()`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/fill) para [`strokeStyle`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/strokeStyle) e [`stroke()`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/stroke).
+- Também queremos tornar o traço um pouco mais espesso, para que você possa ver o círculo maligno com mais facilidade. Isso pode ser obtido definindo um valor para [`lineWidth`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/lineWidth) em algum lugar após a chamada [`beginPath()`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/beginPath) (3 será suficiente).
 
 #### `checkBounds()`
 
