@@ -293,7 +293,7 @@ form {
   width: 400px;
   /* Encadré pour voir les limites du formulaire */
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 1em;
 }
 
@@ -308,7 +308,8 @@ label {
   text-align: right;
 }
 
-input, textarea {
+input,
+textarea {
   /* Pour s'assurer que tous les champs texte ont la même police.
      Par défaut, les textarea ont une police monospace */
   font: 1em sans-serif;
@@ -321,7 +322,8 @@ input, textarea {
   border: 1px solid #999;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   /* Pour souligner légèrement les éléments actifs */
   border-color: #000;
 }
@@ -342,7 +344,7 @@ textarea {
 button {
   /* Cette marge supplémentaire représente grosso modo le même espace que celui
      entre les étiquettes et les champs texte */
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 ```
 
