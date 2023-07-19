@@ -1,5 +1,5 @@
 ---
-title: Logical AND (&&)
+title: Operador lógico AND (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
 l10n:
   sourceCommit: 05218bd05ab482d49ca659473851a285bcb104b0
