@@ -1,5 +1,5 @@
 ---
-title: 'SVG: Elément image'
+title: "SVG: Elément image"
 slug: Web/SVG/Tutorial/SVG_Image_Tag
 tags:
   - Débutant

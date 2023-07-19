@@ -37,7 +37,7 @@ array.with(index, value)
 
 `with()` 方法永远不会产生[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#稀疏数组)。如果原数组是稀疏的，新数组对应的空白索引位置会替换为 `undefined`。
 
-`with()` 方法是[通用的](zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
+`with()` 方法是[通用的](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#通用数组方法)。它只期望 `this` 值具有 `length` 属性和整数键属性。
 
 ## 示例
 

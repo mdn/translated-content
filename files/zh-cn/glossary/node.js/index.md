@@ -19,4 +19,4 @@ Node.js 是一个跨平台 {{Glossary("JavaScript")}} 运行环境，使开发�
 - [API 文档](https://nodejs.org/api/)
 - [教程](https://nodejs.org/documentation/tutorials/)
 
-{{QuickLinksWithSubpages("zh-CN/docs/Glossary")}}
+{{QuickLinksWithSubpages("/zh-CN/docs/Glossary")}}

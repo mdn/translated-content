@@ -235,7 +235,7 @@ Le <i lang="en">worker</i> que nous venons de créer était ce qu'on appelle un 
 Il existe cependant d'autres types de <i lang="en">workers</i>&nbsp;:
 
 - Les [<i lang="en">workers</i> partagés](/fr/docs/Web/API/SharedWorker) qui peuvent être partagés par plusieurs scripts différents s'exécutant dans différentes fenêtres.
-- Les [<i lang="en">](fr/docs/Web/API/Service_Worker_API) qui agissent comme des serveurs intermédiaires, mettant en cache les ressources afin que les applications web puissent fonctionner même hors ligne. Il s'agit d'un élément clé des [applications web progressives (PWA)](/fr/docs/Web/Progressive_web_apps).
+- Les [<i lang="en">](/fr/docs/Web/API/Service_Worker_API) qui agissent comme des serveurs intermédiaires, mettant en cache les ressources afin que les applications web puissent fonctionner même hors ligne. Il s'agit d'un élément clé des [applications web progressives (PWA)](/fr/docs/Web/Progressive_web_apps).
 
 ## Conclusion
 
@@ -247,6 +247,6 @@ Bien qu'ils ne puissent pas utiliser toutes les API auxquelles le document a acc
 
 - [Utiliser les <i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Utiliser les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [L'API <i lang="en">Web Workers</i>](fr/docs/Web/API/Web_Workers_API)
+- [L'API <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}

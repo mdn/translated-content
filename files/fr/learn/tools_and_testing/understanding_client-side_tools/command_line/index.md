@@ -405,9 +405,13 @@ Ensuite collez le code suivant dans un fichier que vous enregistrez dans ce rép
 
 ```js
 const myObj = {
-a:1,b:{c:2}}
-function printMe(obj){console.log(obj.b.c)}
-printMe(myObj)
+  a: 1,
+  b: { c: 2 },
+};
+function printMe(obj) {
+  console.log(obj.b.c);
+}
+printMe(myObj);
 ```
 
 Nous pouvons exécuter prettier sur un code source simplement pour vérifier s'il nécessite une correction. Passez dans votre répertoire avec `cd` et essayez de lancer cette commande :

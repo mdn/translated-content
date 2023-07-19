@@ -1,5 +1,5 @@
 ---
-title: 'Publier sur le Web : combien ça coûte ?'
+title: "Publier sur le Web : combien ça coûte ?"
 slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 tags:
   - Beginner
