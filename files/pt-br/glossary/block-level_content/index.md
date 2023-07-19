@@ -13,13 +13,18 @@ Navegadores normalmente mostram o elemento em nível de bloco com uma nova linha
 ### HTML
 
 ```html
-<p>Este parágrafo é um elemento block-level; seu plano de fundo foi colorido para exibir o elemento pai do parágrafo.</p>
+<p>
+  Este parágrafo é um elemento block-level; seu plano de fundo foi colorido para
+  exibir o elemento pai do parágrafo.
+</p>
 ```
 
 ### CSS
 
 ```css
-p { background-color: #8ABB55; }
+p {
+  background-color: #8abb55;
+}
 ```
 
 {{ EmbedLiveSample('Block-level_Example') }}

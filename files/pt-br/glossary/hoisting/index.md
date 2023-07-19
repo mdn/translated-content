@@ -79,8 +79,8 @@ console.log(num1 + " " + num2); //'3 4'
 var num2; //Declara num2 para hoisting
 
 //Example 3 - Hoists
-a = 'Cran'; //Inicializa a
-b = 'berry'; //Inicializa b
+a = "Cran"; //Inicializa a
+b = "berry"; //Inicializa b
 console.log(a + "" + b); // 'Cranberry'
 var a, b; //Declara ambos a & b para hoisting
 ```
