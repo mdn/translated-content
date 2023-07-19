@@ -59,12 +59,11 @@ Cet élément implémente l'interface {{domxref("SVGFEDropShadowElement")}}.
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <filter id="shadow">
-      <feDropShadow dx="4" dy="8" stdDeviation="4"/>
+      <feDropShadow dx="4" dy="8" stdDeviation="4" />
     </filter>
   </defs>
 
-  <circle cx="50%" cy="50%" r="80"
-      style="fill:blue; filter:url(#shadow);"/>
+  <circle cx="50%" cy="50%" r="80" style="fill:blue; filter:url(#shadow);" />
 </svg>
 ```
 
