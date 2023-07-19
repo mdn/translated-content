@@ -77,7 +77,6 @@ build/
 /files/ko/web/svg/**/*.md
 
 # pt-br
-/files/pt-br/games/**/*.md
 /files/pt-br/learn/**/*.md
 /files/pt-br/learn/css/**/*.md
 /files/pt-br/learn/html/**/*.md
