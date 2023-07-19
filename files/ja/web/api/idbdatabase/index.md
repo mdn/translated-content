@@ -14,7 +14,7 @@ IndexedDB API の `IDBDatabase` インターフェイスは、[データベー�
 ## インスタンスプロパティ
 
 - {{domxref("IDBDatabase.name")}} {{readonlyInline}}
-  - : 接続しているデータベース名を含む{{ domxref("DOMString") }}。
+  - : 接続しているデータベース名を含む{{ jsxref("String", "文字列", "", "not_code") }}。
 - {{domxref("IDBDatabase.version")}} {{readonlyInline}}
   - : 接続しているデータベースのバージョンを含む [64-bit integer](</ja/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers>)。データベースが初めて作られた場合、この属性は空文字です。
 - {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}
