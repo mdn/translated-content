@@ -89,7 +89,6 @@ build/
 /files/pt-br/web/http/**/*.md
 /files/pt-br/web/javascript/**/*.md
 /files/pt-br/web/svg/**/*.md
-/files/pt-br/webassembly/**/*.md
 
 # ru
 /files/ru/glossary/**/*.md

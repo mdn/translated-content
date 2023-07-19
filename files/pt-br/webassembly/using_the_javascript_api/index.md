@@ -23,32 +23,32 @@ Vamos percorrer o passo a passo de um exemplo que explica como usar a API JavaSc
 3. Depois, crie um arquivo html simples chamado `index.html` no mesmo diretório que seu arquivo wasm (você pode usar o nosso [template simples](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) caso você não tenha algum por aí).
 4. Agora, para ajudar a entender o que está acontecendo aqui, vamos olhar a representação textual do nosso módulo wasm (do qual também encontramos em [Converting WebAssembly format to wasm](/pt-BR/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format)):
 
-    ```
-    (module
-      (func $i (import "imports" "imported_func") (param i32))
-      (func (export "exported_func")
-        i32.const 42
-        call $i))
-    ```
+   ```
+   (module
+     (func $i (import "imports" "imported_func") (param i32))
+     (func (export "exported_func")
+       i32.const 42
+       call $i))
+   ```
 
 5. Na segunda linha, você perceberá que o import tem um namespace de dois níveis — a função interna `$i` que é importada do `imports.imported_func`. Precisamos refletir esse namespace de dois níveis no JavaScript ao escrever o objeto que será importado no módulo wasm. Crie um elemento `<script></script>` no seu arquivo HTML, e adicione o seguinte código:
 
-    ```js
-    var importObject = {
-      imports: {
-          imported_func: function(arg) {
-            console.log(arg);
-          }
-        }
-      };
-    ```
+   ```js
+   var importObject = {
+     imports: {
+       imported_func: function (arg) {
+         console.log(arg);
+       },
+     },
+   };
+   ```
 
 Conforme explicado acima, temos nossa função que será importada em `imports.imported_func`.
 
 > **Nota:** Isto poderia ser mais conciso usando [a sintaxe de arrow function do ES6](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions):
 >
 > ```js
-> var importObject = { imports: { imported_func: arg => console.log(arg) } };
+> var importObject = { imports: { imported_func: (arg) => console.log(arg) } };
 > ```
 
 O estilo que você preferir fica a sua escolha.
@@ -60,13 +60,12 @@ Com o objeto que iremos importar preparado, vamos baixar o nosso arquivo wasm, t
 Adicione o código abaixo no seu script:
 
 ```js
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(results => {
-  results.instance.exports.exported_func();
-});
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((results) => {
+    results.instance.exports.exported_func();
+  });
 ```
 
 > **Nota:** Já explicamos com grandes detalhes como funciona essa síntaxe em [Loading and running WebAssembly code](/pt-BR/docs/WebAssembly/Loading_and_running#Using_Fetch). Volte lá e se atualize caso não se sinta confortável com o assunto.
@@ -98,23 +97,23 @@ Let's start exploring this by looking at a quick example.
 1. Create another new simple HTML page (copy our [simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)) and call it `memory.html`. Add a `<script></script>` element to the page.
 2. Now add the following line to the top of your script, to create a memory instance:
 
-    ```js
-    var memory = new WebAssembly.Memory({initial:10, maximum:100});
-    ```
+   ```js
+   var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
+   ```
 
-    The unit of `initial` and `maximum` is WebAssembly pages — these are fixed to 64KB in size. This means that the above memory instance has an initial size of 640KB, and a maximum size of 6.4MB.
+   The unit of `initial` and `maximum` is WebAssembly pages — these are fixed to 64KB in size. This means that the above memory instance has an initial size of 640KB, and a maximum size of 6.4MB.
 
-    WebAssembly memory exposes its bytes by simply providing a buffer getter/setter that returns an ArrayBuffer. For example, to write 42 directly into the first word of linear memory, you can do this:
+   WebAssembly memory exposes its bytes by simply providing a buffer getter/setter that returns an ArrayBuffer. For example, to write 42 directly into the first word of linear memory, you can do this:
 
-    ```js
-    new Uint32Array(memory.buffer)[0] = 42;
-    ```
+   ```js
+   new Uint32Array(memory.buffer)[0] = 42;
+   ```
 
-    You can then return the same value using:
+   You can then return the same value using:
 
-    ```js
-    new Uint32Array(memory.buffer)[0]
-    ```
+   ```js
+   new Uint32Array(memory.buffer)[0];
+   ```
 
 3. Try this now in your demo — save what you've added so far, load it in your browser, then try entering the above two lines in your JavaScript console.
 
@@ -142,27 +141,26 @@ Let's make the above assertions clearer by looking at a more involved memory exa
 
 2. Go back to your `memory.html` sample file, and fetch, compile, and instantiate your wasm module as before — add the following to the bottom of your script:
 
-    ```js
-    fetch('memory.wasm').then(response =>
-      response.arrayBuffer()
-    ).then(bytes =>
-      WebAssembly.instantiate(bytes)
-    ).then(results => {
-      // add your code here
-    });
-    ```
+   ```js
+   fetch("memory.wasm")
+     .then((response) => response.arrayBuffer())
+     .then((bytes) => WebAssembly.instantiate(bytes))
+     .then((results) => {
+       // add your code here
+     });
+   ```
 
 3. Since this module exports its memory, given an Instance of this module called instance we can use an exported function `accumulate()` to create and populate an input array directly in the module instance's linear memory (`mem`). Add the following into your code, where indicated:
 
-    ```js
-    var i32 = new Uint32Array(results.instance.exports.mem.buffer);
-    for (var i = 0; i < 10; i++) {
-      i32[i] = i;
-    }
+   ```js
+   var i32 = new Uint32Array(results.instance.exports.mem.buffer);
+   for (var i = 0; i < 10; i++) {
+     i32[i] = i;
+   }
 
-    var sum = results.instance.exports.accumulate(0, 10);
-    console.log(sum);
-    ```
+   var sum = results.instance.exports.accumulate(0, 10);
+   console.log(sum);
+   ```
 
 Note how we create the {{domxref("Uint32Array")}} view on the Memory object's buffer ([`Memory.prototype.buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)), not on the Memory itself.
 
@@ -196,23 +194,22 @@ Let's looking at an simple table example — a WebAssembly module that creates a
 2. Create a new copy of our [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) in the same directory and call it `table.html`.
 3. As before, fetch, compile, and instantiate your wasm module — add the following into a {{htmlelement("script")}} element at the bottom of your HTML body:
 
-    ```js
-    fetch('table.wasm').then(response =>
-      response.arrayBuffer()
-    ).then(bytes =>
-      WebAssembly.instantiate(bytes)
-    ).then(results => {
-      // add your code here
-    });
-    ```
+   ```js
+   fetch("table.wasm")
+     .then((response) => response.arrayBuffer())
+     .then((bytes) => WebAssembly.instantiate(bytes))
+     .then((results) => {
+       // add your code here
+     });
+   ```
 
 4. Now let's access the data in the tables — add the following lines to your code in the indicated place:
 
-    ```js
-    var tbl = results.instance.exports.tbl;
-    console.log(tbl.get(0)());  // 13
-    console.log(tbl.get(1)());  // 42
-    ```
+   ```js
+   var tbl = results.instance.exports.tbl;
+   console.log(tbl.get(0)()); // 13
+   console.log(tbl.get(1)()); // 42
+   ```
 
 This code accesses each function reference stored in the table in turn, and instantiates them to print the values they hold to the console — note how each function reference is retrieved with a [`Table.prototype.get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) call, then we add an extra set of parentheses on the end to actually invoke the function.
 
