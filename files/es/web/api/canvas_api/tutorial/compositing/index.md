@@ -39,7 +39,7 @@ En este ejemplo, utilizamos un trazado de recorte de forma circular para restrin
 
 ```js
 function dibuja() {
-  var ctx = document.getElementById('lienzo').getContext('2d');
+  var ctx = document.getElementById("lienzo").getContext("2d");
   ctx.fillRect(0, 0, 150, 150);
   ctx.translate(75, 75);
 
@@ -50,8 +50,8 @@ function dibuja() {
 
   // pinta el fondo
   var lingrad = ctx.createLinearGradient(0, -75, 0, 75);
-  lingrad.addColorStop(0, '#232256');
-  lingrad.addColorStop(1, '#143778');
+  lingrad.addColorStop(0, "#232256");
+  lingrad.addColorStop(1, "#143778");
 
   ctx.fillStyle = lingrad;
   ctx.fillRect(-75, -75, 150, 150);
@@ -59,13 +59,14 @@ function dibuja() {
   // dibuja las estrellas
   for (var j = 1; j < 50; j++) {
     ctx.save();
-    ctx.fillStyle = '#fff';
-    ctx.translate(75 - Math.floor(Math.random() * 150),
-                  75 - Math.floor(Math.random() * 150));
+    ctx.fillStyle = "#fff";
+    ctx.translate(
+      75 - Math.floor(Math.random() * 150),
+      75 - Math.floor(Math.random() * 150),
+    );
     dibulaEstrella(ctx, Math.floor(Math.random() * 4) + 2);
     ctx.restore();
   }
-
 }
 
 function dibujaEstrella(ctx, r) {

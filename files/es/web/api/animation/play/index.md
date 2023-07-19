@@ -27,29 +27,28 @@ En el ejemplo [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen
 
 ```js
 // El pastel tiene su propia animación:
-var nommingCake = document.getElementById('eat-me_sprite').animate(
-[
-  { transform: 'translateY(0)' },
-  { transform: 'translateY(-80%)' }
-], {
-  fill: 'forwards',
-  easing: 'steps(4, end)',
-  duration: aliceChange.effect.timing.duration / 2
-});
+var nommingCake = document
+  .getElementById("eat-me_sprite")
+  .animate(
+    [{ transform: "translateY(0)" }, { transform: "translateY(-80%)" }],
+    {
+      fill: "forwards",
+      easing: "steps(4, end)",
+      duration: aliceChange.effect.timing.duration / 2,
+    },
+  );
 
 // Pausa la animación del pastel para que no se reproduzca inmediatamente.
 nommingCake.pause();
 
 // Esta función se reproducirá cuando el usuario haga click o toque
-var growAlice = function() {
-
+var growAlice = function () {
   // Reproduce la animación de Alicia.
   aliceChange.play();
 
   // Reproduce la animación del pastel.
   nommingCake.play();
-
-}
+};
 
 // Cuando el usuario hace click o toca, llama a growAlice, para reproducir todas las animaciones.
 cake.addEventListener("mousedown", growAlice, false);

@@ -36,7 +36,7 @@ Por ejemplo, podremos proporcionar un texto descriptivo del contenido del canvas
 </canvas>
 
 <canvas id="clock" width="150" height="150">
-  <img src="images/clock.png" width="150" height="150" alt=""/>
+  <img src="images/clock.png" width="150" height="150" alt="" />
 </canvas>
 ```
 
@@ -55,8 +55,8 @@ Si el contenido alternativo no se necesita, un simple `<canvas id="foo" ...></ca
 El canvas esta inicialmente en blanco. Para mostrar alguna cosa, un script primero necesita acceder al contexto a renderizar y dibujar sobre este. El elemento {{HTMLElement("canvas")}} tiene un [method](/es/docs/Web/API/HTMLCanvasElement#Methods) llamado `getContext()`, usado para obtener el contexto a renderizar y sus funciones de dibujo. `getContext()` toma un parametro, el tipo de contexto. Para graficos 2D, como los que cubre este tutorial, su especificacion es "2d".
 
 ```js
-var canvas = document.getElementById('tutorial');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("tutorial");
+var ctx = canvas.getContext("2d");
 ```
 
 La primera linea regresa el nodo DOM para el elemento {{HTMLElement("canvas")}} llamando al metodo {{domxref("document.getElementById()")}}. Una vez tu tienes el elemento nodo, tu puedes acceder al contexto de dibujo usando su metodo `getContext()`.
@@ -66,10 +66,10 @@ La primera linea regresa el nodo DOM para el elemento {{HTMLElement("canvas")}} 
 El contenido de regreso que es mostrado en navegadores los cuales no soportan {{HTMLElement("canvas")}}. Para los Scripts puede tambien comprobarse su soporte desde la programacion por un simple test para la presencia del metodo `getContext()`. Con un trozo de codigo parecido al que viene debajo:
 
 ```js
-var canvas = document.getElementById('tutorial');
+var canvas = document.getElementById("tutorial");
 
-if (canvas.getContext){
-  var ctx = canvas.getContext('2d');
+if (canvas.getContext) {
+  var ctx = canvas.getContext("2d");
   // drawing code here
 } else {
   // canvas-unsupported code here
@@ -85,15 +85,17 @@ Aqui esta una plantilla minimalista, la cual usaremos como punto de partida para
   <head>
     <title>Canvas tutorial</title>
     <script type="text/javascript">
-      function draw(){
-        var canvas = document.getElementById('tutorial');
-        if (canvas.getContext){
-          var ctx = canvas.getContext('2d');
+      function draw() {
+        var canvas = document.getElementById("tutorial");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
         }
       }
     </script>
     <style type="text/css">
-      canvas { border: 1px solid black; }
+      canvas {
+        border: 1px solid black;
+      }
     </style>
   </head>
   <body onload="draw();">
@@ -114,25 +116,25 @@ Para comenzar, daremos un vistazo a un simple ejemplo que dibuja dos rectangulos
 
 ```html
 <html>
- <head>
-  <script type="application/javascript">
-    function draw() {
-      var canvas = document.getElementById("canvas");
-      if (canvas.getContext) {
-        var ctx = canvas.getContext("2d");
+  <head>
+    <script type="application/javascript">
+      function draw() {
+        var canvas = document.getElementById("canvas");
+        if (canvas.getContext) {
+          var ctx = canvas.getContext("2d");
 
-        ctx.fillStyle = "rgb(200,0,0)";
-        ctx.fillRect (10, 10, 55, 50);
+          ctx.fillStyle = "rgb(200,0,0)";
+          ctx.fillRect(10, 10, 55, 50);
 
-        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-        ctx.fillRect (30, 30, 55, 50);
+          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+          ctx.fillRect(30, 30, 55, 50);
+        }
       }
-    }
-  </script>
- </head>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+    </script>
+  </head>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
