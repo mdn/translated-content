@@ -102,29 +102,29 @@ To explore various features of Vue, we will be building up a sample todo list ap
 1. In terminal, to where you'd like to create your sample app, then run `cd vue create moz-todo-vue`
 2. Use the arrow keys and to select the "Manually select features" option.
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
 3. The first menu you'll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press to proceed.
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
 4. Next you'll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit again. This will help us catch common errors, but not be overly opinionated.
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
 5. Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit to continue.
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
 6. Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's file. Select "In dedicated config files" and push `package.json`.
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
 7. Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type , otherwise type .
 
-    <kbd>y</kbd>
+   <kbd>y</kbd>
 
-    <kbd>n</kbd>
+   <kbd>n</kbd>
 
 The CLI will now begin scaffolding out your project, and installing all of your dependencies.
 
@@ -178,14 +178,14 @@ Open your `App.vue` file — you'll see that it has three parts: `<template>`, `
 In the case of `App.vue`, our default export sets the name of the component to `App` and registers the `HelloWorld` component by adding it into the `components` property. When you register a component in this way, you're registering it locally. Locally registered components can only be used inside the components that register them, so you need to import and register them in every component file that uses them. This can be useful for bundle splitting/tree shaking since not every page in your app necessarily needs every component.
 
 ```js
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     //You can register components locally here.
-    HelloWorld
-  }
+    HelloWorld,
+  },
 };
 ```
 
@@ -240,12 +240,12 @@ If you save your `App.vue` file now, the rendered app will throw an error becaus
 Delete these lines now:
 
 ```js
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 ```
 
 ```js
 components: {
-  HelloWorld
+  HelloWorld;
 }
 ```
 
