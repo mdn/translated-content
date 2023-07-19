@@ -7,7 +7,7 @@ slug: Web/CSS/filter
 
 [CSS](/zh-CN/docs/Web/CSS) **`filter`** 属性将模糊或颜色偏移等图形效果应用于元素。滤镜通常用于调整图像、背景和边框的渲染。
 
-有几个[函数](#函数)（例如 `blur()` 和 `contrast()`）可以帮助你实现与定义的效果。
+有几个[函数](#函数)（例如 `blur()` 和 `contrast()`）可以帮助你实现预定义的效果。
 
 {{EmbedInteractiveExample("pages/css/filter.html")}}
 
@@ -29,11 +29,11 @@ filter: sepia(60%);
 /* URL */
 filter: url("filters.svg#filter-id");
 
-/* 多个滤波器 */
+/* 多个滤镜 */
 filter: contrast(175%) brightness(3%);
 filter: drop-shadow(3px 3px red) sepia(100%) drop-shadow(-3px -3px blue);
 
-/* 不使用滤波器 */
+/* 不使用滤镜 */
 filter: none;
 
 /* 全局值 */
@@ -50,7 +50,7 @@ filter: unset;
 filter: <filter-function> [<filter-function>]* | none;
 ```
 
-你可以使用 `url()` 来引用[SVG 滤镜元素](/zh-CN/docs/Web/SVG/Element/filter)。可以使用如下语法引用 SVG {{SVGElement("filter")}} 元素：
+你可以使用 `url()` 来引用 [SVG 滤镜元素](/zh-CN/docs/Web/SVG/Element/filter)。可以使用如下语法引用 SVG {{SVGElement("filter")}} 元素：
 
 ```css
 filter: url(file.svg#filter-element-id);
@@ -70,7 +70,7 @@ filter: blur(5px);
 ```
 
 - {{cssxref("filter-function/brightness", "brightness()")}}
-  - : 将线性乘法器应用于输入图像，使其看起来或多或少地变得明亮。值为 `0%` 将创建全黑图像；值为 `100%` 会使输入保持不变，其他值是该效果的线性乘数。如果值大于 `100%` 将使图像更加明亮。
+  - : 将线性乘法器应用于输入图像，以调整其亮度。值为 `0%` 将创建全黑图像；值为 `100%` 会使输入保持不变，其他值是该效果的线性乘数。如果值大于 `100%` 将使图像更加明亮。
 
 ```css
 filter: brightness(2);
@@ -84,21 +84,21 @@ filter: contrast(200%);
 ```
 
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-  - : 使用 `<shadow>` 参数沿图像的轮廓生成阴影效果。阴影语法类似于 `<box-shadow>`（在 [CSS 背景和边框模块](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders)中定义），但不允许使用 `inset` 关键字以及 `spread` 参数。与所有 `filter` 属性值一样，任何在 `drop-shadow()` 后应用的滤镜同样会在阴影上应用效果。
+  - : 使用 `<shadow>` 参数沿图像的轮廓生成阴影效果。阴影语法类似于 `<box-shadow>`（在 [CSS 背景和边框模块](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders)中定义），但不允许使用 `inset` 关键字以及 `spread` 参数。与所有 `filter` 属性值一样，任何在 `drop-shadow()` 后的滤镜同样会应用在阴影上。
 
 ```css
 filter: drop-shadow(16px 16px 10px black);
 ```
 
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
-  - : 将图像转换为灰度图。值为 `100%` 则完全转为灰度图像，值为 `0%` 则图像无变化。值在 `0%` 到 `100%` 之间，则是该效果的线性乘数。
+  - : 将图像转换为灰度图。值为 `100%` 则完全转为灰度图像，若为初始值 `0%` 则图像无变化。值在 `0%` 到 `100%` 之间，则是该效果的线性乘数。
 
 ```css
 filter: grayscale(100%);
 ```
 
 - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-  - : 应用色相旋转。`<angle>` 一值设定图像会被调整的色环角度值。值为 `0deg`，则图像无变化。
+  - : 应用色相旋转。`<angle>` 值设定图像会被调整的色环角度值。值为 `0deg`，则图像无变化。
 
 ```css
 filter: hue-rotate(90deg);
@@ -209,7 +209,7 @@ img:nth-of-type(2) {
 
 {{EmbedLiveSample('重复滤镜函数','100%','229px')}}
 
-滤镜函数按顺序应用。这就是阴影颜色不同的原因：第一个阴影的色调被 `hue-rotate()` 函数改变，而第二个阴影的色调没有改变。
+滤镜函数按顺序应用。这就是阴影颜色不同的原因：第一个阴影的色调被 `hue-rotate()` 函数改变，而第二个阴影的色调没有被改变。
 
 ## 规范
 
