@@ -1,12 +1,13 @@
 ---
-title: ':-moz-focusring'
-slug: Web/CSS/:-moz-focusring
+title: ":-moz-focusring"
+slug: conflicting/Web/CSS/:focus-visible
 tags:
   - CSS
   - Non-standard
   - Pseudo-classe
   - Reference
 translation_of: Web/CSS/:-moz-focusring
+original_slug: Web/CSS/:-moz-focusring
 ---
 
 {{Non-standard_header}}{{CSSRef}}

@@ -1,7 +1,8 @@
 ---
 title: Window.applicationCache
-slug: Web/API/Window/applicationCache
+slug: orphaned/Web/API/Window/applicationCache
 translation_of: Web/API/Window/applicationCache
+original_slug: Web/API/Window/applicationCache
 ---
 
 > **Attention :** Le cache d'application est obsolète depuis Firefox 44, et n'est plus disponible dans un contexte non sécurisé depuis Firefox 60 ([bug Firefox 1354175](https://bugzil.la/1354175), actuellemet Nightly/Beta seulement). Ne pas l'utiliser sur des sites hors lignes — envisager l'utilisation de [service workers](/fr/docs/Web/API/Service_Worker_API) à la place.

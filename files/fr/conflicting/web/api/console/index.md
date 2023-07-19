@@ -1,6 +1,6 @@
 ---
 title: WorkerGlobalScope.console
-slug: Web/API/WorkerGlobalScope/console
+slug: conflicting/Web/API/console
 tags:
   - API
   - Propriété
@@ -9,6 +9,7 @@ tags:
   - WorkerGlobalScope
   - lecture seule
 translation_of: Web/API/WorkerGlobalScope/console
+original_slug: Web/API/WorkerGlobalScope/console
 ---
 
 {{APIRef("Web Workers API")}}{{Non-standard_header}}
