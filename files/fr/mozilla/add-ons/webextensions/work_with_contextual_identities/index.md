@@ -65,12 +65,12 @@ Les principales caractéristiques du fichier [manifest.json](https://github.com/
 Une fenêtre contextuelle sur le bouton de la barre d'outils fournit l'interface utilisateur de l'extension. [context.html](https://github.com/mdn/webextensions-examples/blob/master/contextual-identities/context.html) implémente ce popup, mais c'est juste un shell dans lequel le script context.js écrit la liste des identités contextuelles et leurs options associées.
 
 ```html
-  <body>
-    <div class="panel">
-      <div id="identity-list"></div>
-    </div>
+<body>
+  <div class="panel">
+    <div id="identity-list"></div>
+  </div>
   <script src="context.js"></script>
-  </body>
+</body>
 ```
 
 ## context.js

@@ -14,8 +14,10 @@ En JavaScript, les opérations de copie d'objet intégrées standards (telles qu
 Une façon de faire une copie complète d'un objet JavaScript, s'il peut être [sérialisé](/fr/docs/Glossary/Serialization), est d'utiliser [`JSON.stringify()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) pour convertir l'objet en une chaîne JSON, puis de reconvertir la chaîne en un (entièrement nouvel) objet JavaScript avec [`JSON.parse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)&nbsp;:
 
 ```js
-let liste_ingredients = ["nouilles", {"liste": ["œufs", "farine", "eau"]}];
-let liste_ingredients_copieprofonde = JSON.parse(JSON.stringify(liste_ingredients));
+let liste_ingredients = ["nouilles", { liste: ["œufs", "farine", "eau"] }];
+let liste_ingredients_copieprofonde = JSON.parse(
+  JSON.stringify(liste_ingredients),
+);
 
 // Modifier la valeur de la propriété 'liste' dans liste_ingredients_copieprofonde
 liste_ingredients_copieprofonde[1].liste = ["farine de riz", "water"];

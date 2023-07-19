@@ -23,16 +23,27 @@ Quelques ingrédients sont nécessaires pour intégrer une police en SVG. Prenon
 
 ```html
 <font id="Font1" horiz-adv-x="1000">
-  <font-face font-family="Super Sans" font-weight="bold" font-style="normal"
-      units-per-em="1000" cap-height="600" x-height="400"
-      ascent="700" descent="300"
-      alphabetic="0" mathematical="350" ideographic="400" hanging="500">
+  <font-face
+    font-family="Super Sans"
+    font-weight="bold"
+    font-style="normal"
+    units-per-em="1000"
+    cap-height="600"
+    x-height="400"
+    ascent="700"
+    descent="300"
+    alphabetic="0"
+    mathematical="350"
+    ideographic="400"
+    hanging="500">
     <font-face-src>
-      <font-face-name name="Super Sans Bold"/>
+      <font-face-name name="Super Sans Bold" />
     </font-face-src>
   </font-face>
-  <missing-glyph><path d="M0,0h200v200h-200z"/></missing-glyph>
-  <glyph unicode="!" horiz-adv-x="300"><!-- Outline of exclam. pt. glyph --></glyph>
+  <missing-glyph><path d="M0,0h200v200h-200z" /></missing-glyph>
+  <glyph unicode="!" horiz-adv-x="300"
+    ><!-- Outline of exclam. pt. glyph --></glyph
+  >
   <glyph unicode="@"><!-- Outline of @ glyph --></glyph>
   <!-- more glyphs -->
 </font>
@@ -79,10 +90,10 @@ Vous pouvez utiliser `@font-face` pour les polices externes de référence :
 </font>
 
 <style type="text/css">
-@font-face {
-  font-family: "Super Sans";
-  src: url(#Super_Sans);
-}
+  @font-face {
+    font-family: "Super Sans";
+    src: url(#Super_Sans);
+  }
 </style>
 
 <text font-family="Super Sans">My text uses Super Sans</text>
