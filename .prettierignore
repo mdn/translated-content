@@ -15,7 +15,6 @@ build/
 
 # es
 /files/es/learn/css/**/*.md
-/files/es/learn/html/**/*.md
 /files/es/learn/server-side/**/*.md
 /files/es/web/api/**/*.md
 /files/es/web/css/**/*.md
