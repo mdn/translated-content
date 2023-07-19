@@ -81,7 +81,6 @@ build/
 /files/ko/web/http/**/*.md
 /files/ko/web/javascript/**/*.md
 /files/ko/web/svg/**/*.md
-/files/ko/webassembly/**/*.md
 
 # pt-br
 /files/pt-br/games/**/*.md
