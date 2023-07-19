@@ -936,10 +936,6 @@
     "modified": "2020-11-22T03:28:22.451Z",
     "contributors": ["kvojps"]
   },
-  "Learn/Common_questions/Tools_and_setup/Using_GitHub_pages": {
-    "modified": "2020-07-16T22:35:51.948Z",
-    "contributors": ["Celio1234"]
-  },
   "Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools": {
     "modified": "2020-07-16T22:35:47.861Z",
     "contributors": [
@@ -1019,10 +1015,6 @@
       "SilvEiRax",
       "sjmiles"
     ]
-  },
-  "Learn/Forms/Basic_native_form_controls": {
-    "modified": "2020-07-16T22:21:22.988Z",
-    "contributors": ["danncam", "VictorGom3s"]
   },
   "Learn/Forms/Form_validation": {
     "modified": "2020-07-16T22:21:52.226Z",
@@ -4496,10 +4488,6 @@
     "modified": "2019-03-23T22:50:52.511Z",
     "contributors": ["Aschlla", "iCynthia"]
   },
-  "Web/Accessibility/ARIA/Roles/slider_role": {
-    "modified": "2019-03-23T22:16:26.114Z",
-    "contributors": ["rener_bz"]
-  },
   "Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets": {
     "modified": "2019-03-23T22:27:46.873Z",
     "contributors": ["Aschlla"]
@@ -5714,18 +5702,6 @@
   "Web/Demos": {
     "modified": "2020-09-04T06:28:02.627Z",
     "contributors": ["gustavoSoriano", "angelorubin", "arthur2323"]
-  },
-  "Web/Events": {
-    "modified": "2019-08-20T18:23:47.517Z",
-    "contributors": [
-      "helton-mori-dev",
-      "ayrtton",
-      "Marnei-Cardoso",
-      "wbamberg",
-      "LeandroMaxNatal",
-      "susanasilva",
-      "jpmedley"
-    ]
   },
   "Web/Guide": {
     "modified": "2020-10-30T13:31:43.101Z",
@@ -10413,10 +10389,6 @@
   "Web/MathML/Element": {
     "modified": "2019-03-23T23:15:05.305Z",
     "contributors": ["non", "splewako"]
-  },
-  "Web/MathML/Element/math": {
-    "modified": "2019-03-23T23:15:04.481Z",
-    "contributors": ["Haroldohc"]
   },
   "Web/MathML/Examples": {
     "modified": "2019-03-23T23:19:30.922Z",
