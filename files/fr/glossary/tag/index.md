@@ -8,6 +8,6 @@ En {{Glossary("HTML")}} une balise est utilisée pour créer un {{Glossary("elem
 
 ## Voir aussi
 
-- [Élément HTML](https://fr.wikipedia.org/wiki/%C3%89l%C3%A9ment_HTML) sur Wikipédia
+- [Élément HTML](https://fr.wikipedia.org/wiki/Élément_HTML) sur Wikipédia
 - [Balises HTML sur W3](http://www.w3.org/History/19921103-hypertext/hypertext/WWW/MarkUp/Tags.html)
-- [Introduction au HTML](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML)
+- [Introduction au HTML](/fr/Apprendre/HTML/Introduction_à_HTML)

@@ -31,13 +31,16 @@ Content-Type: text/html
 
 ```html
 <html>
-  <head><title>Unavailable For Legal Reasons</title></head>
+  <head>
+    <title>Unavailable For Legal Reasons</title>
+  </head>
   <body>
     <h1>Unavailable For Legal Reasons</h1>
-    <p>This request may not be serviced in the Roman Province
-    of Judea due to the Lex Julia Majestatis, which disallows
-    access to resources hosted on servers deemed to be
-    operated by the People's Front of Judea.</p>
+    <p>
+      This request may not be serviced in the Roman Province of Judea due to the
+      Lex Julia Majestatis, which disallows access to resources hosted on
+      servers deemed to be operated by the People's Front of Judea.
+    </p>
   </body>
 </html>
 ```

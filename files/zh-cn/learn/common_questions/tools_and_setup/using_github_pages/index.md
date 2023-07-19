@@ -23,15 +23,15 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 
 1. 将命令行指向你的 test-site 目录（或者任何一个你能调用的包含有你的网站的目录）。为此，请使用 cd 命令（即“更改目录”）。如果你已经将你的网站放到了位于桌面上的 test-site 目录中，则可以输入以下内容：
 
-    ```bash
-    cd Desktop/test-site
-    ```
+   ```bash
+   cd Desktop/test-site
+   ```
 
 2. 当命令行指向你的网站所在目录时，键入以下命令，该命令告诉 git 工具将目录转换为 git 仓库：
 
-    ```bash
-    git init
-    ```
+   ```bash
+   git init
+   ```
 
 #### 命令行界面
 
@@ -54,30 +54,30 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
 1. 接下来，你需要为你的文件创建一个新的仓库。单击 GitHub 主页右上角的加号（+），然后选择“_New Repository_”。
 2. 在此页面的“_Repository name_”框中，为你的代码库起一个名字，例如：_my-repository_。
 3. 还要填写一个描述来说明你的存储库将包含哪些内容。你的屏幕应该是这样的
-    ![](create-new-repo.png)
+   ![](create-new-repo.png)
 4. 单击*Create repository*;你将会看到如下页面：
-    ![](github-repo.png)
+   ![](github-repo.png)
 
 ### 将你的文件上传到 GitHub
 
 1. 在当前页面上，你可能对本节的这部分感兴趣“**_…or push an existing repository from the command line_**（或者从命令行推送一个现有存储库）”。你应该看到本节中列出的两行代码。复制整个第一行，将其粘贴到命令行中，然后按 Enter 键。命令应该看起来像是这样的：
 
-    ```bash
-    git remote add origin https://github.com/chrisdavidmills/my-repository.git
-    ```
+   ```bash
+   git remote add origin https://github.com/chrisdavidmills/my-repository.git
+   ```
 
 2. 接下来，键入以下两个命令，每个命令之后按 Enter。这些指令将会把代码上传到 GitHub，并要求 Git 管理这些文件。
 
-    ```bash
-    git add --all
-    git commit -m 'adding my files to my repository'
-    ```
+   ```bash
+   git add --all
+   git commit -m 'adding my files to my repository'
+   ```
 
 3. 最后，将代码推送到 GitHub，通过你正在访问的 GitHub 网页，然后输入我们看到的两个命令中的第二个命令“ **…or push an existing repository from the command line**（或从命令行部分推入现有存储库）部分”：
 
-    ```bash
-    git push -u origin master
-    ```
+   ```bash
+   git push -u origin master
+   ```
 
 4. 现在你需要为你的仓库开启 GitHub pages 分支。为此，其在仓库的主页中选择 _Settings_，然后从左侧的侧边栏中选择 _Pages_。在 _Source_ 下选择“main”分支。页面应该会自动刷新。
 5. 重新回到 _GitHub Pages_ 部分，你应该会看到形式为“Your site is ready to be published at `https://xxxxxx`.”的一行内容。

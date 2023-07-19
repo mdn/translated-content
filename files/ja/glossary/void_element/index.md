@@ -2,7 +2,7 @@
 title: Void element （空要素）
 slug: Glossary/Void_element
 l10n:
-  sourceCommit:  af32ed24e243178cd060769b7c707afcc271f9f6
+  sourceCommit: af32ed24e243178cd060769b7c707afcc271f9f6
 ---
 
 **空要素 (void element)** とは HTML における{{Glossary("element", "要素")}}のうち、子ノード（すなわち子要素およびテキストノード）を**持つことができない**ものを指します。空要素には開始タグしかありません。空要素では終了タグを指定することができません。

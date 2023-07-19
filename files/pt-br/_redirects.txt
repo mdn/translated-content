@@ -402,7 +402,6 @@
 /pt-BR/docs/Learn/Common_questions/Que_software_eu_preciso	/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 /pt-BR/docs/Learn/Common_questions/Thinking_before_coding	/pt-BR/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding
 /pt-BR/docs/Learn/Common_questions/Upload_files_to_a_web_server	/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
-/pt-BR/docs/Learn/Common_questions/Using_Github_pages	/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
 /pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools	/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 /pt-BR/docs/Learn/Common_questions/What_are_hyperlinks	/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks
 /pt-BR/docs/Learn/Common_questions/What_is_a_domain_name	/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name
@@ -483,9 +482,10 @@
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomia_de_uma_WebExtension	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/O_que_vem_a_seguir_	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/Passo-a-Passo	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
+/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Prerequisites	/pt-BR/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next_	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissões	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions
-/pt-BR/docs/Mozilla/Add-ons/WebExtensions/pre-requisitos	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
+/pt-BR/docs/Mozilla/Add-ons/WebExtensions/pre-requisitos	/pt-BR/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/sua_primeira_WebExtension	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Itens_do_menu_de_contexto	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 /pt-BR/docs/Mozilla/Firefox/Releases/3/Zoom_de_página_inteira	/pt-BR/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
@@ -659,6 +659,7 @@
 /pt-BR/docs/Web/API/Window.navigator	/pt-BR/docs/Web/API/Window/navigator
 /pt-BR/docs/Web/API/Window.openDialog	/pt-BR/docs/conflicting/Web/API/Window
 /pt-BR/docs/Web/API/Window/Window.localStorage	/pt-BR/docs/Web/API/Window/localStorage
+/pt-BR/docs/Web/API/Window/applicationCache	/pt-BR/docs/orphaned/Web/API/Window/applicationCache
 /pt-BR/docs/Web/API/Window/crypto	/pt-BR/docs/Web/API/crypto_property
 /pt-BR/docs/Web/API/Window/openDialog	/pt-BR/docs/conflicting/Web/API/Window
 /pt-BR/docs/Web/API/Window/performance	/pt-BR/docs/Web/API/performance_property
@@ -687,13 +688,11 @@
 /pt-BR/docs/Web/API/notificacoes	/pt-BR/docs/Web/API/Notification
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_atributo_aria-labelledby	/pt-BR/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_atributo_aria-required	/pt-BR/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
-/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Usando_o_slider_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/slider_role
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute	/pt-BR/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute	/pt-BR/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute	/pt-BR/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute	/pt-BR/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
-/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/slider_role
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Utilizando_o_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Test_Cases	/pt-BR/docs/Web/Accessibility/ARIA
 /pt-BR/docs/Web/Accessibility/ARIA/Guia_para_implementar_o_leitor_de_tela_ARIA	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
@@ -826,7 +825,6 @@
 /pt-BR/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets	/pt-BR/docs/Learn/Forms/How_to_build_custom_form_controls
 /pt-BR/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form	/pt-BR/docs/Learn/Forms/How_to_structure_a_web_form
 /pt-BR/docs/Web/Guide/HTML/Forms/Meu_primeiro_formulario_HTML	/pt-BR/docs/Learn/Forms/Your_first_form
-/pt-BR/docs/Web/Guide/HTML/Forms/Os_widgets_nativos	/pt-BR/docs/Learn/Forms/Basic_native_form_controls
 /pt-BR/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/pt-BR/docs/Learn/Forms/Sending_and_retrieving_form_data
 /pt-BR/docs/Web/Guide/HTML/Using_data_attributes	/pt-BR/docs/Learn/HTML/Howto/Use_data_attributes
 /pt-BR/docs/Web/Guide/Introducao_ao_Desenvolvimento_Web	/pt-BR/docs/Web/Guide/Introduction_to_Web_development

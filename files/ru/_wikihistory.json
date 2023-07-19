@@ -3496,10 +3496,6 @@
     "modified": "2020-08-27T17:26:46.914Z",
     "contributors": ["sergserg213", "Vorteri", "klavatron"]
   },
-  "Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-18T21:06:53.326Z",
-    "contributors": ["gladisihor"]
-  },
   "Mozilla/Add-ons/WebExtensions/What_are_WebExtensions": {
     "modified": "2020-05-17T16:42:52.348Z",
     "contributors": ["kollieartwolf", "T1mL3arn", "idma88", "flammenmensch"]
@@ -17416,6 +17412,10 @@
   "orphaned/Mozilla/Add-ons/WebExtensions/Debugging": {
     "modified": "2019-03-29T04:27:38.888Z",
     "contributors": ["karr1d"]
+  },
+  "orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites": {
+    "modified": "2019-03-18T21:06:53.326Z",
+    "contributors": ["gladisihor"]
   },
   "orphaned/Toolkit_API": {
     "modified": "2019-01-16T14:44:25.079Z",
