@@ -50,7 +50,7 @@ function refreshPopupWindow() {
     popupWindow.location.reload(true);
   } else {
     // Abre una nueva ventana emergente
-    popupWindow = window.open("popup.html","dataWindow");
+    popupWindow = window.open("popup.html", "dataWindow");
   }
 }
 ```
