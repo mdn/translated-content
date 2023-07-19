@@ -21,11 +21,15 @@ div.avertissement {
   border: 2px solid yellow;
   color: white;
   background-color: darkred;
-  padding:  0.8em 0.8em 0.6em;
+  padding: 0.8em 0.8em 0.6em;
 }
 
 #personnalise {
-  font: 16px Lucida Grande, Arial, Helvetica, sans-serif;
+  font:
+    16px Lucida Grande,
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 ```
 

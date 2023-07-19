@@ -85,10 +85,11 @@ const header = (
 > **Nota:** Los paréntesis en el fragmento anterior no son exclusivos de JSX y no tienen ningún efecto en la aplicación. Son una señal para ti (y tu computadora) de que las múltiples líneas de código que contiene forman parte de una misma expresión. También podríamos escribir la expresión del encabezado de esta manera:
 >
 > ```jsx
-> const header = <header>
-> <h1>Mozilla Developer Network</h1>
->
-> </header>
+> const header = (
+>   <header>
+>     <h1>Mozilla Developer Network</h1>
+>   </header>
+> );
 > ```
 >
 > Sin embargo, esto luce un poco raro, ya que la etiqueta [`<header>`](/es/docs/Web/HTML/Element/header) que inicia la expresión no tiene sangría en la misma posición que su correspondiente etiqueta de cierre.
@@ -96,8 +97,10 @@ const header = (
 Por supuesto, tu navegador no puede leer JSX sin ayuda. Al compilarla (usando una herramienta como [Babel](https://babeljs.io/) o [Parcel](https://parceljs.org/)), nuestra expresión de encabezado se vería así:
 
 ```js
-const header = React.createElement("header", null,
-  React.createElement("h1", null, "Mozilla Developer Network")
+const header = React.createElement(
+  "header",
+  null,
+  React.createElement("h1", null, "Mozilla Developer Network"),
 );
 ```
 
@@ -196,9 +199,9 @@ En React, un **componente** es un módulo reutilizable que representa una parte 
 Abramos `src/App.js`, ya que nuestro navegador nos pide que lo editemos. Este archivo contiene nuestro primer componente —`App`—, y algunas otras líneas de código:
 
 ```jsx
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -212,8 +215,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -230,9 +232,9 @@ El archivo `App.js` se compone de tres partes principales: algunas declaraciones
 Las declaraciones `import` en la parte superior del archivo le permiten a `App.js` utilizar código que ha sido definido en otra parte. Revisemos estas declaraciones más detalladamente.
 
 ```js
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 ```
 
 La primera declaración importa la biblioteca React como tal. Dado que React convierte el JSX que escribimos en `React.createElement()`, todos los componentes de React deben importar el módulo `React`. Si omites este paso, tu aplicación producirá un error.
@@ -262,8 +264,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
       </header>
@@ -286,9 +287,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          ¡Hola, mundo!
-        </p>
+        <p>¡Hola, mundo!</p>
       </header>
     </div>
   );
@@ -304,13 +303,13 @@ En la parte inferior del archivo `App.js`, la declaración `export default App` 
 Vamos a abrir el archivo `src/index.js`, ya que es en este donde el componente `App` está siendo utilizado. Este archivo es el punto de entrada para nuestra aplicación, e inicialmente luce así:
 
 ```jsx
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
@@ -334,12 +333,12 @@ Los [Service workers](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 Finalmente, tu archivo `index.js` debería verse así:
 
 ```jsx
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ## Variables y props
@@ -365,9 +364,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          ¡Hola, mundo!
-        </p>
+        <p>¡Hola, mundo!</p>
       </header>
     </div>
   );
@@ -383,9 +380,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          ¡Hola, {subject}!
-        </p>
+        <p>¡Hola, {subject}!</p>
       </header>
     </div>
   );
@@ -403,7 +398,7 @@ Un **prop** es cualquier dato que se pasa a un componente de React. Los props se
 Agrega un prop de `subject` a la llamada del componente `<App />`, con un valor de `Clarice`. Al terminar, tu código debería verse similar a este:
 
 ```jsx
-ReactDOM.render(<App subject="Clarice" />, document.getElementById('root'));
+ReactDOM.render(<App subject="Clarice" />, document.getElementById("root"));
 ```
 
 Volviendo a `App.js`, vamos a revisar nuevamente la función `App` como tal, la cual se lee así (acortando la declaración `return` por razones de brevedad):
