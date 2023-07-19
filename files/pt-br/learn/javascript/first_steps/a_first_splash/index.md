@@ -654,7 +654,7 @@ Vamos brincar um pouco com alguns objetos do navegador.
 
     Cada elemento em uma página tem uma propriedade `style`, que contém um objeto no qual estão inseridos em suas propriedades todos os estilos incorporados de CSS aplicados ao respectivo elemento. Isso nos permite configurar dinamicamente novos estilos CSS nos elementos usando JavaScript.
 
-## Finalizado por enquanto...
+## Finalizado por enquanto
 
 Então é isso, para construir o exemplo — você chegou ao final, muito bem! Teste o resultado do seu código, ou [jogue com nossa versão finalizada aqui](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Se você não conseguir fazer o exemplo funcionar, compare com o [código fonte](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
 
