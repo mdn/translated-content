@@ -4086,6 +4086,7 @@
 /fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers	/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
 /fr/docs/Web/API/Worker/onmessage	/fr/docs/Web/API/Worker/message_event
 /fr/docs/Web/API/WorkerGlobalScope/close	/fr/docs/Web/API/DedicatedWorkerGlobalScope/close
+/fr/docs/Web/API/WorkerGlobalScope/console	/fr/docs/Web/API/console
 /fr/docs/Web/API/WorkerGlobalScope/onclose	/fr/docs/Web/API/DedicatedWorkerGlobalScope/close
 /fr/docs/Web/API/WorkerGlobalScope/onerror	/fr/docs/Web/API/WorkerGlobalScope/error_event
 /fr/docs/Web/API/WorkerGlobalScope/onlanguagechange	/fr/docs/Web/API/WorkerGlobalScope/languagechange_event
@@ -4206,6 +4207,7 @@
 /fr/docs/Web/CSS/-ms-user-select	/fr/docs/Web/CSS/user-select
 /fr/docs/Web/CSS/-webkit-mask-image	/fr/docs/Web/CSS/mask-image
 /fr/docs/Web/CSS/-webkit-print-color-adjust	/fr/docs/Web/CSS/print-color-adjust
+/fr/docs/Web/CSS/:-moz-focusring	/fr/docs/Web/CSS/:focus-visible
 /fr/docs/Web/CSS/:-moz-list-bullet	/fr/docs/Web/CSS/::-moz-list-bullet
 /fr/docs/Web/CSS/:-moz-list-number	/fr/docs/Web/CSS/::-moz-list-number
 /fr/docs/Web/CSS/:-moz-locale-dir(ltr)	/fr/docs/Web/CSS/:-moz-locale-dir_ltr
