@@ -2,7 +2,6 @@
 title: API Selection
 slug: Web/API/Selection_API
 translation_of: Web/API/Selection_API
-spec-urls: https://w3c.github.io/selection-api/#selection-interface
 ---
 
 {{DefaultAPISidebar("Selection API")}}
