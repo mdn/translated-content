@@ -1,5 +1,5 @@
 ---
-title: '<a>: El elemento ancla'
+title: "<a>: El elemento ancla"
 slug: Web/HTML/Element/a
 original_slug: Web/HTML/Elemento/a
 ---
@@ -237,13 +237,13 @@ Cuando se clicea sobre un {{HTMLElement("a")}} las consecuencias varían de acue
 
 ¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
 
-| Navegadores de escritorio                                                                                                                             | Windows 8.1 | OS X 10.9                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------- |
-| Firefox 30.0                                                                                                                                          | Si          | Si                              |
+| Navegadores de escritorio                                                                      | Windows 8.1 | OS X 10.9                       |
+| ---------------------------------------------------------------------------------------------- | ----------- | ------------------------------- |
+| Firefox 30.0                                                                                   | Si          | Si                              |
 | Chrome ≥39 ([Chromium bug 388666](https://code.google.com/p/chromium/issues/detail?id=388666)) | Si          | Si                              |
-| Safari 7.0.5                                                                                                                                          | N/A         | Sólo cuando tiene un `tabindex` |
-| Internet Explorer 11                                                                                                                                  | Si          | N/A                             |
-| Presto (Opera 12)                                                                                                                                     | Si          | Si                              |
+| Safari 7.0.5                                                                                   | N/A         | Sólo cuando tiene un `tabindex` |
+| Internet Explorer 11                                                                           | Si          | N/A                             |
+| Presto (Opera 12)                                                                              | Si          | Si                              |
 
 ¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
 

@@ -7,6 +7,7 @@ original_slug: Web/HTML/Elemento/caption
 ### Definición
 
 - Es el encargado de darle un título descriptivo a las tablas.
+
   - : **Sus etiquetas son**: `<caption>` y `</caption>` (ambas obligatorias).
 
     **Crea una caja**: .

@@ -7,6 +7,7 @@ original_slug: Web/HTML/Elemento/meta
 ### Definición
 
 - **meta** de "metainformation" - metainformación. Sirve para aportar información sobre el documento..
+
   - : **Sus etiquetas son**: `<meta>` (solo tiene una).
 
     **Está definido como**: Elemento [de cabecera](/es/HTML/Elemento/Tipos_de_elementos#de_cabecera).

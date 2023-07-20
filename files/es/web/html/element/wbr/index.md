@@ -14,11 +14,11 @@ Este elemento fue implementado por primera vez en Internet Explorer 5.5 y fue of
 
 ## Contexto de uso
 
-| Contenido permitido        | Vacío                                                                                                                      |
-| -------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido        | Vacío                                                                                                           |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | Omisión de etiquetas       | Es un {{Glossary("empty element")}}; debe de tener una etiqueta de inicio pero no debe de tener una de cierre . |
-| Elementos padre permitidos | Cualquier elemento que permita contenido estático de texto.                                                                |
-| Documento normativo        | [HTML 5, section 4.6.24](http://dev.w3.org/html5/spec/text-level-semantics.html#the-wbr-element)                           |
+| Elementos padre permitidos | Cualquier elemento que permita contenido estático de texto.                                                     |
+| Documento normativo        | [HTML 5, section 4.6.24](http://dev.w3.org/html5/spec/text-level-semantics.html#the-wbr-element)                |
 
 ## Atributos
 

@@ -19,11 +19,11 @@ La presentación del elemento puede variar considerablamente entre navegadores y
 {{EmbedLiveSample("summary_example1", 700, 30)}}
 
 | **[Value](#value)**             | Una {{domxref("DOMString")}} de siete caracteres que especifica un {{cssxref("&lt;color&gt;")}} en notación hexadecimal en minúsculas |
-| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Sucesos**                     | [`change`](/es/docs/Web/Reference/Events/change) e [`input`](/es/docs/Web/Reference/Events/input)                                                                                                   |
-| **Atributos comunes admitidos** | [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete) y [`list`](/es/docs/Web/HTML/Element/input#list)                                               |
-| **Atributos IDL**               | `list` y `value`                                                                                                                                      |
-| **Métodos**                     | {{domxref("HTMLInputElement.select", "select()")}}                                                                                  |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sucesos**                     | [`change`](/es/docs/Web/Reference/Events/change) e [`input`](/es/docs/Web/Reference/Events/input)                                     |
+| **Atributos comunes admitidos** | [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete) y [`list`](/es/docs/Web/HTML/Element/input#list)                       |
+| **Atributos IDL**               | `list` y `value`                                                                                                                      |
+| **Métodos**                     | {{domxref("HTMLInputElement.select", "select()")}}                                                                                    |
 
 ## Valor
 

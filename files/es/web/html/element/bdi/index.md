@@ -13,11 +13,11 @@ Es útil al embeber o incrustart texto del que se desconoce la direccionalidad, 
 > **Nota:** Aunque el mismo efecto visual se puede conseguir usando la regla CSS {{cssxref("unicode-bidi")}}`: isolate` en un elemento {{HTMLElement("span")}} u otro elemento de formateado de texto, el significado semántico sólo se consigue usando el elemento `<bdi>`. En especial los navegadores permiten ignorar los estilos CSS. En tal caso el texto se mostrará correctamente usando el elemento HTML pero será basura usando CSS para fijar la semántica.
 
 | [Content categories](/es/docs/HTML/Content_categories) | [Flow content](/es/docs/HTML/Content_categories#Flow_content), [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content), contenido palpable. |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                                              | [Phrasing content](/es/docs/HTML/Content_categories#Phrasing_content).                                                                                                                               |
-| Omisión de etiqueta                                                              | {{no_tag_omission}}                                                                                                                                                                                                                    |
-| Elementos padre permitidos                                                       | Any element that accepts [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content).                                                                                                      |
-| Interfaz DOM                                                                     | {{domxref("HTMLElement")}}                                                                                                                                                                                                        |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                    | [Phrasing content](/es/docs/HTML/Content_categories#Phrasing_content).                                                                                    |
+| Omisión de etiqueta                                    | {{no_tag_omission}}                                                                                                                                       |
+| Elementos padre permitidos                             | Any element that accepts [phrasing content](/es/docs/HTML/Content_categories#Phrasing_content).                                                           |
+| Interfaz DOM                                           | {{domxref("HTMLElement")}}                                                                                                                                |
 
 ## Atributos
 
