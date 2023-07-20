@@ -12,7 +12,7 @@ Este artigo mostra como definir os modelos para o website [LocalLibrary](/pt-BR/
     <tr>
       <th scope="row">Pré-requisitos:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/skeleton_website"
           >Django Tutorial Part 2: Criar um esqueleto de um site</a
         >.
       </td>

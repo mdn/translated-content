@@ -1,17 +1,6 @@
 ---
 title: Notre premier code JavaScript
 slug: Learn/JavaScript/First_steps/A_first_splash
-tags:
-  - Apprendre
-  - Article
-  - CodingScripting
-  - Débutant
-  - Fonctions
-  - JavaScript
-  - Objets
-  - Opérateurs
-  - Variables
-  - structures conditionnelles
 translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
 

@@ -12,7 +12,7 @@ Este artigo introduz brevemente bancos de dados e como usá-los com aplicativos 
     <tr>
       <th scope="row">Pré-requisitos:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
+        <a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
           >Tutorial Express Parte 2: Criando o esqueleto de um website</a
         >
       </td>

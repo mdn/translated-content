@@ -1,12 +1,7 @@
 ---
 title: Transférer des fichiers vers un serveur web
 slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
-tags:
-  - Beginner
-  - NeedsActiveLearning
-  - WebMechanics
 translation_of: Learn/Common_questions/Upload_files_to_a_web_server
-original_slug: Learn/Common_questions/Upload_files_to_a_web_server
 ---
 
 Cet article illustre comment publier votre site en ligne grâce à des outils {{Glossary("FTP")}}.

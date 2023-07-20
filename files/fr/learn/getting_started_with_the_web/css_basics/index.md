@@ -1,15 +1,7 @@
 ---
 title: Les bases des CSS
 slug: Learn/Getting_started_with_the_web/CSS_basics
-tags:
-  - Apprendre
-  - CSS
-  - Code CSS
-  - Débutant
-  - Styles
-  - Web
 translation_of: Learn/Getting_started_with_the_web/CSS_basics
-original_slug: Apprendre/Commencer_avec_le_web/Les_bases_CSS
 ---
 
 {{LearnSidebar}}

@@ -169,22 +169,19 @@ So our final module (for now) looks like this:
 
 If you want to follow along with the example, save the above our module into a file called `add.wat`, then convert it into a binary file called `add.wasm` using wabt (see [Converting WebAssembly text format to wasm](/pt-BR/docs/WebAssembly/Text_format_to_wasm) for details).
 
-Next, we'll load our binary into a typed array called `addCode` (as described in [Fetching WebAssembly Bytecode](/pt-BR/docs/WebAssembly/Fetching_WebAssembly_bytecode)), compile and instantiate it, and execute our `add` function in JavaScript (we can now find `add()` in the [`exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) property of the instance):
+Next, we'll load our binary into a typed array called `addCode` (as described in [Fetching WebAssembly Bytecode](/pt-BR/docs/WebAssembly/Fetching_WebAssembly_bytecode)), compile and instantiate it, and execute our `add` function in JavaScript (we can now find `add()` in the [`exports`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) property of the instance):
 
 ```js
-fetchAndInstantiate('add.wasm').then(function(instance) {
-   console.log(instance.exports.add(1, 2));  // "3"
+fetchAndInstantiate("add.wasm").then(function (instance) {
+  console.log(instance.exports.add(1, 2)); // "3"
 });
 
 // fetchAndInstantiate() found in wasm-utils.js
 function fetchAndInstantiate(url, importObject) {
-  return fetch(url).then(response =>
-    response.arrayBuffer()
-  ).then(bytes =>
-    WebAssembly.instantiate(bytes, importObject)
-  ).then(results =>
-    results.instance
-  );
+  return fetch(url)
+    .then((response) => response.arrayBuffer())
+    .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+    .then((results) => results.instance);
 }
 ```
 
@@ -221,8 +218,8 @@ This is functionally equivalent to including a separate function statement outsi
 The JavaScript code to call our above module looks like so:
 
 ```js
-fetchAndInstantiate('call.wasm').then(function(instance) {
-  console.log(instance.exports.getAnswerPlus1());  // "43"
+fetchAndInstantiate("call.wasm").then(function (instance) {
+  console.log(instance.exports.getAnswerPlus1()); // "43"
 });
 ```
 
@@ -253,13 +250,13 @@ This would look like the following:
 ```js
 var importObject = {
   console: {
-    log: function(arg) {
+    log: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetchAndInstantiate('logger.wasm', importObject).then(function(instance) {
+fetchAndInstantiate("logger.wasm", importObject).then(function (instance) {
   instance.exports.logIt();
 });
 ```
@@ -274,9 +271,9 @@ From JavaScript's point of view, it's is as though memory is all inside one big 
 
 So a string is just a sequence of bytes somewhere inside this linear memory. Let's assume that we've written a suitable string of bytes to memory; how do we pass that string out to JavaScript?
 
-The key is that JavaScript can create WebAssembly linear memory instances via the {{jsxref("WebAssembly.Memory()")}} interface, and access an existing memory instance (currently you can only have one per module instance) using the associated instance methods. Memory instances have a [`buffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
+The key is that JavaScript can create WebAssembly linear memory instances via the {{jsxref("WebAssembly.Memory()")}} interface, and access an existing memory instance (currently you can only have one per module instance) using the associated instance methods. Memory instances have a [`buffer`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
 
-Memory instances can also grow, for example via the [`Memory.grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow) method in JavaScript. When growth occurs, since `ArrayBuffer`s can't change size, the current `ArrayBuffer` is detached and a new `ArrayBuffer` is created to point to the newer, bigger memory. This means all we need to do to pass a string to JavaScript is to pass out the offset of the string in linear memory along with some way to indicate the length.
+Memory instances can also grow, for example via the [`Memory.grow()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow) method in JavaScript. When growth occurs, since `ArrayBuffer`s can’t change size, the current `ArrayBuffer` is detached and a new `ArrayBuffer` is created to point to the newer, bigger memory. This means all we need to do to pass a string to JavaScript is to pass out the offset of the string in linear memory along with some way to indicate the length.
 
 While there are many different ways to encode a string's length in the string itself (for example, C strings); for simplicity here we just pass both offset and length as parameters:
 
@@ -294,7 +291,7 @@ consoleLogString(offset, length) {
 }
 ```
 
-The last missing piece of the puzzle is where `consoleLogString` gets access to the WebAssembly `memory`. WebAssembly gives us a lot of flexibility here: we can either create a [`Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) object in JavaScript and have the WebAssembly module import the memory, or we can have the WebAssembly module create the memory and export it to JavaScript.
+The last missing piece of the puzzle is where `consoleLogString` gets access to the WebAssembly `memory`. WebAssembly gives us a lot of flexibility here: we can either create a [`Memory`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) object in JavaScript and have the WebAssembly module import the memory, or we can have the WebAssembly module create the memory and export it to JavaScript.
 
 For simplicity, let's create it in JavaScript then import it into WebAssembly. Our `import` statement is written as follows:
 
@@ -324,11 +321,11 @@ Our final wasm module looks like this:
 Now from JavaScript we can create a Memory with 1 page and pass it in. This results in "Hi" being printed to the console:
 
 ```js
-var memory = new WebAssembly.Memory({initial:1});
+var memory = new WebAssembly.Memory({ initial: 1 });
 
 var importObj = { console: { log: consoleLogString }, js: { mem: memory } };
 
-fetchAndInstantiate('logger2.wasm', importObj).then(function(instance) {
+fetchAndInstantiate("logger2.wasm", importObj).then(function (instance) {
   instance.exports.writeHi();
 });
 ```
@@ -443,7 +440,7 @@ The full module all together looks like this, and can be found in our [wasm-tabl
 We load it into a webpage using the following JavaScript:
 
 ```js
-fetchAndInstantiate('wasm-table.wasm').then(function(instance) {
+fetchAndInstantiate("wasm-table.wasm").then(function (instance) {
   console.log(instance.exports.callByIndex(0)); // returns 42
   console.log(instance.exports.callByIndex(1)); // returns 13
   console.log(instance.exports.callByIndex(2));
@@ -453,15 +450,15 @@ fetchAndInstantiate('wasm-table.wasm').then(function(instance) {
 
 > **Nota:** You can find this example on GitHub as [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
 
-> **Nota:** Just like Memory, Tables can also be created from JavaScript (see [`WebAssembly.Table()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table)) as well as imported to/from another wasm module.
+> **Nota:** Just like Memory, Tables can also be created from JavaScript (see [`WebAssembly.Table()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table)) as well as imported to/from another wasm module.
 
 ### Mutating tables and dynamic linking
 
-Because JavaScript has full access to function references, the Table object can be mutated from JavaScript by the [`grow()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) and [`set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) methods. When WebAssembly gets [reference types](http://webassembly.org/docs/gc/), WebAssembly code will be able to mutate tables itself with `get_elem`/`set_elem` instructions.
+Because JavaScript has full access to function references, the Table object can be mutated from JavaScript by the [`grow()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow), [`get()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) and [`set()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set) methods. When WebAssembly gets [reference types](http://webassembly.org/docs/gc/), WebAssembly code will be able to mutate tables itself with `get_elem`/`set_elem` instructions.
 
 Because tables are mutable, they can be used to implement sophisticated load-time and run-time [dynamic linking schemes](http://webassembly.org/docs/dynamic-linking). When a program is dynamically linked, multiple instances share the same memory and table. This is symmetric to a native application where multiple compiled `.dll`s share a single process's address space.
 
-To see this in action, we'll create a single import object containing a Memory object and a Table object, and pass this same import object to multiple [`instantiate()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) calls.
+To see this in action, we'll create a single import object containing a Memory object and a Table object, and pass this same import object to multiple [`instantiate()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate) calls.
 
 Our `.wat` examples look like so:
 
@@ -514,16 +511,16 @@ After converting to assembly, we then use `shared0.wasm` and `shared1.wasm` in J
 ```js
 var importObj = {
   js: {
-    memory : new WebAssembly.Memory({ initial: 1 }),
-    table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
-  }
+    memory: new WebAssembly.Memory({ initial: 1 }),
+    table: new WebAssembly.Table({ initial: 1, element: "anyfunc" }),
+  },
 };
 
 Promise.all([
-  fetchAndInstantiate('shared0.wasm', importObj),
-  fetchAndInstantiate('shared1.wasm', importObj)
-]).then(function(results) {
-  console.log(results[1].exports.doIt());  // prints 42
+  fetchAndInstantiate("shared0.wasm", importObj),
+  fetchAndInstantiate("shared1.wasm", importObj),
+]).then(function (results) {
+  console.log(results[1].exports.doIt()); // prints 42
 });
 ```
 

@@ -24,7 +24,7 @@ Neste artigo iremos pegar um simples documento HTML e aplicar o CSS nele, aprend
             >como trabalhar com arquivos</a
           >, e conhecimento básico sobre HTML (estude
           <a
-            href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
+            href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
             >Introdução ao HTML</a
           >.)
         </p>
@@ -134,7 +134,7 @@ li {
 
 Experimente adicionar isto ao seu CSS agora.
 
-A propriedade `list-style-type` é uma boa propriedade para se ver no MDN para ver quais valores são suportados. Dê uma olhada na página para [`list-style-type`](/en-US/docs/Web/CSS/list-style-type) e encontrará um exemplo interativo no topo da página para experimentar alguns valores diferentes nele, todos os valores permitidos são detalhados mais abaixo na página.
+A propriedade `list-style-type` é uma boa propriedade para se ver no MDN para ver quais valores são suportados. Dê uma olhada na página para [`list-style-type`](/pt-BR/docs/Web/CSS/list-style-type) e encontrará um exemplo interativo no topo da página para experimentar alguns valores diferentes nele, todos os valores permitidos são detalhados mais abaixo na página.
 
 Olhando para essa página você descobrirá que, além de remover a marcação da lista, que você também pode alterá-los — Teste mudá-los para marcação quadrada, usando valores de `square`.
 
@@ -218,7 +218,7 @@ O exemplo ativo abaixo inclui as duas regras acima. Verifique adicionando uma re
 
 ## Estilizando coisas baseadas no estado
 
-O tipo final de estilo, que vamos dar uma olhada neste tutorial, é a habilidade de estilizar coisas com base em seu estado. Um exemplo direto disso é quando estilizamos links. Quando aplicamos um estilo a um link, precisamos especificar o elemento [`<a>`](/en-US/docs/Web/HTML/Element/a) (âncora). Isto possui diferentes estados, dependendo se ele foi visitado, se não foi visitado, se o mouse está passando por ele, se foi teclado ou no processo de ser clicado (ativado). Você pode usar CSS para especificar estes diferentes estados — o CSS abaixo estiliza links não visitados com a cor rosa e links visitados com a cor verde.
+O tipo final de estilo, que vamos dar uma olhada neste tutorial, é a habilidade de estilizar coisas com base em seu estado. Um exemplo direto disso é quando estilizamos links. Quando aplicamos um estilo a um link, precisamos especificar o elemento [`<a>`](/pt-BR/docs/Web/HTML/Element/a) (âncora). Isto possui diferentes estados, dependendo se ele foi visitado, se não foi visitado, se o mouse está passando por ele, se foi teclado ou no processo de ser clicado (ativado). Você pode usar CSS para especificar estes diferentes estados — o CSS abaixo estiliza links não visitados com a cor rosa e links visitados com a cor verde.
 
 ```css
 a:link {

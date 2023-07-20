@@ -1,19 +1,7 @@
 ---
 title: Formatage avancé du texte
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-tags:
-  - Apprendre
-  - Citation
-  - Codage
-  - Débutant
-  - Guide
-  - HTML
-  - Texte
-  - abréviation
-  - listes descriptives
-  - sémantique
 translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-original_slug: Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}

@@ -13,10 +13,10 @@ Positioning allows you to take elements out of the normal document layout flow, 
       <th scope="row">Prerequisites:</th>
       <td>
         HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), and an idea of How CSS works (study
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction to CSS</a
         >.)
       </td>

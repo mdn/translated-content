@@ -1,16 +1,7 @@
 ---
 title: Pseudo-classes et pseudo-éléments
 slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
-tags:
-  - Apprendre
-  - CSS
-  - Débutant
-  - Pseudo
-  - Pseudo-class
-  - Pseudo-element
-  - Sélecteurs
 translation_of: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
-original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-éléments
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}

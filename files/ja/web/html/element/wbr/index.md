@@ -13,15 +13,15 @@ slug: Web/HTML/Element/wbr
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Content_categories"
           >コンテンツカテゴリ</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -39,7 +39,7 @@ slug: Web/HTML/Element/wbr
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>

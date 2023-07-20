@@ -2,7 +2,6 @@
 title: Manipuler des documents
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
-original_slug: Apprendre/JavaScript/Client-side_web_APIs/Manipulating_documents
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}

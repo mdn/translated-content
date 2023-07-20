@@ -14,7 +14,7 @@ Este artigo é uma introdução às tabelas HTML, cobrindo o básico, como linha
       <th scope="row">Pré-requisitos:</th>
       <td>
         Noções básicas de HTML (consulte
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introdução ao HTML</a
         >
         ).

@@ -10,6 +10,15 @@ build/
 /files/**/conflicting/**/*.md
 /files/**/orphaned/**/*.md
 
+# XXX Ignored until https://github.com/prettier/prettier/issues/11828 is fixed
+/files/fr/glossary/cross_axis/index.md
+/files/fr/glossary/flex/index.md
+/files/fr/glossary/flex_container/index.md
+/files/fr/glossary/flexbox/index.md
+/files/fr/glossary/grid_axis/index.md
+/files/fr/glossary/grid_lines/index.md
+/files/fr/glossary/main_axis/index.md
+
 # A full pass on all Markdown files is being performed.
 # The following folders still need a full pass:
 
@@ -77,41 +86,28 @@ build/
 /files/ko/web/svg/**/*.md
 
 # pt-br
-/files/pt-br/games/**/*.md
-/files/pt-br/learn/**/*.md
 /files/pt-br/learn/css/**/*.md
 /files/pt-br/learn/html/**/*.md
 /files/pt-br/learn/javascript/**/*.md
 /files/pt-br/learn/server-side/**/*.md
-/files/pt-br/mdn/**/*.md
-/files/pt-br/web/**/*.md
 /files/pt-br/web/api/**/*.md
 /files/pt-br/web/css/**/*.md
 /files/pt-br/web/html/**/*.md
 /files/pt-br/web/http/**/*.md
 /files/pt-br/web/javascript/**/*.md
 /files/pt-br/web/svg/**/*.md
-/files/pt-br/webassembly/**/*.md
 
 # ru
-/files/ru/glossary/**/*.md
-/files/ru/learn/**/*.md
 /files/ru/learn/css/**/*.md
 /files/ru/learn/html/**/*.md
 /files/ru/learn/javascript/**/*.md
 /files/ru/learn/server-side/**/*.md
-/files/ru/mdn/**/*.md
-/files/ru/mozilla/**/*.md
-/files/ru/mozilla/add-ons/**/*.md
-/files/ru/mozilla/add-ons/webextensions/api/**/*.md
-/files/ru/mozilla/firefox**/*.md
 /files/ru/web/api/**/*.md
 /files/ru/web/css/**/*.md
 /files/ru/web/html/**/*.md
 /files/ru/web/http/**/*.md
 /files/ru/web/javascript/**/*.md
 /files/ru/web/svg/**/*.md
-/files/ru/webassembly/**/*.md
 
 # zh-cn
 /files/zh-cn/learn/css/**/*.md
