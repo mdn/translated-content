@@ -81,10 +81,12 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 ## Ejemplo
 
 ```html
-<p>Conforme al sitio web de Mozilla,
-  <q
-  cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0
-  fue lanzado en 2004 y se convirtió en un gran éxito.</q></p>
+<p>
+  Conforme al sitio web de Mozilla,
+  <q cite="https://www.mozilla.org/en-US/about/history/details/"
+    >Firefox 1.0 fue lanzado en 2004 y se convirtió en un gran éxito.</q
+  >
+</p>
 ```
 
 {{EmbedLiveSample('Ejemplo')}}

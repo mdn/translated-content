@@ -229,8 +229,8 @@ código:
 
 ```html
 <p>
- Texto normal y ...
- <font size="5" color="#0000ff"> Texto distinto. </font>
+  Texto normal y ...
+  <font size="5" color="#0000ff"> Texto distinto. </font>
 </p>
 ```
 

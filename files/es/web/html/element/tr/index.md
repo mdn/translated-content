@@ -53,7 +53,7 @@ Este elemento incluye los [global attributes](/es/docs/HTML/Global_attributes).
     - `bottom`,que pondrá el texto tan cerca de la parte inferior de la célula como sae posible;
     - `middle`,que centrará el texto en la celda;
     - y `top`, que pondrá el texto como cerca de la parte superior de la célula como es posible.
-    > **Nota:** No utilice este atributo, ya que está obsoleto (y no es compatible) en el último estándar: {{cssxref("vertical-align")}} en su lugar establecer la propiedad CSS en él.
+      > **Nota:** No utilice este atributo, ya que está obsoleto (y no es compatible) en el último estándar: {{cssxref("vertical-align")}} en su lugar establecer la propiedad CSS en él.
 
 ## Interfaz DOM
 

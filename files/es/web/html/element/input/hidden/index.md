@@ -13,7 +13,7 @@ original_slug: Web/HTML/Elemento/input/hidden
 ## Ejemplo
 
 ```html
-<input id="prodId" name="prodId" type="hidden" value="xm234jq">
+<input id="prodId" name="prodId" type="hidden" value="xm234jq" />
 ```
 
 {{ EmbedLiveSample('Basic_example', 600, 40) }}
@@ -69,7 +69,11 @@ El formulario HTML puede verse un como como este:
 <form>
   <div>
     <label for="title">Título del artículo:</label>
-    <input type="text" id="titulo" name="titulo" value="Mi excelente artículo del blog">
+    <input
+      type="text"
+      id="titulo"
+      name="titulo"
+      value="Mi excelente artículo del blog" />
   </div>
   <div>
     <label for="content">Contenido del artículo:</label>
@@ -80,7 +84,7 @@ Este es el contenido de mi excelente actículo del blog. ¡Espero lo disfrutes!
   <div>
     <button type="submit">Actualizar artículo</button>
   </div>
-  <input type="hidden" id="acticuloId" name="articuloId" value="34657">
+  <input type="hidden" id="acticuloId" name="articuloId" value="34657" />
 </form>
 ```
 
@@ -107,7 +111,8 @@ label {
   padding-right: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   flex: 7;
   font-family: sans-serif;
   font-size: 1.1rem;

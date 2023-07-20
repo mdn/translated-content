@@ -228,7 +228,7 @@ código:
 
 ```html
 <div style="color: blue;">
- <h2> Ejemplo de div y span </h2>
+  <h2>Ejemplo de div y span</h2>
   <p>
     Esto es un párrafo dentro de un div,
     <span style="color: red;"> y esto un span dentro de un párrafo.</span>

@@ -85,7 +85,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 Para incluir una hoja de estilos en una página, use la siguiente sintaxis:
 
 ```html
-<link href="style.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
 ```
 
 ### Proporcionando hojas de estilos alternativas
@@ -95,9 +95,9 @@ También se pueden especificar [hojas de estilos alternativas](/es/docs/Web/CSS/
 El usuario puede elegir cuál hoja de estilos usar, seleccionándola desde el menú Ver > Estilo de Página. Esto proporciona una manera en que los usuarios pueden ver múltiples versiones de una misma página.
 
 ```html
-<link href="default.css" rel="stylesheet" title="Default Style">
-<link href="fancy.css" rel="alternate stylesheet" title="Fancy">
-<link href="basic.css" rel="alternate stylesheet" title="Basic">
+<link href="default.css" rel="stylesheet" title="Default Style" />
+<link href="fancy.css" rel="alternate stylesheet" title="Fancy" />
+<link href="basic.css" rel="alternate stylesheet" title="Basic" />
 ```
 
 ### Eventos de carga de hojas de estilos
@@ -106,16 +106,20 @@ Se puede determinar cuando una hoja de estilos fue cargada estableciendo la ejec
 
 ```html
 <script>
-function sheetLoaded() {
-  // Hacer algo interesante; la hoja de estilos ha sido cargada
-}
+  function sheetLoaded() {
+    // Hacer algo interesante; la hoja de estilos ha sido cargada
+  }
 
-function sheetError() {
-  alert("¡Ocurrió un error al cargar la hoja de estilos!");
-}
+  function sheetError() {
+    alert("¡Ocurrió un error al cargar la hoja de estilos!");
+  }
 </script>
 
-<link rel="stylesheet" href="mystylesheet.css" onload="sheetLoaded()" onerror="sheetError()">
+<link
+  rel="stylesheet"
+  href="mystylesheet.css"
+  onload="sheetLoaded()"
+  onerror="sheetError()" />
 ```
 
 > **Nota:** El evento `load` se dispara una vez que la hoja de estilos y todo su contenido importado ha sido cargado y procesado, e inmediatamente antes de que los estilos sean aplicados al contenido.

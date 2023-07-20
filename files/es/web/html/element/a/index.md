@@ -144,9 +144,7 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
 ```html
 <!-- anclaje a un archivo externo -->
-<a href="https://www.mozilla.com/">
-Enlace externo
-</a>
+<a href="https://www.mozilla.com/">Enlace externo</a>
 ```
 
 #### Resultado
@@ -157,9 +155,7 @@ Enlace externo
 
 ```html
 <!-- enlace a un elemento en esta página con id="attr-href" -->
-<a href="#attr-href">
-Descripción de enlaces de la misma página
-</a>
+<a href="#attr-href">Descripción de enlaces de la misma página</a>
 ```
 
 #### Resultado
@@ -172,8 +168,7 @@ Este ejemplo utiliza una imagen que enlaza a la página de inicio de MDN. La pá
 
 ```html
 <a href="https://developer.mozilla.org/en-US/" target="_blank">
-  <img src="mdn_logo.png"
-       alt="MDN logo" />
+  <img src="mdn_logo.png" alt="MDN logo" />
 </a>
 ```
 
@@ -210,13 +205,17 @@ Para detalles adicionales acerca del esquema de la URL `tel`, consultar {{RFC(28
 Si deseas permitir a los usurios descargar una elemento HTML {{HTMLElement("canvas")}} como una imagen, puedes crear un enlace con una atributo `download` y la información canvas como un archivo URL:
 
 ```js
-var link = document.createElement('a');
-link.innerHTML = 'download image';
+var link = document.createElement("a");
+link.innerHTML = "download image";
 
-link.addEventListener('click', function(ev) {
+link.addEventListener(
+  "click",
+  function (ev) {
     link.href = canvas.toDataURL();
     link.download = "mypainting.png";
-}, false);
+  },
+  false,
+);
 
 document.body.appendChild(link);
 ```

@@ -226,7 +226,13 @@ original_slug: Web/HTML/Elemento/big
 
 ```html
 <p>
-  Texto normal y texto <big> cada <big> vez <big> más <big> grande. </big></big></big></big>
+  Texto normal y texto
+  <big>
+    cada
+    <big>
+      vez <big> más <big> grande. </big></big></big
+    ></big
+  >
 </p>
 ```
 

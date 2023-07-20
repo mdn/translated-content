@@ -223,7 +223,7 @@ código:
 
 ```html
 <div style="border: 1px dotted blue;">
-  <h4>Ejemplo de div y span </h4>
+  <h4>Ejemplo de div y span</h4>
   <p>
     Esto es un párrafo dentro de un div,
     <span style="color: red;"> y esto un span dentro de un párrafo. </span>

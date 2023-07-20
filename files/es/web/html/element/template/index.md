@@ -59,8 +59,8 @@ if ('content' in document.createElement('template')) {
 
   // Instanciar la tabla con el tbody existente
   // y la fila con el template
-  var t = document.querySelector('#productrow'),
-  td = t.content.querySelectorAll("td");
+  var t = document.querySelector("#productrow"),
+    td = t.content.querySelectorAll("td");
   td[0].textContent = "1235646565";
   td[1].textContent = "Stuff";
 

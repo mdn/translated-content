@@ -56,8 +56,7 @@ Las compensaciones de tiempo se especifican como valores float que indican el n√
 ## Ejemplos
 
 ```html
-<audio src="audiotest_(1).ogg"
-       autoplay>
+<audio src="audiotest_(1).ogg" autoplay>
   Your browser does not support the <code>audio</code> element.
 </audio>
 ```

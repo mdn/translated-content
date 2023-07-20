@@ -33,10 +33,14 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 El DOCTYPE usado en el siguiente ejemplo indica que es un documento HTML5.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <head>...</head>
-  <body>...</body>
+  <head>
+    ...
+  </head>
+  <body>
+    ...
+  </body>
 </html>
 ```
 

@@ -140,8 +140,7 @@ El valor de fecha y hora (el valor legible por el equipo) es el valor del atribu
 #### HTML
 
 ```html
-<p>El concierto fué el <time
-  datetime="2001-05-15T19:00">15 de Mayo</time>.</p>
+<p>El concierto fué el <time datetime="2001-05-15T19:00">15 de Mayo</time>.</p>
 ```
 
 #### Output

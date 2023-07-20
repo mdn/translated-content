@@ -220,9 +220,13 @@ original_slug: Web/HTML/Elemento/caption
 El siguiente código:
 
 ```html
-<table border='1'>
-  <caption>Tabla con caption</caption>
-  <tr> <td> tabla de una celda. </td>  </tr>
+<table border="1">
+  <caption>
+    Tabla con caption
+  </caption>
+  <tr>
+    <td>tabla de una celda.</td>
+  </tr>
 </table>
 ```
 

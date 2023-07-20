@@ -13,7 +13,10 @@ El **`<input>`** fallará la restricción de validación si la longitud del valo
 Al agregar `minlength="5"`, el valor debe estar vacío o tener cinco caracteres o más para ser válido.
 
 ```html
-<label for="fruit">Ingresa un nombre de fruta que tenga al menos 5 letras</label> <input type="text" minlength="5" id="fruit">
+<label for="fruit"
+  >Ingresa un nombre de fruta que tenga al menos 5 letras</label
+>
+<input type="text" minlength="5" id="fruit" />
 ```
 
 Podemos usar pseudoclases para estilizar el elemento en función de si el valor es válido. El valor será válido siempre que sea `null` (vacío) o tenga cinco o más caracteres. _Lima_ no es válido, _limón es válido_.
