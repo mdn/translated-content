@@ -12,14 +12,14 @@ El **elemento** **HTML `<dialog>`** representa una caja de diálogo u otro compo
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/es/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >,
         <a
-          href="/en-US/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
+          href="/es/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
           >sectioning root</a
         >
       </td>
@@ -27,7 +27,7 @@ El **elemento** **HTML `<dialog>`** representa una caja de diálogo u otro compo
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >
       </td>
@@ -40,7 +40,7 @@ El **elemento** **HTML `<dialog>`** representa una caja de diálogo u otro compo
       <th scope="row">Permitted parent elements</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
         >
       </td>

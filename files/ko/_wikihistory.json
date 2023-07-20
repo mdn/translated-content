@@ -1924,10 +1924,6 @@
     "modified": "2020-02-05T05:41:58.537Z",
     "contributors": ["SphinxKnight", "gs.won"]
   },
-  "Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2020-02-05T05:41:53.311Z",
-    "contributors": ["SphinxKnight", "jwhitlock", "JangmiJo"]
-  },
   "Mozilla/Add-ons/WebExtensions/User_actions": {
     "modified": "2020-02-05T05:41:59.190Z",
     "contributors": ["SphinxKnight", "sylee0424"]
@@ -10854,6 +10850,10 @@
   "conflicting/Web/JavaScript/Reference/Errors/Deprecated_octal": {
     "modified": "2020-03-12T19:44:24.834Z",
     "contributors": ["magnoliaa"]
+  },
+  "orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites": {
+    "modified": "2020-02-05T05:41:53.311Z",
+    "contributors": ["SphinxKnight", "jwhitlock", "JangmiJo"]
   },
   "orphaned/Web/API/Proximity_Events": {
     "modified": "2019-03-23T23:26:46.443Z",

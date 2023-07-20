@@ -1,7 +1,7 @@
 ---
 title: Secure Context (安全なコンテキスト)
 slug: Glossary/Secure_Context
-l10n: 
+l10n:
   sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---
 

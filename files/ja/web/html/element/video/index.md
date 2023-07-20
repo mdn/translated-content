@@ -431,10 +431,10 @@ AddType video/webm .webm
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >, 記述コンテンツ, 埋め込みコンテンツ。 <a href="/ja/docs/Web/HTML/Element/video#controls"><code>controls</code></a> 属性を持つ場合は、対話的コンテンツおよび知覚可能コンテンツ。
       </td>

@@ -49,7 +49,7 @@ slug: Learn/Forms/Other_form_controls
 
 以下截图显示了 macOS 上 Firefox 71 和 Safari 13，Windows 10 上 Edge 18、Yandex 14、Firefox 71 和 Chrome 79 下的默认、聚焦和禁用的 `<textarea>` 元素。
 
-![The default, focused, and disabled \<textarea> element in Firefox 71 and Safari 13 on Mac OSX and Edge 18, Yandex 14, Firefox and Chrome on Windows 10.](textarea_basic.png)
+![The default, focused, and disabled 'textarea' element in Firefox 71 and Safari 13 on Mac OSX and Edge 18, Yandex 14, Firefox and Chrome on Windows 10.](textarea_basic.png)
 
 > **备注：** 你可以在该系列的第一篇文章中整理的例子中找到一个稍微有趣的文本区域使用的[示例](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html)（[顺便看看源代码](https://github.com/mdn/learning-area/blob/main/html/forms/your-first-HTML-form/first-form-styled.html)）。
 
@@ -146,15 +146,15 @@ slug: Learn/Forms/Other_form_controls
 ```html
 <select id="multi" name="multi" multiple size="2">
   <optgroup label="fruits">
-     <option>Banana</option>
-     <option selected>Cherry</option>
-     <option>Lemon</option>
-   </optgroup>
-   <optgroup label="vegetables">
-     <option>Carrot</option>
-     <option>Eggplant</option>
-     <option>Potato</option>
-   </optgroup>
+    <option>Banana</option>
+    <option selected>Cherry</option>
+    <option>Lemon</option>
+  </optgroup>
+  <optgroup label="vegetables">
+    <option>Carrot</option>
+    <option>Eggplant</option>
+    <option>Potato</option>
+  </optgroup>
 </select>
 ```
 
@@ -178,7 +178,7 @@ slug: Learn/Forms/Other_form_controls
 
 ```html
 <label for="myFruit">What's your favorite fruit?</label>
-<input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+<input type="text" name="myFruit" id="myFruit" list="mySuggestion" />
 <datalist id="mySuggestion">
   <option>Apple</option>
   <option>Banana</option>
@@ -199,7 +199,7 @@ slug: Learn/Forms/Other_form_controls
 
 ```html
 <label for="myFruit">What is your favorite fruit? (With fallback)</label>
-<input type="text" id="myFruit" name="fruit" list="fruitList">
+<input type="text" id="myFruit" name="fruit" list="fruitList" />
 
 <datalist id="fruitList">
   <label for="suggestion">or pick a fruit</label>

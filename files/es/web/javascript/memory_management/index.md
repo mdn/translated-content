@@ -187,7 +187,7 @@ En el primer ejemplo, después de que la llamada a una función termina, los dos
 
 Lo mismo ocurre en el segundo ejemplo. Una vez que el elemento div y sus métodos se hacen inalcanzable desde los objetos raíz, ambos pueden ser recolectados a pesar de que estén referenciados los unos de los otros.
 
-#### Limitación: los objetos necesarios se hacen inalcanzables de forma explícita.
+#### Limitación: los objetos necesarios se hacen inalcanzables de forma explícita
 
 Aunque esto está marcado como una limitación, se puede encontrar muy poco en la práctica. Ésta es la razón por la cuál la recolección de basura es poco tomada en cuenta.
 

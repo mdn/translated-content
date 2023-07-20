@@ -41,8 +41,8 @@ Puedes usar el atributo [`list`](/es/docs/Web/HTML/Element/input#list) en un ele
 <label>Superhéroe favorito</label>
 <input list="superheroes" name="list" />
 <datalist id="superheroes">
-    <option label="Iron Man" value="Iron Man">
-    <option label="The Hulk" value="The Hulk">
+  <option label="Iron Man" value="Iron Man"></option>
+  <option label="The Hulk" value="The Hulk"></option>
 </datalist>
 ```
 
@@ -57,7 +57,11 @@ Puedes usar el atributo [`for`](/es/docs/Web/HTML/Element/output#for) para espec
 El atributo [`placeholder`](/es/docs/Web/HTML/Element/input#placeholder) en elementos `{{ HTMLElement("input") }}` y `{{ HTMLElement("textarea") }}` provee una ayuda a los usuarios acerca de qué debe ser ingresado en el campo. El texto introducido en el placeholder no debe contener «enters» o saltos de línea.
 
 ```html
-<input type="email" id="user-email" placeholder="e.g. john.doe@mozilla.com" required/>
+<input
+  type="email"
+  id="user-email"
+  placeholder="e.g. john.doe@mozilla.com"
+  required />
 ```
 
 ### El atributo autofocus

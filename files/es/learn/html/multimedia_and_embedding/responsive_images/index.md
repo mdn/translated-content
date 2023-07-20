@@ -15,9 +15,9 @@ Las imágenes adaptables son solo una parte del diseño web responsivo, un tema 
       <th scope="row">Prerrequisitos:</th>
       <td>
         Deberías tener un conocimiento
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">básico de HTML</a>
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML">básico de HTML</a>
         y cómo
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
           >agregar imágenes estáticas a un sitio web</a
         >.
       </td>
@@ -75,19 +75,23 @@ En esta sección, veremos los dos problemas ilustrados anteriormente y mostrarem
 Entonces, ¿qué queremos solucionar con el cambio de resolución? Queremos mostrar la misma imagen, más grande o más pequeña dependiendo del dispositivo — Esta es la situación que tenemos en la segunda imagen de nuestro ejemplo. El elemento estándar {{htmlelement("img")}} tradicionalmente solo permite apuntar el navegador a un solo archivo fuente:
 
 ```html
-<img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+<img src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy" />
 ```
 
 Sin embargo, podemos utilizar dos nuevos atributos — [`srcset`](/es/docs/Web/HTML/Element/img#srcset) y [`sizes`](/es/docs/Web/HTML/Element/img#sizes) — para proporcionar varias imágenes de origen adicionales junto con sugerencias para ayudar al navegador a elegir el correcto. Puede ver el ejemplo [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) en Github (vea también [el código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html)):
 
 ```html
-<img srcset="elva-fairy-320w.jpg 320w,
-             elva-fairy-480w.jpg 480w,
-             elva-fairy-800w.jpg 800w"
-     sizes="(max-width: 320px) 280px,
+<img
+  srcset="
+    elva-fairy-320w.jpg 320w,
+    elva-fairy-480w.jpg 480w,
+    elva-fairy-800w.jpg 800w
+  "
+  sizes="(max-width: 320px) 280px,
             (max-width: 480px) 440px,
             800px"
-     src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+  src="elva-fairy-800w.jpg"
+  alt="Elva dressed as a fairy" />
 ```
 
 Los atributos `srcset` y `sizes` parecen complicados, pero resultan más fáciles de entender si los formatea como se muestra arriba, con valores diferentes para el atributo en cada línea. Cada valor contiene una lista separada por coma, y cada parte de la lista está compuesta por tres sub-partes. Repasemos ahora el contenido de cada uno:
@@ -126,10 +130,10 @@ Los navegadores más antiguos que no soportan estas características solo las ig
 If you're supporting multiple display resolutions, but everyone sees your image at the same real-world size on the screen, you can allow the browser to choose an appropriate resolution image by using `srcset` with x-descriptors and without `sizes` — a somewhat easier syntax! You can find an example of what this looks like in [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (see also [the source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
 
 ```html
-<img srcset="elva-fairy-320w.jpg,
-             elva-fairy-480w.jpg 1.5x,
-             elva-fairy-640w.jpg 2x"
-     src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
+<img
+  srcset="elva-fairy-320w.jpg, elva-fairy-480w.jpg 1.5x, elva-fairy-640w.jpg 2x"
+  src="elva-fairy-640w.jpg"
+  alt="Elva dressed as a fairy" />
 ```
 
 ![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)In this example, the following CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels):
@@ -149,16 +153,16 @@ To recap, the **art direction problem** involves wanting to change the image dis
 Returning to our original [not-responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) example, we have an image that badly needs art direction:
 
 ```html
-<img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+<img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
 ```
 
 Let's fix this, with {{htmlelement("picture")}}! Like [`<video>` and `<audio>`](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content), The `<picture>` element is a wrapper containing several {{htmlelement("source")}} elements that provide several different sources for the browser to choose between, followed by the all-important {{htmlelement("img")}} element. The code in [responsive.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) looks like so:
 
 ```html
 <picture>
-  <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
-  <source media="(min-width: 800px)" srcset="elva-800w.jpg">
-  <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+  <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg" />
+  <source media="(min-width: 800px)" srcset="elva-800w.jpg" />
+  <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
 </picture>
 ```
 
@@ -184,9 +188,11 @@ There are several exciting new image formats (such as WebP and JPEG-2000) that c
 
 ```html
 <picture>
-  <source type="image/svg+xml" srcset="pyramid.svg">
-  <source type="image/webp" srcset="pyramid.webp">
-  <img src="pyramid.png" alt="regular pyramid built from four equilateral triangles">
+  <source type="image/svg+xml" srcset="pyramid.svg" />
+  <source type="image/webp" srcset="pyramid.webp" />
+  <img
+    src="pyramid.png"
+    alt="regular pyramid built from four equilateral triangles" />
 </picture>
 ```
 

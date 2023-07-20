@@ -13,7 +13,7 @@ slug: Web/HTML/Element/track
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>

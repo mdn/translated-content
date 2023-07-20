@@ -21,7 +21,10 @@ D'un autre côté, le **masquage** (_masking_) permet plus de souplesse en prena
 Pour créer un demi-cercle, on définit d'abord un élément `circle`:
 
 ```html
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <clipPath id="cut-off-bottom">
       <rect x="0" y="0" width="200" height="100" />
@@ -45,14 +48,19 @@ Nous avons maintenant un demi-cercle, sans avoir à passer par un arc dans un é
 Le masquage, contrairement au découpage permet de travailler avec des gradients. Si vous voulez qu'un élément disparaisse progressivement, vous y parviendrez en utiilisant des masques.
 
 ```html
-<svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="200"
+  height="200"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="Gradient">
       <stop offset="0" stop-color="white" stop-opacity="0" />
       <stop offset="1" stop-color="white" stop-opacity="1" />
     </linearGradient>
     <mask id="Mask">
-      <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)"  />
+      <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)" />
     </mask>
   </defs>
 
@@ -78,9 +86,21 @@ Le rectangle ci-dessus sera dessiné semi-transparent.
 On peut également utiliser deux attributs distincts pour le remplissage et le contour: `fill-opacity` et `stroke-opacity`, pour contrôler l'opacité des propriétés `fill` et `stroke` respecitvement. Notez que le contour est dessiné au-dessus du remplissage. Ainsi, si vous rendez le contour semi-transparent et non le remplissage, celui-ci sera visible à travers le contour:
 
 ```html
-<svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  width="200"
+  height="200"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <rect x="0" y="0" width="200" height="200" fill="blue" />
-  <circle cx="100" cy="100" r="50" stroke="yellow" stroke-width="40" stroke-opacity=".5" fill="red" />
+  <circle
+    cx="100"
+    cy="100"
+    r="50"
+    stroke="yellow"
+    stroke-width="40"
+    stroke-opacity=".5"
+    fill="red" />
 </svg>
 ```
 

@@ -13,7 +13,7 @@ HTTP 요청 대상을 "리소스"라고 하며 리소스의 특성은 더 이상
 
 ```
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
+https://developer.mozilla.org/ko/docs/Learn/
 https://developer.mozilla.org/en-US/search?q=URL
 ```
 
@@ -92,7 +92,7 @@ urn:ietf:rfc:7230
 ## 예제
 
 ```
-https://developer.mozilla.org/en-US/docs/Learn
+https://developer.mozilla.org/ko/docs/Learn
 tel:+1-816-555-1212
 git@github.com:mdn/browser-compat-data.git
 ftp://example.org/resource.txt
@@ -106,5 +106,5 @@ mailto:help@supercyberhelpdesk.info
 
 ## 같이 보기
 
-- [What is a URL?](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+- [What is a URL?](/ko/docs/Learn/Common_questions/What_is_a_URL)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

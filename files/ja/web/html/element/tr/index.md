@@ -42,7 +42,7 @@ slug: Web/HTML/Element/tr
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : 文字列で、行の各セルの背景色を定義します。値は [16 進 `#RRGGBB` または `#RGB` 値](/ja/docs/Web/CSS/color_value/rgb)、あるいは[色キーワード](/ja/docs/Web/CSS/color_value#color_keywords)を使用できます。属性を省略するか JavaScript で `null` を設定すると、行のセルは親要素の背景色を継承します。
+  - : 文字列で、行の各セルの背景色を定義します。値は [16 進 `#RRGGBB` または `#RGB` 値](/ja/docs/Web/CSS/color_value/rgb)、あるいは[色キーワード](/ja/docs/Web/CSS/named-color)を使用できます。属性を省略するか JavaScript で `null` を設定すると、行のセルは親要素の背景色を継承します。
 
     > **メモ:** {{HTMLElement("tr")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイルを設定するべきです。 `bgcolor` 属性と同様の効果を与えるには、[CSS](/ja/docs/Web/CSS) の {{CSSxRef("background-color")}} プロパティを使用してください。
 
@@ -503,7 +503,7 @@ tbody > tr > td:last-of-type {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>なし</td>
     </tr>

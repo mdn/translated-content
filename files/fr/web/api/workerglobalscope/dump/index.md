@@ -44,7 +44,7 @@ Vous devriez observer le message «test» apparaître dans le terminal.
 
 ## Spécifications
 
-Cette méthode n’apparaît dans aucune spécification.
+Cette méthode n'apparaît dans aucune spécification.
 
 ## Compatibilité des navigateurs
 

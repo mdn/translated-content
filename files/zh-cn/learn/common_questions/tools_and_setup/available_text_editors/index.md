@@ -371,9 +371,9 @@ slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
 试着挖掘你的编辑器的设置，并阅读手册或文档，看看它的功能是什么。特别是尝试一下（如果在你的编辑器中可能的话）：
 
 - 改变语法高亮的设置和颜色
-- 反复调整[缩进](<https://zh.wikipedia.org/wiki/缩进风格>)宽度，将其设置为适合你需要的适当值
+- 反复调整[缩进](https://zh.wikipedia.org/wiki/缩进风格)宽度，将其设置为适合你需要的适当值
 - 检查自动保存和会话保存设置
-- 配置任何可用的[插件](<https://zh.wikipedia.org/wiki/插件>)并研究如何获得新的插件
+- 配置任何可用的[插件](https://zh.wikipedia.org/wiki/插件)并研究如何获得新的插件
 - 改变配色方案
 - 调整视图设置，看看如何能改变视图的布局
 - 检查你的编辑器支持哪些编程语言或技术

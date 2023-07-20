@@ -16,15 +16,15 @@ Os navegadores modernos oferecem suporte a várias maneiras de os sites armazena
       <th scope="row">Pré-requisitos:</th>
       <td>
         Noções básicas de JavaScript (consulte as
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">primeiras etapas </a
-        ><a href="/en-US/docs/Learn/JavaScript/First_steps"></a>,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">primeiras etapas </a
+        ><a href="/pt-BR/docs/Learn/JavaScript/First_steps"></a>,
+        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
           >blocos de construção</a
         >
         ,
-        <a href="/en-US/docs/Learn/JavaScript/Objects">objetos JavaScript</a> ),
+        <a href="/pt-BR/docs/Learn/JavaScript/Objects">objetos JavaScript</a> ),
         as
-        <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
+        <a href="/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
           >noções básicas de APIs do lado do cliente</a
         >
       </td>
@@ -529,7 +529,7 @@ function deleteItem(e) {
 }
 ```
 
-- The first part of this could use some explaining — we retrieve the ID of the record to be deleted using `Number(e.target.parentNode.getAttribute('data-note-id'))` — recall that the ID of the record was saved in a `data-note-id` attribute on the `<li>` when it was first displayed. We do however need to pass the attribute through the global built-in [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) object as it is of datatype string, and therefore wouldn't be recognized by the database, which expects a number.
+- The first part of this could use some explaining — we retrieve the ID of the record to be deleted using `Number(e.target.parentNode.getAttribute('data-note-id'))` — recall that the ID of the record was saved in a `data-note-id` attribute on the `<li>` when it was first displayed. We do however need to pass the attribute through the global built-in [`Number()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number) object as it is of datatype string, and therefore wouldn't be recognized by the database, which expects a number.
 - We then get a reference to the object store using the same pattern we've seen previously, and use the {{domxref("IDBObjectStore.delete()")}} method to delete the record from the database, passing it the ID.
 - When the database transaction is complete, we delete the note's `<li>` from the DOM, and again do the check to see if the `<ul>` is now empty, inserting a note as appropriate.
 

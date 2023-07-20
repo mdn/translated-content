@@ -27,7 +27,7 @@ gen.next(value)
 
 ### Возвращаемое значение
 
-[`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) с двумя свойствами:
+[`Object`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object) с двумя свойствами:
 
 - `done` (boolean)
 

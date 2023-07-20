@@ -33,7 +33,7 @@ A {{domxref("USVString")}}.
 ## Exemples
 
 ```js
-const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+const url = new URL("https://developer.mozilla.org/fr/docs/Web/API/URL/toString");
 url.toJSON()
 ```
 

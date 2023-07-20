@@ -37,7 +37,7 @@ Referer: <url>
 ## 예제
 
 ```
-Referer: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+Referer: https://developer.mozilla.org/ko/docs/Web/JavaScript
 Referer: https://example.com/page?q=123
 Referer: https://example.com/
 ```

@@ -15,7 +15,7 @@ JavaScript에서 모든 숫자는 [double-precision 64-bit binary format IEEE 75
 
 JavaScript에 최근 추가 된 것은 {{jsxref ( "BigInt")}}로, 매우 큰 정수를 나타낼 수 있습니다. `BigInt`를사용할땐 다음을 주의해야 합니다. 예를 들면, `BigInt`와 {{jsxref ( "Number")}} 값을 같은 연산으로 혼합하고 일치시킬 수는 없으며 {{jsxref ( "Math")}} 객체를 `BigInt`값과 함께 사용할 수 없습니다.
 
-JavaScript에서 다른 기본형과 문맥에 대한 내용은 [JavaScript data types and structures](/en-US/docs/Web/JavaScript/Data_structures)를 참조하세요.
+JavaScript에서 다른 기본형과 문맥에 대한 내용은 [JavaScript data types and structures](/ko/docs/Web/JavaScript/Data_structures)를 참조하세요.
 
 여러분은 숫자 리터럴의 네 가지 유형을 사용할 수 있습니다: 10진수, 2진수, 8진수, 16진수
 
@@ -35,7 +35,7 @@ JavaScript에서 다른 기본형과 문맥에 대한 내용은 [JavaScript data
 
 ### 2진수
 
-2진수 구문은 앞에 오는 0과 소문자 또는 대문자 라틴 문자 "B"(0B 또는 0b)를 사용합니다. 0b 다음의 숫자가 0 또는 1이 아니면 다음의 [SyntaxError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다. "0b 이후에 누락 된 2 진수"("Missing binary digits after 0b")입니다.
+2진수 구문은 앞에 오는 0과 소문자 또는 대문자 라틴 문자 "B"(0B 또는 0b)를 사용합니다. 0b 다음의 숫자가 0 또는 1이 아니면 다음의 [SyntaxError](/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다. "0b 이후에 누락 된 2 진수"("Missing binary digits after 0b")입니다.
 
 ```js
 var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
@@ -60,7 +60,7 @@ ECMAScript 5의 Strict 모드는 8 진수 구문을 금지합니다. 8 진수 �
 
 ### 16진수
 
-16진수 구문은 앞에 0 다음에 소문자나 대문자 라틴어 문자 "X"(`0x` 또는 `0X`)를 사용합니다. 0X 이후 숫자가 범위(0123456789ABCDEF) 밖에 있는 경우, 다음 [SyntaxError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다: "식별자는 숫자 리터럴 후 즉시 시작됩니다".
+16진수 구문은 앞에 0 다음에 소문자나 대문자 라틴어 문자 "X"(`0x` 또는 `0X`)를 사용합니다. 0X 이후 숫자가 범위(0123456789ABCDEF) 밖에 있는 경우, 다음 [SyntaxError](/ko/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)가 발생합니다: "식별자는 숫자 리터럴 후 즉시 시작됩니다".
 
 ```js
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000

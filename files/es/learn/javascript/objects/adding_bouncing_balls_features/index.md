@@ -111,7 +111,7 @@ Este método actuará de una forma muy similar al método `collisionDetect()` de
 - En el exterior de la declaración `if`, ya no es necesario comprobar si la bola actual en la iteración es la misma que la bola que está haciendo la comprobación, porque ya no es una bola, ¡es el círculo del mal! En su lugar, debe hacer una prueba para ver si existe la bola que se está verificando (¿con qué propiedad podría hacerlo?). Si no existe, ya ha sido devorado por el círculo maligno, por lo que no es necesario volver a comprobarlo.
 - En el interior de la declaración `if`, ya no desea que los objetos cambien de color cuando se detecta una colisión; en cambio, desea que no existan más bolas que colisionen con el círculo maligno (una vez más, ¿cómo cree que haría eso?).
 
-### Trayendo el círculo del mal al programa.
+### Trayendo el círculo del mal al programa
 
 Ahora que hemos definido el círculo maligno, debemos hacerlo aparecer en nuestra escena. Para hacerlo, necesitas hacer alguno cambios a la función `loop()`.
 
@@ -119,7 +119,7 @@ Ahora que hemos definido el círculo maligno, debemos hacerlo aparecer en nuestr
 - En el punto en el que intera por todas las pelotas y llama a las funciones `draw()`, `update()`, y `collisionDetect()` para cada una, hazlo para que estas funciones solo sean llamadas si la bola actual existe.
 - Llama a los métodos de la instancia de la pelota maligna `draw()`, `checkBounds()`, y `collisionDetect()` en cada iteración del bucle.
 
-### Implementando el contador de puntuación.
+### Implementando el contador de puntuación
 
 Para implementar el contador de puntuación sigue estos pasos:
 

@@ -14,9 +14,9 @@ Vector graphics are very useful in many circumstances — they have small file s
       <th scope="row">Prerequisites:</th>
       <td>
         You should know the
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">basics of HTML</a>
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML">basics of HTML</a>
         and how to
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
           >insert an image into your document</a
         >.
       </td>
@@ -136,7 +136,7 @@ If your SVGs aren't showing up at all, it might be because your server isn't set
 
 ### How to include SVG code inside your HTML
 
-You can also open up the SVG file in a text editor, copy the SVG code, and paste it into your HTML document — this is sometimes called putting your **SVG inline**, or **inlining SVG**. Make sure your SVG code snippet begins and ends with the [`<svg></svg>`](/en-US/docs/Web/SVG/Element/svg) tags (don't include anything outside those.) Here's a very simple example of what you might paste into your document:
+You can also open up the SVG file in a text editor, copy the SVG code, and paste it into your HTML document — this is sometimes called putting your **SVG inline**, or **inlining SVG**. Make sure your SVG code snippet begins and ends with the [`<svg></svg>`](/pt-BR/docs/Web/SVG/Element/svg) tags (don't include anything outside those.) Here's a very simple example of what you might paste into your document:
 
 ```html
 <svg width="300" height="200">

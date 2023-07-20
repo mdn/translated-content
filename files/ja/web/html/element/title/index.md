@@ -23,7 +23,7 @@ l10n:
       </th>
       <td>
         <a
-          href="/ja/docs/Web/Guide/HTML/Content_categories#メタデータコンテンツ"
+          href="/ja/docs/Web/HTML/Content_categories#メタデータコンテンツ"
           >メタデータコンテンツ</a
         >
       </td>

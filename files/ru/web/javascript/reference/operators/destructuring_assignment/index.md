@@ -117,7 +117,7 @@ console.log("A is " + a + " B is " + b);
 
 ### Получение значений из результата регулярного выражения
 
-Когда метод [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) регулярного выражения находит совпадение, он возвращает массив, содержащий первый совпадающий фрагмент строки и далее группы, определённые в регулярном выражении. Деструктурирующее присваивание упрощает получение данных из этих групп, игнорируя первый фрагмент:
+Когда метод [`exec()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) регулярного выражения находит совпадение, он возвращает массив, содержащий первый совпадающий фрагмент строки и далее группы, определённые в регулярном выражении. Деструктурирующее присваивание упрощает получение данных из этих групп, игнорируя первый фрагмент:
 
 ```js
 var url = "https://developer.mozilla.org/en-US/Web/JavaScript";
@@ -168,7 +168,7 @@ var metadata = {
         title: "JavaScript-Umgebung"
        }
     ],
-    url: "/en-US/docs/Tools/Scratchpad"
+    url: "/ru/docs/Tools/Scratchpad"
 };
 
 var { title: englishTitle, translations: [{ title: localeTitle }] } = metadata;

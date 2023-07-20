@@ -209,7 +209,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -259,8 +259,7 @@ Para convertir esto en una cita en bloque independiente, simplemente harías lo 
 ```html
 <p>A continuación se muestra una cita en bloque independiente...</p>
 <blockquote
-  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"
->
+  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
   <p>
     El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
     <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
@@ -280,7 +279,7 @@ Las citas en línea funcionan exactamente de la misma manera, excepto que usan e
 ```html
 <p>
   El elemento de cita — <code>&lt;q&gt;</code> — se
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+  <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q"
     >utiliza en para citas breves que no requieren saltos de párrafo.</q
   >
 </p>
@@ -305,8 +304,7 @@ Hay un elemento {{HTMLElement("cite")}}, pero está destinado a contener el tít
 </p>
 
 <blockquote
-  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"
->
+  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
   <p>
     El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
     <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
@@ -316,11 +314,11 @@ Hay un elemento {{HTMLElement("cite")}}, pero está destinado a contener el tít
 
 <p>
   El elemento de cita — <code>&lt;q&gt;</code> — se
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+  <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q"
     >utiliza en citas breves que no requieren saltos de párrafo.</q
   >
   --
-  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+  <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/q">
     <cite>página q de MDN</cite></a
   >.
 </p>
@@ -449,7 +447,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -604,7 +602,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;

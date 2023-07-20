@@ -9,7 +9,7 @@ WebKit comenzó como una copia del KHTML de KDE y sus librerías KJS, pero desde
 
 WebKit es una marca registrada de Apple, y es distribuido bajo la licencia BSD. Por otro lado, dos de sus más importantes componentes están bajo la licencia [LGPL](/es/docs/Glossary/LGPL): la libería de renderizado HTML de **WebCore** y el motor **JavaScriptCore**.
 
-## Para saber más...
+## Para saber más
 
 ### Cultura General
 

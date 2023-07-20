@@ -214,4 +214,4 @@ A _sintaxe rest_ se parece exatamente como a _sintaxe de espalhamento_, mas esta
 
 ## Veja também
 
-- [Parâmetros Rest](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (also ‘`...`’)
+- [Parâmetros Rest](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/rest_parameters) (also '`...`')

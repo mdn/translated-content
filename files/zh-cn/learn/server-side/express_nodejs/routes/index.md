@@ -376,7 +376,7 @@ app.use('/catalog', catalogRouter);  // 将 catalog 路由添加进中间件链
   DEBUG=express-locallibrary-tutorial:* npm run devstart
   ```
 
-> **备注：** 以上命令只对 bash 有效，要在 Windows 上使用 bash，最简单的方法就是安装 Git。（详情参见 [教程 2 相关译注](zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website#使用应用生成器)）
+> **备注：** 以上命令只对 bash 有效，要在 Windows 上使用 bash，最简单的方法就是安装 Git。（详情参见 [教程 2 相关译注](/zh-CN/docs/Learn/Server-side/Express_Nodejs/skeleton_website#使用应用生成器)）
 
 接下来浏览上面一些 URL，确保不会收到错误页面（HTTP 404）。可以尝试以下示例：
 

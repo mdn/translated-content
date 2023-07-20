@@ -17,7 +17,7 @@ original_slug: Web/JavaScript/EventLoop
 
 ### Визуальное представление
 
-![Stack, heap, queue](/en-US/docs/Web/JavaScript/EventLoop/the_javascript_runtime_environment_example.svg)
+![Stack, heap, queue](/ru/docs/Web/JavaScript/EventLoop/the_javascript_runtime_environment_example.svg)
 
 Для лучшего **визуального** представления работы **Event loop**, Вы можете ознакомиться с данным видео: <https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=389s>
 

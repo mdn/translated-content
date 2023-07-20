@@ -27,7 +27,7 @@ translation_of: Web/API/XMLHttpRequest/readyState
 - HEADERS_RECEIVED
   - : Был вызван метод send() и получены заголовки ответа (response headers) .
 - LOADING
-  - : Получена часть ответа. Если [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) - это пустая строка или имеет значение "text", [`responseText`](/en-US/docs/Web/API/XMLHttpRequest/responseText) будет содержать загруженную порцию текста ответа.
+  - : Получена часть ответа. Если [`responseType`](/ru/docs/Web/API/XMLHttpRequest/responseType) - это пустая строка или имеет значение "text", [`responseText`](/ru/docs/Web/API/XMLHttpRequest/responseText) будет содержать загруженную порцию текста ответа.
 - DONE
   - : Операция доставки данных завершена. Это может означать как то, что передача данных полностью завершена успешно, так и то, что произошла ошибка.
 
