@@ -278,10 +278,10 @@ Occupons-nous maintenant de quelque chose d'un peu plus compliqué. Nous allons 
 
 En fait, cette URL est celle de l'ancien emplacement de la page. Lorsque vous l'entrez dans un nouvel onglet de votre navigateur, vous êtes (finalement) redirigé sur [https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch](/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch).
 
-Par conséquent, si vous utilisez curl pour faire une requête à `https://developer.mozilla.org/fr/docs/Web/API/fetch`, vous n'aurez pas de résultat. Essayez :
+Par conséquent, si vous utilisez curl pour faire une requête à `https://developer.mozilla.org/docs/Web/API/fetch`, vous n'aurez pas de résultat. Essayez :
 
 ```bash
-curl https://developer.mozilla.org/fr/docs/Web/API/fetch
+curl https://developer.mozilla.org/en-US/docs/Web/API/fetch
 ```
 
 Nous devons dire explicitement à `curl` de suivre les redirections en utilisant l'option `-L`.
@@ -291,16 +291,16 @@ Examinons également les en-têtes retournées par `developer.mozilla.org` en ut
 Essayez maintenant la ligne suivante, et vous allez constater qu'il y a en fait trois redirections avant d'atteindre la page finale :
 
 ```bash
-curl https://developer.mozilla.org/fr/docs/Web/API/fetch -L -I | grep location
+curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location
 ```
 
 Votre sortie devrait ressembler à ceci (`curl` va d'abord afficher des compteurs et autres informations de téléchargement) :
 
 ```bash
-location: /fr/docs/Web/API/fetch
-location: /fr/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
-location: /fr/docs/Web/API/GlobalFetch/fetch
-location: /fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch
+location: /en-US/docs/Web/API/fetch
+location: /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
+location: /en-US/docs/Web/API/GlobalFetch/fetch
+location: /en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 ```
 
 Bien que ce résultat soit artificiel, nous pourrions le pousser un peu plus loin et remplacer `location:` par le nom de domaine, de façon à avoir des URLs complètes. Pour cela, nous allons ajouter `awk` à notre formule (il s'agit d'un langage de programmation tout comme JavaScript, Ruby ou Python, mais beaucoup plus ancien !).
