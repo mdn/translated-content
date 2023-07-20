@@ -573,6 +573,7 @@
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery	/ru/docs/Web/Guide/Audio_and_video_delivery
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video	/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/buffering_seeking_time_ranges	/ru/docs/Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
+/ru/docs/Web/CSS/:-moz-focusring	/ru/docs/conflicting/Web/CSS/:focus-visible
 /ru/docs/Web/CSS/:blank	/ru/docs/Web/CSS/:-moz-only-whitespace
 /ru/docs/Web/CSS/:host()	/ru/docs/Web/CSS/:host_function
 /ru/docs/Web/CSS/@viewport	/ru/docs/Web/CSS

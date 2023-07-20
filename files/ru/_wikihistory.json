@@ -8132,10 +8132,6 @@
     "modified": "2019-03-23T22:29:56.828Z",
     "contributors": ["BychekRU"]
   },
-  "Web/CSS/:-moz-focusring": {
-    "modified": "2019-03-23T22:37:34.919Z",
-    "contributors": ["teoli", "DVV", "andreww2012"]
-  },
   "Web/CSS/:-moz-only-whitespace": {
     "modified": "2020-10-15T22:11:44.237Z",
     "contributors": ["ExE-Boss", "ialexi-bl"]
@@ -16726,6 +16722,10 @@
   "conflicting/Web/CSS": {
     "modified": "2020-05-13T06:10:35.795Z",
     "contributors": ["mandalorian7117", "cvrebert"]
+  },
+  "conflicting/Web/CSS/:focus-visible": {
+    "modified": "2019-03-23T22:37:34.919Z",
+    "contributors": ["teoli", "DVV", "andreww2012"]
   },
   "conflicting/Web/CSS/:is": {
     "modified": "2019-03-23T22:39:12.816Z",
