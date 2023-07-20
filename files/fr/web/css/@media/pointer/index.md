@@ -1,10 +1,6 @@
 ---
 title: pointer
 slug: Web/CSS/@media/pointer
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/pointer
 ---
 

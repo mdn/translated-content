@@ -1,10 +1,6 @@
 ---
 title: <feConvolveMatrix>
 slug: Web/SVG/Element/feConvolveMatrix
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 translation_of: Web/SVG/Element/feConvolveMatrix
 ---
 

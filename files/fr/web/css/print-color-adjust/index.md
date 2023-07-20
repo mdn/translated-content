@@ -2,8 +2,6 @@
 title: print-color-adjust
 slug: Web/CSS/print-color-adjust
 translation_of: Web/CSS/print-color-adjust
-original_slug: Web/CSS/-webkit-print-color-adjust
-browser-compat: css.properties.print-color-adjust
 ---
 
 {{CSSRef}}

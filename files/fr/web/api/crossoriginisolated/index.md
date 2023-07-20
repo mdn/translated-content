@@ -1,10 +1,7 @@
 ---
 title: crossOriginIsolated
 slug: Web/API/crossOriginIsolated
-page-type: web-api-global-property
 translation_of: Web/API/crossOriginIsolated
-original_slug: Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated
-browser-compat: api.crossOriginIsolated
 ---
 
 {{APIRef()}}{{SeeCompatTable}}

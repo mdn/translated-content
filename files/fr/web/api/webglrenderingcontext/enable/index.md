@@ -1,14 +1,7 @@
 ---
 title: WebGLRenderingContext.enable()
 slug: Web/API/WebGLRenderingContext/enable
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/enable
-original_slug: Web/API/WebGLRenderingContext/activer
 ---
 
 {{APIRef("WebGL")}}

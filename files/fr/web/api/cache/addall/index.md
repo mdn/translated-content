@@ -1,16 +1,6 @@
 ---
 title: Cache.addAll()
 slug: Web/API/Cache/addAll
-tags:
-  - API
-  - Cache
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Worker
-  - Service worker API
-  - ServiceWorker
-  - addAll
 translation_of: Web/API/Cache/addAll
 ---
 

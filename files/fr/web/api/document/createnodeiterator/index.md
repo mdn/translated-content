@@ -1,10 +1,6 @@
 ---
 title: Document.createNodeIterator()
 slug: Web/API/Document/createNodeIterator
-tags:
-  - API
-  - DOM
-  - Méthodes
 translation_of: Web/API/Document/createNodeIterator
 ---
 

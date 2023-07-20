@@ -1,13 +1,6 @@
 ---
 title: Selection.collapse()
 slug: Web/API/Selection/collapse
-tags:
-  - API
-  - Edition HTML
-  - Experimental
-  - Method
-  - Reference
-  - Selection
 translation_of: Web/API/Selection/collapse
 ---
 

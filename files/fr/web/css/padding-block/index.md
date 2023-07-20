@@ -1,12 +1,6 @@
 ---
 title: padding-block
 slug: Web/CSS/padding-block
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
 translation_of: Web/CSS/padding-block
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/overflow-wrap
 ---
 

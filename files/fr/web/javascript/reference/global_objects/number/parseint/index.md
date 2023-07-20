@@ -1,14 +1,7 @@
 ---
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Number
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/parseInt
 ---
 
 {{JSRef}}

@@ -1,19 +1,7 @@
 ---
 title: '<cite> : l''élément de citation'
 slug: Web/HTML/Element/cite
-tags:
-  - Attribution
-  - Citation
-  - Citing References
-  - Citing Works
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Quotations
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/cite
-browser-compat: html.elements.cite
 ---
 
 {{HTMLSidebar}}

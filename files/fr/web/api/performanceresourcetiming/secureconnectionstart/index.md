@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.secureConnectionStart
 slug: Web/API/PerformanceResourceTiming/secureConnectionStart
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - secureConnectionStart
 translation_of: Web/API/PerformanceResourceTiming/secureConnectionStart
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: user-select
 slug: Web/CSS/user-select
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/user-select
 ---
 

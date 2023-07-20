@@ -1,11 +1,6 @@
 ---
 title: '<summary> : l''élément de révélation d''un résumé'
 slug: Web/HTML/Element/summary
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/summary
 ---
 

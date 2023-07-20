@@ -1,9 +1,7 @@
 ---
 title: Comparaison des cibles d'évènements
 slug: Web/API/Event/Comparison_of_Event_Targets
-page-type: guide
 translation_of: Web/API/Event/Comparison_of_Event_Targets
-original_slug: Web/API/Event/Comparaison_des_cibles_d_évènements
 l10n:
   sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
 ---

@@ -1,13 +1,7 @@
 ---
 title: Expressions rationnelles
 slug: Web/JavaScript/Guide/Regular_expressions
-tags:
-  - Guide
-  - Intermédiaire
-  - JavaScript
-  - RegExp
 translation_of: Web/JavaScript/Guide/Regular_Expressions
-original_slug: Web/JavaScript/Guide/Expressions_régulières
 ---
 
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Formatage_du_texte", "Web/JavaScript/Guide/Collections_indexées")}}

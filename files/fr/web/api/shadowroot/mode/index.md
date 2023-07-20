@@ -1,13 +1,6 @@
 ---
 title: ShadowRoot.mode
 slug: Web/API/ShadowRoot/mode
-tags:
-  - API
-  - Propriété
-  - Reference
-  - ShadowRoot
-  - mode
-  - shadow dom
 translation_of: Web/API/ShadowRoot/mode
 ---
 

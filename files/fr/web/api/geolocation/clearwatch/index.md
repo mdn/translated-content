@@ -1,13 +1,6 @@
 ---
 title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
-tags:
-  - API
-  - Besoin d'exemple
-  - Géolocalisation
-  - Géolocalisation API
-  - Méthode
-  - Reference
 translation_of: Web/API/Geolocation/clearWatch
 ---
 

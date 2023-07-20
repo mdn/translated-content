@@ -1,14 +1,6 @@
 ---
 title: FormData.delete()
 slug: Web/API/FormData/delete
-tags:
-  - API
-  - FormData
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - delete
 translation_of: Web/API/FormData/delete
 ---
 

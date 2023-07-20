@@ -2,7 +2,6 @@
 title: Element.clientLeft
 slug: Web/API/Element/clientLeft
 translation_of: Web/API/Element/clientLeft
-browser-compat: api.Element.clientLeft
 ---
 
 {{APIRef("DOM")}}

@@ -1,10 +1,6 @@
 ---
 title: '@charset'
 slug: Web/CSS/@charset
-tags:
-  - CSS
-  - Reference
-  - Règle @
 translation_of: Web/CSS/@charset
 ---
 

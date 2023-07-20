@@ -1,13 +1,6 @@
 ---
 title: Affectation après ET logique (&&=)
 slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
-tags:
-  - JavaScript
-  - Language feature
-  - Logical assignment
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_and_assignment
 ---
 
 {{jsSidebar("Operators")}}

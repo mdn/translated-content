@@ -1,13 +1,7 @@
 ---
 title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/round
 ---
 
 {{JSRef}}

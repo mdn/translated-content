@@ -1,13 +1,7 @@
 ---
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
-tags:
-  - Exception
-  - JavaScript
-  - Reference
-  - Statement
 translation_of: Web/JavaScript/Reference/Statements/throw
-original_slug: Web/JavaScript/Reference/Instructions/throw
 ---
 
 {{jsSidebar("Statements")}}

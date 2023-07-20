@@ -1,10 +1,6 @@
 ---
 title: WebGLTexture
 slug: Web/API/WebGLTexture
-tags:
-  - API
-  - Reference
-  - WebGL
 translation_of: Web/API/WebGLTexture
 ---
 

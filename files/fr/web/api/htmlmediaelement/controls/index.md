@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.controls
 slug: Web/API/HTMLMediaElement/controls
-browser-compat: api.HTMLMediaElement.controls
 translation_of: Web/API/HTMLMediaElement/controls
 ---
 

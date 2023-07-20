@@ -1,10 +1,6 @@
 ---
 title: Optimisation et performances
 slug: Web/Guide/Performance
-tags:
-  - Optimisation
-  - Performances web
-  - Web
 translation_of: Web/Guide/Performance
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: 'Window: vrdisplaydisconnect event'
 slug: Web/API/Window/vrdisplaydisconnect_event
-tags:
-  - Evènement
-  - Reference
-  - WebVR
-  - onvrdisplaydisconnect
-  - vrdisplaydisconnect
 translation_of: Web/API/Window/vrdisplaydisconnect_event
 ---
 

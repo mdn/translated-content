@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.redirectEnd
 slug: Web/API/PerformanceResourceTiming/redirectEnd
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - redirectEnd
 translation_of: Web/API/PerformanceResourceTiming/redirectEnd
 ---
 

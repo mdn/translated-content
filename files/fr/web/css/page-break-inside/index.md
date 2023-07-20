@@ -1,10 +1,6 @@
 ---
 title: page-break-inside
 slug: Web/CSS/page-break-inside
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/page-break-inside
 ---
 

@@ -2,8 +2,6 @@
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap
-browser-compat: javascript.builtins.WeakMap
 ---
 
 {{JSRef}}

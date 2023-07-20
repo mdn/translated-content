@@ -1,10 +1,6 @@
 ---
 title: '::selection'
 slug: Web/CSS/::selection
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::selection
 ---
 

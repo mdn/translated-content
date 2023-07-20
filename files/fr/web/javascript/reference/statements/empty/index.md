@@ -1,12 +1,7 @@
 ---
 title: vide
 slug: Web/JavaScript/Reference/Statements/Empty
-tags:
-  - Instruction
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Statements/Empty
-original_slug: Web/JavaScript/Reference/Instructions/Vide
 ---
 
 {{jsSidebar("Statements")}}

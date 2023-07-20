@@ -2,7 +2,6 @@
 title: '@property'
 slug: Web/CSS/@property
 translation_of: Web/CSS/@property
-browser-compat: css.at-rules.property
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

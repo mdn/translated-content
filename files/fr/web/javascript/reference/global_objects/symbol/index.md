@@ -2,8 +2,6 @@
 title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol
-browser-compat: javascript.builtins.Symbol
 ---
 
 {{JSRef}}

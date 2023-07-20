@@ -1,12 +1,6 @@
 ---
 title: Utiliser l'API Web Storage
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
-tags:
-  - API
-  - Guide
-  - Stockage
-  - Stockage Web
-  - localStorage
 translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
 

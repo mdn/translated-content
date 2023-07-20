@@ -1,11 +1,6 @@
 ---
 title: '::slotted()'
 slug: Web/CSS/::slotted
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
-  - Web
 translation_of: Web/CSS/::slotted
 ---
 

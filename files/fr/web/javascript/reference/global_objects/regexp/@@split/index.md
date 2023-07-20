@@ -1,15 +1,7 @@
 ---
 title: RegExp.prototype[@@split]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
-tags:
-  - Expressions rationnelles
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@split
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.loop
 slug: Web/API/HTMLMediaElement/loop
-browser-compat: api.HTMLMediaElement.loop
 translation_of: Web/API/HTMLMediaElement/loop
 ---
 

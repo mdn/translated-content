@@ -1,13 +1,6 @@
 ---
 title: PerformanceElementTiming.naturalHeight
 slug: Web/API/PerformanceElementTiming/naturalHeight
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - naturalHeight
-  - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/naturalHeight
 ---
 

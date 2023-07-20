@@ -1,12 +1,7 @@
 ---
 title: Règles @
 slug: Web/CSS/At-rule
-tags:
-  - CSS
-  - Reference
-  - Règle @
 translation_of: Web/CSS/At-rule
-original_slug: Web/CSS/Règles_@
 ---
 
 {{cssref}}

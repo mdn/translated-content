@@ -1,8 +1,6 @@
 ---
 title: HTMLFormElement.acceptCharset
 slug: Web/API/HTMLFormElement/acceptCharset
-tags:
-  - HTMLFormElement
 translation_of: Web/API/HTMLFormElement/acceptCharset
 ---
 

@@ -1,14 +1,7 @@
 ---
 title: '<base> : l''élément pour l''URL de base du document'
 slug: Web/HTML/Element/base
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
 translation_of: Web/HTML/Element/base
-browser-compat: html.elements.base
 ---
 
 {{HTMLSidebar}}

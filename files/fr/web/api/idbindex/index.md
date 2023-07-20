@@ -1,15 +1,6 @@
 ---
 title: IDBIndex
 slug: Web/API/IDBIndex
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
-  - TopicStub
 translation_of: Web/API/IDBIndex
 ---
 

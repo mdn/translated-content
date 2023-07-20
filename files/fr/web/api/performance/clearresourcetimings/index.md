@@ -1,12 +1,6 @@
 ---
 title: performance.clearResourceTimings()
 slug: Web/API/Performance/clearResourceTimings
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - Performance web
 translation_of: Web/API/Performance/clearResourceTimings
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: initial
 slug: Web/CSS/initial
-tags:
-  - CSS
-  - Cascade
-  - Mot-clé
-  - Reference
 translation_of: Web/CSS/initial
 ---
 

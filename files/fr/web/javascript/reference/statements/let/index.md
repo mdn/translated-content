@@ -1,13 +1,7 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - ECMAScript 2015
-  - Instruction
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Statements/let
-original_slug: Web/JavaScript/Reference/Instructions/let
 ---
 
 {{jsSidebar("Statements")}}

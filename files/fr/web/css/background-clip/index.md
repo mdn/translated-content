@@ -1,10 +1,6 @@
 ---
 title: background-clip
 slug: Web/CSS/background-clip
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/background-clip
 ---
 

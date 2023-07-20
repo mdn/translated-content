@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-slider-thumb'
 slug: Web/CSS/::-webkit-slider-thumb
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-slider-thumb
 ---
 

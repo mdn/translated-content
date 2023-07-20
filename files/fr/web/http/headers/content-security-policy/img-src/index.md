@@ -2,7 +2,6 @@
 title: "CSP : img-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/img-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/img-src
-browser-compat: http.headers.csp.Content-Security-Policy.img-src
 ---
 
 {{HTTPSidebar}}

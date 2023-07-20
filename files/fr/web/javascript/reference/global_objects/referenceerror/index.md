@@ -2,7 +2,6 @@
 title: ReferenceError
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError
 translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError
-original_slug: Web/JavaScript/Reference/Objets_globaux/ReferenceError
 ---
 
 {{JSRef}}

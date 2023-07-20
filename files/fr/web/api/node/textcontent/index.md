@@ -1,11 +1,6 @@
 ---
 title: element.textContent
 slug: Web/API/Node/textContent
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
 translation_of: Web/API/Node/textContent
 ---
 

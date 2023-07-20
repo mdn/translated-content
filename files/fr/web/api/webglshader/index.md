@@ -1,10 +1,6 @@
 ---
 title: WebGLShader
 slug: Web/API/WebGLShader
-tags:
-  - Reference
-  - WebGL
-  - WebGLShader
 translation_of: Web/API/WebGLShader
 ---
 

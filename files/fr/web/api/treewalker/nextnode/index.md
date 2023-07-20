@@ -1,12 +1,6 @@
 ---
 title: TreeWalker.nextNode()
 slug: Web/API/TreeWalker/nextNode
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/TreeWalker/nextNode
 ---
 

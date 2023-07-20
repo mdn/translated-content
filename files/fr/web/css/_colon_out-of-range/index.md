@@ -1,10 +1,6 @@
 ---
 title: ':out-of-range'
 slug: Web/CSS/:out-of-range
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:out-of-range
 ---
 

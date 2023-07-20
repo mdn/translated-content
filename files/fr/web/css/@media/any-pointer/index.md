@@ -1,10 +1,6 @@
 ---
 title: any-pointer
 slug: Web/CSS/@media/any-pointer
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/any-pointer
 ---
 

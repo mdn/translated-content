@@ -1,14 +1,6 @@
 ---
 title: Notification.dir
 slug: Web/API/Notification/dir
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - direction
 translation_of: Web/API/Notification/dir
 ---
 

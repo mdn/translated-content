@@ -1,10 +1,6 @@
 ---
 title: Host
 slug: Web/HTTP/Headers/Host
-tags:
-  - HTTP
-  - Reference
-  - en-tête
 translation_of: Web/HTTP/Headers/Host
 ---
 

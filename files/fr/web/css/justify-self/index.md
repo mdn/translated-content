@@ -1,10 +1,6 @@
 ---
 title: justify-self
 slug: Web/CSS/justify-self
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/justify-self
 ---
 

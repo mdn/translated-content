@@ -2,8 +2,6 @@
 title: translateZ()
 slug: Web/CSS/transform-function/translateZ
 translation_of: Web/CSS/transform-function/translateZ()
-original_slug: Web/CSS/transform-function/translateZ()
-browser-compat: css.types.transform-function.translateZ
 ---
 
 {{CSSRef}}

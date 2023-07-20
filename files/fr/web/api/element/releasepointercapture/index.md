@@ -1,12 +1,6 @@
 ---
 title: Element.releasePointerCapture()
 slug: Web/API/Element/releasePointerCapture
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthodes
-  - Pointeur
 translation_of: Web/API/Element/releasePointerCapture
 ---
 

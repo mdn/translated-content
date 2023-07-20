@@ -1,14 +1,6 @@
 ---
 title: 'HTMLDialogElement: close event'
 slug: Web/API/HTMLDialogElement/close_event
-tags:
-  - API
-  - DOM HTML
-  - Evènement
-  - HTMLDialogElement
-  - Reference
-  - close
-  - fermeture
 translation_of: Web/API/HTMLDialogElement/close_event
 ---
 

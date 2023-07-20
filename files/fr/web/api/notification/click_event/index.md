@@ -1,15 +1,7 @@
 ---
 title: Notification.onclick
 slug: Web/API/Notification/click_event
-tags:
-  - API
-  - DOM
-  - Notifications
-  - Propriété
-  - Reference
-  - onclick
 translation_of: Web/API/Notification/onclick
-original_slug: Web/API/notification/onclick
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

@@ -1,10 +1,6 @@
 ---
 title: flex-shrink
 slug: Web/CSS/flex-shrink
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/flex-shrink
 ---
 

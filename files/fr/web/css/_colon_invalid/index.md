@@ -1,10 +1,6 @@
 ---
 title: ':invalid'
 slug: Web/CSS/:invalid
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:invalid
 ---
 

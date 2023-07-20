@@ -1,10 +1,6 @@
 ---
 title: XMLHttpRequest.response
 slug: Web/API/XMLHttpRequest/response
-tags:
-  - AJAX
-  - Reference
-  - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/response
 ---
 

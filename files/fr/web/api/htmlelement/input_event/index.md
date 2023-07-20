@@ -1,11 +1,6 @@
 ---
 title: input
 slug: Web/API/HTMLElement/input_event
-tags:
-  - DOM
-  - Element
-  - Entrée
-  - HTML5
 translation_of: Web/API/HTMLElement/input_event
 ---
 

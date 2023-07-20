@@ -1,13 +1,6 @@
 ---
 title: NodeIterator.nextNode()
 slug: Web/API/NodeIterator/nextNode
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Itérateur
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/NodeIterator/nextNode
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: Commentaires
 slug: Web/CSS/Comments
-tags:
-  - CSS
-  - Débutant
-  - Reference
 translation_of: Web/CSS/Comments
 ---
 
