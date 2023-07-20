@@ -264,11 +264,11 @@ ls | wc -l
 
 もう少し複雑なことを見てみましょう。
 
-最初に、MDN の「fetch」ページ `https://developer.mozilla.org/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch` を `curl` コマンド (URL からコンテンツを要求するために使用できる) を使用してコンテンツを取得します。
+最初に、MDN の「fetch」ページ `https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch` を `curl` コマンド (URL からコンテンツを要求するために使用できる) を使用してコンテンツを取得します。
 やってみよう:
 
 ```bash
-curl https://developer.mozilla.org/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch
+curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 ```
 
 ページが ([/Web/API/fetch](/ja/docs/Web/API/fetch) に) リダイレクトされているため、出力は得られません。
@@ -279,13 +279,13 @@ curl https://developer.mozilla.org/ja/docs/Web/API/WindowOrWorkerGlobalScope/fet
 以下を実行してみてください (最終ページに到達する前にリダイレクトが 1 つだけあることがわかります)。
 
 ```bash
-curl https://developer.mozilla.org/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
+curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location
 ```
 
 出力は次のようになります (`curl` は最初にいくつかのダウンロードカウンターなどを出力します)。
 
 ```bash
-location: /ja/docs/Web/API/fetch
+location: /en-US/docs/Web/API/fetch
 ```
 
 人為的ではありますが、この結果をもう少し進めて `location:` 行の内容を変換し、それぞれの先頭に基本オリジンを追加して、完全な URL を出力できるようにすることができます。
@@ -294,13 +294,13 @@ location: /ja/docs/Web/API/fetch
 これを実行してみてください:
 
 ```bash
-curl https://developer.mozilla.org/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
+curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
 ```
 
 最終的な出力は次のようになります:
 
 ```bash
-https://developer.mozilla.org/ja/docs/Web/API/fetch
+https://developer.mozilla.org/en-US/docs/Web/API/fetch
 ```
 
 これらのコマンドを組み合わせることで、`/docs/Web/API/WindowOrWorkerGlobalScope/fetch` URL をリクエストしたときに Mozilla サーバーがリダイレクトしている完全な URL を表示するように出力をカスタマイズしました。
