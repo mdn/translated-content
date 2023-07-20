@@ -25,7 +25,7 @@ Echemos un vistazo a la declaración condicional más común que usarás en Java
 
 — El humilde [`if ... else`](/es/docs/Web/JavaScript/Reference/Statements/if...else)[statement](/es/docs/Web/JavaScript/Reference/Statements/if...else).
 
-### Sintaxis if ... else básica.
+### Sintaxis if ... else básica
 
 Una sintaxis básica `if...else` luce así. {{glossary("pseudocode")}}:
 

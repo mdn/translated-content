@@ -169,7 +169,7 @@ div {
 
 ## Browser compatibility
 
-Please see the [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
+Please see the [`<transform-function>`](/ru/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
 
 ## See also
 

@@ -65,7 +65,7 @@ Ce document fournit une liste concise des points à vérifier par les développe
 - Un titre d'application **DOIT** être fourni.
 - Les titres **NE DOIVENT PAS** rompre la structure hiérarchique
 
-  ```html
+  ```html-nolint
   <h1>Titre de premier niveau</h1>
     <h2>Titre secondaire</h2>
     <h2>Un autre titre secondaire</h2>

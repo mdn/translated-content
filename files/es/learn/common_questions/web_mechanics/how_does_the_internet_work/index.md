@@ -12,7 +12,7 @@ En este artículo se describe qué es Internet y cómo funciona.
       <th scope="row">Prerequisitos:</th>
       <td>
         Ninguno, pero te animamos a leer el
-        <a href="/en-US/docs/Learn/Thinking_before_coding"
+        <a href="/es/docs/Learn/Thinking_before_coding"
           >Artículo sobre el establecimiento de metas</a
         >
         primero.

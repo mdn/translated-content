@@ -19,5 +19,5 @@ original_slug: Web/API/ByteString
 
 ## Смотрите также
 
-- [String](/ru/docs/Web/JavaScript/Reference/Global_Objects/String "/en-US/docs/Web/API/DOMString")
+- [String](/ru/docs/Web/JavaScript/Reference/Global_Objects/String "/ru/docs/Web/API/DOMString")
 - [Binary strings](/ru/docs/Web/API/DOMString/Binary)

@@ -42,8 +42,9 @@ Les images — qu'elles soient intégrés à l'aide de {{HTMLElement("img")}} ou
 Une fois que votre image a été convertie en forme progressive, vous pouvez simplement l'utiliser comme d'habitude.
 
 ```html
-<img src="/images/stafff-photo-huge-progressive.jpg"
-     alt="Photo du personnel, prise en janvier 1972">
+<img
+  src="/images/stafff-photo-huge-progressive.jpg"
+  alt="Photo du personnel, prise en janvier 1972" />
 ```
 
 Lors de l'utilisation d'une image progressive, les données sont stockées de telle sorte que le navigateur est en mesure de rendre une représentation de faible qualité de l'image dès que possible, puis de mettre à jour l'image au fur et à mesure de son chargement — ou une fois celui-ci terminé — pour la présenter en pleine qualité.

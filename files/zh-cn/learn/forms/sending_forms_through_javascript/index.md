@@ -57,29 +57,31 @@ function sendData(data) {
   var name;
 
   // 将数据对象转换为URL编码的键/值对数组。
-  for(name in data) {
-    urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]));
+  for (name in data) {
+    urlEncodedDataPairs.push(
+      encodeURIComponent(name) + "=" + encodeURIComponent(data[name]),
+    );
   }
 
   // 将配对合并为单个字符串，并将所有%编码的空格替换为
   // “+”字符；匹配浏览器表单提交的行为。
-  urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+  urlEncodedData = urlEncodedDataPairs.join("&").replace(/%20/g, "+");
 
   // 定义成功数据提交时发生的情况
-  XHR.addEventListener('load', function(event) {
-    alert('耶！已发送数据并加载响应。');
+  XHR.addEventListener("load", function (event) {
+    alert("耶！已发送数据并加载响应。");
   });
 
   // 定义错误提示
-  XHR.addEventListener('error', function(event) {
-    alert('哎呀！出问题了。');
+  XHR.addEventListener("error", function (event) {
+    alert("哎呀！出问题了。");
   });
 
   // 建立我们的请求
-  XHR.open('POST', 'https://example.com/cors.php');
+  XHR.open("POST", "https://example.com/cors.php");
 
   // 为表单数据 POST 请求添加所需的 HTTP 头
-  XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  XHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
   // 最后，发送我们的数据。
   XHR.send(urlEncodedData);
@@ -111,25 +113,25 @@ function sendData(data) {
 ```js
 function sendData(data) {
   var XHR = new XMLHttpRequest();
-  var FD  = new FormData();
+  var FD = new FormData();
 
   // 把我们的数据添加到这个 FormData 对象中
-  for(name in data) {
+  for (name in data) {
     FD.append(name, data[name]);
   }
 
   // 定义数据成功发送并返回后执行的操作
-  XHR.addEventListener('load', function(event) {
-    alert('Yeah! 已发送数据并加载响应。');
+  XHR.addEventListener("load", function (event) {
+    alert("Yeah! 已发送数据并加载响应。");
   });
 
   // 定义发生错误时执行的操作
-  XHR.addEventListener('error', function(event) {
-    alert('Oops! 出错了。');
+  XHR.addEventListener("error", function (event) {
+    alert("Oops! 出错了。");
   });
 
   // 设置请求地址和方法
-  XHR.open('POST', 'https://example.com/cors.php');
+  XHR.open("POST", "https://example.com/cors.php");
 
   // 发送这个 formData 对象，HTTP 请求头会自动设置
   XHR.send(FD);
@@ -149,8 +151,8 @@ function sendData(data) {
 ```html
 <form id="myForm">
   <label for="myName">告诉我你的名字：</label>
-  <input id="myName" name="name" value="John">
-  <input type="submit" value="提交">
+  <input id="myName" name="name" value="John" />
+  <input type="submit" value="提交" />
 </form>
 ```
 
@@ -162,16 +164,16 @@ window.addEventListener("load", function () {
     var XHR = new XMLHttpRequest();
 
     // 我们把这个 FormData 和表单元素绑定在一起。
-    var FD  = new FormData(form);
+    var FD = new FormData(form);
 
     // 我们定义了数据成功发送时会发生的事。
-    XHR.addEventListener("load", function(event) {
+    XHR.addEventListener("load", function (event) {
       alert(event.target.responseText);
     });
 
     // 我们定义了失败的情形下会发生的事
-    XHR.addEventListener("error", function(event) {
-      alert('哎呀！出了一些问题。');
+    XHR.addEventListener("error", function (event) {
+      alert("哎呀！出了一些问题。");
     });
 
     // 我们设置了我们的请求
@@ -228,8 +230,8 @@ window.addEventListener("load", function () {
 // 它只有一个参数，一个由键值对填充的对象。
 function sendData(data) {
   var name,
-      form = document.createElement("form"),
-      node = document.createElement("input");
+    form = document.createElement("form"),
+    node = document.createElement("input");
 
   // 定义响应时发生的事件
   iframe.addEventListener("load", function () {
@@ -239,8 +241,8 @@ function sendData(data) {
   form.action = "http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi";
   form.target = iframe.name;
 
-  for(name in data) {
-    node.name  = name;
+  for (name in data) {
+    node.name = name;
     node.value = data[name].toString();
     form.appendChild(node.cloneNode());
   }
@@ -274,11 +276,11 @@ function sendData(data) {
 <form id="myForm">
   <p>
     <label for="i1">文本数据：</label>
-    <input id="i1" name="myText" value="一些文本数据">
+    <input id="i1" name="myText" value="一些文本数据" />
   </p>
   <p>
     <label for="i2">文件数据：</label>
-    <input id="i2" name="myFile" type="file">
+    <input id="i2" name="myFile" type="file" />
   </p>
   <button>提交！</button>
 </form>
@@ -289,14 +291,13 @@ function sendData(data) {
 ```js
 // 因为我们想获取 DOM 节点，
 // 我们在页面加载时初始化我们的脚本。
-window.addEventListener('load', function () {
-
+window.addEventListener("load", function () {
   // 这些变量用于存储表单数据
   var text = document.getElementById("i1");
   var file = {
-        dom    : document.getElementById("i2"),
-        binary : null
-      };
+    dom: document.getElementById("i2"),
+    binary: null,
+  };
 
   // 使用 FileReader API 获取文件内容
   var reader = new FileReader();
@@ -307,13 +308,13 @@ window.addEventListener('load', function () {
   });
 
   // 页面加载时，如果一个文件已经被选择，那么读取该文件。
-  if(file.dom.files[0]) {
+  if (file.dom.files[0]) {
     reader.readAsBinaryString(file.dom.files[0]);
   }
 
   // 如果没有被选择，一旦用户选择了它，就读取文件。
   file.dom.addEventListener("change", function () {
-    if(reader.readyState === FileReader.LOADING) {
+    if (reader.readyState === FileReader.LOADING) {
       reader.abort();
     }
 
@@ -324,7 +325,7 @@ window.addEventListener('load', function () {
   function sendData() {
     // 如果存在被选择的文件，等待它读取完成
     // 如果没有，延迟函数的执行
-    if(!file.binary && file.dom.files.length > 0) {
+    if (!file.binary && file.dom.files.length > 0) {
       setTimeout(sendData, 10);
       return;
     }
@@ -345,19 +346,24 @@ window.addEventListener('load', function () {
       data += "--" + boundary + "\r\n";
 
       // 把它描述成表单数据
-      data += 'content-disposition: form-data; '
-      // 定义表单数据的名称
-            + 'name="'         + file.dom.name          + '"; '
-      // 提供文件的真实名字
-            + 'filename="'     + file.dom.files[0].name + '"\r\n';
+      data +=
+        "content-disposition: form-data; " +
+        // 定义表单数据的名称
+        'name="' +
+        file.dom.name +
+        '"; ' +
+        // 提供文件的真实名字
+        'filename="' +
+        file.dom.files[0].name +
+        '"\r\n';
       // 和文件的 MIME 类型
-      data += 'Content-Type: ' + file.dom.files[0].type + '\r\n';
+      data += "Content-Type: " + file.dom.files[0].type + "\r\n";
 
       // 元数据和数据之间有一条空行。
-      data += '\r\n';
+      data += "\r\n";
 
       // 将二进制数据添加到主体请求中
-      data += file.binary + '\r\n';
+      data += file.binary + "\r\n";
     }
 
     // 文本数据更简单一些
@@ -367,7 +373,7 @@ window.addEventListener('load', function () {
     // 声明它是表单数据，并命名它
     data += 'content-disposition: form-data; name="' + text.name + '"\r\n';
     // 元数据和数据之间有一条空行。
-    data += '\r\n';
+    data += "\r\n";
 
     // 添加文本数据到主体请求中
     data += text.value + "\r\n";
@@ -376,20 +382,23 @@ window.addEventListener('load', function () {
     data += "--" + boundary + "--";
 
     // 定义成功提交数据执行的语句
-    XHR.addEventListener('load', function(event) {
-      alert('✌！数据已发送且响应已加载。');
+    XHR.addEventListener("load", function (event) {
+      alert("✌！数据已发送且响应已加载。");
     });
 
     // 定义发生错误时做的事
-    XHR.addEventListener('error', function(event) {
-      alert('哎呀！出现了一些问题。');
+    XHR.addEventListener("error", function (event) {
+      alert("哎呀！出现了一些问题。");
     });
 
     // 建立请求
-    XHR.open('POST', 'https://example.com/cors.php');
+    XHR.open("POST", "https://example.com/cors.php");
 
     // 添加需要的 HTTP 头部来处理多重表单数据 POST 请求
-    XHR.setRequestHeader('Content-Type','multipart/form-data; boundary=' + boundary);
+    XHR.setRequestHeader(
+      "Content-Type",
+      "multipart/form-data; boundary=" + boundary,
+    );
 
     // 最后，发送数据。
     XHR.send(data);
@@ -399,7 +408,7 @@ window.addEventListener('load', function () {
   var form = document.getElementById("myForm");
 
   // …接管提交事件
-  form.addEventListener('submit', function (event) {
+  form.addEventListener("submit", function (event) {
     event.preventDefault();
     sendData();
   });

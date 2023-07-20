@@ -43,4 +43,4 @@ There are a number of things you can do to help secure your site. This article o
 
 - [Open Web Application Security Project (OWASP)](https://www.owasp.org/)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/Security")}}

@@ -29,7 +29,7 @@ L'événement `message` est déclenché sur un objet {{domxref('Window')}} lorsq
       <th scope="row">Propriété de gestionnaire d'événements</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessage"
+          ><a href="/fr/docs/Web/API/WindowEventHandlers/onmessage"
             >onmessage</a
           ></code
         >

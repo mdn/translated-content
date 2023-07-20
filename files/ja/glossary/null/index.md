@@ -1,5 +1,5 @@
 ---
-title: 'Null'
+title: "Null"
 slug: Glossary/Null
 ---
 
@@ -10,7 +10,7 @@ slug: Glossary/Null
 しかし、場合によっては、 `null` はそれらしく見えても「プリミティブ」ではありません。あらゆるオブジェクトが `null` 値から派生しており、そのため `typeof` で検査すると `object` が返るという一面もあります。
 
 ```js
-typeof null === 'object' // true
+typeof null === "object"; // true
 ```
 
 - **[用語集](/ja/docs/Glossary)**

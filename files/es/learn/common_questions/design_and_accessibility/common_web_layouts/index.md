@@ -80,7 +80,7 @@ Estudiemos algunos ejemplos más concretos tomados de sitios web bien conocidos.
 
 Bastante sencillo. Sólo recuerda que muchas personas navegarán por tu sitio desde escritorios, así que haz tu contenido también utilizable allí.
 
-### Diseño de dos columnas.
+### Diseño de dos columnas
 
 **[Abduzeedo](http://abduzeedo.com/typography-mania-261)**, un simple diseño de blog. Los blogs usualmente tienen dos columnas, una para el contenido principal que es más ancha y otra más estrecha para el contenido secundario (como widgets, niveles de navegación secundarios y anuncios).
 

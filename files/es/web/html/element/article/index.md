@@ -65,7 +65,7 @@ Un mismo documento puede tener varios artículos; por ejemplo, en un blog en el 
     <tr>
       <th scope="row">Rol ARIA implícito</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/article_role"
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/article_role"
           ><code>article (en-US)</code></a
         >
       </td>

@@ -10,7 +10,7 @@ L'interface **`IDBObjectStore`** de l'{{domxref("IndexedDB_API","API IndexedDB")
 
 Le magasin d'objet emmagasine des enregistrements. Chaque enregistrement est constitué d'un couple clé/valeur. Chaque valeurs est indexée sur sa clé. Les clés sont triées pour former l'index primaire du magasin. Ce qui permet un accès rapide et ordonnée aux valeurs.
 
-Le magasin d'objet peut en plus de l'index primaire avoir des index qui ordonnent les enregistrements sur d'autres clés. Ces index se mettent automatiquement à jour dans la plupart des cas et permettent de mettre des contraintes d’unicités pour d'autres clés que la clé primaire du magasin d'objet.
+Le magasin d'objet peut en plus de l'index primaire avoir des index qui ordonnent les enregistrements sur d'autres clés. Ces index se mettent automatiquement à jour dans la plupart des cas et permettent de mettre des contraintes d'unicités pour d'autres clés que la clé primaire du magasin d'objet.
 
 {{AvailableInWorkers}}
 
@@ -54,7 +54,7 @@ Le magasin d'objet peut en plus de l'index primaire avoir des index qui ordonnen
 - {{domxref("IDBObjectStore.transaction")}} {{readonlyInline}}
   - : La {{domxref("IDBTransaction","transaction")}} à laquelle l'accès du magasin d'objet appartient.
 - {{domxref("IDBObjectStore.autoIncrement")}} {{readonlyInline}}
-  - : La position du drapeau d’incrémentation automatique du magasin d'objet relié.
+  - : La position du drapeau d'incrémentation automatique du magasin d'objet relié.
 
 <!---->
 

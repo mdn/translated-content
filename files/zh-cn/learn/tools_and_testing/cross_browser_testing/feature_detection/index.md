@@ -39,7 +39,7 @@ slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 ```js
 if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(function(position) {
+  navigator.geolocation.getCurrentPosition(function (position) {
     // 使用如 Google Maps API 显示地图上的位置
   });
 } else {
@@ -57,15 +57,15 @@ if ("geolocation" in navigator) {
 
 ### CSS
 
-你可以通过在 JavaScript 中测试 [*element.style.property*](/zh-CN/docs/Web/API/HTMLElement/style)（例如 `paragraph.style.rotate`）的存在来编写 CSS 特性测试。
+你可以通过在 JavaScript 中测试 [_element.style.property_](/zh-CN/docs/Web/API/HTMLElement/style)（例如 `paragraph.style.rotate`）的存在来编写 CSS 特性测试。
 
 一个经典的例子可能是测试浏览器是否支持 [Subgrid](/zh-CN/docs/Web/CSS/CSS_grid_layout/Subgrid)；对于支持 [`grid-template-columns`](/zh-CN/docs/Web/CSS/grid-template-columns) 和 [`grid-template-rows`](/zh-CN/docs/Web/CSS/grid-template-rows) 的 subgrid 值的浏览器，我们可以在布局上使用 subgrid。对于不使用 subgrid 的浏览器，我们可以使用普通的网格，它可以正常工作，但没有那么酷的外观。
 
 以此为例，如果支持该值，我们可以包含一个 subgrid 样式表，如果不支持，则包含一个普通网格样式表。为此，我们可以在 HTML 文件的头部包含两个样式表：一个是所有的样式表，另一个在不支持 subgrid 的情况下实现默认布局：
 
 ```html
-<link href="basic-styling.css" rel="stylesheet">
-<link class="conditional" href="grid-layout.css" rel="stylesheet">
+<link href="basic-styling.css" rel="stylesheet" />
+<link class="conditional" href="grid-layout.css" rel="stylesheet" />
 ```
 
 这里，`basic-styling.css` 处理所有我们想给每个浏览器的样式。我们还有两个 CSS 文件，`grid-layout.css` 和 `subgrid-layout.css`，它们包含了我们想根据浏览器的支持程度有选择地应用的 CSS。
@@ -74,12 +74,12 @@ if ("geolocation" in navigator) {
 
 我们可以在我们的文档中添加 `<script></script>` 元素，填充以下 JavaScript：
 
-   ```js
-   const conditional = document.querySelector('.conditional');
-   if (CSS.supports("grid-template-columns", "subgrid")) {
-     conditional.setAttribute('href', 'subgrid-layout.css.css');
-   }
-   ```
+```js
+const conditional = document.querySelector(".conditional");
+if (CSS.supports("grid-template-columns", "subgrid")) {
+  conditional.setAttribute("href", "subgrid-layout.css.css");
+}
+```
 
 在我们的条件语句中，我们使用 [`CSS.supports()`](/zh-CN/docs/Web/API/CSS/supports) 测试 {{cssxref("grid-template-columns")}} 属性是否支持 `subgrid` 值。
 
@@ -131,6 +131,7 @@ CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。
 但请记住，有些特性是已知不可检测的，见 Modernizr 在 2016 年发布的[不可检测的列表](https://github.com/Modernizr/Modernizr/wiki/Undetectables)。
 
 - 对象的成员
+
   - : 检查一个特定的方法或属性（通常是使用 API 的入口或你正在检测的其他特性）是否存在于其父 `Object` 中。
 
     我们前面的例子使用这种模式来检测 [Geolocation](/zh-CN/docs/Web/API/Geolocation_API) 的支持，通过测试 [`navigator`](/zh-CN/docs/Web/API/Navigator) 对象的 `geolocation`成员：
@@ -142,13 +143,14 @@ CSS 有一个原生的特性检测机制：{{cssxref("@supports")}} at-规则。
     ```
 
 - 元素的属性
+
   - : 使用 {{domxref("Document.createElement()")}} 在内存中创建一个元素，然后检查其上是否存在属性。
 
     这个例子展示了一种检测 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 支持的方法：
 
     ```js
     function supports_canvas() {
-      return !!document.createElement('canvas').getContext;
+      return !!document.createElement("canvas").getContext;
     }
     if (supports_canvas()) {
       // 创建 canvas 元素并在其上作画
@@ -223,14 +225,18 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 4. 现在编辑你的 `<html>` 起始标签，使它改变成以下这样：
 
    ```html
-   <html lang="en-us" class="no-js">…</html>
+   <html lang="en-us" class="no-js">
+     …
+   </html>
    ```
 
 此时，试着加载你的页面，你会对 Modernizr 在 CSS 特性方面的工作有一个概念。如果你看一下浏览器开发者工具的 DOM 检查器，你会发现 Modernizr 已经像这样更新了你的 `<html>` 元素的 `class` 属性：
 
 ```html
 <html
-  class="js no-htmlimports no-proximity sizes no-flash transferables applicationcache blobconstructor blob-constructor no-contextmenu (and loads of more values)">…</html>
+  class="js no-htmlimports no-proximity sizes no-flash transferables applicationcache blobconstructor blob-constructor no-contextmenu (and loads of more values)">
+  …
+</html>
 ```
 
 它现在包含了大量的类，表示对不同技术特性的支持状态。举例来说，如果浏览器完全不支持 grid，`<html>` 将被赋予 `no-cssgrid` 的类名。如果你在类列表中搜索，你还会看到其他与网格有关的类，比如：
@@ -257,12 +263,12 @@ main {
 
 /* 支持 subgrid 的浏览器的属性 */
 .csssubgrid .item {
-    grid-template-columns: subgrid;
+  grid-template-columns: subgrid;
 }
 
 .csssubgrid .subitem {
-   grid-column: 3 / 6;
-   grid-row: 1 / 3;
+  grid-column: 3 / 6;
+  grid-row: 1 / 3;
 }
 
 /* 不支持 subgrid 的浏览器的回落 */
@@ -299,22 +305,25 @@ Modernizr.fetch
 
    ```js
    if (Modernizr.geolocation) {
-
-     navigator.geolocation.getCurrentPosition(function(position) {
- 
-       let latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+     navigator.geolocation.getCurrentPosition(function (position) {
+       let latlng = new google.maps.LatLng(
+         position.coords.latitude,
+         position.coords.longitude,
+       );
        let myOptions = {
          zoom: 8,
          center: latlng,
          mapTypeId: google.maps.MapTypeId.TERRAIN,
-         disableDefaultUI: true
-       }
-       let map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+         disableDefaultUI: true,
+       };
+       let map = new google.maps.Map(
+         document.getElementById("map_canvas"),
+         myOptions,
+       );
      });
-
    } else {
-     const para = document.createElement('p');
-     para.textContent = '啊，没有地理位置支持！';
+     const para = document.createElement("p");
+     para.textContent = "啊，没有地理位置支持！";
      document.body.appendChild(para);
    }
    ```

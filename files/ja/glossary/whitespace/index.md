@@ -15,18 +15,18 @@ slug: Glossary/Whitespace
 
 1. 仕様書
 
-    1. [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace)
-    2. [ECMAScript® 2015 言語仕様書](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)
+   1. [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace)
+   2. [ECMAScript® 2015 言語仕様書](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)
 
 2. リファレンス
 
-    1. [ホワイトスペースは HTML、 CSS、 そして DOM 内でどう扱われるか](/ja/docs/Web/API/Document_Object_Model/Whitespace)
-    2. {{cssxref("white-space")}}
+   1. [ホワイトスペースは HTML、 CSS、 そして DOM 内でどう扱われるか](/ja/docs/Web/API/Document_Object_Model/Whitespace)
+   2. {{cssxref("white-space")}}
 
 3. Wikipedia 記事
 
-    1. [Whitespace character](https://ja.wikipedia.org/wiki/Whitespace_character) (英語)
+   1. [Whitespace character](https://ja.wikipedia.org/wiki/Whitespace_character) (英語)
 
 4. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Character")}}
+   1. {{Glossary("Character")}}
