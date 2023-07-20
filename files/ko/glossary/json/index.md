@@ -1,6 +1,8 @@
 ---
 title: JSON
 slug: Glossary/JSON
+l10n:
+  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
 ---
 
 _JavaScript Object Notation_ (**JSON**) 은 데이터 교환 형식의 일종입니다. 엄격한 부분 집합은 아니지만, JSON은 {{Glossary("JavaScript")}} 구문과 매우 유사합니다. 많은 프로그래밍 언어가 JSON을 지원하지만, 웹 사이트와 브라우저 확장기능을 포함한 JavaScript 기반 앱에 특히 유용합니다.
