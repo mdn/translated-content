@@ -109,7 +109,6 @@ build/
 /files/ru/web/http/**/*.md
 /files/ru/web/javascript/**/*.md
 /files/ru/web/svg/**/*.md
-/files/ru/webassembly/**/*.md
 
 # zh-cn
 /files/zh-cn/learn/css/**/*.md
