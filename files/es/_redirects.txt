@@ -1270,7 +1270,8 @@
 /es/docs/Mejoras_SVG_en_Firefox_3	/es/docs/Mozilla/Firefox/Releases/3/SVG_improvements
 /es/docs/Mejoras_XUL_en_Firefox_3	/es/docs/Mozilla/Firefox/Releases/3/XUL_improvements_in_Firefox_3
 /es/docs/Mozilla/Add-ons/WebExtensions/Anatomia_de_una_WebExtension	/es/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-/es/docs/Mozilla/Add-ons/WebExtensions/Prerequisitos	/es/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
+/es/docs/Mozilla/Add-ons/WebExtensions/Prerequisites	/es/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
+/es/docs/Mozilla/Add-ons/WebExtensions/Prerequisitos	/es/docs/orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites
 /es/docs/Mozilla/Add-ons/WebExtensions/Que_son_las_WebExtensions	/es/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 /es/docs/Mozilla/Add-ons/WebExtensions/Tu_primera_WebExtension	/es/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 /es/docs/Mozilla/Add-ons/WebExtensions/Tutorial	/es/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension

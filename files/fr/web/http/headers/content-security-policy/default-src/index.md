@@ -1,5 +1,5 @@
 ---
-title: 'CSP: default-src'
+title: "CSP: default-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
 tags:
   - CSP

@@ -13,11 +13,11 @@ Proteger dados do usuário é uma parte essencial de qualquer projeto de website
       <th scope="row">Pré-requisitos:</th>
       <td>
         Ler o tópico "<a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Website_security"
+          href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/First_steps/Website_security"
           >Website security</a
         >" de Programação Server-side. Conclua os tópicos do tutorial Django
         tutorial até (e incluindo) pelos menos
-        <a href="/en-US/docs/Learn/Server-side/Django/Forms"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Forms"
           >Tutorial Django Parte 9: Trabalhando com formulários</a
         >.
       </td>

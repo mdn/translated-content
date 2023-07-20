@@ -35,7 +35,7 @@ iframe_node.contentDocument.designMode = "on";
 
 {{Compat("api.Document.designMode")}}
 
-## Veja também:
+## Veja também
 
 - [Rich-Text Editing in Mozilla](/pt-BR/docs/Rich-Text_Editing_in_Mozilla)
 - {{domxref("HTMLElement.contentEditable")}}

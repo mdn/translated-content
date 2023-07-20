@@ -2832,10 +2832,6 @@
     "modified": "2019-03-18T21:02:55.354Z",
     "contributors": ["alexgilsoncampi"]
   },
-  "Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-23T22:45:28.352Z",
-    "contributors": ["yuniers"]
-  },
   "Mozilla/Add-ons/WebExtensions/What_are_WebExtensions": {
     "modified": "2020-11-23T00:59:33.889Z",
     "contributors": ["kenliten", "hecaxmmx", "13539"]
@@ -15330,6 +15326,10 @@
   "orphaned/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension": {
     "modified": "2019-03-18T21:08:10.456Z",
     "contributors": ["fitojb", "yuniers"]
+  },
+  "orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites": {
+    "modified": "2019-03-23T22:45:28.352Z",
+    "contributors": ["yuniers"]
   },
   "orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox": {
     "modified": "2019-03-23T22:45:27.399Z",
