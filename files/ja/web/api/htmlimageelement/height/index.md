@@ -32,8 +32,8 @@ l10n:
   src="/ja/docs/Web/HTML/Element/img/clock-demo-200px.png"
   alt="Clock"
   srcset="
-    /ja/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
-    /ja/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
+    /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
+    /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
   "
   sizes="(max-width: 400px) 200px, 300px" />
 ```
