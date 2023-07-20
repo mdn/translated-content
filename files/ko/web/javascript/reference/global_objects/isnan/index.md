@@ -73,7 +73,7 @@ isNaN(new Date().toString());     // 참
 
 // 이것이 허위 양성이고 isNaN이 완전히 신뢰할 수 없는 이유이다.
 isNaN("blabla")   // 참: "blabla"는 숫자로 변환됩니다.
-                  // 이것을 숫자롯 parsing 하는 것을 실패하고 NaN을 반환한다.
+                  // 이것을 숫자로 parsing 하는 것을 실패하고 NaN을 반환한다.
 ```
 
 ### 유용한 특별 케이스 행동
