@@ -29,7 +29,6 @@ build/
 /files/es/web/api/**/*.md
 /files/es/web/css/**/*.md
 /files/es/web/html/**/*.md
-/files/es/web/http/**/*.md
 /files/es/web/javascript/**/*.md
 
 # fr
