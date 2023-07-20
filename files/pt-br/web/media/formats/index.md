@@ -12,9 +12,10 @@ Para exibir um vídeo usando HTML5, que funcione nas últimas versões dos princ
 
 ```html
 <video controls>
-  <source src="somevideo.webm" type="video/webm">
-  <source src="somevideo.mp4" type="video/mp4">
-  Desculpe; seu navegador não suporta vídeos HTML5 em WebM com VP8 ou MP4 com H.264.
+  <source src="somevideo.webm" type="video/webm" />
+  <source src="somevideo.mp4" type="video/mp4" />
+  Desculpe; seu navegador não suporta vídeos HTML5 em WebM com VP8 ou MP4 com
+  H.264.
   <!-- Você pode embutir um Flash player aqui, para exibir seu vídeo mp4 em navegadores antigos -->
 </video>
 ```

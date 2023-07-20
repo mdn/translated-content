@@ -53,7 +53,7 @@ Vary: Upgrade-Insecure-Requests
 
 {{Compat("http.headers.Upgrade-Insecure-Requests")}}
 
-## Veja também:
+## Veja também
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - CSP {{CSP("upgrade-insecure-requests")}} directive

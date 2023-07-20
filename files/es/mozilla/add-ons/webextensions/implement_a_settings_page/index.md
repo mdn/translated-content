@@ -23,7 +23,6 @@ Crea un nuevo directorio llamado "configuración", a continuación crea un archi
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -40,7 +39,6 @@ Crea un nuevo directorio llamado "configuración", a continuación crea un archi
       "id": "settings-example@mozilla.org"
     }
   }
-
 }
 ```
 
@@ -68,7 +66,6 @@ En primer lugar, actualiza "manifest.json" para que tenga este contenido:
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -91,7 +88,6 @@ En primer lugar, actualiza "manifest.json" para que tenga este contenido:
   },
 
   "permissions": ["storage"]
-
 }
 ```
 
@@ -103,24 +99,21 @@ Hemos añadido dos nuevas claves de manifiesto:
 A continuacion, como hemos prometido crear "options.html", vamos a realizarlo. Crea un archivo con ese nombre en el directorio "configuración" , y añade el siguiente contenido:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
 
   <body>
-
     <form>
-        <label>Border color<input type="text" id="color" ></label>
-        <button type="submit">Save</button>
+      <label>Border color<input type="text" id="color" /></label>
+      <button type="submit">Save</button>
     </form>
 
     <script src="options.js"></script>
-
   </body>
-
 </html>
 ```
 
@@ -131,7 +124,7 @@ Crea "options.js", de nuevo en el directorio "configuración" , y añade el sigu
 ```js
 function saveOptions(e) {
   chrome.storage.local.set({
-    color: document.querySelector("#color").value
+    color: document.querySelector("#color").value,
   });
 }
 

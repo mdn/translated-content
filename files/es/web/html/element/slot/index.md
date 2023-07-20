@@ -11,15 +11,15 @@ original_slug: Web/HTML/Elemento/slot
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/es/docs/Web/HTML/Content_categories"
           >Categorias de contenido</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/Web/HTML/Content_categories#Flow_content"
           >Contenido de flujo</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >
       </td>
@@ -27,7 +27,7 @@ original_slug: Web/HTML/Elemento/slot
     <tr>
       <th scope="row">Contenido permitido</th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Transparent_content_model"
+        <a href="/es/docs/HTML/Content_categories#Transparent_content_model"
           >Transparente</a
         >
       </td>
@@ -44,7 +44,7 @@ original_slug: Web/HTML/Elemento/slot
       <th scope="row">Parentes permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >
       </td>

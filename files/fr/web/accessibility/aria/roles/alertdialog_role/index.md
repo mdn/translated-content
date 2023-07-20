@@ -46,16 +46,21 @@ Lorsque la boîte de dialogue est correctement labélisée et que le focus se pl
 L'extrait de code ci-dessous présente la façon de baliser une boîte de dialogue d'alerte qui ne contient qu'un message et un bouton `OK`.
 
 ```html
-<div role="alertdialog" aria-labelledby="dialog1Titre" aria-describedby="dialog1Desc">
+<div
+  role="alertdialog"
+  aria-labelledby="dialog1Titre"
+  aria-describedby="dialog1Desc">
   <div role="document" tabindex="0">
     <h2 id="dialog1Titre">Votre session est sur le point d’expirer</h2>
-    <p id="dialog1Desc">Pour prolonger votre session, cliquez sur le bouton OK</p>
+    <p id="dialog1Desc">
+      Pour prolonger votre session, cliquez sur le bouton OK
+    </p>
     <button>OK</button>
   </div>
 </div>
 ```
 
-#### Exemples concrets&nbsp;:
+#### Exemples concrets
 
 À définir
 

@@ -29,7 +29,7 @@ API, которые мы рассмотрели до сих пор, встрое
 
 ### Они находятся на сторонних серверах
 
-API браузера встроены в браузер - вы можете получить к ним доступ сразу из JavaScript. Например, [API геолокации](/ru/docs/Web/API/Geolocation/Using_geolocation), доступный в нашем примере, осуществляется с использованием свойства геолокации объекта [`Navigator`](/en-US/docs/Web/API/Navigator), которое возвращает объект [`Geolocation`](/en-US/docs/Web/API/Geolocation). Этот пример использует метод [`getCurrentPosition()`](/en-US/docs/Web/API/Geolocation/getCurrentPosition) этого объекта, для запроса текущего положения устройства:
+API браузера встроены в браузер - вы можете получить к ним доступ сразу из JavaScript. Например, [API геолокации](/ru/docs/Web/API/Geolocation/Using_geolocation), доступный в нашем примере, осуществляется с использованием свойства геолокации объекта [`Navigator`](/ru/docs/Web/API/Navigator), которое возвращает объект [`Geolocation`](/ru/docs/Web/API/Geolocation). Этот пример использует метод [`getCurrentPosition()`](/ru/docs/Web/API/Geolocation/getCurrentPosition) этого объекта, для запроса текущего положения устройства:
 
 ```js
 navigator.geolocation.getCurrentPosition(function(position) { ... });
@@ -255,7 +255,7 @@ In the case of this API, you need to include the API key as a [get](/ru/docs/Web
     }
     ```
 
-`submitSearch()` sets the page number back to 0 to begin with, then calls `fetchResults()`. This first calls [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) on the event object, to stop the form actually submitting (which would break the example). Next, we use some string manipulation to assemble the full URL that we will make the request to. We start off by assembling the parts we deem as mandatory for this demo:
+`submitSearch()` sets the page number back to 0 to begin with, then calls `fetchResults()`. This first calls [`preventDefault()`](/ru/docs/Web/API/Event/preventDefault) on the event object, to stop the form actually submitting (which would break the example). Next, we use some string manipulation to assemble the full URL that we will make the request to. We start off by assembling the parts we deem as mandatory for this demo:
 
 - The base URL (taken from the `baseURL` variable).
 - The API key, which has to be specified in the `api-key` URL parameter (the value is taken from the `key` variable).
@@ -263,7 +263,7 @@ In the case of this API, you need to include the API key as a [get](/ru/docs/Web
 - The search term, which has to be specified in the `q` URL parameter (the value is taken from the value of the `searchTerm` text {{htmlelement("input")}}).
 - The document type to return results for, as specified in an expression passed in via the `fq` URL parameter. In this case, we just want to return articles.
 
-Next, we use a couple of [`if()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statements to check whether the `startDate` and `endDate` `<input>`s have had values filled in on them. If they do, we append their values to the URL, specified in `begin_date` and `end_date` URL parameters respectively.
+Next, we use a couple of [`if()`](/ru/docs/Web/JavaScript/Reference/Statements/if...else) statements to check whether the `startDate` and `endDate` `<input>`s have had values filled in on them. If they do, we append their values to the URL, specified in `begin_date` and `end_date` URL parameters respectively.
 
 So, a complete URL would end up looking something like this:
 
@@ -291,7 +291,7 @@ fetch(url).then(function(result) {
 });
 ```
 
-Here we run the request by passing our `url` variable to [`fetch()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch), convert the response body to JSON using the [`json()`](/en-US/docs/Web/API/Body/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI.
+Here we run the request by passing our `url` variable to [`fetch()`](/ru/docs/Web/API/WindowOrWorkerGlobalScope/fetch), convert the response body to JSON using the [`json()`](/ru/docs/Web/API/Body/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI.
 
 ### Displaying the data
 
@@ -359,9 +359,9 @@ function displayResults(json) {
 
 There's a lot of code here; let's explain it step by step:
 
-- The [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop is a common pattern used to delete all of the contents of a DOM element, in this case, the {{htmlelement("section")}} element. We keep checking to see if the `<section>` has a first child, and if it does, we remove the first child. The loop ends when `<section>` no longer has any children.
+- The [`while`](/ru/docs/Web/JavaScript/Reference/Statements/while) loop is a common pattern used to delete all of the contents of a DOM element, in this case, the {{htmlelement("section")}} element. We keep checking to see if the `<section>` has a first child, and if it does, we remove the first child. The loop ends when `<section>` no longer has any children.
 - Next, we set the `articles` variable to equal `json.response.docs` — this is the array holding all the objects that represent the articles returned by the search. This is done purely to make the following code a bit simpler.
-- The first [`if()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) block checks to see if 10 articles are returned (the API returns up to 10 articles at a time.) If so, we display the {{htmlelement("nav")}} that contains the _Previous 10_/_Next 10_ pagination buttons. If less than 10 articles are returned, they will all fit on one page, so we don't need to show the pagination buttons. We will wire up the pagination functionality in the next section.
+- The first [`if()`](/ru/docs/Web/JavaScript/Reference/Statements/if...else) block checks to see if 10 articles are returned (the API returns up to 10 articles at a time.) If so, we display the {{htmlelement("nav")}} that contains the _Previous 10_/_Next 10_ pagination buttons. If less than 10 articles are returned, they will all fit on one page, so we don't need to show the pagination buttons. We will wire up the pagination functionality in the next section.
 - The next `if()` block checks to see if no articles are returned. If so, we don't try to display any — we just create a {{htmlelement("p")}} containing the text "No results returned." and insert it into the `<section>`.
 - If some articles are returned, we, first of all, create all the elements that we want to use to display each news story, insert the right contents into each one, and then insert them into the DOM at the appropriate places. To work out which properties in the article objects contained the right data to show, we consulted the [Article Search API reference](https://developer.nytimes.com/article_search_v2.json). Most of these operations are fairly obvious, but a few are worth calling out:
 
@@ -377,7 +377,7 @@ To make the pagination buttons work, we will increment (or decrement) the value 
 
 This allows us to easily write a simplistic pagination function.
 
-1. Below the existing [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) call, add these two new ones, which cause the `nextPage()` and `previousPage()` functions to be invoked when the relevant buttons are clicked:
+1. Below the existing [`addEventListener()`](/ru/docs/Web/API/EventTarget/addEventListener) call, add these two new ones, which cause the `nextPage()` and `previousPage()` functions to be invoked when the relevant buttons are clicked:
 
     ```js
     nextBtn.addEventListener('click', nextPage);
@@ -404,7 +404,7 @@ This allows us to easily write a simplistic pagination function.
 
     The first function is simple — we increment the `pageNumber` variable, then run the `fetchResults()` function again to display the next page's results.
 
-    The second function works nearly exactly the same way in reverse, but we also have to take the extra step of checking that `pageNumber` is not already zero before decrementing it — if the fetch request runs with a minus `page` URL parameter, it could cause errors. If the `pageNumber` is already 0, we simply [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) out of the function, to avoid wasting processing power (If we are already at the first page, we don't need to load the same results again).
+    The second function works nearly exactly the same way in reverse, but we also have to take the extra step of checking that `pageNumber` is not already zero before decrementing it — if the fetch request runs with a minus `page` URL parameter, it could cause errors. If the `pageNumber` is already 0, we simply [`return`](/ru/docs/Web/JavaScript/Reference/Statements/return) out of the function, to avoid wasting processing power (If we are already at the first page, we don't need to load the same results again).
 
 ## YouTube example
 

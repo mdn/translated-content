@@ -48,34 +48,32 @@ En plus des attributs qui suivent, l'élément `<math>` accepte tous les attribu
 ### Notation HTML5
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>MathML en HTML5</title>
   </head>
   <body>
-
-  <math>
-    <mrow>
+    <math>
       <mrow>
+        <mrow>
+          <msup>
+            <mi>a</mi>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mi>b</mi>
+            <mn>2</mn>
+          </msup>
+        </mrow>
+        <mo>=</mo>
         <msup>
-          <mi>a</mi>
-          <mn>2</mn>
-        </msup>
-        <mo>+</mo>
-        <msup>
-          <mi>b</mi>
+          <mi>c</mi>
           <mn>2</mn>
         </msup>
       </mrow>
-      <mo>=</mo>
-      <msup>
-        <mi>c</mi>
-        <mn>2</mn>
-      </msup>
-    </mrow>
-  </math>
-
+    </math>
   </body>
 </html>
 ```

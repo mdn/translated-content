@@ -9,7 +9,7 @@ slug: Glossary/Loop
 
 ### for ループ
 
-#### 構文:
+#### 構文
 
 ```
 for (文1; 文2; 文3){
@@ -21,11 +21,11 @@ for (文1; 文2; 文3){
 - 文 2 は、コードブロックを実行するのに必要な条件を定義します。
 - 文 3 は、コードブロックが実行されるたびに実行されます。
 
-#### 例:
+#### 例
 
 ```js
-for(var i = 0; i < 10; i++){
-    console.log(i)
+for (var i = 0; i < 10; i++) {
+  console.log(i);
 }
 //このループは数字の 0-9 の数字を表示し、条件に合う (i = 10) と停止します
 ```
@@ -38,7 +38,7 @@ for(var i = 0; i < 10; i++){
 
 ### while ループ
 
-#### 構文:
+#### 構文
 
 ```
 while (条件){
@@ -48,13 +48,13 @@ while (条件){
 
 - このコードブロックは条件が真である限り、継続します。
 
-#### 例:
+#### 例
 
 ```js
 var i = 0;
-while(i < 5){
-    console.log(i)
-    i++
+while (i < 5) {
+  console.log(i);
+  i++;
 }
 //このループは 0-4 の数字を表示し、条件 (i >=5) が偽になると停止します
 ```
@@ -65,8 +65,8 @@ while(i < 5){
 
 1. General Knowledge
 
-    1. Wikipedia の [制御構造](https://ja.wikipedia.org/wiki/制御構造#ループ)
+   1. Wikipedia の [制御構造](https://ja.wikipedia.org/wiki/制御構造#ループ)
 
 2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Loop", "ループ")}}
+   1. {{Glossary("Loop", "ループ")}}

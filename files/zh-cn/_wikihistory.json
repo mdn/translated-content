@@ -5371,10 +5371,6 @@
     "modified": "2019-03-18T21:04:42.330Z",
     "contributors": ["pea3nut"]
   },
-  "Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-23T22:45:08.369Z",
-    "contributors": ["GrayLight", "yfdyh000"]
-  },
   "Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page": {
     "modified": "2020-05-01T09:44:07.553Z",
     "contributors": ["ultiwill"]
@@ -15625,10 +15621,6 @@
   "Web/API/Window/appinstalled_event": {
     "modified": "2019-03-18T21:40:44.436Z",
     "contributors": ["Aaron_Zhung", "echoArray"]
-  },
-  "Web/API/Window/applicationCache": {
-    "modified": "2019-03-23T23:31:44.274Z",
-    "contributors": ["xgqfrms-GitHub", "inJs", "teoli", "ziyunfei", "sunnylost"]
   },
   "Web/API/Window/back": {
     "modified": "2019-03-23T22:12:59.387Z",

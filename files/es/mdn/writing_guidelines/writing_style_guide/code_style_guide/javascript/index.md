@@ -559,7 +559,7 @@ Las sentencias `switch` pueden ser un poco complicadas.
   ```
 
 > **Nota:** Tenga en cuenta que solo los errores _recuperables_ deben detectarse y manejarse.
-  Todos los errores no recuperables deben dejarse pasar y aumentar la pila de llamadas.
+> Todos los errores no recuperables deben dejarse pasar y aumentar la pila de llamadas.
 
 ## Objetos
 

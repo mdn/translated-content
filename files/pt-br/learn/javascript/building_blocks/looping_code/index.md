@@ -15,7 +15,7 @@ As linguagens de programação são muito úteis para concluir rapidamente taref
       <td>
         Conhecimento básico em informática, um básico entendimento de HTML e
         CSS,
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >.
       </td>
@@ -870,6 +870,6 @@ If there is anything you didn't understand, feel free to read through the articl
 - [for statement reference](/pt-BR/docs/Web/JavaScript/Reference/Statements/for)
 - [while](/pt-BR/docs/Web/JavaScript/Reference/Statements/while) and [do...while](/pt-BR/docs/Web/JavaScript/Reference/Statements/do...while) references
 - [break](/pt-BR/docs/Web/JavaScript/Reference/Statements/break) and [continue](/pt-BR/docs/Web/JavaScript/Reference/Statements/continue) references
-- [What’s the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
+- [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — some advanced loop best practices
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}

@@ -12,5 +12,5 @@ Les éléments et les balises _ne_ sont _pas_ la même chose. Les balises commen
 ## Voir aussi
 
 - L'interface {{domxref("Element")}}, qui représente l'élément dans le DOM.
-- [Plus d'informations à propos des éléments.](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started)
+- [Plus d'informations à propos des éléments.](/fr/Apprendre/HTML/Introduction_à_HTML/Getting_started)
 - [Les éléments personnalisés dans la section Composants Web](/fr/docs/Web/Web_Components/Custom_Elements)(en)

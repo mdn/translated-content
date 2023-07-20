@@ -9,7 +9,7 @@ slug: Learn/HTML/Introduction_to_HTML
 
 ## 前言
 
-尽管你无需事先拥有任何 HTML 相关知识以学习该模块，你仍至少需要熟悉一些使用电脑的基础知识，并会被动地使用网络（也就是看着它，浏览内容）。你需要配置基础的开发环境（详细说明请参见[安装基本软件](zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)页面），并且懂得如何创建和管理文件（在[处理文件](zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)页面中有详细说明） —— 它们都是我们纯新手 [Web 开发入门](zh-CN/docs/Learn/Getting_started_with_the_web)模块的一部分。
+尽管你无需事先拥有任何 HTML 相关知识以学习该模块，你仍至少需要熟悉一些使用电脑的基础知识，并会被动地使用网络（也就是看着它，浏览内容）。你需要配置基础的开发环境（详细说明请参见[安装基本软件](/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software)页面），并且懂得如何创建和管理文件（在[处理文件](/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files)页面中有详细说明） —— 它们都是我们纯新手 [Web 开发入门](/zh-CN/docs/Learn/Getting_started_with_the_web)模块的一部分。
 
 > **备注：** 如果你正在一台你不能创建文件的设备上作业，那么你需要在在线编程工具上运行（大多数）代码示例，如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 等。
 

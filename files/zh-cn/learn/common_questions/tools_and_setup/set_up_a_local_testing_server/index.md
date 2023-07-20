@@ -45,36 +45,36 @@ slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 
 1. 安装 Python。如果您正在使用 Linux 或 Mac OS X，则应该已经在您的系统上可用。如果您是 Windows 用户，则可以从 Python 主页获取安装程序，并按照说明进行安装：
 
-    - 转到[python.org](https://www.python.org/)
-    - 在“下载”部分下，单击 Python“3.xxx”的链接。
-    - 在页面的底部，选择*Windows x86 可执行文件安装程序*并下载它。
-    - 当它已经下载，运行它。
-    - 在第一个安装程序页面上，确保选中了“将 Python 3.xxx 添加到 PATH”复选框。
-    - 单击*安装*，然后在安装完成后单击*关闭*。
+   - 转到[python.org](https://www.python.org/)
+   - 在“下载”部分下，单击 Python“3.xxx”的链接。
+   - 在页面的底部，选择*Windows x86 可执行文件安装程序*并下载它。
+   - 当它已经下载，运行它。
+   - 在第一个安装程序页面上，确保选中了“将 Python 3.xxx 添加到 PATH”复选框。
+   - 单击*安装*，然后在安装完成后单击*关闭*。
 
 2. 打开你的命令提示符（Windows）/终端（OS X / Linux）。要检查 Python 是否安装，请输入以下命令：
 
-    ```bash
-    python -V
-    ```
+   ```bash
+   python -V
+   ```
 
 3. 下面应该给出你安装的版本号，使用`cd`命令导航到您的示例所在的目录。
 
-    ```bash
-    # 输入你想要进入的目录，举例
-    cd Desktop
-    # 用两个点来表示进入上一层级的目录
-    cd ..
-    ```
+   ```bash
+   # 输入你想要进入的目录，举例
+   cd Desktop
+   # 用两个点来表示进入上一层级的目录
+   cd ..
+   ```
 
 4. 输入命令在该目录中启动服务器：
 
-    ```bash
-    ＃如果上面返回的 Python 版本是 3.X
-    python -m http.server
-    ＃如果上面返回的 Python 版本是 2.X
-    python -m SimpleHTTPServer
-    ```
+   ```bash
+   ＃如果上面返回的 Python 版本是 3.X
+   python -m http.server
+   ＃如果上面返回的 Python 版本是 2.X
+   python -m SimpleHTTPServer
+   ```
 
 5. 默认情况下，这将在本地 Web 服务器上的端口 8000 上运行目录的内容。您可以通过转到`localhost:8000`Web 浏览器中的 URL 来访问此服务器。在这里你会看到列出的目录的内容 - 点击你想运行的 HTML 文件。
 

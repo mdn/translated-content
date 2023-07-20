@@ -43,7 +43,6 @@ Digamos que desea traducir el contenido de la página que se observa en esta dir
    > NOTA:
    >
    > - Si el archivo no existe, deberá crearlo en formato `Markdown` imitando la ruta que tiene la versión en inglés.
-   >
    > - Es posible que el archivo en la versión en español se encuentre en formato `HTML`, en cuyo caso tendrá que reemplazarlo por el formato `Markdown`.
 
 3. Utilizar el texto y formato en inglés como guía para traducir al español.

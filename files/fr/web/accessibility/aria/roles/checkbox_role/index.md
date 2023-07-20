@@ -45,7 +45,7 @@ Les technologies d'assistance doivent faire la chose suivante&nbsp;:
 <label for="chk1">Enregistrer mes préférences</label>
 ```
 
-#### Exemples concrets&nbsp;:
+#### Exemples concrets
 
 - <http://test.cita.uiuc.edu/aria/checkbox/checkbox1.php>
 

@@ -29,7 +29,7 @@ alert(document.lastModified);
 var oLastModif = new Date(document.lastModified);
 ```
 
-### Exemple #3: Transformer `lastModified` en un nombre de millisecondes passées depuis le 1 Janvier 1970 à 00:00:00, heure locale.
+### Exemple #3: Transformer `lastModified` en un nombre de millisecondes passées depuis le 1 Janvier 1970 à 00:00:00, heure locale
 
 ```js
 var nLastModif = Date.parse(document.lastModified);

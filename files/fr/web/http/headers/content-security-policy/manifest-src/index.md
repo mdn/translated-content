@@ -1,5 +1,5 @@
 ---
-title: 'CSP : manifest-src'
+title: "CSP : manifest-src"
 slug: Web/HTTP/Headers/Content-Security-Policy/manifest-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/manifest-src
 browser-compat: http.headers.csp.Content-Security-Policy.manifest-src
@@ -56,7 +56,7 @@ Content-Security-Policy: manifest-src https://example.com/
 Cet élément [`<link>`](/fr/docs/Web/HTML/Element/link) sera bloqué et ne se chargera pas&nbsp;:
 
 ```html
-<link rel="manifest" href="https://not-example.com/manifest">
+<link rel="manifest" href="https://not-example.com/manifest" />
 ```
 
 ## Spécifications

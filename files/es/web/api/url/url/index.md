@@ -40,16 +40,16 @@ var m = 'https://developer.mozilla.org';
 var a = new URL("/", m);                                // => 'https://developer.mozilla.org/'
 var b = new URL(m);                                     // => 'https://developer.mozilla.org/'
 
-        new URL('en-US/docs', b);                      // => 'https://developer.mozilla.org/en-US/docs'
-var d = new URL('/en-US/docs', b);                     // => 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', d);                     // => 'https://developer.mozilla.org/en-US/docs'
-        new URL('/en-US/docs', a);                     // => 'https://developer.mozilla.org/en-US/docs'
+        new URL('es/docs', b);                      // => 'https://developer.mozilla.org/es/docs'
+var d = new URL('/es/docs', b);                     // => 'https://developer.mozilla.org/es/docs'
+        new URL('/es/docs', d);                     // => 'https://developer.mozilla.org/es/docs'
+        new URL('/es/docs', a);                     // => 'https://developer.mozilla.org/es/docs'
 
-        new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
-                                                       // => 'https://developer.mozilla.org/en-US/docs'
+        new URL('/es/docs', "https://developer.mozilla.org/fr-FR/toto");
+                                                       // => 'https://developer.mozilla.org/es/docs'
 
-        new URL('/en-US/docs', '');                    // Provoca una excepción TypeError ya que '' no es una URL válida
-        new URL('/en-US/docs');                        // Provoca una excepción TypeError ya que '/en-US/docs' no es una URL válida
+        new URL('/es/docs', '');                    // Provoca una excepción TypeError ya que '' no es una URL válida
+        new URL('/es/docs');                        // Provoca una excepción TypeError ya que '/es/docs' no es una URL válida
         new URL('http://www.example.com', );           // => 'http://www.example.com/'
         new URL('http://www.example.com', b);          // => 'http://www.example.com/'
 

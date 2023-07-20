@@ -88,7 +88,7 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 
   <p>这是一个文本段落</p>
 
-  <img src="cat.jpg" alt="我家猫猫的图片">
+  <img src="cat.jpg" alt="我家猫猫的图片" />
   ```
 
   如果我们采用房屋建筑类比的话，HTML 就像房屋的地基和墙壁一样，赋予房屋结构并将其结合在一起。
@@ -96,7 +96,7 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 - 级联样式表（Cascading Style Sheets，CSS）是一种基于规则的语言，用于将样式应用于 HTML，例如，设置文本和背景颜色，添加边框，设置动画效果或以某种方式布置页面。作为一个简单的示例，以下代码会将我们的 HTML 段落变为红色：
 
   ```css
-  p  {
+  p {
     color: red;
   }
   ```
@@ -106,8 +106,8 @@ HTTP 消息（称为请求和响应）的实际语法不是人类可读的，但
 - 从动态样式切换到从服务器获取更新，再到复杂的 3D 图形， **JavaScript** 是我们用来向网站添加交互性的编程语言。以下简单的 JavaScript 将在内存中存储对我们段落的引用，并更改其中的文本：
 
   ```js
-  let pElem = document.querySelector('p');
-  pElem.textContent =  '我们改变了文本！';
+  let pElem = document.querySelector("p");
+  pElem.textContent = "我们改变了文本！";
   ```
 
   在房屋类比中，JavaScript 就像炊具，电视，微波炉或吹风机，这些东西为您的房屋提供了有用的功能。

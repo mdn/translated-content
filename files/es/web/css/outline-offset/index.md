@@ -56,7 +56,7 @@ El código anterior producirá este efecto:
 
 {{ EmbedLiveSample('Examples', '', '', '') }}
 
-#### Otro ejemplo:
+#### Otro ejemplo
 
 ```html hidden
 <p>

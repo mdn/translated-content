@@ -59,7 +59,7 @@ Ces règles décrivent le formatage à respecter pour les exemples de code sur M
 ```js example-good
 function maFonction() {
   if (bidule) {
-    console.log('Et ça marche.');
+    console.log("Et ça marche.");
   }
 }
 ```
@@ -68,7 +68,7 @@ function maFonction() {
 
 On ajoute un espace entre une instruction de contrôle ou de boucle et la parenthèse ouvrante correspondante.
 
- ```js example-good
+```js example-good
 if (condition) {
   /* on gère la condition */
 } else {
@@ -85,16 +85,18 @@ if (condition) {
 Ainsi, ce qui suit n'est pas idéal&nbsp;:
 
 ```js example-bad
-let alice = "Pendant un bout de chemin le trou allait tout droit comme un tunnel, puis tout à coup il plongeait perpendiculairement d'une façon si brusque qu'Alice se sentit tomber comme dans un puits d'une grande profondeur, avant même d'avoir pensé à se retenir.";
+let alice =
+  "Pendant un bout de chemin le trou allait tout droit comme un tunnel, puis tout à coup il plongeait perpendiculairement d'une façon si brusque qu'Alice se sentit tomber comme dans un puits d'une grande profondeur, avant même d'avoir pensé à se retenir.";
 ```
 
 Et ceci est mieux, mais un peu étrange à lire&nbsp;:
 
 ```js
-const alice = "Pendant un bout de chemin le trou allait tout droit comme un tunnel, "
-+ "puis tout à coup il plongeait perpendiculairement d'une façon si brusque qu'Alice "
-+ "se sentit tomber comme dans un puits d'une grande profondeur, avant même d'avoir "
-+ "pensé à se retenir.";
+const alice =
+  "Pendant un bout de chemin le trou allait tout droit comme un tunnel, " +
+  "puis tout à coup il plongeait perpendiculairement d'une façon si brusque qu'Alice " +
+  "se sentit tomber comme dans un puits d'une grande profondeur, avant même d'avoir " +
+  "pensé à se retenir.";
 ```
 
 Une meilleure solution consistera ici à utiliser un gabarit de chaîne de caractères&nbsp;:
@@ -107,14 +109,18 @@ profondeur, avant même d'avoir pensé à se retenir.`;
 ```
 
 ```js example-good
-if (obj.CONDITION || obj.AUTRE_CONDITION || obj.UNE_AUTRE_CONDITION
-       || obj.ENCORE_UNE_AUTRE_CONDITION ) {
+if (
+  obj.CONDITION ||
+  obj.AUTRE_CONDITION ||
+  obj.UNE_AUTRE_CONDITION ||
+  obj.ENCORE_UNE_AUTRE_CONDITION
+) {
   /* quelque chose */
 }
 
-const toolkitProfileService =
-  Components.classes["@mozilla.org/toolkit/profile-service;1"]
-    .createInstance(Components.interfaces.nsIToolkitProfileService);
+const toolkitProfileService = Components.classes[
+  "@mozilla.org/toolkit/profile-service;1"
+].createInstance(Components.interfaces.nsIToolkitProfileService);
 ```
 
 ### Hauteur des blocs de code
@@ -180,8 +186,8 @@ Pour obtenir ce rendu, on commencera par écrire le bloc de code avec la chaîne
 
 ```js
 function maFonction() {
-  console.log('Coucou !');
-};
+  console.log("Coucou !");
+}
 ```
 
 Pour représenter le bloc de code d'un bon ou d'un mauvais exemple, utilisez le mot-clé `example-good` ou `example-bad` après la chaîne de caractères indiquant le langage&nbsp;:
@@ -199,11 +205,11 @@ Pour représenter le bloc de code d'un bon ou d'un mauvais exemple, utilisez le 
 Cela sera affiché ainsi&nbsp;:
 
 ```html example-good
-<p class="brush: js example-good">
+<p class="brush: js example-good"></p>
 ```
 
 ```html example-bad
-<p class="brush: js example-bad">
+<p class="brush: js example-bad"></p>
 ```
 
 ### Traduction des exemples de code

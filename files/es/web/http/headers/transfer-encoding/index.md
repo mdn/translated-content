@@ -71,7 +71,7 @@ Network\r\n
 
 {{Compat}}
 
-## Ver además:
+## Ver además
 
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Content-Encoding")}}
