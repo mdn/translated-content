@@ -7,7 +7,7 @@ l10n:
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
-L'objectif de ce chapitre est de mieux comprendr e certains des concepts fondamentaux de CSS que sont la cascade, la spécificité et l'héritage. Tous les trois contrôlent la façon dont le CSS est appliqué au HTML et comment les éventuels conflits entre les déclarations de style sont résolus.
+L'objectif de ce chapitre est de mieux comprendre certains des concepts fondamentaux de CSS que sont la cascade, la spécificité et l'héritage. Tous les trois contrôlent la façon dont le CSS est appliqué au HTML et comment les éventuels conflits entre les déclarations de style sont résolus.
 
 Bien que ce chapitre puisse sembler plus théorique voire académique que d'autres dans ce parcours, comprendre ces concepts vous facilitera la tâche par la suite&nbsp;! Nous vous recommandons de suivre ce chapitre avec attention et de vérifier que vous comprenez bien les concepts avant d'aller plus loin.
 
