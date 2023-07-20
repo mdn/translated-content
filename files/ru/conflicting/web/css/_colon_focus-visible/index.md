@@ -1,10 +1,11 @@
 ---
-title: ':-moz-focusring'
-slug: Web/CSS/:-moz-focusring
+title: ":-moz-focusring"
+slug: conflicting/Web/CSS/:focus-visible
 tags:
   - Фокус
   - псевдокласс
 translation_of: Web/CSS/:-moz-focusring
+original_slug: Web/CSS/:-moz-focusring
 ---
 
 {{Non-standard_header}}{{CSSRef}}
