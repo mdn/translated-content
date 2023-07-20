@@ -39,4 +39,4 @@ obj.display();
 
 ## Voir aussi
 
-- [Abstraction](https://fr.wikipedia.org/wiki/Abstraction_(informatique)) sur Wikipédia.
+- [Abstraction](<https://fr.wikipedia.org/wiki/Abstraction_(informatique)>) sur Wikipédia.

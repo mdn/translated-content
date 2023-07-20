@@ -2,6 +2,7 @@
 title: Exported WebAssembly functions
 slug: WebAssembly/Exported_functions
 ---
+
 {{WebAssemblySidebar}}
 
 Exported WebAssembly functions는 JavaScript에서 WebAssembly 함수를 나타내는 방법입니다. 여기서는 이 함수들에 대해 더 자세히 설명합니다.
@@ -24,13 +25,12 @@ Exported WebAssembly functions는 JavaScript에서 WebAssembly 함수를 나타�
 ```js
 var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
-WebAssembly.instantiateStreaming(fetch('table.wasm'))
-.then(obj => {
+WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
   var tbl = obj.instance.exports.tbl;
-  console.log(tbl.get(0)());  // 13
-  console.log(tbl.get(1)());  // 42
-  otherTable.set(0,tbl.get(0));
-  otherTable.set(1,tbl.get(1));
+  console.log(tbl.get(0)()); // 13
+  console.log(tbl.get(1)()); // 42
+  otherTable.set(0, tbl.get(0));
+  otherTable.set(1, tbl.get(1));
   console.log(otherTable.get(0)());
   console.log(otherTable.get(1)());
 });

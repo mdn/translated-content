@@ -41,7 +41,7 @@ let createData = {
   type: "detached_panel",
   url: "panel.html",
   width: 250,
-  height: 100
+  height: 100,
 };
 let creating = browser.windows.create(createData);
 ```
@@ -51,7 +51,7 @@ let creating = browser.windows.create(createData);
 Например, когда пользователь нажмёт на кнопку, можно вызвать функцию {{WebExtAPIRef("windows.remove()")}} и передать ей идентификатор текущего окна:
 
 ```js
-document.getElementById("closeme").addEventListener("click", function(){
+document.getElementById("closeme").addEventListener("click", function () {
   let winId = browser.windows.WINDOW_ID_CURRENT;
   let removing = browser.windows.remove(winId);
 });
@@ -64,7 +64,7 @@ document.getElementById("closeme").addEventListener("click", function(){
 ```js
 function onVisited(historyItem) {
   if (historyItem.url == browser.extension.getURL(myPage)) {
-    browser.history.deleteUrl({url: historyItem.url});
+    browser.history.deleteUrl({ url: historyItem.url });
   }
 }
 

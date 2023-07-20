@@ -25,9 +25,8 @@ Le serveur peut alors utiliser ces informations du client pour déterminer les r
 
 > **Note :** Les indications du client peuvent aussi être formulées en HTML à l'aide de l'élément [`<meta>`](/fr/docs/Web/HTML/Element/meta) avec l'attribut [`http-equiv`](/fr/docs/Web/HTML/Element/meta#attr-http-equiv) :
 >
->
 > ```html
-> <meta http-equiv="Accept-CH" content="Width, Viewport-Width, Downlink">
+> <meta http-equiv="Accept-CH" content="Width, Viewport-Width, Downlink" />
 > ```
 
 ## Client Hints Infrastructures variables

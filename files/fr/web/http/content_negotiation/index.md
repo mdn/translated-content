@@ -49,12 +49,12 @@ The {{HTTPHeader("Accept")}} header is defined by the browser, or any other user
 
 The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that can be used by the server to select an appropriate response. Valid values are:
 
-| Value            | Meaning                                                                                                                                                                                                             |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Device-Memory`  | Indicates the approximate amount of device RAM. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024. For example, 512 megabytes will be reported as `0.5`.  |
-| `DPR`            | Indicates the client's device pixel ratio.                                                                                                                                                                          |
-| `Viewport-Width` | Indicates the layout viewport width in CSS pixels.                                                                                                                                                                  |
-| `Width`          | Indicates the resource width in physical pixels (in other words the intrinsic size of an image).                                                                                                                    |
+| Value            | Meaning                                                                                                                                                                                                            |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Device-Memory`  | Indicates the approximate amount of device RAM. This value is an approximation given by rounding to the nearest power of 2 and dividing that number by 1024. For example, 512 megabytes will be reported as `0.5`. |
+| `DPR`            | Indicates the client's device pixel ratio.                                                                                                                                                                         |
+| `Viewport-Width` | Indicates the layout viewport width in CSS pixels.                                                                                                                                                                 |
+| `Width`          | Indicates the resource width in physical pixels (in other words the intrinsic size of an image).                                                                                                                   |
 
 ### The `Accept-Charset` header
 
@@ -64,7 +64,7 @@ With UTF-8 now being well-supported, being the preferred way of encoding charact
 
 ### The `Accept-CH-Lifetime` header
 
-> **Note :** This is part of an **experimental** technology called *Client Hints* and is only available in Chrome 61 or later.
+> **Note :** This is part of an **experimental** technology called _Client Hints_ and is only available in Chrome 61 or later.
 
 The {{HTTPHeader("Accept-CH-Lifetime")}} header is used with the `Device-Memory` value of the `Accept-CH` header and indicates the amount of time the device should opt-in to sharing the amount of device memory with the server. The value is given in miliseconds and it's use is optional.
 

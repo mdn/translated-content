@@ -90,7 +90,7 @@ Para injetar os scripts na página via programação (por exemplo, quando o usu�
 // background.js
 
 chrome.tabs.executeScript({
-  file: "my-script.js"
+  file: "my-script.js",
 });
 ```
 

@@ -25,5 +25,5 @@ Enquanto continua em forma de rascunho na Web Incubator Community Group, o Model
 
 1. [Glossário](/pt-BR/docs/Glossario)
 
-    1. {{Glossary("Accessibility", "Acessibilidade")}}
-    2. {{Glossary("ARIA")}}
+   1. {{Glossary("Accessibility", "Acessibilidade")}}
+   2. {{Glossary("ARIA")}}

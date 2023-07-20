@@ -306,7 +306,7 @@ CORS 通訊協定最初要求此預檢請求重新導向的行為，但[在隨�
 因此直到瀏覽器趕上規範之前，你可以使用下列一或兩種方法來解決這個限制：
 
 - 變更伺服器端的行為以避免預檢以及／或是避免重新導向——假如你對被請求的伺服擁有控制權
-- 變更請求為[簡單請求](zh-TW/docs/Web/HTTP/Access_control_CORS#Simple_requests)，讓預檢不會發生
+- 變更請求為[簡單請求](/zh-TW/docs/Web/HTTP/Access_control_CORS#Simple_requests)，讓預檢不會發生
 
 但若難以實施以上方法，仍有其他可行的方式：
 

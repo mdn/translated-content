@@ -9,7 +9,7 @@ original_slug: Web/Progressive_web_apps/Loading
 
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 
-Dans les articles précédents, nous avons abordé les APIs qui nous aident à faire de notre exemple [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) une Progressive Web App: [Service Workers](en-US/docs/Web/Progressive_web_apps/Offline_Service_workers), [Manifestes Web](/fr/docs/Web/Progressive_web_apps/Installable_PWAs), [Notifications et Push](/fr/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push). Dans cet article, nous irons encore plus loin et améliorerons la performance de l'application en téléchargeant progessivement ses ressources.
+Dans les articles précédents, nous avons abordé les APIs qui nous aident à faire de notre exemple [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) une Progressive Web App: [Service Workers](/fr/docs/Web/Progressive_web_apps/Offline_Service_workers), [Manifestes Web](/fr/docs/Web/Progressive_web_apps/Installable_PWAs), [Notifications et Push](/fr/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push). Dans cet article, nous irons encore plus loin et améliorerons la performance de l'application en téléchargeant progessivement ses ressources.
 
 ## Première visualisation signifiante
 

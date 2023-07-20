@@ -104,7 +104,7 @@ if (!Array.prototype.fill) {
 
 {{Compat("javascript.builtins.Array.fill")}}
 
-\[1] Começando com Chrome 36, isto era disponível com uma mudança nas preferencias. Em chrome://flags, ativar a entrada “Enable Experimental JavaScript”.
+\[1] Começando com Chrome 36, isto era disponível com uma mudança nas preferencias. Em chrome://flags, ativar a entrada "Enable Experimental JavaScript".
 
 ## Ver também
 
