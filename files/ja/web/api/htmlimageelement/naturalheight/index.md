@@ -29,7 +29,7 @@ l10n:
 ```html
 <div class="box">
   <img
-    src="/ja/docs/Web/HTML/Element/img/clock-demo-400px.png"
+    src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png"
     class="image"
     alt="A round wall clock with a white dial and black numbers" />
 </div>

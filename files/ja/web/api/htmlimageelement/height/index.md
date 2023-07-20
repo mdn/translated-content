@@ -29,7 +29,7 @@ l10n:
 ```html
 <p>画像の高さ: <span class="size">?</span>px (リサイズで更新)</p>
 <img
-  src="/ja/docs/Web/HTML/Element/img/clock-demo-200px.png"
+  src="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png"
   alt="Clock"
   srcset="
     /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,

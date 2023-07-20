@@ -126,7 +126,7 @@ The signaling process involves this exchange of messages among a number of point
 
 Imagine that Naomi and Priya are engaged in a discussion using the chat software, and Naomi decides to open a video call between the two. Here's the expected sequence of events:
 
-[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](/ja/docs/Web/API/WebRTC_API/Signaling_and_video_calling/webrtc_-_signaling_diagram.svg)
+[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling/webrtc_-_signaling_diagram.svg)
 
 We'll see this detailed more over the course of this article.
 

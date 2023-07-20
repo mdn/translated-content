@@ -143,7 +143,7 @@ var x = 0;
 
 これにより、1 秒に数回更新する素晴らしい波形表示が得られます。
 
-![a black oscilloscope line, showing the waveform of an audio signal](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API/wave.png)
+![a black oscilloscope line, showing the waveform of an audio signal](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API/wave.png)
 
 ## 周波数棒グラフの作成
 
@@ -206,6 +206,6 @@ draw();
 
 このコードでは、次のような結果が得られます。
 
-![a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API/bar-graph.png)
+![a series of red bars in a bar graph, showing intensity of different frequencies in an audio signal](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API/bar-graph.png)
 
 > **メモ:** この記事に記載されている例では、{{domxref("AnalyserNode.getByteFrequencyData()")}}と{{domxref("AnalyserNode.getByteTimeDomainData()")}}で使用法が示されています。実際の例は{{domxref("AnalyserNode.getFloatFrequencyData()")}}と{{domxref("AnalyserNode.getFloatTimeDomainData()")}}にあるので、私たちの [Voice-change-O-matic-float-data](http://mdn.github.io/voice-change-o-matic-float-data/) デモを参照してください（[ソースコード](https://github.com/mdn/voice-change-o-matic-float-data)も参照してください）— これは、元の [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/) とまったく同じですが、符号なしバイトデータではなく、Float データを使用しています。

@@ -18,7 +18,7 @@ HTTP 要求の対象は「リソース」と呼ばれ、その本質は細かく
 ```
 https://developer.mozilla.org
 https://developer.mozilla.org/ja/docs/Learn/
-https://developer.mozilla.org/en-US/search?q=URL
+https://developer.mozilla.org/ja/search?q=URL
 ```
 
 ブラウザーのアドレスバーに URL を入力して、URL に関連付けられているページ (リソース) を読み込むように指示できます。

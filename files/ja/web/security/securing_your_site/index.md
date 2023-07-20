@@ -34,6 +34,6 @@ slug: Web/Security/Securing_your_site
 ## 関連情報
 
 - [Open Web Application Security Project (OWASP)](https://www.owasp.org/)
-- [Mozilla Web Security Cheat Sheet](https://infosec.mozilla.org/guidelines/web_security/ja/docs/)
+- [Mozilla Web Security Cheat Sheet](https://infosec.mozilla.org/guidelines/web_security.html#web-security-cheat-sheet)
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Security")}}

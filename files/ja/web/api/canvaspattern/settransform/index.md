@@ -62,7 +62,7 @@ img.onload = function() {
 </div>
 <textarea id="code" class="playable-code" style="height:120px">
 var img = new Image();
-img.src = 'https://developer.mozilla.org/ja/docs/Web/API/CanvasPattern/setTransform/canvas_createpattern.png';
+img.src = 'https://developer.mozilla.org/en-US/docs/Web/API/CanvasPattern/setTransform/canvas_createpattern.png';
 img.onload = function() {
   var pattern = ctx.createPattern(img, 'repeat');
   pattern.setTransform(matrix.rotate(-45).scale(1.5));

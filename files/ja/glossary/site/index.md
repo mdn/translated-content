@@ -20,7 +20,7 @@ l10n:
 これらは、登録可能なドメインが `mozilla.org` であることから、同じサイトであると考えられます。
 
 - `https://developer.mozilla.org/ja/docs/`
-- `https://support.mozilla.org/en-US/`
+- `https://support.mozilla.org/ja/`
 
 これらは、ポートは関係ないので、同じサイトです。
 
