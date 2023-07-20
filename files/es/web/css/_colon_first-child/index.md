@@ -61,7 +61,8 @@ p:first-child {
 <ul>
   <li>Objeto 1</li>
   <li>Objeto 2</li>
-  <li>Objeto 3
+  <li>
+    Objeto 3
     <ul>
       <li>Objeto 3.1</li>
       <li>Objeto 3.2</li>

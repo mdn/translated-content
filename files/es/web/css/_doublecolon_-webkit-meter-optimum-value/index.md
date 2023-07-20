@@ -20,9 +20,9 @@ El color por defecto es verde.
 ```css
 meter::-webkit-meter-bar {
   /* Necesario para eliminar la propiedad de fondo por defecto */
-  background : none;
-  background-color : whiteSmoke;
-  box-shadow : 0 5px 5px -5px #333 inset;
+  background: none;
+  background-color: whiteSmoke;
+  box-shadow: 0 5px 5px -5px #333 inset;
 }
 
 meter::-webkit-meter-optimum-value {
