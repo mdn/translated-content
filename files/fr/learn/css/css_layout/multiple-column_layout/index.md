@@ -1,17 +1,7 @@
 ---
 title: Disposition sur plusieurs colonnes
 slug: Learn/CSS/CSS_layout/Multiple-column_Layout
-tags:
-  - Apprendre
-  - Apprentissage
-  - CSS
-  - Colonnes multiples
-  - Disposition
-  - Débutant
-  - Guide
-  - Multi-col
 translation_of: Learn/CSS/CSS_layout/Multiple-column_Layout
-original_slug: Apprendre/CSS/CSS_layout/Multiple-column_Layout
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}

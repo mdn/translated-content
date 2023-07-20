@@ -43,6 +43,7 @@ original_slug: Games/Introduction_to_HTML5_Game_Gevelopment_(summary)
 - [Pointer Lock API](/pt-BR/docs/WebAPI/Pointer_Lock)
   - : Bloquei o mouse ou outro dispositivo apontador na interface do seu jogo.
 - [SVG](/pt-BR/docs/SVG) (Gráficos Vetorias Escaláveis)
+
   - : Crie gráficos vetoriais que sejam dimensionados sem problemas, independemente do tamanho ou da resolução da exibição do usuário.
 
 - [Typed Arrays](/pt-BR/docs/JavaScript/Typed_arrays)

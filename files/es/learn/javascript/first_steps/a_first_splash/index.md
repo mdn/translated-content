@@ -459,7 +459,7 @@ for (let i = 0 ; i < resetParas.length ; i++) {
 
 Este código crea una variable que contiene una lista de todos los párrafos dentro de `<div class="resultParas">` usando el método {{domxref("document.querySelectorAll", "querySelectorAll()")}}, luego recorre cada uno de ellos, eliminando el texto contenido a su paso.
 
-### Una pequeña explicación sobre objetos.
+### Una pequeña explicación sobre objetos
 
 Agreguemos una mejora final más antes de entrar en esta explicación. Agrega la siguiente línea justo debajo de la línea `let resetButton;` cerca de la parte superior de tu JavaScript, luego guarda tu archivo:
 
@@ -528,7 +528,7 @@ Juguemos un poco con algunos objetos del navegador.
 
     Cada elemento de una página tiene una propiedad `style`, que a su vez contiene un objeto cuyas propiedades contienen todos los estilos CSS en línea aplicados a ese elemento. Esto nos permite establecer dinámicamente nuevos estilos CSS en elementos utilizando JavaScript.
 
-## Terminamos por ahora...
+## Terminamos por ahora
 
 Así que eso es todo para construir el ejemplo. Llegaste al final, ¡bien hecho! Prueba tu código final, o [juega con nuestra versión final aquí](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Si no puedes hacer que el ejemplo funcione, compáralo con el [código fuente](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html).
 

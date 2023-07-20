@@ -1,17 +1,7 @@
 ---
 title: Méthodes de mises en page traditionnelles
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
-tags:
-  - Apprendre
-  - Boîtes flottantes
-  - CSS
-  - Disposition
-  - Débutant
-  - Guide
-  - Héritage
-  - systèmes de trames
 translation_of: Learn/CSS/CSS_layout/Legacy_Layout_Methods
-original_slug: Apprendre/CSS/CSS_layout/Legacy_Layout_Methods
 ---
 
 {{LearnSidebar}}

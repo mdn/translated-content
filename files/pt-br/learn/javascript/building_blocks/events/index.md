@@ -14,7 +14,7 @@ Eventos são ações ou ocorrências que acontecem no sistema que estamos desenv
       <th scope="row">Pré-requisitos:</th>
       <td>
         Conhecimentos básicos em informática, conhecimento básico em HTML e CSS,
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
           >JavaScript, primeiros passos</a
         >.
       </td>
@@ -114,7 +114,7 @@ btn.onclick = function() {
 }
 ```
 
-A propriedade [`onclick`](/en-US/docs/Web/API/GlobalEventHandlers/onclick) é a propriedade do manipulador de eventos que está sendo usada nesta situação. É essencialmente uma propriedade como qualquer outra disponível no botão (por exemplo, [`btn.textContent`](/en-US/docs/Web/API/Node/textContent), ou [`btn.style`](/en-US/docs/Web/API/HTMLElement/style)), mas é um tipo especial — quando você configura para ser igual a algum código, esse código será executado quando o evento é acionado no botão.
+A propriedade [`onclick`](/pt-BR/docs/Web/API/GlobalEventHandlers/onclick) é a propriedade do manipulador de eventos que está sendo usada nesta situação. É essencialmente uma propriedade como qualquer outra disponível no botão (por exemplo, [`btn.textContent`](/pt-BR/docs/Web/API/Node/textContent), ou [`btn.style`](/pt-BR/docs/Web/API/HTMLElement/style)), mas é um tipo especial — quando você configura para ser igual a algum código, esse código será executado quando o evento é acionado no botão.
 
 Você também pode definir a propriedade handler para ser igual a um nome de função nomeado (como vimos em [Construa sua própria função](/pt-BR/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)). O seguinte funcionaria da mesma forma:
 
@@ -133,10 +133,10 @@ Há muitas propriedades diferentes de manipulador de eventos disponíveis. Vamos
 
 Primeiro de tudo, faça uma cópia local do [random-color-eventhandlerproperty.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerproperty.html), e abra-o no seu navegador. É apenas uma cópia do exemplo de cor aleatória simples com o qual já estamos jogando neste artigo. Agora tente alterar `btn.onclick` para os seguintes valores diferentes, por sua vez, e observando os resultados no exemplo:
 
-- [`btn.onfocus`](/en-US/docs/Web/API/GlobalEventHandlers/onfocus) e [`btn.onblur`](/en-US/docs/Web/API/GlobalEventHandlers/onblur) — A cor mudará quando o botão estiver focado e fora de foco (tente pressionar a guia para aba no botão e desligar novamente). Eles geralmente são usados para exibir informações sobre como preencher campos de formulário quando eles estão focalizados ou exibir uma mensagem de erro se um campo de formulário tiver acabado de ser preenchido com um valor incorreto.
-- [`btn.ondblclick`](/en-US/docs/Web/API/GlobalEventHandlers/ondblclick) — A cor só será alterada quando for clicada duas vezes.
-- [`window.onkeypress`](/en-US/docs/Web/API/GlobalEventHandlers/onkeypress), [`window.onkeydown`](/en-US/docs/Web/API/GlobalEventHandlers/onkeydown), [`window.onkeyup`](/en-US/docs/Web/API/GlobalEventHandlers/onkeyup) — A cor mudará quando uma tecla for pressionada no teclado. `keypress` refere-se a um pressionamento geral (botão para baixo e depois para cima), enquanto `keydown` e `keyup` refere-se apenas a parte do pressionamento da tecla para baixo e de soltar a tecla para cima, respectivamente. Note que não funciona se você tentar registrar este manipulador de eventos no próprio botão — nós tivemos que registrá-lo no objeto [window](/pt-BR/docs/Web/API/Window), que representa toda a janela do navegador.
-- [`btn.onmouseover`](/en-US/docs/Web/API/GlobalEventHandlers/onmouseover) e [`btn.onmouseout`](/en-US/docs/Web/API/GlobalEventHandlers/onmouseout) — A cor mudará quando o ponteiro do mouse for movido, de modo que comece a passar o mouse sobre o botão, ou quando parar de passar o mouse sobre o botão e sair dele, respectivamente.
+- [`btn.onfocus`](/pt-BR/docs/Web/API/GlobalEventHandlers/onfocus) e [`btn.onblur`](/pt-BR/docs/Web/API/GlobalEventHandlers/onblur) — A cor mudará quando o botão estiver focado e fora de foco (tente pressionar a guia para aba no botão e desligar novamente). Eles geralmente são usados para exibir informações sobre como preencher campos de formulário quando eles estão focalizados ou exibir uma mensagem de erro se um campo de formulário tiver acabado de ser preenchido com um valor incorreto.
+- [`btn.ondblclick`](/pt-BR/docs/Web/API/GlobalEventHandlers/ondblclick) — A cor só será alterada quando for clicada duas vezes.
+- [`window.onkeypress`](/pt-BR/docs/Web/API/GlobalEventHandlers/onkeypress), [`window.onkeydown`](/pt-BR/docs/Web/API/GlobalEventHandlers/onkeydown), [`window.onkeyup`](/pt-BR/docs/Web/API/GlobalEventHandlers/onkeyup) — A cor mudará quando uma tecla for pressionada no teclado. `keypress` refere-se a um pressionamento geral (botão para baixo e depois para cima), enquanto `keydown` e `keyup` refere-se apenas a parte do pressionamento da tecla para baixo e de soltar a tecla para cima, respectivamente. Note que não funciona se você tentar registrar este manipulador de eventos no próprio botão — nós tivemos que registrá-lo no objeto [window](/pt-BR/docs/Web/API/Window), que representa toda a janela do navegador.
+- [`btn.onmouseover`](/pt-BR/docs/Web/API/GlobalEventHandlers/onmouseover) e [`btn.onmouseout`](/pt-BR/docs/Web/API/GlobalEventHandlers/onmouseout) — A cor mudará quando o ponteiro do mouse for movido, de modo que comece a passar o mouse sobre o botão, ou quando parar de passar o mouse sobre o botão e sair dele, respectivamente.
 
 Alguns eventos são muito gerais e estão disponíveis praticamente em qualquer lugar (por exemplo, um manipulador `onclick` pode ser registrado em quase qualquer elemento), enquanto alguns são mais específicos e úteis apenas em certas situações (por exemplo, faz sentido usar [onplay](/pt-BR/docs/Web/API/GlobalEventHandlers/GlobalEventHandlers.onplay) apenas em elementos específicos, como {{htmlelement("video")}}).
 
@@ -181,7 +181,7 @@ for (var i = 0; i < buttons.length; i++) {
 
 ### addEventListener() e removeEventListener()
 
-O mais novo tipo de mecanismo de evento é definido na Especificação de Eventos Nível 2 do [Document Object Model (DOM)](https://www.w3.org/TR/DOM-Level-2-Events/), que fornece aos navegadores uma nova função — [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener). Isso funciona de maneira semelhante às propriedades do manipulador de eventos, mas a sintaxe é obviamente diferente. Poderíamos reescrever nosso exemplo de cor aleatória para ficar assim:
+O mais novo tipo de mecanismo de evento é definido na Especificação de Eventos Nível 2 do [Document Object Model (DOM)](https://www.w3.org/TR/DOM-Level-2-Events/), que fornece aos navegadores uma nova função — [`addEventListener()`](/pt-BR/docs/Web/API/EventTarget/addEventListener). Isso funciona de maneira semelhante às propriedades do manipulador de eventos, mas a sintaxe é obviamente diferente. Poderíamos reescrever nosso exemplo de cor aleatória para ficar assim:
 
 ```js
 var btn = document.querySelector('button');
@@ -205,7 +205,7 @@ btn.addEventListener('click', function() {
 });
 ```
 
-Esse mecanismo tem algumas vantagens sobre os mecanismos mais antigos discutidos anteriormente. Para começar, há uma função de contraparte, [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener), que remove um listener adicionado anteriormente. Por exemplo, isso removeria o listener definido no primeiro bloco de código nesta seção:
+Esse mecanismo tem algumas vantagens sobre os mecanismos mais antigos discutidos anteriormente. Para começar, há uma função de contraparte, [`removeEventListener()`](/pt-BR/docs/Web/API/EventTarget/removeEventListener), que remove um listener adicionado anteriormente. Por exemplo, isso removeria o listener definido no primeiro bloco de código nesta seção:
 
 ```js
 btn.removeEventListener('click', bgChange);
@@ -229,7 +229,7 @@ myElement.addEventListener('click', functionB);
 
 Ambas as funções serão executadas quando o elemento for clicado.
 
-Além disso, há vários outros recursos e opções poderosos disponíveis com esse mecanismo de eventos. Estes são um pouco fora do escopo deste artigo, mas se você quiser ler sobre eles, dê uma olhada nas páginas de referência [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) e [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener).
+Além disso, há vários outros recursos e opções poderosos disponíveis com esse mecanismo de eventos. Estes são um pouco fora do escopo deste artigo, mas se você quiser ler sobre eles, dê uma olhada nas páginas de referência [`addEventListener()`](/pt-BR/docs/Web/API/EventTarget/addEventListener) e [`removeEventListener()`](/pt-BR/docs/Web/API/EventTarget/removeEventListener).
 
 ### Qual mecanismo devo usar?
 
@@ -366,7 +366,7 @@ div {
 }
 ```
 
-Agora algum JavaScript — aqui nós implementamos uma verificação muito simples dentro de um manipulador de evento onsubmit (o evento submit é disparado em um formulário quando é enviado) que testa se os campos de texto estão vazios. Se estiverem, chamamos a função [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault) no objeto de evento — que interrompe o envio do formulário — e, em seguida, exibir uma mensagem de erro no parágrafo abaixo do nosso formulário para informar ao usuário o que está errado:
+Agora algum JavaScript — aqui nós implementamos uma verificação muito simples dentro de um manipulador de evento onsubmit (o evento submit é disparado em um formulário quando é enviado) que testa se os campos de texto estão vazios. Se estiverem, chamamos a função [`preventDefault()`](/pt-BR/docs/Web/API/Event/preventDefault) no objeto de evento — que interrompe o envio do formulário — e, em seguida, exibir uma mensagem de erro no parágrafo abaixo do nosso formulário para informar ao usuário o que está errado:
 
 ```js
 var form = document.querySelector('form');
@@ -530,7 +530,7 @@ Nos navegadores modernos, por padrão, todos os manipuladores de eventos são re
 
 #### Corrigindo o problema com stopPropagation()
 
-Este é um comportamento irritante, mas existe uma maneira de corrigir isso! O objeto de evento padrão tem uma função disponível chamada [`stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation), que quando invocada no objeto de evento de um manipulador, faz com que o manipulador seja executado, mas o evento não borbulha mais acima na cadeia, portanto, mais nenhum manipulador rodará.
+Este é um comportamento irritante, mas existe uma maneira de corrigir isso! O objeto de evento padrão tem uma função disponível chamada [`stopPropagation()`](/pt-BR/docs/Web/API/Event/stopPropagation), que quando invocada no objeto de evento de um manipulador, faz com que o manipulador seja executado, mas o evento não borbulha mais acima na cadeia, portanto, mais nenhum manipulador rodará.
 
 Podemos, portanto, consertar nosso problema atual alterando a segunda função do manipulador no bloco de códigos anterior para isto:
 
@@ -545,7 +545,7 @@ Você pode tentar fazer uma cópia local do código-fonte [show-video-box.html s
 
 > **Nota:** Por que se preocupar em capturar e borbulhar? Bem, nos velhos tempos em que os navegadores eram muito menos compatíveis entre si do que são agora, o Netscape usava apenas captura de eventos, e o Internet Explorer usava apenas borbulhamento de eventos. Quando o W3C decidiu tentar padronizar o comportamento e chegar a um consenso, eles acabaram com esse sistema que incluía ambos, que é o único navegador moderno implementado.
 
-> **Nota:** Como mencionado acima, por padrão, todos os manipuladores de eventos são registrados na fase de bubbling, e isso faz mais sentido na maioria das vezes. Se você realmente quiser registrar um evento na fase de captura, registre seu manipulador usando [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener), e defina a propriedade terceira opcional como `true`.
+> **Nota:** Como mencionado acima, por padrão, todos os manipuladores de eventos são registrados na fase de bubbling, e isso faz mais sentido na maioria das vezes. Se você realmente quiser registrar um evento na fase de captura, registre seu manipulador usando [`addEventListener()`](/pt-BR/docs/Web/API/EventTarget/addEventListener), e defina a propriedade terceira opcional como `true`.
 
 #### Delegação de eventos
 

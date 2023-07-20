@@ -29,7 +29,7 @@ _El HTML_` <input type="datetime"> `es un control para ingresar tiempo y fecha (
       <th scope="row">Interfaz DOM</th>
       <td>
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement"
+          href="/es/docs/Web/API/HTMLInputElement"
           title="The HTMLInputElement interface provides special properties and methods (beyond the regular HTMLElement interface it also has available to it by inheritance) for manipulating the layout and presentation of input elements."
           ><code>HTMLInputElement</code></a
         >

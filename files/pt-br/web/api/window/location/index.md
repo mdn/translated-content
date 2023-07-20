@@ -52,7 +52,7 @@ function reloadPageWithHash() {
 
 > **Nota:**O exemplo acima funciona em situações onde `location.hash` não precisa ser retida. Contudo, em navegadores baseados em Gecko, definindo `location.pathname` desta forma irá apagar qualquer informação em `location.hash`, enquanto que no WebKit(e possivelmente em outro navegador), definir o pathname não vai alterar o hash. Se você precisa mudar o pathname mas manter o hash como é, use o `método replace()`, que deve funcionar de forma consistente em todos os navegadores.
 
-### Exemplo #4: Mostrar as propriedades da URL atual em um alerta:
+### Exemplo #4: Mostrar as propriedades da URL atual em um alerta
 
 ```js
 function showLoc() {
@@ -66,7 +66,7 @@ function showLoc() {
 // no html: <button onclick="showLoc();">Mostrar propriedades de localização</button>
 ```
 
-### Exemplo #5: Enviando uma linha de dados para o servidor para modificar a propriedade search:
+### Exemplo #5: Enviando uma linha de dados para o servidor para modificar a propriedade search
 
 ```js
 function sendData (sData) {
@@ -78,7 +78,7 @@ function sendData (sData) {
 
 A URL atual com "?Some%20data" anexada é enviada para o servidor (se nenhuma ação for captada pelo servidor, o documento atual é recarregado com o a linha de pesquisa modificada).
 
-### Exemplo #6: Usando favoritos sem mudar a propriedade `hash`:
+### Exemplo #6: Usando favoritos sem mudar a propriedade `hash`
 
 ```html
 <!doctype html>

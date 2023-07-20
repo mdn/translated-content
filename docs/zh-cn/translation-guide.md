@@ -114,12 +114,16 @@ Reference to [Live sample macros](/en-US/docs/MDN/Structures/Live_samples#live_s
 
 #### 常见中/英文标点
 
+<!-- markdownlint-disable search-replace -->
+
 | 名称   | 中文 | 英文    |
 | ------ | ---- | ------- |
 | 括号   | （） | ()      |
 | 冒号   | ：   | :       |
 | 引号   | “”   | ""      |
 | 破折号 | ——   | -- 、 — |
+
+<!-- markdownlint-enable search-replace -->
 
 简体中文标点符号参考资源：
 

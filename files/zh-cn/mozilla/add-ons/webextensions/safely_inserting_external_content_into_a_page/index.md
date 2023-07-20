@@ -35,9 +35,13 @@ addonElement.appendChild(div);
 
 ```js example-bad
 var data = JSON.parse(responseText);
-addonElement.innerHTML = "<div class='" + data.className + "'>" +
-                         "Your favorite color is now " + data.color +
-                         "</div>";
+addonElement.innerHTML =
+  "<div class='" +
+  data.className +
+  "'>" +
+  "Your favorite color is now " +
+  data.color +
+  "</div>";
 ```
 
 在其中，Here, the contents of `data.className` 或 `data.color` 的内容可能包含 HTML 代码使得标签提早关闭，并插入更多的 HTML 内容，之后关闭另一个标签。

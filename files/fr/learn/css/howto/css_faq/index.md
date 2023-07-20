@@ -1,13 +1,7 @@
 ---
 title: Questions fréquentes en CSS
 slug: Learn/CSS/Howto/CSS_FAQ
-tags:
-  - CSS
-  - Débutant
-  - Exemple
-  - Guide
 translation_of: Learn/CSS/Howto/CSS_FAQ
-original_slug: Web/CSS/CSS_questions_frequentes
 ---
 
 ## Pourquoi mon CSS, pourtant valide, ne fournit pas un rendu correct ?

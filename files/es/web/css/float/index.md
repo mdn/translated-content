@@ -136,7 +136,7 @@ div {
 
 {{EmbedLiveSample('','400','180')}}
 
-### Limpiando (clearing) flotantes:
+### Limpiando (clearing) flotantes
 
 A veces querrás forzar un item a moverse por debajo de elementos flotantes. Por ejemplo, párrafos que han de permanecer adyacentes a elementos flotantes, pero forzar a los encabezados a estar en su propia línea. Para ello revisa el siguiente ejemplo: {{cssxref("clear")}}
 

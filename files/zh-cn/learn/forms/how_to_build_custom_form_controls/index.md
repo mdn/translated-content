@@ -74,7 +74,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls
      tabindex 属性是用来让用户聚焦在小部件上的。
      稍后我们会发现最好通过 JavaScript 来设定它的值。-->
 <div class="select" tabindex="0">
-
   <!-- 这个容器用来显示组件现在的值 -->
   <span class="value">Cherry</span>
 
@@ -89,7 +88,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls
     <li class="option">Strawberry</li>
     <li class="option">Apple</li>
   </ul>
-
 </div>
 ```
 
@@ -109,7 +107,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
   position: relative;
 
   /* 这将使我们的组件成为文本流的一部分，同时又可以调整大小 */
-  display : inline-block;
+  display: inline-block;
 }
 ```
 
@@ -134,9 +132,9 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 .select .optList {
   /* 这可以确保我们的选项列表将会显示在值的下面，并且会处在
      HTML 流之外*/
-  position : absolute;
-  top      : 100%;
-  left     : 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 ```
 
@@ -161,38 +159,38 @@ slug: Learn/Forms/How_to_build_custom_form_controls
      (用来确保用户在文本模式下使用浏览器缩放时组件的可缩放性).
      在大多数浏览器下的默认换算是 1em == 16px.
      如果你对 em 和 px 的转换感到疑惑，请参考 http://riddle.pl/emcalc/ */
-  font-size   : 0.625em; /* 这个（=10px）是以 em 方式表达的这个环境里的字体大小 */
-  font-family : Verdana, Arial, sans-serif;
+  font-size: 0.625em; /* 这个（=10px）是以 em 方式表达的这个环境里的字体大小 */
+  font-family: Verdana, Arial, sans-serif;
 
-  -moz-box-sizing : border-box;
-  box-sizing : border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   /* 我们需要为将要添加的向下箭头准备一些额外的空间 */
-  padding : .1em 2.5em .2em .5em; /* 1px 25px 2px 5px */
-  width   : 10em; /* 100px */
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
 
-  border        : .2em solid #000; /* 2px */
-  border-radius : .4em; /* 4px */
-  box-shadow    : 0 .1em .2em rgba(0,0,0,.45); /* 0 1px 2px */
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
 
   /* 第一段声明是为了不支持线性梯度填充的浏览器准备的。
      第二段声明是因为基于 WebKit 的浏览器没有预先定义它。
      如果你想为过时的浏览器提供支持，请参阅 http://www.colorzilla.com/gradient-editor/ */
-  background : #F0F0F0;
-  background : -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
-  background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+  background: #f0f0f0;
+  background: -webkit-linear-gradient(90deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
 .select .value {
   /* 因为值的宽度可能超过组件的宽度，我们需要确保他不会改变组件的宽度 */
-  display  : inline-block;
-  width    : 100%;
-  overflow : hidden;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
 
   vertical-align: top;
 
   /* 如果内容溢出了，最好有一个恰当的缩写。*/
-  white-space  : nowrap;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 ```
@@ -201,25 +199,25 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 ```css
 .select:after {
-  content : "▼"; /* 我们使用了 unicode 编码的字符 U+25BC，确保设置了 charset meta 标签 */
+  content: "▼"; /* 我们使用了 unicode 编码的字符 U+25BC，确保设置了 charset meta 标签 */
   position: absolute;
-  z-index : 1; /* 这对于防止箭头覆盖选项列表很重要 */
-  top     : 0;
-  right   : 0;
+  z-index: 1; /* 这对于防止箭头覆盖选项列表很重要 */
+  top: 0;
+  right: 0;
 
-  -moz-box-sizing : border-box;
-  box-sizing : border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
-  height  : 100%;
-  width   : 2em;  /* 20px */
-  padding-top : .1em; /* 1px */
+  height: 100%;
+  width: 2em; /* 20px */
+  padding-top: 0.1em; /* 1px */
 
-  border-left  : .2em solid #000; /* 2px */
-  border-radius: 0 .1em .1em 0;  /* 0 1px 1px 0 */
+  border-left: 0.2em solid #000; /* 2px */
+  border-radius: 0 0.1em 0.1em 0; /* 0 1px 1px 0 */
 
-  background-color : #000;
-  color : #FFF;
-  text-align : center;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
 }
 ```
 
@@ -227,18 +225,18 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 ```css
 .select .optList {
-  z-index : 2; /* 我们明确的表示选项列表会始终与向下箭头重叠 */
+  z-index: 2; /* 我们明确的表示选项列表会始终与向下箭头重叠 */
 
   /* 这会重置 ul 元素的默认样式 */
   list-style: none;
-  margin : 0;
+  margin: 0;
   padding: 0;
 
-  -moz-box-sizing : border-box;
-  box-sizing : border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   /* 这会确保即使数值比组件小，选项列表仍能变得跟组件自身一样大*/
-  min-width : 100%;
+  min-width: 100%;
 
   /* 万一列表太长了，它的内容会从垂直方向溢出 (会自动添加一个竖向滚动条)
      但是水平方向不会 (因为我们没有设定宽度，列表会自适应宽度。如果不能的话，内容会被截断) */
@@ -246,11 +244,11 @@ slug: Learn/Forms/How_to_build_custom_form_controls
   overflow-y: auto;
   overflow-x: hidden;
 
-  border: .2em solid #000; /* 2px */
-  border-top-width : .1em; /* 1px */
-  border-radius: 0 0 .4em .4em; /* 0 0 4px 4px */
+  border: 0.2em solid #000; /* 2px */
+  border-top-width: 0.1em; /* 1px */
+  border-radius: 0 0 0.4em 0.4em; /* 0 0 4px 4px */
 
-  box-shadow: 0 .2em .4em rgba(0,0,0,.4); /* 0 2px 4px */
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4); /* 0 2px 4px */
   background: #f0f0f0;
 }
 ```
@@ -259,12 +257,12 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 ```css
 .select .option {
-  padding: .2em .3em; /* 2px 3px */
+  padding: 0.2em 0.3em; /* 2px 3px */
 }
 
 .select .highlight {
   background: #000;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
@@ -348,7 +346,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls
       </ul>
     </div>
   </form>
-
 </body>
 ```
 
@@ -361,10 +358,10 @@ slug: Learn/Forms/How_to_build_custom_form_controls
      - 要么我们将 body 的 class 设置为"widget"，隐藏真实的{{HTMLElement("select")}}元素
      - 或是我们没有改变 body 的 class，这样 body 的 class 还是"no-widget",
        因此 class 为"select"的元素需要被隐藏 */
-  position : absolute;
-  left     : -5000em;
-  height   : 0;
-  overflow : hidden;
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
 }
 ```
 
@@ -424,18 +421,17 @@ window.addEventListener("load", function () {
 // 它需要一个参数：
 // select :要停用的带有 'select' 类的节点
 function deactivateSelect(select) {
-
   // 如果组件没有运行，不用进行任何操作
-  if (!select.classList.contains('active')) return;
+  if (!select.classList.contains("active")) return;
 
   // 我们需要获取自定义组件的选项列表
-  var optList = select.querySelector('.optList');
+  var optList = select.querySelector(".optList");
 
   // 关闭选项列表
-  optList.classList.add('hidden');
+  optList.classList.add("hidden");
 
   // 然后停用组件本身
-  select.classList.remove('active');
+  select.classList.remove("active");
 }
 
 // 每当用户想要激活（或停用）这个组件的时候，会调用这个函数
@@ -443,9 +439,8 @@ function deactivateSelect(select) {
 // select : 要激活的带有'select'类的 DOM 节点
 // selectList : 包含所有带'select'类的 DOM 节点的列表
 function activeSelect(select, selectList) {
-
   // 如果组件已经激活了，不进行任何操作
-  if (select.classList.contains('active')) return;
+  if (select.classList.contains("active")) return;
 
   // 我们需要关闭所有自定义组件的活动状态
   // 因为 deactiveselect 函数满足 forEach 回调函数的所有请求，
@@ -453,19 +448,18 @@ function activeSelect(select, selectList) {
   selectList.forEach(deactivateSelect);
 
   // 然后我们激活特定的组件
-  select.classList.add('active');
+  select.classList.add("active");
 }
 
 // 每当用户想要打开/关闭选项列表的时候，会调用这个函数
 // 它需要一个参数：
 // select : 要触发的列表的 DOM 节点
 function toggleOptList(select) {
-
   // 该列表不包含在组件中
-  var optList = select.querySelector('.optList');
+  var optList = select.querySelector(".optList");
 
   // 我们改变列表的class去显示/隐藏它
-  optList.classList.toggle('hidden');
+  optList.classList.toggle("hidden");
 }
 
 // 每当我们要高亮一个选项的时候，会调用该函数
@@ -473,18 +467,17 @@ function toggleOptList(select) {
 // select : 带有'select'类的 DOM 节点，包含了需要高亮强调的选项
 // option : 需要高亮强调的带有'option'类的 DOM 节点
 function highlightOption(select, option) {
-
   // 为我们的自定义 select 元素获取所有有效选项的列表
-  var optionList = select.querySelectorAll('.option');
+  var optionList = select.querySelectorAll(".option");
 
   // 我们移除所有选项的高亮强调
   optionList.forEach(function (other) {
-    other.classList.remove('highlight');
+    other.classList.remove("highlight");
   });
 
   // 我们高亮强调正确的选项
-  option.classList.add('highlight');
-};
+  option.classList.add("highlight");
+}
 ```
 
 这是你需要用来处理组件不同状态的所有代码。
@@ -493,25 +486,24 @@ function highlightOption(select, option) {
 
 ```js
 // 我们处理文档加载时的事件绑定。
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener("load", function () {
+  var selectList = document.querySelectorAll(".select");
 
   // 每个自定义组件都需要初始化
   selectList.forEach(function (select) {
-
     // 它的'option'元素也需要
-    var optionList = select.querySelectorAll('.option');
+    var optionList = select.querySelectorAll(".option");
 
     // 每当用户的鼠标悬停在一个选项上时，我们高亮这个指定的选项
     optionList.forEach(function (option) {
-      option.addEventListener('mouseover', function () {
+      option.addEventListener("mouseover", function () {
         // 注意:'select'和'option'变量是我们函数调用范围内有效的闭包。
         highlightOption(select, option);
       });
     });
 
     // 每当用户点击一个自定义的 select 元素时
-    select.addEventListener('click', function (event) {
+    select.addEventListener("click", function (event) {
       // 注意:'select'变量是我们函数调用范围内有效的闭包。
 
       // 我们改变选项列表的可见性
@@ -520,7 +512,7 @@ window.addEventListener('load', function () {
 
     // 如果组件获得了焦点
     // 每当用户点击它或是用 tab 键访问这个组件时，组件获得焦点
-    select.addEventListener('focus', function (event) {
+    select.addEventListener("focus", function (event) {
       // 注意:'select'和'selectlist'变量是我们函数调用范围内有效的闭包。
 
       // 我们激活这个组件
@@ -528,7 +520,7 @@ window.addEventListener('load', function () {
     });
 
     // 如果组件失去焦点
-    select.addEventListener('blur', function (event) {
+    select.addEventListener("blur", function (event) {
       // 注意:'select'变量是我们函数调用范围内有效的闭包。
 
       // 我们关闭这个组件
@@ -540,10 +532,10 @@ window.addEventListener('load', function () {
 
 此时，我们的组件会根据我们的设计改变状态，但是它的值仍然没有更新。我们接下来会处理这件事。
 
-| 实时示例                                                                                                |
-| ----------------------------------------------------------------------------------------------------------- |
+| 实时示例                                                                                               |
+| ------------------------------------------------------------------------------------------------------ |
 | {{EmbedLiveSample("改变状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}} |
-| [查看源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)            |
+| [查看源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)                      |
 
 ### 处理组件的值
 
@@ -564,10 +556,10 @@ function updateValue(select, index) {
   var nativeWidget = select.previousElementSibling;
 
   // 我们也需要得到自定义组件的值占位符，
-  var value = select.querySelector('.value');
+  var value = select.querySelector(".value");
 
   // 还有整个选项列表。
-  var optionList = select.querySelectorAll('.option');
+  var optionList = select.querySelectorAll(".option");
 
   // 我们将被选择的索引设定为我们的选择的索引
   nativeWidget.selectedIndex = index;
@@ -577,7 +569,7 @@ function updateValue(select, index) {
 
   // 然后高亮我们自定义组件里对应的选项
   highlightOption(select, optionList[index]);
-};
+}
 
 // 这个函数返回原生组件里当前选定的索引
 // 它需要 1 个参数：
@@ -588,20 +580,20 @@ function getIndex(select) {
   var nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
-};
+}
 ```
 
 通过这两个函数，我们可以将原生组件绑定到自定义的组件上。
 
 ```js
 // 我们在文档加载时处理事件的绑定。
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener("load", function () {
+  var selectList = document.querySelectorAll(".select");
 
   // 每个自定义组件都需要初始化
   selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll('.option'),
-        selectedIndex = getIndex(select);
+    var optionList = select.querySelectorAll(".option"),
+      selectedIndex = getIndex(select);
 
     // 使我们的自定义组件可以获得焦点
     select.tabIndex = 0;
@@ -614,21 +606,25 @@ window.addEventListener('load', function () {
 
     // 每当用户点击一个选项的时候，更新相应的值
     optionList.forEach(function (option, index) {
-      option.addEventListener('click', function (event) {
+      option.addEventListener("click", function (event) {
         updateValue(select, index);
       });
     });
 
     // 每当用户在获得焦点的组件上用键盘操作时，更新相应的值
-    select.addEventListener('keyup', function (event) {
+    select.addEventListener("keyup", function (event) {
       var length = optionList.length,
-          index  = getIndex(select);
+        index = getIndex(select);
 
       // 当用户点击向下箭头时，跳转到下一个选项
-      if (event.keyCode === 40 && index < length - 1) { index++; }
+      if (event.keyCode === 40 && index < length - 1) {
+        index++;
+      }
 
       // 当用户点击向上箭头时，跳转到上一个选项
-      if (event.keyCode === 38 && index > 0) { index--; }
+      if (event.keyCode === 38 && index > 0) {
+        index--;
+      }
 
       updateValue(select, index);
     });
@@ -640,10 +636,10 @@ window.addEventListener('load', function () {
 
 做完上面这些后，我们就完成了！下面是结果：
 
-| 实时示例                                                                                                |
-| ----------------------------------------------------------------------------------------------------------- |
+| 实时示例                                                                                               |
+| ------------------------------------------------------------------------------------------------------ |
 | {{EmbedLiveSample("改变状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}} |
-| [查看源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)            |
+| [查看源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)                      |
 
 但是等等，我们真的做完了嘛？
 
@@ -688,29 +684,29 @@ window.addEventListener('load', function () {
 ```js
 function updateValue(select, index) {
   var nativeWidget = select.previousElementSibling;
-  var value = select.querySelector('.value');
-  var optionList = select.querySelectorAll('.option');
+  var value = select.querySelector(".value");
+  var optionList = select.querySelectorAll(".option");
 
   // 我们确保所有的选项都没有被选中
   optionList.forEach(function (other) {
-    other.setAttribute('aria-selected', 'false');
+    other.setAttribute("aria-selected", "false");
   });
 
   // 我们确保选定的选项被选中了
-  optionList[index].setAttribute('aria-selected', 'true');
+  optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
   value.innerHTML = optionList[index].innerHTML;
   highlightOption(select, optionList[index]);
-};
+}
 ```
 
 这是经过所有的改变之后的最终结果。（藉由 [NVDA](https://www.nvaccess.org/) 或 [VoiceOver](https://www.apple.com/accessibility/vision/) 这样的辅助技术尝试它，你会对此有更好的体会)：
 
-| 实时示例                                                                                                |
-| ----------------------------------------------------------------------------------------------------------- |
+| 实时示例                                                                                               |
+| ------------------------------------------------------------------------------------------------------ |
 | {{EmbedLiveSample("改变状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}} |
-| [查看最终源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)      |
+| [查看最终源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)                  |
 
 ## 总结
 

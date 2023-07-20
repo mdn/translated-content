@@ -22,12 +22,12 @@ Em {{Glossary("CSS")}}, os seletores são usados para direcionar os elementos {{
           >trabalhar com arquivos</a
         > , conceitos básicos de HTML (estude
         <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introdução ao HTML</a
         >
         ) e uma ideia de como o CSS funciona (estude os
         <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps"
+          href="https://developer.mozilla.org/pt-BR/docs/Learn/CSS/First_steps"
           >primeiros passos do CSS</a
         > ).
       </td>

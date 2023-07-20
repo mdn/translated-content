@@ -13,9 +13,9 @@ slug: Learn/JavaScript/Building_blocks/Build_your_own_function
       <th scope="row">先修知识：</th>
       <td>
         基本的电脑常识，对于 HTML 和 CSS 的基本了解，
-        <a href="zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a
         >，
-        <a href="zh-CN/docs/Learn/JavaScript/Building_blocks/Functions"
+        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions"
           >函数 - 可复用代码块</a
         >。
       </td>

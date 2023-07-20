@@ -28,7 +28,7 @@ HTML5 引入的新 input 类型十分酷，因为他们的降级 (degrade) 是�
 ```html
 <label for="myColor">
   Pick a color
-  <input type="color" id="myColor" name="color">
+  <input type="color" id="myColor" name="color" />
 </label>
 ```
 
@@ -69,7 +69,7 @@ HTML5 引入的新 input 类型十分酷，因为他们的降级 (degrade) 是�
 {{HTMLElement("input")}} 元素可能使得通过元素选择器应用 CSS 变得有些困难：
 
 ```html
-<input type="button" value="click me">
+<input type="button" value="click me" />
 ```
 
 如果我们把所有 input 的外框移除，我们能否只恢复 input 按钮的默认外观？
@@ -77,7 +77,7 @@ HTML5 引入的新 input 类型十分酷，因为他们的降级 (degrade) 是�
 ```css
 input {
   /* 这条规则关闭了含有外边框的 input 类型的默认渲染效果，包括了使用 input 元素定义的按钮 */
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }
 input[type="button"] {
   /* 这条规则并不能恢复默认渲染行为！ */
@@ -159,18 +159,18 @@ API 的兼容性是最大的问题。由于这个原因，与“非侵入式（u
 ```js
 Modernizr.load({
   // 这会测试你的浏览器是否支持 HTML5 表单验证 API
-  test : Modernizr.formvalidation,
+  test: Modernizr.formvalidation,
 
   // 如果浏览器不支持它，则会加载以下 polyfill
-  nope : form-validation-API-polyfill.js,
+  nope: form - validation - API - polyfill.js,
 
   // 无论如何，你的核心 App 文件依赖于该 API 被加载
-  both : app.js,
+  both: app.js,
 
   // 一旦加载了这两个文件，就会调用该函数来初始化应用程序
-  complete : function () {
+  complete: function () {
     app.init();
-  }
+  },
 });
 ```
 

@@ -21,7 +21,7 @@ Reflect.construct(target, argumentsList[, newTarget])
 - `argumentsList`
   - : `target`의 매개변수로 전달할 배열형 객체.
 - `newTarget` {{optional_inline}}
-  - : 프로토타입으로 사용할 생성자. [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) 연산자도 확인하세요. `newTarget`이 주어지지 않았을 땐 `target`을 사용합니다.
+  - : 프로토타입으로 사용할 생성자. [`new.target`](/ko/docs/Web/JavaScript/Reference/Operators/new.target) 연산자도 확인하세요. `newTarget`이 주어지지 않았을 땐 `target`을 사용합니다.
 
 ### 반환 값
 
@@ -123,4 +123,4 @@ d.getFullYear(); // 1776
 
 - {{jsxref("Reflect")}}
 - [`new`](/ko/docs/Web/JavaScript/Reference/Operators/new)
-- [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target)
+- [`new.target`](/ko/docs/Web/JavaScript/Reference/Operators/new.target)

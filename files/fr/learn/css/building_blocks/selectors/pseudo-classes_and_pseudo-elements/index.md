@@ -1,16 +1,7 @@
 ---
 title: Pseudo-classes et pseudo-éléments
 slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
-tags:
-  - Apprendre
-  - CSS
-  - Débutant
-  - Pseudo
-  - Pseudo-class
-  - Pseudo-element
-  - Sélecteurs
 translation_of: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
-original_slug: Apprendre/CSS/Building_blocks/Selectors/Pseudo-classes_et_pseudo-éléments
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
@@ -180,8 +171,8 @@ Il existe un grand nombre de pseudo-classes et pseudo-éléments, une bonne list
 | {{ Cssxref(":out-of-range") }}         | Matches an element with a range when its value is out of range.                                                                                                                                                                                                                                                                                                           |
 | {{ Cssxref(":past") }}                     | Matches the elements before the current element.                                                                                                                                                                                                                                                                                                                          |
 | {{ Cssxref(":placeholder-shown") }} | Matches an input element that is showing placeholder text.                                                                                                                                                                                                                                                                                                                |
-| {{ Cssxref(":playing") }}                 | Matches an element representing an audio, video, or similar resource that is capable of being “played” or “paused”, when that element is “playing”.                                                                                                                                                                                                                       |
-| {{ Cssxref(":paused") }}                 | Matches an element representing an audio, video, or similar resource that is capable of being “played” or “paused”, when that element is “paused”.                                                                                                                                                                                                                        |
+| {{ Cssxref(":playing") }}                 | Matches an element representing an audio, video, or similar resource that is capable of being "played" or "paused", when that element is "playing".                                                                                                                                                                                                                       |
+| {{ Cssxref(":paused") }}                 | Matches an element representing an audio, video, or similar resource that is capable of being "played" or "paused", when that element is "paused".                                                                                                                                                                                                                        |
 | {{ Cssxref(":read-only") }}             | Matches an element if it is not user-alterable.                                                                                                                                                                                                                                                                                                                           |
 | {{ Cssxref(":read-write") }}             | Matches an element if it is user-alterable.                                                                                                                                                                                                                                                                                                                               |
 | {{ Cssxref(":required") }}             | Matches form elements that are required.                                                                                                                                                                                                                                                                                                                                  |

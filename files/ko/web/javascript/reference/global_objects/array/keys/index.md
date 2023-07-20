@@ -21,7 +21,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/keys
 
 ## 설명
 
-[Sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) 에 사용하면, `keys()` 메서드는 `undefined` 값이 있는 것처럼 빈 슬롯을 순회합니다.
+[Sparse arrays](/ko/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays) 에 사용하면, `keys()` 메서드는 `undefined` 값이 있는 것처럼 빈 슬롯을 순회합니다.
 
 `keys()` 메서드는 [generic](https://en.wikipedia.org/wiki/Generic_programming)합니다. `this` 값에 정수를 가지는 `length` 속성만 있어야 합니다.
 

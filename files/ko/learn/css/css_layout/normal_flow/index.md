@@ -18,7 +18,7 @@ original_slug: Learn/CSS/CSS_layout/일반_흐름
         HTML의 기초 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML에 대한 소개</a
         >)와 CSS 작동 방식에 대한 개념(<a
-          href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+          href="/ko/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 소개</a
         >를 공부하세요.)
       </td>

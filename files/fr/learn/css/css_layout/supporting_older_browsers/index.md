@@ -1,21 +1,7 @@
 ---
 title: Prise en charge des anciens navigateurs
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-tags:
-  - Apprendre
-  - Beginner
-  - CSS
-  - Débutant
-  - Guide
-  - Layout
-  - Learn
-  - feature queries
-  - flexbox
-  - float
-  - grid
-  - legacy
 translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-original_slug: Apprendre/CSS/CSS_layout/Prise_En_Charge_Des_Anciens_Navigateurs
 ---
 
 {{LearnSidebar}}

@@ -12,7 +12,7 @@ translation_of: Web/API/Document/scroll_event
 
 {{APIRef}}
 
-L’évènement **`scroll`** (défilement) est émis lorsque l’on fait défiler le document ou un élément.
+L'évènement **`scroll`** (défilement) est émis lorsque l'on fait défiler le document ou un élément.
 
 ## Informations générales
 
@@ -53,10 +53,10 @@ L’évènement **`scroll`** (défilement) est émis lorsque l’on fait défile
 
 | Propriété                             | Type                                 | Description                                                                   |
 | ------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | La cible de l’évènement (la plus haute dans l’arbre DOM).                     |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Le type d’évènement.                                                          |
-| `bubbles` {{readonlyInline}}    | {{domxref("Boolean")}}         | Si l’évènement bouillonne ou non.                                             |
-| `cancelable` {{readonlyInline}} | {{domxref("Boolean")}}         | Si l’évènement est annulable ou non.                                          |
+| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | La cible de l'évènement (la plus haute dans l'arbre DOM).                     |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Le type d'évènement.                                                          |
+| `bubbles` {{readonlyInline}}    | {{domxref("Boolean")}}         | Si l'évènement bouillonne ou non.                                             |
+| `cancelable` {{readonlyInline}} | {{domxref("Boolean")}}         | Si l'évènement est annulable ou non.                                          |
 | `view` {{readonlyInline}}       | {{domxref("WindowProxy")}} | {{domxref("Document.defaultView")}} (objet `window` du document) |
 | `detail` {{readonlyInline}}     | `long` (`float`)                     | 0.                                                                            |
 
@@ -64,9 +64,9 @@ L’évènement **`scroll`** (défilement) est émis lorsque l’on fait défile
 
 ### Temporisation des évènements scroll
 
-Comme les évènements `scroll` peuvent être émis à une fréquence élevée, le gestionnaire d’évènements ne devrait pas effectuer des opérations coûteuses en termes de puissance de calcul, telles que des modification du DOM. À la place, il est recommandé de temporiser l’évènement en utilisant {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{domxref("window.setTimeout()", "setTimeout()")}} ou un {{domxref("CustomEvent")}}, comme suit.
+Comme les évènements `scroll` peuvent être émis à une fréquence élevée, le gestionnaire d'évènements ne devrait pas effectuer des opérations coûteuses en termes de puissance de calcul, telles que des modification du DOM. À la place, il est recommandé de temporiser l'évènement en utilisant {{domxref("window.requestAnimationFrame()", "requestAnimationFrame()")}}, {{domxref("window.setTimeout()", "setTimeout()")}} ou un {{domxref("CustomEvent")}}, comme suit.
 
-Notez, cependant, que les évènements d’interface utilisateur et les frames d’animation sont émises à peu près à la même fréquence, et ainsi l’optimisation qui suit est souvent superflue. Cet exemple optimise l’évènement `scroll` avec `requestAnimationFrame`.
+Notez, cependant, que les évènements d'interface utilisateur et les frames d'animation sont émises à peu près à la même fréquence, et ainsi l'optimisation qui suit est souvent superflue. Cet exemple optimise l'évènement `scroll` avec `requestAnimationFrame`.
 
 ```js
 // Référence: http://www.html5rocks.com/en/tutorials/speed/animations/
@@ -94,7 +94,7 @@ window.addEventListener('scroll', function(e) {
 
 ### Autres exemples
 
-Pour plus d’exemples similaires, voir l’évènement [resize](/fr/docs/Web/Events/resize#Example).
+Pour plus d'exemples similaires, voir l'évènement [resize](/fr/docs/Web/Events/resize#Example).
 
 ## Spécifications
 

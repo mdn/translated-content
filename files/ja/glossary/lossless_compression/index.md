@@ -9,7 +9,7 @@ slug: Glossary/Lossless_compression
 
 1. [用語集](/ja/docs/Glossary)
 
-    1. {{glossary("GZIP")}}
-    2. {{glossary("Brotli")}}
-    3. {{glossary("PNG")}}
-    4. {{glossary("Lossy compression", "非可逆圧縮")}}
+   1. {{glossary("GZIP")}}
+   2. {{glossary("Brotli")}}
+   3. {{glossary("PNG")}}
+   4. {{glossary("Lossy compression", "非可逆圧縮")}}

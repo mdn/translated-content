@@ -1,5 +1,5 @@
 ---
-title: 'HTTP : Requêtes conditionnelles'
+title: "HTTP : Requêtes conditionnelles"
 slug: Web/HTTP/Conditional_requests
 tags:
   - Conditional Requests

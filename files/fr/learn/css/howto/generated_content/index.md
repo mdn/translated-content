@@ -1,11 +1,7 @@
 ---
 title: Contenu
 slug: Learn/CSS/Howto/Generated_content
-tags:
-  - CSS
-  - CSS:Premiers_pas
 translation_of: Learn/CSS/Howto/Generated_content
-original_slug: Apprendre/CSS/Comment/Generated_content
 ---
 
 {{LearnSidebar}}

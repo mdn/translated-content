@@ -416,7 +416,7 @@ Employee.prototype.specialty = "none";
 
 Now the value of the `jane` object's `specialty` property is "none".
 
-Another way of inheriting is by using the [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call "en-US/docs/JavaScript/Reference/Global Objects/Function/call") / [`apply()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply "en-US/docs/JavaScript/Reference/Global Objects/Function/apply") methods. Below are equivalent:
+Another way of inheriting is by using the [`call()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/call "en-US/docs/JavaScript/Reference/Global Objects/Function/call") / [`apply()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply "en-US/docs/JavaScript/Reference/Global Objects/Function/apply") methods. Below are equivalent:
 
 ```js
 function Engineer (name, projs, mach) {

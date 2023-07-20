@@ -1,14 +1,7 @@
 ---
 title: 'Testez vos compétences : les tableaux'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
-tags:
-  - Arrays
-  - Beginner
-  - JavaScript
-  - Learn
-  - test your skills
 translation_of: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
-original_slug: Learn/JavaScript/First_steps/Testes_vos_competence:_Tableaux
 ---
 
 {{learnsidebar}}

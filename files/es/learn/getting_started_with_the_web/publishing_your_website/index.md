@@ -76,11 +76,11 @@ Esta no es la única manera, pero sí la que te permite poner manos a la obra in
 7. Da clic en _Create repository_ (Crear repositorio).
 8. Arrastra y suelta el contenido de la carpeta de tu sitio web en tu repositorio. Cuando termines de pasar el contenido haz clic en _Commit changes_ (Confirmar cambios).
 
-    > **Nota:** cerciórate que tu carpeta tiene un archivo de nombre <kbd>index.html</kbd>
+   > **Nota:** cerciórate que tu carpeta tiene un archivo de nombre <kbd>index.html</kbd>
 
 9. En tu navegador desplázate a <kbd>username.github.io</kbd> para ver tu sitio web en línea. Por ejemplo, para el nombre de usuario Bob Smith, escribe <kbd>bobsmith.github.io</kbd>.
 
-    > **Nota:** puede que tu página web tarde unos minutos en entrar en funcionamiento. Si tu sitio web no se muestra inmediatamente, espera unos minutos e inténtalo de nuevo.
+   > **Nota:** puede que tu página web tarde unos minutos en entrar en funcionamiento. Si tu sitio web no se muestra inmediatamente, espera unos minutos e inténtalo de nuevo.
 
 ### Subir tus archivos a GitHub a través de la línea de comandos
 
@@ -108,40 +108,40 @@ Aunque este procedimiento pueda parecer un poco aterrador al principio no te pre
 
 1. Apunta la línea de comandos a tu directorio `sitio-prueba` (o como quiera que hayas llamado al directorio que contiene tu sitio web). Para esto utiliza el comando `cd` (es decir, _«change directory»_, _«cambiar de directorio»_). Aquí viene lo que deberías teclear si has ubicado tu sitio web en un directorio llamado `sitio-prueba` en tu escritorio:
 
-    ```bash
-    cd Desktop/sitio-prueba
-    ```
+   ```bash
+   cd Desktop/sitio-prueba
+   ```
 
-    En Windows sería:
+   En Windows sería:
 
-    ```bash
-    cd %USERPROFILE%\Desktop\sitio-prueba
-    ```
+   ```bash
+   cd %USERPROFILE%\Desktop\sitio-prueba
+   ```
 
 2. Cuando la línea de comandos esté apuntando dentro del directorio de tu sitio web, teclea el siguiente comando, que indica a la herramienta de `git` que transforme el directorio en un repositorio de Git:
 
-    ```bash
-    git init
-    ```
+   ```bash
+   git init
+   ```
 
 3. A continuación, regresa a la ventana del sitio de GitHub que dejaste abierta. En esa página, la sección que interesa es _…or push an existing repository from the command line_. Deberías ver dos líneas de código listadas en esa sección. Copia toda la primera línea, pégala en la línea de comandos y presiona <kbd>Intro</kbd>. El comando debería verse similar a:
 
-    ```bash
-    git remote add origin https://github.com/bobsmith/bobsmith.github.io.gi
-    ```
+   ```bash
+   git remote add origin https://github.com/bobsmith/bobsmith.github.io.gi
+   ```
 
 4. A continuación, ingresa los siguientes dos comandos, presionando <kbd>Intro</kbd> después de cada uno. Estos preparan el código para cargar a GitHub y pedir a Git administrar estos archivos.
 
-    ```bash
-    git add --all
-    git commit -m 'agregando archivos a mi repositorio'
-    ```
+   ```bash
+   git add --all
+   git commit -m 'agregando archivos a mi repositorio'
+   ```
 
 5. Finalmente, envía el codigo a GitHub tomando de la página web de GitHub en la que estás el segundo de los dos comandos del paso 3 e introdúcelo en el terminal:
 
-    ```bash
-    git push -u origin master
-    ```
+   ```bash
+   git push -u origin master
+   ```
 
 6. Ahora cuando vayas a la direccion de red de tu página GitHub (_usuario.github.io_) en una nueva pestaña del navegador ¡deberías ver tu sitio en línea! Envíala por correo-e a tus amigos y presume de tu maestría.
 

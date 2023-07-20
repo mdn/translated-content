@@ -13,4 +13,4 @@ slug: Glossary/Native
 
 ### 一般知識
 
-- Wikipedia 上の [Native (computing)](https://en.wikipedia.org/wiki/Native_(computing)) (英語)
+- Wikipedia 上の [Native (computing)](<https://en.wikipedia.org/wiki/Native_(computing)>) (英語)

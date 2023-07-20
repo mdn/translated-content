@@ -14,4 +14,4 @@ Une Valeur **{{Glossary("primitive")}}** affectée automatiquement aux **{{Gloss
 
 ### Référence technique
 
-- [Structures de données](/fr/docs/Web/JavaScript/Structures_de_donn%C3%A9es)
+- [Structures de données](/fr/docs/Web/JavaScript/Structures_de_données)

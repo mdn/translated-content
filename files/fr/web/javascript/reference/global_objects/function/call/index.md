@@ -43,7 +43,7 @@ Il est possible d'affecter un objet `this` différent lors de l'appel à une fon
 
 ## Exemples
 
-### Utiliser `call()` pour chaîner le constructeur d'un objet.
+### Utiliser `call()` pour chaîner le constructeur d'un objet
 
 Il est possible d'utiliser `call` pour chaîner le constructeur d'un objet, de façon similaire à Java. Dans l'exemple suivant, le constructeur de l'objet `Product` est défini avec deux paramètres, `name` et `price`. Deux autres fonctions, `Food` et `Toy` invoquent `Product` en passant `this,` `name` et `price`. `Product` initialise les propriétés `name` et `price`, tandis que les fonctions spécialisées définissent la propriété `category`.
 

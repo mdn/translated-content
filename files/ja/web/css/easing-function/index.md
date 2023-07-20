@@ -2,73 +2,77 @@
 title: <easing-function>
 slug: Web/CSS/easing-function
 l10n:
-  sourceCommit: 4e002d26cb032c915aeee366f922f23cbacd8bf1
+  sourceCommit: 1582aa82a3bb6c104068e0ce79381400e4fe9d07
 ---
 
 {{CSSRef}}
 
 **`<easing-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、数値が変化する速度を記述する数学的な関数を表します。
 
-この 2 つの値の間の遷移は様々な形で適用される可能性があります。アニメーション中に値が変化する速さを記述するために使用されることがあります。これにより、この間、アニメーションの速度を変化させることができます。また、カラーグラデーションで 2 色間を補間するために使用されることもあります。イージング関数は、CSS の [transition](/ja/docs/Web/CSS/transition-timing-function) および [animation](/ja/docs/Web/CSS/animation-timing-function) プロパティで指定することができます。
+この 2 つの値の間の遷移は様々な形で適用される可能性があります。アニメーション中に値が変化する速さを記述するために使用されることがあります。これにより、この間、アニメーションの速度を変化させることができます。イージング関数は、CSS の [transition](/ja/docs/Web/CSS/transition-timing-function) および [animation](/ja/docs/Web/CSS/animation-timing-function) プロパティで指定することができます。
 
 ## 構文
 
 ```css
 /* linear 関数とキーワード */
-/* linear(<list-of-points>) */
-linear(1, -0.5, 0);
-linear;
+/* linear(<point-list>) */
+linear(1, -0.5, 0)
+linear
 
 /* cubic-bezier 関数とキーワード */
 /* cubic-bezier(<x1>, <y1>, <x2>, <y2>) */
-cubic-bezier(0.42, 0.0, 1.0, 1.0);
-ease;
-ease-in;
-ease-out;
-ease-in-out;
+cubic-bezier(0.42, 0.0, 1.0, 1.0)
+ease
+ease-in
+ease-out
+ease-in-out
 
 /* steps 関数とキーワード */
 /* steps(<number-of-steps>, <direction>) */
-steps(4, end);
-step-start;
-step-end;
+steps(4, end)
+step-start
+step-end
 ```
 
 ### 値
 
-- _list-of-points_
+- `<point-list>`
 
-  - : 線形の停止点のリスト
+  - : 線形の停止点のリストです。
 
-- _x1, y1, x2, y2_
+- `linear`
 
-  - : {{cssxref("&lt;number&gt;")}} 値で、3 次ベジェ曲線を定義する P1 点と P2 点の横軸と縦軸を表します。 x1 および x2 は範囲 `[0, 1]` でなければならず,、それ以外の場合は無効です。
+  - : 補間が直線的に行われることを示します。このキーワードは、イージング関数 `linear(0, 1)` を表します。
+
+![原点から (1, 1) に伸びる直線を示す「入力の進行」から「出力の進行」のグラフ。](linear.svg)
+
+- `<x1>`, `<y1>`, `<x2>`, `<y2>`
+
+  - : {{cssxref("&lt;number&gt;")}} 値で、3 次ベジェ曲線を定義する P1 点と P2 点の横軸と縦軸を表します。 `x1` および `x2` は範囲 `[0, 1]` でなければならず、それ以外の場合は無効です。
 
 - `ease`
+
   - : 補間がゆっくり始まり、急激に加速し、終わりに向かって徐々に遅くなることを示します。このキーワードは、イージング関数 `cubic-bezier(0.25, 0.1, 0.25, 1.0)` を表します。これは [`ease-in-out`](#ease-in-out) と似ていますが、始めのうちはより急激に加速されます。
 
-![「時間比率」と「出力比率」の 2 次元グラフで、原点から X1 Y1 まですばやく上昇する曲線が描かれています。](cubic-bezier-ease.png)
-
 - `ease-in`
+
   - : 補間がゆっくり始まり、その後次第に加速していき、最終状態に達するとアニメーションは突然停止します。このキーワードはイージング関数 `cubic-bezier(0.42, 0.0, 1.0, 1.0)` を表します。
 
-![時間比率」と「出力比率」の 2 次元グラフで、原点から浅い曲線を描き、 X1 Y1 に近づくと直線化します。](cubic-bezier-ease-in.png)
-
-- `ease-in-out`
-  - : 補間がゆっくり始まり、加速し、終わりに向かって減速することを示します。このキーワードは、イージング関数 `cubic-bezier(0.42, 0.0, 0.58, 1.0)` を表します。始めは [`ease-in`](#ease-in) 関数のように動作し、終わりは [`ease-out`](#ease-out) 関数のように動作します。
-
-![「時間比率」と「出力比率」の 2 次元グラフで、原典から X1 Y1 に向かって点対称の「S 字型」の曲線を示します。](cubic-bezier-ease-in-out.png)
-
 - `ease-out`
+
   - : 補間が急速に始まり、最終状態にかけて次第に減速していくことを示します。このキーワードはタイミング関数 `cubic-bezier(0.0, 0.0, 0.58, 1.0)` を表します。
 
-![「時間比率」と「出力比率」の 2 次元グラフは、直線的な対角線を示し、 X1 Y1 に近づくとわずかにカーブしています。](cubic-bezier-ease-out.png)
+- `ease-in-out`
 
-- _number-of-steps_
+  - : 補間がゆっくり始まり、加速し、終わりに向かって減速することを示します。このキーワードは、イージング関数 `cubic-bezier(0.42, 0.0, 0.58, 1.0)` を表します。始めは [`ease-in`](#ease-in) 関数のように動作し、終わりは [`ease-out`](#ease-out) 関数のように動作します。
+
+![「入力の進行」と「出力の進行」のグラフのうち、"ease" は元から (1, 1) にすばやく上昇する曲線、"ease-in" は原点から (1, 1) に近づくにつれてまっすぐになる浅い曲線、"ease-out" は (1, 1) に近づくにつれてわずかにカーブするまっすぐな対角線、"ease-in-out" は原点から (1, 1) にカーブする点対称の "S" 字型の曲線を示します。](ease.svg)
+
+- `<number-of-steps>`
 
   - : 厳密に正の {{cssxref("&lt;integer&gt;")}} で、段階関数を構成する等間隔の段数を表します。
 
-- _direction_
+- `<direction>`
 
   - : ジャンプが発生するタイミングを示す以下のキーワードのいずれかです。
     - `jump-start` は補間の開始時に最初の段階が発生することを指定します。
@@ -79,14 +83,14 @@ step-end;
     - `end` は `jump-end` と同等です。これが既定値です。
 
 - `step-start`
+
   - : 補間はすぐに最終状態に遷移し、最後までその状態を維持します。このキーワードは、イージング関数 `steps(1, jump-start)` または `steps(1, start)` を表します。
 
-![X0 Y0 と X1 Y1 を 1 点とする「時間比率」対「出力比率」の 2 次元グラフ。 Y 軸から X1 Y1 まで水平線が伸びています。](steps-1-start.png)
-
 - `step-end`
+
   - : 補間、終了するまで初期状態のままで、終了時点で直接最終状態にジャンプします。このキーワードは、イージング関数 `steps(1, jump-end)` または `steps(1, end)` を表します。
 
-![X0 Y0 と X1 Y1 を 1 点とする「時間比率」対「出力比率」の 2 次元グラフ。X 軸は原点から X0 Y1 に向かって水平線が伸びています。](steps-1-end.png)
+![「入力の進行」から「出力の進行」のグラフのうち、"step-start" は原点を中空にし、(0, 1) から (1, 1) に伸びる水平線を示し、"step-end" は原点から (1, 0) に伸びる水平線（中空）と (1, 1) のこの点を示します。](step.svg)
 
 ## 解説
 
@@ -98,75 +102,54 @@ step-end;
 
 ### 線形イージング関数
 
-`linear()` 関数は、その点間を直線的に補間する区分線形関数を定義します。これにより、跳ね返り効果や弾性効果など、より複雑なアニメーションを近似的に表現することができます。この補間は、始めから終わりまで一定の割合で行われます。典型的な `linear()` 関数の使用法は、多くの点を指定して曲線のような錯覚を作成することです。
+`linear()` 関数は、その点間を直線的に補間する区分線形関数を定義します。これにより、跳ね返り効果や弾性効果など、より複雑なアニメーションを近似的に表現することができます。この補間は、始めから終わりまで一定の割合で行われます。典型的な `linear()` 関数の使用法は、多くの点を指定して何らかの曲線に近似させることです。
 
 `linear()` 関数を定義するときには、 `linear(0, 0.25, 1)` のように、_線形イージング点_ をリストで指定します。この `linear()` 関数は、 `0` から `0.25` 、そして `1` へと直線的に移動するイージング関数を生成します。
+
+![「入力の進行」と「出力の進行」のグラフ。"linear(0, 0.25, 1)" は原点、(0.5, 0.25)、(1, 1) を結ぶ折れ線、"linear(0, 0.25 75%, 1)" は原点、(0.75, 0.25)、(1, 1) を結ぶ折れ線を示します。](linear_function.svg)
 
 別の例として、 `linear(0, 0.25%, 1)` という関数を考えてみましょう。これは、 75% の時間で `0` から `.25` へと遷移し、最後の 25% を `.25` から `1` へと遷移する線形イージング関数を生成します。
 
 `linear` キーワードは、 2 つの点を持つ `linear()` 関数を生成します。これは、イージング関数 `cubic-bezier(0.0, 0.0, 1.0, 1.0)` と同じです。
 
-![「時間比率」と「出力比率」の 2 次元グラフが、元からX1 Y1まで伸びる直線の対角線を示しています。](cubic-bezier-linear.png)
+[`linear`](#linear) キーワードはイージング関数 `linear(0, 1)` と等価です。
 
 ### 3 次ベジェイージング関数
 
-`cubic-bezier()` 関数記法は、[3 次ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A)を定義します。イージング関数のサブセットである 3 次ベジェのイージング関数は、{{Glossary("interpolation", "補間")}}の始まりと終わりを滑らかにするために使用できるので、「スムーズな」イージング関数とよく呼ばれます。これらはどちらも {{cssxref("&lt;number&gt;")}} として表される、入力比率と出力比率を関連付けます。これらの値について、 `0.0` は初期状態を表し、 `1.0` は最終状態を表します。
+`cubic-bezier()` 関数記法は、[3 次ベジェ曲線](https://ja.wikipedia.org/wiki/%E3%83%99%E3%82%B8%E3%82%A7%E6%9B%B2%E7%B7%9A)を定義します。イージング関数のサブセットである 3 次ベジェのイージング関数は、{{Glossary("interpolation", "補間")}}の始まりと終わりを滑らかにするために使用できるので、「スムーズな」イージング関数とよく呼ばれます。これらはどちらも {{cssxref("&lt;number&gt;")}} として表される、入力の進行と出力の進行を関連付けます。これらの値について、 `0.0` は初期状態を表し、 `1.0` は最終状態を表します。
 
-![「時間比率」と「出力比率」の 2 次元グラフは、原点から X1 Y1 へ向かう「S」字型の曲線を示しています。 X0 Y0 でのベジェハンドルは「P₁ = (0.075, 0.75)」、X1 Y1 では「P₂ = (0.0875, 0.36)」であるとラベル付けされています。](cubic-bezier-example.png)
+![「入力の進行」から「出力の進行」のグラフで、ベジェ制御する点 P1(0.1, 0.6) と P2(0.7, 0.2) で原点から (1, 1) にカーブする S 字型の図形を示す。](cubic-bezier.svg)
 
-3 次ベジェ曲線は 4 個の点 P0, P1, P2, P3 によって定義されます。
-
-- P0 と P3 は曲線の始点と終点であり、 CSS では座標が割合（横座標は時間の割合、縦座標は出力範囲の割合）であることから、これらの点は固定されています。
-- P0 は `(0, 0)` で開始時間および初期状態を示します。
-- P3 は `(1, 1)` で終了時間および最終状態を示します。
+3 次ベジェ曲線は 4 個の点 P0, P1, P2, P3 によって定義されます。P0 と P3 は曲線の始点と終点を表します。CSS では、この点は座標の進行（横軸が入力の進行、縦軸が出力の進行）として固定されています。P0 は `(0, 0)` で進行の開始かつ初期状態を示します。P3 は `(1, 1)` で進行の終了かつ最終状態を示します。
 
 すべての 3 次ベジェ曲線が[数学的な関数](https://ja.wikipedia.org/wiki/%E9%96%A2%E6%95%B0_%28%E6%95%B0%E5%AD%A6%29) とは限らないため、どの 3 次ベジェ曲線もイージング関数として適しているわけではありません。すなわち、曲線は横座標で 0 から 1 の値をとります。 P0 および P3 は CSS の定義で固定されているので、P1 および P2 の横座標の値が `[0, 1]` の範囲にある場合のみ、3 次ベジェ曲線は関数であり、それゆえ有効になります。
 
 P1 または P2 の縦軸が `[0, 1]` の範囲外の 3 次ベジェ曲線は、値が最終状態より遠くに行き、その後戻るようになることがあります。アニメーションでは、 {{cssxref("left")}} や {{cssxref("right")}} などのいくつかのプロパティで、これは一種の「跳ね返る」効果を生み出します。
 
-![出力比率が 1 を超え、移行期間の中間点で 1.5 となることを示すイージング関数のグラフ。](tf_with_output_gt_than_1.png)
+![イージング関数 "cubic-bezier(0.3, 0.2, 0.2, 1.4)" のグラフ。一方は、ある入力の進行から始めるには出力の進行が 1 以上になることを示し、もう一方は出力の進行が 1 に到達すると、その後は 1 にとどまることを示します。](cubic-bezier_out_of_range.svg)
 
-しかし、一部のプロパティでは、許容範囲外になると出力が制限されます。例えば、色成分が `255` より大きい、あるいは `0` より小さい場合、最も近い許容値（それぞれ `255` と `0`）に丸められます。いくつかの `cubic-bezier()` 曲線はこのプロパティを示します。
+しかし、一部のプロパティでは、許容範囲外になると出力が制限されます。例えば、{{CSSXref("color_value/rgb", "rgb()")}} における色成分が `255` より大きい、あるいは `0` より小さい場合、最も近い許容値（それぞれ `255` と `0`）に丸められます。一部の `cubic-bezier()` 曲線はこのプロパティを示します。
 
-![出力比率が 1 に到達し、その後ずっと 1 のままであることを示すイージング関数のグラフ。](tf_with_output_gt_than_1_clipped.png)
+不正な 3 時限ベジェ曲線を指定すると、 CSS はその属性全体を無視します。
 
-不正な `cubic-bezier` 曲線を指定すると、 CSS はその属性全体を無視します。
-
-`cubic-bezier()` 関数は、[`ease`](#ease)、[`ease-in`](#ease-in)、[`ease-out`](#ease-out)、[`ease-in-out`](#ease-in-out) のキーワードを使用して指定することもできます。これらのキーワードは、それぞれ特定の `cubic-bezier()` 記法を表します。
+[`ease`](#ease)、[`ease-in`](#ease-in)、[`ease-out`](#ease-out)、[`ease-in-out`](#ease-in-out) のそれぞれのキーワードは、それぞれ特定の `cubic-bezier()` 値と同等です。
 
 ### 段階イージング関数
 
-`steps()` 関数記法は、出力値の領域を等距離の段階に分割する段階関数を定義するものです。この段階関数のサブクラスは、階段関数とも呼ばれることがあります。
+`steps()` 関数記法は、出力値の領域を等距離の段階に分割する段階関数を定義するものです。この段階関数のサブクラスは、[階段関数](https://ja.wikipedia.org/wiki/階段関数)とも呼ばれることがあります。
 
 `steps()` 関数を説明するいくつかの例を示します。
 
 ```css
-steps(2, jump-start)
-steps(2, start)
-```
-
-![X0 Y0、X0.5 Y0.5、X1 Y1 を点とする「時間比率」対「出力比率」の2次元グラフ。2 つ目と3 つ目の点からの水平線は、Y 軸方向に 0.5 単位で伸びています。](steps-2-start.png)
-
-```css
-steps(4, jump-end)
-steps(4, end)
-```
-
-![4 つの段階を示す2次元の段階グラフで、4 つ目の段階から 100% 地点の最終値までジャンプしています。](steps-4-end.png)
-
-```css
+steps(2, jump-start) /* Or steps(2, start) */
+steps(4, jump-end) /* Or steps(4, end) */
 steps(5, jump-none)
-```
-
-![ジャンプのない 5 つの段階を示す 2 次元の段階グラフです。始めの 20% の時間は 0% で、最後の 20% の時間は 100% です。](step5none.png)
-
-```css
 steps(3, jump-both)
 ```
 
-![X0 Y0, X0 Y0.25, X0.25 Y0.5, X0.75 Y0.75, X1 Y1 にある点を示す 2 次元段階グラフ。2 つ目、3 つ目、4 つ目の点には、Y 軸から 0.25 単位離れたところに伸びる水平線があります。](step3both.png)
+![「入力の進行」と「出力の進行」のグラフで、"steps(2, jump-start)" は、(0, 0.5) と (0.5, 1) からそれぞれ 0.5 単位で伸びる水平線を表示させ、原点と (0.5, 0.5) を中空点としています。"steps(4, jump-end)" は、それぞれ (0, 0)、(0.25, 0.25)、(0.5, 0.5)、(0.75, 0.75) から 0.25 単位で伸びる水平線を表示させ、(0.25, 0)、(0.5, 0.25)、(0.75, 0.5) に中空点があります。"steps(5, jump-none)" は、それぞれ (0, 0)、(0.2, 0.25)、(0.4, 0.5)、(0.6, 0.75)、(0.8, 1) から 0.2 単位で伸びる水平線を表示させ、(0.2, 0)、(0.4, 0.25)、(0.6, 0.5)、(0.8, 0.75) が中空点です。"steps(3, jump-both)" は、(0, 0.25)、(1/3, 0.5)、(2/3, 0.75) からそれぞれ 1/3 単位で伸びる水平線を示し、(1, 1) を点、(1/3, 0.25)、(2/3, 0.5)、(1, 0.75) を中空点とします。](jump.svg)
 
-関数 `steps()` は、[`step-start`](#step-start) と [`step-end`](#step-end) のキーワードを使用して指定することもできます。これらのキーワードは、それぞれ特定の `steps()` の記法を表します。
+[`step-start`](#step-start) と [`step-end`](#step-end) の各キーワードは、それぞれ特定の `steps()` の値を表します。
 
 ## 形式文法
 
@@ -186,10 +169,10 @@ steps(3, jump-both)
 </div>
 <ul>
   <li>
-    <button class="animation-button">Start animation</button>
+    <button class="animation-button">アニメーションを開始</button>
   </li>
   <li>
-    <label for="easing-select">Choose an easing function:</label>
+    <label for="easing-select">イージング関数を選択:</label>
     <select id="easing-select">
       <option selected>linear</option>
       <option>linear(0, 0.5 50%, 1)</option>
@@ -256,13 +239,13 @@ const startBtn = document.querySelector("button");
 const divElem = document.querySelector("div > div");
 
 startBtn.addEventListener("click", () => {
-  if (startBtn.textContent === "Start animation") {
+  if (startBtn.textContent === "アニメーションを開始") {
     divElem.style.animationName = "move-right";
-    startBtn.textContent = "Stop animation";
+    startBtn.textContent = "アニメーションを停止";
     divElem.style.animationTimingFunction = selectElem.value;
   } else {
     divElem.style.animationName = "unset";
-    startBtn.textContent = "Start animation";
+    startBtn.textContent = "アニメーションを開始";
   }
 });
 
@@ -273,13 +256,13 @@ selectElem.addEventListener("change", () => {
 
 #### 結果
 
-{{EmbedLiveSample('Comparing_the_easing_functions', '100%', 200)}}
+{{EmbedLiveSample("comparing_the_easing_functions", "100%", 200)}}
 
 ### cubic-bezier() 関数の使用
 
 以下は CSS における正しい 3 次ベジェ曲線の使い方です。
 
-```css
+```css example-good
 /* 4 つの値が [0, 1] の範囲に含まれる、標準的なベジェ曲線 */
 cubic-bezier(0.1, 0.7, 1.0, 0.1)
 
@@ -312,11 +295,11 @@ cubic-bezier(0.3, 2.1)
 cubic-bezier(-1.9, 0.3, -0.2, 2.1)
 ```
 
-### steps() 関数の例
+### steps() 関数の使用
 
 以下のタイミング関数は妥当です。
 
-```css
+```css example-good
 /* 5 段階あり、最後の段階は
    アニメーションの完了直前に発生します。 */
 steps(5, end)
@@ -355,6 +338,6 @@ steps(0, jump-none)
 
 ## 関連情報
 
-- [CSS アニメーション](/ja/docs/Web/CSS/CSS_Animations)
-- [CSS トランジション](/ja/docs/Web/CSS/CSS_Transitions)
+- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)
+- [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)
 - [cubic-bezier](https://cubic-bezier.com/)

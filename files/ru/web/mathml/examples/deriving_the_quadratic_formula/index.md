@@ -1,5 +1,5 @@
 ---
-title: 'MathML: Вывод Квадратичной Формулы'
+title: "MathML: Вывод Квадратичной Формулы"
 slug: Web/MathML/Examples/Deriving_the_Quadratic_Formula
 tags:
   - Beginner

@@ -174,7 +174,7 @@ button.onclick = function() {
       typeof myNum;
       ```
 
-    - С другой стороны, каждое число имеет метод, называемый [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString), который преобразует его в эквивалентную строку. Попробуй это:
+    - С другой стороны, каждое число имеет метод, называемый [`toString()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number/toString), который преобразует его в эквивалентную строку. Попробуй это:
 
       ```js
       const myNum = 123;

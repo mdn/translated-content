@@ -2832,10 +2832,6 @@
     "modified": "2019-03-18T21:02:55.354Z",
     "contributors": ["alexgilsoncampi"]
   },
-  "Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-23T22:45:28.352Z",
-    "contributors": ["yuniers"]
-  },
   "Mozilla/Add-ons/WebExtensions/What_are_WebExtensions": {
     "modified": "2020-11-23T00:59:33.889Z",
     "contributors": ["kenliten", "hecaxmmx", "13539"]
@@ -15331,6 +15327,10 @@
     "modified": "2019-03-18T21:08:10.456Z",
     "contributors": ["fitojb", "yuniers"]
   },
+  "orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites": {
+    "modified": "2019-03-23T22:45:28.352Z",
+    "contributors": ["yuniers"]
+  },
   "orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox": {
     "modified": "2019-03-23T22:45:27.399Z",
     "contributors": ["yuniers"]
@@ -15855,54 +15855,6 @@
   "orphaned/Web/SVG/SVG_en_Firefox_1.5": {
     "modified": "2019-03-23T23:42:07.791Z",
     "contributors": ["teoli", "Mgjbot", "Jorolo", "Arcnor"]
-  },
-  "orphaned/Web/XPath/Axes/ancestor": {
-    "modified": "2019-01-16T16:11:09.049Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "orphaned/Web/XPath/Axes/ancestor-or-self": {
-    "modified": "2019-01-16T16:11:00.606Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "orphaned/Web/XPath/Axes/attribute": {
-    "modified": "2019-01-16T16:11:03.106Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "orphaned/Web/XPath/Axes/child": {
-    "modified": "2019-01-16T16:11:02.142Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "orphaned/Web/XPath/Axes/descendant": {
-    "modified": "2019-01-16T16:11:00.301Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "orphaned/Web/XPath/Axes/descendant-or-self": {
-    "modified": "2019-01-16T16:11:00.088Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "orphaned/Web/XPath/Axes/following": {
-    "modified": "2019-01-16T16:10:55.079Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "orphaned/Web/XPath/Axes/following-sibling": {
-    "modified": "2019-01-16T16:11:02.465Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "orphaned/Web/XPath/Axes/namespace": {
-    "modified": "2019-01-16T16:10:55.086Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "orphaned/Web/XPath/Axes/parent": {
-    "modified": "2019-01-16T16:10:56.130Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "orphaned/Web/XPath/Axes/preceding": {
-    "modified": "2019-01-16T16:11:08.778Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
-  },
-  "orphaned/Web/XPath/Axes/preceding-sibling": {
-    "modified": "2019-01-16T16:10:57.298Z",
-    "contributors": ["ExE-Boss", "Mgjbot", "Cmayo"]
   },
   "orphaned/XPInstall_API_Reference": {
     "modified": "2019-01-16T15:37:54.457Z",

@@ -30,9 +30,7 @@ document.body.appendChild(script);
 两种常见的情况下是脚本是**非**异步的（由[HTML 规范](https://www.w3.org/TR/html5/scripting-1.html)定义）
 
 ```js
-<script async>
-  code();
-</script>
+<script async>code();</script>
 ```
 
 以及

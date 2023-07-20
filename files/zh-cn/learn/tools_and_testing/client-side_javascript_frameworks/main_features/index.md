@@ -51,8 +51,10 @@ const header = (
 
 ```js
 const subject = "World";
-const header = React.createElement("header", null,
-  React.createElement("h1", null, "Hello, ", subject, "!")
+const header = React.createElement(
+  "header",
+  null,
+  React.createElement("h1", null, "Hello, ", subject, "!"),
 );
 ```
 
@@ -84,7 +86,7 @@ const header = React.createElement("header", null,
 
 ```js
 {
-  subject: "World"
+  subject: "World";
 }
 ```
 
@@ -157,13 +159,8 @@ function AuthorCredit(props) {
 
 ```html
 <figure>
-  <img
-    src="assets/zelda.png"
-    alt="Portrait of Zelda Schiff"
-  >
-  <figcaption>
-    Zelda Schiff is editor-in-chief of the Library Times.
-  </figcaption>
+  <img src="assets/zelda.png" alt="Portrait of Zelda Schiff" />
+  <figcaption>Zelda Schiff is editor-in-chief of the Library Times.</figcaption>
 </figure>
 ```
 
@@ -176,9 +173,7 @@ function AuthorCredit(props) {
 ```js
 function CounterButton() {
   const [count] = useState(0);
-  return (
-    <button>Clicked {count} times</button>
-  );
+  return <button>Clicked {count} times</button>;
 }
 ```
 

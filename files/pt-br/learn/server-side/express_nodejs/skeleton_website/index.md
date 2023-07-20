@@ -15,7 +15,7 @@ Neste segundo [Tutorial Express](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tu
       <th scope="row">Pré-requisitos:</th>
       <td>
         <a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment"
+          href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment"
           >Preparar o ambiente de desenvolvimento do Node </a
         >. Revise o Tutorial Express.
       </td>

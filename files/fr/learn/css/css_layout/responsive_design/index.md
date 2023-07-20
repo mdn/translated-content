@@ -1,17 +1,7 @@
 ---
 title: Responsive design
 slug: Learn/CSS/CSS_layout/Responsive_Design
-tags:
-  - Images
-  - Media Queries
-  - RWD
-  - Responsive web design
-  - Typographie
-  - flexbox
-  - grid
-  - grille fluide
 translation_of: Learn/CSS/CSS_layout/Responsive_Design
-original_slug: Apprendre/CSS/CSS_layout/Responsive_Design
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Apprendre/CSS/CSS_layout/Multiple-column_Layout", "Apprendre/CSS/CSS_layout/Media_queries", "Apprendre/CSS/CSS_layout")}}
@@ -294,8 +284,6 @@ Il existe d'autres paramètres que vous pouvez utiliser avec la balise meta view
 - `user-scalable`: Empêche le zoom si défini à `no`.
 
 Vous devriez éviter d'utiliser `minimum-scale`, `maximum-scale`, et en particulier la définition de `user-scalable` sur `no`. Les utilisateurs devraient être autorisés à zoomer autant ou aussi peu que nécessaire; éviter cela entraîne des problèmes d'accessibilité.
-
-> **Note :** Il existe une règle @ CSS conçue pour remplacer la métabalise viewport — [@viewport](/fr/docs/Web/CSS/@viewport) — Cependant, son support par navigateur est médiocre. Il a été mis en œuvre dans Internet Explorer et Edge, mais une fois que Edgium (La version Edge basée sur Chromium) sera livré, il ne fera plus partie du navigateur Edge.
 
 ## Sommaire
 

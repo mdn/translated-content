@@ -63,13 +63,10 @@ Firefox 还支持 `chrome.*` 命名空间中的 callbacks 风格的 API，这主
 
 ```json
 {
- // ...
- "background": {
-   "scripts": [
-     "browser-polyfill.js",
-     "background.js"
-   ]
- }
+  // ...
+  "background": {
+    "scripts": ["browser-polyfill.js", "background.js"]
+  }
 }
 ```
 

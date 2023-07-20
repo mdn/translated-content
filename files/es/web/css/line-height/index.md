@@ -3,13 +3,7 @@ title: line-height
 slug: Web/CSS/line-height
 ---
 
-```
-https://developer.mozilla.org/en-US/docs/Web/CSS{{ CSSRef() }}
-/*Keyword value*/
-line-height: normal;
-
-/
-```
+{{ CSSRef() }}
 
 ### Resumen
 
@@ -68,21 +62,13 @@ div { font: 10pt/1.2  Georgia,"Bitstream Charter",serif; } /* font shorthand */
 
 A menudo es más conveniente establecer el `line-height` usando {{cssxref("font")}} abreviadamente, como se muestra arriba, pero esto también requiere especificar la propiedad `font-family`.
 
-### Notas
-
 ### Especificaciones
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visudet.html#propdef-line-height)
+{{Specifications}}
 
 ### Compatibilidad de navegadores
 
-| Navegador         | Versión mínima |
-| ----------------- | -------------- |
-| Internet Explorer | ?              |
-| Firefox           | 1              |
-| Netscape          | ?              |
-| Opera             | ?              |
-| Safari            | ?              |
+{{Compat}}
 
 ### Ver también
 
