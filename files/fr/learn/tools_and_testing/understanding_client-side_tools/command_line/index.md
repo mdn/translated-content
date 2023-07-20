@@ -281,7 +281,7 @@ En fait, cette URL est celle de l'ancien emplacement de la page. Lorsque vous l'
 Par conséquent, si vous utilisez curl pour faire une requête à `https://developer.mozilla.org/docs/Web/API/fetch`, vous n'aurez pas de résultat. Essayez :
 
 ```bash
-curl https://developer.mozilla.org/en-US/docs/Web/API/fetch
+curl https://developer.mozilla.org/docs/Web/API/fetch
 ```
 
 Nous devons dire explicitement à `curl` de suivre les redirections en utilisant l'option `-L`.
