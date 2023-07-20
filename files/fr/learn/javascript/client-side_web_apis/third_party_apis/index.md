@@ -2,7 +2,6 @@
 title: API tierces
 slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
-original_slug: Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}

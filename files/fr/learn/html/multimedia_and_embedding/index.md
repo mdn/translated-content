@@ -1,24 +1,7 @@
 ---
 title: Multimédia et Intégration
 slug: Learn/HTML/Multimedia_and_embedding
-tags:
-  - Apprentissage
-  - Audio
-  - Codage
-  - Débutant
-  - Evaluation
-  - Flash
-  - Guide
-  - HTML
-  - Image Vectorielle
-  - Images
-  - Interactivité
-  - SVG
-  - Video
-  - iframes
-  - imagemaps
 translation_of: Learn/HTML/Multimedia_and_embedding
-original_slug: Apprendre/HTML/Multimedia_and_embedding
 ---
 
 {{LearnSidebar}}

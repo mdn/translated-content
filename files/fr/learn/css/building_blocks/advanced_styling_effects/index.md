@@ -2,7 +2,6 @@
 title: Effets de boîte avancés
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 translation_of: Learn/CSS/Building_blocks/Advanced_styling_effects
-original_slug: Apprendre/CSS/Building_blocks/Advanced_styling_effects
 ---
 
 {{LearnSidebar}}

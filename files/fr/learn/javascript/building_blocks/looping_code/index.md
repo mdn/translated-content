@@ -1,22 +1,7 @@
 ---
 title: Les boucles dans le code
 slug: Learn/JavaScript/Building_blocks/Looping_code
-tags:
-  - Article
-  - CodingScripting
-  - DO
-  - Débutant
-  - Guide
-  - JavaScript
-  - Learn
-  - Loop
-  - break
-  - continue
-  - for
-  - l10n:priority
-  - while
 translation_of: Learn/JavaScript/Building_blocks/Looping_code
-original_slug: Apprendre/JavaScript/Building_blocks/Looping_code
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}

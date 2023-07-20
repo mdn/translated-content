@@ -1,18 +1,7 @@
 ---
 title: Publier votre site web
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-tags:
-  - Apprendre
-  - Débutant
-  - Codage
-  - FTP
-  - GitHub
-  - Google App Engine
-  - Web
-  - Publier
-  - Serveur Web
 translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
-original_slug: Apprendre/Commencer_avec_le_web/Publier_votre_site_web
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_JavaScript", "Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web","Apprendre/Commencer_avec_le_web")}}

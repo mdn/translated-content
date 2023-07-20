@@ -1,19 +1,7 @@
 ---
 title: Fondamentaux du texte HTML
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
-tags:
-  - Apprendre
-  - Débutant
-  - Guide
-  - HTML
-  - Introduction à l'HTML
-  - Listes
-  - Paragraphes
-  - Texte
-  - Titres
-  - sémantique
 translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
-original_slug: Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}

@@ -1,16 +1,7 @@
 ---
 title: Exemple 4
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
-tags:
-  - Avancé
-  - Exemple
-  - Formulaires
-  - Guide
-  - HTML
-  - Web
 translation_of: Learn/Forms/How_to_build_custom_form_controls/Example_4
-original_slug: >-
-  Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés/Example_4
 ---
 
 Ceci est le quatrième exemple expliquant [comment construire des widgets de formulaire personnalisés](/fr/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets).

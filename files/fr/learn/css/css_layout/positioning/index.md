@@ -2,7 +2,6 @@
 title: Le positionnement
 slug: Learn/CSS/CSS_layout/Positioning
 translation_of: Learn/CSS/CSS_layout/Positioning
-original_slug: Apprendre/CSS/CSS_layout/Le_positionnement
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}

@@ -1,16 +1,7 @@
 ---
 title: Initiation à la mise en forme du texte
 slug: Learn/CSS/Styling_text/Fundamentals
-tags:
-  - Alignement
-  - CSS
-  - Débutant
-  - Guide
-  - Polices de caractères
-  - Style
-  - Texte
 translation_of: Learn/CSS/Styling_text/Fundamentals
-original_slug: Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}

@@ -1,20 +1,7 @@
 ---
 title: Gérer les problèmes courants d'accessibilité
 slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
-tags:
-  - Accessibilité
-  - Apprentissage
-  - Article
-  - CSS
-  - Clavier
-  - Débutant
-  - HTML
-  - JavaScript
-  - Outils
-  - navigateur croisé
-  - test
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/Accessibility
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/Accessibilité
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/JavaScript","Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing")}}
