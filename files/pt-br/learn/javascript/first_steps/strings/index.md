@@ -295,7 +295,7 @@ Aqui estamos usando uma função {{domxref("Window.prompt()", "Window.prompt()")
       typeof myNum;
       ```
 
-    - Por outro lado, todo número tem um método chamado [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) que converterá para a string equivalente. Tente isto:
+    - Por outro lado, todo número tem um método chamado [`toString()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) que converterá para a string equivalente. Tente isto:
 
       ```js
       var myNum = 123;

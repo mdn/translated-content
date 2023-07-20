@@ -5,7 +5,7 @@ slug: Glossary/Browser
 
 Un _Navegador web_ es un programa o aplicación que da acceso a la [Web](/es/docs/Glossary/World_Wide_Web), y permite a los usuarios el acceso a más páginas a través de [hipervínculos](/es/docs/Glossary/Hyperlink).
 
-## Para saber más...
+## Para saber más
 
 ### Cultura general
 

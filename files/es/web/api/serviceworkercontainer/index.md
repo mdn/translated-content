@@ -49,7 +49,7 @@ if ('serviceWorker' in navigator) {
     console.log('Service worker registration succeeded:', registration);
 
     // At this point, you can optionally do something
-    // with registration. See https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration
+    // with registration. See https://developer.mozilla.org/es/docs/Web/API/ServiceWorkerRegistration
   }).catch(function(error) {
     console.log('Service worker registration failed:', error);
   });

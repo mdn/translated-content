@@ -25,17 +25,15 @@ L'élément MathML `<merror>` est utilisé afin d'afficher des contenus en tant 
 
 ```html
 <math>
-
-<merror>
-  <mrow>
-    <mtext> Division par zéro : </mtext>
-    <mfrac>
-      <mn> 1 </mn>
-      <mn> 0 </mn>
-    </mfrac>
-  </mrow>
-</merror>
-
+  <merror>
+    <mrow>
+      <mtext> Division par zéro : </mtext>
+      <mfrac>
+        <mn> 1 </mn>
+        <mn> 0 </mn>
+      </mfrac>
+    </mrow>
+  </merror>
 </math>
 ```
 

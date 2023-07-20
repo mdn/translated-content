@@ -212,7 +212,7 @@ Você irá aprender sobre laços propriamente em um artigo futuro, mas, brevemen
 
 1. Comece o laço no item número 0 na array.
 2. Pare o laço no item de número igual ao comprimento da array. Isto funcionará para uma array de qualquer tamanho, mas neste caso vai parar o laço no item 7 (isto é bom, como o último item — que nós queremos que o laço cubra — é 6.
-3. Para cada item, imprima no console do navegador com [`console.log()`](/en-US/docs/Web/API/Console/log).
+3. Para cada item, imprima no console do navegador com [`console.log()`](/pt-BR/docs/Web/API/Console/log).
 
 ## Alguns métodos úteis em array
 

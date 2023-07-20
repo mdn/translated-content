@@ -154,7 +154,7 @@ translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
         Совпадёт с символом возврат назад (англ. backspace). Если вы ищите
         символ границы слова (<code>\b</code>), смотри
         <a
-          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries"
+          href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Regular_Expressions/Boundaries"
           >Границы</a
         >.
       </td>

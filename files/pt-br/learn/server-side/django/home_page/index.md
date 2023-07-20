@@ -13,10 +13,10 @@ Agora estamos prontos para adicionar o código que exibe nossa primeira página 
       <th scope="row">Pré-requisitos:</th>
       <td>
         Leia a
-        <a href="/en-US/docs/Learn/Server-side/Django/Introduction"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Introduction"
           >Introdução ao Django</a
         >. Conclua os tópicos do tutorial anterior (incluindo
-        <a href="/en-US/docs/Learn/Server-side/Django/Admin_site"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Admin_site"
           >Django Tutorial Part 4: Django admin site</a
         >).
       </td>

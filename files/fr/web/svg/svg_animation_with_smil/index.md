@@ -44,8 +44,11 @@ Si vous voulez animer plus d'attributs dans le même élément, ajoutez simpleme
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
   <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
     <animate
-       attributeName="cx" from="0" to="100"
-       dur="5s" repeatCount="indefinite" />
+      attributeName="cx"
+      from="0"
+      to="100"
+      dur="5s"
+      repeatCount="indefinite" />
   </circle>
 </svg>
 ```
@@ -62,16 +65,22 @@ Dans l'exemple ci dessous, on anime le centre de rotation et l'angle.
 <svg width="300" height="100">
   <title>SVG SMIL Animate with transform</title>
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
-  <rect x="0" y="50" width="15" height="34" fill="blue" stroke="black" stroke-width="1">
+  <rect
+    x="0"
+    y="50"
+    width="15"
+    height="34"
+    fill="blue"
+    stroke="black"
+    stroke-width="1">
     <animateTransform
-       attributeName="transform"
-       begin="0s"
-       dur="20s"
-       type="rotate"
-       from="0 60 60"
-       to="360 100 60"
-       repeatCount="indefinite"
-      />
+      attributeName="transform"
+      begin="0s"
+      dur="20s"
+      type="rotate"
+      from="0 60 60"
+      to="360 100 60"
+      repeatCount="indefinite" />
   </rect>
 </svg>
 ```
@@ -93,9 +102,7 @@ On crée ici un chemin avec les commandes **MoveTo**, pour définir le point de 
   <title>SVG SMIL Animate with Path</title>
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
   <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1">
-    <animateMotion
-       path="M 0 0 H 300 Z"
-       dur="3s" repeatCount="indefinite" />
+    <animateMotion path="M 0 0 H 300 Z" dur="3s" repeatCount="indefinite" />
   </circle>
 </svg>
 ```
@@ -110,10 +117,19 @@ Le même exemple que précédemment mais avec une trajectoire courbe.
 <svg width="300" height="100">
   <title>SVG SMIL Animate with Path</title>
   <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />
-  <rect x="0" y="0" width="20" height="20" fill="blue" stroke="black" stroke-width="1">
+  <rect
+    x="0"
+    y="0"
+    width="20"
+    height="20"
+    fill="blue"
+    stroke="black"
+    stroke-width="1">
     <animateMotion
-       path="M 250,80 H 50 Q 30,80 30,50 Q 30,20 50,20 H 250 Q 280,20,280,50 Q 280,80,250,80Z"
-       dur="3s" repeatCount="indefinite" rotate="auto" />
+      path="M 250,80 H 50 Q 30,80 30,50 Q 30,20 50,20 H 250 Q 280,20,280,50 Q 280,80,250,80Z"
+      dur="3s"
+      repeatCount="indefinite"
+      rotate="auto" />
   </rect>
 </svg>
 ```

@@ -127,7 +127,7 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 
 ### Proxy
 
-- [Proxy.create](/en-US/docs/Archive/Web/Old_Proxy_API) and [Proxy.createFunction](/en-US/docs/Archive/Web/Old_Proxy_API) are deprecated. Use {{jsxref("Proxy")}} instead.
+- [Proxy.create](/ko/docs/Archive/Web/Old_Proxy_API) and [Proxy.createFunction](/ko/docs/Archive/Web/Old_Proxy_API) are deprecated. Use {{jsxref("Proxy")}} instead.
 - The following traps are obsolete:
 
   - `hasOwn` ([Firefox bug 980565](https://bugzil.la/980565), Firefox 33).
@@ -142,7 +142,7 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 
 ### String methods
 
-- [HTML wrapper methods](/en-US/docs/tag/HTML%20wrapper%20methods) like {{jsxref("String.prototype.fontsize")}} and {{jsxref("String.prototype.big")}}.
+- [HTML wrapper methods](/ko/docs/tag/HTML%20wrapper%20methods) like {{jsxref("String.prototype.fontsize")}} and {{jsxref("String.prototype.big")}}.
 - {{jsxref("String.prototype.quote")}} is removed from Firefox 37.
 - non standard `flags` parameter in {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, and {{jsxref("String.prototype.replace")}} are deprecated.
 
@@ -152,8 +152,8 @@ These obsolete features have been entirely removed from JavaScript and can no lo
 
 ### Object
 
-- The [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors are deprecated. Use [`Object.getPrototypeOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) and [`Object.setPrototypeOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) instead. This does not apply to the `__proto__` literal key in object literals.
-- The [`Object.prototype.__defineGetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`Object.prototype.__defineSetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`Object.prototype.__lookupGetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), and [`Object.prototype.__lookupSetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) methods are deprecated. Use [`Object.getOwnPropertyDescriptor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) and [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) instead.
+- The [`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors are deprecated. Use [`Object.getPrototypeOf`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) and [`Object.setPrototypeOf`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) instead. This does not apply to the `__proto__` literal key in object literals.
+- The [`Object.prototype.__defineGetter__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`Object.prototype.__defineSetter__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`Object.prototype.__lookupGetter__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), and [`Object.prototype.__lookupSetter__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) methods are deprecated. Use [`Object.getOwnPropertyDescriptor`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) and [`Object.defineProperty`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) instead.
 
 ### Function
 
@@ -196,8 +196,8 @@ These obsolete features have been entirely removed from JavaScript and can no lo
 
 ### E4X
 
-See [E4X](/en-US/docs/Archive/Web/E4X) for more information.
+See [E4X](/ko/docs/Archive/Web/E4X) for more information.
 
 ### Sharp variables
 
-See [Sharp variables in JavaScript](/en-US/docs/Archive/Web/Sharp_variables_in_JavaScript) for more information.
+See [Sharp variables in JavaScript](/ko/docs/Archive/Web/Sharp_variables_in_JavaScript) for more information.

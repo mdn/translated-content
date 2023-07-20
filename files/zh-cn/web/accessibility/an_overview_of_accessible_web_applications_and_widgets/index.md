@@ -4,7 +4,7 @@ slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 ---
 
 <section id="Quick_links">
-  {{ListSubpagesForSidebar("zh-CN/docs/Web/Accessibility", 1)}}
+  {{ListSubpagesForSidebar("/zh-CN/docs/Web/Accessibility", 1)}}
 </section>
 
 web 正在变化。静态的、基于页面的站点逐渐被动态站点所取代，桌面式的 web 应用由大量的 JavaScript 和 AJAX 组成。设计人员完全可以通过 JavaScript，HTML 和 CSS 的组合创建令人惊叹的新的小部件和控件。这种转变有可能显着提高网络的响应能力和可用性，但是由于无障碍差距，存在许多用户有无法享用这种好处的风险。用户无法访问传统上 JavaScript 对于诸如屏幕阅读器等辅助技术，但是现在有了创建动态 Web 用户界面的方法，可以被各种用户访问。
@@ -66,9 +66,15 @@ _Example 3: Markup for the tabs widget with ARIA attributes added._
 
 <div>
   <!-- Notice the role and aria-labelledby attributes we've added to describe these panels. -->
-  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">Chapter 1 content goes here</div>
-  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">Chapter 2 content goes here</div>
-  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">Quiz content goes here</div>
+  <div id="ch1Panel" role="tabpanel" aria-labelledby="ch1Tab">
+    Chapter 1 content goes here
+  </div>
+  <div id="ch2Panel" role="tabpanel" aria-labelledby="ch2Tab">
+    Chapter 2 content goes here
+  </div>
+  <div id="quizPanel" role="tabpanel" aria-labelledby="quizTab">
+    Quiz content goes here
+  </div>
 </div>
 ```
 
@@ -101,19 +107,26 @@ _Example 1a. HTML for a selectable menu._
 
 ```html
 <ul id="fontMenu" class="menu" role="menu" aria-hidden="true">
-  <li id="sans-serif"
-      class="menu-item"
-      role="menuitemradio"
-      tabindex="-1"
-      aria-controls="st1"
-      aria-checked="true">Sans-serif</li>
-  <li id="serif"
-      class="menu-item"
-      role="menuitemradio"
-      tabindex="-1"
-      aria-controls="st1"
-      aria-checked="false">Serif</li>
+  <li
+    id="sans-serif"
+    class="menu-item"
+    role="menuitemradio"
+    tabindex="-1"
+    aria-controls="st1"
+    aria-checked="true">
+    Sans-serif
+  </li>
+  <li
+    id="serif"
+    class="menu-item"
+    role="menuitemradio"
+    tabindex="-1"
+    aria-controls="st1"
+    aria-checked="false">
+    Serif
+  </li>
   ...
+</ul>
 ```
 
 The CSS that is used to alter the visual appearance of the selected item is shown in Example 1b. Note that there is no custom classname used, only the status of the **`aria-checked`** attribute on line 1.
@@ -123,7 +136,7 @@ _Example 1b. Attribute-based selector for indicating state._
 ```css
 li[aria-checked="true"] {
   font-weight: bold;
-  background-image: url('images/dot.png');
+  background-image: url("images/dot.png");
   background-repeat: no-repeat;
   background-position: 5px 10px;
 }
@@ -134,14 +147,14 @@ The JavaScript to update the **`aria-checked`** property has the form shown in E
 _Example 1c. JavaScript to update the aria-checked attribute_.
 
 ```js
-var processMenuChoice = function(item) {
+var processMenuChoice = function (item) {
   // 'check' the selected item
-  item.setAttribute('aria-checked', 'true');
+  item.setAttribute("aria-checked", "true");
   // 'un-check' the other menu items
   var sib = item.parentNode.firstChild;
-  for (; sib; sib = sib.nextSibling ) {
-    if ( sib.nodeType === 1 && sib !== item ) {
-      sib.setAttribute('aria-checked', 'false');
+  for (; sib; sib = sib.nextSibling) {
+    if (sib.nodeType === 1 && sib !== item) {
+      sib.setAttribute("aria-checked", "false");
     }
   }
 };
@@ -159,14 +172,18 @@ _Example 2a. HTML for a tooltip._
 
 ```html
 <div class="text">
-    <label id="tp1-label" for="first">First Name:</label>
-    <input type="text" id="first" name="first" size="20"
-           aria-labelledby="tp1-label"
-           aria-describedby="tp1"
-           aria-required="false" />
-    <div id="tp1" class="tooltip"
-         role="tooltip"
-         aria-hidden="true">Your first name is optional</div>
+  <label id="tp1-label" for="first">First Name:</label>
+  <input
+    type="text"
+    id="first"
+    name="first"
+    size="20"
+    aria-labelledby="tp1-label"
+    aria-describedby="tp1"
+    aria-required="false" />
+  <div id="tp1" class="tooltip" role="tooltip" aria-hidden="true">
+    Your first name is optional
+  </div>
 </div>
 ```
 
@@ -177,7 +194,7 @@ _Example 2b. Attribute-based selector for indicating state._
 ```css
 div.tooltip[aria-hidden="true"] {
   display: none;
-  }
+}
 ```
 
 The JavaScript to update the **`aria-hidden`** property has the form shown in Example 2c. Note that the script only updates the **`aria-hidden`** attribute (line 2); it does not need to also add or remove a custom classname.
@@ -185,9 +202,9 @@ The JavaScript to update the **`aria-hidden`** property has the form shown in Ex
 _Example 2c. JavaScript to update the aria-checked attribute._
 
 ```js
-var showTip = function(el) {
-  el.setAttribute('aria-hidden', 'false');
-}
+var showTip = function (el) {
+  el.setAttribute("aria-hidden", "false");
+};
 ```
 
 ### 角色变化

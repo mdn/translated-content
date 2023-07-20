@@ -37,6 +37,6 @@ _Esta interface implementa métodos definidos em {{domxref("RandomSource")}}._
 
 - [Components.utils.importGlobalProperties](/pt-BR/docs/Components.utils.importGlobalProperties)
 
-## Dicionário:
+## Dicionário
 
 "Key" = "Chave"

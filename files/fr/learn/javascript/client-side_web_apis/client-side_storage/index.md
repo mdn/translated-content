@@ -1,17 +1,7 @@
 ---
 title: Stockage côté client
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
-tags:
-  - API
-  - Apprendre
-  - Codage
-  - Débutant
-  - Guide
-  - IndexedDB
-  - JavaScript
-  - Storage
 translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
-original_slug: Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
 
 {{LearnSidebar}}

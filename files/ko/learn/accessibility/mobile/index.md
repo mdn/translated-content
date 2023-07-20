@@ -16,7 +16,7 @@ original_slug: Learn/접근성/모바일
         <p>
           기본적인 컴퓨터 사용능력, HTML, CSS, JavaScript에 대한 기본적인 이해,
           그리고
-          <a href="/en-US/docs/Learn/Accessibility">이전 내용들에 대한 이해</a>.
+          <a href="/ko/docs/Learn/Accessibility">이전 내용들에 대한 이해</a>.
         </p>
       </td>
     </tr>

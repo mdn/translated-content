@@ -1,19 +1,7 @@
 ---
 title: Construire vos propres fonctions
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
-tags:
-  - Apprentissage
-  - Article
-  - Débutant
-  - Fonctions
-  - Guide
-  - I10n
-  - JavaScript
-  - Paramètres
-  - Scripting
-  - Tutoriel
 translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
-original_slug: Apprendre/JavaScript/Building_blocks/Build_your_own_function
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}

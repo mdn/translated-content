@@ -45,6 +45,6 @@ A **`Path2D`** interface da API Canvas 2D é usada para declarar caminhos que s�
 
 {{Compat("api.Path2D")}}
 
-## Veja também:
+## Veja também
 
 - {{domxref("CanvasRenderingContext2D")}}

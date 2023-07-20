@@ -447,7 +447,7 @@ He dado a `.box3` position relative y luego he posicionado el sub-ítem con las 
 
 Una interacción final con otra especificación de layout que merece la pena destacar es la interacción entre CSS Grid Layout y `display:` `contents`. El valor de `contents` en la propiedad display es un nuevo valor que se describe en [Display specification](https://drafts.csswg.org/css-display/#box-generation) de la siguiente manera:
 
-> “El elemento en sí no genera ninguna caja, pero sus hijos y pseudo-elementos siguen generando cajas como de costumbre. A efectos de generación y layout de cajas, el elemento debe ser tratado como si hubiera sido sustituido por sus hijos y pseudo-elementos en el árbol del documento”
+> "El elemento en sí no genera ninguna caja, pero sus hijos y pseudo-elementos siguen generando cajas como de costumbre. A efectos de generación y layout de cajas, el elemento debe ser tratado como si hubiera sido sustituido por sus hijos y pseudo-elementos en el árbol del documento"
 
 Si configuras un ítem como `display: contents` la caja que normalmente crearía desaparece, y las cajas de los elementos hijo aparecen como si hubieran subido de nivel. Esto significa que los hijos de un grid item pueden convertirse en grid items. . ¿Suena raro? He aquí un ejemplo sencillo. En el siguiente marcado tengo un grid, el primer ítem del grid se establece para que se expanda tres pistas de columna. Contiene tres ítems anidados. Como esos hijos no son hijos directos, no forman parte del grid layout y por tanto se muestran como `display: block`.
 

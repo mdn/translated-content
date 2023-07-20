@@ -46,6 +46,6 @@ document.addEventListener("pointerlockchange", function( event ) {
 
 - [`pointerlockerror`](/es/docs/Mozilla_event_reference/pointerlockerror)
 
-## Véase también:
+## Véase también
 
 - [Using Pointer Lock API](/es/docs/API/Pointer_Lock_API)

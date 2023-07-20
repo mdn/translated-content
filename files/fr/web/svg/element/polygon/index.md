@@ -17,7 +17,11 @@ L'élément **`<polygon>`** délimite une forme close composée d'un groupe de p
 ## Exemple
 
 ```css hidden
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html

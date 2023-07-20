@@ -1,25 +1,7 @@
 ---
 title: 'Tableaux HTML : dispositions avancées et accessibilité'
 slug: Learn/HTML/Tables/Advanced
-tags:
-  - Accessibilité
-  - Apprentissage
-  - Article
-  - Avancés
-  - Codage
-  - Débutant
-  - En-têtes
-  - HTML
-  - Imbrication
-  - Portée
-  - Tableaux
-  - caption
-  - resume
-  - tbody
-  - tfoot
-  - thead
 translation_of: Learn/HTML/Tables/Advanced
-original_slug: Apprendre/HTML/Tableaux/Advanced
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}

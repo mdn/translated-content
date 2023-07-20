@@ -2,7 +2,6 @@
 title: Mise en forme des liens
 slug: Learn/CSS/Styling_text/Styling_links
 translation_of: Learn/CSS/Styling_text/Styling_links
-original_slug: Learn/CSS/Styling_text/Mise_en_forme_des_liens
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}

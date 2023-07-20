@@ -204,7 +204,7 @@ Cache-Control: must-understand, no-store
 
 `no-transform` は、仲介者が（キャッシュを実装しているかどうかに関係なく）レスポンスの内容を変換すべきではないことを示します。
 
-注意: [Google’s Web Light](https://support.google.com/webmasters/answer/6211428) は、そのような仲介者の一種です。これは、キャッシュストアや低速接続のデータを最小化するために画像を変換し、オプトアウトオプションとして `no-transform` に対応します。
+注意: [Google's Web Light](https://support.google.com/webmasters/answer/6211428) は、そのような仲介者の一種です。これは、キャッシュストアや低速接続のデータを最小化するために画像を変換し、オプトアウトオプションとして `no-transform` に対応します。
 
 #### `immutable`
 
@@ -355,7 +355,7 @@ Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
 Cache-Control: no-store
 ```
 
-### “cache busting” における静的資産のキャッシュ
+### "cache busting" における静的資産のキャッシュ
 
 バージョン/ハッシュビルドを持つ静的資産を構築する場合、ファイル名やクエリー文字列にバージョン/ハッシュを追加することは、キャッシュを管理するための良い方法です。
 
@@ -384,7 +384,7 @@ React ライブラリーのバージョンは、ライブラリーを更新す�
 Cache-Control: max-age=31536000, immutable
 ```
 
-ライブラリーを更新したり、画像を編集したりすると、新しいコンテンツは新しい URL を持つはずなので、キャッシュは再利用されません。それを “cache busting” パターンと呼びます。
+ライブラリーを更新したり、画像を編集したりすると、新しいコンテンツは新しい URL を持つはずなので、キャッシュは再利用されません。それを "cache busting" パターンと呼びます。
 
 `no-cache` を使用して HTML レスポンス自体がキャッシュされないようにしてください。 `no-cache` では再検証することができるので、クライアントが HTML レスポンスや静的資産の新しいバージョンを正しく受信します。
 

@@ -52,9 +52,7 @@ Ambos fragmentos de texto tienen color negro por defecto.
 El `<div>` "good" tiene un color de fondo púrpura claro, lo que hace que el texto sea fácil de leer:
 
 ```html hidden
-    <div class="good">
-      Good contrast
-    </div>
+<div class="good">Good contrast</div>
 ```
 
 ```css hidden
@@ -81,9 +79,7 @@ div {
 El `<div>` "bad", por otro lado, tiene un color de fondo púrpura muy oscuro, lo que hace que el texto sea mucho más difícil de leer:
 
 ```html hidden
-    <div class="bad">
-      Bad contrast
-    </div>
+<div class="bad">Bad contrast</div>
 ```
 
 ```css hidden

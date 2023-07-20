@@ -1,23 +1,7 @@
 ---
 title: 'Tableaux HTML : notions de base'
 slug: Learn/HTML/Tables/Basics
-tags:
-  - Apprentissage
-  - Article
-  - Bases
-  - Codage
-  - Débutant
-  - En-têtes
-  - HTML
-  - Tableaux
-  - cellule
-  - col
-  - colgroup
-  - colspan
-  - rangées
-  - rowspan
 translation_of: Learn/HTML/Tables/Basics
-original_slug: Apprendre/HTML/Tableaux/Basics
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}

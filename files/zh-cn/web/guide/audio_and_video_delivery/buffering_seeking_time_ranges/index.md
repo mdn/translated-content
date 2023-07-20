@@ -2,6 +2,7 @@
 title: Media buffering, seeking, and time ranges
 slug: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 ---
+
 有时候知道 {{htmlelement("audio") }} 或 {{htmlelement("video") }} 已经下载了多少或有多少可以不延迟的播放是有用的 — 音频和视频的缓冲条就是这个的一个好例子。这篇文章讨论 用 [TimeRanges](/zh-CN/docs/Web/API/TimeRanges)如何创建一个 buffer/seek bar，和 media API 的其他特性。
 
 ## Buffered
@@ -11,14 +12,13 @@ slug: Web/Guide/Audio_and_video_delivery/buffering_seeking_time_ranges
 它与 {{htmlelement("audio") }} 或 {{htmlelement("video") }}一起工作; 现在我们来考虑一个简单的 aodio 例子：
 
 ```html
-<audio id="my-audio" controls src="music.mp3">
-</audio>
+<audio id="my-audio" controls src="music.mp3"></audio>
 ```
 
 我们可以这样访问这些属性：
 
 ```js
-var myAudio = document.getElementById('my-audio');
+var myAudio = document.getElementById("my-audio");
 
 var bufferedTimeRanges = myAudio.buffered;
 ```
@@ -45,11 +45,11 @@ TimeRanges 是一系列有开始和结束时间的非重叠的时间范围。 ([
 对于这个 audio 实例，相关联的 {{ domxref("TimeRange") }} 对象会有以下的可用属性：
 
 ```js
-myAudio.buffered.length;   // returns 2
+myAudio.buffered.length; // returns 2
 myAudio.buffered.start(0); // returns 0
-myAudio.buffered.end(0);   // returns 5
+myAudio.buffered.end(0); // returns 5
 myAudio.buffered.start(1); // returns 15
-myAudio.buffered.end(1);   // returns 19
+myAudio.buffered.end(1); // returns 19
 ```
 
 为了试用并形象化 buffered time ranges 我们可以写一点 HTML:
@@ -57,46 +57,43 @@ myAudio.buffered.end(1);   // returns 19
 ```html
 <p>
   <audio id="my-audio" controls>
-    <source src="music.mp3" type="audio/mpeg">
+    <source src="music.mp3" type="audio/mpeg" />
   </audio>
 </p>
 <p>
-  <canvas id="my-canvas" width="300" height="20">
-  </canvas>
+  <canvas id="my-canvas" width="300" height="20"></canvas>
 </p>
 ```
 
 and a little bit of JavaScript:
 
 ```js
-  window.onload = function(){
+window.onload = function () {
+  var myAudio = document.getElementById("my-audio");
+  var myCanvas = document.getElementById("my-canvas");
+  var context = myCanvas.getContext("2d");
 
-    var myAudio = document.getElementById('my-audio');
-    var myCanvas = document.getElementById('my-canvas');
-    var context = myCanvas.getContext('2d');
+  context.fillStyle = "lightgray";
+  context.fillRect(0, 0, myCanvas.width, myCanvas.height);
+  context.fillStyle = "red";
+  context.strokeStyle = "white";
 
-    context.fillStyle = 'lightgray';
-    context.fillRect(0, 0, myCanvas.width, myCanvas.height);
-    context.fillStyle = 'red';
-    context.strokeStyle = 'white';
+  var inc = myCanvas.width / myAudio.duration;
 
-    var inc = myCanvas.width / myAudio.duration;
+  // display TimeRanges
 
-    // display TimeRanges
+  myAudio.addEventListener("seeked", function () {
+    for (i = 0; i < myAudio.buffered.length; i++) {
+      var startX = myAudio.buffered.start(i) * inc;
+      var endX = myAudio.buffered.end(i) * inc;
+      var width = endX - startX;
 
-    myAudio.addEventListener('seeked', function() {
-      for (i = 0; i < myAudio.buffered.length; i++) {
-
-        var startX = myAudio.buffered.start(i) * inc;
-        var endX = myAudio.buffered.end(i) * inc;
-        var width = endX - startX;
-
-        context.fillRect(startX, 0, width, myCanvas.height);
-        context.rect(startX, 0, width, myCanvas.height);
-        context.stroke();
-      }
-    });
-  }
+      context.fillRect(startX, 0, width, myCanvas.height);
+      context.rect(startX, 0, width, myCanvas.height);
+      context.stroke();
+    }
+  });
+};
 ```
 
 这在长一些的 audio 或 video 上工作的更好，但是按开始键并在进度条上点击，你会得到这个。每个红色填充的长方形代表一个时间范围。
@@ -174,25 +171,26 @@ We'll use the following CSS to style the buffering display:
 And the following JavaScript provides our functionality:
 
 ```js
-window.onload = function(){
+window.onload = function () {
+  var myAudio = document.getElementById("my-audio");
 
-  var myAudio = document.getElementById('my-audio');
-
-  myAudio.addEventListener('progress', function() {
+  myAudio.addEventListener("progress", function () {
     var bufferedEnd = myAudio.buffered.end(myAudio.buffered.length - 1);
-    var duration =  myAudio.duration;
+    var duration = myAudio.duration;
     if (duration > 0) {
-      document.getElementById('buffered-amount').style.width = ((bufferedEnd / duration)*100) + "%";
+      document.getElementById("buffered-amount").style.width =
+        (bufferedEnd / duration) * 100 + "%";
     }
   });
 
-  myAudio.addEventListener('timeupdate', function() {
-    var duration =  myAudio.duration;
+  myAudio.addEventListener("timeupdate", function () {
+    var duration = myAudio.duration;
     if (duration > 0) {
-      document.getElementById('progress-amount').style.width = ((myAudio.currentTime / duration)*100) + "%";
+      document.getElementById("progress-amount").style.width =
+        (myAudio.currentTime / duration) * 100 + "%";
     }
   });
-}
+};
 ```
 
 The progress event is fired as data is downloaded, this is a good event to react to if we want to display download or buffering progress.

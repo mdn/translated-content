@@ -28,10 +28,7 @@ slug: Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
   "name": "webRequest-demo",
   "version": "1.0",
 
-  "permissions": [
-    "webRequest",
-    "<all_urls>"
-  ],
+  "permissions": ["webRequest", "<all_urls>"],
 
   "background": {
     "scripts": ["background.js"]
@@ -46,10 +43,9 @@ function logURL(requestDetails) {
   console.log(`Loading: ${requestDetails.url}`);
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  logURL,
-  {urls: ["<all_urls>"]}
-);
+browser.webRequest.onBeforeRequest.addListener(logURL, {
+  urls: ["<all_urls>"],
+});
 ```
 
 这里我们在请求开始之前用 {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} 调用 `logURL()`函数。`logURL()` 函数 抓取从事件对象发出的请求中的 URL，然后将其打印到浏览器的控制台窗口中。[参数](/zh-CN/Add-ons/WebExtensions/Match_patterns) `{urls: ["<all_urls>"]}` 表示拦截发往所有 URL 的 HTTP 请求。
@@ -64,7 +60,6 @@ browser.webRequest.onBeforeRequest.addListener(
 
 ```json
 {
-
   "description": "Demonstrating webRequests",
   "manifest_version": 2,
   "name": "webRequest-demo",
@@ -79,7 +74,6 @@ browser.webRequest.onBeforeRequest.addListener(
   "background": {
     "scripts": ["background.js"]
   }
-
 }
 ```
 
@@ -89,7 +83,8 @@ browser.webRequest.onBeforeRequest.addListener(
 
 ```js
 let pattern = "https://developer.mozilla.org/*";
-const targetUrl = "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
+const targetUrl =
+  "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension/frog.jpg";
 
 function redirect(requestDetails) {
   console.log(`Redirecting: ${requestDetails.url}`);
@@ -97,14 +92,14 @@ function redirect(requestDetails) {
     return;
   }
   return {
-    redirectUrl: targetUrl
+    redirectUrl: targetUrl,
   };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   redirect,
-  {urls:[pattern], types:["image"]},
-  ["blocking"]
+  { urls: [pattern], types: ["image"] },
+  ["blocking"],
 );
 ```
 
@@ -129,7 +124,8 @@ browser.webRequest.onBeforeRequest.addListener(
 ```js
 let targetPage = "http://useragentstring.com/*";
 
-let ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+let ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 function rewriteUserAgentHeader(e) {
   e.requestHeaders.forEach((header) => {
@@ -137,13 +133,13 @@ function rewriteUserAgentHeader(e) {
       header.value = ua;
     }
   });
-  return {requestHeaders: e.requestHeaders};
+  return { requestHeaders: e.requestHeaders };
 }
 
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
-  {urls: [targetPage]},
-  ["blocking", "requestHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "requestHeaders"],
 );
 ```
 

@@ -37,7 +37,7 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
   -webkit-appearance: none;
   appearance: none;
 
-/* for Internet Explorer */
+  /* for Internet Explorer */
   background: none;
 }
 ```

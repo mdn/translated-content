@@ -117,7 +117,11 @@ body {
   width: 100%;
   max-width: 68rem;
   margin: 0 auto;
-  font: 1.6rem/1.25 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:
+    1.6rem/1.25 "Helvetica Neue",
+    Helvetica,
+    Arial,
+    sans-serif;
   background-color: #f5f5f5;
   color: #4d4d4d;
   -moz-osx-font-smoothing: grayscale;
@@ -154,7 +158,7 @@ import "./assets/reset.css";
 
 ## 向单文件组件添加全局样式
 
-现在，我们已将 CSS 重置为在浏览器之间统一，需要对样式进行更多自定义。我们希望将某些样式应用于应用程序中的各个组件。虽然可以直接将这些文件添加到 `reset.css` 样式表中，但是我们将它们添加到 `App.vue`  文件的 `<style>` 标签中，以演示如何使用它们。
+现在，我们已将 CSS 重置为在浏览器之间统一，需要对样式进行更多自定义。我们希望将某些样式应用于应用程序中的各个组件。虽然可以直接将这些文件添加到 `reset.css` 样式表中，但是我们将它们添加到 `App.vue` 文件的 `<style>` 标签中，以演示如何使用它们。
 
 文件中已经存在一些样式。让我们删除它们，并用下面的样式替换它们。这些样式可以做一些事情——为按钮和输入添加一些样式，并自定义 `#app` 元素及其子元素。
 
@@ -247,7 +251,9 @@ import "./assets/reset.css";
     padding: 1rem;
     padding-top: 0;
     position: relative;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 2px 4px 0 rgba(0, 0, 0, 0.2),
+      0 2.5rem 5rem 0 rgba(0, 0, 0, 0.1);
   }
   @media screen and (min-width: 550px) {
     #app {

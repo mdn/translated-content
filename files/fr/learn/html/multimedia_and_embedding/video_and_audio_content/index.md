@@ -1,18 +1,7 @@
 ---
 title: Contenu audio et vidéo
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-tags:
-  - Article
-  - Audio
-  - Débutant
-  - Guide
-  - HTML
-  - Légendes
-  - Video
-  - pistes (audio ou texte)
-  - sous‑titres
 translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-original_slug: Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
@@ -269,7 +258,7 @@ En bonus, vous pouvez chercher des textes à intégrer et ajouter des légendes 
 
 Emballez, c'est pesé ! Nous espérons que vous avez pris plaisir avec ces pages vidéo et audio. Au chapitre suivant, nous découvrirons des manières différentes d'intégrer du contenu sur le Web en se servant de technologies comme {{htmlelement("iframe")}} et {{htmlelement("object")}}.
 
-## Consultez aussi :
+## Consultez aussi
 
 - {{htmlelement("audio")}}
 - {{htmlelement("video")}}

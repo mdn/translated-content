@@ -6,7 +6,7 @@ translation_of: Web/API/AudioContext/createMediaElementSource
 
 {{ APIRef("Web Audio API") }}
 
-La méthode `createMediaElementSource()` de l’interface {{ domxref("AudioContext") }} est utilisée pour créer un nouvel objet {{ domxref("MediaElementAudioSourceNode") }} d’après un élément HTML {{ htmlelement("audio") }} ou {{ htmlelement("video") }} existant, permettant ainsi de jouer et de manipuler l’audio de cet élément.
+La méthode `createMediaElementSource()` de l'interface {{ domxref("AudioContext") }} est utilisée pour créer un nouvel objet {{ domxref("MediaElementAudioSourceNode") }} d'après un élément HTML {{ htmlelement("audio") }} ou {{ htmlelement("video") }} existant, permettant ainsi de jouer et de manipuler l'audio de cet élément.
 
 Pour plus de détails à propos des nœuds source audio des éléments média, constultez la page de référence de {{ domxref("MediaElementAudioSourceNode") }}.
 
@@ -28,7 +28,7 @@ Un {{domxref("MediaElementAudioSourceNode")}}.
 
 ## Exemple
 
-Cet exemple simple crée une source depuis un élément {{ htmlelement("audio") }} grâce à `createMediaElementSource()`, puis passe le signal audio à travers un {{ domxref("GainNode") }} avant de l’injecter dans le {{ domxref("AudioDestinationNode") }} pour la lecture. Quand le pointeur de la souris est déplacé, la fonction `updatePage()` est invoquée, et calcule le gain actuel comme rapport de la position Y de la souris divisée par la hauteur totale de la fenêtre. Vous pouvez ainsi augmenter ou diminuer le volume de la musique jouée, en déplaçant le pointeur de la souris vers le haut ou vers le bas.
+Cet exemple simple crée une source depuis un élément {{ htmlelement("audio") }} grâce à `createMediaElementSource()`, puis passe le signal audio à travers un {{ domxref("GainNode") }} avant de l'injecter dans le {{ domxref("AudioDestinationNode") }} pour la lecture. Quand le pointeur de la souris est déplacé, la fonction `updatePage()` est invoquée, et calcule le gain actuel comme rapport de la position Y de la souris divisée par la hauteur totale de la fenêtre. Vous pouvez ainsi augmenter ou diminuer le volume de la musique jouée, en déplaçant le pointeur de la souris vers le haut ou vers le bas.
 
 > **Note :** Vous pouvez également [voir cet exemple en temps réel](http://mdn.github.io/webaudio-examples/media-source-buffer/), ou [examiner le code source](https://github.com/mdn/webaudio-examples/tree/master/media-source-buffer).
 
@@ -71,7 +71,7 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 ```
 
-> **Note :** Du fait de l’appel à `createMediaElementSource()`, la lecture de l’audio du {{ domxref("HTMLMediaElement") }} est redirigée dans le graphe de traitement de l’AudioContext. Ainsi, jouer / mettre en pause le média est toujours possible via l’API des éléments média ou via les contrôles du lecteur.
+> **Note :** Du fait de l'appel à `createMediaElementSource()`, la lecture de l'audio du {{ domxref("HTMLMediaElement") }} est redirigée dans le graphe de traitement de l'AudioContext. Ainsi, jouer / mettre en pause le média est toujours possible via l'API des éléments média ou via les contrôles du lecteur.
 
 ## Spécifications
 

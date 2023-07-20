@@ -112,7 +112,7 @@ If you want to see how to use the `Object.defineProperty` method with a _binary-
 
 ### 建立屬性
 
-When the property specified doesn't exist in the object, `Object.defineProperty()` creates a new property as described. Fields may be omitted from the descriptor, and default values for those fields are imputed. All of the Boolean-valued fields default to `false`. The `value`, `get`, and `set` fields default to {{jsxref("undefined")}}. A property which is defined without `get`/`set`/`value`/`writable` is called “generic” and is “typed” as a data descriptor.
+When the property specified doesn't exist in the object, `Object.defineProperty()` creates a new property as described. Fields may be omitted from the descriptor, and default values for those fields are imputed. All of the Boolean-valued fields default to `false`. The `value`, `get`, and `set` fields default to {{jsxref("undefined")}}. A property which is defined without `get`/`set`/`value`/`writable` is called 「generic」 and is 「typed」 as a data descriptor.
 
 ```js
 var o = {}; // Creates a new object
@@ -154,7 +154,7 @@ Object.defineProperty(o, "conflict", {
 
 ### 修改屬性
 
-如果該屬性已經存在, `Object.defineProperty()` 將會根據描述符內的值和物件當前的 configuration 來修改屬性。 如果舊的描述符之 `configurable` 的特徵為 false (屬性為 “non-configurable”), 那除了 `writable` 之外的特徵都將無法修改。 在這個情況，也不可能在 data 和 accessor 屬性類型中來回切換。
+如果該屬性已經存在, `Object.defineProperty()` 將會根據描述符內的值和物件當前的 configuration 來修改屬性。 如果舊的描述符之 `configurable` 的特徵為 false (屬性為 「non-configurable」), 那除了 `writable` 之外的特徵都將無法修改。 在這個情況，也不可能在 data 和 accessor 屬性類型中來回切換。
 
 如果有一個屬性是 non-configurable, 那它的 `writable` 特徵只能被改變為 `false`.
 
@@ -162,7 +162,7 @@ Object.defineProperty(o, "conflict", {
 
 #### Writable attribute
 
-當 `writable` 屬性特徵被設為 `false`, 此屬性為 “non-writable”. 它將無法被重新賦值。
+當 `writable` 屬性特徵被設為 `false`, 此屬性為 「non-writable」. 它將無法被重新賦值。
 
 ```js
 var o = {}; // Creates a new object

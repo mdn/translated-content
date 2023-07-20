@@ -68,7 +68,6 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
 
 ```html
 <math>
-
   <mi> y </mi>
 
   <mi> sin </mi>
@@ -76,7 +75,6 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
   <mi mathvariant="monospace"> x </mi>
 
   <mi mathvariant="bold"> &pi; </mi>
-
 </math>
 ```
 

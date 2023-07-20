@@ -368,5 +368,5 @@ Essas são as funcionalidades básicas da Web Animations API, a maioria delas j�
 ## Veja também
 
 - A [coleção completa de demos de Alice no País das Maravilhas](http://codepen.io/collection/bpEza/) no CodePen para você brincar, compartilhar e editar
-- [Animating like you just don’t care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) (em inglês) — Um ótimo artigo para se ler que explica mais sobre a Web Animations API por baixo dos panos, e por que ela tem uma performance melhor do que os outros métodos de animação web
+- [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) (em inglês) — Um ótimo artigo para se ler que explica mais sobre a Web Animations API por baixo dos panos, e por que ela tem uma performance melhor do que os outros métodos de animação web
 - [web-animations-js](https://github.com/web-animations/web-animations-js) — O polyfill da Web Animations API

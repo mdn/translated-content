@@ -1,17 +1,7 @@
 ---
 title: Déboguer de l'HTML
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
-tags:
-  - Codage
-  - Débutant
-  - Erreur
-  - Guide
-  - HTML
-  - Validation
-  - débogage
-  - validateur
 translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
-original_slug: Apprendre/HTML/Introduction_à_HTML/Debugging_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}

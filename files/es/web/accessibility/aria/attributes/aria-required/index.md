@@ -14,7 +14,7 @@ HTML5 ahora tiene el atributo `required`, pero aria-required todavía es útil p
 
 `true` o `false` (Default: `false`)
 
-### Posibles efectos en agentes de usuario y tecnología asistente.
+### Posibles efectos en agentes de usuario y tecnología asistente
 
 Los lectores de pantalla deben anunciar el campo como requerido.
 
@@ -27,16 +27,16 @@ Nota que este atributo no cambiará automáticamente la presentación del campo.
 #### Ejemplo 1: Un formulario sencillo
 
 ```html
- <form action="post">
-     <label for="firstName">First name:</label>
-     <input id="firstName" type="text" aria-required="true" />
-     <br/>
-     <label for="lastName">Last name:</label>
-     <input id="lastName" type="text" aria-required="true" />
-     <br/>
-     <label for="streetAddress">Street address:</label>
-     <input id="streetAddress" type="text" />
- </form>
+<form action="post">
+  <label for="firstName">First name:</label>
+  <input id="firstName" type="text" aria-required="true" />
+  <br />
+  <label for="lastName">Last name:</label>
+  <input id="lastName" type="text" aria-required="true" />
+  <br />
+  <label for="streetAddress">Street address:</label>
+  <input id="streetAddress" type="text" />
+</form>
 ```
 
 ### Notas

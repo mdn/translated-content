@@ -1,18 +1,6 @@
 ---
 title: Premiers pas en JavaScript
 slug: Learn/JavaScript/First_steps
-tags:
-  - Article
-  - Auto-évaluation
-  - Chaînes de caractères
-  - Débutant
-  - Guide
-  - JavaScript
-  - Module
-  - Nombres
-  - Opérateurs
-  - Tableaux
-  - Variables
 translation_of: Learn/JavaScript/First_steps
 ---
 

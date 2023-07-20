@@ -171,7 +171,7 @@ console.log(newInstance.name); //Polygon
 
 Здесь прототип **Square** класса изменён, но в то же время constructor предыдущего базового класса **Polygon** вызывается при создании нового экземпляра **Square**.
 
-### Constructors по умолчанию.
+### Constructors по умолчанию
 
 Если вы не определите метод constructor, будет использован constructor по умолчанию. Для базовых классов, constructor по умолчанию:
 

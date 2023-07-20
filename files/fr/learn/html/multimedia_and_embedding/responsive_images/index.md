@@ -2,7 +2,6 @@
 title: Images adaptatives
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
-original_slug: Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_à_une_page_web
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}

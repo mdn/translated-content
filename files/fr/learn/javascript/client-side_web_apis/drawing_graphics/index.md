@@ -2,7 +2,6 @@
 title: Dessiner des graphismes
 slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 translation_of: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
-original_slug: Apprendre/JavaScript/Client-side_web_APIs/Drawing_graphics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

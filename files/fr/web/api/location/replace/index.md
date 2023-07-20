@@ -32,7 +32,7 @@ object.replace(url);
 
 ```js
 // Navigue vers l'article Location.reload en remplaçant la page actuelle
-document.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+document.location.replace('https://developer.mozilla.org/fr/docs/Web/API/Location.reload');
 ```
 
 ## Spécifications

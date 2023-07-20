@@ -46,8 +46,8 @@ _还没有可用的资料。[Please, consider contributing](/zh-CN/docs/MDN/Gett
 
 ```
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
-https://developer.mozilla.org/en-US/search?q=URL
+https://developer.mozilla.org/zh-CN/docs/Learn/
+https://developer.mozilla.org/zh-CN/search?q=URL
 ```
 
 您可以将上面的这些网址输进您的浏览器地址栏来告诉浏览器加载相关联的页面（或资源）。
@@ -120,12 +120,12 @@ URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏�
   <tbody>
     <tr>
       <td>完整网址（与之前使用的网址相同）</td>
-      <td><pre>https://developer.mozilla.org/en-US/docs/Learn</pre></td>
+      <td><pre>https://developer.mozilla.org/zh-CN/docs/Learn</pre></td>
     </tr>
     <tr>
       <td>隐去协议</td>
       <td>
-        <pre>//developer.mozilla.org/en-US/docs/Learn</pre>
+        <pre>//developer.mozilla.org/zh-CN/docs/Learn</pre>
         <p>
           在这种情况下，浏览器将使用与用于加载该 URL 的文档相同的协议来调用该 URL。
         </p>
@@ -134,7 +134,7 @@ URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏�
     <tr>
       <td>隐去域名</td>
       <td>
-        <pre>/en-US/docs/Learn</pre>
+        <pre>/zh-CN/docs/Learn</pre>
         <p>
           这是 HTML 文档中绝对 URL 最常见的用例。浏览器将使用与用于加载托管该 URL 的文档相同的协议和相同的域名。<strong>注意</strong>：不可能省略该域名而不省略协议。
         </p>
@@ -145,7 +145,7 @@ URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏�
 
 #### 相对 URL 示例
 
-为了更好地了解以下示例，我们假设从位于以下 URL 的文档中调用 URL： `https://developer.mozilla.org/en-US/docs/Learn`
+为了更好地了解以下示例，我们假设从位于以下 URL 的文档中调用 URL： `https://developer.mozilla.org/zh-CN/docs/Learn`
 
 <table>
   <tbody>
@@ -153,7 +153,7 @@ URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏�
       <td>子资源</td>
       <td>
         <pre>Skills/Infrastructure/Understanding_URLs</pre>
-        <p>因为该 URL 不以 / 开头，浏览器将尝试在包含当前资源的子目录中查找文档。所以在这个例子中，我们真的想要达到这个 URL <code>https://developer.mozilla.org/en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs</code>
+        <p>因为该 URL 不以 / 开头，浏览器将尝试在包含当前资源的子目录中查找文档。所以在这个例子中，我们真的想要达到这个 URL <code>https://developer.mozilla.org/zh-CN/docs/Learn/Skills/Infrastructure/Understanding_URLs</code>
         </p>
       </td>
     </tr>
@@ -162,7 +162,7 @@ URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏�
       <td>
         <pre>../CSS/display</pre>
         <p>
-          在这种情况下，我们使用从 UNIX 文件系统世界继承的../写入约定来告诉我们要从一个目录上升的浏览器。在这里，我们要达到以下 URL：https://developer.mozilla.org/en-US/docs/Learn/../CSS/display，可以将其简化为：https://developer.mozilla.org/en-US/docs/CSS/display
+          在这种情况下，我们使用从 UNIX 文件系统世界继承的../写入约定来告诉我们要从一个目录上升的浏览器。在这里，我们要达到以下 URL：https://developer.mozilla.org/zh-CN/docs/Learn/../CSS/display，可以将其简化为：https://developer.mozilla.org/zh-CN/docs/CSS/display
         </p>
       </td>
     </tr>
@@ -171,7 +171,7 @@ URL 的必需部分在很大程度上取决于使用 URL 的上下文。在浏�
 
 ### 语义 URL
 
-尽管 URL 具有非常的技术性，但 URL 表示一个可读性的网站入口点。它们可以被记住，并且任何人都可以将它们输入浏览器的地址栏。人是 Web 的核心，因此建立所谓的 *[semantic URLs](http://en.wikipedia.org/wiki/Semantic_URL)* 被认为是最佳实践。语义 URL 使用具有固有含义的单词，任何人都可以理解，无论他们的技术水平如何。
+尽管 URL 具有非常的技术性，但 URL 表示一个可读性的网站入口点。它们可以被记住，并且任何人都可以将它们输入浏览器的地址栏。人是 Web 的核心，因此建立所谓的 _[semantic URLs](http://en.wikipedia.org/wiki/Semantic_URL)_ 被认为是最佳实践。语义 URL 使用具有固有含义的单词，任何人都可以理解，无论他们的技术水平如何。
 
 语言语义当然与电脑无关。您可能经常看到看起来像随机字符混搭的网址。但创建人类可读的 URL 有很多优点：
 

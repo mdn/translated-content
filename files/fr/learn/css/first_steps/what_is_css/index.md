@@ -2,7 +2,6 @@
 title: Qu'est-ce que CSS ?
 slug: Learn/CSS/First_steps/What_is_CSS
 translation_of: Learn/CSS/First_steps/What_is_CSS
-original_slug: Learn/CSS/First_steps/Qu_est_ce_que_CSS
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}

@@ -10,4 +10,4 @@ Par exemple, vous pouvez ajouter l'attribut `role="alert"` à un élément {{HTM
 
 ## Voir aussi
 
-- [ARIA](/fr/docs/Accessibilit%C3%A9/ARIA) sur MDN
+- [ARIA](/fr/docs/Accessibilité/ARIA) sur MDN

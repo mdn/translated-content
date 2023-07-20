@@ -17,9 +17,9 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
 
 ```js
 function update() {
-    game.physics.arcade.collide(ball, paddle);
-    game.physics.arcade.collide(ball, bricks, ballHitBrick);
-    paddle.x = game.input.x || game.world.width*0.5;
+  game.physics.arcade.collide(ball, paddle);
+  game.physics.arcade.collide(ball, bricks, ballHitBrick);
+  paddle.x = game.input.x || game.world.width * 0.5;
 }
 ```
 
@@ -27,7 +27,7 @@ function update() {
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
+  brick.kill();
 }
 ```
 
