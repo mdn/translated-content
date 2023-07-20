@@ -1,5 +1,5 @@
 ---
-title: ':-moz-focusring'
+title: ":-moz-focusring"
 slug: Web/CSS/:-moz-focusring
 ---
 

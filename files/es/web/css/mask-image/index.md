@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-image'
+title: "-webkit-mask-image"
 slug: Web/CSS/mask-image
 original_slug: Web/CSS/-webkit-mask-image
 ---
