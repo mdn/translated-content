@@ -96,15 +96,11 @@ La función `minmax()` puede ser usada dentro de:
 ```html
 <div id="container">
   <div>
-    Elemento tan ancho como el contenido,<br/>
+    Elemento tan ancho como el contenido,<br />
     pero de máximo 300 píxeles.
   </div>
-  <div>
-    Elemento con un ancho flexible, pero con un mínimo de 200 píxeles.
-  </div>
-  <div>
-    Elemento inflexible de 150 píxeles de ancho.
-  </div>
+  <div>Elemento con un ancho flexible, pero con un mínimo de 200 píxeles.</div>
+  <div>Elemento inflexible de 150 píxeles de ancho.</div>
 </div>
 ```
 
@@ -134,15 +130,8 @@ La función `minmax()` puede ser usada dentro de:
     1. [Conceptos básicos del diseño con rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
     2. [Relación a otros métodos de diseño](/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
     3. [Posicionamiento basado en líneas](
-/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
-    4. [Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
-    5. [Diseño usando lineas con nombre](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
-    6. [Posicionamiento automático en el diseño con rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-    7. [Alineamiento de cajas en el diseño con rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-    8. [Rejillas, valores lógicos y modos de escritura](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-    9. [CSS Grid Layout y la Accesibilidad](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-    10. [CSS Grid Layout y una Mejora Progresiva](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-    11. [Elaborando diseños comunes utilizando rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+
+    /es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid) 4. [Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas) 5. [Diseño usando lineas con nombre](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines) 6. [Posicionamiento automático en el diseño con rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout) 7. [Alineamiento de cajas en el diseño con rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout) 8. [Rejillas, valores lógicos y modos de escritura](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes) 9. [CSS Grid Layout y la Accesibilidad](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility) 10. [CSS Grid Layout y una Mejora Progresiva](/es/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) 11. [Elaborando diseños comunes utilizando rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
 
 5. **Propiedades**
 

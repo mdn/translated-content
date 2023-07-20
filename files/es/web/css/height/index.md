@@ -81,9 +81,8 @@ Asegúrese de que los elementos definidos con `height` no se truncan y/o no oscu
 <div id="taller">Yo tengo 50 píxeles.</div>
 <div id="shorter">Yo tengo 25 píxeles de altura.</div>
 <div id="parent">
-  <div id="child">
-    Yo tengo la mitad de altura de mi padre
-  </div>
+  <div id="child">Yo tengo la mitad de altura de mi padre</div>
+</div>
 ```
 
 #### CSS
@@ -127,9 +126,7 @@ div {
 
 ## Véase también
 
-- [El modelo de caja](
-  /es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
-  )
+- [El modelo de caja](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 - {{cssxref("width")}}
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-height")}}

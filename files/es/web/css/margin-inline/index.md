@@ -9,10 +9,10 @@ La propiedad de [CSS](/es/docs/Web/CSS) **`margin-inline`** define los márgenes
 
 ```css
 /* Valores <largo> */
-margin-inline: 10px 20px;  /* Un largo absoluto */
-margin-inline: 1em 2em;    /* relativo al tamaño del texto */
-margin-inline: 5% 2%;      /* relativo al ancho del container del bloque más cercano */
-margin-inline: 10px;       /* settear tanto el valor inicial como el final*/
+margin-inline: 10px 20px; /* Un largo absoluto */
+margin-inline: 1em 2em; /* relativo al tamaño del texto */
+margin-inline: 5% 2%; /* relativo al ancho del container del bloque más cercano */
+margin-inline: 10px; /* settear tanto el valor inicial como el final*/
 
 /* Valores keyword */
 margin-inline: auto;
