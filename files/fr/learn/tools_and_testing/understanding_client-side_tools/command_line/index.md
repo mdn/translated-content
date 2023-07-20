@@ -278,7 +278,7 @@ Occupons-nous maintenant de quelque chose d'un peu plus compliqué. Nous allons 
 
 En fait, cette URL est celle de l'ancien emplacement de la page. Lorsque vous l'entrez dans un nouvel onglet de votre navigateur, vous êtes (finalement) redirigé sur [https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch](/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch).
 
-Par conséquent, si vous utilisez curl pour faire une requête à `https://developer.mozilla.org/docs/Web/API/fetch`, vous n'aurez pas de résultat. Essayez :
+Par conséquent, si vous utilisez curl pour faire une requête à `https://developer.mozilla.org/fr/docs/Web/API/fetch`, vous n'aurez pas de résultat. Essayez :
 
 ```bash
 curl https://developer.mozilla.org/fr/docs/Web/API/fetch
@@ -291,7 +291,7 @@ Examinons également les en-têtes retournées par `developer.mozilla.org` en ut
 Essayez maintenant la ligne suivante, et vous allez constater qu'il y a en fait trois redirections avant d'atteindre la page finale :
 
 ```bash
-curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location
+curl https://developer.mozilla.org/fr/docs/Web/API/fetch -L -I | grep location
 ```
 
 Votre sortie devrait ressembler à ceci (`curl` va d'abord afficher des compteurs et autres informations de téléchargement) :
@@ -308,7 +308,7 @@ Bien que ce résultat soit artificiel, nous pourrions le pousser un peu plus loi
 Essayez de lancer cette commande :
 
 ```bash
-curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
+curl https://developer.mozilla.org/fr/docs/Web/API/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
 ```
 
 Votre sortie finale devrait ressembler à ceci :
