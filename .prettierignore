@@ -98,7 +98,6 @@ build/
 /files/pt-br/web/svg/**/*.md
 
 # ru
-/files/ru/glossary/**/*.md
 /files/ru/learn/**/*.md
 /files/ru/learn/css/**/*.md
 /files/ru/learn/html/**/*.md
