@@ -23,7 +23,7 @@ matchAll(regexp)
 
     如果 `regexp` 不是一个 `RegExp` 对象，并且没有 `Symbol.matchAll` 方法，它将通过 `new RegExp(regexp, 'g')` 被隐式转换为一个 {{jsxref("RegExp")}} 对象。
 
-    如果 `regexp` 是一个[正则表达式对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)，那么它必须设置了全局（`g`） 标志，否则会抛出一个 {{jsxref("TypeError")}} 异常。
+    如果 `regexp` 是一个[正则表达式对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)，那么它必须设置了全局（`g`）标志，否则会抛出一个 {{jsxref("TypeError")}} 异常。
 
 ### 返回值
 
@@ -32,7 +32,7 @@ matchAll(regexp)
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果 `regexp` 是一个[正则表达式对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)，且没有设置全局（`g`） 标志（其 [`flags`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) 属性不包含 `"g"`），则会抛出该异常。
+  - : 如果 `regexp` 是一个[正则表达式对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)，且没有设置全局（`g`）标志（其 [`flags`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) 属性不包含 `"g"`），则会抛出该异常。
 
 ## 描述
 
