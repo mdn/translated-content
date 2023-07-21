@@ -53,7 +53,7 @@ Dans l'exemple suivant, nous avons défini la couleur de notre titre en utilisan
 ```css
 h1 {
   color: black;
-  background-color: rgb(197,93,161);
+  background-color: rgb(197, 93, 161);
 }
 ```
 

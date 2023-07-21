@@ -33,7 +33,6 @@ build/
 /files/es/web/javascript/**/*.md
 
 # fr
-/files/fr/learn/css/**/*.md
 /files/fr/learn/html/**/*.md
 /files/fr/learn/javascript/**/*.md
 /files/fr/learn/server-side/**/*.md
