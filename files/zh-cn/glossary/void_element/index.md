@@ -5,7 +5,7 @@ slug: Glossary/Void_element
 
 {{GlossarySidebar}}
 
-**空元素**（empty element）是 HTML 中不能存在子节点（例如内嵌的元素或者文本节点）的{{Glossary("element", "元素")}}。空元素只有开始标签且不能指定结束标签。
+**空元素**（empty element）是 HTML 中**不能**存在子节点（例如内嵌的元素或者文本节点）的{{Glossary("element", "元素")}}。空元素只有开始标签且不能指定结束标签。
 
 在 HTML 中，空元素不能有结束标签。例如，`<input type="text"></input>` 是无效的 HTML。相反，不能有任何子节点的 SVG 或 MathML 元素可以使用结束标签来代替 XML 开始标签中的自闭合标签语法。
 
