@@ -1,13 +1,6 @@
 ---
 title: Document.preferredStyleSheetSet
 slug: Web/API/Document/preferredStyleSheetSet
-tags:
-  - API
-  - CSSOM
-  - Document
-  - Feuilles de style
-  - Propriétés
-  - Reference
 translation_of: Web/API/Document/preferredStyleSheetSet
 ---
 

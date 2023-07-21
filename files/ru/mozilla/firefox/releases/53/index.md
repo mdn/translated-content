@@ -3,6 +3,7 @@ title: Firefox 53 для разработчиков
 slug: Mozilla/Firefox/Releases/53
 translation_of: Mozilla/Firefox/Releases/53
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 53 был выпущен 19 апреля 2017. В этой статье перечислены основные изменения, которые полезны не только для веб-разработчиков, но и разработчиков Firefox и Gecko, а также разработчикам дополнений.

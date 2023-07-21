@@ -1,13 +1,6 @@
 ---
 title: 'Element : évènement mouseover'
 slug: Web/API/Element/mouseover_event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - Reference
-  - mouseover
 translation_of: Web/API/Element/mouseover_event
 ---
 

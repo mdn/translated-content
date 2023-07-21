@@ -126,7 +126,7 @@ console.log(str4); // retorna 'sobre nós'
 console.log(str5); // retorna <empty string>
 ```
 
-### Exemplo: Usando `slice()` com índices negativos.
+### Exemplo: Usando `slice()` com índices negativos
 
 O exemplo a seguir usa o _`slice()`_ com índices negativos.
 

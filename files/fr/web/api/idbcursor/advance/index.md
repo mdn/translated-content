@@ -1,11 +1,6 @@
 ---
 title: IDBCursor.advance()
 slug: Web/API/IDBCursor/advance
-tags:
-  - API
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBCursor/advance
 ---
 

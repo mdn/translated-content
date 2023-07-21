@@ -2,7 +2,6 @@
 title: Le modèle de grille et les autres modèles de disposition
 slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
 translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
-original_slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 ---
 
 {{CSSRef}}

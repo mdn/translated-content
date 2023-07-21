@@ -1,15 +1,6 @@
 ---
 title: Notification.timestamp
 slug: Web/API/Notification/timestamp
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - horodatage
-  - timeStamp
 translation_of: Web/API/Notification/timestamp
 ---
 

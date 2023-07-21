@@ -1,12 +1,6 @@
 ---
 title: AudioBufferSourceNode
 slug: Web/API/AudioBufferSourceNode
-tags:
-  - API
-  - Buffer
-  - Experimental
-  - Reference
-  - Web Audio API
 translation_of: Web/API/AudioBufferSourceNode
 ---
 

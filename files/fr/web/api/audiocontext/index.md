@@ -1,13 +1,6 @@
 ---
 title: AudioContext
 slug: Web/API/AudioContext
-tags:
-  - API
-  - Audio
-  - Buffer
-  - Experimental
-  - Reference
-  - Web Audio API
 translation_of: Web/API/AudioContext
 ---
 

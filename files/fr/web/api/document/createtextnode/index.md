@@ -1,11 +1,6 @@
 ---
 title: document.createTextNode
 slug: Web/API/Document/createTextNode
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Reference
 translation_of: Web/API/Document/createTextNode
 ---
 

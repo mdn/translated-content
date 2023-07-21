@@ -2,7 +2,6 @@
 title: '::target-text'
 slug: Web/CSS/::target-text
 translation_of: Web/CSS/::target-text
-browser-compat: css.selectors.target-text
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

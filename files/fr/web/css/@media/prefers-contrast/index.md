@@ -2,7 +2,6 @@
 title: prefers-contrast
 slug: Web/CSS/@media/prefers-contrast
 translation_of: Web/CSS/@media/prefers-contrast
-browser-compat: css.at-rules.media.prefers-contrast
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

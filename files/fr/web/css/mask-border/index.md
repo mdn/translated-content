@@ -2,7 +2,6 @@
 title: mask-border
 slug: Web/CSS/mask-border
 translation_of: Web/CSS/mask-border
-browser-compat: css.properties.mask-border
 ---
 
 {{cssref}}

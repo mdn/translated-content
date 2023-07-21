@@ -1,13 +1,7 @@
 ---
 title: Plus unaire (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Unary_plus
-browser-compat: javascript.operators.unary_plus
 ---
 
 {{jsSidebar("Operators")}}

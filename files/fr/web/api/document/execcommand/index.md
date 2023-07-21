@@ -1,12 +1,6 @@
 ---
 title: document.execCommand
 slug: Web/API/Document/execCommand
-tags:
-  - API
-  - DOM
-  - Method
-  - Méthodes
-  - Reference
 translation_of: Web/API/Document/execCommand
 ---
 

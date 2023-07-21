@@ -106,7 +106,7 @@ original_slug: Web/JavaScript/Language_Resources
       </td>
       <td>Junho 2004</td>
       <td>
-        <a href="/en-US/docs/E4X" title="E4X">ECMAScript for XML (E4X)</a
+        <a href="/pt-BR/docs/E4X" title="E4X">ECMAScript for XML (E4X)</a
         >.<br />Veja também a
         <a
           class="link-https"
@@ -125,7 +125,7 @@ original_slug: Web/JavaScript/Language_Resources
       </td>
       <td>Dezembro de 2005</td>
       <td>
-        <a href="/en-US/docs/E4X" title="E4X">ECMAScript para XML (E4X)</a>.
+        <a href="/pt-BR/docs/E4X" title="E4X">ECMAScript para XML (E4X)</a>.
       </td>
     </tr>
     <tr>

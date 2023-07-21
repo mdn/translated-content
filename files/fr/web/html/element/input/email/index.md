@@ -2,7 +2,6 @@
 title: <input type="email">
 slug: Web/HTML/Element/input/email
 translation_of: Web/HTML/Element/input/email
-browser-compat: html.elements.input.input-email
 ---
 
 {{HTMLSidebar}}

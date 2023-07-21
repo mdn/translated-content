@@ -1,14 +1,7 @@
 ---
 title: Atomics.xor()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/xor
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/xor
 ---
 
 {{JSRef}}

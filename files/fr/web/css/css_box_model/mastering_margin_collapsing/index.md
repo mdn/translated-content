@@ -1,11 +1,7 @@
 ---
 title: Fusion des marges
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
-tags:
-  - CSS
-  - Reference
 translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
-original_slug: Web/CSS/Modèle_de_boîte_CSS/Fusion_des_marges
 ---
 
 {{CSSRef}}Les marges [haute](/fr/docs/Web/CSS/margin-top) et [basse](/fr/docs/Web/CSS/margin-bottom) des blocs sont parfois fusionnées en une seule marge dont la taille est la plus grande des deux marges fusionnées. C'est ce qu'on appelle **la fusion des marges**.

@@ -1,14 +1,7 @@
 ---
 title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
-tags:
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/description
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/description
 ---
 
 {{JSRef}}

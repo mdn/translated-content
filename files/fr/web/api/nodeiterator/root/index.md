@@ -1,13 +1,6 @@
 ---
 title: NodeIterator.root
 slug: Web/API/NodeIterator/root
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Itérateur
-  - Noeuds
-  - Propriété
 translation_of: Web/API/NodeIterator/root
 ---
 

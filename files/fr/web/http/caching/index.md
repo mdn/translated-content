@@ -1,12 +1,7 @@
 ---
 title: Mise en cache HTTP
 slug: Web/HTTP/Caching
-tags:
-  - Guide
-  - HTTP
-  - Le cache
 translation_of: Web/HTTP/Caching
-original_slug: Web/HTTP/Cache
 ---
 
 {{HTTPSidebar}}
@@ -133,7 +128,7 @@ Quand on arrive au moment d'expiration d'un document en cache, il est soit valid
 
 ### ETags
 
-L'en-tête réponse {{HTTPHeader("ETag")}} est une valeur "*opaque-to-the-user agent"* qui peut être utilisée comme un validateur fort. Cela signifie que l'agent-utilisateur HTTP, comme un navigateur, par exemple, ne sait pas ce que cette chaîne représente et ne peut prévoir quelle pourrait être sa valeur. Si l'en-tête `ETag` est une partie de la réponse pour une ressource, le client peut délivrer un {{HTTPHeader("If-None-Match")}} dans l'en-tête des futures requêtes, dans le but de valider les ressources en cache.
+L'en-tête réponse {{HTTPHeader("ETag")}} est une valeur _"opaque-to-the-user agent"_ qui peut être utilisée comme un validateur fort. Cela signifie que l'agent-utilisateur HTTP, comme un navigateur, par exemple, ne sait pas ce que cette chaîne représente et ne peut prévoir quelle pourrait être sa valeur. Si l'en-tête `ETag` est une partie de la réponse pour une ressource, le client peut délivrer un {{HTTPHeader("If-None-Match")}} dans l'en-tête des futures requêtes, dans le but de valider les ressources en cache.
 
 L'en-tête de réponse {{HTTPHeader("Last-Modified")}} peut être utilisée comme un validateur faible. Il est dit "faible" car il a une précision à la seconde prés. Si l'en-tête `Last-Modified` est présente dans une réponse, alors le client peut délivrer une en-tête de requête {{HTTPHeader("If-Modified-Since")}} pour valider le document en cache.
 

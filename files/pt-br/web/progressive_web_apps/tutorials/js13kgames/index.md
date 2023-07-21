@@ -80,7 +80,7 @@ In this series of articles we will examine the source code of a super simple web
 
 You can find the online version at [mdn.github.io/pwa-examples/js13kpwa](https://mdn.github.io/pwa-examples/js13kpwa/) (also [see the source code](https://github.com/mdn/pwa-examples/tree/master/js13kpwa)), which we will be carefully explaining in the next few articles.
 
-Now, let's move to the second part of this series, where we’ll be looking at the structure of our example app.
+Now, let's move to the second part of this series, where we'll be looking at the structure of our example app.
 
 {{NextMenu("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive")}}
 

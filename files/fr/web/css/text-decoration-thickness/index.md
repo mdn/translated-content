@@ -1,10 +1,6 @@
 ---
 title: text-decoration-thickness
 slug: Web/CSS/text-decoration-thickness
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/text-decoration-thickness
 ---
 

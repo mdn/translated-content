@@ -1,13 +1,7 @@
 ---
 title: Addition (+)
 slug: Web/JavaScript/Reference/Operators/Addition
-tags:
-  - JavaScript
-  - Opérateur
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Addition
-original_slug: Web/JavaScript/Reference/Opérateurs/Addition
-browser-compat: javascript.operators.addition
 ---
 
 {{jsSidebar("Operators")}}

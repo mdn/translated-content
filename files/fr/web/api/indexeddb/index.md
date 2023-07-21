@@ -1,14 +1,7 @@
 ---
 title: indexedDB
 slug: Web/API/indexedDB
-tags:
-  - API
-  - IndexedDB
-  - Propriété
-  - Reference
-  - WindowOrWorkerGlobalScope
 translation_of: Web/API/indexedDB
-original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
 
 {{APIRef}}

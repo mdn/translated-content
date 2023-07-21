@@ -2,7 +2,6 @@
 title: Constructeur WeakSet()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/WeakSet
-browser-compat: javascript.builtins.WeakSet.WeakSet
 ---
 
 {{JSRef}}

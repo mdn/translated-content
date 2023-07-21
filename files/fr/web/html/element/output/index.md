@@ -1,12 +1,6 @@
 ---
 title: '<output> : l''élément de sortie'
 slug: Web/HTML/Element/output
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/output
 ---
 

@@ -1,13 +1,6 @@
 ---
 title: 'Attribut HTML : rel'
 slug: Web/HTML/Attributes/rel
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Link
-  - form
-  - rel
 translation_of: Web/HTML/Attributes/rel
 ---
 

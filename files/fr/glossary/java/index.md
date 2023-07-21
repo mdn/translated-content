@@ -10,4 +10,4 @@ Java est un langage de {{Glossary("OOP","programmation orientée objet")}} basé
 
 ### Culture générale
 
-- [Java](https://fr.wikipedia.org/wiki/Java_(langage)) sur Wikipédia
+- [Java](<https://fr.wikipedia.org/wiki/Java_(langage)>) sur Wikipédia

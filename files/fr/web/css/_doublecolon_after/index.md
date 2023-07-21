@@ -1,12 +1,6 @@
 ---
 title: '::after (:after)'
 slug: Web/CSS/::after
-tags:
-  - CSS
-  - Disposition
-  - Pseudo-element
-  - Reference
-  - Web
 translation_of: Web/CSS/::after
 ---
 

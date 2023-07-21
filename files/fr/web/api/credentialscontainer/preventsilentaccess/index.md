@@ -1,12 +1,6 @@
 ---
 title: CredentialsContainer.preventSilentAccess()
 slug: Web/API/CredentialsContainer/preventSilentAccess
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Méthode
-  - Reference
 translation_of: Web/API/CredentialsContainer/preventSilentAccess
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: FeaturePolicy.allowsFeature()
 slug: Web/API/FeaturePolicy/allowsFeature
-tags:
-  - API
-  - Feature Policy
-  - Feature-Policy
-  - Reference
 translation_of: Web/API/FeaturePolicy/allowsFeature
 ---
 

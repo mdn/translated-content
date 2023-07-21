@@ -6,6 +6,7 @@ tags:
   - Боковая панель
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 ---
+
 {{AddonSidebar}}
 
 Боковая панель - это панель, которая отображается в левой части окна браузера, рядом с веб-страницей. В браузере предусмотрен пользовательский интерфейс, который позволяет пользователю видеть доступные боковые панели и выбирать боковую панель для отображения. Например, Firefox имеет меню "Вид > Боковая панель". Одновременно может отображаться только одна боковая панель, и эта боковая панель будет отображаться для всех вкладок и всех окон браузера.
@@ -20,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 
 ```js
 // sidebar.js
-browser.windows.getCurrent({populate: true}).then((windowInfo) => {
+browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
   myWindowId = windowInfo.id;
 });
 ```

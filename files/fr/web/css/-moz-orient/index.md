@@ -1,11 +1,6 @@
 ---
 title: '-moz-orient'
 slug: Web/CSS/-moz-orient
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-moz-orient
 ---
 

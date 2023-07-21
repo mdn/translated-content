@@ -1,13 +1,6 @@
 ---
 title: En-têtes HTTP
 slug: Web/HTTP/Headers
-tags:
-  - En-têtes
-  - HTTP
-  - Headers
-  - Networking
-  - Overview
-  - Reference
 translation_of: Web/HTTP/Headers
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: Element.scrollIntoViewIfNeeded()
 slug: Web/API/Element/scrollIntoViewIfNeeded
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthodes
 translation_of: Web/API/Element/scrollIntoViewIfNeeded
 ---
 

@@ -1,13 +1,6 @@
 ---
 title: Document.mozSetImageElement()
 slug: Web/API/Document/mozSetImageElement
-tags:
-  - API
-  - Arrière-plan
-  - CSS
-  - DOM
-  - Image
-  - Méthodes
 translation_of: Web/API/Document/mozSetImageElement
 ---
 

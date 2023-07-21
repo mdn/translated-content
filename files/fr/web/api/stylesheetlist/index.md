@@ -1,11 +1,6 @@
 ---
 title: StyleSheetList
 slug: Web/API/StyleSheetList
-tags:
-  - API
-  - CSSDOM
-  - NeedsContent
-  - NeedsUpdate
 translation_of: Web/API/StyleSheetList
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 translation_of: Web/API/HTMLBodyElement
 ---
 

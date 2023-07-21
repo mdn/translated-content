@@ -1,13 +1,7 @@
 ---
 title: Number.NaN
 slug: Web/JavaScript/Reference/Global_Objects/Number/NaN
-tags:
-  - JavaScript
-  - Number
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/NaN
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/NaN
 ---
 
 {{JSRef}}

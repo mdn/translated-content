@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-meter-even-less-good-value'
 slug: Web/CSS/::-webkit-meter-even-less-good-value
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-meter-even-less-good-value
 ---
 

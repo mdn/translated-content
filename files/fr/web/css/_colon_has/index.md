@@ -1,12 +1,6 @@
 ---
 title: ':has'
 slug: Web/CSS/:has
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-classe
-  - Reference
-  - Sélecteur
 translation_of: Web/CSS/:has
 ---
 

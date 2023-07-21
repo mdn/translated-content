@@ -2,7 +2,6 @@
 title: Constructeur SyntaxError()
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError
 translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError/SyntaxError
-browser-compat: javascript.builtins.SyntaxError.SyntaxError
 ---
 
 {{JSRef}}

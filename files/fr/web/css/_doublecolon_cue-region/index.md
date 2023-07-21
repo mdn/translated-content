@@ -1,11 +1,6 @@
 ---
 title: '::cue-region'
 slug: Web/CSS/::cue-region
-tags:
-  - CSS
-  - Media
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::cue-region
 ---
 

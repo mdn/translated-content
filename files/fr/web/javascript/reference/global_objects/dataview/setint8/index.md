@@ -1,15 +1,7 @@
 ---
 title: DataView.prototype.setInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
-tags:
-  - DataView
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setInt8
 ---
 
 {{JSRef}}

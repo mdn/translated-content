@@ -1,13 +1,7 @@
 ---
 title: ':-webkit-autofill'
 slug: Web/CSS/:autofill
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:-webkit-autofill
-original_slug: Web/CSS/:-webkit-autofill
 ---
 
 {{CSSRef}}{{Non-standard_header}}

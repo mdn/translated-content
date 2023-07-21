@@ -1,12 +1,6 @@
 ---
 title: Document.alinkColor
 slug: Web/API/Document/alinkColor
-tags:
-  - API
-  - HTML DOM
-  - Obsolete
-  - Propriété
-  - Reference
 translation_of: Web/API/Document/alinkColor
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: TreeWalker.filter
 slug: Web/API/TreeWalker/filter
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Noeuds
-  - Propriétés
 translation_of: Web/API/TreeWalker/filter
 ---
 

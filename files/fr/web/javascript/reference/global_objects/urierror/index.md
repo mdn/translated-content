@@ -2,8 +2,6 @@
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
 translation_of: Web/JavaScript/Reference/Global_Objects/URIError
-original_slug: Web/JavaScript/Reference/Objets_globaux/URIError
-browser-compat: javascript.builtins.URIError
 ---
 
 {{JSRef}}

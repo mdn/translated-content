@@ -1,14 +1,7 @@
 ---
 title: Date.prototype.getHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getHours
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getHours
 ---
 
 {{JSRef}}

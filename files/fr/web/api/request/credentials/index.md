@@ -1,11 +1,6 @@
 ---
 title: Request.credentials
 slug: Web/API/Request/credentials
-tags:
-  - API
-  - Propriété
-  - Reference
-  - request
 translation_of: Web/API/Request/credentials
 ---
 

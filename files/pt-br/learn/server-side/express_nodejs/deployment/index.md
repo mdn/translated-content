@@ -13,7 +13,7 @@ Now you've created (and tested) an awesome [LocalLibrary](/pt-BR/docs/Learn/Serv
       <th scope="row">Pré-requisitos:</th>
       <td>
         Complete todos os tópicos anteriores do turotrial, inclusive o
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/forms"
+        <a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/forms"
           >Express Tutorial Part 6: Working with forms</a
         >.
       </td>

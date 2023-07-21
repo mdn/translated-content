@@ -2,8 +2,6 @@
 title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakSet
-browser-compat: javascript.builtins.WeakSet
 ---
 
 {{JSRef}}

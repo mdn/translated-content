@@ -2,7 +2,6 @@
 title: Element.lastElementChild
 slug: Web/API/Element/lastElementChild
 translation_of: Web/API/Element/lastElementChild
-browser-compat: api.Element.lastElementChild
 ---
 
 {{APIRef("DOM")}}

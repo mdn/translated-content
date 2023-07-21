@@ -1,12 +1,6 @@
 ---
 title: event.initEvent
 slug: Web/API/Event/initEvent
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Méthode
-  - Reference
 translation_of: Web/API/Event/initEvent
 ---
 

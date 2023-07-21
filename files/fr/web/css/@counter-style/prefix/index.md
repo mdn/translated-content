@@ -1,10 +1,6 @@
 ---
 title: prefix
 slug: Web/CSS/@counter-style/prefix
-tags:
-  - CSS
-  - Descripteur
-  - Reference
 translation_of: Web/CSS/@counter-style/prefix
 ---
 

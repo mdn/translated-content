@@ -1,12 +1,6 @@
 ---
 title: Element.insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
-tags:
-  - API
-  - DOM
-  - Element
-  - Insertion
-  - Méthodes
 translation_of: Web/API/Element/insertAdjacentElement
 ---
 

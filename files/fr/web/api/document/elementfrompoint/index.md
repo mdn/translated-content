@@ -3,8 +3,6 @@ title: Document.elementFromPoint()
 slug: Web/API/Document/elementFromPoint
 translation_of: Web/API/DocumentOrShadowRoot/elementFromPoint
 translation_of_original: Web/API/Document/elementFromPoint
-original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
-browser-compat: api.Document.elementFromPoint
 ---
 
 {{APIRef("DOM")}}

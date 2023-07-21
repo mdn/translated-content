@@ -1,12 +1,6 @@
 ---
 title: DOMPointReadOnly
 slug: Web/API/DOMPointReadOnly
-tags:
-  - API
-  - DOM
-  - Géométrie
-  - Interface
-  - Quadrilatère
 translation_of: Web/API/DOMPointReadOnly
 ---
 

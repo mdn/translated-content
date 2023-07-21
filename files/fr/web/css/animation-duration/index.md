@@ -1,10 +1,6 @@
 ---
 title: animation-duration
 slug: Web/CSS/animation-duration
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/animation-duration
 ---
 

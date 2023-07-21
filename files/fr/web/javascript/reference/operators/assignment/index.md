@@ -1,14 +1,7 @@
 ---
 title: Assignement (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
-tags:
-  - Fonctionnalités du language
-  - JavaScript
-  - Opérateur
-  - Opérateur d'assignement
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Assignment
-original_slug: Web/JavaScript/Reference/Opérateurs/Assignement
 ---
 
 {{jsSidebar("Operators")}}

@@ -1,13 +1,7 @@
 ---
 title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
-tags:
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/matchAll
 ---
 
 {{JSRef}}

@@ -1,12 +1,6 @@
 ---
 title: Event.type
 slug: Web/API/Event/type
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Propriétés
-  - Type
 translation_of: Web/API/Event/type
 ---
 

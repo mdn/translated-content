@@ -2,8 +2,6 @@
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
-original_slug: Web/JavaScript/Reference/Objets_globaux/Boolean
-browser-compat: javascript.builtins.Boolean
 ---
 
 {{JSRef}}

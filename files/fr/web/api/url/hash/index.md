@@ -1,12 +1,6 @@
 ---
 title: URL.hash
 slug: Web/API/URL/hash
-tags:
-  - API
-  - Hash
-  - Propriété
-  - Reference
-  - URL
 translation_of: Web/API/URL/hash
 ---
 

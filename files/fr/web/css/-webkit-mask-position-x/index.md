@@ -1,11 +1,6 @@
 ---
 title: '-webkit-mask-position-x'
 slug: Web/CSS/-webkit-mask-position-x
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-mask-position-x
 ---
 

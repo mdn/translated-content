@@ -1,15 +1,7 @@
 ---
 title: Présentation du côté serveur
 slug: Learn/Server-side/First_steps/Introduction
-tags:
-  - Apprendre
-  - Débutant
-  - Guide
-  - Intro
-  - Programmation côté serveur
-  - Serveur
 translation_of: Learn/Server-side/First_steps/Introduction
-original_slug: Learn/Server-side/Premiers_pas/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}

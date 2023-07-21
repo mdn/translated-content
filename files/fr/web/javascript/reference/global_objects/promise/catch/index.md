@@ -1,15 +1,7 @@
 ---
 title: Promise.prototype.catch()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/catch
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Promise
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/catch
 ---
 
 {{JSRef}}
