@@ -42,7 +42,7 @@ JavaScript 是一种脚本编程语言，它可以在网页上实现复杂的功
 
 ```css
 p {
-  font-family: sans-serif, '黑体';
+  font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
