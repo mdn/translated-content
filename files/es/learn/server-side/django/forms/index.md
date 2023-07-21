@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de Django Parte 9: Trabajo con formularios'
+title: "Tutorial de Django Parte 9: Trabajo con formularios"
 slug: Learn/Server-side/Django/Forms
 ---
 
@@ -89,17 +89,17 @@ Basado en el diagrama de anterior, las principales pasos que hace el proceso del
 
 1. Mostrar el formulario predeterminado la primera vez que es solicitado por el usuario.
 
-    - El formulario puede contener campos en blanco (por ejemplo, si está creando un registro nuevo), o puede estar rellenado previamente con valores iniciales (por ejemplo, si está modificando un registro o si tiene valores iniciales predeterminados útiles).
-    - El formulario se conoce como no vinculado en este punto porque no esta asociado con ningún dato ingresado por el usuario (aunque pueda tener valores iniciales).
+   - El formulario puede contener campos en blanco (por ejemplo, si está creando un registro nuevo), o puede estar rellenado previamente con valores iniciales (por ejemplo, si está modificando un registro o si tiene valores iniciales predeterminados útiles).
+   - El formulario se conoce como no vinculado en este punto porque no esta asociado con ningún dato ingresado por el usuario (aunque pueda tener valores iniciales).
 
 2. Recibir datos de una solicitud de envío y vincularlo al formulario.
 
-    - La vinculacion de datos al formulario significa que los datos ingresados por el usuario y cualquier error están disponibles cuando necesitamos volver a desplegar el formulario.
+   - La vinculacion de datos al formulario significa que los datos ingresados por el usuario y cualquier error están disponibles cuando necesitamos volver a desplegar el formulario.
 
 3. Limpiar y validar los datos. Clean and validate the data.
 
-    - La limpieza de los datos realiza una sanitización de la entrada (por ejemplo, remover caracteres no válidos que podrían ser usados para enviar contenido malicioso al servidor) y convertirlos en tipos consistente de Python.
-    - La validación verifica que los valores sean apropiados para el campo (por ejemplo, que esten en el rango correcto de fechas, no sean demasiado cortos ni demasiado largos, etc.)
+   - La limpieza de los datos realiza una sanitización de la entrada (por ejemplo, remover caracteres no válidos que podrían ser usados para enviar contenido malicioso al servidor) y convertirlos en tipos consistente de Python.
+   - La validación verifica que los valores sean apropiados para el campo (por ejemplo, que esten en el rango correcto de fechas, no sean demasiado cortos ni demasiado largos, etc.)
 
 4. Si algún dato es no válido, volver a mostrar el formulario, esta vez con cualquier valor rellenado por el usuario y los mensajes de error para los campos con problemas.
 5. Si todos los datos son válidos, realizar las acciones requeridas (por ejemplo, guardar los datos, enviar un correo electrónico, devolver el resultado de una búsqueda, cargar un archivo, etc)
