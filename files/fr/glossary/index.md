@@ -1,5 +1,5 @@
 ---
-title: 'Glossaire MDN : définitions des termes du Web'
+title: "Glossaire MDN : définitions des termes du Web"
 slug: Glossary
 translation_of: Glossary
 ---

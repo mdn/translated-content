@@ -1,13 +1,6 @@
 ---
 title: Event.cancelBubble
 slug: Web/API/Event/cancelBubble
-tags:
-  - API
-  - Annulation
-  - DOM
-  - Evènement
-  - Propagation
-  - Propriétés
 translation_of: Web/API/Event/cancelBubble
 ---
 

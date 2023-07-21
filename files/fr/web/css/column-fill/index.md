@@ -1,10 +1,6 @@
 ---
 title: column-fill
 slug: Web/CSS/column-fill
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/column-fill
 ---
 

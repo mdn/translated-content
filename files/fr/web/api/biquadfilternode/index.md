@@ -2,7 +2,6 @@
 title: BiquadFilterNode
 slug: Web/API/BiquadFilterNode
 translation_of: Web/API/BiquadFilterNode
-browser-compat: api.BiquadFilterNode
 ---
 
 {{APIRef("Web Audio API")}}

@@ -1,10 +1,6 @@
 ---
 title: border-top-left-radius
 slug: Web/CSS/border-top-left-radius
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border-top-left-radius
 ---
 

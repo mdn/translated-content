@@ -25,7 +25,7 @@ Les bibliothèques tierces sont un excellent moyen d'ajouter rapidement des fonc
 
 [En savoir plus sur la soumission du code source sur l'atelier d'extensions](https://extensionworkshop.com/documentation/publish/source-code-submission/)
 
-## L'accord de distribution des modules complémentaires de   Firefox
+## L'accord de distribution des modules complémentaires de Firefox
 
 Les extensions de navigateur doivent être signées pour être installées dans les réalisations ou versions bêta de Firefox. La signature a lieu dans addons.mozilla.org (AMO) et est soumise aux termes et conditions du contrat de distribution de Firefox Add-on. L'objectif de l'accord est de garantir que les utilisateurs de Firefox aient accès à des modules complémentaires de qualité et bien supportés qui améliorent l'expérience de Firefox.
 

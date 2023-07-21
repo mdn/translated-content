@@ -1,7 +1,6 @@
 ---
 title: background-position
 slug: Web/CSS/background-position
-browser-compat: css.properties.background-position
 translation_of: Web/CSS/background-position
 ---
 

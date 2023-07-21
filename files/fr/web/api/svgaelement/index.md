@@ -1,12 +1,6 @@
 ---
 title: SVGAElement
 slug: Web/API/SVGAElement
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
-  - WebAPI
 translation_of: Web/API/SVGAElement
 ---
 

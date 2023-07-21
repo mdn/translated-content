@@ -1,7 +1,6 @@
 ---
 title: filter
 slug: Web/CSS/filter
-browser-compat: css.properties.filter
 translation_of: Web/CSS/filter
 ---
 

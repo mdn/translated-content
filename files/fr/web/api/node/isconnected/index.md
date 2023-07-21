@@ -1,11 +1,6 @@
 ---
 title: Node.isConnected
 slug: Web/API/Node/isConnected
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
 translation_of: Web/API/Node/isConnected
 ---
 

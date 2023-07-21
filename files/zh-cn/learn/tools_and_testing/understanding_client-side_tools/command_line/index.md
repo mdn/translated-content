@@ -275,7 +275,7 @@ ls | wc -l
 因此，如果您使用 curl 请求 `https://developer.mozilla.org/docs/Web/API/fetch`，则不会得到输出。现在就试试：
 
 ```bash
-curl https://developer.mozilla.org/zh-CN/docs/Web/API/fetch
+curl https://developer.mozilla.org/docs/Web/API/fetch
 ```
 
 我们想精确的告诉 `curl` 遵循重定向使用`-L` 标签。

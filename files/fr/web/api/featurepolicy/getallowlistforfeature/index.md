@@ -1,11 +1,6 @@
 ---
 title: FeaturePolicy.getAllowlistForFeature()
 slug: Web/API/FeaturePolicy/getAllowlistForFeature
-tags:
-  - API
-  - Feature Policy
-  - Feature-Policy
-  - Reference
 translation_of: Web/API/FeaturePolicy/getAllowlistForFeature
 ---
 

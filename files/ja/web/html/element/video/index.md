@@ -1,6 +1,8 @@
 ---
-title: '<video>: 動画埋め込み要素'
+title: "<video>: 動画埋め込み要素"
 slug: Web/HTML/Element/video
+l10n:
+  sourceCommit: f751b1597b2406180ac9ea3cae03a19b9d18c7b0
 ---
 
 {{HTMLSidebar}}
@@ -27,26 +29,24 @@ slug: Web/HTML/Element/video
 
     一部のブラウザー (Chrome 70.0 など) では、 `muted` 属性がないと autoplay は動作しません。
 
-- `autopictureinpicture` {{experimental_inline}}
-  - : 論理属性で、 `true` であれば、ユーザーがこの文書と他の文書やアプリケーションとの間を行き来したときに、自動的にピクチャインピクチャモードに切り替わるようにすることを示します。
 - `controls`
   - : この属性が指定された場合、再生、音量、シーク、ポーズの各機能を制御するコントロールを表示します。
-- `controlslist` {{experimental_inline}}
+- `controlslist` {{experimental_inline}}{{non-standard_inline}}
 
-  - : [`controlslist`](https://wicg.github.io/controls-list/html-output/multipage/embedded-content.html#attr-media-controlslist) 属性が指定されていると、ブラウザー自身のコントロールのセットを表示する場合（例えば `controls` 属性が設定されている場合）、メディア要素に表示するコントロールを選択するのを補助します。
+  - : [`controlslist`](https://wicg.github.io/controls-list/explainer.html) 属性が指定されていると、ブラウザー自身のコントロールのセットを表示する場合（例えば `controls` 属性が設定されている場合）、`video` 要素に表示するコントロールを選択するのを補助します。
 
     指定できる値は `nodownload`, `nofullscreen`, `noremoteplayback` です。
 
-    [`disablepictureinpicture`](#attr-disablepictureinpicture) 属性を使用すると、ピクチャインピクチャモード（およびコントロール）を無効にすることができます。
+    [`disablepictureinpicture`](#disablepictureinpicture) 属性を使用すると、ピクチャインピクチャモード（およびコントロール）を無効にすることができます。
 
 - `crossorigin`
 
-  - : 列挙型の属性で、関連画像を取得する際に CORS を使用するかどうかを示します。 [CORS が有効なリソース](/ja/docs/Web/HTML/CORS_enabled_image)は、*汚染*されることなく {{HTMLElement("canvas")}} 要素で再利用することができます。許可される値は次の通りです。
+  - : [列挙型](/ja/docs/Glossary/Enumerated)の属性で、関連画像を取得する際に CORS を使用するかどうかを示します。 [CORS が有効なリソース](/ja/docs/Web/HTML/CORS_enabled_image)は、*汚染*されることなく {{HTMLElement("canvas")}} 要素で再利用することができます。許可される値は次の通りです。
 
     - `anonymous`
-      - : 資格情報なしでオリジン間リクエストを実行します。すなわち、 `Origin:` HTTP ヘッダーを送信する際に、 Cookie や X.509 証明書を送信したり、 HTTP ベーシック認証を行ったりしません。サーバーが元のサイトに資格情報を付与しない場合 (`Access-Control-Allow-Origin:` HTTP ヘッダーの設定なし)、画像が*汚染*され、その使用が制限されます。
+      - : 資格情報なしでオリジン間リクエストを実行します。すなわち、 `Origin:` HTTP ヘッダーを送信する際に、 Cookie や X.509 証明書を送信したり、 HTTP ベーシック認証を行ったりしません。サーバーが元のサイトに資格情報を付与しない場合 (`Access-Control-Allow-Origin:` HTTP ヘッダーの設定なし)、リソースが*汚染*され、その使用が制限されます。
     - `use-credentials`
-      - : 資格情報を使用してオリジン間リクエストを実行します。すなわち、 `Origin:` HTTP ヘッダーを送信する際に Cookie や資格情報を送信したり、 HTTP ベーシック認証を行ったりします。サーバーが元のサイトに（`Access-Control-Allow-Credentials:` HTTP ヘッダーを通して）資格情報を与えない場合、画像が*汚染*され、その使用が制限されます。
+      - : 資格情報を使用してオリジン間リクエストを実行します。すなわち、 `Origin:` HTTP ヘッダーを送信する際に Cookie や資格情報を送信したり、 HTTP ベーシック認証を行ったりします。サーバーが元のサイトに（`Access-Control-Allow-Credentials:` HTTP ヘッダーを通して）資格情報を与えない場合、リソースが*汚染*され、その使用が制限されます。
 
     この属性が存在しない場合、リソースは CORS なしのリクエストで（すなわち `Origin:` HTTP ヘッダーを送信せずに）取得され、 {{HTMLElement('canvas')}} 要素における汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワードに `anonymous` が指定されたものとして扱われます。追加の情報は [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)を参照してください。
 
@@ -153,6 +153,14 @@ slug: Web/HTML/Element/video
     </tr>
     <tr>
       <td>
+        {{domxref("HTMLMediaElement.error_event", 'error')}}
+      </td>
+      <td>
+        メディアデータの取得中にエラーが発生したか、リソースの型が対応していないメディア形式です。
+      </td>
+    </tr>
+    <tr>
+      <td>
         {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}}
       </td>
       <td>メディアの最初のフレームが読み込み終わった。</td>
@@ -250,10 +258,11 @@ slug: Web/HTML/Element/video
 
 ```html
 <video controls>
-  <source src="myVideo.webm" type="video/webm">
-  <source src="myVideo.mp4" type="video/mp4">
-  <p>このブラウザーは HTML5 video に対応していません。
-    代わりに<a href="myVideo.mp4">動画へのリンク</a>があります。</p>
+  <source src="myVideo.webm" type="video/webm" />
+  <source src="myVideo.mp4" type="video/mp4" />
+  <p>
+    このブラウザーは HTML の動画に対応していません。代わりに<a href="myVideo.mp4">動画へのリンク</a>があります。
+  </p>
 </video>
 ```
 
@@ -264,7 +273,7 @@ slug: Web/HTML/Element/video
 - `controls` 属性を指定しないと、 video はブラウザーの標準のコントロールを含めません。 JavaScript と {{domxref("HTMLMediaElement")}} を使用して、独自のコントロールを作成することもできます。詳しくは[クロスブラウザーの動画プレイヤーの作成](/ja/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/cross_browser_video_player)を参照してください。
 - 動画（および音声）コンテンツを詳細に制御できるよう、 `HTMLMediaElement` はたくさんの種類の[イベント](/ja/docs/Web/API/HTMLMediaElement#events)を発行します。これらのイベントは、制御を可能にするだけでなく、メディアのダウンロードと再生の両方の進行状況や再生状態、再生位置を監視することができます。
 - {{cssxref("object-position")}} プロパティを用いて、要素の枠内での動画の位置を調整することができ、 {{cssxref("object-fit")}} プロパティを用いて動画の寸法がどのように枠内に合わせられるかを制御することができます。
-- 動画と同時に字幕を表示するには、 JavaScript と共に {{htmlelement("track")}} 要素と [WebVTT](/ja/docs/Web/API/WebVTT_API) を使用します。詳しくは、 [HTML5 動画への字幕の追加](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。
+- 動画と同時に字幕を表示するには、 JavaScript と共に {{htmlelement("track")}} 要素と [WebVTT](/ja/docs/Web/API/WebVTT_API) を使用します。詳しくは、 [HTML 動画への字幕の追加](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。
 - `<video>` 要素を使って音声ファイルを再生することができます。例えば [WebVTT](/ja/docs/Web/API/WebVTT_API) の代替表記を伴う音声を再生したい場合などに、 {{HTMLElement("audio")}} 要素は WebVTT を使った字幕を許可していないため便利です。
 - 要素に対応しているブラウザーで代替コンテンツをテストするには、 `<video>` を `<notavideo>` のような実在しないタグに置き換えてください。
 
@@ -290,13 +299,13 @@ HTML の `<video>` の使用について一般的な良い情報源として、[
 例えば、次のようなコードで `<video>` 要素で音声トラックが追加されたり削除されたりしたときを検出することができます。
 
 ```js
-var elem = document.querySelector("video");
+const elem = document.querySelector("video");
 
-elem.audioTracks.onaddtrack = function(event) {
+elem.audioTracks.onaddtrack = (event) => {
   trackEditor.addTrack(event.track);
 };
 
-elem.audioTracks.onremovetrack = function(event) {
+elem.audioTracks.onremovetrack = (event) => {
   trackEditor.removeTrack(event.track);
 };
 ```
@@ -317,7 +326,7 @@ AddType video/ogg .ogv
 AddType video/ogg .ogg
 ```
 
-WebM 形式で動画を提供する場合、 Apache Web Server では "/etc/apache" の "mime.types" ファイルまたは `httpd.conf` の "AddType" ディレクティブで動画ファイルの拡張子 (一般的には ".webm") を MIME type "video/webm" に追加することで問題が解決します。
+WebM 形式で動画を提供する場合、Apache Web Server では "/etc/apache" の "mime.types" ファイルまたは `httpd.conf` の "AddType" ディレクティブで動画ファイルの拡張子（一般的には ".webm"）を MIME type "video/webm" に追加することで問題が解決します。
 
 ```
 AddType video/webm .webm
@@ -337,15 +346,12 @@ AddType video/webm .webm
 <!-- Simple video example -->
 <!-- 'Big Buck Bunny' licensed under CC 3.0 by the Blender foundation. Hosted by archive.org -->
 <!-- Poster from peach.blender.org -->
-<video controls
-    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-    poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-    width="620">
-
-すみませんが、このブラウザーは埋め込み動画に対応していません。
-しかし、<a href="https://archive.org/details/BigBuckBunny_124">ダウンロード</a>
-してお好きな動画プレイヤーで見ることはできます。
-
+<video
+  controls
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+  width="620">
+  恐れ入りますが、このブラウザーは埋め込み動画に対応していません。しかし、<a href="https://archive.org/details/BigBuckBunny_124">ダウンロード</a>してお好きな動画プレイヤーで見ることはできます。
 </video>
 ```
 
@@ -365,19 +371,21 @@ AddType video/webm .webm
 <!-- Using multiple sources as fallbacks for a video tag -->
 <!-- 'Elephants Dream' by Orange Open Movie Project Studio, licensed under CC-3.0, hosted by archive.org -->
 <!-- Poster hosted by Wikimedia -->
-<video width="620" controls
-  poster="https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg" >
+<video
+  width="620"
+  controls
+  poster="https://upload.wikimedia.org/wikipedia/commons/e/e8/Elephants_Dream_s5_both.jpg">
   <source
     src="https://archive.org/download/ElephantsDream/ed_hd.ogv"
-    type="video/ogg">
+    type="video/ogg" />
   <source
     src="https://archive.org/download/ElephantsDream/ed_hd.avi"
-    type="video/avi">
+    type="video/avi" />
   <source
     src="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4"
-    type="video/mp4">
+    type="video/mp4" />
 
-  お使いのブラウザーは HTML5 の video タグに対応していません。
+  恐れ入りますが、このブラウザーは埋め込み動画に対応していません。しかし、<a href="https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4">MP4 をダウンロード</a>してお好きな動画プレイヤーで見ることはできます。
 </video>
 ```
 
@@ -385,13 +393,13 @@ AddType video/webm .webm
 
 {{EmbedLiveSample('Multiple sources', '', '400')}}
 
-はじめに [WebM](/ja/docs/Web/Media/Formats/Containers#webm) を試します。再生できない場合は、 [MP4](/ja/docs/Web/Media/Formats/Containers#mp4) を試します。最後に [Ogg](/ja/docs/Web/Media/Formats/Containers#ogg) を試します。 video 要素に対応していない場合は代替メッセージを表示しますが、すべてのソースに失敗した場合は表示しません。
+はじめに [Ogg](/ja/docs/Web/Media/Formats/Containers#ogg) を試します。再生できない場合は、 [MP4](/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4) を試します。video 要素に対応していない場合は代替メッセージを表示しますが、すべてのソースに失敗した場合は表示しません。
 
 メディアファイル形式によっては、ファイル形式文字列の一部として [`codecs`](/ja/docs/Web/Media/Formats/codecs_parameter) 引数を使用して、より具体的な情報を提供することができます。比較的簡単な例は `video/webm; codecs="vp8, vorbis"` であり、 [WebM](/ja/docs/Web/Media/Formats/Containers#webm) 映像であり、動画に [VP8](/ja/docs/Web/Media/Formats/Video_codecs#vp8)、音声に [Vorbis](/ja/docs/Web/Media/Formats/Audio_codecs#vorbis) を使用していることを示しています。
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
+## アクセシビリティの考慮
 
-動画には、実際にコンテンツを説明する字幕と文字化情報 (transcript) を提供するべきです (実装方法について詳しくは [HTML5 動画への字幕の追加](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) を参照してください) 。字幕によって、聴力を失った人が動画の再生時に音声の内容を理解する事ができるようになるのに対し、文字化情報を使用すると、音声コンテンツを理解するのに時間が掛かる人が、自分に合ったペースと書式で内容を確認できるようになります。
+動画には、実際にコンテンツを説明する字幕と文字化情報 (transcript) を提供するべきです（実装方法について詳しくは [HTML 動画への字幕の追加](/ja/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) を参照してください）。字幕によって、聴力を失った人が動画の再生時に音声の内容を理解する事ができるようになるのに対し、文字化情報を使用すると、音声コンテンツを理解するのに時間が掛かる人が、自分に合ったペースと書式で内容を確認できるようになります。
 
 注目すべき点は、音声のみのメディアにキャプションを付けることはできますが、キャプションを表示するために要素の video 領域が使用されるため、 {{HTMLElement("video")}} 要素で音声を再生しないとキャプションを付けることができないということです。これは、 video 要素で音声を再生するのに便利な特別なシナリオの 1 つです。
 
@@ -421,7 +429,7 @@ AddType video/webm .webm
 
 - [Web Video Text Tracks Format (WebVTT)](/ja/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
-- [MDN WCAG を理解する ― ガイドライン 1.2 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.2_—_providing_text_alternatives_for_time-based_media)
+- [MDN WCAG を理解する ― ガイドライン 1.2 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.2_—_タイムベースト・メディアのための代替テキストの提供)
 - [Understanding Success Criterion 1.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-av-only-alt.html)
 - [Understanding Success Criterion 1.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-captions.html)
 
@@ -431,10 +439,10 @@ AddType video/webm .webm
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >, 記述コンテンツ, 埋め込みコンテンツ。 <a href="/ja/docs/Web/HTML/Element/video#controls"><code>controls</code></a> 属性を持つ場合は、対話的コンテンツおよび知覚可能コンテンツ。
       </td>
@@ -468,7 +476,7 @@ AddType video/webm .webm
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td><code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>
@@ -495,6 +503,6 @@ AddType video/webm .webm
 
 - フレーム内における画像の位置と寸法の設定: {{cssxref("object-position")}} および {{cssxref("object-fit")}}
 - {{htmlelement("audio")}}
-- [HTML5 での動画や音声の使用](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [HTML での動画や音声の使用](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [canvas を用いた動画の操作](/ja/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Ogg メディアのサーバーの構成](/ja/docs/Web/HTTP/Configuring_servers_for_Ogg_media)

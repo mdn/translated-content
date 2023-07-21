@@ -1,12 +1,6 @@
 ---
 title: scroll-margin-block
 slug: Web/CSS/scroll-margin-block
-tags:
-  - CSS
-  - Propriété
-  - Propriété logique
-  - Propriété raccourcie
-  - Reference
 translation_of: Web/CSS/scroll-margin-block
 ---
 

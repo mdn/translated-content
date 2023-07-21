@@ -1,15 +1,7 @@
 ---
 title: DataView.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
-tags:
-  - DataView
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/byteLength
 ---
 
 {{JSRef}}

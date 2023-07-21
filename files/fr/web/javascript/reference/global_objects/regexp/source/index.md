@@ -1,14 +1,7 @@
 ---
 title: RegExp.prototype.source
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/source
-tags:
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/source
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/source
 ---
 
 {{JSRef}}

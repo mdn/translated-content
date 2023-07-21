@@ -1,11 +1,6 @@
 ---
 title: AudioParam
 slug: Web/API/AudioParam
-tags:
-  - API
-  - Experimental
-  - Reference
-  - Web Audio API
 translation_of: Web/API/AudioParam
 ---
 

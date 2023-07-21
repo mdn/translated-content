@@ -2,7 +2,6 @@
 title: '<frame>'
 slug: Web/HTML/Element/frame
 translation_of: Web/HTML/Element/frame
-browser-compat: html.elements.frame
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}

@@ -1,12 +1,7 @@
 ---
 title: 'SyntaxError: identifier starts immediately after numeric literal'
 slug: Web/JavaScript/Reference/Errors/Identifier_after_number
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Identifier_after_number
-original_slug: Web/JavaScript/Reference/Erreurs/Identifier_after_number
 ---
 
 {{JSSidebar("Errors")}}

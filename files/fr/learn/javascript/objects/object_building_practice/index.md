@@ -1,17 +1,7 @@
 ---
 title: La construction d'objet en pratique
 slug: Learn/JavaScript/Objects/Object_building_practice
-tags:
-  - Apprendre
-  - Article
-  - Canvas
-  - Débutant
-  - JavaScript
-  - Manuel
-  - Objets
-  - Tutoriel
 translation_of: Learn/JavaScript/Objects/Object_building_practice
-original_slug: Learn/JavaScript/Objects/la_construction_d_objet_en_pratique
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}

@@ -1,12 +1,6 @@
 ---
 title: DOMRectReadOnly()
 slug: Web/API/DOMRectReadOnly/DOMRectReadOnly
-tags:
-  - API
-  - Constructeurs
-  - DOM
-  - Géométrie
-  - Rectangle
 translation_of: Web/API/DOMRectReadOnly/DOMRectReadOnly
 ---
 

@@ -1,13 +1,6 @@
 ---
 title: DocumentFragment()
 slug: Web/API/DocumentFragment/DocumentFragment
-tags:
-  - API
-  - Constructeur
-  - DOM
-  - Document
-  - Elements
-  - Fragments
 translation_of: Web/API/DocumentFragment/DocumentFragment
 ---
 

@@ -2,7 +2,6 @@
 title: padding-inline-start
 slug: Web/CSS/padding-inline-start
 translation_of: Web/CSS/padding-inline-start
-browser-compat: css.properties.padding-inline-start
 ---
 
 {{CSSRef}}

@@ -1,12 +1,6 @@
 ---
 title: Event.cancelable
 slug: Web/API/Event/cancelable
-tags:
-  - API
-  - Annulable
-  - DOM
-  - Propriétés
-  - évènements
 translation_of: Web/API/Event/cancelable
 ---
 

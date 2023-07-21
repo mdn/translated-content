@@ -1,11 +1,6 @@
 ---
 title: <hkern>
 slug: Web/SVG/Element/hkern
-tags:
-  - Element
-  - Police SVG
-  - Reference
-  - SVG
 translation_of: Web/SVG/Element/hkern
 ---
 

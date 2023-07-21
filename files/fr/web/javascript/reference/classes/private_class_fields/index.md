@@ -1,10 +1,6 @@
 ---
 title: Variables de classe privés
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
-tags:
-  - Classe
-  - Fonctionnalité du langage
-  - JavaScript
 translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
 

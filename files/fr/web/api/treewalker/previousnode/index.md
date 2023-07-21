@@ -1,12 +1,6 @@
 ---
 title: TreeWalker.previousNode()
 slug: Web/API/TreeWalker/previousNode
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/TreeWalker/previousNode
 ---
 

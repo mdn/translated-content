@@ -1,12 +1,6 @@
 ---
 title: Node.getRootNode()
 slug: Web/API/Node/getRootNode
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Noeuds
-  - Racine
 translation_of: Web/API/Node/getRootNode
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: place-items
 slug: Web/CSS/place-items
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
 translation_of: Web/CSS/place-items
 ---
 

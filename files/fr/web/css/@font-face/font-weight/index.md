@@ -1,11 +1,6 @@
 ---
 title: font-weight
 slug: Web/CSS/@font-face/font-weight
-tags:
-  - '@font-face'
-  - CSS
-  - Descripteur
-  - Reference
 translation_of: Web/CSS/@font-face/font-weight
 ---
 

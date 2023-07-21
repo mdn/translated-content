@@ -1,18 +1,7 @@
 ---
 title: Contenu audio et vidéo
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-tags:
-  - Article
-  - Audio
-  - Débutant
-  - Guide
-  - HTML
-  - Légendes
-  - Video
-  - pistes (audio ou texte)
-  - sous‑titres
 translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-original_slug: Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
@@ -67,7 +56,10 @@ L'élément {{htmlelement("video")}} vous permet d'intégrer de la vidéo très 
 
 ```html
 <video src="rabbit320.webm" controls>
-  <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place, un <a href="rabbit320.webm">lien sur la vidéo</a>.</p>
+  <p>
+    Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place,
+    un <a href="rabbit320.webm">lien sur la vidéo</a>.
+  </p>
 </video>
 ```
 
@@ -105,16 +97,17 @@ Un lecteur audio peut jouer directement une piste audio, par ex. un fichier MP3 
 Les formats ci-dessus ont été créés pour compresser la vidéo et l'audio dans des fichiers gérables (les fichiers vidéo et audio bruts sont très volumineux). Les navigateurs contiennent différents {{Glossary("Codec","Codecs")}}, comme Vorbis ou H.264, utilisés pour convertir le son et la vidéo compressés en binaire et inversement. Comme indiqué ci-dessus, les navigateurs ne supportent malheureusement pas tous les mêmes codecs, vous devrez donc fournir plusieurs fichiers pour chaque production de média. S'il vous manque le bon codec pour décoder le média, il ne pourra pas être lu.
 
 > **Note :** Vous êtes peut-être surpris de l'existence d'une telle situation. Les formats **MP3** (pour l'audio) et **MP4/H.264** (pour la vidéo) sont tous deux largement pris en charge et de bonne qualité. Cependant, ils sont également grevés de brevets — les brevets américains couvrent le MP3 jusqu'en 2017 au moins et le H.264 jusqu'en 2027 au plus tôt, ce qui signifie que les navigateurs ne détenant pas de licence doivent payer d'énormes sommes d'argent pour pouvoir utiliser ces formats. En outre, beaucoup de personnes évitent, par principe, les logiciels propriétaires et leur préférent des formats ouverts. C'est pourquoi nous devons fournir plusieurs formats pour une prise en charge par différents navigateurs.
->
->
 
 Alors, comment faire ? Jetez un coup d'œil à l'exemple qui suit, [mis à jour](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html), ([essayez-le directement ici](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html) aussi) :
 
 ```html
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place, un <a href="rabbit320.mp4">lien sur la vidéo</a>.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place,
+    un <a href="rabbit320.mp4">lien sur la vidéo</a>.
+  </p>
 </video>
 ```
 
@@ -129,12 +122,20 @@ Chaque élément \<source> possède également un attribut de type. C'est facult
 Il y a possibilité d'inclure d'autres fonctionnalités dans une vidéo HTML5. Regardez notre troisième exemple&nbsp;:
 
 ```html
-<video controls width="400" height="400"
-       autoplay loop muted
-       poster="poster.png">
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place, un <a href="rabbit320.mp4">lien à la vidéo</a>.</p>
+<video
+  controls
+  width="400"
+  height="400"
+  autoplay
+  loop
+  muted
+  poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Votre navigateur ne prend pas en charge les vidéos HTML5. Voici, à la place,
+    un <a href="rabbit320.mp4">lien à la vidéo</a>.
+  </p>
 </video>
 ```
 
@@ -170,9 +171,12 @@ L'élément {{htmlelement("audio")}} fonctionne exactement de la même manière 
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
-  <p>Votre navigateur ne prend pas en charge l'audio HTML5. Voici, à la place, un <a href="viper.mp3">lien sur l'audio</a>.</p>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Votre navigateur ne prend pas en charge l'audio HTML5. Voici, à la place, un
+    <a href="viper.mp3">lien sur l'audio</a>.
+  </p>
 </audio>
 ```
 
@@ -235,9 +239,9 @@ Voici un exemple&nbsp;:
 
 ```html
 <video controls>
-    <source src="example.mp4" type="video/mp4">
-    <source src="example.webm" type="video/webm">
-    <track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
 </video>
 ```
 

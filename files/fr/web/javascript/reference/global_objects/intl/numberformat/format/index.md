@@ -1,17 +1,7 @@
 ---
 title: Intl.NumberFormat.prototype.format
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - NumberFormat
-  - Propriété
-  - Prototype
-  - Reference
-  - i18n
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat/format
 ---
 
 {{JSRef}}

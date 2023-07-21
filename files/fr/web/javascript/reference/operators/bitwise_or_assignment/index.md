@@ -1,13 +1,6 @@
 ---
 title: Affectation après OU binaire (|=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.bitwise_or_assignment
 ---
 
 {{jsSidebar("Operators")}}

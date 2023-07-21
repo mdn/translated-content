@@ -1,9 +1,7 @@
 ---
 title: Window.requestAnimationFrame()
 slug: Web/API/window/requestAnimationFrame
-page-type: web-api-instance-method
 translation_of: Web/API/window/requestAnimationFrame
-browser-compat: api.Window.requestAnimationFrame
 ---
 
 {{APIRef}}

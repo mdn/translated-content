@@ -1,12 +1,6 @@
 ---
 title: NodeList
 slug: Web/API/NodeList
-tags:
-  - API
-  - DOM
-  - Interface
-  - Liste
-  - Noeuds
 translation_of: Web/API/NodeList
 ---
 

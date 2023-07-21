@@ -15,10 +15,10 @@ Com a maior parte da teoria essencial tratada no artigo anterior, este artigo fo
       <td>
         Alfabetização básica em informática, um entendimento básico de HTML e
         CSS,
-        <a href="/en-US/docs/Learn/JavaScript/First_steps"
+        <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
           >Primeiros passos do JavaScript</a
         >,
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions"
+        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions"
           >Funções — blocos reutilizáveis de código</a
         >.
       </td>

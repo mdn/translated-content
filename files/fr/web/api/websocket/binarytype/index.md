@@ -1,7 +1,6 @@
 ---
 title: WebSocket.binaryType
 slug: Web/API/WebSocket/binaryType
-browser-compat: api.WebSocket.binaryType
 ---
 
 {{APIRef("Web Sockets API")}}

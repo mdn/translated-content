@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-search-cancel-button'
 slug: Web/CSS/::-webkit-search-cancel-button
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-search-cancel-button
 ---
 

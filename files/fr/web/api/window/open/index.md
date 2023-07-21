@@ -2,7 +2,6 @@
 title: Window.open()
 slug: Web/API/Window/open
 translation_of: Web/API/Window/open
-browser-compat: api.Window.open
 ---
 
 {{APIRef}}

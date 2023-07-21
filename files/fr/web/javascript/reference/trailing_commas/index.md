@@ -1,14 +1,7 @@
 ---
 title: Virgules finales (trailing commas)
 slug: Web/JavaScript/Reference/Trailing_commas
-tags:
-  - ECMAScript2017
-  - ECMAScript5
-  - JavaScript
-  - Syntaxe
-  - Virgule
 translation_of: Web/JavaScript/Reference/Trailing_commas
-original_slug: Web/JavaScript/Reference/Virgules_finales
 ---
 
 {{JsSidebar("More")}}

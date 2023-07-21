@@ -1,15 +1,7 @@
 ---
 title: Intl.PluralRules.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - PluralRules
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/supportedLocalesOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules/supportedLocalesOf
 ---
 
 {{JSRef}}

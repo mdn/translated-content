@@ -1,14 +1,6 @@
 ---
 title: Console.trace()
 slug: Web/API/console/trace
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthode
-  - console
-  - débogage
-  - trace
 translation_of: Web/API/Console/trace
 ---
 

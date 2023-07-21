@@ -1,10 +1,6 @@
 ---
 title: left
 slug: Web/CSS/left
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/left
 ---
 

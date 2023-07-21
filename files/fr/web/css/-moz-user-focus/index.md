@@ -1,11 +1,6 @@
 ---
 title: '-moz-user-focus'
 slug: Web/CSS/-moz-user-focus
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-moz-user-focus
 ---
 

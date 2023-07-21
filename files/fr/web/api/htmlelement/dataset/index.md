@@ -2,7 +2,6 @@
 title: HTMLElement.dataset
 slug: Web/API/HTMLElement/dataset
 translation_of: Web/API/HTMLElement/dataset
-browser-compat: api.HTMLElement.dataset
 ---
 
 {{APIRef("HTML DOM")}}

@@ -1,12 +1,6 @@
 ---
 title: Window.locationbar
 slug: Web/API/Window/locationbar
-tags:
-  - API
-  - HTML DOM
-  - Propriété
-  - Reference
-  - Window
 translation_of: Web/API/Window/locationbar
 ---
 

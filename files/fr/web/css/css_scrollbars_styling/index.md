@@ -1,12 +1,7 @@
 ---
 title: CSS Scrollbars
 slug: Web/CSS/CSS_scrollbars_styling
-tags:
-  - Aperçu
-  - CSS
-  - css scrollbars
 translation_of: Web/CSS/CSS_Scrollbars
-original_slug: Web/CSS/CSS_Scrollbars
 ---
 
 {{CSSRef}} {{SeeCompatTable}}

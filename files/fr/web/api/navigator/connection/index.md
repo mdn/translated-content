@@ -1,12 +1,6 @@
 ---
 title: Navigator.connection
 slug: Web/API/Navigator/connection
-tags:
-  - API
-  - Connexion
-  - Expérimental(2)
-  - Navigateur
-  - Propriété
 translation_of: Web/API/Navigator/connection
 ---
 

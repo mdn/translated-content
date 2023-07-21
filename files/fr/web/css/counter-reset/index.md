@@ -1,10 +1,6 @@
 ---
 title: counter-reset
 slug: Web/CSS/counter-reset
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/counter-reset
 ---
 

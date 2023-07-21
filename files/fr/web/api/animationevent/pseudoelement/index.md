@@ -1,12 +1,6 @@
 ---
 title: AnimationEvent.pseudoElement
 slug: Web/API/AnimationEvent/pseudoElement
-tags:
-  - API
-  - AnimationEvent
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/API/AnimationEvent/pseudoElement
 ---
 

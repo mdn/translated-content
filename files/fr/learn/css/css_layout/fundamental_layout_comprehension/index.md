@@ -2,7 +2,6 @@
 title: Compréhension fondamentale de la mise en page
 slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 translation_of: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
-original_slug: Apprendre/CSS/CSS_layout/Fundamental_Layout_Comprehension
 ---
 
 {{LearnSidebar}}

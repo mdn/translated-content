@@ -1,11 +1,6 @@
 ---
 title: PerformanceObserverEntryList
 slug: Web/API/PerformanceObserverEntryList
-tags:
-  - API
-  - Interface
-  - Reference
-  - Performance Web
 translation_of: Web/API/PerformanceObserverEntryList
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: IDBDatabase.createObjectStore()
 slug: Web/API/IDBDatabase/createObjectStore
-tags:
-  - API
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBDatabase/createObjectStore
 ---
 

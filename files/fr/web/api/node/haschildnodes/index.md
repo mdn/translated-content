@@ -1,13 +1,6 @@
 ---
 title: element.hasChildNodes
 slug: Web/API/Node/hasChildNodes
-tags:
-  - API
-  - DOM
-  - Method
-  - NeedsSpecTable
-  - Node
-  - Reference
 translation_of: Web/API/Node/hasChildNodes
 ---
 

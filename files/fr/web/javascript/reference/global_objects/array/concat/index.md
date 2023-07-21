@@ -2,8 +2,6 @@
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/concat
-browser-compat: javascript.builtins.Array.concat
 ---
 
 {{JSRef}}

@@ -1,11 +1,6 @@
 ---
 title: WebGLRenderingContext.isBuffer()
 slug: Web/API/WebGLRenderingContext/isBuffer
-tags:
-  - API
-  - Méthode
-  - WebGL
-  - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/isBuffer
 ---
 

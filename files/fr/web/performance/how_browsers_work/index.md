@@ -1,11 +1,6 @@
 ---
 title: "Remplir la page: comment fonctionnent les navigateurs"
 slug: Web/Performance/How_browsers_work
-tags:
-  - DNS
-  - Navigation
-  - Performance
-  - Performance Web
 translation_of: Web/Performance/How_browsers_work
 ---
 

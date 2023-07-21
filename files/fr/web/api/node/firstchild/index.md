@@ -1,12 +1,6 @@
 ---
 title: element.firstChild
 slug: Web/API/Node/firstChild
-tags:
-  - API
-  - DOM
-  - Enfant
-  - Noeuds
-  - Propriété
 translation_of: Web/API/Node/firstChild
 ---
 

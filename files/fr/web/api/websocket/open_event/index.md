@@ -1,7 +1,6 @@
 ---
 title: 'WebSocket : évènement open'
 slug: Web/API/WebSocket/open_event
-browser-compat: api.WebSocket.open_event
 ---
 
 {{APIRef}}

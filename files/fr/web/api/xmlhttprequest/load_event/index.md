@@ -2,7 +2,6 @@
 title: XMLHttpRequestEventTarget.onload
 slug: Web/API/XMLHttpRequest/load_event
 translation_of: Web/API/XMLHttpRequestEventTarget/onload
-original_slug: Web/API/XMLHttpRequestEventTarget/onload
 ---
 
 {{APIRef("XMLHttpRequest")}}

@@ -1,11 +1,6 @@
 ---
 title: FeaturePolicy.features()
 slug: Web/API/FeaturePolicy/features
-tags:
-  - API
-  - Feature Policy
-  - Feature-Policy
-  - Reference
 translation_of: Web/API/FeaturePolicy/features
 ---
 

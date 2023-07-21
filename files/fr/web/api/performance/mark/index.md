@@ -1,12 +1,6 @@
 ---
 title: performance.mark()
 slug: Web/API/Performance/mark
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - Performance web
 translation_of: Web/API/Performance/mark
 ---
 

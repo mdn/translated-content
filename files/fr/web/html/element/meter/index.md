@@ -1,12 +1,6 @@
 ---
 title: <meter>
 slug: Web/HTML/Element/meter
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/meter
 ---
 

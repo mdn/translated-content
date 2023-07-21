@@ -1,13 +1,6 @@
 ---
 title: PerformanceNavigationTiming.domContentLoadedEventEnd
 slug: Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - PerformanceNavigationTiming
-  - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming/domContentLoadedEventEnd
 ---
 

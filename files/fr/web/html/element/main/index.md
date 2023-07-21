@@ -1,11 +1,6 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/main
 ---
 

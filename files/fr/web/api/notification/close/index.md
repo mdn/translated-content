@@ -1,15 +1,6 @@
 ---
 title: Notification.close()
 slug: Web/API/Notification/close
-tags:
-  - API
-  - API Notifications
-  - Méthode
-  - Notification
-  - Notifications
-  - Reference
-  - close
-  - fermeture
 translation_of: Web/API/Notification/close
 ---
 

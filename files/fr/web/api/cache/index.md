@@ -1,16 +1,6 @@
 ---
 title: Cache
 slug: Web/API/Cache
-tags:
-  - API
-  - API Cache
-  - API Service worker
-  - Cache
-  - Interface
-  - Reference
-  - Service Workers
-  - Stockage
-  - hors ligne
 translation_of: Web/API/Cache
 ---
 

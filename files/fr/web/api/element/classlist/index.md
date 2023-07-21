@@ -1,13 +1,6 @@
 ---
 title: element.classList
 slug: Web/API/Element/classList
-tags:
-  - API
-  - Classe
-  - DOM
-  - Element
-  - Liste
-  - Propriétés
 translation_of: Web/API/Element/classList
 ---
 

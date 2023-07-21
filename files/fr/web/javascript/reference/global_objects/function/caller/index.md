@@ -1,13 +1,7 @@
 ---
 title: Function.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
-tags:
-  - Function
-  - JavaScript
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/caller
 ---
 
 {{JSRef}} {{non-standard_header}}

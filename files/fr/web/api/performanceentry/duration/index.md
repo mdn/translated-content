@@ -1,13 +1,6 @@
 ---
 title: PerformanceEntry.duration
 slug: Web/API/PerformanceEntry/duration
-tags:
-  - API
-  - PerformanceEntry
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
 translation_of: Web/API/PerformanceEntry/duration
 ---
 

@@ -2,7 +2,6 @@
 title: word-break
 slug: Web/CSS/word-break
 translation_of: Web/CSS/word-break
-browser-compat: css.properties.word-break
 ---
 
 {{CSSRef}}

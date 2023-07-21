@@ -1,13 +1,7 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Operators/class
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Opérateur
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/class
-original_slug: Web/JavaScript/Reference/Opérateurs/class
 ---
 
 {{JSSidebar("Operators")}}

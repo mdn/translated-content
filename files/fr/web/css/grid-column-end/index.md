@@ -1,10 +1,6 @@
 ---
 title: grid-column-end
 slug: Web/CSS/grid-column-end
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/grid-column-end
 ---
 

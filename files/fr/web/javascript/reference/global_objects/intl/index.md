@@ -1,14 +1,7 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-tags:
-  - Espace de noms
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl
 ---
 
 {{JSRef}}

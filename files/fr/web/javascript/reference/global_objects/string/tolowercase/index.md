@@ -1,14 +1,7 @@
 ---
 title: String.prototype.toLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/toLowerCase
 ---
 
 {{JSRef}}

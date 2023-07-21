@@ -1,10 +1,6 @@
 ---
 title: order
 slug: Web/CSS/order
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/order
 ---
 

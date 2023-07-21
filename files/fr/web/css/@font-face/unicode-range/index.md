@@ -2,7 +2,6 @@
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
 translation_of: Web/CSS/@font-face/unicode-range
-browser-compat: css.at-rules.font-face.unicode-range
 ---
 
 {{cssref}}
