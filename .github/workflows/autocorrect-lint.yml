@@ -1,5 +1,16 @@
+# This workflow to use AutoCorrect tool for checking the copywriting, correct spaces and punctuations for CJK contents.
+#
+# For example:
+#
+# - incorrect: "欢迎阅读MDN文档." 
+# - correct:   "欢迎阅读 MDN 文档。"
+#
+# - incorrect: "Welcome，this is MDN Web Docs。"
+# - correct:   "Welcome, to read MDN Web Docs."
+#
+# More details:
+# https://github.com/huacnlee/autocorrect
 name: AutoCorrect Lint
-
 on:
   pull_request:
     branches:
