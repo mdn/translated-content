@@ -1,21 +1,25 @@
 ---
-title: DOMTokenList.keys()
+title: "DOMTokenList: keys() メソッド"
+short-title: keys()
 slug: Web/API/DOMTokenList/keys
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
 
-**`keys()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキーを処理することができる{{jsxref("Iteration_protocols","イテレーター","",1)}}を返します。キーの型は符号なし整数です。
+**`keys()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、このオブジェクトに含まれるすべてのキーを処理することができる{{jsxref("Iteration_protocols","イテレーター","",1)}}を返します。
+キーの型は符号なし整数です。
 
 ## 構文
 
-```js
-keys();
+```js-nolint
+keys()
 ```
 
 ## 引数
 
-なし
+なし。
 
 ### 返値
 
@@ -38,7 +42,7 @@ const span = document.querySelector("span");
 const classes = span.classList;
 const iterator = classes.keys();
 
-for(let value of iterator) {
+for (let value of iterator) {
   span.textContent += `(${value}) `;
 }
 ```

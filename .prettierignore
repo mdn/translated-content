@@ -33,7 +33,6 @@ build/
 /files/es/web/javascript/**/*.md
 
 # fr
-/files/fr/learn/html/**/*.md
 /files/fr/learn/javascript/**/*.md
 /files/fr/learn/server-side/**/*.md
 /files/fr/mozilla/add-ons/webextensions/api/**/*.md
@@ -119,4 +118,3 @@ build/
 /files/zh-cn/web/http/**/*.md
 /files/zh-cn/web/javascript/reference/**/*.md
 /files/zh-cn/web/svg/**/*.md
-/docs/zh-cn/glossary.md
