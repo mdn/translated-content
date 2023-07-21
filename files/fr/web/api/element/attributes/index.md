@@ -1,12 +1,6 @@
 ---
 title: element.attributes
 slug: Web/API/Element/attributes
-tags:
-  - API
-  - DOM
-  - Element
-  - Propriété
-  - Reference
 translation_of: Web/API/Element/attributes
 ---
 

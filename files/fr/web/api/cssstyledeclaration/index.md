@@ -1,13 +1,6 @@
 ---
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
-tags:
-  - API
-  - CSSOM
-  - Interface
-  - NeedsCompatTable
-  - NeedsMarkupWork
-  - Reference
 translation_of: Web/API/CSSStyleDeclaration
 ---
 

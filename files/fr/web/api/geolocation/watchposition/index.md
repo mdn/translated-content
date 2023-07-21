@@ -1,13 +1,6 @@
 ---
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
-tags:
-  - API
-  - Exemple
-  - Géolocalisation
-  - Géolocalisation API
-  - Méthode
-  - Reference
 translation_of: Web/API/Geolocation/watchPosition
 ---
 

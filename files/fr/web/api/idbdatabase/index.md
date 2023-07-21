@@ -1,11 +1,6 @@
 ---
 title: IDBDatabase
 slug: Web/API/IDBDatabase
-tags:
-  - API
-  - IndexedDB
-  - Interface
-  - Reference
 translation_of: Web/API/IDBDatabase
 ---
 

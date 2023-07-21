@@ -1,10 +1,6 @@
 ---
 title: EventSource
 slug: Web/API/EventSource
-tags:
-  - API
-  - Interface
-  - Reference
 translation_of: Web/API/EventSource
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: Document.queryCommandState()
 slug: Web/API/Document/queryCommandState
-tags:
-  - API
-  - DOM
-  - Document
 translation_of: Web/API/Document/queryCommandState
 ---
 

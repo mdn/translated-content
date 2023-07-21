@@ -1,12 +1,6 @@
 ---
 title: DOMPoint
 slug: Web/API/DOMPoint
-tags:
-  - API
-  - DOM
-  - Géométrie
-  - Point
-  - Quadrilatère
 translation_of: Web/API/DOMPoint
 ---
 

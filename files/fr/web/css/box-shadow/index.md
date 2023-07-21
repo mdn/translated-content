@@ -1,10 +1,6 @@
 ---
 title: box-shadow
 slug: Web/CSS/box-shadow
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/box-shadow
 ---
 

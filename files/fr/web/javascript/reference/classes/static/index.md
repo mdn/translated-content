@@ -1,11 +1,6 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Classes/static
 ---
 

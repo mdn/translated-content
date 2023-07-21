@@ -1,10 +1,6 @@
 ---
 title: text-indent
 slug: Web/CSS/text-indent
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/text-indent
 ---
 

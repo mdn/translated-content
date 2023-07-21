@@ -1,12 +1,6 @@
 ---
 title: Supérieur ou égal (>=)
 slug: Web/JavaScript/Reference/Operators/Greater_than_or_equal
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.greater_than_or_equal
 ---
 
 {{jsSidebar("Operators")}}

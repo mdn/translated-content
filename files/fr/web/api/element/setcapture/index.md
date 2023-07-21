@@ -1,13 +1,6 @@
 ---
 title: Element.setCapture()
 slug: Web/API/Element/setCapture
-tags:
-  - API
-  - Capture
-  - DOM
-  - Elements
-  - Méthodes
-  - Souris
 translation_of: Web/API/Element/setCapture
 ---
 

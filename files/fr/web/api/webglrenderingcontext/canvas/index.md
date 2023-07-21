@@ -1,13 +1,7 @@
 ---
 title: WebGLRenderingContext.canvas
 slug: Web/API/WebGLRenderingContext/canvas
-tags:
-  - Propriété
-  - WebGL
-  - WebGLRenderingContext
-  - lecture seule
 translation_of: Web/API/WebGLRenderingContext/canvas
-original_slug: Web/API/WebGLRenderingContext/canevas
 ---
 
 {{APIRef("WebGL")}}

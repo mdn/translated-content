@@ -1,11 +1,6 @@
 ---
 title: Element.outerHTML
 slug: Web/API/Element/outerHTML
-tags:
-  - API
-  - DOM
-  - Privacy
-  - Propriétés
 translation_of: Web/API/Element/outerHTML
 ---
 

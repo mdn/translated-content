@@ -1,13 +1,6 @@
 ---
 title: <slot>
 slug: Web/HTML/Element/slot
-tags:
-  - Composant web
-  - Element
-  - HTML
-  - Reference
-  - Web
-  - shadow dom
 translation_of: Web/HTML/Element/slot
 ---
 

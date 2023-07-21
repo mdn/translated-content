@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerContainer.register()
 slug: Web/API/ServiceWorkerContainer/register
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - ServicerWorkerContainer
-  - register
 translation_of: Web/API/ServiceWorkerContainer/register
 ---
 

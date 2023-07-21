@@ -1,12 +1,6 @@
 ---
 title: IDBKeyRange.lower
 slug: Web/API/IDBKeyRange/lower
-tags:
-  - API
-  - IDBKeyRange
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBKeyRange/lower
 ---
 

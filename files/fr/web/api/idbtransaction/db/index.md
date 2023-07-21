@@ -1,12 +1,6 @@
 ---
 title: IDBTransaction.db
 slug: Web/API/IDBTransaction/db
-tags:
-  - API
-  - IDBTransaction
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBTransaction/db
 ---
 

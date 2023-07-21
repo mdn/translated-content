@@ -1,14 +1,7 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
-tags:
-  - JavaScript
-  - Operator
-  - Prototype
-  - Reference
-  - instanceof
 translation_of: Web/JavaScript/Reference/Operators/instanceof
-original_slug: Web/JavaScript/Reference/Opérateurs/instanceof
 ---
 
 {{jsSidebar("Operators")}}

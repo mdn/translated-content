@@ -2,7 +2,6 @@
 title: font-variant-alternates
 slug: Web/CSS/font-variant-alternates
 translation_of: Web/CSS/font-variant-alternates
-browser-compat: css.properties.font-variant-alternates
 ---
 
 {{CSSRef}}

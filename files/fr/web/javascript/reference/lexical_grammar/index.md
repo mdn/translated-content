@@ -1,13 +1,7 @@
 ---
 title: Grammaire lexicale
 slug: Web/JavaScript/Reference/Lexical_grammar
-tags:
-  - Avancé
-  - Grammaire
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Lexical_grammar
-original_slug: Web/JavaScript/Reference/Grammaire_lexicale
 ---
 
 {{JsSidebar("More")}}

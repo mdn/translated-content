@@ -1,11 +1,6 @@
 ---
 title: '::marker'
 slug: Web/CSS/::marker
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::marker
 ---
 

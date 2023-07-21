@@ -1,13 +1,6 @@
 ---
 title: Element.setPointerCapture()
 slug: Web/API/Element/setPointerCapture
-tags:
-  - API
-  - Capture
-  - DOM
-  - Element
-  - Méthodes
-  - Pointeur
 translation_of: Web/API/Element/setPointerCapture
 ---
 

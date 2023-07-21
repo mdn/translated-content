@@ -1,10 +1,6 @@
 ---
 title: column-rule-style
 slug: Web/CSS/column-rule-style
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/column-rule-style
 ---
 

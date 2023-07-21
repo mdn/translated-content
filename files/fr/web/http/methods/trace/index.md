@@ -1,12 +1,7 @@
 ---
 title: TRACE
 slug: Web/HTTP/Methods/TRACE
-tags:
-  - HTTP
-  - Reference
-  - requête
 translation_of: Web/HTTP/Methods/TRACE
-original_slug: Web/HTTP/Méthode/TRACE
 ---
 
 {{HTTPSidebar}}

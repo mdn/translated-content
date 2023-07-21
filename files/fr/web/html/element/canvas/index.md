@@ -1,16 +1,7 @@
 ---
 title: '<canvas> : l''élément de canevas graphique'
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - Element
-  - HTML
-  - HTML scripting
-  - HTML5
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/canvas
-browser-compat: html.elements.canvas
 ---
 
 {{HTMLSidebar}}

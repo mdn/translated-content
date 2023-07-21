@@ -1,11 +1,6 @@
 ---
 title: '<title> : l''élément de titre du document'
 slug: Web/HTML/Element/title
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/title
 ---
 

@@ -2,8 +2,6 @@
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-original_slug: Web/JavaScript/Reference/Objets_globaux/AsyncFunction
-browser-compat: javascript.builtins.AsyncFunction
 ---
 
 {{JSRef}}

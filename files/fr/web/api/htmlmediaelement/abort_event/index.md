@@ -1,13 +1,6 @@
 ---
 title: 'HTMLMediaElement: abort event'
 slug: Web/API/HTMLMediaElement/abort_event
-tags:
-  - API
-  - Event
-  - HTMLMediaElement
-  - Reference
-  - Web
-  - abort
 translation_of: Web/API/HTMLMediaElement/abort_event
 ---
 

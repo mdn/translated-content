@@ -1,16 +1,6 @@
 ---
 title: Gérer les problèmes courants en JavaScript
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
-tags:
-  - Apprentissage
-  - Débutant
-  - JavaScript
-  - Librairies
-  - détection de fonctionnalité
-  - linting
-  - navigateur croisé
-  - polyfills
-  - test
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 ---
 

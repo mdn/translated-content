@@ -1,11 +1,7 @@
 ---
 title: Ajouter des couleurs avec les nuanceurs
 slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
-tags:
-  - Tutoriel
-  - WebGL
 translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
-original_slug: Web/API/WebGL_API/Tutorial/Ajouter_des_couleurs_avec_les_shaders
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}

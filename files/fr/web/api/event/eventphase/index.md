@@ -1,9 +1,7 @@
 ---
 title: Event.eventPhase
 slug: Web/API/Event/eventPhase
-page-type: web-api-instance-property
 translation_of: Web/API/Event/eventPhase
-browser-compat: api.Event.eventPhase
 ---
 
 {{ApiRef("DOM")}}

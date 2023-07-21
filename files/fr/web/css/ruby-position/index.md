@@ -1,11 +1,6 @@
 ---
 title: ruby-position
 slug: Web/CSS/ruby-position
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - Ruby
 translation_of: Web/CSS/ruby-position
 ---
 

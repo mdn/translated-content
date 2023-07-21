@@ -1,9 +1,6 @@
 ---
 title: DataTransfer
 slug: Web/API/DataTransfer
-tags:
-  - API
-  - Glisser-deposer
 translation_of: Web/API/DataTransfer
 ---
 

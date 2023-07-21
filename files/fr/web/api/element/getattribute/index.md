@@ -1,13 +1,6 @@
 ---
 title: element.getAttribute
 slug: Web/API/Element/getAttribute
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Méthode
-  - Reference
 translation_of: Web/API/Element/getAttribute
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: 'Element : évènement mousemove'
 slug: Web/API/Element/mousemove_event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - Reference
-  - events
-  - mousemove
 translation_of: Web/API/Element/mousemove_event
 ---
 

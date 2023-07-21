@@ -1,12 +1,6 @@
 ---
 title: CDATASection
 slug: Web/API/CDATASection
-tags:
-  - API
-  - DOM
-  - Interface
-  - Référence(2)
-  - Section
 translation_of: Web/API/CDATASection
 ---
 

@@ -2,7 +2,6 @@
 title: Constructeur Int16Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
 translation_of: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
-browser-compat: javascript.builtins.Int16Array.Int16Array
 ---
 
 {{JSRef}}

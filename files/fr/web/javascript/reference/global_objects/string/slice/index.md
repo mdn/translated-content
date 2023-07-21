@@ -1,14 +1,7 @@
 ---
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
-tags:
-  - Chaîne
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/slice
 ---
 
 {{JSRef}}

@@ -1,11 +1,6 @@
 ---
 title: text-rendering
 slug: Web/CSS/text-rendering
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - SVG
 translation_of: Web/CSS/text-rendering
 ---
 

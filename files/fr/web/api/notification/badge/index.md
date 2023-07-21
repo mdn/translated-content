@@ -1,13 +1,6 @@
 ---
 title: Notification.badge
 slug: Web/API/Notification/badge
-tags:
-  - API Notification
-  - API badge
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
 translation_of: Web/API/Notification/badge
 ---
 

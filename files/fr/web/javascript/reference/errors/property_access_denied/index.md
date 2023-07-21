@@ -1,13 +1,7 @@
 ---
 title: 'Error: Permission denied to access property "x"'
 slug: Web/JavaScript/Reference/Errors/Property_access_denied
-tags:
-  - Erreurs
-  - Error
-  - JavaScript
-  - Sécurité
 translation_of: Web/JavaScript/Reference/Errors/Property_access_denied
-original_slug: Web/JavaScript/Reference/Erreurs/Property_access_denied
 ---
 
 {{jsSidebar("Errors")}}

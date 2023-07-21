@@ -1,12 +1,7 @@
 ---
 title: Le fonctionnement de l'Internet
 slug: Learn/Common_questions/Web_mechanics/How_does_the_Internet_work
-tags:
-  - Beginner
-  - Internet
-  - WebMechanics
 translation_of: Learn/Common_questions/How_does_the_Internet_work
-original_slug: Learn/Common_questions/How_does_the_Internet_work
 ---
 
 Dans cet article, nous expliquons ce qu'est l'Internet et comment il fonctionne.

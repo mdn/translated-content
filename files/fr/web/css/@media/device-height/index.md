@@ -1,11 +1,6 @@
 ---
 title: device-height
 slug: Web/CSS/@media/device-height
-tags:
-  - CSS
-  - Caractéristique média
-  - Déprécié
-  - Reference
 translation_of: Web/CSS/@media/device-height
 ---
 

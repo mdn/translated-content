@@ -1,10 +1,6 @@
 ---
 title: <feTurbulence>
 slug: Web/SVG/Element/feTurbulence
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 translation_of: Web/SVG/Element/feTurbulence
 ---
 

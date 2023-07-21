@@ -1,10 +1,6 @@
 ---
 title: <display-listitem>
 slug: Web/CSS/display-listitem
-tags:
-  - CSS
-  - Reference
-  - Type de donnée
 translation_of: Web/CSS/display-listitem
 ---
 

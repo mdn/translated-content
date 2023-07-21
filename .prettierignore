@@ -11,6 +11,7 @@ build/
 /files/**/orphaned/**/*.md
 
 # XXX Ignored until https://github.com/prettier/prettier/issues/11828 is fixed
+/files/es/learn/css/howto/css_faq/index.md
 /files/fr/glossary/cross_axis/index.md
 /files/fr/glossary/flex/index.md
 /files/fr/glossary/flex_container/index.md
@@ -23,7 +24,6 @@ build/
 # The following folders still need a full pass:
 
 # es
-/files/es/learn/css/**/*.md
 /files/es/learn/javascript/**/*.md
 /files/es/learn/server-side/**/*.md
 /files/es/web/api/**/*.md
@@ -33,8 +33,6 @@ build/
 /files/es/web/javascript/**/*.md
 
 # fr
-/files/fr/learn/css/**/*.md
-/files/fr/learn/html/**/*.md
 /files/fr/learn/javascript/**/*.md
 /files/fr/learn/server-side/**/*.md
 /files/fr/mozilla/add-ons/webextensions/api/**/*.md
@@ -120,4 +118,3 @@ build/
 /files/zh-cn/web/http/**/*.md
 /files/zh-cn/web/javascript/reference/**/*.md
 /files/zh-cn/web/svg/**/*.md
-/docs/zh-cn/glossary.md

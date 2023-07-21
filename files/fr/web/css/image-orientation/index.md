@@ -2,7 +2,6 @@
 title: image-orientation
 slug: Web/CSS/image-orientation
 translation_of: Web/CSS/image-orientation
-browser-compat: css.properties.image-orientation
 ---
 
 {{CSSRef}}

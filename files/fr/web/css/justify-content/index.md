@@ -1,11 +1,6 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - flexbox
 translation_of: Web/CSS/justify-content
 ---
 

@@ -2,8 +2,6 @@
 title: url()
 slug: Web/CSS/url
 translation_of: Web/CSS/url()
-original_slug: Web/CSS/url()
-browser-compat: css.types.url
 ---
 
 {{CSSRef}}

@@ -1,12 +1,6 @@
 ---
 title: performance.getEntriesByType()
 slug: Web/API/Performance/getEntriesByType
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - Performance web
 translation_of: Web/API/Performance/getEntriesByType
 ---
 

@@ -1,16 +1,7 @@
 ---
 title: TypedArray.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/lastIndexOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/lastIndexOf
 ---
 
 {{JSRef}}

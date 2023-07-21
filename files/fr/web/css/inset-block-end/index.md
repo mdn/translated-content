@@ -1,13 +1,7 @@
 ---
 title: inset-block-end
 slug: Web/CSS/inset-block-end
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/inset-block-end
-original_slug: inset-block-end
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -1,10 +1,6 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Classes/extends
 ---
 

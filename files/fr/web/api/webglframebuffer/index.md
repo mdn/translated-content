@@ -1,10 +1,6 @@
 ---
 title: WebGLFramebuffer
 slug: Web/API/WebGLFramebuffer
-tags:
-  - API
-  - Reference
-  - WebGL
 translation_of: Web/API/WebGLFramebuffer
 ---
 

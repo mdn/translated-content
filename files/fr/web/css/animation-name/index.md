@@ -1,10 +1,6 @@
 ---
 title: animation-name
 slug: Web/CSS/animation-name
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/animation-name
 ---
 

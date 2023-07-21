@@ -1,11 +1,6 @@
 ---
 title: Document.lastStyleSheetSet
 slug: Web/API/Document/lastStyleSheetSet
-tags:
-  - API
-  - DOM
-  - Feuilles de styles
-  - Propriétés
 translation_of: Web/API/Document/lastStyleSheetSet
 ---
 

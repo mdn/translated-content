@@ -1,12 +1,6 @@
 ---
 title: WebGLRenderingContext.createBuffer()
 slug: Web/API/WebGLRenderingContext/createBuffer
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/createBuffer
 ---
 

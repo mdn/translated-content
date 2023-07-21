@@ -2,7 +2,6 @@
 title: Object.hasOwn()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwn
-browser-compat: javascript.builtins.Object.hasOwn
 ---
 
 {{JSRef}}{{SeeCompatTable}}

@@ -1,11 +1,6 @@
 ---
 title: '<p> : l''élément paragraphe'
 slug: Web/HTML/Element/p
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/p
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: border-left-color
 slug: Web/CSS/border-left-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border-left-color
 ---
 

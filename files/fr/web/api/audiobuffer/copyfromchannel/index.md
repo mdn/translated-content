@@ -1,11 +1,6 @@
 ---
 title: AudioBuffer.copyFromChannel()
 slug: Web/API/AudioBuffer/copyFromChannel
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Web Audio API
 translation_of: Web/API/AudioBuffer/copyFromChannel
 ---
 

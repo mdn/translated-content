@@ -1,13 +1,6 @@
 ---
 title: 'Attribut HTML : step'
 slug: Web/HTML/Attributes/step
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - Reference
-  - step
 translation_of: Web/HTML/Attributes/step
 ---
 

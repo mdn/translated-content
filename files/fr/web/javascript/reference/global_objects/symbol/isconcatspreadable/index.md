@@ -1,14 +1,7 @@
 ---
 title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Reference
-  - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/isConcatSpreadable
 ---
 
 {{JSRef}}

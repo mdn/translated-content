@@ -1,15 +1,7 @@
 ---
 title: "Évaluation: dépannage d'accessibilité"
 slug: Learn/Accessibility/Accessibility_troubleshooting
-tags:
-  - Accessibilité
-  - Apprendre
-  - CSS
-  - Débutant
-  - HTML
-  - JavaScript
 translation_of: Learn/Accessibility/Accessibility_troubleshooting
-original_slug: Apprendre/a11y/Accessibility_troubleshooting
 ---
 
 {{LearnSidebar}}

@@ -1,15 +1,7 @@
 ---
 title: String.prototype.bold()
 slug: Web/JavaScript/Reference/Global_Objects/String/bold
-tags:
-  - Déprécié
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/bold
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/bold
 ---
 
 {{JSRef}}{{deprecated_header}}

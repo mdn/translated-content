@@ -1,16 +1,6 @@
 ---
 title: Notification.vibrate
 slug: Web/API/Notification/vibrate
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - Vibration
-  - Vibreur
-  - vibrate
 translation_of: Web/API/Notification/vibrate
 ---
 

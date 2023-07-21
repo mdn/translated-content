@@ -2,8 +2,6 @@
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
 translation_of: Web/JavaScript/Reference/Global_Objects/Error
-original_slug: Web/JavaScript/Reference/Objets_globaux/Error
-browser-compat: javascript.builtins.Error
 ---
 
 {{JSRef}}

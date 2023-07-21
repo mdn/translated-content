@@ -1,13 +1,6 @@
 ---
 title: SharedWorker
 slug: Web/API/SharedWorker
-tags:
-  - API
-  - Interface
-  - Reference
-  - Shared
-  - SharedWorker
-  - Worker
 translation_of: Web/API/SharedWorker
 ---
 

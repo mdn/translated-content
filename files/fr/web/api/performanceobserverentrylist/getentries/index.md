@@ -1,13 +1,6 @@
 ---
 title: PerformanceObserverEntryList.getEntries()
 slug: Web/API/PerformanceObserverEntryList/getEntries
-tags:
-  - API
-  - Method
-  - Méthode
-  - PerformanceObserverEntryList
-  - Reference
-  - Performance Web
 translation_of: Web/API/PerformanceObserverEntryList/getEntries
 ---
 

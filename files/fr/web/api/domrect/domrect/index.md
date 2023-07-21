@@ -1,12 +1,6 @@
 ---
 title: DOMRect.DOMRect()
 slug: Web/API/DOMRect/DOMRect
-tags:
-  - API
-  - Constructeurs
-  - DOM
-  - Géométrie
-  - Rectangle
 translation_of: Web/API/DOMRect/DOMRect
 ---
 

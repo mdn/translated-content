@@ -1,11 +1,6 @@
 ---
 title: Storage.removeItem()
 slug: Web/API/Storage/removeItem
-tags:
-  - API
-  - Méthode
-  - Stockage
-  - Stockage Web
 translation_of: Web/API/Storage/removeItem
 ---
 

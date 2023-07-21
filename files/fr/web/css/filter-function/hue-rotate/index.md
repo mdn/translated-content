@@ -2,8 +2,6 @@
 title: hue-rotate()
 slug: Web/CSS/filter-function/hue-rotate
 translation_of: Web/CSS/filter-function/hue-rotate()
-original_slug: Web/CSS/filter-function/hue-rotate()
-browser-compat: css.types.filter-function.hue-rotate
 ---
 
 {{CSSRef}}

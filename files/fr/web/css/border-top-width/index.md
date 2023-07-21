@@ -1,10 +1,6 @@
 ---
 title: border-top-width
 slug: Web/CSS/border-top-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border-top-width
 ---
 

@@ -2,7 +2,6 @@
 title: 409 Conflict
 slug: Web/HTTP/Status/409
 translation_of: Web/HTTP/Status/409
-browser-compat: http.status.409
 ---
 
 {{HTTPSidebar}}

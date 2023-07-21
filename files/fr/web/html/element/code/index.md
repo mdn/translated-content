@@ -1,16 +1,7 @@
 ---
 title: '<code> : l''élément de code en ligne'
 slug: Web/HTML/Element/code
-tags:
-  - Code
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Inline Code
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/code
-browser-compat: html.elements.code
 ---
 
 {{HTMLSidebar}}

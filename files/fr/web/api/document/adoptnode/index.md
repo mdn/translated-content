@@ -1,13 +1,6 @@
 ---
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
-tags:
-  - API
-  - DOM
-  - Document
-  - Méthodes
-  - Noeuds
-  - Propriétaire
 translation_of: Web/API/Document/adoptNode
 ---
 

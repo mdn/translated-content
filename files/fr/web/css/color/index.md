@@ -1,10 +1,6 @@
 ---
 title: color
 slug: Web/CSS/color
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/color
 ---
 

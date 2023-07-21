@@ -2,8 +2,6 @@
 title: Intl.RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat
-browser-compat: javascript.builtins.Intl.RelativeTimeFormat
 ---
 
 {{JSRef}}

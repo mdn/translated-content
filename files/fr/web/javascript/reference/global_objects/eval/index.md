@@ -1,14 +1,7 @@
 ---
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
-tags:
-  - Attention
-  - JavaScript
-  - Méthode
-  - Reference
-  - eval
 translation_of: Web/JavaScript/Reference/Global_Objects/eval
-original_slug: Web/JavaScript/Reference/Objets_globaux/eval
 ---
 
 {{jsSidebar("Objects")}}

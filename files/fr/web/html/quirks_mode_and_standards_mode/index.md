@@ -1,13 +1,6 @@
 ---
 title: Mode quirks et mode standard
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
-tags:
-  - Gecko
-  - Guide
-  - HTML
-  - Web Development
-  - Web Standards
-  - XHTML
 translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
 

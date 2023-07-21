@@ -1,13 +1,6 @@
 ---
 title: GeolocationPosition
 slug: Web/API/GeolocationPosition
-tags:
-  - API
-  - Geolocation API
-  - GeolocationPosition
-  - Interface
-  - Secure context
-  - TopicStub
 translation_of: Web/API/GeolocationPosition
 ---
 

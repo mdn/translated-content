@@ -1,11 +1,6 @@
 ---
 title: element.clientWidth
 slug: Web/API/Element/clientWidth
-tags:
-  - API
-  - CSSOM View
-  - Propriété
-  - Reference
 translation_of: Web/API/Element/clientWidth
 ---
 

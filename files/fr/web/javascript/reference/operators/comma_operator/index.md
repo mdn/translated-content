@@ -1,12 +1,7 @@
 ---
 title: L'opérateur virgule
 slug: Web/JavaScript/Reference/Operators/Comma_operator
-tags:
-  - JavaScript
-  - Opérateur
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
-original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_virgule
 ---
 
 {{jsSidebar("Operators")}}
