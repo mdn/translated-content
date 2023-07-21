@@ -76,7 +76,9 @@ Cette fonction peut aider à améliorer l'accessibilité en fournissant une coul
 ```html
 <ul>
   <li dir="ltr">La puce est une flèche pointant à droite et située à gauche</li>
-  <li dir="rtl">La puce est la même flèche mais renversée pour pointer à gauche.</li>
+  <li dir="rtl">
+    La puce est la même flèche mais renversée pour pointer à gauche.
+  </li>
 </ul>
 ```
 
@@ -93,7 +95,9 @@ Pour les éléments de la liste allant de gauche à droite (ceux avec `dir="ltr"
 ### Afficher une section de l'image
 
 ```html
-<div class="box">Vous pouvez survoler cet élément pour voir un autre curseur</div>
+<div class="box">
+  Vous pouvez survoler cet élément pour voir un autre curseur
+</div>
 ```
 
 ```css
@@ -109,21 +113,25 @@ Lorsqu'on survole la boîte, le curseur changera pour afficher une section d'un 
 ### Placer une couleur sur une image en arrière-plan
 
 ```css hidden
-.quarterlogo {height: 200px; width: 200px; border: 1px solid;}
+.quarterlogo {
+  height: 200px;
+  width: 200px;
+  border: 1px solid;
+}
 ```
 
 ```css
 .quarterlogo {
-  background-image:
-    image(rgba(0, 0, 0, 0.25)),
-    url("firefox.png");
+  background-image: image(rgba(0, 0, 0, 0.25)), url("firefox.png");
   background-size: 25%;
   background-repeat: no-repeat;
 }
 ```
 
 ```html
-<div class="quarterlogo">Si pris en charge, un quart de ce div aura un logo assombri</div>
+<div class="quarterlogo">
+  Si pris en charge, un quart de ce div aura un logo assombri
+</div>
 ```
 
 Dans l'exemple précédent, on placera un masque noir semi-transparent sur le logo Firefox utilisé comme image d'arrière-plan. Si on avait utilisé la propriété [`background-color`](/fr/docs/Web/CSS/background-color) à la place, la couleur aurait été placée sous le logo et non sur lui. De plus, le conteneur entier aurait eu cette couleur en arrière-plan. Avec `image()` et [`background-size`](/fr/docs/Web/CSS/background-size) (tout en empêchant l'image de se répéter grâce à [`background-repeat`](/fr/docs/Web/CSS/background-repeat)), le voile noir ne couvrira qu'un quart du conteneur.
