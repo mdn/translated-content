@@ -2,7 +2,7 @@
 #
 # For example:
 #
-# - incorrect: "欢迎阅读MDN文档." 
+# - incorrect: "欢迎阅读MDN文档."
 # - correct:   "欢迎阅读 MDN 文档。"
 #
 # - incorrect: "Welcome，this is MDN Web Docs。"
