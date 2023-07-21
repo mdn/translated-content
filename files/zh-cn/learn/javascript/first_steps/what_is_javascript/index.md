@@ -33,10 +33,10 @@ JavaScript 是一种脚本编程语言，它可以在网页上实现复杂的功
 这三层依次建立，秩序井然。以简单文本标签作为示例。首先用 HTML 将文本标记起来，从而赋予它结构和目的：
 
 ```html
-<p>玩家 1：小明</p>
+<p>Player 1: Chris</p>
 ```
 
-![作为纯文本段落出现的“玩家 1：小明”](just-html.png)
+![作为纯文本段落出现的“Player 1: Chris”](just-html.png)
 
 然后我们可以为它加一点 CSS 让它更好看：
 
@@ -57,7 +57,7 @@ p {
 }
 ```
 
-![已添加样式的“玩家 1：小明”段落](html-and-css.png)
+![已添加样式的“Player 1: Chris”段落](html-and-css.png)
 
 最后，我们可以再加上一些 JavaScript 来实现动态行为：
 
@@ -67,8 +67,8 @@ const para = document.querySelector("p");
 para.addEventListener("click", updateName);
 
 function updateName() {
-  const name = prompt('输入一个新的名字：');
-  para.textContent = `玩家 1：${name}`;
+  const name = prompt("Enter a new name");
+  para.textContent = `Player 1: ${name}`;
 }
 ```
 
