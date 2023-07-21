@@ -30,7 +30,9 @@ JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复
 - {{glossary("CSS")}} 是一种样式规则语言，可将样式应用于 HTML 内容，例如设置背景颜色和字体，在多个列中布局内容。
 - {{glossary("JavaScript")}} 是一种脚本语言，可以用来创建动态更新的内容，控制多媒体，制作图像动画，还有很多。（好吧，虽然它不是万能的，但可以通过简短的代码来实现神奇的功能。）
 
-这三层依次建立，秩序井然。以文本标签 (text label) 的简单示例。首先用 HTML 将文本标记起来，从而赋予它结构和目的：
+这三层依次建立，秩序井然。以文本标签 (text label) 的简单示例。
+
+首先用 HTML 将文本标记起来，从而赋予它结构和目的：
 
 ```html
 <p>玩家 1：小明</p>
@@ -57,29 +59,6 @@ p {
 }
 ```
 
-```html hidden
-<!DOCTYPE html>
-<html><head><style>
-p {
-  font-family: sans-serif, '黑体';
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-align: center;
-  border: 2px solid rgba(0, 0, 200, 0.6);
-  background: rgba(0, 0, 200, 0.3);
-  color: rgba(0, 0, 200, 0.6);
-  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
-  border-radius: 10px;
-  padding: 3px 10px;
-  display: inline-block;
-  cursor: pointer;
-}
-</style></head>
-<body>
-<p>玩家 1：小明</p>
-</body></html>
-```
-
 {{ EmbedLiveSample('广义的定义', '100%', 80) }}
 
 最后，我们可以再加上一些 JavaScript 来实现动态行为：
@@ -93,37 +72,6 @@ function updateName() {
   let name = prompt('输入一个新的名字：');
   para.textContent = '玩家 1：' + name;
 }
-```
-
-```html hidden
-<!DOCTYPE html>
-<html><head><style>
-p {
-font-family: sans-serif, '黑体';
-letter-spacing: 1px;
-text-transform: uppercase;
-text-align: center;
-border: 2px solid rgba(0,0,200,0.6);
-background: rgba(0,0,200,0.3);
-color: rgba(0,0,200,0.6);
-box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
-border-radius: 10px;
-padding: 3px 10px;
-display: inline-block;
-cursor: pointer;
-}
-</style></head>
-<body>
-<p>玩家 1：小明</p>
-<script>
-const para = document.querySelector('p');
-para.addEventListener('click', updateName);
-function updateName() {
-  const name = prompt('输入一个新的名字：');
-  para.textContent = '玩家 1：' + name;
-}
-</script>
-</body></html>
 ```
 
 {{ EmbedLiveSample('广义的定义', '100%', 80) }}
