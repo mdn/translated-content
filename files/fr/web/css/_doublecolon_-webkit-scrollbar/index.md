@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-scrollbar'
 slug: Web/CSS/::-webkit-scrollbar
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-scrollbar
 ---
 

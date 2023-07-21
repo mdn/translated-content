@@ -1,14 +1,7 @@
 ---
 title: String.prototype.matchAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/matchAll
 ---
 
 {{JSRef}}

@@ -1,17 +1,7 @@
 ---
 title: Maîtriser le passage à la ligne des éléments flexibles
 slug: Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items
-tags:
-  - CSS
-  - Grille
-  - Guide
-  - Intermediate
-  - flexbox
-  - grid
-  - wrapping
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items
-original_slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Maîtriser_passage_à_la_ligne_des_éléments_flexibles
 ---
 
 {{CSSRef}}

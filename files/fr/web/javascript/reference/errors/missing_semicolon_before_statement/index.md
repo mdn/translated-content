@@ -1,13 +1,7 @@
 ---
 title: 'SyntaxError: missing ; before statement'
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
-tags:
-  - Erreurs
-  - JavaScript
-  - Reference
-  - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
-original_slug: Web/JavaScript/Reference/Erreurs/Missing_semicolon_before_statement
 ---
 
 {{jsSidebar("Errors")}}

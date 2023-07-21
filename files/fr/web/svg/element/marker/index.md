@@ -1,9 +1,6 @@
 ---
 title: <marker>
 slug: Web/SVG/Element/marker
-tags:
-  - SVG
-  - SVG Element
 translation_of: Web/SVG/Element/marker
 ---
 

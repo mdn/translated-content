@@ -1,12 +1,6 @@
 ---
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
-tags:
-  - API
-  - DOM
-  - Document
-  - Méthodes
-  - Sélecteurs
 translation_of: Web/API/Document/querySelectorAll
 ---
 

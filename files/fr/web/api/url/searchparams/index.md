@@ -1,13 +1,6 @@
 ---
 title: URL.searchParams
 slug: Web/API/URL/searchParams
-tags:
-  - API
-  - Lecture-seule
-  - Propriété
-  - Reference
-  - URL
-  - URLSearchParameters
 translation_of: Web/API/URL/searchParams
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: grid-row-end
 slug: Web/CSS/grid-row-end
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/grid-row-end
 ---
 

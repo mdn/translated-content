@@ -1,12 +1,7 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
-tags:
-  - JavaScript
-  - Opérateur
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/await
-original_slug: Web/JavaScript/Reference/Opérateurs/await
 ---
 
 {{jsSidebar("Operators")}}

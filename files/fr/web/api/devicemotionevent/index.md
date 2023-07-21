@@ -1,15 +1,6 @@
 ---
 title: DeviceMotionEvent
 slug: Web/API/DeviceMotionEvent
-tags:
-  - API
-  - Device Orientation
-  - Experimental
-  - Firefox OS
-  - Mobile
-  - Motion
-  - Orientation
-  - TopicStub
 translation_of: Web/API/DeviceMotionEvent
 ---
 

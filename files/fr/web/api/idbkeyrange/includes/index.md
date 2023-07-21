@@ -1,12 +1,6 @@
 ---
 title: IDBKeyRange.includes()
 slug: Web/API/IDBKeyRange/includes
-tags:
-  - API
-  - IDBKeyRange
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBKeyRange/includes
 ---
 

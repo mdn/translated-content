@@ -1,15 +1,7 @@
 ---
 title: '<fieldset> : l''élément pour les ensembles de champs'
 slug: Web/HTML/Element/fieldset
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/fieldset
-browser-compat: html.elements.fieldset
 ---
 
 {{HTMLSidebar}}

@@ -1,10 +1,6 @@
 ---
 title: CSS Layout cookbook
 slug: Web/CSS/Layout_cookbook
-tags:
-  - CSS
-  - Guide
-  - recettes
 translation_of: Web/CSS/Layout_cookbook
 ---
 

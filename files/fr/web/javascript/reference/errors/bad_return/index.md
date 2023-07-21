@@ -1,13 +1,7 @@
 ---
 title: 'SyntaxError: return not in function'
 slug: Web/JavaScript/Reference/Errors/Bad_return
-tags:
-  - Erreurs
-  - JavaScript
-  - Reference
-  - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Bad_return_or_yield
-original_slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
 
 {{jsSidebar("Errors")}}

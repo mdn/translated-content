@@ -2,7 +2,6 @@
 title: compositionend
 slug: Web/API/Element/compositionend_event
 translation_of: Web/API/Element/compositionend_event
-original_slug: Web/Events/compositionend
 ---
 
 L'événement **`compositionend`** est déclenché lorsque la composition d'un texte via {{glossary("input method editor", "méthode de saisie")}} est terminée ou annulée (démarre avec des caractères spéciaux qui requièrent une séquence de touches et d'autres entrées telles que la reconnaissance vocale ou la suggestion de mot sur mobile).

@@ -1,13 +1,6 @@
 ---
 title: Affectation après décalage à droite non signé (>>>=)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.unsigned_right_shift_assignment
 ---
 
 {{jsSidebar("Operators")}}

@@ -2,7 +2,6 @@
 title: dragend
 slug: Web/API/HTMLElement/dragend_event
 translation_of: Web/API/Document/dragend_event
-original_slug: Web/API/Document/dragend_event
 ---
 
 L'événement **dragend** est déclenché lorsque une opération de glissement est terminée (en relâchant le bouton de la souris ou en appuyant sur la touche Echap).

@@ -1,13 +1,6 @@
 ---
 title: DOMRectReadOnly.height
 slug: Web/API/DOMRectReadOnly/height
-tags:
-  - API
-  - DOM
-  - Géométrie
-  - Hauteur
-  - Propriétés
-  - Rectangle
 translation_of: Web/API/DOMRectReadOnly/height
 ---
 

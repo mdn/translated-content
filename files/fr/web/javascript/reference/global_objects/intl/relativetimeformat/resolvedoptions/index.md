@@ -2,18 +2,8 @@
 title: Intl.RelativeTimeFormat.prototype.resolvedOptions()
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - i18n
 translation_of: >-
   Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
-original_slug: >-
-  Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat/resolvedOptions
 ---
 
 {{JSRef}}

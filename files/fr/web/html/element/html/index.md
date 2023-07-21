@@ -1,11 +1,6 @@
 ---
 title: '<html> : l''élément de racine du document HTML'
 slug: Web/HTML/Element/html
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/html
 ---
 

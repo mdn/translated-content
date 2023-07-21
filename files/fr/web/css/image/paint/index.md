@@ -2,7 +2,6 @@
 title: paint()
 slug: Web/CSS/image/paint
 translation_of: Web/CSS/image/paint
-browser-compat: css.types.image.paint
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

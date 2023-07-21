@@ -1,12 +1,7 @@
 ---
 title: touchend
 slug: Web/API/Element/touchend_event
-tags:
-  - Tactile
-  - TouchEvent
-  - events
 translation_of: Web/API/Document/touchend_event
-original_slug: Web/API/Document/touchend_event
 ---
 
 {{APIRef}}

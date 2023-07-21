@@ -1,10 +1,6 @@
 ---
 title: bottom
 slug: Web/CSS/bottom
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/bottom
 ---
 

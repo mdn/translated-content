@@ -2,16 +2,8 @@
 title: Intl.RelativeTimeFormat.supportedLocalesOf()
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Reference
 translation_of: >-
   Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/supportedLocalesOf
-original_slug: >-
-  Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat/supportedLocalesOf
 ---
 
 {{JSRef}}

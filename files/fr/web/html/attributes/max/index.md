@@ -1,13 +1,6 @@
 ---
 title: 'Attribut HTML : max'
 slug: Web/HTML/Attributes/max
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - max
-  - Reference
 translation_of: Web/HTML/Attributes/max
 ---
 

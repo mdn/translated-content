@@ -1,10 +1,6 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/flex-basis
 ---
 

@@ -1,10 +1,7 @@
 ---
 title: value-of
 slug: Web/XSLT/Element/value-of
-tags:
-  - Référence_XSLT
 translation_of: Web/XSLT/Element/value-of
-original_slug: Web/XSLT/value-of
 ---
 
 {{ XsltRef() }}

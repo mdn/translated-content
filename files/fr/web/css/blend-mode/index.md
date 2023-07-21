@@ -1,10 +1,6 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-tags:
-  - CSS
-  - Reference
-  - Type
 translation_of: Web/CSS/blend-mode
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: Credential
 slug: Web/API/Credential
-tags:
-  - API
-  - Credential
-  - Credential Management API
-  - Interface
-  - Reference
 translation_of: Web/API/Credential
 ---
 

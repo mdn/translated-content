@@ -1,17 +1,7 @@
 ---
 title: '<form> : l''élément représentant un formulaire'
 slug: Web/HTML/Element/form
-tags:
-  - Element
-  - Form Element
-  - Forms
-  - HTML
-  - HTML Form Element
-  - HTML forms
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/form
-browser-compat: html.elements.form
 ---
 
 {{HTMLSidebar}}

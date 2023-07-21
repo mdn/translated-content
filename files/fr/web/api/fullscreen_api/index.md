@@ -1,13 +1,7 @@
 ---
 title: Utiliser le mode plein écran
 slug: Web/API/Fullscreen_API
-tags:
-  - API
-  - DOM
-  - Plein écran
-  - Tutoriel
 translation_of: Web/API/Fullscreen_API
-original_slug: Web/Guide/DOM/Using_full_screen_mode
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}

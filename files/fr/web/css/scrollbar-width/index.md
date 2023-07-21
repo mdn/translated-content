@@ -1,10 +1,6 @@
 ---
 title: scrollbar-width
 slug: Web/CSS/scrollbar-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/scrollbar-width
 ---
 

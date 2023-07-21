@@ -1,8 +1,6 @@
 ---
 title: Window.sessionStorage
 slug: Web/API/Window/sessionStorage
-tags:
-  - API
 translation_of: Web/API/Window/sessionStorage
 ---
 

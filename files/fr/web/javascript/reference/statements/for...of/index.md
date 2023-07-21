@@ -1,13 +1,7 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
-tags:
-  - ECMAScript 2015
-  - Instruction
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Statements/for...of
-original_slug: Web/JavaScript/Reference/Instructions/for...of
 ---
 
 {{jsSidebar("Statements")}}

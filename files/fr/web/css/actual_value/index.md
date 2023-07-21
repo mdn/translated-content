@@ -1,12 +1,7 @@
 ---
 title: Valeur réelle
 slug: Web/CSS/actual_value
-tags:
-  - CSS
-  - Guide
-  - Reference
 translation_of: Web/CSS/actual_value
-original_slug: Web/CSS/valeur_reelle
 ---
 
 {{CSSRef}}

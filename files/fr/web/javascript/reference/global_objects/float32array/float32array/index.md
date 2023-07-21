@@ -2,7 +2,6 @@
 title: Constructeur Float32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
 translation_of: Web/JavaScript/Reference/Global_Objects/Float32Array/Float32Array
-browser-compat: javascript.builtins.Float32Array.Float32Array
 ---
 
 {{JSRef}}

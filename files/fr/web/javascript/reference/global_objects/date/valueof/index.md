@@ -1,14 +1,7 @@
 ---
 title: Date.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/valueOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/valueOF
 ---
 
 {{JSRef}}

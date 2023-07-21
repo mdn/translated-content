@@ -1,10 +1,7 @@
 ---
 title: caches
 slug: Web/API/caches
-page-type: web-api-global-property
 translation_of: Web/API/caches
-original_slug: Web/API/WindowOrWorkerGlobalScope/caches
-browser-compat: api.caches
 ---
 
 {{APIRef()}}{{SeeCompatTable}}

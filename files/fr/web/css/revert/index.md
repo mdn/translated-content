@@ -1,11 +1,6 @@
 ---
 title: revert
 slug: Web/CSS/revert
-tags:
-  - CSS
-  - Cascade
-  - Mot-clé
-  - Reference
 translation_of: Web/CSS/revert
 ---
 

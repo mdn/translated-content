@@ -1,12 +1,7 @@
 ---
 title: Propriétés logiques pour les marges, les bordures et les remplissages
 slug: Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
-tags:
-  - CSS
-  - Guide
-  - Propriété logique
 translation_of: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
-original_slug: Web/CSS/CSS_Logical_Properties/Margins_borders_padding
 ---
 
 {{CSSRef}}

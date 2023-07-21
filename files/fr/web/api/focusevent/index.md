@@ -1,12 +1,6 @@
 ---
 title: FocusEvent
 slug: Web/API/FocusEvent
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Focus
-  - Interface
 translation_of: Web/API/FocusEvent
 ---
 

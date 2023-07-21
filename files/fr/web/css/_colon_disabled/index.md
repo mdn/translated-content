@@ -1,10 +1,6 @@
 ---
 title: ':disabled'
 slug: Web/CSS/:disabled
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:disabled
 ---
 

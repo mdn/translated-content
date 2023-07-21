@@ -2,7 +2,6 @@
 title: DOMTokenList.toggle()
 slug: Web/API/DOMTokenList/toggle
 translation_of: Web/API/DOMTokenList/toggle
-browser-compat: api.DOMTokenList.toggle
 ---
 
 {{APIRef("DOM")}}

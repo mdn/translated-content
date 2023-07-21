@@ -1,12 +1,7 @@
 ---
 title: Instructions
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - Reference
-  - statements
 translation_of: Web/JavaScript/Reference/Statements
-original_slug: Web/JavaScript/Reference/Instructions
 ---
 
 {{jsSidebar("Statements")}}

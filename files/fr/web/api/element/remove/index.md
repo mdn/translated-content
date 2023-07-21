@@ -2,7 +2,6 @@
 title: Element.remove()
 slug: Web/API/Element/remove
 translation_of: Web/API/Element/remove
-browser-compat: api.Element.remove
 ---
 
 {{APIRef("DOM")}}

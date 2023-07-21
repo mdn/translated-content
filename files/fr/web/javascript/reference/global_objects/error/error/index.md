@@ -2,7 +2,6 @@
 title: Constructeur Error()
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/Error
-browser-compat: javascript.builtins.Error.Error
 ---
 
 {{JSRef}}

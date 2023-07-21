@@ -2,8 +2,6 @@
 title: TypedArray.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleString
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/toLocaleString
-browser-compat: javascript.builtins.TypedArray.toLocaleString
 ---
 
 {{JSRef}}

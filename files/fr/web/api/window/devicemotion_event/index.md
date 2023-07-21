@@ -2,7 +2,6 @@
 title: 'Window: devicemotion event'
 slug: Web/API/Window/devicemotion_event
 translation_of: Web/API/Window/devicemotion_event
-browser-compat: api.Window.devicemotion_event
 ---
 
 {{APIRef}}

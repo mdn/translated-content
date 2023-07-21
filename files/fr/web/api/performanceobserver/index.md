@@ -1,14 +1,6 @@
 ---
 title: PerformanceObserver
 slug: Web/API/PerformanceObserver
-tags:
-  - API
-  - Interface
-  - Performance Observer API
-  - PerformanceObserver
-  - Reference
-  - Performance Web
-  - observers
 translation_of: Web/API/PerformanceObserver
 ---
 

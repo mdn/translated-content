@@ -1,16 +1,6 @@
 ---
 title: Client
 slug: Web/API/Client
-tags:
-  - API
-  - Client
-  - Experimental
-  - Interface
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorkerClient
-  - ServiceWorkers
 translation_of: Web/API/Client
 ---
 

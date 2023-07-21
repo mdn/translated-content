@@ -1,14 +1,7 @@
 ---
 title: Math.atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/atanh
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/atanh
 ---
 
 {{JSRef}}

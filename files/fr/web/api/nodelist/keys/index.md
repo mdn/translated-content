@@ -1,12 +1,6 @@
 ---
 title: NodeList.keys()
 slug: Web/API/NodeList/keys
-tags:
-  - API
-  - DOM
-  - Liste
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/NodeList/keys
 ---
 

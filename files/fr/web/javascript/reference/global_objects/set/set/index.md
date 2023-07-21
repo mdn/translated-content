@@ -2,7 +2,6 @@
 title: Constructeur Set()
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/Set
-browser-compat: javascript.builtins.Set.Set
 ---
 
 {{JSRef}}

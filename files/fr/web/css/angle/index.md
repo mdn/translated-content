@@ -1,10 +1,6 @@
 ---
 title: <angle>
 slug: Web/CSS/angle
-tags:
-  - CSS
-  - Reference
-  - Type
 translation_of: Web/CSS/angle
 ---
 

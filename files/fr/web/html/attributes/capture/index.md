@@ -1,13 +1,6 @@
 ---
 title: 'Attribut HTML : capture'
 slug: Web/HTML/Attributes/capture
-tags:
-  - API
-  - Attribute
-  - Attributes
-  - Capture
-  - Constraint validation
-  - HTML
 translation_of: Web/HTML/Attributes/capture
 ---
 

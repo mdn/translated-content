@@ -1,13 +1,6 @@
 ---
 title: Document.location
 slug: Web/API/Document/location
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Propriété
-  - Reference
-  - lecture seule
 translation_of: Web/API/Document/location
 ---
 

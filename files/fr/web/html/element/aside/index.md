@@ -1,18 +1,7 @@
 ---
 title: '<aside> : l''élément aparté'
 slug: Web/HTML/Element/aside
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - HTML5
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Sectioning content
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/aside
-browser-compat: html.elements.aside
 ---
 
 {{HTMLSidebar}}

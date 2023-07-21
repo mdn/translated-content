@@ -2,7 +2,6 @@
 title: Utilisation de l'API Notifications
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 translation_of: Web/API/Notifications_API/Using_the_Notifications_API
-original_slug: Web/API/notification/Using_Web_Notifications
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

@@ -1,13 +1,6 @@
 ---
 title: NodeList.values()
 slug: Web/API/NodeList/values
-tags:
-  - API
-  - DOM
-  - Itérateur
-  - Liste
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/NodeList/values
 ---
 

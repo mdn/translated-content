@@ -1,10 +1,6 @@
 ---
 title: '@supports'
 slug: Web/CSS/@supports
-tags:
-  - CSS
-  - Reference
-  - Règle @
 translation_of: Web/CSS/@supports
 ---
 

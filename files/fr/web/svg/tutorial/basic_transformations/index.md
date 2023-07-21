@@ -1,12 +1,7 @@
 ---
 title: Transformations de base
 slug: Web/SVG/Tutorial/Basic_Transformations
-tags:
-  - Intermediate
-  - SVG
-  - SVG:Tutoriel
 translation_of: Web/SVG/Tutorial/Basic_Transformations
-original_slug: Web/SVG/Tutoriel/Transformations_de_base
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/Texts", "Web/SVG/Tutoriel/Découpages_et_masquages") }}

@@ -2,7 +2,6 @@
 title: font-weight
 slug: Web/CSS/font-weight
 translation_of: Web/CSS/font-weight
-browser-compat: css.properties.font-weight
 ---
 
 {{CSSRef}}

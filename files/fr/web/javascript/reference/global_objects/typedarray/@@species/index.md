@@ -1,15 +1,7 @@
 ---
 title: get TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
-tags:
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/@@species
 ---
 
 {{JSRef}}

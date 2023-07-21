@@ -2,7 +2,6 @@
 title: AudioListener
 slug: Web/API/AudioListener
 translation_of: Web/API/AudioListener
-browser-compat: api.AudioListener
 ---
 
 {{APIRef("Web Audio API")}}

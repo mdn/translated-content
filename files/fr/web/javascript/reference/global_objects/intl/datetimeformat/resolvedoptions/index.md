@@ -1,17 +1,7 @@
 ---
 title: Intl.DateTimeFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
-tags:
-  - DateTimeFormat
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/resolvedOptions
 ---
 
 {{JSRef}}

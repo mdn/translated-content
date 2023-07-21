@@ -1,14 +1,6 @@
 ---
 title: DeviceMotionEvent.accelerationIncludingGravity
 slug: Web/API/DeviceMotionEvent/accelerationIncludingGravity
-tags:
-  - API
-  - Appareil
-  - Mobile
-  - Mouvement
-  - Orientation
-  - Propriétés
-  - axes
 translation_of: Web/API/DeviceMotionEvent/accelerationIncludingGravity
 ---
 

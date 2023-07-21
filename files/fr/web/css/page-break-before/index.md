@@ -1,10 +1,6 @@
 ---
 title: page-break-before
 slug: Web/CSS/page-break-before
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/page-break-before
 ---
 

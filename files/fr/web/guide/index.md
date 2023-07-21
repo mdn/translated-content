@@ -1,10 +1,6 @@
 ---
 title: Guides pour les développeurs du Web
 slug: Web/Guide
-tags:
-  - Guide
-  - Landing
-  - Web
 translation_of: Web/Guide
 ---
 

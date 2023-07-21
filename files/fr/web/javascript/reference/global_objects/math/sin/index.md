@@ -1,13 +1,7 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/sin
 ---
 
 {{JSRef}}

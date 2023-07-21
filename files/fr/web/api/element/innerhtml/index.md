@@ -1,14 +1,7 @@
 ---
 title: element.innerHTML
 slug: Web/API/Element/innerHTML
-tags:
-  - API
-  - DOM
-  - Elements
-  - HTML
-  - Propriétés
 translation_of: Web/API/Element/innerHTML
-original_slug: Web/API/Element/innertHTML
 ---
 
 {{APIRef("DOM")}}

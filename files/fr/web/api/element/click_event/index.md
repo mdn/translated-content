@@ -1,12 +1,6 @@
 ---
 title: 'Element : évènement click'
 slug: Web/API/Element/click_event
-tags:
-  - API
-  - DOM
-  - Element
-  - Reference
-  - click
 translation_of: Web/API/Element/click_event
 ---
 

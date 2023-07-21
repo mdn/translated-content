@@ -2,8 +2,6 @@
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
 translation_of: Web/JavaScript/Reference/Global_Objects/Map
-original_slug: Web/JavaScript/Reference/Global_Objects/Map
-browser-compat: javascript.builtins.Map
 ---
 
 {{JSRef}}

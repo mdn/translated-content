@@ -1,12 +1,6 @@
 ---
 title: Event.target
 slug: Web/API/Event/target
-tags:
-  - API
-  - Cible
-  - DOM
-  - Evènement
-  - Propriétés
 translation_of: Web/API/Event/target
 ---
 

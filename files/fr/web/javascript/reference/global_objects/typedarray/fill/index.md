@@ -1,16 +1,7 @@
 ---
 title: TypedArray.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/fill
 ---
 
 {{JSRef}}

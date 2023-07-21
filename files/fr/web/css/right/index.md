@@ -1,10 +1,6 @@
 ---
 title: right
 slug: Web/CSS/right
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/right
 ---
 

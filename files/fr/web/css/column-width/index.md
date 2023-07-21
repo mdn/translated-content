@@ -1,10 +1,6 @@
 ---
 title: column-width
 slug: Web/CSS/column-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/column-width
 ---
 

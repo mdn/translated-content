@@ -1,13 +1,7 @@
 ---
 title: Métaprogrammation
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - Guide
-  - JavaScript
-  - Proxy
-  - Reflect
 translation_of: Web/JavaScript/Guide/Meta_programming
-original_slug: Web/JavaScript/Guide/Métaprogrammation
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/iterateurs_et_generateurs","Web/JavaScript/Guide/Modules")}}
