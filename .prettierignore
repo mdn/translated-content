@@ -34,7 +34,6 @@ build/
 
 # fr
 /files/fr/learn/css/**/*.md
-/files/fr/learn/html/**/*.md
 /files/fr/learn/javascript/**/*.md
 /files/fr/learn/server-side/**/*.md
 /files/fr/mozilla/add-ons/webextensions/api/**/*.md
