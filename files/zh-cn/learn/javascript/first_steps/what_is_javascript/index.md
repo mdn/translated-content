@@ -74,7 +74,7 @@ function updateName() {
 
 {{ EmbedLiveSample('高层定义', '100%', 80) }}
 
-尝试点击最后一个版本的文本标签，观察会发生什么（也可在 GitHub 上查看这个 demo 的 [源代码](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html)或[在线运行它](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)）！
+尝试点击最后一个版本的文本标签，观察会发生什么（也可在 GitHub 上查看这个演示的[源代码](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/javascript-label.html)或[在线运行它](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)）！
 
 JavaScript 能做的远不止这些。让我们来仔细探索。
 
