@@ -32,13 +32,21 @@ JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复
 
 这三层依次建立，秩序井然。以文本标签 (text label) 的简单示例。
 
+### 使用HTML标记文本
+
 首先用 HTML 将文本标记起来，从而赋予它结构和目的：
 
 ```html
 <p>玩家 1：小明</p>
 ```
 
-玩家 1：小明
+{{ EmbedLiveSample('使用HTML标记文本', '100%', 80) }}
+
+### 添加CSS
+
+```html hidden
+<p>玩家 1：小明</p>
+```
 
 然后我们可以为它加一点 CSS 让它更好看：
 
@@ -59,7 +67,30 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('广义的定义', '100%', 80) }}
+{{ EmbedLiveSample('添加CSS', '100%', 80) }}
+
+### 添加JavaScript
+
+```html hidden
+<p>玩家 1：小明</p>
+```
+
+```css hidden
+p {
+  font-family: sans-serif, '黑体';
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid rgba(0, 0, 200, 0.6);
+  background: rgba(0, 0, 200, 0.3);
+  color: rgba(0, 0, 200, 0.6);
+  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+  border-radius: 10px;
+  padding: 3px 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+```
 
 最后，我们可以再加上一些 JavaScript 来实现动态行为：
 
@@ -74,7 +105,7 @@ function updateName() {
 }
 ```
 
-{{ EmbedLiveSample('广义的定义', '100%', 80) }}
+{{ EmbedLiveSample('添加JavaScript', '100%', 80) }}
 
 尝试点击最后一个版本的文本标签，观察会发生什么（也可在 GitHub 上查看这个 demo 的 [源代码](https://github.com/roy-tian/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html) 或 [在线运行](https://roy-tian.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)。）
 
