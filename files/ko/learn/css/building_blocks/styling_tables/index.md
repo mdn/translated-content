@@ -84,8 +84,8 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
 표 예제를 함께 스타일링 해 봅시다.
 
 1. 시작하려면, [sample markup](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/punk-bands-unstyled.html) 의 로컬 사본을 만들고 두 이미지 ([노이즈](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/noise.png) 및 [표범가죽](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/styling-tables/leopardskin.jpg)) 를 모두 다운로드한 다음, 세 개의 결과 파일을 로컬 컴퓨터의 작업 디렉토리에 넣습니다.
-2. 다음으로, `style.css` 라는 새 파일을 만들고 다른 파일과 같은 디렉토리에 저장하십시오.
-3. {{htmlelement("head")}} 안에 다음 HTML 행을 배치하여 CSS 를 HTML 에 연결하십시오:
+2. 다음으로, `style.css` 라는 새 파일을 만들고 다른 파일과 같은 디렉토리에 저장하세요.
+3. {{htmlelement("head")}} 안에 다음 HTML 행을 배치하여 CSS 를 HTML 에 연결하세요.
 
     ```html
     <link href="style.css" rel="stylesheet" type="text/css">
@@ -93,7 +93,7 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
 
 ### 간격 및 레이아웃
 
-가장 먼저 해야할 일은 간격/레이아웃을 정렬하는 것입니다 — 기본 표 스타일은 너무 비좁습니다! 이렇게 하려면, `style.css` 파일에 다음 CSS 를 추가하십시오:
+가장 먼저 해야할 일은 간격/레이아웃을 정렬하는 것입니다 — 기본 표 스타일은 너무 비좁습니다! 이렇게 하려면, `style.css` 파일에 다음 CSS 를 추가하세요.
 
 ```css
 /* 간격 */
@@ -146,13 +146,13 @@ th, td {
 
 우선, [Google Fonts](https://www.google.com/fonts) 에서 펑크 밴드 관련 표에 적합한 글꼴을 찾았습니다. 원하는 경우 거기에 가서 다른 것을 찾을 수 있습니다. 제공된 {{htmlelement("link")}} 요소 및 custom {{cssxref("font-family")}} 선언을 Google Fonts 에서 제공하는 선언으로 바꾸면 됩니다.
 
-먼저, 다음 {{htmlelement("link")}} 요소를 기존 `<link>` 요소 바로 위의 HTML head 에 추가하십시오:
+먼저, 다음 {{htmlelement("link")}} 요소를 기존 `<link>` 요소 바로 위의 HTML head 에 추가하세요.
 
 ```html
 <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 ```
 
-이제 이전 CSS 아래의 `style.css` 파일에, 다음 CSS 를 추가하십시오:
+이제 이전 CSS 아래의 `style.css` 파일에, 다음 CSS 를 추가하세요.
 
 ```css
 /* typography */
@@ -195,9 +195,9 @@ tfoot th {
 
 ### 그래픽 과 색상
 
-이제 그래픽과 색상으로 넘어가겠습니다! 표에는 punk and attitude 가 가득하기 때문에, 밝은 인상적인 스타일링을 제공해야합니다. 걱정하지 마십시오. 표를 크게 만들 필요는 없습니다 — 더 미묘하고 세련된 것을 선택할 수 있습니다.
+이제 그래픽과 색상으로 넘어가겠습니다! 표에는 punk and attitude 가 가득하기 때문에, 밝은 인상적인 스타일링을 제공해야합니다. 걱정하지 마세요. 표를 크게 만들 필요는 없습니다 — 더 미묘하고 세련된 것을 선택할 수 있습니다.
 
-아래에서 다시 CSS 를 `style.css` 파일에 추가하고, 다시 시작하십시오:
+아래에서 다시 CSS 를 `style.css` 파일에 추가하고, 다시 시작하세요.
 
 ```css
 thead, tfoot {
@@ -220,7 +220,7 @@ thead th, tfoot th, tfoot td {
 
 #### 얼룩말 줄무늬 (Zebra striping)
 
-우리는 표의 다른 데이터 행을 더 쉽게 구문 분석하고 읽을 수 있도록 번갈아 가며 **zebra stripes** 를 구현하는 방법을 보여주기 위해 별도의 섹션을 제공하고자 했습니다. `style.css` 파일의 맨 아래에 다름 CSS 를 추가하십시오:
+우리는 표의 다른 데이터 행을 더 쉽게 구문 분석하고 읽을 수 있도록 번갈아 가며 **zebra stripes** 를 구현하는 방법을 보여주기 위해 별도의 섹션을 제공하고자 했습니다. `style.css` 파일의 맨 아래에 다름 CSS 를 추가하세요.
 
 ```css
 tbody tr:nth-child(odd) {
@@ -252,7 +252,7 @@ table {
 
 ### caption 스타일링
 
-표와 관련하여 마지막으로 해야할 일이 있습니다 — caption 에 스타일을 지정하는 일입니다. 이렇게 하려면, `style.css` 파일의 맨 아래에 다름을 추가하십시오:
+표와 관련하여 마지막으로 해야할 일이 있습니다 — caption 에 스타일을 지정하는 일입니다. 이렇게 하려면, `style.css` 파일의 맨 아래에 다름을 추가하세요.
 
 ```css
 caption {
@@ -272,18 +272,18 @@ caption {
 
 ## 적극적인 학습: 나만의 표 스타일
 
-이 시점에서 표 HTML 예제 (또는 일부를 사용하십시오!) 를 가져와서 표보다 훨씬 더 나은 디자인과 장식을 갖도록 스타일을 지정하고 싶습니다.
+이 시점에서 표 HTML 예제 (또는 일부를 사용하세요!) 를 가져와서 표보다 훨씬 더 나은 디자인과 장식을 갖도록 스타일을 지정하고 싶습니다.
 
 ## 표 스타일링 빠르게 하는 팁
 
 다음 단계로 넘어가지 전에, 위에서 설명한 가장 유용한 요점에 대한 간단한 목록을 제공해야 한다고 생각했습니다:
 
-- 표 마크 업을 가능한 한 간단하게 만들고, 유연한 작업을 유지하십시오 예: 백분유을 사용하여 디자인의 반응속도를 향상시킵니다.
+- 표 마크 업을 가능한 한 간단하게 만들고, 유연한 작업을 유지하세요 예: 백분유을 사용하여 디자인의 반응속도를 향상시킵니다.
 - {{cssxref("table-layout")}}`: fixed` 를 사용하여 제목 ({{htmlelement("th")}}) 에서 {{cssxref("width")}} 를 설정하여 열 너비를 쉽게 설정할 수 있는 예측 가능한 표 레이아웃을 작성합니다.
 - {{cssxref("border-collapse")}}`: collapse` 를 사용하여 표 요소 테두리를 서로 접어서 깔끔하게 만들 수 있습니다.
-- {{htmlelement("thead")}}, {{htmlelement("tbody")}} 및 {{htmlelement("tfoot")}} 를 사용하여 표를 논리적 덩어리로 나누고 CSS 를 적용할 추가 위치를 제공하십시오. 필요한 경우 서로 위에 스타일을 더 쉽게 레이어할 수 있습니다.
+- {{htmlelement("thead")}}, {{htmlelement("tbody")}} 및 {{htmlelement("tfoot")}} 를 사용하여 표를 논리적 덩어리로 나누고 CSS 를 적용할 추가 위치를 제공하세요. 필요한 경우 서로 위에 스타일을 더 쉽게 레이어할 수 있습니다.
 - alternative 행을 읽기 쉽게 하려면 얼룩말 줄무늬를 사용합니다.
-- {{cssxref("text-align")}} 을 사용하여 {{htmlelement("th")}} 및 {{htmlelement("td")}} 텍스트를 정렬하여, 더 깜끔하고 쉽게 따라할 수 있도록 하십시오.
+- {{cssxref("text-align")}} 을 사용하여 {{htmlelement("th")}} 및 {{htmlelement("td")}} 텍스트를 정렬하여, 더 깜끔하고 쉽게 따라할 수 있도록 하세요.
 
 ## 요약
 
