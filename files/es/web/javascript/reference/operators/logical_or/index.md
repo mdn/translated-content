@@ -40,7 +40,7 @@ La expresión lógica OR es evaluada de izquierda a derecha, es posible una eval
 
 <code>(alguna expresión _truthy_) || expresión</code> es evaluada por cortocircuito (_short-circuit_) a la expresión _truthy_.
 
-Cortocircuito (_Short-circuit_) significa que la parte de la `expresión` de arriba **no es evaluada**, por lo que ningún efecto secundario resultante de ella es realizado (por ejemplo, si la `expresión` es una llamada a una función, la llamada nunca es realizada). Esto ocurre porque el valor del oprador ya está determinado después de la evaluación del primer operando. Veamos un ejemplo:
+Cortocircuito (_Short-circuit_) significa que la parte de la `expresión` de arriba **no es evaluada**, por lo que ningún efecto secundario resultante de ella es realizado (por ejemplo, si la `expresión` es una llamada a una función, la llamada nunca es realizada). Esto ocurre porque el valor del operador ya está determinado después de la evaluación del primer operando. Veamos un ejemplo:
 
 ```js
 function A() {
