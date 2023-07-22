@@ -99,7 +99,7 @@ function handleFirstPlay(event) {
 
     vid.onplay = null;
 
-  // 再生が開始された後に行う必要があるものをすべて開始する。
+    // 再生が開始された後に行う必要があるものをすべて開始する。
   }
 }
 ```
