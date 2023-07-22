@@ -246,19 +246,19 @@ OK、プロジェクトの初期設定を済ませましょう。
 
    これにより、デフォルトの `package.json` ファイルが作成され、必要に応じて後で構成できます。 `--force` フラグを指定すると、コマンドは (前に見たように) どのようなコンテンツを含めるかについての通常の質問を一切せずに、デフォルトの `package.json` ファイルを即座に作成します。 現時点ではデフォルトのみが必要なので、これにより時間を少し節約できます。
 
-#### Getting the project code files
+#### プロジェクトコードファイルの取得
 
-At this point, we'll get hold of the project's code files (HTML, CSS, JavaScript, etc.), and put them in our `src` directory. We won't teach you how they work, as that is not the point of this chapter. They are merely here to run the tools on, to teach you about how _they_ work.
+この時点で、プロジェクトのコードファイル (HTML、CSS、JavaScript など) を取得し、 `src` ディレクトリに置きます。この章の目的ではないので、これらのファイルがどのように機能するかについては説明しません。 この章では、ツールがどのように動作するのかを教えるために、単にツールを動作させるためのものです。
 
-1. To get hold of the code files, visit <https://github.com/remy/mdn-will-it-miss> and download and unzip the contents of this repo onto your local drive somewhere. You can download the entire project as a zip file by selecting _Clone or download_ > _Download ZIP_.
+1. コード・ファイルを入手するには、<https://github.com/remy/mdn-will-it-miss> にアクセスし、このリポジトリの内容をローカル ドライブのどこかにダウンロードして解凍します。 _Clone or download_ > _Download ZIP_　を選択すると、プロジェクト全体を zip ファイルとしてダウンロードできます。
 
    ![The GitHub will it miss repo](github-will-it-miss.png)
 
-2. Now copy the contents of the project's `src` directory to your currently empty `src` directory.
+2. プロジェクトの `src` ディレクトリの内容を、現在空の `src` ディレクトリにコピーします。
 
-We have our project files in place. That's all we need to do for now!
+これでプロジェクトのファイルが揃いました。これでとりあえずは完了です！
 
-> **Note:** To set up the project on your local machine, go to the root directory of the unzipped folder, open a terminal in that location, and execute the `npm install` command in the terminal. This will install all project dependencies that are mentioned in the `package.json` file.
+> **メモ:** ローカルマシンでプロジェクトをセットアップするには、解凍したフォルダーのルートディレクトリに移動し、その場所でターミナルを開き、ターミナルで `npm install` コマンドを実行する。これにより、 `package.json` ファイルに記載されているプロジェクトの依存関係がすべてインストールされます。
 
 #### Installing our tools
 
