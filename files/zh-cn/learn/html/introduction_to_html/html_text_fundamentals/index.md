@@ -273,9 +273,12 @@ textarea.onkeyup = function () {
 
 每份无序的清单从 {{htmlelement("ul")}} 元素开始，需要包裹清单上所有被列出的项目：
 
-```html
+```html-nolint
 <ul>
-  豆浆 油条 豆汁 焦圈
+  豆浆
+  油条
+  豆汁
+  焦圈
 </ul>
 ```
 
