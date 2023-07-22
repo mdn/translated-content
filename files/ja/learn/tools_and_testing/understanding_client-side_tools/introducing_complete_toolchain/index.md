@@ -112,25 +112,25 @@ l10n:
 
 npm は、ツールチェーンの後続の部分をインストールするために使用されます。 ただし、まず最初に、リビジョン管理を支援するために git をインストールします。
 
-### Code revision control
+### コードリビジョン管理
 
-It's possible you've heard of "git" before. [Git](https://git-scm.com/) is currently the most popular source code revision control tool available to developers — revision control provides many advantages, such as a way to backup your work in a remote place, and a mechanism to work in a team on the same project without fear of overwriting each other's code.
+「git」について聞いたことがあるかもしれません。 [Git](https://git-scm.com/) は現在、開発者が利用できる最も人気のあるソースコードのリビジョン管理ツールです。リビジョン管理には、作業内容を遠隔地にバックアップする方法や、互いのコードを上書きすることを恐れずに同じプロジェクトでチームで作業するメカニズムなど、多くの利点があります。
 
-It might be obvious to some, but it bears repeating: Git is not the same thing as GitHub. Git is the revision control tool, whereas [GitHub](https://github.com/) is an online store for git repositories (plus a number of useful tools for working with them). Note that, although we're using GitHub in this chapter, there are several alternatives including [GitLab](https://about.gitlab.com/) and [Bitbucket](https://www.atlassian.com/software/bitbucket), and you could even host your own git repositories.
+当たり前のことかもしれないが、繰り返す伝える必要があります。Git は GitHub と同じではありません。 Git はリビジョン管理ツールですが、 [GitHub](https://github.com/) は git リポジトリ (およびそれらを操作するための便利なツール) のオンラインストアです。 この章では GitHub を使用していますが、 [GitLab](https://about.gitlab.com/) や [Bitbucket](https://www.atlassian.com/software/bitbucket) などの代替手段がいくつかあり、独自の Git リポジトリをホストすることもできます。
 
-Using revision control in your projects and including it as part of the toolchain will help manage the evolution of your code. It offers a way to "commit" blocks of work as you progress, along with comments such as "X new feature implemented", or "Bug Z now fixed due to Y changes".
+プロジェクトでリビジョン管理を使用し、ツールチェーンの一部として組み込むことは、コードの進化を管理するのに役立ちます。 これは、「X 個の新機能が実装されました」または「Y 個の変更によりバグ Z が修正されました」などのコメントとともに、作業の進行に合わせて作業ブロックを「コミット」する方法を提供します。
 
-Revision control can also allow you to _branch_ out your project code, creating a separate version, and trying out new functionality on, without those changes affecting your original code.
+リビジョン管理を使用すると、変更が元のコードに影響を与えることなく、プロジェクトコードを「分岐」して別のバージョンを作成し、新しい機能を試すこともできます。
 
-Finally, it can help you undo changes or revert your code back to a time "when it was working" if a mistake has been introduced somewhere and you are having trouble fixing it — something all developers need to do once in a while!
+最後に、どこかに間違いが生じて修正が困難な場合に、変更を元に戻したり、コードを「動作していたとき」の状態に戻したりするのに役立ちます。これはすべての開発者が時々行う必要があります。
 
-Git can be [downloaded and installed via the git-scm website](https://git-scm.com/downloads) — download the relevant installer for your system, run it, and follow the on-screen prompts. This is all you need to do for now.
+Git は [git-scm をウェブサイトからダウンロードしてインストールする](https://git-scm.com/downloads)ことができます。あなたのシステムに合ったインストーラーをダウンロードして実行し、画面の指示に従ってください。今のところ、必要なことはこれだけです。
 
-You can interact with git in a number of different ways, from using the command line to issue commands, to using a [git GUI app](https://git-scm.com/downloads/guis) to issue the same commands by pushing buttons, or even from directly inside your code editor, as seen in the Visual Studio Code example below:
+コマンドラインを使ってコマンドを発行したり、[git GUIアプリ](https://git-scm.com/downloads/guis) を使ってボタンを押すことで同じコマンドを発行したり、あるいは以下の Visual Studio Code の例にあるように、コードエディターの中から直接操作したりと、さまざまな方法でgitと対話することができます。
 
 ![GitHub integration shown in VS Code](vscode-git.png)
 
-Anyway, installing git is all we need to do for now. Let's move on.
+とにかく、今のところやるべきことは git をインストールすることだけです。 次へ移りましょう。
 
 ### Code tidying tools
 
