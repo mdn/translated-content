@@ -14,9 +14,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var zooming = browser.tabs.setZoom(
-  tabId,           // optional integer
-  zoomFactor       // number
-)
+  tabId, // optional integer
+  zoomFactor, // number
+);
 ```
 
 ### Paramètres
