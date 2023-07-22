@@ -164,7 +164,7 @@ prettier --write ./src/index.html
 - 特別な「git hooks」を使用して、コミット前にコードがフォーマットされているかどうかをテストします。
 - コードエディタープラグインを使用して、ファイルが保存されるたびに Prettier コマンドを実行します。
 
-> **メモ:** git フックとは何ですか? Git (GitHub ではありません) は、git で実行するタスク (コードのコミットなど) にプレアクションとポストアクションを付加できるシステムを提供します。 git hooks は (この著者の意見では) 少し複雑すぎるかもしれませんが、一度導入すると非常に強力になります。 hooks の使用に興味がある場合は、 [Husky](https://github.com/typicode/husky) を参照すると、 hooks を使用するためのルートが大幅に簡素化されます。
+> **メモ:** git hooks とは何ですか? Git (GitHub ではありません) は、git で実行するタスク (コードのコミットなど) にプレアクションとポストアクションを付加できるシステムを提供します。 git hooks は (この著者の意見では) 少し複雑すぎるかもしれませんが、一度導入すると非常に強力になります。 hooks の使用に興味がある場合は、 [Husky](https://github.com/typicode/husky) を参照すると、 hooks を使用するためのルートが大幅に簡素化されます。
 
 VS Code の場合、便利な拡張機能の 1 つは [Prettier Code Formatter by Esben Petersen](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) です。これを使うと、VSCode は保存時にコードを自動的に整形してくれます。 これは、HTML、CSS、JavaScript、JSON、マークダウンなど、作業中のプロジェクト内のすべてのファイルが適切にフォーマットされることを意味します。 エディターに必要なのは、「Format On Save」を有効にすることだけです。
 
