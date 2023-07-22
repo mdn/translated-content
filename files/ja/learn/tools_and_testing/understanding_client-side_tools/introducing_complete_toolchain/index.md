@@ -52,19 +52,19 @@ l10n:
 
 上記の機能やツールが何をするものなのか、よく知らないかもしれないが、パニックにならないでください。この記事を進めながら各部分について説明します。
 
-## Toolchains and their inherent complexity
+## ツールチェーンとその固有の複雑さ
 
-As with any chain, the more links you have in your toolchain, the more complex and potentially brittle it is — for example it might be more complex to configure, and easier to break. Conversely, the fewer links, the more resilient the toolchain is likely to be.
+他のチェーンと同様にツールチェーン内のリンクが増えるほど、ツールチェーンはより複雑になり脆弱になる可能性があります。たとえば構成がより複雑になり、壊れやすくなる可能性があります。 逆にリンクが少ないほど、ツールチェーンは壊れにくくなる可能性があります。
 
-All web projects will be different, and you need to consider what parts of your toolchain are necessary and consider each part carefully.
+すべてのウェブプロジェクトは異なるため、ツールチェーンのどの部分が必要かを検討し、それぞれの部分を慎重に検討する必要があります。
 
-The smallest toolchain is one that has no links at all. You would hand code the HTML, use "vanilla JavaScript" (meaning no frameworks or intermediary languages), and manually upload it all to a server for hosting.
+最小のツールチェーンは、リンクがまったくないツールチェーンです。 HTML を手動でコーディングし、「vanilla JavaScript」 (フレームワークや中間言語を使用しないことを意味します) を使用し、それをすべて手動でサーバーにアップロードしてホスティングします。
 
-However, more complicated software requirements will likely benefit from the usage of tools to help simplify the development process. In addition, you should include tests before you deploy to your production server to ensure your software works as intended — this already sounds like a necessary toolchain.
+しかし、より複雑なソフトウェア要件の場合は、開発プロセスを簡素化するツールを使用することで恩恵を得られる可能性があります。 さらに、本番サーバーにデプロイする前にソフトウェアが意図したとおりに動作することを確認するテストを含める必要があります。これはすでに必要なツールチェーンのように思えます。
 
-For our sample project, we'll be using a toolchain specifically designed to aid our software development and support the technical choices made during the software design phase. We will however be avoiding any superfluous tooling, with the aim of keeping complexity to a minimum.
+サンプルプロジェクトではソフトウェア開発を支援し、ソフトウェア設計段階での技術的選択をサポートするために特別に設計されたツールチェーンを使用します。 ただし、複雑さを最小限に抑えることを目的としてて、余計なツールは使わないようにします。
 
-For example, we _could_ have included a tool to minimize our SVG file sizes during the build. However, this project has only 4 SVG images, which were [manually minified using SVGO](https://www.npmjs.com/package/svgo) before adding them to the project.
+例えば、ビルド中に SVG ファイルサイズを最小化するツールを組み込むこともできたかもしれません。 しかし、このプロジェクトには SVG 画像が 4 つしかなく、プロジェクトに追加する前に [SVGO を使用して手動で縮小](https://www.npmjs.com/package/svgo) しました。
 
 ## A couple of prerequisites
 
