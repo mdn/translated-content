@@ -210,41 +210,41 @@ ESLint は npm 経由でインストールされるため、第 2 章の説明�
 
 コマンドラインを使用して、プロジェクトを作成し、初期ツールをインストールし、基本的な構成ファイルを作成できます。 繰り返しになりますが、このプロセスを数回繰り返すと、デフォルトの設定がどのようなものであるかがわかるようになります。 もちろん、これは可能な構成の 1 つにすぎません。
 
-### Initial setup
+### 初期設定
 
-OK, let's get the initial project setup out of the way.
+OK、プロジェクトの初期設定を済ませましょう。
 
-1. Start off by opening your terminal, and navigating to a place that you'll be able to find and get to easily. The Desktop perhaps, or your home or documents folder?
-2. Next, run the following commands to create a folder to keep your project in, and go inside the folder:
+1. まずターミナルを開いて、見つけやすい場所に移動します。 デスクトップ、あるいはホームフォルダーやドキュメントフォルダーでしょうか?
+2. 次に、次のコマンドを実行してプロジェクトを保存するフォルダーを作成し、そのフォルダー内に移動します。
 
    ```bash
    mkdir will-it-miss
    cd will-it-miss
    ```
 
-3. Now we will create a new directory for all of our website's development code to live in. Run the following now:
+3. 次に、ウェブサイトのすべての開発コードが存在する新しいディレクトリを作成します。今すぐ次のコマンドを実行します。
 
    ```bash
    mkdir src
    ```
 
-   Code organization tends to be quite subjective from team to team. For this project, the source code will live in `src`.
+   コードの構成は、チームごとにかなり主観的なものになる傾向があります。 このプロジェクトの場合、ソース コードは `src` 内に存在します。
 
-4. Making sure you are inside the root of the `will-it-miss` directory, enter the following command to start git's source control functionality working on the directory:
+4. `will-it-miss` ディレクトリのルート内にいることを確認し、次のコマンドを入力して、ディレクトリ上で動作する git のソース管理機能を開始します。
 
    ```bash
    git init
    ```
 
-   This means that you'll now be able to start storing revisions to the folder's contents, saving it to a remote repository, etc. More on this later!
+   つまり、フォルダーの内容のリビジョンを保存したり、リモート リポジトリへの保存などを開始できることを意味します。これについては後ほど詳しく説明します！
 
-5. Next, enter the following command to turn your directory into an npm package, with the advantages that we discussed in the previous article:
+5. 次に、次のコマンドを入力して、ディレクトリを npm パッケージに変換します。これには、前の記事で説明した利点があります。
 
    ```bash
    npm init --force
    ```
 
-   This will create a default `package.json` file that we can configure later on if desired. The `--force` flag causes the command to instantly create a default `package.json` file without asking you all the usual questions about what contents you want it to have (as we saw previously). We only need the defaults for now, so this saves us a bit of time.
+   これにより、デフォルトの `package.json` ファイルが作成され、必要に応じて後で構成できます。 `--force` フラグを指定すると、コマンドは (前に見たように) どのようなコンテンツを含めるかについての通常の質問を一切せずに、デフォルトの `package.json` ファイルを即座に作成します。 現時点ではデフォルトのみが必要なので、これにより時間を少し節約できます。
 
 #### Getting the project code files
 
