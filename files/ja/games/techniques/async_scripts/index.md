@@ -18,7 +18,7 @@ slug: Games/Techniques/Async_scripts
 あるいは、スクリプトで同じことを行います。
 
 ```js
-const script = document.createElement('script');
+const script = document.createElement("script");
 script.src = "file.js";
 document.body.appendChild(script);
 ```
@@ -27,16 +27,18 @@ document.body.appendChild(script);
 
 ## 非同期とそうでない時?
 
-スクリプトが非同期で *ない* 、よく似た状況 ([仕様に定義されている](https://html.spec.whatwg.org/multipage/scripting.html)通り) では次の通りです。
+スクリプトが非同期で _ない_ 、よく似た状況 ([仕様に定義されている](https://html.spec.whatwg.org/multipage/scripting.html)通り) では次の通りです。
 
 ```html
-<script async>code</script>
+<script async>
+  code;
+</script>
 ```
 
 および
 
 ```js
-const script = document.createElement('script');
+const script = document.createElement("script");
 script.textContent = "code";
 document.body.appendChild(script);
 ```
@@ -47,7 +49,7 @@ document.body.appendChild(script);
 
 ```js
 const blob = new Blob([codeString]);
-const script = document.createElement('script');
+const script = document.createElement("script");
 const url = URL.createObjectURL(blob);
 script.onload = script.onerror = () => URL.revokeObjectURL(url);
 script.src = url;
