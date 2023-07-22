@@ -88,20 +88,21 @@ l10n:
 
 開発環境から始めて、これらに取り組みましょう。
 
-## Creating a development environment
+## 開発環境の構築
 
-This part of the toolchain is sometimes seen to be delaying the actual work, and it can be very easy to fall into a "rabbit hole" of tooling where you spend a lot of time trying to get the environment "just right".
+ツールチェーンのこの部分が実際の作業を遅らせているように見えることがあります。環境を「適切な」状態にするために多くの時間を費やすという、ツールの「ウサギの穴」にはまりやすい可能性があります。
 
-But you can look at this in the same way as setting up your physical work environment. The chair needs to be comfortable, and set up in a good position to help with your posture. You need power, Wi-Fi, and USB ports! There might be important decorations or music that help with your mental state — these are all important to do your best work possible, and they should also only need to be set up once, if done properly.
+しかし、これは物理的な作業環境を整えるのと同じように考えることができます。 椅子は快適であり、姿勢を助けるために適切な位置に設置されている必要があります。 電源、Wi-Fi、USB ポートが必要です。 あなたの精神状態を助ける重要な装飾や音楽があるかもしれません。これらはすべて、可能な限り最高の仕事をするために重要であり、適切に行われれば、セットアップは 1 回だけで済みます。
 
-In the same way, setting up your development environment, if done well, needs to be done only once and should be reusable in many future projects. You will probably want to review this part of the toolchain semi-regularly and consider if there are any upgrades or changes you should introduce, but this shouldn't be required too often.
+同様に、開発環境のセットアップは、うまくいけば、一度だけ行えばよく、将来の多くのプロジェクトで再利用できるはずです。 おそらく、ツールチェーンのこの部分を半定期的に確認し、導入すべきアップグレードや変更があるかどうかを検討することをお勧めしますが、これはあまり頻繁に行う必要はありません。
 
-Your toolchain will depend on your own needs, but for this example of a (possible) complete toolchain, the tools that will be installed up front will be:
+ツールチェーンはユーザー自身のニーズによって異なりますが、この (可能な) 完全なツールチェーンの例では、事前にインストールされるツールは次のとおりです。
 
-- Library installation tools — for adding dependencies.
-- Code revision control.
-- Code tidying tools — for tidying JavaScript, CSS, and HTML.
-- Code linting tools — for linting our code.
+- ライブラリインストールツール — 依存関係を追加するためのツール
+- コードリビジョン管理
+- コード整理ツール — JavaScript、CSS、HTML の整理
+- コード lint ツール — コードを lint するためのツール
+
 
 ### Library installation tools
 
