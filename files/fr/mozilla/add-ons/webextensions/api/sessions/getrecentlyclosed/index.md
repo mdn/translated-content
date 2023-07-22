@@ -14,8 +14,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingSessions = browser.sessions.getRecentlyClosed(
-  filter             // optional object
-)
+  filter, // optional object
+);
 ```
 
 ### Paramètres
@@ -40,7 +40,7 @@ Le code restaure la session la plus récemment fermée, qu'il s'agisse d'un ongl
 ```js
 function restoreMostRecent(sessionInfos) {
   if (!sessionInfos.length) {
-    console.log("No sessions found")
+    console.log("No sessions found");
     return;
   }
   let sessionInfo = sessionInfos[0];
@@ -55,9 +55,9 @@ function onError(error) {
   console.log(error);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var gettingSessions = browser.sessions.getRecentlyClosed({
-    maxResults: 1
+    maxResults: 1,
   });
   gettingSessions.then(restoreMostRecent, onError);
 });
