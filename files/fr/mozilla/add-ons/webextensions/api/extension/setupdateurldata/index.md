@@ -12,8 +12,8 @@ Définit les paramètres de l'URL de mise à jour de l'extension. Cette valeur e
 
 ```js
 browser.extension.setUpdateUrlData(
-  data // string
-)
+  data, // string
+);
 ```
 
 ### Paramètres
