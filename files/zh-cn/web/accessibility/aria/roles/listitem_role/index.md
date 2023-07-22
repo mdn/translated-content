@@ -3,7 +3,7 @@ title: "ARIA: listitem 角色"
 slug: Web/Accessibility/ARIA/Roles/listitem_role
 ---
 
-ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与  [`list`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/list_role) 角色结合使用，用于标识列表容器。
+ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 [`list`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/list_role) 角色结合使用，用于标识列表容器。
 
 ```html
 <section role="list">
