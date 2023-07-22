@@ -295,5 +295,5 @@ animation: 3s linear slidein, 3s ease-out 5s slideout;
 
 ## 같이 보기
 
-- [CSS 애니매이션 사용하기](/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- [CSS 애니매이션 사용하기](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API
