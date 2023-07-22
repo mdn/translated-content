@@ -1,13 +1,6 @@
 ---
 title: Clients.get()
 slug: Web/API/Clients/get
-tags:
-  - API
-  - Clients
-  - Méthode
-  - Reference
-  - Service Workers
-  - get
 translation_of: Web/API/Clients/get
 ---
 

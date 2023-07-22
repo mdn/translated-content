@@ -2,8 +2,6 @@
 title: sepia()
 slug: Web/CSS/filter-function/sepia
 translation_of: Web/CSS/filter-function/sepia()
-original_slug: Web/CSS/filter-function/sepia()
-browser-compat: css.types.filter-function.sepia
 ---
 
 {{cssref}}

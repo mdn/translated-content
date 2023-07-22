@@ -1,8 +1,7 @@
 ---
 title: WorkerGlobalScope.console
-slug: Web/API/WorkerGlobalScope/console
-l10n:
-  sourceCommit: cc1f5c3bd1a9976a0668eeee016f6afc144533b0
+slug: conflicting/Web/API/console
+original_slug: Web/API/WorkerGlobalScope/console
 ---
 
 {{APIRef("Web Workers API")}}{{Non-standard_header}}

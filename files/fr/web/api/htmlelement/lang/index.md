@@ -1,9 +1,6 @@
 ---
 title: element.lang
 slug: Web/API/HTMLElement/lang
-tags:
-  - DOM
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLElement/lang
 ---
 

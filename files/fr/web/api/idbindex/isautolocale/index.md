@@ -1,13 +1,6 @@
 ---
 title: IDBIndex.isAutoLocale
 slug: Web/API/IDBIndex/isAutoLocale
-tags:
-  - API
-  - Experimental
-  - IDBIndex
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBIndex/isAutoLocale
 ---
 

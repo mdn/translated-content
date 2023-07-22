@@ -1,12 +1,7 @@
 ---
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
-tags:
-  - JavaScript
-  - Reference
-  - URI
 translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
-original_slug: Web/JavaScript/Reference/Objets_globaux/encodeURI
 ---
 
 {{jsSidebar("Objects")}}

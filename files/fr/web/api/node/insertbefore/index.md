@@ -1,13 +1,6 @@
 ---
 title: element.insertBefore
 slug: Web/API/Node/insertBefore
-tags:
-  - API
-  - DOM
-  - Enfant
-  - Insertion
-  - Méthodes
-  - Noeud
 translation_of: Web/API/Node/insertBefore
 ---
 

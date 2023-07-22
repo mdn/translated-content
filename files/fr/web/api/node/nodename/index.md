@@ -1,12 +1,6 @@
 ---
 title: element.nodeName
 slug: Web/API/Node/nodeName
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Nom
-  - Propriété
 translation_of: Web/API/Node/nodeName
 ---
 

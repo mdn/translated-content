@@ -1,15 +1,7 @@
 ---
 title: itemid
 slug: Web/HTML/Global_attributes/itemid
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Micro-données
-  - Reference
-  - itemid
 translation_of: Web/HTML/Global_attributes/itemid
-original_slug: Web/HTML/Attributs_universels/itemid
 ---
 
 {{HTMLSidebar("Global_attributes")}}

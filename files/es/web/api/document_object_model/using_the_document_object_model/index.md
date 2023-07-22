@@ -12,13 +12,13 @@ Many HTML authors may think of HTML as something flat — a bunch of text with t
 
 ```html
 <html>
-<head>
-  <title>My Document</title>
-</head>
-<body>
-  <h1>Header</h1>
-  <p>Paragraph</p>
-</body>
+  <head>
+    <title>My Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+  </body>
 </html>
 ```
 
@@ -40,37 +40,37 @@ Suppose the author wants to take the above document and change the contents of t
 
 ```html
 <body>
-<input type="button" value="Change this document." onclick="change()">
-<h2>Header</h2>
-<p>Paragraph</p>
+  <input type="button" value="Change this document." onclick="change()" />
+  <h2>Header</h2>
+  <p>Paragraph</p>
 </body>
 ```
 
 ### JavaScript Content
 
 ```js
-  function change() {
-    // document.getElementsByTagName("H2") returns a NodeList of the <h2>
-    // elements in the document, and the first is number 0:
+function change() {
+  // document.getElementsByTagName("H2") returns a NodeList of the <h2>
+  // elements in the document, and the first is number 0:
 
-    var header = document.getElementsByTagName("H2").item(0);
-    // the firstChild of the header is a Text node:
-    header.firstChild.data = "A dynamic document";
-    // now the header is "A dynamic document".
+  var header = document.getElementsByTagName("H2").item(0);
+  // the firstChild of the header is a Text node:
+  header.firstChild.data = "A dynamic document";
+  // now the header is "A dynamic document".
 
-    var para = document.getElementsByTagName("P").item(0);
-    para.firstChild.data = "This is the first paragraph.";
+  var para = document.getElementsByTagName("P").item(0);
+  para.firstChild.data = "This is the first paragraph.";
 
-    // create a new Text node for the second paragraph
-    var newText = document.createTextNode("This is the second paragraph.");
-    // create a new Element to be the second paragraph
-    var newElement = document.createElement("P");
-    // put the text in the paragraph
-    newElement.appendChild(newText);
-    // and put the paragraph on the end of the document by appending it to
-    // the BODY (which is the parent of para)
-    para.parentNode.appendChild(newElement);
-  }
+  // create a new Text node for the second paragraph
+  var newText = document.createTextNode("This is the second paragraph.");
+  // create a new Element to be the second paragraph
+  var newElement = document.createElement("P");
+  // put the text in the paragraph
+  newElement.appendChild(newText);
+  // and put the paragraph on the end of the document by appending it to
+  // the BODY (which is the parent of para)
+  para.parentNode.appendChild(newElement);
+}
 ```
 
 {{ EmbedLiveSample('A_simple_example', 800, 300) }}

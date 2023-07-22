@@ -1,13 +1,7 @@
 ---
 title: counter()
 slug: Web/CSS/counter
-tags:
-  - CSS
-  - Compteur CSS
-  - Fonction
-  - Reference
 translation_of: Web/CSS/counter()
-original_slug: Web/CSS/counter()
 ---
 
 {{CSSRef}}

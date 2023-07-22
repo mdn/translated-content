@@ -2,7 +2,6 @@
 title: Constructeur Date()
 slug: Web/JavaScript/Reference/Global_Objects/Date/Date
 translation-of: Web/JavaScript/Reference/Global_Objects/Date/Date
-browser-compat: javascript.builtins.Date.Date
 ---
 
 {{JSRef}}

@@ -2,8 +2,6 @@
 title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/atan2
-browser-compat: javascript.builtins.Math.atan2
 ---
 
 {{JSRef}}

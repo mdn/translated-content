@@ -1,5 +1,5 @@
 ---
-title: 'MathML: 二次方程式の解の公式を導く'
+title: "MathML: 二次方程式の解の公式を導く"
 slug: Web/MathML/Examples/Deriving_the_Quadratic_Formula
 ---
 

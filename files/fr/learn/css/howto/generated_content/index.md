@@ -62,7 +62,7 @@ Cette règle ajoute un espace et une icône après chaque lien qui possède la c
 
 ```css
 a.glossary::after {
-   content: " " url("glossary-icon.gif");
+  content: " " url("glossary-icon.gif");
 }
 ```
 

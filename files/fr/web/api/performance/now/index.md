@@ -1,13 +1,6 @@
 ---
 title: performance.now()
 slug: Web/API/Performance/now
-tags:
-  - API
-  - API Performance Web
-  - Method
-  - Méthode
-  - Performance
-  - Reference
 translation_of: Web/API/Performance/now
 ---
 

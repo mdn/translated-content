@@ -1,13 +1,7 @@
 ---
 title: Math.acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/acos
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/acos
 ---
 
 {{JSRef}}

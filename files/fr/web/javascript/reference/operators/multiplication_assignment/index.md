@@ -1,13 +1,6 @@
 ---
 title: Affectation après multiplication (*=)
 slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.multiplication_assignment
 ---
 
 {{jsSidebar("Operators")}}

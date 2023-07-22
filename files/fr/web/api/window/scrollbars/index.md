@@ -1,12 +1,6 @@
 ---
 title: Window.scrollbars
 slug: Web/API/Window/scrollbars
-tags:
-  - API
-  - HTML DOM
-  - Propriété
-  - Reference
-  - Window
 translation_of: Web/API/Window/scrollbars
 ---
 

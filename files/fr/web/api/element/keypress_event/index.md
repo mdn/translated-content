@@ -2,7 +2,6 @@
 title: keypress
 slug: Web/API/Element/keypress_event
 translation_of: Web/API/Document/keypress_event
-original_slug: Web/API/Document/keypress_event
 ---
 
 {{APIRef}} {{deprecated_header}}

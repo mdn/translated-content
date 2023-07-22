@@ -2,7 +2,6 @@
 title: Opérations de glissement
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
-original_slug: Web/API/API_HTML_Drag_and_Drop/Opérations_de_glissement
 ---
 
 Ce qui suit décrit les étapes qui se déroulent lors d'un Glisser Déposer.

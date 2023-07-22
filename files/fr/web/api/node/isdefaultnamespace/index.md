@@ -1,11 +1,6 @@
 ---
 title: Node.isDefaultNamespace()
 slug: Web/API/Node/isDefaultNamespace
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/Node/isDefaultNamespace
 ---
 

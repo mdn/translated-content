@@ -2,7 +2,6 @@
 title: <input type="tel">
 slug: Web/HTML/Element/input/tel
 translation_of: Web/HTML/Element/input/tel
-browser-compat: html.elements.input.input-tel
 ---
 
 {{HTMLSidebar}}

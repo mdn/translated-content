@@ -1,7 +1,6 @@
 ---
 title: Intl.DisplayNames.prototype.of()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
-browser-compat: javascript.builtins.Intl.DisplayNames.of
 ---
 
 {{JSRef}}

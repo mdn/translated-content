@@ -1,14 +1,6 @@
 ---
 title: CacheStorage
 slug: Web/API/CacheStorage
-tags:
-  - API
-  - Cache de stockage
-  - Experimental
-  - Interface
-  - Reference
-  - Service Workers
-  - ServiceWorker
 translation_of: Web/API/CacheStorage
 ---
 

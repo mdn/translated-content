@@ -1,14 +1,7 @@
 ---
 title: Object.getOwnPropertySymbols()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols
 ---
 
 {{JSRef}}

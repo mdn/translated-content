@@ -1,13 +1,6 @@
 ---
 title: PerformanceNavigationTiming.loadEventStart
 slug: Web/API/PerformanceNavigationTiming/loadEventStart
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - PerformanceNavigationTiming
-  - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming/loadEventStart
 ---
 

@@ -1,15 +1,6 @@
 ---
 title: IDBRequest
 slug: Web/API/IDBRequest
-tags:
-  - API
-  - Database
-  - IDBRequest
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
-  - TopicStub
 translation_of: Web/API/IDBRequest
 ---
 

@@ -1,19 +1,7 @@
 ---
 title: Appliquer des couleurs sur des éléments HTML grâce à CSS
 slug: Web/CSS/CSS_colors/Applying_color
-tags:
-  - Beginner
-  - CSS
-  - CSS Colors
-  - Débutant
-  - Guide
-  - HTML
-  - HTML Colors
-  - HTML Styles
-  - Styling HTML
-  - color
 translation_of: Web/HTML/Applying_color
-original_slug: Web/HTML/Applying_color
 ---
 
 {{HTMLSidebar}}

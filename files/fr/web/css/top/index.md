@@ -1,11 +1,6 @@
 ---
 title: top
 slug: Web/CSS/top
-tags:
-  - CSS
-  - Positionnement
-  - Propriété
-  - Reference
 translation_of: Web/CSS/top
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: ServiceWorker
 slug: Web/API/ServiceWorker
-tags:
-  - API
-  - Interface
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - Workers
-  - hors-ligne
 translation_of: Web/API/ServiceWorker
 ---
 

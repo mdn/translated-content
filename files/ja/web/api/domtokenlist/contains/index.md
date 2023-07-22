@@ -1,6 +1,9 @@
 ---
-title: DOMTokenList.contains()
+title: "DOMTokenList: contains() メソッド"
+short-title: contains()
 slug: Web/API/DOMTokenList/contains
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
@@ -9,8 +12,8 @@ slug: Web/API/DOMTokenList/contains
 
 ## 構文
 
-```js
-contains(token);
+```js-nolint
+contains(token)
 ```
 
 ## 引数
@@ -36,12 +39,9 @@ contains(token);
 
 ```js
 const span = document.querySelector("span");
-const classes = span.classList;
-if (classes.contains("c")) {
-  span.textContent = "classList に 'c' が含まれています";
-} else {
-  span.textContent = "classList に 'c' が含まれていません";
-}
+span.textContent = span.classList.contains("c")
+  ? "classList に 'c' が含まれています"
+  : "classList に 'c' が含まれていません";
 ```
 
 出力結果は以下のようになります。

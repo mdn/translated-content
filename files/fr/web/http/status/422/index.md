@@ -19,7 +19,3 @@ Le code de statut de réponse HTTP **`422 Unprocessable Entity`** indique que le
 ## Spécifications
 
 {{Specifications}}
-
-## Compatibilité des navigateurs
-
-{{Compat}}

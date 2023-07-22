@@ -1,9 +1,7 @@
 ---
 title: BroadcastChannel.name
 slug: Web/API/BroadcastChannel/name
-page-type: web-api-instance-property
 translation_of: Web/API/BroadcastChannel/name
-browser-compat: api.BroadcastChannel.name
 l10n:
   sourceCommit: c80b15ae2fe8b65c1a68264df72323986b2750b2
 ---

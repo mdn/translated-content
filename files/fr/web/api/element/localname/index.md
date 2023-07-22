@@ -1,14 +1,6 @@
 ---
 title: Element.localName
 slug: Web/API/Element/localName
-tags:
-  - API
-  - DOM
-  - Element
-  - Nom
-  - Propriétés
-  - XML
-  - local
 translation_of: Web/API/Element/localName
 ---
 

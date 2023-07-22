@@ -1,12 +1,6 @@
 ---
 title: Window.postMessage
 slug: Web/API/Window/postMessage
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
-  - postMessage
 translation_of: Web/API/Window/postMessage
 ---
 

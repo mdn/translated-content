@@ -1,13 +1,6 @@
 ---
 title: 'Element : évènement dblclick'
 slug: Web/API/Element/dblclick_event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - Reference
-  - dblclick
 translation_of: Web/API/Element/dblclick_event
 ---
 

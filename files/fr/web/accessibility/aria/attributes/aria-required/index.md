@@ -2,7 +2,6 @@
 title: aria-required
 slug: Web/Accessibility/ARIA/Attributes/aria-required
 translation_of: Web/Accessibility/ARIA/Attributes/aria-required
-spec-urls: https://w3c.github.io/aria/#aria-required
 ---
 
 L'attribut `aria-required` indique qu'une saisie de l'utilisatrice ou de l'utilisateur est requise pour cet élément avant qu'un formulaire puisse être envoyé.

@@ -1,11 +1,6 @@
 ---
 title: FileReader()
 slug: Web/API/FileReader/FileReader
-tags:
-  - API
-  - Constructeur
-  - FileReader
-  - Reference
 translation_of: Web/API/FileReader/FileReader
 ---
 

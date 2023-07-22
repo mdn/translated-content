@@ -1,14 +1,7 @@
 ---
 title: String.prototype.link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/link
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/link
 ---
 
 {{JSRef}}

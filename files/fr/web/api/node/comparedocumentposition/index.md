@@ -1,13 +1,6 @@
 ---
 title: Node.compareDocumentPosition()
 slug: Web/API/Node/compareDocumentPosition
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Méthodes
-  - Noeuds
-  - Position
 translation_of: Web/API/Node/compareDocumentPosition
 ---
 

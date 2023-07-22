@@ -1,14 +1,7 @@
 ---
 title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/valueOf
 ---
 
 {{JSRef}}

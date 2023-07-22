@@ -1,12 +1,6 @@
 ---
 title: Console
 slug: Web/API/console
-tags:
-  - API
-  - Interface
-  - Reference
-  - console
-  - débogage
 translation_of: Web/API/Console
 ---
 

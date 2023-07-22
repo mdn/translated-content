@@ -2,7 +2,6 @@
 title: dragstart
 slug: Web/API/HTMLElement/dragstart_event
 translation_of: Web/API/Document/dragstart_event
-original_slug: Web/API/Document/dragstart_event
 ---
 
 L'événement **dragstart** est déclenché lorsque l'utilisateur glisse un élément ou une sélection de texte.

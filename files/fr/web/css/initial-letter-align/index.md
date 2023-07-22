@@ -1,12 +1,6 @@
 ---
 title: initial-letter-align
 slug: Web/CSS/initial-letter-align
-tags:
-  - Alignement
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/initial-letter-align
 ---
 

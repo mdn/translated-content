@@ -1,11 +1,6 @@
 ---
 title: <feSpotLight>
 slug: Web/SVG/Element/feSpotLight
-tags:
-  - Element
-  - SVG
-  - SVG Filter
-  - SVG Light Source
 translation_of: Web/SVG/Element/feSpotLight
 ---
 

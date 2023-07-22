@@ -1,16 +1,6 @@
 ---
 title: Window.find()
 slug: Web/API/Window/find
-tags:
-  - API
-  - HTML DOM
-  - Méthode
-  - NeedsCompatTable
-  - NeedsContent
-  - Non-standard
-  - Reference
-  - Window
-  - find
 translation_of: Web/API/Window/find
 ---
 

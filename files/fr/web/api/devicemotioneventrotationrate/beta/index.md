@@ -1,18 +1,8 @@
 ---
 title: DeviceRotationRate.beta
 slug: Web/API/DeviceMotionEventRotationRate/beta
-tags:
-  - API
-  - DOM
-  - Orientation
-  - Propriétés
-  - Vitesse
-  - axes
-  - rotation
-  - x
 translation_of: Web/API/DeviceMotionEventRotationRate/beta
 translation_of_original: Web/API/DeviceRotationRate/beta
-original_slug: Web/API/DeviceRotationRate/beta
 ---
 
 {{ ApiRef("Device Orientation Events") }}

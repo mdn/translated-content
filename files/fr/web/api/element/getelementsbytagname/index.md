@@ -1,12 +1,6 @@
 ---
 title: element.getElementsByTagName
 slug: Web/API/Element/getElementsByTagName
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthode
-  - Reference
 translation_of: Web/API/Element/getElementsByTagName
 ---
 

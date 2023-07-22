@@ -1,13 +1,6 @@
 ---
 title: ShadowRoot.innerHTML
 slug: Web/API/ShadowRoot/innerHTML
-tags:
-  - API
-  - Propriété
-  - Reference
-  - ShadowRoot
-  - innerHTML
-  - shadow dom
 translation_of: Web/API/ShadowRoot/innerHTML
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: '-moz-user-input'
 slug: Web/CSS/-moz-user-input
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-moz-user-input
 ---
 

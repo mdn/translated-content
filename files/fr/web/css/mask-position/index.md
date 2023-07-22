@@ -2,7 +2,6 @@
 title: mask-position
 slug: Web/CSS/mask-position
 translation_of: Web/CSS/mask-position
-browser-compat: css.properties.mask-position
 ---
 
 {{CSSRef}}

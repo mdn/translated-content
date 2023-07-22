@@ -1,14 +1,6 @@
 ---
 title: ExtendableMessageEvent.origin
 slug: Web/API/ExtendableMessageEvent/origin
-tags:
-  - API
-  - Experimental
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - origin
 translation_of: Web/API/ExtendableMessageEvent/origin
 ---
 

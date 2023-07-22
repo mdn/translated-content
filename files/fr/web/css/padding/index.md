@@ -1,11 +1,6 @@
 ---
 title: padding
 slug: Web/CSS/padding
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
 translation_of: Web/CSS/padding
 ---
 

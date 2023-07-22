@@ -2,8 +2,6 @@
 title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat
-browser-compat: javascript.builtins.Intl.DateTimeFormat
 ---
 
 {{JSRef}}

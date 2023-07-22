@@ -1,12 +1,6 @@
 ---
 title: scroll-padding-block
 slug: Web/CSS/scroll-padding-block
-tags:
-  - CSS
-  - Propriété
-  - Propriété logique
-  - Propriété raccourcie
-  - Reference
 translation_of: Web/CSS/scroll-padding-block
 ---
 

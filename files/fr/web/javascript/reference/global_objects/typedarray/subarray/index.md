@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/subarray
 ---
 
 {{JSRef}}

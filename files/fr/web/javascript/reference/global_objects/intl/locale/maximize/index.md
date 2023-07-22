@@ -1,14 +1,7 @@
 ---
 title: Intl.Locale.prototype.maximize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/maximize
 ---
 
 {{JSRef}}

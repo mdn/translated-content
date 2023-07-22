@@ -1,12 +1,7 @@
 ---
 title: Combinateur de colonne
 slug: Web/CSS/Column_combinator
-tags:
-  - CSS
-  - Reference
-  - Sélecteur
 translation_of: Web/CSS/Column_combinator
-original_slug: Web/CSS/Combinateur_colonne
 ---
 
 {{CSSRef("Selectors")}}{{SeeCompatTable}}

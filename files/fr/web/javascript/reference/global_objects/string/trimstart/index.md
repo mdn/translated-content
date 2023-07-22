@@ -1,14 +1,7 @@
 ---
 title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/trimStart
 ---
 
 {{JSRef}}

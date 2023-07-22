@@ -2,7 +2,6 @@
 title: Constructeur ReferenceError()
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
 translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
-browser-compat: javascript.builtins.ReferenceError.ReferenceError
 ---
 
 {{JSRef}}

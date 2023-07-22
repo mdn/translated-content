@@ -1,12 +1,6 @@
 ---
 title: scroll-padding-inline
 slug: Web/CSS/scroll-padding-inline
-tags:
-  - CSS
-  - Propriété
-  - Propriété logique
-  - Propriété raccourcie
-  - Reference
 translation_of: Web/CSS/scroll-padding-inline
 ---
 

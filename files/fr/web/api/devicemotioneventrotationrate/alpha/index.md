@@ -1,18 +1,8 @@
 ---
 title: DeviceRotationRate.alpha
 slug: Web/API/DeviceMotionEventRotationRate/alpha
-tags:
-  - API
-  - DOM
-  - Mobile
-  - Propriétés
-  - Vitesse
-  - axes
-  - rotation
-  - z
 translation_of: Web/API/DeviceMotionEventRotationRate/alpha
 translation_of_original: Web/API/DeviceRotationRate/alpha
-original_slug: Web/API/DeviceRotationRate/alpha
 ---
 
 {{ ApiRef("Device Orientation Events") }}

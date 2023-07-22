@@ -1,12 +1,7 @@
 ---
 title: Transformations XML avec XSLT
 slug: Web/XSLT/Transforming_XML_with_XSLT
-tags:
-  - Transformations_XML_avec_XSLT
-  - XML
-  - XSLT
 translation_of: Web/XSLT/Transforming_XML_with_XSLT
-original_slug: Web/XSLT/Transformations_XML_avec_XSLT
 ---
 
 ### [Présentation](/fr/Transformations_XML_avec_XSLT/Pr%c3%a9sentation)

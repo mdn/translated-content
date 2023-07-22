@@ -1,12 +1,7 @@
 ---
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
-tags:
-  - JavaScript
-  - Reference
-  - globalThis
 translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
-original_slug: Web/JavaScript/Reference/Objets_globaux/globalThis
 ---
 
 {{jsSidebar("Objects")}}

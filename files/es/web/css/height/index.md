@@ -4,6 +4,7 @@ slug: Web/CSS/height
 l10n:
   sourceCommit: abcebf471d56ef12239e2565f26d952e8a8cab2e
 ---
+
 {{CSSRef}}
 
 La propiedad CSS **`height`** especifica la altura de un elemento. Por defecto, la propiedad define la altura del [área de contenido](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area). Sin embargo, si {{cssxref("box-sizing")}} está configurado como `border-box`, determina la altura del [área de borde](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area).

@@ -1,12 +1,6 @@
 ---
 title: IDBKeyRange.lowerOpen
 slug: Web/API/IDBKeyRange/lowerOpen
-tags:
-  - API
-  - IDBKeyRange
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBKeyRange/lowerOpen
 ---
 

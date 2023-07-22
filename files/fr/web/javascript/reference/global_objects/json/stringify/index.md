@@ -1,13 +1,7 @@
 ---
 title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
-tags:
-  - JSON
-  - JavaScript
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
-original_slug: Web/JavaScript/Reference/Objets_globaux/JSON/stringify
 ---
 
 {{JSRef}}

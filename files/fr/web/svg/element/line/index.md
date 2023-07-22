@@ -1,13 +1,6 @@
 ---
 title: <line>
 slug: Web/SVG/Element/line
-tags:
-  - Element
-  - Graphisme
-  - Reference
-  - Référence(2)
-  - SVG
-  - Élément(2)
 translation_of: Web/SVG/Element/line
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: 'Window: vrdisplayconnect event'
 slug: Web/API/Window/vrdisplayconnect_event
-tags:
-  - Evènement
-  - Reference
-  - WebVR
-  - onvrdisplayconnect
-  - vrdisplayconnect
 translation_of: Web/API/Window/vrdisplayconnect_event
 ---
 

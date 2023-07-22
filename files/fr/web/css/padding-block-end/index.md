@@ -1,11 +1,6 @@
 ---
 title: padding-block-end
 slug: Web/CSS/padding-block-end
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/padding-block-end
 ---
 

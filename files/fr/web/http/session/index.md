@@ -1,10 +1,6 @@
 ---
 title: Une session HTTP typique
 slug: Web/HTTP/Session
-tags:
-  - HTTP
-  - Session
-  - Session HTTP
 translation_of: Web/HTTP/Session
 ---
 

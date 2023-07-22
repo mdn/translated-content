@@ -2,7 +2,6 @@
 title: gap (grid-gap)
 slug: Web/CSS/gap
 translation_of: Web/CSS/gap
-browser-compat: css.properties.gap
 ---
 
 {{CSSRef}}

@@ -1,12 +1,6 @@
 ---
 title: Propriétés personnalisées (--*)
 slug: Web/CSS/--*
-tags:
-  - CSS
-  - Experimental
-  - Reference
-  - Variables
-  - Variables CSS
 translation_of: Web/CSS/--*
 ---
 

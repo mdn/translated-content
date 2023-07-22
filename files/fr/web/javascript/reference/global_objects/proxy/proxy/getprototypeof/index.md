@@ -1,14 +1,7 @@
 ---
 title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/getPrototypeOf
 ---
 
 {{JSRef}}

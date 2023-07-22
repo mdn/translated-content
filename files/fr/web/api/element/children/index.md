@@ -2,7 +2,6 @@
 title: Element.children
 slug: Web/API/Element/children
 translation_of: Web/API/Element/children
-browser-compat: api.Element.children
 ---
 
 {{APIRef("DOM")}}

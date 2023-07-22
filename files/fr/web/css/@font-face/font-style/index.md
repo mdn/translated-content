@@ -1,10 +1,6 @@
 ---
 title: font-style
 slug: Web/CSS/@font-face/font-style
-tags:
-  - CSS
-  - Descripteur
-  - Reference
 translation_of: Web/CSS/@font-face/font-style
 ---
 

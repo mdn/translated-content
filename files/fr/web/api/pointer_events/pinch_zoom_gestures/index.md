@@ -1,12 +1,7 @@
 ---
 title: Gestes pincer et zoomer
 slug: Web/API/Pointer_events/Pinch_zoom_gestures
-tags:
-  - Guide
-  - PointerEvent
-  - touch
 translation_of: Web/API/Pointer_events/Pinch_zoom_gestures
-original_slug: Web/API/Pointer_events/gestes_pincer_zoom
 ---
 
 {{DefaultAPISidebar("Pointer Events")}}

@@ -1,11 +1,6 @@
 ---
 title: Le mode strict
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Reference
-  - Strict Mode
 translation_of: Web/JavaScript/Reference/Strict_mode
 ---
 

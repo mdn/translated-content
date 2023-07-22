@@ -1,8 +1,6 @@
 ---
 title: HTMLSelectElement.checkValidity()
 slug: Web/API/HTMLSelectElement/checkValidity
-page-type: web-api-instance-method
-browser-compat: api.HTMLSelectElement.checkValidity
 translation_of: Web/API/HTMLSelectElement/checkValidity
 ---
 

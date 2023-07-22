@@ -2,8 +2,6 @@
 title: Uint8ClampedArray
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 translation_of: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
-original_slug: Web/JavaScript/Reference/Objets_globaux/Uint8ClampedArray
-browser-compat: javascript.builtins.Uint8ClampedArray
 ---
 
 {{JSRef}}

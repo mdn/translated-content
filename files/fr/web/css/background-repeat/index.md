@@ -1,7 +1,6 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
-browser-compat: css.properties.background-repeat
 translation_of: Web/CSS/background-repeat
 ---
 

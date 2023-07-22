@@ -1,16 +1,6 @@
 ---
 title: Clipboard
 slug: Web/API/Clipboard
-tags:
-  - API
-  - Clip
-  - Clipboard
-  - Clipboard API
-  - Editing
-  - Interface
-  - Pasteboard
-  - Presse-papiers
-  - Reference
 translation_of: Web/API/Clipboard
 ---
 

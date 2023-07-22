@@ -1,11 +1,6 @@
 ---
 title: Document.createNSResolver()
 slug: Web/API/Document/createNSResolver
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - XPath
 translation_of: Web/API/Document/createNSResolver
 ---
 

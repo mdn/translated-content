@@ -2,7 +2,6 @@
 title: Constructeur SharedArrayBuffer()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
 translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
-browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
 ---
 
 {{JSRef}}

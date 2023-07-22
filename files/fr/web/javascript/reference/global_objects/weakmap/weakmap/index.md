@@ -2,7 +2,6 @@
 title: Constructeur WeakMap()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/WeakMap
-browser-compat: javascript.builtins.WeakMap.WeakMap
 ---
 
 {{JSRef}}

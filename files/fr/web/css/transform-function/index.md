@@ -1,10 +1,6 @@
 ---
 title: transform-function
 slug: Web/CSS/transform-function
-tags:
-  - CSS
-  - Reference
-  - Type de donnée
 translation_of: Web/CSS/transform-function
 ---
 

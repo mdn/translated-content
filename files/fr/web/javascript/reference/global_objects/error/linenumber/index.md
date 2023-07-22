@@ -1,15 +1,7 @@
 ---
 title: Error.prototype.lineNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
-tags:
-  - Error
-  - JavaScript
-  - Non-standard
-  - Propriété
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
-original_slug: Web/JavaScript/Reference/Objets_globaux/Error/lineNumber
 ---
 
 {{JSRef}} {{non-standard_header}}

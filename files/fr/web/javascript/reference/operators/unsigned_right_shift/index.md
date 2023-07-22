@@ -1,13 +1,6 @@
 ---
 title: Décalage binaire à droite non-signé (>>>)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.unsigned_right_shift
 ---
 
 {{jsSidebar("Operators")}}

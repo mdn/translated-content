@@ -1,16 +1,7 @@
 ---
 title: Chaînage optionnel (optional chaining)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-tags:
-  - Chaînage
-  - Chaînage optionnel
-  - Coalescence
-  - JavaScript
-  - Operator
-  - Opérateur
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
-original_slug: Web/JavaScript/Reference/Opérateurs/Optional_chaining
 ---
 
 {{jsSidebar("Operators")}}

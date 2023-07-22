@@ -1,15 +1,7 @@
 ---
 title: Limites de stockage du navigateur et critères d'éviction
 slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
-tags:
-  - Base de données
-  - IndexedDB
-  - LRU
-  - Limites
-  - Stockage
-  - eviction
 translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
-original_slug: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}

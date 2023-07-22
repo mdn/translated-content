@@ -1,12 +1,6 @@
 ---
 title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Référence(2)
-  - contenteditable
 translation_of: Web/API/HTMLElement/contentEditable
 ---
 

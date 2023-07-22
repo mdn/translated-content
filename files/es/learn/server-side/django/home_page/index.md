@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de Django Parte 5: Creación de tu página de inicio'
+title: "Tutorial de Django Parte 5: Creación de tu página de inicio"
 slug: Learn/Server-side/Django/Home_page
 ---
 
@@ -251,9 +251,9 @@ La plantilla base también hace referencia a un archivo css local (**styles.css*
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 

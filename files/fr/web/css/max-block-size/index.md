@@ -2,7 +2,6 @@
 title: max-block-size
 slug: Web/CSS/max-block-size
 translation_of: Web/CSS/max-block-size
-browser-compat: css.properties.max-block-size
 ---
 
 {{CSSRef}}

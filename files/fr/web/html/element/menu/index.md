@@ -1,7 +1,6 @@
 ---
 title: "<menu> : l'élément de menu"
 slug: Web/HTML/Element/menu
-browser-compat: html.elements.menu
 translation_of: Web/HTML/Element/menu
 ---
 

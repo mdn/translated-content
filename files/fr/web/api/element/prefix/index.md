@@ -1,12 +1,6 @@
 ---
 title: Element.prefix
 slug: Web/API/Element/prefix
-tags:
-  - API
-  - DOM
-  - Element
-  - Propriétés
-  - Préfixe
 translation_of: Web/API/Element/prefix
 ---
 
