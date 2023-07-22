@@ -16,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removingBookmark = browser.bookmarks.remove(
-  id                 // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres
