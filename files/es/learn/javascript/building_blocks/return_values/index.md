@@ -112,21 +112,21 @@ Let's have a go at writing our own functions featuring return values.
 3. Next, we're going to include a way to print out information about the number entered into the text input. Enter the following event handler below the existing functions:
 
    ```js
-input.addEventListener("change", () => {
-  const num = parseFloat(input.value);
-  if (isNaN(num)) {
-    para.textContent = "You need to enter a number!";
-  } else {
-    para.textContent = `${num} squared is ${squared(num)}. `;
-    para.textContent += `${num} cubed is ${cubed(num)}. `;
-    para.textContent += `${num} factorial is ${factorial(num)}. `;
-  }
-});
+   input.addEventListener("change", () => {
+     const num = parseFloat(input.value);
+     if (isNaN(num)) {
+       para.textContent = "You need to enter a number!";
+     } else {
+       para.textContent = `${num} squared is ${squared(num)}. `;
+       para.textContent += `${num} cubed is ${cubed(num)}. `;
+       para.textContent += `${num} factorial is ${factorial(num)}. `;
+     }
+   });
    ```
 
    Here we are creating an `onchange` event handler that runs whenever the change event fires on the text input — that is, when a new value is entered into the text input, and submitted (enter a value then press tab for example). When this anonymous function runs, the existing value entered into the input is stored in the `num` variable.\
-   Next, we do a conditional test — if the entered value is not a number, we print an error message into the paragraph. The test looks at whether the expression `isNaN(num)` returns true. We use the [isNaN()](/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function to test whether the num value is not a number — if so, it returns `true`, and if not, `false`.\
-   If the test returns `false`, the `num` value is a number, so we print out a sentence inside the paragraph element stating what the square, cube, and factorial of the number are. The sentence calls the `squared()`, `cubed()`, and `factorial()` functions to get the required values.
+    Next, we do a conditional test — if the entered value is not a number, we print an error message into the paragraph. The test looks at whether the expression `isNaN(num)` returns true. We use the [isNaN()](/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function to test whether the num value is not a number — if so, it returns `true`, and if not, `false`.\
+    If the test returns `false`, the `num` value is a number, so we print out a sentence inside the paragraph element stating what the square, cube, and factorial of the number are. The sentence calls the `squared()`, `cubed()`, and `factorial()` functions to get the required values.
 
 4. Save your code, load it in a browser, and try it out.
 

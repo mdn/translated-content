@@ -242,8 +242,10 @@ Ahora, un poco de diversión, añadamos la detección de colisiones a nuestro c�
          var distance = Math.sqrt(dx * dx + dy * dy);
 
          if (distance < this.size + balls[j].size) {
-           balls[j].color = this.color =
-             `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+           balls[j].color = this.color = `rgb(${random(0, 255)},${random(
+             0,
+             255,
+           )},${random(0, 255)})`;
          }
        }
      }
