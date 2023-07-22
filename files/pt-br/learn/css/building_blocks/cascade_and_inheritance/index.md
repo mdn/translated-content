@@ -107,15 +107,15 @@ Embora cada página de propriedade CSS liste se a propriedade é herdada ou não
 O {{glossary("CSS")}} fornece cinco valores de propriedades universais especiais para controlar a herança. Cada propriedade CSS aceita esses valores.
 
 - {{cssxref("inherit")}}
-   - : define o valor da propriedade aplicada a um elemento selecionado para ser igual ao de seu elemento pai. Efetivamente, isso "ativa a herança".
+  - : define o valor da propriedade aplicada a um elemento selecionado para ser igual ao de seu elemento pai. Efetivamente, isso "ativa a herança".
 - {{cssxref("initial")}}
-   - : define o valor da propriedade aplicada a um elemento selecionado para o [valor inicial](/pt-BR/docs/Web/CSS/initial_value) dessa propriedade.
+  - : define o valor da propriedade aplicada a um elemento selecionado para o [valor inicial](/pt-BR/docs/Web/CSS/initial_value) dessa propriedade.
 - {{cssxref("revert")}}
-   - : redefine o valor da propriedade aplicado a um elemento selecionado para o estilo padrão do navegador, em vez dos padrões aplicados a essa propriedade. Esse valor age como {{cssxref("unset")}} em muitos casos.
+  - : redefine o valor da propriedade aplicado a um elemento selecionado para o estilo padrão do navegador, em vez dos padrões aplicados a essa propriedade. Esse valor age como {{cssxref("unset")}} em muitos casos.
 - {{cssxref("revert-layer")}}
-   - : Redefine o valor da propriedade aplicada a um elemento selecionado para o valor estabelecido em uma [camada em cascata](/pt-BR/docs/Web/CSS/@layer) anterior.
+  - : Redefine o valor da propriedade aplicada a um elemento selecionado para o valor estabelecido em uma [camada em cascata](/pt-BR/docs/Web/CSS/@layer) anterior.
 - {{cssxref("unset")}}
-   - : Redefine a propriedade para seu valor natural, o que significa que, se a propriedade for herdada naturalmente, ela agirá como `herdar`, caso contrário, agirá como `inicial`.
+  - : Redefine a propriedade para seu valor natural, o que significa que, se a propriedade for herdada naturalmente, ela agirá como `herdar`, caso contrário, agirá como `inicial`.
 
 > **Nota:** Consulte [Tipos de origem](/pt-BR/docs/Web/CSS/Cascade#origin_types) para obter mais informações sobre cada um deles e como eles funcionam.
 
