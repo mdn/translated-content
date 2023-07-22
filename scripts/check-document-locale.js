@@ -94,23 +94,34 @@ const getDocumentLanguages = async (doc, expectedLocale = "ENGLISH") => {
   return result;
 };
 
-const printMD = (data) => {
+const printTable = (data, md = true) => {
   const detectedLanguages = Array.from(DETECTED_LANGUAGES.values()).sort();
 
   // Print header
-  console.log(`| File | ${detectedLanguages.join(" | ")} |`);
-  console.log(`| --- |${" --- |".repeat(detectedLanguages.length)}`);
+  if (md) {
+    console.log(`| File | ${detectedLanguages.join(" | ")} |`);
+    console.log(`| --- |${" --- |".repeat(detectedLanguages.length)}`);
+  } else {
+    console.log(`File,${detectedLanguages.join(",")}`);
+  }
 
   // Print file details
   for (const [k, v] of Object.entries(data)) {
-    let str = `| ${k} |`;
+    let str = `${k},`;
 
     if (v) {
       for (const l of detectedLanguages) {
-        str += ` ${v[l] || "0"} |`;
+        str += `${v[l] || "0"},`;
       }
     } else {
-      str += `${" DETECTION ERROR! |".repeat(detectedLanguages.length)}`;
+      str += `${"DETECTION ERROR!,".repeat(detectedLanguages.length)}`;
+    }
+
+    // Strip last comma
+    str = str.substr(0, str.length - 1);
+
+    if (md) {
+      str = "| " + str.replace(/,/g, " | ") + " |";
     }
 
     console.log(str);
@@ -139,7 +150,7 @@ const main = async () => {
           describe: "The format to print results in",
           type: "string",
           default: "md",
-          choices: ["md", "json"],
+          choices: ["md", "csv", "json"],
         });
     },
   );
@@ -185,10 +196,10 @@ const main = async () => {
 
   spinner.stop();
 
-  if (argv.format === "md") {
-    printMD(data);
-  } else if (argv.format === "json") {
+  if (argv.format === "json") {
     printJSON(data);
+  } else {
+    printTable(data, argv.format === "md");
   }
 };
 
