@@ -1,19 +1,7 @@
 ---
-title: 'HTML : une bonne base pour l''accessibilité'
+title: "HTML : une bonne base pour l'accessibilité"
 slug: Learn/Accessibility/HTML
-tags:
-  - Accessibilité
-  - Article
-  - Clavier
-  - Débutant
-  - Forms
-  - HTML
-  - Liens
-  - a11y
-  - boutons
-  - sémantique
 translation_of: Learn/Accessibility/HTML
-original_slug: Apprendre/a11y/HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
@@ -104,11 +92,17 @@ L'une des meilleures aides en accessibilité qu'un utilisateur de lecteur d'écr
 
 <h2>Mon sous-titre</h2>
 
-<p>Ceci est la première sous-section de mon document. J'aurais aimé que les gens puissent trouver ce contenu!</p>
+<p>
+  Ceci est la première sous-section de mon document. J'aurais aimé que les gens
+  puissent trouver ce contenu!
+</p>
 
 <h2>Mon second sous-titre</h2>
 
-<p>Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus intéressante que la dernière.</p>
+<p>
+  Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus
+  intéressante que la dernière.
+</p>
 ```
 
 Nous avons préparé pour vous une version avec un texte plus long afin de l'essayer avec lecteur d'écran (voir [la bonne sémantique](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). Si vous essayez de naviguer dans ce document, vous verrez qu'il est assez simple de s'y retrouver :
@@ -121,25 +115,27 @@ Nous avons préparé pour vous une version avec un texte plus long afin de l'ess
 Les gens écrivent parfois des titres, des paragraphes, etc. utilisant le HTML de présentation et retours à la ligne, quelque chose comme ce qui suit :
 
 ```html example-bad
-<font size="7">Mon titre</font>
-<br><br>
+<font size="7">Mon titre</font> <br /><br />
 Ceci est la première section de mon document.
-<br><br>
+<br /><br />
 Je vais ajouter ici un autre paragraphe.
-<br><br>
+<br /><br />
 1. Voici
-<br><br>
+<br /><br />
 2. une liste pour
-<br><br>
+<br /><br />
 3. toi à lire.
-<br><br>
+<br /><br />
 <font size="5">Mon sous-titre</font>
-<br><br>
-<p>Ceci est la première sous-section de mon document. J'aurais aimé que les gens puissent trouver ce contenu!
-<br><br>
-<font size="5">My 2nd subheading</font>
-<br><br>
-Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus intéressante que la dernière.
+<br /><br />
+<p>
+  Ceci est la première sous-section de mon document. J'aurais aimé que les gens
+  puissent trouver ce contenu! <br /><br />
+  <font size="5">My 2nd subheading</font>
+  <br /><br />
+  Ceci est la seconde sous-section de mon document. Je pense qu'elle est plus
+  intéressante que la dernière.
+</p>
 ```
 
 Si vous essayez notre version plus longue avec un lecteur d'écran (voir [la mauvaise sémantique](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)), vous n'aurez pas une très bonne expérience – le lecteur d'écran n'a plus rien à utiliser comme indicateur, il ne peut pas récupérer une table des matières utilisable, et la page entière est vue comme un bloc unique, lu tout d'une traite.
@@ -162,69 +158,61 @@ Essayez notre exemple [table-layout.html](http://mdn.github.io/learning-area/acc
 
 ```html
 <table width="1200">
-      <!-- main heading row -->
-      <tr id="heading">
-        <td colspan="6">
+  <!-- main heading row -->
+  <tr id="heading">
+    <td colspan="6">
+      <h1 align="center">Header</h1>
+    </td>
+  </tr>
+  <!-- nav menu row  -->
+  <tr id="nav" bgcolor="#ffffff">
+    <td width="200">
+      <a href="#" align="center">Home</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Our team</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Projects</a>
+    </td>
+    <td width="200">
+      <a href="#" align="center">Contact</a>
+    </td>
+    <td width="300">
+      <form width="300">
+        <input type="search" name="q" placeholder="Search query" width="300" />
+      </form>
+    </td>
+    <td width="100">
+      <button width="100">Go!</button>
+    </td>
+  </tr>
+  <!-- spacer row -->
+  <tr id="spacer" height="10">
+    <td></td>
+  </tr>
+  <!-- main content and aside row -->
+  <tr id="main">
+    <td id="content" colspan="4" bgcolor="#ffffff">
+      <!-- main content goes here -->
+    </td>
+    <td id="aside" colspan="2" bgcolor="#ff80ff" valign="top">
+      <h2>Related</h2>
 
-          <h1 align="center">Header</h1>
-
-        </td>
-      </tr>
-      <!-- nav menu row  -->
-      <tr id="nav" bgcolor="#ffffff">
-        <td width="200">
-          <a href="#" align="center">Home</a>
-        </td>
-        <td width="200">
-          <a href="#" align="center">Our team</a>
-        </td>
-        <td width="200">
-          <a href="#" align="center">Projects</a>
-        </td>
-        <td width="200">
-          <a href="#" align="center">Contact</a>
-        </td>
-        <td width="300">
-          <form width="300">
-            <input type="search" name="q" placeholder="Search query" width="300">
-          </form>
-        </td>
-        <td width="100">
-          <button width="100">Go!</button>
-        </td>
-      </tr>
-      <!-- spacer row -->
-      <tr id="spacer" height="10">
-        <td>
-
-        </td>
-      </tr>
-      <!-- main content and aside row -->
-      <tr id="main">
-        <td id="content" colspan="4" bgcolor="#ffffff">
-
-          <!-- main content goes here -->
-        </td>
-        <td id="aside" colspan="2" bgcolor="#ff80ff" valign="top">
-          <h2>Related</h2>
-
-          <!-- aside content goes here -->
-
-        </td>
-      </tr>
-      <!-- spacer row -->
-      <tr id="spacer" height="10">
-        <td>
-
-        </td>
-      </tr>
-      <!-- footer row -->
-      <tr id="footer" bgcolor="#ffffff">
-        <td colspan="6">
-          <p>©Copyright 2050 by nobody. All rights reversed.</p>
-        </td>
-      </tr>
-    </table>
+      <!-- aside content goes here -->
+    </td>
+  </tr>
+  <!-- spacer row -->
+  <tr id="spacer" height="10">
+    <td></td>
+  </tr>
+  <!-- footer row -->
+  <tr id="footer" bgcolor="#ffffff">
+    <td colspan="6">
+      <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </td>
+  </tr>
+</table>
 ```
 
 Si vous essayez de naviguer à l'aide d'un lecteur d'écran, cela vous indiquera probablement qu'il existe un tableau à examiner (bien que certains lecteurs d'écran puissent deviner la différence entre les présentations de tableau et les tableaux de données). Vous devrez ensuite (en fonction du lecteur d'écran que vous utilisez) devoir accéder à la table en tant qu'objet et en examiner les caractéristiques séparément, puis sortir à nouveau de la table pour continuer à naviguer dans le contenu.
@@ -244,7 +232,6 @@ Vous pouvez vérifier ces affirmations en comparant votre expérience antérieur
 
 <!--  Voici le contenu principal de notre page  -->
 <main>
-
   <!--  Il contient un article  -->
   <article>
     <h2>Intitulé de l'article</h2>
@@ -257,7 +244,6 @@ Vous pouvez vérifier ces affirmations en comparant votre expérience antérieur
 
     <!--  à part le contenu ici  -->
   </aside>
-
 </main>
 
 <!--  Et voici notre pied de page principal utilisé dans toutes les pages de notre site Web. -->
@@ -290,15 +276,20 @@ Vous obtenez essentiellement ce comportement gratuitement, en utilisant simpleme
 ```html example-good
 <h1>Liens</h1>
 
-<p> Ceci est un lien vers  <a href="https://www.mozilla.org">Mozilla</a>.</p>
+<p>Ceci est un lien vers <a href="https://www.mozilla.org">Mozilla</a>.</p>
 
-<p> Un autre lien, pour  <a href="https://developer.mozilla.org">Mozilla Developer Network</a>.</p>
+<p>
+  Un autre lien, pour
+  <a href="https://developer.mozilla.org">Mozilla Developer Network</a>.
+</p>
 
 <h2>Boutons</h2>
 
 <p>
   <button data-message="This is from the first button">Cliquez moi!</button>
-  <button data-message="This is from the second button"> Cliquez moi aussi !</button>
+  <button data-message="This is from the second button">
+    Cliquez moi aussi !
+  </button>
   <button data-message="This is from the third button">Et moi!</button>
 </p>
 
@@ -307,19 +298,19 @@ Vous obtenez essentiellement ce comportement gratuitement, en utilisant simpleme
 <form>
   <div>
     <label for="name"> Remplis ton nom :</label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name" />
   </div>
   <div>
     <label for="age"> Entrez votre âge :</label>
-    <input type="text" id="age" name="age">
+    <input type="text" id="age" name="age" />
   </div>
   <div>
     <label for="mood"> Choisissez votre humeur :</label>
     <select id="mood" name="mood">
       <option>Heureux</option>
-      <option> Triste </option>
-      <option> Fâché </option>
-      <option> Préoccupé </option>
+      <option>Triste</option>
+      <option>Fâché</option>
+      <option>Préoccupé</option>
     </select>
   </div>
 </form>
@@ -330,9 +321,9 @@ Cela signifie que vous devez utiliser des liens, des boutons, des éléments de 
 Cependant, il est encore une fois que les gens font parfois des choses étranges avec HTML. Par exemple, vous voyez parfois des boutons balisés en utilisant {{htmlelement("div")}}s, par exemple :
 
 ```html example-bad
-<div data-message="This is from the first button"> Cliquez-moi!</div>
-<div data-message="This is from the second button">  Cliquez moi aussi!</div>
-<div data-message="This is from the third button"> Et moi!</div>
+<div data-message="This is from the first button">Cliquez-moi!</div>
+<div data-message="This is from the second button">Cliquez moi aussi!</div>
+<div data-message="This is from the third button">Et moi!</div>
 ```
 
 Il est toutefois déconseillé d'utiliser un tel code. Vous perdriez immédiatement l'accessibilité au clavier natif que vous auriez obtenue si vous aviez utilisé des éléments {{htmlelement("button")}}. De plus, vous n'obtenez aucun des styles CSS par défaut que les boutons ont.
@@ -342,9 +333,13 @@ Il est toutefois déconseillé d'utiliser un tel code. Vous perdriez immédiatem
 Ajouter de tels avantages en retour demande un peu de travail (vous pouvez utiliser un exemple de code dans notre exemple [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) – voir également le [source code](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)). Ici, nous avons donné à nos faux boutons `<div>` la possibilité se focaliser (y compris via la touche Tab) en donnant à chacun l'attribut `tabindex="0"` :
 
 ```html
-<div data-message="This is from the first button" tabindex="0"> Cliquez-moi!</div>
-<div data-message="This is from the second button" tabindex="0"> Cliquez moi aussi!</div>
-<div data-message="This is from the third button" tabindex="0"> Et moi!</div>
+<div data-message="This is from the first button" tabindex="0">
+  Cliquez-moi!
+</div>
+<div data-message="This is from the second button" tabindex="0">
+  Cliquez moi aussi!
+</div>
+<div data-message="This is from the third button" tabindex="0">Et moi!</div>
 ```
 
 Fondamentalement, l'attribut [`tabindex`](/fr/docs/Web/HTML/Global_attributes#tabindex) est principalement destiné à permettre aux éléments que l'on peut cibler avec la touche Tab d'avoir un ordre de tabulation personnalisé (spécifié dans l'ordre numérique positif), au lieu d'être simplement tabulés dans leur ordre source par défaut. C'est presque toujours une mauvaise idée, car cela peut causer une confusion majeure. Utilisez-le uniquement si vous en avez vraiment besoin, par exemple si la mise en page affiche les éléments dans un ordre visuel très différent de celui du code source et si vous souhaitez que les éléments fonctionnent de manière plus logique. Il y a deux autres options pour `tabindex` :
@@ -355,11 +350,12 @@ Fondamentalement, l'attribut [`tabindex`](/fr/docs/Web/HTML/Global_attributes#ta
 Bien que l'addition ci-dessus nous permette de tabuler les boutons, elle ne nous permet pas de les activer via la touche Entrée/Retour. Pour ce faire, nous avons dû ajouter le bout de code JavaScript suivant :
 
 ```js
-document.onkeydown = function(e) {
-  if(e.keyCode === 13) { // The Enter/Return key
+document.onkeydown = function (e) {
+  if (e.keyCode === 13) {
+    // The Enter/Return key
     document.activeElement.onclick(e);
   }
-}
+};
 ```
 
 Ici, nous ajoutons un écouteur à l'objet `document` pour détecter le moment où un bouton a été appuyé sur le clavier. Nous vérifions quel bouton a été pressé via la propriété [`keyCode`](/fr/docs/Web/API/KeyboardEvent/keyCode) de l'objet événement; s'il s'agit du code clé qui correspond Return/Enter, nous exécutons la fonction stockée dans le gestionnaire du bouton `onclick` à l'aide de `document.activeElement.onclick()`. [`activeElement`](/fr/docs/Web/API/Document/activeElement) nous donne l'élément qui est actuellement ciblé sur la page.
@@ -379,13 +375,19 @@ Vous devez vous assurer que les libellés des boutons et des liens sont compréh
 Assurez-vous que vos étiquettes ont une signification hors contexte, qu'elles soient lues séparément ou dans le contexte du paragraphe dans lequel elles se trouvent. Par exemple, voici un exemple de texte de lien de qualité :
 
 ```html example-good
-<p> Les baleines sont vraiment des créatures géniales . <a href="whales.html"> En savoir plus sur les baleines </a>.</p>
+<p>
+  Les baleines sont vraiment des créatures géniales .
+  <a href="whales.html"> En savoir plus sur les baleines </a>.
+</p>
 ```
 
 c'est un mauvais texte du lien :
 
 ```html example-bad
-<p> Les baleines sont des créatures vraiment impressionnantes. Pour en savoir plus sur les baleines,  <a href="whales.html">cliquez ici</a>.</p>
+<p>
+  Les baleines sont des créatures vraiment impressionnantes. Pour en savoir plus
+  sur les baleines, <a href="whales.html">cliquez ici</a>.
+</p>
 ```
 
 > **Note :** Vous pouvez trouver beaucoup plus d'informations sur l'implémentation de liens et les meilleures pratiques dans notre article sur la [création d'hyperliens](/fr/docs/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks). Vous pouvez également voir quelques bons et mauvais exemples dans [Bons-liens.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) et [Mauvais-liens.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
@@ -393,7 +395,7 @@ c'est un mauvais texte du lien :
 Les libellés de formulaire sont également importantes pour vous donner un indice sur ce que vous devez entrer dans chaque entrée de formulaire. Ce qui suit semble être un exemple assez raisonnable :
 
 ```html example-bad
- Remplis ton nom : <input type="text" id="name" name="name">
+Remplis ton nom : <input type="text" id="name" name="name" />
 ```
 
 Cependant, ce n'est pas très utile pour les utilisateurs handicapés. Dans l'exemple ci-dessus, rien n'associe de manière non équivoque l'étiquette à la saisie de formulaire et explique clairement comment la remplir si vous ne la voyez pas. Si vous y accédez avec certains lecteurs d'écran, vous ne recevrez peut-être qu'une description du type « éditer le texte".
@@ -403,7 +405,7 @@ Ce qui suit est un exemple bien meilleur :
 ```html example-good
 <div>
   <label for="name">Entrez votre nom:</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" />
 </div>
 ```
 
@@ -460,18 +462,24 @@ Alors que le contenu textuel est intrinsèquement accessible, il n'en est pas de
 Nous avons un exemple simple écrit, [accessible-image.html](http://mdn.github.io/learning-area/accessibility/html/accessible-image.html), comporte quatre copies de la même image :
 
 ```html
-<img src="dinosaur.png">
+<img src="dinosaur.png" />
 
-<img src="dinosaur.png"
-      alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées.">
+<img
+  src="dinosaur.png"
+  alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées." />
 
-<img src="dinosaur.png"
-      alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées."
-      title="Le dinosaure rouge de Mozilla ">
+<img
+  src="dinosaur.png"
+  alt="Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées."
+  title="Le dinosaure rouge de Mozilla " />
 
-<img src="dinosaur.png" aria-labelledby="dino-label">
+<img src="dinosaur.png" aria-labelledby="dino-label" />
 
-<p id="dino-label"> Tyrannosaure rouge Rex de Mozilla: Dinosaure à deux jambes, debout comme un être humain, avec des armes légères et une grosse tête avec beaucoup de dents acérées.</p>
+<p id="dino-label">
+  Tyrannosaure rouge Rex de Mozilla: Dinosaure à deux jambes, debout comme un
+  être humain, avec des armes légères et une grosse tête avec beaucoup de dents
+  acérées.
+</p>
 ```
 
 La première image, lorsqu'elle est visualisée par un lecteur d'écran, n'offre pas beaucoup d'aide à l'utilisateur. VoiceOver, par exemple, lit « /dinosaur.png, image&nbsp;». Il lit le nom du fichier pour essayer de fournir de l'aide. Dans cet exemple, l'utilisateur ou l'utilisatrice saura au moins qu'il s'agit d'un dinosaure, mais les fichiers peuvent souvent être chargés avec des noms de fichiers générés par une machine (par exemple, à partir d'un appareil photo numérique) et ces noms de fichiers ne fourniront probablement aucun contexte au contenu de l'image.
@@ -493,9 +501,9 @@ Si vous souhaitez fournir des informations contextuelles supplémentaires, vous 
 Jetons un autre coup d'oeil à la quatrième méthode :
 
 ```html
-<img src="dinosaur.png" aria-labelledby="dino-label">
+<img src="dinosaur.png" aria-labelledby="dino-label" />
 
-<p id="dino-label"> Le Tyrannosaure rouge Mozilla  ... </p>
+<p id="dino-label">Le Tyrannosaure rouge Mozilla ...</p>
 ```
 
 Dans ce cas, nous n'utilisons pas du tout l'attribut `alt` Nous avons plutôt présenté notre description de l'image sous forme de paragraphe de texte normal, en lui attribuant un `id` puis nous avons utilisé l'attribut `aria-labelledby` pour : faire référence à cela `id`, ce qui amène les lecteurs d'écran à utiliser ce paragraphe comme alt text/label pour cette image. Ceci est particulièrement utile si vous souhaitez utiliser le même texte comme étiquette pour plusieurs images – quelque chose qui n'est pas possible avec `alt`.
@@ -507,7 +515,7 @@ Dans ce cas, nous n'utilisons pas du tout l'attribut `alt` Nous avons plutôt pr
 Les images ont également d'autres mécanismes disponibles pour fournir un texte descriptif. Par exemple, il existe un attribut `longdesc` destiné à pointer sur un document web distinct contenant une description étendue de l'image, par exemple :
 
 ```html
-<img src="dinosaur.png" longdesc="dino-info.html">
+<img src="dinosaur.png" longdesc="dino-info.html" />
 ```
 
 Cela semble être une bonne idée, en particulier pour les infographies telles que les grands graphiques contenant de nombreuses informations, qui pourraient peut-être être représentées sous forme de tableau de données accessible (voir section précédente). Cependant, longdesc n'est pas toujours pris en charge par les lecteurs d'écran et le contenu est totalement inaccessible aux utilisateurs autres que les lecteurs d'écran. Il est sans doute préférable d'inclure la description longue sur la même page que l'image, ou d'y accéder par un lien régulier.
@@ -516,8 +524,12 @@ HTML5 comprend deux nouveaux éléments — {{htmlelement("figure")}} et {{htmle
 
 ```html
 <figure>
-  <img src="dinosaur.png" alt="Le Mozilla Tyrannosaurus ">
-  <figcaption> Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tête avec beaucoup de dents acérées .</figcaption>
+  <img src="dinosaur.png" alt="Le Mozilla Tyrannosaurus " />
+  <figcaption>
+    Un Tyrannosaure Rex rouge: Un dinosaure à deux pattes se tenant droit comme
+    un humain, avec de petits bras et une grosse tête avec beaucoup de dents
+    acérées .
+  </figcaption>
 </figure>
 ```
 
@@ -527,7 +539,7 @@ Malheureusement, la plupart des lecteurs d'écran ne semblent pas encore associe
 
 ```html
 <h3>
-  <img src="article-icon.png" alt="">
+  <img src="article-icon.png" alt="" />
   Tyrannosaurus Rex: le roi des dinosaures
 </h3>
 ```

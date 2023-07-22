@@ -1,13 +1,6 @@
 ---
 title: PerformanceNavigationTiming.type
 slug: Web/API/PerformanceNavigationTiming/type
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - PerformanceNavigationTiming
-  - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming/type
 ---
 

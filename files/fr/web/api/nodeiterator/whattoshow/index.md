@@ -1,13 +1,6 @@
 ---
 title: NodeIterator.whatToShow
 slug: Web/API/NodeIterator/whatToShow
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Itérateur
-  - Noeuds
-  - Propriétés
 translation_of: Web/API/NodeIterator/whatToShow
 ---
 

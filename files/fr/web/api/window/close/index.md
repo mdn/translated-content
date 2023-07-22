@@ -1,8 +1,6 @@
 ---
 title: window.close
 slug: Web/API/Window/close
-tags:
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/Window/close
 ---
 

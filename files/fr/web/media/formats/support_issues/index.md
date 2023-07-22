@@ -1,20 +1,7 @@
 ---
 title: Traiter les questions de soutien aux médias dans le contenu web
 slug: Web/Media/Formats/Support_issues
-tags:
-  - Audio
-  - Guide
-  - HTMLAudioElement
-  - HTMLMediaElement
-  - HTMLVideoElement
-  - Intermédiaire
-  - Media
-  - Son
-  - Sources
-  - Video
-  - WebRTC
 translation_of: Web/Media/Formats/Support_issues
-original_slug: Web/Media/Formats/Questions_sur_le_soutien
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Media")}}

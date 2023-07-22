@@ -15,7 +15,7 @@ HTML 双向文本替代元素 (**`<bdo>`**) 改写了文本的方向性，使文
  <tbody>
   <tr>
    <th scope="row">内容分类</th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">流式元素</a>, <a href="zh-CN/docs/Web/Guide/HTML/Content_categories">短语元素</a>, 显式元素。</td>
+   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">流式元素</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">短语元素</a>, 显式元素。</td>
   </tr>
   <tr>
    <th scope="row">许可内容</th>

@@ -2,9 +2,6 @@
 title: queueMicrotask()
 slug: Web/API/queueMicrotask
 translation_of: Web/API/queueMicrotask
-page-type: web-api-global-function
-original_slug: Web/API/WindowOrWorkerGlobalScope/queueMicrotask
-browser-compat: api.queueMicrotask
 ---
 
 {{APIRef("HTML DOM")}}

@@ -1,18 +1,7 @@
 ---
 title: '<div> : l''élément de division du contenu'
 slug: Web/HTML/Element/div
-tags:
-  - Content Division
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Layout
-  - Reference
-  - Web
-  - div
 translation_of: Web/HTML/Element/div
-browser-compat: html.elements.div
 ---
 
 {{HTMLSidebar}}

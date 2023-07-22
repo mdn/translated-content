@@ -2,7 +2,6 @@
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
 translation_of: Web/API/Element/scrollLeft
-browser-compat: api.Element.scrollLeft
 ---
 
 {{APIRef("DOM")}}

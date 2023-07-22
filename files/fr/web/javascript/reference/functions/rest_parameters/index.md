@@ -1,13 +1,7 @@
 ---
 title: Paramètres du reste (Rest parameters)
 slug: Web/JavaScript/Reference/Functions/rest_parameters
-tags:
-  - ECMAScript 2015
-  - Functions
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Functions/rest_parameters
-original_slug: Web/JavaScript/Reference/Fonctions/paramètres_du_reste
 ---
 
 {{jsSidebar("Functions")}}

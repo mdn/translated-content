@@ -1,18 +1,7 @@
 ---
 title: WindowBase64.btoa()
 slug: Web/API/btoa
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
-  - Web
-  - WindowOrWorkerGlobalScope
-  - btoa
-  - chaînes
-  - données
 translation_of: Web/API/WindowOrWorkerGlobalScope/btoa
-original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
 
 {{APIRef("HTML DOM")}}

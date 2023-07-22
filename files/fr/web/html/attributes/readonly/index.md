@@ -1,12 +1,6 @@
 ---
 title: 'Attribut HTML : readonly'
 slug: Web/HTML/Attributes/readonly
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Forms
-  - required
 translation_of: Web/HTML/Attributes/readonly
 ---
 

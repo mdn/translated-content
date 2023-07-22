@@ -1,12 +1,7 @@
 ---
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
-tags:
-  - Instruction
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Statements/for-await...of
-original_slug: Web/JavaScript/Reference/Instructions/for-await...of
 ---
 
 {{jsSidebar("Statements")}}

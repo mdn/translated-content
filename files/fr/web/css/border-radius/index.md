@@ -2,7 +2,6 @@
 title: border-radius
 slug: Web/CSS/border-radius
 translation_of: Web/CSS/border-radius
-browser-compat: css.properties.border-radius
 ---
 
 {{CSSRef}}

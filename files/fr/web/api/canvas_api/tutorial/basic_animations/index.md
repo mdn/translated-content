@@ -1,15 +1,7 @@
 ---
 title: Animations basiques
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
-tags:
-  - Canvas
-  - Graphiques
-  - HTML
-  - HTML5
-  - Intermédiaire
-  - Tutoriel
 translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
-original_slug: Web/API/Canvas_API/Tutoriel_canvas/Animations_basiques
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Tutoriel_canvas/Advanced_animations")}}

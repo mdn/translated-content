@@ -1,10 +1,6 @@
 ---
 title: flex-flow
 slug: Web/CSS/flex-flow
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/flex-flow
 ---
 

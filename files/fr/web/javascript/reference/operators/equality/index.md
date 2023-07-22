@@ -1,12 +1,6 @@
 ---
 title: Égalité (==)
 slug: Web/JavaScript/Reference/Operators/Equality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.equality
 ---
 
 {{jsSidebar("Operators")}}

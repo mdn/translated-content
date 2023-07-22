@@ -34,7 +34,7 @@ var animation = element.animate(keyframes, options);
     - `id {{optional_inline}}`
       - : Свойство уникальное для `animate()`: [`DOMString`](/ru/docs/Web/API/DOMString), с помощью которого можно ссылаться на анимацию.
 
-    {{Page("ru/docs/Web/API/EffectTiming", "Свойства")}}
+    {{Page("/ru/docs/Web/API/EffectTiming", "Свойства")}}
 
 #### Будущие возможности
 

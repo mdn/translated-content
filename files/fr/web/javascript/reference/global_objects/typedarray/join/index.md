@@ -1,16 +1,7 @@
 ---
 title: TypedArray.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/join
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/join
 ---
 
 {{JSRef}}

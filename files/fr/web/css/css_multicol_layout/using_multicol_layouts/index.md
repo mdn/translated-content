@@ -1,12 +1,7 @@
 ---
 title: Utiliser une disposition multi-colonnes
 slug: Web/CSS/CSS_multicol_layout/Using_multicol_layouts
-tags:
-  - Avancé
-  - CSS
-  - Guide
 translation_of: Web/CSS/CSS_Columns/Using_multi-column_layouts
-original_slug: Web/CSS/CSS_Columns/Using_multi-column_layouts
 ---
 
 {{CSSRef}}

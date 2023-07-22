@@ -1,15 +1,7 @@
 ---
 title: Object.prototype.__lookupGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
-tags:
-  - Déprécié
-  - JavaScript
-  - Méthode
-  - Object
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/lookupGetter
 ---
 
 {{JSRef}} {{deprecated_header}}

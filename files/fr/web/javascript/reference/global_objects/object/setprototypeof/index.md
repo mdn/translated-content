@@ -1,14 +1,7 @@
 ---
 title: Object.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/setPrototypeOf
 ---
 
 {{JSRef}}

@@ -1,18 +1,7 @@
 ---
 title: Récupérer des données du serveur
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
-tags:
-  - API
-  - Apprendre
-  - Article
-  - Codage
-  - Débutant
-  - Fetch
-  - JavaScript
-  - XHR
-  - data
 translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
-original_slug: Apprendre/JavaScript/Client-side_web_APIs/Fetching_data
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

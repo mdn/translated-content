@@ -1,11 +1,6 @@
 ---
 title: ':-moz-suppressed'
 slug: Web/CSS/:-moz-suppressed
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:-moz-suppressed
 ---
 

@@ -1,15 +1,7 @@
 ---
 title: Appliquer des couleurs
 slug: Web/API/WebGL_API/By_example/Clearing_with_colors
-tags:
-  - Apprendre
-  - Débutant
-  - Exemple
-  - Graphisme
-  - Tutoriel
-  - WebGL
 translation_of: Web/API/WebGL_API/By_example/Clearing_with_colors
-original_slug: Web/API/WebGL_API/By_example/Appliquer_des_couleurs
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Détecter_WebGL","Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_%C3%A0_la_souris")}}

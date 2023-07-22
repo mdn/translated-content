@@ -1,19 +1,7 @@
 ---
 title: '<caption> : l''élément de légende d''un tableau'
 slug: Web/HTML/Element/caption
-tags:
-  - Element
-  - HTML
-  - HTML Tables
-  - HTML tabular data
-  - Reference
-  - Table Captions
-  - Table Titles
-  - Tables
-  - Web
-  - caption
 translation_of: Web/HTML/Element/caption
-browser-compat: html.elements.caption
 ---
 
 {{HTMLSidebar}}

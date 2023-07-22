@@ -1,12 +1,6 @@
 ---
 title: DOMImplementation.createDocumentType()
 slug: Web/API/DOMImplementation/createDocumentType
-tags:
-  - API
-  - DOM
-  - DOMImplementation
-  - Méthode
-  - Reference
 translation_of: Web/API/DOMImplementation/createDocumentType
 ---
 

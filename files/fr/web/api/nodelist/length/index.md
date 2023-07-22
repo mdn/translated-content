@@ -1,12 +1,6 @@
 ---
 title: NodeList.length
 slug: Web/API/NodeList/length
-tags:
-  - API
-  - DOM
-  - Liste
-  - Noeuds
-  - Propriétés
 translation_of: Web/API/NodeList/length
 ---
 

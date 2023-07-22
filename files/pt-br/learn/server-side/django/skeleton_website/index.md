@@ -12,7 +12,7 @@ O segundo artigo do tutorial de Django mostra uma forma de criar o "esqueleto" d
     <tr>
       <th scope="row">Pré-requisitos:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/development_environment"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/development_environment"
           >Configurar um ambiente de desenvolvimento Django</a
         >. Ter lido
         <a

@@ -1,14 +1,7 @@
 ---
 title: String.prototype.charAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charAt
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/charAt
 ---
 
 {{JSRef}}

@@ -2,8 +2,6 @@
 title: blur()
 slug: Web/CSS/filter-function/blur
 translation_of: Web/CSS/filter-function/blur()
-original_slug: Web/CSS/filter-function/blur()
-browser-compat: css.types.filter-function.blur
 ---
 
 {{CSSRef}}

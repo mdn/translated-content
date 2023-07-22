@@ -1,16 +1,7 @@
 ---
 title: 'Attribut HTML : crossorigin'
 slug: Web/HTML/Attributes/crossorigin
-tags:
-  - Advanced
-  - Attribute
-  - CORS
-  - HTML
-  - NeedsContent
-  - Reference
-  - Security
 translation_of: Web/HTML/Attributes/crossorigin
-original_slug: Web/HTML/Reglages_des_attributs_CORS
 ---
 
 {{HTMLSidebar}}

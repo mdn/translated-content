@@ -1,15 +1,7 @@
 ---
 title: Map.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/Map/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/get
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/get
 ---
 
 {{JSRef}}

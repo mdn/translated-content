@@ -1,12 +1,6 @@
 ---
 title: TreeWalker.parentNode()
 slug: Web/API/TreeWalker/parentNode
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/TreeWalker/parentNode
 ---
 

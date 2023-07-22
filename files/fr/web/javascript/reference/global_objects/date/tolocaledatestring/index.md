@@ -2,8 +2,6 @@
 title: Date.prototype.toLocaleDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toLocaleDateString
-browser-compat: javascript.builtins.Date.toLocaleDateString
 ---
 
 {{JSRef}}

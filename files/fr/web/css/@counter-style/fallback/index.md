@@ -1,10 +1,6 @@
 ---
 title: fallback
 slug: Web/CSS/@counter-style/fallback
-tags:
-  - CSS
-  - Descripteur
-  - Reference
 translation_of: Web/CSS/@counter-style/fallback
 ---
 

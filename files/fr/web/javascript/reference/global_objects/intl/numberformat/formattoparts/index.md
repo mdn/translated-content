@@ -1,16 +1,7 @@
 ---
 title: Intl.NumberFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - NumberFormat
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat/formatToParts
 ---
 
 {{JSRef}}

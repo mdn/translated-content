@@ -1,13 +1,6 @@
 ---
 title: AuthenticatorAssertionResponse
 slug: Web/API/AuthenticatorAssertionResponse
-tags:
-  - API
-  - AuthenticatorAssertionResponse
-  - Interface
-  - Reference
-  - Web Authentification API
-  - WebAuthn
 translation_of: Web/API/AuthenticatorAssertionResponse
 ---
 

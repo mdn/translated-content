@@ -1,7 +1,6 @@
 ---
 title: Navigator.languages
 slug: Web/API/Navigator/languages
-browser-compat: api.Navigator.languages
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}

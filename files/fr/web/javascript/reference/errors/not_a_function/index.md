@@ -1,12 +1,7 @@
 ---
 title: 'TypeError: "x" is not a function'
 slug: Web/JavaScript/Reference/Errors/Not_a_function
-tags:
-  - Erreurs
-  - JavaScript
-  - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Not_a_function
-original_slug: Web/JavaScript/Reference/Erreurs/Not_a_function
 ---
 
 {{jsSidebar("Errors")}}

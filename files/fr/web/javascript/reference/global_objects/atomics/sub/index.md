@@ -1,14 +1,7 @@
 ---
 title: Atomics.sub()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/sub
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/sub
 ---
 
 {{JSRef}}

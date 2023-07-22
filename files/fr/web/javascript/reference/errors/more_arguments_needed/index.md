@@ -1,12 +1,7 @@
 ---
 title: 'TypeError: More arguments needed'
 slug: Web/JavaScript/Reference/Errors/More_arguments_needed
-tags:
-  - Erreurs
-  - JavaScript
-  - TypeError
 translation_of: Web/JavaScript/Reference/Errors/More_arguments_needed
-original_slug: Web/JavaScript/Reference/Erreurs/More_arguments_needed
 ---
 
 {{jsSidebar("Errors")}}

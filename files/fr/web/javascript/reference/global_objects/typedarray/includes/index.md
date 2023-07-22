@@ -1,16 +1,7 @@
 ---
 title: TypedArray.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
-tags:
-  - ECMAScript 2016
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/includes
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/includes
 ---
 
 {{JSRef}}

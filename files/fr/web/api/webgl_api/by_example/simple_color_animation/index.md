@@ -1,15 +1,7 @@
 ---
 title: Créer une animation colorée
 slug: Web/API/WebGL_API/By_example/Simple_color_animation
-tags:
-  - Apprendre
-  - Débutant
-  - Exemple
-  - Graphisme
-  - Tutoriel
-  - WebGL
 translation_of: Web/API/WebGL_API/By_example/Simple_color_animation
-original_slug: Web/API/WebGL_API/By_example/Créer_une_animation_colorée
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_une_couleur_à_la_souris","Apprendre/WebGL/Par_exemple/Masque_de_couleur")}}

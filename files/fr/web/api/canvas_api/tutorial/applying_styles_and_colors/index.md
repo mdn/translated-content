@@ -2,7 +2,6 @@
 title: Ajout de styles et de couleurs
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-original_slug: Web/API/Canvas_API/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Formes_géométriques", "Dessin_de_texte_avec_canvas")}}

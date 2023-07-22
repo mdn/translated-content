@@ -15,10 +15,10 @@ Há um último conceito essencial para discutirmos neste curso, para fechar noss
       <td>
         <p>
           Conhecimento básico de internet, compreenção básica de HTML e CSS,
-          <a href="/en-US/docs/Learn/JavaScript/First_steps"
+          <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
             >JavaScript primeiros passos</a
           >,
-          <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions"
+          <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions"
             >Funções — reutilizando blocos de código</a
           >.
         </p>

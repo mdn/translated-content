@@ -1,11 +1,6 @@
 ---
 title: box-pack
 slug: Web/CSS/box-pack
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/box-pack
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: 'Attribut HTML : disabled'
 slug: Web/HTML/Attributes/disabled
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Forms
-  - required
 translation_of: Web/HTML/Attributes/disabled
 ---
 

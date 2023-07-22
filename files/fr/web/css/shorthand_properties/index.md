@@ -1,12 +1,7 @@
 ---
 title: Propriétés raccourcies
 slug: Web/CSS/Shorthand_properties
-tags:
-  - CSS
-  - Guide
-  - Reference
 translation_of: Web/CSS/Shorthand_properties
-original_slug: Web/CSS/Propriétés_raccourcies
 ---
 
 {{CSSRef}}

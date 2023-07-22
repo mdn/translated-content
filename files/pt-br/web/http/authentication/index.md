@@ -110,7 +110,7 @@ Vários clientes também permitem que você evite o prompt de login usando uma U
 https://username:password@www.example.com/
 ```
 
-**O uso destas URLs está obsoleto**. No Chrome, a parte `username:password@` nas URLs é [retirada](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) por razões de segurança. No Firefox, é verificado se o site realmente Airequer autenticação e, se não, Firefox alertará o usuário com uma mensagem "Você está prestes a logar no site “www\.example.com” com seu nome de usuário "username", mas o website não requer autenticação. Isso pode ser uma tentativa de enganá-lo".
+**O uso destas URLs está obsoleto**. No Chrome, a parte `username:password@` nas URLs é [retirada](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) por razões de segurança. No Firefox, é verificado se o site realmente Airequer autenticação e, se não, Firefox alertará o usuário com uma mensagem "Você está prestes a logar no site "www\.example.com" com seu nome de usuário "username", mas o website não requer autenticação. Isso pode ser uma tentativa de enganá-lo".
 
 ## Veja também
 

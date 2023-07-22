@@ -1,12 +1,6 @@
 ---
 title: DocumentFragment.querySelector()
 slug: Web/API/DocumentFragment/querySelector
-tags:
-  - API
-  - DOM
-  - Document
-  - Méthodes
-  - fragment
 translation_of: Web/API/DocumentFragment/querySelector
 ---
 

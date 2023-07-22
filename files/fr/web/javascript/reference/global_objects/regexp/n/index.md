@@ -1,14 +1,7 @@
 ---
 title: RegExp.$1-$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
-tags:
-  - JavaScript
-  - Non-standard
-  - Propriété
-  - Reference
-  - RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/n
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/n
 ---
 
 {{JSRef}} {{non-standard_header}}

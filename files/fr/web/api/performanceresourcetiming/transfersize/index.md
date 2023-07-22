@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.transferSize
 slug: Web/API/PerformanceResourceTiming/transferSize
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - transferSize
 translation_of: Web/API/PerformanceResourceTiming/transferSize
 ---
 

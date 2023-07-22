@@ -41,7 +41,7 @@ slug: MDN/Community/Contributing/Translated_content
 ### 俄语（ru）
 
 - 讨论组：[Matrix (#mdn-l10n-ru channel)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- 目前的志愿者：[armanpwnz](https://github.com/armanpwnz)、[captainspring](https://github.com/captainspring)、[myshov](https://github.com/myshov)、[Saionaro](https://github.com/Saionaro)、[sashasushko](https://github.com/sashasushko)、[lex111](https://github.com/lex111)
+- 目前的志愿者：[yanaklose](https://github.com/yanaklose)、[myshov](https://github.com/myshov)、[Saionaro](https://github.com/Saionaro)、[sashasushko](https://github.com/sashasushko)、[lex111](https://github.com/lex111)
 
 ### 西班牙语（es）
 

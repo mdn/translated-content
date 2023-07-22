@@ -1,8 +1,6 @@
 ---
 title: style
 slug: Web/API/HTMLStyleElement
-tags:
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLStyleElement
 ---
 

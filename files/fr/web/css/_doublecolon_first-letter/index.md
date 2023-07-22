@@ -1,10 +1,6 @@
 ---
 title: '::first-letter'
 slug: Web/CSS/::first-letter
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::first-letter
 ---
 

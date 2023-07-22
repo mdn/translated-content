@@ -1,16 +1,6 @@
 ---
 title: Utiliser Fetch
 slug: Web/API/Fetch_API/Using_Fetch
-tags:
-  - API
-  - BODY
-  - Expérimental(2)
-  - Fetch
-  - Guide
-  - Promesse
-  - Promise
-  - Response
-  - request
 translation_of: Web/API/Fetch_API/Using_Fetch
 ---
 

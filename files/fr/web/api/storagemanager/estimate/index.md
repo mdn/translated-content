@@ -1,9 +1,7 @@
 ---
 title: StorageManager.estimate()
 slug: Web/API/StorageManager/estimate
-page-type: web-api-instance-method
 translation_of: Web/API/StorageManager/estimate
-browser-compat: api.StorageManager.estimate
 ---
 
 {{securecontext_header}}{{APIRef("Storage")}}

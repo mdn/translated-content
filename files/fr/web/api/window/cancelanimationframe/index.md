@@ -1,14 +1,6 @@
 ---
 title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
-tags:
-  - API
-  - Animation
-  - DOM
-  - Experimental
-  - Méthode
-  - Reference
-  - Window
 translation_of: Web/API/Window/cancelAnimationFrame
 ---
 

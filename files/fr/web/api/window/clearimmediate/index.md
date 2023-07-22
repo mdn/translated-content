@@ -1,11 +1,6 @@
 ---
 title: Window.clearImmediate()
 slug: Web/API/Window/clearImmediate
-tags:
-  - API
-  - HTML DOM
-  - Méthode
-  - Window
 translation_of: Web/API/Window/clearImmediate
 ---
 

@@ -16,11 +16,11 @@ JavaScript では、オブジェクトを操作する標準の組み込み構文
 JavaScript のオブジェクトのディープコピーを作成する一つの方法は、そのオブジェクトが [シリアライズ](/ja/docs/Glossary/Serialization) 可能であれば {{jsxref("JSON.stringify()")}} でオブジェクトを JSON 文字列に変換し、 {{jsxref("JSON.parse()")}} で文字列から（完全に新しい） JavaScript のオブジェクトに変換することです。
 
 ```js
-let ingredients_list = ["noodles",{"list":["eggs","flour","water"]}];
+let ingredients_list = ["noodles", { list: ["eggs", "flour", "water"] }];
 let ingredients_list_deepcopy = JSON.parse(JSON.stringify(ingredients_list));
 
 // ingredients_list_deepcopy の 'list' プロパティの値を変更します
-ingredients_list_deepcopy[1].list = ["rice flour","water"]
+ingredients_list_deepcopy[1].list = ["rice flour", "water"];
 // ingredients_list の 'list' プロパティは変更されません
 console.log(ingredients_list[1].list);
 // Array(3) [ "eggs", "flour", "water" ]

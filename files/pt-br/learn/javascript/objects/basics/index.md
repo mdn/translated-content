@@ -15,9 +15,9 @@ Neste artigo, veremos a sintaxe fundamental de objetos JavaScript e revisitaremo
       <td>
         Interação básica com o computador, entendimento básico de HTML e CSS,
         familiaridade com o básico de JavaScript (ver
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
+        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
         e
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
           >Elementos construtivos</a
         >).
       </td>
@@ -268,7 +268,7 @@ Então quando usamos métodos de strings como:
 minhaString.split(',');
 ```
 
-Estamos usando um método disponível na instância da class [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). Toda vez que você cria uma string em seu código, essa string é automaticamente criada como uma instância de `String`, e, portanto, possui vários métodos e propriedades comuns que estão disponíveis para ela.
+Estamos usando um método disponível na instância da class [`String`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String). Toda vez que você cria uma string em seu código, essa string é automaticamente criada como uma instância de `String`, e, portanto, possui vários métodos e propriedades comuns que estão disponíveis para ela.
 
 Quando você acessa o document object model usando linhas como estas:
 
@@ -277,9 +277,9 @@ var minhaDiv = document.createElement('div');
 var meuVideo = document.querySelector('video');
 ```
 
-Você está usando métodos disponíveis na instância da class [`Document`](/en-US/docs/Web/API/Document). Cada vez que a página é recarrecada, uma instância de `Document` é criada, chamando `document`, que representa a estrutura inteira da página, conteúdo e outros recursos como sua URL. Novamente, isso significa que ela tem vários métodos e propriedades disponíveis nela.
+Você está usando métodos disponíveis na instância da class [`Document`](/pt-BR/docs/Web/API/Document). Cada vez que a página é recarrecada, uma instância de `Document` é criada, chamando `document`, que representa a estrutura inteira da página, conteúdo e outros recursos como sua URL. Novamente, isso significa que ela tem vários métodos e propriedades disponíveis nela.
 
-O mesmo pode ser dito de basicamente qualquer outro objeto/API embutido que esteja usando — [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math), etc.
+O mesmo pode ser dito de basicamente qualquer outro objeto/API embutido que esteja usando — [`Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Math`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math), etc.
 
 Note que Objetos/APIs embutidos nem sempre criam instâncias de objetos automaticamente. Por exemplo, a [API de Notificações](/pt-BR/docs/Web/API/Notifications_API) — que permite que navegadores modernos disparem notificações de sistema — requerem que você inicialize uma nova instância de objeto usando o construtor para cada notificação que queira disparar. Tente entrar o seguinte no seu console Javascript:
 

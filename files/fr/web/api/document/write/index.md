@@ -1,12 +1,6 @@
 ---
 title: document.write
 slug: Web/API/Document/write
-tags:
-  - API
-  - DOM
-  - Document
-  - Méthodes
-  - Rérérence
 translation_of: Web/API/Document/write
 ---
 

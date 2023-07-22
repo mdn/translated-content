@@ -1,12 +1,6 @@
 ---
 title: ':nth-of-type'
 slug: Web/CSS/:nth-of-type
-tags:
-  - CSS
-  - Mise en page
-  - Pseudo-classe
-  - Reference
-  - Web
 translation_of: Web/CSS/:nth-of-type
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: GestureEvent
 slug: Web/API/GestureEvent
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Interface
 translation_of: Web/API/GestureEvent
 ---
 

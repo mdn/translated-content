@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.encodedBodySize
 slug: Web/API/PerformanceResourceTiming/encodedBodySize
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - encodedBodySize
 translation_of: Web/API/PerformanceResourceTiming/encodedBodySize
 ---
 

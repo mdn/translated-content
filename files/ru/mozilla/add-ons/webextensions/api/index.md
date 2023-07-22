@@ -20,7 +20,7 @@ function logTabs(tabs) {
   console.log(tabs);
 }
 
-browser.tabs.query({currentWindow: true}, logTabs);
+browser.tabs.query({ currentWindow: true }, logTabs);
 ```
 
 Многие API выполняются асинхронно, возвращая [`Promise`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise):
@@ -34,9 +34,7 @@ function logError(e) {
   console.error(e);
 }
 
-var setCookie = browser.cookies.set(
-  {url: "/"}
-);
+var setCookie = browser.cookies.set({ url: "/" });
 setCookie.then(logCookie, logError);
 ```
 

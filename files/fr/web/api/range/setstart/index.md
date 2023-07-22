@@ -1,11 +1,6 @@
 ---
 title: Range.setStart()
 slug: Web/API/Range/setStart
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
 translation_of: Web/API/Range/setStart
 ---
 

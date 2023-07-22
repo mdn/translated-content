@@ -1,12 +1,6 @@
 ---
 title: Reste (%)
 slug: Web/JavaScript/Reference/Operators/Remainder
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.remainder
 ---
 
 {{jsSidebar("Operators")}}

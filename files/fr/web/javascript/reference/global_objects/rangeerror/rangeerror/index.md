@@ -2,7 +2,6 @@
 title: Constructeur RangeError()
 slug: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
 translation_of: Web/JavaScript/Reference/Global_Objects/RangeError/RangeError
-browser-compat: javascript.builtins.RangeError.RangeError
 ---
 
 {{JSRef}}

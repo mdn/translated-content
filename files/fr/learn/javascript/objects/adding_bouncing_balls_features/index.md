@@ -1,18 +1,7 @@
 ---
 title: Ajouter des fonctionnalités à notre exercice des balles rebondissantes
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-tags:
-  - Apprentissage
-  - CodingScripting
-  - Débutant
-  - Evaluation
-  - JavaScript
-  - OOJS
-  - Objet
-  - Orienté objet
 translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-original_slug: >-
-  Learn/JavaScript/Objects/Ajouter_des_fonctionnalités_à_notre_démo_de_balles_rebondissantes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}

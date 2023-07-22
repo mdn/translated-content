@@ -1,16 +1,6 @@
 ---
 title: Cache.matchAll()
 slug: Web/API/Cache/matchAll
-tags:
-  - API
-  - Cache
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - matchAll
 translation_of: Web/API/Cache/matchAll
 ---
 

@@ -1,9 +1,7 @@
 ---
 title: AnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
-page-type: web-api-constructor
 translation_of: Web/API/AnimationEvent/AnimationEvent
-browser-compat: api.AnimationEvent.AnimationEvent
 l10n:
   sourceCommit: c000698d544f932314050edec3f47b8b8dc906bf
 ---

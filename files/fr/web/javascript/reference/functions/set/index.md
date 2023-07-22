@@ -1,13 +1,7 @@
 ---
 title: L'opérateur set
 slug: Web/JavaScript/Reference/Functions/set
-tags:
-  - ECMAScript 5
-  - Functions
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Functions/set
-original_slug: Web/JavaScript/Reference/Fonctions/set
 ---
 
 {{jsSidebar("Functions")}}

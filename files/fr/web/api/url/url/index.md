@@ -1,12 +1,6 @@
 ---
 title: URL()
 slug: Web/API/URL/URL
-tags:
-  - API
-  - Constructeur
-  - Reference
-  - URL
-  - URL API
 translation_of: Web/API/URL/URL
 ---
 

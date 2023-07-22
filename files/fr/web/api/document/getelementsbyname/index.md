@@ -1,12 +1,6 @@
 ---
 title: document.getElementsByName()
 slug: Web/API/Document/getElementsByName
-tags:
-  - API
-  - DOM
-  - Document
-  - HTML
-  - Méthodes
 translation_of: Web/API/Document/getElementsByName
 ---
 

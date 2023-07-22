@@ -1,10 +1,6 @@
 ---
 title: range
 slug: Web/CSS/@counter-style/range
-tags:
-  - CSS
-  - Descripteur
-  - Reference
 translation_of: Web/CSS/@counter-style/range
 ---
 

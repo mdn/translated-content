@@ -1,11 +1,6 @@
 ---
 title: columns
 slug: Web/CSS/columns
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
 translation_of: Web/CSS/columns
 ---
 

@@ -1,13 +1,6 @@
 ---
 title: element.hasAttributes
 slug: Web/API/Element/hasAttributes
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthode
-  - Reference
-  - polyfill
 translation_of: Web/API/Element/hasAttributes
 ---
 

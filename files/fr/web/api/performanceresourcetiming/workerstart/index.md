@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.workerStart
 slug: Web/API/PerformanceResourceTiming/workerStart
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - workerStart
 translation_of: Web/API/PerformanceResourceTiming/workerStart
 ---
 

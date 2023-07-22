@@ -1,10 +1,6 @@
 ---
 title: ':enabled'
 slug: Web/CSS/:enabled
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:enabled
 ---
 

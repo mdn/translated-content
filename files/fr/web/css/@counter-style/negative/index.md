@@ -1,10 +1,6 @@
 ---
 title: negative
 slug: Web/CSS/@counter-style/negative
-tags:
-  - CSS
-  - Descripteur
-  - Reference
 translation_of: Web/CSS/@counter-style/negative
 ---
 

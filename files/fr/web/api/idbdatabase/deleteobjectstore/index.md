@@ -1,11 +1,6 @@
 ---
 title: IDBDatabase.deleteObjectStore()
 slug: Web/API/IDBDatabase/deleteObjectStore
-tags:
-  - API
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBDatabase/deleteObjectStore
 ---
 

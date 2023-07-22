@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.domainLookupEnd
 slug: Web/API/PerformanceResourceTiming/domainLookupEnd
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - domainLookupEnd
 translation_of: Web/API/PerformanceResourceTiming/domainLookupEnd
 ---
 

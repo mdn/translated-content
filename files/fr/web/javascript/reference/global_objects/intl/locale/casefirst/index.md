@@ -1,16 +1,7 @@
 ---
 title: Intl.Locale.prototype.caseFirst
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
-  - Unicode
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/caseFirst
 ---
 
 {{JSRef}}

@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-outer-spin-button'
+title: "::-webkit-outer-spin-button"
 slug: Web/CSS/::-webkit-outer-spin-button
 ---
 
