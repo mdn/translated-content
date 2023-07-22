@@ -1,11 +1,6 @@
 ---
 title: font-display
 slug: Web/CSS/@font-face/font-display
-tags:
-  - CSS
-  - Descripteur
-  - Experimental
-  - Reference
 translation_of: Web/CSS/@font-face/font-display
 ---
 

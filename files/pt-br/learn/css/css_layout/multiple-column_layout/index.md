@@ -14,10 +14,10 @@ A especificação de layout de várias colunas fornece um método de disposiçã
       <th scope="row">Pré requisitos:</th>
       <td>
         HTML basico (estude
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >) e uma ideia de como CSS funciona (estude
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction to CSS</a
         >).
       </td>

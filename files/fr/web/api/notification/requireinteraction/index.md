@@ -1,15 +1,6 @@
 ---
 title: Notification.requireInteraction
 slug: Web/API/Notification/requireInteraction
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - Web
-  - requireInteraction
 translation_of: Web/API/Notification/requireInteraction
 ---
 

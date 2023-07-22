@@ -1,16 +1,7 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-tags:
-  - Chaîne
-  - Expression
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - Régulière
 translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/replace
 ---
 
 {{JSRef}}

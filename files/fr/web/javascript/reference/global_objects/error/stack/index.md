@@ -1,15 +1,7 @@
 ---
 title: Error.prototype.stack
 slug: Web/JavaScript/Reference/Global_Objects/Error/stack
-tags:
-  - Error
-  - JavaScript
-  - Non-standard
-  - Propriété
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/Stack
-original_slug: Web/JavaScript/Reference/Objets_globaux/Error/Stack
 ---
 
 {{JSRef}} {{non-standard_header}}

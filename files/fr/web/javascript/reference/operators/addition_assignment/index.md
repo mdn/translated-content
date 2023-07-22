@@ -1,13 +1,6 @@
 ---
 title: Affectation après addition (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.addition_assignment
 ---
 
 {{jsSidebar("Operators")}}

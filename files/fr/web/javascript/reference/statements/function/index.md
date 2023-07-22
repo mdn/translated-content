@@ -1,12 +1,7 @@
 ---
 title: function
 slug: Web/JavaScript/Reference/Statements/function
-tags:
-  - JavaScript
-  - Reference
-  - Statement
 translation_of: Web/JavaScript/Reference/Statements/function
-original_slug: Web/JavaScript/Reference/Instructions/function
 ---
 
 {{jsSidebar("Statements")}}

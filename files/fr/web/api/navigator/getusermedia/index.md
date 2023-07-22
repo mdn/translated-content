@@ -2,8 +2,6 @@
 title: Navigator.getUserMedia()
 slug: Web/API/Navigator/getUserMedia
 translation_of: Web/API/Navigator/getUserMedia
-original_slug: NavigatorUserMedia.getUserMedia
-browser-compat: api.Navigator.getUserMedia
 ---
 
 {{APIRef("Media Capture and Streams")}}{{deprecated_header}}

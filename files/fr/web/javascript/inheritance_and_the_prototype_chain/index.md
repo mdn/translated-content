@@ -1,14 +1,7 @@
 ---
 title: Héritage et chaîne de prototype
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - Guide
-  - Héritage
-  - Intermédiaire
-  - JavaScript
-  - OOP
 translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
-original_slug: Web/JavaScript/Héritage_et_chaîne_de_prototypes
 ---
 
 {{jsSidebar("Advanced")}}

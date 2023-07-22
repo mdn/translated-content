@@ -1,8 +1,6 @@
 ---
 title: HTMLHeadingElement
 slug: Web/API/HTMLHeadingElement
-page-type: web-api-interface
-browser-compat: api.HTMLHeadingElement
 translation_of: Web/API/HTMLHeadingElement
 ---
 

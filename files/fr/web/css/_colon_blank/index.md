@@ -1,12 +1,6 @@
 ---
 title: ':blank'
 slug: Web/CSS/:blank
-tags:
-  - CSS
-  - Draft
-  - Experimental
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:blank
 ---
 

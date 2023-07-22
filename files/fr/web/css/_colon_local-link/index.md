@@ -2,7 +2,6 @@
 title: ':local-link'
 slug: Web/CSS/:local-link
 translation_of: Web/CSS/:local-link
-browser-compat: css.selectors.local-link
 ---
 
 {{CSSRef}}

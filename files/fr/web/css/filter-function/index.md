@@ -1,10 +1,6 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
-tags:
-  - CSS
-  - Reference
-  - Type
 translation_of: Web/CSS/filter-function
 ---
 

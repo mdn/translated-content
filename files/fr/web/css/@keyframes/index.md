@@ -1,10 +1,6 @@
 ---
 title: '@keyframes'
 slug: Web/CSS/@keyframes
-tags:
-  - CSS
-  - Reference
-  - Règle @
 translation_of: Web/CSS/@keyframes
 ---
 

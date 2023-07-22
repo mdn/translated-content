@@ -1,14 +1,6 @@
 ---
 title: Response.ok
 slug: Web/API/Response/ok
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - Response
-  - ok
 translation_of: Web/API/Response/ok
 ---
 

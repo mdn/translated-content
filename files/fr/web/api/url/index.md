@@ -1,9 +1,7 @@
 ---
 title: URL
 slug: Web/API/URL
-page-type: web-api-interface
 translation_of: Web/API/URL
-browser-compat: api.URL
 ---
 
 {{ApiRef("URL API")}}

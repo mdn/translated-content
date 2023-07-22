@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.buffered
 slug: Web/API/HTMLMediaElement/buffered
-browser-compat: api.HTMLMediaElement.buffered
 translation_of: Web/API/HTMLMediaElement/buffered
 ---
 

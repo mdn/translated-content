@@ -1,11 +1,6 @@
 ---
 title: font-variant-caps
 slug: Web/CSS/font-variant-caps
-tags:
-  - CSS
-  - CSS Fonts
-  - Propriété
-  - Reference
 translation_of: Web/CSS/font-variant-caps
 ---
 

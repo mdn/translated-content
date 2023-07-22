@@ -1,11 +1,6 @@
 ---
 title: document.createComment
 slug: Web/API/Document/createComment
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Reference
 translation_of: Web/API/Document/createComment
 ---
 

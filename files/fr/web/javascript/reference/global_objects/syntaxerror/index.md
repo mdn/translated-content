@@ -2,8 +2,6 @@
 title: SyntaxError
 slug: Web/JavaScript/Reference/Global_Objects/SyntaxError
 translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
-original_slug: Web/JavaScript/Reference/Objets_globaux/SyntaxError
-browser-compat: javascript.builtins.SyntaxError
 ---
 
 {{JSRef}}

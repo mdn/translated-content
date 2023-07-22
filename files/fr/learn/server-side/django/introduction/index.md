@@ -1,10 +1,6 @@
 ---
 title: Introduction à Django
 slug: Learn/Server-side/Django/Introduction
-tags:
-  - Débutant
-  - Python
-  - django
 translation_of: Learn/Server-side/Django/Introduction
 ---
 

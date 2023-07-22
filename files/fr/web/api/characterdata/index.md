@@ -1,9 +1,6 @@
 ---
 title: CharacterData
 slug: Web/API/CharacterData
-tags:
-  - API
-  - DOM
 translation_of: Web/API/CharacterData
 ---
 

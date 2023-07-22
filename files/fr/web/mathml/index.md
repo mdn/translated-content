@@ -2,7 +2,6 @@
 title: MathML
 slug: Web/MathML
 translation_of: Web/MathML
-browser-compat: mathml.elements.math
 ---
 
 {{MathMLRef}}

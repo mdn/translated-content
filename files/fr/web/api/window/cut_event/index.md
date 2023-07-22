@@ -1,14 +1,6 @@
 ---
 title: 'Window: cut event'
 slug: Web/API/Window/cut_event
-tags:
-  - API
-  - API Presse-papiers
-  - Cut
-  - Evènement
-  - Reference
-  - Web
-  - Window
 translation_of: Web/API/Window/cut_event
 ---
 

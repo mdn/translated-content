@@ -2,8 +2,6 @@
 title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
 translation_of: Web/API/HTMLFormElement/elements
-page-type: web-api-instance-property
-browser-compat: api.HTMLFormElement.elements
 ---
 
 {{APIRef("HTML DOM")}}

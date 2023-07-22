@@ -1,15 +1,6 @@
 ---
 title: element.removeEventListener
 slug: Web/API/EventTarget/removeEventListener
-tags:
-  - API
-  - Cible
-  - DOM
-  - Evènement
-  - Méthode
-  - Reference
-  - Suppression
-  - Écouteurs
 translation_of: Web/API/EventTarget/removeEventListener
 ---
 

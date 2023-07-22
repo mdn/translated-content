@@ -1,9 +1,6 @@
 ---
 title: Attributs d'événements des SVG
 slug: Web/SVG/Attribute/Events
-tags:
-  - Event
-  - SVG
 translation_of: Web/SVG/Attribute/Events
 ---
 

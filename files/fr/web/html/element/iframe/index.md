@@ -1,21 +1,7 @@
 ---
 title: '<iframe> : l''élément de cadre intégré'
 slug: Web/HTML/Element/iframe
-tags:
-  - Content
-  - Element
-  - Embedded content
-  - Embedding
-  - Frames
-  - HTML
-  - HTML embedded content
-  - Inline Frames
-  - Reference
-  - Web
-  - embedded
-  - iframe
 translation_of: Web/HTML/Element/iframe
-browser-compat: html.elements.iframe
 ---
 
 {{HTMLSidebar}}

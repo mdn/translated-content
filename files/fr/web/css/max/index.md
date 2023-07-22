@@ -1,12 +1,7 @@
 ---
 title: max()
 slug: Web/CSS/max
-tags:
-  - CSS
-  - Fonction
-  - Reference
 translation_of: Web/CSS/max()
-original_slug: Web/CSS/max()
 ---
 
 {{CSSRef}}

@@ -10,4 +10,4 @@ Un {{glossary("objet")}} créé par un {{glossary("constructeur")}} est une inst
 
 ### Culture générale
 
-- [Instance](https://fr.wikipedia.org/wiki/Instance_(programmation)) sur Wikipédia
+- [Instance](<https://fr.wikipedia.org/wiki/Instance_(programmation)>) sur Wikipédia

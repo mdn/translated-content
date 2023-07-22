@@ -2,8 +2,6 @@
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp
-browser-compat: javascript.builtins.RegExp
 ---
 
 {{JSRef}}

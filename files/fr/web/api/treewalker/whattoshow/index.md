@@ -1,11 +1,6 @@
 ---
 title: TreeWalker.whatToShow
 slug: Web/API/TreeWalker/whatToShow
-tags:
-  - API
-  - DOM
-  - Propriété
-  - Reference
 translation_of: Web/API/TreeWalker/whatToShow
 ---
 

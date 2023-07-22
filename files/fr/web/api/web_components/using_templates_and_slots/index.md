@@ -2,7 +2,6 @@
 title: Utiliser les éléments template et slot
 slug: Web/API/Web_components/Using_templates_and_slots
 translation_of: Web/Web_Components/Using_templates_and_slots
-original_slug: Web/Web_Components/Using_templates_and_slots
 ---
 
 {{DefaultAPISidebar("Web Components")}}

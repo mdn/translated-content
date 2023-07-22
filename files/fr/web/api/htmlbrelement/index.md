@@ -1,9 +1,6 @@
 ---
 title: HTMLBRElement
 slug: Web/API/HTMLBRElement
-tags:
-  - DOM
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLBRElement
 ---
 

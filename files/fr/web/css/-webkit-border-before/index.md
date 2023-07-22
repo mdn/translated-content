@@ -1,11 +1,6 @@
 ---
 title: '-webkit-border-before'
 slug: Web/CSS/-webkit-border-before
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-border-before
 ---
 

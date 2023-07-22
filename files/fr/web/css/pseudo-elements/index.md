@@ -1,13 +1,7 @@
 ---
 title: Pseudo-éléments
 slug: Web/CSS/Pseudo-elements
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
-  - Sélecteur
 translation_of: Web/CSS/Pseudo-elements
-original_slug: Web/CSS/Pseudo-éléments
 ---
 
 {{CSSRef}}

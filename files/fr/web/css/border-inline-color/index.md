@@ -1,12 +1,6 @@
 ---
 title: border-inline-color
 slug: Web/CSS/border-inline-color
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
 translation_of: Web/CSS/border-inline-color
 ---
 

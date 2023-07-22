@@ -1,12 +1,6 @@
 ---
 title: PasswordCredential
 slug: Web/API/PasswordCredential/PasswordCredential
-tags:
-  - API
-  - Constructeur
-  - Credential Management API
-  - PasswordCredential
-  - Reference
 translation_of: Web/API/PasswordCredential/PasswordCredential
 ---
 

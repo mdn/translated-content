@@ -2,7 +2,6 @@
 title: Les grilles CSS et l'amélioration progressive
 slug: Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement
 translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
-original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement
 ---
 
 {{CSSRef}}

@@ -1,15 +1,7 @@
 ---
 title: DataView.prototype.byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
-tags:
-  - DataView
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/byteOffset
 ---
 
 {{JSRef}}

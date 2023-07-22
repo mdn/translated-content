@@ -1,11 +1,6 @@
 ---
 title: AudioProcessingEvent
 slug: Web/API/AudioProcessingEvent
-tags:
-  - API
-  - Experimental
-  - Reference
-  - Web Audio API
 translation_of: Web/API/AudioProcessingEvent
 ---
 

@@ -1,15 +1,6 @@
 ---
 title: PerformanceObserver.takeRecords()
 slug: Web/API/PerformanceObserver/takeRecords
-tags:
-  - API
-  - Method
-  - Méthode
-  - Performance Observer API
-  - PerformanceObserver
-  - Reference
-  - observers
-  - takeRecords()
 translation_of: Web/API/PerformanceObserver/disconnect
 ---
 

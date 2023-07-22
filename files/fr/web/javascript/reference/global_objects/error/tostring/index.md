@@ -1,14 +1,7 @@
 ---
 title: Error.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
-tags:
-  - Error
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Error/toString
 ---
 
 {{JSRef}}

@@ -1,18 +1,7 @@
 ---
 title: Valeurs de retour des fonctions
 slug: Learn/JavaScript/Building_blocks/Return_values
-tags:
-  - Apprendre
-  - Article
-  - Débutant
-  - Fonctions
-  - Guide
-  - JavaScript
-  - Return
-  - Valeurs de retour
-  - Écriture de code
 translation_of: Learn/JavaScript/Building_blocks/Return_values
-original_slug: Apprendre/JavaScript/Building_blocks/Return_values
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}

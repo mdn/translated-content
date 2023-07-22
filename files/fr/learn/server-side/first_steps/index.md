@@ -1,14 +1,7 @@
 ---
 title: Premiers pas dans la programmation d'un site côté serveur
 slug: Learn/Server-side/First_steps
-tags:
-  - Débutant
-  - Encodage
-  - Guide
-  - Intro
-  - Programmation côté serveur
 translation_of: Learn/Server-side/First_steps
-original_slug: Learn/Server-side/Premiers_pas
 ---
 
 {{LearnSidebar}}

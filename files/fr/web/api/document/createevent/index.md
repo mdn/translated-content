@@ -1,11 +1,6 @@
 ---
 title: Document.createEvent()
 slug: Web/API/Document/createEvent
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
 translation_of: Web/API/Document/createEvent
 ---
 

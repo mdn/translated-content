@@ -1,14 +1,6 @@
 ---
 title: L'API de périphérique WebXR
 slug: Web/API/WebXR_Device_API
-tags:
-  - API
-  - AR
-  - Réalité augmentée
-  - Réalité virtuelle
-  - VR
-  - WebXR
-  - WebXR API
 translation_of: Web/API/WebXR_Device_API
 ---
 

@@ -1,10 +1,7 @@
 ---
 title: Network Information API
 slug: Web/API/Network_Information_API
-tags:
-  - WebAPI
 translation_of: Web/API/Network_Information_API
-original_slug: WebAPI/Network_Information
 ---
 
 {{ SeeCompatTable() }}

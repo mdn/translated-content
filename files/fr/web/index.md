@@ -1,9 +1,6 @@
 ---
 title: Technologies web pour développeurs
 slug: Web
-tags:
-  - Landing
-  - Web
 translation_of: Web
 ---
 

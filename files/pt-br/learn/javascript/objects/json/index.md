@@ -16,14 +16,14 @@ JavaScript Object Notation (JSON) é um formato baseado em texto padrão para re
         <p>
           Conhecimento básico em informática, conhecimento básico de HTML e CSS,
           conhecimento básico de JavaScript veja
-          <a href="/en-US/docs/Learn/JavaScript/First_steps"
+          <a href="/pt-BR/docs/Learn/JavaScript/First_steps"
             >Primeiros passos</a
           >
           e
-          <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+          <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
             >Construindo blocos</a
           >) e o básico de OOJS (veja
-          <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+          <a href="/pt-BR/docs/Learn/JavaScript/Object-oriented/Introduction"
             >Introdução a objetos</a
           >).
         </p>
@@ -205,7 +205,7 @@ Para obter o JSON, vamos usar uma API chamada {{domxref("XMLHttpRequest")}} (ger
     var request = new XMLHttpRequest();
     ```
 
-3. Agora precisamos abrir uma nova solicitação usando o método [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open) . Adicione a seguinte linha:
+3. Agora precisamos abrir uma nova solicitação usando o método [`open()`](/pt-BR/docs/Web/API/XMLHttpRequest/open) . Adicione a seguinte linha:
 
     ```js
     request.open('GET', requestURL);
@@ -213,10 +213,10 @@ Para obter o JSON, vamos usar uma API chamada {{domxref("XMLHttpRequest")}} (ger
 
     Isso leva pelo menos dois parâmetros — existem outros parâmetros opcionais disponíveis. Nós só precisamos dos dois obrigatórios para este exemplo simples:
 
-    - O método HTTP a ser usado ao fazer a solicitação de rede. Neste caso, [`GET`](/en-US/docs/Web/HTTP/Methods/GET) é bom, pois estamos apenas recuperando alguns dados simples.
+    - O método HTTP a ser usado ao fazer a solicitação de rede. Neste caso, [`GET`](/pt-BR/docs/Web/HTTP/Methods/GET) é bom, pois estamos apenas recuperando alguns dados simples.
     - O URL para fazer a solicitação — esta é a URL do arquivo JSON que armazenamos anteriormente.
 
-4. Em seguida, adicione as duas linhas a seguir — aqui estamos definindo o [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) como JSON, para que o XHR saiba que o servidor retornará o JSON e que isso deve ser convertido nos bastidores em um objeto JavaScript. Em seguida, enviamos a solicitação com o método [`send()`](/en-US/docs/Web/API/XMLHttpRequest/send):
+4. Em seguida, adicione as duas linhas a seguir — aqui estamos definindo o [`responseType`](/pt-BR/docs/Web/API/XMLHttpRequest/responseType) como JSON, para que o XHR saiba que o servidor retornará o JSON e que isso deve ser convertido nos bastidores em um objeto JavaScript. Em seguida, enviamos a solicitação com o método [`send()`](/pt-BR/docs/Web/API/XMLHttpRequest/send):
 
     ```js
     request.responseType = 'json';
@@ -233,9 +233,9 @@ Para obter o JSON, vamos usar uma API chamada {{domxref("XMLHttpRequest")}} (ger
     }
     ```
 
-Aqui estamos armazenando a resposta ao nosso pedido (disponível na propriedade [`response`](/en-US/docs/Web/API/XMLHttpRequest/response)) em uma variável chamada `superHeroes`; essa variável agora conterá o objeto JavaScript com base no JSON! Então, estamos passando esse objeto para duas chamadas de função — a primeira preencherá o <`header>` com os dados corretos, enquanto a segunda criará uma ficha de informações para cada herói da equipe e a inserirá na `<section>`.
+Aqui estamos armazenando a resposta ao nosso pedido (disponível na propriedade [`response`](/pt-BR/docs/Web/API/XMLHttpRequest/response)) em uma variável chamada `superHeroes`; essa variável agora conterá o objeto JavaScript com base no JSON! Então, estamos passando esse objeto para duas chamadas de função — a primeira preencherá o <`header>` com os dados corretos, enquanto a segunda criará uma ficha de informações para cada herói da equipe e a inserirá na `<section>`.
 
-Envolvemos o código em um manipulador de eventos que é executado quando o evento de carregamento é acionado no objeto de solicitação (consulte [`onload`](/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload)) — isso ocorre porque o evento load é acionado quando a resposta é retornada com sucesso; Fazê-lo desta forma garante que `request.response` estará definitivamente disponível quando chegarmos a tentar fazer algo com ele.
+Envolvemos o código em um manipulador de eventos que é executado quando o evento de carregamento é acionado no objeto de solicitação (consulte [`onload`](/pt-BR/docs/Web/API/XMLHttpRequestEventTarget/onload)) — isso ocorre porque o evento load é acionado quando a resposta é retornada com sucesso; Fazê-lo desta forma garante que `request.response` estará definitivamente disponível quando chegarmos a tentar fazer algo com ele.
 
 ### Preenchendo o Cabeçalho
 
@@ -253,7 +253,7 @@ function populateHeader(jsonObj) {
 }
 ```
 
-Nós chamamos o parâmetro `jsonObj`, para nos lembrarmos que esse objeto JavaScript foi originado do JSON. Aqui, primeiro criamos um elemento {{HTMLElement("h1")}} como [`createElement()`](/en-US/docs/Web/API/Document/createElement), definimos seu [`textContent`](/en-US/docs/Web/API/Node/textContent) para igualar a propriedade `squadName` do objeto e, em seguida, o adicionamos ao cabeçalho usando [`appendChild()`](/en-US/docs/Web/API/Node/appendChild). Em seguida, fazemos uma operação muito semelhante com um parágrafo: criá-lo, definir seu conteúdo de texto e anexá-lo ao cabeçalho. A única diferença é que seu texto é definido como uma string concatenada contendo as propriedades `homeTown` e `formed` do objeto.
+Nós chamamos o parâmetro `jsonObj`, para nos lembrarmos que esse objeto JavaScript foi originado do JSON. Aqui, primeiro criamos um elemento {{HTMLElement("h1")}} como [`createElement()`](/pt-BR/docs/Web/API/Document/createElement), definimos seu [`textContent`](/pt-BR/docs/Web/API/Node/textContent) para igualar a propriedade `squadName` do objeto e, em seguida, o adicionamos ao cabeçalho usando [`appendChild()`](/pt-BR/docs/Web/API/Node/appendChild). Em seguida, fazemos uma operação muito semelhante com um parágrafo: criá-lo, definir seu conteúdo de texto e anexá-lo ao cabeçalho. A única diferença é que seu texto é definido como uma string concatenada contendo as propriedades `homeTown` e `formed` do objeto.
 
 ### Criando os cartões de informações do herói
 
@@ -319,8 +319,8 @@ request.responseType = 'json';
 
 Mas às vezes não temos muita sorte — às vezes recebemos uma string JSON bruta e precisaremos convertê-la em um objeto por conta própria. E quando queremos enviar um objeto JavaScript pela rede, precisamos convertê-lo em JSON (uma string) antes de enviá-lo. Felizmente, esses dois problemas são tão comuns no desenvolvimento da Web que um objeto [JSON](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON) interno está disponível nos navegadores, o que contém os dois métodos a seguir:
 
-- [`parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): Aceita uma string JSON como um parâmetro e retorna o objeto JavaScript correspondente.
-- [`stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): Aceita um objeto como um parâmetro e retorna o formato equivalente de string JSON.
+- [`parse()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): Aceita uma string JSON como um parâmetro e retorna o objeto JavaScript correspondente.
+- [`stringify()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): Aceita um objeto como um parâmetro e retorna o formato equivalente de string JSON.
 
 Você pode ver o primeiro em ação em nosso exemplo [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) (veja o [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) — isso faz exatamente a mesma coisa que o exemplo que construímos anteriormente, exceto pelo fato de configurarmos o XHR para retornar texto JSON bruto, em seguida, usado `parse()` para convertê-lo em um objeto JavaScript real. O trecho principal do código está aqui:
 

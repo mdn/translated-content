@@ -1,13 +1,6 @@
 ---
 title: NodeIterator.pointerBeforeReferenceNode
 slug: Web/API/NodeIterator/pointerBeforeReferenceNode
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Itérateur
-  - Noeuds
-  - Propriétés
 translation_of: Web/API/NodeIterator/pointerBeforeReferenceNode
 ---
 

@@ -27,7 +27,7 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 - [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域において、1 行目に均等割付を与えたときに適切な処理を妨げるバグを修正しました。
 - [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域の最初で delete もしくは backspace を押した際に、前のブロックに影響するバグを修正しました。
 - [`document.getSelection()`](/ja/docs/Web/API/Document/getSelection "DOM の getSelection() メソッドは、 Window インタフェース及び Document インタフェースで利用可能です。
-  詳細については window.getSelection() の頁を参照して下さい。") が文字列化ではなく、[`window.getSelection()`](/ja/docs/Web/API/Window/getSelection) と同じ `Selection` オブジェクトを返すようになりました。
+詳細については window.getSelection() の頁を参照して下さい。") が文字列化ではなく、[`window.getSelection()`](/ja/docs/Web/API/Window/getSelection) と同じ `Selection` オブジェクトを返すようになりました。
 - HTML5 の `selectionDirection` プロパティが実装されました。編集可能テキストで選択した方向を指定できます。
 - [`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement) の `seekable` プロパティが実装されました。このプロパティは [`TimeRanges`](/ja/docs/Web/API/TimeRanges) を返します。
 - [`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement)`.preload` 属性が適切な _enumerated value_ を反映するようになりました。

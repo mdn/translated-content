@@ -2,7 +2,6 @@
 title: Constructeur URIError()
 slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
 translation_of: Web/JavaScript/Reference/Global_Objects/URIError/URIError
-browser-compat: javascript.builtins.URIError.URIError
 ---
 
 {{JSRef}}

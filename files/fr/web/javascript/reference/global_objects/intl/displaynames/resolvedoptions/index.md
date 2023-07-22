@@ -1,7 +1,6 @@
 ---
 title: Intl.DisplayNames.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions
-browser-compat: javascript.builtins.Intl.DisplayNames.resolvedOptions
 ---
 
 {{JSRef}}

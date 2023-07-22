@@ -1,12 +1,6 @@
 ---
 title: NodeIterator.previousNode()
 slug: Web/API/NodeIterator/previousNode
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/NodeIterator/previousNode
 ---
 

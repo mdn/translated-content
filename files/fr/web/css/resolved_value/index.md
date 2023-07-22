@@ -1,11 +1,7 @@
 ---
 title: Valeur résolue
 slug: Web/CSS/resolved_value
-tags:
-  - CSS
-  - Reference
 translation_of: Web/CSS/resolved_value
-original_slug: Web/CSS/valeur_résolue
 ---
 
 {{cssref}}

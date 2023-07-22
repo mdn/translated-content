@@ -1,16 +1,7 @@
 ---
 title: Intl.DateTimeFormat.prototype.format
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - i18n
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/format
 ---
 
 {{JSRef}}

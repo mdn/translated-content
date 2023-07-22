@@ -1,12 +1,6 @@
 ---
 title: DOMImplementation.createDocument()
 slug: Web/API/DOMImplementation/createDocument
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
-  - implementation
 translation_of: Web/API/DOMImplementation/createDocument
 ---
 

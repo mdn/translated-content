@@ -1,11 +1,6 @@
 ---
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
-tags:
-  - API
-  - Geolocation
-  - Méthode
-  - Reference
 translation_of: Web/API/Geolocation/getCurrentPosition
 ---
 

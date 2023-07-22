@@ -1,13 +1,6 @@
 ---
 title: 'Element : évènement contextmenu'
 slug: Web/API/Element/contextmenu_event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - Reference
-  - contextemenu
 translation_of: Web/API/Element/contextmenu_event
 ---
 

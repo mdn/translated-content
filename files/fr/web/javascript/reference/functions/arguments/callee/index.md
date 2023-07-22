@@ -1,15 +1,7 @@
 ---
 title: callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
-tags:
-  - Déprécié
-  - Fonctions
-  - JavaScript
-  - Propriété
-  - Reference
-  - arguments
 translation_of: Web/JavaScript/Reference/Functions/arguments/callee
-original_slug: Web/JavaScript/Reference/Fonctions/arguments/callee
 ---
 
 {{jsSidebar("Functions")}}{{deprecated_header}}

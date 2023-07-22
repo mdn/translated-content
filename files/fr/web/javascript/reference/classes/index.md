@@ -1,12 +1,6 @@
 ---
 title: Classes
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - Classes
-  - ECMAScript 2015
-  - Intermédiaire
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Classes
 ---
 

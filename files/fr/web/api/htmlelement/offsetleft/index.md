@@ -1,8 +1,6 @@
 ---
 title: element.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
-tags:
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLElement/offsetLeft
 ---
 

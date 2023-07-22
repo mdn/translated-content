@@ -1,15 +1,7 @@
 ---
 title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - WeakMap
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
-original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/delete
 ---
 
 {{JSRef}}

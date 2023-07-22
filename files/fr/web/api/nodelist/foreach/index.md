@@ -2,7 +2,6 @@
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
 translation_of: Web/API/NodeList/forEach
-browser-compat: api.NodeList.forEach
 ---
 
 {{APIRef("DOM")}}

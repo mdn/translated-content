@@ -1,14 +1,7 @@
 ---
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Experimental
-  - Function
-  - Instruction
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Statements/async_function
-original_slug: Web/JavaScript/Reference/Instructions/async_function
 ---
 
 {{jsSidebar("Statements")}}

@@ -2,7 +2,6 @@
 title: String.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/String/at
 translation_of: Web/JavaScript/Reference/Global_Objects/String/at
-browser-compat: javascript.builtins.String.at
 ---
 
 {{JSRef}}

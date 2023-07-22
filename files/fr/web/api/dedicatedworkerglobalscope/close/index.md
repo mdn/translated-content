@@ -1,12 +1,6 @@
 ---
 title: DedicatedWorkerGlobalScope.close()
 slug: Web/API/DedicatedWorkerGlobalScope/close
-tags:
-  - API
-  - Arrêter
-  - DOM
-  - Méthodes
-  - Worker
 translation_of: Web/API/DedicatedWorkerGlobalScope/close
 ---
 

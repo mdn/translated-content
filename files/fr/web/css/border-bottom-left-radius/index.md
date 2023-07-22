@@ -1,10 +1,6 @@
 ---
 title: border-bottom-left-radius
 slug: Web/CSS/border-bottom-left-radius
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border-bottom-left-radius
 ---
 

@@ -2,7 +2,6 @@
 title: list-style-position
 slug: Web/CSS/list-style-position
 translation_of: Web/CSS/list-style-position
-browser-compat: css.properties.list-style-position
 ---
 
 {{CSSRef}}

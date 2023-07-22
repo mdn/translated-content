@@ -1,7 +1,6 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
-browser-compat: css.properties.border-image-repeat
 translation_of: Web/CSS/border-image-repeat
 ---
 

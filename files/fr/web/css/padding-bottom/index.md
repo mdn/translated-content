@@ -1,10 +1,6 @@
 ---
 title: padding-bottom
 slug: Web/CSS/padding-bottom
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/padding-bottom
 ---
 

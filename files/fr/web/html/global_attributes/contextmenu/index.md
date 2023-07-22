@@ -1,13 +1,7 @@
 ---
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
 translation_of: Web/HTML/Global_attributes/contextmenu
-original_slug: Web/HTML/Attributs_universels/contextmenu
 ---
 
 {{HTMLSidebar("Global_attributes")}}

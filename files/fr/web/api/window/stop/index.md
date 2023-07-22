@@ -1,14 +1,6 @@
 ---
 title: Window.stop()
 slug: Web/API/Window/stop
-tags:
-  - API
-  - DOM
-  - HTML DOM
-  - Méthode
-  - Reference
-  - Window
-  - stop
 translation_of: Web/API/Window/stop
 ---
 

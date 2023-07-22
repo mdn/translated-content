@@ -1,14 +1,7 @@
 ---
 title: Reflect.has()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/has
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/has
 ---
 
 {{JSRef}}

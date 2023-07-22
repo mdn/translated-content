@@ -1,11 +1,6 @@
 ---
 title: <i>
 slug: Web/HTML/Element/i
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/i
 ---
 

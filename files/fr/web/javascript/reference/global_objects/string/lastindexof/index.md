@@ -1,14 +1,7 @@
 ---
 title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/lastIndexOf
 ---
 
 {{JSRef}}

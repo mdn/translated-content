@@ -1,16 +1,6 @@
 ---
 title: 'Django didactique Section 2: Créer le squelette du site web'
 slug: Learn/Server-side/Django/skeleton_website
-tags:
-  - Apprentissage
-  - Article
-  - Didactitiel
-  - Débutant
-  - Guide
-  - Intro
-  - Programmation
-  - Tutoriel
-  - django
 translation_of: Learn/Server-side/Django/skeleton_website
 ---
 

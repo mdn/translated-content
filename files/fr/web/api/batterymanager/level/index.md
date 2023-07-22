@@ -1,9 +1,7 @@
 ---
 title: BatteryManager.level
 slug: Web/API/BatteryManager/level
-page-type: web-api-instance-property
 translation_of: Web/API/BatteryManager/level
-browser-compat: api.BatteryManager.level
 ---
 
 {{APIRef("Battery API")}}

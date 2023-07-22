@@ -1,12 +1,6 @@
 ---
 title: HTMLElement.title
 slug: Web/API/HTMLElement/title
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Propriété
-  - Reference
 translation_of: Web/API/HTMLElement/title
 ---
 

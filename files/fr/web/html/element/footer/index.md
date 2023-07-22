@@ -1,13 +1,7 @@
 ---
 title: '<footer> : l''élément de pied de page ou de section'
 slug: Web/HTML/Element/footer
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
 translation_of: Web/HTML/Element/footer
-browser-compat: html.elements.footer
 ---
 
 {{HTMLSidebar}}

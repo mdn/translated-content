@@ -1,13 +1,7 @@
 ---
 title: Guide des polices variables
 slug: Web/CSS/CSS_fonts/Variable_fonts_guide
-tags:
-  - CSS
-  - Fonts
-  - Guide
-  - Polices
 translation_of: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
-original_slug: Web/CSS/CSS_Fonts/Guide_polices_variables
 ---
 
 {{CSSRef}}

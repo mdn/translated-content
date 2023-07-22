@@ -2,8 +2,6 @@
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-original_slug: Web/JavaScript/Reference/Objets_globaux/SharedArrayBuffer
-browser-compat: javascript.builtins.SharedArrayBuffer
 ---
 
 {{JSRef}}

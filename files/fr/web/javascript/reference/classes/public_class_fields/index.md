@@ -1,12 +1,7 @@
 ---
 title: Champs de classe publics
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
-tags:
-  - Classes
-  - Fonctionnalité du langage
-  - JavaScript
 translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
-original_slug: Web/JavaScript/Reference/Classes/Class_fields
 ---
 
 {{JsSidebar("Classes")}}{{SeeCompatTable}}

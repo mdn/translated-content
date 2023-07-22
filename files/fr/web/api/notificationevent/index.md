@@ -1,12 +1,6 @@
 ---
 title: NotificationEvent
 slug: Web/API/NotificationEvent
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Reference
-  - ServiceWorker
 translation_of: Web/API/NotificationEvent
 ---
 

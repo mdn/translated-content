@@ -1,10 +1,6 @@
 ---
 title: touch-action
 slug: Web/CSS/touch-action
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/touch-action
 ---
 
