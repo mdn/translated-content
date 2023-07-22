@@ -185,12 +185,12 @@ A negação ([`:not()`](/pt-BR/docs/Web/CSS/:not)), seletor relacional ([`:has()
 A tabela a seguir mostra alguns exemplos isolados para você entrar no clima. Tente passar por eles e certifique-se de entender por que eles têm a especificidade que lhes demos. Ainda não abordamos os seletores em detalhes, mas você pode encontrar detalhes de cada seletor no MDN [referência de seletores](/pt-BR/docs/Web/CSS/CSS_Selectors).
 
 | Seletor                                   | Identificadores | Classes | Elementos | Especificidade total |
-| ----------------------------------------- | ----------- | ------- | -------- | ----------------- |
-| `h1`                                      | 0           | 0       | 1        | 0-0-1             |
-| `h1 + p::first-letter`                    | 0           | 0       | 3        | 0-0-3             |
-| `li > a[href*="en-US"] > .inline-warning` | 0           | 2       | 2        | 0-2-2             |
-| `#identifier`                             | 1           | 0       | 0        | 1-0-0             |
-| `button:not(#mainBtn, .cta`)              | 1           | 0       | 1        | 1-0-1             |
+| ----------------------------------------- | --------------- | ------- | --------- | -------------------- |
+| `h1`                                      | 0               | 0       | 1         | 0-0-1                |
+| `h1 + p::first-letter`                    | 0               | 0       | 3         | 0-0-3                |
+| `li > a[href*="en-US"] > .inline-warning` | 0               | 2       | 2         | 0-2-2                |
+| `#identifier`                             | 1               | 0       | 0         | 1-0-0                |
+| `button:not(#mainBtn, .cta`)              | 1               | 0       | 1         | 1-0-1                |
 
 Antes de prosseguirmos, vamos ver um exemplo em ação.
 
@@ -224,7 +224,7 @@ Vamos examinar isso para ver o que está acontecendo - tente remover algumas das
 
 1. Você verá que os valores {{cssxref("color")}} e {{cssxref("padding")}} da terceira regra foram aplicados, mas os valores {{cssxref("background-color")}} não tem. Por que? Realmente, todos os três certamente devem ser aplicados porque as regras posteriores na ordem de origem geralmente substituem as regras anteriores.
 2. No entanto, as regras acima vencem porque os seletores de classe têm maior especificidade do que os seletores de elemento.
-3. Ambos os elementos têm um [`class`](/pt-BR/docs/Web/HTML/Global_attributes#class) de `better`, mas o segundo tem um [`id`](/pt-BR/docs /Web/HTML/Global_attributes#id) de `vencedor` também. Como os IDs têm uma especificidade _ainda maior_ do que as classes (você só pode ter um elemento com cada ID exclusivo em uma página, mas muitos elementos com a mesma classe — os seletores de ID são _muito específicos_ no que visam), a cor de fundo vermelha e o 1px a borda preta deve ser aplicada ao 2º elemento, com o primeiro elemento obtendo a cor de fundo cinza e sem borda, conforme especificado pela classe.
+3. Ambos os elementos têm um [`class`](/pt-BR/docs/Web/HTML/Global_attributes#class) de `better`, mas o segundo tem um [`id`](/pt-BR/docs /Web/HTML/Global*attributes#id) de `vencedor` também. Como os IDs têm uma especificidade \_ainda maior* do que as classes (você só pode ter um elemento com cada ID exclusivo em uma página, mas muitos elementos com a mesma classe — os seletores de ID são _muito específicos_ no que visam), a cor de fundo vermelha e o 1px a borda preta deve ser aplicada ao 2º elemento, com o primeiro elemento obtendo a cor de fundo cinza e sem borda, conforme especificado pela classe.
 4. O segundo elemento _fica_ com a cor de fundo vermelha, mas sem borda. Por que? Por causa do sinalizador `!important` na segunda regra. Adicionar o sinalizador `!important` depois de `border: none` significa que esta declaração prevalecerá sobre o valor `border` na regra anterior, mesmo que o seletor de ID tenha maior especificidade.
 
 > **Nota:** A única maneira de substituir uma declaração importante é incluir outra declaração importante com a _mesma especificidade_ posteriormente na ordem de origem, ou uma com maior especificidade, ou incluir uma declaração importante em uma camada em cascata anterior (nós ainda não cobrimos as camadas em cascata).
