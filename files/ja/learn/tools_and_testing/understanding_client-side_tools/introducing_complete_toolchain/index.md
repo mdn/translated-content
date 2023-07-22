@@ -104,13 +104,13 @@ l10n:
 - コード lint ツール — コードを lint するためのツール
 
 
-### Library installation tools
+### ライブラリーインストールツール
 
-We'll use npm to install our tools, which you first met in Chapter 2. You should have Node.js and npm installed already, but if not, [refer back to that section](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups).
+第 2 章で初めて説明した npm を使用してツールをインストールします。Node.js と npm がすでにインストールされている必要がありますが、インストールされていない場合は、[そのセクションを参照してください](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups)。
 
-> **Note:** Though it's not clear from the installation process, installing npm also installs a complementary tool called npx. We will use npx later in this chapter to help run tools that are installed as local dependencies to the project.
+> **メモ:** インストールプロセスから分かりませんが、npm をインストールすると、npx と呼ばれる補完ツールもインストールされます。 この章の後半では、プロジェクトのローカル依存関係としてインストールされているツールの実行に役立つ npx を使用します。
 
-npm will be used to install subsequent parts of our toolchain. First of all, however, we'll install git to help with revision control.
+npm は、ツールチェーンの後続の部分をインストールするために使用されます。 ただし、まず最初に、リビジョン管理を支援するために git をインストールします。
 
 ### Code revision control
 
