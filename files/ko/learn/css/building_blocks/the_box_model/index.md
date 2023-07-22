@@ -1,5 +1,5 @@
 ---
-title: 상자 모델
+title: 박스 모델
 slug: Learn/CSS/Building_blocks/The_box_model
 original_slug: Learn/CSS/Building_blocks/상자_모델
 ---
