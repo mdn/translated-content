@@ -260,19 +260,19 @@ OK、プロジェクトの初期設定を済ませましょう。
 
 > **メモ:** ローカルマシンでプロジェクトをセットアップするには、解凍したフォルダーのルートディレクトリに移動し、その場所でターミナルを開き、ターミナルで `npm install` コマンドを実行する。これにより、 `package.json` ファイルに記載されているプロジェクトの依存関係がすべてインストールされます。
 
-#### Installing our tools
+#### ツールのインストール
 
-Now it's time to install the initial set of tools we'll be using in our dev environment. Run the following from inside your project's root directory:
+それでは、開発環境で使用するツールの初期セットをインストールしましょう。プロジェクトのルートディレクトリ内から次のコマンドを実行します。
 
 ```bash
 npm install --save-dev eslint prettier babel-eslint
 ```
 
-There are two important things to note about the command you just ran. The first is that we're installing the dependencies locally to the project — installing tools locally is better for a specific project. Installing locally (not including the `--global` option) allows us to easily recreate this setup on other machines.
+先ほど実行したコマンドについて、注意すべき重要な点が 2 つあります。1 つ目は、依存関係をプロジェクトにローカルにインストールしていることです。特定のプロジェクトに対してローカルにツールをインストールする方が良いです。ローカルにインストールすること（`--global` オプションを含まない場合）で、他のマシンでも簡単に同じ環境を再現することができます。
 
-The second important part of this install command is the `--save-dev` option. This tells the npm tool that these particular dependencies are only needed for development (npm therefore lists them in the `package.json` file under `devDependencies`, not `dependencies`). This means that if this project is installed in production mode these dependencies will not be installed. A "typical" project can have many development dependencies which are not needed to actually run the code in production. Keeping them as separate dependencies reduces any unnecessary work when deploying to production (which we will look at in the next chapter).
+このインストールコマンドの2つ目の重要な部分は、`--save-dev` オプションです。これによって、npm ツールに対して特定の依存関係が開発にのみ必要であることを伝えます（したがって、npm はこれらの依存関係を `dependencies` ではなく `devDependencies` として `package.json` ファイルにリストします）。これはつまり、このプロジェクトが本番モードでインストールされる場合、これらの依存関係はインストールされないということです。一般的なプロジェクトでは、本番で実際にコードを実行するためには不要な開発用の依存関係が多数含まれることがあります。それらを別々の依存関係として保持することで、本番環境へのデプロイ時の不必要な作業を減らすことができます（次の章で見ていく内容です）。
 
-Before starting on the development of the actual application code, a little configuration is required for our tools to work properly. It's not a prerequisite of developing for the web, but it's useful to have the tools configured correctly if they're going to help catch errors during development — which ESLint is particularly useful for.
+実際のアプリケーションコードの開発を始める前に、ツールが適切に動作するように少し設定が必要です。これはWeb開発の前提条件ではありませんが、開発中にエラーをキャッチするのに役立つため、ツールが正しく設定されていると便利です。特に ESLint はその点で特に役立ちます。
 
 ### Configuring our tools
 
