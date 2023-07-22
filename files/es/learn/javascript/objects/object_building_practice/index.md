@@ -197,13 +197,7 @@ function loop() {
       random(0 + size, height - size),
       random(-7, 7),
       random(-7, 7),
-      "rgb(" +
-        random(0, 255) +
-        "," +
-        random(0, 255) +
-        "," +
-        random(0, 255) +
-        ")",
+      `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`,
       size,
     );
     balls.push(ball);
@@ -249,13 +243,7 @@ Ahora, un poco de diversión, añadamos la detección de colisiones a nuestro c�
 
          if (distance < this.size + balls[j].size) {
            balls[j].color = this.color =
-             "rgb(" +
-             random(0, 255) +
-             "," +
-             random(0, 255) +
-             "," +
-             random(0, 255) +
-             ")";
+             `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
          }
        }
      }
