@@ -1,5 +1,5 @@
 ---
-title: Render-blocking
+title: Render-blocking (レンダーブロッキング)
 slug: Glossary/Render_blocking
 l10n:
   sourceCommit: 8c4e47ca0a8d95ef49ea3b39f5eec454a3d15ae9
