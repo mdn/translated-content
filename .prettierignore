@@ -24,7 +24,6 @@ build/
 # The following folders still need a full pass:
 
 # es
-/files/es/learn/javascript/**/*.md
 /files/es/web/api/**/*.md
 /files/es/web/css/**/*.md
 /files/es/web/html/**/*.md
