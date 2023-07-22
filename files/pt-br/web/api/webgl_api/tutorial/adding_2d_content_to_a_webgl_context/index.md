@@ -141,7 +141,7 @@ A vértice (vertex) do shader define a posição e a forma de cada vértice.
 
 ## Criando um objeto
 
-Before we can render our square, we need to create the buffer that contains its vertices. We'll do that using a function we call `initBuffers()`; as we explore more advanced WebGL concepts, this routine will be augmented to create more -- and more complex -- 3D objects.
+Before we can render our square, we need to create the buffer that contains its vertices. We'll do that using a function we call `initBuffers()`; as we explore more advanced WebGL concepts, this routine will be augmented to create more — and more complex — 3D objects.
 
 ```js
 var horizAspect = 480.0/640.0;
