@@ -10,7 +10,7 @@ La propiedad de solo lectura **`File.lastModifiedDate`** retorna la fecha de ult
 ## Sintaxis
 
 ```js
-var time = instanceOfFile.lastModifiedDate
+var time = instanceOfFile.lastModifiedDate;
 ```
 
 ## Valor
@@ -27,7 +27,11 @@ var fileInput = document.getElementById("myfileinput");
 var files = fileInput.files;
 
 for (var i = 0; i < files.length; i++) {
-  alert(files[i].name + " tiene una fecha de ultima modificacion el " + files[i].lastModifiedDate);
+  alert(
+    files[i].name +
+      " tiene una fecha de ultima modificacion el " +
+      files[i].lastModifiedDate,
+  );
 }
 ```
 

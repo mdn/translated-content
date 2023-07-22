@@ -12,7 +12,7 @@ Dados namespace y nodeName del element, devuelve su `Attr` .
 ## Sintaxis
 
 ```js
-attributeNode = element.getAttributeNodeNS(namespace,nodeName)
+attributeNode = element.getAttributeNodeNS(namespace, nodeName);
 ```
 
 - `attributeNode` es el nodo para el atributo especificado.

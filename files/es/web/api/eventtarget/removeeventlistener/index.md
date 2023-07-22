@@ -52,8 +52,8 @@ element.addEventListener("mousedown", handleMouseDown, true);
 Ahora, considera `removeEventListener()`:
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, false);     // Fallo
-element.removeEventListener("mousedown", handleMouseDown, true);      // Éxito
+element.removeEventListener("mousedown", handleMouseDown, false); // Fallo
+element.removeEventListener("mousedown", handleMouseDown, true); // Éxito
 ```
 
 La primera llamada falla porque el valor de `useCapture` no coincide. El segundo valor funciona, puesto que `useCapture` es igual a su valor cuando se añadió el detector.
@@ -69,12 +69,12 @@ Aqui, especificamos un objeto `options` en el cual `passive` esta definido como 
 Vea consecutivamente, cada una de las siguientes llamadas a `removeEventListener()`. Cualquiera de éstas donde `capture` o `useCapture` es `true` falla; en todas las demás funciona. Solo la configuración `capture` importa a `removeEventListener()`.
 
 ```js
-element.removeEventListener("mousedown", handleMouseDown, { passive: true });     // Funciona
-element.removeEventListener("mousedown", handleMouseDown, { capture: false });    // Funciona
-element.removeEventListener("mousedown", handleMouseDown, { capture: true });     // Falla
-element.removeEventListener("mousedown", handleMouseDown, { passive: false });    // Funciona
-element.removeEventListener("mousedown", handleMouseDown, false);                 // Funciona
-element.removeEventListener("mousedown", handleMouseDown, true);                  // Falla
+element.removeEventListener("mousedown", handleMouseDown, { passive: true }); // Funciona
+element.removeEventListener("mousedown", handleMouseDown, { capture: false }); // Funciona
+element.removeEventListener("mousedown", handleMouseDown, { capture: true }); // Falla
+element.removeEventListener("mousedown", handleMouseDown, { passive: false }); // Funciona
+element.removeEventListener("mousedown", handleMouseDown, false); // Funciona
+element.removeEventListener("mousedown", handleMouseDown, true); // Falla
 ```
 
 Vale la pena mencionar que algunos navegadores tienen un comportamiento inconsistente, y a menos que se tengan razones específicas, es probablemente una buena idea usar los mismos valores usados por la llamada a `addEventListener()` al momento de utilizar `removeEventListener()`.
@@ -90,35 +90,29 @@ Llamar {{ domxref("<code>removeEventListener</code>") }} en algún {{ domxref("E
 Este es un ejemplo en donde se agrega y después se elimina un {{ domxref("EventListener") }}
 
 ```js
-var body = document.querySelector('body'),
-    clickTarget = document.getElementById('click-target'),
-    mouseOverTarget = document.getElementById('mouse-over-target'),
-    toggle = false;
+var body = document.querySelector("body"),
+  clickTarget = document.getElementById("click-target"),
+  mouseOverTarget = document.getElementById("mouse-over-target"),
+  toggle = false;
 
 function makeBackgroundYellow() {
-    'use strict';
+  "use strict";
 
-    if (toggle) {
-        body.style.backgroundColor = 'white';
-    } else {
-        body.style.backgroundColor = 'yellow';
-    }
+  if (toggle) {
+    body.style.backgroundColor = "white";
+  } else {
+    body.style.backgroundColor = "yellow";
+  }
 
-    toggle = !toggle;
+  toggle = !toggle;
 }
 
-clickTarget.addEventListener('click',
-    makeBackgroundYellow,
-    false
-);
+clickTarget.addEventListener("click", makeBackgroundYellow, false);
 
-mouseOverTarget.addEventListener('mouseover', function () {
-    'use strict';
+mouseOverTarget.addEventListener("mouseover", function () {
+  "use strict";
 
-    clickTarget.removeEventListener('click',
-        makeBackgroundYellow,
-        false
-    );
+  clickTarget.removeEventListener("click", makeBackgroundYellow, false);
 });
 ```
 

@@ -32,7 +32,6 @@ build/
 /files/es/web/javascript/**/*.md
 
 # fr
-/files/fr/learn/javascript/**/*.md
 /files/fr/learn/server-side/**/*.md
 /files/fr/mozilla/add-ons/webextensions/api/**/*.md
 /files/fr/web/api/**/*.md
@@ -105,7 +104,6 @@ build/
 /files/ru/web/svg/**/*.md
 
 # zh-cn
-/files/zh-cn/learn/html/**/*.md
 /files/zh-cn/learn/javascript/**/*.md
 /files/zh-cn/learn/server-side/**/*.md
 /files/zh-cn/web/api/**/*.md
