@@ -1,5 +1,5 @@
 ---
-title: Document and website structure
+title: 문서와 웹사이트 구조
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 ---
 
