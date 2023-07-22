@@ -78,15 +78,15 @@ l10n:
 後で、このプロジェクトをデプロイするために Netlify アカウントを GitHub リポジトリに接続する必要があります。 その方法については次の章で説明します。
 
 
-## Three stages of tools
+## 3　つ段階のツール
 
-As we talked about in [Chapter 1](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview), the toolchain will be structured into the following phases:
+[クライアントサイドツールの概要](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)で説明したようにツールチェーンは次のフェーズで構成されます。
 
-- **Safety net**: Making the software development experience stable and more efficient. We might also refer to this as our development environment.
-- **Transformation**: Tooling that allows us to use the latest features of a language (e.g. JavaScript) or another language entirely (e.g. JSX or TypeScript) in our development process, and then transforms our code so that the production version still runs on a wide variety of browsers, modern and older.
-- **Post development**: Tooling that comes into play after you are done with the body of development to ensure that your software makes it to the web and continues to run. In this case study we'll look at adding tests to your code, and deploying your app using Netlify so it is available for all the web to see.
+- **セーフティネット**: ソフトウェア開発体験を安定させ、より効率的にします。 これを開発環境と呼ぶこともあります。
+- **トランスフォーメーション**: 開発プロセスにおいて、ある言語 (JavaScript など) または別の言語全体 (JSX や TypeScript など) の最新機能を使用できるようにし、製品版がモダンなものから古いものまで、さまざまなブラウザで動作するようにコードを変換します。
+- **ポスト開発**: 開発本体が終了後に、ソフトウェアがウェブに公開され、実行され続けることを保証するために使用するツールです。このケーススタディでは、コードにテストを追加し、Netlify を使用してアプリをデプロイし、ウェブ上で利用できるようにします。
 
-Let's start working on these, beginning with our development environment.
+開発環境から始めて、これらに取り組みましょう。
 
 ## Creating a development environment
 
