@@ -288,7 +288,7 @@ npm install --save-dev eslint prettier babel-eslint
    }
    ```
 
-   これらの設定を使用すると、Prettier が JavaScript をフォーマットする際には、すべての引用された値にシングルクォートを使用し、末尾のカンマは使用しません（ ECMAScript の新しい機能で、古いブラウザーでエラーが発生する可能性があるものです）。[ Prettier の設定についての詳細](https://prettier.io/docs/en/configuration.html)は、公式ドキュメントを参照してください。
+   これらの設定を使用すると、Prettier が JavaScript をフォーマットする際には、すべての引用された値にシングルクォートを使用し、末尾のカンマは使用しません（ ECMAScript の新しい機能で、古いブラウザーでエラーが発生する可能性があるものです）。 [Prettier の設定についての詳細](https://prettier.io/docs/en/configuration.html)は、公式ドキュメントを参照してください。
 
 3. 次に、ESLintの設定を行います。 `will-it-miss` ディレクトリのルートに `.eslintrc.json` という別のファイルを作成し、以下の内容を記述します。
 
@@ -348,7 +348,7 @@ npm install --save-dev eslint prettier babel-eslint
    npm install --save-dev eslint-plugin-react
    ```
 
-ESLintのルールは、[ ESLint rules のリスト](https://eslint.org/docs/rules/) があり、心のままに調整して設定することができます。多くの企業やチームが[独自の ESLint 設定](https://www.npmjs.com/search?q=keywords:eslintconfig)を公開しており、これらはしばしばインスピレーションを得るのに役立つこともありますし、自分の基準に合ったものを選択する際にも便利です。ただし、注意が必要です： ESLint の設定は非常に奥深いものです！
+ESLintのルールは、 [ESLint rules のリスト](https://eslint.org/docs/rules/) があり、心のままに調整して設定することができます。多くの企業やチームが[独自の ESLint 設定](https://www.npmjs.com/search?q=keywords:eslintconfig)を公開しており、これらはしばしばインスピレーションを得るのに役立つこともありますし、自分の基準に合ったものを選択する際にも便利です。ただし、注意が必要です： ESLint の設定は非常に奥深いものです！
 
 ここまでで、開発環境のセットアップが完了しました。これで、ついに（ほぼ）コーディングの準備が整いました。
 
@@ -376,7 +376,7 @@ npm install --save-dev parcel-bundler
 
 ### 将来使用出来る機能
 
-このプロジェクトのコードは、完全に標準化されていない新しいウェブ機能を含むいくつかの新しいウェブ機能を使用しています。例えば、 [Sass](https://sass-lang.com/) のようなツールに頼る代わりに、この特定のプロジェクトでは[ W3C の CSS ネスティング](https://drafts.csswg.org/css-nesting/)の提案を使用しています。 CSS ネスティングは CSS セレクターやプロパティを相互にネストできるため、より具体的なセレクタースコープを作成することができます。 Sass は最初のプリプロセッサのうちの 1 つであり、ネスティングをサポートしていた（もしくは最初のものであった）のですが、多年経過した現在、ネスティングは標準化される見通しとなり、これによりビルドツールを必要とせずにブラウザーで利用できるようになります。
+このプロジェクトのコードは、完全に標準化されていない新しいウェブ機能を含むいくつかの新しいウェブ機能を使用しています。例えば、 [Sass](https://sass-lang.com/) のようなツールに頼る代わりに、この特定のプロジェクトでは [W3C の CSS ネスティング](https://drafts.csswg.org/css-nesting/)の提案を使用しています。 CSS ネスティングは CSS セレクターやプロパティを相互にネストできるため、より具体的なセレクタースコープを作成することができます。 Sass は最初のプリプロセッサのうちの 1 つであり、ネスティングをサポートしていた（もしくは最初のものであった）のですが、多年経過した現在、ネスティングは標準化される見通しとなり、これによりビルドツールを必要とせずにブラウザーで利用できるようになります。
 
 それまでは、 Parcel が [PostCSS](https://postcss.org/) のサポートを受けて、ネストされた CSS とネイティブにサポートされる CSS の間の変換を行います。 Parcel は PostCSS との統合をデフォルトで提供しています。このプロジェクトでは特に CSS ネスティング（ Sass の代わりに）を使用することに決めたため、プロジェクトには PostCSS プラグインを含める必要があります。
 
