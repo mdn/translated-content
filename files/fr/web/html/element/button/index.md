@@ -1,15 +1,7 @@
 ---
 title: '<button> : l''élément représentant un bouton'
 slug: Web/HTML/Element/button
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/button
-browser-compat: html.elements.button
 ---
 
 {{HTMLSidebar}}

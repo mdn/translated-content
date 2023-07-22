@@ -1,13 +1,6 @@
 ---
 title: Clients.matchAll()
 slug: Web/API/Clients/matchAll
-tags:
-  - API
-  - Client
-  - Expérimental(2)
-  - Méthode
-  - Référence(2)
-  - Service Workers
 translation_of: Web/API/Clients/matchAll
 ---
 

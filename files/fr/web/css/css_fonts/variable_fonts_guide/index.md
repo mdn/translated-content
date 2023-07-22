@@ -1,13 +1,7 @@
 ---
 title: Guide des polices variables
 slug: Web/CSS/CSS_fonts/Variable_fonts_guide
-tags:
-  - CSS
-  - Fonts
-  - Guide
-  - Polices
 translation_of: Web/CSS/CSS_Fonts/Variable_Fonts_Guide
-original_slug: Web/CSS/CSS_Fonts/Guide_polices_variables
 ---
 
 {{CSSRef}}
@@ -173,7 +167,7 @@ Pour charger une police variable, la syntaxe est proche de celle utilisée pour 
 
 La syntaxe de base est la même mais on peut indiquer la technologie utilisée pour la police ainsi que les intervalles autorisés pour les descripteurs `font-weight` et `font-stretch`.
 
-#### Exemple d'une police standard réale droite :
+#### Exemple d'une police standard réale droite
 
 ```css
 @font-face {
@@ -185,7 +179,7 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
 }
 ```
 
-#### Exemple d'une police avec une forme droite et une forme italique :
+#### Exemple d'une police avec une forme droite et une forme italique
 
 ```css
 @font-face {
@@ -199,7 +193,7 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
 
 > **Note :** Il n'existe pas de valeur spécifique pour la mesure du degré supérieur. Les valeurs fournies à `font-style` indiquent simplement qu'un axe est présent afin que le navigateur puisse afficher correctement les caractères droits ou en italique.
 
-#### Exemple d'une police qui ne contient que des italiques et aucun caractère droit :
+#### Exemple d'une police qui ne contient que des italiques et aucun caractère droit
 
 ```css
 @font-face {
@@ -211,7 +205,7 @@ La syntaxe de base est la même mais on peut indiquer la technologie utilisée p
 }
 ```
 
-#### Exemple d'une police avec un axe de pente :
+#### Exemple d'une police avec un axe de pente
 
 ```css
 @font-face {

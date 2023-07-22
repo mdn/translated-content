@@ -20,13 +20,18 @@ original_slug: Web/HTML/Block-level_elements
 ### HTML
 
 ```html
-<p>Этот абзац — блочный элемент; его цвет фона покрашен, чтобы показать родительский элемент абзаца.</p>
+<p>
+  Этот абзац — блочный элемент; его цвет фона покрашен, чтобы показать
+  родительский элемент абзаца.
+</p>
 ```
 
 ### CSS
 
 ```css
-p { background-color: #8ABB55; }
+p {
+  background-color: #8abb55;
+}
 ```
 
 {{ EmbedLiveSample('Block-level_Example') }}

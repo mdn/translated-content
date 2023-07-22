@@ -9,6 +9,7 @@ tags:
   - Расширения
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -144,7 +145,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/background
             когда фоновая страница выгружена из памяти, но остальные значения
             сбрасываются. Если нужно хранить постоянные данные при использовании
             страницы событий, используйте
-            <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage"
+            <a href="/ru/docs/Mozilla/Add-ons/WebExtensions/API/storage"
               >storage API</a
             >.
           </li>

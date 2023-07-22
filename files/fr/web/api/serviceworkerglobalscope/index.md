@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope
 slug: Web/API/ServiceWorkerGlobalScope
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorkerGlobalScope
-  - TopicStub
 translation_of: Web/API/ServiceWorkerGlobalScope
 ---
 

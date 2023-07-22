@@ -1,11 +1,6 @@
 ---
 title: IDBDatabase.name
 slug: Web/API/IDBDatabase/name
-tags:
-  - API
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBDatabase/name
 ---
 

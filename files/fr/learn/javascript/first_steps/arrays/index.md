@@ -1,22 +1,7 @@
 ---
 title: Les tableaux
 slug: Learn/JavaScript/First_steps/Arrays
-tags:
-  - Arrays
-  - Article
-  - Beginner
-  - CodingScripting
-  - JavaScript
-  - Join
-  - Learn
-  - Pop
-  - Push
-  - l10n:priority
-  - shift
-  - split
-  - unshift
 translation_of: Learn/JavaScript/First_steps/Arrays
-original_slug: Learn/JavaScript/First_steps/tableaux
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}

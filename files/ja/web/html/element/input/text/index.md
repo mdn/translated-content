@@ -2,7 +2,7 @@
 title: <input type="text">
 slug: Web/HTML/Element/input/text
 l10n:
-  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
+  sourceCommit: d85a7ba8cca98c2f6cf67a0c44f0ffd467532f20
 ---
 
 {{HTMLSidebar}}
@@ -11,57 +11,9 @@ l10n:
 
 {{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <td><strong><a href="#値">値</a></strong></td>
-      <td>
-        テキスト入力欄に含まれるテキストを表す文字列。
-      </td>
-    </tr>
-    <tr>
-      <td><strong>イベント</strong></td>
-      <td>
-        {{domxref("HTMLElement/change_event", "change")}} および
-        {{domxref("HTMLElement/input_event", "input")}}
-      </td>
-    </tr>
-    <tr>
-      <td><strong>対応している共通属性</strong></td>
-      <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
-      </td>
-    </tr>
-    <tr>
-      <td><strong>IDL 属性</strong></td>
-      <td><a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>, <code>value</code></td>
-    </tr>
-    <tr>
-      <td><strong>DOM インターフェイス</strong></td>
-      <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>メソッド</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ## 値
 
- [`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では {{domxref("HTMLInputElement")}} の `value` プロパティを使ってこれを受け取ることができます。
+[`value`](/ja/docs/Web/HTML/Element/input#value) 属性は、テキスト入力欄に入力された現在のテキストの値が入っている文字列です。 JavaScript では {{domxref("HTMLInputElement")}} の `value` プロパティを使ってこれを受け取ることができます。
 
 ```js
 let theText = myTextInput.value;
@@ -91,7 +43,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### `pattern`
 
-`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
+`pattern` 属性は、指定する場合は正規表現であり、入力欄の [`value`](/ja/docs/Web/HTML/Element/input#value) が[制約検証](/ja/docs/Web/HTML/Constraint_validation)に合格するためにはこれと一致しなければなりません。これは {{jsxref("RegExp")}} 型で使用される JavaScript の妥当な正規表現である必要があり、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で記述されています。正規表現がコンパイルされるときに `'u'` フラグが指定されるので、パターンは ASCII ではなく Unicode コードポイントの並びとして扱われます。パターンのテキストをスラッシュで囲んではいけません。
 
 指定されたパターンがないかか無効である場合は、正規表現は適用されず、この属性は完全に無視されます。
 
@@ -105,7 +57,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 コントロールの内容がある書字方向 ({{Glossary("LTR")}} または {{Glossary("RTL")}}) であるものの、プレイスホルダーを逆の方向に表示する必要がある場合、 Unicode 双方向アルゴリズム書式文字を使用してプレイスホルダーの中で書字方向を上書きすることができます。詳しくは、[双方向テキストでの Unicode コードの使い方（英語）](https://www.w3.org/International/questions/qa-bidi-unicode-controls)を参照してください。
 
-> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[\<input>: 入力欄 (フォーム入力) 要素](/ja/docs/Web/HTML/Element/input)の[プレイスホルダーはアクセシブルではない](/ja/docs/Web/HTML/Element/input#プレイスホルダーはアクセシブルではない)を参照してください。
+> **メモ:** 可能であれば `placeholder` を使用することは避けてください。フォームを説明する他の方法ほど意味論的に有益ではなく、コンテンツに予期しない技術的な問題を引き起こす可能性があります。詳しくは、[`<input>` のアクセシビリティの考慮](/ja/docs/Web/HTML/Element/input#アクセシビリティの考慮)を参照してください。
 
 ### `readonly`
 
@@ -151,7 +103,7 @@ Safari 拡張である `autocorrect` 属性は文字列で、ユーザーがこ�
 
 Mozilla 拡張で、ユーザーがフィールドを編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押した場合に行われるアクションの種類のヒントを提供します。
 
-この属性は非推奨です。変わらいにグローバル属性 [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes#enterkeyhint) を使用してください。
+この属性は非推奨です。代わりにグローバル属性 [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes#enterkeyhint) を使用してください。
 
 ## テキスト入力欄の使用
 
@@ -361,7 +313,7 @@ input:valid + span::after {
 
 ### パターンの指定
 
- [`pattern`](/ja/docs/Web/HTML/Element/input#pattern)nt/input#pattern)nt/input#pattern) 属性を使用して、入力値が妥当と判断されるために一致しなければならない正規表現を指定することができます（入力値を検証するために正規表現を使うための短期コースは[正規表現による検証](/ja/docs/Learn/Forms/Form_validation#validating_against_a_regular_expression)をご覧ください）。
+ [`pattern`](/ja/docs/Web/HTML/Element/input#pattern) 属性を使用して、入力値が妥当と判断されるために一致しなければならない正規表現を指定することができます（入力値を検証するために正規表現を使うための短期コースは[正規表現による検証](/ja/docs/Learn/Forms/Form_validation#正規表現での検証)をご覧ください）。
 
 以下の例では、 4～8 文字の値で、英小文字のみが含まれているという要件の制約を与えます。
 
@@ -420,6 +372,62 @@ input:valid + span::after {
 ## 例
 
  [最初の HTML フォーム](/ja/docs/Learn/Forms/Your_first_form)および [HTML フォームの構成方法](/ja/docs/Learn/Forms/How_to_structure_a_web_form)の記事の文脈で、良いテキスト入力欄の例を見ることができます。
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <td><strong><a href="#値">値</a></strong></td>
+      <td>
+        テキスト入力欄に含まれるテキストを表す文字列。
+      </td>
+    </tr>
+    <tr>
+      <td><strong>イベント</strong></td>
+      <td>
+        {{domxref("HTMLElement/change_event", "change")}} および
+        {{domxref("HTMLElement/input_event", "input")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>対応している共通属性</strong></td>
+      <td>
+        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
+      </td>
+    </tr>
+    <tr>
+      <td><strong>IDL 属性</strong></td>
+      <td><a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>, <code>value</code></td>
+    </tr>
+    <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
+      <td><strong>メソッド</strong></td>
+      <td>
+        {{domxref("HTMLInputElement.select", "select()")}},
+        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
+        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
+      </td>
+    </tr>
+    <tr>
+      <td><strong>暗黙の ARIA ロール</strong></td>
+      <td><code>list</code> 属性がない場合:
+                <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
+      <td><code>list</code> 属性がある場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

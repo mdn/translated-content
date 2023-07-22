@@ -1,13 +1,7 @@
 ---
 title: Sélecteurs descendant
 slug: Web/CSS/Descendant_combinator
-tags:
-  - CSS
-  - Débutant
-  - Reference
-  - Sélecteur
 translation_of: Web/CSS/Descendant_combinator
-original_slug: Web/CSS/Sélecteurs_descendant
 ---
 
 {{CSSRef("Selectors")}}

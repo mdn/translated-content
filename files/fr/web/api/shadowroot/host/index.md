@@ -1,12 +1,6 @@
 ---
 title: ShadowRoot.host
 slug: Web/API/ShadowRoot/host
-tags:
-  - API
-  - Propriété
-  - Reference
-  - ShadowRoot
-  - shadow dom
 translation_of: Web/API/ShadowRoot/host
 ---
 

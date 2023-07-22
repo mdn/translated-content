@@ -1,16 +1,6 @@
 ---
 title: history.search()
 slug: Mozilla/Add-ons/WebExtensions/API/history/search
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Method
-  - Non-standard
-  - Reference
-  - Search
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/search
 ---
 

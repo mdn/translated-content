@@ -48,7 +48,7 @@ You can specify a font on the user's local computer by name using the `local()` 
 這個範例指定一個可供下載的字型，並套用至 document 的整個 body。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

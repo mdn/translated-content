@@ -1,13 +1,7 @@
 ---
 title: Generator
 slug: Web/JavaScript/Reference/Global_Objects/Generator
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator
-original_slug: Web/JavaScript/Reference/Objets_globaux/Generator
 ---
 
 {{JSRef}}

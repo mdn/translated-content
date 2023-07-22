@@ -1,11 +1,6 @@
 ---
 title: ':dir'
 slug: Web/CSS/:dir
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:dir
 ---
 

@@ -1,15 +1,6 @@
 ---
 title: CacheStorage.keys()
 slug: Web/API/CacheStorage/keys
-tags:
-  - API
-  - CacheStorage
-  - Experimental
-  - Méthodes
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - keys
 translation_of: Web/API/CacheStorage/keys
 ---
 

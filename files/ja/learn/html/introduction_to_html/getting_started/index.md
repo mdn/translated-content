@@ -197,7 +197,7 @@ textarea.onkeyup = () => {
 
 ### 要素を入れ子にする
 
-要素の中に要素を入れることができます。これは**入れ子**（ネスト）と呼ばれています。たとえば “My cat is **very** grumpy.” と記述したい場合、“very” という語を {{htmlelement("strong")}} 要素で囲むことができ、その語がより強く強調表示されることを意味します。
+要素の中に要素を入れることができます。これは**入れ子**（ネスト）と呼ばれています。たとえば "My cat is **very** grumpy." と記述したい場合、"very" という語を {{htmlelement("strong")}} 要素で囲むことができ、その語がより強く強調表示されることを意味します。
 
 ```html
 <p>My cat is <strong>very</strong> grumpy.</p>

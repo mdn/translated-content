@@ -124,7 +124,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 4. 之后，任何紧跟在另一个空格之后的空格（甚至跨越两个独立的行内元素）都会被忽略，所以我们会得到：
 
    ```html-nolint
-   <h1>Hello◦<span>World!</span></h1>
+   <h1>◦Hello◦<span>World!</span></h1>
    ```
 
 5. 最后，元素开头和结尾的空格序列被删除，所以我们最终得到了：
@@ -139,7 +139,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 
 ### 在块格式化上下文的空白符
 
-上面我们只是看了包含行内元素的元素，以及行内格式化上下文。如果一个元素至少包含一个块元素，那么它就会建立所谓的[块格式化上下文](zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。
+上面我们只是看了包含行内元素的元素，以及行内格式化上下文。如果一个元素至少包含一个块元素，那么它就会建立所谓的[块格式化上下文](/zh-CN/docs/Web/Guide/CSS/Block_formatting_context)。
 
 这种情况下，空白符的处理方式非常不同。
 

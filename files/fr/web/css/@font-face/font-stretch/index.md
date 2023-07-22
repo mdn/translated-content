@@ -1,11 +1,6 @@
 ---
 title: font-stretch
 slug: Web/CSS/@font-face/font-stretch
-tags:
-  - '@font-face'
-  - CSS
-  - Descripteur
-  - Reference
 translation_of: Web/CSS/@font-face/font-stretch
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: Gestion de la mémoire
 slug: Web/JavaScript/Memory_management
-tags:
-  - JavaScript
-  - Mémoire
-  - Performance
 translation_of: Web/JavaScript/Memory_Management
-original_slug: Web/JavaScript/Gestion_de_la_mémoire
 ---
 
 {{JsSidebar("Advanced")}}

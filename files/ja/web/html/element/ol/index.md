@@ -1,6 +1,8 @@
 ---
-title: '<ol>: 順序付きリスト要素'
+title: "<ol>: 順序付きリスト要素"
 slug: Web/HTML/Element/ol
+l10n:
+  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
 {{HTMLSidebar}}
@@ -8,56 +10,6 @@ slug: Web/HTML/Element/ol
 **`<ol>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序付きリストを表します。ふつうは番号付きのリストとして表示されます。
 
 {{EmbedInteractiveExample("pages/tabbed/ol.html", "tabbed-shorter")}}
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
-      </th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>。また、<code>&#x3C;ol></code> 要素の子が少なくとも 1 個の {{HTMLElement("li")}} 要素を包含する場合は、<a href="/ja/docs/Web/Guide/HTML/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a>。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        0 個以上の {{HTMLElement("li")}}, {{HTMLElement("script")}}, {{HTMLElement("template")}} の各要素。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>
-        <a href="/ja/docs/Web/Guide/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/directory_role">directory</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menubar_role">menubar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role">tablist</a></code>,
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/toolbar_role">toolbar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tree_role">tree</a></code>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{DOMxRef("HTMLOListElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 属性
 
@@ -108,7 +60,7 @@ slug: Web/HTML/Element/ol
 </ol>
 ```
 
-上記の HTML は次のように出力されます。
+#### 結果
 
 {{EmbedLiveSample("Simple_example", 400, 100)}}
 
@@ -122,7 +74,7 @@ slug: Web/HTML/Element/ol
 </ol>
 ```
 
-上記の HTML は次のように出力されます。
+#### 結果
 
 {{EmbedLiveSample("Using_Roman_Numeral_type", 400, 100)}}
 
@@ -138,7 +90,7 @@ slug: Web/HTML/Element/ol
 </ol>
 ```
 
-上記の HTML は次のように出力されます。
+#### 結果
 
 {{EmbedLiveSample("Using_the_start_attribute", 400, 100)}}
 
@@ -147,18 +99,21 @@ slug: Web/HTML/Element/ol
 ```html
 <ol>
   <li>first item</li>
-  <li>second item  <!-- ここには終了タグ </li> はありません -->
+  <li>
+    second item
+    <!-- ここには終了タグ </li> はありません -->
     <ol>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ol>
-  </li>            <!-- 終了タグ </li> はここにあります -->
+  </li>
+  <!-- 終了タグ </li> はここにあります -->
   <li>third item</li>
 </ol>
 ```
 
-上記の HTML は次のように出力されます。
+#### 結果
 
 {{EmbedLiveSample("Nesting_lists", 400, 150)}}
 
@@ -167,20 +122,75 @@ slug: Web/HTML/Element/ol
 ```html
 <ol>
   <li>first item</li>
-  <li>second item  <!-- ここには終了タグ </li> はありません -->
+  <li>
+    second item
+    <!-- ここには終了タグ </li> はありません -->
     <ul>
       <li>second item first subitem</li>
       <li>second item second subitem</li>
       <li>second item third subitem</li>
     </ul>
-  </li>            <!-- 終了タグ </li> はここにあります -->
+  </li>
+  <!-- 終了タグ </li> はここにあります -->
   <li>third item</li>
 </ol>
 ```
 
-上記の HTML は次のように出力されます。
+#### 結果
 
 {{EmbedLiveSample("Unordered_list_inside_ordered_list", 400, 150)}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>。また、<code>&#x3C;ol></code> 要素の子が少なくとも 1 個の {{HTMLElement("li")}} 要素を包含する場合は、<a href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ">知覚可能コンテンツ</a>。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        0 個以上の {{HTMLElement("li")}}, {{HTMLElement("script")}}, {{HTMLElement("template")}} の各要素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>{{no_tag_omission}}</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>を受け入れるすべての要素
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/directory_role">directory</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menubar_role">menubar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role">none</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role">radiogroup</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role">tablist</a></code>,
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/toolbar_role">toolbar</a></code>, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tree_role">tree</a></code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{DOMxRef("HTMLOListElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 
@@ -196,6 +206,6 @@ slug: Web/HTML/Element/ol
 - `<ol>` 要素のスタイル付けに役立つ CSS プロパティ:
 
   - {{CSSxRef("list-style")}} プロパティは、序数の表示方法を選ぶのに便利です。
-  - [CSS カウンター](/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)は、複雑な入れ子のリストを扱うのに便利です。
-  - {{CSSxRef("line-height")}} プロパティは、非推奨の [`compact`](/ja/docs/Web/HTML/Element/ol#compact)ment/ol#compact) 属性をシミュレートするのに役立ちます。
+  - [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)は、複雑な入れ子のリストを扱うのに便利です。
+  - {{CSSxRef("line-height")}} プロパティは、非推奨の [`compact`](#compact) 属性をシミュレートするのに役立ちます。
   - {{CSSxRef("margin")}} プロパティは、リストの字下げを制御するのに役立ちます。

@@ -2,7 +2,6 @@
 title: Intl.PluralRules.selectRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/selectRange
-browser-compat: javascript.builtins.Intl.PluralRules.selectRange
 ---
 
 {{JSRef}}
@@ -12,7 +11,7 @@ La méthode **`Intl.PluralRules.prototype.selectRange()`** reçoit deux valeurs 
 ## Syntaxe
 
 ```js
-formatRange(debutIntervalle, finIntervalle)
+selectRange(debutIntervalle, finIntervalle)
 ```
 
 ### Valeur de retour

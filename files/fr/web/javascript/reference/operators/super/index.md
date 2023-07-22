@@ -1,16 +1,7 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Left-hand-side expressions
-  - Operator
 translation_of: Web/JavaScript/Reference/Operators/super
-original_slug: Web/JavaScript/Reference/Opérateurs/super
-browser-compat: javascript.operators.super
 ---
 
 {{jsSidebar("Operators")}}

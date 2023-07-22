@@ -1,17 +1,6 @@
 ---
 title: CanvasRenderingContext2D.getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
-tags:
-  - API
-  - Canvas
-  - Canvas API
-  - CanvasRenderingContext2D
-  - Image
-  - ImageData
-  - Méthode
-  - Méthodes
-  - References
-  - getImageDate
 translation_of: Web/API/CanvasRenderingContext2D/getImageData
 ---
 

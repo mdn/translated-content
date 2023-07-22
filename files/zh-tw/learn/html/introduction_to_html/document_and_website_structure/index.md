@@ -5,7 +5,7 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
-{{glossary("HTML")}} 不僅能夠定義網頁的單獨部分（例如“段落”或“圖片”），還可以使用區塊級元素（例如“標題欄”、“導覽選單”、“主內容列”）來定義網站中的複合區域。本文將探討如何規劃基本的網站結構，並根據規劃的結構來編寫 HTML。
+{{glossary("HTML")}} 不僅能夠定義網頁的單獨部分（例如「段落」或「圖片」），還可以使用區塊級元素（例如「標題欄」、「導覽選單」、「主內容列」）來定義網站中的複合區域。本文將探討如何規劃基本的網站結構，並根據規劃的結構來編寫 HTML。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -48,7 +48,7 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 - 頁尾:
   - : 橫跨頁面底部的狹長區域。和頁首一樣，頁尾是放置共用資訊（比如版權聲明或聯繫方式）的，一般使用較小字體，且通常為次要內容。還可以通過提供快速訪問連結來進行{{Glossary("SEO")}} 。
 
-一個“典型的網站”可能會這樣佈局:
+一個「典型的網站」可能會這樣佈局:
 
 ![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](sample-website.png)
 
@@ -75,7 +75,7 @@ To implement such semantic mark up, HTML provides dedicated tags that you can us
 Our example seen above is represented by the following code (you can also [find the example in our GitHub repository](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). We'd like you to look at the example above, and then look over the listing below to see what parts make up what section of the visual.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />

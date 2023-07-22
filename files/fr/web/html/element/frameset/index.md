@@ -1,14 +1,7 @@
 ---
 title: '<frameset> : l''élément contenant des frames'
 slug: Web/HTML/Element/frameset
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/frameset
-browser-compat: html.elements.frameset
 ---
 
 {{HTMLSidebar}}

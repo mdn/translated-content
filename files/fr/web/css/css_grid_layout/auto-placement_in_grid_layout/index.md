@@ -1,14 +1,7 @@
 ---
 title: Le placement automatique sur une grille CSS
 slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
-tags:
-  - CSS
-  - CSS Grids
-  - Grilles CSS
-  - Guide
-  - Intermédiaire
 translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
-original_slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 ---
 
 {{CSSRef}}
@@ -257,7 +250,7 @@ Une grille peut contenir un mélange d'éléments. Certains éléments peuvent a
 
 ### Modification de l'ordre du document
 
-Le placement des éléments qui n'ont pas eu d'ordre défini sont placés selon l'algorithme décrit dans la section _“order modified document order”_. Cela signifie que si on utilise uniquement la propriété `order`, les éléments seront placés selon cet ordre plutôt que selon l'ordre indiqué par le DOM. Sinon, l'ordre des éléments sera celui décrit par le document source.
+Le placement des éléments qui n'ont pas eu d'ordre défini sont placés selon l'algorithme décrit dans la section _"order modified document order"_. Cela signifie que si on utilise uniquement la propriété `order`, les éléments seront placés selon cet ordre plutôt que selon l'ordre indiqué par le DOM. Sinon, l'ordre des éléments sera celui décrit par le document source.
 
 ### Les éléments avec des propriétés de placement
 

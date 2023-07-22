@@ -1,15 +1,6 @@
 ---
 title: pkcs11.installModule()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - installModule
-  - pkcs11
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
 ---
 

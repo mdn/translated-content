@@ -1,16 +1,7 @@
 ---
 title: SharedArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
-tags:
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Prototype
-  - Reference
-  - SharedArrayBuffer
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
-original_slug: Web/JavaScript/Reference/Objets_globaux/SharedArrayBuffer/slice
 ---
 
 {{JSRef}}

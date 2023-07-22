@@ -1,13 +1,7 @@
 ---
 title: Ajouter z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index
-tags:
-  - Avancé
-  - CSS
-  - Guide
-  - z-index
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 ---
 
 {{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_et_float","Web/CSS/Comprendre_z-index/Empilement_de_couches", "Web/CSS/Comprendre_z-index")}}
@@ -39,9 +33,9 @@ Cette propriété, dont l'attribut est une valeur entière (positive ou négativ
 
 Dans l'exemple qui suit, l'empilement des couches a été réordonné en utilisant `z-index`. Le `z-index` du bloc DIV#5 n'a pas d'effet, l'élément n'étant pas positionné.
 
-{{EmbedLiveSample("Code_source_de_l’exemple", '468', '365')}}
+{{EmbedLiveSample("Code_source_de_l'exemple", '468', '365')}}
 
-## Code source de l’exemple
+## Code source de l'exemple
 
 ### HTML
 

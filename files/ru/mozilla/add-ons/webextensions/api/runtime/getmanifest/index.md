@@ -21,7 +21,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
 ## Синтаксис
 
 ```js
-browser.runtime.getManifest()
+browser.runtime.getManifest();
 ```
 
 ### Параметры

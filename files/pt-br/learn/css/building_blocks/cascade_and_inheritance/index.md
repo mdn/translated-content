@@ -24,10 +24,10 @@ Embora esta lição possa parecer menos pouco relevante e mais acadêmico do que
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >working with files</a
         >, HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), and an idea of how CSS works (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)
+        <a href="/pt-BR/docs/Learn/CSS/First_steps">CSS first steps</a>.)
       </td>
     </tr>
     <tr>

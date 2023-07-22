@@ -1,13 +1,7 @@
 ---
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
-tags:
-  - Function
-  - JavaScript
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/length
 ---
 
 {{JSRef}}

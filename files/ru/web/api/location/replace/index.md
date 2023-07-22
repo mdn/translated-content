@@ -33,7 +33,7 @@ object.replace(url);
 
 ```js
 // Перейти на статью Location.reload, заменив текущую страницу
-document.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Location.reload');
+document.location.replace('https://developer.mozilla.org/ru/docs/Web/API/Location.reload');
 ```
 
 ## Спецификации

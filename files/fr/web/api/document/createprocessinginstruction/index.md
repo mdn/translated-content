@@ -1,15 +1,6 @@
 ---
 title: Document.createProcessingInstruction()
 slug: Web/API/Document/createProcessingInstruction
-tags:
-  - API
-  - Création
-  - DOM
-  - Méthodes
-  - Noeuds
-  - Reference
-  - Traitement
-  - instructions
 translation_of: Web/API/Document/createProcessingInstruction
 ---
 

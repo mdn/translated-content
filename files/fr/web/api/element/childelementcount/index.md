@@ -1,15 +1,7 @@
 ---
 title: ParentNode.childElementCount
 slug: Web/API/Element/childElementCount
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
-  - Reference
-  - parent
 translation_of: Web/API/ParentNode/childElementCount
-original_slug: Web/API/ParentNode/childElementCount
 ---
 
 {{APIRef("DOM") }}

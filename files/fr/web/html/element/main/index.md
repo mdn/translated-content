@@ -1,17 +1,12 @@
 ---
 title: <main>
 slug: Web/HTML/Element/main
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/main
 ---
 
 {{HTMLSidebar}}
 
-L’élément HTML **`<main>`** représente le contenu majoritaire du {{HTMLElement("body")}} du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document ou de la fonctionnalité principale d'une application.
+L'élément HTML **`<main>`** représente le contenu majoritaire du {{HTMLElement("body")}} du document. Le contenu principal de la zone est constitué de contenu directement en relation, ou qui étend le sujet principal du document ou de la fonctionnalité principale d'une application.
 
 Un document ne peut pas avoir plus d'un seul élément `<main>` sans attribut [`hidden`](/fr/docs/Web/HTML/Global_attributes#hidden).
 
@@ -148,7 +143,7 @@ Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence 
         Le rôle <code>main</code> est appliqué à <code>&#x3C;main></code> par
         défaut, et le rôle <code
           ><a
-            href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role"
+            href="https://developer.mozilla.org/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role"
             >presentation</a
           ></code
         > est également autorisé.

@@ -19,4 +19,4 @@ slug: Web/Security/Insecure_passwords
 
 - [No More Passwords over HTTP, Please!](https://blog.mozilla.org/tanvi/2016/01/28/no-more-passwords-over-http-please/) — 提供詳細資訊和常見問題的部落格文章
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
+{{QuickLinksWithSubpages("/zh-TW/docs/Web/Security")}}

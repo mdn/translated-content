@@ -1,12 +1,6 @@
 ---
 title: WebGLRenderingContext.bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/bindBuffer
 ---
 

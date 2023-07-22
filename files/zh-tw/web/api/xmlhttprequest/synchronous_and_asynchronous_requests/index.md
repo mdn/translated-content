@@ -54,7 +54,7 @@ function xhrError() {
 
 function loadFile(
   sURL,
-  fCallback /*, argumentToPass1, argumentToPass2, etc. */
+  fCallback /*, argumentToPass1, argumentToPass2, etc. */,
 ) {
   var oReq = new XMLHttpRequest();
   oReq.callback = fCallback;
@@ -147,7 +147,7 @@ if (request.status === 200) {
 
 Line 3 sends the request. The `null` parameter indicates that no body content is needed for the `GET` request.
 
-Line 5 checks the status code after the transaction is completed. If the result is 200 -- HTTP's "OK" result -- the document's text content is output to the console.
+Line 5 checks the status code after the transaction is completed. If the result is 200 — HTTP's "OK" result — the document's text content is output to the console.
 
 ### Example: Synchronous HTTP request from a Worker
 
@@ -156,7 +156,7 @@ One of the few cases in which a synchronous request does not usually block execu
 **`example.html`** (the main page):
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

@@ -1,14 +1,7 @@
 ---
 title: Date.prototype.toJSON()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toJSON
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toJSON
 ---
 
 {{JSRef}}

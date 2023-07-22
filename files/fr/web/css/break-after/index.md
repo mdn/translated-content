@@ -1,10 +1,6 @@
 ---
 title: break-after
 slug: Web/CSS/break-after
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/break-after
 ---
 

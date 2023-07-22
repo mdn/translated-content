@@ -1,12 +1,6 @@
 ---
 title: Navigator.credentials
 slug: Web/API/Navigator/credentials
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Propriété
-  - Reference
 translation_of: Web/API/Navigator/credentials
 ---
 

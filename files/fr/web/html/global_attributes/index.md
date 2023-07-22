@@ -1,14 +1,7 @@
 ---
 title: Les attributs universels
 slug: Web/HTML/Global_attributes
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Global_attributes
-original_slug: Web/HTML/Attributs_universels
 ---
 
 {{HTMLSidebar("Global_attributes")}}

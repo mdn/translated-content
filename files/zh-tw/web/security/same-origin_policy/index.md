@@ -45,8 +45,8 @@ document.domain = "company.com";
 
 下面是一些能跨來源嵌入的資源:
 
-- \<script src=”…”>\</script>內的 Javascript，但語法錯誤訊息只限於同源程式碼腳本。
-- CSS 的\<link rel="stylesheet" href="...">，由於 CSS 寬鬆語法規則，跨來源 CSS 要求正確的 Content-Type 標頭。限制在瀏覽器間各有差異: [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](http://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](http://code.google.com/p/chromium/issues/detail?id=9877), [Safari](http://support.apple.com/kb/HT4070) (請至 CVE-2010-0051)以及[Opera](http://www.opera.com/support/kb/view/943/).
+- `<script src="…"></script>` 內的 JavaScript，但語法錯誤訊息只限於同源程式碼腳本。
+- CSS 的 `<link rel="stylesheet" href="...">`，由於 CSS 寬鬆語法規則，跨來源 CSS 要求正確的 Content-Type 標頭。限制在瀏覽器間各有差異: [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](http://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](http://code.google.com/p/chromium/issues/detail?id=9877), [Safari](http://support.apple.com/kb/HT4070) (請至 CVE-2010-0051)以及[Opera](http://www.opera.com/support/kb/view/943/).
 - {{htmlelement("img")}}的影像；支援格式有 PNG, JPEG, GIF, BMP, SVG 等等
 - {{htmlelement("video")}}和{{htmlelement("audio")}}媒體檔案
 - [`<object>`](/zh-TW/docs/HTML/Element/object), [`<embed>`](/zh-TW/docs/HTML/Element/embed)和[`<applet>`](/zh-TW/docs/HTML/Element/applet)的外掛

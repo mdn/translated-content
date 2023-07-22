@@ -1,11 +1,6 @@
 ---
 title: place-content
 slug: Web/CSS/place-content
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
 translation_of: Web/CSS/place-content
 ---
 
@@ -66,7 +61,7 @@ La première valeur utilisée sera celle qui correspond à {{cssxref("align-cont
   - : Les éléments sont équirépartis dans le conteneur sur l'axe correspondant. Ainsi, l'espace entre chaque élément adjacent sera le même. Le premier élément est aligné sur le bord du conteneur et le dernier élément est également aligné sur le bord du conteneur à la fin de l'axe.
 - `baseline first baseline`
   `last baseline`
-  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box’s first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
+  - : Specifies participation in first- or last-baseline alignment: aligns the alignment baseline of the box's first or last baseline set with the corresponding baseline in the shared first or last baseline set of all the boxes in its baseline-sharing group.
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `space-around`
   - : Les éléments sont équirépartis dans le conteneur sur l'axe correspondant. L'espace entre chaque élément adjacent sera le même. L'espace entre le bord du conteneur et le premier élément sera la moitié de l'espace utilisé entre chaque élément. L'espace entre le dernier élément et le bord du conteneur sera la moitié de l'espace utilisé entre chaque élément.

@@ -1,11 +1,6 @@
 ---
 title: ':-moz-submit-invalid'
 slug: Web/CSS/:-moz-submit-invalid
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:-moz-submit-invalid
 ---
 

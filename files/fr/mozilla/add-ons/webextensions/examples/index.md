@@ -1,11 +1,7 @@
 ---
 title: Exemples de WebExtensions
 slug: Mozilla/Add-ons/WebExtensions/Examples
-tags:
-  - Interface
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Examples
-original_slug: Mozilla/Add-ons/WebExtensions/Exemples
 ---
 
 {{AddonSidebar}}

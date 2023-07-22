@@ -2,7 +2,6 @@
 title: Window.scroll()
 slug: Web/API/Window/scroll
 translation_of: Web/API/Window/scroll
-browser-compat: api.Window.scroll
 ---
 
 {{APIRef}}

@@ -1,7 +1,6 @@
 ---
 title: Intl.supportedValuesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
-browser-compat: javascript.builtins.Intl.supportedValuesOf
 ---
 
 {{JSRef}} {{SeeCompatTable}}

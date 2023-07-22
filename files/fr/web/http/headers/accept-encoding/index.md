@@ -39,7 +39,7 @@ Dès lors que l'usage d'`identity`, signifiant l'absence de compression, n'est p
 
 ## Syntaxe
 
-```html
+```http
 Accept-Encoding: gzip
 Accept-Encoding: compress
 Accept-Encoding: deflate

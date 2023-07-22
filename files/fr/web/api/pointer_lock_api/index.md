@@ -1,15 +1,7 @@
 ---
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
-tags:
-  - API
-  - Avancé
-  - Jeux
-  - Reference
-  - mouse lock
-  - pointer lock
 translation_of: Web/API/Pointer_Lock_API
-original_slug: WebAPI/Pointer_Lock
 ---
 
 {{DefaultAPISidebar("Pointer Lock API")}}

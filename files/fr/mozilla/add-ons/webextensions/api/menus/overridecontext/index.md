@@ -1,14 +1,6 @@
 ---
 title: overrideContext()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - WebExtensions
-  - contextMenus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 ---
 

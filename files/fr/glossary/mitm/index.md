@@ -1,12 +1,7 @@
 ---
 title: MitM
 slug: Glossary/MitM
-tags:
-  - Attaque
-  - Glossaire
-  - Sécurité
 translation_of: Glossary/MitM
-original_slug: Glossaire/MitM
 ---
 
 Une **attaque de l'homme du milieu** (Man-in-the-middle attack ou MitM) intercepte une communication entre deux systèmes. Par exemple, un routeur Wi-Fi peut être compromis.

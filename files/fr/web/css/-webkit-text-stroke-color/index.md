@@ -1,11 +1,6 @@
 ---
 title: '-webkit-text-stroke-color'
 slug: Web/CSS/-webkit-text-stroke-color
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-text-stroke-color
 ---
 

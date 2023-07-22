@@ -1,15 +1,6 @@
 ---
 title: browsingData.removeLocalStorage()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeLocalStorage
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage
 ---
 

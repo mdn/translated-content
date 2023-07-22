@@ -863,7 +863,7 @@ do {
 - [for свойства и характеристики](/ru/docs/Web/JavaScript/Reference/Statements/for)
 - [while](/ru/docs/Web/JavaScript/Reference/Statements/while) и [do...while](/ru/docs/Web/JavaScript/Reference/Statements/do...while) описание
 - [break](/ru/docs/Web/JavaScript/Reference/Statements/break) и [continue](/ru/docs/Web/JavaScript/Reference/Statements/continue) описание
-- [What’s the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — статья о практическом применении циклов
+- [What's the Best Way to Write a JavaScript For Loop?](https://www.impressivewebs.com/javascript-for-loop/) — статья о практическом применении циклов
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 

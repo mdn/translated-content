@@ -1,13 +1,6 @@
 ---
 title: element.appendChild
 slug: Web/API/Node/appendChild
-tags:
-  - API
-  - Ajout
-  - DOM
-  - Enfant
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/Node/appendChild
 ---
 

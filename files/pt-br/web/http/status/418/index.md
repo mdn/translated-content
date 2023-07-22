@@ -25,4 +25,4 @@ O código de erro HTTP para o cliente **`418 I'm a teapot`** indica que o servid
 
 ## Veja também
 
-- {{interwiki("wikipedia", "Hyper Text Coffee Pot Control Protocol", "Wikipedia: Hyper Text Coffee Pot Control Protocol")}}
+- [Wikipedia: Hyper Text Coffee Pot Control Protocol](https://en.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol)

@@ -1,15 +1,7 @@
 ---
 title: Intl.Locale.prototype.minimize()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/minimize
 ---
 
 {{JSRef}}

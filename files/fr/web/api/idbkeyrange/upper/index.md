@@ -1,12 +1,6 @@
 ---
 title: IDBKeyRange.upper
 slug: Web/API/IDBKeyRange/upper
-tags:
-  - API
-  - IDBKeyRange
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBKeyRange/upper
 ---
 

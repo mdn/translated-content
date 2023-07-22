@@ -1,10 +1,6 @@
 ---
 title: ':hover'
 slug: Web/CSS/:hover
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:hover
 ---
 

@@ -26,7 +26,7 @@ Um arquivo HTML normalmente é salvo com uma extensão .htm ou .html, é disponi
 
 ### Conhecimento Geral
 
-- {{interwiki("wikipedia", "HTML", "HTML")}} na Wikipedia
+- [HTML](https://pt.wikipedia.org/wiki/HTML) na Wikipedia
 
 ### Aprendendo HTML
 

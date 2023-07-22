@@ -91,7 +91,7 @@ CSS документы, используемые для стилизации web
 
 Все HTML данные должны пересылаться с данным типом. Альтернативные MIME типы для XHTML (например, `application/xhtml+xml`) почти не используются в настоящее время.
 
-> **Примечание:** Используйте `application/xml` или `application/xhtml+xml`, когда вам необходим строгий синтаксический анализ документов, разделы [`<![CDATA[…]]>`](/en-US/docs/Web/API/CDATASection) или элементы, не принадлежащие к пространствам имён HTML/SVG/MathML.
+> **Примечание:** Используйте `application/xml` или `application/xhtml+xml`, когда вам необходим строгий синтаксический анализ документов, разделы [`<![CDATA[…]]>`](/ru/docs/Web/API/CDATASection) или элементы, не принадлежащие к пространствам имён HTML/SVG/MathML.
 
 ### text/javascript
 
@@ -126,7 +126,7 @@ CSS документы, используемые для стилизации web
 
 Лишь несколько типов изображений достаточно распространены, чтобы безопасно использоваться на веб-страницах.
 
-{{page("ru/docs/Web/Media/Formats/Image_types", "table-of-image-file-types")}}
+{{page("/ru/docs/Web/Media/Formats/Image_types", "table-of-image-file-types")}}
 
 ### Аудио и видео типы
 

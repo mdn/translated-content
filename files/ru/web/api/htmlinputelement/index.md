@@ -557,10 +557,10 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
       <td><code>void</code></td>
       <td>
         Sets the files selected on the input to the given array of
-        <code><a href="/en-US/docs/Web/API/File">File</a></code> objects. This
+        <code><a href="/ru/docs/Web/API/File">File</a></code> objects. This
         is an alternative to <code>mozSetFileNameArray</code> which can be used
         in frame scripts: a chrome script can
-        <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code"
+        <a href="/ru/docs/Extensions/Using_the_DOM_File_API_in_chrome_code"
           >open files as <code>File</code> objects</a
         >
         and send them via

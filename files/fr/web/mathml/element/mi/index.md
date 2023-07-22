@@ -1,10 +1,6 @@
 ---
 title: mi
 slug: Web/MathML/Element/mi
-tags:
-  - MathML
-  - MathML:Element
-  - MathML:Référence
 translation_of: Web/MathML/Element/mi
 ---
 
@@ -68,7 +64,6 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
 
 ```html
 <math>
-
   <mi> y </mi>
 
   <mi> sin </mi>
@@ -76,7 +71,6 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
   <mi mathvariant="monospace"> x </mi>
 
   <mi mathvariant="bold"> &pi; </mi>
-
 </math>
 ```
 

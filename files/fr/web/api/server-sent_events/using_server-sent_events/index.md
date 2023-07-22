@@ -1,15 +1,6 @@
 ---
 title: Utiliser les évènements envoyés par le serveur
 slug: Web/API/Server-sent_events/Using_server-sent_events
-tags:
-  - Advanced
-  - Communication
-  - DOM
-  - Guide
-  - SSE
-  - Server Sent Events
-  - Server-sent events
-  - messaging
 translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
 

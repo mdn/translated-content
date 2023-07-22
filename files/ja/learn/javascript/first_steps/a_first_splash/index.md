@@ -586,7 +586,7 @@ guessField.focus();
 
     ページ内に存在するすべての要素は `style` プロパティを持っていて、そのオブジェクトを介して CSS のインラインスタイルで要素に適用されるすべてのプロパティにアクセスすることができます。これを使うことで、JavaScript から動的に要素の CSS のスタイルを設定できるのです。
 
-## ここで一息...
+## ここで一息
 
 これで数字当てゲームができました。最後までついて来れましたね！作ったプログラムを動かしてみてください 。(最後のプログラムは[こちらでも遊べます](http://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。) もし作ったプログラムが動かなければ、[ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)と見比べてみてください。
 

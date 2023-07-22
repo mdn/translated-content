@@ -1,14 +1,7 @@
 ---
 title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
-original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/apply
 ---
 
 {{JSRef}}

@@ -1,14 +1,7 @@
 ---
 title: '<big> : l''élément d''agrandissement de texte'
 slug: Web/HTML/Element/big
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/big
-browser-compat: html.elements.big
 ---
 
 {{HTMLSidebar}}

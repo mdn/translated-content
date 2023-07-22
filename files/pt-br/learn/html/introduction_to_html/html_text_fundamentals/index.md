@@ -931,7 +931,7 @@ textarea.onkeyup = function(){
 
 {{ EmbedLiveSample('Playable_code_5', 700, 500, "", "", "hide-codepen-jsfiddle") }}
 
-### Itálico, negrito, sublinhado...
+### Itálico, negrito, sublinhado
 
 Os elementos que discutimos até agora têm clara semântica associada. A situação com {{htmlelement("b")}}, {{htmlelement("i")}}, e com {{htmlelement("u")}} é um pouco mais complicada. Eles surgiram para que as pessoas pudessem escrever negrito, itálico ou texto sublinhado em uma época em que o CSS ainda era pouco suportado. Elementos como este, que apenas afetam a apresentação e não a semântica, são conhecidos como **elementos de apresentação** e não devem mais ser usados, porque, como já vimos, a semântica é importante para a acessibilidade, SEO, etc.
 

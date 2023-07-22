@@ -7,7 +7,7 @@ slug: Web/API/Permissions_API/Using_the_Permissions_API
 
 本文提供了使用 W3C Permission API 的基本说明，它提供了一种程序上的方式来查询当前上下文的 API 权限授权状态。
 
-## 申请权限面临的困境...
+## 申请权限面临的困境
 
 惨淡的事实是，权限在 Web 开发中是令人厌恶却不得不面对的问题，对于开发者而言，处理它毫无乐趣。
 

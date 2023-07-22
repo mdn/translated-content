@@ -2,7 +2,6 @@
 title: Element.prepend()
 slug: Web/API/Element/prepend
 translation_of: Web/API/Element/prepend
-browser-compat: api.Element.prepend
 ---
 
 {{APIRef("DOM")}}

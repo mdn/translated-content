@@ -1,12 +1,7 @@
 ---
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
-tags:
-  - Instruction
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Statements/switch
-original_slug: Web/JavaScript/Reference/Instructions/switch
 ---
 
 {{jsSidebar("Statements")}}

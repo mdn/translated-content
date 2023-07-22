@@ -23,7 +23,7 @@ This example appends text to an element each time time the {{HTMLElement("div")}
 > **備註：** This is an example of how not to do things, using one of these attributes.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Event Attribute Example</title>
@@ -50,7 +50,7 @@ Try this example below:
 Instead, you should use {{domxref("EventTarget.addEventListener()")}}, as shown here:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Event Attribute Example</title>

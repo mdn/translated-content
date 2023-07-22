@@ -29,6 +29,6 @@ a:link {color: slategray;}
 
 {{Compat("css.selectors.link")}}
 
-## Veja também:
+## Veja também
 
 - {{ cssxref(":visited") }}, {{ cssxref(":hover") }}, {{ cssxref(":active") }}

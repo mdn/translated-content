@@ -1,13 +1,6 @@
 ---
 title: webRequest.StreamFilter.disconnect()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/disconnect
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - StreamFilter.disconnect
-  - WebExtensions
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/disconnect
 ---
 

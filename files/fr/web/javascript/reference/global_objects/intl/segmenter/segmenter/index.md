@@ -2,7 +2,6 @@
 title: Constructeur Intl.Segmenter()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
-browser-compat: javascript.builtins.Intl.Segmenter.constructor
 ---
 
 {{JSRef}}

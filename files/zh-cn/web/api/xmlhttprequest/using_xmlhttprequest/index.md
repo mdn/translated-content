@@ -251,7 +251,7 @@ foo=bar&baz=The+first+line.%0D%0AThe+second+line.%0D%0A
 |*|
 |*|  :: XMLHttpRequest.prototype.sendAsBinary() Polyfill ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  https://developer.mozilla.org/zh-CN/docs/DOM/XMLHttpRequest#sendAsBinary()
 \*/
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
@@ -270,7 +270,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 |*|
 |*|  :: AJAX Form Submit Framework ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+|*|  https://developer.mozilla.org/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
 |*|
 |*|  This framework is released under the GNU Public License, version 3 or later.
 |*|  https://www.gnu.org/licenses/gpl-3.0-standalone.html
@@ -773,9 +773,8 @@ oReq.send(null);
 
 ## 参见
 
-- [MDN AJAX introduction](/zh-CN/docs/Web/Guide/AJAX/Getting_Started)
-- [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-- [HTTP access control](/zh-CN/docs/Web/HTTP/CORS)
+- [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [HTTP 访问控制](/zh-CN/docs/Web/HTTP/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
 - [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

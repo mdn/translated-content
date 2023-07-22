@@ -1,13 +1,6 @@
 ---
 title: element.replaceChild
 slug: Web/API/Node/replaceChild
-tags:
-  - API
-  - DOM
-  - Enfant
-  - Méthodes
-  - Noeuds
-  - Remplacement
 translation_of: Web/API/Node/replaceChild
 ---
 

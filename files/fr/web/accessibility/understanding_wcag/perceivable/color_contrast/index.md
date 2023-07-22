@@ -1,12 +1,7 @@
 ---
 title: Contraste de la couleur
 slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
-tags:
-  - Accessibilité
-  - WCAG
-  - contraste
 translation_of: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
-original_slug: Web/Accessibility/Understanding_WCAG/Perceivable/Contraste_de_la_couleur
 ---
 
 Le [contraste de la couleur](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) entre l'arrière-plan et le contenu de premier-plan (qui est en général du texte) doit être assez prononcé pour assurer la lisibilité.
@@ -55,9 +50,7 @@ Les deux textes ont leur couleur noire par défaut. La "bonne" `<div>` a un fond
 ### Bon exemple
 
 ```html
-    <div class="bon">
-      Bon contraste
-    </div>
+<div class="bon">Bon contraste</div>
 ```
 
 ```css
@@ -84,9 +77,7 @@ div {
 La "mauvaise" `<div>`, en revanche, a un fond violet très foncé, ce qui rend le texte beaucoup plus difficile à lire:
 
 ```html
-    <div class="mauvais">
-      Mauvais contraste
-    </div>
+<div class="mauvais">Mauvais contraste</div>
 ```
 
 ```css

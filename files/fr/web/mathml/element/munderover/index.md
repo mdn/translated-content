@@ -1,10 +1,6 @@
 ---
 title: <munderover>
 slug: Web/MathML/Element/munderover
-tags:
-  - MathML
-  - MathML:Element
-  - Référence MathML
 translation_of: Web/MathML/Element/munderover
 ---
 
@@ -38,13 +34,17 @@ Exemple de rendu: ![integral-0-infinity](munderover.png)
 
 ```html
 <math displaystyle="true">
-
-  <munderover >
-    <mo> &#x222B; <!--INTEGRAL--> </mo>
+  <munderover>
+    <mo>
+      &#x222B;
+      <!--INTEGRAL-->
+    </mo>
     <mn> 0 </mn>
-    <mi> &#x221E; <!--INFINITY--> </mi>
+    <mi>
+      &#x221E;
+      <!--INFINITY-->
+    </mi>
   </munderover>
-
 </math>
 ```
 

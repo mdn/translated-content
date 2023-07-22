@@ -17,8 +17,8 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay
 
 ```js
 function ballHitPaddle(ball, paddle) {
-    ball.animations.play('wobble');
-    ball.body.velocity.x = -1*5*(paddle.x-ball.x);
+  ball.animations.play("wobble");
+  ball.body.velocity.x = -1 * 5 * (paddle.x - ball.x);
 }
 ```
 

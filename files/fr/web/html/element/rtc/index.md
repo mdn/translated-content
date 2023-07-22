@@ -1,12 +1,6 @@
 ---
 title: '<rtc> : l''élément de conteneur de texte Ruby'
 slug: Web/HTML/Element/rtc
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Ruby
-  - Web
 translation_of: Web/HTML/Element/rtc
 ---
 

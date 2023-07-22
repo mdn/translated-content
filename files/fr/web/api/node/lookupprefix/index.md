@@ -1,13 +1,6 @@
 ---
 title: Node.lookupPrefix()
 slug: Web/API/Node/lookupPrefix
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Noeuds
-  - Préfixes
-  - URI
 translation_of: Web/API/Node/lookupPrefix
 ---
 

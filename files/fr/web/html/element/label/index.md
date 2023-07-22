@@ -1,12 +1,6 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/label
 ---
 
@@ -71,7 +65,7 @@ Il n'existe pas de spécificité relative à la mise en forme des éléments `<l
 
 {{EmbedLiveSample('Exemple_simple', '200', '50', '')}}
 
-### Utiliser l’attribut `for`
+### Utiliser l'attribut `for`
 
 #### HTML
 
@@ -82,7 +76,7 @@ Il n'existe pas de spécificité relative à la mise en forme des éléments `<l
 
 #### Résultat
 
-{{EmbedLiveSample("Utiliser_l’attribut_for", '200', '50', '')}}
+{{EmbedLiveSample("Utiliser_l'attribut_for", '200', '50', '')}}
 
 ## Accessibilité
 

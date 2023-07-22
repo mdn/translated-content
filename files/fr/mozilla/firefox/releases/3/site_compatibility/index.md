@@ -1,11 +1,7 @@
 ---
 title: Changements dans Gecko 1.9 affectant les sites Web
 slug: Mozilla/Firefox/Releases/3/Site_compatibility
-tags:
-  - Développement_Web
-  - Gecko
 translation_of: Mozilla/Firefox/Releases/3/Site_compatibility
-original_slug: Changements_dans_Gecko_1.9_affectant_les_sites_Web
 ---
 
 {{FirefoxSidebar}}
@@ -23,13 +19,13 @@ Dans Gecko 1.8, il n'était pas possible de définir des gestionnaires d'évène
 Par exemple, ceci&nbsp;:
 
 ```js
-window.addEventListener('load', votreFonction, true);
+window.addEventListener("load", votreFonction, true);
 ```
 
 devrait être remplacé par ceci&nbsp;:
 
 ```js
-window.addEventListener('load', votreFonction, false);
+window.addEventListener("load", votreFonction, false);
 ```
 
 Pour une explication du fonctionnement de la capture des évènements, consultez [DOM Level 2 Event capture](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) (en)

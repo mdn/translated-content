@@ -1,20 +1,14 @@
 ---
 title: Empilement sans z-index
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
-tags:
-  - Avancé
-  - CSS
-  - Guide
-  - z-index
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 ---
 
 {{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}
 
 ## Empilement sans `z-index`
 
-Lorsqu’aucun élément n'a de {{cssxref("z-index")}} définis, tous les éléments sont empilés dans cet ordre (de bas en haut)&nbsp;:
+Lorsqu'aucun élément n'a de {{cssxref("z-index")}} définis, tous les éléments sont empilés dans cet ordre (de bas en haut)&nbsp;:
 
 1. Arrière-plans et bordures de l'élément racine
 2. Blocs enfants dans le flux normal, dans leur ordre d'apparition (en HTML)

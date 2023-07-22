@@ -1,17 +1,6 @@
 ---
 title: Qu'est-ce qui n'a pas fonctionné ? Déboguer du code JavaScript
 slug: Learn/JavaScript/First_steps/What_went_wrong
-tags:
-  - Apprentissage
-  - Article
-  - Codage
-  - Débutant
-  - Erreur
-  - JavaScript
-  - Tutoriel
-  - console.log
-  - débogage
-  - outils de développement
 translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
 
@@ -212,7 +201,7 @@ cela déclenchera cette même erreur car le logiciel pense que vous êtes en tra
 
 > **Note :** Voyez la page relative à [SyntaxError: missing ; before statement](/fr/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) pour plus de précisions à propos de cette erreur.
 
-### Le programme dit que vous avez gagné quelle que soit votre suggestion.
+### Le programme dit que vous avez gagné quelle que soit votre suggestion
 
 Voilà un autre symptome de la confusion entre opérateur d'assignation et opérateur de test d'égalité. Ainsi, dans `checkGuess()`, si vous modifiez cette ligne&nbsp;:
 

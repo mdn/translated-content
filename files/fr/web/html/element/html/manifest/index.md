@@ -2,7 +2,6 @@
 title: manifest
 slug: Web/HTML/Element/html/manifest
 translation_of: Web/HTML/Element/html/manifest
-browser-compat: html.elements.html.manifest
 ---
 
 {{securecontext_header}}{{Deprecated_Header}}{{Non-standard_Header}}

@@ -1,12 +1,7 @@
 ---
 title: Hyperlien
 slug: Glossary/Hyperlink
-tags:
-  - Glossaire
-  - HTML
-  - Navigation
 translation_of: Glossary/Hyperlink
-original_slug: Glossaire/Hyperlien
 ---
 
 Les hyperliens connectent des pages web ou des données à une autre. En HTML, l'élément {{HTMLElement("a")}} définit un hyperlien d'un endroit sur une page web (comme une chaîne de caractères ou une image) à un autre endroit sur une autre page web (ou même sur la même page).
@@ -16,7 +11,7 @@ Les hyperliens connectent des pages web ou des données à une autre. En HTML, l
 ### Culture générale
 
 - [Hyperlien](https://fr.wikipedia.org/wiki/Hyperlien) sur Wikipédia
-- Le guide [Création d'hyperliens](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks) sur MDN
+- Le guide [Création d'hyperliens](/fr/Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks) sur MDN
 
 ### Référence technique
 

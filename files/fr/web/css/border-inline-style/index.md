@@ -2,7 +2,6 @@
 title: border-inline-style
 slug: Web/CSS/border-inline-style
 translation_of: Web/CSS/border-inline-style
-browser-compat: css.properties.border-inline-style
 ---
 
 {{CSSRef}}

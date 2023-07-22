@@ -1,15 +1,7 @@
 ---
 title: Intl.Locale.prototype.language
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/language
 ---
 
 {{JSRef}}

@@ -70,7 +70,7 @@ l10n:
   - {{domxref("IDBObjectStore.getKey()")}} メソッドをサポートしました ([Firefox バグ 1271506](https://bugzil.la/1271506))。
   - {{domxref("IDBCursor.continuePrimaryKey()")}} メソッドをサポートしました ([Firefox バグ 1271505](https://bugzil.la/1271505))。
   - バイナリーキーをサポートしました ([Firefox バグ 1271500](https://bugzil.la/1271500))。
-  - ["What’s new in IndexedDB 2.0?" – Mozilla hacks](https://hacks.mozilla.org/2016/10/whats-new-in-indexeddb-2-0/) もご覧ください。
+  - ["What's new in IndexedDB 2.0?" – Mozilla hacks](https://hacks.mozilla.org/2016/10/whats-new-in-indexeddb-2-0/) もご覧ください。
 
 ### Canvas
 

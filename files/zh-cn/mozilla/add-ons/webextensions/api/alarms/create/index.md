@@ -11,9 +11,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
 
 ```js
 browser.alarms.create(
-  name,              // 可选的字符串 (string) 类型
-  alarmInfo          // 可选的对象 (object) 类型
-)
+  name, // 可选的字符串 (string) 类型
+  alarmInfo, // 可选的对象 (object) 类型
+);
 ```
 
 ### 参数介绍
@@ -47,7 +47,7 @@ Create a one-time delay-based alarm with "" for the name:
 const delayInMinutes = 5;
 
 browser.alarms.create({
-  delayInMinutes
+  delayInMinutes,
 });
 ```
 
@@ -59,7 +59,7 @@ const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   delayInMinutes,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 
@@ -71,7 +71,7 @@ const periodInMinutes = 2;
 
 browser.alarms.create("my-periodic-alarm", {
   when,
-  periodInMinutes
+  periodInMinutes,
 });
 ```
 

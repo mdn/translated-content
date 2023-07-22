@@ -98,7 +98,8 @@ En el ejemplo siguiente seleccionamos todos los elementos `<p>` que vienen despu
 Puedes combinar cualquiera de los selectores de los artículos anteriores con selectores de combinación para seleccionar una parte del documento. Por ejemplo, podrías utilizar el código siguiente para seleccionar elementos de una lista con una clase «a» que son hijos directos de `<ul>`:
 
 ```css
-ul > li[class="a"]  {  }
+ul > li[class="a"] {
+}
 ```
 
 Ten cuidado cuando creas largas listas de selectores que seleccionan partes del documento muy específicas. Te será difícil volver a utilizar las reglas CSS porque has definido un selector muy específico para la ubicación del elemento en el marcado.

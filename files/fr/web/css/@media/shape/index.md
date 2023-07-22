@@ -1,12 +1,6 @@
 ---
 title: shape
 slug: Web/CSS/@media/shape
-tags:
-  - '@media'
-  - CSS
-  - Caractéristique média
-  - Reference
-  - Règle @
 translation_of: Web/CSS/@media/shape
 ---
 

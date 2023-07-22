@@ -6,6 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 {{AddonSidebar}}
 
 > **备注：** 如果你熟悉浏览器扩展的基本概念，你可以跳过这一章节，去阅读[如何把扩展文件组合在一起](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，阅读[参考文档](/zh-CN/docs/Mozilla/Add-ons/WebExtensions#reference)以构建你的扩展。访问 [Firefox 扩展工作站](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)，了解有关 Firefox 扩展测试、发布等更多信息。
+
 在这篇文章中，我们将为 Firefox 创建一个扩展。这个扩展只是给从“`mozilla.org`”或其任意子域名加载的任何页面添加一个红色边框。
 
 该示例的源代码位于 GitHub：<https://github.com/mdn/webextensions-examples/tree/main/borderify>
@@ -25,7 +26,6 @@ cd borderify
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Borderify",
   "version": "1.0",
@@ -42,7 +42,6 @@ cd borderify
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
@@ -69,7 +68,7 @@ cd borderify
 
 扩展应该有一个图标。这将显示在附加组件管理器加载项的列表中。我们的 manifest.json 保证了会有一个图标“icons/border-48.png”。
 
-在“borderify”目录下直接创建“icons”目录，并在“icons”目录下保存一个名为“border-48.png”的图标。你可以使用[我们示例](https://github.com/mdn/webextensions-examples/blob/master/borderify/icons/border-48.png)中的图标，来自谷歌 Material Design 的图标库，遵循 [Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/3.0/) 协议。
+在“borderify”目录下直接创建“icons”目录，并在“icons”目录下保存一个名为“border-48.png”的图标。你可以使用[我们示例](https://github.com/mdn/webextensions-examples/blob/main/borderify/icons/border-48.png)中的图标，来自谷歌 Material Design 的图标库，遵循 [Creative Commons Attribution-ShareAlike](http://creativecommons.org/licenses/by-sa/3.0/) 协议。
 
 如果您选择使用自己的图标，它也应该是 48×48 像素的。你也可以为高分辨率显示器提供一个 96x96 的像素图标，在 manifest.json 的 `icons` 对象中添加 `96` 属性即可：
 
@@ -110,7 +109,7 @@ borderify/
 
 ### 安装
 
-打开 Firefox 的 [about:debugging](/zh-CN/docs/Tools/about:debugging) 页面，点击“This Firefox”，点击 "临时加载附加组件（Load Temporary Add-on）" 按钮，并选择你的扩展所在的目录：
+打开 Firefox 的 [about:debugging](/zh-CN/docs/Tools/about:debugging) 页面，点击“This Firefox”，点击“临时加载附加组件（Load Temporary Add-on）”按钮，并选择你的扩展所在的目录：
 
 附加组件将会被安装，直到下次重启浏览器失效。
 
@@ -132,7 +131,7 @@ borderify/
 
 ## 打包和发布
 
-为了给其他人使用你的插件，你需要打包，并将其提交给 Mozilla 进行签名。要了解更多有关，请参考 [“发布你的扩展”](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)。
+为了给其他人使用你的插件，你需要打包，并将其提交给 Mozilla 进行签名。要了解更多有关，请参考[“发布你的扩展”](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension)。
 
 ## 下一步
 
@@ -141,5 +140,5 @@ borderify/
 - [写一个更加复杂的扩展](/zh-CN/Add-ons/WebExtensions/Your_second_WebExtension)
 - [阅读更多关于扩展的内容](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [探索更多关于扩展的示例](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [发现开发，测试，和发布扩展需要的知识](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_)
-- [进一步的学习](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next_#Continue_your_learning_experience)
+- [发现开发，测试，和发布扩展需要的知识](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [进一步的学习](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/What_next#继续你的学习经历)

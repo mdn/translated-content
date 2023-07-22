@@ -1,13 +1,7 @@
 ---
 title: Introduction au développement de jeux vidéo
 slug: Games/Introduction
-tags:
-  - Firefox OS
-  - Guide
-  - Jeux
-  - Mobile
 translation_of: Games/Introduction
-original_slug: Jeux/Introduction
 ---
 
 {{GamesSidebar}}
@@ -20,15 +14,15 @@ Grâce aux technologies web actuelles et aux navigateurs récents, il est tout �
 
 Le Web peut vraiment se concevoir comme une plateforme pour les jeux : "le Web est la plateforme". La liste qui suit présente les technologies au cœur de celle-ci.
 
-| Fonctionnalités                        | Technologie                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Audio**                              | [Web Audio API](/fr/docs/Web/API/Web_Audio_API)                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Graphisme**                          | [WebGL](/fr/docs/WebGL) ([OpenGL ES](http://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                                                                                                                                                          |
+| Fonctionnalités                        | Technologie                                                                                                                                                                                                                                                               |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Audio**                              | [Web Audio API](/fr/docs/Web/API/Web_Audio_API)                                                                                                                                                                                                                           |
+| **Graphisme**                          | [WebGL](/fr/docs/WebGL) ([OpenGL ES](http://www.khronos.org/opengles/) 2.0)                                                                                                                                                                                               |
 | **Mécanismes d'interface utilisateur** | [Événements tactiles](/fr/docs/Web/Guide/DOM/Events/Touch_events), [Gamepad API](/fr/docs/Web/Guide/API/Gamepad), capteurs, [WebRTC](/fr/docs/WebRTC), [Full Screen API](/fr/docs/Web/Guide/DOM/Using_full_screen_mode), [Pointer Lock API](/fr/docs/WebAPI/Pointer_Lock) |
-| **Langage**                            | [JavaScript](/fr/docs/JavaScript) (ou C/C++ utilisé avec [Emscripten](https://github.com/kripken/emscripten/wiki) pour être compilé en JavaScript)                                                                                                                                                                                                                                    |
-| **Réseau**                             | [WebRTC](/fr/docs/WebRTC) et/ou les [WebSockets](/fr/docs/WebSockets)                                                                                                                                                                                                                                                                                                                                            |
-| **Stockage**                           | [IndexedDB](/fr/docs/IndexedDB) ou le "cloud"                                                                                                                                                                                                                                                                                                                                                                                       |
-| **Web**                                | [HTML](/fr/docs/Web/HTML), [CSS](/fr/docs/Web/CSS), [SVG](/fr/docs/SVG), [Social API](/fr/docs/Social_API) (et plus encore...)                                                                                                                                                                                                                                               |
+| **Langage**                            | [JavaScript](/fr/docs/JavaScript) (ou C/C++ utilisé avec [Emscripten](https://github.com/kripken/emscripten/wiki) pour être compilé en JavaScript)                                                                                                                        |
+| **Réseau**                             | [WebRTC](/fr/docs/WebRTC) et/ou les [WebSockets](/fr/docs/WebSockets)                                                                                                                                                                                                     |
+| **Stockage**                           | [IndexedDB](/fr/docs/IndexedDB) ou le "cloud"                                                                                                                                                                                                                             |
+| **Web**                                | [HTML](/fr/docs/Web/HTML), [CSS](/fr/docs/Web/CSS), [SVG](/fr/docs/SVG), [Social API](/fr/docs/Social_API) (et plus encore...)                                                                                                                                            |
 
 ## L'aspect commercial
 

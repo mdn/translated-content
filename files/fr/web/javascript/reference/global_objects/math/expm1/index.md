@@ -1,15 +1,7 @@
 ---
 title: Math.expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/expm1
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/expm1
 ---
 
 {{JSRef}}

@@ -1,13 +1,6 @@
 ---
 title: table.insertRow
 slug: Web/API/HTMLTableElement/insertRow
-tags:
-  - API
-  - DOM HTML
-  - HTMLTableElement
-  - Méthode
-  - NeedsMobileBrowserCompatibility
-  - Reference
 translation_of: Web/API/HTMLTableElement/insertRow
 ---
 

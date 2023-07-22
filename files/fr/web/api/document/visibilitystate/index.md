@@ -1,12 +1,6 @@
 ---
 title: Document.visibilityState
 slug: Web/API/Document/visibilityState
-tags:
-  - API
-  - DOM
-  - Document
-  - Propriétés
-  - Visibilité
 translation_of: Web/API/Document/visibilityState
 ---
 

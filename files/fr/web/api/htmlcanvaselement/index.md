@@ -1,8 +1,6 @@
 ---
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
-tags:
-  - Canvas
 translation_of: Web/API/HTMLCanvasElement
 ---
 
@@ -46,7 +44,7 @@ _Méthodes héritées de son parent,_ _{{domxref("HTMLElement")}}._
         <code>"webgl"</code>) renvoie un objet
         {{domxref("WebGLRenderingContext")}} . Ce dernier contexte
         n'est disponible que dans les navigateur qui implémentent
-        <a href="/en-US/docs/Web/WebGL">WebGL</a>.
+        <a href="/fr/docs/Web/WebGL">WebGL</a>.
       </td>
     </tr>
     <tr>

@@ -51,11 +51,31 @@ Primero, empecemos con algo de HTML simple — añade lo siguiente al cuerpo de 
 
 <div class="box">Caja flotante</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. </p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet.
+</p>
 
-<p>Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+  orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare
+  ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
+  ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+  ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et
+  a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 Ahora aplica el siguiente CSS a tu HTML (usando un elemento {{htmlelement("style")}} o un {{htmlelement("link")}} para separar el fichero `.css` — tú eliges):
@@ -65,14 +85,17 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
   width: 150px;
   height: 100px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -86,7 +109,7 @@ Si guardas y recargas la página, verás algo parecido a lo que esperarías: la 
   width: 150px;
   height: 100px;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -100,11 +123,31 @@ Ahora, si guardas y recargas, podrás ver algo parecido a lo siguiente:
 
 <div class="box">Caja flotante</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate.
+</p>
 
-<p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
@@ -112,17 +155,20 @@ body {
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  font: .9em/1.2 Arial, Helvetica, sans-serif
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
-float: left;
-margin-right: 15px;
-width: 150px;
-height: 150px;
-border-radius: 5px;
-background-color: rgb(207,232,220);
-padding: 1em;
+  float: left;
+  margin-right: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 ```
 
@@ -138,7 +184,7 @@ Añade una clase `special` al primer párrafo de texto, el que sucede inmediatam
 
 ```css
 .special {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
 }
@@ -153,35 +199,58 @@ Para que el efecto sea más fácil de ver, cambia el `margin-right` de tu elemen
 
 <div class="box">Caja flotante</div>
 
-<p class="special">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+<p class="special">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate.
+</p>
 
-<p>Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
 body {
-width: 90%;
-max-width: 900px;
-margin: 0 auto;
-font: .9em/1.2 Arial, Helvetica, sans-serif
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
-float: left;
-margin: 15px;
-width: 150px;
-height: 150px;
-border-radius: 5px;
-background-color: rgb(207,232,220);
-padding: 1em;
+  float: left;
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 
 .special {
-background-color: rgb(79,185,227);
-padding: 10px;
-color: #fff;
+  background-color: rgb(79, 185, 227);
+  padding: 10px;
+  color: #fff;
 }
 ```
 
@@ -206,33 +275,56 @@ En el HTML del ejemplo anterior, añade una clase `cleared` al segundo párrafo 
 
 <div class="box">Caja flotante</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate.
+</p>
 
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p class="cleared">
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
 body {
-width: 90%;
-max-width: 900px;
-margin: 0 auto;
-font: .9em/1.2 Arial, Helvetica, sans-serif
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .box {
-float: left;
-margin: 15px;
-width: 150px;
-height: 150px;
-border-radius: 5px;
-background-color: rgb(207,232,220);
-padding: 1em;
+  float: left;
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 
 .cleared {
-clear: left;
+  clear: left;
 }
 ```
 
@@ -252,7 +344,10 @@ Ahora ya sabes cómo limpiar un elemento que sigue a un elemento flotante, pero 
 <div class="wrapper">
   <div class="box">Caja flotante</div>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate.</p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
 ```
 
@@ -260,7 +355,7 @@ En tu CSS, añade la siguiente regla para la clase `.wrapper` y después recarga
 
 ```css
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
 }
@@ -270,7 +365,7 @@ Además, elimina la clase `.cleared` anterior:
 
 ```css
 .cleared {
-    clear: left;
+  clear: left;
 }
 ```
 
@@ -283,36 +378,59 @@ Verás que, como en el ejemplo en el que hemos puesto un color de fondo al párr
 <div class="wrapper">
   <div class="box">Caja flotante</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
 
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p class="cleared">
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
 body {
-width: 90%;
-max-width: 900px;
-margin: 0 auto;
-font: .9em/1.2 Arial, Helvetica, sans-serif
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {
-background-color: rgb(79,185,227);
-padding: 10px;
-color: #fff;
+  background-color: rgb(79, 185, 227);
+  padding: 10px;
+  color: #fff;
 }
 
 .box {
-float: left;
-margin: 15px;
-width: 150px;
-height: 150px;
-border-radius: 5px;
-background-color: rgb(207,232,220);
-padding: 1em;
+  float: left;
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 ```
 
@@ -341,41 +459,64 @@ Ahora recarga la página y la caja debería limpiarse. Esto es básicamente lo m
 <div class="wrapper">
   <div class="box">Caja flotante</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p class="cleared">
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
 body {
-width: 90%;
-max-width: 900px;
-margin: 0 auto;
-font: .9em/1.2 Arial, Helvetica, sans-serif
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {
-background-color: rgb(79,185,227);
-padding: 10px;
-color: #fff;
+  background-color: rgb(79, 185, 227);
+  padding: 10px;
+  color: #fff;
 }
 
 .box {
-float: left;
-margin: 15px;
-width: 150px;
-height: 150px;
-border-radius: 5px;
-background-color: rgb(207,232,220);
-padding: 1em;
+  float: left;
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 
 .wrapper::after {
-content: "";
-clear: both;
-display: block;
+  content: "";
+  clear: both;
+  display: block;
 }
 ```
 
@@ -389,7 +530,7 @@ Elimina el CSS clearfix que añadiste en la anterior sección y, en su lugar, a�
 
 ```css
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
   overflow: auto;
@@ -401,36 +542,59 @@ Elimina el CSS clearfix que añadiste en la anterior sección y, en su lugar, a�
 <div class="wrapper">
   <div class="box">Caja flotante</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p class="cleared">
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
 body {
-width: 90%;
-max-width: 900px;
-margin: 0 auto;
-font: .9em/1.2 Arial, Helvetica, sans-serif
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {
-background-color: rgb(79,185,227);
-padding: 10px;
-color: #fff;
-overflow: auto;
+  background-color: rgb(79, 185, 227);
+  padding: 10px;
+  color: #fff;
+  overflow: auto;
 }
 
 .box {
-float: left;
-margin: 15px;
-width: 150px;
-height: 150px;
-border-radius: 5px;
-background-color: rgb(207,232,220);
-padding: 1em;
+  float: left;
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 ```
 
@@ -444,7 +608,7 @@ La manera moderna de resolver este problema es usar el valor `flow-root` de la p
 
 ```css
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   color: #fff;
   display: flow-root;
@@ -456,36 +620,59 @@ La manera moderna de resolver este problema es usar el valor `flow-root` de la p
 <div class="wrapper">
   <div class="box">Caja flotante</div>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
+    aliquam dolor, eu lacinia lorem placerat vulputate.
+  </p>
 </div>
-<p class="cleared">Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p class="cleared">
+  Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
+  imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa
+  at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas
+  ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae
+  convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis.
+  Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut
+  luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare
+  felis, eget fermentum sapien.
+</p>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 ```
 
 ```css hidden
 body {
-width: 90%;
-max-width: 900px;
-margin: 0 auto;
-font: .9em/1.2 Arial, Helvetica, sans-serif
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .wrapper {
-background-color: rgb(79,185,227);
-padding: 10px;
-color: #fff;
-display: flow-root;
+  background-color: rgb(79, 185, 227);
+  padding: 10px;
+  color: #fff;
+  display: flow-root;
 }
 
 .box {
-float: left;
-margin: 15px;
-width: 150px;
-height: 150px;
-border-radius: 5px;
-background-color: rgb(207,232,220);
-padding: 1em;
+  float: left;
+  margin: 15px;
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
 }
 ```
 

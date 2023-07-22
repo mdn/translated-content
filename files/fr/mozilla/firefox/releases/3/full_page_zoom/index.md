@@ -2,7 +2,6 @@
 title: Zoom pleine page
 slug: Mozilla/Firefox/Releases/3/Full_page_zoom
 translation_of: Mozilla/Firefox/Releases/3/Full_page_zoom
-original_slug: Zoom_pleine_page
 ---
 
 {{FirefoxSidebar}}
@@ -27,7 +26,9 @@ Il est également possible d'utiliser la fonction fullZoom pour un xul:iframe. C
 var zoom = 1.5;
 var iframe = document.getElementById("authorFrame");
 var contViewer = iframe.docShell.contentViewer;
-var docViewer = contViewer.QueryInterface(Components.interfaces.nsIMarkupDocumentViewer);
+var docViewer = contViewer.QueryInterface(
+  Components.interfaces.nsIMarkupDocumentViewer,
+);
 docViewer.fullZoom = zoom;
 ```
 

@@ -1,12 +1,6 @@
 ---
 title: Modules
 slug: Mozilla/Add-ons
-tags:
-  - Add-ons
-  - Extensions
-  - Landing
-  - Modules
-  - Mozilla
 translation_of: Mozilla/Add-ons
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: MediaStreamEvent
 slug: Web/API/MediaStreamEvent
-tags:
-  - API
-  - Expérimentale
-  - Expérimentale(2)
-  - Interface
-  - Reference
-  - Référence(2)
-  - WebRTC
 translation_of: Web/API/MediaStreamEvent
 ---
 

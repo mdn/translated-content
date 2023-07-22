@@ -1,9 +1,6 @@
 ---
 title: WebGLProgram
 slug: Web/API/WebGLProgram
-tags:
-  - WebGL
-  - WebGLProgram
 translation_of: Web/API/WebGLProgram
 ---
 

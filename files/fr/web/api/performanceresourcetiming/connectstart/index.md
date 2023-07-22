@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.connectStart
 slug: Web/API/PerformanceResourceTiming/connectStart
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - connectStart
 translation_of: Web/API/PerformanceResourceTiming/connectStart
 ---
 

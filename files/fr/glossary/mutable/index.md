@@ -1,12 +1,7 @@
 ---
 title: Muable
 slug: Glossary/Mutable
-tags:
-  - Débutant
-  - Glossaire
-  - Variables
 translation_of: Glossary/Mutable
-original_slug: Glossaire/Muable
 ---
 
 Une variable _muable_ (_mutable_) est une variable qui peut être modifiée. En {{glossary("JavaScript")}}, seuls les {{Glossary("Object","objets")}} et {{Glossary("Array","tableaux")}} (_arrays_) sont muables, pas {{Glossary("primitive", "les valeurs primitives")}}.

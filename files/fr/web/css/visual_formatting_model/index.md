@@ -1,12 +1,7 @@
 ---
 title: Modèle de mise en forme visuelle
 slug: Web/CSS/Visual_formatting_model
-tags:
-  - CSS
-  - Intermédiaire
-  - NeedsUpdate
 translation_of: Web/CSS/Visual_formatting_model
-original_slug: Web/CSS/Modèle_de_mise_en_forme_visuelle
 ---
 
 {{CSSRef}}

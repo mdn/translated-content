@@ -1,14 +1,6 @@
 ---
 title: Les bases de JavaScript, orienté objet
 slug: Learn/JavaScript/Objects/Basics
-tags:
-  - API
-  - Apprendre
-  - Débutant
-  - JavaScript
-  - Objet
-  - Syntaxe
-  - this
 translation_of: Learn/JavaScript/Objects/Basics
 ---
 

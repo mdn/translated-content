@@ -47,15 +47,15 @@ var el = document.querySelector("div.user-panel.main input[name='login']");
 <div id="foo:bar"></div>
 
 <script>
-  console.log('#foo\bar');               // "#fooar"
-  document.querySelector('#foo\bar');    // No coincide con nada
+  console.log("#foo\bar"); // "#fooar"
+  document.querySelector("#foo\bar"); // No coincide con nada
 
-  console.log('#foo\\bar');              // "#foo\bar"
-  console.log('#foo\\\\bar');            // "#foo\\bar"
-  document.querySelector('#foo\\\\bar'); // Coincide con el primer div
+  console.log("#foo\\bar"); // "#foo\bar"
+  console.log("#foo\\\\bar"); // "#foo\\bar"
+  document.querySelector("#foo\\\\bar"); // Coincide con el primer div
 
-  document.querySelector('#foo:bar');    // No coincide con nada
-  document.querySelector('#foo\\:bar');  // Coincide con el segundo div
+  document.querySelector("#foo:bar"); // No coincide con nada
+  document.querySelector("#foo\\:bar"); // Coincide con el segundo div
 </script>
 ```
 

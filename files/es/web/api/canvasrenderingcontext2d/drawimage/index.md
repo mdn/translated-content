@@ -20,7 +20,7 @@ void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 ### Parámetros
 
 - `image`
-  - : Un elemento a dibujar dentro del context. La especificación permite cualquier fuente de imagen en canvas ({{domxref("CanvasImageSource")}}), tal como una {{domxref("HTMLImageElement")}}, un {{domxref("HTMLVideoElement")}}, un {{domxref("HTMLCanvasElement")}} o un{{domxref("ImageBitmap")}}.
+  - : Un elemento a dibujar dentro del context. La especificación permite cualquier fuente de imagen en canvas, tal como una {{domxref("HTMLImageElement")}}, un {{domxref("HTMLVideoElement")}}, un {{domxref("HTMLCanvasElement")}} o un{{domxref("ImageBitmap")}}.
 - `dx`
   - : La coordenada X del canvas destino en la cual se coloca la esquina superior izquierda de la imagen origen.
 - `dy`

@@ -1,12 +1,7 @@
 ---
 title: ServiceWorker.onstatechange
 slug: Web/API/ServiceWorker/statechange_event
-tags:
-  - API
-  - Propriété
-  - Reference
 translation_of: Web/API/ServiceWorker/onstatechange
-original_slug: Web/API/ServiceWorker/onstatechange
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

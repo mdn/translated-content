@@ -1,13 +1,6 @@
 ---
 title: Blob()
 slug: Web/API/Blob/Blob
-tags:
-  - API
-  - Blob
-  - Constructeur
-  - Experimental
-  - File API
-  - Reference
 translation_of: Web/API/Blob/Blob
 ---
 

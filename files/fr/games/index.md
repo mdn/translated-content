@@ -1,12 +1,7 @@
 ---
 title: Développement de jeux vidéo
 slug: Games
-tags:
-  - Applications
-  - Développement
-  - Jeux
 translation_of: Games
-original_slug: Jeux
 ---
 
 {{GamesSidebar}}

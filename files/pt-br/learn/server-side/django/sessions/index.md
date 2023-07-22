@@ -12,7 +12,7 @@ original_slug: Learn/Server-side/Django/Sessões
       <th scope="row">Pré-requisitos:</th>
       <td>
         Completar todos os tópicos anteriores do tutorial, incluindo
-        <a href="/en-US/docs/Learn/Server-side/Django/Generic_views"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Generic_views"
           >Django Tutorial Part 6: Generic list and detail views</a
         >
       </td>

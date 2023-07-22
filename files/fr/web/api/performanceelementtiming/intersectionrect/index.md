@@ -1,13 +1,6 @@
 ---
 title: PerformanceElementTiming.intersectionRect
 slug: Web/API/PerformanceElementTiming/intersectionRect
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - intersectionRect
-  - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/intersectionRect
 ---
 

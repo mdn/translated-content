@@ -1,10 +1,6 @@
 ---
 title: offset-path
 slug: Web/CSS/offset-path
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/offset-path
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
-tags:
-  - Déprécié
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/menuitem
 ---
 
@@ -14,7 +8,7 @@ translation_of: Web/HTML/Element/menuitem
 
 L'élément HTML **`<menuitem>`** représente une commande qu'un utilisateur peut utiliser via un menu contextuel ou un menu rattaché à un bouton.
 
-Une commande peut être définie explicitement, avec un texte et éventuellement une icône ou bien faire référence à une commande décrite dans un autre élément. Une commande peut prendre la forme d'une case à cocher ou d’un groupe de boutons radio.
+Une commande peut être définie explicitement, avec un texte et éventuellement une icône ou bien faire référence à une commande décrite dans un autre élément. Une commande peut prendre la forme d'une case à cocher ou d'un groupe de boutons radio.
 
 ## Attributs
 

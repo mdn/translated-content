@@ -1,13 +1,7 @@
 ---
 title: Workflows for different game types
 slug: Games/Tutorials
-tags:
-  - Canvas
-  - JavaScript
-  - Jeux
-  - Web
 translation_of: Games/Tutorials
-original_slug: Games/Workflows
 ---
 
 {{GamesSidebar}}

@@ -22,10 +22,10 @@ Agora que você tem uma ideia sobre o que é o CSS e seu uso basico, é hora de 
           href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files"
           >operação com arquivos</a
         >, básico de HTML (veja
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introdução ao HTML</a
         >), e uma ideia de
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
+        <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
           >Como funciona o CSS</a
         >.
       </td>
@@ -249,7 +249,7 @@ As regras de especificidade e cascata podem parecer um pouco complicadas no iní
 
 Em seu nível mais básico, CSS consiste em dois blocos de construção:
 
-- **Properties**: Identificadores legíveis para humanos que indicam quais características estilísticas (por exemplo, [`font-size`](/en-US/docs/Web/CSS/font-size), [`width`](/en-US/docs/Web/CSS/width), [`background-color`](/en-US/docs/Web/CSS/background-color)) que você deseja alterar.
+- **Properties**: Identificadores legíveis para humanos que indicam quais características estilísticas (por exemplo, [`font-size`](/pt-BR/docs/Web/CSS/font-size), [`width`](/pt-BR/docs/Web/CSS/width), [`background-color`](/pt-BR/docs/Web/CSS/background-color)) que você deseja alterar.
 - **Valores**: Cada propriedade especificada recebe um valor, que indica como você deseja alterar essas características estilísticas (por exemplo, o que deseja mudar a fonte, a largura ou a cor de fundo para).
 
 A imagem abaixo destaca uma única propriedade e valor. O nome da propriedade é `color` e o valor é `blue`.
@@ -335,7 +335,7 @@ A saída do código acima se parece com isso:
 
 ## @rules
 
-Até agora, não encontramos as regras, em inglês [`@rules`](/en-US/docs/Web/CSS/At-rule) (pronuncia-se "at-rules") do CSS. Estas são regras especiais que dão ao CSS algumas instruções sobre como se comportar. Algumas `@rules` são simples, com o nome da regra e um valor. Por exemplo, para importar uma folha de estilo adicional na sua folha de estilo CSS principal, você pode usar `@import`:
+Até agora, não encontramos as regras, em inglês [`@rules`](/pt-BR/docs/Web/CSS/At-rule) (pronuncia-se "at-rules") do CSS. Estas são regras especiais que dão ao CSS algumas instruções sobre como se comportar. Algumas `@rules` são simples, com o nome da regra e um valor. Por exemplo, para importar uma folha de estilo adicional na sua folha de estilo CSS principal, você pode usar `@import`:
 
 ```css
 @import 'styles2.css';

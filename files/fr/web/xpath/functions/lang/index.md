@@ -1,10 +1,7 @@
 ---
 title: lang
 slug: Web/XPath/Functions/lang
-tags:
-  - Référence_XSLT
 translation_of: Web/XPath/Functions/lang
-original_slug: Web/XPath/Fonctions/lang
 ---
 
 {{ XsltRef() }}

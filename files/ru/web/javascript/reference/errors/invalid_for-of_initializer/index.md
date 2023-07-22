@@ -26,7 +26,7 @@ SyntaxError: for-of loop variable declaration may not have an initializer. (Chro
 
 ## Что случилось?
 
-В заголовке цикла [for...of](/ru/docs/Web/JavaScript/Reference/Statements/for...of) инициализируется переменная. Иными словами, переменная объявляется и получает значение|`for (var i = 0 of iterable)`|. В подобных циклах это не допускается. Инициализировать переменные можно в циклах [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for).
+В заголовке цикла [for...of](/ru/docs/Web/JavaScript/Reference/Statements/for...of) инициализируется переменная. Иными словами, переменная объявляется и получает значение|`for (var i = 0 of iterable)`|. В подобных циклах это не допускается. Инициализировать переменные можно в циклах [`for`](/ru/docs/Web/JavaScript/Reference/Statements/for).
 
 ## Примеры
 
@@ -61,6 +61,6 @@ for (let value of iterable) {
 
 ## Смотрите также
 
-- [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
-- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) – В строгом режиме инициализация тоже не разрешается ([SyntaxError: for-in loop head declarations may not have initializers](/ru/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
-- [`for`](/en-US/docs/Web/JavaScript/Reference/Statements/for) – Инициализация во время итерации разрешена.
+- [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in) – В строгом режиме инициализация тоже не разрешается ([SyntaxError: for-in loop head declarations may not have initializers](/ru/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer))
+- [`for`](/ru/docs/Web/JavaScript/Reference/Statements/for) – Инициализация во время итерации разрешена.

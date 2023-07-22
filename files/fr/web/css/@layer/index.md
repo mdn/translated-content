@@ -2,7 +2,6 @@
 title: '@layer'
 slug: Web/CSS/@layer
 translation_of: Web/CSS/@layer
-browser-compat: css.at-rules.layer
 ---
 
 {{CSSRef}}

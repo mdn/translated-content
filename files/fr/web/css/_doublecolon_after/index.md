@@ -1,12 +1,6 @@
 ---
 title: '::after (:after)'
 slug: Web/CSS/::after
-tags:
-  - CSS
-  - Disposition
-  - Pseudo-element
-  - Reference
-  - Web
 translation_of: Web/CSS/::after
 ---
 
@@ -33,7 +27,7 @@ a:after {
 
 ### Utilisation simple
 
-Nous allons ici créer deux classes : une pour les paragraphes ennuyeux et une pour les intéressants. Nous marquerons ensuite chacun de ces paragraphes en ajoutant un pseudo-élément après chacun d’eux.
+Nous allons ici créer deux classes : une pour les paragraphes ennuyeux et une pour les intéressants. Nous marquerons ensuite chacun de ces paragraphes en ajoutant un pseudo-élément après chacun d'eux.
 
 #### HTML
 
@@ -91,7 +85,7 @@ On peut mettre en forme du texte ou des images avec la propriété {{cssxref("co
 
 {{EmbedLiveSample('Exemple_décoratif', '100%', 60)}}
 
-### Bulles d’information
+### Bulles d'information
 
 Dans l'exemple suivant, on illustre le [pseudo-élément](/fr-FR/docs/Web/CSS/Pseudo-elements) `::after` avec l'expression CSS {{cssxref("attr()")}} et un attribut de données personnalisé `data-descr` afin de créer une _bulle d'information_ de type glossaire en CSS pur.
 
@@ -136,7 +130,7 @@ span[data-descr]:hover::after {
 
 #### Résultat
 
-{{EmbedLiveSample("Bulles_d’information", '100%', 150)}}
+{{EmbedLiveSample("Bulles_d'information", '100%', 150)}}
 
 ## Spécifications
 

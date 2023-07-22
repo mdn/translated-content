@@ -1,11 +1,6 @@
 ---
 title: Event()
 slug: Web/API/Event/Event
-tags:
-  - API
-  - Constructeur
-  - DOM
-  - évènements
 translation_of: Web/API/Event/Event
 ---
 

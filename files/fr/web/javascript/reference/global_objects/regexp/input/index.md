@@ -1,14 +1,7 @@
 ---
 title: RegExp.input ($_)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/input
-tags:
-  - JavaScript
-  - Non-standard
-  - Propriété
-  - Reference
-  - RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/input
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/input
 ---
 
 {{JSRef}} {{non-standard_header}}

@@ -2,8 +2,6 @@
 title: GlobalEventHandlers.onblur
 slug: Web/API/Window/blur_event
 translation_of: Web/API/GlobalEventHandlers/onblur
-original_slug: Web/API/GlobalEventHandlers/onblur
-browser-compat: api.GlobalEventHandlers.onblur
 ---
 
 {{ApiRef("HTML DOM")}}

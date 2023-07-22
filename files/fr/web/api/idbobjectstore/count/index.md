@@ -1,12 +1,6 @@
 ---
 title: IDBObjectStore.count()
 slug: Web/API/IDBObjectStore/count
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBObjectStore/count
 ---
 

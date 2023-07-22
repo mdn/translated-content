@@ -1,11 +1,6 @@
 ---
 title: '<nav> : l''élément de section de navigation'
 slug: Web/HTML/Element/nav
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/nav
 ---
 

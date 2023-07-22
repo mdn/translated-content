@@ -116,7 +116,7 @@ Em versões anteriores do Firefox & Chrome e a partir de Safari 5.1.7 e Opera 12
 
 ### Observações específicas para Firefox
 
-A declaração `const` foi implementada no Firefox muito antes de `const` aparecer na especificação ECMAScript 6. For `const` ES6 compliance see {{bug(950547)}} and {{bug(611388)}}.
+A declaração `const` foi implementada no Firefox muito antes de `const` aparecer na especificação ECMAScript 6. For `const` ES6 compliance see [Erro do Firefox 950547](https://bugzil.la/950547) and [Erro do Firefox 611388](https://bugzil.la/611388).
 
 - Iniciando com o Gecko 36:
 

@@ -1,10 +1,6 @@
 ---
 title: overflow-block
 slug: Web/CSS/@media/overflow-block
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/overflow-block
 ---
 

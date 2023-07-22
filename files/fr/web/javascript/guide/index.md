@@ -1,9 +1,6 @@
 ---
 title: Guide JavaScript
 slug: Web/JavaScript/Guide
-tags:
-  - Guide
-  - JavaScript
 translation_of: Web/JavaScript/Guide
 ---
 

@@ -1,15 +1,6 @@
 ---
 title: HTMLMediaElement.volume
 slug: Web/API/HTMLMediaElement/volume
-tags:
-  - API
-  - Audio
-  - HTML DOM
-  - Property
-  - Propriété
-  - Reference
-  - Volume
-  - sound
 translation_of: Web/API/HTMLMediaElement/volume
 ---
 

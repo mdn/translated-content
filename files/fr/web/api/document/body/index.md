@@ -1,9 +1,6 @@
 ---
 title: document.body
 slug: Web/API/Document/body
-tags:
-  - DOM
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/Document/body
 ---
 

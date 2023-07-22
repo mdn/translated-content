@@ -1,11 +1,6 @@
 ---
 title: Chiffrement avec clé publique
 slug: Glossary/Public-key_cryptography
-tags:
-  - Cryptography
-  - Glossary
-  - Public-key cryptography
-  - Security
 translation_of: Glossary/Public-key_cryptography
 ---
 

@@ -1,9 +1,6 @@
 ---
 title: <feOffset>
 slug: Web/SVG/Element/feOffset
-tags:
-  - SVG
-  - SVG Filter
 translation_of: Web/SVG/Element/feOffset
 ---
 
@@ -47,8 +44,15 @@ Cet élément implémente l'interface {{domxref("SVGFEOffsetElement")}}.
     </filter>
   </defs>
 
-  <rect x="0" y="0" width="100" height="100" stroke="black" fill="green"/>
-  <rect x="0" y="0" width="100" height="100" stroke="black" fill="green" filter="url(#offset)"/>
+  <rect x="0" y="0" width="100" height="100" stroke="black" fill="green" />
+  <rect
+    x="0"
+    y="0"
+    width="100"
+    height="100"
+    stroke="black"
+    fill="green"
+    filter="url(#offset)" />
 </svg>
 ```
 

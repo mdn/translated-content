@@ -7,7 +7,7 @@ slug: Web/API/EventTarget/addEventListener
 
 ## Resumen
 
-`addEventListener()` Registra un evento a un objeto en específico. El [Objeto especifico](/es/docs/DOM/EventTarget) puede ser un simple [elemento](/es/docs/DOM/element) en un archivo, el mismo [`documento`](/en-US/docs/DOM/document) , una [`ventana`](/en-US/docs/DOM/window) o un [`XMLHttpRequest`](/en-US/docs/DOM/XMLHttpRequest).
+`addEventListener()` Registra un evento a un objeto en específico. El [Objeto especifico](/es/docs/DOM/EventTarget) puede ser un simple [elemento](/es/docs/DOM/element) en un archivo, el mismo [`documento`](/es/docs/DOM/document) , una [`ventana`](/es/docs/DOM/window) o un [`XMLHttpRequest`](/es/docs/DOM/XMLHttpRequest).
 
 Para registrar más de un eventListener, puedes llamar `addEventListener()` para el mismo elemento pero con diferentes tipos de eventos o parámetros de captura.
 
@@ -38,41 +38,46 @@ target.addEventListener(tipo, listener[, useCapture, wantsUntrusted {{ Non-stand
 ## Ejemplo
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>DOM Event Example</title>
+  <head>
+    <title>DOM Event Example</title>
 
-<style>
-#t { border: 1px solid red }
-#t1 { background-color: pink; }
-</style>
+    <style>
+      #t {
+        border: 1px solid red;
+      }
+      #t1 {
+        background-color: pink;
+      }
+    </style>
 
-<script>
-// Function to change the content of t2
-function modifyText() {
-  var t2 = document.getElementById("t2");
-  t2.firstChild.nodeValue = "three";
-}
+    <script>
+      // Function to change the content of t2
+      function modifyText() {
+        var t2 = document.getElementById("t2");
+        t2.firstChild.nodeValue = "three";
+      }
 
-// Function to add event listener to t
-function load() {
-  var el = document.getElementById("t");
-  el.addEventListener("click", modifyText, false);
-}
+      // Function to add event listener to t
+      function load() {
+        var el = document.getElementById("t");
+        el.addEventListener("click", modifyText, false);
+      }
 
-document.addEventListener("DOMContentLoaded", load, false);
-</script>
-
-</head>
-<body>
-
-<table id="t">
-   <tr><td id="t1">one</td></tr>
-   <tr><td id="t2">two</td></tr>
-</table>
-
-</body>
+      document.addEventListener("DOMContentLoaded", load, false);
+    </script>
+  </head>
+  <body>
+    <table id="t">
+      <tr>
+        <td id="t1">one</td>
+      </tr>
+      <tr>
+        <td id="t2">two</td>
+      </tr>
+    </table>
+  </body>
 </html>
 ```
 
@@ -83,40 +88,50 @@ En el ejemplo anterior , `modifyText()` es una listener para los eventos `click`
 Si quieres pasar parámetros a la función del listener, debes utilizar funciones anónimas.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>DOM Event Example</title>
+  <head>
+    <title>DOM Event Example</title>
 
-<style>
-#t { border: 1px solid red }
-#t1 { background-color: pink; }
-</style>
+    <style>
+      #t {
+        border: 1px solid red;
+      }
+      #t1 {
+        background-color: pink;
+      }
+    </style>
 
-<script>
+    <script>
+      // Function to change the content of t2
+      function modifyText(new_text) {
+        var t2 = document.getElementById("t2");
+        t2.firstChild.nodeValue = new_text;
+      }
 
-// Function to change the content of t2
-function modifyText(new_text) {
-  var t2 = document.getElementById("t2");
-  t2.firstChild.nodeValue = new_text;
-}
-
-// Function to add event listener to t
-function load() {
-  var el = document.getElementById("t");
-  el.addEventListener("click", function(){modifyText("four")}, false);
-}
-</script>
-
-</head>
-<body onload="load();">
-
-<table id="t">
-  <tr><td id="t1">one</td></tr>
-  <tr><td id="t2">two</td></tr>
-</table>
-
-</body>
+      // Function to add event listener to t
+      function load() {
+        var el = document.getElementById("t");
+        el.addEventListener(
+          "click",
+          function () {
+            modifyText("four");
+          },
+          false,
+        );
+      }
+    </script>
+  </head>
+  <body onload="load();">
+    <table id="t">
+      <tr>
+        <td id="t1">one</td>
+      </tr>
+      <tr>
+        <td id="t2">two</td>
+      </tr>
+    </table>
+  </body>
 </html>
 ```
 
@@ -149,55 +164,54 @@ In the example above, the value of `this` within `modifyText()` when called from
 ```html
 <table id="t" onclick="modifyText();">
   . . .
+</table>
 ```
 
 The value of `this` within `modifyText()` when called from the onclick event will be a reference to the global (window) object.
 
-> **Nota:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Note, however, that you'll need to keep a reference to the listener around so you can later remove it.
+> **Nota:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/es/docs/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Note, however, that you'll need to keep a reference to the listener around so you can later remove it.
 
 This is an example with and without `bind`:
 
 ```js
-var Something = function(element)
-{
-  this.name = 'Something Good';
-  this.onclick1 = function(event) {
+var Something = function (element) {
+  this.name = "Something Good";
+  this.onclick1 = function (event) {
     console.log(this.name); // undefined, as this is the element
   };
-  this.onclick2 = function(event) {
+  this.onclick2 = function (event) {
     console.log(this.name); // 'Something Good', as this is the binded Something object
   };
-  element.addEventListener('click', this.onclick1, false);
-  element.addEventListener('click', this.onclick2.bind(this), false); // Trick
-}
+  element.addEventListener("click", this.onclick1, false);
+  element.addEventListener("click", this.onclick2.bind(this), false); // Trick
+};
 ```
 
 A problem in the example above is that you cannot remove the listener with `bind`. Another solution is using a special function called `handleEvent` to catch any events:
 
 ```js
-var Something = function(element)
-{
-  this.name = 'Something Good';
-  this.handleEvent = function(event) {
+var Something = function (element) {
+  this.name = "Something Good";
+  this.handleEvent = function (event) {
     console.log(this.name); // 'Something Good', as this is the Something object
-    switch(event.type) {
-      case 'click':
+    switch (event.type) {
+      case "click":
         // some code here...
         break;
-      case 'dblclick':
+      case "dblclick":
         // some code here...
         break;
     }
   };
 
   // Note that the listeners in this case are this, not this.handleEvent
-  element.addEventListener('click', this, false);
-  element.addEventListener('dblclick', this, false);
+  element.addEventListener("click", this, false);
+  element.addEventListener("dblclick", this, false);
 
   // You can properly remove the listners
-  element.removeEventListener('click', this, false);
-  element.removeEventListener('dblclick', this, false);
-}
+  element.removeEventListener("click", this, false);
+  element.removeEventListener("dblclick", this, false);
+};
 ```
 
 ### Legacy Internet Explorer and attachEvent
@@ -206,9 +220,9 @@ In Internet Explorer versions prior to IE 9, you have to use [`attachEvent`](<ht
 
 ```js
 if (el.addEventListener) {
-  el.addEventListener('click', modifyText, false);
-} else if (el.attachEvent)  {
-  el.attachEvent('onclick', modifyText);
+  el.addEventListener("click", modifyText, false);
+} else if (el.attachEvent) {
+  el.attachEvent("onclick", modifyText);
 }
 ```
 
@@ -223,8 +237,8 @@ There is a drawback to `attachEvent`, the value of `this` will be a reference to
 el.onclick = modifyText;
 
 // Using a function expression
-element.onclick = function() {
-    // ... function logic ...
+element.onclick = function () {
+  // ... function logic ...
 };
 ```
 
@@ -253,7 +267,7 @@ for(i=0 ; i<els.length ; i++){
 }
 ```
 
-In the first case, a new (anonymous) function is created at each loop turn. In the second case, the same previously declared function is used as an event handler. This results in smaller memory consumption. Moreover, in the first case, since no reference to the anonymous functions is kept, it is not possible to call [`element.removeEventListener`](/en-US/docs/Web/API/EventTarget/removeEventListener) because we do not have a reference to the handler, while in the second case, it's possible to do `myElement.removeEventListener("click", processEvent, false)`.
+In the first case, a new (anonymous) function is created at each loop turn. In the second case, the same previously declared function is used as an event handler. This results in smaller memory consumption. Moreover, in the first case, since no reference to the anonymous functions is kept, it is not possible to call [`element.removeEventListener`](/es/docs/Web/API/EventTarget/removeEventListener) because we do not have a reference to the handler, while in the second case, it's possible to do `myElement.removeEventListener("click", processEvent, false)`.
 
 ## Especificaciones
 

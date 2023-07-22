@@ -13,10 +13,10 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON
 
 JSON 是序列物件、陣列、數字、字串、布林值、還有 {{jsxref("null")}} 的語法。它建基、但不同於 JavaScript：有些 JavaScript 不是 JSON、而有些 JSON 不是 JavaScript。請參見 [JSON: The JavaScript subset that isn't](http://timelessrepo.com/json-isnt-a-javascript-subset)。
 
-| JavaScript 型別 | 與 JSON 的差別                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 物件與陣列      | 屬性名稱必須是包含在雙引號中的字串；禁止尾後逗號。                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| 數字            | 數字不可以 0 作為開頭(在 JSON.stringify 0 會被忽略，但是在 JSON.parse 會造成語法錯誤)；小數點前面必須至少有一位數字。                                                                                                                                                                                                                                                                                                                                                             |
+| JavaScript 型別 | 與 JSON 的差別                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 物件與陣列      | 屬性名稱必須是包含在雙引號中的字串；禁止尾後逗號。                                                                                                                                                                                                                                                                                                                                                                                                          |
+| 數字            | 數字不可以 0 作為開頭(在 JSON.stringify 0 會被忽略，但是在 JSON.parse 會造成語法錯誤)；小數點前面必須至少有一位數字。                                                                                                                                                                                                                                                                                                                                       |
 | 字串            | Only a limited set of characters may be escaped; certain control characters are prohibited; the Unicode line separator ([U+2028](http://unicode-table.com/en/2028/)) and paragraph separator ([U+2029](http://unicode-table.com/en/2029/)) characters are permitted; strings must be double-quoted. See the following example where {{jsxref("JSON.parse()")}} works fine and a {{jsxref("SyntaxError")}} is thrown when evaluating the code as JavaScript: |
 
 ```js
@@ -95,42 +95,61 @@ Insignificant whitespace may be present anywhere except within a `JSONNumber` (n
 ```js
 if (!window.JSON) {
   window.JSON = {
-    parse: function(sJSON) { return eval('(' + sJSON + ')'); },
+    parse: function (sJSON) {
+      return eval("(" + sJSON + ")");
+    },
     stringify: (function () {
       var toString = Object.prototype.toString;
       var hasOwnProperty = Object.prototype.hasOwnProperty;
-      var isArray = Array.isArray || function (a) { return toString.call(a) === '[object Array]'; };
-      var escMap = {'"': '\\"', '\\': '\\\\', '\b': '\\b', '\f': '\\f', '\n': '\\n', '\r': '\\r', '\t': '\\t'};
-      var escFunc = function (m) { return escMap[m] || '\\u' + (m.charCodeAt(0) + 0x10000).toString(16).substr(1); };
+      var isArray =
+        Array.isArray ||
+        function (a) {
+          return toString.call(a) === "[object Array]";
+        };
+      var escMap = {
+        '"': '\\"',
+        "\\": "\\\\",
+        "\b": "\\b",
+        "\f": "\\f",
+        "\n": "\\n",
+        "\r": "\\r",
+        "\t": "\\t",
+      };
+      var escFunc = function (m) {
+        return (
+          escMap[m] ||
+          "\\u" + (m.charCodeAt(0) + 0x10000).toString(16).substr(1)
+        );
+      };
       var escRE = /[\\"\u0000-\u001F\u2028\u2029]/g;
       return function stringify(value) {
         if (value == null) {
-          return 'null';
-        } else if (typeof value === 'number') {
-          return isFinite(value) ? value.toString() : 'null';
-        } else if (typeof value === 'boolean') {
+          return "null";
+        } else if (typeof value === "number") {
+          return isFinite(value) ? value.toString() : "null";
+        } else if (typeof value === "boolean") {
           return value.toString();
-        } else if (typeof value === 'object') {
-          if (typeof value.toJSON === 'function') {
+        } else if (typeof value === "object") {
+          if (typeof value.toJSON === "function") {
             return stringify(value.toJSON());
           } else if (isArray(value)) {
-            var res = '[';
+            var res = "[";
             for (var i = 0; i < value.length; i++)
-              res += (i ? ', ' : '') + stringify(value[i]);
-            return res + ']';
-          } else if (toString.call(value) === '[object Object]') {
+              res += (i ? ", " : "") + stringify(value[i]);
+            return res + "]";
+          } else if (toString.call(value) === "[object Object]") {
             var tmp = [];
             for (var k in value) {
               // in case "hasOwnProperty" has been shadowed
               if (hasOwnProperty.call(value, k))
-                tmp.push(stringify(k) + ': ' + stringify(value[k]));
+                tmp.push(stringify(k) + ": " + stringify(value[k]));
             }
-            return '{' + tmp.join(', ') + '}';
+            return "{" + tmp.join(", ") + "}";
           }
         }
         return '"' + value.toString().replace(escRE, escFunc) + '"';
       };
-    })()
+    })(),
   };
 }
 ```

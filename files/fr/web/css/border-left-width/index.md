@@ -1,10 +1,6 @@
 ---
 title: border-left-width
 slug: Web/CSS/border-left-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border-left-width
 ---
 

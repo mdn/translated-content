@@ -23,7 +23,7 @@ Até agora você já deve ter aprendido a incorporar coisas em suas páginas da 
           >trabalho com arquivos</a
         >
         , familiaridade com os fundamentos de HTML (conforme abordado em
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Introdução ao HTML</a
         >
         ) e os artigos anteriores deste módulo.
@@ -38,15 +38,15 @@ Até agora você já deve ter aprendido a incorporar coisas em suas páginas da 
               <td>
                 Para saber como itens incorporar em páginas da web que usam
                 <a
-                  href="/en-US/docs/Web/HTML/Element/object"
+                  href="/pt-BR/docs/Web/HTML/Element/object"
                   ><code>&#x3C;object></code></a
                 >,
                 <a
-                  href="/en-US/docs/Web/HTML/Element/embed"
+                  href="/pt-BR/docs/Web/HTML/Element/embed"
                   ><code>&#x3C;embed></code></a
                 >e
                 <a
-                  href="/en-US/docs/Web/HTML/Element/iframe"
+                  href="/pt-BR/docs/Web/HTML/Element/iframe"
                   ><code>&#x3C;iframe></code></a
                 >, como filmes em Flash e outras páginas da web.
               </td>
@@ -216,11 +216,11 @@ Então, isso foi fácil e divertido, certo? Os elementos [`<iframe>`](/pt-BR/doc
 Existem algumas sérias [preocupações de segurança](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#Security_concerns) a serem consideradas com `<iframe>`s, como discutiremos abaixo, mas isso não significa que você não deve usá-las em seus sites - apenas requer algum conhecimento e pensamento cuidadoso. Vamos explorar o código um pouco mais detalhadamente. Digamos que você queira incluir o glossário MDN em uma de suas páginas da web - você pode tentar algo como isto:
 
 ```
-<iframe src="/en-US/docs/Glossary"
+<iframe src="/pt-BR/docs/Glossary"
         width="100%" height="500" frameborder="0"
         allowfullscreen sandbox>
   <p>
-    <a href="/en-US/docs/Glossary">
+    <a href="/pt-BR/docs/Glossary">
        Fallback link for browsers that don't support iframes
     </a>
   </p>
@@ -229,17 +229,17 @@ Existem algumas sérias [preocupações de segurança](/pt-BR/docs/Learn/HTML/Mu
 
 Este exemplo inclui os fundamentos básicos necessários para usar um `<iframe>`:
 
-- [`allowfullscreen`](/en-US/docs/Web/HTML/Element/iframe#attr-allowfullscreen)
+- [`allowfullscreen`](/pt-BR/docs/Web/HTML/Element/iframe#attr-allowfullscreen)
   - : Se definido, ele `<iframe>`poderá ser colocado no modo de tela cheia usando a [API de tela cheia](/pt-BR/docs/Web/API/Fullscreen_API) (um pouco além do escopo deste artigo).
-- [`frameborder`](/en-US/docs/Web/HTML/Element/iframe#attr-frameborder)
+- [`frameborder`](/pt-BR/docs/Web/HTML/Element/iframe#attr-frameborder)
   - : Se definido como 1, isso indica ao navegador para desenhar uma borda entre esse quadro e outros quadros, que é o comportamento padrão. 0 remove a borda. Usar isso não é mais recomendado, pois o mesmo efeito pode ser melhor alcançado usando em seu [CSS](/pt-BR/docs/Glossary/CSS) .[`border`](/pt-BR/docs/Web/CSS/border)`: none;`
-- [`src`](/en-US/docs/Web/HTML/Element/iframe#attr-src)
+- [`src`](/pt-BR/docs/Web/HTML/Element/iframe#attr-src)
   - : Este atributo, como [`<video>`](/pt-BR/docs/Web/HTML/Element/video)/ [`<img>`](/pt-BR/docs/Web/HTML/Element/img), contém um caminho apontando para o URL do documento a ser incorporado.
-- [`width`](/en-US/docs/Web/HTML/Element/iframe#attr-width) e [`height`](/en-US/docs/Web/HTML/Element/iframe#attr-height)
+- [`width`](/pt-BR/docs/Web/HTML/Element/iframe#attr-width) e [`height`](/pt-BR/docs/Web/HTML/Element/iframe#attr-height)
   - : Esses atributos especificam a largura e a altura que você deseja que o iframe seja.
 - Conteúdo alternativo
   - : Da mesma forma que outros elementos semelhantes [`<video>`](/pt-BR/docs/Web/HTML/Element/video), você pode incluir conteúdo de fallback entre as `<iframe></iframe>`tags de abertura e fechamento que aparecerão se o navegador não suportar `<iframe>`. Nesse caso, incluímos um link para a página. É improvável que você encontre qualquer navegador que não suporte `<iframe>`s atualmente.
-- [`sandbox`](/en-US/docs/Web/HTML/Element/iframe#attr-sandbox)
+- [`sandbox`](/pt-BR/docs/Web/HTML/Element/iframe#attr-sandbox)
   - : Esse atributo, que funciona em navegadores um pouco mais modernos que o restante dos `<iframe>`recursos (por exemplo, IE 10 e superior), requer configurações de segurança mais elevadas; falaremos mais sobre isso na próxima seção.
 
 > **Nota:** Para melhorar a velocidade, é uma boa ideia definir o `src`atributo do iframe com JavaScript após o carregamento do conteúdo principal. Isso torna sua página utilizável mais cedo e diminui o tempo de carregamento da página oficial (uma importante métrica de [SEO](/pt-BR/docs/Glossary/SEO) ).
@@ -250,9 +250,9 @@ Acima, mencionamos preocupações de segurança - vamos abordar isso com mais de
 
 Fabricantes de navegadores e desenvolvedores da Web descobriram da maneira mais difícil que iframes são um alvo comum (termo oficial: **vetor de ataque** ) para pessoas más na Web (geralmente chamadas de **hackers** ou, mais precisamente, **crackers** ) atacarem se estiverem tentando modificar maliciosamente seu página da web ou induzir as pessoas a fazer algo que não desejam, como revelar informações confidenciais como nomes de usuário e senhas. Por esse motivo, engenheiros de especificações e desenvolvedores de navegadores desenvolveram vários mecanismos de segurança para torná- `<iframe>`los mais seguros, e também existem práticas recomendadas a serem consideradas - abordaremos alguns deles abaixo.
 
-> **Nota:** {{interwiki('wikipedia','Clickjacking')}} é um tipo comum de ataque iframe, no qual hackers incorporam um iframe invisível ao documento (ou incorporam o documento ao próprio site malicioso) e o usam para capturar as interações dos usuários. Essa é uma maneira comum de enganar os usuários ou roubar dados confidenciais.
+> **Nota:** [Clickjacking](https://pt.wikipedia.org/wiki/Clickjacking) é um tipo comum de ataque iframe, no qual hackers incorporam um iframe invisível ao documento (ou incorporam o documento ao próprio site malicioso) e o usam para capturar as interações dos usuários. Essa é uma maneira comum de enganar os usuários ou roubar dados confidenciais.
 
-Um primeiro exemplo rápido - tente carregar o exemplo anterior que mostramos acima em seu navegador - você pode [encontrá-lo ao vivo no Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ( [consulte o código-fonte](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) também.) Na verdade, você não verá nada exibido na página e se olhar para o _console_ nas [ferramentas de desenvolvedor](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) do [navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) , você verá uma mensagem informando o motivo. No Firefox, você será informado sobre o _Load negado pelo X-Frame-Options: /en-US/docs/Glossary não permite o enquadramento_ . Isso ocorre porque os desenvolvedores que criaram o MDN incluíram uma configuração no servidor que serve as páginas do site para impedir que elas sejam incorporadas dentro de `<iframe>`s (consulte [Configurar diretivas CSP](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#Configure_CSP_directives), abaixo.) Isso faz sentido - uma página MDN inteira não faz sentido para ser incorporada em outras páginas, a menos que você queira fazer algo como incorporá-las ao seu site e reivindicá-las como suas - ou tentar roubar dados via clickjacking , que são coisas muito ruins para se fazer. Além disso, se todos começassem a fazer isso, toda a largura de banda adicional começaria a custar muito dinheiro à Mozilla.
+Um primeiro exemplo rápido - tente carregar o exemplo anterior que mostramos acima em seu navegador - você pode [encontrá-lo ao vivo no Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ( [consulte o código-fonte](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) também.) Na verdade, você não verá nada exibido na página e se olhar para o _console_ nas [ferramentas de desenvolvedor](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) do [navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) , você verá uma mensagem informando o motivo. No Firefox, você será informado sobre o _Load negado pelo X-Frame-Options: /pt-BR/docs/Glossary não permite o enquadramento_ . Isso ocorre porque os desenvolvedores que criaram o MDN incluíram uma configuração no servidor que serve as páginas do site para impedir que elas sejam incorporadas dentro de `<iframe>`s (consulte [Configurar diretivas CSP](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#Configure_CSP_directives), abaixo.) Isso faz sentido - uma página MDN inteira não faz sentido para ser incorporada em outras páginas, a menos que você queira fazer algo como incorporá-las ao seu site e reivindicá-las como suas - ou tentar roubar dados via clickjacking , que são coisas muito ruins para se fazer. Além disso, se todos começassem a fazer isso, toda a largura de banda adicional começaria a custar muito dinheiro à Mozilla.
 
 #### Incorporar somente quando necessário
 
@@ -285,7 +285,7 @@ Se absolutamente necessário, você pode adicionar permissões uma a uma (dentro
 
 #### Configure directivas CSP
 
-{{Glossary("CSP")}} significa **[política de segurança de conteúdo](/pt-BR/docs/Web/Security/CSP)** e fornece um [conjunto de cabeçalhos HTTP](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives) (metadados enviados junto com suas páginas da web quando são veiculados de um servidor da web) projetados para melhorar a segurança do seu documento HTML. Quando se trata de proteger `<iframe>`'s, você pode _[configurar seu servidor para enviar um cabeçalho `X-Frame-Options` apropriado](/pt-BR/docs/Web/HTTP/X-Frame-Options)_. Isso pode impedir que outros sites incorporem seu conteúdo em suas páginas da Web (o que habilitaria o {{interwiki('wikipedia','clickjacking')}} e vários outros ataques), exatamente o que os desenvolvedores do MDN fizeram, como vimos anteriormente.
+{{Glossary("CSP")}} significa **[política de segurança de conteúdo](/pt-BR/docs/Web/Security/CSP)** e fornece um [conjunto de cabeçalhos HTTP](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives) (metadados enviados junto com suas páginas da web quando são veiculados de um servidor da web) projetados para melhorar a segurança do seu documento HTML. Quando se trata de proteger `<iframe>`'s, você pode _[configurar seu servidor para enviar um cabeçalho `X-Frame-Options` apropriado](/pt-BR/docs/Web/HTTP/X-Frame-Options)_. Isso pode impedir que outros sites incorporem seu conteúdo em suas páginas da Web (o que habilitaria o [clickjacking](https://pt.wikipedia.org/wiki/clickjacking) e vários outros ataques), exatamente o que os desenvolvedores do MDN fizeram, como vimos anteriormente.
 
 > **Nota:** Você pode ler a publicação de Frederik Braun [X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/) para obter mais informações sobre este tópico. Obviamente, está fora do escopo uma explicação completa neste artigo.
 

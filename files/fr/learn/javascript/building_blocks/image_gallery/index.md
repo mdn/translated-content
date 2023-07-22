@@ -1,19 +1,7 @@
 ---
 title: Galerie d'images
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-tags:
-  - Apprendre
-  - Boucles
-  - Débutant
-  - Evaluation
-  - Gestionnaire d'événement
-  - JavaScript
-  - conditions
-  - l10n:priority
-  - Écriture de code
-  - évènements
 translation_of: Learn/JavaScript/Building_blocks/Image_gallery
-original_slug: Apprendre/JavaScript/Building_blocks/Image_gallery
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
@@ -71,7 +59,7 @@ L'exemple ressemble à ceci:
 
 Les parties les plus intéressantes du fichier CSS de l'exemple:
 
-- Positionnez les trois éléments en absolu à l’intérieur du `full-img <div>`: le `<img>` dans lequel l’image est affichée grandeur nature, un `<div>` vide dimensionné à la même taille que le `<img>` et placé juste au-dessus (ceci est utilisé pour appliquer un effet assombrissant à l'image via une couleur d'arrière-plan semi-transparente), et un bouton `<button>` qui est utilisé pour contrôler l'effet d'assombrissement.
+- Positionnez les trois éléments en absolu à l'intérieur du `full-img <div>`: le `<img>` dans lequel l'image est affichée grandeur nature, un `<div>` vide dimensionné à la même taille que le `<img>` et placé juste au-dessus (ceci est utilisé pour appliquer un effet assombrissant à l'image via une couleur d'arrière-plan semi-transparente), et un bouton `<button>` qui est utilisé pour contrôler l'effet d'assombrissement.
 - Réglez la largeur des images à l'intérieur de `thumb-bar <div>` (appelées images miniatures) à 20% et faites un float à gauche pour qu'elles soient côte-à-côte sur une ligne.
 
 Votre JavaScript doit:

@@ -1,9 +1,6 @@
 ---
 title: '-webkit-line-clamp'
 slug: Web/CSS/-webkit-line-clamp
-tags:
-  - CSS
-  - Propriété
 translation_of: Web/CSS/-webkit-line-clamp
 ---
 
@@ -86,5 +83,5 @@ p {
 
 ## Voir aussi
 
-- [Line Clampin’ (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
+- [Line Clampin' (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
 - {{cssxref("line-clamp")}}

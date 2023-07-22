@@ -1,16 +1,6 @@
 ---
 title: Cache.add()
 slug: Web/API/Cache/add
-tags:
-  - API
-  - Add
-  - Cache
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Worker
-  - Service worker API
-  - ServiceWorker
 translation_of: Web/API/Cache/add
 ---
 

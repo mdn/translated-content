@@ -1,13 +1,7 @@
 ---
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/abs
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/abs
 ---
 
 {{JSRef}}

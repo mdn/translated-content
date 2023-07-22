@@ -40,7 +40,7 @@ myMap.has('baz')   // retorna false
 
 {{Specifications}}
 
-## Compatibilidade com navegadores.
+## Compatibilidade com navegadores
 
 {{Compat}}
 

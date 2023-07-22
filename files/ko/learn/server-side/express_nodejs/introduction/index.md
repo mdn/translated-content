@@ -13,10 +13,10 @@ slug: Learn/Server-side/Express_Nodejs/Introduction
       <th scope="row">알아야 할 것들</th>
       <td>
         기본적인 컴퓨터의 이해. 서버 사이드 웹사이트 프로그래밍(<a
-          href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps"
+          href="https://developer.mozilla.org/ko/docs/Learn/Server-side/First_steps"
           >server-side website programming</a
         >), 그리고 특별히 웹사이트에서 클라이언트와 서버간의 상호작용(<a
-          href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/ko/docs/Learn/Server-side/First_steps/Client-Server_overview"
           >client-server interactions in websites</a
         >)의 메커니즘에 대한 이해
       </td>

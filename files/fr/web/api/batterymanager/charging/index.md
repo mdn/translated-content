@@ -2,7 +2,6 @@
 title: BatteryManager.charging
 slug: Web/API/BatteryManager/charging
 translation_of: Web/API/BatteryManager/charging
-browser-compat: api.BatteryManager.charging
 ---
 
 {{APIRef("Battery API")}}

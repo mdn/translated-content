@@ -1,11 +1,6 @@
 ---
 title: event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Propriété
 translation_of: Web/API/Event/defaultPrevented
 ---
 

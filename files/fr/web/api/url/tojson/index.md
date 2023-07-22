@@ -1,12 +1,6 @@
 ---
 title: URL.toJSON()
 slug: Web/API/URL/toJSON
-tags:
-  - API
-  - Méthode
-  - Reference
-  - URL
-  - toJSON()
 translation_of: Web/API/URL/toJSON
 ---
 
@@ -33,7 +27,7 @@ A {{domxref("USVString")}}.
 ## Exemples
 
 ```js
-const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+const url = new URL("https://developer.mozilla.org/fr/docs/Web/API/URL/toString");
 url.toJSON()
 ```
 

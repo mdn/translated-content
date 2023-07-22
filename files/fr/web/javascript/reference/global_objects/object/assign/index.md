@@ -1,15 +1,7 @@
 ---
 title: Object.assign()
 slug: Web/JavaScript/Reference/Global_Objects/Object/assign
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/assign
 ---
 
 {{JSRef}}

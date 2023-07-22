@@ -1,10 +1,6 @@
 ---
 title: widows
 slug: Web/CSS/widows
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/widows
 ---
 
