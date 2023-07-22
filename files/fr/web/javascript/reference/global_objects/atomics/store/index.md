@@ -1,14 +1,7 @@
 ---
 title: Atomics.store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/store
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/store
 ---
 
 {{JSRef}}

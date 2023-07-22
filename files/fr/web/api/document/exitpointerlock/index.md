@@ -1,12 +1,6 @@
 ---
 title: Document.exitPointerLock()
 slug: Web/API/Document/exitPointerLock
-tags:
-  - API
-  - DOM
-  - Experimental
-  - Méthode
-  - Reference
 translation_of: Web/API/Document/exitPointerLock
 ---
 

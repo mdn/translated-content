@@ -2,7 +2,6 @@
 title: Constructeur Int32Array()
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
 translation_of:  Web/JavaScript/Reference/Global_Objects/Int32Array/Int32Array
-browser-compat: javascript.builtins.Int32Array.Int32Array
 ---
 
 {{JSRef}}

@@ -2,7 +2,6 @@
 title: vertical-align
 slug: Web/CSS/vertical-align
 translation_of: Web/CSS/vertical-align
-browser-compat: css.properties.vertical-align
 ---
 
 {{CSSRef}}

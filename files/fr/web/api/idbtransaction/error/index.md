@@ -1,13 +1,6 @@
 ---
 title: IDBTransaction.error
 slug: Web/API/IDBTransaction/error
-tags:
-  - API
-  - Erreur
-  - IDBTransaction
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBTransaction/error
 ---
 

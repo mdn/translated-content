@@ -1,10 +1,6 @@
 ---
 title: width
 slug: Web/CSS/@media/width
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/width
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: Collections indexées
 slug: Web/JavaScript/Guide/Indexed_collections
-tags:
-  - Array
-  - Guide
-  - JavaScript
 translation_of: Web/JavaScript/Guide/Indexed_collections
-original_slug: Web/JavaScript/Guide/Collections_indexées
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}

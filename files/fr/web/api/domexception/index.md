@@ -1,11 +1,6 @@
 ---
 title: DOMException
 slug: Web/API/DOMException
-tags:
-  - API
-  - DOM
-  - Erreurs
-  - exceptions
 translation_of: Web/API/DOMException
 ---
 

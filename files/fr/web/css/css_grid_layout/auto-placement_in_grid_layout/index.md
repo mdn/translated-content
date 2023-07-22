@@ -1,14 +1,7 @@
 ---
 title: Le placement automatique sur une grille CSS
 slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
-tags:
-  - CSS
-  - CSS Grids
-  - Grilles CSS
-  - Guide
-  - Intermédiaire
 translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
-original_slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 ---
 
 {{CSSRef}}

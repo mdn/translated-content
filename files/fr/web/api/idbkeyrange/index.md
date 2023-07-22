@@ -1,15 +1,6 @@
 ---
 title: IDBKeyRange
 slug: Web/API/IDBKeyRange
-tags:
-  - API
-  - Database
-  - IDBKeyRange
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
-  - TopicStub
 translation_of: Web/API/IDBKeyRange
 ---
 

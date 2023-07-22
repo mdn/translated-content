@@ -1,8 +1,6 @@
 ---
 title: Aligner des éléments dans un conteneur flexible
 slug: Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container
-original_slug: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Aligner_des_éléments_dans_un_conteneur_flexible
 ---
 
 {{CSSRef}}

@@ -1,12 +1,6 @@
 ---
 title: 'Attribut HTML : required'
 slug: Web/HTML/Attributes/required
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - Forms
-  - required
 translation_of: Web/HTML/Attributes/required
 ---
 

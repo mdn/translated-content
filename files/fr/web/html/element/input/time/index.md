@@ -2,7 +2,6 @@
 title: <input type="time">
 slug: Web/HTML/Element/input/time
 translation_of: Web/HTML/Element/input/time
-browser-compat: html.elements.input.input-time
 ---
 
 {{HTMLSidebar}}

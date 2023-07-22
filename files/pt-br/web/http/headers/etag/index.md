@@ -61,7 +61,7 @@ If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
 Se o hash não for compatível, isto significa que o documento foi editado durante determinado intervalo e uma resposta com o status {{HTTPStatus("412")}} `Precondition Failed` será enviada ao cliente.
 
-### Armazenando recursos sem alterações.
+### Armazenando recursos sem alterações
 
 Outro uso típico de cabeçalho (header) com a `ETag` é para guardar recursos que não foram alterados. Se um usuário visitar um recurso dado por uma URL de novo, (é necessaíro ter a `ETag` configurada), e ele deseja saber se está obsoleto (_stale)_ (ou antigo para ser considerado como utilizável), o cliente enviará o valor da sua `ETag` por meio de um atributo no cabeçalho {{HTTPHeader("If-None-Match")}}, veja o exemplo abaixo:
 

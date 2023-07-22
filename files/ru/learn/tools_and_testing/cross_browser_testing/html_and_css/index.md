@@ -97,16 +97,31 @@ For example:
 
 ```html
 <video id="video" controls preload="metadata" poster="img/poster.jpg">
-  <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4">
-  <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
-  <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg">
+  <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4" />
+  <source
+    src="video/tears-of-steel-battle-clip-medium.webm"
+    type="video/webm" />
+  <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg" />
   <!-- Flash fallback -->
-  <object type="application/x-shockwave-flash" data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" width="1024" height="576">
-     <param name="movie" value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-     <param name="allowfullscreen" value="true" />
-     <param name="wmode" value="transparent" />
-     <param name="flashvars" value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-      <img alt="Tears of Steel poster image" src="img/poster.jpg" width="1024" height="428" title="No video playback possible, please download the video from the link below" />
+  <object
+    type="application/x-shockwave-flash"
+    data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4"
+    width="1024"
+    height="576">
+    <param
+      name="movie"
+      value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
+    <param name="allowfullscreen" value="true" />
+    <param name="wmode" value="transparent" />
+    <param
+      name="flashvars"
+      value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
+    <img
+      alt="Tears of Steel poster image"
+      src="img/poster.jpg"
+      width="1024"
+      height="428"
+      title="No video playback possible, please download the video from the link below" />
   </object>
   <!-- Offer download -->
   <a href="video/tears-of-steel-battle-clip-medium.mp4">Download MP4</a>
@@ -125,11 +140,11 @@ The following example shows date and time inputs:
 <form>
   <div>
     <label for="date">Enter a date:</label>
-    <input id="date" type="date">
+    <input id="date" type="date" />
   </div>
   <div>
     <label for="time">Enter a time:</label>
-    <input id="time" type="time">
+    <input id="time" type="time" />
   </div>
 </form>
 ```
@@ -138,42 +153,43 @@ The output of this code is as follows:
 
 ```css hidden
 label {
-        float: left;
-        width: 30%;
-        text-align: right;
-      }
+  float: left;
+  width: 30%;
+  text-align: right;
+}
 
-      input {
-        float: right;
-        width: 65%;
-      }
+input {
+  float: right;
+  width: 65%;
+}
 
-      label, input {
-        margin-bottom: 20px;
-      }
+label,
+input {
+  margin-bottom: 20px;
+}
 
-      div {
-        clear: both;
-        margin: 10px;
-      }
+div {
+  clear: both;
+  margin: 10px;
+}
 
-      body {
-        width: 400px;
-        margin: 0 auto;
-      }
+body {
+  width: 400px;
+  margin: 0 auto;
+}
 ```
 
 ```html hidden
 <form>
-      <div>
-        <label for="date">Enter a date:</label>
-        <input id="date" type="date">
-      </div>
-      <div>
-        <label for="time">Enter a time:</label>
-        <input id="time" type="time">
-      </div>
-    </form>
+  <div>
+    <label for="date">Enter a date:</label>
+    <input id="date" type="date" />
+  </div>
+  <div>
+    <label for="time">Enter a time:</label>
+    <input id="time" type="time" />
+  </div>
+</form>
 ```
 
 {{ EmbedLiveSample('Hidden_example', '100%', 150) }}
@@ -231,7 +247,7 @@ IE conditional comments are a modified proprietary HTML comment syntax, which ca
 ```html
 <!--[if lte IE 8]>
   <script src="ie-fix.js"></script>
-  <link href="ie-fix.css" rel="stylesheet" type="text/css">
+  <link href="ie-fix.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 ```
 
@@ -242,7 +258,13 @@ This block will apply the IE-specific CSS and JavaScript only if the browser vie
 As you can see, this is especially useful for applying code fixes to old versions of IE. The use case we mentioned earlier (making modern semantic elements styleable in old versions of IE) can be achieved easily using conditional comments, for example you could put something like this in your IE stylesheet:
 
 ```css
-aside, main, article, section, nav, figure, figcaption {
+aside,
+main,
+article,
+section,
+nav,
+figure,
+figcaption {
   display: block;
 }
 ```
@@ -278,12 +300,12 @@ However, another issue that appears in versions of IE older than 9 is that none 
 2. Now download [MooTools](http://mootools.net/) and [Selectivizr](http://selectivizr.com/), and save them in the same directory as your sample HTML.
 3. Put the following code into the head of your HTML document, just before the opening `<style>` tag:
 
-    ```html
-    <script type="text/javascript" src="MooTools-Core-1.6.0.js"></script>
-        <!--[if (gte IE 6)&(lte IE 8)]>
-          <script type="text/javascript" src="selectivizr-min.js"></script>
-        <![endif]-->
-    ```
+   ```html
+   <script type="text/javascript" src="MooTools-Core-1.6.0.js"></script>
+   <!--[if (gte IE 6)&(lte IE 8)]>
+     <script type="text/javascript" src="selectivizr-min.js"></script>
+   <![endif]-->
+   ```
 
 If you try running this in an old version of IE, it should work fine.
 
@@ -302,9 +324,15 @@ Here's some examples:
 ```css
 -webkit-transform: rotate(90deg);
 
-background-image: -moz-linear-gradient(left,green,yellow);
-background-image: -webkit-gradient(linear,left center,right center,from(green),to(yellow));
-background-image: linear-gradient(to right,green,yellow);
+background-image: -moz-linear-gradient(left, green, yellow);
+background-image: -webkit-gradient(
+  linear,
+  left center,
+  right center,
+  from(green),
+  to(yellow)
+);
+background-image: linear-gradient(to right, green, yellow);
 ```
 
 The first line shows a {{cssxref("transform")}} property with a `-webkit-` prefix — this was needed to make transforms work in Chrome, etc. until the feature was finalized and such browsers added a prefix-free version of the property (at the time of writing, Chrome supported both versions).
@@ -326,16 +354,16 @@ Try this simple example:
 3. Look for a feature you can use to select that element. For example, at the time of writing, the main Google logo had an ID of `hplogo`.
 4. Store a reference to this element in a variable, for example:
 
-    ```js
-    var test = document.getElementById('hplogo');
-    ```
+   ```js
+   var test = document.getElementById("hplogo");
+   ```
 
 5. Now try to set a new value for the CSS property you are interested in on that element; you can do this using the [style](/ru/docs/Web/API/HTMLElement/style) property of the element, for example try typing these into the JavaScript console:
 
-    ```js
-    test.style.transform = 'rotate(90deg)'
-    test.style.webkitTransform = 'rotate(90deg)'
-    ```
+   ```js
+   test.style.transform = "rotate(90deg)";
+   test.style.webkitTransform = "rotate(90deg)";
+   ```
 
 As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in lower camel case, not hyphenated), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what versions of the property are implemented in that browser.
 

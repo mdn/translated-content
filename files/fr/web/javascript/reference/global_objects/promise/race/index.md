@@ -1,14 +1,7 @@
 ---
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Promise
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/race
 ---
 
 {{JSRef}}

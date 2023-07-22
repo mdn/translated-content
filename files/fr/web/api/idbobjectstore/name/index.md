@@ -1,12 +1,6 @@
 ---
 title: IDBObjectStore.name
 slug: Web/API/IDBObjectStore/name
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBObjectStore/name
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: 'Attribut HTML : for'
 slug: Web/HTML/Attributes/for
-tags:
-  - Attribute
-  - Attributes
-  - HTML
-  - for
-  - Reference
 translation_of: Web/HTML/Attributes/for
 ---
 

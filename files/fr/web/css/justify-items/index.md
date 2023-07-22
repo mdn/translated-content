@@ -1,10 +1,6 @@
 ---
 title: justify-items
 slug: Web/CSS/justify-items
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/justify-items
 ---
 

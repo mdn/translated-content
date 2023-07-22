@@ -1,10 +1,6 @@
 ---
 title: display-outside
 slug: Web/CSS/display-outside
-tags:
-  - CSS
-  - Reference
-  - Type de donnée
 translation_of: Web/CSS/display-outside
 ---
 

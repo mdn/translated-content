@@ -1,13 +1,7 @@
 ---
 title: Utilisation du groupe switch
 slug: Web/Accessibility/ARIA/Roles/switch_role
-tags:
-  - ARIA
-  - Accessibility
-  - NeedsContent
-  - Rôle
 translation_of: Web/Accessibility/ARIA/Roles/Switch_role
-original_slug: Accessibilité/ARIA/Techniques_ARIA/Utilisation_du_groupe_switch
 ---
 
 Le rôle ARIA switch est très similaire au [role checkbox](/fr/docs/Accessibilit%C3%A9/ARIA/Techniques_ARIA/Utiliser_le_role_checkbox), à la sémantique près — il a deux états représentant on/off, au lieu de checked/unchecked.

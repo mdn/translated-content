@@ -1,17 +1,7 @@
 ---
 title: Principaux blocs en JS
 slug: Learn/JavaScript/Building_blocks
-tags:
-  - Auto-évaluation
-  - Boucles
-  - Débutant
-  - Fonctions
-  - Guide
-  - Modules
-  - conditions
-  - évènements
 translation_of: Learn/JavaScript/Building_blocks
-original_slug: Apprendre/JavaScript/Building_blocks
 ---
 
 {{JsSidebar}}{{PreviousNext("Learn/JavaScript/First_steps", "Learn/JavaScript/Objects")}}

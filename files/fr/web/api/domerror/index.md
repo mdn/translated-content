@@ -1,12 +1,6 @@
 ---
 title: DOMError
 slug: Web/API/DOMError
-tags:
-  - API
-  - DOM
-  - Erreurs
-  - Interface
-  - Reference
 translation_of: Web/API/DOMError
 ---
 

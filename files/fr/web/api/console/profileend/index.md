@@ -1,11 +1,6 @@
 ---
 title: Console.profileEnd()
 slug: Web/API/console/profileEnd
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Profils
 translation_of: Web/API/Console/profileEnd
 ---
 

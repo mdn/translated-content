@@ -1,18 +1,7 @@
 ---
 title: L'héritage au sein de JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-tags:
-  - Apprendre
-  - Article
-  - Débutant
-  - Héritage
-  - JS Orienté Objet
-  - JavaScript
-  - Objet
-  - Programmation orientée objet
-  - Prototype
 translation_of: Learn/JavaScript/Objects/Inheritance
-original_slug: Learn/JavaScript/Objects/Inheritance
 ---
 
 {{LearnSidebar}}

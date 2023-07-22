@@ -1,12 +1,6 @@
 ---
 title: Event.isTrusted
 slug: Web/API/Event/isTrusted
-tags:
-  - API
-  - Event
-  - Property
-  - Read-only
-  - Référence(2)
 translation_of: Web/API/Event/isTrusted
 ---
 

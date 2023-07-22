@@ -1,11 +1,6 @@
 ---
 title: IDBCursor
 slug: Web/API/IDBCursor
-tags:
-  - API
-  - IndexedDB
-  - Interface
-  - Référence(2)
 translation_of: Web/API/IDBCursor
 ---
 

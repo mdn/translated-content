@@ -1,14 +1,6 @@
 ---
 title: FormData.entries()
 slug: Web/API/FormData/entries
-tags:
-  - API
-  - Entries
-  - FormData
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequest
 translation_of: Web/API/FormData/entries
 ---
 

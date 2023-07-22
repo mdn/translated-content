@@ -1,10 +1,7 @@
 ---
 title: element.onkeyup
 slug: Web/API/Element/keyup_event
-tags:
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/GlobalEventHandlers/onkeyup
-original_slug: Web/API/GlobalEventHandlers/onkeyup
 ---
 
 {{ ApiRef() }}

@@ -1,11 +1,6 @@
 ---
 title: mask
 slug: Web/CSS/mask
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - SVG
 translation_of: Web/CSS/mask
 ---
 

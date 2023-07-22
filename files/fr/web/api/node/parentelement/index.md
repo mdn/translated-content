@@ -1,12 +1,6 @@
 ---
 title: Node.parentElement
 slug: Web/API/Node/parentElement
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
-  - parent
 translation_of: Web/API/Node/parentElement
 ---
 

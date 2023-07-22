@@ -1,7 +1,6 @@
 ---
 title: Constructeur Intl.Collator()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
-browser-compat: javascript.builtins.Intl.Collator.Collator
 ---
 
 {{JSRef}}

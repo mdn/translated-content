@@ -1,14 +1,7 @@
 ---
 title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/notify
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/notify
 ---
 
 {{JSRef}}

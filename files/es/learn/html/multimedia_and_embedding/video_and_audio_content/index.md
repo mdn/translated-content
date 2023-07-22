@@ -55,7 +55,10 @@ El elemento {{htmlelement("video")}} nos permite incrustar video fácilmente. Un
 
 ```html
 <video src="rabbit320.webm" controls>
-  <p>Tu navegador no soporta HTML5 video. Aquí está el <a href="rabbit320.webm">enlace del video</a>.</p>
+  <p>
+    Tu navegador no soporta HTML5 video. Aquí está el
+    <a href="rabbit320.webm">enlace del video</a>.
+  </p>
 </video>
 ```
 
@@ -106,9 +109,12 @@ Está bien, ¿pero cómo lo hacemos? Miremos el siguiente [ejemplo actualizado](
 
 ```html
 <video controls>
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Su navegador no soporta video HTML5. Aquí hay un <a href="rabbit320.mp4">enlace al video</a>.</p>
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Su navegador no soporta video HTML5. Aquí hay un
+    <a href="rabbit320.mp4">enlace al video</a>.
+  </p>
 </video>
 ```
 
@@ -123,12 +129,20 @@ Cada elemento `<source>` tambien tiene un atributo `type` . Esto es opcional, pe
 Hay varias otras características que puede incluir en un vídeo HTML5. Eche un vistazo a nuestro tercer ejemplo, a continuación.
 
 ```html
-<video controls width="400" height="400"
-       autoplay loop muted
-       poster="poster.png">
-  <source src="rabbit320.mp4" type="video/mp4">
-  <source src="rabbit320.webm" type="video/webm">
-  <p>Su navegador no soporta vídeo HTML5. Este es un <a href="rabbit320.mp4">enlace al vídeo</a> alternativo.</p>
+<video
+  controls
+  width="400"
+  height="400"
+  autoplay
+  loop
+  muted
+  poster="poster.png">
+  <source src="rabbit320.mp4" type="video/mp4" />
+  <source src="rabbit320.webm" type="video/webm" />
+  <p>
+    Su navegador no soporta vídeo HTML5. Este es un
+    <a href="rabbit320.mp4">enlace al vídeo</a> alternativo.
+  </p>
 </video>
 ```
 
@@ -164,9 +178,12 @@ El elemento {{htmlelement("audio")}} funciona exactamente de la misma forma que 
 
 ```html
 <audio controls>
-  <source src="viper.mp3" type="audio/mp3">
-  <source src="viper.ogg" type="audio/ogg">
-  <p>Su navegador no es compatible con audio HTML5. Aquí hay un <a href="viper.mp3">enlace al audio</a> en su lugar.</p>
+  <source src="viper.mp3" type="audio/mp3" />
+  <source src="viper.ogg" type="audio/ogg" />
+  <p>
+    Su navegador no es compatible con audio HTML5. Aquí hay un
+    <a href="viper.mp3">enlace al audio</a> en su lugar.
+  </p>
 </audio>
 ```
 
@@ -198,9 +215,9 @@ Puede monitorear las listas de pistas dentro de un elemento multimedia para dete
 
 ```js
 var mediaElem = document.querySelector("video");
-mediaElem.audioTracks.onaddtrack = function(event) {
+mediaElem.audioTracks.onaddtrack = function (event) {
   audioTrackAdded(event.track);
-}
+};
 ```
 
 Encontraras mas documentación acerca de esto en nuestra {{domxref("TrackEvent")}} documentación.
@@ -251,9 +268,9 @@ He aquí un ejemplo:
 
 ```html
 <video controls>
-    <source src="example.mp4" type="video/mp4">
-    <source src="example.webm" type="video/webm">
-    <track kind="subtitles" src="subtitles_en.vtt" srclang="en">
+  <source src="example.mp4" type="video/mp4" />
+  <source src="example.webm" type="video/webm" />
+  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
 </video>
 ```
 

@@ -1,13 +1,6 @@
 ---
 title: PerformanceObserverEntryList.getEntriesByType()
 slug: Web/API/PerformanceObserverEntryList/getEntriesByType
-tags:
-  - API
-  - Method
-  - Méthodes
-  - PerformanceObserverEntryList
-  - Reference
-  - Performance Web
 translation_of: Web/API/PerformanceObserverEntryList/getEntriesByType
 ---
 

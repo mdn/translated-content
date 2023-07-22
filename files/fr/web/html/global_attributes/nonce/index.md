@@ -2,7 +2,6 @@
 title: nonce
 slug: Web/HTML/Global_attributes/nonce
 translation_of: Web/HTML/Global_attributes/nonce
-browser-compat: html.global_attributes.nonce
 ---
 
 {{HTMLSidebar("Global_attributes")}}

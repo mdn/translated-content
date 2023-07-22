@@ -1,8 +1,6 @@
 ---
 title: document.images
 slug: Web/API/Document/images
-tags:
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/Document/images
 ---
 

@@ -2,7 +2,6 @@
 title: Element.closest()
 slug: Web/API/Element/closest
 translation_of: Web/API/Element/closest
-browser-compat: api.Element.closest
 ---
 
 {{APIRef('DOM')}}

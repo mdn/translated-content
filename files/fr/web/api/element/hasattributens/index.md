@@ -1,12 +1,6 @@
 ---
 title: element.hasAttributeNS
 slug: Web/API/Element/hasAttributeNS
-tags:
-  - API
-  - Attributs
-  - DOM
-  - Element
-  - Méthodes
 translation_of: Web/API/Element/hasAttributeNS
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: Client.frameType
 slug: Web/API/Client/frameType
-tags:
-  - API
-  - Client
-  - Experimental
-  - Property
-  - Reference
-  - ServiceWorker
-  - frameType
 translation_of: Web/API/Client/frameType
 ---
 

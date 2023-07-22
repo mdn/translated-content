@@ -1,10 +1,6 @@
 ---
 title: grid-column-start
 slug: Web/CSS/grid-column-start
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/grid-column-start
 ---
 

@@ -1,14 +1,7 @@
 ---
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/toString
 ---
 
 {{JSRef}}

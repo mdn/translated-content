@@ -1,13 +1,6 @@
 ---
 title: Request()
 slug: Web/API/Request/Request
-tags:
-  - API
-  - Constructeur
-  - Experimental
-  - Fetch
-  - Reference
-  - request
 translation_of: Web/API/Request/Request
 ---
 

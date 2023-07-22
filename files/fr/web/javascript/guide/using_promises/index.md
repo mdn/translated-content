@@ -1,14 +1,7 @@
 ---
 title: Utiliser les promesses
 slug: Web/JavaScript/Guide/Using_promises
-tags:
-  - Guide
-  - Intermédiaire
-  - JavaScript
-  - Promesses
-  - Promise
 translation_of: Web/JavaScript/Guide/Using_promises
-original_slug: Web/JavaScript/Guide/Utiliser_les_promesses
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Le_modèle_objet_JavaScript_en_détails", "Web/JavaScript/Guide/iterateurs_et_generateurs")}}

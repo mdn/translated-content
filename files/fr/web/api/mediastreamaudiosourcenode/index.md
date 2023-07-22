@@ -2,7 +2,6 @@
 title: MediaStreamAudioSourceNode
 slug: Web/API/MediaStreamAudioSourceNode
 translation_of: Web/API/MediaStreamAudioSourceNode
-browser-compat: api.MediaStreamAudioSourceNode
 ---
 
 {{APIRef("Web Audio API")}}

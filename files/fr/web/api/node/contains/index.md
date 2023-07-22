@@ -1,12 +1,6 @@
 ---
 title: Node.contains
 slug: Web/API/Node/contains
-tags:
-  - API
-  - DOM
-  - Filiation
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/Node/contains
 ---
 

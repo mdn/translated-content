@@ -1,15 +1,7 @@
 ---
 title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/String/anchor
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/anchor
 ---
 
 {{JSRef}}

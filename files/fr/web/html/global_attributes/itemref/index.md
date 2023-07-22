@@ -1,15 +1,7 @@
 ---
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Micro-données
-  - Microdata
-  - Reference
 translation_of: Web/HTML/Global_attributes/itemref
-original_slug: Web/HTML/Attributs_universels/itemref
 ---
 
 {{HTMLSidebar("Global_attributes")}}

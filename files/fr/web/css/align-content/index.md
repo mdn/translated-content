@@ -1,10 +1,6 @@
 ---
 title: align-content
 slug: Web/CSS/align-content
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/align-content
 ---
 

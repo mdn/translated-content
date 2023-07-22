@@ -1,12 +1,6 @@
 ---
 title: Inégalité stricte (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.strict_inequality
 ---
 
 {{jsSidebar("Operators")}}

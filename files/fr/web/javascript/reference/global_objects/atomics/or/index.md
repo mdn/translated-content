@@ -1,14 +1,7 @@
 ---
 title: Atomics.or()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/or
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/or
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/or
 ---
 
 {{JSRef}}

@@ -1,16 +1,6 @@
 ---
 title: ServiceWorkerRegistration.getNotifications()
 slug: Web/API/ServiceWorkerRegistration/getNotifications
-tags:
-  - API
-  - API Service worker
-  - Expérimentale
-  - Méthode
-  - Notifications
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
-  - getNotifications
 translation_of: Web/API/ServiceWorkerRegistration/getNotifications
 ---
 

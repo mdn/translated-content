@@ -1,12 +1,6 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content
-tags:
-  - CSS
-  - Experimental
-  - Fonction
-  - Reference
-  - Web
 translation_of: Web/CSS/fit-content
 ---
 

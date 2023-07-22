@@ -1,14 +1,7 @@
 ---
 title: Atomics.load()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/load
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/load
 ---
 
 {{JSRef}}

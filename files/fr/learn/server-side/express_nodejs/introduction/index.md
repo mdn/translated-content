@@ -1,14 +1,6 @@
 ---
 title: Introduction à Express/Node
 slug: Learn/Server-side/Express_Nodejs/Introduction
-tags:
-  - Beginner
-  - CodingScripting
-  - Express
-  - Learn
-  - Node
-  - nodejs
-  - server-side
 translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
 

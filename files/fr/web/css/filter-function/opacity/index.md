@@ -2,8 +2,6 @@
 title: opacity()
 slug: Web/CSS/filter-function/opacity
 translation_of: Web/CSS/filter-function/opacity()
-original_slug: Web/CSS/filter-function/opacity()
-browser-compat: css.types.filter-function.opacity
 ---
 
 {{CSSRef}}

@@ -1,15 +1,7 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
-tags:
-  - Expressions rationnelles
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/search
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/search
 ---
 
 {{JSRef}}

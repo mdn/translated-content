@@ -2,7 +2,6 @@
 title: Les grilles CSS, les valeurs logiques et les modes d'écriture
 slug: Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes
 translation_of: Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes
-original_slug: Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes
 ---
 
 {{CSSRef}}

@@ -2,8 +2,6 @@
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy
-browser-compat: javascript.builtins.Proxy
 ---
 
 {{JSRef}}

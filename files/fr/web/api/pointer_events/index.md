@@ -1,11 +1,6 @@
 ---
 title: Événements de pointeur
 slug: Web/API/Pointer_events
-tags:
-  - API
-  - NeedsTranslation
-  - Overview
-  - TopicStub
 translation_of: Web/API/Pointer_events
 ---
 

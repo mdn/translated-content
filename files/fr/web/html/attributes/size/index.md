@@ -1,12 +1,6 @@
 ---
 title: 'Attribut HTML : size'
 slug: Web/HTML/Attributes/size
-tags:
-  - Attribute
-  - HTML
-  - Input
-  - Reference
-  - Select
 translation_of: Web/HTML/Attributes/size
 ---
 

@@ -15,11 +15,11 @@ Nos artigos anteriores, analisamos todos os detalhes essenciais da teoria e da s
       <td>
         Conhecimentos básicos de informática, conhecimento básico de HTML e CSS,
         familiaridade com o básico de JavaScript (veja
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> e
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">First steps</a> e
+        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
           >Building blocks</a
         >) e o básico de OOJS (veja
-        <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/pt-BR/docs/Learn/JavaScript/Object-oriented/Introduction"
           >Introduction to objects</a
         >).
       </td>
@@ -59,7 +59,7 @@ const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
 ```
 
-Esse script obtém uma referência ao elemento `<canvas>` e, em seguida, chama o método [`getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext) para nos fornecer um contexto no qual podemos começar a desenhar. A variável resultante (`ctx`) é o objeto que representa diretamente a área de desenho da tela e nos permite desenhar formas 2D nela.
+Esse script obtém uma referência ao elemento `<canvas>` e, em seguida, chama o método [`getContext()`](/pt-BR/docs/Web/API/HTMLCanvasElement/getContext) para nos fornecer um contexto no qual podemos começar a desenhar. A variável resultante (`ctx`) é o objeto que representa diretamente a área de desenho da tela e nos permite desenhar formas 2D nela.
 
 Em seguida, definimos variáveis chamadas `width` e `height`, e a largura e altura do elemento canvas (representado pelas propriedades `canvas.width` e `canvas.height`) para igualar a largura e a altura da viewport do navegador (a área em que a página da Web aparece — isso pode ser obtido das propriedades {{domxref("Window.innerWidth")}} e {{domxref("Window.innerHeight")}} ).
 
@@ -115,15 +115,15 @@ Ball.prototype.draw = function() {
 
 Usando esta função, podemos dizer a nossa bola para desenhar-se na tela, chamando uma série de membros do contexto de tela 2D que definimos anteriormente (`ctx`). O contexto é como o papel, e agora queremos comandar nossa caneta para desenhar algo nela:
 
-- Primeiro, usamos [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) para declarar que queremos desenhar uma forma no papel.
-- Em seguida, usamos [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) para definir a cor que queremos que a forma seja — nós a definimos como a propriedade `color` da nossa bola.
-- Em seguida, usamos o método [`arc()`](/en-US/docs/Web/API/CanvasRenderingContext2D/arc) para traçar uma forma de arco no papel. Seus parâmetros são:
+- Primeiro, usamos [`beginPath()`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/beginPath) para declarar que queremos desenhar uma forma no papel.
+- Em seguida, usamos [`fillStyle`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/fillStyle) para definir a cor que queremos que a forma seja — nós a definimos como a propriedade `color` da nossa bola.
+- Em seguida, usamos o método [`arc()`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/arc) para traçar uma forma de arco no papel. Seus parâmetros são:
 
   - A posição `x` e `y` do centro do arco — estamos especificando as propriedades `x` e `y` da nossa bola.
   - O raio do nosso arco — estamos especificando a propriedade `size` da nossa bola.
   - Os dois últimos parâmetros especificam o número inicial e final de graus em volta do círculo em que o arco é desenhado entre eles. Aqui nós especificamos 0 graus e `2 * PI`, que é o equivalente a 360 graus em radianos (irritantemente, você tem que especificar isso em radianos). Isso nos dá um círculo completo. Se você tivesse especificado apenas `1 * PI`, você obteria um semicírculo (180 graus).
 
-- Por último, usamos o método [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill), que basicamente diz "terminar de desenhar o caminho que começamos com `beginPath()`, e preencher a área que ocupa com a cor que especificamos anteriormente em `fillStyle`."
+- Por último, usamos o método [`fill()`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/fill), que basicamente diz "terminar de desenhar o caminho que começamos com `beginPath()`, e preencher a área que ocupa com a cor que especificamos anteriormente em `fillStyle`."
 
 Você pode começar a testar seu objeto já.
 

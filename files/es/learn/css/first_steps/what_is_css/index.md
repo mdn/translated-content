@@ -61,8 +61,8 @@ El código siguiente muestra una regla CSS muy simple que proporcionaría el est
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 ```
 
@@ -76,12 +76,12 @@ Una hoja de estilo CSS contendrá muchas de estas reglas, escritas una tras otra
 
 ```css
 h1 {
-    color: red;
-    font-size: 5em;
+  color: red;
+  font-size: 5em;
 }
 
 p {
-    color: black;
+  color: black;
 }
 ```
 

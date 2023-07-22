@@ -1,12 +1,6 @@
 ---
 title: AudioBufferSourceNode.loop
 slug: Web/API/AudioBufferSourceNode/loop
-tags:
-  - API
-  - AudioBufferSourceNode
-  - Loop
-  - Reference
-  - Web Audio API
 translation_of: Web/API/AudioBufferSourceNode/loop
 ---
 

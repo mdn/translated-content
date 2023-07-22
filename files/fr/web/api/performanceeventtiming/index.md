@@ -1,14 +1,6 @@
 ---
 title: PerformanceEventTiming
 slug: Web/API/PerformanceEventTiming
-tags:
-  - API
-  - Event Timing API
-  - Interface
-  - Performance
-  - PerformanceEventTiming
-  - Reference
-  - Performance Web
 translation_of: Web/API/PerformanceEventTiming
 ---
 

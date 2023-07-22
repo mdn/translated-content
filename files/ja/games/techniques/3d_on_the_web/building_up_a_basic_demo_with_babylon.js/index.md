@@ -23,23 +23,31 @@ Babylon.js で開発を始めるにあたっては、そんなに多くのもの
 ここに使う HTML の構造を示します。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>MDN Games: Babylon.js demo</title>
     <style>
-        html,body,canvas { margin: 0; padding: 0; width: 100%; height: 100%; font-size: 0; }
+      html,
+      body,
+      canvas {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 0;
+      }
     </style>
-</head>
-<body>
-<script src="babylon.js"></script>
-<canvas id="render-canvas"></canvas>
-<script>
-    var canvas = document.getElementById("render-canvas");
-    /* all our JavaScript code goes here */
-</script>
-</body>
+  </head>
+  <body>
+    <script src="babylon.js"></script>
+    <canvas id="render-canvas"></canvas>
+    <script>
+      var canvas = document.getElementById("render-canvas");
+      /* all our JavaScript code goes here */
+    </script>
+  </body>
 </html>
 ```
 
@@ -74,7 +82,7 @@ scene.clearColor = new BABYLON.Color3(0.8, 0.8, 0.8);
 
 ```js
 var renderLoop = function () {
-    scene.render();
+  scene.render();
 };
 engine.runRenderLoop(renderLoop);
 ```
@@ -86,7 +94,11 @@ engine.runRenderLoop(renderLoop);
 さて、セットアップコードができたところで、標準的なシーンコンポーネントであるカメラ、ライト、オブジェクトの実装について考える必要があります。まず、カメラから始めましょう。シーンの作成と `clearColor` を定義した行の下に、次の行を追加してください。
 
 ```js
-var camera = new BABYLON.FreeCamera("camera", new BABYLON.Vector3(0, 0, -10), scene);
+var camera = new BABYLON.FreeCamera(
+  "camera",
+  new BABYLON.Vector3(0, 0, -10),
+  scene,
+);
 ```
 
 Babylon.js では多くの[カメラ](https://doc.babylonjs.com/divingDeeper/cameras)が利用可能です。 `FreeCamera` は最も基本的で汎用的なカメラです。初期化するためには、 3 つの引数を渡す必要があります。使用したい名前、三次元空間での位置の座標、そして追加したいシーンです。
@@ -98,7 +110,11 @@ Babylon.js では多くの[カメラ](https://doc.babylonjs.com/divingDeeper/cam
 Babylon.js では、様々な[光源](https://doc.babylonjs.com/divingDeeper/lights/lights_introduction#types-of-lights)が利用可能です。最も基本的なものは `PointLight` で、これは懐中電灯のように動作し、指定された方向にスポットライトを照らします。カメラ定義の下に、次の行を追加してください。
 
 ```js
-var light = new BABYLON.PointLight("light", new BABYLON.Vector3(10, 10, 0), scene);
+var light = new BABYLON.PointLight(
+  "light",
+  new BABYLON.Vector3(10, 10, 0),
+  scene,
+);
 ```
 
 引数は、先に定義したカメラと非常によく似ています。ライトの名前、三次元空間での位置、ライトを追加するシーンです。
@@ -198,9 +214,9 @@ cylinder.material = cylinderMaterial;
 ```js
 var t = 0;
 var renderLoop = function () {
-    scene.render();
-    t -= 0.01;
-    // animation code goes here
+  scene.render();
+  t -= 0.01;
+  // animation code goes here
 };
 engine.runRenderLoop(renderLoop);
 ```
@@ -212,7 +228,7 @@ engine.runRenderLoop(renderLoop);
 回転を適用するのは、 `renderLoop` 関数の最後にこの行を追加するだけと簡単です。
 
 ```js
-box.rotation.y = t*2;
+box.rotation.y = t * 2;
 ```
 
 これは、 `y` 軸に沿ってボックスを回転させます。
@@ -222,7 +238,7 @@ box.rotation.y = t*2;
 この行を前の行の下に追加して、トーラスを拡大縮小します。
 
 ```js
-torus.scaling.z = Math.abs(Math.sin(t*2))+0.5;
+torus.scaling.z = Math.abs(Math.sin(t * 2)) + 0.5;
 ```
 
 アニメーションの見た目を良くするために、少し調整が加えられています。値を変えてみて、アニメーションにどのような影響が出るか試してみてください。
@@ -232,7 +248,7 @@ torus.scaling.z = Math.abs(Math.sin(t*2))+0.5;
 円柱の位置を直接変更することで、シーン上で円柱を動かすことができます。この行を前の行の下に追加してください。
 
 ```js
-cylinder.position.y = Math.sin(t*3);
+cylinder.position.y = Math.sin(t * 3);
 ```
 
 円柱は `Math.sin()` 関数のおかげで `y` 軸上で上下に浮き沈みします。

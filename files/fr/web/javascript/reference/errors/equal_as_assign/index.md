@@ -1,12 +1,7 @@
 ---
 title: 'SyntaxError: test for equality (==) mistyped as assignment (=)?'
 slug: Web/JavaScript/Reference/Errors/Equal_as_assign
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Equal_as_assign
-original_slug: Web/JavaScript/Reference/Erreurs/Equal_as_assign
 ---
 
 {{jsSidebar("Errors")}}

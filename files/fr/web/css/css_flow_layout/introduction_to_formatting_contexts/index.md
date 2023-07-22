@@ -1,12 +1,7 @@
 ---
 title: Explications quant aux contextes de formatage
 slug: Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts
-tags:
-  - CSS
-  - Guide
-  - Intermédiaire
 translation_of: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
-original_slug: Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 ---
 
 {{CSSRef}}

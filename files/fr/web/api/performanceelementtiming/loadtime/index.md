@@ -1,13 +1,6 @@
 ---
 title: PerformanceElementTiming.loadTime
 slug: Web/API/PerformanceElementTiming/loadTime
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - loadTime
-  - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/loadTime
 ---
 

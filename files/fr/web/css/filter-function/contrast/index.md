@@ -2,8 +2,6 @@
 title: contrast()
 slug: Web/CSS/filter-function/contrast
 translation_of: Web/CSS/filter-function/contrast()
-original_slug: Web/CSS/filter-function/contrast()
-browser-compat: css.types.filter-function.contrast
 ---
 
 {{CSSRef}}

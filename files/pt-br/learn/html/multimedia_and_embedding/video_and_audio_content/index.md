@@ -31,7 +31,7 @@ Agora que estamos à vontade para adicionar imagens simples a uma página da Web
               href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
               >Introdução ao HTML</a
             >) e
-        <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
           >Images in HTML</a
         >.
       </td>

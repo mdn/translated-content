@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.responseStart
 slug: Web/API/PerformanceResourceTiming/responseStart
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - responseStart
 translation_of: Web/API/PerformanceResourceTiming/responseStart
 ---
 

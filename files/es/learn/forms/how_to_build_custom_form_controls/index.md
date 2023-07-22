@@ -75,7 +75,6 @@ Ahora que se ha decidido la funcionalidad básica del widget, es hora de comenza
      El atributo tabindex es lo que permite al usuario enforcar el widget.
      Veremos más adelante que es mejor configurarlo a través de JavaScript. -->
 <div class="select" tabindex="0">
-
   <!-- Este contenedor será usado para mostrar el valor actual del widget -->
   <span class="value">Cherry</span>
 
@@ -90,7 +89,6 @@ Ahora que se ha decidido la funcionalidad básica del widget, es hora de comenza
     <li class="option">Strawberry</li>
     <li class="option">Apple</li>
   </ul>
-
 </div>
 ```
 
@@ -110,7 +108,7 @@ The required styles are those necessary to handle the three states of our widget
   position: relative;
 
   /* This will make our widget become part of the text flow and sizable at the same time */
-  display : inline-block;
+  display: inline-block;
 }
 ```
 
@@ -135,9 +133,9 @@ Now, let's handle the list of options:
 .select .optList {
   /* This will make sure our list of options will be displayed below the value
      and out of the HTML flow */
-  position : absolute;
-  top      : 100%;
-  left     : 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 ```
 
@@ -163,39 +161,39 @@ So now that we have the basic functionality in place, the fun can start. The fol
      browser's zoom in a text-only mode). The computations are made
      assuming 1em == 16px which is the default value in most browsers.
      If you are lost with px to em conversion, try https://riddle.pl/emcalc/ */
-  font-size   : 0.625em; /* this (10px) is the new font size context for em value in this context */
-  font-family : Verdana, Arial, sans-serif;
+  font-size: 0.625em; /* this (10px) is the new font size context for em value in this context */
+  font-family: Verdana, Arial, sans-serif;
 
-  -moz-box-sizing : border-box;
-  box-sizing : border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   /* We need extra room for the down arrow we will add */
-  padding : .1em 2.5em .2em .5em; /* 1px 25px 2px 5px */
-  width   : 10em; /* 100px */
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
 
-  border        : .2em solid #000; /* 2px */
-  border-radius : .4em; /* 4px */
-  box-shadow    : 0 .1em .2em rgba(0,0,0,.45); /* 0 1px 2px */
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
 
   /* The first declaration is for browsers that do not support linear gradients.
      The second declaration is because WebKit based browsers haven't unprefixed it yet.
      If you want to support legacy browsers, try https://www.colorzilla.com/gradient-editor/ */
-  background : #F0F0F0;
-  background : -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
-  background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+  background: #f0f0f0;
+  background: -webkit-linear-gradient(90deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
 .select .value {
   /* Because the value can be wider than our widget, we have to make sure it will not
      change the widget's width */
-  display  : inline-block;
-  width    : 100%;
-  overflow : hidden;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
 
   vertical-align: top;
 
   /* And if the content overflows, it's better to have a nice ellipsis. */
-  white-space  : nowrap;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 ```
@@ -204,25 +202,25 @@ We don't need an extra element to design the down arrow; instead, we're using th
 
 ```css
 .select:after {
-  content : "▼"; /* We use the unicode caracter U+25BC; see https://www.utf8-chartable.de */
+  content: "▼"; /* We use the unicode caracter U+25BC; see https://www.utf8-chartable.de */
   position: absolute;
-  z-index : 1; /* This will be important to keep the arrow from overlapping the list of options */
-  top     : 0;
-  right   : 0;
+  z-index: 1; /* This will be important to keep the arrow from overlapping the list of options */
+  top: 0;
+  right: 0;
 
-  -moz-box-sizing : border-box;
-  box-sizing : border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
-  height  : 100%;
-  width   : 2em;  /* 20px */
-  padding-top : .1em; /* 1px */
+  height: 100%;
+  width: 2em; /* 20px */
+  padding-top: 0.1em; /* 1px */
 
-  border-left  : .2em solid #000; /* 2px */
-  border-radius: 0 .1em .1em 0;  /* 0 1px 1px 0 */
+  border-left: 0.2em solid #000; /* 2px */
+  border-radius: 0 0.1em 0.1em 0; /* 0 1px 1px 0 */
 
-  background-color : #000;
-  color : #FFF;
-  text-align : center;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
 }
 ```
 
@@ -230,19 +228,19 @@ Next, let's style the list of options:
 
 ```css
 .select .optList {
-  z-index : 2; /* We explicitly said the list of options will always overlap the down arrow */
+  z-index: 2; /* We explicitly said the list of options will always overlap the down arrow */
 
   /* this will reset the default style of the ul element */
   list-style: none;
-  margin : 0;
+  margin: 0;
   padding: 0;
 
-  -moz-box-sizing : border-box;
-  box-sizing : border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   /* This will ensure that even if the values are smaller than the widget,
      the list of options will be as large as the widget itself */
-  min-width : 100%;
+  min-width: 100%;
 
   /* In case the list is too long, its content will overflow vertically
      (which will add a vertical scrollbar automatically) but never horizontally
@@ -252,11 +250,11 @@ Next, let's style the list of options:
   overflow-y: auto;
   overflow-x: hidden;
 
-  border: .2em solid #000; /* 2px */
-  border-top-width : .1em; /* 1px */
-  border-radius: 0 0 .4em .4em; /* 0 0 4px 4px */
+  border: 0.2em solid #000; /* 2px */
+  border-top-width: 0.1em; /* 1px */
+  border-radius: 0 0 0.4em 0.4em; /* 0 0 4px 4px */
 
-  box-shadow: 0 .2em .4em rgba(0,0,0,.4); /* 0 2px 4px */
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4); /* 0 2px 4px */
   background: #f0f0f0;
 }
 ```
@@ -265,12 +263,12 @@ For the options, we need to add a `highlight` class to be able to identify the v
 
 ```css
 .select .option {
-  padding: .2em .3em; /* 2px 3px */
+  padding: 0.2em 0.3em; /* 2px 3px */
 }
 
 .select .highlight {
   background: #000;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
@@ -689,7 +687,6 @@ First, we need to add a regular {{HTMLElement("select")}} element before each us
       </ul>
     </div>
   </form>
-
 </body>
 ```
 
@@ -702,10 +699,10 @@ Second, we need two new classes to let us hide the unneeded element (that is, th
      - either we have set the body class to "widget" and thus we hide the actual {{HTMLElement("select")}} element
      - or we have not changed the body class, therefore the body class is still "no-widget",
        so the elements whose class is "select" must be hidden */
-  position : absolute;
-  left     : -5000em;
-  height   : 0;
-  overflow : hidden;
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
 }
 ```
 
@@ -928,7 +925,7 @@ Beyond the availability of those specific features, there is still one issue rem
 ```js
 NodeList.prototype.forEach = function (callback) {
   Array.prototype.forEach.call(this, callback);
-}
+};
 ```
 
 We weren't kidding when we said it's easy to do.
@@ -942,18 +939,17 @@ The ground is ready, we can now start to define all the functions that will be u
 // It takes one parameter
 // select : the DOM node with the `select` class to deactivate
 function deactivateSelect(select) {
-
   // If the widget is not active there is nothing to do
-  if (!select.classList.contains('active')) return;
+  if (!select.classList.contains("active")) return;
 
   // We need to get the list of options for the custom widget
-  var optList = select.querySelector('.optList');
+  var optList = select.querySelector(".optList");
 
   // We close the list of option
-  optList.classList.add('hidden');
+  optList.classList.add("hidden");
 
   // and we deactivate the custom widget itself
-  select.classList.remove('active');
+  select.classList.remove("active");
 }
 
 // This function will be used each time the user wants to (de)activate the widget
@@ -961,9 +957,8 @@ function deactivateSelect(select) {
 // select : the DOM node with the `select` class to activate
 // selectList : the list of all the DOM nodes with the `select` class
 function activeSelect(select, selectList) {
-
   // If the widget is already active there is nothing to do
-  if (select.classList.contains('active')) return;
+  if (select.classList.contains("active")) return;
 
   // We have to turn off the active state on all custom widgets
   // Because the deactivateSelect function fulfill all the requirement of the
@@ -972,19 +967,18 @@ function activeSelect(select, selectList) {
   selectList.forEach(deactivateSelect);
 
   // And we turn on the active state for this specific widget
-  select.classList.add('active');
+  select.classList.add("active");
 }
 
 // This function will be used each time the user wants to open/closed the list of options
 // It takes one parameter:
 // select : the DOM node with the list to toggle
 function toggleOptList(select) {
-
   // The list is kept from the widget
-  var optList = select.querySelector('.optList');
+  var optList = select.querySelector(".optList");
 
   // We change the class of the list to show/hide it
-  optList.classList.toggle('hidden');
+  optList.classList.toggle("hidden");
 }
 
 // This function will be used each time we need to highlight an option
@@ -992,18 +986,17 @@ function toggleOptList(select) {
 // select : the DOM node with the `select` class containing the option to highlight
 // option : the DOM node with the `option` class to highlight
 function highlightOption(select, option) {
-
   // We get the list of all option available for our custom select element
-  var optionList = select.querySelectorAll('.option');
+  var optionList = select.querySelectorAll(".option");
 
   // We remove the highlight from all options
   optionList.forEach(function (other) {
-    other.classList.remove('highlight');
+    other.classList.remove("highlight");
   });
 
   // We highlight the right option
-  option.classList.add('highlight');
-};
+  option.classList.add("highlight");
+}
 ```
 
 That's all you need in order to handle the various states of the custom widget.
@@ -1012,18 +1005,17 @@ Next, we bind these functions to the appropriate events:
 
 ```js
 // We handle the event binding when the document is loaded.
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener("load", function () {
+  var selectList = document.querySelectorAll(".select");
 
   // Each custom widget needs to be initialized
   selectList.forEach(function (select) {
-
     // as well as all its `option` elements
-    var optionList = select.querySelectorAll('.option');
+    var optionList = select.querySelectorAll(".option");
 
     // Each time a user hovers their mouse over an option, we highlight the given option
     optionList.forEach(function (option) {
-      option.addEventListener('mouseover', function () {
+      option.addEventListener("mouseover", function () {
         // Note: the `select` and `option` variable are closures
         // available in the scope of our function call.
         highlightOption(select, option);
@@ -1031,7 +1023,7 @@ window.addEventListener('load', function () {
     });
 
     // Each times the user click on a custom select element
-    select.addEventListener('click', function (event) {
+    select.addEventListener("click", function (event) {
       // Note: the `select` variable is a closure
       // available in the scope of our function call.
 
@@ -1042,7 +1034,7 @@ window.addEventListener('load', function () {
     // In case the widget gain focus
     // The widget gains the focus each time the user clicks on it or each time
     // they use the tabulation key to access the widget
-    select.addEventListener('focus', function (event) {
+    select.addEventListener("focus", function (event) {
       // Note: the `select` and `selectList` variable are closures
       // available in the scope of our function call.
 
@@ -1051,7 +1043,7 @@ window.addEventListener('load', function () {
     });
 
     // In case the widget loose focus
-    select.addEventListener('blur', function (event) {
+    select.addEventListener("blur", function (event) {
       // Note: the `select` variable is a closure
       // available in the scope of our function call.
 
@@ -1279,9 +1271,9 @@ window.addEventListener("load", () => {
 });
 ```
 
-| Live example                                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("",120,130)}} |
+| Live example                                                                                |
+| ------------------------------------------------------------------------------------------- |
+| {{EmbedLiveSample("",120,130)}}                                                             |
 | [Check out the source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3) |
 
 ### Handling the widget's value
@@ -1303,10 +1295,10 @@ function updateValue(select, index) {
   var nativeWidget = select.previousElementSibling;
 
   // We also need  to get the value placeholder of our custom widget
-  var value = select.querySelector('.value');
+  var value = select.querySelector(".value");
 
   // And we need the whole list of options
-  var optionList = select.querySelectorAll('.option');
+  var optionList = select.querySelectorAll(".option");
 
   // We set the selected index to the index of our choice
   nativeWidget.selectedIndex = index;
@@ -1316,7 +1308,7 @@ function updateValue(select, index) {
 
   // And we highlight the corresponding option of our custom widget
   highlightOption(select, optionList[index]);
-};
+}
 
 // This function returns the current selected index in the native widget
 // It takes one parameter:
@@ -1327,20 +1319,20 @@ function getIndex(select) {
   var nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
-};
+}
 ```
 
 With these two functions, we can bind the native widgets to the custom ones:
 
 ```js
 // We handle event binding when the document is loaded.
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener("load", function () {
+  var selectList = document.querySelectorAll(".select");
 
   // Each custom widget needs to be initialized
   selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll('.option'),
-        selectedIndex = getIndex(select);
+    var optionList = select.querySelectorAll(".option"),
+      selectedIndex = getIndex(select);
 
     // We make our custom widget focusable
     select.tabIndex = 0;
@@ -1353,21 +1345,25 @@ window.addEventListener('load', function () {
 
     // Each time a user clicks on an option, we update the value accordingly
     optionList.forEach(function (option, index) {
-      option.addEventListener('click', function (event) {
+      option.addEventListener("click", function (event) {
         updateValue(select, index);
       });
     });
 
     // Each time a user uses their keyboard on a focused widget, we update the value accordingly
-    select.addEventListener('keyup', function (event) {
+    select.addEventListener("keyup", function (event) {
       var length = optionList.length,
-          index  = getIndex(select);
+        index = getIndex(select);
 
       // When the user hits the down arrow, we jump to the next option
-      if (event.keyCode === 40 && index < length - 1) { index++; }
+      if (event.keyCode === 40 && index < length - 1) {
+        index++;
+      }
 
       // When the user hits the up arrow, we jump to the previous option
-      if (event.keyCode === 38 && index > 0) { index--; }
+      if (event.keyCode === 38 && index > 0) {
+        index--;
+      }
 
       updateValue(select, index);
     });
@@ -1634,9 +1630,9 @@ window.addEventListener("load", () => {
 });
 ```
 
-| Live example                                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("",120,130)}} |
+| Live example                                                                                |
+| ------------------------------------------------------------------------------------------- |
+| {{EmbedLiveSample("",120,130)}}                                                             |
 | [Check out the source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4) |
 
 But wait a second, are we really done?
@@ -1682,21 +1678,21 @@ The `aria-selected` attribute is used to mark which option is currently selected
 ```js
 function updateValue(select, index) {
   var nativeWidget = select.previousElementSibling;
-  var value = select.querySelector('.value');
-  var optionList = select.querySelectorAll('.option');
+  var value = select.querySelector(".value");
+  var optionList = select.querySelectorAll(".option");
 
   // We make sure that all the options are not selected
   optionList.forEach(function (other) {
-    other.setAttribute('aria-selected', 'false');
+    other.setAttribute("aria-selected", "false");
   });
 
   // We make sure the chosen option is selected
-  optionList[index].setAttribute('aria-selected', 'true');
+  optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
   value.innerHTML = optionList[index].innerHTML;
   highlightOption(select, optionList[index]);
-};
+}
 ```
 
 Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](http://www.nvda-project.org/) or [VoiceOver](https://www.apple.com/accessibility/voiceover/)):
@@ -1952,9 +1948,9 @@ window.addEventListener("load", () => {
 });
 ```
 
-| Live example                                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("",120,130)}} |
+| Live example                                                                                      |
+| ------------------------------------------------------------------------------------------------- |
+| {{EmbedLiveSample("",120,130)}}                                                                   |
 | [Check out the final source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5) |
 
 ## Conclusion
