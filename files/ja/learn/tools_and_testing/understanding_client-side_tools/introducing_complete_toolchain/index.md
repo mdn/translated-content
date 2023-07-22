@@ -30,13 +30,13 @@ l10n:
 
 > **メモ:** これらのツールのすべてをコマンドラインで実行する必要があるわけではないことも繰り返し述べておきます。 現在のコードエディター (VS Code や Atom など) の _多く_ は、プラグインを介して多数のツールの統合をサポートしています。
 
-## Introducing our case study
+## ツールチェーンのケーススタディの事例紹介
 
-The toolchain that we are creating in this article will be used to build and deploy a mini-site that lists data (taken from one of [NASA's open APIs](https://api.nasa.gov/)) concerning potentially hazardous space objects that threaten our existence on Earth! It looks like this:
+この記事で作成しているツールチェーンは、地球上の私たちの存在を脅かす潜在的に危険な宇宙物体に関するデータ ([NASA's open APIs](https://api.nasa.gov/) の 1 つから取得) をリストするミニサイトを構築して展開するために使用されます。 次のようになります。
 
 ![screenshot of the sample will it miss website](will-it-miss-screenshot.png)
 
-You can see a live version of the site at [near-misses.netlify.com](https://near-misses.netlify.app/).
+このサイトのライブバージョンは、[near-misses.netlify.com](https://near-misses.netlify.app/) でご覧いただけます。
 
 ## Tools used in our toolchain
 
