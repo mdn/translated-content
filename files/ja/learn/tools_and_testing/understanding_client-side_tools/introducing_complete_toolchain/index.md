@@ -352,23 +352,23 @@ ESLintのルールは、 [list of ESLint rules](https://eslint.org/docs/rules/) 
 
 ここまでで、開発環境のセットアップが完了しました。これで、ついに（ほぼ）コーディングの準備が整いました。
 
-## Build and transformation tools
+## ビルドおよび変換ツール
 
-For this project, as mentioned above, React is going to be used, which also means that JSX will be used in the source code. The project will also use the latest JavaScript features.
+このプロジェクトでは、前述した通り、 React を使用し、そのためにソースコードではJSXを使用します。また、プロジェクトでは最新の JavaScript 機能も利用します。
 
-An immediate issue is that no browser has native support for JSX; it is an intermediate language that is meant to be compiled into languages the browser understands in the production code.
+直近の課題として、ブラウザは JSX をネイティブにサポートしていません。 JSX は中間言語であり、本番コードではブラウザが理解できる言語にコンパイルする必要があります。
 
-If the browser tries to run the source JavaScript it will immediately complain; the project needs a build tool to transform the source code to something the browser can consume without issue.
+ブラウザがソース JavaScript を実行しようとすると、すぐにエラーが発生します。このプロジェクトでは、ブラウザが問題なく読み込めるようにソースコードを変換するためのビルドツールが必要です。
 
-There's a number of choices for transform tools and though WebPack is a particularly popular one, this project is going to use Parcel — specifically because it requires a lot less configuration.
+変換ツールはいくつか選択肢がありますが、特に人気のある WebPack の代わりに、このプロジェクトでは Parcel を使用することにします。 Parcel は設定が少なくて済むため、特にこの選択になりました。
 
-Parcel works on the basis that it will try to configure your development requirements on the fly. Parcel will watch the code and run a live-reloading web server during development. This also means that Parcel will install our software dependencies automatically as they are referenced in the source code, as we [saw in Chapter 3](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management#using_the_package_ecosystem).
+Parcel は開発要件を自動的に設定しようとする仕組みで動作します。 Parcel はコードを監視し、開発中にライブリロードするウェブサーバーを実行します。これはまた、 Parcel がソースコード内で参照されると自動的にソフトウェアの依存関係をインストールすることも意味します（第3章で見た内容です）。
 
-Parcel will take care of installing any transformation tooling and configuration required without us needing to intervene (in most cases).
+Parcel は、必要な変換ツールと設定を、私たちが介入することなく自動的に処理します（ほとんどの場合）。
 
-Then as a final bonus, Parcel can bundle and prepare the code for production deployment, taking care of minification and browser compatibility requirements.
+そして最後の特典として、Parcel はコードをバンドルして本番デプロイの準備をし、最小化やブラウザの互換性要件も対応します。
 
-We therefore need to install the parcel dependency in our project too — run the following command in your terminal:
+したがって、このプロジェクトには Parcel の依存関係もインストールする必要があります。ターミナルで以下のコマンドを実行してください。
 
 ```bash
 npm install --save-dev parcel-bundler
