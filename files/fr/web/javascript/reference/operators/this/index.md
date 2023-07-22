@@ -1,12 +1,7 @@
 ---
 title: L'opérateur this
 slug: Web/JavaScript/Reference/Operators/this
-tags:
-  - JavaScript
-  - Operator
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/this
-original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_this
 ---
 
 {{jsSidebar("Operators")}}

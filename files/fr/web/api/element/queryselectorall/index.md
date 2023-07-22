@@ -2,7 +2,6 @@
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 translation_of: Web/API/Element/querySelectorAll
-browser-compat: api.Element.querySelectorAll
 ---
 
 {{APIRef("DOM")}}

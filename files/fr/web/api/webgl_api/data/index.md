@@ -1,22 +1,7 @@
 ---
 title: Les données en WebGL
 slug: Web/API/WebGL_API/Data
-tags:
-  - 3D
-  - API WebGL
-  - Attributs
-  - BesoinDExemple
-  - BesoinDeContenu
-  - Graphismes
-  - Graphismes 3D
-  - Guide
-  - Intermédiaire
-  - Uniformes
-  - Variants
-  - WebGL
-  - dessin
 translation_of: Web/API/WebGL_API/Data
-original_slug: Web/API/WebGL_API/Données
 ---
 
 {{DefaultAPISidebar("WebGL")}}

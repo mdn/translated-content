@@ -1,16 +1,7 @@
 ---
 title: Intl.NumberFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - NumberFormat
-  - Reference
-  - i18n
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat/supportedLocalesOf
 ---
 
 {{JSRef}}

@@ -1,11 +1,6 @@
 ---
 title: '<picture> : l''élément d''image adaptative'
 slug: Web/HTML/Element/picture
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/picture
 ---
 

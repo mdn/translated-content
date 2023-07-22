@@ -1,24 +1,7 @@
 ---
 title: 'Attribut HTML : autocomplete'
 slug: Web/HTML/Attributes/autocomplete
-tags:
-  - Addresses
-  - Attribute
-  - Email addresses
-  - Forms
-  - HTML
-  - Input
-  - Phone Numbers
-  - Reference
-  - Select
-  - Text
-  - Usernames
-  - autocomplete
-  - form
-  - passwords
-  - textarea
 translation_of: Web/HTML/Attributes/autocomplete
-original_slug: Web/HTML/Attributs/autocomplete
 ---
 
 {{HTMLSidebar}}

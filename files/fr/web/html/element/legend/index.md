@@ -1,12 +1,6 @@
 ---
 title: <legend>
 slug: Web/HTML/Element/legend
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/legend
 ---
 

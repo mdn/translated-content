@@ -1,12 +1,7 @@
 ---
 title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/NaN
-tags:
-  - JavaScript
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/NaN
-original_slug: Web/JavaScript/Reference/Objets_globaux/NaN
 ---
 
 {{jsSidebar("Objects")}}

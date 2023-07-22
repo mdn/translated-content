@@ -1,13 +1,6 @@
 ---
 title: 'CSS : Feuilles de style en cascade'
 slug: Web/CSS
-tags:
-  - CSS
-  - Design
-  - Landing
-  - Reference
-  - Structure
-  - Styles
 translation_of: Web/CSS
 ---
 

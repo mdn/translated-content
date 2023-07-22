@@ -2,8 +2,6 @@
 title: Intl.Collator
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator
-browser-compat: javascript.builtins.Intl.Collator
 ---
 
 {{JSRef}}

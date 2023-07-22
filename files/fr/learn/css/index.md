@@ -1,19 +1,7 @@
 ---
 title: Composer le HTML avec les CSS
 slug: Learn/CSS
-tags:
-  - Article
-  - CSS
-  - Codage
-  - Débutant
-  - Longueur
-  - Nécessite du contenu
-  - Renvois
-  - Style
-  - débogage
-  - particularités
 translation_of: Learn/CSS
-original_slug: Apprendre/CSS
 ---
 
 {{LearnSidebar}}

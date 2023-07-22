@@ -1,11 +1,6 @@
 ---
 title: scroll-snap-type
 slug: Web/CSS/scroll-snap-type
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/scroll-snap-type
 ---
 

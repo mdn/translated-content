@@ -1,15 +1,7 @@
 ---
 title: Formulaires HTML
 slug: Learn/Forms
-tags:
-  - Apprentissage
-  - Featured
-  - Formulaires
-  - Guide
-  - HTML
-  - Web
 translation_of: Learn/Forms
-original_slug: Web/Guide/HTML/Formulaires
 ---
 
 {{learnSidebar}}

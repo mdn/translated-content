@@ -1,13 +1,6 @@
 ---
 title: PerformanceObserver()
 slug: Web/API/PerformanceObserver/PerformanceObserver
-tags:
-  - API
-  - Constructor
-  - Constructeur
-  - PerformanceObserver
-  - Reference
-  - Performance Web
 translation_of: Web/API/PerformanceObserver/PerformanceObserver
 ---
 

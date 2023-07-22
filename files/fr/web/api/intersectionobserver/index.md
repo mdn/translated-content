@@ -1,13 +1,6 @@
 ---
 title: IntersectionObserver
 slug: Web/API/IntersectionObserver
-tags:
-  - API
-  - Interface
-  - Intersection Observer API
-  - IntersectionObserver
-  - Reference
-  - observers
 translation_of: Web/API/IntersectionObserver
 ---
 

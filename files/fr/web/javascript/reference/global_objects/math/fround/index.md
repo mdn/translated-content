@@ -1,14 +1,7 @@
 ---
 title: Math.fround()
 slug: Web/JavaScript/Reference/Global_Objects/Math/fround
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/fround
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/fround
 ---
 
 {{JSRef}}

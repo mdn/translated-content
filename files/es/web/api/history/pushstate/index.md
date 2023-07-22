@@ -45,11 +45,11 @@ Esto crea un nuevo registro en el historial del navegador, estableciendo `state`
 ### JavaScript
 
 ```js
-const state = { 'page_id': 1, 'user_id': 5 }
-const title = ''
-const url = 'hello-world.html'
+const state = { page_id: 1, user_id: 5 };
+const title = "";
+const url = "hello-world.html";
 
-history.pushState(state, title, url)
+history.pushState(state, title, url);
 ```
 
 ## Especificaciones

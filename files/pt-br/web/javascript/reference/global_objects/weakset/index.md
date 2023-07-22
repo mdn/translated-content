@@ -3,7 +3,7 @@ title: WeakSet
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 ---
 
-{{JSRef}}O objeto **WeakSet** pertmite que você armazene objetos mantidos “fracamente” na coleção.
+{{JSRef}}O objeto **WeakSet** pertmite que você armazene objetos mantidos "fracamente" na coleção.
 
 ## Syntaxe
 
@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakSet
 ### Parâmetros
 
 - iterable
-  - : Se um[objeto interagível](pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) é passado, todos os seus elementos serão adicionados ao novo `WeakSet`.
+  - : Se um[objeto interagível](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) é passado, todos os seus elementos serão adicionados ao novo `WeakSet`.
 
 ## Descrição
 

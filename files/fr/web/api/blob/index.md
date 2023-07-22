@@ -1,10 +1,6 @@
 ---
 title: Blob
 slug: Web/API/Blob
-tags:
-  - API
-  - Référence(2)
-  - WebAPI
 translation_of: Web/API/Blob
 ---
 

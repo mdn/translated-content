@@ -2,8 +2,6 @@
 title: scaleX()
 slug: Web/CSS/transform-function/scaleX
 translation_of: Web/CSS/transform-function/scaleX()
-original_slug: Web/CSS/transform-function/scaleX()
-browser-compat: css.types.transform-function.scaleX
 ---
 
 {{CSSRef}}

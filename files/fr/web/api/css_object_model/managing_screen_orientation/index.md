@@ -1,11 +1,6 @@
 ---
 title: Gérer l'orientation de l'écran
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
-tags:
-  - Avancé
-  - CSSOM View
-  - Guide
-  - Screen Orientation
 translation_of: Web/API/CSS_Object_Model/Managing_screen_orientation
 ---
 

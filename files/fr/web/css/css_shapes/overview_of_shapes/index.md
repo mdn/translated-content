@@ -1,13 +1,7 @@
 ---
 title: Aperçu des formes CSS
 slug: Web/CSS/CSS_shapes/Overview_of_shapes
-tags:
-  - Aperçu
-  - CSS
-  - CSS Shapes
-  - Formes CSS
 translation_of: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
-original_slug: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 ---
 
 {{CSSRef}}

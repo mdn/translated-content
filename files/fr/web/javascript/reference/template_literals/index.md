@@ -1,14 +1,7 @@
 ---
 title: Littéraux de gabarits
 slug: Web/JavaScript/Reference/Template_literals
-tags:
-  - Chaîne de caractères
-  - ECMAScript 2015
-  - Guide
-  - JavaScript
-  - Littéraux de gabarits
 translation_of: Web/JavaScript/Reference/Template_literals
-original_slug: Web/JavaScript/Reference/Littéraux_gabarits
 ---
 
 {{JsSidebar("More")}}

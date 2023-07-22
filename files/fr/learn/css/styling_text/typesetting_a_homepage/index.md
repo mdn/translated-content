@@ -1,16 +1,6 @@
 ---
 title: Composition de la page d'accueil d'une école de communauté
 slug: Learn/CSS/Styling_text/Typesetting_a_homepage
-tags:
-  - CSS
-  - Codage
-  - Composer du texte
-  - Débutant
-  - Evaluation
-  - Fontes
-  - Fontes web
-  - Liens
-  - Listes
 translation_of: Learn/CSS/Styling_text/Typesetting_a_homepage
 ---
 

@@ -1,13 +1,7 @@
 ---
 title: inset-inline-start
 slug: Web/CSS/inset-inline-start
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/inset-inline-start
-original_slug: inset-inline-start
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

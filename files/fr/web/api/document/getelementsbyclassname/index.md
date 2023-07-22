@@ -1,11 +1,6 @@
 ---
 title: document.getElementsByClassName
 slug: Web/API/Document/getElementsByClassName
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Reference
 translation_of: Web/API/Document/getElementsByClassName
 ---
 

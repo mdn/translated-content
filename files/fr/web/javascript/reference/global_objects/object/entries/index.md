@@ -1,14 +1,7 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-tags:
-  - ECMAScript2016
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/entries
 ---
 
 {{JSRef}}

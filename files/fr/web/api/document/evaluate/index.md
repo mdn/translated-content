@@ -1,12 +1,6 @@
 ---
 title: document.evaluate
 slug: Web/API/Document/evaluate
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
-  - XPath
 translation_of: Web/API/Document/evaluate
 ---
 

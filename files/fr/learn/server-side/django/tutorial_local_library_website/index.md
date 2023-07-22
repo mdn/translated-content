@@ -1,13 +1,6 @@
 ---
 title: 'Django Didactique: Site web "Bibliothèque locale"'
 slug: Learn/Server-side/Django/Tutorial_local_library_website
-tags:
-  - Apprentissage
-  - Article
-  - Didacticiel
-  - Débutant
-  - Guide
-  - django
 translation_of: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 

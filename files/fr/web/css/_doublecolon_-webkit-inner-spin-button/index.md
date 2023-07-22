@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-inner-spin-button'
 slug: Web/CSS/::-webkit-inner-spin-button
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-inner-spin-button
 ---
 

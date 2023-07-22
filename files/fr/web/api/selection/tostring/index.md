@@ -1,8 +1,6 @@
 ---
 title: toString
 slug: Web/API/Selection/toString
-tags:
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/Selection/toString
 ---
 

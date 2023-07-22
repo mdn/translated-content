@@ -1,7 +1,6 @@
 ---
 title: ':playing'
 slug: Web/CSS/:playing
-browser-compat: css.selectors.playing
 translation_of: Web/CSS/:playing
 ---
 

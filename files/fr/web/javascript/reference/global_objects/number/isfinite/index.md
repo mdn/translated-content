@@ -1,15 +1,7 @@
 ---
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Méthode
-  - Number
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/isFinite
 ---
 
 {{JSRef}}

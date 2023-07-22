@@ -1,14 +1,7 @@
 ---
 title: arguments
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - Fonctions
-  - Functions
-  - JavaScript
-  - Reference
-  - arguments
 translation_of: Web/JavaScript/Reference/Functions/arguments
-original_slug: Web/JavaScript/Reference/Fonctions/arguments
 ---
 
 {{jsSidebar("Fonctions")}}

@@ -1,10 +1,6 @@
 ---
 title: Element.matches()
 slug: Web/API/Element/matches
-tags:
-  - API
-  - DOM
-  - Selector
 translation_of: Web/API/Element/matches
 ---
 

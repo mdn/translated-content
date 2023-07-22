@@ -1,18 +1,7 @@
 ---
 title: '<center> : l''élément de texte centré'
 slug: Web/HTML/Element/center
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Text
-  - Text Alignment
-  - Web
-  - alignment
-  - center
 translation_of: Web/HTML/Element/center
-browser-compat: html.elements.center
 ---
 
 {{HTMLSidebar}}

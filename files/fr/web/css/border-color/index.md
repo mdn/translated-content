@@ -1,11 +1,6 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
 translation_of: Web/CSS/border-color
 ---
 

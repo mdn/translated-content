@@ -1,13 +1,6 @@
 ---
 title: Affectation après ET binaire (&=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.bitwise_and_assignment
 ---
 
 {{jsSidebar("Operators")}}

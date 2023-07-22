@@ -1,16 +1,7 @@
 ---
 title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
-tags:
-  - Array
-  - ECMAScript6
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/findIndex
 ---
 
 {{JSRef}}

@@ -1,15 +1,6 @@
 ---
 title: document.querySelector
 slug: Web/API/Document/querySelector
-tags:
-  - API
-  - CSS
-  - DOM
-  - Document
-  - JavaScript
-  - Méthodes
-  - Sélecteurs
-  - Échappement
 translation_of: Web/API/Document/querySelector
 ---
 

@@ -1,13 +1,7 @@
 ---
 title: Négation unaire (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Unary_negation
-browser-compat: javascript.operators.unary_negation
 ---
 
 {{jsSidebar("Operators")}}

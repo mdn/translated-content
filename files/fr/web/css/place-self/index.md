@@ -1,11 +1,6 @@
 ---
 title: place-self
 slug: Web/CSS/place-self
-tags:
-  - CSS
-  - Propriété
-  - Propriété raccourcie
-  - Reference
 translation_of: Web/CSS/place-self
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-origin'
+title: "-webkit-mask-origin"
 slug: Web/CSS/mask-origin
 original_slug: Web/CSS/-webkit-mask-origin
 ---

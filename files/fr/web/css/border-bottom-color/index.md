@@ -1,10 +1,6 @@
 ---
 title: border-bottom-color
 slug: Web/CSS/border-bottom-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border-bottom-color
 ---
 

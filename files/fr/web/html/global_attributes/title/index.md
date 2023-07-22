@@ -1,13 +1,7 @@
 ---
 title: title
 slug: Web/HTML/Global_attributes/title
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
 translation_of: Web/HTML/Global_attributes/title
-original_slug: Web/HTML/Attributs_universels/title
 ---
 
 {{HTMLSidebar("Global_attributes")}}

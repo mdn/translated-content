@@ -1,11 +1,6 @@
 ---
 title: Attr.namespaceURI
 slug: Web/API/Attr/namespaceURI
-tags:
-  - API
-  - DOM
-  - Reference
-  - namespaceURI
 translation_of: Web/API/Attr/namespaceURI
 ---
 

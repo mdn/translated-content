@@ -1,12 +1,6 @@
 ---
 title: IDBFactory.cmp()
 slug: Web/API/IDBFactory/cmp
-tags:
-  - API
-  - IDBFactory
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBFactory/cmp
 ---
 

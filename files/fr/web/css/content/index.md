@@ -2,7 +2,6 @@
 title: content
 slug: Web/CSS/content
 translation_of: Web/CSS/content
-browser-compat: css.properties.content
 ---
 
 {{CSSRef}}

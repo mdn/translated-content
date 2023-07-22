@@ -2,7 +2,6 @@
 title: CanvasRenderingContext2D.bezierCurveTo()
 slug: Web/API/CanvasRenderingContext2D/bezierCurveTo
 translation_of: Web/API/CanvasRenderingContext2D/bezierCurveTo
-browser-compat: api.CanvasRenderingContext2D.bezierCurveTo
 ---
 
 {{APIRef}}

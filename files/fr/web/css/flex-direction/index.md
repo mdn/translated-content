@@ -1,10 +1,6 @@
 ---
 title: flex-direction
 slug: Web/CSS/flex-direction
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/flex-direction
 ---
 

@@ -2,8 +2,6 @@
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
 translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypeError
-browser-compat: javascript.builtins.TypeError
 ---
 
 {{JSRef}}

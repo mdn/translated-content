@@ -1,10 +1,6 @@
 ---
 title: ':empty'
 slug: Web/CSS/:empty
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:empty
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: grid-template
 slug: Web/CSS/grid-template
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/grid-template
 ---
 

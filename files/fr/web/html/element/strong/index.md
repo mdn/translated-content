@@ -1,11 +1,6 @@
 ---
 title: '<strong> : l''élément de haute importance'
 slug: Web/HTML/Element/strong
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/strong
 ---
 

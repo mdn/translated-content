@@ -2,8 +2,6 @@
 title: cross-fade()
 slug: Web/CSS/cross-fade
 translation_of: Web/CSS/cross-fade()
-original_slug: Web/CSS/cross-fade()
-browser-compat: css.types.image.cross-fade
 ---
 
 {{CSSRef}}

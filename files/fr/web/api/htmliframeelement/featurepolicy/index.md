@@ -1,13 +1,6 @@
 ---
 title: HTMLIFrameElement.featurePolicy
 slug: Web/API/HTMLIFrameElement/featurePolicy
-tags:
-  - API
-  - Feature Policy
-  - Feature-Policy
-  - HTMLIFrameElement
-  - Policy
-  - Property
 translation_of: Web/API/HTMLIFrameElement/featurePolicy
 ---
 

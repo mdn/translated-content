@@ -1,11 +1,6 @@
 ---
 title: '-webkit-text-stroke-width'
 slug: Web/CSS/-webkit-text-stroke-width
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-text-stroke-width
 ---
 

@@ -2,7 +2,6 @@
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
 translation_of: Web/CSS/scroll-behavior
-browser-compat: css.properties.scroll-behavior
 ---
 
 {{CSSRef}}

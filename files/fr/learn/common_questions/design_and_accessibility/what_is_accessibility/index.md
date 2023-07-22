@@ -1,14 +1,7 @@
 ---
 title: Qu'est-ce que l'accessibilité ?
 slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibility
-tags:
-  - Accessibility
-  - Beginner
-  - Intro
-  - NeedsActiveLearning
-  - Web
 translation_of: Learn/Common_questions/What_is_accessibility
-original_slug: Learn/Common_questions/What_is_accessibility
 ---
 
 Cet article aborde les concepts de base qui forment l'accessibilité pour le Web.

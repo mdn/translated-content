@@ -1,13 +1,7 @@
 ---
 title: 'SyntaxError: "use strict" not allowed in function with "x" parameter'
 slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
-tags:
-  - Erreurs
-  - JavaScript
-  - Reference
-  - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
-original_slug: Web/JavaScript/Reference/Erreurs/Strict_Non_Simple_Params
 ---
 
 {{jsSidebar("Errors")}}

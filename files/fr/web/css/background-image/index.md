@@ -1,7 +1,6 @@
 ---
 title: background-image
 slug: Web/CSS/background-image
-browser-compat: css.properties.background-image
 translation_of: Web/CSS/background-image
 ---
 

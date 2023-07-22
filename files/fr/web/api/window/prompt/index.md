@@ -1,12 +1,6 @@
 ---
 title: window.prompt
 slug: Web/API/Window/prompt
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
-  - Window
 translation_of: Web/API/Window/prompt
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: '<kbd> : l''élément de saisie clavier'
 slug: Web/HTML/Element/kbd
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/kbd
 ---
 

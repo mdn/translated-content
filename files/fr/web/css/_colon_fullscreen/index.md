@@ -1,11 +1,6 @@
 ---
 title: ':fullscreen'
 slug: Web/CSS/:fullscreen
-tags:
-  - CSS
-  - Fullscreen API
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:fullscreen
 ---
 

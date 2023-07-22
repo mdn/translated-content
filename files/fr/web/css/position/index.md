@@ -2,7 +2,6 @@
 title: position
 slug: Web/CSS/position
 translation_of: Web/CSS/position
-browser-compat: css.properties.position
 ---
 
 {{CSSRef}}

@@ -34,7 +34,7 @@ l10n:
         要素、0 個以上の{{HTMLElement("style")}} 要素、0 個以上の
         {{HTMLElement("meta")}} 要素。<br />スクリプトの実行が無効かつ
         {{HTMLElement("head")}} 要素の子孫ではない場合: 任意の<a
-          href="/ja/docs/Web/Guide/HTML/Content_categories#透過的コンテンツ"
+          href="/ja/docs/Web/HTML/Content_categories#透過的コンテンツ"
           >透過的コンテンツ</a
         >、ただし
         <code>&#x3C;noscript></code>

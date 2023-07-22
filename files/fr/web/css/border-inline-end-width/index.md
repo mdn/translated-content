@@ -1,11 +1,6 @@
 ---
 title: border-inline-end-width
 slug: Web/CSS/border-inline-end-width
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border-inline-end-width
 ---
 

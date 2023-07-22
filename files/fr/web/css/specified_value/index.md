@@ -1,12 +1,7 @@
 ---
 title: Valeur spécifiée
 slug: Web/CSS/specified_value
-tags:
-  - CSS
-  - Cascade
-  - Reference
 translation_of: Web/CSS/specified_value
-original_slug: Web/CSS/Valeur_spécifiée
 ---
 
 {{CSSRef}}

@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.initiatorType
 slug: Web/API/PerformanceResourceTiming/initiatorType
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - initiatorType
 translation_of: Web/API/PerformanceResourceTiming/initiatorType
 ---
 

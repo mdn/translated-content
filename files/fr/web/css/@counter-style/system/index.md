@@ -1,10 +1,6 @@
 ---
 title: system
 slug: Web/CSS/@counter-style/system
-tags:
-  - CSS
-  - Descripteur
-  - Reference
 translation_of: Web/CSS/@counter-style/system
 ---
 

@@ -1,24 +1,7 @@
 ---
 title: Multimédia et Intégration
 slug: Learn/HTML/Multimedia_and_embedding
-tags:
-  - Apprentissage
-  - Audio
-  - Codage
-  - Débutant
-  - Evaluation
-  - Flash
-  - Guide
-  - HTML
-  - Image Vectorielle
-  - Images
-  - Interactivité
-  - SVG
-  - Video
-  - iframes
-  - imagemaps
 translation_of: Learn/HTML/Multimedia_and_embedding
-original_slug: Apprendre/HTML/Multimedia_and_embedding
 ---
 
 {{LearnSidebar}}
@@ -58,4 +41,4 @@ Les évaluations qui suivent sont là pour tester votre compréhension des bases
 - [Intégrer une carte interactive en haut d'une image](/fr/docs/Apprendre/HTML/Comment/Ajouter_carte_zones_cliquables_sur_image)
   - : Une représentation cartographique fournit un mécanisme qui lie différents secteurs d'une image à différents endroits. Pensez à une carte qui fournirait des informations plus approfondies sur chaque pays sur lequel vous cliquez. Cette technique peut parfois être d'une grande utilité.
 - [Web Principes fondamentaux 2](https://teach.mozilla.org/activities/web-lit-basics-two/)
-  - : Un excellent cours de Mozilla qui explore et teste les compétences développées dans le module : *Multimedia et intégration*. Approfondissez les fondamentaux de la composition de pages web, concevez des outils pour l'accessibilité, le partage de ressources, découvrez l'utilisation de supports en ligne et la mutualisation du travail (ce qui signifie que votre travail est librement disponible et partagé avec d'autres).
+  - : Un excellent cours de Mozilla qui explore et teste les compétences développées dans le module : _Multimedia et intégration_. Approfondissez les fondamentaux de la composition de pages web, concevez des outils pour l'accessibilité, le partage de ressources, découvrez l'utilisation de supports en ligne et la mutualisation du travail (ce qui signifie que votre travail est librement disponible et partagé avec d'autres).

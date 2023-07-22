@@ -1,26 +1,7 @@
 ---
 title: Formats de date et d'heure utilisés en HTML
 slug: Web/HTML/Date_and_time_formats
-tags:
-  - Date
-  - Element
-  - Format
-  - HTML
-  - ISO 8601
-  - Input
-  - Reference
-  - String
-  - Time
-  - Week
-  - datetime
-  - datetime-local
-  - del
-  - ins
-  - month
-  - month-year
-  - week-year
 translation_of: Web/HTML/Date_and_time_formats
-original_slug: Web/HTML/Formats_date_heure_HTML
 ---
 
 {{HTMLSidebar}}

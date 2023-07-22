@@ -1,11 +1,6 @@
 ---
 title: <ul>
 slug: Web/HTML/Element/ul
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/ul
 ---
 

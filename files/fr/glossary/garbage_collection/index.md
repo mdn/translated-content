@@ -11,7 +11,7 @@ translation_of: Glossary/Garbage_collection
 ### Culture générale
 
 - [Gestion de la mémoire](https://fr.wikipedia.org/wiki/Gestion_de_la_mémoire) sur Wikipédia
-- [Ramasse-miettes](https://fr.wikipedia.org/wiki/Ramasse-miettes_(informatique)) sur Wikipédia
+- [Ramasse-miettes](<https://fr.wikipedia.org/wiki/Ramasse-miettes_(informatique)>) sur Wikipédia
 
 ### Référence technique
 

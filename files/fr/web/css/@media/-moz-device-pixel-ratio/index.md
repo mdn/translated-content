@@ -1,12 +1,6 @@
 ---
 title: '-moz-device-pixel-ratio'
 slug: Web/CSS/@media/-moz-device-pixel-ratio
-tags:
-  - '@media'
-  - CSS
-  - Caractéristique média
-  - Déprécié
-  - Non-standard
 translation_of: Web/CSS/@media/-moz-device-pixel-ratio
 ---
 

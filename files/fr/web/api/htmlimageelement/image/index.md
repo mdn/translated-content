@@ -1,10 +1,6 @@
 ---
 title: Image()
 slug: Web/API/HTMLImageElement/Image
-tags:
-  - API
-  - Constructeur
-  - DOM
 translation_of: Web/API/HTMLImageElement/Image
 ---
 

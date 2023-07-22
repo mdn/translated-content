@@ -1,11 +1,6 @@
 ---
 title: display
 slug: Web/CSS/display
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - display
 translation_of: Web/CSS/display
 ---
 

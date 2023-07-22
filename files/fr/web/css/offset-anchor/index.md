@@ -1,10 +1,6 @@
 ---
 title: offset-anchor
 slug: Web/CSS/offset-anchor
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/offset-anchor
 ---
 

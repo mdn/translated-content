@@ -1,15 +1,7 @@
 ---
 title: Opérateur de coalescence des nuls (Nullish coalescing operator)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
-tags:
-  - Coalescence
-  - JavaScript
-  - Opérateur
-  - Reference
-  - falsy
-  - nullish
 translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
-original_slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 ---
 
 {{JSSidebar("Operators")}}

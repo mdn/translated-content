@@ -1,11 +1,6 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/transform
 ---
 

@@ -1,14 +1,7 @@
 ---
 title: L'opérateur get
 slug: Web/JavaScript/Reference/Functions/get
-tags:
-  - ECMAScript 2015
-  - ECMAScript 5
-  - Functions
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Functions/get
-original_slug: Web/JavaScript/Reference/Fonctions/get
 ---
 
 {{jsSidebar("Functions")}}

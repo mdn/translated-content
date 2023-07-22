@@ -1,11 +1,6 @@
 ---
 title: <strike>
 slug: Web/HTML/Element/strike
-tags:
-  - Element
-  - HTML
-  - Obsolete
-  - Reference
 translation_of: Web/HTML/Element/strike
 ---
 

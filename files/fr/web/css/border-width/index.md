@@ -1,10 +1,6 @@
 ---
 title: border-width
 slug: Web/CSS/border-width
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border-width
 ---
 

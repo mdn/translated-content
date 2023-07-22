@@ -93,7 +93,6 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
      Атрибут tabindex позволяет пользователю переместить фокус на виджет.
      Позже мы увидим, что лучше его установить через JavaScript. -->
 <div class="select" tabindex="0">
-
   <!-- Этот контейнер послужит для отображения текущего значения виджета -->
   <span class="value">Cherry</span>
 
@@ -108,7 +107,6 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
     <li class="option">Strawberry</li>
     <li class="option">Apple</li>
   </ul>
-
 </div>
 ```
 
@@ -129,7 +127,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
   /* Это сделает наш виджет частью текстового потока и одновременно сделает его
      изменяемого размера */
-  display : inline-block;
+  display: inline-block;
 }
 ```
 
@@ -152,11 +150,11 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 /* Селектор .select здесь применён для удобства (синтаксический сахар), чтобы быть уверенными,
    что определяемые классы находятся в нашем виджете. */
 .select .optList {
-/* Это позволит нам быть уверенными, что список вариантов будет показан ниже значения
+  /* Это позволит нам быть уверенными, что список вариантов будет показан ниже значения
    и вне HTML потока */
-  position : absolute;
-  top      : 100%;
-  left     : 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 ```
 
@@ -182,40 +180,40 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
      использовать увеличение в текстовом режиме браузера). Вычисления сделаны из расчёта что
      1em == 16px что является умолчанием для большинства браузеров.
      Если вы затрудняетесь с преобразованием px в em, попробуйте http://riddle.pl/emcalc/ */
-  font-size   : 0.625em; /* это (10px) новый размер шрифта для нашего контекста для значения
+  font-size: 0.625em; /* это (10px) новый размер шрифта для нашего контекста для значения
                             em в исходном контексте */
-  font-family : Verdana, Arial, sans-serif;
+  font-family: Verdana, Arial, sans-serif;
 
-  -moz-box-sizing : border-box;
-  box-sizing : border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   /* Нам нужно добавить дополнительное пространство для стрелки вниз */
-  padding : .1em 2.5em .2em .5em; /* 1px 25px 2px 5px */
-  width   : 10em; /* 100px */
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
 
-  border        : .2em solid #000; /* 2px */
-  border-radius : .4em; /* 4px */
-  box-shadow    : 0 .1em .2em rgba(0,0,0,.45); /* 0 1px 2px */
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
 
   /* Первое объявление - для браузеров не поддерживающих линейный градиент.
      Второе объявление - потому что основанные на WebKit браузеры ещё не избавились от префикса в нем.
      Если вам нужна поддержка устаревших браузеров, попробуйте http://www.colorzilla.com/gradient-editor/ */
-  background : #F0F0F0;
-  background : -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
-  background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+  background: #f0f0f0;
+  background: -webkit-linear-gradient(90deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
 .select .value {
   /* Так как значение может быть шире, чем наш виджет, нужно быть уверенными, что оно не изменит
      ширину виджета */
-  display  : inline-block;
-  width    : 100%;
-  overflow : hidden;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
 
   vertical-align: top;
 
   /* И, если содержимое слишком длинное, лучше иметь красивенькие точечки. */
-  white-space  : nowrap;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 ```
@@ -224,25 +222,25 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 ```css
 .select:after {
-  content : "▼"; /* Мы используем Unicode символ U+25BC; смотрите http://www.utf8-chartable.de */
+  content: "▼"; /* Мы используем Unicode символ U+25BC; смотрите http://www.utf8-chartable.de */
   position: absolute;
-  z-index : 1; /* Важно чтобы стрелка не перекрывала элементы списка */
-  top     : 0;
-  right   : 0;
+  z-index: 1; /* Важно чтобы стрелка не перекрывала элементы списка */
+  top: 0;
+  right: 0;
 
-  -moz-box-sizing : border-box;
-  box-sizing : border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
-  height  : 100%;
-  width   : 2em;  /* 20px */
-  padding-top : .1em; /* 1px */
+  height: 100%;
+  width: 2em; /* 20px */
+  padding-top: 0.1em; /* 1px */
 
-  border-left  : .2em solid #000; /* 2px */
-  border-radius: 0 .1em .1em 0;  /* 0 1px 1px 0 */
+  border-left: 0.2em solid #000; /* 2px */
+  border-radius: 0 0.1em 0.1em 0; /* 0 1px 1px 0 */
 
-  background-color : #000;
-  color : #FFF;
-  text-align : center;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
 }
 ```
 
@@ -250,19 +248,19 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 ```css
 .select .optList {
-  z-index : 2; /* Мы явно сказали, что список вариантов всегда будет перекрывать стрелку вниз */
+  z-index: 2; /* Мы явно сказали, что список вариантов всегда будет перекрывать стрелку вниз */
 
   /* это сбросит значения стиля по умолчанию для элемента ul */
   list-style: none;
-  margin : 0;
+  margin: 0;
   padding: 0;
 
-  -moz-box-sizing : border-box;
-  box-sizing : border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   /* Это для того, чтобы убедиться что если значения будут короче виджета
      то список вариантов останется таким же по размеру как и сам виджет */
-  min-width : 100%;
+  min-width: 100%;
 
   /* В случае, если список слишком длинный, его содержимое не будет помещаться по вертикали
      (что автоматически добавит полосу прокрутки), но этого никогда не произойдёт по горизонтали
@@ -272,11 +270,11 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
   overflow-y: auto;
   overflow-x: hidden;
 
-  border: .2em solid #000; /* 2px */
-  border-top-width : .1em; /* 1px */
-  border-radius: 0 0 .4em .4em; /* 0 0 4px 4px */
+  border: 0.2em solid #000; /* 2px */
+  border-top-width: 0.1em; /* 1px */
+  border-radius: 0 0 0.4em 0.4em; /* 0 0 4px 4px */
 
-  box-shadow: 0 .2em .4em rgba(0,0,0,.4); /* 0 2px 4px */
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4); /* 0 2px 4px */
   background: #f0f0f0;
 }
 ```
@@ -285,12 +283,12 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 ```css
 .select .option {
-  padding: .2em .3em; /* 2px 3px */
+  padding: 0.2em 0.3em; /* 2px 3px */
 }
 
 .select .highlight {
   background: #000;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
@@ -375,7 +373,6 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
       </ul>
     </div>
   </form>
-
 </body>
 ```
 
@@ -388,10 +385,10 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
      - или мы присваиваем классу body значение "widget" и таким образом мы скрываем элемент {{HTMLElement("select")}}
      - или мы не меняем класс body, тогда класс body остаётся в значении "no-widget",
        и элементы, чей класс "select" будут скрыты */
-  position : absolute;
-  left     : -5000em;
-  height   : 0;
-  overflow : hidden;
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
 }
 ```
 
@@ -452,7 +449,7 @@ window.addEventListener("load", function () {
 ```js
 NodeList.prototype.forEach = function (callback) {
   Array.prototype.forEach.call(this, callback);
-}
+};
 ```
 
 Мы не шутили, когда сказали, что это легко сделать.
@@ -466,18 +463,17 @@ NodeList.prototype.forEach = function (callback) {
 // Ей передаётся один параметр
 // select : DOM нода класса `select` который должен быть деактивирован
 function deactivateSelect(select) {
-
   // Если виджет не активен, то и делать-то нечего
-  if (!select.classList.contains('active')) return;
+  if (!select.classList.contains("active")) return;
 
   // Получаем список опций для нашего виджета
-  var optList = select.querySelector('.optList');
+  var optList = select.querySelector(".optList");
 
   // Закрываем список опций
-  optList.classList.add('hidden');
+  optList.classList.add("hidden");
 
   // и деактивируем сам виджет
-  select.classList.remove('active');
+  select.classList.remove("active");
 }
 
 // Эта функция будет вызываться каждый раз, когда пользователь захочет (де)активировать наш виджет
@@ -485,9 +481,8 @@ function deactivateSelect(select) {
 // select : DOM нода класса `select` для активации
 // selectList : список всех DOM нод с классом `select`
 function activeSelect(select, selectList) {
-
   // Если виджет активен, то и делать-то нечего
-  if (select.classList.contains('active')) return;
+  if (select.classList.contains("active")) return;
 
   // Нам нужно отключить активное состояние всех наших виджетов
   // Так как функция deactivateSelect соответствует всем требованиям
@@ -495,19 +490,18 @@ function activeSelect(select, selectList) {
   selectList.forEach(deactivateSelect);
 
   // А теперь мы возвращаем активное состояние нужного виджета
-  select.classList.add('active');
+  select.classList.add("active");
 }
 
 // Эта функция будет вызываться каждый раз, когда пользователь будет открывать/закрывать список вариантов
 // Ей передаётся один параметр:
 // select : DOM нода со списком для переключения состояния
 function toggleOptList(select) {
-
   // Список хранится в виджете
-  var optList = select.querySelector('.optList');
+  var optList = select.querySelector(".optList");
 
   // Мы меняем класс виджета чтобы показать/скрыть его
-  optList.classList.toggle('hidden');
+  optList.classList.toggle("hidden");
 }
 
 // Эта функция будет вызываться каждый раз, когда нам нужно подсветить вариант
@@ -515,18 +509,17 @@ function toggleOptList(select) {
 // select : DOM нода класса `select` содержащая вариант для подсветки
 // option : DOM нода класса `option` для подсветки
 function highlightOption(select, option) {
-
   // Мы получаем список всех вариантов доступных в нашем элементе
-  var optionList = select.querySelectorAll('.option');
+  var optionList = select.querySelectorAll(".option");
 
   // Мы удаляем подсветку всех вариантов
   optionList.forEach(function (other) {
-    other.classList.remove('highlight');
+    other.classList.remove("highlight");
   });
 
   // Подсвечиваем нужный вариант
-  option.classList.add('highlight');
-};
+  option.classList.add("highlight");
+}
 ```
 
 Это все, что вам нужно для обработки различных состояний пользовательского виджета.
@@ -535,18 +528,17 @@ function highlightOption(select, option) {
 
 ```js
 // Мы обрабатываем событие при загрузке документа.
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener("load", function () {
+  var selectList = document.querySelectorAll(".select");
 
   // Каждый наш собственный виджет должен быть проинициализирован
   selectList.forEach(function (select) {
-
     // также как и его элементы `option`
-    var optionList = select.querySelectorAll('.option');
+    var optionList = select.querySelectorAll(".option");
 
     // Когда пользователь проводит мышью над элементом `option`, мы подсвечиваем этот вариант
     optionList.forEach(function (option) {
-      option.addEventListener('mouseover', function () {
+      option.addEventListener("mouseover", function () {
         // Замечание: использование переменных `select` и `option`
         // ограничено рамками нашей функции.
         highlightOption(select, option);
@@ -554,18 +546,18 @@ window.addEventListener('load', function () {
     });
 
     // Когда пользователь кликает на наш виджет
-    select.addEventListener('click', function (event) {
-       // Замечание: использование переменной `select`
-       // ограничено рамками нашей функции.
+    select.addEventListener("click", function (event) {
+      // Замечание: использование переменной `select`
+      // ограничено рамками нашей функции.
 
-       // Мы переключаем видимость списка вариантов
+      // Мы переключаем видимость списка вариантов
       toggleOptList(select);
     });
 
     // Когда виджет получает фокус
     // Виджет получает фокус когда пользователь кликает на него
     // или переходит на него клавишей табуляции
-    select.addEventListener('focus', function (event) {
+    select.addEventListener("focus", function (event) {
       // Замечание: использование переменных `select` и `selectList`
       // ограничено рамками нашей функции.
 
@@ -574,7 +566,7 @@ window.addEventListener('load', function () {
     });
 
     // Когда виджет теряет фокус
-    select.addEventListener('blur', function (event) {
+    select.addEventListener("blur", function (event) {
       // Замечание: использование переменной `select`
       // ограничено рамками нашей функции.
 
@@ -587,10 +579,10 @@ window.addEventListener('load', function () {
 
 В этот момент наш виджет будет изменять состояние в соответствии с нашим дизайном, но не будет обновлять его значение. С этим мы разберёмся дальше.
 
-| Пример                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Пример                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------- |
 | {{ EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3") }} |
-| [Посмотреть исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)                                                    |
+| [Посмотреть исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)                   |
 
 ### Обработка значения виджета
 
@@ -611,10 +603,10 @@ function updateValue(select, index) {
   var nativeWidget = select.previousElementSibling;
 
   // Нам также нужно получить значение заполнителя нашего пользовательского виджета
-  var value = select.querySelector('.value');
+  var value = select.querySelector(".value");
 
   // И нам нужен весь список вариантов
-  var optionList = select.querySelectorAll('.option');
+  var optionList = select.querySelectorAll(".option");
 
   // Установим значение текущего номера выбранного элемента равным index
   nativeWidget.selectedIndex = index;
@@ -624,7 +616,7 @@ function updateValue(select, index) {
 
   // И мы подсвечиваем соответствующий вариант нашего пользовательского виджета
   highlightOption(select, optionList[index]);
-};
+}
 
 // Эта функция возвращает текущий номер выбранного элемента в стандартном виджете
 // Ей передаётся один параметр:
@@ -636,20 +628,20 @@ function getIndex(select) {
   var nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
-};
+}
 ```
 
 Используя эти две функции мы можем связать стандартный виджет с пользовательским:
 
 ```js
 // Мы обрабатываем привязку события при загрузке документа.
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener("load", function () {
+  var selectList = document.querySelectorAll(".select");
 
   // Каждый пользовательский виджет необходимо инициализировать:
   selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll('.option'),
-        selectedIndex = getIndex(select);
+    var optionList = select.querySelectorAll(".option"),
+      selectedIndex = getIndex(select);
 
     // Мы делаем наш пользовательский виджет фокусируемым
     select.tabIndex = 0;
@@ -662,22 +654,26 @@ window.addEventListener('load', function () {
 
     // Каждый раз, когда пользователь кликает на вариант, мы соответственно обновляем значение
     optionList.forEach(function (option, index) {
-      option.addEventListener('click', function (event) {
+      option.addEventListener("click", function (event) {
         updateValue(select, index);
       });
     });
 
     // Когда виджет находится в фокусе, при каждом нажатии клавиши на клавиатуре, мы соответственно
     // обновляем  значение
-    select.addEventListener('keyup', function (event) {
+    select.addEventListener("keyup", function (event) {
       var length = optionList.length,
-          index  = getIndex(select);
+        index = getIndex(select);
 
       // Когда пользователь нажимает стрелку вниз, мы переходим на следующий вариант
-      if (event.keyCode === 40 && index < length - 1) { index++; }
+      if (event.keyCode === 40 && index < length - 1) {
+        index++;
+      }
 
       // Когда пользователь нажимает стрелку вверх, мы переходим на предыдущий вариант
-      if (event.keyCode === 38 && index > 0) { index--; }
+      if (event.keyCode === 38 && index > 0) {
+        index--;
+      }
 
       updateValue(select, index);
     });
@@ -689,10 +685,10 @@ window.addEventListener('load', function () {
 
 С этим мы закончили! Вот результат:
 
-| Пример                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Пример                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------- |
 | {{ EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4") }} |
-| [Посмотреть исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)                                                    |
+| [Посмотреть исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)                   |
 
 Но секундочку, мы точно закончили?
 
@@ -737,29 +733,29 @@ window.addEventListener('load', function () {
 ```js
 function updateValue(select, index) {
   var nativeWidget = select.previousElementSibling;
-  var value = select.querySelector('.value');
-  var optionList = select.querySelectorAll('.option');
+  var value = select.querySelector(".value");
+  var optionList = select.querySelectorAll(".option");
 
   // Мы уверены что все варианты не выбраны
   optionList.forEach(function (other) {
-    other.setAttribute('aria-selected', 'false');
+    other.setAttribute("aria-selected", "false");
   });
 
   // Мы уверены что выбранный вариант отмечен
-  optionList[index].setAttribute('aria-selected', 'true');
+  optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
   value.innerHTML = optionList[index].innerHTML;
   highlightOption(select, optionList[index]);
-};
+}
 ```
 
 Вот окончательный результат всех этих изменений (вы сможете это лучше прочувствовать если испробуете это со вспомогательными технологиями, такими как [NVDA](http://www.nvda-project.org/) или [VoiceOver](http://www.apple.com/accessibility/voiceover/)):
 
-| Пример                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5") }}                  |
-| [Посмотреть исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5) |
+| Пример                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------- |
+| {{ EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5") }} |
+| [Посмотреть исходный код](/ru/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)                   |
 
 ## Заключение
 

@@ -1,13 +1,6 @@
 ---
 title: AnimationEvent.elapsedTime
 slug: Web/API/AnimationEvent/elapsedTime
-tags:
-  - API
-  - AnimationEvent
-  - CSS Animations
-  - Experimental
-  - Property
-  - Reference
 translation_of: Web/API/AnimationEvent/elapsedTime
 ---
 

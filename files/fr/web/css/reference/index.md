@@ -1,13 +1,6 @@
 ---
 title: Référence CSS
 slug: Web/CSS/Reference
-tags:
-  - CSS
-  - CSS Data Types
-  - I10n:priority
-  - Overview
-  - Reference
-  - Types CSS
 translation_of: Web/CSS/Reference
 ---
 

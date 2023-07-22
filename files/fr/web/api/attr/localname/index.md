@@ -1,11 +1,6 @@
 ---
 title: Attr.localName
 slug: Web/API/Attr/localName
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - Reference
 translation_of: Web/API/Attr/localName
 ---
 

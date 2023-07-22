@@ -1,21 +1,7 @@
 ---
 title: Des objets aux iframes — autres techniques d'intégration
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
-tags:
-  - Apprentissage
-  - Article
-  - Codage
-  - Débutant
-  - Flash
-  - Guide
-  - HTML
-  - Integration
-  - Multimédia et intégration
-  - Object
-  - embed
-  - iframe
 translation_of: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
-original_slug: Apprendre/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
@@ -85,18 +71,22 @@ Si vous faites une erreur, vous pouvez toujours réinitialiser le tout avec le b
 ```html hidden
 <h2>Sortie directe</h2>
 
-<div class="output" style="min-height: 250px;">
-</div>
+<div class="output" style="min-height: 250px;"></div>
 
 <h2>Code modifiable</h2>
-<p class="a11y-label">Pressez Esc pour sortir le focus de la zone de code (Tab insère une tabulation).</p>
+<p class="a11y-label">
+  Pressez Esc pour sortir le focus de la zone de code (Tab insère une
+  tabulation).
+</p>
 
-<textarea id="code" class="input" style="width: 95%;min-height: 100px;">
-</textarea>
+<textarea
+  id="code"
+  class="input"
+  style="width: 95%;min-height: 100px;"></textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Réinitialiser">
-  <input id="solution" type="button" value="Afficher la solution">
+  <input id="reset" type="button" value="Réinitialiser" />
+  <input id="solution" type="button" value="Afficher la solution" />
 </div>
 ```
 
@@ -123,10 +113,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -134,38 +124,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Afficher la solution';
+  solution.value = "Afficher la solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Afficher la solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Afficher la solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Cacher la solution';
+    solution.value = "Cacher la solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Afficher la solution';
+    solution.value = "Afficher la solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
+var htmlSolution =
+  '<iframe width="420" height="315" src="https://www.youtube.com/embed/QH2-TGUlwu4" frameborder="0" allowfullscreen>\n</iframe>\n\n<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37995.65748333395!2d-2.273568166412784!3d53.473310471916975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bae6c05743d3d%3A0xf82fddd1e49fc0a1!2sThe+Lowry!5e0!3m2!1sen!2suk!4v1518171785211" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>\n</iframe>';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // bloque la sortie de la zone texte avec la touche tab et fait en
 // sorte qu'il affiche une tabulation à l'emplacement du curseur
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -177,8 +168,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -189,10 +183,10 @@ function insertAtCaret(text) {
 
 // Met à jour le code utilisateur enregistré chaque fois que l'utilisateur le modifie
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // Nous ne voulons enregistrer l'état quand le code utilisateur va être montré,
   // et non la solution, de sorte que la solution n'est pas enregistrée avec le code utilisateur
-  if(solution.value === 'Afficher la solution') {
+  if (solution.value === "Afficher la solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -211,11 +205,18 @@ Alors, facile et amusant, non ? Les éléments {{htmlelement("iframe")}} sont co
 Il y a de sérieux [problèmes de sécurité](#problèmes_de_sécurité) à prendre en considération avec \<iframe>, comme nous le verrons plus loin, mais cela ne veut pas dire que vous ne devez pas les utiliser dans vos sites Web — cela demande juste un peu de connaissance et de soin à la conception. Examinons le code un peu plus en détail. Disons que vous voulez intégrer le glossaire MDN dans une de vos pages Web — vous pourriez tenter quelque chose comme&nbsp;:
 
 ```html
-<iframe src="https://developer.mozilla.org/fr/docs/Glossary"
-        width="100%" height="500" frameborder="0"
-        allowfullscreen sandbox>
-  <p> <a href="https://developer.mozilla.org/fr/docs/Glossary">
-    Lien de repli pour les navigateurs ne prenant pas en charge iframe  </a> </p>
+<iframe
+  src="https://developer.mozilla.org/fr/docs/Glossary"
+  width="100%"
+  height="500"
+  frameborder="0"
+  allowfullscreen
+  sandbox>
+  <p>
+    <a href="https://developer.mozilla.org/fr/docs/Glossary">
+      Lien de repli pour les navigateurs ne prenant pas en charge iframe
+    </a>
+  </p>
 </iframe>
 ```
 
@@ -267,7 +268,7 @@ L'utilisation de HTTPS nécessite un certificat de sécurité, ce qui peut être
 
 #### Toujours utiliser l'attribut `sandbox`
 
-Pour minimiser la possibilité que des attaquants commettent des actions néfastes sur votre site Web, vous deviez donner au contenu intégré uniquement les permissions nécessaires pour qu'il fasse son travail. Bien sûr, cela est aussi valable pour votre propre contenu. Le conteneur de code, dans lequel il peut être utilisé de manière appropriée — ou pour des tests — sans pouvoir causer aucun dommage (accidentel ou malveillant) au reste de la base du code s'appelle un [`sandbox`](https://en.wikipedia.org/wiki/Sandbox_(computer_security)) (_bac à sable_).
+Pour minimiser la possibilité que des attaquants commettent des actions néfastes sur votre site Web, vous deviez donner au contenu intégré uniquement les permissions nécessaires pour qu'il fasse son travail. Bien sûr, cela est aussi valable pour votre propre contenu. Le conteneur de code, dans lequel il peut être utilisé de manière appropriée — ou pour des tests — sans pouvoir causer aucun dommage (accidentel ou malveillant) au reste de la base du code s'appelle un [`sandbox`](<https://en.wikipedia.org/wiki/Sandbox_(computer_security)>) (_bac à sable_).
 
 Un contenu en dehors du «&nbsp;bac à sable&nbsp;» peut faire beaucoup trop de choses (exécuter du JavaScript, soumettre des formulaires, des fenêtres «&nbsp;popup&nbsp;», etc.). Par défaut, vous devez imposer toute restriction disponible avec un attribut `sandbox` sans paramètres, comme montré dans notre exemple précédent.
 
@@ -291,24 +292,31 @@ Cependant, il est peu probable que vous utilisiez beaucoup ces éléments — le
 
 Si vous avez besoin d'intégrer du contenu de greffon, vous aurez besoin de ce minimum d'information :
 
-|                                                                                      | {{htmlelement("embed")}}                                                          | {{htmlelement("object")}}                                                              |
-| ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| {{glossary("URL")}} du contenu à intégrer                                       | [`src`](/fr/docs/Web/HTML/Element/embed#src)                                                  | [`data`](/fr/docs/Web/HTML/Element/object#data)                                                  |
-| {{glossary("type MIME", 'type de media')}} _précis_ du contenu intégré | [`type`](/fr/docs/Web/HTML/Element/embed#type)                                              | [`type`](/fr/docs/Web/HTML/Element/object#type)                                                  |
-| hauteur et largeur (en pixels CSS) de la boîte contrôlée par le greffon              | [`height`](/fr/docs/Web/HTML/Element/embed#height) [`width`](/fr/docs/Web/HTML/Element/embed#width) | [`height`](/fr/docs/Web/HTML/Element/object#height) [`width`](/fr/docs/Web/HTML/Element/object#width) |
-| noms et valeurs à passer en paramètre au greffon                                     | attributs adéquats avec ces noms et valeurs                                               | éléments de la simple balise {{htmlelement("param")}}, contenus dans `<object>`       |
-| contenu HTML indépendant en repli en cas de ressources inaccessibles                 | non pris en charge (`<noembed>` a été abandonné)                                          | contenu dans `<object>`, après `les éléments <param>`                                         |
+|                                                                         | {{htmlelement("embed")}}                                                                            | {{htmlelement("object")}}                                                                             |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| {{glossary("URL")}} du contenu à intégrer                               | [`src`](/fr/docs/Web/HTML/Element/embed#src)                                                        | [`data`](/fr/docs/Web/HTML/Element/object#data)                                                       |
+| {{glossary("type MIME", 'type de media')}} _précis_ du contenu intégré  | [`type`](/fr/docs/Web/HTML/Element/embed#type)                                                      | [`type`](/fr/docs/Web/HTML/Element/object#type)                                                       |
+| hauteur et largeur (en pixels CSS) de la boîte contrôlée par le greffon | [`height`](/fr/docs/Web/HTML/Element/embed#height) [`width`](/fr/docs/Web/HTML/Element/embed#width) | [`height`](/fr/docs/Web/HTML/Element/object#height) [`width`](/fr/docs/Web/HTML/Element/object#width) |
+| noms et valeurs à passer en paramètre au greffon                        | attributs adéquats avec ces noms et valeurs                                                         | éléments de la simple balise {{htmlelement("param")}}, contenus dans `<object>`                       |
+| contenu HTML indépendant en repli en cas de ressources inaccessibles    | non pris en charge (`<noembed>` a été abandonné)                                                    | contenu dans `<object>`, après `les éléments <param>`                                                 |
 
-> **Note :** `<object>` requiert un attribut `data`, un attribut `type`, ou les deux. Si vous utilisez les deux, vous devez aussi utiliser l'attribut [`typemustmatch`](/fr/docs/Web/HTML/Element/object#typemustmatch) (uniquement implémenté dans Firefox, au moment de la rédaction du présent document). `typemustmatch` empêche le fichier incorporé d'être exécuté avant que l'attribut `type` indique le type exact de média. `typemustmatch`  peut donc conférer d'importants avantages sur le plan de la sécurité quand vous intégrez du contenu de diverses {{glossary("origin","origines")}} (il peut empêcher un attaquant d'exécuter n'importe quel script par l'intermédiaire du greffon).
+> **Note :** `<object>` requiert un attribut `data`, un attribut `type`, ou les deux. Si vous utilisez les deux, vous devez aussi utiliser l'attribut [`typemustmatch`](/fr/docs/Web/HTML/Element/object#typemustmatch) (uniquement implémenté dans Firefox, au moment de la rédaction du présent document). `typemustmatch` empêche le fichier incorporé d'être exécuté avant que l'attribut `type` indique le type exact de média. `typemustmatch` peut donc conférer d'importants avantages sur le plan de la sécurité quand vous intégrez du contenu de diverses {{glossary("origin","origines")}} (il peut empêcher un attaquant d'exécuter n'importe quel script par l'intermédiaire du greffon).
 
 Voici un exemple utilisant l'élément {{htmlelement("embed")}} pour intégrer un film Flash (voyez ceci [en direct sur Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html) ainsi que [le code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/embed-flash.html) également):
 
 ```html
-<embed src="whoosh.swf" quality="medium"
-       bgcolor="#ffffff" width="550" height="400"
-       name="whoosh" align="middle" allowScriptAccess="sameDomain"
-       allowFullScreen="false" type="application/x-shockwave-flash"
-       pluginspage="http://www.macromedia.com/go/getflashplayer">
+<embed
+  src="whoosh.swf"
+  quality="medium"
+  bgcolor="#ffffff"
+  width="550"
+  height="400"
+  name="whoosh"
+  align="middle"
+  allowScriptAccess="sameDomain"
+  allowFullScreen="false"
+  type="application/x-shockwave-flash"
+  pluginspage="http://www.macromedia.com/go/getflashplayer" />
 ```
 
 Plutôt horrible, n'est-ce pas ? Le HTML généré par l'outil Adobe Flash avait tendance à être encore pire, utilisant un élément \<objet> avec un élément \<embed> intégré pour couvrir toutes les bases (voir un exemple.) Flash a même été utilisé avec succès comme contenu de repli pour la vidéo HTML5, pendant un certain temps, mais cela est de plus en plus souvent considéré comme non nécessaire.
@@ -316,9 +324,16 @@ Plutôt horrible, n'est-ce pas ? Le HTML généré par l'outil Adobe Flash avait
 Regardons maintenant un exemple avec `<object>`&nbsp;; il intègre un PDF dans une (voir [l'exemple en direct](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) et le [code source](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html))&nbsp;:
 
 ```html
-<object data="mypdf.pdf" type="application/pdf"
-        width="800" height="1200" typemustmatch>
-  <p>Vous ne possédez pas de greffon PDF, mais vous pouvez <a href="myfile.pdf">télécharger le fichier PDF.</a></p>
+<object
+  data="mypdf.pdf"
+  type="application/pdf"
+  width="800"
+  height="1200"
+  typemustmatch>
+  <p>
+    Vous ne possédez pas de greffon PDF, mais vous pouvez
+    <a href="myfile.pdf">télécharger le fichier PDF.</a>
+  </p>
 </object>
 ```
 

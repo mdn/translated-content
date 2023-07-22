@@ -1,14 +1,6 @@
 ---
 title: <video>
 slug: Web/HTML/Element/video
-tags:
-  - Element
-  - HTML
-  - Media
-  - Multimedia
-  - Reference
-  - Video
-  - Web
 translation_of: Web/HTML/Element/video
 ---
 

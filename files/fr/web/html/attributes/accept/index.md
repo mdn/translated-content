@@ -1,13 +1,6 @@
 ---
 title: 'Attribut HTML : accept'
 slug: Web/HTML/Attributes/accept
-tags:
-  - Accept
-  - Attribute
-  - File
-  - HTML
-  - Input
-  - Reference
 translation_of: Web/HTML/Attributes/accept
 ---
 

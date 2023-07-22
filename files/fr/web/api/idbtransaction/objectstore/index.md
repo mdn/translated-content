@@ -1,11 +1,6 @@
 ---
 title: IDBTransaction.objectStore()
 slug: Web/API/IDBTransaction/objectStore
-tags:
-  - API
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBTransaction/objectStore
 ---
 

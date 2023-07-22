@@ -1,11 +1,6 @@
 ---
 title: perspective
 slug: Web/CSS/perspective
-tags:
-  - CSS
-  - Propriétés
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/perspective
 ---
 

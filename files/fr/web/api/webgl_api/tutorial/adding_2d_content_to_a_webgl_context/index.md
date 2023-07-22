@@ -1,19 +1,7 @@
 ---
 title: Ajouter du contenu à WebGL
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
-tags:
-  - 3D
-  - API WebGL
-  - Graphismes
-  - Graphismes 2D
-  - Graphismes 3D
-  - Intermédiaire
-  - Shaders
-  - Tutoriel
-  - WebGL
-  - dessin
 translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
-original_slug: Web/API/WebGL_API/Tutorial/Ajouter_du_contenu_à_WebGL
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}

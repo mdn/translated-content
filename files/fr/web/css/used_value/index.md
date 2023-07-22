@@ -1,13 +1,7 @@
 ---
 title: Valeur utilisée
 slug: Web/CSS/used_value
-tags:
-  - CSS
-  - Guide
-  - Reference
-  - Web
 translation_of: Web/CSS/used_value
-original_slug: Web/CSS/Valeur_utilisée
 ---
 
 {{cssref}}

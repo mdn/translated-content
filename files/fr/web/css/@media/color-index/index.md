@@ -1,10 +1,6 @@
 ---
 title: color-index
 slug: Web/CSS/@media/color-index
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/color-index
 ---
 

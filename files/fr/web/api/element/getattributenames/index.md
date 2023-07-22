@@ -1,12 +1,6 @@
 ---
 title: Element.getAttributeNames()
 slug: Web/API/Element/getAttributeNames
-tags:
-  - API
-  - Attributs
-  - DOM
-  - Element
-  - Méthodes
 translation_of: Web/API/Element/getAttributeNames
 ---
 

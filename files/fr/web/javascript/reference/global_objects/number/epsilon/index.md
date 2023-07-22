@@ -1,15 +1,7 @@
 ---
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - Propriété
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/EPSILON
 ---
 
 {{JSRef}}

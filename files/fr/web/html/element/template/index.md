@@ -1,11 +1,6 @@
 ---
 title: <template>
 slug: Web/HTML/Element/template
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/template
 ---
 

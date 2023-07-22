@@ -1,12 +1,6 @@
 ---
 title: IDBObjectStore.openCursor()
 slug: Web/API/IDBObjectStore/openCursor
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBObjectStore/openCursor
 ---
 

@@ -17,7 +17,9 @@ Par défaut, il se verra attribué une police de caractères plus grande pour le
 Par ailleurs, vous pouvez faire _ressembler_ n'importe quel élément à un titre de premier niveau. Considérons le code suivant :
 
 ```html
-<span style="font-size: 32px; margin: 21px 0;">Est-ce un titre de premier niveau ?</span>
+<span style="font-size: 32px; margin: 21px 0;"
+  >Est-ce un titre de premier niveau ?</span
+>
 ```
 
 Cela sera affiché comme un titre de premier niveau mais sans en avoir la valeur sémantique, il n'y aura donc aucun des bénéfices supplémentaires tels que ceux décrits ci-dessus. Il vaut donc mieux utiliser l'élément HTML correct pour la tâche recherchée.

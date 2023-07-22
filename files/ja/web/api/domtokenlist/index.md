@@ -1,6 +1,8 @@
 ---
 title: DOMTokenList
 slug: Web/API/DOMTokenList
+l10n:
+  sourceCommit: f45409ba2169ff05e433d21aa4ee0424079916b8
 ---
 
 {{APIRef("DOM")}}
@@ -9,17 +11,17 @@ slug: Web/API/DOMTokenList
 
 `DOMTokenList` の添字は JavaScript の {{jsxref("Array")}} オブジェクトのように `0` から始まります。 `DOMTokenList` は常に大文字と小文字を区別します。
 
-## プロパティ
+## インスタンスプロパティ
 
 - {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
   - : 整数で、このオブジェクトに格納されているオブジェクトの数を表します。
 - {{domxref("DOMTokenList.value")}}
   - : {{Glossary("stringifier", "文字列化")}}プロパティであり、リストの値を文字列で返します。
 
-## メソッド
+## インスタンスメソッド
 
 - {{domxref("DOMTokenList.item()")}}
-  - : そのリスト内で指定された位置の項目を返します。指定された位置がそのリストの `length` 以上であれば `undefined` を返します。
+  - : そのリスト内で指定された位置の項目を返します。指定された位置がそのリストの `length` 以上であれば `null` を返します。
 - {{domxref("DOMTokenList.contains()")}}
   - : 指定されたトークンがリストに含まれていれば `true` を返し、そうでなければ `false`を返します。
 - {{domxref("DOMTokenList.add()")}}

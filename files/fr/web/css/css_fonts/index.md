@@ -1,11 +1,6 @@
 ---
 title: CSS Fonts
 slug: Web/CSS/CSS_fonts
-tags:
-  - Aperçu
-  - CSS
-  - CSS Fonts
-  - Reference
 translation_of: Web/CSS/CSS_Fonts
 ---
 

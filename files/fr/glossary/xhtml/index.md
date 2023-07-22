@@ -15,13 +15,12 @@ Cet exemple montre un document HTML et un document XHTML inclus dans l'en-tête 
 ### Document HTML
 
 ```html
-HTTP/1.1 200 OK
-Content-Type: text/html
+HTTP/1.1 200 OK Content-Type: text/html
 
-<!DOCTYPE html>
-<html lang=en>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset=utf-8>
+    <meta charset="utf-8" />
     <title>HTML</title>
   </head>
   <body>

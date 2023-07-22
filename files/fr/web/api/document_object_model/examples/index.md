@@ -1,11 +1,7 @@
 ---
 title: Exemples
 slug: Web/API/Document_Object_Model/Examples
-tags:
-  - DOM
-  - Exemples
 translation_of: Web/API/Document_Object_Model/Examples
-original_slug: Web/API/Document_Object_Model/Exemples
 ---
 
 Cette page présente quelques exemples plus détaillés de développement Web et XML utilisant le DOM. Partout où c'est possible, les exemples utilisent des API courantes, des astuces et des modèles en JavaScript pour manipuler l'objet de document.

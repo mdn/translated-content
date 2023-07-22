@@ -2,7 +2,6 @@
 title: Valeurs et unités CSS
 slug: Learn/CSS/Building_blocks/Values_and_units
 translation_of: Learn/CSS/Building_blocks/Values_and_units
-original_slug: Apprendre/CSS/Building_blocks/Values_and_units
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
@@ -54,7 +53,7 @@ Dans l'exemple suivant, nous avons défini la couleur de notre titre en utilisan
 ```css
 h1 {
   color: black;
-  background-color: rgb(197,93,161);
+  background-color: rgb(197, 93, 161);
 }
 ```
 

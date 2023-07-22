@@ -1,13 +1,6 @@
 ---
 title: element.removeChild
 slug: Web/API/Node/removeChild
-tags:
-  - API
-  - DOM
-  - Enfant
-  - Méthodes
-  - Noeuds
-  - Suppression
 translation_of: Web/API/Node/removeChild
 ---
 

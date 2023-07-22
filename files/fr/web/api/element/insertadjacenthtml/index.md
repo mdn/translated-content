@@ -1,11 +1,6 @@
 ---
 title: element.insertAdjacentHTML
 slug: Web/API/Element/insertAdjacentHTML
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
 translation_of: Web/API/Element/insertAdjacentHTML
 ---
 

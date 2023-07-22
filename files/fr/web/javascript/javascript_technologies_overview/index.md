@@ -1,10 +1,6 @@
 ---
 title: Survol des technologies JavaScript
 slug: Web/JavaScript/JavaScript_technologies_overview
-tags:
-  - Beginner
-  - DOM
-  - JavaScript
 translation_of: Web/JavaScript/JavaScript_technologies_overview
 ---
 

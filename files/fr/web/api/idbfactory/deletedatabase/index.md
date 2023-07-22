@@ -1,11 +1,6 @@
 ---
 title: IDBFactory.deleteDatabase()
 slug: Web/API/IDBFactory/deleteDatabase
-tags:
-  - IDBFactory
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBFactory/deleteDatabase
 ---
 

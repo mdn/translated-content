@@ -1,6 +1,9 @@
 ---
-title: DOMTokenList.supports()
+title: "DOMTokenList: supports() メソッド"
+short-title: supports()
 slug: Web/API/DOMTokenList/supports
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
@@ -9,8 +12,8 @@ slug: Web/API/DOMTokenList/supports
 
 ## 構文
 
-```js
-supports(token);
+```js-nolint
+supports(token)
 ```
 
 ## 引数
@@ -25,15 +28,15 @@ supports(token);
 ## 例
 
 ```js
-const iframe = document.getElementById('display');
+const iframe = document.getElementById("display");
 
-if (iframe.sandbox.supports('an-upcoming-feature')) {
+if (iframe.sandbox.supports("an-upcoming-feature")) {
   // support code for mystery future feature
 } else {
   // fallback code
 }
 
-if (iframe.sandbox.supports('allow-scripts')) {
+if (iframe.sandbox.supports("allow-scripts")) {
   // instruct frame to run JavaScript
   //
   // (NOTE: This feature is well-supported; this is just an example!)

@@ -104,7 +104,7 @@ A tabela a seguir descreve brevemente esses tipos de dados.
         exemplo, a propriedade <strong><code>ownerDocument </code></strong>de um
         elemento retorna o <code>document</code> ao qual ele pertence),esse
         objeto é o próprio objeto de <code>document</code> raiz. O capítulo
-        <a href="/en-US/docs/Web/API/Document"
+        <a href="/pt-BR/docs/Web/API/Document"
           >DOM <code>document</code> Reference</a
         >
         descreve o objeto do <code>document</code> .

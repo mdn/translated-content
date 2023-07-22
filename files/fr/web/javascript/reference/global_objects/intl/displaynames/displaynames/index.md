@@ -1,11 +1,6 @@
 ---
 title: Intl.DisplayNames() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
-tags:
-  - API
-  - Constructeur
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
 ---
 

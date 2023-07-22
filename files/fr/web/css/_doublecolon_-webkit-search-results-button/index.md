@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-search-results-button'
 slug: Web/CSS/::-webkit-search-results-button
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-search-results-button
 ---
 

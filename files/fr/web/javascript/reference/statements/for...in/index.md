@@ -1,13 +1,7 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - Instruction
-  - JavaScript
-  - Reference
-  - Statement
 translation_of: Web/JavaScript/Reference/Statements/for...in
-original_slug: Web/JavaScript/Reference/Instructions/for...in
 ---
 
 {{jsSidebar("Statements")}}

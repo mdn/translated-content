@@ -1,16 +1,6 @@
 ---
 title: Node
 slug: Web/API/Node
-tags:
-  - API
-  - DOM
-  - Document
-  - Element
-  - Interface
-  - Node
-  - Référence DOM
-  - Structure
-  - hierarchy
 translation_of: Web/API/Node
 ---
 

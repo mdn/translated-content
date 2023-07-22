@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-slider-runnable-track'
 slug: Web/CSS/::-webkit-slider-runnable-track
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-slider-runnable-track
 ---
 

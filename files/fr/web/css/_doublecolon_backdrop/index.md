@@ -1,10 +1,6 @@
 ---
 title: '::backdrop'
 slug: Web/CSS/::backdrop
-tags:
-  - CSS
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::backdrop
 ---
 

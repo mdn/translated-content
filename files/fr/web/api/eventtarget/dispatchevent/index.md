@@ -1,12 +1,6 @@
 ---
 title: element.dispatchEvent
 slug: Web/API/EventTarget/dispatchEvent
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Traitement
-  - évènements
 translation_of: Web/API/EventTarget/dispatchEvent
 ---
 

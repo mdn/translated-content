@@ -1,11 +1,6 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
-  - JavaScript
-  - Landing
-  - Landing page
-  - Learn
 translation_of: Web/JavaScript
 ---
 

@@ -1,14 +1,7 @@
 ---
 title: JavaScript
 slug: Learn/JavaScript
-tags:
-  - Débutant
-  - Développement
-  - JavaScript
-  - Modules
-  - scripts
 translation_of: Learn/JavaScript
-original_slug: Apprendre/JavaScript
 ---
 
 {{LearnSidebar}}

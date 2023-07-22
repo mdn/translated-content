@@ -1,13 +1,7 @@
 ---
 title: La sécurité d'un site Web
 slug: Learn/Server-side/First_steps/Website_security
-tags:
-  - Débutant
-  - Guide
-  - Sécurité
-  - Sécurité Web
 translation_of: Learn/Server-side/First_steps/Website_security
-original_slug: Learn/Server-side/Premiers_pas/Website_security
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/Premiers_pas")}}

@@ -1,12 +1,7 @@
 ---
 title: Sélecteurs de classe
 slug: Web/CSS/Class_selectors
-tags:
-  - CSS
-  - Reference
-  - Sélecteur
 translation_of: Web/CSS/Class_selectors
-original_slug: Web/CSS/Sélecteurs_de_classe
 ---
 
 {{CSSRef}}

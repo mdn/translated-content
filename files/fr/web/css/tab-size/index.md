@@ -1,11 +1,6 @@
 ---
 title: tab-size
 slug: Web/CSS/tab-size
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/tab-size
 ---
 

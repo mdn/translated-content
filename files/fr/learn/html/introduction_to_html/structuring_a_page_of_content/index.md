@@ -2,7 +2,6 @@
 title: Structurer une page de contenu
 slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
-original_slug: Apprendre/HTML/Introduction_à_HTML/Structuring_a_page_of_content
 ---
 
 {{LearnSidebar}}

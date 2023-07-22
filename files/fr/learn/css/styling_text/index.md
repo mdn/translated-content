@@ -1,16 +1,6 @@
 ---
 title: Introduction au style de texte
 slug: Learn/CSS/Styling_text
-tags:
-  - CSS
-  - Débutant
-  - Liens
-  - Listes
-  - Mise en page
-  - Module
-  - Polices de caractères
-  - Style
-  - Texte
 translation_of: Learn/CSS/Styling_text
 ---
 

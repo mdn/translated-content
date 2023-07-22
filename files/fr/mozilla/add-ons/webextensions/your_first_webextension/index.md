@@ -27,7 +27,6 @@ Créez un nouveau fichier nommé `manifest.json` directement dans le répertoire
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Borderify",
   "version": "1.0",
@@ -44,7 +43,6 @@ Créez un nouveau fichier nommé `manifest.json` directement dans le répertoire
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
@@ -91,7 +89,7 @@ Une alternative est de fournir un fichier SVG qui sera automatiquement mis à la
 Enfin, créez un fichier nommé `borderify.js` directement dans le répertoire `borderify` et insérez-y le code qui suit&nbsp;:
 
 ```js
-document.body.style.border = '5px solid red';
+document.body.style.border = "5px solid red";
 ```
 
 Ce script sera chargé dans chaque page où le domaine correspond au motif fourni par la clé `content_scripts` du manifeste (`manifest.json`). Ce script a un accès direct au document contrairement à des scripts chargés par la page elle-même.

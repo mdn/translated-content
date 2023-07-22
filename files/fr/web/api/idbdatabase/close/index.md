@@ -1,11 +1,6 @@
 ---
 title: IDBDatabase.close()
 slug: Web/API/IDBDatabase/close
-tags:
-  - API
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBDatabase/close
 ---
 

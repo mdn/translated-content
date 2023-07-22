@@ -1,14 +1,7 @@
 ---
 title: Array.prototype.join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/join
 ---
 
 {{JSRef}}

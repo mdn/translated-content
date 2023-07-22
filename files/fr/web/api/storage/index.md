@@ -1,12 +1,6 @@
 ---
 title: Storage
 slug: Web/API/Storage
-tags:
-  - API
-  - Interface
-  - Reference
-  - Stockage
-  - Storage
 translation_of: Web/API/Storage
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: IDBRequest.source
 slug: Web/API/IDBRequest/source
-tags:
-  - API
-  - IDBRequest
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBRequest/source
 ---
 

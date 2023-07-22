@@ -1,10 +1,6 @@
 ---
 title: <frequency>
 slug: Web/CSS/frequency
-tags:
-  - CSS
-  - Reference
-  - Type
 translation_of: Web/CSS/frequency
 ---
 

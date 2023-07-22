@@ -1,12 +1,7 @@
 ---
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
-tags:
-  - Date
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date
 ---
 
 {{JSRef}}

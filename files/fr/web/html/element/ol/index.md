@@ -1,12 +1,6 @@
 ---
 title: '<ol> : l''élément de liste ordonnée'
 slug: Web/HTML/Element/ol
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Reference
 translation_of: Web/HTML/Element/ol
 ---
 

@@ -1,13 +1,7 @@
 ---
 title: De quels logiciels ai-je besoin pour construire un site web ?
 slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
-tags:
-  - Beginner
-  - Learn
-  - NeedsActiveLearning
-  - WebMechanics
 translation_of: Learn/Common_questions/What_software_do_I_need
-original_slug: Learn/Common_questions/What_software_do_I_need
 ---
 
 Dans cet article, nous listons les logiciels nécessaires pour éditer, mettre en ligne ou consulter un site web.

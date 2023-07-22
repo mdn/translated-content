@@ -1,10 +1,6 @@
 ---
 title: <integer>
 slug: Web/CSS/integer
-tags:
-  - CSS
-  - Reference
-  - Type
 translation_of: Web/CSS/integer
 ---
 

@@ -1,16 +1,7 @@
 ---
 title: TypedArray.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/filter
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/filter
 ---
 
 {{JSRef}}

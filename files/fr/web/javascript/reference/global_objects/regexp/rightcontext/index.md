@@ -1,15 +1,7 @@
 ---
 title: RegExp.rightContext ($')
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
-tags:
-  - JavaScript
-  - Non-standard
-  - Propriété
-  - Reference
-  - RegExp
-  - Regular Expressions
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/rightContext
 ---
 
 {{JSRef}} {{non-standard_header}}

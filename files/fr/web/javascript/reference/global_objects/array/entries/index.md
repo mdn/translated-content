@@ -1,15 +1,7 @@
 ---
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/entries
 ---
 
 {{JSRef}}

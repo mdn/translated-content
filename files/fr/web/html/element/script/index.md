@@ -1,11 +1,6 @@
 ---
 title: '<script> : l''élément de script'
 slug: Web/HTML/Element/script
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/script
 ---
 

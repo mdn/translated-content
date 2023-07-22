@@ -1,12 +1,6 @@
 ---
 title: WebGLRenderingContext.viewport()
 slug: Web/API/WebGLRenderingContext/viewport
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/viewport
 ---
 

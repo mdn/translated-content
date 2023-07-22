@@ -1,16 +1,7 @@
 ---
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/filter
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/filter
 ---
 
 {{JSRef}}

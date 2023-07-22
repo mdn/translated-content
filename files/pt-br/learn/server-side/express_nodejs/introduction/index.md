@@ -52,7 +52,7 @@ Você pode utilizar o Node.js para criar um simples servidor web, utilizando o p
 
 ### Olá, Node.js
 
-O exemplo a seguir cria um servidor web que escuta qualquer tipo de requisição HTTP na URL `http://127.0.0.1:8000/` -- quando uma requisição é recebida, o script vai responder com a string (texto) "Olá Mundo". Se você já instalou o Node, você pode seguir os passos seguintes deste exemplo.
+O exemplo a seguir cria um servidor web que escuta qualquer tipo de requisição HTTP na URL `http://127.0.0.1:8000/` — quando uma requisição é recebida, o script vai responder com a string (texto) "Olá Mundo". Se você já instalou o Node, você pode seguir os passos seguintes deste exemplo.
 
 1. Abre o Terminal (no Windows, abra o prompt da linha de comando)
 2. Crie uma pasta onde você quer salvar o programa, por exemplo, `test-node`. Então, entre na pasta com o seguinte comando no terminal:

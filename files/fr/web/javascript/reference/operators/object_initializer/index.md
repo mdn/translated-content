@@ -1,13 +1,7 @@
 ---
 title: Initialisateur d'objet
 slug: Web/JavaScript/Reference/Operators/Object_initializer
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Object
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Object_initializer
-original_slug: Web/JavaScript/Reference/Opérateurs/Initialisateur_objet
 ---
 
 {{JsSidebar("Operators")}}

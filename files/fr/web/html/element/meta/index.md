@@ -1,11 +1,6 @@
 ---
 title: '<meta> : l''élément de métadonnées du document'
 slug: Web/HTML/Element/meta
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/meta
 ---
 

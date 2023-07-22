@@ -2,7 +2,6 @@
 title: compositionstart
 slug: Web/API/Element/compositionstart_event
 translation_of: Web/API/Element/compositionstart_event
-original_slug: Web/Events/compositionstart
 ---
 
 {{APIRef}}

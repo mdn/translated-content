@@ -118,7 +118,7 @@ Una vez que hemos seteado la matriz de mapeo de textura, pasamos la matriz al b�
 
 ## Actualizando los shaders
 
-El shader -- y el código que inicializa los shaders -- también necesita ser actualizado para utilizar la textura en vez de un color solido.
+El shader — y el código que inicializa los shaders — también necesita ser actualizado para utilizar la textura en vez de un color solido.
 
 Primero, echemos un vistazo a un cambio muy sencillo que se necesita en initShaders():
 

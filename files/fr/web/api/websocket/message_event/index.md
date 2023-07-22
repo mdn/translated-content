@@ -1,7 +1,6 @@
 ---
 title: 'WebSocket : évènement message'
 slug: Web/API/WebSocket/message_event
-browser-compat: api.WebSocket.message_event
 ---
 
 {{APIRef}}

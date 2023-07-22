@@ -1,10 +1,6 @@
 ---
 title: grid
 slug: Web/CSS/grid
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/grid
 ---
 

@@ -2,7 +2,6 @@
 title: Exemple basique
 slug: Web/API/XSLTProcessor/Basic_Example
 translation_of: Web/API/XSLTProcessor/Basic_Example
-original_slug: XSLT_dans_Gecko/Exemple_basique
 ---
 
 1. [Introduction](/fr/docs/XSLT_dans_Gecko)

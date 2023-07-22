@@ -1,13 +1,6 @@
 ---
 title: 'Attribut HTML : min'
 slug: Web/HTML/Attributes/min
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
-  - min
-  - Reference
 translation_of: Web/HTML/Attributes/min
 ---
 

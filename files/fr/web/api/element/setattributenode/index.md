@@ -1,12 +1,6 @@
 ---
 title: element.setAttributeNode
 slug: Web/API/Element/setAttributeNode
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthode
-  - Reference
 translation_of: Web/API/Element/setAttributeNode
 ---
 

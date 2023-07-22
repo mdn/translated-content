@@ -1,12 +1,7 @@
 ---
 title: L'opérateur void
 slug: Web/JavaScript/Reference/Operators/void
-tags:
-  - JavaScript
-  - Operator
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/void
-original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_void
 ---
 
 {{jsSidebar("Operators")}}

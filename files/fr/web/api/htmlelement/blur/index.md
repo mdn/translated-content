@@ -2,7 +2,6 @@
 title: HTMLElement.blur()
 slug: Web/API/HTMLElement/blur
 translation_of: Web/API/HTMLElement/blur
-browser-compat: api.HTMLElement.blur
 ---
 
 {{APIRef("HTML DOM")}}

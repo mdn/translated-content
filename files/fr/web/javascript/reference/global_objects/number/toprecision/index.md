@@ -1,14 +1,7 @@
 ---
 title: Number.prototype.toPrecision()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-tags:
-  - JavaScript
-  - Méthode
-  - Number
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toPrecision
 ---
 
 {{JSRef}}

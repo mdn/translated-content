@@ -2,7 +2,6 @@
 title: '@media'
 slug: Web/CSS/@media
 translation_of: Web/CSS/@media
-browser-compat: css.at-rules.media
 ---
 
 {{CSSRef}}

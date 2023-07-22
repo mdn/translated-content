@@ -1,12 +1,6 @@
 ---
 title: <select>
 slug: Web/HTML/Element/select
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/select
 ---
 

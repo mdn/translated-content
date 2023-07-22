@@ -1,13 +1,6 @@
 ---
 title: 'Element : évènement mouseleave'
 slug: Web/API/Element/mouseleave_event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - Reference
-  - mouseleave
 translation_of: Web/API/Element/mouseleave_event
 ---
 

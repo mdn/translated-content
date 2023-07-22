@@ -1,20 +1,6 @@
 ---
 title: WebGLRenderingContext.enableVertexAttribArray()
 slug: Web/API/WebGLRenderingContext/enableVertexAttribArray
-tags:
-  - 3D
-  - API
-  - API WebGL
-  - Attributs des Sommets
-  - Graphiques
-  - Méthode
-  - Reference
-  - Tableau des Attributs
-  - WebGL
-  - WebGLRenderingContext
-  - enableVertexAttribArray
-  - shader de sommet
-  - sommet
 translation_of: Web/API/WebGLRenderingContext/enableVertexAttribArray
 ---
 

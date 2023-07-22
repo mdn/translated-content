@@ -1,16 +1,6 @@
 ---
 title: Programmation de Sites Web côté serveur
 slug: Learn/Server-side
-tags:
-  - Beginner
-  - CodingScripting
-  - Intro
-  - Landing
-  - Learn
-  - Server
-  - Server-side programming
-  - Topic
-  - TopicStub
 translation_of: Learn/Server-side
 ---
 

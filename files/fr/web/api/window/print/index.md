@@ -1,8 +1,6 @@
 ---
 title: Window.print()
 slug: Web/API/Window/print
-page-type: web-api-instance-method
-browser-compat: api.Window.print
 translation_of: Web/API/Window/print
 ---
 

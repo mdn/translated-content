@@ -1,15 +1,6 @@
 ---
 title: Node.baseURI
 slug: Web/API/Node/baseURI
-tags:
-  - API
-  - DOM
-  - HTML
-  - Propriétés
-  - URI
-  - URL
-  - URL absolue
-  - XML
 translation_of: Web/API/Node/baseURI
 ---
 

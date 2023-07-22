@@ -1,12 +1,6 @@
 ---
 title: ':where()'
 slug: Web/CSS/:where
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-classe
-  - Reference
-  - Sélecteur
 translation_of: Web/CSS/:where
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: Blocs de base en CSS
 slug: Learn/CSS/Building_blocks
-tags:
-  - CSS
-  - Débutant
-  - Tutoriel
 translation_of: Learn/CSS/Building_blocks
-original_slug: Apprendre/CSS/Building_blocks
 ---
 
 {{LearnSidebar}}

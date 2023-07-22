@@ -15,12 +15,12 @@ Com a maior parte dos detalhes principais do OOJS agora explicados, este artigo 
       <td>
         Conhecimento básico de computação, conhecimento básico de HTML e CSS,
         familiaridade com com o básico de Javascript (veja
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
+        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">Primeiros passos</a>
         e
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/pt-BR/docs/Learn/JavaScript/Building_blocks"
           >Construindo blocos</a
         >) e OOJS básico (veja
-        <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/pt-BR/docs/Learn/JavaScript/Object-oriented/Introduction"
           >Introdução a objetos</a
         >).
       </td>
@@ -81,7 +81,7 @@ function Teacher(first, last, age, gender, interests, subject) {
 }
 ```
 
-Isto parece similar ao construtor Person de várias maneiras, mas há algo estranho aqui que nós não vimos antes — a função [`call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call). Esta função basicamente permite chamar uma função definida em outro lugar, mas no contexto atual. O primeiro parâmetro especifica o valor `this` que você deseja usar ao executar a função, e os outros parâmetros são aqueles que devem ser passados para a função quando ela é invocada.
+Isto parece similar ao construtor Person de várias maneiras, mas há algo estranho aqui que nós não vimos antes — a função [`call()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/call). Esta função basicamente permite chamar uma função definida em outro lugar, mas no contexto atual. O primeiro parâmetro especifica o valor `this` que você deseja usar ao executar a função, e os outros parâmetros são aqueles que devem ser passados para a função quando ela é invocada.
 
 Nós queremos que o construtor `Teacher()` pegue os mesmos parâmetros que o construtor `Person()` de onde ele está herdando, então especificamos todos eles como parâmetros na chamada `call()`.
 
@@ -138,7 +138,7 @@ Tudo está bem até agora, mas nós temos um problema. Nós definimos um novo co
     Teacher.prototype = Object.create(Person.prototype);
     ```
 
-    Aqui nosso amigo [`create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) vem para o resgate novamente. Nesse caso, estamos usando para criar um novo objeto e torná-lo o valor de `Teacher.prototype`. O novo objeto tem `Person.prototype` como seu protótipo e, portanto, herdará, se e quando necessário, todos os métodos disponíveis no `Person.prototype`.
+    Aqui nosso amigo [`create()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/create) vem para o resgate novamente. Nesse caso, estamos usando para criar um novo objeto e torná-lo o valor de `Teacher.prototype`. O novo objeto tem `Person.prototype` como seu protótipo e, portanto, herdará, se e quando necessário, todos os métodos disponíveis no `Person.prototype`.
 
 2. Precisamos fazer mais uma coisa antes de prosseguirmos. Depois de adicionar a última linha, a propriedade `constructor` de `Teacher.prototype` agora é igual a `Person()`, porque apenas definimos `Teacher.prototype` para fazer referência a um objeto que herda suas propriedades de `Person.prototype`! Tente salvar seu código, carregar a página em um navegador e inserir `Teacher.prototype.constructor` no console para verificar.
 3. Isso pode se tornar um problema, então precisamos definir isso corretamente. Você pode fazer isso voltando ao seu código-fonte e adicionando a seguinte linha na parte inferior:
@@ -216,7 +216,7 @@ Em nossa [seção de teoria OOP](/pt-BR/docs/Learn/JavaScript/Objects/Object-ori
 Resumindo, você basicamente tem três tipos de propriedade / método para se preocupar:
 
 1. Aqueles definidos dentro de uma função construtora que são dadas a instâncias de objetos. Estes são bastante fáceis de detectar — em seu próprio código personalizado, eles são os membros definidos dentro de um construtor usando as linhas `this.x = x` ; no código do navegador, eles são os membros disponíveis apenas para instâncias de objetos (geralmente criados chamando um construtor usando a palavra-chave `new`, por exemplo, `var myInstance = new myConstructor()`).
-2. Aqueles definidos diretamente no próprio construtor, que estão disponíveis apenas no construtor. Geralmente, eles estão disponíveis apenas em objetos de navegador internos e são reconhecidos por serem encadeados diretamente em um construtor, não em uma instância. Por exemplo, [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
+2. Aqueles definidos diretamente no próprio construtor, que estão disponíveis apenas no construtor. Geralmente, eles estão disponíveis apenas em objetos de navegador internos e são reconhecidos por serem encadeados diretamente em um construtor, não em uma instância. Por exemplo, [`Object.keys()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
 3. Aqueles definidos no protótipo de um construtor, que são herdados por todas as instâncias e herdam as classes de objetos. Estes incluem qualquer membro definido na propriedade de protótipo de um Construtor, por ex. `myConstructor.prototype.x()`.
 
 Se você não tem certeza de qual é qual, não se preocupe com isso ainda — você ainda está aprendendo e a familiaridade virá com a prática.
@@ -253,7 +253,7 @@ class Person {
 
 A declaração [class](/pt-BR/docs/Web/JavaScript/Reference/Statements/class) indica que estamos criando uma nova classe. Dentro deste bloco, definimos todos os recursos da classe:
 
-- O método [`constructor()`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) define a função construtora que representa nossa classe `Person`.
+- O método [`constructor()`](/pt-BR/docs/Web/JavaScript/Reference/Classes/constructor) define a função construtora que representa nossa classe `Person`.
 - `greeting()` e `farewell()` são métodos de classe. Quaisquer métodos que você deseja associar à classe são definidos dentro dela, após o construtor. Neste exemplo, usamos [template literals](/pt-BR/docs/Web/JavaScript/Reference/Template_literals) em vez de concatenação de string para facilitar a leitura do código.
 
 Agora podemos instanciar instâncias de objeto usando o operador [`new`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new), da mesma maneira que fizemos antes:

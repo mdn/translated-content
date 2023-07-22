@@ -1,12 +1,6 @@
 ---
 title: Pseudo-classes
 slug: Web/CSS/Pseudo-classes
-tags:
-  - CSS
-  - Intermédiaire
-  - Pseudo-classe
-  - Reference
-  - Sélecteur
 translation_of: Web/CSS/Pseudo-classes
 ---
 

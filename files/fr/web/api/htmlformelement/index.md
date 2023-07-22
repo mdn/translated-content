@@ -1,13 +1,6 @@
 ---
 title: form
 slug: Web/API/HTMLFormElement
-tags:
-  - API
-  - Contrôles
-  - DOM
-  - Formulaire
-  - HTML
-  - Interface
 translation_of: Web/API/HTMLFormElement
 ---
 
