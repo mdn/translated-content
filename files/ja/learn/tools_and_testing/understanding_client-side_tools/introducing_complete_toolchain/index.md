@@ -374,16 +374,16 @@ Parcel は、必要な変換ツールと設定を、私たちが介入するこ�
 npm install --save-dev parcel-bundler
 ```
 
-### Using future features
+### 将来使用出来る機能
 
-The code for our project is using some new web features including features that are so new they aren't fully standardized yet. For example, instead of reaching for a tool like [Sass](https://sass-lang.com/), this particular project uses the W3C proposal for [CSS nesting](https://drafts.csswg.org/css-nesting/). CSS nesting allows us to nest CSS selectors and properties inside one another thus creating more specific selector scope. Sass was one of the first preprocessors to support nesting (if not the first) but now after many years, nesting looks like it will soon be standardized, which means that we will have it available in our browsers without needing build tools.
+このプロジェクトのコードは、完全に標準化されていない新しいウェブ機能を含むいくつかの新しいウェブ機能を使用しています。例えば、 [Sass](https://sass-lang.com/) のようなツールに頼る代わりに、この特定のプロジェクトでは[ W3C の CSS ネスティング](https://drafts.csswg.org/css-nesting/)の提案を使用しています。 CSS ネスティングは CSS セレクターやプロパティを相互にネストできるため、より具体的なセレクタースコープを作成することができます。 Sass は最初のプリプロセッサのうちの 1 つであり、ネスティングをサポートしていた（もしくは最初のものであった）のですが、多年経過した現在、ネスティングは標準化される見通しとなり、これによりビルドツールを必要とせずにブラウザで利用できるようになります。
 
-Until then, Parcel will do the transformation between nested CSS and natively supported CSS with the help of [PostCSS](https://postcss.org/), which Parcel works with out of the box. Since we've specifically decided this project should use CSS nesting (instead of Sass), the project will need to include a PostCSS plugin.
+それまでは、 Parcel が [PostCSS](https://postcss.org/) のサポートを受けて、ネストされた CSS とネイティブにサポートされる CSS の間の変換を行います。 Parcel は PostCSS との統合をデフォルトで提供しています。このプロジェクトでは特に CSS ネスティング（ Sass の代わりに）を使用することに決めたため、プロジェクトには PostCSS プラグインを含める必要があります。
 
-Let's use the [postcss-preset-env](https://preset-env.cssdb.org/), which lets us "use tomorrow's CSS today". To do so, follow these steps:
+[postcss-preset-env](https://preset-env.cssdb.org/) を使用し、「明日のCSSを今日使う」ことができます。以下の手順に従って設定を行います：
 
-1. Add a single file called `.postcssrc` to the root of your project directory.
-2. Add the following contents to the new file, which will automagically give us full access to the latest CSS features:
+1. プロジェクトディレクトリのルートに `.postcssrc` という名前の単一のファイルを追加します。
+2. 新しいファイルに以下の内容を追加します。これにより、最新の CSS 機能を完全に使用できるようになります。
 
    ```json
    {
@@ -395,11 +395,11 @@ Let's use the [postcss-preset-env](https://preset-env.cssdb.org/), which lets us
    }
    ```
 
-That's all we need to do — remember that Parcel installs the dependencies for us by default!
+これで必要な作業はすべて完了です — なお、 Parcel はデフォルトで依存関係を自動的にインストールしてくれることを忘れないでください！
 
-Although this stage of our toolchain can be quite painful, because we've chosen a tool that purposely tries to reduce configuration and complexity, there's really nothing more we need to do during the development phase. Modules are correctly imported, nested CSS is correctly transformed to "regular CSS", and our development is unimpeded by the build process.
+ツールチェーンのこの段階はかなり厄介なことがありますが、わざと設定や複雑さを減らすように意図して選んだツールのおかげで、開発フェーズで行うべき作業はこれ以上ありません。モジュールは正しくインポートされ、ネストされたCSSは正しく「通常の CSS 」に変換され、ビルドプロセスによる開発の妨げがありません。
 
-Now our software is ready to be written!
+さあ、ソフトウェアの開発が始められる準備が整いました！
 
 ## Running the transformation
 
