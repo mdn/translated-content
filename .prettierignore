@@ -31,7 +31,6 @@ build/
 /files/es/web/javascript/**/*.md
 
 # fr
-/files/fr/learn/javascript/**/*.md
 /files/fr/learn/server-side/**/*.md
 /files/fr/mozilla/add-ons/webextensions/api/**/*.md
 /files/fr/web/api/**/*.md
