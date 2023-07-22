@@ -75,7 +75,7 @@ function updateProgress(percentComplete) {
 <progress id="percent-loaded" value="75" max="100">75 %</progress>
 ```
 
-> **Note:**  {{HTMLElement('progress')}} 元素不允许 `min` 属性，最小值永远为 0。
+> **Note:** {{HTMLElement('progress')}} 元素不允许 `min` 属性，最小值永远为 0。
 
 > HTML 陆标元素（{{HTMLElement("main")}}、{{HTMLElement("header")}}、{{HTMLElement("nav")}} 等）具有内置的 ARIA 角色，因此有无需复制它们。
 

@@ -29,7 +29,6 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 
 菜单按钮是指控制一个菜单且 [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性设置为 `menu` 或 `true` 的按钮。
 
-
 ### 所有子元素都是 presentation
 
 有些类型的用户界面元件，当呈现为平台无障碍 API 时，仅可包含文本。无障碍 API 没有呈现 `button` 中包含的语义元素的方式。要处理这个限制，浏览器会自动为任何 `button` 的后代元素应用角色 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role)，因为按钮这种角色不支持带有语义的子元素。
@@ -59,7 +58,6 @@ button 角色会向辅助技术（如屏幕阅读器）识别一个元素为按�
 - [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
   - : 如果按钮控制了其他元素的分组，`aria-expanded` 状态指示了被控制的分组当前是被展开还是折叠。如果按钮有设置了 `aria-expanded="false"`，那么分组当前没有开，如果被展开了，则按钮会有 `aria-expanded="undefined"`，如果属性被忽略，则是不可展开。
 
-
 ### 基本的按钮
 
 Buttons should always have an accessible name. For most buttons, this name will be the same as the text inside the button, between the opening and closing tags. In some cases, for example buttons represented by icons, the accessible name may be provided from the [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attributes.
@@ -84,7 +82,6 @@ As an example, the mute button on an audio player labeled "mute" could indicate 
 
 Following button activation, focus is set depending on the type of action the button performs. For example, if clicking the button opens a dialog, the focus should move to the dialog. If the button closes a dialog, focus should return to the button that opened the dialog unless the function performed in the dialog context logically leads to a different element. If the button alters the current context, such as muting and unmuting an audio file, then focus typically remains on the button.
 
-
 ### Required JavaScript Features
 
 #### Required event handlers
@@ -105,7 +102,6 @@ Buttons can be operated by mouse, touch, and keyboard users. For native HTML `<b
 `handleBtnClick` 和 `handleBtnKeyDown` 事件处理器执行了按钮在鼠标单击或者按下 <kbd>Space</kbd> 或 <kbd>Enter</kbd> 键的操作。在这个例子中，操作是给名字列表添加一个新的名字。
 
 在文本框中添加名称以尝试这个例子。按钮会给列表添加一个新的名字。
-
 
 #### HTML
 
@@ -180,10 +176,9 @@ function handleCommand(event) {
 
 ### 切换按钮示例
 
-在这个片段中，使用 `button` 角色和 `aria-pressed` 属性，来将 `<span>` 元素转换为一个切换按钮，按钮被激活时， `aria-pressed` 的值在 `true`` 和 `false`` 之间切换。
+在这个片段中，使用 `button` 角色和 `aria-pressed` 属性，来将 `<span>` 元素转换为一个切换按钮，按钮被激活时，`aria-pressed` 的值在 `true` 和 `false` 之间切换。
 
 #### HTML
-
 
 ```html
 <button
@@ -259,7 +254,6 @@ function toggleButton(element) {
   }
 }
 ```
-
 
 ### 结果
 
