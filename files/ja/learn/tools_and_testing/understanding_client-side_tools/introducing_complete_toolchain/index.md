@@ -204,11 +204,11 @@ ESLint は npm 経由でインストールされるため、第 2 章の説明�
 
 ![ESLint error integration shown in VS Code](eslint-error.png)
 
-## Configuring the initial project
+## 初期プロジェクトの設定
 
-Using these tools, a new project can be set up safely in the knowledge that many "basic" issues will be caught early on.
+これらのツールを使用すると、多くの「基本的な」問題が早い段階で発見されることがわかっているので、新しいプロジェクトを安全にセットアップできます。
 
-Using the command line, we can create the project, install the initial tooling, and create rudimentary configuration files. Again, once you've repeated this process a few times, you'll get a feel for what your default setup should be. Of course, this is _just one_ possible configuration.
+コマンドラインを使用して、プロジェクトを作成し、初期ツールをインストールし、基本的な構成ファイルを作成できます。 繰り返しになりますが、このプロセスを数回繰り返すと、デフォルトの設定がどのようなものであるかがわかるようになります。 もちろん、これは可能な構成の 1 つにすぎません。
 
 ### Initial setup
 
