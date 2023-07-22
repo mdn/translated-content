@@ -43,11 +43,11 @@ l10n:
 この記事では、次のツールと機能を使用します。
 
 - [JSX](https://reactjs.org/docs/introducing-jsx.html)は、[React](https://reactjs.org) に関連する構文拡張のセットで、JavaScript 内でコンポーネント構造を定義するなどの作業を可能にします。このチュートリアルに行うのに React を理解する必要はありませんが、非ネイティブ Web 言語をツールチェーンに統合する方法を理解するためにこれを含めました。
-- [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) などの最新の組み込み JavaScript 機能（執筆時点）です。
+- [`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) などの最新の組み込み JavaScript 機能（執筆時点）です。
 - フォーマット用の [Prettier](https://prettier.io/) や lint 用の [ESLint](https://eslint.org/) などの便利な開発ツール。
 - [PostCSS](https://postcss.org/) は、CSS のネスティング機能を提供します。
 - [Parcel](https://parceljs.org/) コードをビルドして縮小し、多数の構成ファイルのコンテンツを自動的に書き込みます。
-- [GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) を使ってソースコードを管理しています。
+- [GitHub](/ja/docs/Learn/Tools_and_testing/GitHub) を使ってソースコードを管理しています。
 - [Netlify](https://www.netlify.com/) を使ってデプロイプロセスを自動化します。
 
 上記の機能やツールが何をするものなのか、よく知らないかもしれないが、パニックにならないでください。この記事を進めながら各部分について説明します。
