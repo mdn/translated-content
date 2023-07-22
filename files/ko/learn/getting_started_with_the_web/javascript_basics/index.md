@@ -7,7 +7,7 @@ slug: Learn/Getting_started_with_the_web/JavaScript_basics
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
-자바스크립트는 여러분의 웹사이트에 상호작용성(예를 들면, 게임, 버튼이 눌리거나 폼에 자료가 입력될 때 반응, 동적인 스타일링과 애니메이션)을 더해 주는 프로그래밍 언어 입니다. 이 글은 여러분이 이 흥미로운 언어를 시작하는 것을 도와드리고 가능한 것에 대한 아이디어를 제공할 것입니다.
+자바스크립트는 여러분의 웹사이트에 상호작용성(예를 들면, 게임, 버튼이 눌리거나 폼에 자료가 입력될 때 반응, 동적인 스타일링과 애니메이션)을 더해 주는 프로그래밍 언어입니다. 이 글은 여러분이 이 흥미로운 언어를 시작하는 것을 도와드리고 가능한 것에 대한 아이디어를 제공할 것입니다.
 
 ## 자바스크립트는 무엇인가?
 
