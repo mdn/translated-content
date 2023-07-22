@@ -160,10 +160,10 @@ for (i = 0; i < ss.length; i++) {
 Para un documento con una sola hoja de estilo en la cual son definidas las tres reglas siguientes:
 
 ```css
-BODY {
+body {
   background-color: darkblue;
 }
-P {
+p {
   font-face: Arial;
   font-size: 10pt;
   margin-left: 0.125in;
