@@ -105,7 +105,6 @@ build/
 
 # zh-cn
 /files/zh-cn/learn/css/**/*.md
-/files/zh-cn/learn/html/**/*.md
 /files/zh-cn/learn/javascript/**/*.md
 /files/zh-cn/learn/server-side/**/*.md
 /files/zh-cn/web/api/**/*.md
