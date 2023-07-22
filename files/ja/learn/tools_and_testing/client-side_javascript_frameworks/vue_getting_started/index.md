@@ -68,43 +68,43 @@ To explore various features of Vue, we will be building up a sample todo list ap
 1. In terminal, `cd` to where you'd like to create your sample app, then run `vue create moz-todo-vue`.
 2. Use the arrow keys and&#x20;
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    &#x20;to select the "Manually select features" option.
+   &#x20;to select the "Manually select features" option.
 
 3. The first menu you'll be presented with allows you to choose which features you want to include in your project. Make sure that "Babel" and "Linter / Formatter" are selected. If they are not, use the arrow keys and the space bar to toggle them on. Once they are selected, press&#x20;
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    &#x20;to proceed.
+   &#x20;to proceed.
 
 4. Next you'll select a config for the linter / formatter. Navigate to "Eslint with error prevention only" and hit&#x20;
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    &#x20;again. This will help us catch common errors, but not be overly opinionated.
+   &#x20;again. This will help us catch common errors, but not be overly opinionated.
 
 5. Next you are asked to configure what kind of automated linting we want. Select "Lint on save". This will check for errors when we save a file inside the project. Hit&#x20;
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    &#x20;to continue.
+   &#x20;to continue.
 
 6. Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's `package.json` file. Select "In dedicated config files" and push&#x20;
 
-    <kbd>Enter</kbd>
+   <kbd>Enter</kbd>
 
-    .
+   .
 
 7. Finally, you are asked if you want to save this as a preset for future options. This is entirely up to you. If you like these settings over the existing presets and want to use them again, type&#x20;
 
-    <kbd>y</kbd>
+   <kbd>y</kbd>
 
-    &#x20;, otherwise type&#x20;
+   &#x20;, otherwise type&#x20;
 
-    <kbd>n</kbd>
+   <kbd>n</kbd>
 
-    .
+   .
 
 The CLI will now begin scaffolding out your project, and installing all of your dependencies.
 
@@ -158,14 +158,14 @@ Open your `App.vue` file — you'll see that it has three parts: `<template>`, `
 In the case of `App.vue`, our default export sets the name of the component to `app` and registers the `HelloWorld` component by adding it into the `components` property. When you register a component in this way, you're registering it locally. Locally registered components can only be used inside the components that register them, so you need to import and register them in every component file that uses them. This can be useful for bundle splitting/tree shaking since not every page in your app necessarily needs every component.
 
 ```js
-import HelloWorld from './components/HelloWorld.vue';
+import HelloWorld from "./components/HelloWorld.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     //You can register components locally here.
-    HelloWorld
-  }
+    HelloWorld,
+  },
 };
 ```
 
@@ -204,7 +204,7 @@ If you navigate to the "local" address in a new browser tab (this should be some
 Let's make our first change to the app — we'll delete the Vue logo. Open the `App.vue` file, and delete the [`<img>`](/ja/docs/Web/HTML/Element/img) element from the template section:
 
 ```html
-<img alt="Vue logo" src="./assets/logo.png">
+<img alt="Vue logo" src="./assets/logo.png" />
 ```
 
 If your server is still running, you should see the logo removed from the rendered site almost instantly. Let's also remove the `HelloWorld` component from our template.
@@ -212,7 +212,7 @@ If your server is still running, you should see the logo removed from the render
 First of all delete this line:
 
 ```html
-<HelloWorld msg="Welcome to Your Vue.js App"/>
+<HelloWorld msg="Welcome to Your Vue.js App" />
 ```
 
 If you save your `App.vue` file now, the rendered app will throw an error because we've registered the component but are not using it. We also need to remove the lines from inside the `<script>` element that import and register the component:
@@ -220,12 +220,12 @@ If you save your `App.vue` file now, the rendered app will throw an error becaus
 Delete these lines now:
 
 ```js
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
 ```
 
 ```js
 components: {
-  HelloWorld
+  HelloWorld;
 }
 ```
 
