@@ -434,12 +434,12 @@ Parcel のもう一つの巧妙な仕掛けは、ソースコードの変更が�
 
 また、 ESLint と Prettier も試してみることができます — ファイルから意図的に多くの空白を削除して、 Prettier を実行して整形してみたり、 JavaScript ファイルに構文エラーを導入して Parcel を使用して再ビルドした際に ESLint がどのようなエラーを表示するか確認してみたりしてください。
 
-## Summary
+## まとめ
 
-We've come a long way in this chapter, building up a rather nice local development environment to create an application in.
+この章では、かなり良いローカル開発環境を構築し、アプリケーションを作成する準備が整いました。
 
-At this point during web software development you would usually be crafting your code for the software you intend to build. Since this module is all about learning the tools around web development, not web development code itself, we won't be teaching you any actual coding — you'll find that information in the rest of MDN!
+通常、ウェブソフトウェアの開発では、この時点で作成したいソフトウェアのコードを作成する段階に入ることになります。しかし、このモジュールはウェブ開発のコードそのものではなく、ウェブ開発周りのツールを学ぶことが目的ですので、実際のコーディングは教えません — 実際のコーディングについての情報はMDNの他の部分で見つけることができます！
 
-Instead, we've written an example project for you to use your tools on. We'd suggest that you work through the rest of the chapter using our example code, and then you can try changing the contents of the src directory to your own project and publishing that on Netlify instead! And indeed, deploying to Netlify will be the end goal of the next chapter!
+代わりに、あなたがツールを使用するためのサンプルプロジェクトを用意しました。私たちは、残りの章でこのサンプルコードを使って作業することをお勧めします。そしてその後、 src ディレクトリの内容を自分のプロジェクトに変更し、それを Netlify に公開してみることもできます！実際に次の章では Netlify へのデプロイが最終的な目標となります！
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Package_management","Learn/Tools_and_testing/Understanding_client-side_tools/Deployment", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
