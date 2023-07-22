@@ -32,7 +32,7 @@ var result = element.matches(selectorString);
 <ul id="aves">
   <li>Loro de alas naranja</li>
   <li class="amenazada">Ágila Filipina</li>
-  <li>Gran Pelícano Blancpo</li>
+  <li>Gran Pelícano Blanco</li>
 </ul>
 
 <script type="text/javascript">
