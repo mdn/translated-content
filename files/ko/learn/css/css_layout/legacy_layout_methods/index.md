@@ -46,7 +46,7 @@ CSS가 아주 최근까지 내장된 격자 시스템을 갖고 있지 않았고
 
 가능한 가장 간단한 예시인 두 개의 열 레이아웃으로 시작하겠습니다. 아래 내용을 따라하려면 당신의 컴퓨터에 `index.html` 파일을 새로 작성하여, 거기에 [간단한 HTML 템플릿](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html)으로 채우고, 파일 내부의 적절한 위치에 아래 코드를 삽입하면 됩니다. 해당 섹션의 맨 아래에는 최종 코드가 어떻게 생겼는지에 대한 실제 예제가 있습니다.
 
-우선, 우리는 칼럼에 넣을 몇 가지 콘텐츠가 필요합니다. 현재 HTML의 바디 내부에 있는 것을 아래 내용으로 대체하십시요:
+우선, 우리는 칼럼에 넣을 몇 가지 콘텐츠가 필요합니다. 현재 HTML의 바디 내부에 있는 것을 아래 내용으로 대체하십시오:
 
 ```html
 <h1>2열 레이아웃 예제</h1>
@@ -137,7 +137,7 @@ div:nth-of-type(2) {
 
 여기서 여러분은 우리가 모든 너비에 대해 백분율을 사용하고 있음을 알아차릴 것입니다. 이것은 **liquid layout**을 생성하기 때문에 꽤 좋은 전략입니다. 이것은 서로 다른 화면 크기에 적응하고 더 작은 화면 크기에서 열 너비에 대해 동일한 비율을 유지하게 됩니다. 브라우저 창의 너비를 조정해 보십시오. 이같은 특징은 반응형 웹 디자인을 위한 귀중한 도구입니다.
 
-> **참고:** 당신은 이 예제가 작종하는 장면을 여기서 [0_two-column-layout.html](http://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) 볼 수 있습니다. (또한, 여기 [소스 코드](https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html))도 있다.
+> **참고:** 당신은 이 예제가 작종하는 장면을 여기서 [0_two-column-layout.html](http://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) 볼 수 있습니다. (또한, 여기 [소스 코드](https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html))도 있습니다.
 
 ## 간단한 레거시 격자 프레임워크 생성하기
 
@@ -199,7 +199,7 @@ body {
 }
 ```
 
-이제 격자의 각 행을 둘러싸는 행 컨테이너를 사용하여 한 행을 다른 행으로부터 정리하여 구분합니다. 다음과 같은 규칙을 이전 규칙 아래에 추가하십시요:
+이제 격자의 각 행을 둘러싸는 행 컨테이너를 사용하여 한 행을 다른 행으로부터 정리하여 구분합니다. 다음과 같은 규칙을 이전 규칙 아래에 추가하십시오:
 
 ```css
 .row {
@@ -213,7 +213,7 @@ body {
 
 우리는 총 너비 960 픽셀에서 배수로 부분을 빼야 함으로 우리의 열 무리를 위해 720픽셀이 주어집니다. 당장에 그것을 12로 나눈다면, 각 열은 60 픽셀이어야 한다는 것을 알 수 있습니다.
 
-다음 단계는 클래스 `.col`에 대한 규칙을 생성하는 일입니다. 동 클래스에 속한 요소를 왼쪽으로 부동시키고, 배수구를 형성하기 위해 20픽셀의 {{cssxref("margin-left")}}와 60픽셀의 {{cssxref("width")}} 값을 동 요소에 부여합니다. 다음 규칙을 당신의 CSS의 맨 아래에 추가하십시요:
+다음 단계는 클래스 `.col`에 대한 규칙을 생성하는 일입니다. 동 클래스에 속한 요소를 왼쪽으로 부동시키고, 배수구를 형성하기 위해 20픽셀의 {{cssxref("margin-left")}}와 60픽셀의 {{cssxref("width")}} 값을 동 요소에 부여합니다. 다음 규칙을 당신의 CSS의 맨 아래에 추가하십시오:
 
 ```css
 .col {
@@ -228,7 +228,7 @@ body {
 
 > **참고:** **주석**: 각 열에 밝은 빨간색 색상을 부여하여 각 공간이 얼마나 많은지 정확하게 볼 수 있습니다.
 
-두 개 이상의 열을 하나로 합치길 원하는 레이아웃 컨테이너에 대해선 해당 컨테이너에 {{cssxref("width")}} 값을 필요한(합치기 할) 열 갯수에 맞춰(아울러 열 사이 배수구 숫자까지 포함해) 조정하기 위해 특별한 클래스를 부여할 필요가 있습니다. 우리는 컨테이너 무리가 2열에서 12열까지 (원하는 열 갯수만큼) 하나로 합치기할 수 있도록 추가 클래스를 만들 필요가 있습니다. 각 열의 너비는 (하나로 합쳐질) 해당 열 갯수의 열 너비와 배수구 너비를 합산한 결과입니다. 여기서 배수구 숫자는 항상 열 갯수에서 하나가 빠집니다.
+두 개 이상의 열을 하나로 합치길 원하는 레이아웃 컨테이너에 대해선 해당 컨테이너에 {{cssxref("width")}} 값을 필요한(합치기 할) 열 갯수에 맞춰(아울러 열 사이 배수구 숫자까지 포함해) 조정하기 위해 특별한 클래스를 부여할 필요가 있습니다. 우리는 컨테이너 무리가 2열에서 12열까지 (원하는 열 갯수만큼) 하나로 합칠 수 있도록 추가 클래스를 만들 필요가 있습니다. 각 열의 너비는 (하나로 합쳐질) 해당 열 갯수의 열 너비와 배수구 너비를 합산한 결과입니다. 여기서 배수구 숫자는 항상 열 갯수에서 하나가 빠집니다.
 
 당신의 CSS 맨 아래에 다음을 추가하십시요.
 
@@ -251,7 +251,7 @@ body {
 
 이러한 클래스를 생성해 놓았다면 격자에 서로 다른 너비의 열 무리를 배치할 수 있습니다. 페이지를 저장하고 브라우저에 불러들여 효과를 확인하십시오.
 
-> **참고:** **참조**: 위의 예제를 제대로 적용하기가 어렵다면 깃허브에 있는 [완성된 버전](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html)과 비교해보라. ([라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)).
+> **참고:** **참조**: 위의 예제를 제대로 적용하기가 어렵다면 깃허브에 있는 [완성된 버전](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html)과 비교해보세요. ([라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)).
 
 당신의 요소 무리에 적용한 클래스를 수정하거나 일부 컨테이너를 추가 및 제거해보며 당신이 어떻게 레이아웃에 변경을 가할 수 있는지 확인하십시오 예를 들어 두 번째 행을 이렇게 만들 수 있습니다:
 
@@ -292,9 +292,9 @@ target / context = result
 
 #### 여러분의 격자 업데이트 하기
 
-이번 절을 시작하려면 이전 예제 페이지의 새 사본을 만들거나 [simple-grid-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html)를 착수파일로 사용하십시요.
+이번 절을 시작하려면 이전 예제 페이지의 새 사본을 만들거나 [simple-grid-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html)를 착수파일로 사용하십시오.
 
-다음과 같이 (`.wrapper` 선택기에 해당하는) 두 번째 CSS 규칙을 업데이트 하십시요:
+다음과 같이 (`.wrapper` 선택기에 해당하는) 두 번째 CSS 규칙을 업데이트 하십시오:
 
 ```css
 body {
@@ -310,7 +310,7 @@ body {
 
 우리는 백분율 너비를 부여했을뿐만 아니라 레이아웃이 과도하게 확대되는 것을 막기 위해 {{cssxref("max-width")}} 속성을 추가했습니다.
 
-다음은 아래와 같이 (`.col` 선택기에 해당하는) 네 번째 CSS 규칙을 업데이트 하십시요:
+다음은 아래와 같이 (`.col` 선택기에 해당하는) 네 번째 CSS 규칙을 업데이트 하십시오:
 
 ```css
 .col {
@@ -321,7 +321,7 @@ body {
 }
 ```
 
-이제 약간 노동력이 투여되어야 할 부분이 있습니다. 픽셀 너비보다는 백분율을 사용하기 위해 모든 `.col.span` 규칙을 업데이트해야 합니다. 계산기를 사용하려면 시간이 좀 걸립니다. 여러분들의 노력을 아끼기 위해, 아래와 같이 여러분을 대신에 우리가 마무리지었습니다.
+이제 약간 노동력이 투여되어야 할 부분이 있습니다. 픽셀 너비보다는 백분율을 사용하기 위해 모든 `.col.span` 규칙을 업데이트해야 합니다. 계산기를 사용하려면 시간이 좀 걸립니다. 여러분들의 노력을 아끼기 위해, 아래와 같이 여러분을 대신해 우리가 마무리지었습니다.
 
 다음을 통해 CSS 규칙의 하위 블록을 업데이트합니다.
 
@@ -344,7 +344,7 @@ body {
 
 이제 코드를 저장하고 브라우저에 내용을 불러들이면 뷰포트 너비를 변경해보십시오. 열 너비가 멋지게 조정되는 것을 볼 수 있어야 합니다.
 
-> **참고:** **참조**: 위의 예제를 제대로 적용하기가 어렵다면 깃허브에 있는 [완성된 버전](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html)과 비교해보라. ([라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)).
+> **참고:** **참조**: 위의 예제를 제대로 적용하기가 어렵다면 깃허브에 있는 [완성된 버전](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html)과 비교해보세요. ([라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)).
 
 ### calc() 함수를 사용한 편리한 계산법
 
@@ -434,7 +434,7 @@ Or if you prefer to calculate the percentages yourself, use this one:
 
 ![](offset-grid-finished.png)
 
-> **참고:** 추가 연습의 하나로 여러분은 `offset-by-two`(2칸 간격띄우기) 클래스를 구현할 수 있습니가?
+> **참고:** 추가 연습의 하나로 여러분은 `offset-by-two`(2칸 간격띄우기) 클래스를 구현할 수 있습니까?
 
 ### 부동 격자 제한
 
@@ -499,7 +499,7 @@ body {
 
 이 독립형 시스템 중 하나를 살펴봅니다. 이 시스템은 격자 프레임워크를 사용하는 일반적인 기술을 보여줍니다. 우리가 사용할 격자는 단순한 CSS 프레임워크인 Skeleton의 일부입니다.
 
-시작하려면 [Skeleton website](http://getskeleton.com/)를 방문하고 ZIP 파일을 다운로드하기 위해 "다운로드"를 선택합니다. 압축파일을 풀고 skeleton.css와 normalize.css를 새 폴더에 복사하십시요.
+시작하려면 [Skeleton website](http://getskeleton.com/)를 방문하고 ZIP 파일을 다운로드하기 위해 "다운로드"를 선택합니다. 압축파일을 풀고 skeleton.css와 normalize.css를 새 폴더에 복사하십시오.
 
 [html-skeleton.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton.html)파일의 복사본을 만들어, skeleton과 normalize CSS 파일이 위치한 폴더와 같은 폴더에 저장합니다.
 
@@ -586,7 +586,7 @@ Skeleton을 사용하기 위해서는 `container` 클래스를 랩퍼(바깥쪽)
 
 HTML 파일을 저장하고 브라우저에 불러들여 효과를 확인하십시오.
 
-> **참고:** 위의 예제를 제대로 적용하기가 어렵다면, 그것을 우리의 [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) 파일과 비교해 보십시요. (그것을 [라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)).
+> **참고:** 위의 예제를 제대로 적용하기가 어렵다면, 그것을 우리의 [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) 파일과 비교해 보십시오. (그것을 [라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)).
 
 당신이 (앞서 다운로드한) skeleton.css 내용을 보면 어떻게 작동하는지 알 수 있습니다. 예를 들어, Skeleton 파일에는 다음과 같이 "three columns" 클래스가 적용되는 요소를 스타일링하기 위한 정의가 부여되어 있습니다.
 
