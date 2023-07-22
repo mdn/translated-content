@@ -67,7 +67,7 @@ HTML은 Rust만큼 복잡하지 않습니다. HTML은 브라우저가 구문 분
 유연한 성질의 HTML 코드를 배울 시간입니다.
 
 1. 첫째로, 우리의 [debug-example demo](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html)를 다운로드하고 Local에 저장하세요. This demo is deliberately written to have some errors in it for us to explore (the HTML markup is said to be **badly-formed**, as opposed to **well-formed**).
-2. Next, open it in a browser. You will see something like this:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
+2. 다음으로, 브라우저에서 다운로드 받은 파일을 여세요. 그렇다면 브라우저에서 아래와 같이 보일겁니다.![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
 3. This immediately doesn't look great; let's look at the source code to see if we can work out why (only the body contents are shown):
 
     ```html
