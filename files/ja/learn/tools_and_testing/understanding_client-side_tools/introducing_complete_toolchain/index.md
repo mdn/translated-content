@@ -401,38 +401,38 @@ npm install --save-dev parcel-bundler
 
 さあ、ソフトウェアの開発が始められる準備が整いました！
 
-## Running the transformation
+## 変換の実行
 
-To start working with our project, we'll run the Parcel server on the command line. In its default mode it will watch for changes in your code and automatically install your dependencies. This is nice because we don't have to flit back and forth between the code and the command line.
+プロジェクトで作業を開始するために、コマンドラインで Parcel サーバーを実行します。デフォルトモードでは、コードの変更を監視し、自動的に依存関係をインストールします。これは便利ですね、コードとコマンドラインを行き来する必要がなくなります。
 
-1. To start Parcel off in the background, go to your terminal and run the following command:
+1. Parcel をバックグラウンドで起動するには、ターミナルに移動して以下のコマンドを実行します：
 
    ```bash
    npx parcel src/index.html
    ```
 
-   You should see an output like this (once the dependencies have been installed):
+   依存関係がインストールされた後に、以下のような出力が表示されるはずです。
 
    ```bash
    Server running at http://localhost:1234
    ✨  Built in 129ms.
    ```
 
-   Parcel also installs the dependencies that we will use in our code, including react, react-dom, react-async-hook, date-fns, and format-number. This first run will therefore be longer than a typical run of Parcel.
+   Parcel は、react、react-dom、react-async-hook、date-fns、およびformat-numberを含む、コードで使用する依存関係もインストールします。したがって、最初の実行は通常のParcelの実行よりも時間がかかります。
 
-   > **Note:** if you run Parcel on this project and are faced with an error that reads `Error: ENOENT: no such file or directory`, stop the process using <kbd>Ctrl</kbd> + <kbd>C</kbd> and then try re-running it.
+   > **メモ:** もしプロジェクトでParcelを実行して `Error: ENOENT: no such file or directory` というエラーが表示された場合は、プロセスを<kbd>Ctrl</kbd> + <kbd>C</kbd>で停止してから再度実行してください。
 
-   The server is now running on the URL that was printed (in this case localhost:1234).
+   サーバーは現在、表示されたURL（この場合は localhost:1234）で実行されています。
 
-2. Go to this URL in your browser and you will see the example app running!
+2. ブラウザでこのURLに移動すると、サンプルアプリが動作しているのが見えるでしょう！
 
-Another clever trick Parcel has up its sleeve is that any changes to your source code will now trigger an update in the browser. To try this out:
+Parcel のもう一つの巧妙な仕掛けは、ソースコードの変更がブラウザで自動的に更新されるという点です。試してみましょう。
 
-1. Load up the file `src/components/App.js` in your favorite text editor.
-2. Search for the text "near misses", and replace it with something silly like "flying pigs".
-3. Save the file, then go straight back to the app running in your browser. You'll notice that the browser has automatically refreshed, and the line "\<date> there will be \<number> near misses" at the top of the page has been changed!
+1. 好きなテキストエディタで `src/components/App.js` ファイルを開きます。
+2. "near misses" というテキストを検索し、代わりに "flying pigs" のような面白いテキストに置き換えます。
+3. ファイルを保存し、ブラウザで動作しているアプリに戻ります。するとブラウザが自動的にリフレッシュされ、ページの上部にある "\<date> there will be \<number> near misses" という行が変更されていることに気付くでしょう！
 
-You could also try using ESLint and Prettier too — try deliberately removing a load of the whitespace from one of your files and running Prettier on it to clean it up, or introduce a syntax error into one of your JavaScript files and see what errors ESLint gives you when you try to use Parcel to build it again.
+また、 ESLint と Prettier も試してみることができます — ファイルから意図的に多くの空白を削除して、 Prettier を実行して整形してみたり、 JavaScript ファイルに構文エラーを導入して Parcel を使用して再ビルドした際に ESLint がどのようなエラーを表示するか確認してみたりしてください。
 
 ## Summary
 
