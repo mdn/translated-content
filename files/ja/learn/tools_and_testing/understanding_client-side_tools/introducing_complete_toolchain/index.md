@@ -132,43 +132,43 @@ Git は [git-scm をウェブサイトからダウンロードしてインスト
 
 とにかく、今のところやるべきことは git をインストールすることだけです。 次へ移りましょう。
 
-### Code tidying tools
+### コード整理ツール
 
-We'll be using Prettier, which we first met in Chapter 2, to tidy our code in this project. If you followed the directions in the [Installing Prettier](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#installing_prettier) section then you might already have Prettier installed. If not, we'll get you to install Prettier as a global utility using the terminal right now.
+このプロジェクトでは、第 2 章で最初に説明した Prettier を使用してコードを整理します。 [Prettier のインストール](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#installing_prettier) セクションの指示に従っている場合は、すでに Prettier がインストールされている可能性があります。 そうでない場合は、今すぐターミナルを使用して Prettier をグローバル ユーティリティとしてインストールするように指示します。
 
-You can check whether you've already got it installed globally using the following command:
+次のコマンドを使用して、すでにグローバルにインストールされているかどうかを確認できます。
 
 ```bash
 prettier -v
 ```
 
-If installed, you'll get a version number returned like 2.0.2; if not, it'll return something along the lines of "command not found". If this is the case, install it using the following command:
+インストールされている場合は、2.0.2 のようなバージョン番号が返されます。 そうでない場合は、「command not found」のような内容が返されます。 この場合は、次のコマンドを使用してインストールします。
 
 ```bash
 npm install prettier -g
 ```
 
-Now that Prettier is installed, running and tidying your code can be done on the command line on an individual file basis from anywhere on your computer, for example:
+Prettier がインストールされたので、コンピューター上のどこからでもコマンドラインで個々のファイルごとにコードの実行と整理を行うことができます。次に例を示します。
 
 ```bash
 prettier --write ./src/index.html
 ```
 
-> **Note:** In the command above, I use Prettier with the `--write` flag. Prettier understands this to mean "if there's any problem in my code format, go ahead and fix them, then save my file". This is fine for our development process, but we can also use `prettier` without the flag and it will only check the file. Checking the file (and not saving it) is useful for purposes like checks that run before a release - i.e. "don't release any code that's not been properly formatted."
+> **メモ:** 上記のコマンドでは、`--write` フラグを指定して Prettier を使用しています。 Prettier は、これが「コードフォーマットに問題があれば、それを修正してからファイルを保存してください」という意味であると理解しています。 これは開発プロセスには問題ありませんが、フラグなしで `prettier` を使用することもでき、ファイルのチェックのみが行われます。 ファイルをチェックする (保存しない) ことは、リリース前に実行されるチェック、つまり「適切にフォーマットされていないコードをリリースしない」などの目的に役立ちます。
 
-It can be arduous to run the initial command against each file, and it would be useful to have a single command to do this for us (and the same will go for our linting tools).
+各ファイルに対して最初のコマンドを実行するのは大変なので、これを実行する単一のコマンドがあれば便利です (リンティングツールにも同じことが言えます)。
 
-There are many ways to solve this problem; here's just a few:
+この問題を解決するには多くの方法があります。 ここにほんの一部を示します。
 
-- Using npm scripts to run multiple commands from the command line in one go, such as `npm run tidy-code`.
-- Using special "git hooks" to test if the code is formatted before a commit.
-- Using code editor plugins to run Prettier commands each time a file is saved.
+- npm スクリプトを使用して、コマンドラインから複数のコマンドを一度に実行します ( `npm run tidy-code` など)。
+- 特別な「git hooks」を使用して、コミット前にコードがフォーマットされているかどうかをテストします。
+- コードエディター ラグインを使用して、ファイルが保存されるたびに Prettier コマンドを実行します。
 
-> **Note:** What is a git hook? Git (not GitHub) provides a system that lets us attach pre- and post- actions to the tasks we perform with git (such as committing your code). Although git hooks can be a bit overly complicated (in this author's opinion), once they're in place they can be very powerful. If you're interested in using hooks, [Husky](https://github.com/typicode/husky) is a greatly simplified route into using hooks.
+> **メモ:** git フックとは何ですか? Git (GitHub ではありません) は、git で実行するタスク (コードのコミットなど) にプレアクションとポストアクションを付加できるシステムを提供します。 git hooks は (この著者の意見では) 少し複雑すぎるかもしれませんが、一度導入すると非常に強力になります。 hooks の使用に興味がある場合は、 [Husky](https://github.com/typicode/husky) を参照すると、 hooks を使用するためのルートが大幅に簡素化されます。
 
-For VS Code, one useful extension is the [Prettier Code Formatter by Esben Petersen](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), which lets VSCode automatically format code upon saving. This means that any file in the project we are working on gets formatted nicely, including HTML, CSS, JavaScript, JSON, markdown, and more. All the editor needs is "Format On Save" enabled.
+VS Code の場合、便利な拡張機能の 1 つは [Prettier Code Formatter by Esben Petersen](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) です。これを使うと、VSCode は保存時にコードを自動的に整形してくれます。 これは、HTML、CSS、JavaScript、JSON、マークダウンなど、作業中のプロジェクト内のすべてのファイルが適切にフォーマットされることを意味します。 エディターに必要なのは、「Format On Save」を有効にすることだけです。
 
-Like many tools made more recently Prettier comes with "sensible defaults". That means that you'll be able to use Prettier without having to configure anything (if you are happy with the [defaults](https://prettier.io/docs/en/configuration.html)). This lets you get on with what's important: the creative work.
+最近作られた多くのツールと同様に、Prettier には「使いやすいデフォルト」が用意されてます。 つまり、何も設定せずに Prettier を使用できるようになります ([デフォルト](https://prettier.io/docs/en/configuration.html) に満足している場合)。 これにより、重要な創造的な作業に取り組むことができます。
 
 ### Code linting tools
 
