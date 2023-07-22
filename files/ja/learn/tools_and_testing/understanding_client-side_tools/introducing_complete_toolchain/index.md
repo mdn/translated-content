@@ -78,7 +78,7 @@ l10n:
 後で、このプロジェクトをデプロイするために Netlify アカウントを GitHub リポジトリに接続する必要があります。 その方法については次の章で説明します。
 
 
-## 3　つ段階のツール
+## 3　段階のツール
 
 [クライアントサイドツールの概要](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)で説明したようにツールチェーンは次のフェーズで構成されます。
 
