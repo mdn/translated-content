@@ -170,24 +170,24 @@ VS Code の場合、便利な拡張機能の 1 つは [Prettier Code Formatter b
 
 最近作られた多くのツールと同様に、Prettier には「使いやすいデフォルト」が用意されてます。 つまり、何も設定せずに Prettier を使用できるようになります ([デフォルト](https://prettier.io/docs/en/configuration.html) に満足している場合)。 これにより、重要な創造的な作業に取り組むことができます。
 
-### Code linting tools
+### コードリンティングツール
 
-Linting helps with code quality but also is a way to catch potential errors earlier during development. It's a key ingredient of a good toolchain and one that many development projects will include by default.
+リンティングはコードの品質を向上させるのに役立ちますが、開発中の早い段階で潜在的なエラーを発見する方法でもあります。 これは優れたツールチェーンの重要な要素であり、多くの開発プロジェクトにデフォルトで組み込まれることになります。
 
-Web development linting tools mostly exist for JavaScript (though there are a few available for HTML and CSS). This makes sense: if an unknown HTML element or invalid CSS property is used, due to the resilient nature of these two languages nothing is likely to break. JavaScript is a lot more fragile — mistakenly calling a function that doesn't exist for example causes your JavaScript to break; linting JavaScript is therefore very important, especially for larger projects.
+ウェブ開発用のリンティングツールは、主に JavaScript 用に存在します (ただし、HTML と CSS 用に利用できるツールもいくつかあります)。 これは当然のことです。不明な HTML 要素または無効な CSS プロパティが使用された場合、これら 2 つの言語の回復力の性質により、何も壊れる可能性はありません。 JavaScript ははるかに脆弱です。たとえば、存在しない関数を誤って呼び出すと、JavaScript が壊れてしまいます。 したがって、JavaScript のリンティングは、特に大規模なプロジェクトの場合には非常に重要です。
 
-The go-to tool for JavaScript linting is [ESLint](https://eslint.org/). It's an extremely powerful and versatile tool but can be tricky to configure correctly and you could easily consume many hours trying to get a configuration _just right_!
+JavaScriptのリンティングに最適なツールは [ESLint](https://eslint.org/) です。 ESLint は非常に強力で多機能なツールですが、正しく設定するのは難しいので、設定を正しくするのに何時間も費やしてしまう可能性があります。
 
-Out of the box, ESLint is going to complain that it can't find the configuration file if you run it. The configuration file supports multiple formats but for this project, we'll use `.eslintrc.json` (the leading period means the file is hidden by default).
+ESLint を実行すると、そのままでは設定ファイルが見つからないというメッセージが表示されます。 構成ファイルは複数の形式をサポートしていますが、このプロジェクトでは `.eslintrc.json` を使用します (先頭のピリオドはデフォルトで隠しファイルであることを意味します)。
 
-ESLint is installed via npm, so as per discussions in Chapter 2, you have the choice to install this tool locally or globally. Using both is recommended:
+ESLint は npm 経由でインストールされるため、第 2 章の説明に従って、このツールをローカルにインストールするかグローバルにインストールするかを選択できます。 両方を使用することをお勧めします。
 
-- For projects you intend to share, you should always include ESLint as a local dependency so that anyone making their own copy can follow the rules you've applied to the project.
-- You should also consider having ESLint installed globally so that you can quickly use it to check any file you want.
+- 共有するプロジェクトでは、独自のコピーを作成する誰もがプロジェクトに適用したルールに従うことができるように、常に ESLint をローカル依存関係として含める必要があります。
+- ESLint をグローバルにインストールして、必要なファイルをすぐにチェックできるようにすることも検討してください。
 
-For the sake of simplicity, in this chapter, we're not going to explore all the features of ESLint, but we will put a configuration in place that works for our particular project and its requirements. However, bear in mind that if you want to refine and enforce a rule about how your code looks (or validates), it's very likely that it can be done with the right ESLint configuration.
+わかりやすくするために、この章では ESLint のすべての機能については説明しませんが、特定のプロジェクトとその要件に適した構成を導入します。 ただし、コードの外観 (または検証) に関するルールを調整して強制したい場合は、適切な ESLint 構成を使用することで実現できる可能性が高いことに留意してください。
 
-A little later in this chapter, we'll provide the ESLint config. Once a working configuration is in place, running the command can generate some useful information. Here is an example ESLint output:
+この章の少し後で、ESLint 構成を提供します。 動作する構成が設定されたら、コマンドを実行すると有用な情報が得られます。 ESLint の出力例を次に示します。
 
 ```bash
 ./my-project/src/index.js
@@ -198,9 +198,9 @@ A little later in this chapter, we'll provide the ESLint config. Once a working 
 ✖ 3 problems (3 errors, 0 warnings)
 ```
 
-> **Note:** We'll install ESLint in the next section; don't worry about this for now.
+> **メモ:** 次のセクションでESLintをインストールしますが、今は気にしないでください。
 
-As with other tools, code editor integration support is typically good for ESLint, and potentially more useful as it can give us real-time feedback when issues crop up:
+他のツールと同様に、コードエディターとの統合サポートは、通常 ESLint に適しており、問題が発生したときにリアルタイムのフィードバックを提供できるため、より便利になる可能性があります。
 
 ![ESLint error integration shown in VS Code](eslint-error.png)
 
