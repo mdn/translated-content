@@ -1,8 +1,7 @@
 ---
 title: Window.applicationCache
-slug: Web/API/Window/applicationCache
-l10n:
-  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
+slug: orphaned/Web/API/Window/applicationCache
+original_slug: Web/API/Window/applicationCache
 ---
 
 {{APIRef}}{{Deprecated_Header}}{{Non-standard_Header}}{{SecureContext_Header}}
