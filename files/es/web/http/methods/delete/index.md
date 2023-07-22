@@ -13,11 +13,11 @@ El método HTTP `DELETE` elimina el recurso especificado.
   <tbody>
     <tr>
       <th scope="row">Petición con cuerpo</th>
-      <td>Puede</td>
+      <td>Posible</td>
     </tr>
     <tr>
       <th scope="row">Respuesta válida con cuerpo</th>
-      <td>Puede</td>
+      <td>Posible</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Seguro")}}</th>
@@ -25,7 +25,7 @@ El método HTTP `DELETE` elimina el recurso especificado.
     </tr>
     <tr>
       <th scope="row">{{Glossary("Idempotent")}}</th>
-      <td>Yes</td>
+      <td>Si</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Cacheable")}}</th>
@@ -33,7 +33,7 @@ El método HTTP `DELETE` elimina el recurso especificado.
     </tr>
     <tr>
       <th scope="row">
-        Permitido en <a href="/es/docs/Learn/Forms">HTML forms</a>
+        Permitido en <a href="/es/docs/Learn/Forms">formularios</a>
       </th>
       <td>No</td>
     </tr>
