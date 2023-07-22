@@ -159,7 +159,9 @@ CSS 中组成一个块级盒子需要：
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```

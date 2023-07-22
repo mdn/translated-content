@@ -10,35 +10,32 @@ original_slug: Web/CSS/Common_CSS_Questions
 
 现代浏览器主要有两种渲染模式：
 
-- *怪异模式*：又称向后兼容模式，允许将传统网页渲染为作者意图。旧浏览器使用的非标准渲染规则。不完整的、不正确的、缺少 DOCTYPE 声明或已知的 DOCTYPE 声明中普遍使用 2001 年以前的文件将在怪异模式中呈现。
-- *标准模式*：浏览器试图严格遵守 W3C 标准。新 HTML 网页有望被设计为符合标准的浏览器，这样做的结果就是，用现代 DOCTYPE 声明的页面将被用标准模式呈现。
+- _怪异模式_：又称向后兼容模式，允许将传统网页渲染为作者意图。旧浏览器使用的非标准渲染规则。不完整的、不正确的、缺少 DOCTYPE 声明或已知的 DOCTYPE 声明中普遍使用 2001 年以前的文件将在怪异模式中呈现。
+- _标准模式_：浏览器试图严格遵守 W3C 标准。新 HTML 网页有望被设计为符合标准的浏览器，这样做的结果就是，用现代 DOCTYPE 声明的页面将被用标准模式呈现。
 
 基于 Gecko 的浏览器，有三分之一 _[Almost Standards Mode](/zh-CN/docs/Gecko's_%22Almost_Standards%22_Mode)_，只有一些小怪癖。
 
 这是最常用的触发标准模式或准标准模式的 DOCTYPE 声明列表：
 
 ```html
-<!DOCTYPE html> /* 这一行是 HTML5 的 doctype 声明。使用该声明会使现代浏览器使用 HTML5 解析器处理页面，这是推荐的 doctype 声明。*/
+<!doctype html> /* 这一行是 HTML5 的 doctype 声明。使用该声明会使现代浏览器使用
+HTML5 解析器处理页面，这是推荐的 doctype 声明。*/
 ```
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 ```
 
 ```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 ```
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 ```
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 请尽可能地使用 HTML 5 DOCTYPE。
@@ -75,16 +72,24 @@ HTML 元素可以拥有一个 `id`/或 `class` 属性。 `id` 属性为元素指
 
 ```css
 /* 标题元素的默认颜色为黑色 */
-h1 { color: red; }
-h1 { color: black; }
+h1 {
+  color: red;
+}
+h1 {
+  color: black;
+}
 ```
 
 从 CSS2 开始，情况就不一样了。关键字 [initial](/zh-CN/docs/Web/CSS/initial) 现在是一个有效的 CSS 属性。它将给定的 CSS 属性值重置为默认值。
 
 ```css
 /* 标题元素的默认颜色为黑色 */
-h1 { color: red; }
-h1 { color: initial; }
+h1 {
+  color: red;
+}
+h1 {
+  color: initial;
+}
 ```
 
 ## 我如何才可以从一个样式中衍生出另一种样式？
@@ -97,13 +102,16 @@ HTML 元素可以通过列出的类属性，用空格分开它们。
 
 ```html
 <style type="text/css">
-.news { background: black; color: white; }
-.today { font-weight: bold; }
+  .news {
+    background: black;
+    color: white;
+  }
+  .today {
+    font-weight: bold;
+  }
 </style>
 
-<div class="news today">
-... content of today's news ...
-</div>
+<div class="news today">... content of today's news ...</div>
 ```
 
 如果相同的属性中声明的规则，解决冲突首先通过特异性，然后根据 CSS 声明的顺序。在 `class` 属性类的顺序是不相关的。
@@ -117,14 +125,20 @@ HTML 元素可以通过列出的类属性，用空格分开它们。
 CSS 应用于 HTML 元素依靠于元素的层次结构。在任何 CSS 特异性或优先级规则中，子元素定义的样式会覆盖父元素的样式。
 
 ```css
-.news { color: black; }
-.corpName { font-weight: bold; color: red; }
+.news {
+  color: black;
+}
+.corpName {
+  font-weight: bold;
+  color: red;
+}
 ```
 
 ```html
 <!-- news 的文字是黑色的，但是 corpName 是红色且加粗的 -->
 <div class="news">
-   (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on Thursday...
+  (Reuters) <span class="corpName">General Electric</span> (GE.NYS) announced on
+  Thursday...
 </div>
 ```
 
@@ -135,19 +149,23 @@ CSS 应用于 HTML 元素依靠于元素的层次结构。在任何 CSS 特异�
 在 CSS 样式表中，顺序 **非常** 重要。如果先定义了一个规则，然后又重新定义了同样的规则，会使用最后一个定义。
 
 ```css
-#stockTicker { font-weight: bold; }
-.stockSymbol { color: red; }
+#stockTicker {
+  font-weight: bold;
+}
+.stockSymbol {
+  color: red;
+}
 /*  其他规则            */
 /*  其他规则            */
 /*  其他规则            */
-.stockSymbol { font-weight: normal; }
+.stockSymbol {
+  font-weight: normal;
+}
 ```
 
 ```html
 <!-- 除了”GE“以外，大部分文字都是加粗的，“GE”本身是红色不加粗的 -->
-<div id="stockTicker">
-   NYS: <span class="stockSymbol">GE</span> +1.0 ...
-</div>
+<div id="stockTicker">NYS: <span class="stockSymbol">GE</span> +1.0 ...</div>
 ```
 
 为了避免此类错误，请对特定选择器仅定义一次规则，将属于那个选择器的规则归类于此组。
@@ -157,22 +175,27 @@ CSS 应用于 HTML 元素依靠于元素的层次结构。在任何 CSS 特异�
 使用便捷属性的好处是语法更加紧凑。仅使用一部分便捷属性完全没有问题，但要注意，没有声明的属性将自动重置为默认状态，这意味着单个属性较靠前的规则可能会被隐式覆盖。
 
 ```css
-#stockTicker { font-size: 12px; font-family: Verdana; font-weight: bold; }
-.stockSymbol { font: 14px Arial; color: red; }
+#stockTicker {
+  font-size: 12px;
+  font-family: Verdana;
+  font-weight: bold;
+}
+.stockSymbol {
+  font: 14px Arial;
+  color: red;
+}
 ```
 
 ```html
-<div id="stockTicker">
-   NYS: <span class="stockSymbol">GE</span> +1.0 ...
-</div>
+<div id="stockTicker">NYS: <span class="stockSymbol">GE</span> +1.0 ...</div>
 ```
 
 在前一个示例中，问题发生在不同元素的规则中；但在同一个元素中问题也可能出现，因为顺序是 **重要** 的。
 
 ```css
 #stockTicker {
-    font-weight: bold;
-    font: 12px Verdana;  /* font-weight is now normal */
+  font-weight: bold;
+  font: 12px Verdana; /* font-weight is now normal */
 }
 ```
 
@@ -181,15 +204,23 @@ CSS 应用于 HTML 元素依靠于元素的层次结构。在任何 CSS 特异�
 `*` 通配符选择器可以指代任何元素，必须小心使用。
 
 ```css
-body * { font-weight: normal; }
-#stockTicker { font: 12px Verdana; }
-.corpName { font-weight: bold; }
-.stockUp { color: red; }
+body * {
+  font-weight: normal;
+}
+#stockTicker {
+  font: 12px Verdana;
+}
+.corpName {
+  font-weight: bold;
+}
+.stockUp {
+  color: red;
+}
 ```
 
 ```html
 <div id="section">
-    NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
+  NYS: <span class="corpName"><span class="stockUp">GE</span></span> +1.0 ...
 </div>
 ```
 
@@ -202,9 +233,15 @@ body * { font-weight: normal; }
 当某个元素应用了多个规则时，规则的选择依赖于样式的 [优先级](/zh-CN/docs/Web/CSS/Specificity)。内联样式（HTML 的 `style` 属性）最高，ID 选择器次之，再其次是类选择器，最后是元素名称选择器。
 
 ```css
-div { color: black; }
-#orange { color: orange; }
-.green { color: green; }
+div {
+  color: black;
+}
+#orange {
+  color: orange;
+}
+.green {
+  color: green;
+}
 ```
 
 ```html
@@ -215,7 +252,7 @@ div { color: black; }
 
 ## -moz-\*， -ms-\*， -webkit-\*， -o-\* 以及 -khtml-\* 属性有什么用？
 
-这些被称为 *前缀属性* 的属性是 CSS 标准的扩展。这些是出于测试目的的使用，不至于污染标准命名空间，防止标准扩展时产生兼容性问题。
+这些被称为 _前缀属性_ 的属性是 CSS 标准的扩展。这些是出于测试目的的使用，不至于污染标准命名空间，防止标准扩展时产生兼容性问题。
 
 不推荐在生产环境网站中使用这些属性，它们已经产生了巨大的网页兼容性混乱。例如，很多开发者只使用了 `-webkit-` 前缀版本的属性，但非前缀的版本已经在所有浏览器中得到支持，没有基于 Webkit 的浏览器很有可能会在今后丢失显示效果。这个问题过于严重，以至于其他浏览器也开始实现 `-webkit-` 前缀属性的别名以提升网站兼容性，即 [Compatibility Living Standard](https://compat.spec.whatwg.org/)。
 
