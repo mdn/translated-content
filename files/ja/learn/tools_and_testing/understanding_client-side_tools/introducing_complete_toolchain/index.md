@@ -66,16 +66,17 @@ l10n:
 
 例えば、ビルド中に SVG ファイルサイズを最小化するツールを組み込むこともできたかもしれません。 しかし、このプロジェクトには SVG 画像が 4 つしかなく、プロジェクトに追加する前に [SVGO を使用して手動で縮小](https://www.npmjs.com/package/svgo) しました。
 
-## A couple of prerequisites
+## いくつかの前提条件
 
-Besides the tools we're going to install that contribute to our toolchain, we mentioned two web services in the above list of tools. Let's take this opportunity to make sure we are set up with them before we continue. You will need to create accounts with each of GitHub and Netlify if you wish to complete the tutorial.
+ツールチェーンに貢献するこれからインストールするツールの他に、上記のツールのリストで 2 つのウェブサービスを紹介しました。先に進む前にこの機会を利用して、セットアップが完了していることを確認しましょう。 チュートリアルを完了するには、GitHub と Netlify のアカウントを作成する必要があります。
 
-- As mentioned previously, GitHub is a source code repository service that adds community features such as issue tracking, following project releases, and much more. In the next chapter, we will push to a GitHub code repository, which will cause a cascade effect that (should) deploy all the software to a home on the web.
-- Netlify is a hosting service for static websites (that is, websites that entirely consist of files that do not change in real-time), which lets us deploy multiple times a day and freely hosts static sites of all kinds. Netlify is what provides the "home on the web" mentioned above — free hosting for us to deploy our test app to.
+- 前述したように、GitHub はソースコードリポジトリサービスであり、課題の追跡やプロジェクトのリリースのフォローなどのコミュニティ機能を追加しています。次の章では、GitHubのコードリポジトリにプッシュして、すべてのソフトウェアをウェブ上のホームにデプロイする（はずの）カスケード効果を引き起こします。
+- Netlify は、静的ウェブサイト (つまり、リアルタイムでは変更されないファイルで完全に構成されているウェブサイト) 用のホスティングサービスです。これにより、1 日に何度もデプロイすることができ、あらゆる種類の静的サイトを自由にホストできます。 Netlify は、前述の「ウェブ上のホーム」、つまりテスト アプリをデプロイするための無料のホスティングを提供するものです。
 
-Once you've signed up for [GitHub](https://github.com/) (click the _Sign Up_ link on the homepage if you don't already have an account, and follow the instructions), you can use your GitHub account for authentication on [Netlify](https://www.netlify.com/) (click _Sign Up_, then choose _GitHub_ from the "Sign up with one of the following" list), so technically you only need to create one new account.
+[GitHub](https://github.com/) にサインアップすると（まだアカウントをお持ちでない場合は、ホームページの _Sign Up_ リンクをクリックし、指示に従ってください）、 [Netlify](https://www.netlify.com/) での認証に GitHub アカウントを使用できるようになる(_Sign Up_ をクリックし、[次のいずれかでサインアップ] リストから _GitHub_ を選択してください)ので、技術的には新しいアカウントを1つ作るだけで済みます。
 
-Later on, you'll need to connect your Netlify account to your GitHub repository to deploy this project; we'll see how to do that in the next chapter.
+後で、このプロジェクトをデプロイするために Netlify アカウントを GitHub リポジトリに接続する必要があります。 その方法については次の章で説明します。
+
 
 ## Three stages of tools
 
