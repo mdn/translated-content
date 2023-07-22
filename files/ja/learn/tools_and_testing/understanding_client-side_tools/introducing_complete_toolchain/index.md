@@ -38,19 +38,19 @@ l10n:
 
 このサイトのライブバージョンは、[near-misses.netlify.com](https://near-misses.netlify.app/) でご覧いただけます。
 
-## Tools used in our toolchain
+## ツールチェーンで使用されるツール
 
-In this article we're going to use the following tools and features:
+この記事では、次のツールと機能を使用します。
 
-- [JSX](https://reactjs.org/docs/introducing-jsx.html), a [React](https://reactjs.org)-related set of syntax extensions that allow you to do things like defining component structures inside JavaScript. You won't need to know React to follow this tutorial, but we've included this to give you an idea of how a non-native web language could be integrated into a toolchain.
-- The latest built-in JavaScript features (at the time of writing), such as [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).
-- Useful development tools such as [Prettier](https://prettier.io/) for formatting and [ESLint](https://eslint.org/) for linting.
-- [PostCSS](https://postcss.org/) to provide CSS nesting capabilities.
-- [Parcel](https://parceljs.org/) to build and minify our code, and to write a bunch of configuration file content automatically for us.
-- [GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) to manage our source code control.
-- [Netlify](https://www.netlify.com/) to automate our deployment process.
+- [JSX](https://reactjs.org/docs/introducing-jsx.html)は、[React](https://reactjs.org) に関連する構文拡張のセットで、JavaScript 内でコンポーネント構造を定義するなどの作業を可能にします。このチュートリアルに行うのに React を理解する必要はありませんが、非ネイティブ Web 言語をツールチェーンに統合する方法を理解するためにこれを含めました。
+- [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) などの最新の組み込み JavaScript 機能（執筆時点）です。
+- フォーマット用の [Prettier](https://prettier.io/) や lint 用の [ESLint](https://eslint.org/) などの便利な開発ツール。
+- [PostCSS](https://postcss.org/) は、CSS のネスティング機能を提供します。
+- [Parcel](https://parceljs.org/) コードをビルドして縮小し、多数の構成ファイルのコンテンツを自動的に書き込みます。
+- [GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub) を使ってソースコードを管理しています。
+- [Netlify](https://www.netlify.com/) を使ってデプロイプロセスを自動化します。
 
-You may not be familiar with all the above features and tools or what they are doing, but don't panic — we'll explain each part as we move through this article.
+上記の機能やツールが何をするものなのか、よく知らないかもしれないが、パニックにならないでください。この記事を進めながら各部分について説明します。
 
 ## Toolchains and their inherent complexity
 
