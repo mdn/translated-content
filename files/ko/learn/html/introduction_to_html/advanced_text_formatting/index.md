@@ -1,5 +1,5 @@
 ---
-title: Advanced text formatting
+title: 진화된 텍스트 포맷팅
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
 
