@@ -69,7 +69,7 @@ fetch("simple.wasm")
   .then((bytes) => WebAssembly.instantiate(bytes, importObject))
   .then((results) => {
     results.instance.exports.exported_func();
-   });
+  });
 ```
 
 ### Como visualizar o Wasm nas ferramentas do desenvolvedor
@@ -133,7 +133,7 @@ Vamos tornar as afirmações acima mais claras observando um exemplo de memória
 
 1. faça uma cópia local de `memory.wasm` no mesmo diretório de antes.
 
-    > **Nota:** você pode ver a representação de texto do módulo em [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
+   > **Nota:** você pode ver a representação de texto do módulo em [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
 
 2. Volte para seu arquivo de exemplo `memory.html` e busque, compile e instancie seu módulo Wasm como antes — adicione o seguinte ao final de seu script:
 
@@ -248,11 +248,7 @@ const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
 WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
   ({ instance }) => {
-    assertEq(
-      "obtendo valor inicial de wasm",
-      instance.exports.getGlobal(),
-      0,
-    );
+    assertEq("obtendo valor inicial de wasm", instance.exports.getGlobal(), 0);
     global.value = 42;
     assertEq(
       "obtendo valor atualizado por JS do wasm",
