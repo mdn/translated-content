@@ -274,12 +274,12 @@ npm install --save-dev eslint prettier babel-eslint
 
 実際のアプリケーションコードの開発を始める前に、ツールが適切に動作するように少し設定が必要です。これはWeb開発の前提条件ではありませんが、開発中にエラーをキャッチするのに役立つため、ツールが正しく設定されていると便利です。特に ESLint はその点で特に役立ちます。
 
-### Configuring our tools
+### ツールの設定
 
-In the root of the project (not in the `src` directory), we will add configuration files to configure some of our tools, namely Prettier and ESLint. This is general practice for tool configuration — you tend to find the config files in the project root, which more often than not contain configuration options expressed in a JSON structure (though our tools and many others also support YAML, which you can switch to if that's your preferred flavor of the configuration file).
+プロジェクトのルートディレクトリ（ `src` ディレクトリではなく）に、いくつかのツールを設定するための設定ファイルを追加します。具体的には、 Prettier と ESLint の設定です。これは一般的なツールの設定方法であり、通常、設定ファイルはプロジェクトのルートに配置されます。これらの設定ファイルには、 JSON 形式で表現された設定オプションが含まれています（ただし、私たちのツールやその他の多くのツールは YAML もサポートしており、もしそちらを好みの設定ファイル形式とする場合は切り替えることもできます）。
 
-1. First of all, create a file in the root of your `will-it-miss` directory called `.prettierrc.json`.
-2. To configure Prettier, give `.prettierrc.json` the following contents:
+1. まず、 `will-it-miss` ディレクトリのルートに `.prettierrc.json` という名前のファイルを作成します。
+2. Prettier を設定するために、 `.prettierrc.json` に以下の内容を記述します：
 
    ```json
    {
@@ -288,9 +288,9 @@ In the root of the project (not in the `src` directory), we will add configurati
    }
    ```
 
-   With these settings, when Prettier formats JavaScript for you it will use single quotes for all your quoted values, and it won't use trailing commas (a newer feature of ECMAScript that will cause errors in older browsers). You can find more about [configuring Prettier](https://prettier.io/docs/en/configuration.html) in its documentation.
+   これらの設定を使用すると、Prettier が JavaScript をフォーマットする際には、すべての引用された値にシングルクォートを使用し、末尾のカンマは使用しません（ ECMAScript の新しい機能で、古いブラウザーでエラーが発生する可能性があるものです）。[Prettierの設定についての詳細](https://prettier.io/docs/en/configuration.html)は、公式ドキュメントを参照してください。
 
-3. Next up, we'll configure ESLint — create another file in the root of your `will-it-miss` directory called `.eslintrc.json`, and give it the following contents:
+3. 次に、ESLintの設定を行います。`will-it-miss` ディレクトリのルートに `.eslintrc.json` という別のファイルを作成し、以下の内容を記述します。
 
    ```json
    {
@@ -309,13 +309,13 @@ In the root of the project (not in the `src` directory), we will add configurati
    }
    ```
 
-   The above ESLint configuration says that we want to use the "recommended" ESLint settings, that we're going to allow usage of ES6 features (such as [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) or [`Set()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)), that we can use module [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) statements, and that using [`console.log()`](/en-US/docs/Web/API/console/log) is allowed.
+   上記の ESLint の設定では、"recommended" ESLint 設定を使用し、ES6の機能（例： [`map()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map) や [`Set()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/Set) など）の使用を許可し、モジュールの [`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) 文を使用できるようにし、 [`console.log()`](/ja/docs/Web/API/console/log) の使用も許可しています。
 
-4. However, in the project's source files we are using React JSX syntax (for your real projects you might use React or Vue or any other framework, or no framework at all!).
+4. ただし、このプロジェクトのソースファイルでは、React JSX構文を使用しています（実際のプロジェクトではReactやVueなどのフレームワーク、またはフレームワークを使用しない場合もあります！）。
 
-   Putting JSX syntax in the middle of our JavaScript is going to cause ESLint to complain pretty quickly with the current configuration, so we'll need to add a little more configuration to the ESLint settings to get it to accept JSX features.
+   JSX構文をJavaScriptの中に挿入すると、ESLintは現在の設定ではすぐに警告を出すことになります。そのため、ESLintの設定に少し追加の設定を行い、JSXの機能を受け入れるようにします。
 
-   The final config file should look like this — add in the bolded parts and save it:
+   最終的な設定ファイルは以下のようになります。太字の部分を追加して保存してください：
 
    ```json
    {
@@ -340,17 +340,17 @@ In the root of the project (not in the `src` directory), we will add configurati
    }
    ```
 
-   As the configuration now uses a plugin called "React", this development dependency also needs to be installed, so that the code is there to actually run that part of the linting process.
+   設定が現在「React」という名前のプラグインを使用しているため、この開発用の依存関係もインストールする必要があります。これにより、実際に lint プロセスのこの部分を実行するためのコードが存在します。
 
-5. Run the following terminal command in the root of your project folder:
+5. プロジェクトフォルダのルートで、以下のターミナルコマンドを実行してください。
 
    ```bash
    npm install --save-dev eslint-plugin-react
    ```
 
-There's a complete [list of ESLint rules](https://eslint.org/docs/rules/) that you can tweak and configure to your heart's content and many companies and teams have published their [own ESLint configurations](https://www.npmjs.com/search?q=keywords:eslintconfig), which can sometimes be useful either to get inspiration or to select one that you feel suits your own standards. A forewarning though: ESLint configuration is a very deep rabbit hole!
+ESLintのルールは、 [list of ESLint rules](https://eslint.org/docs/rules/) があり、心のままに調整して設定することができます。多くの企業やチームが[独自の ESLint 設定](https://www.npmjs.com/search?q=keywords:eslintconfig) を公開しており、これらはしばしばインスピレーションを得るのに役立つこともありますし、自分の基準に合ったものを選択する際にも便利です。ただし、注意が必要です： ESLint の設定は非常に奥深いものです！
 
-That's our dev environment setup complete at this point. Now, finally we're (very nearly) ready to code.
+ここまでで、開発環境のセットアップが完了しました。これで、ついに（ほぼ）コーディングの準備が整いました。
 
 ## Build and transformation tools
 
