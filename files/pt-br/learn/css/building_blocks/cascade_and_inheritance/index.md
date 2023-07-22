@@ -279,4 +279,3 @@ Se você não entendeu totalmente a cascata, a especificidade e a herança, não
 Volte aqui se você começar a encontrar problemas estranhos com estilos que não se aplicam conforme o esperado. Pode ser um problema de especificidade.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Cascade_layers", "Learn/CSS/Building_blocks")}}
-
