@@ -100,7 +100,7 @@ l10n:
 
 - ライブラリインストールツール — 依存関係を追加するためのツール
 - コードリビジョン管理
-- コード整形ツール — JavaScript、CSS、HTML の整形
+- コード整理ツール — JavaScript、CSS、HTML の整理
 - コード lint ツール — コードを lint するためのツール
 
 
@@ -132,7 +132,7 @@ Git は [git-scm をウェブサイトからダウンロードしてインスト
 
 とにかく、今のところやるべきことは git をインストールすることだけです。 次へ移りましょう。
 
-### コード整形ツール
+### コード整理ツール
 
 このプロジェクトでは、第 2 章で最初に説明した Prettier を使用してコードを整形します。 [Prettier のインストール](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#installing_prettier) セクションの指示に従っている場合は、すでに Prettier がインストールされている可能性があります。 そうでない場合は、今すぐターミナルを使用して Prettier をグローバル ユーティリティとしてインストールするように指示します。
 
