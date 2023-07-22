@@ -116,7 +116,7 @@ const printTable = (data, md = true) => {
         str += `${v[l] || "0"},`;
       }
     } else {
-      str += `${"DETECTION ERROR!,".repeat(detectedLanguages.length)}`;
+      str += `${"ERR,".repeat(detectedLanguages.length)}`;
     }
 
     // Strip last comma
