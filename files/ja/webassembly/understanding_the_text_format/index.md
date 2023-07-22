@@ -172,10 +172,9 @@ WebAssembly のバリデーションルールはスタックが正確に一致�
 次に、 `addCode` という名前の型付き配列にバイナリー読み込み（[WebAssembly コードのロードと実行](/ja/docs/WebAssembly/Loading_and_running) で説明されています）、コンパイル、インスタンス化して、JavaScript で `add` 関数を実行します（`add()` はインスタンスの [`exports`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) プロパティから見つけることができます）。
 
 ```js
-WebAssembly.instantiateStreaming(fetch('add.wasm'))
-  .then(obj => {
-    console.log(obj.instance.exports.add(1, 2));  // "3"
-  });
+WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
+  console.log(obj.instance.exports.add(1, 2)); // "3"
+});
 ```
 
 > **メモ:** この例は GitHub の[add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)) にあります。関数のインスタンス化についての詳細は {{JSxRef("WebAssembly.instantiateStreaming()")}} も合わせて参照してください。
@@ -211,10 +210,9 @@ WebAssembly.instantiateStreaming(fetch('add.wasm'))
 上のモジュールを呼び出す JavaScript コードは次のようになります。
 
 ```js
-WebAssembly.instantiateStreaming(fetch('call.wasm'))
- .then(obj => {
-    console.log(obj.instance.exports.getAnswerPlus1());  // "43"
-  });
+WebAssembly.instantiateStreaming(fetch("call.wasm")).then((obj) => {
+  console.log(obj.instance.exports.getAnswerPlus1()); // "43"
+});
 ```
 
 ### JavaScript から関数をインポートする
@@ -242,16 +240,17 @@ JavaScript 関数にはシグネチャの概念がないため、インポート
 ```js
 var importObject = {
   console: {
-    log: function(arg) {
+    log: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
-  .then(obj => {
+WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
+  (obj) => {
     obj.instance.exports.logIt();
-  });
+  },
+);
 ```
 
 > **メモ:** この例は GitHub の [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html))を参照してください。
@@ -278,7 +277,7 @@ WebAssembly のテキスト形式では、次のようになります (GitHub �
 JavaScript を使用して同等の値を作成するには、 {{JSxRef("WebAssembly.Global()")}} コンストラクターを使用してください。
 
 ```js
-const global = new WebAssembly.Global({value: "i32", mutable: true}, 0);
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 ```
 
 ### WebAssembly メモリー
@@ -304,7 +303,7 @@ JavaScript 側では、バイト列を簡単に JavaScript 文字列にデコー
 ```js
 function consoleLogString(offset, length) {
   var bytes = new Uint8Array(memory.buffer, offset, length);
-  var string = new TextDecoder('utf8').decode(bytes);
+  var string = new TextDecoder("utf8").decode(bytes);
   console.log(string);
 }
 ```
@@ -339,14 +338,15 @@ function consoleLogString(offset, length) {
 ここで、JavaScript から 1 ページ分のサイズを持つ Memory を作成してそれに渡すことができます。結果としてコンソールに "Hi" と出力されます。
 
 ```js
-var memory = new WebAssembly.Memory({initial:1});
+var memory = new WebAssembly.Memory({ initial: 1 });
 
 var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
-WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
-  .then(obj => {
+WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
+  (obj) => {
     obj.instance.exports.writeHi();
-  });
+  },
+);
 ```
 
 > **メモ:** 完全なソースは GitHub の [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)) を参照してください。
@@ -432,7 +432,7 @@ function() {
 
 より高級な、JavaScript のような表現力の高い言語では、関数を含む配列 (あるいはオブジェクトかもしれません) で同じことができることが想像できますよね。擬似コードだとこれは `tbl[i]()` のようになります。
 
-型チェックの話に戻ります。WebAssembly は型チェックされていて、 `funcref`  は「任意の関数シグネチャ」を意味するので、呼び出し先の (推定される) シグネチャを指定する必要があります。そのため、 `$return_i32` 型を指定することで、プログラムに関数が `i32` を返すはずだと知らせます。もし呼び出し先のシグネチャが一致しない (代わりに `f32` が返されるような) 場合は {{JSxRef("WebAssembly.RuntimeError")}} 例外が発生します。
+型チェックの話に戻ります。WebAssembly は型チェックされていて、 `funcref` は「任意の関数シグネチャ」を意味するので、呼び出し先の (推定される) シグネチャを指定する必要があります。そのため、 `$return_i32` 型を指定することで、プログラムに関数が `i32` を返すはずだと知らせます。もし呼び出し先のシグネチャが一致しない (代わりに `f32` が返されるような) 場合は {{JSxRef("WebAssembly.RuntimeError")}} 例外が発生します。
 
 さて、呼び出しを行うときにどのようにテーブルに `call_indirect` をリンクさせているのでしょうか? 答えは、現在モジュールインスタンスごとに1つのテーブルしか許容されないため、`call_indirect` はそれを暗黙的に呼び出します。将来的に複数のテーブルを持てるようになったとき、以下の行のように、何らかのテーブル識別子を指定する必要があるでしょう。
 
@@ -460,12 +460,11 @@ call_indirect $my_spicy_table (type $i32_to_void)
 次の JavaScript を使用してウェブページに読み込んでみましょう。
 
 ```js
-WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
-  .then(obj => {
-    console.log(obj.instance.exports.callByIndex(0)); // returns 42
-    console.log(obj.instance.exports.callByIndex(1)); // returns 13
-    console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
-  });
+WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
+  console.log(obj.instance.exports.callByIndex(0)); // returns 42
+  console.log(obj.instance.exports.callByIndex(1)); // returns 13
+  console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
+});
 ```
 
 > **メモ:** 例は GitHub の [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html) ([動作例](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)) を参照してください。
@@ -531,16 +530,16 @@ JavaScript は関数参照にフルアクセスできるため、 Table オブ�
 ```js
 var importObj = {
   js: {
-    memory : new WebAssembly.Memory({ initial: 1 }),
-    table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
-  }
+    memory: new WebAssembly.Memory({ initial: 1 }),
+    table: new WebAssembly.Table({ initial: 1, element: "anyfunc" }),
+  },
 };
 
 Promise.all([
-  WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
-  WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
-]).then(function(results) {
-  console.log(results[1].instance.exports.doIt());  // prints 42
+  WebAssembly.instantiateStreaming(fetch("shared0.wasm"), importObj),
+  WebAssembly.instantiateStreaming(fetch("shared1.wasm"), importObj),
+]).then(function (results) {
+  console.log(results[1].instance.exports.doIt()); // prints 42
 });
 ```
 
@@ -607,13 +606,17 @@ WebAssembly スレッド ([Firefox 79](/ja/docs/Mozilla/Firefox/Releases/79) 以
 JavaScript API 側では、[`WebAssembly.Memory()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) コンストラクタの初期化オブジェクトに `shared` プロパティを追加し、 `true` に設定すると共有メモリを作成するようになりました。
 
 ```js
-let memory = new WebAssembly.Memory({initial:10, maximum:100, shared:true});
+let memory = new WebAssembly.Memory({
+  initial: 10,
+  maximum: 100,
+  shared: true,
+});
 ```
 
 メモリーの [`buffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer) プロパティは `SharedArrayBuffer` を返すようになり、普通の `ArrayBuffer` ではなくなりました。
 
 ```js
-memory.buffer // returns SharedArrayBuffer
+memory.buffer; // returns SharedArrayBuffer
 ```
 
 テキスト形式の上では、 `shared` キーワードを使って、次のように共有メモリーを作成することができます。

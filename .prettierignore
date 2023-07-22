@@ -55,7 +55,6 @@ build/
 /files/ja/web/http/**/*.md
 /files/ja/web/javascript/**/*.md
 /files/ja/web/svg/**/*.md
-/files/ja/webassembly/**/*.md
 
 # ko
 /files/ko/games/**/*.md
