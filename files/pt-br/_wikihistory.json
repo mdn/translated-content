@@ -4751,10 +4751,6 @@
     "modified": "2020-10-15T22:02:16.544Z",
     "contributors": ["EvertonTomalok"]
   },
-  "Web/CSS/CSS_Selectors": {
-    "modified": "2019-03-22T08:21:56.189Z",
-    "contributors": ["Arlon", "Lukff", "kelvyncosta"]
-  },
   "Web/CSS/CSS_Types": {
     "modified": "2019-03-18T21:41:31.457Z",
     "contributors": ["brunoeduardo"]
@@ -4940,6 +4936,10 @@
   "Web/CSS/CSS_positioned_layout/Understanding_z-index": {
     "modified": "2019-03-23T22:59:23.481Z",
     "contributors": ["songbird159", "teoli", "MaxWilliamJF"]
+  },
+  "Web/CSS/CSS_selectors": {
+    "modified": "2019-03-22T08:21:56.189Z",
+    "contributors": ["Arlon", "Lukff", "kelvyncosta"]
   },
   "Web/CSS/CSS_transforms": {
     "modified": "2019-03-23T22:44:44.279Z",
