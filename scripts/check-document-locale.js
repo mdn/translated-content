@@ -17,6 +17,8 @@ import { hideBin } from "yargs/helpers";
 
 const spinner = ora().start();
 
+const THRESHOLD = 10;
+
 const IGNORE_BLOCK_STRINGS = [
   "<!-- lang-detect ignore-start -->",
   "<!-- lang-detect ignore-end -->",
@@ -81,9 +83,9 @@ const getDocumentLanguages = async (doc, expectedLocale = "ENGLISH") => {
     throw e;
   }
 
-  const detectedLanguages = detection.languages.filter(
-    (l) => !IGNORED_LANGUAGES.includes(l.name),
-  );
+  const detectedLanguages = detection.languages
+    .filter((l) => !IGNORED_LANGUAGES.includes(l.name))
+    .filter((l) => l.percent >= THRESHOLD);
   const result = {};
 
   for (const l of detectedLanguages) {
