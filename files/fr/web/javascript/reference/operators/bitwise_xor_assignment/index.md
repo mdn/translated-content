@@ -1,13 +1,6 @@
 ---
 title: Affectation après OU exclusif binaire (^=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.bitwise_xor_assignment
 ---
 
 {{jsSidebar("Operators")}}

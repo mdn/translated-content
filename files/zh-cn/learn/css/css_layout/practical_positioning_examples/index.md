@@ -54,17 +54,32 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
     <article class="active-panel">
       <h2>The first tab</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
+        et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius
+        libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt
+        metus. Donec ultrices, urna maximus consequat aliquet, dui neque
+        eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor
+        urna. Nulla facilisi.
+      </p>
     </article>
     <article>
       <h2>The second tab</h2>
 
-      <p>This tab hasn't got any Lorem Ipsum in it. But the content isn't very exciting all the same.</p>
+      <p>
+        This tab hasn't got any Lorem Ipsum in it. But the content isn't very
+        exciting all the same.
+      </p>
     </article>
     <article>
       <h2>The third tab</h2>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an ordered list: how exciting!</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an
+        ordered list: how exciting!
+      </p>
 
       <ol>
         <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
@@ -150,7 +165,8 @@ body {
 最后，对于本节，我们将会在链接状态上设置一些样式。首先，我们要设置标签的 `:focus` 和 `:hover` 状态，让他们在获得焦点/鼠标悬浮的时候看起来不同，给用户提供一些可视化反馈。其次，当某个选项卡的类（ `class` ）出现 `active` 时，我们为其设置一条相同的样式规则。我们将通过使用 JavaScript 来设置，当一个标签被点击时。把这些 CSS 放置在你的其他样式后面：
 
 ```css
-.info-box li a:focus, .info-box li a:hover {
+.info-box li a:focus,
+.info-box li a:hover {
   background-color: #a60000;
   color: white;
 }
@@ -200,32 +216,32 @@ body {
 让这些特性工作的最后一步是添加一些 JavaScript。添加下列一块代码，准确的写在你的开始和结束的{{htmlelement("script")}}标签之间（在接下来的 HTML 内容中你将会发现这些）：
 
 ```js
-var tabs = document.querySelectorAll('.info-box li a');
-var panels = document.querySelectorAll('.info-box article');
+var tabs = document.querySelectorAll(".info-box li a");
+var panels = document.querySelectorAll(".info-box article");
 
-for(i = 0; i < tabs.length; i++) {
+for (i = 0; i < tabs.length; i++) {
   var tab = tabs[i];
   setTabHandler(tab, i);
 }
 
 function setTabHandler(tab, tabPos) {
-  tab.onclick = function() {
-    for(i = 0; i < tabs.length; i++) {
-      if(tabs[i].getAttribute('class')) {
-        tabs[i].removeAttribute('class');
+  tab.onclick = function () {
+    for (i = 0; i < tabs.length; i++) {
+      if (tabs[i].getAttribute("class")) {
+        tabs[i].removeAttribute("class");
       }
     }
 
-    tab.setAttribute('class', 'active');
+    tab.setAttribute("class", "active");
 
-    for(i = 0; i < panels.length; i++) {
-      if(panels[i].getAttribute('class')) {
-        panels[i].removeAttribute('class');
+    for (i = 0; i < panels.length; i++) {
+      if (panels[i].getAttribute("class")) {
+        panels[i].removeAttribute("class");
       }
     }
 
-    panels[tabPos].setAttribute('class', 'active-panel');
-  }
+    panels[tabPos].setAttribute("class", "active-panel");
+  };
 }
 ```
 
@@ -259,14 +275,30 @@ function setTabHandler(tab, tabPos) {
 ```html
 <section class="fake-content">
   <h1>Fake content</h1>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
-  <p>This is fake content. Your main web page contents would probably go here.</p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
+  <p>
+    This is fake content. Your main web page contents would probably go here.
+  </p>
 </section>
 ```
 
@@ -398,7 +430,7 @@ aside {
 这是最后要添加的一点 CSS ——把这些放到你的 CSS 底部：
 
 ```css
-input[type=checkbox]:checked + aside {
+input[type="checkbox"]:checked + aside {
   right: 0px;
 }
 ```

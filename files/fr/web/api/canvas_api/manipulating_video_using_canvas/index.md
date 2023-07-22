@@ -1,11 +1,7 @@
 ---
 title: Manipulation vidéo avec la balise canvas
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
-tags:
-  - Canvas
-  - Video
 translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
-original_slug: HTML/Manipulating_video_using_canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}}

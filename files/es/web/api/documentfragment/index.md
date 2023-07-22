@@ -55,18 +55,18 @@ An empty `DocumentFragment` can be created using the {{domxref("document.createD
 ### JavaScript
 
 ```js
-var list = document.querySelector('#list')
-var fruits = ['Apple', 'Orange', 'Banana', 'Melon']
+var list = document.querySelector("#list");
+var fruits = ["Apple", "Orange", "Banana", "Melon"];
 
-var fragment = new DocumentFragment()
+var fragment = new DocumentFragment();
 
 fruits.forEach(function (fruit) {
-  var li = document.createElement('li')
-  li.innerHTML = fruit
-  fragment.appendChild(li)
-})
+  var li = document.createElement("li");
+  li.innerHTML = fruit;
+  fragment.appendChild(li);
+});
 
-list.appendChild(fragment)
+list.appendChild(fragment);
 ```
 
 ### Result

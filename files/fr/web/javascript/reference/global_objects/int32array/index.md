@@ -1,14 +1,7 @@
 ---
 title: Int32Array
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/Int32Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Int32Array
 ---
 
 {{JSRef}}

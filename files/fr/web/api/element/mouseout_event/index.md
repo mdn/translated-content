@@ -1,13 +1,6 @@
 ---
 title: 'Element : évènement mouseout'
 slug: Web/API/Element/mouseout_event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - Reference
-  - mouseout
 translation_of: Web/API/Element/mouseout_event
 ---
 

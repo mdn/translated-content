@@ -1,14 +1,7 @@
 ---
 title: handler.deleteProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/deleteProperty
 ---
 
 {{JSRef}}

@@ -1,10 +1,6 @@
 ---
 title: inverted-colors
 slug: Web/CSS/@media/inverted-colors
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/inverted-colors
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: 'WebSocket : évènement error'
 slug: Web/API/WebSocket/error_event
-browser-compat: api.WebSocket.error_event
 ---
 
 {{APIRef}}

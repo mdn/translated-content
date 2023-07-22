@@ -2,8 +2,6 @@
 title: matrix()
 slug: Web/CSS/transform-function/matrix
 translation_of: Web/CSS/transform-function/matrix()
-original_slug: Web/CSS/transform-function/matrix()
-browser-compat: css.types.transform-function.matrix
 ---
 
 {{CSSRef}}

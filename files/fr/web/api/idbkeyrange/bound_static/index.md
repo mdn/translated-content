@@ -1,14 +1,7 @@
 ---
 title: IDBKeyRange.bound()
 slug: Web/API/IDBKeyRange/bound_static
-tags:
-  - API
-  - IDBKeyRange
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBKeyRange/bound
-original_slug: Web/API/IDBKeyRange/bound
 ---
 
 {{APIRef("IndexedDB")}}

@@ -1,10 +1,6 @@
 ---
 title: border-top
 slug: Web/CSS/border-top
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border-top
 ---
 

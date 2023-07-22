@@ -1,15 +1,6 @@
 ---
 title: FormData.keys()
 slug: Web/API/FormData/keys
-tags:
-  - API
-  - FormData
-  - Iteration
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequestAPI
-  - keys
 translation_of: Web/API/FormData/keys
 ---
 

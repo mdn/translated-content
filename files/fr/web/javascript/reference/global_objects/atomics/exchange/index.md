@@ -1,14 +1,7 @@
 ---
 title: Atomics.exchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/exchange
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/exchange
 ---
 
 {{JSRef}}

@@ -1,13 +1,6 @@
 ---
 title: Affectation après division (/=)
 slug: Web/JavaScript/Reference/Operators/Division_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.division_assignment
 ---
 
 {{jsSidebar("Operators")}}

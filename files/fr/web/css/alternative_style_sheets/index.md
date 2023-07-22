@@ -1,12 +1,7 @@
 ---
 title: Feuilles de style alternatives
 slug: Web/CSS/Alternative_style_sheets
-tags:
-  - CSS
-  - NeedsCompatTable
-  - Reference
 translation_of: Web/CSS/Alternative_style_sheets
-original_slug: Web/CSS/Feuilles_de_style_alternatives
 ---
 
 {{CSSRef}}

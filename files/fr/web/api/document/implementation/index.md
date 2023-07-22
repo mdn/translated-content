@@ -1,11 +1,6 @@
 ---
 title: document.implementation
 slug: Web/API/Document/implementation
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - Reference
 translation_of: Web/API/Document/implementation
 ---
 

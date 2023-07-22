@@ -1,12 +1,6 @@
 ---
 title: IDBIndex.getKey()
 slug: Web/API/IDBIndex/getKey
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBIndex/getKey
 ---
 

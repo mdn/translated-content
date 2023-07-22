@@ -1,12 +1,6 @@
 ---
 title: Event.currentTarget
 slug: Web/API/Event/currentTarget
-tags:
-  - API
-  - Cible
-  - DOM
-  - Evènement
-  - Propriété
 translation_of: Web/API/Event/currentTarget
 ---
 

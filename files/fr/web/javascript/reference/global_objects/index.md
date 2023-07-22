@@ -1,12 +1,7 @@
 ---
 title: Objets globaux
 slug: Web/JavaScript/Reference/Global_Objects
-tags:
-  - Aperçu
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects
-original_slug: Web/JavaScript/Reference/Objets_globaux
 ---
 
 {{jsSidebar("Objects")}}

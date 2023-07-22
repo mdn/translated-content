@@ -1,10 +1,6 @@
 ---
 title: ':active'
 slug: Web/CSS/:active
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:active
 ---
 

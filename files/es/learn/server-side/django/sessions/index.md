@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de Django Parte 7: Framework de sesiones'
+title: "Tutorial de Django Parte 7: Framework de sesiones"
 slug: Learn/Server-side/Django/Sessions
 ---
 
@@ -141,7 +141,7 @@ Aquí primero obtenemos el valor de la clave de sesión `'num_visits'`, establec
 
 Añade la línea que se ve al final del siguiente bloque a tu plantilla HTML principal (**/locallibrary/catalog/templates/index.html**) al final de la sección "Dynamic content" para desplegar la variable de contexto:
 
-```html
+```django
 <h2>Dynamic content</h2>
 
 <p>The library has the following record counts:</p>

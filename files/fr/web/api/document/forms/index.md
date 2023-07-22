@@ -1,12 +1,6 @@
 ---
 title: Document.forms
 slug: Web/API/Document/forms
-tags:
-  - API
-  - DOM
-  - Document
-  - Formulaires
-  - Propriétés
 translation_of: Web/API/Document/forms
 ---
 

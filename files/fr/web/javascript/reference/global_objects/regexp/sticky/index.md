@@ -1,16 +1,7 @@
 ---
 title: RegExp.prototype.sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
-tags:
-  - ECMAScript 2015
-  - Expressions rationnelles
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/sticky
 ---
 
 {{JSRef}}

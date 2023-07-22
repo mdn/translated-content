@@ -2,7 +2,6 @@
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
 translation_of: Web/HTTP/Headers/X-Frame-Options
-browser-compat: http.headers.X-Frame-Options
 ---
 
 {{HTTPSidebar}}

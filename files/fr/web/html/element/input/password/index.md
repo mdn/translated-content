@@ -2,7 +2,6 @@
 title: <input type="password">
 slug: Web/HTML/Element/input/password
 translation_of: Web/HTML/Element/input/password
-browser-compat: html.elements.input.input-password
 ---
 
 {{HTMLSidebar}}

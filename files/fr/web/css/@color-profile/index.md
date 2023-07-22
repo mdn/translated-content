@@ -2,7 +2,6 @@
 title: '@color-profile'
 slug: Web/CSS/@color-profile
 translation_of: Web/CSS/@color-profile
-browser-compat: css.at-rules.color-profile
 ---
 
 {{CSSRef}}

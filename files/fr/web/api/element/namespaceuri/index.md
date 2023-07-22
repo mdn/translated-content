@@ -1,13 +1,6 @@
 ---
 title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
-tags:
-  - API
-  - DOM
-  - Element
-  - Espace de noms
-  - Propriétés
-  - URI
 translation_of: Web/API/Element/namespaceURI
 ---
 

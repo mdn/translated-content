@@ -1,10 +1,6 @@
 ---
 title: animation-direction
 slug: Web/CSS/animation-direction
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/animation-direction
 ---
 

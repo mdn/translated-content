@@ -1,15 +1,6 @@
 ---
 title: MessageEvent
 slug: Web/API/MessageEvent
-tags:
-  - API
-  - Channels
-  - Interface
-  - Reference
-  - WebSockets
-  - Window
-  - Workers
-  - messaging
 translation_of: Web/API/MessageEvent
 ---
 

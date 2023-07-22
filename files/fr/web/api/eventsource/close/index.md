@@ -1,15 +1,6 @@
 ---
 title: EventSource.close()
 slug: Web/API/EventSource/close
-tags:
-  - API
-  - EventSource
-  - Evénement serveur
-  - Fonction
-  - Méthode
-  - Reference
-  - Server-sent events
-  - close
 translation_of: Web/API/EventSource/close
 ---
 

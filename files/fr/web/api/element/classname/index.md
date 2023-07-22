@@ -1,12 +1,6 @@
 ---
 title: element.className
 slug: Web/API/Element/className
-tags:
-  - API
-  - Classe
-  - DOM
-  - Element
-  - Propriétés
 translation_of: Web/API/Element/className
 ---
 

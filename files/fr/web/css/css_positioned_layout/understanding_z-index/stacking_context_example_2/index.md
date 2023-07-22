@@ -1,12 +1,7 @@
 ---
 title: Exemple d'empilement 2
 slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2
-tags:
-  - Avancé
-  - CSS
-  - Guide
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
-original_slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 ---
 
 {{PreviousMenuNext("Web/CSS/Comprendre_z-index/Exemple_1","Web/CSS/Comprendre_z-index/Exemple_3", "Web/CSS/Comprendre_z-index")}}

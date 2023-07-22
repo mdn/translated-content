@@ -1,10 +1,6 @@
 ---
 title: border-collapse
 slug: Web/CSS/border-collapse
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border-collapse
 ---
 

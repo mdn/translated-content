@@ -2,7 +2,6 @@
 title: IDBIndex.locale
 slug: Web/API/IDBIndex/locale
 translation_of: Web/API/IDBIndex/locale
-browser-compat: api.IDBIndex.locale
 ---
 
 {{APIRef("IndexedDB")}}{{SeeCompatTable}}

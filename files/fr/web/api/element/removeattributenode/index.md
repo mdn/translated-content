@@ -1,11 +1,6 @@
 ---
 title: element.removeAttributeNode
 slug: Web/API/Element/removeAttributeNode
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthodes
 translation_of: Web/API/Element/removeAttributeNode
 ---
 

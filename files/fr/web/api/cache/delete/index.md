@@ -1,15 +1,6 @@
 ---
 title: Cache.delete()
 slug: Web/API/Cache/delete
-tags:
-  - API
-  - Cache
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - delete
 translation_of: Web/API/Cache/delete
 ---
 

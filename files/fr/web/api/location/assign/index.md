@@ -1,13 +1,6 @@
 ---
 title: Location.assign()
 slug: Web/API/Location/assign
-tags:
-  - API
-  - JavaScript
-  - Location
-  - Méthode
-  - Reference
-  - WebAPI
 translation_of: Web/API/Location/assign
 ---
 

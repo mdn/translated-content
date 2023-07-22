@@ -1,13 +1,6 @@
 ---
 title: Manipulation Audio et Vidéo
 slug: Web/Guide/Audio_and_video_manipulation
-tags:
-  - Audio
-  - Canvas
-  - HTML5
-  - Video
-  - Web Audio API
-  - WebGL
 translation_of: Web/Guide/Audio_and_video_manipulation
 ---
 

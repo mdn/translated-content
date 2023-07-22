@@ -2,7 +2,6 @@
 title: GainNode
 slug: Web/API/GainNode
 translation_of: Web/API/GainNode
-browser-compat: api.GainNode
 ---
 
 {{APIRef("Web Audio API")}}

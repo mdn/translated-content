@@ -1,11 +1,6 @@
 ---
 title: ':-moz-user-disabled'
 slug: Web/CSS/:-moz-user-disabled
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:-moz-user-disabled
 ---
 

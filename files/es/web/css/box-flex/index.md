@@ -1,5 +1,5 @@
 ---
-title: '-moz-box-flex'
+title: "-moz-box-flex"
 slug: Web/CSS/box-flex
 original_slug: Web/CSS/-moz-box-flex
 ---

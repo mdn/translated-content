@@ -52,12 +52,13 @@ Veamos las propiedades que permiten definir el estilo del tipo de letra. En este
 
 <p>Well I remember it as though it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 Puedes ver el [ejemplo completo en Github](http://mdn.github.io/learning-area/css/styling-text/fundamentals/) (consulta también [el código fuente](https://github.com/mdn/learning-area/blob/master/css/styling-text/fundamentals/index.html).)
@@ -81,12 +82,13 @@ Esto mostrará el contenido de los párrafos en color rojo, en lugar del negro q
 
 <p>Well I remember it as though it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 {{ EmbedLiveSample('Color', '100%', 220) }}
@@ -202,12 +204,13 @@ Esto nos da el resultado siguiente:
 
 <p>Well I remember it as though it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 {{ EmbedLiveSample('Un_ejemplo_con_font-family', '100%', 220) }}
@@ -226,8 +229,10 @@ Las cosas se vuelven más complicadas cuando se empieza a alterar el tamaño del
 
 ```html
 <!-- El tamaño de letra base del documento es 16px -->
-<article> <!-- Si mi tamaño de letra es 1.5em -->
-  <p>Mi párrafo</p> <!-- ¿Cómo calculo el tamaño del tipo de letra para que de 20px? -->
+<article>
+  <!-- Si mi tamaño de letra es 1.5em -->
+  <p>Mi párrafo</p>
+  <!-- ¿Cómo calculo el tamaño del tipo de letra para que de 20px? -->
 </article>
 ```
 
@@ -244,12 +249,13 @@ Nuestro nuevo resultado es:
 
 <p>Well I remember it as though it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css
@@ -310,12 +316,13 @@ Añadamos un par de estas propiedades a nuestro ejemplo. Nuestro nuevo resultado
 
 <p>Well I remember it as though it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css
@@ -363,10 +370,11 @@ Las cuatro propiedades son las siguientes:
 Puedes aplicar diversas sombras al mismo texto incluyendo múltiples valores de sombra separados por comas, por ejemplo:
 
 ```css
-text-shadow: -1px -1px 1px #aaa,
-             0px 4px 1px rgba(0,0,0,0.5),
-             4px 4px 5px rgba(0,0,0,0.7),
-             0px 0px 7px rgba(0,0,0,0.4);
+text-shadow:
+  -1px -1px 1px #aaa,
+  0px 4px 1px rgba(0, 0, 0, 0.5),
+  4px 4px 5px rgba(0, 0, 0, 0.7),
+  0px 0px 7px rgba(0, 0, 0, 0.4);
 ```
 
 Si aplicamos esto al elemento {{htmlelement("h1")}} de nuestro ejemplo _Tommy The Cat_, obtenemos esto:
@@ -376,12 +384,13 @@ Si aplicamos esto al elemento {{htmlelement("h1")}} de nuestro ejemplo _Tommy Th
 
 <p>Well I remember it as though it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -392,10 +401,11 @@ html {
 h1 {
   font-size: 26px;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
 }
 
 h1 + p {
@@ -433,12 +443,13 @@ Si aplicamos `text-align: center;` al elemento {{htmlelement("h1")}} de nuestro 
 
 <p>Well I remember as though it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -449,10 +460,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -484,12 +496,13 @@ Aplicando esto a los elementos {{htmlelement("p")}} en nuestro ejemplo nos darí
 
 <p>Well I remember it as though it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -500,10 +513,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -541,12 +555,13 @@ y obtendremos:
 
 <p>Well I remember it as though it were a meal ago...</p>
 
-<p>Said Tommy the Cat as he reeled back to clear whatever foreign matter
- may have nestled its way into his mighty throat. Many a fat alley rat
-had met its demise while staring point blank down the cavernous barrel of
- this awesome prowling machine. Truly a wonder of nature this urban
-predator — Tommy the cat had many a story to tell. But it was a rare
-occasion such as this that he did.</p>
+<p>
+  Said Tommy the Cat as he reeled back to clear whatever foreign matter may have
+  nestled its way into his mighty throat. Many a fat alley rat had met its
+  demise while staring point blank down the cavernous barrel of this awesome
+  prowling machine. Truly a wonder of nature this urban predator — Tommy the cat
+  had many a story to tell. But it was a rare occasion such as this that he did.
+</p>
 ```
 
 ```css hidden
@@ -557,10 +572,11 @@ html {
 h1 {
   font-size: 2.6rem;
   text-transform: capitalize;
-  text-shadow: -1px -1px 1px #aaa,
-               0px 2px 1px rgba(0,0,0,0.5),
-               2px 2px 2px rgba(0,0,0,0.7),
-               0px 0px 3px rgba(0,0,0,0.4);
+  text-shadow:
+    -1px -1px 1px #aaa,
+    0px 2px 1px rgba(0, 0, 0, 0.5),
+    2px 2px 2px rgba(0, 0, 0, 0.7),
+    0px 0px 3px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
@@ -628,7 +644,10 @@ Se debe colocar una barra inclinada (_slash_) entre las propiedades {{cssxref("f
 Un ejemplo completo se vería así:
 
 ```css
-font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+font:
+  italic normal bold normal 3em/1.5 Helvetica,
+  Arial,
+  sans-serif;
 ```
 
 ## Aprendizaje activo: Jugar a aplicar estilos
@@ -638,20 +657,37 @@ En esta sección de aprendizaje activo no proponemos ningún ejercicio específi
 Si te equivocas, puedes volver a empezar con el botón _Reinicio_.
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-  <p>Some sample text for your delight</p></textarea>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+  <p>Some sample text for your delight</p></textarea
+  >
 
   <h2>CSS Input</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">p {
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+p {
 
-  }</textarea>
+  }</textarea
+  >
 
   <h2>Output</h2>
-  <div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
   <div class="controls">
-    <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
   </div>
 </div>
 ```
@@ -664,8 +700,8 @@ let htmlCode = htmlInput.value;
 let cssCode = cssInput.value;
 const output = document.querySelector(".output");
 
-const styleElem = document.createElement('style');
-const headElem = document.querySelector('head');
+const styleElem = document.createElement("style");
+const headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -673,7 +709,7 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();

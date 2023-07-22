@@ -1,14 +1,6 @@
 ---
 title: DOMQuad
 slug: Web/API/DOMQuad
-tags:
-  - API
-  - Coordonnées
-  - DOM
-  - Géométrie
-  - Interfaces
-  - Quadrilatère
-  - dimensions
 translation_of: Web/API/DOMQuad
 ---
 

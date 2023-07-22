@@ -1,13 +1,7 @@
 ---
 title: Object.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/toLocaleString
 ---
 
 {{JSRef}}

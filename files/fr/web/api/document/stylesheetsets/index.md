@@ -1,12 +1,6 @@
 ---
 title: Document.styleSheetSets
 slug: Web/API/Document/styleSheetSets
-tags:
-  - API
-  - DOM
-  - Document
-  - Feuilles de styles
-  - Propriétés
 translation_of: Web/API/Document/styleSheetSets
 ---
 

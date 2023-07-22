@@ -2,7 +2,6 @@
 title: Intl.Segmenter.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
-browser-compat: javascript.builtins.Intl.Segmenter.resolvedOptions
 ---
 
 {{JSRef}}

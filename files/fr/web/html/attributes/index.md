@@ -1,19 +1,7 @@
 ---
 title: Référence des attributs HTML
 slug: Web/HTML/Attributes
-tags:
-  - Attribute
-  - Attributes
-  - Beginner
-  - Configuring
-  - Element Attributes
-  - Elements
-  - HTML
-  - Reference
-  - Settings
-  - Web
 translation_of: Web/HTML/Attributes
-original_slug: Web/HTML/Attributs
 ---
 
 {{HTMLSidebar}}

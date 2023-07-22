@@ -1,10 +1,6 @@
 ---
 title: <feComponentTransfer>
 slug: Web/SVG/Element/feComponentTransfer
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 translation_of: Web/SVG/Element/feComponentTransfer
 ---
 

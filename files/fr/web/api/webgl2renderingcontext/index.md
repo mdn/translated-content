@@ -1,12 +1,6 @@
 ---
 title: WebGL2RenderingContext
 slug: Web/API/WebGL2RenderingContext
-tags:
-  - API
-  - Experimental
-  - Reference
-  - WebGL
-  - WebGL2
 translation_of: Web/API/WebGL2RenderingContext
 ---
 

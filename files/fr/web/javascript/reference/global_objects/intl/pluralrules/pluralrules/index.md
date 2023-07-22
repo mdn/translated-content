@@ -1,7 +1,6 @@
 ---
 title: Constructeur Intl.PluralRules()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
-browser-compat: javascript.builtins.Intl.PluralRules.PluralRules
 ---
 
 {{JSRef}}

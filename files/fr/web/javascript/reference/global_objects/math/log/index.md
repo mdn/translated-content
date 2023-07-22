@@ -1,13 +1,7 @@
 ---
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/log
 ---
 
 {{JSRef}}

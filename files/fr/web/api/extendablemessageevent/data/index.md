@@ -1,12 +1,6 @@
 ---
 title: ExtendableMessageEvent.data
 slug: Web/API/ExtendableMessageEvent/data
-tags:
-  - API
-  - Experimental
-  - Propriété
-  - Reference
-  - Service Workers
 translation_of: Web/API/ExtendableMessageEvent/data
 ---
 

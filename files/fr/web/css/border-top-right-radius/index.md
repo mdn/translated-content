@@ -1,10 +1,6 @@
 ---
 title: border-top-right-radius
 slug: Web/CSS/border-top-right-radius
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border-top-right-radius
 ---
 

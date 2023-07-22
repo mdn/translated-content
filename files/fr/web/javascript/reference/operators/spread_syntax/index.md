@@ -1,14 +1,7 @@
 ---
 title: Syntaxe de décomposition
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-tags:
-  - ECMAScript 2015
-  - ECMAScript6
-  - JavaScript
-  - Reference
-  - Syntaxe
 translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
-original_slug: Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition
 ---
 
 {{jsSidebar("Operators")}}

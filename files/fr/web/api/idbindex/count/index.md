@@ -1,12 +1,6 @@
 ---
 title: IDBIndex.count()
 slug: Web/API/IDBIndex/count
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBIndex/count
 ---
 

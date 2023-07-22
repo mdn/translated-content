@@ -2,7 +2,6 @@
 title: <input type="url">
 slug: Web/HTML/Element/input/url
 translation_of: Web/HTML/Element/input/url
-browser-compat: html.elements.input.input-url
 ---
 
 {{HTMLSidebar}}

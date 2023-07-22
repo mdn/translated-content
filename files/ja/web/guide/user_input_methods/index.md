@@ -116,8 +116,10 @@ if (elem.requestFullscreen) {
 以下は、コンテンツのセクションにドラッグできるようにする例です。
 
 ```html
-<div draggable="true" ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
-    This text <strong>may</strong> be dragged.
+<div
+  draggable="true"
+  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
+  This text <strong>may</strong> be dragged.
 </div>
 ```
 
@@ -133,9 +135,7 @@ if (elem.requestFullscreen) {
 [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#attr-contenteditable) 属性を使うことで、開いているウェブアプリのあらゆる DOM 要素を直接編集することができます。
 
 ```html
-<div contenteditable="true">
-    このテキストは閲覧者が編集することができます。
-</div>
+<div contenteditable="true">このテキストは閲覧者が編集することができます。</div>
 ```
 
 > **メモ:** 互換性や例、その他リソースに関する情報は [コンテンツを編集可能にするガイド](/ja/docs/Web/Guide/HTML/Editable_content)で確認することができます。

@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: heading ロール'
+title: "ARIA: heading ロール"
 slug: Web/Accessibility/ARIA/Roles/heading_role
 ---
 
@@ -39,30 +39,32 @@ slug: Web/Accessibility/ARIA/Roles/heading_role
 
 ```html
 <div id="container">
-<div role="heading" aria-level="1">メインのページ見出し</div>
-<p>この記事では、ページ構造の表示について説明します。</p>
-<div role="heading" aria-level="2">前書き</div>
-<p>導入テキスト。</p>
-<div role="heading" aria-level="2">第 1 章</div>
-<p>テキスト</p>
-<div role="heading" aria-level="3">第 1.1 章</div>
-<p>サブセクションにさらにテキストがあります。</p>
-...</div>
+  <div role="heading" aria-level="1">メインのページ見出し</div>
+  <p>この記事では、ページ構造の表示について説明します。</p>
+  <div role="heading" aria-level="2">前書き</div>
+  <p>導入テキスト。</p>
+  <div role="heading" aria-level="2">第 1 章</div>
+  <p>テキスト</p>
+  <div role="heading" aria-level="3">第 1.1 章</div>
+  <p>サブセクションにさらにテキストがあります。</p>
+  ...
+</div>
 ```
 
 ただし、代わりに次のようにするべきです。
 
 ```html
 <div id="container">
-<h1>メインのページ見出し</h1>
-<p>この記事では、ページ構造の表示について説明します。</p>
-<h2>前書き</h2>
-<p>導入テキスト。</p>
-<h2>第 1 章</h2>
-<p>テキスト</p>
-<h3>第 1.1 章</h3>
-<p>サブセクションにさらにテキストがあります。</p>
-...</div>
+  <h1>メインのページ見出し</h1>
+  <p>この記事では、ページ構造の表示について説明します。</p>
+  <h2>前書き</h2>
+  <p>導入テキスト。</p>
+  <h2>第 1 章</h2>
+  <p>テキスト</p>
+  <h3>第 1.1 章</h3>
+  <p>サブセクションにさらにテキストがあります。</p>
+  ...
+</div>
 ```
 
 ## アクセシビリティに関する懸念

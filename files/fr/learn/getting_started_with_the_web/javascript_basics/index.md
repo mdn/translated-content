@@ -1,14 +1,7 @@
 ---
 title: Les bases de JavaScript
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
-tags:
-  - Apprendre
-  - Code JavaScript
-  - Débutant
-  - JavaScript
-  - Web
 translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
-original_slug: Apprendre/Commencer_avec_le_web/Les_bases_JavaScript
 ---
 
 {{LearnSidebar}}

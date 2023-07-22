@@ -23,21 +23,21 @@ WebAssembly JavaScript API の使用方法と、wasm モジュールを読み込
 2. 次に、 wasm ファイルと同じディレクトリーに `index.html` という名前でシンプルな HTML ファイルを作成しましょう（簡単に利用できるテンプレートを持っていないのであれば、[単純なテンプレート](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)が利用できます）。
 3. ここで、何が起こっているのか理解を助けるために、 wasm モジュールのテキスト表現を見てみましょう（[WebAssembly 形式から wasm への変換](/ja/docs/WebAssembly/Text_format_to_wasm)も参照してください）。
 
-    ```wasm
-    (module
-      (func $i (import "imports" "imported_func") (param i32))
-      (func (export "exported_func")
-        i32.const 42
-        call $i))
-    ```
+   ```wasm
+   (module
+     (func $i (import "imports" "imported_func") (param i32))
+     (func (export "exported_func")
+       i32.const 42
+       call $i))
+   ```
 
 4. 2 行目に 2 階層の名前空間を持つインポートの宣言があります。 — 内部関数 `$i` は `imports.imported_func` からインポートされています。wasm モジュールにインポートするオブジェクトを記述するときに、この 2 階層の名前空間を JavaScript に反映させる必要があります。 `<script></script>` 要素を HTML 内に作成して、次のコードを追加してください。
 
-    ```js
-    const importObject = {
-      imports: { imported_func: (arg) => console.log(arg) }
-    };
-    ```
+   ```js
+   const importObject = {
+     imports: { imported_func: (arg) => console.log(arg) },
+   };
+   ```
 
 ### WebAssembly モジュールをストリーミングする
 
@@ -49,7 +49,7 @@ Firefox 58 の新機能として、 WebAssembly モジュールを基礎とな�
 
 ```js
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func()
+  (obj) => obj.instance.exports.exported_func(),
 );
 ```
 
@@ -95,23 +95,23 @@ JavaScript では、Memory インスタンスはリサイズ可能な [`ArrayBuf
 1. もう 1 つのシンプルな HTML ページを（[単純なテンプレート](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)をコピーして）作成し、 `memory.html` という名前を付けてください。このページに `<script></script>` 要素を追加してください。
 2. メモリーインスタンスを作成するために、次の行をスクリプトに追加します。
 
-    ```js
-    const memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
-    ```
+   ```js
+   const memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
+   ```
 
-    `initial` と `maximum` の単位は WebAssembly ページです。これらは 64KB に固定されています。上の例では、メモリーインスタンスは初期サイズが 640KB、最大サイズが 6.4MB であることを意味しています。
+   `initial` と `maximum` の単位は WebAssembly ページです。これらは 64KB に固定されています。上の例では、メモリーインスタンスは初期サイズが 640KB、最大サイズが 6.4MB であることを意味しています。
 
-    WebAssembly メモリーが持つバイト列は ArrayBuffer として buffer ゲッター/セッターから公開されています。例えば、線形メモリーの先頭ワードに直接、 42 を書き込むには次のようにします。
+   WebAssembly メモリーが持つバイト列は ArrayBuffer として buffer ゲッター/セッターから公開されています。例えば、線形メモリーの先頭ワードに直接、 42 を書き込むには次のようにします。
 
-    ```js
-    new Uint32Array(memory.buffer)[0] = 42;
-    ```
+   ```js
+   new Uint32Array(memory.buffer)[0] = 42;
+   ```
 
-    その後で同じ値を返すことができます。
+   その後で同じ値を返すことができます。
 
-    ```js
-    new Uint32Array(memory.buffer)[0]
-    ```
+   ```js
+   new Uint32Array(memory.buffer)[0];
+   ```
 
 3. デモで試してみましょう。これまでに追加した内容を保存してブラウザーで読み込んだ後、JavaScript コンソールで上の 2 行を入力してみてください。
 
@@ -135,30 +135,30 @@ Memory インスタンスの作成時に最大値が指定していて、この�
 
 1. `memory.wasm` のローカルコピーを以前と同じディレクトリーに作成します。
 
-    > **メモ:** モジュールのテキスト表現は [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat) を参照してください。
+   > **メモ:** モジュールのテキスト表現は [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat) を参照してください。
 
 2. `memory.html` サンプルファイルに戻って、以前と同じように wasm モジュールを読み取り、コンパイル、インスタンス化します。以下のものをスクリプトの最後に追加してください。
 
-    ```js
-    WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
-      js: { mem: memory },
-    }).then((results) => {
-      // ここにコードを追加
-    });
-    ```
+   ```js
+   WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+     js: { mem: memory },
+   }).then((results) => {
+     // ここにコードを追加
+   });
+   ```
 
 3. このモジュールはモジュール内部のメモリーをエクスポートします。 instance という名前でモジュールの Instance が取得され、エクスポートされた関数 `accumulate()` を使用してモジュールの線形メモリー (`mem`) に直接入力された配列を合計する事ができます。指定された場所に、次のコードを追加してみましょう。
 
-    ```js
-    const i32 = new Uint32Array(memory.buffer);
+   ```js
+   const i32 = new Uint32Array(memory.buffer);
 
-    for (let i = 0; i < 10; i++) {
-      i32[i] = i;
-    }
+   for (let i = 0; i < 10; i++) {
+     i32[i] = i;
+   }
 
-    const sum = results.instance.exports.accumulate(0, 10);
-    console.log(sum);
-    ```
+   const sum = results.instance.exports.accumulate(0, 10);
+   console.log(sum);
+   ```
 
 Memory オブジェクト自体でなく、Memory オブジェクトの buffer ([`Memory.prototype.buffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer)) から {{jsxref("Uint32Array")}} ビューを作成していることに注意してください。
 
@@ -171,7 +171,7 @@ Memory オブジェクト自体でなく、Memory オブジェクトの buffer (
 
 ## テーブル
 
-WebAssembly Table は JavaScript と WebAssembly コードの両方でアクセスできるリサイズ可能な [参照](https://en.wikipedia.org/wiki/Reference_(computer_science)) の型付き配列です。Memory はリサイズ可能な生のバイト列を提供しますが、参照はエンジンに保証された値（このバイト列は安全性、移植性、安定性の理由からコンテンツによって直接読み書きしてはいけない）であるため、参照を格納するために使用することは安全ではありません。
+WebAssembly Table は JavaScript と WebAssembly コードの両方でアクセスできるリサイズ可能な [参照](<https://en.wikipedia.org/wiki/Reference_(computer_science)>) の型付き配列です。Memory はリサイズ可能な生のバイト列を提供しますが、参照はエンジンに保証された値（このバイト列は安全性、移植性、安定性の理由からコンテンツによって直接読み書きしてはいけない）であるため、参照を格納するために使用することは安全ではありません。
 
 テーブルは要素の型を持ち、テーブルに格納できる参照の型が制限されます。WebAssembly の現バージョンでは WebAssembly コード内で必要な参照の型は関数型の1つだけです。そして、これが唯一の正しい要素の型となります。将来のバージョンでは、さらに多くの要素の型が追加される予定です。
 
@@ -187,24 +187,24 @@ WebAssembly Table は JavaScript と WebAssembly コードの両方でアクセ�
 
 1. `table.wasm` をローカルの新しいディレクトリーにコピーします。
 
-    > **メモ:** このモジュールのテキスト表現は [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) を参照してください。
+   > **メモ:** このモジュールのテキスト表現は [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) を参照してください。
 
 2. [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) を `table.html` という名前で同じディレクトリーにコピーします。
 3. 前と同じように、wasm モジュールを読み取り、コンパイル、インスタンス化します。次のコードを HTML の body の末尾の {{htmlelement("script")}} 要素に追加してください。
 
-    ```js
-    WebAssembly.instantiateStreaming(fetch("table.wasm")).then((results) => {
-      // add code here
-    });
-    ```
+   ```js
+   WebAssembly.instantiateStreaming(fetch("table.wasm")).then((results) => {
+     // add code here
+   });
+   ```
 
 4. 今度はテーブル内のデータにアクセスしてみましょう。コードの指定された場所に次の行を追加してください。
 
-    ```js
-    const tbl = results.instance.exports.tbl;
-    console.log(tbl.get(0)()); // 13
-    console.log(tbl.get(1)()); // 42
-    ```
+   ```js
+   const tbl = results.instance.exports.tbl;
+   console.log(tbl.get(0)()); // 13
+   console.log(tbl.get(1)()); // 42
+   ```
 
 このコードはテーブルに格納されている各関数参照に順番にアクセスし、内包した値をコンソールに書き出すためにインスタンス化します。 [`Table.prototype.get()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) で各関数参照を取得した後、関数を実行するためには括弧を追加することに注意してください。
 
@@ -237,7 +237,10 @@ const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
-  const result = got === expected ? `SUCCESS! Got: ${got}<br>` : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
+  const result =
+    got === expected
+      ? `SUCCESS! Got: ${got}<br>`
+      : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
   output.innerHTML += `Testing ${msg}: ${result}`;
 }
 
@@ -250,17 +253,17 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
     assertEq(
       "getting initial value from wasm",
       instance.exports.getGlobal(),
-      0
+      0,
     );
     global.value = 42;
     assertEq(
       "getting JS-updated value from wasm",
       instance.exports.getGlobal(),
-      42
+      42,
     );
     instance.exports.incGlobal();
     assertEq("getting wasm-updated value from JS", global.value, 43);
-  }
+  },
 );
 ```
 

@@ -1,11 +1,6 @@
 ---
 title: HTMLIFrameElement.contentWindow
 slug: Web/API/HTMLIFrameElement/contentWindow
-tags:
-  - API
-  - DOM
-  - Propriété
-  - Web
 translation_of: Web/API/HTMLIFrameElement/contentWindow
 ---
 

@@ -1,18 +1,7 @@
 ---
 title: Structure de Site Web et de document
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-tags:
-  - Codage
-  - Disposition
-  - Débutant
-  - Guide
-  - HTML
-  - Page
-  - Site
-  - blocs
-  - sémantique
 translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-original_slug: Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure
 ---
 
 {{LearnSidebar}}
@@ -96,14 +85,17 @@ Pour mettre en œuvre le marquage sémantique, HTML fournit des balises dédiée
 Notre exemple affiché plus haut est représenté par le code ci‑après (vous le trouverez également [dans le dépôt Github](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). Nous aimerions que vous regardiez cet exemple et que vous recherchiez dans le listing suivant les sections constituant les diverses parties du visuel.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
     <title>Intitulé de ma page</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet"
+      type="text/css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- Les trois lignes ci‑dessous sont un correctif pour que la sémantique
           HTML5 fonctionne correctement avec les anciennes versions de
@@ -128,30 +120,53 @@ Notre exemple affiché plus haut est représenté par le code ci‑après (vous 
         <li><a href="#">Contact</a></li>
       </ul>
 
-        <!-- Un formulaire de recherche est une autre façon de naviguer de
+      <!-- Un formulaire de recherche est une autre façon de naviguer de
             façon non‑linéaire dans un site. -->
 
-        <form>
-          <input type="search" name="q" placeholder="Rechercher">
-          <input type="submit" value="Lancer !">
-        </form>
-      </nav>
+      <form>
+        <input type="search" name="q" placeholder="Rechercher" />
+        <input type="submit" value="Lancer !" />
+      </form>
+    </nav>
 
     <!-- Ici nous mettons le contenu de la page -->
     <main>
-
       <!-- Il contient un article -->
       <article>
         <h2>En-tête d'article</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+          lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
+          viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
+          et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
+          congue enim, ut porta lorem lacinia consectetur.
+        </p>
 
         <h3>Sous‑section</h3>
-        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
-        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+        <p>
+          Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
+          Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
+        </p>
+        <p>
+          Pelientesque auctor nisi id magna consequat sagittis. Curabitur
+          dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
+          Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
+        </p>
 
         <h3>Autre sous‑section</h3>
-        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
-        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+        <p>
+          Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
+          soclis natoque penatibus et manis dis parturient montes, nascetur
+          ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
+          facilisis semper ac in est.
+        </p>
+        <p>
+          Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
+          tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
+          ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
+          diam iaculis velit, is fringille sem nunc vet mi.
+        </p>
       </article>
 
       <!-- Le contenu « à côté » peut aussi être intégré dans le contenu
@@ -166,14 +181,12 @@ Notre exemple affiché plus haut est représenté par le code ci‑après (vous 
           <li><a href="#">Eh bien…</a></li>
         </ul>
       </aside>
-
     </main>
 
     <!-- Et voici notre pied de page utilisé sur toutes les pages du site -->
     <footer>
       <p>©Copyright 2050 par personne. Tous droits reversés.</p>
     </footer>
-
   </body>
 </html>
 ```
@@ -199,9 +212,13 @@ Parfois, vous êtes dans la situation où vous ne trouvez pas l'élément séman
 {{HTMLElement("span")}} est un élément en ligne non-semantique&nbsp;; vous l'utiliserez seulement si vous ne trouvez pas de meilleur élément de sémantique textuelle pour envelopper votre contenu, ou bien si vous ne voulez pas ajouter de signification particulière. Par exemple&nbsp;:
 
 ```html
-<p>Le Roi retourna ivre à sa chambre à une heure, la bière ne l'aidant en rien
-alors qu'il titubait en travers de la porte <span class="editor-note">
-[Note du rédacteur : Pour cette scène, la lumière doit être faible].</span></p>
+<p>
+  Le Roi retourna ivre à sa chambre à une heure, la bière ne l'aidant en rien
+  alors qu'il titubait en travers de la porte
+  <span class="editor-note">
+    [Note du rédacteur : Pour cette scène, la lumière doit être faible].</span
+  >
+</p>
 ```
 
 Dans ce cas, la note du rédacteur est simplement supposée fournir une indication supplémentaire pour le metteur en scène de la pièce ; elle n'est pas censée avoir une signification sémantique supplémentaire. Pour les utilisateurs malvoyants, les CSS seraient peut-être utilisés pour distancer légèrement la note du texte principal.
@@ -213,12 +230,15 @@ Dans ce cas, la note du rédacteur est simplement supposée fournir une indicati
   <h2>Panier d'achat</h2>
   <ul>
     <li>
-      <p><a href=""><b>Boucles d'oreilles en argent</b></a>: €99,95.</p>
-      <img src="../products/3333-0985/thumb.png" alt="Boucles d'oreilles en argent">
+      <p>
+        <a href=""><b>Boucles d'oreilles en argent</b></a
+        >: €99,95.
+      </p>
+      <img
+        src="../products/3333-0985/thumb.png"
+        alt="Boucles d'oreilles en argent" />
     </li>
-    <li>
-      ...
-    </li>
+    <li>...</li>
   </ul>
   <p>Total des achats&nbsp;: €237,89</p>
 </div>
@@ -235,10 +255,12 @@ Les éléments {{htmlelement("br")}} et {{htmlelement("hr")}} sont utilisés à 
 `<br>` crée un saut de ligne dans un paragraphe&nbsp;; c'est le seul moyen de forcer une structure rigide quand vous voulez obtenir une suite de lignes courtes fixes, comme dans une adresse postale ou un poème. Par exemple&nbsp;:
 
 ```html
-<p>Il y avait une fois une fille nommée Nell<br>
-Qui aimait écrire du HTML<br>
-Mais ses structures et sémantiques affligeantes<br>
-rendaient de ses marquages la lecture inélégante.</p>
+<p>
+  Il y avait une fois une fille nommée Nell<br />
+  Qui aimait écrire du HTML<br />
+  Mais ses structures et sémantiques affligeantes<br />
+  rendaient de ses marquages la lecture inélégante.
+</p>
 ```
 
 Sans éléments `<br>`, le paragraphe serait rendu par une seule longue ligne (comme précisé plus haut dans ce cours, [HTML ignore la plupart des blancs](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#whitespace_in_html))&nbsp;; avec des \<br> dans le code, voici le rendu de ce qui précède&nbsp;:
@@ -253,9 +275,19 @@ rendaient de ses marquages la lecture inélégante.
 ### Exemple avec hr
 
 ```html
-    <p>Ron était acculé dans un angle par des Netherbeasts en maraude. Effrayé, mais déterminé à protéger ses amis, il a levé sa baguette et s'est préparé à se battre, espérant que son appel de détresse serait entendu.</p>
-    <hr>
-    <p>Pendant ce temps, Harry était assis à la maison, regardant sa déclaration de redevances et réfléchissant à la sortie du prochaine épisode de la fiction, quand une lettre de détresse enchantée passa par sa fenêtre et atterrit sur ses genoux. Il la lut à la hâte et, se dressant brusquement, « mieux vaut retourner au travail alors » se dit-il.</p>
+<p>
+  Ron était acculé dans un angle par des Netherbeasts en maraude. Effrayé, mais
+  déterminé à protéger ses amis, il a levé sa baguette et s'est préparé à se
+  battre, espérant que son appel de détresse serait entendu.
+</p>
+<hr />
+<p>
+  Pendant ce temps, Harry était assis à la maison, regardant sa déclaration de
+  redevances et réfléchissant à la sortie du prochaine épisode de la fiction,
+  quand une lettre de détresse enchantée passa par sa fenêtre et atterrit sur
+  ses genoux. Il la lut à la hâte et, se dressant brusquement, « mieux vaut
+  retourner au travail alors » se dit-il.
+</p>
 ```
 
 sera rendu ainsi&nbsp;:

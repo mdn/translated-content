@@ -44,7 +44,7 @@ l10n:
 2. `index.html` ファイルを開き、次のコードをファイルに挿入します。それが今のところ何を意味するのか気にしないでください。シリーズの後半で構造を詳しく見ていきます。
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="ja">
      <head>
        <meta charset="utf-8" />

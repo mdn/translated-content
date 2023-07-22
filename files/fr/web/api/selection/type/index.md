@@ -1,12 +1,6 @@
 ---
 title: Selection.type
 slug: Web/API/Selection/type
-tags:
-  - API
-  - Experimental
-  - Propriété
-  - Reference
-  - Type
 translation_of: Web/API/Selection/type
 ---
 

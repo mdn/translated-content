@@ -1,12 +1,6 @@
 ---
 title: element.id
 slug: Web/API/Element/id
-tags:
-  - API
-  - DOM
-  - Element
-  - Propriété
-  - Reference
 translation_of: Web/API/Element/id
 ---
 

@@ -2,8 +2,6 @@
 title: scaleY()
 slug: Web/CSS/transform-function/scaleY
 translation_of: Web/CSS/transform-function/scaleY()
-original_slug: Web/CSS/transform-function/scaleY()
-browser-compat: css.types.transform-function.scaleY
 ---
 
 {{CSSRef}}

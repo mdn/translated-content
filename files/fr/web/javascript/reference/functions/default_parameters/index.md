@@ -1,13 +1,7 @@
 ---
 title: Valeurs par défaut des arguments
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - ECMAScript 2015
-  - Fonctions
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Functions/Default_parameters
-original_slug: Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments
 ---
 
 {{jsSidebar("Functions")}}

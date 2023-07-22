@@ -1,10 +1,6 @@
 ---
 title: ':right'
 slug: Web/CSS/:right
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:right
 ---
 

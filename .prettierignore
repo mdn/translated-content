@@ -10,13 +10,21 @@ build/
 /files/**/conflicting/**/*.md
 /files/**/orphaned/**/*.md
 
+# XXX Ignored until https://github.com/prettier/prettier/issues/11828 is fixed
+/files/es/learn/css/howto/css_faq/index.md
+/files/fr/glossary/cross_axis/index.md
+/files/fr/glossary/flex/index.md
+/files/fr/glossary/flex_container/index.md
+/files/fr/glossary/flexbox/index.md
+/files/fr/glossary/grid_axis/index.md
+/files/fr/glossary/grid_lines/index.md
+/files/fr/glossary/main_axis/index.md
+/files/zh-cn/learn/css/howto/css_faq/index.md
+
 # A full pass on all Markdown files is being performed.
 # The following folders still need a full pass:
 
 # es
-/files/es/learn/css/**/*.md
-/files/es/learn/javascript/**/*.md
-/files/es/learn/server-side/**/*.md
 /files/es/web/api/**/*.md
 /files/es/web/css/**/*.md
 /files/es/web/html/**/*.md
@@ -24,9 +32,6 @@ build/
 /files/es/web/javascript/**/*.md
 
 # fr
-/files/fr/learn/css/**/*.md
-/files/fr/learn/html/**/*.md
-/files/fr/learn/javascript/**/*.md
 /files/fr/learn/server-side/**/*.md
 /files/fr/mozilla/add-ons/webextensions/api/**/*.md
 /files/fr/web/api/**/*.md
@@ -35,25 +40,20 @@ build/
 /files/fr/web/javascript/**/*.md
 
 # ja
-/files/ja/games/**/*.md
-/files/ja/learn/**/*.md
 /files/ja/learn/css/**/*.md
 /files/ja/learn/html/**/*.md
 /files/ja/learn/javascript/**/*.md
 /files/ja/learn/server-side/**/*.md
-/files/ja/mdn/**/*.md
 /files/ja/mozilla/**/*.md
+/files/ja/mdn/**/*.md
 /files/ja/mozilla/add-ons/**/*.md
 /files/ja/mozilla/add-ons/webextensions/api/**/*.md
-/files/ja/mozilla/firefox**/*.md
-/files/ja/web/**/*.md
 /files/ja/web/api/**/*.md
 /files/ja/web/css/**/*.md
 /files/ja/web/html/**/*.md
 /files/ja/web/http/**/*.md
 /files/ja/web/javascript/**/*.md
 /files/ja/web/svg/**/*.md
-/files/ja/webassembly/**/*.md
 
 # ko
 /files/ko/games/**/*.md
@@ -77,7 +77,6 @@ build/
 /files/ko/web/svg/**/*.md
 
 # pt-br
-/files/pt-br/learn/css/**/*.md
 /files/pt-br/learn/html/**/*.md
 /files/pt-br/learn/javascript/**/*.md
 /files/pt-br/learn/server-side/**/*.md
@@ -89,28 +88,18 @@ build/
 /files/pt-br/web/svg/**/*.md
 
 # ru
-/files/ru/glossary/**/*.md
-/files/ru/learn/**/*.md
 /files/ru/learn/css/**/*.md
 /files/ru/learn/html/**/*.md
 /files/ru/learn/javascript/**/*.md
 /files/ru/learn/server-side/**/*.md
-/files/ru/mdn/**/*.md
-/files/ru/mozilla/**/*.md
-/files/ru/mozilla/add-ons/**/*.md
-/files/ru/mozilla/add-ons/webextensions/api/**/*.md
-/files/ru/mozilla/firefox**/*.md
 /files/ru/web/api/**/*.md
 /files/ru/web/css/**/*.md
 /files/ru/web/html/**/*.md
 /files/ru/web/http/**/*.md
 /files/ru/web/javascript/**/*.md
 /files/ru/web/svg/**/*.md
-/files/ru/webassembly/**/*.md
 
 # zh-cn
-/files/zh-cn/learn/css/**/*.md
-/files/zh-cn/learn/html/**/*.md
 /files/zh-cn/learn/javascript/**/*.md
 /files/zh-cn/learn/server-side/**/*.md
 /files/zh-cn/web/api/**/*.md
@@ -119,4 +108,3 @@ build/
 /files/zh-cn/web/http/**/*.md
 /files/zh-cn/web/javascript/reference/**/*.md
 /files/zh-cn/web/svg/**/*.md
-/docs/zh-cn/glossary.md

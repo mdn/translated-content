@@ -1,12 +1,6 @@
 ---
 title: IDBIndex.name
 slug: Web/API/IDBIndex/name
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBIndex/name
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: padding-inline
 slug: Web/CSS/padding-inline
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
 translation_of: Web/CSS/padding-inline
 ---
 

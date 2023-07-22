@@ -1,10 +1,7 @@
 ---
 title: not
 slug: Web/XPath/Functions/not
-tags:
-  - Référence_XSLT
 translation_of: Web/XPath/Functions/not
-original_slug: Web/XPath/Fonctions/not
 ---
 
 {{ XsltRef() }}

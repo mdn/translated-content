@@ -1,14 +1,6 @@
 ---
 title: KeyboardEvent.charCode
 slug: Web/API/KeyboardEvent/charCode
-tags:
-  - API
-  - Clavier
-  - DOM
-  - Déprécié
-  - Propriété
-  - Référence(2)
-  - évènements
 translation_of: Web/API/KeyboardEvent/charCode
 ---
 

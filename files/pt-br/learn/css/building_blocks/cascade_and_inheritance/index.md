@@ -184,7 +184,7 @@ A negação ([`:not()`](/pt-BR/docs/Web/CSS/:not)), seletor relacional ([`:has()
 
 A tabela a seguir mostra alguns exemplos isolados para você entrar no clima. Tente passar por eles e certifique-se de entender por que eles têm a especificidade que lhes demos. Ainda não abordamos os seletores em detalhes, mas você pode encontrar detalhes de cada seletor no MDN [referência de seletores](/pt-BR/docs/Web/CSS/CSS_Selectors).
 
-| Seletor                                  | Identificadores | Classes | Elementos | Especificidade total |
+| Seletor                                   | Identificadores | Classes | Elementos | Especificidade total |
 | ----------------------------------------- | ----------- | ------- | -------- | ----------------- |
 | `h1`                                      | 0           | 0       | 1        | 0-0-1             |
 | `h1 + p::first-letter`                    | 0           | 0       | 3        | 0-0-3             |

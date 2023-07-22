@@ -1,11 +1,7 @@
 ---
 title: 'Warning: unreachable code after return statement'
 slug: Web/JavaScript/Reference/Errors/Stmt_after_return
-tags:
-  - JavaScript
-  - Warning
 translation_of: Web/JavaScript/Reference/Errors/Stmt_after_return
-original_slug: Web/JavaScript/Reference/Erreurs/Stmt_after_return
 ---
 
 {{jsSidebar("Errors")}}

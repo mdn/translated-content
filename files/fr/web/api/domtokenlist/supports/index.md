@@ -1,10 +1,6 @@
 ---
 title: DOMTokenList.supports()
 slug: Web/API/DOMTokenList/supports
-tags:
-  - API
-  - DOM
-  - Méthodes
 translation_of: Web/API/DOMTokenList/supports
 ---
 

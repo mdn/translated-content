@@ -3,6 +3,7 @@ title: Chrome incompatibilities
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
+
 {{AddonSidebar}}
 
 Веб расширения разработаны с поддержкой совместимости с расширениями Chrome и Оперы на сколько это возможно. Расширения, написанные для этих браузеров, должны работать в Firefox с минимальными изменениями.

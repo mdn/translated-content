@@ -1,12 +1,6 @@
 ---
 title: PerformanceMark
 slug: Web/API/PerformanceMark
-tags:
-  - API
-  - Interface
-  - Performance Timing API
-  - Reference
-  - Performance Web
 translation_of: Web/API/PerformanceMark
 ---
 

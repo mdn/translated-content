@@ -1,10 +1,6 @@
 ---
 title: HTMLCollection
 slug: Web/API/HTMLCollection
-tags:
-  - API
-  - DOM
-  - Reference
 translation_of: Web/API/HTMLCollection
 ---
 

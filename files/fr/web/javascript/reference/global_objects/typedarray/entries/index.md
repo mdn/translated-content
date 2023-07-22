@@ -1,16 +1,7 @@
 ---
 title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/entries
 ---
 
 {{JSRef}}

@@ -1,10 +1,6 @@
 ---
 title: outline
 slug: Web/CSS/outline
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/outline
 ---
 

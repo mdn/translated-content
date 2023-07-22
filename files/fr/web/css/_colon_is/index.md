@@ -1,12 +1,6 @@
 ---
 title: ':is() (:matches(), :any())'
 slug: Web/CSS/:is
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-classe
-  - Reference
-  - Web
 translation_of: Web/CSS/:is
 ---
 

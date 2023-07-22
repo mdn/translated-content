@@ -1,10 +1,6 @@
 ---
 title: text-underline-position
 slug: Web/CSS/text-underline-position
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/text-underline-position
 ---
 

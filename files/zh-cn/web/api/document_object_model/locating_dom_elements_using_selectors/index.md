@@ -5,7 +5,7 @@ slug: Web/API/Document_object_model/Locating_DOM_elements_using_selectors
 
 {{DefaultAPISidebar("DOM")}}
 
-Selectors API 提供了通过与一组[选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)匹配来轻松快速地从 DOM 检索 {{domxref("Element")}} 节点的方法。这比以前的技术要快得多，例如，过去的技术需要在 JavaScript 代码中使用循环来定位你需要查找的特定项目。
+Selectors API 提供了通过与一组[选择器](/zh-CN/docs/Web/CSS/CSS_selectors)匹配来轻松快速地从 DOM 检索 {{domxref("Element")}} 节点的方法。这比以前的技术要快得多，例如，过去的技术需要在 JavaScript 代码中使用循环来定位你需要查找的特定项目。
 
 ## NodeSelector 接口
 
@@ -22,7 +22,7 @@ Selectors API 提供了通过与一组[选择器](/zh-CN/docs/Web/CSS/CSS_Select
 
 ## 选择器
 
-选择器方法接受若干[选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)来决定应该返回什么元素或哪些元素。这包括[选择器列表](/zh-CN/docs/Web/CSS/Selector_list)，所以你可以在一个查询中分组多个选择器。
+选择器方法接受若干[选择器](/zh-CN/docs/Web/CSS/CSS_selectors)来决定应该返回什么元素或哪些元素。这包括[选择器列表](/zh-CN/docs/Web/CSS/Selector_list)，所以你可以在一个查询中分组多个选择器。
 
 为了保护用户的隐私，一些[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)不被支持或表现得不同。例如，{{cssxref(":visited")}} 将不返回任何匹配，{{cssxref(":link")}} 则被视为 {{cssxref(":any-link")}}。
 
@@ -49,7 +49,7 @@ const el = document.querySelector("#main, #basic, #exclamation");
 ## 参见
 
 - [选择器规范](https://drafts.csswg.org/selectors/)
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)
+- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
 - {{domxref("Element.querySelector()")}}
 - {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}

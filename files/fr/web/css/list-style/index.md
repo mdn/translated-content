@@ -2,7 +2,6 @@
 title: list-style
 slug: Web/CSS/list-style
 translation_of: Web/CSS/list-style
-browser-compat: css.properties.list-style
 ---
 
 {{CSSRef}}

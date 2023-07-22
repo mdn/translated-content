@@ -1,12 +1,6 @@
 ---
 title: Storage.length
 slug: Web/API/Storage/length
-tags:
-  - API
-  - Propriété
-  - Reference
-  - Stockage
-  - Web Stockage
 translation_of: Web/API/Storage/length
 ---
 

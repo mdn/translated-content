@@ -1,15 +1,7 @@
 ---
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/isArray
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/isArray
 ---
 
 {{JSRef}}

@@ -1,10 +1,6 @@
 ---
 title: table-layout
 slug: Web/CSS/table-layout
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/table-layout
 ---
 

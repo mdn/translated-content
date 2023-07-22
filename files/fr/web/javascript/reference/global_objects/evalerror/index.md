@@ -2,8 +2,6 @@
 title: EvalError
 slug: Web/JavaScript/Reference/Global_Objects/EvalError
 translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
-original_slug: Web/JavaScript/Reference/Objets_globaux/EvalError
-browser-compat: javascript.builtins.EvalError
 ---
 
 {{JSRef}}

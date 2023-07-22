@@ -1,13 +1,6 @@
 ---
 title: Console.table
 slug: Web/API/console/table
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthode
-  - console
-  - débogage
 translation_of: Web/API/Console/table
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: PerformanceEntry.startTime
 slug: Web/API/PerformanceEntry/startTime
-tags:
-  - API
-  - Performance Timeline API
-  - PerformanceEntry
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
 translation_of: Web/API/PerformanceEntry/startTime
 ---
 
