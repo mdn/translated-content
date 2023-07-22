@@ -29,15 +29,15 @@ slug: Learn/JavaScript/First_steps/Variables
 변수란, 숫자(합계나 계산에 사용되는) 또는 문자열(문장의 일부로 사용되는)과 같은 값의 컨테이너입니다. 그러나 변수에 대한 한 가지 특별한 점은 포함된 값이 변경될 수 있다는 것입니다. 간단한 예를 살펴보겠습니다:
 
 ```html
-<button>Press me</button>
+<button>눌러주세요</button>
 ```
 
 ```js
 const button = document.querySelector('button');
 
 button.onclick = function() {
-  let name = prompt('What is your name?');
-  alert('Hello ' + name + ', nice to see you!');
+  let name = prompt('당신의 이름은 무엇인가요?');
+  alert('안녕하세요 ' + name + ', 만나서 반가워요!');
 }
 ```
 
@@ -48,18 +48,18 @@ button.onclick = function() {
 왜 변수가 유용한지 이해하려면, 변수를 사용하지 않고 이 예제를 작성하는 방법에 대해 생각해 봅시다. 그러면 아마 이런 식으로 끝날 것입니다.
 
 ```js example-bad
-let name = prompt('What is your name?');
+let name = prompt('당신의 이름은 무엇인가요?');
 
 if (name === 'Adam') {
-  alert('Hello Adam, nice to see you!');
+  alert('안녕하세요 Adam, 만나서 반가워요!');
 } else if (name === 'Alan') {
-  alert('Hello Alan, nice to see you!');
+  alert('안녕하세요 Alan, 만나서 반가워요!');
 } else if (name === 'Bella') {
-  alert('Hello Bella, nice to see you!');
+  alert('안녕하세요 Bella, 만나서 반가워요!');
 } else if (name === 'Bianca') {
-  alert('Hello Bianca, nice to see you!');
+  alert('안녕하세요 Bianca, 만나서 반가워요!');
 } else if (name === 'Chris') {
-  alert('Hello Chris, nice to see you!');
+  alert('안녕하세요 Chris, 만나서 반가워요!');
 }
 
 // ... and so on ...
@@ -91,7 +91,7 @@ var myAge;
 <html>
   <head>
     <meta charset="utf-8">
-    <title>JavaScript console</title>
+    <title>자바스크립트 콘솔</title>
     <style>
       * {
         box-sizing: border-box;
@@ -255,9 +255,9 @@ myAge = 40;
 - 변수 이름의 시작부분에 밑줄(\_)을 사용하지 마세요. JavaScript 구문에서 밑줄로 시작하는 것은 특별한 의미를 가지고 있으므로 혼란을 가져올수 있습니다.
 - 변수 이름의 시작부분에 숫자를 사용하지 마세요. 허용되지 않으며 오류가 발생합니다.
 - 안전한 명명법은 소위 ["lower camel case"](https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms)(소문자 낙타 문법) 입니다. 여러 단어를 하나로 묶고 첫 단어의 시작은 소문자를 사용하며 그다음 단어의 시작은 대문자로 사용합니다. 우리는 지금까지 이 문서에서 변수 이름에 이 방법을 사용해 왔습니다.
-- 포함된 데이터를 쉽게 이해 할 수 있게 변수 이름을 직관적으로 부여 합니다. 단일 문자 / 숫자 또는 긴 구절을 사용하지 마세요.변수 이름을 직관적으로 만들어, 포함된 데이터를 표현 할 수 있습니다.
-- 변수는 대소문자를 구분 합니다. - `myage` 와 `myAge`  는 다른 변수 입니다.
-- 마지막으로 JavaScript 예약어를 변수 이름으로 사용하면 안됩니다. (예약어란 JavaScript의 실제 구문을 구성하는 단어를 의미 합니다.) 따라서 변수 이름으로 `var`, `function`, `let`, `for` 와 같은 단어를 사용 할 수 없습니다. 브라우저는 이러한 단어를 다른 코드 아이템(예약어)로 인식하므로 오류가 발생 합니다.
+- 포함된 데이터를 쉽게 이해 할 수 있게 변수 이름을 직관적으로 부여 합니다. 단일 문자 / 숫자 또는 긴 구절을 사용하지 마세요. 변수 이름을 직관적으로 만들어, 포함된 데이터를 표현할 수 있습니다.
+- 변수는 대소문자를 구분 합니다. - `myage` 와 `myAge`  는 다른 변수입니다.
+- 마지막으로 JavaScript 예약어를 변수 이름으로 사용하면 안됩니다. (예약어란 JavaScript의 실제 구문을 구성하는 단어를 의미 합니다.) 따라서 변수 이름으로 `var`, `function`, `let`, `for` 와 같은 단어를 사용 할 수 없습니다. 브라우저는 이러한 단어를 다른 코드 아이템(예약어)로 인식하므로 오류가 발생합니다.
 
 > **참고:** 다음 [Lexical grammar — keywords](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) 링크에서 예약어의 목록을 확인 할 수 있습니다.
 
@@ -349,7 +349,7 @@ myNumberArray[2]; // should return 40
 
 ### 객체
 
-프로그래밍에서 객체(Objects)는 실제 사물(real life object)을 모델링 하는 코드 구조입니다. 예를들어 주차장 객체는 주차장의 높이와 넓이 정보를 가지고 표현 할 수 있으며, 사람 객체는 이름, 키, 몸무게, 사용하는 언어등의 정보를 가지고 표현 할 수 있습니다.
+프로그래밍에서 객체(Objects)는 실제 사물(real life object)을 모델링 하는 코드 구조입니다. 예를들어 주차장 객체는 주차장의 높이와 넓이 정보를 가지고 표현 할 수 있으며, 사람 객체는 이름, 키, 몸무게, 사용하는 언어등의 정보를 가지고 표현할 수 있습니다.
 
 콘솔에 다음 코드를 입력해 보세요.
 
