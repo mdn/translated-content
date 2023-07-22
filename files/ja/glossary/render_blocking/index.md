@@ -1,17 +1,18 @@
 ---
 title: Render-blocking
 slug: Glossary/Render_blocking
-page-type: glossary-definition
+l10n:
+  sourceCommit: 8c4e47ca0a8d95ef49ea3b39f5eec454a3d15ae9
 ---
 
 {{GlossarySidebar}}
 
-**Render-blocking** refers to any part of the process of loading a website when it blocks the rendering of the user interface. Render-blocking is bad for web performance because it increases the length of time until users can interact with the site — for example viewing content or interacting with controls.
+**レンダリングブロッキング**はウェブサイトのローディングプロセスにおいてユーザーインターフェイスのレンダリング更新をブロックする部分のことを指します。レンダリングブロッキングは、例えばコンテンツの閲覧やフォームコントロールを使った動作など、ユーザーがウェブサイトとインタラクションできるまでの応答時間を長くさせるため、ウェブパフォーマンスを低下させます。
 
-The most common causes of render-blocking are initially-loaded CSS or JavaScript files.
+CSS や JavaScript ファイルの初期ローディングはレンダリングブロッキングを発生させる最も一般的な原因です。
 
-## See also
+## 関連項目
 
-- [CSS performance optimization](/en-US/docs/Learn/Performance/CSS)
-- [JavaScript performance optimization](/en-US/docs/Learn/Performance/JavaScript)
+- [CSS のパフォーマンス最適化](/ja/docs/Learn/Performance/CSS)
+- [JavaScript のパフォーマンス最適化](/ja/docs/Learn/Performance/JavaScript)
 - [What Are Render-Blocking Resources & How to Fix Render Blocking Issues](https://speckyboy.com/render-blocking/) on Speckyboy (2018)
