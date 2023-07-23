@@ -49,7 +49,7 @@ l10n:
 ```js
 const audioCtx = new AudioContext();
 // …
-const audioElement = document.querySelector('audio');
+const audioElement = document.querySelector("audio");
 // …
 const audioSource = audioCtx.createMediaElementSource(audioElement);
 // etc.
@@ -69,10 +69,10 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 そのライブラリーで利用可能なオブジェクトを使い始めることができます。例えば以下のようにします。
 
 ```js
-const map = L.mapquest.map('map', {
+const map = L.mapquest.map("map", {
   center: [53.480759, -2.242631],
-  layers: L.mapquest.tileLayer('map'),
-  zoom: 12
+  layers: L.mapquest.tileLayer("map"),
+  zoom: 12,
 });
 ```
 
@@ -91,7 +91,7 @@ const map = L.mapquest.map('map', {
 Mapquest API の例には、次のような行があります。
 
 ```js
-L.mapquest.key = 'YOUR-API-KEY-HERE';
+L.mapquest.key = "YOUR-API-KEY-HERE";
 ```
 
 この行では、アプリケーションで使用する API キーまたは開発者キーを指定します。アプリケーションの開発者は、キーを取得して API の機能へのアクセス許可を得るためにコードに含める必要があります。この例では、プレースホルダーを用意しました。
@@ -115,7 +115,7 @@ API の他の機能の使用方法を示すために、Mapquest の例にさら�
 Mapquest API で表示できる地図には、さまざまな種類があります。 これを行うには、次の行を見つけます。
 
 ```js
-layers: L.mapquest.tileLayer('map')
+layers: L.mapquest.tileLayer("map");
 ```
 
 hybrid-style map にするために `'map'` を `'hybrid'` に変えてみてください。他にも様々な値があります。 [`tileLayer` のリファレンスページ](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-tile-layer/) には使える様々なオプションや情報が載っています。
@@ -131,7 +131,7 @@ map.addControl(L.mapquest.control());
 [`mapquest.control()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-control/) メソッドは、単純なフル機能のコントロールセットを作成するだけで、デフォルトでは右上隅に配置されます。 `position` プロパティを含むコントロールのパラメータとしてオプションオブジェクトを指定することで、位置を調整することができます。例えば、次のようにしてみてください。
 
 ```js
-  map.addControl(L.mapquest.control({ position: 'bottomright' }));
+map.addControl(L.mapquest.control({ position: "bottomright" }));
 ```
 
 他にも、[`mapquest.searchControl()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-search-control/) や [`mapquest.satelliteControl()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-satellite-control/) など、利用可能なコントロールの種類があり、中には非常に複雑で強力なものもあります。実際に遊んでみて、何ができるか見てみましょう。
@@ -143,15 +143,15 @@ map.addControl(L.mapquest.control());
 ```js
 L.marker([53.480759, -2.242631], {
   icon: L.mapquest.icons.marker({
-    primaryColor: '#22407F',
-    secondaryColor: '#3B5998',
+    primaryColor: "#22407F",
+    secondaryColor: "#3B5998",
     shadow: true,
-    size: 'md',
-    symbol: 'A'
-  })
+    size: "md",
+    symbol: "A",
+  }),
 })
-.bindPopup('This is Manchester!')
-.addTo(map);
+  .bindPopup("This is Manchester!")
+  .addTo(map);
 ```
 
 ご覧のように、最もシンプルな方法では、2 つの引数を取ります。マーカーを表示する座標を含む配列と、その時点で表示するアイコンを定義する `icon` プロパティを含むオプションオブジェクトです。
@@ -197,15 +197,15 @@ L.marker([53.480759, -2.242631], {
 1. 次の行を探します。
 
    ```js
-   const key = 'INSERT-YOUR-API-KEY-HERE';
+   const key = "INSERT-YOUR-API-KEY-HERE";
    ```
 
-    既存の API キーを、前のセクションで取得した実際の API キーに置き換えます。
+   既存の API キーを、前のセクションで取得した実際の API キーに置き換えます。
 
 2. JavaScript の `// Event listeners to control the functionality` コメントの下に、以下の行を追加してください。これは、フォームが送信されたとき（ボタンが押されたとき）に `submitSearch()` という関数を実行します。
 
    ```js
-   searchForm.addEventListener('submit', submitSearch);
+   searchForm.addEventListener("submit", submitSearch);
    ```
 
 3. 前の行の下に `submitSearch()` と `fetchResults()` 関数の定義を追加します。
@@ -223,13 +223,13 @@ L.marker([53.480759, -2.242631], {
      // Assemble the full URL
      let url = `${baseURL}?api-key=${key}&page=${pageNumber}&q=${searchTerm.value}&fq=document_type:("article")`;
 
-     if (startDate.value !== '') {
+     if (startDate.value !== "") {
        url = `${url}&begin_date=${startDate.value}`;
-     };
+     }
 
-     if (endDate.value !== '') {
+     if (endDate.value !== "") {
        url = `${url}&end_date=${endDate.value}`;
-     };
+     }
    }
    ```
 
@@ -281,30 +281,30 @@ function displayResults(json) {
 
   const articles = json.response.docs;
 
-  nav.style.display = articles.length === 10 ? 'block' : 'none';
+  nav.style.display = articles.length === 10 ? "block" : "none";
 
   if (articles.length === 0) {
-    const para = document.createElement('p');
-    para.textContent = 'No results returned.'
+    const para = document.createElement("p");
+    para.textContent = "No results returned.";
     section.appendChild(para);
   } else {
     for (const current of articles) {
-      const article = document.createElement('article');
-      const heading = document.createElement('h2');
-      const link = document.createElement('a');
-      const img = document.createElement('img');
-      const para1 = document.createElement('p');
-      const keywordPara = document.createElement('p');
-      keywordPara.classList.add('keywords');
+      const article = document.createElement("article");
+      const heading = document.createElement("h2");
+      const link = document.createElement("a");
+      const img = document.createElement("img");
+      const para1 = document.createElement("p");
+      const keywordPara = document.createElement("p");
+      keywordPara.classList.add("keywords");
 
       console.log(current);
 
       link.href = current.web_url;
       link.textContent = current.headline.main;
       para1.textContent = current.snippet;
-      keywordPara.textContent = 'Keywords: ';
+      keywordPara.textContent = "Keywords: ";
       for (const keyword of current.keywords) {
-        const span = document.createElement('span');
+        const span = document.createElement("span");
         span.textContent = `${keyword.value} `;
         keywordPara.appendChild(span);
       }
@@ -322,7 +322,7 @@ function displayResults(json) {
       section.appendChild(article);
     }
   }
-};
+}
 ```
 
 ここにはたくさんのコードがあります。
@@ -345,8 +345,8 @@ function displayResults(json) {
 1. 既存の [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) コールの下に、関連するボタンがクリックされたときに `nextPage()` および `previousPage()` 関数が呼び出されるように、これら 2 つの新しいものを追加します。
 
    ```js
-   nextBtn.addEventListener('click', nextPage);
-   previousBtn.addEventListener('click', previousPage);
+   nextBtn.addEventListener("click", nextPage);
+   previousBtn.addEventListener("click", previousPage);
    ```
 
 2. 前回の追加の下に、2 つの関数を定義してみましょう — 今すぐこのコードを追加します。
@@ -355,7 +355,7 @@ function displayResults(json) {
    function nextPage(e) {
      pageNumber++;
      fetchResults(e);
-   };
+   }
 
    function previousPage(e) {
      if (pageNumber > 0) {
@@ -364,12 +364,12 @@ function displayResults(json) {
        return;
      }
      fetchResults(e);
-   };
+   }
    ```
 
-    最初の関数は単純で、変数 `pageNumber` をインクリメントしてから、次のページの結果を表示するために `fetchResults()` 関数を再度実行します。
+   最初の関数は単純で、変数 `pageNumber` をインクリメントしてから、次のページの結果を表示するために `fetchResults()` 関数を再度実行します。
 
-    2 番目の関数は逆の方法でほぼ正確に同じように動作しますが、`pageNumber` がすでに 0 ではないことを確認するという余分なステップを踏まなければなりません — もしフェッチリクエストがマイナスの `page` 引数で実行された場合、エラーを引き起こす可能性があります。もし `pageNumber` がすでに 0 であれば、処理能力を無駄にしないように、単に関数から [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) します（すでに最初のページにいるのであれば、同じ結果を再び読み込む必要はありません）。
+   2 番目の関数は逆の方法でほぼ正確に同じように動作しますが、`pageNumber` がすでに 0 ではないことを確認するという余分なステップを踏まなければなりません — もしフェッチリクエストがマイナスの `page` 引数で実行された場合、エラーを引き起こす可能性があります。もし `pageNumber` がすでに 0 であれば、処理能力を無駄にしないように、単に関数から [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) します（すでに最初のページにいるのであれば、同じ結果を再び読み込む必要はありません）。
 
 > **メモ:** 完成した [NYTimes API のサンプルコードは GitHub で見ることができます](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/index.html) （[ライブ動作はこちら](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)）。
 

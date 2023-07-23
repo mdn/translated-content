@@ -50,12 +50,11 @@ l10n:
 
 ```js
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -73,14 +72,17 @@ function generatePrimes(quota) {
   return primes;
 }
 
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
+  document.querySelector(
+    "#output",
+  ).textContent = `Finished generating ${quota} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Try typing in here immediately after pressing "Generate primes"';
   document.location.reload();
 });
 ```
@@ -99,7 +101,7 @@ document.querySelector('#reload').addEventListener('click', () => {
 "index.html" ファイルと "style.css" ファイルは、すでに完成しています。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
@@ -118,7 +120,8 @@ document.querySelector('#reload').addEventListener('click', () => {
 
     <textarea id="user-input" rows="5" cols="62">
 ［素数の生成］を押した後、すぐにここに入力してみてください。
-</textarea>
+</textarea
+    >
 
     <div id="output"></div>
   </body>
@@ -140,15 +143,15 @@ textarea {
 
 ```js
 // 新しいワーカーを作成し、"generate.js" にあるコードを与えます。
-const worker = new Worker('./generate.js');
+const worker = new Worker("./generate.js");
 
 // ユーザーが［素数の生成］をクリックしたら、ワーカーにメッセージを送ります。
 // メッセージのコマンドは "generate" であり、メッセージには生成する素数の
 // 数である "quota" も含まれています。
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   worker.postMessage({
-    command: 'generate',
+    command: "generate",
     quota,
   });
 });
@@ -156,12 +159,15 @@ document.querySelector('#generate').addEventListener('click', () => {
 // ワーカーがメインスレッドにメッセージを送り返したら、メッセージ
 // データから受け取った生成された素数の個数を含むユーザーへの
 // メッセージで出力ボックスを更新します。
-worker.addEventListener('message', (message) => {
-  document.querySelector('#output').textContent = `${message.data} 個の素数を生成しました。`;
+worker.addEventListener("message", (message) => {
+  document.querySelector(
+    "#output",
+  ).textContent = `${message.data} 個の素数を生成しました。`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = '［素数の生成］を押した後、すぐにここに入力してみてください。';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    "［素数の生成］を押した後、すぐにここに入力してみてください。";
   document.location.reload();
 });
 ```
@@ -183,19 +189,18 @@ document.querySelector('#reload').addEventListener('click', () => {
 // メインスレッドからのメッセージを待ち受けします。
 // メッセージのコマンドが "generate" であれば、 `generatePrimes()` を呼び出します。
 addEventListener("message", (message) => {
-  if (message.data.command === 'generate') {
+  if (message.data.command === "generate") {
     generatePrimes(message.data.quota);
   }
 });
 
 // Generate primes (very inefficiently)
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }

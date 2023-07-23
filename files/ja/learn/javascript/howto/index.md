@@ -42,8 +42,8 @@ JavaScript のコードが正しく動作しないので修正したい、とい
 
 ```js
 function myFunction() {
-  alert('This is my function.');
-};
+  alert("This is my function.");
+}
 ```
 
 上記のコードで定義した関数は、例えば以下のように呼び出さないかぎり何もしません。
@@ -78,9 +78,9 @@ var myNumber = 0;
 
 ```js
 var myObject = {
-  name : 'Chris',
-  age : 38
-}
+  name: "Chris",
+  age: 38,
+};
 ```
 
 ## 基本的な定義

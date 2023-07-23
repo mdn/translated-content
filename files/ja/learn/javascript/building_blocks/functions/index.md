@@ -22,8 +22,8 @@ JavaScript の中で、関数はあらゆるところに見つかるでしょう
 このコースではブラウザーに組込まれた関数をたくさん使ってきました。毎回テキスト文字列を操作したときには、こんな風に:
 
 ```js
-let myText = 'I am a string';
-let newString = myText.replace('string', 'sausage');
+let myText = "I am a string";
+let newString = myText.replace("string", "sausage");
 console.log(newString);
 // the replace() string function takes a string,
 // replaces one substring with another, and returns
@@ -33,8 +33,8 @@ console.log(newString);
 あるいは毎回配列を操作したときには:
 
 ```js
-let myArray = ['I', 'love', 'chocolate', 'frogs'];
-let madeAString = myArray.join(' ');
+let myArray = ["I", "love", "chocolate", "frogs"];
+let madeAString = myArray.join(" ");
 console.log(madeAString);
 // the join() function takes an array, joins
 // all the array items together into a single
@@ -68,10 +68,10 @@ JavaScript 言語にはたくさんの組込み関数があるので、いろい
 
 ```js
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -88,7 +88,7 @@ draw();
 
 ```js
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 ```
 
@@ -100,7 +100,7 @@ function random(number) {
 
 ```js
 function myFunction() {
-  alert('hello');
+  alert("hello");
 }
 
 myFunction();
@@ -113,7 +113,7 @@ myFunction();
 
 ```js
 function myFunction() {
-  alert('hello');
+  alert("hello");
 }
 ```
 
@@ -128,11 +128,11 @@ function() {
 これは**匿名関数**と呼ばれます — 名前がないんです! それだけでは何もしません。匿名関数はよくイベントハンドラで使われていて、例えば以下では関連づけられたボタンがクリックされるたび、関数の中のコードが走ります:
 
 ```js
-const myButton = document.querySelector('button');
+const myButton = document.querySelector("button");
 
-myButton.onclick = function() {
-  alert('hello');
-}
+myButton.onclick = function () {
+  alert("hello");
+};
 ```
 
 上の例では、ページの中に選択してクリックするための{{htmlelement("button")}}要素が存在しなければならないでしょう。あなたはこのような例をここまでのコースで見てきましたし、ここから先の記事でもっと学習し、使い方を見ていく事になります。
@@ -140,9 +140,9 @@ myButton.onclick = function() {
 匿名関数を変数の値として代入する事もできます:
 
 ```js
-const myGreeting = function() {
-  alert('hello');
-}
+const myGreeting = function () {
+  alert("hello");
+};
 ```
 
 この関数は次のように起動できます:
@@ -168,18 +168,18 @@ anotherGreeting();
 
 ```js
 function myGreeting() {
-  alert('hello');
+  alert("hello");
 }
 ```
 
 匿名関数は主にイベント発火 — ボタンがクリックされたとか — のレスポンスとして、一連のコードを走らせるだけのような場合に、イベントハンドラとして使われます。くりかえしですが、こんな具合です:
 
 ```js
-myButton.onclick = function() {
-  alert('hello');
+myButton.onclick = function () {
+  alert("hello");
   // I can put as much code
   // inside here as I want
-}
+};
 ```
 
 ## 関数の引数
@@ -197,8 +197,8 @@ let myNumber = Math.random();
 ですがブラウザー組込みの文字列関数 [replace()](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) は二つの引数が必要です — 主文字列から探すべき部分文字列と、部分文字列を置換する文字列です:
 
 ```js
-let myText = 'I am a string';
-let newString = myText.replace('string', 'sausage');
+let myText = "I am a string";
+let newString = myText.replace("string", "sausage");
 ```
 
 > **メモ:** 複数の引数を指定するときは、カンマで区切って書きます
@@ -206,8 +206,8 @@ let newString = myText.replace('string', 'sausage');
 引数には省略可能 — 書かなくても良い — なものもある事に触れておくべきでしょう。省略された場合、関数はだいたいデフォルトに規定された動作を行ないます。例えば、配列の [join()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 関数のパラメータは省略可能です:
 
 ```js
-let myArray = ['I', 'love', 'chocolate', 'frogs'];
-let madeAString = myArray.join(' ');
+let myArray = ["I", "love", "chocolate", "frogs"];
+let madeAString = myArray.join(" ");
 // returns 'I love chocolate frogs'
 let madeAString = myArray.join();
 // returns 'I,love,chocolate,frogs'
@@ -236,17 +236,17 @@ JavaScript がこう作られているのにはいくつも理由があります
 
 ```js
 // first.js
-let name = 'Chris';
+let name = "Chris";
 function greeting() {
-  alert('Hello ' + name + ': welcome to our company.');
+  alert("Hello " + name + ": welcome to our company.");
 }
 ```
 
 ```js
 // second.js
-let name = 'Zaptec';
+let name = "Zaptec";
 function greeting() {
-  alert('Our company is called ' + name + '.');
+  alert("Our company is called " + name + ".");
 }
 ```
 
@@ -270,89 +270,89 @@ function greeting() {
 2. ブラウザーとテキストエディターでサンプルを開きます
 3. ブラウザーの開発者ツールで JavaScript コンソールを開きます。JavaScript コンソールで、次のコマンドを入力します。
 
-    ```js
-    output(x);
-    ```
+   ```js
+   output(x);
+   ```
 
-    変数 x の出力値が画面に表示されるはずです。
+   変数 x の出力値が画面に表示されるはずです。
 
 4. コンソールに次のように入力してみてください
 
-    ```js
-    output(y);
-    output(z);
-    ```
+   ```js
+   output(y);
+   output(z);
+   ```
 
-    どちらも、"[ReferenceError: y is not defined](/ja/docs/Web/JavaScript/Reference/Errors/Not_defined)"の一行のエラーが返されるはずです。なぜでしょうか？ 関数スコープのため、つまり `y` と `z` は `a()` と `b()` 関数の中でロックされているので、global スコープから呼び出されたときには `output()` はそれらにアクセスできません。
+   どちらも、"[ReferenceError: y is not defined](/ja/docs/Web/JavaScript/Reference/Errors/Not_defined)"の一行のエラーが返されるはずです。なぜでしょうか？ 関数スコープのため、つまり `y` と `z` は `a()` と `b()` 関数の中でロックされているので、global スコープから呼び出されたときには `output()` はそれらにアクセスできません。
 
 5. しかし、別の関数の中から呼び出されたときはどうでしょうか？ `a()` と `b()` を次のように編集してみてください：
 
-    ```js
-    function a() {
-      let y = 2;
-      output(y);
-    }
+   ```js
+   function a() {
+     let y = 2;
+     output(y);
+   }
 
-    function b() {
-      let z = 3;
-      output(z);
-    }
-    ```
+   function b() {
+     let z = 3;
+     output(z);
+   }
+   ```
 
-    コードを保存してブラウザーに再ロードしてから、JavaScript コンソールから `a()` と `b()` 関数を呼び出してみてください。
+   コードを保存してブラウザーに再ロードしてから、JavaScript コンソールから `a()` と `b()` 関数を呼び出してみてください。
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    ページに `y` と `z` の値の出力が表示されます。`output()` 関数が他の関数の中、つまり表示される変数が定義されているのと同じスコープでそれぞれ呼び出されているので、これはうまくいきます。`output()` 自体はグローバルスコープで定義されているので、どこからでも利用できます。
+   ページに `y` と `z` の値の出力が表示されます。`output()` 関数が他の関数の中、つまり表示される変数が定義されているのと同じスコープでそれぞれ呼び出されているので、これはうまくいきます。`output()` 自体はグローバルスコープで定義されているので、どこからでも利用できます。
 
 6. 今度は次のようにコードを更新してみてください：
 
-    ```js
-    function a() {
-      let y = 2;
-      output(x);
-    }
+   ```js
+   function a() {
+     let y = 2;
+     output(x);
+   }
 
-    function b() {
-      let z = 3;
-      output(x);
-    }
-    ```
+   function b() {
+     let z = 3;
+     output(x);
+   }
+   ```
 
-    保存してもう一度読み込み、JavaScript コンソールでもう一度試してみてください：
+   保存してもう一度読み込み、JavaScript コンソールでもう一度試してみてください：
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    `a()` と `b()` の両方の呼び出しは `x` の値、つまり 1 が出力されます。これは `x` がグローバル変数であり、すべてのコード内どこでも利用可能であるため、`output()` の呼び出しが `x` と同じスコープではなくてもうまく動きます。
+   `a()` と `b()` の両方の呼び出しは `x` の値、つまり 1 が出力されます。これは `x` がグローバル変数であり、すべてのコード内どこでも利用可能であるため、`output()` の呼び出しが `x` と同じスコープではなくてもうまく動きます。
 
 7. 最後に、次のようにコードを更新してみてください：
 
-    ```js
-    function a() {
-      let y = 2;
-      output(z);
-    }
+   ```js
+   function a() {
+     let y = 2;
+     output(z);
+   }
 
-    function b() {
-      let z = 3;
-      output(y);
-    }
-    ```
+   function b() {
+     let z = 3;
+     output(y);
+   }
+   ```
 
-    保存してもう一度読み込み、JavaScript コンソールでもう一度試してみてください：
+   保存してもう一度読み込み、JavaScript コンソールでもう一度試してみてください：
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    今度は `a()` と `b()` の両方の呼び出しで、迷惑な "[ReferenceError: _variable name_ is not defined](/ja/docs/Web/JavaScript/Reference/Errors/Not_defined)" エラーが返されます — これは `output()` 呼び出しと、出力しようとしている変数が同じ関数のスコープにない、つまりこれらの関数呼び出しからは変数が参照できない状態だからです。
+   今度は `a()` と `b()` の両方の呼び出しで、迷惑な "[ReferenceError: _variable name_ is not defined](/ja/docs/Web/JavaScript/Reference/Errors/Not_defined)" エラーが返されます — これは `output()` 呼び出しと、出力しようとしている変数が同じ関数のスコープにない、つまりこれらの関数呼び出しからは変数が参照できない状態だからです。
 
 > **メモ:** 同じスコープルールはループ (`for() { ... }` など) と条件ブロック (`if() { ... }`など) には適用されません。それらは非常によく似ていますが、同じものではありません。混乱しないように注意してください。
 

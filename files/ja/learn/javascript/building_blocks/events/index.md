@@ -42,22 +42,25 @@ slug: Learn/JavaScript/Building_blocks/Events
 ```
 
 ```css hidden
-button { margin: 10px };
+button {
+  margin: 10px;
+}
 ```
 
 JavaScript はこのようになります:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 
-btn.onclick = function() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+btn.onclick = function () {
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
-}
+};
 ```
 
 このコードでは、`btn` という変数に {{domxref("Document.querySelector()")}} 関数を使って取得したボタンへの参照を格納しています。それとは別にランダムな数値を返す関数も定義しています。コードの 3 つ目の部分はイベントハンドラーです。`btn` 変数は[`<button>`](/ja/docs/Web/HTML/Element/button)要素を指していますが、この種のオブジェクトにはたくさん発火し得るイベントがあるので、色々なイベントハンドラーが使えます。[`onclick`](/ja/docs/Web/API/GlobalEventHandlers/onclick) イベントハンドラプロパティに、ランダムな RGB 色を生成し [`<body>`](/ja/docs/Web/HTML/Element/body) の [`background-color`](/ja/docs/Web/CSS/background-color) を設定するコードを抱えた匿名関数を代入する事で、[`click`](/ja/docs/Web/API/Element/click_event) イベントが発火されるのを待ちかまえます。
@@ -87,12 +90,13 @@ btn.onclick = function() {
 イベントハンドラーコードを代入するためのいろいろなプロパティがあり、そういったものをここまでのコースで最もたくさん見てきました。上記の例に戻りましょう。
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
-btn.onclick = function() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+btn.onclick = function () {
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
-}
+};
 ```
 
 [`onclick`](/ja/docs/Web/API/GlobalEventHandlers/onclick) プロパティがこの例で使用されているイベントハンドラープロパティです。ボタンで利用可能なプロパティ(例えば [`btn.textContent`](/ja/docs/Web/API/Node/textContent) や [`btn.style`](/ja/docs/Web/API/HTMLElement/style))のうちの 1 プロパティに過ぎませんが、特別な種類のものです(コードを代入すると、そのコードはボタンでイベントが発火した際に実行される)。
@@ -100,10 +104,11 @@ btn.onclick = function() {
 ハンドラープロパティには、名前付き関数の関数名 ([Build your own function](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function) でみられるような) を設定することもできます。こう書いても動作は同じです:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function bgChange() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 }
 
@@ -131,7 +136,8 @@ btn.onclick = bgChange;
 
 ```js
 function bgChange() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 }
 ```
@@ -141,7 +147,9 @@ function bgChange() {
 Web 上で見かける最初期のイベントハンドラー登録方法には、上の例のような**イベントハンドラー HTML 属性**(**インラインイベントハンドラー**とも言う)があります — 属性値がイベント発生時に実行したい JavaScript コードそのものです。上の例では{{htmlelement("script")}}要素の中で定義された関数を起動していますが、直接 JavsScript そのものを属性の中に入れる事もできます。例えば:
 
 ```html
-<button onclick="alert('Hello, this is my old-fashioned event handler!');">Press me</button>
+<button onclick="alert('Hello, this is my old-fashioned event handler!');">
+  Press me
+</button>
 ```
 
 多くのイベントハンドラープロパティと等価な HTML 属性を見付けるでしょうが、使うべきではありません — こういうのは悪い方法とみなされています。ちょっとした事を手早く片づけたい時、イベントハンドラー属性を使うのが簡単に思えるかもしれませんが、あっという間に手がつけられない、効率の悪いものになってしまいます。
@@ -151,7 +159,7 @@ Web 上で見かける最初期のイベントハンドラー登録方法には�
 (HTML と JavaScript が)一つのファイルになっているとしても、インラインイベントハンドラーは良いアイデアではありません。ボタン一つならいいですが、ボタンが 100 あったら? ファイルに 100 の属性を追加したならば、あっという間に管理していくのは悪夢と化す事でしょう。JavaScript を使えば、ページにボタンがいくつあろうが、全部のボタンにイベントハンドラーを追加するのは簡単です、こんな具合です:
 
 ```js
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].onclick = bgChange;
@@ -161,7 +169,7 @@ for (let i = 0; i < buttons.length; i++) {
 ここにある他のオプションは [`NodeList`](/ja/docs/Web/API/NodeList) オブジェクトの組み込みメソッドの [`forEach()`](/ja/docs/Web/API/NodeList/forEach) で使えることに注意してください:
 
 ```js
-buttons.forEach(function(button) {
+buttons.forEach(function (button) {
   button.onclick = bgChange;
 });
 ```
@@ -173,14 +181,15 @@ buttons.forEach(function(button) {
 最新のイベント機構は [Document Object Model (DOM) Level 2 Events](https://www.w3.org/TR/DOM-Level-2-Events/) 仕様で規定されていて、ブラウザーに新しい関数が追加されました — [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener)です。この関数はイベントハンドラープロパティと同じ方向性ですが、文法は明確に異なります。ランダム色の例をこんな風に書き換える事ができます:
 
 ```js
-const btn = document.querySelector('button');
+const btn = document.querySelector("button");
 
 function bgChange() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 }
 
-btn.addEventListener('click', bgChange);
+btn.addEventListener("click", bgChange);
 ```
 
 > **メモ:** [こちら](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-addeventlistener.html)に GitHub 上のサンプルがあります (また、[こちら](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-addeventlistener.html)で実際に動くところが見られます)。
@@ -188,8 +197,9 @@ btn.addEventListener('click', bgChange);
 `addEventListener()` 関数のカッコの中で、二つの引数を指定しています — ハンドラーを登録したいイベントの名前と、それに反応して実行させたいコードを含んだ関数です。匿名関数を使って、実行したいコードを全部 addEventListener() 関数の引数に書いてしまっても全く問題ありません。こんな具合です:
 
 ```js
-btn.addEventListener('click', function() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+btn.addEventListener("click", function () {
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   document.body.style.backgroundColor = rndCol;
 });
 ```
@@ -197,7 +207,7 @@ btn.addEventListener('click', function() {
 この方式は、ここまでで見てきた古い方式に勝る点がいくつかあります。まず第一に、逆を行なう関数 [`removeEventListener()`](/ja/docs/Web/API/EventTarget/removeEventListener)があり、以前に追加したリスナーを削除できます。例えばこうすると、このセクションの最初のコード部で追加したリスナーを削除します:
 
 ```js
-btn.removeEventListener('click', bgChange);
+btn.removeEventListener("click", bgChange);
 ```
 
 単純で小さなプログラムではたいした事ありませんが、大きくて複雑なプログラムでは、古く使われないイベントハンドラーを除去しておくと効率が良くなります。さらに、これは例えば同じボタンに状況の違いによって異なる動作をさせる事ができるようになります — ただ適切なイベントハンドラーを追加したり削除するだけで良いのです。
@@ -214,8 +224,8 @@ myElement.onclick = functionB;
 ですがこれなら動きます:
 
 ```js
-myElement.addEventListener('click', functionA);
-myElement.addEventListener('click', functionB);
+myElement.addEventListener("click", functionA);
+myElement.addEventListener("click", functionB);
 ```
 
 要素がクリックされると、どちらの関数も走ります。
@@ -252,12 +262,13 @@ etc.
 
 ```js
 function bgChange(e) {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
   e.target.style.backgroundColor = rndCol;
   console.log(e);
 }
 
-btn.addEventListener('click', bgChange);
+btn.addEventListener("click", bgChange);
 ```
 
 > **メモ:** [こちら](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventobject.html) に GitHub 上のサンプルがあります (また、[こちら](http://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)で実際に動くところが見れらます)。
@@ -269,22 +280,22 @@ btn.addEventListener('click', bgChange);
 複数の要素に同じイベントハンドラを割り当てて、どれかでイベントがあったときに何かさせたいような場合、`e.target` はとてつもなく有用なものです。複数の要素に同じイベントハンドラーを割り当てて、どれかでイベントがあったときに何かさせたいような場合、e.target はとてつもなく有用なものです。例えばクリックすると見えなくなるタイルが 16 個あるとします。`e.target` を使ってそれをただ消せるなら、もっと難解な手段で選びだすのよりも使いすいでしょう。続く例では (完全なソースコードは [useful-eventtarget.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/useful-eventtarget.html) を見てください; ここで [ライブ実行](http://mdn.github.io/learning-area/javascript/building-blocks/events/useful-eventtarget.html) も見られます)、16 個の {{htmlelement("div")}} 要素を JavaScript で生成します。そしてこれらを全部 {{domxref("document.querySelectorAll()")}}を使って選択し、ループで一つ一つに `onclick` ハンドラを追加して、それぞれがクリックされた時にランダムな色が表われるようにしています:
 
 ```js
-const divs = document.querySelectorAll('div');
+const divs = document.querySelectorAll("div");
 
 for (let i = 0; i < divs.length; i++) {
-  divs[i].onclick = function(e) {
+  divs[i].onclick = function (e) {
     e.target.style.backgroundColor = bgChange();
-  }
+  };
 }
 ```
 
 結果はこうです(クリックして遊んでみてください):
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Useful event target example</title>
     <style>
       div {
@@ -298,25 +309,26 @@ for (let i = 0; i < divs.length; i++) {
   <body>
     <script>
       for (let i = 1; i <= 16; i++) {
-        const myDiv = document.createElement('div');
+        const myDiv = document.createElement("div");
         document.body.appendChild(myDiv);
       }
 
       function random(number) {
-        return Math.floor(Math.random()*number);
+        return Math.floor(Math.random() * number);
       }
 
       function bgChange() {
-        var rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+        var rndCol =
+          "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
         return rndCol;
       }
 
-      const divs = document.querySelectorAll('div');
+      const divs = document.querySelectorAll("div");
 
       for (let i = 0; i < divs.length; i++) {
-        divs[i].onclick = function(e) {
+        divs[i].onclick = function (e) {
           e.target.style.backgroundColor = bgChange();
-        }
+        };
       }
     </script>
   </body>
@@ -339,14 +351,14 @@ for (let i = 0; i < divs.length; i++) {
 <form>
   <div>
     <label for="fname">First name: </label>
-    <input id="fname" type="text">
+    <input id="fname" type="text" />
   </div>
   <div>
     <label for="lname">Last name: </label>
-    <input id="lname" type="text">
+    <input id="lname" type="text" />
   </div>
   <div>
-     <input id="submit" type="submit">
+    <input id="submit" type="submit" />
   </div>
 </form>
 <p></p>
@@ -361,17 +373,17 @@ div {
 さあちょっとした JavaScript です — ここでは [onsubmit](/ja/docs/Web/API/GlobalEventHandlers/onsubmit) イベントハンドラー(フォームがサブミットされるとサブミットイベントが発火します)の中で、テキストフィールドが空かどうかテストするだけのとても簡単なチェックを実装します。もし空なら、イベントオブジェクトの [`preventDefault()`](/ja/docs/Web/API/Event/preventDefault) 関数— これでフォームの送信を抑制します — を呼び、それからフォームの下にあるパラグラフに、何が問題なのかユーザーに伝えるためのエラーメッセージを表示します:
 
 ```js
-const form = document.querySelector('form');
-const fname = document.getElementById('fname');
-const lname = document.getElementById('lname');
-const para = document.querySelector('p');
+const form = document.querySelector("form");
+const fname = document.getElementById("fname");
+const lname = document.getElementById("lname");
+const para = document.querySelector("p");
 
-form.onsubmit = function(e) {
-  if (fname.value === '' || lname.value === '') {
+form.onsubmit = function (e) {
+  if (fname.value === "" || lname.value === "") {
     e.preventDefault();
-    para.textContent = 'You need to fill in both names!';
+    para.textContent = "You need to fill in both names!";
   }
-}
+};
 ```
 
 言うまでもなく弱っちいフォームの検証です — 例えばフォームに空白や数字が入っていても止められません — が、例としては十分です。結果はこうなります。
@@ -385,21 +397,25 @@ form.onsubmit = function(e) {
 ここで最後に説明していくのは、滅多には遭遇しませんが、理解できていないととても苦痛になるかもしれない事柄です。ある一つの要素で同じイベントに紐付く二つのハンドラが活性化された時に何が起きるのかを説明するのが、イベントのバブリングとキャプチャリングという二種類のメカニズムです。わかりやすくするために次の例を見てください — [show-video-box.html](http://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box.html) 例を新しいタブで開いてください ([ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/show-video-box.html) もまた別のタブに)。ライブでも下で見られます:
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Show video box example</title>
     <style>
       div {
         position: absolute;
         top: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         width: 480px;
         height: 380px;
         border-radius: 10px;
         background-color: #eee;
-        background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.1));
+        background-image: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.1)
+        );
       }
 
       .hidden {
@@ -415,7 +431,6 @@ form.onsubmit = function(e) {
         width: 400px;
         margin: 40px auto;
       }
-
     </style>
   </head>
   <body>
@@ -423,36 +438,41 @@ form.onsubmit = function(e) {
 
     <div class="hidden">
       <video>
-        <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4" type="video/mp4">
-        <source src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm" type="video/webm">
-        <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+        <source
+          src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.mp4"
+          type="video/mp4" />
+        <source
+          src="https://raw.githubusercontent.com/mdn/learning-area/master/javascript/building-blocks/events/rabbit320.webm"
+          type="video/webm" />
+        <p>
+          Your browser doesn't support HTML5 video. Here is a
+          <a href="rabbit320.mp4">link to the video</a> instead.
+        </p>
       </video>
     </div>
 
     <script>
+      const btn = document.querySelector("button");
+      const videoBox = document.querySelector("div");
+      const video = document.querySelector("video");
 
-      const btn = document.querySelector('button');
-      const videoBox = document.querySelector('div');
-      const video = document.querySelector('video');
-
-      btn.onclick = function() {
+      btn.onclick = function () {
         displayVideo();
-      }
+      };
 
       function displayVideo() {
-        if(videoBox.getAttribute('class') === 'hidden') {
-          videoBox.setAttribute('class','showing');
+        if (videoBox.getAttribute("class") === "hidden") {
+          videoBox.setAttribute("class", "showing");
         }
       }
 
-      videoBox.addEventListener('click',function() {
-        videoBox.setAttribute('class','hidden');
+      videoBox.addEventListener("click", function () {
+        videoBox.setAttribute("class", "hidden");
       });
 
-      video.addEventListener('click',function() {
+      video.addEventListener("click", function () {
         video.play();
       });
-
     </script>
   </body>
 </html>
@@ -467,9 +487,12 @@ form.onsubmit = function(e) {
 
 <div class="hidden">
   <video>
-    <source src="rabbit320.mp4" type="video/mp4">
-    <source src="rabbit320.webm" type="video/webm">
-    <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+    <source src="rabbit320.mp4" type="video/mp4" />
+    <source src="rabbit320.webm" type="video/webm" />
+    <p>
+      Your browser doesn't support HTML5 video. Here is a
+      <a href="rabbit320.mp4">link to the video</a> instead.
+    </p>
   </video>
 </div>
 ```
@@ -477,9 +500,9 @@ form.onsubmit = function(e) {
 {{htmlelement("button")}} がクリックされると、`<div>` のクラス属性を `hidden` から `showing` に変更するので、ビデオが表示されます(例の CSS にこの二つのクラスが含まれており、それぞれはボックスの位置をスクリーンの外、内にします)。
 
 ```js
-btn.onclick = function() {
-  videoBox.setAttribute('class', 'showing');
-}
+btn.onclick = function () {
+  videoBox.setAttribute("class", "showing");
+};
 ```
 
 では二つばかり `onclick` イベントハンドラーを追加します — 最初のは `<div>` に、二つ目は `<video>`にです。ビデオの外側の `<div>` 領域がクリックされた時にはボックスがまた隠れるようにし、ビデオそのものがクリックされたらビデオが再生されるようにしたいというわけです。
@@ -528,7 +551,7 @@ video.onclick = function() {
 よって我々の今の問題は、先のコードブロック、第二のハンドラー関数をこのように変更して解決できます:
 
 ```js
-video.onclick = function(e) {
+video.onclick = function (e) {
   e.stopPropagation();
   video.play();
 };

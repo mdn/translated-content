@@ -136,9 +136,9 @@ const audioCtx = new AudioContext();
 次に、 `<audio>` 、 `<button>` 、および `<input>` 要素への参照を格納する定数を作成し、 {{domxref("AudioContext.createMediaElementSource()")}} メソッドを使用して、音声のソースを表す `MediaElementAudioSourceNode` を作成します。`<audio>` 要素はここから再生されます。
 
 ```js
-const audioElement = document.querySelector('audio');
-const playBtn = document.querySelector('button');
-const volumeSlider = document.querySelector('.volume');
+const audioElement = document.querySelector("audio");
+const playBtn = document.querySelector("button");
+const volumeSlider = document.querySelector(".volume");
 
 const audioSource = audioCtx.createMediaElementSource(audioElement);
 ```
@@ -147,29 +147,29 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 
 ```js
 // play/pause audio
-playBtn.addEventListener('click', () => {
+playBtn.addEventListener("click", () => {
   // check if context is in suspended state (autoplay policy)
-  if (audioCtx.state === 'suspended') {
-     audioCtx.resume();
+  if (audioCtx.state === "suspended") {
+    audioCtx.resume();
   }
 
   // if track is stopped, play it
-  if (playBtn.getAttribute('class') === 'paused') {
+  if (playBtn.getAttribute("class") === "paused") {
     audioElement.play();
-    playBtn.setAttribute('class', 'playing');
-    playBtn.textContent = 'Pause'
+    playBtn.setAttribute("class", "playing");
+    playBtn.textContent = "Pause";
     // if track is playing, stop it
-} else if (playBtn.getAttribute('class') === 'playing') {
+  } else if (playBtn.getAttribute("class") === "playing") {
     audioElement.pause();
-    playBtn.setAttribute('class', 'paused');
-    playBtn.textContent = 'Play';
+    playBtn.setAttribute("class", "paused");
+    playBtn.textContent = "Play";
   }
 });
 
 // if track ends
-audioElement.addEventListener('ended', () => {
-  playBtn.setAttribute('class', 'paused');
-  playBtn.textContent = 'Play'
+audioElement.addEventListener("ended", () => {
+  playBtn.setAttribute("class", "paused");
+  playBtn.textContent = "Play";
 });
 ```
 
@@ -181,7 +181,7 @@ audioElement.addEventListener('ended', () => {
 // volume
 const gainNode = audioCtx.createGain();
 
-volumeSlider.addEventListener('input', () => {
+volumeSlider.addEventListener("input", () => {
   gainNode.gain.value = volumeSlider.value;
 });
 ```
@@ -201,23 +201,23 @@ API を使用する場合、その API のエントリーポイント（入口�
 Document Object Model (DOM) API もシンプルなエントリーポイントがあります。その機能は、例えば {{domxref("Document")}} オブジェクトや、何らかの形で影響を与えたい HTML 要素のインスタンスにぶら下がった状態で得られる傾向があります。
 
 ```js
-const em = document.createElement('em'); // 新しい em 要素を作成
-const para = document.querySelector('p'); // 既存の p 要素の参照
-em.textContent = 'Hello there!'; // em にテキストの内容を入れる
+const em = document.createElement("em"); // 新しい em 要素を作成
+const para = document.querySelector("p"); // 既存の p 要素の参照
+em.textContent = "Hello there!"; // em にテキストの内容を入れる
 para.appendChild(em); // 段落に em を入れる
 ```
 
 [キャンバス API](/ja/docs/Web/API/Canvas_API) も、操作するために使用するコンテキストオブジェクトの取得に頼っていますが、この用途では音声コンテキストではなくグラフィックコンテキストを使用します。このコンテキストオブジェクトは、描画する {{htmlelement("canvas")}} 要素への参照を取得し、その {{domxref("HTMLCanvasElement.getContext()")}} メソッドを呼び出すことによって作成されます。
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 ```
 
 キャンバスに対して何らかの処理を行いたい場合は、コンテキストオブジェクト（{{domxref("CanvasRenderingContext2D")}} のインスタンス）のプロパティやメソッドを呼び出すことで実現できます。
 
 ```js
-Ball.prototype.draw = function() {
+Ball.prototype.draw = function () {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -237,29 +237,29 @@ Ball.prototype.draw = function() {
 
 ```js
 // play/pause audio
-playBtn.addEventListener('click', () => {
+playBtn.addEventListener("click", () => {
   // check if context is in suspended state (autoplay policy)
-  if (audioCtx.state === 'suspended') {
-     audioCtx.resume();
+  if (audioCtx.state === "suspended") {
+    audioCtx.resume();
   }
 
   // if track is stopped, play it
-  if (playBtn.getAttribute('class') === 'paused') {
+  if (playBtn.getAttribute("class") === "paused") {
     audioElement.play();
-    playBtn.setAttribute('class', 'playing');
-    playBtn.textContent = 'Pause'
+    playBtn.setAttribute("class", "playing");
+    playBtn.textContent = "Pause";
     // if track is playing, stop it
-} else if (playBtn.getAttribute('class') === 'playing') {
+  } else if (playBtn.getAttribute("class") === "playing") {
     audioElement.pause();
-    playBtn.setAttribute('class', 'paused');
-    playBtn.textContent = 'Play';
+    playBtn.setAttribute("class", "paused");
+    playBtn.textContent = "Play";
   }
 });
 
 // if track ends
-audioElement.addEventListener('ended', () => {
-  playBtn.setAttribute('class', 'paused');
-  playBtn.textContent = 'Play'
+audioElement.addEventListener("ended", () => {
+  playBtn.setAttribute("class", "paused");
+  playBtn.textContent = "Play";
 });
 ```
 
