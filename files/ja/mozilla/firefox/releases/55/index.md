@@ -39,7 +39,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 ### JavaScript
 
-- {{jsxref("SharedArrayBuffer")}} および {{jsxref("Atomics")}} オブジェクトをデフォルトで有効化しました。JavaScript の Shared Memory と Atomics の入門として、[A Taste of JavaScript’s New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) をご覧ください。
+- {{jsxref("SharedArrayBuffer")}} および {{jsxref("Atomics")}} オブジェクトをデフォルトで有効化しました。JavaScript の Shared Memory と Atomics の入門として、[A Taste of JavaScript's New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) をご覧ください。
 - [object destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) で rest operator (`...`) をサポートしました。また、spread operator (`...`) が [オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax#オブジェクトリテラルでのスプレッド構文) で動作するようになりました (Stage 3 ECMAScript proposal: [Object Rest/Spread Properties](https://github.com/tc39/proposal-object-rest-spread)。 [Firefox バグ 1339395](https://bugzil.la/1339395))。
 - [非同期ジェネレーターメソッド](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions#非同期ジェネレーターメソッド) をサポートしました ([Firefox バグ 1353693](https://bugzil.la/1353693))。
 - {{jsxref("String.prototype.toLocaleLowerCase()")}} および {{jsxref("String.prototype.toLocaleUpperCase()")}} メソッドで、ロケール固有の大文字・小文字の対応を言語タグで指定するための、省略可能な引数 `locale` をサポートしました ([Firefox バグ 1318403](https://bugzil.la/1318403))。

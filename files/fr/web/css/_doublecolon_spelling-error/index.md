@@ -1,11 +1,6 @@
 ---
 title: '::spelling-error'
 slug: Web/CSS/::spelling-error
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::spelling-error
 ---
 

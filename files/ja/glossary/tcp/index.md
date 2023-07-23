@@ -9,14 +9,14 @@ TCP の役割は、パケットがエラーなく信頼性高く配信される�
 
 1. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("IPv4")}}
-    2. {{Glossary("IPv6")}}
-    3. {{Glossary("Packet", "パケット")}}
+   1. {{Glossary("IPv4")}}
+   2. {{Glossary("IPv6")}}
+   3. {{Glossary("Packet", "パケット")}}
 
 2. Wikipedia の記事
 
-    1. [Transmission Control Protocol](https://ja.wikipedia.org/wiki/Transmission_Control_Protocol)
+   1. [Transmission Control Protocol](https://ja.wikipedia.org/wiki/Transmission_Control_Protocol)
 
 3. 関連情報
 
-    1. [HTTP の概要](/ja/docs/Web/HTTP/Overview)
+   1. [HTTP の概要](/ja/docs/Web/HTTP/Overview)

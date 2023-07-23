@@ -1,16 +1,6 @@
 ---
 title: downloads.resume()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/resume
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - resume
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/resume
 ---
 
@@ -24,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var resuming = browser.downloads.resume(
-  downloadId      // integer
-)
+  downloadId, // integer
+);
 ```
 
 ### Paramètres

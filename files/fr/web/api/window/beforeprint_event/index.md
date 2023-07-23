@@ -1,11 +1,7 @@
 ---
 title: beforeprint
 slug: Web/API/Window/beforeprint_event
-tags:
-  - Evènement
-  - Reference
 translation_of: Web/API/Window/beforeprint_event
-original_slug: Web/Events/beforeprint
 ---
 
 L'événement **`beforeprint`** est déclenché lorsque le document associé est sur le point d'être imprimé ou qu'un "aperçu avant impression" est lancé.

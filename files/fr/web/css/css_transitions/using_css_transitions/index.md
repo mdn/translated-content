@@ -1,13 +1,7 @@
 ---
 title: Utiliser les transitions CSS
-slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-tags:
-  - Avancé
-  - CSS
-  - Guide
-  - Transitions
+slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
-original_slug: Web/CSS/CSS_Transitions/Utiliser_transitions_CSS
 ---
 
 {{CSSref}}

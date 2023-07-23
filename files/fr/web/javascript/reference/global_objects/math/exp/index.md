@@ -1,13 +1,7 @@
 ---
 title: Math.exp()
 slug: Web/JavaScript/Reference/Global_Objects/Math/exp
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/exp
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/exp
 ---
 
 {{JSRef}}

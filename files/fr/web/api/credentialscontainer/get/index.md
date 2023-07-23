@@ -1,14 +1,6 @@
 ---
 title: CredentialsContainer.get()
 slug: Web/API/CredentialsContainer/get
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Méthode
-  - Reference
-  - Web Authentication API
-  - WebAuthn
 translation_of: Web/API/CredentialsContainer/get
 ---
 

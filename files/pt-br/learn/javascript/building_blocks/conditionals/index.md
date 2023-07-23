@@ -14,7 +14,7 @@ Em qualquer linguagem de programação, o código precisa tomar decisões e real
       <th scope="row">Pré-requisitos:</th>
       <td>
         Conhecimento básico de algoritmos, um entendimento básico de HTML e CSS,
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript </a
+        <a href="/pt-BR/docs/Learn/JavaScript/First_steps">JavaScript </a
         >primeiros passos.
       </td>
     </tr>
@@ -35,7 +35,7 @@ As declarações condicionais nos permitem representar tomadas de decisão como 
 
 ## Declarações if ... else
 
-De longe o tipo mais comum de declaração condicional que você usará em JavaScript — as modestas declarações [`if ... else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else).
+De longe o tipo mais comum de declaração condicional que você usará em JavaScript — as modestas declarações [`if ... else`](/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else).
 
 ### Sintaxe básica if ... else
 

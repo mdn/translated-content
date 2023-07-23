@@ -2,7 +2,6 @@
 title: WorkerGlobalScope.ononline
 slug: Web/API/WorkerGlobalScope/online_event
 translation_of: Web/API/WorkerGlobalScope/ononline
-original_slug: Web/API/WorkerGlobalScope/ononline
 ---
 
 {{APIRef("Web Workers API")}}

@@ -1,16 +1,7 @@
 ---
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/@@iterator
 ---
 
 {{JSRef}}

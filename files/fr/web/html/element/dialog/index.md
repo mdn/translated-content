@@ -1,16 +1,7 @@
 ---
 title: '<dialog> : l''élément de boîte de dialogue'
 slug: Web/HTML/Element/dialog
-tags:
-  - Dialog
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - polyfill
 translation_of: Web/HTML/Element/dialog
-browser-compat: html.elements.dialog
 ---
 
 {{HTMLSidebar}}

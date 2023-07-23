@@ -1,12 +1,6 @@
 ---
 title: IDBObjectStore.index()
 slug: Web/API/IDBObjectStore/index
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBObjectStore/index
 ---
 

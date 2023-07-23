@@ -1,17 +1,6 @@
 ---
 title: idle.queryState()
 slug: Mozilla/Add-ons/WebExtensions/API/idle/queryState
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Idle
-  - Inactif
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - queryState
 translation_of: Mozilla/Add-ons/WebExtensions/API/idle/queryState
 ---
 
@@ -25,8 +14,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var querying = browser.idle.queryState(
-  detectionIntervalInSeconds // integer
-)
+  detectionIntervalInSeconds, // integer
+);
 ```
 
 ### Paramètres
@@ -44,14 +33,14 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Dans cet extrait simple, nous appelons `queryState()` et vérifions si le `newState` est `inactif` ou `active`, en enregistrant un message selon le cas. Comme nous avons spécifié une valeur de `detectionIntervalInSeconds` de 15, un état `inactif`  ne sera signalé que s'il n'y a pas eu d'activité de l'utilisateur depuis au moins 15 secondes
+Dans cet extrait simple, nous appelons `queryState()` et vérifions si le `newState` est `inactif` ou `active`, en enregistrant un message selon le cas. Comme nous avons spécifié une valeur de `detectionIntervalInSeconds` de 15, un état `inactif` ne sera signalé que s'il n'y a pas eu d'activité de l'utilisateur depuis au moins 15 secondes
 
 ```js
 function onGot(newState) {
-  if (newState === 'idle') {
-    console.log('Please come back — we miss you!');
-  } else if (newState === 'active') {
-    console.log('Glad to still have you with us!');
+  if (newState === "idle") {
+    console.log("Please come back — we miss you!");
+  } else if (newState === "active") {
+    console.log("Glad to still have you with us!");
   }
 }
 

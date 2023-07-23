@@ -152,7 +152,7 @@ function refresh() {
 }
 ```
 
-Enfin, la méthode `addEventListener()` est utilisée pour commencer à écouter les événements [`keydown`](/fr/docs/Web/API/Element/keydown_event), en mettant à jour chaque touche en mettant à jour la position et l’angle de rotation du vaisseau, puis en appelant la méthode `refresh()` pour tracer le navire dans sa nouvelle position et son nouvel angle.
+Enfin, la méthode `addEventListener()` est utilisée pour commencer à écouter les événements [`keydown`](/fr/docs/Web/API/Element/keydown_event), en mettant à jour chaque touche en mettant à jour la position et l'angle de rotation du vaisseau, puis en appelant la méthode `refresh()` pour tracer le navire dans sa nouvelle position et son nouvel angle.
 
 ```js
 window.addEventListener("keydown", function(event) {

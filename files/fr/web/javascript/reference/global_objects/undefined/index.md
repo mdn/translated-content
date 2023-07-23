@@ -2,8 +2,6 @@
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
 translation_of: Web/JavaScript/Reference/Global_Objects/undefined
-original_slug: Web/JavaScript/Reference/Objets_globaux/undefined
-browser-compat: javascript.builtins.undefined
 ---
 
 {{jsSidebar("Objects")}}

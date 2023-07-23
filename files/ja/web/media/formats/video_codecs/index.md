@@ -988,24 +988,31 @@ HEVCは独占的な形式で、多くの特許で保護されています。ラ�
             </tr>
             <tr>
               <th scope="row">HEVC / H.265 対応</th>
-              <td>なし</td>
+              <td>107</td>
               <td>18</td>
               <td>なし</td>
               <td>11</td>
-              <td>なし</td>
+              <td>94</td>
               <td>11</td>
             </tr>
           </tbody>
         </table>
-        <p>
-          Internet Explorer、Chrome、Edge は、ハードウェアコーデックを搭載した機器でのみ HEVC に対応しています。
+        <p>Chrome は、ハードウェアコーデックを備えた Windows 8 以降、Linux、ChromeOS デバイス、およびすべての macOS Big Sur+ および Android 5.0 以降のデバイスで HEVC をサポートします。 </p>
+        <p>Edge (Chromium) は、ハードウェアコーデックを備えた Windows 10 1709 以降の端末で、<a href="https://apps.microsoft.com/store/detail/hevc-video-extension/9NMZLZ57R3T7">Microsoft Store から HEVC 動画拡張機能</a>をインストールした場合に対応します。他のプラットフォームにおける Chrome と同様の対応状況となります。Edge（レガシー）は、ハードウェアデコーダーのある端末でのみ HEVC に対応しています。
         </p>
-        <p>Mozilla は、特許に邪魔されている間は、 HEVC に対応しない予定です。</p>
+        <p>HEVC は特許で保護されているため、Mozilla は HEVC をサポートしません。</p>
+        <p>Internet Explorer は、ハードウェアデコーダーを備えた端末でのみ HEVC に対応します。</p>
+        <p>Opera およびその他の Chromium ベースのブラウザーは、Chrome と同じ対応状況です。</p>
+        <p>Safari は、macOS High Sierra 以降のすべての端末で HEVC に対応しています。</p>
       </td>
     </tr>
     <tr>
       <th scope="row">コンテナーの対応</th>
-      <td><a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a></td>
+      <td>
+        <a href="https://en.wikipedia.org/wiki/ISO/IEC_base_media_file_format"
+            >ISOBMFF</a
+          >、MPEG-TS、<a href="/ja/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>、<a href="/ja/docs/Web/Media/Formats/Containers#quicktime">QuickTime</a>
+      </td>
     </tr>
     <tr>
       <th scope="row">
@@ -1936,18 +1943,18 @@ let recorder = new MediaRecorder(sourceStream, options);
 
 `codecs` 引数の値をドットで区切られたプロパティに分解すると、以下のようになります。
 
-| 値  | 説明                                                                                                                                                                                                                                                                              |
-| ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `av01` | 4 文字のコード (4CC) の指定で、 [AV1](#av1) コーデックを識別する。                                                                                                                                                                                                             |
-| `2`    | プロファイルを示します。値 2 は Professional プロファイルを示します。値 1 は High プロファイル、値 0 は Main プロファイルを指定します。                                                                                                                                       |
+| 値     | 説明                                                                                                                                                                                                                                                  |
+| ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `av01` | 4 文字のコード (4CC) の指定で、 [AV1](#av1) コーデックを識別する。                                                                                                                                                                                    |
+| `2`    | プロファイルを示します。値 2 は Professional プロファイルを示します。値 1 は High プロファイル、値 0 は Main プロファイルを指定します。                                                                                                               |
 | `19H`  | レベルと階層です。この値は AV1 仕様書の [A.3](https://aomediacodec.github.io/av1-spec/#levels) 節の表からきており、レベル 6.3 の高次の階層を示します。                                                                                                |
 | `12`   | 色深度。 1 成分あたり 12 ビットを示します。他に使用可能な値は 8 と 10 ですが、 AV1 では 12 が最も精度の高い色表現となります。                                                                                                                         |
-| `0`    | モノクロモードフラグ。 1 の場合、クロマプレーンは記録されず、すべてのデータは厳密にルマデータとなり、グレイスケールの画像となります。ここでは色をつけたいので 0 を指定します。                                                                                             |
+| `0`    | モノクロモードフラグ。 1 の場合、クロマプレーンは記録されず、すべてのデータは厳密にルマデータとなり、グレイスケールの画像となります。ここでは色をつけたいので 0 を指定します。                                                                        |
 | `000`  | AV1 仕様書の [6.4.2 節](https://aomediacodec.github.io/av1-spec/#color-config-semantics)からきたクロマサブサンプリングモード。値 000 は、モノクロモード値 0 と組み合わせて、 4:4:4 クロマサブサンプリング、または色データの損失がないことを示します。 |
-| `09`   | 使用する色のプライマリー。この値は AV1 仕様書の [6.4.2 節](https://aomediacodec.github.io/av1-spec/#color-config-semantics)で定められています。 9 は、 HDR に使用される BT.2020 色を使用したいことを示します。                                                       |
-| `16`   | 使用する撮像素子特性。同様に [6.4.2 節](https://aomediacodec.github.io/av1-spec/#color-config-semantics)で定められています。 16 は、 BT.2100 PQ 色の特性を使用することを示します。                                                                |
-| `09`   | これも [6.4.2 節](https://aomediacodec.github.io/av1-spec/#color-config-semantics)にある、使用する行列係数。値 9 は、可変輝度の BT.2020 を使用することを指定します。これは、 BT.2010 YbCbCr としても有益なものです。                                       |
-| `1`    | 動画の「フルレンジ」フラグ。 1 の値は、全色範囲を使用することを示す。                                                                                                                                                                                        |
+| `09`   | 使用する色のプライマリー。この値は AV1 仕様書の [6.4.2 節](https://aomediacodec.github.io/av1-spec/#color-config-semantics)で定められています。 9 は、 HDR に使用される BT.2020 色を使用したいことを示します。                                        |
+| `16`   | 使用する撮像素子特性。同様に [6.4.2 節](https://aomediacodec.github.io/av1-spec/#color-config-semantics)で定められています。 16 は、 BT.2100 PQ 色の特性を使用することを示します。                                                                    |
+| `09`   | これも [6.4.2 節](https://aomediacodec.github.io/av1-spec/#color-config-semantics)にある、使用する行列係数。値 9 は、可変輝度の BT.2020 を使用することを指定します。これは、 BT.2010 YbCbCr としても有益なものです。                                  |
+| `1`    | 動画の「フルレンジ」フラグ。 1 の値は、全色範囲を使用することを示す。                                                                                                                                                                                 |
 
 コーデック選択のための文書は、おそらく `codecs` 引数を作成するときに使用する情報を提供してくれるでしょう。
 

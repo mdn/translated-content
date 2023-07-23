@@ -11,7 +11,7 @@ slug: Web/EXSLT/exsl/object-type
 
 ## Syntaxe
 
-```js
+```plain
 exsl:object-type(object)
 ```
 

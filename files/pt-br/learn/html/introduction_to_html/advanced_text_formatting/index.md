@@ -160,7 +160,7 @@ Quotation Element</em>) indicates that the enclosed text is an extended quotatio
 Para transformar isso em uma citação em bloco, faríamos assim:
 
 ```html
-<blockquote cite="/en-US/docs/Web/HTML/Element/blockquote">
+<blockquote cite="/pt-BR/docs/Web/HTML/Element/blockquote">
   <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
   Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
 </blockquote>
@@ -175,7 +175,7 @@ O estilo padrão do navegador renderiza isso como um parágrafo recuado, como um
 As citações embutidas funcionam exatamente da mesma maneira, exceto pelo uso do elemento {{htmlelement("q")}}. Por exemplo, o bit de marcação abaixo contém uma citação da página MDN \<q>:
 
 ```html
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="/en-US/docs/Web/HTML/Element/q">intended
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="/pt-BR/docs/Web/HTML/Element/q">intended
 for short quotations that don't require paragraph breaks.</q></p>
 ```
 
@@ -185,20 +185,20 @@ O elemento de citação — `<q>` — é "destinado a citações curtas que não
 
 ### Citações
 
-O conteúdo do atributo {{htmlattrxref("cite","blockquote")}} parece útil, mas, infelizmente, navegadores, leitores de tela etc. não fazem muito uso dele. Não há como fazer com que o navegador exiba o conteúdo de `cite`, sem escrever sua própria solução usando JavaScript ou CSS. Se você deseja disponibilizar a fonte da citação na página, uma maneira melhor de marcá-la é colocar o elemento {{htmlelement("cite")}} próximo ao elemento quote. Isso realmente tem o objetivo de conter o nome da fonte da citação — ou seja, o nome do livro ou o nome da pessoa que disse a citação — mas não há razão para que você não possa vincular o texto dentro de `<cite>` à citação fonte de alguma forma:
+O conteúdo do atributo [`cite`](/pt-BR/docs/Web/HTML/Element/blockquote#cite) parece útil, mas, infelizmente, navegadores, leitores de tela etc. não fazem muito uso dele. Não há como fazer com que o navegador exiba o conteúdo de `cite`, sem escrever sua própria solução usando JavaScript ou CSS. Se você deseja disponibilizar a fonte da citação na página, uma maneira melhor de marcá-la é colocar o elemento {{htmlelement("cite")}} próximo ao elemento quote. Isso realmente tem o objetivo de conter o nome da fonte da citação — ou seja, o nome do livro ou o nome da pessoa que disse a citação — mas não há razão para que você não possa vincular o texto dentro de `<cite>` à citação fonte de alguma forma:
 
 ```html
-<p>According to the <a href="/en-US/docs/Web/HTML/Element/blockquote">
+<p>According to the <a href="/pt-BR/docs/Web/HTML/Element/blockquote">
 <cite>MDN blockquote page</cite></a>:
 </p>
 
-<blockquote cite="/en-US/docs/Web/HTML/Element/blockquote">
+<blockquote cite="/pt-BR/docs/Web/HTML/Element/blockquote">
   <p>The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or <em>HTML Block
   Quotation Element</em>) indicates that the enclosed text is an extended quotation.</p>
 </blockquote>
 
-<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="/en-US/docs/Web/HTML/Element/q">intended
-for short quotations that don't require paragraph breaks.</q> -- <a href="/en-US/docs/Web/HTML/Element/q">
+<p>The quote element — <code>&lt;q&gt;</code> — is <q cite="/pt-BR/docs/Web/HTML/Element/q">intended
+for short quotations that don't require paragraph breaks.</q> -- <a href="/pt-BR/docs/Web/HTML/Element/q">
 <cite>MDN q page</cite></a>.</p>
 ```
 
@@ -279,7 +279,7 @@ window.addEventListener("load", drawOutput);
 
 ## Abreviações
 
-Outro elemento bastante comum que você encontrará ao olhar na Web é o {{htmlelement("abbr")}} — usado para contornar uma abreviação ou sigla e fornecer uma expansão completa do termo (incluído em um atributo {{htmlattrxref("title")}}.) Vejamos alguns exemplos
+Outro elemento bastante comum que você encontrará ao olhar na Web é o {{htmlelement("abbr")}} — usado para contornar uma abreviação ou sigla e fornecer uma expansão completa do termo (incluído em um atributo [`title`](/pt-BR/docs/Web/HTML/Global_attributes#title).) Vejamos alguns exemplos
 
 ```
 <p>Usamos <abbr title="Hypertext Markup Language">HTML</abbr> para estruturar nossos documentos da web.</p>

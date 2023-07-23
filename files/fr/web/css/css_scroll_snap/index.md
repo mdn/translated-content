@@ -1,11 +1,6 @@
 ---
 title: CSS Scroll Snap
-slug: Web/CSS/CSS_Scroll_Snap
-tags:
-  - CSS
-  - CSS Scroll Snap
-  - Reference
-  - Vue d'ensemble
+slug: Web/CSS/CSS_scroll_snap
 translation_of: Web/CSS/CSS_Scroll_Snap
 ---
 

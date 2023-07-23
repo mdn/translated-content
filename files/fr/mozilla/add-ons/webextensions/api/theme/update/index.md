@@ -1,15 +1,6 @@
 ---
 title: update
 slug: Mozilla/Add-ons/WebExtensions/API/theme/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Refernce
-  - Theme
-  - Update
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/update
 ---
 
@@ -21,9 +12,9 @@ Met à jour le thème du navigateur en fonction du contenu de l'objet {{WebExtAP
 
 ```js
 browser.theme.update(
-  windowId,    // integer
-  theme        // object
-)
+  windowId, // integer
+  theme, // object
+);
 ```
 
 ### Paramètres
@@ -46,13 +37,13 @@ Définit le thème du navigateur pour utiliser un graphique solaire avec une cou
 
 ```js
 const suntheme = {
- images: {
-   headerURL: 'sun.jpg',
- },
- colors: {
-   accentcolor: '#CF723F',
-   textcolor: '#111',
- }
+  images: {
+    headerURL: "sun.jpg",
+  },
+  colors: {
+    accentcolor: "#CF723F",
+    textcolor: "#111",
+  },
 };
 
 browser.theme.update(suntheme);
@@ -62,19 +53,19 @@ Définissez le thème uniquement pour la fenêtre actuellement ciblée:
 
 ```js
 const day = {
-    images: {
-      headerURL: 'sun.jpg',
-    },
-    colors: {
-      accentcolor: '#CF723F',
-      textcolor: '#111',
-    }
+  images: {
+    headerURL: "sun.jpg",
+  },
+  colors: {
+    accentcolor: "#CF723F",
+    textcolor: "#111",
+  },
 };
 
 browser.menus.create({
   id: "set-theme",
   title: "set theme",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 async function updateThemeForCurrentWindow() {

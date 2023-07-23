@@ -1,13 +1,7 @@
 ---
 title: Définir des termes avec HTML
 slug: Learn/HTML/Howto/Define_terms_with_HTML
-tags:
-  - Beginner
-  - Guide
-  - HTML
-  - Learn
 translation_of: Learn/HTML/Howto/Define_terms_with_HTML
-original_slug: Apprendre/HTML/Comment/Définir_des_termes_avec_HTML
 ---
 
 HTML fournit plusieurs méthodes pour décrire la sémantique du contenu qu'on emploie (que ce soit intégré dans le texte ou dans un glossaire à part). Dans cet article, nous verrons comment correctement définir les termes utilisés au sein d'un document.
@@ -52,7 +46,10 @@ Dans certains manuels, à la première occurence d'un terme, celui-ci est placé
 On peut procéder de cette façon avec HTML. En revanche, HTML ne gère pas l'aspect visuel d'un document, uniquement son contenu. On utilisera l'élément {{htmlelement("dfn")}} qui permet d'identifier la première occurence d'un terme. Attention, `<dfn>` enveloppe le terme à définir et pas sa définition (qui elle s'étend sur le paragraphe courant) :
 
 ```html
-<p><dfn>Firefox</dfn> est le navigateur créé et développé par la Fondation Mozilla.</p>
+<p>
+  <dfn>Firefox</dfn> est le navigateur créé et développé par la Fondation
+  Mozilla.
+</p>
 ```
 
 > **Note :** On utilise également parfois le gras pour mettre en avant du contenu. Le gras, en tant que tel, est un concept qui n'appartient pas à HTML mais à la mise en forme. En revanche, pour mettre en avant (utiliser une emphase), il existe [des éléments HTML tout indiqués](/fr/Apprendre/HTML/Howto/Emphasize_content_or_indicate_that_text_is_important).
@@ -64,7 +61,8 @@ En ce qui concerne les abréviations, il est préférable [de les identifier sé
 ```html
 <p>
   <dfn><abbr>HTML</abbr> (hypertext markup language)</dfn>
-   est un langage de description utilisé pour structurer des documents sur le Web.
+  est un langage de description utilisé pour structurer des documents sur le
+  Web.
 </p>
 ```
 
@@ -80,11 +78,12 @@ En ce qui concerne les abréviations, il est préférable [de les identifier sé
     <dfn aria-describedby="ff">Firefox</dfn>
     est le navigateur web créé et développé par la Fondation Mozilla.
   </span>
-  Vous pouvez le télécharger sur <a href="http://www.mozilla.org">mozilla.org</a>
+  Vous pouvez le télécharger sur
+  <a href="http://www.mozilla.org">mozilla.org</a>
 </p>
 ```
 
-Les technologies d'assistance à la navigation pourront tirer parti de cet attribut pour fournir un texte alternatif pour un terme donné. `aria-describedby` peut être utilisé pour n'importe quelle balise contenant un mot-clé à définir (il n'est pas nécessaire que ce soit `<dfn>`). `aria-describedby` utilise un référence à l'{{htmlattrxref('id')}} de l'élément qui contient la description.
+Les technologies d'assistance à la navigation pourront tirer parti de cet attribut pour fournir un texte alternatif pour un terme donné. `aria-describedby` peut être utilisé pour n'importe quelle balise contenant un mot-clé à définir (il n'est pas nécessaire que ce soit `<dfn>`). `aria-describedby` utilise un référence à l'[`id`](/fr/docs/Web/HTML/Global_attributes#id) de l'élément qui contient la description.
 
 ## Comment construire une liste de descriptions
 
@@ -101,23 +100,19 @@ Voici un exemple simple qui dresse une liste de descriptions de plats :
 ```html
 <dl>
   <dt>jambalaya</dt>
-    <dd>
-      une entrée à base de riz qui contient généralement
-      du poulet, des saucisses, des fruits de mer et des
-      épices
-    </dd>
+  <dd>
+    une entrée à base de riz qui contient généralement du poulet, des saucisses,
+    des fruits de mer et des épices
+  </dd>
 
   <dt>sukiyaki</dt>
-    <dd>
-      une spécialité japonaise à base de fines tranches de
-      viande, de légumes, de nouilles et qui est cuite dans
-      un sauce soja et du saké
-    </dd>
+  <dd>
+    une spécialité japonaise à base de fines tranches de viande, de légumes, de
+    nouilles et qui est cuite dans un sauce soja et du saké
+  </dd>
 
   <dt>chianti</dt>
-    <dd>
-      un vin italien, sec, originaire de Toscane
-    </dd>
+  <dd>un vin italien, sec, originaire de Toscane</dd>
 </dl>
 ```
 

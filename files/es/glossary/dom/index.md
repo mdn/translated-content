@@ -9,7 +9,7 @@ El DOM es una de las APIs más usadas en la [Web](/es/docs/Glossary/World_Wide_W
 
 El DOM surgió a partir de la implementación de [JavaScript](/es/docs/Glossary/JavaScript) en los navegadores. A esta primera versión también se la conoce como DOM 0 o "Legacy DOM". Hoy en día el grupo WHATWG es el encargado de actualizar el estándar de DOM.
 
-## Para saber más...
+## Para saber más
 
 ### Cultura General
 

@@ -1,13 +1,6 @@
 ---
 title: Affectation après soustraction (-=)
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.subtraction_assignment
 ---
 
 {{jsSidebar("Operators")}}

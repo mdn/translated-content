@@ -2,7 +2,6 @@
 title: minmax()
 slug: Web/CSS/minmax
 translation_of: Web/CSS/minmax()
-original_slug: Web/CSS/minmax()
 ---
 
 {{CSSRef}}

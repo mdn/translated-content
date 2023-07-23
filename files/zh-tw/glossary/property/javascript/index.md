@@ -3,6 +3,8 @@ title: Property (JavaScript)
 slug: Glossary/Property/JavaScript
 ---
 
+{{GlossarySidebar}}
+
 **property**（屬性）是典型的物件特徵，經常與資料結構聯結。屬性分為兩種類型：
 
 - _實體屬性（Instance properties）_：保存的資料只於特定的物件實體中。

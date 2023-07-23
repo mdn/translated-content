@@ -1,12 +1,7 @@
 ---
 title: Node.js
 slug: Glossary/Node.js
-tags:
-  - Glossaire
-  - Infrastructure
-  - JavaScript
 translation_of: Glossary/Node.js
-original_slug: Glossaire/Node.js
 ---
 
 Node.js est un environnement {{Glossary("JavaScript")}} multiplateforme qui permet aux développeurs de créer des applications réseaux et côté serveur en utilisant JavaScript.

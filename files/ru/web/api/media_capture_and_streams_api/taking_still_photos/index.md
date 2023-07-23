@@ -116,13 +116,13 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 
 Успешное выполнение промиса передаёт объект потока( `stream` ) в качестве параметра функции метода `then()`., который присваивается свойству `srcObject` элемента {{HTMLElement("video")}}, направляя поток в него.
 
-Как только поток связан с элементом `<video>` , запускаем его воспроизведение, вызовом метода [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play).
+Как только поток связан с элементом `<video>` , запускаем его воспроизведение, вызовом метода [`HTMLMediaElement.play()`](/ru/docs/Web/API/HTMLMediaElement#play).
 
 Метод обработки ошибки промиса вызывается в случае, если получение потока окажется неудачным, к примеру, когда к устройству подключена несовместимая камера, или пользователь запретил к ней доступ.
 
 #### Обработка события начала воспроизведения
 
-После момента вызова метода [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play) на элементе {{HTMLElement("video")}}, возникает промежуток времени до начала воспроизведения видеопотока. Для недопущения блокирования интерфейса пользователя в это промежуток, нужно установить обработчик события {{event("canplay")}} элемента `video` , который сработает, когда элемент начнёт воспроизведение видеопотока. В этот момент все свойства элемента `video` конфигурируются на основе формата потока.
+После момента вызова метода [`HTMLMediaElement.play()`](/ru/docs/Web/API/HTMLMediaElement#play) на элементе {{HTMLElement("video")}}, возникает промежуток времени до начала воспроизведения видеопотока. Для недопущения блокирования интерфейса пользователя в это промежуток, нужно установить обработчик события {{event("canplay")}} элемента `video` , который сработает, когда элемент начнёт воспроизведение видеопотока. В этот момент все свойства элемента `video` конфигурируются на основе формата потока.
 
 ```
     video.addEventListener('canplay', function(ev){
@@ -232,5 +232,5 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 - [Пробуем пример](https://mdn-samples.mozilla.org/s/webrtc-capturestill)
 - [Примеры на Github](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
 - {{domxref("Navigator.mediaDevices.getUserMedia()")}}
-- {{SectionOnPage("/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images","Использование изображений")}}
+- {{SectionOnPage("/ru/docs/Web/API/Canvas_API/Tutorial/Using_images","Использование изображений")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

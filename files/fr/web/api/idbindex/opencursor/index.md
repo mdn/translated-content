@@ -1,13 +1,6 @@
 ---
 title: IDBIndex.openCursor()
 slug: Web/API/IDBIndex/openCursor
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Méthode
-  - Reference
-  - openCursor
 translation_of: Web/API/IDBIndex/openCursor
 ---
 

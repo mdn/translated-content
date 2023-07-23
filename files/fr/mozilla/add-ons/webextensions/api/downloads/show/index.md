@@ -1,16 +1,6 @@
 ---
 title: downloads.show()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/show
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - show
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/show
 ---
 
@@ -24,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var showing = browser.downloads.show(
-  downloadId             // integer
-)
+  downloadId, // integer
+);
 ```
 
 ### Paramètes
@@ -55,16 +45,16 @@ function onError(error) {
 }
 
 function openDownload(downloadItems) {
-    if (downloadItems.length > 0) {
-      latestDownloadId = downloadItems[0].id;
-      var showing = browser.downloads.show(latestDownloadId);
-      showing.then(onShowing, onError);
-    }
+  if (downloadItems.length > 0) {
+    latestDownloadId = downloadItems[0].id;
+    var showing = browser.downloads.show(latestDownloadId);
+    showing.then(onShowing, onError);
   }
+}
 
 var searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(openDownload, onError);

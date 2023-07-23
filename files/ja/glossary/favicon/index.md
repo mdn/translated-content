@@ -12,5 +12,5 @@ slug: Glossary/Favicon
 1. Wikipedia 上の [Favicon](https://ja.wikipedia.org/wiki/Favicon)
 2. ツール
 
-    1. [Free favicon generator](https://favicon.io/)
-    2. [Favicon.ico and & app icon generator](https://www.favicon-generator.org/)
+   1. [Free favicon generator](https://favicon.io/)
+   2. [Favicon.ico and & app icon generator](https://www.favicon-generator.org/)

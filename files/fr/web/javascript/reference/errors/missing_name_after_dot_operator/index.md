@@ -1,12 +1,7 @@
 ---
 title: 'SyntaxError: missing name after . operator'
 slug: Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Missing_name_after_dot_operator
-original_slug: Web/JavaScript/Reference/Erreurs/Missing_name_after_dot_operator
 ---
 
 {{jsSidebar("Errors")}}

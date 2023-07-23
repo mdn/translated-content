@@ -34,7 +34,7 @@ slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 
 回到我们的[样式化文本](/zh-CN/docs/Learn/CSS/Styling_text)模块，我们查看了{{cssxref("text-shadow")}}属性，它允许您将一个或多个阴影应用到元素的文本上。对于盒子来说，存在一个等价的属性——{{cssxref("box-shadow")}}允许您将一个或多个阴影应用到一个实际的元素盒子中。和文本阴影一样，盒子的阴影在各种浏览器中也得到了很好的支持，但只有在 IE9+（IE9 及更新版本）中可用。你的旧 IE 版本的用户可能只需要应付没有阴影的情况，所以只要测试一下你的设计，确保你的内容在没有他们的情况下是清晰可见的。
 
-你可以 [box-shadow.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html)在这部分找到例子 (见[源码](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html))。
+你可以 [box-shadow.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html)在这部分找到例子 (见[源码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/box-shadow.html))。
 
 ### 一个简单的盒子阴影
 
@@ -42,7 +42,10 @@ slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 
 ```html
 <article class="simple">
-  <p><strong>Warning</strong>: The thermostat on the cosmic transcender has reached a critical level.</p>
+  <p>
+    <strong>Warning</strong>: The thermostat on the cosmic transcender has
+    reached a critical level.
+  </p>
 </article>
 ```
 
@@ -57,11 +60,15 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 .simple {
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 ```
 
@@ -84,7 +91,10 @@ article {
 
 ```html hidden
 <article class="multiple">
-  <p><strong>Warning</strong>: The thermostat on the cosmic transcender has reached a critical level.</p>
+  <p>
+    <strong>Warning</strong>: The thermostat on the cosmic transcender has
+    reached a critical level.
+  </p>
 </article>
 ```
 
@@ -97,16 +107,21 @@ article {
   max-width: 500px;
   padding: 10px;
   background-color: red;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.25)
+  );
 }
 
 .multiple {
-  box-shadow: 1px 1px 1px black,
-              2px 2px 1px black,
-              3px 3px 1px red,
-              4px 4px 1px red,
-              5px 5px 1px black,
-              6px 6px 1px black;
+  box-shadow:
+    1px 1px 1px black,
+    2px 2px 1px black,
+    3px 3px 1px red,
+    4px 4px 1px red,
+    5px 5px 1px black,
+    6px 6px 1px black;
 }
 ```
 
@@ -134,19 +149,22 @@ button {
   border-radius: 10px;
   border: none;
   background-image: linear-gradient(to bottom right, #777, #ddd);
-  box-shadow: 1px 1px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow:
+    1px 1px 1px black,
+    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 
-button:focus, button:hover {
+button:focus,
+button:hover {
   background-image: linear-gradient(to bottom right, #888, #eee);
 }
 
 button:active {
-  box-shadow: inset 2px 2px 1px black,
-              inset 2px 3px 5px rgba(0,0,0,0.3),
-              inset -2px -3px 5px rgba(255,255,255,0.5);
+  box-shadow:
+    inset 2px 2px 1px black,
+    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
+    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
 }
 ```
 
@@ -185,12 +203,12 @@ p {
 }
 
 .filter {
-  -webkit-filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
-  filter: drop-shadow(5px 5px 1px rgba(0,0,0,0.7));
+  -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
+  filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
 }
 
 .box-shadow {
-  box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.7);
 }
 ```
 
@@ -207,7 +225,7 @@ p {
 
 > **备注：** 如果你确实决定在你的代码中使用前缀，确保你包括了所有需要的前缀以及无前缀的版本，这样才会有尽可能多的浏览器能够使用这些特性，并且如果浏览器落下了前缀，它们也能够使用无前缀的版本。另外需要注意的是这些实验性的特性可能会有改变，这可能会导致你的代码被破坏，在前缀被去除之前，最好还是仅仅实验这些特性。
 
-你可以看到更多关于滤镜的例子，在 [filters.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html) (也可以看 [source code](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/filters.html)).
+你可以看到更多关于滤镜的例子，在 [filters.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html) (也可以看 [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/filters.html)).
 
 ## Blend modes（混合模式）
 
@@ -218,7 +236,7 @@ CSS 混合模式允许我们为元素添加一个混合模式，以当两个元�
 - {{cssxref("background-blend-mode")}}, 用来将单个元素的多重背景图片和背景颜色设置混合在一起。
 - {{cssxref("mix-blend-mode")}}, 用来将一个元素与它覆盖的那些元素各自所设置的背景（background）和内容 (content) 混合在一起。
 
-你可以找到比这里用到的更多的例子，在我们的[blend-modes.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) 示例页面 (查看 [source code](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html)), 或者在 {{cssxref("&lt;blend-mode&gt;")}} 参考页面。
+你可以找到比这里用到的更多的例子，在我们的[blend-modes.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) 示例页面 (查看 [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/blend-modes.html)), 或者在 {{cssxref("&lt;blend-mode&gt;")}} 参考页面。
 
 > **备注：** 混合模式（Blend modes）同样也很新，而且略微不如滤镜（filter）的被支持度。至今也没有没 Edge 支持，并且 Safari 也仅仅支持部分混合模式选项。
 
@@ -227,10 +245,8 @@ CSS 混合模式允许我们为元素添加一个混合模式，以当两个元�
 让我们再来看一些例子以帮助我们更好的理解这一点。首先，{{cssxref("background-blend-mode")}}——在这里我们将展示一对简单的{{htmlelement("div")}}s，这样你就可以比较原始版本和混合版本：
 
 ```html
-<div>
-</div>
-<div class="multiply">
-</div>
+<div></div>
+<div class="multiply"></div>
 ```
 
 现在来点 CSS — 我们正在给`<div>`添加一个背景图像和一个绿色的背景色：
@@ -262,20 +278,14 @@ div {
 ```html
 <article>
   No mix blend mode
-  <div>
-
-  </div>
-  <div>
-  </div>
+  <div></div>
+  <div></div>
 </article>
 
 <article>
   Multiply mix
-  <div class="multiply-mix">
-
-  </div>
-  <div>
-  </div>
+  <div class="multiply-mix"></div>
+  <div></div>
 </article>
 ```
 
@@ -341,7 +351,7 @@ article div:last-child {
 
 如果您确实希望在您的生产工作中使用这些特性，请确保在浏览器中进行彻底的测试，并检查这些特性不工作的地方，站点仍然可用。
 
-> **备注：** 对于一个完整的 `-webkit-background-clip: text` 代码示例，见[background-clip-text.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html)（也可以见[源码](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)）。
+> **备注：** 对于一个完整的 `-webkit-background-clip: text` 代码示例，见[background-clip-text.html](http://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html)（也可以见[源码](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/advanced_box_effects/background-clip-text.html)）。
 
 ## 自主学习：尝试一些效果
 
@@ -350,13 +360,24 @@ article div:last-child {
 如果你犯了一个错误，你可以用 _Reset_ 按钮来重置这个例子。
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>HTML Input</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><div class="style-me">
-</div></textarea>
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<div class="style-me">
+</div></textarea
+  >
 
   <h2>CSS Input</h2>
-  <textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">.style-me {
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+.style-me {
   width: 280px;
   height: 130px;
   padding: 10px;
@@ -365,12 +386,19 @@ article div:last-child {
   background-color: red;
   background: url(colorful-heart.png) no-repeat center 20px,
               linear-gradient(to bottom right, #f33, #a33);
-} </textarea>
+} </textarea
+  >
 
   <h2>Output</h2>
-  <div class="output" style="width: 90%;height: 15em;padding: 10px;border: 1px solid #0095dd;overflow:hidden;"></div>
+  <div
+    class="output"
+    style="width: 90%;height: 15em;padding: 10px;border: 1px solid #0095dd;overflow:hidden;"></div>
   <div class="controls">
-  <input id="reset" type="button" value="Reset" style="margin: 10px 10px 0 0;">
+    <input
+      id="reset"
+      type="button"
+      value="Reset"
+      style="margin: 10px 10px 0 0;" />
   </div>
 </div>
 ```
@@ -383,8 +411,8 @@ var htmlCode = htmlInput.value;
 var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
@@ -392,7 +420,7 @@ function drawOutput() {
   styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   htmlInput.value = htmlCode;
   cssInput.value = cssCode;
   drawOutput();

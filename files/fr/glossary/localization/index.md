@@ -1,13 +1,7 @@
 ---
 title: Localisation
 slug: Glossary/Localization
-tags:
-  - Glossaire
-  - Langue
-  - Localisation
-  - Paramètres régionaux
 translation_of: Glossary/Localization
-original_slug: Localization
 ---
 
 La localisation (l10n) est le processus d'adaptation d'une interface utilisateur de logiciel à une culture spécifique.
@@ -32,4 +26,4 @@ Les facteurs communs suivants sont à considérer :
 
 ## Voir aussi
 
-- [Localisation](https://fr.wikipedia.org/wiki/Localisation_(linguistique)) sur Wikipédia
+- [Localisation](<https://fr.wikipedia.org/wiki/Localisation_(linguistique)>) sur Wikipédia

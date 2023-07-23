@@ -1,12 +1,6 @@
 ---
 title: Disposition des boîtes flexibles CSS
-slug: Web/CSS/CSS_Flexible_Box_Layout
-tags:
-  - Aperçu
-  - CSS
-  - CSS Flexible Box Layout
-  - CSS Flexible Boxes
-  - Reference
+slug: Web/CSS/CSS_flexible_box_layout
 translation_of: Web/CSS/CSS_Flexible_Box_Layout
 ---
 

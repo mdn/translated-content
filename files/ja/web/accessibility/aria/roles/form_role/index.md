@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: form ロール'
+title: "ARIA: form ロール"
 slug: Web/Accessibility/ARIA/Roles/form_role
 ---
 
@@ -43,24 +43,34 @@ slug: Web/Accessibility/ARIA/Roles/form_role
 ```html
 <div role="form" id="send-comment" aria-label="コメントを追加">
   <label for="username">ユーザー名</label>
-  <input id="username" name="username" autocomplete="nickname" autocorrect="off" type="text">
+  <input
+    id="username"
+    name="username"
+    autocomplete="nickname"
+    autocorrect="off"
+    type="text" />
 
   <label for="email">電子メール</label>
-  <input id="email" name="email" autocomplete="email" autocapitalize="off" autocorrect="off" spellcheck="false" type="text">
+  <input
+    id="email"
+    name="email"
+    autocomplete="email"
+    autocapitalize="off"
+    autocorrect="off"
+    spellcheck="false"
+    type="text" />
 
   <label for="comment">コメント</label>
   <textarea id="comment" name="comment"></textarea>
 
-  <input value="コメント" type="submit">
+  <input value="コメント" type="submit" />
 </div>
 ```
 
 代わりに `<form>` を使用することをお勧めします。
 
 ```html
-<form id="send-comment" aria-label="コメントを追加">
-  ....
-</form>
+<form id="send-comment" aria-label="コメントを追加">....</form>
 ```
 
 ## アクセシビリティに関する懸念

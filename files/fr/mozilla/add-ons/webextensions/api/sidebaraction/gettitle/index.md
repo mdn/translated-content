@@ -1,15 +1,6 @@
 ---
 title: sidebarAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getTitle
-  - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
 ---
 
@@ -25,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingTitle = browser.sidebarAction.getTitle(
-  details               // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -56,9 +47,9 @@ Ce code bascule le titre entre "this" et "that" chaque fois que l'utilisateur cl
 ```js
 function toggleTitle(title) {
   if (title == "this") {
-    browser.sidebarAction.setTitle({title: "that"});
+    browser.sidebarAction.setTitle({ title: "that" });
   } else {
-    browser.sidebarAction.setTitle({title: "this"});
+    browser.sidebarAction.setTitle({ title: "this" });
   }
 }
 

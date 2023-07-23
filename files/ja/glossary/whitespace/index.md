@@ -11,22 +11,22 @@ slug: Glossary/Whitespace
 
 ## JavaScript での使い方
 
-[ECMAScript® 2015 言語仕様書](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)では、いくつかの Unicode コードポイントをホワイトスペースとして定めています。 U+0009 CHARACTER TABULATION \<TAB>, U+000B LINE TABULATION \<VT>, U+000C FORM FEED \<FF>, U+0020 SPACE \<SP>, U+00A0 NO-BREAK SPACE \<NBSP>, U+FEFF ZERO WIDTH NO-BREAK SPACE \<ZWNBSP> および その他のカテゴリ “Zs” Unicode の他の “Separator, space” コードポイント \<USP> に属するすべての文字です。これらの文字はふつう、コードの機能性には不要なものです。
+[ECMAScript® 2015 言語仕様書](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)では、いくつかの Unicode コードポイントをホワイトスペースとして定めています。 U+0009 CHARACTER TABULATION \<TAB>, U+000B LINE TABULATION \<VT>, U+000C FORM FEED \<FF>, U+0020 SPACE \<SP>, U+00A0 NO-BREAK SPACE \<NBSP>, U+FEFF ZERO WIDTH NO-BREAK SPACE \<ZWNBSP> および その他のカテゴリ "Zs" Unicode の他の "Separator, space" コードポイント \<USP> に属するすべての文字です。これらの文字はふつう、コードの機能性には不要なものです。
 
 1. 仕様書
 
-    1. [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace)
-    2. [ECMAScript® 2015 言語仕様書](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)
+   1. [ASCII whitespace](https://infra.spec.whatwg.org/#ascii-whitespace)
+   2. [ECMAScript® 2015 言語仕様書](https://www.ecma-international.org/ecma-262/6.0/#sec-white-space)
 
 2. リファレンス
 
-    1. [ホワイトスペースは HTML、 CSS、 そして DOM 内でどう扱われるか](/ja/docs/Web/API/Document_Object_Model/Whitespace)
-    2. {{cssxref("white-space")}}
+   1. [ホワイトスペースは HTML、 CSS、 そして DOM 内でどう扱われるか](/ja/docs/Web/API/Document_Object_Model/Whitespace)
+   2. {{cssxref("white-space")}}
 
 3. Wikipedia 記事
 
-    1. [Whitespace character](https://ja.wikipedia.org/wiki/Whitespace_character) (英語)
+   1. [Whitespace character](https://ja.wikipedia.org/wiki/Whitespace_character) (英語)
 
 4. [用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Character")}}
+   1. {{Glossary("Character")}}

@@ -3,6 +3,8 @@ title: Signature (functions)（函数签名）
 slug: Glossary/Signature/Function
 ---
 
+{{GlossarySidebar}}
+
 一个**函数签名 (**或*类型*签名，或*方法*签名**)** 定义了 {{Glossary("Function", "函数")}} 或 {{Glossary("Method", "方法")}} 的输入与输出。
 
 一个签名可以包括：
@@ -19,7 +21,7 @@ slug: Glossary/Signature/Function
 {{Glossary("JavaScript")}} 是一种*松散类型* 或 *动态*语言。这意味着您不必提前声明变量的类型。处理程序时，将自动确定类型。JavaScript 中的签名仍然可以为您提供有关该方法的一些信息：
 
 ```js
-MyObject.prototype.myFunction(value)
+MyObject.prototype.myFunction(value);
 ```
 
 - 该方法是安装在一个名为 `MyObject` 的 {{Glossary("object", "对象")}}上。

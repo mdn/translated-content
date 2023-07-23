@@ -1,12 +1,7 @@
 ---
 title: Générer des formes avec des images
-slug: Web/CSS/CSS_Shapes/Shapes_From_Images
-tags:
-  - CSS
-  - Formes CSS
-  - Guide
+slug: Web/CSS/CSS_shapes/Shapes_from_images
 translation_of: Web/CSS/CSS_Shapes/Shapes_From_Images
-original_slug: Web/CSS/CSS_Shapes/Générer_formes_images
 ---
 
 {{CSSRef}}

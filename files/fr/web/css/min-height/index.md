@@ -2,7 +2,6 @@
 title: min-height
 slug: Web/CSS/min-height
 translation_of: Web/CSS/min-height
-browser-compat: css.properties.min-height
 ---
 
 {{CSSRef}}

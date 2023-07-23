@@ -2,7 +2,6 @@
 title: 406 Not Acceptable
 slug: Web/HTTP/Status/406
 translation_of: Web/HTTP/Status/406
-browser-compat: http.status.406
 ---
 
 {{HTTPSidebar}}

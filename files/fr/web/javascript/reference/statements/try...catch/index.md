@@ -1,12 +1,7 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-tags:
-  - JavaScript
-  - Reference
-  - Statement
 translation_of: Web/JavaScript/Reference/Statements/try...catch
-original_slug: Web/JavaScript/Reference/Instructions/try...catch
 ---
 
 {{jsSidebar("Statements")}}

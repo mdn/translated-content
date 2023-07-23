@@ -80,7 +80,7 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
     ![](variavel-e-nula.png)
 3. Dessa vez o erro informado é "TypeError: baixoOuAlto is null", na linha 78.
 
-    > **Nota:** [`Null`](/en-US/docs/Glossary/Null) é um valor especial que significa "nada", ou "sem valor". Então `baixoOuAlto` foi declarado e inicializado, mas não com algum valor significativo — não possui nenhum caractere ou valor.
+    > **Nota:** [`Null`](/pt-BR/docs/Glossary/Null) é um valor especial que significa "nada", ou "sem valor". Então `baixoOuAlto` foi declarado e inicializado, mas não com algum valor significativo — não possui nenhum caractere ou valor.
 
     > **Nota:** Esse erro não apareceu assim que a página foi carregada porque esse erro ocorreu dentro de uma função (dentro do bloco `conferirPalpite() { ... }` ). Como você irá aprender com mais detalhes no nosso artigo de funções mais tarde, o código localizado dentro de funções roda em um escopo separado do código presente fora das funções. Nesse caso, o código não estava rodando e o erro não estava aparecendo até a função `conferirPalpite()` ser executada na linha 86.
 
@@ -102,12 +102,12 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
     console.log(baixoOuAlto);
     ```
 
-    > **Nota:** [`console.log()`](/en-US/docs/Web/API/Console/log) é uma função de debugging (correção de erros) realmente útil que exibe um valor na tela do console. Então ela irá imprimir o valor da variável `baixoOuAlto` na tela do console assim que tentarmos defini-la na linha 48.
+    > **Nota:** [`console.log()`](/pt-BR/docs/Web/API/Console/log) é uma função de debugging (correção de erros) realmente útil que exibe um valor na tela do console. Então ela irá imprimir o valor da variável `baixoOuAlto` na tela do console assim que tentarmos defini-la na linha 48.
 
 7. Salve o arquivo e o atualize no navegador, e você deverá ver agora o resultado do `console.log()` na tela do seu console.
     ![](console-log-saida.png)
     Pois bem, nesse ponto o valor de `baixoOuAlto` e `null`, então definitivamente há um problema com a linha 48.
-8. Vamos pensar em qual poderia ser o problema. A linha 48 está usando um método [`document.querySelector()`](/en-US/docs/Web/API/Document/querySelector) para pegar a referência do elemento selecionado com um seletor CSS selector (_CSS selector_). Olhando mais acima no nosso código, podemos encontrar o parágrafo em questão:
+8. Vamos pensar em qual poderia ser o problema. A linha 48 está usando um método [`document.querySelector()`](/pt-BR/docs/Web/API/Document/querySelector) para pegar a referência do elemento selecionado com um seletor CSS selector (_CSS selector_). Olhando mais acima no nosso código, podemos encontrar o parágrafo em questão:
 
     ```js
     <p class="baixoOuAlto"></p>
@@ -152,13 +152,13 @@ Há sem dúvida um problema na lógica do jogo em algum lugar — o jogo não es
 
 ### Trabalhando através da lógica
 
-Para consertar isso, vamos considerar como essa linha está trabalhando. Primeiro, nós invocamos [`Math.random()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random), que gera um número decimal aleatório entre 0 e 1, ex. 0.5675493843.
+Para consertar isso, vamos considerar como essa linha está trabalhando. Primeiro, nós invocamos [`Math.random()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/random), que gera um número decimal aleatório entre 0 e 1, ex. 0.5675493843.
 
 ```js
 Math.random()
 ```
 
-Em seguida, passamos o resultado invocando `Math.random()` através de [`Math.floor()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), que arredonda o número passado para o menor número inteiro mais próximo. E então adicionamos 1 ao resultado:
+Em seguida, passamos o resultado invocando `Math.random()` através de [`Math.floor()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/floor), que arredonda o número passado para o menor número inteiro mais próximo. E então adicionamos 1 ao resultado:
 
 ```
 Math.floor(Math.random()) + 1

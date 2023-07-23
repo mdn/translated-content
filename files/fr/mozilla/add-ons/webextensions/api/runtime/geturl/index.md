@@ -1,16 +1,6 @@
 ---
 title: runtime.getURL()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getURL
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getURL
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getURL
 ---
 
@@ -20,8 +10,8 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getURL
 
 ```js
 browser.runtime.getURL(
-  path // string
-)
+  path, // string
+);
 ```
 
 ### Paramètres

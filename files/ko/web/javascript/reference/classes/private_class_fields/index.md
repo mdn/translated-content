@@ -194,5 +194,5 @@ private 인스턴스 메소드는 generator, async 그리고 async generator 함
 
 ## See also
 
-- [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- [Public class fields](/ko/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)

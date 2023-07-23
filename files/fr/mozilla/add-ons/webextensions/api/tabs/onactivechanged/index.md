@@ -1,17 +1,6 @@
 ---
 title: tabs.onActiveChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onActiveChanged
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged
 ---
 
@@ -24,9 +13,9 @@ Se déclenche lorsque l'onglet sélectionné dans une fenêtre change. Notez que
 ## Syntaxe
 
 ```js
-browser.tabs.onActiveChanged.addListener(listener)
-browser.tabs.onActiveChanged.removeListener(listener)
-browser.tabs.onActiveChanged.hasListener(listener)
+browser.tabs.onActiveChanged.addListener(listener);
+browser.tabs.onActiveChanged.removeListener(listener);
+browser.tabs.onActiveChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

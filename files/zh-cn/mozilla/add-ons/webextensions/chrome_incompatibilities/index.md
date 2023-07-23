@@ -16,13 +16,13 @@ slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 在 Chrome 中，扩展通过使用 `chrome` 命名空间来访问私有 JavaScript API：
 
 ```js
-chrome.browserAction.setIcon({path: "path/to/icon.png"});
+chrome.browserAction.setIcon({ path: "path/to/icon.png" });
 ```
 
 WebExtensions 通过使用 `browser` 命名空间来访问等价的 API：
 
 ```js
-browser.browserAction.setIcon({path: "path/to/icon.png"});
+browser.browserAction.setIcon({ path: "path/to/icon.png" });
 ```
 
 许多 API 是异步的。在 Chrome 中，异步的 API 使用回调来返回值，使用 {{WebExtAPIRef("runtime.lastError")}} 来与传达错误：
@@ -36,10 +36,7 @@ function logCookie(c) {
   }
 }
 
-chrome.cookies.set(
-  {url: "https://developer.mozilla.org/"},
-  logCookie
-);
+chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
 ```
 
 在 WebExtensions 中应使用 [promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 来访问等价的 API：
@@ -53,9 +50,7 @@ function logError(e) {
   console.error(e);
 }
 
-var setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 setCookie.then(logCookie, logError);
 ```
 
@@ -73,17 +68,17 @@ setCookie.then(logCookie, logError);
 
 本节剩余部分介绍了表格未涵盖的兼容性问题。
 
-#### [notifications](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/notifications)
+#### notifications
 
 - For `notifications.create(), with the "basic"` [`type`](/zh-CN/Add-ons/WebExtensions/API/notifications/TemplateType), `iconUrl` is optional in Firefox. It is required in Chrome.
 - Notifications are cleared immediately when the user clicks on them. This is not the case in Chrome.
 - If you call `notifications.create()` more than once in rapid succession, Firefox may end up not displaying any notification at all. Waiting to make subsequent calls until within the `chrome.notifications.create() callback` function is not a sufficiently long delay to prevent this from happening.
 
-#### [proxy](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
+#### proxy
 
 - This API is completely different to the design of the Chrome API. With Chrome's API an extension can register a PAC file, but can also define explicit proxying rules. Since this is also possible using the extended PAC files, this API only supports the PAC file approach. Because this API is incompatible with the Chrome `proxy` API, this API is only available through the `browser` namespace.
 
-#### [tabs](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
+#### tabs
 
 - In Firefox, relative URLs passed into `tabs.executeScript()` or `tabs.insertCSS()` are resolved relative to the current page URL. In Chrome, these URLs are resolved relative to the add-on's base URL. To work cross-browser, you can specify the path as an absolute URL, starting at the add-on's root, like this:
 
@@ -93,13 +88,13 @@ setCookie.then(logCookie, logError);
 
 - 在 Firefox 中，用 `tabs.query()` 根据 URL 查询标签页需要有`"tabs"` 权限。在 Chrome 中，没有`"tabs"`权限也可以，但结果将限制在 URL 匹配主机权限的标签页。
 
-#### [webRequest](/zh-CN/Add-ons/WebExtensions/API/webRequest)
+#### webRequest
 
 - 在 Firefox 中，只有原网址使用 `http:` 或 `https:` 协议时所请求的重定向才有效。
 - In Firefox, events are not fired for system requests (for example, extension upgrades or searchbar suggestions). From Firefox 57 onwards, Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.
 - In Firefox, if an extension wants to redirect a public (e.g. HTTPS) URL to an [extension page](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page. Note that any website may then link or redirect to that url, and extensions should treat any input (POST data, for examples) as if it came from an untrusted source, just as a normal web page should.
 
-#### [windows](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/windows)
+#### windows
 
 - Firefox 中 `onFocusChanged` 对于指定的焦点变化将触发多次。
 

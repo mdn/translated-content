@@ -1,15 +1,7 @@
 ---
 title: '<datalist> : l''élément de liste des données'
 slug: Web/HTML/Element/datalist
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML5
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/datalist
-browser-compat: html.elements.datalist
 ---
 
 {{HTMLSidebar}}

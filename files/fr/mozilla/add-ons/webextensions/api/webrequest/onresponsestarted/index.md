@@ -1,16 +1,6 @@
 ---
 title: webRequest.onResponseStarted
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onResponseStarted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onResponseStarted
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onResponseStarted
 ---
 
@@ -24,12 +14,12 @@ Cet événement est à titre d'information seulement.
 
 ```js
 browser.webRequest.onResponseStarted.addListener(
-  listener,             // function
-  filter,               //  object
-  extraInfoSpec         //  optional array of strings
-)
-browser.webRequest.onResponseStarted.removeListener(listener)
-browser.webRequest.onResponseStarted.hasListener(listener)
+  listener, // function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.webRequest.onResponseStarted.removeListener(listener);
+browser.webRequest.onResponseStarted.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -146,10 +136,9 @@ function logResponse(responseDetails) {
   console.log(responseDetails.statusLine);
 }
 
-browser.webRequest.onResponseStarted.addListener(
-  logResponse,
-  {urls: [target]}
-);
+browser.webRequest.onResponseStarted.addListener(logResponse, {
+  urls: [target],
+});
 ```
 
 {{WebExtExamples}}

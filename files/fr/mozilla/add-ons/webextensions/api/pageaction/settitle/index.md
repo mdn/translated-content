@@ -1,16 +1,6 @@
 ---
 title: pageAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - pageAction
-  - setTitle
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/setTitle
 ---
 
@@ -22,8 +12,8 @@ Définit le titre de la page action. Le titre est affiché dans une info-bulle l
 
 ```js
 browser.pageAction.setTitle(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -50,7 +40,7 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
   browser.pageAction.show(tabId);
   browser.pageAction.setTitle({
     tabId: tabId,
-    title: "Tab ID: " + tabId
+    title: "Tab ID: " + tabId,
   });
 });
 ```

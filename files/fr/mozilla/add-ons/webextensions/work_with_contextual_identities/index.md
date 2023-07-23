@@ -1,16 +1,7 @@
 ---
 title: Travailler avec des identités contextuelles
 slug: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
-tags:
-  - Add-ons
-  - Comment
-  - Contextual identities
-  - Débutant
-  - Extensions
-  - Hox-to
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities
-original_slug: Mozilla/Add-ons/WebExtensions/travailler_avec_des_identites_contextuelles
 ---
 
 {{AddonSidebar}}
@@ -74,12 +65,12 @@ Les principales caractéristiques du fichier [manifest.json](https://github.com/
 Une fenêtre contextuelle sur le bouton de la barre d'outils fournit l'interface utilisateur de l'extension. [context.html](https://github.com/mdn/webextensions-examples/blob/master/contextual-identities/context.html) implémente ce popup, mais c'est juste un shell dans lequel le script context.js écrit la liste des identités contextuelles et leurs options associées.
 
 ```html
-  <body>
-    <div class="panel">
-      <div id="identity-list"></div>
-    </div>
+<body>
+  <div class="panel">
+    <div id="identity-list"></div>
+  </div>
   <script src="context.js"></script>
-  </body>
+</body>
 ```
 
 ## context.js
@@ -113,7 +104,7 @@ Le script utilise maintenant contextualIdentities.query pour déterminer s'il ex
       }
 ```
 
-Si des identités contextuelles sont présentes — Firefox a quatre identités par défaut — le script parcourt chacune d'elles en ajoutant son nom, stylisé dans la couleur choisie, à l'élément \<div>. La fonction `createOptions()` ajoute ensuite les options à “create” ou “close all” à la \<div> avant qu'elle ne soit ajoutée au popup.
+Si des identités contextuelles sont présentes — Firefox a quatre identités par défaut — le script parcourt chacune d'elles en ajoutant son nom, stylisé dans la couleur choisie, à l'élément \<div>. La fonction `createOptions()` ajoute ensuite les options à "create" ou "close all" à la \<div> avant qu'elle ne soit ajoutée au popup.
 
 ```json
      for (let identity of identities) {

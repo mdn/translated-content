@@ -1,14 +1,6 @@
 ---
 title: Notification.data
 slug: Web/API/Notification/data
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - données
 translation_of: Web/API/Notification/data
 ---
 

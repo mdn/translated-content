@@ -1,11 +1,6 @@
 ---
 title: API de Notifications
 slug: Web/API/Notifications_API
-tags:
-  - API Notifications
-  - Notifications
-  - permission
-  - système
 translation_of: Web/API/Notifications_API
 ---
 

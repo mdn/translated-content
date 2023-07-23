@@ -1,15 +1,6 @@
 ---
 title: browserSettings.overrideDocumentColors
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/overrideDocumentColors
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - overrideDocumentColors
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/overrideDocumentColors
 ---
 
@@ -38,8 +29,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.overrideDocumentColors.set({value: "always"}).
-  then(logResult);
+browser.browserSettings.overrideDocumentColors
+  .set({ value: "always" })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}

@@ -29,14 +29,14 @@ elem.dispatchEvent(event);
 例如，event 可以创建如下：
 
 ```js
-var event = new CustomEvent('build', { 'detail': elem.dataset.time });
+var event = new CustomEvent("build", { detail: elem.dataset.time });
 ```
 
 下面的代码允许你在事件监听器中访问更多的数据：
 
 ```js
 function eventHandler(e) {
-  log('The time is: ' + e.detail);
+  log("The time is: " + e.detail);
 }
 ```
 
@@ -46,15 +46,19 @@ function eventHandler(e) {
 
 ```js
 // Create the event.
-var event = document.createEvent('Event');
+var event = document.createEvent("Event");
 
 // Define that the event name is 'build'.
-event.initEvent('build', true, true);
+event.initEvent("build", true, true);
 
 // Listen for the event.
-document.addEventListener('build', function (e) {
-  // e.target matches document from above
-}, false);
+document.addEventListener(
+  "build",
+  function (e) {
+    // e.target matches document from above
+  },
+  false,
+);
 
 // target can be any Element or other EventTarget.
 document.dispatchEvent(event);
@@ -71,20 +75,20 @@ document.dispatchEvent(event);
 ```
 
 ```js
-const form = document.querySelector('form');
-const textarea = document.querySelector('textarea');
+const form = document.querySelector("form");
+const textarea = document.querySelector("textarea");
 
 // Create a new event, allow bubbling, and provide any data you want to pass to the "details" property
-const eventAwesome = new CustomEvent('awesome', {
+const eventAwesome = new CustomEvent("awesome", {
   bubbles: true,
-  detail: { text: () => textarea.value }
+  detail: { text: () => textarea.value },
 });
 
 // The form element listens for the custom "awesome" event and then consoles the output of the passed text() method
-form.addEventListener('awesome', e => console.log(e.detail.text()));
+form.addEventListener("awesome", (e) => console.log(e.detail.text()));
 
 // As the user types, the textarea inside the form dispatches/triggers the event to fire, and uses itself as the starting point
-textarea.addEventListener('input', e => e.target.dispatchEvent(eventAwesome));
+textarea.addEventListener("input", (e) => e.target.dispatchEvent(eventAwesome));
 ```
 
 ### 动态创建和派发事件
@@ -98,15 +102,20 @@ textarea.addEventListener('input', e => e.target.dispatchEvent(eventAwesome));
 ```
 
 ```js
-const form = document.querySelector('form');
-const textarea = document.querySelector('textarea');
+const form = document.querySelector("form");
+const textarea = document.querySelector("textarea");
 
-form.addEventListener('awesome', e => console.log(e.detail.text()));
+form.addEventListener("awesome", (e) => console.log(e.detail.text()));
 
-textarea.addEventListener('input', function() {
+textarea.addEventListener("input", function () {
   // Create and dispatch/trigger an event on the fly
   // Note: Optionally, we've also leveraged the "function expression" (instead of the "arrow function expression") so "this" will represent the element
-  this.dispatchEvent(new CustomEvent('awesome', { bubbles: true, detail: { text: () => textarea.value } }))
+  this.dispatchEvent(
+    new CustomEvent("awesome", {
+      bubbles: true,
+      detail: { text: () => textarea.value },
+    }),
+  );
 });
 ```
 
@@ -116,12 +125,12 @@ textarea.addEventListener('input', function() {
 
 ```js
 function simulateClick() {
-  var event = new MouseEvent('click', {
-    'view': window,
-    'bubbles': true,
-    'cancelable': true
+  var event = new MouseEvent("click", {
+    view: window,
+    bubbles: true,
+    cancelable: true,
   });
-  var cb = document.getElementById('checkbox');
+  var cb = document.getElementById("checkbox");
   var cancelled = !cb.dispatchEvent(event);
   if (cancelled) {
     // A handler called preventDefault.

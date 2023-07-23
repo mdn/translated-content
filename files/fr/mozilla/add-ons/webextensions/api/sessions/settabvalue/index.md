@@ -1,15 +1,6 @@
 ---
 title: sessions.setTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - sessions
-  - setTabValue
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue
 ---
 
@@ -25,10 +16,10 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var storing = browser.sessions.setTabValue(
-  tabId,    // integer
-  key,      // string
-  value     // string or object
-)
+  tabId, // integer
+  key, // string
+  value, // string or object
+);
 ```
 
 ### Paramètres
@@ -54,7 +45,10 @@ Définissez une valeur sur l'onglet actif lorsque l'utilisateur sélectionne un 
 
 ```js
 async function setOnActiveTab() {
-  let tabArray = await browser.tabs.query({currentWindow: true, active: true});
+  let tabArray = await browser.tabs.query({
+    currentWindow: true,
+    active: true,
+  });
   let tabId = tabArray[0].id;
   await browser.sessions.setTabValue(tabId, "my-key", "my-value");
 }
@@ -62,7 +56,7 @@ async function setOnActiveTab() {
 browser.menus.create({
   id: "my-item",
   title: "my item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(setOnActiveTab);

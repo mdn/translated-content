@@ -208,10 +208,6 @@
     "modified": "2019-07-04T12:16:45.863Z",
     "contributors": ["BVaflick"]
   },
-  "Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation": {
-    "modified": "2019-03-18T21:45:23.068Z",
-    "contributors": ["wbamberg", "maxypayne"]
-  },
   "Glossary": {
     "modified": "2020-10-07T11:13:45.197Z",
     "contributors": [
@@ -1206,18 +1202,6 @@
     "modified": "2020-07-16T22:40:14.761Z",
     "contributors": ["TurtleOld", "baradusov", "niktariy", "boxa6"]
   },
-  "Learn/Accessibility/Mobile": {
-    "modified": "2020-07-16T22:40:32.502Z",
-    "contributors": ["boxa6"]
-  },
-  "Learn/Accessibility/Multimedia": {
-    "modified": "2020-07-16T22:40:27.927Z",
-    "contributors": ["boxa6"]
-  },
-  "Learn/Accessibility/WAI-ARIA_basics": {
-    "modified": "2020-07-16T22:40:23.911Z",
-    "contributors": ["streloc84", "boxa6"]
-  },
   "Learn/Accessibility/What_is_accessibility": {
     "modified": "2020-07-16T22:40:06.747Z",
     "contributors": ["niktariy", "Frisle", "Pristavka"]
@@ -1657,17 +1641,6 @@
       "GaidaiAndrii",
       "bracket",
       "Dmitrij"
-    ]
-  },
-  "Learn/Forms/Basic_native_form_controls": {
-    "modified": "2020-12-02T02:50:19.864Z",
-    "contributors": [
-      "kan0neego",
-      "lazyelf472",
-      "Галина",
-      "shade0602",
-      "outdever",
-      "Instantrec"
     ]
   },
   "Learn/Forms/Form_validation": {
@@ -3500,10 +3473,6 @@
     "modified": "2020-08-27T17:26:46.914Z",
     "contributors": ["sergserg213", "Vorteri", "klavatron"]
   },
-  "Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-18T21:06:53.326Z",
-    "contributors": ["gladisihor"]
-  },
   "Mozilla/Add-ons/WebExtensions/What_are_WebExtensions": {
     "modified": "2020-05-17T16:42:52.348Z",
     "contributors": ["kollieartwolf", "T1mL3arn", "idma88", "flammenmensch"]
@@ -3563,10 +3532,6 @@
     "modified": "2019-03-18T21:05:03.573Z",
     "contributors": ["vladimir-nikotin", "Shychara"]
   },
-  "Mozilla/Add-ons/WebExtensions/user_interface/Browser_action": {
-    "modified": "2019-03-18T21:05:13.253Z",
-    "contributors": ["vladimir-nikotin", "Shychara"]
-  },
   "Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items": {
     "modified": "2019-03-18T21:01:56.567Z",
     "contributors": ["shmel3"]
@@ -3590,6 +3555,10 @@
   "Mozilla/Add-ons/WebExtensions/user_interface/Sidebars": {
     "modified": "2019-03-18T21:05:02.475Z",
     "contributors": ["leksiq", "LumenGNU"]
+  },
+  "Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button": {
+    "modified": "2019-03-18T21:05:13.253Z",
+    "contributors": ["vladimir-nikotin", "Shychara"]
   },
   "Mozilla/Firefox": {
     "modified": "2020-01-18T14:11:55.644Z",
@@ -8140,10 +8109,6 @@
     "modified": "2019-03-23T22:29:56.828Z",
     "contributors": ["BychekRU"]
   },
-  "Web/CSS/:-moz-focusring": {
-    "modified": "2019-03-23T22:37:34.919Z",
-    "contributors": ["teoli", "DVV", "andreww2012"]
-  },
   "Web/CSS/:-moz-only-whitespace": {
     "modified": "2020-10-15T22:11:44.237Z",
     "contributors": ["ExE-Boss", "ialexi-bl"]
@@ -8480,120 +8445,6 @@
     "modified": "2019-03-23T22:55:54.351Z",
     "contributors": ["surrsoft"]
   },
-  "Web/CSS/CSS_Flow_Layout": {
-    "modified": "2020-03-07T13:30:09.947Z",
-    "contributors": ["Radragon"]
-  },
-  "Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts": {
-    "modified": "2020-03-08T14:31:08.319Z",
-    "contributors": ["Radragon"]
-  },
-  "Web/CSS/CSS_Grid_Layout": {
-    "modified": "2020-04-17T02:22:53.979Z",
-    "contributors": [
-      "alexphilin",
-      "RomanBush",
-      "Kamye",
-      "SavkovCG",
-      "dblokhin",
-      "Renatdk",
-      "Fgeniy",
-      "igor-klymenok",
-      "InkFaust",
-      "SHOOROOP"
-    ]
-  },
-  "Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout": {
-    "modified": "2020-10-15T04:59:47.084Z",
-    "contributors": [
-      "Virss",
-      "touze147",
-      "john_roldven",
-      "iandr",
-      "nicktorn89",
-      "ArtemSkachko",
-      "greensleeves",
-      "PaulineNemchak",
-      "hmdn",
-      "miirinjej",
-      "avkozlov4",
-      "Sajag",
-      "coshturnina",
-      "zhenetta",
-      "sergeytkachenko",
-      "dek4nice",
-      "chemaxa"
-    ]
-  },
-  "Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout": {
-    "modified": "2020-06-05T16:04:56.391Z",
-    "contributors": ["randomesis", "dimahvatit", "slychai85"]
-  },
-  "Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes": {
-    "modified": "2019-03-18T21:35:04.965Z",
-    "contributors": ["slychai85"]
-  },
-  "Web/CSS/CSS_Grid_Layout/Grid_Template_Areas": {
-    "modified": "2019-03-18T21:10:23.458Z",
-    "contributors": ["maximTorba", "denisvovchenko", "slychai85", "coshturnina"]
-  },
-  "Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines": {
-    "modified": "2020-04-04T03:56:43.842Z",
-    "contributors": ["anna.bunakova"]
-  },
-  "Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid": {
-    "modified": "2020-09-29T19:08:10.559Z",
-    "contributors": ["Zulcom", "denisvovchenko", "coshturnina"]
-  },
-  "Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout": {
-    "modified": "2020-04-12T13:44:00.238Z",
-    "contributors": ["anna.bunakova"]
-  },
-  "Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout": {
-    "modified": "2020-12-13T10:57:37.943Z",
-    "contributors": [
-      "deepdarkness",
-      "denisvovchenko",
-      "coshturnina",
-      "InkFaust"
-    ]
-  },
-  "Web/CSS/CSS_Grid_Layout/Subgrid": {
-    "modified": "2019-11-24T10:14:04.099Z",
-    "contributors": ["hisbvdis"]
-  },
-  "Web/CSS/CSS_Images": {
-    "modified": "2019-03-23T22:33:49.629Z",
-    "contributors": ["BychekRU"]
-  },
-  "Web/CSS/CSS_Images/Using_CSS_gradients": {
-    "modified": "2020-03-30T10:47:12.450Z",
-    "contributors": ["Virss"]
-  },
-  "Web/CSS/CSS_Lists_and_Counters": {
-    "modified": "2019-03-23T22:23:15.839Z",
-    "contributors": ["TylerH"]
-  },
-  "Web/CSS/CSS_Ruby": {
-    "modified": "2019-03-18T21:40:32.040Z",
-    "contributors": ["FeliciaJess"]
-  },
-  "Web/CSS/CSS_Scroll_Snap": {
-    "modified": "2020-04-23T14:07:31.697Z",
-    "contributors": ["r-i-c-h"]
-  },
-  "Web/CSS/CSS_Scroll_Snap/Basic_concepts": {
-    "modified": "2020-04-24T16:34:16.121Z",
-    "contributors": ["hisbvdis"]
-  },
-  "Web/CSS/CSS_Selectors": {
-    "modified": "2019-09-26T17:15:05.505Z",
-    "contributors": ["RomanBush", "vkorzhova", "Gergalov", "bezik", "irenprkpv"]
-  },
-  "Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors": {
-    "modified": "2019-03-18T21:30:19.329Z",
-    "contributors": ["Hoopers_Hooch"]
-  },
   "Web/CSS/CSS_Types": {
     "modified": "2019-03-18T21:45:05.678Z",
     "contributors": ["TViglesGoom"]
@@ -8734,9 +8585,103 @@
     "modified": "2020-07-12T10:15:34.642Z",
     "contributors": ["PavelKoroteev", "RomanBush"]
   },
+  "Web/CSS/CSS_flow_layout": {
+    "modified": "2020-03-07T13:30:09.947Z",
+    "contributors": ["Radragon"]
+  },
+  "Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts": {
+    "modified": "2020-03-08T14:31:08.319Z",
+    "contributors": ["Radragon"]
+  },
   "Web/CSS/CSS_fonts": {
     "modified": "2020-10-10T08:59:00.093Z",
     "contributors": ["StanEffy"]
+  },
+  "Web/CSS/CSS_grid_layout": {
+    "modified": "2020-04-17T02:22:53.979Z",
+    "contributors": [
+      "alexphilin",
+      "RomanBush",
+      "Kamye",
+      "SavkovCG",
+      "dblokhin",
+      "Renatdk",
+      "Fgeniy",
+      "igor-klymenok",
+      "InkFaust",
+      "SHOOROOP"
+    ]
+  },
+  "Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout": {
+    "modified": "2020-10-15T04:59:47.084Z",
+    "contributors": [
+      "Virss",
+      "touze147",
+      "john_roldven",
+      "iandr",
+      "nicktorn89",
+      "ArtemSkachko",
+      "greensleeves",
+      "PaulineNemchak",
+      "hmdn",
+      "miirinjej",
+      "avkozlov4",
+      "Sajag",
+      "coshturnina",
+      "zhenetta",
+      "sergeytkachenko",
+      "dek4nice",
+      "chemaxa"
+    ]
+  },
+  "Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout": {
+    "modified": "2020-06-05T16:04:56.391Z",
+    "contributors": ["randomesis", "dimahvatit", "slychai85"]
+  },
+  "Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement": {
+    "modified": "2020-09-29T19:08:10.559Z",
+    "contributors": ["Zulcom", "denisvovchenko", "coshturnina"]
+  },
+  "Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines": {
+    "modified": "2020-04-04T03:56:43.842Z",
+    "contributors": ["anna.bunakova"]
+  },
+  "Web/CSS/CSS_grid_layout/Grid_template_areas": {
+    "modified": "2019-03-18T21:10:23.458Z",
+    "contributors": ["maximTorba", "denisvovchenko", "slychai85", "coshturnina"]
+  },
+  "Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes": {
+    "modified": "2019-03-18T21:35:04.965Z",
+    "contributors": ["slychai85"]
+  },
+  "Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids": {
+    "modified": "2020-04-12T13:44:00.238Z",
+    "contributors": ["anna.bunakova"]
+  },
+  "Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods": {
+    "modified": "2020-12-13T10:57:37.943Z",
+    "contributors": [
+      "deepdarkness",
+      "denisvovchenko",
+      "coshturnina",
+      "InkFaust"
+    ]
+  },
+  "Web/CSS/CSS_grid_layout/Subgrid": {
+    "modified": "2019-11-24T10:14:04.099Z",
+    "contributors": ["hisbvdis"]
+  },
+  "Web/CSS/CSS_images": {
+    "modified": "2019-03-23T22:33:49.629Z",
+    "contributors": ["BychekRU"]
+  },
+  "Web/CSS/CSS_images/Using_CSS_gradients": {
+    "modified": "2020-03-30T10:47:12.450Z",
+    "contributors": ["Virss"]
+  },
+  "Web/CSS/CSS_lists": {
+    "modified": "2019-03-23T22:23:15.839Z",
+    "contributors": ["TylerH"]
   },
   "Web/CSS/CSS_media_queries": {
     "modified": "2019-03-23T22:04:37.337Z",
@@ -8767,6 +8712,10 @@
   "Web/CSS/CSS_multicol_layout/Using_multicol_layouts": {
     "modified": "2019-07-22T11:08:23.191Z",
     "contributors": ["a-bodrova", "sandmanisdancing", "fscholz", "ldone"]
+  },
+  "Web/CSS/CSS_paged_media": {
+    "modified": "2020-10-12T15:00:21.800Z",
+    "contributors": ["at940266"]
   },
   "Web/CSS/CSS_positioned_layout": {
     "modified": "2019-03-23T22:44:29.790Z",
@@ -8801,6 +8750,26 @@
   "Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index": {
     "modified": "2020-04-16T01:16:28.675Z",
     "contributors": ["pelyp47"]
+  },
+  "Web/CSS/CSS_ruby_layout": {
+    "modified": "2019-03-18T21:40:32.040Z",
+    "contributors": ["FeliciaJess"]
+  },
+  "Web/CSS/CSS_scroll_snap": {
+    "modified": "2020-04-23T14:07:31.697Z",
+    "contributors": ["r-i-c-h"]
+  },
+  "Web/CSS/CSS_scroll_snap/Basic_concepts": {
+    "modified": "2020-04-24T16:34:16.121Z",
+    "contributors": ["hisbvdis"]
+  },
+  "Web/CSS/CSS_selectors": {
+    "modified": "2019-09-26T17:15:05.505Z",
+    "contributors": ["RomanBush", "vkorzhova", "Gergalov", "bezik", "irenprkpv"]
+  },
+  "Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors": {
+    "modified": "2019-03-18T21:30:19.329Z",
+    "contributors": ["Hoopers_Hooch"]
   },
   "Web/CSS/CSS_table": {
     "modified": "2019-03-23T22:31:01.222Z",
@@ -8892,10 +8861,6 @@
   "Web/CSS/Layout_mode": {
     "modified": "2019-03-23T23:09:42.012Z",
     "contributors": ["idoru", "BychekRU", "ldone"]
-  },
-  "Web/CSS/Paged_Media": {
-    "modified": "2020-10-12T15:00:21.800Z",
-    "contributors": ["at940266"]
   },
   "Web/CSS/Pseudo-classes": {
     "modified": "2019-03-23T22:51:08.664Z",
@@ -10097,17 +10062,6 @@
       "Dionys",
       "Woodroof",
       "Zhuravlik"
-    ]
-  },
-  "Web/Guide/AJAX/Getting_Started": {
-    "modified": "2019-03-24T00:01:49.926Z",
-    "contributors": [
-      "DanilaH",
-      "chrisdavidmills",
-      "Megapotz",
-      "Apparition",
-      "Square",
-      "Kwinto"
     ]
   },
   "Web/Guide/API": {
@@ -16343,7 +16297,7 @@
       "thatlldo"
     ]
   },
-  "WebAssembly/C_to_wasm": {
+  "WebAssembly/C_to_Wasm": {
     "modified": "2019-03-18T21:33:56.809Z",
     "contributors": ["thatlldo"]
   },
@@ -16375,7 +16329,7 @@
     "modified": "2019-06-12T11:14:54.085Z",
     "contributors": ["deadblackclover"]
   },
-  "WebAssembly/Rust_to_wasm": {
+  "WebAssembly/Rust_to_Wasm": {
     "modified": "2020-06-11T14:27:31.970Z",
     "contributors": [
       "DuckerMan",
@@ -16746,6 +16700,10 @@
     "modified": "2020-05-13T06:10:35.795Z",
     "contributors": ["mandalorian7117", "cvrebert"]
   },
+  "conflicting/Web/CSS/:focus-visible": {
+    "modified": "2019-03-23T22:37:34.919Z",
+    "contributors": ["teoli", "DVV", "andreww2012"]
+  },
   "conflicting/Web/CSS/:is": {
     "modified": "2019-03-23T22:39:12.816Z",
     "contributors": ["BychekRU", "JhonyLe"]
@@ -16799,6 +16757,17 @@
   "conflicting/Web/Guide": {
     "modified": "2019-03-24T00:00:53.915Z",
     "contributors": ["Dionys"]
+  },
+  "conflicting/Web/Guide/AJAX": {
+    "modified": "2019-03-24T00:01:49.926Z",
+    "contributors": [
+      "DanilaH",
+      "chrisdavidmills",
+      "Megapotz",
+      "Apparition",
+      "Square",
+      "Kwinto"
+    ]
   },
   "conflicting/Web/Guide/Mobile": {
     "modified": "2019-03-23T23:27:06.077Z",
@@ -17424,6 +17393,10 @@
   "orphaned/Mozilla/Add-ons/WebExtensions/Debugging": {
     "modified": "2019-03-29T04:27:38.888Z",
     "contributors": ["karr1d"]
+  },
+  "orphaned/Mozilla/Add-ons/WebExtensions/Prerequisites": {
+    "modified": "2019-03-18T21:06:53.326Z",
+    "contributors": ["gladisihor"]
   },
   "orphaned/Toolkit_API": {
     "modified": "2019-01-16T14:44:25.079Z",

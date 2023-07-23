@@ -4,7 +4,6 @@ slug: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 translation_of: >-
   Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 ---
 
 ## Introduction

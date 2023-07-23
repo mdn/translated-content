@@ -1,14 +1,7 @@
 ---
 title: Tutoriel canvas
 slug: Web/API/Canvas_API/Tutorial
-tags:
-  - Canvas
-  - Guide
-  - HTML
-  - Tutoriel_canvas
-  - Tutoriels
 translation_of: Web/API/Canvas_API/Tutorial
-original_slug: Web/API/Canvas_API/Tutoriel_canvas
 ---
 
 {{DefaultAPISidebar("Canvas API")}}

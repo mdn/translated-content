@@ -46,6 +46,7 @@ Este tema contiene los siguientes módulos, en un orden sugerido para trabajar a
 - [Mejores prácticas de rendimiento en JavaScript](/es/docs/Learn/Performance/JavaScript)
   - : JavaScript, cuando se usa correctamente, puede permitir experiencias web interactivas e inmersivas, o puede dañar significativamente el tiempo de descarga, el tiempo de procesamiento, el rendimiento dentro de la aplicación, la duración de la batería y la experiencia del usuario. Este artículo describe algunas de las mejores prácticas de JavaScript que deben tenerse en cuenta para garantizar que incluso el contenido complejo tenga el mayor rendimiento posible.
 - Rendimiento de fuentes web
+
   - : Un aspecto que a menudo se pasa por alto en el panorama del rendimiento son las fuentes web. Las fuentes web son más prominentes que nunca en el diseño web, sin embargo, muchos desarrolladores simplemente las incorporan desde un servicio de terceros y no piensan en ello. En este artículo, cubriremos métodos para obtener sus archivos de fuentes lo más pequeños posible con una configuración y sub configuración de archivos eficientes. A partir de ahí, continuaremos hablando sobre cómo los navegadores envían mensajes de texto y cómo puede usar las funciones de CSS y JavaScript para garantizar que sus fuentes se representen rápidamente y con una interrupción mínima de la experiencia del usuario.
 
 - [Rendimiento móvil](/es/docs/Learn/Performance/Mobile)

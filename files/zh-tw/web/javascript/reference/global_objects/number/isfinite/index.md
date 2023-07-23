@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 
 ## 語法
 
-```plain
+```js-nolint
 Number.isFinite(value)
 ```
 
@@ -31,25 +31,27 @@ In comparison to the global {{jsxref("isFinite", "isFinite()")}} function, this 
 ## 範例
 
 ```js
-Number.isFinite(Infinity);  // false
-Number.isFinite(NaN);       // false
+Number.isFinite(Infinity); // false
+Number.isFinite(NaN); // false
 Number.isFinite(-Infinity); // false
 
-Number.isFinite(0);         // true
-Number.isFinite(2e64);      // true
+Number.isFinite(0); // true
+Number.isFinite(2e64); // true
 
-Number.isFinite('0');       // false, would've been true with
-                            // global isFinite('0')
-Number.isFinite(null);      // false, would've been true with
-                            // global isFinite(null)
+Number.isFinite("0"); // false, would've been true with
+// global isFinite('0')
+Number.isFinite(null); // false, would've been true with
+// global isFinite(null)
 ```
 
 ## Polyfill
 
 ```js
-Number.isFinite = Number.isFinite || function(value) {
-    return typeof value === 'number' && isFinite(value);
-}
+Number.isFinite =
+  Number.isFinite ||
+  function (value) {
+    return typeof value === "number" && isFinite(value);
+  };
 ```
 
 ## 規範

@@ -83,20 +83,20 @@ WebAssembly 模块中的所有代码都是划分到函数里面。函数具有�
 
 ## 获取和设置局部变量和参数
 
-局部变量和参数能够被函数体使用 get_local 和 set_local 指令进行读写。
+局部变量和参数能够被函数体使用 `local.get` 和 `local.set` 指令进行读写。
 
-get_local/set_local 指令使用数字索引来指向将被存取的条目：按照它们的声明顺序，参数在前，局部变量在后。因此，给定下面的函数：
+`local.get`/`local.set` 指令使用数字索引来指向将被存取的条目：按照它们的声明顺序，参数在前，局部变量在后。因此，给定下面的函数：
 
 ```wasm
 (func (param i32) (param f32) (local f64)
-  get_local 0
-  get_local 1
-  get_local 2)
+  local.get 0
+  local.get 1
+  local.get 2)
 ```
 
-- get_local 0 会得到 i32 类型的参数
-- get_local 1 会得到 f32 类型的参数
-- get_local 2 会得到 f64 类型的局部变量
+- `local.get 0` 会得到 i32 类型的参数
+- `local.get 1` 会得到 f32 类型的参数
+- `local.get 2` 会得到 f64 类型的局部变量
 
 由于使用数字索引来指向某个条目容易让人混淆，因此，也可以通过别名的方式来访问它们，方法就是在类型声明的前面添加一个使用美元符号（$）作为前缀的名字。例如：
 
@@ -104,7 +104,7 @@ get_local/set_local 指令使用数字索引来指向将被存取的条目：按
 (func (param $p1 i32) (param $p2 f32) (local $loc i32) …)
 ```
 
-这里，使用 get_local $p1 就代替 get_local 0，访问参数 i32 变量时，就可以通过 $p1 进行访问。
+这里，使用 `local.get $p1` 就可以代替 `local.get 0`，访问参数 i32 变量时，就可以通过 $p1 进行访问。
 
 > **备注：** 当文本转换为二进制后，二进制中只包含整数。
 
@@ -112,14 +112,14 @@ get_local/set_local 指令使用数字索引来指向将被存取的条目：按
 
 虽然浏览器把 wasm 编译为某种更高效的东西，但是，wasm 的执行是以栈式机器定义的。也就是说，其基本理念是每种类型的指令都是在栈上执行数值的入栈出栈操作。
 
-例如，get_local 被定义为把它读到的局部变量值压入到栈上，然后 i32.add 从栈上取出两个 i32 类型值（它的含义是把前面压入栈上的两个值取出来）计算它们的和（以 2^32 求模），最后把结果压入栈上。
+例如，`local.get` 被定义为把它读到的局部变量值压入到栈上，然后 `i32.add` 从栈上取出两个 `i32` 类型值（它的含义是把前面压入栈上的两个值取出来）计算它们的和（以 2^32 求模），最后把结果压入栈上。
 
 当函数被调用的时候，它是从一个空栈开始的。随着函数体指令的执行，栈会逐步填满和清空。例如，在执行了下面的函数之后：
 
 ```wasm
 (func (param $p i32)
-  get_local $p
-  get_local $p
+  local.get $p
+  local.get $p
   i32.add)
 ```
 
@@ -134,8 +134,8 @@ WebAssembly 验证规则确保栈准确匹配：如果你声明了 (result f32)�
 ```wasm
 (module
   (func (param $lhs i32) (param $rhs i32) (result i32)
-    get_local $lhs
-    get_local $rhs
+    local.get $lhs
+    local.get $rhs
     i32.add))
 ```
 
@@ -166,8 +166,8 @@ WebAssembly 验证规则确保栈准确匹配：如果你声明了 (result f32)�
 ```wasm
 (module
   (func $add (param $lhs i32) (param $rhs i32) (result i32)
-    get_local $lhs
-    get_local $rhs
+    local.get $lhs
+    local.get $rhs
     i32.add)
   (export "add" (func $add))
 )
@@ -178,19 +178,16 @@ WebAssembly 验证规则确保栈准确匹配：如果你声明了 (result f32)�
 接下来，我们把二进制文件加载到叫做 addCode 的带类型数组（[获取 WebAssembly 字节码](/zh-CN/docs/WebAssembly/Fetching_WebAssembly_bytecode)），编译并实例化它，然后在 JavaScript 中执行我们的 add 函数（现在，我们可以在实例的[exports](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports)属性中找到 add()）。
 
 ```js
-fetchAndInstantiate('add.wasm').then(function(instance) {
-   console.log(instance.exports.add(1, 2));  // "3"
+fetchAndInstantiate("add.wasm").then(function (instance) {
+  console.log(instance.exports.add(1, 2)); // "3"
 });
 
 // fetchAndInstantiate() found in wasm-utils.js
 function fetchAndInstantiate(url, importObject) {
-  return fetch(url).then(response =>
-    response.arrayBuffer()
-  ).then(bytes =>
-    WebAssembly.instantiate(bytes, importObject)
-  ).then(results =>
-    results.instance
-  );
+  return fetch(url)
+    .then((response) => response.arrayBuffer())
+    .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+    .then((results) => results.instance);
 }
 ```
 
@@ -227,8 +224,8 @@ function fetchAndInstantiate(url, importObject) {
 调用我们前面模块的 JavaScript 看起来像这样：
 
 ```js
-fetchAndInstantiate('call.wasm').then(function(instance) {
-  console.log(instance.exports.getAnswerPlus1());  // "43"
+fetchAndInstantiate("call.wasm").then(function (instance) {
+  console.log(instance.exports.getAnswerPlus1()); // "43"
 });
 ```
 
@@ -259,13 +256,13 @@ JavaScript 函数没有签名的概念，因此，无论导入的声明签名是
 ```js
 var importObject = {
   console: {
-    log: function(arg) {
+    log: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetchAndInstantiate('logger.wasm', importObject).then(function(instance) {
+fetchAndInstantiate("logger.wasm", importObject).then(function (instance) {
   instance.exports.logIt();
 });
 ```
@@ -334,11 +331,11 @@ consoleLogString(offset, length) {
 现在，我们可以从 JavaScript 中创建一个 1 页的内存（Memory）然后把它传递进去。这会在控制台输出"Hi"。
 
 ```js
-var memory = new WebAssembly.Memory({initial:1});
+var memory = new WebAssembly.Memory({ initial: 1 });
 
 var importObj = { console: { log: consoleLogString }, js: { mem: memory } };
 
-fetchAndInstantiate('logger2.wasm', importObject).then(function(instance) {
+fetchAndInstantiate("logger2.wasm", importObject).then(function (instance) {
   instance.exports.writeHi();
 });
 ```
@@ -410,7 +407,7 @@ function() {
 ```wasm
 (type $return_i32 (func (result i32))) ;; if this was f32, type checking would fail
 (func (export "callByIndex") (param $i i32) (result i32)
-  get_local $i
+  local.get $i
   call_indirect $return_i32)
 ```
 
@@ -422,7 +419,7 @@ function() {
 你也可以在命令调用的时候显式地声明 call_indirect 的参数，就像下面这样：
 
 ```wasm
-(call_indirect $return_i32 (get_local $i))
+(call_indirect $return_i32 (local.get $i))
 ```
 
 在更高层面，像 JavaScript 这样更具表达力的语言，你可以设想使用一个数组（或者更有可能的是对象）来完成相同的事情。伪代码看起来像这样：tbl\[i]\()。
@@ -447,7 +444,7 @@ call_indirect $my_spicy_table $i32_to_void
   (elem (i32.const 0) $f1 $f2)
   (type $return_i32 (func (result i32)))
   (func (export "callByIndex") (param $i i32) (result i32)
-    get_local $i
+    local.get $i
     call_indirect $return_i32)
 )
 ```
@@ -455,7 +452,7 @@ call_indirect $my_spicy_table $i32_to_void
 我们使用下面的 JavaScript 把它加载到一个网页中：
 
 ```js
-fetchAndInstantiate('wasm-table.wasm').then(function(instance) {
+fetchAndInstantiate("wasm-table.wasm").then(function (instance) {
   console.log(instance.exports.callByIndex(0)); // 返回 42
   console.log(instance.exports.callByIndex(1)); // 返回 13
   console.log(instance.exports.callByIndex(2));
@@ -526,16 +523,16 @@ fetchAndInstantiate('wasm-table.wasm').then(function(instance) {
 ```js
 var importObj = {
   js: {
-    memory : new WebAssembly.Memory({ initial: 1 }),
-    table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
-  }
+    memory: new WebAssembly.Memory({ initial: 1 }),
+    table: new WebAssembly.Table({ initial: 1, element: "anyfunc" }),
+  },
 };
 
 Promise.all([
-  fetchAndInstantiate('shared0.wasm', importObj),
-  fetchAndInstantiate('shared1.wasm', importObj)
-]).then(function(results) {
-  console.log(results[1].exports.doIt());  // prints 42
+  fetchAndInstantiate("shared0.wasm", importObj),
+  fetchAndInstantiate("shared1.wasm", importObj),
+]).then(function (results) {
+  console.log(results[1].exports.doIt()); // prints 42
 });
 ```
 

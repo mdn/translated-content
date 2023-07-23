@@ -1,14 +1,6 @@
 ---
 title: PerformanceObserver.observe()
 slug: Web/API/PerformanceObserver/observe
-tags:
-  - API
-  - Method
-  - Méthode
-  - Performance
-  - PerformanceObserver
-  - Reference
-  - Performance Web
 translation_of: Web/API/PerformanceObserver/observe
 ---
 

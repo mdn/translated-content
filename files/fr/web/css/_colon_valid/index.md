@@ -1,10 +1,6 @@
 ---
 title: ':valid'
 slug: Web/CSS/:valid
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:valid
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: border
 slug: Web/CSS/border
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border
 ---
 

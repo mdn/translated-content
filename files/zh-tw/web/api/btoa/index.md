@@ -33,7 +33,7 @@ An ASCII string containing the Base64 representation of `stringToEncode`.
 ## Example
 
 ```js
-const encodedData = window.btoa('Hello, world'); // encode a string
+const encodedData = window.btoa("Hello, world"); // encode a string
 const decodedData = window.atob(encodedData); // decode the string
 ```
 
@@ -47,10 +47,10 @@ Base64, by design, expects binary data as its input. In terms of JavaScript stri
 const ok = "a";
 console.log(ok.codePointAt(0).toString(16)); //   61: occupies < 1 byte
 
-const notOK = "✓"
+const notOK = "✓";
 console.log(notOK.codePointAt(0).toString(16)); // 2713: occupies > 1 byte
 
-console.log(btoa(ok));    // YQ==
+console.log(btoa(ok)); // YQ==
 console.log(btoa(notOK)); // error
 ```
 
@@ -72,7 +72,7 @@ const myString = "☸☹☺☻☼☾☿";
 
 const converted = toBinary(myString);
 const encoded = btoa(converted);
-console.log(encoded);                 // OCY5JjomOyY8Jj4mPyY=
+console.log(encoded); // OCY5JjomOyY8Jj4mPyY=
 ```
 
 If you do this, of course you'll have to reverse the conversion on the decoded string:
@@ -88,7 +88,7 @@ function fromBinary(binary) {
 
 const decoded = atob(encoded);
 const original = fromBinary(decoded);
-console.log(original);                // ☸☹☺☻☼☾☿
+console.log(original); // ☸☹☺☻☼☾☿
 ```
 
 ## Polyfill

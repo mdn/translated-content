@@ -1,5 +1,5 @@
 ---
-title: '評価: アクセシビリティのトラブルシューティング'
+title: "評価: アクセシビリティのトラブルシューティング"
 slug: Learn/Accessibility/Accessibility_troubleshooting
 ---
 
@@ -74,9 +74,9 @@ slug: Learn/Accessibility/Accessibility_troubleshooting
 1. 成果をオンラインで共有できるエディター、例えば [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/) に置きます。
 2. 採点や手助けのための投稿を [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn) に書いてください。投稿には次のものを(英語で)入れて下さい:
 
-    - "Assessment wanted for Accessibility troubleshooting"のような説明的なタイトル。
-    - 何を試して、どうしてほしいのかの詳細。つまり行き詰まって助けてほしいのか、採点評価してほしいのか。
-    - オンラインで共有できるエディター (上記ステップ 1 で触れたもの)での例のリンク。これは身につけるとよい習慣です — コーティングの問題を、他の人がコードを見ずに助けるのは困難です。
-    - 助けてもらいたい問題が見つかるような、タスクや評価のページのリンク
+   - "Assessment wanted for Accessibility troubleshooting"のような説明的なタイトル。
+   - 何を試して、どうしてほしいのかの詳細。つまり行き詰まって助けてほしいのか、採点評価してほしいのか。
+   - オンラインで共有できるエディター (上記ステップ 1 で触れたもの)での例のリンク。これは身につけるとよい習慣です — コーティングの問題を、他の人がコードを見ずに助けるのは困難です。
+   - 助けてもらいたい問題が見つかるような、タスクや評価のページのリンク
 
 {{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}

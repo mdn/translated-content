@@ -1,16 +1,6 @@
 ---
 title: downloads.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onCreated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downlaods
-  - onCreated
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onCreated
 ---
 
@@ -23,9 +13,9 @@ L'écouteur reçoit l'objet {{WebExtAPIRef('downloads.DownloadItem')}} en questi
 ## Syntaxe
 
 ```js
-browser.downloads.onCreated.addListener(listener)
-browser.downloads.onCreated.removeListener(listener)
-browser.downloads.onCreated.hasListener(listener)
+browser.downloads.onCreated.addListener(listener);
+browser.downloads.onCreated.removeListener(listener);
+browser.downloads.onCreated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

@@ -1,14 +1,7 @@
 ---
 title: Glisser et déposer
 slug: Web/API/HTML_Drag_and_Drop_API
-tags:
-  - Avancé
-  - Glisser-deposer
-  - Guide
-  - HTML
-  - drag and drop
 translation_of: Web/API/HTML_Drag_and_Drop_API
-original_slug: Web/API/API_HTML_Drag_and_Drop
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -75,7 +68,7 @@ Dans cette section, nous allons voir les premières étapes nécessaires aux fon
 
 ### Identifier ce qui peut être déplacé
 
-Pour qu'un élément puisse être déplacé, il faut lui ajouter l'attribut {{htmlattrxref("draggable")}} ainsi que le gestionnaire d'évènement global {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} :
+Pour qu'un élément puisse être déplacé, il faut lui ajouter l'attribut [`draggable`](/fr/docs/Web/HTML/Global_attributes#draggable) ainsi que le gestionnaire d'évènement global {{domxref("GlobalEventHandlers.ondragstart","ondragstart")}} :
 
 ```html
 <script>

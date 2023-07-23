@@ -1,13 +1,6 @@
 ---
 title: Document.releaseCapture()
 slug: Web/API/Document/releaseCapture
-tags:
-  - API
-  - Capture
-  - DOM
-  - Document
-  - Méthodes
-  - Souris
 translation_of: Web/API/Document/releaseCapture
 ---
 

@@ -44,13 +44,13 @@ Now you need to fork and clone both the [content repo](https://github.com/mdn/co
 
 1. Navigate to your local clone of the content repository fork:
 
-    ```bash
-    cd ~/path/to/content
-    ```
+   ```bash
+   cd ~/path/to/content
+   ```
 
 2. Run the command `yarn install` to fetch the latest packages and get the local MDN testing environment set up. It is also recommended that you run `yarn install` before every update you do to the source, to make sure you have the latest packages.
 
-3. Next, create an environment variable called `CONTENT_TRANSLATED_ROOT` containing the path to the *translated-content* repo’s `files` directory. You could do this for a single session like so:
+3. Next, create an environment variable called `CONTENT_TRANSLATED_ROOT` containing the path to the _translated-content_ repo’s `files` directory. You could do this for a single session like so:
 
    ```bash
    export CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files
@@ -82,5 +82,5 @@ Over in the translated-content repo, decide what change you want to make, and th
 
 For more information, we'd like to suggest that you go to the [content repo](https://github.com/mdn/content) and read its contribution guide, particularly to learn about [how to get started](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#getting-started), [pull request etiquette](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#pull-request-etiquette), and common actions such as [adding](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#adding-a-new-document), [moving](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#moving-documents), or [deleting](https://github.com/mdn/content/blob/main/CONTRIBUTING.md#deleting-a-document) documents.
 
-[Guidelines document]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines
-[Writing style guide]: https://developer.mozilla.org/en-US/docs/MDN/Guidelines/Writing_style_guide
+[Guidelines document]: https://developer.mozilla.org/docs/MDN/Writing_guidelines
+[Writing style guide]: https://developer.mozilla.org/docs/MDN/Writing_guidelines/Writing_style_guide

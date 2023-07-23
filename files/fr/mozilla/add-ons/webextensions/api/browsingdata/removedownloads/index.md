@@ -1,15 +1,6 @@
 ---
 title: browsingData.removeDownloads()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeDownloads
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeDownloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeDownloads
 ---
 
@@ -28,8 +19,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.browsingData.removeDownloads(
-  removalOptions            // RemovalOptions object
-)
+  removalOptions, // RemovalOptions object
+);
 ```
 
 ### Paramètres
@@ -62,11 +53,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removeDownloads(
-  {since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removeDownloads({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Supprime tous les enregistrements d'objets téléchargés :
@@ -80,8 +71,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeDownloads({}).
-then(onRemoved, onError);
+browser.browsingData.removeDownloads({}).then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}

@@ -1,13 +1,7 @@
 ---
 title: HTML
 slug: Glossary/HTML
-tags:
-  - Encodage
-  - Glossaire
-  - HTML
-  - l10n:priority
 translation_of: Glossary/HTML
-original_slug: Glossaire/HTML
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Glossaire")}}

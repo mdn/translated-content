@@ -1,11 +1,6 @@
 ---
 title: IDBDatabase
 slug: Web/API/IDBDatabase
-tags:
-  - API
-  - IndexedDB
-  - Interface
-  - Reference
 translation_of: Web/API/IDBDatabase
 ---
 
@@ -24,7 +19,7 @@ Cet objet hérite de [EventTarget](/fr/docs/Web/API/EventTarget).
 - {{domxref("IDBDatabase.close()")}}
   - : Ferme de façon asynchrone la connexion à la base de données.
 - {{domxref("IDBDatabase.createObjectStore()")}}
-  - : Ajoute un magasin d’objet ou un index à la base de donnéeset le renvoie.
+  - : Ajoute un magasin d'objet ou un index à la base de donnéeset le renvoie.
 - {{domxref("IDBDatabase.deleteObjectStore()")}}
   - : À partir d'un nom donné, supprime un magasin d'objet et les index associés.
 - {{domxref("IDBDatabase.transaction()")}}
@@ -42,11 +37,11 @@ Cet objet hérite de [EventTarget](/fr/docs/Web/API/EventTarget).
 ### Gestionnaires d'événements
 
 - {{domxref("IDBDatabase.onabort")}}
-  - : S'exécute au déclenchement de l'événement `abort` quand la tentative d’accès à la base de donnée est interrompue.
+  - : S'exécute au déclenchement de l'événement `abort` quand la tentative d'accès à la base de donnée est interrompue.
 - {{domxref("IDBDatabase.onerror")}}
-  - : S’exécute au déclenchement de l'événement `error` quand la connexion à la base de donnée échoue.
+  - : S'exécute au déclenchement de l'événement `error` quand la connexion à la base de donnée échoue.
 - {{domxref("IDBDatabase.onversionchange")}}
-  - : S’exécute au déclenchement de l'événement `versionchange` quand la structure de la base de donnée change (l'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} ou {{domxref("IDBFactory.deleteDatabase")}} à été demandé ailleurs (probablement dans une autre fenêtre ou onglet sur le même ordinateur). Cela est différent de la transaction correspondant à un changement de version (cf. {{domxref("IDBVersionChangeEvent")}}) mais les concepts sont liés.
+  - : S'exécute au déclenchement de l'événement `versionchange` quand la structure de la base de donnée change (l'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} ou {{domxref("IDBFactory.deleteDatabase")}} à été demandé ailleurs (probablement dans une autre fenêtre ou onglet sur le même ordinateur). Cela est différent de la transaction correspondant à un changement de version (cf. {{domxref("IDBVersionChangeEvent")}}) mais les concepts sont liés.
 
 ## Exemples
 

@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.decodedBodySize
 slug: Web/API/PerformanceResourceTiming/decodedBodySize
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - decodedBodySize
 translation_of: Web/API/PerformanceResourceTiming/decodedBodySize
 ---
 

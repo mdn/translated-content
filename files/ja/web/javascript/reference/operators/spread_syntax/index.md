@@ -275,5 +275,5 @@ JavaScript エンジンには、引数の個数に上限があります。関数
 
 ## 関連情報
 
-- {{jsxref("Functions/rest_parameters", "残余引数", "", 1)}} (こちらも ‘`...`’)
-- {{jsxref("Function.prototype.apply()")}} (こちらも ‘`...`’)
+- {{jsxref("Functions/rest_parameters", "残余引数", "", 1)}} (こちらも '`...`')
+- {{jsxref("Function.prototype.apply()")}} (こちらも '`...`')

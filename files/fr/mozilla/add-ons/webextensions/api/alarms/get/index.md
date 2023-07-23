@@ -1,16 +1,6 @@
 ---
 title: alarms.get()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/get
 ---
 
@@ -22,8 +12,8 @@ Cette méthode permet d'obtenir une alarme en fonction de son nom. Cette fonctio
 
 ```js
 var getAlarm = browser.alarms.get(
-  name  // optional string
-)
+  name, // optional string
+);
 ```
 
 ### Paramètres

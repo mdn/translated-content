@@ -28,8 +28,8 @@ var ball;
 
 ```js
 function preload() {
-    // ...
-    game.load.image('ball', 'img/ball.png');
+  // ...
+  game.load.image("ball", "img/ball.png");
 }
 ```
 
@@ -41,7 +41,7 @@ function preload() {
 
 ```js
 function create() {
-    ball = game.add.sprite(50, 50, 'ball');
+  ball = game.add.sprite(50, 50, "ball");
 }
 ```
 

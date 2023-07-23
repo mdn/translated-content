@@ -1,11 +1,6 @@
 ---
 title: AudioBuffer
 slug: Web/API/AudioBuffer
-tags:
-  - API
-  - Experimental
-  - Reference
-  - Web Audio API
 translation_of: Web/API/AudioBuffer
 ---
 

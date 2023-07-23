@@ -14,7 +14,7 @@ original_slug: Web/Guide/HTML/Content_categories
 - 表单相关的内容类，描述了表单相关元素共有的内容规范；
 - 特殊内容类，描述了仅仅在某些特殊元素上才需要遵守的内容规范，通常这些元素都有特殊的上下文关系。
 
-[![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)](/en-US/docs/Web/Guide/HTML/Content_categories/content_categories_venn.png)
+[![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)](/zh-CN/docs/Web/Guide/HTML/Content_categories/content_categories_venn.png)
 
 ## 主内容分类
 

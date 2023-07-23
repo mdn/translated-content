@@ -86,7 +86,7 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)someCookieName\s*\=\s*([^;]*).*$)|^.
 |*|
 |*|  A complete cookies reader/writer framework with full unicode support.
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/document.cookie
+|*|  https://developer.mozilla.org/zh-CN/docs/DOM/document.cookie
 |*|
 |*|  This framework is released under the GNU Public License, version 3 or later.
 |*|  http://www.gnu.org/licenses/gpl-3.0-standalone.html

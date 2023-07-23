@@ -1,12 +1,7 @@
 ---
 title: do...while
 slug: Web/JavaScript/Reference/Statements/do...while
-tags:
-  - JavaScript
-  - Reference
-  - Statement
 translation_of: Web/JavaScript/Reference/Statements/do...while
-original_slug: Web/JavaScript/Reference/Instructions/do...while
 ---
 
 {{jsSidebar("Statements")}}

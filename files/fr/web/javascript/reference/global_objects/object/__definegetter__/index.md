@@ -1,15 +1,7 @@
 ---
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
-tags:
-  - Déprécié
-  - JavaScript
-  - Méthode
-  - Object
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/defineGetter
 ---
 
 {{JSRef}}
@@ -82,4 +74,4 @@ console.log(o.gimmeFive); // 5
 - [`Object.prototype.__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - [Guide JavaScript : définir des getters et setters](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters)
 - [\[Billet de blog\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) (en anglais)
-- {{bug(647423)}}
+- [bug Firefox 647423](https://bugzil.la/647423)

@@ -1,56 +1,60 @@
 ---
-title: FormData.values()
+title: "FormData: values() メソッド"
+short-title: values()
 slug: Web/API/FormData/values
+l10n:
+  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
 ---
 
 {{APIRef("XMLHttpRequest")}}
 
-**`FormData.values()`** メソッドは {{jsxref("Iteration_protocols",'iterator')}} を返し、このオブジェクトに含まれる全ての値を通過できるようにします。値は {{domxref("USVString")}} または {{domxref("Blob")}} オブジェクトです。
+**`FormData.values()`** メソッドは、この {{domxref("FormData")}} に含まれるすべての値を走査する[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)を返します。値は文字列または {{domxref("Blob")}} オブジェクトです。
 
-> **メモ:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
+> **メモ:** このメソッドは[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)で使用できます。
 
 ## 構文
 
-```
-formData.values();
+```js-nolint
+values()
 ```
 
-### 返り値
+### 引数
 
-{{jsxref("Iteration_protocols","iterator")}} を返します。
+なし。
+
+### 返値
+
+この {{domxref("FormData")}} の値の[イテレーター](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)です。
 
 ## 例
 
 ```js
-// テストの FormData オブジェクトを作成
-var formData = new FormData();
-formData.append('key1', 'value1');
-formData.append('key2', 'value2');
+const formData = new FormData();
+formData.append("key1", "value1");
+formData.append("key2", "value2");
 
 // 値を表示
-for (var value of formData.values()) {
-   console.log(value);
+for (const value of formData.values()) {
+  console.log(value);
 }
 ```
 
-結果は次のとおりです:
+結果は次のとおりです。
 
 ```
 value1
 value2
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.FormData.values")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/ja/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/ja/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
+- [FormData オブジェクトの使用](/ja/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

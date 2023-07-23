@@ -1,31 +1,7 @@
 ---
 title: Guide des types et formats de fichiers d'images
 slug: Web/Media/Formats/Image_types
-tags:
-  - APNG
-  - BMP
-  - Bitmap
-  - Diagrams
-  - File
-  - File Types
-  - Filetype
-  - Graphics
-  - Guide
-  - ICO
-  - Icons
-  - Image
-  - Images
-  - JPEG
-  - JPG
-  - Media
-  - PNG
-  - Photos
-  - SVG
-  - WebP
-  - gif
-  - icon
 translation_of: Web/Media/Formats/Image_types
-original_slug: Web/Media/Formats/Types_des_images
 ---
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Media")}}
@@ -1619,10 +1595,13 @@ Par exemple, si vous affichez un diagramme mieux affiché avec SVG, mais que vou
 
 ```html
 <picture>
-  <source srcset="diagram.svg" type="image/svg+xml">
-  <source srcset="diagram.png" type="image/png">
-  <img src="diagram.gif" width="620" height="540"
-       alt="Diagramme montrant les canaux de données">
+  <source srcset="diagram.svg" type="image/svg+xml" />
+  <source srcset="diagram.png" type="image/png" />
+  <img
+    src="diagram.gif"
+    width="620"
+    height="540"
+    alt="Diagramme montrant les canaux de données" />
 </picture>
 ```
 

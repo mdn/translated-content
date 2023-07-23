@@ -1,11 +1,6 @@
 ---
 title: 'Attribut HTML : multiple'
 slug: Web/HTML/Attributes/multiple
-tags:
-  - Attribute
-  - Attributes
-  - Constraint validation
-  - HTML
 translation_of: Web/HTML/Attributes/multiple
 ---
 

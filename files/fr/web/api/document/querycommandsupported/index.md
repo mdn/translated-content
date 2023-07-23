@@ -1,13 +1,6 @@
 ---
 title: Document.queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
-tags:
-  - API
-  - Commandes
-  - DOM
-  - Document
-  - Méthodes
-  - editeur
 translation_of: Web/API/Document/queryCommandSupported
 ---
 

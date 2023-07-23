@@ -16,7 +16,7 @@ slug: Web/JavaScript/Reference/Errors/Deprecated_octal
 
 ## 에러 타입
 
-{{jsxref("SyntaxError")}} [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) 내에서만.
+{{jsxref("SyntaxError")}} [strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode) 내에서만.
 
 ## 무엇이 잘 못 되었을까?
 
@@ -62,5 +62,5 @@ slug: Web/JavaScript/Reference/Errors/Deprecated_octal
 
 ## See also
 
-- [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)
-- [Warning: 08/09 is not a legal ECMA-262 octal constant](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_octal)
+- [Lexical grammar](/ko/docs/Web/JavaScript/Reference/Lexical_grammar#Octal)
+- [Warning: 08/09 is not a legal ECMA-262 octal constant](/ko/docs/Web/JavaScript/Reference/Errors/Bad_octal)

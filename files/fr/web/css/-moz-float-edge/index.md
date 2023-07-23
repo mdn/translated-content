@@ -1,11 +1,6 @@
 ---
 title: '-moz-float-edge'
 slug: Web/CSS/-moz-float-edge
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-moz-float-edge
 ---
 
@@ -84,4 +79,4 @@ Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla e
 
 ## Voir aussi
 
-- {{bug(432891)}}
+- [bug Firefox 432891](https://bugzil.la/432891)

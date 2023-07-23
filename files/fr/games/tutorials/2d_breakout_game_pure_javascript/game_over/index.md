@@ -1,16 +1,7 @@
 ---
 title: Fin de partie
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
-tags:
-  - Canvas
-  - Débutant
-  - Fin de partie
-  - JavaScript
-  - Jeux
-  - Tutoriel
-  - game over
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
-original_slug: Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over
 ---
 
 {{GamesSidebar}}
@@ -26,12 +17,12 @@ C'est sympa de regarder la balle rebondir contre les murs et de pouvoir bouger l
 Essayons d'intégrer une fin de partie dans le jeu . Voyons une partie du code de la troisième leçon, où nous faisions rebondir la balle contre les murs :
 
 ```js
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+  dx = -dx;
 }
 
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-    dy = -dy;
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+  dy = -dy;
 }
 ```
 
@@ -54,12 +45,12 @@ var interval = setInterval(draw, 10);
 Puis remplacez la seconde instruction `if` par le code suivant:
 
 ```js
-if(y + dy < ballRadius) {
-    dy = -dy;
-} else if(y + dy > canvas.height-ballRadius) {
-    alert("GAME OVER");
-    document.location.reload();
-    clearInterval(interval); // Needed for Chrome to end game
+if (y + dy < ballRadius) {
+  dy = -dy;
+} else if (y + dy > canvas.height - ballRadius) {
+  alert("GAME OVER");
+  document.location.reload();
+  clearInterval(interval); // Needed for Chrome to end game
 }
 ```
 
@@ -68,17 +59,16 @@ if(y + dy < ballRadius) {
 La dernière chose à faire dans cette leçon est de créer une sorte de détection de collision entre la raquette et la balle, de sorte qu'elle puisse rebondir et revenir dans la zone de jeu. La chose la plus facile à faire est de vérifier si le centre de la balle se trouve entre les bords droit et gauche du paddle. Mettez à jour le dernier bout de code que vous venez de modifier, comme-ci dessous :
 
 ```js
-if(y + dy < ballRadius) {
+if (y + dy < ballRadius) {
+  dy = -dy;
+} else if (y + dy > canvas.height - ballRadius) {
+  if (x > paddleX && x < paddleX + paddleWidth) {
     dy = -dy;
-} else if(y + dy > canvas.height-ballRadius) {
-    if(x > paddleX && x < paddleX + paddleWidth) {
-        dy = -dy;
-    }
-    else {
-        alert("GAME OVER");
-        document.location.reload();
-        clearInterval(interval);
-    }
+  } else {
+    alert("GAME OVER");
+    document.location.reload();
+    clearInterval(interval);
+  }
 }
 ```
 

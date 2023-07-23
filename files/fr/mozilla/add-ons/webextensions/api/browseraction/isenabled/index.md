@@ -1,15 +1,6 @@
 ---
 title: browserAction.isEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browserAction
-  - isEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled
 ---
 
@@ -23,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 let gettingIsEnabled = browser.browserAction.isEnabled(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -52,7 +43,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 Vérifiez l'état global :
 
 ```js
-browser.browserAction.isEnabled({}).then(result => {
+browser.browserAction.isEnabled({}).then((result) => {
   console.log(result);
 });
 ```
@@ -62,11 +53,11 @@ Vérifiez l'état de l'onglet actuellement actif :
 ```js
 async function enabledInActiveTab() {
   let tabs = await browser.tabs.query({
-    currentWindow:true,
-    active: true
+    currentWindow: true,
+    active: true,
   });
   let enabled = await browser.browserAction.isEnabled({
-    tabId: tabs[0].id
+    tabId: tabs[0].id,
   });
   console.log(enabled);
 }

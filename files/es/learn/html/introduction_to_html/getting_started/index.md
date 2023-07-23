@@ -165,7 +165,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -243,8 +243,7 @@ No todos los elementos siguen el patrón de etiqueta de apertura, contenido y et
 
 ```html
 <img
-  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"
-/>
+  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" />
 ```
 
 Este texto mostrará lo siguiente en tu página:
@@ -390,7 +389,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -419,7 +418,7 @@ textarea.onkeyup = function () {
 
 ### Atributos booleanos
 
-En ocasiones puedes ver atributos escritos sin valor. Esto está permitido. Estos se denominan atributos booleanos. Los atributos booleanos solo pueden tener un valor, que generalmente es el mismo que el nombre del atributo. Por ejemplo, considera el atributo {{htmlattrxref("disabled", "input")}}, que puedes asignar a los elementos de entrada del formulario. (Usa esto para _deshabilitar_ los elementos de entrada del formulario para que el usuario no pueda realizar entradas. Los elementos desactivados suelen tener una apariencia atenuada). Por ejemplo:
+En ocasiones puedes ver atributos escritos sin valor. Esto está permitido. Estos se denominan atributos booleanos. Los atributos booleanos solo pueden tener un valor, que generalmente es el mismo que el nombre del atributo. Por ejemplo, considera el atributo [`disabled`](/es/docs/Web/HTML/Element/input#disabled), que puedes asignar a los elementos de entrada del formulario. (Usa esto para _deshabilitar_ los elementos de entrada del formulario para que el usuario no pueda realizar entradas. Los elementos desactivados suelen tener una apariencia atenuada). Por ejemplo:
 
 ```bash
 <input type="text" disabled="disabled">
@@ -502,7 +501,7 @@ Así que tendrás que hacer esto:
 Los elementos HTML no son muy útiles por sí mismos. Ahora veremos cómo combinar los elementos individuales para formar una página HTML completa:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -665,7 +664,7 @@ function insertAtCaret(text) {
   var front = textarea.value.substring(0, caretPos);
   var back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -699,8 +698,7 @@ En los ejemplos anteriores se han incluido espacios en blanco y saltos de línea
 ```html
 <p>Los perros son tontos.</p>
 
-<p>Los    perros        son
-         tontos.</p>
+<p>Los perros son tontos.</p>
 ```
 
 No importa cuántos espacios en blanco se utilicen (incluye tanto caracteres de espacio como saltos de línea) el intérprete de HTML reduce cada secuencia de espacio en blanco a un único espacio al interpretar el código. Entonces, ¿por qué utilizar espacios en blanco? La respuesta está en la legibilidad.
@@ -726,7 +724,8 @@ El equivalente de referencia de caracter podría recordarse fácilmente porque e
 Considera los dos siguientes párrafos:
 
 ```html
-<p>En HTML, defines un párrafo con el elemento <p>.</p>
+<p>En HTML, defines un párrafo con el elemento</p>
+<p>.</p>
 
 <p>En HTML, defines un párrafo con el elemento &lt;p&gt;.</p>
 ```

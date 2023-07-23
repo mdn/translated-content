@@ -8,9 +8,28 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 先のいくつかのレッスンで、あなたは CSS を使ってシンプルなテキストドキュメントにスタイルを追加してフォーマットする方法を学びました。ここでは、それを実際に行ってみましょう。
 
-| 前提条件: | 基礎コンピューターリテラシー、[基本的なソフトウェアのインストール](/ja/Learn/Getting_started_with_the_web/Installing_basic_software)、[ファイル操作](/ja/Learn/Getting_started_with_the_web/Dealing_with_files)の基礎知識 HTML の基礎 ([HTML の入門](/ja/docs/Learn/HTML/Introduction_to_HTML)で学ぶ)、CSS の基礎(このモジュールの残り) |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目的:     | いくつかの CSS を試し、知識レベルを確認します                                                                                                                                                                                                                                                                                           |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">前提条件:</th>
+      <td>
+        基本的なコンピュータリテラシー、<a
+          href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >基本的なソフトウェアのインストール</a
+        >、基本的な<a
+          href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >ファイル操作</a
+        >や HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML"
+          >HTML の入門</a
+        >で学ぶ）、CSS の基礎（このモジュールの残り部分）。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">目的:</th>
+      <td>いくつかの CSS を試し、知識レベルを確認します。</td>
+    </tr>
+  </tbody>
+</table>
 
 ## さあ始めよう
 

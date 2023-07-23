@@ -1,15 +1,6 @@
 ---
 title: webRequest.filterResponseData()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - filterResponseData
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
 ---
 
@@ -24,8 +15,8 @@ Pour utiliser cette API, vous devez avoir la [permission de l'API](/fr/Add-ons/W
 
 ```js
 var filter = browser.webRequest.filterResponseData(
-  requestId       // string
-)
+  requestId, // string
+);
 ```
 
 ### Paramètres
@@ -47,22 +38,22 @@ function listener(details) {
   let decoder = new TextDecoder("utf-8");
   let encoder = new TextEncoder();
 
-  filter.ondata = event => {
-    let str = decoder.decode(event.data, {stream: true});
+  filter.ondata = (event) => {
+    let str = decoder.decode(event.data, { stream: true });
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    str = str.replace(/Example/g, 'WebExtension Example');
+    str = str.replace(/Example/g, "WebExtension Example");
     filter.write(encoder.encode(str));
     filter.disconnect();
-  }
+  };
 
   return {};
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.com/*"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.com/*"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

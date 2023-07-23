@@ -1,14 +1,7 @@
 ---
 title: Netscape Navigator
 slug: Glossary/Netscape_Navigator
-tags:
-  - Glossaire
-  - Navigateur
-  - Navigation
-  - Netscape
-  - Netscape Navigator
 translation_of: Glossary/Netscape_Navigator
-original_slug: Glossaire/Netscape_Navigator
 ---
 
 Netscape Navigator, ou Netscape, était le principal {{glossary("navigateur")}} des années 90. Il était basé sur Mosaic et l'équipe de Netscape était dirigée par Marc Andreessen, un programmeur qui a également écrit du code pour Mosaic.

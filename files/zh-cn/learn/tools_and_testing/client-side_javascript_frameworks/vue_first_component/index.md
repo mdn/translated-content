@@ -7,7 +7,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 
 现在是时候深入了解 Vue，并创建我们自己的自定义组件了--我们将从创建一个组件来表示待办事项列表中的每个项目开始。在这一过程中，我们将学习一些重要的概念，例如在其他组件中调用组件，通过道具向它们传递数据，以及保存数据状态。
 
-> **备注：** 如果你需要根据我们的版本检查您的代码，你可以在我们的 [todo-vue](https://github.com/mdn/todo-vue) 仓库找到中找到示例 Vue 程序代码的完成版本。有关运行中的实时版本，请参见 <https://mdn.github.io/todo-vue/dist/>。
+> **备注：** 如果你需要根据我们的版本检查您的代码，你可以在我们的 [todo-vue](https://github.com/mdn/todo-vue) 仓库找到中找到示例 Vue 程序代码的完成版本。有关运行中的实时版本，请参见 <https://mdn.github.io/todo-vue/>。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -64,16 +64,16 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 现在我们可以开始为`ToDoItem`添加实际内容了。Vue 模板目前只允许一个根元素--一个元素需要包裹模板内的所有内容（Vue 3 发布后会改变这种情况）。我们将为该根元素使用一个[`<div>`](/zh-CN/docs/Web/HTML/Element/div)。
 
 1. 现在在你的组件模板中添加一个空的`<div>`。
-2. 在那个`<div>`里面，让我们添加一个`checkbox`和一个对应的`label`。给复选框添加一个`id`，并添加一个`for`属性，将复选框映射到标签上，如下图所示。.
+2. 在那个 `<div>` 里面，让我们添加一个 `checkbox` 和一个对应的 `label`。给复选框添加一个 `id`，并添加一个 `for` 属性，将复选框映射到标签上，如下所示：
 
-    ```html
-    <template>
-      <div>
-        <input type="checkbox" id="todo-item" checked="false" />
-        <label for="todo-item">My Todo Item</label>
-      </div>
-    </template>
-    ```
+   ```html
+   <template>
+     <div>
+       <input type="checkbox" id="todo-item" checked="false" />
+       <label for="todo-item">My Todo Item</label>
+     </div>
+   </template>
+   ```
 
 ### 在应用程序中使用 TodoItem 组件
 
@@ -82,28 +82,28 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 1. 再次打开`App.vue`文件。
 2. 在`<script>`标签的顶部，添加以下内容来引入`ToDoItem`组件：
 
-    ```js
-    import ToDoItem from './components/ToDoItem.vue';
-    ```
+   ```js
+   import ToDoItem from "./components/ToDoItem.vue";
+   ```
 
 3. 在你的组件对象里面，添加 `components` 属性，然后在它里面添加您的 ToDoItem 组件进行注册。
 
 你的`<script>`内容现在应该是这样的：
 
 ```js
-import ToDoItem from './components/ToDoItem.vue';
+import ToDoItem from "./components/ToDoItem.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    ToDoItem
-  }
+    ToDoItem,
+  },
 };
 ```
 
 这和之前 Vue CLI 注册`HelloWorld`组件的方式是一样的。
 
-要在应用程序中实际展示`ToDoItem`组件，你需要在`<template>`模板内添加一个`<to-do-item>/to-do-item>`元素。请注意，组件文件名及其在 JavaScript 中的表示方式总是用大写驼色（例如`ToDoList`），而等价的自定义元素总是用连字符小写（例如`<to-do-list>`）。
+要在应用程序中实际展示 `ToDoItem` 组件，你需要在 `<template>` 模板内添加一个 `<to-do-item></to-do-item>` 元素。请注意，组件文件名及其在 JavaScript 中的表示方式总是用大写驼色（例如 `ToDoList`），而等价的自定义元素总是用连字符小写（例如 `<to-do-list>`）。
 
 1. 在`<h1>`下面，创建一个无序列表 (`<ul>`)，其中包含一个列表项 (`<li>`)。
 2. 在列表项 (\<li>) 里面添加`<to-do-item></to-do-item>`.
@@ -147,13 +147,13 @@ export default {
 3. 在这个对象里，添加两个 key 为 `label` 和 `done` 属性。
 4. `label` 的值应该是一个带有两个属性的对象（或者是 **props**，因为它们被调用在可找到的组件的 context）
 
-    1. 第一个 `required` 属性，它的值是 `true`. 这将会告诉 Vue 说，我们希望每个该组件的实例都必须有个 label 字段。如果 `ToDoItem` 组件没有 label 字段的话，Vue 会提示警告。
-    2. 第二是添加一个 `type` 属性。这个属性的值设为 JavaScript 的 `String` 类型。这等于告诉 Vue，我们希望 type 属性的值是 String 类型的。
+   1. 第一个 `required` 属性，它的值是 `true`. 这将会告诉 Vue 说，我们希望每个该组件的实例都必须有个 label 字段。如果 `ToDoItem` 组件没有 label 字段的话，Vue 会提示警告。
+   2. 第二是添加一个 `type` 属性。这个属性的值设为 JavaScript 的 `String` 类型。这等于告诉 Vue，我们希望 type 属性的值是 String 类型的。
 
 5. 现在转向 `done` prop.
 
-    1. 首先添加一个 `default` 属性，它的值是 `false`。这意味着当没有 `done` prop 被传递给 `ToDoItem` 组件时， `done` prop 的值会是 false（注意 default 属性不是必需的————我们只在非 required props 里才需要 `default` ）
-    2. 接着，添加一个 `type` 属性，值为 `Boolean`。这将告诉 Vue，我们希望这个 prop 的值是 JavaScript 的 Boolean 类型。
+   1. 首先添加一个 `default` 属性，它的值是 `false`。这意味着当没有 `done` prop 被传递给 `ToDoItem` 组件时， `done` prop 的值会是 false（注意 default 属性不是必需的————我们只在非 required props 里才需要 `default` ）
+   2. 接着，添加一个 `type` 属性，值为 `Boolean`。这将告诉 Vue，我们希望这个 prop 的值是 JavaScript 的 Boolean 类型。
 
 你的组件对象现在看起来应该像是这样：
 
@@ -174,7 +174,7 @@ export default {
 
 在你的 `<template>` 中，将 `<label>` 标签的 contents 内容修改为 `\{{label}}`。
 
-`\{{}}` 是 Vue 中的一个特殊的模版语法，它能在 template 内打印 类中定义的 JavaScript 表达式的结果，包括值和方法。重要的是， `\{{}}` 里的内容是作为 text 文本显示，而非 HTML。在此例中，我们打印的是 `label` 的值。
+`\{{}}` 是 Vue 中的一个特殊的模版语法，它能在模版内打印类中定义的 JavaScript 表达式的结果，包括值和方法。重要的是，`\{{}}` 里的内容是作为文本显示，而非 HTML。在此例中，我们打印的是 `label` 的值。
 
 现在，你组件的 template 部分应该是像这样：
 
@@ -241,13 +241,13 @@ data() {
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
+    done: { default: false, type: Boolean },
   },
   data() {
     return {
-      isDone: this.done
+      isDone: this.done,
     };
-  }
+  },
 };
 ```
 
@@ -307,25 +307,25 @@ npm install --save lodash.uniqueid
 现在，我们可以将此包导入我们的 `ToDoItem` 组件中。在 `ToDoItem.vue` 的 `<script>` 元素的顶部添加以下行：
 
 ```js
-import uniqueId from 'lodash.uniqueid';
+import uniqueId from "lodash.uniqueid";
 ```
 
 接下来，将字段 `id` 添加到我们的数据属性中，这样组件对象最终看起来就是这样（`uniqueId()` 返回指定的前缀——`todo`——并附加一个唯一的字符串）：
 
 ```js
-import uniqueId from 'lodash.uniqueid';
+import uniqueId from "lodash.uniqueid";
 
 export default {
   props: {
     label: { required: true, type: String },
-    done: { default: false, type: Boolean }
+    done: { default: false, type: Boolean },
   },
   data() {
     return {
       isDone: this.done,
-      id: uniqueId('todo-')
+      id: uniqueId("todo-"),
     };
-  }
+  },
 };
 ```
 

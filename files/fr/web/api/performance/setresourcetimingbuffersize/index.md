@@ -1,12 +1,6 @@
 ---
 title: performance.setResourceTimingBufferSize()
 slug: Web/API/Performance/setResourceTimingBufferSize
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - Performance web
 translation_of: Web/API/Performance/setResourceTimingBufferSize
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: 'RangeError: radix must be an integer'
 slug: Web/JavaScript/Reference/Errors/Bad_radix
-tags:
-  - Erreurs
-  - JavaScript
-  - RangeError
 translation_of: Web/JavaScript/Reference/Errors/Bad_radix
-original_slug: Web/JavaScript/Reference/Erreurs/Bad_radix
 ---
 
 {{jsSidebar("Errors")}}

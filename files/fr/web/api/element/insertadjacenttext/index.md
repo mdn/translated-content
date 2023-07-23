@@ -1,13 +1,6 @@
 ---
 title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
-tags:
-  - API
-  - DOM
-  - Element
-  - Insertion
-  - Méthodes
-  - Texte
 translation_of: Web/API/Element/insertAdjacentText
 ---
 

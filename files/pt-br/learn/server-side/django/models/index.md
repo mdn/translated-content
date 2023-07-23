@@ -12,7 +12,7 @@ Este artigo mostra como definir os modelos para o website [LocalLibrary](/pt-BR/
     <tr>
       <th scope="row">Pré-requisitos:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Django/skeleton_website"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/skeleton_website"
           >Django Tutorial Part 2: Criar um esqueleto de um site</a
         >.
       </td>
@@ -92,7 +92,7 @@ Nas seções abaixa, exploraremos detalhadamente cada um dos recursos dentro do 
 
 #### Campos (Fields)
 
-Um modelo pode ter um número árbitrário de campos, de qualquer tipo -- cada um representa uma coluna de dados que queremos armazenar em uma de nossas tabelas de banco de dados. Cada registro do banco de dados (row - linha) consitirá em um valor de cada campo. Vamos ver o exemplo visto acima:
+Um modelo pode ter um número árbitrário de campos, de qualquer tipo — cada um representa uma coluna de dados que queremos armazenar em uma de nossas tabelas de banco de dados. Cada registro do banco de dados (row - linha) consitirá em um valor de cada campo. Vamos ver o exemplo visto acima:
 
 ```js
 my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')

@@ -1,5 +1,5 @@
 ---
-title: '::before (:before)'
+title: "::before (:before)"
 slug: Web/CSS/::before
 ---
 

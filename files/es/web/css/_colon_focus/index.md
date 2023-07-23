@@ -1,5 +1,5 @@
 ---
-title: ':focus'
+title: ":focus"
 slug: Web/CSS/:focus
 ---
 

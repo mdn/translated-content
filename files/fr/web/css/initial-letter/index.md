@@ -1,11 +1,6 @@
 ---
 title: initial-letter
 slug: Web/CSS/initial-letter
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/initial-letter
 ---
 

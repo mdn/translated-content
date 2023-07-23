@@ -1,16 +1,6 @@
 ---
 title: tabs.print()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/print
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Reference
-  - WebExtensions
-  - impression
-  - print
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/print
 ---
 
@@ -21,7 +11,7 @@ Appelez cette fonction pour imprimer le contenu de l'onglet actif. Si cette fonc
 ## Syntaxe
 
 ```js
-browser.tabs.print()
+browser.tabs.print();
 ```
 
 ### Paramètres

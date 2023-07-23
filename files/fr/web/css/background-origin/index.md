@@ -1,7 +1,6 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
-browser-compat: css.properties.background-image
 translation_of: Web/CSS/background-origin
 ---
 

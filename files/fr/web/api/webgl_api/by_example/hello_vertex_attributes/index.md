@@ -1,15 +1,7 @@
 ---
 title: Introduction aux attributs de vertex
 slug: Web/API/WebGL_API/By_example/Hello_vertex_attributes
-tags:
-  - Apprendre
-  - Débutant
-  - Exemple
-  - Graphisme
-  - Tutoriel
-  - WebGL
 translation_of: Web/API/WebGL_API/By_example/Hello_vertex_attributes
-original_slug: Web/API/WebGL_API/By_example/Introduction_aux_attributs_vertex
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Hello_GLSL","Apprendre/WebGL/Par_exemple/Générer_des_textures_avec_du_code")}}

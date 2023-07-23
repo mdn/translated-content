@@ -9,9 +9,3 @@ Uma **linguagem de programação dinâmica** é uma linguagem de programação n
 Isso é o oposto das linguagens denominadas **linguagens de programação estática**, nas quais tais mudanças normalmente não são possíveis.
 
 > **Nota:** Note que, embora exista de fato uma conexão entre essa propriedade dinâmica/estática das linguagens de programação e a tipagem dinâmica/estática, ambas estão longe de serem sinônimas.
-
-## Aprenda mais
-
-### Conhecimento geral
-
-- {{Interwiki("wikipedia", "Linguagem de Programação Dinâmica")}} on Wikipedia

@@ -495,7 +495,7 @@ guessField.focus();
 
    页面上的每个元素都有一个 `style` 属性，它本身包含一个对象，其属性包含应用于该元素的所有内联 CSS 样式。让我们可以使用 JavaScript 在元素上动态设置新的 CSS 样式。
 
-## 大功告成...
+## 大功告成
 
 这个示例已经构建完毕，做得好！来尝试运行一下最终的代码，或者[看看我们的最终版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。如果你的版本无法正常工作，请对照[源代码](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)进行检查。
 

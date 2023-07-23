@@ -1,12 +1,6 @@
 ---
 title: Performance API
 slug: Web/API/Performance_API
-tags:
-  - API
-  - Guide
-  - Aperçu
-  - Performance
-  - Performance Web
 translation_of: Web/API/Performance_API
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: 'Window: paste event'
 slug: Web/API/Window/paste_event
-tags:
-  - Evènement
-  - Reference
-  - Window
-  - paste
 translation_of: Web/API/Window/paste_event
 ---
 

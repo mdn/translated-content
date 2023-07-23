@@ -1,11 +1,6 @@
 ---
 title: <li>
 slug: Web/HTML/Element/li
-tags:
-  - Contenu de groupage HTML
-  - Element
-  - HTML
-  - Reference
 translation_of: Web/HTML/Element/li
 ---
 
@@ -19,7 +14,7 @@ L'élément HTML **`<li>`** est utilisé pour représenter un élément dans une
 
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("value")}}
+- `value`
 
   - : Cette valeur entière indique la valeur ordinale en cours de l'élément de liste tel que défini par l'élément {{HTMLElement("ol")}}. La seule valeur autorisée pour cet attribut est un nombre, même si la liste est affichée avec des chiffres romains ou des lettres. Les éléments de la liste qui suivent celui-ci continueront la numérotation à partir de la valeur indiquée. L'attribut **value** n'a pas de signification pour les listes non ordonnées ({{HTMLElement("ul")}}) ou pour les menus ({{HTMLElement("menu")}}).
 
@@ -27,7 +22,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 
     > **Note :** Avant Gecko 9.0, des valeurs négatives étaient incorrectement converties en 0. A partir de Gecko 9.0, toutes les valeurs entières ont été correctement analysées.
 
-- {{htmlattrdef("type")}} {{Deprecated_inline}}
+- `type` {{Deprecated_inline}}
 
   - : Cet attribut de caractère indique le type de numérotation utilisé pour la liste :
 

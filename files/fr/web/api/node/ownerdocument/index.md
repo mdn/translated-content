@@ -1,12 +1,6 @@
 ---
 title: element.ownerDocument
 slug: Web/API/Node/ownerDocument
-tags:
-  - API
-  - DOM
-  - Document
-  - Noeuds
-  - Propriétés
 translation_of: Web/API/Node/ownerDocument
 ---
 

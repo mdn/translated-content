@@ -1,13 +1,7 @@
 ---
 title: REST
 slug: Glossary/REST
-tags:
-  - Architecture
-  - Glossaire
-  - HTTP
-  - Mécanismes web
 translation_of: Glossary/REST
-original_slug: Glossaire/REST
 ---
 
 Representational State Transfer (**REST**) désigne un groupe de contraintes concernant l'architecture logicielle destiné à apporter aux systèmes efficacité, fiabilité et scalabilité. Un système est appelé "RESTful" lorsqu'il adhère à ces contraintes.

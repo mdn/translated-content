@@ -1,16 +1,6 @@
 ---
 title: webNavigation.onReferenceFragmentUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragmentUpdated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onReferenceFragmentUpdated
-  - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragmentUpdated
 ---
 
@@ -20,11 +10,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onReferenceFragm
 
 ```js
 browser.webNavigation.onReferenceFragmentUpdated.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onReferenceFragmentUpdated.removeListener(listener)
-browser.webNavigation.onReferenceFragmentUpdated.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onReferenceFragmentUpdated.removeListener(listener);
+browser.webNavigation.onReferenceFragmentUpdated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -79,12 +69,8 @@ Consigne les URL cibles et les informations de transition supplémentaires pour 
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnReferenceFragmentUpdated(details) {
   console.log("onReferenceFragmentUpdated: " + details.url);
@@ -92,7 +78,10 @@ function logOnReferenceFragmentUpdated(details) {
   console.log("Transition qualifiers: " + details.transitionQualifiers);
 }
 
-browser.webNavigation.onReferenceFragmentUpdated.addListener(logOnReferenceFragmentUpdated, filter);
+browser.webNavigation.onReferenceFragmentUpdated.addListener(
+  logOnReferenceFragmentUpdated,
+  filter,
+);
 ```
 
 {{WebExtExamples}}

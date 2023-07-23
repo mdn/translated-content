@@ -1,14 +1,7 @@
 ---
 title: Number.prototype.toExponential()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toExponential
-tags:
-  - JavaScript
-  - Méthode
-  - Number
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toExponential
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toExponential
 ---
 
 {{JSRef}}

@@ -1,12 +1,6 @@
 ---
 title: TreeWalker.root
 slug: Web/API/TreeWalker/root
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Noeuds
-  - Propriétés
 translation_of: Web/API/TreeWalker/root
 ---
 

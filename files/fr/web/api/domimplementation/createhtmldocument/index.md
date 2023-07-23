@@ -1,14 +1,6 @@
 ---
 title: DOMImplementation.createHTMLDocument()
 slug: Web/API/DOMImplementation/createHTMLDocument
-tags:
-  - API
-  - DOM
-  - DOM Référence(2)
-  - DOM implémentation
-  - Expérimental(2)
-  - Méthode
-  - Référence(2)
 translation_of: Web/API/DOMImplementation/createHTMLDocument
 ---
 

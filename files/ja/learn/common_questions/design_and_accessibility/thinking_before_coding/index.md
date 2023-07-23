@@ -43,7 +43,7 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 はじめに友人と 1 時間ディスカッションするのは良いことですが、不十分です。自分のアイディアを具現化するためにどのような道をたどらなければならないかを明確に把握するためには、座ってアイディアを体系化する必要があります。これを行うには、紙とペンと、少なくとも次の質問に答えるための時間が必要です。
 
-> **メモ:** プロジェクトのアイディア化を実行するための方法は無数にあります。ここにそれらすべてを提示することはできません (一冊の本では不十分です)。ここでは、プロフェッショナルが[プロジェクトの理念](https://en.wikipedia.org/wiki/Ideation_(idea_generation))、[プロジェクト計画](https://en.wikipedia.org/wiki/Project_planning)、および[プロジェクト管理](https://en.wikipedia.org/wiki/Project_management)と呼ぶものを処理する簡単な方法を紹介します。
+> **メモ:** プロジェクトのアイディア化を実行するための方法は無数にあります。ここにそれらすべてを提示することはできません (一冊の本では不十分です)。ここでは、プロフェッショナルが[プロジェクトの理念](<https://en.wikipedia.org/wiki/Ideation_(idea_generation)>)、[プロジェクト計画](https://en.wikipedia.org/wiki/Project_planning)、および[プロジェクト管理](https://en.wikipedia.org/wiki/Project_management)と呼ぶものを処理する簡単な方法を紹介します。
 
 ### 本当にしたいことは何ですか？
 

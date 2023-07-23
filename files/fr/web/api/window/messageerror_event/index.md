@@ -1,12 +1,6 @@
 ---
 title: 'Window: messageerror event'
 slug: Web/API/Window/messageerror_event
-tags:
-  - API
-  - Evènement
-  - Message d'événement
-  - Reference
-  - Window
 translation_of: Web/API/Window/messageerror_event
 ---
 

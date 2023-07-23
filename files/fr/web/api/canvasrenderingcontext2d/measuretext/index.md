@@ -1,12 +1,6 @@
 ---
 title: CanvasRenderingContext2D.measureText()
 slug: Web/API/CanvasRenderingContext2D/measureText
-tags:
-  - API
-  - Canevas
-  - CanvasRenderingContext2D
-  - Méthode
-  - Reference
 translation_of: Web/API/CanvasRenderingContext2D/measureText
 ---
 

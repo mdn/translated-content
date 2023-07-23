@@ -1,13 +1,6 @@
 ---
 title: element.getAttribute
 slug: Web/API/Element/getAttribute
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Méthode
-  - Reference
 translation_of: Web/API/Element/getAttribute
 ---
 
@@ -67,7 +60,7 @@ let nonce = script.getAttribute("nonce");
 // renvoie une chaine vide
 ```
 
-Plutôt que de tenter de lire le _nonce_ via l’attribut, utilisez la propriété {{domxref("HTMLOrForeignElement/nonce", "nonce")}} :
+Plutôt que de tenter de lire le _nonce_ via l'attribut, utilisez la propriété {{domxref("HTMLOrForeignElement/nonce", "nonce")}} :
 
 ```js
 let nonce = script.nonce;

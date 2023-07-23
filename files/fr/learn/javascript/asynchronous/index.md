@@ -25,7 +25,7 @@ Le JavaScript asynchrone est un sujet assez avancé, et il vous est conseillé d
 ## Guides
 
 - [Introduction au JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - : Dans cet article, nous verrons ce que sont la programmation **synchrone** et **asynchrone*, pourquoi nous avons souvent besoin de techniques asynchrones, la façon dont les fonctions asynchrones ont été implémentées en JavaScript au cours du temps et les différents problèmes associés.
+  - : Dans cet article, nous verrons ce que sont la programmation **synchrone** et **asynchrone**, pourquoi nous avons souvent besoin de techniques asynchrones, la façon dont les fonctions asynchrones ont été implémentées en JavaScript au cours du temps et les différents problèmes associés.
 - [Comment utiliser les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Promises)
   - : Ici, nous verrons les promesses et comment manipuler les API qui les utilisent. Nous introduirons également les mots-clés `async` et `await`.
 - [Implémenter une API fonctionnant avec les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)

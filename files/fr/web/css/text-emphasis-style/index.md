@@ -1,10 +1,6 @@
 ---
 title: text-emphasis-style
 slug: Web/CSS/text-emphasis-style
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/text-emphasis-style
 ---
 

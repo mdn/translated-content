@@ -1,12 +1,6 @@
 ---
 title: PerformanceServerTiming
 slug: Web/API/PerformanceServerTiming
-tags:
-  - API
-  - Interface
-  - Reference
-  - Performance Web
-  - Resource Timing API
 translation_of: Web/API/PerformanceServerTiming
 ---
 

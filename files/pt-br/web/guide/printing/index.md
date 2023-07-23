@@ -39,24 +39,33 @@ If you want to be able to automatically close a [popup window](/pt-BR/docs/DOM/w
 ```html
 <!doctype html>
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> <title>JavaScript Window Close Example </title>
-  <script type="text/javascript">
-    function popuponclick() {
-      my_window = window.open('', 'mywindow', 'status=1,width=350,height=150');
-      my_window.document.write('<html><head><title>Print Me</title></head>');
-      my_window.document.write('<body onafterprint="self.close()">');
-      my_window.document.write('<p>When you print this window, it will close afterward.</p>');
-      my_window.document.write('</body></html>');
-  }
-  </script>
-</head>
-<body>
-  <p>To try out the <code>afterprint</code> event, click the link below to open
-  the window to print. You can also try changing the code to use <code>beforeprint</code>
-  to see the difference.</p>
-  <p><a href="javascript: popuponclick()">Open Popup Window</a></p>
-</body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>JavaScript Window Close Example</title>
+    <script type="text/javascript">
+      function popuponclick() {
+        my_window = window.open(
+          "",
+          "mywindow",
+          "status=1,width=350,height=150",
+        );
+        my_window.document.write("<html><head><title>Print Me</title></head>");
+        my_window.document.write('<body onafterprint="self.close()">');
+        my_window.document.write(
+          "<p>When you print this window, it will close afterward.</p>",
+        );
+        my_window.document.write("</body></html>");
+      }
+    </script>
+  </head>
+  <body>
+    <p>
+      To try out the <code>afterprint</code> event, click the link below to open
+      the window to print. You can also try changing the code to use
+      <code>beforeprint</code> to see the difference.
+    </p>
+    <p><a href="javascript: popuponclick()">Open Popup Window</a></p>
+  </body>
 </html>
 ```
 
@@ -69,40 +78,46 @@ If you want to be able to print an external page without opening it, you can uti
 ```html
 <!doctype html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>MDN Example</title>
-<script type="text/javascript">
-function closePrint () {
-  document.body.removeChild(this.__container__);
-}
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>MDN Example</title>
+    <script type="text/javascript">
+      function closePrint() {
+        document.body.removeChild(this.__container__);
+      }
 
-function setPrint () {
-  this.contentWindow.__container__ = this;
-  this.contentWindow.onbeforeunload = closePrint;
-  this.contentWindow.onafterprint = closePrint;
-  this.contentWindow.focus(); // Required for IE
-  this.contentWindow.print();
-}
+      function setPrint() {
+        this.contentWindow.__container__ = this;
+        this.contentWindow.onbeforeunload = closePrint;
+        this.contentWindow.onafterprint = closePrint;
+        this.contentWindow.focus(); // Required for IE
+        this.contentWindow.print();
+      }
 
-function printPage (sURL) {
-  var oHiddFrame = document.createElement("iframe");
-  oHiddFrame.onload = setPrint;
-  oHiddFrame.style.position = "fixed";
-  oHiddFrame.style.right = "0";
-  oHiddFrame.style.bottom = "0";
-  oHiddFrame.style.width = "0";
-  oHiddFrame.style.height = "0";
-  oHiddFrame.style.border = "0";
-  oHiddFrame.src = sURL;
-  document.body.appendChild(oHiddFrame);
-}
-</script>
-</head>
+      function printPage(sURL) {
+        var oHiddFrame = document.createElement("iframe");
+        oHiddFrame.onload = setPrint;
+        oHiddFrame.style.position = "fixed";
+        oHiddFrame.style.right = "0";
+        oHiddFrame.style.bottom = "0";
+        oHiddFrame.style.width = "0";
+        oHiddFrame.style.height = "0";
+        oHiddFrame.style.border = "0";
+        oHiddFrame.src = sURL;
+        document.body.appendChild(oHiddFrame);
+      }
+    </script>
+  </head>
 
-<body>
-  <p><span onclick="printPage('externalPage.html');" style="cursor:pointer;text-decoration:underline;color:#0000ff;">Print external page!</span></p>
-</body>
+  <body>
+    <p>
+      <span
+        onclick="printPage('externalPage.html');"
+        style="cursor:pointer;text-decoration:underline;color:#0000ff;"
+        >Print external page!</span
+      >
+    </p>
+  </body>
 </html>
 ```
 

@@ -1,12 +1,6 @@
 ---
 title: 'Window: Evenement offline'
 slug: Web/API/Window/offline_event
-tags:
-  - API
-  - Event
-  - Offline
-  - Reference
-  - Window
 translation_of: Web/API/Window/offline_event
 ---
 

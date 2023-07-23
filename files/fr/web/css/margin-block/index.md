@@ -1,12 +1,6 @@
 ---
 title: margin-block
 slug: Web/CSS/margin-block
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
 translation_of: Web/CSS/margin-block
 ---
 

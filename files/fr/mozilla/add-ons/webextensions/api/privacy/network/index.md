@@ -1,15 +1,6 @@
 ---
 title: privacy.network
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/network
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Network
-  - Pricavy
-  - Property
-  - Reference
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/network
 ---
 
@@ -47,21 +38,21 @@ function onSet(result) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-
   var getting = browser.privacy.network.webRTCIPHandlingPolicy.get({});
   getting.then((got) => {
     console.log(got.value);
-    if ((got.levelOfControl === "controlled_by_this_extension") ||
-        (got.levelOfControl === "controllable_by_this_extension")) {
+    if (
+      got.levelOfControl === "controlled_by_this_extension" ||
+      got.levelOfControl === "controllable_by_this_extension"
+    ) {
       var setting = browser.privacy.network.webRTCIPHandlingPolicy.set({
-        value: "default_public_interface_only"
+        value: "default_public_interface_only",
       });
       setting.then(onSet);
     } else {
       console.log("Not able to set webRTCIPHandlingPolicy");
     }
   });
-
 });
 ```
 

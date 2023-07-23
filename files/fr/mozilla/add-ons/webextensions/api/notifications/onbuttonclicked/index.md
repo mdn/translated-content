@@ -1,16 +1,6 @@
 ---
 title: notifications.onButtonClicked
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - onButtonClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked
 ---
 
@@ -21,9 +11,9 @@ Lancé lorsque l'utilisateur clique sur l'un des boutons de la notification.
 ## Syntaxe
 
 ```js
-browser.notifications.onButtonClicked.addListener(listener)
-browser.notifications.onButtonClicked.removeListener(listener)
-browser.notifications.onButtonClicked.hasListener(listener)
+browser.notifications.onButtonClicked.addListener(listener);
+browser.notifications.onButtonClicked.removeListener(listener);
+browser.notifications.onButtonClicked.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

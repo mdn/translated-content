@@ -1,11 +1,6 @@
 ---
 title: IDBCursor.continue()
 slug: Web/API/IDBCursor/continue
-tags:
-  - API
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBCursor/continue
 ---
 

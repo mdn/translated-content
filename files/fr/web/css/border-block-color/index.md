@@ -1,12 +1,6 @@
 ---
 title: border-block-color
 slug: Web/CSS/border-block-color
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Propriété logique
-  - Reference
 translation_of: Web/CSS/border-block-color
 ---
 
@@ -84,4 +78,4 @@ div {
   - {{cssxref("border-left-color")}}.
 
 - Les propriétés relatives aux propriétés logiques : {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
-- {{bug("1297097")}}
+- [bug Firefox 1297097](https://bugzil.la/1297097)

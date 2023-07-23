@@ -94,13 +94,13 @@ HTTP/1.1 消除了大量歧义内容并引入了多项改进：
 一个典型的请求流程，所有请求都通过一个连接实现，看起来就像这样：
 
 ```http
-GET /en-US/docs/Glossary/Simple_header HTTP/1.1
+GET /zh-CN/docs/Glossary/Simple_header HTTP/1.1
 Host: developer.mozilla.org
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+Referer: https://developer.mozilla.org/zh-CN/docs/Glossary/Simple_header
 
 200 OK
 Connection: Keep-Alive
@@ -123,7 +123,7 @@ User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101
 Accept: */*
 Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+Referer: https://developer.mozilla.org/zh-CN/docs/Glossary/Simple_header
 
 200 OK
 Age: 9578461
@@ -169,7 +169,7 @@ HTTP 和 Web 安全模型——[同源策略](/zh-CN/docs/Web/Security/Same-orig
 
 ## HTTP/2——为了更优异的表现
 
-这些年来，网页愈渐变得的复杂，甚至演变成了独有的应用，可见媒体的播放量，增进交互的脚本大小也增加了许多：更多的数据通过 HTTP 请求被传输。HTTP/1.1 链接需要请求以正确的顺序发送，理论上可以用一些并行的链接（尤其是 5 到 8 个），带来的成本和复杂性堪忧。比如，HTTP 管线化（pipelining）就成为了 Web 开发的负担。为此，在 2010 年早期，谷歌通过实践了一个实验性的 SPDY 协议。这种在在客户端和服务器端交换数据的替代方案引起了在浏览器和服务器上工作的开发人员的兴趣。明确了响应数量的增加和解决复杂的数据传输，SPDY 成为了 HTTP/2 协议的基础。
+这些年来，网页愈渐变得的复杂，甚至演变成了独有的应用，可见媒体的播放量，增进交互的脚本大小也增加了许多：更多的数据通过 HTTP 请求被传输。HTTP/1.1 链接需要请求以正确的顺序发送，理论上可以用一些并行的链接（尤其是 5 到 8 个），带来的成本和复杂性堪忧。比如，HTTP 管线化（pipelining）就成为了 Web 开发的负担。为此，在 2010 年早期，谷歌通过实践了一个实验性的 SPDY 协议。这种在客户端和服务器端交换数据的替代方案引起了在浏览器和服务器上工作的开发人员的兴趣。明确了响应数量的增加和解决复杂的数据传输，SPDY 成为了 HTTP/2 协议的基础。
 
 HTTP/2 在 HTTP/1.1 有几处基本的不同：
 
@@ -187,7 +187,7 @@ HTTP/2 在 HTTP/1.1 有几处基本的不同：
 随着 HTTP/2.的发布，就像先前的 HTTP/1.x 一样，HTTP 没有停止进化，HTTP 的扩展性依然被用来添加新的功能。特别的，我们能列举出 2016 年里 HTTP 的新扩展：
 
 - 对 Alt-Svc 的支持允许了给定资源的位置和资源鉴定，允许了更智能的 CDN 缓冲机制。
-- [客户端提示（client hint）](/en-US/docs/Web/HTTP/Client_hints) 的引入允许浏览器或者客户端来主动交流它的需求，或者是硬件约束的信息给服务端。
+- [客户端提示（client hint）](/zh-CN/docs/Web/HTTP/Client_hints) 的引入允许浏览器或者客户端来主动交流它的需求，或者是硬件约束的信息给服务端。
 - 在 Cookie 头中引入安全相关的的前缀，现在帮助保证一个安全的 Cookie 没被更改过。
 
 ## HTTP/3——基于 QUIC 的 HTTP

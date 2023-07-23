@@ -46,7 +46,7 @@ function f(x, o) {
 }
 ```
 
-Only when `f` is called is `x` either found or not, and if found, either in `o` or (if no such property exists) in `f`'s activation object, where `x` names the first formal argument. If you forget to define `x` in the object you pass as the second argument, or if there's some similar bug or confusion, you won't get an error -- just unexpected results.
+Only when `f` is called is `x` either found or not, and if found, either in `o` or (if no such property exists) in `f`'s activation object, where `x` names the first formal argument. If you forget to define `x` in the object you pass as the second argument, or if there's some similar bug or confusion, you won't get an error — just unexpected results.
 
 **Contra:** Code using `with` may not be forward compatible, especially when used with something other than a plain object. Consider this example:
 
@@ -58,7 +58,7 @@ function f(foo, values) {
 }
 ```
 
-If you call `f([1,2,3], obj)` in an ECMAScript 5 environment, then the `values` reference inside the `with` statement will resolve to `obj`. However, ECMAScript 6 introduces a `values` property on [`Array.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) (so that it will be available on every array). So, in a JavaScript environment that supports ECMAScript 6, the `values` reference inside the `with` statement will resolve to `[1,2,3].values`.
+If you call `f([1,2,3], obj)` in an ECMAScript 5 environment, then the `values` reference inside the `with` statement will resolve to `obj`. However, ECMAScript 6 introduces a `values` property on [`Array.prototype`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) (so that it will be available on every array). So, in a JavaScript environment that supports ECMAScript 6, the `values` reference inside the `with` statement will resolve to `[1,2,3].values`.
 
 ## Примеры
 

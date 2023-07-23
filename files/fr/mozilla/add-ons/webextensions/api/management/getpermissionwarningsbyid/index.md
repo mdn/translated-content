@@ -1,14 +1,6 @@
 ---
 title: management.getPermissionWarningsById()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsById
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - WebExtensions
-  - getPermissionWarningsById
-  - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsById
 ---
 
@@ -24,8 +16,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingWarnings = browser.management.getPermissionWarningsById(
-  id                  // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres

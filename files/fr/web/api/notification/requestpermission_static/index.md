@@ -1,15 +1,7 @@
 ---
 title: Notification.requestPermission()
 slug: Web/API/Notification/requestPermission_static
-tags:
-  - API
-  - API Notifications
-  - Méthode
-  - Notification
-  - Notifications
-  - Reference
 translation_of: Web/API/Notification/requestPermission
-original_slug: Web/API/Notification/requestPermission
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}

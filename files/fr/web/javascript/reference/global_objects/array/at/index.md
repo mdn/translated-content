@@ -2,7 +2,6 @@
 title: Array.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/Array/at
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/at
-browser-compat: javascript.builtins.Array.at
 ---
 
 {{JSRef}}

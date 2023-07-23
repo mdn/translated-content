@@ -3,7 +3,7 @@ title: invalid
 slug: Web/API/HTMLInputElement/invalid_event
 translation_of: Web/API/HTMLInputElement/invalid_event
 ---
-Событие `invalid` запускается, когда отправляемый элемент был проверен, но его содержимое не удовлетворило установленные ограничения. Валидность отправляемого элемента проверяется до отправления формы или после вызова метода [`checkValidity()`](/en-US/docs/HTML/Forms_in_HTML#Constraint_Validation_API)на элементе.
+Событие `invalid` запускается, когда отправляемый элемент был проверен, но его содержимое не удовлетворило установленные ограничения. Валидность отправляемого элемента проверяется до отправления формы или после вызова метода [`checkValidity()`](/ru/docs/HTML/Forms_in_HTML#Constraint_Validation_API)на элементе.
 
 ## Общая информация
 

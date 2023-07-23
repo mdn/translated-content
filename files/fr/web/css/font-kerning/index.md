@@ -1,10 +1,6 @@
 ---
 title: font-kerning
 slug: Web/CSS/font-kerning
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/font-kerning
 ---
 

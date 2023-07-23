@@ -1,15 +1,6 @@
 ---
 title: runtime.getBrowserInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getBrowserInfo
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
 ---
 
@@ -22,7 +13,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une {{JSxRef("Promise")}}.
 ## Syntaxe
 
 ```js
-var gettingInfo = browser.runtime.getBrowserInfo()
+var gettingInfo = browser.runtime.getBrowserInfo();
 ```
 
 ### Paramètres

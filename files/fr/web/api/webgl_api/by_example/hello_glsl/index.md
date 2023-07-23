@@ -1,13 +1,6 @@
 ---
 title: Hello GLSL
 slug: Web/API/WebGL_API/By_example/Hello_GLSL
-tags:
-  - Apprendre
-  - Débutant
-  - Exemple
-  - Graphisme
-  - Tutoriel
-  - WebGL
 translation_of: Web/API/WebGL_API/By_example/Hello_GLSL
 ---
 

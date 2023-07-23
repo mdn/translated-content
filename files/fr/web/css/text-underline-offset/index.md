@@ -1,10 +1,6 @@
 ---
 title: text-underline-offset
 slug: Web/CSS/text-underline-offset
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/text-underline-offset
 ---
 

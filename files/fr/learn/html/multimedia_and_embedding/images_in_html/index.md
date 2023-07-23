@@ -1,19 +1,7 @@
 ---
 title: Les images en HTML
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-tags:
-  - Débutant
-  - Guide
-  - HTML
-  - Image
-  - Title
-  - alt text
-  - figcaption
-  - figure
-  - img
-  - src
 translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-original_slug: Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
@@ -51,20 +39,20 @@ Au début, le Web n'était que du texte, ce qui était un peu ennuyeux. Heureuse
 
 ## Comment intégrer une image à une page web ?
 
-Pour mettre une image simple sur une page web, nous utiliserons l'élément {{htmlelement("img")}}. C'est un {{glossary("empty element","élément vide")}} (ce qui signifie qu'il ne contient ni texte ni balise de fermeture) qui demande au moins un attribut pour fonctionner — `src` (souvent appelé par son nom entier: *source*). L'attribut `src` contient un chemin pointant vers l'image que vous voulez intégrer, qui peut être une URL absolue ou relative, de la même manière que l'élément {{htmlelement("a")}} `href=` attribue des valeurs.
+Pour mettre une image simple sur une page web, nous utiliserons l'élément {{htmlelement("img")}}. C'est un {{glossary("empty element","élément vide")}} (ce qui signifie qu'il ne contient ni texte ni balise de fermeture) qui demande au moins un attribut pour fonctionner — `src` (souvent appelé par son nom entier: _source_). L'attribut `src` contient un chemin pointant vers l'image que vous voulez intégrer, qui peut être une URL absolue ou relative, de la même manière que l'élément {{htmlelement("a")}} `href=` attribue des valeurs.
 
 > **Note :** Vous devriez lire [Une brève présentation des URL et des chemins](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks#url) pour vous rafraîchir la mémoire avant de continuer.
 
 Donc, par exemple, si votre image s'appelle `dinosaur.jpg`, et qu'elle est située dans le même répertoire que votre page HTML, vous pouvez intégrer cette image comme ceci (URL relative) :
 
 ```html
-<img src="dinosaur.jpg">
+<img src="dinosaur.jpg" />
 ```
 
 Et si cette image se trouve dans un sous-répertoire `images` situé dans le même dossier que la page HTML (ce que Google recommande pour {{glossary("SEO")}}/dans un but d'indexation et d'optimisation de la recherche), alors vous l'intégrerez comme ceci :
 
 ```html
-<img src="images/dinosaur.jpg">
+<img src="images/dinosaur.jpg" />
 ```
 
 Ainsi de suite.
@@ -74,7 +62,7 @@ Ainsi de suite.
 Vous pouvez intégrer l'image en utilisant son URL absolue, par exemple :
 
 ```html
-<img src="https://www.example.com/images/dinosaur.jpg">
+<img src="https://www.example.com/images/dinosaur.jpg" />
 ```
 
 Ce n'est pas trés efficace, cela fait travailler le navigateur plus qu'il ne devrait, il cherche l'adresse IP depuis le serveur DNS à chaque fois etc... Vous devriez autant que possible garder vos images du site sur le même serveur que la page HTML.
@@ -100,9 +88,10 @@ Le code au-dessus vous donnera, à peu prés, le résultat suivant :
 Le prochain attribut que nous allons étudier est `alt`. Sa valeur est supposée être un descriptif sous forme de texte de l'image, à utiliser dans les cas où l'image ne peut être affichée. Exemple : le code au-dessus pourrait être modifié de cette manière :
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
-          it has a large head with long sharp teeth">
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth" />
 ```
 
 La manière la plus simple de tester votre texte `alt` est de mal épeler votre nom de fichier intentionnellement. Si dans l'exemple, la photo était épelée `dinosooooor.jpg`, le navigateur ne l'afficherait pas mais afficherait le texte alt à la place :
@@ -120,7 +109,7 @@ Pourquoi vous verrez partout du texte alt ? Vous en aurez besoin car c'est très
 Que devriez-vous noter dans vos attributs `alt` ? En premier lieu, cela dépend de la raison pour laquelle cette image se trouve là. En d'autres mots, ce que vous perdriez si cette image ne s'affichait pas :
 
 - **Decoration.** Vous devriez utiliser [des images d'arrière-plan CSS](#images_darrière-plan_css) pour les images décoratives mais si vous devez utiliser du HTML, ajoutez un `alt=""` vide. Si l'image ne fait pas vraiment partie du contenu, un lecteur d'écran ne perdra pas de temps à la lire.
-- **Contenu.** Si votre image fournit une ou plusieurs informations supplémentaires significatives, inscrivez ces mêmes informations dans un *bref* `alt` text – ou mieux, dans le texte principal, que tout le monde puisse les voir. N'écrivez pas de `alt` text redondants. Imaginez combien ce serait ennuyeux pour un lecteur si tous les paragraphes étaient écrits en double... Si l'image est décrite de manière adéquate dans le corps de texte principal, vous pouvez utiliser simplement `alt=""`.
+- **Contenu.** Si votre image fournit une ou plusieurs informations supplémentaires significatives, inscrivez ces mêmes informations dans un _bref_ `alt` text – ou mieux, dans le texte principal, que tout le monde puisse les voir. N'écrivez pas de `alt` text redondants. Imaginez combien ce serait ennuyeux pour un lecteur si tous les paragraphes étaient écrits en double... Si l'image est décrite de manière adéquate dans le corps de texte principal, vous pouvez utiliser simplement `alt=""`.
 - **Lien.** Si vous mettez une image à l'intérieur d'une ancre {{htmlelement("a")}} pour transformer une image en lien, vous devez quand même fournir un [Lien texte accessible](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks#bplien). Dans de tels cas, vous pouvez, soit l'inclure dans le même élément `<a>`, soit dans l'attribut `alt` de l'image – utilisez ce qui marche le mieux dans votre cas.
 - **Texte.** Vous ne devez pas mettre de texte dans les images. Si votre titre principal a besoin d'un peu d'ombrage par exemple, [utilisez CSS](/fr/docs/Web/CSS/text-shadow) pour ça, plutôt que de mettre du texte dans une image. De toutes manières, si vous ne pouvez pas éviter de faire ça, vous devez ajouter le texte dans l'attribut `alt` .
 
@@ -130,14 +119,15 @@ Le but est de livrer essentiellement une expérience de qualité, même quand le
 
 ### Largeur et hauteur (width-height)
 
-Vous pouvez vous servir des attributs `width` et `height` pour spécifier la largeur et la hauteur de votre image. Vous pouvez trouver la largeur et la hauteur de différentes manières. Sur Mac, par exemple, vous pouvez utiliser   <kbd>Cmd</kbd> + <kbd>I</kbd> pour afficher l'info relative au fichier image. Pour revenir à notre exemple, nous pourrions faire ceci :
+Vous pouvez vous servir des attributs `width` et `height` pour spécifier la largeur et la hauteur de votre image. Vous pouvez trouver la largeur et la hauteur de différentes manières. Sur Mac, par exemple, vous pouvez utiliser <kbd>Cmd</kbd> + <kbd>I</kbd> pour afficher l'info relative au fichier image. Pour revenir à notre exemple, nous pourrions faire ceci :
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
-     width="400"
-     height="341">
+  width="400"
+  height="341" />
 ```
 
 Cela ne fait pas grande différence à l'affichage dans des circonstances normales. Mais, si l'image n'est pas affichée, disons que l'utilisateur est juste arrivé sur la page et qu'elle n'est pas encore chargée, vous remarquerez que le navigateur laisse un espace pour qu'elle y apparaisse :
@@ -155,12 +145,13 @@ De toutes manières, vous ne devez pas altérer la taille de vos images avec les
 Comme décrit dans le chapitre [Création d'hyperliens](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks), vous pouvez aussi ajouter un attribut `title` aux images, pour fournir un supplément d'information si nécessaire. Dans notre exemple, nous pourrions faire ceci :
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
-     width="400"
-     height="341"
-     title="A T-Rex on display in the Manchester University Museum">
+  width="400"
+  height="341"
+  title="A T-Rex on display in the Manchester University Museum" />
 ```
 
 Cela donne une info-bulle avec le texte entré dans l'attribut `title` :
@@ -181,28 +172,29 @@ Nous avons dit plus tôt de ne jamais faire de "hotlinking" sur d'autres serveur
 
 Nous avons encore quelques petites choses pour vous :
 
-- Ajoutez du texte `alt`  , et vérifiez qu'il marche en faisant une faute dans l'URL de l'image.
+- Ajoutez du texte `alt` , et vérifiez qu'il marche en faisant une faute dans l'URL de l'image.
 - Réglez l'image à une bonne taille : `width` et `height` ( conseil : c'est 200px wide (large) and 171px high (haut)), puis expérimentez d'autres valeurs pour en appréhender les effets.
-- Mettez un `title`  sur l'image.
+- Mettez un `title` sur l'image.
 
 Si vous faites une erreur, vous pouvez toujours remettre à zéro en utilisant le bouton _Reset_ . Si vous êtes vraiment bloqué, regardez la réponse en cliquant le bouton S*how solution* :
 
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
 <img>
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -229,10 +221,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -240,38 +232,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"\n title="A T-Rex on display in the Manchester University Museum">';
+var htmlSolution =
+  '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171"\n title="A T-Rex on display in the Manchester University Museum">';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -283,8 +276,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -295,10 +291,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -316,11 +312,12 @@ En parlant de légendes, il y a de nombreuses manières d'en ajouter qui ira ave
 
 ```html
 <div class="figure">
-  <img src="images/dinosaur.jpg"
-       alt="The head and torso of a dinosaur skeleton;
+  <img
+    src="images/dinosaur.jpg"
+    alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
-       width="400"
-       height="341">
+    width="400"
+    height="341" />
 
   <p>A T-Rex on display in the Manchester University Museum.</p>
 </div>
@@ -332,19 +329,22 @@ Une meilleure solution consiste en l'utilisation des éléments HTML5 {{htmlelem
 
 ```html
 <figure>
-  <img src="images/dinosaur.jpg"
-        alt="The head and torso of a dinosaur skeleton;
+  <img
+    src="images/dinosaur.jpg"
+    alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
-        width="400"
-        height="341">
+    width="400"
+    height="341" />
 
-  <figcaption>A T-Rex on display in the Manchester University Museum.</figcaption>
+  <figcaption>
+    A T-Rex on display in the Manchester University Museum.
+  </figcaption>
 </figure>
 ```
 
 L'élément {{htmlelement("figcaption")}} dit au navigateur et aux technologies d'assistance que la légende décrit le contenu de l'autre élément {{htmlelement("figure")}}.
 
-> **Note :** D'un point de vue accessibilité, les légendes ont un rôle différent du texte {{htmlattrxref('alt','img')}}. Le texte {{htmlattrxref('alt','img')}} ne sert qu'en absence d'image tandis que les légendes servent en même temps aux utilisateurs qui voient l'image. Les légendes et le texte `alt` devraient cependant être différents car ils apparaissent tout deux quand l'image est absente. Essayez d'enlever les images dans votre navigateur et voyez à quoi ça ressemble.
+> **Note :** D'un point de vue accessibilité, les légendes ont un rôle différent du texte [`alt`](/fr/docs/Web/HTML/Element/img#alt). Le texte [`alt`](/fr/docs/Web/HTML/Element/img#alt) ne sert qu'en absence d'image tandis que les légendes servent en même temps aux utilisateurs qui voient l'image. Les légendes et le texte `alt` devraient cependant être différents car ils apparaissent tout deux quand l'image est absente. Essayez d'enlever les images dans votre navigateur et voyez à quoi ça ressemble.
 
 Un objet \<figure> n'est pas forcé de contenir une image. C'est une unité de contenu indépendante qui :
 
@@ -359,25 +359,28 @@ Cet objet peut être un ensemble d'images, des bribes de code, de l'audio, de la
 Dans cette section, nous allons vous demander de récupérer le code fini de la section "Pédagogie active" précédente et d'y faire ceci :
 
 - Encapsulez-le dans un élément {{htmlelement("figure")}} .
-- Copiez le texte de l'attribut, enlevez l'attribut `title`  et mettez le texte dans un élément {{htmlelement("figcaption")}} sous l'image.
+- Copiez le texte de l'attribut, enlevez l'attribut `title` et mettez le texte dans un élément {{htmlelement("figcaption")}} sous l'image.
 
 Si vous faites une erreur, vous pouvez toujours remettre à zéro en utilisant le bouton _Reset_ . Si vous êtes vraiment bloqué, regardez la réponse en cliquant le bouton S*how solution* :
 
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">
-</textarea>
+<textarea
+  id="code"
+  class="input"
+  style="min-height: 100px; width: 95%"></textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -404,10 +407,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -415,38 +418,39 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '<figure>\n <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171" />\n <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
+var htmlSolution =
+  '<figure>\n <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n width="200"\n height="171" />\n <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -458,8 +462,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -470,10 +477,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

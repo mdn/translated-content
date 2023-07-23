@@ -133,7 +133,7 @@ div {
 
 {{EmbedLiveSample('基本示例', 650, 90)}}
 
-> **备注：** 你也可以在 GitHub 中找到这个示例——详见[源代码](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/simple-file.html)和[在线运行实例](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)。
+> **备注：** 你也可以在 GitHub 中找到这个示例——详见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html)和[在线运行实例](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html)。
 
 无论用户的设备或操作系统是什么，文件输入都提供一个按钮，打开一个允许用户选择文件的文件选择对话框。
 
@@ -199,7 +199,7 @@ div {
 
 {{EmbedLiveSample('限制可接受的文件类型', 650, 90)}}
 
-> **备注：** 你也可以在 GitHub 中找到这个示例——详见[源代码](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-with-accept.html)和[在线运行实例](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html)。
+> **备注：** 你也可以在 GitHub 中找到这个示例——详见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html)和[在线运行实例](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html)。
 
 这可能看起来很相似，但是如果你尝试用该输入选择一个文件，你将看到文件选择器只允许你选择 `accept` 值指定的文件类型（实际接口会按不同的浏览器和操作系统有所不同）。
 
@@ -222,7 +222,7 @@ div {
 
 在本例中，我们将展示一个稍微高级一点的文件选择器，它利用了在 `HTMLInputElement.files` 属性中可用的文件信息，并且展示了一些聪明的技巧。
 
-> **备注：** 你可以在 GitHub 中查看本示例的完整源代码——[file-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/file-examples/file-example.html)（[参见在线的运行实例](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)）。我们不会解释 CSS；JavaScript 是主要的关注点。
+> **备注：** 你可以在 GitHub 中查看本示例的完整源代码——[file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html)（[参见在线的运行实例](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)）。我们不会解释 CSS；JavaScript 是主要的关注点。
 
 首先，让我们看看 HTML：
 

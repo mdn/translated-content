@@ -1,13 +1,6 @@
 ---
 title: BlobEvent.data
 slug: Web/API/BlobEvent/data
-tags:
-  - API
-  - Blob
-  - DOM
-  - Evènement
-  - Propriétés
-  - données
 translation_of: Web/API/BlobEvent/data
 ---
 

@@ -1,16 +1,6 @@
 ---
 title: 'Django didactique Section 2: Créer le squelette du site web'
 slug: Learn/Server-side/Django/skeleton_website
-tags:
-  - Apprentissage
-  - Article
-  - Didactitiel
-  - Débutant
-  - Guide
-  - Intro
-  - Programmation
-  - Tutoriel
-  - django
 translation_of: Learn/Server-side/Django/skeleton_website
 ---
 
@@ -362,7 +352,7 @@ Ne vous inquitez ! Cette erreur était attendue ; elle est due à l'absence de d
 
 > **Note :** Chaque fois que vous apportez des modifications significatives, il est important d'exécuter à nouveau un migration et un test du serveur. Cela est assez rapide, pour ne pas s'en priver !
 
-## Relevez le défi...
+## Relevez le défi
 
 Le dossier **catalog/** a été créé automatiquement et contient des fichiers pour les vues, modèles de données, etc. Ouvrez-les pour les consulter.
 

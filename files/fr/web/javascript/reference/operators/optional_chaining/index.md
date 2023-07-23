@@ -1,16 +1,7 @@
 ---
 title: Chaînage optionnel (optional chaining)
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-tags:
-  - Chaînage
-  - Chaînage optionnel
-  - Coalescence
-  - JavaScript
-  - Operator
-  - Opérateur
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
-original_slug: Web/JavaScript/Reference/Opérateurs/Optional_chaining
 ---
 
 {{jsSidebar("Operators")}}
@@ -19,7 +10,7 @@ L'opérateur de **chaînage optionnel** **`?.`** permet de lire la valeur d'une 
 
 Ceci résulte en des expressions plus courtes et plus simples lors de l'accès à des propriétés chaînées quand il est possible qu'une référence soit manquante. Ceci peut aussi être utile lors de l'exploration du contenu d'un objet lorsqu'il n'y a aucune garantie concernant les propriétés qui sont requises.
 
-Le chainage optionnel ne peut pas être utilisé sur un objet initialement inexistant. Il ne remplace les vérifications du type `if (typeof a == "undefined")`.
+Le chainage optionnel ne peut pas être utilisé sur un objet initialement inexistant. Il ne remplace pas les vérifications du type `if (typeof a == "undefined")`.
 
 {{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html")}}
 

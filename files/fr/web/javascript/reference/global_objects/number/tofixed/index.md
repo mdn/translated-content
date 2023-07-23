@@ -1,14 +1,7 @@
 ---
 title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
-tags:
-  - JavaScript
-  - Méthode
-  - Number
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toFixed
 ---
 
 {{JSRef}}

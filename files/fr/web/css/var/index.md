@@ -1,14 +1,7 @@
 ---
 title: var()
 slug: Web/CSS/var
-tags:
-  - CSS
-  - Experimental
-  - Fonction CSS
-  - Reference
-  - Variables CSS
 translation_of: Web/CSS/var()
-original_slug: Web/CSS/var()
 ---
 
 {{CSSRef}}

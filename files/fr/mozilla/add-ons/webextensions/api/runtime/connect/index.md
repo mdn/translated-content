@@ -1,16 +1,6 @@
 ---
 title: runtime.connect()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connect
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - connect
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connect
 ---
 
@@ -30,8 +20,8 @@ Attention, vous ne pouvez pas utiliser cette fonctionnalité pour connecter une 
 ```js
 var port = browser.runtime.connect(
   extensionId, // optional string
-  connectInfo  // optional object
-)
+  connectInfo, // optional object
+);
 ```
 
 ### Paramètres
@@ -66,16 +56,16 @@ Le script de contenu :
 ```js
 // content-script.js
 
-var myPort = browser.runtime.connect({name:"port-from-cs"});
-myPort.postMessage({greeting: "hello from content script"});
+var myPort = browser.runtime.connect({ name: "port-from-cs" });
+myPort.postMessage({ greeting: "hello from content script" });
 
-myPort.onMessage.addListener(function(m) {
+myPort.onMessage.addListener(function (m) {
   console.log("In content script, received message from background script: ");
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
-  myPort.postMessage({greeting: "they clicked the page!"});
+document.body.addEventListener("click", function () {
+  myPort.postMessage({ greeting: "they clicked the page!" });
 });
 ```
 
@@ -97,17 +87,17 @@ var portFromCS;
 
 function connected(p) {
   portFromCS = p;
-  portFromCS.postMessage({greeting: "hi there content script!"});
-  portFromCS.onMessage.addListener(function(m) {
-    console.log("In background script, received message from content script")
+  portFromCS.postMessage({ greeting: "hi there content script!" });
+  portFromCS.onMessage.addListener(function (m) {
+    console.log("In background script, received message from content script");
     console.log(m.greeting);
   });
 }
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
-  portFromCS.postMessage({greeting: "they clicked the button!"});
+browser.browserAction.onClicked.addListener(function () {
+  portFromCS.postMessage({ greeting: "they clicked the button!" });
 });
 ```
 

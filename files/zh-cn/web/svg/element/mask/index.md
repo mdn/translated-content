@@ -13,7 +13,34 @@ slug: Web/SVG/Element/mask
 
 ## 示例
 
-» [mask.svg](/files/3269/mask.svg)
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="-10 -10 120 120">
+  <mask id="myMask">
+    <!-- 白色像素下的所有内容都将可见 -->
+    <rect x="0" y="0" width="100" height="100" fill="white" />
+
+    <!-- 黑色像素下的所有内容都将不可见 -->
+    <path
+      d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z"
+      fill="black" />
+  </mask>
+
+  <polygon points="-10,110 110,110 110,-10" fill="orange" />
+
+  <!-- 应用此蒙版后，我们在圆圈中“打”一个心形孔 -->
+  <circle cx="50" cy="50" r="50" mask="url(#myMask)" />
+</svg>
+```
+
+{{EmbedLiveSample('示例', 100, 100)}}
 
 ## 属性
 

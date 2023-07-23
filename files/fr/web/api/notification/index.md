@@ -1,12 +1,6 @@
 ---
 title: Notification
 slug: Web/API/Notification
-tags:
-  - API
-  - API Notifications
-  - Interface
-  - Notifications
-  - Reference
 translation_of: Web/API/Notification
 ---
 

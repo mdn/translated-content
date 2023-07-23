@@ -1,16 +1,6 @@
 ---
 title: HTMLMediaElement.play()
 slug: Web/API/HTMLMediaElement/play
-tags:
-  - API
-  - Audio
-  - HTMLMediaElement
-  - Interface
-  - Media
-  - Méthode
-  - Reference
-  - Video
-  - play
 translation_of: Web/API/HTMLMediaElement/play
 ---
 

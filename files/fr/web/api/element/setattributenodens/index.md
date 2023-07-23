@@ -1,11 +1,6 @@
 ---
 title: element.setAttributeNodeNS
 slug: Web/API/Element/setAttributeNodeNS
-tags:
-  - API
-  - DOM
-  - Element
-  - Méthodes
 translation_of: Web/API/Element/setAttributeNodeNS
 ---
 

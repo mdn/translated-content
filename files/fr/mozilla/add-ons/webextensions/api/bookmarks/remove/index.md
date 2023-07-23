@@ -1,17 +1,6 @@
 ---
 title: bookmarks.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - remove
-  - supprimer
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 ---
 
@@ -19,7 +8,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
 
 La méthode **`bookmarks.remove()`** supprime un seul signet ou un dossier de signets vide.
 
-> **Attention :** Si votre extension tente de supprimer un signet du nœud racine de l’arborescence de signets, l’appel déclenche une erreur avec le message suivant: "_La racine du signet ne peut pas être modifiée_" et le signet ne sera pas supprimé.
+> **Attention :** Si votre extension tente de supprimer un signet du nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "_La racine du signet ne peut pas être modifiée_" et le signet ne sera pas supprimé.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -27,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removingBookmark = browser.bookmarks.remove(
-  id                 // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres

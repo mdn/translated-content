@@ -1,11 +1,6 @@
 ---
 title: padding-block-start
 slug: Web/CSS/padding-block-start
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/padding-block-start
 ---
 

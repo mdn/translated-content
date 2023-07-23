@@ -144,7 +144,7 @@ Let's go through this line by line and decipher what it means.
 6. Finally, the local connection's remote description is set to refer to the remote peer by calling localConnection's {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
 7. The `catch()` calls a routine that handles any errors that occur.
 
-> **Примечание:** Once again, this process is not a real-world implementation; in normal usage, there's two chunks of code running on two machines, interacting and negotiating the connection. A side channel, commonly called a “signalling server,” is usually used to exchange the description (which is in **application/sdp** form) between the two peers.
+> **Примечание:** Once again, this process is not a real-world implementation; in normal usage, there's two chunks of code running on two machines, interacting and negotiating the connection. A side channel, commonly called a "signalling server," is usually used to exchange the description (which is in **application/sdp** form) between the two peers.
 
 #### Handling successful peer connection
 
@@ -235,7 +235,7 @@ When the user presses the "Send" button, the sendMessage() method we've establis
   }
 ```
 
-First, the text of the message is fetched from the input box's {{htmlattrxref("value", "input")}} attribute. This is then sent to the remote peer by calling {{domxref("RTCDataChannel.send", "sendChannel.send()")}}. That's all there is to it! The rest of this method is just some user experience sugar -- the input box is emptied and re-focused so the user can immediately begin typing another message.
+First, the text of the message is fetched from the input box's [`value`](/ru/docs/Web/HTML/Element/input#value) attribute. This is then sent to the remote peer by calling {{domxref("RTCDataChannel.send", "sendChannel.send()")}}. That's all there is to it! The rest of this method is just some user experience sugar — the input box is emptied and re-focused so the user can immediately begin typing another message.
 
 ### Receiving messages
 

@@ -1,10 +1,6 @@
 ---
 title: ':read-only'
 slug: Web/CSS/:read-only
-tags:
-  - CSS
-  - Pseudo-classe
-  - Refrence
 translation_of: Web/CSS/:read-only
 ---
 
@@ -27,7 +23,7 @@ input:read-only {
 }
 ```
 
-> **Note :** Ce sélecteur ne permet pas de cibler que les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} avec {{htmlattrxref("readonly", "input")}}. Il permet de sélectionner n'importe quel élément qui ne peut pas être édité par l'utilisateur.
+> **Note :** Ce sélecteur ne permet pas de cibler que les éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} avec [`readonly`](/fr/docs/Web/HTML/Element/input#readonly). Il permet de sélectionner n'importe quel élément qui ne peut pas être édité par l'utilisateur.
 
 ## Syntaxe
 
@@ -74,4 +70,4 @@ p[contenteditable="true"] { color: blue; }
 ## Voir aussi
 
 - {{cssxref(":read-write")}}
-- L'attribut HTML {{htmlattrxref("contenteditable")}}
+- L'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable)

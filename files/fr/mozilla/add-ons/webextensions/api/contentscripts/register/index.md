@@ -1,13 +1,6 @@
 ---
 title: contentScripts.register()
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
-tags:
-  - API
-  - Extensions
-  - Méthode
-  - Reference
-  - contentScripts
-  - register
 translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 ---
 
@@ -23,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var registering = browser.contentScripts.register(
-  contentScriptOptions       // object
-)
+  contentScriptOptions, // object
+);
 ```
 
 ### Paramètres
@@ -69,20 +62,19 @@ Actuellement, les scripts de contenu ne sont pas enregistrés lorsque la page d'
 
 ## Exemples
 
-Cet exemple enregistre le script de contenu `defaultCode`  pour toutes les URL `.org` :
+Cet exemple enregistre le script de contenu `defaultCode` pour toutes les URL `.org` :
 
 ```js
 const defaultHosts = "*://*.org/*";
-const defaultCode = "document.body.innerHTML = '<h1>This page has been eaten<h1>'";
+const defaultCode =
+  "document.body.innerHTML = '<h1>This page has been eaten<h1>'";
 
 async function register(hosts, code) {
-
   return await browser.contentScripts.register({
     matches: [hosts],
-    js: [{code}],
-    runAt: "document_idle"
+    js: [{ code }],
+    runAt: "document_idle",
   });
-
 }
 
 var registered = register(defaultHosts, defaultCode);
@@ -92,10 +84,10 @@ Ce code enregistre le fichier JS à l'adresse content_scripts/example.js:
 
 ```js
 const scriptObj = await browser.contentScripts.register({
-  "js": [{file: "/content_scripts/example.js"}],
-  "matches": ["<all_urls>"],
-  "allFrames": true,
-  "runAt": "document_start"
+  js: [{ file: "/content_scripts/example.js" }],
+  matches: ["<all_urls>"],
+  allFrames: true,
+  runAt: "document_start",
 });
 ```
 

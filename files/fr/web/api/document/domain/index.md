@@ -1,15 +1,6 @@
 ---
 title: Document.domain
 slug: Web/API/Document/domain
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - NeedsCompatTable
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Propriété
-  - Reference
 translation_of: Web/API/Document/domain
 ---
 
@@ -35,7 +26,7 @@ if (document.domain == mauvaisDomaine )
 ```
 
 ```js
-// Pour l'URI https://developer.mozilla.org/en-US/docs/Web, ce qui
+// Pour l'URI https://developer.mozilla.org/fr/docs/Web, ce qui
 // suit définit le domaine comme étant la chaîne "developer.mozilla.org"
 var domaine = document.domain;
 ```

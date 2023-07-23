@@ -70,12 +70,11 @@ console.log(x + " " + y); // '1 undefined'
 // JavaScript は宣言のみを巻き上げるので、 y の値の表示はこうなる。
 var y = 2; // y の宣言と初期化
 
-
 // 例 2
 // 巻き上げは行われないが、初期化は (まだ宣言されていない場合は) 宣言も行うので、変数は利用できる。
 
-a = 'Cran'; // Initialize a
-b = 'berry'; // Initialize b
+a = "Cran"; // Initialize a
+b = "berry"; // Initialize b
 console.log(a + "" + b); // 'Cranberry'
 ```
 

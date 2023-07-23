@@ -1,16 +1,6 @@
 ---
 title: pageAction.getPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getPopup
-  - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup
 ---
 
@@ -24,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingPopup = browser.pageAction.getPopup(
-  details               // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -56,12 +46,12 @@ function gotPopup(popupURL) {
 
 browser.contextMenus.create({
   id: "get-popup",
-  title: "Get popup URL"
+  title: "Get popup URL",
 });
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "get-popup") {
-    var gettingPopup = browser.pageAction.getPopup({tabId: tab.id});
+    var gettingPopup = browser.pageAction.getPopup({ tabId: tab.id });
     gettingPopup.then(gotPopup);
   }
 });

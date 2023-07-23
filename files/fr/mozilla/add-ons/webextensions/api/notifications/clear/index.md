@@ -1,16 +1,6 @@
 ---
 title: notifications.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/clear
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - clear
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/clear
 ---
 
@@ -24,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var clearing = browser.notifications.clear(
-  id                            // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres
@@ -53,10 +43,10 @@ function toggleAlarm(all) {
     browser.notifications.clear(myNotification);
   } else {
     browser.notifications.create(myNotification, {
-      "type": "basic",
-      "iconUrl": browser.extension.getURL("icons/cake-48.png"),
-      "title": "Am imposing title",
-      "message": "Some interesting content"
+      type: "basic",
+      iconUrl: browser.extension.getURL("icons/cake-48.png"),
+      title: "Am imposing title",
+      message: "Some interesting content",
     });
   }
 }

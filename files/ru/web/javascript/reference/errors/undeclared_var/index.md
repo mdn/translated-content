@@ -48,7 +48,7 @@ foo(); // ReferenceError: assignment to undeclared variable bar
 
 ### Правильно
 
-Чтобы сделать "bar" объявленной переменной, вы можете добавить перед ней ключевое слово [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) .
+Чтобы сделать "bar" объявленной переменной, вы можете добавить перед ней ключевое слово [`var`](/ru/docs/Web/JavaScript/Reference/Statements/var) .
 
 ```js example-good
 function foo() {

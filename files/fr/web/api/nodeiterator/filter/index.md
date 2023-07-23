@@ -1,13 +1,6 @@
 ---
 title: NodeIterator.filter
 slug: Web/API/NodeIterator/filter
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Itérateur
-  - Noeuds
-  - Propriétés
 translation_of: Web/API/NodeIterator/filter
 ---
 

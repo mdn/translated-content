@@ -1,16 +1,6 @@
 ---
 title: cookies.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/remove
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - remove
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/remove
 ---
 
@@ -26,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.cookies.remove(
-  details               // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -69,12 +59,12 @@ function onError(error) {
 function removeCookie(tabs) {
   var removing = browser.cookies.remove({
     url: tabs[0].url,
-    name: "favourite-colour"
+    name: "favourite-colour",
   });
   removing.then(onRemoved, onError);
 }
 
-var getActive = browser.tabs.query({active: true, currentWindow: true});
+var getActive = browser.tabs.query({ active: true, currentWindow: true });
 getActive.then(removeCookie);
 ```
 

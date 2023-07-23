@@ -1,9 +1,6 @@
 ---
 title: Popups
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Popups
-tags:
-  - WebExtensions
-  - interface utilisateur
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 ---
 

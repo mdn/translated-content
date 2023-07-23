@@ -1,10 +1,6 @@
 ---
 title: border-right-color
 slug: Web/CSS/border-right-color
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border-right-color
 ---
 

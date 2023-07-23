@@ -1,15 +1,6 @@
 ---
 title: sidebarAction.toggle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/toggle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Reference
-  - WebExtensions
-  - sidebarAction
-  - toogle
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/toggle
 ---
 
@@ -24,7 +15,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-browser.sidebarAction.toggle()
+browser.sidebarAction.toggle();
 ```
 
 ### Paramètres
@@ -47,7 +38,7 @@ Bascule la barre latérale lorsque l'utilisateur sélectionne un élément dans 
 browser.menus.create({
   id: "toggle-sidebar",
   title: "Toggle sidebar",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

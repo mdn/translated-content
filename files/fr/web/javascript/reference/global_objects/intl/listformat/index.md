@@ -2,8 +2,6 @@
 title: Intl.ListFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat
-browser-compat: javascript.builtins.Intl.ListFormat
 ---
 
 {{JSRef}}

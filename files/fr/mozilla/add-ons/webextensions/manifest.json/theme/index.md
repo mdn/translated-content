@@ -1,16 +1,6 @@
 ---
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
-tags:
-  - Add-ons
-  - Browser
-  - Customization
-  - Customize
-  - Design
-  - Look and Feel
-  - Themes
-  - colors
-  - theme manifest
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 ---
 
@@ -49,7 +39,7 @@ Utilisez la clé du thème pour définir un thème statique à appliquer à Fire
 
 > **Note :** Si vous voulez inclure un thème avec une extension, veuillez voir l'API {{WebExtAPIRef("theme")}}.
 
-> **Note :** Depuis mai 2019, les thèmes doivent être signés pour être installés ({{bug(1545109)}}). Voir [Signature et distribution votre extension](/fr/docs/Mozilla/Add-ons/Distribution) pour plus de détails.
+> **Note :** Depuis mai 2019, les thèmes doivent être signés pour être installés ([bug Firefox 1545109](https://bugzil.la/1545109)). Voir [Signature et distribution votre extension](/fr/docs/Mozilla/Add-ons/Distribution) pour plus de détails.
 
 > **Note :** Prise en charge des thèmes dans Firefox pour Android : Une nouvelle version de Firefox pour Android, basée sur GeckoView, est en cours de développement. Une [pré-version](https://play.google.com/store/apps/details?id=org.mozilla.fenix) ne support pas les thèmes.
 
@@ -203,7 +193,7 @@ Les images doivent avoir une hauteur de 200 pixels pour garantir qu'elles rempli
           également que dans Firefox 60 et suivants, tout
           {{cssxref("text-shadow")}} appliqué au texte d'en-tête est
           supprimé si aucun <code>headerURL</code> n'est spécifié (voir
-          {{bug(1404688)}}).
+          [bug Firefox 1404688](https://bugzil.la/1404688)).
         </p>
         <p>
           Dans Firefox pour Android, <code>headerURL</code> ou
@@ -269,7 +259,7 @@ Les images doivent avoir une hauteur de 200 pixels pour garantir qu'elles rempli
 
 ### Couleurs
 
-Ces propriétés définissent les couleurs utilisées pour les différentes parties du navigateur. Ils sont tous facultatifs (mais notez que `"accentcolor"` et `"textcolor"`  étaient obligatoires dans Firefox avant la version 63). L'effet de ces propriétés sur l'interface utilisateur de Firefox est présenté ici:
+Ces propriétés définissent les couleurs utilisées pour les différentes parties du navigateur. Ils sont tous facultatifs (mais notez que `"accentcolor"` et `"textcolor"` étaient obligatoires dans Firefox avant la version 63). L'effet de ces propriétés sur l'interface utilisateur de Firefox est présenté ici:
 
 <table class="standard-table">
   <tbody>
@@ -579,7 +569,7 @@ Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne c
       <td>
         <p>
           La couleur d'arrière-plan des éléments mis en surbrillance à l'aide du
-          clavier dans les fenêtre contextuelles (tel que l’élément sélectionné
+          clavier dans les fenêtre contextuelles (tel que l'élément sélectionné
           dans le menu déroulant de la barre d'URL).
         </p>
         <div class="note">
@@ -1263,8 +1253,8 @@ En outre, cette clé accepte diverses propriétés qui sont des alias pour l'une
 
 > **Attention :** A partir de Firefox 70, les propriétés suivantes sont supprimées : `accentcolor` et `textcolor`. Utilisez à la place `frame` et `tab_background_text`. L'utilisation de ces valeurs dans des thèmes chargés dans Firefox 65 ou une version ultérieure augmentera les avertissements.
 
-| Nom                   | Alias pour                                  |
-| --------------------- | ------------------------------------------- |
+| Nom                   | Alias pour                           |
+| --------------------- | ------------------------------------ |
 | `bookmark_text`       | `toolbar_text {{Deprecated_Inline}}` |
 | `frame`               | `accentcolor {{Deprecated_Inline}}`  |
 | `frame_inactive`      | `accentcolor {{Deprecated_Inline}}`  |

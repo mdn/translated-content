@@ -1,12 +1,6 @@
 ---
 title: WebGLRenderingContext.activeTexture()
 slug: Web/API/WebGLRenderingContext/activeTexture
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/activeTexture
 ---
 

@@ -1,13 +1,6 @@
 ---
 title: XMLHttpRequest.timeout
 slug: Web/API/XMLHttpRequest/timeout
-tags:
-  - AJAX
-  - API
-  - Propriété
-  - Reference
-  - XHR
-  - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/timeout
 ---
 

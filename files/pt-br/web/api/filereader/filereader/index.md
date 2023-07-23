@@ -19,7 +19,7 @@ Nenhum.
 
 ## Exemplo
 
-O seguinte trecho de código ilustra a criação de um objeto [`FileReader`](/en-US/docs/Web/API/FileReader) usando o construtor `FileReader()` e depois utilizando o objeto:
+O seguinte trecho de código ilustra a criação de um objeto [`FileReader`](/pt-BR/docs/Web/API/FileReader) usando o construtor `FileReader()` e depois utilizando o objeto:
 
 ```js
 function printFile(file) {

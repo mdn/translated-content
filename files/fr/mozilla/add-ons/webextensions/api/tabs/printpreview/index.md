@@ -1,15 +1,6 @@
 ---
 title: tabs.printPreview()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/printPreview
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Reference
-  - WebExtensions
-  - printPreview
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/printPreview
 ---
 
@@ -22,7 +13,7 @@ window.addEventListener("afterprint", resumeFunction, false);
 ## Syntaxe
 
 ```js
-var openingPreview = browser.tabs.printPreview()
+var openingPreview = browser.tabs.printPreview();
 ```
 
 ### Paramètres
@@ -39,10 +30,9 @@ Dans cet exemple, un script d'arrière-plan écoute un clic sur une [action de n
 
 ```js
 browser.browserAction.onClicked.addListener(() => {
-  browser.tabs.printPreview()
-    .then(() => {
-      console.log("Entered print preview");
-    });
+  browser.tabs.printPreview().then(() => {
+    console.log("Entered print preview");
+  });
 });
 ```
 

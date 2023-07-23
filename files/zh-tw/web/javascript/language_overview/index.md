@@ -177,8 +177,8 @@ var name = "simon";
 JavaScript 的數字運算子有 `+`、`-`、`*`、`/`、以及 `%` - 最後一個是取餘數的運算子（英稱 _mod_）。用來指定值的運算子是 `=`，另外還有複合指定陳述式，如 `+=` 以及 `-=`。這些是用以延伸 `x = x 運算子 y`。
 
 ```js
-x += 5
-x = x + 5
+x += 5;
+x = x + 5;
 ```
 
 你可以用 `++` 和 `--` 來分別增加或是減少數值。這些運算子可以放在變數的開頭或結尾。
@@ -236,7 +236,7 @@ if (name == "狗狗") {
 } else {
   name = "!" + name;
 }
-name == "貓咪!!"
+name == "貓咪!!";
 ```
 
 JavaScript 有 `while` 迴圈以及 `do-while` 迴圈。前者適合做基本的迴圈，而後者是當你要迴圈至少執行一次就需要用到：
@@ -248,7 +248,7 @@ while (true) {
 
 do {
   var input = get_input();
-} while (inputIsNotValid(input))
+} while (inputIsNotValid(input));
 ```
 
 JavaScript 的 `for` 迴圈跟 C 和 Java 的一樣：可以讓你用一行就提供控制的條件與資訊。
@@ -274,46 +274,46 @@ var name = otherName || "預設";
 JavaScript 也有三元運算子 (tertiary operator)，可以用來寫單行的條件陳述式：
 
 ```js
-var allowed = (age > 18) ? "是" : "否";
+var allowed = age > 18 ? "是" : "否";
 ```
 
 switch 陳述式可以根據一個數字或字串做不同決定：
 
 ```js
-switch(action) {
-    case '畫':
-        drawit(); //開始畫
-        break; //中斷
-    case '吃':
-        eatit(); //開始吃
-        break; //中斷
-    default: //預設
-        donothing(); //不做任何事
+switch (action) {
+  case "畫":
+    drawit(); //開始畫
+    break; //中斷
+  case "吃":
+    eatit(); //開始吃
+    break; //中斷
+  default: //預設
+    donothing(); //不做任何事
 }
 ```
 
 如果你不加個 `break` （中斷）陳述式，執行的程式碼會往下「掉」一層。你很少會需要這樣 - 不過假如你真的要這樣，最好用個註解說明一下，這樣才方便除錯：
 
 ```js
-switch(a) {
-    case 1: //往下「掉」一層
-    case 2:
-        eatit(); //開始吃
-        break; //中斷
-    default: //預設
-        donothing(); //不做任何事
+switch (a) {
+  case 1: //往下「掉」一層
+  case 2:
+    eatit(); //開始吃
+    break; //中斷
+  default: //預設
+    donothing(); //不做任何事
 }
 ```
 
 default 子句 (clause) 是選擇性的，可有可無。如果你喜歡的話，你可以在 switch 部分或 case 部分放表達式 (expression)；兩者之間的比較使用的會是 `===` 運算子：
 
 ```js
-switch(1 + 3){
-    case 2 + 2:
-        yay(); //耶！
-        break; //中斷
-    default: //預設
-        neverhappens(); //根本不會發生
+switch (1 + 3) {
+  case 2 + 2:
+    yay(); //耶！
+    break; //中斷
+  default: //預設
+    neverhappens(); //根本不會發生
 }
 ```
 
@@ -348,7 +348,7 @@ var obj = {};
 一旦建立了，一個物件的屬性可以用兩種方法存取：
 
 ```js
-obj.name = "小明"
+obj.name = "小明";
 var name = obj.name;
 ```
 
@@ -370,13 +370,14 @@ obj["for"] = "Simon"; //沒問題
 
 ```js
 var obj = {
-    name: "胡蘿蔔", //名稱
-    "for": "小華", //給誰
-    details: { //詳細資訊
-        color: "橘", //顏色
-        size: 12 //大小
-    }
-}
+  name: "胡蘿蔔", //名稱
+  for: "小華", //給誰
+  details: {
+    //詳細資訊
+    color: "橘", //顏色
+    size: 12, //大小
+  },
+};
 ```
 
 存取屬性也可以連在一起：
@@ -439,7 +440,7 @@ undefined
 
 ```js
 for (var i = 0; i < a.length; i++) {
-    //處理 a[i]
+  //處理 a[i]
 }
 ```
 
@@ -447,15 +448,15 @@ for (var i = 0; i < a.length; i++) {
 
 ```js
 for (var i = 0, len = a.length; i < len; i++) {
-    //處理 a[i]
+  //處理 a[i]
 }
 ```
 
 一個更棒的寫法是：
 
 ```js
-for (var i = 0, item; item = a[i]; i++) {
-    //處理 item
+for (var i = 0, item; (item = a[i]); i++) {
+  //處理 item
 }
 ```
 
@@ -474,7 +475,7 @@ for (var i in a) {
 假如你要在陣列結尾加入項目，最安全的方法是這樣：
 
 ```js
-a[a.length] = item;                 //同 a.push(item);
+a[a.length] = item; //同 a.push(item);
 ```
 
 由於 `a.length` 一定是最高索引數加一，你可以很確定你指定到的是陣列結尾的空間。
@@ -501,8 +502,8 @@ a.sort(cmpfn), a.splice(start, delcount, [item]..), a.unshift([item]..)
 
 ```js
 function add(x, y) {
-    var total = x + y;
-    return total;
+  var total = x + y;
+  return total;
 }
 ```
 
@@ -577,13 +578,13 @@ function avgArray(arr) {
 JavaScript 可以讓你建立匿名 (anonymous) 函式。
 
 ```js
-var avg = function() {
-    var sum = 0;
-    for (var i = 0, j = arguments.length; i < j; i++) {
-        sum += arguments[i];
-    }
-    return sum / arguments.length;
-}
+var avg = function () {
+  var sum = 0;
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    sum += arguments[i];
+  }
+  return sum / arguments.length;
+};
 ```
 
 這個語法上和 `function avg()` 形式相等。這是非常強大的功能，因為你可以藉此在平常該放表達式的地方塞入一個完整的函式定義。這可以讓你用在各種令人拍案叫絕的技巧上。下列可以把本地 (local) 參數「藏」起來－－像 C 的 block scope 一樣：
@@ -605,29 +606,31 @@ JavaScript 能讓你遞迴地呼叫函式。這在處理樹狀結構的時候特
 
 ```js
 function countChars(elm) {
-    if (elm.nodeType == 3) { // TEXT_NODE
-        return elm.nodeValue.length;
-    }
-    var count = 0;
-    for (var i = 0, child; child = elm.childNodes[i]; i++) {
-        count += countChars(child);
-    }
-    return count;
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
+    return elm.nodeValue.length;
+  }
+  var count = 0;
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
+    count += countChars(child);
+  }
+  return count;
 }
 ```
 
 以上揭露了一個使用匿名函式的潛在問題：如果匿名函式沒有名稱，那要怎麼樣遞迴地自我呼叫？答案是使用 `arguments` 物件。該物件除了提供一系列的參數以外，還提供了一個叫做 `arguments.callee` 的屬性。這個屬性所指向的是目前的函式，因此可以用來做遞迴的呼叫：
 
 ```js
-var charsInBody = (function(elm) {
-    if (elm.nodeType == 3) { // TEXT_NODE
-        return elm.nodeValue.length;
-    }
-    var count = 0;
-    for (var i = 0, child; child = elm.childNodes[i]; i++) {
-        count += arguments.callee(child);
-    }
-    return count;
+var charsInBody = (function (elm) {
+  if (elm.nodeType == 3) {
+    // TEXT_NODE
+    return elm.nodeValue.length;
+  }
+  var count = 0;
+  for (var i = 0, child; (child = elm.childNodes[i]); i++) {
+    count += arguments.callee(child);
+  }
+  return count;
 })(document.body);
 ```
 
@@ -710,14 +713,14 @@ undefined undefined
 
 ```js
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
-    this.fullName = function() {
-        return this.first + ' ' + this.last;
-    }
-    this.fullNameReversed = function() {
-        return this.last + ', ' + this.first;
-    }
+  this.first = first;
+  this.last = last;
+  this.fullName = function () {
+    return this.first + " " + this.last;
+  };
+  this.fullNameReversed = function () {
+    return this.last + ", " + this.first;
+  };
 }
 var s = new Person("Simon", "Willison");
 ```
@@ -728,16 +731,16 @@ var s = new Person("Simon", "Willison");
 
 ```js
 function personFullName() {
-    return this.first + ' ' + this.last;
+  return this.first + " " + this.last;
 }
 function personFullNameReversed() {
-    return this.last + ', ' + this.first;
+  return this.last + ", " + this.first;
 }
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
-    this.fullName = personFullName;
-    this.fullNameReversed = personFullNameReversed;
+  this.first = first;
+  this.last = last;
+  this.fullName = personFullName;
+  this.fullNameReversed = personFullNameReversed;
 }
 ```
 
@@ -747,15 +750,15 @@ function Person(first, last) {
 
 ```js
 function Person(first, last) {
-    this.first = first;
-    this.last = last;
+  this.first = first;
+  this.last = last;
 }
-Person.prototype.fullName = function() {
-    return this.first + ' ' + this.last;
-}
-Person.prototype.fullNameReversed = function() {
-    return this.last + ', ' + this.first;
-}
+Person.prototype.fullName = function () {
+  return this.first + " " + this.last;
+};
+Person.prototype.fullNameReversed = function () {
+  return this.last + ", " + this.first;
+};
 ```
 
 Person.prototype 是一個由所有 Person 物件共享的物件。他將產生一個可供查看的關係鍊 (有個特殊的名字 prototype chain)。任何時候當我們想要使用某個不在 Person 中定義的 property 時，JavaScript 就會到 Person.prototype 裡頭尋找。因此， Person.prototype 就成為一個所有 Person 物件共用且可視的一個共享空間(物件)。這是一個提供強大工具，允許你可以在執行的任何一刻增加物件的相關函式。
@@ -812,9 +815,9 @@ desrever eb won nac sihT
 
 ```js
 function trivialNew(constructor) {
-    var o = {}; // Create an object
-    constructor.apply(o, arguments);
-    return o;
+  var o = {}; // Create an object
+  constructor.apply(o, arguments);
+  return o;
 }
 ```
 
@@ -822,7 +825,7 @@ function trivialNew(constructor) {
 
 ```js
 function lastNameCaps() {
-    return this.last.toUpperCase();
+  return this.last.toUpperCase();
 }
 var s = new Person("Simon", "Willison");
 lastNameCaps.call(s);
@@ -837,11 +840,11 @@ JavaScript 函式宣告可以放在其他函式內。我們之前有在 `makePer
 
 ```js
 function betterExampleNeeded() {
-    var a = 1;
-    function oneMoreThanA() {
-        return a + 1;
-    }
-    return oneMoreThanA();
+  var a = 1;
+  function oneMoreThanA() {
+    return a + 1;
+  }
+  return oneMoreThanA();
 }
 ```
 
@@ -894,9 +897,9 @@ JavaScript 是具有垃圾回收特性的語言，物件的生滅都是由執行
 
 ```js
 function leakMemory() {
-    var el = document.getElementById('el');
-    var o = { 'el': el };
-    el.o = o;
+  var el = document.getElementById("el");
+  var o = { el: el };
+  el.o = o;
 }
 ```
 
@@ -912,10 +915,10 @@ function leakMemory() {
 
 ```js
 function addHandler() {
-    var el = document.getElementById('el');
-    el.onclick = function() {
-        this.style.backgroundColor = 'red';
-    }
+  var el = document.getElementById("el");
+  el.onclick = function () {
+    this.style.backgroundColor = "red";
+  };
 }
 ```
 
@@ -925,11 +928,11 @@ function addHandler() {
 
 ```js
 function addHandler() {
-    var el = document.getElementById('el');
-    el.onclick = function() {
-        this.style.backgroundColor = 'red';
-    }
-    el = null;
+  var el = document.getElementById("el");
+  el.onclick = function () {
+    this.style.backgroundColor = "red";
+  };
+  el = null;
 }
 ```
 
@@ -939,13 +942,12 @@ function addHandler() {
 
 ```js
 function addHandler() {
-    var clickHandler = function() {
-        this.style.backgroundColor = 'red';
-    }
-    (function() {
-        var el = document.getElementById('el');
-        el.onclick = clickHandler;
-    })();
+  var clickHandler = (function () {
+    this.style.backgroundColor = "red";
+  })(function () {
+    var el = document.getElementById("el");
+    el.onclick = clickHandler;
+  })();
 }
 ```
 

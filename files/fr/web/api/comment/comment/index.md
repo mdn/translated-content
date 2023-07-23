@@ -1,10 +1,6 @@
 ---
 title: Comment()
 slug: Web/API/Comment/Comment
-tags:
-  - API
-  - Commentaires
-  - DOM
 translation_of: Web/API/Comment/Comment
 ---
 

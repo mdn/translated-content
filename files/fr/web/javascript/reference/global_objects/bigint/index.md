@@ -2,8 +2,6 @@
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
-original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt
-browser-compat: javascript.builtins.BigInt
 ---
 
 {{JSRef}}

@@ -1,11 +1,6 @@
 ---
 title: <map>
 slug: Web/HTML/Element/map
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/map
 ---
 
@@ -19,7 +14,7 @@ L'élément HTML **`<map>`** est utilisé avec des éléments {{HTMLElement("are
 
 Comme tous les autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("name")}}
+- `name`
   - : Cet attribut fournit un nom afin que la carte cliquable puisse être référencée. Cet attribut est obligatoire et sa valeur doit être une chaîne de caractères non-vide qui ne contient pas de blancs. La valeur de cet attribut doit être unique pour tous les éléments {{HTMLElement("map")}} du document. Si l'attribut universel `id` est utilisé, `name` devra avoir la même valeur que celui-ci.
 
 ## Exemples

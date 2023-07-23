@@ -1,16 +1,6 @@
 ---
 title: browserAction.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - onClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 ---
 
@@ -23,9 +13,9 @@ Pour définir une action de clic droit, utilisez l'API [`contextMenus`](/fr/Add-
 ## Syntaxe
 
 ```js
-browser.browserAction.onClicked.addListener(listener)
-browser.browserAction.onClicked.removeListener(listener)
-browser.browserAction.onClicked.hasListener(listener)
+browser.browserAction.onClicked.addListener(listener);
+browser.browserAction.onClicked.removeListener(listener);
+browser.browserAction.onClicked.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

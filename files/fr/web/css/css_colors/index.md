@@ -1,15 +1,7 @@
 ---
 title: CSS Color
-slug: Web/CSS/CSS_Colors
-tags:
-  - Aperçu
-  - CSS
-  - CSS Colors
-  - Couleurs
-  - Overview
-  - Reference
+slug: Web/CSS/CSS_colors
 translation_of: Web/CSS/CSS_Color
-original_slug: Web/CSS/CSS_Color
 ---
 
 {{CSSRef}}

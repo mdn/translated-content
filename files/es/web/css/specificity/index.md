@@ -61,7 +61,7 @@ Cuando se emplea `important` en una declaración de estilo, esta declaración so
     .myClass.myClass span { color: orange; }
     ```
 
-#### Cómo se debería usar !important:
+#### Cómo se debería usar !important
 
 ##### A) Sobrescribiendo los estilos en linea
 

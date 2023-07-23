@@ -1,11 +1,6 @@
 ---
 title: CSS Transforms
-slug: Web/CSS/CSS_Transforms
-tags:
-  - Aperçu
-  - CSS
-  - CSS Transforms
-  - Reference
+slug: Web/CSS/CSS_transforms
 translation_of: Web/CSS/CSS_Transforms
 ---
 

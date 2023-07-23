@@ -1,5 +1,5 @@
 ---
-title: 'Propiedades personalizadas (--*): variables CSS'
+title: "Propiedades personalizadas (--*): variables CSS"
 slug: Web/CSS/--*
 ---
 

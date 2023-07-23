@@ -2,7 +2,6 @@
 title: La relation Client-Serveur
 slug: Learn/Server-side/First_steps/Client-Server_overview
 translation_of: Learn/Server-side/First_steps/Client-Server_overview
-original_slug: Learn/Server-side/Premiers_pas/Client-Serveur
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
@@ -223,25 +222,25 @@ Employer des gabarits HTML facilite la façon de changer la structure HTML parce
 
 Cette section présente une vue d'ensemble du cycle dynamique HTTP de requête/réponse, construit avec ce que nous avons vu précédemment avec de plus amples détails. Toujours dans l'optique de "faire les choses en réel" nous utiliserons le contexte du site d'une équipe de sport où l'entraîneur peut sélectionner le nom de l'équipe et le nombre de joueurs dans un formulaire HTML et avoir en retour une suggestion "Meilleure composition" pour le prochain match.
 
-Le diagramme ci-dessous montre les principaux éléments du site Web "entraîneur d'équipe", ainsi que des étiquettes numérotées pour la séquence des opérations lorsque l'entraîneur accède à la liste "meilleure équipe". Les parties du site qui le rendent dynamique sont l’application Web (c’est ainsi que nous nous référerons au code côté serveur qui traite les requêtes HTTP et renvoie les réponses HTTP), la base de données, qui contient des informations sur les joueurs, les équipes, les entraîneurs et leurs partenaires. relations, et les modèles HTML.
+Le diagramme ci-dessous montre les principaux éléments du site Web "entraîneur d'équipe", ainsi que des étiquettes numérotées pour la séquence des opérations lorsque l'entraîneur accède à la liste "meilleure équipe". Les parties du site qui le rendent dynamique sont l'application Web (c'est ainsi que nous nous référerons au code côté serveur qui traite les requêtes HTTP et renvoie les réponses HTTP), la base de données, qui contient des informations sur les joueurs, les équipes, les entraîneurs et leurs partenaires. relations, et les modèles HTML.
 
 ![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](Web%20Application%20with%20HTML%20and%20Steps.png)
 
-Une fois que l’entraîneur a soumis le formulaire avec le nom de l’équipe et le nombre de joueurs, la séquence des opérations est la suivante:
+Une fois que l'entraîneur a soumis le formulaire avec le nom de l'équipe et le nombre de joueurs, la séquence des opérations est la suivante:
 
-1. Le navigateur Web crée une requête HTTP GET au serveur en utilisant l’URL de base de la ressource (/ best) et en codant l’équipe et le numéro du joueur sous forme de paramètres d’URL (par exemple / best? team=my_team_name\&show = 11) ou dans le cadre de l’URL modèle (par exemple / best / my_team_name / 11 /). Une requête GET est utilisée car la requête extrait uniquement des données (sans les modifier).
+1. Le navigateur Web crée une requête HTTP GET au serveur en utilisant l'URL de base de la ressource (/ best) et en codant l'équipe et le numéro du joueur sous forme de paramètres d'URL (par exemple / best? team=my_team_name\&show = 11) ou dans le cadre de l'URL modèle (par exemple / best / my_team_name / 11 /). Une requête GET est utilisée car la requête extrait uniquement des données (sans les modifier).
 2. Le serveur Web détecte que la demande est "dynamique" et la transmet à l'application Web pour traitement (le serveur Web détermine comment gérer différentes URL en fonction des règles de correspondance de modèle définies dans sa configuration).
 3. L'application Web identifie l'objectif de la demande d'obtenir la "meilleure liste d'équipes" en fonction de l'URL (/ best /) et recherche le nom d'équipe requis et le nombre de joueurs à partir de l'URL. L'application Web obtient alors les informations requises de la base de données (en utilisant des paramètres "internes" supplémentaires pour définir quels joueurs sont les "meilleurs", et éventuellement en obtenant également l'identité de l'entraîneur connecté à partir d'un cookie côté client).
 4. L'application Web crée dynamiquement une page HTML en plaçant les données (de la base de données) dans des espaces réservés dans un modèle HTML.
 5. L'application Web renvoie le code HTML généré au navigateur Web (via le serveur Web), ainsi qu'un code d'état HTTP de 200 ("success"). Si quoi que ce soit empêche le code HTML d'être renvoyé, l'application Web renvoie un autre code, par exemple "404" pour indiquer que l'équipe n'existe pas.
-6. Le navigateur Web commence alors à traiter le code HTML renvoyé, en envoyant des demandes distinctes pour obtenir tous les fichiers CSS ou JavaScript qu’il référence (voir étape 7).
+6. Le navigateur Web commence alors à traiter le code HTML renvoyé, en envoyant des demandes distinctes pour obtenir tous les fichiers CSS ou JavaScript qu'il référence (voir étape 7).
 7. Le serveur Web charge les fichiers statiques à partir du système de fichiers et les renvoie directement au navigateur (là encore, le traitement correct des fichiers est basé sur les règles de configuration et la correspondance des types d'URL).
 
 Une opération de mise à jour d'un enregistrement dans la base de données serait gérée de la même manière, sauf que, comme toute mise à jour de base de données, la demande HTTP du navigateur devrait être codée en tant que demande POST.
 
 ### Que faire d'autre?
 
-Le travail d'une application Web consiste à recevoir des requêtes HTTP et à renvoyer des réponses HTTP. Bien que l'interaction avec une base de données pour obtenir ou mettre à jour des informations soit une tâche très courante, le code peut faire d'autres choses en même temps, ou ne pas interagir du tout avec une base de données.Un bon exemple de tâche supplémentaire qu'une application Web pourrait exécuter serait l'envoi d'un courrier électronique aux utilisateurs pour confirmer leur inscription sur le site. Le site peut également effectuer une journalisation ou d’autres opérations.
+Le travail d'une application Web consiste à recevoir des requêtes HTTP et à renvoyer des réponses HTTP. Bien que l'interaction avec une base de données pour obtenir ou mettre à jour des informations soit une tâche très courante, le code peut faire d'autres choses en même temps, ou ne pas interagir du tout avec une base de données.Un bon exemple de tâche supplémentaire qu'une application Web pourrait exécuter serait l'envoi d'un courrier électronique aux utilisateurs pour confirmer leur inscription sur le site. Le site peut également effectuer une journalisation ou d'autres opérations.
 
 ### Renvoyer autre chose que du HTML
 
@@ -249,7 +248,7 @@ Le code de site Web côté serveur ne doit pas nécessairement renvoyer des extr
 
 ## Les frameworks Web simplifient la programmation Web côté serveur
 
-Les infrastructures Web côté serveur facilitent beaucoup la rédaction de code permettant de gérer les opérations décrites ci-dessus.L’une des opérations les plus importantes qu’ils effectuent consiste à fournir des mécanismes simples pour mapper les URL de différentes ressources / pages à des fonctions de gestionnaire spécifiques. Cela facilite la séparation du code associé à chaque type de ressource. Cela présente également des avantages en termes de maintenance, car vous pouvez modifier l'URL utilisée pour fournir une fonctionnalité particulière à un endroit, sans avoir à changer la fonction de gestionnaire.Par exemple, considérons le code Django (Python) suivant qui mappe deux modèles d'URL à deux fonctions d'affichage. Le premier modèle garantit qu'une requête HTTP avec une URL de ressource / best sera transmise à une fonction nommée index () dans le module views. Une demande qui a pour motif "/ best / junior" sera plutôt transmise à la fonction d'affichage junior ().
+Les infrastructures Web côté serveur facilitent beaucoup la rédaction de code permettant de gérer les opérations décrites ci-dessus.L'une des opérations les plus importantes qu'ils effectuent consiste à fournir des mécanismes simples pour mapper les URL de différentes ressources / pages à des fonctions de gestionnaire spécifiques. Cela facilite la séparation du code associé à chaque type de ressource. Cela présente également des avantages en termes de maintenance, car vous pouvez modifier l'URL utilisée pour fournir une fonctionnalité particulière à un endroit, sans avoir à changer la fonction de gestionnaire.Par exemple, considérons le code Django (Python) suivant qui mappe deux modèles d'URL à deux fonctions d'affichage. Le premier modèle garantit qu'une requête HTTP avec une URL de ressource / best sera transmise à une fonction nommée index () dans le module views. Une demande qui a pour motif "/ best / junior" sera plutôt transmise à la fonction d'affichage junior ().
 
 ```python
 # file: best/urls.py
@@ -269,7 +268,7 @@ urlpatterns = [
 
 > **Note :** Les premiers paramètres des fonctions url () peuvent paraître un peu bizarres (par exemple, r '^ junior / $') car ils utilisent une technique de correspondance de modèle appelée "expressions régulières" (RegEx ou RE). Vous n'avez pas besoin de savoir comment fonctionnent les expressions régulières à ce stade, car elles nous permettent également de faire correspondre les modèles de l'URL (plutôt que les valeurs codées en dur ci-dessus) et de les utiliser comme paramètres dans nos fonctions d'affichage. À titre d'exemple, un RegEx très simple pourrait dire "faire correspondre une seule lettre majuscule, suivie de 4 à 7 lettres minuscules".
 
-L'infrastructure Web permet également à une fonction d'affichage d'extraire facilement des informations de la base de données. La structure de nos données est définie dans des modèles, qui sont des classes Python qui définissent les champs à stocker dans la base de données sous-jacente. Si nous avons un modèle nommé Team avec un champ "team_type", nous pouvons utiliser une syntaxe de requête simple pour récupérer toutes les équipes ayant un type particulier.L’exemple ci-dessous donne la liste de toutes les équipes ayant le type d’équipe exact (sensible à la casse) de "junior" - notez le format: nom du champ (team_type) suivi du double underscore, puis du type de match à utiliser (ici nous utilisons: exact). ). Il existe de nombreux autres types de match et nous pouvons les enchaîner. Nous pouvons également contrôler l'ordre et le nombre de résultats retournés.
+L'infrastructure Web permet également à une fonction d'affichage d'extraire facilement des informations de la base de données. La structure de nos données est définie dans des modèles, qui sont des classes Python qui définissent les champs à stocker dans la base de données sous-jacente. Si nous avons un modèle nommé Team avec un champ "team_type", nous pouvons utiliser une syntaxe de requête simple pour récupérer toutes les équipes ayant un type particulier.L'exemple ci-dessous donne la liste de toutes les équipes ayant le type d'équipe exact (sensible à la casse) de "junior" - notez le format: nom du champ (team_type) suivi du double underscore, puis du type de match à utiliser (ici nous utilisons: exact). ). Il existe de nombreux autres types de match et nous pouvons les enchaîner. Nous pouvons également contrôler l'ordre et le nombre de résultats retournés.
 
 ```python
 #best/views.py

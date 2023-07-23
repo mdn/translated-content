@@ -48,7 +48,7 @@ function eventHandler(e) {
 // 建立事件
 var event = document.createEvent("Event");
 
-// 設定事件名稱為 “build” 。
+// 設定事件名稱為 「build」 。
 event.initEvent("build", true, true);
 
 // 監聽事件
@@ -57,7 +57,7 @@ elem.addEventListener(
   function (e) {
     // e.target matches elem
   },
-  false
+  false,
 );
 
 // 事件對象可以是任一 HTML 元素或是 EventTarget 。
@@ -87,11 +87,7 @@ function simulateClick() {
 }
 ```
 
-## 瀏覽器的支援度
-
-{{Compat}}
-
-## 延伸閱讀
+## 參見
 
 - {{domxref("document.createEvent()")}}
 - {{domxref("Event.initEvent()")}}

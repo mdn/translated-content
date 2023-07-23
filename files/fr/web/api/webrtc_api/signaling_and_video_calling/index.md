@@ -1,11 +1,8 @@
 ---
 title: L’essentiel du WebRTC
 slug: Web/API/WebRTC_API/Signaling_and_video_calling
-tags:
-  - WebRTC
 translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 translation_of_original: Web/API/WebRTC_API/WebRTC_basics
-original_slug: Web/Guide/API/WebRTC/WebRTC_basics
 ---
 
 Maintenant que vous comprenez l'[architecture WebRTC](/fr/docs/Web/Guide/API/WebRTC/WebRTC_architecture), vous pouvez passer à cet article, qui vous emmène à travers la création d'une application RTC multi-navigateurs.A la fin de cet article vous devriez pouvoir créer un canal de données et de médias pair à pair qui fonctionne
@@ -108,7 +105,7 @@ Cette page contient des informations périmées selon <http://stackoverflow.com/
 
 > Peu importe ce que la page de MDN indique, RTPDataChannels est très désuet (faites connaître l'URL). Firefox et Chrome supportent les spec DataChannels maintenant. Idem pour DTLSSRTPKeyAgreement je pense.
 
-## Shims (Bibliothèque d’interception d’API)
+## Shims (Bibliothèque d'interception d'API)
 
 Comme vous pouvez l'imaginer, avec une API aussi jeune, vous devez utiliser les préfixes de navigateur et les positionner dans des variables communes.
 
@@ -129,7 +126,7 @@ var pc = new PeerConnection(configuration, options);
 
 ### RTCConfiguration
 
-L'objet {{domxref("RTCConfiguration")}} contient l’information sur les serveurs TURN et/ou STUN à utiliser pour ICE. Ceci est requis pour s'assurer que la plupart des utilisateurs peuvent en fait créer une connexion en évitant les restrictions du NAT et du pare-feu.
+L'objet {{domxref("RTCConfiguration")}} contient l'information sur les serveurs TURN et/ou STUN à utiliser pour ICE. Ceci est requis pour s'assurer que la plupart des utilisateurs peuvent en fait créer une connexion en évitant les restrictions du NAT et du pare-feu.
 
 ```js
 var configuration = {
@@ -173,13 +170,13 @@ pc.onicecandidate = function (e) {
 };
 ```
 
-Lorsque le rappel est exécuté, nous devons utiliser le canal de signal pour envoyer le Candidat au pair. Sur Chrome, on trouve habituellement plusieurs candidats ICE, nous n’en avons besoin que d'un seul donc j'en envoie généralement une puis supprimer le descripteur. Firefox inclut le Candidat dans l'Offre SDP.
+Lorsque le rappel est exécuté, nous devons utiliser le canal de signal pour envoyer le Candidat au pair. Sur Chrome, on trouve habituellement plusieurs candidats ICE, nous n'en avons besoin que d'un seul donc j'en envoie généralement une puis supprimer le descripteur. Firefox inclut le Candidat dans l'Offre SDP.
 
 ## Canal de Signal
 
-Maintenant que nous avons un candidat ICE, nous devons l’envoyer à nos pairs afin qu'ils sachent comment se connecter avec nous. Toutefois, cela nous laisse face à une problématique de l’œuf et de la poule; Nous voulons que PeerConnection envoie des données à un pair, mais avant cela, nous devons lui envoyer des métadonnées…
+Maintenant que nous avons un candidat ICE, nous devons l'envoyer à nos pairs afin qu'ils sachent comment se connecter avec nous. Toutefois, cela nous laisse face à une problématique de l'œuf et de la poule; Nous voulons que PeerConnection envoie des données à un pair, mais avant cela, nous devons lui envoyer des métadonnées…
 
-C'est là qu'intervient le canal de signal. C'est n'importe quel mode de transport de données qui permet aux deux pairs d’échanger des informations. Dans cet article, nous allons utiliser [FireBase](http://firebase.com) parce que c'est incroyablement facile à installer et ne nécessite aucun hébergement ou code serveur.
+C'est là qu'intervient le canal de signal. C'est n'importe quel mode de transport de données qui permet aux deux pairs d'échanger des informations. Dans cet article, nous allons utiliser [FireBase](http://firebase.com) parce que c'est incroyablement facile à installer et ne nécessite aucun hébergement ou code serveur.
 
 Pour l'instant imaginez seulement que deux méthodes existent: `send()` va prendre une clé et lui affecter des données et `recv()` appelle un descripteur lorsqu'une clé a une valeur.
 
@@ -213,7 +210,7 @@ pc.createOffer(function (offer) {
 
 ### errorHandler
 
-S'il y avait un problème lors de la génération d’une offre, cette méthode sera exécutée avec les détails de l'erreur comme premier argument.
+S'il y avait un problème lors de la génération d'une offre, cette méthode sera exécutée avec les détails de l'erreur comme premier argument.
 
 ```js
 var errorHandler = function (err) {
@@ -236,11 +233,11 @@ var constraints = {
 
 `OfferToReceiveAudio/Video` Dit aux autres pair que vous désirez recevoir de la vidéo ou de l'audio de leur part. Ce n'est pas nécessaire pour DataChannels.
 
-Une fois que l'offre a été générée nous devons définir le SDP local à la nouvelle offre et l’envoyer par le canal de signal aux autres pairs et attendre leur réponse SDP.
+Une fois que l'offre a été générée nous devons définir le SDP local à la nouvelle offre et l'envoyer par le canal de signal aux autres pairs et attendre leur réponse SDP.
 
 ## Réponse
 
-Une réponse SDP est comme une offre, mais est une réponse ; un peu comme répondre au téléphone. Nous pouvons seulement émettre une réponse qu’après avoir reçu une offre.
+Une réponse SDP est comme une offre, mais est une réponse ; un peu comme répondre au téléphone. Nous pouvons seulement émettre une réponse qu'après avoir reçu une offre.
 
 ```js
 recv("offer", function (offer) {
@@ -259,7 +256,7 @@ recv("offer", function (offer) {
 
 J'expliquerai d'abord comment utiliser PeerConnection pour l'API DataChannels et le transfert de données arbitraires entre des pairs.
 
-_Note: Au moment de l’écriture de cet article, l'interopérabilité entre Chrome et Firefox n'est pas possible avec DataChannels. Chrome prend en charge un protocole similaire mais privé et soutiendra le protocole standard bientôt._
+_Note: Au moment de l'écriture de cet article, l'interopérabilité entre Chrome et Firefox n'est pas possible avec DataChannels. Chrome prend en charge un protocole similaire mais privé et soutiendra le protocole standard bientôt._
 
 ```js
 var channel = pc.createDataChannel(channelName, channelOptions);
@@ -303,7 +300,7 @@ channel.onmessage = function (e) {
 }
 ```
 
-Le cœur de la connexion. Lorsque vous recevez un message, cette méthode s’exécute. Le premier argument est un objet d'événement qui contient les données, heure de réception et autres informations.
+Le cœur de la connexion. Lorsque vous recevez un message, cette méthode s'exécute. Le premier argument est un objet d'événement qui contient les données, heure de réception et autres informations.
 
 #### onclose
 
@@ -319,7 +316,7 @@ pc.ondatachannel = function (e) {
 };
 ```
 
-Le canal est disponible dans l’objet événement passé dans le descripteur en tant que `e.channel`.
+Le canal est disponible dans l'objet événement passé dans le descripteur en tant que `e.channel`.
 
 #### send()
 
@@ -331,7 +328,7 @@ Cette méthode vous permet d'envoyer des données directement au pair! Incroyabl
 
 #### close()
 
-Ferme le canal une fois que la connexion doit se terminer. Il est recommandé de le faire sur l’ unload de la page.
+Ferme le canal une fois que la connexion doit se terminer. Il est recommandé de le faire sur l' unload de la page.
 
 ## Media
 

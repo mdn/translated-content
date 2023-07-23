@@ -1,15 +1,7 @@
 ---
 title: callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
-tags:
-  - Déprécié
-  - Fonctions
-  - JavaScript
-  - Propriété
-  - Reference
-  - arguments
 translation_of: Web/JavaScript/Reference/Functions/arguments/callee
-original_slug: Web/JavaScript/Reference/Fonctions/arguments/callee
 ---
 
 {{jsSidebar("Functions")}}{{deprecated_header}}
@@ -115,7 +107,7 @@ var résultat = create()(5); // renvoie 120 (5 * 4 * 3 * 2 * 1)
 
 ### Une utilisation d'`arguments.callee` qui ne possède pas de solution de remplacement
 
-Malgré tout, dans un cas comme le suivant, il n'existe pas d'équivalent pour `arguments.callee`, c'est pourquoi sa déprécation pourrait être un bug (voir {{Bug("725398")}}):
+Malgré tout, dans un cas comme le suivant, il n'existe pas d'équivalent pour `arguments.callee`, c'est pourquoi sa déprécation pourrait être un bug (voir [bug Firefox 725398](https://bugzil.la/725398)):
 
 ```js
 function créerPersonne (sIdentité) {

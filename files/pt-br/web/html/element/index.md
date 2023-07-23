@@ -174,7 +174,7 @@ Estes elementos são usados para se criar e manipular dados em tabelas.
 | {{HTMLElement("tbody")}}    | Encapsulates a set of table rows ({{HTMLElement("tr")}} elements), indicating that they comprise the body of the table ({{HTMLElement("table")}}). |
 | {{HTMLElement("td")}}       | Defines a cell of a table that contains data. It participates in the _table model_. |
 | {{HTMLElement("tfoot")}}    | O **`<tfoot>`** é um **elemento HTML** que define um conjunto de linhas as quais farão parte do rodapé de uma tabela HTML |
-| {{HTMLElement("th")}}       | O **elemento HTML `<th>`** define uma célula cabeçalho do grupo de células de sua tabela. A exatidão natural deste grupo é definida pelos atributos {{htmlattrxref("scope", "th")}} e {{htmlattrxref("headers", "th")}}. |
+| {{HTMLElement("th")}}       | O **elemento HTML `<th>`** define uma célula cabeçalho do grupo de células de sua tabela. A exatidão natural deste grupo é definida pelos atributos [`scope`](/pt-BR/docs/Web/HTML/Element/th#scope) e [`headers`](/pt-BR/docs/Web/HTML/Element/th#headers). |
 | {{HTMLElement("thead")}}    | Defines a set of rows defining the head of the columns of the table. |
 | {{HTMLElement("tr")}}       | Defines a row of cells in a table. The row's cells can then be established using a mix of {{HTMLElement("td")}} (data cell) and {{HTMLElement("th")}} (header cell) elements. |
 

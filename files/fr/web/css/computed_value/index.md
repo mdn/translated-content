@@ -1,11 +1,7 @@
 ---
 title: Valeur calculée
 slug: Web/CSS/computed_value
-tags:
-  - CSS
-  - Reference
 translation_of: Web/CSS/computed_value
-original_slug: Web/CSS/Valeur_calculée
 ---
 
 {{CSSRef}}

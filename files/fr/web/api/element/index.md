@@ -2,7 +2,6 @@
 title: Element
 slug: Web/API/Element
 translation_of: Web/API/Element
-browser-compat: api.Element
 ---
 
 {{APIRef("DOM")}}

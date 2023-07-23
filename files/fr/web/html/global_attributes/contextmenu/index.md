@@ -1,20 +1,14 @@
 ---
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
 translation_of: Web/HTML/Global_attributes/contextmenu
-original_slug: Web/HTML/Attributs_universels/contextmenu
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
 > **Attention :** Cet attribut est [obsolète](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) et sera retiré de l'ensemble des navigateurs.
 
-L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`contextmenu`** correspond à l'{{htmlattrxref("id","","identifiant",1)}} d'un élément {{HTMLElement("menu")}} qu'on souhaite utiliser comme menu contextuel pour l'élément courant.
+L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`contextmenu`** correspond à l'[`id`](/fr/docs/Web/HTML/Global_attributes#id) d'un élément {{HTMLElement("menu")}} qu'on souhaite utiliser comme menu contextuel pour l'élément courant.
 
 Un menu contextuel est un menu qui apparaît suite à une action utilisateur (par exemple un clic-droit). HTML5 permet désormais de personnaliser ce menu.
 

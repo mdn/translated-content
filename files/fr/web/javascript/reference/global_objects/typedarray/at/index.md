@@ -2,7 +2,6 @@
 title: TypedArray.prototype.at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/at
-browser-compat: javascript.builtins.TypedArray.at
 ---
 
 {{JSRef}}

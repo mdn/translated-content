@@ -75,7 +75,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{HTMLAttrDef("cite")}}
+- `cite`
   - : El valor de este atributo es una URL que designa un documento o mensaje fuente para la información citada. Este atributo está destinado a señalar información que explica el contexto o la referencia de la cita.
 
 ## Ejemplo

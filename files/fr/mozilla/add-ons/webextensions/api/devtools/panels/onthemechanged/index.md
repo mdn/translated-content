@@ -1,16 +1,7 @@
 ---
 title: devtools.panels.onThemeChanged
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - onThemeChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged
 ---
 
 {{AddonSidebar()}}
@@ -20,9 +11,9 @@ Remplacement quand le thème de devtools change
 ## Syntaxe
 
 ```js
-browser.devtools.panels.onThemeChanged.addListener(listener)
-browser.devtools.panels.onThemeChanged.removeListener(listener)
-browser.devtools.panels.onThemeChanged.hasListener(listener)
+browser.devtools.panels.onThemeChanged.addListener(listener);
+browser.devtools.panels.onThemeChanged.removeListener(listener);
+browser.devtools.panels.onThemeChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

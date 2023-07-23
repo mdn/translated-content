@@ -209,7 +209,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -242,7 +242,7 @@ HTML también dispone de elementos para el marcado de citas; cual elemento utili
 
 ### Cita en bloque independiente (blockquote)
 
-Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párrafos, una lista, etc.) se cita en otro lugar, debes envolverla dentro de un elemento {{HTMLElement("blockquote")}} para indicarlo, e incluye una URL que apunte a la fuente de la cita dentro de un atributo {{HTMLAttrxRef("cite", "blockquote")}}. Por ejemplo, el siguiente marcado tomado de la página del elemento `<blockquote>` de MDN:
+Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párrafos, una lista, etc.) se cita en otro lugar, debes envolverla dentro de un elemento {{HTMLElement("blockquote")}} para indicarlo, e incluye una URL que apunte a la fuente de la cita dentro de un atributo [`cite`](/es/docs/Web/HTML/Element/blockquote#cite). Por ejemplo, el siguiente marcado tomado de la página del elemento `<blockquote>` de MDN:
 
 ```html
 <p>
@@ -259,8 +259,7 @@ Para convertir esto en una cita en bloque independiente, simplemente harías lo 
 ```html
 <p>A continuación se muestra una cita en bloque independiente...</p>
 <blockquote
-  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"
->
+  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
   <p>
     El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
     <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
@@ -280,7 +279,7 @@ Las citas en línea funcionan exactamente de la misma manera, excepto que usan e
 ```html
 <p>
   El elemento de cita — <code>&lt;q&gt;</code> — se
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+  <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q"
     >utiliza en para citas breves que no requieren saltos de párrafo.</q
   >
 </p>
@@ -292,7 +291,7 @@ El estilo predeterminado del navegador lo representará como texto normal entre 
 
 ### Citas
 
-El contenido del atributo {{HTMLAttrxRef("cite", "blockquote")}} suena útil, pero desafortunadamente los navegadores, lectores de pantalla, etc. no hacen mucho con él. No hay forma de hacer que el navegador muestre el contenido de `cite` sin escribir tu propia solución usando JavaScript o CSS. Si deseas que la fuente de la cita esté disponible en la página, lo debes hacer en el texto a través de un enlace o de alguna otra forma apropiada.
+El contenido del atributo [`cite`](/es/docs/Web/HTML/Element/blockquote#cite) suena útil, pero desafortunadamente los navegadores, lectores de pantalla, etc. no hacen mucho con él. No hay forma de hacer que el navegador muestre el contenido de `cite` sin escribir tu propia solución usando JavaScript o CSS. Si deseas que la fuente de la cita esté disponible en la página, lo debes hacer en el texto a través de un enlace o de alguna otra forma apropiada.
 
 Hay un elemento {{HTMLElement("cite")}}, pero está destinado a contener el título del recurso que se cita, p. ej. el nombre del libro. Sin embargo, no hay razón por la que no puedas vincular el texto dentro de `<cite>` a la fuente de la cita de alguna manera:
 
@@ -305,8 +304,7 @@ Hay un elemento {{HTMLElement("cite")}}, pero está destinado a contener el tít
 </p>
 
 <blockquote
-  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote"
->
+  cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/blockquote">
   <p>
     El <strong>elemento HTML <code>&lt;blockquote&gt;</code></strong> (o
     <em>elemento HTML de cita en bloque independiente</em>) indica que el texto
@@ -316,11 +314,11 @@ Hay un elemento {{HTMLElement("cite")}}, pero está destinado a contener el tít
 
 <p>
   El elemento de cita — <code>&lt;q&gt;</code> — se
-  <q cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q"
+  <q cite="https://developer.mozilla.org/es/docs/Web/HTML/Element/q"
     >utiliza en citas breves que no requieren saltos de párrafo.</q
   >
   --
-  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/q">
+  <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/q">
     <cite>página q de MDN</cite></a
   >.
 </p>
@@ -449,7 +447,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -478,7 +476,7 @@ textarea.onkeyup = function () {
 
 ## Abreviaturas
 
-Otro elemento bastante común que encontrarás cuando busques en la Web es {{HTMLElement("abbr")}} — se usa para envolver una abreviatura o acrónimo, y proporcionar una expansión completa del término (incluida dentro de un atributo {{HTMLAttrxRef("title")}}. Veamos un par de ejemplos:
+Otro elemento bastante común que encontrarás cuando busques en la Web es {{HTMLElement("abbr")}} — se usa para envolver una abreviatura o acrónimo, y proporcionar una expansión completa del término (incluida dentro de un atributo [`title`](/es/docs/Web/HTML/Global_attributes#title). Veamos un par de ejemplos:
 
 ```html
 <p>
@@ -604,7 +602,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
