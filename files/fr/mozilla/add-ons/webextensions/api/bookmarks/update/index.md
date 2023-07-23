@@ -16,9 +16,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var updating = browser.bookmarks.update(
-  id,                    // string
-  changes                // object
-)
+  id, // string
+  changes, // object
+);
 ```
 
 ### Paramètres
@@ -56,7 +56,7 @@ function updateFolders(items) {
     // only folders, so skip items with a `url`
     if (!item.url) {
       var updating = browser.bookmarks.update(item.id, {
-        title: "Mozilla Developer Network (MDN)"
+        title: "Mozilla Developer Network (MDN)",
       });
       updating.then(onFulfilled, onRejected);
     }
