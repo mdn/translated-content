@@ -177,52 +177,44 @@ Maintenant que nous avons mis en place les fonctionnalités de base, le divertis
 
 ```css
 .select {
-  /* Toutes les tailles seront exprimées en valeurs em (lettre M, étalon
-     du cadratin : cadre dans lequel sont dessinées toutes les lettres d'une
-     police de caractères) pour des raisons d'accessibilité (pour être sûrs
-     que le widget reste redimensionnable si l'utilisateur utilise le zoom
-     du navigateur en mode texte exclusif). Les calculs sont faits en
-     supposant que 1em==16px qui est la valeur par défaut dans la majorité
-     des navigateurs. Si vous êtes perdus avec les conversions entre px et
-     em, essayez http://riddle.pl/emcalc/ */
-  font-size   : 0.625em; /* ceci (10px) est le nouveau contexte de taille de
+  /* Les calculs sont faits en supposant que 1em==16px qui est la valeur
+     par défaut dans la majorité des navigateurs. */
+  font-size: 0.625em; /* ceci (10px) est le nouveau contexte de taille de
      police pour la valeur em dans ce contexte. */
-  font-family : Verdana, Arial, sans-serif;
+  font-family: Verdana, Arial, sans-serif;
 
-  -moz-box-sizing : border-box;
-  box-sizing : border-box;
+  box-sizing: border-box;
 
   /* Nous avons besoin de plus d'espace pour la flèche vers le bas que nous
      allons ajouter. */
-  padding : .1em 2.5em .2em .5em; /* 1px 25px 2px 5px */
-  width   : 10em; /* 100px */
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
 
-  border        : .2em solid #000; /* 2px */
-  border-radius : .4em; /* 4px */
-  box-shadow    : 0 .1em .2em rgba(0,0,0,.45); /* 0 1px 2px */
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
 
   /* La première déclaration concerne les navigateurs qui ne prennent pas en
      charge les gradients linéaires. La deuxième déclaration est parce que
      les navigateurs basés sur WebKit ne l'ont pas encore préfixé. Si vous
      souhaitez prendre en charge les anciens navigateurs, essayez
      http://www.colorzilla.com/gradient-editor/ */
-  background : #F0F0F0;
-  background : -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
-  background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
 .select .value {
   /* Comme la valeur peut être plus large que le widget, nous devons nous
      assurer qu'elle ne changera pas la largeur du widget. */
-  display  : inline-block;
-  width    : 100%;
-  overflow : hidden;
-
-  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
 
   /* Et si le contenu déborde, c'est mieux d'avoir une jolie abreviation. */
-  white-space  : nowrap;
+  white-space: nowrap;
   text-overflow: ellipsis;
+  vertical-align: top;
+}
 ```
 
 Nous n'avons pas besoin d'un élément supplémentaire pour concevoir la flèche vers le bas ; à la place, nous utilisons le pseudo-élément {{cssxref(":after:after")}}. Cependant, elle pourrait également être mise en œuvre à l'aide d'une simple image de fond sur la classe `select`.
@@ -236,7 +228,6 @@ Nous n'avons pas besoin d'un élément supplémentaire pour concevoir la flèche
   top: 0;
   right: 0;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   height: 100%;
@@ -263,7 +254,6 @@ Maintenant, composons la décoration de la liste des options :
   margin: 0;
   padding: 0;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   /* Cela nous assure que même si les valeurs sont plus petites que le widget,
@@ -781,7 +771,7 @@ Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_
 }
 ```
 
-{{ EmbedLiveSample('Sans_JS', 120, 130) }}
+{{EmbedLiveSample("Sans_JS", 120, 130)}}
 
 #### Avec JS
 
@@ -854,7 +844,6 @@ Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_
   font-size: 0.625em; /* 10px */
   font-family: Verdana, Arial, sans-serif;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
@@ -891,7 +880,6 @@ Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_
 
   padding-top: 0.1em;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   text-align: center;
@@ -917,7 +905,6 @@ Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_
 
   box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   min-width: 100%;
@@ -938,14 +925,14 @@ Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_
 
 ```js hidden
 window.addEventListener("load", function () {
-  var form = document.querySelector("form");
+  const form = document.querySelector("form");
 
   form.classList.remove("no-widget");
   form.classList.add("widget");
 });
 ```
 
-{{ EmbedLiveSample('Avec_JS', 120, 130) }}
+{{EmbedLiveSample("Avec_JS", 120, 130)}}
 
 > **Note :** Si vous voulez vraiment rendre votre code générique et réutilisable, au lieu de faire un changement de classe, il est préférable d'ajouter la classe widget pour cacher les éléments {{HTMLElement("select")}} et d'ajouter dynamiquement l'arbre DOM représentant le widget personnalisé après chaque élément {{HTMLElement("select")}} dans la page.
 
@@ -959,18 +946,8 @@ Les fonctionnalités que nous prévoyons d'utiliser sont les suivantes (classée
 
 1. {{domxref("element.classList","classList")}}
 2. {{domxref("EventTarget.addEventListener","addEventListener")}}
-3. [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach) (ce n'est pas du DOM mais du JavaScript moderne)
+3. {{domxref("NodeList.forEach()")}}
 4. {{domxref("element.querySelector","querySelector")}} et {{domxref("element.querySelectorAll","querySelectorAll")}}
-
-Au-delà de la disponibilité de ces fonctionnalités spécifiques, il reste encore un problème avant de commencer. L'objet retourné par la fonction {{domxref("element.querySelectorAll","querySelectorAll()")}} est une {{domxref("NodeList")}} plutôt qu'un [`Array`](/fr/docs/JavaScript/Reference/Global_Objects/Array). C'est important, car les objets `Array` acceptent la fonction [`forEach`](/fr/docs/JavaScript/Reference/Global_Objects/Array/forEach), mais {{domxref("NodeList")}} ne le fait pas. Comme {{domxref("NodeList")}} ressemble vraiment à un `Array` et que `forEach` est d'utilisation si commode, nous pouvons facilement ajouter la prise en charge de `forEach à` {{domxref("NodeList")}} pour nous faciliter la vie, comme ceci :
-
-```js
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-};
-```
-
-On ne plaisantait pas quand on a dit que c'était facile à faire.
 
 ### Construction des fonctions de rappel d'événements
 
@@ -985,7 +962,7 @@ function deactivateSelect(select) {
   if (!select.classList.contains("active")) return;
 
   // Nous devons obtenir la liste des options pour le widget personnalisé
-  var optList = select.querySelector(".optList");
+  const optList = select.querySelector(".optList");
 
   // Nous cachons la liste des options
   optList.classList.add("hidden");
@@ -1018,23 +995,23 @@ function activeSelect(select, selectList) {
 // select : le nœud DOM de la liste à basculer
 function toggleOptList(select) {
   // La liste est prise à partir du widget
-  var optList = select.querySelector(".optList");
+  const optList = select.querySelector(".optList");
 
   // Nous changeons la classe de la liste pour l'enrouler/dérouler
   optList.classList.toggle("hidden");
 }
 
 // Cett fonction sera utilisée chaque fois qu'il faut mettre en surbrillance
-// une option.  Elle prend deux paramètres :
+// une option. Elle prend deux paramètres :
 // select : le nœud DOM de la classe `select`
 //          contenant l'option à mettre en surbrillance
 // option : le nœud DOM de la classe `option` à mettre en surbrillance
 function highlightOption(select, option) {
   // Obtenir la liste de toutes les options disponibles pour l'élémént sélectionné
-  var optionList = select.querySelectorAll(".option");
+  const optionList = select.querySelectorAll(".option");
 
   // Supprimer la surbrillance pour toutes les options
-  optionList.forEach(function (other) {
+  optionList.forEach((other) => {
     other.classList.remove("highlight");
   });
 
@@ -1050,17 +1027,17 @@ Ensuite, nous assujettissons ces fonctions aux événement appropriés :
 ```js
 // Nous lions le widget aux événements dès le chargement du document
 window.addEventListener("load", function () {
-  var selectList = document.querySelectorAll(".select");
+  const selectList = document.querySelectorAll(".select");
 
   // Chaque widget personnalisé doit être initialisé
-  selectList.forEach(function (select) {
+  selectList.forEach((select) => {
     // de même que tous les éléments `option`
-    var optionList = select.querySelectorAll(".option");
+    const optionList = select.querySelectorAll(".option");
 
     // Chaque fois que l'utilisateur passe le pointeur de souris
     // sur une option, nous mettons en surbrillance la dite option
 
-    optionList.forEach(function (option) {
+    optionList.forEach((option) => {
       option.addEventListener("mouseover", function () {
         // Note : les variables `select` et `option` sont des "closures"
         // disponibles dans la portée de notre appel de fonction.
@@ -1095,6 +1072,14 @@ window.addEventListener("load", function () {
 
       // Nous désactivons le widget
       deactivateSelect(select);
+    });
+
+    // Relâcher le focus si la personne utilise la touche Echap
+    select.addEventListener("keyup", (event) => {
+      // Désactivation sur appui sur Echap
+      if (event.key === "Escape") {
+        deactivateSelect(select);
+      }
     });
   });
 });
@@ -1165,14 +1150,13 @@ Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_
 }
 
 /* ------------ */
-/* Style chic  */
+/* Style chic */
 /* ------------ */
 
 .select {
   font-size: 0.625em; /* 10px */
   font-family: Verdana, Arial, sans-serif;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
@@ -1184,7 +1168,6 @@ Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_
   box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
 
   background: #f0f0f0;
-  background: -webkit-linear-gradient(90deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -1209,7 +1192,6 @@ Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_
 
   padding-top: 0.1em;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   text-align: center;
@@ -1235,7 +1217,6 @@ Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_
 
   box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   min-width: 100%;
@@ -1255,22 +1236,10 @@ Consultez le [code source complet ici](/fr/docs/Learn/Forms/How_to_build_custom_
 ```
 
 ```js hidden
-// ----------- //
-// UTILITAIRES //
-// ----------- //
-
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-};
-
-// ------------------------- //
-// Définitions des fonctions //
-// ------------------------- //
-
 function deactivateSelect(select) {
   if (!select.classList.contains("active")) return;
 
-  var optList = select.querySelector(".optList");
+  const optList = select.querySelector(".optList");
 
   optList.classList.add("hidden");
   select.classList.remove("active");
@@ -1284,15 +1253,15 @@ function activeSelect(select, selectList) {
 }
 
 function toggleOptList(select, show) {
-  var optList = select.querySelector(".optList");
+  const optList = select.querySelector(".optList");
 
   optList.classList.toggle("hidden");
 }
 
 function highlightOption(select, option) {
-  var optionList = select.querySelectorAll(".option");
+  const optionList = select.querySelectorAll(".option");
 
-  optionList.forEach(function (other) {
+  optionList.forEach((other) => {
     other.classList.remove("highlight");
   });
 
@@ -1303,45 +1272,51 @@ function highlightOption(select, option) {
 // Lien aux événements //
 // ------------------- //
 
-window.addEventListener("load", function () {
-  var form = document.querySelector("form");
+window.addEventListener("load", () => {
+  const form = document.querySelector("form");
 
   form.classList.remove("no-widget");
   form.classList.add("widget");
 });
 
-window.addEventListener("load", function () {
-  var selectList = document.querySelectorAll(".select");
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll(".option");
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
 
-    optionList.forEach(function (option) {
-      option.addEventListener("mouseover", function () {
+    optionList.forEach((option) => {
+      option.addEventListener("mouseover", () => {
         highlightOption(select, option);
       });
     });
 
     select.addEventListener(
       "click",
-      function (event) {
+      (event) => {
         toggleOptList(select);
       },
-      false,
+      false
     );
 
-    select.addEventListener("focus", function (event) {
+    select.addEventListener("focus", (event) => {
       activeSelect(select, selectList);
     });
 
-    select.addEventListener("blur", function (event) {
+    select.addEventListener("blur", (event) => {
       deactivateSelect(select);
+    });
+
+    select.addEventListener("keyup", (event) => {
+      if (event.keyCode === 27) {
+        deactivateSelect(select);
+      }
     });
   });
 });
 ```
 
-{{ EmbedLiveSample('Exemple_en_direct',120,130) }}
+{{EmbedLiveSample("Exemple_en_direct",120,130)}}
 
 ### Gérer la valeur du widget
 
@@ -1355,17 +1330,17 @@ Comme nous l'avons vu précédemment, nous utilisons déjà un widget de sélect
 // Cette fonction met à jour la valeur affichée et la synchronise avec celle
 // du widget natif. Elle prend deux paramètres :
 // select : le nœud DOM de la classe `select` contenant la valuer à mettre à jour
-// index  : l'index de la valeur choisie
+// index : l'index de la valeur choisie
 function updateValue(select, index) {
   // Nous devons obtenir le widget natif correspondant au widget personnalisé
   // Dans notre exemple, le widget natif est un parent du widget personnalisé
-  var nativeWidget = select.previousElementSibling;
+  const nativeWidget = select.previousElementSibling;
 
   // Nou devons aussi obtenir la valeur de remplacement du widget personnalisé
-  var value = select.querySelector(".value");
+  const value = select.querySelector(".value");
 
   // Et nous avons besoin de toute la liste des options
-  var optionList = select.querySelectorAll(".option");
+  const optionList = select.querySelectorAll(".option");
 
   // Nous définissons l'index choisi à l'index du choix
   nativeWidget.selectedIndex = index;
@@ -1383,7 +1358,7 @@ function updateValue(select, index) {
 function getIndex(select) {
   // Nous avons besoin d'avoir accès au widget natif pour le widget personnalisé
   // Dans notre exemple, le widget natif est un parent du widget personnalisé
-  var nativeWidget = select.previousElementSibling;
+  const nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
 }
@@ -1394,12 +1369,12 @@ Avec ces deux fonctions, nous pouvons lier les widgets natifs avec les personnal
 ```js
 // Nous lions le widget aux événements dès le chargement du document
 window.addEventListener("load", function () {
-  var selectList = document.querySelectorAll(".select");
+  const selectList = document.querySelectorAll(".select");
 
   // Chaque widget personnalisé doit être initialisé
-  selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll(".option"),
-      selectedIndex = getIndex(select);
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
+    const selectedIndex = getIndex(select);
 
     // Nous rendons le widget personnalisé capable d'avoir le focus
     select.tabIndex = 0;
@@ -1412,8 +1387,8 @@ window.addEventListener("load", function () {
 
     // Chaque fois que l'utilisateur clique sur une option, nous mettons à
     // jour la valeur en accord
-    optionList.forEach(function (option, index) {
-      option.addEventListener("click", function (event) {
+    optionList.forEach((option, index) => {
+      option.addEventListener("click", (event) => {
         updateValue(select, index);
       });
     });
@@ -1421,17 +1396,22 @@ window.addEventListener("load", function () {
     // Chaque fois que l'utilisateur utilise le clavier sur un widget
     // avec focus, les valeurs sont mises à jour en accord
 
-    select.addEventListener("keyup", function (event) {
-      var length = optionList.length,
-        index = getIndex(select);
+    select.addEventListener("keyup", (event) => {
+      let index = getIndex(select);
 
-      // Quand l'utilisateur presse ⇓, nous allons à l'option suivante
-      if (event.keyCode === 40 && index < length - 1) {
+      // Lorsque l'utilisateur utilise la touche Echap
+      // le contrôle est désactivé
+      if (event.key === "Escape") {
+        deactivateSelect(select);
+      }
+
+      // Quand l'utilisateur presse la flèche bas, nous allons à l'option suivante
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
       }
 
-      // Quand l'utilisateur presse ⇑, nous sautons à l'option suivante
-      if (event.keyCode === 38 && index > 0) {
+      // Quand l'utilisateur presse la flèche haut, nous sautons à l'option suivante
+      if (event.key === "ArrowUp" && index > 0) {
         index--;
       }
 
@@ -1504,14 +1484,13 @@ Et voilà, nous avons terminé ! Voici le résultat ([consultez le code source i
 }
 
 /* ------------ */
-/* Styles chic  */
+/* Styles chic */
 /* ------------ */
 
 .select {
   font-size: 0.625em; /* 10px */
   font-family: Verdana, Arial, sans-serif;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
@@ -1523,7 +1502,6 @@ Et voilà, nous avons terminé ! Voici le résultat ([consultez le code source i
   box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
 
   background: #f0f0f0;
-  background: -webkit-linear-gradient(90deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -1548,7 +1526,6 @@ Et voilà, nous avons terminé ! Voici le résultat ([consultez le code source i
 
   padding-top: 0.1em;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   text-align: center;
@@ -1574,7 +1551,6 @@ Et voilà, nous avons terminé ! Voici le résultat ([consultez le code source i
 
   box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   min-width: 100%;
@@ -1594,14 +1570,6 @@ Et voilà, nous avons terminé ! Voici le résultat ([consultez le code source i
 ```
 
 ```js hidden
-// ----------- //
-// UTILITAIRES //
-// ----------- //
-
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-};
-
 // ------------------------- //
 // Définitions des fonctions //
 // ------------------------- //
@@ -1609,7 +1577,7 @@ NodeList.prototype.forEach = function (callback) {
 function deactivateSelect(select) {
   if (!select.classList.contains("active")) return;
 
-  var optList = select.querySelector(".optList");
+  const optList = select.querySelector(".optList");
 
   optList.classList.add("hidden");
   select.classList.remove("active");
@@ -1623,15 +1591,15 @@ function activeSelect(select, selectList) {
 }
 
 function toggleOptList(select, show) {
-  var optList = select.querySelector(".optList");
+  const optList = select.querySelector(".optList");
 
   optList.classList.toggle("hidden");
 }
 
 function highlightOption(select, option) {
-  var optionList = select.querySelectorAll(".option");
+  const optionList = select.querySelectorAll(".option");
 
-  optionList.forEach(function (other) {
+  optionList.forEach((other) => {
     other.classList.remove("highlight");
   });
 
@@ -1639,9 +1607,9 @@ function highlightOption(select, option) {
 }
 
 function updateValue(select, index) {
-  var nativeWidget = select.previousElementSibling;
-  var value = select.querySelector(".value");
-  var optionList = select.querySelectorAll(".option");
+  const nativeWidget = select.previousElementSibling;
+  const value = select.querySelector(".value");
+  const optionList = select.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
   value.innerHTML = optionList[index].innerHTML;
@@ -1649,7 +1617,7 @@ function updateValue(select, index) {
 }
 
 function getIndex(select) {
-  var nativeWidget = select.previousElementSibling;
+  const nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
 }
@@ -1658,65 +1626,67 @@ function getIndex(select) {
 // Liens aux événements //
 // -------------------- //
 
-window.addEventListener("load", function () {
-  var form = document.querySelector("form");
+window.addEventListener("load", () => {
+  const form = document.querySelector("form");
 
   form.classList.remove("no-widget");
   form.classList.add("widget");
 });
 
-window.addEventListener("load", function () {
-  var selectList = document.querySelectorAll(".select");
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll(".option");
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
 
-    optionList.forEach(function (option) {
-      option.addEventListener("mouseover", function () {
+    optionList.forEach((option) => {
+      option.addEventListener("mouseover", () => {
         highlightOption(select, option);
       });
     });
 
-    select.addEventListener("click", function (event) {
+    select.addEventListener("click", (event) => {
       toggleOptList(select);
     });
 
-    select.addEventListener("focus", function (event) {
+    select.addEventListener("focus", (event) => {
       activeSelect(select, selectList);
     });
 
-    select.addEventListener("blur", function (event) {
+    select.addEventListener("blur", (event) => {
       deactivateSelect(select);
     });
   });
 });
 
-window.addEventListener("load", function () {
-  var selectList = document.querySelectorAll(".select");
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll(".option"),
-      selectedIndex = getIndex(select);
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
+    const selectedIndex = getIndex(select);
 
     select.tabIndex = 0;
     select.previousElementSibling.tabIndex = -1;
 
     updateValue(select, selectedIndex);
 
-    optionList.forEach(function (option, index) {
-      option.addEventListener("click", function (event) {
+    optionList.forEach((option, index) => {
+      option.addEventListener("click", (event) => {
         updateValue(select, index);
       });
     });
 
-    select.addEventListener("keyup", function (event) {
-      var length = optionList.length,
-        index = getIndex(select);
+    select.addEventListener("keyup", (event) => {
+      let index = getIndex(select);
 
-      if (event.keyCode === 40 && index < length - 1) {
+      if (event.key === "Escape") {
+        deactivateSelect(select);
+      }
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
       }
-      if (event.keyCode === 38 && index > 0) {
+      if (event.key === "ArrowUp" && index > 0) {
         index--;
       }
 
@@ -1770,12 +1740,12 @@ L'attribut `aria-selected` s'utilise pour marquer l'option actuellement sélecti
 
 ```js
 function updateValue(select, index) {
-  var nativeWidget = select.previousElementSibling;
-  var value = select.querySelector(".value");
-  var optionList = select.querySelectorAll(".option");
+  const nativeWidget = select.previousElementSibling;
+  const value = select.querySelector(".value");
+  const optionList = select.querySelectorAll(".option");
 
   // Nous nous assurons qu'aucune option n'est sélectionnée
-  optionList.forEach(function (other) {
+  optionList.forEach((other) => {
     other.setAttribute("aria-selected", "false");
   });
 
@@ -1849,14 +1819,13 @@ Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleu
 }
 
 /* ------------ */
-/* Styles Chic  */
+/* Styles Chic */
 /* ------------ */
 
 .select {
   font-size: 0.625em; /* 10px */
   font-family: Verdana, Arial, sans-serif;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
@@ -1868,7 +1837,6 @@ Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleu
   box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
 
   background: #f0f0f0;
-  background: -webkit-linear-gradient(90deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -1893,7 +1861,6 @@ Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleu
 
   padding-top: 0.1em;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   text-align: center;
@@ -1919,7 +1886,6 @@ Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleu
 
   box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   min-width: 100%;
@@ -1939,22 +1905,13 @@ Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleu
 ```
 
 ```js hidden
-// ----------- //
-// UTILITAIRES //
-// ----------- //
-
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-};
-
 // ------------------------- //
 // Définitions des fonctions //
 // ------------------------- //
-
 function deactivateSelect(select) {
   if (!select.classList.contains("active")) return;
 
-  var optList = select.querySelector(".optList");
+  const optList = select.querySelector(".optList");
 
   optList.classList.add("hidden");
   select.classList.remove("active");
@@ -1968,15 +1925,15 @@ function activeSelect(select, selectList) {
 }
 
 function toggleOptList(select, show) {
-  var optList = select.querySelector(".optList");
+  const optList = select.querySelector(".optList");
 
   optList.classList.toggle("hidden");
 }
 
 function highlightOption(select, option) {
-  var optionList = select.querySelectorAll(".option");
+  const optionList = select.querySelectorAll(".option");
 
-  optionList.forEach(function (other) {
+  optionList.forEach((other) => {
     other.classList.remove("highlight");
   });
 
@@ -1984,11 +1941,11 @@ function highlightOption(select, option) {
 }
 
 function updateValue(select, index) {
-  var nativeWidget = select.previousElementSibling;
-  var value = select.querySelector(".value");
-  var optionList = select.querySelectorAll(".option");
+  const nativeWidget = select.previousElementSibling;
+  const value = select.querySelector(".value");
+  const optionList = select.querySelectorAll(".option");
 
-  optionList.forEach(function (other) {
+  optionList.forEach((other) => {
     other.setAttribute("aria-selected", "false");
   });
 
@@ -2000,7 +1957,7 @@ function updateValue(select, index) {
 }
 
 function getIndex(select) {
-  var nativeWidget = select.previousElementSibling;
+  const nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
 }
@@ -2009,52 +1966,54 @@ function getIndex(select) {
 // Liens aux événements //
 // -------------------- //
 
-window.addEventListener("load", function () {
-  var form = document.querySelector("form");
+window.addEventListener("load", () => {
+  const form = document.querySelector("form");
 
   form.classList.remove("no-widget");
   form.classList.add("widget");
 });
 
-window.addEventListener("load", function () {
-  var selectList = document.querySelectorAll(".select");
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll(".option"),
-      selectedIndex = getIndex(select);
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
+    const selectedIndex = getIndex(select);
 
     select.tabIndex = 0;
     select.previousElementSibling.tabIndex = -1;
 
     updateValue(select, selectedIndex);
 
-    optionList.forEach(function (option, index) {
+    optionList.forEach((option, index) => {
       option.addEventListener("mouseover", function () {
         highlightOption(select, option);
       });
 
-      option.addEventListener("click", function (event) {
+      option.addEventListener("click", (event) => {
         updateValue(select, index);
       });
     });
 
-    select.addEventListener("click", function (event) {
+    select.addEventListener("click", (event) => {
       toggleOptList(select);
     });
 
-    select.addEventListener("focus", function (event) {
+    select.addEventListener("focus", (event) => {
       activeSelect(select, selectList);
     });
 
-    select.addEventListener("blur", function (event) {
+    select.addEventListener("blur", (event) => {
       deactivateSelect(select);
     });
 
-    select.addEventListener("keyup", function (event) {
-      var length = optionList.length,
-        index = getIndex(select);
+    select.addEventListener("keyup", (event) => {
+      let index = getIndex(select);
 
-      if (event.keyCode === 40 && index < length - 1) {
+      if (event.keyCode === 27) {
+        deactivateSelect(select);
+      }
+      if (event.keyCode === 40 && index < optionList.length - 1) {
         index++;
       }
       if (event.keyCode === 38 && index > 0) {
@@ -2067,7 +2026,7 @@ window.addEventListener("load", function () {
 });
 ```
 
-{{EmbedLiveSample("#lattribut_aria-selected",120,130)}}
+{{EmbedLiveSample("Lattribut_aria-selected",120,130)}}
 
 ## Conclusion
 
