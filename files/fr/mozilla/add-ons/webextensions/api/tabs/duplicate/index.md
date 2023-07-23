@@ -14,8 +14,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [promesse (`Promise`)](/fr/d
 
 ```js
 let duplicating = browser.tabs.duplicate(
-  tabId,              // entier
-  duplicateProperties // objet optionnel
+  tabId, // entier
+  duplicateProperties, // objet optionnel
 );
 ```
 

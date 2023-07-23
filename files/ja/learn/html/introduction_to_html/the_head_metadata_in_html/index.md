@@ -33,7 +33,7 @@ HTML の文書の{{glossary("Head", "ヘッド")}}部は、ページが読み込
 [前の記事で扱った HTML 文書](/ja/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_文書の構成)をもう一度見てみましょう。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -72,7 +72,7 @@ HTML のヘッド部は {{htmlelement("head")}} 要素の内容です。 {{htmle
 
 2. ファイルをブラウザーで開きます。このようなものが見えるでしょう。
 
-    ![ブラウザーのページタブに 'title' テキスト、文書本体のページ見出しに 'h1' テキストを持つウェブページ。](title-example.png)
+   ![ブラウザーのページタブに 'title' テキスト、文書本体のページ見出しに 'h1' テキストを持つウェブページ。](title-example.png)
 
    `<h1>` コンテンツが出ている場所と、`<title>` コンテンツが出ている場所がひと目で分かります。
 
@@ -80,7 +80,7 @@ HTML のヘッド部は {{htmlelement("head")}} 要素の内容です。 {{htmle
 
 `<title>` 要素はいろいろな方法で使われます。例えば、ページのブックマーク（_ブックマーク > このページをブックマーク_ または Firefox の URL バーのスターアイコンにて）してみると、提案されたブックマーク名として `<title>` コンテンツが記入されています。
 
-![Firefox でブックマークされているウェブページ。ブックマーク名には、\<title> 要素の内容が自動的に付与されています。](bookmark-example.png)
+![Firefox でブックマークされているウェブページ。ブックマーク名には、'title' 要素の内容が自動的に付与されています。](bookmark-example.png)
 
 `<title>` の内容は後述するように、コンテンツは検索結果にも使われます。
 

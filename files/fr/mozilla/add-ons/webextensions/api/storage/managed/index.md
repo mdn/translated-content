@@ -23,8 +23,7 @@ Voici un exemple de manifest :
   "name": "favourite-color-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
-  "data":
-  {
+  "data": {
     "color": "management thinks it should be blue!"
   }
 }
@@ -33,7 +32,7 @@ Voici un exemple de manifest :
 Compte tenu de ce manifeste, l'extension "favourite-color-examples\@mozilla.org" pourrait accéder aux données en utilisant un code comme celui-ci :
 
 ```js
-var storageItem = browser.storage.managed.get('color');
+var storageItem = browser.storage.managed.get("color");
 storageItem.then((res) => {
   console.log(`Managed colur is: ${res.color}`);
 });

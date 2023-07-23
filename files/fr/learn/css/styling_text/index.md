@@ -8,7 +8,7 @@ Une fois acquises les bases du langage CSS, la prochaine étape pour vous est la
 
 ## Prérequis
 
-Avant de commencer ce module, vous devez déjà être familiarisé avec les bases de HTML proposées dans [Introduction à HTML](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML), et être à l'aise avec les fondamentaux de CSS étudiés dans [Introduction à CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS).
+Avant de commencer ce module, vous devez déjà être familiarisé avec les bases de HTML proposées dans [Introduction à HTML](/fr/Apprendre/HTML/Introduction_à_HTML), et être à l'aise avec les fondamentaux de CSS étudiés dans [Introduction à CSS](/fr/Apprendre/CSS/Introduction_à_CSS).
 
 > **Note :** Si vous travaillez sur un ordinateur/tablette/autre appereil sur lequel vous ne pouvez pas créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code dans un programme de codage en ligne tels que [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
 

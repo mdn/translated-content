@@ -13,9 +13,9 @@ Vous pouvez injecter du code dans des pages dont l'URL peut être exprimée à l
 Vous pouvez également injecter du code dans des pages empaquetées avec votre propre extension :
 
 ```js
-browser.tabs.create({url: "/my-page.html"}).then(() => {
+browser.tabs.create({ url: "/my-page.html" }).then(() => {
   browser.tabs.executeScript({
-    code: `console.log('location:', window.location.href);`
+    code: `console.log('location:', window.location.href);`,
   });
 });
 ```
@@ -32,9 +32,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var executing = browser.tabs.executeScript(
-  tabId,                 // optional integer
-  details                // object
-)
+  tabId, // optional integer
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -65,7 +65,8 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) résol
 Le résultat du script est la dernière instruction évaluée, ce qui est similaire à ce qui serait produit (les résultats, pas les affichages de `console.log()`) si vous exécutiez le script dans la [Console Web](/fr/docs/Outils/Console_Web). Par exemple, considérez un script comme celui-ci&nbsp;:
 
 ```js
-var foo='my result';foo;
+var foo = "my result";
+foo;
 ```
 
 Ici, le tableau des résultats contiendra la chaîne `"my result"` en tant qu'élément. Les valeurs de résultat doivent être [clonables structurées](/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure). La dernière déclaration peut également être une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), mais cette fonctionnalité n'est pas supportée par la bibliothèque [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript).
@@ -87,7 +88,7 @@ function onError(error) {
 var makeItGreen = 'document.body.style.border = "5px solid green"';
 
 var executing = browser.tabs.executeScript({
-  code: makeItGreen
+  code: makeItGreen,
 });
 executing.then(onExecuted, onError);
 ```
@@ -105,7 +106,7 @@ function onError(error) {
 
 var executing = browser.tabs.executeScript({
   file: "/content-script.js",
-  allFrames: true
+  allFrames: true,
 });
 executing.then(onExecuted, onError);
 ```
@@ -121,9 +122,8 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var executing = browser.tabs.executeScript(
-  2, {
-    file: "/content-script.js"
+var executing = browser.tabs.executeScript(2, {
+  file: "/content-script.js",
 });
 executing.then(onExecuted, onError);
 ```

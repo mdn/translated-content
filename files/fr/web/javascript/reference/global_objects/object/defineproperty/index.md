@@ -111,7 +111,7 @@ Object.defineProperty(obj, "clé", avecValeur("static"));
 
 ## Exemples
 
-Pour plus d'exemples utilisant la méthode `Object.defineProperty` avec une syntaxe de masque binaire, voir [les exemples supplémentaires](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/defineProperty/Exemples_suppl%C3%A9mentaires).
+Pour plus d'exemples utilisant la méthode `Object.defineProperty` avec une syntaxe de masque binaire, voir [les exemples supplémentaires](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/defineProperty/Exemples_supplémentaires).
 
 ### Créer une propriété
 
@@ -344,7 +344,7 @@ arc.getArchive(); // [{val: 11}, {val: 13}]
 
 ## Voir aussi
 
-- [Énumérabilité et maîtrise des propriétés](/fr/docs/Web/JavaScript/Caract%C3%A8re_%C3%A9num%C3%A9rable_des_propri%C3%A9t%C3%A9s_et_rattachement)
+- [Énumérabilité et maîtrise des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}
@@ -353,5 +353,5 @@ arc.getArchive(); // [{val: 11}, {val: 13}]
 - {{jsxref("Opérateurs/L_opérateur_get", "get")}}
 - {{jsxref("Opérateurs/L_opérateur_set", "set")}}
 - {{jsxref("Object.create()")}}
-- [Exemples supplémentaires utilisant `Object.defineProperty`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/defineProperty/Exemples_suppl%C3%A9mentaires)
+- [Exemples supplémentaires utilisant `Object.defineProperty`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/defineProperty/Exemples_supplémentaires)
 - {{jsxref("Reflect.defineProperty()")}}

@@ -14,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var checking = browser.pkcs11.isModuleInstalled(
-  name              // string
-)
+  name, // string
+);
 ```
 
 ### Paramètres

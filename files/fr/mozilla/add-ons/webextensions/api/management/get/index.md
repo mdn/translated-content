@@ -16,8 +16,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingInfo = browser.management.get(
-  id                  // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres

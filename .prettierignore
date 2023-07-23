@@ -19,6 +19,7 @@ build/
 /files/fr/glossary/grid_axis/index.md
 /files/fr/glossary/grid_lines/index.md
 /files/fr/glossary/main_axis/index.md
+/files/fr/learn/server-side/django/forms/index.md
 /files/pt-br/learn/server-side/django/forms/index.md
 /files/zh-cn/learn/css/howto/css_faq/index.md
 
@@ -33,7 +34,6 @@ build/
 /files/es/web/javascript/**/*.md
 
 # fr
-/files/fr/learn/server-side/**/*.md
 /files/fr/mozilla/add-ons/webextensions/api/**/*.md
 /files/fr/web/api/**/*.md
 /files/fr/web/css/**/*.md
@@ -42,7 +42,6 @@ build/
 
 # ja
 /files/ja/learn/css/**/*.md
-/files/ja/learn/html/**/*.md
 /files/ja/learn/javascript/**/*.md
 /files/ja/learn/server-side/**/*.md
 /files/ja/mozilla/**/*.md
