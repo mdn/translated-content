@@ -13,9 +13,9 @@ Cet événement peut ne pas être pertinent ou pris en charge par des navigateur
 ## Syntaxe
 
 ```js
-browser.tabs.onReplaced.addListener(listener)
-browser.tabs.onReplaced.removeListener(listener)
-browser.tabs.onReplaced.hasListener(listener)
+browser.tabs.onReplaced.addListener(listener);
+browser.tabs.onReplaced.removeListener(listener);
+browser.tabs.onReplaced.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
