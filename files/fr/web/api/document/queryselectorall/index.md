@@ -55,7 +55,7 @@ const container = document.querySelector("#test");
 const matches = container.querySelectorAll("div.highlighted > p");
 ```
 
-Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/S%C3%A9lecteurs_d_attribut) pour renvoyer une liste d'éléments {{domxref("iframe")}} dans le document qui contient un attribut nommé `"data-src"` :
+Cet exemple utilise un [sélecteur d'attribut](/fr/docs/Web/CSS/Sélecteurs_d_attribut) pour renvoyer une liste d'éléments {{domxref("iframe")}} dans le document qui contient un attribut nommé `"data-src"` :
 
 ```js
 const matches = document.querySelectorAll("iframe[data-src]");

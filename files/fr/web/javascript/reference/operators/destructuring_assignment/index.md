@@ -375,7 +375,7 @@ Cela permet d'accéder directement à `id`, `displayName` et `firstName` depuis 
 
 ### Les noms de propriétés calculés et la décomposition
 
-Il est possible d'utiliser des noms de propriétés calculés, comme avec les [littéraux objets](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Initialisateur_objet#Noms_de_propri.C3.A9t.C3.A9s_calcul.C3.A9s), avec la décomposition.
+Il est possible d'utiliser des noms de propriétés calculés, comme avec les [littéraux objets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet#Noms_de_propri.C3.A9t.C3.A9s_calcul.C3.A9s), avec la décomposition.
 
 ```js
 let clef = "z";

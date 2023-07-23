@@ -51,7 +51,7 @@ document .  evaluate  ( " .  //h2", document.body, null, XPathResult.ANY_TYPE, n
 
 Remarquez ci-dessus, `document.body` a été utilisé comme contexte plutôt que comme document, de sorte que le XPath commence à partir de l'élément body. (Dans cet exemple, le `"."` est important pour indiquer que l'interrogation doit commencer à partir du noeud contextuel, document.body . Si le "." est omis (en quittant `//h2`), la requête démarrera à partir du noeud racine ( `html`) ce qui serait plus inutile.)
 
-Voir [Introduction à l'utilisation de XPath avec JavaScript](/fr/docs/Introduction_%C3%A0_l'utilisation_de_XPath_avec_JavaScript) pour plus d'informations.
+Voir [Introduction à l'utilisation de XPath avec JavaScript](/fr/docs/Introduction_à_l'utilisation_de_XPath_avec_JavaScript) pour plus d'informations.
 
 ## Notes
 

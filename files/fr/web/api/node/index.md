@@ -160,7 +160,7 @@ DOMComb(parentNode, callbackFunction);
 
 #### Description
 
-Suit le cycle récursif de tous les nœuds enfants d'un `parentNode` et le `parentNode` lui-même, et exécute la fonction `callbackFunction` (_rappel_) sur eux comme un objet [`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
+Suit le cycle récursif de tous les nœuds enfants d'un `parentNode` et le `parentNode` lui-même, et exécute la fonction `callbackFunction` (_rappel_) sur eux comme un objet [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
 
 #### Paramètres
 

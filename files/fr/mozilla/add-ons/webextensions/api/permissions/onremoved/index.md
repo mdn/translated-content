@@ -11,9 +11,9 @@ Activé lorsque certaines permissions sont supprimés de l'extension.
 ## Syntaxe
 
 ```js
-browser.permissions.onRemoved.addListener(listener)
-browser.permissions.onRemoved.removeListener(listener)
-browser.permissions.onRemoved.hasListener(listener)
+browser.permissions.onRemoved.addListener(listener);
+browser.permissions.onRemoved.removeListener(listener);
+browser.permissions.onRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

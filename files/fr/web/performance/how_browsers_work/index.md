@@ -58,7 +58,7 @@ Après les 8 allers-retours, le navigateur est enfin en mesure de faire la deman
 
 ## Response
 
-Une fois la connexion établie avec un serveur Web établie, le navigateur envoie une [demande HTTP `GET`](/fr/docs/Web/HTTP/M%C3%A9thode) initiale au nom de l'utilisateur, qui pour les sites Web est le plus souvent un fichier HTML. Dès que le serveur reçoit la demande, il répond avec les en-têtes de réponse pertinents et le contenu du code HTML.
+Une fois la connexion établie avec un serveur Web établie, le navigateur envoie une [demande HTTP `GET`](/fr/docs/Web/HTTP/Méthode) initiale au nom de l'utilisateur, qui pour les sites Web est le plus souvent un fichier HTML. Dès que le serveur reçoit la demande, il répond avec les en-têtes de réponse pertinents et le contenu du code HTML.
 
 ```html
 <!doctype html>
@@ -153,7 +153,7 @@ Lors de l'analyse du CSS et de la création du CSSOM, d'autres ressources, notam
 
 Le navigateur crée également une arbre d'[accessibilité](/fr/docs/Apprendre/a11y) que les périphériques d'assistance utilisent pour analyser et interpréter le contenu. Le modèle d'objet d'accessibilité (AOM) est comme une version sémantique du DOM. Le navigateur met à jour l'arbre d'accessibilité lorsque le DOM est mis à jour. L'arbre d'accessibilité n'est pas modifiable par les technologies d'assistance elles-mêmes.
 
-Jusqu'à la construction de l'AOM, le contenu n'est pas accessible aux [lecteurs d'écran](/fr/docs/Accessibilit%C3%A9/ARIA/FAQ_Applications_Web_et_ARIA).
+Jusqu'à la construction de l'AOM, le contenu n'est pas accessible aux [lecteurs d'écran](/fr/docs/Accessibilité/ARIA/FAQ_Applications_Web_et_ARIA).
 
 ## Rendre
 

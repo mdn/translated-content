@@ -137,7 +137,7 @@ console.log(obj.somme);  // 16
 
 > **Note :** Le paramètre pour `this` est passé à la méthode `forEach()`, à chaque appel du callback, celui-ci sera utilisé comme valeur pour `this`.
 
-> **Note :** Si la fonction passée en argument est [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), il n'est pas nécessaire d'ajouter le paramètre `this` car les fonctions fléchées utilisent le [`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this) fourni par le contexte lexical.
+> **Note :** Si la fonction passée en argument est [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), il n'est pas nécessaire d'ajouter le paramètre `this` car les fonctions fléchées utilisent le [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) fourni par le contexte lexical.
 
 ### Stopper une boucle
 

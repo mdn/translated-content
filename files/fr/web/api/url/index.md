@@ -81,7 +81,7 @@ Les URL sont encodées selon les règles édictées par [la RFC 3986](https://da
 
 ```js
 url.pathname = 'démonstration.html';
-console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
+console.log(url.href); // "http://www.example.com/démonstration.html"
 ```
 
 L'interface [`URLSearchParams`](/fr/docs/Web/API/URLSearchParams) peut être utilisée pour construire et manipuler le fragment de la requête.
