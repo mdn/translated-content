@@ -55,7 +55,7 @@ Cet élément ne possède que [les attributs universels](/fr/docs/Web/HTML/Globa
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_sectionnant"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_sectionnant"
           >contenu sectionnant</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"

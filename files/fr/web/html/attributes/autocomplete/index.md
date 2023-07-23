@@ -104,7 +104,7 @@ Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/
 - `transaction-amount`
   - : Le montant de la transaction, pour un formulaire de paiement, exprimé dans la devise fournie par `transaction-currency`.
 - `language`
-  - : La langue préférée, indiquée sous la forme [d'une balise de langue valide selon BCP 47](https://fr.wikipedia.org/wiki/%C3%89tiquette_d%27identification_de_langues_IETF).
+  - : La langue préférée, indiquée sous la forme [d'une balise de langue valide selon BCP 47](https://fr.wikipedia.org/wiki/Étiquette_d%27identification_de_langues_IETF).
 - `bday`
   - : Une date de naissance complète.
 - `bday-day`
