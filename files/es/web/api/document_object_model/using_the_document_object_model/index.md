@@ -8,7 +8,7 @@ The W3C's DOM Level 1 Core is a powerful object model for changing the content t
 
 ## What is a content tree?
 
-Many HTML authors may think of HTML as something flat -- a bunch of text with tags in the middle. However, it is something much more than that. Any HTML document (or for that matter any SGML document or XML document) is a tree structure. For example, the following document and tree structure are similar (although not identical -- see the notes on [whitespace in the DOM](/es/docs/Whitespace_in_the_DOM)):
+Many HTML authors may think of HTML as something flat — a bunch of text with tags in the middle. However, it is something much more than that. Any HTML document (or for that matter any SGML document or XML document) is a tree structure. For example, the following document and tree structure are similar (although not identical — see the notes on [whitespace in the DOM](/es/docs/Whitespace_in_the_DOM)):
 
 ```html
 <html>

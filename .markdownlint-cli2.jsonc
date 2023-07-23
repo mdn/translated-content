@@ -167,15 +167,14 @@
           "replace": " ",
           "searchScope": "all"
         },
-        // XXX Many instances still found in translated content
         // XXX zh-cn/zh-tw prefers em-dash instead
-        // {
-        //   "name": "m-dash",
-        //   "message": "Don't use '--'. Use m-dash — instead",
-        //   "search": " -- ",
-        //   "replace": " — ",
-        //   "searchScope": "text"
-        // },
+        {
+          "name": "m-dash",
+          "message": "Don't use '--'. Use m-dash — instead",
+          "search": " -- ",
+          "replace": " — ",
+          "searchScope": "text"
+        },
         {
           "name": "relative-link",
           "message": "Internal links should start with '/'",

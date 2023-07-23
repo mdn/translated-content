@@ -14,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingFrame = browser.webNavigation.getFrame(
-  details                // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -61,7 +61,7 @@ function onError(error) {
 
 var gettingFrame = browser.webNavigation.getFrame({
   tabId: 19,
-  frameId: 1537
+  frameId: 1537,
 });
 
 // Edge specific - processId is required not optional, must be integer not null

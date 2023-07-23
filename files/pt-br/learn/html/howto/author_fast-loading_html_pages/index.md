@@ -64,7 +64,7 @@ Scripts _inline_ podem ser custosos para o carregamento, uma vez que o parser de
 
 ### Use CSS moderno e marcação validada
 
-O uso de CSS moderno reduz a quantidade de marcação, pode reduzir a necessidade de imagens, em termos de layout, e frequentemente substitui imagens de textos estilizados -- que "custam" muito mais do que o texto estilizado com CSS.
+O uso de CSS moderno reduz a quantidade de marcação, pode reduzir a necessidade de imagens, em termos de layout, e frequentemente substitui imagens de textos estilizados — que "custam" muito mais do que o texto estilizado com CSS.
 
 Usar marcações validadas tem outras vantagens. Primeiro, _browsers_ não precisarão realizar correção de erros durante o _parsing_ de HTML (isso é à parte da preocupação filosófica de permitir variação de formato na entrada do usuário, e então programaticamente "corrigir" ou normalizá-la; ou se, ao invés disso, forçar um formato de entrada rígido, sem tolerância a desvios).
 

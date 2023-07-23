@@ -13,7 +13,7 @@ Vous ne pouvez pas appeler cette fonction avant que l'événement {{WebExtAPIRef
 ## Syntaxe
 
 ```js
-filter.disconnect()
+filter.disconnect();
 ```
 
 ### Paramètres
@@ -36,18 +36,18 @@ Cet exemple précèdera "preface text" au corps de la réponse. Il se déconnect
 function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
 
-  filter.onstart = event => {
+  filter.onstart = (event) => {
     console.log("started");
     let encoder = new TextEncoder();
     filter.write(encoder.encode("preface text"));
     filter.disconnect();
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.org/"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.org/"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

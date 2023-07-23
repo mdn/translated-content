@@ -27,7 +27,7 @@ var insertedNode = parentNode.insertBefore(newNode, referenceNode);
 
 Si `referenceNode` es `null`, el `newNode` se insertará al final de la lista de nodos hijos.
 
-> **Nota:** `referenceNode` **no** es un parámetro opcional -- debes pasar explícitamente un `Node` o `null`. No proporcionándolo o pasando valores no válidos podría provocar un [comportamiento](https://code.google.com/p/chromium/issues/detail?id=419780) [distinto](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) en diferentes versiones de navegadores.
+> **Nota:** `referenceNode` **no** es un parámetro opcional — debes pasar explícitamente un `Node` o `null`. No proporcionándolo o pasando valores no válidos podría provocar un [comportamiento](https://code.google.com/p/chromium/issues/detail?id=419780) [distinto](https://bugzilla.mozilla.org/show_bug.cgi?id=119489) en diferentes versiones de navegadores.
 
 ### Valor devuelto
 
