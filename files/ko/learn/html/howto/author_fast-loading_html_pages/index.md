@@ -77,21 +77,27 @@ table기반의 레이아웃을 `<div>`를 쓰거나 table을 작은 table로 나
 아래와 같이 깊게 중첩된 table 대신
 
 ```html
-<TABLE>
-  <TABLE>
-    <TABLE>
-          ...
-    </TABLE>
-  </TABLE>
-</TABLE>
+<table>
+  <table>
+    <table>
+      ...
+    </table>
+  </table>
+</table>
 ```
 
 중첩되지 않은 table 또는 div를 쓰라
 
 ```html
-<TABLE>...</TABLE>
-<TABLE>...</TABLE>
-<TABLE>...</TABLE>
+<table>
+  ...
+</table>
+<table>
+  ...
+</table>
+<table>
+  ...
+</table>
 ```
 
 #### 그림과 표의 크기를 명시하라
