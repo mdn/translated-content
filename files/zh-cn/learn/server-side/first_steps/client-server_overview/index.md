@@ -123,27 +123,14 @@ X-Frame-Options: DENY
 Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
-```
 
-```html
-<!doctype html>
-<html
-  lang="en-US"
-  dir="ltr"
-  class="redesign no-js"
-  data-ffo-opensanslight="false"
-  data-ffo-opensans="false">
-  <head prefix="og: http://ogp.me/ns#">
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <script>
-      (function (d) {
-        d.className = d.className.replace(/\bno-js/, "");
-      })(document.documentElement);
-    </script>
-    ...
-  </head>
-</html>
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  ...
 ```
 
 header 的剩余部分还包括一些回应的其他信息（比如回应在什么时候生成的），有关服务器的信息，还有它期望浏览器如何处理这个包（比如， `X-Frame-Options: DENY` 告诉浏览器不允许这个网页嵌入在其他网站的 HTML 元素{{htmlelement("iframe")}}上。
