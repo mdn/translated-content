@@ -14,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var detectingLanguages = browser.i18n.detectLanguage(
-  text                  // string
-)
+  text, // string
+);
 ```
 
 ### Paramètres
@@ -52,7 +52,7 @@ function onLanguageDetected(langInfo) {
   }
 }
 
-var text = "L'homme est né libre, et partout il est dans les fers."
+var text = "L'homme est né libre, et partout il est dans les fers.";
 
 var detecting = browser.i18n.detectLanguage(text);
 detecting.then(onLanguageDetected);

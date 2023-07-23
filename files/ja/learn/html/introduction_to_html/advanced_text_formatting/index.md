@@ -103,7 +103,8 @@ HTML テキストの基礎では、HTML で [基本的なリストをマーク�
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
 </p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
@@ -203,7 +204,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -338,7 +339,8 @@ HTML には引用をマークアップするための機能もあります。ど
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
 </p>
 
 <textarea id="code" class="input" style="min-height: 150px; width: 95%">
@@ -434,7 +436,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -499,7 +501,8 @@ textarea.onkeyup = () => {
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
 </p>
 
 <textarea id="code" class="input" style="min-height: 50px; width: 95%">
@@ -593,7 +596,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;

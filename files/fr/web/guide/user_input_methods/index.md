@@ -157,7 +157,7 @@ Dans un Open Web App, tout élément DOM peut être rendu directement éditable 
 - [Gérer l'orientation de l'écran](/fr/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 - [Utiliser le mode plein écran](/fr/docs/Web/Guide/DOM/Using_full_screen_mode)
 - [Drag & Drop de multiples éléments](/fr/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
-- [Opérations de glissement](/fr/docs/Web/API/API_HTML_Drag_and_Drop/Op%C3%A9rations_de_glissement)
+- [Opérations de glissement](/fr/docs/Web/API/API_HTML_Drag_and_Drop/Opérations_de_glissement)
 
 ## Référence
 

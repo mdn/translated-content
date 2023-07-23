@@ -19,8 +19,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.browsingData.removePasswords(
-  removalOptions            // RemovalOptions object
-)
+  removalOptions, // RemovalOptions object
+);
 ```
 
 ### Paramètres
@@ -53,10 +53,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removePasswords({since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removePasswords({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Supprime tous les mots de passe enregistrés :

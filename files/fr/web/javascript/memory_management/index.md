@@ -87,7 +87,7 @@ Utiliser des variables revient à lire et écrire la mémoire allouée. Cela peu
 
 La plupart des problèmes concernant la gestion de la mémoire surviennent à cet endroit. Le plus difficile est de savoir « quand » la mémoire allouée n'est plus utilisée. Pour les langages « bas niveau », il faut donc que le développeur détermine quelle partie de la mémoire n'est plus utilisée à tel endroit du code et la libère.
 
-Les interpréteurs des langages de haut niveau intègrent un composant logiciel, appelé « ramasse-miettes » qui a pour but de surveiller l'utilisation de la mémoire afin de déterminer quand une partie de la mémoire allouée n'est plus utilisée afin de la libérer automatiquement. Ce procédé ne peut être qu'une approximation car savoir si tel ou tel fragment de mémoire est nécessaire est un problème [indécidable](https://fr.wikipedia.org/wiki/D%C3%A9cidabilit%C3%A9) (autrement dit, ce problème ne peut être résolu par un algorithme).
+Les interpréteurs des langages de haut niveau intègrent un composant logiciel, appelé « ramasse-miettes » qui a pour but de surveiller l'utilisation de la mémoire afin de déterminer quand une partie de la mémoire allouée n'est plus utilisée afin de la libérer automatiquement. Ce procédé ne peut être qu'une approximation car savoir si tel ou tel fragment de mémoire est nécessaire est un problème [indécidable](https://fr.wikipedia.org/wiki/Décidabilité) (autrement dit, ce problème ne peut être résolu par un algorithme).
 
 ## Le ramasse-miettes ou _garbage collection_
 

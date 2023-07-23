@@ -6,7 +6,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Formes_géométriques", "Dessin_de_texte_avec_canvas")}}
 
-Dans le chapitre sur [les formes géométriques](/fr/docs/Tutoriel_canvas/Formes_g%C3%A9om%C3%A9triques), nous avons utilisé les styles de lignes et de remplissage par défaut. Ici, nous allons explorer les options de canvas à notre disposition pour rendre nos dessins un peu plus attrayants. Vous apprendrez comment ajouter des couleurs différentes, des styles de ligne, des dégradés, des motifs et des ombres à vos dessins.
+Dans le chapitre sur [les formes géométriques](/fr/docs/Tutoriel_canvas/Formes_géométriques), nous avons utilisé les styles de lignes et de remplissage par défaut. Ici, nous allons explorer les options de canvas à notre disposition pour rendre nos dessins un peu plus attrayants. Vous apprendrez comment ajouter des couleurs différentes, des styles de ligne, des dégradés, des motifs et des ombres à vos dessins.
 
 ## Les couleurs
 

@@ -18,8 +18,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 browser.browserAction.getBadgeTextColor(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres

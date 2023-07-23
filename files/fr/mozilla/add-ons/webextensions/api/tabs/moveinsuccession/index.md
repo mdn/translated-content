@@ -19,7 +19,7 @@ While the successor tab can be assigned with {{WebExtAPIRef('tabs.update()')}}, 
 ## Syntaxe
 
 ```js
-browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
+browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, { insert: true });
 ```
 
 ### Paramètres

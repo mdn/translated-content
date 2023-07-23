@@ -14,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var querying = browser.tabs.query(
-  queryInfo             // object
-)
+  queryInfo, // object
+);
 ```
 
 ### Paramètres
@@ -99,7 +99,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({currentWindow: true});
+var querying = browser.tabs.query({ currentWindow: true });
 querying.then(logTabs, onError);
 ```
 
@@ -117,7 +117,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({currentWindow: true, active: true});
+var querying = browser.tabs.query({ currentWindow: true, active: true });
 querying.then(logTabs, onError);
 ```
 
@@ -135,7 +135,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({url: "*://*.mozilla.org/*"});
+var querying = browser.tabs.query({ url: "*://*.mozilla.org/*" });
 querying.then(logTabs, onError);
 ```
 

@@ -20,9 +20,9 @@ Pour plus d'informations, voir [Native messaging](/fr/Add-ons/WebExtensions/Nati
 
 ```js
 var sending = browser.runtime.sendNativeMessage(
-  application,             // string
-  message                  // object
-)
+  application, // string
+  message, // object
+);
 ```
 
 ### Paramètres

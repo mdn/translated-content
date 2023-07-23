@@ -13,7 +13,7 @@ Il s'agit d'une fonction asynchrone qui retourne une [`Promise`](/fr/docs/Web/Ja
 ## Syntaxe
 
 ```js
-var gettingAll = browser.permissions.getAll()
+var gettingAll = browser.permissions.getAll();
 ```
 
 ### Paramètres
@@ -36,7 +36,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 browser.permissions.getAll().then((result) => {
   console.log(result.permissions); // [ "webRequest", "tabs" ]
-  console.log(result.origins)      // [ "*://*.mozilla.org/*" ]
+  console.log(result.origins); // [ "*://*.mozilla.org/*" ]
 });
 ```
 

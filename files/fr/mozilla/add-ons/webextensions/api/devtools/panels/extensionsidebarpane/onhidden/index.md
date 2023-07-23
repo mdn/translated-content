@@ -13,9 +13,9 @@ Appelé lorsque le volet de la barre latérale est masqué, suite à l'abandon d
 ## Syntaxe
 
 ```js
-browser.devtools.panels.onHidden.addListener(listener)
-browser.devtools.panels.onHidden.removeListener(listener)
-browser.devtools.panels.onHidden.hasListener(listener)
+browser.devtools.panels.onHidden.addListener(listener);
+browser.devtools.panels.onHidden.removeListener(listener);
+browser.devtools.panels.onHidden.hasListener(listener);
 ```
 
 Les événements ont trois fonctions:
@@ -44,7 +44,6 @@ Créez un volet de barre latérale et journal afficher et masquer les événemen
 
 ```js
 function onCreated(sidebarPane) {
-
   sidebarPane.onShown.addListener(() => {
     console.log("Shown");
   });
@@ -52,7 +51,6 @@ function onCreated(sidebarPane) {
   sidebarPane.onHidden.addListener(() => {
     console.log("Hidden");
   });
-
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
