@@ -11,9 +11,9 @@ Mise en place à chaque fois que l'utilisateur visite une page. Un objet {{WebEx
 ## Syntaxe
 
 ```js
-browser.history.onVisited.addListener(listener)
-browser.history.onVisited.removeListener(listener)
-browser.history.onVisited.hasListener(listener)
+browser.history.onVisited.addListener(listener);
+browser.history.onVisited.removeListener(listener);
+browser.history.onVisited.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

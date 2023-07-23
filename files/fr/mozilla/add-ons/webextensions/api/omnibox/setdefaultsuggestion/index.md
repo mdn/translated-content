@@ -14,8 +14,8 @@ Une fois que l'utilisateur a entré votre mot clé et a commencé à interagir a
 
 ```js
 browser.omnibox.setDefaultSuggestion(
-  suggestion            // object
-)
+  suggestion, // object
+);
 ```
 
 ### Paramètres
@@ -35,7 +35,7 @@ None.
 
 ```js
 browser.omnibox.setDefaultSuggestion({
-  description: "Type the name of a CSS property"
+  description: "Type the name of a CSS property",
 });
 ```
 
