@@ -140,30 +140,34 @@ En fait, il est possible d'associer plusieurs étiquettes à un seul widget, mai
 Considérons cet exemple&nbsp;:
 
 ```html
-<p>Les champs obligatoires sont suivis de <abbr title="required">*</abbr>.</p>
+<p>
+  Les champs obligatoires sont suivis de <span aria-label="required">*</span>.
+</p>
 
 <!-- Donc ceci&nbsp;: -->
-<div>
+<!--div>
   <label for="username">Nom&nbsp;:</label>
   <input type="text" name="username" />
-  <label for="username"><abbr title="required">*</abbr></label>
-</div>
+  <label for="username"><span aria-label="required">*</span></label>
+</div-->
 
 <!-- sera mieux programmé ainsi&nbsp;: -->
-<div>
+<!--div>
   <label for="username">
     <span>Nom&nbsp;:</span>
     <input id="username" type="text" name="username" />
-    <abbr title="required">*</abbr>
+    <span aria-label="required">*</span>
   </label>
-</div>
+</div-->
 
 <!-- mais ceci est probablement encore meilleur&nbsp;: -->
 <div>
-  <label for="username">Nom&nbsp;:<abbr title="required">*</abbr></label>
-  <input id="username" type="text" name="username" />
+  <label for="username">Nom&nbsp;:<span aria-label="required">*</span></label>
+  <input id="username" type="text" name="username" required />
 </div>
 ```
+
+{{EmbedLiveSample("", 120, 120)}}
 
 Le paragraphe du haut définit la règle pour les éléments obligatoires. Ce doit être au début pour s'assurer que les techniques d'assistance telles que les lecteurs d'écran l'afficheront ou le vocaliseront à l'utilisateur avant qu'il ne trouve un élément obligatoire. Ainsi, ils sauront ce que signifie l'astérisque. Un lecteur d'écran mentionnera l'astérisque en disant «&nbsp;astérisque&nbsp;» ou «&nbsp;obligatoire&nbsp;», selon les réglages du lecteur d'écran — dans tous les cas, ce qui sera dit est clairement précisé dans le premier paragraphe.
 
@@ -200,17 +204,17 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
 
 3. Ensuite, commencez le formulaire en ajoutant un élément {{htmlelement("form")}}&nbsp;:
 
-   ```html
+   ```html-nolint
    <form></form>
    ```
 
 4. Entre les balises `<form>`, ajoutez un en‑tête et un paragraphe pour informer les utilisateurs comment sont marqués les champs obligatoires&nbsp;:
 
-   ```html
+   ```html-nolint
    <h1>Formulaire de paiement</h1>
    <p>
      Les champs obligatoires sont suivis par un
-     <strong><abbr title="required">*</abbr></strong
+     <strong><span aria-label="required">*</span></strong
      >.
    </p>
    ```
@@ -240,23 +244,23 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
      <p>
        <label for="name">
          <span>Nom&nbsp;: </span>
-         <strong><abbr title="required">*</abbr></strong>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="text" id="name" name="username" />
+       <input type="text" id="name" name="username" required />
      </p>
      <p>
        <label for="mail">
          <span>e-mail&nbsp;:</span>
-         <strong><abbr title="required">*</abbr></strong>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="email" id="mail" name="usermail" />
+       <input type="email" id="mail" name="usermail" required />
      </p>
      <p>
        <label for="pwd">
          <span>Mot de passe&nbsp;:</span>
-         <strong><abbr title="required">*</abbr></strong>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="password" id="pwd" name="password" />
+       <input type="password" id="pwd" name="password" required />
      </p>
    </section>
    ```
@@ -279,17 +283,21 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
      <p>
        <label for="number">
          <span>Numéro de carte&nbsp;:</span>
-         <strong><abbr title="required">*</abbr></strong>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="text" id="number" name="cardnumber" />
+       <input type="tel" id="number" name="cardnumber" required />
      </p>
      <p>
-       <label for="date">
-         <span>Validité&nbsp;:</span>
-         <strong><abbr title="required">*</abbr></strong>
-         <em>format mm/aa</em>
+       <label for="expiration">
+         <span>Date d'expiration&nbsp;:</span>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="text" id="date" name="expiration" />
+       <input
+         type="text"
+         id="expiration"
+         required="true"
+         placeholder="MM/YY"
+         pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
      </p>
    </section>
    ```
@@ -297,175 +305,22 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
 7. La dernière section est plus simple&nbsp;; elle ne contient qu'un bouton {{htmlelement("button")}} de type `submit`, pour adresser les données du formulaire. Ajoutez ceci au bas du formulaire&nbsp;:
 
    ```html
-   <p><button type="submit">Valider le paiement</button></p>
+   <section>
+     <p>
+       <button type="submit">Valider le paiement</button>
+     </p>
+   </section>
+   ```
+
+8. Enfin, finalisez votre formulaire en ajoutant la balise fermante pour [`<form>`](/fr/docs/Web/HTML/Element/form)&nbsp;:
+
+   ```html
+   </form>
    ```
 
 Vous pouvez voir le formulaire terminé en action ci‑dessous (vous le trouverez aussi sur GitHub — voir la [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) payment-form.html et une exécution [directe](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 
-#### Exemple en direct
-
-Consultez le [code source complet ici](/Learn/Forms/How_to_structure_a_web_form/Example)
-
-```html hidden
-<form>
-  <h1>Formulaire de paiement</h1>
-  <p>
-    Les champs obligatoires sont suivis par
-    <strong><abbr title="required">*</abbr></strong
-    >.
-  </p>
-  <section>
-    <h2>Informations de contact</h2>
-    <fieldset>
-      <legend>Qualité</legend>
-      <ul>
-        <li>
-          <label for="title_1">
-            <input type="radio" id="title_1" name="title" value="M." />
-            Monsieur
-          </label>
-        </li>
-        <li>
-          <label for="title_2">
-            <input type="radio" id="title_2" name="title" value="Mme." />
-            Madame
-          </label>
-        </li>
-      </ul>
-    </fieldset>
-    <p>
-      <label for="name">
-        <span>Nom :</span>
-        <strong><abbr title="required">*</abbr></strong>
-      </label>
-      <input type="text" id="name" name="username" />
-    </p>
-    <p>
-      <label for="mail">
-        <span>e-mail :</span>
-        <strong><abbr title="required">*</abbr></strong>
-      </label>
-      <input type="email" id="mail" name="usermail" />
-    </p>
-    <p>
-      <label for="password">
-        <span>Mot de passe :</span>
-        <strong><abbr title="required">*</abbr></strong>
-      </label>
-      <input type="password" id="pwd" name="password" />
-    </p>
-  </section>
-  <section>
-    <h2>Informations de paiement</h2>
-    <p>
-      <label for="card">
-        <span>Type de carte :</span>
-      </label>
-      <select id="card" name="usercard">
-        <option value="visa">Visa</option>
-        <option value="mc">Mastercard</option>
-        <option value="amex">American Express</option>
-      </select>
-    </p>
-    <p>
-      <label for="number">
-        <span>Numéro :</span>
-        <strong><abbr title="required">*</abbr></strong>
-      </label>
-      <input type="text" id="number" name="cardnumber" />
-    </p>
-    <p>
-      <label for="date">
-        <span>Validité :</span>
-        <strong><abbr title="required">*</abbr></strong>
-        <em>format mm/aa</em>
-      </label>
-      <input type="text" id="date" name="expiration" />
-    </p>
-  </section>
-  <section>
-    <p><button type="submit">Valider le paiement</button></p>
-  </section>
-</form>
-```
-
-```css hidden
-h1 {
-  margin-top: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-form {
-  margin: 0 auto;
-  width: 450px;
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 1em;
-}
-
-div + div {
-  margin-top: 1em;
-}
-
-label span {
-  display: inline-block;
-  width: 120px;
-  text-align: right;
-}
-
-input,
-textarea {
-  font: 1em sans-serif;
-  width: 250px;
-  box-sizing: border-box;
-  border: 1px solid #999;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  width: auto;
-  border: none;
-}
-
-input:focus,
-textarea:focus {
-  border-color: #000;
-}
-
-textarea {
-  vertical-align: top;
-  height: 5em;
-  resize: vertical;
-}
-
-fieldset {
-  width: 250px;
-  box-sizing: border-box;
-  margin-left: 146px;
-  border: 1px solid #999;
-}
-
-button {
-  margin: 20px 0 0 124px;
-}
-
-label {
-  position: relative;
-}
-
-label em {
-  position: absolute;
-  right: 5px;
-  top: 20px;
-}
-```
-
-{{ EmbedLiveSample("Exemple_en_direct", "100%", "620") }}
+{{EmbedLiveSample("Exemple_en_direct", "100%", "620")}}
 
 ## Résumé
 
