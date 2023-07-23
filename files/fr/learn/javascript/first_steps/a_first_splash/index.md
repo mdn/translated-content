@@ -261,7 +261,7 @@ Les fonctions sont des blocs de code réutilisables que vous pouvez écrire une 
 
 Quand nous voulons exécuter le code, nous saisissons le nom de la fonction suivi des parenthèses.
 
-Essayez. Enregistrez le code et actualisez la page du navigateur. Puis, allez dans les [outils de développement et la console JavaScript](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs) et entrez la ligne suivante :
+Essayez. Enregistrez le code et actualisez la page du navigateur. Puis, allez dans les [outils de développement et la console JavaScript](/fr/Apprendre/Découvrir_outils_développement_navigateurs) et entrez la ligne suivante :
 
 ```js
 checkGuess();
@@ -275,7 +275,7 @@ Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir 
 
 Les opérateurs en JavaScript nous permettent d'effectuer des tests, de faire des calculs, de joindre des chaînes ensemble et d'autres choses de ce genre.
 
-Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les [outils de développement et la console Javascript](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes «&nbsp;Exemple&nbsp;» exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous&nbsp;:
+Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les [outils de développement et la console Javascript](/fr/Apprendre/Découvrir_outils_développement_navigateurs). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes «&nbsp;Exemple&nbsp;» exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous&nbsp;:
 
 ```html hidden
 <!doctype html>
@@ -561,7 +561,7 @@ Pour finir, c'est le moment de faire une synthèse sur quelques caractéristique
 
 Dans le code précédent, une partie à examiner de plus près est la boucle [for](/fr/docs/Web/JavaScript/Reference/Instructions/for). Les boucles sont un concept très important dans la programmation, qui vous permet de continuer à exécuter un morceau de code encore et encore, jusqu'à ce qu'une certaine condition soit remplie.
 
-Pour commencer, allez sur votre [console developpeur Javascript](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs) et entrez ce qui suit :
+Pour commencer, allez sur votre [console developpeur Javascript](/fr/Apprendre/Découvrir_outils_développement_navigateurs) et entrez ce qui suit :
 
 ```js
 for (let i = 1; i < 21; i++) {
