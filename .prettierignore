@@ -19,6 +19,7 @@ build/
 /files/fr/glossary/grid_axis/index.md
 /files/fr/glossary/grid_lines/index.md
 /files/fr/glossary/main_axis/index.md
+/ru/learn/html/introduction_to_html/the_head_metadata_in_html/index.md
 /files/zh-cn/learn/css/howto/css_faq/index.md
 
 # A full pass on all Markdown files is being performed.
@@ -89,7 +90,6 @@ build/
 
 # ru
 /files/ru/learn/css/**/*.md
-/files/ru/learn/html/**/*.md
 /files/ru/learn/javascript/**/*.md
 /files/ru/learn/server-side/**/*.md
 /files/ru/web/api/**/*.md
