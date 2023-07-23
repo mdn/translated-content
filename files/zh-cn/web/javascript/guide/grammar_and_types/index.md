@@ -78,7 +78,7 @@ JavaScript 有三种声明方式。
 - 直接赋值。例如`x = 42`。在函数外使用这种形式赋值，会产生一个全局变量。在严格模式下会产生错误。因此你不应该使用这种方式来声明变量。
 - 使用关键词 `let` 。例如 `let y = 13`。这个语法可以用来声明块作用域的局部变量。參考下方[变量的作用域 (Variable scope)](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量的作用域) 。
 
-你可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)将[对象字面量](#对象字面量_object_literals)的属性绑定到变量。就像这样`let { bar } = foo`。这会创建一个名为`bar`的变量，并且将`foo`对像中属性名与之相同的属性的值赋给它。
+你可以使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)将[对象字面量](#对象字面量_object_literals)的属性绑定到变量。就像这样`let { bar } = foo`。这会创建一个名为`bar`的变量，并且将`foo`对象中属性名与之相同的属性的值赋给它。
 
 你也可以直接给属性赋值。像这样`x = 42`。这种声明方式将会创建一个[未声明全局变量](/zh-CN/docs/Web/JavaScript/Reference/Statements/var#%E6%8F%8F%E8%BF%B0)。这样做还会产生 JavaScript 警告。因为未声明的全局变量常常导致预期之外的行为，所以不建议使用。
 
