@@ -16,9 +16,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var retrieving = browser.sessions.getTabValue(
-  tabId,    // integer
-  key       // string
-)
+  tabId, // integer
+  key, // string
+);
 ```
 
 ### Paramètres
@@ -50,7 +50,9 @@ function onGetRejected(e) {
 }
 
 browser.tabs.onCreated.addListener((tab) => {
-  browser.sessions.getTabValue(tab.id, "my-key").then(onGetResolved, onGetRejected);
+  browser.sessions
+    .getTabValue(tab.id, "my-key")
+    .then(onGetResolved, onGetRejected);
 });
 ```
 

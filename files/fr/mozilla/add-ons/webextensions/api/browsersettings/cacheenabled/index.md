@@ -24,8 +24,7 @@ function logResult(result) {
   console.log(`Current level of control: ${result.levelOfControl}`);
 }
 
-browser.browserSettings.cacheEnabled.get({}).
-  then(logResult);
+browser.browserSettings.cacheEnabled.get({}).then(logResult);
 ```
 
 Désactivation du cache du navigateur :
@@ -35,8 +34,7 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.cacheEnabled.set({value: false}).
-  then(logResult);
+browser.browserSettings.cacheEnabled.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}

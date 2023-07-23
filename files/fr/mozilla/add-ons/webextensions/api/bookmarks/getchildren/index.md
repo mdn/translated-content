@@ -14,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingChildren = browser.bookmarks.getChildren(
-  id                     // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres

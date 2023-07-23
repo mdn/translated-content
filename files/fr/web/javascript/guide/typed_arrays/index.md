@@ -140,7 +140,7 @@ let vueMontant = new Float32Array(buffer, 20, 1);
 
 On peut ensuite accéder au montant lié à un utilisateur, par exemple, avec `vueMontant[0]`.
 
-> **Note :** [L'alignement des structures de données](https://fr.wikipedia.org/wiki/Alignement_en_m%C3%A9moire) dans une structure C dépend de la plate-forme. Il est donc nécessaire de prendre des précautions quant au format attendu.
+> **Note :** [L'alignement des structures de données](https://fr.wikipedia.org/wiki/Alignement_en_mémoire) dans une structure C dépend de la plate-forme. Il est donc nécessaire de prendre des précautions quant au format attendu.
 
 ### Convertir un tableau typé en un tableau normal
 
