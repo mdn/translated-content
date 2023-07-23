@@ -110,7 +110,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
 
 在消息的末尾我们可以看到**主体**内容——包含了针对请求返回的真实的 HTML。
 
-```html
+```http
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
@@ -123,16 +123,27 @@ X-Frame-Options: DENY
 Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
+```
 
-
-
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
-<head prefix="og: http://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
-  ...
+```html
+<!doctype html>
+<html
+  lang="en-US"
+  dir="ltr"
+  class="redesign no-js"
+  data-ffo-opensanslight="false"
+  data-ffo-opensans="false">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script>
+      (function (d) {
+        d.className = d.className.replace(/\bno-js/, "");
+      })(document.documentElement);
+    </script>
+    ...
+  </head>
+</html>
 ```
 
 header 的剩余部分还包括一些回应的其他信息（比如回应在什么时候生成的），有关服务器的信息，还有它期望浏览器如何处理这个包（比如， `X-Frame-Options: DENY` 告诉浏览器不允许这个网页嵌入在其他网站的 HTML 元素{{htmlelement("iframe")}}上。
@@ -145,7 +156,7 @@ header 的剩余部分还包括一些回应的其他信息（比如回应在什�
 
 下面的文本展示了当用户在网站上提交新的文件的时候，生成的一个 HTTP 请求的格式和之前展示的 GET 请求是非常相似的，只是第一行标识这个请求为 POST。
 
-```html
+```http
 POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
@@ -171,7 +182,7 @@ csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&
 
 请求的响应如下。状态码"302 FOUND"告知浏览器，服务端已收到它提交的 post 请求，它必须再发出第二个 HTTP 请求来加载`Location`字段中指定的页面。对于其他方面的信息含义，则与`GET`请求的响应信息类似。
 
-```html
+```http
 HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com
