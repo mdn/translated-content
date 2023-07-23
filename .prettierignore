@@ -77,7 +77,6 @@ build/
 /files/ko/web/svg/**/*.md
 
 # pt-br
-/files/pt-br/learn/html/**/*.md
 /files/pt-br/learn/javascript/**/*.md
 /files/pt-br/learn/server-side/**/*.md
 /files/pt-br/web/api/**/*.md
