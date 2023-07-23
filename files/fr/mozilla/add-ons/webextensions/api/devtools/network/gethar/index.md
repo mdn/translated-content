@@ -13,7 +13,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var getting = browser.devtools.network.getHAR()
+var getting = browser.devtools.network.getHAR();
 ```
 
 ### Paramètres

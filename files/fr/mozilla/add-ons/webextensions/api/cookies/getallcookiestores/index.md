@@ -13,7 +13,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var gettingStores = browser.cookies.getAllCookieStores()
+var gettingStores = browser.cookies.getAllCookieStores();
 ```
 
 ### Paramètres

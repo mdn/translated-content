@@ -48,7 +48,7 @@ function onError(error) {
 }
 
 var searching = browser.downloads.search({
-  query:["imgur"]
+  query: ["imgur"],
 });
 
 searching.then(logDownloads, onError);
@@ -72,7 +72,7 @@ function onError(error) {
 
 var id = 13;
 
-var searching = browser.downloads.search({id});
+var searching = browser.downloads.search({ id });
 searching.then(logDownloads, onError);
 ```
 
@@ -113,8 +113,8 @@ function onError(error) {
 }
 
 var searching = browser.downloads.search({
-   limit: 1,
-   orderBy: ["-startTime"]
+  limit: 1,
+  orderBy: ["-startTime"],
 });
 searching.then(logDownloads, onError);
 ```

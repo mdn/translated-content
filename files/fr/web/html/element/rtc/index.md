@@ -57,7 +57,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
       <td>
         Du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >
         ou des éléments {{HTMLElement("rt")}}.

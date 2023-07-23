@@ -14,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingPanel = browser.sidebarAction.getPanel(
-  details               // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -31,7 +31,7 @@ var gettingPanel = browser.sidebarAction.getPanel(
 
 <!---->
 
-- Si `windowId` et `tabId`  sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
+- Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
 - Si `windowId` et `tabId` sont tous les deux omis, le panneau global est renvoyé.
 
 ### Valeur retournée

@@ -229,7 +229,7 @@ Voir [l'API MediaRecorder](/fr/docs/Web/API/MediaRecorder_API) pour plus de dét
 
 [Encrypted Media Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/encrypted-media/encrypted-media.html) (EME ou « extensions pour les médias chiffrés ») est une proposition du W3C d'étendre [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) en fournissant des API pour contrôler la lecture de contenu protégé.
 
-L'API prend en charge divers cas d'utilisation, allant du simple déchiffrement par clé aux vidéos protégées par DRM (pourvu que le navigateur implémente ce système). L'échange de licence/clé est contrôlé par l'application, facilitant ainsi le développement d'applications de lecture robustes et qui prennent en charge différentes technologies de déchiffrement et de protection de contenu. Un des principaux usages d'EME est de permettre au navigateur d'implémenter la gestion des DRM ([<i lang="en">Digital Rights Management</i>](https://fr.wikipedia.org/wiki/Gestion_des_droits_num%C3%A9riques)).
+L'API prend en charge divers cas d'utilisation, allant du simple déchiffrement par clé aux vidéos protégées par DRM (pourvu que le navigateur implémente ce système). L'échange de licence/clé est contrôlé par l'application, facilitant ainsi le développement d'applications de lecture robustes et qui prennent en charge différentes technologies de déchiffrement et de protection de contenu. Un des principaux usages d'EME est de permettre au navigateur d'implémenter la gestion des DRM ([<i lang="en">Digital Rights Management</i>](https://fr.wikipedia.org/wiki/Gestion_des_droits_numériques)).
 
 ### Diffusion adaptative
 

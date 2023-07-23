@@ -11,7 +11,7 @@ L'API <i lang="en">Web Authentication</i> est une extension de l'API [<i lang="e
 
 ## Concepts et utilisation de l'API <i lang="en">Web Authentication</i>
 
-L'API <i lang="en">Web Authentication</i> (qu'on pourrait traduire en «&nbsp;authentification web&nbsp;»), généralement désignée par le terme WebAuthn, utilise [la cryptographie asymétrique (à clé publique)](https://fr.wikipedia.org/wiki/Cryptographie_asym%C3%A9trique) plutôt que des mots de passe ou des SMS pour l'enregistrement, l'authentification et [l'authentification forte](https://fr.wikipedia.org/wiki/Authentification_forte) sur les sites web. Cela présente différents avantages&nbsp;:
+L'API <i lang="en">Web Authentication</i> (qu'on pourrait traduire en «&nbsp;authentification web&nbsp;»), généralement désignée par le terme WebAuthn, utilise [la cryptographie asymétrique (à clé publique)](https://fr.wikipedia.org/wiki/Cryptographie_asymétrique) plutôt que des mots de passe ou des SMS pour l'enregistrement, l'authentification et [l'authentification forte](https://fr.wikipedia.org/wiki/Authentification_forte) sur les sites web. Cela présente différents avantages&nbsp;:
 
 - Protection contre l'hameçonnage (<i lang="en">phishing</i>)
   - : Une personne malveillante qui crée un faux site de connexion ne peut pas récupérer les informations de l'utilisatrice ou de l'utilisateur, car la signature change avec [l'origine](/fr/docs/Glossary/Origin) du site.

@@ -13,9 +13,9 @@ Voir {{WebExtAPIRef("bookmarks.onImportBegan")}}.
 ## Syntaxe
 
 ```js
-browser.bookmarks.onImportEnded.addListener(listener)
-browser.bookmarks.onImportEnded.removeListener(listener)
-browser.bookmarks.onImportEnded.hasListener(listener)
+browser.bookmarks.onImportEnded.addListener(listener);
+browser.bookmarks.onImportEnded.removeListener(listener);
+browser.bookmarks.onImportEnded.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

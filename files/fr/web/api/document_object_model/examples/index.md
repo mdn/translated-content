@@ -371,7 +371,7 @@ for (var i = 0; i < 2; i++) {
 
 - N'utilisez jamais la propriété {{domxref("element.innerHTML","innerHTML")}} d'un tableau pour le modifier, même si vous pouvez l'utiliser pour créer un tableau entier ou le contenu d'une cellule.
 - Si vous utilisez les méthodes DOM Core {{domxref("document.createElement")}} et {{domxref("Node.appendChild")}} pour créer des lignes et cellules de tableau, il est nécessaire de les ajouter à un élément `tbody` dans Internet Explorer, tandis que les autres navigateurs vous permettront de les ajouter à un élément `table` (les lignes seront ajoutées au dernier élément `tbody`).
-- Un certain nombre d'autres méthodes utilitaires faisant partie de l'[interface table](/fr/docs/Web/API/HTMLTableElement#M%C3%A9thodes) peuvent être utilisées pour créer et modifier des tableaux.
+- Un certain nombre d'autres méthodes utilitaires faisant partie de l'[interface table](/fr/docs/Web/API/HTMLTableElement#Méthodes) peuvent être utilisées pour créer et modifier des tableaux.
 
 ## Subnav
 

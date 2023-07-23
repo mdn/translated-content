@@ -467,7 +467,7 @@ Les _skip links_ sont particulièrement utiles pour les personnes qui naviguent 
 
 - _[WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)_ (en anglais)
 - [Comment utiliser les _skip links_ - _The A11Y Project_ (en anglais)](https://a11yproject.com/posts/2013-05-11-skip-nav-links/)
-- [Comprendre les règles WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [Comprendre les règles WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [_Understanding Success Criterion 2.4.1 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ### Dimensionnement et proximité
