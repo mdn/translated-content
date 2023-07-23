@@ -123,27 +123,14 @@ X-Frame-Options: DENY
 Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
-```
 
-```html
-<!doctype html>
-<html
-  lang="en-US"
-  dir="ltr"
-  class="redesign no-js"
-  data-ffo-opensanslight="false"
-  data-ffo-opensans="false">
-  <head prefix="og: http://ogp.me/ns#">
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <script>
-      (function (d) {
-        d.className = d.className.replace(/\bno-js/, "");
-      })(document.documentElement);
-    </script>
-    ...
-  </head>
-</html>
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  ...
 ```
 
 Остальная часть заголовка ответа содержит информацию об ответе (например, когда он был сгенерирован), сервере и о том, как он ожидает, что браузер обработает страницу (например, строка `X-Frame-Options: DENY` говорит браузеру не допускать внедрения этой страницы, если она будет внедрена в {{htmlelement ("iframe")}} на другом сайте).
