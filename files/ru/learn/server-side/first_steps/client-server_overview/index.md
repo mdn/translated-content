@@ -110,7 +110,7 @@ HTTP-запрос может также содержать body, но в дан�
 
 В конце сообщения мы видим содержимое **body,** содержащее HTML-код возвращаемого ответа.
 
-```html
+```http
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
@@ -123,16 +123,27 @@ X-Frame-Options: DENY
 Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
+```
 
-
-
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
-<head prefix="og: http://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
-  ...
+```html
+<!doctype html>
+<html
+  lang="en-US"
+  dir="ltr"
+  class="redesign no-js"
+  data-ffo-opensanslight="false"
+  data-ffo-opensans="false">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script>
+      (function (d) {
+        d.className = d.className.replace(/\bno-js/, "");
+      })(document.documentElement);
+    </script>
+    ...
+  </head>
+</html>
 ```
 
 Остальная часть заголовка ответа содержит информацию об ответе (например, когда он был сгенерирован), сервере и о том, как он ожидает, что браузер обработает страницу (например, строка `X-Frame-Options: DENY` говорит браузеру не допускать внедрения этой страницы, если она будет внедрена в {{htmlelement ("iframe")}} на другом сайте).
@@ -145,7 +156,7 @@ HTTP `POST` создаётся, когда вы отправляете форм�
 
 В приведённом ниже тексте показан HTTP-запрос, сделанный когда пользователь загружает новые данные профиля на этом сайте. Формат запроса почти такой же, как пример запроса `GET`, показанный ранее, хотя первая строка идентифицирует этот запрос как `POST`.
 
-```html
+```http
 POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
@@ -171,7 +182,7 @@ csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&
 
 Ответ от запроса показан ниже. Код состояния «`302 Found`» сообщает браузеру, что сообщение обработано, и что необходим второй HTTP-запрос для загрузки страницы, указанной в поле `Location`. В остальном информация аналогична информации для ответа на запрос `GET` .
 
-```html
+```http
 HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com
