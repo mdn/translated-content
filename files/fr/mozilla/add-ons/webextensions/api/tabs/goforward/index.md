@@ -14,9 +14,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var goingForward = browser.tabs.goForward(
-  tabId,                       // optional integer
-  callback                     // optional function
-)
+  tabId, // optional integer
+  callback, // optional function
+);
 ```
 
 ### Paramètres

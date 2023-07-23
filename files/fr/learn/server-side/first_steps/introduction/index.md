@@ -131,7 +131,7 @@ Une analyse plus approfondie des habitudes des utilisateurs peut être utilisée
 >
 > Les résultats de recherche Google sont optimisés en fonction des recherches précédentes.
 >
-> 1. Allez sur [Google](https:\\google.com).
+> 1. Allez sur [Google](https://www.google.com).
 > 2. Recherchez "football".
 > 3. Maintenant tapez "favoris" dans la barre de recherche et regardez les prédictions de recherche de l'autocomplete.
 >

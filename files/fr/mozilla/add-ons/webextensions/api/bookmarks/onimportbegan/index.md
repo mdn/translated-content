@@ -13,9 +13,9 @@ Pendant l'importation d'un ensemble de signets, {{WebExtAPIRef("bookmarks.onCrea
 ## Syntaxe
 
 ```js
-browser.bookmarks.onImportBegan.addListener(listener)
-browser.bookmarks.onImportBegan.removeListener(listener)
-browser.bookmarks.onImportBegan.hasListener(listener)
+browser.bookmarks.onImportBegan.addListener(listener);
+browser.bookmarks.onImportBegan.removeListener(listener);
+browser.bookmarks.onImportBegan.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

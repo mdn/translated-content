@@ -12,9 +12,9 @@ Obtient la chaîne localisée pour le message spécifié.
 
 ```js
 browser.i18n.getMessage(
-  messageName,  // string
-  substitutions // optional any
-)
+  messageName, // string
+  substitutions, // optional any
+);
 ```
 
 ### Paramètres
@@ -54,9 +54,9 @@ Cela fonctionnerait avec un fichier \_locales/en/messages.json contenant :
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }

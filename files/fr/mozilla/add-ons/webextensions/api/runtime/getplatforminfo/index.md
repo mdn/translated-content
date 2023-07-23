@@ -13,7 +13,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-var getting = browser.runtime.getPlatformInfo()
+var getting = browser.runtime.getPlatformInfo();
 ```
 
 ### Paramètres
