@@ -69,9 +69,9 @@ ARIA `listitem` 角色可用于标识项目列表中的项目。它通常与 [`l
 - [HTML `<ol>` 元素](/zh-CN/docs/Web/HTML/Element/ol)
 - [ARIA：`list` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/list_role)
 - [ARIA：`group` 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role)
-- [Accessibility Object Model](https://wicg.github.io/aom/spec/)
-- [ARIA in HTML](https://w3c.github.io/html-aria/)
-- [ARIA Lists examples](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — by Scott O'Hara
+- [无障碍对象模型](https://wicg.github.io/aom/spec/)
+- [HTML 中的 ARIA](https://w3c.github.io/html-aria/)
+- [ARIA 列表示例](https://www.scottohara.me/blog/2018/05/26/aria-lists.html) — by Scott O'Hara
 
 <section id="Quick_links">
 
