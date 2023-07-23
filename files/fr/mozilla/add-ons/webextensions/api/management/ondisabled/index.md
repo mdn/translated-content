@@ -13,9 +13,9 @@ L'API requière l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/pe
 ## Syntaxe
 
 ```js
-browser.management.onDisabled.addListener(listener)
-browser.management.onDisabled.removeListener(listener)
-browser.management.onDisabled.hasListener(listener)
+browser.management.onDisabled.addListener(listener);
+browser.management.onDisabled.removeListener(listener);
+browser.management.onDisabled.hasListener(listener);
 ```
 
 Les événement ont trois fonctions :

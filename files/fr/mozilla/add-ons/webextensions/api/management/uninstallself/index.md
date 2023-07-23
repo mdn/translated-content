@@ -16,8 +16,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var uninstallingSelf = browser.management.uninstallSelf(
-  options              // object
-)
+  options, // object
+);
 ```
 
 ### Paramètres
@@ -51,7 +51,7 @@ function onCanceled(error) {
 }
 
 var uninstalling = browser.management.uninstallSelf({
-  showConfirmDialog: true
+  showConfirmDialog: true,
 });
 
 uninstalling.then(null, onCanceled);
@@ -66,7 +66,7 @@ function onCanceled(error) {
 
 var uninstalling = browser.management.uninstallSelf({
   showConfirmDialog: true,
-  dialogMessage: "Testing self-uninstall"
+  dialogMessage: "Testing self-uninstall",
 });
 
 uninstalling.then(null, onCanceled);

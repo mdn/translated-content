@@ -15,7 +15,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var removing = browser.menus.removeAll()
+var removing = browser.menus.removeAll();
 ```
 
 ### Paramètres
@@ -42,16 +42,16 @@ function onRemoved() {
 browser.menus.create({
   id: "click-me",
   title: "Click me!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.create({
   id: "remove-all",
   title: "Remove all!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
-browser.menus.onClicked.addListener(function(info, tab) {
+browser.menus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "remove-all") {
     var removing = browser.menus.removeAll();
     removing.then(onRemoved);

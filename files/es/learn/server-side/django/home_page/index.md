@@ -202,7 +202,7 @@ La plantilla base que pensamos usar para el siito web _LocalLibrary_ se muestra 
 
 > **Nota:** También introducimos dos etiquetas de plantilla adicionales: `url` y `load static`. Se discute sobre ellas en secciones posteriores.
 
-Crea un nuevo archivo -- **/locallibrary/catalog/templates/_base_generic.html_** -- y pon en él el siguiente contenido:
+Crea un nuevo archivo — **/locallibrary/catalog/templates/_base_generic.html_** — y pon en él el siguiente contenido:
 
 ```django
 <!DOCTYPE html>
@@ -245,7 +245,7 @@ Crea un nuevo archivo -- **/locallibrary/catalog/templates/_base_generic.html_**
 </html>
 ```
 
-La plantilla usa (e incluye) JavaScript y CSS desde [Bootstrap](http://getbootstrap.com/) para mejorar el diseño y la presentación de la página HTML. Usar Bootstrap u otro framework web del lado del cliente es una manera rápida de crear una página atractiva que puede escalarse bien en diferentes tamaños de navegador, y también nos permite concentrarnos en la presentación de la página sin tener que entrar en ninguno de los detalles -- ¡queremos enfocarnos nada más en el código del lado del servidor aquí!
+La plantilla usa (e incluye) JavaScript y CSS desde [Bootstrap](http://getbootstrap.com/) para mejorar el diseño y la presentación de la página HTML. Usar Bootstrap u otro framework web del lado del cliente es una manera rápida de crear una página atractiva que puede escalarse bien en diferentes tamaños de navegador, y también nos permite concentrarnos en la presentación de la página sin tener que entrar en ninguno de los detalles — ¡queremos enfocarnos nada más en el código del lado del servidor aquí!
 
 La plantilla base también hace referencia a un archivo css local (**styles.css**) que brinda algo más de estilo. Crea **/locallibrary/catalog/static/css/styles.css** y pon en él el siguiente contenido:
 
@@ -370,7 +370,7 @@ Aquí hay un par de tareas para probar tu familiaridad con consultas a modelos, 
 
 ## Resumen
 
-Hemos creado la página de inicio para nuestro sitio -- una página HTML que despliega algunos conteos de registros de la base de datos y contiene enlaces a otras de nuestras páginas que aún nos faltan por crear. Sobre la marcha hemos adquirido mucha información fundamental sobre mapeadores URL, vistas, consultas a la base de datos usando nuestros modelos, cómo enviar información a una plantilla desde nuestra vista, y cómo crear y extender plantillas.
+Hemos creado la página de inicio para nuestro sitio — una página HTML que despliega algunos conteos de registros de la base de datos y contiene enlaces a otras de nuestras páginas que aún nos faltan por crear. Sobre la marcha hemos adquirido mucha información fundamental sobre mapeadores URL, vistas, consultas a la base de datos usando nuestros modelos, cómo enviar información a una plantilla desde nuestra vista, y cómo crear y extender plantillas.
 
 En nuestro siguiente artículo nos basaremos en nuestro conocimiento para crear las otras cuatro páginas.
 

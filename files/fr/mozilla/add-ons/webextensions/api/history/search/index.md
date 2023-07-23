@@ -14,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var searching = browser.history.search(
-  query                  // object
-)
+  query, // object
+);
 ```
 
 ### Paramètres
@@ -67,7 +67,7 @@ function onGot(historyItems) {
   }
 }
 
-var searching = browser.history.search({text: ""});
+var searching = browser.history.search({ text: "" });
 
 searching.then(onGot);
 ```
@@ -83,8 +83,8 @@ function onGot(historyItems) {
 }
 
 var searching = browser.history.search({
-   text: "",
-   startTime: 0
+  text: "",
+  startTime: 0,
 });
 
 searching.then(onGot);
@@ -101,9 +101,9 @@ function onGot(historyItems) {
 }
 
 var searching = browser.history.search({
- text: "mozilla",
- startTime: 0,
- maxResults: 1
+  text: "mozilla",
+  startTime: 0,
+  maxResults: 1,
 });
 
 searching.then(onGot);

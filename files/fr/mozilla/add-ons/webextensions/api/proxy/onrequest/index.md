@@ -24,12 +24,12 @@ Pour utiliser `proxy.onRequest`, une extension doit avoir la [permission API](/f
 
 ```js
 browser.proxy.onRequest.addListener(
-  listener,             //  function
-  filter,               //  object
-  extraInfoSpec         //  optional array of strings
-)
-browser.proxy.onRequest.removeListener(listener)
-browser.proxy.onRequest.hasListener(listener)
+  listener, //  function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.proxy.onRequest.removeListener(listener);
+browser.proxy.onRequest.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -81,12 +81,14 @@ function shouldProxyRequest(requestInfo) {
 function handleProxyRequest(requestInfo) {
   if (shouldProxyRequest(requestInfo)) {
     console.log(`Proxying: ${requestInfo.url}`);
-    return {type: "http", host: "127.0.0.1", port: 65535};
+    return { type: "http", host: "127.0.0.1", port: 65535 };
   }
-  return {type: "direct"};
+  return { type: "direct" };
 }
 
-browser.proxy.onRequest.addListener(handleProxyRequest, {urls: ["<all_urls>"]});
+browser.proxy.onRequest.addListener(handleProxyRequest, {
+  urls: ["<all_urls>"],
+});
 ```
 
 {{WebExtExamples}}

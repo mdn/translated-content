@@ -2,7 +2,7 @@
 title: Code unit (コードユニット)
 slug: Glossary/Code_unit
 l10n:
- sourceCommit: 1e0e8f74b6e22d43be7d7e63693a1ca4016cb291
+  sourceCommit: 1e0e8f74b6e22d43be7d7e63693a1ca4016cb291
 ---
 
 **コードユニット** とは、文字エンコーディングシステムで用いられる UTF-8 や UTF-16 といった基本的構成要素です。文字エンコーディングシステムは Unicode {{Glossary("code point","コードポイント")}} をエンコードするためにひとつもしくは複数のコードユニットを用います。

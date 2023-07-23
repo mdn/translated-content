@@ -15,7 +15,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-var gettingSelf = browser.management.getSelf()
+var gettingSelf = browser.management.getSelf();
 ```
 
 ### Paramètres

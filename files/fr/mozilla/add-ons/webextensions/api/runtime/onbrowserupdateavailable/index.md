@@ -11,9 +11,9 @@ Lancé lorsqu'une mise à jour pour le navigateur est disponible, mais qu'elle n
 ## Syntaxe
 
 ```js
-browser.runtime.onBrowserUpdateAvailable.addListener(listener)
-browser.runtime.onBrowserUpdateAvailable.removeListener(listener)
-browser.runtime.onBrowserUpdateAvailable.hasListener(listener)
+browser.runtime.onBrowserUpdateAvailable.addListener(listener);
+browser.runtime.onBrowserUpdateAvailable.removeListener(listener);
+browser.runtime.onBrowserUpdateAvailable.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -45,7 +45,9 @@ function handleBrowserUpdateAvailable() {
   // handle event
 }
 
-browser.runtime.onBrowserUpdateAvailable.addListener(handleBrowserUpdateAvailable);
+browser.runtime.onBrowserUpdateAvailable.addListener(
+  handleBrowserUpdateAvailable,
+);
 ```
 
 {{WebExtExamples}}
