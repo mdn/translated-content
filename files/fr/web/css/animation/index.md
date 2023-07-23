@@ -317,7 +317,7 @@ Veillez à fournir un mécanisme qui permette d'interrompre ou de désactiver l'
 - [_Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article_ (en anglais)](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
 - [_An Introduction to the Reduced Motion Media Query - CSS-Tricks_ (en anglais)](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [_Responsive Design for Motion - WebKit_ (en anglais)](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [Comprendre les règles WCAG 2.2](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
+- [Comprendre les règles WCAG 2.2](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_—_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
 - _[Understanding Success Criterion 2.2.2 - W3C Understanding WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)_
 
 ## Spécifications

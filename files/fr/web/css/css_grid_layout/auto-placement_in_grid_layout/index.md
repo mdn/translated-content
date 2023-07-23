@@ -380,7 +380,7 @@ En dehors des éléments placés explicitement, la grille place les éléments a
 
 Pour cela, sur le conteneur, on ajoute la propriété {{cssxref("grid-auto-flow")}} avec la valeur `dense`. C'est la même propriété qu'on utilise pour modifier l'ordre du flux avec `column`. On peut aussi obtenir une disposition dense, rangée par colonne en utilisant les deux valeurs pour la propriété : `grid-auto-flow: column dense`.
 
-Avec cette valeur, la grille cherchera donc à combler les espaces qu'elle a laissés quitte à ne pas respecter l'ordre du DOM. En revanche, l'ordre de la navigation au clavier (_tab order_) suivra toujours l'ordre du document. Nous étudierons cet aspect plus en détails dans [un article sur l'accessibilité](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_accessibilit%C3%A9).
+Avec cette valeur, la grille cherchera donc à combler les espaces qu'elle a laissés quitte à ne pas respecter l'ordre du DOM. En revanche, l'ordre de la navigation au clavier (_tab order_) suivra toujours l'ordre du document. Nous étudierons cet aspect plus en détails dans [un article sur l'accessibilité](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_accessibilité).
 
 ```css hidden
 * {box-sizing: border-box;}
