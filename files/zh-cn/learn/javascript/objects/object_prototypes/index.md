@@ -110,7 +110,7 @@ do {
 // null
 ```
 
-这段代码创建了 `Date` 对象，然后遍历了它的原型链，记录并输出了原型。从中我们知道 `myDate` 的原型是 `Date.prototype` 对象，*它*（`Date.prototype`）的原型是 `Object.prototype`。
+这段代码创建了 `Date` 对象，然后遍历了它的原型链，记录并输出了原型。从中我们知道 `myDate` 的原型是 `Date.prototype` 对象，_它_（`Date.prototype`）的原型是 `Object.prototype`。
 
 ![myDate 的原型链](mydate-prototype-chain.svg)
 
