@@ -26,7 +26,7 @@ HTML 要素に適用できるさまざまな種類の位置指定があります
 これを実演し、例をこれからのセクションのために準備するために、最初に HTML の 2 番目の {{htmlelement("p")}} に `positioned` の `class` を次のように追加します。
 
 ```html
-<p class="positioned"> ... </p>
+<p class="positioned">...</p>
 ```
 
 それでは、CSS の最後に次の規則を追加してください。
@@ -68,13 +68,30 @@ left: 30px;
 ```html hidden
 <h1>Relative positioning</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p class="positioned">By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
+<p class="positioned">
+  By default we span 100% of the width of our parent element, and we are as tall
+  as our child content. Our total width and height is our content + padding +
+  border width/height.
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -122,13 +139,30 @@ position: absolute;
 ```html hidden
 <h1>Absolute positioning</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p class="positioned">By default we span 100% of the width of our parent element, and we are as tall as our child content. Our total width and height is our content + padding + border width/height.</p>
+<p class="positioned">
+  By default we span 100% of the width of our parent element, and we are as tall
+  as our child content. Our total width and height is our content + padding +
+  border width/height.
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -186,13 +220,29 @@ position: relative;
 ```html hidden
 <h1>Positioning context</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p class="positioned">Now I'm absolutely positioned relative to the <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!</p>
+<p class="positioned">
+  Now I'm absolutely positioned relative to the
+  <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -260,13 +310,29 @@ z-index: 1;
 ```html hidden
 <h1>z-index</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
-<p class="positioned">Now I'm absolutely positioned relative to the <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!</p>
+<p class="positioned">
+  Now I'm absolutely positioned relative to the
+  <code>&lt;body&gt;</code> element, not the <code>&lt;html&gt;</code> element!
+</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -354,13 +420,26 @@ p:nth-of-type(1) {
 ```html hidden
 <h1>Fixed positioning</h1>
 
-<p>I am a basic block level element. My adjacent block level elements sit on new lines below me.</p>
+<p>
+  I am a basic block level element. My adjacent block level elements sit on new
+  lines below me.
+</p>
 
 <p class="positioned">I'm not positioned any more...</p>
 
-<p>We are separated by our margins. Because of margin collapsing, we are separated by the width of one of our margins, not both.</p>
+<p>
+  We are separated by our margins. Because of margin collapsing, we are
+  separated by the width of one of our margins, not both.
+</p>
 
-<p>inline elements <span>like this one</span> and <span>this one</span> sit on the same line as one another, and adjacent text nodes, if there is space on the same line. Overflowing inline elements <span>wrap onto a new line if possible — like this one containing text</span>, or just go on to a new line if not, much like this image will do: <img src="long.jpg"></p>
+<p>
+  inline elements <span>like this one</span> and <span>this one</span> sit on
+  the same line as one another, and adjacent text nodes, if there is space on
+  the same line. Overflowing inline elements
+  <span>wrap onto a new line if possible — like this one containing text</span>,
+  or just go on to a new line if not, much like this image will do:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css hidden
@@ -406,13 +485,41 @@ p:nth-of-type(1) {
 ```html hidden
 <h1>Sticky positioning</h1>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 
 <div class="positioned">Sticky</div>
 
-<p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
 
-<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,
+  tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus
+  neque, ac ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+  volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros
+  pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec
+  lacus varius commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
 ```
 
 ```css hidden
@@ -422,8 +529,8 @@ body {
 }
 
 .positioned {
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -446,31 +553,31 @@ body {
 <h1>Sticky positioning</h1>
 
 <dl>
-    <dt>A</dt>
-    <dd>Apple</dd>
-    <dd>Ant</dd>
-    <dd>Altimeter</dd>
-    <dd>Airplane</dd>
-    <dt>B</dt>
-    <dd>Bird</dd>
-    <dd>Buzzard</dd>
-    <dd>Bee</dd>
-    <dd>Banana</dd>
-    <dd>Beanstalk</dd>
-    <dt>C</dt>
-    <dd>Calculator</dd>
-    <dd>Cane</dd>
-    <dd>Camera</dd>
-    <dd>Camel</dd>
-    <dt>D</dt>
-    <dd>Duck</dd>
-    <dd>Dime</dd>
-    <dd>Dipstick</dd>
-    <dd>Drone</dd>
-    <dt>E</dt>
-    <dd>Egg</dd>
-    <dd>Elephant</dd>
-    <dd>Egret</dd>
+  <dt>A</dt>
+  <dd>Apple</dd>
+  <dd>Ant</dd>
+  <dd>Altimeter</dd>
+  <dd>Airplane</dd>
+  <dt>B</dt>
+  <dd>Bird</dd>
+  <dd>Buzzard</dd>
+  <dd>Bee</dd>
+  <dd>Banana</dd>
+  <dd>Beanstalk</dd>
+  <dt>C</dt>
+  <dd>Calculator</dd>
+  <dd>Cane</dd>
+  <dd>Camera</dd>
+  <dd>Camel</dd>
+  <dt>D</dt>
+  <dd>Duck</dd>
+  <dd>Dime</dd>
+  <dd>Dipstick</dd>
+  <dd>Drone</dd>
+  <dt>E</dt>
+  <dd>Egg</dd>
+  <dd>Elephant</dd>
+  <dd>Egret</dd>
 </dl>
 ```
 
@@ -510,31 +617,31 @@ dt {
 <h1>Sticky positioning</h1>
 
 <dl>
-    <dt>A</dt>
-    <dd>Apple</dd>
-    <dd>Ant</dd>
-    <dd>Altimeter</dd>
-    <dd>Airplane</dd>
-    <dt>B</dt>
-    <dd>Bird</dd>
-    <dd>Buzzard</dd>
-    <dd>Bee</dd>
-    <dd>Banana</dd>
-    <dd>Beanstalk</dd>
-    <dt>C</dt>
-    <dd>Calculator</dd>
-    <dd>Cane</dd>
-    <dd>Camera</dd>
-    <dd>Camel</dd>
-    <dt>D</dt>
-    <dd>Duck</dd>
-    <dd>Dime</dd>
-    <dd>Dipstick</dd>
-    <dd>Drone</dd>
-    <dt>E</dt>
-    <dd>Egg</dd>
-    <dd>Elephant</dd>
-    <dd>Egret</dd>
+  <dt>A</dt>
+  <dd>Apple</dd>
+  <dd>Ant</dd>
+  <dd>Altimeter</dd>
+  <dd>Airplane</dd>
+  <dt>B</dt>
+  <dd>Bird</dd>
+  <dd>Buzzard</dd>
+  <dd>Bee</dd>
+  <dd>Banana</dd>
+  <dd>Beanstalk</dd>
+  <dt>C</dt>
+  <dd>Calculator</dd>
+  <dd>Cane</dd>
+  <dd>Camera</dd>
+  <dd>Camel</dd>
+  <dt>D</dt>
+  <dd>Duck</dd>
+  <dd>Dime</dd>
+  <dd>Dipstick</dd>
+  <dd>Drone</dd>
+  <dt>E</dt>
+  <dd>Egg</dd>
+  <dd>Elephant</dd>
+  <dd>Egret</dd>
 </dl>
 ```
 

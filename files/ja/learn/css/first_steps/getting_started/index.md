@@ -18,28 +18,29 @@ HTML 文書から始めましょう。あなたのコンピューターのフォ
 ```html
 <!doctype html>
 <html lang="ja">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>CSS 入門</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>見出し１です</h1>
 
-    <p>これは第一段落の文です。この文には <span>span 要素</span>
-と<a href="http://example.com">リンク</a>が含まれます。</p>
+    <p>
+      これは第一段落の文です。この文には <span>span 要素</span> と<a
+        href="http://example.com"
+        >リンク</a
+      >が含まれます。
+    </p>
 
     <p>これは第二段落の文です。この文には <em>em 要素</em>が含まれます。</p>
 
     <ul>
-        <li>一つ目の項目</li>
-        <li>二つ目の項目</li>
-        <li><em>三つ目</em>の項目</li>
+      <li>一つ目の項目</li>
+      <li>二つ目の項目</li>
+      <li><em>三つ目</em>の項目</li>
     </ul>
-
-</body>
-
+  </body>
 </html>
 ```
 
@@ -54,7 +55,7 @@ HTML ドキュメントとおなじフォルダーにファイルをつくり、
 `styles.css` を `index.html` にリンクさせるには、HTML 文書にある {{htmlelement("head")}} 要素の中につぎのコードを追記してください:
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 {{htmlelement("link")}} 要素はブラウザーに、スタイルシートがあること、`rel` 属性を使うこと、`href` 属性の値でスタイルシートのある場所を伝えます。`styles.css` に以下のルールを記述すれば、CSS が働くかテストできます。使っているコードエディターでつぎのコードを CSS ファイルに追記してください:
@@ -82,8 +83,9 @@ p {
 セレクタをカンマで区切ることによって、同時に複数のセレクタへ焦点をあてることができます。もしすべての段落とリストすべてを緑にしたければ、CSS のルールセットは次のようになります:
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 

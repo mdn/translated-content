@@ -24,7 +24,7 @@ CSS の仕様や MDN のプロパティページでは、`<color>` や `<length>
 ```css
 h1 {
   color: black;
-  background-color: rgb(197,93,161);
+  background-color: rgb(197, 93, 161);
 }
 ```
 

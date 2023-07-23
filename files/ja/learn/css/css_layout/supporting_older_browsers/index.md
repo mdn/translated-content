@@ -44,10 +44,12 @@ CSS の仕様には、2 つのレイアウト方法が同じ項目に適用さ�
 以下の例では、3 つの `<div>` をフロートさせて、それらが一行に表示されるようにしました。 [CSS グリッドレイアウト](/ja/docs/Learn/CSS/CSS_layout/Grids)をサポートしていないブラウザーでは、ボックスの行はフロートレイアウトとして表示されます。 グリッド項目になったフロート項目はフロートのふるまいを失います。 つまり、`wrapper` をグリッドコンテナに変えることによって、フロート項目はグリッド項目になります。 ブラウザーがグリッドレイアウトをサポートしていればグリッドビューを表示し、そうでなければ `display: grid` と関連のプロパティを無視してフロートレイアウトが使用されます。
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -57,7 +59,7 @@ CSS の仕様には、2 つのレイアウト方法が同じ項目に適用さ�
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -94,10 +96,12 @@ CSS の仕様には、2 つのレイアウト方法が同じ項目に適用さ�
 フロートレイアウトでは、パーセントはコンテナから計算されます — 33.333% はコンテナ幅の 3 分の 1 です。 ただしグリッドでは、 33.333% は項目が配置されているグリッド領域から計算されるため、グリッドレイアウトが導入されると、実際に必要なサイズのさらに 3 分の 1 になってしまいます。
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -107,7 +111,7 @@ CSS の仕様には、2 つのレイアウト方法が同じ項目に適用さ�
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -132,10 +136,12 @@ CSS の仕様には、2 つのレイアウト方法が同じ項目に適用さ�
 上記の例に機能クエリを追加すると、グリッドをサポートしている場合、項目の幅を `auto` に戻すことができます。
 
 ```css
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -145,14 +151,14 @@ CSS の仕様には、2 つのレイアウト方法が同じ項目に適用さ�
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
 
 @supports (display: grid) {
   .item {
-      width: auto;
+    width: auto;
   }
 }
 ```
