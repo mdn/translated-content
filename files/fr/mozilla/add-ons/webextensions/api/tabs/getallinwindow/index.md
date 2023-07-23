@@ -17,8 +17,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var getting = browser.tabs.getAllInWindow(
-  windowId            // optional integer
-)
+  windowId, // optional integer
+);
 ```
 
 ### Paramètres

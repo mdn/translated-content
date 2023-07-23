@@ -16,10 +16,10 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var storing = browser.sessions.setWindowValue(
-  windowId,    // integer
-  key,         // string
-  value        // string or object
-)
+  windowId, // integer
+  key, // string
+  value, // string or object
+);
 ```
 
 ### Paramètres
@@ -52,7 +52,7 @@ async function setOnActiveWindow() {
 browser.menus.create({
   id: "my-item",
   title: "my item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(setOnActiveWindow);
