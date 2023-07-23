@@ -1,5 +1,5 @@
 ---
-title: 'Django 튜토리얼: 지역 도서관 웹사이트'
+title: "Django 튜토리얼: 지역 도서관 웹사이트"
 slug: Learn/Server-side/Django/Tutorial_local_library_website
 ---
 

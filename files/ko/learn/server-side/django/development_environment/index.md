@@ -132,8 +132,8 @@ python3 -V
 
 1. 필요한 설치 파일을 다운로드하세요:
 
-    1. <https://www.python.org/downloads/> 로 가세요.
-    2. **Download Python 3.7.0** 버튼을 선택하세요 (정확한 마이너 버전 숫자는 다를 수도 있습니다).
+   1. <https://www.python.org/downloads/> 로 가세요.
+   2. **Download Python 3.7.0** 버튼을 선택하세요 (정확한 마이너 버전 숫자는 다를 수도 있습니다).
 
 2. 파인더를 통해 파일을 찾아, 패키지 파일을 더블클릭 하세요. 그리고선 설치 과정을 따릅니다.
 
@@ -156,8 +156,8 @@ pip3 list
 
 1. 필요한 설치 파일을 다운로드하세요:
 
-    1. <https://www.python.org/downloads/> 로 가세요
-    2. **Download Python 3.7.1** 버튼을 선택하세요 (정확한 마이너 버전 숫자는 다를 수도 있습니다).
+   1. <https://www.python.org/downloads/> 로 가세요
+   2. **Download Python 3.7.1** 버튼을 선택하세요 (정확한 마이너 버전 숫자는 다를 수도 있습니다).
 
 2. 다운로드된 파일을 더블클릭해서 파이썬을 설치하세요.
 

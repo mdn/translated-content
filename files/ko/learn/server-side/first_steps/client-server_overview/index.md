@@ -115,7 +115,7 @@ HTTP requests는 본문을 가질수 있지만 이번 케이스에서는 비어 
 
 메시지의 마지막에는 요청에 의해 반환된 실제 HTML을 포함하는 **본문** 콘텐츠를 볼 수 있습니다.
 
-```html
+```http
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
@@ -128,16 +128,27 @@ X-Frame-Options: DENY
 Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
+```
 
-
-
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
-<head prefix="og: http://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
-  ...
+```html
+<!doctype html>
+<html
+  lang="en-US"
+  dir="ltr"
+  class="redesign no-js"
+  data-ffo-opensanslight="false"
+  data-ffo-opensans="false">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script>
+      (function (d) {
+        d.className = d.className.replace(/\bno-js/, "");
+      })(document.documentElement);
+    </script>
+    ...
+  </head>
+</html>
 ```
 
 응답 header의 나머지 부분은 응답(예. 생성 되었을 때), 서버및 브라우저가 처리하는 방법의 대한 정보를 포함하고 있습니다(예. `X-Frame-Options: DENY`행은 브라우저가 페이지를 다른 사이트의 {{htmlelement ( "iframe")}}에 삽입하는 것을 허용하지 않는 것을 지시합니다).
@@ -176,7 +187,7 @@ csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&
 
 요청에서 온 응답은 아래와 같이 보여집니다. "`302 Found`"의 상태 코드는 브라우저에게 post가 성공했고, `Location` 필드가 지정된 페이지를 로드하기 위해 두번째 HTTP request를 실행해야 하는 것을 알려줍니다. 그렇지 않은 경우 정보는 `GET` request에 대한 응답정보와 유사합니다.
 
-```html
+```http
 HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com
