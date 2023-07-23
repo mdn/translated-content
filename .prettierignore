@@ -88,7 +88,6 @@ build/
 /files/pt-br/web/svg/**/*.md
 
 # ru
-/files/ru/learn/css/**/*.md
 /files/ru/learn/html/**/*.md
 /files/ru/learn/javascript/**/*.md
 /files/ru/learn/server-side/**/*.md
