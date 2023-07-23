@@ -33,7 +33,6 @@ build/
 /files/es/web/javascript/**/*.md
 
 # fr
-/files/fr/mozilla/add-ons/webextensions/api/**/*.md
 /files/fr/web/api/**/*.md
 /files/fr/web/css/**/*.md
 /files/fr/web/html/**/*.md
