@@ -45,7 +45,7 @@ CSS를 추가하면 보기 좋게 꾸밀 수 있습니다.
 
 ```css
 p {
-  font-family: 'helvetica neue', helvetica, sans-serif;
+  font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
@@ -65,12 +65,12 @@ p {
 마지막으로는 JavaScript를 곁들여 동적인 기능을 추가할 수 있습니다.
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
-  const name = prompt('Enter a new name');
+  const name = prompt("Enter a new name");
   para.textContent = `Player 1: ${name}`;
 }
 ```
@@ -138,12 +138,12 @@ JavaScript는 DOM (Document Object Model) API를 통해 HTML과 CSS를 동적으
 브라우저가 JavaScript 블록을 마주치면, 일반적으로는 순서대로 위에서 아래로 실행합니다. 따라서 코드 배치 순서에도 주의를 기울여야 합니다. 예를 들기 위해 맨 위의 첫 예제 코드로 돌아가봅시다.
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 
-para.addEventListener('click', updateName);
+para.addEventListener("click", updateName);
 
 function updateName() {
-  const name = prompt('Enter a new name');
+  const name = prompt("Enter a new name");
   para.textContent = `Player 1: ${name}`;
 }
 ```
@@ -188,26 +188,24 @@ CSS와 비슷한 방법으로 JavaScript를 HTML 코드에 적용할 수 있습�
 
    ```html
    <script>
-
      // JavaScript goes here
-
    </script>
    ```
 
 4. 이제 {{htmlelement("script")}} 요소 안에 JavaScript를 넣어서 웹 페이지를 조금 흥미롭게 만들어보겠습니다. 밑의 코드를 "// JavaScript goes here" 바로 아래에 넣어주세요.
 
    ```js
-   document.addEventListener('DOMContentLoaded', () => {
+   document.addEventListener("DOMContentLoaded", () => {
      function createParagraph() {
-       const para = document.createElement('p');
-       para.textContent = 'You clicked the button!';
+       const para = document.createElement("p");
+       para.textContent = "You clicked the button!";
        document.body.appendChild(para);
      }
 
-     const buttons = document.querySelectorAll('button');
+     const buttons = document.querySelectorAll("button");
 
      for (const button of buttons) {
-       button.addEventListener('click', createParagraph);
+       button.addEventListener("click", createParagraph);
      }
    });
    ```
@@ -236,15 +234,15 @@ CSS와 비슷한 방법으로 JavaScript를 HTML 코드에 적용할 수 있습�
 
    ```js
    function createParagraph() {
-     const para = document.createElement('p');
-     para.textContent = 'You clicked the button!';
+     const para = document.createElement("p");
+     para.textContent = "You clicked the button!";
      document.body.appendChild(para);
    }
 
-   const buttons = document.querySelectorAll('button');
+   const buttons = document.querySelectorAll("button");
 
    for (const button of buttons) {
-     button.addEventListener('click', createParagraph);
+     button.addEventListener("click", createParagraph);
    }
    ```
 
@@ -258,8 +256,8 @@ CSS와 비슷한 방법으로 JavaScript를 HTML 코드에 적용할 수 있습�
 
 ```js example-bad
 function createParagraph() {
-  const para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  const para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 ```
@@ -281,10 +279,10 @@ function createParagraph() {
 HTML에 JavaScript를 직접 넣는 대신, 순수한 JavaScript 방법을 사용하세요. `querySelectorAll()` 함수를 사용하면 현재 페이지 내의 모든 버튼을 선택할 수 있습니다. 그 후 반복과 `addEventListener()`로 버튼 하나씩 처리기를 부착하세요. 다음과 같은 모습이 될 것입니다.
 
 ```js
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
 for (const button of buttons) {
-  button.addEventListener('click', createParagraph);
+  button.addEventListener("click", createParagraph);
 }
 ```
 
@@ -393,8 +391,8 @@ HTML 및 CSS와 동일하게, JavaScript에서도 브라우저는 무시하는 �
 // 함수: 새로운 문단을 생성해서 HTML 본문 끝에 붙입니다.
 
 function createParagraph() {
-  const para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  const para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 
@@ -405,10 +403,10 @@ function createParagraph() {
   아무 버튼이나 클릭하면 createParagraph() 함수가 실행됩니다.
 */
 
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
 for (const button of buttons) {
-  button.addEventListener('click', createParagraph);
+  button.addEventListener("click", createParagraph);
 }
 ```
 

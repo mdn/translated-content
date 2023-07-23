@@ -66,18 +66,18 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 1. 가공 전의 텍스트 파일에서, "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" 바로 밑의 코드를 모두 복사해서 `main.js` 파일의 맨 위에 붙여넣습니다. 이 내용은 세 개의 변수 제공하는데, `customName` 변수는 "Enter custom name" 텍스트 필드 값을 저장하고, `randomize` 변수에는 "Generate random story" 버튼 오브젝트를 저장하고, HTML 바디에 끝에 있는 클래스가 `story`인 [\<p>](/ko/docs/Web/HTML/Element/p) 엘리먼트는 story 변수에 저장하며 해당 엘리먼트에는 랜덤한 이야기가 복사됩니다. 또한, randomValueFromArray() 함수는 배열을 가져와서 배열이 가진 항목 중 하나를 랜덤하게 반환합니다.
 2. 가공전 텍스트 파일의 두번째 섹션 "2. RAW TEXT STRINGS"에는 프로그램에 자동으로 입력되어 랜덤 이야기 엘리먼트에 출력하는 문자열이 포함되어 있습니다. `main.js` 에 아래 설명대로 변수를 만듭니다:
 
-    1. 먼저 `storyText`변수에 가장 긴 문자열("It was 94 fahrenheit outside, so \~\~" 로 시작하는 문장)을 저장합니다.
-    2. `insertX` 배열에 세 개의 문자열 집단의 첫번째(Willy the Goblin, Big Daddy, Father Christmas)를 저장합니다.
-    3. `insertY` 배열에 세 개의 문자열 집단의 두번째(the soup kitchen, Disneyland, the White House)을 저장합니다.
-    4. `insertZ` 배열에 세 개의 문자열 집단의 세번째(spontaneously combusted, melted into a puddle on the sidewalk, turned into a slug and crawled away)를 저장합니다.
+   1. 먼저 `storyText`변수에 가장 긴 문자열("It was 94 fahrenheit outside, so \~\~" 로 시작하는 문장)을 저장합니다.
+   2. `insertX` 배열에 세 개의 문자열 집단의 첫번째(Willy the Goblin, Big Daddy, Father Christmas)를 저장합니다.
+   3. `insertY` 배열에 세 개의 문자열 집단의 두번째(the soup kitchen, Disneyland, the White House)을 저장합니다.
+   4. `insertZ` 배열에 세 개의 문자열 집단의 세번째(spontaneously combusted, melted into a puddle on the sidewalk, turned into a slug and crawled away)를 저장합니다.
 
 이벤트 핸들러와 완성되지 않은 함수 정리:
 
 1. 가공전 텍스트 파일("raw text file")로 돌아가자.
 2. "3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION" 밑의 코드를 복사하고, `main.js` 파일의 맨 밑에다 붙여 넣으세요:
 
-    - `randomize` 변수에 클릭 이벤트 리스너를 추가하세요. 그러면 버튼이 클릭되었을 때, `result()` 함수가 실행됩니다.
-    - 코드에 부분적으로 완료된 `result()` 함수를 추가하세요. 이 평가의 뒤 부분에서 함수가 완성되고 정상적으로 동작하도록 내용을 추가할 것입니다.
+   - `randomize` 변수에 클릭 이벤트 리스너를 추가하세요. 그러면 버튼이 클릭되었을 때, `result()` 함수가 실행됩니다.
+   - 코드에 부분적으로 완료된 `result()` 함수를 추가하세요. 이 평가의 뒤 부분에서 함수가 완성되고 정상적으로 동작하도록 내용을 추가할 것입니다.
 
 `result()` 함수 완성하기:
 
@@ -87,10 +87,10 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 4. 첫번째 `if` 블록에서, `newStory` 의 'Bob'이라는 이름을 `name` 변수를 사용하여 변환하는 함수를 추가하세요. 이 블록에서 말하는 내용은 "만약 `customName` 텍스트 입력에 값이 들어가 있다면, 이야기속의 Bob을 사용자가 정의한 이름으로 바꾸세요" 라는 의미입니다.
 5. 두번째 `if` 블록에서는 `uk` 라디오 버튼이 선택되었는지 확인합시다. `uk` 라디오 버튼이 눌려졌다면, 이야기('story') 상의 무게('weight')와 온도('temperature') 값 들인 파운드('pounds')와 화씨온도(Fahrenheit) 를 'stones'과 섭씨온도('centigrade')를 바꾸어야 합니다. 필요한 것은 아래와 같습니다:
 
-    1. 파운드(pound)를 stone, 화씨온도(Fahrenheit) 를 섭씨온도(centigrade)로 변환하는 공식을 참조하라.
-    2. `weight` 변수를 정의하는 라인에서는, 300를 300 파운드를 stones 변환하라. 변환 결과값을 `Math.round()` 를 실행한 결과값 끝에 `' stone'` 을 결합한다(문자열 더하기 연산 또는 concat())
-    3. `temperature` 변수를 정의하는 라인에서는, 94를 화씨(Fahrenheit) 94도를 섭씨온도(centigrade)로 변환하라. 변환 결과값을 `Math.round()` 를 실행한 결과값 끝에 `' centigrade'`을 결합한다(문자열 더하기 연산 또는 concat())
-    4. 두 변수 정의 바로 밑에, '94 화씨온도('farenheit')로 `temperature` 변수의 내용을 변환하는 것과, '300 pounds'을 `weight` 변수의 내용을 바꾸는 두줄의 문자열 변환라인을 추가한다 .
+   1. 파운드(pound)를 stone, 화씨온도(Fahrenheit) 를 섭씨온도(centigrade)로 변환하는 공식을 참조하라.
+   2. `weight` 변수를 정의하는 라인에서는, 300를 300 파운드를 stones 변환하라. 변환 결과값을 `Math.round()` 를 실행한 결과값 끝에 `' stone'` 을 결합한다(문자열 더하기 연산 또는 concat())
+   3. `temperature` 변수를 정의하는 라인에서는, 94를 화씨(Fahrenheit) 94도를 섭씨온도(centigrade)로 변환하라. 변환 결과값을 `Math.round()` 를 실행한 결과값 끝에 `' centigrade'`을 결합한다(문자열 더하기 연산 또는 concat())
+   4. 두 변수 정의 바로 밑에, '94 화씨온도('farenheit')로 `temperature` 변수의 내용을 변환하는 것과, '300 pounds'을 `weight` 변수의 내용을 바꾸는 두줄의 문자열 변환라인을 추가한다 .
 
 6. 마지막으로, 함수의 끝 두 줄에 `story` 변수의 `textContent` 속성(property)을 `newStory`와 같게 만드세요.
 
@@ -100,7 +100,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 - 만약 JavaScript가 정상적으로 HTML에 적용되었는지 의심스럽다면, 일시적으로 JavaScript의 내용을 지우고, 단순하고 짧은 효과가 명확한 내용을 추가해서, 저장하고 새로고침을 해보세요. 아래 예제는 {{htmlelement("html")}} 의 배경을 빨강색으로 바꿉니다 — 정상적으로 JavaScript가 적용되었다면 브라우저 전체 윈도우가 빨강색으로 바뀌게 될겁니다:
 
   ```js
-  document.querySelector('html').style.backgroundColor = 'red';
+  document.querySelector("html").style.backgroundColor = "red";
   ```
 
 - [Math.round()](/ko/docs/Web/JavaScript/Reference/Global_Objects/Math/round) 는 가장 가까운 정수로 단순하게 반올림한 결과를 반환하는 JavaScript 내장함수 입니다.
@@ -113,10 +113,10 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 1. 온라인 공유가 가능한 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/) 같은 에디터에 작업한 것을 올려 두세요.
 2. 평가 또는 도움을 요청을 [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn) 에 포스트를 쓰세요. 당신의 글은 아래를 포함해야 합니다:
 
-    - "Assessment wanted for Silly story generator"와 같은 서술적인 제목.
-    - 이미 시도해본 것에 대한 상세내용과 우리가 어떻게 하길 원하는 지.
-      예. 만약 당신이 풀이가 막히고 도움이 필요하다거나, 평가를 원한다는 것을.
-    - 평가를 받고 싶거나 도움이 필요한 예제를 갖고 있는 공유가능한 온라인 에디터 링크. (위에 1단계에서 언급한 것). 이것은 좋은 습관입니다. 그들의 코드를 보지못한다면 도움을 주기는 굉장히 어렵습니다.
-    - 실제 작업 또는 평가 페이지 링크, 그래야 우리가 당신이 도움받길 원하는 것을 찾을 수 있어요.
+   - "Assessment wanted for Silly story generator"와 같은 서술적인 제목.
+   - 이미 시도해본 것에 대한 상세내용과 우리가 어떻게 하길 원하는 지.
+     예. 만약 당신이 풀이가 막히고 도움이 필요하다거나, 평가를 원한다는 것을.
+   - 평가를 받고 싶거나 도움이 필요한 예제를 갖고 있는 공유가능한 온라인 에디터 링크. (위에 1단계에서 언급한 것). 이것은 좋은 습관입니다. 그들의 코드를 보지못한다면 도움을 주기는 굉장히 어렵습니다.
+   - 실제 작업 또는 평가 페이지 링크, 그래야 우리가 당신이 도움받길 원하는 것을 찾을 수 있어요.
 
 {{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}

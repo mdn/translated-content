@@ -58,28 +58,39 @@ Object { }
 
 ```js
 const person = {
-  name: ['Bob', 'Smith'],
+  name: ["Bob", "Smith"],
   age: 32,
-  gender: 'male',
-  interests: ['music', 'skiing'],
-  bio: function() {
-    alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+  gender: "male",
+  interests: ["music", "skiing"],
+  bio: function () {
+    alert(
+      this.name[0] +
+        " " +
+        this.name[1] +
+        " is " +
+        this.age +
+        " years old. He likes " +
+        this.interests[0] +
+        " and " +
+        this.interests[1] +
+        ".",
+    );
   },
-  greeting: function() {
-    alert('Hi! I\'m ' + this.name[0] + '.');
-  }
+  greeting: function () {
+    alert("Hi! I'm " + this.name[0] + ".");
+  },
 };
 ```
 
 저장하고 새로 고침 한 후 브라우저 devtools의 JavaScript 콘솔에 다음 중 일부를 입력 해보세요.
 
 ```js
-person.name
-person.name[0]
-person.age
-person.interests[1]
-person.bio()
-person.greeting()
+person.name;
+person.name[0];
+person.age;
+person.interests[1];
+person.bio();
+person.greeting();
 ```
 
 이제 객체 내부에 몇 가지 데이터와 기능이 있으며, 멋진 간단한 구문으로 액세스 할 수 있습니다!
@@ -92,7 +103,7 @@ person.greeting()
 var objectName = {
   member1Name: member1Value,
   member2Name: member2Value,
-  member3Name: member3Value
+  member3Name: member3Value,
 };
 ```
 
@@ -107,9 +118,9 @@ var objectName = {
 위에서, 우리는 객체의 프로퍼티와 메소드를 **점 표기법**을 통해 접근했습니다. 객체 이름(person)은 **네임스페이스**처럼 동작합니다. 객체내에 **캡슐화되어있는**것에 접근하려면 먼저 점을 입력해야합니다. 그 다음 점을 찍고 접근하고자 하는 항목을 적습니다. 간단한 프로퍼티의 이름일 수도 있을 것이고, 배열의 일부이거나 객체의 메소드를 호출할 수도 있습니다.
 
 ```js
-person.age
-person.interests[1]
-person.bio()
+person.age;
+person.interests[1];
+person.bio();
 ```
 
 ### 하위 namespaces
@@ -132,22 +143,22 @@ name : {
 자, 이제 우리는 성공적으로 **하위 namespace** 를 만들었습니다. 복잡해보이지만, 사실 그렇지도 않습니다. 이 속성을 사용하려면 그저 끝에 다른 점을 하나 찍어주기만 하면 됩니다. JS 콘솔에서 아래와 같이 입력해보세요.
 
 ```js
-person.name.first
-person.name.last
+person.name.first;
+person.name.last;
 ```
 
 **중요**: 객체의 속성이 바뀌었으니까, 기존 메소드 코드를 바꿔 줘야 합니다. 기존 코드를
 
 ```js
-name[0]
-name[1]
+name[0];
+name[1];
 ```
 
 아래와 같이 바꿔줘야 합니다.
 
 ```js
-name.first
-name.last
+name.first;
+name.last;
 ```
 
 그렇지 않으면 기존 메소드는 더 이상 동작하지 않을 것입니다.
@@ -157,15 +168,15 @@ name.last
 객체의 프로퍼티에 접근하는 다른 방법으로 괄호 표기법을 사용하는 것이 있습니다. 다음과 같이 사용하는 대신
 
 ```js
-person.age
-person.name.first
+person.age;
+person.name.first;
 ```
 
 이렇게 사용할 수 있습니다.
 
 ```js
-person['age']
-person['name']['first']
+person["age"];
+person["name"]["first"];
 ```
 
 이런 방식은 배열 속에 있는 항목에 접근하는 방법과 매우 유사해 보이는데 실제로도 이는 기본적으로 동일한 것입니다. 한 항목을 선택하기 위해 인덱스 숫자를 이용하는 대신에 각 멤버의 값들과 연결된 이름을 이용합니다. 객체가 간혹 **연관배열 (associative arrays**)이라고 불리는 것이 당연합니다. 연관배열은 배열이 숫자를 값에 연결하는 것과 같은 방법으로 문자열을 값에 매핑합니다.
@@ -176,28 +187,30 @@ person['name']['first']
 
 ```js
 person.age = 45;
-person['name']['last'] = 'Cratchit';
+person["name"]["last"] = "Cratchit";
 ```
 
 위의 코드를 입력한 다음, 객체 멤버값을 아래와 같이 다시 확인해봅시다.
 
 ```js
-person.age
-person['name']['last']
+person.age;
+person["name"]["last"];
 ```
 
 객체 멤버를 설정하는 것은 단순히 기존에 존재하는 프로퍼티나 메소드로 값을 설정하는 것 뿐 아니라, 완전히 새로운 멤버를 생성할 수도 있습니다. JS 콘솔에서 아래 내용을 입력해보세요.
 
 ```js
-person['eyes'] = 'hazel';
-person.farewell = function() { alert("Bye everybody!"); }
+person["eyes"] = "hazel";
+person.farewell = function () {
+  alert("Bye everybody!");
+};
 ```
 
 자, 이제 새로운 멤버를 테스트해보세요.
 
 ```js
-person['eyes']
-person.farewell()
+person["eyes"];
+person.farewell();
 ```
 
 대괄호 표현의 이점 중 하나는 멤버의 값을 동적으로 변경할 수 있을 뿐아니라, 멤버 이름까지도 동적으로 사용할 수 있다는 것입니다. 자, 만약 사용자가 두개의 텍스트 입력을 통해서 people 데이터에 커스텀 값을 넣고 싶어한다고 가정해봅시다. 그 값은 다음과 같이 얻어올 수 있을겁니다.
@@ -216,15 +229,15 @@ person[myDataName] = myDataValue;
 자, 제대로 동작하는지 보려면 아래와 같이 `person` 객체에 대괄호를 붙여서 확인해보면 됩니다.
 
 ```js
-var myDataName = 'height';
-var myDataValue = '1.75m';
+var myDataName = "height";
+var myDataValue = "1.75m";
 person[myDataName] = myDataValue;
 ```
 
 이제 저장하고 리로드후 아래코드를 입력해보세요.
 
 ```js
-person.height
+person.height;
 ```
 
 점 표기법으로는 위의 예제처럼 멤버의 이름을 동적으로 사용할 수 없고, 상수 값만을 사용해야 합니다.
@@ -245,18 +258,18 @@ greeting: function() {
 
 ```js
 var person1 = {
-  name: 'Chris',
-  greeting: function() {
-    alert('Hi! I\'m ' + this.name + '.');
-  }
-}
+  name: "Chris",
+  greeting: function () {
+    alert("Hi! I'm " + this.name + ".");
+  },
+};
 
 var person2 = {
-  name: 'Deepti',
-  greeting: function() {
-    alert('Hi! I\'m ' + this.name + '.');
-  }
-}
+  name: "Deepti",
+  greeting: function () {
+    alert("Hi! I'm " + this.name + ".");
+  },
+};
 ```
 
 이 예제에서, 메소드의 실제 코드는 완전히 동일하지만 `person1.greeting()` 은 "Hi! I'm Chris." 를 출력합니다. 반면 `person2.greeting()` 은 "Hi! I'm Deepti." 을 출력하게 됩니다. 앞서 이야기한 것처럼, `this` 은 실행중인 코드가 속해있는 객체입니다. 객체 리터럴을 직접 지정해서 사용하는 경우라면 그리 유용하지 않겠지만, 동적으로 객체를 생성하는 경우(예를 들면 생성자를 사용하는 경우)에는 매우 유용합니다. 이 부분은 추후에 더 명확하게 이해가 될 겁니다.
@@ -268,7 +281,7 @@ var person2 = {
 자, 다음과 같이 문자열의 메소드를 사용했다고 가정합시다.
 
 ```js
-myString.split(',');
+myString.split(",");
 ```
 
 [`String`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String) 클래스의 인스턴스가 가진 메소드를 사용하고 있습니다. 코드에서 문자열을 생성할 때 마다 `String` 의 인스턴스가 만들어지고, 그렇게 만들어진 인스턴스는 당연히 공통적으로 사용할 수 있는 메소드와 프러퍼티를 가집니다.
@@ -276,8 +289,8 @@ myString.split(',');
 아래와 같이 도큐먼트 오브젝트 모델(DOM)에 접근할때면,
 
 ```js
-var myDiv = document.createElement('div');
-var myVideo = document.querySelector('video');
+var myDiv = document.createElement("div");
+var myVideo = document.querySelector("video");
 ```
 
 [`Document`](/ko/docs/Web/API/Document) 클래스의 인스턴스를 통해 메소드를 사용하고 있는 것입니다. 각 웹페이지가 로딩될 때, `Document` 인스턴스가 만들어지고, 전체 웹 페이지 구조와 컨텐츠 그리고 URL같은 기능들을 제공하는 `document` 가 호출됩니다. 다시 말하지만 이건 여러 공통 메소드와 프로퍼티들이 이 인스턴스를 통해 사용가능하게 됩니다.
@@ -287,7 +300,7 @@ var myVideo = document.querySelector('video');
 모든 내장 객체/API가 자동으로 객체의 인스턴스를 생성하는 것은 아니라는 것에 주의 하세요. 예를 들어, [Notifications API](/ko/docs/Web/API/Notifications_API) — 최근 브라우져들이 시스템 알림을 사용하게 하는 기능 — 는 사용자가 발생 시키길 원하는 notification 만을 선택하게 하는 생성자를 사용해야 합니다. JavaScript 콘솔에 다음 내용을 입력해보세요
 
 ```js
-var myNotification = new Notification('Hello!');
+var myNotification = new Notification("Hello!");
 ```
 
 다음 문서에서 생성자에 대해서 좀더 자세히 알아볼 것입니다.

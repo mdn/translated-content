@@ -35,8 +35,8 @@ slug: Learn/JavaScript/Building_blocks/Functions
 우리는 이 코스에서 많은 브라우저 내장(built-in) 함수를 사용해왔습니다. 예를 들어, 우리가 매번 텍스트 문자열을 조작할 때마다:
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 console.log(newString);
 // the replace() string function takes a string,
 // replaces one substring with another, and returns
@@ -46,8 +46,8 @@ console.log(newString);
 또는 우리가 배열을 조작할 때마다:
 
 ```js
-var myArray = ['I', 'love', 'chocolate', 'frogs'];
-var madeAString = myArray.join(' ');
+var myArray = ["I", "love", "chocolate", "frogs"];
+var madeAString = myArray.join(" ");
 console.log(madeAString);
 // the join() function takes an array, joins
 // all the array items together into a single
@@ -81,10 +81,10 @@ JavaScript 언어는 여러분 스스로 코드 전체를 적을 필요 없이, 
 
 ```js
 function draw() {
-  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  ctx.clearRect(0, 0, WIDTH, HEIGHT);
   for (var i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.fillStyle = "rgba(255,0,0,0.5)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
@@ -101,7 +101,7 @@ draw();
 
 ```js
 function random(number) {
-  return Math.floor(Math.random()*number);
+  return Math.floor(Math.random() * number);
 }
 ```
 
@@ -113,10 +113,10 @@ function random(number) {
 
 ```js
 function myFunction() {
-  alert('hello');
+  alert("hello");
 }
 
-myFunction()
+myFunction();
 // calls the function once
 ```
 
@@ -128,7 +128,7 @@ myFunction()
 
 ```js
 function myFunction() {
-  alert('hello');
+  alert("hello");
 }
 ```
 
@@ -143,11 +143,11 @@ function() {
 이건 **익명 함수**라고 불려요. 이름이 없다는 뜻이죠! 익명함수는 스스로 뭘 어쩌지 못 해요. 익명함수는 주로 이벤트 핸들러와 사용됩니다. 아래의 예시는 함수 내의 코드가 관련된 버튼을 클릭함에 따라 작동한다는 걸 보여주죠.
 
 ```js
-var myButton = document.querySelector('button');
+var myButton = document.querySelector("button");
 
-myButton.onclick = function() {
-  alert('hello');
-}
+myButton.onclick = function () {
+  alert("hello");
+};
 ```
 
 위의 예시는 페이지 상의 클릭을 위해 {{htmlelement("button")}} 요소를 필요로 합니다. 여러분은 코스를 거치며 이런 구조의 코드를 꽤 봐왔을 거예요. 다음 문서에서 더 많은 걸 배워 보자구요.
@@ -155,9 +155,9 @@ myButton.onclick = function() {
 여러분은 변수 속에 익명함수를 넣을 수 있어요. 예시입니다.
 
 ```js
-var myGreeting = function() {
-  alert('hello');
-}
+var myGreeting = function () {
+  alert("hello");
+};
 ```
 
 > **참고:** 이 형태의 함수 생성은 또한 _함수 표현식_(function expression)으로도 알려져 있습니다. 함수 선언과는 다르게, 함수 표현식은 호이스팅되지 않습니다.
@@ -171,9 +171,9 @@ myGreeting();
 이 방법은 효과적으로 함수에 이름을 부여하고 있어요. 여러분은 다중 변수들에 함수를 할당할 수도 있죠. 예를 들면,
 
 ```js
-var anotherGreeting = function() {
-  alert('hello');
-}
+var anotherGreeting = function () {
+  alert("hello");
+};
 ```
 
 이제 함수는 이런 식으로도 호출이 가능해졌구요.
@@ -187,18 +187,18 @@ anotherGreeting();
 
 ```js
 function myGreeting() {
-  alert('hello');
+  alert("hello");
 }
 ```
 
 익명함수는 이벤트 발생에 따른 수많은 코드를 작동시키기 위해 주로 쓰이게 돼요. 이벤트 핸들러를 사용한 버튼의 클릭과 같은 상황에 말이죠. 자, 그 코드는 아래와 같이 생겼어요.
 
 ```js
-myButton.onclick = function() {
-  alert('hello');
+myButton.onclick = function () {
+  alert("hello");
   // 내가 원하는 만큼 얼마든지
   // 여기에 코드를 작성하면 됩니다!
-}
+};
 ```
 
 ## 함수 매개변수
@@ -216,8 +216,8 @@ var myNumber = Math.random();
 하지만 브라우저의 내장 문자열 [replace()](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 함수는 두 개의 매개변수를 필요로 합니다. 대체될 문자와 대체할 문자죠.
 
 ```js
-var myText = 'I am a string';
-var newString = myText.replace('string', 'sausage');
+var myText = "I am a string";
+var newString = myText.replace("string", "sausage");
 ```
 
 > **참고:** 여러 개의 매개변수는 콤마에 의해 구분되어집니다.
@@ -225,8 +225,8 @@ var newString = myText.replace('string', 'sausage');
 매개변수는 이따금 선택 사항이기도 합니다. 여러분이 명시해 줄 필요가 없다는 뜻이죠. 그런 경우, 일반적으로 함수는 기본 기능을 수행합니다. 예를 들어, 배열과 관련된 [join()](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/join) 함수의 매개변수가 그렇죠.
 
 ```js
-var myArray = ['I', 'love', 'chocolate', 'frogs'];
-var madeAString = myArray.join(' ');
+var myArray = ["I", "love", "chocolate", "frogs"];
+var madeAString = myArray.join(" ");
 // returns 'I love chocolate frogs'
 var madeAString = myArray.join();
 // returns 'I,love,chocolate,frogs'
@@ -255,17 +255,17 @@ var madeAString = myArray.join();
 
 ```js
 // first.js
-var name = 'Chris';
+var name = "Chris";
 function greeting() {
-  alert('Hello ' + name + ': welcome to our company.');
+  alert("Hello " + name + ": welcome to our company.");
 }
 ```
 
 ```js
 // second.js
-var name = 'Zaptec';
+var name = "Zaptec";
 function greeting() {
-  alert('Our company is called ' + name + '.');
+  alert("Our company is called " + name + ".");
 }
 ```
 
@@ -289,79 +289,79 @@ function greeting() {
 2. 예제를 인터넷 브라우저나 텍스트 에디터를 통해 열어봅시다.
 3. 브라우저 개발자 툴에서 자바스크립트 콘솔을 엽시다. 자바스크립트 콘솔에서 아래와 같이 작성해보세요.
 
-    ```js
-    output(x);
-    ```
+   ```js
+   output(x);
+   ```
 
-    여러분은 브라우저 뷰포트에 출력된 변수 `x`의 값을 볼 수 있을 것입니다.
+   여러분은 브라우저 뷰포트에 출력된 변수 `x`의 값을 볼 수 있을 것입니다.
 
 4. 이제 다음을 콘솔에 입력해 보세요.
 
-    ```js
-    output(y);
-    output(z);
-    ```
+   ```js
+   output(y);
+   output(z);
+   ```
 
-    이것 모두는 다음의 오류를 리턴할 것입니다. "[ReferenceError: y is not defined](/ko/docs/Web/JavaScript/Reference/Errors/Not_defined)". 이것은 왜 그럴까요? 왜냐하면 함수 스코프 때문입니다. — `y`와 `z`는 `a()`와 `b()`함수 안에 잡혀 있어서, `output()`은 전역 스코프에서 호출되었을 때 그들에게 접근할 수 없습니다.
+   이것 모두는 다음의 오류를 리턴할 것입니다. "[ReferenceError: y is not defined](/ko/docs/Web/JavaScript/Reference/Errors/Not_defined)". 이것은 왜 그럴까요? 왜냐하면 함수 스코프 때문입니다. — `y`와 `z`는 `a()`와 `b()`함수 안에 잡혀 있어서, `output()`은 전역 스코프에서 호출되었을 때 그들에게 접근할 수 없습니다.
 
 5. 그러나, 이것이 다른 함수 안쪽에서 호출되었을 때는 어떨까요? `a()`와 `b()`를 다음과 같이 보이도록 수정해 보세요.
 
-    ```js
-    function a() {
-      var y = 2;
-      output(y);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(y);
+   }
 
-    function b() {
-      var z = 3;
-      output(z);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(z);
+   }
+   ```
 
-    코드를 저장하고 브라우저에서 다시 로드한 후, `a()`와 `b()` 함수를 자바스크립트 콘솔에서 호출해 보세요.
+   코드를 저장하고 브라우저에서 다시 로드한 후, `a()`와 `b()` 함수를 자바스크립트 콘솔에서 호출해 보세요.
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
-    여러분은 페이지에 출력된 `y`와 `z`값들을 볼 수 있을 것입니다. `output()` 함수가 다른 함수 안쪽에서 호출되고 있으므로, 이것은 잘 작동합니다. — 각각의 경우에서, 같은 스코프에서 그것이 출력하고 있는 변수들이 정의되어 있으므로. `output()`는 전역 스코프에서 정의되었으므로, 이 함수 자체는 어디서든 이용할 수 있습니다.
+   여러분은 페이지에 출력된 `y`와 `z`값들을 볼 수 있을 것입니다. `output()` 함수가 다른 함수 안쪽에서 호출되고 있으므로, 이것은 잘 작동합니다. — 각각의 경우에서, 같은 스코프에서 그것이 출력하고 있는 변수들이 정의되어 있으므로. `output()`는 전역 스코프에서 정의되었으므로, 이 함수 자체는 어디서든 이용할 수 있습니다.
 
 6. 이제 여러분의 코드를 다음과 같이 갱신해 보세요.
 
-    ```js
-    function a() {
-      var y = 2;
-      output(x);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(x);
+   }
 
-    function b() {
-      var z = 3;
-      output(x);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(x);
+   }
+   ```
 
 7. 저장하고 다시 로드한 후 이것을 자바스크립트 콘솔에서 시도해 보세요.
 
-    ```js
-    a();
-    b();
-    ```
+   ```js
+   a();
+   b();
+   ```
 
 8. 브라우저 뷰포트에 `a()` 와 `b()` 모두 x 값을 출력해야 합니다. 왜냐하면 비록 `output()` 호출이 `x`가 정의되어 있는 같은 스코프에 있지 않더라도, `x`는 전역 변수이므로 모든 코드 어디서든 이용 가능하기 때문에 이것들은 잘 작동합니다.
 9. 마지막으로, 여러분의 코드를 다음과 같이 갱신해 보세요.
 
-    ```js
-    function a() {
-      var y = 2;
-      output(z);
-    }
+   ```js
+   function a() {
+     var y = 2;
+     output(z);
+   }
 
-    function b() {
-      var z = 3;
-      output(y);
-    }
-    ```
+   function b() {
+     var z = 3;
+     output(y);
+   }
+   ```
 
 10. 저장하고 다시 로드한 후, 자바스크립트 콘솔에서 다시 다음을 시도해 보세요.
 

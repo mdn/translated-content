@@ -291,7 +291,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
    ```js
    // error handler signifies that the database didn't open successfully
    openRequest.addEventListener("error", () =>
-     console.error("Database failed to open")
+     console.error("Database failed to open"),
    );
 
    // success handler signifies that the database opened successfully
@@ -395,7 +395,7 @@ function addData(e) {
   });
 
   transaction.addEventListener("error", () =>
-    console.log("Transaction not opened due to error")
+    console.log("Transaction not opened due to error"),
   );
 }
 ```
@@ -566,7 +566,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
            displayVideo(
              request.result.mp4,
              request.result.webm,
-             request.result.name
+             request.result.name,
            );
          } else {
            // Fetch the videos from the network
@@ -587,10 +587,10 @@ Let's walk through the most interesting parts of the example. We won't look at i
    // Fetch the MP4 and WebM versions of the video using the fetch() function,
    // then expose their response bodies as blobs
    const mp4Blob = fetch(`videos/${video.name}.mp4`).then((response) =>
-     response.blob()
+     response.blob(),
    );
    const webmBlob = fetch(`videos/${video.name}.webm`).then((response) =>
-     response.blob()
+     response.blob(),
    );
 
    // Only run the next code when both promises have fulfilled
@@ -616,7 +616,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
      const request = objectStore.add({ mp4, webm, name });
 
      request.addEventListener("success", () =>
-       console.log("Record addition attempt finished")
+       console.log("Record addition attempt finished"),
      );
      request.addEventListener("error", () => console.error(request.error));
    }
@@ -682,7 +682,7 @@ The first thing to note is that there's an extra bit of code placed in the main 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register(
-      "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js"
+      "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/sw.js",
     )
     .then(() => console.log("Service Worker Registered"));
 }
@@ -711,8 +711,8 @@ self.addEventListener("install", (e) => {
           "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.html",
           "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/index.js",
           "/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/style.css",
-        ])
-      )
+        ]),
+      ),
   );
 });
 ```
@@ -735,7 +735,7 @@ If a match is found, we return it as the custom response. If not, we [fetch()](/
 self.addEventListener("fetch", (e) => {
   console.log(e.request.url);
   e.respondWith(
-    caches.match(e.request).then((response) => response || fetch(e.request))
+    caches.match(e.request).then((response) => response || fetch(e.request)),
   );
 });
 ```
