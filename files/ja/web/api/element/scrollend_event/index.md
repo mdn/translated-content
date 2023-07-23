@@ -1,12 +1,12 @@
 ---
 title: "Element: scrollend イベント"
+short-title: scrollend
 slug: Web/API/Element/scrollend_event
 l10n:
-  sourceCommit: 974a1b988d5e1d84b7e031a651434ae35d3d4128
+  sourceCommit: 458eb9af74287fd15ef8ba9f4ba9aa3423c4cac3
 ---
 
 {{APIRef}}
-{{SeeCompatTable}}
 
 **`scrollend`** イベントは、要素のスクロールが完了した時に発行されます。
 スクロールが完了したと見なされるのは、スクロール位置に保留中の更新値がなくなり、かつユーザーがジェスチャーを完了したときです。
@@ -37,13 +37,39 @@ onscrollend = (event) => {};
 
 次の例では、`scrollend` イベントを使用して、ユーザーが要素の内部をスクロールしていることを検出する方法を示します。
 
+```css hidden
+#scroll-box {
+  height: 100px;
+  width: 100px;
+  float: left;
+  overflow: scroll;
+  outline: 4px dotted;
+  margin: 4px;
+}
+
+#scroll-box-title {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  transform: translateX(0);
+}
+
+#large-element {
+  height: 200px;
+  width: 200px;
+}
+
+#output {
+  text-align: center;
+}
+```
+
 ```html
-<div
-  id="scroll-box"
-  style="overflow: scroll; height: 100px; width: 100px; float: left;">
-  <p style="height: 200px; width: 200px;">Scroll me!</p>
+<div id="scroll-box">
+  <p id="scroll-box-title">Scroll me!</p>
+  <p id="large-element"></p>
 </div>
-<p style="text-align: center;" id="output">Waiting on scroll events...</p>
+<p id="output">Waiting on scroll events...</p>
 ```
 
 ```js
@@ -59,19 +85,45 @@ element.addEventListener("scrollend", (event) => {
 });
 ```
 
-{{EmbedLiveSample("Using_scrollend_with_an_event_listener", "100%", 120)}}
+{{EmbedLiveSample("Using_scrollend_with_an_event_listener", "100%", 130)}}
 
 ### `onscrollend` イベントハンドラープロパティの使用
 
 次の例では、`onscrollend` イベントハンドラープロパティを使用して、ユーザーがスクロールしていることを検出する方法を示しています。
 
+```css hidden
+#scroll-box {
+  height: 100px;
+  width: 100px;
+  float: left;
+  overflow: scroll;
+  outline: 4px dotted;
+  margin: 4px;
+}
+
+#scroll-box-title {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  transform: translateX(0);
+}
+
+#large-element {
+  height: 200px;
+  width: 200px;
+}
+
+#output {
+  text-align: center;
+}
+```
+
 ```html
-<div
-  id="scroll-box"
-  style="overflow: scroll; height: 100px; width: 100px; float: left;">
-  <p style="height: 200px; width: 200px;">Scroll me!</p>
+<div id="scroll-box">
+  <p id="scroll-box-title">Scroll me!</p>
+  <p id="large-element"></p>
 </div>
-<p id="output" style="text-align: center;">Waiting on scroll events...</p>
+<p id="output">Waiting on scroll events...</p>
 ```
 
 ```js
@@ -87,7 +139,7 @@ element.onscrollend = (event) => {
 };
 ```
 
-{{EmbedLiveSample("Using_onscrollend_event_handler_property", "100%", 120)}}
+{{EmbedLiveSample("Using_onscrollend_event_handler_property", "100%", 130)}}
 
 ## 仕様書
 
