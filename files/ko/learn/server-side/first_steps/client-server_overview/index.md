@@ -128,27 +128,14 @@ X-Frame-Options: DENY
 Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
-```
 
-```html
-<!doctype html>
-<html
-  lang="en-US"
-  dir="ltr"
-  class="redesign no-js"
-  data-ffo-opensanslight="false"
-  data-ffo-opensans="false">
-  <head prefix="og: http://ogp.me/ns#">
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <script>
-      (function (d) {
-        d.className = d.className.replace(/\bno-js/, "");
-      })(document.documentElement);
-    </script>
-    ...
-  </head>
-</html>
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  ...
 ```
 
 응답 header의 나머지 부분은 응답(예. 생성 되었을 때), 서버및 브라우저가 처리하는 방법의 대한 정보를 포함하고 있습니다(예. `X-Frame-Options: DENY`행은 브라우저가 페이지를 다른 사이트의 {{htmlelement ( "iframe")}}에 삽입하는 것을 허용하지 않는 것을 지시합니다).
