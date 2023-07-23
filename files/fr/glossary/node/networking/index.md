@@ -10,4 +10,4 @@ Dans un réseau, un **nœud** est un point unique du réseau. Dans les réseaux 
 
 ### Culture générale
 
-- [Nœud (réseau)](https://fr.wikipedia.org/wiki/N%C5%93ud_(r%C3%A9seau)) sur Wikipédia
+- [Nœud (réseau)](<https://fr.wikipedia.org/wiki/Nœud_(réseau)>) sur Wikipédia

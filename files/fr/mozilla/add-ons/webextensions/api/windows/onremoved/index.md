@@ -11,9 +11,9 @@ Lancer quand une fenêtre est fermée.
 ## Syntaxe
 
 ```js
-browser.windows.onRemoved.addListener(listener)
-browser.windows.onRemoved.removeListener(listener)
-browser.windows.onRemoved.hasListener(listener)
+browser.windows.onRemoved.addListener(listener);
+browser.windows.onRemoved.removeListener(listener);
+browser.windows.onRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

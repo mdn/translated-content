@@ -1,11 +1,6 @@
 ---
 title: '<hr> : l''élément de rupture thématique (règle horizontale)'
 slug: Web/HTML/Element/hr
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/hr
 ---
 

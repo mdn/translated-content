@@ -1,12 +1,6 @@
 ---
 title: '<rt> : l''élément de texte Ruby'
 slug: Web/HTML/Element/rt
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Ruby
-  - Web
 translation_of: Web/HTML/Element/rt
 ---
 

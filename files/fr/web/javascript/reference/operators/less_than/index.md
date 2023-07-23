@@ -1,12 +1,6 @@
 ---
 title: Inférieur strict (<)
 slug: Web/JavaScript/Reference/Operators/Less_than
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.less_than
 ---
 
 {{jsSidebar("Operators")}}

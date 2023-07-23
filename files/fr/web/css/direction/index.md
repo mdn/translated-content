@@ -1,10 +1,6 @@
 ---
 title: direction
 slug: Web/CSS/direction
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/direction
 ---
 

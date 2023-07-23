@@ -1,14 +1,7 @@
 ---
 title: Date.prototype.getFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getFullYear
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getFullYear
 ---
 
 {{JSRef}}

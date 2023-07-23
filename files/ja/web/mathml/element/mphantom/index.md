@@ -22,17 +22,15 @@ Rendering in your browser: <math><mrow><mi>x </mi><mo>+ </mo><mphantom><mi>y </m
 
 ```html
 <math>
-
-<mrow>
-  <mi> x </mi>
-  <mo> + </mo>
-  <mphantom>
-    <mi> y </mi>
+  <mrow>
+    <mi> x </mi>
     <mo> + </mo>
-  </mphantom>
-  <mi> z </mi>
-</mrow>
-
+    <mphantom>
+      <mi> y </mi>
+      <mo> + </mo>
+    </mphantom>
+    <mi> z </mi>
+  </mrow>
 </math>
 ```
 

@@ -1,16 +1,7 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-tags:
-  - Chaîne
-  - Expression
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - Régulière
 translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/replace
 ---
 
 {{JSRef}}
@@ -172,7 +163,7 @@ console.log(nouvChn); // Twas the night before Christmas...
 
 Cela affiche 'Twas the night before Christmas...'.
 
-> **Note :** Voir [ce guide](/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res) pour plus d'explications concernant les expressions régulières.
+> **Note :** Voir [ce guide](/fr/docs/Web/JavaScript/Guide/Expressions_régulières) pour plus d'explications concernant les expressions régulières.
 
 ### Utilisation de `global` et `ignore` avec `replace()`
 

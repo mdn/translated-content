@@ -1,12 +1,7 @@
 ---
 title: element
 slug: Web/CSS/element
-tags:
-  - CSS
-  - Fonction
-  - Reference
 translation_of: Web/CSS/element()
-original_slug: Web/CSS/element()
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

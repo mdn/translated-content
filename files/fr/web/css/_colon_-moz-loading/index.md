@@ -1,11 +1,6 @@
 ---
 title: ':-moz-loading'
 slug: Web/CSS/:-moz-loading
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:-moz-loading
 ---
 

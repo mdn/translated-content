@@ -1,15 +1,6 @@
 ---
 title: WheelEvent.deltaZ
 slug: Web/API/WheelEvent/deltaZ
-tags:
-  - API
-  - DOM
-  - Interface
-  - Lecture seulement
-  - Propriété
-  - Reference
-  - Référence(2)
-  - WheelEvent
 translation_of: Web/API/WheelEvent/deltaZ
 ---
 

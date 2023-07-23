@@ -38,7 +38,12 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
 
 ```html
 <div id="tree1" role="tree" tabindex="-1">
-  <div id="animals" class="groupHeader" role="presentation" aria-owns="animalGroup" aria-expanded="true">
+  <div
+    id="animals"
+    class="groupHeader"
+    role="presentation"
+    aria-owns="animalGroup"
+    aria-expanded="true">
     <img role="presentation" tabindex="-1" src="images/treeExpanded.gif" />
     <span role="treeitem" tabindex="0">動物</span>
   </div>
@@ -46,7 +51,12 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role
     <div id="birds" role="treeitem">
       <span tabindex="-1">鳥</span>
     </div>
-    <div id="cats" class="groupHeader" role="presentation" aria-owns="catGroup" aria-expanded="false">
+    <div
+      id="cats"
+      class="groupHeader"
+      role="presentation"
+      aria-owns="catGroup"
+      aria-expanded="false">
       <img role="presentation" tabindex="-1" src="images/treeContracted.gif" />
       <span role="treeitem" tabindex="0">猫</span>
     </div>

@@ -2,7 +2,6 @@
 title: SVGElement
 slug: Web/API/SVGElement
 translation_of: Web/API/SVGElement
-browser-compat: api.SVGElement
 ---
 
 {{APIRef("SVG")}}

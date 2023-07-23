@@ -1,12 +1,6 @@
 ---
 title: IDBRequest.readyState
 slug: Web/API/IDBRequest/readyState
-tags:
-  - API
-  - IDBRequest
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBRequest/readyState
 ---
 

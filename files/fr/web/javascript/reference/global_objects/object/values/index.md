@@ -1,14 +1,7 @@
 ---
 title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
-tags:
-  - ECMAScript2016
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/values
 ---
 
 {{JSRef}}

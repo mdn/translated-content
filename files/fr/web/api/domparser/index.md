@@ -1,12 +1,6 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
-tags:
-  - API
-  - DOM
-  - HTML
-  - SVG
-  - XML
 translation_of: Web/API/DOMParser
 ---
 

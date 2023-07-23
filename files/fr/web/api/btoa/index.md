@@ -1,18 +1,7 @@
 ---
 title: WindowBase64.btoa()
 slug: Web/API/btoa
-tags:
-  - API
-  - DOM
-  - Méthode
-  - Reference
-  - Web
-  - WindowOrWorkerGlobalScope
-  - btoa
-  - chaînes
-  - données
 translation_of: Web/API/WindowOrWorkerGlobalScope/btoa
-original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
 
 {{APIRef("HTML DOM")}}
@@ -74,7 +63,7 @@ uena('I \u2661 Unicode!'); // SSDimaEgVW5pY29kZSE=
 aenu('SSDimaEgVW5pY29kZSE='); // "I ♡ Unicode!"
 ```
 
-Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des tableaux typés pour faire la conversion](/fr/docs/D%C3%A9coder_encoder_en_base64).
+Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des tableaux typés pour faire la conversion](/fr/docs/Décoder_encoder_en_base64).
 
 ## Spécifications
 

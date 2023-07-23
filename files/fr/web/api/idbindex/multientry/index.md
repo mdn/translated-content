@@ -1,12 +1,6 @@
 ---
 title: IDBIndex.multiEntry
 slug: Web/API/IDBIndex/multiEntry
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBIndex/multiEntry
 ---
 

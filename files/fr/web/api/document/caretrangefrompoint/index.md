@@ -1,9 +1,7 @@
 ---
 title: Document.caretRangeFromPoint()
 slug: Web/API/Document/caretRangeFromPoint
-page-type: web-api-instance-method
 translation_of: Web/API/Document/caretRangeFromPoint
-browser-compat: api.Document.caretRangeFromPoint
 ---
 
 {{APIRef("DOM")}}{{Non-standard_header}}

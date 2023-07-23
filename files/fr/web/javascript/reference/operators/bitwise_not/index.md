@@ -1,14 +1,7 @@
 ---
 title: NON binaire (~)
 slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
-browser-compat: javascript.operators.bitwise_not
 ---
 
 {{jsSidebar("Operators")}}
@@ -48,7 +41,7 @@ La table de vérité pour l'opération `NON` est :
 ~9 (base 10) = 11111111111111111111111111110110 (base 2) = -10 (base 10)
 ```
 
-L'entier signé sur 32 bits est inversé selon [le complément à deux](https://fr.wikipedia.org/wiki/Compl%C3%A9ment_%C3%A0_deux). Autrement dit, la présence du bit le plus significatif est utilisée pour exprimer des entiers négatifs.
+L'entier signé sur 32 bits est inversé selon [le complément à deux](https://fr.wikipedia.org/wiki/Complément_à_deux). Autrement dit, la présence du bit le plus significatif est utilisée pour exprimer des entiers négatifs.
 
 Appliquer un NON binaire sur n'importe quel nombre `x` fournira la valeur `-(x + 1)`. Ainsi, `~-5` renverra `4`.
 

@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.domainLookupStart
 slug: Web/API/PerformanceResourceTiming/domainLookupStart
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - domainLookupStart
 translation_of: Web/API/PerformanceResourceTiming/domainLookupStart
 ---
 

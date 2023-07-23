@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: textbox ロール'
+title: "ARIA: textbox ロール"
 slug: Web/Accessibility/ARIA/Roles/textbox_role
 ---
 
@@ -14,12 +14,20 @@ slug: Web/Accessibility/ARIA/Roles/textbox_role
 ```html
 <!-- 単純なテキスト入力フィールド -->
 <div id="txtboxLabel">5桁の郵便番号を入力してください</div>
-<div role="textbox" contenteditable="true" aria-placholder="5-digit zipcode" aria-labeledby="txtboxLabel"></div>
+<div
+  role="textbox"
+  contenteditable="true"
+  aria-placholder="5-digit zipcode"
+  aria-labeledby="txtboxLabel"></div>
 
 <!-- 複数行のテキスト領域 -->
 <div id="txtboxMultilineLabel">記事のタグを入力してください</div>
-<div role="textbox" contenteditable="true" aria-multiline="true"
-   aria-labeledby="txtboxMultilineLabel" aria-required="true"></div>
+<div
+  role="textbox"
+  contenteditable="true"
+  aria-multiline="true"
+  aria-labeledby="txtboxMultilineLabel"
+  aria-required="true"></div>
 ```
 
 意味論的な要素はより簡潔であり、テキストボックス機能をサポートするために JavaScript を必要としません。

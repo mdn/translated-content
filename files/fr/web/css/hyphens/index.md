@@ -1,10 +1,6 @@
 ---
 title: hyphens
 slug: Web/CSS/hyphens
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/hyphens
 ---
 

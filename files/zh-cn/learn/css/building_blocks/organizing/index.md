@@ -58,8 +58,13 @@ slug: Learn/CSS/Building_blocks/Organizing
 你可以看到很多 CSS 格式化的方式，一些开发者将所有的规则放在一行里面，像是这样：
 
 ```css
-.box { background-color: #567895; }
-h2 { background-color: black; color: white; }
+.box {
+  background-color: #567895;
+}
+h2 {
+  background-color: black;
+  color: white;
+}
 ```
 
 还有的开发者更喜欢将所有的东西放在新的一行：
@@ -231,7 +236,7 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 }
 
 .comment .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .list-item {
@@ -241,7 +246,7 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 }
 
 .list-item .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 ```
 
@@ -254,14 +259,14 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 }
 
 .media .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .comment img {
   border: 1px solid grey;
 }
 
- .list-item {
+.list-item {
   border-bottom: 1px solid grey;
 }
 ```
@@ -281,7 +286,7 @@ CSS 本身没有什么内置的组织方式，所以你需要自己完成建立�
 <ul>
   <li class="media list-item">
     <img />
-   <div class="content"></div>
+    <div class="content"></div>
   </li>
 </ul>
 ```
@@ -295,9 +300,7 @@ BEM 即为块级元素修饰字符（Block Element Modifier）。在 BEM 中，�
 ```html
 <form class="form form--theme-xmas form--simple">
   <input class="form__input" type="text" />
-  <input
-    class="form__submit form__submit--disabled"
-    type="submit" />
+  <input class="form__submit form__submit--disabled" type="submit" />
 </form>
 ```
 

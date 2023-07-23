@@ -1,11 +1,6 @@
 ---
 title: HTMLTableCellElement
 slug: Web/API/HTMLTableCellElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
 translation_of: Web/API/HTMLTableCellElement
 ---
 

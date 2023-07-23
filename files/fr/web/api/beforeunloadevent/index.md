@@ -1,9 +1,6 @@
 ---
 title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
-tags:
-  - API
-  - Reference
 translation_of: Web/API/BeforeUnloadEvent
 ---
 

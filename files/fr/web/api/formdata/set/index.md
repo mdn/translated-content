@@ -1,14 +1,6 @@
 ---
 title: FormData.set()
 slug: Web/API/FormData/set
-tags:
-  - API
-  - FormData
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - set
 translation_of: Web/API/FormData/set
 ---
 

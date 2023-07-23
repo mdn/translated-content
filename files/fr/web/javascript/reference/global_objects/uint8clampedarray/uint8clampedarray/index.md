@@ -2,7 +2,6 @@
 title: Constructeur Uint8ClampedArray()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray
 translation_of: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray
-browser-compat: javascript.builtins.Uint8ClampedArray.Uint8ClampedArray
 ---
 
 {{JSRef}}

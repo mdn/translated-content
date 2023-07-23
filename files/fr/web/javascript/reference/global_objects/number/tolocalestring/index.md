@@ -2,8 +2,6 @@
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toLocaleString
-browser-compat: javascript.builtins.Number.toLocaleString
 ---
 
 {{JSRef}}

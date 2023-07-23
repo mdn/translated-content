@@ -1,11 +1,6 @@
 ---
 title: box-decoration-break
 slug: Web/CSS/box-decoration-break
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/box-decoration-break
 ---
 

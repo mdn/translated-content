@@ -11,7 +11,7 @@ slug: Web/EXSLT/math/highest
 
 ## 構文
 
-```js
+```
 math:highest(nodeSet)
 ```
 

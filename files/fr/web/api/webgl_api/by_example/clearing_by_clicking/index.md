@@ -1,18 +1,10 @@
 ---
 title: Appliquer une couleur à la souris
 slug: Web/API/WebGL_API/By_example/Clearing_by_clicking
-tags:
-  - Apprendre
-  - Débutant
-  - Exemple
-  - Graphisme
-  - Tutoriel
-  - WebGL
 translation_of: Web/API/WebGL_API/By_example/Clearing_by_clicking
-original_slug: Web/API/WebGL_API/By_example/Appliquer_une_couleur_à_la_souris
 ---
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs","Apprendre/WebGL/Par_exemple/Cr%C3%A9er_une_animation_color%C3%A9e")}}
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs","Apprendre/WebGL/Par_exemple/Créer_une_animation_colorée")}}
 
 Dans cet article, on voit comment combiner les interactions de l'utilisateur et les opérations graphiques. Plus précisément, dans cet exemple, chaque clic de l'utilisateur déclenchera l'application d'une couleur aléatoire dans le contexte de rendu.
 
@@ -122,4 +114,4 @@ window.addEventListener("load", function setupWebGL (evt) {
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking).
 
-{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs","Apprendre/WebGL/Par_exemple/Cr%C3%A9er_une_animation_color%C3%A9e")}}
+{{PreviousNext("Apprendre/WebGL/Par_exemple/Appliquer_des_couleurs","Apprendre/WebGL/Par_exemple/Créer_une_animation_colorée")}}

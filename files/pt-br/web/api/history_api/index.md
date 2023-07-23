@@ -3,7 +3,7 @@ title: Manipulando o histórico do navegador
 slug: Web/API/History_API
 ---
 
-O objeto DOM {{ domxref("window") }} fornece acesso ao histórico do navegador através do objeto {{ domxref("window.history", "history") }}. Ele expõe métodos e propriedades úteis que permitem que você se mova para trás e para frente através do histórico de navegação do usuário, bem como -- iniciando com o HTML5 -- manipular o conteúdo da pilha de históricos.
+O objeto DOM {{ domxref("window") }} fornece acesso ao histórico do navegador através do objeto {{ domxref("window.history", "history") }}. Ele expõe métodos e propriedades úteis que permitem que você se mova para trás e para frente através do histórico de navegação do usuário, bem como — iniciando com o HTML5 — manipular o conteúdo da pilha de históricos.
 
 ## Navegando através do histórico
 

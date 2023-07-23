@@ -17,7 +17,7 @@ p {
   color: yellow;
 
   /* A propriedade "background-color" define a cor ao fundo, neste caso preto. */
-  background-color: black
+  background-color: black;
 }
 ```
 

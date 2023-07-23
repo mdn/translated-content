@@ -1,14 +1,6 @@
 ---
 title: console.error()
 slug: Web/API/console/error
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthodes
-  - Web
-  - console
-  - débogage
 translation_of: Web/API/Console/error
 ---
 

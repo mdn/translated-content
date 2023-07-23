@@ -1,15 +1,6 @@
 ---
 title: performance.timeOrigin
 slug: Web/API/Performance/timeOrigin
-tags:
-  - API
-  - Experimental
-  - High Resolution Time API
-  - Performance
-  - Property
-  - Propriété
-  - Reference
-  - timeOrigin
 translation_of: Web/API/Performance/getEntriesByName
 ---
 

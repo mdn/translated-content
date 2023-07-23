@@ -2,7 +2,6 @@
 title: HTMLElement.tabIndex
 slug: Web/API/HTMLElement/tabIndex
 translation_of: Web/API/HTMLElement/tabIndex
-browser-compat: api.HTMLElement.tabIndex
 ---
 
 {{APIRef("HTML DOM")}}

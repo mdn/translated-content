@@ -1,10 +1,6 @@
 ---
 title: margin-right
 slug: Web/CSS/margin-right
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/margin-right
 ---
 

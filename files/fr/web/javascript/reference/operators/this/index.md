@@ -1,19 +1,14 @@
 ---
 title: L'opérateur this
 slug: Web/JavaScript/Reference/Operators/this
-tags:
-  - JavaScript
-  - Operator
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/this
-original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_this
 ---
 
 {{jsSidebar("Operators")}}
 
 En JavaScript, **le mot-clé `this`** se comporte légèrement différemment des autres langages de programmation. Son comportement variera également légèrement selon qu'on utilise le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) ou le mode non-strict.
 
-Dans la plupart des cas, la valeur de `this` sera déterminée à partir de la façon dont une fonction est appelée. Il n'est pas possible de lui affecter une valeur lors de l'exécution et sa valeur peut être différente à chaque fois que la fonction est appelée. La méthode {{jsxref("Function.prototype.bind()","bind()")}} a été introduite avec ECMAScript 5 pour [définir la valeur de `this` pour une fonction, indépendamment de la façon dont elle est appelée](#bind). ECMAScript 2015 (ES6) a ajouté [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) dans lesquelles `this` correspond à la valeur du contexte englobant.
+Dans la plupart des cas, la valeur de `this` sera déterminée à partir de la façon dont une fonction est appelée. Il n'est pas possible de lui affecter une valeur lors de l'exécution et sa valeur peut être différente à chaque fois que la fonction est appelée. La méthode {{jsxref("Function.prototype.bind()","bind()")}} a été introduite avec ECMAScript 5 pour [définir la valeur de `this` pour une fonction, indépendamment de la façon dont elle est appelée](#bind). ECMAScript 2015 (ES6) a ajouté [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) dans lesquelles `this` correspond à la valeur du contexte englobant.
 
 {{EmbedInteractiveExample("pages/js/expressions-this.html")}}
 

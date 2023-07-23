@@ -1,13 +1,7 @@
 ---
 title: '::-webkit-file-upload-button'
 slug: Web/CSS/::file-selector-button
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::file-selector-button
-original_slug: Web/CSS/::-webkit-file-upload-button
 ---
 
 {{CSSRef}}{{Non-standard_header}}

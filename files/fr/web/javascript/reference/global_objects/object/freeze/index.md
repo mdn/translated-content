@@ -1,14 +1,7 @@
 ---
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Object
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/freeze
 ---
 
 {{JSRef}}

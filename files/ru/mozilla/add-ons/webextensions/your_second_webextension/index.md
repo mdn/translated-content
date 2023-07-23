@@ -60,7 +60,6 @@ cd beastify
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Beastify",
   "version": "1.0",
@@ -71,9 +70,7 @@ cd beastify
     "48": "icons/beasts-48.png"
   },
 
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab"],
 
   "browser_action": {
     "default_icon": "icons/beasts-32.png",
@@ -86,7 +83,6 @@ cd beastify
     "beasts/turtle.jpg",
     "beasts/snake.jpg"
   ]
-
 }
 ```
 
@@ -142,12 +138,12 @@ cd beastify
 HTML выглядит так:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_beast.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_beast.css" />
   </head>
 
   <body>
@@ -158,7 +154,6 @@ HTML выглядит так:
 
     <script src="choose_beast.js"></script>
   </body>
-
 </html>
 ```
 
@@ -169,7 +164,8 @@ HTML выглядит так:
 CSS фиксирует размер всплывающей панели, гарантирует что три варианта заполняют пространство и даёт им основной стиль:
 
 ```css
-html, body {
+html,
+body {
   width: 100px;
 }
 
@@ -182,19 +178,19 @@ html, body {
 }
 
 .beast:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 
 .beast {
- background-color: #E5F2F2;
+  background-color: #e5f2f2;
 }
 
 .clear {
- background-color: #FBFBC9;
+  background-color: #fbfbc9;
 }
 
 .clear:hover {
- background-color: #EAEAC9;
+  background-color: #eaeac9;
 }
 ```
 
@@ -238,15 +234,17 @@ document.addEventListener("click", (e) => {
     var chosenBeastURL = beastNameToURL(chosenBeast);
 
     browser.tabs.executeScript(null, {
-      file: "/content_scripts/beastify.js"
+      file: "/content_scripts/beastify.js",
     });
 
-    var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
-    gettingActiveTab.then((tabs) => {
-      browser.tabs.sendMessage(tabs[0].id, {beastURL: chosenBeastURL});
+    var gettingActiveTab = browser.tabs.query({
+      active: true,
+      currentWindow: true,
     });
-  }
-  else if (e.target.classList.contains("clear")) {
+    gettingActiveTab.then((tabs) => {
+      browser.tabs.sendMessage(tabs[0].id, { beastURL: chosenBeastURL });
+    });
+  } else if (e.target.classList.contains("clear")) {
     browser.tabs.reload();
     window.close();
   }

@@ -91,7 +91,7 @@ Il est possible de s'assurer que les cookies sont envoyés de façon sécurisée
 
 Un cookie avec l'attribut `Secure` sera uniquement envoyé au serveur si la requête est chiffrée (avec le protocole HTTPS). Il ne sera jamais envoyé sur une adresse HTTP non sécurisée (exception faite de `localhost`). Cela signifie qu'une [attaque d'interception](/fr/docs/Glossary/MitM) ne permettra pas de lire l'information. Les sites qui utilisent un protocole non sécurisé, comme ceux avec `http:` dans l'URL, ne peuvent pas définir de cookies avec l'attribut `Secure`. Toutefois, l'attribut `Secure` ne garantit pas une protection absolue des données sensibles des cookies. Ainsi, quelqu'un qui a accès au disque dur du client (ou au code JavaScript du site si l'attribut `HttpOnly` n'est pas ajouté) pourra toujours lire et modifier l'information.
 
-Lorsque l'attribut `HttpOnly` est indiqué, le cookie est inaccessible en JavaScript et ne peut pas être manipulé avec l'API [`Document.cookie`](/fr/docs/Web/API/Document/cookie), il est uniquement envoyé au serveur. Ainsi, les cookies qui persistent côté serveur pour les sessions n'ont pas besoin d'être disponibles en JavaScript et devraient être paramétrés avec l'attribut `HttpOnly`. Cette précaution permet de réduire les risque d'attaque [XSS](/fr/docs/Web/Security/Types_of_attacks#cross-site_scripting_(xss)).
+Lorsque l'attribut `HttpOnly` est indiqué, le cookie est inaccessible en JavaScript et ne peut pas être manipulé avec l'API [`Document.cookie`](/fr/docs/Web/API/Document/cookie), il est uniquement envoyé au serveur. Ainsi, les cookies qui persistent côté serveur pour les sessions n'ont pas besoin d'être disponibles en JavaScript et devraient être paramétrés avec l'attribut `HttpOnly`. Cette précaution permet de réduire les risque d'attaque [XSS](</fr/docs/Web/Security/Types_of_attacks#cross-site_scripting_(xss)>).
 
 Voici un exemple&nbsp;:
 
@@ -160,7 +160,7 @@ Set-Cookie: macle=mavaleur; SameSite=Strict
 
 Une application vulnérable sur un sous-domaine pourrait donc définir un cookie avec l'attribut `Domain`, ce qui donnerait accès à ce cookie sur l'ensemble des sous-domaines. Ce mécanisme pourrait être abusé lors d'une _attaque par fixation de session_. Voir [la description de ce type d'attaque](/fr/docs/Web/Security/Types_of_attacks#fixation_de_session) pour plus d'informations sur les méthodes de prévention.
 
-Comme [mesure de défense en profondeur](https://fr.wikipedia.org/wiki/D%C3%A9fense_en_profondeur), on peut utiliser des _préfixes de cookie_ pour confirmer différents aspects du cookie. Deux préfixes sont disponibles&nbsp;:
+Comme [mesure de défense en profondeur](https://fr.wikipedia.org/wiki/Défense_en_profondeur), on peut utiliser des _préfixes de cookie_ pour confirmer différents aspects du cookie. Deux préfixes sont disponibles&nbsp;:
 
 - `__Host-`
   - : Si un nom de cookie utilise ce préfixe, il sera uniquement accepté dans un en-tête [`Set-Cookie`](/fr/docs/Web/HTTP/Headers/Set-Cookie) si&nbsp;:
@@ -168,7 +168,7 @@ Comme [mesure de défense en profondeur](https://fr.wikipedia.org/wiki/D%C3%A9fe
     - Il a été envoyé depuis une origine sécurisée
     - Il n'inclut pas d'attribut `Domain`
     - L'attribut `Path` vaut `/`.
-    Ainsi, de tels cookies peuvent être vus comme verrouillés au domaine.
+      Ainsi, de tels cookies peuvent être vus comme verrouillés au domaine.
 - `__Secure-`
   - : Si un nom de cookie utilise ce préfixe, il sera uniquement accepté dans un en-tête [`Set-Cookie`](/fr/docs/Web/HTTP/Headers/Set-Cookie) s'il est marqué avec l'attribut `Secure` et qu'il a été envoyé depuis une origine sécurisée. Il s'agit d'une forme plus faible que celle fournie par le préfixe `__Host-`.
 
@@ -246,6 +246,6 @@ Certaines techniques peuvent être utilisées pour recréer des cookies après l
 - [`Navigator.cookieEnabled`](/fr/docs/Web/API/Navigator/cookieEnabled)
 - [L'attribut `SameSite`](/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite)
 - [La RFC 6265 qui spécifie les cookies](https://datatracker.ietf.org/doc/html/rfc6265)
-- [La page Wikipédia sur les cookies](https://fr.wikipedia.org/wiki/Cookie_(informatique))
+- [La page Wikipédia sur les cookies](<https://fr.wikipedia.org/wiki/Cookie_(informatique)>)
 - [Les cookies, le RGPD, et la directive ePrivacy (pas un site officiel de l'UE)](https://gdpr.eu/cookies/)
 - [Firefox&nbsp;: inspecter les cookies en utilisant l'inspecteur de stockage (en anglais)](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)

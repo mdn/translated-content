@@ -1,13 +1,6 @@
 ---
 title: IDBRequest.error
 slug: Web/API/IDBRequest/error
-tags:
-  - API
-  - Error
-  - IDBRequest
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBRequest/error
 ---
 

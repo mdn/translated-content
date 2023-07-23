@@ -1,14 +1,7 @@
 ---
 title: Atomics.isLockFree()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/isLockFree
 ---
 
 {{JSRef}}

@@ -1,15 +1,7 @@
 ---
 title: Int8Array
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array
-tags:
-  - Constructor
-  - Int8Array
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrrays
 translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Int8Array
 ---
 
 {{JSRef}}

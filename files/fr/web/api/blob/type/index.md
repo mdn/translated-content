@@ -1,11 +1,6 @@
 ---
 title: Blob.type
 slug: Web/API/Blob/type
-tags:
-  - API
-  - DOM
-  - Fichiers
-  - Propriété
 translation_of: Web/API/Blob/type
 ---
 

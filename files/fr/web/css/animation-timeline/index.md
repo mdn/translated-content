@@ -2,7 +2,6 @@
 title: animation-timeline
 slug: Web/CSS/animation-timeline
 translation_of: Web/CSS/animation-timeline
-browser-compat: css.properties.animation-timeline
 l10n:
   sourceCommit: 9f958fd33582b47bd3e365c64eb2cdd9cee8f527
 ---

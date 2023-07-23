@@ -2,8 +2,6 @@
 title: File.name
 slug: Web/API/File/name
 translation_of: Web/API/File/name
-original_slug: Web/API/File/fileName
-browser-compat: api.File.name
 ---
 
 {{APIRef("File API")}}

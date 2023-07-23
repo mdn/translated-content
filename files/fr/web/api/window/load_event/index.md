@@ -1,10 +1,7 @@
 ---
 title: 'Window : évènement load'
 slug: Web/API/Window/load_event
-page-type: web-api-event
 translation_of: Web/API/Window/load_event
-original_slug: Web/Events/load
-browser-compat: api.Window.load_event
 l10n:
   sourceCommit: 95d6c222f9aba9a60dee4adc738d741a28c8b83a
 ---

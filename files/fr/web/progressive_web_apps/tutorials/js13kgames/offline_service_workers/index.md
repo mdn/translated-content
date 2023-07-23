@@ -1,15 +1,7 @@
 ---
 title: Faire fonctionner les PWAs en mode déconnecté grâce aux Service workers
 slug: Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
-tags:
-  - PWA
-  - Progressive web app
-  - Service Workers
-  - hors-ligne
-  - js13kGames
-  - progressive
 translation_of: Web/Progressive_web_apps/Offline_Service_workers
-original_slug: Web/Progressive_web_apps/Offline_Service_workers
 ---
 
 {{PreviousMenuNext("Web/Apps/Progressive/App_structure", "Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive")}}

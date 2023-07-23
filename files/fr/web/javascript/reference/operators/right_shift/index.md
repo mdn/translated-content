@@ -1,13 +1,6 @@
 ---
 title: Décalage binaire à droite (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.right_shift
 ---
 
 {{jsSidebar("Operators")}}

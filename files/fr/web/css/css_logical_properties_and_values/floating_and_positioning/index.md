@@ -1,12 +1,7 @@
 ---
 title: Propriétés logiques pour les flottements et le positionnement
 slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
-tags:
-  - CSS
-  - Guide
-  - Propriété logique
 translation_of: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
-original_slug: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 ---
 
 {{CSSRef}}

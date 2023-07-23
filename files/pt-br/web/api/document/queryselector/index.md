@@ -46,7 +46,7 @@ Gera uma exceção `SYNTAX_ERR` se o grupo de seletores utilizado for inválido.
 
 - [Selectors API](https://www.w3.org/TR/selectors-api/)
 
-## Veja também:
+## Veja também
 
 - {{domxref("document.querySelectorAll()")}}
 - {{domxref("element.querySelector()")}}

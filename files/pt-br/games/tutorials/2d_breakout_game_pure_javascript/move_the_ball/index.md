@@ -19,7 +19,7 @@ Delete all the JavaScript you currently have inside your HTML file except for th
 
 ```js
 function draw() {
-    // drawing code
+  // drawing code
 }
 setInterval(draw, 10);
 ```
@@ -28,7 +28,7 @@ Thanks to the infinite nature of `setInterval` the `draw()` function will be cal
 
 ```js
 ctx.beginPath();
-ctx.arc(50, 50, 10, 0, Math.PI*2);
+ctx.arc(50, 50, 10, 0, Math.PI * 2);
 ctx.fillStyle = "#0095DD";
 ctx.fill();
 ctx.closePath();
@@ -43,19 +43,19 @@ You won't notice the ball being repainted constantly at the moment, as it's not 
 First, add the following two lines above your `draw()` function, to define `x` and `y`:
 
 ```js
-var x = canvas.width/2;
-var y = canvas.height-30;
+var x = canvas.width / 2;
+var y = canvas.height - 30;
 ```
 
 Next update the `draw()` function to use the x and y variables in the {{domxref("CanvasRenderingContext2D.arc()","arc()")}} method, as shown in the following highlighted line:
 
 ```js
 function draw() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 ```
 
@@ -70,13 +70,13 @@ The last thing to do is to update `x` and `y` with our `dx` and `dy` variable on
 
 ```js
 function draw() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    x += dx;
-    y += dy;
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+  x += dx;
+  y += dy;
 }
 ```
 
@@ -92,14 +92,14 @@ Add the following highlighted new line to the `draw()` function:
 
 ```js
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
-    x += dx;
-    y += dy;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+  x += dx;
+  y += dy;
 }
 ```
 
@@ -113,18 +113,18 @@ Replace the existing draw() function with the following two functions:
 
 ```js
 function drawBall() {
-    ctx.beginPath();
-    ctx.arc(x, y, 10, 0, Math.PI*2);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.arc(x, y, 10, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 
 function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBall();
-    x += dx;
-    y += dy;
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  x += dx;
+  y += dy;
 }
 ```
 

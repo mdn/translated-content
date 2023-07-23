@@ -1,16 +1,7 @@
 ---
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/every
 ---
 
 {{JSRef}}
@@ -77,7 +68,7 @@ function estAssezGrand(element, index, array) {
 
 ### Utiliser les fonctions fléchées avec `every`
 
-{{jsxref("Fonctions/Fonctions_fl%C3%A9ch%C3%A9es","Les fonctions fléchées","","1")}} permettent d'utiliser une syntaxe plus concise pour effectuer le même test.
+{{jsxref("Fonctions/Fonctions_fléchées","Les fonctions fléchées","","1")}} permettent d'utiliser une syntaxe plus concise pour effectuer le même test.
 
 ```js
 [12, 5, 8, 130, 44].every(elem => elem >= 10); // false

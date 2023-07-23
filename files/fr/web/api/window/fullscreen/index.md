@@ -2,7 +2,6 @@
 title: Window.fullScreen
 slug: Web/API/Window/fullScreen
 translation_of: Web/API/Window/fullScreen
-browser-compat: api.Window.fullScreen
 ---
 
 {{APIRef}}{{Non-standard_Header}}

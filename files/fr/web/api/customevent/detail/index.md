@@ -1,11 +1,6 @@
 ---
 title: CustomEvent.detail
 slug: Web/API/CustomEvent/detail
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - Évènement personnalisé
 translation_of: Web/API/CustomEvent/detail
 ---
 

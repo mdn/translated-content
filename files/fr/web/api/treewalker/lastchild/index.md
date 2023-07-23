@@ -1,12 +1,6 @@
 ---
 title: TreeWalker.lastChild()
 slug: Web/API/TreeWalker/lastChild
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/TreeWalker/lastChild
 ---
 

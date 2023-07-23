@@ -1,12 +1,6 @@
 ---
 title: TreeWalker.firstChild()
 slug: Web/API/TreeWalker/firstChild
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/TreeWalker/firstChild
 ---
 

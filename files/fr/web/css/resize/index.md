@@ -1,10 +1,6 @@
 ---
 title: resize
 slug: Web/CSS/resize
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/resize
 ---
 

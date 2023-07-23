@@ -1,10 +1,6 @@
 ---
 title: scripting
 slug: Web/CSS/@media/scripting
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/scripting
 ---
 

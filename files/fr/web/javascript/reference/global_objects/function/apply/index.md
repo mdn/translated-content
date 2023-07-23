@@ -1,13 +1,7 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-tags:
-  - Function
-  - JavaScript
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/apply
 ---
 
 {{JSRef}}

@@ -10,6 +10,6 @@ Un [Objet](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object) est une stru
 
 ### Culture générale
 
-- [Programmation orientée objet](https://fr.wikipedia.org/wiki/Programmation_orient%C3%A9e_objet) sur Wikipédia
+- [Programmation orientée objet](https://fr.wikipedia.org/wiki/Programmation_orientée_objet) sur Wikipédia
 - {{jsxref("Object")}} dans la [référence JavaScript](/fr/docs/Web/JavaScript/Reference)
 - [Structure de données Objet en JavaScript](/fr/docs/Web/JavaScript/Structures_de_données#Les_objets)

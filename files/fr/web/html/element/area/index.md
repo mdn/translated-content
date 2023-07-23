@@ -1,17 +1,7 @@
 ---
 title: '<area> : l''élément de zone'
 slug: Web/HTML/Element/area
-tags:
-  - Content
-  - Element
-  - HTML
-  - HTML:Flow content
-  - HTML:Phrasing content
-  - Multimedia
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/area
-browser-compat: html.elements.area
 ---
 
 {{HTMLSidebar}}

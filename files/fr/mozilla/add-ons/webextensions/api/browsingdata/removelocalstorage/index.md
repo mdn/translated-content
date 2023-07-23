@@ -19,8 +19,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.browsingData.removeLocalStorage(
-  removalOptions            // RemovalOptions object
-)
+  removalOptions, // RemovalOptions object
+);
 ```
 
 ### Paramètres
@@ -49,8 +49,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeLocalStorage({}).
-then(onRemoved, onError);
+browser.browsingData.removeLocalStorage({}).then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}

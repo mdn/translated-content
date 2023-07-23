@@ -1,10 +1,6 @@
 ---
 title: text-align
 slug: Web/CSS/text-align
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/text-align
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: ':default'
+title: ":default"
 slug: Web/CSS/:default
 ---
 

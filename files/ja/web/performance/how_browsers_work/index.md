@@ -60,7 +60,7 @@ HTTPS によって確立される安全なコネクションでは、もう 1 �
 ウェブサーバーへのコネクションが確立されると、ブラウザーはユーザーに代わって最初の [HTTP `GET` リクエスト](/ja/docs/Web/HTTP/Methods)を送信します。ウェブサイトであれば、多くの場合その対象は HTML ファイルです。リクエストを受け取ったサーバーは、適当なレスポンスヘッダーと HTML のコンテンツを返します。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

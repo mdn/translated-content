@@ -1,10 +1,7 @@
 ---
 title: generate-id
 slug: Web/XPath/Functions/generate-id
-tags:
-  - Référence_XSLT
 translation_of: Web/XPath/Functions/generate-id
-original_slug: Web/XPath/Fonctions/generate-id
 ---
 
 {{ XsltRef() }}

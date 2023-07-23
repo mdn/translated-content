@@ -1,14 +1,10 @@
 ---
 title: Nombres et dates
 slug: Web/JavaScript/Guide/Numbers_and_dates
-tags:
-  - Guide
-  - JavaScript
 translation_of: Web/JavaScript/Guide/Numbers_and_dates
-original_slug: Web/JavaScript/Guide/Nombres_et_dates
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs", "Web/JavaScript/Guide/Formatage_du_texte")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_et_Opérateurs", "Web/JavaScript/Guide/Formatage_du_texte")}}
 
 Ce chapitre illustre le fonctionnement des nombres et des dates en JavaScript grâce aux concepts, objets et fonctions utilisables avec ce langage. Cela inclut notamment l'écriture de nombre selon différentes bases (décimale, binaire, hexadécimale) et l'utilisation de l'objet global {{jsxref("Math")}}.
 
@@ -326,4 +322,4 @@ L'instruction qui suit concatène la valeur de `minutes` à `calc`. Si la valeur
 
 Enfin, une expression conditionnelle est utilisée pour ajouter "P.M." à `calc` si `heures` vaut 12 ou plus, sinon ce sera la chaîne "A.M." qui sera ajoutée à la fin de `calc`.
 
-{{PreviousNext("Web/JavaScript/Guide/Expressions_et_Op%C3%A9rateurs", "Web/JavaScript/Guide/Formatage_du_texte")}}
+{{PreviousNext("Web/JavaScript/Guide/Expressions_et_Opérateurs", "Web/JavaScript/Guide/Formatage_du_texte")}}

@@ -1,10 +1,6 @@
 ---
 title: ':optional'
 slug: Web/CSS/:optional
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:optional
 ---
 

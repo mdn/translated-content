@@ -1,13 +1,6 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
-tags:
-  - API
-  - DOM
-  - Evènements IU
-  - Interface
-  - Reference
-  - évènements
 translation_of: Web/API/KeyboardEvent
 ---
 

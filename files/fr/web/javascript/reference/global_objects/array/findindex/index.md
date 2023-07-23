@@ -1,16 +1,7 @@
 ---
 title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
-tags:
-  - Array
-  - ECMAScript6
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/findIndex
 ---
 
 {{JSRef}}
@@ -55,7 +46,7 @@ S'il existe un tel élément, `findIndex` renverra immédiatement l'index de l'�
 
 `callback` possède trois arguments : la valeur de l'élément, l'index de l'élément et l'objet Array qui est parcouru
 
-Si l'argument `argumentThis` est fourni à la méthode `findIndex`, il sera utilisé comme « contexte » [`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this) pour chaque appel de `callback`. S'il n'est pas fourni, {{jsxref("undefined")}} sera utilisé.
+Si l'argument `argumentThis` est fourni à la méthode `findIndex`, il sera utilisé comme « contexte » [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) pour chaque appel de `callback`. S'il n'est pas fourni, {{jsxref("undefined")}} sera utilisé.
 
 `findIndex` ne modifie pas le tableau sur laquelle elle est appelée. Les éléments qui seront traités par `findIndex` sont « récoltés » avant le premier appel de `callback`. Tout élément qui sera ajouté au tableau après l'appel de `findIndex` ne sera pas utilisé avec `callback`. Si un élément existant, pas encore visité, est modifié par `callback`, la valeur qui sera passé au `callback` pour cet élément modifié sera celle que `findIndex` utilise lorsqu'elle utilise l'index de l'élément en question. Les éléments supprimés sont bien parcourus.
 

@@ -1,7 +1,6 @@
 ---
 title: Constructeur Intl.DateTimeFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
-browser-compat: javascript.builtins.Intl.DateTimeFormat.DateTimeFormat
 ---
 
 {{JSRef}}

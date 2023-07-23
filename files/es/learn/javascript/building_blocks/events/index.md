@@ -2,7 +2,7 @@
 title: Introducción a los eventos
 slug: Learn/JavaScript/Building_blocks/Events
 l10n:
-  sourceCommit: ac5dfaa2f71a7381cd8fdd4cb554507f375ac19c 
+  sourceCommit: ac5dfaa2f71a7381cd8fdd4cb554507f375ac19c
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
@@ -111,7 +111,7 @@ btn.addEventListener("click", () => {
 El elemento HTML {{HTMLElement("button")}} lanzará un evento cuando el usuario hace clic sobre él. Entonces define la función `addEventListener()` que estamos llamando aquí. Le estamos pasando dos parámetros:
 
 - la cadena `"click"`, para indicar que queremos detectar el evento de clic.
-Los botones pueden lanzar muchos otros eventos, como [`"mouseover"`](/es/docs/Web/API/Element/mouseover_event) cuando el usuario mueve el ratón por encima del botón, o [`"keydown"`](/es/docs/Web/API/Element/keydown_event) cuando el usuario presiona una tecla y el botón está enfocado.
+  Los botones pueden lanzar muchos otros eventos, como [`"mouseover"`](/es/docs/Web/API/Element/mouseover_event) cuando el usuario mueve el ratón por encima del botón, o [`"keydown"`](/es/docs/Web/API/Element/keydown_event) cuando el usuario presiona una tecla y el botón está enfocado.
 - una función a llamar cuando el evento ocurra. En este caso, la función genera un color RGB aleatorio y establece el [`background-color`](/es/docs/Web/CSS/background-color) de la página [`<body>`](/es/docs/Web/HTML/Element/body) a ese color.
 
 Es válido crear una función manejador con su propio nombre, de la siguiente forma:
@@ -139,7 +139,7 @@ Primero, haz una copia local del archivo [random-color-addeventlistener.html](ht
 Se trata de una copia del ejemplo sencillo del color aleatorio con el que ya trabajamos anteriormente. Ahora intenta a cambiar `click` por cada uno de los siguientes valores y observa los resultados en el ejemplo:
 
 - [`focus`](/es/docs/Web/API/Element/focus_event) y [`blur`](/es/docs/Web/API/Element/blur_event) — El color cambia cuando el botón es enfocado y desenfocado; Intenta presionar la tecla "Tabulador" para enfocar el botón y presionala de nuevo para desenfocarlo.
-Estos eventos son normalmente utilizados para mostrar información a la hora de completar formularios, o incluso para mostrar un mensaje de error si un campo recibe un valor incorrecto.
+  Estos eventos son normalmente utilizados para mostrar información a la hora de completar formularios, o incluso para mostrar un mensaje de error si un campo recibe un valor incorrecto.
 - [`dblclick`](/es/docs/Web/API/Element/dblclick_event) — El color cambia únicamente cuando se hace doble clic sobre el botón.
 - [`mouseover`](/es/docs/Web/API/Element/mouseover_event) y [`mouseout`](/es/docs/Web/API/Element/mouseout_event) — El color cambia cuando el puntero del ratón pasa por encima del botón, o cuando el puntero sale del botón, respectivamente.
 
@@ -165,7 +165,7 @@ btn.addEventListener(
     const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
     document.body.style.backgroundColor = rndCol;
   },
-  { signal: controller.signal }
+  { signal: controller.signal },
 ); // se pasa una AbortSignal a este manejador
 ```
 
@@ -349,7 +349,7 @@ const textBox = document.querySelector("#textBox");
 const output = document.querySelector("#output");
 textBox.addEventListener(
   "keydown",
-  (event) => (output.textContent = `Presionaste "${event.key}".`)
+  (event) => (output.textContent = `Presionaste "${event.key}".`),
 );
 ```
 
@@ -398,7 +398,7 @@ div {
 }
 ```
 
-Ahora un poco de JavaScript. Aquí vamos a implementar una simple prueba dentro del manejador del evento [`submit`](/es/docs/Web/API/HTMLFormElement/submit_event) (el evento *submit* es lanzado en un formulario cuando este se envía) que determina si los campos de texto están vacíos o no.
+Ahora un poco de JavaScript. Aquí vamos a implementar una simple prueba dentro del manejador del evento [`submit`](/es/docs/Web/API/HTMLFormElement/submit_event) (el evento _submit_ es lanzado en un formulario cuando este se envía) que determina si los campos de texto están vacíos o no.
 En caso de que lo estén, llamamos al método [`preventDefault()`](/es/docs/Web/API/Event/preventDefault) del objeto evento, el cual detiene el envío del formulario y muestra un mensaje de error en el párrafo debajo de nuestro formulario para hacerle saber al usuario cuál es el problema:
 
 ```js
@@ -751,7 +751,7 @@ const container = document.querySelector("#container");
 
 container.addEventListener(
   "click",
-  (event) => (event.target.style.backgroundColor = bgChange())
+  (event) => (event.target.style.backgroundColor = bgChange()),
 );
 ```
 

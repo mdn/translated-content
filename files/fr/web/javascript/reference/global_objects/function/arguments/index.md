@@ -1,15 +1,7 @@
 ---
 title: Function.arguments
 slug: Web/JavaScript/Reference/Global_Objects/Function/arguments
-tags:
-  - Déprécié
-  - Function
-  - JavaScript
-  - Propriété
-  - Reference
-  - arguments
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/arguments
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/arguments
 ---
 
 {{JSRef}} {{Deprecated_header}}

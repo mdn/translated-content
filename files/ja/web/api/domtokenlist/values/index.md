@@ -1,6 +1,9 @@
 ---
-title: DOMTokenList.values()
+title: "DOMTokenList: values() メソッド"
+short-title: values()
 slug: Web/API/DOMTokenList/values
+l10n:
+  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
 {{APIRef("DOM")}}
@@ -9,8 +12,8 @@ slug: Web/API/DOMTokenList/values
 
 ## 構文
 
-```js
-tokenList.values();
+```js-nolint
+tokenList.values()
 ```
 
 ## 引数
@@ -38,7 +41,7 @@ const span = document.querySelector("span");
 const classes = span.classList;
 const iterator = classes.values();
 
-for(let value of iterator) {
+for (const value of iterator) {
   span.textContent += `(${value}) `;
 }
 ```

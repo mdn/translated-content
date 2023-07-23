@@ -264,7 +264,7 @@ Esto significa que necesitamos especificar el tamaño de letra para el título d
 Si observas el tipo de letra de una página HTML responsiva, en general vas a encontrar la siguiente etiqueta {{htmlelement ("meta")}} en la cabecera del documento.
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 Esta metaetiqueta informa a los navegadores de los dispositivos móviles que deben establecer el ancho de la ventana gráfica al ancho del dispositivo y escalar el documento al 100% de ese tamaño, de modo que el documento se mostrará al tamaño optimizado para esos dispositivos móviles.

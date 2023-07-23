@@ -1,16 +1,12 @@
 ---
 title: padding-right
 slug: Web/CSS/padding-right
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/padding-right
 ---
 
 {{CSSRef}}
 
-La propriété **`padding-right`** d'un élément correspond à l'espace nécessaire à la droite d'un élément. La [zone de remplissage](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte) correspond à l'espace entre le contenu et la bordure. `padding-right` ne peut pas recevoir de valeurs négatives.
+La propriété **`padding-right`** d'un élément correspond à l'espace nécessaire à la droite d'un élément. La [zone de remplissage](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) correspond à l'espace entre le contenu et la bordure. `padding-right` ne peut pas recevoir de valeurs négatives.
 
 {{EmbedInteractiveExample("pages/css/padding-right.html")}}
 

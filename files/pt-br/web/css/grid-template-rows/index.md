@@ -53,13 +53,13 @@ Esta propriedade pode ser especificada como:
   - : É um valor de {{cssxref("percentage", "&lt;percentagem&gt;")}} não negativo, relativo ao tamanho do bloco do grid contêiner. Se o tamanho do grid contêiner depender do tamanho de suas tracks, então a percentagem deve ser tratada como `auto`.
     As contribuições de tamanho inerentes da track podem ser ajustados ao tamanho do grid contêiner, e aumentar o tamanho final da track pelo o valor mínimo que respeitará a percentagem.
 - {{cssxref("&lt;flex_value&gt;","&lt;flex&gt;")}}
-  - : Is a non-negative dimension with the unit `fr` specifying the track’s flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor. When appearing outside a `minmax()` notation, it implies an automatic minimum (i.e. `minmax(auto, <flex>)`).
+  - : Is a non-negative dimension with the unit `fr` specifying the track's flex factor. Each `<flex>`-sized track takes a share of the remaining space in proportion to its flex factor. When appearing outside a `minmax()` notation, it implies an automatic minimum (i.e. `minmax(auto, <flex>)`).
 - `max-content`
   - : Is a keyword representing the largest maximal content contribution of the grid items occupying the grid track.
 - `min-content`
   - : Is a keyword representing the largest minimal content contribution of the grid items occupying the grid track.
 - {{cssxref("minmax", "minmax(min, max)")}}
-  - : Is a functional notation that defines a size range, greater than or equal to _min_, and less than or equal to _max_. If _max_ is smaller than _min_, then _max_ is ignored and the function is treated as _min_. As a maximum, a `<flex>` value sets the track’s flex factor. It is invalid as a minimum.
+  - : Is a functional notation that defines a size range, greater than or equal to _min_, and less than or equal to _max_. If _max_ is smaller than _min_, then _max_ is ignored and the function is treated as _min_. As a maximum, a `<flex>` value sets the track's flex factor. It is invalid as a minimum.
 - `auto`
 
   - : Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.

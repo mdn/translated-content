@@ -1,10 +1,6 @@
 ---
 title: Attr
 slug: Web/API/Attr
-tags:
-  - API
-  - Attribut
-  - DOM
 translation_of: Web/API/Attr
 ---
 

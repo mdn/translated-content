@@ -2,7 +2,6 @@
 title: Constructeur FinalizationRegistry()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
 translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
-browser-compat: javascript.builtins.FinalizationRegistry.FinalizationRegistry
 ---
 
 {{JSRef}}

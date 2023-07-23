@@ -1,12 +1,6 @@
 ---
 title: '<rp> : l''élément de parenthèses alternatif aux annotations Ruby'
 slug: Web/HTML/Element/rp
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Ruby
-  - Web
 translation_of: Web/HTML/Element/rp
 ---
 
@@ -81,7 +75,7 @@ body {
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >. Texte.
       </td>

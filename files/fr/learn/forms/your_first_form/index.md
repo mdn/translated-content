@@ -1,17 +1,7 @@
 ---
 title: Mon premier formulaire HTML
 slug: Learn/Forms/Your_first_form
-tags:
-  - Apprentissage
-  - Codage
-  - Débutant
-  - Exemple
-  - Formulaires
-  - Guide
-  - HTML
-  - Web
 translation_of: Learn/Forms/Your_first_form
-original_slug: Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
@@ -46,7 +36,7 @@ Les formulaires HTML sont un des vecteurs principaux d'interaction entre un util
 
 Un formulaire HTML est composé d'un ou plusieurs widgets. Ceux-ci peuvent être des zones de texte (sur une seule ligne ou plusieurs lignes), des boîtes à sélection, des boutons, des cases à cocher ou des boutons radio. La plupart du temps, ces items sont associés à un libellé qui décrit leur rôle — des étiquettes correctement implémentées sont susceptibles d'informer clairement l'utilisateur normal ou mal‑voyant sur ce qu'il convient d'entrer dans le formulaire.
 
-La principale différence entre un formulaire HTML et un document HTML habituel réside dans le fait que, généralement, les données collectées par le formulaire sont envoyées vers un serveur web. Dans ce cas, vous avez besoin de mettre en place un serveur web pour récupérer ces données et les traiter. La mise en place d'un tel serveur ne fait pas partie des sujets abordés dans ce guide. Si vous souhaitez toutefois en savoir plus, voyez «&nbsp;[Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires)&nbsp;» plus loin dans ce module.
+La principale différence entre un formulaire HTML et un document HTML habituel réside dans le fait que, généralement, les données collectées par le formulaire sont envoyées vers un serveur web. Dans ce cas, vous avez besoin de mettre en place un serveur web pour récupérer ces données et les traiter. La mise en place d'un tel serveur ne fait pas partie des sujets abordés dans ce guide. Si vous souhaitez toutefois en savoir plus, voyez «&nbsp;[Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)&nbsp;» plus loin dans ce module.
 
 ## Concevoir le formulaire
 
@@ -72,9 +62,7 @@ Avant de poursuivre, faites une copie locale de notre [simple modèle HTML](http
 Tous les formulaires HTML débutent par un élément {{HTMLElement("form")}} comme celui-ci :
 
 ```html
-<form action="/my-handling-form-page" method="post">
-
-</form>
+<form action="/my-handling-form-page" method="post"></form>
 ```
 
 Cet élément définit un formulaire. C'est un élément conteneur au même titre que les éléments {{HTMLElement("div")}} ou {{HTMLElement("p")}}, mais il accepte aussi quelques attributs spécifiques afin de contrôler la manière dont il se comporte. Tous ses attributs sont optionnels mais définir au moins les attributs `action` et `method` est considéré comme de bonne pratique.
@@ -82,7 +70,7 @@ Cet élément définit un formulaire. C'est un élément conteneur au même titr
 - L'attribut `action` définit l'emplacement (une URL) où doivent être envoyées les données collectées par le formulaire.
 - L'attribut `method` définit la méthode HTTP utilisée pour envoyer les données (cela peut être « get » ou « post »).
 
-> **Note :** Si vous souhaitez en savoir plus sur le fonctionnement de ces attributs, cela est détaillé dans l'article [«&nbsp;Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires)&nbsp;».
+> **Note :** Si vous souhaitez en savoir plus sur le fonctionnement de ces attributs, cela est détaillé dans l'article [«&nbsp;Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)&nbsp;».
 
 Pour le moment, ajoutez l'élément {{htmlelement("form")}} ci dessus dans le corps de votre HTML.
 
@@ -94,18 +82,18 @@ En terme de code HTML, nous avons besoin de quelque chose qui ressemble à ceci 
 
 ```html
 <form action="/ma-page-de-traitement" method="post">
-    <div>
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="user_name">
-    </div>
-    <div>
-        <label for="mail">e-mail&nbsp;:</label>
-        <input type="email" id="mail" name="user_mail">
-    </div>
-    <div>
-        <label for="msg">Message :</label>
-        <textarea id="msg" name="user_message"></textarea>
-    </div>
+  <div>
+    <label for="name">Nom :</label>
+    <input type="text" id="name" name="user_name" />
+  </div>
+  <div>
+    <label for="mail">e-mail&nbsp;:</label>
+    <input type="email" id="mail" name="user_mail" />
+  </div>
+  <div>
+    <label for="msg">Message :</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </div>
 </form>
 ```
 
@@ -119,7 +107,9 @@ Concernant l'élément {{HTMLElement("input")}}, l'attribut le plus important es
 Last but not least, remarquez la syntaxe de `<input>` vs `<textarea></textarea>`. C'est une des bizarreries du HTML. La balise `<input>` est un élément vide, ce qui signifie qu'il n'a pas besoin de balise fermante. Au contraire, {{HTMLElement("textarea")}} n'est pas un élément vide, il faut donc le fermer avec la balise fermante appropriée. Cela a un effet sur une caractéristique spécifique des formulaires HTML : la manière dont vous définissez la valeur par défaut. Pour définir une valeur par défaut d'un élément {{HTMLElement("input")}} vous devez utiliser l'attribut `value` de la manière suivante :
 
 ```html
-<input type="text" value="par défaut cet élément sera renseigné avec ce texte">
+<input
+  type="text"
+  value="par défaut cet élément sera renseigné avec ce texte" />
 ```
 
 A contrario, si vous souhaitez définir la valeur par défaut d'un élément {{HTMLElement("textarea")}}, il suffit simplement de mettre la valeur par défaut entre les balises ouvrantes et fermantes de l'élément {{HTMLElement("textarea")}} de la manière suivante :
@@ -133,9 +123,9 @@ A contrario, si vous souhaitez définir la valeur par défaut d'un élément {{H
 Notre formulaire est presque terminé. Il nous suffit seulement d'ajouter un bouton pour permettre à l'utilisateur de nous envoyer les données renseignées dans le formulaire. Ceci se fait simplement en ajoutant d'un élément {{HTMLElement("button")}} ; ajoutez‑le juste avant la balise fermante `</form> :`
 
 ```html
-    <div class="button">
-        <button type="submit">Envoyer le message</button>
-    </div>
+<div class="button">
+  <button type="submit">Envoyer le message</button>
+</div>
 ```
 
 Comme vous le voyez l'élément {{htmlelement("button")}} accepte aussi un attribut de type — il peut prendre une des trois valeurs&nbsp;: `submit`, `reset` ou `button`.
@@ -159,9 +149,7 @@ Les formulaires sont notoirement embêtants à présenter joliment. Apprendre la
 Tout d'abord, ajoutons un élément {{htmlelement("style")}} à notre page, dans l'en‑tête HTML. Comme ceci&nbsp;:
 
 ```html
-<style>
-
-</style>
+<style></style>
 ```
 
 Entre les balises style, ajoutons le CSS suivant, juste comme indiqué&nbsp;:
@@ -173,7 +161,7 @@ form {
   width: 400px;
   /* Encadré pour voir les limites du formulaire */
   padding: 1em;
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
   border-radius: 1em;
 }
 
@@ -188,7 +176,8 @@ label {
   text-align: right;
 }
 
-input, textarea {
+input,
+textarea {
   /* Pour s'assurer que tous les champs texte ont la même police.
      Par défaut, les textarea ont une police monospace */
   font: 1em sans-serif;
@@ -201,7 +190,8 @@ input, textarea {
   border: 1px solid #999;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   /* Pour souligner légèrement les éléments actifs */
   border-color: #000;
 }
@@ -222,7 +212,7 @@ textarea {
 button {
   /* Cette marge supplémentaire représente grosso modo le même espace que celui
      entre les étiquettes et les champs texte */
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
 ```
 
@@ -262,7 +252,7 @@ Pour nommer vos données vous devez utiliser l'attribut `name` pour identifier b
 
 Dans notre exemple, le formulaire enverra trois informations nommées respectivement «&nbsp;`user_name`&nbsp;», «&nbsp;`user_email`&nbsp;» et «&nbsp;`user_message`&nbsp;». Ces informations seront envoyées à l'URL « `/my-handling-form-page` » avec la méthode HTTP POST.
 
-Du côté du serveur, le script à l'URL « `/my-handling-form-page` » recevra les données sous forme d'une liste de trois éléments clé/valeur intégrés à la requête HTTP. À vous de définir comment ce script va manipuler les données. Chacun des langages serveurs (PHP, Python, Ruby, Java, C#, etc.) a son propre mécanisme pour traiter ces données. Il n'appartient pas à ce guide d'approfondir ce sujet, mais si vous souhaitez en savoir plus, nous avons mis quelques exemples dans l'article [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_donn%C3%A9es_des_formulaires).
+Du côté du serveur, le script à l'URL « `/my-handling-form-page` » recevra les données sous forme d'une liste de trois éléments clé/valeur intégrés à la requête HTTP. À vous de définir comment ce script va manipuler les données. Chacun des langages serveurs (PHP, Python, Ruby, Java, C#, etc.) a son propre mécanisme pour traiter ces données. Il n'appartient pas à ce guide d'approfondir ce sujet, mais si vous souhaitez en savoir plus, nous avons mis quelques exemples dans l'article [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires).
 
 ## Résumé
 

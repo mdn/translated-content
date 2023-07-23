@@ -1,11 +1,6 @@
 ---
 title: '-webkit-mask-repeat-y'
 slug: Web/CSS/-webkit-mask-repeat-y
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-mask-repeat-y
 ---
 
