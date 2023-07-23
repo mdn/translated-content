@@ -2,7 +2,8 @@
 title: 내용물
 slug: Learn/CSS/Howto/Generated_content
 ---
-> **경고:** **중요**: 번역은 제가 필요한 부분 및 확인 가능한 부분만 진행 하였으며 변역된 날자는(2013/03/18)이며 문서 변경이 잦아 오늘 이후는 원문과 번역이 다를 수 있습니다. 참고하세요. 미 번역/변경된 부분은 추가로 다른 분이 해 주실 것으로 믿습니다.
+
+> **경고:** 번역은 제가 필요한 부분 및 확인 가능한 부분만 진행 하였으며 변역된 날자는(2013/03/18)이며 문서 변경이 잦아 오늘 이후는 원문과 번역이 다를 수 있습니다. 참고하세요. 미 번역/변경된 부분은 추가로 다른 분이 해 주실 것으로 믿습니다.
 
 [CSS 시작하기](/en/CSS/Getting_Started) 안내서 9번째 장; 이번에는 CSS에서Document에 표시될 내용물을 추가 하는 방법을 알아보자. stylesheet를 수정해서 텍스트 내용과 이미지를 수정해 보자.
 
@@ -51,7 +52,9 @@ element 전/후로 이미지를 추가 하려면, {{ cssxref("content") }}속성
 이 규칙은 `'glossary`' class 다음에 공백과 하나의 아이콘을 추가한다.
 
 ```css
-a.glossary:after {content: " " url("../images/glossary-icon.gif");}
+a.glossary:after {
+  content: " " url("../images/glossary-icon.gif");
+}
 ```
 
 element의 배경으로 이미지를 추가 하고자 한다면, {{ cssxref("background") }}속성 값에 이미지의 URL을 할당 하라. 이것이 배경색이나, 이미지를 설정하거나, 이미지를 반복하거나 혹은 다른 사항을 설정하는 단순한 방법이다.
@@ -63,7 +66,9 @@ element의 배경으로 이미지를 추가 하고자 한다면, {{ cssxref("bac
 이 설렉터는 element의 id를 나타낸다. `'no-repeat'` 값은 이미지가 한번만 나타나는 것을 말한다.
 
 ```css
-#sidebar-box {background: url("../images/sidebar-ground.png") no-repeat;}
+#sidebar-box {
+  background: url("../images/sidebar-ground.png") no-repeat;
+}
 ```
 
 좀더 자세히
@@ -75,29 +80,29 @@ element의 배경으로 이미지를 추가 하고자 한다면, {{ cssxref("bac
 이 이미지는 아래쪽에 파란색 줄이 있는 흰사각형이다.:
 
 | ![Image:Blue-rule.png](blue-rule.png) |
-| ---------------------------------------------------------- |
+| ------------------------------------- |
 
 1. 이 이미지를 다운 받아 예제파일들이 있는 폴더에 저장하라. (이미지에서 왼쪽 클릭을 하여 나타나는 메뉴에서 "다른 이름으로 사진저장"을 선택하여 예제가 있는 폴더를 선택하여 저장)
 2. CSS파일을 열어 아래 규칙을 body부분에 추가 하여 전체 배경으로 해당 이미지를 설정하라.
 
-    ```css
-    background: url("Blue-rule.png");
-    ```
+   ```css
+   background: url("Blue-rule.png");
+   ```
 
-    일단 위의 값은 이미지를 반복적으로 보여주는데, 기본 설정이므로 따로 표시 해 줄 필요는 없다. 이미지는 수직/수평적으로 반복되어 아래와 같이 편지지 같은 화면을 제공한다.
+   일단 위의 값은 이미지를 반복적으로 보여주는데, 기본 설정이므로 따로 표시 해 줄 필요는 없다. 이미지는 수직/수평적으로 반복되어 아래와 같이 편지지 같은 화면을 제공한다.
 
-    ![Image:Blue-rule-ground.png](blue-rule-ground.png)
+   ![Image:Blue-rule-ground.png](blue-rule-ground.png)
 
-    **C**ascading **S**tyle **S**heets
+   **C**ascading **S**tyle **S**heets
 
-    **C**ascading **S**tyle **S**heets
+   **C**ascading **S**tyle **S**heets
 
 도전
 
 아래 아미지를 다운 받아보라.
 
 | ![Image:Yellow-pin.png](yellow-pin.png) |
-| ------------------------------------------------------------- |
+| --------------------------------------- |
 
 Stylesheet에 하나의 규칙을 추가 하여 아래와 같이 각라인 맨 앞에 나타나도록 하라.
 
@@ -108,7 +113,7 @@ Stylesheet에 하나의 규칙을 추가 하여 아래와 같이 각라인 맨 �
 Add this rule to your stylesheet:
 
 ```css
-p:before{
+p:before {
   content: url("yellow-pin.png");
 }
 ```

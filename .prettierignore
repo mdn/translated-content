@@ -59,7 +59,6 @@ build/
 /files/ko/games/**/*.md
 /files/ko/glossary/**/*.md
 /files/ko/learn/**/*.md
-/files/ko/learn/css/**/*.md
 /files/ko/learn/html/**/*.md
 /files/ko/learn/javascript/**/*.md
 /files/ko/learn/server-side/**/*.md
