@@ -1,11 +1,6 @@
 ---
 title: '<param> : l''élément paramètre d''un objet'
 slug: Web/HTML/Element/param
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/param
 ---
 

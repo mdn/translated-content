@@ -1,19 +1,7 @@
 ---
 title: '<embed> : l''élément de contenu externe embarqué'
 slug: Web/HTML/Element/embed
-tags:
-  - Element
-  - Embedding Content
-  - External content
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - Plugins
-  - Reference
-  - Web
-  - embed
 translation_of: Web/HTML/Element/embed
-browser-compat: html.elements.embed
 ---
 
 {{HTMLSidebar}}

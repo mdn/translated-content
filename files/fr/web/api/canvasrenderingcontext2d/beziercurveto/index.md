@@ -2,12 +2,11 @@
 title: CanvasRenderingContext2D.bezierCurveTo()
 slug: Web/API/CanvasRenderingContext2D/bezierCurveTo
 translation_of: Web/API/CanvasRenderingContext2D/bezierCurveTo
-browser-compat: api.CanvasRenderingContext2D.bezierCurveTo
 ---
 
 {{APIRef}}
 
-La méthode **`CanvasRenderingContext2D.bezierCurveTo()`** de l'API Canvas 2D ajoute une [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier) cubique au sous-chemin courant. Elle requiert trois points : les deux premiers sont des points de contrôle et le troisième est le point d'arrivée. Le point de départ est le dernier point dans le chemin courant, qui peut être changé au moyen de la méthode [`moveTo()`](/fr/docs/Web/API/CanvasRenderingContext2D/moveTo) avant de créer une courbe de Bézier.
+La méthode **`CanvasRenderingContext2D.bezierCurveTo()`** de l'API Canvas 2D ajoute une [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_Bézier) cubique au sous-chemin courant. Elle requiert trois points : les deux premiers sont des points de contrôle et le troisième est le point d'arrivée. Le point de départ est le dernier point dans le chemin courant, qui peut être changé au moyen de la méthode [`moveTo()`](/fr/docs/Web/API/CanvasRenderingContext2D/moveTo) avant de créer une courbe de Bézier.
 
 ## Syntaxe
 
@@ -121,4 +120,4 @@ contexte2D.stroke();
 ## Voir aussi
 
 - L'interface définissant cette méthode : [`CanvasRenderingContext2D`](/fr/docs/Web/API/CanvasRenderingContext2D)
-- [L'article Wikipédia sur les courbes de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier)
+- [L'article Wikipédia sur les courbes de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_Bézier)

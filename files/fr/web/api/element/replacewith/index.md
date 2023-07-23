@@ -2,7 +2,6 @@
 title: Element.replaceWith()
 slug: Web/API/Element/replaceWith
 translation_of: Web/API/Element/replaceWith
-browser-compat: api.Element.replaceWith
 ---
 
 {{APIRef("DOM")}}

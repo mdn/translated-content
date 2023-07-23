@@ -1,11 +1,6 @@
 ---
 title: PerformanceElementTiming
 slug: Web/API/PerformanceElementTiming
-tags:
-  - API
-  - Interface
-  - Reference
-  - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming
 ---
 

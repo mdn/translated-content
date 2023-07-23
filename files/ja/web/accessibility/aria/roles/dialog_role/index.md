@@ -1,14 +1,19 @@
 ---
-title: 'ARIA: dialog ロール'
+title: "ARIA: dialog ロール"
 slug: Web/Accessibility/ARIA/Roles/dialog_role
 ---
 
 ダイアログ ([`dialog`](https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#dialog)) ロールは、ウェブアプリケーションやウェブページの残りの部分からコンテンツや UI を分離する HTML ベースのアプリケーションのダイアログやウィンドウをマークアップするために使用します。 ダイアログは通常、オーバーレイを使用して残りのページコンテンツの上に配置されます。 ダイアログはノンモーダル (ダイアログ外のコンテンツともやりとり可能) またはモーダル (ダイアログ内のコンテンツのみとやりとり可能) のいずれかになります。
 
 ```html
-<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <h2 id="dialog1Title">あなたの個人情報が更新されました</h2>
-  <p id="dialog1Desc">情報は、ユーザーアカウントのセクションでいつでも変更できます。</p>
+  <p id="dialog1Desc">
+    情報は、ユーザーアカウントのセクションでいつでも変更できます。
+  </p>
   <button>閉じる</button>
 </div>
 ```
@@ -29,9 +34,14 @@ slug: Web/Accessibility/ARIA/Roles/dialog_role
 ダイアログにすでに表示されているタイトルバーがある場合、そのバーの中のテキストを使用してダイアログ自体にラベルを付けることができます。 これを達成する最善の方法は、`role="dialog"` 要素に `aria-labelledby` 属性を使用することです。 さらに、ダイアログがダイアログタイトル以外に追加の説明テキストを含んでいる場合、このテキストは `aria-describedby` 属性を使用してダイアログに関連付けることができます。 このアプローチは、次のコードスニペットに示されています。
 
 ```html
-<div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
   <h2 id="dialog1Title">あなたの個人情報が更新されました</h2>
-  <p id="dialog1Desc">情報は、ユーザーアカウントのセクションでいつでも変更できます。</p>
+  <p id="dialog1Desc">
+    情報は、ユーザーアカウントのセクションでいつでも変更できます。
+  </p>
   <button>閉じる</button>
 </div>
 ```
@@ -73,31 +83,34 @@ slug: Web/Accessibility/ARIA/Roles/dialog_role
 #### フォームを含むダイアログ
 
 ```html
- <div role="dialog" aria-labelledby="dialog1Title" aria-describedby="dialog1Desc">
-   <h2 id="dialog1Title">加入申込書</h2>
-   <p id="dialog1Desc">私たちは、この情報を第三者と共有することはありません。</p>
-   <form>
-     <p>
-       <label for="firstName">名</label>
-       <input id="firstName" type="text" />
-     </p>
-     <p>
-       <label for="lastName">姓</label>
-       <input id="lastName" type="text"/>
-     </p>
-     <p>
-       <label for="interests">興味</label>
-       <textarea id="interests"></textarea>
-     </p>
-     <p>
-       <input type="checkbox" id="autoLogin"/>
-       <label for="autoLogin">自動ログイン？</label>
-     </p>
-     <p>
-         <input type="submit" value="情報を保存する"/>
-     </p>
-   </form>
- </div>
+<div
+  role="dialog"
+  aria-labelledby="dialog1Title"
+  aria-describedby="dialog1Desc">
+  <h2 id="dialog1Title">加入申込書</h2>
+  <p id="dialog1Desc">私たちは、この情報を第三者と共有することはありません。</p>
+  <form>
+    <p>
+      <label for="firstName">名</label>
+      <input id="firstName" type="text" />
+    </p>
+    <p>
+      <label for="lastName">姓</label>
+      <input id="lastName" type="text" />
+    </p>
+    <p>
+      <label for="interests">興味</label>
+      <textarea id="interests"></textarea>
+    </p>
+    <p>
+      <input type="checkbox" id="autoLogin" />
+      <label for="autoLogin">自動ログイン？</label>
+    </p>
+    <p>
+      <input type="submit" value="情報を保存する" />
+    </p>
+  </form>
+</div>
 ```
 
 #### 動作する例

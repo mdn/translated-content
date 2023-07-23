@@ -1,12 +1,6 @@
 ---
 title: '<rtc> : l''élément de conteneur de texte Ruby'
 slug: Web/HTML/Element/rtc
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Ruby
-  - Web
 translation_of: Web/HTML/Element/rtc
 ---
 
@@ -63,7 +57,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attribu
       <td>
         Du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >
         ou des éléments {{HTMLElement("rt")}}.

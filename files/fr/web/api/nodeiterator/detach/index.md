@@ -1,13 +1,6 @@
 ---
 title: NodeIterator.detach()
 slug: Web/API/NodeIterator/detach
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Itérateur
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/NodeIterator/detach
 ---
 

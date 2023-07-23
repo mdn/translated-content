@@ -2,7 +2,6 @@
 title: Constructeur Function()
 slug: Web/JavaScript/Reference/Global_Objects/Function/Function
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/Function
-browser-compat: javascript.builtins.Function.Function
 ---
 
 {{JSRef}}

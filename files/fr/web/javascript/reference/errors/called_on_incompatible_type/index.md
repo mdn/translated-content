@@ -1,12 +1,7 @@
 ---
 title: 'TypeError: X.prototype.y called on incompatible type'
 slug: Web/JavaScript/Reference/Errors/Called_on_incompatible_type
-tags:
-  - Erreurs
-  - JavaScript
-  - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Called_on_incompatible_type
-original_slug: Web/JavaScript/Reference/Erreurs/Called_on_incompatible_type
 ---
 
 {{jsSidebar("Errors")}}

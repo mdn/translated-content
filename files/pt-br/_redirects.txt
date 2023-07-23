@@ -743,7 +743,7 @@
 /pt-BR/docs/Web/CSS/Pseudo-elementos	/pt-BR/docs/Web/CSS/Pseudo-elements
 /pt-BR/docs/Web/CSS/Seletor_de_atributos	/pt-BR/docs/Web/CSS/Attribute_selectors
 /pt-BR/docs/Web/CSS/Seletor_universal	/pt-BR/docs/Web/CSS/Universal_selectors
-/pt-BR/docs/Web/CSS/Seletores_CSS	/pt-BR/docs/Web/CSS/CSS_Selectors
+/pt-BR/docs/Web/CSS/Seletores_CSS	/pt-BR/docs/Web/CSS/CSS_selectors
 /pt-BR/docs/Web/CSS/Sintexe_valor	/pt-BR/docs/Web/CSS/Value_definition_syntax
 /pt-BR/docs/Web/CSS/Tools	/pt-BR/docs/conflicting/Web/CSS
 /pt-BR/docs/Web/CSS/Tools/Border-image_generator	/pt-BR/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator

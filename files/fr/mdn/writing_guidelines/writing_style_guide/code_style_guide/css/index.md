@@ -16,7 +16,7 @@ Les directives suivantes couvrent la manière d'écrire les CSS pour les exemple
   - [N'utilisez pas de méthodologies CSS spécifiques](#dont_use_specific_css_methodologies)
   - [Utiliser des unités flexibles/relatives](#use_flexiblerelative_units)
   - [Ne pas utiliser de réinitialisation](#dont_use_resets)
-  - [Planifiez votre CSS — évitez les surcharges](#plan_your_css_%e2%80%94_avoid_overriding)
+  - [Planifiez votre CSS — évitez les surcharges](#plan_your_css_—_avoid_overriding)
 
 - [Style général de codage CSS](#general_css_coding_style)
 

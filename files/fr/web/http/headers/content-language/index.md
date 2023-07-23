@@ -1,12 +1,6 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
-tags:
-  - En-tête HTTP
-  - En-tête de requête
-  - HTTP
-  - Négociation de contenu
-  - Reference
 translation_of: Web/HTTP/Headers/Content-Language
 ---
 

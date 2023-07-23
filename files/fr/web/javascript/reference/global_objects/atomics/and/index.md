@@ -1,14 +1,7 @@
 ---
 title: Atomics.and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/and
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/and
 ---
 
 {{JSRef}}

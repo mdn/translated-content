@@ -1,13 +1,6 @@
 ---
 title: 'Element : évènement mouseenter'
 slug: Web/API/Element/mouseenter_event
-tags:
-  - API
-  - DOM
-  - Element
-  - Interface
-  - Reference
-  - mouseenter
 translation_of: Web/API/Element/mouseenter_event
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: FeaturePolicy.allowedFeatures()
 slug: Web/API/FeaturePolicy/allowedFeatures
-tags:
-  - API
-  - Directive
-  - Feature Policy
-  - Feature-Policy
-  - Reference
 translation_of: Web/API/FeaturePolicy/allowedFeatures
 ---
 

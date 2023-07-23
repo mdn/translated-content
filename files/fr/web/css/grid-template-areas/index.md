@@ -1,10 +1,6 @@
 ---
 title: grid-template-areas
 slug: Web/CSS/grid-template-areas
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/grid-template-areas
 ---
 

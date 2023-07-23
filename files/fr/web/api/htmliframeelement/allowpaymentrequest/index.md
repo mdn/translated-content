@@ -2,7 +2,6 @@
 title: HTMLIFrameElement.allowPaymentRequest
 slug: Web/API/HTMLIFrameElement/allowPaymentRequest
 translation_of: HTMLIFrameElement.allowPaymentRequest
-browser-compat: api.HTMLIFrameElement.allowPaymentRequest
 ---
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}{{non-standard_header}}

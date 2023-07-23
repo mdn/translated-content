@@ -1,14 +1,7 @@
 ---
 title: length
 slug: Web/JavaScript/Reference/Functions/arguments/length
-tags:
-  - Functions
-  - JavaScript
-  - Propriété
-  - Reference
-  - arguments
 translation_of: Web/JavaScript/Reference/Functions/arguments/length
-original_slug: Web/JavaScript/Reference/Fonctions/arguments/length
 ---
 
 {{jsSideBar("Functions")}}

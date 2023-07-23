@@ -1,13 +1,6 @@
 ---
 title: PerformanceElementTiming.naturalWidth
 slug: Web/API/PerformanceElementTiming/naturalWidth
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - naturalWidth
-  - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/naturalWidth
 ---
 

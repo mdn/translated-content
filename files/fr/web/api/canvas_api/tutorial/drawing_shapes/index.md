@@ -1,16 +1,7 @@
 ---
 title: Dessiner des formes avec le canevas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-tags:
-  - Canvas
-  - Graphisme
-  - Guide
-  - HTML
-  - HTML5
-  - Intermédiaire
-  - Tutoriel
 translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
-original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 ---
 
 {{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
@@ -295,7 +286,7 @@ function draw() {
 
 ### Les courbes quadratiques et de Bézier
 
-Le type suivant de trajets disponible est la [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_B%C3%A9zier), disponible en deux variétés, cubique et quadratique. Elles sont généralement utilisées pour dessiner des formes naturelles complexes.
+Le type suivant de trajets disponible est la [courbe de Bézier](https://fr.wikipedia.org/wiki/Courbe_de_Bézier), disponible en deux variétés, cubique et quadratique. Elles sont généralement utilisées pour dessiner des formes naturelles complexes.
 
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}
   - : Dessine une courbe de Bézier quadratique depuis la position courante du stylo jusqu'au point final spécifié par `x` et `y`, en utilisant le point de contrôle spécifié par `cp1x` et `cp1y`.

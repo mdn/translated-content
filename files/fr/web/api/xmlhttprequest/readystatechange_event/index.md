@@ -2,7 +2,6 @@
 title: XMLHttpRequest.onreadystatechange
 slug: Web/API/XMLHttpRequest/readystatechange_event
 translation_of: Web/API/XMLHttpRequest/onreadystatechange
-original_slug: Web/API/XMLHttpRequest/onreadystatechange
 ---
 
 {{APIRef}}

@@ -1,10 +1,6 @@
 ---
 title: ':required'
 slug: Web/CSS/:required
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:required
 ---
 

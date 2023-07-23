@@ -1,13 +1,6 @@
 ---
 title: ET logique (&&)
 slug: Web/JavaScript/Reference/Operators/Logical_AND
-tags:
-  - JavaScript
-  - Language feature
-  - Logical Operator
-  - Operator
-  - Reference
-browser-compat: javascript.operators.logical_and
 ---
 
 {{jsSidebar("Operators")}}

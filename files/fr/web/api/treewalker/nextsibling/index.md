@@ -1,12 +1,6 @@
 ---
 title: TreeWalker.nextSibling()
 slug: Web/API/TreeWalker/nextSibling
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/TreeWalker/nextSibling
 ---
 

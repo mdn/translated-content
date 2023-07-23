@@ -1,12 +1,6 @@
 ---
 title: XMLHttpRequest.withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
-tags:
-  - API
-  - Propriété
-  - Reference
-  - XHR
-  - XMLHttpRequest
 translation_of: Web/API/XMLHttpRequest/withCredentials
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: IDBTransaction.mode
 slug: Web/API/IDBTransaction/mode
-tags:
-  - API
-  - IDBTransaction
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBTransaction/mode
 ---
 

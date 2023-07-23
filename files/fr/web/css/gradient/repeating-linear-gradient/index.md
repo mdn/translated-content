@@ -2,7 +2,6 @@
 title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
 translation_of: Web/CSS/gradient/repeating-linear-gradient
-browser-compat: css.types.image.gradient.repeating-linear-gradient
 ---
 
 {{CSSRef}}

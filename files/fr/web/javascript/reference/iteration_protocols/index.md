@@ -1,14 +1,7 @@
 ---
 title: Les protocoles d'itération
 slug: Web/JavaScript/Reference/Iteration_protocols
-tags:
-  - ECMAScript 2015
-  - Intermédiaire
-  - Iterator
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Iteration_protocols
-original_slug: Web/JavaScript/Reference/Les_protocoles_iteration
 ---
 
 {{jsSidebar("More")}}
@@ -196,7 +189,7 @@ ainsi que {{jsxref("Promise.all", "Promise.all(itérable)")}}, {{jsxref("Promise
 
 ### Les éléments de syntaxe utilisant des itérables
 
-Certains éléments du langage utilisent des itérables, par exemple : [`for..of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of), [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateur_de_d%C3%A9composition), [yield\*](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/yield*), [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Affecter_par_d%C3%A9composition) :
+Certains éléments du langage utilisent des itérables, par exemple : [`for..of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of), [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition), [yield\*](/fr/docs/Web/JavaScript/Reference/Opérateurs/yield*), [l'affectation par décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition) :
 
 ```js
 for(let value of ["a", "b", "c"]){

@@ -1,11 +1,6 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/@font-face/font-variation-settings
-tags:
-  - '@font-face'
-  - CSS
-  - Descripteur
-  - Reference
 translation_of: Web/CSS/@font-face/font-variation-settings
 ---
 

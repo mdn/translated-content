@@ -1,11 +1,6 @@
 ---
 title: Window.scrollByPages()
 slug: Web/API/Window/scrollByPages
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Méthode
 translation_of: Web/API/Window/scrollByPages
 ---
 

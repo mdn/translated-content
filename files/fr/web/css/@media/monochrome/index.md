@@ -1,10 +1,6 @@
 ---
 title: monochrome
 slug: Web/CSS/@media/monochrome
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/monochrome
 ---
 

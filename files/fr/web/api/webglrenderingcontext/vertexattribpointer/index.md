@@ -1,12 +1,6 @@
 ---
 title: WebGLRenderingContext.vertexAttribPointer()
 slug: Web/API/WebGLRenderingContext/vertexAttribPointer
-tags:
-  - API
-  - Méthode
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/vertexAttribPointer
 ---
 

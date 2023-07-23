@@ -1,13 +1,6 @@
 ---
 title: Notification.lang
 slug: Web/API/Notification/lang
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
 translation_of: Web/API/Notification/lang
 ---
 

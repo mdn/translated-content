@@ -1,16 +1,7 @@
 ---
 title: Comment construire des widgets de formulaires personnalisés
 slug: Learn/Forms/How_to_build_custom_form_controls
-tags:
-  - Avancé
-  - Exemple
-  - Formulaires
-  - Guide
-  - HTML
-  - Web
 translation_of: Learn/Forms/How_to_build_custom_form_controls
-original_slug: >-
-  Web/Guide/HTML/Formulaires/Comment_construire_des_widgets_de_formulaires_personnalisés
 ---
 
 {{LearnSidebar}}

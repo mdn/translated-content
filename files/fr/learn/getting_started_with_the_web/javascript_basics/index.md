@@ -1,14 +1,7 @@
 ---
 title: Les bases de JavaScript
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
-tags:
-  - Apprendre
-  - Code JavaScript
-  - Débutant
-  - JavaScript
-  - Web
 translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
-original_slug: Apprendre/Commencer_avec_le_web/Les_bases_JavaScript
 ---
 
 {{LearnSidebar}}
@@ -71,7 +64,7 @@ Ensuite, nous fixons à «&nbsp;Bonjour, monde !&nbsp;» la valeur de la propri�
 
 Nous allons explorer les fonctionnalités de base de JavaScript pour que vous puissiez mieux comprendre comment il fonctionne. Ces fonctionnalités sont communes à la plupart des langages de programmation, si vous comprenez ces éléments en JavaScript, vous êtes en bonne voie de pouvoir programmer à peu près n'importe quoi !
 
-> **Attention :** Tout au long de cet article, vous pouvez saisir les lignes de code dans votre console JavaScript pour voir ce qui se passe. Pour plus de détails sur les consoles JavaScript, vous pouvez lire [Découvrir les outils de développement présents dans le navigateur](/fr/Apprendre/D%C3%A9couvrir_outils_d%C3%A9veloppement_navigateurs).
+> **Attention :** Tout au long de cet article, vous pouvez saisir les lignes de code dans votre console JavaScript pour voir ce qui se passe. Pour plus de détails sur les consoles JavaScript, vous pouvez lire [Découvrir les outils de développement présents dans le navigateur](/fr/Apprendre/Découvrir_outils_développement_navigateurs).
 
 ### Variables
 

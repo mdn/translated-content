@@ -11,9 +11,9 @@ Lancé lorsqu'un signet ou un dossier est supprimé. Lorsqu'un dossier est suppr
 ## Syntaxe
 
 ```js
-browser.bookmarks.onRemoved.addListener(listener)
-browser.bookmarks.onRemoved.removeListener(listener)
-browser.bookmarks.onRemoved.hasListener(listener)
+browser.bookmarks.onRemoved.addListener(listener);
+browser.bookmarks.onRemoved.removeListener(listener);
+browser.bookmarks.onRemoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

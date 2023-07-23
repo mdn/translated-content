@@ -1,19 +1,6 @@
 ---
 title: MediaSource
 slug: Web/API/MediaSource
-tags:
-  - API
-  - Audio
-  - Experimental
-  - Extensions
-  - Interface
-  - MSE
-  - Media
-  - MediaSource
-  - MediaSource Extensions
-  - Reference
-  - TopicStub
-  - Video
 translation_of: Web/API/MediaSource
 ---
 

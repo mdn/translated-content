@@ -1,15 +1,6 @@
 ---
 title: "CSP: report-to"
 slug: Web/HTTP/Headers/Content-Security-Policy/report-to
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - HTTP
-  - Reporting
-  - Security
-  - Sécurité
-  - report-to
 translation_of: Web/HTTP/Headers/Content-Security-Policy/report-to
 ---
 

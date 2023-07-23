@@ -1,12 +1,7 @@
 ---
 title: 'TypeError: "x" is read-only'
 slug: Web/JavaScript/Reference/Errors/Read-only
-tags:
-  - Erreurs
-  - JavaScript
-  - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Read-only
-original_slug: Web/JavaScript/Reference/Erreurs/Read-only
 ---
 
 {{jsSidebar("Errors")}}

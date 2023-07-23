@@ -1,15 +1,7 @@
 ---
 title: Generator.prototype.return()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/return
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
-original_slug: Web/JavaScript/Reference/Objets_globaux/Generator/return
 ---
 
 {{JSRef}}

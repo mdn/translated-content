@@ -1,14 +1,7 @@
 ---
 title: translate
 slug: Web/HTML/Global_attributes/translate
-tags:
-  - Attribut
-  - Attribut universel
-  - Experimental
-  - HTML
-  - Reference
 translation_of: Web/HTML/Global_attributes/translate
-original_slug: Web/HTML/Attributs_universels/translate
 ---
 
 {{HTMLSidebar("Global_attributes")}}

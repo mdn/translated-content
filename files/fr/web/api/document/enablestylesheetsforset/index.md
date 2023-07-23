@@ -1,13 +1,6 @@
 ---
 title: Document.enableStyleSheetsForSet()
 slug: Web/API/Document/enableStyleSheetsForSet
-tags:
-  - API
-  - Activation
-  - CSS
-  - DOM
-  - Feuilles de styles
-  - Méthode
 translation_of: Web/API/Document/enableStyleSheetsForSet
 ---
 

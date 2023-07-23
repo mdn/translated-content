@@ -2,7 +2,6 @@
 title: autofocus
 slug: Web/HTML/Global_attributes/autofocus
 translation_of: Web/HTML/Global_attributes/autofocus
-browser-compat: html.global_attributes.autofocus
 ---
 
 {{HTMLSidebar("Global_attributes")}}

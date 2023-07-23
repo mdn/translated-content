@@ -1,10 +1,6 @@
 ---
 title: ErrorEvent
 slug: Web/API/ErrorEvent
-tags:
-  - API
-  - Evènement
-  - Worker API
 translation_of: Web/API/ErrorEvent
 ---
 

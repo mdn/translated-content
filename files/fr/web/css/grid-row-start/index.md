@@ -1,10 +1,6 @@
 ---
 title: grid-row-start
 slug: Web/CSS/grid-row-start
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/grid-row-start
 ---
 

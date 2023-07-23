@@ -303,7 +303,7 @@
 /es/docs/DOM/style	/es/docs/Web/API/HTMLStyleElement
 /es/docs/DOM/table	/es/docs/Web/API/HTMLTableElement
 /es/docs/DOM/window	/es/docs/Web/API/Window
-/es/docs/DOM/window.applicationCache	/es/docs/Web/API/Window/applicationCache
+/es/docs/DOM/window.applicationCache	/es/docs/orphaned/Web/API/Window/applicationCache
 /es/docs/DOM/window.fullScreen	/es/docs/Web/API/Window/fullScreen
 /es/docs/DOM/window.getSelection	/es/docs/Web/API/Window/getSelection
 /es/docs/DOM/window.navigator.geolocation	/es/docs/Web/API/Navigator/geolocation
@@ -370,7 +370,7 @@
 /es/docs/DOM:style	/es/docs/Web/API/HTMLStyleElement
 /es/docs/DOM:table	/es/docs/Web/API/HTMLTableElement
 /es/docs/DOM:window	/es/docs/Web/API/Window
-/es/docs/DOM:window.applicationCache	/es/docs/Web/API/Window/applicationCache
+/es/docs/DOM:window.applicationCache	/es/docs/orphaned/Web/API/Window/applicationCache
 /es/docs/DOM:window.fullScreen	/es/docs/Web/API/Window/fullScreen
 /es/docs/DOM:window.getSelection	/es/docs/Web/API/Window/getSelection
 /es/docs/DOM:window.navigator.registerProtocolHandler	/es/docs/Web/API/Navigator/registerProtocolHandler
@@ -1721,6 +1721,7 @@
 /es/docs/Web/API/Window.navigator	/es/docs/Web/API/Window/navigator
 /es/docs/Web/API/Window.onbeforeunload	/es/docs/conflicting/Web/API/Window/beforeunload_event
 /es/docs/Web/API/Window.setTimeout	/es/docs/Web/API/setTimeout
+/es/docs/Web/API/Window/applicationCache	/es/docs/orphaned/Web/API/Window/applicationCache
 /es/docs/Web/API/Window/crypto	/es/docs/Web/API/crypto_property
 /es/docs/Web/API/Window/dialogArguments	/es/docs/orphaned/Web/API/Window/dialogArguments
 /es/docs/Web/API/WindowBase64.atob	/es/docs/Web/API/atob
@@ -1791,6 +1792,7 @@
 /es/docs/Web/CSS/-webkit-mask-position	/es/docs/Web/CSS/mask-position
 /es/docs/Web/CSS/-webkit-mask-repeat	/es/docs/Web/CSS/mask-repeat
 /es/docs/Web/CSS/-webkit-print-color-adjust	/es/docs/Web/CSS/print-color-adjust
+/es/docs/Web/CSS/:-moz-focusring	/es/docs/conflicting/Web/CSS/:focus-visible
 /es/docs/Web/CSS/:-moz-list-bullet	/es/docs/Web/CSS/::-moz-list-bullet
 /es/docs/Web/CSS/:-moz-list-number	/es/docs/Web/CSS/::-moz-list-number
 /es/docs/Web/CSS/:-moz-locale-dir(ltr)	/es/docs/Web/CSS/:-moz-locale-dir_ltr

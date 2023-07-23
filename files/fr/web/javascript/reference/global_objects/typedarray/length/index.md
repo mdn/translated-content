@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
-tags:
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - TypedArray
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/length
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/length
 ---
 
 {{JSRef}}

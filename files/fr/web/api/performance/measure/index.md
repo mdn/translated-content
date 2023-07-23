@@ -1,13 +1,6 @@
 ---
 title: performance.measure()
 slug: Web/API/Performance/measure
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - Performance web
-  - Web Workers
 translation_of: Web/API/Performance/measure
 ---
 

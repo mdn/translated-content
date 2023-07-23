@@ -1,10 +1,6 @@
 ---
 title: <feMergeNode>
 slug: Web/SVG/Element/feMergeNode
-tags:
-  - Element
-  - SVG
-  - SVG Filter
 translation_of: Web/SVG/Element/feMergeNode
 ---
 

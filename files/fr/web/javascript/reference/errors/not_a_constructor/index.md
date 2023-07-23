@@ -1,12 +1,7 @@
 ---
 title: 'TypeError: "x" is not a constructor'
 slug: Web/JavaScript/Reference/Errors/Not_a_constructor
-tags:
-  - Erreurs
-  - JavaScript
-  - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Not_a_constructor
-original_slug: Web/JavaScript/Reference/Erreurs/Not_a_constructor
 ---
 
 {{jsSidebar("Errors")}}

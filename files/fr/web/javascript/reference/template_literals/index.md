@@ -1,14 +1,7 @@
 ---
 title: Littéraux de gabarits
 slug: Web/JavaScript/Reference/Template_literals
-tags:
-  - Chaîne de caractères
-  - ECMAScript 2015
-  - Guide
-  - JavaScript
-  - Littéraux de gabarits
 translation_of: Web/JavaScript/Reference/Template_literals
-original_slug: Web/JavaScript/Reference/Littéraux_gabarits
 ---
 
 {{JsSidebar("More")}}
@@ -211,7 +204,7 @@ latex`\unicode`
 
 #### Révision ES2018 pour les séquences d'échappement illégales
 
-Les gabarits étiquetés doivent permettre l'intégration d'autres langages (par exemple, des [DSL](https://fr.wikipedia.org/wiki/Langage_d%C3%A9di%C3%A9) ou du [LaTeX](https://fr.wikipedia.org/wiki/LaTeX)), dans lesquels d'autres séquences d'échappement sont fréquentes. La proposition [Template Literal Revision](https://tc39.github.io/proposal-template-literal-revision/) pour ECMAScript (étape 4, à intégrer dans le standard ECMAScript 2018) supprime la restriction syntaxique des séquences d'échappement dans les gabarits étiquetés.
+Les gabarits étiquetés doivent permettre l'intégration d'autres langages (par exemple, des [DSL](https://fr.wikipedia.org/wiki/Langage_dédié) ou du [LaTeX](https://fr.wikipedia.org/wiki/LaTeX)), dans lesquels d'autres séquences d'échappement sont fréquentes. La proposition [Template Literal Revision](https://tc39.github.io/proposal-template-literal-revision/) pour ECMAScript (étape 4, à intégrer dans le standard ECMAScript 2018) supprime la restriction syntaxique des séquences d'échappement dans les gabarits étiquetés.
 
 Toutefois, les séquences d'échappement illégales doivent toujours être représentées dans la version "bidouillée". Elles seront affichées comme un élément {{jsxref("undefined")}} dans le tableau "bidouillé" :
 

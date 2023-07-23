@@ -1,10 +1,6 @@
 ---
 title: ':default'
 slug: Web/CSS/:default
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:default
 ---
 

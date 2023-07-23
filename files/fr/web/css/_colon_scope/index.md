@@ -1,11 +1,6 @@
 ---
 title: ':scope'
 slug: Web/CSS/:scope
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:scope
 ---
 

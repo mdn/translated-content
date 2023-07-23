@@ -103,7 +103,7 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 - `form`
   - : El elemento form, si es que hay alguno, al que el objeto está asociado (su _form propietario_). El valor de este atributo debe ser el ID de un elemento {{HTMLElement("form")}} del mismo documento.
 - `height`
-  - : La altura del recurso mostrado, en [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Valores absolutos unicamente. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : La altura del recurso mostrado, en [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Valores absolutos unicamente. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 - `name`
   - : El nombre de un contexto de navegación válido (HTML5), o el nombre del control (HTML4).
 - `standby` only {{deprecated_inline}}
@@ -117,7 +117,7 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 - `usemap`
   - : Una refercia hash-name a un elemento {{HTMLElement("map")}}; es decir un '#' seguido del valor de un [`name`](/es/docs/Web/HTML/Element/map#name) de un elemento map.
 - `width`
-  - : El ancho del recurso mostrado, en [CSS pixels](https://drafts.csswg.org/css-values/#px). -- (Valores absolutos unicamente. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
+  - : El ancho del recurso mostrado, en [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Valores absolutos unicamente. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 
 ## Ejemplos
 

@@ -1,12 +1,6 @@
 ---
 title: element.childNodes
 slug: Web/API/Node/childNodes
-tags:
-  - API
-  - DOM
-  - Enfants
-  - Noeuds
-  - Propriétés
 translation_of: Web/API/Node/childNodes
 ---
 

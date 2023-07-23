@@ -96,28 +96,21 @@ Para empezar, escribiremos nuestro conjunto de reglas vacío:
 
 ```css
 a {
-
 }
 
-
 a:link {
-
 }
 
 a:visited {
-
 }
 
 a:focus {
-
 }
 
 a:hover {
-
 }
 
 a:active {
-
 }
 ```
 
@@ -148,31 +141,32 @@ a:link {
 }
 
 a:visited {
-  color: #437A16;
+  color: #437a16;
 }
 
 a:focus {
   border-bottom: 1px solid;
-  background: #BAE498;
+  background: #bae498;
 }
 
 a:hover {
   border-bottom: 1px solid;
-  background: #CDFEAA;
+  background: #cdfeaa;
 }
 
 a:active {
   background: #265301;
-  color: #CDFEAA;
+  color: #cdfeaa;
 }
 ```
 
 También proporcionaremos algún ejemplo de HTML al que aplicar CSS:
 
 ```html
-<p>Dispones de varios navegadores, como <a href="#">Mozilla
-Firefox</a>, <a href="#">Google Chrome</a> y
-<a href="#">Microsoft Edge</a>.</p>
+<p>
+  Dispones de varios navegadores, como <a href="#">Mozilla Firefox</a>,
+  <a href="#">Google Chrome</a> y <a href="#">Microsoft Edge</a>.
+</p>
 ```
 
 Poner los dos juntos nos da este resultado:
@@ -198,14 +192,25 @@ En esta sesión de aprendizaje activo, queremos que tomes nuestro conjunto de re
 Si te equivocas, puedes volver a empezar pulsando el botón _Reinicio_. Si te quedas encallado, pulsa el botón _Mostrar la solución_ para recuperar el ejemplo anterior.
 
 ```html hidden
-<div class="body-wrapper" style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
+<div
+  class="body-wrapper"
+  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
   <h2>Entrada de HTML</h2>
-  <textarea id="code" class="html-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"><p> Hay varios navegadores disponibles, tales como <a href="#">Mozilla
+  <textarea
+    id="code"
+    class="html-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+<p> Hay varios navegadores disponibles, tales como <a href="#">Mozilla
  Firefox</a>, <a href="#">Google Chrome</a> y
-<a href="#">Microsoft Edge</a>.</p></textarea>
+<a href="#">Microsoft Edge</a>.</p></textarea
+  >
 
-<h2>Entrada CSS</h2>
-<textarea id="code" class="css-input" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">a {
+  <h2>Entrada CSS</h2>
+  <textarea
+    id="code"
+    class="css-input"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+a {
 
 }
 
@@ -227,14 +232,25 @@ a:hover {
 
 a:active {
 
-}</textarea>
+}</textarea
+  >
 
-<h2>Salida</h2>
-<div class="output" style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
-<div class="controls">
-<input id="reset" type="button" value="Reinicio" style="margin: 10px 10px 0 0;">
-<input id="solution" type="button" value="Mostrar la solución" style="margin: 10px 0 0 10px;">
-</div>
+  <h2>Salida</h2>
+  <div
+    class="output"
+    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
+  <div class="controls">
+    <input
+      id="reset"
+      type="button"
+      value="Reinicio"
+      style="margin: 10px 10px 0 0;" />
+    <input
+      id="solution"
+      type="button"
+      value="Mostrar la solución"
+      style="margin: 10px 0 0 10px;" />
+  </div>
 </div>
 ```
 
@@ -247,25 +263,26 @@ var cssCode = cssInput.value;
 var output = document.querySelector(".output");
 var solution = document.getElementById("solution");
 
-var styleElem = document.createElement('style');
-var headElem = document.querySelector('head');
+var styleElem = document.createElement("style");
+var headElem = document.querySelector("head");
 headElem.appendChild(styleElem);
 
 function drawOutput() {
-output.innerHTML = htmlInput.value;
-styleElem.textContent = cssInput.value;
+  output.innerHTML = htmlInput.value;
+  styleElem.textContent = cssInput.value;
 }
 
-reset.addEventListener("click", function() {
-htmlInput.value = htmlCode;
-cssInput.value = cssCode;
-drawOutput();
+reset.addEventListener("click", function () {
+  htmlInput.value = htmlCode;
+  cssInput.value = cssCode;
+  drawOutput();
 });
 
-solution.addEventListener("click", function() {
-htmlInput.value = htmlCode;
-cssInput.value = 'p {\n font-size: 1.2rem;\n font-family: sans-serif;\n line-height: 1.4;\n}\n\na {\n outline: none;\n text-decoration: none;\n padding: 2px 1px 0;\n}\n\na:link {\n color: #265301;\n}\n\na:visited {\n color: #437A16;\n}\n\na:focus {\n border-bottom: 1px solid;\n background: #BAE498;\n}\n\na:hover {\n border-bottom: 1px solid;\n background: #CDFEAA;\n}\n\na:active {\n background: #265301;\n color: #CDFEAA;\n}';
-drawOutput();
+solution.addEventListener("click", function () {
+  htmlInput.value = htmlCode;
+  cssInput.value =
+    "p {\n font-size: 1.2rem;\n font-family: sans-serif;\n line-height: 1.4;\n}\n\na {\n outline: none;\n text-decoration: none;\n padding: 2px 1px 0;\n}\n\na:link {\n color: #265301;\n}\n\na:visited {\n color: #437A16;\n}\n\na:focus {\n border-bottom: 1px solid;\n background: #BAE498;\n}\n\na:hover {\n border-bottom: 1px solid;\n background: #CDFEAA;\n}\n\na:active {\n background: #265301;\n color: #CDFEAA;\n}";
+  drawOutput();
 });
 
 htmlInput.addEventListener("input", drawOutput);
@@ -282,9 +299,12 @@ Una práctica común es incluir iconos en los enlaces para proporcionar más de 
 Echemos un vistazo a algunos elementos HTML y CSS que nos van a proporcionar el efecto que queremos. En primer lugar, algunos elementos HTML sencillos para dar estilo:
 
 ```html
-<p>Para obtener más información sobre el tiempo, visite nuestra <a href="http://#">página del tiempo</a>,
-mire la <a href="http://#">Wikipedia</a>, o cheque
-<a href="http://#">Extreme Science</a>.</p>
+<p>
+  Para obtener más información sobre el tiempo, visite nuestra
+  <a href="http://#">página del tiempo</a>, mire la
+  <a href="http://#">Wikipedia</a>, o cheque
+  <a href="http://#">Extreme Science</a>.
+</p>
 ```
 
 A continuación, el CSS:
@@ -314,7 +334,8 @@ a:visited {
   color: purple;
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
   border-bottom: 1px solid;
 }
 
@@ -323,7 +344,7 @@ a:active {
 }
 
 a[href*="http"] {
-  background: url('external-link-52.png') no-repeat 100% 0;
+  background: url("external-link-52.png") no-repeat 100% 0;
   background-size: 16px 16px;
   padding-right: 19px;
 }
@@ -353,14 +374,19 @@ En primer lugar, un poco de HTML:
 
 ```html
 <ul>
-  <li><a href="#">Inicio</a></li> <li><a href="#">Pizza</a></li> <li><a href = "#">Música</a> </li> <li><a href="#">Wombats</a></li> <li><a href="#">Finlandia</a></li>
+  <li><a href="#">Inicio</a></li>
+  <li><a href="#">Pizza</a></li>
+  <li><a href="#">Música</a></li>
+  <li><a href="#">Wombats</a></li>
+  <li><a href="#">Finlandia</a></li>
 </ul>
 ```
 
 Y ahora nuestro CSS:
 
 ```css
-body,html {
+body,
+html {
   margin: 0;
   font-family: sans-serif;
 }
@@ -389,7 +415,9 @@ li:last-child a {
   margin-right: 0;
 }
 
-a:link, a:visited, a:focus {
+a:link,
+a:visited,
+a:focus {
   background: yellow;
 }
 

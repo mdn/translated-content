@@ -2,8 +2,6 @@
 title: Intl.PluralRules
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules
-browser-compat: javascript.builtins.Intl.PluralRules
 ---
 
 {{JSRef}}

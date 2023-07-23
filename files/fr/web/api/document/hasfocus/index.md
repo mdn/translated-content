@@ -1,12 +1,6 @@
 ---
 title: document.hasFocus
 slug: Web/API/Document/hasFocus
-tags:
-  - API
-  - DOM
-  - Focus
-  - Méthodes
-  - Reference
 translation_of: Web/API/Document/hasFocus
 ---
 

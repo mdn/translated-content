@@ -88,7 +88,7 @@ tags:
 ```html
 <form>
   <label for="choose">Would you prefer a banana or cherry?</label>
-  <input id="choose" name="i_like">
+  <input id="choose" name="i_like" />
   <button>Submit</button>
 </form>
 ```
@@ -116,7 +116,7 @@ input:valid {
 ```html
 <form>
   <label for="choose">Would you prefer a banana or cherry? (required)</label>
-  <input id="choose" name="i_like" required>
+  <input id="choose" name="i_like" required />
   <button>Submit</button>
 </form>
 ```
@@ -169,7 +169,7 @@ input:valid {
 ```html
 <form>
   <label for="choose">Would you prefer a banana or a cherry?</label>
-  <input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry">
+  <input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry" />
   <button>Submit</button>
 </form>
 ```
@@ -218,11 +218,17 @@ input:valid {
 <form>
   <div>
     <label for="choose">Would you prefer a banana or a cherry?</label>
-    <input type="text" id="choose" name="i_like" required minlength="6" maxlength="6">
+    <input
+      type="text"
+      id="choose"
+      name="i_like"
+      required
+      minlength="6"
+      maxlength="6" />
   </div>
   <div>
     <label for="number">How many would you like?</label>
-    <input type="number" id="number" name="amount" value="1" min="1" max="10">
+    <input type="number" id="number" name="amount" value="1" min="1" max="10" />
   </div>
   <div>
     <button>Submit</button>
@@ -325,7 +331,7 @@ input[type="email"],
 input[type="number"],
 textarea,
 fieldset {
-  width : 100%;
+  width: 100%;
   border: 1px solid #333;
   box-sizing: border-box;
 }
@@ -400,8 +406,10 @@ input:focus:invalid {
 
 ```html
 <form>
-  <label for="mail">I would like you to provide me with an e-mail address:</label>
-  <input type="email" id="mail" name="mail">
+  <label for="mail"
+    >I would like you to provide me with an e-mail address:</label
+  >
+  <input type="email" id="mail" name="mail" />
   <button>Submit</button>
 </form>
 ```
@@ -443,7 +451,7 @@ email.addEventListener("input", function (event) {
   <p>
     <label for="mail">
       <span>Please enter an email address:</span>
-      <input type="email" id="mail" name="mail" required minlength="8">
+      <input type="email" id="mail" name="mail" required minlength="8" />
       <span class="error" aria-live="polite"></span>
     </label>
   </p>
@@ -466,14 +474,14 @@ body {
   font: 1em sans-serif;
   width: 200px;
   padding: 0;
-  margin : 0 auto;
+  margin: 0 auto;
 }
 
 p * {
   display: block;
 }
 
-input[type=email]{
+input[type="email"] {
   -webkit-appearance: none;
   appearance: none;
 
@@ -488,9 +496,9 @@ input[type=email]{
 }
 
 /* Это стили для не валидных полей */
-input:invalid{
+input:invalid {
   border-color: #900;
-  background-color: #FDD;
+  background-color: #fdd;
 }
 
 input:focus:invalid {
@@ -499,7 +507,7 @@ input:focus:invalid {
 
 /* Это стили для кастомных сообщений об ошибке */
 .error {
-  width  : 100%;
+  width: 100%;
   padding: 0;
 
   font-size: 80%;
@@ -520,30 +528,30 @@ input:focus:invalid {
 ```js
 // Существуют разные способы получить DOM-узел; здесь мы определяем саму форму и
 // поле ввода email и элемент span, в который поместим сообщение об ошибке
-const form  = document.getElementsByTagName('form')[0];
+const form = document.getElementsByTagName("form")[0];
 
-const email = document.getElementById('mail');
-const emailError = document.querySelector('#mail + span.error');
+const email = document.getElementById("mail");
+const emailError = document.querySelector("#mail + span.error");
 
-email.addEventListener('input', function (event) {
+email.addEventListener("input", function (event) {
   // Каждый раз, когда пользователь что-то вводит,
   // мы проверяем, являются ли поля формы валидными
 
   if (email.validity.valid) {
     // Если на момент валидации какое-то сообщение об ошибке уже отображается,
     // если поле валидно, удаляем сообщение
-    emailError.textContent = ''; // Сбросить содержимое сообщения
-    emailError.className = 'error'; // Сбросить визуальное состояние сообщения
+    emailError.textContent = ""; // Сбросить содержимое сообщения
+    emailError.className = "error"; // Сбросить визуальное состояние сообщения
   } else {
     // Если поле не валидно, показываем правильную ошибку
     showError();
   }
 });
 
-form.addEventListener('submit', function (event) {
+form.addEventListener("submit", function (event) {
   // Если поле email валдно, позволяем форме отправляться
 
-  if(!email.validity.valid) {
+  if (!email.validity.valid) {
     // Если поле email не валидно, отображаем соответствующее сообщение об ошибке
     showError();
     // Затем предотвращаем стандартное событие отправки формы
@@ -552,22 +560,22 @@ form.addEventListener('submit', function (event) {
 });
 
 function showError() {
-  if(email.validity.valueMissing) {
+  if (email.validity.valueMissing) {
     // Если поле пустое,
     // отображаем следующее сообщение об ошибке
-    emailError.textContent = 'You need to enter an e-mail address.';
-  } else if(email.validity.typeMismatch) {
+    emailError.textContent = "You need to enter an e-mail address.";
+  } else if (email.validity.typeMismatch) {
     // Если поле содержит не email-адрес,
     // отображаем следующее сообщение об ошибке
-    emailError.textContent = 'Entered value needs to be an e-mail address.';
-  } else if(email.validity.tooShort) {
+    emailError.textContent = "Entered value needs to be an e-mail address.";
+  } else if (email.validity.tooShort) {
     // Если содержимое слишком короткое,
     // отображаем следующее сообщение об ошибке
-    emailError.textContent = `Email should be at least ${ email.minLength } characters; you entered ${ email.value.length }.`;
+    emailError.textContent = `Email should be at least ${email.minLength} characters; you entered ${email.value.length}.`;
   }
 
   // Задаём соответствующую стилизацию
-  emailError.className = 'error active';
+  emailError.className = "error active";
 }
 ```
 
@@ -616,9 +624,9 @@ HTML почти тот такой же; мы только удалили фун�
 <form>
   <p>
     <label for="mail">
-        <span>Please enter an email address:</span>
-        <input type="text" id="mail" name="mail">
-        <span class="error" aria-live="polite"></span>
+      <span>Please enter an email address:</span>
+      <input type="text" id="mail" name="mail" />
+      <span class="error" aria-live="polite"></span>
     </label>
   </p>
   <!-- Для некоторых устаревших браузеров элементу `button` нужно добавлять
@@ -634,7 +642,7 @@ body {
   font: 1em sans-serif;
   width: 200px;
   padding: 0;
-  margin : 0 auto;
+  margin: 0 auto;
 }
 
 form {
@@ -659,9 +667,9 @@ input.mail {
 }
 
 /* Стилизация не валидных полей */
-input.invalid{
+input.invalid {
   border-color: #900;
-  background-color: #FDD;
+  background-color: #fdd;
 }
 
 input:focus.invalid {
@@ -670,7 +678,7 @@ input:focus.invalid {
 
 /* Стилизация сообщений об ошибках */
 .error {
-  width  : 100%;
+  width: 100%;
   padding: 0;
 
   font-size: 80%;
@@ -689,8 +697,8 @@ input:focus.invalid {
 
 ```js
 // Устаревшие браузеры поддерживают несколько способов получения DOM-узла
-const form  = document.getElementsByTagName('form')[0];
-const email = document.getElementById('mail');
+const form = document.getElementsByTagName("form")[0];
+const email = document.getElementById("mail");
 
 // Ниже приведён способ получения узла следующего родственного DOM-элемента
 // Он опасен, потому что можно создать бесконечный цикл.
@@ -699,22 +707,23 @@ let error = email;
 while ((error = error.nextSibling).nodeType != 1);
 
 // Согласно спецификации HTML5
-const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const emailRegExp =
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 // Многие устаревшие браузеры не поддерживают метод `addEventListener`
 // Есть простой способ заменить его; и далеко не единственный
 function addEvent(element, event, callback) {
-  let previousEventCallBack = element["on"+event];
-  element["on"+event] = function (e) {
+  let previousEventCallBack = element["on" + event];
+  element["on" + event] = function (e) {
     let output = callback(e);
 
     // Колбэк, который возвращает `false`, останавливает цепочку колбэков
     // и прерывает выполнение колбэка события
     if (output === false) return false;
 
-    if (typeof previousEventCallBack === 'function') {
+    if (typeof previousEventCallBack === "function") {
       output = previousEventCallBack(e);
-      if(output === false) return false;
+      if (output === false) return false;
     }
   };
 }

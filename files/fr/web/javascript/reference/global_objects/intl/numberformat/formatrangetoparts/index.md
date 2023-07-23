@@ -2,7 +2,6 @@
 title: Intl.NumberFormat.prototype.formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRangeToParts
-browser-compat: javascript.builtins.Intl.NumberFormat.formatRangeToParts
 ---
 
 {{JSRef}}

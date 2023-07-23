@@ -1,10 +1,6 @@
 ---
 title: letter-spacing
 slug: Web/CSS/letter-spacing
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/letter-spacing
 ---
 

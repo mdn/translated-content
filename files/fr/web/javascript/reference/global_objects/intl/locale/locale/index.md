@@ -1,7 +1,6 @@
 ---
 title: Constructeur Intl.Locale()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
-browser-compat: javascript.builtins.Intl.Locale.Locale
 ---
 
 {{JSRef}}

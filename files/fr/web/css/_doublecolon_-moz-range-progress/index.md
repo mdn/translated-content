@@ -2,7 +2,6 @@
 title: '::-moz-range-progress'
 slug: Web/CSS/::-moz-range-progress
 translation_of: Web/CSS/::-moz-range-progress
-browser-compat: css.selectors.-moz-range-progress
 ---
 
 {{CSSRef}}{{Non-standard_header}}

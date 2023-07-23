@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.responseEnd
 slug: Web/API/PerformanceResourceTiming/responseEnd
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - responseEnd
 translation_of: Web/API/PerformanceResourceTiming/responseEnd
 ---
 

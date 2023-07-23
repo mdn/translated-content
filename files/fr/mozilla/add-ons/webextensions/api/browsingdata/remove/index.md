@@ -18,9 +18,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.browsingData.remove(
-  removalOptions,            // RemovalOptions object
-  dataTypes                  // DataTypeSet object
-)
+  removalOptions, // RemovalOptions object
+  dataTypes, // DataTypeSet object
+);
 ```
 
 ### Paramètres
@@ -55,12 +55,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.remove(
-  {since: oneWeekAgo},
-  {downloads: true, history: true}).
-then(onRemoved, onError);
+browser.browsingData
+  .remove({ since: oneWeekAgo }, { downloads: true, history: true })
+  .then(onRemoved, onError);
 ```
 
 Supprimer tout l'historique de téléchargement et de navigation :
@@ -74,9 +73,9 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.remove({},
-  {downloads: true, history: true}).
-then(onRemoved, onError);
+browser.browsingData
+  .remove({}, { downloads: true, history: true })
+  .then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}

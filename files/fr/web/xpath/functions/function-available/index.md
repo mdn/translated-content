@@ -1,10 +1,7 @@
 ---
 title: function-available
 slug: Web/XPath/Functions/function-available
-tags:
-  - Référence_XSLT
 translation_of: Web/XPath/Functions/function-available
-original_slug: Web/XPath/Fonctions/function-available
 ---
 
 {{ XsltRef() }}

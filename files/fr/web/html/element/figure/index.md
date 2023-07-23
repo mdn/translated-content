@@ -1,16 +1,7 @@
 ---
 title: '<figure> : l''élément de figure avec légende facultative'
 slug: Web/HTML/Element/figure
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Information
-  - Presentation
-  - Reference
-  - figure
 translation_of: Web/HTML/Element/figure
-browser-compat: html.elements.figure
 ---
 
 {{HTMLSidebar}}

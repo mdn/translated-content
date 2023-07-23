@@ -2,14 +2,6 @@
 title: "Testez vos compétences : l'accessibilité en CSS et JavaScript"
 slug: >-
   Learn/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility
-tags:
-  - Accessibility
-  - Assessment
-  - Beginner
-  - HTML
-  - JavaScript
-  - Learn
-  - test your skills
 ---
 
 {{LearnSidebar}}

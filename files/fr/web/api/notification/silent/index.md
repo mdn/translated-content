@@ -1,16 +1,6 @@
 ---
 title: Notification.silent
 slug: Web/API/Notification/silent
-tags:
-  - API
-  - API Notifications
-  - Notifications
-  - Propriété
-  - Reference
-  - Vibration
-  - Vibreur
-  - silencieuse
-  - silent
 translation_of: Web/API/Notification/silent
 ---
 

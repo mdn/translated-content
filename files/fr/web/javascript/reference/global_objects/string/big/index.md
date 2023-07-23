@@ -1,15 +1,7 @@
 ---
 title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
-tags:
-  - Dépréciée
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/big
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/big
 ---
 
 {{JSRef}}{{deprecated_header}}

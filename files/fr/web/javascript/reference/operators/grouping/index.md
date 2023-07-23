@@ -1,12 +1,7 @@
 ---
 title: Opérateur de groupement
 slug: Web/JavaScript/Reference/Operators/Grouping
-tags:
-  - JavaScript
-  - Operator
-  - Primary Expressions
 translation_of: Web/JavaScript/Reference/Operators/Grouping
-original_slug: Web/JavaScript/Reference/Opérateurs/Groupement
 ---
 
 {{jsSidebar("Operators")}}

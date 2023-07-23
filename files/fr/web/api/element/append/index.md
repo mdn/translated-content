@@ -2,7 +2,6 @@
 title: Element.append()
 slug: Web/API/Element/append
 translation_of: Web/API/Element/append
-browser-compat: api.Element.append
 ---
 
 {{APIRef("DOM")}}

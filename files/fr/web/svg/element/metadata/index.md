@@ -1,10 +1,6 @@
 ---
 title: <metadata>
 slug: Web/SVG/Element/metadata
-tags:
-  - Element
-  - SVG
-  - SVG Description
 translation_of: Web/SVG/Element/metadata
 ---
 

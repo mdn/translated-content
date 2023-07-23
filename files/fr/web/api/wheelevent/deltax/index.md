@@ -1,14 +1,6 @@
 ---
 title: WheelEvent.deltaX
 slug: Web/API/WheelEvent/deltaX
-tags:
-  - API
-  - DOM
-  - Lecture seulement
-  - Propriété
-  - Reference
-  - Référence(2)
-  - WheelEvent
 translation_of: Web/API/WheelEvent/deltaX
 ---
 

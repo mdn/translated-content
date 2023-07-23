@@ -2,7 +2,6 @@
 title: <object>
 slug: Web/HTML/Element/object
 translation_of: Web/HTML/Element/object
-browser-compat: html.elements.object
 ---
 
 {{HTMLSidebar}}

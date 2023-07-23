@@ -1,10 +1,6 @@
 ---
 title: symbols
 slug: Web/CSS/@counter-style/symbols
-tags:
-  - CSS
-  - Descripteur
-  - Reference
 translation_of: Web/CSS/@counter-style/symbols
 ---
 

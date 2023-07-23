@@ -1,11 +1,6 @@
 ---
 title: Storage.getItem()
 slug: Web/API/Storage/getItem
-tags:
-  - API
-  - Méthode
-  - Stockage
-  - Stockage Web
 translation_of: Web/API/Storage/getItem
 ---
 

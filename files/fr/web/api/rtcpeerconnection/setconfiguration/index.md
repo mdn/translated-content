@@ -1,12 +1,6 @@
 ---
 title: RTCPeerConnection.setConfiguration()
 slug: Web/API/RTCPeerConnection/setConfiguration
-tags:
-  - Experimental
-  - Méthode
-  - Reference
-  - WebRTC
-  - setConfiguration
 translation_of: Web/API/RTCPeerConnection/setConfiguration
 ---
 

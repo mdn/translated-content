@@ -1,15 +1,6 @@
 ---
 title: ServiceWorkerRegistration.showNotification()
 slug: Web/API/ServiceWorkerRegistration/showNotification
-tags:
-  - API
-  - Experimental
-  - Méthode
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerRegistration
-  - showNotification
 translation_of: Web/API/ServiceWorkerRegistration/showNotification
 ---
 

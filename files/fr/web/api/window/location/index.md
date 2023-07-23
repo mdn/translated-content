@@ -2,7 +2,6 @@
 title: Window.location
 slug: Web/API/Window/location
 translation_of: Web/API/Window/location
-browser-compat: api.Window.location
 ---
 
 {{APIRef}}

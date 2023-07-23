@@ -1,14 +1,7 @@
 ---
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Promise
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/resolve
 ---
 
 {{JSRef}}

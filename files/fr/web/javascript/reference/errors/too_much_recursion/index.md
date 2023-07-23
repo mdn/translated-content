@@ -1,13 +1,7 @@
 ---
 title: 'InternalError: too much recursion'
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
-tags:
-  - Erreurs
-  - InternalError
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
-original_slug: Web/JavaScript/Reference/Erreurs/Too_much_recursion
 ---
 
 {{jsSidebar("Errors")}}

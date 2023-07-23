@@ -1,12 +1,7 @@
 ---
 title: 'RangeError: invalid date'
 slug: Web/JavaScript/Reference/Errors/Invalid_date
-tags:
-  - Erreurs
-  - JavaScript
-  - RangeError
 translation_of: Web/JavaScript/Reference/Errors/Invalid_date
-original_slug: Web/JavaScript/Reference/Erreurs/Invalid_date
 ---
 
 {{jsSidebar("Errors")}}

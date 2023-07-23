@@ -1,13 +1,7 @@
 ---
 title: GlobalEventHandlers.onauxclick
 slug: Web/API/Element/auxclick_event
-tags:
-  - API
-  - Expérimentale
-  - Propriété
-  - Reference
 translation_of: Web/API/GlobalEventHandlers/onauxclick
-original_slug: Web/API/GlobalEventHandlers/onauxclick
 ---
 
 {{ApiRef("HTML DOM")}} {{SeeCompatTable}}

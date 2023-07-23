@@ -1,14 +1,7 @@
 ---
 title: Intl.Locale.prototype.baseName
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/baseName
 ---
 
 {{JSRef}}

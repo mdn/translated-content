@@ -1,15 +1,7 @@
 ---
 title: Les bases des CSS
 slug: Learn/Getting_started_with_the_web/CSS_basics
-tags:
-  - Apprendre
-  - CSS
-  - Code CSS
-  - Débutant
-  - Styles
-  - Web
 translation_of: Learn/Getting_started_with_the_web/CSS_basics
-original_slug: Apprendre/Commencer_avec_le_web/Les_bases_CSS
 ---
 
 {{LearnSidebar}}
@@ -177,7 +169,7 @@ html {
 }
 ```
 
-Cette règle permet de définir la couleur utilisée en arrière-plan pour toute la page. Vous pouvez ici utiliser la valeur que vous aviez choisie [lors de la conception de votre site](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site#Couleur_du_th%C3%A8me).
+Cette règle permet de définir la couleur utilisée en arrière-plan pour toute la page. Vous pouvez ici utiliser la valeur que vous aviez choisie [lors de la conception de votre site](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site#Couleur_du_thème).
 
 ### Mettre en forme le corps de page
 

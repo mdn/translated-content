@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-progress-value'
 slug: Web/CSS/::-webkit-progress-value
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-progress-value
 ---
 

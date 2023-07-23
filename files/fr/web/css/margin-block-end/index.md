@@ -1,11 +1,6 @@
 ---
 title: margin-block-end
 slug: Web/CSS/margin-block-end
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/margin-block-end
 ---
 

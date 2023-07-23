@@ -1,11 +1,6 @@
 ---
 title: padding-inline-end
 slug: Web/CSS/padding-inline-end
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/padding-inline-end
 ---
 

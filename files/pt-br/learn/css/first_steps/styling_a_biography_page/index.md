@@ -3,6 +3,7 @@ title: Using your new knowledge
 slug: Learn/CSS/First_steps/Styling_a_biography_page
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 Com o que você aprendeu nas últimas lições, você deve perceber que pode formatar simples documentos de texto utilizando CSS, implementado seu próprio estilo neles. Esta avaliação lhe dá a oportunidade de fazer exatamente isto.
@@ -71,10 +72,10 @@ Se gostaria de ter seu trabalho avaliado, ou se ficou emperrado e gostaria de aj
 1. Coloque seu trabalho num editor de texto compartilhado online tal como o [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/).
 2. Escreva um post perguntando por avaliação e/ou ajuda em [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Seu post deve incluir:
 
-    - Um título descritivo, tal como "Avaliação desejada para primeiros passos em CSS".
-    - Detalhes do que você já tentou, e o que gostaria que ós fizéssemos, p.e. se você está emperrado e precisa de ajuda, ou se deseja uma avalição.
-    - Um link para o exemplo que você deseja ser avaliadao ou precisa de ajuda, em um editor online compartilhado (como mencionado no passo 1 acima). Esta é uma boa prática a se desenvolver — é muito difícil ajudar alguém com um problema de computação se não é possível ver o código dessa pessoa.
-    - Um link para a atual págia de tarefa ou avaliaçãopara que possamos ver a questão que você está com dúvida.
+   - Um título descritivo, tal como "Avaliação desejada para primeiros passos em CSS".
+   - Detalhes do que você já tentou, e o que gostaria que ós fizéssemos, p.e. se você está emperrado e precisa de ajuda, ou se deseja uma avalição.
+   - Um link para o exemplo que você deseja ser avaliadao ou precisa de ajuda, em um editor online compartilhado (como mencionado no passo 1 acima). Esta é uma boa prática a se desenvolver — é muito difícil ajudar alguém com um problema de computação se não é possível ver o código dessa pessoa.
+   - Um link para a atual págia de tarefa ou avaliaçãopara que possamos ver a questão que você está com dúvida.
 
 ## O que vem a seguir?
 

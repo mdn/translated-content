@@ -1,11 +1,6 @@
 ---
 title: '-webkit-mask-composite'
 slug: Web/CSS/-webkit-mask-composite
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-mask-composite
 ---
 

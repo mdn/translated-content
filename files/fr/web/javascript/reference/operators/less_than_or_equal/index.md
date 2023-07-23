@@ -1,12 +1,6 @@
 ---
 title: Inférieur ou égal (<=)
 slug: Web/JavaScript/Reference/Operators/Less_than_or_equal
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.less_than_or_equal
 ---
 
 {{jsSidebar("Operators")}}

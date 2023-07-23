@@ -1,11 +1,6 @@
 ---
 title: margin-block-start
 slug: Web/CSS/margin-block-start
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/margin-block-start
 ---
 

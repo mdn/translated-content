@@ -1,16 +1,6 @@
 ---
 title: DeviceOrientationEvent
 slug: Web/API/DeviceOrientationEvent
-tags:
-  - B2G
-  - Device Orientation
-  - Experimental
-  - Firefox OS
-  - Mobile
-  - Orientation
-  - WebAPI
-  - events
-  - évènements
 translation_of: Web/API/DeviceOrientationEvent
 ---
 

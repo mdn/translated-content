@@ -2,8 +2,6 @@
 title: FileReader.readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
 translation_of: Web/API/FileReader/readAsDataURL
-page-type: web-api-instance-method
-browser-compat: api.FileReader.readAsDataURL
 l10n:
   sourceCommit: cd997ca39d8f0ce5511bc41a9bc58310ac69cb40
 ---

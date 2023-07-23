@@ -3,8 +3,6 @@ title: Document.activeElement
 slug: Web/API/Document/activeElement
 translation_of: Web/API/DocumentOrShadowRoot/activeElement
 translation_of_original: Web/API/Document/activeElement
-original_slug: Web/API/DocumentOrShadowRoot/activeElement
-browser-compat: api.Document.activeElement
 ---
 
 {{APIRef("Shadow DOM")}}

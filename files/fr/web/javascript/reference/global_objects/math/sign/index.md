@@ -1,15 +1,7 @@
 ---
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/sign
 ---
 
 {{JSRef}}

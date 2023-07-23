@@ -1,16 +1,7 @@
 ---
 title: String.prototype.small()
 slug: Web/JavaScript/Reference/Global_Objects/String/small
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/small
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/small
 ---
 
 {{JSRef}}{{deprecated_header}}

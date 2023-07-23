@@ -1,14 +1,6 @@
 ---
 title: IDBObjectStore.getKey()
 slug: Web/API/IDBObjectStore/getKey
-tags:
-  - IBDObjectStore
-  - IndexedDB
-  - Method
-  - Méthode
-  - Reference
-  - Storage
-  - Web API
 translation_of: Web/API/IDBObjectStore/getKey
 ---
 
