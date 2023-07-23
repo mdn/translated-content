@@ -1,14 +1,6 @@
 ---
 title: overrideContext()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
-tags:
-  - API
-  - Add-ons
-  - Create
-  - Extensions
-  - Method
-  - WebExtensions
-  - contextMenus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/overrideContext
 ---
 
@@ -24,8 +16,8 @@ Pour appeler cette méthode, votre extension doit avoir la permission `menus.ove
 
 ```js
 browser.menus.overrideContext(
-  contextOptions // object
-)
+  contextOptions, // object
+);
 ```
 
 ### Paramètres

@@ -79,7 +79,7 @@ CDN - это географически распределённая сеть с
 
 ### Разделяйте ваш контент
 
-Использование таблиц для вёрстки макетов устаревший метод, который не должен больше использоваться. Вместо этого для создания макетов нужно использовать \<a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">floats\</a>, \<a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning\</a>, \<a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">flexbox\</a>, или \<a href="/en-US/docs/Learn/CSS/CSS_layout/Grids">grids\</a>.
+Использование таблиц для вёрстки макетов устаревший метод, который не должен больше использоваться. Вместо этого для создания макетов нужно использовать \<a href="/ru/docs/Learn/CSS/CSS_layout/Floats">floats\</a>, \<a href="/ru/docs/Learn/CSS/CSS_layout/Positioning">positioning\</a>, \<a href="/ru/docs/Learn/CSS/CSS_layout/Flexbox">flexbox\</a>, или \<a href="/ru/docs/Learn/CSS/CSS_layout/Grids">grids\</a>.
 
 Таблицы по-прежнему считаются допустимой разметкой, но их следует использовать для отображения табличных данных. Чтобы браузер быстрее отображал вашу страницу, вам следует избегать вложения таблиц.
 

@@ -1,12 +1,6 @@
 ---
 title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - Référence(2)
-  - contenteditable
 translation_of: Web/API/HTMLElement/contentEditable
 ---
 
@@ -39,4 +33,4 @@ element.contentEditable = "true"
 
 - [Contenu editable](/fr/docs/Web/HTML/Contenu_editable)
 - {{domxref("HTMLElement.isContentEditable")}}
-- L'attribut global [contenteditable](/fr/docs/Web/HTML/Attributs_universels/contenteditable) .
+- L'attribut global [`contenteditable`](/fr/docs/Web/HTML/Attributs_universels/contenteditable) .

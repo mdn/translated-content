@@ -1,17 +1,7 @@
 ---
 title: '<details> : l''élément de divulgation des détails'
 slug: Web/HTML/Element/details
-tags:
-  - Disclosure Box
-  - Disclosure Widget
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - details
 translation_of: Web/HTML/Element/details
-browser-compat: html.elements.details
 ---
 
 {{HTMLSidebar}}

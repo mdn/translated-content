@@ -3,6 +3,8 @@ title: 交叉轴
 slug: Glossary/Cross_Axis
 ---
 
+{{GlossarySidebar}}
+
 弹性容器 {{glossary("flexbox")}} 的交叉轴和主轴 {{glossary("main axis")}} 垂直，因此如果弹性方向是 {{cssxref("flex-direction")}} 行 `row` 或者反向行 `row-reverse` ，那么交叉轴就是从上至下地垂直走向的。
 
 ![The cross axis runs down the column](basics3.png)
@@ -26,9 +28,9 @@ slug: Glossary/Cross_Axis
 
 ### 拓展阅读
 
-- CSS 弹性容器指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS 弹性容器指南：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
-- CSS 弹性容器指南：_[Mastering wrapping of flex items](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_
+- CSS 弹性容器指南：_[Basic Concepts of Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS 弹性容器指南：_[Aligning items in a flex container](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
+- CSS 弹性容器指南：_[Mastering wrapping of flex items](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)_
 
 - [MDN Web Docs Glossary](/zh-CN/docs/Glossary)
 

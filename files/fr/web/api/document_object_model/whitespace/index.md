@@ -1,8 +1,6 @@
 ---
 title: Gestion des espaces dans le DOM
 slug: Web/API/Document_Object_Model/Whitespace
-tags:
-  - DOM
 translation_of: Web/API/Document_Object_Model/Whitespace
 ---
 

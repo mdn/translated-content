@@ -1,13 +1,6 @@
 ---
 title: Document.characterSet
 slug: Web/API/Document/characterSet
-tags:
-  - API
-  - DOM
-  - Document
-  - Property
-  - Read-only
-  - Reference
 translation_of: Web/API/Document/characterSet
 ---
 

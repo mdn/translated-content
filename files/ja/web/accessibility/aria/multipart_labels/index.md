@@ -1,5 +1,5 @@
 ---
-title: '複数の部分に分かれたラベル: 内部にフィールドがあるラベルに ARIA を使用'
+title: "複数の部分に分かれたラベル: 内部にフィールドがあるラベルに ARIA を使用"
 slug: Web/Accessibility/ARIA/Multipart_labels
 original_slug: Web/Accessibility/ARIA/forms/Multipart_labels
 ---
@@ -8,7 +8,7 @@ original_slug: Web/Accessibility/ARIA/forms/Multipart_labels
 
 ユーザーに質問をするフォームがあり、回答が質問文の中にある場合があります。有名なブラウザーの設定項目の例を挙げると、「履歴を x 日後に削除する」という設定です。「履歴を」はテキストボックスの左側にあり、また x は 21 のような数値であり、「日後に削除する」という文言はテキストボックスの後ろにあって、理解しやすい文を構成しています。
 
-画面リーダーを使用している場合、 Firefox でこの設定項目に達すると「履歴を 21 日後に削除する」と伝えられ、その後でテキストボックス内にるので、数値 21 が入っているとと知らされることに気づきます。すばらしいでしょう？単位を見つけるために行き来する必要はありません。「日」は容易に「か月」や「年」に変えることができ、また多くの通常のダイアログではこれを見つけるための方法が、画面の再調査コマンドで行き来する以外にありません。
+スクリーンリーダーを使用している場合、 Firefox でこの設定項目に達すると「履歴を 21 日後に削除する」と伝えられ、その後でテキストボックス内にるので、数値 21 が入っているとと知らされることに気づきます。すばらしいでしょう？単位を見つけるために行き来する必要はありません。「日」は容易に「か月」や「年」に変えることができ、また多くの通常のダイアログではこれを見つけるための方法が、画面の再調査コマンドで行き来する以外にありません。
 
 解決策は、ARIA の **aria-labelledby** という属性にあります。この引数は、ひとつのアクセシブルな名称になるように連結したい HTML 要素の ID で構成される文字列です。
 
@@ -25,11 +25,17 @@ body {
 ```
 
 ```html
-<input aria-labelledby="labelShutdown shutdownTime shutdownUnit" type="checkbox" />
+<input
+  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
+  type="checkbox" />
 
 <span id="labelShutdown">Shut down computer after</span>
 
-<input aria-labelledby="labelShutdown shutdownTime shutdownUnit" id="shutdownTime" type="text" value="10" />
+<input
+  aria-labelledby="labelShutdown shutdownTime shutdownUnit"
+  id="shutdownTime"
+  type="text"
+  value="10" />
 
 <span id="shutdownUnit"> minutes</span>
 ```

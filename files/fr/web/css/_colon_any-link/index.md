@@ -1,11 +1,6 @@
 ---
 title: ':any-link'
 slug: Web/CSS/:any-link
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:any-link
 ---
 

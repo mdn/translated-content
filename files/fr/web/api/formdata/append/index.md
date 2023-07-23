@@ -1,14 +1,6 @@
 ---
 title: FormData.append()
 slug: Web/API/FormData/append
-tags:
-  - API
-  - Append
-  - FormData
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequest
 translation_of: Web/API/FormData/append
 ---
 

@@ -1,16 +1,6 @@
 ---
 title: runtime.onUpdateAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onUpdateAvailable
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onUpdateAvailable
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onUpdateAvailable
 ---
 
@@ -27,9 +17,9 @@ Si l'extension n'écoute pas cet événement lorsqu'une mise à jour est disponi
 ## Syntaxe
 
 ```js
-browser.runtime.onUpdateAvailable.addListener()
-browser.runtime.onUpdateAvailable.removeListener(listener)
-browser.runtime.onUpdateAvailable.hasListener(listener)
+browser.runtime.onUpdateAvailable.addListener();
+browser.runtime.onUpdateAvailable.removeListener(listener);
+browser.runtime.onUpdateAvailable.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

@@ -1,7 +1,6 @@
 ---
 title: background
 slug: Web/CSS/background
-browser-compat: css.properties.background
 translation_of: Web/CSS/background
 ---
 

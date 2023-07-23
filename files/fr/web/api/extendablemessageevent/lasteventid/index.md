@@ -1,20 +1,12 @@
 ---
 title: ExtendableMessageEvent.lastEventId
 slug: Web/API/ExtendableMessageEvent/lastEventId
-tags:
-  - API
-  - Experimental
-  - ExtendableMessageEvent
-  - Property
-  - Reference
-  - Service Workers
-  - lastEventID
 translation_of: Web/API/ExtendableMessageEvent/lastEventId
 ---
 
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-La propriété en lecture seule **`lastEventID`** de l'interface {{domxref("ExtendableMessageEvent")}} représente, dans [les évenements envoyés par lle serveur](/fr/docs/Web/API/en-US/docs/Server-sent_events/Using_server-sent_events), le dernier ID de l'évenement source.
+La propriété en lecture seule **`lastEventID`** de l'interface {{domxref("ExtendableMessageEvent")}} représente, dans [les évenements envoyés par lle serveur](/fr/docs/Web/API/Server-sent_events/Using_server-sent_events), le dernier ID de l'évenement source.
 
 ## Syntaxe
 

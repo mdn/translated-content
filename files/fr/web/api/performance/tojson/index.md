@@ -1,12 +1,6 @@
 ---
 title: performance.toJSON()
 slug: Web/API/Performance/toJSON
-tags:
-  - API
-  - Method
-  - Méthode
-  - Performance Web
-  - Référence
 translation_of: Web/API/Performance/toJSON
 ---
 

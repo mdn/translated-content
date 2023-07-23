@@ -1,11 +1,6 @@
 ---
 title: <template>
 slug: Web/HTML/Element/template
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/template
 ---
 
@@ -149,7 +144,7 @@ table td {
           >des éléments destinés aux scripts</a
         >. L'élément {{HTMLElement("colgroup")}} est également autorisé
         s'il n'a pas l'attribut
-        {{htmlattrxref("span", "colgroup")}}.
+        <a href="/fr/docs/Web/HTML/Element/colgroup#span"><code>span</code></a>.
       </td>
     </tr>
     <tr>

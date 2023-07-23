@@ -1,14 +1,6 @@
 ---
 title: management.uninstall()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstall
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - WebExtensions
-  - management
-  - uninstall
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstall
 ---
 
@@ -24,9 +16,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var uninstalling = browser.management.uninstall(
-  id,                  // string
-  options              // object
-)
+  id, // string
+  options, // object
+);
 ```
 
 ### Paramètres

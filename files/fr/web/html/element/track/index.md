@@ -2,7 +2,6 @@
 title: '<track> : l''élément de piste texte embarquée'
 slug: Web/HTML/Element/track
 translation_of: Web/HTML/Element/track
-browser-compat: html.elements.track
 ---
 
 {{HTMLSidebar}}
@@ -82,7 +81,7 @@ L'élément HTML **`<track>`** est utilisé comme élément fils d'un élément 
 - `label`
   - : Le titre associé à la piste et qui est affiché par le navigateur lorsque celui-ci liste les pistes disponibles.
 - `src`
-  - : L'adresse du fichier pour la piste (celle du fichier `.vtt`). Cet attribut doit être une URL valide et doit nécessairement être présent dans l'élément. L'URL indiquée doit avoir la même origine à moins que l'élément parent [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video) de l'élément `<track>` possède un attribut [crossorigin](/fr/docs/Web/HTML/Attributes/crossorigin).
+  - : L'adresse du fichier pour la piste (celle du fichier `.vtt`). Cet attribut doit être une URL valide et doit nécessairement être présent dans l'élément. L'URL indiquée doit avoir la même origine à moins que l'élément parent [`<audio>`](/fr/docs/Web/HTML/Element/audio) ou [`<video>`](/fr/docs/Web/HTML/Element/video) de l'élément `<track>` possède un attribut [`crossorigin`](/fr/docs/Web/HTML/Attributes/crossorigin).
 - `srclang`
   - : La langue dans laquelle est exprimée la piste textuelle. La valeur de cet attribut doit être une balise de langue [BCP 47](https://r12a.github.io/app-subtags/). Si l'attribut `kind` vaut `subtitles,` l'attribut `srclang` doit obligatoirement être défini.
 

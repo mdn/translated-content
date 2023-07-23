@@ -1,16 +1,6 @@
 ---
 title: menus.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - contextMenus
-  - onClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 ---
 
@@ -23,9 +13,9 @@ Pour la compatibilité avec les autres navigateurs, Firefox rend cet événement
 ## Syntaxe
 
 ```js
-browser.menus.onClicked.addListener(listener)
-browser.menus.onClicked.removeListener(listener)
-browser.menus.onClicked.hasListener(listener)
+browser.menus.onClicked.addListener(listener);
+browser.menus.onClicked.removeListener(listener);
+browser.menus.onClicked.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -61,12 +51,11 @@ Cet exemple écoute les clics sur un élément de menu, puis enregistre l'ID de 
 browser.menus.create({
   id: "click-me",
   title: "Click me!",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info, tab) => {
-  console.log("Item " + info.menuItemId + " clicked " +
-              "in tab " + tab.id);
+  console.log("Item " + info.menuItemId + " clicked " + "in tab " + tab.id);
 });
 ```
 

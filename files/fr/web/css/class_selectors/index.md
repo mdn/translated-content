@@ -1,12 +1,7 @@
 ---
 title: Sélecteurs de classe
 slug: Web/CSS/Class_selectors
-tags:
-  - CSS
-  - Reference
-  - Sélecteur
 translation_of: Web/CSS/Class_selectors
-original_slug: Web/CSS/Sélecteurs_de_classe
 ---
 
 {{CSSRef}}
@@ -31,7 +26,7 @@ li.spacious.elegant {
 }
 ```
 
-L'attribut {{htmlattrxref("class")}} est une liste de termes séparés par des espaces, il est nécessaire qu'un de ces termes corresponde exactement au nom utilisé dans le sélecteur pour que l'élément soit ciblé.
+L'attribut [`class`](/fr/docs/Web/HTML/Global_attributes#class) est une liste de termes séparés par des espaces, il est nécessaire qu'un de ces termes corresponde exactement au nom utilisé dans le sélecteur pour que l'élément soit ciblé.
 
 ## Syntaxe
 

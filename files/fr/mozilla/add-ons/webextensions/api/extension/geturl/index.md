@@ -1,15 +1,6 @@
 ---
 title: extension.getURL()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getURL
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getURL
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getURL
 ---
 
@@ -23,8 +14,8 @@ Convertit un chemin relatif dans le répertoire d'installation d'une extension e
 
 ```js
 browser.extension.getURL(
-  path // string
-)
+  path, // string
+);
 ```
 
 ### Paramètres

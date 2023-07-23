@@ -53,7 +53,7 @@ class MyArray extends Array {
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - {{jsxref("Array")}}
 - {{jsxref("Symbol.species")}}

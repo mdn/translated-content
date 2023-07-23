@@ -168,7 +168,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
@@ -203,14 +203,14 @@ There are some serious [Security concerns](#security_concerns) to consider with 
 
 ```html
 <iframe
-  src="https://developer.mozilla.org/en-US/docs/Glossary"
+  src="https://developer.mozilla.org/zh-TW/docs/Glossary"
   width="100%"
   height="500"
   frameborder="0"
   allowfullscreen
   sandbox>
   <p>
-    <a href="https://developer.mozilla.org/en-US/docs/Glossary">
+    <a href="https://developer.mozilla.org/zh-TW/docs/Glossary">
       Fallback link for browsers that don't support iframes
     </a>
   </p>
@@ -242,7 +242,7 @@ Browser makers and Web developers have learned the hard way that iframes are a c
 
 > **備註：** [Clickjacking](https://zh.wikipedia.org/wiki/Clickjacking) is one kind of common iframe attack where hackers embed an invisible iframe into your document (or embed your document into their own malicious website) and use it to capture users' interactions. This is a common way to mislead users or steal sensitive data.
 
-A quick example first though — try loading the previous example we showed above into your browser — you can [find it live on Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ([see the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) too.) You won't actually see anything displayed on the page, and if you look at the _Console_ in the [browser developer tools](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools), you'll see a message telling you why. In Firefox, you'll get told _Load denied by X-Frame-Options: "https://developer.mozilla.org/en-US/docs/Glossary" does not permit framing_. This is because the developers that built MDN have included a setting on the server that serves the website pages to disallow them from being embedded inside `<iframe>`s (see [Configure CSP directives](#configure_csp_directives), below.) This makes sense — an entire MDN page doesn't really make sense to be embedded in other pages unless you want to do something like embed them on your site and claim them as your own — or attempt to steal data via clickjacking, which are both really bad things to do. Plus if everybody started to do this, all the additional bandwidth would start to cost Mozilla a lot of money.
+A quick example first though — try loading the previous example we showed above into your browser — you can [find it live on Github](http://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) ([see the source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/other-embedding-technologies/iframe-detail.html) too.) You won't actually see anything displayed on the page, and if you look at the _Console_ in the [browser developer tools](/zh-TW/docs/Learn/Common_questions/What_are_browser_developer_tools), you'll see a message telling you why. In Firefox, you'll get told _Load denied by X-Frame-Options: "https://developer.mozilla.org/zh-TW/docs/Glossary" does not permit framing_. This is because the developers that built MDN have included a setting on the server that serves the website pages to disallow them from being embedded inside `<iframe>`s (see [Configure CSP directives](#configure_csp_directives), below.) This makes sense — an entire MDN page doesn't really make sense to be embedded in other pages unless you want to do something like embed them on your site and claim them as your own — or attempt to steal data via clickjacking, which are both really bad things to do. Plus if everybody started to do this, all the additional bandwidth would start to cost Mozilla a lot of money.
 
 #### Only embed when necessary
 
@@ -261,7 +261,7 @@ If the content is licensed, you must obey the license terms. For example, the co
 
 Using HTTPS requires a security certificate, which can be expensive (although [Let's Encrypt](https://letsencrypt.org/) makes things easier) — if you can't get one, you may serve your parent document with HTTP. However, because of the second benefit of HTTPS above, _no matter what the cost, you must never embed third-party content with HTTP._ (In the best case scenario, your user's Web browser will give them a scary warning.) All reputable companies that make content available for embedding via an `<iframe>` will make it available via HTTPS — look at the URLs inside the `<iframe>` `src` attribute when you are embedding content from Google Maps or Youtube, for example.
 
-> **備註：** [Github pages](/zh-TW/docs/Learn/Common_questions/Using_Github_pages) allow content to be served via HTTPS by default, so is useful for hosting content. If you are using different hosting and are not sure, ask your hosting provider about it.
+> **備註：** [Github pages](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) allow content to be served via HTTPS by default, so is useful for hosting content. If you are using different hosting and are not sure, ask your hosting provider about it.
 
 #### Always use the `sandbox` attribute
 

@@ -1,14 +1,6 @@
 ---
 title: browserSettings.zoomSiteSpecific
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomSiteSpecific
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - WebExtensions
-  - browserSettings
-  - zoomSiteSpecific
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomSiteSpecific
 ---
 
@@ -45,8 +37,7 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.zoomSiteSpecific.set({value: false}).
-  then(logResult);
+browser.browserSettings.zoomSiteSpecific.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}

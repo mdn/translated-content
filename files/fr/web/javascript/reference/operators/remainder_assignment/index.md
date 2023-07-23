@@ -1,13 +1,6 @@
 ---
 title: Affectation après reste (%=)
 slug: Web/JavaScript/Reference/Operators/Remainder_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.remainder_assignment
 ---
 
 {{jsSidebar("Operators")}}

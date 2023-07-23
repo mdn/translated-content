@@ -2,7 +2,6 @@
 title: aria-required
 slug: Web/Accessibility/ARIA/Attributes/aria-required
 translation_of: Web/Accessibility/ARIA/Attributes/aria-required
-spec-urls: https://w3c.github.io/aria/#aria-required
 ---
 
 L'attribut `aria-required` indique qu'une saisie de l'utilisatrice ou de l'utilisateur est requise pour cet élément avant qu'un formulaire puisse être envoyé.
@@ -29,7 +28,12 @@ Dans le fragment HTML qui suit, si la personne doit nécessairement remplir une 
 
 ```html
 <div id="tbLabel">Adresse mail (obligatoire)</div>
-<div role="textbox" contenteditable aria-labelledby="tblabel" aria-required="true" id="email1"></div>
+<div
+  role="textbox"
+  contenteditable
+  aria-labelledby="tblabel"
+  aria-required="true"
+  id="email1"></div>
 ```
 
 Dans cet exemple, il faudrait recourir à JavaScript pour empêcher l'envoi du formulaire tant que la boîte de texte n'a pas de contenu.

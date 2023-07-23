@@ -1,10 +1,6 @@
 ---
 title: color
 slug: Web/CSS/@media/color
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/color
 ---
 

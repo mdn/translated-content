@@ -1,12 +1,7 @@
 ---
 title: Accesseurs de propriétés
 slug: Web/JavaScript/Reference/Operators/Property_accessors
-tags:
-  - JavaScript
-  - Opérateur
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
-original_slug: Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres
 ---
 
 {{jsSidebar("Operators")}}

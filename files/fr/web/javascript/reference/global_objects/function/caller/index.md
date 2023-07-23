@@ -1,13 +1,7 @@
 ---
 title: Function.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
-tags:
-  - Function
-  - JavaScript
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/caller
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -83,4 +77,4 @@ Ne fait partie d'aucune spécification. Implémentée avec JavaScript 1.5.
 
 ## Voir aussi
 
-- Le bug d'implémentation pour SpiderMonkey {{bug(65683)}}
+- Le bug d'implémentation pour SpiderMonkey [bug Firefox 65683](https://bugzil.la/65683)

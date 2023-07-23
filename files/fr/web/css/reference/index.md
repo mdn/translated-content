@@ -1,13 +1,6 @@
 ---
 title: Référence CSS
 slug: Web/CSS/Reference
-tags:
-  - CSS
-  - CSS Data Types
-  - I10n:priority
-  - Overview
-  - Reference
-  - Types CSS
 translation_of: Web/CSS/Reference
 ---
 
@@ -51,7 +44,7 @@ div.menu-bar li:hover > ul {
 }
 ```
 
-Pour une introduction à la syntaxe des sélecteurs CSS, consultez [ce tutoriel](/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/La_syntaxe). Soyez conscient que n’importe quelle erreur de [syntaxe CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured) dans une définition de règle l’invalide entièrement. Les règles non validées sont ignorées par le navigateur. Note : les définitions de règles CSS sont intégralement [basées sur du texte](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII) alors que DOM-CSS / CSSOM (le système de gestion des règles) est [basé sur des objets](https://www.w3.org/TR/cssom/#introduction).
+Pour une introduction à la syntaxe des sélecteurs CSS, consultez [ce tutoriel](/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/La_syntaxe). Soyez conscient que n'importe quelle erreur de [syntaxe CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured) dans une définition de règle l'invalide entièrement. Les règles non validées sont ignorées par le navigateur. Note : les définitions de règles CSS sont intégralement [basées sur du texte](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII) alors que DOM-CSS / CSSOM (le système de gestion des règles) est [basé sur des objets](https://www.w3.org/TR/cssom/#introduction).
 
 ### Syntaxe des règles @
 
@@ -59,7 +52,7 @@ Comme la structure des règles @ varie grandement, veuillez consulter [règle @]
 
 ## Index des mots-clés
 
-> **Note :** Les noms de propriétés de cet index n’incluent **pas** les [noms de l’API DOM JavaScript](/fr/docs/Web/CSS/CSS_Properties_Reference) lorsqu’ils sont différents des noms standards CSS.
+> **Note :** Les noms de propriétés de cet index n'incluent **pas** les [noms de l'API DOM JavaScript](/fr/docs/Web/CSS/CSS_Properties_Reference) lorsqu'ils sont différents des noms standards CSS.
 
 {{CSS_Ref}}
 
@@ -73,9 +66,9 @@ Les sélecteurs simples sont des sélecteurs fondamentaux. Ce sont les sélecteu
 
 - [Sélecteur de type](/fr/docs/Web/CSS/Type_selectors) `nomElement`
 - [Sélecteur de classe](/fr/docs/Web/CSS/Class_selectors) `.nomClasse`
-- [Sélecteur d’identifiant](/fr/docs/Web/CSS/ID_selectors) `#nomID`
+- [Sélecteur d'identifiant](/fr/docs/Web/CSS/ID_selectors) `#nomID`
 - [Sélecteur universel](/fr/docs/Web/CSS/Universal_selectors) **`*`**, `ns|*`, **`*|*`**, **`|*`**
-- [Sélecteur d’attribut](/fr/docs/Web/CSS/Attribute_selectors) `[attr=valeur]`
+- [Sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors) `[attr=valeur]`
 
 ### Sélecteur de groupe
 
@@ -90,12 +83,12 @@ Les combinateurs sont des sélecteurs qui établissent une relation entre deux s
   - : Indique que les éléments sélectionnés par `A` et par `B` ont le même parent et que celui sélectionné par `B` suit immédiatement celui sélectionné par `A`.
 - [Combinateur de voisin général](/fr/docs/Web/CSS/General_sibling_combinator) `A ~ B`
   - : Indique que les éléments sélectionnés par `A` et par `B` ont le même parent et que celui sélectionné par `B` suit celui sélectionné par `A`, mais pas nécessairement immédiatement après lui.
-- [Combinateur d’enfant](/fr/docs/Web/CSS/Child_combinator) `A > B`
-  - : Indique que l’élément sélectionné par `B` est un enfant direct de l’élément sélectionné par `A`.
+- [Combinateur d'enfant](/fr/docs/Web/CSS/Child_combinator) `A > B`
+  - : Indique que l'élément sélectionné par `B` est un enfant direct de l'élément sélectionné par `A`.
 - [Combinateur de descendant](/fr/docs/Web/CSS/Descendant_combinator) `A B`
-  - : Indique que l’élément sélectionné par `B` est un descendant de l’élément sélectionné par `A`, mais n’en est pas nécessairement un enfant direct.
+  - : Indique que l'élément sélectionné par `B` est un descendant de l'élément sélectionné par `A`, mais n'en est pas nécessairement un enfant direct.
 - [Combinateur de colonne](/fr/docs/Web/CSS/Column_combinator) `A || B` {{Experimental_Inline}}
-  - : Indique que l’élément sélectionné par `B` est situé dans la colonne de table indiquée par `A`. Les éléments qui s’étendent sur des colonnes multiples sont considérés comme étant membres de chacune de ces colonnes.
+  - : Indique que l'élément sélectionné par `B` est situé dans la colonne de table indiquée par `A`. Les éléments qui s'étendent sur des colonnes multiples sont considérés comme étant membres de chacune de ces colonnes.
 
 ### Pseudo
 

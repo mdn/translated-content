@@ -1,12 +1,6 @@
 ---
 title: element.nodeType
 slug: Web/API/Node/nodeType
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
-  - Types
 translation_of: Web/API/Node/nodeType
 ---
 

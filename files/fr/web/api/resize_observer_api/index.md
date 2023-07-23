@@ -1,16 +1,6 @@
 ---
 title: Resize Observer API
 slug: Web/API/Resize_Observer_API
-tags:
-  - API
-  - Draft
-  - Element
-  - Monitor
-  - Overview
-  - Reference
-  - Resize Observer
-  - Resize Observer API
-  - observe
 translation_of: Web/API/Resize_Observer_API
 ---
 
@@ -74,4 +64,4 @@ resizeObserver.observe(document.querySelector('div'));
 
 ## Voir aussi
 
-- [ResizeObserver: It’s Like document.onresize for Elements](https://developers.google.com/web/updates/2016/10/resizeobserver)
+- [ResizeObserver: It's Like document.onresize for Elements](https://developers.google.com/web/updates/2016/10/resizeobserver)

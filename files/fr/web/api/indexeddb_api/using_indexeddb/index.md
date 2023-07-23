@@ -1,15 +1,7 @@
 ---
 title: Utiliser IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
-tags:
-  - Avancé
-  - Base de données
-  - Guide
-  - IndexedDB
-  - Stockage
-  - Tutoriel
 translation_of: Web/API/IndexedDB_API/Using_IndexedDB
-original_slug: Web/API/API_IndexedDB/Using_IndexedDB
 ---
 
 IndexedDB est un moyen de stocker des données de manière persistante dans un navigateur. Cela vous laisse créer des applications web avec de riches possibilités de requêtes indépendamment de la disponibilité du réseau puisque vos applications peuvent fonctionner en ligne ou hors-ligne.
@@ -89,13 +81,13 @@ request.onsuccess = function(event) {
 };
 ```
 
-Laquelle de ces deux fonctions, `onsuccess()` or `onerror()`, sera appelée ? Si tout se passe bien, un évènement success (qui est un évènement DOM dont la propriété `type` est à `"success"`) est déclenché avec `request` comme cible. Une fois déclenché, la fonction `onsuccess()` de `request` est lancée avec l'évènement success comme argument. S’il y avait un quelconque problème, un évènement erreur (qui est un évènement DOM dont la propriété `type` est définie à `"error"`) est lancée dans `request`. Cela déclenche la fonction `onerror()` avec l'évènement d'erreur comme argument.
+Laquelle de ces deux fonctions, `onsuccess()` or `onerror()`, sera appelée ? Si tout se passe bien, un évènement success (qui est un évènement DOM dont la propriété `type` est à `"success"`) est déclenché avec `request` comme cible. Une fois déclenché, la fonction `onsuccess()` de `request` est lancée avec l'évènement success comme argument. S'il y avait un quelconque problème, un évènement erreur (qui est un évènement DOM dont la propriété `type` est définie à `"error"`) est lancée dans `request`. Cela déclenche la fonction `onerror()` avec l'évènement d'erreur comme argument.
 
-L'API IndexedDB est conçue pour minimiser le recours à la gestion des erreurs, donc vous ne serez pas amené à voir beaucoup d'évènements erreurs (du moins, pas tant que vous utilisez l'API !). Cependant, dans le cas d'une ouverture de base de données, il y a quelques conditions qui génèrent des évènements d'erreurs. Le problème le plus courant est que l'utilisateur a décidé d'interdire l'accès à la création de base de données. Un des principaux objectifs d’IndexedDB est de permettre un stockage important de données pour l'utilisation hors-ligne. (Pour en savoir plus sur la capacité de stockage de chaque navigateur, voyez [Limites de stockage](/fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)).
+L'API IndexedDB est conçue pour minimiser le recours à la gestion des erreurs, donc vous ne serez pas amené à voir beaucoup d'évènements erreurs (du moins, pas tant que vous utilisez l'API !). Cependant, dans le cas d'une ouverture de base de données, il y a quelques conditions qui génèrent des évènements d'erreurs. Le problème le plus courant est que l'utilisateur a décidé d'interdire l'accès à la création de base de données. Un des principaux objectifs d'IndexedDB est de permettre un stockage important de données pour l'utilisation hors-ligne. (Pour en savoir plus sur la capacité de stockage de chaque navigateur, voyez [Limites de stockage](/fr/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)).
 
-Évidemment, les navigateurs ne peuvent permettre qu'une publicité en ligne ou un site malicieux pollue votre ordinateur, donc ils informent l’utilisateur la première fois qu'une application web tente d'ouvrir un espace de stockage IndexedDB. L'utilisateur peut choisir de permettre ou refuser l'accès. En ce qui concerne l’utilisation d’IndexedDB en mode privé, les données restent en mémoire jusqu’à ce que la session privée soit close (Navigation privée pour Firefox et mode Incognito pour Chrome, mais dans Firefox, cela [n'est pas encore implémenté](https://bugzilla.mozilla.org/show_bug.cgi?id=781982) depuis novembre 2015, aussi vous ne pouvez pas utiliser IndexedDB dans le mode privé de Firefo du tout).
+Évidemment, les navigateurs ne peuvent permettre qu'une publicité en ligne ou un site malicieux pollue votre ordinateur, donc ils informent l'utilisateur la première fois qu'une application web tente d'ouvrir un espace de stockage IndexedDB. L'utilisateur peut choisir de permettre ou refuser l'accès. En ce qui concerne l'utilisation d'IndexedDB en mode privé, les données restent en mémoire jusqu'à ce que la session privée soit close (Navigation privée pour Firefox et mode Incognito pour Chrome, mais dans Firefox, cela [n'est pas encore implémenté](https://bugzilla.mozilla.org/show_bug.cgi?id=781982) depuis novembre 2015, aussi vous ne pouvez pas utiliser IndexedDB dans le mode privé de Firefo du tout).
 
-Maintenant, en admettant qu’un utilisateur ait accepté la création d'une base, et que vous receviez un évènement "success" qui déclenche le callback _(rappel)_ "success" ; que se passe-il après ? La requête a génèré un appel à `indexedDB.open()`, donc `request.result` est une instance de `IDBDatabase`, et vous voulez garder en mémoire cela pour plus tard. Votre code devrait ressembler à ceci :
+Maintenant, en admettant qu'un utilisateur ait accepté la création d'une base, et que vous receviez un évènement "success" qui déclenche le callback _(rappel)_ "success" ; que se passe-il après ? La requête a génèré un appel à `indexedDB.open()`, donc `request.result` est une instance de `IDBDatabase`, et vous voulez garder en mémoire cela pour plus tard. Votre code devrait ressembler à ceci :
 
 ```js
 var db;
@@ -110,7 +102,7 @@ request.onsuccess = function(event) {
 
 #### Gérer les erreurs
 
-Comme mentionné ci-dessus, les évènements d’erreur génèrent des info-bulles. Ils sont rattachés à la requête qui a généré l’erreur, puis la bulle de l'évènement est transmis à la transaction, et enfin à l'objet de la base de données. Si vous souhaitez éviter d'ajouter un gestionnaire d'erreurs à chaque requête, vous pouvez en ajouter un unique à l'objet de la base de donnée, de cette manière :
+Comme mentionné ci-dessus, les évènements d'erreur génèrent des info-bulles. Ils sont rattachés à la requête qui a généré l'erreur, puis la bulle de l'évènement est transmis à la transaction, et enfin à l'objet de la base de données. Si vous souhaitez éviter d'ajouter un gestionnaire d'erreurs à chaque requête, vous pouvez en ajouter un unique à l'objet de la base de donnée, de cette manière :
 
 ```js
 db.onerror = function(event) {
@@ -123,7 +115,7 @@ Une des erreurs courantes possibles lorsqu'on ouvre une base de données, c'est 
 
 ### Créer ou mettre à jour une version de base de données
 
-Lorsque vous créez une nouvelle base de données, ou que vous augmentez le numéro de version d'une base existante (en spécifiant un numéro de version supérieur à celui que vous aviez auparavant, lors de [Ouvrir une base de données](#ouvrir_une_base_de_données)), l'évènement `onupgradeneeded` sera déclenché et un objet `IDBVersionChangeEvent` sera passé à un évènement `onversionchange` dans `request.result` (la variable `db` dans l'exemple). Dans le gestionnaire d’évènement `upgradeneeded`, vous devez créer les objets de stockage requis pour cette version de base :
+Lorsque vous créez une nouvelle base de données, ou que vous augmentez le numéro de version d'une base existante (en spécifiant un numéro de version supérieur à celui que vous aviez auparavant, lors de [Ouvrir une base de données](#ouvrir_une_base_de_données)), l'évènement `onupgradeneeded` sera déclenché et un objet `IDBVersionChangeEvent` sera passé à un évènement `onversionchange` dans `request.result` (la variable `db` dans l'exemple). Dans le gestionnaire d'évènement `upgradeneeded`, vous devez créer les objets de stockage requis pour cette version de base :
 
 ```js
 // Cet évènement est seulement implémenté dans des navigateurs récents
@@ -135,7 +127,7 @@ request.onupgradeneeded = function(event) {
 };
 ```
 
-Dans ce cas, la base de données disposera aussitôt des objets de stockage de la version précédente de la base, donc vous n’aurez pas à créer de nouveau ces objets de stockage. Vous aurez seulement besoin de créer de nouveaux objets de stockage, ou d'en supprimer de la version précédente si vous n'en avez plus besoin. Si vous avez besoin de changer un objet de stockage existant (par exemple, pour changer la `keyPath`), alors vous devez supprimer l’ancien objet de stockage et le créer à nouveau avec les nouveaux paramètres. Notez que ceci supprimera les informations dans l'objet de stockage ! Si vous avez besoin de sauvegarder ces informations, vous devez les lire et les sauvegarder quelque part avant de mettre à jour la base de données.
+Dans ce cas, la base de données disposera aussitôt des objets de stockage de la version précédente de la base, donc vous n'aurez pas à créer de nouveau ces objets de stockage. Vous aurez seulement besoin de créer de nouveaux objets de stockage, ou d'en supprimer de la version précédente si vous n'en avez plus besoin. Si vous avez besoin de changer un objet de stockage existant (par exemple, pour changer la `keyPath`), alors vous devez supprimer l'ancien objet de stockage et le créer à nouveau avec les nouveaux paramètres. Notez que ceci supprimera les informations dans l'objet de stockage ! Si vous avez besoin de sauvegarder ces informations, vous devez les lire et les sauvegarder quelque part avant de mettre à jour la base de données.
 
 Essayer de créer un objet de stockage avec un nom déjà existant (ou essayer de supprimer un objet de stockage avec un nom qui n'existe pas encore) renverra une erreur.
 
@@ -156,7 +148,7 @@ Le tableau suivant montre les différentes manières d'attribuer des clés.
 
 Vous pouvez aussi créer des index sur un objet de stockage, à condition que l'objet de stockage contienne des objets, et non des primitives. Un index vous permet de consulter les valeurs stockées dans un objet de stockage en utilisant la valeur d'une propriété de l'objet stocké, plutôt que la clé de l'objet.
 
-En outre, les index ont la capacité d'appliquer des contraintes simples sur les données stockées. En paramétrant l'option `unique` lorsque l'on crée un index, ce dernier fait que deux objets ne peuvent être enregistrés en ayant la même valeur pour le chemin de clé de l'index. Par exemple, si vous avez un objet de stockage qui contient un ensemble de personnes, et que vous voulez vous assurer que deux personnes n’aient pas la même adresse de courriel, vous pouvez utiliser un index avec le paramètre `unique` à `true`.
+En outre, les index ont la capacité d'appliquer des contraintes simples sur les données stockées. En paramétrant l'option `unique` lorsque l'on crée un index, ce dernier fait que deux objets ne peuvent être enregistrés en ayant la même valeur pour le chemin de clé de l'index. Par exemple, si vous avez un objet de stockage qui contient un ensemble de personnes, et que vous voulez vous assurer que deux personnes n'aient pas la même adresse de courriel, vous pouvez utiliser un index avec le paramètre `unique` à `true`.
 
 Cela peut sembler confus, mais ce simple exemple devrait illustrer ces concepts. D'abord, nous définissons quelques données client à utiliser dans notre exemple :
 
@@ -214,7 +206,7 @@ Les objets de stockage sont créés avec un simple appel à `createObjectStore()
 
 Nous avons aussi demandé un index nommé «&nbsp;<i lang="en">name</i>&nbsp;» qui examine la propriété `name` dans les objets stockés. Comme avec `createObjectStore()`, `createIndex()` prend un paramètre de type objet facultatif (`options`) qui définit le type d'index à créer. Ajouter des objets qui n'auront pas de propriété `name` fonctionnera, mais ces objets n'apparaîtront pas dans l'index «&nbsp;<i lang="en">name</i>&nbsp;».
 
-Nous pouvons récupérer les objets client stockés, en utilisant directement leur `ssn` dans l'objet de stockage, ou en utilisant leur nom via l’index `name`. Pour en savoir plus sur ce fonctionnement, se référer à la section [Utiliser un index](#utiliser_un_index).
+Nous pouvons récupérer les objets client stockés, en utilisant directement leur `ssn` dans l'objet de stockage, ou en utilisant leur nom via l'index `name`. Pour en savoir plus sur ce fonctionnement, se référer à la section [Utiliser un index](#utiliser_un_index).
 
 ### Utiliser le générateur de clés
 
@@ -255,7 +247,7 @@ Pour changer le "schéma" ou la structure de la base de données — qui impliqu
 
 Pour lire les enregistrements d'un objet de stockage existant, la transaction peut être en mode `readonly` ou `readwrite`. Pour appliquer des changements à un objet de stockage existant, la transaction doit être en mode `readwrite`. Vous démarrez ces transactions avec {{domxref("IDBDatabase.transaction")}}. La méthode accepte deux paramètres : les `storeNames` (la portée, définie comme un tableau des objets de stockage auxquels vous souhaitez accéder) et le `mode` (`readonly` ou `readwrite`) pour la transaction. La méthode retourne un objet de transaction contenant la méthode {{domxref("IDBIndex.objectStore")}}, que vous utilisez pour accéder à votre objet de stockage. Par défaut, lorsqu'aucun mode n'est spécifié, les transactions démarrent en mode `readonly`.
 
-> **Note :** À partir de Firefox 40, les transactions IndexedDB ont des garanties de durabilité relachées afin d'augmenter les performances (voir {{Bug("1112702")}}.) Auparavant, lors d'une transaction `readwrite` {{domxref("IDBTransaction.oncomplete")}} était déclenché seulement lorsque les données étaient garanties pour une écriture sur le disque. Dans Firefox 40+ l'évènement `complete` est déclenché une fois que l'OS a autorisé l'écriture de données, mais potentiellement avant que les données soient réellement écrites sur le disque. L'évènement `complete` peut ainsi être livré plus vite qu'avant, cependant, il existe un petit risque que l'ensemble de la transaction soit perdu si l'OS s'effondre ou si un problème électrique survient avant que les données soient écrites. Comme de tels évènements catastrophiques sont rares, la plupart des utilisateurs n'ont pas à s'en soucier. Si vous devez vous assurer de la durabilité pour quelconque raison que ce soit (par exemple, vous stockez des données critiques qui ne peuvent être recalculées plus tard) vous pouvez forcer une transaction à écrire sur le disque avant que l'évènement `complete` ne soit délivré en créant une transaction utilisant un mode expérimental (non-standard) `readwriteflush`  (se référer à {{domxref("IDBDatabase.transaction")}}.
+> **Note :** À partir de Firefox 40, les transactions IndexedDB ont des garanties de durabilité relachées afin d'augmenter les performances (voir [bug Firefox 1112702](https://bugzil.la/1112702).) Auparavant, lors d'une transaction `readwrite` {{domxref("IDBTransaction.oncomplete")}} était déclenché seulement lorsque les données étaient garanties pour une écriture sur le disque. Dans Firefox 40+ l'évènement `complete` est déclenché une fois que l'OS a autorisé l'écriture de données, mais potentiellement avant que les données soient réellement écrites sur le disque. L'évènement `complete` peut ainsi être livré plus vite qu'avant, cependant, il existe un petit risque que l'ensemble de la transaction soit perdu si l'OS s'effondre ou si un problème électrique survient avant que les données soient écrites. Comme de tels évènements catastrophiques sont rares, la plupart des utilisateurs n'ont pas à s'en soucier. Si vous devez vous assurer de la durabilité pour quelconque raison que ce soit (par exemple, vous stockez des données critiques qui ne peuvent être recalculées plus tard) vous pouvez forcer une transaction à écrire sur le disque avant que l'évènement `complete` ne soit délivré en créant une transaction utilisant un mode expérimental (non-standard) `readwriteflush`  (se référer à {{domxref("IDBDatabase.transaction")}}.
 
 Vous pouvez accélérer l'accès à vos données en utilisant le bon mode et la bonne portée dans la transaction. Voici deux astuces :
 
@@ -277,7 +269,7 @@ La fonction `transaction()` prend deux arguments (bien que l'un d'eux soit facul
 
 Maintenant que vous avez une transaction, vous devez comprendre sa durée de vie. Les transactions sont étroitement liées à la boucle de l'évènement. Si vous établissez une transaction et si vous sortez de la boucle d'évènements sans l'utiliser, alors la transaction deviendra inactive. La seule manière de garder la transaction active est d'y insérer une requête. Lorsque la requête est terminée, vous obtenez un évènement DOM, et en supposant que la requête ait réussi, vous avez une autre opportunité d'étendre la transaction durant ce "callback" _(rappel)_. Si vous sortez de la boucle d'évènements sans étendre la transaction, alors elle devient inactive, etc… Tant qu'il reste des demandes en attente, la transaction reste active. La durée de vie des transactions est vraiment très simple, mais cela peut prendre un peu de temps de la maîtriser. Quelques exemples supplémentaires aideront. Si vous commencez à voir des codes d'erreur `TRANSACTION_INACTIVE_ERR`, alors vous avez raté quelque chose.
 
-Les transactions peuvent recevoir des évènements DOM de trois types : `error` _(erreur)_, `abort` _(abandonnée)_ et `complete` _(terminée)_. Nous avons déjà parlé du fait que les `error` créent des bulles, ainsi une transaction peut recevoir des évènements d'erreur venant de n'importe quelle requête l'ayant généré. Un point plus subtil ici, c'est que le comportement par défaut d'une erreur est d'abandonner la transaction là où elle a eu lieu. A moins que vous gériez l’erreur en appelant d'abord `stopPropagation()` sur l’évènement erreur, puis que vous fassiez quelque chose d'autre, la transaction complète sera annulée. Cette conception vous oblige à réfléchir et gérer les erreurs, mais vous pouvez toujours ajouter un gestionnaire d'erreurs "fourre-tout" à la base de données si la gestion d'erreurs fines est trop lourde. Si vous ne gérez pas un évènement d'erreur, ou si vous appelez `abort()` sur la transaction, alors la transaction est annulée et un évènement `abort` est lancé sur la transaction. Sinon, une fois que toutes les demandes en instance sont terminées, vous recevez un évènement `complete`. Si vous faites beaucoup d'opérations sur les bases de données, alors suivre la transaction plutôt que les requêtes individuelles, peut certainement vous aider.
+Les transactions peuvent recevoir des évènements DOM de trois types : `error` _(erreur)_, `abort` _(abandonnée)_ et `complete` _(terminée)_. Nous avons déjà parlé du fait que les `error` créent des bulles, ainsi une transaction peut recevoir des évènements d'erreur venant de n'importe quelle requête l'ayant généré. Un point plus subtil ici, c'est que le comportement par défaut d'une erreur est d'abandonner la transaction là où elle a eu lieu. A moins que vous gériez l'erreur en appelant d'abord `stopPropagation()` sur l'évènement erreur, puis que vous fassiez quelque chose d'autre, la transaction complète sera annulée. Cette conception vous oblige à réfléchir et gérer les erreurs, mais vous pouvez toujours ajouter un gestionnaire d'erreurs "fourre-tout" à la base de données si la gestion d'erreurs fines est trop lourde. Si vous ne gérez pas un évènement d'erreur, ou si vous appelez `abort()` sur la transaction, alors la transaction est annulée et un évènement `abort` est lancé sur la transaction. Sinon, une fois que toutes les demandes en instance sont terminées, vous recevez un évènement `complete`. Si vous faites beaucoup d'opérations sur les bases de données, alors suivre la transaction plutôt que les requêtes individuelles, peut certainement vous aider.
 
 Maintenant que vous avons une transaction, nous avons besoin de récupérer l'objet de stockage de celle-ci. Les transactions vous permettent seulement d'avoir l'objet de stockage que vous avez spécifié lors de la création de la transaction. Puis, vous pouvez ajouter toutes les données dont vous avez besoin.
 
@@ -300,7 +292,7 @@ for (var i in customerData) {
 }
 ```
 
-La méthode `result` d’une requête venant d'un appel à `add()` est la clé de la valeur qui vient d'être ajoutée. Dans ce cas, ce devrait être équivalent à la propriété `ssn` de l'objet qui vient d'être ajouté, puisque l'objet de stockage utilise la propriété `ssn` pour le key path. Notez que la fonction `add()` requiert qu'aucun objet déjà présent dans la base ait la même clé. Si vous essayez de modifier une entrée existante, ou si vous ne vous en occupez pas, vous pouvez utiliser la fonction `put()`, comme montré plus loin dans la section [Mettre à jour une entrée dans la base de données](#mettre_à_jour_une_entrée_dans_la_base_de_données).
+La méthode `result` d'une requête venant d'un appel à `add()` est la clé de la valeur qui vient d'être ajoutée. Dans ce cas, ce devrait être équivalent à la propriété `ssn` de l'objet qui vient d'être ajouté, puisque l'objet de stockage utilise la propriété `ssn` pour le key path. Notez que la fonction `add()` requiert qu'aucun objet déjà présent dans la base ait la même clé. Si vous essayez de modifier une entrée existante, ou si vous ne vous en occupez pas, vous pouvez utiliser la fonction `put()`, comme montré plus loin dans la section [Mettre à jour une entrée dans la base de données](#mettre_à_jour_une_entrée_dans_la_base_de_données).
 
 ### Supprimer des données dans la base de données
 
@@ -340,16 +332,16 @@ db.transaction("customers").objectStore("customers").get("444-44-4444").onsucces
 };
 ```
 
-Vous voyez comment ça fonctionne ? Comme il n'y a qu'un seul objet de stockage, vous pouvez éviter de passer une liste d'objets dont vous avez besoin dans votre transaction, et juste passer le nom comme une chaîne de caractères. Aussi, nous faisons seulement une lecture de la base, donc nous n'avons pas besoin d'une transaction `"readwrite"`. Appeler une `transaction()` sans spécifier de mode nous donne une transaction `"readonly"`. Une autre subtilité ici est que nous n'enregistrons pas l'objet de notre requête dans une variable. Comme l’évènement DOM a la requête comme cible, vous pouvez utiliser l'évènement pour récupérer la propriété `result`.
+Vous voyez comment ça fonctionne ? Comme il n'y a qu'un seul objet de stockage, vous pouvez éviter de passer une liste d'objets dont vous avez besoin dans votre transaction, et juste passer le nom comme une chaîne de caractères. Aussi, nous faisons seulement une lecture de la base, donc nous n'avons pas besoin d'une transaction `"readwrite"`. Appeler une `transaction()` sans spécifier de mode nous donne une transaction `"readonly"`. Une autre subtilité ici est que nous n'enregistrons pas l'objet de notre requête dans une variable. Comme l'évènement DOM a la requête comme cible, vous pouvez utiliser l'évènement pour récupérer la propriété `result`.
 
-Vous pouvez accélérer l’accès à vos données en limitant la portée et le mode de la transaction. Voici deux astuces :
+Vous pouvez accélérer l'accès à vos données en limitant la portée et le mode de la transaction. Voici deux astuces :
 
-- Lors de la définition de la [scope](/fr/docs/IndexedDB/Using_IndexedDB#scope) _(portée)_, spécifiez seulement l’objet de stockage dont vous avez besoin. De cette manière, vous pouvez avoir de multiples opérations simultanées sans qu’elles se chevauchent.
-- Spécifier une transaction en mode readwrite uniquement lorsque c’est nécessaire. Vous pouvez avoir de multiples opérations simultanées en lecture seule, mais vous ne pouvez avoir qu’une transaction "readwrite" _(lecture/écriture)_ sur un objet de stockage. Pour en savoir plus, voir la définition relative aux [transactions in the Basic Concepts article](/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction).
+- Lors de la définition de la [scope](/fr/docs/IndexedDB/Using_IndexedDB#scope) _(portée)_, spécifiez seulement l'objet de stockage dont vous avez besoin. De cette manière, vous pouvez avoir de multiples opérations simultanées sans qu'elles se chevauchent.
+- Spécifier une transaction en mode readwrite uniquement lorsque c'est nécessaire. Vous pouvez avoir de multiples opérations simultanées en lecture seule, mais vous ne pouvez avoir qu'une transaction "readwrite" _(lecture/écriture)_ sur un objet de stockage. Pour en savoir plus, voir la définition relative aux [transactions in the Basic Concepts article](/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction).
 
 ### Mettre à jour une entrée dans la base de données
 
-Maintenant que nous avons récupéréré quelques données, les mettre à jour et en insérer est assez simple. Mettons à jour l’exemple précédent :
+Maintenant que nous avons récupéréré quelques données, les mettre à jour et en insérer est assez simple. Mettons à jour l'exemple précédent :
 
 ```js
 var objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
@@ -375,13 +367,13 @@ request.onsuccess = function(event) {
 };
 ```
 
-Ici, nous avons créé une variable `objectStore` et nous avons recherché un enregistrement d’un client, identifié par la valeur ssn (`444-44-4444`). Nous avons ensuite mis le résultat dans une variable (`data`), mis à jour la propriété `age` de cet objet, puis créé une deuxième requête (`requestUpdate`) pour mettre l'enregistrement du client dans l'`objectStore`, en écrasant la valeur précédente.
+Ici, nous avons créé une variable `objectStore` et nous avons recherché un enregistrement d'un client, identifié par la valeur ssn (`444-44-4444`). Nous avons ensuite mis le résultat dans une variable (`data`), mis à jour la propriété `age` de cet objet, puis créé une deuxième requête (`requestUpdate`) pour mettre l'enregistrement du client dans l'`objectStore`, en écrasant la valeur précédente.
 
 > **Note :** dans ce cas, nous avons eu à spécifier une transaction `readwrite` puisque nous voulions écrire dans la base, et pas seulement la lire.
 
 ### Utiliser un curseur
 
-Utiliser `get()` nécessite de connaître la clé que vous souhaitez récupérer. Si vous voulez parcourir toutes les valeurs de l’objet de stockage, alors vous devez utiliser un curseur. Voici comment ça marche :
+Utiliser `get()` nécessite de connaître la clé que vous souhaitez récupérer. Si vous voulez parcourir toutes les valeurs de l'objet de stockage, alors vous devez utiliser un curseur. Voici comment ça marche :
 
 ```js
 var objectStore = db.transaction("customers").objectStore("customers");
@@ -398,7 +390,7 @@ objectStore.openCursor().onsuccess = function(event) {
 };
 ```
 
-La fonction `openCursor()` prend en compte plusieurs arguments. En premier, vous pouvez spécifier une plage de résultats à récupérer en utilisant un objet "key range" que nous allons voir dans une minute. En deuxième, vous pouvez spécifier la direction vers laquelle vous souhaitez itérer. Dans l’exemple ci-dessus, nous avons itéré tous les objets dans l’ordre ascendant. Le "callback" _(rappel)_ de réussite pour les curseurs est un peu spécial. L'objet cursor lui-même est le `result` _(résutat)_ de la requête (au-dessus, nous utilisons le raccourci `event.target.result`). Puis la clé et valeur courante peuvent être trouvées dans les propriétés `key`*(clé)* et `value` _(valeur)_ de l’objet cursor. Si vous souhaitez continuer, vous devez appeler `continue()` sur le curseur. Lorsque vous avez atteint la fin des données (ou s’il n’y a plus d’entrées qui correspondent à votre requête `openCursor()` ) , vous aurez toujours votre callback success, mais la propriété `result` sera `undefined`.
+La fonction `openCursor()` prend en compte plusieurs arguments. En premier, vous pouvez spécifier une plage de résultats à récupérer en utilisant un objet "key range" que nous allons voir dans une minute. En deuxième, vous pouvez spécifier la direction vers laquelle vous souhaitez itérer. Dans l'exemple ci-dessus, nous avons itéré tous les objets dans l'ordre ascendant. Le "callback" _(rappel)_ de réussite pour les curseurs est un peu spécial. L'objet cursor lui-même est le `result` _(résutat)_ de la requête (au-dessus, nous utilisons le raccourci `event.target.result`). Puis la clé et valeur courante peuvent être trouvées dans les propriétés `key`*(clé)* et `value` _(valeur)_ de l'objet cursor. Si vous souhaitez continuer, vous devez appeler `continue()` sur le curseur. Lorsque vous avez atteint la fin des données (ou s'il n'y a plus d'entrées qui correspondent à votre requête `openCursor()` ) , vous aurez toujours votre callback success, mais la propriété `result` sera `undefined`.
 
 Une utilisation classique avec les curseurs est de récupérer tous les objets dans un objet de stockage et de les mettre dans un tableau, comme ceci :
 
@@ -583,7 +575,7 @@ Vous devriez également écouter les erreurs `VersionError` pour gérer le cas o
 
 IndexedDB utilise le principe " same-origin " _(même origine)_, ce qui signifie qu'il relie le stockage à l'origine du site qui le crée (généralement, c'est le domaine ou le sous-domaine du site), de sorte qu'il ne peut être consulté par aucune autre origine.
 
-Le contenu de la fenêtre de tiers (par exemple le contenu de {{htmlelement("iframe")}}) peut accèder à IndexedDB pour l'origine dans laquelle il est intégré, à moins que le navigateur ne soit configuré pour [ne jamais accepter de cookies tiers](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (voir le {{bug("1147821")}}).
+Le contenu de la fenêtre de tiers (par exemple le contenu de {{htmlelement("iframe")}}) peut accèder à IndexedDB pour l'origine dans laquelle il est intégré, à moins que le navigateur ne soit configuré pour [ne jamais accepter de cookies tiers](https://support.mozilla.org/en-US/kb/disable-third-party-cookies) (voir le [bug Firefox 1147821](https://bugzil.la/1147821)).
 
 ## Avertissement concernant l'arrêt du navigateur
 
@@ -603,7 +595,7 @@ Tout d'abord, vous devez vous occuper de toujours laisser votre base de données
 
 Ensuite, vous ne devez jamais lier les transactions de base de données pour les événements unload _(déchargement_). Si l'événement unload est déclenché par la fermeture du navigateur, toutes les transactions créées dans le gestionnaire d'événements unload ne seront jamais terminées. Une approche intuitive, pour le maintien de certaines informations dans les sessions du navigateur, est de le lire à partir de la base de données, lorsque le navigateur (ou une page particulière) est ouvert, le mettre à jour à mesure que l'utilisateur interagit avec le navigateur, puis l'enregistrer dans la base de données lorsque le navigateur ( ou page) se ferme. Cependant, cela ne fonctionne pas. Les transactions de la base de données sont créées dans le gestionnaire d'événements unload, mais comme elles sont asynchrones, elles sont interrompues avant qu'elles puissent s'exécuter.
 
-En fait, il n'y a aucun moyen de garantir que les transactions IndexedDB seront terminées, même avec un arrêt normal du navigateur. Voir {{bug (870645)}}. Comme solution de rechange pour cette notification d'arrêt normal, vous pouvez suivre vos transactions et ajouter un événement `beforeunload` pour avertir l'utilisateur si des transactions ne sont pas encore terminées au moment du déchargement.
+En fait, il n'y a aucun moyen de garantir que les transactions IndexedDB seront terminées, même avec un arrêt normal du navigateur. Voir le [bug Firefox 870645](https://bugzil.la/870645). Comme solution de rechange pour cette notification d'arrêt normal, vous pouvez suivre vos transactions et ajouter un événement `beforeunload` pour avertir l'utilisateur si des transactions ne sont pas encore terminées au moment du déchargement.
 
 Au-moins, avec l'ajout des notifications d'annulation et {{domxref ("IDBDatabase.onclose")}}, vous pouvez savoir quand cela s'est produit.
 

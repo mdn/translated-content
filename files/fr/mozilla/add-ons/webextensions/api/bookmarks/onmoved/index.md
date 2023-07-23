@@ -1,16 +1,6 @@
 ---
 title: bookmarks.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onMoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
 ---
 
@@ -21,9 +11,9 @@ Lancé lorsqu'un signet ou un dossier est déplacé vers un autre dossier parent
 ## Syntaxe
 
 ```js
-browser.bookmarks.onMoved.addListener(listener)
-browser.bookmarks.onMoved.removeListener(listener)
-browser.bookmarks.onMoved.hasListener(listener)
+browser.bookmarks.onMoved.addListener(listener);
+browser.bookmarks.onMoved.removeListener(listener);
+browser.bookmarks.onMoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

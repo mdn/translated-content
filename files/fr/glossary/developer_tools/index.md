@@ -1,13 +1,7 @@
 ---
 title: Outils de développement
 slug: Glossary/Developer_Tools
-tags:
-  - Encodage
-  - Glossaire
-  - débogage
-  - outils de développement
 translation_of: Glossary/Developer_Tools
-original_slug: Glossaire/Developer_Tools
 ---
 
 Les outils de développement sont des programmes qui permettent à un développeur de créer, tester et {{Glossary("debug","déboguer")}} un logiciel.
@@ -18,7 +12,7 @@ Les navigateurs courants fournissent des outils de développement intégrés, qu
 
 ### Culture générale
 
-- [Environnement de développement](https://fr.wikipedia.org/wiki/Environnement_de_d%C3%A9veloppement) sur Wikipédia
+- [Environnement de développement](https://fr.wikipedia.org/wiki/Environnement_de_développement) sur Wikipédia
 
 ### Références techniques
 

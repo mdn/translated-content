@@ -13,21 +13,26 @@ En SVG, el elemento \<a> es un contenedor, es decir, puede crear un enlace alred
 
 ```css hidden
 @namespace svgns url(http://www.w3.org/2000/svg);
-html,body,svg { height:100% }
+html,
+body,
+svg {
+  height: 100%;
+}
 ```
 
 ```html
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- Un vínculo alrededor de una forma -->
   <a href="https://developer.mozilla.org/docs/Web/SVG/Element/circle">
-    <circle cx="50" cy="40" r="35"/>
+    <circle cx="50" cy="40" r="35" />
   </a>
 
   <!-- Un vínculo alrededor de una forma -->
   <a href="https://developer.mozilla.org/docs/Web/SVG/Element/circle">
-    <text x="50" y="90" text-anchor="middle">
-      &lt;circle&gt;
-    </text>
+    <text x="50" y="90" text-anchor="middle">&lt;circle&gt;</text>
   </a>
 </svg>
 ```
@@ -47,7 +52,8 @@ svgns|a text {
   text-decoration: underline;
 }
 
-svgns|a:hover, svgns|a:active {
+svgns|a:hover,
+svgns|a:active {
   outline: dotted 1px blue;
 }
 ```
@@ -58,28 +64,28 @@ svgns|a:hover, svgns|a:active {
 
 ## Atributos
 
-- {{htmlattrxref("download", "a")}} {{experimental_inline}}
+- [`download`](/es/docs/Web/HTML/Element/a#download) {{experimental_inline}}
   - : Este atributo indica a los navegadores que descarguen un {{Glossary ( "URL ")}} en lugar de desplazarse a él, por lo que se le pedirá al usuario que lo guarde como un archivo local.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("href")}}
   - : Este atributo contiene el {{Glossary ( "URL ")}} o el fragmento de URL al que apunta el hipervínculo.
     _Value type_: **[\<URL>](/docs/Web/SVG/Content_type#URL)** ; _Default value_: _none_; _Animatable_: **yes**
-- {{htmlattrxref("hreflang", "a")}}
+- [`hreflang`](/es/docs/Web/HTML/Element/a#hreflang)
   - : This attribute contains the URL or URL fragment that the hyperlink points to.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
-- {{htmlattrxref("ping", "a")}} {{experimental_inline}}
+- [`ping`](/es/docs/Web/HTML/Element/a#ping) {{experimental_inline}}
   - : Este atributo contiene una lista de direcciones URL separadas por espacios a las que, cuando se sigue el hipervínculo, las solicitudes [`POST`](/es/docs/Web/HTTP/Methods/POST) con el cuerpo `PING` serán enviadas por el navegador (en segundo plano). Normalmente se utiliza para el seguimiento. Para obtener una característica más ampliamente admitida que aborde los mismos casos de uso, consulte [Navigator.sendBeacon()](/es/docs/Web/API/Navigator/sendBeacon).
     _Value type_: **[\<list-of-URLs>](/docs/Web/SVG/Content_type#List-of-Ts)** ; _Default value_: _none_; _Animatable_: **no**
-- {{htmlattrxref("referrerpolicy", "a")}} {{experimental_inline}}
+- [`referrerpolicy`](/es/docs/Web/HTML/Element/a#referrerpolicy) {{experimental_inline}}
   - : Este atributo indica qué [referrer](/es/docs/Web/HTTP/Headers/Referer) se enviará al obtener {{Glossary("URL")}}.
     _Value type_: `no-referrer`|`no-referrer-when-downgrade`|`same-origin`|`origin`|`strict-origin`|`origin-when-cross-origin`|`strict-origin-when-cross-origin`|`unsafe-url` ; _Default value_: _none_; _Animatable_: **no**
-- {{htmlattrxref("rel", "a")}} {{experimental_inline}}
+- [`rel`](/es/docs/Web/HTML/Element/a#rel) {{experimental_inline}}
   - : Este atributo especifica la relación del objeto de destino con el vínculado.
     _Value type_: **[\<list-of-Link-Types>](/docs/Web/HTML/Link_types)** ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("target")}}
   - : Este atributo especifica dónde mostrar el {{Glossary("URL")}}.
     _Value type_: `_self`|`_parent`|`_top`|`_blank`|**\<name>** ; _Default value_: `_self`; _Animatable_: **yes**
-- {{htmlattrxref("type", "a")}}
+- [`type`](/es/docs/Web/HTML/Element/a#type)
   - : Este atributo especifica el tipo de medio en forma de un {{Glossary ( "tipo MIME ")}} para la dirección URL vinculada.
     _Value type_: **\<string>** ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}

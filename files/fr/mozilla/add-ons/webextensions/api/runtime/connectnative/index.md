@@ -1,16 +1,6 @@
 ---
 title: runtime.connectNative()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - connectNative
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/connectNative
 ---
 
@@ -22,8 +12,8 @@ Pour plus d'informations, voir [messagerie native](/fr/Add-ons/WebExtensions/Nat
 
 ```js
 var port = browser.runtime.connectNative(
-  application // string
-)
+  application, // string
+);
 ```
 
 ### Paramètres

@@ -2,7 +2,6 @@
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
 translation_of: Web/CSS/border-bottom-style
-browser-compat: css.properties.border-bottom-style
 ---
 
 {{CSSRef}}

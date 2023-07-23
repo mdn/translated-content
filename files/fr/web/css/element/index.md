@@ -1,12 +1,7 @@
 ---
 title: element
 slug: Web/CSS/element
-tags:
-  - CSS
-  - Fonction
-  - Reference
 translation_of: Web/CSS/element()
-original_slug: Web/CSS/element()
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -26,7 +21,7 @@ element(id)
 ### Paramètres
 
 - **`id`**
-  - : L'identifiant (correspondant à l'attribut {{htmlattrxref("id")}}) de l'élément HTML visé.
+  - : L'identifiant (correspondant à l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id)) de l'élément HTML visé.
 
 ## Exemples
 

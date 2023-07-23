@@ -1,11 +1,6 @@
 ---
 title: event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Propriété
 translation_of: Web/API/Event/defaultPrevented
 ---
 
@@ -15,7 +10,7 @@ translation_of: Web/API/Event/defaultPrevented
 
 Retourne un booléen indiquant si {{domxref("event.preventDefault()")}} a été appelée sur l'évènement ou non.
 
-> **Note :** Cette propriété doit etre utilisée au lieu de la méthode `getPreventDefault()` qui n'est pas standard et est désormais dépréciée (voir {{bug(691151)}}).
+> **Note :** Cette propriété doit etre utilisée au lieu de la méthode `getPreventDefault()` qui n'est pas standard et est désormais dépréciée (voir [bug Firefox 691151](https://bugzil.la/691151)).
 
 ## Syntaxe
 

@@ -1,11 +1,6 @@
 ---
 title: '<var> : l''élément de variable'
 slug: Web/HTML/Element/var
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/var
 ---
 

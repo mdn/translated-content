@@ -1,9 +1,6 @@
 ---
 title: Live streaming web Audio et Vidéo
 slug: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
-tags:
-  - Guide
-  - Streaming adaptatif
 translation_of: Web/Guide/Audio_and_video_delivery/Live_streaming_web_audio_and_video
 ---
 
@@ -63,7 +60,7 @@ Par exemple:
 
 ```html
 <video src="rtsp://myhost.com/mymedia.format">
- <!-- Fallback here -->
+  <!-- Fallback here -->
 </video>
 ```
 

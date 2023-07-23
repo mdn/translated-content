@@ -1,15 +1,6 @@
 ---
 title: menus.refresh()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/refresh
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - menus
-  - refresh
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/refresh
 ---
 
@@ -28,7 +19,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-browser.menus.refresh()
+browser.menus.refresh();
 ```
 
 ### Paramètres
@@ -50,12 +41,12 @@ Cet exemple permet d'afficher le menu contextuel sur un lien, puis met à jour l
 ```js
 function updateMenuItem(linkHostname) {
   browser.menus.update(openLabelledId, {
-    title: `Open (${linkHostname})`
+    title: `Open (${linkHostname})`,
   });
   browser.menus.refresh();
 }
 
-browser.menus.onShown.addListener(info => {
+browser.menus.onShown.addListener((info) => {
   if (!info.linkUrl) {
     return;
   }

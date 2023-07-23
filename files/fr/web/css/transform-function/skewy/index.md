@@ -2,7 +2,6 @@
 title: skewY()
 slug: Web/CSS/transform-function/skewY
 translation_of: Web/CSS/transform-function/skewY()
-browser-compat: css.types.transform-function.skewY
 ---
 
 {{CSSRef}}

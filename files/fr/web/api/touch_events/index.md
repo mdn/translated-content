@@ -2,8 +2,6 @@
 title: Évènements tactiles
 slug: Web/API/Touch_events
 translation_of: Web/API/Touch_events
-original_slug: Web/Guide/DOM/Events/Touch_events
-browser-compat: api.Touch
 ---
 
 {{DefaultAPISidebar("Touch Events")}}

@@ -1,16 +1,6 @@
 ---
 title: Locale-specific message reference
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
-tags:
-  - Internationalization
-  - Localization
-  - Reference
-  - String
-  - WebExtensions
-  - i18n
-  - message
-  - messages.json
-  - placeholders
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
 ---
 
@@ -45,9 +35,9 @@ Le code suivant montre un exemple de fichier `messages.json file`, tiré de notr
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }

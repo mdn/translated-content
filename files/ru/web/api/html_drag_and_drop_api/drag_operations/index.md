@@ -19,7 +19,7 @@ original_slug: Web/Guide/HTML/Drag_and_drop/Drag_operations
 
 Для перетаскивания других HTML-элементов, должны быть выполнены три пункта :
 
-1. Установить `{{htmlattrxref("draggable")}}="true"` на элемент, который вы хотите сделать перетаскиваемым.
+1. Установить `[`draggable`](/ru/docs/Web/HTML/Global_attributes#draggable)="true"` на элемент, который вы хотите сделать перетаскиваемым.
 2. Добавить обработчик события `{{event("dragstart")}}`.
 3. [Установить данные перетаскивания](/ru/docs/Web/API/DataTransfer/setData) в обработчик выше.
 
@@ -31,9 +31,9 @@ original_slug: Web/Guide/HTML/Drag_and_drop/Drag_operations
 </p>
 ```
 
-Атрибут `{{htmlattrxref("draggable")}}` установлен в `"true"`, т.о. этот элемент становится перетаскиваемым. Если этот атрибут был опущен или установлен в `"false"`, то элемент не может быть перенесён, и вместо этого будет выбран текст.
+Атрибут `[`draggable`](/ru/docs/Web/HTML/Global_attributes#draggable)` установлен в `"true"`, т.о. этот элемент становится перетаскиваемым. Если этот атрибут был опущен или установлен в `"false"`, то элемент не может быть перенесён, и вместо этого будет выбран текст.
 
-Атрибут `{{htmlattrxref("draggable")}}` может быть использован для любого элемента, включая изображения и ссылки. Однако, для последних двух, значение по умолчанию - `true`, т.о. вы можете только использовать атрибут `{{htmlattrxref("draggable")}}` со значением `false` для отключение перетаскивания этих элементов.
+Атрибут `[`draggable`](/ru/docs/Web/HTML/Global_attributes#draggable)` может быть использован для любого элемента, включая изображения и ссылки. Однако, для последних двух, значение по умолчанию - `true`, т.о. вы можете только использовать атрибут `[`draggable`](/ru/docs/Web/HTML/Global_attributes#draggable)` со значением `false` для отключение перетаскивания этих элементов.
 
 > **Примечание:** Когда элемент становится перетаскиваемыми, текст или другие элементы в нем больше не могут быть выбраны обычным способом, щёлкая и перетаскивая мышью. Вместо этого пользователь должен удерживать клавишу <kbd>Alt</kbd> чтобы выбрать текст с помощью мыши или клавиатуры.
 
@@ -59,11 +59,11 @@ original_slug: Web/Guide/HTML/Drag_and_drop/Drag_operations
 
 Когда происходит перетаскивание, данные должны быть связаны с перетаскиванием, которое определяет, что перетаскивается. Например, при перетаскивании выделенного текста в текстовое поле данные, связанные с элементом данных перетаскивания, являются самим текстом. Аналогично, при перетаскивании ссылки на веб-странице элемент данных перетаскивания является URL-адресом ссылки.
 
-{{domxref("DataTransfer","drag data")}} содержит два параметра, **тип** (или формат) данных, и **значение** данных. Формат это строковый тип (такой как [`text/plain`](/en-US/docs/DragDrop/Recommended_Drag_Types#text) текстовых данных), значение - строка текста. Когда начинается перетаскивание, вы добавляете данные, предоставляя тип и данные. Во время перетаскивания в обработчике события для событий `{{event("dragenter")}}` и `{{event("dragover")}}` , вы используете типы данных перетаскиваемых данных, чтобы проверить, разрешено ли удаление. Например, цель drop, которая принимает ссылки, будет проверять тип [`text/uri-list`](/en-US/docs/DragDrop/Recommended_Drag_Types#link). В течение события drop, обработчик будет получать данные тащат и вставить его на место.
+{{domxref("DataTransfer","drag data")}} содержит два параметра, **тип** (или формат) данных, и **значение** данных. Формат это строковый тип (такой как [`text/plain`](/ru/docs/DragDrop/Recommended_Drag_Types#text) текстовых данных), значение - строка текста. Когда начинается перетаскивание, вы добавляете данные, предоставляя тип и данные. Во время перетаскивания в обработчике события для событий `{{event("dragenter")}}` и `{{event("dragover")}}` , вы используете типы данных перетаскиваемых данных, чтобы проверить, разрешено ли удаление. Например, цель drop, которая принимает ссылки, будет проверять тип [`text/uri-list`](/ru/docs/DragDrop/Recommended_Drag_Types#link). В течение события drop, обработчик будет получать данные тащат и вставить его на место.
 
-Свойство {{domxref("DataTransfer","drag data's")}} {{domxref("DataTransfer.types","types")}} возвращает список MIME-типов {{domxref("DOMString")}}, таких как [`text/plain`](/en-US/docs/DragDrop/Recommended_Drag_Types#text) или [`image/jpeg`](/en-US/docs/DragDrop/Recommended_Drag_Types#image). Вы также можете создавать свои собственные типы. Большинство основные используемых типов описаны в [Recommended Drag Types](/ru/docs/DragDrop/Recommended_Drag_Types).
+Свойство {{domxref("DataTransfer","drag data's")}} {{domxref("DataTransfer.types","types")}} возвращает список MIME-типов {{domxref("DOMString")}}, таких как [`text/plain`](/ru/docs/DragDrop/Recommended_Drag_Types#text) или [`image/jpeg`](/ru/docs/DragDrop/Recommended_Drag_Types#image). Вы также можете создавать свои собственные типы. Большинство основные используемых типов описаны в [Recommended Drag Types](/ru/docs/DragDrop/Recommended_Drag_Types).
 
-Перетаскивание может включать элементы данных нескольких различных типов. Это позволяет предоставлять данные в более специфических типах, часто пользовательских, но по предоставляет резервные данные для drop, которые не поддерживают более специфические типы. Как правило, наименее специфичным типом будут обычные текстовые данные, использующие тип [`text/plain`](/en-US/docs/DragDrop/Recommended_Drag_Types#text). Эти данные будут простым текстовым представлением.
+Перетаскивание может включать элементы данных нескольких различных типов. Это позволяет предоставлять данные в более специфических типах, часто пользовательских, но по предоставляет резервные данные для drop, которые не поддерживают более специфические типы. Как правило, наименее специфичным типом будут обычные текстовые данные, использующие тип [`text/plain`](/ru/docs/DragDrop/Recommended_Drag_Types#text). Эти данные будут простым текстовым представлением.
 
 Установка элементов drag-данных {{domxref("DragEvent.dataTransfer","dataTransfer")}}, используя метод {{domxref("DataTransfer.setData","setData()")}}. Требуется два аргумента: тип данных и значение данных. Например:
 
@@ -71,7 +71,7 @@ original_slug: Web/Guide/HTML/Drag_and_drop/Drag_operations
 event.dataTransfer.setData("text/plain", "Text to drag");
 ```
 
-Здесь, значение - "Text to drag", формат - [`text/plain`](/en-US/docs/DragDrop/Recommended_Drag_Types#text).
+Здесь, значение - "Text to drag", формат - [`text/plain`](/ru/docs/DragDrop/Recommended_Drag_Types#text).
 
 Вы можете предусмотреть данные в нескольких форматах. Сделаем это, вызовем метод {{domxref("DataTransfer.setData","setData()")}} несколько раз с различными форматами. Вы должны вызывать его с форматами от большей специфичности к меньшей.
 
@@ -86,7 +86,7 @@ dt.setData("text/plain", "https://www.mozilla.org");
 
 Предоставляя данные и в других типах, мы также можем поддерживать перетаскивание в другие приложения в менее специфичных формах. Тип `application/x.bookmark` может предоставлять данные с более подробной информацией для использования в приложении, в то время как другие типы могут включать только один URL-адрес или текстовую версию.
 
-Обратите внимание, что и [`text/uri-list`](/en-US/docs/DragDrop/Recommended_Drag_Types#link) и [`text/plain`](/en-US/docs/DragDrop/Recommended_Drag_Types#text) содержат одни и те же данные в этом примере. Это часто бывает так, но это не обязательно.
+Обратите внимание, что и [`text/uri-list`](/ru/docs/DragDrop/Recommended_Drag_Types#link) и [`text/plain`](/ru/docs/DragDrop/Recommended_Drag_Types#text) содержат одни и те же данные в этом примере. Это часто бывает так, но это не обязательно.
 
 Если вы попытаетесь добавить данные дважды с тем же форматом, новые данные заменят старые данные, но в той же позиции в списке типов, что и старые данные.
 
@@ -208,7 +208,7 @@ function doDragOver(event) {
 }
 ```
 
-В этом примере мы используем метод `includes` чтобы проверить, присутствует ли тип [`text/uri-list`](/en-US/docs/DragDrop/Recommended_Drag_Types#link) в списке типов. Если это так, мы отменим событие, так что сброс становится разрешён. Если перетаскиваемые данные не содержат ссылки, событие не будет отменено, и сброс не может произойти в этом месте.
+В этом примере мы используем метод `includes` чтобы проверить, присутствует ли тип [`text/uri-list`](/ru/docs/DragDrop/Recommended_Drag_Types#link) в списке типов. Если это так, мы отменим событие, так что сброс становится разрешён. Если перетаскиваемые данные не содержат ссылки, событие не будет отменено, и сброс не может произойти в этом месте.
 
 Вы также можете установить либо свойство {{domxref("DataTransfer.effectAllowed","effectAllowed")}}, либо свойство{{domxref("DataTransfer.dropEffect","dropEffect")}}, либо оба одновременно, если вы хотите указать более конкретные сведения о типе операции, которая будет выполнена. Естественно, изменение любого свойства не будет иметь никакого эффекта, если вы не отмените событие.
 
@@ -260,7 +260,7 @@ In the example here, once the data has been retrieved, we insert the string as t
 
 In a web page, you should call the {{domxref("Event.preventDefault","preventDefault()")}} method of the event if you have accepted the drop, so that the browser's default handling is not triggered by the dropped data as well. For example, when a link is dragged to a web page, Firefox will open the link. By cancelling the event, this behavior will be prevented.
 
-You can retrieve other types of data as well. If the data is a link, it should have the type [`text/uri-list`](/en-US/docs/DragDrop/Recommended_Drag_Types#link). You could then insert a link into the content.
+You can retrieve other types of data as well. If the data is a link, it should have the type [`text/uri-list`](/ru/docs/DragDrop/Recommended_Drag_Types#link). You could then insert a link into the content.
 
 ```js
 function doDrop(event) {
@@ -276,7 +276,7 @@ function doDrop(event) {
 }
 ```
 
-This example inserts a link from the dragged data. As the name implies, the [`text/uri-list`](/en-US/docs/DragDrop/Recommended_Drag_Types#link) type actually may contain a list of URLs, each on a separate line. The above code uses [`split`](/en-US/docs/JavaScript/Reference/Global_Objects/String/split) to break the string into lines, then iterates over the list of lines, and inserts each as a link into the document. (Note also that links starting with a number sign (`#`) are skipped, as these are comments.)
+This example inserts a link from the dragged data. As the name implies, the [`text/uri-list`](/ru/docs/DragDrop/Recommended_Drag_Types#link) type actually may contain a list of URLs, each on a separate line. The above code uses [`split`](/ru/docs/JavaScript/Reference/Global_Objects/String/split) to break the string into lines, then iterates over the list of lines, and inserts each as a link into the document. (Note also that links starting with a number sign (`#`) are skipped, as these are comments.)
 
 For simple cases, you can use the special type `URL` just to retrieve the first valid URL in the list. For example:
 

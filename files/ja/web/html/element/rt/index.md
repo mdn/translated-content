@@ -1,21 +1,49 @@
 ---
-title: '<rt>: ルビ文字列要素'
+title: "<rt>: ルビテキスト要素"
 slug: Web/HTML/Element/rt
+l10n:
+  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
 {{HTMLSidebar}}
 
-**HTML のルビ文字列 (`<rt>`) 要素**は、ルビによる注釈（振り仮名）のルビ文字列の部分を定義し、東アジアの組版において発音、翻訳、音写などの情報を提供するために使用します。 `<rt>` 要素は常に {{HTMLElement("ruby")}} 要素の中で使用されます。
+**`<rt>`** は [HTML](/ja/docs/Web/HTML) の要素で、ルビによる注釈（振り仮名）のルビテキストの部分を指定子します。東アジアの組版において発音、翻訳、音写などの情報を提供するために使用します。 `<rt>` 要素は常に {{HTMLElement("ruby")}} 要素の中で使用されます。
 
 {{EmbedInteractiveExample("pages/tabbed/rt.html", "tabbed-shorter")}}
 
 より多くの例については {{HTMLElement("ruby")}} 要素についての記事を参照してください。
 
+## 属性
+
+この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
+
+## 例
+
+### ルビ注釈の使用
+
+この例では、 {{HTMLElement("ruby")}} 要素内の漢字にローマ字表記を提供します。
+
+```html
+<ruby> 漢 <rt>Kan</rt> 字 <rt>ji</rt> </ruby>
+```
+
+```css hidden
+body {
+  font-size: 22px;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
+
+## 技術的概要
+
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a>
+        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>なし</td>
     </tr>
@@ -30,7 +58,7 @@ slug: Web/HTML/Element/rt
     <tr>
       <th scope="row">タグの省略</th>
       <td>
-        {{HTMLElement("rt")}} 要素の直後に {{HTMLElement("rt")}}
+        <code>&#x3C;rt></code> 要素の直後に <code>&#x3C;rt></code>
         要素または {{HTMLElement("rp")}}
         要素がある場合、または親要素内に他のコンテンツがない場合は終了タグを省略可能。
       </td>
@@ -57,31 +85,6 @@ slug: Web/HTML/Element/rt
     </tr>
   </tbody>
 </table>
-
-## 属性
-
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
-
-## 例
-
-この例では、 {{HTMLElement("ruby")}} 要素内の漢字にローマ字表記を提供します。
-
-```html
-<ruby>
-  漢 <rt>Kan</rt>
-  字 <rt>ji</rt>
-</ruby>
-```
-
-```css hidden
-body {
-  font-size: 22px;
-}
-```
-
-このブラウザーの出力は次のように見えます。
-
-{{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
 
 ## 仕様書
 

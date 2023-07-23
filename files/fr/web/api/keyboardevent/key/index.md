@@ -1,28 +1,20 @@
 ---
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Lecture-seule
-  - Propriété
-  - Reference
-  - UI Events
 translation_of: Web/API/KeyboardEvent/key
 ---
 
 {{APIRef("DOM Events")}}
 
-La propriété en lecture seule de `key` de l'interface {{domxref("KeyboardEvent")}} retourne la valeur d’une ou plusieurs touches pressées par l’utilisateur, tout en tenant compte de l'état des touches de modification telles que la touche <kbd>Shift</kbd> (_majuscules_) ainsi que les paramètres régionaux des clavier et mise en page. Ce peut être l’une des valeurs suivantes :
+La propriété en lecture seule de `key` de l'interface {{domxref("KeyboardEvent")}} retourne la valeur d'une ou plusieurs touches pressées par l'utilisateur, tout en tenant compte de l'état des touches de modification telles que la touche <kbd>Shift</kbd> (_majuscules_) ainsi que les paramètres régionaux des clavier et mise en page. Ce peut être l'une des valeurs suivantes :
 
 #### Valeurs des touches
 
 Voir une liste complète des [valeurs de touches](/fr/docs/Web/API/KeyboardEvent/key/Key_Values)
 
-- Si la valeur a une représentation d’impression, ce sera une chaîne de caractères Unicode non vide
+- Si la valeur a une représentation d'impression, ce sera une chaîne de caractères Unicode non vide
 - Si la valeur est une touche de contrôle, une des [valeurs de touches pré-définies](#Key_values).
-- Si le `KeyboardEvent` est causé par l’appui sur une touche morte, la valeur de la touche sera "`Dead`".
+- Si le `KeyboardEvent` est causé par l'appui sur une touche morte, la valeur de la touche sera "`Dead`".
 - Certaines touches de clavier spécialisées (telles que les touches étendues de contrôle des médias sur les claviers multimédias) ne génèrent pas de codes de touches sous Windows ; à la place, ils déclenchent les événements `WM_APPCOMMAND`. Ces événements sont connectés aux événements de clavier DOM et sont répertoriés parmi les «codes de touche virtuelle» pour Windows, même s'ils ne sont pas réellement des codes de touche.
 - Si la valeur ne peut être identifiée, '`Unidentified`' sera retourné.
 

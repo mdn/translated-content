@@ -1,15 +1,6 @@
 ---
 title: omnibox.setDefaultSuggestion()
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - omnibox
-  - setDefaultSuggestion
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion
 ---
 
@@ -23,8 +14,8 @@ Une fois que l'utilisateur a entré votre mot clé et a commencé à interagir a
 
 ```js
 browser.omnibox.setDefaultSuggestion(
-  suggestion            // object
-)
+  suggestion, // object
+);
 ```
 
 ### Paramètres
@@ -44,7 +35,7 @@ None.
 
 ```js
 browser.omnibox.setDefaultSuggestion({
-  description: "Type the name of a CSS property"
+  description: "Type the name of a CSS property",
 });
 ```
 

@@ -1,13 +1,7 @@
 ---
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/atan
 ---
 
 {{JSRef}}

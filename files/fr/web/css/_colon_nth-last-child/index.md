@@ -1,10 +1,6 @@
 ---
 title: ':nth-last-child'
 slug: Web/CSS/:nth-last-child
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:nth-last-child
 ---
 
@@ -130,7 +126,7 @@ tr:nth-last-child(n+1){
 
 {{EmbedLiveSample('Cas_aux_limites')}}
 
-### Mise en forme selon le nombre d’éléments
+### Mise en forme selon le nombre d'éléments
 
 Il est possible d'utiliser les compteurs pour mettre en forme une liste selon le nombre d'éléments qu'elle contient. Dans l'exemple qui suit, on met les éléments de la liste en rouge si celle-ci contient au moins trois éléments. Pour cela, on combine la pseudo-classe `nth-last-child` et [le sélecteur de voisins généraux (_general sibling combinator_)](/fr/docs/Web/CSS/Sélecteurs_de_voisins_généraux).
 
@@ -163,7 +159,7 @@ li:nth-last-child(n+3) ~ li {
 
 #### Résultat
 
-{{EmbedLiveSample("Mise_en_forme_selon_le_nombre_d’éléments", '100%', 270)}}
+{{EmbedLiveSample("Mise_en_forme_selon_le_nombre_d'éléments", '100%', 270)}}
 
 ## Spécifications
 

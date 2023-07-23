@@ -1,8 +1,6 @@
 ---
 title: translateX()
 slug: Web/CSS/transform-function/translateX
-original_slug: Web/CSS/transform-function/translateX()
-browser-compat: css.types.transform-function.translateX
 ---
 
 {{CSSRef}}

@@ -1,15 +1,6 @@
 ---
 title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensiosn
-  - Reference
-  - WebExtensions
-  - menus
-  - onShown
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onShown
 ---
 
@@ -83,9 +74,9 @@ Firefox rend cet événement disponible via l'espace de noms `contextMenus` ains
 ## Syntaxe
 
 ```js
-browser.menus.onShown.addListener(listener)
-browser.menus.onShown.removeListener(listener)
-browser.menus.onShown.hasListener(listener)
+browser.menus.onShown.addListener(listener);
+browser.menus.onShown.removeListener(listener);
+browser.menus.onShown.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -132,12 +123,12 @@ Cet exemple permet d'afficher le menu contextuel sur un lien, puis met à jour l
 ```js
 function updateMenuItem(linkHostname) {
   browser.menus.update(openLabelledId, {
-    title: `Open (${linkHostname})`
+    title: `Open (${linkHostname})`,
   });
   browser.menus.refresh();
 }
 
-browser.menus.onShown.addListener(info => {
+browser.menus.onShown.addListener((info) => {
   if (!info.linkUrl) {
     return;
   }

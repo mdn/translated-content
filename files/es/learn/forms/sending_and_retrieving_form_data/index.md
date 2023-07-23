@@ -14,12 +14,12 @@ En este artículo se analiza lo que sucede cuando un usuario envía un formulari
       <th scope="row">Requisitos previos:</th>
       <td>
         Conocimientos básicos de informática, una
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML"
           >comprensión de HTML</a
         >
         , y conocimientos básicos de
-        <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> y
-        <a href="/en-US/docs/Learn/Server-side/First_steps"
+        <a href="/es/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> y
+        <a href="/es/docs/Learn/Server-side/First_steps"
           >programación del lado del servidor</a
         >
         .
@@ -50,39 +50,39 @@ En el lado del cliente, un formulario HTML no es más que una manera fácil de u
 
 > **Nota:** Para tener una mejor idea de cómo funcionan las arquitecturas cliente-servidor, lea nuestra [programación de páginas web del lado del servidor, módulo: primeros pasos](/es/docs/Learn/Server-side/First_steps). En el lado del cliente: Debes definir como envías los datos.
 
-El elemento {{HTMLElement ( "form")}} define cómo se enviarán los datos. Todos sus atributos están diseñados para que pueda configurar la solicitud que se enviará cuando un usuario pulsa un botón de envío. Los dos atributos más importantes son {{htmlattrxref ( "acción", "forma")}} y {{htmlattrxref ( "método", "forma")}}.
+El elemento {{HTMLElement ( "form")}} define cómo se enviarán los datos. Todos sus atributos están diseñados para que pueda configurar la solicitud que se enviará cuando un usuario pulsa un botón de envío. Los dos atributos más importantes son [`acción`](/es/docs/Web/HTML/Element/forma#acción) y [`método`](/es/docs/Web/HTML/Element/forma#método).
 
-#### El atributo {{htmlattrxref ( "acción", "forma")}}.
+#### El atributo [`acción`](/es/docs/Web/HTML/Element/forma#acción)
 
 Este atributo define el lugar donde los datos se envian. Su valor debe ser una dirección URL válida. Si no se proporciona este atributo, los datos serán enviados a la dirección URL de la página que contiene el formulario.
 
 En este ejemplo, los datos se envían a una dirección URL absoluta - `http://foo.com`:
 
 ```html
-<form action="http://foo.com">
+<form action="http://foo.com"></form>
 ```
 
-<p>Aquí, nosotros usamos una URL relativa - los datos se envían a una dirección URL diferente en el servidor:</p>
+Aquí, nosotros usamos una URL relativa - los datos se envían a una dirección URL diferente en el servidor:
 
 ```html
-<form action="/ somewhere_else">
+<form action="/somewhere_else"></form>
 ```
 
-<p>Cuando se especifica sin atributos, como abajo, el {{HTMLElement ( "form")}} los datos se envían a la misma página en que la "forma" está presente :</p>
+Cuando se especifica sin atributos, como abajo, el {{HTMLElement ( "form")}} los datos se envían a la misma página en que la "forma" está presente :
 
 ```html
-<form>
+<form></form>
 ```
 
-<p>Muchas páginas más antiguas utilizan la siguiente notación para indicar que los datos deben ser enviados a la misma página que contiene el formulario; Esto fue necesario porque hasta HTML5, el atributo {{htmlattrxref ( "acción", "form")}} fue requerido . Esto ya no es necesario.</p>
+Muchas páginas más antiguas utilizan la siguiente notación para indicar que los datos deben ser enviados a la misma página que contiene el formulario; Esto fue necesario porque hasta HTML5, el atributo [`acción`](/es/docs/Web/HTML/Element/form#acción) fue requerido . Esto ya no es necesario.
 
 ```html
-<form action="#">
+<form action="#"></form>
 ```
 
-> **Nota:** Es posible especificar una dirección URL que utiliza el protocolo HTTPS (HTTP seguro). Al hacer esto, los datos se cifran junto con el resto de la solicitud, incluso si el propio formulario está alojado en una página insegura se accede a través de HTTPS. Por otro lado, si el formulario está alojado en una página segura, pero se especifica una dirección URL HTTP insegura con el atributo {{htmlattrxref ( "acción", "form")}} , todos los navegadores mostrarán una advertencia de seguridad para el usuario cada vez que intenten enviar datos, ya que estos no se pueden cifrar.
+> **Nota:** Es posible especificar una dirección URL que utiliza el protocolo HTTPS (HTTP seguro). Al hacer esto, los datos se cifran junto con el resto de la solicitud, incluso si el propio formulario está alojado en una página insegura se accede a través de HTTPS. Por otro lado, si el formulario está alojado en una página segura, pero se especifica una dirección URL HTTP insegura con el atributo [`acción`](/es/docs/Web/HTML/Element/form#acción) , todos los navegadores mostrarán una advertencia de seguridad para el usuario cada vez que intenten enviar datos, ya que estos no se pueden cifrar.
 
-#### El atributo {{htmlattrxref ( "método", "form")}}
+#### El atributo [`método`](/es/docs/Web/HTML/Element/form#método)
 
 Este atributo define cómo se envían los datos. El [protocolo HTTP](/es/docs/HTTP) proporciona varias formas de realizar una solicitud; Los datos del formulario HTML se pueden transmitir a través de un número de diferentes queridos, los más comunes de los cuales son el método `GET` y el método `POST`.
 
@@ -98,14 +98,14 @@ Considere la siguiente forma:
 <form action="http://foo.com" method="get">
   <div>
     <label for="decir"> ¿Qué saludo quiere decir? </label>
-    <input name="decir" id="decir" value="Hola">
+    <input name="decir" id="decir" value="Hola" />
   </div>
   <div>
     <label for="para"> ¿A quién se lo quiere decir? </label>
-    <input name="para" value="mamá">
+    <input name="para" value="mamá" />
   </div>
   <div>
-    <button> enviar mis saludos </button>
+    <button>enviar mis saludos</button>
   </div>
 </form>
 ```
@@ -132,20 +132,20 @@ Anfitrión: foo.com
 
 El `POST` método es un poco diferente. Es el método que el navegador utiliza para comunicarse con el servidor cuando se pide una respuesta que tenga en cuenta los datos proporcionados en el cuerpo de la petición HTTP: "Hey servidor, echa un vistazo a estos datos y envíame de vuelta un resultado apropiado." Si un formulario se envía utilizando este método, los datos se anexan al cuerpo de la petición HTTP.
 
-Veamos un ejemplo - se trata de algo similar a como se vió en el método `GET` del apartado anterior, pero con el {{htmlattrxref ( "método", "form")}} atributo establecido `post`.
+Veamos un ejemplo - se trata de algo similar a como se vió en el método `GET` del apartado anterior, pero con el [`método`](/es/docs/Web/HTML/Element/form#método) atributo establecido `post`.
 
 ```html
 <form action="http://foo.com" method="post">
   <div>
-    <label for="dice"> Lo saludo qué quiere decir? </ Label>
-    <input name="decir" id="decir" value="Hola">
+    <label for="dice"> Lo saludo qué quiere decir? </label>
+    <input name="decir" id="decir" value="Hola" />
   </div>
   <div>
-    <Label for="para"> ¿Quién usted quiere decir que a? </ Label>
-    <Input name="a" value="mamá">
+    <label for="para"> ¿Quién usted quiere decir que a? </label>
+    <input name="a" value="mamá" />
   </div>
   <div>
-    <button> enviar mis saludos</button>
+    <button>enviar mis saludos</button>
   </div>
 </form>
 ```
@@ -247,14 +247,14 @@ Vale la pena señalar que incluso el uso de estos marcos, trabajar con formulari
 
 El envío de archivos con formularios HTML es un caso especial. Los archivos son datos binarios - o considerados como tal - mientras que todos los demás datos son datos de texto. Debido a que HTTP es un protocolo de texto, existen requisitos especiales para el manejo de datos binarios.
 
-### El {{htmlattrxref ( "enctype", "form")}} atributo
+### El [`enctype`](/es/docs/Web/HTML/Element/form#enctype) atributo
 
 Este atributo le permite especificar el valor de la cabecera `Content-Type` HTTP incluido en la solicitud que se genera cuando se envía el formulario. Esta cabecera es muy importante porque le dice al servidor qué tipo de datos se está enviando. Por defecto, su valor es `application/x-www-form-urlencoded`. En términos humanos, esto significa: "Estos son datos de formulario que han sido codificados dentro de los parámetros de la URL."
 
 Si desea enviar archivos, es necesario tomar tres pasos adicionales:
 
-- Ajuste el {{htmlattrxref ( "método", "form")}} atributo `POST` porque el contenido del archivo no se puede poner dentro de los parámetros de URL.
-- Establecer el valor de {{htmlattrxref("enctype", "form")}} que `multipart/form-data` debido a que los datos se dividen en múltiples partes, una para cada archivo más uno para los datos de texto incluidos en el cuerpo del formulario (si también se introduce el texto en la formulario).
+- Ajuste el [`método`](/es/docs/Web/HTML/Element/form#método) atributo `POST` porque el contenido del archivo no se puede poner dentro de los parámetros de URL.
+- Establecer el valor de [`enctype`](/es/docs/Web/HTML/Element/form#enctype) que `multipart/form-data` debido a que los datos se dividen en múltiples partes, una para cada archivo más uno para los datos de texto incluidos en el cuerpo del formulario (si también se introduce el texto en la formulario).
 - Incluir uno o más widgets [selector de archivos](/es/docs/Learn/HTML/Forms/The_native_form_widgets#File_picker) para permitir a los usuarios seleccionar el archivo (s) que será subido.
 
 Por ejemplo:
@@ -262,16 +262,16 @@ Por ejemplo:
 ```html
 <form method="post" enctype="multipart / form-data">
   <div>
-    <Label for="archivo"> Elija un archivo </label>
-    <input type="file" id="file" name="myFile">
+    <label for="archivo"> Elija un archivo </label>
+    <input type="file" id="file" name="myFile" />
   </div>
   <div>
-    <button> Enviar el archivo </button>
+    <button>Enviar el archivo</button>
   </div>
 </form>
 ```
 
-> **Nota:** Algunos navegadores son compatibles con la {{htmlattrxref ( "múltiple", "input")}} atributo en el elemento {{HTMLElement ( "input")}}, lo que permite elegir más de un archivo para subir con un único elemento `<input>` . Cómo el servidor gestiona los archivos realmente depende de la tecnología utilizada en el servidor. Como se mencionó anteriormente, el uso de un marco le hará la vida mucho más fácil.
+> **Nota:** Algunos navegadores son compatibles con la [`múltiple`](/es/docs/Web/HTML/Element/input#múltiple) atributo en el elemento {{HTMLElement ( "input")}}, lo que permite elegir más de un archivo para subir con un único elemento `<input>` . Cómo el servidor gestiona los archivos realmente depende de la tecnología utilizada en el servidor. Como se mencionó anteriormente, el uso de un marco le hará la vida mucho más fácil.
 
 > **Advertencia:** Muchos servidores están configurados con un límite de tamaño para los archivos y las peticiones HTTP con el fin de prevenir el abuso. Es importante comprobar este límite con el administrador del servidor antes de enviar un archivo.
 

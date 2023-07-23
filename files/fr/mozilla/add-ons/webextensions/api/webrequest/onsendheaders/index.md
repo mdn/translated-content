@@ -1,16 +1,6 @@
 ---
 title: webRequest.onSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onSendHeaders
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onSendHeaders
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onSendHeaders
 ---
 
@@ -24,12 +14,12 @@ Cet événement est à titre d'information seulement.
 
 ```js
 browser.webRequest.onSendHeaders.addListener(
-  listener,             // function
-  filter,               //  object
-  extraInfoSpec         //  optional array of strings
-)
-browser.webRequest.onSendHeaders.removeListener(listener)
-browser.webRequest.onSendHeaders.hasListener(listener)
+  listener, // function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.webRequest.onSendHeaders.removeListener(listener);
+browser.webRequest.onSendHeaders.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -142,8 +132,8 @@ function logCookies(e) {
 // "requestHeaders" so we get the headers
 browser.webRequest.onSendHeaders.addListener(
   logCookies,
-  {urls: [targetPage]},
-  ["requestHeaders"]
+  { urls: [targetPage] },
+  ["requestHeaders"],
 );
 ```
 

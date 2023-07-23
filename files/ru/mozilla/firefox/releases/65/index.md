@@ -55,7 +55,7 @@ translation_of: Mozilla/Firefox/Releases/65
 
 - События теперь отправляются на отключённые элементы HTML, то есть элементы {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("select")}} и {{htmlelement("textarea")}} с установленными атрибутами `disabled` ({{bug(329509)}}).
 - Как в Chrome и Safari, удаление атрибута `src` у элемента {{htmlelement("iframe")}} загружает в него `about:blank` ({{bug(1501418)}}) . До этого удаление `src` не влияло на содержимое `iframe`.
-- Добавлена поддержка атрибута {{htmlattrxref("referrerpolicy", "script")}} у элементов {{htmlelement("script")}} ({{bug(1460920)}}).
+- Добавлена поддержка атрибута [`referrerpolicy`](/ru/docs/Web/HTML/Element/script#referrerpolicy) у элементов {{htmlelement("script")}} ({{bug(1460920)}}).
 
 ### CSS
 
@@ -80,7 +80,8 @@ translation_of: Mozilla/Firefox/Releases/65
   - `user-select: all`, установленное на элемент, больше не перекрывает значения `user-select` дочерних элементов. Пример:
 
     ```html
-    <div style="-webkit-user-select: all">All
+    <div style="-webkit-user-select: all">
+      All
       <div style="-webkit-user-select: none">None</div>
     </div>
     ```
@@ -126,7 +127,7 @@ _Без изменений._
 #### События DOM
 
 - За одно событие разрешено не более одного вызова {{domxref("Window.open()")}} ({{bug(675574)}}).
-- События [`keyup`](/en-US/docs/Web/Events/keyup) и [`keydown`](/en-US/docs/Web/Events/keydown) в целях улучшения кроссбраузерной совместимости для пользователей CJKT отныне срабатывают во время композиции IME ({{bug(354358)}}).
+- События [`keyup`](/ru/docs/Web/Events/keyup) и [`keydown`](/ru/docs/Web/Events/keydown) в целях улучшения кроссбраузерной совместимости для пользователей CJKT отныне срабатывают во время композиции IME ({{bug(354358)}}).
 
 #### Веб-воркеры
 

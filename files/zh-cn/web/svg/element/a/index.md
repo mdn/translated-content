@@ -20,7 +20,7 @@ slug: Web/SVG/Element/a
      xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
 
-  <a xlink:href="https://developer.mozilla.org/en-US/docs/SVG"
+  <a xlink:href="https://developer.mozilla.org/zh-CN/docs/SVG"
      target="_blank">
     <rect height="30" width="120" y="0" x="0" rx="15"/>
     <text fill="white" text-anchor="middle"

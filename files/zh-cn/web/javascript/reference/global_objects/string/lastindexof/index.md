@@ -5,72 +5,71 @@ slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 
 {{JSRef}}
 
-**`lastIndexOf()`** 方法返回调用{{jsxref("String")}} 对象的指定值最后一次出现的索引，在一个字符串中的指定位置 `fromIndex`处从后向前搜索。如果没找到这个特定值则返回 -1。
+{{jsxref("String")}} 的 **`lastIndexOf()`** 方法搜索该字符串并返回指定子字符串最后一次出现的索引。它可以接受一个可选的起始位置参数，并返回指定子字符串在小于或等于指定数字的索引中的最后一次出现的位置。
 
-该方法将从尾到头地检索字符串 _str_，看它是否含有子串 _searchValue_。开始检索的位置在字符串的 _fromIndex_ 处或字符串的结尾（没有指定 _fromIndex_ 时）。如果找到一个 _searchValue_，则返回 _searchValue_ 的第一个字符在 _str_ 中的位置。*str*中的字符位置是从 0 开始的。
+{{EmbedInteractiveExample("pages/js/string-lastindexof.html", "shorter")}}
 
 ## 语法
 
-```plain
-str.lastIndexOf(searchValue[, fromIndex])
+```js-nolint
+lastIndexOf(searchString)
+lastIndexOf(searchString, position)
 ```
 
 ### 参数
 
-- `searchValue`
-  - : 一个字符串，表示被查找的值。如果`searchValue`是空字符串，则返回`fromIndex`。
-- `fromIndex`{{optional_inline}}
-  - : 待匹配字符串 searchValue 的开头一位字符从 str 的第 fromIndex 位开始向左回向查找。`fromIndex`默认值是 `+Infinity`。如果 `fromIndex >= str.length` ，则会搜索整个字符串。如果 `fromIndex < 0` ，则等同于 `fromIndex == 0`。
+- `searchString`
+
+  - : 要搜索的子字符串。所有值都会[强制转换为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)，因此如果该参数被省略或传入 `undefined`，`lastIndexOf()` 方法会在字符串中搜索 `"undefined"`，这通常不是你想要的。
+
+- `position` {{optional_inline}}
+
+  - : 该方法返回指定子字符串在小于或等于 `position` 的位置中的最后一次出现的索引，默认为 `+Infinity`。如果 `position` 大于调用字符串的长度，则该方法将搜索整个字符串。如果 `position` 小于 `0`，则行为与 `0` 相同，即该方法只在索引 `0` 处查找指定的子字符串。
+
+    - `'hello world hello'.lastIndexOf('world', 4)` 返回 `-1`——因为虽然子字符串 `world` 在索引 `6` 处出现，但该位置不小于或等于 `4`。
+
+    - `'hello world hello'.lastIndexOf('hello', 99)` 返回 `12`——因为小于或等于 `99` 的位置中，最后一次出现 `hello` 的位置是索引 `12`。
+
+    - `'hello world hello'.lastIndexOf('hello', 0)` 和 `'hello world hello'.lastIndexOf('hello', -5)` 都返回 `0`——因为两者都导致该方法只在索引 `0` 处查找 `hello`。
 
 ### 返回值
 
-返回指定值最后一次出现的索引 (该索引仍是以从左至右 0 开始记数的)，如果没找到则返回 -1。
+如果找到了 `searchString`，则返回最后一次出现的索引，否则返回 `-1`。
 
 ## 描述
 
-字符串中的字符被从左向右索引。首字符的索引（index）是 0，最后一个字符的索引是 `stringName.length - 1`。
+字符串的索引从 0 开始：字符串第一个字符的索引为 `0`，字符串最后一个字符的索引为字符串长度减 1。
 
-```plain
-'canal'.lastIndexOf('a');     // returns 3（没有指明 fromIndex 则从末尾 l 处开始反向检索到的第一个 a 出现在 l 的后面，即 index 为 3 的位置）
-'canal'.lastIndexOf('a', 2);  // returns 1（指明 fromIndex 为 2 则从 n 处反向向回检索到其后面就是 a，即 index 为 1 的位置）
-'canal'.lastIndexOf('a', 0);  // returns -1(指明 fromIndex 为 0 则从 c 处向左回向检索 a 发现没有，故返回 -1)
-'canal'.lastIndexOf('x');     // returns -1
-'canal'.lastIndexOf('c', -5); // returns 0（指明 fromIndex 为 -5 则视同 0，从 c 处向左回向查找发现自己就是，故返回 0）
-'canal'.lastIndexOf('c', 0);  // returns 0（指明 fromIndex 为 0 则从 c 处向左回向查找 c 发现自己就是，故返回自己的索引 0）
-'canal'.lastIndexOf('');      // returns 5
-'canal'.lastIndexOf('', 2);   // returns 2
+```js
+"canal".lastIndexOf("a"); // 返回 3
+"canal".lastIndexOf("a", 2); // 返回 1
+"canal".lastIndexOf("a", 0); // 返回 -1
+"canal".lastIndexOf("x"); // 返回 -1
+"canal".lastIndexOf("c", -5); // 返回 0
+"canal".lastIndexOf("c", 0); // 返回 0
+"canal".lastIndexOf(""); // 返回 5
+"canal".lastIndexOf("", 2); // 返回 2
 ```
-
-> **备注：** `'abab'.lastIndexOf('ab', 2)` 将返回 2 而不是 0，因为 fromIndex 只限制待匹配字符串的开头。
-
-(例如'abadefgabm'.lastIndexOf('ab', 7) 返回 7，虽然查找的'ab'中的 b 已经在 index=8 的位置了从 index=7 的 a 处向左查找仍是能找到自身 a 加上其后连成 ab，因为 fromIndex 指的是待匹配字符串的开头那一个)
 
 ### 区分大小写
 
-`lastIndexOf` 方法区分大小写。例如，下面的表达式返回 -1：
+`lastIndexOf()` 方法区分大小写。例如，以下表达式返回 `-1`：
 
 ```js
-"Blue Whale, Killer Whale".lastIndexOf("blue"); // returns -1
+"Blue Whale, Killer Whale".lastIndexOf("blue"); // 返回 -1
 ```
 
 ## 示例
 
-### 示例：使用 `indexOf` 和 `lastIndexOf`
+### 使用 indexOf() 和 lastIndexOf()
 
-下例使用 `indexOf` 和 `lastIndexOf` 方法来定位字符串 "`Brave new world`" 中的值。
+以下示例使用 {{jsxref("String.prototype.indexOf()", "indexOf()")}} 和 `lastIndexOf()` 在字符串 `"Brave, Brave New World"` 中查找值。
 
 ```js
-var anyString = "Brave new world";
+const anyString = "Brave, Brave New World";
 
-console.log("The index of the first w from the beginning is " + anyString.indexOf("w"));
-// Displays 8
-console.log("The index of the first w from the end is " + anyString.lastIndexOf("w"));
-// Displays 10
-
-console.log("The index of 'new' from the beginning is " + anyString.indexOf("new"));
-// Displays 6
-console.log("The index of 'new' from the end is " + anyString.lastIndexOf("new"));
-// Displays 6
+console.log(anyString.indexOf("Brave")); // 0
+console.log(anyString.lastIndexOf("Brave")); // 7
 ```
 
 ## 规范
@@ -81,7 +80,7 @@ console.log("The index of 'new' from the end is " + anyString.lastIndexOf("new")
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("String.prototype.charAt()")}}
 - {{jsxref("String.prototype.indexOf()")}}

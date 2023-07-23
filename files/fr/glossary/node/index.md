@@ -1,9 +1,6 @@
 ---
 title: Nœud
 slug: Glossary/Node
-tags:
-  - Disambiguation
-  - Glossaire
 translation_of: Glossary/Node
 ---
 

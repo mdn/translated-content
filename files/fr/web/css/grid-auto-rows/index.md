@@ -1,10 +1,6 @@
 ---
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/grid-auto-rows
 ---
 

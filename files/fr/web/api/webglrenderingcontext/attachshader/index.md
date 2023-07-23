@@ -1,9 +1,6 @@
 ---
 title: WebGLRenderingContext.attachShader()
 slug: Web/API/WebGLRenderingContext/attachShader
-tags:
-  - Méthode
-  - WebGL
 translation_of: Web/API/WebGLRenderingContext/attachShader
 ---
 

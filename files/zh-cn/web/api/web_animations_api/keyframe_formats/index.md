@@ -1,11 +1,11 @@
 ---
-title: 关键帧 (Keyframe) 格式
+title: 关键帧格式
 slug: Web/API/Web_Animations_API/Keyframe_Formats
 ---
 
-{{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
+{{DefaultAPISidebar("Web Animations")}}
 
-{{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect()")}}, 和 {{domxref("KeyframeEffect.setKeyframes()")}} 都接受格式为一组关键帧的对象，这种格式有以下几种选项。
+{{domxref("Element.animate()")}}、{{domxref("KeyframeEffect.KeyframeEffect()")}} 和 {{domxref("KeyframeEffect.setKeyframes()")}} 都接受格式为一组关键帧的对象，这种格式有以下几种选项。
 
 ## 语法
 
@@ -100,17 +100,9 @@ slug: Web/API/Web_Animations_API/Keyframe_Formats
 - composite
   - : {{domxref("KeyframeEffect.composite")}} 操作用于将此关键帧中指定的值与基础值组合在一起。如果正在使用在效果上指定的复合操作，则不会出现这种情况。
 
-## 规范
-
-{{Specifications}}
-
-## 浏览器兼容性
-
-{{Compat}}
-
-## 相关推荐
+## 参见
 
 - [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
 - {{domxref("Element.animate()")}}
-- {{domxref("KeyframeEffect.KeyframeEffect()")}}
+- {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
 - {{domxref("KeyframeEffect.setKeyframes()")}}

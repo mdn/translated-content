@@ -7,7 +7,7 @@ slug: Web/API/URL/port
 
 {{AvailableInWorkers}}
 
-## **语法**
+## 语法
 
 ```plain
 string = object.port;
@@ -33,6 +33,6 @@ var result = url.port; // Returns:'80'
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - The {{domxref("URL")}} interface it belongs to.

@@ -267,7 +267,7 @@ Uma solução melhor, é usar os elementos do HTML5 {{htmlelement("figure")}} e 
 
 O elemento {{htmlelement("figcaption")}} informa aos navegadores e à tecnologia de assistência que a legenda descreve o outro conteúdo do elemento {{htmlelement("figure")}}.
 
-> **Nota:** Do ponto de vista da acessibilidade, legendas e {{htmlattrxref('alt','img')}} texto têm papéis distintos. As legendas beneficiam até as pessoas que podem ver a imagem, enquanto {{htmlattrxref('alt','img')}} texto fornece a mesma funcionalidade que uma imagem ausente. Portanto, legendas e `alt` texto não deve apenas dizer a mesma coisa, porque ambos aparecem quando a imagem desaparece. Tente desativar as imagens no seu navegador e veja como fica.
+> **Nota:** Do ponto de vista da acessibilidade, legendas e [`alt`](/pt-BR/docs/Web/HTML/Element/img#alt) texto têm papéis distintos. As legendas beneficiam até as pessoas que podem ver a imagem, enquanto [`alt`](/pt-BR/docs/Web/HTML/Element/img#alt) texto fornece a mesma funcionalidade que uma imagem ausente. Portanto, legendas e `alt` texto não deve apenas dizer a mesma coisa, porque ambos aparecem quando a imagem desaparece. Tente desativar as imagens no seu navegador e veja como fica.
 
 Uma figura não precisa ser uma imagem. É uma unidade de conteúdo independente que:
 

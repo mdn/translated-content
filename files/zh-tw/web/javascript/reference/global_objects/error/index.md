@@ -92,9 +92,9 @@ Usually you create an `Error` object with the intention of raising it using the 
 
 ```js
 try {
-  throw new Error('Whoops!');
+  throw new Error("Whoops!");
 } catch (e) {
-  console.log(e.name + ': ' + e.message);
+  console.log(e.name + ": " + e.message);
 }
 ```
 
@@ -107,9 +107,9 @@ try {
   foo.bar();
 } catch (e) {
   if (e instanceof EvalError) {
-    console.log(e.name + ': ' + e.message);
+    console.log(e.name + ": " + e.message);
   } else if (e instanceof RangeError) {
-    console.log(e.name + ': ' + e.message);
+    console.log(e.name + ": " + e.message);
   }
   // ... etc
 }
@@ -126,9 +126,9 @@ See also the ["What's a good way to extend Error in JavaScript?" discussion on S
 ```js
 // Create a new object, that prototypically inherits from the Error constructor
 function MyError(message) {
-  this.name = 'MyError';
-  this.message = message || 'Default Message';
-  this.stack = (new Error()).stack;
+  this.name = "MyError";
+  this.message = message || "Default Message";
+  this.stack = new Error().stack;
 }
 MyError.prototype = Object.create(Error.prototype);
 MyError.prototype.constructor = MyError;
@@ -136,15 +136,15 @@ MyError.prototype.constructor = MyError;
 try {
   throw new MyError();
 } catch (e) {
-  console.log(e.name);     // 'MyError'
-  console.log(e.message);  // 'Default Message'
+  console.log(e.name); // 'MyError'
+  console.log(e.message); // 'Default Message'
 }
 
 try {
-  throw new MyError('custom message');
+  throw new MyError("custom message");
 } catch (e) {
-  console.log(e.name);     // 'MyError'
-  console.log(e.message);  // 'custom message'
+  console.log(e.name); // 'MyError'
+  console.log(e.message); // 'custom message'
 }
 ```
 

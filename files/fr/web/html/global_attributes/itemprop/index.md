@@ -1,14 +1,7 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Micro-données
-  - Microdata
 translation_of: Web/HTML/Global_attributes/itemprop
-original_slug: Web/HTML/Attributs_universels/itemprop
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -420,8 +413,7 @@ Un exemple sur un livre qu'on décrit avec les différents attributs.
 - [Les différents attributs universels](/fr/docs/Web/HTML/Attributs_universels)
 - Les autres attributs universels relatifs aux microdonnées :
 
-  - {{htmlattrxref("itemid")}}
-  - {{htmlattrxref("itemprop")}}
-  - {{htmlattrxref("itemref")}}
-  - {{htmlattrxref("itemscope")}}
-  - {{htmlattrxref("itemtype")}}
+  - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
+  - [`itemref`](/fr/docs/Web/HTML/Global_attributes#itemref)
+  - [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope)
+  - [`itemtype`](/fr/docs/Web/HTML/Global_attributes#itemtype)

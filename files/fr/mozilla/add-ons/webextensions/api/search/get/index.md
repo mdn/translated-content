@@ -1,14 +1,6 @@
 ---
 title: search.get()
 slug: Mozilla/Add-ons/WebExtensions/API/search/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Search
-  - WebExtensions
-  - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/search/get
 ---
 
@@ -23,7 +15,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var gettingEngines = browser.search.get()
+var gettingEngines = browser.search.get();
 ```
 
 ### Paramètres

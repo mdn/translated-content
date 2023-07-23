@@ -1,11 +1,6 @@
 ---
 title: CSS Images
-slug: Web/CSS/CSS_Images
-tags:
-  - Aperçu
-  - CSS
-  - CSS Images
-  - Reference
+slug: Web/CSS/CSS_images
 translation_of: Web/CSS/CSS_Images
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: TreeWalker.currentNode
 slug: Web/API/TreeWalker/currentNode
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Noeuds
-  - Propriété
 translation_of: Web/API/TreeWalker/currentNode
 ---
 

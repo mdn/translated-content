@@ -1,6 +1,9 @@
 ---
-title: 'HTMLTrackElement: cuechange event'
+title: "HTMLTrackElement: cuechange イベント"
+short-title: cuechange
 slug: Web/API/HTMLTrackElement/cuechange_event
+l10n:
+  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
 {{APIRef("WebVTT")}}
@@ -12,9 +15,9 @@ slug: Web/API/HTMLTrackElement/cuechange_event
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用したり、イベントハンドラープロパティを設定したりしてください。
 
 ```js
-addEventListener('cuechange', (event) => { })
+addEventListener("cuechange", (event) => {});
 
-oncuechange = (event) => { }
+oncuechange = (event) => {};
 ```
 
 ## イベント型

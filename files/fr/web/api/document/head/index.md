@@ -1,10 +1,6 @@
 ---
 title: document.head
 slug: Web/API/Document/head
-tags:
-  - DOM
-  - Document
-  - HTML5
 translation_of: Web/API/Document/head
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: Concepts relatifs au viewport
 slug: Web/CSS/Viewport_concepts
-tags:
-  - CSS
-  - Guide
-  - viewport
 translation_of: Web/CSS/Viewport_concepts
-original_slug: Web/CSS/Concepts_viewport
 ---
 
 {{CSSRef}}
@@ -159,7 +154,6 @@ La propriété `width` contrôle la taille de la zone d'affichage et on l'utilis
 
 ## Voir aussi
 
-- [La règle @ `@viewport`](/fr/docs/Web/CSS/@viewport)
 - [L'API Visual Viewport](/fr/docs/Web/API/Visual_Viewport_API)
 - L'élément {{HTMLElement("meta")}} et notamment `<meta name="viewport">`
 - [L'utilisation de la balise méta `viewport` afin de contrôler la disposition sur les navigateurs mobiles](/fr/docs/Mozilla/Mobile/Balise_meta_viewport)

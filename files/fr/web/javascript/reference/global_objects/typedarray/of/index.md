@@ -1,14 +1,7 @@
 ---
 title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Reference
-  - TypedArray
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/of
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/of
 ---
 
 {{JSRef}}

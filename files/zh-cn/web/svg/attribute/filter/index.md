@@ -3,11 +3,11 @@ title: filter
 slug: Web/SVG/Attribute/filter
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-属性`filter`定义了由{{ SVGElement("filter") }}元素定义滤镜效果，该滤镜效果将应用到该元素上。
+属性 `filter` 定义了由 {{ SVGElement("filter") }} 元素定义滤镜效果，该滤镜效果将应用到该元素上。
 
-作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。请阅读{{ cssxref("filter","CSS filter") }}以了解更多信息。
+作为一个外观属性，它可以直接用作 CSS 样式表内部的属性。请阅读 {{ cssxref("filter","CSS filter") }} 以了解更多信息。
 
 ## 用法
 

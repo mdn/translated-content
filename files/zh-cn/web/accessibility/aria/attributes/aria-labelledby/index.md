@@ -3,7 +3,7 @@ title: Using the aria-labelledby attribute
 slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 ---
 
-### **描述**
+### 描述
 
 [`aria-labelledby`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)属性用来表明某些元素的 id 是某一对象的标签。它被用来确定控件或控件组与它们标签之间的联系。使用诸如屏幕阅读器等辅助技术的用户通常使用 tabbing 在页面的不同区域间进行导航。如果一个输入元素、控件或控件组没有被分配一个 label 标签，那么屏幕阅读器就无法对其进行阅读。
 
@@ -35,12 +35,12 @@ slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 <div id="billing">Billing Address</div>
 
 <div>
-    <div id="name">Name</div>
-    <input type="text" aria-labelledby="name billing"/>
+  <div id="name">Name</div>
+  <input type="text" aria-labelledby="name billing" />
 </div>
 <div>
-    <div id="address">Address</div>
-    <input type="text" aria-labelledby="address billing"/>
+  <div id="address">Address</div>
+  <input type="text" aria-labelledby="address billing" />
 </div>
 ```
 
@@ -50,8 +50,8 @@ slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 
 ```html
 <div role="main" aria-labelledby="foo">
-    <h1 id="foo">Wild fires spread across the San Diego Hills</h1>
-    Strong winds expand fires ignited by high temperatures ...
+  <h1 id="foo">Wild fires spread across the San Diego Hills</h1>
+  Strong winds expand fires ignited by high temperatures ...
 </div>
 ```
 
@@ -62,9 +62,9 @@ slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 ```html
 <div id="radio_label">My radio label</div>
 <ul role="radiogroup" aria-labelledby="radio_label">
-    <li role="radio">Item #1</li>
-    <li role="radio">Item #2</li>
-    <li role="radio">Item #3</li>
+  <li role="radio">Item #1</li>
+  <li role="radio">Item #2</li>
+  <li role="radio">Item #3</li>
 </ul>
 ```
 
@@ -74,8 +74,8 @@ slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 
 ```html
 <div role="dialog" aria-labelledby="dialogheader">
-    <h2 id="dialogheader">Choose a File</h2>
-    ... Dialog contents
+  <h2 id="dialogheader">Choose a File</h2>
+  ... Dialog contents
 </div>
 ```
 
@@ -84,8 +84,12 @@ slug: Web/Accessibility/ARIA/Attributes/aria-labelledby
 在下面的示例中，某一事物的被一个叙述性的自然流所描述的定义与这一事物本身通过**aria-labeledby**属性相联结：
 
 ```html
-<p>The doctor explained it had been a <dfn id="placebo">placebo</dfn>, or <span role="definition" aria-labelledby="placebo">
-an inert preparation prescribed more for the mental relief of the patient than for its actual effect on a disorder.</span>
+<p>
+  The doctor explained it had been a <dfn id="placebo">placebo</dfn>, or
+  <span role="definition" aria-labelledby="placebo">
+    an inert preparation prescribed more for the mental relief of the patient
+    than for its actual effect on a disorder.</span
+  >
 </p>
 ```
 
@@ -95,15 +99,20 @@ an inert preparation prescribed more for the mental relief of the patient than f
 
 ```html
 <dl>
-    <dt id="anathema">anthema</dt>
-    <dd role="definition" aria-labelledby="anathema">a ban or curse solemnly pronounced by ecclesiastical authority
-                                                        and accompanied by excommunication</dd>
-    <dd role="definition" aria-labelledby="anathema">a vigorous denunciation : cursor</dd>
+  <dt id="anathema">anthema</dt>
+  <dd role="definition" aria-labelledby="anathema">
+    a ban or curse solemnly pronounced by ecclesiastical authority and
+    accompanied by excommunication
+  </dd>
+  <dd role="definition" aria-labelledby="anathema">
+    a vigorous denunciation : cursor
+  </dd>
 
-    <dt id="homily">homily</dt>
-    <dd role="definition" aria-labelledby="homily">a usually short sermon</dd>
-    <dd role="definition" aria-labelledby="homily">a lecture or discourse on or of a moral theme</dd>
-
+  <dt id="homily">homily</dt>
+  <dd role="definition" aria-labelledby="homily">a usually short sermon</dd>
+  <dd role="definition" aria-labelledby="homily">
+    a lecture or discourse on or of a moral theme
+  </dd>
 </dl>
 ```
 
@@ -113,14 +122,14 @@ an inert preparation prescribed more for the mental relief of the patient than f
 
 ```html
 <div role="menubar">
-    <div role="menuitem" aria-haspopup="true" id="fileMenu">File</div>
-    <div role="menu" aria-labelledby="fileMenu">
-        <div role="menuitem">Open</div>
-        <div role="menuitem">Save</div>
-        <div role="menuitem">Save as ...</div>
-        ...
-    </div>
+  <div role="menuitem" aria-haspopup="true" id="fileMenu">File</div>
+  <div role="menu" aria-labelledby="fileMenu">
+    <div role="menuitem">Open</div>
+    <div role="menuitem">Save</div>
+    <div role="menuitem">Save as ...</div>
     ...
+  </div>
+  ...
 </div>
 ```
 

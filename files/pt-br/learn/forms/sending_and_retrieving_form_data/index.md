@@ -20,9 +20,9 @@ No lado do cliente, um formulário HTML é nada mais do que uma maneira convenie
 
 ### No lado do cliente: definindo como enviar os dados
 
-O elemento {{HTMLElement("form")}} define como os dados serão enviados. Todos os seus atributos são projetados para permitir que você configure o pedido a ser enviado quando um usuário acessa um botão de envio. Os dois atributos mais importantes são:{{htmlattrxref("action","form")}} e {{htmlattrxref("method","form")}}.
+O elemento {{HTMLElement("form")}} define como os dados serão enviados. Todos os seus atributos são projetados para permitir que você configure o pedido a ser enviado quando um usuário acessa um botão de envio. Os dois atributos mais importantes são:[`action`](/pt-BR/docs/Web/HTML/Element/form#action) e [`method`](/pt-BR/docs/Web/HTML/Element/form#method).
 
-#### o atributo {{htmlattrxref("action","form")}}
+#### o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action)
 
 Este atributo define para onde os dados são enviados. Seu valor deve ser um URL válido. Se esse atributo não for fornecido, os dados serão enviados para o URL da página que contém o formulário.
 
@@ -31,30 +31,30 @@ Este atributo define para onde os dados são enviados. Seu valor deve ser um URL
 Neste exemplo, os dados são enviados para `http://foo.com`:
 
 ```html
-<form action="http://foo.com">
+<form action="http://foo.com"></form>
 ```
 
 Aqui, os dados são enviados para o mesmo servidor que hospeda a página do formulário, mas para um URL diferente no servidor:
 
 ```html
-<form action="/somewhere_else">
+<form action="/somewhere_else"></form>
 ```
 
 Quando especificado sem atributos, como abaixo, o atributo {{HTMLElement("form")}} faz com que os dados sejam enviados para a página que inclui o formulário:
 
 ```html
-<form>
+<form></form>
 ```
 
-Muitas páginas mais antigas usam a seguinte notação para indicar que os dados devem ser enviados para a mesma página que contém o formulário; Isso era necessário porque até HTML5, o atributo {{htmlattrxref ( "action", "form")}} era obrigatório. Isso não é mais necessário.
+Muitas páginas mais antigas usam a seguinte notação para indicar que os dados devem ser enviados para a mesma página que contém o formulário; Isso era necessário porque até HTML5, o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action) era obrigatório. Isso não é mais necessário.
 
 ```html
-<form action="#">
+<form action="#"></form>
 ```
 
-> **Nota:** **Nota: É possível especificar um URL que use o protocolo HTTPS (HTTP seguro). Quando você fizer isso, os dados são criptografados junto com o resto da solicitação, mesmo se o formulário em si é hospedado em uma página insegura acessada usando HTTP. Por outro lado, se o formulário estiver hospedado na página segura, mas você especificar um URL HTTP inseguro com o atributo {{htmlattrxref ( "action", "form")}}, todos os navegadores exibirão um aviso de segurança para o usuário cada vez que Tente enviar dados porque os dados não serão criptografados.**
+> **Nota:** **Nota: É possível especificar um URL que use o protocolo HTTPS (HTTP seguro). Quando você fizer isso, os dados são criptografados junto com o resto da solicitação, mesmo se o formulário em si é hospedado em uma página insegura acessada usando HTTP. Por outro lado, se o formulário estiver hospedado na página segura, mas você especificar um URL HTTP inseguro com o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action), todos os navegadores exibirão um aviso de segurança para o usuário cada vez que Tente enviar dados porque os dados não serão criptografados.**
 
-#### o atributo {{htmlattrxref("method","form")}}
+#### o atributo [`method`](/pt-BR/docs/Web/HTML/Element/form#method)
 
 Este atributo define como os dados são enviados. o [HTTP protocol](/pt-BR/docs/HTTP)
 
@@ -66,12 +66,14 @@ Para entender a diferença entre esses dois métodos, vamos dar um passo atrás 
 
 O método GET é o método usado pelo navegador para pedir ao servidor para enviar de volta um determinado recurso: "Hey servidor, eu quero obter este recurso." Nesse caso, o navegador envia um corpo vazio. Como o corpo está vazio, se um formulário é enviado usando esse método, os dados enviados para o servidor são anexados ao URL.
 
-###### Exemplo<br>Considere o seguinte formulário:
+###### Exemplo
+
+Considere o seguinte formulário:
 
 ```html
 <form action="http://foo.com" method="get">
-  <input name="say" value="Hi">
-  <input name="to" value="Mom">
+  <input name="say" value="Hi" />
+  <input name="to" value="Mom" />
   <button>Envie meus cumprimentos</button>
 </form>
 ```
@@ -93,8 +95,8 @@ Considere esta forma (a mesma acima):
 
 ```html
 <form action="http://foo.com" method="post">
-  <input name="say" value="Hi">
-  <input name="to" value="Mom">
+  <input name="say" value="Hi" />
+  <input name="to" value="Mom" />
   <button>Send my greetings</button>
 </form>
 ```
@@ -183,25 +185,25 @@ Vale a pena notar que mesmo usando essas estruturas, trabalhar com formulários 
 
 Arquivos são um caso especial com formulários HTML. Eles são dados binários - ou considerados como tal - onde todos os outros dados são dados de texto. Porque HTTP é um protocolo de texto, há requisitos especiais para manipular dados binários.
 
-### o {{htmlattrxref("enctype","form")}} atributo
+### o [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) atributo
 
 Esse atributo permite especificar o valor do cabeçalho HTTP Content-Type. Este cabeçalho é muito importante porque informa ao servidor que tipo de dados está sendo enviado. Por padrão, seu valor é application / x-www-form-urlencoded. Em termos humanos, isso significa: "Este é o formulário de dados que foi codificado em forma de URL."
 
 Mas se você quiser enviar arquivos, você precisa fazer duas coisas:
 
-- Colocou o {{htmlattrxref("method","form")}} Atributo para POST porque o conteúdo do arquivo não pode ser colocado dentro de um parâmetro de URL usando um formulário.
-- Defina o valor de {{htmlattrxref("enctype","form")}} Para multipart / form-data porque os dados serão divididos em várias partes, uma para cada arquivo mais uma para o texto do corpo do formulário que pode ser enviado com eles.
+- Colocou o [`method`](/pt-BR/docs/Web/HTML/Element/form#method) Atributo para POST porque o conteúdo do arquivo não pode ser colocado dentro de um parâmetro de URL usando um formulário.
+- Defina o valor de [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) Para multipart / form-data porque os dados serão divididos em várias partes, uma para cada arquivo mais uma para o texto do corpo do formulário que pode ser enviado com eles.
 
 Por exemplo:
 
 ```html
 <form method="post" enctype="multipart/form-data">
-  <input type="file" name="myFile">
+  <input type="file" name="myFile" />
   <button>Send the file</button>
 </form>
 ```
 
-> **Nota:** **Nota: Alguns navegadores suportam**{{htmlattrxref("multiple","input")}} Atributo no {{HTMLElement("input")}} Elemento para enviar mais de um arquivo com apenas um elemento de entrada. Como o servidor lida com esses arquivos realmente depende da tecnologia usada no servidor. Como mencionado anteriormente, usando um quadro fará sua vida muito mais fácil.
+> **Nota:** **Nota: Alguns navegadores suportam**[`multiple`](/pt-BR/docs/Web/HTML/Element/input#multiple) Atributo no {{HTMLElement("input")}} Elemento para enviar mais de um arquivo com apenas um elemento de entrada. Como o servidor lida com esses arquivos realmente depende da tecnologia usada no servidor. Como mencionado anteriormente, usando um quadro fará sua vida muito mais fácil.
 
 > **Aviso:** **Aviso: Muitos servidores são configurados com um limite de tamanho para arquivos e solicitações HTTP, a fim de evitar abusos. É importante verificar esse limite com o administrador do servidor antes de enviar um arquivo.**
 

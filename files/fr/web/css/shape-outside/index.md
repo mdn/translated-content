@@ -1,10 +1,6 @@
 ---
 title: shape-outside
 slug: Web/CSS/shape-outside
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/shape-outside
 ---
 

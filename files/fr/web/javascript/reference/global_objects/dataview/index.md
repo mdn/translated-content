@@ -2,8 +2,6 @@
 title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView
-original_slug: Web/JavaScript/Reference/Objets_globaux/DataView
-browser-compat: javascript.builtins.DataView
 ---
 
 {{JSRef}}

@@ -1,16 +1,6 @@
 ---
 title: runtime.setUninstallURL()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/setUninstallURL
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - runtime
-  - setUninstallURL
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/setUninstallURL
 ---
 
@@ -24,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var settingUrl = browser.runtime.setUninstallURL(
-  url             // string
-)
+  url, // string
+);
 ```
 
 ### Paramètres

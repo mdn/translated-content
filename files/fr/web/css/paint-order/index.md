@@ -1,13 +1,6 @@
 ---
 title: paint-order
 slug: Web/CSS/paint-order
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
-  - SVG
-  - Web
 translation_of: Web/CSS/paint-order
 ---
 

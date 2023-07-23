@@ -1,15 +1,7 @@
 ---
 title: Appliquer des découpes simples
 slug: Web/API/WebGL_API/By_example/Basic_scissoring
-tags:
-  - Apprendre
-  - Débutant
-  - Exemple
-  - Graphisme
-  - Tutoriel
-  - WebGL
 translation_of: Web/API/WebGL_API/By_example/Basic_scissoring
-original_slug: Web/API/WebGL_API/By_example/Appliquer_des_découpes_simples
 ---
 
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Masque_de_couleur","Apprendre/WebGL/Par_exemple/Tailles_de_canvas_et_WebGL")}}

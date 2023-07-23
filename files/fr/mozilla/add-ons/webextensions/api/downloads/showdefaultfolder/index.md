@@ -1,17 +1,6 @@
 ---
 title: downloads.showDefaultFolder()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Refernce
-  - ShwoDefaultFolder
-  - Téléchargement
-  - WebExtensions
-  - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder
 ---
 
@@ -38,11 +27,11 @@ Aucun
 L'extrait suivant contient un bouton d'affichage qui, lorsqu'il est cliqué, appelle `showDefaultFolder()` pour ouvrir le dossier de téléchargement par défaut dans le gestionnaire de fichiers de la plateforme :
 
 ```js
-var showBtn = document.querySelector('.show');
+var showBtn = document.querySelector(".show");
 
-showBtn.onclick = function() {
+showBtn.onclick = function () {
   browser.downloads.showDefaultFolder();
-}
+};
 ```
 
 {{WebExtExamples}}

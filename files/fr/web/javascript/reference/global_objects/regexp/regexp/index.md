@@ -2,7 +2,6 @@
 title: Constructeur RegExp()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
-browser-compat: javascript.builtins.RegExp.RegExp
 ---
 
 {{JSRef}}

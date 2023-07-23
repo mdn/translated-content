@@ -1,7 +1,6 @@
 ---
 title: Débuter sur MDN
 slug: MDN/Community/Contributing/Getting_started
-original_slug: MDN/Contribute/Getting_started
 l10n:
   sourceCommit: 2d6d6a1d9f8ba2073c9f8e1bbc6b4e20204fb53c
 ---

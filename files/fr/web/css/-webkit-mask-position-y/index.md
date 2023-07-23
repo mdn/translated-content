@@ -1,11 +1,6 @@
 ---
 title: '-webkit-mask-position-y'
 slug: Web/CSS/-webkit-mask-position-y
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-mask-position-y
 ---
 

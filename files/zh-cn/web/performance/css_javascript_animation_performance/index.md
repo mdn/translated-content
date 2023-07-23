@@ -11,8 +11,8 @@ slug: Web/Performance/CSS_JavaScript_animation_performance
 
 CSS 中的 transition 和 animation 都可以用于编写动画，它们都有各自的使用场景：
 
-- CSS {{cssxref("transition")}} 提供了一个简单的的方式去创造当前样式与结束状态样式之间的动画，比如一个 button 的普通状态和 hover 状态。尽管一个元素处于过渡状态中，新的过渡动画也会立即从当前样式开始，而不是直接跳转到 CSS 的最终状态。浏览[使用 CSS transition](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) 以获取更多细节。
-- 另一方面，CSS {{cssxref("animation")}} 允许开发者去通过一个初始状态属性值集合与最终状态属性值集合创造动画，而不是单单的初始和最终状态。CSS animations 由两部分组成：描述 CSS 动画的样式，以及一组关键帧，表示动画样式的开始和结束状态，以及可能的中间状态。浏览[使用 CSS animation](/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations) 以获取更多细节。
+- CSS {{cssxref("transition")}} 提供了一个简单的的方式去创造当前样式与结束状态样式之间的动画，比如一个 button 的普通状态和 hover 状态。尽管一个元素处于过渡状态中，新的过渡动画也会立即从当前样式开始，而不是直接跳转到 CSS 的最终状态。浏览[使用 CSS transition](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) 以获取更多细节。
+- 另一方面，CSS {{cssxref("animation")}} 允许开发者去通过一个初始状态属性值集合与最终状态属性值集合创造动画，而不是单单的初始和最终状态。CSS animations 由两部分组成：描述 CSS 动画的样式，以及一组关键帧，表示动画样式的开始和结束状态，以及可能的中间状态。浏览[使用 CSS animation](/zh-CN/docs/Web/CSS/CSS_animations/Using_CSS_animations) 以获取更多细节。
 
 就性能方面来说，无论通过 CSS animation 还是 transition 创造动画，都没有区别。在这篇文章中二者都归类为基于 CSS 的动画。
 
@@ -34,11 +34,11 @@ CSS 中的 transition 和 animation 都可以用于编写动画，它们都有�
 
 在进行示例之前，请启用 FPS 工具先查看当前帧速率：
 
-1. 在地址栏中，输入 *about:config*，点击 `I'll be careful, I promise!` 按钮，以进入配置屏幕。
-    ![](pic1.png)
+1. 在地址栏中，输入 _about:config_，点击 `I'll be careful, I promise!` 按钮，以进入配置屏幕。
+   ![](pic1.png)
 2. 在搜索栏中搜索 `layers.acceleration.draw-fps` 首选项。
 3. 双击该条目将值设置为 `true`。现在您可以在 Firefox 窗口的左上角看到三个紫色的框。第一个框代表 FPS。
-    ![](pic2.png)
+   ![](pic2.png)
 
 ### 运行性能测试
 
@@ -169,7 +169,7 @@ function animate(time) {
 
 即使是上面给出的测试结果，我们仍然认为 CSS 动画是更好的选择。为什么？关键是只要动画涉及的属性不引起 reflow（重新布局）（参考 [CSS trigger](https://csstriggers.com/) 获得更多信息），我们可以把采样操作移出主线程。最常见的属性是 CSS transform。如果一个元素被提升为一个 [layer](https://wiki.mozilla.org/Gecko:Overview#Graphics)，transform 属性动画就可以在 GPU 中进行。这意味着更好地性能，特别是在移动设备上。在 [OffMainThreadCompositing](https://wiki.mozilla.org/Platform/GFX/OffMainThreadCompositing) 上寻找更多细节。
 
-要在火狐中激活 OMTA（脱离主线程的动画） ，你需要前往 *about:config* 然后搜索 `layers.offmainthreadcomposition.async-animations`，将其切换到 `true`。
+要在火狐中激活 OMTA（脱离主线程的动画） ，你需要前往 _about:config_ 然后搜索 `layers.offmainthreadcomposition.async-animations`，将其切换到 `true`。
 
 ![](pic3.png)
 

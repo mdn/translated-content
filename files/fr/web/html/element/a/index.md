@@ -1,20 +1,7 @@
 ---
 title: '<a> : l''élément d''ancre'
 slug: Web/HTML/Element/a
-tags:
-  - Content
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Interactive content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Inline element
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/a
-browser-compat: html.elements.a
 ---
 
 {{HTMLSidebar}}
@@ -298,7 +285,7 @@ Pour plus de détails sur les URL `mailto:`, comme l'inclusion d'un sujet ou d'u
 
 Voir [RFC 3966](https://tools.ietf.org/html/rfc3966) pour la syntaxe, les fonctionnalités supplémentaires et d'autres détails sur le schéma URL `tel:`.
 
-### Utilisation de l'attribut de téléchargement pour enregistrer un \<canvas> au format PNG.
+### Utilisation de l'attribut de téléchargement pour enregistrer un \<canvas> au format PNG
 
 Pour enregistrer le contenu d'un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sous forme d'image, vous pouvez créer un lien avec un attribut `download` et les données du canvas sous forme d'une URL `data:` :
 

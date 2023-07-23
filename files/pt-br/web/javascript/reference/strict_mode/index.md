@@ -89,7 +89,7 @@ delete Object.prototype; // lança TypeError
 
 Quarto, strict mode anterior ao Gecko 34 requer que todas as propriedades nomeadas em um objeto literal sejam únicas. Código normal pode duplicar nomes de propriedades, sendo que a última ocorrência determina o valor da propriedade. Mas como apenas o último faz algo, a duplicação é meramente um vetor de bugs, se o código for modificado para mudar o valor da propriedade por outro meio que não modificando a última instância. Nomes de propriedades duplicados são erro de sintaxe em strict mode:
 
-> **Nota:** Não é mais o caso no ECMAScript 6 ({{bug(1041128)}}).
+> **Nota:** Não é mais o caso no ECMAScript 6 ([Erro do Firefox 1041128](https://bugzil.la/1041128)).
 
 ```js
 "use strict";

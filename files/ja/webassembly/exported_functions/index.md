@@ -27,16 +27,15 @@ i10n:
 ```js
 const otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
 
-WebAssembly.instantiateStreaming(fetch('table.wasm'))
-  .then((obj) => {
-    const tbl = obj.instance.exports.tbl;
-    console.log(tbl.get(0)());  // 13
-    console.log(tbl.get(1)());  // 42
-    otherTable.set(0,tbl.get(0));
-    otherTable.set(1,tbl.get(1));
-    console.log(otherTable.get(0)());
-    console.log(otherTable.get(1)());
-  });
+WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
+  const tbl = obj.instance.exports.tbl;
+  console.log(tbl.get(0)()); // 13
+  console.log(tbl.get(1)()); // 42
+  otherTable.set(0, tbl.get(0));
+  otherTable.set(1, tbl.get(1));
+  console.log(otherTable.get(0)());
+  console.log(otherTable.get(1)());
+});
 ```
 
 ここでは、{{jsxref("WebAssembly.Table")}} コンストラクターを使用して JavaScript からテーブル(`otherTable`)を作成し、 table.wasm をページに読み込むために {{jsxref("WebAssembly.instantiateStreaming()")}} ユーティリティ関数を使用しています。

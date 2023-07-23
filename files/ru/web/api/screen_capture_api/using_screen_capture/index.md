@@ -29,7 +29,7 @@ async function startCapture(displayMediaOptions) {
 }
 ```
 
-Можно написать этот код, используя асинхронную функцию и оператор [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) , как показано выше, или использовать тип {{jsxref("Promise")}} непосредственно, пример ниже.
+Можно написать этот код, используя асинхронную функцию и оператор [`await`](/ru/docs/Web/JavaScript/Reference/Operators/await) , как показано выше, или использовать тип {{jsxref("Promise")}} непосредственно, пример ниже.
 
 **_Запуска захвата с экрана: в стиле `Promise`_**
 
@@ -98,7 +98,7 @@ function startCapture(displayMediaOptions) {
 
 Метод {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} в основном используется для захвата видео пользовательского экрана или его части. Однако {{Glossary("user agent", "user agents")}} может позволить захватить аудио вместе с видео контентом. Источником аудио может быть выбранное окно, вся аудио система компьютера, или пользовательский микрофон (или их комбинация) .
 
-До запуска скрипта, который будет запрашивать возможность обмена аудио, проверьте реализацию {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} , для понимания браузерной совместимости с функциональностью захвата аудио в поток захвата экрана.
+До запуска скрипта, который будет запрашивать возможность обмена аудио, проверьте реализацию {{SectionOnPage("/ru/docs/Web/API/MediaDevices/getDisplayMedia", "Browser compatibility", "code")}} , для понимания браузерной совместимости с функциональностью захвата аудио в поток захвата экрана.
 
 Чтобы запросить доступ к экрану с включённым звуком, параметры ниже передаются в метод `getDisplayMedia()`:
 
@@ -231,7 +231,7 @@ The stream is connected to the {{HTMLElement("video")}} element by storing the r
 
 The `dumpOptionsInfo()` function—which we will look at in a moment—dumps information about the stream to the log box for educational purposes.
 
-If any of that fails, the [`catch()`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) clause outputs an error message to the log box.
+If any of that fails, the [`catch()`](/ru/docs/Web/JavaScript/Reference/Statements/try...catch) clause outputs an error message to the log box.
 
 ##### Stopping display capture
 
@@ -322,7 +322,7 @@ The final product looks like this. If your browser supports Screen Capture API, 
 
 ## Security
 
-In order to function when [Feature Policy](/ru/docs/Web/HTTP/Feature_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Feature-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's {{htmlattrxref("allow", "iframe")}} attribute.
+In order to function when [Feature Policy](/ru/docs/Web/HTTP/Feature_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Feature-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's [`allow`](/ru/docs/Web/HTML/Element/iframe#allow) attribute.
 
 For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
 

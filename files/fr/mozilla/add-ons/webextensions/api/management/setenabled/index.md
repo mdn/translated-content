@@ -1,14 +1,6 @@
 ---
 title: management.setEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/setEnabled
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - WebExtensions
-  - management
-  - setEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/setEnabled
 ---
 
@@ -26,9 +18,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var settingEnabled = browser.management.setEnabled(
-  id,              // string
-  enabled         // boolean
-)
+  id, // string
+  enabled, // boolean
+);
 ```
 
 ### Paramètres

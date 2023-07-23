@@ -1,12 +1,6 @@
 ---
 title: IDBObjectStore.put()
 slug: Web/API/IDBObjectStore/put
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBObjectStore/put
 ---
 

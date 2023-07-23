@@ -1,12 +1,6 @@
 ---
 title: IDBDatabase.objectStoreNames
 slug: Web/API/IDBDatabase/objectStoreNames
-tags:
-  - API
-  - Database
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBDatabase/objectStoreNames
 ---
 

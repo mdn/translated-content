@@ -49,11 +49,11 @@ env(safe-area-inset-left, 1.4rem);
 
 **注意**: 不同于其他的 CSS 属性，用户代理定义的属性名字对大小写敏感。
 
-### Formal syntax
+### 形式语法
 
 {{CSSSyntax}}
 
-## Examples
+## 示例
 
 下面的示例使用`env()`的第二个可选参数，如果环境变量不可用，该参数可让您设置备用值
 
@@ -80,7 +80,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ### Example values
 
@@ -95,17 +95,17 @@ padding: env(x, 50px, 20px); /* ignored because '50px, 20px' is not a valid padd
 
 **Note**: User agent properties are not reset by the [all](/zh-CN/docs/Web/CSS/all) property.
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{CSSxRef("var", "var(…)")}}
-- [CSS Custom Properties for Cascading Variables](/zh-CN/docs/Web/CSS/CSS_Variables)
+- [CSS Custom Properties for Cascading Variables](/zh-CN/docs/Web/CSS/CSS_cascading_variables)
 - [Custom Properties (--\*)](/zh-CN/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/zh-CN/docs/Web/CSS/Using_CSS_variables)

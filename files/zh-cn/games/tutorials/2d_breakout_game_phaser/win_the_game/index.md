@@ -17,20 +17,20 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
-    score += 10;
-    scoreText.setText('Points: '+score);
+  brick.kill();
+  score += 10;
+  scoreText.setText("Points: " + score);
 
-    var count_alive = 0;
-    for (i = 0; i < bricks.children.length; i++) {
-      if (bricks.children[i].alive == true) {
-        count_alive++;
-      }
+  var count_alive = 0;
+  for (i = 0; i < bricks.children.length; i++) {
+    if (bricks.children[i].alive == true) {
+      count_alive++;
     }
-    if (count_alive == 0) {
-      alert('You won the game, congratulations!');
-      location.reload();
-    }
+  }
+  if (count_alive == 0) {
+    alert("You won the game, congratulations!");
+    location.reload();
+  }
 }
 ```
 

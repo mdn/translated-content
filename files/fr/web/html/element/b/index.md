@@ -1,18 +1,7 @@
 ---
 title: '<b> : l''élément portant à l''attention'
 slug: Web/HTML/Element/b
-tags:
-  - Attention
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/b
-browser-compat: html.elements.b
 ---
 
 {{HTMLSidebar}}

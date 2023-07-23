@@ -1,10 +1,6 @@
 ---
 title: orphans
 slug: Web/CSS/orphans
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/orphans
 ---
 

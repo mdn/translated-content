@@ -1,15 +1,6 @@
 ---
 title: Client.id
 slug: Web/API/Client/id
-tags:
-  - API
-  - Client
-  - Experimental
-  - Propriété
-  - Reference
-  - Service Workers
-  - ServiceWorkers
-  - id
 translation_of: Web/API/Client/id
 ---
 

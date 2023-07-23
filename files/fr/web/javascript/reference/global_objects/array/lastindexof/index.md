@@ -1,16 +1,7 @@
 ---
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/lastIndexOf
 ---
 
 {{JSRef}}
@@ -59,7 +50,7 @@ tableau.lastIndexOf(2, -1); // 3
 
 ### Trouver toutes les occurrences d'un élément
 
-L’exemple suivant utilise `lastIndexOf` pour trouver tous les index (`indices`) d’un élément dans un tableau donné, en utilisant {{jsxref("Array.prototype.push", "push")}} pour les ajouter dans un autre tableau quand ils sont trouvés.
+L'exemple suivant utilise `lastIndexOf` pour trouver tous les index (`indices`) d'un élément dans un tableau donné, en utilisant {{jsxref("Array.prototype.push", "push")}} pour les ajouter dans un autre tableau quand ils sont trouvés.
 
 ```js
 var indices = [];
@@ -75,7 +66,7 @@ console.log(indices);
 // [4, 2, 0]
 ```
 
-Remarquez que nous avons dû traiter le cas de `idx === 0` séparément (`idx > 0`) parce que l’élément sera toujours trouvé, indépendamment du paramètre de `fromIndex`, si c’est le premier élément du tableau. C’est une différence avec la méthode {{jsxref("Array.prototype.indexOf", "indexOf")}}.
+Remarquez que nous avons dû traiter le cas de `idx === 0` séparément (`idx > 0`) parce que l'élément sera toujours trouvé, indépendamment du paramètre de `fromIndex`, si c'est le premier élément du tableau. C'est une différence avec la méthode {{jsxref("Array.prototype.indexOf", "indexOf")}}.
 
 ## Prothèse d'émulation (_polyfill_)
 

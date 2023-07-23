@@ -1,13 +1,7 @@
 ---
 title: Extensions CSS de Mozilla
 slug: Web/CSS/Mozilla_Extensions
-tags:
-  - CSS
-  - Mozilla
-  - Non-standard
-  - Reference
 translation_of: Web/CSS/Mozilla_Extensions
-original_slug: Web/CSS/Extensions_Mozilla
 ---
 
 {{CSSRef}}
@@ -273,7 +267,7 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 
 ### {{Cssxref("border-color")}}
 
-- `-moz-use-text-color` {{deprecated_inline}} retiré de Gecko (cf. {{bug(1306214)}}) ; [currentcolor](/fr/docs/Web/CSS/color_value#currentcolor_keyword) doit être utilisée à la place.
+- `-moz-use-text-color` {{deprecated_inline}} retiré de Gecko (cf. [bug Firefox 1306214](https://bugzil.la/1306214)) ; [currentcolor](/fr/docs/Web/CSS/color_value#currentcolor_keyword) doit être utilisée à la place.
 
 ### {{Cssxref("border-style")}} et {{Cssxref("outline-style")}}
 
@@ -551,7 +545,7 @@ Les applications Mozilla, telles que Firefox, prennent en charge un certain nomb
 
 ## Autres
 
-- {{Cssxref("-moz-alt-content")}} {{Bug("11011")}}
+- {{Cssxref("-moz-alt-content")}} [bug Firefox 11011](https://bugzil.la/11011)
 
 ## Voir aussi
 

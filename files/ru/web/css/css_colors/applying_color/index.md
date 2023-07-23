@@ -1,9 +1,10 @@
 ---
 title: Применение цвета к HTML-элементам с помощью CSS
-slug: Web/CSS/CSS_Colors/Applying_color
+slug: Web/CSS/CSS_colors/Applying_color
 translation_of: Web/HTML/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
+
 {{HTMLSidebar}}
 
 Использование цвета - одна из фундаментальных форм человеческого восприятия, так дети экспериментируют с цветом ещё до того, как начинают осознанно рисовать. Возможно, именно поэтому цвет - одна из первых вещей, с которой люди хотят экспериментировать, изучая разработку веб-сайтов. С помощью [CSS](/ru/docs/Web/CSS), существует множество способов присвоить цвет [HTML](/ru/docs/Web/HTML) элементам, чтобы придать им желаемый вид. Эта статья даёт базовые представления о всех способах применения цвета к HTML-элементам с помощью CSS.
@@ -29,13 +30,13 @@ original_slug: Web/HTML/Applying_color
 - {{cssxref("background-color")}}
   - : Цвет фона текста.
 - {{cssxref("text-shadow")}}
-  - : Добавляет и устанавливает параметры тени для текста. Один из параметров тени - это основной цвет, который размывается и смешивается с цветом фона на основе других параметров. См. {{SectionOnPage("/en-US/docs/Learn/CSS/Styling_text/Fundamentals", "Text drop shadows")}}, чтобы узнать больше.
+  - : Добавляет и устанавливает параметры тени для текста. Один из параметров тени - это основной цвет, который размывается и смешивается с цветом фона на основе других параметров. См. {{SectionOnPage("/ru/docs/Learn/CSS/Styling_text/Fundamentals", "Text drop shadows")}}, чтобы узнать больше.
 - {{cssxref("text-decoration-color")}}
   - : По умолчанию, элементы оформление текста (подчёркивание, перечёркивание) используют цвет свойства `color`. Но вы можете присвоить другой цвет с помощью свойства `text-decoration-color`.
 - {{cssxref("text-emphasis-color")}}
   - : Цвет, который используется для выделения диакритических знаков, прилегающих к каждому текстовому символу. Это свойство используется преимущественно для восточноазиатских языков.
 - {{cssxref("caret-color")}}
-  - : Цвет, который используется для каретки ({{Glossary("caret")}}) (курсора ввода текста). Применимо только к редактируемым элементам, таким как {{HTMLElement ("input")}} и {{HTMLElement ("textarea")}} или элементам , для которых установлен атрибут {{htmlattrxref ("contenteditable")}}.
+  - : Цвет, который используется для каретки ({{Glossary("caret")}}) (курсора ввода текста). Применимо только к редактируемым элементам, таким как {{HTMLElement ("input")}} и {{HTMLElement ("textarea")}} или элементам , для которых установлен атрибут [`contenteditable`](/ru/docs/Web/HTML/Global_attributes#contenteditable).
 
 ### Блоки
 
@@ -52,7 +53,7 @@ original_slug: Web/HTML/Applying_color
 
 ### Границы
 
-Вокруг любого элемента можно создать [границу](/ru/docs/Learn/CSS/Styling_boxes/Borders), т.е. линию вокруг содержимого элемента. См. {{SectionOnPage("/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}}, чтобы узнать больше про отношения между элементами и их границами, и статью [Оформляем Границы с Помощью CSS](/ru/docs/Learn/CSS/Styling_boxes/Borders), чтобы узнать больше про то, как применять стили к границам.
+Вокруг любого элемента можно создать [границу](/ru/docs/Learn/CSS/Styling_boxes/Borders), т.е. линию вокруг содержимого элемента. См. {{SectionOnPage("/ru/docs/Learn/CSS/Introduction_to_CSS/Box_model", "Box properties")}}, чтобы узнать больше про отношения между элементами и их границами, и статью [Оформляем Границы с Помощью CSS](/ru/docs/Learn/CSS/Styling_boxes/Borders), чтобы узнать больше про то, как применять стили к границам.
 
 Существует краткая запись {{cssxref("border")}}, которая позволяет задать сразу все свойства границы, включая даже не связанные с цветом свойства, такие как толщина линии ([width](/ru/docs/Web/CSS/border-width)), стиль линии ([style](/ru/docs/Web/CSS/border-style)): сплошная (solid), штриховая (dashed) и так далее.
 
@@ -86,7 +87,7 @@ CSS не единственная web-технология, которая по�
 
 Существует набор названий цветов стандартной палитры, который позволяет использовать ключевые слова вместо числового значения цвета. Ключевые слова включают основные и вторичные цвета (такие как красный (`red`), синий (`blue`), или оранжевый (`orange`)), оттенки серого (от чёрного (`black`) к белому (`white`), включая такие цвета как темносерый (`darkgray`) или светло-серый (`lightgrey`)), а также множество других смешанных цветов: `lightseagreen`, `cornflowerblue`, и `rebeccapurple`.
 
-См. {{SectionOnPage("/en-US/docs/Web/CSS/color_value", "Color keywords", "code")}} - полный перечень всех доступных ключевых слов.
+См. {{SectionOnPage("/ru/docs/Web/CSS/color_value", "Color keywords", "code")}} - полный перечень всех доступных ключевых слов.
 
 ### RGB значения
 
@@ -309,7 +310,7 @@ CSS мы рассмотрим более детально, чтобы по оч�
 
 ## Предоставляем возможность пользователю выбрать цвет
 
-There are many situations in which your web site may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own color picker, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its {{htmlattrxref("type", "input")}} attribute.
+There are many situations in which your web site may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own color picker, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its [`type`](/ru/docs/Web/HTML/Element/input#type) attribute.
 
 The `<input>` element represents a color only in the [hexadecimal string notation](#hexadecimal_string_notation) covered above.
 
@@ -349,7 +350,7 @@ The CSS simply establishes a size for the box and some basic styling for appeara
 
 #### JavaScript
 
-The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/en-US/docs/Web/HTML/Element/input/color) element.
+The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/ru/docs/Web/HTML/Element/input/color) element.
 
 ```js
 let colorPicker = document.getElementById("colorPicker");

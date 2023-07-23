@@ -1,10 +1,6 @@
 ---
 title: grid
 slug: Web/CSS/@media/grid
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/grid
 ---
 

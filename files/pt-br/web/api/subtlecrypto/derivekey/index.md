@@ -122,7 +122,7 @@ Nota: Por conta de não haver ferramentas nativas que convertam entre Uint8Array
 - {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
 - {{domxref("SubtleCrypto")}}, a interface a qual ele pertence.
 
-### Dicionário:
+### Dicionário
 
 "Key" = "Chave"
 

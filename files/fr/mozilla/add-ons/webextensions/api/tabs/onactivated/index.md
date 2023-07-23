@@ -1,16 +1,6 @@
 ---
 title: tabs.onActivated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onActivated
-  - tavs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onActivated
 ---
 
@@ -21,9 +11,9 @@ Se déclenche lorsque l'onglet actif dans une fenêtre change. Notez que l'URL d
 ## Syntaxe
 
 ```js
-browser.tabs.onActivated.addListener(listener)
-browser.tabs.onActivated.removeListener(listener)
-browser.tabs.onActivated.hasListener(listener)
+browser.tabs.onActivated.addListener(listener);
+browser.tabs.onActivated.removeListener(listener);
+browser.tabs.onActivated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -63,8 +53,7 @@ Les événements ont trois fonctions :
 
 ```js
 function handleActivated(activeInfo) {
-  console.log("Tab " + activeInfo.tabId +
-              " was activated");
+  console.log("Tab " + activeInfo.tabId + " was activated");
 }
 
 browser.tabs.onActivated.addListener(handleActivated);

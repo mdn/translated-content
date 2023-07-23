@@ -1,16 +1,6 @@
 ---
 title: browserAction.getBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - getBadgeText
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText
 ---
 
@@ -23,9 +13,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-var gettingText = browser.browserAction.getBadgeText (
-  details               // object
-)
+var gettingText = browser.browserAction.getBadgeText(
+  details, // object
+);
 ```
 
 ### Paramètres

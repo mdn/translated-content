@@ -2,7 +2,6 @@
 title: ':paused'
 slug: Web/CSS/:paused
 translation_of: Web/CSS/:paused
-browser-compat: css.selectors.paused
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

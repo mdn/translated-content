@@ -226,7 +226,7 @@ The [`path`](#new-cookie_path) parameter of a new cookie can accept only _absolu
 |*|
 |*|  :: Translate relative paths to absolute paths ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/document.cookie
+|*|  https://developer.mozilla.org/ru/docs/Web/API/document.cookie
 |*|  https://developer.mozilla.org/User:fusionchess
 |*|
 |*|  The following code is released under the GNU Public License, version 3 or later.
@@ -247,22 +247,22 @@ function relPathToAbs (sRelPath) {
 ##### Sample usage
 
 ```js
-/* Let us be in /en-US/docs/Web/API/document.cookie */
+/* Let us be in /ru/docs/Web/API/document.cookie */
 
 alert(location.pathname);
-// displays: /en-US/docs/Web/API/document.cookie
+// displays: /ru/docs/Web/API/document.cookie
 
 alert(relPathToAbs("./"));
-// displays: /en-US/docs/Web/API/
+// displays: /ru/docs/Web/API/
 
 alert(relPathToAbs("../Guide/API/DOM/Storage"));
-// displays: /en-US/docs/Web/Guide/API/DOM/Storage
+// displays: /ru/docs/Web/Guide/API/DOM/Storage
 
 alert(relPathToAbs("../../Firefox"));
-// displays: /en-US/docs/Firefox
+// displays: /ru/docs/Firefox
 
 alert(relPathToAbs("../Guide/././API/../../../Firefox"));
-// displays: /en-US/docs/Firefox
+// displays: /ru/docs/Firefox
 ```
 
 ### Относительный срок годности cookie: числовые примеры

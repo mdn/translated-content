@@ -3,6 +3,8 @@ title: Truthy（真值）
 slug: Glossary/Truthy
 ---
 
+{{GlossarySidebar}}
+
 在 {{Glossary("JavaScript")}} 中，**truthy**（真值）指的是在{{Glossary("Boolean", "布尔值")}}上下文中，转换后的值为 `true` 的值。被定义为{{Glossary("Falsy", "假值")}}以外的任何值都为真值。（即所有除 `false`、`0`、`-0`、`0n`、`""`、`null`、`undefined` 和 `NaN` 以外的皆为真值）。
 
 {{Glossary("JavaScript")}} 在布尔值上下文中使用{{Glossary("Type_Coercion", "强制类型转换")}}。

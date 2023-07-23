@@ -1,11 +1,6 @@
 ---
 title: Pagination
 slug: Web/CSS/Layout_cookbook/Pagination
-tags:
-  - CSS
-  - Guide
-  - Recette
-  - flexbox
 translation_of: Web/CSS/Layout_cookbook/Pagination
 ---
 

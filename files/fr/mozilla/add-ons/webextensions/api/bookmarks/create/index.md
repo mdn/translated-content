@@ -1,16 +1,6 @@
 ---
 title: bookmarks.create()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Create
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 ---
 
@@ -26,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var createBookmark = browser.bookmarks.create(
-  bookmark                  // CreateDetails object
-)
+  bookmark, // CreateDetails object
+);
 ```
 
 ### Paramètres
@@ -50,7 +40,7 @@ function onCreated(node) {
 
 var createBookmark = browser.bookmarks.create({
   title: "bookmarks.create() on MDN",
-  url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create"
+  url: "https://developer.mozilla.org/Add-ons/WebExtensions/API/bookmarks/create",
 });
 
 createBookmark.then(onCreated);

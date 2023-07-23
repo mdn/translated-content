@@ -80,7 +80,7 @@ for (let i = 0; i < 6; i++) {
 }
 ```
 
-#### Результат:
+#### Результат
 
 {{EmbedLiveSample("Использование_fillStyle_в_циклах_for", 160, 160, "canvas_fillstyle.png")}}
 

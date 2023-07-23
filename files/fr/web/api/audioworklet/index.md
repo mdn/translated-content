@@ -1,20 +1,6 @@
 ---
 title: AudioWorklet
 slug: Web/API/AudioWorklet
-tags:
-  - API
-  - Audio
-  - AudioWorklet
-  - Background
-  - Custom
-  - Interface
-  - Low-latency
-  - Reference
-  - Web Audio API
-  - Worklet
-  - Zero-latency
-  - latency
-  - sound
 translation_of: Web/API/AudioWorklet
 ---
 

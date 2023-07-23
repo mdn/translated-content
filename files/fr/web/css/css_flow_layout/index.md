@@ -1,10 +1,6 @@
 ---
 title: CSS Flow Layout
-slug: Web/CSS/CSS_Flow_Layout
-tags:
-  - CSS
-  - CSS Flow Layout
-  - Reference
+slug: Web/CSS/CSS_flow_layout
 translation_of: Web/CSS/CSS_Flow_Layout
 ---
 

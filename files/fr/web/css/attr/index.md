@@ -2,7 +2,6 @@
 title: attr()
 slug: Web/CSS/attr
 translation_of: Web/CSS/attr()
-original_slug: Web/CSS/attr()
 ---
 
 {{CSSRef}}

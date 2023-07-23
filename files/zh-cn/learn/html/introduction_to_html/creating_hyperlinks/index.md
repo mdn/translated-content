@@ -36,7 +36,8 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 ```html
 <p>
-  我创建了一个指向 <a href="https://www.mozilla.org/zh-CN/">Mozilla 主页</a>的链接。
+  我创建了一个指向
+  <a href="https://www.mozilla.org/zh-CN/">Mozilla 主页</a>的链接。
 </p>
 ```
 
@@ -89,8 +90,11 @@ img {
 
 ```html
 <p>
-  我创建了一个指向<a href="https://www.mozilla.org/zh-CN/"
-   title="了解 Mozilla 使命以及如何参与贡献的最佳站点。">Mozilla 主页</a>的超链接。
+  我创建了一个指向<a
+    href="https://www.mozilla.org/zh-CN/"
+    title="了解 Mozilla 使命以及如何参与贡献的最佳站点。"
+    >Mozilla 主页</a
+  >的超链接。
 </p>
 ```
 
@@ -156,16 +160,16 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 
 ```html
 <p>
-  要提供意见和建议，请将信件邮寄至<a href="contacts.html#Mailing_address">我们的地址</a>。
+  要提供意见和建议，请将信件邮寄至<a href="contacts.html#Mailing_address"
+    >我们的地址</a
+  >。
 </p>
 ```
 
 你甚至可以在同一份文档下，通过链接文档片段，来链接到*当前文档的另一部分*：
 
 ```html
-<p>
-  本页面底部可以找到<a href="#Mailing_address">公司邮寄地址</a>。
-</p>
+<p>本页面底部可以找到<a href="#Mailing_address">公司邮寄地址</a>。</p>
 ```
 
 ### 绝对 URL 和相对 URL
@@ -188,7 +192,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 
 ### 使用清晰的链接措辞
 
-把链接放在你的页面上很容易。这还不够。我们需要让所有的读者都可以使用链接，无论他们当前的环境和用于访问的工具（*无障碍*）。例如：
+把链接放在你的页面上很容易。这还不够。我们需要让所有的读者都可以使用链接，无论他们当前的环境和用于访问的工具（_无障碍_）。例如：
 
 - 使用屏幕阅读器的用户喜欢从页面上的一个链接跳到另一个链接，并且脱离上下文来阅读链接。
 - 搜索引擎使用链接文本来索引目标文件，所以在链接文本中包含关键词是一个很好的主意，以有效地描述与之相关的信息。
@@ -199,17 +203,13 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 **好的**链接文本：[下载 Firefox](https://www.mozilla.org/zh-CN/firefox/new/?redirect_source=firefox-com)
 
 ```html example-good
-<p><a href="https://www.mozilla.org/firefox/">
- 下载 Firefox
-</a></p>
+<p><a href="https://www.mozilla.org/firefox/"> 下载 Firefox </a></p>
 ```
 
 **不好的**链接文本：[点击这里](https://www.mozilla.org/firefox/)下载 Firefox
 
 ```html example-bad
-<p><a href="https://www.mozilla.org/firefox/">
-  点击这里
-</a>下载 Firefox</p>
+<p><a href="https://www.mozilla.org/firefox/"> 点击这里 </a>下载 Firefox</p>
 ```
 
 其他提示：
@@ -248,8 +248,9 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 当你链接到要下载的资源而不是在浏览器中打开时，你可以使用 `download` 属性来提供一个默认的保存文件名。下面是一个 Firefox 的 Windows 最新版本下载链接的示例：
 
 ```html
-<a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN"
-   download="firefox-latest-64bit-installer.exe">
+<a
+  href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=zh-CN"
+  download="firefox-latest-64bit-installer.exe">
   下载最新的 Firefox 中文版 - Windows（64 位）
 </a>
 ```

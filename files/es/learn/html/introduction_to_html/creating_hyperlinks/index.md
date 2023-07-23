@@ -42,7 +42,7 @@ El sitio web de la BBC, por ejemplo, contiene una gran cantidad de enlaces que a
 
 ## Anatomía de un enlace
 
-Un enlace básico se crea incluyendo el texto (o cualquier otro contenido, ve [Convertir bloques de contenido en enlaces](#convertir_bloques_de_contenido_en_enlaces)), que queramos convertir en un enlace usando un elemento ancla {{HTMLElement("a")}}, dándole un atributo {{HTMLAttrxRef("href", "a")}} (también conocido como «**_Hypertext Reference_**», «**_target_**» u **objetivo**) que contendrá la dirección web hacia dónde queremos que apunte el enlace.
+Un enlace básico se crea incluyendo el texto (o cualquier otro contenido, ve [Convertir bloques de contenido en enlaces](#convertir_bloques_de_contenido_en_enlaces)), que queramos convertir en un enlace usando un elemento ancla {{HTMLElement("a")}}, dándole un atributo [`href`](/es/docs/Web/HTML/Element/a#href) (también conocido como «**_Hypertext Reference_**», «**_target_**» u **objetivo**) que contendrá la dirección web hacia dónde queremos que apunte el enlace.
 
 ```html
 <p>
@@ -93,8 +93,7 @@ Como hemos mencionado anteriormente, puedes convertir cualquier contenido en un 
 <a href="https://www.mozilla.org/es-ES/">
   <img
     src="mozilla-image.png"
-    alt="Logotipo de Mozilla que dirige a la página inicial de Mozilla"
-  />
+    alt="Logotipo de Mozilla que dirige a la página inicial de Mozilla" />
 </a>
 ```
 
@@ -143,7 +142,7 @@ Observamos también dos directorios dentro de nuestro directorio raíz que son: 
 
 ### Fragmentos de documento
 
-Es posible apuntar hacia una parte concreta de un documento HTML en vez de a todo un documento. Para ello hay que asignar previamente un atributo {{HTMLAttrxRef("id")}} al elemento hacia el que apuntamos. Esto se debe hacer en el encabezado y quedará así:
+Es posible apuntar hacia una parte concreta de un documento HTML en vez de a todo un documento. Para ello hay que asignar previamente un atributo [`id`](/es/docs/Web/HTML/Global_attributes#id) al elemento hacia el que apuntamos. Esto se debe hacer en el encabezado y quedará así:
 
 ```html
 <h2 id="Dirección_de_envío">Dirección de envío</h2>
@@ -260,8 +259,7 @@ Si queremos hacer referencia a una descarga en lugar de a algo que abra el naveg
 ```html
 <a
   href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=es-MX"
-  download="firefox-latest-64bit-installer.exe"
->
+  download="firefox-latest-64bit-installer.exe">
   Descarga la última versión de Firefox para Windows (64 bits) (Español, es-MX)
 </a>
 ```
@@ -304,7 +302,7 @@ En su forma más básica, un enlace `mailto:` simplemente contiene la dirección
 
 Esto da como resultado un enlace que se ve así: [Enviar correo electrónico a ninguna parte](mailto:nowhere@mozilla.org).
 
-De hecho, incluso el atributo con la dirección de correo electrónico es opcional. Si lo omites y tu ({{HTMLAttrxRef("href", "a")}} simplemente es "mailto:", aparecerá una nueva ventana de correo saliente en el gestor de correo sin la dirección del destinatario. Esto es útil cuando queremos compartir enlaces que los usuarios puedan pulsar para enviar un correo electrónico y elegir un destinatario posteriormente.
+De hecho, incluso el atributo con la dirección de correo electrónico es opcional. Si lo omites y tu ([`href`](/es/docs/Web/HTML/Element/a#href) simplemente es "mailto:", aparecerá una nueva ventana de correo saliente en el gestor de correo sin la dirección del destinatario. Esto es útil cuando queremos compartir enlaces que los usuarios puedan pulsar para enviar un correo electrónico y elegir un destinatario posteriormente.
 
 ### Especificar detalles
 
@@ -314,8 +312,7 @@ Veamos un ejemplo que incluye estos campos:
 
 ```html
 <a
-  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email"
->
+  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
   Enviar un correo electrónico cc, bcc, asunto y cuerpo
 </a>
 ```

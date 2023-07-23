@@ -2,7 +2,6 @@
 title: FinalizationRegistry.prototype.register()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
 translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
-browser-compat: javascript.builtins.FinalizationRegistry.register
 ---
 
 {{JSRef}}

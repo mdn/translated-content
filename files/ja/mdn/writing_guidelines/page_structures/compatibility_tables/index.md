@@ -29,6 +29,7 @@ BCD データを MDN ページに取り込むには、BCD ソースファイル�
 
 互換性データのクエリ文字列は、ページの Front-matter で `browser-compat` キーを指定してください。
 例えば、{{domxref("AbortController")}} の場合、以下のように追加します。
+（訳注：日本語に翻訳された記事には `browser-compat` キーは追加しないでください。省略しても英語版の Front-matter が参照されるため、不要です。あると混乱の原因になります。[参考](https://github.com/mdn/translated-content/issues/7849#issuecomment-1224316755)）
 
 ```md
 ---

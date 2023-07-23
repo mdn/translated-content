@@ -1,15 +1,6 @@
 ---
 title: browserSettings.newTabPageOverride
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - newTabPageOverride
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
 ---
 
@@ -28,7 +19,7 @@ Notez qu'il s'agit d'un paramètre en lecture seule.
 Obtenir la valeur actuelle de la nouvelle URL de l'onglet :
 
 ```js
-browser.browserSettings.newTabPageOverride.get({}).then(result => {
+browser.browserSettings.newTabPageOverride.get({}).then((result) => {
   console.log(result.value);
 });
 ```

@@ -1,16 +1,6 @@
 ---
 title: Notification.renotify
 slug: Web/API/Notification/renotify
-tags:
-  - API
-  - API Notifications
-  - Experimental
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - renotifier
-  - renotify
 translation_of: Web/API/Notification/renotify
 ---
 

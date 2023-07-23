@@ -1,13 +1,6 @@
 ---
 title: PerformanceNavigationTiming.unloadEventStart
 slug: Web/API/PerformanceNavigationTiming/unloadEventStart
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - PerformanceNavigationTiming
-  - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming/unloadEventStart
 ---
 

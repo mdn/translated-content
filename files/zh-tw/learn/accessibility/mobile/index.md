@@ -33,7 +33,7 @@ With web access on mobile devices being so popular, and popular platforms such a
 
 The state of accessibility — and support for web standards in general — is good in modern mobile devices. Long gone are the days when mobile devices ran completely different web technologies to desktop browsers, forcing developers to use browser sniffing and serve them completely separate sites (although quite a few companies still detect usage of mobile devices and serve them a separate mobile domain).
 
-目前，行動裝置通常可以處理“全脂(full fat)”網站，主要平台甚至還內置了屏幕閱讀器，使視障人士能夠成功使用它們。 現代手機行動瀏覽器也傾向於對[WAI-ARIA](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics)有很好的支持。
+目前，行動裝置通常可以處理「全脂(full fat)」網站，主要平台甚至還內置了屏幕閱讀器，使視障人士能夠成功使用它們。 現代手機行動瀏覽器也傾向於對[WAI-ARIA](/zh-TW/docs/Learn/Accessibility/WAI-ARIA_basics)有很好的支持。
 
 To make a website accessible and usable on mobile, you just need to follow general good web design and accessibility best practices.
 
@@ -219,7 +219,7 @@ We've provided a simple example that shows how to use the mouse and touch events
 
 In particular, the most common problems that need to be addressed for mobile are:
 
-- Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as [media queries](/zh-TW/docs/Web/CSS/Media_Queries), [viewport](/zh-TW/docs/Mozilla/Mobile/Viewport_meta_tag), and [flexbox](/zh-TW/docs/Learn/CSS/CSS_layout/Flexbox).
+- Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as [media queries](/zh-TW/docs/Web/CSS/CSS_media_queries), [viewport](/zh-TW/docs/Mozilla/Mobile/Viewport_meta_tag), and [flexbox](/zh-TW/docs/Learn/CSS/CSS_layout/Flexbox).
 - Conserving image sizes downloaded. In general, small screen devices won't need images that are as large as their desktop counterparts, and they are more likely to be on slow network connections. Therefore, it is wise to serve smaller images to narrow screen devices as appropriate. You can handle this using [responsive image techniques](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 - Thinking about high resolutions. Many mobile devices have high-resolution screens, and therefore need higher-resolution images so that the display can continue to look crisp and sharp. Again, you can serve images as appropriate using responsive image techniques. In addition, many image requirements can be fulfilled using the SVG vector images format, which is well-supported across browsers today. SVG has a small file size and will stay sharp regardless of whatever size is being displayed (see [Adding vector graphics to the web](/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) for more details).
 

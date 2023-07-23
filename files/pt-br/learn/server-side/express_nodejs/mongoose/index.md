@@ -12,7 +12,7 @@ Este artigo introduz brevemente bancos de dados e como usá-los com aplicativos 
     <tr>
       <th scope="row">Pré-requisitos:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
+        <a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
           >Tutorial Express Parte 2: Criando o esqueleto de um website</a
         >
       </td>
@@ -71,7 +71,7 @@ As a general rule, you should consider both the features provided and the "commu
 
 ### Usando Mongoose e MongoDb para a LocalLibrary
 
-Para o exemplo da _Local Library_ (e para o resto do tópico) nós iremos usar o [Mongoose ODM](https://www.npmjs.com/package/mongoose) para acessar os dados da nossa aplicação. Mongoose funciona como uma interface para o [MongoDB](https://www.mongodb.com/what-is-mongodb), um banco de dados de código aberto e [NoSQL](https://en.wikipedia.org/wiki/NoSQL) que usa um modelo de dados orientado a documentos. Uma “coleção” de “documentos”, em uma base de dados do MongoDB, [é semelhante](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) a uma “tabela” com “linhas” em uma base dados relacional.
+Para o exemplo da _Local Library_ (e para o resto do tópico) nós iremos usar o [Mongoose ODM](https://www.npmjs.com/package/mongoose) para acessar os dados da nossa aplicação. Mongoose funciona como uma interface para o [MongoDB](https://www.mongodb.com/what-is-mongodb), um banco de dados de código aberto e [NoSQL](https://en.wikipedia.org/wiki/NoSQL) que usa um modelo de dados orientado a documentos. Uma "coleção" de "documentos", em uma base de dados do MongoDB, [é semelhante](https://docs.mongodb.com/manual/core/databases-and-collections/#collections) a uma "tabela" com "linhas" em uma base dados relacional.
 
 Esse ODM (Object Data Model) e banco de dados combinados são extremamente populares na comunidade do Node, particularmente porque os documentos armazenados e os métodos de consultas se parecem muito com JSON, que consequentemente são muito familiares aos desenvolvedores JavaScript.
 
@@ -210,7 +210,7 @@ var schema = new Schema(
 })
 ```
 
-Most of the [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) (the descriptors after “type:” or after field names) are self-explanatory. The exceptions are:
+Most of the [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) (the descriptors after "type:" or after field names) are self-explanatory. The exceptions are:
 
 - `ObjectId`: Represents specific instances of a model in the database. For example, a book might use this to represent its author object. This will actually contain the unique ID (`_id`) for the specified object. We can use the `populate()` method to pull in the associated information when needed.
 - [Mixed](http://mongoosejs.com/docs/schematypes.html#mixed): An arbitrary schema type.

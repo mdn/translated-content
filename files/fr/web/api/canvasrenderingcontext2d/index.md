@@ -1,11 +1,6 @@
 ---
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - graphique
 translation_of: Web/API/CanvasRenderingContext2D
 ---
 
@@ -72,16 +67,16 @@ Les méthodes et propriétés suivantes controllent comment les lignes sont dess
 
 ## Styles de texte
 
-Les propriétés suivantes contrôlent la manière dont le texte est rendu à l’affichage.
+Les propriétés suivantes contrôlent la manière dont le texte est rendu à l'affichage.
 
 - {{domxref("CanvasRenderingContext2D.font")}}
   - : Paramètre de fonte dont la valeur par défaut est `10px sans-serif`.
 - {{domxref("CanvasRenderingContext2D.textAlign")}}
-  - : Paramètre d’alignement horizontal. Ses valeurs possibles sont : `start` (par défaut), `end`, `left`, `right` et `center`.
+  - : Paramètre d'alignement horizontal. Ses valeurs possibles sont : `start` (par défaut), `end`, `left`, `right` et `center`.
 - {{domxref("CanvasRenderingContext2D.textBaseline")}}
-  - : Paramètre d’alignement vertical par rapport à la ligne de base du texte. Ses valeurs possibles sont : `top`, `hanging`, `middle`, `alphabetic` (par défaut), `ideographic`, `bottom`.
+  - : Paramètre d'alignement vertical par rapport à la ligne de base du texte. Ses valeurs possibles sont : `top`, `hanging`, `middle`, `alphabetic` (par défaut), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
-  - : Direction d’affichage. Ses valeurs possibles sont : `ltr, rtl`, `inherit` (par défaut).
+  - : Direction d'affichage. Ses valeurs possibles sont : `ltr, rtl`, `inherit` (par défaut).
 
 ## Fill and stroke styles
 

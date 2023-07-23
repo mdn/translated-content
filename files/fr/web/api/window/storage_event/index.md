@@ -1,13 +1,6 @@
 ---
 title: 'Window: storage event'
 slug: Web/API/Window/storage_event
-tags:
-  - API
-  - Evènement
-  - Reference
-  - Stockage
-  - Stockage Web
-  - Window
 translation_of: Web/API/Window/storage_event
 ---
 

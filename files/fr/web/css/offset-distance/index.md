@@ -1,12 +1,6 @@
 ---
 title: offset-distance
 slug: Web/CSS/offset-distance
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - motion-offset
-  - offset-distance
 translation_of: Web/CSS/offset-distance
 ---
 

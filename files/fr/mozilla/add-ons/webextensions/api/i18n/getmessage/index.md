@@ -1,16 +1,6 @@
 ---
 title: i18n.getMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getMessage
-  - i18n
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 ---
 
@@ -22,9 +12,9 @@ Obtient la chaîne localisée pour le message spécifié.
 
 ```js
 browser.i18n.getMessage(
-  messageName,  // string
-  substitutions // optional any
-)
+  messageName, // string
+  substitutions, // optional any
+);
 ```
 
 ### Paramètres
@@ -64,9 +54,9 @@ Cela fonctionnerait avec un fichier \_locales/en/messages.json contenant :
     "message": "You clicked $URL$.",
     "description": "Tells the user which link they clicked.",
     "placeholders": {
-      "url" : {
-        "content" : "$1",
-        "example" : "https://developer.mozilla.org"
+      "url": {
+        "content": "$1",
+        "example": "https://developer.mozilla.org"
       }
     }
   }

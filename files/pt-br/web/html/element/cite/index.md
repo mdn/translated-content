@@ -64,7 +64,7 @@ Este elemento inclui apenas [atributos globais](/pt-BR/docs/HTML/Global_attribut
 
 - Um trabalho criativo deve conter a citação de um livro,um documento,um ensaio,um poema,um filme,um programa de televisão,um video game,uma escultura,uma pintura,uma produção cinematográfica,um jogo,uma opera,um musical,uma exibição,um relatório de um caso legal,um programa de computador,um website,uma página da web,um post de um blog ou comentário,um post em um forum ou um comentário no mesmo,um tweet,uma obra ou discurso,etc.
 - O W3C específica alguns estados para referenciar um trabalho criativo que deve incluir o nome do autor,enquanto a WHATWG declarou que não deve ser incluso o nome do autor sob nenhuma circustância.
-- Use o atributo {{htmlattrxref("cite", "blockquote")}} em um elemento {{HTMLElement("blockquote")}} ou {{HTMLElement("q")}} para referenciar uma fonte online.
+- Use o atributo [`cite`](/pt-BR/docs/Web/HTML/Element/blockquote#cite) em um elemento {{HTMLElement("blockquote")}} ou {{HTMLElement("q")}} para referenciar uma fonte online.
 - Para evitar que o itálico padrão do estilo seja usado pelo elemento \<cite> use a propiedade {{cssxref("font-style")}} do CSS.
 
 ## Exemplo

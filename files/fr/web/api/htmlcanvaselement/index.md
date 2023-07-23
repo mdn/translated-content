@@ -1,8 +1,6 @@
 ---
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
-tags:
-  - Canvas
 translation_of: Web/API/HTMLCanvasElement
 ---
 
@@ -16,8 +14,8 @@ _Propriétés hérités de son parent,_ _{{domxref("HTMLElement")}}._
 
 | Nom      | Type            | Description                                                                                                                                     |
 | -------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `height` | `unsigned long` | Représente l'attribut HTML {{htmlattrxref("height", "canvas")}}, qui spécifie la hauteur de l'espace des coordonnées en pixels CSS. |
-| `width`  | `unsigned long` | Représente l'attribut HTML {{htmlattrxref("width", "canvas")}}, qui spécifie la largeur de l'espace des coordonnées en pixels CSS. |
+| `height` | `unsigned long` | Représente l'attribut HTML [`height`](/fr/docs/Web/HTML/Element/canvas#height), qui spécifie la hauteur de l'espace des coordonnées en pixels CSS. |
+| `width`  | `unsigned long` | Représente l'attribut HTML [`width`](/fr/docs/Web/HTML/Element/canvas#width), qui spécifie la largeur de l'espace des coordonnées en pixels CSS. |
 
 ## Méthodes
 
@@ -46,7 +44,7 @@ _Méthodes héritées de son parent,_ _{{domxref("HTMLElement")}}._
         <code>"webgl"</code>) renvoie un objet
         {{domxref("WebGLRenderingContext")}} . Ce dernier contexte
         n'est disponible que dans les navigateur qui implémentent
-        <a href="/en-US/docs/Web/WebGL">WebGL</a>.
+        <a href="/fr/docs/Web/WebGL">WebGL</a>.
       </td>
     </tr>
     <tr>

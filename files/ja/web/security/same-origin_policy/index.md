@@ -102,24 +102,24 @@ document.domain = "company.com";
 
 以下に示した `Window` のプロパティは、異なるオリジンからのアクセスが許可されています。
 
-| メソッド                                     |
-| -------------------------------------------- |
-| {{domxref("window.blur")}}         |
-| {{domxref("window.close")}}         |
-| {{domxref("window.focus")}}         |
+| メソッド                          |
+| --------------------------------- |
+| {{domxref("window.blur")}}        |
+| {{domxref("window.close")}}       |
+| {{domxref("window.focus")}}       |
 | {{domxref("window.postMessage")}} |
 
-| 属性                                     |                   |
-| ---------------------------------------- | ----------------- |
-| {{domxref("window.closed")}}     | 読み取り専用      |
-| {{domxref("window.frames")}}     | 読み取り専用      |
-| {{domxref("window.length")}}     | 読み取り専用      |
+| 属性                           |                   |
+| ------------------------------ | ----------------- |
+| {{domxref("window.closed")}}   | 読み取り専用      |
+| {{domxref("window.frames")}}   | 読み取り専用      |
+| {{domxref("window.length")}}   | 読み取り専用      |
 | {{domxref("window.location")}} | 読み取り/書き込み |
-| {{domxref("window.opener")}}     | 読み取り専用      |
-| {{domxref("window.parent")}}     | 読み取り専用      |
+| {{domxref("window.opener")}}   | 読み取り専用      |
+| {{domxref("window.parent")}}   | 読み取り専用      |
 | {{domxref("window.self")}}     | 読み取り専用      |
-| {{domxref("window.top")}}         | 読み取り専用      |
-| {{domxref("window.window")}}     | 読み取り専用      |
+| {{domxref("window.top")}}      | 読み取り専用      |
+| {{domxref("window.window")}}   | 読み取り専用      |
 
 一部のブラウザーでは、仕様書で定められたものより多くのプロパティでアクセスが許可されています。
 
@@ -127,12 +127,12 @@ document.domain = "company.com";
 
 以下に示した `Location` のプロパティは、異なるオリジンからのアクセスが許可されています。
 
-| メソッド                                 |
-| ---------------------------------------- |
+| メソッド                        |
+| ------------------------------- |
 | {{domxref("location.replace")}} |
 
-| 属性                                 |              |
-| ------------------------------------ | ------------ |
+| 属性                         |              |
+| ---------------------------- | ------------ |
 | {{domxref("URLUtils.href")}} | 書き込みのみ |
 
 一部のブラウザーでは、仕様書で定められたものより多くのプロパティでアクセスが許可されています。

@@ -1,6 +1,6 @@
 ---
 title: Usando animações CSS
-slug: Web/CSS/CSS_Animations/Using_CSS_animations
+slug: Web/CSS/CSS_animations/Using_CSS_animations
 original_slug: Web/CSS/CSS_Animations/Usando_animações_CSS
 ---
 
@@ -78,7 +78,7 @@ O estilo para o elemento {{ HTMLElement("p") }} aqui especifica que a animação
 
 Se quiséssemos quaisquer estilização customizada no elemento {{ HTMLElement("p") }} para aparecer em navegadores que não suportam animações CSS, incluiríamos aqui também; no entanto, nesse caso não queremos nenhuma estilização customizada a não ser o efeito da animação.
 
-Os keyframes são definidos utilizando-se as regras{{cssxref("@keyframes") }}. Neste caso, utilizamos apenas dois keyframes. O primeiro ocorre no progresso de 0% (ou seja, o primeiro keyframe da animação, através do pseudônimo from). Nesta etapa, configuramos a margem esquerda do elemento para ser 100% - quer dizer, como a margem está à esquerda e com valor 100%, o elemento irá se deslocar para o seu limite, ou seja, para a parte direita – e sua largura será de 300%, ou seja, 3 vezes a largura do seu tamanho original. Isto faz com que o elemento, em seu primeiro frame da animação, seja “empurrado” para fora do limite da parte direita da janela do navegador.
+Os keyframes são definidos utilizando-se as regras{{cssxref("@keyframes") }}. Neste caso, utilizamos apenas dois keyframes. O primeiro ocorre no progresso de 0% (ou seja, o primeiro keyframe da animação, através do pseudônimo from). Nesta etapa, configuramos a margem esquerda do elemento para ser 100% - quer dizer, como a margem está à esquerda e com valor 100%, o elemento irá se deslocar para o seu limite, ou seja, para a parte direita – e sua largura será de 300%, ou seja, 3 vezes a largura do seu tamanho original. Isto faz com que o elemento, em seu primeiro frame da animação, seja "empurrado" para fora do limite da parte direita da janela do navegador.
 
 O segundo (e último) keyframe ocorre na etapa 100% do progresso (ou seja, o último keyframe da animação, através do pseudônimo to). A margem esquerda está com valor de 0% e a largura do elemento está com valor de 100%. Isto resulta na animação do elemento {{ HTMLElement("p") }}, que entra gradativamente na área de conteúdo até atingir uma margem esquerda de 0%.
 
@@ -214,7 +214,7 @@ ela com uma voz lânguida e sonolenta.
 
 ### Usando eventos de animação
 
-Você pode ter controle adicional sobre animações -- como também informações úteis sobre elas -- através do uso de eventos de animação. Esses eventos, representados pelo objeto {{ domxref("event/AnimationEvent", "AnimationEvent") }} , podem ser usados para detectar quando animações iniciam, terminam, e começam uma nova iteração. Cada evento inclui o tempo no qual ele ocorreu como também o nome da animação que lançou o evento.
+Você pode ter controle adicional sobre animações — como também informações úteis sobre elas — através do uso de eventos de animação. Esses eventos, representados pelo objeto {{ domxref("event/AnimationEvent", "AnimationEvent") }} , podem ser usados para detectar quando animações iniciam, terminam, e começam uma nova iteração. Cada evento inclui o tempo no qual ele ocorreu como também o nome da animação que lançou o evento.
 
 Nós vamos modificar o exemplo de deslizamento de texto para gerar alguma informação sobre cada evento de animação quando ele ocorrer, para que possamos perceber como eles funcionam.
 

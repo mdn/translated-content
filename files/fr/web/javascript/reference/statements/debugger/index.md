@@ -2,8 +2,6 @@
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
 translation_of: Web/JavaScript/Reference/Statements/debugger
-original_slug: Web/JavaScript/Reference/Instructions/debugger
-browser-compat: javascript.statements.debugger
 ---
 
 {{jsSidebar("Statements")}}

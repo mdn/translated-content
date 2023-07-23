@@ -14,6 +14,6 @@ slug: Glossary/Graceful_degradation
 3. [機能検出の実装](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
 4. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Graceful degradation", "グレースフルデグラデーション")}}
-    2. {{Glossary("Polyfill", "ポリフィル")}}
-    3. {{Glossary("Progressive enhancement", "プログレッシブエンハンスメント")}}
+   1. {{Glossary("Graceful degradation", "グレースフルデグラデーション")}}
+   2. {{Glossary("Polyfill", "ポリフィル")}}
+   3. {{Glossary("Progressive enhancement", "プログレッシブエンハンスメント")}}

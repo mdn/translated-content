@@ -32,9 +32,9 @@ var animation = element.animate(keyframes, options);
   - : Целое число**, представляющее продолжительность анимации** (в миллисекундах), **или** объект, содержащий одно или более временных свойств.
 
     - `id {{optional_inline}}`
-      - : Свойство уникальное для `animate()`: [`DOMString`](/en-US/docs/Web/API/DOMString), с помощью которого можно ссылаться на анимацию.
+      - : Свойство уникальное для `animate()`: [`DOMString`](/ru/docs/Web/API/DOMString), с помощью которого можно ссылаться на анимацию.
 
-    {{Page("ru/docs/Web/API/EffectTiming", "Свойства")}}
+    {{Page("/ru/docs/Web/API/EffectTiming", "Свойства")}}
 
 #### Будущие возможности
 

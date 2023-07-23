@@ -36,7 +36,7 @@ slug: Web/Security
 ## 数据安全
 
 - [使用 HTTP Cookies](/zh-CN/docs/Web/HTTP/Cookies)
-  - : *HTTP cookie*（web cookie，浏览器 cookie）是服务器发送给客户端 web 浏览器的一小块数据。浏览器可能会存储它，并在后续对同一服务器的请求中将它发送回服务器。例如，通常这可以说明两个请求来自同一个浏览器，从而让用户保持登录状态。
+  - : _HTTP cookie_（web cookie，浏览器 cookie）是服务器发送给客户端 web 浏览器的一小块数据。浏览器可能会存储它，并在后续对同一服务器的请求中将它发送回服务器。例如，通常这可以说明两个请求来自同一个浏览器，从而让用户保持登录状态。
 - [Local storage](/zh-CN/docs/Web/API/Window/localStorage)
   - : `Window` 对象的 {{domxref("Window.localStorage")}} 属性是一种服务器在客户端上存储持久性数据的方法，数据可以在不同的会话中持久访问。
 
@@ -67,7 +67,7 @@ slug: Web/Security
 - [HTTP X-Frame-Options](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)
   - : **`X-Frame-Options`** [HTTP](/zh-CN/docs/Web/HTTP) 响应头可以用来表明是否应该允许浏览器在 [`<frame>`](/zh-CN/docs/Web/HTML/Element/frame)、[`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)、[`<embed>`](/zh-CN/docs/Web/HTML/Element/embed) 或 [`<object>`](/zh-CN/docs/Web/HTML/Element/object) 中渲染页面。网站通过这些方法，保证它们的内容不被轻易嵌入至其他站点，可以避免[点击劫持](/zh-CN/docs/Glossary/Clickjacking)攻击。
 - [CSP: frame-ancestors](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
-  - : HTTP {{HTTPHeader("Content-Security-Policy")}}（CSP）的 **`frame-ancestors`** 指令指定了使用 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}} 或 {{HTMLElement("applet")}} 元素嵌入页面的合法父元素。
+  - : HTTP {{HTTPHeader("Content-Security-Policy")}}（CSP）的 **`frame-ancestors`** 指令指定了使用 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}} 或{{HTMLElement("embed")}} 元素嵌入页面的合法父元素。
 
 ## 用户信息安全
 

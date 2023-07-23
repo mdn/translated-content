@@ -1,11 +1,6 @@
 ---
 title: '::grammar-error'
 slug: Web/CSS/::grammar-error
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::grammar-error
 ---
 

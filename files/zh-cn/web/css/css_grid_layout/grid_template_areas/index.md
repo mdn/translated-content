@@ -1,11 +1,11 @@
 ---
 title: 网格模板区域
-slug: Web/CSS/CSS_Grid_Layout/Grid_Template_Areas
+slug: Web/CSS/CSS_grid_layout/Grid_template_areas
 ---
 
 {{CSSRef}}
 
-在[上一篇指南](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)中我们着眼于网格线以及如何依赖网格线定位项目。在使用 CSS 网格布局时，因为离不开网格线，所以最直接的方式就是使用网格线来定位项目。不过，还有另一种替代方法用于定位项目，你可以独立使用它，也可把它和基于网格线的定位结合起来。这个方法采用对模板区域命名的方式来定位项目，接下来我们就来弄清如何使用它。很快你就会知道为什么我们有时把这种方法称为网格布局的 ASCII 艺术方法！
+在[上一篇指南](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)中我们着眼于网格线以及如何依赖网格线定位项目。在使用 CSS 网格布局时，因为离不开网格线，所以最直接的方式就是使用网格线来定位项目。不过，还有另一种替代方法用于定位项目，你可以独立使用它，也可把它和基于网格线的定位结合起来。这个方法采用对模板区域命名的方式来定位项目，接下来我们就来弄清如何使用它。很快你就会知道为什么我们有时把这种方法称为网格布局的 ASCII 艺术方法！
 
 ## 命名网格区域
 

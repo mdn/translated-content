@@ -10,7 +10,7 @@ original_slug: Web/HTTP/Аутентификация
 ---
 {{HTTPSidebar}}
 
-HTTP предоставляет набор инструментов для котнроля доступа к ресурсам и аутентификации. Самой
+HTTP предоставляет набор инструментов для контроля доступа к ресурсам и аутентификации. Самой
 распространённой схемой HTTP аутентификации является "Базовая" (Basic) аутентификация. Данное руководство описывает
 основные возможности HTTP аутентификации и показывает способы ограничения доступа к вашему серверу с её
 использованием.
@@ -178,7 +178,7 @@ https://username:password@www.example.com/
 `username:password@` даже[
 вырезана](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7) из соображений безопасности. В браузере Firefox, проверяется, действительно ли сайт требует
 аутентификации и если нет, тогда Firefox предупредит пользователя запросом (prompt) "You are about to log in to the
-site “www\.example.com” with the username “username”, but the website does not require authentication. This may be an
+site "www\.example.com" with the username "username", but the website does not require authentication. This may be an
 attempt to trick you.".
 
 ## Смотреть также

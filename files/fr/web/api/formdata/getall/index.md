@@ -1,14 +1,6 @@
 ---
 title: FormData.getAll()
 slug: Web/API/FormData/getAll
-tags:
-  - API
-  - FormData
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - getAll
 translation_of: Web/API/FormData/getAll
 ---
 

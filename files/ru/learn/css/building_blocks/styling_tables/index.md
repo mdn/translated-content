@@ -63,7 +63,7 @@ translation_of: Learn/CSS/Building_blocks/Styling_tables
 </table>
 ```
 
-Таблица размечена, немного стилизована и понятна, благодаря использованию таких свойств как {{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}} и т.д. К сожалению при просмотре в браузере она не очень хорошо выглядит (посмотреть можно здесь [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)):
+Таблица размечена, немного стилизована и понятна, благодаря использованию таких свойств как [`scope`](/ru/docs/Web/HTML/Element/th#scope), {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}} и т.д. К сожалению при просмотре в браузере она не очень хорошо выглядит (посмотреть можно здесь [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)):
 
 ![](table-unstyled.png)
 

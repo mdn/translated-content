@@ -1,12 +1,7 @@
 ---
 title: Polices SVG
 slug: Web/SVG/Tutorial/SVG_fonts
-tags:
-  - Police
-  - SVG
-  - font
 translation_of: Web/SVG/Tutorial/SVG_fonts
-original_slug: Web/SVG/Tutoriel/polices_SVG
 ---
 
 {{ PreviousNext("Web/SVG/Tutoriel/filtres","Web/SVG/Tutoriel/SVG_Image_Tag") }}
@@ -23,16 +18,27 @@ Quelques ingrédients sont nécessaires pour intégrer une police en SVG. Prenon
 
 ```html
 <font id="Font1" horiz-adv-x="1000">
-  <font-face font-family="Super Sans" font-weight="bold" font-style="normal"
-      units-per-em="1000" cap-height="600" x-height="400"
-      ascent="700" descent="300"
-      alphabetic="0" mathematical="350" ideographic="400" hanging="500">
+  <font-face
+    font-family="Super Sans"
+    font-weight="bold"
+    font-style="normal"
+    units-per-em="1000"
+    cap-height="600"
+    x-height="400"
+    ascent="700"
+    descent="300"
+    alphabetic="0"
+    mathematical="350"
+    ideographic="400"
+    hanging="500">
     <font-face-src>
-      <font-face-name name="Super Sans Bold"/>
+      <font-face-name name="Super Sans Bold" />
     </font-face-src>
   </font-face>
-  <missing-glyph><path d="M0,0h200v200h-200z"/></missing-glyph>
-  <glyph unicode="!" horiz-adv-x="300"><!-- Outline of exclam. pt. glyph --></glyph>
+  <missing-glyph><path d="M0,0h200v200h-200z" /></missing-glyph>
+  <glyph unicode="!" horiz-adv-x="300"
+    ><!-- Outline of exclam. pt. glyph --></glyph
+  >
   <glyph unicode="@"><!-- Outline of @ glyph --></glyph>
   <!-- more glyphs -->
 </font>
@@ -46,7 +52,7 @@ Its child, the {{ SVGElement("font-face-src") }} element, corresponds to CSS' `s
 
 Following {{ SVGElement("font-face-src") }} is a {{ SVGElement("missing-glyph") }} element. This defines what should be displayed if a certain glyph is not found in the font and if there are no fallback mechanisms. It also shows how glyphs are created: By simply adding any graphical SVG content inside. You can use literally any other SVG elements in here, even {{ SVGElement("filter") }}, {{ SVGElement("a") }} or {{ SVGElement("script") }}. For simple glyphs, however, you can simply add a `d` attribute — this defines a shape for the glyph exactly like how standard SVG paths work.
 
-The actual glyphs are then defined by {{ SVGElement("glyph") }} elements. The most important attribute is `unicode`. It defines the unicode codepoint represented by this glyph. If you also specify the {{htmlattrxref("lang")}} attribute on a glyph, you can further restrict it to certain languages (represented by `xml:lang` on the target) exclusively. Again, you can use arbitrary SVG to define the glyph, which allows for great effects in supporting user agents.
+The actual glyphs are then defined by {{ SVGElement("glyph") }} elements. The most important attribute is `unicode`. It defines the unicode codepoint represented by this glyph. If you also specify the [`lang`](/fr/docs/Web/HTML/Global_attributes#lang) attribute on a glyph, you can further restrict it to certain languages (represented by `xml:lang` on the target) exclusively. Again, you can use arbitrary SVG to define the glyph, which allows for great effects in supporting user agents.
 
 There are two further elements that can be defined inside `font`: {{ SVGElement("hkern") }} and {{ SVGElement("vkern") }}. Each carries references to at least two characters (attributes `u1` and `u2`) and an attribute `k` that determines how much the distance between those characters should be decreased. The below example instructs user agents to place the "A" and "V" characters closer together the standard distance between characters.
 
@@ -79,10 +85,10 @@ Vous pouvez utiliser `@font-face` pour les polices externes de référence :
 </font>
 
 <style type="text/css">
-@font-face {
-  font-family: "Super Sans";
-  src: url(#Super_Sans);
-}
+  @font-face {
+    font-family: "Super Sans";
+    src: url(#Super_Sans);
+  }
 </style>
 
 <text font-family="Super Sans">My text uses Super Sans</text>

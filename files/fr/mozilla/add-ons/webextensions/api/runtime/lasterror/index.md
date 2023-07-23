@@ -1,16 +1,6 @@
 ---
 title: runtime.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - lastError
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
 ---
 
@@ -28,7 +18,7 @@ Si vous applez une fonction asynchrone qui veut définir `lastError`, vous devez
 ## Syntaxe
 
 ```js
-var myError = browser.runtime.lastError;  // null or Error object
+var myError = browser.runtime.lastError; // null or Error object
 ```
 
 ### Valeur
@@ -48,10 +38,7 @@ function logCookie(c) {
   }
 }
 
-browser.cookies.set(
-  {url: "https://developer.mozilla.org/"},
-  logCookie
-);
+browser.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
 ```
 
 La même chose, mais en utilisant une promesse de gérer le résultat de `setCookie()`:
@@ -65,9 +52,7 @@ function logError(e) {
   console.error(e);
 }
 
-var setCookie = browser.cookies.set(
-  {url: "https://developer.mozilla.org/"}
-);
+var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
 
 setCookie.then(logCookie, logError);
 ```

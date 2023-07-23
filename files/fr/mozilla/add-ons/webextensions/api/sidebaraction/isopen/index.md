@@ -1,15 +1,6 @@
 ---
 title: sidebarAction.isOpen()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - isOpen
-  - slidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen
 ---
 
@@ -28,8 +19,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 let gettingIsOpen = browser.sidebarAction.isOpen(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -50,7 +41,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 Vérifiez la fenêtre la plus haute :
 
 ```js
-browser.sidebarAction.isOpen({}).then(result => {
+browser.sidebarAction.isOpen({}).then((result) => {
   console.log(result);
 });
 ```
@@ -59,12 +50,12 @@ Vérifiez toutes les fenêtres ouvertes :
 
 ```js
 async function checkWindow(windowId) {
-  let result = await browser.sidebarAction.isOpen({windowId});
+  let result = await browser.sidebarAction.isOpen({ windowId });
   console.log(`window: ${windowId} status: ${result}`);
 }
 
-browser.windows.getAll().then(all => {
-  for (let {id} of all) {
+browser.windows.getAll().then((all) => {
+  for (let { id } of all) {
     checkWindow(id);
   }
 });

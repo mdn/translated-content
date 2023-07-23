@@ -1,15 +1,6 @@
 ---
 title: sidebarAction.setPanel()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - setPanel
-  - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
 ---
 
@@ -31,8 +22,8 @@ Si vous définissez un nouveau panneau en utilisant `setPanel()`, et omettez les
 
 ```js
 browser.sidebarAction.setPanel(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -73,9 +64,9 @@ var thatPanel = browser.runtime.getURL("/that.html");
 
 function toggle(panel) {
   if (panel === thisPanel) {
-    browser.sidebarAction.setPanel({panel: thatPanel});
+    browser.sidebarAction.setPanel({ panel: thatPanel });
   } else {
-    browser.sidebarAction.setPanel({panel: thisPanel});
+    browser.sidebarAction.setPanel({ panel: thisPanel });
   }
 }
 

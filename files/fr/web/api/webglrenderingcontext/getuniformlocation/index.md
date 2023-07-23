@@ -1,17 +1,6 @@
 ---
 title: WebGLRenderingContext.getUniformLocation()
 slug: Web/API/WebGLRenderingContext/getUniformLocation
-tags:
-  - API
-  - Méthode
-  - Reference
-  - Uniform Variables
-  - Uniforms
-  - Variables
-  - Variables en WebGL
-  - WebGL
-  - WebGLRenderingContext
-  - getUniformLocation
 translation_of: Web/API/WebGLRenderingContext/getUniformLocation
 ---
 

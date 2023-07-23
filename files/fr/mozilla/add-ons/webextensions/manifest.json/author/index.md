@@ -1,12 +1,7 @@
 ---
 title: author
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/author
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/author
-original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/auteur
 ---
 
 {{AddonSidebar}}

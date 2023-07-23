@@ -1,15 +1,7 @@
 ---
 title: Uint32Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
-  - Uint32Array
 translation_of: Web/JavaScript/Reference/Global_Objects/Uint32Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Uint32Array
 ---
 
 {{JSRef}}

@@ -1,12 +1,6 @@
 ---
 title: 'Window: online event'
 slug: Web/API/Window/online_event
-tags:
-  - API
-  - Evènement
-  - Online
-  - Reference
-  - Window
 translation_of: Web/API/Window/online_event
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: Fonctions et portée des fonctions
 slug: Web/JavaScript/Reference/Functions
-tags:
-  - Function
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Functions
-original_slug: Web/JavaScript/Reference/Fonctions
 ---
 
 {{jsSidebar("Functions")}}
@@ -558,7 +553,7 @@ Une déclaration de fonction peut très facilement (et souvent involontairement)
     }
     ```
 
-### Exemples :
+### Exemples
 
 ```js
   // déclaration de fonction

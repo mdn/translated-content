@@ -1,15 +1,7 @@
 ---
 title: Définir une méthode
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-tags:
-  - ECMAScript 2015
-  - Fonctions
-  - JavaScript
-  - Object
-  - Reference
-  - Syntaxe
 translation_of: Web/JavaScript/Reference/Functions/Method_definitions
-original_slug: Web/JavaScript/Reference/Fonctions/Définition_de_méthode
 ---
 
 {{JsSidebar("Functions")}}

@@ -13,7 +13,25 @@ slug: Web/SVG/Element/polyline
 
 ## 示例
 
-» [polyline.svg](/files/3260/polyline.svg)
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- 具有默认填充的折线示例 -->
+  <polyline points="0,100 50,25 50,75 100,0" />
+
+  <!-- 具有描边但无填充的相同的多段线形状示例 -->
+  <polyline points="100,100 150,25 150,75 200,0" fill="none" stroke="black" />
+</svg>
+```
+
+{{EmbedLiveSample('示例', 100, 100)}}
 
 ## 属性
 

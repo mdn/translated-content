@@ -1,20 +1,7 @@
 ---
 title: Création d'hyperliens
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - Apprendre
-  - Codage
-  - Débutant
-  - Guide
-  - HTML
-  - Liens
-  - Title
-  - URL
-  - absolu
-  - hyperliens
-  - relatif
 translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-original_slug: Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks
 ---
 
 {{LearnSidebar}}
@@ -61,11 +48,12 @@ La page d'accueil de la BBC, par exemple, contient un nombre important de liens 
 
 ## Anatomie d'un lien
 
-Un lien élémentaire se crée en intégrant le texte (ou tout autre contenu, cf. [Liens de niveau bloc](#liens_de_niveau_bloc)) que vous voulez transformer en lien dans un élément {{htmlelement("a")}} et en lui affectant un attribut {{htmlattrxref("href", "a")}} (également connu comme étant une **Hypertext Reference**) contenant l'adresse web vers laquelle vous voulez que le lien pointe.
+Un lien élémentaire se crée en intégrant le texte (ou tout autre contenu, cf. [Liens de niveau bloc](#liens_de_niveau_bloc)) que vous voulez transformer en lien dans un élément {{htmlelement("a")}} et en lui affectant un attribut [`href`](/fr/docs/Web/HTML/Element/a#href) (également connu comme étant une **Hypertext Reference**) contenant l'adresse web vers laquelle vous voulez que le lien pointe.
 
 ```html
-<p>Je suis en train de créer un lien à
-<a href="https://www.mozilla.org/fr/">la page d'accueil Mozilla</a>.
+<p>
+  Je suis en train de créer un lien à
+  <a href="https://www.mozilla.org/fr/">la page d'accueil Mozilla</a>.
 </p>
 ```
 
@@ -78,10 +66,14 @@ Je suis en train de créer un lien à [la page d'accueil de Mozilla](https://www
 L'autre attribut qu'il est possible d'ajouter à un lien est `title` ; il est destiné à contenir des informations utiles supplémentaires à propos du lien, comme le type d'informations contenues dans la page ou ce qu'il faut savoir. Par exemple :
 
 ```html
-<p>Je suis en train de créer un lien à
-<a href="https://www.mozilla.org/fr/"
-   title="Le meilleur endroit pour trouver plus d'informations sur la
-  mission de Mozilla et la manière de contribuer">la page d'accueil Mozilla</a>.
+<p>
+  Je suis en train de créer un lien à
+  <a
+    href="https://www.mozilla.org/fr/"
+    title="Le meilleur endroit pour trouver plus d'informations sur la
+  mission de Mozilla et la manière de contribuer"
+    >la page d'accueil Mozilla</a
+  >.
 </p>
 ```
 
@@ -105,7 +97,9 @@ Comme mentionné précédemment, vous pouvez transformer à peu près tout conte
 
 ```html
 <a href="https://www.mozilla.org/fr/">
-  <img src="mozilla-image.png" alt="logo mozilla pointant sur la page d'accueil mozilla">
+  <img
+    src="mozilla-image.png"
+    alt="logo mozilla pointant sur la page d'accueil mozilla" />
 </a>
 ```
 
@@ -128,27 +122,34 @@ Il y a aussi deux répertoires dans la racine — `pdfs` et `projects`. Chacun d
 - **Dans un même dossier** : si vous voulez inclure un hyperlien dans `index.html` (celui de plus haut niveau) pointant vers `contacts.html`, il suffit d'indiquer uniquement le nom du fichier auquel vous voulez le lier, car il est dans le même répertoire que le fichier actuel. Ainsi, l'URL à utiliser est `contacts.html` :
 
   ```html
-  <p>Voulez‑vous rencontrer un membre du personnel en particulier ?
-  Voyez comment faire sur notre page <a href="contacts.html">Contacts</a>.</p>
+  <p>
+    Voulez‑vous rencontrer un membre du personnel en particulier ? Voyez comment
+    faire sur notre page <a href="contacts.html">Contacts</a>.
+  </p>
   ```
 
 - **Descendre dans les sous-répertoires** : si vous désirez inclure un hyperlien dans `index.html` (`celui` de plus haut niveau) pointant vers `projects/index.html`, vous avez besoin de descendre dans le dossier `projects` avant d'indiquer le fichier auquel vous voulez vous lier. Cela se fait en indiquant le nom du dossier, suivi d'une barre oblique normale, puis le nom du fichier. Donc l'URL à utiliser sera `projects/index.html` :
 
   ```html
-  <p>Visitez la <a href="projects/index.html">page d'accueil</a> de mon projet.</p>
+  <p>
+    Visitez la <a href="projects/index.html">page d'accueil</a> de mon projet.
+  </p>
   ```
 
 - **Monter dans les dossiers parents** : si vous voulez inclure un hyperlien dans `projects/index.html` qui pointe vers `pdfs/projects-brief.pdf`, vous aurez besoin de monter dans le répertoire au niveau au‑dessus, puis de descendre dans le dossier `pdfs`. « Monter dans le répertoire au niveau au‑dessus » est indiqué avec deux points — `..` —, de sorte que l'URL à utiliser sera `../pdfs/project‑brief.pdf` :
 
   ```html
-  <p>Voici un lien vers mon <a href="../pdfs/project-brief.pdf">sommaire de projet</a>.</p>
+  <p>
+    Voici un lien vers mon
+    <a href="../pdfs/project-brief.pdf">sommaire de projet</a>.
+  </p>
   ```
 
 > **Note :** Vous pouvez combiner plusieurs instances de ces fonctionnalités dans des URL complexes si nécessaire, par ex. `../../../complexe/path/to/my/file.html`.
 
 ### Fragments de documents
 
-Il est possible de faire un lien vers une partie donnée d'un document HTML (désignée du terme **fragment de document**), plutôt que juste le haut du document. Pour ce faire, vous devrez d'abord assigner un attribut {{htmlattrxref("id")}} à l'élément sur lequel vous voulez pointer. Il est généralement logique d'établir un lien vers une rubrique précise, ainsi cela ressemble à quelque chose comme :
+Il est possible de faire un lien vers une partie donnée d'un document HTML (désignée du terme **fragment de document**), plutôt que juste le haut du document. Pour ce faire, vous devrez d'abord assigner un attribut [`id`](/fr/docs/Web/HTML/Global_attributes#id) à l'élément sur lequel vous voulez pointer. Il est généralement logique d'établir un lien vers une rubrique précise, ainsi cela ressemble à quelque chose comme :
 
 ```html
 <h2 id="Adresse_mailing">Adresse de mailing</h2>
@@ -157,13 +158,19 @@ Il est possible de faire un lien vers une partie donnée d'un document HTML (dé
 Puis, pour faire un lien vers cet `id` précisément, il convient de l'indiquer à la fin de l'URL, précédé d'un croisillon (#) :
 
 ```html
-<p>Vous voulez nous écrire une lettre ? Utilisez notre <a href="contacts.html#Adresse_mailing">adresse de contact</a>.</p>
+<p>
+  Vous voulez nous écrire une lettre ? Utilisez notre
+  <a href="contacts.html#Adresse_mailing">adresse de contact</a>.
+</p>
 ```
 
 Vous pouvez même utiliser une référence au fragment de document seul pour faire un lien vers _une autre partie du même document_ :
 
 ```html
-<p>Vous trouverez n l'<a href="#Adresse_mailing">adresse de mailing</a> de notre société au bas de cette page.</p>
+<p>
+  Vous trouverez n l'<a href="#Adresse_mailing">adresse de mailing</a> de notre
+  société au bas de cette page.
+</p>
 ```
 
 ### URL absolue vs. URL relative
@@ -197,18 +204,13 @@ Regardons un exemple particulier :
 **Bon** texte de lien&nbsp;: [Télécharger Firefox](https://firefox.com)
 
 ```html
-<p><a href="https://firefox.com/">
-  Télécharger Firefox
-</a></p>
+<p><a href="https://firefox.com/"> Télécharger Firefox </a></p>
 ```
 
 **Mauvais** texte de lien&nbsp;: [Cliquer ici](https://firefox.com/) pour télécharger Firefox
 
 ```html
-<p><a href="https://firefox.com/">
-  Cliquer ici
-</a>
-pour télécharger Firefox</p>
+<p><a href="https://firefox.com/"> Cliquer ici </a> pour télécharger Firefox</p>
 ```
 
 Autres conseils :
@@ -235,17 +237,23 @@ Quand faites un lien vers une ressource à télécharger (comme un PDF ou un doc
 Voici quelques exemples suggérant les genres de texte pouvant être employé :
 
 ```html
-<p><a href="http://www.exemple.com/rapport-volumineux.pdf">
-  Télécharger le rapport des ventes (PDF, 10Mo)
-</a></p>
+<p>
+  <a href="http://www.exemple.com/rapport-volumineux.pdf">
+    Télécharger le rapport des ventes (PDF, 10Mo)
+  </a>
+</p>
 
-<p><a href="http://www.exemple.com/flux-video/" target="_blank">
-  Regarder la vidéo (le flux s'ouvre dans un nouvel onglet, qualité HD)
-</a></p>
+<p>
+  <a href="http://www.exemple.com/flux-video/" target="_blank">
+    Regarder la vidéo (le flux s'ouvre dans un nouvel onglet, qualité HD)
+  </a>
+</p>
 
-<p><a href="http://www.exemple.com/jeu-de-voiture">
-  Jouer au jeu de voiture (nécessite Flash)
-</a></p>
+<p>
+  <a href="http://www.exemple.com/jeu-de-voiture">
+    Jouer au jeu de voiture (nécessite Flash)
+  </a>
+</p>
 ```
 
 ### Utilisez l'attribut `download` pour faire un lien vers un téléchargement
@@ -253,9 +261,11 @@ Voici quelques exemples suggérant les genres de texte pouvant être employé :
 Quand vous faites un lien avec une ressource qui doit être téléchargée plutôt qu'ouverte dans le navigateur, vous pouvez utiliser l'attribut `download` pour fournir un nom d'enregistrement par défaut. Voici un exemple avec un lien de téléchargement vers la version Windows la plus récente de Firefox :
 
 ```html
-<a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=fr-FR"
-   download="firefox-latest-64bit-installer.exe">
-  Télécharger la version de Firefox pour Windows la plus récente (64-bit)(français, France)
+<a
+  href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=fr-FR"
+  download="firefox-latest-64bit-installer.exe">
+  Télécharger la version de Firefox pour Windows la plus récente
+  (64-bit)(français, France)
 </a>
 ```
 
@@ -295,7 +305,7 @@ Sous sa forme la plus basique et la plus communément utilisée, un lien `mailto
 
 Ceci donne un résultat qui ressemble à ceci : [Envoyer un courriel à nullepart](mailto:nowhere@mozilla.org).
 
-En fait, l'adresse de courriel est même optionnelle. Si vous l'omettez (c'est-à-dire, si votre {{htmlattrxref("href", "a")}} est simplement "mailto:"), une nouvelle fenêtre de courriel sortant sera ouverte par le client de courriel de l'utilisateur, sans adresse de destination encore spécifiée. C'est souvent utile comme pour les liens "Partager" que lesquels les utilisateurs peuvent cliquer pour envoyer un e-mail à l'adresse de leur choix.
+En fait, l'adresse de courriel est même optionnelle. Si vous l'omettez (c'est-à-dire, si votre [`href`](/fr/docs/Web/HTML/Element/a#href) est simplement "mailto:"), une nouvelle fenêtre de courriel sortant sera ouverte par le client de courriel de l'utilisateur, sans adresse de destination encore spécifiée. C'est souvent utile comme pour les liens "Partager" que lesquels les utilisateurs peuvent cliquer pour envoyer un e-mail à l'adresse de leur choix.
 
 ### Spécification des détails
 
@@ -304,7 +314,8 @@ En plus de l'adresse mail, vous pouvez fournir d'autres informations. En fait, t
 Voici un exemple incluant cc (carbon copy), bcc (blind cc), subject (sujet) et body :
 
 ```html
-<a href="mailto:nullepart@mozilla.org?cc=nom2@rapidtables.com&bcc=nom3@rapidtables.com&subject=L%27objet%20du%20courriel&body=Le%20corps%20du%20courriel">
+<a
+  href="mailto:nullepart@mozilla.org?cc=nom2@rapidtables.com&bcc=nom3@rapidtables.com&subject=L%27objet%20du%20courriel&body=Le%20corps%20du%20courriel">
   Envoyer un e-mail avec copie, copie cachée, sujet et corps de message
 </a>
 ```

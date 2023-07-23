@@ -47,7 +47,7 @@ function f(arg) {
 
 ## Notas de compatibilidade
 
-- Antes do Firefox 49, isto foi lançado como um {{jsxref("TypeError")}} ({{bug(1275240)}}).
+- Antes do Firefox 49, isto foi lançado como um {{jsxref("TypeError")}} ([Erro do Firefox 1275240](https://bugzil.la/1275240)).
 
 ## Veja também
 

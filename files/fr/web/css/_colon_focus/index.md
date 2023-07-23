@@ -1,10 +1,6 @@
 ---
 title: ':focus'
 slug: Web/CSS/:focus
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:focus
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: Document.createTreeWalker()
 slug: Web/API/Document/createTreeWalker
-tags:
-  - API
-  - Arborescence
-  - DOM
-  - Document
-  - Filtre
-  - Méthodes
-  - Noeuds
 translation_of: Web/API/Document/createTreeWalker
 ---
 

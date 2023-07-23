@@ -1,16 +1,6 @@
 ---
 title: runtime.onSuspend
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspend
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onSuspend
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspend
 ---
 
@@ -23,9 +13,9 @@ Envoyé sur la page de l'événement juste avant son déchargement. Cela donne �
 ## Syntaxe
 
 ```js
-browser.runtime.onSuspend.addListener(listener)
-browser.runtime.onSuspend.removeListener(listener)
-browser.runtime.onSuspend.hasListener(listener)
+browser.runtime.onSuspend.addListener(listener);
+browser.runtime.onSuspend.removeListener(listener);
+browser.runtime.onSuspend.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

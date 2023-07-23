@@ -1,10 +1,6 @@
 ---
 title: API de Vibration
 slug: Web/API/Vibration_API
-tags:
-  - Débutant
-  - Firefox OS
-  - Vibration
 translation_of: Web/API/Vibration_API
 ---
 

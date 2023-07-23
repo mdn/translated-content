@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: application ロール'
+title: "ARIA: application ロール"
 slug: Web/Accessibility/ARIA/Roles/application_role
 ---
 

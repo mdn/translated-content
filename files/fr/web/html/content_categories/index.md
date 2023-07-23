@@ -1,13 +1,7 @@
 ---
 title: Catégories de contenu
 slug: Web/HTML/Content_categories
-tags:
-  - Avancé
-  - Contenus
-  - Guide
-  - HTML
 translation_of: Web/Guide/HTML/Content_categories
-original_slug: Web/Guide/HTML/Content_categories
 ---
 
 Chaque élément [HTML](/fr/docs/Web/HTML) est membre d'un certain nombre de catégories de contenu qui regroupent des éléments partageant un ensemble de caractéristiques. Ceci est un regroupement lâche, en ce sens qu'il ne crée pas réellement de relation entre les éléments de ces types, mais il aide à définir et à décrire leur comportement et les règles associées qu'ils doivent respecter, en particulier lorsque l'on entre dans leurs détails complexes. Il est également possible que les éléments ne soient membres d'aucune de ces catégories.
@@ -39,7 +33,7 @@ Quelques autres éléments appartiennent à cette catégorie mais seulement sous
 - {{HTMLElement("area")}} s'il est un descendant de l'élément {{HTMLElement("map")}}
 - {{HTMLElement("link")}} si l'attribut [**itemprop**](/fr/docs/HTML/Global_attributes#itemprop) est présent
 - {{HTMLElement("meta")}} si l'attribut [**itemprop**](/fr/docs/HTML/Global_attributes#itemprop) est présent
-- {{HTMLElement("style")}} si l'attribut {{htmlattrxref("scoped","style")}} {{deprecated_inline()}} est présent
+- {{HTMLElement("style")}} si l'attribut [`scoped`](/fr/docs/Web/HTML/Element/style#scoped) {{deprecated_inline()}} est présent
 
 ### Contenu sectionnant
 
@@ -85,12 +79,12 @@ Le contenu interactif regroupe des éléments spécialement conçus pour une int
 
 Quelques éléments appartiennent à cette catégorie seulement sous certaines conditions :
 
-- {{HTMLElement("audio")}} si l'attribut {{htmlattrxref("controls", "audio")}} est présent
-- {{HTMLElement("img")}} si l'attribut {{htmlattrxref("usemap", "img")}} est présent
-- {{HTMLElement("input")}} si l'attribubt {{htmlattrxref("type", "input")}} ne vaut pas `hidden`
-- {{HTMLElement("menu")}} si l'attribut {{htmlattrxref("type", "menu")}} vaut `toolbar`
-- {{HTMLElement("object")}} si l'attribut {{htmlattrxref("usemap", "object")}} est présent
-- {{HTMLElement("video")}}, si l'attribut {{htmlattrxref("controls", "video")}} est présent
+- {{HTMLElement("audio")}} si l'attribut [`controls`](/fr/docs/Web/HTML/Element/audio#controls) est présent
+- {{HTMLElement("img")}} si l'attribut [`usemap`](/fr/docs/Web/HTML/Element/img#usemap) est présent
+- {{HTMLElement("input")}} si l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) ne vaut pas `hidden`
+- {{HTMLElement("menu")}} si l'attribut [`type`](/fr/docs/Web/HTML/Element/menu#type) vaut `toolbar`
+- {{HTMLElement("object")}} si l'attribut [`usemap`](/fr/docs/Web/HTML/Element/object#usemap) est présent
+- {{HTMLElement("video")}}, si l'attribut [`controls`](/fr/docs/Web/HTML/Element/video#controls) est présent
 
 ### Contenu tangible
 

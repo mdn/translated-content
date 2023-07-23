@@ -1,16 +1,6 @@
 ---
 title: extension.isAllowedIncognitoAccess()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - isAllowedIncognitoAccess
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess
 ---
 
@@ -23,7 +13,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var isAllowed = browser.extension.isAllowedIncognitoAccess()
+var isAllowed = browser.extension.isAllowedIncognitoAccess();
 ```
 
 ### Paramètres

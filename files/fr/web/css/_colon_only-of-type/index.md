@@ -1,10 +1,6 @@
 ---
 title: ':only-of-type'
 slug: Web/CSS/:only-of-type
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:only-of-type
 ---
 

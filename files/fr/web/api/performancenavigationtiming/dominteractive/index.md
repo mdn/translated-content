@@ -1,13 +1,6 @@
 ---
 title: PerformanceNavigationTiming.domInteractive
 slug: Web/API/PerformanceNavigationTiming/domInteractive
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - PerformanceNavigationTiming
-  - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming/domInteractive
 ---
 

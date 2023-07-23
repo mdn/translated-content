@@ -1,10 +1,6 @@
 ---
 title: align-items
 slug: Web/CSS/align-items
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/align-items
 ---
 

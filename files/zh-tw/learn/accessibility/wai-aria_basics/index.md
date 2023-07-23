@@ -26,7 +26,7 @@ slug: Learn/Accessibility/WAI-ARIA_basics
 
 開始瞭解甚麼是 WAI-ARIA，以及它可為我們做些甚麼。
 
-### **一個全新問題集**
+### 一個全新問題集
 
 當網站應用程式開始更複雜與動態，新的無障礙特性與問題集就開始出現。
 
@@ -227,7 +227,7 @@ var intervalID = window.setInterval(showQuote, 10000);
 
 這將使螢幕報讀器在內容更新時讀出更新的內容。
 
-> **備註：** 如果你嘗試從 `XMLHttpRequest` 執行 `file://` URL`，`大部分的瀏覽器會拋出安全異常，例如你直接上傳該檔案到瀏覽器(透過雙擊滑鼠鍵等)。為了這項可以執行，你需要將檔案上傳到一個網站伺服器如 [GitHub](/zh-TW/docs/Learn/Common_questions/Using_Github_pages)，或本機網站伺服器如 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
+> **備註：** 如果你嘗試從 `XMLHttpRequest` 執行 `file://` URL`，`大部分的瀏覽器會拋出安全異常，例如你直接上傳該檔案到瀏覽器(透過雙擊滑鼠鍵等)。為了這項可以執行，你需要將檔案上傳到一個網站伺服器如 [GitHub](/zh-TW/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages)，或本機網站伺服器如 [Python's SimpleHTTPServer](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)。
 
 這裡有一項額外的考量—只有文字更新才讀出。如果我們也總是讀出標題，那將很好，以讓使用者記住讀出的內容。為做到這樣，我們可以添加 [`aria-atomic`](https://www.w3.org/TR/wai-aria-1.1/#aria-atomic) 屬性到這個部分，再次更新您的 `<section>` 標籤如下所示：
 
@@ -410,7 +410,7 @@ function toggleMusician(bool) {
 - [`aria-setsize`](https://www.w3.org/TR/wai-aria-1.1/#aria-setsize) — T 本屬性允許你向螢幕報讀器指定某元素是一系列中的部分，以及該系列有多少項目。
 - [`aria-posinset`](https://www.w3.org/TR/wai-aria-1.1/#aria-posinset) — 本屬性允許你指定某個元素在一系列中的位置，伴隨 `aria-setsize，`提供螢幕報讀器有足夠資訊來告訴你目前的位置在"1 of 3"項目等。在許多情況下，瀏覽器應該可從元素層級結構推測這項資訊，但它肯定有助於提供更多的線索。
 
-在我們的測試中，這些新的結構確實提供整體的改善。頁籤現在被認定為頁籤(如螢幕報讀器讀出"索引標籤")，被選取的頁籤以”已選取”指出並讀出頁籤的名稱，螢幕報讀器也告訴你目前所在的頁籤數目。此外，因為設置 `aria-hidden` (只有非隱藏的頁籤才設定`aria-hidden="false"` )，非隱藏的頁籤是唯一你可以向下導覽的內容，意即所選取的內容很容易找到。
+在我們的測試中，這些新的結構確實提供整體的改善。頁籤現在被認定為頁籤（如螢幕報讀器讀出「索引標籤」），被選取的頁籤以「已選取」指出並讀出頁籤的名稱，螢幕報讀器也告訴你目前所在的頁籤數目。此外，因為設置 `aria-hidden`（只有非隱藏的頁籤才設定 `aria-hidden="false"`），非隱藏的頁籤是唯一你可以向下導覽的內容，意即所選取的內容很容易找到。
 
 > **備註：** 如果有任何你很明確地不希望螢幕報讀器讀出的內容，你可賦予它們 `aria-hidden="true"` 屬性。
 

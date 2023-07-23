@@ -43,13 +43,13 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 举个例子来看，如果你有一幅文件名为 `dinosaur.jpg` 的图片，且它与你的 HTML 页面存放在相同路径下，那么你可以这样嵌入它：
 
 ```html
-<img src="dinosaur.jpg">
+<img src="dinosaur.jpg" />
 ```
 
 如果这张图片存储在和 HTML 页面同路径的 `images` 文件夹下（这也是 Google 推荐的做法，利于{{glossary("SEO")}}/索引），那么你可以采用如下形式：
 
 ```html
-<img src="images/dinosaur.jpg">
+<img src="images/dinosaur.jpg" />
 ```
 
 以此类推。
@@ -59,7 +59,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 你也可以像下面这样使用绝对路径：
 
 ```html
-<img src="https://www.example.com/images/dinosaur.jpg">
+<img src="https://www.example.com/images/dinosaur.jpg" />
 ```
 
 但是这种方式是不被推荐的，这样做只会使浏览器做更多的工作，例如重新通过 DNS 再去寻找 IP 地址。通常我们都会把图片和 HTML 放在同一个服务器上。
@@ -78,16 +78,17 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 > **备注：** 像{{htmlelement("img")}}和{{htmlelement("video")}}这样的元素有时被称之为**替换元素**，因为这样的元素的内容和尺寸由外部资源（像是一个图片或视频文件）所定义，而不是元素自身。
 
-> **备注：** 你可以在[GitHub 上的这个网页](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)看到这个例子的运行结果（也可以看到[源码](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/images-in-html/index.html)）。
+> **备注：** 你可以在[GitHub 上的这个网页](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)看到这个例子的运行结果（也可以看到[源码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)）。
 
 ### 备选文本
 
 下一个我们讨论的属性是 `alt` ，它的值应该是对图片的文字描述，用于在图片无法显示或不能被看到的情况。例如，上面的例子可以做如下改进：
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
-          it has a large head with long sharp teeth">
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth" />
 ```
 
 测试`alt` 属性最简单的方式就是故意拼错图片文件名，这样浏览器就无法找到该图片从而显示备选的文本。如果我们将上例的图片文件名改为 `dinosooooor.jpg`，浏览器就不能显示图片，而显示：
@@ -118,10 +119,11 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 你可以用宽度和高度属性来指定你的图片的高度和宽度（你可以用多种方式找到你的图片的宽度和高度，例如在 Mac 上，你可以用 <kbd>Cmd</kbd> + <kbd>I</kbd> 来得到显示的图片文件的信息）回到我们的例子，你可以这样做：
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
-     width="400"
-     height="341">
+<img
+  src="images/dinosaur.jpg"
+  alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
+  width="400"
+  height="341" />
 ```
 
 在正常的情况下，这不会对显示产生很大的影响，但是如果图片没有显示（例如用户刚刚开始浏览网页，但是图片还没有加载完成），你会注意到浏览器会为要显示的图片留下一定的空间：
@@ -136,14 +138,15 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 ### Image titles 图片标题
 
-类似于[超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#使用\<title>添加支持信息)，你可以给图片增加`title`属性来提供需要更进一步的支持信息。在我们的例子中，可以这样做：
+类似于[超链接](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#使用_title_属性添加支持信息)，你可以给图片增加 `title` 属性来提供需要更进一步的支持信息。在我们的例子中，可以这样做：
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
-     width="400"
-     height="341"
-     title="A T-Rex on display in the Manchester University Museum">
+<img
+  src="images/dinosaur.jpg"
+  alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
+  width="400"
+  height="341"
+  title="A T-Rex on display in the Manchester University Museum" />
 ```
 
 这会给我们一个鼠标悬停提示，看起来就像链接标题：
@@ -173,27 +176,50 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
 如果你遇到了错误，你可以按 reset 按钮来重置。如果你遇到了困难无法完成，按下 Show solution 按钮来看一下答案。
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <style>
-      body { font-family: '微软雅黑', Helvetica, Arial, sans-serif; margin: 10px; background: #f5f9fa; }
-      h2 { font-size: 16px; }
-      code, textarea { font-family: Consolas, Menlo, monospace; }
-      .output { min-height: 200px; }
-      .input { min-height: 100px; width: 95%; }
-      .a11y-label { margin: 0; text-align: right; font-size: 0.7rem; width: 98%; }
-      .controls { width: 96%; text-align: right; }
+      body {
+        font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+        margin: 10px;
+        background: #f5f9fa;
+      }
+      h2 {
+        font-size: 16px;
+      }
+      code,
+      textarea {
+        font-family: Consolas, Menlo, monospace;
+      }
+      .output {
+        min-height: 200px;
+      }
+      .input {
+        min-height: 100px;
+        width: 95%;
+      }
+      .a11y-label {
+        margin: 0;
+        text-align: right;
+        font-size: 0.7rem;
+        width: 98%;
+      }
+      .controls {
+        width: 96%;
+        text-align: right;
+      }
     </style>
-
   </head>
   <body>
     <h2>实时输出</h2>
     <div class="output"></div>
 
     <h2>可编辑代码</h2>
-    <p class="a11y-label">按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code> </p>
+    <p class="a11y-label">
+      按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
+    </p>
     <textarea id="code" class="input"></textarea>
 
     <div class="controls">
@@ -201,76 +227,74 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
       <button id="btn-solution">显示答案</button>
     </div>
     <script>
-        const btnReset = document.getElementById('btn-reset');
-        const btnSolution = document.getElementById('btn-solution');
-        const blockOutput = document.querySelector('.output');
-        const blockInput = document.querySelector('.input');
-        const original = 'https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg';
-        const answer =
-`<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+      const btnReset = document.getElementById("btn-reset");
+      const btnSolution = document.getElementById("btn-solution");
+      const blockOutput = document.querySelector(".output");
+      const blockInput = document.querySelector(".input");
+      const original =
+        "https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg";
+      const answer = `<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
   alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
   width="200"
   height="171"
   title="曼彻斯特大学博物馆展出的一只霸王龙的化石">`;
-        let userEntry = "";
+      let userEntry = "";
 
-        init();
-        btnReset.addEventListener('click', init);
+      init();
+      btnReset.addEventListener("click", init);
 
-        btnSolution.addEventListener('click', () => {
-          if (btnSolution.textContent === '显示答案') {
-            blockInput.value =
-            blockOutput.innerHTML = answer;
-            btnSolution.textContent = '隐藏答案';
-          } else {
-            blockInput.value =
-            blockOutput.innerHTML = userEntry;
-            btnSolution.textContent = '显示答案';
-          }
-        });
+      btnSolution.addEventListener("click", () => {
+        if (btnSolution.textContent === "显示答案") {
+          blockInput.value = blockOutput.innerHTML = answer;
+          btnSolution.textContent = "隐藏答案";
+        } else {
+          blockInput.value = blockOutput.innerHTML = userEntry;
+          btnSolution.textContent = "显示答案";
+        }
+      });
 
-        blockInput.addEventListener('keydown', (e) => {
-          switch (e.key) {
-          case 'Tab':
+      blockInput.addEventListener("keydown", (e) => {
+        switch (e.key) {
+          case "Tab":
             e.preventDefault();
-            insertAtCursor('\t');
+            insertAtCursor("\t");
             break;
           case "Escape":
             blockInput.blur();
             break;
-          }
-        });
-
-        blockInput.addEventListener('keyup', () => {
-          userEntry = blockInput.value;
-          blockOutput.innerHTML = blockInput.value;
-          if (btnSolution.textContent === '隐藏答案') {
-            btnSolution.textContent = '显示答案';
-          }
-        });
-
-        function init() {
-          userEntry =
-          blockOutput.innerHTML =
-          blockInput.value = original;
-          btnSolution.textContent = '显示答案';
         }
+      });
 
-        function insertAtCursor(text) {
-          const scrollPos = blockInput.scrollTop;
-          const cursorPos = blockInput.selectionStart;
-
-          const front = blockInput.value.substring(0, cursorPos);
-          const back = blockInput.value.substring(
-            blockInput.selectionEnd, blockInput.value.length);
-
-          blockInput.value = front + text + back;
-          blockInput.selectionStart =
-          blockInput.selectionEnd = cursorPos + text.length;
-          blockInput.focus();
-          blockInput.scrollTop = scrollPos;
+      blockInput.addEventListener("keyup", () => {
+        userEntry = blockInput.value;
+        blockOutput.innerHTML = blockInput.value;
+        if (btnSolution.textContent === "隐藏答案") {
+          btnSolution.textContent = "显示答案";
         }
-      </script>
+      });
+
+      function init() {
+        userEntry = blockOutput.innerHTML = blockInput.value = original;
+        btnSolution.textContent = "显示答案";
+      }
+
+      function insertAtCursor(text) {
+        const scrollPos = blockInput.scrollTop;
+        const cursorPos = blockInput.selectionStart;
+
+        const front = blockInput.value.substring(0, cursorPos);
+        const back = blockInput.value.substring(
+          blockInput.selectionEnd,
+          blockInput.value.length,
+        );
+
+        blockInput.value = front + text + back;
+        blockInput.selectionStart = blockInput.selectionEnd =
+          cursorPos + text.length;
+        blockInput.focus();
+        blockInput.scrollTop = scrollPos;
+      }
+    </script>
   </body>
 </html>
 ```
@@ -283,10 +307,11 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
 
 ```html
 <div class="figure">
-  <img src="/images/dinosaur_small.jpg"
-     alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
-     width="400"
-     height="341">
+  <img
+    src="/images/dinosaur_small.jpg"
+    alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
+    width="400"
+    height="341" />
   <p>曼彻斯特大学博物馆展出的一只霸王龙的化石</p>
 </div>
 ```
@@ -297,10 +322,11 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
 
 ```html
 <figure>
-  <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
-      alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
-      width="400"
-      height="341">
+  <img
+    src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+    alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
+    width="400"
+    height="341" />
   <figcaption>曼彻斯特大学博物馆展出的一只霸王龙的化石</figcaption>
 </figure>
 ```
@@ -327,27 +353,50 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
 如果你遇到了错误，你可以按 reset 按钮来重置。如果你遇到了困难无法完成，按下 Show solution 按钮来看一下答案。
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <style>
-      body { font-family: '微软雅黑', Helvetica, Arial, sans-serif; margin: 10px; background: #f5f9fa; }
-      h2 { font-size: 16px; }
-      code, textarea { font-family: Consolas, Menlo, monospace; }
-      .output { min-height: 200px; }
-      .input { min-height: 100px; width: 95%; }
-      .a11y-label { margin: 0; text-align: right; font-size: 0.7rem; width: 98%; }
-      .controls { width: 96%; text-align: right; }
+      body {
+        font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+        margin: 10px;
+        background: #f5f9fa;
+      }
+      h2 {
+        font-size: 16px;
+      }
+      code,
+      textarea {
+        font-family: Consolas, Menlo, monospace;
+      }
+      .output {
+        min-height: 200px;
+      }
+      .input {
+        min-height: 100px;
+        width: 95%;
+      }
+      .a11y-label {
+        margin: 0;
+        text-align: right;
+        font-size: 0.7rem;
+        width: 98%;
+      }
+      .controls {
+        width: 96%;
+        text-align: right;
+      }
     </style>
-
   </head>
   <body>
     <h2>实时输出</h2>
     <div class="output"></div>
 
     <h2>可编辑代码</h2>
-    <p class="a11y-label">按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code> </p>
+    <p class="a11y-label">
+      按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
+    </p>
     <textarea id="code" class="input"></textarea>
 
     <div class="controls">
@@ -355,82 +404,78 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
       <button id="btn-solution">显示答案</button>
     </div>
     <script>
-        const btnReset = document.getElementById('btn-reset');
-        const btnSolution = document.getElementById('btn-solution');
-        const blockOutput = document.querySelector('.output');
-        const blockInput = document.querySelector('.input');
-        const original =
-`<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+      const btnReset = document.getElementById("btn-reset");
+      const btnSolution = document.getElementById("btn-solution");
+      const blockOutput = document.querySelector(".output");
+      const blockInput = document.querySelector(".input");
+      const original = `<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
    alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
    width="200"
    height="171">`;
-        const answer =
-`<figure>
+      const answer = `<figure>
   <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
      alt="一只恐龙头部和躯干的骨架，它有一个巨大的头，长着锋利的牙齿。"
      width="200"
      height="171">
   <figcaption>曼彻斯特大学博物馆展出的一只霸王龙的化石</figcaption>
 </figure>`;
-        let userEntry = "";
+      let userEntry = "";
 
-        init();
-        btnReset.addEventListener('click', init);
+      init();
+      btnReset.addEventListener("click", init);
 
-        btnSolution.addEventListener('click', () => {
-          if (btnSolution.textContent === '显示答案') {
-            blockInput.value =
-            blockOutput.innerHTML = answer;
-            btnSolution.textContent = '隐藏答案';
-          } else {
-            blockInput.value =
-            blockOutput.innerHTML = userEntry;
-            btnSolution.textContent = '显示答案';
-          }
-        });
+      btnSolution.addEventListener("click", () => {
+        if (btnSolution.textContent === "显示答案") {
+          blockInput.value = blockOutput.innerHTML = answer;
+          btnSolution.textContent = "隐藏答案";
+        } else {
+          blockInput.value = blockOutput.innerHTML = userEntry;
+          btnSolution.textContent = "显示答案";
+        }
+      });
 
-        blockInput.addEventListener('keydown', (e) => {
-          switch (e.key) {
-          case 'Tab':
+      blockInput.addEventListener("keydown", (e) => {
+        switch (e.key) {
+          case "Tab":
             e.preventDefault();
-            insertAtCursor('\t');
+            insertAtCursor("\t");
             break;
           case "Escape":
             blockInput.blur();
             break;
-          }
-        });
-
-        blockInput.addEventListener('keyup', () => {
-          userEntry = blockInput.value;
-          blockOutput.innerHTML = blockInput.value;
-          if (btnSolution.textContent === '隐藏答案') {
-            btnSolution.textContent = '显示答案';
-          }
-        });
-
-        function init() {
-          userEntry =
-          blockOutput.innerHTML =
-          blockInput.value = original;
-          btnSolution.textContent = '显示答案';
         }
+      });
 
-        function insertAtCursor(text) {
-          const scrollPos = blockInput.scrollTop;
-          const cursorPos = blockInput.selectionStart;
-
-          const front = blockInput.value.substring(0, cursorPos);
-          const back = blockInput.value.substring(
-            blockInput.selectionEnd, blockInput.value.length);
-
-          blockInput.value = front + text + back;
-          blockInput.selectionStart =
-          blockInput.selectionEnd = cursorPos + text.length;
-          blockInput.focus();
-          blockInput.scrollTop = scrollPos;
+      blockInput.addEventListener("keyup", () => {
+        userEntry = blockInput.value;
+        blockOutput.innerHTML = blockInput.value;
+        if (btnSolution.textContent === "隐藏答案") {
+          btnSolution.textContent = "显示答案";
         }
-      </script>
+      });
+
+      function init() {
+        userEntry = blockOutput.innerHTML = blockInput.value = original;
+        btnSolution.textContent = "显示答案";
+      }
+
+      function insertAtCursor(text) {
+        const scrollPos = blockInput.scrollTop;
+        const cursorPos = blockInput.selectionStart;
+
+        const front = blockInput.value.substring(0, cursorPos);
+        const back = blockInput.value.substring(
+          blockInput.selectionEnd,
+          blockInput.value.length,
+        );
+
+        blockInput.value = front + text + back;
+        blockInput.selectionStart = blockInput.selectionEnd =
+          cursorPos + text.length;
+        blockInput.focus();
+        blockInput.scrollTop = scrollPos;
+      }
+    </script>
   </body>
 </html>
 ```

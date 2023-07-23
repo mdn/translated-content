@@ -2,7 +2,6 @@
 title: DataTransfer.clearData()
 slug: Web/API/DataTransfer/clearData
 translation_of: Web/API/DataTransfer/clearData
-browser-compat: api.DataTransfer.clearData
 ---
 
 {{APIRef("HTML Drag and Drop API")}}

@@ -1,15 +1,6 @@
 ---
 title: Document.createCDATASection()
 slug: Web/API/Document/createCDATASection
-tags:
-  - API
-  - Création
-  - DOM
-  - Document
-  - Méthode
-  - Section
-  - XML
-  - données
 translation_of: Web/API/Document/createCDATASection
 ---
 

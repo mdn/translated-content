@@ -1,14 +1,7 @@
 ---
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/sort
 ---
 
 {{JSRef}}
@@ -46,7 +39,7 @@ Si le paramètre `fonctionComparaison` est fourni, les éléments du tableau (qu
 - Si `fonctionComparaison(a, b)` est inférieur à 0, on trie `a` avec un indice inférieur à `b` (`a` sera classé avant `b`)
 - Si `fonctionComparaison(a, b)` renvoie 0, on laisse `a` et `b` inchangés l'un par rapport à l'autre, mais triés par rapport à tous les autres éléments. Note&nbsp;: la norme ECMAScript ne garantit pas ce comportement, par conséquent tous les navigateurs (par exemple les versions de Mozilla antérieures à 2003) ne respectent pas ceci.
 - Si `fonctionComparaison(a, b)` est supérieur à 0, on trie `b` avec un indice inférieur à `a`.
-- `fonctionComparaison(a, b)` doit toujours renvoyer le même résultat à partir de la même paire d'arguments. Si la fonction renvoie des résultats incohérents, alors l’ordre dans lequel sont triés les éléments n’est pas défini.
+- `fonctionComparaison(a, b)` doit toujours renvoyer le même résultat à partir de la même paire d'arguments. Si la fonction renvoie des résultats incohérents, alors l'ordre dans lequel sont triés les éléments n'est pas défini.
 
 Une fonction de comparaison aura donc généralement la forme suivante&nbsp;:
 
@@ -108,7 +101,7 @@ items.sort(function (a, b) {
 
 Certaines implémentations de JavaScript utilisent un tri stable&nbsp;: l'ordre partiel de `a` et `b` ne change pas si `a` et `b` sont égaux. Si l'indice de `a` était inférieur à celui de `b` avant le tri, il le sera toujours après, quels que soient les mouvements de `a` et `b` dus au tri.
 
-Le tri est stable dans [SpiderMonkey](/fr/docs/SpiderMonkey) et tous les navigateurs basés sur Mozilla à partir de [Gecko](/fr/docs/Gecko) 1.9 (voir le {{ Bug(224128) }}).
+Le tri est stable dans [SpiderMonkey](/fr/docs/SpiderMonkey) et tous les navigateurs basés sur Mozilla à partir de [Gecko](/fr/docs/Gecko) 1.9 (voir le [bug Firefox 224128](https://bugzil.la/224128)).
 
 Le comportement de la méthode `sort()` a changé entre JavaScript 1.1 et JavaScript 1.2.
 

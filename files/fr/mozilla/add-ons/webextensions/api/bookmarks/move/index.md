@@ -1,16 +1,6 @@
 ---
 title: bookmarks.move()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - move
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 ---
 
@@ -18,7 +8,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 
 La méthode **`bookmarks.move()`** déplace le {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à la destination spécifiée dans l'arborescence des signets. Cela vous permet de déplacer un signet vers un nouveau dossier et / ou une position dans le dossier.
 
-> **Attention :** Si votre extension tente de déplacer un signet dans le nœud racine de l’arborescence de signets, l’appel déclenche une erreur avec le message suivant: "_La racine du signet ne peut pas être modifiée_" et le déplacement ne sera pas terminé.
+> **Attention :** Si votre extension tente de déplacer un signet dans le nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "_La racine du signet ne peut pas être modifiée_" et le déplacement ne sera pas terminé.
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -26,12 +16,12 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var movingBookmark = browser.bookmarks.move(
-  id,                    // string
-  destination           // object
-)
+  id, // string
+  destination, // object
+);
 ```
 
-### Paramètres :
+### Paramètres
 
 - `id`
   - : Un {{jsxref("string")}} contenant l'ID du signet ou du dossier à déplacer.
@@ -63,7 +53,7 @@ function onRejected(error) {
 
 var bookmarkId = "abcdefghilkl";
 
-var movingBookmark = browser.bookmarks.move(bookmarkId, {index: 0});
+var movingBookmark = browser.bookmarks.move(bookmarkId, { index: 0 });
 movingBookmark.then(onMoved, onRejected);
 ```
 

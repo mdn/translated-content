@@ -1,16 +1,6 @@
 ---
 title: getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/getAll
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - commands
-  - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/getAll
 ---
 
@@ -18,7 +8,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands/getAll
 
 Obient toutes les commandes pour l'exécution que vous avez enregistré à l'aide d'une des [`commandes` clef du manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
 
-Les commandes sont renvoyées sous la forme d'un tableau d'objets   {{WebExtAPIRef('commands.Command')}}. Altenativement, si vous utilisez la version de base promise de l'API, `browser.commands.getAll()`, les commandes sont passées dans l'argument `onFulfilled` à [`Promise.then()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise/then).
+Les commandes sont renvoyées sous la forme d'un tableau d'objets {{WebExtAPIRef('commands.Command')}}. Altenativement, si vous utilisez la version de base promise de l'API, `browser.commands.getAll()`, les commandes sont passées dans l'argument `onFulfilled` à [`Promise.then()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise/then).
 
 C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
 
@@ -44,7 +34,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ```js
 function logCommands(commands) {
-  commands.forEach(function(command) {
+  commands.forEach(function (command) {
     console.log(command);
   });
 }

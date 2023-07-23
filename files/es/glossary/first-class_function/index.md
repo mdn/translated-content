@@ -11,9 +11,9 @@ Un lenguaje de programación se dice que tiene **Funciones de primera clase** cu
 ### JavaScript
 
 ```js
-const foo = function() {
-   console.log("foobar");
-}
+const foo = function () {
+  console.log("foobar");
+};
 // Invocación usando una variable
 foo();
 ```
@@ -28,7 +28,7 @@ Asignamos una **Función Anónima** a una {{glossary("Variable")}}, la cual util
 
 ```js
 function diHola() {
-   return "Hola ";
+  return "Hola ";
 }
 function saludar(saludo, nombre) {
   console.log(saludo() + nombre);
@@ -47,9 +47,9 @@ Pasamos nuestra función `diHola()` como argumento de la función `saludar()`, e
 
 ```js
 function diHola() {
-   return function() {
-      console.log("¡Hola!");
-   }
+  return function () {
+    console.log("¡Hola!");
+  };
 }
 ```
 
@@ -62,11 +62,11 @@ Volviendo al ejemplo; Ahora, necesitamos invocar la función `diHola` y su `Func
 ### 1- Usando una variable
 
 ```js
-const diHola = function() {
-   return function() {
-      console.log("¡Hola!");
-   }
-}
+const diHola = function () {
+  return function () {
+    console.log("¡Hola!");
+  };
+};
 const miFuncion = diHola();
 miFuncion();
 ```
@@ -79,9 +79,9 @@ De esta manera, devolverá el mensaje `¡Hola!`.
 
 ```js
 function diHola() {
-   return function() {
-      console.log("¡Hola!");
-   }
+  return function () {
+    console.log("¡Hola!");
+  };
 }
 diHola()();
 ```
@@ -95,7 +95,7 @@ Usamos paréntesis doble `()()` para invocar también a la función retornada.
 <section id="Quick_links">
  <ol>
   <li>[First-class functions](https://es.wikipedia.org/wiki/First-class_function) on Wikipedia</li>
-  <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
+  <li><a href="/es/docs/Glossary">MDN Web Docs Glossary</a>
    <ul>
     <li>{{glossary("Callback function")}}</li>
     <li>{{glossary("Function")}}</li>

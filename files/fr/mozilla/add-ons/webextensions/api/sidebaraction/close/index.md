@@ -1,15 +1,6 @@
 ---
 title: sidebarAction.close()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/close
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - close
-  - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/close
 ---
 
@@ -24,7 +15,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-browser.sidebarAction.close()
+browser.sidebarAction.close();
 ```
 
 ### Paramètres
@@ -47,7 +38,7 @@ Fermez la barre latérale lorsque l'utilisateur sélectionne un élément de men
 browser.menus.create({
   id: "close-sidebar",
   title: "close sidebar",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

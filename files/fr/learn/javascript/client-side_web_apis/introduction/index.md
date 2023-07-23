@@ -32,7 +32,7 @@ Les API (<i lang="en">Application Programming Interfaces</i> soit «&nbsp;interf
 
 En guise d'exemple concret, pensez à des branchements électriques dans une maison, appartement ou autre logement. Si vous souhaitez utiliser un appareil dans votre maison, il vous suffit de le brancher dans une prise et cela fonctionne. Vous n'essayez pas de le brancher directement à l'alimentation électrique&nbsp;: le faire serait réellement inefficace, et, si vous n'êtes pas électricienne ou électricien, difficile et dangereux à réaliser.
 
-![Deux multiprises branchées sur deux prises différentes. Chaque multiprise possède deux emplacements&nbsp;: un sur le haut et un sur la face. Sur ces emplacements, des prises simples sont branchées.](plug-socket.png)
+![Deux multiprises branchées sur deux prises différentes. Chaque multiprise possède deux emplacements : un sur le haut et un sur la face. Sur ces emplacements, des prises simples sont branchées.](plug-socket.png)
 
 _Source de l'image&nbsp;: [<i lang="en">Overloaded plug socket</i>](https://www.flickr.com/photos/easy-pics/9518184890/in/photostream/lightbox/) par [The Clear Communication People](https://www.flickr.com/photos/easy-pics/), sur Flickr._
 
@@ -123,8 +123,8 @@ Alors comment ces objets interagissent-ils&nbsp;? Si vous regardez notre exemple
 <audio src="outfoxing.mp3"></audio>
 
 <button class="paused">Lire</button>
-<br>
-<input type="range" min="0" max="1" step="0.01" value="1" class="volume">
+<br />
+<input type="range" min="0" max="1" step="0.01" value="1" class="volume" />
 ```
 
 Pour commencer, nous incluons, un élément `<audio>` avec lequel nous intégrons un fichier MP3 dans la page. Nous n'incluons pas de contrôles par défaut du navigateur. Ensuite, nous incluons un [`<button>`](/fr/docs/Web/HTML/Element/Button) que nous utiliserons pour lire et arrêter la musique, et un élément [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`, que nous utiliserons pour ajuster le volume de la piste en cours de lecture.
@@ -141,9 +141,9 @@ const audioCtx = new AudioContext();
 Ensuite, nous créons des constantes qui stockent les références à nos éléments `<audio>`, `<button>` et `<input>`, et nous utilisons la méthode [`AudioContext.createMediaElementSource()`](/fr/docs/Web/API/AudioContext/createMediaElementSource) pour créer un `MediaElementAudioSourceNode` représentant la source de notre audio (ici, c'est l'élément `<audio>`)&nbsp;:
 
 ```js
-const audioElement = document.querySelector('audio');
-const playBtn = document.querySelector('button');
-const volumeSlider = document.querySelector('.volume');
+const audioElement = document.querySelector("audio");
+const playBtn = document.querySelector("button");
+const volumeSlider = document.querySelector(".volume");
 
 const audioSource = audioCtx.createMediaElementSource(audioElement);
 ```
@@ -152,29 +152,29 @@ Ensuite, nous incluons deux gestionnaires d'évènements qui servent à basculer
 
 ```js
 // lecture/pause de l'audio
-playBtn.addEventListener('click', function() {
+playBtn.addEventListener("click", function () {
   // vérifier si le contexte est en état de suspension (politique de lecture automatique)
-  if (audioCtx.state === 'suspended') {
+  if (audioCtx.state === "suspended") {
     audioCtx.resume();
   }
 
   // si la piste est arrêtée, la lire
-  if (this.getAttribute('class') === 'paused') {
+  if (this.getAttribute("class") === "paused") {
     audioElement.play();
-    this.setAttribute('class', 'playing');
-    this.textContent = 'Pause'
-  // si une piste est en cours de lecture, l'arrêter
-  } else if (this.getAttribute('class') === 'playing') {
+    this.setAttribute("class", "playing");
+    this.textContent = "Pause";
+    // si une piste est en cours de lecture, l'arrêter
+  } else if (this.getAttribute("class") === "playing") {
     audioElement.pause();
-    this.setAttribute('class', 'paused');
-    this.textContent = 'Lire';
+    this.setAttribute("class", "paused");
+    this.textContent = "Lire";
   }
 });
 
 // si la piste se termine
-audioElement.addEventListener('ended', function() {
-  playBtn.setAttribute('class', 'paused');
-  playBtn.textContent = 'Lire';
+audioElement.addEventListener("ended", function () {
+  playBtn.setAttribute("class", "paused");
+  playBtn.textContent = "Lire";
 });
 ```
 
@@ -185,7 +185,7 @@ Ensuite, nous créons un objet [`GainNode`](/fr/docs/Web/API/GainNode) à l'aide
 ```js
 const gainNode = audioCtx.createGain();
 
-volumeSlider.addEventListener('input', function() {
+volumeSlider.addEventListener("input", function () {
   gainNode.gain.value = this.value;
 });
 ```
@@ -205,23 +205,23 @@ Lorsque vous utilisez une API, vous devez vous assurer que vous savez où se tro
 L'API DOM (<i lang="en">Document Object Model</i>) a également un point d'entrée simple&nbsp;: ses fonctionnalités ont tendance à être trouvées accrochées à l'objet [`Document`](/fr/docs/Web/API/Document), ou à une instance d'un élément HTML que vous voulez modifier d'une manière ou d'une autre, par exemple&nbsp;:
 
 ```js
-const em = document.createElement('em'); // crée un nouvel élément em
-const para = document.querySelector('p'); // référence à un élément p existant
-em.textContent = 'Coucou vous !'; // donne à em du contenu textuel
+const em = document.createElement("em"); // crée un nouvel élément em
+const para = document.querySelector("p"); // référence à un élément p existant
+em.textContent = "Coucou vous !"; // donne à em du contenu textuel
 para.appendChild(em); // intègre em dans le paragraphe
 ```
 
 L'API [Canvas](/fr/docs/Web/API/Canvas_API) repose également sur l'obtention d'un objet de contexte à utiliser pour manipuler les choses, bien que dans ce cas, il s'agisse d'un contexte graphique plutôt que d'un contexte audio. Son objet de contexte est créé en obtenant une référence à l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sur lequel vous voulez dessiner, puis en appelant sa méthode [`HTMLCanvasElement.getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext)&nbsp;:
 
 ```js
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 ```
 
 Tout ce que nous voulons faire au canevas est ensuite réalisé en appelant les propriétés et les méthodes de l'objet contexte (qui est une instance de [`CanvasRenderingContext2D`](/fr/docs/Web/API/CanvasRenderingContext2D)), par exemple&nbsp;:
 
 ```js
-Ball.prototype.draw = function() {
+Ball.prototype.draw = function () {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -241,29 +241,29 @@ Nous avons déjà vu un certain nombre de gestionnaires d'évènements utilisés
 
 ```js
 // lecture/pause de l'audio
-playBtn.addEventListener('click', function() {
+playBtn.addEventListener("click", function () {
   // vérifier si le contexte est en état de suspension (politique de lecture automatique)
-  if (audioCtx.state === 'suspended') {
+  if (audioCtx.state === "suspended") {
     audioCtx.resume();
   }
 
   // si la piste est arrêtée, la lire
-  if (this.getAttribute('class') === 'paused') {
+  if (this.getAttribute("class") === "paused") {
     audioElement.play();
-    this.setAttribute('class', 'playing');
-    this.textContent = 'Pause'
-  // si une piste est en cours de lecture, l'arrêter
-  } else if (this.getAttribute('class') === 'playing') {
+    this.setAttribute("class", "playing");
+    this.textContent = "Pause";
+    // si une piste est en cours de lecture, l'arrêter
+  } else if (this.getAttribute("class") === "playing") {
     audioElement.pause();
-    this.setAttribute('class', 'paused');
-    this.textContent = 'Lire';
+    this.setAttribute("class", "paused");
+    this.textContent = "Lire";
   }
 });
 
 // si la piste se termine
-audioElement.addEventListener('ended', function() {
-  playBtn.setAttribute('class', 'paused');
-  playBtn.textContent = 'Lire';
+audioElement.addEventListener("ended", function () {
+  playBtn.setAttribute("class", "paused");
+  playBtn.textContent = "Lire";
 });
 ```
 

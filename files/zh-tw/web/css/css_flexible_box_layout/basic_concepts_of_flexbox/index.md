@@ -1,6 +1,6 @@
 ---
 title: CSS彈性盒子用法
-slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
 ---
 
@@ -80,7 +80,7 @@ Recall that while the display order of the elements is independent of their orde
 
 由於彈性盒子使用不同的排版演算法，所以有些屬性不太適合用在彈性容器內：
 
-- [multiple column 模組](/zh-TW/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)的 `column-*` 屬性對彈性項目無效。
+- [multiple column 模組](/zh-TW/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)的 `column-*` 屬性對彈性項目無效。
 - {{cssxref("clear")}} 對彈性項目無效。
 - {{cssxref("float")}} causes the `display` property of the element to compute to `block`.
 - {{cssxref("vertical-align")}} 對已對齊的彈性項目無效。
@@ -92,7 +92,7 @@ Recall that while the display order of the elements is independent of their orde
 這個基本彈性將展示如何把「彈性化」引至某個元素、並在彈性狀態下相鄰該元素的表現。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -153,7 +153,7 @@ Recall that while the display order of the elements is independent of their orde
 這裡展示了貼合了瀏覽器視窗的排版，必須為智慧型手機視窗最佳化的情況。不僅尺寸要縮減，呈現順序也要改變。彈性盒子把這件事變得相當簡單。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <style>

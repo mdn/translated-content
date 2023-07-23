@@ -2,8 +2,6 @@
 title: <position>
 slug: Web/CSS/position_value
 translation_of: Web/CSS/position_value
-original_slug: Web/CSS/Type_position
-browser-compat: css.types.position
 ---
 
 {{CSSRef}}

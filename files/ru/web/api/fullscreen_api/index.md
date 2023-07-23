@@ -156,4 +156,4 @@ If full-screen mode is already active (`fullscreenElement` is not `null`), we ca
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/ru/docs/Web/HTML/Element/iframe#allowfullscreen)

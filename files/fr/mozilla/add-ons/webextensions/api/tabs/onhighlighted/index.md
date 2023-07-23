@@ -1,16 +1,6 @@
 ---
 title: tabs.onHighlighted
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlighted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onHighlighted
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlighted
 ---
 
@@ -23,9 +13,9 @@ Notez qu'avant la version 63, Firefox n'avait pas le concept de mettre en évide
 ## Syntaxe
 
 ```js
-browser.tabs.onHighlighted.addListener(listener)
-browser.tabs.onHighlighted.removeListener(listener)
-browser.tabs.onHighlighted.hasListener(listener)
+browser.tabs.onHighlighted.addListener(listener);
+browser.tabs.onHighlighted.removeListener(listener);
+browser.tabs.onHighlighted.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :

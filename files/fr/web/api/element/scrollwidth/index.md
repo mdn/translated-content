@@ -1,8 +1,6 @@
 ---
 title: element.scrollWidth
 slug: Web/API/Element/scrollWidth
-tags:
-  - Référence_du_DOM_Gecko
 translation_of: Web/API/Element/scrollWidth
 ---
 

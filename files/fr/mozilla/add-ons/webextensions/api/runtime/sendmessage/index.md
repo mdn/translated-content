@@ -1,16 +1,6 @@
 ---
 title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - runtime
-  - sendMessage
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
 
@@ -32,10 +22,10 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var sending = browser.runtime.sendMessage(
-  extensionId,             // optional string
-  message,                 // any
-  options                  // optional object
-)
+  extensionId, // optional string
+  message, // any
+  options, // optional object
+);
 ```
 
 ### Paramètres
@@ -95,7 +85,7 @@ function handleError(error) {
 
 function notifyBackgroundPage(e) {
   var sending = browser.runtime.sendMessage({
-    greeting: "Greeting from the content script"
+    greeting: "Greeting from the content script",
   });
   sending.then(handleResponse, handleError);
 }
@@ -109,9 +99,8 @@ Le script d'arrière-plan correspondant ressemble à ceci :
 // background-script.js
 
 function handleMessage(request, sender, sendResponse) {
-  console.log("Message from the content script: " +
-    request.greeting);
-  sendResponse({response: "Response from background script"});
+  console.log("Message from the content script: " + request.greeting);
+  sendResponse({ response: "Response from background script" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);

@@ -1,11 +1,6 @@
 ---
 title: CSS Text
-slug: Web/CSS/CSS_Text
-tags:
-  - Aperçu
-  - CSS
-  - CSS Text
-  - Reference
+slug: Web/CSS/CSS_text
 translation_of: Web/CSS/CSS_Text
 ---
 

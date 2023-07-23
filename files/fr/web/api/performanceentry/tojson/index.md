@@ -1,14 +1,6 @@
 ---
 title: PerformanceEntry.toJSON()
 slug: Web/API/PerformanceEntry/toJSON
-tags:
-  - API
-  - Method
-  - Méthode
-  - Performance Timeline API
-  - PerformanceEntry
-  - Reference
-  - Performance Web
 translation_of: Web/API/PerformanceEntry/toJSON
 ---
 

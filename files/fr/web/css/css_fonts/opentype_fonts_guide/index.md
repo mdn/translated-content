@@ -1,13 +1,7 @@
 ---
 title: Guide des caractéristiques de police OpenType
-slug: Web/CSS/CSS_Fonts/OpenType_fonts_guide
-tags:
-  - CSS
-  - Fonts
-  - Guide
-  - Polices
+slug: Web/CSS/CSS_fonts/OpenType_fonts_guide
 translation_of: Web/CSS/CSS_Fonts/OpenType_fonts_guide
-original_slug: Web/CSS/CSS_Fonts/Guide_caractéristiques_police_OpenType
 ---
 
 {{CSSRef}}

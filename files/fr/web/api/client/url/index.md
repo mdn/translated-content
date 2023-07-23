@@ -1,14 +1,6 @@
 ---
 title: Client.url
 slug: Web/API/Client/url
-tags:
-  - API
-  - Client
-  - Experimental
-  - Property
-  - Reference
-  - ServiceWorkers
-  - URL
 translation_of: Web/API/Client/url
 ---
 

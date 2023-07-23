@@ -9,7 +9,7 @@ Apache Subversion (**SVN**) es un sistema ({{Glossary("SCM")}}) de código abier
 
 ### Conocimientos generales
 
-- [Apache Subversion](https://es.wikipedia.org/wiki/Subversion_(software)) en Wikipedia
+- [Apache Subversion](<https://es.wikipedia.org/wiki/Subversion_(software)>) en Wikipedia
 - [Sitio web oficial](https://subversion.apache.org/)
 
 ### Véase tambiém

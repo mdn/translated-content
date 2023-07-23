@@ -1,11 +1,7 @@
 ---
 title: Barres laterales
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-tags:
-  - WebExtensions
-  - barre latérale
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
-original_slug: Mozilla/Add-ons/WebExtensions/user_interface/barres_laterales
 ---
 
 {{AddonSidebar}}
@@ -24,7 +20,7 @@ Un document pour un onglet particulier peut être défini en utilisant la foncti
 
 ```js
 // sidebar.js
-browser.windows.getCurrent({populate: true}).then((windowInfo) => {
+browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
   myWindowId = windowInfo.id;
 });
 ```

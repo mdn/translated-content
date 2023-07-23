@@ -2,17 +2,7 @@
 title: devtools.panels.ExtensionSidebarPane.setObject()
 slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setObject
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - setObject
 translation_of: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setObject
-original_slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setObject
 ---
 
@@ -28,9 +18,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var setting = browser.devtools.panels.setObject(
-  jsonObject,       // string, array, or JSON object
-  rootTitle         // string
-)
+  jsonObject, // string, array, or JSON object
+  rootTitle, // string
+);
 ```
 
 ### Paramètres
@@ -59,8 +49,8 @@ function onCreated(sidebarPane) {
     someString: "hello there",
     someObject: {
       someNumber: 42,
-      someOtherString: "this is my pane's content"
-    }
+      someOtherString: "this is my pane's content",
+    },
   });
 }
 

@@ -2,7 +2,6 @@
 title: object-position
 slug: Web/CSS/object-position
 translation_of: Web/CSS/object-position
-browser-compat: css.properties.object-position
 ---
 
 {{CSSRef}}
