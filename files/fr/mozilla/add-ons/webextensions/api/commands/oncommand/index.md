@@ -9,9 +9,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
 ## Syntaxe
 
 ```js
-browser.commands.onCommand.addListener(listener)
-browser.commands.onCommand.removeListener(listener)
-browser.commands.onCommand.hasListener(listener)
+browser.commands.onCommand.addListener(listener);
+browser.commands.onCommand.removeListener(listener);
+browser.commands.onCommand.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -56,7 +56,7 @@ Etant donnée une entrée manifest.json comme ceci :
 Vous pouvez écouter cette commande particulière comme ceci :
 
 ```js
-browser.commands.onCommand.addListener(function(command) {
+browser.commands.onCommand.addListener(function (command) {
   if (command == "toggle-feature") {
     console.log("toggling the feature!");
   }

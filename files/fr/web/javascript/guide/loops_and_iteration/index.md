@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Loops_and_iteration
 translation_of: Web/JavaScript/Guide/Loops_and_iteration
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Contr%C3%B4le_du_flux_Gestion_des_erreurs", "Web/JavaScript/Guide/Fonctions")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs", "Web/JavaScript/Guide/Fonctions")}}
 
 Les boucles permettent de répéter des actions simplement et rapidement. Ce chapitre du [guide JavaScript](/fr/docs/Web/JavaScript/Guide) présente les différentes instructions qu'il est possible d'utiliser en JavaScript pour effectuer des itérations.
 
@@ -350,4 +350,4 @@ for (let i of arr) {
 }
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Contr%C3%B4le_du_flux_Gestion_des_erreurs", "Web/JavaScript/Guide/Fonctions")}}
+{{PreviousNext("Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs", "Web/JavaScript/Guide/Fonctions")}}

@@ -6,7 +6,7 @@ translation_of: Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Refe
 
 La liste ci-dessous, ordonnée alphabétiquement, présente les élémentes, les axes et les fonctions de la recommandation XSLT 1.0 du W3C, ainsi que les sections appropriées de la recommandation XPath. Le développement de XSLT est toujours en cours, et ce document sera mis à jours au fur et à mesure de l'extension des fonctionnalités.
 
-### [Éléments](/fr/XSLT/%c3%89l%c3%a9ments)
+### [Éléments](/fr/XSLT/Éléments)
 
 #### [xsl:apply-imports](/fr/XSLT/apply-imports)
 

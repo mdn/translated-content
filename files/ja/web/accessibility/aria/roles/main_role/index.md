@@ -1,5 +1,5 @@
 ---
-title: 'ARIA: main ロール'
+title: "ARIA: main ロール"
 slug: Web/Accessibility/ARIA/Roles/main_role
 ---
 
@@ -33,7 +33,7 @@ slug: Web/Accessibility/ARIA/Roles/main_role
     <!-- 記事のコンテンツ -->
   </div>
 
- <!-- サイドバーとフッター -->
+  <!-- サイドバーとフッター -->
 </body>
 ```
 

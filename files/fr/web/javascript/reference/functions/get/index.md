@@ -93,7 +93,7 @@ console.log(obj.toto); // "truc"
 
 Les accesseurs permettent de définir des propriétés sur un objet mais ils ne calculent pas la valeur de la propriété tant qu'il n'y a pas d'accès envers celle-ci. Un accesseur délègue le coût de calcul jusqu'au moment où la valeur est vraiment nécessaire (si cette dernière n'est jamais utilisée, cela ne coûte alors rien).
 
-Une technique supplémentaire pour optimiser ou retarder le calcul d'une valeur d'une propriété et de la mettre en cache pour les accès ultérieurs consiste à utiliser **des accesseurs intelligents « [mémoïsés](https://fr.wikipedia.org/wiki/M%C3%A9mo%C3%AFsation) »**. La valeur est calculée lors du premier appel de l'accesseur puis est mise en cache afin que les appels ultérieurs renvoient la valeur en cache sans la recalculer. Cette méthode peut s'avérer utile dans plusieurs situations :
+Une technique supplémentaire pour optimiser ou retarder le calcul d'une valeur d'une propriété et de la mettre en cache pour les accès ultérieurs consiste à utiliser **des accesseurs intelligents « [mémoïsés](https://fr.wikipedia.org/wiki/Mémoïsation) »**. La valeur est calculée lors du premier appel de l'accesseur puis est mise en cache afin que les appels ultérieurs renvoient la valeur en cache sans la recalculer. Cette méthode peut s'avérer utile dans plusieurs situations :
 
 - Si le calcul de la valeur est coûteux (il consomme beaucoup de RAM ou de temps CPU, il crée de nouveaux _threads_, il utilise des fichiers distants, etc.).
 - Si la valeur est utilisée plus tard ou, dans certains cas, n'est pas utilisée du tout.

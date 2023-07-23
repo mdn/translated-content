@@ -39,27 +39,29 @@ _Herada métodos del padre,_ _{{domxref("ExtendableEvent")}}_.
 Este evento fetch, permite al navegador hacer esta acción por defecto para peticiones non-GET. Para peticiones GET esto intenta retornar una coincidencia en el cache, y vuelve de nuevo a la red. Si busca una concidencia en el cache, actualiza asincronicamente el cache para la próxima vez.
 
 ```js
-addEventListener('fetch', event => {
+addEventListener("fetch", (event) => {
   // Permite al navegador hacer este asunto por defecto
   // para peticiones non-GET.
-  if (event.request.method != 'GET') return;
+  if (event.request.method != "GET") return;
 
   // Evita el valor predeterminado, y manejar solicitud nosostros mismos.
-  event.respondWith(async function() {
-    // Intenta obtener la respuesta de el cache.
-    const cache = await caches.open('dynamic-v1');
-    const cachedResponse = await cache.match(event.request);
+  event.respondWith(
+    (async function () {
+      // Intenta obtener la respuesta de el cache.
+      const cache = await caches.open("dynamic-v1");
+      const cachedResponse = await cache.match(event.request);
 
-    if (cachedResponse) {
-      // Si encontramos una coincidencia en el cache, lo devuelve, pero también
-      // actualizar la entrada en el cache en segundo plano.
-      event.waitUntil(cache.add(event.request));
-      return cachedResponse;
-    }
+      if (cachedResponse) {
+        // Si encontramos una coincidencia en el cache, lo devuelve, pero también
+        // actualizar la entrada en el cache en segundo plano.
+        event.waitUntil(cache.add(event.request));
+        return cachedResponse;
+      }
 
-    // Si no encontramos una coincidencia en el cache, usa la red.
-    return fetch(event.request);
-  }());
+      // Si no encontramos una coincidencia en el cache, usa la red.
+      return fetch(event.request);
+    })(),
+  );
 });
 ```
 

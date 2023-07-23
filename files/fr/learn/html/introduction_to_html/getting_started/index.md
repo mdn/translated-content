@@ -19,7 +19,7 @@ Cet article porte sur les fondements du HTML, pour prendre un bon départ — no
           >logiciels de base</a
         >
         et savoir
-        <a href="/fr/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers"
+        <a href="/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >gérer les fichiers</a
         >.
       </td>
@@ -715,7 +715,7 @@ Nous devons utiliser les références des caractères — des codes spéciaux qu
 | '            | `&apos;`             |
 | &            | `&amp;`              |
 
-> **Note :** Un graphique de toutes les références d'entité de caractères HTML est disponible sur Wikipédia : [Liste des entités caractère de XML et HTML](https://fr.wikipedia.org/wiki/Liste_des_entit%C3%A9s_caract%C3%A8re_de_XML_et_HTML).
+> **Note :** Un graphique de toutes les références d'entité de caractères HTML est disponible sur Wikipédia : [Liste des entités caractère de XML et HTML](https://fr.wikipedia.org/wiki/Liste_des_entités_caractère_de_XML_et_HTML).
 
 Dans l'exemple ci-dessous, voici deux paragraphes parlant de techniques Web :
 

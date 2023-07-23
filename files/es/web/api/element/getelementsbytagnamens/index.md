@@ -10,7 +10,7 @@ El método `Element.getElementsByTagNameNS()` devuelve una {{domxref("HTMLCollec
 ## Sintaxis
 
 ```js
-elementos = elemento.getElementsByTagNameNS(espacioNombreURI, nombreLocal)
+elementos = elemento.getElementsByTagNameNS(espacioNombreURI, nombreLocal);
 ```
 
 - `elementos` es una {{domxref("HTMLCollection")}} viva de elementos encontrados en el orden en el que aparecen en el árbol.
@@ -26,10 +26,10 @@ var table = document.getElementById("forecast-table");
 var cells = table.getElementsByTagNameNS("https://www.w3.org/1999/xhtml", "td");
 
 for (var i = 0; i < cells.length; i++) {
-    var axis = cells[i].getAttribute("axis");
-    if (axis == "year") {
-        // obtiene los datos
-    }
+  var axis = cells[i].getAttribute("axis");
+  if (axis == "year") {
+    // obtiene los datos
+  }
 }
 ```
 

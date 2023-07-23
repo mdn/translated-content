@@ -10,7 +10,7 @@ slug: Web/API/Element/setAttributeNS
 ## Sintaxis
 
 ```js
-elemento.setAttributeNS(namespace,nombre,valor)
+elemento.setAttributeNS(namespace, nombre, valor);
 ```
 
 - `namespace` es un string especificando el namespace del atributo.

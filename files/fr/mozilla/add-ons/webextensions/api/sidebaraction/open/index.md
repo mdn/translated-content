@@ -13,7 +13,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-browser.sidebarAction.open()
+browser.sidebarAction.open();
 ```
 
 ### Paramètres
@@ -36,7 +36,7 @@ Ouvrez la barre latérale lorsque l'utilisateur sélectionne un élément de men
 browser.menus.create({
   id: "open-sidebar",
   title: "open sidebar",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

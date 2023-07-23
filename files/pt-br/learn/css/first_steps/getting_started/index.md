@@ -47,28 +47,30 @@ Nosso ponto de partida e um documento HTML. Você pode copiar o código abaixo s
 ```html
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Getting started with CSS</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>I am a level one heading</h1>
 
-    <p>This is a paragraph of text. In the text is a <span>span element</span>
-and also a <a href="http://example.com">link</a>.</p>
+    <p>
+      This is a paragraph of text. In the text is a
+      <span>span element</span> and also a
+      <a href="http://example.com">link</a>.
+    </p>
 
-    <p>This is the second paragraph. It contains an <em>emphasized</em> element.</p>
+    <p>
+      This is the second paragraph. It contains an <em>emphasized</em> element.
+    </p>
 
     <ul>
-        <li>Item one</li>
-        <li>Item two</li>
-        <li>Item <em>three</em></li>
+      <li>Item one</li>
+      <li>Item two</li>
+      <li>Item <em>three</em></li>
     </ul>
-
-</body>
-
+  </body>
 </html>
 ```
 
@@ -83,7 +85,7 @@ Crie um arquivo na mesma pasta em que se encontra o seu documento HTML e salve-o
 Para ligar o `style.css` ao `index.html` adicione a seguinte linha em algum lugar dentro do {{htmlelement("head")}} do documento HTML:
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 Este {{htmlelement("link")}} elemento diz ao navegador que temos uma folha de estilo, usando o atributo `rel`, e a localização desse arquivo como o valor do atributo `href`. Você pode testar se esse CSS funciona adicionando regras ao `styles.css`. Usando o seu editor de código, adicione as linhas seguintes ao seu arquivo CSS:
@@ -111,8 +113,9 @@ p {
 Você pode especificar múltiplos seletores, separando-os com virgula. Se eu quero que todos os parágrafos e todos os itens da lista se tornem verdes, então minha regra se parecerá com isto:
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 

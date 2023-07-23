@@ -13,7 +13,7 @@ El método `animate()` de la interfaz {{domxref("Element")}} es un método abrev
 ## Síntaxis
 
 ```js
-animate(keyframes, options)
+animate(keyframes, options);
 ```
 
 ### Parámetros
@@ -43,15 +43,18 @@ utilizamos el método conveniente, `animate()` para inmediatamente crear y repro
 para hacerlo fluir hacia arriba, indefinidamente. Observa el arreglo de los objetos enviados como fotogramas clave y también el bloque de opciones de sincronización.
 
 ```js
-document.getElementById("tunnel").animate([
-  // fotogramas clave
-  { transform: 'translateY(0px)' },
-  { transform: 'translateY(-300px)' }
-], {
-  // opciones de sincronización
-  duration: 1000,
-  iterations: Infinity
-});
+document.getElementById("tunnel").animate(
+  [
+    // fotogramas clave
+    { transform: "translateY(0px)" },
+    { transform: "translateY(-300px)" },
+  ],
+  {
+    // opciones de sincronización
+    duration: 1000,
+    iterations: Infinity,
+  },
+);
 ```
 
 ### Implicito a/desde fotogramas clave
@@ -59,9 +62,7 @@ document.getElementById("tunnel").animate([
 En versiones más recientes de navegadores, se te permite declarar el estado de inicio o fin únicamente para una animación (por ejemplo: un simple fotograma clave), y el navegador inferirá la otra parte de la animación si está habilitado. Por ejemplo, considera [esta simple animación](https://mdn.github.io/dom-examples/web-animations-api/implicit-keyframes.html) — el objeto de fotograma clave se ve así:
 
 ```js
-let rotate360 = [
-  { transform: 'rotate(360deg)' }
-];
+let rotate360 = [{ transform: "rotate(360deg)" }];
 ```
 
 Solamente hemos especificado el fin del estado de la animación, y el estado inicial está implícito.

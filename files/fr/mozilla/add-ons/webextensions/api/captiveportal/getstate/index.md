@@ -11,7 +11,7 @@ Renvoie l'état du portail comme `unknown`, `not_captive`, `unlocked_portal`, ou
 ## Syntaxe
 
 ```js
-var state = browser.captivePortal.getState()
+var state = browser.captivePortal.getState();
 ```
 
 ### Valeur retournée
