@@ -97,7 +97,7 @@ HTTP リクエストもボディを持つことができますが、この場合
 
 メッセージの最後に **body** があります。これにはリクエストによって返された実際の HTML が含まれています。
 
-```html
+```http
 HTTP/1.1 200 OK
 Server: Apache
 X-Backend-Server: developer1.webapp.scl3.mozilla.com
@@ -110,16 +110,27 @@ X-Frame-Options: DENY
 Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
+```
 
-
-
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
-<head prefix="og: http://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
-  ...
+```html
+<!doctype html>
+<html
+  lang="en-US"
+  dir="ltr"
+  class="redesign no-js"
+  data-ffo-opensanslight="false"
+  data-ffo-opensans="false">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script>
+      (function (d) {
+        d.className = d.className.replace(/\bno-js/, "");
+      })(document.documentElement);
+    </script>
+    ...
+  </head>
+</html>
 ```
 
 レスポンスヘッダの残りの部分には、レスポンス (たとえば、いつ生成されたか)、サーバ、およびブラウザーがページを処理する方法についての情報が含まれます (たとえば、`X-Frame-Options: DENY` 行は、このページを別のサイトの {{htmlelement("iframe")}} に埋め込むことを許可しないようにブラウザーに指示します)。
@@ -132,7 +143,7 @@ HTTP `POST` は、サーバに保存する情報を含むフォームを送信�
 
 以下のテキストは、ユーザがこのサイトに新しいプロファイルの詳細を送信したときに行われる HTTP リクエストを示しています。最初の行はこのリクエストを `POST` として識別しますが、リクエストのフォーマットは前述の `GET` リクエストの例とほぼ同じです。
 
-```html
+```http
 POST https://developer.mozilla.org/en-US/profiles/hamishwillee/edit HTTP/1.1
 Host: developer.mozilla.org
 Connection: keep-alive
@@ -158,7 +169,7 @@ csrfmiddlewaretoken=zIPUJsAZv6pcgCBJSCj1zU6pQZbfMUAT&user-username=hamishwillee&
 
 リクエストからのレスポンスは以下のとおりです。ステータスコード "`302 Found`" は、投稿が成功したこと、および `Location` フィールドで指定されたページを読み込むために 2 番目の HTTP リクエストを発行する必要があることをブラウザーに通知します。その他の点では、この情報は GET リクエストへのレスポンスに関する情報と似ています。
 
-```html
+```http
 HTTP/1.1 302 FOUND
 Server: Apache
 X-Backend-Server: developer3.webapp.scl3.mozilla.com
