@@ -1,5 +1,5 @@
 ---
-title: 'HTML el atributo: accept'
+title: "HTML el atributo: accept"
 slug: Web/HTML/Attributes/accept
 original_slug: Web/HTML/Atributos/accept
 ---

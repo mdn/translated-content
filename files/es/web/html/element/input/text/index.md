@@ -76,7 +76,7 @@ Además de los atributos que operan en todos los elementos {{HTMLElement("input"
 
 | Atributo                      | Descripción                                                                                                                                              |
 | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`list`](#list)               | El id del elemento {{HTMLElement("datalist")}} que contiene las opciones de autocompletar predefinidas                                          |
+| [`list`](#list)               | El id del elemento {{HTMLElement("datalist")}} que contiene las opciones de autocompletar predefinidas                                                   |
 | [`maxlength`](#maxlength)     | El número máximo de caracteres que debe aceptar la entrada                                                                                               |
 | [`minlength`](#minlength)     | El número mínimo de caracteres que la entrada puede tener y aún se considera válida                                                                      |
 | [`pattern`](#pattern)         | Una expresión regular que el contenido de la entrada debe coincidir para que sea válida                                                                  |

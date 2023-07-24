@@ -12,13 +12,13 @@ Para seleccionar la imagen óptima, el {{Glossary("user agent")}} examina cada a
 
 El navegador escogerá la fuente más apropiada de acuerdo al diseño de la página (las limitaciones de la caja donde aparecerá la imagen) y el dispositivo que se utilize para visualizarla (p.ej. pantalla normal o hiDPI).
 
-| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Flujo de contenido](/es/docs/Web/HTML/Content_categories#flow_content), contenido textual o estático, contenido incrustado                                            |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | [Flujo de contenido](/es/docs/Web/HTML/Content_categories#flow_content), contenido textual o estático, contenido incrustado                               |
+| --------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Contenido permitido                                             | Cero o más elementos {{HTMLElement("source")}}, seguidos por un elemento {{HTMLElement("img")}}, mezclados opcionalmente con elementos script-supporting. |
-| Omisión de etiquetas                                            | {{no_tag_omission}}                                                                                                                                               |
-| Padres permitidos                                               | Cualquier elemento que permita embeber contenido.                                                                                                                      |
-| ARIA roles permitidos                                           | Ninguno.                                                                                                                                                               |
-| DOM interface                                                   | {{domxref("HTMLPictureElement")}}                                                                                                                           |
+| Omisión de etiquetas                                            | {{no_tag_omission}}                                                                                                                                       |
+| Padres permitidos                                               | Cualquier elemento que permita embeber contenido.                                                                                                         |
+| ARIA roles permitidos                                           | Ninguno.                                                                                                                                                  |
+| DOM interface                                                   | {{domxref("HTMLPictureElement")}}                                                                                                                         |
 
 ## Atributos
 

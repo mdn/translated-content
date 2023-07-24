@@ -14,7 +14,7 @@ El **elemento HTML** \<sub> define un fragmento de texto que se debe mostrar, po
 | Omission de etiquetas                                       | Ninguna, tanto la etiqueta de apertura y cierre deben estar presentes                                                                                                                                                                               |
 | Elementos padres permitidos                                 | Cualquier elemento que acepte contenido estático o de texto                                                                                                                                                                                         |
 | Roles ARIA permitidos                                       | Cualquiera                                                                                                                                                                                                                                          |
-| Interfaz DOM                                                | {{domxref("HTMLElement")}}                                                                                                                                                                                                                |
+| Interfaz DOM                                                | {{domxref("HTMLElement")}}                                                                                                                                                                                                                          |
 
 ## Atributos
 

@@ -7,6 +7,7 @@ original_slug: Web/HTML/Elemento/font
 ### Definición
 
 - **font** -_fuente_ . Indica el tamaño, color, o fuente del texto que contiene.
+
   - : **Sus etiquetas son**: \<font> y \</font> (ambas obligatorias).
 
     - **Está definido como**: Elemento [desaprobado](/es/HTML/Elemento/Tipos_de_elementos#desaprobado).

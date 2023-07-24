@@ -1,5 +1,5 @@
 ---
-title: 'HTML el atributo: minlength'
+title: "HTML el atributo: minlength"
 slug: Web/HTML/Attributes/minlength
 original_slug: Web/HTML/Atributos/minlength
 ---

@@ -1,5 +1,5 @@
 ---
-title: '<mark>: el elemento de resaltado de texto'
+title: "<mark>: el elemento de resaltado de texto"
 slug: Web/HTML/Element/mark
 original_slug: Web/HTML/Elemento/mark
 ---

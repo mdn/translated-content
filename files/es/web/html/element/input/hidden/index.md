@@ -19,11 +19,11 @@ original_slug: Web/HTML/Elemento/input/hidden
 {{ EmbedLiveSample('Basic_example', 600, 40) }}
 
 | **[Value](#value)**             | {{domxref("DOMString")}} representando el valor de un campo oculto que se espetra pasar al servidor. |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| **Events**                      | Ninguno.                                                                                                     |
-| **Supported Common Attributes** | [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete)                                                     |
-| **IDL attributes**              | `value`                                                                                                      |
-| **Methods**                     | Ninguno.                                                                                                     |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Events**                      | Ninguno.                                                                                             |
+| **Supported Common Attributes** | [`autocomplete`](/es/docs/Web/HTML/Element/input#autocomplete)                                       |
+| **IDL attributes**              | `value`                                                                                              |
+| **Methods**                     | Ninguno.                                                                                             |
 
 ## Valor (Value)
 
