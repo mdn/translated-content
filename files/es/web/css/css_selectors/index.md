@@ -1,6 +1,6 @@
 ---
 title: Selectores CSS
-slug: Web/CSS/CSS_Selectors
+slug: Web/CSS/CSS_selectors
 original_slug: Web/CSS/Selectores_CSS
 ---
 
