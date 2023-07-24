@@ -34,7 +34,7 @@ Cuando una cadena no vacía es asignada a la propiedad `returnValue` del Evento,
 
 ```js
 window.addEventListener("beforeunload", function (event) {
-  event.returnValue = "o/";
+  event.returnValue = "\\o/";
 });
 
 //is equivalent to
@@ -47,7 +47,7 @@ Los navegadores basado en Webkit no se basan en las especificaciones del cuadro 
 
 ```js
 window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "o/";
+  var confirmationMessage = "\\o/";
 
   (e || window.event).returnValue = confirmationMessage; //Gecko + IE
   return confirmationMessage; //Webkit, Safari, Chrome etc.
