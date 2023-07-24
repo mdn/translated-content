@@ -18,8 +18,8 @@ var historyObj = window.history;
 ## Ejemplo
 
 ```js
-history.back();     // equivalente a hacer clic en el botón de regresar
-history.go(-1);     // equivalente a history.back();
+history.back(); // equivalente a hacer clic en el botón de regresar
+history.go(-1); // equivalente a history.back();
 ```
 
 ## Notas

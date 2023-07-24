@@ -11,10 +11,10 @@ La propiedad `sessionStorage` permite acceder a un objeto {{domxref("Storage")}}
 
 ```js
 // Almacena la información en sessionStorage
-sessionStorage.setItem('key', 'value');
+sessionStorage.setItem("key", "value");
 
 // Obtiene la información almacenada desde sessionStorage
-var data = sessionStorage.getItem('key');
+var data = sessionStorage.getItem("key");
 ```
 
 ### Valor
@@ -26,7 +26,7 @@ Un objeto de tipo {{domxref("Storage")}}.
 El siguiente código accede al objeto {{domxref("Storage")}} del la sesión actual del domino y le añade un elemento utilizando {{domxref("Storage.setItem()")}}.
 
 ```js
-sessionStorage.setItem('myCat', 'Tom');
+sessionStorage.setItem("myCat", "Tom");
 ```
 
 El siguiente ejemplo graba de forma automática el contenido de un campo de texto, y si el navegador es actualizado accidentalmente, restaura el contenido del campo de texto para no perder lo escrito.
@@ -43,7 +43,7 @@ if (sessionStorage.getItem("autosave")) {
 }
 
 // Espera por cambios en el campo de texto
-field.addEventListener("change", function() {
+field.addEventListener("change", function () {
   // Almacena el resultado en el objeto de almacenamiento de sesión
   sessionStorage.setItem("autosave", field.value);
 });
