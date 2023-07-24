@@ -68,8 +68,8 @@ l10n:
 
 1. JavaScript では、文字列を囲む引用符として、単一引用符と二重引用符を使用することができます。以下のどちらの例も正しく動きます。
 
-   ```js
-   const sgl = "単一引用符";
+   ```js-nolint
+   const sgl = '単一引用符';
    const dbl = "二重引用符";
    console.log(sgl);
    console.log(dbl);
