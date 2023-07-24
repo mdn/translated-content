@@ -1,5 +1,5 @@
 ---
-title: ':checked'
+title: ":checked"
 slug: Web/CSS/:checked
 ---
 
@@ -31,15 +31,15 @@ El usuario puede activar este estado marcando/seleccionando un elemento, o desac
 
 ```html
 <div>
-  <input type="radio" name="my-input" id="yes">
+  <input type="radio" name="my-input" id="yes" />
   <label for="yes">Yes</label>
 
-  <input type="radio" name="my-input" id="no">
+  <input type="radio" name="my-input" id="no" />
   <label for="no">No</label>
 </div>
 
 <div>
-  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <input type="checkbox" name="my-checkbox" id="opt-in" />
   <label for="opt-in">Check me!</label>
 </div>
 
@@ -95,14 +95,38 @@ Este ejemplo utiliza la pseudoclase `:checked` para permitir al usuario alternar
 
 <table>
   <thead>
-    <tr><th>Columna #1</th><th>Columna #2</th><th>Columna #3</th></tr>
+    <tr>
+      <th>Columna #1</th>
+      <th>Columna #2</th>
+      <th>Columna #3</th>
+    </tr>
   </thead>
   <tbody>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
-    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-    <tr><td>[cell text]</td><td>[cell text]</td><td>[cell text]</td></tr>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
-    <tr class="expandable"><td>[more text]</td><td>[more text]</td><td>[more text]</td></tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
+    <tr>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+    </tr>
+    <tr>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+      <td>[cell text]</td>
+    </tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
+    <tr class="expandable">
+      <td>[more text]</td>
+      <td>[more text]</td>
+      <td>[more text]</td>
+    </tr>
   </tbody>
 </table>
 

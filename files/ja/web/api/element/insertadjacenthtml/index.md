@@ -1,63 +1,132 @@
 ---
-title: element.insertAdjacentHTML
+title: "Element: insertAdjacentHTML() メソッド"
+short-title: insertAdjacentHTML()
 slug: Web/API/Element/insertAdjacentHTML
+l10n:
+  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
-## 概要
-
-`insertAdjacentHTML()` は、第二引数で指定するテキストを HTML または XML としてパースし、その結果であるノードを DOM ツリー内の指定された位置（第一引数で指定）に挿入します。これは挿入先の要素を再度パースするものではないため、既存の要素や要素内部の破壊を伴いません。余分なシリアル化のステップを回避できる分、 `innerHTML` への代入による直接的な操作よりもはるかに高速な動作となります。
+**`insertAdjacentHTML()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定されたテキストを HTML または XML として解釈し、結果のノードを DOM ツリーの指定された位置に挿入します。
 
 ## 構文
 
+```js-nolint
+insertAdjacentHTML(position, text)
 ```
-element.insertAdjacentHTML(position, text);
-```
 
-`position` には `element` に対する相対位置を、以下に示す文字列の 1 つで指定します。
+### 引数
 
-- `'beforebegin'`
-  - : element の直前に挿入
-- `'afterbegin'`
-  - : `element` 内部の、最初の子要素の前に挿入
-- `'beforeend'`
-  - : `element` 内部の、最後の子要素の後に挿入
-- `'afterend'`
-  - : `element` の直後に挿入
+- `position`
 
-`text` には HTML または XML としてパースし DOM ツリーに挿入することが可能な文字列を指定します。
+  - : 文字列で、要素の相対的な位置を表します。以下のいずれかでなければなりません。
 
-### ポジション名の可視化
+    - `"beforebegin"`
+      - : 要素の前。要素が DOM ツリー内にあり、親要素がある場合にのみ有効です。
+    - `"afterbegin"`
+      - : 要素のすぐ内側、最初の子の前。
+    - `"beforeend"`
+      - : 要素のすぐ内側、最後の子の後。
+    - `"afterend"`
+      - : 要素の後。要素が DOM ツリー内にあり、親要素がある場合にのみ有効です。
 
-```
+- `text`
+  - : HTML または XML として解釈し、ツリーに挿入する文字列です。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
+
+### 例外
+
+このメソッドは、以下の種類の {{domxref("DOMException")}} を発生させることがあります。
+
+- `NoModificationAllowedError` {{domxref("DOMException")}}
+  - : `position` が `"beforebegin"` または `"afterend"` で、要素が親を持っていないか、親が `Document` オブジェクトである場合に発生します。
+- `SyntaxError` {{domxref("DOMException")}}
+  - : `position` が掲載されている 4 つの値のいずれでもない場合に発生します。
+
+## 解説
+
+`insertAdjacentHTML()` は挿入先の要素を再解釈するものではないため、既存の要素や要素内部の破壊を伴いません。余分なシリアル化のステップを回避できる分、{{domxref("Element.innerHTML", "innerHTML")}} の操作よりもはるかに高速な動作となります。
+
+挿入されるコンテンツの使用可能な位置は、以下のように可視化できます。
+
+```html
 <!-- beforebegin -->
 <p>
-<!-- afterbegin -->
-foo
-<!-- beforeend -->
+  <!-- afterbegin -->
+  foo
+  <!-- beforeend -->
 </p>
 <!-- afterend -->
 ```
 
-> **メモ:** `beforebegin` および `afterend` の位置指定で動作するのは、ノードがツリー内にあり、かつ親要素が存在する場合のみとなります。
+### セキュリティの考慮事項
+
+`insertAdjacentHTML()` を使用してページに HTML を挿入する場合、エスケープされていないユーザー入力を使用しないように注意してください。
+
+プレーンテキストを挿入する場合は、`insertAdjacentHTML()` を使用しないでください。代わりに {{domxref("Node.textContent")}} プロパティか {{domxref("Element.insertAdjacentText()")}} メソッドを使用してください。これは、渡されたコンテンツを HTML として解釈せず、生のテキストとして挿入します。
 
 ## 例
 
-```js
-// <div id="one">one</div>
-var d1 = document.getElementById('one');
-d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
+### HTML の挿入
 
-// 挿入位置および挿入後の構造は、以下のようになります。
-// <div id="one">one</div><div id="two">two</div>
+#### HTML
+
+```html
+<select id="position">
+  <option>beforebegin</option>
+  <option>afterbegin</option>
+  <option>beforeend</option>
+  <option>afterend</option>
+</select>
+
+<button id="insert">Insert HTML</button>
+<button id="reset">Reset</button>
+
+<p>
+  Some text, with a <code id="subject">code-formatted element</code> inside it.
+</p>
 ```
 
-## 仕様
+#### CSS
+
+```css
+code {
+  color: red;
+}
+```
+
+#### JavaScript
+
+```js
+const insert = document.querySelector("#insert");
+insert.addEventListener("click", () => {
+  const subject = document.querySelector("#subject");
+  const positionSelect = document.querySelector("#position");
+  subject.insertAdjacentHTML(
+    positionSelect.value,
+    "<strong>inserted text</strong>",
+  );
+});
+
+const reset = document.querySelector("#reset");
+reset.addEventListener("click", () => {
+  document.location.reload();
+});
+```
+
+#### 結果
+
+{{EmbedLiveSample("Examples", 100, 100)}}
+
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 
@@ -65,4 +134,5 @@ d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
 
 - {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("Element.insertAdjacentText()")}}
-- Henri Sivonen 氏による [hacks.mozilla.org へのゲストポスト](http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) には、幾つかのケースでは insertAdjacentHTML がより速い方法であることを示すベンチマークが含まれています。
+- {{domxref("XMLSerializer")}}: DOM ツリーを XML 文字列へシリアライズ
+- Henri Sivonen 氏による [hacks.mozilla.org へのゲストポスト](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) には、幾つかのケースでは insertAdjacentHTML がより速い方法であることを示すベンチマークが含まれています。

@@ -173,7 +173,7 @@ Parcel は `index.html` と `index.js` ファイルが動作することを期�
 そのため、 `index.html` ファイルを作業ディレクトリーに追加する必要があります。テストディレクトリーに `index.html` を作成し、次の内容を指定します。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />

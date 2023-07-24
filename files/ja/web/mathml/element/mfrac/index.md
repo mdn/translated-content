@@ -44,14 +44,14 @@ MathML の `<mfrac>` 要素は分数を表示するのに使います。
 ```html
 <math>
   <mfrac bevelled="true">
-     <mfrac>
-        <mi> a </mi>
-        <mi> b </mi>
-     </mfrac>
-     <mfrac>
-        <mi> c </mi>
-        <mi> d </mi>
-     </mfrac>
+    <mfrac>
+      <mi> a </mi>
+      <mi> b </mi>
+    </mfrac>
+    <mfrac>
+      <mi> c </mi>
+      <mi> d </mi>
+    </mfrac>
   </mfrac>
 </math>
 ```

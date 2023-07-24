@@ -1,5 +1,5 @@
 ---
-title: ':defined'
+title: ":defined"
 slug: Web/CSS/:defined
 ---
 
@@ -30,24 +30,26 @@ Los siguientes fragmentos están tomados de nuestra demostración [Pseudo-clase-
 En esta demostración, definimos un elemento personalizado trivial muy simple:
 
 ```js
-customElements.define('simple-custom',
+customElements.define(
+  "simple-custom",
   class extends HTMLElement {
     constructor() {
       super();
 
-      let divElem = document.createElement('div');
-      divElem.textContent = this.getAttribute('text');
+      let divElem = document.createElement("div");
+      divElem.textContent = this.getAttribute("text");
 
-      let shadowRoot = this.attachShadow({mode: 'open'})
-        .appendChild(divElem);
-  }
-})
+      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
+    }
+  },
+);
 ```
 
 Luego inserta una copia de este elemento en el documento, junto con un `<p>` estándar:
 
 ```html
-<simple-custom text="Texto de ejemplo del elemento personalizado"></simple-custom>
+<simple-custom
+  text="Texto de ejemplo del elemento personalizado"></simple-custom>
 
 <p>Texto de ejemplo de párrafo estándar</p>
 ```

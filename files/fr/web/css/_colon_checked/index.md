@@ -17,7 +17,7 @@ input:checked {
 }
 ```
 
-> **Note :** Les navigateurs considèrent souvent les éléments `<option>` comme [des éléments remplacés](/fr/docs/Web/CSS/%C3%89l%C3%A9ment_remplac%C3%A9)et la possibilité de mise en forme avec `:checked` varie d'un navigateur à l'autre.
+> **Note :** Les navigateurs considèrent souvent les éléments `<option>` comme [des éléments remplacés](/fr/docs/Web/CSS/Élément_remplacé)et la possibilité de mise en forme avec `:checked` varie d'un navigateur à l'autre.
 
 ## Syntaxe
 

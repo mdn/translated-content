@@ -17,6 +17,6 @@ La respuesta de código de estado del Protocolo de Transferencia de Hipertexto (
 
 ## Specifications
 
-| Specification                                                | Title                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| Specification                                | Title                                                         |
+| -------------------------------------------- | ------------------------------------------------------------- |
 | {{RFC("7231", "400 Bad Request" , "6.5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |

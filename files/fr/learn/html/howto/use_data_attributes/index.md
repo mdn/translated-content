@@ -18,7 +18,7 @@ La syntaxe est simple. Tout attribut d'un élément dont le nom commence par `da
   data-columns="3"
   data-index-number="12314"
   data-parent="voitures">
-...
+  ...
 </article>
 ```
 
@@ -29,11 +29,11 @@ Lire les valeurs de ces attributs avec du [JavaScript](/fr/docs/Web/JavaScript) 
 Pour obtenir un attribut `data` avec l'objet `dataset`, repérez la propriété avec la partie du nom de l'attribut qui suit le préfixe `data-` (notez que les tirets sont convertis en _[camelCase](https://fr.wikipedia.org/wiki/CamelCase)_).
 
 ```js
-var article = document.getElementById('voitureelectrique');
+var article = document.getElementById("voitureelectrique");
 
-article.dataset.columns // "3"
-article.dataset.indexNumber // "12314"
-article.dataset.parent // "voitures"
+article.dataset.columns; // "3"
+article.dataset.indexNumber; // "12314"
+article.dataset.parent; // "voitures"
 ```
 
 Chaque propriété est une chaîne et peut être en lecture et écriture. Dans le cas ci-dessus passer le paramètre `article.dataset.columns = 5` mettrait l'attribut à `"5"`.
@@ -51,10 +51,10 @@ article::before {
 Vous pouvez également utiliser les [sélecteurs d'attributs](/fr/docs/Web/CSS/Sélecteurs_d_attribut) en CSS pour modifier les styles en fonction des données :
 
 ```css
-article[data-columns='3'] {
+article[data-columns="3"] {
   width: 400px;
 }
-article[data-columns='4'] {
+article[data-columns="4"] {
   width: 600px;
 }
 ```

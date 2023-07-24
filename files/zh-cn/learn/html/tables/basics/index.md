@@ -125,18 +125,18 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 2. 每一个表格的内容都包含在这两个标签中：**[`<table></table>`](/zh-CN/docs/Web/HTML/Element/table)**。在你的 HTML 的 {{htmlelement("body")}} 中添加这些内容。
 3. 在表格中，最小的内容容器是单元格，是通过 **[`<td>`](/zh-CN/docs/Web/HTML/Element/td)** 元素创建的（其中“td”代表“table data”）。把下面的内容添加到你的表格标签中：
 
-    ```html
-    <td>Hi, I'm your first cell.</td>
-    ```
+   ```html
+   <td>Hi, I'm your first cell.</td>
+   ```
 
 4. 如果我们想要一行四个单元格，我们需要把这组标签拷贝三次，更新你表中的内容，让它看起来是这样的：
 
-    ```html
-    <td>Hi, I'm your first cell.</td>
-    <td>I'm your second cell.</td>
-    <td>I'm your third cell.</td>
-    <td>I'm your fourth cell.</td>
-    ```
+   ```html
+   <td>Hi, I'm your first cell.</td>
+   <td>I'm your second cell.</td>
+   <td>I'm your third cell.</td>
+   <td>I'm your fourth cell.</td>
+   ```
 
 你会看到，单元格不会放置在彼此的下方，而是自动与同一行上的其他单元格对齐。每个 `<td>` 元素 创建一个单独单元格，它们共同组成了第一行。我们添加的每个单元格都使行的长度变长。
 
@@ -144,14 +144,14 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 1. 把你已经创建好的 4 个单元格放入 `<tr>` 标签，就像这样：
 
-    ```html
-    <tr>
-      <td>Hi, I'm your first cell.</td>
-      <td>I'm your second cell.</td>
-      <td>I'm your third cell.</td>
-      <td>I'm your fourth cell.</td>
-    </tr>
-    ```
+   ```html
+   <tr>
+     <td>Hi, I'm your first cell.</td>
+     <td>I'm your second cell.</td>
+     <td>I'm your third cell.</td>
+     <td>I'm your fourth cell.</td>
+   </tr>
+   ```
 
 2. 现在你已经实现了一行，可以继续增加至两行、三行。每一行都需要一个额外的 `<tr>` 元素来包装，每个单元格的内容都应该写在 `<td>`中。
 
@@ -178,13 +178,14 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 ```
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 {{EmbedLiveSample("结果")}}
@@ -294,13 +295,14 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 ```
 
 ```css hidden
-  table {
-    border-collapse: collapse;
-  }
-  td, th {
-    border: 1px solid black;
-    padding: 10px 20px;
-  }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
 ```
 
 但是输出的结果不是我们想要的：
@@ -354,8 +356,8 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 ```html
 <table>
   <colgroup>
-    <col>
-    <col style="background-color: yellow">
+    <col />
+    <col style="background-color: yellow" />
   </colgroup>
   <tr>
     <th>Data 1</th>
@@ -378,7 +380,7 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 ```html
 <colgroup>
-  <col style="background-color: yellow" span="2">
+  <col style="background-color: yellow" span="2" />
 </colgroup>
 ```
 

@@ -11,7 +11,7 @@ Supprimer toute mise en évidence d'une recherche précédente qui a été appli
 ## Syntaxe
 
 ```js
-browser.find.removeHighlighting()
+browser.find.removeHighlighting();
 ```
 
 ### Paramètres

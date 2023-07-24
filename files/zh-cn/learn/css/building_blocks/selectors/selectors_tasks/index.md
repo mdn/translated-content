@@ -110,7 +110,7 @@ slug: Learn/CSS/Building_blocks/Selectors/Selectors_Tasks
 1. 将你的作业上传到可共享的在线编辑器上，比如 [CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)。你可以自己编写代码，也可以使用上面给出的初始文件。
 2. 在 [MDN 论坛的学习板块](https://discourse.mozilla.org/c/mdn/learn)上发帖以寻求打分或帮助。你的帖子中应包含：
 
-    - 一个简述问题的标题。如“Assessment wanted for Selectors skill test 1”（请使用英文发帖）。
-    - 详细描述你的尝试和你预期的网页效果。比如你在哪个位置需要帮助，或者你需要打分评估。
-    - 你需要打分或帮助的作业链接（通过上述的在线编辑器上传）。只有让别人看到你的代码，你才能得到更好的帮助。
-    - 本题的链接。让别人知道你所问的具体题目。
+   - 一个简述问题的标题。如“Assessment wanted for Selectors skill test 1”（请使用英文发帖）。
+   - 详细描述你的尝试和你预期的网页效果。比如你在哪个位置需要帮助，或者你需要打分评估。
+   - 你需要打分或帮助的作业链接（通过上述的在线编辑器上传）。只有让别人看到你的代码，你才能得到更好的帮助。
+   - 本题的链接。让别人知道你所问的具体题目。

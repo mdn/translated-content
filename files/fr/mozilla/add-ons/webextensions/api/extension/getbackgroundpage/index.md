@@ -13,7 +13,7 @@ Alias de {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
 ## Syntaxe
 
 ```js
-var page = browser.extension.getBackgroundPage()
+var page = browser.extension.getBackgroundPage();
 ```
 
 ### Paramètres

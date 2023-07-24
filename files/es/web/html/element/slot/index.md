@@ -3,6 +3,7 @@ title: <slot>
 slug: Web/HTML/Element/slot
 original_slug: Web/HTML/Elemento/slot
 ---
+
 {{HTMLSidebar}}
 
 **El elemento HTML `<slot>`** —parte de la suite tecnologica [Web Components](/es/docs/Web/Web_Components) — es un placeholder en un componente que tu puedes llenar con tu propio marcado, que te permite crear árboles DOM por separado y presentarlos juntos.
@@ -73,6 +74,7 @@ original_slug: Web/HTML/Elemento/slot
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
 - `name`
+
   - : El nombre del slot.
 
     Un **slot nombrado** es un elemento `<slot>` con el atributo `name`.
@@ -82,19 +84,43 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 ```html
 <template id="element-details-template">
   <style>
-    details {font-family: "Open Sans Light",Helvetica,Arial}
-    .name {font-weight: bold; color: #217ac0; font-size: 120%}
-    h4 { margin: 10px 0 -8px 0; }
-    h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
-    h4 span { border: 1px solid #cee9f9; border-radius: 4px }
-    h4 span { color: white }
-    .attributes { margin-left: 22px; font-size: 90% }
-    .attributes p { margin-left: 16px; font-style: italic }
+    details {
+      font-family: "Open Sans Light", Helvetica, Arial;
+    }
+    .name {
+      font-weight: bold;
+      color: #217ac0;
+      font-size: 120%;
+    }
+    h4 {
+      margin: 10px 0 -8px 0;
+    }
+    h4 span {
+      background: #217ac0;
+      padding: 2px 6px 2px 6px;
+    }
+    h4 span {
+      border: 1px solid #cee9f9;
+      border-radius: 4px;
+    }
+    h4 span {
+      color: white;
+    }
+    .attributes {
+      margin-left: 22px;
+      font-size: 90%;
+    }
+    .attributes p {
+      margin-left: 16px;
+      font-style: italic;
+    }
   </style>
   <details>
     <summary>
       <span>
-        <code class="name">&lt;<slot name="element-name">NEED NAME</slot>&gt;</code>
+        <code class="name"
+          >&lt;<slot name="element-name">NEED NAME</slot>&gt;</code
+        >
         <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
       </span>
     </summary>
@@ -103,7 +129,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
       <slot name="attributes"><p>None</p></slot>
     </div>
   </details>
-  <hr>
+  <hr />
 </template>
 ```
 

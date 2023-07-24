@@ -7,7 +7,7 @@ translation_of_original: Web/API/DeviceRotationRate/beta
 
 {{ ApiRef("Device Orientation Events") }}
 
-Cette propriété indique la vitesse de rotation autour de l'axe X -- en degrés par seconde -- dans un objet {{ domxref("DeviceRotationRate") }}.
+Cette propriété indique la vitesse de rotation autour de l'axe X — en degrés par seconde — dans un objet {{ domxref("DeviceRotationRate") }}.
 
 ## Syntaxe
 

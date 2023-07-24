@@ -5649,16 +5649,6 @@
     "modified": "2019-03-23T22:27:29.008Z",
     "contributors": ["israel-munoz"]
   },
-  "Web/API/Window/applicationCache": {
-    "modified": "2019-03-23T23:52:56.666Z",
-    "contributors": [
-      "SphinxKnight",
-      "fscholz",
-      "AshfaqHossain",
-      "HenryGR",
-      "Mgjbot"
-    ]
-  },
   "Web/API/Window/beforeunload_event": {
     "modified": "2019-04-30T14:05:00.135Z",
     "contributors": ["wbamberg", "ExE-Boss", "anasyusef", "Bant89"]
@@ -6263,10 +6253,6 @@
   "Web/CSS/:-moz-first-node": {
     "modified": "2019-03-23T22:34:12.741Z",
     "contributors": ["pekechis"]
-  },
-  "Web/CSS/:-moz-focusring": {
-    "modified": "2019-03-23T22:34:12.588Z",
-    "contributors": ["teoli", "pekechis"]
   },
   "Web/CSS/:-moz-handler-blocked": {
     "modified": "2019-03-23T22:33:34.259Z",
@@ -14597,6 +14583,10 @@
     "modified": "2019-03-18T21:16:20.006Z",
     "contributors": ["teoli", "pekechis"]
   },
+  "conflicting/Web/CSS/:focus-visible": {
+    "modified": "2019-03-23T22:34:12.588Z",
+    "contributors": ["teoli", "pekechis"]
+  },
   "conflicting/Web/CSS/:placeholder-shown": {
     "modified": "2019-03-23T22:33:30.015Z",
     "contributors": ["teoli", "pekechis"]
@@ -15544,6 +15534,16 @@
   "orphaned/Web/API/Web_Crypto_API/Checking_authenticity_with_password": {
     "modified": "2019-03-23T22:10:43.026Z",
     "contributors": ["haxdai"]
+  },
+  "orphaned/Web/API/Window/applicationCache": {
+    "modified": "2019-03-23T23:52:56.666Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "AshfaqHossain",
+      "HenryGR",
+      "Mgjbot"
+    ]
   },
   "orphaned/Web/API/Window/dialogArguments": {
     "modified": "2019-03-23T22:33:21.065Z",

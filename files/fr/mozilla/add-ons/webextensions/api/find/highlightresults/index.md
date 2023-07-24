@@ -15,7 +15,7 @@ Notez que les résultats stockés sont globaux pour toutes les extensions, par e
 ## Syntaxe
 
 ```js
-browser.find.highlightResults()
+browser.find.highlightResults();
 ```
 
 ### Paramètres

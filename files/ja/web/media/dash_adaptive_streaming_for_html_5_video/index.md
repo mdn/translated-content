@@ -84,8 +84,8 @@ ffmpeg \
 
 ```html
 <video>
-  <source src="movie.mpd">
-  <source src="movie.webm">
+  <source src="movie.mpd" />
+  <source src="movie.webm" />
   Your browser does not support the video tag.
 </video>
 ```

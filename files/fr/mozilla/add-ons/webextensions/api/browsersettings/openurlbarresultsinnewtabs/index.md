@@ -25,8 +25,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.openUrlbarResultsInNewTabs.set({value: true}).
-  then(logResult);
+browser.browserSettings.openUrlbarResultsInNewTabs
+  .set({ value: true })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}
