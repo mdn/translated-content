@@ -56,7 +56,7 @@ Este elemento implementa la interfaz [`HTMLElement`](/en/DOM/element).
 ```html
 <div>
   <h2>Encabezado</h2>
-  <img src="roble.jpg" alt="un roble">
+  <img src="roble.jpg" alt="un roble" />
 </div>
 ```
 
@@ -65,7 +65,7 @@ Este elemento implementa la interfaz [`HTMLElement`](/en/DOM/element).
 ```html
 <section>
   <h2>Encabezado</h2>
-  <img src="roble.jpg" alt="un roble">
+  <img src="roble.jpg" alt="un roble" />
 </section>
 ```
 

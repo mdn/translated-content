@@ -182,7 +182,7 @@ Los elementos {{HTMLElement("input")}} de tipo `text` crean entradas básicas de
 <form>
   <div>
     <label for="uname">Elige un nombre de usuario: </label>
-    <input type="text" id="uname" name="name">
+    <input type="text" id="uname" name="name" />
   </div>
   <div>
     <button>Enviar</button>
@@ -204,8 +204,11 @@ Puedes proporcionar un marcador de posición útil dentro de tu entrada de texto
 <form>
   <div>
     <label for="uname">Elige un nombre de usuario: </label>
-    <input type="text" id="uname" name="name"
-           placeholder="Una sola palabra, en minúsculas">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      placeholder="Una sola palabra, en minúsculas" />
   </div>
   <div>
     <button>Enviar</button>
@@ -227,9 +230,12 @@ El tamaño físico del cuadro de entrada se puede controlar mediante el atributo
 <form>
   <div>
     <label for="uname">Elige un nombre de usuario: </label>
-    <input type="text" id="uname" name="name"
-           placeholder="Una sola palabra, en minúsculas"
-           size="30">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      placeholder="Una sola palabra, en minúsculas"
+      size="30" />
   </div>
   <div>
     <button>Enviar</button>
@@ -259,14 +265,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
-  position: absolute; content: '✖';
+input:invalid + span:after {
+  position: absolute;
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -281,7 +288,7 @@ Puedes usar el atributo [`required`](/es/docs/Web/HTML/Element/input#required) c
 <form>
   <div>
     <label for="uname">Elige un nombre de usuario: </label>
-    <input type="text" id="uname" name="name" required>
+    <input type="text" id="uname" name="name" required />
     <span class="validity"></span>
   </div>
   <div>
@@ -291,7 +298,23 @@ Puedes usar el atributo [`required`](/es/docs/Web/HTML/Element/input#required) c
 ```
 
 ```css hidden
-div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }
+div {
+  margin-bottom: 10px;
+  position: relative;
+}
+input + span {
+  padding-right: 30px;
+}
+input:invalid + span:after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
+input:valid + span:after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
 ```
 
 Esto se renderiza así:
@@ -310,9 +333,15 @@ El siguiente ejemplo requiere que el valor ingresado tenga entre 4 y 8 caractere
 <form>
   <div>
     <label for="uname">Elige un nombre de usuario: </label>
-    <input type="text" id="uname" name="name" required size="10"
-           placeholder="nombreusuario"
-           minlength="4" maxlength="8">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="10"
+      placeholder="nombreusuario"
+      minlength="4"
+      maxlength="8" />
     <span class="validity"></span>
   </div>
   <div>
@@ -322,7 +351,23 @@ El siguiente ejemplo requiere que el valor ingresado tenga entre 4 y 8 caractere
 ```
 
 ```css hidden
-div { margin-bottom: 10px; position: relative; } input + span { padding-right: 30px; } input:invalid+span:after { position: absolute; content: '✖'; padding-left: 5px; } input:valid+span:after { position: absolute; content: '✓'; padding-left: 5px; }
+div {
+  margin-bottom: 10px;
+  position: relative;
+}
+input + span {
+  padding-right: 30px;
+}
+input:invalid + span:after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
+input:valid + span:after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
 ```
 
 Esto se renderiza así:
@@ -343,10 +388,18 @@ El siguiente ejemplo restringe el valor a 4-8 caracteres y requiere que contenga
 <form>
   <div>
     <label for="uname">Elige un nombre de usuario: </label>
-    <input type="text" id="uname" name="name" required size="45"
-           pattern="[a-z]{4,8}">
+    <input
+      type="text"
+      id="uname"
+      name="name"
+      required
+      size="45"
+      pattern="[a-z]{4,8}" />
     <span class="validity"></span>
-    <p>Los nombres de usuario deben estar en minúsculas y tener entre 4 y 8 caracteres de longitud.</p>
+    <p>
+      Los nombres de usuario deben estar en minúsculas y tener entre 4 y 8
+      caracteres de longitud.
+    </p>
   </div>
   <div>
     <button>Enviar</button>
@@ -369,15 +422,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span:after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span:after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```

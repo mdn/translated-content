@@ -13,7 +13,7 @@ La presentación del elemento puede variar considerablamente entre navegadores y
 ## Ejemplo
 
 ```html
-<input type="color">
+<input type="color" />
 ```
 
 {{EmbedLiveSample("summary_example1", 700, 30)}}
@@ -40,7 +40,7 @@ Las entradas del tipo «`color`» son sencillas debido al número limitado de at
 Puede actualizar el ejemplo simple anterior para definir un valor predeterminado, de manera que el botón muestrario de colores tenga precargado ese color y el selector de colores (si lo hay) se abra con ese color preseleccionado también:
 
 ```html
-<input type="color" value="#ff0000">
+<input type="color" value="#ff0000" />
 ```
 
 {{EmbedLiveSample("Providing_a_default_color", 700, 30)}}
@@ -58,7 +58,7 @@ colorPicker.addEventListener("input", actualizarPrimero, false);
 colorPicker.addEventListener("change", watchColorPicker, false);
 
 function watchColorPicker(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach(function (p) {
     p.style.color = event.target.value;
   });
 }
@@ -85,16 +85,22 @@ Creemos un ejemplo que realice algo más con la entrada de color a través de la
 El código HTML es bastante sencillo: un par de párrafos de material descriptivo con un {{HTMLElement("input")}} del tipo «`color`» con el identificador «`muestrario`», el cual utilizaremos para modificar el color del texto de los párrafos.
 
 ```html
-<p>Este ejemplo demuestra la utilización del control <code>&lt;input type="color"&gt;</code>.</p>
+<p>
+  Este ejemplo demuestra la utilización del control
+  <code>&lt;input type="color"&gt;</code>.
+</p>
 
 <label for="muestrario">Color:</label>
-<input type="color" value="#ff0000" id="muestrario">
+<input type="color" value="#ff0000" id="muestrario" />
 
-<p>Observe cómo el color de los párrafos cambia cuando manipula el selector de colores.
-   A medida que realiza cambios en el selector, el color del primer párrafo cambia,
-   a manera de previsualización (esto usa el suceso <code>input</code>).
-   Cuando cierra el selector, se desencadena el suceso <code>change</code>
-   y podemos detectarlo para cambiar todos los párrafos al color elegido.</p>
+<p>
+  Observe cómo el color de los párrafos cambia cuando manipula el selector de
+  colores. A medida que realiza cambios en el selector, el color del primer
+  párrafo cambia, a manera de previsualización (esto usa el suceso
+  <code>input</code>). Cuando cierra el selector, se desencadena el suceso
+  <code>change</code> y podemos detectarlo para cambiar todos los párrafos al
+  color elegido.
+</p>
 ```
 
 ### JavaScript
@@ -144,7 +150,7 @@ Cuando se cierre el selector de colores, señalando que el valor dejará de camb
 
 ```js
 function actualizarTodo(event) {
-  document.querySelectorAll("p").forEach(function(p) {
+  document.querySelectorAll("p").forEach(function (p) {
     p.style.color = event.target.value;
   });
 }

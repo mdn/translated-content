@@ -33,7 +33,9 @@ Este elemento implementa la interface [HTMLElement](/es/docs/Web/API/HTMLElement
 La [guia de estilo de Yahoo](http://styleguide.yahoo.com/) recomienda [romper una URL antes de la puntuación](https://shopping.yahoo.com/9780312569846-yahoo-style-guide/) , para evitar dejar una marca de puntuación en el final de la línea , lo cual el lector podría confundir con el final de la URL .
 
 ```html
-<p>http://this<wbr>.is<wbr>.a<wbr>.really<wbr>.long<wbr>.example<wbr>.com/With<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages<wbr>/deeper<wbr>/level<wbr>/pages</p>
+<p>
+  http://this<wbr />.is<wbr />.a<wbr />.really<wbr />.long<wbr />.example<wbr />.com/With<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages
+</p>
 ```
 
 {{EmbedLiveSample("Example")}}

@@ -170,7 +170,7 @@ Dependiendo de su tipo, una imagen puede tener ancho y alto intrínseco, pero no
 ## Ejemplo 1
 
 ```html
-<img src="mdn-logo-sm.png" alt="MDN">
+<img src="mdn-logo-sm.png" alt="MDN" />
 ```
 
 ![MDN](/static/img/favicon144.png)
@@ -178,7 +178,9 @@ Dependiendo de su tipo, una imagen puede tener ancho y alto intrínseco, pero no
 ## Ejemplo 2: Enlace con imagen
 
 ```html
-<a href="https://developer.mozilla.org/"><img src="mdn-logo-sm.png" alt="MDN"></a>
+<a href="https://developer.mozilla.org/"
+  ><img src="mdn-logo-sm.png" alt="MDN"
+/></a>
 ```
 
 [![MDN](/static/img/favicon144.png)](/)
@@ -188,9 +190,7 @@ Dependiendo de su tipo, una imagen puede tener ancho y alto intrínseco, pero no
 El atributo `src` es un candidato en agentes de usuario `1x` que soporta `srcset.`
 
 ```html
-<img src="mdn-logo-sm.png"
-      alt="MDN"
-      srcset="mdn-logo-HD.png 2x">
+<img src="mdn-logo-sm.png" alt="MDN" srcset="mdn-logo-HD.png 2x" />
 ```
 
 ## Ejemplo 4: Uso de atributos `srcset` y `sizes`
@@ -198,10 +198,11 @@ El atributo `src` es un candidato en agentes de usuario `1x` que soporta `srcset
 El atributo`src` es ignorado en agentes de usuario que soportan `srcset` cuando usan descriptores `'w'`. Cuando la condición de media `(min-width: 600px)` encaja, la imagen será 200px de ancho, de otra manera será 50vw de ancho (50% del ancho del dispositivo).
 
 ```html
-<img src="clock-demo-thumb-200.png"
-      alt="Clock"
-      srcset="clock-demo-thumb-200.png 200w, clock-demo-thumb-400.png 400w"
-      sizes="(min-width: 600px) 200px, 50vw">
+<img
+  src="clock-demo-thumb-200.png"
+  alt="Clock"
+  srcset="clock-demo-thumb-200.png 200w, clock-demo-thumb-400.png 400w"
+  sizes="(min-width: 600px) 200px, 50vw" />
 ```
 
 ## Especificaciones

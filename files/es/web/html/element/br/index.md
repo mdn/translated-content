@@ -29,10 +29,10 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 ## Ejemplo
 
 ```html
-Mozilla Foundation<br>
-1981 Landings Drive<br>
-Building K<br>
-Mountain View, CA 94043-0801<br>
+Mozilla Foundation<br />
+1981 Landings Drive<br />
+Building K<br />
+Mountain View, CA 94043-0801<br />
 USA
 ```
 

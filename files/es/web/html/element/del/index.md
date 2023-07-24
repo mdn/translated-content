@@ -114,19 +114,13 @@ El siguiente código:
 
 ```html
 Ejemplo de ins en linea:
-<p>
-  El agua es insípida <del>y húmeda.</del> <ins>inodora e incolora.</ins>
-</p>
+<p>El agua es insípida <del>y húmeda.</del> <ins>inodora e incolora.</ins></p>
 
 Ejemplo de ins en bloque:
-<p>
-  El agua es insípida.
-</p>
+<p>El agua es insípida.</p>
 
 <del>
-  <p>
-    y húmeda.
-  </p>
+  <p>y húmeda.</p>
 </del>
 ```
 

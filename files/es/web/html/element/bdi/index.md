@@ -26,7 +26,10 @@ Como los demás elementos HTML , este elemento tiene los [global attributes](/es
 ## Ejemplo
 
 ```html
-<p dir="ltr">Esta palabara arábica<bdi>ARABIC_PLACEHOLDER</bdi> se muestra automáticamente de derecha a izquierda.</p>
+<p dir="ltr">
+  Esta palabara arábica<bdi>ARABIC_PLACEHOLDER</bdi> se muestra automáticamente
+  de derecha a izquierda.
+</p>
 ```
 
 ### Resultado

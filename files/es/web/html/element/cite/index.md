@@ -197,7 +197,7 @@ original_slug: Web/HTML/Elemento/cite
 código:
 
 ```html
-<p> <cite>Galileo</cite> dijo: "... y sin embargo, se mueve." </p>
+<p><cite>Galileo</cite> dijo: "... y sin embargo, se mueve."</p>
 ```
 
 Resultado:

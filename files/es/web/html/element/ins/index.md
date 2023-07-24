@@ -113,12 +113,12 @@ original_slug: Web/HTML/Elemento/ins
 El siguiente código:
 
 ```html
- Ejemplo de ins en linea:
-   <p> El agua es insipida, <ins>inodora e incolora.</ins> </p>
+Ejemplo de ins en linea:
+<p>El agua es insipida, <ins>inodora e incolora.</ins></p>
 
- Ejemplo de ins en bloque:
-   <p> El agua es insipida. </p>
-   <ins> <p> Y además inodora e incolora. </p> </ins>
+Ejemplo de ins en bloque:
+<p>El agua es insipida.</p>
+<ins> <p>Y además inodora e incolora.</p> </ins>
 ```
 
 Se visualiza así:
