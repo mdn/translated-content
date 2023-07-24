@@ -151,8 +151,8 @@ Math.random();
 
 接下来，我们把调用 `Math.random()` 的结果作为参数传递给 [`Math.floor()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)，它会舍弃小数部分返回与之最接近的整数。然后我们给这个结果加上 1：
 
-```plain
-Math.floor(Math.random()) + 1
+```js
+Math.floor(Math.random()) + 1;
 ```
 
 由于将一个 0 和 1 之间的随机小数的小数部分舍弃，返回的整数一定为 0，因此在此基础上加 1 之后返回值一定为 1。要在舍弃小数部分之前将它乘以 100。便可得到 0 到 99 之间的随机数：
