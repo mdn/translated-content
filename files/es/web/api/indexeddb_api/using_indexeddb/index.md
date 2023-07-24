@@ -457,12 +457,7 @@ index.openCursor().onsuccess = function (event) {
   if (cursor) {
     // cursor.key is a name, like "Bill", and cursor.value is the whole object.
     alert(
-      "Name: " +
-        cursor.key +
-        ", SSN: " +
-        cursor.value.ssn +
-        ", email: " +
-        cursor.value.email,
+      `Name: ${cursor.key}, SSN: ${cursor.value.ssn}, email: ${cursor.value.email}`,
     );
     cursor.continue();
   }
