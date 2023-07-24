@@ -65,9 +65,8 @@ h1 {
 
 Eu também poderia combiná-los em uma lista de seletores, adicionando uma vírgula entre eles.
 
-```css
-h1,
-.special {
+```css-nolint
+h1, .special {
   color: blue;
 }
 ```
@@ -94,7 +93,7 @@ h1 {
   color: blue;
 }
 
-.special {
+..special {
   color: blue;
 }
 ```
@@ -103,7 +102,7 @@ Quando combinados, no entanto, nem o `h1` nem a classe terão o estilo, pois a r
 
 ```css
 h1,
-.special {
+..special {
   color: blue;
 }
 ```
