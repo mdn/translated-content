@@ -2,6 +2,8 @@
 title: 의사-클래스 and 의사-요소들
 slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 page-type: learn-module-chapter
+l10n:
+  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
@@ -11,26 +13,26 @@ page-type: learn-module-chapter
 <table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">전제 조건:</th>
       <td>
-        Basic computer literacy,
+        기본 컴퓨터 활용 능력,
         <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
-        >, basic knowledge of
+          href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          >설치된 기본 소프트웨어</a
+        >, 에 대한 기본 지식
         <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >working with files</a
-        >, HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >), and an idea of how CSS works (study
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>).
+          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          >파일 작업</a
+        >, HTML 기초 (학습
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
+          >HTML 소개</a
+        >), CSS 작동 방식에 대한 아이디어 (학습
+        <a href="/ko/docs/Learn/CSS/First_steps">CSS first steps</a>).
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
-      <td>To learn about the pseudo-class and pseudo-element selectors.</td>
+      <th scope="row">목적:</th>
+      <td>의사 클래스 및 의사 요소 선택자에 대해 알아보려면.</td>
     </tr>
   </tbody>
 </table>
@@ -53,9 +55,9 @@ page-type: learn-module-chapter
 
 모든 의사 클래스는 이와 같은 방식으로 작동합니다. HTML에 클래스를 추가한 것처럼 동작하여 특정 상태에 있는 문서의 일부를 대상으로 합니다. MDN의 다른 예를 살펴보십시오.
 
-- [`:last-child`](/en-US/docs/Web/CSS/:last-child)
-- [`:only-child`](/en-US/docs/Web/CSS/:only-child)
-- [`:invalid`](/en-US/docs/Web/CSS/:invalid)
+- [`:last-child`](/ko/docs/Web/CSS/:last-child)
+- [`:only-child`](/ko/docs/Web/CSS/:only-child)
+- [`:invalid`](/ko/docs/Web/CSS/:invalid)
 
 > **참고:** 앞에 요소 선택자가 없는 의사 클래스와 요소를 작성하는 것은 유효합니다. 위의 예에서 `:first-child`를 작성할 수 있으며 규칙은 `<article>` 요소의 첫 번째 자식인 _any_ 요소에 적용됩니다. 단락 첫 번째 자식이 아니라 - `:first-child`는 `*:first-child`와 동일합니다. 그러나 일반적으로 그보다 더 많은 제어를 원하므로, 더 구체적이어야 합니다.  
 
@@ -63,8 +65,8 @@ page-type: learn-module-chapter
 
 일부 의사 클래스는 사용자가 어떤 방식으로든 문서와 상호 작용할 때만 적용됩니다. **동적 의사 클래스**라고도 하는 이러한 **사용자 행동** 의사 클래스는 사용자가 요소와 상호 작용할 때 클래스가 요소에 추가된 것처럼 작동합니다. 예를 들면, 다음과 같습니다. 
 
-- [`:hover`](/en-US/docs/Web/CSS/:hover) — mentioned above; this only applies if the user moves their pointer over an element, typically a link.
-- [`:focus`](/en-US/docs/Web/CSS/:focus) — only applies if the user focuses the element by clicking or using keyboard controls.
+- [`:hover`](/ko/docs/Web/CSS/:hover) — mentioned above; this only applies if the user moves their pointer over an element, typically a link.
+- [`:focus`](/ko/docs/Web/CSS/:focus) — only applies if the user focuses the element by clicking or using keyboard controls.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/hover.html", '100%', 500)}}
 
@@ -100,7 +102,7 @@ article p:first-child::first-line {
 
 ## ::before 및 ::after로 콘텐츠 생성
 
-CSS를 사용하여 문서에 콘텐츠를 삽입하기 위해 [`content`](/en-US/docs/Web/CSS/content) 속성과 함께 사용되는 몇 가지 특수 의사 요소가 있습니다.
+CSS를 사용하여 문서에 콘텐츠를 삽입하기 위해 [`content`](/ko/docs/Web/CSS/content) 속성과 함께 사용되는 몇 가지 특수 의사 요소가 있습니다.
 
 이를 사용하여 아래의 실제 예와 같이 텍스트 문자열을 삽입할 수 있습니다. {{cssxref("content")}} 속성의 텍스트 값을 변경해고 출력에서 변경되는 것을 확인해보세요. 또한 `::before` 의사 요소를 `::after`로 변경하고 요소의 시작 부분 대신 끝에 삽입된 텍스트를 볼 수 있습니다. 
 
@@ -127,11 +129,11 @@ CSS에서 텍스트 문자열을 삽입하는 것은 실제로 웹에서 매우 
 
 의사 클래스를 사용하면 해당 상태에 대한 클래스를 DOM에 추가한 것처럼 특정 상태에 있는 요소를 대상으로 지정할 수 있습니다. 의사 요소는 DOM에 완전히 새로운 요소를 추가한 것처럼 작동하며 스타일을 지정할 수 있습니다. `::before` 및 `::after` 의사 요소를 사용하면 CSS를 사용하여 문서에 콘텐츠를 삽입할 수 있습니다.
 
-다음 글에서는 [combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)에 대해 알아보겠습니다.
+다음 글에서는 [combinators](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)에 대해 알아보겠습니다.
 
 ## See also
 
-- [Pseudo-classes reference](/en-US/docs/Web/CSS/Pseudo-classes)
-- [Pseudo-elements reference](/en-US/docs/Web/CSS/Pseudo-elements)
+- [Pseudo-classes reference](/ko/docs/Web/CSS/Pseudo-classes)
+- [Pseudo-elements reference](/ko/docs/Web/CSS/Pseudo-elements)
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
