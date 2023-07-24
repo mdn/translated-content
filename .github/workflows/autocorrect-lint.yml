@@ -15,9 +15,6 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - "files/zh-cn/**"
-      - ".github/workflows/autocorrect-lint.yml"
 
 jobs:
   lint:
