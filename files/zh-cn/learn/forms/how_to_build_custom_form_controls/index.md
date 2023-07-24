@@ -64,10 +64,10 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 设计新的交互方式只是行业中重要参与者的一种选择，他们有足够的影响力来推动它们创建的交互方式成为标准。例如，Apple 于 2001 年在 iPod 中推出了滚轮。他们拥有足够的市场份额，而成功推出了一种全新的设备交互方式，这是大多数设备公司无法做到的。
 
-最好不要发明新的用户交互方式。对于你添加的任何交互方式，在设计阶段花费时间至关重要；如果你对一种行为的定义不够合适，，或者忘记定义了某种行为，那么在用户习惯之后，将很难去重新定义它们。如果你在定义时有疑问，请征询他人的意见，如果你有预算，请不要犹豫去进行[用户可用性测试](https://zh.wikipedia.org/wiki/可用性测试)，这个过程被称为用户体验设计（UX Design），如果你想要深入的学习相关的内容，请查阅下面这些有用资源：
+最好不要发明新的用户交互方式。对于你添加的任何交互方式，在设计阶段花费时间至关重要；如果你对一种行为的定义不够合适，或者忘记定义了某种行为，那么在用户习惯之后，将很难去重新定义它们。如果你在定义时有疑问，请征询他人的意见，如果你有预算，请不要犹豫去进行[用户可用性测试](https://zh.wikipedia.org/wiki/可用性测试)，这个过程被称为用户体验设计（UX Design），如果你想要深入的学习相关的内容，请查阅下面这些有用资源：
 
 - [UXMatters.com](https://www.uxmatters.com/)
-- [UXDesign.com](http://uxdesign.com/)
+- [UXDesign.com](https://uxdesign.com/)
 - [SmashingMagazine 用户体验设计部分](https://www.smashingmagazine.com/)
 
 > **备注：** 此外，在绝大多数系统中，还有一种方法能够打开 {{HTMLElement("select")}} 元素来观察其所有的选项（这和用鼠标点击 {{HTMLElement("select")}} 元素是一样的）。这可以通过 Windows 下的 <kbd>Alt</kbd> + <kbd>Down</kbd> 实现。这没有在我们的示例中实现，但是这样做会很方便，因为鼠标点击（`click`）事件就是由该原理实现的。
@@ -158,7 +158,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 }
 ```
 
-> **备注：** 我们也可以使用 `transform: scale(1, 0)` 来不指定选项列表的高度为零但宽度不变。
+> **备注：** 我们也可以使用 `transform: scale(1, 0)` 来指定选项列表的高度为零，但宽度不变。
 
 ### 美化
 
@@ -181,14 +181,13 @@ slug: Learn/Forms/How_to_build_custom_form_controls
   border-radius: 0.4em;
   box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
 
-  /* 第一段声明是为不支持线性梯度的浏览器准备的。 */
+  /* 第一段声明是为不支持线性渐变的浏览器准备的。 */
   background: #f0f0f0;
-  background: -webkit-linear-gradient(90deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
 .select .value {
-  /* 因为值的宽度可能超过控件的宽度，我们需要确保它不会改变空间的宽度。如果内容溢出了，我们显示省略号 */
+  /* 因为值的宽度可能超过控件的宽度，我们需要确保它不会改变控件的宽度。如果内容溢出了，我们显示省略号 */
   display: inline-block;
   width: 100%;
   overflow: hidden;
@@ -198,7 +197,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 }
 ```
 
-我们不需要一个额外的元素来设计向下箭头，而使用 {{cssxref(":after")}} 伪类替代。这也可以通过使用一张加在`select` 类上的简单的背景图像来实现。
+我们不需要一个额外的元素来设计向下箭头，而使用 {{cssxref(":after")}} 伪类替代。这也可以通过使用一张加在 `select` 类上的简单的背景图像来实现。
 
 ```css
 .select:after {
@@ -236,7 +235,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
   box-sizing: border-box;
 
-  /* 这会确保即使数值比控件小，选项列表仍能变得跟控件自身一样大 */
+  /* 这会确保即使数值比控件小，选项列表仍能变得跟控件自身一样宽 */
   min-width: 100%;
 
   /* 万一列表太长了，它的内容会从垂直方向溢出（会自动添加一个竖向滚动条）
@@ -643,7 +642,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 ### 它为什么不生效？
 
-在我们开始之前，要记住一件和 JavaScript 有关的非常重要的事情：**在浏览器中，这是一种不可靠的技术**。当你构建一个自定义控件时，你会不得不得依赖于 JavaScript，因为这是将所有的东西联系在一起的线索。但是，很多情况下，JavaScript 不能在浏览器中运行。
+在我们开始之前，要记住一件和 JavaScript 有关的非常重要的事情：**在浏览器中，这是一种不可靠的技术**。当你构建一个自定义控件时，你会不得不依赖于 JavaScript，因为这是将所有的东西联系在一起的线索。但是，很多情况下，JavaScript 不能在浏览器中运行。
 
 - 用户禁用了 JavaScript：这是最不常见的情形。现在只有很少的人会禁用 JavaScript。
 - 脚本没有加载：这是最常见的情形，特别是在移动端上，在那些网络非常不可靠的地方。
