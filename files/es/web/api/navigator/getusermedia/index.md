@@ -16,32 +16,31 @@ navigator.getUserMedia ( constraints, successCallback, errorCallback );
 Aquí hay un ejemplo usando getUserMedia() con los prefijos del navegador.
 
 ```js
-navigator.getMedia = ( navigator.getUserMedia ||
-                       navigator.webkitGetUserMedia ||
-                       navigator.mozGetUserMedia);
+navigator.getMedia =
+  navigator.getUserMedia ||
+  navigator.webkitGetUserMedia ||
+  navigator.mozGetUserMedia;
 
-navigator.getMedia (
+navigator.getMedia(
+  // Restricciones (contraints) *Requerido
+  {
+    video: true,
+    audio: true,
+  },
 
-   // Restricciones (contraints) *Requerido
-   {
-      video: true,
-      audio: true
-   },
+  // Funcion de finalizacion (Succes-Callback) *Requerido
+  function (localMediaStream) {
+    var video = document.querySelector("video");
+    video.src = window.URL.createObjectURL(localMediaStream);
+    video.onloadedmetadata = function (e) {
+      // Haz algo con el video aquí.
+    };
+  },
 
-   // Funcion de finalizacion (Succes-Callback) *Requerido
-   function(localMediaStream) {
-      var video = document.querySelector('video');
-      video.src = window.URL.createObjectURL(localMediaStream);
-      video.onloadedmetadata = function(e) {
-         // Haz algo con el video aquí.
-      };
-   },
-
-   // errorCallback *Opcional
-   function(err) {
+  // errorCallback *Opcional
+  function (err) {
     console.log("Ocurrió el siguiente error: " + err);
-   }
-
+  },
 );
 ```
 
