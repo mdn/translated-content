@@ -1,5 +1,5 @@
 ---
-title: 'Express 教程 6: 使用表单'
+title: "Express 教程 6: 使用表单"
 slug: Learn/Server-side/Express_Nodejs/forms
 ---
 
@@ -51,9 +51,13 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -81,7 +85,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 1. 在用户第一次请求时显示默认表单。
 
-    - 表单可能包含空白字段（例如，如果您正在创建新记录），或者可能预先填充了初始值（例如，如果您要更改记录，或者具有有用的默认初始值）。
+   - 表单可能包含空白字段（例如，如果您正在创建新记录），或者可能预先填充了初始值（例如，如果您要更改记录，或者具有有用的默认初始值）。
 
 2. 接收用户提交的数据，通常是在 HTTP `POST`请求中。
 3. 验证并清理数据。
@@ -115,8 +119,8 @@ npm install express-validator --save
 要在我们的控制器中使用验证器，我们必须从'**express-validator/check**'和'**express-validator/filter**'模块中，导入我们想要使用的函数，如下所示：
 
 ```js
-const { body,validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');
+const { body, validationResult } = require("express-validator/check");
+const { sanitizeBody } = require("express-validator/filter");
 ```
 
 有许多可用的功能，允许您一次检查和清理请求参数，正文，标头，cookie 等数据，或所有数据。对于本教程，我们主要使用`body`， `sanitizeBody`，和 `validationResult`（如上面“导入”的）。
@@ -150,17 +154,16 @@ const { sanitizeBody } = require('express-validator/filter');
 
   ```js
   (req, res, next) => {
-      // Extract the validation errors from a request.
-      const errors = validationResult(req);
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-      if (!errors.isEmpty()) {
-          // There are errors. Render form again with sanitized values/errors messages.
-          // Error messages can be returned in an array using `errors.array()`.
-          }
-      else {
-          // Data from form is valid.
-      }
-  }
+    if (!errors.isEmpty()) {
+      // There are errors. Render form again with sanitized values/errors messages.
+      // Error messages can be returned in an array using `errors.array()`.
+    } else {
+      // Data from form is valid.
+    }
+  };
   ```
 
   我们使用验证结果的`isEmpty()`方法，来检查是否存在错误，并使用其`array()`方法，来获取错误消息集合。有关更多信息，请参[阅验证结果 API](https://github.com/ctavan/express-validator#validation-result-api)。
@@ -206,10 +209,10 @@ const { sanitizeBody } = require('express-validator/filter');
 
 ```js
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
-router.get('/genre/create', genre_controller.genre_create_get);
+router.get("/genre/create", genre_controller.genre_create_get);
 
 // POST request for creating Genre.
-router.post('/genre/create', genre_controller.genre_create_post);
+router.post("/genre/create", genre_controller.genre_create_post);
 ```
 
 ## Express 表单子文件

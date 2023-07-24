@@ -12,8 +12,8 @@ slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 打开**/controllers/genreController.js**，并在文件顶部添加以下行：
 
 ```js
-const { body,validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');
+const { body, validationResult } = require("express-validator/check");
+const { sanitizeBody } = require("express-validator/filter");
 ```
 
 ## 控制器—get 路由
@@ -22,8 +22,8 @@ const { sanitizeBody } = require('express-validator/filter');
 
 ```js
 // Display Genre create form on GET.
-exports.genre_create_get = function(req, res, next) {
-    res.render('genre_form', { title: 'Create Genre' });
+exports.genre_create_get = function (req, res, next) {
+  res.render("genre_form", { title: "Create Genre" });
 };
 ```
 
@@ -33,55 +33,52 @@ exports.genre_create_get = function(req, res, next) {
 
 ```js
 // Handle Genre create on POST.
-exports.genre_create_post =  [
+exports.genre_create_post = [
+  // Validate that the name field is not empty.
+  body("name", "Genre name required").isLength({ min: 1 }).trim(),
 
-    // Validate that the name field is not empty.
-    body('name', 'Genre name required').isLength({ min: 1 }).trim(),
+  // Sanitize (trim and escape) the name field.
+  sanitizeBody("name").trim().escape(),
 
-    // Sanitize (trim and escape) the name field.
-    sanitizeBody('name').trim().escape(),
+  // Process request after validation and sanitization.
+  (req, res, next) => {
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-    // Process request after validation and sanitization.
-    (req, res, next) => {
+    // Create a genre object with escaped and trimmed data.
+    var genre = new Genre({ name: req.body.name });
 
-        // Extract the validation errors from a request.
-        const errors = validationResult(req);
-
-        // Create a genre object with escaped and trimmed data.
-        var genre = new Genre(
-          { name: req.body.name }
-        );
-
-
-        if (!errors.isEmpty()) {
-            // There are errors. Render the form again with sanitized values/error messages.
-            res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});
-        return;
+    if (!errors.isEmpty()) {
+      // There are errors. Render the form again with sanitized values/error messages.
+      res.render("genre_form", {
+        title: "Create Genre",
+        genre: genre,
+        errors: errors.array(),
+      });
+      return;
+    } else {
+      // Data from form is valid.
+      // Check if Genre with same name already exists.
+      Genre.findOne({ name: req.body.name }).exec(function (err, found_genre) {
+        if (err) {
+          return next(err);
         }
-        else {
-            // Data from form is valid.
-            // Check if Genre with same name already exists.
-            Genre.findOne({ 'name': req.body.name })
-                .exec( function(err, found_genre) {
-                     if (err) { return next(err); }
 
-                     if (found_genre) {
-                         // Genre exists, redirect to its detail page.
-                         res.redirect(found_genre.url);
-                     }
-                     else {
-
-                         genre.save(function (err) {
-                           if (err) { return next(err); }
-                           // Genre saved. Redirect to genre detail page.
-                           res.redirect(genre.url);
-                         });
-
-                     }
-
-                 });
+        if (found_genre) {
+          // Genre exists, redirect to its detail page.
+          res.redirect(found_genre.url);
+        } else {
+          genre.save(function (err) {
+            if (err) {
+              return next(err);
+            }
+            // Genre saved. Redirect to genre detail page.
+            res.redirect(genre.url);
+          });
         }
+      });
     }
+  },
 ];
 ```
 
@@ -135,20 +132,22 @@ sanitizeBody('name').trim().escape(),
 
 ```js
 // Check if Genre with same name already exists.
-Genre.findOne({ 'name': req.body.name })
-    .exec( function(err, found_genre) {
-    if (err) { return next(err); }
-        if (found_genre) {
-            // Genre exists, redirect to its detail page.
-            res.redirect(found_genre.url);
-            }
-        else {
-            genre.save(function (err) {
-                if (err) { return next(err); }
-                    // Genre saved. Redirect to genre detail page.
-                    res.redirect(genre.url);
-                });
-        }
+Genre.findOne({ name: req.body.name }).exec(function (err, found_genre) {
+  if (err) {
+    return next(err);
+  }
+  if (found_genre) {
+    // Genre exists, redirect to its detail page.
+    res.redirect(found_genre.url);
+  } else {
+    genre.save(function (err) {
+      if (err) {
+        return next(err);
+      }
+      // Genre saved. Redirect to genre detail page.
+      res.redirect(genre.url);
+    });
+  }
 });
 ```
 
@@ -161,8 +160,12 @@ Genre.findOne({ 'name': req.body.name })
 在`GET`情况下，表单为空，我们只传递一个 title 变量。在`POST`情况下，用户先前输入了无效数据 - 在种类变量`genre`中，我们传回了输入数据的已清理版本，并且在`errors`变量中，我们传回了一组错误消息。
 
 ```js
-res.render('genre_form', { title: 'Create Genre'});
-res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});
+res.render("genre_form", { title: "Create Genre" });
+res.render("genre_form", {
+  title: "Create Genre",
+  genre: genre,
+  errors: errors.array(),
+});
 ```
 
 创建 **/views/genre_form.pug**，并复制下面的文本。
