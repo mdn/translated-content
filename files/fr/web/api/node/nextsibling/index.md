@@ -1,11 +1,6 @@
 ---
 title: element.nextSibling
 slug: Web/API/Node/nextSibling
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
 translation_of: Web/API/Node/nextSibling
 ---
 

@@ -1,9 +1,6 @@
 ---
 title: Worker()
 slug: Web/API/Worker/Worker
-tags:
-  - API
-  - Reference
 translation_of: Web/API/Worker/Worker
 ---
 

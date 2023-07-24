@@ -14,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var deletingRange = browser.history.deleteRange(
-  range           // object
-)
+  range, // object
+);
 ```
 
 ### Paramètres
@@ -50,7 +50,7 @@ function oneMinuteAgo() {
 
 browser.history.deleteRange({
   startTime: oneMinuteAgo(),
-  endTime: Date.now()
+  endTime: Date.now(),
 });
 ```
 

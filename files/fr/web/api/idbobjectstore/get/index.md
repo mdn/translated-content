@@ -2,7 +2,6 @@
 title: IDBObjectStore.get()
 slug: Web/API/IDBObjectStore/get
 translation_of: Web/API/IDBObjectStore/get
-browser-compat: api.IDBObjectStore.get
 ---
 
 {{APIRef("IndexedDB")}}

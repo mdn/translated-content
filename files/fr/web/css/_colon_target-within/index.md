@@ -2,7 +2,6 @@
 title: ':target-within'
 slug: Web/CSS/:target-within
 translation_of: Web/CSS/:target-within
-browser-compat: css.selectors.target-within
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

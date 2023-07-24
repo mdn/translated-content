@@ -1,13 +1,6 @@
 ---
 title: Affectation après exponentiation (**=)
 slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.exponentiation_assignment
 ---
 
 {{jsSidebar("Operators")}}

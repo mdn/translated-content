@@ -1,14 +1,6 @@
 ---
 title: Notification.icon
 slug: Web/API/Notification/icon
-tags:
-  - API
-  - API Notifications
-  - Icône
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
 translation_of: Web/API/Notification/icon
 ---
 

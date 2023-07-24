@@ -29,7 +29,10 @@ var score = 0;
 `지금 create()` 함수 뒤에 다음과 같은 코드를 추가해봅시다:
 
 ```js
-scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095DD' });
+scoreText = game.add.text(5, 5, "Points: 0", {
+  font: "18px Arial",
+  fill: "#0095DD",
+});
 ```
 
 `text()` 메소드는 4개의 변수를 가질수 있습니다:
@@ -46,9 +49,9 @@ scoreText = game.add.text(5, 5, 'Points: 0', { font: '18px Arial', fill: '#0095D
 
 ```js
 function ballHitBrick(ball, brick) {
-    brick.kill();
-    score += 10;
-    scoreText.setText('Points: '+score);
+  brick.kill();
+  score += 10;
+  scoreText.setText("Points: " + score);
 }
 ```
 

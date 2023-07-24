@@ -1,12 +1,6 @@
 ---
 title: IDBIndex.getAll()
 slug: Web/API/IDBIndex/getAll
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBIndex/getAll
 ---
 

@@ -2,7 +2,6 @@
 title: Window.dump()
 slug: Web/API/Window/dump
 translation_of: Web/API/Window/dump
-browser-compat: api.Window.dump
 ---
 
 {{ApiRef}} {{Non-standard_header}}

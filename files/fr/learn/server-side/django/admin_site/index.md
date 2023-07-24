@@ -1,14 +1,6 @@
 ---
-title: 'Django didactique Section 4: Site d''administration de Django'
+title: "Django didactique Section 4: Site d'administration de Django"
 slug: Learn/Server-side/Django/Admin_site
-tags:
-  - Apprentissage
-  - Article
-  - Didacticiel
-  - Débutant
-  - Python
-  - django
-  - django_admin
 translation_of: Learn/Server-side/Django/Admin_site
 ---
 

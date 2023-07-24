@@ -21,21 +21,21 @@ function listener(details) {
   let filter = browser.webRequest.filterResponseData(details.requestId);
   let encoder = new TextEncoder();
 
-  filter.ondata = event => {
+  filter.ondata = (event) => {
     // pass through all the response data
     filter.write(event.data);
-  }
+  };
 
-  filter.onstop = event => {
+  filter.onstop = (event) => {
     filter.write(encoder.encode("extra stuff"));
     filter.disconnect();
-  }
+  };
 }
 
 browser.webRequest.onBeforeRequest.addListener(
   listener,
-  {urls: ["https://example.com/*"], types: ["main_frame"]},
-  ["blocking"]
+  { urls: ["https://example.com/*"], types: ["main_frame"] },
+  ["blocking"],
 );
 ```
 

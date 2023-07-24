@@ -1,10 +1,6 @@
 ---
 title: inherit
 slug: Web/CSS/inherit
-tags:
-  - CSS
-  - Mot-clé
-  - Reference
 translation_of: Web/CSS/inherit
 ---
 

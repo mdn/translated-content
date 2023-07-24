@@ -3,11 +3,6 @@ title: >-
   Utilisation de la balise meta viewport pour contrôler la mise en page sur
   mobile
 slug: Web/HTML/Viewport_meta_tag
-tags:
-  - Layout
-  - Responsiveness
-  - Mobile
-  - viewport
 translation_of: Web/HTML/Viewport_meta_tag
 ---
 

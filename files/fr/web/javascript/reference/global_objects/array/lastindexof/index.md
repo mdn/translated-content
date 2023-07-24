@@ -1,16 +1,7 @@
 ---
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/lastIndexOf
 ---
 
 {{JSRef}}

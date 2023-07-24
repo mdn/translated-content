@@ -11,4 +11,4 @@ Netscape のおかげで、{{glossary("World Wide Web","ウェブ")}}はテキ�
 
 ### 基礎知識
 
-- Wikipedia 上の記事 [Netscape_Navigator_(ネットスケープコミュニケーションズ)](https://ja.wikipedia.org/wiki/Netscape_Navigator_(ネットスケープコミュニケーションズ))
+- Wikipedia 上の記事 [Netscape_Navigator\_(ネットスケープコミュニケーションズ)](<https://ja.wikipedia.org/wiki/Netscape_Navigator_(ネットスケープコミュニケーションズ)>)

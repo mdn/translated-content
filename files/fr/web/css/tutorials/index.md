@@ -1,11 +1,6 @@
 ---
 title: Tutoriels CSS
 slug: Web/CSS/Tutorials
-tags:
-  - Beginner
-  - CSS
-  - Guide
-  - Tutorial
 translation_of: Web/CSS/Tutorials
 ---
 

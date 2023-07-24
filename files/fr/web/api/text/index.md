@@ -1,9 +1,6 @@
 ---
 title: Text
 slug: Web/API/Text
-tags:
-  - API
-  - DOM
 translation_of: Web/API/Text
 ---
 

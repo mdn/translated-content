@@ -4,6 +4,7 @@ slug: Learn/JavaScript/Asynchronous/Introducing_workers
 l10n:
   sourceCommit: ca269eb6b25f792eeb4f53bbca3e7be3b8c0f350
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
 Dans ce dernier article de notre module sur le JavaScript asynchrone, nous présenterons les <i lang="en">workers</i> (qu'on pourrait traduire en français par _travailleurs_, moins usité), qui permettent d'exécuter certaines tâches dans un [fil d'exécution](/fr/docs/Glossary/Thread) séparé.
@@ -49,12 +50,11 @@ Revoyons d'abord le code JavaScript de notre exemple précédent&nbsp;:
 
 ```js
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -72,14 +72,17 @@ function generatePrimes(quota) {
   return primes;
 }
 
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `Génération de ${quota} nombres premiers terminée !`;
+  document.querySelector(
+    "#output",
+  ).textContent = `Génération de ${quota} nombres premiers terminée !`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"';
   document.location.reload();
 });
 ```
@@ -98,30 +101,29 @@ Pour cet exemple, commencez par faire une copie locale des fichiers présents da
 Le fichier `index.html` et les fichiers `style.css` sont déjà complets&nbsp;:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr-FR">
   <head>
-    <meta charset="utf-8"> 
-    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Nombres premiers</title>
     <script src="main.js" defer></script>
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
   </head>
 
   <body>
-
     <label for="quota">Quantité de nombres premiers à générer :</label>
-    <input type="text" id="quota" name="quota" value="1000000">
+    <input type="text" id="quota" name="quota" value="1000000" />
 
     <button id="generate">Générer des nombres premiers</button>
     <button id="reload">Recharger</button>
 
-    <textarea id="user-input" rows="5" cols="62">Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"</textarea>
+    <textarea id="user-input" rows="5" cols="62">
+Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"</textarea
+    >
 
     <div id="output"></div>
-
   </body>
-
 </html>
 ```
 
@@ -140,28 +142,31 @@ Copiez maintenant le code suivant dans `main.js`&nbsp;:
 
 ```js
 // On crée un nouveau worker en lui injectant le code présent dans le fichier "generate.js"
-const worker = new Worker('./generate.js');
+const worker = new Worker("./generate.js");
 
 // Lorsque la personne clique sur "Générer des nombres premiers", on envoie un message au worker.
 // La commande portée par le message est "generate", et le message contient également "quota"
 // qui indique la quantité de nombres premiers à générer.
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   worker.postMessage({
-    command: 'generate',
+    command: "generate",
     quota,
   });
 });
 
 // Lorsque le worker renvoie un message au fil principal. Grâce aux données
-// du message, on met à jour la zone de sortie avec un texte, indiquant aussi 
+// du message, on met à jour la zone de sortie avec un texte, indiquant aussi
 // le quantité de nombres premiers générés.
-worker.addEventListener('message', (message) => {
-  document.querySelector('#output').textContent = `Génération de ${message.data} nombres premiers terminée !`;
+worker.addEventListener("message", (message) => {
+  document.querySelector(
+    "#output",
+  ).textContent = `Génération de ${message.data} nombres premiers terminée !`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"';
   document.location.reload();
 });
 ```
@@ -170,10 +175,10 @@ document.querySelector('#reload').addEventListener('click', () => {
 
 2. Ensuite, comme dans la version synchrone, nous ajoutons un gestionnaire d'événements `click` au bouton "Générer des nombres premiers". En revanche, plutôt que d'appeler une fonction `generatePrimes()`, nous envoyons un message au travailleur en utilisant [`postMessage()`](/fr/docs/Web/API/Worker/postMessage). L'argument de cette fonction est le message à transmettre. Ici nous transmettons un objet JSON contenant deux propriétés&nbsp;:
 
-    - `commande`
-      - : Une chaîne de caractères indiquant la tâche demandée au <i lang="en">worker</i> (au cas où notre <i lang="en">worker</i> pourrait faire plus d'une chose)
-    - `quota`
-      - : La quantité de nombres premiers à générer.
+   - `commande`
+     - : Une chaîne de caractères indiquant la tâche demandée au <i lang="en">worker</i> (au cas où notre <i lang="en">worker</i> pourrait faire plus d'une chose)
+   - `quota`
+     - : La quantité de nombres premiers à générer.
 
 3. Ensuite, nous ajoutons un gestionnaire d'évènements `message` au <i lang="en">worker</i>. C'est ainsi qu'il peut nous dire quand il a terminé et transmettre les données résultantes. Notre gestionnaire prend les données de la propriété `data` du message et les écrit dans l'élément de sortie (les données sont exactement les mêmes que `quota`, donc c'est un peu inutile, mais cela illustre le principe).
 
@@ -185,19 +190,18 @@ Passons maintenant au code du <i lang="en">worker</i>. Copiez le code suivant da
 // On écoute les messages du fil principal.
 // Si la commande de message est "generate", on appelle `generatePrimes()`
 addEventListener("message", (message) => {
-  if (message.data.command === 'generate') {
+  if (message.data.command === "generate") {
     generatePrimes(message.data.quota);
   }
 });
 
 // On génère des nombres premiers (très inefficacement)
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -235,7 +239,7 @@ Le <i lang="en">worker</i> que nous venons de créer était ce qu'on appelle un 
 Il existe cependant d'autres types de <i lang="en">workers</i>&nbsp;:
 
 - Les [<i lang="en">workers</i> partagés](/fr/docs/Web/API/SharedWorker) qui peuvent être partagés par plusieurs scripts différents s'exécutant dans différentes fenêtres.
-- Les [<i lang="en">](fr/docs/Web/API/Service_Worker_API) qui agissent comme des serveurs intermédiaires, mettant en cache les ressources afin que les applications web puissent fonctionner même hors ligne. Il s'agit d'un élément clé des [applications web progressives (PWA)](/fr/docs/Web/Progressive_web_apps).
+- Les [<i lang="en">](/fr/docs/Web/API/Service_Worker_API) qui agissent comme des serveurs intermédiaires, mettant en cache les ressources afin que les applications web puissent fonctionner même hors ligne. Il s'agit d'un élément clé des [applications web progressives (PWA)](/fr/docs/Web/Progressive_web_apps).
 
 ## Conclusion
 
@@ -247,6 +251,6 @@ Bien qu'ils ne puissent pas utiliser toutes les API auxquelles le document a acc
 
 - [Utiliser les <i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [Utiliser les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [L'API <i lang="en">Web Workers</i>](fr/docs/Web/API/Web_Workers_API)
+- [L'API <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}

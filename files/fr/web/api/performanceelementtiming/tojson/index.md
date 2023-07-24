@@ -1,13 +1,6 @@
 ---
 title: PerformanceElementTiming.toJSON()
 slug: Web/API/PerformanceElementTiming/toJSON
-tags:
-  - API
-  - Method
-  - Méthode
-  - Reference
-  - toJSON()
-  - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/toJSON
 ---
 

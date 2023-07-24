@@ -61,7 +61,7 @@ A text where I need to <span class="ref">something</span>
 
 ```css
 a.glossary::after {
-   content: " " url("glossary-icon.gif");
+  content: " " url("glossary-icon.gif");
 }
 ```
 

@@ -1,10 +1,6 @@
 ---
 title: EXSLT
 slug: Web/EXSLT
-tags:
-  - EXSLT
-  - Référence_XSLT
-  - XSLT
 translation_of: Web/EXSLT
 ---
 

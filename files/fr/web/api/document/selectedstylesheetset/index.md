@@ -1,12 +1,6 @@
 ---
 title: Document.selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
-tags:
-  - API
-  - DOM
-  - Document
-  - Feuilles de styles
-  - Propriétés
 translation_of: Web/API/Document/selectedStyleSheetSet
 ---
 

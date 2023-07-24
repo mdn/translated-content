@@ -1,12 +1,6 @@
 ---
 title: DedicatedWorkerGlobalScope.name
 slug: Web/API/DedicatedWorkerGlobalScope/name
-tags:
-  - API
-  - DOM
-  - Nom
-  - Propriétés
-  - Worker
 translation_of: Web/API/DedicatedWorkerGlobalScope/name
 ---
 

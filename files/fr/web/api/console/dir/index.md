@@ -2,7 +2,6 @@
 title: console.dir()
 slug: Web/API/console/dir
 translation_of: Web/API/Console/dir
-browser-compat: api.console.dir
 ---
 
 {{APIRef("Console API")}}

@@ -1,17 +1,7 @@
 ---
 title: Intl.NumberFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - NumberFormat
-  - Prototype
-  - Reference
-  - i18n
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/NumberFormat/resolvedOptions
 ---
 
 {{JSRef}}

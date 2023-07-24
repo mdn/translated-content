@@ -6010,10 +6010,6 @@
       "m4ucoder"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/Prerequisites": {
-    "modified": "2019-03-18T21:02:53.858Z",
-    "contributors": ["hellosct1"]
-  },
   "Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page": {
     "modified": "2019-07-03T12:00:39.099Z",
     "contributors": ["hellosct1"]
@@ -6044,7 +6040,7 @@
       "unpeudetout"
     ]
   },
-  "Mozilla/Add-ons/WebExtensions/What_next_": {
+  "Mozilla/Add-ons/WebExtensions/What_next": {
     "modified": "2020-05-24T10:03:42.606Z",
     "contributors": ["hellosct1"]
   },
@@ -12730,10 +12726,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/Window/applicationCache": {
-    "modified": "2019-05-15T12:55:24.617Z",
-    "contributors": ["Lonylis", "personnel"]
-  },
   "Web/API/Window/back": {
     "modified": "2020-08-30T04:11:10.912Z",
     "contributors": ["Voulto"]
@@ -13288,10 +13280,6 @@
   "Web/API/WorkerGlobalScope": {
     "modified": "2020-10-03T00:59:22.962Z",
     "contributors": ["duduindo", "Voulto", "chrisdavidmills"]
-  },
-  "Web/API/WorkerGlobalScope/console": {
-    "modified": "2020-10-15T22:26:34.613Z",
-    "contributors": ["Eliastik"]
   },
   "Web/API/WorkerGlobalScope/dump": {
     "modified": "2020-10-15T22:27:11.681Z",
@@ -14017,10 +14005,6 @@
   "Web/CSS/:-moz-first-node": {
     "modified": "2019-04-05T07:46:35.367Z",
     "contributors": ["SphinxKnight", "teoli", "FredB", "Mgjbot", "Fredchat"]
-  },
-  "Web/CSS/:-moz-focusring": {
-    "modified": "2020-10-15T21:48:30.571Z",
-    "contributors": ["SphinxKnight", "teoli", "claudepache"]
   },
   "Web/CSS/:-moz-handler-blocked": {
     "modified": "2019-04-05T07:44:27.221Z",
@@ -15088,24 +15072,6 @@
     "modified": "2019-04-06T13:17:41.411Z",
     "contributors": ["SphinxKnight"]
   },
-  "Web/CSS/CSS_Selectors": {
-    "modified": "2019-10-31T07:53:06.500Z",
-    "contributors": [
-      "bdrnglm",
-      "SphinxKnight",
-      "a-mt",
-      "cabscorp",
-      "edspeedy",
-      "TiWisti",
-      "daisyback",
-      "personnel",
-      "Sebastianz"
-    ]
-  },
-  "Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors": {
-    "modified": "2019-04-06T13:14:05.671Z",
-    "contributors": ["SphinxKnight", "ffoodd"]
-  },
   "Web/CSS/CSS_Types": {
     "modified": "2019-07-12T07:45:36.764Z",
     "contributors": ["SphinxKnight"]
@@ -15656,6 +15622,24 @@
   "Web/CSS/CSS_scrollbars_styling": {
     "modified": "2020-10-15T22:10:56.124Z",
     "contributors": ["tristantheb", "SphinxKnight"]
+  },
+  "Web/CSS/CSS_selectors": {
+    "modified": "2019-10-31T07:53:06.500Z",
+    "contributors": [
+      "bdrnglm",
+      "SphinxKnight",
+      "a-mt",
+      "cabscorp",
+      "edspeedy",
+      "TiWisti",
+      "daisyback",
+      "personnel",
+      "Sebastianz"
+    ]
+  },
+  "Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors": {
+    "modified": "2019-04-06T13:14:05.671Z",
+    "contributors": ["SphinxKnight", "ffoodd"]
   },
   "Web/CSS/CSS_shapes": {
     "modified": "2019-04-26T04:23:36.000Z",

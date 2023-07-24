@@ -1,14 +1,7 @@
 ---
 title: String.length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
-tags:
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/length
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/length
 ---
 
 {{JSRef}}

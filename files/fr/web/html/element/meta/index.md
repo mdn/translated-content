@@ -1,11 +1,6 @@
 ---
 title: '<meta> : l''élément de métadonnées du document'
 slug: Web/HTML/Element/meta
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/meta
 ---
 
@@ -486,7 +481,7 @@ Désactiver la possibilité de zoom avec `user-scalable: no` empêche les person
         >
         ou du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >.
       </td>

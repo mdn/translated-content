@@ -1,14 +1,7 @@
 ---
 title: Promise.all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Promise
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/all
-original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/all
 ---
 
 {{JSRef}}

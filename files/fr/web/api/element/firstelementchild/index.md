@@ -2,7 +2,6 @@
 title: Element.firstElementChild
 slug: Web/API/Element/firstElementChild
 translation_of: Web/API/Element/firstElementChild
-browser-compat: api.Element.firstElementChild
 ---
 
 {{APIRef("DOM")}}

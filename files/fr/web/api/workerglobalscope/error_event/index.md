@@ -2,7 +2,6 @@
 title: WorkerGlobalScope.onerror
 slug: Web/API/WorkerGlobalScope/error_event
 translation_of: Web/API/WorkerGlobalScope/onerror
-original_slug: Web/API/WorkerGlobalScope/onerror
 ---
 
 {{APIRef("Web Workers API")}}

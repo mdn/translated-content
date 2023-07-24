@@ -1,14 +1,7 @@
 ---
 title: get ArrayBuffer[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Propriété
-  - Reference
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
-original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/@@species
 ---
 
 {{JSRef}}

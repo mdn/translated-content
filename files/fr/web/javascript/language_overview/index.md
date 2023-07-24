@@ -1,15 +1,7 @@
 ---
 title: Une réintroduction à JavaScript
 slug: Web/JavaScript/Language_overview
-tags:
-  - CodingScripting
-  - Guide
-  - Intermediate
-  - Intro
-  - JavaScript
-  - Learn
 translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
-original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 
 {{jsSidebar}}

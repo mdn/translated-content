@@ -2,8 +2,6 @@
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
-original_slug: Web/JavaScript/Reference/Objets_globaux/GeneratorFunction
-browser-compat: javascript.builtins.GeneratorFunction
 ---
 
 {{JSRef}}

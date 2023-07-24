@@ -1,16 +1,7 @@
 ---
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/copyWithin
 ---
 
 {{JSRef}}

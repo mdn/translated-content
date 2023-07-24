@@ -14,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingTitle = browser.pageAction.getTitle(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -46,7 +46,7 @@ function gotTitle(title) {
 
 browser.pageAction.onClicked.addListener((tab) => {
   var gettingTitle = browser.pageAction.getTitle({
-    tabId: tab.id
+    tabId: tab.id,
   });
   gettingTitle.then(gotTitle);
 });

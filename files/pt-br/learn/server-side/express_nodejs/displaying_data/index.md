@@ -1,5 +1,5 @@
 ---
-title: 'Express Tutorial Part 5: Displaying library data'
+title: "Express Tutorial Part 5: Displaying library data"
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
 
@@ -13,7 +13,7 @@ We're now ready to add the pages that display the [LocalLibrary](/pt-BR/docs/Lea
       <th scope="row">Pré-requisitos:</th>
       <td>
         Complete previous tutorial topics (including
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/routes"
+        <a href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes"
           >Express Tutorial Part 4: Routes and controllers</a
         >).
       </td>

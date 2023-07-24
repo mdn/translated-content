@@ -8,6 +8,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
+
 {{AddonSidebar}}
 
 В этой статье мы пройдём весь путь создания WebExtension для Firefox, от начала и до конца. Это дополнение будет просто добавлять красную рамку ко всем страницам, загруженным с "mozilla.org" или любого из его поддоменов.
@@ -31,7 +32,6 @@ cd borderify
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Borderify",
   "version": "1.0",
@@ -54,7 +54,6 @@ cd borderify
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 

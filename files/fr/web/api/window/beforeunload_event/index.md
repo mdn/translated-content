@@ -2,7 +2,6 @@
 title: beforeunload
 slug: Web/API/Window/beforeunload_event
 translation_of: Web/API/Window/beforeunload_event
-original_slug: Web/Events/beforeunload
 ---
 
 L'événement **`beforeunload`** est déclenché quand la fênetre, ou le document, et leurs resources sont sur le point d'être déchargés.

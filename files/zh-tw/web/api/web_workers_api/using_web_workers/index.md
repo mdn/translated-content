@@ -319,7 +319,7 @@ var asyncEval = (function () {
 })();
 ```
 
-[data URL](en-US/docs/Web/HTTP/data_URIs) 相當於網路請求，範例中的 data URL 會在 worker 執行下列程式碼回應訊息：
+[data URL](/zh-TW/docs/Web/HTTP/data_URIs) 相當於網路請求，範例中的 data URL 會在 worker 執行下列程式碼回應訊息：
 
 ```js
 onmessage = function (oEvent) {

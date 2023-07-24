@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-meter-bar'
 slug: Web/CSS/::-webkit-meter-bar
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-meter-bar
 ---
 

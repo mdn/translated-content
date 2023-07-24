@@ -1,12 +1,6 @@
 ---
 title: <select>
 slug: Web/HTML/Element/select
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/select
 ---
 
@@ -199,7 +193,7 @@ Les utilisateurs du clavier pourront sélectionner des options non-contigües de
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >,
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_interactif"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_interactif"
           >contenu interactif</a
         >,
         <a

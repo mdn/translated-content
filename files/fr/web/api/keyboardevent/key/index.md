@@ -1,14 +1,6 @@
 ---
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
-tags:
-  - API
-  - DOM
-  - KeyboardEvent
-  - Lecture-seule
-  - Propriété
-  - Reference
-  - UI Events
 translation_of: Web/API/KeyboardEvent/key
 ---
 

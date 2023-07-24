@@ -1,15 +1,7 @@
 ---
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
-tags:
-  - Expressions rationnelles
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/match
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/match
 ---
 
 {{JSRef}}

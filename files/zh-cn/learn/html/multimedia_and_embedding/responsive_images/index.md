@@ -19,7 +19,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
     <tr>
       <th scope="row">学习目标：</th>
       <td>
-        学习使用 <a href="zh-CN/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a>、{{htmlelement("picture")}} 元素等特性来实现网页中响应式图像的解决方案。
+        学习使用 <a href="/zh-CN/docs/Web/HTML/Element/img#srcset"><code>srcset</code></a>、{{htmlelement("picture")}} 元素等特性来实现网页中响应式图像的解决方案。
       </td>
     </tr>
   </tbody>
@@ -86,13 +86,13 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 2. 一个空格
 3. **图片的固有宽度**（以像素为单位）（480w）。注意，这里使用宽度描述符 `w`，而非你可能期望的 `px`。图片的[固有宽度](/zh-CN/docs/Glossary/Intrinsic_Size)是它的真实大小，可以通过检查你电脑上的图片文件找到（例如，在 Mac 上，你可以在 Finder 上选择这个图片，然后按
 
-    <kbd>Cmd</kbd>
+   <kbd>Cmd</kbd>
 
-    \+
+   \+
 
-    <kbd>I</kbd>
+   <kbd>I</kbd>
 
-    来显示信息）。
+   来显示信息）。
 
 **`sizes`** 定义了一组媒体条件（例如屏幕宽度）并且指明当某些媒体条件为真时，什么样的图片尺寸是最佳选择——这就是我们之前提到的提示。上面的示例中，在每个逗号之前，我们写：
 
@@ -122,9 +122,10 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 如果你要支持多分辨率显示，但希望每个人在屏幕上看到的图片的实际尺寸是相同的，你可以使用 `srcset` 结合 x 语法——一种更简单的语法——而不用 `sizes`，来让浏览器选择合适分辨率的图片。你可以参考这个示例 [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)（或查看[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)）：
 
 ```html
-<img srcset="elva-fairy-320w.jpg, elva-fairy-480w.jpg 1.5x, elva-fairy-640w.jpg 2x"
-     src="elva-fairy-640w.jpg"
-     alt="Elva dressed as a fairy" />
+<img
+  srcset="elva-fairy-320w.jpg, elva-fairy-480w.jpg 1.5x, elva-fairy-640w.jpg 2x"
+  src="elva-fairy-640w.jpg"
+  alt="Elva dressed as a fairy" />
 ```
 
 ![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)
@@ -183,7 +184,9 @@ img {
 <picture>
   <source type="image/svg+xml" srcset="pyramid.svg" />
   <source type="image/webp" srcset="pyramid.webp" />
-  <img src="pyramid.png" alt="regular pyramid built from four equilateral triangles" />
+  <img
+    src="pyramid.png"
+    alt="regular pyramid built from four equilateral triangles" />
 </picture>
 ```
 

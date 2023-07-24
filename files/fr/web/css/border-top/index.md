@@ -1,16 +1,12 @@
 ---
 title: border-top
 slug: Web/CSS/border-top
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/border-top
 ---
 
 {{CSSRef}}
 
-La propriété CSS **`border-top`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de paramétrer la bordure haute d'un élément.
+La propriété CSS **`border-top`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de paramétrer la bordure haute d'un élément.
 
 C'est une propriété raccourcie qui permet de définir les valeurs de :
 

@@ -2,7 +2,6 @@
 title: BatteryManager.dischargingTime
 slug: Web/API/BatteryManager/dischargingTime
 translation_of: Web/API/BatteryManager/dischargingTime
-browser-compat: api.BatteryManager.dischargingTime
 ---
 
 {{APIRef("Battery API")}}

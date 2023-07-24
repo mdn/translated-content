@@ -1,10 +1,6 @@
 ---
 title: Référence des événements
 slug: Web/Events
-tags:
-  - Event
-  - Overview
-  - Reference
 translation_of: Web/Events
 ---
 

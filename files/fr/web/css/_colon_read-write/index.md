@@ -1,10 +1,6 @@
 ---
 title: ':read-write'
 slug: Web/CSS/:read-write
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:read-write
 ---
 

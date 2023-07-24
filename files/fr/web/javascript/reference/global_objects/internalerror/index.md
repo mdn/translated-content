@@ -2,8 +2,6 @@
 title: InternalError
 slug: Web/JavaScript/Reference/Global_Objects/InternalError
 translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
-original_slug: Web/JavaScript/Reference/Objets_globaux/InternalError
-browser-compat: javascript.builtins.InternalError
 ---
 
 {{JSRef}} {{non-standard_header}}

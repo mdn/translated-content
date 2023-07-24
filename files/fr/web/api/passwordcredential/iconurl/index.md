@@ -1,12 +1,6 @@
 ---
 title: PasswordCredential.iconURL
 slug: Web/API/PasswordCredential/iconURL
-tags:
-  - API
-  - Credential Management API
-  - PasswordCredential
-  - Propriété
-  - Reference
 translation_of: Web/API/PasswordCredential/iconURL
 ---
 

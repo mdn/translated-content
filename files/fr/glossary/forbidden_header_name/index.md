@@ -33,4 +33,4 @@ Les noms d'en-tête interdits commencent avec `Proxy-` ou `Sec-`, ou se composen
 - `Upgrade`
 - `Via`
 
-> **Note :** L'en-tête `User-Agent` n'est plus interdit, [conformément à la spécification](https://fetch.spec.whatwg.org/#terminology-headers) — voir la liste des noms d'en-tête interdit (implémentée dans Firefox 43), et peut donc maintenant être défini dans un objet [en-tête](/fr/docs/Web/API/Headers) Fetch, via XHR [setRequestHeader()](/fr/docs/Web/API/XMLHttpRequest#setRequestHeader%28%29), etc.
+> **Note :** L'en-tête `User-Agent` n'est plus interdit, [conformément à la spécification](https://fetch.spec.whatwg.org/#terminology-headers) — voir la liste des noms d'en-tête interdit (implémentée dans Firefox 43), et peut donc maintenant être défini dans un objet [en-tête](/fr/docs/Web/API/Headers) Fetch, via XHR [setRequestHeader()](</fr/docs/Web/API/XMLHttpRequest#setRequestHeader()>), etc.

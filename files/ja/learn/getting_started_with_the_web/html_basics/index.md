@@ -82,7 +82,7 @@ My cat is very grumpy
 ここまでは HTML 要素について見てきましたが、しかし、要素単体ではあまり役には立ちません。ここからはどのようにしてそれぞれの要素を組み合わせ、 HTML ページ全体を作っていくのかを勉強していきましょう。[ファイルの扱い](/ja/docs/Learn/Getting_started_with_the_web/Dealing_with_files)で出てきた `index.html` に書いてあるコードをもう一度見てみましょう。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
@@ -211,7 +211,7 @@ alt テキストのキーワードは「説明文」です。 alt テキスト�
    <a href="">Mozilla Manifesto</a>
    ```
 
-    このリンクのリンク先になるウェブアドレスを、この属性の値に書き込みます。
+   このリンクのリンク先になるウェブアドレスを、この属性の値に書き込みます。
 
    ```html
    <a href="https://www.mozilla.org/en-US/about/manifesto/">

@@ -2,7 +2,6 @@
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
 translation_of: Web/API/HTMLElement/click
-browser-compat: api.HTMLElement.click
 ---
 
 {{APIRef("HTML DOM")}}

@@ -1,14 +1,7 @@
 ---
 title: RegExp.prototype[@@replace]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@replace
 ---
 
 {{JSRef}}

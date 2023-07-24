@@ -1,13 +1,6 @@
 ---
 title: PerformanceElementTiming.identifier
 slug: Web/API/PerformanceElementTiming/identifier
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - identifier
-  - PerformanceElementTiming
 translation_of: Web/API/PerformanceElementTiming/identifier
 ---
 

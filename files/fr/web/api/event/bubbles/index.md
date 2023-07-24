@@ -1,12 +1,6 @@
 ---
 title: Event.bubbles
 slug: Web/API/Event/bubbles
-tags:
-  - API
-  - DOM
-  - Propagation
-  - Propriétés
-  - évènements
 translation_of: Web/API/Event/bubbles
 ---
 

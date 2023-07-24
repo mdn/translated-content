@@ -1,7 +1,6 @@
 ---
 title: Intl.DisplayNames.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf
-browser-compat: javascript.builtins.Intl.DisplayNames.supportedLocalesOf
 ---
 
 {{JSRef}}

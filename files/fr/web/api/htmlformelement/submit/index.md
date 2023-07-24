@@ -1,10 +1,6 @@
 ---
 title: HTMLFormElement.submit()
 slug: Web/API/HTMLFormElement/submit
-tags:
-  - HTML DOM
-  - HTMLFormElement
-  - Méthode
 translation_of: Web/API/HTMLFormElement/submit
 ---
 

@@ -2,16 +2,7 @@
 title: Contrôler les proportions des boîtes flexibles le long de l'axe principal
 slug: >-
   Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis
-tags:
-  - Boîtes flexibles
-  - CSS
-  - Flex
-  - Guide
-  - Intermediate
-  - flexbox
 translation_of: >-
-  Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
-original_slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax
 ---
 

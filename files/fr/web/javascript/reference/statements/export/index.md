@@ -1,14 +1,7 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-tags:
-  - ECMAScript 2015
-  - Instruction
-  - JavaScript
-  - Modules
-  - export
 translation_of: Web/JavaScript/Reference/Statements/export
-original_slug: Web/JavaScript/Reference/Instructions/export
 ---
 
 {{jsSidebar("Statements")}}

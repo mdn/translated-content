@@ -34,9 +34,8 @@ Dans l'exemple suivant (basé sur le fichier [`index-compile.html`](https://gith
 ```js
 var worker = new Worker("wasm_worker.js");
 
-WebAssembly.compileStreaming(fetch("simple.wasm"))
-.then(mod =>
-  worker.postMessage(mod)
+WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
+  worker.postMessage(mod),
 );
 ```
 
@@ -45,17 +44,17 @@ Dans le _worker_ (cf. [`wasm_worker.js`](https://github.com/mdn/webassembly-exam
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-onmessage = function(e) {
-  console.log('module reçu du thread principal');
+onmessage = function (e) {
+  console.log("module reçu du thread principal");
   var mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then(function (instance) {
     instance.exports.exported_func();
   });
 

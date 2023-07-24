@@ -2,7 +2,6 @@
 title: FormData.get()
 slug: Web/API/FormData/get
 translation_of: Web/API/FormData/get
-browser-compat: api.FormData.get
 ---
 
 {{APIRef("XMLHttpRequest")}}

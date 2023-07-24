@@ -1,6 +1,9 @@
 ---
-title: Element.scrollTop
+title: "Element: scrollTop プロパティ"
+short-title: scrollTop
 slug: Web/API/Element/scrollTop
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
@@ -9,48 +12,39 @@ slug: Web/API/Element/scrollTop
 
 要素の `scrollTop` の値は、要素の上から最も上の*表示されている*コンテンツまでの距離を測ったものです。要素の内容が垂直スクロールバーを生成しなかった場合は、 `scrollTop` の値は `0` になります。
 
-`scrollTop` がルート要素 (`<html>` 要素) に対して使用されると、ウィンドウの `scrollY` が返されます。[これは `scrollTop` の特例です](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-scrolltop)。
+`scrollTop` には任意の整数値を設定することができますが、注意点があります。
 
-> **警告:** 画面の拡大縮小を使用するシステムでは、 `scrollTop` が小数になることがあります。
+- 要素がスクロールできない場合（例えば、オーバーフローがない、または要素に "**non-scrollable**" のプロパティがある場合）、`scrollTop` は `0` です。
+- `scrollTop` は負の値には反応せず、代わりに `0` に設定します。
+- 要素で利用できる最大値よりも大きな値を設定するには、`scrollTop` は最大値に決定します。
 
-## 構文
+`scrollTop` がルート要素（`<html>` 要素）に対して使用されると、ウィンドウの `scrollY` が返されます。[これは `scrollTop` の特例です](https://www.w3.org/TR/2016/WD-cssom-view-1-20160317/#dom-element-scrolltop)。
 
-```js
-// スクロールしたピクセル数を取得
-var intElemScrollTop = someElement.scrollTop;
-```
+> **警告:** 画面の拡大縮小を使用するシステムでは、`scrollTop` が小数になることがあります。
 
-このコードを実行した後、 `intElemScrollTop` はこの要素 ({{domxref("Element")}}) が上方向にスクロールしたピクセル数に対応した整数になります。
+## 値
 
-```js
-// スクロールするピクセル数を設定
-element.scrollTop = intValue;
-```
-
-`scrollTop` は任意の整数値で設定することができます。しかし、
-
-- 要素がスクロールできない場合 (例えば、はみ出した部分がない場合や、要素に "**non-scrollable**" のプロパティがある場合)、 `scrollTop` は `0` に設定されます。
-- `scrollTop` は負の数には対応していません。代わりに、 `0` に戻ります。
-- 指定された値が、コンテンツがスクロールできる最大値を超えていたら、 `scrollTop` は最大値に設定されます。
+数値です。
 
 ## 例
 
 ### 要素のスクロール
 
-この例で、破線の境界線の付いた内部のコンテナーをスクロールしてみて、 `scrollTop` の値がどのように変わるかを確認してください。
+この例で、破線の境界線の付いた内部のコンテナーをスクロールしてみて、`scrollTop` の値がどのように変わるかを確認してください。
 
 #### HTML
 
 ```html
-
 <div id="container">
   <div id="scroller">
-      <p>Far out in the uncharted backwaters of the unfashionable end
-      of the western spiral arm of the Galaxy lies a small unregarded
-      yellow sun. Orbiting this at a distance of roughly ninety-two million
-      miles is an utterly insignificant little blue green planet whose
-      ape-descended life forms are so amazingly primitive that they still
-      think digital watches are a pretty neat idea.</p>
+    <p>
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Orbiting this at a distance of roughly ninety-two million miles is an
+      utterly insignificant little blue green planet whose ape-descended life
+      forms are so amazingly primitive that they still think digital watches are
+      a pretty neat idea.
+    </p>
   </div>
 </div>
 
@@ -78,7 +72,7 @@ element.scrollTop = intValue;
 const scroller = document.querySelector("#scroller");
 const output = document.querySelector("#output");
 
-scroller.addEventListener("scroll", event => {
+scroller.addEventListener("scroll", (event) => {
   output.textContent = `scrollTop: ${scroller.scrollTop}`;
 });
 ```

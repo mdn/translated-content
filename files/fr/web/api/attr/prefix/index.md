@@ -1,11 +1,6 @@
 ---
 title: Attr.prefix
 slug: Web/API/Attr/prefix
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - Reference
 translation_of: Web/API/Attr/prefix
 ---
 

@@ -1,15 +1,7 @@
 ---
 title: BigInt64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
-tags:
-  - BigInt
-  - Constructeur
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt64Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt64Array
 ---
 
 {{JSRef}}

@@ -1,22 +1,7 @@
 ---
 title: '<audio> : l''élément audio embarqué'
 slug: Web/HTML/Element/audio
-tags:
-  - Audio
-  - Element
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - HTML:Embedded content
-  - HTML:Flow content
-  - HTML:Phrasing content
-  - Media
-  - Multimedia
-  - Reference
-  - Web
-  - sound
 translation_of: Web/HTML/Element/audio
-browser-compat: html.elements.audio
 ---
 
 {{HTMLSidebar}}

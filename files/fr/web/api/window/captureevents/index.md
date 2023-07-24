@@ -1,12 +1,6 @@
 ---
 title: Window.captureEvents()
 slug: Web/API/Window/captureEvents
-tags:
-  - API
-  - Gecko
-  - HTML DOM
-  - Méthode
-  - Non-standard
 translation_of: Web/API/Window/captureEvents
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: 'RangeError: radix must be an integer'
 slug: Web/JavaScript/Reference/Errors/Bad_radix
-tags:
-  - Erreurs
-  - JavaScript
-  - RangeError
 translation_of: Web/JavaScript/Reference/Errors/Bad_radix
-original_slug: Web/JavaScript/Reference/Erreurs/Bad_radix
 ---
 
 {{jsSidebar("Errors")}}
@@ -31,10 +26,10 @@ Pourquoi limiter la base à 36 ? Lorsqu'une base est supérieure à 10, on utili
 
 Généralement, on emploie cette méthode avec des bases fréquemment utilisées :
 
-- 2 pour [les nombres binaires](https://fr.wikipedia.org/wiki/Syst%C3%A8me_binaire),
-- 8 pour [les nombres octaux](https://fr.wikipedia.org/wiki/Syst%C3%A8me_octal),
-- 10 pour [les nombres décimaux](https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%C3%A9cimal),
-- 16 pour [les nombres hexadécimaux](https://fr.wikipedia.org/wiki/Syst%C3%A8me_hexad%C3%A9cimal).
+- 2 pour [les nombres binaires](https://fr.wikipedia.org/wiki/Système_binaire),
+- 8 pour [les nombres octaux](https://fr.wikipedia.org/wiki/Système_octal),
+- 10 pour [les nombres décimaux](https://fr.wikipedia.org/wiki/Système_décimal),
+- 16 pour [les nombres hexadécimaux](https://fr.wikipedia.org/wiki/Système_hexadécimal).
 
 ## Examples
 

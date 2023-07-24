@@ -1,14 +1,6 @@
 ---
 title: Introduction
 slug: Web/API/Document_Object_Model/Introduction
-tags:
-  - Beginner
-  - DOM
-  - Document
-  - Guide
-  - HTML DOM
-  - Introduction
-  - Tutorial
 translation_of: Web/API/Document_Object_Model/Introduction
 ---
 

@@ -38,7 +38,7 @@ Como todos os outros elementos do HTML, este elemento tem os atributos globais, 
 
 {{Compat("html.elements.bdi")}}
 
-## Veja Também:
+## Veja Também
 
 - Related HTML element: {{HTMLElement("bdo")}}
 - Related HTML properties: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}

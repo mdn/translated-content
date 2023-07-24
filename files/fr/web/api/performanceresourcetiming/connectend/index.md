@@ -1,14 +1,6 @@
 ---
 title: PerformanceResourceTiming.connectEnd
 slug: Web/API/PerformanceResourceTiming/connectEnd
-tags:
-  - API
-  - Property
-  - Propriété
-  - Reference
-  - Performance Web
-  - Resource Timing API
-  - connectEnd
 translation_of: Web/API/PerformanceResourceTiming/connectEnd
 ---
 

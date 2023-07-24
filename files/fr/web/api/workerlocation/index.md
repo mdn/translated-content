@@ -1,9 +1,6 @@
 ---
 title: WorkerLocation
 slug: Web/API/WorkerLocation
-tags:
-  - API
-  - Web Workers
 translation_of: Web/API/WorkerLocation
 ---
 

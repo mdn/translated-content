@@ -1,12 +1,6 @@
 ---
 title: FederatedCredential.provider
 slug: Web/API/FederatedCredential/provider
-tags:
-  - API
-  - Credential Management API
-  - FederatedCredential
-  - Propriété
-  - Reference
 translation_of: Web/API/FederatedCredential/provider
 ---
 

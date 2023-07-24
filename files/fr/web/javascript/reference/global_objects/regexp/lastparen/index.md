@@ -1,13 +1,7 @@
 ---
 title: RegExp.lastParen ($+)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
-tags:
-  - JavaScript
-  - Propriété
-  - Reference
-  - RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastParen
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/lastParen
 ---
 
 {{JSRef}} {{non-standard_header}}

@@ -1,13 +1,7 @@
 ---
 title: Sélecteurs d'attribut
 slug: Web/CSS/Attribute_selectors
-tags:
-  - CSS
-  - Débutant
-  - Reference
-  - Sélecteur
 translation_of: Web/CSS/Attribute_selectors
-original_slug: Web/CSS/Sélecteurs_d_attribut
 ---
 
 {{CSSRef}}

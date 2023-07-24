@@ -1,15 +1,7 @@
 ---
 title: Delay
 slug: Web/API/KeyframeEffect/KeyframeEffect
-tags:
-  - API
-  - Animation
-  - AnimationEffectTimingProperties
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/API/EffectTiming/delay
-original_slug: Web/API/EffectTiming/delay
 ---
 
 {{SeeCompatTable}}{{APIRef("Web Animations")}}

@@ -1,15 +1,7 @@
 ---
 title: Map.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/delete
-original_slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 ---
 
 {{JSRef}}

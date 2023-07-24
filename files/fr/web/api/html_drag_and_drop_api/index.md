@@ -1,14 +1,7 @@
 ---
 title: Glisser et déposer
 slug: Web/API/HTML_Drag_and_Drop_API
-tags:
-  - Avancé
-  - Glisser-deposer
-  - Guide
-  - HTML
-  - drag and drop
 translation_of: Web/API/HTML_Drag_and_Drop_API
-original_slug: Web/API/API_HTML_Drag_and_Drop
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}

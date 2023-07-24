@@ -1,10 +1,6 @@
 ---
 title: will-change
 slug: Web/CSS/will-change
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/will-change
 ---
 

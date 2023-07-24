@@ -1,14 +1,7 @@
 ---
 title: Date.prototype.setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setMonth
 ---
 
 {{JSRef}}

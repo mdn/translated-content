@@ -1,15 +1,7 @@
 ---
 title: Math.trunc()
 slug: Web/JavaScript/Reference/Global_Objects/Math/trunc
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/trunc
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/trunc
 ---
 
 {{JSRef}}

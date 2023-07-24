@@ -2,7 +2,6 @@
 title: RegExp.prototype.hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
-browser-compat: javascript.builtins.RegExp.hasIndices
 ---
 
 {{JSRef}}

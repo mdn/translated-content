@@ -1,11 +1,6 @@
 ---
 title: perspective-origin
 slug: Web/CSS/perspective-origin
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/perspective-origin
 ---
 

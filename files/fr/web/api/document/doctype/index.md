@@ -1,13 +1,6 @@
 ---
 title: Document.doctype
 slug: Web/API/Document/doctype
-tags:
-  - API
-  - DOM
-  - DTD
-  - Document
-  - Propriétés
-  - Type
 translation_of: Web/API/Document/doctype
 ---
 

@@ -1,12 +1,7 @@
 ---
 title: 'SyntaxError: missing } after function body'
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
-tags:
-  - Erreurs
-  - JavaScript
-  - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
-original_slug: Web/JavaScript/Reference/Erreurs/Missing_curly_after_function_body
 ---
 
 {{jsSidebar("Errors")}}
