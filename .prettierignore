@@ -97,7 +97,6 @@ build/
 /files/ru/web/svg/**/*.md
 
 # zh-cn
-/files/zh-cn/learn/javascript/**/*.md
 /files/zh-cn/web/api/**/*.md
 /files/zh-cn/web/css/**/*.md
 /files/zh-cn/web/html/**/*.md
