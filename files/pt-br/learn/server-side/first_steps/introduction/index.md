@@ -131,7 +131,7 @@ Uma análise mais profunda dos hábitos do usuário pode ser usada para antecipa
 >
 > Os resultados de pesquisa do Google são otimizados com base em pesquisas anteriores.
 >
-> 1. Vá em [Google search](https:\\google.com).
+> 1. Vá em [Google search](https://www.google.com).
 > 2. Pesquise por "futeboll".
 > 3. Agora tente digitar "favorito" na caixa de pesquisa e observe as previsões de pesquisa do preenchimento automático.
 >
