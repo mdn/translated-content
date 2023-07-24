@@ -121,7 +121,7 @@ WCAG 成功基準 3.1.2 は、異なる言語の**部分**があるページに�
     </li>
     <li>
       <a
-        href="/ja/docs/Web/HTML/Global_attributes/lang$locales"
+        href="/en-US/docs/Web/HTML/Global_attributes/lang$locales"
         rel="nofollow"
         id="translations-add">
         Add a translation
