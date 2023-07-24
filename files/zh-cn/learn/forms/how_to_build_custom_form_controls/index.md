@@ -5,7 +5,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 {{LearnSidebar}}
 
-在许多情况下，可用的原生 HTML 表单控件是不够的。如果要在某些控件（例如 {{HTMLElement("select")}} 元素）上执行[设置高级样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)，或者如果要提供自定义行为，你就需要考虑构建自己的控件。
+在许多情况下，可用的原生 HTML 表单控件是不够的。如果要在某些控件（例如 {{HTMLElement("select")}} 元素）上[设置高级样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)，或者如果要提供自定义行为，你就需要考虑构建自己的控件。
 
 在本文中，我们会看到如何构建自定义控件。为此，我们将使用这样一个示例：重建 {{HTMLElement("select")}} 元素。我们还将讨论如何构建、何时构建自定义控件、构建是否存在意义，以及构建控件的相关注意事项。
 
@@ -639,7 +639,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 现在我们的设计和结构已经完成了。我们可以写些 JavaScript 代码来让这个控件真正生效。
 
-> **警告：** 下面的代码仅仅是教学性质的，不是生产环境的代码，并且不应该照搬使用。这种方案不具有前瞻性，而且可能在旧浏览器上会不工作。这里面还有冗余的部分，在生产环境下，代码需要优化。
+> **警告：** 下面的代码仅仅是教学性质的，不是生产环境的代码，并且不应该照搬使用。这种方案不具有前瞻性，而且可能在旧式浏览器上会不工作。这里面还有冗余的部分，在生产环境下，代码需要优化。
 
 ### 它为什么不生效？
 
@@ -921,7 +921,7 @@ window.addEventListener("load", () => {
 ```js
 // 这个函数会用在每当我们想要停用一个自定义控件的时候
 // 它需要一个参数：
-// select :要停用的带有 'select' 类的节点
+// select：要停用的带有 `select` 类的节点
 function deactivateSelect(select) {
   // 如果控件没有运行，不用进行任何操作
   if (!select.classList.contains("active")) return;
@@ -1362,7 +1362,11 @@ window.addEventListener("load", () => {
 
 在上面的代码里，值得注意的是 [`tabIndex`](/zh-CN/docs/Web/API/HTMLElement/tabIndex) 属性的使用。使用这个属性是很有必要的，这可以确保原生控件将永远不会获得焦点，而且还可以确保当用户使用键盘和鼠标时，我们的自定义控件能够获得焦点。
 
-做完上面这些后，我们就完成了！下面是结果（[在这里查看源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)）：
+做完上面这些后，我们就完成了！
+
+#### 实时示例
+
+查看[完整源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)。
 
 ```html hidden
 <form class="no-widget">
@@ -1619,7 +1623,7 @@ window.addEventListener("load", () => {
 });
 ```
 
-{{EmbedLiveSample("处理控件的值",120,130)}}
+{{EmbedLiveSample("实时示例_2",120,130)}}
 
 但是等等，我们真的做完了嘛？
 
@@ -1627,23 +1631,23 @@ window.addEventListener("load", () => {
 
 我们构建了一个能够生效的东西，尽管这离一个特性齐全的选择框还差得远，但是它效果不错。但是我们已经完成的事情只不过是摆弄 DOM。这个控件并没有真正的语义，即使它看起来像一个选择框，但是从浏览器的角度来看并不是，所以辅助技术并不能明白这是一个选择框。简单来说，这个全新的选择框并不具备无障碍！
 
-幸运的是，有一种解决方案叫做 [ARIA](/zh-CN/docs/Web/Accessibility/ARIA)。ARIA 代表“无障碍富互联网应用”。这是一个专为我们现在做的事情设计的 [W3C 规范](https://www.w3.org/TR/wai-aria/)：使网络应用和自定义控件易于访问，它本质上是一组用来拓展 HTML 的属性集，以便我们能够更好的描述角色、状态和属性，就像我们刚才设计的元素是它试图传递的原生元素一样。使用这些属性非常简单，所以让我们来试试看。
+幸运的是，有一种解决方案叫做 [ARIA](/zh-CN/docs/Web/Accessibility/ARIA)。ARIA 代表“无障碍富互联网应用”。这是一个专为我们现在做的事情设计的 [W3C 规范](https://www.w3.org/TR/wai-aria/)：使 web 应用和自定义控件可以无障碍访问，它本质上是一组用来拓展 HTML 的属性集，以便我们能够更好的描述角色、状态和属性，就像我们刚才设计的元素是它试图传递的原生元素一样。只要编辑 HTML 标记就可以使用这些属性。我们也可以通过 JavaScript 在用户更新选择的值时更新 ARIA 属性。
 
 ### `role` 属性
 
-[ARIA](/zh-CN/docs/Accessibility/ARIA) 使用的关键属性是 [`role`](/zh-CN/docs/Accessibility/ARIA/ARIA_Techniques) 属性。[`role`](/zh-CN/docs/Accessibility/ARIA/ARIA_Techniques) 属性接受一个值，该值定义了一个元素的用途。每一个 role 定义了它自己的需求和行为。在我们的例子中，我们会使用 [`listbox`](/zh-CN/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) 这一 role。这是一个 "合成角色"，表示具有该 role 的元素应该有子元素，每个子元素都有特定的角色。（在这个案例中，至少有一个具有`option` 角色的子元素）。
+[ARIA](/zh-CN/docs/Web/Accessibility/ARIA) 使用的关键属性是角色（[`role`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques)）属性。[`role`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性接受一个值，该值定义了一个元素的用途。每一个角色定义了它自己的需求和行为。在我们的示例中，我们会使用 [`listbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role) 这一角色。这是一个“复合角色（composite role）”，表示具有该角色的元素应该有子元素，每个子元素都有特定的角色。（在这个案例中，至少有一个具有`option` 角色的子元素）。
 
-同样值得注意的是，ARIA 定义了默认应用于标准 HTML 标记的角色。例如，{{HTMLElement("table")}} 元素与角色 `grid` 相匹配，而 {{HTMLElement("ul")}} 元素与角色 `list` 相匹配。由于我们使用了一个 {{HTMLElement("ul")}} 元素，我们想要确保我们控件的 `listbox` 角色能替代 {{HTMLElement("ul")}} 元素的`list` 角色。为此，我们会使用角色 `presentation`。这个角色被设计成让我们来表示一个元素没有特殊的含义，并且仅仅用于提供信息。我们会将其应用到{{HTMLElement("ul")}} 元素上。
+同样值得注意的是，ARIA 定义了默认应用于标准 HTML 标记的角色。例如，{{HTMLElement("table")}} 元素与角色 `grid` 相匹配，而 {{HTMLElement("ul")}} 元素与角色 `list` 相匹配。由于我们使用了一个 {{HTMLElement("ul")}} 元素，我们想要确保我们控件的 `listbox` 角色能替代 {{HTMLElement("ul")}} 元素的 `list` 角色。为此，我们会使用角色 `presentation`。这个角色被设计成让我们来表示一个元素没有特殊的含义，并且仅仅用于提供信息。我们会将其应用到 {{HTMLElement("ul")}} 元素上。
 
-为了支持 [`listbox`](/zh-CN/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) 角色，我们只需要将我们 HTML 改成这样：
+为了支持 [`listbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role) 角色，我们只需要将我们的 HTML 改成这样：
 
 ```html
-<!-- 我们把 role="listbox" 属性添加到我们的顶部元素 -->
+<!-- 我们把 role="listbox" 属性添加到我们的顶层元素 -->
 <div class="select" role="listbox">
   <span class="value">Cherry</span>
   <!-- 我们也把 role="presentation" 添加到 ul 元素中 -->
   <ul class="optList" role="presentation">
-    <!-- 然后把 role="option" 属性添加到所有 li 元素里 -->
+    <!-- 然后把 role="option" 属性添加到所有 li 元素中 -->
     <li role="option" class="option">Cherry</li>
     <li role="option" class="option">Lemon</li>
     <li role="option" class="option">Banana</li>
@@ -1653,22 +1657,22 @@ window.addEventListener("load", () => {
 </div>
 ```
 
-> **备注：** 只有当你想要为不支持 [CSS 属性选择器的](/zh-CN/docs/CSS/Attribute_selectors)旧浏览器提供支持时，才有必要同时包含 `role` 属性和一个`class` 属性。
+> **备注：** 不需要同时包含 `role` 属性和 `class` 属性。你可以在 CSS 中使用 `[role="option"]` [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)来代替 `.option` 类。
 
 ### `aria-selected` 属性
 
-仅仅使用 [`role`](/zh-CN/docs/Accessibility/ARIA/ARIA_Techniques) 属性是不够的。 [ARIA](/zh-CN/docs/Accessibility/ARIA) 还提供了许多状态和属性的内部特征。你能更好更充分的利用它们，你的控件就会能够被辅助技术更好的理解。在我们的例子中，我们会把使用限制在一个属性上：`aria-selected`。
+仅仅使用 [`role`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性是不够的。[ARIA](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques) 还提供了许多状态和属性特征。你能更好更充分的利用它们，你的控件就会能够被辅助技术更好地理解。在我们的示例中，我们会把使用限制在一个属性上：`aria-selected`。
 
 `aria-selected` 属性被用来标记当前被选中的选项；这可以让辅助技术告知用户当前的选项是什么。我们会通过 JavaScript 动态地使用该属性，每当用户选择一个选项时标记选中的选项。为了达到这一目的，我们需要修正我们的 `updateValue()` 函数：
 
 ```js
 function updateValue(select, index) {
-  var nativeWidget = select.previousElementSibling;
-  var value = select.querySelector(".value");
-  var optionList = select.querySelectorAll(".option");
+  const nativeWidget = select.previousElementSibling;
+  const value = select.querySelector(".value");
+  const optionList = select.querySelectorAll('[role="option"]');
 
   // 我们确保所有的选项都没有被选中
-  optionList.forEach(function (other) {
+  optionList.forEach((other) => {
     other.setAttribute("aria-selected", "false");
   });
 
@@ -1681,21 +1685,382 @@ function updateValue(select, index) {
 }
 ```
 
-这是经过所有的改变之后的最终结果。（藉由 [NVDA](https://www.nvaccess.org/) 或 [VoiceOver](https://www.apple.com/accessibility/vision/) 这样的辅助技术尝试它，你会对此有更好的体会)：
+让屏幕阅读器聚焦于不可见的 select 而忽略我们的添加样式后的 select 似乎更简单，但这不是一个无障碍的解决方案。屏幕阅读器的用户不仅限于盲人；弱视甚至视力没问题的人也使用它们。因此，你不能让屏幕阅读器聚焦于不可见的元素。
 
-| 实时示例                                                                                               |
-| ------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("改变状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}} |
-| [查看最终源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)                  |
+下面是经过所有的改变之后的最终结果（藉由 [NVDA](https://www.nvaccess.org/) 或 [VoiceOver](https://www.apple.com/accessibility/vision/) 这样的辅助技术尝试它，你会对此有更好的体会）。
+
+#### 实时示例
+
+查看[完整源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)。
+
+```html hidden
+<form class="no-widget">
+  <select name="myFruit">
+    <option>Cherry</option>
+    <option>Lemon</option>
+    <option>Banana</option>
+    <option>Strawberry</option>
+    <option>Apple</option>
+  </select>
+
+  <div class="select" role="listbox">
+    <span class="value">Cherry</span>
+    <ul class="optList hidden" role="presentation">
+      <li class="option" role="option" aria-selected="true">Cherry</li>
+      <li class="option" role="option">Lemon</li>
+      <li class="option" role="option">Banana</li>
+      <li class="option" role="option">Strawberry</li>
+      <li class="option" role="option">Apple</li>
+    </ul>
+  </div>
+</form>
+```
+
+```css hidden
+.widget select,
+.no-widget .select {
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+}
+
+.select.active,
+.select:focus {
+  box-shadow: 0 0 3px 1px #227755;
+  outline: none;
+}
+
+.select .optList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.select .optList.hidden {
+  max-height: 0;
+  visibility: hidden;
+}
+
+.select {
+  font-size: 0.625em; /* 10px */
+  font-family: Verdana, Arial, sans-serif;
+
+  box-sizing: border-box;
+
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
+
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+
+  background: #f0f0f0;
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+}
+
+.select .value {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.select:after {
+  content: "▼";
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 2em; /* 20px */
+  top: 0;
+  right: 0;
+
+  padding-top: 0.1em;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-left: 0.2em solid #000;
+  border-radius: 0 0.1em 0.1em 0;
+
+  background-color: #000;
+  color: #fff;
+}
+
+.select .optList {
+  z-index: 2;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background: #f0f0f0;
+  border: 0.2em solid #000;
+  border-top-width: 0.1em;
+  border-radius: 0 0 0.4em 0.4em;
+
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+
+  box-sizing: border-box;
+
+  min-width: 100%;
+  max-height: 10em; /* 100px */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select .option {
+  padding: 0.2em 0.3em;
+}
+
+.select .highlight {
+  background: #000;
+  color: #ffffff;
+}
+```
+
+```js hidden
+function deactivateSelect(select) {
+  if (!select.classList.contains("active")) return;
+
+  const optList = select.querySelector(".optList");
+
+  optList.classList.add("hidden");
+  select.classList.remove("active");
+}
+
+function activeSelect(select, selectList) {
+  if (select.classList.contains("active")) return;
+
+  selectList.forEach(deactivateSelect);
+  select.classList.add("active");
+}
+
+function toggleOptList(select, show) {
+  const optList = select.querySelector(".optList");
+
+  optList.classList.toggle("hidden");
+}
+
+function highlightOption(select, option) {
+  const optionList = select.querySelectorAll(".option");
+
+  optionList.forEach((other) => {
+    other.classList.remove("highlight");
+  });
+
+  option.classList.add("highlight");
+}
+
+function updateValue(select, index) {
+  const nativeWidget = select.previousElementSibling;
+  const value = select.querySelector(".value");
+  const optionList = select.querySelectorAll(".option");
+
+  optionList.forEach((other) => {
+    other.setAttribute("aria-selected", "false");
+  });
+
+  optionList[index].setAttribute("aria-selected", "true");
+
+  nativeWidget.selectedIndex = index;
+  value.innerHTML = optionList[index].innerHTML;
+  highlightOption(select, optionList[index]);
+}
+
+function getIndex(select) {
+  const nativeWidget = select.previousElementSibling;
+
+  return nativeWidget.selectedIndex;
+}
+
+window.addEventListener("load", () => {
+  const form = document.querySelector("form");
+
+  form.classList.remove("no-widget");
+  form.classList.add("widget");
+});
+
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
+
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
+    const selectedIndex = getIndex(select);
+
+    select.tabIndex = 0;
+    select.previousElementSibling.tabIndex = -1;
+
+    updateValue(select, selectedIndex);
+
+    optionList.forEach((option, index) => {
+      option.addEventListener("mouseover", () => {
+        highlightOption(select, option);
+      });
+
+      option.addEventListener("click", (event) => {
+        updateValue(select, index);
+      });
+    });
+
+    select.addEventListener("click", (event) => {
+      toggleOptList(select);
+    });
+
+    select.addEventListener("focus", (event) => {
+      activeSelect(select, selectList);
+    });
+
+    select.addEventListener("blur", (event) => {
+      deactivateSelect(select);
+    });
+
+    select.addEventListener("keyup", (event) => {
+      let index = getIndex(select);
+
+      if (event.keyCode === 27) {
+        deactivateSelect(select);
+      }
+      if (event.keyCode === 40 && index < optionList.length - 1) {
+        index++;
+      }
+      if (event.keyCode === 38 && index > 0) {
+        index--;
+      }
+
+      updateValue(select, index);
+    });
+  });
+});
+```
+
+{{EmbedLiveSample("实时示例_3",120,130)}}
+
+如果你想继续前进，此示例中的代码需要进行一些改进才能变得通用和可复用。你可以尝试进行这方面的练习。有两个提示可以帮助你：我们所有函数的第一个参数都是相同的，这意味着这些函数需要相同的上下文。构建一个对象来共享该上下文是明智的。
+
+## 代替方法：使用单选按钮
+
+在上面的示例中，我们使用非语义化的 HTML、CSS 和 JavaScript 重新构建了一个 {{htmlelement('select')}} 元素。这个 select 从有限的选项中选择一个选项，这和一组同名的 {{htmlelement('input/radio', 'radio')}} 按钮的功能是一样的。
+
+我们可以使用单选按钮重新实现这个功能，让我们看看这个方法。
+
+我们可以从一个完全语义化、无障碍且无序的{{htmlelement('input/radio','单选')}}按钮列表开始，使用一对语义化的 {{htmlelement('fieldset')}} 和 {{htmlelement('legend')}} 对来标记整个组。
+
+```html
+<fieldset>
+  <legend>Pick a fruit</legend>
+  <ul class="styledSelect">
+    <li><input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked><label for="fruitCherry">Cherry</label></li>
+    <li><input type="radio" name="fruit" value="Lemon" id="fruitLemon"><label for="fruitLemon">Lemon</label></li>
+    <li><input type="radio" name="fruit" value="Banana" id="fruitBanana"><label for="fruitBanana"">Banana</label></li>
+    <li><input type="radio" name="fruit" value="Strawberry" id="fruitStrawberry"><label for="fruitStrawberry">Strawberry</label></li>
+    <li><input type="radio" name="fruit" value="Apple" id="fruitApple"><label for="fruitApple">Apple</label></li>
+  </ul>
+</fieldset>
+```
+
+我们将对单选按钮列表（不是 legend/fieldset）设置一些样式，使其看起来有点像前面的示例，这里只是为了表明它可以实现：
+
+```css
+.styledSelect {
+  display: inline-block;
+  padding: 0;
+}
+.styledSelect li {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+.styledSelect [type="radio"] {
+  position: absolute;
+  left: -100vw;
+  top: -100vh;
+}
+.styledSelect label {
+  margin: 0;
+  line-height: 2;
+  padding: 0 0 0 4px;
+}
+.styledSelect:not(:focus-within) input:not(:checked) + label {
+  height: 0;
+  outline: none;
+  overflow: hidden;
+}
+.styledSelect:not(:focus-within) input:checked + label {
+  border: 0.2em solid #000;
+  border-radius: 0.4em;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+}
+.styledSelect:not(:focus-within) input:checked + label::after {
+  content: "▼";
+  background: black;
+  float: right;
+  color: white;
+  padding: 0 4px;
+  margin: 0 -4px 0 4px;
+}
+.styledSelect:focus-within {
+  border: 0.2em solid #000;
+  border-radius: 0.4em;
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+}
+.styledSelect:focus-within input:checked + label {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+}
+```
+
+无需 JavaScript，只需一点点 CSS，我们就可以为单选按钮列表添加样式，使其只显示选中的项目。当焦点在 `<fieldset>` 中的 `<ul>` 内时，列表会打开，上下（和左右）箭头可以选择上一个和下一个项目。尝试一下：
+
+{{EmbedLiveSample("代替方法：使用单选按钮",200,240)}}
+
+在某种程度上，这不需要 JavaScript 就可以工作。我们创建了一个与自定义控件类似的控件，即使 JavaScript 运行失败也能正常工作。看起来是一个很好的解决方案，对吧？嗯，但它不是完美的。它确实可以与键盘配合使用，但不能按预期使用鼠标单击。使用 Web 标准作为自定义控件的基础而不是依赖框架来创建没有原生语义的元素，可能更有意义。然而，我们的控件不具有与 `<select>` 原生具有的相同的功能。
+
+从正面来说，屏幕阅读器完全可以访问这个控件，而且其完全可以使用键盘导航。但是，该控件并不是 {{htmlelement('select')}} 的替代。有一些功能是不同或者缺失的。例如，所有的四个箭头都可以导航到选项，但是当用户在最后一个按钮上点击向下箭头时，它选到第一个按钮；它不会像 `<select>` 那样停在选项列表的顶部和底部。
+
+我们将把添加这个缺失功能作为读者的一个练习。
 
 ## 总结
 
-我们已经了解了所有和构建一个自定义表单控件相关的基础知识，但是如你所见做这件事非常繁琐，并且通常情况下依赖第三方库，而不是自己从头写起会更容易，也更好 (当然，除非你的目的就是构建一个这样的库）。
+我们已经了解了所有和构建一个自定义表单控件相关的基础知识，但是如你所见，做这件事非常繁琐。在创建你自己的自定义控件之前，请考虑 HTML 是否提供可用于充分满足你的要求的替代元素。如果你的确需要创建自定义控件，那么通过第三方库，而不是自己从头构建会更容易，也更好。但是，如果你确实需要自己创建，修改现有元素或使用框架来实现预制控件，请记住创建可用且无障碍的表单控件比看起来更复杂。
 
 这儿有一些库，在你编写自己的之前应该了解一下：
 
 - [jQuery UI](https://jqueryui.com/)
-- [AXE accessible custom select dropdowns](https://www.webaxe.org/accessible-custom-select-dropdowns/)
+- [AXE 无障碍的自定义选择下拉菜单](https://www.webaxe.org/accessible-custom-select-dropdowns/)
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
 
-如果你想更进一步，本例中的代码需要一些改进，才能变得更加通用和可重用。这是一个你可以尝试去做的练习。这里有两个提示可以帮到你：我们所有函数的第一个参数是相同的，这意味着这些函数需要相同的上下文。构建一个对象来共享那些上下文是更聪明的做法。还有，你需要让它的特性适用性更好；也就是说，它要能在一系列对 Web 标准的兼容性不同的浏览器上工作良好。祝愉快！
+如果你确实通过单选按钮、你自己的 JavaScript 或第三方库创建了替代控件，请确保其无障碍且功能可靠；也就是说，它需要能够更好地与各种浏览器配合使用，而这些浏览器与所使用的 Web 标准的兼容性各不相同。祝愉快！
+
+## 参见
+
+### 学习路径
+
+- [你的第一个 HTML 表单](/zh-CN/docs/Learn/Forms/Your_first_form)
+- [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
+- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
+- [HTML5 的 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
+- [其他表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
+- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
+- [为 HTML 表单添加样式](/zh-CN/docs/Learn/Forms/Styling_web_forms)
+- [表单数据校验](/zh-CN/docs/Learn/Forms/Form_validation)
+- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
+
+### 高级主题
+
+- [使用 JavaScript 发送表单](/zh-CN/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- **如何构建自定义表单控件**
+- [旧式浏览器中的 HTML 表单](/zh-CN/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
+- [高级设计 HTML 表单](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
+- [表单控件兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
