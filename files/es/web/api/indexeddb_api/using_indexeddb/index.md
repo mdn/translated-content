@@ -950,15 +950,7 @@ input {
         req.onsuccess = function (evt) {
           var value = evt.target.result;
           var list_item = $(
-            "<li>" +
-              "[" +
-              cursor.key +
-              "] " +
-              "(biblioid: " +
-              value.biblioid +
-              ") " +
-              value.title +
-              "</li>",
+            `<li>[${cursor.key}] (biblioid: ${value.biblioid}) ${value.title}</li>`,
           );
           if (value.year != null) list_item.append(" - " + value.year);
 
