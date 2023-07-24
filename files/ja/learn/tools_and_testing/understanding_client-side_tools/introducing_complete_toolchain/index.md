@@ -248,7 +248,7 @@ OK、プロジェクトの初期設定を済ませましょう。
 
 この時点で、プロジェクトのコードファイル( HTML、 CSS、 JavaScript など) を取得し、 `src` ディレクトリに置きます。この章の目的ではないので、これらのファイルがどのように機能するかについては説明しません。 この章では、ツールがどのように動作するのかを教えるために、単にツールを動作させるためのものです。
 
-1. コード・ファイルを入手するには、<https://github.com/remy/mdn-will-it-miss> にアクセスし、このリポジトリーの内容をローカル ドライブのどこかにダウンロードして解凍します。 _Clone or download_ > _Download ZIP_ を選択すると、プロジェクト全体を zip ファイルとしてダウンロードできます。
+1. コードファイルを入手するには、<https://github.com/remy/mdn-will-it-miss> にアクセスし、このリポジトリーの内容をローカルドライブのどこかにダウンロードして解凍します。 _Clone or download_ > _Download ZIP_ を選択すると、プロジェクト全体を zip ファイルとしてダウンロードできます。
 
    ![The GitHub will it miss repo](github-will-it-miss.png)
 
