@@ -35,63 +35,63 @@ slug: Learn/CSS/Styling_text/Styling_lists
 
 우선, 간단한 목록 예제를 봅시다. 이 기사 전체에서 우리는 순서가 없는, 순서가 있는, 설명 목록을 살펴볼 것입니다 — 모두 유사한 스타일링 기능이 있으며, 일부 유형은 목록 유형과 다릅니다. 스타일이 지정되지 않은 예제는 [Github 에서 가능](http://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) 합니다 ([소스 코드](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html) 도 확인하십시오.)
 
-목록 예제의 HTML 은 다음과 같습니다:
+목록 예제의 HTML 은 다음과 같습니다.
 
 ```html
-<h2>Shopping (unordered) list</h2>
+<h2>장바구니</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>참조 단락, 참조 단락, 참조 단락, 참조 단락, 참조 단락,
+참조 단락, 참조 단락, 참조 단락, 참조 단락, 참조 단락.</p>
 
 <ul>
-  <li>Hummus</li>
-  <li>Pita</li>
-  <li>Green salad</li>
-  <li>Halloumi</li>
+  <li>허머스</li>
+  <li>피타</li>
+  <li>그린 샐러드</li>
+  <li>할루미</li>
 </ul>
 
-<h2>Recipe (ordered) list</h2>
+<h2>레시피 목록</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>참조 단락, 참조 단락, 참조 단락, 참조 단락, 참조 단락,
+참조 단락, 참조 단락, 참조 단락, 참조 단락, 참조 단락.</p>
 
 <ol>
-  <li>Toast pita, leave to cool, then slice down the edge.</li>
-  <li>Fry the halloumi in a shallow, non-stick pan, until browned on both sides.</li>
-  <li>Wash and chop the salad.</li>
-  <li>Fill pita with salad, hummus, and fried halloumi.</li>
+  <li>피타를 토스트하고 식힌 다음 가장자리를 자릅니다.</li>
+  <li>달라붙지 않는 얕은 팬에 할루미를 튀겨 양면이 갈색이 되도록 합니다.</li>
+  <li>샐러드를 씻고 자릅니다.</li>
+  <li>샐러드, 후무스, 튀긴 할루미로 피타 속을 채웁니다.</li>
 </ol>
 
-<h2>Ingredient description list</h2>
+<h2>성분 설명 목록</h2>
 
-<p>Paragraph for reference, paragraph for reference, paragraph for reference,
-paragraph for reference, paragraph for reference, paragraph for reference.</p>
+<p>참조 단락, 참조 단락, 참조 단락, 참조 단락, 참조 단락,
+참조 단락, 참조 단락, 참조 단락, 참조 단락, 참조 단락.</p>
 
 <dl>
-  <dt>Hummus</dt>
-  <dd>A thick dip/sauce generally made from chick peas blended with tahini, lemon juice, salt, garlic, and other ingredients.</dd>
-  <dt>Pita</dt>
-  <dd>A soft, slightly leavened flatbread.</dd>
-  <dt>Halloumi</dt>
-  <dd>A semi-hard, unripened, brined cheese with a higher-than-usual melting point, usually made from goat/sheep milk.</dd>
-  <dt>Green salad</dt>
-  <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
+  <dt>허머스</dt>
+  <dd>일반적으로 타히니, 레몬 주스, 소금, 마늘 및 기타 재료와 혼합된 병아리콩으로 만든 걸쭉한 딥/소스입니다.</dd>
+  <dt>피타</dt>
+  <dd>부드러우면서 살짝 누룩을 넣은 플랫브레드입니다.</dd>
+  <dt>할루미</dt>
+  <dd>일반적으로 염소/양의 우유로 만들어지며 녹는점이 평소보다 높은 반경성, 숙성되지 않은 소금물에 절인 치즈입니다.</dd>
+  <dt>그린 샐러드</dt>
+  <dd>많은 사람들이 케밥을 장식하는 데에 사용하는 녹색 건강 재료입니다.</dd>
 </dl>
 ```
 
-If you go to the live example now and investigate the list elements using [browser developer tools](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools), you'll notice a couple of styling defaults:
+지금 라이브 예제로 이동하여 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용하여 목록 요소를 조사하면, 몇 가지 스타일 기본값을 알 수 있습니다.:
 
-- The {{htmlelement("ul")}} and {{htmlelement("ol")}} elements have a top and bottom {{cssxref("margin")}} of `16px` (`1em`) and a {{cssxref("padding-left")}} of `40px` (`2.5em`.)
-- The list items ({{htmlelement("li")}} elements) have no set defaults for spacing.
-- The {{htmlelement("dl")}} element has a top and bottom {{cssxref("margin")}} of `16px` (`1em`), but no padding set.
-- The {{htmlelement("dd")}} elements have {{cssxref("margin-left")}} of `40px` (`2.5em`.)
-- The {{htmlelement("p")}} elements we've included for reference have a top and bottom {{cssxref("margin")}} of `16px` (`1em`), the same as the different list types.
+- {{htmlelement("ul")}} 및 {{htmlelement("ol")}} 요소의 위쪽 및 아래쪽 {{cssxref("margin")}}은 16px(1em)이고 {{cssxref("padding-left")}}은 40px(2.5em)입니다.
+- 목록 항목({{htmlelement("li")}} 요소)에는 간격에 대한 기본값이 설정되어 있지 않습니다.
+- {{htmlelement("dl")}} 요소에는 16px(1em)의 상단 및 하단 {{cssxref("margin")}}이 있지만 안쪽 여백 세트는 없습니다.
+- {{htmlelement("dd")}} 요소의 {{cssxref("margin-left")}}는 40px(2.5em)입니다.
+- 참조용으로 포함된 {{htmlelement("p")}} 요소의 상단 및 하단 {{cssxref("margin")}}은 다른 목록 유형과 마찬가지로 16px(1em)입니다.
 
-## Handling list spacing
+## 목록 간격 처리
 
-When styling lists, you need to adjust their styles so they keep the same vertical spacing as their surrounding elements (such as paragraphs and images; sometimes called vertical rhythm), and the same horizontal spacing as each other (you can see the [finished styled example](http://mdn.github.io/learning-area/css/styling-text/styling-lists/) on Github, and [find the source code](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html) too.)
+목록 스타일을 지정할 때 스타일을 조정하여 주변 요소(예: 단락 및 이미지, 때로는 수직 리듬이라고도 함)와 동일한 세로 간격을 유지하고 서로 동일한 가로 간격을 유지해야 합니다(Github에서 완성된 [스타일 예제](http://mdn.github.io/learning-area/css/styling-text/styling-lists/)를 볼 수 있으며 [소스 코드](https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html)도 찾을 수 있음).
 
-The CSS used for the text styling and spacing is as follows:
+텍스트 스타일 및 간격에 사용되는 CSS는 다음과 같습니다.
 
 ```css
 /* General styles */
@@ -129,22 +129,22 @@ dd {
 }
 ```
 
-- The first rule sets a sitewide font and a baseline font size of 10px. These are inherited by everything on the page.
-- Rules 2 and 3 set relative font sizes for the headings, different list types (the children of the list elements inherit these), and paragraphs. This means that each paragraph and list will have the same font size and top and bottom spacing, helping to keep the vertical rhythm consistent.
-- Rule 4 sets the same {{cssxref("line-height")}} on the paragraphs and list items — so the paragraphs and each individual list item will have the same spacing between lines. This will also help to keep the vertical rhythm consistent.
-- Rules 5 and 6 apply to the description list — we set the same `line-height` on the description list terms and descriptions as we did with the paragraphs and list items. Again, consistency is good! We also make the description terms have bold font, so they visually stand out easier.
+- 첫 번째 규칙은 사이트 전체 글꼴과 기준 글꼴 크기를 10px로 설정합니다. 이는 페이지의 모든 항목에 상속됩니다.
+- 두번째 규칙과 세번째 규칙은 제목, 다양한 목록 유형(목록 요소의 자식이 이를 상속함) 및 단락에 대한 상대 글꼴 크기를 설정합니다. 즉, 각 단락과 목록은 동일한 글꼴 크기와 위쪽 및 아래쪽 간격을 가지므로 세로 리듬을 일관되게 유지하는 데 도움이 됩니다.
+- 네번째 규칙은 단락과 목록 항목에 동일한 {{cssxref("line-height")}}를 설정하므로 단락과 각 개별 목록 항목은 줄 사이의 간격이 동일합니다. 이것은 또한 수직 리듬을 일관되게 유지하는 데 도움이 됩니다.
+- 다섯번째 규칙과 여섯번째 규칙은 설명 목록에 적용됩니다. 단락 및 목록 항목에서와 마찬가지로 설명 목록 용어 및 설명에 동일한 `line-height`를 설정했습니다. 다시 말하지만 일관성이 좋습니다! 또한 설명 용어를 굵은 글꼴로 만들어 시각적으로 더 쉽게 눈에 띕니다.
 
-## List-specific styles
+## 목록별 스타일
 
-Now we've looked at general spacing techniques for lists, let's explore some list-specific properties. There are three properties you should know about to start with, which can be set on {{htmlelement("ul")}} or {{htmlelement("ol")}} elements:
+이제 목록에 대한 일반적인 간격 기술을 살펴보았습니다. 이제 몇 가지 목록 관련 속성을 살펴보겠습니다. {{htmlelement("ul")}} 또는 {{htmlelement("ol")}} 요소에 설정할 수 있는 세 가지 속성으로 시작해야 합니다.
 
-- {{cssxref("list-style-type")}}: Sets the type of bullets to use for the list, for example, square or circle bullets for an unordered list, or numbers, letters or roman numerals for an ordered list.
-- {{cssxref("list-style-position")}}: Sets whether the bullets appear inside the list items, or outside them before the start of each item.
-- {{cssxref("list-style-image")}}: Allows you to use a custom image for the bullet, rather than a simple square or circle.
+- {{cssxref("list-style-type")}}: 목록에 사용할 글머리 기호 유형을 설정합니다. 예를 들어 정렬되지 않은 목록의 경우 사각형 또는 원형 글머리 기호, 순서가 지정된 목록의 경우 숫자, 문자 또는 로마 숫자입니다.
+- {{cssxref("list-style-position")}}: 글머리 기호가 목록 항목 내부에 표시되는지 아니면 각 항목 시작 전에 목록 항목 외부에 표시되는지 설정합니다.
+- {{cssxref("list-style-image")}}: 간단한 사각형이나 원이 아닌 글머리 기호에 대한 사용자 지정 이미지를 사용할 수 있습니다.
 
-### Bullet styles
+### 글머리 기호 스타일
 
-As mentioned above, the {{cssxref("list-style-type")}} property allows you to set what type of bullet to use for the bullet points. In our example, we've set the ordered list to use uppercase roman numerals, with:
+위에서 언급했듯이, {{cssxref("list-style-type")}} 속성을 사용하면 글머리 기호에 사용할 글머리 기호 유형을 설정할 수 있습니다. 예시에서는 대문자 로마 숫자를 사용하도록 정렬된 목록을 다음과 같이 설정했습니다.
 
 ```css
 ol {
@@ -152,17 +152,17 @@ ol {
 }
 ```
 
-This gives us the following look:
+이는 다음과 같은 모습을 보여줍니다.
 
 ![an ordered list with the bullet points set to appear outside the list item text.](outer-bullets.png)
 
-You can find a lot more options by checking out the {{cssxref("list-style-type")}} reference page.
+{{cssxref("list-style-type")}} 참조 페이지를 확인하면 더 많은 옵션을 찾을 수 있습니다.
 
-### Bullet position
+### 글머리 기호 위치
 
-The {{cssxref("list-style-position")}} property sets whether the bullets appear inside the list items, or outside them before the start of each item. The default value is `outside`, which causes the bullets to sit outside the list items, as seen above.
+{{cssxref("list-style-position")}} 속성은 글머리 기호가 목록 항목 내부에 표시되는지 또는 각 항목 시작 전에 목록 항목 외부에 표시되는지를 설정합니다. 기본값은 `outside`이며, 위에 표시된 것처럼 글머리 기호가 목록 항목 외부에 위치합니다.
 
-If you set the value to `inside`, the bullets will sit inside the lines:
+값을 `inside`에 설정하면 글머리 기호가 줄 안쪽에 표시됩니다.
 
 ```css
 ol {
