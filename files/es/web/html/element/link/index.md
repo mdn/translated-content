@@ -30,6 +30,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
     - `"use-credentials"`
       - : Una solicitud a un origen cruzado (esto es, con el encabezado HTTP `Origin:`) es realizada, enviando credenciales (es decir, se envían cookies, certificado y autenticación básica HTTP). Si el servidor no otorga credenciales al sitio de origen (a través del encabezado HTTP `Access-Control-Allow-Credentials:`), la imagen estará _corrupta_, y su uso estará restringido.Si no está presente, el recurso es obtenido sin una solicitud CORS (sin enviar el encabezado HTTP `Origin:`), previniendo así su uso no corrupto en elementos {{HTMLElement('canvas')}}. Si se introduce un valor no permitido, se maneja como si usara el valor **anonymous**. Véase [atributos de configuración CORS](/es/docs/Web/HTML/Atributos_de_configuracion_CORS) para más información.
 - `disabled` {{Non-standard_inline}}
+
   - : Este atributo es usado para deshabilitar una relación de enlace. Agregando programación, este atributo puede ser usado para habilitar o deshabilitar la relación con distintas hojas de estilos.
     > **Nota:** Aunque no hay atributo `disabled` en el estándar de HTML, **sí** hay un atributo `disabled` en el objeto DOM `HTMLLinkElement`.El uso de `disabled` como atributo HTML no es estándar, y solo puede ser usado en algunos navegadores ([W3 #27677](https://www.w3.org/Bugs/Public/show_bug.cgi?id=27677)). **No debe usarse**. Para lograr un efecto similar, se puede usar una de las siguientes técnicas:
     >
