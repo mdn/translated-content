@@ -18,7 +18,7 @@ HTML에 대한 연구에서 알 수 있듯이, 요소에는 마크업되는 요�
         <a
           href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >설치된 기본 소프트웨어</a
-        >, 
+        >,
         <a
           href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업</a
@@ -34,7 +34,7 @@ HTML에 대한 연구에서 알 수 있듯이, 요소에는 마크업되는 요�
   </tbody>
 </table>
 
-## 존재 및 값 선택자 
+## 존재 및 값 선택자
 
 이러한 선택기는 속성의 존재 여부(예: `href`) 또는 속성 값에 대한 다양한 일치 항목을 기준으로 요소를 선택할 수 있습니다.
 
@@ -75,7 +75,7 @@ HTML에 대한 연구에서 알 수 있듯이, 요소에는 마크업되는 요�
       <td><code>[<em>attr</em>|=<em>value</em>]</code></td>
       <td><code>div[lang|="zh"]</code></td>
       <td>
-        값이 정확히 <em>value</em>이거나 바로 뒤에 하이픈이 오는 <em>value</em>로 시작하는 <em>attr</em> 속성이 있는 요소와 일치합니다. 
+        값이 정확히 <em>value</em>이거나 바로 뒤에 하이픈이 오는 <em>value</em>로 시작하는 <em>attr</em> 속성이 있는 요소와 일치합니다.
       </td>
     </tr>
   </tbody>
@@ -89,7 +89,7 @@ HTML에 대한 연구에서 알 수 있듯이, 요소에는 마크업되는 요�
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/attribute.html", '100%', 800)}}
 
-## 하위 문자열 일치 선택자 
+## 하위 문자열 일치 선택자
 
 이러한 선택자는 속성 값 내에서 하위 문자열의 고급 일치를 허용합니다. 예를 들어 `box-warning` 및 `box-error` 클래스가 있고 문자열 "box-"로 시작하는 모든 항목을 일치시키려는 경우, `[class^="box-"]`를 사용하여 둘 다 선택할 수 있습니다(또는 위 섹션에서 설명한 `[class|="box"]`).
 
