@@ -46,7 +46,7 @@ Le paragraphe précédent permet de comprendre pourquoi nous avons créé un mod
 ## Guides relatifs à la mise en forme des formulaires
 
 - [Mise en forme des formulaires web](/fr/docs/Learn/Forms/Styling_web_forms)
-  - : Cet article est une introduction à la mise en forme des formulaires à l'aide CSS, couvrant l'ensemble des bases nécessaires à une mise en forme simple.
+  - : Cet article est une introduction à la mise en forme des formulaires à l'aide de CSS, couvrant l'ensemble des bases nécessaires à une mise en forme simple.
 - [Mise en forme avancée des formulaires](/fr/docs/Learn/Forms/Advanced_form_styling)
   - : Ici, nous verrons certaines techniques plus avancées qui s'avèrent nécessaires lorsqu'on travaille avec certains éléments de formulaire plus difficiles à mettre en forme.
 - [Les pseudo-classes relatives à l'interface utilisateur](/fr/docs/Learn/Forms/UI_pseudo-classes)
