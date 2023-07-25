@@ -58,7 +58,7 @@ HTML에 대한 연구에서 알 수 있듯이, 요소에는 마크업되는 요�
       <td><code>[<em>attr</em>=<em>value</em>]</code></td>
       <td><code>a[href="https://example.com"]</code></td>
       <td>
-        값이 정확히 <em>value</em>(따옴표 안의 문자열)인 <em>attr</em> 속성이 있는 요소와 일치합니다.  
+        값이 정확히 <em>value</em>(따옴표 안의 문자열)인 <em>attr</em> 속성이 있는 요소와 일치합니다.
       </td>
     </tr>
     <tr>
