@@ -19,20 +19,19 @@ build/
 /files/fr/glossary/grid_axis/index.md
 /files/fr/glossary/grid_lines/index.md
 /files/fr/glossary/main_axis/index.md
+/files/fr/learn/server-side/django/forms/index.md
+/files/pt-br/learn/server-side/django/forms/index.md
 /files/zh-cn/learn/css/howto/css_faq/index.md
+/files/zh-cn/learn/server-side/django/forms/index.md
 
 # A full pass on all Markdown files is being performed.
 # The following folders still need a full pass:
 
 # es
-/files/es/web/api/**/*.md
 /files/es/web/css/**/*.md
-/files/es/web/html/**/*.md
-/files/es/web/http/**/*.md
-/files/es/web/javascript/**/*.md
+/files/es/web/javascript/reference/**/*.md
 
 # fr
-/files/fr/learn/server-side/**/*.md
 /files/fr/mozilla/add-ons/webextensions/api/**/*.md
 /files/fr/web/api/**/*.md
 /files/fr/web/css/**/*.md
@@ -41,7 +40,6 @@ build/
 
 # ja
 /files/ja/learn/css/**/*.md
-/files/ja/learn/html/**/*.md
 /files/ja/learn/javascript/**/*.md
 /files/ja/learn/server-side/**/*.md
 /files/ja/mozilla/**/*.md
@@ -56,7 +54,6 @@ build/
 /files/ja/web/svg/**/*.md
 
 # ko
-/files/ko/games/**/*.md
 /files/ko/glossary/**/*.md
 /files/ko/learn/**/*.md
 /files/ko/learn/css/**/*.md
@@ -77,9 +74,6 @@ build/
 /files/ko/web/svg/**/*.md
 
 # pt-br
-/files/pt-br/learn/html/**/*.md
-/files/pt-br/learn/javascript/**/*.md
-/files/pt-br/learn/server-side/**/*.md
 /files/pt-br/web/api/**/*.md
 /files/pt-br/web/css/**/*.md
 /files/pt-br/web/html/**/*.md
@@ -100,8 +94,6 @@ build/
 /files/ru/web/svg/**/*.md
 
 # zh-cn
-/files/zh-cn/learn/javascript/**/*.md
-/files/zh-cn/learn/server-side/**/*.md
 /files/zh-cn/web/api/**/*.md
 /files/zh-cn/web/css/**/*.md
 /files/zh-cn/web/html/**/*.md

@@ -17,7 +17,7 @@ Para comenzar a capturar video desde la pantalla, llama a `getDisplayMedia()` en
 
 ```js
 captureStream = await navigator.mediaDevices.getDisplayMedia(
-  displayMediaOptions
+  displayMediaOptions,
 );
 ```
 

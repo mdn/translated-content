@@ -30,7 +30,9 @@ El siguiente código podría ser usado si quisieras primero comprobar si las not
 function notifyMe() {
   // Comprobamos si el navegador soporta las notificaciones
   if (!("Notification" in window)) {
-    console.log("Este navegador no es compatible con las notificaciones de escritorio");
+    console.log(
+      "Este navegador no es compatible con las notificaciones de escritorio",
+    );
   }
 
   // Comprobamos si los permisos han sido concedidos anteriormente
@@ -40,7 +42,10 @@ function notifyMe() {
   }
 
   // Si no, pedimos permiso para la notificación
-  else if (Notification.permission !== 'denied' || Notification.permission === "default") {
+  else if (
+    Notification.permission !== "denied" ||
+    Notification.permission === "default"
+  ) {
     Notification.requestPermission(function (permission) {
       // Si el usuario nos lo concede, creamos la notificación
       if (permission === "granted") {

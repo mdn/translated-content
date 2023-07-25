@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<pre>`** représente du texte préformaté, généralement écrit avec une [police à chasse fixe](https://fr.wikipedia.org/wiki/Police_d%27%C3%A9criture_%C3%A0_chasse_fixe). Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.
+L'élément [HTML](/fr/docs/Web/HTML) **`<pre>`** représente du texte préformaté, généralement écrit avec une [police à chasse fixe](https://fr.wikipedia.org/wiki/Police_d%27écriture_à_chasse_fixe). Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.
 
 {{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
 

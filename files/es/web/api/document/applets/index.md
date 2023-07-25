@@ -14,7 +14,7 @@ del documento.
 ### Sintaxis
 
 ```js
-nodeList = document.applets
+nodeList = document.applets;
 ```
 
 ### Ejemplo

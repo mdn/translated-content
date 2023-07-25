@@ -14,7 +14,7 @@ JavaScript está influenciado sobre todo por la sintaxis de Java, C y C++, pero 
 JavaScript distingue entre mayúsculas y minúsculas (es **case-sensitive**) y utiliza el conjunto de caracteres **Unicode**. Por ejemplo, la palabra «Früh» (que significa "temprano" en Alemán) se podría usar como el nombre de una variable.
 
 ```js
-let Früh = "foobar"
+let Früh = "foobar";
 ```
 
 Pero, la variable `früh` no es la misma que `Früh` porque JavaScript distingue entre mayúsculas y minúsculas.
@@ -87,18 +87,18 @@ Un intento de acceder a una variable no declarada da como resultado el disparo d
 
 ```js
 var a;
-console.log('El valor de a es ' + a); // El valor de a es undefined
+console.log("El valor de a es " + a); // El valor de a es undefined
 
-console.log('El valor de b es ' + b); // El valor de b es undefined
+console.log("El valor de b es " + b); // El valor de b es undefined
 var b;
 // Esto puede desconcertarte hasta que leas 'Elevación de variable' a continuación
 
-console.log('El valor de c es ' + c); // Error de referencia no detectado: c no está definida
+console.log("El valor de c es " + c); // Error de referencia no detectado: c no está definida
 
 let x;
-console.log('El valor de x es ' + x); // El valor de x es undefined
+console.log("El valor de x es " + x); // El valor de x es undefined
 
-console.log('El valor de y es ' + y); // Error de referencia no detectada: y no está definida
+console.log("El valor de y es " + y); // Error de referencia no detectada: y no está definida
 let y;
 ```
 
@@ -124,7 +124,7 @@ El valor `undefined` se convierte en `NaN` cuando se usa en contexto numérico.
 
 ```js
 var a;
-a + 2;  // Evalúa a NaN
+a + 2; // Evalúa a NaN
 ```
 
 Cuando evalúas una variable {{JSxRef("null")}}, el valor nulo se comporta como `0` en contextos numéricos y como `false` en contextos booleanos. Por ejemplo:
@@ -146,7 +146,7 @@ Por ejemplo, el siguiente código registrará `5`, porque el ámbito de `x` es e
 if (true) {
   var x = 5;
 }
-console.log(x);  // x es 5
+console.log(x); // x es 5
 ```
 
 Este comportamiento cambia cuando se usa la declaración `let` (introducida en ECMAScript 2015).
@@ -175,11 +175,11 @@ var x = 3;
  * Ejemplo 2
  */
 // devolverá un valor de undefined
-var myVar = 'my value';
+var myVar = "my value";
 
-(function() {
+(function () {
   console.log(myVar); // undefined
-  var myVar = 'valor local';
+  var myVar = "valor local";
 })();
 ```
 
@@ -196,12 +196,12 @@ x = 3;
 /**
  * Ejemplo 2
  */
-var myVar = 'my value';
+var myVar = "my value";
 
-(function() {
+(function () {
   var myVar;
   console.log(myVar); // undefined
-  myVar = 'valor local';
+  myVar = "valor local";
 })();
 ```
 
@@ -224,16 +224,15 @@ En el caso de las funciones, solo se incluyen _declaraciones_ de función, pero 
 foo(); // "bar"
 
 function foo() {
-  console.log('bar');
+  console.log("bar");
 }
-
 
 /* Expresión de función */
 
 baz(); // TypeError: baz no es una función
 
-var baz = function() {
-  console.log('bar2');
+var baz = function () {
+  console.log("bar2");
 };
 ```
 
@@ -263,7 +262,7 @@ No puedes declarar una constante con el mismo nombre que una función o una vari
 
 ```js
 // ESTO CAUSARÁ UN ERROR
-function f() {};
+function f() {}
 const f = 5;
 
 // ESTO TAMBIÉN CAUSARÁ UN ERROR
@@ -278,15 +277,15 @@ function f() {
 Sin embargo, las propiedades de los objetos asignados a constantes no son protegidas, es por esto que la siguiente declaración se ejecuta sin problemas.
 
 ```js
-const MY_OBJECT = {'key': 'value'};
-MY_OBJECT.key = 'otherValue';
+const MY_OBJECT = { key: "value" };
+MY_OBJECT.key = "otherValue";
 ```
 
 Además, el contenido de los arreglos tampoco está protegido cuando es asignado a una constante, es por esto que la siguiente declaración se ejecuta sin problemas.
 
 ```js
-const MY_ARRAY = ['HTML','CSS'];
-MY_ARRAY.push('JAVASCRIPT');
+const MY_ARRAY = ["HTML", "CSS"];
+MY_ARRAY.push("JAVASCRIPT");
 console.log(MY_ARRAY); // registra ['HTML','CSS','JAVASCRIPT'];
 ```
 
@@ -323,7 +322,7 @@ var answer = 42;
 Y luego, puedes asignarle una cadena a esa misma variable, por ejemplo:
 
 ```js
-answer = 'Gracias por todo el pescado...';
+answer = "Gracias por todo el pescado...";
 ```
 
 Debido a que JavaScript se tipifica dinámicamente, esta asignación no genera un mensaje de error.
@@ -333,15 +332,15 @@ Debido a que JavaScript se tipifica dinámicamente, esta asignación no genera u
 En expresiones que involucran valores numéricos y de cadena con el operador `+`, JavaScript convierte los valores numéricos en cadenas. Por ejemplo, considera las siguientes declaraciones:
 
 ```js
-x = 'La respuesta es ' + 42 // "La respuesta es 42"
-y = 42 + ' es la respuesta' // "42 es la respuesta"
+x = "La respuesta es " + 42; // "La respuesta es 42"
+y = 42 + " es la respuesta"; // "42 es la respuesta"
 ```
 
 Con todos los demás operadores, JavaScript _no_ convierte valores numéricos en cadenas. Por ejemplo:
 
 ```js
-'37' - 7 // 30
-'37' + 7 // "377"
+"37" - 7; // 30
+"37" + 7; // "377"
 ```
 
 ### Convertir texto a números
@@ -356,14 +355,14 @@ En el caso que un valor representando un número está en memoria como texto, ha
 > **Nota:** Además, una práctica recomendada para `parseInt` es incluir siempre el parámetro _radix_. El parámetro `radix` se utiliza para especificar qué sistema numérico se utilizará.
 
 ```js
-parseInt('101', 2) // 5
+parseInt("101", 2); // 5
 ```
 
 Un método alternativo para recuperar un número de una cadena es con el operador `+` (más unario):
 
-```js
-'1.1' + '1.1' // '1.11.1'
-(+'1.1') + (+'1.1') // 2.2
+```js-nolint
+"1.1" + "1.1"; // '1.11.1'
+(+"1.1") + (+"1.1"); // 2.2
 // Nota: los paréntesis se agregan para mayor claridad, no son necesarios.
 ```
 
@@ -386,7 +385,7 @@ Un arreglo literal es una lista de cero o más expresiones, cada una de las cual
 El siguiente ejemplo crea el arreglo `coffees` con tres elementos y `length` de tres:
 
 ```js
-let coffees = ['French Roast', 'Colombian', 'Kona'];
+let coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
 > **Nota:** Un arreglo literal es un tipo de _iniciador de objeto_. Consulta {{JSxRef("Guide/Trabajando_con_objectos", "Uso de iniciadores de objetos", "#Uso_de_iniciadores_de_objeto")}}.
@@ -400,7 +399,7 @@ Si creas un arreglo utilizando un literal en un script de nivel superior, JavaSc
 No tienes que especificar todos los elementos en un arreglo literal. Si colocas dos comas en una fila, el arreglo completa el valor `undefined` para los elementos no especificados. El siguiente ejemplo crea el arreglo `fish`:
 
 ```js
-let fish = ['Lion', , 'Angel'];
+let fish = ["Lion", , "Angel"];
 ```
 
 Este arreglo tiene dos elementos con valores y un elemento vacío:
@@ -415,20 +414,20 @@ En el siguiente ejemplo, el `length` del arreglo es tres. No hay `myList[3]`. To
 
 > **Nota:** Las comas finales pueden crear errores en versiones anteriores del navegador y se recomienda eliminarlas.
 
-```js
-let myList = ['home', , 'school', ];
+```js-nolint
+let myList = ["home", , "school", ];
 ```
 
 En el siguiente ejemplo, el `length` del arreglo es cuatro, y faltan `myList[0]` y `myList[2]`.
 
 ```js
-let myList = [ ,'home', , 'school'];
+let myList = [, "home", , "school"];
 ```
 
 En el siguiente ejemplo, el `length` del arreglo es cuatro, y faltan `myList[1]` y `myList[3]`. **Solo se ignora la última coma.**
 
 ```js
-let myList = ['home', , 'school', , ];
+let myList = ["home", , "school", ,];
 ```
 
 Entender el comportamiento de las comas adicionales es importante para comprender JavaScript como lenguaje.
@@ -496,27 +495,27 @@ Un objeto literal es una lista de cero o más pares de nombres de propiedad y va
 El siguiente es un ejemplo de un objeto literal. El primer elemento del objeto `car` define una propiedad, `myCar`, y le asigna una nueva cadena, "`Saturn`"; al segundo elemento, la propiedad `getCar`, se le asigna inmediatamente el resultado de invocar a la función `(carTypes("Honda"));` el tercer elemento, la propiedad `special`, utiliza una variable (`sales`) existente.
 
 ```js
-var sales = 'Toyota';
+var sales = "Toyota";
 
 function carTypes(name) {
-  if (name === 'Honda') {
+  if (name === "Honda") {
     return name;
   } else {
     return "Lo sentimos, no vendemos " + name + ".";
   }
 }
 
-var car = { myCar: 'Saturn', getCar: carTypes('Honda'), special: sales };
+var car = { myCar: "Saturn", getCar: carTypes("Honda"), special: sales };
 
-console.log(car.myCar);   // Saturn
-console.log(car.getCar);  // Honda
+console.log(car.myCar); // Saturn
+console.log(car.getCar); // Honda
 console.log(car.special); // Toyota
 ```
 
 Además, puedes utilizar un literal numérico o de cadena para el nombre de una propiedad o anidar un objeto dentro de otro. El siguiente ejemplo usa estas opciones.
 
 ```js
-var car = { manyCars: {a: 'Saab', b: 'Jeep'}, 7: 'Mazda' };
+var car = { manyCars: { a: "Saab", b: "Jeep" }, 7: "Mazda" };
 
 console.log(car.manyCars.b); // Jeep
 console.log(car[7]); // Mazda
@@ -545,17 +544,17 @@ Juntos, estos también acercan los objetos literales y las declaraciones de clas
 
 ```js
 var obj = {
-    // __proto__
-    __proto__: theProtoObj,
-    // Abreviatura de "handler: handler"
-    handler,
-    // Métodos
-    toString() {
-     // Llamadas a super
-     return 'd ' + super.toString();
-    },
-    // Nombres de propiedad calculados (dinámicos)
-    [ 'prop_' + (() => 42)() ]: 42
+  // __proto__
+  __proto__: theProtoObj,
+  // Abreviatura de "handler: handler"
+  handler,
+  // Métodos
+  toString() {
+    // Llamadas a super
+    return "d " + super.toString();
+  },
+  // Nombres de propiedad calculados (dinámicos)
+  ["prop_" + (() => 42)()]: 42,
 };
 ```
 
@@ -573,19 +572,19 @@ Una cadena literal consta de cero o más caracteres encerrados entre comillas do
 
 Los siguientes son ejemplos de cadenas literales:
 
-```js
-'foo'
-"bar"
-'1234'
-"una linea \n otra linea"
-"John's cat"
+```js-nolint
+'foo';
+"bar";
+'1234';
+"una linea \n otra linea";
+"John's cat";
 ```
 
 Puedes llamar a cualquiera de los métodos del objeto {{JSxRef("String")}} en un valor de cadena literal. JavaScript automáticamente convierte la cadena literal en un objeto `String` temporal, llama al método y luego descarta el objeto `String` temporal. También puedes usar la propiedad `String.length` con una cadena literal:
 
 ```js
 // Imprimirá el número de símbolos en la cadena, incluidos los espacios en blanco.
-console.log("John's cat".length)  // En este caso, 10.
+console.log("John's cat".length); // En este caso, 10.
 ```
 
 En ES2015, también están disponibles las _plantillas literales_. Las plantillas literales están encerradas por la comilla invertida (`` ` ``) ([Acento_grave](https://es.wikipedia.org/wiki/Acento_grave)) en lugar de comillas simples o dobles.
@@ -596,16 +595,17 @@ Opcionalmente, puedes agregar una etiqueta para permitirte personalizar la const
 
 ```js
 // Creación de cadenas literales básicas
-`en JavaScript '\n' es un avance de línea.`
+`en JavaScript '\n' es un avance de línea.`;
 
 // Cadenas multilínea
 `En JavaScript, las cadenas de plantilla pueden ocupar
  varias líneas, pero las cadenas entrecomillas dobles o
- simples no pueden.`
+ simples no pueden.`;
 
 // Interpolación de cadenas
-var name = 'Bob', time = 'today';
-`Hola ${name}, ¿cómo estás ${time}?`
+var name = "Bob",
+  time = "hoy";
+`Hola ${name}, ¿cómo estás ${time}?`;
 
 // Construye un prefijo de petición HTTP utilizado para interpretar los reemplazos y la construcción
 POST`http://foo.org/bar?a=${a}&b=${b}
@@ -622,29 +622,29 @@ Debes usar cadenas literales a menos que específicamente necesites usar un obje
 Adicionalmente a los caracteres normales, también puedes incluir caracteres especiales en las cadenas, como muestra el siguiente ejemplo:
 
 ```js
-"una linea \n otra linea"
+"una linea \n otra linea";
 ```
 
 La siguiente tabla enumera los caracteres especiales que se pueden usar en una cadena JavaScript.
 
-| Caracter    | Significado                                                                                                                                                                                                                                                                          |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `\0`        | Byte nulo                                                                                                                                                                                                                                                                            |
-| `\b`        | Retroceso                                                                                                                                                                                                                                                                            |
-| `\f`        | Avance de Página                                                                                                                                                                                                                                                                     |
-| `\n`        | Nueva Línea                                                                                                                                                                                                                                                                          |
-| `\r`        | Retorno de carro                                                                                                                                                                                                                                                                     |
-| `\t`        | Tabulación                                                                                                                                                                                                                                                                           |
-| `\v`        | Tabulación vertical                                                                                                                                                                                                                                                                  |
-| `\'`        | Apóstrofo o comilla simple                                                                                                                                                                                                                                                           |
-| `\"`        | Comilla doble                                                                                                                                                                                                                                                                        |
-| `\\`        | Caracter de barra invertida                                                                                                                                                                                                                                                          |
-| `\XXX`      | El caracter con la codificación Latin-1 especificada por hasta tres dígitos octales _XXX_ entre `0` y `377`. Por ejemplo, `\251` es la secuencia octal del símbolo de copyright.                                                                                                     |
-|             |                                                                                                                                                                                                                                                                                      |
-| `\xXX`      | El caracter con la codificación Latin-1 especificada por los dos dígitos hexadecimales _XX_ entre `00` y `FF`. Por ejemplo, `\xA9` es la secuencia hexadecimal del símbolo de copyright.                                                                                             |
-|             |                                                                                                                                                                                                                                                                                      |
+| Caracter    | Significado                                                                                                                                                                                                                                              |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `\0`        | Byte nulo                                                                                                                                                                                                                                                |
+| `\b`        | Retroceso                                                                                                                                                                                                                                                |
+| `\f`        | Avance de Página                                                                                                                                                                                                                                         |
+| `\n`        | Nueva Línea                                                                                                                                                                                                                                              |
+| `\r`        | Retorno de carro                                                                                                                                                                                                                                         |
+| `\t`        | Tabulación                                                                                                                                                                                                                                               |
+| `\v`        | Tabulación vertical                                                                                                                                                                                                                                      |
+| `\'`        | Apóstrofo o comilla simple                                                                                                                                                                                                                               |
+| `\"`        | Comilla doble                                                                                                                                                                                                                                            |
+| `\\`        | Caracter de barra invertida                                                                                                                                                                                                                              |
+| `\XXX`      | El caracter con la codificación Latin-1 especificada por hasta tres dígitos octales _XXX_ entre `0` y `377`. Por ejemplo, `\251` es la secuencia octal del símbolo de copyright.                                                                         |
+|             |                                                                                                                                                                                                                                                          |
+| `\xXX`      | El caracter con la codificación Latin-1 especificada por los dos dígitos hexadecimales _XX_ entre `00` y `FF`. Por ejemplo, `\xA9` es la secuencia hexadecimal del símbolo de copyright.                                                                 |
+|             |                                                                                                                                                                                                                                                          |
 | `\uXXXX`    | El caracter Unicode especificado por los cuatro dígitos hexadecimales _XXXX_. Por ejemplo, `\u00A9` es la secuencia Unicode para el símbolo de copyright. Consulta {{JSxRef("Gramatica_lexica", "Secuencias de escape Unicode", "#Cadenas_literales")}}. |
-| `\u{XXXXX}` | El punto de código escape Unicode. Por ejemplo, `\u{2F804}` es el mismo que el escape Unicode simple `\uD87E\uDC04`.                                                                                                                                                                 |
+| `\u{XXXXX}` | El punto de código escape Unicode. Por ejemplo, `\u{2F804}` es el mismo que el escape Unicode simple `\uD87E\uDC04`.                                                                                                                                     |
 
 #### Escapar caracteres
 
@@ -652,7 +652,7 @@ Para caracteres no enumerados en la tabla, la precedencia de la barra inversa es
 
 Puedes insertar comillas dobles dentro de una cadena anteponiendo un caracter de barra inversa. Esto se conoce como _escapar_ las comillas. Por ejemplo:
 
-```js
+```js-nolint
 var quote = "Él leyó \"La cremación de Sam McGee\" de R.W. Service.";
 console.log(quote);
 ```
@@ -666,37 +666,37 @@ El leyó "La cremación de Sam McGee" de R.W. Service.
 Para incluir una barra invertida literal dentro de una cadena, debes escapar el caracter de barra invertida. Por ejemplo, para asignar la ruta del archivo `c:\temp` a una cadena, usa lo siguiente:
 
 ```js
-var home = 'c:\\temp';
+var home = "c:\\temp";
 ```
 
 También puedes escapar los saltos de línea precediéndolos con una barra invertida. La barra invertida y el salto de línea se eliminan del valor de la cadena.
 
 ```js
-var str = 'esta cadena \
+var str =
+  "esta cadena \
 se divide \
 en múltiples \
-líneas.'
-console.log(str);   // esta cadena se divide en múltiples líneas.
+líneas.";
+console.log(str); // esta cadena se divide en múltiples líneas.
 ```
 
 Aunque JavaScript no tiene sintaxis "«heredoc»" se puede acercar insertando una barra inversa y un salto de linea al final de cada linea:
 
 ```js
 var poem =
-'Las rosas son rojas,\n\
+  "Las rosas son rojas,\n\
 Las violetas son azules.\n\
 El azúcar es dulce,\n\
-y foo también.'
+y foo también.";
 ```
 
 ECMAScript 2015 introduce un nuevo tipo de literal, a saber, {{JSxRef("template_strings", "plantillas literales")}}. Esto permite muchas nuevas funciones, ¡incluidas cadenas multilínea!
 
 ```js
-var poem =
-`Las rosas son rojas,
+var poem = `Las rosas son rojas,
 Las violetas son azules.
 El azúcar es dulce,
-y foo también.`
+y foo también.`;
 ```
 
 ## Mas información

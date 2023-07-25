@@ -51,8 +51,8 @@ En el siguiente código, abrimos una transacción read/write en nuestra base de 
 // Abrimos nuestra base de datos
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
 
   // Almacenar el resultado de la apertura de la base de datos en la variable db. Esta es usada mucho después
   db = DBOpenRequest.result;
@@ -63,19 +63,30 @@ DBOpenRequest.onsuccess = function(event) {
 
 function addData() {
   // Crea un nuevo objeto listo para ser insertado en la IDB
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  var newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // Inicia una transacción de lectura/escritura db transaction, lista para agregar los datos
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // Informa sobre el éxito de la inicio de la transacción
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML +=
+      "<li>Transaction completed: database modification finished.</li>";
   };
 
-
-  transaction.onerror = function(event) {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
   };
 
   // Crea una almacén de objetos en la transacción
@@ -84,11 +95,11 @@ function addData() {
   // Agrega nuestro objeto newItem al almacén de objetos
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     //Informa sobre el éxito de nuestro nuevo elemento en la base de datos
-    note.innerHTML += '<li>New item added to database.</li>';
+    note.innerHTML += "<li>New item added to database.</li>";
   };
-};
+}
 ```
 
 ## Parámetros

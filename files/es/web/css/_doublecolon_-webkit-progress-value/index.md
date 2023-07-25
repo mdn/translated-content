@@ -28,7 +28,7 @@ progress {
 ### Contenido HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ## Resultado

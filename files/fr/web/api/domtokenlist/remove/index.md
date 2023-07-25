@@ -46,7 +46,7 @@ La sortie ressemble à ceci :
 
 {{ EmbedLiveSample('Exemples', '100%', 60) }}
 
-Pour supprimer plusieurs classes à la fois, vous pouvez utiliser un tableau (_array_) avec la [syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateur_de_d%C3%A9composition). L'ordre des classes n'a pas d'importance :
+Pour supprimer plusieurs classes à la fois, vous pouvez utiliser un tableau (_array_) avec la [syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition). L'ordre des classes n'a pas d'importance :
 
 ```js
 let span = document.getElementsByTagName("span")[0],

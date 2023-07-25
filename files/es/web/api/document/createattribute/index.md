@@ -13,7 +13,7 @@ El método **`Document.createAttribute()`** crea un nuevo nodo de tipo atributo 
 ## Sintaxis
 
 ```js
-atributo = document.createAttribute(nombre)
+atributo = document.createAttribute(nombre);
 ```
 
 ### Parametros

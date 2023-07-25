@@ -157,7 +157,7 @@ function* [nom]([param[, param[, ... param]]]) {
 
 ### Utiliser une expression de fonction fléchée (=>)
 
-Une expression de fonction fléchée possède une syntaxe plus courte et est liée, de façon lexicale, à sa valeur (voir la page sur les [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) pour plus de détails) :
+Une expression de fonction fléchée possède une syntaxe plus courte et est liée, de façon lexicale, à sa valeur (voir la page sur les [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) pour plus de détails) :
 
 ```
 ([param[, param]]) => {
@@ -214,7 +214,7 @@ Les paramètres par défaut permettent aux paramètres déclarés d'une fonction
 
 ### Les paramètres du reste
 
-Cette syntaxe permet de représenter un nombre indéfini d'arguments sous forme d'un tableau. Pour plus de détails, voir la page sur [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/param%C3%A8tres_du_reste).
+Cette syntaxe permet de représenter un nombre indéfini d'arguments sous forme d'un tableau. Pour plus de détails, voir la page sur [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste).
 
 ## L'objet `arguments`
 
@@ -478,7 +478,7 @@ Tous ces exemples effectuent à peu près la même chose, mais différent sur qu
         console.log(x); // renvoie une erreur
         ```
 
-    Le nom de la fonction apparaît également lorsque la fonction est sérialisée avec la [méthode toString de l'objet `Function`](/fr/docs/JavaScript/Reference/R%C3%A9f%C3%A9rence_JavaScript/Objets_globaux/Function/toString).
+    Le nom de la fonction apparaît également lorsque la fonction est sérialisée avec la [méthode toString de l'objet `Function`](/fr/docs/JavaScript/Reference/Référence_JavaScript/Objets_globaux/Function/toString).
 
     La variable à laquelle est assignée la fonction est seulement limitée par rapport à la portée. La portée au sein de laquelle la fonction est déclarée est donc garantie d'être dans la portée de la variable.
 

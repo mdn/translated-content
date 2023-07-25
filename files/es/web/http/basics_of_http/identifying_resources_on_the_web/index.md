@@ -101,8 +101,8 @@ urn:isbn:9780141036144
 
 ## Especificaciones
 
-| Especificación                                                           | Título                                                             |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| Especificación                                         | Título                                                             |
+| ------------------------------------------------------ | ------------------------------------------------------------------ |
 | {{RFC("7230", "Uniform Resource Identifiers", "2.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
 ## Ver también

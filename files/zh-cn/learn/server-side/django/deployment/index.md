@@ -1,5 +1,5 @@
 ---
-title: 'Django 教程 11: 部署 Django 到生产环境'
+title: "Django 教程 11: 部署 Django 到生产环境"
 slug: Learn/Server-side/Django/Deployment
 ---
 
@@ -197,10 +197,10 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 2. 登录后，点击顶部工具栏中的 + 链接，然后选择新建储存库 **New repository**。
 3. 填写此表单上的所有字段。虽然这些不是强制性的，但强烈建议使用它们。
 
-    - 输入新的储存库名称（例如 django_local_library）和描述（例如“用 Django 编写的本地图书馆网站”）。
-    - 在 Add .gitignore 选择列表中，选择 **Python**。
-    - 在添加许可证选择列表中，选择您想要的许可证。
-    - 选中使用自述文件初始化此储存库（**Initialize this repository with a README）**。
+   - 输入新的储存库名称（例如 django_local_library）和描述（例如“用 Django 编写的本地图书馆网站”）。
+   - 在 Add .gitignore 选择列表中，选择 **Python**。
+   - 在添加许可证选择列表中，选择您想要的许可证。
+   - 选中使用自述文件初始化此储存库（**Initialize this repository with a README）**。
 
 4. 点击 **Create repository**.
 5. 点击新仓库页面上的绿色“克隆或下载”（**Clone or download**）按钮。
@@ -211,65 +211,65 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 1. 为您的本地计算机安装 git（您可以在[此处](https://git-scm.com/downloads)找到不同平台的版本）。
 2. 打开命令提示符/终端，并使用您在上面复制的 URL 克隆储存库：
 
-    ```bash
-    git clone https://github.com/<your_git_user_id>/django_local_library.git
-    ```
+   ```bash
+   git clone https://github.com/<your_git_user_id>/django_local_library.git
+   ```
 
-    这将在当前目录下方创建储存库。
+   这将在当前目录下方创建储存库。
 
 3. 切换目录，到新的仓库。
 
-    ```bash
-    cd django_local_library
-    ```
+   ```bash
+   cd django_local_library
+   ```
 
 最后一步是复制你的应用程序，然后使用 git，将文件添加到你的仓库：
 
 1. 将您的 Django 应用程序，复制到此文件夹（与 **manage.py** 级别相同的、和以下级别的所有文件，而**不是**包含 locallibrary 文件夹的文件）。
 2. 打开 **.gitignore** 文件，将以下几行复制到其底部，然后保存（此文件用于标识默认情况下，不应上传到 git 的文件）。
 
-    ```
-    # Text backup files
-    *.bak
+   ```
+   # Text backup files
+   *.bak
 
-    #Database
-    *.sqlite3
-    ```
+   #Database
+   *.sqlite3
+   ```
 
 3. 打开命令提示符/终端，并使用`add`命令，将所有文件添加到 git。
 
-    ```bash
-    git add -A
-    ```
+   ```bash
+   git add -A
+   ```
 
 4. 使用 status 命令，检查要添加的所有文件是否正确（您希望包含源文件，而不是二进制文件，临时文件等）。它应该看起来有点像下面的列表。
 
-    ```
-    > git status
-    On branch master
-    Your branch is up-to-date with 'origin/master'.
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
+   ```
+   > git status
+   On branch master
+   Your branch is up-to-date with 'origin/master'.
+   Changes to be committed:
+     (use "git reset HEAD <file>..." to unstage)
 
-            modified:   .gitignore
-            new file:   catalog/__init__.py
-            ...
-            new file:   catalog/migrations/0001_initial.py
-            ...
-            new file:   templates/registration/password_reset_form.html
-    ```
+           modified:   .gitignore
+           new file:   catalog/__init__.py
+           ...
+           new file:   catalog/migrations/0001_initial.py
+           ...
+           new file:   templates/registration/password_reset_form.html
+   ```
 
 5. 如果您满意，请将文件提交到本地储存库：
 
-    ```bash
-    git commit -m "First version of application moved into github"
-    ```
+   ```bash
+   git commit -m "First version of application moved into github"
+   ```
 
 6. 然后使用以下内容，将本地储存库同步到 Github 网站：
 
-    ```bash
-    git push origin master
-    ```
+   ```bash
+   git push origin master
+   ```
 
 完成此操作后，您应该可以返回创建储存库的 Github 上的页面，刷新页面，并看到您的整个应用程序已经上传。使用此添加/提交/推送循环，您可以在文件更改时，继续更新储存库。
 

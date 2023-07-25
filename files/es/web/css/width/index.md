@@ -79,7 +79,9 @@ p.goldie {
 ```
 
 ```html
-<p class="goldie">La comunidad de Mozilla produce una gran cantidad de software excelente.</p>
+<p class="goldie">
+  La comunidad de Mozilla produce una gran cantidad de software excelente.
+</p>
 ```
 
 {{EmbedLiveSample('Default_width', '500px', '64px')}}
@@ -130,15 +132,17 @@ p.goldie {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit usa un nombre no estándar */
-  width: -moz-max-content;    /* Firefox/Gecko */
+  width: intrinsic; /* Safari/WebKit usa un nombre no estándar */
+  width: -moz-max-content; /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
   width: max-content;
 }
 ```
 
 ```html
-<p class="maxgreen">La comunidad de Mozilla produce una gran cantidad de software excelente.</p>
+<p class="maxgreen">
+  La comunidad de Mozilla produce una gran cantidad de software excelente.
+</p>
 ```
 
 {{EmbedLiveSample('', '500px', '64px')}}
@@ -155,7 +159,9 @@ p.minblue {
 ```
 
 ```html
-<p class="minblue">La comunidad de Mozilla produce una gran cantidad de software excelente.</p>
+<p class="minblue">
+  La comunidad de Mozilla produce una gran cantidad de software excelente.
+</p>
 ```
 
 {{EmbedLiveSample('', '500px', '155px')}}

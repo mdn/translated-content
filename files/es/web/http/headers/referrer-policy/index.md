@@ -60,7 +60,7 @@ Referrer-Policy: unsafe-url
 ## Ejemplos
 
 | Directiva                             | Documento                               | Navegación a                          | Referente                               |
-| ------------------------------------- | --------------------------------------  | ------------------------------------  | --------------------------------------  |
+| ------------------------------------- | --------------------------------------- | ------------------------------------- | --------------------------------------- |
 | **`no-referrer`**                     | <https://ejemplo.com/pagina.html>       | cualquier dominio o ruta de acceso    | ningún referente                        |
 | **`no-referrer-when-downgrade`**      | <https://ejemplo.com/pagina.html>       | <https://ejemplo.com/otrapagina.html> | <https://ejemplo.com/pagina.html>       |
 | **`no-referrer-when-downgrade`**      | <https://ejemplo.com/pagina.html>       | <https://mozilla.org>                 | <https://ejemplo.com/pagina.html>       |

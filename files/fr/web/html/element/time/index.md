@@ -11,7 +11,7 @@ L'élément HTML **`<time>`** permet de représenter une période donnée. Cet �
 Cet élément permet de représenter :
 
 - une heure
-- une date du [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_gr%C3%A9gorien) (en précisant éventuellement l'heure et les informations de fuseau horaire).
+- une date du [calendrier grégorien](https://fr.wikipedia.org/wiki/Calendrier_grégorien) (en précisant éventuellement l'heure et les informations de fuseau horaire).
 - [une durée valide](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string).
 
 {{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}

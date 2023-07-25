@@ -40,10 +40,18 @@ margin-bottom: inherit; /*margen heredado*/
 ## Examples
 
 ```css
-.content { margin-bottom:   5%; }
-.sidebox { margin-bottom: 10px; }
-.logo    { margin-bottom: -5px; }
-#header  { margin-bottom:  1em; }
+.content {
+  margin-bottom: 5%;
+}
+.sidebox {
+  margin-bottom: 10px;
+}
+.logo {
+  margin-bottom: -5px;
+}
+#header {
+  margin-bottom: 1em;
+}
 ```
 
 [Ver en el JSFiddle](https://jsfiddle.net/V3hrF)

@@ -18,9 +18,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var setting = browser.devtools.panels.setObject(
-  jsonObject,       // string, array, or JSON object
-  rootTitle         // string
-)
+  jsonObject, // string, array, or JSON object
+  rootTitle, // string
+);
 ```
 
 ### Paramètres
@@ -49,8 +49,8 @@ function onCreated(sidebarPane) {
     someString: "hello there",
     someObject: {
       someNumber: 42,
-      someOtherString: "this is my pane's content"
-    }
+      someOtherString: "this is my pane's content",
+    },
   });
 }
 

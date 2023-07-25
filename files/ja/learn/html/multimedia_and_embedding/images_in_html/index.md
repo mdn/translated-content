@@ -188,7 +188,8 @@ https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-e
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
 </p>
 
 <textarea id="code" class="input" style="min-height: 100px; width: 95%">
@@ -282,7 +283,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -339,9 +340,7 @@ textarea.onkeyup = function () {
     width="400"
     height="341" />
 
-  <figcaption>
-    マンチェスター大学博物館に展示されている T-Rex。
-  </figcaption>
+  <figcaption>マンチェスター大学博物館に展示されている T-Rex。</figcaption>
 </figure>
 ```
 
@@ -373,7 +372,8 @@ textarea.onkeyup = function () {
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
 </p>
 
 <textarea
@@ -468,7 +468,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
   textarea.value = front + text + back;
   caretPos += text.length;
