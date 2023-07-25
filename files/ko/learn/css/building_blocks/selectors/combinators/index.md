@@ -1,7 +1,6 @@
 ---
 title: 결합자
 slug: Learn/CSS/Building_blocks/Selectors/Combinators
-page-type: learn-module-chapter
 l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
@@ -104,7 +103,7 @@ ul > li[class="a"] {
 
 간단한 클래스를 만들고 해당 요소에 적용하는 것이 더 나은 경우가 많습니다. 즉, 결합자에 대한 지식은 문서에서 스타일을 지정해야 하고 HTML이 {{Glossary("CMS")}}에 의해 생성되기 때문에 HTML에 액세스할 수 없는 경우 매우 유용할 것입니다.
 
-## 능력을 시험해보세요!
+## 능력을 시험해보세요
 
 이 기사의 끝에 도달했지만, 가장 중요한 정보를 기억할 수 있나요? 계속 진행하기 전에 이 정보를 기억하고 있는지 확인하는 추가 테스트를 찾을 수 있습니다. - [Test your skills: Selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks)를 참조하세요.
 
