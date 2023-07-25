@@ -38,7 +38,10 @@ El método `Object.fromEntries()` toma una lista de pares con clave-valor y devu
 Con `Object.fromEntries`, puedes convertir de un {{jsxref("Map")}} a un {{jsxref("Object")}}:
 
 ```js
-const map = new Map([ ['foo', 'bar'], ['baz', 42] ]);
+const map = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
 const obj = Object.fromEntries(map);
 console.log(obj); // { foo: "bar", baz: 42 }
 ```
@@ -48,7 +51,11 @@ console.log(obj); // { foo: "bar", baz: 42 }
 Con `Object.fromEntries`, puedes convertir de un {{jsxref("Array")}} a un {{jsxref("Object")}}:
 
 ```js
-const arr = [ ['0', 'a'], ['1', 'b'], ['2', 'c'] ];
+const arr = [
+  ["0", "a"],
+  ["1", "b"],
+  ["2", "c"],
+];
 const obj = Object.fromEntries(arr);
 console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 ```
@@ -61,8 +68,7 @@ Con `Object.fromEntries`, su método inverso {{jsxref("Object.entries()")}}, y [
 const object1 = { a: 1, b: 2, c: 3 };
 
 const object2 = Object.fromEntries(
-  Object.entries(object1)
-  .map(([ key, val ]) => [ key, val * 2 ])
+  Object.entries(object1).map(([key, val]) => [key, val * 2]),
 );
 
 console.log(object2);
