@@ -25,7 +25,7 @@ replace(patrón, reemplazo)
 - `reemplazo`
   - : Puede ser una cadena o una función.
     - Si es una cadena, reemplazará la subcadena que coincida con `patrón`. Un número de patrones de reemplazo especiales son soportados; consulta la sección [Especificando una cadena como el reemplazo](#especificando-una-cadena-como-el-reemplazo).
-    - Si es una función, será invocada para cada coincidencia y su valor de retorno será usado como  el texto de reemplazo. Los parámetros proporcionados a esta función son descritos en la sección [Especificando una función como el reemplazo](#especificando-una-función-como-el-reemplazo).
+    - Si es una función, será invocada para cada coincidencia y su valor de retorno será usado como el texto de reemplazo. Los parámetros proporcionados a esta función son descritos en la sección [Especificando una función como el reemplazo](#especificando-una-función-como-el-reemplazo).
 
 ### Valor de retorno
 
@@ -156,7 +156,6 @@ console.log(newstr); // Cruz, Maria
 ```
 
 Esto imprime `'Cruz, Maria'`.
-
 
 ### Usando una función en línea que modifica los caracteres encontrados
 
