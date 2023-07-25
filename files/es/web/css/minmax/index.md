@@ -129,7 +129,7 @@ La función `minmax()` puede ser usada dentro de:
 
     1. [Conceptos básicos del diseño con rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)
     2. [Relación a otros métodos de diseño](/es/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)
-    3. [Posicionamiento basado en líneas](
+    3. [Posicionamiento basado en líneas](/es/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
     4. [Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
     5. [Diseño usando lineas con nombre](/es/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines)
     6. [Posicionamiento automático en el diseño con rejillas](/es/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
