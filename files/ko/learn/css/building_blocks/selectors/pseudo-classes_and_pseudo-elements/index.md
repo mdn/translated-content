@@ -19,15 +19,15 @@ l10n:
         <a
           href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >설치된 기본 소프트웨어</a
-        >, 에 대한 기본 지식
+        >, 
         <a
           href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업</a
-        >, HTML 기초 (학습
+        >에 대한 기본 지식, HTML 기초 (
         <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
-          >HTML 소개</a
-        >), CSS 작동 방식에 대한 아이디어 (학습
-        <a href="/ko/docs/Learn/CSS/First_steps">CSS first steps</a>).
+          >HTML 입문</a
+        > 학습), CSS 작동 방식에 대한 아이디어 (
+        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 번째 단계</a> 학습).
       </td>
     </tr>
     <tr>
