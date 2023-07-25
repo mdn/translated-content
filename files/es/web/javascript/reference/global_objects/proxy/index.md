@@ -21,8 +21,8 @@ y un manipulador más simple aún que no tiene propiedades:
 
 ```js
 const target = {
-  message1: 'hello',
-  message2: 'everyone',
+  message1: "hello",
+  message2: "everyone",
 };
 
 const handler1 = {};
@@ -43,13 +43,13 @@ manipulador:
 
 ```js
 const target = {
-  message1: 'hello',
-  message2: 'everyone',
+  message1: "hello",
+  message2: "everyone",
 };
 
 const handler2 = {
   get: function (target, prop, receiver) {
-    return 'world';
+    return "world";
   },
 };
 
@@ -74,14 +74,14 @@ el comportamiento original y redefinir otros:
 
 ```js
 const target = {
-  message1: 'hello',
-  message2: 'everyone',
+  message1: "hello",
+  message2: "everyone",
 };
 
 const handler3 = {
   get: function (target, prop, receiver) {
-    if (prop === 'message2') {
-      return 'world';
+    if (prop === "message2") {
+      return "world";
     }
     return Reflect.get(...arguments);
   },
@@ -125,7 +125,7 @@ p.b = undefined;
 console.log(p.a, p.b);
 //  1, undefined
 
-console.log('c' in p, p.c);
+console.log("c" in p, p.c);
 //  false, 37
 ```
 
@@ -158,12 +158,12 @@ objeto. Este ejemplo usa el manipulador
 ```js
 let validator = {
   set: function (obj, prop, value) {
-    if (prop === 'age') {
+    if (prop === "age") {
       if (!Number.isInteger(value)) {
-        throw new TypeError('La edad no es un entero');
+        throw new TypeError("La edad no es un entero");
       }
       if (value > 200) {
-        throw new RangeError('La edad parece inválida');
+        throw new RangeError("La edad parece inválida");
       }
     }
 
@@ -179,7 +179,7 @@ const person = new Proxy({}, validator);
 
 person.age = 100;
 console.log(person.age); // 100
-person.age = 'young'; // Lanza una excepción
+person.age = "young"; // Lanza una excepción
 person.age = 300; // Lanza una excepción
 ```
 
@@ -215,9 +215,9 @@ var Boy = extend(Person, function (name, age) {
   this.age = age;
 });
 
-Boy.prototype.gender = 'M';
+Boy.prototype.gender = "M";
 
-var Peter = new Boy('Peter', 13);
+var Peter = new Boy("Peter", 13);
 
 console.log(Peter.gender); // "M"
 console.log(Peter.name); // "Peter"
@@ -277,12 +277,12 @@ array de ser necesario. El objeto también soporta una propiedad extra llamada
 ```js
 let products = new Proxy(
   {
-    browsers: ['Internet Explorer', 'Netscape'],
+    browsers: ["Internet Explorer", "Netscape"],
   },
   {
     get: function (obj, prop) {
       // Una propiedad extra
-      if (prop === 'latestBrowser') {
+      if (prop === "latestBrowser") {
         return obj.browsers[obj.browsers.length - 1];
       }
 
@@ -291,13 +291,13 @@ let products = new Proxy(
     },
     set: function (obj, prop, value) {
       // Una propiedad extra
-      if (prop === 'latestBrowser') {
+      if (prop === "latestBrowser") {
         obj.browsers.push(value);
         return true;
       }
 
       // Convierte el valor si no es un array
-      if (typeof value === 'string') {
+      if (typeof value === "string") {
         value = [value];
       }
 
@@ -307,19 +307,19 @@ let products = new Proxy(
       // Indica éxito
       return true;
     },
-  }
+  },
 );
 
 console.log(products.browsers);
 //  ['Internet Explorer', 'Netscape']
 
-products.browsers = 'Firefox';
+products.browsers = "Firefox";
 //  pasa una cadena (por error)
 
 console.log(products.browsers);
 //  ['Firefox'] <- no hay problema, el valor es un arreglo
 
-products.latestBrowser = 'Chrome';
+products.latestBrowser = "Chrome";
 
 console.log(products.browsers);
 //  ['Firefox', 'Chrome']
@@ -339,9 +339,9 @@ caso, el target sería {{domxref("HTMLTableElement.rows", "table.rows")}}.
 ```js
 let products = new Proxy(
   [
-    { name: 'Firefox', type: 'browser' },
-    { name: 'SeaMonkey', type: 'browser' },
-    { name: 'Thunderbird', type: 'mailer' },
+    { name: "Firefox", type: "browser" },
+    { name: "SeaMonkey", type: "browser" },
+    { name: "Thunderbird", type: "mailer" },
   ],
   {
     get: function (obj, prop) {
@@ -351,7 +351,7 @@ let products = new Proxy(
       }
 
       // Obtiene el número de productos; un alias de products.length
-      if (prop === 'number') {
+      if (prop === "number") {
         return obj.length;
       }
 
@@ -380,18 +380,18 @@ let products = new Proxy(
       }
 
       // Obtiene los tipos de productos
-      if (prop === 'types') {
+      if (prop === "types") {
         return Object.keys(types);
       }
 
       return undefined;
     },
-  }
+  },
 );
 
 console.log(products[0]); // { name: 'Firefox', type: 'browser' }
-console.log(products['Firefox']); // { name: 'Firefox', type: 'browser' }
-console.log(products['Chrome']); // undefined
+console.log(products["Firefox"]); // { name: 'Firefox', type: 'browser' }
+console.log(products["Chrome"]); // undefined
 console.log(products.browser); // [{ name: 'Firefox', type: 'browser' }, { name: 'SeaMonkey', type: 'browser' }]
 console.log(products.types); // ['browser', 'mailer']
 console.log(products.number); // 3
@@ -434,7 +434,7 @@ var docCookies = new Proxy(docCookies, {
     return sKey in oTarget || oTarget.hasItem(sKey);
   },
   defineProperty: function (oTarget, sKey, oDesc) {
-    if (oDesc && 'value' in oDesc) {
+    if (oDesc && "value" in oDesc) {
       oTarget.setItem(sKey, oDesc.value);
     }
     return oTarget;
@@ -454,10 +454,10 @@ var docCookies = new Proxy(docCookies, {
 
 /* Pruebas de cookies */
 
-console.log((docCookies.my_cookie1 = 'Primer valor'));
-console.log(docCookies.getItem('my_cookie1'));
+console.log((docCookies.my_cookie1 = "Primer valor"));
+console.log(docCookies.getItem("my_cookie1"));
 
-docCookies.setItem('my_cookie1', 'Valor cambiado');
+docCookies.setItem("my_cookie1", "Valor cambiado");
 console.log(docCookies.my_cookie1);
 ```
 

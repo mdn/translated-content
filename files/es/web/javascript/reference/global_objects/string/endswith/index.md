@@ -37,7 +37,7 @@ Este método ha sido añadido a la especificación ECMAScript 6 y puede no estar
 
 ```js
 if (!String.prototype.endsWith) {
-  String.prototype.endsWith = function(search, this_len) {
+  String.prototype.endsWith = function (search, this_len) {
     if (this_len === undefined || this_len > this.length) {
       this_len = this.length;
     }
@@ -51,11 +51,11 @@ if (!String.prototype.endsWith) {
 ### Usando `endsWith()`
 
 ```js
-let str = 'To be, or not to be, that is the question.'
+let str = "To be, or not to be, that is the question.";
 
-console.log(str.endsWith('question.'))  // true
-console.log(str.endsWith('to be'))      // false
-console.log(str.endsWith('to be', 19))  // true
+console.log(str.endsWith("question.")); // true
+console.log(str.endsWith("to be")); // false
+console.log(str.endsWith("to be", 19)); // true
 ```
 
 ## Especificaciones

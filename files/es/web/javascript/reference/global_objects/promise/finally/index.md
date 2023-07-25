@@ -15,7 +15,7 @@ Esto ayuda a evitar tener código duplicado tanto en el {{jsxref("Promise.then",
 ```js
 p.finally(alFinalizar);
 
-p.finally(function() {
+p.finally(function () {
   // finalizada (exitosa o rechazada)
 });
 ```
@@ -47,16 +47,25 @@ Utilizar `finally()` es muy similar a llamar `.then(onFinally, onFinally)`, sin 
 ```js
 let isLoading = true;
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest)
+  .then(function (response) {
     var contentType = response.headers.get("content-type");
-    if(contentType && contentType.includes("application/json")) {
+    if (contentType && contentType.includes("application/json")) {
       return response.json();
     }
     throw new TypeError("Oops, no hemos obtenido un JSON!");
   })
-  .then(function(json) { /* procesar el JSON */ })
-  .catch(function(error) { console.log(error); /* esta línea podría arrojar error, e.g. cuando console = {} */ })
-  .finally(function() { isLoading = false; });
+  .then(function (json) {
+    /* procesar el JSON */
+  })
+  .catch(function (error) {
+    console.log(
+      error,
+    ); /* esta línea podría arrojar error, e.g. cuando console = {} */
+  })
+  .finally(function () {
+    isLoading = false;
+  });
 ```
 
 ## Especificaciones

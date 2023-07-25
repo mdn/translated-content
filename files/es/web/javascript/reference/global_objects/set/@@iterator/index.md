@@ -28,7 +28,7 @@ La función **iteradora** `Set` , la cuál es {{jsxref("Set.prototype.values()",
 
 ```js
 const mySet = new Set();
-mySet.add('0');
+mySet.add("0");
 mySet.add(1);
 mySet.add({});
 
@@ -43,7 +43,7 @@ console.log(setIter.next().value); // Object
 
 ```js
 const mySet = new Set();
-mySet.add('0');
+mySet.add("0");
 mySet.add(1);
 mySet.add({});
 

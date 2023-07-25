@@ -27,8 +27,8 @@ El método `toLowerCase` devuelve el valor de la cadena convertida a minúsculas
 El siguiente ejemplo muestra la cadena "alfabeto" en minúsculas:
 
 ```js
-var textoMayusculas="ALFABETO"
-document.write(textoMayusculas.toLowerCase())
+var textoMayusculas = "ALFABETO";
+document.write(textoMayusculas.toLowerCase());
 ```
 
 ## Vea También
