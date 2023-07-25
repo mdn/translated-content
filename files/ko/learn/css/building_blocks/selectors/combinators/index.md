@@ -23,10 +23,10 @@ l10n:
           href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업</a
         >에 대한 기본 지식, HTML 기초 (
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 입문</a
         > 학습), CSS 작동 방식에 대한 아이디어 (
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS 첫 번째 단계</a> 학습)
+        <a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 번째 단계</a> 학습)
       </td>
     </tr>
     <tr>
@@ -40,7 +40,7 @@ l10n:
 
 ## 후손 결합자
 
-**후손 결합자** - 일반적으로 단일 공백(" ") 문자로 표시됩니다 - 첫 번째 선택자와 일치하는 조상(부모, 부모의 부모, 부모의 부모의 부모 등) 요소가 있는 경우 두 번째 선택자와 일치하는 요소가 선택되도록 두 선택자를 결합합니다. 후손 결합자를 활용하는 선택자를 _하위 선택자_라고 합니다.
+**후손 결합자** - 일반적으로 단일 공백(" ") 문자로 표시됩니다 - 첫 번째 선택자와 일치하는 조상(부모, 부모의 부모, 부모의 부모의 부모 등) 요소가 있는 경우 두 번째 선택자와 일치하는 요소가 선택되도록 두 선택자를 결합합니다. 후손 결합자를 활용하는 선택자를 하위 선택자라고 합니다.
 
 ```css
 body article p
