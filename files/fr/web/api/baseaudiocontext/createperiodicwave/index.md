@@ -47,7 +47,9 @@ imag[0] = 0;
 réel[1] = 1;
 imag[1] = 0;
 
-var onde = contexteAudio.createPeriodicWave(réel, imag, {disableNormalization: true});
+var onde = contexteAudio.createPeriodicWave(réel, imag, {
+  disableNormalization: true,
+});
 
 oscillateur.setPeriodicWave(wave);
 
