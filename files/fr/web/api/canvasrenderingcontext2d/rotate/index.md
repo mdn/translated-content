@@ -38,10 +38,10 @@ Ceci est seulement un fragment de code simple qui utilise la méthode `rotate`.
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.rotate(45 * Math.PI / 180);
+ctx.rotate((45 * Math.PI) / 180);
 ctx.fillRect(70, 0, 100, 30);
 
 // réinitialise la matrice de transformation courante à la matrice identité
@@ -61,7 +61,8 @@ Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel 
 <textarea id="code" class="playable-code">
 ctx.rotate(45 * Math.PI / 180);
 ctx.fillRect(70,0,100,30);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
+ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea
+>
 ```
 
 ```js hidden
@@ -77,14 +78,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
