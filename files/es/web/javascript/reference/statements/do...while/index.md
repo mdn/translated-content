@@ -19,6 +19,7 @@ while (condición);
 ```
 
 - `sentencia`
+
   - : Una sentencia que se ejecuta al menos una vez y es reejecutada cada vez que la condición se evalúa a verdadera. Para ejecutar múltiples sentencias dentro de un bucle, utilice la sentencia {{jsxref("Statements/block", "block")}} (`{ ... }`) para agrupar aquellas sentencias.
 
 - `condición`
@@ -32,8 +33,8 @@ En el siguiente ejemplo, el bucle hacer mientras itera al menos una vez y se rei
 
 ```js
 do {
-   i += 1;
-   document.write(i);
+  i += 1;
+  document.write(i);
 } while (i < 5);
 ```
 

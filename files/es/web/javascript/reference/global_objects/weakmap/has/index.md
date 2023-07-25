@@ -32,10 +32,10 @@ wm.has(key);
 
 ```js
 var wm = new WeakMap();
-wm.set(window, 'foo');
+wm.set(window, "foo");
 
 wm.has(window); // Devuelve true
-wm.has('baz');  // Devuelve false
+wm.has("baz"); // Devuelve false
 ```
 
 ## Especificaciones

@@ -1,5 +1,5 @@
 ---
-title: 'null'
+title: "null"
 slug: Web/JavaScript/Reference/Operators/null
 original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
@@ -35,10 +35,10 @@ El valor `null` es un literal (no una propiedad del objeto global como podría s
 ### Diferencias entre `null` y `undefined`
 
 ```js
-typeof null        // object (bug en ECMAScript, debería ser null)
-typeof undefined   // undefined
-null === undefined // false
-null  == undefined // true
+typeof null; // object (bug en ECMAScript, debería ser null)
+typeof undefined; // undefined
+null === undefined; // false
+null == undefined; // true
 ```
 
 ## Especificaciones

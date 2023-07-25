@@ -38,15 +38,15 @@ var asyncIterable = {
         }
 
         return Promise.resolve({ done: true });
-      }
+      },
     };
-  }
+  },
 };
 
-(async function() {
-   for await (let num of asyncIterable) {
-     console.log(num);
-   }
+(async function () {
+  for await (let num of asyncIterable) {
+    console.log(num);
+  }
 })();
 
 // 0
@@ -66,7 +66,7 @@ async function* asyncGenerator() {
   }
 }
 
-(async function() {
+(async function () {
   for await (let num of asyncGenerator()) {
     console.log(num);
   }
@@ -108,7 +108,7 @@ async function getResponseSize(url) {
   // salida esperada: "Tamaño de la respuesta: 1071472"
   return responseSize;
 }
-getResponseSize('https://jsonplaceholder.typicode.com/photos');
+getResponseSize("https://jsonplaceholder.typicode.com/photos");
 ```
 
 ## Especificaciones
