@@ -38,8 +38,8 @@ slug: Learn/JavaScript/Howto
 
 ```js
 function myFunction() {
-  alert('This is my function.');
-};
+  alert("This is my function.");
+}
 ```
 
 这个函数不会执行，除非你调用它，例如：
@@ -70,9 +70,9 @@ const myNumber = 0;
 
 ```js
 const myObject = {
-  name: 'Chris',
-  age: 38
-}
+  name: "Chris",
+  age: 38,
+};
 ```
 
 ## 基本定义

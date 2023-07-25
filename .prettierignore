@@ -31,8 +31,7 @@ build/
 /files/es/web/api/**/*.md
 /files/es/web/css/**/*.md
 /files/es/web/html/**/*.md
-/files/es/web/http/**/*.md
-/files/es/web/javascript/**/*.md
+/files/es/web/javascript/reference/**/*.md
 
 # fr
 /files/fr/mozilla/add-ons/webextensions/api/**/*.md
@@ -97,7 +96,6 @@ build/
 /files/ru/web/svg/**/*.md
 
 # zh-cn
-/files/zh-cn/learn/javascript/**/*.md
 /files/zh-cn/web/api/**/*.md
 /files/zh-cn/web/css/**/*.md
 /files/zh-cn/web/html/**/*.md

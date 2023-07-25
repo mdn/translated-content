@@ -101,21 +101,21 @@ h3 {
 ### Estableciendo relleno con píxeles y porcentajes
 
 ```css
-padding: 5%;                /* Todos los lados: 5% de relleno */
+padding: 5%; /* Todos los lados: 5% de relleno */
 
-padding: 10px;              /* Todos los lados: 10px de relleno */
+padding: 10px; /* Todos los lados: 10px de relleno */
 
-padding: 10px 20px;         /* arriba y abajo:      10px  de relleno */
-                            /* izquierda y derecha: 20px  de relleno */
+padding: 10px 20px; /* arriba y abajo:      10px  de relleno */
+/* izquierda y derecha: 20px  de relleno */
 
-padding: 10px 3% 20px;      /* arriba:              10px  de relleno */
-                            /* izquierda y derecha: 3%  de relleno   */
-                            /* abajo:               20px  de relleno */
+padding: 10px 3% 20px; /* arriba:              10px  de relleno */
+/* izquierda y derecha: 3%  de relleno   */
+/* abajo:               20px  de relleno */
 
-padding: 1em 3px 30px 5px;  /* arriba:      1em  de relleno  */
-                            /* derecha:     3px  de relleno  */
-                            /* abajo:       30px  de relleno */
-                            /* izquierda:   5px  de relleno  */
+padding: 1em 3px 30px 5px; /* arriba:      1em  de relleno  */
+/* derecha:     3px  de relleno  */
+/* abajo:       30px  de relleno */
+/* izquierda:   5px  de relleno  */
 ```
 
 ## Especificaciones

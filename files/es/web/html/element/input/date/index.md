@@ -178,8 +178,7 @@ Veamos un ejemplo con fecha mínima y máxima y, también, estableciendo el camp
       name="party"
       min="2017-04-01"
       max="2017-04-20"
-      required
-    />
+      required />
     <span class="validity"></span>
   </label>
 

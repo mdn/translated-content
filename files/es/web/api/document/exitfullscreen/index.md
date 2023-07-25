@@ -7,7 +7,7 @@ slug: Web/API/Document/exitFullscreen
 
 El método **`exitFullscreen()`** de {{domxref("Document")}} solicita que el elemento de este documento que se presenta actualmente en modo de pantalla completa se retire del modo de pantalla completa, restaurando el estado anterior de la pantalla. Esto generalmente revierte los efectos de una llamada previa a {{domxref("Element.requestFullscreen()")}}.
 
-La excepción es si otro elemento ya estaba en modo de pantalla completa cuando el elemento actual se colocó en modo de pantalla completa usando `requestFullscreen()`. En ese caso, el elemento de pantalla completa anterior se restaura al estado de pantalla completa. En esencia, se mantiene un [stack](https://es.wikipedia.org/wiki/Stack_(abstract_data_type)) de elementos de pantalla completa.
+La excepción es si otro elemento ya estaba en modo de pantalla completa cuando el elemento actual se colocó en modo de pantalla completa usando `requestFullscreen()`. En ese caso, el elemento de pantalla completa anterior se restaura al estado de pantalla completa. En esencia, se mantiene un [stack](<https://es.wikipedia.org/wiki/Stack_(abstract_data_type)>) de elementos de pantalla completa.
 
 ## Sintaxis
 
@@ -30,9 +30,9 @@ Este ejemplo hace que el documento actual entre y salga de una presentación a p
 ```js
 document.onclick = function (event) {
   if (document.fullscreenElement) {
-    document.exitFullscreen()
+    document.exitFullscreen();
   } else {
-    document.documentElement.requestFullscreen()
+    document.documentElement.requestFullscreen();
   }
 };
 ```

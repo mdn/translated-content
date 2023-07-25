@@ -15,11 +15,11 @@ Esto se relaciona con {{cssxref("padding-block-start")}}, {{cssxref("padding-inl
 
 ```css
 /* <length> values */
-padding-block-end: 10px;      /* An absolute length */
-padding-block-end: 1em;       /* A length relative to the text size */
+padding-block-end: 10px; /* An absolute length */
+padding-block-end: 1em; /* A length relative to the text size */
 
 /* <percentage> value */
-padding-block-end: 5%;        /* A padding relative to the block container's width */
+padding-block-end: 5%; /* A padding relative to the block container's width */
 
 /* Global values */
 padding-block-end: inherit;
@@ -59,7 +59,7 @@ div {
 .exampleText {
   writing-mode: vertical-lr;
   padding-block-end: 20px;
-  background-color: #C8C800;
+  background-color: #c8c800;
 }
 ```
 

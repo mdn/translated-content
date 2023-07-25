@@ -33,16 +33,16 @@ var ctx = canvas.getContext("2d");
 
 // First path
 ctx.beginPath();
-ctx.strokeStyle = 'blue';
-ctx.moveTo(20,20);
-ctx.lineTo(200,20);
+ctx.strokeStyle = "blue";
+ctx.moveTo(20, 20);
+ctx.lineTo(200, 20);
 ctx.stroke();
 
 // Second path
 ctx.beginPath();
-ctx.strokeStyle = 'green';
-ctx.moveTo(20,20);
-ctx.lineTo(120,120);
+ctx.strokeStyle = "green";
+ctx.moveTo(20, 20);
+ctx.lineTo(120, 120);
 ctx.stroke();
 ```
 
@@ -67,7 +67,8 @@ ctx.beginPath();
 ctx.strokeStyle = 'green';
 ctx.moveTo(20,20);
 ctx.lineTo(120, 120);
-ctx.stroke();</textarea>
+ctx.stroke();</textarea
+>
 ```
 
 ```js hidden
@@ -83,14 +84,14 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

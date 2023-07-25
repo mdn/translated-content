@@ -40,19 +40,19 @@ _La nueva versión de la interfaz de `MediaQueryList` hereda métodos de su inte
 Este ejemplo sencillo crea una `MediaQueryList` y, a continuación, establece un detector para detectar cuándo cambia el estado de la consulta de medios, ejecutando una función personalizada cuando cambia la apariencia de la página.
 
 ```js
-var para = document.querySelector('p');
+var para = document.querySelector("p");
 
-var mql = window.matchMedia('(max-width: 600px)');
+var mql = window.matchMedia("(max-width: 600px)");
 
 function screenTest(e) {
   if (e.matches) {
     /* el ventana tiene 600 píxeles de ancho o menos*/
-    para.textContent = 'This is a narrow screen — less than 600px wide.';
-    document.body.style.backgroundColor = 'red';
+    para.textContent = "This is a narrow screen — less than 600px wide.";
+    document.body.style.backgroundColor = "red";
   } else {
     /* la ventana tiene más de 600 píxeles de ancho */
-    para.textContent = 'This is a wide screen — more than 600px wide.';
-    document.body.style.backgroundColor = 'blue';
+    para.textContent = "This is a wide screen — more than 600px wide.";
+    document.body.style.backgroundColor = "blue";
   }
 }
 
