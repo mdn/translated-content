@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-El código de estado de respuesta **`405 Method Not Allowed`** del protocolo de transferencia de hipertexto (HTTP) indica que el servidor conoce el método de solicitud, pero el recurso de destino no admite este método.
+El código de estado de respuesta **`405 Method Not Allowed`** (Método no permitido, en español) del protocolo de transferencia de hipertexto (HTTP) indica que el servidor conoce el método de solicitud, pero el recurso de destino no admite este método.
 
 El servidor **debe** generar un campo de cabecera **`Allow`** en una respuesta con código de estado 405. El campo debe contener una lista de métodos que el recurso de destino admite actualmente.
 
@@ -24,6 +24,6 @@ El servidor **debe** generar un campo de cabecera **`Allow`** en una respuesta c
 ## Véase también
 
 - {{HTTPHeader("Allow")}}
-- [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.405)
-- [How to Fix 405 Method Not Allowed](https://kinsta.com/blog/405-method-not-allowed-error/)
-- [Troubleshooting HTTP 405](https://docs.microsoft.com/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)
+- [Definiciones de código de estado HTTP](https://httpwg.org/specs/rfc9110.html#status.405)
+- [Cómo arreglar `405 Method Not Allowed`](https://kinsta.com/blog/405-method-not-allowed-error/)
+- [Solución de problemas de HTTP 405](https://docs.microsoft.com/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)
