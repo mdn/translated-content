@@ -24,17 +24,19 @@ var result = element.hasAttributes();
 ```js
 var foo = document.getElementById("foo");
 if (foo.hasAttributes()) {
-    // faire quelque chose avec 'foo.attributes'
+  // faire quelque chose avec 'foo.attributes'
 }
 ```
 
 ## Polyfill
 
 ```js
-;(function(prototype) {
-    prototype.hasAttributes = prototype.hasAttributes || function() {
-        return (this.attributes.length > 0);
-    }
+(function (prototype) {
+  prototype.hasAttributes =
+    prototype.hasAttributes ||
+    function () {
+      return this.attributes.length > 0;
+    };
 })(Element.prototype);
 ```
 

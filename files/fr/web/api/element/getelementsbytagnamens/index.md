@@ -11,7 +11,7 @@ La méthode **`Element.getElementsByTagNameNS()`** renvoie un objet {{domxref("H
 ## Syntaxe
 
 ```js
-elements = element.getElementsByTagNameNS(namespaceURI,localName);
+elements = element.getElementsByTagNameNS(namespaceURI, localName);
 ```
 
 ### Paramètres

@@ -49,7 +49,7 @@ Vous pouvez enregistrer le code qui suit dans un fichier avec l'extension `.xhtm
       function getAllParaElems() {
         const allParas = document.getElementsByTagNameNS(
           "http://www.w3.org/1999/xhtml",
-          "p"
+          "p",
         );
         const num = allParas.length;
         alert(`Il y a ${num} éléments &lt;p&gt; dans ce document`);
@@ -59,7 +59,7 @@ Vous pouvez enregistrer le code qui suit dans un fichier avec l'extension `.xhtm
         const div1 = document.getElementById("div1");
         const div1Paras = div1.getElementsByTagNameNS(
           "http://www.w3.org/1999/xhtml",
-          "p"
+          "p",
         );
         const num = div1Paras.length;
         alert(`Il y a ${num} éléments &lt;p&gt; dans l'élément div1`);
@@ -69,7 +69,7 @@ Vous pouvez enregistrer le code qui suit dans un fichier avec l'extension `.xhtm
         const div2 = document.getElementById("div2");
         const div2Paras = div2.getElementsByTagNameNS(
           "http://www.w3.org/1999/xhtml",
-          "p"
+          "p",
         );
         const num = div2Paras.length;
         alert(`Il y a ${num} éléments &lt;p&gt; dans l'élément div2`);
@@ -101,12 +101,14 @@ Vous pouvez enregistrer le code qui suit dans un fichier avec l'extension `.xhtm
     <br />
 
     <button onclick="div1ParaElems();">
-      Afficher tous les éléments <code>&lt;p&gt;</code> dans l'élément <code>&lt;div1&gt;</code>
+      Afficher tous les éléments <code>&lt;p&gt;</code> dans l'élément
+      <code>&lt;div1&gt;</code>
     </button>
     <br />
 
     <button onclick="div2ParaElems();">
-      Afficher tous les éléments <code>&lt;p&gt;</code> dans l'élément <code>&lt;div2&gt;</code>
+      Afficher tous les éléments <code>&lt;p&gt;</code> dans l'élément
+      <code>&lt;div2&gt;</code>
     </button>
   </body>
 </html>
