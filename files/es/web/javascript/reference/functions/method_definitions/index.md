@@ -29,8 +29,8 @@ Dado el siguiente código:
 
 ```js
 var obj = {
-  foo: function() {},
-  bar: function() {}
+  foo: function () {},
+  bar: function () {},
 };
 ```
 
@@ -39,7 +39,7 @@ Ahora se puede abreviar esto mismo como:
 ```js
 var obj = {
   foo() {},
-  bar() {}
+  bar() {},
 };
 ```
 
@@ -81,12 +81,12 @@ Las las definiciones de métodos no son constructores y generarán un {{jsxref("
 var obj = {
   method() {},
 };
-new obj.method; // TypeError: obj.method no es un constructor
+new obj.method(); // TypeError: obj.method no es un constructor
 
 var obj = {
-  * g() {}
+  *g() {},
 };
-new obj.g; // TypeError: obj.g no es un constructor (cambiado en ES2016)
+new obj.g(); // TypeError: obj.g no es un constructor (cambiado en ES2016)
 ```
 
 ## Ejemplos

@@ -62,25 +62,29 @@ var arr1 = [1, 2, [3, 4]];
 arr1.flat();
 
 //aplanar una matriz de nivel único
-arr1.reduce((acc, val) => acc.concat(val), []);// [1, 2, 3, 4]
+arr1.reduce((acc, val) => acc.concat(val), []); // [1, 2, 3, 4]
 
 //o
-const flatSingle = arr => [].concat(...arr);
+const flatSingle = (arr) => [].concat(...arr);
 ```
 
 ```js
 //para permitir el aplanamiento a nivel profundo use recursión con reduce y concat
-var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
+var arr1 = [1, 2, 3, [1, 2, 3, 4, [2, 3, 4]]];
 
 function flattenDeep(arr1) {
-   return arr1.reduce((acc, val) => Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val), []);
+  return arr1.reduce(
+    (acc, val) =>
+      Array.isArray(val) ? acc.concat(flattenDeep(val)) : acc.concat(val),
+    [],
+  );
 }
 flattenDeep(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
 ```
 
 ```js
 //aplanamiento profundo no recursivo usando un stack
-var arr1 = [1,2,3,[1,2,3,4, [2,3,4]]];
+var arr1 = [1, 2, 3, [1, 2, 3, 4, [2, 3, 4]]];
 function flatten(input) {
   const stack = [...input];
   const res = [];
@@ -97,7 +101,7 @@ function flatten(input) {
   //invierte para restaurar el orden de entrada
   return res.reverse();
 }
-flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
+flatten(arr1); // [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
 ```
 
 ```js
@@ -105,7 +109,7 @@ flatten(arr1);// [1, 2, 3, 1, 2, 3, 4, 2, 3, 4]
 function flatten(array) {
   var flattend = [];
   !(function flat(array) {
-    array.forEach(function(el) {
+    array.forEach(function (el) {
       if (Array.isArray(el)) flat(el);
       else flattend.push(el);
     });
@@ -118,7 +122,7 @@ function flatten(array) {
 
 ```js
 if (!Array.prototype.flat) {
-  Array.prototype.flat = function(depth) {
+  Array.prototype.flat = function (depth) {
     var flattend = [];
     (function flat(array, depth) {
       for (let el of array) {

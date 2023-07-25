@@ -38,9 +38,9 @@ Array(arrayLength)
 Los arrays pueden ser creados usando la notación [literal](/es/docs/Web/JavaScript/Reference/Lexical_grammar#arreglos_literales):
 
 ```js
-const fruits = ['Apple', 'Banana'];
+const fruits = ["Apple", "Banana"];
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // "Apple"
+console.log(fruits[0]); // "Apple"
 ```
 
 ### Constructor de array con un solo parámetro
@@ -50,7 +50,7 @@ Los arrays pueden ser creados usando un constructor con un solo parámetro numé
 ```js
 const fruits = new Array(2);
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // undefined
+console.log(fruits[0]); // undefined
 ```
 
 ### Constructor de array con múltiples parámetros
@@ -58,9 +58,9 @@ console.log(fruits[0]);     // undefined
 Si se pasa más de un argumento al constructor, se crea un nuevo {{jsxref("Array")}} con los elementos dados.
 
 ```js
-const fruits = new Array('Apple', 'Banana');
+const fruits = new Array("Apple", "Banana");
 console.log(fruits.length); // 2
-console.log(fruits[0]);     // "Apple"
+console.log(fruits[0]); // "Apple"
 ```
 
 ## Especificaciones

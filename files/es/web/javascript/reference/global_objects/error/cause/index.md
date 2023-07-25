@@ -32,7 +32,7 @@ En este caso debería pasar el error original al constructor para el nuevo `Erro
 try {
   connectToDatabase();
 } catch (err) {
-  throw new Error('Falló la conexión a la base de datos.', { cause: err });
+  throw new Error("Falló la conexión a la base de datos.", { cause: err });
 }
 ```
 
@@ -45,14 +45,20 @@ Los mensajes de error escritos para consumo humano pueden ser inapropiados para 
 ```js
 function makeRSA(p, q) {
   if (!Number.isInteger(p) || !Number.isInteger(q)) {
-    throw new Error('La generación de claves RSA requiere entradas de tipo entero.', {
-      cause: { code: 'NonInteger', values: [p, q] },
-    });
+    throw new Error(
+      "La generación de claves RSA requiere entradas de tipo entero.",
+      {
+        cause: { code: "NonInteger", values: [p, q] },
+      },
+    );
   }
   if (!areCoprime(p, q)) {
-    throw new Error('La generación de claves RSA requiere dos enteros coprimos.', {
-      cause: { code: 'NonCoprime', values: [p, q] },
-    })
+    throw new Error(
+      "La generación de claves RSA requiere dos enteros coprimos.",
+      {
+        cause: { code: "NonCoprime", values: [p, q] },
+      },
+    );
   }
   // algoritmo rsa...
 }
