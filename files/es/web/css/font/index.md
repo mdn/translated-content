@@ -38,27 +38,9 @@ También se pueden especificar los tipos de letra del sistema usando la propieda
 - small-caption
   - : el tipo de letra usado para etiquetar pequeños controles (small control).
 - status-bar
-
   - : el tipo de letra usado en la barra de estado de la ventana.
-  \-moz-window
-
-  \-moz-document
-
-  \-moz-workspace
-
-  \-moz-desktop
-
-  \-moz-info
-
-  \-moz-dialog
-
-  \-moz-button
-
-  \-moz-pull-down-menu
-
-  \-moz-list
-
-  \-moz-field
+- Gecko implementa:
+  - : `-moz-window`, `-moz-document`, `-moz-workspace`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list`, `-moz-field`
 
 ## Ejemplos
 

@@ -28,7 +28,6 @@ build/
 # The following folders still need a full pass:
 
 # es
-/files/es/web/css/**/*.md
 /files/es/web/javascript/reference/**/*.md
 
 # fr
