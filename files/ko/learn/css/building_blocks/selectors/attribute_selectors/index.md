@@ -1,7 +1,6 @@
 ---
 title: 속성 선택자
 slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
-page-type: learn-module-chapter
 l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
@@ -17,15 +16,15 @@ HTML에 대한 연구에서 알 수 있듯이, 요소에는 마크업되는 요�
       <td>
         기본 컴퓨터 활용 능력,
         <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >설치된 기본 소프트웨어</a
         >, 
         <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
+          href="/ko/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >파일 작업</a
-        >에 대한 기본 지식, HTML 기초 (<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        >에 대한 기본 지식, HTML 기초 (<a href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
-        > 학습), CSS 작동 방식에 대한 아이디어 (<a href="/en-US/docs/Learn/CSS/First_steps">CSS 첫 단계</a> 공부)
+        > 학습), CSS 작동 방식에 대한 아이디어 (<a href="/ko/docs/Learn/CSS/First_steps">CSS 첫 단계</a> 공부)
       </td>
     </tr>
     <tr>
@@ -100,8 +99,7 @@ HTML에 대한 연구에서 알 수 있듯이, 요소에는 마크업되는 요�
 | `[attr$=value]` | `li[class$="-box"]` | 값이 _value_로 끝나는 _attr_ 속성이 있는 요소와 일치합니다.                         |
 | `[attr*=value]` | `li[class*="box"]`  | 값이 문자열 내에서 _value_를 포함하는 _attr_ 속성이 있는 요소와 일치합니다. |
 
-(Aside: It may help to note that `^` and `$` have long been used as _anchors_ in so-called _regular expressions_ to mean _begins with_ and _ends with_ respectively.)
-(참고: `^` 및 `$`는 소위 _정규식_에서 각각 _시작_ 및 _종료_를 의미하는 _닻_으로 오랫동안 사용되어 왔다는 점에 유의하는 것이 도움이 될 수 있습니다.)
+(참고: `^` 및 `$`는 소위 정규식에서 각각 시작 및 종료를 의미하는 닻으로 오랫동안 사용되어 왔다는 점에 유의하는 것이 도움이 될 수 있습니다.)
 
 다음 예는 이 선택자의 사용법을 보여줍니다:
 
@@ -123,6 +121,6 @@ HTML에 대한 연구에서 알 수 있듯이, 요소에는 마크업되는 요�
 
 ## 요약
 
-이제 속성 선택자가 완료되었으므로, 다음 문서로 이동하여 [pseudo-class and pseudo-element selectors](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)에 대해 읽어볼 수 있습니다.
+이제 속성 선택자가 완료되었으므로, 다음 문서로 이동하여 [의사 클래스와 의사 요소 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)에 대해 읽어볼 수 있습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
