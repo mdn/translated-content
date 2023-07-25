@@ -35,6 +35,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
     >
     > - Si el atributo `disabled` fue añadido directamente al elemento en la página, no incluya el elemento {{HTMLElement("link")}} en vez de eso;
     > - Establezca la **propiedad** `disabled` del objeto DOM `StyleSheet` vía programación.
+
 - `href`
   - : Este atributo especifica la {{glossary("URL")}} del recurso enlazado. La URL debe ser absoluta o relativa.
 - `hreflang`
