@@ -1,9 +1,10 @@
 ---
-title: Example 3
-slug: Learn/Forms/How_to_build_custom_form_controls/Example_3
+title: 示例 5
+slug: Learn/Forms/How_to_build_custom_form_controls/Example_5
+page-type: learn-module-chapter
 ---
 
-这是解释[如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)的第三个示例。
+这是解释[如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)的最后一个示例。
 
 ## 改变状态
 
@@ -11,7 +12,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_3
 
 ```html
 <form class="no-widget">
-  <select name="myFruit" tabindex="-1">
+  <select name="myFruit">
     <option>Cherry</option>
     <option>Lemon</option>
     <option>Banana</option>
@@ -19,14 +20,14 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_3
     <option>Apple</option>
   </select>
 
-  <div class="select" tabindex="0">
+  <div class="select" role="listbox">
     <span class="value">Cherry</span>
-    <ul class="optList hidden">
-      <li class="option">Cherry</li>
-      <li class="option">Lemon</li>
-      <li class="option">Banana</li>
-      <li class="option">Strawberry</li>
-      <li class="option">Apple</li>
+    <ul class="optList hidden" role="presentation">
+      <li class="option" role="option" aria-selected="true">Cherry</li>
+      <li class="option" role="option">Lemon</li>
+      <li class="option" role="option">Banana</li>
+      <li class="option" role="option">Strawberry</li>
+      <li class="option" role="option">Apple</li>
     </ul>
   </div>
 </form>
@@ -194,9 +195,31 @@ function highlightOption(select, option) {
   option.classList.add("highlight");
 }
 
-// ------- //
-// 事件绑定 //
-// ------- //
+function updateValue(select, index) {
+  const nativeWidget = select.previousElementSibling;
+  const value = select.querySelector(".value");
+  const optionList = select.querySelectorAll(".option");
+
+  optionList.forEach((other) => {
+    other.setAttribute("aria-selected", "false");
+  });
+
+  optionList[index].setAttribute("aria-selected", "true");
+
+  nativeWidget.selectedIndex = index;
+  value.innerHTML = optionList[index].innerHTML;
+  highlightOption(select, optionList[index]);
+}
+
+function getIndex(select) {
+  const nativeWidget = select.previousElementSibling;
+
+  return nativeWidget.selectedIndex;
+}
+
+// ------------- //
+// Event binding //
+// ------------- //
 
 window.addEventListener("load", () => {
   const form = document.querySelector("form");
@@ -210,20 +233,26 @@ window.addEventListener("load", () => {
 
   selectList.forEach((select) => {
     const optionList = select.querySelectorAll(".option");
+    const selectedIndex = getIndex(select);
 
-    optionList.forEach((option) => {
+    select.tabIndex = 0;
+    select.previousElementSibling.tabIndex = -1;
+
+    updateValue(select, selectedIndex);
+
+    optionList.forEach((option, index) => {
       option.addEventListener("mouseover", () => {
         highlightOption(select, option);
       });
+
+      option.addEventListener("click", (event) => {
+        updateValue(select, index);
+      });
     });
 
-    select.addEventListener(
-      "click",
-      (event) => {
-        toggleOptList(select);
-      },
-      false,
-    );
+    select.addEventListener("click", (event) => {
+      toggleOptList(select);
+    });
 
     select.addEventListener("focus", (event) => {
       activeSelect(select, selectList);
@@ -234,9 +263,19 @@ window.addEventListener("load", () => {
     });
 
     select.addEventListener("keyup", (event) => {
+      let index = getIndex(select);
+
       if (event.key === "Escape") {
         deactivateSelect(select);
       }
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
+        index++;
+      }
+      if (event.key === "ArrowUp" && index > 0) {
+        index--;
+      }
+
+      updateValue(select, index);
     });
   });
 });

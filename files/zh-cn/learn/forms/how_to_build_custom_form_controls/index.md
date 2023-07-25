@@ -19,7 +19,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 ![选择框的三种状态](custom-select.png)
 
-上面图片显示了我们控件的三个主要状态：正常状态（左）、活动状态（中）和打开状态（右）。
+上面图片显示了我们控件的三个主要状态：正常状态（左）、活动状态（中）和展开状态（右）。
 
 在行为方面，我们正在重建原始 HTML 元素，因此它应该具有与原生 HTML 元素相同的行为和语义。我们要求我们的控件可以通过鼠标和键盘进行使用，并且可以被屏幕阅读器所识别，就像任何原生控件一样。首先让我们定义控件如何进入每种状态：
 
@@ -33,17 +33,17 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 - 用户点击或在触摸屏上触摸控件。
 - 用户按下 tab 键使控件获得了焦点。
-- 控件处于打开状态然后用户点击控件。
+- 控件处于展开状态然后用户点击控件。
 
-**在以下情况下，控件处于打开状态：**
+**在以下情况下，控件处于展开状态：**
 
-- 控件处于非打开状态时被用户点击。
+- 控件处于非展开状态时被用户点击。
 
 我们知道如何改变状态后，定义如何改变控件的值同样重要：
 
 **在以下情况下，其值将会被改变：**
 
-- 控件在打开状态下用户点击一个选项。
+- 控件在展开状态下用户点击一个选项。
 - 控件在活动状态下用户按下键盘的上/下方向键。
 
 **在以下情况下，其值不会被改变：**
@@ -53,16 +53,18 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 最后，让我们定义控件的选项将要怎么表现：
 
-- 当控件处于打开状态时，被选中的选项将被突出显示
+- 当控件处于展开状态时，被选中的选项将被突出显示
 - 当鼠标悬停在某个选项上时，该选项将被突出显示，并且之前突出显示的选项将返回其正常的状态
 
-对于我们的示例的目的，我们将就此结束；但是，如果你是一个认真的读者，你会注意到我们省略了一些东西，例如，你认为用户在控件处于打开状态时点击 tab 键会发生什么？答案是：_什么也不会发生_。好吧，似乎很明显这就是正确的行为，但事实是，因为在我们的规范中没有定义这种情况，我们很容易忽略这种行为。在团队环境中尤其是这样，因为设计控件行为的人与实现的人通常是不同的。
+对于我们的示例的目的，我们将就此结束；但是，如果你是一个认真的读者，你会注意到我们省略了一些东西，例如，你认为用户在控件处于展开状态时点击 tab 键会发生什么？答案是：_什么也不会发生_。好吧，似乎很明显这就是正确的行为，但事实是，因为在我们的规范中没有定义这种情况，我们很容易忽略这种行为。在团队环境中尤其是这样，因为设计控件行为的人与实现的人通常是不同的。
 
-另外一个有趣的例子是：当控件处于打开状态时，用户按下键盘上方向键和下方向键将会发生什么？这个问题有些棘手，如果你认为活动状态和打开状态是完全不同的，那么答案又是“什么都不会发生”，因为我们没有定义任何在打开状态下键盘的交互行为。从另一个方面看，如果你认为活动状态和打开状态是有重叠的部分，那么控件的值可能会改变，但是被选中的选项肯定不会相应的进行突出显示，同样是因为我们没有定义在控件打开状态下的任何键盘交互事件（我们仅仅定义了控件打开会发生什么，而没有定义在其打开后会发生什么）。
+另外一个有趣的例子是：当控件处于展开状态时，用户按下键盘上方向键和下方向键将会发生什么？这个问题有些棘手，如果你认为活动状态和展开状态是完全不同的，那么答案又是“什么都不会发生”，因为我们没有定义任何在展开状态下键盘的交互行为。从另一个方面看，如果你认为活动状态和展开状态是有重叠的部分，那么控件的值可能会改变，但是被选中的选项肯定不会相应的进行突出显示，同样是因为我们没有定义在控件展开状态下的任何键盘交互事件（我们仅仅定义了控件打开会发生什么，而没有定义在其打开后会发生什么）。
 
-在我们的示例中，缺失的规范是显而易见的，所以我们将着手处理它们，但是对于一些没有人想到去定义正确行为的控件而言，这的确是一个问题。所以在元素（例如 {{htmlelement('select')}}）标准化阶段，规范作者花费了大量的时间来定义每个输入设备每个用例的所有涉及的交互。创建新的控件并不容易，特别是你正在创建以前从未做过的东西，没有人知道其预期的行为和相关的交互是什么。至少 select 已经完成了这些设计，所以我们知道它应该如何表现！
+我们必须进一步思考：按退出键会发生什么？按下 <kbd>Esc</kbd> 键会关闭一个打开的选择框。记住，如果你想要提供与现有的原生 {{htmlelement('select')}} 相同的功能，那么它应该对所有用户都有相同的行为，不论是键盘、鼠标、触摸、屏幕阅读器，还是其他任何输入设备。
 
-设计新的交互方式只是行业中重要参与者的一种选择，他们有足够的影响力来推动它们创建的交互方式成为标准。例如，Apple 于 2001 年在 iPod 中推出了滚轮。他们拥有足够的市场份额，而成功推出了一种全新的设备交互方式，这是大多数设备公司无法做到的。
+在我们的示例中，规范的缺失是显而易见的，所以我们将着手处理它们，但是对于一些没有人想到去定义正确行为的控件而言，这的确是一个问题。所以在元素（例如 {{htmlelement('select')}}）标准化阶段，规范作者花费了大量的时间来定义每个输入设备每个用例的所有涉及的交互。创建新的控件并不容易，特别是你正在创建以前从未做过的东西，没有人知道其预期的行为和相关的交互是什么。至少 select 已经完成了这些设计，所以我们知道它应该如何表现！
+
+设计新的交互方式只是行业中重要参与者的一种选择，他们有足够的影响力来推动他们创建的交互方式成为标准。例如，Apple 于 2001 年在 iPod 中推出了滚轮。他们拥有足够的市场份额，而成功推出了一种全新的设备交互方式，这是大多数设备公司无法做到的。
 
 最好不要发明新的用户交互方式。对于你添加的任何交互方式，在设计阶段花费时间至关重要；如果你对一种行为的定义不够合适，或者忘记定义了某种行为，那么在用户习惯之后，将很难去重新定义它们。如果你在定义时有疑问，请征询他人的意见，如果你有预算，请不要犹豫去进行[用户可用性测试](https://zh.wikipedia.org/wiki/可用性测试)，这个过程被称为用户体验设计（UX Design），如果你想要深入的学习相关的内容，请查阅下面这些有用资源：
 
@@ -100,9 +102,11 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 注意类名的使用：不管实际使用了哪种底层 HTML 元素，它们都标识每个相关的部分。这很重要，因为这样做能确保我们的 CSS 和 JavaScript 不会和 HTML 结构强绑定，这样我们就可以在不破坏使用控件的代码的情况下进行实现更改。比如，如果你希望增加一个等价的 {{HTMLElement("optgroup")}} 元素。
 
+然而，类名并不提供语义值。到现在为止，屏幕阅读器的用户只能“看到”无序列表。我们后面会为其添加 ARIA 语义。
+
 ## 使用 CSS 创建外观
 
-现在我们有了控件结构，我们可以开始设计我们的控件了。构建自定义控件的重点是能够完全按照我们的期望设置它的样式。为了达到这个目的，我们将 CSS 部分的工作分为两部分：第一部分是让我们的控件表现得像一个 {{HTMLElement("select")}} 元素所必需的的 CSS 规则，第二部分包含了让控件看起来像我们所希望那样的精妙样式。
+现在我们有了结构，我们可以开始设计我们的控件了。构建自定义控件的重点是能够完全按照我们的期望设置它的样式。为了达到这个目的，我们将 CSS 部分的工作分为两部分：第一部分是让我们的控件表现得像一个 {{HTMLElement("select")}} 元素所必需的的 CSS 规则，第二部分包含了让控件看起来像我们所希望那样的精妙样式。
 
 ### 所需的样式
 
@@ -120,7 +124,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 }
 ```
 
-我们需要一个额外的 `active` 类来定义我们的控件处于其激活状态时的的界面外观。因为我们的控件是可以聚焦的，我们通过 {{cssxref(":focus")}} 伪类重复自定义样式来确保它们表现得一样。
+我们需要一个额外的 `active` 类来定义我们的控件处于其激活状态时的的界面外观。因为我们的控件是可以聚焦的，我们通过 {{cssxref(":focus")}} 伪类复用自定义样式来确保它们表现得一样。
 
 ```css
 .select .active,
@@ -147,7 +151,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 }
 ```
 
-我们需要一个额外的类来处理选项列表隐藏时的情况。为了管理没有完全匹配的活动状态和打开状态之间的差异，这是有必要的。
+我们需要一个额外的类来处理选项列表隐藏时的情况。为了管理没有完全匹配的活动状态和展开状态之间的差异，这是有必要的。
 
 ```css
 .select .optList.hidden {
@@ -197,10 +201,10 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 }
 ```
 
-我们不需要一个额外的元素来设计向下箭头，而使用 {{cssxref(":after")}} 伪类替代。这也可以通过使用一张加在 `select` 类上的简单的背景图像来实现。
+我们不需要一个额外的元素来设计向下箭头，而使用 {{cssxref("::after")}} 伪类替代。这也可以通过使用一张加在 `select` 类上的简单的背景图像来实现。
 
 ```css
-.select:after {
+.select::after {
   content: "▼"; /* 我们使用了 unicode 字符 U+25BC，请确保设置了 charset meta 标签 */
   position: absolute;
   z-index: 1; /* 这对于防止箭头覆盖选项列表很重要 */
@@ -334,7 +338,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -456,7 +460,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -512,7 +516,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 
 {{EmbedLiveSample("活动状态",120,130)}}
 
-#### 打开状态
+#### 展开状态
 
 ```html hidden
 <div class="select active">
@@ -578,7 +582,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -632,7 +636,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 }
 ```
 
-{{EmbedLiveSample("打开状态",120,130)}}
+{{EmbedLiveSample("展开状态",120,130)}}
 
 ## 通过 JavaScript 让你的控件动起来
 
@@ -685,7 +689,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls
 </body>
 ```
 
-第二，我们需要两个新的类（class）来隐藏不需要的元素：如果脚本未运行，我们会在视觉上隐藏自定义控件；如果脚本正常运行，则隐藏“真正”的 {{HTMLElement("select")}} 元素）。注意默认情况下，我们的 HTML 代码会隐藏我们的自定义控件。
+第二，我们需要两个新的类来隐藏不需要的元素：如果脚本未运行，我们会在视觉上隐藏自定义控件；如果脚本正常运行，则隐藏“真正”的 {{HTMLElement("select")}} 元素）。注意默认情况下，我们的 HTML 代码会隐藏我们的自定义控件。
 
 ```css
 .widget select,
@@ -837,7 +841,7 @@ window.addEventListener("load", function () {
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -969,7 +973,7 @@ function toggleOptList(select) {
 // option：需要高亮强调的带有'option'类的 DOM 节点
 function highlightOption(select, option) {
   // 为我们的自定义 select 元素获取所有有效选项的列表
-  var optionList = select.querySelectorAll(".option");
+  const optionList = select.querySelectorAll(".option");
 
   // 我们移除所有选项的高亮强调
   optionList.forEach(function (other) {
@@ -1127,7 +1131,7 @@ window.addEventListener("load", function () {
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -1449,7 +1453,7 @@ window.addEventListener("load", () => {
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -1774,7 +1778,7 @@ function updateValue(select, index) {
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;

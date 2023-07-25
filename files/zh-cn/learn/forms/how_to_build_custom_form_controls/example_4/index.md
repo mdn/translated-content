@@ -3,7 +3,7 @@ title: Example 4
 slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
 ---
 
-这是解释 [如何构建自定义表单小部件](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets) 的第四个示例。
+这是解释[如何构建自定义表单控件](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls)的第四个示例。
 
 ## 改变状态
 
@@ -43,9 +43,9 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
   overflow: hidden;
 }
 
-/* --------------- */
-/* Required Styles */
-/* --------------- */
+/*--------- */
+/* 所需的样式 */
+/* -------- */
 
 .select {
   position: relative;
@@ -69,15 +69,14 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
   visibility: hidden;
 }
 
-/* ------------ */
-/* Fancy Styles */
-/* ------------ */
+/* ------- */
+/* 美化样式 */
+/* ------- */
 
 .select {
   font-size: 0.625em; /* 10px */
   font-family: Verdana, Arial, sans-serif;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
@@ -89,7 +88,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
   box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
 
   background: #f0f0f0;
-  background: -webkit-linear-gradient(90deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
@@ -103,7 +101,7 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -114,7 +112,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
 
   padding-top: 0.1em;
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   text-align: center;
@@ -140,7 +137,6 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
 
   box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
 
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 
   min-width: 100%;
@@ -163,21 +159,13 @@ slug: Learn/Forms/How_to_build_custom_form_controls/Example_4
 
 ```js
 // ------- //
-// HELPERS //
+// 函数定义 //
 // ------- //
-
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-};
-
-// -------------------- //
-// Function definitions //
-// -------------------- //
 
 function deactivateSelect(select) {
   if (!select.classList.contains("active")) return;
 
-  var optList = select.querySelector(".optList");
+  const optList = select.querySelector(".optList");
 
   optList.classList.add("hidden");
   select.classList.remove("active");
@@ -191,15 +179,15 @@ function activeSelect(select, selectList) {
 }
 
 function toggleOptList(select, show) {
-  var optList = select.querySelector(".optList");
+  const optList = select.querySelector(".optList");
 
   optList.classList.toggle("hidden");
 }
 
 function highlightOption(select, option) {
-  var optionList = select.querySelectorAll(".option");
+  const optionList = select.querySelectorAll(".option");
 
-  optionList.forEach(function (other) {
+  optionList.forEach((other) => {
     other.classList.remove("highlight");
   });
 
@@ -207,9 +195,9 @@ function highlightOption(select, option) {
 }
 
 function updateValue(select, index) {
-  var nativeWidget = select.previousElementSibling;
-  var value = select.querySelector(".value");
-  var optionList = select.querySelectorAll(".option");
+  const nativeWidget = select.previousElementSibling;
+  const value = select.querySelector(".value");
+  const optionList = select.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
   value.innerHTML = optionList[index].innerHTML;
@@ -217,7 +205,7 @@ function updateValue(select, index) {
 }
 
 function getIndex(select) {
-  var nativeWidget = select.previousElementSibling;
+  const nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
 }
@@ -226,65 +214,67 @@ function getIndex(select) {
 // Event binding //
 // ------------- //
 
-window.addEventListener("load", function () {
-  var form = document.querySelector("form");
+window.addEventListener("load", () => {
+  const form = document.querySelector("form");
 
   form.classList.remove("no-widget");
   form.classList.add("widget");
 });
 
-window.addEventListener("load", function () {
-  var selectList = document.querySelectorAll(".select");
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll(".option");
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
 
-    optionList.forEach(function (option) {
-      option.addEventListener("mouseover", function () {
+    optionList.forEach((option) => {
+      option.addEventListener("mouseover", () => {
         highlightOption(select, option);
       });
     });
 
-    select.addEventListener("click", function (event) {
+    select.addEventListener("click", (event) => {
       toggleOptList(select);
     });
 
-    select.addEventListener("focus", function (event) {
+    select.addEventListener("focus", (event) => {
       activeSelect(select, selectList);
     });
 
-    select.addEventListener("blur", function (event) {
+    select.addEventListener("blur", (event) => {
       deactivateSelect(select);
     });
   });
 });
 
-window.addEventListener("load", function () {
-  var selectList = document.querySelectorAll(".select");
+window.addEventListener("load", () => {
+  const selectList = document.querySelectorAll(".select");
 
-  selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll(".option"),
-      selectedIndex = getIndex(select);
+  selectList.forEach((select) => {
+    const optionList = select.querySelectorAll(".option");
+    const selectedIndex = getIndex(select);
 
     select.tabIndex = 0;
     select.previousElementSibling.tabIndex = -1;
 
     updateValue(select, selectedIndex);
 
-    optionList.forEach(function (option, index) {
-      option.addEventListener("click", function (event) {
+    optionList.forEach((option, index) => {
+      option.addEventListener("click", (event) => {
         updateValue(select, index);
       });
     });
 
-    select.addEventListener("keyup", function (event) {
-      var length = optionList.length,
-        index = getIndex(select);
+    select.addEventListener("keyup", (event) => {
+      let index = getIndex(select);
 
-      if (event.keyCode === 40 && index < length - 1) {
+      if (event.key === "Escape") {
+        deactivateSelect(select);
+      }
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
       }
-      if (event.keyCode === 38 && index > 0) {
+      if (event.key === "ArrowUp" && index > 0) {
         index--;
       }
 
