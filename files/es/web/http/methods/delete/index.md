@@ -7,33 +7,33 @@ l10n:
 
 {{HTTPSidebar}}
 
-El método HTTP `DELETE` elimina el recurso especificado.
+El **método de solicitud HTTP `DELETE`** elimina el recurso especificado.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Petición con cuerpo</th>
-      <td>Posible</td>
+      <td>Puede</td>
     </tr>
     <tr>
       <th scope="row">Respuesta válida con cuerpo</th>
-      <td>Posible</td>
+      <td>Puede</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Seguro")}}</th>
+      <th scope="row">{{Glossary("Safe/HTTP", "Seguro")}}</th>
       <td>No</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Idempotent")}}</th>
+      <th scope="row">{{Glossary("Idempotent","Idempotente")}}</th>
       <td>Si</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Cacheable")}}</th>
+      <th scope="row">{{Glossary("Cacheable","Se puede almacenar en Cache")}}</th>
       <td>No</td>
     </tr>
     <tr>
       <th scope="row">
-        Permitido en <a href="/es/docs/Learn/Forms">formularios</a>
+        Permitido en <a href="/es/docs/Learn/Forms">formularios HTML</a>
       </th>
       <td>No</td>
     </tr>
@@ -43,7 +43,7 @@ El método HTTP `DELETE` elimina el recurso especificado.
 ## Sintaxis
 
 ```http
-DELETE /archivo.html HTTP/1.1
+DELETE /file.html HTTP/1.1
 ```
 
 ## Ejemplo
@@ -51,8 +51,8 @@ DELETE /archivo.html HTTP/1.1
 ### Petición
 
 ```http
-DELETE /archivo.html HTTP/1.1
-Host: ejemplo.com
+DELETE /file.html HTTP/1.1
+Host: example.com
 ```
 
 ### Respuestas
@@ -87,4 +87,4 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Véase también
 
-- HTTP status: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}
+- Estado HTTP: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}
