@@ -22,8 +22,8 @@ L'objet `WebGLBuffer` ne définit aucune méthode ou propriété en propre, et s
 ### Création d'un tampon
 
 ```js
-var canevas = document.getElementById('canevas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canevas");
+var gl = canevas.getContext("webgl");
 var tampon = gl.createBuffer();
 ```
 
