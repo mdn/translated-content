@@ -11,7 +11,7 @@ La propriété **`password`** est une propriété accessible en lecture seule ra
 ## Syntaxe
 
 ```js
-password = passwordCredential.password
+password = passwordCredential.password;
 ```
 
 ### Valeur

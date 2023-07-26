@@ -23,12 +23,16 @@ Une chaîne de caractères [`DOMString`](/fr/docs/Web/API/DOMString).
 Dans cet exemple, l'appel à `entry.id` entraînera l'affichage dans la console du code `myImage`, qui est l'[`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) de l'élément image.
 
 ```html
-<img src="image.jpg" alt="une belle image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="une belle image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js
 const observer = new PerformanceObserver((list) => {
-let entries = list.getEntries().forEach(function (entry) {
+  let entries = list.getEntries().forEach(function (entry) {
     if (entry.identifier === "big-image") {
       console.log(entry.id);
     }

@@ -19,10 +19,9 @@ Les évènements de transition de page sont émis quand une page web est chargé
 ### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<body onpageshow="myFunction(event)">
-</body>
+  <body onpageshow="myFunction(event)"></body>
 </html>
 ```
 
@@ -30,11 +29,11 @@ Les évènements de transition de page sont émis quand une page web est chargé
 
 ```js
 function myFunction(event) {
-    if (event.persisted) {
-        alert("La page a été mise en cache par le navigateur");
-    } else {
-        alert("La page n’a PAS été mise en cache par le navigateur");
-    }
+  if (event.persisted) {
+    alert("La page a été mise en cache par le navigateur");
+  } else {
+    alert("La page n’a PAS été mise en cache par le navigateur");
+  }
 }
 ```
 
