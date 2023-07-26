@@ -270,7 +270,7 @@ Agora que demonstramos o uso dos principais blocos de construção do WebAssembl
 - Um módulo pode ter N instâncias, da mesma forma que um literal de função pode produzir N valores de fechamento.
 - Uma instância de módulo pode usar instâncias de memória 0–1, que fornecem o "espaço de endereço" da instância. Versões futuras do WebAssembly podem permitir instâncias de memória 0–N por instância de módulo (consulte [Múltiplas memórias](https://webassembly.org/roadmap/)).
 - Uma instância de módulo pode usar instâncias de tabela 0–1 — este é o "espaço de endereço de função" da instância, usado para implementar ponteiros de função C. Versões futuras do WebAssembly podem permitir 0–N instâncias de tabela por instância de módulo.
-- Uma instância de memória ou tabela pode ser usada por instâncias de módulo 0–N — todas essas instâncias compartilham o mesmo espaço de endereço, permitindo [vinculação dinâmica](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking .md).
+- Uma instância de memória ou tabela pode ser usada por instâncias de módulo 0–N — todas essas instâncias compartilham o mesmo espaço de endereço, permitindo [vinculação dinâmica](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md).
 
 Você pode ver a multiplicidade em ação em nosso artigo Compreendendo o formato de texto — consulte a [seção Tabelas mutantes e vinculação dinâmica](/pt-BR/docs/WebAssembly/Understanding_the_text_format#mutating_tables_and_dynamic_linking).
 
