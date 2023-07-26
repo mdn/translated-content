@@ -6,13 +6,13 @@ original_slug: Web/媒体/Autoplay_guide
 
 网页加载完成后立即播放音频（或带有音频轨道的视频）可能会意外地打扰到用户。尽管自动播放媒体文件是一个很实用的功能，但是我们也应该谨慎地使用它，保证只有在它被需要的时候才使用。为了让用户拥有控制权，通常浏览器会提供各种方式禁用自动播放音频功能。在这篇文章中，我们将介绍各种媒体和 Web Audio APIs 的自动播放功能，包括关于如何使用自动播放功能、如何优雅的处理阻止自动播放功能的一些简短的介绍。
 
-Autoplay blocking is _not_ applied to {{HTMLElement("video")}} elements when the source media does not have an audio track, or if the audio track is muted. Media with an active audio track are considered to be **audible**, and autoplay blocking applies to them. **Inaudible** media are not affected by autoplay blocking.
+当源媒体没有音轨或音轨静音时，阻止自动播放不会应用于{{HTMLElement("video")}}元素。具有活动音轨的媒体被认为是**可听的**，并且阻止自动播放适用于它们。**听不见的**媒体不受阻止自动播放的影响。
 
 ## 自动播放 和 自动播放暂停
 
-The term **autoplay** refers to any feature that causes audio to begin to play without the user specifically requesting that playback begin. This includes both the use of HTML attributes to autoplay media as well as the user of JavaScript code to start playback outside the context of handling user input.
+术语**自动播放**是指无需用户明确请求开始播放即可导致音频开始播放的任何功能。这包括使用 HTML 属性自动播放媒体以及用户使用 JavaScript 代码在处理用户输入的上下文之外开始播放。
 
-That means that both of the following are considered autoplay behavior, and are therefore subject to the browser's autoplay blocking policy:
+这意味着以下两种行为都被视为自动播放行为，因此受到浏览器阻止自动播放策略的约束:
 
 ```html
 <audio src="/music.mp4" autoplay></audio>
@@ -74,17 +74,17 @@ audioElement.play();
 
 如果您能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。您可以通过侦听要在媒体元素上触发的[`play`](/zh-CN/docs/Web/API/HTMLMediaElement/play_event)事件来轻松实现此目的。
 
-The `play` event is sent both when the media is resumed after being paused _and_ when autoplay occurs. That means that the first time the `play` event is fired, you know your media is being started for the first time after the page is opened.
+当媒体暂停后恢复时以及发生自动播放时都会发送`play`事件。这意味着第一次触发`play`事件时，您知道您的媒体是在页面打开后第一次启动的。
 
-Consider this HTML for a media element:
+考虑以下 HTML 作为媒体元素:
 
 ```html
 <video src="myvideo.mp4" autoplay onplay=handleFirstPlay(event)">
 ```
 
-Here we have a {{HTMLElement("video")}} element whose [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay) attribute is set, with an {{domxref("HTMLMediaElement.onplay", "onplay")}} event handler set up; the event is handled by a function called `handleFirstPlay()`, which receives as input the `play` event.
+这里我们有一个 {{HTMLElement("video")}} 元素，它设置了[`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay) 属性，并设置了 {{domxref("HTMLMediaElement.onplay", "onplay")}} 事件处理程序；该事件由名为`handleFirstPlay()` 的函数处理，该函数接收`play`事件作为输入。
 
-`handleFirstPlay()` looks like this:
+`handleFirstPlay()` 看起来像这样:
 
 ```js
 function handleFirstPlay(event) {
@@ -96,31 +96,31 @@ function handleFirstPlay(event) {
 }
 ```
 
-After getting a reference to the video element from the {{domxref("Event")}} object's {{domxref("Event.target", "target")}}, the element's `onplay` handler is set to `null`. This will prevent any future `play` events from being delivered to the handler. That could happen if the video is paused and resumed by the user or automatically by the browser when the document is in a background tab.
+从{{domxref("Event")}}对象的{{domxref("Event.target", "target")}}获取对视频元素的引用后，该元素的 `onplay` 处理程序将设置为 `null`。这将阻止任何未来的播放事件被传递给处理程序。当文档位于后台选项卡时，如果用户暂停并恢复视频或浏览器自动暂停和恢复视频，则可能会发生这种情况。.
 
-At this point, your site or app can begin whatever it needs to do that relies upon the video having been started up.
+此时，您的网站或应用程序可以开始执行依赖于视频启动的任何操作。
 
-> **备注：** This approach doesn't differentiate between autoplay and the user starting playback manually.
+> **备注：** 此方法不区分自动播放和用户手动开始播放。
 
 ### The play() method
 
-The term "autoplay" also refers to scenarios in which a script tries to trigger the playback of media that includes audio, outside the context of handling a user input event. This is done by calling the media element's {{domxref("HTMLMediaElement.play", "play()")}} method.
+术语“自动播放”还指脚本尝试在处理用户输入事件的上下文之外触发包含音频的媒体播放的场景。这是通过调用媒体元素的{{domxref("HTMLMediaElement.play", "play()")}}方法来完成的。
 
-> **备注：** It is strongly recommended that you use the `autoplay` attribute whenever possible, because support for autoplay preferences are more widespread for the `autoplay` attribute than for other means of playing media automatically. It also lets the browser take responsibility for starting playback, letting it optimize the timing of that taking place.
+> **备注：** 强烈建议您尽可能使用自动播放属性，因为自动播放属性对自动播放首选项的支持比其他自动播放媒体的方式更广泛。它还让浏览器负责开始播放，并优化播放的时间。
 
-#### Example: Playing video
+#### 示例：播放视频
 
-This simple example plays the first {{HTMLElement("video")}} element found in the document. `play()` won't let the playback begin unless the document has permission to automatically play media.
+这个简单的示例播放文档中找到的第一个{{HTMLElement("video")}}元素。除非文档有权自动播放媒体，否则 `play()` 不会让播放开始。
 
 ```js
 document.querySelector("video").play();
 ```
 
-#### Example: Handling play() failures
+#### 示例：处理 play() 失败
 
-It's much easier to detect a failure to autoplay media when you use the {{domxref("HTMLMediaElement.play", "play()")}} method to start it. `play()` returns a {{jsxref("Promise")}} which is resolved once the media successfully begins to play, and is rejected when playback fails to begin (such as if autoplay is denied). When autoplay fails, you likely will want to offer a way for the user to manually tell the browser to ask the user to grant permission to play media.
+当您使用{{domxref("HTMLMediaElement.play", "play()")}}方法启动媒体时，更容易检测到自动播放媒体的故障。 `play()` 返回一个{{jsxref("Promise")}}，一旦媒体成功开始播放，该 Promise 就会被解析；当播放无法开始时（例如自动播放被拒绝），该 Promise 将被拒绝。当自动播放失败时，您可能希望为用户提供一种手动告诉浏览器要求用户授予播放媒体权限的方法。
 
-You might use code like this to accomplish the job:
+您可以使用这样的代码来完成这项工作:
 
 ```js
 let startPlayPromise = videoElem.play();
@@ -141,13 +141,13 @@ if (startPlayPromise !== undefined) {
 }
 ```
 
-The first thing we do with the result of `play()` is make sure it's not `undefined`. We check for this because in earlier versions of the HTML specification, `play()` didn't return a value. Returning a promise to allow you to determine success or failure of the operation was added more recently. Checking for `undefined` prevents this code from failing with an error on older versions of web browsers.
+我们对 play() 的结果做的第一件事是确保它不是`undefined`。我们检查这一点是因为在早期版本的 HTML 规范中，play() 没有返回值。最近添加了返回一个允许您确定操作成功或失败的承诺。检查`undefined`可防止此代码在旧版本的 Web 浏览器上失败并出现错误。
 
-We then add a {{jsxref("Promise.catch", "catch()")}} handler to the promise. This looks at the error's {{domxref("DOMException.name", "name")}} to see if it's `NotAllowedError`. This indicates that playback failed due to a permission issue, such as autoplay being denied. If that's the case, we should present a user interface to let the user manually start playback; that's handled here by a function `showPlayButton()`.
+然后我们向 Promise 添加一个 {{jsxref("Promise.catch", "catch()")}} 处理程序。这将查看错误的{{domxref("DOMException.name", "name")}}以查看它是否为 `NotAllowedError`。这表示由于权限问题导致播放失败，例如自动播放被拒绝。如果是这样的话，我们应该提供一个用户界面，让用户手动开始播放；这是由函数 `showPlayButton()` 处理的。
 
-Any other errors are handled as appropriate.
+任何其他错误都会被适当处理。
 
-If the promise returned by `play()` is resolved without error, the `then()` clause is run and can begin whatever needs to be done when autoplay has begun.
+如果 `play()` 返回的 Promise 已正确解决，则 `then()` 子句将运行，并且可以在自动播放开始时开始执行任何需要执行的操作。
 
 ## Autoplay using the Web Audio API
 
