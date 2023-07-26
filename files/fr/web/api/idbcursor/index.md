@@ -1,11 +1,6 @@
 ---
 title: IDBCursor
 slug: Web/API/IDBCursor
-tags:
-  - API
-  - IndexedDB
-  - Interface
-  - Référence(2)
 translation_of: Web/API/IDBCursor
 ---
 
@@ -111,19 +106,20 @@ Dans ce fragment simple, nous créons une transaction, récupérons un magasin d
 
 ```js
 function afficheDonnee() {
-  var transaction = db.transaction(['grandListAlbum'], "readonly");
-  var objectStore = transaction.objectStore('grandListAlbum');
+  var transaction = db.transaction(["grandListAlbum"], "readonly");
+  var objectStore = transaction.objectStore("grandListAlbum");
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = function (event) {
     var curseur = event.target.result;
-    if(curseur) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = curseur.value.titreAlbum + ', ' + curseur.value.annee;
+    if (curseur) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        curseur.value.titreAlbum + ", " + curseur.value.annee;
       list.appendChild(listItem);
 
       curseur.continue();
     } else {
-      console.log('Entrées tous affichés.');
+      console.log("Entrées tous affichés.");
     }
   };
 }

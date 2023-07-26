@@ -1,5 +1,5 @@
 ---
-title: 'Django 教程 9: 使用表单'
+title: "Django 教程 9: 使用表单"
 slug: Learn/Server-side/Django/Forms
 ---
 
@@ -50,9 +50,13 @@ slug: Learn/Server-side/Django/Forms
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -82,17 +86,17 @@ Django 的表单处理，使用了我们在之前的教程中，学到的所有�
 
 1. 在用户第一次请求时，显示默认表单。
 
-    - 表单可能包含空白字段（例如，如果您正在创建新记录），或者可能预先填充了初始值（例如，如果您要更改记录，或者具有有用的默认初始值）。
-    - 此时表单被称为未绑定，因为它与任何用户输入的数据无关（尽管它可能具有初始值）。
+   - 表单可能包含空白字段（例如，如果您正在创建新记录），或者可能预先填充了初始值（例如，如果您要更改记录，或者具有有用的默认初始值）。
+   - 此时表单被称为未绑定，因为它与任何用户输入的数据无关（尽管它可能具有初始值）。
 
 2. 从提交请求接收数据，并将其绑定到表单。
 
-    - 将数据绑定到表单，意味着当我们需要重新显示表单时，用户输入的数据和任何错误都可取用。
+   - 将数据绑定到表单，意味着当我们需要重新显示表单时，用户输入的数据和任何错误都可取用。
 
 3. 清理并验证数据。
 
-    - 清理数据会对输入执行清理（例如，删除可能用于向服务器发送恶意内容的无效字符）并将其转换为一致的 Python 类型。
-    - 验证检查值是否适合该字段（例如，在正确的日期范围内，不是太短或太长等）
+   - 清理数据会对输入执行清理（例如，删除可能用于向服务器发送恶意内容的无效字符）并将其转换为一致的 Python 类型。
+   - 验证检查值是否适合该字段（例如，在正确的日期范围内，不是太短或太长等）
 
 4. 如果任何数据无效，请重新显示表单，这次使用任何用户填充的值，和问题字段的错误消息。
 5. 如果所有数据都有效，请执行必要的操作（例如保存数据，发送表单和发送电子邮件，返回搜索结果，上传文件等）
@@ -344,22 +348,21 @@ def renew_book_librarian(request, pk):
 
 创建视图中引用的模板（**/catalog/templates/catalog/book\_renew\_librarian.html**），并将下面的代码，复制到其中：
 
-```html
+```django
 {% extends "base_generic.html" %}
+
 {% block content %}
+  <h1>Renew: \{{bookinst.book.title}}</h1>
+  <p>Borrower: \{{bookinst.borrower}}</p>
+  <p{% if bookinst.is_overdue %} class="text-danger"{% endif %}>Due date: \{{bookinst.due_back}}</p>
 
-    <h1>Renew: \{{bookinst.book.title}}</h1>
-    <p>Borrower: \{{bookinst.borrower}}</p>
-    <p{% if bookinst.is_overdue %} class="text-danger"{% endif %}>Due date: \{{bookinst.due_back}}</p>
-
-    <form action="" method="post">
-        {% csrf_token %}
-        <table>
-        \{{ form }}
-        </table>
-        <input type="submit" value="Submit" />
-    </form>
-
+  <form action="" method="post">
+    {% csrf_token %}
+    <table>
+      \{{ form }}
+    </table>
+    <input type="submit" value="Submit" />
+  </form>
 {% endblock %}
 ```
 
@@ -375,9 +378,16 @@ def renew_book_librarian(request, pk):
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required />
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2016-11-08"
+      required />
     <br />
-    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
   </td>
 </tr>
 ```
@@ -389,14 +399,21 @@ def renew_book_librarian(request, pk):
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
-   <td>
-      <ul class="errorlist">
-        <li>Invalid date - renewal in past</li>
-      </ul>
-      <input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required />
-      <br />
-      <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
-    </td>
+  <td>
+    <ul class="errorlist">
+      <li>Invalid date - renewal in past</li>
+    </ul>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2015-11-08"
+      required />
+    <br />
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
+  </td>
 </tr>
 ```
 
@@ -418,8 +435,10 @@ def renew_book_librarian(request, pk):
 
 如果您接受了[Django 教程第 8 部分中的“挑战”：用户身份验证和权限](/zh-CN/docs/learn/Server-side/Django/Authentication#Challenge_yourself)，您将获得图书馆中借出的所有书本的列表，这只有图书馆工作人员才能看到。我们可以使用下面的模板代码，为每个项目旁边的续借页面，添加链接。
 
-```html
-{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}
+```django
+{% if perms.catalog.can_mark_returned %}-
+  <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>
+{% endif %}
 ```
 
 > **备注：** 请记住，您的测试登录需要具有“`catalog.can_mark_returned`”权限，才能访问续借书本页面（可能使用您的超级用户帐户）。
@@ -541,21 +560,19 @@ class AuthorDelete(DeleteView):
 
 “创建”和“更新”视图默认使用相同的模板，它将以您的模型命名：**model\_name\_form.html**（您可以使用视图中的`template_name_suffix` 字段，将后缀更改为 **form** 以外的其他内容，例如，`template_name_suffix = '_other_suffix'`）
 
-创建模板文件 **locallibrary/catalog/templates/catalog/author\_form.html**，并复制到下面的文本中。
+创建模板文件 **locallibrary/catalog/templates/catalog/author_form.html**，并复制到下面的文本中。
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-
-<form action="" method="post">
+  <form action="" method="post">
     {% csrf_token %}
     <table>
     \{{ form.as_table }}
     </table>
     <input type="submit" value="Submit" />
-
-</form>
+  </form>
 {% endblock %}
 ```
 
@@ -563,20 +580,18 @@ class AuthorDelete(DeleteView):
 
 “删除”视图需要查找以 **model\_name\_confirm\_delete.html** 格式命名的模板（同样，您可以在视图中，使用`template_name_suffix` 更改后缀）。创建模板文件 **locallibrary/catalog/templates/catalog/author\_confirm\_delete.html** ，并复制到下面的文本中。
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
+  <h1>Delete Author</h1>
 
-<h1>Delete Author</h1>
+  <p>Are you sure you want to delete the author: \{{ author }}?</p>
 
-<p>Are you sure you want to delete the author: \{{ author }}?</p>
-
-<form action="" method="POST">
-  {% csrf_token %}
-  <input type="submit" action="" value="Yes, delete." />
-</form>
-
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" action="" value="Yes, delete." />
+  </form>
 {% endblock %}
 ```
 
@@ -616,7 +631,7 @@ urlpatterns += [
 
 ## 挑战自己
 
-创建一些表单，来创建、编辑和删除书本记录`Book`。您可以使用与作者`Authors`完全相同的结构。如果您的 **book_form.html** 模板只是 **author\_form.html** 模板的复制重命名版本，则新的“创建图书”页面，将如下所示：
+创建一些表单，来创建、编辑和删除书本记录`Book`。您可以使用与作者`Authors`完全相同的结构。如果您的 **book_form.html** 模板只是 **author_form.html** 模板的复制重命名版本，则新的“创建图书”页面，将如下所示：
 
 ![](forms_example_create_book.png)
 

@@ -11,7 +11,7 @@ Obtient la langue de l'interface utilisateur du navigateur. Ceci est différent 
 ## Syntaxe
 
 ```js
-browser.i18n.getUILanguage()
+browser.i18n.getUILanguage();
 ```
 
 ### Paramètres

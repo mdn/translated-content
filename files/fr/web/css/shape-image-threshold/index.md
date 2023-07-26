@@ -1,11 +1,6 @@
 ---
 title: shape-image-threshold
 slug: Web/CSS/shape-image-threshold
-tags:
-  - CSS
-  - Experimental
-  - Propriété
-  - Reference
 translation_of: Web/CSS/shape-image-threshold
 ---
 

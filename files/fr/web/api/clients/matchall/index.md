@@ -1,13 +1,6 @@
 ---
 title: Clients.matchAll()
 slug: Web/API/Clients/matchAll
-tags:
-  - API
-  - Client
-  - Expérimental(2)
-  - Méthode
-  - Référence(2)
-  - Service Workers
 translation_of: Web/API/Clients/matchAll
 ---
 
@@ -16,7 +9,7 @@ translation_of: Web/API/Clients/matchAll
 ## Syntaxe
 
 ```js
-ServiceWorkerClients.matchAll(options).then(function(clients) {
+ServiceWorkerClients.matchAll(options).then(function (clients) {
   // faire quelque chose avec la list de clients
 });
 ```
@@ -37,9 +30,9 @@ Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui s
 ## Exemples
 
 ```js
-clients.matchAll(options).then(function(clientList) {
-  for(var i = 0 ; i < clients.length ; i++) {
-    if(clientList[i].url === 'index.html') {
+clients.matchAll(options).then(function (clientList) {
+  for (var i = 0; i < clients.length; i++) {
+    if (clientList[i].url === "index.html") {
       clients.openWindow(clientList[i]);
       // ou faire quelque chose avec le client
     }

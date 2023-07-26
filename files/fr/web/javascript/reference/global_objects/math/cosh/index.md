@@ -1,15 +1,7 @@
 ---
 title: Math.cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/cosh
 ---
 
 {{JSRef}}

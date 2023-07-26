@@ -1,13 +1,6 @@
 ---
 title: Console.table
 slug: Web/API/console/table
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthode
-  - console
-  - débogage
 translation_of: Web/API/Console/table
 ---
 
@@ -57,7 +50,11 @@ Si les éléments d'un tableau, ou les propriétés d'un objet, sont eux-mêmes 
 ```js
 // un tableau de tableaux
 
-var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
+var people = [
+  ["John", "Smith"],
+  ["Jane", "Doe"],
+  ["Emily", "Jones"],
+];
 console.table(people);
 ```
 

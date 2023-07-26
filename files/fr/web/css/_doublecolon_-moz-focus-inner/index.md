@@ -2,7 +2,6 @@
 title: '::-moz-focus-inner'
 slug: Web/CSS/::-moz-focus-inner
 translation_of: Web/CSS/::-moz-focus-inner
-browser-compat: css.selectors.-moz-focus-inner
 l10n:
   sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
 ---

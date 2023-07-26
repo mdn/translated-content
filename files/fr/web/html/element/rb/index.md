@@ -1,11 +1,6 @@
 ---
-title: '<rb> : l''élément de base ruby'
+title: "<rb> : l'élément de base ruby"
 slug: Web/HTML/Element/rb
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Ruby
 translation_of: Web/HTML/Element/rb
 ---
 

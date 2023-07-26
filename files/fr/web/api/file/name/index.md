@@ -2,8 +2,6 @@
 title: File.name
 slug: Web/API/File/name
 translation_of: Web/API/File/name
-original_slug: Web/API/File/fileName
-browser-compat: api.File.name
 ---
 
 {{APIRef("File API")}}
@@ -25,7 +23,7 @@ Une chaîne de caractères qui contient le nom du fichier sans le chemin, par ex
 ### HTML
 
 ```html
-<input type="file" multiple onchange="processSelectedFiles(this)">
+<input type="file" multiple onchange="processSelectedFiles(this)" />
 
 <div id="output"></div>
 ```
@@ -45,7 +43,7 @@ function processSelectedFiles(fileInput) {
 ```
 
 ```css hidden
-#output{
+#output {
   padding: 0.5em 0;
   white-space: pre;
 }

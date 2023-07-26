@@ -2,8 +2,6 @@
 title: saturate()
 slug: Web/CSS/filter-function/saturate
 translation_of: Web/CSS/filter-function/saturate()
-original_slug: Web/CSS/filter-function/saturate()
-browser-compat: css.types.filter-function.saturate
 ---
 
 {{CSSRef}}

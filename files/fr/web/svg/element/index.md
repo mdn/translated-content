@@ -1,14 +1,6 @@
 ---
 title: Element
 slug: Web/SVG/Element
-tags:
-  - Conception adaptative
-  - Elements
-  - Graphiques vectoriels
-  - Références SVG
-  - SVG
-  - dessin
-  - l10n:priority
 translation_of: Web/SVG/Element
 ---
 

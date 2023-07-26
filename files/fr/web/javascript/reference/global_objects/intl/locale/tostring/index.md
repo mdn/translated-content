@@ -1,14 +1,7 @@
 ---
 title: Intl.Locale.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
-tags:
-  - Intl
-  - JavaScript
-  - Locale
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/toString
 ---
 
 {{JSRef}}

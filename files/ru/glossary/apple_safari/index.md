@@ -10,6 +10,7 @@ tags:
 translation_of: Glossary/Apple_Safari
 original_slug: Глоссарий/Apple_Safari
 ---
+
 [Safari](http://www.apple.com/safari/) (Сафари) - это {{Glossary("Browser","веб-браузер")}} разработанный компанией Apple, входит в состав операционных систем macOS и iOS. [Safari](http://www.apple.com/safari/) работает на движке [WebKit](http://www.webkit.org/).
 
 ## Узнайте больше

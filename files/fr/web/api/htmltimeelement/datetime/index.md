@@ -152,7 +152,7 @@ Le format de la chaîne de caractères doit correspondre à l'une des micro-synt
 
 ```js
 dateTimeString = timeElt.dateTime;
-timeElt.dateTime = dateTimeString
+timeElt.dateTime = dateTimeString;
 ```
 
 ## Exemple

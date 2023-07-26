@@ -1,14 +1,6 @@
 ---
 title: Notification.icon
 slug: Web/API/Notification/icon
-tags:
-  - API
-  - API Notifications
-  - Icône
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
 translation_of: Web/API/Notification/icon
 ---
 
@@ -19,7 +11,7 @@ La propriété en lecture seule **`icon`** de l'interface {{domxref ("Notificati
 ## Syntaxe
 
 ```js
-Notification.icon
+Notification.icon;
 ```
 
 ### Valeur

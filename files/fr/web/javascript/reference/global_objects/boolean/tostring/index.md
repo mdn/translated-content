@@ -1,14 +1,7 @@
 ---
 title: Boolean.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
-tags:
-  - Boolean
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Boolean/toString
 ---
 
 {{JSRef}}

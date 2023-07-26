@@ -2,7 +2,6 @@
 title: Constructeur DataView()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/DataView
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/DataView
-browser-compat: javascript.builtins.DataView.DataView
 ---
 
 {{JSRef}}

@@ -1,11 +1,6 @@
 ---
 title: prefers-color-scheme
 slug: Web/CSS/@media/prefers-color-scheme
-tags:
-  - '@media'
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/prefers-color-scheme
 ---
 

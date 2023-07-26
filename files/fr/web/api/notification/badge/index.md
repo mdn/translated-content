@@ -1,13 +1,6 @@
 ---
 title: Notification.badge
 slug: Web/API/Notification/badge
-tags:
-  - API Notification
-  - API badge
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
 translation_of: Web/API/Notification/badge
 ---
 
@@ -18,7 +11,7 @@ La propriété **`badge`** de l'interface {{domxref ("Notification")}} renvoie l
 ## Syntaxe
 
 ```js
-const url = Notification.badge
+const url = Notification.badge;
 ```
 
 ### Valeur

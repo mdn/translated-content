@@ -1,5 +1,5 @@
 ---
-title: '<samp> : l''élément d''échantillon en sortie'
+title: "<samp> : l'élément d'échantillon en sortie"
 slug: Web/HTML/Element/samp
 l10n:
   sourceCommit: 20f58e36e34d79bac99aa527865a754e9c29c81b
@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<samp>`** est un élément qui permet de représenter un résultat produit par un programme informatique en incise dans du texte. Il est généralement affiché avec la police à chasse fixe du navigateur (par exemple en [Courier](https://fr.wikipedia.org/wiki/Courier_(police_d%27%C3%A9criture)) ou en Lucida Console).
+L'élément [HTML](/fr/docs/Web/HTML) **`<samp>`** est un élément qui permet de représenter un résultat produit par un programme informatique en incise dans du texte. Il est généralement affiché avec la police à chasse fixe du navigateur (par exemple en [Courier](https://fr.wikipedia.org/wiki/Courier_(police_d%27écriture)) ou en Lucida Console).
 
 {{EmbedInteractiveExample("pages/tabbed/samp.html", "tabbed-shorter")}}
 

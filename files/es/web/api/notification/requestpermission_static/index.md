@@ -15,7 +15,9 @@ El método **`requestPermission`** de la interfaz {{domxref("Notification")}} so
 La ultima especificación ha actualizado este método a una sintaxis de tipo promesa que funciona así:
 
 ```js
-Notification.requestPermission().then(function(permission) { /* ... */ });
+Notification.requestPermission().then(function (permission) {
+  /* ... */
+});
 ```
 
 Anteriormente, la sintaxis se basaba en un simple callback; esta versión ahora está obsoleta:
@@ -51,7 +53,9 @@ Es posible enviar una notificación de la siguiente forma: aquí presentamos un 
 function notifyMe() {
   // Comprobamos si el navegador soporta las notificaciones
   if (!("Notification" in window)) {
-    alert("Este navegador no es compatible con las notificaciones de escritorio");
+    alert(
+      "Este navegador no es compatible con las notificaciones de escritorio",
+    );
   }
 
   // Comprobamos si los permisos han sido concedidos anteriormente

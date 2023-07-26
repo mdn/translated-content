@@ -1,12 +1,6 @@
 ---
 title: Égalité stricte (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.strict_equality
 ---
 
 {{jsSidebar("Operators")}}

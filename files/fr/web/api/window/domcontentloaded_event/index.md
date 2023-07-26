@@ -2,7 +2,6 @@
 title: DOMContentLoaded
 slug: Web/API/Window/DOMContentLoaded_event
 translation_of: Web/API/Window/DOMContentLoaded_event
-original_slug: Web/Events/DOMContentLoaded
 ---
 
 {{APIRef}}
@@ -48,8 +47,8 @@ Si vous voulez que le DOM soit analysé aussi rapidement que possible après que
 
 ```js
 window.addEventListener("DOMContentLoaded", (event) => {
-    console.log("DOM entièrement chargé et analysé");
-  });
+  console.log("DOM entièrement chargé et analysé");
+});
 ```
 
 ## Spécifications

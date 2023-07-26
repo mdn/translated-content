@@ -1,22 +1,14 @@
 ---
 title: Opérateur de coalescence des nuls (Nullish coalescing operator)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing
-tags:
-  - Coalescence
-  - JavaScript
-  - Opérateur
-  - Reference
-  - falsy
-  - nullish
 translation_of: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
-original_slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
 ---
 
 {{JSSidebar("Operators")}}
 
 L'**opérateur de coalescence des nuls** (`??`), est un opérateur logique qui renvoie son opérande de droite lorsque son opérande de gauche vaut {{jsxref("null")}} ou {{jsxref("undefined")}} et qui renvoie son opérande de gauche sinon.
 
-Contrairement à [l'opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_logiques), l'opérande de gauche sera renvoyé s'il s'agit d'une [valeur équivalente à `false`](/fr/docs/Glossaire/Falsy) qui n'est ni `null`, ni `undefined`. En d'autres termes, si vous utilisez `||` pour fournir une valeur par défaut à une variable `foo`, vous pourriez rencontrer des comportements inattendus si vous considérez certaines valeurs _falsy_ comme utilisables (par exemple une chaine vide `''` ou `0`). Voir ci-dessous pour plus d'exemples.
+Contrairement à [l'opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_logiques), l'opérande de gauche sera renvoyé s'il s'agit d'une [valeur équivalente à `false`](/fr/docs/Glossaire/Falsy) qui n'est ni `null`, ni `undefined`. En d'autres termes, si vous utilisez `||` pour fournir une valeur par défaut à une variable `foo`, vous pourriez rencontrer des comportements inattendus si vous considérez certaines valeurs _falsy_ comme utilisables (par exemple une chaine vide `''` ou `0`). Voir ci-dessous pour plus d'exemples.
 
 {{EmbedInteractiveExample("pages/js/expressions-nullishcoalescingoperator.html")}}
 
@@ -117,7 +109,7 @@ Cependant, fournir des parenthèses pour indiquer explicitement la priorité est
 
 ### Relation avec l'opérateur de chaînage optionnel (`?.`)
 
-Tout comme l'opérateur de coalescence des nuls, l'[opérateur de chaînage optionnel (?.)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Optional_chaining) traite les valeurs `null` et `undefined` comme des valeurs spécifiques. Ce qui permet d'accéder à une propriété d'un objet qui peut être `null` ou `undefined`.
+Tout comme l'opérateur de coalescence des nuls, l'[opérateur de chaînage optionnel (?.)](/fr/docs/Web/JavaScript/Reference/Opérateurs/Optional_chaining) traite les valeurs `null` et `undefined` comme des valeurs spécifiques. Ce qui permet d'accéder à une propriété d'un objet qui peut être `null` ou `undefined`.
 
 ```js
 let toto = { uneProprieteToto: "coucou" };
@@ -137,6 +129,6 @@ console.log(toto.uneProprieteTiti?.toUpperCase()); // undefined
 ## Voir aussi
 
 - [_Falsy values_ (Valeurs équivalentes à `false` dans un contexte booléen)](/fr/docs/Glossaire/Falsy)
-- [Opérateur de chaînage optionnel (_optional chaining_)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Optional_chaining)
-- [Opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateurs_logiques#Logical_OR)
-- [Valeurs par défaut des arguments](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_d%C3%A9faut_des_arguments)
+- [Opérateur de chaînage optionnel (_optional chaining_)](/fr/docs/Web/JavaScript/Reference/Opérateurs/Optional_chaining)
+- [Opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_logiques#Logical_OR)
+- [Valeurs par défaut des arguments](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments)

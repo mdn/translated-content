@@ -1,14 +1,7 @@
 ---
-title: '<font> : l''élément de police'
+title: "<font> : l'élément de police"
 slug: Web/HTML/Element/font
-tags:
-  - Element
-  - HTML
-  - Deprecated
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/font
-browser-compat: html.elements.font
 ---
 
 {{HTMLSidebar}}

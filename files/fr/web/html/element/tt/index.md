@@ -1,12 +1,6 @@
 ---
-title: '<tt> : l''élément de texte de téléscripteur (obsolète)'
+title: "<tt> : l'élément de texte de téléscripteur (obsolète)"
 slug: Web/HTML/Element/tt
-tags:
-  - Element
-  - HTML
-  - Obsolete
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/tt
 ---
 

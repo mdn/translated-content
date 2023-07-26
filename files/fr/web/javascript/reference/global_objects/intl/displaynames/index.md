@@ -1,13 +1,6 @@
 ---
 title: Intl.DisplayNames
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
-tags:
-  - Class
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 ---
 

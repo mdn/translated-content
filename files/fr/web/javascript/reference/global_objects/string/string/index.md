@@ -2,7 +2,6 @@
 title: Constructeur String()
 slug: Web/JavaScript/Reference/Global_Objects/String/String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/String
-browser-compat: javascript.builtins.String.String
 ---
 
 {{JSRef}}

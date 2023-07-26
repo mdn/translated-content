@@ -31,9 +31,9 @@ Firefox 2 より、Firefox はフィードを読む際に使う RSS または At
 
 ```js
 navigator.registerContentHandler(
-    "application/vnd.mozilla.maybe.feed",
-    "http://www.theeasyreaderurl.com?feed=%s",
-    "Easy Reader"
+  "application/vnd.mozilla.maybe.feed",
+  "http://www.theeasyreaderurl.com?feed=%s",
+  "Easy Reader",
 );
 ```
 

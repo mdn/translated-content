@@ -1,16 +1,12 @@
 ---
 title: width
 slug: Web/CSS/@media/width
-tags:
-  - CSS
-  - Caractéristique média
-  - Reference
 translation_of: Web/CSS/@media/width
 ---
 
 {{CSSRef}}
 
-**`width`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet d'appliquer des styles différents en fonction de la largeur de la zone d'affichage (_viewport_) ou de la largeur de la page (pour [les média paginés](/fr/docs/Web/CSS/M%C3%A9dia_pagin%C3%A9s)). La largeur est exprimée comme une longueur CSS (type {{cssxref("&lt;length&gt;")}}.
+**`width`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet d'appliquer des styles différents en fonction de la largeur de la zone d'affichage (_viewport_) ou de la largeur de la page (pour [les média paginés](/fr/docs/Web/CSS/Média_paginés)). La largeur est exprimée comme une longueur CSS (type {{cssxref("&lt;length&gt;")}}.
 
 ## Syntaxe
 

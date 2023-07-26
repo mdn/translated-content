@@ -1,12 +1,6 @@
 ---
 title: URL.protocol
 slug: Web/API/URL/protocol
-tags:
-  - API
-  - Propriété
-  - Reference
-  - URL
-  - protocole
 translation_of: Web/API/URL/protocol
 ---
 
@@ -30,7 +24,7 @@ Un {{domxref("USVString")}}.
 ## Exemples
 
 ```js
-var url = new URL('https://developer.mozilla.org/fr/docs/Web/API/URL/protocol');
+var url = new URL("https://developer.mozilla.org/fr/docs/Web/API/URL/protocol");
 var result = url.protocol; // Retourne:"https:"
 ```
 

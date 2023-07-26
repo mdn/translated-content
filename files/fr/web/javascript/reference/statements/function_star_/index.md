@@ -1,16 +1,7 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - ECMAScript 2015
-  - Function
-  - Generator
-  - Instruction
-  - Iterator
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Statements/function*
-original_slug: Web/JavaScript/Reference/Instructions/function*
 ---
 
 {{jsSidebar("Statements")}}
@@ -204,6 +195,6 @@ console.log(truc.next()); // {value: 10, done: false}
 - D'autres ressources disponibles sur le Web :
 
   - [Regenerator](https://facebook.github.io/regenerator/) un compilateur permettant de traduire des générateurs ES2015 en du code JavaScript basé sur ES5
-  - [Forbes Lindesay: Promises and Generators: control flow utopia -- JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s) (vidéo en anglais)
+  - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s) (vidéo en anglais)
   - [Task.js](https://github.com/mozilla/task.js)
   - [Itérer de façon asynchrone sur des générateurs](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch4.md#iterating-generators-asynchronously)

@@ -42,7 +42,7 @@ Ninguno ({{jsxref("undefined")}}).
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}
   - : Se lanza cuando el nodo no puede insertarse en el punto especificado
-  de la jerarquía.
+    de la jerarquía.
 
 ## Ejemplos
 

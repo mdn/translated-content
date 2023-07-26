@@ -1,12 +1,6 @@
 ---
 title: FederatedCredential
 slug: Web/API/FederatedCredential/FederatedCredential
-tags:
-  - API
-  - Constructeur
-  - Credential Management API
-  - FederatedCredential
-  - Reference
 translation_of: Web/API/FederatedCredential/FederatedCredential
 ---
 
@@ -19,7 +13,7 @@ Pour les navigateurs qui le prennent en charge, une instance de cette classe pou
 ## Syntaxe
 
 ```js
-var mesCredentials = new FederatedCredential(init)
+var mesCredentials = new FederatedCredential(init);
 ```
 
 ### Paramètres

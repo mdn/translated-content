@@ -1,14 +1,7 @@
 ---
 title: Array.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reverse
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/reverse
 ---
 
 {{JSRef}}

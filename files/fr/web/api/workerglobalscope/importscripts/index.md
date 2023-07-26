@@ -34,7 +34,7 @@ Rien.
 Si vous disposez d'un code présent dans un script indépendant appelé `foo.js` que vous souhaitez utiliser à l'intérieur de worker.js, vous pouvez l'importer de la façon suivante:
 
 ```js
-importScripts('foo.js');
+importScripts("foo.js");
 ```
 
 `importScripts()` et `self.importScripts()` sont effectivement équivalentes — les deux expressions correspondent à la façon d'appeler `importScripts()` au sein du contexte local du worker.

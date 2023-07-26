@@ -1,8 +1,7 @@
 ---
-title: '<tbody> : l''élément de corps d''un tableau'
+title: "<tbody> : l'élément de corps d'un tableau"
 slug: Web/HTML/Element/tbody
 translation_of: Web/HTML/Element/tbody
-browser-compat: html.elements.tbody
 ---
 
 {{HTMLSidebar}}

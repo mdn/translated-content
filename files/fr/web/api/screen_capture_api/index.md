@@ -1,20 +1,6 @@
 ---
 title: Screen Capture API
 slug: Web/API/Screen_Capture_API
-tags:
-  - API
-  - Capture
-  - Conference
-  - Media
-  - MediaDevices
-  - Overvew
-  - Screen Capture
-  - Screen Sharing
-  - Video
-  - Window
-  - display
-  - getDisplayMedia
-  - screen
 translation_of: Web/API/Screen_Capture_API
 ---
 
@@ -29,7 +15,9 @@ L'API Screen Capture est relativement simple à utiliser. Sa seule méthode est 
 Pour commencer à capturer une vidéo de l'écran, il faut appeler `getDisplayMedia()` dans une instance de `navigator.mediaDevices`
 
 ```js
-captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+captureStream = await navigator.mediaDevices.getDisplayMedia(
+  displayMediaOptions,
+);
 ```
 
 La [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) retournée par `getDisplayMedia()` est résolue en un objet [`MediaStream`](/fr/docs/Web/API/MediaStream) qui diffuse le média capturé.
@@ -90,7 +78,7 @@ Le dictionnaire suivant est difinit par l'API Screen Capture.
 Les [agents utilisateurs](/fr/docs/Glossary/User_agent) qui prennent en charge les politiques de fonctionnalités (<i lang="en">feature policy</i>) (soit en utilisant l'en-tête HTTP [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Feature-Policy) ou l'attribut [`allow`](/fr/docs/Web/HTML/Element/iframe#allow) de l'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) peuvent indiquer le souhait d'utiliser l'API Screen Capture via la directive `display-capture`&nbsp;:
 
 ```html
-<iframe allow="display-capture" src="/some-other-document.html">
+<iframe allow="display-capture" src="/some-other-document.html"></iframe>
 ```
 
 La liste d'autorisations par défaut est `self`, ce qui permet à tout contenu du document d'utiliser Screen Capture.

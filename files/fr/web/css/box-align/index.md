@@ -2,7 +2,6 @@
 title: box-align
 slug: Web/CSS/box-align
 translation_of: Web/CSS/box-align
-browser-compat: css.properties.box-align
 ---
 
 {{CSSRef}}{{Non-standard_header}}

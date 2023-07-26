@@ -1,10 +1,6 @@
 ---
 title: line-height
 slug: Web/CSS/line-height
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/line-height
 ---
 

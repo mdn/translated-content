@@ -1,15 +1,7 @@
 ---
 title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
-tags:
-  - ECMAScript 2015
-  - Generator
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
-original_slug: Web/JavaScript/Reference/Objets_globaux/Generator/throw
 ---
 
 {{JSRef}}

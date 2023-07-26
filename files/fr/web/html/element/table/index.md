@@ -1,12 +1,6 @@
 ---
-title: '<table> : l''élément de tableau'
+title: "<table> : l'élément de tableau"
 slug: Web/HTML/Element/table
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Tableaux
-  - Web
 translation_of: Web/HTML/Element/table
 ---
 

@@ -3,6 +3,7 @@ title: Основы WebAssembly
 slug: WebAssembly/Concepts
 translation_of: WebAssembly/Concepts
 ---
+
 {{WebAssemblySidebar}}
 
 В этой статье объясняются концепции, лежащие в основе работы технологии WebAssembly, включая её цели, проблемы, которые она решает, и то, как она работает в движке рендеринга веб-браузера.

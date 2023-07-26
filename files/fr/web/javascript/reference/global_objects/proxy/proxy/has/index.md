@@ -1,14 +1,7 @@
 ---
 title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Proxy
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
-original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/has
 ---
 
 {{JSRef}}

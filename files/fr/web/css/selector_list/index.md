@@ -1,9 +1,6 @@
 ---
 title: Liste de sélecteurs
 slug: Web/CSS/Selector_list
-tags:
-  - CSS
-  - Sélecteur
 translation_of: Web/CSS/Selector_list
 ---
 

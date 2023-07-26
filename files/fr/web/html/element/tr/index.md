@@ -1,8 +1,7 @@
 ---
-title: '<tr> : l''élément de ligne d''un tableau'
+title: "<tr> : l'élément de ligne d'un tableau"
 slug: Web/HTML/Element/tr
 translation_of: Web/HTML/Element/tr
-browser-compat: html.elements.tr
 ---
 
 {{HTMLSidebar}}

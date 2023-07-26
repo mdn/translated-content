@@ -11,8 +11,8 @@ slug: Web/EXSLT/exsl/object-type
 
 ## 構文
 
-```js
-exsl:object-type(object)
+```
+exsl:object-type(object);
 ```
 
 ### 引数

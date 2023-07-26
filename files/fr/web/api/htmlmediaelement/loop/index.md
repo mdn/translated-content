@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.loop
 slug: Web/API/HTMLMediaElement/loop
-browser-compat: api.HTMLMediaElement.loop
 translation_of: Web/API/HTMLMediaElement/loop
 ---
 
@@ -23,7 +22,7 @@ Une valeur booléenne.
 ## Exemple
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 obj.loop = true; // vrai
 ```
 

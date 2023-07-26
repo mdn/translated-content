@@ -38,7 +38,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 このフィールド型は [`type`](/ja/docs/Web/HTML/Element/input#type)属性の `email` の値でセットされます:
 
 ```html
-<input type="email" id="email" name="email">
+<input type="email" id="email" name="email" />
 ```
 
 この [`type`](/ja/docs/Web/HTML/Element/input#type) が使われたとき、ユーザーは有効なメールアドレスをフィールドに入力することが必須です。その他のコンテンツでは、ブラウザーによってフォーム送信時にエラーが表示されます。この動作は下記のスクリーンショットで見ることができます。
@@ -48,7 +48,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 `email` 入力型と [`multiple`](/ja/docs/Web/HTML/Attributes/multiple) 属性を組み合わせて、複数のメールアドレスが同じ入力に（カンマ区切りで）入力させることもできます。
 
 ```html
-<input type="email" id="email" name="email" multiple>
+<input type="email" id="email" name="email" multiple />
 ```
 
 いくつかの端末 — 特にスマートフォンのような動的キーボードつきのタッチ端末 — では、 `@` キーを含むメールアドレス入力に適した別の仮想キーパッドが現れることもあります。Android 版 Firefox のキーボードの例として下記のスクリーンショットを見てください:
@@ -74,7 +74,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 検索フィールドは、ページやアプリの検索ボックス作成に使われるものです。このフィールド型は `search` の値を [`type`](/ja/docs/Web/HTML/Element/input#type) 属性のに使用することで設定されます。
 
 ```html
-<input type="search" id="search" name="search">
+<input type="search" id="search" name="search" />
 ```
 
 `text` フィールドと `search` フィールドの主な違いは、ブラウザーの見た目のスタイル設定方法です。よく、`search` フィールドは角丸で描画されます。また時折、値がクリックされたときに値をクリアする "Ⓧ" も表示されます。その他、動的キーボードのある端末では、キーボードの Enter キーが "**検索**"、あるいは虫眼鏡アイコンで表示されることもあります。
@@ -90,7 +90,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 電話番号を入力するための特殊なフィールドは、 `tel` の値を [`type`](/ja/docs/Web/HTML/Element/input#type) 属性に使うと作成することができます。
 
 ```html
-<input type="tel" id="tel" name="tel">
+<input type="tel" id="tel" name="tel" />
 ```
 
 動的キーボードつきのタッチ端末でアクセスしたとき、たいていの端末では `type="tel"` が出てくると数字のキーパッドを表示します。つまりこの型は、テンキーが役立つときはいつでも有用であり、電話番号だけに使用する必要はありません。
@@ -108,7 +108,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 URL を入力するための特殊な型のフィールドは、 `url` の値を[`type`](/ja/docs/Web/HTML/Element/input#type) 属性に使うと作成することができます。
 
 ```html
-<input type="url" id="url" name="url">
+<input type="url" id="url" name="url" />
 ```
 
 これはフィールドに特別な検証制約を追加します。ブラウザーは (`http:`のような) プロトコルがない場合や、URL の形式が良くない場合にエラーを報告します。動的キーボードのある端末ではよく、コロン、ピリオド、スラッシュの複数やすべてをデフォルトキーとして表示します。
@@ -134,13 +134,13 @@ URL を入力するための特殊な型のフィールドは、 `url` の値を
 いくつか例を見てみましょう。次の最初の例では値が `1` と `10` の間に制限され、増減ボタンで値が `2` ずつ変更される数値コントロールを作成しています。
 
 ```html
-<input type="number" name="age" id="age" min="1" max="10" step="2">
+<input type="number" name="age" id="age" min="1" max="10" step="2" />
 ```
 
 2 つ目の例では値が `0` と `1` の間に制限され、増減ボタンで値が `0.01` ずつ変更される数値コントロールを作成しています。
 
 ```html
-<input type="number" name="change" id="pennies" min="0" max="1" step="0.01">
+<input type="number" name="change" id="pennies" min="0" max="1" step="0.01" />
 ```
 
 `number` 入力型は有効な値の範囲に制限されているときに意味を持ちます。例えば、ある人の年齢や身長です。範囲が大きすぎて増分が意味をなさない場合 (例えば USA の郵便番号は、`00001` から `99999` の範囲です)、`tel` 型がより良い選択となることもあります。これは数値のスピナー UI 機能に対して、数値キーパッドを提供します。
@@ -161,7 +161,14 @@ URL を入力するための特殊な型のフィールドは、 `url` の値を
 
 ```html
 <label for="price">Choose a maximum house price: </label>
-<input type="range" name="price" id="price" min="50000" max="500000" step="100" value="250000">
+<input
+  type="range"
+  name="price"
+  id="price"
+  min="50000"
+  max="500000"
+  step="100"
+  value="250000" />
 <output class="price-output" for="price"></output>
 ```
 
@@ -172,12 +179,12 @@ URL を入力するための特殊な型のフィールドは、 `url` の値を
 実際に現在の値を表示して、変更時に更新するには、JavaScript を使う必要がありますが、比較的に簡単です。
 
 ```js
-const price = document.querySelector('#price');
-const output = document.querySelector('.price-output');
+const price = document.querySelector("#price");
+const output = document.querySelector(".price-output");
 
 output.textContent = price.value;
 
-price.addEventListener('input', () => {
+price.addEventListener("input", () => {
   output.textContent = price.value;
 });
 ```
@@ -203,7 +210,7 @@ HTML の日付コントロールは、カレンダーウィジェットを提供
 [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local) は特定のタイムゾーン情報のない日付と時刻を表示して選択するウィジェットを作成します。
 
 ```html
-<input type="datetime-local" name="datetime" id="datetime">
+<input type="datetime-local" name="datetime" id="datetime" />
 ```
 
 ### `month`
@@ -211,7 +218,7 @@ HTML の日付コントロールは、カレンダーウィジェットを提供
 [`<input type="month">`](/ja/docs/Web/HTML/Element/input/month) は年と月を表示して選択するウィジェットを作成します。
 
 ```html
-<input type="month" name="month" id="month">
+<input type="month" name="month" id="month" />
 ```
 
 ### `time`
@@ -219,7 +226,7 @@ HTML の日付コントロールは、カレンダーウィジェットを提供
 [`<input type="time">`](/ja/docs/Web/HTML/Element/input/time) は時刻の値を表示して選択するウィジェットを作成します。時刻は 12 時間のフォーマットで表示されますが、*返値*は 24 時間フォーマットです。
 
 ```html
-<input type="time" name="time" id="time">
+<input type="time" name="time" id="time" />
 ```
 
 ### `week`
@@ -229,7 +236,7 @@ HTML の日付コントロールは、カレンダーウィジェットを提供
 週は月曜始まりで日曜日で終わります。それに加えて、その年の最初の週はその年の最初の木曜日を含みます—これはその年の最初の日を含まないことも、前年の最後の数日を含むこともあります。
 
 ```html
-<input type="week" name="week" id="week">
+<input type="week" name="week" id="week" />
 ```
 
 ### date/time 値の制限
@@ -238,7 +245,13 @@ HTML の日付コントロールは、カレンダーウィジェットを提供
 
 ```html
 <label for="myDate">When are you available this summer?</label>
-<input type="date" name="myDate" min="2013-06-01" max="2013-08-31" step="7" id="myDate">
+<input
+  type="date"
+  name="myDate"
+  min="2013-06-01"
+  max="2013-08-31"
+  step="7"
+  id="myDate" />
 ```
 
 ## 色選択コントロール
@@ -248,7 +261,7 @@ HTML の日付コントロールは、カレンダーウィジェットを提供
 `color` コントロールは {{HTMLElement("input")}} 要素を、 [`type`](/ja/docs/Web/HTML/Element/input#type) 属性に `color`をつけて作成できます。
 
 ```html
-<input type="color" name="color" id="color">
+<input type="color" name="color" id="color" />
 ```
 
 対応しているいる場合、色コントロールは OS の既定の色選択機能を呼び出して選択できるようにする傾向があります。下記のスクリーンショットは macOS の Firefox の例です。

@@ -52,7 +52,7 @@ const gamepadAPI = {
   buttons: [],
   buttonsCache: [],
   buttonsStatus: [],
-  axesStatus: []
+  axesStatus: [],
 };
 ```
 
@@ -161,7 +161,7 @@ update() {
 
 ### ボタンプレスの検出
 
-`buttonPressed()`  メソッドはメインのゲームループに配置され、ボタンの押下を待機します。 2 つの引数、つまり待ち受けするボタンと、ボタンを押したままにすることをゲームに伝える（オプション）方法があります。 それがなければ、ボタンを放してもう一度押して、希望する効果を持たなければなりません。
+`buttonPressed()` メソッドはメインのゲームループに配置され、ボタンの押下を待機します。 2 つの引数、つまり待ち受けするボタンと、ボタンを押したままにすることをゲームに伝える（オプション）方法があります。 それがなければ、ボタンを放してもう一度押して、希望する効果を持たなければなりません。
 
 ```js
 buttonPressed(button, hold) {
@@ -192,10 +192,10 @@ buttonPressed(button, hold) {
 
 ```js
 if (gamepadAPI.turbo) {
-  if (gamepadAPI.buttonPressed('A', 'hold')) {
+  if (gamepadAPI.buttonPressed("A", "hold")) {
     this.turbo_fire();
   }
-  if (gamepadAPI.buttonPressed('B')) {
+  if (gamepadAPI.buttonPressed("B")) {
     this.managePause();
   }
 }

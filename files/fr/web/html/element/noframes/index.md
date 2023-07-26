@@ -1,12 +1,6 @@
 ---
-title: '<noframes> : l''élément alternatif aux frames (obsolete)'
+title: "<noframes> : l'élément alternatif aux frames (obsolete)"
 slug: Web/HTML/Element/noframes
-tags:
-  - Element
-  - HTML
-  - Obsolete
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/noframes
 ---
 

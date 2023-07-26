@@ -1,7 +1,6 @@
 ---
 title: Constructeur Intl.NumberFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
-browser-compat: javascript.builtins.Intl.NumberFormat.NumberFormat
 ---
 
 {{JSRef}}

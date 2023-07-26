@@ -1,13 +1,7 @@
 ---
 title: Sélecteurs enfant
 slug: Web/CSS/Child_combinator
-tags:
-  - CSS
-  - Débutant
-  - Reference
-  - Sélecteur
 translation_of: Web/CSS/Child_combinator
-original_slug: Web/CSS/Sélecteurs_enfant
 ---
 
 {{CSSRef("Selectors")}}

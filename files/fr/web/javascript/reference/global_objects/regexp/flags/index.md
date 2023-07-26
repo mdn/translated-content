@@ -1,16 +1,7 @@
 ---
 title: RegExp.prototype.flags
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - RegExp
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/flags
 ---
 
 {{JSRef}}

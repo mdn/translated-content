@@ -1,13 +1,7 @@
 ---
 title: Math.asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
-tags:
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/asinh
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/asinh
 ---
 
 {{JSRef}}

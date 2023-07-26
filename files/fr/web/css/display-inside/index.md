@@ -1,10 +1,6 @@
 ---
 title: display-inside
 slug: Web/CSS/display-inside
-tags:
-  - CSS
-  - Reference
-  - Type
 translation_of: Web/CSS/display-inside
 ---
 

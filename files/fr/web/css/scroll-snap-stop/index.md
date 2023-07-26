@@ -1,10 +1,6 @@
 ---
 title: scroll-snap-stop
 slug: Web/CSS/scroll-snap-stop
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/scroll-snap-stop
 ---
 

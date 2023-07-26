@@ -1,8 +1,7 @@
 ---
-title: 'Document: évènement transitionend'
+title: "Document: évènement transitionend"
 slug: Web/API/Element/transitionend_event
 translation_of: Web/API/Document/transitionend_event
-original_slug: Web/API/Document/transitionend_event
 ---
 
 {{APIRef}}
@@ -45,8 +44,8 @@ La cible originale pour cet évènement est l'[`Element`](/fr/docs/Web/API/Eleme
 Le code suivant ajoute un gestionnaire sur l'évènement `transitionend`&nbsp;:
 
 ```js
-document.addEventListener('transitionend', () => {
-  console.log('Transition terminée');
+document.addEventListener("transitionend", () => {
+  console.log("Transition terminée");
 });
 ```
 
@@ -54,7 +53,7 @@ La même chose, mais en utilisant la propriété [`ontransitionend`](/fr/docs/We
 
 ```js
 document.ontransitionend = () => {
-  console.log('Transition terminée');
+  console.log("Transition terminée");
 };
 ```
 

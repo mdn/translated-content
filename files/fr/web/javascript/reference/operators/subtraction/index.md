@@ -1,12 +1,6 @@
 ---
 title: Soustraction (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.subtraction
 ---
 
 {{jsSidebar("Operators")}}

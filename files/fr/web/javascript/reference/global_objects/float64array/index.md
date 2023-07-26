@@ -1,14 +1,7 @@
 ---
 title: Float64Array
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/Float64Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/Float64Array
 ---
 
 {{JSRef}}

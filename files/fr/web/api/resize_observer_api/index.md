@@ -1,16 +1,6 @@
 ---
 title: Resize Observer API
 slug: Web/API/Resize_Observer_API
-tags:
-  - API
-  - Draft
-  - Element
-  - Monitor
-  - Overview
-  - Reference
-  - Resize Observer
-  - Resize Observer API
-  - observe
 translation_of: Web/API/Resize_Observer_API
 ---
 
@@ -49,19 +39,26 @@ Vous trouverez plusieurs exemples basiques sur notre dépôt GitHub :
 Le code suivra usuellement ce genre de modèle (tiré de resize-observer-border-radius.html):
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
+const resizeObserver = new ResizeObserver((entries) => {
   for (let entry of entries) {
-    if(entry.contentBoxSize) {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentBoxSize.inlineSize/10) +
-                                                      (entry.contentBoxSize.blockSize/10)) + 'px';
+    if (entry.contentBoxSize) {
+      entry.target.style.borderRadius =
+        Math.min(
+          100,
+          entry.contentBoxSize.inlineSize / 10 +
+            entry.contentBoxSize.blockSize / 10,
+        ) + "px";
     } else {
-      entry.target.style.borderRadius = Math.min(100, (entry.contentRect.width/10) +
-                                                      (entry.contentRect.height/10)) + 'px';
+      entry.target.style.borderRadius =
+        Math.min(
+          100,
+          entry.contentRect.width / 10 + entry.contentRect.height / 10,
+        ) + "px";
     }
   }
 });
 
-resizeObserver.observe(document.querySelector('div'));
+resizeObserver.observe(document.querySelector("div"));
 ```
 
 ## Spécifications

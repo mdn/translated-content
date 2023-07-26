@@ -1,11 +1,6 @@
 ---
 title: Attr.localName
 slug: Web/API/Attr/localName
-tags:
-  - API
-  - DOM
-  - Propriétés
-  - Reference
 translation_of: Web/API/Attr/localName
 ---
 
@@ -18,7 +13,7 @@ La propriété **`Attr.localName`**, en lecture seule, renvoie la partie locale 
 ## Syntaxe
 
 ```js
-name = attribute.localName
+name = attribute.localName;
 ```
 
 ### Valeur renvoyée
@@ -39,7 +34,7 @@ Cet exemple affiche "id" dans une fenêtre d'alerte.
 
 ```js
 const element = document.querySelector("#exemple");
-element.addEventListener("click", function() {
+element.addEventListener("click", function () {
   const attribute = element.attributes[0];
   alert(attribute.localName);
 });

@@ -2,7 +2,6 @@
 title: border-image-slice
 slug: Web/CSS/border-image-slice
 translation_of: Web/CSS/border-image-slice
-browser-compat: css.properties.border-image-slice
 ---
 
 {{CSSRef}}
@@ -176,4 +175,4 @@ sliceSlider.addEventListener('input', () => {
 
 ## Voir aussi
 
-- [Description illustrée de la syntaxe multi-valuée](/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_%c3%a9pineux)
+- [Description illustrée de la syntaxe multi-valuée](/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_épineux)

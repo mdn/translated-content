@@ -1,10 +1,6 @@
 ---
 title: document.head
 slug: Web/API/Document/head
-tags:
-  - DOM
-  - Document
-  - HTML5
 translation_of: Web/API/Document/head
 ---
 
@@ -24,7 +20,7 @@ var aHead = document.head;
 
 alert(aHead.id); // "my-document-head";
 
-alert( document.head === document.querySelector("head") ); // true
+alert(document.head === document.querySelector("head")); // true
 ```
 
 ## Notes

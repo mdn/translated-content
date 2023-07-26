@@ -1,7 +1,6 @@
 ---
 title: HTMLMediaElement.controls
 slug: Web/API/HTMLMediaElement/controls
-browser-compat: api.HTMLMediaElement.controls
 translation_of: Web/API/HTMLMediaElement/controls
 ---
 
@@ -16,7 +15,7 @@ Une valeur booléenne. La valeur `true` signifie que les contrôles seront affic
 ## Exemple
 
 ```js
-let obj = document.createElement('video');
+let obj = document.createElement("video");
 obj.controls = true;
 ```
 

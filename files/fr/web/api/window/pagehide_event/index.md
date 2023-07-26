@@ -2,7 +2,6 @@
 title: pagehide
 slug: Web/API/Window/pagehide_event
 translation_of: Web/API/Window/pagehide_event
-original_slug: Web/Events/pagehide
 ---
 
 L'évènement `pagehide` est émis lorsqu'une entrée dans un historique de session est sur le point d'être quittée.
@@ -24,13 +23,13 @@ L'évènement `pagehide` est émis lorsqu'une entrée dans un historique de sess
 
 ## Propriétés
 
-| Propriété                             | Type                                 | Description                                               |
-| ------------------------------------- | ------------------------------------ | --------------------------------------------------------- |
+| Propriété                       | Type                       | Description                                               |
+| ------------------------------- | -------------------------- | --------------------------------------------------------- |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | La cible de l'évènement (la plus haute dans l'arbre DOM). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | Le type d'évènement.                                      |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Si l'évènement bouillonne en temps normal ou non.         |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Si l'évènement est annulable ou non.                      |
-| `persisted` {{readonlyInline}}  | {{jsxref("boolean")}}         | Si l'entrée est chargée depuis le cache ou non.           |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | Le type d'évènement.                                      |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Si l'évènement bouillonne en temps normal ou non.         |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Si l'évènement est annulable ou non.                      |
+| `persisted` {{readonlyInline}}  | {{jsxref("boolean")}}      | Si l'entrée est chargée depuis le cache ou non.           |
 
 ## Évènements liés
 

@@ -1,14 +1,7 @@
 ---
 title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/@@species
 ---
 
 {{JSRef}}

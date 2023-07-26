@@ -2,7 +2,6 @@
 title: WeakRef
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakRef
-browser-compat: javascript.builtins.WeakRef
 ---
 
 {{JSRef}}

@@ -1,11 +1,6 @@
 ---
 title: Guide to Web APIs
 slug: Web/Guide/API
-tags:
-  - API
-  - Guide
-  - Landing
-  - Web
 translation_of: Web/Guide/API
 ---
 

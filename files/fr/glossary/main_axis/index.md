@@ -35,5 +35,5 @@ Sur l'axe principal, vous pouvez contrôler le dimensionnement des éléments fl
 ### En lire plus
 
 - Guide Flexbox CSS : _[Les concepts de base pour flexbox](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
-- Guide Flexbox CSS : *[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des*éléments*dans_un_conteneur_flexible)*
+- Guide Flexbox CSS : _[Aligner des éléments dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)_
 - Guide Flexbox CSS : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal)_

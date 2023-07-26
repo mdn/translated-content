@@ -1,15 +1,7 @@
 ---
 title: ':defined'
 slug: Web/CSS/:defined
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
 translation_of: Web/CSS/:defined
-browser-compat: css.selectors.defined
 ---
 
 {{CSSRef}}

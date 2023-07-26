@@ -2,8 +2,6 @@
 title: Intl.DateTimeFormat.prototype.formatRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/formatRange
-browser-compat: javascript.builtins.Intl.DateTimeFormat.formatRange
 ---
 
 {{JSRef}}

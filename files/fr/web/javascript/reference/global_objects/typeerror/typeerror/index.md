@@ -2,7 +2,6 @@
 title: Constructeur TypeError()
 slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
 translation_of: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
-browser-compat: javascript.builtins.TypeError.TypeError
 ---
 
 {{JSRef}}

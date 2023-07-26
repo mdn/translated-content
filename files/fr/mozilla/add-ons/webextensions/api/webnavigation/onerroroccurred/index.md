@@ -12,11 +12,11 @@ Lancé lorsqu'une erreur se produit et que la navigation est annulée. Cela peut
 
 ```js
 browser.webNavigation.onErrorOccurred.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onErrorOccurred.removeListener(listener)
-browser.webNavigation.onErrorOccurred.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onErrorOccurred.removeListener(listener);
+browser.webNavigation.onErrorOccurred.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -69,12 +69,8 @@ Logs les URL cibles de `onErrorOccurred`, si le nom d'hôte de l'URL cible conti
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnErrorOccurred(details) {
   console.log("onErrorOccurred: " + details.url);

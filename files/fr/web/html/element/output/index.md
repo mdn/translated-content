@@ -1,12 +1,6 @@
 ---
-title: '<output> : l''élément de sortie'
+title: "<output> : l'élément de sortie"
 slug: Web/HTML/Element/output
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/output
 ---
 
@@ -61,11 +55,11 @@ Le formulaire qui suit fournit un curseur dont la valeur peut aller de 0 à 100 
           >contenu phrasé</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_associ%C3%A9_aux_formulaires"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_associé_aux_formulaires"
           >contenu associé au formulaire (énuméré, étiquetable,
           réinitialisable)</a
         >,
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_tangible"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
           >contenu tangible</a
         >.
       </td>

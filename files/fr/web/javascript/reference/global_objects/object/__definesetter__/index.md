@@ -1,14 +1,7 @@
 ---
 title: Object.prototype.__defineSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
-tags:
-  - JavaScript
-  - Méthode
-  - Object
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/defineSetter
 ---
 
 {{JSRef}}

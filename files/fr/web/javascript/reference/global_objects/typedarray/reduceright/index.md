@@ -1,15 +1,7 @@
 ---
 title: TypedArray.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
-tags:
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - TypedArray
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/reduceRight
 ---
 
 {{JSRef}}

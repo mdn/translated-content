@@ -1,14 +1,6 @@
 ---
 title: Console.trace()
 slug: Web/API/console/trace
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthode
-  - console
-  - débogage
-  - trace
 translation_of: Web/API/Console/trace
 ---
 
@@ -41,7 +33,7 @@ foo();
 
 Dans la console, la trace suivante sera affichée :
 
-```html
+```plain
 bar
 foo
 <anonymous>

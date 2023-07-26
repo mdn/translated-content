@@ -37,8 +37,7 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.zoomSiteSpecific.set({value: false}).
-  then(logResult);
+browser.browserSettings.zoomSiteSpecific.set({ value: false }).then(logResult);
 ```
 
 {{WebExtExamples}}

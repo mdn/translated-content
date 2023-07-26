@@ -34,22 +34,23 @@ function displayData() {
   var keyRangeValue = IDBKeyRange.bound("F", "W", true, true);
   console.log(keyRangeValue.upperOpen);
 
-  var transaction = db.transaction(['fThings'], 'readonly');
-  var objectStore = transaction.objectStore('fThings');
+  var transaction = db.transaction(["fThings"], "readonly");
+  var objectStore = transaction.objectStore("fThings");
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function(event) {
+  objectStore.openCursor(keyRangeValue).onsuccess = function (event) {
     var cursor = event.target.result;
-      if(cursor) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + cursor.value.fThing + '</strong>, ' + cursor.value.fRating;
-        list.appendChild(listItem);
+    if (cursor) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        "<strong>" + cursor.value.fThing + "</strong>, " + cursor.value.fRating;
+      list.appendChild(listItem);
 
-        cursor.continue();
-      } else {
-        console.log('Entries all displayed.');
-      }
-    };
+      cursor.continue();
+    } else {
+      console.log("Entries all displayed.");
+    }
   };
+}
 ```
 
 ## Spécifications

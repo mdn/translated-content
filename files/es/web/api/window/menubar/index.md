@@ -12,7 +12,7 @@ Retorna el objeto **menubar**, cuya visibilidad puede ser examinada.
 ### Sintaxis
 
 ```js
-objRef = window.menubar
+objRef = window.menubar;
 ```
 
 ### Ejemplo
@@ -21,15 +21,15 @@ El siguiente ejemplo HTML completo muestra la forma en que es utilizada la propi
 
 ```html
 <html>
-<head>
-  <title>Various DOM Tests</title>
-  <script>
-    var visible = window.menubar.visible;
-  </script>
-</head>
-<body>
-  <p>Various DOM Tests</p>
-</body>
+  <head>
+    <title>Various DOM Tests</title>
+    <script>
+      var visible = window.menubar.visible;
+    </script>
+  </head>
+  <body>
+    <p>Various DOM Tests</p>
+  </body>
 </html>
 ```
 

@@ -1,11 +1,6 @@
 ---
-title: '<mark> : l''élément de marquage du texte'
+title: "<mark> : l'élément de marquage du texte"
 slug: Web/HTML/Element/mark
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/mark
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: Notification.image
 slug: Web/API/Notification/image
-tags:
-  - API
-  - API Notifications
-  - Image
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
 translation_of: Web/API/Notification/image
 ---
 
@@ -19,7 +11,7 @@ La propriété en lecture seule **`image`** de l'interface {{domxref ("Notificat
 ## Syntaxe
 
 ```js
-Notification.image
+Notification.image;
 ```
 
 ### Valeur

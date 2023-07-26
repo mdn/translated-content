@@ -1,11 +1,6 @@
 ---
 title: '-moz-float-edge'
 slug: Web/CSS/-moz-float-edge
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-moz-float-edge
 ---
 

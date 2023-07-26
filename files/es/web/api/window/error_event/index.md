@@ -47,7 +47,7 @@ window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
 
   // Just let default handler run.
   return false;
-}
+};
 ```
 
 ## Notas

@@ -1,15 +1,7 @@
 ---
 title: RegExp.prototype[@@match]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
-tags:
-  - Expressions rationnelles
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@match
 ---
 
 {{JSRef}}

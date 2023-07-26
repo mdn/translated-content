@@ -1,13 +1,6 @@
 ---
 title: HTMLFrameSetElement
 slug: Web/API/HTMLFrameSetElement
-tags:
-  - API
-  - HTML-DOM
-  - HTMLFrameSetElement
-  - Interface
-  - Obsolete
-  - Reference
 translation_of: Web/API/HTMLFrameSetElement
 ---
 

@@ -171,7 +171,7 @@ Les lignes créées dans la grille explicite peuvent être nommées, en ajoutant
 ### Further reading
 
 - Guide des grilles CSS : _[Les concepts de base des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
-- Guide des grilles CSS : *[Places les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Placer_les*éléments*sur_les_lignes_d_une_grille_CSS)*
+- Guide des grilles CSS : _[Places les éléments sur les lignes d'une grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_une_grille_CSS)_
 - Guide des grilles CSS : _[Utiliser des lignes nommées sur une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_grille)_
-- Guide des grilles CSS : *[Les grilles CSS, valeurs logiques et modes d'écriture](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d*écriture)\_
+- Guide des grilles CSS : _[Les grilles CSS, valeurs logiques et modes d'écriture](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture)_
 - [Définition des lignes de grille dans la spécification des grilles CSS](https://drafts.csswg.org/css-grid/#grid-line-concept)

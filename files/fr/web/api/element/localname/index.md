@@ -1,14 +1,6 @@
 ---
 title: Element.localName
 slug: Web/API/Element/localName
-tags:
-  - API
-  - DOM
-  - Element
-  - Nom
-  - Propriétés
-  - XML
-  - local
 translation_of: Web/API/Element/localName
 ---
 
@@ -21,7 +13,7 @@ La propriété en lecture seule **`Element.localName`** renvoie la partie locale
 ## Syntaxe
 
 ```js
-name = element.localName
+name = element.localName;
 ```
 
 ### Valeur renvoyée

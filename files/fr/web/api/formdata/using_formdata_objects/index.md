@@ -1,16 +1,7 @@
 ---
 title: Utilisation des objets FormData
 slug: Web/API/FormData/Using_FormData_Objects
-tags:
-  - AJAX
-  - Blob
-  - File
-  - FormData
-  - Formulaires
-  - XHR
-  - XMLHttpRequest
 translation_of: Web/API/FormData/Using_FormData_Objects
-original_slug: Web/API/FormData/Utilisation_objets_FormData
 ---
 
 L'objet [`FormData`](/fr/docs/Web/API/FormData) vous permet de compiler un ensemble de paires clé/valeur à envoyer à l'aide de l'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest). Il est principalement destiné à l'envoi de données de formulaire, mais il peut également être utilisé indépendamment des formulaires pour transmettre des données indexées. Le format des données transmises est le même que celui qu'utiliserait la méthode {{domxref("HTMLFormElement.submit","submit()")}} du formulaire pour envoyer les données si l'encodage de ce dernier était défini sur `multipart/form-data`.
@@ -30,7 +21,7 @@ formData.append("userfile", fileInputElement.files[0]);
 
 // objet JavaScript de type fichier
 var content = '<a id="a"><b id="b">hey!</b></a>'; // the body of the new file...
-var blob = new Blob([content], { type: "text/xml"});
+var blob = new Blob([content], { type: "text/xml" });
 
 formData.append("webmasterfile", blob);
 
@@ -80,7 +71,15 @@ L'objet `FormData` vous permet également d'envoyer des fichiers. Il vous suffit
 ```html
 <form enctype="multipart/form-data" method="post" name="fileinfo">
   <label>Votre adresse électronique&nbsp;:</label>
-  <input type="email" autocomplete="on" autofocus name="userid" placeholder="email" required size="32" maxlength="64" /><br />
+  <input
+    type="email"
+    autocomplete="on"
+    autofocus
+    name="userid"
+    placeholder="email"
+    required
+    size="32"
+    maxlength="64" /><br />
   <label>Étiquette du fichier personnalisé&nbsp;:</label>
   <input type="text" name="filelabel" size="12" maxlength="32" /><br />
   <label>Fichier à mettre de côté&nbsp;:</label>
@@ -94,26 +93,32 @@ Vous pouvez ensuite l'envoyer à l'aide du code suivant&nbsp;:
 
 ```js
 var form = document.forms.namedItem("fileinfo");
-form.addEventListener('submit', function(ev) {
-
-  var oOutput = document.querySelector("div"),
+form.addEventListener(
+  "submit",
+  function (ev) {
+    var oOutput = document.querySelector("div"),
       oData = new FormData(form);
 
-  oData.append("CustomField", "Données supplémentaires");
+    oData.append("CustomField", "Données supplémentaires");
 
-  var oReq = new XMLHttpRequest();
-  oReq.open("POST", "stash.php", true);
-  oReq.onload = function(oEvent) {
-    if (oReq.status == 200) {
-      oOutput.innerHTML = "Envoyé&nbsp;!";
-       } else {
-      oOutput.innerHTML = "Erreur " + oReq.status + " lors de la tentative d’envoi du fichier.<br \/>";
-    }
-  };
+    var oReq = new XMLHttpRequest();
+    oReq.open("POST", "stash.php", true);
+    oReq.onload = function (oEvent) {
+      if (oReq.status == 200) {
+        oOutput.innerHTML = "Envoyé&nbsp;!";
+      } else {
+        oOutput.innerHTML =
+          "Erreur " +
+          oReq.status +
+          " lors de la tentative d’envoi du fichier.<br />";
+      }
+    };
 
-  oReq.send(oData);
-  ev.preventDefault();
-}, false);
+    oReq.send(oData);
+    ev.preventDefault();
+  },
+  false,
+);
 ```
 
 > **Note :** Si vous passez une référence dans le formulaire, la méthode spécifiée dans ce dernier sera utilisée au lieu de celle définie dans l'appel de la méthode open().
@@ -135,14 +140,14 @@ $.ajax({
   url: "stash.php",
   type: "POST",
   data: fd,
-  processData: false,  // dire à jQuery de ne pas traiter les données
-  contentType: false   // dire à jQuery de ne pas définir le contentType
+  processData: false, // dire à jQuery de ne pas traiter les données
+  contentType: false, // dire à jQuery de ne pas définir le contentType
 });
 ```
 
 ## Envoi de formulaires et de fichiers via AJAX sans objet `FormData`
 
-Si vous voulez en savoir plus sur la sérialisation des données et l'envoi d'un formulaire via [AJAX](/fr/docs/AJAX) *sans* utiliser d'objets FormData, consultez [ce paragraphe](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
+Si vous voulez en savoir plus sur la sérialisation des données et l'envoi d'un formulaire via [AJAX](/fr/docs/AJAX) _sans_ utiliser d'objets FormData, consultez [ce paragraphe](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
 
 ## Voir aussi
 

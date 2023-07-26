@@ -4,6 +4,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 original_slug: Learn/Tools_and_testing/Фронтенд_JavaScript_фреймворки
 ---
+
 {{LearnSidebar}}
 JavaScript-фреймворки являются неотъемлемой частью современной веб-разработки,предоставляя разработчикам проверенные и протестированныеинструменты для создания масштабируемых и интерактивных веб-приложений. Многиесовременные компании используют фреймворки для своих решений, поэтому многие задачи связанные с разработкой клиентской части веб-приложений теперь требуют опыта работы с ними.
 

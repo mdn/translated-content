@@ -1,11 +1,6 @@
 ---
 title: '-webkit-transform-2d'
 slug: Web/CSS/@media/-webkit-transform-2d
-tags:
-  - CSS
-  - Caractéristique média
-  - Non-standard
-  - Reference
 translation_of: Web/CSS/@media/-webkit-transform-2d
 ---
 

@@ -14,9 +14,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var detecting = browser.tabs.detectLanguage(
-  tabId,                  // optional integer
-  callback                // optional function
-)
+  tabId, // optional integer
+  callback, // optional function
+);
 ```
 
 ### Paramètres
@@ -43,7 +43,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var detecting = browser.tabs.detectLanguage();
   detecting.then(onLanguageDetected, onError);
 });
@@ -68,7 +68,7 @@ function detectLanguages(tabs) {
   }
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var querying = browser.tabs.query({});
   querying.then(detectLanguages, onError);
 });

@@ -1,16 +1,7 @@
 ---
 title: Intl.ListFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/resolvedOptions
 ---
 
 {{JSRef}}

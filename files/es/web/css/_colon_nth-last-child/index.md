@@ -1,5 +1,5 @@
 ---
-title: ':nth-last-child'
+title: ":nth-last-child"
 slug: Web/CSS/:nth-last-child
 ---
 
@@ -93,12 +93,12 @@ table {
 }
 
 /* Selecciona los últimos tres elementos */
-tr:nth-last-child(-n+3) {
+tr:nth-last-child(-n + 3) {
   background-color: pink;
 }
 
 /* Toma todos los elementos a partir del penúltimo elemento */
-tr:nth-last-child(n+2) {
+tr:nth-last-child(n + 2) {
   color: blue;
 }
 
@@ -141,7 +141,7 @@ tr:nth-last-child(n) {
   background-color: lightgray;
 }
 
-tr:nth-last-child(n+1){
+tr:nth-last-child(n + 1) {
   font-weight: 600;
 }
 ```

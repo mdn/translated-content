@@ -1,10 +1,6 @@
 ---
 title: transition-timing-function
 slug: Web/CSS/transition-timing-function
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/transition-timing-function
 ---
 

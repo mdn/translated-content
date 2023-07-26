@@ -1,13 +1,7 @@
 ---
 title: Contribuer à une recette
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
-tags:
-  - CSS
-  - Guide
-  - MDN
-  - Meta
 translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe
-original_slug: Web/CSS/Layout_cookbook/Contribuer_à_une_recette
 ---
 
 {{CSSRef}}

@@ -1,15 +1,7 @@
 ---
 title: Set.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/forEach
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set/forEach
 ---
 
 {{JSRef}}

@@ -1,9 +1,6 @@
 ---
 title: History
 slug: Web/API/History
-tags:
-  - DOM
-  - HTML-DOM
 translation_of: Web/API/History
 ---
 
@@ -13,7 +10,7 @@ L'interface **`History`** permet de manipuler l'historique de navigation du navi
 
 ## Propriétés
 
-*L'interface `History`* *n'hérite d'aucune propriété.*
+_L'interface `History` n'hérite d'aucune propriété._
 
 - {{domxref("History.length")}} {{readOnlyInline}}
   - : Retourne un `Integer` représentant le nombre d'élements dans l'historique de la session, y incluant la page actullement ouverte. Par exemple, pour une page chargée dans un nouvel onglet cette propriété retourne `1`.

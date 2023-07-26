@@ -1,9 +1,6 @@
 ---
 title: Text
 slug: Web/API/Text
-tags:
-  - API
-  - DOM
 translation_of: Web/API/Text
 ---
 
@@ -11,7 +8,7 @@ translation_of: Web/API/Text
 
 L'interface **`Text`** représente le contenu textuel d'un élément {{domxref("Element")}} ou d'un attribut {{domxref("Attr")}}. Si un élément n'a pas de balisage dans son contenu, il a un seul enfant implémentant `Text` qui contient le texte de l'élément. Par contre, si l'élément contient un balisage, il est analysé par les éléments d'information et les noeuds `Text` qui sont ses enfants.
 
-Un nouveau document a un unique noeud `Text` pour chaque bloc de texte. Au fil du temps, d'autres noeuds peuvent être créés `Text` en temps que modification du contenu du document. La méthode {{domxref("Node.normalize()")}} fusionne les objets `Text`  dans un seul noeud pour chaque bloc de texte.
+Un nouveau document a un unique noeud `Text` pour chaque bloc de texte. Au fil du temps, d'autres noeuds peuvent être créés `Text` en temps que modification du contenu du document. La méthode {{domxref("Node.normalize()")}} fusionne les objets `Text` dans un seul noeud pour chaque bloc de texte.
 
 {{InheritanceDiagram}}
 

@@ -1,11 +1,6 @@
 ---
 title: font
 slug: Web/CSS/font
-tags:
-  - CSS
-  - Polices CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/font
 ---
 

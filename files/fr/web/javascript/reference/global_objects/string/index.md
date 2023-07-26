@@ -1,15 +1,7 @@
 ---
 title: String
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String
-original_slug: Web/JavaScript/Reference/Objets_globaux/String
-browser-compat: javascript.builtins.String
 ---
 
 {{JSRef}}

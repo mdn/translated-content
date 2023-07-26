@@ -1,11 +1,6 @@
 ---
 title: <map>
 slug: Web/HTML/Element/map
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/map
 ---
 
@@ -65,7 +60,7 @@ _Pour le lien `right.html`&nbsp;:_
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >,
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_tangible"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
           >contenu tangible</a
         >.
       </td>
@@ -75,7 +70,7 @@ _Pour le lien `right.html`&nbsp;:_
       <td>
         Tout élément dont
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Mod%C3%A8le_de_contenu_transparent"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Modèle_de_contenu_transparent"
           >le modèle de contenu est transparent</a
         >.
       </td>
@@ -89,7 +84,7 @@ _Pour le lien `right.html`&nbsp;:_
       <td>
         Tout élément qui accepte
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >du contenu phrasé</a
         >.
       </td>

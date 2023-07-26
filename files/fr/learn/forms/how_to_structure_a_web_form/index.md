@@ -1,17 +1,7 @@
 ---
 title: Comment structurer un formulaire HTML
 slug: Learn/Forms/How_to_structure_a_web_form
-tags:
-  - Apprentissage
-  - Débutant
-  - Exemple
-  - Formulaires
-  - Guide
-  - HTML
-  - Structure
-  - Web
 translation_of: Learn/Forms/How_to_structure_a_web_form
-original_slug: Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
@@ -140,30 +130,34 @@ En fait, il est possible d'associer plusieurs étiquettes à un seul widget, mai
 Considérons cet exemple&nbsp;:
 
 ```html
-<p>Les champs obligatoires sont suivis de <abbr title="required">*</abbr>.</p>
+<p>
+  Les champs obligatoires sont suivis de <span aria-label="required">*</span>.
+</p>
 
 <!-- Donc ceci&nbsp;: -->
-<div>
+<!--div>
   <label for="username">Nom&nbsp;:</label>
   <input type="text" name="username" />
-  <label for="username"><abbr title="required">*</abbr></label>
-</div>
+  <label for="username"><span aria-label="required">*</span></label>
+</div-->
 
 <!-- sera mieux programmé ainsi&nbsp;: -->
-<div>
+<!--div>
   <label for="username">
     <span>Nom&nbsp;:</span>
     <input id="username" type="text" name="username" />
-    <abbr title="required">*</abbr>
+    <span aria-label="required">*</span>
   </label>
-</div>
+</div-->
 
 <!-- mais ceci est probablement encore meilleur&nbsp;: -->
 <div>
-  <label for="username">Nom&nbsp;:<abbr title="required">*</abbr></label>
-  <input id="username" type="text" name="username" />
+  <label for="username">Nom&nbsp;:<span aria-label="required">*</span></label>
+  <input id="username" type="text" name="username" required />
 </div>
 ```
+
+{{EmbedLiveSample("", 120, 120)}}
 
 Le paragraphe du haut définit la règle pour les éléments obligatoires. Ce doit être au début pour s'assurer que les techniques d'assistance telles que les lecteurs d'écran l'afficheront ou le vocaliseront à l'utilisateur avant qu'il ne trouve un élément obligatoire. Ainsi, ils sauront ce que signifie l'astérisque. Un lecteur d'écran mentionnera l'astérisque en disant «&nbsp;astérisque&nbsp;» ou «&nbsp;obligatoire&nbsp;», selon les réglages du lecteur d'écran — dans tous les cas, ce qui sera dit est clairement précisé dans le premier paragraphe.
 
@@ -200,17 +194,17 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
 
 3. Ensuite, commencez le formulaire en ajoutant un élément {{htmlelement("form")}}&nbsp;:
 
-   ```html
+   ```html-nolint
    <form></form>
    ```
 
 4. Entre les balises `<form>`, ajoutez un en‑tête et un paragraphe pour informer les utilisateurs comment sont marqués les champs obligatoires&nbsp;:
 
-   ```html
+   ```html-nolint
    <h1>Formulaire de paiement</h1>
    <p>
      Les champs obligatoires sont suivis par un
-     <strong><abbr title="required">*</abbr></strong
+     <strong><span aria-label="required">*</span></strong
      >.
    </p>
    ```
@@ -240,23 +234,23 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
      <p>
        <label for="name">
          <span>Nom&nbsp;: </span>
-         <strong><abbr title="required">*</abbr></strong>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="text" id="name" name="username" />
+       <input type="text" id="name" name="username" required />
      </p>
      <p>
        <label for="mail">
          <span>e-mail&nbsp;:</span>
-         <strong><abbr title="required">*</abbr></strong>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="email" id="mail" name="usermail" />
+       <input type="email" id="mail" name="usermail" required />
      </p>
      <p>
        <label for="pwd">
          <span>Mot de passe&nbsp;:</span>
-         <strong><abbr title="required">*</abbr></strong>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="password" id="pwd" name="password" />
+       <input type="password" id="pwd" name="password" required />
      </p>
    </section>
    ```
@@ -279,17 +273,21 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
      <p>
        <label for="number">
          <span>Numéro de carte&nbsp;:</span>
-         <strong><abbr title="required">*</abbr></strong>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="text" id="number" name="cardnumber" />
+       <input type="tel" id="number" name="cardnumber" required />
      </p>
      <p>
-       <label for="date">
-         <span>Validité&nbsp;:</span>
-         <strong><abbr title="required">*</abbr></strong>
-         <em>format mm/aa</em>
+       <label for="expiration">
+         <span>Date d'expiration&nbsp;:</span>
+         <strong><span aria-label="required">*</span></strong>
        </label>
-       <input type="text" id="date" name="expiration" />
+       <input
+         type="text"
+         id="expiration"
+         required="true"
+         placeholder="MM/YY"
+         pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
      </p>
    </section>
    ```
@@ -297,12 +295,22 @@ Mettons ces idées en pratique et construisons une structure de formulaire un pe
 7. La dernière section est plus simple&nbsp;; elle ne contient qu'un bouton {{htmlelement("button")}} de type `submit`, pour adresser les données du formulaire. Ajoutez ceci au bas du formulaire&nbsp;:
 
    ```html
-   <p><button type="submit">Valider le paiement</button></p>
+   <section>
+     <p>
+       <button type="submit">Valider le paiement</button>
+     </p>
+   </section>
+   ```
+
+8. Enfin, finalisez votre formulaire en ajoutant la balise fermante pour [`<form>`](/fr/docs/Web/HTML/Element/form)&nbsp;:
+
+   ```html
+   </form>
    ```
 
 Vous pouvez voir le formulaire terminé en action ci‑dessous (vous le trouverez aussi sur GitHub — voir la [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) payment-form.html et une exécution [directe](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 
-{{EmbedLiveSample("Un_formulaire_de_paiement","100%","620", "", "Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML/Exemple")}}
+{{EmbedLiveSample("Exemple_en_direct", "100%", "620")}}
 
 ## Résumé
 

@@ -46,21 +46,21 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 
 1. 打开 `number-game-errors.html` 所在的标签页，然后打开 JavaScript 控制台。你将看到以下出错信息：
 
-    ![不是函数](屏幕快照_2018-10-17_20.27.08.png)
+   ![不是函数](屏幕快照_2018-10-17_20.27.08.png)
 
 2. 这个错误很容易跟踪，浏览器为你提供了几条有用的信息（截图来自 Firefox，其他浏览器也提供类似信息）。从左到右依次为：
 
-    - 红色“!”表示这是一个错误。
-    - 一条出错信息，表示问题出在哪儿：“TypeError：**guessSubmit**.addeventListener is not a function”（类型错误：**guessSubmit**.addeventListener 不是函数）
-    - 点击 \[详细了解] 将跳转到一个 MDN 页面，其中包含了此类错误超详细的解释。
-    - JavaScript 文件名，点击将跳转到开发者工具的“调试器”标签页。如果你按照这个链接，你会看到错误突出显示的确切行。
-    - 出错的行，以及导致错误的首个字符号。这里错误来自 86 行，第 3 个字符。
+   - 红色“!”表示这是一个错误。
+   - 一条出错信息，表示问题出在哪儿：“TypeError：**guessSubmit**.addeventListener is not a function”（类型错误：**guessSubmit**.addeventListener 不是函数）
+   - 点击 \[详细了解] 将跳转到一个 MDN 页面，其中包含了此类错误超详细的解释。
+   - JavaScript 文件名，点击将跳转到开发者工具的“调试器”标签页。如果你按照这个链接，你会看到错误突出显示的确切行。
+   - 出错的行，以及导致错误的首个字符号。这里错误来自 86 行，第 3 个字符。
 
 3. 我们在代码编辑器中找到第 86 行：
 
-    ```js
-    guessSubmit.addeventListener('click', checkGuess);
-    ```
+   ```js
+   guessSubmit.addeventListener("click", checkGuess);
+   ```
 
 4. 出错信息显示“guessSubmit.addeventListener 不是一个函数”，说明这里可能存在拼写错误。如果你不确定某语法的拼写是否正确，可以到 MDN 上去查找，目前最简便的方法就是去你喜欢的搜索引擎搜索“MDN + 语言*特性”。就本文当前内容你可以点击*：[`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener)。
 5. 因此这里错误显然是我们把函数名写错造成的。请记住，JavaScript 区分大小写，所以任何轻微的不同或大小写问题都会导致出错。将 `addeventListener` 改为 `addEventListener` 便可解决。
@@ -73,36 +73,36 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 2. 现在，如果尝试输入一个数字并按确定按钮，你会看到...另一个错误！ ![](屏幕快照_2018-10-17_21.56.00.png)
 3. 此次出错信息为“TypeError：lowOrHi is null”（“类型错误：lowOrHi 为 null”），在第 78 行。
 
-    > **备注：** [`Null`](/zh-CN/docs/Glossary/Null)是一个特殊值，意思是“什么也没有”，或者“没有值”。这表示 `lowOrHi` 已声明并初始化，但没有任何有意义的值，可以说：它没有类型没有值。
+   > **备注：** [`Null`](/zh-CN/docs/Glossary/Null)是一个特殊值，意思是“什么也没有”，或者“没有值”。这表示 `lowOrHi` 已声明并初始化，但没有任何有意义的值，可以说：它没有类型没有值。
 
-    > **备注：** 这条错误没有在页面加载时立即发生，是因为它发生在函数内部（`checkGuess() { ... }`块中）。函数内部的代码运行于一个外部代码相互独立的域内，后面函数的文章中将更详细地讲解。此时此刻，只有当代码运行至 86 行并调用 `checkGuess()` 函数时，代码才会抛出出错信息。
+   > **备注：** 这条错误没有在页面加载时立即发生，是因为它发生在函数内部（`checkGuess() { ... }`块中）。函数内部的代码运行于一个外部代码相互独立的域内，后面函数的文章中将更详细地讲解。此时此刻，只有当代码运行至 86 行并调用 `checkGuess()` 函数时，代码才会抛出出错信息。
 
 4. 请观察第 78 行代码：
 
-    ```js
-    lowOrHi.textContent = '你猜高了！';
-    ```
+   ```js
+   lowOrHi.textContent = "你猜高了！";
+   ```
 
 5. 该行试图将 `lowOrHi` 变量中的 `textContent` 属性设置为一个字符串，但是失败了，这是因为 `lowOrHi` 并不包含预期的内容。为了一探究竟，你可以在代码中查找一下该变量的的其他实例。`lowOrHi` 最早出现于第 48 行：
 
-    ```js
-    const lowOrHi = document.querySelector('lowOrHi');
-    ```
+   ```js
+   const lowOrHi = document.querySelector("lowOrHi");
+   ```
 
 6. 此处，我们试图让该变量包含一个指向文档 HTML 中特定元素的引用。我们来检查一下在该行代码执行后变量的值是否为 `null`。在第 49 行添加以下代码：
 
-    ```js
-    console.log(lowOrHi);
-    ```
+   ```js
+   console.log(lowOrHi);
+   ```
 
-    > **备注：** [`console.log()`](/zh-CN/docs/Web/API/Console/log) 是一个非常实用的调试功能，它可以把值打印到控制台。因此我们将其置于代码第 48 行时，它会将 `lowOrHi` 的值打印至控制台。
+   > **备注：** [`console.log()`](/zh-CN/docs/Web/API/Console/log) 是一个非常实用的调试功能，它可以把值打印到控制台。因此我们将其置于代码第 48 行时，它会将 `lowOrHi` 的值打印至控制台。
 
 7. 保存并刷新，你将在控制台看到 `console.log()` 的执行结果：![](屏幕快照_2018-10-18_16.43.40.png) 显然，此处 `lowOrHi` 的值为 `null`，所以第 48 行肯定有问题。
 8. 我们来思考问题有哪些可能。第 48 行使用 [`document.querySelector()`](/zh-CN/docs/Web/API/Document/querySelector) 方法和一个 CSS 选择器来取得一个元素的引用。进一步查看我们的文件，我们可以找到有问题的段落：
 
-    ```js
-    <p class="lowOrHi"></p>
-    ```
+   ```js
+   <p class="lowOrHi"></p>
+   ```
 
 9. 这里我们需要一个类选择器，它应以一个点开头（`.`），但被传递到第 48 行的`querySelector()`方法中的选择器没有点。这可能是问题所在！尝试将第 48 行中的 `lowOrHi` 改成 `.lowOrHi`。
 10. 再次保存并刷新，此时 `console.log()` 语句应该返回我们想要的 `<p>` 元素。终于把错误搞定了！此时你可以把 `console.log()` 一行删除，或保留它以便随后参考。选择权在你。
@@ -123,21 +123,21 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 
 1. 寻找 `randomNumber` 变量和首次设定随机数的代码。保存着游戏开始时玩家要猜的随机数的实例大约在 44 行：
 
-    ```js
-    let randomNumber = Math.floor(Math.random()) + 1;
-    ```
+   ```js
+   let randomNumber = Math.floor(Math.random()) + 1;
+   ```
 
-    重新开始游戏产生随机数的设定语句大约在 113 行：
+   重新开始游戏产生随机数的设定语句大约在 113 行：
 
-    ```js
-    randomNumber = Math.floor(Math.random()) + 1;
-    ```
+   ```js
+   randomNumber = Math.floor(Math.random()) + 1;
+   ```
 
 2. 为了检查问题是否来自这两行，我们要再次转到我们的朋友 - 控制台：在两行代码之后各插入下面的代码：
 
-    ```js
-    console.log(randomNumber);
-    ```
+   ```js
+   console.log(randomNumber);
+   ```
 
 3. 保存并刷新，然后试玩，你会看到在控制台显示的随机数总是等于 1。
 
@@ -146,13 +146,13 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
 为了解决这个问题，让我们来思考这行代码如何工作。首先，我们调用 [`Math.random()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/random),它生成一个在 0 和 1 之间的十进制随机数，例如 0.5675493843。
 
 ```js
-Math.random()
+Math.random();
 ```
 
 接下来，我们把调用 `Math.random()` 的结果作为参数传递给 [`Math.floor()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)，它会舍弃小数部分返回与之最接近的整数。然后我们给这个结果加上 1：
 
-```plain
-Math.floor(Math.random()) + 1
+```js
+Math.floor(Math.random()) + 1;
 ```
 
 由于将一个 0 和 1 之间的随机小数的小数部分舍弃，返回的整数一定为 0，因此在此基础上加 1 之后返回值一定为 1。要在舍弃小数部分之前将它乘以 100。便可得到 0 到 99 之间的随机数：
