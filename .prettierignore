@@ -83,7 +83,6 @@ build/
 
 # ru
 /files/ru/learn/html/**/*.md
-/files/ru/learn/javascript/**/*.md
 /files/ru/learn/server-side/**/*.md
 /files/ru/web/api/**/*.md
 /files/ru/web/css/**/*.md
