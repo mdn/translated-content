@@ -41,8 +41,7 @@ Voir la section ci-après sur la compatibilité des navigateurs à ce sujet car 
 ```html
 <details open>
   <summary>Détails produit</summary>
-  <p>Ce produit a été fabriqué par
-  ACME et respecte les pandas.</p>
+  <p>Ce produit a été fabriqué par ACME et respecte les pandas.</p>
 </details>
 ```
 

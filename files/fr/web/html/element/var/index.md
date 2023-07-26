@@ -32,7 +32,10 @@ La plupart des navigateurs appliquent la propriété {{cssxref("font-style")}} a
 
 ```css
 var {
-  font: bold 15px "Courier", "Courier New", monospace;
+  font:
+    bold 15px "Courier",
+    "Courier New",
+    monospace;
 }
 ```
 
@@ -59,7 +62,10 @@ var {
 
 ```css
 var {
-  font: bold 15px "Courier", "Courier New", monospace;
+  font:
+    bold 15px "Courier",
+    "Courier New",
+    monospace;
 }
 ```
 
@@ -68,8 +74,8 @@ var {
 ```html
 <p>
   Les variables <var>minSpeed</var> et <var>maxSpeed</var> contrôlent les
-  vitesses minimale et maximale de l'appareil et sont exprimées en tours
-  par minute.
+  vitesses minimale et maximale de l'appareil et sont exprimées en tours par
+  minute.
 </p>
 ```
 
