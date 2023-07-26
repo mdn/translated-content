@@ -24,7 +24,7 @@ El **`::-moz-color-swatch`** [pdseudo-elemento CSS](/es/docs/Web/CSS) es una [ex
 ### CSS
 
 ```css
-input[type=color]::-moz-color-swatch {
+input[type="color"]::-moz-color-swatch {
   border-radius: 10px;
   border-style: none;
 }

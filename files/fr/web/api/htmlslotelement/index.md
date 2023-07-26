@@ -11,7 +11,7 @@ La méthode **`HTMLContentElement.getDistributedNodes()`** retourne un {{domxref
 ## Syntaxe
 
 ```js
-var nodeList = object.getDistributedNodes()
+var nodeList = object.getDistributedNodes();
 ```
 
 ## Exemple

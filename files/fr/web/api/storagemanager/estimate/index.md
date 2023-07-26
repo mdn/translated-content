@@ -13,7 +13,7 @@ Cette méthode est asynchrone est renvoie une [promesse](/fr/docs/Web/JavaScript
 ## Syntaxe
 
 ```js
-estimate()
+estimate();
 ```
 
 ### Paramètres
@@ -47,17 +47,19 @@ Dans cet exemple, on récupère les estimations de l'espace utilisé et du quota
 
 ```html
 <label>
-  Vous utilisez actuellement <output id="percent">
-  </output>% du stockage disponible.
+  Vous utilisez actuellement <output id="percent"> </output>% du stockage
+  disponible.
 </label>
 ```
 
 ### JavaScript
 
 ```js
-navigator.storage.estimate().then(function(estimate) {
-  document.getElementById("percent").value =
-      (estimate.usage / estimate.quota * 100).toFixed(2);
+navigator.storage.estimate().then(function (estimate) {
+  document.getElementById("percent").value = (
+    (estimate.usage / estimate.quota) *
+    100
+  ).toFixed(2);
 });
 ```
 

@@ -53,22 +53,23 @@ mix-blend-mode: unset;
   <div class="col">
     <div class="note">Mezclado aislado (sin mezclar con el fondo)</div>
     <div class="row isolate">
-      <div class="cell"> normal
+      <div class="cell">
+        normal
         <div class="container normal">
           <div class="group">
             <div class="item firefox"></div>
             <svg viewBox="0 0 150 150">
               <defs>
                 <linearGradient id="red">
-                  <stop offset="0"    stop-color="hsl(0,100%,50%)" />
+                  <stop offset="0" stop-color="hsl(0,100%,50%)" />
                   <stop offset="100%" stop-color="hsl(0,0%,100%)" />
                 </linearGradient>
                 <linearGradient id="green">
-                  <stop offset="0"    stop-color="hsl(120,100%,50%)" />
+                  <stop offset="0" stop-color="hsl(120,100%,50%)" />
                   <stop offset="100%" stop-color="hsl(120,0%,100%)" />
                 </linearGradient>
                 <linearGradient id="blue">
-                  <stop offset="0"    stop-color="hsl(240,100%,50%)" />
+                  <stop offset="0" stop-color="hsl(240,100%,50%)" />
                   <stop offset="100%" stop-color="hsl(240,0%,100%)" />
                 </linearGradient>
               </defs>
@@ -79,7 +80,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> multiply
+      <div class="cell">
+        multiply
         <div class="container multiply">
           <div class="group">
             <div class="item firefox"></div>
@@ -91,7 +93,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> darken
+      <div class="cell">
+        darken
         <div class="container darken">
           <div class="group">
             <div class="item firefox"></div>
@@ -103,7 +106,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> screen
+      <div class="cell">
+        screen
         <div class="container screen">
           <div class="group">
             <div class="item firefox"></div>
@@ -115,7 +119,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> lighten
+      <div class="cell">
+        lighten
         <div class="container lighten">
           <div class="group">
             <div class="item firefox"></div>
@@ -127,7 +132,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> overlay
+      <div class="cell">
+        overlay
         <div class="container overlay">
           <div class="group">
             <div class="item firefox"></div>
@@ -139,7 +145,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> color-dodge
+      <div class="cell">
+        color-dodge
         <div class="container color-dodge">
           <div class="group">
             <div class="item firefox"></div>
@@ -151,7 +158,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> color-burn
+      <div class="cell">
+        color-burn
         <div class="container color-burn">
           <div class="group">
             <div class="item firefox"></div>
@@ -163,7 +171,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> hard-light
+      <div class="cell">
+        hard-light
         <div class="container hard-light">
           <div class="group">
             <div class="item firefox"></div>
@@ -175,7 +184,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> soft-light
+      <div class="cell">
+        soft-light
         <div class="container soft-light">
           <div class="group">
             <div class="item firefox"></div>
@@ -187,7 +197,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> difference
+      <div class="cell">
+        difference
         <div class="container difference">
           <div class="group">
             <div class="item firefox"></div>
@@ -199,7 +210,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> exclusion
+      <div class="cell">
+        exclusion
         <div class="container exclusion">
           <div class="group">
             <div class="item firefox"></div>
@@ -211,7 +223,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> hue
+      <div class="cell">
+        hue
         <div class="container hue">
           <div class="group">
             <div class="item firefox"></div>
@@ -223,7 +236,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> saturation
+      <div class="cell">
+        saturation
         <div class="container saturation">
           <div class="group">
             <div class="item firefox"></div>
@@ -235,7 +249,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> color
+      <div class="cell">
+        color
         <div class="container color">
           <div class="group">
             <div class="item firefox"></div>
@@ -247,7 +262,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> luminosity
+      <div class="cell">
+        luminosity
         <div class="container luminosity">
           <div class="group">
             <div class="item firefox"></div>
@@ -263,7 +279,8 @@ mix-blend-mode: unset;
 
     <div class="note">Mezclado global (mezclar con el fondo)</div>
     <div class="row">
-      <div class="cell"> normal
+      <div class="cell">
+        normal
         <div class="container normal">
           <div class="group">
             <div class="item firefox"></div>
@@ -275,7 +292,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> multiply
+      <div class="cell">
+        multiply
         <div class="container multiply">
           <div class="group">
             <div class="item firefox"></div>
@@ -287,7 +305,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> darken
+      <div class="cell">
+        darken
         <div class="container darken">
           <div class="group">
             <div class="item firefox"></div>
@@ -299,7 +318,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> screen
+      <div class="cell">
+        screen
         <div class="container screen">
           <div class="group">
             <div class="item firefox"></div>
@@ -311,7 +331,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> lighten
+      <div class="cell">
+        lighten
         <div class="container lighten">
           <div class="group">
             <div class="item firefox"></div>
@@ -323,7 +344,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> overlay
+      <div class="cell">
+        overlay
         <div class="container overlay">
           <div class="group">
             <div class="item firefox"></div>
@@ -335,7 +357,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> color-dodge
+      <div class="cell">
+        color-dodge
         <div class="container color-dodge">
           <div class="group">
             <div class="item firefox"></div>
@@ -347,7 +370,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> color-burn
+      <div class="cell">
+        color-burn
         <div class="container color-burn">
           <div class="group">
             <div class="item firefox"></div>
@@ -359,7 +383,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> hard-light
+      <div class="cell">
+        hard-light
         <div class="container hard-light">
           <div class="group">
             <div class="item firefox"></div>
@@ -371,7 +396,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> soft-light
+      <div class="cell">
+        soft-light
         <div class="container soft-light">
           <div class="group">
             <div class="item firefox"></div>
@@ -383,7 +409,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> difference
+      <div class="cell">
+        difference
         <div class="container difference">
           <div class="group">
             <div class="item firefox"></div>
@@ -395,7 +422,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> exclusion
+      <div class="cell">
+        exclusion
         <div class="container exclusion">
           <div class="group">
             <div class="item firefox"></div>
@@ -407,7 +435,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> hue
+      <div class="cell">
+        hue
         <div class="container hue">
           <div class="group">
             <div class="item firefox"></div>
@@ -419,7 +448,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> saturation
+      <div class="cell">
+        saturation
         <div class="container saturation">
           <div class="group">
             <div class="item firefox"></div>
@@ -431,7 +461,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> color
+      <div class="cell">
+        color
         <div class="container color">
           <div class="group">
             <div class="item firefox"></div>
@@ -443,7 +474,8 @@ mix-blend-mode: unset;
           </div>
         </div>
       </div>
-      <div class="cell"> luminosity
+      <div class="cell">
+        luminosity
         <div class="container luminosity">
           <div class="group">
             <div class="item firefox"></div>
@@ -461,10 +493,11 @@ mix-blend-mode: unset;
 ```
 
 ```css hidden
-html,body {
+html,
+body {
   height: 100%;
   box-sizing: border-box;
-  background: #EEE;
+  background: #eee;
 }
 
 .grid {
@@ -489,9 +522,9 @@ html,body {
 }
 
 .cell {
-  margin: .5em;
-  padding: .5em;
-  background-color: #FFF;
+  margin: 0.5em;
+  padding: 0.5em;
+  background-color: #fff;
   overflow: hidden;
   text-align: center;
 }
@@ -499,8 +532,8 @@ html,body {
 .note {
   background: #fff3d4;
   padding: 1em;
-  margin: .5em .5em 0;
-  font: .8em sans-serif;
+  margin: 0.5em 0.5em 0;
+  font: 0.8em sans-serif;
   text-align: left;
   white-space: nowrap;
 }
@@ -511,8 +544,8 @@ html,body {
 
 .container {
   position: relative;
-  background: linear-gradient(to right, #000 0%, transparent 50%, #FFF 100%),
-              linear-gradient(to bottom, #FF0 0%, #F0F 50%, #0FF 100%);
+  background: linear-gradient(to right, #000 0%, transparent 50%, #fff 100%),
+    linear-gradient(to bottom, #ff0 0%, #f0f 50%, #0ff 100%);
   width: 150px;
   height: 150px;
   margin: 0 auto;
@@ -536,24 +569,58 @@ html,body {
   fill: url(#blue);
 }
 
-.isolate .group { isolation: isolate; }
+.isolate .group {
+  isolation: isolate;
+}
 
-.normal .item      { mix-blend-mode: normal; }
-.multiply .item    { mix-blend-mode: multiply; }
-.screen .item      { mix-blend-mode: screen; }
-.overlay .item     { mix-blend-mode: overlay; }
-.darken .item      { mix-blend-mode: darken; }
-.lighten .item     { mix-blend-mode: lighten; }
-.color-dodge .item { mix-blend-mode: color-dodge; }
-.color-burn .item  { mix-blend-mode: color-burn; }
-.hard-light .item  { mix-blend-mode: hard-light; }
-.soft-light .item  { mix-blend-mode: soft-light; }
-.difference .item  { mix-blend-mode: difference; }
-.exclusion .item   { mix-blend-mode: exclusion; }
-.hue .item         { mix-blend-mode: hue; }
-.saturation .item  { mix-blend-mode: saturation; }
-.color .item       { mix-blend-mode: color; }
-.luminosity .item  { mix-blend-mode: luminosity; }
+.normal .item {
+  mix-blend-mode: normal;
+}
+.multiply .item {
+  mix-blend-mode: multiply;
+}
+.screen .item {
+  mix-blend-mode: screen;
+}
+.overlay .item {
+  mix-blend-mode: overlay;
+}
+.darken .item {
+  mix-blend-mode: darken;
+}
+.lighten .item {
+  mix-blend-mode: lighten;
+}
+.color-dodge .item {
+  mix-blend-mode: color-dodge;
+}
+.color-burn .item {
+  mix-blend-mode: color-burn;
+}
+.hard-light .item {
+  mix-blend-mode: hard-light;
+}
+.soft-light .item {
+  mix-blend-mode: soft-light;
+}
+.difference .item {
+  mix-blend-mode: difference;
+}
+.exclusion .item {
+  mix-blend-mode: exclusion;
+}
+.hue .item {
+  mix-blend-mode: hue;
+}
+.saturation .item {
+  mix-blend-mode: saturation;
+}
+.color .item {
+  mix-blend-mode: color;
+}
+.luminosity .item {
+  mix-blend-mode: luminosity;
+}
 ```
 
 {{EmbedLiveSample("", "100%", 1600, "", "", "")}}
@@ -563,16 +630,20 @@ html,body {
 ```html
 <svg>
   <g class="isolate">
-    <circle cx="40" cy="40" r="40" fill="red"/>
-    <circle cx="80" cy="40" r="40" fill="lightgreen"/>
-    <circle cx="60" cy="80" r="40" fill="blue"/>
+    <circle cx="40" cy="40" r="40" fill="red" />
+    <circle cx="80" cy="40" r="40" fill="lightgreen" />
+    <circle cx="60" cy="80" r="40" fill="blue" />
   </g>
 </svg>
 ```
 
 ```css
-circle { mix-blend-mode: screen; }
-.isolate { isolation: isolate; } /* sin aislación, el color de fondo será tenido en cuenta */
+circle {
+  mix-blend-mode: screen;
+}
+.isolate {
+  isolation: isolate;
+} /* sin aislación, el color de fondo será tenido en cuenta */
 ```
 
 {{EmbedLiveSample("Ejemplo_vivo", "100%", "180")}}

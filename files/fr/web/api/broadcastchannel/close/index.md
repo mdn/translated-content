@@ -22,7 +22,7 @@ canal.close();
 
 ```js
 // Connexion au canal
-const bc = new BroadcastChannel('canal_test');
+const bc = new BroadcastChannel("canal_test");
 
 // Autres opérations (tel que postMessage, …)
 

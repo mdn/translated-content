@@ -13,7 +13,7 @@ La propriété en lecture seule **`timeOrigin`** de l'interface {{domxref("Perfo
 ## Syntaxe
 
 ```js
-  var timeOrigin = performance.timeOrigin
+var timeOrigin = performance.timeOrigin;
 ```
 
 ### Valeur

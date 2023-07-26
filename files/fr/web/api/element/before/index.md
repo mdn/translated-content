@@ -12,9 +12,9 @@ Les objets qui sont des chaînes de caractères sont insérés comme des nœuds 
 ## Syntaxe
 
 ```js
-before(param1)
-before(param1, param2)
-before(param1, param2, /* ... ,*/ paramN)
+before(param1);
+before(param1, param2);
+before(param1, param2, /* ... ,*/ paramN);
 ```
 
 ### Paramètres

@@ -42,7 +42,6 @@ sel.remove(1);
     <option value="3">Option: Value 3</option>
   </select>
 */
-
 ```
 
 ## Spécifications

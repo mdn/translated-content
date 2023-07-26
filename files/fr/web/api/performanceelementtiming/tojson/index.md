@@ -24,7 +24,11 @@ var json = PerformanceElementTiming.toJSON();
 Dans cet exemple, l'appel de `entry.toJSON()` renvoie une représentation JSON de l'objet [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming), avec les informations sur l'élément image.
 
 ```html
-<img src="image.jpg" alt="une belle image" elementtiming="big-image" id="myImage">
+<img
+  src="image.jpg"
+  alt="une belle image"
+  elementtiming="big-image"
+  id="myImage" />
 ```
 
 ```js

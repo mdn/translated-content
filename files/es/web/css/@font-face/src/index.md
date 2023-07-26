@@ -18,20 +18,22 @@ Al igual que con otras URLs en CSS, la URL puede ser relativa, en cuyo caso se r
 ```css
 /* <url> values */
 src: url(https://somewebsite.com/path/to/font.woff); /* absolute URL */
-src: url(path/to/font.woff);                         /* relative URL */
-src: url(path/to/font.woff) format("woff");          /* explicit format */
-src: url('path/to/font.woff');                       /* quoted URL */
-src: url(path/to/svgfont.svg#example);               /* fragment identifying font */
+src: url(path/to/font.woff); /* relative URL */
+src: url(path/to/font.woff) format("woff"); /* explicit format */
+src: url("path/to/font.woff"); /* quoted URL */
+src: url(path/to/svgfont.svg#example); /* fragment identifying font */
 
 /* <font-face-name> values */
-src: local(font);      /* unquoted name */
+src: local(font); /* unquoted name */
 src: local(some font); /* name containing space */
-src: local("font");    /* quoted name */
+src: local("font"); /* quoted name */
 
 /* Multiple items */
-src: local(font), url(path/to/font.svg) format("svg"),
-    url(path/to/font.woff) format("woff"),
-    url(path/to/font.ttf) format("opentype");
+src:
+  local(font),
+  url(path/to/font.svg) format("svg"),
+  url(path/to/font.woff) format("woff"),
+  url(path/to/font.ttf) format("opentype");
 ```
 
 ### Valores
@@ -50,8 +52,10 @@ src: local(font), url(path/to/font.svg) format("svg"),
 ```css
 @font-face {
   font-family: examplefont;
-  src: local(Example Font), url('examplefont.woff') format("woff"),
-      url('examplefont.woff') format("opentype");
+  src:
+    local(Example Font),
+    url("examplefont.woff") format("woff"),
+    url("examplefont.woff") format("opentype");
 }
 ```
 

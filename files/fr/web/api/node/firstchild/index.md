@@ -24,8 +24,8 @@ Cet exemple montre l'utilisation de `firstChild` et la manière dont les nœuds 
 </p>
 
 <script type="text/javascript">
-  var p01 = document.getElementById('para-01');
-  alert(p01.firstChild.nodeName)
+  var p01 = document.getElementById("para-01");
+  alert(p01.firstChild.nodeName);
 </script>
 ```
 
@@ -39,14 +39,14 @@ Si ces espaces sont retirés du code source, les nœuds `#text` n'apparaîtront 
 <p id="para-01"><span>Premier span</span></p>
 
 <script type="text/javascript">
-  var p01 = document.getElementById('para-01');
-  alert(p01.firstChild.nodeName)
+  var p01 = document.getElementById("para-01");
+  alert(p01.firstChild.nodeName);
 </script>
 ```
 
 À présent, l'alerte affichera «&nbsp;SPAN&nbsp;».
 
-Pour éviter le problème avec `node.firstChild`  renvoyant des noeuds `#text` ou `#comment`, {{domxref("ParentNode.firstElementChild")}} peut être utilisé pour renvoyer seulement le premier noeud élément. Toutefois, `node.firstElementChild` nécessite un "shim" pour Internet Explorer 9 et antérieurs.
+Pour éviter le problème avec `node.firstChild` renvoyant des noeuds `#text` ou `#comment`, {{domxref("ParentNode.firstElementChild")}} peut être utilisé pour renvoyer seulement le premier noeud élément. Toutefois, `node.firstElementChild` nécessite un "shim" pour Internet Explorer 9 et antérieurs.
 
 ## Spécifications
 

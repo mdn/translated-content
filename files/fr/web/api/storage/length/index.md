@@ -24,9 +24,9 @@ La fonction suivante ajoute trois éléments au localStorage du domaine courant 
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'yellow');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'cats.png');
+  localStorage.setItem("bgcolor", "yellow");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "cats.png");
 
   localStorage.length; // retourne 3 si localStorage est vide au préalable
 }

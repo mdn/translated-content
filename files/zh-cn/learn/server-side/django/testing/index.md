@@ -1,5 +1,5 @@
 ---
-title: 'Django 教程 10: 测试 Django 网页应用'
+title: "Django 教程 10: 测试 Django 网页应用"
 slug: Learn/Server-side/Django/Testing
 ---
 

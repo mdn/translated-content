@@ -41,8 +41,8 @@ hide(endingUI);
 
 // Cuando los créditos se hayan desvanecido,
 // volvemos a agregar los eventos de puntero cuando terminen.
-bringUI.onfinish = function() {
-  endingUI.style.pointerEvents = 'auto';
+bringUI.onfinish = function () {
+  endingUI.style.pointerEvents = "auto";
 };
 ```
 

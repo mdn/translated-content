@@ -27,8 +27,10 @@ A {{domxref("USVString")}}.
 ## Exemples
 
 ```js
-const url = new URL("https://developer.mozilla.org/fr/docs/Web/API/URL/toString");
-url.toJSON()
+const url = new URL(
+  "https://developer.mozilla.org/fr/docs/Web/API/URL/toString",
+);
+url.toJSON();
 ```
 
 ## Spécifications

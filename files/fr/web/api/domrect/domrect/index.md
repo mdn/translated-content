@@ -30,7 +30,7 @@ var myDOMRect = new DOMRect(x, y, width, height);
 Pour créer un nouveau `DOMPoint`, vous pouvez exécuter une ligne de code telle que celle-ci :
 
 ```js
-myDOMRect = new DOMRect(0,0,100,100);
+myDOMRect = new DOMRect(0, 0, 100, 100);
 // l'exécution de 'myDOMRect' dans la console devrait alors renvoyer
 // DOMRect { x: 0, y: 0, width: 100, height: 100, top: 0, right: 100, bottom: 100, left: 0 }
 ```

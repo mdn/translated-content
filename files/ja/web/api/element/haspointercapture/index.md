@@ -1,42 +1,45 @@
 ---
-title: Element.hasPointerCapture()
+title: "Element: hasPointerCapture() メソッド"
+short-title: hasPointerCapture()
 slug: Web/API/Element/hasPointerCapture
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
 
-{{domxref("Element")}} インターフェイスの **`hasPointerCapture()`** メソッドは、それを呼び出した要素が、与えられたポインタ ID によって識別されるポインタに対するポインタキャプチャを持つかどうかを示します。
+**`hasPointerCapture()`** は {{domxref("Element")}} インターフェイスのメソッドで、それを呼び出した要素が、指定されたポインター ID によって識別されるポインターに対するポインターキャプチャを持つかどうかを示します。
 
 ## 構文
 
-```
-targetElement.hasPointerCapture(pointerId);
+```js-nolint
+hasPointerCapture(pointerId)
 ```
 
-### パラメーター
+### 引数
 
 - `pointerId`
   - : {{domxref("PointerEvent")}} オブジェクトの {{domxref("PointerEvent.pointerId", "pointerId")}}。
 
-### 戻り値
+### 返値
 
-{{jsxref("Boolean")}} の値 — 要素がポインタキャプチャを持っている場合は `true`、持っていない場合は `false` です。
+論理値です。要素がポインターキャプチャを持っている場合は `true`、持っていない場合は `false` です。
 
 ## 例
 
 ```html
-<html>
+<html lang="ja">
   <script>
     function downHandler(ev) {
       const el = document.getElementById("target");
       // 要素 'target' はそれ以上のイベントを受信/キャプチャします
       el.setPointerCapture(ev.pointerId);
 
-      /* ... */
+      // …
 
       // 要素にまだポインタキャプチャがあるかどうかを確認します
       let pointerCap = el.hasPointerCapture(ev.pointerId);
-      if(pointerCap) {
+      if (pointerCap) {
         // まだポインタキャプチャがあります
       } else {
         // おっと、ポインタキャプチャを失いました！
@@ -54,7 +57,7 @@ targetElement.hasPointerCapture(pointerId);
 </html>
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

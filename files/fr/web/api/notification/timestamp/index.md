@@ -13,7 +13,7 @@ L'horodatage de la notification peut représenter le moment, en millisecondes de
 ## Syntaxe
 
 ```js
-Notification.timestamp
+Notification.timestamp;
 ```
 
 ### Valeur

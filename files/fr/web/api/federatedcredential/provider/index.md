@@ -11,7 +11,7 @@ La propriété **`provider`**, rattachée à l'interface {{domxref("FederatedCre
 ## Syntaxe
 
 ```js
-var provider = FederatedCredential.provider
+var provider = FederatedCredential.provider;
 ```
 
 ### Valeur

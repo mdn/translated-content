@@ -25,7 +25,7 @@ function overHandler(event) {
 }
 
 function init() {
-  let el = document.getElementById('target');
+  let el = document.getElementById("target");
   el.ongotpointercapture = overHandler;
 }
 ```

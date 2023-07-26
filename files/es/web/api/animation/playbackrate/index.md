@@ -28,10 +28,10 @@ Toma un número que puede ser 0, negativo o positivo. Los valores negativos invi
 En el ejemplo [Growing/Shrinking Alice Game](https://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010) , hacer click o tocar la botella, hace que la animación de crecimiento de Alicia (`aliceChange`) se invierta para reducirse:
 
 ```js
-var shrinkAlice = function() {
+var shrinkAlice = function () {
   aliceChange.playbackRate = -1;
   aliceChange.play();
-}
+};
 
 // Con un toque o un click, Alicia se encogerá.
 bottle.addEventListener("mousedown", shrinkAlice, false);
@@ -41,10 +41,10 @@ bottle.addEventListener("touchstart", shrinkAlice, false);
 Por el contrario, hacer click en el pastel hace que "crezca" reproduciendo `aliceChange` hacia adelante otra vez:
 
 ```js
-var growAlice = function() {
+var growAlice = function () {
   aliceChange.playbackRate = 1;
   aliceChange.play();
-}
+};
 
 // Con un toque o un click, Alicia crecerá.
 cake.addEventListener("mousedown", growAlice, false);
@@ -54,23 +54,21 @@ cake.addEventListener("touchstart", growAlice, false);
 En otro ejemplo, [Red Queen's Race Game](https://codepen.io/rachelnabors/pen/PNGGaV?editors=0010), Alicia y La Reina Roja están ralentizandose constantemente:
 
 ```js
-setInterval( function() {
-
+setInterval(function () {
   // Asegúrate de que la velocidad de reproducción nunca descienda por debajo de .4
 
-  if (redQueen_alice.playbackRate > .4) {
-    redQueen_alice.playbackRate *= .9;
+  if (redQueen_alice.playbackRate > 0.4) {
+    redQueen_alice.playbackRate *= 0.9;
   }
-
 }, 3000);
 ```
 
 Pero hacer click o hacer tapping(pasar el puntero) sobre ellos hace que aceleren multiplicando su `playbackRate` (velocidad de reproducción):
 
 ```js
-var goFaster = function() {
+var goFaster = function () {
   redQueen_alice.playbackRate *= 1.1;
-}
+};
 
 document.addEventListener("click", goFaster);
 document.addEventListener("touchstart", goFaster);

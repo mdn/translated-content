@@ -66,8 +66,8 @@ L'interface `PerformanceEventTiming` des événements de l'`Event Timing API` fo
 L'exemple suivant montre comment utiliser l'API pour tous les événements :
 
 ```js
-const observer = new PerformanceObserver(function(list) {
-  const perfEntries = list.getEntries().forEach(entry => {
+const observer = new PerformanceObserver(function (list) {
+  const perfEntries = list.getEntries().forEach((entry) => {
     // Durée totale
     const inputDuration = entry.duration;
     // Retard d'entrée (avant l'événement de traitement)
@@ -77,7 +77,7 @@ const observer = new PerformanceObserver(function(list) {
   });
 });
 // Enregistre un observateur pour l'événement.
-observer.observe({entryTypes: ["event"]});
+observer.observe({ entryTypes: ["event"] });
 ```
 
 Nous pouvons également interroger directement le [premier délai d'entrée](https://web.dev/fid). Le premier délai d'entrée ou « FID : First input delay », mesure le temps entre le moment où un utilisateur interagit pour la première fois avec une page (c'est-à-dire lorsqu'il clique sur un lien ou sur un bouton) et le moment où le navigateur est effectivement en mesure de commencer à traiter les gestionnaires d'événements en réponse à cette interaction.
@@ -87,18 +87,22 @@ Nous pouvons également interroger directement le [premier délai d'entrée](htt
 // https://github.com/w3c/page-visibility/issues/29
 // NOTE : idéalement, cette vérification devrait être effectuée dans le <head> du document
 // pour éviter les cas où l'état de visibilité change avant l'exécution de ce code.
-let firstHiddenTime = document.visibilityState === 'hidden' ? 0 : Infinity;
-document.addEventListener('visibilitychange', (event) => {
-  firstHiddenTime = Math.min(firstHiddenTime, event.timeStamp);
-}, {once: true});
+let firstHiddenTime = document.visibilityState === "hidden" ? 0 : Infinity;
+document.addEventListener(
+  "visibilitychange",
+  (event) => {
+    firstHiddenTime = Math.min(firstHiddenTime, event.timeStamp);
+  },
+  { once: true },
+);
 
 // Envoie les données transmises à un point de terminaison analytique. Ce code
 // utilise `/analytics` ; vous pouvez le remplacer par votre propre URL.
 function sendToAnalytics(data) {
   const body = JSON.stringify(data);
   // Utilise `navigator.sendBeacon()` si disponible, en revenant à `fetch()`.
-  (navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) ||
-      fetch('/analytics', {body, method: 'POST', keepalive: true});
+  (navigator.sendBeacon && navigator.sendBeacon("/analytics", body)) ||
+    fetch("/analytics", { body, method: "POST", keepalive: true });
 }
 
 // Utilise un try/catch au lieu de la fonction de détection de la prise en charge de `first-input`
@@ -113,7 +117,7 @@ try {
       const fid = entry.processingStart - entry.startTime;
 
       // Rapporte la valeur du FID à un terminal d'analyse.
-      sendToAnalytics({fid});
+      sendToAnalytics({ fid });
     }
   }
 
@@ -125,7 +129,7 @@ try {
   // Observe les entrées de type `first-input`, y compris les entrées en mémoire tampon,
   // c'est-à-dire les entrées qui ont eu lieu avant d'appeler `observe()` ci-dessous.
   po.observe({
-    type: 'first-input',
+    type: "first-input",
     buffered: true,
   });
 } catch (e) {

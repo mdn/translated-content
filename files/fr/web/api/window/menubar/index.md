@@ -11,7 +11,7 @@ La propriété **`Window.menubar`** renvoie l'objet `menubar`, dont la visibilit
 ## Syntaxe
 
 ```js
-objRef = window.menubar
+objRef = window.menubar;
 ```
 
 ## Exemple
@@ -20,15 +20,15 @@ L'exemple HTML complet suivant montre comment la propriété `visible` de l'obje
 
 ```html
 <html>
-<head>
-  <title>Divers Tests DOM</title>
-  <script>
-    var visible = window.menubar.visible;
-  </script>
-</head>
-<body>
-  <p>Divers Tests DOM</p>
-</body>
+  <head>
+    <title>Divers Tests DOM</title>
+    <script>
+      var visible = window.menubar.visible;
+    </script>
+  </head>
+  <body>
+    <p>Divers Tests DOM</p>
+  </body>
 </html>
 ```
 

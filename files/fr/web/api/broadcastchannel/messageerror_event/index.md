@@ -1,5 +1,5 @@
 ---
-title: 'BroadcastChannel : évènement messageerror'
+title: "BroadcastChannel : évènement messageerror"
 slug: Web/API/BroadcastChannel/messageerror_event
 translation_of: Web/API/BroadcastChannel/messageerror_event
 l10n:
@@ -15,8 +15,8 @@ L'évènement `messageerror` est déclenché sur un objet [`BroadcastChannel`](/
 Utilisez le nom de l'évènement dans les méthodes telles que [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou définissez un gestionnaire d'évènements dans la propriété.
 
 ```js
-addEventListener('messageerror', (event) => { })
-onmessageerror = (event) => { }
+addEventListener("messageerror", (event) => {});
+onmessageerror = (event) => {};
 ```
 
 ## Type de l'évènement
@@ -45,13 +45,13 @@ _En plus des propriétés listées ci-dessous, les propriétés de l'interface p
 Ce code utilise [`addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener) pour écouter les messages et les erreurs&nbsp;:
 
 ```js
-const canal = new BroadcastChannel('canal_exemple');
+const canal = new BroadcastChannel("canal_exemple");
 
-canal.addEventListener('message', (event) => {
+canal.addEventListener("message", (event) => {
   received.textContent = event.data;
 });
 
-canal.addEventListener('messageerror', (event) => {
+canal.addEventListener("messageerror", (event) => {
   console.error(event);
 });
 ```
@@ -59,7 +59,7 @@ canal.addEventListener('messageerror', (event) => {
 Voici un exemple similaire qui utilise les gestionnaires d'évènements `onmessage` et `onmessageerror`&nbsp;:
 
 ```js
-const canal = new BroadcastChannel('canal_exemple');
+const canal = new BroadcastChannel("canal_exemple");
 
 canal.onmessage = (event) => {
   received.textContent = event.data;

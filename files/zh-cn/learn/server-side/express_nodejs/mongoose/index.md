@@ -121,10 +121,10 @@ Mongoose 需要连接到 MongoDB 数据库。可以 `require()` 之，并通过 
 
 ```js
 // 导入 mongoose 模块
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 // 设置默认 mongoose 连接
-const mongoDB = 'mongodb://127.0.0.1/my_database';
+const mongoDB = "mongodb://127.0.0.1/my_database";
 mongoose.connect(mongoDB);
 // 让 mongoose 使用全局 Promise 库
 mongoose.Promise = global.Promise;
@@ -132,7 +132,7 @@ mongoose.Promise = global.Promise;
 const db = mongoose.connection;
 
 // 将连接与错误事件绑定（以获得连接错误的提示）
-db.on('error', console.error.bind(console, 'MongoDB 连接错误：'));
+db.on("error", console.error.bind(console, "MongoDB 连接错误："));
 ```
 
 可以用 `mongoose.connection` 取得默认的 `Connection` 对象。一旦连接，`Connection` 实例将触发打开事件。
@@ -153,14 +153,14 @@ db.on('error', console.error.bind(console, 'MongoDB 连接错误：'));
 
 ```js
 // 获取 Mongoose
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 // 定义一个模式
 var Schema = mongoose.Schema;
 
 var SomeModelSchema = new Schema({
-    a_string: String,
-    a_date: Date
+  a_string: String,
+  a_date: Date,
 });
 ```
 
@@ -175,12 +175,12 @@ var SomeModelSchema = new Schema({
 const Schema = mongoose.Schema;
 
 const SomeModelSchema = new Schema({
-    a_string: String,
-    a_date: Date
+  a_string: String,
+  a_date: Date,
 });
 
 // 使用模式“编译”模型
-const SomeModel = mongoose.model('SomeModel', SomeModelSchema);
+const SomeModel = mongoose.model("SomeModel", SomeModelSchema);
 ```
 
 第一个参数是为模型所创建集合的别名（Mongoose 将为 SomeModel 模型创建数据库集合），第二个参数是创建模型时使用的模式。
@@ -192,8 +192,7 @@ const SomeModel = mongoose.model('SomeModel', SomeModelSchema);
 模式可以包含任意数量的字段，每个字段代表 MongoDB 文档中的一段存储区域。下面是一个模式的示例，其中有许多常见字段类型和声明方式：
 
 ```js
-const schema = new Schema(
-{
+const schema = new Schema({
   name: String,
   binary: Buffer,
   living: Boolean,
@@ -203,8 +202,8 @@ const schema = new Schema(
   _someId: Schema.Types.ObjectId,
   array: [],
   ofString: [String], // 其他类型也可使用数组
-  nested: { stuff: { type: String, lowercase: true, trim: true } }
-})
+  nested: { stuff: { type: String, lowercase: true, trim: true } },
+});
 ```
 
 大多数 [模式类型](http://mongoosejs.com/docs/schematypes.html)（ [SchemaType](http://mongoosejs.com/docs/schematypes.html)，字段名之后的描述符）都是自解释的。除了：
@@ -245,13 +244,13 @@ Mongoose 提供内置的和自定义的验证器，以及同步的和异步的�
 const breakfastSchema = new Schema({
   eggs: {
     type: Number,
-    min: [6, '鸡蛋太少'],
-    max: 12
+    min: [6, "鸡蛋太少"],
+    max: 12,
   },
   drink: {
     type: String,
-    enum: ['咖啡', '茶']
-  }
+    enum: ["咖啡", "茶"],
+  },
 });
 ```
 
@@ -281,10 +280,10 @@ const breakfastSchema = new Schema({
 
 ```js
 // 创建一个 SomeModel 模型的实例
-const awesome_instance = new SomeModel({ name: '牛人' });
+const awesome_instance = new SomeModel({ name: "牛人" });
 
 // 传递回调以保存这个新建的模型实例
-awesome_instance.save( function (err) {
+awesome_instance.save(function (err) {
   if (err) {
     return handleError(err);
   } // 已保存
@@ -296,14 +295,11 @@ awesome_instance.save( function (err) {
 还可以使用 `create()`，在定义模型实例的同时将其保存。回调的第一个参数返回错误，第二个参数返回新建的模型实例。
 
 ```js
-SomeModel.create(
-  { name: '也是牛人' },
-  function(err, awesome_instance) {
-    if (err) {
-      return handleError(err);
-    } // 已保存
-  }
-);
+SomeModel.create({ name: "也是牛人" }, function (err, awesome_instance) {
+  if (err) {
+    return handleError(err);
+  } // 已保存
+});
 ```
 
 每个模型都有一个相关的连接（使用 `mongoose.model()` 时将做为默认连接）。可以通过创建新连接并对其调用 `.model()`，从而在另一个数据库上创建文档。
@@ -316,10 +312,10 @@ console.log(awesome_instance.name); // 控制台将显示 '也是牛人'
 
 // 修改字段内容并调用 save() 以修改记录
 awesome_instance.name = "酷毙了的牛人";
-awesome_instance.save( function(err) {
-   if (err) {
-     return handleError(err);
-   } // 已保存
+awesome_instance.save(function (err) {
+  if (err) {
+    return handleError(err);
+  } // 已保存
 });
 ```
 
@@ -328,18 +324,14 @@ awesome_instance.save( function(err) {
 可以使用查询方法搜索记录，查询条件可列在 JSON 文档中。以下代码展示了如何在数据库中找到所有网球运动员，并返回运动员姓名和年龄字段。这里只指定了一个匹配字段（运动项目，`sport`），也可以添加更多条件，指定正则表达式，或去除所有条件以返回所有运动员。
 
 ```js
-const Athlete = mongoose.model('Athlete', yourSchema);
+const Athlete = mongoose.model("Athlete", yourSchema);
 
 // SELECT name, age FROM Athlete WHERE sport='Tennis'
-Athlete.find(
-  { 'sport': 'Tennis' },
-  'name age',
-  function (err, athletes) {
-    if (err) {
-      return handleError(err);
-    } // 'athletes' 中保存一个符合条件的运动员的列表
-  }
-);
+Athlete.find({ sport: "Tennis" }, "name age", function (err, athletes) {
+  if (err) {
+    return handleError(err);
+  } // 'athletes' 中保存一个符合条件的运动员的列表
+});
 ```
 
 若像上述代码那样指定回调，则查询将立即执行。搜索完成后将调用回调。
@@ -350,10 +342,10 @@ Athlete.find(
 
 ```js
 // 寻找所有网球运动员
-const query = Athlete.find({ 'sport': 'Tennis' });
+const query = Athlete.find({ sport: "Tennis" });
 
 // 查找 name, age 两个字段
-query.select('name age');
+query.select("name age");
 
 // 只查找前 5 条记录
 query.limit(5);
@@ -366,20 +358,22 @@ query.exec(function (err, athletes) {
   if (err) {
     return handleError(err);
   } // athletes 中保存网球运动员列表，按年龄排序，共 5 条记录
-})
+});
 ```
 
 上面的查询条件定义在 `find()` 方法中。也可以使用 `where()` 函数来执行此操作，可以使用点运算符（`.`）将所有查询链接在一起。以下代码与上述的查询基本相同，还添加了年龄范围的附加条件。
 
 ```js
-Athlete.
-  find().
-  where('sport').equals('Tennis').
-  where('age').gt(17).lt(50).  // 附加 WHERE 查询
-  limit(5).
-  sort({ age: -1 }).
-  select('name age').
-  exec(callback); // 回调函数的名字是 callback
+Athlete.find()
+  .where("sport")
+  .equals("Tennis")
+  .where("age")
+  .gt(17)
+  .lt(50) // 附加 WHERE 查询
+  .limit(5)
+  .sort({ age: -1 })
+  .select("name age")
+  .exec(callback); // 回调函数的名字是 callback
 ```
 
 [`find()`](http://mongoosejs.com/docs/api.html#query_Query-find) 方法会取得所有匹配记录，但通常你只想取得一个。以下方法可以查询单个记录：
@@ -399,27 +393,27 @@ Athlete.
 例如，以下模式定义了作者和简介。每个作者可以有多条简介，我们将其表示为一个 `ObjectId` 数组。每条简介只对应一个作者。“`ref`”（黑体字）告知模式分配哪个模型给该字段。
 
 ```js
-const mongoose = require('mongoose');
-const Schema   = mongoose.Schema;
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
 const authorSchema = Schema({
-  name    : String,
-  stories : [{ type: Schema.Types.ObjectId, ref: 'Story' }]
+  name: String,
+  stories: [{ type: Schema.Types.ObjectId, ref: "Story" }],
 });
 
 const storySchema = Schema({
-  author : { type: Schema.Types.ObjectId, ref: 'Author' },
-  title  : String
+  author: { type: Schema.Types.ObjectId, ref: "Author" },
+  title: String,
 });
 
-const Story  = mongoose.model('Story', storySchema);
-const Author = mongoose.model('Author', authorSchema);
+const Story = mongoose.model("Story", storySchema);
+const Author = mongoose.model("Author", authorSchema);
 ```
 
 可以通过分配 `_id` 值来保存对相关文档的引用。下面我们创建一个作者、一条简介，并将新简介的 `author` 字段设置为新建作者的 id。
 
 ```js
-const wxm = new Author({ name: '司马迁' });
+const wxm = new Author({ name: "司马迁" });
 
 wxm.save(function (err) {
   if (err) {
@@ -429,13 +423,13 @@ wxm.save(function (err) {
   // 现在库中有了作者司马迁，我们来新建一条简介
   const story = new Story({
     title: "司马迁是历史学家",
-    author: wxm._id    // author 设置为作者 司马迁 的 _id。ID 是自动创建的。
+    author: wxm._id, // author 设置为作者 司马迁 的 _id。ID 是自动创建的。
   });
 
   story.save(function (err) {
     if (err) {
       return handleError(err);
-    }  // 司马迁有了一条简介
+    } // 司马迁有了一条简介
   });
 });
 ```
@@ -443,14 +437,13 @@ wxm.save(function (err) {
 现在简介文档通过作者文档的 ID 引用了作者。可使用 `populate()` 在简介中获取作者信息，如下所示。
 
 ```js
-Story
-  .findOne({ title: '司马迁是历史学家' })
-  .populate('author') // 使用作者 id 填充实际作者信息
+Story.findOne({ title: "司马迁是历史学家" })
+  .populate("author") // 使用作者 id 填充实际作者信息
   .exec(function (err, story) {
     if (err) {
       return handleError(err);
     }
-    console.log('作者是 %s', story.author.name);
+    console.log("作者是 %s", story.author.name);
     // 控制台将打印 "作者是 司马迁"
   });
 ```
@@ -460,13 +453,11 @@ Story
 > 更好的方法是获取作者的 `_id`，然后使用 `find()` 在所有简介的作者字段中搜索。
 >
 > ```js
-> Story
->   .find({ author : wxm._id })
->   .exec(function (err, stories) {
->     if (err) {
->       return handleError(err);
->     } // 返回所有 author 字段的值为 司马迁 id 的简介
->   });
+> Story.find({ author: wxm._id }).exec(function (err, stories) {
+>   if (err) {
+>     return handleError(err);
+>   } // 返回所有 author 字段的值为 司马迁 id 的简介
+> });
 > ```
 
 以上是本教程中“项目间协同”需要了解的所有内容。更多详细信息请参阅 [Population](http://mongoosejs.com/docs/populate.html)（Mongoose 英文文档）。
@@ -479,25 +470,25 @@ Story
 // 文件：./models/somemodel.js
 
 // Require Mongoose
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 // 定义一个模式
 const Schema = mongoose.Schema;
 
 const SomeModelSchema = new Schema({
-    a_string : String,
-    a_date   : Date
+  a_string: String,
+  a_date: Date,
 });
 
 // 导出函数来创建 "SomeModel" 模型类
-module.exports = mongoose.model('SomeModel', SomeModelSchema );
+module.exports = mongoose.model("SomeModel", SomeModelSchema);
 ```
 
 然后就可以在其他文件中，`require` 并使用该模型。下面是通过 `SomeModel` 模块来获取所有实例的方法。
 
 ```js
 // 通过 require 模块来创建 SomeModel 模型
-const SomeModel = require('../models/somemodel')
+const SomeModel = require("../models/somemodel");
 
 // 使用 SomeModel 对象（模型）来查找所有的 SomeModel 记录
 SomeModel.find(callback_function);
@@ -519,37 +510,37 @@ SomeModel.find(callback_function);
 
 1. 单击 _MongoDB Deployments_（MongoDB 部署）部分中的 **Create New（新建）**。![](mlabcreatenewdeployment.png)
 2. 将打开 Cloud Provider（云服务提供商）选择屏幕。
-    ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
+   ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
 
-    - 在 Plan Type（方案类型）部分中，选择 SANDBOX（Free）免费沙箱方案。
-    - 从 _Cloud Provider_（云服务提供商）部分选择任意提供商。不同地区适用不同提供商（显示在选定的计划类型下面）。
-    - 点击 **Continue（继续）**按钮。
+   - 在 Plan Type（方案类型）部分中，选择 SANDBOX（Free）免费沙箱方案。
+   - 从 _Cloud Provider_（云服务提供商）部分选择任意提供商。不同地区适用不同提供商（显示在选定的计划类型下面）。
+   - 点击 **Continue（继续）**按钮。
 
 3. 此时将打开 _Select Region_（选择区域）屏幕。
 
-    ![Select new region screen](mlab_new_deployment_select_region_v2.png)
+   ![Select new region screen](mlab_new_deployment_select_region_v2.png)
 
-    - 选择离你最近的地区，然后 **Continue**。
+   - 选择离你最近的地区，然后 **Continue**。
 
 4. 将打开 Final Details（最后的细节）屏幕。
-    ![New deployment database name](mlab_new_deployment_final_details.png)
+   ![New deployment database name](mlab_new_deployment_final_details.png)
 
-    - 输入新数据库的名称 `local_library`，然后 **Continue**。
+   - 输入新数据库的名称 `local_library`，然后 **Continue**。
 
 5. 将打开 _Order Confirmation_（订单确认）屏幕。
-    ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
+   ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
 
-    - 点击 **Submit Order（提交订单）**以创建数据库。
+   - 点击 **Submit Order（提交订单）**以创建数据库。
 
 6. 将返回到主屏幕。点击刚创建的新数据库可以打开详细信息屏幕。当前数据库还没有任何数据。
 
-    ![mLab - Database details screen](mlab_new_deployment_database_details.png)
+   ![mLab - Database details screen](mlab_new_deployment_database_details.png)
 
-    表单显示了访问数据库的 URL（上图的红框）。此时可以创建一个用户，并在 URL 中指定用户名，就可以访问这个 URL 了。
+   表单显示了访问数据库的 URL（上图的红框）。此时可以创建一个用户，并在 URL 中指定用户名，就可以访问这个 URL 了。
 
 7. 点击 **Users** 选项卡，点击 **Add database user** 按钮。
 8. 输入用户名和密码（两次），然后按 **Create**。不要选择 Make _read-only_。
-    ![](mlab_database_users.png)
+   ![](mlab_database_users.png)
 
 现在数据库已经创建好了，并且有一个可访问的 URL（带有用户名和密码）：`mongodb://<dbuser>:<dbpassword>@ds019038.mlab.com:19038/local_library`
 
@@ -567,12 +558,12 @@ npm install mongoose
 
 ```js
 // 设置 Mongoose 连接
-const mongoose = require('mongoose');
-const mongoDB = '在此插入数据库_URL';
-mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
+const mongoose = require("mongoose");
+const mongoDB = "在此插入数据库_URL";
+mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
 const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB 连接错误：'));
+db.on("error", console.error.bind(console, "MongoDB 连接错误："));
 ```
 
 如上文 [Mongoose 入门](#Mongoose_入门) 所讲，以上代码创建了与数据库的默认连接，并绑定了错误事件（错误信息将及时打印到控制台）。
@@ -595,42 +586,36 @@ db.on('error', console.error.bind(console, 'MongoDB 连接错误：'));
 将下方的 `Author` 模式代码复制粘贴至 **./models/author.js** 文件中。模式中定义了两个 `String` 模式类型来表示作者的姓氏和名字（这两个字段是必需的，且长度不能超过 100 字符），定义了两个 `Date` 字段做为作者的生卒日期。
 
 ```js
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const AuthorSchema = new Schema(
-  {
-    first_name: {type: String, required: true, max: 100},
-    family_name: {type: String, required: true, max: 100},
-    date_of_birth: {type: Date},
-    date_of_death: {type: Date},
-  }
-);
+const AuthorSchema = new Schema({
+  first_name: { type: String, required: true, max: 100 },
+  family_name: { type: String, required: true, max: 100 },
+  date_of_birth: { type: Date },
+  date_of_death: { type: Date },
+});
 
 // 虚拟属性'name'：表示作者全名
-AuthorSchema
-  .virtual('name')
-  .get(function () {
-    return this.family_name + ', ' + this.first_name;
-  });
+AuthorSchema.virtual("name").get(function () {
+  return this.family_name + ", " + this.first_name;
+});
 
 // 虚拟属性'lifespan'：作者寿命
-AuthorSchema
-  .virtual('lifespan')
-  .get(function () {
-    return (this.date_of_death.getYear() - this.date_of_birth.getYear()).toString();
-  });
+AuthorSchema.virtual("lifespan").get(function () {
+  return (
+    this.date_of_death.getYear() - this.date_of_birth.getYear()
+  ).toString();
+});
 
 // 虚拟属性'url'：作者 URL
-AuthorSchema
-  .virtual('url')
-  .get(function () {
-    return '/catalog/author/' + this._id;
-  });
+AuthorSchema.virtual("url").get(function () {
+  return "/catalog/author/" + this._id;
+});
 
 // 导出 Author 模型
-module.exports = mongoose.model('Author', AuthorSchema);
+module.exports = mongoose.model("Author", AuthorSchema);
 ```
 
 我们还为 `AuthorSchema` 声明了一个 "`url`" 虚拟属性，以返回模型特定实例的绝对 URL。在模板中需要获取特定作者的链接时可使用该属性。
@@ -645,27 +630,25 @@ module.exports = mongoose.model('Author', AuthorSchema);
 将下方的 `Book` 模式代码复制粘贴至 **./models/book.js** 文件中。大体结构与作者模型相似，有三个字符串字段，一个用于获取特定藏书记录 URL 的虚拟属性，代码最后对模型进行导出。
 
 ```js
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
 const BookSchema = new Schema({
-  title: {type: String, required: true},
-  author: {type: Schema.Types.ObjectId, ref: 'Author', required: true},
-  summary: {type: String, required: true},
-  isbn: {type: String, required: true},
-  genre: [{type: Schema.Types.ObjectId, ref: 'Genre'}]
+  title: { type: String, required: true },
+  author: { type: Schema.Types.ObjectId, ref: "Author", required: true },
+  summary: { type: String, required: true },
+  isbn: { type: String, required: true },
+  genre: [{ type: Schema.Types.ObjectId, ref: "Genre" }],
 });
 
 // 虚拟属性'url'：藏书 URL
-BookSchema
-  .virtual('url')
-  .get(function () {
-    return '/catalog/book/' + this._id;
-  });
+BookSchema.virtual("url").get(function () {
+  return "/catalog/book/" + this._id;
+});
 
 // 导出 Book 模块
-module.exports = mongoose.model('Book', BookSchema);
+module.exports = mongoose.model("Book", BookSchema);
 ```
 
 主要区别在于：此处有两个字段是对其他模型的引用（黑体字所示）：
@@ -678,34 +661,31 @@ module.exports = mongoose.model('Book', BookSchema);
 最后将 `BookInstance` 模式代码复制粘贴至 **./models/bookinstance.js** 文件中。 `BookInstance` 表示可供借阅的藏书的特定副本，其中包含该副本是否可用、还书期限，“出版批次”或版本详细信息。
 
 ```js
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
 const BookInstanceSchema = new Schema({
-    // 指向相关藏书的引用
-    book: { type: Schema.Types.ObjectId, ref: 'Book', required: true },
-    // 出版项
-    imprint: {type: String, required: true},
-    status: {
-      type: String,
-      required: true,
-      enum: ['Available', 'Maintenance', 'Loaned', 'Reserved'],
-      default: 'Maintenance'
-    },
-    due_back: {type: Date, default: Date.now}
-  }
-);
+  // 指向相关藏书的引用
+  book: { type: Schema.Types.ObjectId, ref: "Book", required: true },
+  // 出版项
+  imprint: { type: String, required: true },
+  status: {
+    type: String,
+    required: true,
+    enum: ["Available", "Maintenance", "Loaned", "Reserved"],
+    default: "Maintenance",
+  },
+  due_back: { type: Date, default: Date.now },
+});
 
 // 虚拟属性'url'：藏书副本 URL
-BookInstanceSchema
-  .virtual('url')
-  .get(function () {
-    return '/catalog/bookinstance/' + this._id;
-  });
+BookInstanceSchema.virtual("url").get(function () {
+  return "/catalog/bookinstance/" + this._id;
+});
 
 // 导出 BookInstancec 模型
-module.exports = mongoose.model('BookInstance', BookInstanceSchema);
+module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 ```
 
 以上代码有点儿新东西，即字段选项（黑体字）：
@@ -734,21 +714,21 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 
 1. 下载（或新建）文件 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)，保存在 express-locallibrary-tutorial 目录（`package.json` 所在位置） 。
 
-    > **备注：** 无需深究 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)，它只是为数据库添加一些示例数据。
-    >
-    > 译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”，请对[populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)源码酌情修改，否则会报错而添加数据失败。
+   > **备注：** 无需深究 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)，它只是为数据库添加一些示例数据。
+   >
+   > 译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”，请对[populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)源码酌情修改，否则会报错而添加数据失败。
 
 2. 在项目根目录运行以下命令，以安装脚本所需的异步模块（后续教程再展开讲）
 
-    ```bash
-    npm install async
-    ```
+   ```bash
+   npm install async
+   ```
 
 3. 在命令提示符下用 node 运行此脚本，并以 MongoDB 数据库的 URL 作为参数（同 `app.js` 中替换 `insert_your_database_url_here` 占位符的 URL）：
 
-    ```bash
-    node populatedb <mongodb url>
-    ```
+   ```bash
+   node populatedb <mongodb url>
+   ```
 
 4. 该脚本应一路运行至完成，并在终端中记录所创建的项目。
 

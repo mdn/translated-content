@@ -20,7 +20,7 @@ var readyPromise = Animation.ready;
 Un {{jsxref("Promise")}} que se resuelve cuando la animación esta lista para reproducirse. Por lo general, se usará una construcción similar a esta usando una promise lista:
 
 ```js
-animation.ready.then(function() {
+animation.ready.then(function () {
   // Hace lo que sea necesario cuando
   // la animación está lista para reproducirse
 });
@@ -32,7 +32,7 @@ En el siguiente ejemplo, el estado de la animación será `running(reproduciendo
 
 ```js
 animation.pause();
-animation.ready.then(function() {
+animation.ready.then(function () {
   // Displays 'running'
   alert(animation.playState);
 });

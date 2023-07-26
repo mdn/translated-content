@@ -1,5 +1,5 @@
 ---
-title: 'WebGL : graphismes 2D et 3D pour le Web'
+title: "WebGL : graphismes 2D et 3D pour le Web"
 slug: Web/API/WebGL_API
 l10n:
   sourceCommit: fff0462a1f0cdd479b62808e810e9fd030622c8e
