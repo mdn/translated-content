@@ -1,5 +1,5 @@
 ---
-title: '@charset'
+title: "@charset"
 slug: Web/CSS/@charset
 ---
 
@@ -39,10 +39,10 @@ Habiendo diferentes maneras de definir la codificación de caracteres en una hoj
 ## Ejemplos
 
 ```css
-@charset "UTF-8";       /* Establece la codificación de la hoja de estilos a Unicode UTF-8 */
+@charset "UTF-8"; /* Establece la codificación de la hoja de estilos a Unicode UTF-8 */
 @charset 'iso-8859-15'; /* Establece la codificación de la hoja de estilos a Latin-9 (idiomas de Europa Occidental, con símbolo de euro) */
- @charset "UTF-8";      /* Inválido, hay un caracter (espacio) antes de la regla-at */
-@charset UTF-8;         /* Inválido, sin comillas simples o dobles, el valor no es una cadena {{cssxref("&lt;string&gt;")}} de CSS */
+@charset "UTF-8"; /* Inválido, hay un caracter (espacio) antes de la regla-at */
+@charset UTF-8; /* Inválido, sin comillas simples o dobles, el valor no es una cadena {{cssxref("&lt;string&gt;")}} de CSS */
 ```
 
 ## Especificaciones

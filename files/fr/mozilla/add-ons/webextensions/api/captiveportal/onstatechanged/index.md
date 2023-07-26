@@ -11,9 +11,9 @@ S'allume lorsque l'état de portail captif change.
 ## Syntaxe
 
 ```js
-browser.captivePortal.onStateChanged.addListener(callback)
-browser.captivePortal.onStateChanged.removeListener(listener)
-browser.captivePortal.onStateChanged.hasListener(listener)
+browser.captivePortal.onStateChanged.addListener(callback);
+browser.captivePortal.onStateChanged.removeListener(listener);
+browser.captivePortal.onStateChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -45,7 +45,7 @@ function handlePortalStatus(portalstatusInfo) {
   console.log("The portal status is now: " + portalstatusInfo.details);
 }
 
-browser.captivePortal.onStateChanged.addListener(handlePortalStatus)
+browser.captivePortal.onStateChanged.addListener(handlePortalStatus);
 ```
 
 {{WebExtExamples}}

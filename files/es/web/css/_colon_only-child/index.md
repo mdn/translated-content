@@ -1,5 +1,5 @@
 ---
-title: ':only-child'
+title: ":only-child"
 slug: Web/CSS/:only-child
 ---
 
@@ -34,9 +34,11 @@ p:only-child {
   </div>
 
   <div>
-    <i>Yo tengo hermanos.</i><br>
-    <b>¡Yo también!</b><br>
-    <span>Yo también tengo hermanos, <span>pero este es un hijo único.</span></span>
+    <i>Yo tengo hermanos.</i><br />
+    <b>¡Yo también!</b><br />
+    <span
+      >Yo también tengo hermanos, <span>pero este es un hijo único.</span></span
+    >
   </div>
 </main>
 ```
@@ -59,19 +61,22 @@ main :only-child {
 
 ```html
 <ol>
-  <li>Primero
+  <li>
+    Primero
     <ul>
-      <li>Esta lista tiene solo un elemento.
+      <li>Esta lista tiene solo un elemento.</li>
     </ul>
   </li>
-  <li>Segundo
+  <li>
+    Segundo
     <ul>
-      <li>Esta lista tiene tres elementos.
-      <li>Esta lista tiene tres elementos.
-      <li>Esta lista tiene tres elementos.
+      <li>Esta lista tiene tres elementos.</li>
+      <li>Esta lista tiene tres elementos.</li>
+      <li>Esta lista tiene tres elementos.</li>
     </ul>
   </li>
-<ol>
+  <ol></ol>
+</ol>
 ```
 
 #### CSS

@@ -20,7 +20,7 @@ El `elementoPadre` es el padre del nodo actual. Esto es siempre un objecto {{dom
 
 ```js
 if (node.parentElement) {
-    node.parentElement.style.color = "red";
+  node.parentElement.style.color = "red";
 }
 ```
 

@@ -11,7 +11,7 @@ Renvoie le dernier jeu de feuilles de styles activé ; cette valeur de la propri
 ## Syntaxe
 
 ```js
-lastStyleSheetSet = document.lastStyleSheetSet
+lastStyleSheetSet = document.lastStyleSheetSet;
 ```
 
 En retour, `lastStyleSheetSet` indique le jeu de feuilles de styles qui a été défini le plus récemment. Si le jeu de feuilles de style en cours n'a pas été modifié en définissant {{ domxref("document.selectedStyleSheetSet") }}, la valeur retournée est `null`.

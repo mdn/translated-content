@@ -393,8 +393,8 @@ El siguiente es un ejemplo mucho mejor:
 
 ```html example-good
 <div>
-  <label for="combre">Entra tu nombre:</label>
-  <input type="text" id="combre" name="nombre" />
+  <label for="nombre">Entra tu nombre:</label>
+  <input type="text" id="nombre" name="nombre" />
 </div>
 ```
 

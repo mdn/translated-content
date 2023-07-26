@@ -1,5 +1,5 @@
 ---
-title: ':out-of-range'
+title: ":out-of-range"
 slug: Web/CSS/:out-of-range
 ---
 
@@ -29,9 +29,17 @@ Esta pseudo-clase es útil para dar al usuario una indicación visual de que el 
 
 ```html
 <form action="" id="form1">
-  <ul>Los valores entre 1 y 10 son válidos.
+  <ul>
+    Los valores entre 1 y 10 son válidos.
     <li>
-      <input id="value1" name="value1" type="number" placeholder="1 a 10" min="1" max="10" value="12">
+      <input
+        id="value1"
+        name="value1"
+        type="number"
+        placeholder="1 a 10"
+        min="1"
+        max="10"
+        value="12" />
       <label for="value1">Tu valor esta </label>
     </li>
   </ul>
@@ -60,11 +68,11 @@ input:out-of-range {
 }
 
 input:in-range + label::after {
-  content: 'bien.';
+  content: "bien.";
 }
 
 input:out-of-range + label::after {
-  content: '¡fuera de rango!';
+  content: "¡fuera de rango!";
 }
 ```
 

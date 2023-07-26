@@ -119,10 +119,7 @@ SVG にはこれまで説明したもの以外にも、いくつかの長所が�
 SVG に対応していないブラウザー（IE 8 以前、Android 2.3 以前）では、 `src` 属性から PNG または JPG を参照し、 [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性（最近のブラウザーのみが認識する）を使用して SVG を参照するようにすることができます。 この場合、対応しているブラウザーのみが SVG を読み込みます。古いブラウザーは代わりに PNG を読み込みます。
 
 ```html
-<img
-  src="equilateral.png"
-  alt="辺が等しい三角形"
-  srcset="equilateral.svg" />
+<img src="equilateral.png" alt="辺が等しい三角形" srcset="equilateral.svg" />
 ```
 
 以下に示すように、 SVG を CSS の背景画像として使用することもできます。 以下のコードでは、古いブラウザーでは理解できる PNG を使用しますが、新しいブラウザーでは SVG を読み込みます。
@@ -193,7 +190,8 @@ SVG 画像は、ウェブページのようにブラウザーで開くことが�
 
 <h2>編集可能なコード</h2>
 <p class="a11y-label">
-  Esc を押すとコード領域からフォーカスを移動させることができます（Tab はタブ文字を挿入します）。
+  Esc を押すとコード領域からフォーカスを移動させることができます（Tab
+  はタブ文字を挿入します）。
 </p>
 
 <textarea id="code" class="input" style="width: 95%;min-height: 200px;">
@@ -293,7 +291,7 @@ function insertAtCaret(text) {
   const front = textarea.value.substring(0, caretPos);
   const back = textarea.value.substring(
     textarea.selectionEnd,
-    textarea.value.length
+    textarea.value.length,
   );
 
   textarea.value = front + text + back;

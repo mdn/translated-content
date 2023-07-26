@@ -82,7 +82,7 @@ function replaceString(oldS, newS, fullS) {
 replaceString("World", "Web", "Brave New World");
 ```
 
-Attention : ceci peut résulter en une boucle infinie si `oldS` est elle-même une sous-chaine de `newS` -- par exemple, si on essaie de remplacer "World" par "OtherWorld". Une meilleure solution serait de remplacer les chaines de cette manière :
+Attention : ceci peut résulter en une boucle infinie si `oldS` est elle-même une sous-chaine de `newS` — par exemple, si on essaie de remplacer "World" par "OtherWorld". Une meilleure solution serait de remplacer les chaines de cette manière :
 
 ```js
 function replaceString(oldS, newS,fullS){

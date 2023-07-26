@@ -1,5 +1,5 @@
 ---
-title: ':invalid'
+title: ":invalid"
 slug: Web/CSS/:invalid
 ---
 
@@ -32,8 +32,10 @@ Este ejemplo presenta una forma simple que colorea los elementos en verde cuando
   <input type="url" id="url_input" />
   <br />
   <br />
-  <label for="email_input">Introduzca una dirección de correo electrónico:</label>
-  <input type="email" id="email_input" required/>
+  <label for="email_input"
+    >Introduzca una dirección de correo electrónico:</label
+  >
+  <input type="email" id="email_input" required />
 </form>
 ```
 
@@ -62,7 +64,7 @@ input:required {
 }
 
 input:required:invalid {
-  border-color: #C00000;
+  border-color: #c00000;
 }
 ```
 

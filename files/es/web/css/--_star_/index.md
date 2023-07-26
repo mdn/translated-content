@@ -1,5 +1,5 @@
 ---
-title: 'Propiedades personalizadas (--*): variables CSS'
+title: "Propiedades personalizadas (--*): variables CSS"
 slug: Web/CSS/--*
 ---
 
@@ -33,10 +33,16 @@ Las propiedades personalizadas tienen como alcance los elementos en los que se d
 ### HTML
 
 ```html
-<p id="firstParagraph">Este párrafo debe tener un fondo azul y un texto amarillo.</p>
-<p id="secondParagraph">Este párrafo debe tener un fondo amarillo y un texto azul.</p>
+<p id="firstParagraph">
+  Este párrafo debe tener un fondo azul y un texto amarillo.
+</p>
+<p id="secondParagraph">
+  Este párrafo debe tener un fondo amarillo y un texto azul.
+</p>
 <div id="container">
-  <p id="thirdParagraph">Este párrafo debe tener un fondo verde y un texto amarillo.</p>
+  <p id="thirdParagraph">
+    Este párrafo debe tener un fondo verde y un texto amarillo.
+  </p>
 </div>
 ```
 

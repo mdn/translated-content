@@ -90,7 +90,7 @@ Et est hérité pour les rôles&nbsp;:
 - [La pseudo-classe CSS `:optional`](/fr/docs/Web/CSS/:optional)
 - [La pseudo-classe CSS `:required`](/fr/docs/Web/CSS/:required)
 - [L'attribut `aria-invalid`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-- [Comprendre les règles WCAG, explications de la règle 3.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
+- [Comprendre les règles WCAG, explications de la règle 3.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_—_input_assistance_help_users_avoid_and_correct_mistakes)
 - [Comprendre les critères de succès 3.3.2 - Guide W3C pour la compréhension de WCAG 2.0 (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 
 <section id="Quick_links">

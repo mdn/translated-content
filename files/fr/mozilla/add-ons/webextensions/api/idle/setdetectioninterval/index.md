@@ -14,8 +14,8 @@ L'intervalle de détection est spécifique à l'extension qui appelle la méthod
 
 ```js
 browser.idle.setDetectionInterval(
-  intervalInSeconds // integer
-)
+  intervalInSeconds, // integer
+);
 ```
 
 ### Paramètres

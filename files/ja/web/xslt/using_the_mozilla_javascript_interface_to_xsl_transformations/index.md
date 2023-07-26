@@ -58,11 +58,14 @@ const newDocument = processor.transformToDocument(domToBeTransformed);
 
 {{domxref("XSLTProcessor.transformToFragment()")}} を使用することもでき、こちらは {{domxref("DocumentFragment")}} ノードを返します。フラグメントを別のノードに追加すると、そのフラグメントのすべての子が透過的に追加され、フラグメント自体はマージされないため、これは便利です。したがってフラグメントは、完全な文書オブジェクトのオーバーヘッドなしにノードを移動して格納するのに便利です。
 
- {{domxref("XSLTProcessor.transformToFragment()")}} は、変換するソース文書（上記）とフラグメントを所有する {{domxref("Document")}} オブジェクトの 2 つの引数をとります（すべてのフラグメントは文書が所有しなければなりません）。
+{{domxref("XSLTProcessor.transformToFragment()")}} は、変換するソース文書（上記）とフラグメントを所有する {{domxref("Document")}} オブジェクトの 2 つの引数をとります（すべてのフラグメントは文書が所有しなければなりません）。
 
 ```js
 const ownerDocument = document.implementation.createDocument("", "test", null);
-const newFragment = processor.transformToFragment(domToBeTransformed, ownerDocument);
+const newFragment = processor.transformToFragment(
+  domToBeTransformed,
+  ownerDocument,
+);
 ```
 
 {{domxref("XSLTProcessor.transformToFragment()")}} は、所有文書自体が {{domxref("HTMLDocument")}} の場合、またはスタイルシートの出力メソッドが HTML の場合、 HTML DOM オブジェクトを生成します。これは、 {{domxref("XSLTProcessor.transformToFragment()")}} がこの要素の作成に使用されることはほとんど**ない**ので、結果の最上位要素のみが {{HTMLElement("html")}} の場合、 HTML DOM オブジェクトを生成しません。これをオーバーライドする場合は、通常の方法で出力メソッドを通常どおりに設定できます。

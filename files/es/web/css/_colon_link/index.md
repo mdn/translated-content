@@ -1,5 +1,5 @@
 ---
-title: ':link'
+title: ":link"
 slug: Web/CSS/:link
 ---
 
@@ -29,8 +29,8 @@ Por defecto, la mayoría de los navegadores aplican un valor especial {{cssxref(
 ### HTML
 
 ```html
-<a href="#ordinary-target">Este es un enlace ordinario.</a><br>
-<a href="">Ya has visitado este enlace.</a><br>
+<a href="#ordinary-target">Este es un enlace ordinario.</a><br />
+<a href="">Ya has visitado este enlace.</a><br />
 <a>Enlace de marcador de posición (no se personalizará)</a>
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-outer-spin-button'
+title: "::-webkit-outer-spin-button"
 slug: Web/CSS/::-webkit-outer-spin-button
 ---
 
@@ -22,7 +22,7 @@ input::-webkit-outer-spin-button {
 ### Contenido HTML
 
 ```html
-<input type="number">
+<input type="number" />
 ```
 
 {{EmbedLiveSample("Ejemplo", 200, 30)}}

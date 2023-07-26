@@ -1,6 +1,9 @@
 ---
-title: Element.firstElementChild
+title: "Element: firstElementChild プロパティ"
+short-title: firstElementChild
 slug: Web/API/Element/firstElementChild
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{ APIRef("DOM") }}
@@ -10,28 +13,23 @@ slug: Web/API/Element/firstElementChild
 `Element.firstElementChild` は要素ノードのみを含みます。
 テキストやコメントノードなど、要素以外のノードを含むすべての子ノードを取得するには、 {{domxref("Node.firstChild")}} を使用してください。
 
-## 構文
+## 値
 
-```js
-// ゲッター
-element = el.firstElementChild;
-
-// セッターなし。読み取り専用プロパティ
-```
+{{domxref("Element")}} オブジェクト、または `null` です。
 
 ## 例
 
 ```html
 <ul id="list">
-  <li>First  (1)</li>
+  <li>First (1)</li>
   <li>Second (2)</li>
-  <li>Third  (3)</li>
+  <li>Third (3)</li>
 </ul>
 
 <script>
-const list = document.getElementById('list');
-console.log(list.firstElementChild.textContent);
-// logs "First (1)"
+  const list = document.getElementById("list");
+  console.log(list.firstElementChild.textContent);
+  // logs "First (1)"
 </script>
 ```
 

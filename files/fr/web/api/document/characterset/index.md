@@ -15,7 +15,7 @@ Les utilisateurs peuvent surcharger l'encodage indiqué pour le document (transm
 ## Syntaxe
 
 ```js
-var string = document.characterSet
+var string = document.characterSet;
 ```
 
 ## Exemples

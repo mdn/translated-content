@@ -48,8 +48,8 @@ Ceci est seulement un fragment de code simple utilisant la méthode `transform`.
 #### JavaScript
 
 ```js
-var canevas = document.getElementById('canevas');
-var ctx = canevas.getContext('2d');
+var canevas = document.getElementById("canevas");
+var ctx = canevas.getContext("2d");
 
 ctx.transform(1, 1, 0, 1, 0, 0);
 ctx.fillRect(0, 0, 100, 100);
@@ -67,7 +67,8 @@ Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct d
 </div>
 <textarea id="code" class="playable-code">
 ctx.transform(1,1,0,1,0,0);
-ctx.fillRect(0,0,100,100);</textarea>
+ctx.fillRect(0,0,100,100);</textarea
+>
 ```
 
 ```js hidden
@@ -85,15 +86,15 @@ function drawCanvas() {
   ctx.restore();
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   drawCanvas();
 });
 
-edit.addEventListener("click", function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);

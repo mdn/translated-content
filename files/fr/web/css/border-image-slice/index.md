@@ -175,4 +175,4 @@ sliceSlider.addEventListener('input', () => {
 
 ## Voir aussi
 
-- [Description illustrée de la syntaxe multi-valuée](/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_%c3%a9pineux)
+- [Description illustrée de la syntaxe multi-valuée](/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_épineux)

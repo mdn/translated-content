@@ -25,12 +25,12 @@ Retourne une {{jsxref("Les_protocoles_iteration", "itération")}} .
 ```js
 // Créer un objet FormData test
 var formData = new FormData();
-formData.append('cle1', 'valeur1');
-formData.append('cle2', 'valeur2');
+formData.append("cle1", "valeur1");
+formData.append("cle2", "valeur2");
 
 // Affiche les valeurs
 for (var value of formData.values()) {
-   console.log(value);
+  console.log(value);
 }
 ```
 

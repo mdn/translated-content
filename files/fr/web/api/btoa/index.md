@@ -30,7 +30,7 @@ Une chaîne contenant la représentation Base64 de la `chaineAEncoder`.
 ## Exemple
 
 ```js
-var donneesEncodees = window.btoa('Salut, monde'); // encode une chaîne
+var donneesEncodees = window.btoa("Salut, monde"); // encode une chaîne
 var donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
 ```
 
@@ -56,14 +56,14 @@ function aenu(chn) {
   return decodeURIComponent(escape(window.atob(chn)));
 }
 // Usage :
-uena('✓ à la mode'); // 4pyTIMOgIGxhIG1vZGU=
-aenu('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
+uena("✓ à la mode"); // 4pyTIMOgIGxhIG1vZGU=
+aenu("4pyTIMOgIGxhIG1vZGU="); // "✓ à la mode"
 
-uena('I \u2661 Unicode!'); // SSDimaEgVW5pY29kZSE=
-aenu('SSDimaEgVW5pY29kZSE='); // "I ♡ Unicode!"
+uena("I \u2661 Unicode!"); // SSDimaEgVW5pY29kZSE=
+aenu("SSDimaEgVW5pY29kZSE="); // "I ♡ Unicode!"
 ```
 
-Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des tableaux typés pour faire la conversion](/fr/docs/D%C3%A9coder_encoder_en_base64).
+Une solution meilleure, plus fiable et moins coûteuse consiste à [utiliser des tableaux typés pour faire la conversion](/fr/docs/Décoder_encoder_en_base64).
 
 ## Spécifications
 

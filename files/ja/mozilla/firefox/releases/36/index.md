@@ -127,7 +127,7 @@ _変更なし。_
   ```js
   var { require } = Cu.import(
     "resource://gre/modules/commonjs/toolkit/require.js",
-    {}
+    {},
   );
   ```
 
@@ -138,7 +138,7 @@ _変更なし。_
 ### JavaScript コードモジュール
 
 - `PromiseUtils.resolveOrTimeout` を実装しました ([Firefox バグ 1080466](https://bugzil.la/1080466))。
-- [PromiseUtils.defer](<https://contest-server.cs.uchicago.edu/ref/JavaScript/developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/PromiseUtils.html#defer()>) (`Promise.defer()` を置き換えるもの) を実装しました ([Firefox バグ 1093021](https://bugzil.la/1093021))。
+- `PromiseUtils.defer` (`Promise.defer()` を置き換えるもの) を実装しました ([Firefox バグ 1093021](https://bugzil.la/1093021))。
 
 ### インターフェイス
 
