@@ -1,5 +1,5 @@
 ---
-title: 의사-클래스 and 의사-요소들
+title: 의사 클래스와 의사 요소
 slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
