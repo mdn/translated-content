@@ -174,7 +174,7 @@
 | Fulfilled               | 이행(함)        |               |                                                                                          |
 | Handler                 | 처리기          | 이벤트 처리기 |                                                                                          |
 | Interface               | 인터페이스      |               |                                                                                          |
-| Iterate                 | 순회            |               |                                                                                          |
+| Iterate                 | 반복            |               |                                                                                          |
 | Listener                | 수신기          | 이벤트 수신기 |                                                                                          |
 | Mixin                   | 믹스인          |               |                                                                                          |
 | Non-blocking operation  | 논블로킹 연산   |               |                                                                                          |
