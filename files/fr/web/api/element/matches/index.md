@@ -73,7 +73,7 @@ Cependant, étant donné la possibilité de prendre en charge les anciens naviga
 
 ```js
 if (!Element.prototype.matches) {
-    Element.prototype.matches = Element.prototype.msMatchesSelector;
+  Element.prototype.matches = Element.prototype.msMatchesSelector;
 }
 ```
 

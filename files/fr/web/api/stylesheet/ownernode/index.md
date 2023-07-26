@@ -22,7 +22,7 @@ objref = stylesheet.ownerNode;
     <link rel="stylesheet" href="example.css" type="text/css" />
     <script>
       function stilo() {
-       alert(document.styleSheets[0].ownerNode);
+        alert(document.styleSheets[0].ownerNode);
       }
     </script>
   </head>
