@@ -28,16 +28,15 @@ var value = event.charCode;
     <title>Exemple charCode</title>
 
     <script type="text/javascript">
-
-      function AfficherCaractere(e)
-      {
+      function AfficherCaractere(e) {
         alert(
-                "Touche tapée : " +
-                String.fromCharCode(e.charCode) + "\n" +
-                "charCode: " + e.charCode
+          "Touche tapée : " +
+            String.fromCharCode(e.charCode) +
+            "\n" +
+            "charCode: " +
+            e.charCode,
         );
       }
-
     </script>
   </head>
 
