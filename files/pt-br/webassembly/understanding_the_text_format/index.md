@@ -106,7 +106,7 @@ E então poderia escrever `local.get $p1` em vez de `local.get 0`, etc. (Observe
 
 Antes de podermos escrever um corpo de função, temos que falar sobre mais uma coisa: **máquinas de pilha**. Embora o navegador o compile para algo mais eficiente, a execução do Wasm é definida em termos de uma máquina de pilha onde a ideia básica é que todo tipo de instrução empurra e/ou retira um certo número de valores `i32`/`i64`/`f32`/`f64` para/de uma pilha.
 
-Por exemplo, `local.get` é definido para colocar o valor do local lido na pilha e `i32.add` empurra dois valores `i32` (ele implicitamente pega os dois valores anteriores colocados na pilha), calcula sua soma (modulo 2^32) e empurra o valor `i32` resultante.
+Por exemplo, `local.get` é definido para colocar o valor do local lido na pilha e `i32.add` empurra dois valores `i32` (ele implicitamente pega os dois valores anteriores colocados na pilha), calcula sua soma (módulo 2^32) e empurra o valor `i32` resultante.
 
 Quando uma função é chamada, ela começa com uma pilha vazia que é gradualmente preenchida e esvaziada conforme as instruções do corpo são executadas. Por exemplo, depois de executar a seguinte função:
 
