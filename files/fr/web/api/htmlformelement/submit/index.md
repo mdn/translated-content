@@ -18,7 +18,7 @@ Si un contrôle de formulaire (tel qu'un submit bouton ) a un `name` ou un `id` 
 ## Syntaxe
 
 ```js
-HTMLFormElement.submit()
+HTMLFormElement.submit();
 ```
 
 ## Exemple

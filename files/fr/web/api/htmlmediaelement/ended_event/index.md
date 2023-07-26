@@ -1,5 +1,5 @@
 ---
-title: 'HTMLMediaElement: ended'
+title: "HTMLMediaElement: ended"
 slug: Web/API/HTMLMediaElement/ended_event
 translation_of: Web/API/HTMLMediaElement/ended_event
 ---
@@ -35,12 +35,12 @@ L'événement se produit dans deux contextes liés mais unique:
 
 ## Propriétés
 
-| Property                              | Type                                 | Description                                            |
-| ------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| Property                        | Type                       | Description                                            |
+| ------------------------------- | -------------------------- | ------------------------------------------------------ |
 | `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}     | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}         | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}         | Whether the event is cancellable or not.               |
+| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
+| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
+| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
 
 ## Evénements liés
 
