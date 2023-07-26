@@ -103,7 +103,7 @@ html {
 4. Теперь вы можете использовать эти шрифты в ваших стеках шрифтов, как и любой веб-безопасный или по умолчанию системный шрифт. Например:
 
 ```css
-font-family: 'zantrokeregular', serif;
+font-family: "zantrokeregular", serif;
 ```
 
 Вы должны получить демо-страницу с какими-то реализованными симпатичными шрифтами. Поскольку различные шрифты создаются в разных размерах, вам может понадобиться настроить размер, интервалы и т.д., чтобы отладить внешний вид.
@@ -133,13 +133,14 @@ font-family: 'zantrokeregular', serif;
 
 ```css
 @font-face {
-  font-family: 'ciclefina';
-  src: url('fonts/cicle_fina-webfont.eot');
-  src: url('fonts/cicle_fina-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/cicle_fina-webfont.woff2') format('woff2'),
-         url('fonts/cicle_fina-webfont.woff') format('woff'),
-         url('fonts/cicle_fina-webfont.ttf') format('truetype'),
-         url('fonts/cicle_fina-webfont.svg#ciclefina') format('svg');
+  font-family: "ciclefina";
+  src: url("fonts/cicle_fina-webfont.eot");
+  src:
+    url("fonts/cicle_fina-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/cicle_fina-webfont.woff2") format("woff2"),
+    url("fonts/cicle_fina-webfont.woff") format("woff"),
+    url("fonts/cicle_fina-webfont.ttf") format("truetype"),
+    url("fonts/cicle_fina-webfont.svg#ciclefina") format("svg");
   font-weight: normal;
   font-style: normal;
 }
