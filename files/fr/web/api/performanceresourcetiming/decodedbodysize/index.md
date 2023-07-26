@@ -25,7 +25,7 @@ La taille (en octets) reçue de l'extraction (HTTP ou cache) du corps du message
 Dans l'exemple suivant, la valeur des propriétés de taille de tous les événements de [type](/fr/docs/Web/API/PerformanceEntry/entryType) `"resource"` est enregistrée.
 
 ```js
-function log_sizes(perfEntry){
+function log_sizes(perfEntry) {
   // Vérifie la prise en charge des propriétés *size et imprime leurs
   // valeurs si elles sont prises en charge.
   if ("decodedBodySize" in perfEntry) {

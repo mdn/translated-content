@@ -65,10 +65,8 @@ function check_PerformanceEntry(obj) {
   for (let i = 0; i < properties.length; i++) {
     // On vérifie chaque propriété
     let supported = properties[i] in obj;
-    if (supported)
-      log("..." + properties[i] + " = " + obj[properties[i]]);
-    else
-      log("..." + properties[i] + " = N'est pas pris en charge");
+    if (supported) log("..." + properties[i] + " = " + obj[properties[i]]);
+    else log("..." + properties[i] + " = N'est pas pris en charge");
   }
   for (let i = 0; i < methods.length; i++) {
     // On vérifie chaque méthode
