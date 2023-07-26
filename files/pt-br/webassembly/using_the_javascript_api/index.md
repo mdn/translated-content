@@ -125,7 +125,7 @@ Se um valor máximo foi fornecido na criação da instância de memória, as ten
 
 Nota: Como o byteLength de um {{jsxref("ArrayBuffer")}} é imutável, após um [`Memory.prototype.grow()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Memory/grow) bem-sucedido operação, o buffer getter retornará um novo objeto ArrayBuffer (com o novo byteLength) e quaisquer objetos ArrayBuffer anteriores serão "desconectados" ou desconectados da memória subjacente para a qual apontaram anteriormente.
 
-Assim como as funções, as memórias lineares podem ser definidas dentro de um módulo ou importadas. Da mesma forma, um módulo também pode, opcionalmente, exportar sua memória. Isso significa que o JavaScript pode obter acesso à memória de uma instância do WebAssembly criando um novo `WebAssembly.Memory` e transmitindo-o como uma importação ou recebendo uma exportação de memória (através de [`Instance.prototype.exports`](/ en-US/docs/WebAssembly/JavaScript_interface/Instance/exports)).
+Assim como as funções, as memórias lineares podem ser definidas dentro de um módulo ou importadas. Da mesma forma, um módulo também pode, opcionalmente, exportar sua memória. Isso significa que o JavaScript pode obter acesso à memória de uma instância do WebAssembly criando um novo `WebAssembly.Memory` e transmitindo-o como uma importação ou recebendo uma exportação de memória (através de [`Instance.prototype.exports`](/pt-BR/docs/WebAssembly/JavaScript_interface/Instance/exports)).
 
 ### Exemplo de memória mais envolvida
 
