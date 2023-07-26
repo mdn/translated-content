@@ -11,7 +11,7 @@ La propriété en lecture seule **`silent`** de l'interface {{domxref ("Notifica
 ## Syntaxe
 
 ```js
-Notification.silent
+Notification.silent;
 ```
 
 ### Valeur
