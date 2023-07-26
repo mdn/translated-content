@@ -91,9 +91,8 @@ Un paragraphe de texte qui contient `<code>` :
 
 ```html
 <p>
-  La fonction <code>selectAll()</code> met en évidence tout le texte
-  du champ de saisie afin que l'utilisateur puisse, par exemple, le
-  copier ou le supprimer.
+  La fonction <code>selectAll()</code> met en évidence tout le texte du champ de
+  saisie afin que l'utilisateur puisse, par exemple, le copier ou le supprimer.
 </p>
 ```
 

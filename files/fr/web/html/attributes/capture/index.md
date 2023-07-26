@@ -24,15 +24,15 @@ Lorsqu'ils sont définis sur un type d'entrée de fichier, les systèmes d'explo
 ```html
 <p>
   <label for="soundFile">Quel est le son de votre voix ?</label>
-  <input type="file" id="soundFile" capture="user" accept="audio/*">
+  <input type="file" id="soundFile" capture="user" accept="audio/*" />
 </p>
 <p>
   <label for="videoFile">Téléchargez une vidéo :</label>
-  <input type="file" id="videoFile" capture="environment" accept="video/*">
+  <input type="file" id="videoFile" capture="environment" accept="video/*" />
 </p>
 <p>
   <label for="imageFile">Téléchargez une photo de vous :</label>
-  <input type="file" id="imageFile" capture="user" accept="image/*">
+  <input type="file" id="imageFile" capture="user" accept="image/*" />
 </p>
 ```
 

@@ -13,7 +13,7 @@ L'attribut **`elementtiming`** est utilisé pour indiquer qu'un élément est ma
 La valeur donnée pour `elementtiming` devient un identifiant pour l'élément observé.
 
 ```html
-<img alt="alt" src="img.jpg" elementtiming="étiquette pour l'élément">
+<img alt="alt" src="img.jpg" elementtiming="étiquette pour l'élément" />
 ```
 
 De bons candidats pour les éléments que vous pourriez vouloir observer sont :
