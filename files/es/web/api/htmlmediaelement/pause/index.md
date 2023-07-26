@@ -2,6 +2,7 @@
 title: HTMLMediaElement.pause()
 slug: Web/API/HTMLMediaElement/pause
 ---
+
 {{APIRef("HTML DOM")}}
 
 El método **`HTMLMediaElement.pause()`** pausará la reproducción de los medios, si los medios ya están en pausa, este método no tendrá efecto.
@@ -28,6 +29,6 @@ Ninguno.
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.HTMLMediaElement.pause")}}
+{{Compat}}

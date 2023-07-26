@@ -1,13 +1,6 @@
 ---
 title: OU exclusif binaire (^)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
-tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.bitwise_xor
 ---
 
 {{jsSidebar("Operators")}}

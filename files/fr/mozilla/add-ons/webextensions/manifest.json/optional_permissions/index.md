@@ -1,11 +1,6 @@
 ---
 title: optional_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
-tags:
-  - Add-ons
-  - WebExtensions
-  - manifest.json
-  - optional_permissions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
 ---
 
@@ -102,6 +97,6 @@ Activez l'extension pour demander l'accès aux éléments privilégiés de l'API
 
 Activez l'extension pour demander les deux permissions ci-dessus.
 
-## Comptabilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.optional_permissions")}}
+{{Compat}}

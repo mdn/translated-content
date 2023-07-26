@@ -1,9 +1,6 @@
 ---
 title: FormData.entries()
 slug: Web/API/FormData/entries
-page-type: web-api-instance-method
-browser-compat: api.FormData.entries
-translation_of: Web/API/FormData/entries
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -43,11 +40,11 @@ key1, value1
 key2, value2
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

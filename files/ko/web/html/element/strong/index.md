@@ -1,17 +1,8 @@
 ---
 title: '<strong>: 높은 중요도 요소'
 slug: Web/HTML/Element/strong
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/strong
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<strong>` 요소**는 중대하거나 긴급한 콘텐츠를 나타냅니다. 보통 브라우저는 굵은 글씨로 표시합니다.
@@ -120,7 +111,7 @@ While `<em>` is used to change the meaning of a sentence as spoken emphasis does
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.strong")}}
+{{Compat}}
 
 ## 같이 보기
 

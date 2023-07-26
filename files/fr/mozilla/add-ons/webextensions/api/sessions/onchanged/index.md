@@ -1,16 +1,6 @@
 ---
 title: sessions.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onChanged
-  - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
 ---
 
@@ -21,9 +11,9 @@ Mise en place lorsque une liste d'onglets fermes ou de fenêtre changes.
 ## Syntaxe
 
 ```js
-browser.sessions.onChanged.addListener(listener)
-browser.sessions.onChanged.removeListener(listener)
-browser.sessions.onChanged.hasListener(listener)
+browser.sessions.onChanged.addListener(listener);
+browser.sessions.onChanged.removeListener(listener);
+browser.sessions.onChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -42,9 +32,9 @@ Les événements ont trois fonctions :
 - `callback`
   - : Fonction qui sera appelée lors de l'événement. Il ne passe aucun paramètre.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.onChanged")}}
+{{Compat}}
 
 ## Exemples
 
@@ -53,7 +43,7 @@ Cette extension écoute `onChanged`, puis restaure immédiatement la dernière s
 ```js
 function restoreSession(sessionInfos) {
   if (!sessionInfos.length) {
-    console.log("No sessions found")
+    console.log("No sessions found");
     return;
   }
   let sessionInfo = sessionInfos[0];
@@ -70,7 +60,7 @@ function onError(error) {
 
 function restoreMostRecent() {
   var gettingSessions = browser.sessions.getRecentlyClosed({
-    maxResults: 1
+    maxResults: 1,
   });
   gettingSessions.then(restoreSession, onError);
 }

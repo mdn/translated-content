@@ -15,9 +15,9 @@ El [atributo global](/es/docs/Web/HTML/Atributos_Globales) **translate** es un a
 
 {{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.translate")}}
+{{Compat}}
 
 ## Ver también
 

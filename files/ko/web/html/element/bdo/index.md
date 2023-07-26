@@ -1,14 +1,6 @@
 ---
 title: '<bdo>: 양방향 텍스트 재정의 요소'
 slug: Web/HTML/Element/bdo
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - 쓰기 방향
-translation_of: Web/HTML/Element/bdo
 ---
 
 {{HTMLSidebar}}
@@ -103,4 +95,4 @@ translation_of: Web/HTML/Element/bdo
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.bdo")}}
+{{Compat}}

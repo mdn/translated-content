@@ -1,13 +1,8 @@
 ---
 title: dir
 slug: Web/HTML/Global_attributes/dir
-tags:
-  - BiDi
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/dir
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`dir`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소의 쓰기 방향을 나타내는 열거형 특성입니다.
@@ -35,7 +30,7 @@ translation_of: Web/HTML/Global_attributes/dir
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.dir")}}
+{{Compat}}
 
 ## 같이 보기
 

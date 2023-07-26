@@ -1,11 +1,6 @@
 ---
 title: '-webkit-mask-position-y'
 slug: Web/CSS/-webkit-mask-position-y
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-mask-position-y
 ---
 
@@ -79,7 +74,7 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-mask-position-y")}}
+{{Compat}}
 
 ## Voir aussi
 

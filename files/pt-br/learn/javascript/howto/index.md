@@ -39,8 +39,8 @@ Um dos erros mais comuns é declarar a função, mas não chama-la em lugar nenh
 
 ```js
 function myFunction() {
-  alert('This is my function.');
-};
+  alert("This is my function.");
+}
 ```
 
 Este código não fará nada a menos que você o chame, por exemplo com
@@ -51,7 +51,7 @@ myFunction();
 
 #### Escopo da função
 
-Lembre-se que [funções tem seu próprio escopo](/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts) — você não pode acessar um conjunto de valores de variáveis ​​dentro de uma função fora da função, a não ser que você tenha declarado a variável globalmente (i.e. não dentro de nenhuma função), ou retorne o valor or [retorne o valor](/pt-BR/docs/Learn/JavaScript/Building_blocks/Return_values) fora da função
+Lembre-se que [funções tem seu próprio escopo](/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions#Function_scope_and_conflicts) — você não pode acessar um conjunto de valores de variáveis dentro de uma função fora da função, a não ser que você tenha declarado a variável globalmente (i.e. não dentro de nenhuma função), ou retorne o valor or [retorne o valor](/pt-BR/docs/Learn/JavaScript/Building_blocks/Return_values) fora da função
 
 #### Executar o código antes de uma declaração de retorno
 
@@ -71,9 +71,9 @@ This doesn't work in [Objects](/pt-BR/docs/Learn/JavaScript/Objects), however �
 
 ```js
 var myObject = {
-  name : 'Chris',
-  age : 38
-}
+  name: "Chris",
+  age: 38,
+};
 ```
 
 ## Definições básicas

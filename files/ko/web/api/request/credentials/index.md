@@ -1,17 +1,6 @@
 ---
 title: Request.credentials
 slug: Web/API/Request/credentials
-tags:
-  - API
-  - Cookies
-  - Fetch
-  - Networking
-  - Property
-  - Reference
-  - Security
-  - credentials
-  - request
-translation_of: Web/API/Request/credentials
 ---
 
 {{APIRef("Fetch")}}
@@ -41,11 +30,11 @@ var myRequest = new Request('flowers.jpg');
 var myCred = myRequest.credentials; // returns "same-origin" by default
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -1,7 +1,6 @@
 ---
 title: Navigator.share
 slug: Web/API/Navigator/share
-translation_of: Web/API/Navigator/share
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
@@ -38,10 +37,10 @@ navigator.share({
 }); // share the URL of MDN
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

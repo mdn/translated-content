@@ -9,6 +9,8 @@ O elemento `svg` é um contêiner que define um novo sistema de coordenadas e [j
 
 > **Nota:** The `xmlns` attribute is only required on the outermost `svg` element of _SVG documents_. It is unnecessary for inner `svg` elements or inside HTML documents.
 
+## Exemplo
+
 ```css hidden
 html,body,svg { height:100% }
 ```
@@ -24,17 +26,17 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Exeemple', 150, '100%')}}
+{{EmbedLiveSample('Exemplo', 300, 100)}}
 
 ## Attributes
 
-- {{SVGAttr("baseProfile")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("baseProfile")}} {{deprecated_inline}}
   - : The minimum SVG language profile that the document requires.
     _Value type_: **\<string>** ; _Default value_: none; _Animatable_: **no**
-- {{SVGAttr("contentScriptType")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("contentScriptType")}} {{deprecated_inline}}
   - : The default scripting language used by the SVG fragment.
     _Value type_: **\<string>** ; _Default value_: `application/ecmascript`; _Animatable_: **no**
-- {{SVGAttr("contentStyleType")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("contentStyleType")}} {{deprecated_inline}}
   - : The default style sheet language used by the SVG fragment.
     _Value type_: **\<string>** ; _Default value_: `text/css`; _Animatable_: **no**
 - {{SVGAttr("height")}}
@@ -43,7 +45,7 @@ html,body,svg { height:100% }
 - {{SVGAttr("preserveAspectRatio")}}
   - : How the `svg` fragment must be deformed if it is displayed with a different aspect ratio.
     _Value type_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Default value_: `xMidYMid meet`; _Animatable_: **yes**
-- {{SVGAttr("version")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("version")}} {{deprecated_inline}}
   - : Which version of SVG is used for the inner content of the element.
     _Value type_: **[\<number>](/pt-BR/docs/Web/SVG/Content_type#Number)** ; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("viewBox")}}

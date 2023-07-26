@@ -1,17 +1,6 @@
 ---
 title: downloads.search()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/search
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Recherche
-  - Reference
-  - Search
-  - WebExtensions
-  - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/search
 ---
 
@@ -36,9 +25,9 @@ var searching = browser.downloads.search(query);
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). La promise est remplie avec un `tableau d'objets` `{{WebExtAPIRef('downloads.DownloadItem')}}` qui correspondent aux critères donnés.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.search")}}
+{{Compat}}
 
 ## Exemples
 
@@ -59,7 +48,7 @@ function onError(error) {
 }
 
 var searching = browser.downloads.search({
-  query:["imgur"]
+  query: ["imgur"],
 });
 
 searching.then(logDownloads, onError);
@@ -83,7 +72,7 @@ function onError(error) {
 
 var id = 13;
 
-var searching = browser.downloads.search({id});
+var searching = browser.downloads.search({ id });
 searching.then(logDownloads, onError);
 ```
 
@@ -124,8 +113,8 @@ function onError(error) {
 }
 
 var searching = browser.downloads.search({
-   limit: 1,
-   orderBy: ["-startTime"]
+  limit: 1,
+  orderBy: ["-startTime"],
 });
 searching.then(logDownloads, onError);
 ```

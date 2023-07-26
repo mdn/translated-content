@@ -20,7 +20,6 @@ Ajax позволяет обновлять части {{Glossary("DOM")}} {{Glos
 
   - {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}
 
-- {{interwiki("wikipedia", "AJAX")}} на Wikipedia
 - [Ajax](/ru/docs/Web/Guide/AJAX)
 - [Ajax - начало работы](/ru/docs/Web/Guide/AJAX/Getting_Started)
 - {{DOMxRef("XMLHttpRequest")}}

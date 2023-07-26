@@ -46,7 +46,7 @@ Un objeto que implementa `FormData` puede usarse directamente en una estructura 
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.FormData")}}
+{{Compat}}
 
 ## Ver también
 

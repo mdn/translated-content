@@ -1,9 +1,7 @@
 ---
 title: Consola
-slug: Web/API/Console
+slug: Web/API/console
 original_slug: Web/API/Console
-l10n:
-  sourceCommit: 71aac3e50b8bc5afea791d69d232dab98e1c5c0d
 ---
 
 {{APIRef("Console API")}}
@@ -13,7 +11,7 @@ El objeto **`console`** provee acceso a la consola de depuración de los navegad
 El objeto `console` puede ser accedido desde cualquier objeto global. {{domxref("Window")}} en el ámbito de navegación y {{domxref("WorkerGlobalScope")}} como variantes específicas de `workers` a través de la propiedad `console`. Está expuesto como {{domxref("Window.console")}}, y puede ser referenciado como `console`. Por ejemplo:
 
 ```js
-console.log("Falló al abrir el enlace especificado")
+console.log("Falló al abrir el enlace especificado");
 ```
 
 Esta página documenta los [Métodos](#métodos) disponibles en el objeto `console` y da algunos ejemplos de [uso](#ejemplos).
@@ -63,23 +61,23 @@ Esta página documenta los [Métodos](#métodos) disponibles en el objeto `conso
 - {{domxref("console.timeLog()")}}
   - : Muestra el valor del [temporizador](#temporizadores) especificado en la consola.
 - {{domxref("console.timeStamp()")}} {{Non-standard_inline}}
-  - : Agrega un marcador a las herramientas del navegador [Timeline](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) o [Waterfall](https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html).
+  - : Agrega un marcador a las herramientas del navegador [Chrome](https://developer.chrome.com/docs/devtools/evaluate-performance/reference/) o [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline).
 - {{domxref("console.trace()")}}
   - : Muestra una [traza de pila](#trazas_de_pila).
 - {{domxref("console.warn()")}}
-  - : Muestra un mensaje de advertencia.Puedes usar [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y argumentos adicionales con este método.
+  - : Muestra un mensaje de advertencia. Puedes usar [sustituciones de cadenas](#usando_sustituciones_de_cadenas) y argumentos adicionales con este método.
 
 ## Ejemplos
 
 ### Enviar texto a la consola
 
-La característica mas utilizada de la consola es la de mostrar texto y otros datos. Existen varias categorías de salida que se pueden generar, utilizando los métodos {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}} o {{domxref("console.debug()")}}. Cada uno de estos muestran resultados que lucen diferente en el registro y se pueden utilizar los controles de filtro proveídos por el navegador para ver únicamente los tipos de salida de interés.
+La característica más utilizada de la consola es la de mostrar texto y otros datos. Existen varias categorías de salida que se pueden generar, utilizando los métodos {{domxref("console.log()")}}, {{domxref("console.info()")}}, {{domxref("console.warn()")}}, {{domxref("console.error()")}} o {{domxref("console.debug()")}}. Cada uno de estos muestran resultados que lucen diferente en el registro y se pueden utilizar los controles de filtro proveídos por el navegador para ver únicamente los tipos de salida de interés.
 
-Hay dos maneras de usar cada uno de los métodos de salida; se puede ingresar una lista de objetos cuyas representaciones en cadena serán concatenadas en un único `string`, el cual se mostrará en la consola, o se puede ingresar una lista que contenga cero o mas sustituciones de cadena seguida por una lista de objetos con los cuales reemplazarlas.
+Hay dos maneras de usar cada uno de los métodos de salida; se puede ingresar una lista de objetos cuyas representaciones en cadena serán concatenadas en un único `string`, el cual se mostrará en la consola, o se puede ingresar una lista que contenga cero o más sustituciones de cadena seguida por una lista de objetos con los cuales reemplazarlas.
 
 #### Mostrando un solo objeto
 
-La manera mas simple de utilizar los métodos de registro es mostrar un solo objeto:
+La manera más simple de utilizar los métodos de registro es mostrar un solo objeto:
 
 ```js
 var someObject = { str: "Algún texto", id: 5 };
@@ -126,8 +124,8 @@ Cuando se pasa una cadena a uno de los métodos del objeto `console` que la acep
 Cada uno de ellos trae el siguiente argumento posterior a la cadena de la lista de parámetros. Por ejemplo:
 
 ```js
-for (let i=0; i<5; i++) {
-  console.log("Hola, %s. Me has llamado %d veces.", "Bob", i+1);
+for (let i = 0; i < 5; i++) {
+  console.log("Hola, %s. Me has llamado %d veces.", "Bob", i + 1);
 }
 ```
 
@@ -146,7 +144,10 @@ La salida se verá parecido a esto:
 Puedes usar la directiva `%c` para aplicar un estilo CSS a la salida de la consola:
 
 ```js
-console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+console.log(
+  "This is %cMy stylish message",
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px",
+);
 ```
 
 El texto previo a la directiva no se verá afectado, pero el texto posterior a la directiva será estilizado usando las declaraciones CSS en el parámetro.
@@ -156,7 +157,12 @@ El texto previo a la directiva no se verá afectado, pero el texto posterior a l
 Puedes usar `%c` varias veces:
 
 ```js
-console.log("Varios estilos: %crojo %cnaranja", "color: red", "color: orange", "Mensaje adicional sin estilo");
+console.log(
+  "Varios estilos: %crojo %cnaranja",
+  "color: red",
+  "color: orange",
+  "Mensaje adicional sin estilo",
+);
 ```
 
 Las propiedadas utilizables junto con la directiva `%c` son las siguientes (al menos, en Firefox - pueden variar en otros navegadores):

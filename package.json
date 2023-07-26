@@ -15,21 +15,21 @@
   },
   "scripts": {
     "fix:json": "prettier -w \"**/*.json\"",
-    "fix:md": "markdownlint-cli2-fix \"**/*.md\"",
+    "fix:md": "markdownlint-cli2-fix \"**/*.md\" && prettier -w \"**/*.md\"",
     "fix:yml": "prettier -w \"**/*.yml\"",
     "lint:json": "prettier -c \"**/*.json\"",
-    "lint:md": "markdownlint-cli2 \"**/*.md\"",
+    "lint:md": "markdownlint-cli2 \"**/*.md\" && prettier -c \"**/*.md\"",
     "lint:yml": "prettier -c \"**/*.yml\"",
     "prepare": "husky install"
   },
   "engines": {
-    "node": "^16.0.0 || >=18.0.0"
+    "node": ">=18.0.0"
   },
   "dependencies": {
-    "husky": "8.0.2",
-    "lint-staged": "13.1.0",
-    "markdownlint-cli2": "0.5.1",
-    "markdownlint-rule-search-replace": "1.0.5",
-    "prettier": "2.8.1"
+    "husky": "8.0.3",
+    "lint-staged": "13.2.3",
+    "markdownlint-cli2": "0.8.1",
+    "markdownlint-rule-search-replace": "1.1.0",
+    "prettier": "3.0.0"
   }
 }

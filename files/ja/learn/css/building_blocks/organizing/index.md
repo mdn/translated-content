@@ -369,27 +369,3 @@ CSS のレイアウトの詳細については、「[CSS レイアウトの学�
 また、これで [MDN の CSS の資料](/ja/docs/Web/CSS)の残りの部分を探索するためのスキルを身につけることができます。プロパティや値を調べたり、[CSS 料理帳](/ja/docs/Web/CSS/Layout_cookbook)で使用するパターンを調べたり、[CSS グリッドレイアウトのガイド](/ja/docs/Web/CSS/CSS_Grid_Layout)などの特定のガイドを読んだりすることができます。
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
-
-## このモジュール
-
-- [カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [CSS セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors)
-
-  - [要素・クラス・ID によるセレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-  - [属性セレクター](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-  - [擬似クラスと擬似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-  - [結合子](/ja/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-- [ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
-- [背景と枠線](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [異なる書字方向の扱い](/ja/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-- [コンテンツのはみ出し（オーバーフロー）](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
-- [値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [CSS によるサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-- [画像・メディア・フォーム要素](/ja/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-- [表のスタイル設定](/ja/docs/Learn/CSS/Building_blocks/Styling_tables)
-- [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-- [CSS の整理](/ja/docs/Learn/CSS/Building_blocks/Organizing)
-- [基本的な CSS の理解](/ja/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
-- [おしゃれなレターヘッド付きの便箋の作成](/ja/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
-- [かっこいいボックス](/ja/docs/Learn/CSS/Building_blocks/A_cool_looking_box)

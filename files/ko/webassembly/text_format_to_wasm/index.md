@@ -1,6 +1,6 @@
 ---
 title: Converting WebAssembly text format to wasm
-slug: WebAssembly/Text_format_to_wasm
+slug: WebAssembly/Text_format_to_Wasm
 ---
 
 {{WebAssemblySidebar}}
@@ -34,9 +34,9 @@ WebAssembly 함수 `exported_func`는 Google 환경에서 사용하기 위해 �
 3. 일단 도구를 만들었 으면 시스템 `PATH`에 `/wabt/out/clang/Debug` 디렉토리를 추가하십시오.
 4. 그런 다음, wat2wasm 프로그램을 실행하여 입력 파일의 경로와 `-o` 매개 변수 다음에 출력 파일의 경로를 전달하십시오.
 
-    ```bash
-    wat2wasm simple.wat -o simple.wasm
-    ```
+   ```bash
+   wat2wasm simple.wat -o simple.wasm
+   ```
 
 wasm을 `.wasm` 어셈블리 코드가 들어있는 `simple.wasm` 파일로 변환합니다.
 
@@ -52,7 +52,7 @@ wat2wasm simple.wat -v
 
 이렇게하면 다음과 같은 방법으로 터미널에 출력을 줄 수 있습니다.
 
-![several strings of binary with textual descriptions beside them. For example: 0000008: 01 ; section code ](https://mdn.mozillademos.org/files/14653/assembly-output.png)
+![several strings of binary with textual descriptions beside them. For example: 0000008: 01 ; section code ](assembly-output.png)
 
 ## See also
 

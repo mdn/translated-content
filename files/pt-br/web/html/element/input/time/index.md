@@ -1,6 +1,6 @@
 ---
 title: <input type="time">
-slug: Web/HTML/Element/Input/time
+slug: Web/HTML/Element/input/time
 ---
 
 {{HTMLSidebar}}
@@ -17,19 +17,19 @@ A interface de usuário deste tipo de campo varia de navegador para navegador. A
 
 No Chrome/Opera, o campo de `time` é simples, com espaços onde o usuário pode inserir horas e minutos (no formato 24 horas), além de setas para cima e para baixo que servem para, respectivamente, incrementar e decrementar o componente atualmente selecionado. Um botão "X" também é apresentado para limpar o conteúdo do campo.
 
-![](https://mdn.mozillademos.org/files/15399/chrome-time.png)
+![](chrome-time.png)
 
 ### Firefox
 
 O campo de `time` do Firefox é bem parecido com o do Chrome, exceto pela ausência das setas para cima e para baixo e por estar no formato 12 horas (com um espaço adicional para inserir AM ou PM).
 
-![](https://mdn.mozillademos.org/files/15403/firefox-time.png)
+![](firefox-time.png)
 
 ### Edge
 
 O campo de `time` do Edge é melhor elaborado, abrindo um seletor de hora e minuto com rolagem infinita. Assim como o Chrome, ele também adota o formato 24 horas:
 
-![](https://mdn.mozillademos.org/files/15401/edge-time.png)
+![](edge-time.png)
 
 <table class="properties">
   <tbody>
@@ -48,10 +48,10 @@ O campo de `time` do Edge é melhor elaborado, abrindo um seletor de hora e minu
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("readonly", "input")}} e
-        {{htmlattrxref("step", "input")}}.
+        <a href="/pt-BR/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/pt-BR/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a> e
+        <a href="/pt-BR/docs/Web/HTML/Element/input#step"><code>step</code></a>.
       </td>
     </tr>
     <tr>
@@ -74,7 +74,7 @@ O campo de `time` do Edge é melhor elaborado, abrindo um seletor de hora e minu
 
 ## Valor
 
-Uma {{domxref("DOMString")}} contendo o valor do horário inserido no campo. Você pode definir um valor padrão para o campo incluindo um horário válido no atributo {{htmlattrxref("value", "input")}} ao criar o elemento `<input>`, tipo assim:
+Uma {{domxref("DOMString")}} contendo o valor do horário inserido no campo. Você pode definir um valor padrão para o campo incluindo um horário válido no atributo [`value`](/pt-BR/docs/Web/HTML/Element/input#value) ao criar o elemento `<input>`, tipo assim:
 
 ```html
 <label for="hora-cons">Escolha o horário da consulta: </label>
@@ -145,11 +145,11 @@ O caso de uso mais simples do `<input type="time">` envolve uma combinação bá
 
 ### Controlando o tamanho do campo
 
-O elemento `<input type="time">` não é compatível com atributos de dimensionamento de formulários tais como {{htmlattrxref("size", "input")}}, já que horários quase sempre tem o mesmo número de caracteres. Você terá que recorrer ao [CSS](/pt-BR/docs/Web/CSS) para ajustar tamanhos.
+O elemento `<input type="time">` não é compatível com atributos de dimensionamento de formulários tais como [`size`](/pt-BR/docs/Web/HTML/Element/input#size), já que horários quase sempre tem o mesmo número de caracteres. Você terá que recorrer ao [CSS](/pt-BR/docs/Web/CSS) para ajustar tamanhos.
 
 ### Usando o atributo step
 
-Você pode usar o atributo {{htmlattrxref("step", "input")}} para variar a quantidade de tempo pulada sempre que o horário for incrementado/decrementado (por exemplo, para fazer com que o horário avançe ou volte em 10 minutos ao clicar nas setinhas ao lado do campo).
+Você pode usar o atributo [`step`](/pt-BR/docs/Web/HTML/Element/input#step) para variar a quantidade de tempo pulada sempre que o horário for incrementado/decrementado (por exemplo, para fazer com que o horário avançe ou volte em 10 minutos ao clicar nas setinhas ao lado do campo).
 
 > **Note:** Esta propriedade pode se comportar de maneira inesperada em alguns navegadores. Por isso, ela não é 100% confiável.
 
@@ -178,7 +178,7 @@ Por padrão, `<input type="time">` não aplica nenhum tipo de validação nos va
 
 ### Definindo horários mínimo e máximo
 
-Você pode usar os atributos {{htmlattrxref("min", "input")}} e {{htmlattrxref("max", "input")}} para restringir a faixa de horário válida que o usuário pode escolher. No seguinte exemplo, definimos `12:00` como o horário mínimo e `18:00` como o horário máximo:
+Você pode usar os atributos [`min`](/pt-BR/docs/Web/HTML/Element/input#min) e [`max`](/pt-BR/docs/Web/HTML/Element/input#max) para restringir a faixa de horário válida que o usuário pode escolher. No seguinte exemplo, definimos `12:00` como o horário mínimo e `18:00` como o horário máximo:
 
 ```html
 <form>
@@ -227,7 +227,7 @@ O resultado disso é que:
 
 ### Tornando campos de horário obrigatórios
 
-Além do mais, você pode usar o atributo {{htmlattrxref("required", "input")}} para tornar obrigatória a inserção de um horário. Como resultado, os navegadores compatíves irão mostrar um erro se você tentar enviar um horário fora da proporção adequada ou que esteja em branco.
+Além do mais, você pode usar o atributo [`required`](/pt-BR/docs/Web/HTML/Element/input#required) para tornar obrigatória a inserção de um horário. Como resultado, os navegadores compatíves irão mostrar um erro se você tentar enviar um horário fora da proporção adequada ou que esteja em branco.
 
 Vamos ver um exemplo. Nele, colocamos um horário mínimo e um máximo, além de tornarmos o campo obrigatório.
 
@@ -259,7 +259,7 @@ Here's a screenshot for those of you who aren't using a browser that supports `t
 
 As mentioned above, Safari and a few other, less common, browsers don't yet support time inputs natively. In general, otherwise, support is good — especially on mobile platforms, which tend to have very nice user interfaces for specifying a time value. For example, the `time` picker on Chrome for Android looks like this:
 
-![](https://mdn.mozillademos.org/files/15407/chrome-android-time.png)
+![](chrome-android-time.png)
 
 Browsers that don't support time inputs gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 
@@ -271,7 +271,7 @@ The second problem is the more serious; as mentioned previously, `time` inputs' 
 - `3 o'clock in the afternoon`
 - etc.
 
-One way around this is to put a {{htmlattrxref("pattern", "input")}} attribute on your `time` input. Even though the `time` input doesn't use it, the `text` input fallback will. For example, try viewing the following demo in a browser that doesn't support time inputs:
+One way around this is to put a [`pattern`](/pt-BR/docs/Web/HTML/Element/input#pattern) attribute on your `time` input. Even though the `time` input doesn't use it, the `text` input fallback will. For example, try viewing the following demo in a browser that doesn't support time inputs:
 
 ```html
 <form>

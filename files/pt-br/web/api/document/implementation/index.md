@@ -40,4 +40,4 @@ A Recomendação do W3C DOM Level 1 apenas especifica o método `hasFeature`, qu
 
 ## Notas específicas para o Gecko
 
-- À partir do Gecko 19.0 {{geckoRelease("19.0")}} o método {{domxref("DOMImplementation.hasFeature","hasFeature")}} irá sempre retornar _true_.
+- À partir do Gecko 19.0 o método {{domxref("DOMImplementation.hasFeature","hasFeature")}} irá sempre retornar _true_.

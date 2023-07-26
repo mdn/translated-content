@@ -7,7 +7,7 @@ slug: Web/API/Document/fullscreenEnabled
 
 ### 概述
 
-返回一个布尔值，表明浏览器是否支持全屏模式。全屏模式只在那些不包含窗口化的插件的页面中可用。对于一个{{ HTMLElement("iframe") }}元素中的页面，则它必需拥有{{ HTMLAttrXRef("mozallowfullscreen", "iframe") }}属性。
+返回一个布尔值，表明浏览器是否支持全屏模式。全屏模式只在那些不包含窗口化的插件的页面中可用。对于一个{{ HTMLElement("iframe") }}元素中的页面，则它必需拥有[`mozallowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#mozallowfullscreen)属性。
 
 ### 语法
 

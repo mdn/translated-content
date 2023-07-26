@@ -1,5 +1,5 @@
 ---
-title: 'Руководство Django Часть 8: Аутентификация и авторизация пользователя'
+title: "Руководство Django Часть 8: Аутентификация и авторизация пользователя"
 slug: Learn/Server-side/Django/Authentication
 tags:
   - Python
@@ -84,23 +84,23 @@ MIDDLEWARE = [
 
 Запустите сервер разработки и перейдите к административной панели вашего сайта (`http://127.0.0.1:8000/admin/`). Залогиньтесь на сайте при помощи параметров (имя пользователя и пароля) аккаунта суперпользователя. Самая "верхняя" страница панели Администратора показывает все наши модели. Для того, чтобы увидеть записи в разделе **Authentication and Authorisation** вы можете нажать на ссылку **Users**, или **Groups**.
 
-![Admin site - add groups or users](https://mdn.mozillademos.org/files/14091/admin_authentication_add.png)
+![Admin site - add groups or users](admin_authentication_add.png)
 
 В первую очередь, в качестве нового члена нашего сайта, давайте создадим новую группу.
 
-1. Нажмите на кнопку **Add** **(Добавить)** (рядом с Group) и создайте новую _группу_; для данной группы введите **Name (Имя)** "Library Members".![Admin site - add group](https://mdn.mozillademos.org/files/14093/admin_authentication_add_group.png)
+1. Нажмите на кнопку **Add** **(Добавить)** (рядом с Group) и создайте новую _группу_; для данной группы введите **Name (Имя)** "Library Members".![Admin site - add group](admin_authentication_add_group.png)
 2. Для данной группы не нужны какие-либо разрешения, поэтому мы просто нажимаем кнопку **SAVE (Сохранить)** (вы перейдёте к списку групп).
 
 Теперь давайте создадим пользователя:
 
 1. Перейдите обратно на домашнюю страницу административной панели
-2. Для перехода к диалогу добавления пользователя нажмите на кнопку **Add**, соответствующую строке _Users (Пользователи)_.![Admin site - add user pt1](https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png)
+2. Для перехода к диалогу добавления пользователя нажмите на кнопку **Add**, соответствующую строке _Users (Пользователи)_.![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
 3. Введите соответствующие **Username** (имя пользователя) и **Password**/**Password confirmation (пароль/подтверждение пароля)** для вашего тестового пользователя
 4. Нажмите **SAVE** для завершения процесса создания пользователя.
 
-    Административная часть сайта создаст нового пользователя и немедленно перенаправит вас на страницу _Change user (Изменение параметров пользователя)_ где вы можете, соответственно, изменить ваш **username**, а кроме того добавить информацию для дополнительных полей модели User. Эти поля включают в себя имя пользователя, фамилию, адрес электронной почты, статус пользователя, а также соответствующие параметры доступа (может быть установлен только флаг **Active**). Ниже вы можете определить группу для пользователя и необходимые параметры доступа, а кроме того, вы можете увидеть важные даты, относящиеся к пользователю (дату подключения к сайту и дату последнего входа).![Admin site - add user pt2](https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png)
+   Административная часть сайта создаст нового пользователя и немедленно перенаправит вас на страницу _Change user (Изменение параметров пользователя)_ где вы можете, соответственно, изменить ваш **username**, а кроме того добавить информацию для дополнительных полей модели User. Эти поля включают в себя имя пользователя, фамилию, адрес электронной почты, статус пользователя, а также соответствующие параметры доступа (может быть установлен только флаг **Active**). Ниже вы можете определить группу для пользователя и необходимые параметры доступа, а кроме того, вы можете увидеть важные даты, относящиеся к пользователю (дату подключения к сайту и дату последнего входа).![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 
-5. В разделе _Groups_, из списка _Доступные группы_ выберите группу **Library Member**, а затем переместите её в блок "Выбранные группы" (нажмите **стрелку-"направо"**, находящуюся между блоками).![Admin site - add user to group](https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png)
+5. В разделе _Groups_, из списка _Доступные группы_ выберите группу **Library Member**, а затем переместите её в блок "Выбранные группы" (нажмите **стрелку-"направо"**, находящуюся между блоками).![Admin site - add user to group](admin_authentication_user_add_group.png)
 6. Больше нам не нужно здесь нечего делать, просто нажмите "Save"(Сохранить), и вы вернётесь к списку созданных пользователей.
 
 Вот и все! Теперь у вас есть учётная запись «обычного члена библиотеки», которую вы сможете использовать для тестирования (как только добавим страницы, чтобы пользователи могли войти в систему).
@@ -184,7 +184,7 @@ TEMPLATES = [
 
 Создайте новый HTML файл, названный /**locallibrary/templates/registration/login.html**. дайте ему следующее содержание:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -231,7 +231,7 @@ TEMPLATES = [
 
 Перейдите на страницу входа (`http://127.0.0.1:8000/accounts/login/`) когда вы сохраните свой шаблон, и вы должны увидеть что-то наподобие этого:
 
-![Library login page v1](https://mdn.mozillademos.org/files/14101/library_login.png)
+![Library login page v1](library_login.png)
 
 Если ваша попытка войти в систему будет успешной, вы будете перенаправлены на другую страницу (по умолчанию это будет `http://127.0.0.1:8000/accounts/profile/`). Проблема здесь в том, что по умолчанию Django ожидает, что после входа в систему вы захотите перейти на страницу профиля, что может быть или не быть. Поскольку вы ещё не определили эту страницу, вы получите ещё одну ошибку!
 
@@ -248,19 +248,19 @@ LOGIN_REDIRECT_URL = '/'
 
 Создайте и откройте **/locallibrary/templates/registration/logged_out.html**. Скопируйте текст ниже:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-<p>Logged out!</p>
+  <p>Logged out!</p>
 
-<a href="{% url 'login'%}">Click here to login again.</a>
+  <a href="{% url 'login'%}">Click here to login again.</a>
 {% endblock %}
 ```
 
 Этот шаблон очень прост. Он просто отображает сообщение, информирующее вас о том, что вы вышли из системы, и предоставляет ссылку, которую вы можете нажать, чтобы вернуться на экран входа в систему. Если вы снова перейдёте на страницу выхода из системы, вы увидите эту страницу:
 
-![Library logout page v1](https://mdn.mozillademos.org/files/14103/library_logout.png)
+![Library logout page v1](library_logout.png)
 
 ### Шаблон сброса пароля
 
@@ -272,16 +272,15 @@ LOGIN_REDIRECT_URL = '/'
 
 Это форма, используемая для получения адреса электронной почты пользователя (для отправки пароля для сброса пароля). Создайте **/locallibrary/templates/registration/password_reset_form.html** и дайте ему следующее содержание:
 
-```html
+```django
 {% extends "base_generic.html" %}
+
 {% block content %}
-
-<form action="" method="post">{% csrf_token %}
-    {% if form.email.errors %} \{{ form.email.errors }} {% endif %}
-        <p>\{{ form.email }}</p>
-    <input type="submit" class="btn btn-default btn-lg" value="Reset password" />
-</form>
-
+  <form action="" method="post">{% csrf_token %}
+      {% if form.email.errors %} \{{ form.email.errors }} {% endif %}
+          <p>\{{ form.email }}</p>
+      <input type="submit" class="btn btn-default btn-lg" value="Reset password" />
+  </form>
 {% endblock %}
 ```
 
@@ -289,10 +288,14 @@ LOGIN_REDIRECT_URL = '/'
 
 Эта форма отображается после того, как ваш адрес электронной почты будет собран. Создайте **/locallibrary/templates/registration/password_reset_done.html**, и дайте ему следующее содержание:
 
-```html
+```django
 {% extends "base_generic.html" %}
+
 {% block content %}
-<p>We've emailed you instructions for setting your password. If they haven't arrived in a few minutes, check your spam folder.</p>
+  <p>
+    We've emailed you instructions for setting your password. If they haven't
+    arrived in a few minutes, check your spam folder.
+  </p>
 {% endblock %}
 ```
 
@@ -300,7 +303,7 @@ LOGIN_REDIRECT_URL = '/'
 
 Этот шаблон предоставляет текст электронной почты HTML, содержащий ссылку на сброс, которую мы отправим пользователям. Создайте /locallibrary/templates/registration/password_reset_email.html и дайте ему следующее содержание:
 
-```html
+```django
 Someone asked for password reset for email \{{ email }}. Follow the link below:
 \{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
@@ -309,37 +312,42 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 На этой странице вы вводите новый пароль после нажатия ссылки в электронном письме с возвратом пароля. Создайте /locallibrary/templates/registration/password_reset_confirm.html и дайте ему следующее содержание:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-
-    {% if validlink %}
-        <p>Please enter (and confirm) your new password.</p>
-        <form action="" method="post">
-            {% csrf_token %}
-            <table>
-                <tr>
-                    <td>\{{ form.new_password1.errors }}
-                        <label for="id_new_password1">New password:</label></td>
-                    <td>\{{ form.new_password1 }}</td>
-                </tr>
-                <tr>
-                    <td>\{{ form.new_password2.errors }}
-                        <label for="id_new_password2">Confirm password:</label></td>
-                    <td>\{{ form.new_password2 }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Change my password" /></td>
-                </tr>
-            </table>
-        </form>
-    {% else %}
-        <h1>Password reset failed</h1>
-        <p>The password reset link was invalid, possibly because it has already been used. Please request a new password reset.</p>
-    {% endif %}
-
+  {% if validlink %}
+    <p>Please enter (and confirm) your new password.</p>
+    <form action="" method="post">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <td>
+            \{{ form.new_password1.errors }}
+            <label for="id_new_password1">New password:</label>
+          </td>
+          <td>\{{ form.new_password1 }}</td>
+        </tr>
+        <tr>
+          <td>
+            \{{ form.new_password2.errors }}
+            <label for="id_new_password2">Confirm password:</label>
+          </td>
+          <td>\{{ form.new_password2 }}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Change my password" /></td>
+        </tr>
+      </table>
+    </form>
+  {% else %}
+    <h1>Password reset failed</h1>
+    <p>
+      The password reset link was invalid, possibly because it has already been
+      used. Please request a new password reset.
+    </p>
+  {% endif %}
 {% endblock %}
 ```
 
@@ -347,13 +355,12 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 Это последний шаблон сброса пароля, который отображается, чтобы уведомить вас о завершении сброса пароля. Создайте /locallibrary/templates/registration/password_reset_complete.html и дайте ему следующее содержание:
 
-```html
+```django
 {% extends "base_generic.html" %}
+
 {% block content %}
-
-<h1>The password has been changed!</h1>
-<p><a href="{% url 'login' %}">log in again?</a></p>
-
+  <h1>The password has been changed!</h1>
+  <p><a href="{% url 'login' %}">log in again?</a></p>
 {% endblock %}
 ```
 
@@ -477,7 +484,7 @@ def is_overdue(self):
     return False
 ```
 
-> **Примечание:** **Примечание.** Сначала мы проверим, является ли `due_back` пустым, прежде чем проводить сравнение. Пустое поле `due_back` заставило Django выкидывать ошибку, а не показывать страницу: пустые значения не сопоставимы. Это не то, что мы хотели бы, чтобы наши пользователи испытывали!
+> **Примечание:** Сначала мы проверим, является ли `due_back` пустым, прежде чем проводить сравнение. Пустое поле `due_back` заставило Django выкидывать ошибку, а не показывать страницу: пустые значения не сопоставимы. Это не то, что мы хотели бы, чтобы наши пользователи испытывали!
 
 Теперь, когда мы обновили наши модели, нам нужно будет внести новые изменения в проект, а затем применить эти миграции:
 
@@ -597,7 +604,7 @@ urlpatterns += [
 
 Когда любой пользователь войдёт в систему, он будет видеть ссылку «Мной позаимствовано (_My Borrowed)_» в боковой колонке, и список книг, показанных ниже (первая книга не имеет установленной даты, что является ошибкой, которую мы надеемся исправить в более позднем уроке!).
 
-![Library - borrowed books by user](https://mdn.mozillademos.org/files/14105/library_borrowed_by_user.png)
+![Library - borrowed books by user](library_borrowed_by_user.png)
 
 ## Права доступа
 
@@ -672,7 +679,7 @@ class MyView(PermissionRequiredMixin, View):
 
 Когда вы закончите, ваша страница должна выглядеть примерно, как на скриншоте ниже.
 
-![All borrowed books, restricted to librarian](https://mdn.mozillademos.org/files/14115/library_borrowed_all.png)
+![All borrowed books, restricted to librarian](library_borrowed_all.png)
 
 ## Подводим итоги
 

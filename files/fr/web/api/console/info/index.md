@@ -1,12 +1,6 @@
 ---
 title: Console.info()
-slug: Web/API/Console/info
-tags:
-  - API
-  - Debugging
-  - Method
-  - NeedsBrowserCompatibility
-  - web console
+slug: Web/API/console/info
 translation_of: Web/API/Console/info
 ---
 

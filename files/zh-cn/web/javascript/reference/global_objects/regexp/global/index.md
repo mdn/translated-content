@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
 
 ## 示例
 
-### 例子：使用 `global`
+### 示例：使用 `global`
 
 ```js
 var regex = new RegExp("foo", "g")

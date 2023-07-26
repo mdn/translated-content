@@ -49,11 +49,12 @@ A página inicial da BBC, por exemplo, contém um grande número de links que ap
 
 ## Anatomia de um link
 
-Um link básico é criado envolvendo o texto (ou outro conteúdo, veja [Block level links](#block_level_links)) que você quer transformar em um link dentro de um elemento {{htmlelement("a")}}, e dando-lhe um atributo {{htmlattrxref("href", "a")}}, (também conhecido como **Hypertext Reference**, ou **target**) que conterá o endereço da Web para o qual você deseja que o link aponte.
+Um link básico é criado envolvendo o texto (ou outro conteúdo, veja [Block level links](#block_level_links)) que você quer transformar em um link dentro de um elemento {{htmlelement("a")}}, e dando-lhe um atributo [`href`](/pt-BR/docs/Web/HTML/Element/a#href), (também conhecido como **Hypertext Reference**, ou **target**) que conterá o endereço da Web para o qual você deseja que o link aponte.
 
 ```html
-<p>Estou criando um link para
-<a href="https://www.mozilla.org/pt-BR/">a página inicial da Mozilla</a>.
+<p>
+  Estou criando um link para
+  <a href="https://www.mozilla.org/pt-BR/">a página inicial da Mozilla</a>.
 </p>
 ```
 
@@ -66,9 +67,13 @@ Estou criando um link para [a página inicial da Mozilla](https://www.mozilla.or
 Outro atributo que você pode querer adicionar aos seus links é o `title`; pretende-se que ele contenha informações úteis adicionais sobre o link, como, que tipo de informação a página contém ou informações importantes. Por exemplo:
 
 ```html
-<p>Estou criando um link para
-<a href="https://www.mozilla.org/pt-BR/"
-   title="O melhor lugar para encontrar mais informações sobre a missão da Mozilla e como contribuir"> a página inicial da Mozilla</a>.
+<p>
+  Estou criando um link para
+  <a
+    href="https://www.mozilla.org/pt-BR/"
+    title="O melhor lugar para encontrar mais informações sobre a missão da Mozilla e como contribuir">
+    a página inicial da Mozilla</a
+  >.
 </p>
 ```
 
@@ -92,7 +97,9 @@ Como falamos anteriormente, você pode transformar qualquer conteúdo em um link
 
 ```html
 <a href="https://www.mozilla.org/pt-BR/">
-  <img src="mozilla-image.png" alt="Logotipo mozilla que liga a página inicial do mozilla">
+  <img
+    src="mozilla-image.png"
+    alt="Logotipo mozilla que liga a página inicial do mozilla" />
 </a>
 ```
 
@@ -106,7 +113,7 @@ Um URL ou _Uniform Resource Locator_ é simplesmente uma sequência de texto que
 
 Os URLs usam caminhos para encontrar arquivos. Os caminhos especificam onde, no explorador de arquivos, o recurso que você está interessado está localizado. Vejamos um exemplo simples de uma estrutura de diretório (veja o diretório de [criação de hiperlinks](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks)).
 
-![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](https://mdn.mozillademos.org/files/12409/simple-directory.png)
+![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](simple-directory.png)
 
 A raiz dessa estrutura de diretório é chamada de `criação de hiperlinks`. Ao trabalhar localmente com um site, você terá um diretório no qual ele todo esta dentro. Incluído na raiz, temos um arquivo `index.html` e um arquivo `contacts.html`. Em um site real, `index.html` seria nossa página inicial ou página de entrada (uma página da web que serve como ponto de entrada para um site ou uma seção específica de um site).
 
@@ -115,20 +122,28 @@ Existem também dois diretórios dentro da nossa raiz — `pdfs` e `projects`. C
 - **Mesmo diretório:** se você deseja incluir um hiperlink dentro de `index.html` (o `index.html` de nível superior) apontando para `contacts.html`, basta especificar o nome do arquivo ao qual deseja vincular, já que está no mesmo diretório que o arquivo atual. Portanto, o URL que você usaria seria `contacts.html`:
 
   ```html
-  <p>Deseja entrar em contato com um membro da equipe específica?
-  Encontre detalhes sobre nossos serviços em nossa <a href="contato.html">página de contatos</a>.</p>
+  <p>
+    Deseja entrar em contato com um membro da equipe específica? Encontre
+    detalhes sobre nossos serviços em nossa
+    <a href="contato.html">página de contatos</a>.
+  </p>
   ```
 
 - **Movendo-se para baixo em subdiretórios:** se você quisesse incluir um hiperlink dentro do `index.html` apontando para o `projeto/index.html`, você precisaria descer no diretório de projetos antes de indicar o arquivo que deseja vincular. Isso é feito especificando o nome do diretório, depois uma barra inclinada e, em seguida, o nome do arquivo. Então o URL que você usaria seria `projeto/index.html`:
 
   ```html
-  <p>Visite minha <a href="projects/index.html">pagina inicial do projeto</a>.</p>
+  <p>
+    Visite minha <a href="projects/index.html">pagina inicial do projeto</a>.
+  </p>
   ```
 
 - **Movendo-se de volta para os diretórios pai:** se você quisesse incluir uma hiperlink dentro de `projeto/index.html` apontando para pdfs/`projetos-brief.pdf`, você precisaria subir um nível de diretório e voltar para o diretório `pdf`. "Subir um diretório" é indicado usando dois pontos — `..` — então a URL que você usaria seria `../pdfs/project-brief.pdf`
 
   ```html
-  <p>Um link para o meu <a href="../pdfs/project-brief.pdf"> breve de projeto</a>.</p>
+  <p>
+    Um link para o meu
+    <a href="../pdfs/project-brief.pdf"> breve de projeto</a>.
+  </p>
   ```
 
 > **Nota:** Você pode combinar várias instâncias desses recursos em URLs complexas, se necessário, por exemplo`../../../complex/path/to/my/file.html`.
@@ -144,13 +159,20 @@ Existem também dois diretórios dentro da nossa raiz — `pdfs` e `projects`. C
 Em seguida, para vincular a esse `id` específico, você o incluirá no final do URL, precedido por um símbolo de hashtag/cerquilha, por exemplo:
 
 ```html
-<p>Quer escrever uma carta? Use nosso<a href="contacts.html#Mailing_address">endereço de correspondência</a>.</p>
+<p>
+  Quer escrever uma carta? Use nosso<a href="contacts.html#Mailing_address"
+    >endereço de correspondência</a
+  >.
+</p>
 ```
 
 Você pode até usar apenas referência de fragmento do documento por si só para vincular a outra parte do mesmo documento:
 
 ```html
-<p>O <a href="#Mailing_address">endereço postal da empresa</a> pode ser encontrado na parte inferior desta página.</p>
+<p>
+  O <a href="#Mailing_address">endereço postal da empresa</a> pode ser
+  encontrado na parte inferior desta página.
+</p>
 ```
 
 ### URLs absolutos versus relativos
@@ -182,18 +204,13 @@ Vejamos um exemplo específico:
 _Texto de link_ **correto**: [Baixe o Firefox](https://firefox.com/)
 
 ```html
-<p><a href="https://firefox.com/">
-  Baixe o Firefox
-</a></p>
+<p><a href="https://firefox.com/"> Baixe o Firefox </a></p>
 ```
 
 _Texto de link_ **incorreto**: [clique aqui](https://firefox.com/) para baixar o Firefox
 
 ```html
-<p><a href="https://firefox.com/">
-  clique aqui
-</a>
-para baixar o Firefox</p>
+<p><a href="https://firefox.com/"> clique aqui </a> para baixar o Firefox</p>
 ```
 
 Outras dicas:
@@ -220,17 +237,23 @@ Ao vincular a um arquivo que será baixado (como um documento PDF ou Word) ou tr
 Vejamos alguns exemplos, para ver que tipo de texto pode ser usado aqui:
 
 ```html
-<p><a href="http://www.example.com/large-report.pdf">
-  Baixe o relatório de vendas (PDF, 10MB)
-</a></p>
+<p>
+  <a href="http://www.example.com/large-report.pdf">
+    Baixe o relatório de vendas (PDF, 10MB)
+  </a>
+</p>
 
-<p><a href="http://www.example.com/video-stream/">
-  Assista ao vídeo (o fluxo abre em separado, qualidade HD)
-</a></p>
+<p>
+  <a href="http://www.example.com/video-stream/">
+    Assista ao vídeo (o fluxo abre em separado, qualidade HD)
+  </a>
+</p>
 
-<p><a href="http://www.example.com/car-game">
-  Jogue o jogo de carro (requer Flash Player)
-</a></p>
+<p>
+  <a href="http://www.example.com/car-game">
+    Jogue o jogo de carro (requer Flash Player)
+  </a>
+</p>
 ```
 
 ### Use o atributo de download ao vincular a um download
@@ -238,8 +261,9 @@ Vejamos alguns exemplos, para ver que tipo de texto pode ser usado aqui:
 Quando você está apontando para um arquivo que deve ser baixado em vez de ser aberto no navegador, poderá usar o atributo de download para fornecer um nome de arquivo salvo padrão. Aqui está um exemplo, com um link de `baixar` para a versão do Windows 39 do Firefox:
 
 ```html
-<a href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=en-US"
-   download="firefox-39-installer.exe">
+<a
+  href="https://download.mozilla.org/?product=firefox-39.0-SSL&os=win&lang=en-US"
+  download="firefox-39-installer.exe">
   Faça o download do Firefox 39 para Windows
 </a>
 ```
@@ -264,7 +288,7 @@ Você deve:
 
 O exemplo final acabaria por parecer algo assim:
 
-![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](https://mdn.mozillademos.org/files/12411/navigation-example.png)
+![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](navigation-example.png)
 
 > **Nota:** Se você ficar preso, ou não tem certeza se o fez bem, você pode verificar o diretório de [navegação-menu-marcado](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) para ver a resposta correta.
 
@@ -280,7 +304,7 @@ Na sua forma mais comum, um `mailto:` simplesmente indica o endereço de e-mail 
 
 Isso resulta em um _link_ que se parece com isto: [Enviar e-mail para lugar nenhum.](mailto:nowhere@mozilla.org)
 
-Na verdade, o endereço de e-mail é opcional. Se você deixar de fora (ou seja, seu {{htmlattrxref("href", "a")}} for simplesmente "mailto:"), uma nova janela de e-mail de saída será aberta pelo aplicativo de e-mail do usuário sem um destinatário. Isso geralmente é útil como "Compartilhar" _links_ que os usuários podem clicar para enviar um e-mail para um endereço escolhido.
+Na verdade, o endereço de e-mail é opcional. Se você deixar de fora (ou seja, seu [`href`](/pt-BR/docs/Web/HTML/Element/a#href) for simplesmente "mailto:"), uma nova janela de e-mail de saída será aberta pelo aplicativo de e-mail do usuário sem um destinatário. Isso geralmente é útil como "Compartilhar" _links_ que os usuários podem clicar para enviar um e-mail para um endereço escolhido.
 
 ### Especificando detalhes
 
@@ -289,8 +313,9 @@ Além do endereço de e-mail, você pode fornecer outras informações. Na verda
 Aqui está um exemplo que inclui um cc, bcc, assunto e corpo de texto:
 
 ```html
-<a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email &amp;body=The%20body%20of%20the%20email">
- Aqui está um exemplo, incluindo um cc, bcc, assunto e corpo:
+<a
+  href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
+  Aqui está um exemplo, incluindo um cc, bcc, assunto e corpo:
 </a>
 ```
 

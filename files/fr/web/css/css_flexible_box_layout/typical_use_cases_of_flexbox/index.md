@@ -1,13 +1,7 @@
 ---
 title: Cas d'utilisation classiques de flexbox
-slug: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
-tags:
-  - CSS
-  - Guide
-  - Intermediate
-  - flexbox
+slug: Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
-original_slug: Web/CSS/CSS_Flexible_Box_Layout/Cas_utilisation_flexbox
 ---
 
 {{CSSRef}}

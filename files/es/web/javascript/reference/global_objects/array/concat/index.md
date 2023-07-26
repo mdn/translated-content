@@ -104,7 +104,7 @@ console.log(nums);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.concat")}}
+{{Compat}}
 
 ## Ver también
 

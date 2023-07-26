@@ -1,16 +1,6 @@
 ---
 title: history.HistoryItem
 slug: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - HistoryItem
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
 ---
 
@@ -35,9 +25,9 @@ C'est un objet avec les propriétés suivantes :
 - `typedCount` {{optional_inline}}
   - : `number`. Le nombre de fois que l'utilisateur a navigué sur cette page en tapant l'adresse.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.HistoryItem")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

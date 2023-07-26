@@ -96,7 +96,7 @@ Events have three functions:
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.menus.onShown", 10)}}
+{{Compat}}
 
 ## 예제
 

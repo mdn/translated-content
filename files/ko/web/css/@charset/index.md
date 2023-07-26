@@ -1,13 +1,6 @@
 ---
 title: '@charset'
 slug: Web/CSS/@charset
-tags:
-  - At-rule
-  - CSS
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/@charset
 ---
 {{ CSSRef }}
 

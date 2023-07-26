@@ -1,11 +1,6 @@
 ---
 title: 'SyntaxError: missing ] after element list'
 slug: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
-tags:
-  - 구문 에러
-  - 배열 초기자
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 ---
 
 {{jsSidebar("Errors")}}

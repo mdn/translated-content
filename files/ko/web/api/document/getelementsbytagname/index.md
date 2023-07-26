@@ -1,12 +1,6 @@
 ---
 title: Document.getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
-tags:
-  - API
-  - DOM
-  - 레퍼런스
-  - 메소드
-translation_of: Web/API/Document/getElementsByTagName
 ---
 
 {{ ApiRef("DOM") }}
@@ -21,7 +15,7 @@ var elements = document.getElementsByTagName(name);
 - _elements_ 는 트리에 나타난 순서대로 발견된 살아있는 {{domxref("HTMLCollection")}} 입니다(하지만 아래 노트를 보세요).
 - _name_ 은 엘리먼트의 이름을 나타내는 문자열입니다. 특수 문자 "\*" 은 모든 엘리먼트를 나타냅니다.
 
-> **참고:** [최신 W3C 명세](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html)에서는 _elements_ 가 `HTMLCollection` 라고 하지만, WebKit 브라우저에서는 {{domxref("NodeList")}} 를 반환합니다. 자세한 내용은 {{bug(14869)}} 버그를 확인하시기 바랍니다.
+> **참고:** [최신 W3C 명세](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html)에서는 _elements_ 가 `HTMLCollection` 라고 하지만, WebKit 브라우저에서는 {{domxref("NodeList")}} 를 반환합니다. 자세한 내용은 [Firefox bug 14869](https://bugzil.la/14869) 버그를 확인하시기 바랍니다.
 
 ## 예시
 
@@ -90,7 +84,7 @@ var elements = document.getElementsByTagName(name);
 
 ## 노트
 
-HTML 다큐먼트에서 호출될 때, getElementsByTagName() 은 처리전에 인수를 소문자로 변환합니다. 이는 HTML 다큐먼트의 하위 트리에 속한 낙타 표기법의 SVG 엘리먼트를 찾으려할 때 바람직하지 않습니다. 그런 경우에는 {{Domxref("document.getElementsByTagNameNS()")}} 가 유용합니다.{{Bug(499656)}} 버그도 확인하시기 바랍니다.
+HTML 다큐먼트에서 호출될 때, getElementsByTagName() 은 처리전에 인수를 소문자로 변환합니다. 이는 HTML 다큐먼트의 하위 트리에 속한 낙타 표기법의 SVG 엘리먼트를 찾으려할 때 바람직하지 않습니다. 그런 경우에는 {{Domxref("document.getElementsByTagNameNS()")}} 가 유용합니다.[Firefox bug 499656](https://bugzil.la/499656) 버그도 확인하시기 바랍니다.
 
 `document.getElementsByTagName()` 은 전체 다큐먼트를 포함하여 탐색한다는 점만 제외하고 {{domxref("Element.getElementsByTagName()")}} 와 유사합니다.
 

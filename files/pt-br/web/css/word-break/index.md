@@ -9,7 +9,7 @@ A propriedade CSS **`word-break`** é usada para especificar se o navegador deve
 
 {{EmbedInteractiveExample("pages/css/word-break.html")}}
 
-> **Note:** **Nota:** comparando com {{cssxref("overflow-wrap")}}, `word-break` criará uma quebra de linha no ponto exato em que o texto vazaria, mesmo que uma palavra pudesse ser colocada por completo em uma nova linha sem a necessidade de quebra da palavra.
+> **Nota:** comparando com {{cssxref("overflow-wrap")}}, `word-break` criará uma quebra de linha no ponto exato em que o texto vazaria, mesmo que uma palavra pudesse ser colocada por completo em uma nova linha sem a necessidade de quebra da palavra.
 
 ## Sintaxe
 

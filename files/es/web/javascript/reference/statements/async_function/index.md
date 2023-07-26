@@ -1,12 +1,6 @@
 ---
 title: Función async
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Declaración
-  - Ejemplo
-  - JavaScript
-  - función
-translation_of: Web/JavaScript/Reference/Statements/async_function
 original_slug: Web/JavaScript/Referencia/Sentencias/funcion_asincrona
 ---
 
@@ -129,9 +123,9 @@ Observe que, en el ejemplo anterior, no hay ninguna instrucción `await` dentro 
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.async_function")}}
+{{Compat}}
 
 ## Véase también
 

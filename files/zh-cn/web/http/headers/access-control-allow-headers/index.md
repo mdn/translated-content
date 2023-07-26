@@ -94,7 +94,7 @@ If the requested method isn't supported, the server will respond with an error.
 - 在最新规范中提出的通配符 (\*)，尚未被如下浏览器实现：
 
   - Chromium: [Issue 615313](https://bugs.chromium.org/p/chromium/issues/detail?id=615313)
-  - Firefox: {{bug(1309358)}}
+  - Firefox: [Firefox bug 1309358](https://bugzil.la/1309358)
   - Servo: [Issue 13283](https://github.com/servo/servo/issues/13283)
   - WebKit: [Issue 165508](https://bugs.webkit.org/show_bug.cgi?id=165508)
 

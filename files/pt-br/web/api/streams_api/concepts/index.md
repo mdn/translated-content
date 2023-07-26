@@ -18,7 +18,7 @@ Há dois tipos de fontes subjacentes:
 
 O dado é lido sequencialmente em pequenos blocos de informação chamado chunks. Um chunk por ser um simples byte, ou, pode ser algo maior como um [typed array](/pt-BR/docs/Web/JavaScript/Typed_arrays) de um certo tamanho.
 Um simples stream pode conter chunks de diferentes tamanhos e tipos.
-![](https://mdn.mozillademos.org/files/15819/Readable%20streams.png)
+![](readable_streams.png)
 
 Os chunks alocados em um stream são ditos **enqueued** (enfileirados) — isto significa que eles estão aguardando em uma fila prontos para serem lidos. Uma **internal queue** rastreia os chunks que ainda não foram lidos (veja filas internas e estratégias de enfileiramento na sessão abaixo).
 
@@ -42,7 +42,7 @@ Em JavaScript, isto pode ser alcançado pelo método {{domxref("ReadableStream.t
 
 Você deve fazê-lo por exemplo em um [ServiceWorker](/pt-BR/docs/Web/API/Service_Worker_API) se deseja pegar a resposta de um servidor e disponibilizar via stream no navegador, mas, também disponibilizá-lo via cache do ServiceWorker. Uma vez que o corpo da resposta não pode ser consumido mais que uma vez, e um stream não pode ser lido por mais de um reader por vez, você precisaria de duas cópias para fazer isto.
 
-![](https://mdn.mozillademos.org/files/15820/tee.png)
+![](tee.png)
 
 ## Writable streams
 
@@ -56,7 +56,7 @@ Uma **internal queue** mantém os chunks que foram escritos por um stream mas n�
 
 Há uma construção que você usará chamada controller — cada writer tem um controller associado que permite a você controlar o stream (por exemplo, abortá-lo se desejado).
 
-![](https://mdn.mozillademos.org/files/15821/writable%20streams.png)
+![](writable_streams.png)
 
 Você pode fazer uso de writable streams usando o construtor
 
@@ -71,7 +71,7 @@ A API de Streams torna possível encadear streams (ou pelo menos irá fazer quan
 
 Para iniciar um pipe chain é chamado o **original source**, e no final é chamado **ultimate sink**.
 
-![](https://mdn.mozillademos.org/files/15818/PipeChain.png)
+![](pipechain.png)
 
 > **Nota:** Esta funcionalidade não está totalmente pensada ainda, embora disponível em muitos navegadores. Até certo ponto espero que a especificação dos writers pode contribuir para algo como uma clase `TransformStream` para criar facilmente transform stream.
 

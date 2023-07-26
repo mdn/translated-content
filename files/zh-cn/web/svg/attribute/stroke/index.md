@@ -3,9 +3,9 @@ title: stroke
 slug: Web/SVG/Attribute/stroke
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
-`stroke`属性定义了给定图形元素的外轮廓的颜色。它的默认值是**none**。
+`stroke` 属性定义了给定图形元素的外轮廓的颜色。它的默认值是 **`none`**。
 
 ## 用法
 
@@ -15,8 +15,6 @@ slug: Web/SVG/Attribute/stroke
 | 可变性 | 是                                    |
 
 ## 示例
-
-​
 
 ## SVG 描边的线
 
@@ -31,7 +29,7 @@ slug: Web/SVG/Attribute/stroke
 ### 示例 2：用 Stroke 属性画一个拥有蓝色边框的黑色的圆形
 
 ```html
-​​<svg height="200" width="200">
+<svg height="200" width="200">
     <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="2" fill ="black" />
 </svg>
 ```

@@ -1,16 +1,6 @@
 ---
 title: webNavigation.onCreatedNavigationTarget
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCreatedNavigationTarget
-  - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget
 ---
 
@@ -29,11 +19,11 @@ Si cet événement est déclenché, il sera déclenché avant {{WebExtAPIRef("we
 
 ```js
 browser.webNavigation.onCreatedNavigationTarget.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onCreatedNavigationTarget.removeListener(listener)
-browser.webNavigation.onCreatedNavigationTarget.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onCreatedNavigationTarget.removeListener(listener);
+browser.webNavigation.onCreatedNavigationTarget.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -78,9 +68,9 @@ Les événements ont trois fonctions :
 - `windowId`
   - : number. L'ID de la fenêtre dans laquelle le nouvel onglet est créé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onCreatedNavigationTarget")}}
+{{Compat}}
 
 ## Exemples
 
@@ -88,12 +78,8 @@ Logs l'URL cible, l'ID de la table source et l'ID de la trame source pour `onCre
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnCreatedNavigationTarget(details) {
   console.log("onCreatedNavigationTarget: " + details.url);
@@ -101,7 +87,10 @@ function logOnCreatedNavigationTarget(details) {
   console.log(details.sourceFrameId);
 }
 
-browser.webNavigation.onCreatedNavigationTarget.addListener(logOnCreatedNavigationTarget, filter);
+browser.webNavigation.onCreatedNavigationTarget.addListener(
+  logOnCreatedNavigationTarget,
+  filter,
+);
 ```
 
 {{WebExtExamples}}

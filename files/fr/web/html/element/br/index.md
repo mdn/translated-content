@@ -1,14 +1,7 @@
 ---
 title: '<br> : l''élément de saut de ligne'
 slug: Web/HTML/Element/br
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/br
-browser-compat: html.elements.br
 ---
 
 {{HTMLSidebar}}
@@ -50,7 +43,7 @@ Mountain View, CA<br>
 USA<br>
 ```
 
-Le résultat ressemble à ceci :
+#### Résultat
 
 {{EmbedLiveSample('Simple_rupture_de_ligne', '', '130')}}
 

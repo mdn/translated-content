@@ -1,15 +1,6 @@
 ---
 title: line-break
 slug: Web/CSS/line-break
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - i18n
-  - l10n
-  - recipe:css-property
-translation_of: Web/CSS/line-break
 ---
 
 {{CSSRef}}

@@ -1,15 +1,6 @@
 ---
 title: tabs.goBack()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/goBack
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - hoBack
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/goBack
 ---
 
@@ -23,9 +14,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var withgoingBack = browser.tabs.goBack(
-  tabId,                  // optional integer
-  callback                  // optional function
-)
+  tabId, // optional integer
+  callback, // optional function
+);
 ```
 
 ### Paramètres
@@ -39,9 +30,9 @@ var withgoingBack = browser.tabs.goBack(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est tenue lorsque la navigation sur la page se termine.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.goBack")}}
+{{Compat}}
 
 ## Exemples
 

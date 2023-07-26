@@ -46,7 +46,7 @@ wm.has(window);    // Возвращает false. Объекта window боль
 
 ## Firefox-specific notes
 
-- Prior to SpiderMonkey 38 {{geckoRelease(38)}}, this method threw a {{jsxref("TypeError")}} when the `key` parameter was not an object. This has been fixed in version 38 and later to return `false` as per latest ES6 standard ({{bug(1127827)}}).
+- Prior to SpiderMonkey 38, this method threw a {{jsxref("TypeError")}} when the `key` parameter was not an object. This has been fixed in version 38 and later to return `false` as per latest ES6 standard ({{bug(1127827)}}).
 
 ## Смотрите также
 

@@ -1,29 +1,31 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
-original_slug: Web/CSS/word-wrap
 ---
 
 {{CSSRef}}
 
 {{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-wrap`** 是用来说明当一个不能被分开的字符串太长而不能填充其包裹盒时，为防止其溢出，浏览器是否允许这样的单词中断换行。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-wrap`** 应用于行级元素，用来设置浏览器是否应该在一个本来不能断开的字符串中插入换行符，以防止文本溢出其行向盒。
 
-> **备注：** 与{{cssxref("word-break")}}相比，`overflow-wrap`仅在无法将整个单词放在自己的行而不会溢出的情况下才会产生中断。
+> **备注：** 与 {{cssxref("word-break")}} 相比，`overflow-wrap` 仅在无法将整个单词放在自己的行而不会溢出的情况下才会产生换行。
 
-> **备注：** word-wrap 属性原本属于微软的一个私有属性，在 CSS3 现在的文本规范草案中已经被重名为 {{cssxref("overflow-wrap")}} 。word-wrap 现在被当作 overflow-wrap 的“别名”。稳定的谷歌 Chrome 和 Opera 浏览器版本支持这种新语法。
+这个属性原本属于微软扩展的一个非标准、无前缀的属性，叫做 `word-wrap`，后来在大多数浏览器中以相同的名称实现。目前它已被更名为 {{cssxref("overflow-wrap")}}，`word-wrap` 相当于其别称。
 
 ## 语法
 
-```
-/* Keyword values */
+```css
+/* 关键词值 */
 overflow-wrap: normal;
 overflow-wrap: break-word;
+overflow-wrap: anywhere;
 
-/* Global values */
+/* 全局值 */
 overflow-wrap: inherit;
 overflow-wrap: initial;
+overflow-wrap: revert;
+overflow-wrap: revert-layer;
 overflow-wrap: unset;
 ```
 
@@ -32,9 +34,11 @@ overflow-wrap: unset;
 ### 值
 
 - `normal`
-  - : 行只能在正常的单词断点处中断。（例如两个单词之间的空格）。
+  - : 行只能在正常的单词断点（例如两个单词之间的空格）处换行。
+- `anywhere`
+  - : 为防止溢出，如果行中没有其他可接受的断点，则不可断的字符串（如长词或 URL）可能会在任何时候换行。在断点处不会插入连字符。在计算最小内容内在大小时，会考虑由单词换行引入的软换行机会。
 - `break-word`
-  - : 表示如果行内没有多余的地方容纳该单词到结尾，则那些正常的不能被分割的单词会被强制分割换行。
+  - : 与 anywhere 值相同，如果行中没有其他可接受的断点，则允许在任意点将通常不可断的单词换行，但在计算最小内容内在大小时不考虑断字引入的软换行机会。
 
 ## 形式语法
 
@@ -44,7 +48,7 @@ overflow-wrap: unset;
 
 ### 比较 overflow-wrap、word-break 和 hyphens
 
-本示例比较分解长单词时，`overflow-wrap`, `word-break`, `hyphens` 的结果。
+本示例比较分解长单词时，`overflow-wrap`、`word-break`、`hyphens` 的结果。
 
 #### HTML
 
@@ -106,8 +110,6 @@ p {
 
 {{Specifications}}
 
-{{cssinfo}}
-
 ## 浏览器兼容性
 
 {{Compat}}
@@ -117,3 +119,4 @@ p {
 - {{cssxref("word-break")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("text-overflow")}}
+- [换行和折行文本的指引](/zh-CN/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

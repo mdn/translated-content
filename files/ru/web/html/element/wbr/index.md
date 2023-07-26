@@ -9,13 +9,13 @@ translation_of: Web/HTML/Element/wbr
 
 **{{EmbedInteractiveExample("pages/tabbed/wbr.html", "tabbed-shorter")}}**
 
-| Категории контента                | **[Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).** |
+| Категории контента                | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Flow_content), [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content). |
 | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Разрешённое содержимое**        | **Отсутствует**                                                                                                                                                 |
-| Пропуск тега                      | **It is an {{Glossary("empty element")}}; it must have a start tag, but must not have an end tag.**                                                  |
-| Разрешённые родительские элементы | **Любой элемент принимающий [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).**                                                  |
-| Разрешённые роли ARIA             | **Любые**                                                                                                                                                       |
-| DOM-интерфейс                     | **{{domxref("HTMLElement")}}**                                                                                                                        |
+| Допустимое содержимое             | Отсутствует                                                                                                                                                 |
+| Пропуск тегов                     | It is an {{Glossary("empty element")}}; it must have a start tag, but must not have an end tag.                                                  |
+| Допустимые родители               | Любой элемент принимающий [фразовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                  |
+| Допустимые ARIA-роли              | Любые                                                                                                                                                       |
+| DOM-интерфейс                     | {{domxref("HTMLElement")}}                                                                                                                        |
 
 ## Атрибуты
 

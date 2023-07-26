@@ -26,7 +26,7 @@ wm.set(key, value);
 
 该`WeakMap`对象
 
-## 例子
+## 示例
 
 ### 使用 `set` 方法
 

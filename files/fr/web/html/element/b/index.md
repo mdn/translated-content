@@ -1,18 +1,7 @@
 ---
 title: '<b> : l''élément portant à l''attention'
 slug: Web/HTML/Element/b
-tags:
-  - Attention
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/b
-browser-compat: html.elements.b
 ---
 
 {{HTMLSidebar}}
@@ -99,7 +88,7 @@ Seuls [les attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent ê
 - Historiquement, l'élément `<b>` a été pensé pour rendre du texte avec une police grasse. Les éléments à seul but stylistique ont été dépréciés avec HTML 4. Ainsi, le sens de l'élément `<b>` a évolué.
 - S'il n'y a aucune raison particulière d'utiliser l'élément `<b>`, en dehors de son apparence en gras, l'utilisation de la propriété [CSS](/fr/docs/Web/CSS) [`font-weight`](/fr/docs/Web/CSS/font-weight) avec une valeur `bold` est à privilégier.
 
-## Exemple
+## Exemples
 
 ```html
 <p>

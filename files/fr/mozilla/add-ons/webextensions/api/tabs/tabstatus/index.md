@@ -1,16 +1,6 @@
 ---
 title: tabs.TabStatus
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/TabStatus
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - TabStatus
-  - Type
-  - WebExtensions
-  - tazbs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/TabStatus
 ---
 
@@ -22,9 +12,9 @@ Indique si l'onglet a terminé le chargement.
 
 Les valeurs de ce type sont des chaînes. Les valeurs possibles sont : `"loading"` et `"complete"`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.TabStatus")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

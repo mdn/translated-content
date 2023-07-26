@@ -49,7 +49,7 @@ box-sizing 属性可以被用来调整这些表现：
     - `width` = border + padding + 内容的宽度
     - `height` = border + padding + 内容的高度
 
-### 形式化语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -93,9 +93,9 @@ div {
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample('Examples', 'auto', 300)}}
+{{EmbedLiveSample('示例', 'auto', 300)}}
 
 ## 规范
 

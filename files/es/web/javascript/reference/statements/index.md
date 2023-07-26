@@ -1,11 +1,6 @@
 ---
 title: Sentencias
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - Referencia
-  - sentencias
-translation_of: Web/JavaScript/Reference/Statements
 original_slug: Web/JavaScript/Referencia/Sentencias
 ---
 

@@ -1,17 +1,6 @@
 ---
 title: userScripts.onBeforeScript
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
-tags:
-  - Add-ons
-  - Addons
-  - Customisation
-  - Extensions
-  - Firefox
-  - Mozilla
-  - Reference
-  - User Scripts API
-  - WebExtensions
-  - userScripts
 translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
 ---
 
@@ -22,23 +11,23 @@ L'événement `beforeScript` se déclenche juste avant l'exécution d'un script 
 ## Syntaxe
 
 ```js
-browser.userScripts.onBeforeScript = functionRef
-browser.userScripts.onBeforeScript.addListener(functionRef)
-browser.userScripts.onBeforeScript.removeListener(functionRef)
-browser.userScripts.onBeforeScript.hasListener(functionRef)
+browser.userScripts.onBeforeScript = functionRef;
+browser.userScripts.onBeforeScript.addListener(functionRef);
+browser.userScripts.onBeforeScript.removeListener(functionRef);
+browser.userScripts.onBeforeScript.hasListener(functionRef);
 ```
 
 ### Value
 
-`functionRef` est la function de gestionnaire à appeler lorsque l'événement `beforeScript`  du script utilisateur se déclenche.
+`functionRef` est la function de gestionnaire à appeler lorsque l'événement `beforeScript` du script utilisateur se déclenche.
 
 ## Exemples
 
 Voir [ce billet de blog](https://blog.mozilla.org/addons/2019/03/26/extensions-in-firefox-67/#userscripts) pour des exemples détaillés
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.userScripts.onBeforeScript")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -33,7 +33,7 @@ var metaKeyPressed = instanceOfKeyboardEvent.metaKey
  }
 ```
 
-{{ EmbedLiveSample('Example', 400, 36) }}
+{{ EmbedLiveSample('示例', 400, 36) }}
 
 ## 规范
 

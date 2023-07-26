@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.onconnectionstatechange
 slug: Web/API/RTCPeerConnection/connectionstatechange_event
-translation_of: Web/API/RTCPeerConnection/onconnectionstatechange
 original_slug: Web/API/RTCPeerConnection/onconnectionstatechange
 ---
 

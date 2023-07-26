@@ -14,7 +14,7 @@ translation_of: Web/API/HTMLElement
 
 _Наследует свойства родителя, {{domxref("Element")}}, и реализует их через {{domxref("GlobalEventHandlers")}} и {{domxref("TouchEventHandlers")}}._
 
-- {{domxref("HTMLElement.accessKey")}} -- ключ доступа
+- {{domxref("HTMLElement.accessKey")}} — ключ доступа
   - : Эта строковая переменная {{domxref("DOMString")}} отображает ключ доступа, сопоставленный элементу _{{domxref("Element")}}_.
 - {{domxref("HTMLElement.accessKeyLabel")}} {{readonlyInline}}
   - : Возвращает {{domxref ("DOMString")}}, содержащий назначенный ключ доступа элемента.
@@ -24,7 +24,7 @@ _Наследует свойства родителя, {{domxref("Element")}}, �
   - : Возвращает {{domxref ("Boolean")}}, который указывает, можно ли редактировать содержимое элемента.
 - {{domxref("HTMLElement.contextMenu")}}
   - : Является {{domxref ("HTMLMenuElement")}}, представляющим контекстное меню, связанное с элементом. Может быть null
-- {{domxref("HTMLElement.dataset")}} {{readonlyInline}} -- набор данных
+- {{domxref("HTMLElement.dataset")}} {{readonlyInline}} — набор данных
   - : Возвращает {{domxref("domstringmap")}}, который позволяет получить доступ к чтению и записи атрибутов пользовательских данных элемента (data-\*) .
 - {{domxref("HTMLElement.dir")}}
   - : Is a {{domxref("DOMString")}}, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
@@ -60,7 +60,7 @@ _Наследует свойства родителя, {{domxref("Element")}}, �
   - : Returns a `double` containing the width of an element, relative to the layout.
 - {{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns an {{domxref("HTMLPropertiesCollection")}}…
-- {{domxref("HTMLElement.spellcheck")}}{{ gecko_minversion_inline("1.9")}}
+- {{domxref("HTMLElement.spellcheck")}}
   - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/ru/docs/HTML/Controlling_spell_checking_in_HTML_forms). It is present on all HTML elements, though it hasn't an effect on all of them.
 - {{domxref("HTMLElement.style")}}
   - : Is {{domxref("CSSStyleDeclaration")}}, an object representing the declarations of an element's style attributes.

@@ -224,7 +224,7 @@ We don't yet support the following APIs, but plan to, soon:
 
 #### Localized String Interpolation
 
-We currently do not support interpolation of localized strings `__MSG_` tokens in extension CSS files: {{bug(1209184)}}.
+We currently do not support interpolation of localized strings `__MSG_` tokens in extension CSS files: [Error 1209184 en Firefox](https://bugzil.la/1209184).
 
 #### Relative URLs
 

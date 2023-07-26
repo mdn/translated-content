@@ -128,11 +128,11 @@ python3 -V
 
 1. 下載所需的安裝程序:
 
-    1. 點擊<https://www.python.org/downloads/>
-    2. 選擇**Download Python 3.7.0**按鈕(確切的版本號可能不同).
+   1. 點擊<https://www.python.org/downloads/>
+   2. 選擇**Download Python 3.7.0**按鈕(確切的版本號可能不同).
 
 2. 使用 Finder 找到文件，然後雙擊包文件。遵循安裝提示。
-    （一般能拖拽就拖拽）
+   （一般能拖拽就拖拽）
 
 你現在可以檢查 Pyhon 3 來確認成功安裝，如下所示:
 
@@ -153,9 +153,9 @@ windows 默認不安裝,但你可以從[python.org](https://www.python.org/)輕�
 
 1. 下載所需版本:
 
-    1. 點擊<https://www.python.org/downloads/>
-    2. 選擇**Download Python 3.7.0** 按鈕(確切的版本號可能不同).
-    3. 通過雙擊下載的文件並按照提示安裝 Python
+   1. 點擊 <https://www.python.org/downloads/>
+   2. 選擇 **Download Python 3.7.0** 按鈕(確切的版本號可能不同).
+   3. 通過雙擊下載的文件並按照提示安裝 Python
 
 你可以通過在命令提示符中輸入以下文本來驗證是否安裝了 Python:
 
@@ -170,7 +170,7 @@ py -3 -V
 pip3 list
 ```
 
-> **備註：** 安裝程序應設置上述命令工作所需的一切。但是，如果您收到無法找到 Python 的消息，則可能忘記將其添加到系統路徑中。您可以通過再次運行安裝程序，選擇“修改”"Modify"，然後選中第二頁上標有“將 Python 添加到環境變量”"Add Python to environment variables"的框來執行此操作。
+> **備註：** 安裝程序應設置上述命令工作所需的一切。但是，如果您收到無法找到 Python 的消息，則可能忘記將其添加到系統路徑中。您可以通過再次運行安裝程序，選擇「修改」"Modify"，然後選中第二頁上標有「將 Python 添加到環境變量」"Add Python to environment variables"的框來執行此操作。
 
 ## 在 Python 虛擬環境中使用 Django
 
@@ -289,16 +289,16 @@ pip3 install virtualenvwrapper-win
 
 一旦你安裝了 virtualenvwrapper 或 virtualenvwrapper-win，那麼在所有平台上使用虛擬環境都非常相似。
 
-現在，您可以使用`mkvirtualenv`命令創建新的虛擬環境。當此命令運行時，您將看到正在設置的環境（您看到的是略微特定 ​​ 於平台的）。當命令完成時，新的虛擬環境，將處於活動狀態 - 您可以看到這一點，因為提示的開頭，將是括號中環境的名稱（如下所示）。
+現在，您可以使用`mkvirtualenv`命令創建新的虛擬環境。當此命令運行時，您將看到正在設置的環境（您看到的是略微特定 於平台的）。當命令完成時，新的虛擬環境，將處於活動狀態 - 您可以看到這一點，因為提示的開頭，將是括號中環境的名稱（如下所示）。
 
-  ```
-  $ mkvirtualenv my_django_environment
+```
+$ mkvirtualenv my_django_environment
 
-  Running virtualenv with interpreter /usr/bin/python3
-  ...
-  virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
-  (my_django_environment) ubuntu@ubuntu:~$
-  ```
+Running virtualenv with interpreter /usr/bin/python3
+...
+virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get_env_details
+(my_django_environment) ubuntu@ubuntu:~$
+```
 
 現在，您可以在虛擬環境中，安裝 Django，並開始開發。
 
@@ -352,7 +352,7 @@ mkdir django_test
 cd django_test
 ```
 
-然後，您可以使用**django-admin**工具創建一個名為“ **mytestsite** ”的新骨架站點，如圖所示。創建網站後，您可以導航到文件夾，您將在其中找到管理項目的主要腳本，名為**manage.py**。
+然後，您可以使用**django-admin**工具創建一個名為「 **mytestsite** 」的新骨架站點，如圖所示。創建網站後，您可以導航到文件夾，您將在其中找到管理項目的主要腳本，名為**manage.py**。
 
 ```bash
 django-admin startproject mytestsite
@@ -376,7 +376,7 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-> **備註：** 以上命令顯示 Linux / macOS X 命令。此時您可以忽略有關“14 個未應用的遷移”的警告！（"14 unapplied migration(s)" ）
+> **備註：** 以上命令顯示 Linux / macOS X 命令。此時您可以忽略有關「14 個未應用的遷移」的警告！（"14 unapplied migration(s)" ）
 
 一旦服務器運行，您可以通過導航到本地 Web 瀏覽器上的以下 URL 來查看該站點：`http://127.0.0.1:8000/`。你應該看到一個如下所示的網站：
 
@@ -395,21 +395,3 @@ Quit the server with CONTROL-C.
 - [How to install Django on Windows](https://docs.djangoproject.com/en/2.0/howto/windows/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
-
-## 本教程連結
-
-- [Django introduction](/zh-TW/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/zh-TW/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/zh-TW/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/zh-TW/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/zh-TW/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/zh-TW/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/zh-TW/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/zh-TW/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/zh-TW/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/zh-TW/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/zh-TW/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/zh-TW/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/zh-TW/docs/Learn/Server-side/Django/django_assessment_blog)

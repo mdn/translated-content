@@ -1,12 +1,7 @@
 ---
 title: Cellule de grille
 slug: Glossary/Grid_Cell
-tags:
-  - CSS
-  - Glossaire
-  - Grilles
 translation_of: Glossary/Grid_Cell
-original_slug: Glossaire/Cellule_de_grille
 ---
 
 Dans une [Grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout), une **cellule de grille** est la plus petite unité de la grille CSS. Elle est un espace entre 4 intersections {{glossary("grid lines","lignes de grille")}} et conceptuellement assimilable à une cellule de tableau.
@@ -20,38 +15,40 @@ Dans l'exemple, nous avons créé une grille de trois colonnes. Les cinq éléme
 ## Exemple
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
 }
 ```
 
 ```html
 <div class="wrapper">
-   <div>One</div>
-   <div>Two</div>
-   <div>Three</div>
-   <div>Four</div>
-   <div>Five</div>
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
 </div>
 ```
 

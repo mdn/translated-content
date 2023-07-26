@@ -53,11 +53,11 @@ document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `delete`
   - : 刪除目前選取的區域。
 - `enableAbsolutePositionEditor`
-  - : 啟用或停用用於移動絕對定位元素的抓取器。這個指令在 Firefox 63 Beta/Dev 版本中預設停用（{{bug(1449564)}}）。
+  - : 啟用或停用用於移動絕對定位元素的抓取器。這個指令在 Firefox 63 Beta/Dev 版本中預設停用（[Firefox bug 1449564](https://bugzil.la/1449564)）。
 - `enableInlineTableEditing`
-  - : 啟用或停用表格的列 / 欄的插入及刪除。此指令在 Firefox 63 Beta/Dev 版本中預設停用 ({{bug(1449564)}})。
+  - : 啟用或停用表格的列 / 欄的插入及刪除。此指令在 Firefox 63 Beta/Dev 版本中預設停用（[Firefox bug 1449564](https://bugzil.la/1449564)）。
 - `enableObjectResizing`
-  - : 啟用或停用圖片、表格、絕對定位元素、其他可重設大小物件的重設大小處理。此指令在 Firefox 63 Beta/Dev 版本中預設停用 ({{bug(1449564)}})。
+  - : 啟用或停用圖片、表格、絕對定位元素、其他可重設大小物件的重設大小處理。此指令在 Firefox 63 Beta/Dev 版本中預設停用（[Firefox bug 1449564](https://bugzil.la/1449564)）。
 - `fontName`
   - : 變更選取區域或插入點的字型名稱。此指令需要字型名稱字串（如「Arial」）作為引數值。
 - `fontSize`

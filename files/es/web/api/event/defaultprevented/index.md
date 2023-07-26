@@ -9,7 +9,7 @@ slug: Web/API/Event/defaultPrevented
 
 Retorna un boleano indicando si {{ domxref("event.preventDefault()") }} fue llamado en el evento o no.
 
-> **Nota:** Deberías usar este en lugar del que no es estándar, el método obsoleto `getPreventDefault()` (ver {{ bug(691151) }}).
+> **Nota:** Deberías usar este en lugar del que no es estándar, el método obsoleto `getPreventDefault()` (ver [Error 691151 en Firefox](https://bugzil.la/691151)).
 
 ### Sintaxis
 
@@ -25,6 +25,10 @@ bool = event.defaultPrevented
  }
 ```
 
-### Compatibilidad del Navegador
+## Especificaciones
 
-{{Compat("api.Event.defaultPrevented")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

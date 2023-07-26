@@ -1,16 +1,6 @@
 ---
 title: webNavigation.TransitionQualifier
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - TransitionQualifier
-  - Type
-  - WebExtensions
-  - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier
 ---
 
@@ -29,9 +19,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - "from_address_bar"
   - : L'utilisateur a déclenché la navigation depuis la barre d'adresse.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.TransitionQualifier")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

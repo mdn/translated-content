@@ -122,7 +122,7 @@ div {
 </ol>
 ```
 
-{{EmbedLiveSample('Example_hidden', '300px', '300px', '')}}
+{{EmbedLiveSample('示例', '300px', '300px', '')}}
 
 ## 规范
 
@@ -132,7 +132,12 @@ div {
 
 {{Compat}}
 
-## 了解更多
+## 参见
 
-- [使用 CSS 渐变](/zh-CN/CSS/Using_CSS_gradients)
-- 其他渐变方法：{{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("repeating-radial-gradient")}}
+- [使用 CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- 其他渐变函数：{{cssxref("gradient/linear-gradient", "linear-gradient()")}}、{{cssxref("gradient/radial-gradient", "radial-gradient()")}}、{{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}、{{cssxref("gradient/conic-gradient", "conic-gradient()")}}、{{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
+- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image/image","image()")}}
+- {{cssxref("element", "element()")}}
+- {{cssxref("image/image-set","image-set()")}}
+- {{cssxref("cross-fade", "cross-fade()")}}

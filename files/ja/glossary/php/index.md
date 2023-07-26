@@ -28,13 +28,13 @@ PHP (再帰的な頭文字語で PHP: Hypertext Preprocessor) はオープンソ
 ### PHP の変数
 
 ```php
-​​​​​​​​​​​​​​<?php
+<?php
  // variables
  $nome='Danilo';
  $sobrenome='Santos';
  $pais='Brasil';
  $email='danilocarsan@gmailcom';
-​​​​​​​
+
  // printing the variables
  echo $nome;
  echo $sobrenome;
@@ -48,7 +48,7 @@ PHP (再帰的な頭文字語で PHP: Hypertext Preprocessor) はオープンソ
 3. Wikibooks 上の [PHP](https://ja.wikibooks.org/wiki/PHP)
 4. [MDN Web Docs 用語集](/ja/docs/Glossary)
 
-    1. {{Glossary("Java")}}
-    2. {{Glossary("JavaScript")}}
-    3. {{Glossary("Python")}}
-    4. {{Glossary("Ruby")}}
+   1. {{Glossary("Java")}}
+   2. {{Glossary("JavaScript")}}
+   3. {{Glossary("Python")}}
+   4. {{Glossary("Ruby")}}

@@ -264,7 +264,7 @@ Esto significa que necesitamos especificar el tamaño de letra para el título d
 Si observas el tipo de letra de una página HTML responsiva, en general vas a encontrar la siguiente etiqueta {{htmlelement ("meta")}} en la cabecera del documento.
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 Esta metaetiqueta informa a los navegadores de los dispositivos móviles que deben establecer el ancho de la ventana gráfica al ancho del dispositivo y escalar el documento al 100% de ese tamaño, de modo que el documento se mostrará al tamaño optimizado para esos dispositivos móviles.
@@ -287,8 +287,6 @@ Con la metaetiqueta `viewport` puedes usar otras configuraciones, aunque, en gen
 
 Deberías evitar el uso de `minimum-scale` y `maximum-scale`, y en particular establecer `user-scalable` en `no`. Hay que permitir a los usuarios hacer zoom tanto o tan poco como lo necesiten; evitarlo provoca problemas de accesibilidad.
 
-> **Nota:** Hay una @regla CSS establecida para reemplazar la metaetiqueta `viewport`: [@viewport](/es/docs/Web/CSS/@viewport). Sin embargo, tiene poca compatibilidad con los navegadores. Se implementó en Internet Explorer y Edge, pero una vez que se lance el navegador Edge basado en Chromium, dejará de formar parte del navegador Edge.
-
 ## Resumen
 
 El diseño responsivo se refiere a un diseño página de un sitio web o una aplicación que responde al entorno en el que se visualiza. Abarca una serie de características y técnicas de CSS y HTML, y ahora es esencialmente el modo como construimos los sitios web de forma predeterminada. Piensa en los sitios web que visitas con tu dispositivo móvil; probablemente sea inusual encontrar un sitio web que tenga la versión de escritorio reducida o en que necesites desplazarse hacia los lados para encontrar las cosas. Esto se debe a que la web se ha movido a este enfoque de diseño responsivo.
@@ -296,18 +294,3 @@ El diseño responsivo se refiere a un diseño página de un sitio web o una apli
 Además, lograr diseños responsivos se ha vuelto mucho más fácil con la ayuda de los métodos de diseño que has aprendido en estos artículos. Si eres nuevo en el desarrollo web, hoy tienes muchas más herramientas a tu disposición que en los primeros días del diseño de página responsivo. Por lo tanto, vale la pena verificar la antigüedad de los materiales que consultas. Si bien los artículos históricos continúan siendo útiles, el uso moderno de CSS y HTML facilita mucho la creación de diseños elegantes y útiles, sin importar con qué dispositivo el visitante visita el sitio.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
-
-## En este módulo
-
-- [Introducción al diseño CSS](/es/docs/Learn/CSS/CSS_layout/Introduction)
-- [Flujo normal](/es/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Cuadrícula](/es/docs/Learn/CSS/CSS_layout/Grids)
-- [Elementos flotantes](/es/docs/Learn/CSS/CSS_layout/Floats)
-- [Posicionamiento](/es/docs/Learn/CSS/CSS_layout/Positioning)
-- [Diseño en columnas](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Diseño responsivo](/es/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Guía para principiantes sobre consultas a medios](/es/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Métodos de compaginación heredados](/es/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Compatibilidad de navegadores antiguos](/es/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Evaluación del conjunto de elementos básicos de compaginación](/es/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

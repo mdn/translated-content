@@ -1,13 +1,6 @@
 ---
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Method
-  - Promise
-  - 레퍼런스
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
 {{JSRef}}
 

@@ -13,7 +13,11 @@ slug: Web/CSS/:focus-visible
 
 ## 语法
 
-{{csssyntax}}
+```css
+:focus-visible {
+  /* ... */
+}
+```
 
 ## 示例
 
@@ -44,7 +48,7 @@ input, button {
 }
 ```
 
-{{EmbedLiveSample('Basic_example', '100%', '300')}}
+{{EmbedLiveSample('基本示例', '100%', '300')}}
 
 ### 选择性地显示焦点
 
@@ -82,7 +86,7 @@ custom-button:focus-visible {
 }
 ```
 
-{{EmbedLiveSample('Selectively_showing_the_focus_indicator', '100%', '300')}}
+{{EmbedLiveSample('选择性地显示焦点', '100%', '300')}}
 
 ## Polyfill
 

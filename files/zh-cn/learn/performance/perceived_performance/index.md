@@ -1,6 +1,6 @@
 ---
 title: 感知性能
-slug: Learn/Performance/perceived_performance
+slug: Learn/Performance/Perceived_performance
 original_slug: learn/Performance/感知性能
 ---
 
@@ -94,18 +94,3 @@ Make things like type-ahead a progressive enhancement: use css to display input 
 By turning as much of the download, render and wait time into active phases and reducing any passive waiting, even if the objective measurements stay the same, the user will feel like the content downloaded, rendered, and responded more quickly. Now that we know what we should be speeding up, let's take a look at some metrics and learn how we can measure these events.
 
 {{PreviousMenuNext("Learn/Performance/what_is_web_performance", "Learn/Performance/Measuring_performance", "Learn/Performance")}}
-
-## In this module
-
-- [The "why" of web performance](/zh-CN/docs/Learn/Performance/why_web_performance)
-- [What is web performance?](/zh-CN/docs/Learn/Performance/What_is_web_performance)
-- [How do users perceive performance?](/zh-CN/docs/Learn/Performance/Perceived_performance)
-- [Measuring performance](/zh-CN/docs/Learn/Performance/Measuring_performance)
-- [Multimedia: images](/zh-CN/docs/Learn/Performance/Multimedia)
-- [Multimedia: video](/zh-CN/docs/Learn/Performance/video)
-- [JavaScript performance best practices](/zh-CN/docs/Learn/Performance/JavaScript).
-- [HTML performance features](/zh-CN/docs/Learn/Performance/HTML)
-- [CSS performance features](/zh-CN/docs/Learn/Performance/CSS)
-- [Fonts and performance](/zh-CN/docs/Learn/Performance/Fonts)
-- [Mobile performance](/zh-CN/docs/Learn/Performance/Mobile)
-- [Focusing on performance](/zh-CN/docs/Learn/Performance/business_case_for_performance)

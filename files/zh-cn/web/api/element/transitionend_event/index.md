@@ -7,7 +7,7 @@ slug: Web/API/Element/transitionend_event
 
 {{domxref("GlobalEventHandlers")}} 混入对象的 **`ontransitionend`** 属性是一个处理 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 事件的 [事件处理函数](/zh-CN/docs/Web/Events/Event_handlers)。
 
-`transitionend` 事件的事件处理函数，在某个 [CSS transition](/zh-CN/docs/Web/CSS/CSS_Transitions) 完成时触发。
+`transitionend` 事件的事件处理函数，在某个 [CSS transition](/zh-CN/docs/Web/CSS/CSS_transitions) 完成时触发。
 
 > **备注：** 如果在 transition 完成前，该 transition 已从目标节点上移除，那么 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 将不会被触发。一种可能的情况是修改了目标节点的 {{cssxref("transition-property")}} 属性，另一种可能的情况是 {{cssxref("display")}} 属性被设为 `"none"`。
 
@@ -27,7 +27,7 @@ target.ontransitionend = {{jsxref("Global_Objects/Function", "Function")}}
 
 ## 示例
 
-本例中，我们使用了 [`transitionrun`](/zh-CN/docs/Web/API/Element/transitionrun_event) 和 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 事件来监测 transition 的开始和结束，从而在 transition 的过程中更新文本。这也可以被用来触发动画或者其它效果来实现连锁反应。
+本例中，我们使用了 [`transitionrun`](/zh-CN/docs/Web/API/Element/transitionrun_event) 和 [`transitionend`](/zh-CN/docs/Web/API/Element/transitionend_event) 事件来监测 transition 的开始和结束，从而在 transition 的过程中更新文本。这也可以被用来触发动画或者其他效果来实现连锁反应。
 
 ### HTML
 

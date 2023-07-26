@@ -38,8 +38,8 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 所有文本框都有一些通用规范：
 
-- 它们可以被标记为 {{htmlattrxref("readonly","input")}}（用户不能修改输入值）甚至是 {{htmlattrxref("disabled","input")}}（输入值永远不会与表单数据的其余部分一起发送）。
-- 它们可以有一个 {{htmlattrxref("placeholder","input")}}；这是文本输入框中出现的文本，用来简略描述输入框的目的。
+- 它们可以被标记为 [`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly)（用户不能修改输入值）甚至是 [`disabled`](/zh-CN/docs/Web/HTML/Element/input#disabled)（输入值永远不会与表单数据的其余部分一起发送）。
+- 它们可以有一个 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder)；这是文本输入框中出现的文本，用来简略描述输入框的目的。
 - 它们可以使用 [`size`](/zh-CN/docs/Web/HTML/Attributes/size)（框的物理尺寸）和 [`maxlength`](/zh-CN/docs/Web/HTML/Attributes/maxlength)（可以输入的最大字符数）进行限制。
 - 如果浏览器支持的话，它们可以从拼写检查（使用 [`spellcheck`](/zh-CN/docs/Web/HTML/Global_attributes/spellcheck) 属性）中获益。
 
@@ -47,30 +47,30 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 ### 单行文本框
 
-使用 {{htmlattrxref("type","input")}} 属性值被设置为 `text` 的 {{HTMLElement("input")}} 元素创建一个单行文本框（同样的，如果你不提供 {{htmlattrxref("type","input")}} 属性，该属性将被默认设置为 `text`）。在你指定的 {{htmlattrxref("type","input")}} 属性的值在浏览器中是未知的情况下（比如你指定 `type="date"`，但是浏览器不支持原生日期选择器），属性值也将会回落到 `text`。
+使用 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值被设置为 `text` 的 {{HTMLElement("input")}} 元素创建一个单行文本框（同样的，如果你不提供 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性，该属性将被默认设置为 `text`）。在你指定的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的值在浏览器中是未知的情况下（比如你指定 `type="date"`，但是浏览器不支持原生日期选择器），属性值也将会回落到 `text`。
 
 > **备注：** 你可以在 Github 上的 [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) 找到所有单行文本框类型（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)）。
 
 这是一个基本的单行文本框示例：
 
 ```html
-<input type="text" id="comment" name="comment" value="I'm a text field">
+<input type="text" id="comment" name="comment" value="I'm a text field" />
 ```
 
 单行文本框只有一个真正的约束：如果您输入带有换行符的文本，浏览器会在发送数据之前删除这些换行符。
 
-*以下截图现实了 macOS 上的 Firefox 71 和 Safair 以及 Windows 10 上的 Chrome 79 和 Edge 18 中的默认、聚焦和禁用的文本输入框。*
+_以下截图现实了 macOS 上的 Firefox 71 和 Safair 以及 Windows 10 上的 Chrome 79 和 Edge 18 中的默认、聚焦和禁用的文本输入框。_
 
 ![Screenshot of the disabled attribute and default :focus styles on a text input in Firefox, Safari, Chrome and Edge.](disabled.png)
 
-> **备注：** HTML5 通过为 {{htmlattrxref("type","input")}} 属性增加特殊值增强了基本单行文本框。这些值仍然将 {{HTMLElement("input")}} 元素转换为单行文本框，但它们为字段添加了一些额外的约束和特性。例如，URL 和 数值类型的约束，我们将会在下一篇文章中介绍：[HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)。
+> **备注：** HTML5 通过为 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性增加特殊值增强了基本单行文本框。这些值仍然将 {{HTMLElement("input")}} 元素转换为单行文本框，但它们为字段添加了一些额外的约束和特性。例如，URL 和 数值类型的约束，我们将会在下一篇文章中介绍：[HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)。
 
 #### 密码框
 
 通过设置 type 属性值为 `password` 来设置该类型框：
 
 ```html
-<input type="password" id="pwd" name="pwd">
+<input type="password" id="pwd" name="pwd" />
 ```
 
 它不会为输入的文本添加任何特殊的约束，但是它会模糊输入到字段中的值（例如，用点或星号），这样它就不能被其他人读取。
@@ -81,15 +81,15 @@ original_slug: Learn/HTML/Forms/The_native_form_widgets
 
 ### 隐藏内容
 
-另一个原生的文本框控件是 `hidden` input 类型。它被用于创建对用户不可见的表单部件，但在发送表单时，会与其它的表单数据一起被发送到服务器——例如，你可能希望向服务器提交一个时间戳，说明订单是何时产生的。因为它是隐藏的，所以用户看不到也不能简单地修改该值，它将永远不会获得焦点，屏幕阅读器也不会注意到它。
+另一个原生的文本框控件是 `hidden` input 类型。它被用于创建对用户不可见的表单部件，但在发送表单时，会与其他的表单数据一起被发送到服务器——例如，你可能希望向服务器提交一个时间戳，说明订单是何时产生的。因为它是隐藏的，所以用户看不到也不能简单地修改该值，它将永远不会获得焦点，屏幕阅读器也不会注意到它。
 
 ```html
-<input type="hidden" id="timestamp" name="timestamp" value="1286705410">
+<input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
 ```
 
 如果您创建了这样一个元素，就需要设置它的 `name` 和 `value` 属性。元素的值可以通过 JavaScript 动态设置。`hidden` input 类型不应有关联的标签（`label` 元素）。
 
-HTML5 中添加了其它的文本输入类型，如：{{HTMLElement("input/search", "search")}}、{{HTMLElement("input/url", "url")}} 和 {{HTMLElement("input/tel", "tel")}}。这些内容将在下一篇文章 [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)中介绍。
+HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/search", "search")}}、{{HTMLElement("input/url", "url")}} 和 {{HTMLElement("input/tel", "tel")}}。这些内容将在下一篇文章 [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)中介绍。
 
 ## 可选中项：复选框和单选按钮
 
@@ -106,7 +106,7 @@ HTML5 中添加了其它的文本输入类型，如：{{HTMLElement("input/searc
 使用 [`type`](/zh-CN/docs/Web/HTML/Element/Input#type) 属性值为 `checkbox` 的 {{HTMLElement("input")}} 元素来创建一个{{HTMLElement("input/checkbox", "复选框")}}。
 
 ```html
-<input type="checkbox" id="questionOne" name="subscribe" value="yes" checked>
+<input type="checkbox" id="questionOne" name="subscribe" value="yes" checked />
 ```
 
 相关的复选框元素应该使用具有相同值的 [`name`](/zh-CN/docs/Web/HTML/Element/Input#name) 属性。包含 `checked` 属性使复选框在页面加载时自动被选中。点击复选框或其相关联的标签也将自动翻转复选框的状态（选中、取消选中）
@@ -117,21 +117,26 @@ HTML5 中添加了其它的文本输入类型，如：{{HTMLElement("input/searc
   <ul>
     <li>
       <label for="carrots">Carrots</label>
-      <input type="checkbox" id="carrots" name="vegetable" value="carrots" checked>
+      <input
+        type="checkbox"
+        id="carrots"
+        name="vegetable"
+        value="carrots"
+        checked />
     </li>
     <li>
       <label for="peas">Peas</label>
-      <input type="checkbox" id="peas" name="vegetable" value="peas">
+      <input type="checkbox" id="peas" name="vegetable" value="peas" />
     </li>
     <li>
       <label for="cabbage">Cabbage</label>
-      <input type="checkbox" id="cabbage" name="vegetable" value="cabbage">
+      <input type="checkbox" id="cabbage" name="vegetable" value="cabbage" />
     </li>
   </ul>
 </fieldset>
 ```
 
-*以下截图显示了 macOS 上的 Firefox 71 和 Safair 13 以及 Windows 10 上的 Chrome 79 和 Edge 18 中的默认、聚焦和禁用的复选框。*
+_以下截图显示了 macOS 上的 Firefox 71 和 Safair 13 以及 Windows 10 上的 Chrome 79 和 Edge 18 中的默认、聚焦和禁用的复选框。_
 
 ![Default, focused and disabled Checkboxes in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10](checkboxes.png)
 
@@ -141,13 +146,13 @@ HTML5 中添加了其它的文本输入类型，如：{{HTMLElement("input/searc
 
 ### 单选按钮
 
-使用 {{htmlattrxref("type","input")}} 属性值为 `radio` 的 {{HTMLElement("input")}} 元素来创建一个单选按钮。
+使用 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值为 `radio` 的 {{HTMLElement("input")}} 元素来创建一个单选按钮。
 
 ```html
-<input type="radio" id="soup" name="meal" checked>
+<input type="radio" id="soup" name="meal" checked />
 ```
 
-几个单选按钮可以连接在一起。如果它们的 {{htmlattrxref("name","input")}} 属性共享相同的值，那么它们将被认为属于同一组的按钮。同一组中只有一个按钮可以同时被选；这意味着当其中一个被选中时，所有其他的都将自动未选中。如果没有选中任何一个，那么整个单选按钮池就被认为处于未知状态，并且没有以表单的形式发送任何值。
+几个单选按钮可以连接在一起。如果它们的 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性共享相同的值，那么它们将被认为属于同一组的按钮。同一组中只有一个按钮可以同时被选；这意味着当其中一个被选中时，所有其他的都将自动未选中。如果没有选中任何一个，那么整个单选按钮池就被认为处于未知状态，并且没有以表单的形式发送任何值。
 
 ```html
 <fieldset>
@@ -155,15 +160,15 @@ HTML5 中添加了其它的文本输入类型，如：{{HTMLElement("input/searc
   <ul>
     <li>
       <label for="soup">Soup</label>
-      <input type="radio" id="soup" name="meal" value="soup" checked>
+      <input type="radio" id="soup" name="meal" value="soup" checked />
     </li>
     <li>
       <label for="curry">Curry</label>
-      <input type="radio" id="curry" name="meal" value="curry">
+      <input type="radio" id="curry" name="meal" value="curry" />
     </li>
     <li>
       <label for="pizza">Pizza</label>
-      <input type="radio" id="pizza" name="meal" value="pizza">
+      <input type="radio" id="pizza" name="meal" value="pizza" />
     </li>
   </ul>
 </fieldset>
@@ -195,31 +200,25 @@ HTML5 中添加了其它的文本输入类型，如：{{HTMLElement("input/searc
 ### submit
 
 ```html
-<button type="submit">
-    This is a <strong>submit button</strong>
-</button>
+<button type="submit">This is a <strong>submit button</strong></button>
 
-<input type="submit" value="This is a submit button">
+<input type="submit" value="This is a submit button" />
 ```
 
 ### reset
 
 ```html
-<button type="reset">
-    This is a <strong>reset button</strong>
-</button>
+<button type="reset">This is a <strong>reset button</strong></button>
 
-<input type="reset" value="This is a reset button">
+<input type="reset" value="This is a reset button" />
 ```
 
 ### anonymous
 
 ```html
-<button type="button">
-    This is an <strong>anonymous button</strong>
-</button>
+<button type="button">This is an <strong>anonymous button</strong></button>
 
-<input type="button" value="This is an anonymous button">
+<input type="button" value="This is an anonymous button" />
 ```
 
 不管您使用的是 {{HTMLElement("button")}} 元素还是 {{HTMLElement("input")}} 元素，按钮的行为都是一样的。然而，有一些显著的不同之处：从示例中可以看到，{{HTMLElement("button")}} 元素允许您在它们的标签中使用 HTML 内容，这些内容被插入到 `<button>` 开始和结束的标签之间。另一方面，{{HTMLElement("input")}} 元素是空元素；它显示的内容需要插入到 `value` 属性中，因此只接受纯文本内容。
@@ -234,16 +233,16 @@ HTML5 中添加了其它的文本输入类型，如：{{HTMLElement("input/searc
 
 **图像按钮**（image button）控件渲染的方式与 {{HTMLElement("img")}} 几乎完全相同。只是在用户点击它时，图像按钮的行为与提交（submit）按钮相同。
 
-图像按钮是使用 {{htmlattrxref("type","input")}} 属性值设置为 `image` 的 {{HTMLElement("input")}} 元素创建的。这个元素支持与 {{HTMLElement("img")}} 元素相同的属性，和其他表单按钮支持的所有属性。
+图像按钮是使用 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值设置为 `image` 的 {{HTMLElement("input")}} 元素创建的。这个元素支持与 {{HTMLElement("img")}} 元素相同的属性，和其他表单按钮支持的所有属性。
 
 ```html
-<input type="image" alt="Click me!" src="my-img.png" width="80" height="30">
+<input type="image" alt="Click me!" src="my-img.png" width="80" height="30" />
 ```
 
 如果使用图像按钮来提交表单，这个小部件不会提交它的值；而是提交在图像上单击处的 X 和 Y 坐标（坐标是相对于图像的，这意味着图像的左上角表示坐标 (0, 0)），坐标被发送为两个键/值对：
 
-- X 值键是 {{htmlattrxref("name","input")}} 属性的值，后面是字符串“.x”。
-- Y 值键是 {{htmlattrxref("name","input")}} 属性的值，后面是字符串“.y”。
+- X 值键是 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的值，后面是字符串“.x”。
+- Y 值键是 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的值，后面是字符串“.y”。
 
 例如，当您点击这个小部件图像坐标为 (123,456) 的位置时，它将会通过 `get` 方法提交。你可以看到类似的 URL：
 
@@ -257,22 +256,22 @@ http://foo.com?pos.x=123&pos.y=456
 
 HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)的文章中详细描述了这个特定的操作。文件选择器小部件是用户如何选择一个或多个文件来发送的。
 
-要创建一个[文件选择器小部件](/zh-CN/docs/Web/HTML/Element/Input/file)，您可以使用 {{HTMLElement("input")}} 元素，将它的 {{htmlattrxref("type","input")}} 属性设置为 `file`。被接受的文件类型可以使用 {{htmlattrxref("accept","input")}} 属性来约束。此外，如果您想让用户选择多个文件，那么可以通过添加 {{htmlattrxref("multiple","input")}} 属性来实现。
+要创建一个[文件选择器小部件](/zh-CN/docs/Web/HTML/Element/Input/file)，您可以使用 {{HTMLElement("input")}} 元素，将它的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性设置为 `file`。被接受的文件类型可以使用 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性来约束。此外，如果您想让用户选择多个文件，那么可以通过添加 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性来实现。
 
 #### 示例
 
 在本例中，创建一个文件选择器，请求图形图像文件。在本例中，允许用户选择多个文件。
 
 ```html
-<input type="file" name="file" id="file" accept="image/*" multiple>
+<input type="file" name="file" id="file" accept="image/*" multiple />
 ```
 
 在一些移动终端上，文件选择器可以访问由设备相机和麦克风直接获取的图片、视频、音频。我们只需要这样设置 `accept` 属性即可（分别对应相机捕获的图片、视频和麦克风获取的音频）：
 
 ```html
-<input type="file" accept="image/*;capture=camera">
-<input type="file" accept="video/*;capture=camcorder">
-<input type="file" accept="audio/*;capture=microphone">
+<input type="file" accept="image/*;capture=camera" />
+<input type="file" accept="video/*;capture=camcorder" />
+<input type="file" accept="audio/*;capture=microphone" />
 ```
 
 ## 通用属性
@@ -322,26 +321,13 @@ HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](
 
 ## 测试你的技能！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其它内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[测试你的技能：基础控件](/zh-CN/docs/Learn/Forms/Test_your_skills:_Basic_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[测试你的技能：基础控件](/zh-CN/docs/Learn/Forms/Test_your_skills:_Basic_controls)。
 
 ## 总结
 
 这篇文章介绍了较老的输入类型——在早期的 HTML 中引入的原始输入类型，它们在所有的浏览器中都得到了很好的支持。在下一节中，我们将介绍 HTML5 中新添加的 `type` 属性。
 
 {{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
-
-## 本章目录
-
-- [你的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-- [如何构造 HTML 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-- [原生表单部件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
-- [样式化 HTML 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
-- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
-- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
-- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 高级技巧
 

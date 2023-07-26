@@ -1,12 +1,6 @@
 ---
 title: '-webkit-transition'
 slug: Web/CSS/@media/-webkit-transition
-tags:
-  - CSS
-  - Caractéristique média
-  - Non-standard
-  - Obsolete
-  - Reference
 translation_of: Web/CSS/@media/-webkit-transition
 ---
 
@@ -34,7 +28,7 @@ Cette caractéristique média est une caractéristique média propriétaire lié
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.-webkit-transition")}}
+{{Compat}}
 
 ## Voir aussi
 

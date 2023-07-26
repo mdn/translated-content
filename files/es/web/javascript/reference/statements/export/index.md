@@ -1,13 +1,6 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Módulos
-  - Sentencia
-  - export
-translation_of: Web/JavaScript/Reference/Statements/export
 original_slug: Web/JavaScript/Referencia/Sentencias/export
 ---
 
@@ -160,9 +153,9 @@ Tenga en cuenta que no es posible usar `var`, `let` o `const` con `export defaul
 
 {{Specifications}}
 
-## Compatiblidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Vea también
 

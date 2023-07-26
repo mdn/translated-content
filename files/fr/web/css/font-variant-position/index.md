@@ -1,10 +1,6 @@
 ---
 title: font-variant-position
 slug: Web/CSS/font-variant-position
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/font-variant-position
 ---
 

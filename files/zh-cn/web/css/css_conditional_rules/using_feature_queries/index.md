@@ -1,6 +1,6 @@
 ---
 title: 使用特性查询
-slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
+slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 ---
 
 {{CSSRef}}
@@ -78,7 +78,7 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 让我们看一个非常简单的例子，在这个例子中，特性查询就派上用场了，它使用上述的方式来组织 CSS。
 
-假设我们想要创建一行三个盒子的布局，理想情况下，我们想要使用 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 布局。但是，我们希望有一个使用浮动（floats）的旧浏览器的布局。我们可以先用下面的代码创建浮动布局，它提供了三个列。
+假设我们想要创建一行三个盒子的布局，理想情况下，我们想要使用 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout) 布局。但是，我们希望有一个使用浮动（floats）的旧浏览器的布局。我们可以先用下面的代码创建浮动布局，它提供了三个列。
 
 {{EmbedGHLiveSample("css-examples/feature-queries/step1.html", '100%', 900)}}
 
@@ -108,5 +108,5 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 - [@supports](/zh-CN/docs/Web/CSS/@supports) 规则
 - 学习布局：[Supporting Older Browsers](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [CSS Grid Layout and Progressive Enhancement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [CSS Grid Layout and Progressive Enhancement](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)

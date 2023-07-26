@@ -17,7 +17,7 @@ translation_of: Web/API/Worker/Worker
 
 Если URL имеет недопустимый синтаксис или нарушена политика одного источника, то будет вызвано {{domxref("DOMException")}} типа `SECURITY_ERR`.
 
-> **Примечание:** **Замечание**: that there is a disagreement among browser manufacturers about whether a data URI is of the same origin or not. Though Gecko 10.0 {{ geckoRelease("10.0") }} and later accept data URIs, that's not the case in all other browsers.
+> **Примечание:** that there is a disagreement among browser manufacturers about whether a data URI is of the same origin or not. Though Gecko 10.0 and later accept data URIs, that's not the case in all other browsers.
 
 ## Синтаксис
 

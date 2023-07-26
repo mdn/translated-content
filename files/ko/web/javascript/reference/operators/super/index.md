@@ -1,13 +1,6 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
-tags:
-  - Classes
-  - JavaScript
-  - Left-hand-side expressions
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/super
 ---
 
 {{jsSidebar("Operators")}}

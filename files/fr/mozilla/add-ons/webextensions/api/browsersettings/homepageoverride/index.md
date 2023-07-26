@@ -1,15 +1,6 @@
 ---
 title: browserSettings.homepageOverride
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - homepageOverride
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride
 ---
 
@@ -19,16 +10,16 @@ Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut êt
 
 Notez qu'il s'agit d'un paramètre en lecture seule. Pour changer la page d'accueil, voir [chrome_settings_overrides](/fr/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.homepageOverride", 10)}}
+{{Compat}}
 
 ## Exemples
 
 Obtenez la valeur actuelle de l'URL de la page d'accueil :
 
 ```js
-browser.browserSettings.homepageOverride.get({}).then(result => {
+browser.browserSettings.homepageOverride.get({}).then((result) => {
   console.log(result.value);
 });
 ```

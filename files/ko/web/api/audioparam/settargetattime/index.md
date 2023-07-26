@@ -1,14 +1,6 @@
 ---
 title: AudioParam.setTargetAtTime()
 slug: Web/API/AudioParam/setTargetAtTime
-tags:
-  - API
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - setTargetAtTime
-browser-compat: api.AudioParam.setTargetAtTime
 ---
 
 {{ APIRef("Web Audio API") }}

@@ -67,7 +67,7 @@ myWorker.port.onmessage = function(e) {
 }
 ```
 
-看完整示例，请见 [Basic shared worker example](https://github.com/mdn/simple-shared-worker) ([run shared worker](http://mdn.github.io/simple-shared-worker/).)
+有关更完整的示例，详见[基本的共享型 worker 示例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker)（[运行基本的共享型 worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)）。
 
 ## 规范
 

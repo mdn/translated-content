@@ -12,7 +12,7 @@ See the document of {{domxref("KeyboardEvent.getModifierState","KeyboardEvent.ge
 ## 语法
 
 ```plain
-var active =​ event.getModifierState(keyArg);
+var active = event.getModifierState(keyArg);
 ```
 
 ### 返回值

@@ -36,7 +36,7 @@ document.cookie = newCookie;
 
   - `;path=path` (e.g., '`/`', '`/mydir`') If not specified, defaults to the current path of the current document location.
 
-    > **Примечание:** Prior to {{Gecko("6.0")}}, paths with quotes were treated as if the quotes were part of the string, instead of as if they were delimiters surrounding the actual path string. This has been fixed.
+    > **Примечание:** Prior to Gecko 6.0, paths with quotes were treated as if the quotes were part of the string, instead of as if they were delimiters surrounding the actual path string. This has been fixed.
 
     The path must be **absolute** (see [RFC 6265](https://tools.ietf.org/html/rfc6265)). For more information on how to use relative paths, see [this paragraph](/ru/docs/Web/API/Document/cookie#Using_relative_URLs_in_the_path_parameter).
 
@@ -226,7 +226,7 @@ The [`path`](#new-cookie_path) parameter of a new cookie can accept only _absolu
 |*|
 |*|  :: Translate relative paths to absolute paths ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/document.cookie
+|*|  https://developer.mozilla.org/ru/docs/Web/API/document.cookie
 |*|  https://developer.mozilla.org/User:fusionchess
 |*|
 |*|  The following code is released under the GNU Public License, version 3 or later.
@@ -247,22 +247,22 @@ function relPathToAbs (sRelPath) {
 ##### Sample usage
 
 ```js
-/* Let us be in /en-US/docs/Web/API/document.cookie */
+/* Let us be in /ru/docs/Web/API/document.cookie */
 
 alert(location.pathname);
-// displays: /en-US/docs/Web/API/document.cookie
+// displays: /ru/docs/Web/API/document.cookie
 
 alert(relPathToAbs("./"));
-// displays: /en-US/docs/Web/API/
+// displays: /ru/docs/Web/API/
 
 alert(relPathToAbs("../Guide/API/DOM/Storage"));
-// displays: /en-US/docs/Web/Guide/API/DOM/Storage
+// displays: /ru/docs/Web/Guide/API/DOM/Storage
 
 alert(relPathToAbs("../../Firefox"));
-// displays: /en-US/docs/Firefox
+// displays: /ru/docs/Firefox
 
 alert(relPathToAbs("../Guide/././API/../../../Firefox"));
-// displays: /en-US/docs/Firefox
+// displays: /ru/docs/Firefox
 ```
 
 ### Относительный срок годности cookie: числовые примеры

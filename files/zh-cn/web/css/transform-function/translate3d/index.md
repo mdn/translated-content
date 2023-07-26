@@ -88,7 +88,7 @@ p {
 
 ### 结果
 
-{{EmbedLiveSample("Using_a_single_axis_translation","100%","250")}}
+{{EmbedLiveSample("单轴变化示例","100%","250")}}
 
 ### z 轴与 x 轴变化
 
@@ -117,7 +117,7 @@ p {
 
 ### 结果
 
-{{EmbedLiveSample("Combining_z-axis_and_x-axis_translation","100%","250")}}
+{{EmbedLiveSample("z 轴与 x 轴变化","100%","250")}}
 
 ## 规范
 
@@ -127,7 +127,7 @@ p {
 
 {{Compat}}
 
-## 另请参阅
+## 参见
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}

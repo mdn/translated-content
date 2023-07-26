@@ -1,15 +1,6 @@
 ---
 title: pageAction.isShown()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/isShown
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - isShown
-  - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/isShown
 ---
 
@@ -23,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 let gettingIsShown = browser.pageAction.isShown(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -40,9 +31,9 @@ let gettingIsShown = browser.pageAction.isShown(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `true` si l'action de page de l'extension est affichée pour l'onglet donné, et `false` dans le cas contraire.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction.isShown")}}
+{{Compat}}
 
 ## Exemples
 
@@ -51,11 +42,11 @@ Vérifiez l'état de l'onglet actuellement actif :
 ```js
 async function shownInActiveTab() {
   let tabs = await browser.tabs.query({
-    currentWindow:true,
-    active: true
+    currentWindow: true,
+    active: true,
   });
   let shown = await browser.pageAction.isShown({
-    tabId: tabs[0].id
+    tabId: tabs[0].id,
   });
   console.log(shown);
 }

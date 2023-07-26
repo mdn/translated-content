@@ -25,7 +25,7 @@ Tudo em CSS tem um quadro em torno de si, e entender estes quadros é chave para
         <a href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML"
           >Introdução ao HTML</a
         >), e uma idéia de como o CSS funciona (ensinado em
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS primeiros passos</a>.)
+        <a href="/pt-BR/docs/Learn/CSS/First_steps">CSS primeiros passos</a>.)
       </td>
     </tr>
     <tr>
@@ -64,15 +64,15 @@ The type of box applied to an element is defined by {{cssxref("display")}} prope
 
 ## Além disto: Tipos de exibição ( display ) internos e externos
 
-Nesse ponto, é melhor também explicar os tipos de exibição interna ( **inner** ) e externa ( **outer )**. Como mencionado acima, as caixas em CSS têm um tipo de exibição externa, que detalha se a caixa é em bloco ou em linha.
+Nesse ponto, é melhor também explicar os tipos de exibição interna ( **inner** ) e externa ( **outer** ). Como mencionado acima, as caixas em CSS têm um tipo de exibição externa, que detalha se a caixa é em bloco ou em linha.
 
-Caixas possuem também um tipo de display _inner_, que determina como elementos dentro da caixa são posicionados. Por default, os elementos dentro de uma caixa são posicionados em um fluxo normal ( **[normal flow](/pt-BR/docs/Learn/CSS/CSS_layout/Normal_Flow) **), significando que eles se comportam como qualquer outro bloco e elementos inline (como explicado acima).
+Caixas possuem também um tipo de display _inner_, que determina como elementos dentro da caixa são posicionados. Por default, os elementos dentro de uma caixa são posicionados em um fluxo normal ( **[normal flow](/pt-BR/docs/Learn/CSS/CSS_layout/Normal_Flow)** ), significando que eles se comportam como qualquer outro bloco e elementos inline (como explicado acima).
 
 We can, however, change the inner display type by using `display` values like `flex`. If we set `display: flex;` on an element, the outer display type is `block`, but the inner display type is changed to `flex`. Any direct children of this box will become flex items and will be laid out according to the rules set out in the [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox) spec, which you'll learn about later on.
 
 > **Nota:** To read more about the values of display, and how boxes work in block and inline layout, take a look at the MDN guide to [Block and Inline Layout](/pt-BR/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow).
 
-When you move on to learn about CSS Layout in more detail, you will encounter `flex`, and various other inner values that your boxes can have, for example [`grid`](/en-US/docs/Learn/CSS/CSS_layout/Grids).
+When you move on to learn about CSS Layout in more detail, you will encounter `flex`, and various other inner values that your boxes can have, for example [`grid`](/pt-BR/docs/Learn/CSS/CSS_layout/Grids).
 
 Block and inline layout, however, is the default way that things on the web behave — as we said above, it is sometimes referred to as _normal flow_, because without any other instruction, our boxes lay out as block or inline boxes.
 
@@ -115,7 +115,7 @@ Making up a block box in CSS we have the:
 
 The below diagram shows these layers:
 
-![Diagram of the box model](https://mdn.mozillademos.org/files/16558/box-model.png)
+![Diagram of the box model](box-model.png)
 
 ### The standard CSS box model
 
@@ -135,7 +135,7 @@ If we assume that the box has the following CSS defining `width`, `height`, `mar
 
 The space taken up by our box using the standard box model will actually be 410px (350 + 25 + 25 + 5 + 5), and the height 210px (150 + 25 + 25 + 5 + 5), as the padding and border are added to the width used for the content box.
 
-![Showing the size of the box when the standard box model is being used.](https://mdn.mozillademos.org/files/16559/standard-box-model.png)
+![Showing the size of the box when the standard box model is being used.](standard-box-model.png)
 
 > **Nota:** The margin is not counted towards the actual size of the box — sure, it affects the total space that the box will take up on the page, but only the space outside the box. The box's area stops at the border — it does not extend into the margin.
 
@@ -143,7 +143,7 @@ The space taken up by our box using the standard box model will actually be 410p
 
 You might think it is rather inconvenient to have to add up the border and padding to get the real size of the box, and you would be right! For this reason, CSS had an alternative box model introduced some time after the standard box model. Using this model, any width is the width of the visible box on the page, therefore the content area width is that width minus the width for the padding and border. The same CSS as used above would give the below result (width = 350px, height = 150px).
 
-![Showing the size of the box when the alternate box model is being used.](https://mdn.mozillademos.org/files/16557/alternate-box-model.png)
+![Showing the size of the box when the alternate box model is being used.](alternate-box-model.png)
 
 By default, browsers use the standard box model. If you want to turn on the alternative model for an element you do so by setting `box-sizing: border-box` on it. By doing this you are telling the browser to take the border box as the area defined by any size you set.
 
@@ -159,7 +159,9 @@ If you want all of your elements to use the alternative box model, and this is a
 html {
   box-sizing: border-box;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 ```
@@ -180,7 +182,7 @@ In the below example, you can see two boxes. Both have a class of `.box`, which 
 
 Your [browser developer tools](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools) can make understanding the box model far easier. If you inspect an element in Firefox's DevTools, you can see the size of the element plus its margin, padding, and border. Inspecting an element in this way is a great way to find out if your box is really the size you think it is!
 
-![Inspecting the box model of an element using Firefox DevTools](https://mdn.mozillademos.org/files/16560/box-model-devtools.png)
+![Inspecting the box model of an element using Firefox DevTools](box-model-devtools.png)
 
 ## Margins, padding, and borders
 
@@ -314,24 +316,3 @@ That's most of what you need to understand about the box model. You may want to 
 In the next lesson, we will take a look at how [backgrounds and borders](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) can be used to make your plain boxes look more interesting.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-1. [Cascade and inheritance](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/pt-BR/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/pt-BR/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/pt-BR/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/pt-BR/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Organizing)

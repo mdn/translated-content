@@ -46,7 +46,7 @@ Vue는 애플리케이션에 Vue를 점진적으로 통합시킬 수 있도록 �
 
 ## 설치하기
 
-기존 사이트에서 Vue를 사용하려면 아래 [`<script>`](/en-US/docs/Web/HTML/Element/script) 요소 중 하나를 페이지에 추가하면 됩니다. 이 한 줄을 추가하는 것만으로 기존의 사이트에서 Vue를 사용할 수 있습니다. Vue가 자칭 '프로그레시브 프레임워크'임을 강조하는 이유가 바로 이것입니다. JQuery 등의 라이브러리를 사용하는 기존 프로젝트를 Vue로 마이그레이션하려고 할 때 아주 좋은 옵션입니다. 이 방식으로 속성, 커스텀 컴포넌트, 데이터 관리 등 수많은 Vue의 핵심 기능을 사용할 수 있게 됩니다.
+기존 사이트에서 Vue를 사용하려면 아래 [`<script>`](/ko/docs/Web/HTML/Element/script) 요소 중 하나를 페이지에 추가하면 됩니다. 이 한 줄을 추가하는 것만으로 기존의 사이트에서 Vue를 사용할 수 있습니다. Vue가 자칭 '프로그레시브 프레임워크'임을 강조하는 이유가 바로 이것입니다. JQuery 등의 라이브러리를 사용하는 기존 프로젝트를 Vue로 마이그레이션하려고 할 때 아주 좋은 옵션입니다. 이 방식으로 속성, 커스텀 컴포넌트, 데이터 관리 등 수많은 Vue의 핵심 기능을 사용할 수 있게 됩니다.
 
 - 개발 스크립트 (최적화되지 않음. 콘솔 경고 포함. 개발용으로 좋음.)
 
@@ -220,11 +220,11 @@ INFO  Starting development server...
 
 브라우저 탭을 열고 위의 “local” 주소로 (위 내용처럼 `http://localhost:8080`이거나 설정에 따라 다를 수 있음) 이동해보면, 아래 사진과 같은 앱이 나타날 것입니다. 환영 메시지, Vue 문서 링크, 우리가 선택한 CLI 플러그인 링크, 기타 유용한 Vue 커뮤니티와 생태계 링크 등이 표시되고 있습니다.
 
-![default vue app render, with vue logo, welcome message, and some documentation links](https://mdn.mozillademos.org/files/17240/vue-default-app.png)
+![default vue app render, with vue logo, welcome message, and some documentation links](vue-default-app.png)
 
 ## 약간의 변경 사항 적용하기
 
-일단 Vue 로고를 제거합시다. `App.vue` 파일을 열고, 템플릿 섹션에서 [`<img>`](/en-US/docs/Web/HTML/Element/img) 요소를 지워보세요.
+일단 Vue 로고를 제거합시다. `App.vue` 파일을 열고, 템플릿 섹션에서 [`<img>`](/ko/docs/Web/HTML/Element/img) 요소를 지워보세요.
 
 ```html
 <img alt="Vue logo" src="./assets/logo.png">
@@ -275,49 +275,3 @@ components: {
 다음 글에서는 우리의 첫 커스텀 컴포넌트를 작성하고, props 전달 및 데이터 상태 저장과 같은 몇 가지 중요한 개념을 살펴보겠습니다.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)

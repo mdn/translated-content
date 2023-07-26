@@ -66,7 +66,7 @@ Google Chrome、Chromium 和 Safari 必须根据输入字符确定值。如果�
 
 从 Firefox 60 开始，Gecko 会尽可能的根据以下规则额设置标点符号的 `keyCode` 值（当满足上述 7.1 或者 7.2 的时候）:
 
-> **警告：** 这些附加规则的目的是为了使键盘布局映射 unicode 字符映射到美国键盘标点符号的用户可以使用只支持 ASCII 的键盘或者美国键盘布局的 Firefox 的 web 应用。否则，新映射的 `keyCode` 值可能会和其他按键冲突。例如，如果当前键盘布局是俄语，`"Period"` 键 和 `"Slash"` 键的 `keyCode` 都会是 `190` （`KeyEvent.DOM_VK_PERIOD`）。如果你需要区分这些按键但是你自己又不想支持时间上所有的键盘布局，你可能应该使用 {{domxref("KeyboardEvent.code")}}。
+> **警告：** 这些附加规则的目的是为了使键盘布局映射 unicode 字符映射到美国键盘标点符号的用户可以使用只支持 ASCII 的键盘或者美国键盘布局的 Firefox 的 web 应用。否则，新映射的 `keyCode` 值可能会和其他按键冲突。例如，如果当前键盘布局是俄语，`"Period"` 键 和 `"Slash"` 键的 `keyCode` 都会是 `190`（`KeyEvent.DOM_VK_PERIOD`）。如果你需要区分这些按键但是你自己又不想支持世界上所有的键盘布局，你可能应该使用 {{domxref("KeyboardEvent.code")}}。
 
 1. 如果运行 macOS 或者 Linux:
 
@@ -2514,7 +2514,7 @@ gecko 在 keyboardvent 中定义了许多 keycode 值，用于显式地生成映
 | `DOM_VK_TAB`                 | 0x09 (9)   | Tab key.                                                                                                                   |
 | `DOM_VK_CLEAR`               | 0x0C (12)  | "5" key on Numpad when NumLock is unlocked. Or on Mac, clear key which is positioned at NumLock key.                       |
 | `DOM_VK_RETURN`              | 0x0D (13)  | Return/enter key on the main keyboard.                                                                                     |
-| `DOM_VK_ENTER`               | 0x0E (14)  | Reserved, but not used. {{Deprecated_Inline}} (Dropped, see {{bug(969247)}}.)                                  |
+| `DOM_VK_ENTER`               | 0x0E (14)  | Reserved, but not used. {{Deprecated_Inline}} (Dropped, see [Firefox bug 969247](https://bugzil.la/969247).)                                  |
 | `DOM_VK_SHIFT`               | 0x10 (16)  | Shift key.                                                                                                                 |
 | `DOM_VK_CONTROL`             | 0x11 (17)  | Control key.                                                                                                               |
 | `DOM_VK_ALT`                 | 0x12 (18)  | Alt (Option on Mac) key.                                                                                                   |

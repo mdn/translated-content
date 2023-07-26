@@ -1,12 +1,6 @@
 ---
 title: Array() 생성자
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
-tags:
-  - Array
-  - Constructor
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/Array
 ---
 
 {{JSRef}}

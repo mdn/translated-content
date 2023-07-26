@@ -1,10 +1,6 @@
 ---
 title: animation-duration
 slug: Web/CSS/animation-duration
-tags:
-  - CSS 애니메이션
-translation_of: Web/CSS/animation-duration
-browser-compat: css.properties.animation-duration
 ---
 
 {{CSSRef}} {{SeeCompatTable}}

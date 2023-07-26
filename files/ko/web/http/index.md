@@ -1,26 +1,18 @@
 ---
 title: HTTP
 slug: Web/HTTP
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - TCP/IP
-  - Web
-  - l10n:priority
-translation_of: Web/HTTP
 ---
 
 {{HTTPSidebar}}
 
-**_하이퍼텍스트 전송 프로토콜(HTTP)_**_은 HTML과 같은 하이퍼미디어 문서를 전송하기위한 _[애플리케이션 레이어](https://en.wikipedia.org/wiki/Application_Layer) 프로토콜입니다. 웹 브라우저와 웹 서버간의 커뮤니케이션을위해 디자인되었지만, 다른 목적으로도 사용될 수 있습니다. HTTP는 클라이언트가 요청을 생성하기 위한 연결을 연다음 응답을 받을때 까지 대기하는 전통적인 [클라이언트-서버 모델](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)을 따릅니다. HTTP는 [무상태 프로토콜](https://en.wikipedia.org/wiki/Stateless_protocol)이며, 이는 서버가 두 요청간에 어떠한 데이터(상태)도 유지하지 않음을 의미합니다.
+**하이퍼텍스트 전송 프로토콜**(HTTP)은 HTML과 같은 하이퍼미디어 문서를 전송하기 위한 [애플리케이션 레이어](https://en.wikipedia.org/wiki/Application_Layer) 프로토콜입니다. 웹 브라우저와 웹 서버간의 통신을 위해 설계되었지만 다른 목적으로도 사용할 수 있습니다. HTTP는 클라이언트가 요청을 하기 위해 연결을 연 다음 응답을 받을때 까지 대기하는 전통적인 [클라이언트-서버 모델](https://en.wikipedia.org/wiki/Client%E2%80%93server_model)을 따릅니다. HTTP는 [무상태 프로토콜](https://en.wikipedia.org/wiki/Stateless_protocol)이며, 서버가 두 요청 간에 어떠한 데이터(상태)도 유지하지 않습니다.
 
 ## 자습서
 
 가이드와 튜토리얼을 통해 HTTP를 사용하는 방법을 배워보세요.
 
 - [HTTP 개요](/ko/docs/Web/HTTP/Overview)
-  - : 클라이언트-서버 프로토콜의 기본 기능들. 할 수 있는 것과 의도된 용도.
+  - : 클라이언트-서버 프로토콜의 기본 기능들입니다. HTTP로 할 수 있는 것과 의도된 용도를 알아보세요.
 - [HTTP 캐시](/ko/docs/Web/HTTP/Caching)
   - : 캐싱은 빠른 웹 사이트를 위해 아주 중요합니다. 이 글은 여러 캐싱 방법과 HTTP 헤더를 사용하여 이를 제어하는 방법을 설명합니다.
 - [HTTP 쿠키](/ko/docs/Web/HTTP/Cookies)

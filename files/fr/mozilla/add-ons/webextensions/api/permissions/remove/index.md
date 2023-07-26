@@ -1,14 +1,6 @@
 ---
 title: permissions.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/remove
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Permissions
-  - Reference
-  - WebExtensions
-  - remove
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/remove
 ---
 
@@ -24,8 +16,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promesse`](/fr/docs/Web/Ja
 
 ```js
 var removing = browser.permissions.remove(
-  permissions                // Permissions object
-)
+  permissions, // Permissions object
+);
 ```
 
 ### Paramètres
@@ -37,28 +29,28 @@ var removing = browser.permissions.remove(
 
 Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `true` si les permissions répertoriées dans l'argument `permissions` ont été supprimées, ou `false` dans le cas contraire.
 
-## Browser compatibility
-
-{{Compat("webextensions.api.permissions.remove")}}
-
 ## Exemples
 
 Ce code ajoute un gestionnaire de clic qui supprime une permission donnée.
 
 ```js
 const permissionToRemove = {
-  permissions: ["history"]
-}
+  permissions: ["history"],
+};
 
 function remove() {
   console.log("removing");
-  browser.permissions.remove(permissionToRemove).then(result => {
+  browser.permissions.remove(permissionToRemove).then((result) => {
     console.log(result);
   });
 }
 
 document.querySelector("#remove").addEventListener("click", remove);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

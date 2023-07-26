@@ -1,6 +1,6 @@
 ---
 title: Arreglos (Matrices)
-slug: Glossary/array
+slug: Glossary/Array
 original_slug: Glossary/Arreglos
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: font-family
 slug: Web/CSS/font-family
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/font-family
 ---
 
 {{CSSRef}}

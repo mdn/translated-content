@@ -1,9 +1,6 @@
 ---
 title: XPath
 slug: Web/XPath
-tags:
-  - XPath
-translation_of: Web/XPath
 ---
 
 XPath는 XML Path Language를 나타내고 [XML](/ko/XML) 문서의 다른 부분을 주소 지정하는(가리키는) 유연한 방법을 제공하는 비XML 문법을 씁니다. 이와 동시에, 또한 패턴과 일치하는지 알아보기 위해 문서 안에 주소 지정된 노드를 검사하는데도 쓰일 수 있습니다.

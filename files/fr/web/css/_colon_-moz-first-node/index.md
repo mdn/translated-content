@@ -1,11 +1,6 @@
 ---
 title: ':-moz-first-node'
 slug: Web/CSS/:-moz-first-node
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:-moz-first-node
 ---
 

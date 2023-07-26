@@ -1,8 +1,9 @@
 ---
 title: OOP
 slug: Glossary/OOP
-original_slug: Glossary/面向对象编程
 ---
+
+{{GlossarySidebar}}
 
 **OOP**（面向对象编程）是一种编程方法，其中数据封装在**{{glossary("object","对象")}}**中，对象本身在其上运行，而不是其组成部分。
 

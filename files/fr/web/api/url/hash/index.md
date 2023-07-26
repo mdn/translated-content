@@ -1,12 +1,6 @@
 ---
 title: URL.hash
 slug: Web/API/URL/hash
-tags:
-  - API
-  - Hash
-  - Propriété
-  - Reference
-  - URL
 translation_of: Web/API/URL/hash
 ---
 
@@ -31,9 +25,11 @@ Un {{domxref("USVString")}}.
 
 ## Exemples
 
-```html
-var url = new URL('https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples');
-url.hash // Returns '#Examples'
+```js
+var url = new URL(
+  "https://developer.mozilla.org/fr/docs/Web/API/URL/href#Examples",
+);
+url.hash; // Returns '#Examples'
 ```
 
 ## Spécifications

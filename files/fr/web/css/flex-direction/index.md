@@ -1,10 +1,6 @@
 ---
 title: flex-direction
 slug: Web/CSS/flex-direction
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/flex-direction
 ---
 
@@ -14,7 +10,7 @@ La propriété **`flex-direction`** définit la façon dont les éléments flexi
 
 {{EmbedInteractiveExample("pages/css/flex-direction.html")}}
 
-On notera que les valeurs `row` et `row-reverse` sont impactées par la direction du conteneur. Si {{htmlattrxref("dir")}} vaut `ltr`, `row` représente l'axe horizontal allant de la gauche vers la droite et `row-reverse` représente le même axe allant de la droite vers la gauche. Si `dir` vaut `rtl`, `row` correspondra à l'axe horizontal orienté de la droite vers la gauche et `row-reverse` de la gauche vers la droite.
+On notera que les valeurs `row` et `row-reverse` sont impactées par la direction du conteneur. Si [`dir`](/fr/docs/Web/HTML/Global_attributes#dir) vaut `ltr`, `row` représente l'axe horizontal allant de la gauche vers la droite et `row-reverse` représente le même axe allant de la droite vers la gauche. Si `dir` vaut `rtl`, `row` correspondra à l'axe horizontal orienté de la droite vers la gauche et `row-reverse` de la gauche vers la droite.
 
 Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Utilisation_des_flexbox_en_CSS).
 
@@ -115,7 +111,7 @@ Lorsqu'on utilise `flex-direction` avec les valeurs `row-reverse` ou `column-rev
 
 - [Les boîtes flexibles et la déconnexion par rapport à la navigation au clavier, Tink (en anglais)](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
 - [L'importance de l'ordre de la source, Adrian Roselli (en anglais)](http://adrianroselli.com/2015/09/source-order-matters.html)
-- [Comprendre les règles 1.3 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Comprendre les règles 1.3 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_—_Create_content_that_can_be_presented_in_different_ways)
 - [Comprendre les critères de réussite 1.3.2 WCAG 2.0, W3C (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
 ## Spécifications

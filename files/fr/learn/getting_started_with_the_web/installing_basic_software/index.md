@@ -1,16 +1,7 @@
 ---
 title: Installation des outils de base
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
-tags:
-  - Apprendre
-  - Débutant
-  - Navigateurs
-  - Outils
-  - Setup
-  - Web
-  - Éditeurs de texte
 translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
-original_slug: Apprendre/Commencer_avec_le_web/Installation_outils_de_base
 ---
 
 {{LearnSidebar}}
@@ -57,14 +48,3 @@ Avant de continuer, vous devriez installer au moins deux de ces navigateurs et l
 Certains projets Web ont besoin d'être lancés sur un serveur Web pour fonctionner correctement. Vous pouvez trouver ces explications ici: [Comment installer en local un serveur de tests&nbsp;?](/fr/Apprendre/Common_questions/configurer_un_serveur_de_test_local)
 
 {{NextMenu("Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site","Apprendre/Commencer_avec_le_web")}}
-
-## Dans ce module
-
-- [Installer les logiciels de base](/fr/Apprendre/Commencer_avec_le_web/Installation_outils_de_base)
-- [Quel aspect pour votre site Web&nbsp;?](/fr/Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site)
-- [Gérer les fichiers](/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers)
-- [Bases du HTML](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_HTML)
-- [Bases des CSS](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_CSS)
-- [Bases du JavaScript](/fr/docs/Apprendre/Commencer_avec_le_web/Les_bases_JavaScript)
-- [Publier votre site Web](/fr/Apprendre/Commencer_avec_le_web/Publier_votre_site_web)
-- [Comment fonctionne le Web](/fr/Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web)

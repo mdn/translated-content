@@ -1,6 +1,8 @@
 ---
-title: Node.isDefaultNamespace()
+title: "Node: isDefaultNamespace() メソッド"
 slug: Web/API/Node/isDefaultNamespace
+l10n:
+  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
 {{APIRef("DOM")}}
@@ -12,8 +14,8 @@ slug: Web/API/Node/isDefaultNamespace
 
 ## 構文
 
-```js
-isDefaultNamespace(namespaceURI);
+```js-nolint
+isDefaultNamespace(namespaceURI)
 ```
 
 ### 引数
@@ -38,12 +40,12 @@ isDefaultNamespace(namespaceURI);
 ```
 
 ```js
-const button = document.getElementsByTagName('button')[0];
-button.addEventListener("click", function () {
-  const aHtmlElt = document.getElementsByTagName('output')[0];
-  const aSvgElt = document.getElementsByTagName('svg')[0];
+const button = document.querySelector("button");
+button.addEventListener("click", () => {
+  const aHtmlElt = document.querySelector("output");
+  const aSvgElt = document.querySelector("svg");
 
-  const result = document.getElementsByTagName('output');
+  const result = document.getElementsByTagName("output");
   result[0].value = aHtmlElt.isDefaultNamespace(""); // true
   result[1].value = aHtmlElt.isDefaultNamespace("http://www.w3.org/2000/svg"); // false
   result[2].value = aSvgElt.isDefaultNamespace(""); // true

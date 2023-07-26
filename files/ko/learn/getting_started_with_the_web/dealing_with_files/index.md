@@ -59,7 +59,7 @@ original_slug: Learn/Getting_started_with_the_web/파일들_다루기
 4. 여러분의 HTML 코드 중 src="" 의 쌍따옴표 사이에 파일 경로를 입력하세요.
 5. HTML 파일을 저장하고나서, 여러분의 웹 브라우저에서 이것을 로드하세요 (파일을 더블 클릭). 여러분의 새 웹페이지가 이미지를 표시하는 것을 보실 수 있습니다!
 
-![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](https://mdn.mozillademos.org/files/9229/website-screenshot.png)
+![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](website-screenshot.png)
 
 파일 경로를 위한 일반적인 규칙들:
 
@@ -70,23 +70,12 @@ original_slug: Learn/Getting_started_with_the_web/파일들_다루기
 
 지금으로선, 이것이 여러분이 알아야 할 전부 입니다.
 
-> **참고:** **노트**: 윈도우 파일 시스템은 기본 슬래시가 아니라 역슬래시를 사용하는 경향이 있습니다. 예시: `C:\windows`. 이것은 HTML에서 문제가 되지않습니다 — 여러분이 윈도우에서 웹 사이트를 개발하더라도 전방향 슬래시(/)를 코드에 사용해야 합니다.
+> **참고:** 윈도우 파일 시스템은 기본 슬래시가 아니라 역슬래시를 사용하는 경향이 있습니다. 예시: `C:\windows`. 이것은 HTML에서 문제가 되지않습니다 — 여러분이 윈도우에서 웹 사이트를 개발하더라도 전방향 슬래시(/)를 코드에 사용해야 합니다.
 
 ## 또 무엇을 더 해야할까요?
 
 현재로서는 이것이 전부입니다. 여러분의 폴더 구조는 이와 같이 보여야 합니다:
 
-![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](https://mdn.mozillademos.org/files/9231/file-structure.png)
+![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
-
-## In this module
-
-- [Installing basic software](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](/en-US/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](/en-US/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)

@@ -1,9 +1,7 @@
 ---
 title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
-browser-compat: javascript.builtins.Symbol.isConcatSpreadable
 l10n:
   sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---

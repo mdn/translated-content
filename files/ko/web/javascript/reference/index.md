@@ -1,19 +1,6 @@
 ---
 title: JavaScript 참고서
 slug: Web/JavaScript/Reference
-tags:
-  - Code
-  - ECMAScript
-  - ECMAScript6
-  - ES6
-  - JS
-  - JavaScript
-  - Landing page
-  - Reference
-  - es
-  - l10n:priority
-  - programming
-translation_of: Web/JavaScript/Reference
 ---
 
 {{JsSidebar}}
@@ -202,12 +189,12 @@ translation_of: Web/JavaScript/Reference
 - {{JSxRef("Operators/Object_initializer", "{}")}}
 - {{JSxRef("Global_Objects/RegExp", "/ab+c/i")}}
 - {{JSxRef("Operators/Grouping", "( )")}}
-- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
+- [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null)
 
 ### 좌변 표현식
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
-- [`?.` (Optional chaining)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [`?.` (Optional chaining)](/ko/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - {{JSxRef("Operators/new", "new")}}
 - {{JSxRef("Operators/new%2Etarget", "new.target")}}
 - {{JSxRef("Operators/import%2Emeta", "import.meta")}}

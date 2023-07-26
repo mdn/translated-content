@@ -1,10 +1,6 @@
 ---
 title: Envelopper une grille
 slug: Web/CSS/Layout_cookbook/Grid_wrapper
-tags:
-  - CSS
-  - Guide
-  - Recette
 translation_of: Web/CSS/Layout_cookbook/Grid_wrapper
 ---
 
@@ -68,9 +64,7 @@ Bien que les grilles CSS nous permettent potentiellement de positionner n'import
 
 ## Compatibilité des navigateurs
 
-### `grid-template-columns`
-
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## Voir aussi
 

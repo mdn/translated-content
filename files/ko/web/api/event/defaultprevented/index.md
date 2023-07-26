@@ -1,11 +1,6 @@
 ---
 title: Event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
-tags:
-  - Property
-  - Read-only
-browser-compat: api.Event.defaultPrevented
-translation_of: Web/API/Event/defaultPrevented
 ---
 
 {{APIRef("DOM")}}

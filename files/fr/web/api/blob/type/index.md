@@ -1,11 +1,6 @@
 ---
 title: Blob.type
 slug: Web/API/Blob/type
-tags:
-  - API
-  - DOM
-  - Fichiers
-  - Propriété
 translation_of: Web/API/Blob/type
 ---
 
@@ -16,7 +11,7 @@ La propriété **`type`** de l'objet [`Blob`](/fr/docs/Web/API/Blob) fourni le t
 ## Syntaxe
 
 ```js
-var mimetype = instanceOfFile.type
+var mimetype = instanceOfFile.type;
 ```
 
 ## Valeur

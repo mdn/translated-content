@@ -1,17 +1,6 @@
 ---
 title: StorageArea.getBytesInUse()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Storage
-  - StorageArea
-  - WebExtensions
-  - getBytesInUse
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse
 ---
 
@@ -40,9 +29,9 @@ var gettingSpace = browser.storage.<storageType>.getBytesInUse(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un entier, `bytesUsed`, représentant l'espace de stockage utilisé par les objets spécifiés dans les `clefs`. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage.StorageArea.getBytesInUse")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

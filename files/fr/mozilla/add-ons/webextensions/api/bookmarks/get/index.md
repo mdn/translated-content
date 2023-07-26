@@ -1,16 +1,6 @@
 ---
 title: bookmarks.get()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
-tags:
-  - API
-  - Add-ons
-  - Bookmraks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/get
 ---
 
@@ -24,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une {{jsxref("promise")}}.
 
 ```js
 var getBookmarks = browser.bookmarks.get(
-  idOrIdList                // string or string array
-)
+  idOrIdList, // string or string array
+);
 ```
 
 ### Paramètres
@@ -56,9 +46,9 @@ gettingBookmarks.then(onFulfilled, onRejected);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.get")}}
+{{Compat}}
 
 > **Note :**
 >

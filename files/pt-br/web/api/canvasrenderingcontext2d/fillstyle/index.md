@@ -110,7 +110,7 @@ for (var i = 0; i < 6; i++){
 
 O resultado fica assim:
 
-{{EmbedLiveSample("Um_exemplo_de_fillStyle_com_laços_for", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
+{{EmbedLiveSample("Um_exemplo_de_fillStyle_com_laços_for", 160, 160, "canvas_fillstyle.png")}}
 
 ## Especificações
 

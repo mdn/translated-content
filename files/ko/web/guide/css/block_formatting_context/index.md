@@ -1,13 +1,6 @@
 ---
 title: 블록 서식 맥락
 slug: Web/Guide/CSS/Block_formatting_context
-tags:
-  - CSS
-  - Guide
-  - NeedsBeginnerUpdate
-  - NeedsExample
-  - Web
-translation_of: Web/Guide/CSS/Block_formatting_context
 ---
 
 {{ CSSRef }}

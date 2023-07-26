@@ -1,13 +1,6 @@
 ---
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
-tags:
-  - API
-  - Exemple
-  - Géolocalisation
-  - Géolocalisation API
-  - Méthode
-  - Reference
 translation_of: Web/API/Geolocation/watchPosition
 ---
 
@@ -19,8 +12,10 @@ Cette méthode retourne une valeur ID de veille qui permet de libérer les fonct
 
 ## Syntaxe
 
-```js
-id = navigator.geolocation.watchPosition(success[, error[, options]])
+```js-nolint
+watchPosition(success)
+watchPosition(success, error)
+watchPosition(success, error, options)
 ```
 
 ### Paramètres
@@ -41,24 +36,24 @@ function success(pos) {
   var crd = pos.coords;
 
   if (target.latitude === crd.latitude && target.longitude === crd.longitude) {
-    console.log('Bravo, vous avez atteint la cible');
+    console.log("Bravo, vous avez atteint la cible");
     navigator.geolocation.clearWatch(id);
   }
 }
 
 function error(err) {
-  console.warn('ERROR(' + err.code + '): ' + err.message);
+  console.warn("ERROR(" + err.code + "): " + err.message);
 }
 
 target = {
-  latitude : 0,
-  longitude: 0
+  latitude: 0,
+  longitude: 0,
 };
 
 options = {
   enableHighAccuracy: false,
   timeout: 5000,
-  maximumAge: 0
+  maximumAge: 0,
 };
 
 id = navigator.geolocation.watchPosition(success, error, options);

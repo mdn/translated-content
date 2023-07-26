@@ -14,16 +14,19 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_li
 
 ```js
 // Display list of all BookInstances.
-exports.bookinstance_list = function(req, res, next) {
-
+exports.bookinstance_list = function (req, res, next) {
   BookInstance.find()
-    .populate('book')
+    .populate("book")
     .exec(function (err, list_bookinstances) {
-      if (err) { return next(err); }
+      if (err) {
+        return next(err);
+      }
       // Successful, so render
-      res.render('bookinstance_list', { title: 'Book Instance List', bookinstance_list: list_bookinstances });
+      res.render("bookinstance_list", {
+        title: "Book Instance List",
+        bookinstance_list: list_bookinstances,
+      });
     });
-
 };
 ```
 
@@ -64,7 +67,7 @@ This view is much the same as all the others. It extends the layout, replacing t
 
 Run the application, open your browser to <http://localhost:3000/>, then select the _All book-instances_ link. If everything is set up correctly, your site should look something like the following screenshot.
 
-![BookInstance List Page - Express Local Library site](https://mdn.mozillademos.org/files/14474/LocalLibary_Express_BookInstance_List.png)
+![BookInstance List Page - Express Local Library site](locallibary_express_bookinstance_list.png)
 
 ## Next steps
 

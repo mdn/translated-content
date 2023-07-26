@@ -13,10 +13,6 @@ original_slug: Глоссарий/Выражение
 
 ## Узнать больше
 
-### Общие сведения
-
-- {{Interwiki("wikipedia", "Инструкция_(информатика)")}} на Википедии
-
 ### Техническая справка
 
 - [JavaScript инструкции и объявления](/ru/docs/Web/JavaScript/Reference/Statements)

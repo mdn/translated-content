@@ -1,13 +1,7 @@
 ---
 title: handler.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.apply
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
+original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/apply
 ---
 
 {{JSRef}}

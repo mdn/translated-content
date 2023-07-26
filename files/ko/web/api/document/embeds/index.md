@@ -1,9 +1,6 @@
 ---
 title: Document.embeds
 slug: Web/API/Document/embeds
-tags:
-  - embeds
-translation_of: Web/API/Document/embeds
 ---
 
 {{ ApiRef() }}
@@ -18,6 +15,6 @@ translation_of: Web/API/Document/embeds
 nodeList = document.embeds
 ```
 
-### Specifications
+### 명세서
 
 {{Specifications}}

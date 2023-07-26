@@ -1,13 +1,6 @@
 ---
 title: 나누기 (/)
 slug: Web/JavaScript/Reference/Operators/Division
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Division
-browser-compat: javascript.operators.division
 ---
 {{jsSidebar("Operators")}}
 

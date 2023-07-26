@@ -1,11 +1,6 @@
 ---
 title: incognito
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/incognito
-tags:
-  - Add-ons
-  - WebExtensions
-  - incognito
-  - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/incognito
 ---
 
@@ -61,6 +56,6 @@ Il s'agit d'une chaîne qui peut prendre l'une des valeurs suivantes:
 "incognito": "not_allowed"
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.incognito")}}
+{{Compat}}

@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.onicecandidate
 slug: Web/API/RTCPeerConnection/icecandidate_event
-translation_of: Web/API/RTCPeerConnection/onicecandidate
 original_slug: Web/API/RTCPeerConnection/onicecandidate
 ---
 

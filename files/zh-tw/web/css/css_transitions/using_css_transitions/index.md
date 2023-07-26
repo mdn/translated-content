@@ -1,6 +1,6 @@
 ---
 title: CSS 轉場
-slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
+slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 ---
 
 {{CSSRef}}
@@ -36,9 +36,7 @@ CSS transitions 和 CSS animations 中可以用來修改的屬性在 [CSS animat
 
 ## 使用漸變函式 (transition timing function)
 
-漸變函式可用來定義轉場發生的時間曲線。其規範方式是以四個參數的貝茲曲線代表：
-
-![](/@api/deki/files/5226/=transition-timing-function.png)
+漸變函式可用來定義轉場發生的時間曲線。其規範方式是以四個參數的貝茲曲線代表。
 
 [CSS transition function manipulator](http://cssglue.com/cubic) 是一個可以讓你非常容易以視覺化方式了解轉場流程的工具。
 
@@ -107,7 +105,7 @@ transition-timing-function: linear;
 你可以定義自己想要的 timing function，這要用貝茲曲線 (cubic bezier curve) 的形式定義之：
 
 ```css
-  transition-timing-function: cubic-bezier(0.2, 0.4, 0.7, 0.8);
+transition-timing-function: cubic-bezier(0.2, 0.4, 0.7, 0.8);
 ```
 
 上例中我們定義了一個以 (0.0, 0.0), (0.2, 0.4), (0.7, 0.8) 和 (1.0, 1.0) 描述的貝茲曲線。
@@ -222,8 +220,8 @@ div {
   -webkit-transition-duration: 1s;
   -o-transition-property: background-color, color;
   -o-transition-duration: 1s;
-  background-color:white;
-  color:black;
+  background-color: white;
+  color: black;
   -moz-box-shadow: 2px 2px 1px black;
 }
 ```
@@ -242,27 +240,31 @@ Transition 是一種很好的工具，他可以幫助你的 JavaScript 執行結
 當你使用 JavaScript 可以將 ball 移動到特定位置：
 
 ```js
-var f = document.getElementById('foo');
-document.addEventListener('click', function(ev){
-    f.style.left = (ev.clientX-25)+'px';
-    f.style.top = (ev.clientY-25)+'px';
-},false);
+var f = document.getElementById("foo");
+document.addEventListener(
+  "click",
+  function (ev) {
+    f.style.left = ev.clientX - 25 + "px";
+    f.style.top = ev.clientY - 25 + "px";
+  },
+  false,
+);
 ```
 
 藉由 CSS，你可以使執行結果更為流暢。我們加入了：
 
 ```css
-p{
-  padding-left:60px;
+p {
+  padding-left: 60px;
 }
-#foo{
-  border-radius:50px;
-  width:50px;
-  height:50px;
-  background:#c00;
-  position:absolute;
-  top:0;
-  left:0;
+#foo {
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  background: #c00;
+  position: absolute;
+  top: 0;
+  left: 0;
   -moz-transition: all 1s;
   -webkit-transition: all 1s;
   -ms-transition: all 1s;
@@ -284,11 +286,11 @@ p{
 搭配上面範例的 HTML 程式碼並不複雜：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>CSS Transition Demo</title>
-    <link rel="stylesheet" href="transitions.css" type="text/css">
+    <link rel="stylesheet" href="transitions.css" type="text/css" />
     <script src="transitions.js" type="text/javascript"></script>
   </head>
   <body onload="runDemo()">

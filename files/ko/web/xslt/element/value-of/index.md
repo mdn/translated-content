@@ -1,11 +1,9 @@
 ---
 title: value-of
 slug: Web/XSLT/Element/value-of
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/value-of
 original_slug: Web/XSLT/value-of
 ---
+
 {{ XsltRef() }}
 
 `<xsl:value-of>` 요소는 XPath 식을 평가하여 그것을 문자열로 바꾸고 문자열을 결과 트리에 씁니다.

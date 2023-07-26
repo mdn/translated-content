@@ -180,7 +180,7 @@ div:nth-of-type(2) {
 
 우리의 목표는 이것을 12열 격자상에 2행 격자를 시연하는 것입니다. 상단 행은 개별 열의 크기를 나타내고 두 번째 행은 격자 크기가 서로 다른 영역입니다.
 
-![](https://mdn.mozillademos.org/files/13901/simple-grid-finished.png)
+![](simple-grid-finished.png)
 
 {{htmlelement("style")}} 요소에는 외곽(래퍼) 컨테이너에 980픽셀의 너비를 부여하는 아래와 같은 코드를 추가하고 오른쪽에 패딩으로는 20픽셀 우측을 추가합니다. 이로써 열 및 배수로의 총 너비를 위해 960픽셀이 주어집니다. 이 경우, 사이트의 모든 요소에 {{cssxref("box-sizing")}}을 `border-box`로 설정했기 때문에 패딩은 총 콘텐츠 너비에서 제외할 수 있습니다(자세한 설명은 [상자 모델의 전면 변경](/ko/docs/Learn/CSS/Styling_boxes/Box_model_recap#Changing_the_box_model_completely)을 참조하세요).
 
@@ -432,7 +432,7 @@ Or if you prefer to calculate the percentages yourself, use this one:
 
 달라진 모습을 보려면 브라우저에 불러들이거나 새로고침을 하세요. 아니면 [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html) 예제가 [실제 실행](http://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html)되는 장면을 보세요. 완성된 예는 다음과 같이 보여야 합니다.
 
-![](https://mdn.mozillademos.org/files/13903/offset-grid-finished.png)
+![](offset-grid-finished.png)
 
 > **참고:** 추가 연습의 하나로 여러분은 `offset-by-two`(2칸 간격띄우기) 클래스를 구현할 수 있습니가?
 
@@ -483,7 +483,7 @@ body {
 
 맨 위 라인에는 격자 위에 12개의 깔끔한 상자가 있고, 뷰포트 너비를 변경할 때 상자는 똑같이 확장하고 수축합니다. 그러나 다음 행에서는 4개의 항목만 있으며, 이들은 60px 기준에서 확장하고 축소됩니다. 그 중 단 4개만 상위 행에 있는 항목보다 훨씬 더 많이 확장할 수 있습니다. 그 결과 두 번째 행에서 모두 같은 너비를 차지합니다.
 
-![](https://mdn.mozillademos.org/files/13905/flexbox-grid-incomplete.png)
+![](flexbox-grid-incomplete.png)
 
 이를 수정하려면 해당 요소에 대해 `flex-basis`가 사용하는 값을 대체할 너비를 제공하기 위해 `span` 클래스를 포함해야 합니다.
 
@@ -586,7 +586,7 @@ Skeleton을 사용하기 위해서는 `container` 클래스를 랩퍼(바깥쪽)
 
 HTML 파일을 저장하고 브라우저에 불러들여 효과를 확인하십시오.
 
-> **참고:** :위의 예제를 제대로 적용하기가 어렵다면, 그것을 우리의 [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) 파일과 비교해 보십시요. (그것을 [라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)).
+> **참고:** 위의 예제를 제대로 적용하기가 어렵다면, 그것을 우리의 [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) 파일과 비교해 보십시요. (그것을 [라이브로도 보세요](http://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)).
 
 당신이 (앞서 다운로드한) skeleton.css 내용을 보면 어떻게 작동하는지 알 수 있습니다. 예를 들어, Skeleton 파일에는 다음과 같이 "three columns" 클래스가 적용되는 요소를 스타일링하기 위한 정의가 부여되어 있습니다.
 
@@ -603,18 +603,3 @@ HTML 파일을 저장하고 브라우저에 불러들여 효과를 확인하십�
 이제 다양한 격자 시스템이 어떻게 만들어지는지 이해하게 되었는데, 이는 구형 사이트에서 작업할 때와 CSS 격자 레이아웃이 제공하는 기본 격자와 이들 구형 시스템 간의 차이를 이해하는 데 유용합니다.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
-
-## 이번 단위에는
-
-- [CSS 레이아웃 소개](/ko/docs/Learn/CSS/CSS_layout/Introduction)
-- [일반 대열](/ko/docs/Learn/CSS/CSS_layout/일반_흐름)
-- [가변상자](/ko/docs/Learn/CSS/CSS_layout/Flexbox)
-- [격자](/ko/docs/Learn/CSS/CSS_layout/Grids)
-- [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats)
-- [위치잡기](/ko/docs/Learn/CSS/CSS_layout/위치잡기)
-- [다단 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [반응형 디자인](/ko/docs/Learn/CSS/CSS_layout/반응형_디자인)
-- [미디어 쿼리 초보자 안내서](/ko/docs/Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서)
-- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [이전 브라우저 지원](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%B4%EC%A0%84_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%A7%80%EC%9B%90)
-- [레이아웃 이해도 필수 평가](/ko/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

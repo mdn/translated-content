@@ -1,7 +1,6 @@
 ---
 title: History.replaceState()
 slug: Web/API/History/replaceState
-translation_of: Web/API/History/replaceState
 ---
 {{APIRef("History API")}}
 

@@ -1,12 +1,11 @@
 ---
 title: RTCPeerConnection.canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
-translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 ---
 
 {{APIRef("WebRTC")}}
 
-읽기 속성인 **{{domxref("RTCPeerConnection")}}** 속성의 **`canTrickleIceCandidates`**는 원격유저가 [trickled ICE candidates](https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice)를 승인 할 수 있는지의 여부를 알려주는 {{jsxref("Boolean")}}을 반환합니다.
+읽기 속성인 **{{domxref("RTCPeerConnection")}}** 속성의 **`canTrickleIceCandidates`** 는 원격유저가 [trickled ICE candidates](https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice)를 승인 할 수 있는지의 여부를 알려주는 {{jsxref("Boolean")}}을 반환합니다.
 
 **ICE trickling** 은 초기 offer 혹은 answer를 다른 유저에게 이미 전달을 했음에도 계속해서 candidate를 보내는 과정을 뜻합니다.
 
@@ -22,7 +21,9 @@ translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 
 {{jsxref("Boolean")}}는 원격 유저가 trickled ICE candidate를 수용 할 수 있으면 `true` 값이고, 그렇지 않으면 `false` 값 입니다. 이미 원격 유저가 생성되었으면, 이 값은 `null` 입니다.
 
-> **참고:** **참조:** 이 속성의 값은 로컬 피어가 {{domxref("RTCPeerConnection.setRemoteDescription()")}}를 호출하게 되면 결정됩니다. 여기에서 제공된 정보를 사용해서 ICE agent가 원격 유저가 trickled ICE candidate를 지원하는지에 대한 여부를 결정해줍니다.
+> **참고:** **참조:** 이 속성의 값은 로컬 피어가 {{domxref("RTCPeerConnection.setRemoteDescription()")}}를 호출하게 되면 결정됩니다.
+>
+> 여기에서 제공된 정보를 사용해서 ICE agent가 원격 유저가 trickled ICE candidate를 지원하는지에 대한 여부를 결정해줍니다.
 
 ## 예시
 

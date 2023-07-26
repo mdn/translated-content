@@ -1,6 +1,6 @@
 ---
 title: Compiling an Existing C Module to WebAssembly
-slug: WebAssembly/existing_C_to_wasm
+slug: WebAssembly/existing_C_to_Wasm
 ---
 
 {{WebAssemblySidebar}}
@@ -45,9 +45,9 @@ $ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
 ```html
 <script src="./a.out.js"></script>
 <script>
-  Module.onRuntimeInitialized = async _ => {
+  Module.onRuntimeInitialized = async (_) => {
     const api = {
-      version: Module.cwrap('version', 'number', []),
+      version: Module.cwrap("version", "number", []),
     };
     console.log(api.version());
   };
@@ -56,7 +56,7 @@ $ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
 
 [output](https://googlechrome.github.io/samples/webassembly/version.html)에 라이브러리의 버전 번호가 정확히 표시됩니다.
 
-![Screenshot of the DevTools console showing the correct versionnumber.](https://mdn.mozillademos.org/files/15913/version.png)
+![Screenshot of the DevTools console showing the correct versionnumber.](version.png)
 
 > **참고:**libwebp는 현재 버전 인 a.b.c를 16 진수 0xabc로 반환합니다. 예를 들어 v0.6.1은 0x000601 = 1537로 인코딩됩니다.
 
@@ -67,16 +67,16 @@ $ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
 자 여기서! 어떻게하면 이미지를 wasm으로 가져올 수 있는지가 가장 먼저 궁굼할 것입니다. [encoding API of libwebp](https://developers.google.com/speed/webp/docs/api#simple_encoding_api)를 보면 RGB, RGBA, BGR 또는 BGRA의 바이트 배열이 필요함을 알 수 있습니다. 다행히 Canvas API에는 RGBA의 이미지 데이터가 포함 된 {{jsxref ( "Uint8ClampedArray")}}를 던져주는 {{domxref ( "CanvasRenderingContext2D.getImageData")}}가 있습니다.
 
 ```js
- async function loadImage(src) {
+async function loadImage(src) {
   // Load image
-  const imgBlob = await fetch(src).then(resp => resp.blob());
+  const imgBlob = await fetch(src).then((resp) => resp.blob());
   const img = await createImageBitmap(imgBlob);
   // Make canvas same size as image
-  const canvas = document.createElement('canvas');
+  const canvas = document.createElement("canvas");
   canvas.width = img.width;
   canvas.height = img.height;
   // Draw image onto canvas
-  const ctx = canvas.getContext('2d');
+  const ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
   return ctx.getImageData(0, 0, img.width, img.height);
 }
@@ -102,12 +102,12 @@ void destroy_buffer(uint8_t* p) {
 
 ```js
 const api = {
-  version: Module.cwrap('version', 'number', []),
-  create_buffer: Module.cwrap('create_buffer', 'number', ['number', 'number']),
-  destroy_buffer: Module.cwrap('destroy_buffer', '', ['number']),
+  version: Module.cwrap("version", "number", []),
+  create_buffer: Module.cwrap("create_buffer", "number", ["number", "number"]),
+  destroy_buffer: Module.cwrap("destroy_buffer", "", ["number"]),
 };
 
-const image = await loadImage('./image.jpg');
+const image = await loadImage("./image.jpg");
 const p = api.create_buffer(image.width, image.height);
 Module.HEAP8.set(image.data, p);
 // ... call encoder ...
@@ -155,7 +155,11 @@ int get_result_size() {
 api.encode(p, image.width, image.height, 100);
 const resultPointer = api.get_result_pointer();
 const resultSize = api.get_result_size();
-const resultView = new Uint8Array(Module.HEAP8.buffer, resultPointer, resultSize);
+const resultView = new Uint8Array(
+  Module.HEAP8.buffer,
+  resultPointer,
+  resultSize,
+);
 const result = new Uint8Array(resultView);
 api.free_result(resultPointer);
 ```
@@ -164,20 +168,20 @@ api.free_result(resultPointer);
 
 이미지의 크기에 따라, wasm이 입력 및 출력 이미지를 모두 수용할 만큼 메모리를 늘릴 수 없는 오류가 발생할 수 있습니다.
 
-![Screenshot of the DevTools console showing an error.](https://mdn.mozillademos.org/files/15922/error.png)
+![Screenshot of the DevTools console showing an error.](error.png)
 
 다행히도 이 문제에 대한 해결책은 오류 메시지에 있습니다. 컴파일 명령에 `-s ALLOW_MEMORY_GROWTH=1`을 추가하기 만하면됩니다.
 
 WebP 인코더를 컴파일하고 JPEG 이미지를 WebP로 코드 변환했습니다. 제대로 동작하는지 확인하기 위해 결과 버퍼를 블롭으로 변환하고 `<img>` 요소에 사용합니다.
 
 ```js
-const blob = new Blob([result], {type: 'image/webp'});
+const blob = new Blob([result], { type: "image/webp" });
 const blobURL = URL.createObjectURL(blob);
-const img = document.createElement('img');
+const img = document.createElement("img");
 img.src = blobURL;
-document.body.appendChild(img)
+document.body.appendChild(img);
 ```
 
 보거라! 새로운 WebP 이미지의 영광을. :) [Demo](https://googlechrome.github.io/samples/webassembly/image.html) | [Full Code](/ko/docs/)
 
-![DevToolsâ network panel and the generated image.](https://mdn.mozillademos.org/files/15914/result.jpg)
+![DevToolsâ network panel and the generated image.](result.jpg)

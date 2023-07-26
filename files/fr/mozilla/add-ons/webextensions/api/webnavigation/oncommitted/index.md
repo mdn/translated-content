@@ -1,16 +1,6 @@
 ---
 title: webNavigation.onCommitted
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onCommitted
-  - webNavigations
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted
 ---
 
@@ -22,11 +12,11 @@ Lancé lorsqu'une navigation est validée. Au moins une partie du nouveau docume
 
 ```js
 browser.webNavigation.onCommitted.addListener(
-  listener,                 // function
-  filter                    // optional object
-)
-browser.webNavigation.onCommitted.removeListener(listener)
-browser.webNavigation.onCommitted.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onCommitted.removeListener(listener);
+browser.webNavigation.onCommitted.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -73,9 +63,9 @@ Les événements ont trois fonctions :
 - `transitionQualifiers`
   - : `Array` de `{{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}`. Informations supplémentaires sur la navigation : par exemple, s'il existait une redirection de serveur ou de client.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onCommitted")}}
+{{Compat}}
 
 ## Exemples
 
@@ -83,12 +73,8 @@ Logs les URL cibles et les informations de transition supplémentaires pour `onC
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnCommitted(details) {
   console.log("target URL: " + details.url);

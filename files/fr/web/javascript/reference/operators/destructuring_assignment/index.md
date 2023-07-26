@@ -1,18 +1,7 @@
 ---
 title: Affecter par décomposition
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - Destructuration
-  - Affectation de déstructuration
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Caractéristiques de la langue
-  - Déstructuration des objets imbriqués et des tableaux
-  - Opérateur
-  - Reference
 translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
-original_slug: Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition
 ---
 
 {{jsSidebar("Operators")}}
@@ -317,7 +306,7 @@ const metadata = {
         title: "JavaScript-Umgebung"
        }
     ],
-    url: "/en-US/docs/Tools/Scratchpad"
+    url: "/fr/docs/Tools/Scratchpad"
 };
 
 let { title: englishTitle, translations: [{ title: localeTitle }] } = metadata;
@@ -386,7 +375,7 @@ Cela permet d'accéder directement à `id`, `displayName` et `firstName` depuis 
 
 ### Les noms de propriétés calculés et la décomposition
 
-Il est possible d'utiliser des noms de propriétés calculés, comme avec les [littéraux objets](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Initialisateur_objet#Noms_de_propri.C3.A9t.C3.A9s_calcul.C3.A9s), avec la décomposition.
+Il est possible d'utiliser des noms de propriétés calculés, comme avec les [littéraux objets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet#Noms_de_propri.C3.A9t.C3.A9s_calcul.C3.A9s), avec la décomposition.
 
 ```js
 let clef = "z";

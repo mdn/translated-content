@@ -42,13 +42,11 @@ Age: 24
 
 ## Spécifications
 
-| Spécification                            | Titre                                           |
-| ---------------------------------------- | ----------------------------------------------- |
-| {{RFC("7234", "Age", "5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Caching |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Age")}}
+{{Compat}}
 
 ## Voir aussi
 

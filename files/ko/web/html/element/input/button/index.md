@@ -1,18 +1,11 @@
 ---
 title: <input type="button">
-slug: Web/HTML/Element/Input/button
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Input Element
-  - Input Type
-translation_of: Web/HTML/Element/input/button
+slug: Web/HTML/Element/input/button
 ---
+
 {{HTMLSidebar}}
 
-**`button`** 유형의 {{htmlelement("input")}} 요소는 단순한 푸시 버튼으로 렌더링 됩니다. 이벤트 처리기(주로 {{event("click")}} 이벤트)를 부착하면, 사용자 지정 기능을 웹 페이지 어느 곳에나 제공할 수 있습니다.
+**`button`** 유형의 {{htmlelement("input")}} 요소는 단순한 푸시 버튼으로 렌더링 됩니다. 이벤트 처리기(주로 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트)를 부착하면, 사용자 지정 기능을 웹 페이지 어느 곳에나 제공할 수 있습니다.
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-standard")}}
 
@@ -28,7 +21,7 @@ translation_of: Web/HTML/Element/input/button
     </tr>
     <tr>
       <td>이벤트</td>
-      <td>{{event("click")}}</td>
+      <td>[`click`](/ko/docs/Web/API/Element/click_event)</td>
     </tr>
     <tr>
       <td>지원하는 공용 특성</td>
@@ -72,7 +65,7 @@ translation_of: Web/HTML/Element/input/button
 
 ### 간단한 버튼
 
-{{event("click")}} 이벤트 처리기를 부착한 간단한 버튼을 통해 기계를 켜고 끄는 기능을 만드는 것으로 시작해보겠습니다. (기계라고는 하지만, 그냥 버튼의 `value`와 문단 내용을 바꾸는 것입니다.)
+[`click`](/ko/docs/Web/API/Element/click_event) 이벤트 처리기를 부착한 간단한 버튼을 통해 기계를 켜고 끄는 기능을 만드는 것으로 시작해보겠습니다. (기계라고는 하지만, 그냥 버튼의 `value`와 문단 내용을 바꾸는 것입니다.)
 
 ```html
 <form>
@@ -98,7 +91,7 @@ function updateBtn() {
 }
 ```
 
-위의 스크립트는 DOM의 `<input>`을 나타내는 {{domxref("HTMLInputElement")}} 객체의 참조를 획득해 변수 `button`에 저장합니다. 그 후 {{domxref("EventTarget.addEventListener", "addEventListener()")}}를 사용해, {{event("click")}} 이벤트가 발생했을 때 실행할 함수를 생성합니다.
+위의 스크립트는 DOM의 `<input>`을 나타내는 {{domxref("HTMLInputElement")}} 객체의 참조를 획득해 변수 `button`에 저장합니다. 그 후 {{domxref("EventTarget.addEventListener", "addEventListener()")}}를 사용해, [`click`](/ko/docs/Web/API/Element/click_event) 이벤트가 발생했을 때 실행할 함수를 생성합니다.
 
 {{EmbedLiveSample("간단한_버튼", 650, 100)}}
 

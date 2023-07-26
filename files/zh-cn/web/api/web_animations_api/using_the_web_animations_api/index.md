@@ -9,7 +9,7 @@ web 动画 API 可以让我们用 JavaScript 写动画并且控制动画。本�
 
 ## 认识 Web 动画 API
 
-[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)将浏览器动画引擎向开发者打开，并由 JavaScript 进行操作。这些 API 被设计成 [CSS Animations](/zh-CN/docs/Web/CSS/CSS_Animations) and [CSS Transitions](/zh-CN/docs/Web/CSS/CSS_Transitions)的接口，未来会对这些 API 做补充以丰富更多的功能。它是对网络上动画化的支持最有效的方式之一，让浏览器进行自己的内部，不需要 hacks，或者强迫，或者{{domxref("Window.requestAnimationFrame()")}}。
+[Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)将浏览器动画引擎向开发者打开，并由 JavaScript 进行操作。这些 API 被设计成 [CSS Animations](/zh-CN/docs/Web/CSS/CSS_animations) and [CSS Transitions](/zh-CN/docs/Web/CSS/CSS_transitions)的接口，未来会对这些 API 做补充以丰富更多的功能。它是对网络上动画化的支持最有效的方式之一，让浏览器进行自己的内部，不需要 hacks，或者强迫，或者{{domxref("Window.requestAnimationFrame()")}}。
 
 通过 Web 动画 API，我们可以将交互式动画从样式表移动到 JavaScript，将表现与行为分开。我们不再需要依赖 DOM 重的技术，如将 CSS 属性和范围类写入元素来控制播放方向。与纯粹的声明式 CSS 不同，JavaScript 还允许我们动态地将属性值设置为持续时间。对于构建自定义动画库和创建交互式动画，Web 动画 API 可能是完成工作的完美工具。让我们看看它能做什么！
 
@@ -106,7 +106,7 @@ document.getElementById("alice").animate(
 
 And boom: the animation starts playing (see the finished [version on Codepen](http://codepen.io/rachelnabors/pen/rxpmJL)).
 
-可以在可以使用 CSS 动画化的任何 DOM 元素上调用 animate() 方法。它可以用几种方式写成。我们可以直接像这样传递他们的值，而不是为关键帧和时间属性制作对象：
+可以在可以使用 CSS 动画化的任何 DOM 元素上调用 animate() 方法。它可以用几种方式写成。我们可以直接像这样传递他们的值，而不需要为关键帧和时间属性创建对象：
 
 ```js
 document.getElementById("alice").animate(
@@ -195,8 +195,7 @@ cake.addEventListener("touchstart", growAlice, false);
 
 - {{domxref("Animation.finish()")}} 动画结束。
 - {{domxref("Animation.cancel()")}} 终止动画。
-- {{domxref("Animation.reverse()")}} 设置动画播放速度
-- ({{domxref("Animation.playbackRate")}}到负值，所以它向后运行。
+- {{domxref("Animation.reverse()")}} 反向播放动画。相当于设置动画播放速度（{{domxref("Animation.playbackRate")}}）为负值，并播放。
 
 让我们先来看一下 playbackRate - 一个否定的播放速度将导致一个动画反向运行。当爱丽丝从瓶中喝酒时，她越来越小。这是因为瓶子将动画的播放速度从 1 更改为 -1：
 

@@ -1,16 +1,6 @@
 ---
 title: alarms.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/clear
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - clear
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/clear
 ---
 
@@ -22,7 +12,7 @@ Cette méthode supprime une alarme à partir du nom passé en argument. Il s'agi
 
 ```js
 var clearAlarm = browser.alarms.clear(
-  name // string
+  name, // string
 );
 ```
 
@@ -39,7 +29,7 @@ Une promesse ({{jsxref("Promise")}}) qui sera tenue avec un booléen. Ce boolée
 
 ```js
 function onCleared(wasCleared) {
-  console.log(wasCleared);  // true/false
+  console.log(wasCleared); // true/false
 }
 
 var clearAlarm = browser.alarms.clear("my-periodic-alarm");
@@ -50,7 +40,7 @@ clearAlarm.then(onCleared);
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms.clear")}}
+{{Compat}}
 
 **Remerciements :**
 

@@ -1,13 +1,6 @@
 ---
 title: Console.groupEnd()
-slug: Web/API/Console/groupEnd
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthode
-  - console
-  - débogage
+slug: Web/API/console/groupEnd
 translation_of: Web/API/Console/groupEnd
 ---
 

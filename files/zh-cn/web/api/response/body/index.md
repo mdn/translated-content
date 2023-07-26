@@ -25,7 +25,7 @@ fetch('./tortoise.png')
 // 取出 body
 .then(response => response.body)
 .then(body => {
-  const reader = Response.getReader();
+  const reader = body.getReader();
 
   return new ReadableStream({
     start(controller) {

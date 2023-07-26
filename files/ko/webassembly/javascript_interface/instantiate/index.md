@@ -1,11 +1,10 @@
 ---
 title: WebAssembly.instantiate()
 slug: WebAssembly/JavaScript_interface/instantiate
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.instantiate()`** 함수를 사용하면 WebAssembly 코드를 컴파일하고 인스턴스화 할 수 있습니다. 이 함수에는 두개의 overloads가 있습니다.
 
@@ -75,19 +74,16 @@ fetch를 사용하여 일부 WebAssembly 바이트 코드를 가져온 후 우�
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(result =>
-  result.instance.exports.exported_func()
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((result) => result.instance.exports.exported_func());
 ```
 
 > **참고:** 이 예제는 GitHub의 [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html)에서도 찾을 수 있습니다 ([라이브보기도 있음](https://mdn.github.io/webassembly-examples/js-api-examples/)).
@@ -99,9 +95,8 @@ fetch('simple.wasm').then(response =>
 ```js
 var worker = new Worker("wasm_worker.js");
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(mod =>
-  worker.postMessage(mod)
+WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
+  worker.postMessage(mod),
 );
 ```
 
@@ -110,27 +105,27 @@ WebAssembly.compileStreaming(fetch('simple.wasm'))
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-onmessage = function(e) {
-  console.log('module received from main thread');
+onmessage = function (e) {
+  console.log("module received from main thread");
   var mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then(function (instance) {
     instance.exports.exported_func();
   });
 };
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

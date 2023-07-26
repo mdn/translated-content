@@ -1,7 +1,6 @@
 ---
 title: 'CSP: img-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/img-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/img-src
 ---
 
 {{HTTPSidebar}}
@@ -59,11 +58,11 @@ Content-Security-Policy: img-src https://example.com/
 <img src="https://not-example.com/foo.jpg" alt="example picture">
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

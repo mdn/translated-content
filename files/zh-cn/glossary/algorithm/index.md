@@ -1,8 +1,9 @@
 ---
 title: 算法
 slug: Glossary/Algorithm
-original_slug: Glossary/算法
 ---
+
+{{GlossarySidebar}}
 
 算法是一个良定义的具体计算步骤的一个序列。
 

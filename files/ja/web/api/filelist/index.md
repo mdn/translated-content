@@ -7,7 +7,7 @@ slug: Web/API/FileList
 
 この型のオブジェクトは、 HTML の {{HTMLElement("input")}} 要素の `files` プロパティで返されます。これにより、 `<input type="file">` 要素で選択されているファイルのリストにアクセスすることができます。また、ドラッグ＆ドロップ API を使用している場合は、ウェブコンテンツにドロップされたファイルのリストにも使用されます。使用方法の詳細は [`DataTransfer`](/ja/docs/Web/API/DataTransfer) オブジェクトを見てください。
 
-> **メモ:** {{Gecko("1.9.2")}} より前は、input 要素は一度に 1 つのファイルだけ選択することができます。すなわち、 FileList に入るファイルは 1 つだけです。 {{Gecko("1.9.2")}} から、 input 要素の multiple 属性が true の場合、 FileList に複数のファイルが入ります。
+> **メモ:** Gecko 1.9.2 より前は、input 要素は一度に 1 つのファイルだけ選択することができます。すなわち、 FileList に入るファイルは 1 つだけです。 Gecko 1.9.2 から、 input 要素の multiple 属性が true の場合、 FileList に複数のファイルが入ります。
 
 ## ファイルリストの使用
 

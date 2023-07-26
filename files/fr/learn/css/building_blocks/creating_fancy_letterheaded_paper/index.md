@@ -1,21 +1,7 @@
 ---
 title: Création d'un en-tête de papier à lettre élégant
 slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
-tags:
-  - Arrière‑plan
-  - Boîte
-  - Boîtes
-  - CSS
-  - Codage
-  - Débutant
-  - Evaluation
-  - encadrement
-  - en‑tête de lettre
-  - lettre
-  - lettre avec en‑tête
-  - papier
 translation_of: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
-original_slug: Apprendre/CSS/styliser_boites/Creating_fancy_letterheaded_paper
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Apprendre/CSS/styliser_boites")}}
@@ -89,13 +75,3 @@ Voici une capture d'écran affichant un exemple de ce à quoi le dessin final re
 Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abord, il n'y rien à gagner en trichant !
 
 {{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Learn/CSS/Styling_boxes")}}
-
-## Dans ce module
-
-- [Le modèle de boîte&nbsp;: récapitulatif](/fr/Apprendre/CSS/styliser_boites/Box_model_recap)
-- [Arrière-plans](/fr/Apprendre/CSS/styliser_boites/Backgrounds)
-- [Encadrements](/fr/docs/Apprendre/CSS/styliser_boites/Borders)
-- [Mise en page des tableaux](/fr/Apprendre/CSS/styliser_boites/Styling_tables)
-- [Effets de boîte avancés](/fr/Apprendre/CSS/styliser_boites/Advanced_box_effects)
-- [Création d'un en-tête de papier à lettre élégant](/fr/docs/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper)
-- [Une boîte d'aspect rafraîchissant](/fr/Apprendre/CSS/styliser_boites/A_cool_looking_box)

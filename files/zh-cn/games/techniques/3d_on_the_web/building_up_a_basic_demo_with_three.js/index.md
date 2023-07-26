@@ -23,24 +23,30 @@ slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 这是将用到的 HTML 结构。
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  meta charset="utf-8">
-  <title>MDN Games: Three.js demo</title>
-  <style>
-    body { margin: 0; padding: 0; }
-    canvas { width: 100%; height: 100%; }
-  </style>
-</head>
-<body>
-<script src="three.min.js"></script>
-<script>
-  var WIDTH = window.innerWidth;
-  var HEIGHT = window.innerHeight;
-  /* all our JavaScript code goes here */
-</script>
-</body>
+  <head>
+    meta charset="utf-8">
+    <title>MDN Games: Three.js demo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="three.min.js"></script>
+    <script>
+      var WIDTH = window.innerWidth;
+      var HEIGHT = window.innerHeight;
+      /* all our JavaScript code goes here */
+    </script>
+  </body>
 </html>
 ```
 
@@ -53,9 +59,9 @@ Before reading on, copy this code to a new text file, and save it in your workin
 A renderer is a tool that displays scenes right in your browser. There are a few different renderers: WebGL is the default one, and the others you can use are Canvas, SVG, CSS and DOM. They differ in a way everything is rendered, so the WebGL implementation will work differently than the CSS one, but the idea is to have it look exactly the same for the end user. Thanks to this approach, a fallback can be used if the primary technology is not supported by the browser.
 
 ```js
-var renderer = new THREE.WebGLRenderer({antialias:true});
+var renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
-renderer.setClearColor(0xDDDDDD, 1);
+renderer.setClearColor(0xdddddd, 1);
 document.body.appendChild(renderer.domElement);
 ```
 
@@ -78,7 +84,7 @@ Later on we will be using the `.add()` method to add objects to the scene.
 我们有渲染场景，但是我们仍然需要一个摄像机来观察场景 - 想象没有摄像机的电影场景。下面的代码将摄像机放在三维坐标系中，并将其指向我们的场景，这样人们就能看到一些东西：
 
 ```js
-var camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
+var camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
 camera.position.z = 50;
 scene.add(camera);
 ```
@@ -126,7 +132,7 @@ In this case we define a simple cube that is 10 x 10 x 10 units. The geometry it
 Material is that thing covering the object — the colors or texture on its surface. In our case we will use a simple blue color to paint our box. There are predefined materials that can be used: Basic, Phong, Lambert. We will play with the last two later on, but for now the Basic one should be enough:
 
 ```js
-var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
+var basicMaterial = new THREE.MeshBasicMaterial({ color: 0x0095dd });
 ```
 
 Add this line below the previous one.
@@ -179,7 +185,7 @@ Now onto the shapes and materials: what would you say for a torus using the Phon
 
 ```js
 var torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
-var phongMaterial = new THREE.MeshPhongMaterial({color: 0xFF9500});
+var phongMaterial = new THREE.MeshPhongMaterial({ color: 0xff9500 });
 var torus = new THREE.Mesh(torusGeometry, phongMaterial);
 scene.add(torus);
 ```
@@ -190,7 +196,7 @@ We can have even crazier predefined shapes; let's play some more — add the fol
 
 ```js
 var dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
-var lambertMaterial = new THREE.MeshLambertMaterial({color: 0xEAEFF2});
+var lambertMaterial = new THREE.MeshLambertMaterial({ color: 0xeaeff2 });
 var dodecahedron = new THREE.Mesh(dodecahedronGeometry, lambertMaterial);
 dodecahedron.position.x = 25;
 scene.add(dodecahedron);
@@ -205,7 +211,7 @@ As mentioned above, the new objects currently just look black. To have both the 
 There are various types of light sources available in Three.js; the most basic one is the `PointLight`, which works like a flashlight — shinig a spotlight in a given direction. Add the following below your shapre definitions:
 
 ```js
-var light = new THREE.PointLight(0xFFFFFF);
+var light = new THREE.PointLight(0xffffff);
 light.position.set(-10, 15, 50);
 scene.add(light);
 ```
@@ -254,7 +260,7 @@ Now onto the movement part.
 Beside rotation and scaling we can also move objects around the scene. Add the following, again just below the `requestAnimationFrame()` invocation:
 
 ```js
-dodecahedron.position.y = -7*Math.sin(t*2);
+dodecahedron.position.y = -7 * Math.sin(t * 2);
 ```
 
 This will move the dodecahedron up and down by applying the `sin()` value to the y axis on each frame, with a little bit of adjustment to make it look cooler. Try changing the values to see how it affects the animations.

@@ -33,7 +33,7 @@ _无_.
 
 ## 样例
 
-有关使用 `devicechange` 事件更新屏幕上设备列表的示例，请参阅 {{SectionOnPage("/en-US/docs/Web/API/MediaDevices/ondevicechange", "Example")}}。
+TBD
 
 ## 规范
 
@@ -43,6 +43,6 @@ _无_.
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{domxref("MediaDevices.ondevicechange")}}

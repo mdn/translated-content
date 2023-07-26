@@ -66,7 +66,7 @@ if (elem.requestFullscreen) {
 
 ### 全画面リクエストに失敗した場合
 
-全画面モードに切り替わることは保証されていません。例えば、{{HTMLElement("iframe")}} 要素には全画面モードでコンテンツを表示することを許可するための{{HTMLAttrXRef("allowfullscreen", "iframe")}} 属性があります。また、ウィンドウ形式のプラグインなど、特定の種類の中身は全画面モードで表示することができません。全画面表示できない要素（またはその親や子孫）を全画面表示にしようとしても、これはうまくいきません。その代わりに、全画面表示をリクエストされた要素は `mozfullscreenerror` イベントを受け取ります。全画面表示に失敗した場合、 Firefox はウェブコンソールにエラーメッセージをログ出力し、なぜ失敗したのかを説明します。しかし、 Chrome や Opera の新しいバージョンでは、そのような警告は生成されません。
+全画面モードに切り替わることは保証されていません。例えば、{{HTMLElement("iframe")}} 要素には全画面モードでコンテンツを表示することを許可するための[`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性があります。また、ウィンドウ形式のプラグインなど、特定の種類の中身は全画面モードで表示することができません。全画面表示できない要素（またはその親や子孫）を全画面表示にしようとしても、これはうまくいきません。その代わりに、全画面表示をリクエストされた要素は `mozfullscreenerror` イベントを受け取ります。全画面表示に失敗した場合、 Firefox はウェブコンソールにエラーメッセージをログ出力し、なぜ失敗したのかを説明します。しかし、 Chrome や Opera の新しいバージョンでは、そのような警告は生成されません。
 
 > **メモ:** 全画面リクエストは、イベントハンドラー内で呼び出す必要があり、そうでない場合は拒否されます。
 
@@ -93,7 +93,7 @@ if (elem.requestFullscreen) {
 
 この例では、ウェブページの中に動画を表示しています。<kbd>Return</kbd> または <kbd>Enter</kbd> キーを押すと、ユーザーは動画のウィンドウ表示と全画面表示を切り替えて表示することができます。
 
-[ライブ例の表示](https://media.prod.mdn.mozit.cloud/samples/domref/fullscreen.html)
+[ライブ例の表示](https://mdn.dev/archives/media/samples/domref/fullscreen.html)
 
 ### Enter キーの監視
 
@@ -196,4 +196,4 @@ function toggleFullScreen() {
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}, {{CSSxRef("::backdrop")}}
-- {{HTMLAttrXRef("allowfullscreen", "iframe")}}
+- [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen)

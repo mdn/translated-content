@@ -34,7 +34,7 @@ void ctx.clip(path, fillRule);
 
 ## 示例
 
-### 使用 `clip` 方法
+### 一个简单的裁剪区域
 
 这是一段简单的代码片段，使用 `clip` 方法创建剪切区域。
 
@@ -47,59 +47,26 @@ void ctx.clip(path, fillRule);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-// Create clipping region
-ctx.arc(100, 100, 75, 0, Math.PI*2, false);
+// Create circular clipping region
+ctx.beginPath();
+ctx.arc(100, 75, 50, 0, Math.PI * 2);
 ctx.clip();
 
-ctx.fillRect(0, 0, 100,100);
+// Draw stuff that gets clipped
+ctx.fillStyle = 'blue';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+ctx.fillStyle = 'orange';
+ctx.fillRect(0, 0, 100, 100);
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.arc(100, 100, 75, 0, Math.PI*2, false);
-ctx.clip();
-ctx.fillRect(0, 0, 100,100);</textarea>
-```
+{{ EmbedLiveSample('一个简单的裁剪区域', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 

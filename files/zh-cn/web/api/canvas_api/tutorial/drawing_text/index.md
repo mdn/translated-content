@@ -36,7 +36,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_fillText_example", 310, 110)}}
+{{EmbedLiveSample("一个填充文本的示例", 310, 110)}}
 
 ### 一个文本边框的示例
 
@@ -58,7 +58,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_strokeText_example", 310, 110)}}
+{{EmbedLiveSample("一个文本边框的示例", 310, 110)}}
 
 ## 有样式的文本
 
@@ -136,7 +136,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('textBaseline 例子', 700, 360) }}
 
 ## 预测量文本宽度
 

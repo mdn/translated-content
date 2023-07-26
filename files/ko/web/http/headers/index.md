@@ -1,13 +1,6 @@
 ---
 title: HTTP 헤더
 slug: Web/HTTP/Headers
-tags:
-  - HTTP
-  - HTTP 헤더
-  - 개요
-  - 네트워킹
-  - 레퍼런스
-translation_of: Web/HTTP/Headers
 ---
 
 {{HTTPSidebar}}

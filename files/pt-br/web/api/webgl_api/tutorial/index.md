@@ -3,7 +3,7 @@ title: WebGL tutorial
 slug: Web/API/WebGL_API/Tutorial
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 [WebGL](http://www.khronos.org/webgl/) enables web content to use an API based on [OpenGL ES](http://www.khronos.org/opengles/) 2.0 to perform 3D rendering in an HTML {{HTMLElement("canvas")}} in browsers that support it without the use of plug-ins. WebGL programs consist of control code written in JavaScript and special effects code(shader code) that is executed on a computer's Graphics Processing Unit (GPU). WebGL elements can be mixed with other HTML elements and composited with other parts of the page or page background.
 

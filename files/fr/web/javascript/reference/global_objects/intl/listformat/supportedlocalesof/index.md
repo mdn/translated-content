@@ -1,15 +1,7 @@
 ---
 title: Intl.ListFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
-tags:
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Méthode
-  - Reference
-  - i18n
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/supportedLocalesOf
 ---
 
 {{JSRef}}
@@ -56,13 +48,11 @@ console.log(Intl.ListFormat.supportedLocalesOf(locales, options).join(', '));
 
 ## Spécifications
 
-| Spécification                                                                                                                                     | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.ListFormat.supportedLocalesOf`](https://tc39.github.io/proposal-intl-list-format/#sec-Intl.ListFormat.supportedLocalesOf) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.ListFormat.supportedLocalesOf")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -29,7 +29,7 @@ background: border-box red;
 background: no-repeat center/80% url( "../img/image.png");
 ```
 
-> **Note:** **Nota:** O {{cssxref ( "background-color")}} só pode ser definido no último fundo, como há apenas uma cor de fundo para todo o elemento.
+> **Nota:** O {{cssxref ( "background-color")}} só pode ser definido no último fundo, como há apenas uma cor de fundo para todo o elemento.
 
 ### Valores
 
@@ -77,7 +77,7 @@ Um ou mais dos seguintes, por qualquer ordem:
 }
 
 .Topbanner {
-  background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #00D repeat-y fixed;
+  background: url("starsolid.gif") #00D repeat-y fixed;
 }
 ```
 

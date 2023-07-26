@@ -1,55 +1,37 @@
 ---
-title: window.personalbar
+title: Window.personalbar
 slug: Web/API/Window/personalbar
+l10n:
+  sourceCommit: c92127e297ef9448c4263e95109d0610e0ba4158
 ---
 
-{{ApiRef}}
+{{APIRef}}
 
-## 概要
+`personalbar` オブジェクトを返します。
 
-`personalbar` オブジェクトを返します。このバーの表示は、ウィンドウ内でトグル（表示/非表示の状態を切り替える）ことができます。
+これは `Window` プロパティのグループのひとつで、論理値である `visible` プロパティを保持し、ウェブブラウザーのユーザーインターフェイスの特定の部分が表示されているかどうかを表していました。
 
-## 構文
+プライバシーと相互運用性の理由から、 `visible` プロパティの値は、この `Window` がポップアップである場合は `false` となり、そうでない場合は `true` となります。
 
-```
-objRef =window.personalbar
-```
+## 値
 
-## 例
+単一のプロパティを保持するオブジェクトです。
 
-以下の完全な HTML の例は、様々な "bar" オブジェクトの visible プロパティで利用可能な方法を示しています。存在するウィンドウのあらゆるバーの visible プロパティ を書き換えるには、特権が必要です。
+- `visible` {{ReadOnlyInline}}
+  - : 論理プロパティで、 `false` はこの `Window` がポップアップであるとき、それ以外は `true` になります。
 
-```html
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8" />
-<title>様々な DOM テスト</title>
-
-<script>
-// 存在するウィンドウのバーの状態を変更します
-netscape.security.PrivilegeManager.enablePrivilege("UniversalBrowserWrite");
-window.personalbar.visible = !window.personalbar.visible;
-</script>
-
-</head>
-<body>
-  <p>様々な DOM テスト</p>
-</body>
-</html>
-```
-
-## 注記
-
-上記の例のページを読み込んだとき、ブラウザは、以下のダイアログを表示するでしょう。
-![](https://mdn.mozillademos.org/files/1574/Modify_any_open_window_dialog.png)
-
-バーの表示を切り替えるには、上記の例のように、スクリプトの実行と特権要求を許可しなければなりません。また、様々なツールバーの表示の動的な変更は、ウィンドウのサイズをかなり劇的に変化させることがあり、ページのレイアウトに影響する可能性があることに注意してください。
-
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
+## ブラウザーの互換性
+
+{{Compat}}
+
 ## 関連情報
 
-- {{domxref("window.locationbar")}} 、{{domxref("window.menubar")}} 、{{domxref("window.scrollbars")}} 、{{domxref("window.statusbar")}} 、{{domxref("window.toolbar")}}
+- {{domxref("window.locationbar")}}
+- {{domxref("window.menubar")}}
+- {{domxref("window.scrollbars")}}
+- {{domxref("window.statusbar")}}
+- {{domxref("window.toolbar")}}

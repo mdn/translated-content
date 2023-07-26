@@ -1,13 +1,6 @@
 ---
 title: types
 slug: Mozilla/Add-ons/WebExtensions/API/types
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - Types
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/types
 ---
 
@@ -20,7 +13,7 @@ Définit le type `BrowserSetting` , qui est utilisé pour représenter un param�
 - {{WebExtAPIRef("types.BrowserSetting")}}
   - : Représente un paramètre de navigateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 {{WebExtExamples("h2")}}
 

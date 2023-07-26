@@ -1,6 +1,6 @@
 ---
 title: Console.countReset()
-slug: Web/API/Console/countReset
+slug: Web/API/console/countReset
 translation_of: Web/API/Console/countReset
 ---
 

@@ -22,13 +22,13 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 Например, если ваше изображение называется `dinosaur.jpg`, и оно находится в той же директории что и ваша HTML страница, вы можете встроить это изображение как:
 
 ```html
-<img src="dinosaur.jpg">
+<img src="dinosaur.jpg" />
 ```
 
 Если изображение было в поддиректории `images` , находящаяся внутри той же директории, что и HTML страница (что рекомендует Google для индексации и целей SEO), тогда вы можете встроить его так:
 
 ```html
-<img src="images/dinosaur.jpg">
+<img src="images/dinosaur.jpg" />
 ```
 
 И так далее.
@@ -38,7 +38,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 Вы можете встроить изображение используя абсолютный URL, например:
 
 ```html
-<img src="https://www.example.com/images/dinosaur.jpg">
+<img src="https://www.example.com/images/dinosaur.jpg" />
 ```
 
 Но это бессмысленно, так как он просто заставляет браузер делать больше работы, запрашивая каждый раз IP-адрес от DNS-сервера. Вы почти всегда будете держать свои изображения для сайта на том же сервере, что и ваш HTML.
@@ -82,7 +82,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 Что именно вы должны писать в атрибут `alt`? В первую очередь, это зависит от того, _зачем_ изображение вообще находится на странице. Другими словами, что вы потеряете, если ваше изображение не появится:
 
 - **Декорация.** Вы должны использовать [Фоновые изображения CSS](#фоновые_изображения_css) для декоративных изображений, но если вы должны использовать HTML, добавьте пустой alt = "". Если изображение служит просто украшением и не является частью содержимого, добавьте пустой `alt=""`. Например, программа чтения с экрана не тратит время на чтение содержимого, которое не является важным для пользователя.
-- **Контент.** Если ваше изображение содержит важную информацию, передайте ту же информацию через краткий `alt`. Или даже лучше, в *главном* тексте, который все увидят. Не используйте `alt` , если можете обойтись без него. Насколько неудобно было бы для пользователя, если бы *параграфы* были написаны дважды в _главном контенте_? Если изображение адекватно описано в основном тексте, можете просто использовать `alt=""`.
+- **Контент.** Если ваше изображение содержит важную информацию, передайте ту же информацию через краткий `alt`. Или даже лучше, в _главном_ тексте, который все увидят. Не используйте `alt` , если можете обойтись без него. Насколько неудобно было бы для пользователя, если бы _параграфы_ были написаны дважды в _главном контенте_? Если изображение адекватно описано в основном тексте, можете просто использовать `alt=""`.
 - **Ссылка.** Если вы помещаете изображение в {{htmlelement("a")}}, для того, чтобы сделать из него ссылку, вы всё ещё должны [использовать чёткие формулировки описания ссылок](/ru/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#%d0%98%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d1%83%d0%b9%d1%82%d0%b5_%d1%87%d1%91%d1%82%d0%ba%d0%b8%d0%b5_%d1%84%d0%be%d1%80%d0%bc%d1%83%d0%bb%d0%b8%d1%80%d0%be%d0%b2%d0%ba%d0%b8_%d0%be%d0%bf%d0%b8%d1%81%d0%b0%d0%bd%d0%b8%d1%8f_%d1%81%d1%81%d1%8b%d0%bb%d0%be%d0%ba). В таком случае, вы сможете использовать элемент `<a>` или атрибут `alt` . Старайтесь выбрать лучший вариант.
 - **Текст.** Не пишите текст в изображениях. Если вашему заголовку понадобится тень, то лучше используйте для этого [CSS](/ru/docs/Web/CSS/text-shadow) вместо добавления текста в изображение. Однако, если _действительно этого не избежать_, то вам следует дополнить текст в атрибуте `alt`.
 
@@ -95,11 +95,12 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 Вы можете использовать атрибуты `width` и `height`, чтобы указать ширину и высоту вашего изображения. Ширину и высоту вашего изображение можете найти различными способами. Например, на Mac можно использовать <kbd>Cmd</kbd> + <kbd>I</kbd> чтобы получить информацию по изображению. Повторяя наш пример, мы можем сделать так:
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
-     width="400"
-     height="341">
+  width="400"
+  height="341" />
 ```
 
 Это не приводит к большой разнице в отображении при нормальных обстоятельствах. Но если изображение не будет показано, например, когда пользователь только что перешёл на страницу, а оно ещё не успело загрузится, вы укажите браузеру оставить место для отрисовки изображения:
@@ -117,12 +118,13 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 Как и для [ссылок](/ru/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), вы также можете добавить атрибут `title` для изображений, чтобы при необходимости предоставить дополнительную информацию. В нашем примере мы могли бы сделать это так:
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"
-     width="400"
-     height="341"
-     title="A T-Rex on display in the Manchester University Museum">
+  width="400"
+  height="341"
+  title="A T-Rex on display in the Manchester University Museum" />
 ```
 
 Это даёт нам всплывающую подсказку при наведении курсора мыши, также как и в ссылках:
@@ -149,8 +151,7 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input">
-<img></textarea>
+<textarea id="code" class="input"><img></textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -161,10 +162,11 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Изображения_в_HTM
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 10em;
   padding: 10px;
@@ -188,13 +190,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n     alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n     width="200"\n     height="171"\n     title="A T-Rex on display in the Manchester University Museum">';
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n     alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n     width="200"\n     height="171"\n     title="A T-Rex on display in the Manchester University Museum">';
   drawOutput();
 });
 
@@ -210,11 +213,12 @@ window.addEventListener("load", drawOutput);
 
 ```html
 <div class="figure">
-  <img src="images/dinosaur.jpg"
-       alt="The head and torso of a dinosaur skeleton;
+  <img
+    src="images/dinosaur.jpg"
+    alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
-       width="400"
-       height="341">
+    width="400"
+    height="341" />
 
   <p>A T-Rex on display in the Manchester University Museum.</p>
 </div>
@@ -238,7 +242,7 @@ window.addEventListener("load", drawOutput);
 
 Элемент {{htmlelement("figcaption")}} говорит браузерам и вспомогательной технологии, что заголовок описывает содержимое элемента {{htmlelement("figure")}}.
 
-> **Примечание:** **Замечание**: С точки зрения доступности, заголовки и {{htmlattrxref('alt','img')}} имеют различные предназначения. Заголовки помогают даже тем, кто имеет возможность просматривать изображение, тогда как {{htmlattrxref('alt','img')}} обеспечивает замену функциональности отсутствующего изображения. Таким образом, заголовки и `alt` не подразумевают под собой одни и те же вещи, потому что оба используются браузером при отсутствии изображения. Попробуйте отключить изображения в своём браузере, чтобы увидеть как это выглядит.
+> **Примечание:** С точки зрения доступности, заголовки и [`alt`](/ru/docs/Web/HTML/Element/img#alt) имеют различные предназначения. Заголовки помогают даже тем, кто имеет возможность просматривать изображение, тогда как [`alt`](/ru/docs/Web/HTML/Element/img#alt) обеспечивает замену функциональности отсутствующего изображения. Таким образом, заголовки и `alt` не подразумевают под собой одни и те же вещи, потому что оба используются браузером при отсутствии изображения. Попробуйте отключить изображения в своём браузере, чтобы увидеть как это выглядит.
 
 Тег \<figure> не является изображением. Он представляет собой независимый структурный элемент, который:
 
@@ -259,8 +263,7 @@ window.addEventListener("load", drawOutput);
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input">
-</textarea>
+<textarea id="code" class="input"></textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -271,10 +274,11 @@ window.addEventListener("load", drawOutput);
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 10em;
   padding: 10px;
@@ -298,13 +302,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<figure>\n  <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n       alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n       width="200"\n       height="171">\n  <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<figure>\n  <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n       alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n       width="200"\n       height="171">\n  <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
   drawOutput();
 });
 
@@ -328,7 +333,7 @@ p {
 
 Итог: если изображение имеет важность, в контексте содержимого вашей страницы, вам следует использовать HTML изображения. Если же картинка является банальной декорацией, используйте фоновые изображения CSS.
 
-> **Примечание:** **Замечание**: вы можете узнать больше о [фоновых изображениях CSS](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) в нашей теме о [CSS](/ru/docs/Learn/CSS).
+> **Примечание:** вы можете узнать больше о [фоновых изображениях CSS](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) в нашей теме о [CSS](/ru/docs/Learn/CSS).
 
 ## Проверьте свои навыки!
 

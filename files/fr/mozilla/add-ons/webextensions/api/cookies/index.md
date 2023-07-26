@@ -1,15 +1,6 @@
 ---
 title: cookies
 slug: Mozilla/Add-ons/WebExtensions/API/cookies
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
 
@@ -106,9 +97,9 @@ Lorsque l'isolation de la première partie est désactivée, le paramètre `firs
 - {{WebExtAPIRef("cookies.onChanged")}}
   - : Détails quand un cookie est défini ou supprimé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

@@ -1,9 +1,7 @@
 ---
 title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
-browser-compat: javascript.builtins.Symbol.unscopables
 l10n:
   sourceCommit: 552892d8fc6707c47ae879aef32e6ac3023166ee
 ---

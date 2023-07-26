@@ -1,16 +1,6 @@
 ---
 title: webNavigation.getAllFrames()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
-tags:
-  - API
-  - Add-ons
-  - Exntesions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getAllFrames
-  - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
 ---
 
@@ -24,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingFrames = browser.webNavigation.getAllFrames(
-  details                // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -54,9 +44,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera a
 
 Si l'onglet spécifié n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.getAllFrames")}}
+{{Compat}}
 
 ## Exemples
 
@@ -74,19 +64,19 @@ function onError(error) {
 }
 
 function logAllFrames(tabs) {
-  var gettingAllFrames = browser.webNavigation.getAllFrames({tabId: tabs[0].id});
+  var gettingAllFrames = browser.webNavigation.getAllFrames({
+    tabId: tabs[0].id,
+  });
   gettingAllFrames.then(logFrameInfo, onError);
 }
 
-browser.browserAction.onClicked.addListener(function() {
-
+browser.browserAction.onClicked.addListener(function () {
   var querying = browser.tabs.query({
     currentWindow: true,
-    active: true
+    active: true,
   });
 
   querying.then(logAllFrames, onError);
-
 });
 ```
 

@@ -1,15 +1,6 @@
 ---
 title: 동일 출처 정책
 slug: Web/Security/Same-origin_policy
-tags:
-  - CORS
-  - JavaScript
-  - Same-origin policy
-  - Security
-  - URL
-  - 교차 출처 정책
-  - 동일 출처 정책
-translation_of: Web/Security/Same-origin_policy
 ---
 
 {{QuickLinksWithSubpages("/ko/docs/Web/Security")}}

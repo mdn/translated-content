@@ -65,7 +65,7 @@ Las palabras clave son abreviaciones por convención que coinciden con los sigui
 
 Ver [Uso de CSS transforms](/En/CSS/Using_CSS_transforms) para más ejemplos.
 
-### Ejemplos en vivo:
+### Ejemplos en vivo
 
 | `transform: none;`                                         |     |
 | ---------------------------------------------------------- | --- |
@@ -85,7 +85,7 @@ Ver [Uso de CSS transforms](/En/CSS/Using_CSS_transforms) para más ejemplos.
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.transform-origin")}}
+{{Compat}}
 
 ## Ver también
 

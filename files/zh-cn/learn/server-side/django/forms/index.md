@@ -1,5 +1,5 @@
 ---
-title: 'Django 教程 9: 使用表单'
+title: "Django 教程 9: 使用表单"
 slug: Learn/Server-side/Django/Forms
 ---
 
@@ -50,9 +50,13 @@ slug: Learn/Server-side/Django/Forms
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -82,17 +86,17 @@ Django 的表单处理，使用了我们在之前的教程中，学到的所有�
 
 1. 在用户第一次请求时，显示默认表单。
 
-    - 表单可能包含空白字段（例如，如果您正在创建新记录），或者可能预先填充了初始值（例如，如果您要更改记录，或者具有有用的默认初始值）。
-    - 此时表单被称为未绑定，因为它与任何用户输入的数据无关（尽管它可能具有初始值）。
+   - 表单可能包含空白字段（例如，如果您正在创建新记录），或者可能预先填充了初始值（例如，如果您要更改记录，或者具有有用的默认初始值）。
+   - 此时表单被称为未绑定，因为它与任何用户输入的数据无关（尽管它可能具有初始值）。
 
 2. 从提交请求接收数据，并将其绑定到表单。
 
-    - 将数据绑定到表单，意味着当我们需要重新显示表单时，用户输入的数据和任何错误都可取用。
+   - 将数据绑定到表单，意味着当我们需要重新显示表单时，用户输入的数据和任何错误都可取用。
 
 3. 清理并验证数据。
 
-    - 清理数据会对输入执行清理（例如，删除可能用于向服务器发送恶意内容的无效字符）并将其转换为一致的 Python 类型。
-    - 验证检查值是否适合该字段（例如，在正确的日期范围内，不是太短或太长等）
+   - 清理数据会对输入执行清理（例如，删除可能用于向服务器发送恶意内容的无效字符）并将其转换为一致的 Python 类型。
+   - 验证检查值是否适合该字段（例如，在正确的日期范围内，不是太短或太长等）
 
 4. 如果任何数据无效，请重新显示表单，这次使用任何用户填充的值，和问题字段的错误消息。
 5. 如果所有数据都有效，请执行必要的操作（例如保存数据，发送表单和发送电子邮件，返回搜索结果，上传文件等）
@@ -131,7 +135,7 @@ class RenewBookForm(forms.Form):
 
 还有许多其他类型的表单字段，您可以从它们与等效模型字段类的相似性中大致认识到：
 
-[`BooleanField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#booleanfield), [`CharField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#charfield), [`ChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#choicefield), [`TypedChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#typedchoicefield), [`DateField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#datefield), [`DateTimeField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#datetimefield), [`DecimalField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#decimalfield), [`DurationField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#durationfield), [`EmailField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#emailfield), [`FileField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#filefield), [`FilePathField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#filepathfield), [`FloatField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#floatfield), [`ImageField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#imagefield), [`IntegerField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#integerfield), [`GenericIPAddressField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#genericipaddressfield), [`MultipleChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#multiplechoicefield), [`TypedMultipleChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#typedmultiplechoicefield), [`NullBooleanField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#nullbooleanfield), [`RegexField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#regexfield), [`SlugField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#slugfield), [`TimeField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#timefield), [`URLField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#urlfield), [`UUIDField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#uuidfield), [`ComboField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#combofield), [`MultiValueField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#multivaluefield), [`SplitDateTimeField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#splitdatetimefield), [`ModelMultipleChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#modelmultiplechoicefield), [`ModelChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#modelchoicefield)​​​​.
+[`BooleanField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#booleanfield), [`CharField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#charfield), [`ChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#choicefield), [`TypedChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#typedchoicefield), [`DateField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#datefield), [`DateTimeField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#datetimefield), [`DecimalField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#decimalfield), [`DurationField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#durationfield), [`EmailField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#emailfield), [`FileField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#filefield), [`FilePathField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#filepathfield), [`FloatField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#floatfield), [`ImageField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#imagefield), [`IntegerField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#integerfield), [`GenericIPAddressField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#genericipaddressfield), [`MultipleChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#multiplechoicefield), [`TypedMultipleChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#typedmultiplechoicefield), [`NullBooleanField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#nullbooleanfield), [`RegexField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#regexfield), [`SlugField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#slugfield), [`TimeField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#timefield), [`URLField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#urlfield), [`UUIDField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#uuidfield), [`ComboField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#combofield), [`MultiValueField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#multivaluefield), [`SplitDateTimeField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#splitdatetimefield), [`ModelMultipleChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#modelmultiplechoicefield), [`ModelChoiceField`](https://docs.djangoproject.com/en/2.0/ref/forms/fields/#modelchoicefield).
 
 下面列出了大多数字段共有的参数（这些参数具有合理的默认值）：
 
@@ -344,22 +348,21 @@ def renew_book_librarian(request, pk):
 
 创建视图中引用的模板（**/catalog/templates/catalog/book\_renew\_librarian.html**），并将下面的代码，复制到其中：
 
-```html
+```django
 {% extends "base_generic.html" %}
+
 {% block content %}
+  <h1>Renew: \{{bookinst.book.title}}</h1>
+  <p>Borrower: \{{bookinst.borrower}}</p>
+  <p{% if bookinst.is_overdue %} class="text-danger"{% endif %}>Due date: \{{bookinst.due_back}}</p>
 
-    <h1>Renew: \{{bookinst.book.title}}</h1>
-    <p>Borrower: \{{bookinst.borrower}}</p>
-    <p{% if bookinst.is_overdue %} class="text-danger"{% endif %}>Due date: \{{bookinst.due_back}}</p>
-
-    <form action="" method="post">
-        {% csrf_token %}
-        <table>
-        \{{ form }}
-        </table>
-        <input type="submit" value="Submit" />
-    </form>
-
+  <form action="" method="post">
+    {% csrf_token %}
+    <table>
+      \{{ form }}
+    </table>
+    <input type="submit" value="Submit" />
+  </form>
 {% endblock %}
 ```
 
@@ -375,9 +378,16 @@ def renew_book_librarian(request, pk):
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
   <td>
-    <input id="id_renewal_date" name="renewal_date" type="text" value="2016-11-08" required />
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2016-11-08"
+      required />
     <br />
-    <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
   </td>
 </tr>
 ```
@@ -389,14 +399,21 @@ def renew_book_librarian(request, pk):
 ```html
 <tr>
   <th><label for="id_renewal_date">Renewal date:</label></th>
-   <td>
-      <ul class="errorlist">
-        <li>Invalid date - renewal in past</li>
-      </ul>
-      <input id="id_renewal_date" name="renewal_date" type="text" value="2015-11-08" required />
-      <br />
-      <span class="helptext">Enter date between now and 4 weeks (default 3 weeks).</span>
-    </td>
+  <td>
+    <ul class="errorlist">
+      <li>Invalid date - renewal in past</li>
+    </ul>
+    <input
+      id="id_renewal_date"
+      name="renewal_date"
+      type="text"
+      value="2015-11-08"
+      required />
+    <br />
+    <span class="helptext"
+      >Enter date between now and 4 weeks (default 3 weeks).</span
+    >
+  </td>
 </tr>
 ```
 
@@ -418,13 +435,15 @@ def renew_book_librarian(request, pk):
 
 如果您接受了[Django 教程第 8 部分中的“挑战”：用户身份验证和权限](/zh-CN/docs/learn/Server-side/Django/Authentication#Challenge_yourself)，您将获得图书馆中借出的所有书本的列表，这只有图书馆工作人员才能看到。我们可以使用下面的模板代码，为每个项目旁边的续借页面，添加链接。
 
-```html
-{% if perms.catalog.can_mark_returned %}- <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>  {% endif %}
+```django
+{% if perms.catalog.can_mark_returned %}-
+  <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>
+{% endif %}
 ```
 
 > **备注：** 请记住，您的测试登录需要具有“`catalog.can_mark_returned`”权限，才能访问续借书本页面（可能使用您的超级用户帐户）。
 
-您也可以手动构建这样的测试 URL - [http://127.0.0.1:8000/catalog/book/*\<bookinstance_id>*/renew/](<http://127.0.0.1:8000/catalog/book/\<bookinstance id\>/renew/>) （可以通过导航到图书馆中的书本详细信息页面，获取有效的 bookinstance id，并复制`id` 字段）。
+您也可以手动构建这样的测试 URL - `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` （可以通过导航到图书馆中的书本详细信息页面，获取有效的 bookinstance id，并复制`id` 字段）。
 
 ### 它看起来是什么样子？
 
@@ -541,21 +560,19 @@ class AuthorDelete(DeleteView):
 
 “创建”和“更新”视图默认使用相同的模板，它将以您的模型命名：**model\_name\_form.html**（您可以使用视图中的`template_name_suffix` 字段，将后缀更改为 **form** 以外的其他内容，例如，`template_name_suffix = '_other_suffix'`）
 
-创建模板文件 **locallibrary/catalog/templates/catalog/author\_form.html**，并复制到下面的文本中。
+创建模板文件 **locallibrary/catalog/templates/catalog/author_form.html**，并复制到下面的文本中。
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-
-<form action="" method="post">
+  <form action="" method="post">
     {% csrf_token %}
     <table>
     \{{ form.as_table }}
     </table>
     <input type="submit" value="Submit" />
-
-</form>
+  </form>
 {% endblock %}
 ```
 
@@ -563,20 +580,18 @@ class AuthorDelete(DeleteView):
 
 “删除”视图需要查找以 **model\_name\_confirm\_delete.html** 格式命名的模板（同样，您可以在视图中，使用`template_name_suffix` 更改后缀）。创建模板文件 **locallibrary/catalog/templates/catalog/author\_confirm\_delete.html** ，并复制到下面的文本中。
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
+  <h1>Delete Author</h1>
 
-<h1>Delete Author</h1>
+  <p>Are you sure you want to delete the author: \{{ author }}?</p>
 
-<p>Are you sure you want to delete the author: \{{ author }}?</p>
-
-<form action="" method="POST">
-  {% csrf_token %}
-  <input type="submit" action="" value="Yes, delete." />
-</form>
-
+  <form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" action="" value="Yes, delete." />
+  </form>
 {% endblock %}
 ```
 
@@ -616,7 +631,7 @@ urlpatterns += [
 
 ## 挑战自己
 
-创建一些表单，来创建、编辑和删除书本记录`Book`。您可以使用与作者`Authors`完全相同的结构。如果您的 **book_form.html** 模板只是 **author\_form.html** 模板的复制重命名版本，则新的“创建图书”页面，将如下所示：
+创建一些表单，来创建、编辑和删除书本记录`Book`。您可以使用与作者`Authors`完全相同的结构。如果您的 **book_form.html** 模板只是 **author_form.html** 模板的复制重命名版本，则新的“创建图书”页面，将如下所示：
 
 ![](forms_example_create_book.png)
 
@@ -638,21 +653,3 @@ urlpatterns += [
 - [Generic editing views](https://docs.djangoproject.com/en/2.0/ref/class-based-views/generic-editing/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
-
-## 本系列教程
-
-- [Django introduction](/zh-CN/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/zh-CN/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/zh-CN/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/zh-CN/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/zh-CN/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/zh-CN/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/zh-CN/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/zh-CN/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/zh-CN/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/zh-CN/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/zh-CN/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/zh-CN/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/zh-CN/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/zh-CN/docs/Learn/Server-side/Django/django_assessment_blog)

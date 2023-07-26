@@ -5,7 +5,7 @@ slug: Web/API/Window/console
 
 {{ APIRef }}
 
-只读属性 Window\.console 返回一个对{{domxref("Console")}}对象的引用，Window\.console 提供了向浏览器控制台输出日志信息的方法。这些方法仅应该用于调试，并不应该用来给最终用户呈现信息。
+只读属性 **`Window.console`** 返回一个对{{domxref("Console")}}对象的引用，Window\.console 提供了向浏览器控制台输出日志信息的方法。这些方法仅应该用于调试，并不应该用来给最终用户呈现信息。
 
 ## 语法
 
@@ -29,7 +29,7 @@ console.log("An error occurred while loading the content");
 console.dir(someObject);
 ```
 
-更多示例参考 {{SectionOnPage("/en-US/docs/Web/API/Console", "Usage")}}。
+更多示例参考 [`console`](/zh-CN/docs/Web/API/console) 文章中的[示例](/zh-CN/docs/Web/API/console#示例)部分。
 
 ## 规范
 

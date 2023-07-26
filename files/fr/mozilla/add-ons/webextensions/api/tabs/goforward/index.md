@@ -1,15 +1,6 @@
 ---
 title: tabs.goForward()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/goForward
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - goForward
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/goForward
 ---
 
@@ -23,9 +14,9 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var goingForward = browser.tabs.goForward(
-  tabId,                       // optional integer
-  callback                     // optional function
-)
+  tabId, // optional integer
+  callback, // optional function
+);
 ```
 
 ### Paramètres
@@ -39,9 +30,9 @@ var goingForward = browser.tabs.goForward(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est tenue lorsque la navigation sur la page se termine.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.goForward")}}
+{{Compat}}
 
 ## Exemples
 

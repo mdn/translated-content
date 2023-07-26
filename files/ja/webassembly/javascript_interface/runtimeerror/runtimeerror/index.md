@@ -4,17 +4,17 @@ slug: WebAssembly/JavaScript_interface/RuntimeError/RuntimeError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RuntimeError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.RuntimeError()`** コンストラクターは、新しい WebAssembly `RuntimeError` オブジェクトを生成します。これは、 WebAssembly が[トラップ](https://webassembly.org/docs/semantics/#traps)を指定するたびに例外として発生する型です。
 
 ## 構文
 
 ```js
-new WebAssembly.RuntimeError()
-new WebAssembly.RuntimeError(message)
-new WebAssembly.RuntimeError(message, fileName)
-new WebAssembly.RuntimeError(message, fileName, lineNumber)
+new WebAssembly.RuntimeError();
+new WebAssembly.RuntimeError(message);
+new WebAssembly.RuntimeError(message, fileName);
+new WebAssembly.RuntimeError(message, fileName, lineNumber);
 ```
 
 ### 引数
@@ -34,15 +34,15 @@ new WebAssembly.RuntimeError(message, fileName, lineNumber)
 
 ```js
 try {
-  throw new WebAssembly.RuntimeError('Hello', 'someFile', 10);
+  throw new WebAssembly.RuntimeError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof WebAssembly.RuntimeError); // true
-  console.log(e.message);                             // "Hello"
-  console.log(e.name);                                // "RuntimeError"
-  console.log(e.fileName);                            // "someFile"
-  console.log(e.lineNumber);                          // 10
-  console.log(e.columnNumber);                        // 0
-  console.log(e.stack);                               // コードの実行されていた位置を返す
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "RuntimeError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // コードの実行されていた位置を返す
 }
 ```
 

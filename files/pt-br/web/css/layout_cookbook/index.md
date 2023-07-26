@@ -7,7 +7,7 @@ slug: Web/CSS/Layout_cookbook
 
 O livro de receitas (Cookbook) de layout CSS visa reunir receitas para padrões de layout comuns, coisas que você pode precisar implementar em seus próprios sites. Além de fornecer código que você pode usar como ponto de partida em seus projetos, essas receitas destacam as diferentes maneiras pelas quais as especificações de layout podem ser usadas e as escolhas que você pode fazer como desenvolvedor.
 
-> **Note:** Se você é novo no layout CSS, então primeiro você pode dar uma olhada em nosso módulo de aprendizado de layout CSS, pois isso lhe dará o básico de que você precisa para usar as receitas aqui.
+> **Nota:** Se você é novo no layout CSS, então primeiro você pode dar uma olhada em nosso módulo de aprendizado de layout CSS, pois isso lhe dará o básico de que você precisa para usar as receitas aqui.
 
 ## As Receitas
 

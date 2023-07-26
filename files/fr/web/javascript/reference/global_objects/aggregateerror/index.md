@@ -1,14 +1,7 @@
 ---
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
-tags:
-  - AggregateError
-  - Classe
-  - Experimental
-  - Interface
-  - JavaScript
 translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
-original_slug: Web/JavaScript/Reference/Objets_globaux/AggregateError
 ---
 
 {{JSRef}}

@@ -5,7 +5,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 original_slug: Web/API/Canvas_API/Tutorial/Применение_стилей_и_цветов
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
 В главе о [рисовании фигур](/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes), мы использовали для линий и заполнения только стили по умолчанию. Здесь мы будем исследовать опции canvas, которые мы имеем в нашем распоряжении, чтобы сделать наши рисунки немного более привлекательными. Вы узнаете, как добавлять различные цвета, стили линий, градиенты, узоры и тени вашим рисункам.
 
@@ -20,7 +20,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Применение_стилей_и_
 
 *`color`* может быть цветом, (строка, представленная в CSS {{cssxref("&lt;color&gt;")}}), градиентом или паттерном. Градиенты и паттерны мы рассмотрим позже. По умолчанию цвет фона и контура — чёрный (значение CSS цвета `#000000`).
 
-> **Примечание:** **На заметку:** Когда вы устанавливаете значения `strokeStyle` и/или `fillStyle`, то новое значение становится стандартным для всех фигур, которые будут нарисованы с этого момента. Когда вам нужен другой цвет, вы должны перезаписать значение в `fillStyle` или в `strokeStyle` для каждой фигуры.
+> **Примечание:** Когда вы устанавливаете значения `strokeStyle` и/или `fillStyle`, то новое значение становится стандартным для всех фигур, которые будут нарисованы с этого момента. Когда вам нужен другой цвет, вы должны перезаписать значение в `fillStyle` или в `strokeStyle` для каждой фигуры.
 
 Чтобы строка *`color`* считалась валидной, она должна соответствовать CSS {{cssxref("&lt;color&gt;")}}. Далее приведены примеры того, как можно по-разному задать один и тот же цвет.
 
@@ -60,7 +60,7 @@ draw();
 
 Результат выглядит так:
 
-{{EmbedLiveSample("Пример_fillStyle", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
+{{EmbedLiveSample("Пример_fillStyle", 160, 160, "canvas_fillstyle.png")}}
 
 ### Пример `strokeStyle`
 
@@ -91,7 +91,7 @@ draw();
 
 Результат выглядит так:
 
-{{EmbedLiveSample("Пример_strokeStyle", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}
+{{EmbedLiveSample("Пример_strokeStyle", "180", "180", "canvas_strokestyle.png")}}
 
 ## Прозрачность
 
@@ -151,7 +151,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Пример_globalAlpha", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}
+{{EmbedLiveSample("Пример_globalAlpha", "180", "180", "canvas_globalalpha.png")}}
 
 ### Пример использования `rgba()`
 
@@ -189,7 +189,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Пример_использования_rgba", "180", "180", "https://mdn.mozillademos.org/files/246/Canvas_rgba.png")}}
+{{EmbedLiveSample("Пример_использования_rgba", "180", "180", "canvas_rgba.png")}}
 
 ## Стили линий
 
@@ -241,11 +241,11 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Пример_lineWidth", "180", "180", "https://mdn.mozillademos.org/files/239/Canvas_linewidth.png")}}
+{{EmbedLiveSample("Пример_lineWidth", "180", "180", "canvas_linewidth.png")}}
 
 Получение чётких строк требует понимания путей сглаживания. На рисунках ниже представлена сетка координат холста. Квадраты между сетками являются фактическими экранными пикселями. В первом изображении сетки ниже прямоугольник от (2, 1) до (5, 5) заполняется. Вся область между ними (светло-красный) падает на границы пикселей, поэтому полученный заполненный прямоугольник будет иметь чёткие края.
 
-![](https://mdn.mozillademos.org/files/201/Canvas-grid.png)
+![](canvas-grid.png)
 
 Если вы рассмотрите путь от (3, 1) до (3, 5) с толщиной строки `1.0`, вы получите ситуацию во втором изображении. Фактическая заполняемая область, (синяя), распространяется только наполовину в пикселях по обе стороны пути. Приблизительно это означает, что частично затенённые пиксели приводят к заполнению всей области (светло-голубой и синей) цветом, только наполовину темным, чем фактический цвет штриха. Это то, что происходит с линией шириной `1.0` в предыдущем примере кода.
 
@@ -263,7 +263,7 @@ draw();
 
 Свойство `lineCap` определяет, как выводятся конечные точки каждой строки. Для этого свойства есть три возможных значения: `butt`, `round` и `square`. По умолчанию для этого свойства установлено значение `butt`.
 
-![](https://mdn.mozillademos.org/files/236/Canvas_linecap.png)
+![](canvas_linecap.png)
 
 - `butt`
   - : Концы линий соответствуют крайним точкам.
@@ -311,15 +311,15 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Пример_lineCap", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}
+{{EmbedLiveSample("Пример_lineCap", "180", "180", "canvas_linecap.png")}}
 
 ### Пример `lineJoin`
 
 Свойство `lineJoin` определяет, как соединяются два сегмента (линий, дуг или кривых) с ненулевой длиной в форме (вырожденные сегменты с нулевой длиной, заданные конечные точки и контрольные точки находятся точно в том же положении - пропущены).
 
-Для этого свойства есть три возможных значения: `round`, `bevel` и `miter`. По умолчанию для этого свойства установлено значение `miter`. Обратите внимание, что настройка `lineJoin` не действует, если два связанных сегмента имеют одно и то же направление, потому что в этом случае не будет добавлена ​​область соединения.
+Для этого свойства есть три возможных значения: `round`, `bevel` и `miter`. По умолчанию для этого свойства установлено значение `miter`. Обратите внимание, что настройка `lineJoin` не действует, если два связанных сегмента имеют одно и то же направление, потому что в этом случае не будет добавлена область соединения.
 
-![](https://mdn.mozillademos.org/files/237/Canvas_linejoin.png)
+![](canvas_linejoin.png)
 
 - `round`
   - : Радиус заполняемой части для скруглённых углов равен половине ширины линии. центр этого радиуса совпадает с концами подключённых сегментов.
@@ -356,7 +356,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Пример_lineJoin", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}
+{{EmbedLiveSample("Пример_lineJoin", "180", "180", "canvas_linejoin.png")}}
 
 ### Демонстрация свойства `miterLimit`
 
@@ -431,7 +431,7 @@ document.getElementById('miterLimit').value = document.getElementById('canvas').
 draw();
 ```
 
-{{EmbedLiveSample("Демонстрация_свойства_miterLimit", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}
+{{EmbedLiveSample("Демонстрация_свойства_miterLimit", "400", "180", "canvas_miterlimit.png")}}
 
 ### Использование штрихов
 
@@ -466,7 +466,7 @@ function march() {
 march();
 ```
 
-{{EmbedLiveSample("Использование_штрихов", "120", "120", "https://mdn.mozillademos.org/files/9853/marching-ants.png")}}
+{{EmbedLiveSample("Использование_штрихов", "120", "120", "marching-ants.png")}}
 
 ## Градиенты
 
@@ -539,7 +539,7 @@ The first is a background gradient. As you can see, we assigned two colors at th
 
 In the second gradient, we didn't assign the starting color (at position 0.0) since it wasn't strictly necessary, because it will automatically assume the color of the next color stop. Therefore, assigning the black color at position 0.5 automatically makes the gradient, from the start to this stop, black.
 
-{{EmbedLiveSample("Пример_createLinearGradient", "180", "180", "https://mdn.mozillademos.org/files/235/Canvas_lineargradient.png")}}
+{{EmbedLiveSample("Пример_createLinearGradient", "180", "180", "canvas_lineargradient.png")}}
 
 ### Пример `createRadialGradient`
 
@@ -594,7 +594,7 @@ In this case, we've offset the starting point slightly from the end point to ach
 
 The last color stop in each of the four gradients uses a fully transparent color. If you want to have a nice transition from this to the previous color stop, both colors should be equal. This isn't very obvious from the code because it uses two different CSS color methods as a demonstration, but in the first gradient `#019F62 = rgba(1,159,98,1)`.
 
-{{EmbedLiveSample("Пример_createRadialGradient", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}
+{{EmbedLiveSample("Пример_createRadialGradient", "180", "180", "canvas_radialgradient.png")}}
 
 ## Шаблоны
 
@@ -634,7 +634,7 @@ function draw() {
 
   // create new image object to use as pattern
   var img = new Image();
-  img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+  img.src = 'canvas_createpattern.png';
   img.onload = function(){
 
     // create pattern
@@ -654,7 +654,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Пример_createPattern", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}
+{{EmbedLiveSample("Пример_createPattern", "180", "180", "canvas_createpattern.png")}}
 
 ## Тени
 
@@ -704,7 +704,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Пример_текста_с_тенью", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}
+{{EmbedLiveSample("Пример_текста_с_тенью", "180", "100", "shadowed-string.png")}}
 
 We will look at the `font` property and `fillText` method in the next chapter about [drawing text](/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
@@ -739,6 +739,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "https://mdn.mozillademos.org/files/9855/fill-rule.png")}}
+{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "fill-rule.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

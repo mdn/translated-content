@@ -1,7 +1,6 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
-translation_of: Web/HTTP/Headers/Expires
 ---
 
 {{HTTPSidebar}}

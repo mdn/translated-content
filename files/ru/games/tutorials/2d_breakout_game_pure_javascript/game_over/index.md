@@ -9,9 +9,7 @@ tags:
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
 
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
-
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаём_зону_кирпичей")}}
+{{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создаём_зону_кирпичей")}}
 
 Это - 5-й шаг из 10 из [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код к этому уроку в [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html).
 
@@ -22,12 +20,12 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 Давайте попытаемся реализовать "Конец Игры" в нашей игре. Вот часть кода от третьего урока, где мы заставили шар отталкиваться от стен:
 
 ```js
-if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+  dx = -dx;
 }
 
-if(y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
-    dy = -dy;
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+  dy = -dy;
 }
 ```
 
@@ -48,12 +46,12 @@ var interval = setInterval(draw, 10);
 Затем замените второй оператор if следующим:
 
 ```js
-if(y + dy < ballRadius) {
-    dy = -dy;
-} else if(y + dy > canvas.height-ballRadius) {
-    alert("GAME OVER");
-    document.location.reload();
-    clearInterval(interval); // Needed for Chrome to end game
+if (y + dy < ballRadius) {
+  dy = -dy;
+} else if (y + dy > canvas.height - ballRadius) {
+  alert("GAME OVER");
+  document.location.reload();
+  clearInterval(interval); // Needed for Chrome to end game
 }
 ```
 
@@ -62,16 +60,15 @@ if(y + dy < ballRadius) {
 Последняя вещь, которую нужно сделать на этом уроке состоит в том, чтобы создать некоторое обнаружение столкновений между шаром и битой, таким образом, шар оттолкнётся от биты и возвратиться в область игры. Самая простая вещь состоит в том, чтобы проверить, является ли центр шара между левыми и правыми краями биты. Обновите последний бит кода, который вы изменили:
 
 ```js
-if(y + dy < ballRadius) {
+if (y + dy < ballRadius) {
+  dy = -dy;
+} else if (y + dy > canvas.height - ballRadius) {
+  if (x > paddleX && x < paddleX + paddleWidth) {
     dy = -dy;
-} else if(y + dy > canvas.height-ballRadius) {
-    if(x > paddleX && x < paddleX + paddleWidth) {
-        dy = -dy;
-    }
-    else {
-        alert("GAME OVER");
-        document.location.reload();
-    }
+  } else {
+    alert("GAME OVER");
+    document.location.reload();
+  }
 }
 ```
 

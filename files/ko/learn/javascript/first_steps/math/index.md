@@ -103,7 +103,7 @@ typeof myNumber;
 ```
 
 올바른 계산 결과를 얻기 위해서는 다음과 같이 하면 됩니다.
-  
+
 ```js
 let myNumber = "74";
 myNumber = Number(myNumber) + 3;
@@ -329,15 +329,3 @@ function updateBtn() {
 > **참고:** 만약 수학을 좋아하고 JavaScript에서 수학이 어떻게 구현되었는지에 대해 더 알고 싶다면, [숫자와 날짜](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates)와 [표현식과 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators)를 참고하세요.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
-
-## 이 과정은
-
-- [JavaScript가 뭔가요?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript에 발 담그기](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [뭐가 잘못됐을까요? JavaScript 문제 해결](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [필요한 정보를 저장하기 — 변수](/ko/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 기초 수학 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)
-- [텍스트 다루기 — JavaScript의 문자열](/ko/docs/Learn/JavaScript/First_steps/Strings)
-- [유용한 문자열 메서드](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)
-- [평가: 바보같은 이야기 생성기](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

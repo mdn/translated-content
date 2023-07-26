@@ -19,11 +19,15 @@ var arrayGP = navigator.getGamepads();
 ## Exemple
 
 ```js
-window.addEventListener("gamepadconnected", function(e) {
+window.addEventListener("gamepadconnected", function (e) {
   var gp = navigator.getGamepads()[0];
-  console.log("Contrôleur n°%d connecté : %s. %d boutons, %d axes.",
-  gp.index, gp.id,
-  gp.buttons.length, gp.axes.length);
+  console.log(
+    "Contrôleur n°%d connecté : %s. %d boutons, %d axes.",
+    gp.index,
+    gp.id,
+    gp.buttons.length,
+    gp.axes.length,
+  );
 });
 ```
 

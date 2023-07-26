@@ -1,12 +1,6 @@
 ---
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
-tags:
-  - Deprecated
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/contextmenu
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -88,17 +82,17 @@ function changeImage() {
 
 {{EmbedLiveSample("Example", "100%", 400)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("html.global_attributes.contextmenu")}}
+{{Compat}}
 
 \[1] An experimental implementation was originally available via the command line option `--enable-blink-features=ContextMenu`. Until Chrome 52 and Opera 39 it was additionally available by enabling the _Experimental Web Platform features_ option, but got removed from that due to a [Web compatibility issue](https://bugs.chromium.org/p/chromium/issues/detail?id=412945). In June 2017, it was removed entirely from the browsers. This is documented in [Chrome bug 87553](https://bugs.chromium.org/p/chromium/issues/detail?id=87553).
 
-\[2] Support for the `contextmenu` attribute has been removed from Firefox Mobile ({{bug(1424252)}}).
+\[2] Support for the `contextmenu` attribute has been removed from Firefox Mobile ([Firefox bug 1424252](https://bugzil.la/1424252)).
 
 ## See also
 

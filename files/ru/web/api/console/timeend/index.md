@@ -1,6 +1,6 @@
 ---
 title: Console.timeEnd
-slug: Web/API/Console/timeEnd
+slug: Web/API/console/timeEnd
 tags:
   - API
   - Method
@@ -9,6 +9,7 @@ tags:
   - консоль
 translation_of: Web/API/Console/timeEnd
 ---
+
 {{APIRef("Console API")}}
 
 Останавливает таймер, который был запущен до этого через функцию {{domxref("console.time()")}}.
@@ -40,7 +41,7 @@ console.timeEnd("answer time");
 
 В примере выше мы получим время, которое потребовалось пользователю, чтобы закрыть первое диалоговое окно, а затем время, которое потребовалось пользователю, чтобы закрыть второе диалоговое окно:
 
-![timerresult.png](https://mdn.mozillademos.org/files/16741/timer_output.png)
+![timerresult.png](timer_output.png)
 
 Обратите внимание, что метка таймера отображается как при вызове `timeLog()`, так и завершении таймера. Кроме того, вызов timeEnd() выводит дополнительную информацию "timer ended", чтобы очевидно показать, что таймер больше не отслеживается.
 

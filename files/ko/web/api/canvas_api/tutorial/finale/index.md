@@ -1,15 +1,10 @@
 ---
 title: Finale
 slug: Web/API/Canvas_API/Tutorial/Finale
-tags:
-  - 그래픽
-  - 캔버스
-  - 튜토리얼
-translation_of: Web/API/Canvas_API/Tutorial/Finale
 original_slug: Web/HTML/Canvas/Tutorial/Finale
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Optimizing_canvas")}}
 
 축하합니다 [Canvas](/ko/docs/Web/API/Canvas_API/Tutorial) 튜토리얼을 모두 끝마쳤습니다! 이 정보는 웹에서 더 나은 2D 그래픽을 만드는데 도움이 됩니다.
 

@@ -1,11 +1,6 @@
 ---
 title: '-webkit-mask-box-image'
 slug: Web/CSS/-webkit-mask-box-image
-tags:
-  - CSS
-  - Non-standard
-  - Reference
-  - Web
 translation_of: Web/CSS/-webkit-mask-box-image
 ---
 
@@ -74,7 +69,7 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-mask-box-image")}}
+{{Compat}}
 
 ## Voir aussi
 

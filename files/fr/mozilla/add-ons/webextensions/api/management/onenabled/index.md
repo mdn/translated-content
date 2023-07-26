@@ -1,14 +1,6 @@
 ---
 title: management.onEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onEnabled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Reference
-  - WebExtensions
-  - management
-  - onEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/onEnabled
 ---
 
@@ -21,9 +13,9 @@ L'API requière l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/pe
 ## Syntaxe
 
 ```js
-browser.management.onEnabled.addListener(listener)
-browser.management.onEnabled.removeListener(listener)
-browser.management.onEnabled.hasListener(listener)
+browser.management.onEnabled.addListener(listener);
+browser.management.onEnabled.removeListener(listener);
+browser.management.onEnabled.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -46,9 +38,9 @@ Les événements ont trois fonctions :
     - `info`
       - : [`ExtensionInfo`](/fr/Add-ons/WebExtensions/API/management/ExtensionInfo): informations de l'extension qui a été désinstallé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.onEnabled")}}
+{{Compat}}
 
 ## Exemples
 

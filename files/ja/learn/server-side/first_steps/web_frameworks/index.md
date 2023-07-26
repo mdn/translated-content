@@ -283,10 +283,3 @@ Mojolicious が提供する機能のいくつかは以下の通りです。
 このモジュールの次の記事では、方向を少し変えてウェブセキュリティについて考えます。
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
-
-## このモジュールの記事一覧
-
-- [サーバサイドの概要](/ja/docs/Learn/Server-side/First_steps/Introduction)
-- [クライアント - サーバの概要](/ja/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [サーバーサイドウェブフレームワーク](/ja/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Web サイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)

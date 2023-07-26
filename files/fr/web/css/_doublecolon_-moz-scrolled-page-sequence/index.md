@@ -1,11 +1,6 @@
 ---
 title: '::-moz-scrolled-page-sequence'
 slug: Web/CSS/::-moz-scrolled-page-sequence
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-moz-scrolled-page-sequence
 ---
 
@@ -23,7 +18,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-scrolled-page-sequence")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -9,6 +9,8 @@ slug: Web/SVG/Element/svg
 
 > **メモ:** `xmlns` 属性は *SVG ドキュメント*の最も外側の `svg` 要素にのみ必要です。内部の `svg` 要素や HTML 文書の内部には不要です。
 
+## 例
+
 ```css hidden
 html,body,svg { height:100% }
 ```
@@ -24,17 +26,17 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('Exeemple', 150, '100%')}}
+{{EmbedLiveSample('Example', 300, 100)}}
 
 ## 属性
 
-- {{SVGAttr("baseProfile")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("baseProfile")}} {{deprecated_inline}}
   - : 文書が要求する最小の SVG 言語プロファイル
     _値の型_: **\<string>** ; _初期値_: none; _Animatable_: **no**
-- {{SVGAttr("contentScriptType")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("contentScriptType")}} {{deprecated_inline}}
   - : SVG フラグメントで用いられる初期記述言語
     _値の型_: **\<string>** ; _初期値_: `application/ecmascript`; _アニメーション可否_: **no**
-- {{SVGAttr("contentStyleType")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("contentStyleType")}} {{deprecated_inline}}
   - : SVG フラグメントで用いられる初期のスタイルシート言語
     _値の型_: **\<string>** ; _初期値_: `text/css`; _アニメーション可否_: **no**
 - {{SVGAttr("height")}}
@@ -43,7 +45,7 @@ html,body,svg { height:100% }
 - {{SVGAttr("preserveAspectRatio")}}
   - : 異なるアスペクト比での表示時に、`svg`フラグメントがどう変形されるか
     _値の型_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _初期値_: `xMidYMid meet`; _アニメーション可否_: **yes**
-- {{SVGAttr("version")}} {{deprecated_inline('svg2')}}
+- {{SVGAttr("version")}} {{deprecated_inline}}
   - : 要素内の内容にどのバージョンの SVG が用いられるか
     _値の型_: **[\<number>](/ja/docs/Web/SVG/Content_type#Number)** ; _初期値_: none; _アニメーション可否_: **no**
 - {{SVGAttr("viewBox")}}

@@ -5,7 +5,7 @@ translation_of: Web/API/Document_object_model/Locating_DOM_elements_using_select
 original_slug: DOM/DOM_Reference/Locating_DOM_elements_using_selectors
 ---
 
-{{ gecko_minversion_header("1.9.1") }}Selectors API предоставляет методы, с помощью которых можно быстро и просто получить доступ к узлам [`Element`](/en-US/docs/DOM/element) из DOM путём сопоставления с набором селекторов. Это намного быстрее, чем прошлые техники, где надо было, например, использовать цикл в JS-коде, чтобы найти конкретные элементы.
+Selectors API предоставляет методы, с помощью которых можно быстро и просто получить доступ к узлам [`Element`](/ru/docs/DOM/element) из DOM путём сопоставления с набором селекторов. Это намного быстрее, чем прошлые техники, где надо было, например, использовать цикл в JS-коде, чтобы найти конкретные элементы.
 
 ## Интерфейс NodeSelector (The NodeSelector interface)
 
@@ -16,7 +16,7 @@ original_slug: DOM/DOM_Reference/Locating_DOM_elements_using_selectors
 - `querySelectorAll`
   - : Возвращает [`NodeList`](/ru/docs/DOM/NodeList), содержащий все подходящие узлы `Element` внутри поддерева узлов. Или возвращает пустой `NodeList`, если совпадений не найдено.
 
-> **Примечание:** [`NodeList`](/en-US/docs/DOM/NodeList), возвращаемый методом `querySelectorAll()`, не настоящий. Этот список отличается от других методов поиска DOM, которые возвращают настоящие (живые) узлы.
+> **Примечание:** [`NodeList`](/ru/docs/DOM/NodeList), возвращаемый методом `querySelectorAll()`, не настоящий. Этот список отличается от других методов поиска DOM, которые возвращают настоящие (живые) узлы.
 
 Вы можете найти примеры и детали, прочитав документацию для методов [`querySelector()`](/ru/docs/DOM/Element.querySelector) и [`querySelectorAll()`](/ru/docs/DOM/Element.querySelectorAll), а также в статье [Code snippets for querySelector](/ru/docs/Code_snippets/QuerySelector).
 

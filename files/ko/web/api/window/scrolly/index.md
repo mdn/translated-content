@@ -1,14 +1,6 @@
 ---
 title: Window.scrollY
 slug: Web/API/Window/scrollY
-tags:
-  - API
-  - CSSOM View
-  - Property
-  - Reference
-  - Window
-  - 스크롤
-translation_of: Web/API/Window/scrollY
 ---
 
 {{APIRef("CSSOM View")}}

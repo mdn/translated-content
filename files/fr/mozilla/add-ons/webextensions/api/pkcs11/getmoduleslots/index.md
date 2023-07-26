@@ -1,15 +1,6 @@
 ---
 title: pkcs11.getModuleSlots()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/getModuleSlots
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getModuleSlots
-  - pkcs11
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/getModuleSlots
 ---
 
@@ -25,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var getting = browser.pkcs11.getModuleSlots(
-  name              // string
-)
+  name, // string
+);
 ```
 
 ### Paramètres
@@ -58,9 +49,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Si le module n'a pas pu être trouvé ou qu'une autre erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pkcs11.getModuleSlots")}}
+{{Compat}}
 
 ## Exemples
 
@@ -77,14 +68,12 @@ function onGotSlots(slots) {
     if (slot.token) {
       console.log(`Contains token: ${slot.token.name}`);
     } else {
-      console.log('Is empty');
+      console.log("Is empty");
     }
   }
 }
 
-browser.pkcs11.installModule("my_module")
-.then(onInstalled)
-.then(onGotSlots);
+browser.pkcs11.installModule("my_module").then(onInstalled).then(onGotSlots);
 ```
 
 {{WebExtExamples}}

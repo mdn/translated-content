@@ -30,7 +30,7 @@ str.link(url)
 
 ## 示例
 
-### 例子：使用 `link`
+### 示例：使用 `link`
 
 下例显示一个单词 "MDN" 作为超链接，指向 Mozilla Developer Network。
 

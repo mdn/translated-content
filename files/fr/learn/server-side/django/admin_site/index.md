@@ -1,14 +1,6 @@
 ---
-title: 'Django didactique Section 4: Site d''administration de Django'
+title: "Django didactique Section 4: Site d'administration de Django"
 slug: Learn/Server-side/Django/Admin_site
-tags:
-  - Apprentissage
-  - Article
-  - Didacticiel
-  - Débutant
-  - Python
-  - django
-  - django_admin
 translation_of: Learn/Server-side/Django/Admin_site
 ---
 
@@ -125,7 +117,7 @@ Ce qui manque actuellement ce sont des _Book Instances_. Vous n'en avez pas car 
 
 ![Admin Site - BookInstance Add](admin_bookinstance_add.png)
 
-Créez plusieurs de ces enregistrements pour chacun de vos livres. Définissez un statut **Available** (_Disponible_) pour certains d'entre eux et **On loan** (_Prêt_) pour d’autres. Pour un statut différent de _Available_, vous devrez préciser une date d'échéance à venir.
+Créez plusieurs de ces enregistrements pour chacun de vos livres. Définissez un statut **Available** (_Disponible_) pour certains d'entre eux et **On loan** (_Prêt_) pour d'autres. Pour un statut différent de _Available_, vous devrez préciser une date d'échéance à venir.
 
 Nous avons terminé cette étape ! Vous savez comment configurer et utiliser le site d'administration. Vous pouvez continuer à créer des enregistrements pour Book, BookInstance, Genre et Author, que nous pourrons utiliser une fois que nous aurons créé nos propres vues de détail.
 
@@ -141,7 +133,7 @@ mais vous avez la possibilité de personnaliser le comportement du site d'admini
 - Des vues en liste
 
   - Ajouter des champs ou des informations supplémentaires affichés pour chaque enregistrement.
-  - Ajouter des filtres pour sélectionner les enregistrements répertoriés, en fonction de la date ou d’une autre valeur de sélection (par exemple, le statut du prêt du livre).
+  - Ajouter des filtres pour sélectionner les enregistrements répertoriés, en fonction de la date ou d'une autre valeur de sélection (par exemple, le statut du prêt du livre).
   - Ajouter des options supplémentaires au menu Actions dans les vues de liste et choisir l'emplacement où ce menu est affiché dans le formulaire.
 
 - Vues détaillées
@@ -195,7 +187,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
     pass
 ```
 
-Pour le moment, toutes les classes d’administration sont vides (cf. pass), par conséquent le comportement d'affichage n'est pas modifié. Cependant, nous allons pouvoir désormais modifier les comportements d'affichage pour chacun des objets nouvellement enregistrés.
+Pour le moment, toutes les classes d'administration sont vides (cf. pass), par conséquent le comportement d'affichage n'est pas modifié. Cependant, nous allons pouvoir désormais modifier les comportements d'affichage pour chacun des objets nouvellement enregistrés.
 
 ### Configurer les vues en liste
 
@@ -276,11 +268,11 @@ La page web de votre application locale devrait ressembler à celle ci-dessous :
 
 ![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
-> **Note :** Vous pouvez aussi utiliser l'attribut `exclude` pour identifier des attributs du modèle que vous souhaitez exclure de l'affichage (les autres attributs seront alors affichés). Pour plus de détails vous pouvez consulter la documentation Django sur l'attribut [exclude](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.exclude).
+> **Note :** Vous pouvez aussi utiliser l'attribut `exclude` pour identifier des attributs du modèle que vous souhaitez exclure de l'affichage (les autres attributs seront alors affichés). Pour plus de détails vous pouvez consulter la documentation Django sur l'attribut [`exclude`](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.exclude).
 
 #### Organiser des sections dans votre vue de détail
 
-Vous avez la possibilité de créer des sections à l'affichage pour regrouper des éléments à renseigner en utilisant l'attribut [fieldsets](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets).
+Vous avez la possibilité de créer des sections à l'affichage pour regrouper des éléments à renseigner en utilisant l'attribut [`fieldsets`](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/#django.contrib.admin.ModelAdmin.fieldsets).
 
 Nous allons utiliser l'objet `BookInstance` pour mettre en avant cette possibilité. Nous avons à afficher des informations sur l'ouvrage (nom, édition, id) et sur sa disponibilité actuelle ou à venir (statut et retour de prêt). Nous choisissons d'afficher ces éléments dans deux sections différentes, l'une nommée et l'autre pas. Modifiez l'objet BookInstanceAdmin avec le texte en gras comme ci-dessous :
 
@@ -346,21 +338,3 @@ Beaucoup de sujets ont été abordés dans ce chapitre... Vous avez acquis les b
 - [Le site d'administration de Django](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/) (Django Docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django Didactique: Site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django didactique Section 2: Créer le squelette du site web](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django didactique Section 3: Utilisation des modèles de données](/fr/docs/Learn/Server-side/Django/Models)
-- [Django didactique Section 4 : Site d'administration de Django](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django didactique Section 5: Créer la page d'accueil](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

@@ -58,13 +58,13 @@ second.onchange = function() {
 
 Больше примеров можно найти здесь: [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
 
-> **Примечание:** **Замечание**: `postMessage()` может отправить только один объект за раз. Если нужно передать несколько значений, то можно отправить массив, как показано выше.
+> **Примечание:** `postMessage()` может отправить только один объект за раз. Если нужно передать несколько значений, то можно отправить массив, как показано выше.
 
 ### Пример с Transfer
 
 В этом примере показано дополнение Firefox, которое передаёт `ArrayBuffer` из основного потока в `ChromeWorker`, а затем `ChromeWorker` передаёт его обратно в основной поток.
 
-#### Код основного потока:
+#### Код основного потока
 
 ```js
 var myWorker = new ChromeWorker(self.path + 'myWorker.js');

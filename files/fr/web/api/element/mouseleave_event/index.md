@@ -1,13 +1,6 @@
 ---
-title: 'Element : évènement mouseleave'
+title: "Element : évènement mouseleave"
 slug: Web/API/Element/mouseleave_event
-tags:
-  - API
-  - DOM
-  - Element
-  - Event
-  - Reference
-  - mouseleave
 translation_of: Web/API/Element/mouseleave_event
 ---
 
@@ -57,10 +50,10 @@ Ici, on utilise l'évènement `mouseenter` pour modifier la bordure d'un éléme
 ### HTML
 
 ```html
-<div id='mouseTarget'>
- <ul id="unorderedList">
-  <li>Pas encore d'évènement !</li>
- </ul>
+<div id="mouseTarget">
+  <ul id="unorderedList">
+    <li>Pas encore d'évènement !</li>
+  </ul>
 </div>
 ```
 
@@ -71,8 +64,8 @@ On met le `div` en forme afin de le rendre plus visible.
 ```css
 #mouseTarget {
   box-sizing: border-box;
-  width:15rem;
-  border:1px solid #333;
+  width: 15rem;
+  border: 1px solid #333;
 }
 ```
 
@@ -81,19 +74,23 @@ On met le `div` en forme afin de le rendre plus visible.
 ```js
 var enterEventCount = 0;
 var leaveEventCount = 0;
-const mouseTarget = document.getElementById('mouseTarget');
-const unorderedList = document.getElementById('unorderedList');
+const mouseTarget = document.getElementById("mouseTarget");
+const unorderedList = document.getElementById("unorderedList");
 
-mouseTarget.addEventListener('mouseenter', e => {
-  mouseTarget.style.border = '5px dotted orange';
+mouseTarget.addEventListener("mouseenter", (e) => {
+  mouseTarget.style.border = "5px dotted orange";
   enterEventCount++;
-  addListItem("Voici le nombre d'évènements mouseenter : " + enterEventCount + ".");
+  addListItem(
+    "Voici le nombre d'évènements mouseenter : " + enterEventCount + ".",
+  );
 });
 
-mouseTarget.addEventListener('mouseleave', e => {
-  mouseTarget.style.border = '1px solid #333';
+mouseTarget.addEventListener("mouseleave", (e) => {
+  mouseTarget.style.border = "1px solid #333";
   leaveEventCount++;
-  addListItem("Voici le nombre d'évènements mouseleave : " + leaveEventCount + ".");
+  addListItem(
+    "Voici le nombre d'évènements mouseleave : " + leaveEventCount + ".",
+  );
 });
 
 function addListItem(text) {

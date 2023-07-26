@@ -1,7 +1,6 @@
 ---
 title: RTCDataChannelEvent.channel
 slug: Web/API/RTCDataChannelEvent/channel
-translation_of: Web/API/RTCDataChannelEvent/channel
 ---
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}

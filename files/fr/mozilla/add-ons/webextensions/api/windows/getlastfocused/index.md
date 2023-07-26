@@ -1,16 +1,6 @@
 ---
 title: windows.getLastFocused()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Referece
-  - WebExtensions
-  - Windows
-  - getLastFocused
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getLastFocused
 ---
 
@@ -24,8 +14,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingWindow = browser.windows.getLastFocused(
-  getInfo               // optional object
-)
+  getInfo, // optional object
+);
 ```
 
 ### Paramètres
@@ -47,9 +37,9 @@ var gettingWindow = browser.windows.getLastFocused(
 
 `Une Promise` qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la dernière fenêtre ciblée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.getLastFocused",2)}}
+{{Compat}}
 
 ## Exemples
 
@@ -67,7 +57,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var getting = browser.windows.getLastFocused({populate: true});
+  var getting = browser.windows.getLastFocused({ populate: true });
   getting.then(logTabs, onError);
 });
 ```

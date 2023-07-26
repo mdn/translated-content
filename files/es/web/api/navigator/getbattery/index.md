@@ -16,7 +16,7 @@ documentación para detalles adicionales, una guía para usar la API, y código 
 ## Sintaxis
 
 ```js
-getBattery()
+getBattery();
 ```
 
 ### Parámetros
@@ -54,10 +54,10 @@ es grabado cuando cambia.
 ```js
 let batteryIsCharging = false;
 
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then(function (battery) {
   batteryIsCharging = battery.charging;
 
-  battery.addEventListener('chargingchange', function() {
+  battery.addEventListener("chargingchange", function () {
     batteryIsCharging = battery.charging;
   });
 });

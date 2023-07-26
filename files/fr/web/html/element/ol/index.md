@@ -1,12 +1,6 @@
 ---
 title: '<ol> : l''élément de liste ordonnée'
 slug: Web/HTML/Element/ol
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Reference
 translation_of: Web/HTML/Element/ol
 ---
 
@@ -158,9 +152,9 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 </ol>
 ```
 
-Le HTML ci-dessus affichera :
+#### Résultat
 
-{{EmbedLiveSample("Exemple_simple", 400, 150)}}
+{{EmbedLiveSample("", 400, 140)}}
 
 ### Utilisation des chiffres romains
 
@@ -172,9 +166,9 @@ Le HTML ci-dessus affichera :
 </ol>
 ```
 
-Le HTML ci-dessus affichera :
+#### Résultat
 
-{{EmbedLiveSample("Utilisation_des_chiffres_romains", 400, 150)}}
+{{EmbedLiveSample("", 400, 120)}}
 
 ### Utilisation de l'attribut start
 
@@ -188,9 +182,9 @@ Le HTML ci-dessus affichera :
 </ol>
 ```
 
-Le HTML ci-dessus affichera :
+#### Résultat
 
-{{EmbedLiveSample("Utilisation_de_l'attribut_start", 400, 160)}}
+{{EmbedLiveSample("", 400, 210)}}
 
 ### Listes imbriquées
 
@@ -208,9 +202,9 @@ Le HTML ci-dessus affichera :
 </ol>
 ```
 
-Le HTML ci-dessus affichera :
+#### Résultat
 
-{{EmbedLiveSample("Listes_imbriquées", 400, 200)}}
+{{EmbedLiveSample("", 400, 200)}}
 
 ### Liste non ordonnée dans une liste ordonnée
 
@@ -228,9 +222,9 @@ Le HTML ci-dessus affichera :
 </ol>
 ```
 
-Le HTML ci-dessus affichera :
+#### Résultat
 
-{{EmbedLiveSample("Liste_non_ordonnée_dans_une_liste_ordonnée", 400, 200)}}
+{{EmbedLiveSample("", 400, 210)}}
 
 ## Spécifications
 

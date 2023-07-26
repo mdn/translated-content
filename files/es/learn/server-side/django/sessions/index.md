@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial de Django Parte 7: Framework de sesiones'
+title: "Tutorial de Django Parte 7: Framework de sesiones"
 slug: Learn/Server-side/Django/Sessions
 ---
 
@@ -13,7 +13,7 @@ Este tutorial extiende nuestro sitio web de la [BibliotecaLocal](/es/docs/Learn/
       <th scope="row">Prerequisitos:</th>
       <td>
         Completar todos los tópicos anteriores del tutorial, incluyendo
-        <a href="/en-US/docs/Learn/Server-side/Django/Generic_views"
+        <a href="/es/docs/Learn/Server-side/Django/Generic_views"
           >Django Tutorial Part 6: Generic list and detail views</a
         >
       </td>
@@ -35,7 +35,7 @@ El framework de sesiones te permite implementar este tipo de comportamiento, pud
 
 ## ¿Qué son las sesiones?
 
-Toda comunicación entre los navegadores web y los servidores se da a través del protocolo HTTP, que es _sin estado_. El hecho de que el protocolo sea sin estado significa que los mensajes entre el cliente y el servidor son completamente independientes entre sí -- no existe una noción de "secuencia" o comportamiento basado en mensajes previos. Como resultado, si quieres tener un sitio que guarde registro de la relación que tiene lugar con un cliente, necesitas implementarlo tú mismo.
+Toda comunicación entre los navegadores web y los servidores se da a través del protocolo HTTP, que es _sin estado_. El hecho de que el protocolo sea sin estado significa que los mensajes entre el cliente y el servidor son completamente independientes entre sí — no existe una noción de "secuencia" o comportamiento basado en mensajes previos. Como resultado, si quieres tener un sitio que guarde registro de la relación que tiene lugar con un cliente, necesitas implementarlo tú mismo.
 
 Las sesiones son el mecanismo que usa Django (y la mayor parte de Internet) para guardar registro del "estado" entre el sitio y un navegador en particular. Las sesiones te permiten almacenar información arbitraria por navegador, y tener esta información disponible para el sitio cuando el navegador se conecta. Cada pieza individual de información asociada con una sesión se conoce como "clave", que se usa tanto para guardar como para recuperar la información.
 
@@ -107,7 +107,7 @@ request.session.modified = True
 
 > **Nota:** Puedes cambiar el comportamiento para que el sitio actualice la base de datos y envíe la cookie en cada solicitud añádiendo `SESSION_SAVE_EVERY_REQUEST = True` a la configuración de tu proyecto (**locallibrary/locallibrary/settings.py**).
 
-## Ejemplo simple -- obteniendo conteos de visitas
+## Ejemplo simple — obteniendo conteos de visitas
 
 Como un ejemplo simple del mundo real, actualizaremos nuestra biblioteca para decirle al usuario actual cuántas veces ha visitado la página principal de _BibliotecaLocal_.
 
@@ -137,11 +137,11 @@ def index(request):
 
 Aquí primero obtenemos el valor de la clave de sesión `'num_visits'`, estableciendo el valor a 0 si no había sido establecido previamente. Cada vez que se recibe la solicitud, incrementamos el valor y lo guardamos de vuelta en la sesión (para la siguiente vez que el usuario visita la página). La variable `num_visits` se envía entonces a la plantilla en nuestra variable de contexto.
 
-> **Nota:** Aquí podríamos incluso revisar si el navegador soporta cookies (mira [Cómo usar sesiones](/es/docs/https://docs.djangoproject.com/en/1.10/topics/http/sessions/) para ejemplos) o diseñar nuestra UI de modo que no importe si el navegador soporta cookies o no.
+> **Nota:** Aquí podríamos incluso revisar si el navegador soporta cookies (mira [Cómo usar sesiones](https://docs.djangoproject.com/en/1.10/topics/http/sessions/) para ejemplos) o diseñar nuestra UI de modo que no importe si el navegador soporta cookies o no.
 
 Añade la línea que se ve al final del siguiente bloque a tu plantilla HTML principal (**/locallibrary/catalog/templates/index.html**) al final de la sección "Dynamic content" para desplegar la variable de contexto:
 
-```html
+```django
 <h2>Dynamic content</h2>
 
 <p>The library has the following record counts:</p>
@@ -168,21 +168,3 @@ En nuestros siguientes artículos explicaremos el framework de autenticación y 
 - [Cómo usar sesiones](https://docs.djangoproject.com/en/1.10/topics/http/sessions/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/Authentication", "Learn/Server-side/Django")}}
-
-## En este módulo
-
-- [Introducción a Django](/es/docs/Learn/Server-side/Django/Introducción)
-- [Configurando un entorno de desarrollo Django](/es/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial de Django: El sito web de la Biblioteca Local](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial de Django Parte 2: Creando el esqueleto de un sitio web](/es/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial de Django Parte 3: Usando modelos](/es/docs/Learn/Server-side/Django/Models)
-- [Tutorial de Django Parte 4: Sitio de administración de Django](/es/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial de Django Parte 5: Creando nuestra página de inicio](/es/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial de Django Parte 6: Listas genéricas y vistas de detalle](/es/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial de Django Parte 7: Framework de sesiones](/es/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial de Django Parte 8: Autenticación de usuarios y permisos](/es/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial de Django Parte 9: Trabajando con formularios](/es/docs/Learn/Server-side/Django/Forms)
-- [Tutorial de Django Parte 10: Probando una aplicación web de Django](/es/docs/Learn/Server-side/Django/Testing)
-- [Tutorial de Django Parte 11: Poniendo Django en producción](/es/docs/Learn/Server-side/Django/Deployment)
-- [Seguridad en aplicaciones web Django](/es/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)

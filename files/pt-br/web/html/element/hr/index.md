@@ -17,15 +17,15 @@ O **elemento HTML `<hr>`** representa uma quebra temática entre elementos de n�
 
 Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{deprecatedGeneric("inline","HTML4.01")}} {{obsoleteGeneric("inline","HTML5")}}
+- {{htmlattrdef("align")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Define a regra de alinhamento na página. Se nenhum valor for especificado, o valor padrão é `left`.
-- {{htmlattrdef("color")}} {{Non-standard_inline}}
+- {{htmlattrdef("color")}} {{Deprecated_Inline}} {{Non-standard_inline}}
   - : Denife a regra da cor através do nome da cor ou um valor hexadecimal.
-- {{htmlattrdef("noshade")}} {{deprecatedGeneric("inline","HTML4.01")}} {{obsoleteGeneric("inline","HTML5")}}
+- {{htmlattrdef("noshade")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Deine a regra para não ter sombreamento.
-- {{htmlattrdef("size")}} {{deprecatedGeneric("inline","HTML4.01")}} {{obsoleteGeneric("inline","HTML5")}}
+- {{htmlattrdef("size")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Denife a altura, em pixels.
-- {{htmlattrdef("width")}} {{deprecatedGeneric("inline","HTML4.01")}} {{obsoleteGeneric("inline","HTML5")}}
+- {{htmlattrdef("width")}} {{deprecated_inline}} {{Non-standard_Inline}}
   - : Define a regra de comprimento na página através de um valor em pixel ou porcentagem.
 
 ## Exemplo

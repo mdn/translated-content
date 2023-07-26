@@ -96,7 +96,7 @@ function success(position) {
 }
 ```
 
-你也可以从 `GeolocationCoordinates` 对象中获取许多其它的信息，包括高度、速度、设备面朝的方向，以及对高度、经纬度数据的精准测量值。
+你也可以从 `GeolocationCoordinates` 对象中获取许多其他的信息，包括高度、速度、设备面朝的方向，以及对高度、经纬度数据的精准测量值。
 
 ## 错误处理
 

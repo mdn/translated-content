@@ -142,7 +142,7 @@ Si necesita admitir motores de JavaScript realmente obsoletos que no son compati
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.includes")}}
+{{Compat}}
 
 ## Ver también
 

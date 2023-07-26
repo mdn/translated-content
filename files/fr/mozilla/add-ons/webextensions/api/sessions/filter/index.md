@@ -1,16 +1,6 @@
 ---
 title: sessions.Filter
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/Filter
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - filter
-  - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/Filter
 ---
 
@@ -25,9 +15,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les proriétés suivante
 - `maxResults`{{optional_inline}}
   - : `number`. Le nombre maximal de résultats à retourner.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.Filter")}}
+{{Compat}}
 
 ## Exemples
 

@@ -1,8 +1,6 @@
 ---
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
-browser-compat: html.elements.allSettled
 ---
 
 {{JSRef}}
@@ -24,7 +22,7 @@ Promise.allSettled(iterable);
 ### 인자
 
 - `iterable`
-  - : 멤버가 모두 `Promise`인, 배열({{jsxref("Array")}})과 같은 [이터러블](ko/docs/Web/JavaScript/Reference/Iteration_protocols) 객체입니다.
+  - : 멤버가 모두 `Promise`인, 배열({{jsxref("Array")}})과 같은 [이터러블](/ko/docs/Web/JavaScript/Reference/Iteration_protocols) 객체입니다.
 
 ### 반환 값
 

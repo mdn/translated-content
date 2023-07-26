@@ -1,11 +1,7 @@
 ---
 title: Cookbook template
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
-tags:
-  - CSS
-  - Meta
 translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
-original_slug: Web/CSS/Layout_cookbook/Contribuer_à_une_recette/Cookbook_template
 ---
 
 {{CSSRef}}
@@ -44,13 +40,7 @@ _Inclure ici les aspects spécifiquement liés à l'accessibilité pour cette re
 
 ## Compatibilité des navigateurs
 
-Les différentes méthodes évoquées plus haut peuvent disposer d'une prise en charge différente selon les navigateurs, se référer à chacun des tableaux suivant pour plus de détails sur la prise en charge de chaque propriété.
-
-_Inclure ici les données de compatibilité pour les principales propriétés utilisées. Comme exemple, voici comment faire pour inclure les données concernant `align-items`._
-
-### align-items
-
-{{Compat("css.properties.align-items")}}
+{{Compat}}
 
 ## Voir aussi
 

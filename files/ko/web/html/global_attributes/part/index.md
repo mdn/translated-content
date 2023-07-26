@@ -1,11 +1,6 @@
 ---
 title: part
 slug: Web/HTML/Global_attributes/part
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/part
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -20,7 +15,7 @@ translation_of: Web/HTML/Global_attributes/part
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.part")}}
+{{Compat}}
 
 ## 같이 보기
 

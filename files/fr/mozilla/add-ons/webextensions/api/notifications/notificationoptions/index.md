@@ -1,15 +1,6 @@
 ---
 title: notifications.NotificationOptions
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
-tags:
-  - AP
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - NotificationOptions
-  - Refere
-  - Type
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions
 ---
 
@@ -71,9 +62,9 @@ Les trois premières propriétés - `type`, `title`, `message` - sont obligatoir
 
 Notez que les propriétés `appIconMaskUrl` et `isClickable` ne sont pas supportées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.NotificationOptions")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

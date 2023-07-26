@@ -1,12 +1,7 @@
 ---
 title: TRACE
 slug: Web/HTTP/Methods/TRACE
-tags:
-  - HTTP
-  - Reference
-  - requête
 translation_of: Web/HTTP/Methods/TRACE
-original_slug: Web/HTTP/Méthode/TRACE
 ---
 
 {{HTTPSidebar}}
@@ -50,15 +45,13 @@ Le destinataire final de la demande doit renvoyer au client le message reçu, à
 TRACE /index.html
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                | Title                                                         |
-| -------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "TRACE", "4.3.8")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.methods.TRACE")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,6 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
-translation_of: Web/JavaScript/Reference/Operators/await
 original_slug: Web/JavaScript/Referencia/Operadores/await
 ---
 
@@ -75,7 +74,7 @@ f3();
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.await")}}
+{{Compat}}
 
 ## Véase también
 

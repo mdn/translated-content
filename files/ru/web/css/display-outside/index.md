@@ -31,7 +31,7 @@ translation_of: Web/CSS/display-outside
 
     Run-in элементы ведут себя как строковые (inlines) или блоковые, в зависимости от окружающих элементов. Если run-in бокс содержит блоковый бокс, тогда он сам считается блоковым. Если блоковый бокс следует за run-in боксом, тогда run-in бокс становится первым строковым (inline) боксом блокового бокса. Если за ним следует строковый (inline) бокс, тогда run-in бокс становится блоковым боксом.
 
-> **Примечание:** **Замечание**: Браузеры, поддерживающие двузначный синтаксис значений, при обнаружении только внешнего значения, например, при отображении `display: block` или `display: inline`, установят внутреннее значение как `flow`. Это приведёт к ожидаемому поведению; например, если вы укажете элемент, который будет блоком, вы ожидаете, что его дочерние элементы будут участвовать в блочной и строковой разметке нормального потока.
+> **Примечание:** Браузеры, поддерживающие двузначный синтаксис значений, при обнаружении только внешнего значения, например, при отображении `display: block` или `display: inline`, установят внутреннее значение как `flow`. Это приведёт к ожидаемому поведению; например, если вы укажете элемент, который будет блоком, вы ожидаете, что его дочерние элементы будут участвовать в блочной и строковой разметке нормального потока.
 
 ## Пример
 
@@ -69,5 +69,5 @@ span {
 
 - `{{CSSxRef("display")}}`
 - `{{CSSxRef("&lt;display-inside&gt;")}}`
-- [`Block and Inline layout in Normal Flow`](/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
-- [`Formatting Contexts explained`](/en-US/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)
+- [`Block and Inline layout in Normal Flow`](/ru/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [`Formatting Contexts explained`](/ru/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)

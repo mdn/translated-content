@@ -12,15 +12,15 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories"
+        <a href="/es/docs/HTML/Content_categories"
           >Contenido de las categorías</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/es/docs/HTML/Content_categories#Flow_content"
           >Contenido de flujo</a
         >,
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >.
       </td>
@@ -29,7 +29,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
       <th scope="row">Contenido permitido</th>
       <td>
         O bien
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >
         o, cero o más elementos {{HTMLElement("option")}}.
@@ -43,7 +43,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
       <th scope="row">Elementos padre permitidos</th>
       <td>
         Cualquier elemento que acepte
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/es/docs/HTML/Content_categories#Phrasing_content"
           >contenido de fraseo</a
         >.
       </td>
@@ -66,15 +66,16 @@ Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs
 ## Ejemplos
 
 ```html
-<label>Choose a browser from this list:
-<input list="browsers" name="myBrowser" /></label>
+<label
+  >Choose a browser from this list: <input list="browsers" name="myBrowser"
+/></label>
 <datalist id="browsers">
-  <option value="Chrome">
-  <option value="Firefox">
-  <option value="Internet Explorer">
-  <option value="Opera">
-  <option value="Safari">
-  <option value="Microsoft Edge">
+  <option value="Chrome"></option>
+  <option value="Firefox"></option>
+  <option value="Internet Explorer"></option>
+  <option value="Opera"></option>
+  <option value="Safari"></option>
+  <option value="Microsoft Edge"></option>
 </datalist>
 ```
 
@@ -86,18 +87,13 @@ Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.datalist")}}
-
-## sección de relleno
-
-Incluya este polyfill para proporcionar soporte para navegadores antiguos y actualmente incompatibles:
-[datalist-polyfill](https://github.com/mfranzke/datalist-polyfill)
+{{Compat}}
 
 ## Ver también
 
-- El elemento {{HTMLElement("input")}}, y más especificamente este atributo {{htmlattrxref("list", "input")}};
+- El elemento {{HTMLElement("input")}}, y más especificamente este atributo [`list`](/es/docs/Web/HTML/Element/input#list);
 - El elemento {{HTMLElement("option")}}.
 
 {{HTMLSidebar}}

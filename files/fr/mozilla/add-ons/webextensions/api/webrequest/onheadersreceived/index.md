@@ -1,16 +1,6 @@
 ---
 title: webRequest.onHeadersReceived
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onHeadersReceived
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
 ---
 
@@ -32,12 +22,12 @@ Notez qu'il est possible que des extensions entrent en conflit ici. Si deux exte
 
 ```js
 browser.webRequest.onHeadersReceived.addListener(
-  listener,             // function
-  filter,               //  object
-  extraInfoSpec         //  optional array of strings
-)
-browser.webRequest.onHeadersReceived.removeListener(listener)
-browser.webRequest.onHeadersReceived.hasListener(listener)
+  listener, // function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.webRequest.onHeadersReceived.removeListener(listener);
+browser.webRequest.onHeadersReceived.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -132,41 +122,43 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onHeadersReceived", 10)}}
+{{Compat}}
 
 ## Exemples
 
 Ce code définit un cookie supplémentaire lors de la demande d'une ressource à partir de l'URL cible :
 
 ```js
-var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+var targetPage =
+  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Add the new header to the original array,
 // and return it.
 function setCookie(e) {
   var setMyCookie = {
     name: "Set-Cookie",
-    value: "my-cookie1=my-cookie-value1"
+    value: "my-cookie1=my-cookie-value1",
   };
   e.responseHeaders.push(setMyCookie);
-  return {responseHeaders: e.responseHeaders};
+  return { responseHeaders: e.responseHeaders };
 }
 
 // Listen for onHeaderReceived for the target page.
 // Set "blocking" and "responseHeaders".
 browser.webRequest.onHeadersReceived.addListener(
   setCookie,
-  {urls: [targetPage]},
-  ["blocking", "responseHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "responseHeaders"],
 );
 ```
 
 Ce code fait la même chose que l'exemple précédent, sauf que l'auditeur est asynchrone, retournant une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui est résolue avec les nouveaux en-têtes :
 
 ```js
-var targetPage = "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+var targetPage =
+  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
 // Return a Promise that sets a timer.
 // When the timer fires, resolve the promise with
@@ -176,10 +168,10 @@ function setCookieAsync(e) {
     window.setTimeout(() => {
       var setMyCookie = {
         name: "Set-Cookie",
-        value: "my-cookie1=my-cookie-value1"
+        value: "my-cookie1=my-cookie-value1",
       };
       e.responseHeaders.push(setMyCookie);
-      resolve({responseHeaders: e.responseHeaders});
+      resolve({ responseHeaders: e.responseHeaders });
     }, 2000);
   });
 
@@ -190,8 +182,8 @@ function setCookieAsync(e) {
 // Set "blocking" and "responseHeaders".
 browser.webRequest.onHeadersReceived.addListener(
   setCookieAsync,
-  {urls: [targetPage]},
-  ["blocking", "responseHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "responseHeaders"],
 );
 ```
 

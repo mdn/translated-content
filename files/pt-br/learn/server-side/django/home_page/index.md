@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Parte 5: Criando nossa home page'
+title: "Django Tutorial Parte 5: Criando nossa home page"
 slug: Learn/Server-side/Django/Home_page
 ---
 
@@ -13,10 +13,10 @@ Agora estamos prontos para adicionar o código que exibe nossa primeira página 
       <th scope="row">Pré-requisitos:</th>
       <td>
         Leia a
-        <a href="/en-US/docs/Learn/Server-side/Django/Introduction"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Introduction"
           >Introdução ao Django</a
         >. Conclua os tópicos do tutorial anterior (incluindo
-        <a href="/en-US/docs/Learn/Server-side/Django/Admin_site"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Admin_site"
           >Django Tutorial Part 4: Django admin site</a
         >).
       </td>
@@ -41,7 +41,7 @@ O diagrama a seguir descreve o fluxo de dados principal e os componentes necess�
 - View functions para obter os dados solicitados dos modelos, crie páginas HTML que exibem os dados e retorne as páginas ao usuário para visualização no navegador.
 - Templates para usar ao renderizar dados nas visualizações.
 
-![](https://mdn.mozillademos.org/files/13931/basic-django.png)
+![](basic-django.png)
 
 Como você verá na próxima seção, temos 5 páginas para exibir, o que é muita informação para documentar em um único artigo. Portanto, este artigo se concentrará em como implementar a página inicial e abordaremos as outras páginas em um artigo subsequente. Isso deve fornecer uma boa compreensão completa de como os mapeadores, visualizações e modelos de URL funcionam na prática.
 
@@ -180,16 +180,16 @@ O seguinte snippet de código é um template base de amostra de um arquivo **bas
 
 > **Nota:** Template _tags_ são funções que você pode usar em um modelo para percorrer as listas, executar operações condicionais com base no valor de uma variável e assim por diante. Além das template tags, a sintaxe template permite que você faça referência a variáveis que são passadas para a template a partir da view e use filtros de template para formatar variáveis (por exemplo, para converter uma sequência em minúscula).
 
-```html
+```django
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  {% block title %}<title>Local Library</title>{% endblock %}
-</head>
-<body>
-  {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
-  {% block content %}<!-- default content text (typically empty) -->{% endblock %}
-</body>
+  <head>
+    {% block title %}<title>Local Library</title>{% endblock %}
+  </head>
+  <body>
+    {% block sidebar %}<!-- insert default navigation text for every page -->{% endblock %}
+    {% block content %}<!-- default content text (typically empty) -->{% endblock %}
+  </body>
 </html>
 ```
 
@@ -197,7 +197,7 @@ Ao definir um template para uma visualização específica, primeiro especificam
 
 Por exemplo, o trecho de código abaixo mostra como usar a template tag `extends` e substituir o block `content`. O HTML gerado incluirá o código e a estrutura definidos no template base, incluindo o conteúdo padrão que você definiu no block `title`, mas o novo block `content` no lugar do padrão.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -214,46 +214,50 @@ Usaremos o seguinte snippet de código como modelo básico para o site _LocalLib
 
 Crie um novo arquivo **_base_generic.html_ **em **/locallibrary/catalog/templates/** e cole o seguinte código no arquivo:
 
-```html
-<!DOCTYPE html>
+```django
+<!doctype html>
 <html lang="en">
-<head>
-  {% block title %}<title>Local Library</title>{% endblock %}
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <!-- Add additional CSS in static file -->
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-<body>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-2">
-      {% block sidebar %}
-        <ul class="sidebar-nav">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a href="">All books</a></li>
-          <li><a href="">All authors</a></li>
-        </ul>
-     {% endblock %}
+  <head>
+    {% block title %}<title>Local Library</title>{% endblock %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous" />
+    <!-- Add additional CSS in static file -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2">
+          {% block sidebar %}
+            <ul class="sidebar-nav">
+              <li><a href="{% url 'index' %}">Home</a></li>
+              <li><a href="">All books</a></li>
+              <li><a href="">All authors</a></li>
+            </ul>
+          {% endblock %}
+        </div>
+        <div class="col-sm-10">{% block content %}{% endblock %}</div>
       </div>
-      <div class="col-sm-10 ">{% block content %}{% endblock %}</div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
 ```
 
 O template inclui CSS de [Bootstrap](http://getbootstrap.com/) para melhorar o layout e a apresentação da página HTML. O uso do Bootstrap (ou outra estrutura da Web do lado do cliente) é uma maneira rápida de criar uma página atraente que é exibida bem em diferentes tamanhos de tela.
 
-O template base também faz referência a um arquivo css local (**styles.css**) que fornece estilo adicional. Criar um arquivo **styles.css** em** **/locallibrary/catalog/static/css/** e cole o seguinte código no arquivo:
+O template base também faz referência a um arquivo css local (**styles.css**) que fornece estilo adicional. Criar um arquivo **styles.css** em **/locallibrary/catalog/static/css/** e cole o seguinte código no arquivo:
 
 ```css
 .sidebar-nav {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
 }
 ```
 
@@ -261,12 +265,15 @@ O template base também faz referência a um arquivo css local (**styles.css**) 
 
 Crie um novo arquivo HTML **_index.html_ **em **/locallibrary/catalog/templates/** e cole o seguinte código no arquivo Esse código estende nosso modelo base na primeira linha e substitui o padrão block `content` para o template.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
   <h1>Local Library Home</h1>
-  <p>Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!</p>
+  <p>
+    Welcome to LocalLibrary, a website developed by
+    <em>Mozilla Developer Network</em>!
+  </p>
   <h2>Dynamic content</h2>
   <p>The library has the following record counts:</p>
   <ul>
@@ -301,17 +308,20 @@ return render(request, 'index.html', context=context)
 
 Dentro do template que você chama primeiro na template tag `load` especificando "static" para adicionar a biblioteca de modelos, conforme mostrado no exemplo de código abaixo. Você pode então usar a template tag `static` e especifique o URL relativo ao arquivo necessário.
 
-```html
+```django
 <!-- Add additional CSS in static file -->
 {% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 ```
 
 Você pode adicionar uma imagem à página de maneira semelhante, por exemplo:
 
-```html
+```django
 {% load static %}
-<img src="{% static 'catalog/images/local_library_model_uml.png' %}" alt="UML diagram" style="width:555px;height:540px;">
+<img
+  src="{% static 'catalog/images/local_library_model_uml.png' %}"
+  alt="UML diagram"
+  style="width:555px;height:540px;" />
 ```
 
 > **Nota:** Os exemplos acima especificam onde os arquivos estão localizados, mas o Django não os serve por padrão. Configuramos o servidor da web de desenvolvimento para exibir arquivos modificando o mapeador de URL global (**/locallibrary/locallibrary/urls.py**) quando [criamos o esqueleto do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website), mas ainda precisamos ativar a veiculação de arquivos na produção. Veremos isso mais tarde.
@@ -356,7 +366,7 @@ TEMPLATES = [
 
 Neste ponto, criamos todos os recursos necessários para exibir a página index. Execute o servidor (`python3 manage.py runserver`) e abra `http://127.0.0.1:8000/` no seu navegador. Se tudo estiver configurado corretamente, seu site deverá ter a seguinte captura de tela.
 
-![Index page for LocalLibrary website](https://mdn.mozillademos.org/files/14045/index_page_ok.png)
+![Index page for LocalLibrary website](index_page_ok.png)
 
 > **Nota:** Os links **All books** e **All authors** ainda não funcionarão porque os caminhos, visualizações e modelos para essas páginas não estão definidos. Acabamos de inserir espaços reservados para esses links no template `base_generic.html`.
 

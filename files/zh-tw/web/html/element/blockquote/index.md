@@ -10,15 +10,15 @@ slug: Web/HTML/Element/blockquote
 | [內容類別](/zh-TW/docs/HTML/Content_categories) | [流內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、sectioning root、捫及內容。 |
 | ----------------------------------------------- | --------------------------------------------------------------------------------------- |
 | 允許內容                                        | [內容流](/zh-TW/docs/HTML/Content_categories#Flow_content).                             |
-| Tag 省略                                        | {{no_tag_omission}}                                                                |
+| Tag 省略                                        | {{no_tag_omission}}                                                                     |
 | 允許父元素                                      | 任何允許[內容流](/zh-TW/docs/HTML/Content_categories#Flow_content)的元素                |
-| DOM 介面                                        | {{domxref("HTMLQuoteElement")}}                                                |
+| DOM 介面                                        | {{domxref("HTMLQuoteElement")}}                                                         |
 
 ## 屬性
 
 這個屬性包含[全局屬性](/zh-TW/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : 一個指向被引用的原始文件或訊息的 URL 。這個屬性預期要指引到解釋內容的資訊，或是引言的援引。
 
 ## 範例

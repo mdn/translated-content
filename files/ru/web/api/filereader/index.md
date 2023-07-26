@@ -66,7 +66,7 @@ FileReader FileReader();
 
 - {{domxref("FileReader.abort()")}}
   - : Отмена операции чтения. После вызова, значение `readyState` станет равным `DONE`.
-- {{domxref("FileReader.readAsArrayBuffer()")}} {{ gecko_minversion_inline("7.0") }}
+- {{domxref("FileReader.readAsArrayBuffer()")}}
   - : Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут `result` будет содержать данные файла в виде {{domxref("ArrayBuffer")}}.
 - {{domxref("FileReader.readAsBinaryString()")}}
   - : Запускает процесс чтения данных указанного {{ domxref("Blob") }}, по завершении, атрибут `result` будет содержать бинарные данные файла в виде строки.
@@ -91,7 +91,7 @@ FileReader FileReader();
 #### Относительно движка Gecko
 
 - В версиях Gecko ниже 2.0 beta 7 (Firefox 4.0 beta 7), все параметры {{ domxref("Blob") }} были параметрами {{ domxref("File") }}; в последствии это было изменено, для соответствия спецификации.
-- В версиях Gecko ниже 13.0 {{ geckoRelease("13.0") }} свойство `FileReader.error` возвращало объект {{ domxref("FileError") }}. Этот интерфейс был упразднён и теперь свойство `FileReader.error` возвращает объект {{ domxref("DOMError") }}, что соответствует определению FileAPI последней спецификации.
+- В версиях Gecko ниже 13.0 свойство `FileReader.error` возвращало объект {{ domxref("FileError") }}. Этот интерфейс был упразднён и теперь свойство `FileReader.error` возвращает объект {{ domxref("DOMError") }}, что соответствует определению FileAPI последней спецификации.
 
 ## Смотрите также
 

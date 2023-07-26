@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-search-results-button'
 slug: Web/CSS/::-webkit-search-results-button
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-search-results-button
 ---
 
@@ -25,7 +20,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-search-results-button")}}
+{{Compat}}
 
 ## Voir aussi
 

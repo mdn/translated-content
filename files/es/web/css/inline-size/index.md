@@ -70,9 +70,9 @@ La propiedad `inline-size` toma los mismos valores de las propiedades {{cssxref(
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.inline-size")}}
+{{Compat}}
 
 ## Mira también
 

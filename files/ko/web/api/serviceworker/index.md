@@ -1,17 +1,6 @@
 ---
 title: ServiceWorker
 slug: Web/API/ServiceWorker
-tags:
-  - API
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - Workers
-  - 서비스 워커
-  - 워커
-translation_of: Web/API/ServiceWorker
 ---
 
 {{APIRef("Service Workers API")}}

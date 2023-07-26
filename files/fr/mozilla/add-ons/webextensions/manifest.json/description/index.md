@@ -1,10 +1,6 @@
 ---
 title: description
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/description
 ---
 
@@ -41,6 +37,6 @@ Ceci est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationaliz
 "description": "Remplace des images par des portraits de chats."
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.description")}}
+{{Compat}}

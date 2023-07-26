@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial Django Parte 8: Autenticação de usuário e permissões'
+title: "Tutorial Django Parte 8: Autenticação de usuário e permissões"
 slug: Learn/Server-side/Django/Authentication
 ---
 
@@ -13,7 +13,7 @@ Neste tutorial, mostraremos como permitir que os usuários efetuem login no seu 
       <th scope="row">Pré-requisitos:</th>
       <td>
         Conclua todos os tópicos do tutorial anterior, incluindo
-        <a href="/en-US/docs/Learn/Server-side/Django/Sessions"
+        <a href="/pt-BR/docs/Learn/Server-side/Django/Sessions"
           >Django Tutorial Part 7: Sessions framework</a
         >.
       </td>
@@ -85,23 +85,23 @@ Abaixo, primeiro criaremos um grupo e depois um usuário. Embora ainda não tenh
 
 Inicie o servidor de desenvolvimento e navegue até o site de administração em seu navegador da web local (`http://127.0.0.1:8000/admin/`). Entre no site usando as credenciais da sua conta de superusuário. O nível superior do site Admin exibe todos os seus modelos, classificados por "aplicativo Django". Na seção **Autenticação e Autorização**, você pode clicar nos links **Usuários** ou **Grupos** para ver seus registros existentes.
 
-![Admin site - add groups or users](https://mdn.mozillademos.org/files/14091/admin_authentication_add.png)
+![Admin site - add groups or users](admin_authentication_add.png)
 
 Primeiro vamos criar um novo grupo para os membros da nossa biblioteca.
 
-1. Clique no botão **Adicionar** (ao lado de Grupo) para criar um novo grupo; digite o **Nome** "Library Members" para o grupo.![Admin site - add group](https://mdn.mozillademos.org/files/14093/admin_authentication_add_group.png)
+1. Clique no botão **Adicionar** (ao lado de Grupo) para criar um novo grupo; digite o **Nome** "Library Members" para o grupo.![Admin site - add group](admin_authentication_add_group.png)
 2. Não precisamos de permissões para o grupo, então pressione **SALVAR** (você será direcionado para uma lista de grupos).
 
 Agora vamos criar um usuário:
 
 1. Volte para a página inicial do site de administração
-2. Clique no botão **Adicionar** ao lado de _Usuários_ para abrir a caixa de diálogo _Adicionar usuário_.![Admin site - add user pt1](https://mdn.mozillademos.org/files/14095/admin_authentication_add_user_prt1.png)
+2. Clique no botão **Adicionar** ao lado de _Usuários_ para abrir a caixa de diálogo _Adicionar usuário_.![Admin site - add user pt1](admin_authentication_add_user_prt1.png)
 3. Digite um nome de **usuário** e uma **senha/confirmação de senha** adequados para o usuário de teste
 4. Pressione **SALVAR** para criar o usuário.
 
-    O site de administração criará o novo usuário e levará você imediatamente para uma tela Alterar usuário, na qual é possível alterar seu **nome de usuário** e adicionar informações aos campos opcionais do modelo de usuário. Esses campos incluem o nome, o sobrenome, o endereço de email e o status e as permissões do usuário (somente o sinalizador **Ativo** deve ser definido). Mais abaixo, você pode especificar os grupos e permissões do usuário e ver datas importantes relacionadas ao usuário (por exemplo, a data de ingresso e a última data de login).![Admin site - add user pt2](https://mdn.mozillademos.org/files/14097/admin_authentication_add_user_prt2.png)
+   O site de administração criará o novo usuário e levará você imediatamente para uma tela Alterar usuário, na qual é possível alterar seu **nome de usuário** e adicionar informações aos campos opcionais do modelo de usuário. Esses campos incluem o nome, o sobrenome, o endereço de email e o status e as permissões do usuário (somente o sinalizador **Ativo** deve ser definido). Mais abaixo, você pode especificar os grupos e permissões do usuário e ver datas importantes relacionadas ao usuário (por exemplo, a data de ingresso e a última data de login).![Admin site - add user pt2](admin_authentication_add_user_prt2.png)
 
-5. Na seção _Grupos_, selecione grupo de **Library Members** na lista de _Grupos disponíveis_ e pressione a **seta para a direita** entre as caixas para movê-lo para a caixa _Grupos escolhidos_.![Admin site - add user to group](https://mdn.mozillademos.org/files/14099/admin_authentication_user_add_group.png)
+5. Na seção _Grupos_, selecione grupo de **Library Members** na lista de _Grupos disponíveis_ e pressione a **seta para a direita** entre as caixas para movê-lo para a caixa _Grupos escolhidos_.![Admin site - add user to group](admin_authentication_user_add_group.png)
 6. Não precisamos fazer mais nada aqui; basta selecionar **SALVAR** novamente, para ir para a lista de usuários.
 
 É isso aí! Agora você tem uma conta de "membro normal da biblioteca" que poderá usar nos testes (depois de implementarmos as páginas para permitir o login).
@@ -183,7 +183,7 @@ TEMPLATES = [
 
 Crie um novo arquivo HTML chamado **/locallibrary/templates/registration/login.html** e forneça o seguinte conteúdo:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -227,7 +227,7 @@ Este modelo compartilha algumas semelhanças com as que já vimos antes - estend
 
 Navegue de volta para a página de login (`http://127.0.0.1:8000/accounts/login/`). Depois de salvar seu modelo, você verá algo assim:
 
-![Library login page v1](https://mdn.mozillademos.org/files/14101/library_login.png)
+![Library login page v1](library_login.png)
 
 Se você fizer login usando credenciais válidas, será redirecionado para outra página (por padrão, isso será `http://127.0.0.1:8000/accounts/profile/`). O problema é que, por padrão, o Django espera que, ao fazer o login, você deseje ser levado para uma página de perfil, o que pode ou não ser o caso. Como você ainda não definiu esta página, receberá outro erro!
 
@@ -244,7 +244,7 @@ Se você navegar para o URL de logout (`http://127.0.0.1:8000/accounts/logout/`)
 
 Crie e abra /**locallibrary/templates/registration/logged_out.html**. Copie o texto abaixo:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -255,7 +255,7 @@ Crie e abra /**locallibrary/templates/registration/logged_out.html**. Copie o te
 
 Este modelo é muito simples. Ele apenas exibe uma mensagem informando que você foi desconectado e fornece um link que você pode pressionar para voltar à tela de login. Se você acessar o URL de logoff novamente, deverá ver esta página:
 
-![Library logout page v1](https://mdn.mozillademos.org/files/14103/library_logout.png)
+![Library logout page v1](library_logout.png)
 
 ### Templates para reset de password
 
@@ -267,7 +267,7 @@ Os seguintes modelos podem ser usados como ponto de partida.
 
 Este é o formulário usado para obter o endereço de email do usuário (para enviar o email de redefinição de senha). Crie **/locallibrary/templates/registration/password_reset_form.html** e forneça o seguinte conteúdo:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -286,7 +286,7 @@ Este é o formulário usado para obter o endereço de email do usuário (para en
 
 Este formulário é exibido após a coleta do seu endereço de email. Crie **/locallibrary/templates/registration/password_reset_done.html**, e forneça o seguinte conteúdo:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -298,7 +298,7 @@ Este formulário é exibido após a coleta do seu endereço de email. Crie **/lo
 
 Este modelo fornece o texto do email em HTML que contém o link de redefinição que enviaremos aos usuários. Crie **/locallibrary/templates/registration/password_reset_email.html** e forneça o seguinte conteúdo:
 
-```html
+```django
 Someone asked for password reset for email \{{ email }}. Follow the link below:
 \{{ protocol}}://\{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
 ```
@@ -307,35 +307,42 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 É nesta página que você digita sua nova senha depois de clicar no link no e-mail de redefinição de senha. Crie **/locallibrary/templates/registration/password_reset_confirm.html** e forneça o seguinte conteúdo:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
-    {% if validlink %}
-        <p>Please enter (and confirm) your new password.</p>
-        <form action="" method="post">
-        {% csrf_token %}
-            <table>
-                <tr>
-                    <td>\{{ form.new_password1.errors }}
-                        <label for="id_new_password1">New password:</label></td>
-                    <td>\{{ form.new_password1 }}</td>
-                </tr>
-                <tr>
-                    <td>\{{ form.new_password2.errors }}
-                        <label for="id_new_password2">Confirm password:</label></td>
-                    <td>\{{ form.new_password2 }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Change my password" /></td>
-                </tr>
-            </table>
-        </form>
-    {% else %}
-        <h1>Password reset failed</h1>
-        <p>The password reset link was invalid, possibly because it has already been used. Please request a new password reset.</p>
-    {% endif %}
+  {% if validlink %}
+    <p>Please enter (and confirm) your new password.</p>
+    <form action="" method="post">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <td>
+            \{{ form.new_password1.errors }}
+            <label for="id_new_password1">New password:</label>
+          </td>
+          <td>\{{ form.new_password1 }}</td>
+        </tr>
+        <tr>
+          <td>
+            \{{ form.new_password2.errors }}
+            <label for="id_new_password2">Confirm password:</label>
+          </td>
+          <td>\{{ form.new_password2 }}</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" value="Change my password" /></td>
+        </tr>
+      </table>
+    </form>
+  {% else %}
+    <h1>Password reset failed</h1>
+    <p>
+      The password reset link was invalid, possibly because it has already been
+      used. Please request a new password reset.
+    </p>
+  {% endif %}
 {% endblock %}
 ```
 
@@ -343,7 +350,7 @@ Someone asked for password reset for email \{{ email }}. Follow the link below:
 
 Este é o último modelo de redefinição de senha, exibido para notificá-lo quando a redefinição de senha for bem-sucedida. Crie **/locallibrary/templates/registration/password_reset_complete.html** e forneça o seguinte conteúdo:
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -383,17 +390,16 @@ Normalmente você primeiro testará contra a variável de template `\{{ user.is_
 
 Abra o template base (**/locallibrary/catalog/templates/base_generic.html**) e copie o texto a seguir no bloco `sidebar`, imediatamente antes da template tag `endblock`.
 
-```html
+```django
   <ul class="sidebar-nav">
-
     ...
 
-   {% if user.is_authenticated %}
-     <li>User: \{{ user.get_username }}</li>
-     <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
-   {% else %}
-     <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
-   {% endif %}
+    {% if user.is_authenticated %}
+      <li>User: \{{ user.get_username }}</li>
+      <li><a href="{% url 'logout'%}?next=\{{request.path}}">Logout</a></li>
+    {% else %}
+      <li><a href="{% url 'login'%}?next=\{{request.path}}">Login</a></li>
+    {% endif %}
   </ul>
 ```
 
@@ -594,7 +600,7 @@ Abra o template base (**/locallibrary/catalog/templates/base_generic.html**) e a
 
 Quando qualquer usuário estiver conectado, ele verá o link _My Borrowed_ na barra lateral e a lista de livros exibida abaixo (o primeiro livro não tem data de vencimento, que é um bug que esperamos corrigir em um tutorial posterior!) .
 
-![Library - borrowed books by user](https://mdn.mozillademos.org/files/14105/library_borrowed_by_user.png)
+![Library - borrowed books by user](library_borrowed_by_user.png)
 
 ## Permissões
 
@@ -671,7 +677,7 @@ Você deve seguir o mesmo padrão da outra view. A principal diferença é que v
 
 Quando terminar, sua página será semelhante à captura de tela abaixo.
 
-![All borrowed books, restricted to librarian](https://mdn.mozillademos.org/files/14115/library_borrowed_all.png)
+![All borrowed books, restricted to librarian](library_borrowed_all.png)
 
 ## Resumo
 
@@ -686,21 +692,3 @@ Em nosso próximo artigo, veremos como você pode usar os formulários Django pa
 - [Introdução a views baseadas em classe > Decorating class-based views](https://docs.djangoproject.com/en/2.1/topics/class-based-views/intro/#decorating-class-based-views) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
-
-## Neste módulo
-
-- [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introduction)
-- [Configurando um ambiente de desenvolvimento Django](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial Django Parte 3: Usando models](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Tutorial Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial Django Parte 6: Lista genérica e detail views](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial Django Parte 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Tutorial Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Tutorial Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- Segurança de aplicações web Django
-- [DIY Django mini blog](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

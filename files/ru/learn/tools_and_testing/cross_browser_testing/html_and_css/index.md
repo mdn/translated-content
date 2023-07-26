@@ -32,7 +32,7 @@ Basically, it is a matter of checking whether your HTML and CSS code is well for
 
 For HTML, validation involves making sure all your tags are properly closed and nested, you are using a DOCTYPE, and you are using tags for their correct purpose. A good strategy is to validate your code regularly. One service that can do this is the W3C [Markup Validation Service](https://validator.w3.org/), which allows you to point to your code, and returns a list of errors:
 
-![The HTML validator homepage](https://mdn.mozillademos.org/files/12441/validator.png)
+![The HTML validator homepage](validator.png)
 
 CSS has a similar story — you need to check that your property names are spelled correctly, property values are spelled correctly and are valid for the properties they are used on, you are not missing any curly braces, and so on. The W3C has a [CSS Validator](http://jigsaw.w3.org/css-validator/) available too, for this purpose.
 
@@ -42,7 +42,7 @@ Another good option to choose is a so-called Linter application, which not only 
 
 There are many online linter applications, the best of which are probably [Dirty Markup](https://www.dirtymarkup.com/) (HTML, CSS, JavaScript), and [CSS Lint](http://csslint.net/) (CSS only). These allows you to paste your code into a window, and it will flag up any errors with crosses, which can then be hovered to get an error message informing you what the problem is. Dirty Markup also allows you to make fixes to your markup using the _Clean_ button.
 
-![](https://mdn.mozillademos.org/files/14113/dirty-markup.png)
+![](dirty-markup.png)
 
 However, it is not very convenient to have to copy and paste your code over to a web page to check its validity several times. What you really want is a linter that will fit into your standard workflow with the minimum of hassle.
 
@@ -54,7 +54,7 @@ Many code editors have linter plugins. Github's [Atom](https://atom.io/) code ed
 4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-csslint** plugin for linting CSS, and the **linter-tidy** plugin for linting HTML.
 5. After the packages have finished installing, try loading up an HTML file and a CSS file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
 
-![](https://mdn.mozillademos.org/files/14109/atom-htmltidy.png)![](https://mdn.mozillademos.org/files/14107/atom-csslint.png)
+![](atom-htmltidy.png)![](atom-csslint.png)
 
 Other popular editors have similar linting packages available. For example, see:
 
@@ -69,7 +69,7 @@ The developer tools built into most browsers also feature useful tools for hunti
 
 As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:
 
-![](https://mdn.mozillademos.org/files/14111/css-message-devtools.png)
+![](css-message-devtools.png)
 
 Other browser devtools have similar features.
 
@@ -91,22 +91,37 @@ Unrecognised HTML elements are treated by the browser as anonymous inline elemen
 
 > **Примечание:** See [IE conditional comments](#ie_conditional_comments) for the best way to do this.
 
-More complex elements like HTML [`<video>`](/en-US/docs/Web/HTML/Element/video), [`<audio>`](/en-US/docs/Web/HTML/Element/audio), and [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas) (and other features besides) have natural mechanisms for fallbacks to be added, which work on the same principle as described above. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.
+More complex elements like HTML [`<video>`](/ru/docs/Web/HTML/Element/video), [`<audio>`](/ru/docs/Web/HTML/Element/audio), and [`<canvas>`](/ru/docs/Web/HTML/Element/canvas) (and other features besides) have natural mechanisms for fallbacks to be added, which work on the same principle as described above. You can add fallback content in between the opening and closing tags, and non-supporting browsers will effectively ignore the outer element and run the nested content.
 
 For example:
 
 ```html
 <video id="video" controls preload="metadata" poster="img/poster.jpg">
-  <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4">
-  <source src="video/tears-of-steel-battle-clip-medium.webm" type="video/webm">
-  <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg">
+  <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4" />
+  <source
+    src="video/tears-of-steel-battle-clip-medium.webm"
+    type="video/webm" />
+  <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg" />
   <!-- Flash fallback -->
-  <object type="application/x-shockwave-flash" data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" width="1024" height="576">
-     <param name="movie" value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-     <param name="allowfullscreen" value="true" />
-     <param name="wmode" value="transparent" />
-     <param name="flashvars" value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-      <img alt="Tears of Steel poster image" src="img/poster.jpg" width="1024" height="428" title="No video playback possible, please download the video from the link below" />
+  <object
+    type="application/x-shockwave-flash"
+    data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4"
+    width="1024"
+    height="576">
+    <param
+      name="movie"
+      value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
+    <param name="allowfullscreen" value="true" />
+    <param name="wmode" value="transparent" />
+    <param
+      name="flashvars"
+      value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
+    <img
+      alt="Tears of Steel poster image"
+      src="img/poster.jpg"
+      width="1024"
+      height="428"
+      title="No video playback possible, please download the video from the link below" />
   </object>
   <!-- Offer download -->
   <a href="video/tears-of-steel-battle-clip-medium.mp4">Download MP4</a>
@@ -117,7 +132,7 @@ This example (taken from [Creating a cross-browser video player](/ru/docs/Web/Ap
 
 > **Примечание:** 3rd party libraries like [Video.js](http://videojs.com/) and [JW Player](https://www.jwplayer.com/) use such fallback mechanisms to provide cross-browser support.
 
-HTML5 form elements also exhibit fallback qualities — HTML5 introduced some special [`<input>`](/en-US/docs/Web/HTML/Element/input) types for inputting specific information into forms, such as times, dates, colors, numbers, etc. These are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Supporting platforms provide special UI widgets when these input types are used, such as a calendar widget for entering dates.
+HTML5 form elements also exhibit fallback qualities — HTML5 introduced some special [`<input>`](/ru/docs/Web/HTML/Element/input) types for inputting specific information into forms, such as times, dates, colors, numbers, etc. These are very useful, particularly on mobile platforms, where providing a pain-free way of entering data is very important for the user experience. Supporting platforms provide special UI widgets when these input types are used, such as a calendar widget for entering dates.
 
 The following example shows date and time inputs:
 
@@ -125,11 +140,11 @@ The following example shows date and time inputs:
 <form>
   <div>
     <label for="date">Enter a date:</label>
-    <input id="date" type="date">
+    <input id="date" type="date" />
   </div>
   <div>
     <label for="time">Enter a time:</label>
-    <input id="time" type="time">
+    <input id="time" type="time" />
   </div>
 </form>
 ```
@@ -138,42 +153,43 @@ The output of this code is as follows:
 
 ```css hidden
 label {
-        float: left;
-        width: 30%;
-        text-align: right;
-      }
+  float: left;
+  width: 30%;
+  text-align: right;
+}
 
-      input {
-        float: right;
-        width: 65%;
-      }
+input {
+  float: right;
+  width: 65%;
+}
 
-      label, input {
-        margin-bottom: 20px;
-      }
+label,
+input {
+  margin-bottom: 20px;
+}
 
-      div {
-        clear: both;
-        margin: 10px;
-      }
+div {
+  clear: both;
+  margin: 10px;
+}
 
-      body {
-        width: 400px;
-        margin: 0 auto;
-      }
+body {
+  width: 400px;
+  margin: 0 auto;
+}
 ```
 
 ```html hidden
 <form>
-      <div>
-        <label for="date">Enter a date:</label>
-        <input id="date" type="date">
-      </div>
-      <div>
-        <label for="time">Enter a time:</label>
-        <input id="time" type="time">
-      </div>
-    </form>
+  <div>
+    <label for="date">Enter a date:</label>
+    <input id="date" type="date" />
+  </div>
+  <div>
+    <label for="time">Enter a time:</label>
+    <input id="time" type="time" />
+  </div>
+</form>
 ```
 
 {{ EmbedLiveSample('Hidden_example', '100%', 150) }}
@@ -190,7 +206,7 @@ CSS is arguably better at fallbacks than HTML. If a browser encounters a declara
 
 Let's look at an example — a simple box styled with CSS, which has some styling provided by various CSS3 features:
 
-![](https://mdn.mozillademos.org/files/14141/blingy-button.png)
+![](blingy-button.png)
 
 > **Примечание:** You can also see this example running live on GitHub as [button-with-fallback.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (also see the [source code](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
 
@@ -218,11 +234,11 @@ button:active {
 
 Here we are providing an [RGBA](</ru/docs/Web/CSS/color_value#rgba()>) {{cssxref("background-color")}} that changes opacity on hover to give the user a hint that the button is interactive, and some semi-transparent inset {{cssxref("box-shadow")}} shades to give the button a bit of texture and depth. The trouble is that RGBA colors and box shadows don't work in IE versions older than 9 — in older versions the background just wouldn't show up at all so the text would be unreadable, no good at all!
 
-![](https://mdn.mozillademos.org/files/14135/unreadable-button.png)
+![](unreadable-button.png)
 
 To sort this out, we have added a second `background-color` declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGBA colors. If not, it will just ignore the entire declaration and move on.
 
-> **Примечание:** The same is true for other CSS features like [media queries](/ru/docs/Web/CSS/Media_Queries/Using_media_queries), [`@font-face`](/en-US/docs/Web/CSS/@font-face) and [`@supports`](/en-US/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
+> **Примечание:** The same is true for other CSS features like [media queries](/ru/docs/Web/CSS/Media_Queries/Using_media_queries), [`@font-face`](/ru/docs/Web/CSS/@font-face) and [`@supports`](/ru/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
 
 #### IE conditional comments
 
@@ -231,7 +247,7 @@ IE conditional comments are a modified proprietary HTML comment syntax, which ca
 ```html
 <!--[if lte IE 8]>
   <script src="ie-fix.js"></script>
-  <link href="ie-fix.css" rel="stylesheet" type="text/css">
+  <link href="ie-fix.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 ```
 
@@ -242,7 +258,13 @@ This block will apply the IE-specific CSS and JavaScript only if the browser vie
 As you can see, this is especially useful for applying code fixes to old versions of IE. The use case we mentioned earlier (making modern semantic elements styleable in old versions of IE) can be achieved easily using conditional comments, for example you could put something like this in your IE stylesheet:
 
 ```css
-aside, main, article, section, nav, figure, figcaption {
+aside,
+main,
+article,
+section,
+nav,
+figure,
+figcaption {
   display: block;
 }
 ```
@@ -262,7 +284,7 @@ Of course, no CSS features will apply at all if you don't use the right [selecto
 
 For example, in the Firefox dev tools, you get this kind of output at the bottom of the DOM inspector:
 
-![](https://mdn.mozillademos.org/files/14139/dom-breadcrumb-trail.png)
+![](dom-breadcrumb-trail.png)
 
 If for example you were trying to use this selector, you'd be able to see that it wouldn't select the input element as desired:
 
@@ -272,22 +294,22 @@ form > #date
 
 (The `date` form input isn't directly inside the `<form>`; you'd be better off using a general descendant selector instead of a child selector).
 
-However, another issue that appears in versions of IE older than 9 is that none of the newer selectors (mainly pseudo-classes and pseudo-elements like [`:nth-of-type`](/en-US/docs/Web/CSS/:nth-of-type), [`:not`](/en-US/docs/Web/CSS/:not), [`::selection`](/en-US/docs/Web/CSS/::selection), etc.) work. If you want to use these in your CSS and you need to support older IE versions, a good move is to use Keith Clark's [Selectivizr](http://selectivizr.com/) library — this is a small JavaScript library that works on top of an existing JavaScript library like [jQuery](http://jquery.com/) or [MooTools](http://mootools.net/).
+However, another issue that appears in versions of IE older than 9 is that none of the newer selectors (mainly pseudo-classes and pseudo-elements like [`:nth-of-type`](/ru/docs/Web/CSS/:nth-of-type), [`:not`](/ru/docs/Web/CSS/:not), [`::selection`](/ru/docs/Web/CSS/::selection), etc.) work. If you want to use these in your CSS and you need to support older IE versions, a good move is to use Keith Clark's [Selectivizr](http://selectivizr.com/) library — this is a small JavaScript library that works on top of an existing JavaScript library like [jQuery](http://jquery.com/) or [MooTools](http://mootools.net/).
 
 1. To try this example, make a local copy of [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html). If you look at this running live, you'll see that it contains two paragraphs, one of which is styled. We've selected the paragraph with `p:first-child`, which won't work in old versions of IE.
 2. Now download [MooTools](http://mootools.net/) and [Selectivizr](http://selectivizr.com/), and save them in the same directory as your sample HTML.
 3. Put the following code into the head of your HTML document, just before the opening `<style>` tag:
 
-    ```html
-    <script type="text/javascript" src="MooTools-Core-1.6.0.js"></script>
-        <!--[if (gte IE 6)&(lte IE 8)]>
-          <script type="text/javascript" src="selectivizr-min.js"></script>
-        <![endif]-->
-    ```
+   ```html
+   <script type="text/javascript" src="MooTools-Core-1.6.0.js"></script>
+   <!--[if (gte IE 6)&(lte IE 8)]>
+     <script type="text/javascript" src="selectivizr-min.js"></script>
+   <![endif]-->
+   ```
 
 If you try running this in an old version of IE, it should work fine.
 
-![](https://mdn.mozillademos.org/files/14137/new-selector-ie7.png)
+![](new-selector-ie7.png)
 
 #### Handling CSS prefixes
 
@@ -302,14 +324,20 @@ Here's some examples:
 ```css
 -webkit-transform: rotate(90deg);
 
-background-image: -moz-linear-gradient(left,green,yellow);
-background-image: -webkit-gradient(linear,left center,right center,from(green),to(yellow));
-background-image: linear-gradient(to right,green,yellow);
+background-image: -moz-linear-gradient(left, green, yellow);
+background-image: -webkit-gradient(
+  linear,
+  left center,
+  right center,
+  from(green),
+  to(yellow)
+);
+background-image: linear-gradient(to right, green, yellow);
 ```
 
 The first line shows a {{cssxref("transform")}} property with a `-webkit-` prefix — this was needed to make transforms work in Chrome, etc. until the feature was finalized and such browsers added a prefix-free version of the property (at the time of writing, Chrome supported both versions).
 
-The last three lines show three different versions of the [`linear-gradient()`](/en-US/docs/Web/CSS/linear-gradient) function, which is used to generate a linear gradient in the background of an element:
+The last three lines show three different versions of the [`linear-gradient()`](/ru/docs/Web/CSS/linear-gradient) function, which is used to generate a linear gradient in the background of an element:
 
 1. The first one has a `-moz-` prefix, and shows a slightly older version of the syntax (Firefox)
 2. The second one has a `-webkit-` prefix, and shows an even older, proprietary version of the syntax (this is actually from a really old version of the WebKit engine).
@@ -326,16 +354,16 @@ Try this simple example:
 3. Look for a feature you can use to select that element. For example, at the time of writing, the main Google logo had an ID of `hplogo`.
 4. Store a reference to this element in a variable, for example:
 
-    ```js
-    var test = document.getElementById('hplogo');
-    ```
+   ```js
+   var test = document.getElementById("hplogo");
+   ```
 
 5. Now try to set a new value for the CSS property you are interested in on that element; you can do this using the [style](/ru/docs/Web/API/HTMLElement/style) property of the element, for example try typing these into the JavaScript console:
 
-    ```js
-    test.style.transform = 'rotate(90deg)'
-    test.style.webkitTransform = 'rotate(90deg)'
-    ```
+   ```js
+   test.style.transform = "rotate(90deg)";
+   test.style.webkitTransform = "rotate(90deg)";
+   ```
 
 As you start to type the property name representation after the second dot (note that in JavaScript, CSS property names are written in lower camel case, not hyphenated), the JavaScript console should begin to autocomplete the names of the properties that exist in the browser and match what you've written so far. This is useful for finding out what versions of the property are implemented in that browser.
 
@@ -411,7 +439,7 @@ Layout features aren't as easy to provide graceful fallbacks for than simple col
 
 For example, you could apply a flexbox layout to modern browsers, then instead apply a floated layout to older browsers that don't support flexbox.
 
-> **Примечание:** There is a fairly new feature in CSS called [`@supports`](/en-US/docs/Web/CSS/@supports), which allows you to implement native feature detection tests.
+> **Примечание:** There is a fairly new feature in CSS called [`@supports`](/ru/docs/Web/CSS/@supports), which allows you to implement native feature detection tests.
 
 #### Responsive design problems
 

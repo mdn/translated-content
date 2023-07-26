@@ -1,6 +1,6 @@
 ---
 title: CSS 背景と境界
-slug: Web/CSS/CSS_Backgrounds_and_Borders
+slug: Web/CSS/CSS_backgrounds_and_borders
 ---
 
 {{CSSRef}}

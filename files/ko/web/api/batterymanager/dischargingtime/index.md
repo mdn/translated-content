@@ -1,7 +1,6 @@
 ---
 title: BatteryManager.dischargingTime (배터리관리기 방전시간)
 slug: Web/API/BatteryManager/dischargingTime
-translation_of: Web/API/BatteryManager/dischargingTime
 ---
 
 {{APIRef("Battery API")}}
@@ -39,11 +38,9 @@ navigator.getBattery().then(function(battery) {
 
 {{ EmbedLiveSample('Example', '100%', 30) }}
 
-## 설명서
+## 명세서
 
-| 사양 (설명)                          | 상태 (설명)                      | 비고      |
-| ------------------------------------ | -------------------------------- | --------- |
-| {{SpecName("Battery API")}} | {{Spec2("Battery API")}} | 최초 정의 |
+{{Specifications}}
 
 ## 브라우저 호환성
 

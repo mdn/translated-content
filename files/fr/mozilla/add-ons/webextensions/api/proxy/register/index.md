@@ -1,16 +1,6 @@
 ---
 title: proxy.register()
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/register
-tags:
-  - API
-  - Add-ons
-  - Function
-  - Méthode
-  - Proxy
-  - Reference
-  - WebExtensions
-  - register
-  - registerProxyScript
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/register
 ---
 
@@ -50,10 +40,10 @@ browser.runtime.onMessage.addListener((message, sender) => {
 let messageToProxy = {
   enabled: true,
   foo: "A string",
-  bar: 1234
+  bar: 1234,
 };
 
-browser.runtime.sendMessage(messageToProxy, {toProxyScript: true});
+browser.runtime.sendMessage(messageToProxy, { toProxyScript: true });
 ```
 
 ```js
@@ -87,13 +77,13 @@ const proxySpecification = [
     host: "foo.com",
     port: 1080,
     proxyDNS: true,
-    failoverTimeout: 5
+    failoverTimeout: 5,
   },
   {
     type: "socks",
     host: "bar.com",
     port: 1060,
-  }
+  },
 ];
 ```
 
@@ -134,8 +124,8 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 ```js
 var registering = browser.proxy.register(
-  url   // string
-)
+  url, // string
+);
 ```
 
 ### Paramètres
@@ -157,9 +147,9 @@ browser.proxy.register(proxyScriptURL);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.proxy.register")}}
+{{Compat}}
 
 > **Note :**
 >

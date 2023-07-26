@@ -1,15 +1,6 @@
 ---
 title: tabs.show()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/show
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - show
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/show
 ---
 
@@ -23,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var showing = browser.tabs.show(
-  tabIds          // integer or integer array
-)
+  tabIds, // integer or integer array
+);
 ```
 
 ### Paramètres
@@ -68,6 +59,6 @@ browser.tabs.show([15, 14, 1]).then(onShown, onError);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.show")}}
+{{Compat}}

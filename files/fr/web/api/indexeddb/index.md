@@ -1,14 +1,7 @@
 ---
 title: indexedDB
 slug: Web/API/indexedDB
-tags:
-  - API
-  - IndexedDB
-  - Propriété
-  - Reference
-  - WindowOrWorkerGlobalScope
 translation_of: Web/API/indexedDB
-original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
 
 {{APIRef}}
@@ -30,10 +23,10 @@ Un objet {{domxref("IDBFactory")}}.
 ```js
 var db;
 function openDB() {
- var DBOpenRequest = window.indexedDB.open('toDoList');
- DBOpenRequest.onsuccess = function(e) {
-   db = DBOpenRequest.result;
- }
+  var DBOpenRequest = window.indexedDB.open("toDoList");
+  DBOpenRequest.onsuccess = function (e) {
+    db = DBOpenRequest.result;
+  };
 }
 ```
 
@@ -53,4 +46,4 @@ function openDB() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

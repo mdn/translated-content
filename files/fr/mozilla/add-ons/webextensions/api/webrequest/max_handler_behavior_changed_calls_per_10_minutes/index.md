@@ -2,16 +2,6 @@
 title: webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
 slug: >-
   Mozilla/Add-ons/WebExtensions/API/webRequest/MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - webRequest
 translation_of: >-
   Mozilla/Add-ons/WebExtensions/API/webRequest/MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
 ---
@@ -22,9 +12,9 @@ Le nombre maximum de fois que `{{WebExtAPIRef("webRequest.handlerBehaviorChanged
 
 Cette propriété est en lecture seule.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

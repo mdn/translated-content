@@ -7,7 +7,7 @@ slug: Web/HTML/Element/meter
 
 O elemento HTML _meter_ (`<meter>`) pode representar um valor escalar dentro de um intervalo conhecido ou um valor fracionário.
 
-> **Note:** **Nota de uso:** A não ser que o atributo **value** esteja entre 0 e 1(inclusive), o atributo **min** e o atributo **max** devem definir o intervalo de modo que o valor do atributo **value** esteja dentro dele.
+> **Note:** A não ser que o atributo **value** esteja entre 0 e 1(inclusive), o atributo **min** e o atributo **max** devem definir o intervalo de modo que o valor do atributo **value** esteja dentro dele.
 
 ## Contexto de uso
 

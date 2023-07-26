@@ -37,7 +37,7 @@ En fonction du type d'élément de formulaire modifié et de la manière dont l'
 - Quand l'utilisateur réalise le changement de manière explicite (par exemple, en sélectionnant une valeur venant d'un {{HTMLElement("select")}} d'un menu déroulant avec le clic d'une souris, en sélectionnant une date d'un "date picker" _(sélecteur de date)_ pour `<input type="date">`, en sélectionnant un fichier d'un "file picker" _(sélecteur de fichier)_ pour `<input type="file">`, etc.).
 - Quand l'élément perd le focus après que sa valeur a été changée, mais pas validée (par exemple, après l'édition d'une valeur de {{HTMLElement("textarea")}} ou `<input type="text">`).
 
-Les différents navigateurs ne sont pas toujours d'accord sur le fait que l'événement **change** doit être déclenché pour certains types d'interactions. Par exemple, la navigation avec le clavier dans les éléments {{HTMLElement("select")}} ne déclenche jamais l'événement dans Gecko jusqu'à ce que l'utilisateur appuie sur la touche Entrée ou déplace le focus en dehors du \<select> (voir {{bug("126379")}}).
+Les différents navigateurs ne sont pas toujours d'accord sur le fait que l'événement **change** doit être déclenché pour certains types d'interactions. Par exemple, la navigation avec le clavier dans les éléments {{HTMLElement("select")}} ne déclenche jamais l'événement dans Gecko jusqu'à ce que l'utilisateur appuie sur la touche Entrée ou déplace le focus en dehors du \<select> (voir [bug Firefox 126379](https://bugzil.la/126379)).
 
 [La spécification HTML répertorie les types `<input>` qui doivent déclencher l'événement `change`.](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply)
 
@@ -50,7 +50,8 @@ Le code suivant gère l'évènement **change** sur [`<select>`](/fr/docs/Web/HTM
 #### HTML
 
 ```html
-<label>Choose an ice cream flavor:
+<label
+  >Choose an ice cream flavor:
   <select class="ice-cream" name="ice-cream">
     <option value="">Select One …</option>
     <option value="chocolate">Chocolate</option>
@@ -80,10 +81,10 @@ select {
 #### Javascript
 
 ```js
-const selectElement = document.querySelector('.ice-cream');
+const selectElement = document.querySelector(".ice-cream");
 
-selectElement.addEventListener('change', (event) => {
-  const result = document.querySelector('.result');
+selectElement.addEventListener("change", (event) => {
+  const result = document.querySelector(".result");
   result.textContent = `You like ${event.target.value}`;
 });
 ```
@@ -99,17 +100,17 @@ Pour certains éléments, notamment `<input type="text">`, l'événement de chan
 #### HTML
 
 ```html
-<input placeholder="Enter some text" name="name"/>
+<input placeholder="Enter some text" name="name" />
 <p id="log"></p>
 ```
 
 #### JavaScript
 
 ```js
-const input = document.querySelector('input');
-const log = document.getElementById('log');
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.addEventListener('change', updateValue);
+input.addEventListener("change", updateValue);
 
 function updateValue(e) {
   log.textContent = e.target.value;

@@ -1,14 +1,6 @@
 ---
 title: AudioParam.exponentialRampToValueAtTime()
 slug: Web/API/AudioParam/exponentialRampToValueAtTime
-tags:
-  - API
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - exponentialRampToValueAtTime
-browser-compat: api.AudioParam.exponentialRampToValueAtTime
 ---
 
 {{ APIRef("Web Audio API") }}

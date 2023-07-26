@@ -1,14 +1,6 @@
 ---
 title: AudioWorkletNode.port
 slug: Web/API/AudioWorkletNode/port
-tags:
-  - API
-  - AudioWorkletNode
-  - Property
-  - Reference
-  - Web Audio API
-  - port
-browser-compat: api.AudioWorkletNode.port
 ---
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
 

@@ -183,15 +183,15 @@ CSS-анимации дают вам очень точный контроль э
 
 Firefox, Chrome и другие браузеры предоставляют встроенные инструменты, которые могут помочь вам диагностировать медленный рендеринг. В частности, [Firefox's Network Monitor](/ru/docs/Tools/Network_Monitor) покажет точное время, когда произошёл каждый сетевой запрос, насколько большим он был и как долго обрабатывался.
 
-![The Firefox network monitor showing get requests, multiple files, and different times taken to load each resource on a graph.](https://mdn.mozillademos.org/files/6845/network-monitor.jpg)
+![The Firefox network monitor showing get requests, multiple files, and different times taken to load each resource on a graph.](network-monitor.jpg)
 
 Если на вашей странице есть JavaScript, который выполняется очень долго, [JavaScript profiler](/ru/docs/Tools/Profiler) укажет на наиболее медленные строки кода.
 
-![The Firefox JavaScript profiler showing a completed profile 1.](https://mdn.mozillademos.org/files/6839/javascript-profiler.png)
+![The Firefox JavaScript profiler showing a completed profile 1.](javascript-profiler.png)
 
 Встроенный [Gecko Profiler](/ru/docs/Performance/Profiling_with_the_Built-in_Profiler) - очень полезный инструмент, который позволяет вам получить ещё более подробную информацию о том, какие части кода работают медленно. Это довольно сложный инструмент, но он предоставляет множество деталей.
 
-![A built-in Gecko profiler windows showing a lot of network information.](https://mdn.mozillademos.org/files/6837/gecko-profiler.png)
+![A built-in Gecko profiler windows showing a lot of network information.](gecko-profiler.png)
 
 > **Примечание:** вы можете использовать эти инструменты и в Android браузере, запустив Firefox и включив [remote debugging](/ru/docs/Tools/Remote_Debugging).
 

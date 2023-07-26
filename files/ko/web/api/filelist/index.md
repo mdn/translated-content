@@ -1,13 +1,6 @@
 ---
 title: FileList
 slug: Web/API/FileList
-page-type: web-api-interface
-tags:
-  - API
-  - File API
-  - Files
-browser-compat: api.FileList
-translation_of: Web/API/FileList
 ---
 
 {{APIRef("File API")}}

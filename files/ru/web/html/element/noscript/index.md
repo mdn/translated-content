@@ -1,22 +1,21 @@
 ---
-title: <noscript>
+title: <noscript> - элемент, который поможет при отключенном JS
 slug: Web/HTML/Element/noscript
 translation_of: Web/HTML/Element/noscript
 ---
 
 {{HTMLSidebar}}
 
-## Резюме
+[HTML](/ru/docs/Web/HTML)-элемент **`<noscript>`** определяет секцию HTML кода, которая будет вставлена, если в браузере пользователя нет либо отключена поддержка JavaScript.
 
-Элемент HTML** `<noscript>` **определяет секцию html кода, которая будет вставлена, если в браузере пользователя нет либо отключена поддержка JavaScript.
-
-- _[Content categories](/ru/docs/HTML/Content_categories)_ [Metadata content](/ru/docs/HTML/Content_categories#Metadata_content), [flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).
-- _Permitted content_ When scripting is disabled and when it is a descendant of the {{HTMLElement("head")}} element: in any order, zero or more {{HTMLElement("link")}} elements, zero or more {{HTMLElement("style")}} elements, and zero or more {{HTMLElement("meta")}} elements.
-  When scripting is disabled and when it isn't a descendant of the {{HTMLElement("head")}} element: any transparent content, but no `<noscript>` element must be among its descendants.
-  Otherwise: flow content or phrasing content.
-- _Tag omission_ {{no_tag_omission}}
-- _Permitted parent elements_ Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), if there are no ancestor `<noscript>` element, or in a {{HTMLElement("head")}} element (but only for an HTML document), here again if there are no ancestor `<noscript>` element.
-- _DOM interface_ {{domxref("HTMLElement")}}
+| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [метаданные](/ru/docs/Web/HTML/Content_categories#метаданные), [основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [фразовый контент](/ru/docs/Web/HTML/Content_categories#фразовый_контент). |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимый контент                                         | Когда выполнение JavaScript отключено и когда он вложен в элемент {{HTMLElement("head")}}: в любом порядке, ноль или более элементов {{HTMLElement("link")}}, ноль или более элементов {{HTMLElement("style")}} и ноль или более элементов {{HTMLElement("meta")}}. <br> Когда выполнение JavaScript отключено и когда он не вложен в элемент {{HTMLElement("head")}}: любой [прозрачный контент](/ru/docs/Web/HTML/Content_categories#прозрачная_модель_контента), но среди его потомков не должно быть элемента `<noscript>`. <br> В противном случае: основной поток или фразовый контент. |
+| Пропуск тега                                               | {{no_tag_omission}} |
+| Допустимые родители                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#Phrasing_content) или элемент {{HTMLElement("head")}} (только для HTML-документа). Оба варианта возможны только если нет элемента-предка `<noscript>`. |
+| Неявная ARIA-роль                                          | [нет роли](https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role) |
+| Допустимые ARIA-роли                                       | нет |
+| DOM-интерфейс                                              | {{domxref("HTMLElement")}} |
 
 ## Атрибуты
 
@@ -26,13 +25,13 @@ translation_of: Web/HTML/Element/noscript
 
 ```html
 <noscript>
-  <!-- anchor linking to external file -->
-  <a href="http://www.mozilla.com/">External Link</a>
+  <!-- привязка к внешнему файлу -->
+  <a href="http://www.mozilla.com/">Внешняя ссылка</a>
 </noscript>
-<p>Rocks!</p>
+<p>Камни!</p>
 ```
 
-### Пример с включённым JavaScript
+### Результат с включённым JavaScript
 
 Rocks!
 
@@ -42,14 +41,10 @@ Rocks!
 
 Rocks!
 
-## Specifications
+## Спецификации
 
-| Specification                                                                                                        | Status                           | Comment |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'scripting-1.html#the-noscript-element', '&lt;noscript&gt;')}} | {{Spec2('HTML5 W3C')}}     |         |
-| {{SpecName('HTML4.01', 'interact/scripts.html#h-18.3.1', '&lt;noscript&gt;')}}             | {{Spec2('HTML4.01')}}     |         |
+{{Specifications}}
 
-## Browser compatibility
+## Совместимость с браузерами
 
 {{Compat}}

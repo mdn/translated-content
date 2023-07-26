@@ -16,7 +16,7 @@ Neste primeiro artigo do Django, respondemos a pergunta "O que é o Django?" e d
         <p>
           Conhecimentos básicos em computação. Um entendimento geral de
               <a
-                href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps"
+                href="https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/First_steps"
                 >programação de websites do lado do servidor</a
               >
               e, em particular, a mecânica de
@@ -58,7 +58,7 @@ Django ajuda você a escrever programas que são:
     O Django ativa a proteção contra muitas vulnerabilidades por padrão, incluindo SQL injection (injeção de SQL), cross-site scripting, cross-site request forgery (Falsificação de solicitação entre sites), e clickjacking ("furto de click") (veja [Segurança de sites](/pt-BR/docs/Learn/Server-side/First_steps/Website_security) para mais detalhes de tais ataques).
 
 - Escalável
-  - : Django usa uma arquitetura baseada em componentes “[shared-nothing](https://en.wikipedia.org/wiki/Shared_nothing_architecture)” ("nada-compartilhado") (cada parte da arquitetura é independente das outras, e consequentemente podem ser substituídas ou mudadas caso necessário). Ter uma separação clara entre as partes diferentes significa que pode se escalar para um tráfego aumentado adicionando hardware em qualquer nível: servidores de cache, servidores de banco de dados ou servidores de aplicação. Alguns dos sites mais ocupados escalaram o Django com sucesso para cumprir com as suas demandas (ex: Instagram e Disqus).
+  - : Django usa uma arquitetura baseada em componentes "[shared-nothing](https://en.wikipedia.org/wiki/Shared_nothing_architecture)" ("nada-compartilhado") (cada parte da arquitetura é independente das outras, e consequentemente podem ser substituídas ou mudadas caso necessário). Ter uma separação clara entre as partes diferentes significa que pode se escalar para um tráfego aumentado adicionando hardware em qualquer nível: servidores de cache, servidores de banco de dados ou servidores de aplicação. Alguns dos sites mais ocupados escalaram o Django com sucesso para cumprir com as suas demandas (ex: Instagram e Disqus).
 - Sustentável
   - : O código do Django é escrito usando princípios de design e padrões que encorajam a criação de codigo sustentável (que facilita a manutenção) e reusável. Em particular, isso utiliza o principio DRY - Don't Repeat Yourself (Não Repita a Si Mesmo) para que não haja duplicações desnecessárias, reduzindo a quantidade de código. O Django também promove o agrupamento de funcionalidades relacionadas para aplicativos reusáveis e, em um nível mais baixo, grupos de código relacionados para modulos (juntamente as linhas do padrão [MVC - Model View Controller](https://pt.wikipedia.org/wiki/MVC)).
 - Portável
@@ -312,21 +312,3 @@ Parabéns, você completou o primeiro passo em sua jornada no Django! Agora voc�
 Você já viu algum código real do Django acima, mas, diferentemente do código do lado do cliente, você precisa configurar um ambiente de desenvolvimento para executá-lo. Esse é o nosso próximo passo.
 
 {{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
-
-## Neste módulo
-
-- [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introdução)
-- [Configurando um ambiente de desenvolvimento](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Parte 3: Usando _models_](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Django Parte 6: Lista genérica e _detail views_](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Django Parte 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- [Segurança de aplicações web Django](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
-- [Criando um mini blog Django](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

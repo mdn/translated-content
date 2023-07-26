@@ -1,16 +1,6 @@
 ---
 title: color
 slug: Web/CSS/color
-tags:
-  - CSS
-  - CSS Colors
-  - CSS Property
-  - CSS Text
-  - Layout
-  - Reference
-  - Web
-  - 색
-translation_of: Web/CSS/color
 ---
 
 {{CSSRef}}

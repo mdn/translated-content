@@ -1,7 +1,6 @@
 ---
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
-translation_of: Web/API/MediaTrackConstraints
 ---
 
 {{APIRef("Media Capture and Streams")}}

@@ -25,8 +25,8 @@ original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 
 在开始测验之前，你应该：
 
-- 将 [HTML file for the exercise](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/index.html), 和 [associated image file](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/chris.jpg),拷贝到你的本地环境中。如果你想使用自己的图片文件以及把你的名字写进资料里面的话，也没有问题，不过需要保证你提供的图像是正方形的。
-- 下载 [CSS resources text file](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt) 到你的本地环境，这个文件包含了一组原始选择器和规则集。你需要学习并将他们组合，这是测验的一部分。
+- 将 [HTML file for the exercise](https://github.com/mdn/learning-area/blob/main/css/introduction-to-css/fundamental-css-comprehension/index.html), 和 [associated image file](https://github.com/mdn/learning-area/blob/main/css/introduction-to-css/fundamental-css-comprehension/chris.jpg),拷贝到你的本地环境中。如果你想使用自己的图片文件以及把你的名字写进资料里面的话，也没有问题，不过需要保证你提供的图像是正方形的。
+- 下载 [CSS resources text file](https://github.com/mdn/learning-area/blob/main/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt) 到你的本地环境，这个文件包含了一组原始选择器和规则集。你需要学习并将他们组合，这是测验的一部分。
 
 > **备注：** 另外，你可以使用一个网站比如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 来做你的测验。你可以复制 HTML 和 CSS 到其中一个在线编辑器中，以及使用这个 [this URL](http://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) 来让 `<img>` 显示图片。如果你使用的在线编辑器无法让你链接 CSS 文件 (没有单独的 CSS 面板)，你也可以将 CSS 直接放入`<style>` 元素中。
 
@@ -85,18 +85,3 @@ original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 如果您将此评估作为有组织的课程的一部分，您应该能够将您的工作交给您的老师/导师进行打分。如果您是自学的，那么您可以通过询问 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), 或在 [#mdn](irc://irc.mozilla.org/mdn)的 IRC 频道 [Mozilla IRC](https://wiki.mozilla.org/IRC) 中轻松获得打分指南。首先尝试练习 - 作弊学不到什么！
 
 {{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
-
-## 在本单元中
-
-- [How CSS works](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works)
-- [CSS syntax](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Syntax)
-- [Selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors)
-- [Simple selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors/Simple_selectors)
-- [Attribute selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors/Attribute_selectors)
-- [Pseudo-classes and pseudo-elements](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors/Pseudo-classes_and_pseudo-elements)
-- [Combinators and multiple selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Selectors/Combinators_and_multiple_selectors)
-- [CSS values and units](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
-- [Cascade and inheritance](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
-- [The box model](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Box_model)
-- [Debugging CSS](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
-- [Fundamental CSS comprehension](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)

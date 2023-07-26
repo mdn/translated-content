@@ -1,15 +1,7 @@
 ---
 title: Intl.Locale.prototype.numberingSystem
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/numberingSystem
 ---
 
 {{JSRef}}
@@ -135,13 +127,11 @@ console.log(us12hour.numberingSystem);
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.numberingSystem) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.numberingSystem")}}
+{{Compat}}
 
 ## Voir aussi
 

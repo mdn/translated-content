@@ -1,17 +1,11 @@
 ---
 title: Range.selectNodeContents()
 slug: Web/API/Range/selectNodeContents
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
-translation_of: Web/API/Range/selectNodeContents
 ---
 
 {{ApiRef("DOM")}}
 
-**`Range.selectNodeContents()`**는 {{domxref("Node")}}의 내용을 포함하는 {{domxref("Range")}}를 설정합니다.
+**`Range.selectNodeContents()`** 는 {{domxref("Node")}}의 내용을 포함하는 {{domxref("Range")}}를 설정합니다.
 
 부모 {{ domxref("Node") }} 의 start, end 값이 Reference가 됩니다. `startOffset` 은 0이고, `endOffset` 은 Child Node의 수 혹은 Reference Node에 포함되어 있는 Child Node의 수가 됩니다.
 

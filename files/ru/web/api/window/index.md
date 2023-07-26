@@ -17,7 +17,7 @@ _Данный интерфейс наследует свойства из инт
 
 Отметим, что свойства, являющиеся объектами (например, перезаписанные прототипы встроенных элементов), перечислены в отдельном разделе ниже.
 
-- {{domxref("Window.applicationCache")}} {{readOnlyInline}} {{gecko_minversion_inline("1.9")}}
+- {{domxref("Window.applicationCache")}} {{readOnlyInline}}
   - : Объект {{domxref("OfflineResourceList")}}, обеспечивающий для окна доступ к ресурсам вне сети.
 - {{domxref("Window.closed")}} {{Non-standard_inline}}{{readOnlyInline}}
   - : Свойство, указывающее было ли текущее окно закрыто или нет.
@@ -25,19 +25,19 @@ _Данный интерфейс наследует свойства из инт
   - : Точка доступа к богатой функциональности [XPCOM](/ru/docs/XPCOM). Некоторые свойства, т.к. [classes](/ru/docs/Components.classes), доступны только для достаточно привилегированного кода. **Web-код не должен использовать эти свойства.**
 - {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Возвращает ссылку на объект консоли, обеспечивающего доступ к консоли браузера.
-- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
+- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}}{{ReadOnlyInline}}
   - : Возвращает ссылку на элемент содержимого в текущем окне. Устаревший вариант в нижним подчёркиванием более не доступен для Web-содержимого.
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Возвращает XUL контроллер объектов для текущего окна chrome.
 - {{domxref("Window.crypto")}} {{readOnlyInline}}
   - : Возвращает зашифрованный объект браузера.
-- {{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}
+- {{domxref("Window.defaultStatus")}}
   - : Получает/устанавливает текст статус-бара для данного окна.
 - {{domxref("Window.devicePixelRatio")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Возвращает соотношение между физическими пикселями и пикселями на дисплее текущего устройства.
 - {{domxref("Window.dialogArguments")}} {{ReadOnlyInline}}
   - : Получает аргументы, переданные в окно (если это диалоговое окно) в момент вызова {{domxref("window.showModalDialog()")}}. Это `nsIArray`.
-- {{domxref("Window.directories")}} {{obsolete_inline}}
+- {{domxref("Window.directories")}}
   - : Синоним {{domxref("window.personalbar")}}
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Возвращает ссылку на содержащийся в окне документ.
@@ -45,9 +45,9 @@ _Данный интерфейс наследует свойства из инт
   - : Возвращает элемент, в который встроено окно, или null, если оно не встроено.
 - {{domxref("Window.frames")}} {{readOnlyInline}}
   - : Возвращает массив дополнительных фреймов в текущем окне.
-- {{domxref("Window.fullScreen")}} {{gecko_minversion_inline("1.9")}}
+- {{domxref("Window.fullScreen")}}
   - : Это свойство указывает, отображается ли окно в полноэкранном режиме или нет.
-- {{domxref("Window.globalStorage")}} {{gecko_minversion_inline("1.8.1")}} {{Non-standard_inline}} {{Obsolete_inline("gecko13")}}
+- {{domxref("Window.globalStorage")}} {{Non-standard_inline}}
   - : Не поддерживает с Gecko 13 (Firefox 13). Использовать вместо него{{domxref("Window.localStorage")}}. Было: Множественные объекты хранения, которые используются для хранения данных на нескольких страницах.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
   - : Возвращает ссылку на объект истории.
@@ -63,19 +63,19 @@ _Данный интерфейс наследует свойства из инт
   - : Получает/устанавливает расположение или текущий URL для текущего объекта окна.
 - {{domxref("Window.locationbar")}} {{ReadOnlyInline}}
   - : Возвращает объект locationbar, который может быть добавлен и убран из окна.
-- {{domxref("Window.localStorage")}} {{readOnlyInline}}{{gecko_minversion_inline("1.9.1")}}
+- {{domxref("Window.localStorage")}} {{readOnlyInline}}
   - : Возвращает ссылку на локальный объект хранилища, используемый для хранения данных, которые могут быть доступны только первоисточникам, создавшим их.
 - {{domxref("Window.menubar")}} {{ReadOnlyInline}}
   - : Возвращает объект menubar, который может быть добавлен и убран из окна.
-- {{domxref("Window.messageManager")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.messageManager")}}
   - : Возвращает объект [message manager](/ru/docs/The_message_manager) для окна.
-- {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}{{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.mozAnimationStartTime")}} {{ReadOnlyInline}}
   - : Время в миллисекундах с момента начала цикла данной анимации.
-- {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Window.mozInnerScreenX")}} {{ReadOnlyInline}}{{non-standard_inline}}
   - : Возвращает горизонтальную (X) координату верхнего левого угла окна просмотра в экранных координатах. Значение возвращается в CSS-пикселях. Смотри `mozScreenPixelsPerCSSPixel` в `nsIDOMWindowUtils` для конвертирования и адаптирования к экранным пикселям, если необходимо.
-- {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}{{gecko_minversion_inline("1.9.2")}}
+- {{domxref("Window.mozInnerScreenY")}} {{ReadOnlyInline}} {{non-standard_inline}}
   - : Возвращает вертикальные (Y) координаты верхнего левого угла окна просмотра в экранных координатах. Значение возвращается в CSS-пикселях. Смотри `mozScreenPixelsPerCSSPixel` для конвертирования и адаптирования к экранным пикселям, если необходимо.
-- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.mozPaintCount")}} {{non-standard_inline}}{{ReadOnlyInline}}
   - : Возвращает количество раз, за которые текущий документ был отрендерен для текущего экрана в этом окне. Может быть использовано для подсчёта скорости преобразования.
 - {{domxref("Window.name")}}
   - : Получает/устанавливает имя для окна.
@@ -101,7 +101,7 @@ _Данный интерфейс наследует свойства из инт
   - : Обеспечивает главенствующее пространство для атрибутов, [относящихся к производительности](/ru/docs/Navigation_timing).
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : Возвращает объект personalbar, который может быть добавлен и убран из окна.
-- {{domxref("Window.pkcs11")}} {{obsolete_inline(29)}}
+- {{domxref("Window.pkcs11")}}
   - : Раньше предоставлял доступ к установке и удалению PKCS11 модуля.
 - {{domxref("Window.returnValue")}}
   - : Возвращаемое значение, которое будет передано в функцию, которая вызвала {{domxref("window.showModalDialog()")}} для отображения окна как модального диалога.
@@ -159,7 +159,7 @@ _Этот интерфейс наследует методы от интерфе
 
 - {{domxref("Window.alert()")}}
   - : Отображает предупреждающее диалоговое окно.
-- {{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.back()")}} {{Non-standard_inline}}
   - : Возвращается на один шаг назад в истории окна.
 - {{domxref("Window.blur()")}}
   - : Убирает фокус с окна.
@@ -177,19 +177,19 @@ _Этот интерфейс наследует методы от интерфе
   - : Закрывает текущее окно.
 - {{domxref("Window.confirm()")}}
   - : Отображает диалог с сообщением, на которое пользователь должен ответить.
-- {{domxref("Window.disableExternalCapture()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.disableExternalCapture()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.dispatchEvent()")}}
   - : Используется для вызова события.
 - {{domxref("Window.dump()")}}
   - : Отправляет сообщение в консоль.
-- {{domxref("Window.enableExternalCapture()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.enableExternalCapture()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.find()")}}
   - : Ищет необходимую строку в окне window.
 - {{domxref("Window.focus()")}}
   - : Устанавливает фокус на текущем окне.
-- {{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.forward()")}} {{Non-standard_inline}}
   - : Переходит на один документ вперёд в текущей истории окна.
 - {{domxref("Window.getAttention()")}}
   - : Заставляет мигать иконку приложения.
@@ -201,9 +201,9 @@ _Этот интерфейс наследует методы от интерфе
   - : Получает подсчитанные стили по умолчанию для определённого элемента, игнорируя авторские стили.
 - {{domxref("Window.getSelection()")}}
   - : Возвращает выбранный объект, представляющий выбранный элемент(ы).
-- {{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}
+- {{domxref("Window.home()")}} {{Non-standard_inline}}
   - : Возвращает браузер на домашнюю страницу.
-- {{domxref("Window.matchMedia()")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.matchMedia()")}}
   - : Возвращает объект {{domxref("MediaQueryList")}}, представляющий указанную строку медиавыражения.
 - {{domxref("Window.maximize()")}}
   - : {{todo("NeedsContents")}}
@@ -213,7 +213,7 @@ _Этот интерфейс наследует методы от интерфе
   - : Сдвигает текущее окно на определённое значение.
 - {{domxref("Window.moveTo()")}}
   - : Сдвигает окно до определённых координат.
-- {{domxref("Window.mozRequestAnimationFrame()")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.mozRequestAnimationFrame()")}}
   - : Сообщает браузеру, что анимация находится в прогрессе, требуя, чтобы браузер определил время перерисовки окна для следующего анимационного фрейма. Это вызовет событие `MozBeforePaint,` прежде чем произойдёт перерисовка .
 - {{domxref("Window.open()")}}
   - : Открывает новое окно.
@@ -237,7 +237,7 @@ _Этот интерфейс наследует методы от интерфе
   - : Динамически меняет размер окна.
 - {{domxref("Window.restore()")}}
   - : {{todo("NeedsContents")}}
-- {{domxref("Window.routeEvent()")}} {{obsolete_inline(24)}}
+- {{domxref("Window.routeEvent()")}}
   - : {{todo("NeedsContents")}}
 - {{domxref("Window.scroll()")}}
   - : Scrolls the window to a particular place in the document.
@@ -299,7 +299,7 @@ _Этот интерфейс наследует методы от интерфе
 
 Интерфейс наследует обработчики событий от _{{domxref("EventTarget")}}_ интерфейса и реализует обработчики событий _{{domxref("WindowEventHandlers")}}._
 
-> **Примечание:** **Замета:** Начиная с {{Gecko("9.0")}}, вы можете использовать синтаксис `if ("onabort" in window),` чтобы определить существует ли обработчик данного события. Интерфейсы обработчиков событий были обновлены таким образом, чтобы соответствовать web IDL интерфейсам. Смотри [обработчики событий DOM](/ru/docs/DOM/DOM_event_handlers) для деталей.
+> **Примечание:** Начиная с Gecko 9.0, вы можете использовать синтаксис `if ("onabort" in window),` чтобы определить существует ли обработчик данного события. Интерфейсы обработчиков событий были обновлены таким образом, чтобы соответствовать web IDL интерфейсам. Смотри [обработчики событий DOM](/ru/docs/DOM/DOM_event_handlers) для деталей.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : Обработчик события для отмены событий в окне.
@@ -325,11 +325,11 @@ _Этот интерфейс наследует методы от интерфе
   - : Свойство обработчика событий для правого клика в окне.
 - {{domxref("Window.ondevicelight")}}
   - : Свойство обработчика событий для отслеживания изменения уровня света.
-- {domxref("Window\.ondevicemotion")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.ondevicemotion")}}
   - : Вызывается, если было определено изменение акселерометра (для мобильных устройств).
-- {{domxref("Window.ondeviceorientation")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.ondeviceorientation")}}
   - : Вызывается, когда была изменена ориентация (для мобильных устройств).
-- {{domxref("Window.ondeviceorientation")}} {{gecko_minversion_inline("6.0")}}
+- {{domxref("Window.ondeviceorientation")}}
   - : Свойство обработчика событий для смены ориентации любого устройства.
 - {{domxref("Window.ondeviceproximity")}}
   - : Свойство обработчика событий для определения близости устройства.
@@ -337,7 +337,7 @@ _Этот интерфейс наследует методы от интерфе
   - : Свойство обработчика событий для события {{event("error")}}, возникшего в окне.
 - {{domxref("GlobalEventHandlers.onfocus")}}
   - : Свойство обработчика событий для события {{event("focus")}} в окне.
-- {{domxref("WindowEventHandlers.onhashchange")}} {{gecko_minversion_inline("1.9.2")}}
+- {{domxref("WindowEventHandlers.onhashchange")}}
   - : Свойство обработчика событий для отлова изменения хэша в окне; вызывается, когда часть URL после ("#") была изменена.
 - {{domxref("Window.onappinstalled")}}
   - : Вызывается, когда страница установлена, как приложение. Смотри {{event('appinstalled')}} событие.
@@ -365,7 +365,7 @@ _Этот интерфейс наследует методы от интерфе
   - : Свойство обработчика событий для события mouseover в окне.
 - {{domxref("GlobalEventHandlers.onmouseup")}}
   - : Свойство обработчика событий для события mouseup в окне.
-- {{domxref("Window.onmozbeforepaint")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("Window.onmozbeforepaint")}}
   - : Свойство обработчика событий для события `MozBeforePaint`, которое присылается прежде чем окно будет перерисовано, если событие необходимо из-за вызова метода {{domxref("Window.mozRequestAnimationFrame()")}}.
 - {{domxref("WindowEventHandlers.onoffline")}}
   - : Вызывается, когда было потеряно соединение с сетью. Смотри событие {{event("offline")}}.
@@ -377,7 +377,7 @@ _Этот интерфейс наследует методы от интерфе
   - : Свойство обработчика событий для события pagehide в окне.
 - {{domxref("Window.onpaint")}}
   - : Свойство обработчика событий для события paint в окне.
-- {{domxref("WindowEventHandlers.onpopstate")}} {{gecko_minversion_inline("2.0")}}
+- {{domxref("WindowEventHandlers.onpopstate")}}
   - : Вызывается, когда была нажата кнопка назад.
 - {{domxref("Window.onrejectionhandled")}} {{experimental_inline}}
   - : Свойство обработчика событий для обработки отказа события {{jsxref("Promise")}}.

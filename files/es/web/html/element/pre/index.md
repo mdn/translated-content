@@ -47,9 +47,9 @@ a   {
 
 {{Specifications}}
 
-## Compatibilidad con exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.pre")}}
+{{Compat}}
 
 ## Véase también
 

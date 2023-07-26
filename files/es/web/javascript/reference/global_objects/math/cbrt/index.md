@@ -66,11 +66,9 @@ Math.cbrt(2);  // 1.2599210498948732
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-[and send us a pull request.](https://github.com/mdn/browser-compat-data)
-
-[{{Compat("javascript.builtins.Math.cbrt")}}](https://github.com/mdn/browser-compat-data)
+{{Compat}}
 
 ## Puedes leer
 

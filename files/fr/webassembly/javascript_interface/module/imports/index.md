@@ -1,18 +1,10 @@
 ---
 title: WebAssembly.Module.imports()
 slug: WebAssembly/JavaScript_interface/Module/imports
-tags:
-  - API
-  - JavaScript
-  - Module
-  - Méthode
-  - Reference
-  - WebAssembly
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/imports
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/imports
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 La méthode **`WebAssembly.imports()`** renvoie un tableau qui contient les références des fonctions importées qui sont disponibles dans un module WebAssembly donné.
 
@@ -40,8 +32,7 @@ Si `module` n'est pas une instance de {{jsxref("WebAssembly.Module")}}, une exce
 Dans l'exemple qui suit, on compile le module `simple.wasm` puis on parcourt ses imports (cf. aussi [le code sur GitHub](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/imports.html) et [l'exemple _live_](https://mdn.github.io/webassembly-examples/js-api-examples/imports.html))
 
 ```js
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(function(mod) {
+WebAssembly.compileStreaming(fetch("simple.wasm")).then(function (mod) {
   var imports = WebAssembly.Module.imports(mod);
   console.log(imports[0]);
 });

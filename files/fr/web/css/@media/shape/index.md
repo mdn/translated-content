@@ -1,12 +1,6 @@
 ---
 title: shape
 slug: Web/CSS/@media/shape
-tags:
-  - '@media'
-  - CSS
-  - Caractéristique média
-  - Reference
-  - Règle @
 translation_of: Web/CSS/@media/shape
 ---
 
@@ -73,10 +67,8 @@ Ce fragment de code HTML permettra d'appliquer une feuille de style particulièr
 
 ## Spécifications
 
-| Spécification                                                              | État      | Commentaires         |
-| -------------------------------------------------------------------------- | --------- | -------------------- |
-| _[CSS Round Display Level 1](https://drafts.csswg.org/css-round-display/)_ | Brouillon | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.shape")}}
+{{Compat}}

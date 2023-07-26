@@ -4,9 +4,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_contr
 translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 ---
 
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
-
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}
+{{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}
 
 Это 4-й этап из 10 [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код как он должен выглядеть после завершения этого урока в [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html).
 
@@ -19,18 +17,18 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyb
 ```js
 var paddleHeight = 10;
 var paddleWidth = 75;
-var paddleX = (canvas.width-paddleWidth)/2;
+var paddleX = (canvas.width - paddleWidth) / 2;
 ```
 
 Здесь мы определяем высоту и ширину ракетки, и его начальную точку на оси X, для дальнейшего использования в расчётах. Давайте создадим функцию, которая будет рисовать ракетку на экране. Добавьте следующий блок после функции `drawBall()`:
 
 ```js
 function drawPaddle() {
-    ctx.beginPath();
-    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#0095DD";
-    ctx.fill();
-    ctx.closePath();
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
 }
 ```
 
@@ -61,21 +59,19 @@ document.addEventListener("keyup", keyUpHandler, false);
 
 ```js
 function keyDownHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = true;
-    }
-    else if(e.keyCode == 37) {
-        leftPressed = true;
-    }
+  if (e.keyCode == 39) {
+    rightPressed = true;
+  } else if (e.keyCode == 37) {
+    leftPressed = true;
+  }
 }
 
 function keyUpHandler(e) {
-    if(e.keyCode == 39) {
-        rightPressed = false;
-    }
-    else if(e.keyCode == 37) {
-        leftPressed = false;
-    }
+  if (e.keyCode == 39) {
+    rightPressed = false;
+  } else if (e.keyCode == 37) {
+    leftPressed = false;
+  }
 }
 ```
 
@@ -88,22 +84,20 @@ function keyUpHandler(e) {
 Теперь у нас есть переменные для хранения информации о нажатых клавишах, обработчики событий и соответствующие функции. Теперь мы допишем код, чтобы перемещать ракетку на экране. Внутри функции `draw()`, мы будем проверять, нажата левая или правая клавиша, когда каждый кадр отображается. Наш код будет выглядеть следующим образом:
 
 ```js
-if(rightPressed) {
-    paddleX += 7;
-}
-else if(leftPressed) {
-    paddleX -= 7;
+if (rightPressed) {
+  paddleX += 7;
+} else if (leftPressed) {
+  paddleX -= 7;
 }
 ```
 
 Если нажата стрелка влево, то ракетка будет двигаться на 7 пикселей влево, а если нажата стрелка вправо то на 7 пикселей вправо. Все хорошо, но, если держать клавишу слишком долго, ракетка уходит за границы холста. Улучшим ситуацию, будем перемещать ракетку только в пределах холста, изменив код следующим образом:
 
 ```js
-if(rightPressed && paddleX < canvas.width-paddleWidth) {
-    paddleX += 7;
-}
-else if(leftPressed && paddleX > 0) {
-    paddleX -= 7;
+if (rightPressed && paddleX < canvas.width - paddleWidth) {
+  paddleX += 7;
+} else if (leftPressed && paddleX > 0) {
+  paddleX -= 7;
 }
 ```
 

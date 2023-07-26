@@ -1,12 +1,7 @@
 ---
 title: Accesseurs de propriétés
-slug: Web/JavaScript/Reference/Operators/Property_Accessors
-tags:
-  - JavaScript
-  - Opérateur
-  - Reference
+slug: Web/JavaScript/Reference/Operators/Property_accessors
 translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
-original_slug: Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres
 ---
 
 {{jsSidebar("Operators")}}
@@ -76,7 +71,7 @@ Cette ligne fait exactement la même chose que l'exemple précédent.
 
 ### Noms de propriétés
 
-Les noms de propriétés doivent être des chaînes de caractères ou des symboles. Cela signifie que les autres types d'objet ne peuvent pas être utilisés comme clés d'un objet. Tout autre type d'objet, même un nombre, sera converti en une chaîne via sa méthode [`toString`](/fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Objets_globaux/Object/toString).
+Les noms de propriétés doivent être des chaînes de caractères ou des symboles. Cela signifie que les autres types d'objet ne peuvent pas être utilisés comme clés d'un objet. Tout autre type d'objet, même un nombre, sera converti en une chaîne via sa méthode [`toString`](/fr/Référence_de_JavaScript_1.5_Core/Objets_globaux/Object/toString).
 
 #### Exemples
 

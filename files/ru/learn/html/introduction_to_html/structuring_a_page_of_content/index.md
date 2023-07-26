@@ -57,7 +57,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Structuring_a_page_of_content
 
 Следующий скриншот показывает пример того, как может выглядеть домашняя страница после маркировки.
 
-![The finished example for the assessment; a simple webpage about birdwatching, including a heading of "Birdwatching", bird photos, and a welcome message](https://mdn.mozillademos.org/files/12449/example-page.png)
+![The finished example for the assessment; a simple webpage about birdwatching, including a heading of "Birdwatching", bird photos, and a welcome message](example-page.png)
 
 ## Оценивание
 

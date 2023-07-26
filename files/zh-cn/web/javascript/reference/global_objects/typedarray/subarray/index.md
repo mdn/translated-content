@@ -9,8 +9,10 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 
 ## 用法
 
-```plain
-typedarray.subarray([begin [,end]])
+```js-nolint
+subarray()
+subarray(begin)
+subarray(begin, end)
 ```
 
 ### 参数

@@ -1,12 +1,11 @@
 ---
 title: RTCIceCandidate.candidate
 slug: Web/API/RTCIceCandidate/candidate
-translation_of: Web/API/RTCIceCandidate/candidate
 ---
 
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCIceCandidate")}} 인터페이스에 대한 읽기 속성인 **`candidate`**는 candidate에 대해 자세히 설명해주는 {{domxref("DOMString")}}를 반환합니다.
+{{domxref("RTCIceCandidate")}} 인터페이스에 대한 읽기 속성인 **`candidate`** 는 candidate에 대해 자세히 설명해주는 {{domxref("DOMString")}}를 반환합니다.
 
 `RTCIceCandidate`의 거의 모든 다른 속성들은 사실 이 문자열에서 가져와진 것입니다.
 
@@ -24,7 +23,7 @@ var candidate = RTCIceCandidate.candidate;
 
 candidate 문자열에 대한 구문은 {{RFC(5245, "", 15.1)}}에 설명되어있습니다.
 
-```
+``` plain
 a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
 ```
 

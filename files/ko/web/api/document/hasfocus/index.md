@@ -1,13 +1,6 @@
 ---
 title: Document.hasFocus()
 slug: Web/API/Document/hasFocus
-tags:
-  - API
-  - DOM
-  - Focus
-  - Method
-  - Reference
-translation_of: Web/API/Document/hasFocus
 ---
 
 {{ ApiRef("DOM") }}

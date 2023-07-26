@@ -10,7 +10,7 @@ El método **`Window.matchMedia()`** devuelve un nuevo objeto {{domxref("MediaQu
 ## Sintaxis
 
 ```js
-mql = window.matchMedia(mediaQueryString)
+mql = window.matchMedia(mediaQueryString);
 ```
 
 Donde `mediaQueryString` es una cadena de texto que representa la media query de la que devolver un nuevo objeto {{domxref("MediaQueryList")}}.
@@ -33,9 +33,9 @@ Consulte [Probando media queries](/es/docs/DOM/Using_media_queries_from_code) pa
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Window.matchMedia")}}
+{{Compat}}
 
 ## Ver también
 

@@ -11,7 +11,7 @@ slug: Learn/JavaScript/Building_blocks/conditionals
 | --------- | ----------------------------------------------------------------------------------------------------------------------- |
 | 目的:     | JavaScript における条件分岐構造をどのように使用するかを理解する。                                                       |
 
-## すべては条件次第..
+## すべては条件次第
 
 人類 (と他の動物たち)は 小さいもの (「クッキーを 1 つ食べるべきか、2 つ食べるべきか...。」) から大きいもの (「故郷に残って親父の農場を継ぐべきか、アメリカで宇宙物理学を学ぶべきか...。」) まで、生活に関わるすべての決定を下します。
 
@@ -755,13 +755,3 @@ textarea.onkeyup = function(){
 - [条件 (三項) 演算子リファレンス](/ja/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
 
 {{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
-
-## このモジュール
-
-- [コードでの意思決定 — 条件文](/ja/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [ループコード](/ja/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [関数 — 再利用可能なコードブロック](/ja/docs/Learn/JavaScript/Building_blocks/Functions)
-- [独自の関数を作る](/ja/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [関数の戻り値](/ja/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [イベントの紹介](/ja/docs/Learn/JavaScript/Building_blocks/Events)
-- [イメージギャラリー](/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery)

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Strict_inequality
 
 严格不相等运算符（`!==`）检查它的两个对象是否不相等，返回一个布尔结果。与[不相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)运算符不同，严格不相等运算符总是认为不同类型的对象是不同的。
 
-{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}
+{{EmbedInteractiveExample("pages/js/expressions-strict-inequality.html")}}
 
 ## 语法
 

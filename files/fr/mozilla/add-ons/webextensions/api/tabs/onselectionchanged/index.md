@@ -1,17 +1,6 @@
 ---
 title: tabs.onSelectionChanged
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onSelectionChanged
-tags:
-  - API
-  - Add-ons
-  - Deprecated
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onSelectionChanged
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onSelectionChanged
 ---
 
@@ -24,9 +13,9 @@ Se déclenche lorsque l'onglet sélectionné dans une fenêtre change.
 ## Syntaxe
 
 ```js
-browser.tabs.onSelectionChanged.addListener(listener)
-browser.tabs.onSelectionChanged.removeListener(listener)
-browser.tabs.onSelectionChanged.hasListener(listener)
+browser.tabs.onSelectionChanged.addListener(listener);
+browser.tabs.onSelectionChanged.removeListener(listener);
+browser.tabs.onSelectionChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions:
@@ -61,9 +50,9 @@ Les événements ont trois fonctions:
 - `windowId`
   - : `integer`. L'ID de la fenêtre dans laquelle l'onglet sélectionné a changé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onSelectionChanged")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

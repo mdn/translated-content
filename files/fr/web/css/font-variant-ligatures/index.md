@@ -2,7 +2,6 @@
 title: font-variant-ligatures
 slug: Web/CSS/font-variant-ligatures
 translation_of: Web/CSS/font-variant-ligatures
-browser-compat: css.properties.font-variant-ligatures
 ---
 
 {{CSSRef}}

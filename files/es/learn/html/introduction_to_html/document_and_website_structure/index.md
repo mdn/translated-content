@@ -74,7 +74,7 @@ HTML dispone de etiquetas adecuadas que puedes usar para establecer estas seccio
 El ejemplo de página web que se muestra arriba se consigue a partir del siguiente código (disponible en el [repositorio Github](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). Observa el ejemplo anterior, y a continuación échale un vistazo al código de abajo para identificar las secciones marcadas en el ejemplo.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -83,8 +83,7 @@ El ejemplo de página web que se muestra arriba se consigue a partir del siguien
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
       rel="stylesheet"
-      type="text/css"
-    />
+      type="text/css" />
     <link rel="stylesheet" href="style.css" />
 
     <!-- las tres siguientes líneas son un truco para obtener elementos semánticos de HTML5 que funcionan en versiones de Internet Explorer antiguas -->
@@ -200,7 +199,7 @@ Es bueno entender el significado global de todos los elementos definitorios de l
 
 ### Envolturas no semánticas
 
-A veces hay situaciones en las que no encuentras un elemento semántico adecuado para agrupar ciertos elementos o englobar cierto contenido. Podrías querer agrupar ciertos elementos para referirte a ellos como una entidad que comparta cierto {{Glossary("CSS")}} o {{Glossary("JavaScript")}}. Para casos como esos, HTML dispone del elemento {{HTMLElement("div")}} y del elemento {{HTMLElement("span")}}. Preferentemente estos elementos se deberán utilizar con sus atributos ({{HTMLAttrxRef('class')}}), para conferirles algún tipo de etiquetado que permita determinarlos con facilidad.
+A veces hay situaciones en las que no encuentras un elemento semántico adecuado para agrupar ciertos elementos o englobar cierto contenido. Podrías querer agrupar ciertos elementos para referirte a ellos como una entidad que comparta cierto {{Glossary("CSS")}} o {{Glossary("JavaScript")}}. Para casos como esos, HTML dispone del elemento {{HTMLElement("div")}} y del elemento {{HTMLElement("span")}}. Preferentemente estos elementos se deberán utilizar con sus atributos ([`class`](/es/docs/Web/HTML/Global_attributes#class)), para conferirles algún tipo de etiquetado que permita determinarlos con facilidad.
 
 {{HTMLElement("span")}} es un elemento no-semántico que se utiliza en el interior de una línea. Se utiliza cuando no se nos ocurre el uso de ningún otro elemento semántico de texto en el que incluir el contenido, o si no se desea añadir ningún significado específico. Por ejemplo:
 
@@ -327,15 +326,3 @@ En este punto, deberías tener una mejor idea sobre cómo estructurar una págin
 - [Uso de secciones y esquemas HTML](/es/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines): Guía avanzada de elementos semánticos HTML5 y el algoritmo de esquema HTML5.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## En este módulo
-
-- [Empezar con HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [¿Qué hay en el «head»? Metadatos en HTML](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-- [Fundamentos de texto HTML](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-- [Crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-- [Estructura web y documentación](/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Depurar HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Marcado para una carta](/es/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Estructuración del contenido de una página](/es/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

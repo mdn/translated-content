@@ -1,12 +1,14 @@
 ---
-title: HTMLInputElement.stepUp()
+title: "HTMLInputElement: stepUp() メソッド"
 slug: Web/API/HTMLInputElement/stepUp
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.stepUp()`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を
-[`step`](/ja/docs/Web/HTML/Attributes/step) 属性の値、または step 属性が明示的に設定されていない場合は既定の `step` の値だけ増加させるものです。このメソッドを呼び出すと、 {{htmlattrxref("value","input")}} は ({{htmlattrxref("step","input")}} \* n) だけ減少します。ここで、n は指定されなかった場合、既定で `1` となり、[`step`](/ja/docs/Web/HTML/Attributes/step) が指定されなかった場合、 `step` の既定値となります。
+[`step`](/ja/docs/Web/HTML/Attributes/step) 属性の値、または step 属性が明示的に設定されていない場合は既定の `step` の値だけ増加させるものです。このメソッドを呼び出すと、 [`value`](/ja/docs/Web/HTML/Element/input#value) は ([`step`](/ja/docs/Web/HTML/Element/input#step) \* n) だけ減少します。ここで、n は指定されなかった場合、既定で `1` となり、[`step`](/ja/docs/Web/HTML/Attributes/step) が指定されなかった場合、 `step` の既定値となります。
 
 <table class="no-markdown">
   <thead>
@@ -19,36 +21,32 @@ slug: Web/API/HTMLInputElement/stepUp
       <td>{{HTMLElement("input/date", "date")}}</td>
       <td><code>1</code> （日）</td>
       <td>
-        7 日（1 週間）単位の増加:<br /><code
-          >&#x3C;input type="date" min="2019-12-25" step="7"></code
-        >
+        7 日（1 週間）単位の増加:<br />
+        <code>&#x3C;input type="date" min="2019-12-25" step="7"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/month", "month")}}</td>
       <td><code>1</code> （ヶ月）</td>
       <td>
-        12 ヶ月（1 年）単位の増加:<br /><code
-          >&#x3C;input type="month" min="2019-12" step="12"></code
-        >
+        12 ヶ月（1 年）単位の増加:<br />
+        <code>&#x3C;input type="month" min="2019-12" step="12"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/week", "week")}}</td>
       <td><code>1</code> （週間）</td>
       <td>
-        2 週間単位の増加:<br /><code
-          >&#x3C;input type="week" min="2019-W23" step="2"></code
-        >
+        2 週間単位の増加:<br />
+        <code>&#x3C;input type="week" min="2019-W23" step="2"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/time", "time")}}</td>
       <td><code>60</code> （秒）</td>
       <td>
-        900 秒（15 分）単位の増加:<br /><code
-          >&#x3C;input type="time" min="09:00" step="900"></code
-        >
+        900 秒（15 分）単位の増加:<br />
+        <code>&#x3C;input type="time" min="09:00" step="900"></code>
       </td>
     </tr>
     <tr>
@@ -57,28 +55,25 @@ slug: Web/API/HTMLInputElement/stepUp
       </td>
       <td><code>1</code> （日）</td>
       <td>
-        同じ曜日:<br /><code
-          >&#x3C;input type="datetime-local" min="019-12-25T19:30"
-          step="7"></code
-        >
+        同じ曜日:<br />
+        <code>&#x3C;input type="datetime-local" min="019-12-25T19:30"
+          step="7"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/number", "number")}}</td>
       <td><code>1</code></td>
       <td>
-        0.1 刻み<br /><code
-          >&#x3C;input type="number" min="0" step="0.1" max="10"></code
-        >
+        0.1 刻み<br />
+        <code>&#x3C;input type="number" min="0" step="0.1" max="10"></code>
       </td>
     </tr>
     <tr>
       <td>{{HTMLElement("input/range", "range")}}</td>
       <td><code>1</code></td>
       <td>
-        2 ずつ増加:<br /><code
-          >&#x3C;input type="range" min="0" step="2" max="10"></code
-        >
+        2 ずつ増加:<br />
+        <code>&#x3C;input type="range" min="0" step="2" max="10"></code>
       </td>
     </tr>
   </thead>
@@ -92,14 +87,19 @@ slug: Web/API/HTMLInputElement/stepUp
 
 ## 構文
 
-```js
-element.stepUp( [ stepIncrement ] );
+```js-nolint
+stepUp()
+stepUp(stepIncrement)
 ```
 
 ### 引数
 
-- _`stepIncrement`_
-  - : `stepDecrement` 引数は省略可能で数値を指定します。引数が渡されなかった場合、 _stepDecrement_ は既定で 1 になります。
+- `stepIncrement` {{optional_inline}}
+  - : 数値です。引数が渡されなかった場合、 `stepIncrement` は既定で `1` になります。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 例
 
@@ -109,35 +109,39 @@ element.stepUp( [ stepIncrement ] );
 
 ```html
 <p>
-  <label>0 から 400 までの 5 で割り切れる数を入力してください。
-   <input type="number" step="5" id="theNumber" min="0" max="400">
+  <label for="theNumber">
+    0 から 400 までの 5 で割り切れる数を入力してください。
   </label>
+  <input type="number" step="5" id="theNumber" min="0" max="400" />
 </p>
 <p>
-  <label>増加させたい段階の数を入力するか、空欄のままにしてください。
-   <input type="number" step="1" id="incrementer" min="0" max="25">
+  <label>
+    増加させたい段階の数を入力するか、空欄のままにしてください。
   </label>
+  <input type="number" step="1" id="incrementInput" min="0" max="25" />
 </p>
-<input type="button" value="Increment" id="theButton">
+<input type="button" value="Increment" id="theButton" />
 ```
 
-### JavaScript
+### Java10Script
 
 ```js
 /* 関数を呼び出すボタンを生成 */
-let button = document.getElementById('theButton')
-button.addEventListener('click', function() {
-  steponup()
-})
+const button = document.getElementById("theButton");
+button.addEventListener("click", () => {
+  stepOnUp();
+});
 
-function steponup() {
-  let input = document.getElementById('theNumber')
-  let val = document.getElementById('incrementer').value
+function stepOnUp() {
+  let input = document.getElementById("theNumber");
+  let val = document.getElementById("incrementInput").value;
 
-  if (val) {  /* 引数付きで加算 */
-    input.stepUp(val)
-  } else {    /* 引数なしで加算。 0 を試してください。 */
-    input.stepUp()
+  if (val) {
+    /* 引数付きで加算 */
+    input.stepUp(val);
+  } else {
+    /* 引数なしで加算。 0 を試してください。 */
+    input.stepUp();
   }
 }
 ```
@@ -150,9 +154,9 @@ input:invalid {
 }
 ```
 
-### Result
+### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 `stepUp` メソッドに引数を渡さなかった場合、既定値は `1` になります。他の値は `step` 属性の値に乗算されるので、この場合は `5` となります。 _`stepIncrement`_ に 4 を渡した場合、 `stepUp` は `4 * 5` すなわち `20` だけ行われます。この引数が `0` であった場合、数値は加算されません。 `stepUp` メソッドは入力が範囲外にならないように、この場合は `400` になった時点で停止し、引数として渡された値の小数点以下を切り捨てます。
 

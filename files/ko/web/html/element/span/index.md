@@ -1,14 +1,6 @@
 ---
 title: <span>
 slug: Web/HTML/Element/span
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/span
 ---
 
 {{HTMLSidebar}}
@@ -110,7 +102,7 @@ li span {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.span")}}
+{{Compat}}
 
 ## 같이 보기
 

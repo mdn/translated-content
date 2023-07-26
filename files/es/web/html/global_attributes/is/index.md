@@ -39,9 +39,9 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.is")}}
+{{Compat}}
 
 ## Vea también
 

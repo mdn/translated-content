@@ -64,4 +64,4 @@ Si hace esto, asegúrese de que su algoritmo es correcto y no está sirviendo el
 Compruebe su sitio web en múltiples navegadores. Esto significa probarlo en múltiples plataformas — al menos iOS y Android.
 
 - Pruebe Safari móvil en iPhone usando el [simulador iOS](https://developer.apple.com/devcenter/ios/index.action).
-- Pruebe Opera y Firefox utilizando el [Android SDK](https://developer.android.com/sdk/index.html). Vea estas instrucciones adicionales para [ejecutar Firefox para Android usando el emulador de Android](https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator).
+- Pruebe Opera y Firefox utilizando el [Android SDK](https://developer.android.com/studio#command-tools). Vea estas instrucciones adicionales para [ejecutar Firefox para Android usando el emulador de Android](https://wiki.mozilla.org/Mobile/Fennec/Android/Emulator).

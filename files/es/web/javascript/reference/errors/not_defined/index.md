@@ -1,11 +1,6 @@
 ---
 title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
-tags:
-  - Error
-  - JavaScript
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Errors/Not_defined
 ---
 
 {{jsSidebar("Errors")}}
@@ -70,4 +65,4 @@ console.log(num1); // 2
 
 - {{Glossary("Ámbito")}}
 - [Guía; declarando variables en JavaScript](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
-- [Guía; contexto de la función en Java Script](/es/docs/Web/JavaScript/Guide/Functions#Function_scope/en-US/docs/)
+- [Guía; contexto de la función en Java Script](/es/docs/Web/JavaScript/Guide/Functions#ámbito_de_function)

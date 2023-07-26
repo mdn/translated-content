@@ -1,15 +1,6 @@
 ---
 title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 ---
 
@@ -75,9 +66,9 @@ Quand l'API `browserAction`, vous pouvez :
 - {{WebExtAPIRef("browserAction.onClicked")}}
   - : Action quand l'icone d'action du navigateur est cliqué. Cet événement ne déclenchera pas si l'action du navigateur comporte une fenêtre contextuelle.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserAction")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

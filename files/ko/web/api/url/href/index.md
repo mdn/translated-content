@@ -1,13 +1,6 @@
 ---
 title: URL.href
 slug: Web/API/URL/href
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/href
 ---
 {{ApiRef("URL API")}}
 

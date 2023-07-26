@@ -60,13 +60,15 @@ This function returns a base 64-encoded data URI from the passed [nsIFile](/zh-T
 ```js
 function generateDataURI(file) {
   var contentType = Components.classes["@mozilla.org/mime;1"]
-                              .getService(Components.interfaces.nsIMIMEService)
-                              .getTypeFromFile(file);
-  var inputStream = Components.classes["@mozilla.org/network/file-input-stream;1"]
-                              .createInstance(Components.interfaces.nsIFileInputStream);
+    .getService(Components.interfaces.nsIMIMEService)
+    .getTypeFromFile(file);
+  var inputStream = Components.classes[
+    "@mozilla.org/network/file-input-stream;1"
+  ].createInstance(Components.interfaces.nsIFileInputStream);
   inputStream.init(file, 0x01, 0600, 0);
-  var stream = Components.classes["@mozilla.org/binaryinputstream;1"]
-                         .createInstance(Components.interfaces.nsIBinaryInputStream);
+  var stream = Components.classes[
+    "@mozilla.org/binaryinputstream;1"
+  ].createInstance(Components.interfaces.nsIBinaryInputStream);
   stream.setInputStream(inputStream);
   var encoded = btoa(stream.readBytes(stream.available()));
   return "data:" + contentType + ";base64," + encoded;
@@ -75,7 +77,7 @@ function generateDataURI(file) {
 
 ## 安全
 
-> **備註：** Prior to {{Gecko("6.0")}}, `data` URIs inherited the security context of the page currently in the browser window if the user enters a `data` URI into the location bar. Now `data` URIs get a new, empty, security context.
+> **備註：** Prior to Gecko 6.0, `data` URIs inherited the security context of the page currently in the browser window if the user enters a `data` URI into the location bar. Now `data` URIs get a new, empty, security context.
 
 ## 常見的問題
 
@@ -119,4 +121,4 @@ The `data` scheme is supported by Opera 7.20 and above, as well as Safari and Ko
 
 ## 資源
 
-- [RFC 2397](http://tools.ietf.org/html/rfc2397) -- The "data" URL scheme"
+- [RFC 2397](http://tools.ietf.org/html/rfc2397) — The "data" URL scheme"

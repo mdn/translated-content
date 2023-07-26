@@ -1,16 +1,6 @@
 ---
 title: downloads.onErased
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - onErased
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
 ---
 
@@ -23,9 +13,9 @@ L'écouteur reçoit le paramètre `downloadId` de l'objet {{WebExtAPIRef('downlo
 ## Syntaxe
 
 ```js
-browser.downloads.onErased.addListener(listener)
-browser.downloads.onErased.removeListener(listener)
-browser.downloads.onErased.hasListener(listener)
+browser.downloads.onErased.addListener(listener);
+browser.downloads.onErased.removeListener(listener);
+browser.downloads.onErased.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -48,9 +38,9 @@ Les événements ont trois fonctions :
     - `downloadId`
       - : Un `integer` représentant l'`id` du {{WebExtAPIRef('downloads.DownloadItem')}} qui a été effacé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.onErased")}}
+{{Compat}}
 
 ## Exemples
 
@@ -65,7 +55,7 @@ browser.downloads.onErased.addListener(handleErased);
 
 var erasing = browser.downloads.erase({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 ```
 

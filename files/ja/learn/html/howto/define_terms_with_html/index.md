@@ -47,7 +47,10 @@ HTML は、インラインであろうと構造化された用語集であろう
 私たちは HTML でもそうしていますが、HTML は視覚的なメディアではないので太字を使いません。 {{htmlelement("dfn")}} は、初めて出現するキーワードをマークするための特別な要素です。 `<dfn>` タグは、定義ではなく定義される単語の周りにあり、定義は段落全体で構成されています。
 
 ```html
-<p><dfn>Firefox</dfn> は、Mozilla Foundation によって作成されたウェブブラウザーです。</p>
+<p>
+  <dfn>Firefox</dfn> は、Mozilla Foundation
+  によって作成されたウェブブラウザーです。
+</p>
 ```
 
 > **メモ:** 太字のもう 1 つの用途はコンテンツを強調することです。 太字自体は HTML の概念ではありませんが、[強調を示すタグ](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance)があります。
@@ -58,8 +61,11 @@ HTML は、インラインであろうと構造化された用語集であろう
 
 ```html
 <p>
-  <dfn><abbr>HTML</abbr> (hypertext markup language、ハイパーテキストマークアップ言語)</dfn>
-   は、ウェブ上のドキュメントを構造化するために使用される記述言語です。
+  <dfn
+    ><abbr>HTML</abbr> (hypertext markup
+    language、ハイパーテキストマークアップ言語)</dfn
+  >
+  は、ウェブ上のドキュメントを構造化するために使用される記述言語です。
 </p>
 ```
 
@@ -79,7 +85,7 @@ HTML は、インラインであろうと構造化された用語集であろう
 </p>
 ```
 
-支援技術は、この属性を使用して、指定された用語の代替テキストを見つけることができます。 `<dfn>` 要素だけでなく、キーワードを囲む任意のタグで `aria-describedby` を使用して定義できます。 `aria-describedby` は、説明を含む要素の {{htmlattrxref('id')}} を参照します。
+支援技術は、この属性を使用して、指定された用語の代替テキストを見つけることができます。 `<dfn>` 要素だけでなく、キーワードを囲む任意のタグで `aria-describedby` を使用して定義できます。 `aria-describedby` は、説明を含む要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) を参照します。
 
 ## 説明リストを作成する方法
 
@@ -96,21 +102,18 @@ HTML は、インラインであろうと構造化された用語集であろう
 ```html
 <dl>
   <dt>jambalaya</dt>
-    <dd>
-      rice-based entree typically containing chicken,
-      sausage, seafood, and spices
-    </dd>
+  <dd>
+    rice-based entree typically containing chicken, sausage, seafood, and spices
+  </dd>
 
   <dt>sukiyaki</dt>
-    <dd>
-      Japanese specialty consisting of thinly sliced meat,
-      vegetables, and noodles, cooked in sake and soy sauce
-    </dd>
+  <dd>
+    Japanese specialty consisting of thinly sliced meat, vegetables, and
+    noodles, cooked in sake and soy sauce
+  </dd>
 
   <dt>chianti</dt>
-    <dd>
-      dry Italian red wine originating in Tuscany
-    </dd>
+  <dd>dry Italian red wine originating in Tuscany</dd>
 </dl>
 ```
 

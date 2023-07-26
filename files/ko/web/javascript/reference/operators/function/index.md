@@ -1,12 +1,6 @@
 ---
 title: 함수 표현식
 slug: Web/JavaScript/Reference/Operators/function
-tags:
-  - Function
-  - JavaScript
-  - Operator
-  - Primary Expressions
-translation_of: Web/JavaScript/Reference/Operators/function
 ---
 
 {{jsSidebar("Operators")}}

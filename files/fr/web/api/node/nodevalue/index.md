@@ -1,11 +1,6 @@
 ---
 title: element.nodeValue
 slug: Web/API/Node/nodeValue
-tags:
-  - API
-  - DOM
-  - Noeuds
-  - Propriétés
 translation_of: Web/API/Node/nodeValue
 ---
 
@@ -88,4 +83,4 @@ Lorsque `nodeValue` est défini comme étant `null`, l'assignation n'a aucun eff
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Node.nodeValue")}}
+{{Compat}}

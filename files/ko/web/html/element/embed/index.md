@@ -1,15 +1,8 @@
 ---
 title: <embed>
 slug: Web/HTML/Element/embed
-tags:
-  - HTML
-  - HTML 포함된 컨텐츠
-  - HTML5
-  - 레퍼런스
-  - 요소
-  - 웹
-translation_of: Web/HTML/Element/embed
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<embed>` 요소**는 외부 어플리케이션이나 대화형 컨텐츠와의 통합점을 나타냅니다.
@@ -49,7 +42,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.embed")}}
+{{Compat}}
 
 ## 같이 보기
 

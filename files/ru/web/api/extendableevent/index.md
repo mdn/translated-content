@@ -18,7 +18,7 @@ translation_of: Web/API/ExtendableEvent
 
 {{APIRef("Service Workers API")}}
 
-The **`ExtendableEvent`** interface extends the lifetime of the [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install) and [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate) events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like {{domxref("FetchEvent")}}) are not dispatched until it upgrades database schemas and deletes the outdated cache entries.
+The **`ExtendableEvent`** interface extends the lifetime of the [`install`](/ru/docs/Web/API/ServiceWorkerGlobalScope/install) and [`activate`](/ru/docs/Web/API/ServiceWorkerGlobalScope/activate) events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like {{domxref("FetchEvent")}}) are not dispatched until it upgrades database schemas and deletes the outdated cache entries.
 
 If {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} is called outside of the `ExtendableEvent` handler, the browser should throw an `InvalidStateError`; note also that multiple calls will stack up, and the resulting promises will be added to the list of [extend lifetime promises](https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises).
 
@@ -44,7 +44,7 @@ _Doesn't implement any specific properties, but inherits properties from its par
 _Inherits methods from its parent,_ _{{domxref("Event")}}_.
 
 - {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : Extends the lifetime of the event. It is intended to be called in the [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install) {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate) {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.
+  - : Extends the lifetime of the event. It is intended to be called in the [`install`](/ru/docs/Web/API/ServiceWorkerGlobalScope/install) {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the [`activate`](/ru/docs/Web/API/ServiceWorkerGlobalScope/activate) {{event("Event_handlers", "event handler")}} for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.
 
 ## Examples
 
@@ -83,7 +83,7 @@ self.addEventListener('install', function(event) {
 });
 ```
 
-> **Примечание:** **Important**: When fetching resources, it's very important to use `{mode: 'no-cors'}` if there is any chance that the resources are served off of a server that doesn't support {{glossary("CORS")}}. In this example, [www.chromium.org](http://www.chromium.org) doesn't support CORS.
+> **Примечание:** When fetching resources, it's very important to use `{mode: 'no-cors'}` if there is any chance that the resources are served off of a server that doesn't support {{glossary("CORS")}}. In this example, [www.chromium.org](http://www.chromium.org) doesn't support CORS.
 
 ## Specifications
 

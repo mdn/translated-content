@@ -33,7 +33,7 @@ slug: Web/HTML/Element/ol
   </tr>
   <tr>
    <th scope="row">允许的 ARIA 角色</th>
-   <td>{{ARIARole("directory")}}, {{ARIARole("group")}}, {{ARIARole("listbox")}}, {{ARIARole("menu")}}, {{ARIARole("menubar")}}, {{ARIARole("none")}}, {{ARIARole("presentation")}}, {{ARIARole("radiogroup")}}, {{ARIARole("tablist")}}, {{ARIARole("toolbar")}}, {{ARIARole("tree")}}</td>
+   <td><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role"><code>listbox</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menu_role"><code>menu</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/menubar_role"><code>menubar</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/radiogroup_role"><code>radiogroup</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tablist_role"><code>tablist</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/toolbar_role"><code>toolbar</code></a>, <a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/tree_role"><code>tree</code></a></td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -46,24 +46,24 @@ slug: Web/HTML/Element/ol
 
 此元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("reversed")}}
+- `reversed`
   - : 此布尔值属性指定列表中的条目是否是倒序排列的，即编号是否应从高到低反向标注。
-- {{htmlattrdef("start")}}
+- `start`
   - : 一个整数值属性，指定了列表编号的起始值。此属性的值应为阿拉伯数字，尽管列表条目的编号类型 `type` 属性可能指定为了罗马数字编号等其他类型的编号。比如说，想要让元素的编号从英文字母 "d" 或者罗马数字 "iv" 开始，都应当使用 `start="4"`。
 
     > **备注：** 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。
-- {{htmlattrdef("type")}}
+- `type`
   - : 设置编号的类型：
 
     - `a` 表示小写英文字母编号
     - `A` 表示大写英文字母编号
     - `i` 表示小写罗马数字编号
     - `I` 表示大写罗马数字编号
-    - `1` 表示数字编号（默认）编号类型适用于整个列表，除非在 `<ol>` 元素的 {{HTMLElement("li")}} 元素中使用不同的 {{HTMLAttrxRef("type", "li")}} 属性。
+    - `1` 表示数字编号（默认）编号类型适用于整个列表，除非在 `<ol>` 元素的 {{HTMLElement("li")}} 元素中使用不同的 [`type`](/zh-CN/docs/Web/HTML/Element/li#type) 属性。
 
     > **备注：** 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。除非列表中序号很重要（比如，在法律或者技术文件中条目通常被需要所引用），否则请使用 CSS {{cssxref("list-style-type")}} 属性替代。
 
-## 使用备注
+## 使用说明
 
 通常，有序列表的条目会和它前面的编号[标记](/zh-CN/docs/Web/CSS/::marker)一起显示，编号标记可以是数字或者字母。
 
@@ -95,7 +95,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Simple_example", 400, 100)}}
+{{EmbedLiveSample("简单示例", 400, 100)}}
 
 ### 使用小写罗马数字编号
 
@@ -109,7 +109,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Using_Roman_Numeral_type", 400, 100)}}
+{{EmbedLiveSample("使用小写罗马数字编号", 400, 100)}}
 
 ### 使用 `start` 属性
 
@@ -125,7 +125,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Using_the_start_attribute", 400, 100)}}
+{{EmbedLiveSample("使用 start 属性", 400, 100)}}
 
 ### 嵌套列表
 
@@ -145,7 +145,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Nesting_lists", 400, 150)}}
+{{EmbedLiveSample("嵌套列表", 400, 150)}}
 
 ### 嵌套有序列表和无序列表
 
@@ -165,7 +165,7 @@ slug: Web/HTML/Element/ol
 
 以上 HTML 输出如下：
 
-{{EmbedLiveSample("Unordered_list_inside_ordered_list", 400, 150)}}
+{{EmbedLiveSample("嵌套有序列表和无序列表", 400, 150)}}
 
 ## 规范
 
@@ -182,5 +182,5 @@ slug: Web/HTML/Element/ol
 
   - the {{cssxref("list-style")}} 属性，有用的选择序数的显示方式，
   - [CSS 计数器](/zh-CN/docs/CSS_Counters), 用于处理复杂的嵌套列表，
-  - {{cssxref("line-height")}} 属性，可以模拟过时的 {{htmlattrxref("compact", "ol")}} 属性；
+  - {{cssxref("line-height")}} 属性，可以模拟过时的 [`compact`](/zh-CN/docs/Web/HTML/Element/ol#compact) 属性；
   - {{cssxref("margin")}} 属性，用来控制列表的缩进。

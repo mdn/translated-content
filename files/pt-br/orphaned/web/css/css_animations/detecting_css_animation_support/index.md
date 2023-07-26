@@ -1,15 +1,6 @@
 ---
 title: Detectando suporte a animação CSS
 slug: orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
-tags:
-  - Animações CSS
-  - Avançado
-  - CSS
-  - Guía
-  - JavaScript
-  - Lixo
-  - Referencia
-translation_of: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 original_slug: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 ---
 

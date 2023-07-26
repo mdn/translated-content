@@ -1,6 +1,6 @@
 ---
 title: Console.dir()
-slug: Web/API/Console/dir
+slug: Web/API/console/dir
 tags:
   - API
   - DOM

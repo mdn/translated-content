@@ -1,12 +1,6 @@
 ---
 title: Console.profile()
-slug: Web/API/Console/profile
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - Profils
-  - débogage
+slug: Web/API/console/profile
 translation_of: Web/API/Console/profile
 ---
 

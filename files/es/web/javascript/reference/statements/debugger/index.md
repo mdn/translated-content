@@ -1,10 +1,6 @@
 ---
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
-tags:
-  - JavaScript
-  - Sentencia
-translation_of: Web/JavaScript/Reference/Statements/debugger
 original_slug: Web/JavaScript/Referencia/Sentencias/debugger
 ---
 
@@ -40,7 +36,7 @@ Cuando el depurador es invocado, la ejecución se detiene en la sentencia debugg
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.statements.debugger")}}
+{{Compat}}
 
 ## Vea también
 

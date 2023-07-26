@@ -5,51 +5,53 @@ slug: Web/CSS/display-legacy
 
 {{CSSRef}}
 
-CSS 2 使用单个关键字来指定 display 的属性，对于相同布局模式的 block 级和 inline 级变体需要使用单独的关键字。本文详述这些关键字。
+CSS 2 为 `display` 属性使用单关键字的语法，对于相同布局模式的块级和行级变体要求使用各自的关键字。本文详述这些关键字。
 
 ## 语法
 
+有效的 `<display-legacy>` 值：
+
 - `inline-block`
 
-  - : 元素会产生一个块元素盒子，并且像内联盒子一样（表现得更像一个被替换的元素），可以融入到周围内容中。
+  - : 元素将生成块级元素盒，将被视为单个行级盒（表现为替换元素）与周围内容构成内容流。
 
     等同于 `inline flow-root`。
 
 - `inline-table`
 
-  - : 在 HTML 中， `inline-table` 没有直接对应关系。它表现为一个 HTML {{HTMLElement("table")}} 元素，但是又表现为一个不同于块级盒子的内联盒子。表盒子内部是一个块级上下文。
+  - : `inline-table` 在 HTML 中没有直接的对应关系。此值表现为 HTML {{HTMLElement("table")}} 元素，但是为行级盒而非块级盒。表格盒内部为块级上下文。
 
     等同于 `inline table`。
 
 - `inline-flex`
 
-  - : 元素表现为一个内联元素，并对内容采用弹性盒子模型进行布局。
+  - : 元素表现为行级元素，并按弹性盒模型对其内容进行布局。
 
     等同于 `inline flex`。
 
 - `inline-grid`
 
-  - : 元素表现为一个内联元素，并对内容采用网格模型进行布局。
+  - : 元素表现为行级元素，并按网格模型对其内容进行布局。
 
     等同于 `inline grid`。
 
-### 正式语法
+### 形式语法
 
 {{CSSSyntax}}
 
-## 例子
+## 示例
 
-在下面的例子中，我们使用 inline-flex 关键字（遗留关键字），创建一个 inline flex 的容器。
+在以下示例中，我们将用旧式关键字 inline-flex 创建行级弹性容器。
 
 ### HTML
 
 ```html
 <div class="container">
-  <div>Flex Item</div>
-  <div>Flex Item</div>
+  <div>弹性元素</div>
+  <div>弹性元素</div>
 </div>
 
-Not a flex item
+非弹性元素
 ```
 
 ### CSS
@@ -62,9 +64,9 @@ Not a flex item
 
 ### 结果
 
-{{EmbedLiveSample("Example", 300, 150)}}
+{{EmbedLiveSample("示例", 300, 150)}}
 
-新的语法中，使用两个关键字来创建 inline flex 容器，inline 用来指定外部显示类型，flex 用来指定内部显示类型。
+在新的语法中，将使用两个值创建行级弹性容器，inline 用于外侧显示类型，flex 用于内侧显示类型。
 
 ```css
 .container {

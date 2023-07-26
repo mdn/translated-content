@@ -1,12 +1,6 @@
 ---
 title: 단항 더하기 (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.unary_plus
 ---
 
 {{jsSidebar("Operators")}}

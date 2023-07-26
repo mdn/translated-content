@@ -1,12 +1,6 @@
 ---
 title: border-image
 slug: Web/CSS/border-image
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/border-image
 ---
 {{CSSRef}}
 
@@ -61,7 +55,7 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 
 이번 예제는 요소의 테두리에 마름모 패턴을 적용합니다. 테두리 이미지의 원본은 가로 81픽셀, 세로 81픽셀의 ".png" 파일로, 8개의 마름모가 사각형의 테두리를 이루고 있습니다.
 
-![an example borderimage](https://mdn.mozillademos.org/files/4127/border.png)
+![an example borderimage](border.png)
 
 #### HTML
 
@@ -82,7 +76,7 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
   padding: 10px;
 
   border-image:
-      url("https://mdn.mozillademos.org/files/4127/border.png")  /* 원본 이미지 */
+      url("border.png")  /* 원본 이미지 */
       27 /                    /* 슬라이스 */
       36px 28px 18px 8px /    /* 너비 */
       18px 14px 9px 4px       /* 거리 */

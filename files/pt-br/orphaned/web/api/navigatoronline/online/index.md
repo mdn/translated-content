@@ -1,15 +1,6 @@
 ---
 title: Navigator.onLine
 slug: orphaned/Web/API/NavigatorOnLine/onLine
-tags:
-  - API
-  - DOM Reference
-  - NavigatorOnLine
-  - Offline
-  - Online
-  - Propriedade
-  - Referencia
-translation_of: Web/API/NavigatorOnLine/onLine
 original_slug: Web/API/NavigatorOnLine/onLine
 ---
 

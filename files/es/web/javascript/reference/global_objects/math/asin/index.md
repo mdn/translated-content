@@ -50,9 +50,9 @@ For values less than -1 or greater than 1, `Math.asin()` returns {{jsxref("NaN")
 
 {{Specifications}}
 
-## Compatibilidad con Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.asin")}}
+{{Compat}}
 
 ## Ver Mas
 

@@ -1,12 +1,6 @@
 ---
 title: CSS 단위와 값
 slug: Web/CSS/CSS_Values_and_Units
-tags:
-  - CSS
-  - 값과 단위
-  - 안내서
-  - 참조
-translation_of: Web/CSS/CSS_Values_and_Units
 original_slug: Web/CSS/CSS_단위와_값
 ---
 
@@ -260,18 +254,9 @@ CSS는 치수를 사용해 아래와 같은 것들을 표시합니다:
 
 `rgba()`와 같은 몇몇 레거시 함수 표기법이 콤마를 사용하지만, 일반적으로 콤마는 목록에서 아이템을 구분하기 위해 사용됩니다. 콤마가 인자를 구분하기 위해 사용된 경우, 콤마 전후의 공백 문자는 선택 사항입니다.
 
-## 사양
+## 명세서
 
-| 사양                                 | 상태                             | 비고                                                                                                                                                                                                                                                                                                                          |
-| ------------------------------------ | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Values")}} | {{Spec2("CSS4 Values")}} | `vi`, `vb`, `ic`, `cap`, `lh`, `rlh` 단위 추가. `min()`, `max()`, `clamp()` 함수 표기법 추가 `toggle()` 추가                                                                                                                                                                                                                  |
-| {{SpecName("CSS3 Values")}} | {{Spec2("CSS3 Values")}} | `calc()`, `ch`, `rem`, `vw`, `vw`, `vmin`, `vmax`, `Q` 추가                                                                                                                                                                                                                                                                   |
-| {{SpecName("CSS4 Colors")}} | {{Spec2("CSS4 Colors")}} | `rgb()`, `rgba()`, `hsl()`, `hsla()` 함수에 콤마 없는 문법 추가. `rgb()`와 `hsl()`에 알파 값 허용하며 `rgba()`와 `hsla()`를 그것들의 (지원이 중단된) 별칭으로 전환. 색깔 키워드 `rebeccapurple` 추가. 4자리와 8자리의 16진수 색깔 값 추가, 마지막 숫자(들)이 알파 값을 의미함. `hwb()`, `device-cmyk()`, `color()` 함수 추가. |
-| {{SpecName("CSS3 Colors")}} | {{Spec2("CSS3 Colors")}} | system-colors를 지원 중단으로 표시. SVG 색깔 추가. `rgba()`, `hsl()`, `hsla()` 함수 추가.                                                                                                                                                                                                                                     |
-| {{SpecName("CSS4 Images")}} | {{Spec2("CSS4 Images")}} | `element()`, `image()`, `image-set()`, `conic-gradient()` 추가                                                                                                                                                                                                                                                                |
-| {{SpecName("CSS3 Images")}} | {{Spec2("CSS3 Images")}} | 이미지를 처음으로 정의함.                                                                                                                                                                                                                                                                                                     |
-| {{SpecName("CSS2.1")}}         | {{Spec2("CSS2.1")}}         |                                                                                                                                                                                                                                                                                                                               |
-| {{SpecName("CSS1")}}         | {{Spec2("CSS1")}}         | 첫번째 정의.                                                                                                                                                                                                                                                                                                                  |
+{{Specifications}}
 
 ## 같이 보기
 

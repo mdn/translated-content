@@ -1,16 +1,6 @@
 ---
 title: webRequest.onBeforeSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standardn
-  - Reference
-  - WebExtensions
-  - onBeforeSendHeaders
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
 ---
 
@@ -46,12 +36,12 @@ Le navigateur conserve la casse originale du nom de l'en-tête tel qu'il a été
 
 ```js
 browser.webRequest.onBeforeSendHeaders.addListener(
-  listener,             //  function
-  filter,               //  object
-  extraInfoSpec         //  optional array of strings
-)
-browser.webRequest.onBeforeSendHeaders.removeListener(listener)
-browser.webRequest.onBeforeSendHeaders.hasListener(listener)
+  listener, //  function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.webRequest.onBeforeSendHeaders.removeListener(listener);
+browser.webRequest.onBeforeSendHeaders.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -83,7 +73,7 @@ Les événements ont trois fonctions :
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
 
     - `"blocking"`: rendre la requête synchrone, ce qui vous permet de modifier les en-têtes de requête
-    - `"requestHeaders"`: inclure les en-têtes de requête dans l'objet `details`  transmis à l'auditeur
+    - `"requestHeaders"`: inclure les en-têtes de requête dans l'objet `details` transmis à l'auditeur
 
 ## Objets supplémentaires
 
@@ -142,9 +132,9 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onBeforeSendHeaders", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -161,7 +151,8 @@ var targetPage = "https://httpbin.org/*";
 /*
 Set UA string to Opera 12
 */
-var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+var ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 /*
 Rewrite the User-Agent header to "ua".
@@ -172,7 +163,7 @@ function rewriteUserAgentHeader(e) {
       header.value = ua;
     }
   }
-  return {requestHeaders: e.requestHeaders};
+  return { requestHeaders: e.requestHeaders };
 }
 
 /*
@@ -183,8 +174,8 @@ Make it "blocking" so we can modify the headers.
 */
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeader,
-  {urls: [targetPage]},
-  ["blocking", "requestHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "requestHeaders"],
 );
 ```
 
@@ -201,7 +192,8 @@ var targetPage = "https://httpbin.org/*";
 /*
 Set UA string to Opera 12
 */
-var ua = "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
+var ua =
+  "Opera/9.80 (X11; Linux i686; Ubuntu/14.10) Presto/2.12.388 Version/12.16";
 
 /*
 Rewrite the User-Agent header to "ua".
@@ -214,7 +206,7 @@ function rewriteUserAgentHeaderAsync(e) {
           header.value = ua;
         }
       }
-      resolve({requestHeaders: e.requestHeaders});
+      resolve({ requestHeaders: e.requestHeaders });
     }, 2000);
   });
 
@@ -229,8 +221,8 @@ Make it "blocking" so we can modify the headers.
 */
 browser.webRequest.onBeforeSendHeaders.addListener(
   rewriteUserAgentHeaderAsync,
-  {urls: [targetPage]},
-  ["blocking", "requestHeaders"]
+  { urls: [targetPage] },
+  ["blocking", "requestHeaders"],
 );
 ```
 

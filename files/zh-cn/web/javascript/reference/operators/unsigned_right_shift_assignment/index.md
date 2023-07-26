@@ -37,5 +37,5 @@ b >>>= 2;   // 1073741822 (00111111111111111111111111111110)
 
 ## 参见
 
-- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)
+- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)
 - [无符号右移位运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)

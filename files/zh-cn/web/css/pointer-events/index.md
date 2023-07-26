@@ -99,7 +99,7 @@ a[href="http://example.com"] {
 }
 ```
 
-{{EmbedLiveSample('Example_2', "500", "100")}}
+{{EmbedLiveSample('示例 2', "500", "100")}}
 
 ## 提示
 
@@ -115,11 +115,11 @@ a[href="http://example.com"] {
 
 Its extension to HTML elements, though present in early drafts of CSS Basic User Interface Module Level 3, has been pushed to its [level 4](http://wiki.csswg.org/spec/css4-ui#pointer-events).
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - The SVG attribute {{SVGAttr("pointer-events")}}
 - [WebKit Specs PointerEventsProperty](http://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content

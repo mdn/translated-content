@@ -1,16 +1,6 @@
 ---
 title: downloads.drag()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/drag
-tags:
-  - API
-  - Add-ons
-  - Drag
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/drag
 ---
 
@@ -22,8 +12,8 @@ La fonction **`drag()`** de l'API {{WebExtAPIRef("downloads")}} initie le glisse
 
 ```js
 chrome.downloads.drag(
-  downloadId // integer
-)
+  downloadId, // integer
+);
 ```
 
 Cette API est également disponible en tant que `browser.downloads.drag()`.
@@ -33,9 +23,9 @@ Cette API est également disponible en tant que `browser.downloads.drag()`.
 - `downloadId`
   - : Un `integer` représentant l'`id` du {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} ein question.
 
-## Browser compatibility
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.drag")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -1,11 +1,6 @@
 ---
 title: ':-moz-broken'
 slug: Web/CSS/:-moz-broken
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:-moz-broken
 ---
 
@@ -44,5 +39,5 @@ Ce sélecteur est principalement destiné à être utilisé par les développeur
 
 ## Voir aussi
 
-- {{bug("11011")}}
+- [bug Firefox 11011](https://bugzil.la/11011)
 - {{cssxref(":-moz-loading")}}, {{cssxref(":-moz-suppressed")}}, {{cssxref(":-moz-user-disabled")}}

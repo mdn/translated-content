@@ -1,13 +1,6 @@
 ---
 title: popstate
 slug: Web/API/Window/popstate_event
-tags:
-  - API
-  - Event
-  - History
-  - History API
-  - Reference
-translation_of: Web/API/Window/popstate_event
 ---
 
 {{APIRef}}
@@ -26,7 +19,7 @@ history.pushState() 또는 history.replaceState()는 popstate 이벤트를 발�
 
 ## 브라우저 호환성
 
-{{Compat("api.Window.popstate_event")}}
+{{Compat}}
 
 ## Example
 

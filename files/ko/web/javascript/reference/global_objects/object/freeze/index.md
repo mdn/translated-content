@@ -1,19 +1,6 @@
 ---
 title: Object.freeze()
 slug: Web/JavaScript/Reference/Global_Objects/Object/freeze
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - 동결
-  - 변경
-  - 변경가능성
-  - 불변
-  - 불변성
-  - 잠금
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 ---
 
 {{JSRef}}

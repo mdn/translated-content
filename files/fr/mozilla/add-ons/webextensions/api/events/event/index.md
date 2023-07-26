@@ -1,16 +1,6 @@
 ---
 title: events.Event
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - events
 translation_of: Mozilla/Add-ons/WebExtensions/API/events/Event
 ---
 
@@ -39,9 +29,9 @@ Les valeurs de ce type sont des objets.
 - {{WebExtAPIRef("events.Event.removeRules()")}}
   - : Annule l'inscription des règles actuellement enregistrées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.events.Event")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -1,16 +1,6 @@
 ---
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
-tags:
-  - API
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Method
-  - Reference
-  - WebRTC
-translation_of: Web/API/MediaDevices/getUserMedia
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -240,11 +230,11 @@ To use `getUserMedia()` in an installable app (for example, a [Firefox OS app](/
 
 See [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-capture) and [permission: video-capture](/en-US/Apps/Developing/App_permissions#video-capture) for more information.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

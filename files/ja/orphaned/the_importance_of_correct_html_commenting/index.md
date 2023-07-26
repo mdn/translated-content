@@ -63,8 +63,8 @@ XML におけるコメントの文法に書かれている通り、コメント�
 
 - [HTML 4.01 Recommendation: 3.2.4 - Comments](http://www.w3.org/TR/html4/intro/sgmltut.html#h-3.2.4)
 - [XML Recommendation: 2.5 - Comments](http://www.w3.org/TR/REC-xml#sec-comments)
-- {{bug(144432) }}
-- {{bug(102127) }}
+- [Firefox バグ 144432](https://bugzil.la/144432)
+- [Firefox バグ 102127](https://bugzil.la/102127)
 
 ### 原文書の情報
 

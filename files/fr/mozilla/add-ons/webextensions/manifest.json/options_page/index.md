@@ -1,14 +1,6 @@
 ---
 title: options_page
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_page
-tags:
-  - Add-ons
-  - Deprecated
-  - Extensions
-  - Manifest
-  - Options
-  - WebExtensions
-  - options_page
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/options_page
 ---
 
@@ -49,9 +41,9 @@ Contrairement aux pages d'options spécifiées à l'aide de la nouvelle clé `op
 "options_page": "options/options.html"
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.options_page")}}
+{{Compat}}
 
 ## Voir aussi
 

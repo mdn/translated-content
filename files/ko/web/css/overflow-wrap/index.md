@@ -1,12 +1,6 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-translation_of: Web/CSS/overflow-wrap
 ---
 {{CSSRef}}
 
@@ -88,11 +82,9 @@ p {
 
 {{ EmbedLiveSample('Example', '100%', 260) }}
 
-## 사양
+## 명세서
 
-| Specification                                                                                | Status                           | Comment            |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{ SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap') }} | {{ Spec2('CSS3 Text') }} | Initial definition |
+{{Specifications}}
 
 ## 브라우저 호환성
 

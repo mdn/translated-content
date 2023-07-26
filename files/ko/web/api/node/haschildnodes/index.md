@@ -1,12 +1,6 @@
 ---
 title: Node.hasChildNodes()
 slug: Web/API/Node/hasChildNodes
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-translation_of: Web/API/Node/hasChildNodes
 ---
 
 {{APIRef("DOM")}}

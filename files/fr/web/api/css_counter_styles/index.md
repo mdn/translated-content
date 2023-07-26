@@ -15,13 +15,11 @@ Le module CSS Styles de compteurs (<i lang="en">Counter Styles</i>) permet de d�
 
 ## Spécifications
 
-{{Specifications("api.CSSCounterStyleRule")}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Interface `CSSCounterStyleRule`
-
-{{Compat("api.CSSCounterStyleRule")}}
+{{Compat}}
 
 ## Voir aussi
 

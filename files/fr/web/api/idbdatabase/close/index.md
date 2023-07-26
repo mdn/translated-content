@@ -1,11 +1,6 @@
 ---
 title: IDBDatabase.close()
 slug: Web/API/IDBDatabase/close
-tags:
-  - API
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBDatabase/close
 ---
 
@@ -31,24 +26,24 @@ Aucune.
 
 ```js
 // ouverture de la connexion à la base de données toDoList
-  var DBOpenRequest = window.indexedDB.open("toDoList", 4);
+var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-  // deux gestionnaires d’événements effectuant les
-  // opérations après que l'ouverture se soit bien
-  // passée ou non.
-  DBOpenRequest.onerror = function(event) {
-    note.innerHTML += '<li>Erreur lors du chargement de la base.</li>';
-  };
+// deux gestionnaires d’événements effectuant les
+// opérations après que l'ouverture se soit bien
+// passée ou non.
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>Erreur lors du chargement de la base.</li>";
+};
 
-  DBOpenRequest.onsuccess = function(event) {
-    note.innerHTML += '<li>Base chargée.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Base chargée.</li>";
 
-    // affecte la connexion à la variable db
-    db = DBOpenRequest.result;
+  // affecte la connexion à la variable db
+  db = DBOpenRequest.result;
 
-    // fermeture de la base de donnée.
-    db.close();
-  }
+  // fermeture de la base de donnée.
+  db.close();
+};
 ```
 
 ## Spécifications
@@ -67,4 +62,4 @@ Aucune.
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

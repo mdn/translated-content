@@ -1,7 +1,6 @@
 ---
 title: Cooperative Scheduling of Background Tasks API
 slug: Web/API/Background_Tasks_API
-translation_of: Web/API/Background_Tasks_API
 ---
 {{DefaultAPISidebar("Background Tasks")}}
 
@@ -470,11 +469,11 @@ document.getElementById("startButton").addEventListener("click", decodeTechnoStu
 
 {{ EmbedLiveSample('Example', 600, 700) }}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

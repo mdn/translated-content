@@ -1,6 +1,8 @@
 ---
 title: 交差オブザーバー API
 slug: Web/API/Intersection_Observer_API
+l10n:
+  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}
@@ -27,13 +29,13 @@ slug: Web/API/Intersection_Observer_API
 交差オブザーバー API を使用すると、以下のいずれかの状況が発生したときに呼び出されるコールバックを構成することができます。
 
 - **ターゲット**要素が端末のビューポートまたは指定された要素と交差すること。この指定された要素は、交差オブザーバー API の用途では**ルート要素**または**ルート**と呼びます。
-- オブザーバーがターゲット要素を監視するよう最初に指示されたとき。
+- オブザーバーが対象要素を監視するよう最初に指示されたとき。
 
-通常、ターゲット要素の最も近いスクロール可能な祖先、またはターゲット要素がスクロール可能な要素の子孫でない場合は、端末のビューポートを基準にして交差の変化を監視したいと思うでしょう。端末のビューポートを基準にして交差を監視するには、 `root` オプションに `null` を指定します。交差オブザーバーのオプションについてのより詳しい説明は、このまま読み進めてください。
+通常、対象要素の最も近いスクロール可能な祖先、または対象要素がスクロール可能な要素の子孫でない場合は、端末のビューポートを基準にして交差の変化を監視したいと思うでしょう。端末のビューポートを基準にして交差を監視するには、 `root` オプションに `null` を指定します。交差オブザーバーのオプションについてのより詳しい説明は、このまま読み進めてください。
 
-ビューポートとその他の要素のどちらがルートとして使用されていても、 API は同じように動作し、ターゲット要素の表示状態が変わってルートとの間で交差の量の期待値を通るたびに、提供したコールバック関数が実行されます。
+ビューポートとその他の要素のどちらがルートとして使用されていても、 API は同じように動作し、対象要素の表示状態が変わってルートとの間で交差の量の期待値を通るたびに、提供したコールバック関数が実行されます。
 
-ターゲット要素とそのルート要素の交差する度合いが**交差率**です。これはターゲット要素のパーセント値を 0.0 から 1.0 の間の値で表現したものです。
+対象要素とそのルート要素の交差する度合いが**交差率**です。これは対象要素のパーセント値を 0.0 から 1.0 の間の値で表現したものです。
 
 ### 交差オブザーバーの作成
 
@@ -64,7 +66,7 @@ let observer = new IntersectionObserver(callback, options);
 
 #### 監視される要素をターゲットにする
 
-オブザーバーを作成した後は、監視するターゲット要素を与える必要があります。
+オブザーバーを作成した後は、監視する対象要素を与える必要があります。
 
 ```js
 let target = document.querySelector('#listItem');
@@ -78,7 +80,7 @@ observer.observe(target);
 
 ```js
 let callback = (entries, observer) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     // それぞれのエントリーは、観測された 1 つの対象要素の交差状態の変化を示している。
     //   entry.boundingClientRect
     //   entry.intersectionRatio
@@ -99,11 +101,11 @@ let callback = (entries, observer) => {
 
 ### 交差の計算方法
 
-交差オブザーバー API によって考慮される領域はすべて矩形です。不規則に整形された要素は、要素全体を囲む最小の矩形で占有しているとみなされます。同様に、要素の可視部分が矩形ではない場合、要素が交差する矩形は要素の可視部分全体を含む最小の矩形であると解釈されます。
+交差オブザーバー API によって考慮される領域はすべて矩形です。不規則に整形された要素は、要素全体を囲む最小の矩形で占有しているとみなされます。同様に、要素の可視部分が矩形ではない場合、要素が交差する矩形は要素の可視部分全体を含む最小の矩形であると見なされます。
 
 {{domxref("IntersectionObserverEntry")}} オブジェクトによって提供される様々なプロパティがどのように交差を表現しているかを知るともっと役に立つでしょう。
 
-#### 交差するルートとルートマージン
+#### ルートとルートマージンの交差
 
 ある要素とそのコンテナーとの交差を監視するまえに、まずはコンテナーを知る必要があります。ここでのコンテナーとは**交差ルート**または**ルート要素**です。これは監視される要素の親要素となる文書内の特定の要素になるか、文書のビューポートをコンテナーとして使用する際は `null` になるかいずれかになります。
 
@@ -113,13 +115,13 @@ let callback = (entries, observer) => {
 - 交差ルートのあふれた部分が切り取られていた場合、ルート交差矩形はルート要素のコンテンツ領域になります。
 - それ以外の場合は、ルート交差矩形は交差ルートのクライアント矩形（{{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} を呼び出して返されるもの）です。
 
-交差するルートとして使用される矩形は、**ルートマージン** `rootMargin` を {{domxref("IntersectionObserver")}} の作成時に設定することで調整することが可能です。 `rootMargin` の値は交差するルートの境界ボックスの各辺にオフセットを追加定義して、最終的な交差のルートの境界を作成します（コールバックが実行された際には {{domxref("IntersectionObserverEntry.rootBounds")}} で取得できるものです）。
+交差するルートとして使用される矩形は、**ルートマージン** `rootMargin` を {{domxref("IntersectionObserver")}} の作成時に設定することで調整することが可能です。 `rootMargin` の値は交差するルートの外接ボックスの各辺にオフセットを追加定義して、最終的な交差のルートの境界を作成します（コールバックが実行された際には {{domxref("IntersectionObserverEntry.rootBounds")}} で取得できるものです）。
 
 #### 閾値
 
-交差オブザーバー API は、ターゲット要素が見える量の微細な変化が発生するたびに知らせるのではなく、**閾値** (threshold) を使用します。オブザーバーを作成する際に、表示されるターゲット要素がどの程度見えているかの割合を表す 1 つ以上の数値を指定できます。API はこれらの閾値を超えて見えたかどうかの変更のみを知らせます。
+交差オブザーバー API は、対象要素が見える量の微細な変化が発生するたびに知らせるのではなく、**閾値** (threshold) を使用します。オブザーバーを作成する際に、表示される対象要素がどの程度見えているかの割合を表す 1 つ以上の数値を指定できます。API はこれらの閾値を超えて見えたかどうかの変更のみを知らせます。
 
-例えば、ターゲット要素が 25% 見える度に通知を受けたい場合は、オブザーバーを作成する際に \[0, 0.25, 0.5, 0.75, 1] という配列を閾値のリストとして指定します。
+例えば、対象要素が 25% 見える度に通知を受けたい場合は、オブザーバーを作成する際に \[0, 0.25, 0.5, 0.75, 1] という配列を閾値のリストとして指定します。
 
 コールバックが呼び出されると、 `IntersectionObserverEntry` オブジェクトのリストを受け取ります。これは、ルートと交差する度合いが変化し、露出量がいずれかの方向に閾値を越えた観測対象ごとに 1 つずつあります。
 
@@ -129,7 +131,7 @@ let callback = (entries, observer) => {
 
 閾値の仕組みを感じ取るには、下のボックスをスクロールして見てください。その中にある各色のボックスには四隅全てにパーセント値が表示されています。コンテナーをスクロールする時にこれらのパーセント値が変化することが分かります。各ボックスには異なる閾値が設定されています。
 
-- 最初のボックスは可視点の各パーセント値がセットされています。つまり{{domxref("IntersectionObserver.thresholds")}} の配列は `[0.00, 0.01, 0.02, ..., 0.99, 1.00]` となります。
+- 最初のボックスは可視点の各パーセント値がセットされています。つまり{{domxref("IntersectionObserver.thresholds")}} の配列は `[0.00, 0.01, 0.02, /*…,*/ 0.99, 1.00]` となります。
 - 2 つ目のボックスには単一の閾値が、 50% の位置にあります。
 - 3 つ目のボックスは可視率が 10% 毎の閾値があります (0%, 10%, 20%...)
 - 最後のボックスの閾値は 25% 毎です。
@@ -146,8 +148,7 @@ let callback = (entries, observer) => {
 
 <main>
   <div class="contents">
-    <div class="wrapper">
-    </div>
+    <div class="wrapper"></div>
   </div>
 </main>
 ```
@@ -256,7 +257,7 @@ startup = () => {
 
   for (let i=0; i<4; i++) {
     let template = document.querySelector("#boxTemplate").content.cloneNode(true);
-    let boxID = "box" + (i+1);
+    let boxID = `box${i + 1}`;
     template.querySelector(".sampleBox").id = boxID;
     wrapper.appendChild(document.importNode(template, true));
 
@@ -264,7 +265,7 @@ startup = () => {
 
     observerOptions.threshold = thresholdSets[i];
     observers[i] = new IntersectionObserver(intersectionCallback, observerOptions);
-    observers[i].observe(document.querySelector("#" + boxID));
+    observers[i].observe(document.querySelector(`#${boxID}`));
   }
 
   // 開始位置までスクロール
@@ -276,7 +277,7 @@ startup = () => {
 intersectionCallback = (entries) => {
   entries.forEach((entry) => {
     let box = entry.target;
-    let visiblePct = (Math.floor(entry.intersectionRatio * 100)) + "%";
+    let visiblePct = `${Math.floor(entry.intersectionRatio * 100)}%`;
 
     box.querySelector(".topLeft").innerHTML = visiblePct;
     box.querySelector(".topRight").innerHTML = visiblePct;
@@ -294,24 +295,24 @@ startup();
 
 ブラウザーは次のように最終的な交差矩形を計算します。これはすべて完了した後の状態が見えますが、交差がいつ発生するかを正確に把握するために、これらの手順を理解すると役立ちます。
 
-1. ターゲット要素の境界矩形（つまり、要素を構成するすべてのコンポーネントの境界ボックスを完全に囲む最小の矩形）は、ターゲットに対して {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} を呼び出すことによって取得されます。これは、交差する矩形の最大の大きさです。残りの手順では、交差しない部分を削除します。
+1. 対象要素の境界矩形（つまり、要素を構成するすべてのコンポーネントの外接ボックスを完全に囲む最小の矩形）は、ターゲットに対して {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} を呼び出すことによって取得されます。これは、交差する矩形の最大の大きさです。残りの手順では、交差しない部分を削除します。
 2. ターゲットの直接の親ブロックから始まり、外側に向かって移動し、それぞれの包含ブロックのクリッピングが（存在すれば）交差する長方形に適用されます。ブロックのクリッピングは、 2 つのブロックの交差と、 {{cssxref("overflow")}} プロパティで（存在すれば）指定されたクリッピングモードに基づいて決定されます。 `overflow` に `visible` 以外を設定すると、クリッピングが行われます。
-3. 包含する要素の1つがネストされた閲覧コンテキストのルートである場合 ({{HTMLElement("iframe")}} に含まれる文書など)、交差する矩形は含まれているコンテキストのビューポートで切り取られ、コンテナー群を通して上方に再帰的にコンテナーの包含ブロックを続けます。ですから、最上位の `<iframe>` に到達したら、交差矩形はフレームのビューポートに切り取られ、フレームの親要素が次のブロックとなり、交差ルートに向けて再帰が行われます。
+3. 包含する要素の1つがネストされた閲覧コンテキストのルートである場合（{{HTMLElement("iframe")}} に含まれる文書など）、交差する矩形は含まれているコンテキストのビューポートで切り取られ、コンテナー群を通して上方に再帰的にコンテナーの包含ブロックを続けます。ですから、最上位の `<iframe>` に到達したら、交差矩形はフレームのビューポートに切り取られ、フレームの親要素が次のブロックとなり、交差ルートに向けて再帰が行われます。
 4. 上方への再帰が交差ルートに達すると、結果の矩形が交差ルートの座標空間に対応付けられます。
 5. 結果の矩形はそれから[ルート交差矩形](#root-intersection-rectangle)と交差することで更新されます。
 6. この矩形は、最終的に、ターゲットの {{domxref("document")}} の座標空間に対応付けられます。
 
 ### 交差状態の変化のコールバック
 
-ターゲット要素がルート要素内で見えている範囲が可視量の閾値を通過したとき、 {{domxref("IntersectionObserver")}} オブジェクトのコールバックが実行されます。コールバックは、入力引数として交差したすべての閾値を示す `IntersectionObserverEntry` オブジェクトの配列を、また参照として `IntersectionObserver` オブジェクト自身を受け取ります。
+対象要素がルート要素内で見えている範囲が可視量の閾値を通過したとき、 {{domxref("IntersectionObserver")}} オブジェクトのコールバックが実行されます。コールバックは、入力引数として交差したすべての閾値を示す `IntersectionObserverEntry` オブジェクトの配列を、また参照として `IntersectionObserver` オブジェクト自身を受け取ります。
 
 閾値のリスト内のそれぞれの項目は、通過した閾値を説明する {{domxref("IntersectionObserverEntry")}} オブジェクトです。つまり、それぞれの項目は指定された要素がルート要素とどれだけ交差したのか、要素が交差したと言えるのかどうか、推移が発生した方向を示します。
 
 以下のコードスニペットでは、要素がルートと交差していない状態から 75% 以上交差する状態に遷移した回数をカウントするコールバックを示しています。しきい値 0.0 （既定値）の場合、コールバックは[およそ](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting) {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} の論理値が遷移した時に呼び出されます。このスニペットでは、まず遷移が正の値であることを確認し、次に {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} が 75% 以上かどうかを判断し、その場合はカウンターをインクリメントしています。
 
 ```js
-intersectionCallback(entries) => {
-  entries.forEach(entry => {
+const intersectionCallback = (entries) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       let elem = entry.target;
 
@@ -326,13 +327,13 @@ intersectionCallback(entries) => {
 ## インターフェイス
 
 - {{domxref("IntersectionObserver")}}
-  - : 交差オブザーバー API の主なインターフェイスです。同一の交差設定に対して任意の数のターゲット要素を監視するオブザーバーを作成し管理するためのメソッドを提供します。各オブザーバーは 1 つ以上のターゲット要素と共通の親要素、または最上位の {{domxref("Document")}} の{{Glossary('viewport', "ビューポート")}}との交差における変化を非同期的に監視することが出来ます。この親要素またはビューポートは**ルート**と呼ばれます。
+  - : 交差オブザーバー API の主なインターフェイスです。同一の交差設定に対して任意の数の対象要素を監視するオブザーバーを作成し管理するためのメソッドを提供します。各オブザーバーは 1 つ以上の対象要素と共通の親要素、または最上位の {{domxref("Document")}} の{{Glossary('viewport', "ビューポート")}}との交差における変化を非同期的に監視することが出来ます。この親要素またはビューポートは**ルート**と呼ばれます。
 - {{domxref("IntersectionObserverEntry")}}
-  - : スクロールにおける変化の特定の瞬間において、ターゲット要素とルートとなるコンテナーとの交差を表現します。この型のオブジェクトは、 `IntersectionObserver` コールバックへの入力、または {{domxref("IntersectionObserver.takeRecords()")}} の呼び出しの 2 通りの方法でのみ受け取ることができます。
+  - : スクロールにおける変化の特定の瞬間において、対象要素とルートとなるコンテナーとの交差を表現します。この型のオブジェクトは、 `IntersectionObserver` コールバックへの入力、または {{domxref("IntersectionObserver.takeRecords()")}} の呼び出しの 2 通りの方法でのみ受け取ることができます。
 
 ## 単純な例
 
-この単純な例では、ターゲット要素の色と透明度を要素の可視性で変化させます。[交差オブザーバー API を利用した時間の絡んだ要素の可視性](/ja/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)では、要素のセット（例えば広告など）がユーザーに表示される時間を測定し、統計を記録したり要素を更新したりしてその情報にユーザーどう反応したかを示す、より拡張性の高い具体例を見ることができるでしょう。
+この単純な例では、対象要素の色と透明度を要素の可視性で変化させます。[交差オブザーバー API による要素の表示時間設定](/ja/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)では、要素のセット（例えば広告など）がユーザーに表示される時間を測定し、統計を記録したり要素を更新したりしてその情報にユーザーどう反応したかを示す、より拡張性の高い具体例を見ることができるでしょう。
 
 ### HTML
 
@@ -340,9 +341,7 @@ intersectionCallback(entries) => {
 
 ```html
 <div id="box">
-  <div class="vertical">
-    Welcome to <strong>The Box!</strong>
-  </div>
+  <div class="vertical">Welcome to <strong>The Box!</strong></div>
 </div>
 ```
 
@@ -352,7 +351,7 @@ intersectionCallback(entries) => {
 
 ```css
 #box {
-  background-color: rgba(40, 40, 190, 255);
+  background-color: rgba(40, 40, 190, 1);
   border: 4px solid rgb(20, 20, 120);
   transition: background-color 1s, border 1s;
   width: 350px;
@@ -407,17 +406,17 @@ window.addEventListener("load", (event) => {
 - `numSteps`
   - : 可視率が 0.0 から 1.0 の間にどのくらいの数の閾値を設定するか示す定数です。
 - `prevRatio`
-  - : この変数は閾値を超えた最後の可視率を記録するために使用します。これはターゲット要素が大体見えるようになったかどうかを調べることが出来ます。
+  - : この変数は閾値を超えた最後の可視率を記録するために使用します。これは対象要素が大体見えるようになったかどうかを調べることが出来ます。
 - `increasingColor`
-  - : 可視率が増加している時にターゲット要素に適用する色を定義する文字列です。文字列の中の "比率" という単語はターゲット要素の現在の可視率に置き換えられ、要素が色を変化させるだけでなく不透明になるにつれて透明度が増していきます。
+  - : 可視率が増加している時に対象要素に適用する色を定義する文字列です。文字列の中の "比率" という単語は対象要素の現在の可視率に置き換えられ、要素が色を変化させるだけでなく不透明になるにつれて透明度が増していきます。
 - `decreasingColor`
   - : 同様に、可視率が減少していく時に適用する色を定義する文字列です。
 
-{{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} を呼び出して{{domxref("Window/load_event", "load")}} イベントの待ち受けを開始します。ページの読み込みが完了すると、{{domxref("Document.querySelector", "querySelector()")}} を使用して ID が `"box"` 要素への参照を取得し、 `createObserver()` メソッドを呼び出して交差オブザーバーの設定とインストール処理を開始します。
+{{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} を呼び出して {{domxref("Window/load_event", "load")}} イベントの待ち受けを開始します。ページの読み込みが完了すると、{{domxref("Document.querySelector", "querySelector()")}} を使用して ID が `"box"` 要素への参照を取得し、 `createObserver()` メソッドを呼び出して交差オブザーバーの設定とインストール処理を開始します。
 
 #### 交差オブザーバーの作成
 
-`createObserver()` メソッドは新しい交差オブザーバー ({{domxref("IntersectionObserver")}}) を作成し、ターゲット要素の監視を開始するためにページが完全に読み込まれてから呼び出されます。
+`createObserver()` メソッドは新しい交差オブザーバー ({{domxref("IntersectionObserver")}}) を作成し、対象要素の監視を開始するためにページが完全に読み込まれてから呼び出されます。
 
 ```js
 function createObserver() {
@@ -434,11 +433,11 @@ function createObserver() {
 }
 ```
 
-この関数ではオブザーバーの設定を含む `options` オブジェクトを設定することから始めます。文書のビューポートに対してターゲット要素がどのくらい見えているかという変化を監視したいので、 `root` は `null` にします。マージンは必要がないので、マージンオフセットである `rootMargin` 設定は "0px" と指定しています。これによって、オブザーバーは追加された（または差し引かれた）空間がなくてもターゲット要素の境界とビューポートの境界の交差点がどう変化するのか監視を開始することができます。
+この関数ではオブザーバーの設定を含む `options` オブジェクトを設定することから始めます。文書のビューポートに対して対象要素がどのくらい見えているかという変化を監視したいので、 `root` は `null` にします。マージンは必要がないので、マージンオフセットである `rootMargin` 設定は "0px" と指定しています。これによって、オブザーバーは追加された（または差し引かれた）空間がなくても対象要素の境界とビューポートの境界の交差点がどう変化するのか監視を開始することができます。
 
 可視率の閾値のリストである、 `threshold` は関数 `buildThresholdList()` によって構成されます。閾値のリストは、この例ではプログラムによって計算されています。その数が意図的に調整可能だからです。
 
-`options` が用意できたら、新しいオブザーバーを作成、つまり{{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} のコンストラクターを呼び出して、閾値をまたいだ際に呼ばれる関数 `handleIntersect()` を指定し、オプションを指定します。次に、返されたオブザーバーに対して {{domxref("IntersectionObserver.observe", "observe()")}} を呼び出し、必要なターゲット要素を渡します。
+`options` が用意できたら、新しいオブザーバーを作成、つまり{{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} のコンストラクターを呼び出して、閾値をまたいだ際に呼ばれる関数 `handleIntersect()` を指定し、オプションを指定します。次に、返されたオブザーバーに対して {{domxref("IntersectionObserver.observe", "observe()")}} を呼び出し、必要な対象要素を渡します。
 
 `observer.observe()` をそれぞれの要素に対して呼び出すことにより、ビューポートに対して交差し変化しているかを複数の要素から監視することが出来ます。
 
@@ -538,7 +537,7 @@ function buildThresholdList() {
 
 #### 交差の変換の処理
 
-ブラウザーはターゲット要素（この場合は `"box"` というIDを持つ要素です）が表示されているか、またはどのくらい見えているかという比率が、閾値のリストにある値の 1 つをまたぐことを検出して、`handleIntersect()` を呼び出します。
+ブラウザーは対象要素（この場合は `"box"` というIDを持つ要素です）が表示されているか、またはどのくらい見えているかという比率が、閾値のリストにある値の 1 つをまたぐことを検出して、`handleIntersect()` を呼び出します。
 
 ```js
 function handleIntersect(entries, observer) {
@@ -554,7 +553,7 @@ function handleIntersect(entries, observer) {
 }
 ```
 
-リストである `entries` 内にある {{domxref("IntersectionObserverEntry")}} について、entry の {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} が上昇しているかを調べます。上昇していればターゲットの {{cssxref("background-color")}} に `increasingColor` (`"rgba(40, 40, 190, ratio)"` だったことを思い出してください) の値をセットし、その際にその中にある "ratio" という文字列を entry が持つ `intersectionRatio` と置き換えます。その結果、色が変更されるだけでなく、ターゲット要素の透明度も変更されます。交差する比率が下がるに連れて、背景色のアルファ値が下がりより透明度の高い要素となります。
+リストである `entries` 内にある {{domxref("IntersectionObserverEntry")}} について、entry の {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} が上昇しているかを調べます。上昇していればターゲットの {{cssxref("background-color")}} に `increasingColor` (`"rgba(40, 40, 190, ratio)"` だったことを思い出してください) の値をセットし、その際にその中にある "ratio" という文字列を entry が持つ `intersectionRatio` と置き換えます。その結果、色が変更されるだけでなく、対象要素の透明度も変更されます。交差する比率が下がるに連れて、背景色のアルファ値が下がりより透明度の高い要素となります。
 
 同様に、 `intersectionRatio` が下がっている場合は `decreasingColor` を文字列として使用し "ratio" という文字列を `intersectionRatio` でもって置き換えたあとに、要素の `background-color` として適用します。
 
@@ -566,7 +565,7 @@ function handleIntersect(entries, observer) {
 
 {{EmbedLiveSample('A_simple_example', 400, 400)}}
 
-より応用的な例は[交差オブザーバー API を使用したタイミング要素の可視性](/ja/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)のセクションを見てください。
+より応用的な例は[交差オブザーバー API による要素の表示時間設定](/ja/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)のセクションを見てください。
 
 ## 仕様書
 
@@ -574,10 +573,10 @@ function handleIntersect(entries, observer) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## 関連情報
 
 - [交差オブザーバーのポリフィル](https://github.com/w3c/IntersectionObserver)
-- [交差オブザーバー API を使用したタイミング要素の可視性](/ja/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
-- {{domxref("IntersectionObserver")}} と {{domxref("IntersectionObserverEntry")}}
+- [交差オブザーバー API による要素の表示時間設定](/ja/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
+- {{domxref("IntersectionObserver")}} オヨビ {{domxref("IntersectionObserverEntry")}}

@@ -5,39 +5,33 @@ slug: Web/CSS/overflow-y
 
 {{CSSRef}}
 
-## 概述
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-y`** 设置了当内容溢出块级元素的上下两侧时所显示的内容。可以不显示，或者显示滚动条或溢出内容。
 
-当一个块级元素（div 元素、p 元素之类的）的内容在垂直方向发生溢出时，
+{{EmbedInteractiveExample("pages/css/overflow-y.html")}}
 
-[CSS](/zh-CN/docs/Web/CSS)属性 `overflow-y` 决定如何处理溢出的内容。
+## 语法
 
-隐藏溢出内容（hidden），或者显示滚动条（scroll），或者直接显示溢出内容（visible），或者让浏览器来处理（auto）。
+```css
+/* 关键词值 */
+overflow-y: visible;
+overflow-y: hidden;
+overflow-y: clip;
+overflow-y: scroll;
+overflow-y: auto;
 
-{{cssinfo}}
-
-## Syntax\[语法]
-
+/* 全局值 */
+overflow-y: inherit;
+overflow-y: initial;
+overflow-y: revert;
+overflow-y: revert-layer;
+overflow-y: unset;
 ```
-/* 在当前 css 选择器元素下，元素内容在垂直方向上溢出时 */
 
-/* overflow-y 属性 可选值 */
-
-overflow-y: visible; /*内容可见*/
-overflow-y: hidden; /*内容隐藏*/
-overflow-y: scroll; /*总是显示滚动条*/
-overflow-y: auto; /*浏览器决定*/
-
-
-/* overflow-y 属性 全局可选值 */
-
-overflow-y: inherit; /*继承*/
-overflow-y: initial; /*默认值*/
-overflow-y: unset; /*未设置*/
-```
+`overflow-y` 属性可指定为下列关键词之一。
 
 当 {{cssxref("overflow-x")}} 值为 `hidden`、`scroll` 或者 `auto`，而本属性的值为 `visible`（默认值）时，本属性会被隐式的计算为 `auto`。
 
-### Values\[可选值]
+### 取值
 
 - `visible`
   - : 内容不会被截断，且可以显示在内容盒之外。
@@ -50,23 +44,29 @@ overflow-y: unset; /*未设置*/
 - `auto`
   - : 取决于浏览器本身。当内容发生溢出时，桌面浏览器如 Firefox 会显示滚动条。
 
-### 正式语法
+## 形式定义
 
-{{csssyntax("overflow-y")}}
+{{CSSInfo}}
 
-## Example\[示例]
+## 形式语法
 
-### HTML
+{{CSSSyntax}}
+
+## 示例
+
+### 设置 overflow-y 行为
+
+#### HTML
 
 ```html
 <ul>
-  <li><code>overflow-y:scroll</code> — 总是显示滚动条
+  <li><code>overflow-y:hidden</code> — 在盒子外隐藏溢出的内容
   <div id="div1">
    歌词是诗歌的一种，入乐的叫歌，不入乐的叫诗（或词）。入乐的歌在感情抒发、形象塑造上和诗没有任何区别，但在结构上、节奏上要受音乐的制约，在韵律上要照顾演唱的方便，在遣词炼字上要考虑听觉艺术的特点，因为它要入乐歌唱。歌词与诗的分别，主要是诗不一定要入乐（合乐），歌词是要合乐的。合乐成为歌曲。歌词一般是配合曲子旋律一同出现的，歌词是歌曲的本意所在。现代一般是配合音乐，便于哼唱的语句。
   </div>
   </li>
 
-  <li><code>overflow-y:hidden</code> — 在盒子外隐藏溢出的内容
+  <li><code>overflow-y:scroll</code> — 总是显示滚动条
   <div id="div2">
   歌词是诗歌的一种，入乐的叫歌，不入乐的叫诗（或词）。入乐的歌在感情抒发、形象塑造上和诗没有任何区别，但在结构上、节奏上要受音乐的制约，在韵律上要照顾演唱的方便，在遣词炼字上要考虑听觉艺术的特点，因为它要入乐歌唱。歌词与诗的分别，主要是诗不一定要入乐（合乐），歌词是要合乐的。合乐成为歌曲。歌词一般是配合曲子旋律一同出现的，歌词是歌曲的本意所在。现代一般是配合音乐，便于哼唱的语句。
   </div>
@@ -87,31 +87,39 @@ overflow-y: unset; /*未设置*/
 </ul>
 ```
 
-### CSS
+#### CSS
 
 ```css
 #div1,
 #div2,
 #div3,
 #div4 {
-  border: 1px solid black; /*元素边框 1px 宽 黑边*/
-  width:  280px;
-  height: 120px;
+  border: 1px solid black;
+  width: 250px;
+  height: 100px;
 }
 
-
-#div1 { overflow-y: scroll; margin-bottom: 12px; }
-
-#div2 { overflow-y: hidden; margin-bottom: 12px;  }
-
-#div3 { overflow-y: visible; margin-bottom: 150px;  }
-
-#div4 { overflow-y: auto; margin-bottom: 12px;  }
+#div1 {
+  overflow-y: hidden;
+  margin-bottom: 12px;
+}
+#div2 {
+  overflow-y: scroll;
+  margin-bottom: 12px;
+}
+#div3 {
+  overflow-y: visible;
+  margin-bottom: 120px;
+}
+#div4 {
+  overflow-y: auto;
+  margin-bottom: 120px;
+}
 ```
 
-### 结果
+#### 结果
 
-{{EmbedLiveSample("Example", "100%", "760")}}
+{{EmbedLiveSample("设置_overflow-y_行为", "100%", "780")}}
 
 ## 规范
 
@@ -123,4 +131,4 @@ overflow-y: unset; /*未设置*/
 
 ## 参见
 
-- 相关 CSS 属性：{{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{Cssxref("overflow")}}, {{Cssxref("overflow-y")}}, {{Cssxref("clip")}}, {{Cssxref("display")}}
+- 相关 CSS 属性：{{CSSXref("text-overflow")}}、{{CSSXref("white-space")}}、{{CSSXref("overflow")}}、{{CSSXref("overflow-x")}}、{{CSSXref("clip")}}、{{CSSXref("display")}}

@@ -29,7 +29,7 @@ if (node.localName == "browser" &&
 
 Это не вычисленное значение, которое является результатом поиска имён на основе проверки декларации в области пространства имён. Пространство имён URI узла заморожена в момент создания узла.
 
-В Firefox 3.5 и выше, пространство имён URI для HTML-элементов в HTML документах это `null`. В более поздних версиях, в соответствии с HTML5, это [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) как в XHTML. {{gecko_minversion_inline("1.9.2")}}
+В Firefox 3.5 и выше, пространство имён URI для HTML-элементов в HTML документах это `null`. В более поздних версиях, в соответствии с HTML5, это [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) как в XHTML.
 
 Для узлов любого [nodeType](/ru/docs/DOM/Node.nodeType) кроме `ELEMENT_NODE` и `ATTRIBUTE_NODE` значение `namespaceURI` всегда `null`.
 

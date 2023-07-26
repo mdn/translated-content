@@ -1,11 +1,6 @@
 ---
 title: is
 slug: Web/HTML/Global_attributes/is
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/is
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -45,7 +40,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.is")}}
+{{Compat}}
 
 ## 같이 보기
 

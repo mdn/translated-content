@@ -45,7 +45,7 @@ if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWI
 }
 ```
 
-> **Примечание:** **Замечание:** _Из-за того, что результат, возвращаемый_ `compareDocumentPosition`, является битовой маской, [побитовый оператор и](/ru/docs/JavaScript/Reference/Operators/Bitwise_Operators) должен использоваться для осмысленных значений.
+> **Примечание:** _Из-за того, что результат, возвращаемый_ `compareDocumentPosition`, является битовой маской, [побитовый оператор и](/ru/docs/JavaScript/Reference/Operators/Bitwise_Operators) должен использоваться для осмысленных значений.
 
 ## Спецификации
 
@@ -56,5 +56,5 @@ if (head.compareDocumentPosition(document.body) & Node.DOCUMENT_POSITION_FOLLOWI
 
 ## Смотрите также
 
-- [`Node.contains`](/en-US/docs/DOM/Node.contains)
+- [`Node.contains`](/ru/docs/DOM/Node.contains)
 - [John Resig - Comparing Document Position](http://ejohn.org/blog/comparing-document-position/)

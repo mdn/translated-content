@@ -1,11 +1,6 @@
 ---
 title: IDBCursor.continue()
 slug: Web/API/IDBCursor/continue
-tags:
-  - API
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBCursor/continue
 ---
 
@@ -74,22 +69,23 @@ Dans ce petit morceau de code, on fait une transaction, on récupère un magasin
 
 ```js
 function afficheDonnee() {
-  var transaction = db.transaction(['granListAlbum'], "readonly");
-  var objectStore = transaction.objectStore('granListAlbum');
+  var transaction = db.transaction(["granListAlbum"], "readonly");
+  var objectStore = transaction.objectStore("granListAlbum");
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = function (event) {
     var curseur = event.target.result;
-    if(curseur) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = curseur.value.titreAlbum + ', ' + curseur.value.annee;
+    if (curseur) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML =
+        curseur.value.titreAlbum + ", " + curseur.value.annee;
       list.appendChild(listItem);
 
       curseur.continue();
     } else {
-      console.log('Entrées toutes affichés.');
+      console.log("Entrées toutes affichés.");
     }
   };
-};
+}
 ```
 
 ## Spécifications
@@ -108,4 +104,4 @@ function afficheDonnee() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

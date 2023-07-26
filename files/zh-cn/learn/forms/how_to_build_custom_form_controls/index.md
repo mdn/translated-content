@@ -1,24 +1,23 @@
 ---
-title: 如何构建表单小工具
+title: 如何构建自定义表单控件
 slug: Learn/Forms/How_to_build_custom_form_controls
-original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
+{{LearnSidebar}}
 
-在许多情况下，[可用的 HTML 表单小组件](/zh-CN/docs/HTML/Forms/The_native_form_widgets)_是不够的_。如果要在某些小部件（例如 {{HTMLElement("select")}}元素）上执行[高级样式](/zh-CN/docs/Advanced_styling_for_HTML_forms)，或者如果要提供自定义表现，则别无选择，只能构建自己的小部件。
+在许多情况下，可用的原生 HTML 表单控件是不够的。如果要在某些控件（例如 {{HTMLElement("select")}} 元素）上执行[高级样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)，或者如果要提供自定义表现，则别无选择，只能构建自己的控件。
 
-在本文中，我们会看到如何构建这样的组件。为此，我们将使用这样一个例子：重建 {{HTMLElement("select")}}元素。
+在本文中，我们会看到如何构建这样的组件。为此，我们将使用这样一个例子：重建 {{HTMLElement("select")}} 元素。
 
 > **备注：** 我们将专注于构建小部件，而不是怎样让代码更通用或可复用；那会涉及一些非基础的 JavaScript 代码和未知环境下的 DOM 操作，这超过了这篇文章的范围。
 
-## 设计，结构，和语义
+## 设计、结构和语义
 
 在构建一个自定义控件之前，首先你要确切的知道你要什么。这将为您节省宝贵的时间。特别地，清楚地定义控件的所有状态非常重要。为了做到这一点，从状态和行为表现都众所周知的现有小控件开始是很好的选择，这样你可以轻松的尽量模仿这些控件。
 
-在我们的示例中，我们将重建 HTML\<select>元素，这是我们希望实现的结果：
+在我们的示例中，我们将重建 {{HTMLElement("select")}} 元素，这是我们希望实现的结果：
 
-![The three states of a select box](/files/4481/custom-select.png)
+![选择框的三种状态](custom-select.png)
 
 上面图片显示了我们控件的三个主要状态：正常状态（左）; 活动状态（中）和打开状态（右）。
 
@@ -58,7 +57,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 另外一个有趣的例子是：当小部件处于打开状态时，用户按下键盘上方向键和下方向键将会发生什么？这个问题有些棘手，如果你认为活动状态和打开状态是完全不同的，那么答案就是“什么都不会发生”，因为我们没有定义任何在打开状态下键盘的交互行为。从另一个方面看，如果你认为活动状态和打开状态是有重叠的部分，那么控件的值可能会改变，但是被选中的选项肯定不会相应的进行突出显示，同样是因为我们没有定义在控件打开状态下的任何键盘交互事件（我们仅仅定义了控件打开会发生什么，而没有定义在其打开后会发生什么）
 
-在我们的例子中，缺失的规范是显而易见的，所以我们将着手处理他们，但是对于一些没有人想到去定义正确行为的小部件而言，这的确是一个问题。所以在设计阶段花费时间是值得的，因为如果你定义的行为不够好，或者忘记定义了一个行为，那么在用户开始实际使用时，将会很难去重新定义它们。如果你在定义时有疑问，请征询他人的意见，如果你有预算，请不要犹豫的去进行[用户可行性测试](https://en.wikipedia.org/wiki/Usability_testing)，这个过程被称为 UX design (User Experience *Design*用户体验设计）,如果你想要深入的学习相关的内容，请查阅下面这些有用资源：
+在我们的例子中，缺失的规范是显而易见的，所以我们将着手处理他们，但是对于一些没有人想到去定义正确行为的小部件而言，这的确是一个问题。所以在设计阶段花费时间是值得的，因为如果你定义的行为不够好，或者忘记定义了一个行为，那么在用户开始实际使用时，将会很难去重新定义它们。如果你在定义时有疑问，请征询他人的意见，如果你有预算，请不要犹豫的去进行[用户可用性测试](https://zh.wikipedia.org/wiki/可用性测试)，这个过程被称为用户体验设计（UX Design），如果你想要深入的学习相关的内容，请查阅下面这些有用资源：
 
 - [UXMatters.com](http://www.uxmatters.com/)
 - [UXDesign.com](http://uxdesign.com/)
@@ -68,14 +67,13 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 ### 定义语义化的 HTML 结构
 
-现在控件的基本功能已经决定了，可以开始构建自定义控件了。第一步是要确定 HTML 结构并给予一些基本的语义规则。第一步就是去确定它的 HTML 结构并给予一些基本的语义。重构{{HTMLElement("select")}}元素需要怎么做如下：
+现在控件的基本功能已经决定了，可以开始构建自定义控件了。第一步就是去确定它的 HTML 结构并给予一些基本的语义规则。重构 {{HTMLElement("select")}} 元素需要这样做：
 
 ```html
 <!-- 这是我们小部件的主要容器。
      tabindex 属性是用来让用户聚焦在小部件上的。
      稍后我们会发现最好通过 JavaScript 来设定它的值。-->
 <div class="select" tabindex="0">
-
   <!-- 这个容器用来显示组件现在的值 -->
   <span class="value">Cherry</span>
 
@@ -90,7 +88,6 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
     <li class="option">Strawberry</li>
     <li class="option">Apple</li>
   </ul>
-
 </div>
 ```
 
@@ -110,7 +107,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
   position: relative;
 
   /* 这将使我们的组件成为文本流的一部分，同时又可以调整大小 */
-  display : inline-block;
+  display: inline-block;
 }
 ```
 
@@ -135,9 +132,9 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 .select .optList {
   /* 这可以确保我们的选项列表将会显示在值的下面，并且会处在
      HTML 流之外*/
-  position : absolute;
-  top      : 100%;
-  left     : 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 ```
 
@@ -162,38 +159,38 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
      (用来确保用户在文本模式下使用浏览器缩放时组件的可缩放性).
      在大多数浏览器下的默认换算是 1em == 16px.
      如果你对 em 和 px 的转换感到疑惑，请参考 http://riddle.pl/emcalc/ */
-  font-size   : 0.625em; /* 这个（=10px）是以 em 方式表达的这个环境里的字体大小 */
-  font-family : Verdana, Arial, sans-serif;
+  font-size: 0.625em; /* 这个（=10px）是以 em 方式表达的这个环境里的字体大小 */
+  font-family: Verdana, Arial, sans-serif;
 
-  -moz-box-sizing : border-box;
-  box-sizing : border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   /* 我们需要为将要添加的向下箭头准备一些额外的空间 */
-  padding : .1em 2.5em .2em .5em; /* 1px 25px 2px 5px */
-  width   : 10em; /* 100px */
+  padding: 0.1em 2.5em 0.2em 0.5em; /* 1px 25px 2px 5px */
+  width: 10em; /* 100px */
 
-  border        : .2em solid #000; /* 2px */
-  border-radius : .4em; /* 4px */
-  box-shadow    : 0 .1em .2em rgba(0,0,0,.45); /* 0 1px 2px */
+  border: 0.2em solid #000; /* 2px */
+  border-radius: 0.4em; /* 4px */
+  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
 
   /* 第一段声明是为了不支持线性梯度填充的浏览器准备的。
      第二段声明是因为基于 WebKit 的浏览器没有预先定义它。
      如果你想为过时的浏览器提供支持，请参阅 http://www.colorzilla.com/gradient-editor/ */
-  background : #F0F0F0;
-  background : -webkit-linear-gradient(90deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
-  background : linear-gradient(0deg, #E3E3E3, #fcfcfc 50%, #f0f0f0);
+  background: #f0f0f0;
+  background: -webkit-linear-gradient(90deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
+  background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
 }
 
 .select .value {
   /* 因为值的宽度可能超过组件的宽度，我们需要确保他不会改变组件的宽度 */
-  display  : inline-block;
-  width    : 100%;
-  overflow : hidden;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
 
   vertical-align: top;
 
   /* 如果内容溢出了，最好有一个恰当的缩写。*/
-  white-space  : nowrap;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
 ```
@@ -202,25 +199,25 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 ```css
 .select:after {
-  content : "▼"; /* 我们使用了 unicode 编码的字符 U+25BC; 参阅 http://www.utf8-chartable.de */
+  content: "▼"; /* 我们使用了 unicode 编码的字符 U+25BC，确保设置了 charset meta 标签 */
   position: absolute;
-  z-index : 1; /* 这对于防止箭头覆盖选项列表很重要 */
-  top     : 0;
-  right   : 0;
+  z-index: 1; /* 这对于防止箭头覆盖选项列表很重要 */
+  top: 0;
+  right: 0;
 
-  -moz-box-sizing : border-box;
-  box-sizing : border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
-  height  : 100%;
-  width   : 2em;  /* 20px */
-  padding-top : .1em; /* 1px */
+  height: 100%;
+  width: 2em; /* 20px */
+  padding-top: 0.1em; /* 1px */
 
-  border-left  : .2em solid #000; /* 2px */
-  border-radius: 0 .1em .1em 0;  /* 0 1px 1px 0 */
+  border-left: 0.2em solid #000; /* 2px */
+  border-radius: 0 0.1em 0.1em 0; /* 0 1px 1px 0 */
 
-  background-color : #000;
-  color : #FFF;
-  text-align : center;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
 }
 ```
 
@@ -228,18 +225,18 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 ```css
 .select .optList {
-  z-index : 2; /* 我们明确的表示选项列表会始终与向下箭头重叠 */
+  z-index: 2; /* 我们明确的表示选项列表会始终与向下箭头重叠 */
 
   /* 这会重置 ul 元素的默认样式 */
   list-style: none;
-  margin : 0;
+  margin: 0;
   padding: 0;
 
-  -moz-box-sizing : border-box;
-  box-sizing : border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   /* 这会确保即使数值比组件小，选项列表仍能变得跟组件自身一样大*/
-  min-width : 100%;
+  min-width: 100%;
 
   /* 万一列表太长了，它的内容会从垂直方向溢出 (会自动添加一个竖向滚动条)
      但是水平方向不会 (因为我们没有设定宽度，列表会自适应宽度。如果不能的话，内容会被截断) */
@@ -247,11 +244,11 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
   overflow-y: auto;
   overflow-x: hidden;
 
-  border: .2em solid #000; /* 2px */
-  border-top-width : .1em; /* 1px */
-  border-radius: 0 0 .4em .4em; /* 0 0 4px 4px */
+  border: 0.2em solid #000; /* 2px */
+  border-top-width: 0.1em; /* 1px */
+  border-radius: 0 0 0.4em 0.4em; /* 0 0 4px 4px */
 
-  box-shadow: 0 .2em .4em rgba(0,0,0,.4); /* 0 2px 4px */
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4); /* 0 2px 4px */
   background: #f0f0f0;
 }
 ```
@@ -260,12 +257,12 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 ```css
 .select .option {
-  padding: .2em .3em; /* 2px 3px */
+  padding: 0.2em 0.3em; /* 2px 3px */
 }
 
 .select .highlight {
   background: #000;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 ```
 
@@ -274,28 +271,28 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">基本状态</th>
-      <th scope="col" style="text-align: center">活动状态</th>
-      <th scope="col" style="text-align: center">打开状态</th>
+      <th scope="col">基本状态</th>
+      <th scope="col">活动状态</th>
+      <th scope="col">打开状态</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Basic_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
+        {{EmbedLiveSample("基本状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Active_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
+        {{EmbedLiveSample("活动状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Open_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
+        {{EmbedLiveSample("展开状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
     </tr>
     <tr>
-      <td colspan="3" style="text-align: center">
+      <td colspan="3">
         <a
           href="/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets/Example_1"
-          >Check out the source code</a
+          >查看源代码</a
         >
       </td>
     </tr>
@@ -312,9 +309,9 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 ### 它为什么不生效？
 
-在我们开始之前，要记住一件和 JavaScript 有关的非常重要的事情：在浏览器中，**这是一种不可靠的技术。**当你构建一个自定义组件时，你会不得不得依赖于 JavaScript，因为这是将所有的东西联系在一起的线索。但是，很多情况下，JavaScript 不能在浏览器中运行。
+在我们开始之前，要记住一件和 JavaScript 有关的非常重要的事情：在浏览器中，**这是一种不可靠的技术**。当你构建一个自定义组件时，你会不得不得依赖于 JavaScript，因为这是将所有的东西联系在一起的线索。但是，很多情况下，JavaScript 不能在浏览器中运行。
 
-- 用户关掉了 JavaScript: 这是最不常见的情形。现在只有很少的人会关掉 JavaScript。
+- 用户关掉了 JavaScript：这是最不常见的情形。现在只有很少的人会关掉 JavaScript。
 - 脚本没有加载。这是最常见的情形，特别是在移动端上，在那些网络非常不可靠的地方。
 - 脚本是有问题的。你应该总是考虑这种可能性。
 - 脚本和第三方脚本冲突。这可能会由用户使用的跟踪脚本和一些书签工具引发。
@@ -349,7 +346,6 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
       </ul>
     </div>
   </form>
-
 </body>
 ```
 
@@ -362,10 +358,10 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
      - 要么我们将 body 的 class 设置为"widget"，隐藏真实的{{HTMLElement("select")}}元素
      - 或是我们没有改变 body 的 class，这样 body 的 class 还是"no-widget",
        因此 class 为"select"的元素需要被隐藏 */
-  position : absolute;
-  left     : -5000em;
-  height   : 0;
-  overflow : hidden;
+  position: absolute;
+  left: -5000em;
+  height: 0;
+  overflow: hidden;
 }
 ```
 
@@ -381,54 +377,40 @@ window.addEventListener("load", function () {
 <table>
   <thead>
     <tr>
-      <th scope="col" style="text-align: center">无 JS</th>
-      <th scope="col" style="text-align: center">有 JS</th>
+      <th scope="col">无 JS</th>
+      <th scope="col">有 JS</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("No_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
+        {{EmbedLiveSample("不使用 JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
       <td>
-        {{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
+        {{EmbedLiveSample("使用 JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
     </tr>
     <tr>
-      <td colspan="2" style="text-align: center">
+      <td colspan="2">
         <a
           href="/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2"
-          >Check out the source code</a
+          >查看源代码</a
         >
       </td>
     </tr>
   </tbody>
 </table>
 
-> **备注：** 如果你真的想让你的代码变得通用和可重用，最好不要做一个 class 选择器开关，而是通过添加一个组件 class 的方式来隐藏{{HTMLElement("select")}} 元素，并且动态地在每一个{{HTMLElement("select")}} 元素后面添加代表页面中自定义组件的 DOM 树。
+> **备注：** 如果你真的想让你的代码变得通用和可重用，最好不要做一个 class 选择器开关，而是通过添加一个组件 class 的方式来隐藏 {{HTMLElement("select")}} 元素，并且动态地在每一个 {{HTMLElement("select")}} 元素后面添加代表页面中自定义组件的 DOM 树。
 
 ### 让工作变得更简单
 
-在我们将要构建的代码之中，我们将会使用标准的 DOM API 来完成我们所要做的所有工作。尽管 DOM API 在浏览器中得到了更好支持，但是在旧的浏览器上还是会出现问题。( 特别是非常老的 Internet Explorer）。
-
-如果你想要避免旧浏览器带来的麻烦，这儿有两种解决方案：使用专门的框架，比如 [jQuery](http://jquery.com/), [$dom](https://github.com/julienw/dollardom), [prototype](http://prototypejs.org/), [Dojo](http://dojotoolkit.org/), [YUI](http://yuilibrary.com/), 或者类似的框架，或者通过填充你想使用的缺失的特性（这可以通过条件加载轻松完成——例如使用 [yepnope](http://yepnopejs.com/) 这样的库。
-
-我们打算使用的特性如下所示（按照风险程度从高到低排列）：
+在我们将要构建的代码之中，我们将会使用标准的 DOM API 和 JavaScript 来完成要做的所有工作。我们准备使用的特性如下所示：
 
 1. {{domxref("element.classList","classList")}}
-2. {{domxref("EventTarget.addEventListener","addEventListener")}}
-3. [`forEach`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array/forEach) (这不是 DOM 而是现代 JavaScript )
-4. {{domxref("element.querySelector","querySelector")}} 和 {{domxref("element.querySelectorAll","querySelectorAll")}}
-
-除了那些特定特性的的可用性以外，在开始之前，仍然存在一个问题。由函数{{domxref("element.querySelectorAll","querySelectorAll()")}} 返回的对象是一个{{domxref("NodeList")}} 而不是 [`Array`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array)。这一点非常重要，因为 `Array` 对象支持 [`forEach`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array/forEach) 函数，但是 {{domxref("NodeList")}} 不支持。由于 {{domxref("NodeList")}} 看起来实在是像一个 `Array` 并且因为 `forEach` 是这样的便于使用。我们可以轻易地添加对 {{domxref("NodeList")}}的支持，使我们的生活更轻松一些，像这样：
-
-```js
-NodeList.prototype.forEach = function (callback) {
-  Array.prototype.forEach.call(this, callback);
-}
-```
-
-我们没有开玩笑，这真的很容易实现。
+2. {{domxref("EventTarget.addEventListener","addEventListener()")}}
+3. {{domxref("NodeList.forEach()")}}
+4. {{domxref("element.querySelector","querySelector()")}} 和 {{domxref("element.querySelectorAll","querySelectorAll()")}}
 
 ### 构造事件回调
 
@@ -439,18 +421,17 @@ NodeList.prototype.forEach = function (callback) {
 // 它需要一个参数：
 // select :要停用的带有 'select' 类的节点
 function deactivateSelect(select) {
-
   // 如果组件没有运行，不用进行任何操作
-  if (!select.classList.contains('active')) return;
+  if (!select.classList.contains("active")) return;
 
   // 我们需要获取自定义组件的选项列表
-  var optList = select.querySelector('.optList');
+  var optList = select.querySelector(".optList");
 
   // 关闭选项列表
-  optList.classList.add('hidden');
+  optList.classList.add("hidden");
 
   // 然后停用组件本身
-  select.classList.remove('active');
+  select.classList.remove("active");
 }
 
 // 每当用户想要激活（或停用）这个组件的时候，会调用这个函数
@@ -458,9 +439,8 @@ function deactivateSelect(select) {
 // select : 要激活的带有'select'类的 DOM 节点
 // selectList : 包含所有带'select'类的 DOM 节点的列表
 function activeSelect(select, selectList) {
-
   // 如果组件已经激活了，不进行任何操作
-  if (select.classList.contains('active')) return;
+  if (select.classList.contains("active")) return;
 
   // 我们需要关闭所有自定义组件的活动状态
   // 因为 deactiveselect 函数满足 forEach 回调函数的所有请求，
@@ -468,19 +448,18 @@ function activeSelect(select, selectList) {
   selectList.forEach(deactivateSelect);
 
   // 然后我们激活特定的组件
-  select.classList.add('active');
+  select.classList.add("active");
 }
 
 // 每当用户想要打开/关闭选项列表的时候，会调用这个函数
 // 它需要一个参数：
 // select : 要触发的列表的 DOM 节点
 function toggleOptList(select) {
-
   // 该列表不包含在组件中
-  var optList = select.querySelector('.optList');
+  var optList = select.querySelector(".optList");
 
   // 我们改变列表的class去显示/隐藏它
-  optList.classList.toggle('hidden');
+  optList.classList.toggle("hidden");
 }
 
 // 每当我们要高亮一个选项的时候，会调用该函数
@@ -488,18 +467,17 @@ function toggleOptList(select) {
 // select : 带有'select'类的 DOM 节点，包含了需要高亮强调的选项
 // option : 需要高亮强调的带有'option'类的 DOM 节点
 function highlightOption(select, option) {
-
   // 为我们的自定义 select 元素获取所有有效选项的列表
-  var optionList = select.querySelectorAll('.option');
+  var optionList = select.querySelectorAll(".option");
 
   // 我们移除所有选项的高亮强调
   optionList.forEach(function (other) {
-    other.classList.remove('highlight');
+    other.classList.remove("highlight");
   });
 
   // 我们高亮强调正确的选项
-  option.classList.add('highlight');
-};
+  option.classList.add("highlight");
+}
 ```
 
 这是你需要用来处理组件不同状态的所有代码。
@@ -508,25 +486,24 @@ function highlightOption(select, option) {
 
 ```js
 // 我们处理文档加载时的事件绑定。
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener("load", function () {
+  var selectList = document.querySelectorAll(".select");
 
   // 每个自定义组件都需要初始化
   selectList.forEach(function (select) {
-
     // 它的'option'元素也需要
-    var optionList = select.querySelectorAll('.option');
+    var optionList = select.querySelectorAll(".option");
 
     // 每当用户的鼠标悬停在一个选项上时，我们高亮这个指定的选项
     optionList.forEach(function (option) {
-      option.addEventListener('mouseover', function () {
+      option.addEventListener("mouseover", function () {
         // 注意:'select'和'option'变量是我们函数调用范围内有效的闭包。
         highlightOption(select, option);
       });
     });
 
     // 每当用户点击一个自定义的 select 元素时
-    select.addEventListener('click', function (event) {
+    select.addEventListener("click", function (event) {
       // 注意:'select'变量是我们函数调用范围内有效的闭包。
 
       // 我们改变选项列表的可见性
@@ -535,7 +512,7 @@ window.addEventListener('load', function () {
 
     // 如果组件获得了焦点
     // 每当用户点击它或是用 tab 键访问这个组件时，组件获得焦点
-    select.addEventListener('focus', function (event) {
+    select.addEventListener("focus", function (event) {
       // 注意:'select'和'selectlist'变量是我们函数调用范围内有效的闭包。
 
       // 我们激活这个组件
@@ -543,7 +520,7 @@ window.addEventListener('load', function () {
     });
 
     // 如果组件失去焦点
-    select.addEventListener('blur', function (event) {
+    select.addEventListener("blur", function (event) {
       // 注意:'select'变量是我们函数调用范围内有效的闭包。
 
       // 我们关闭这个组件
@@ -555,28 +532,10 @@ window.addEventListener('load', function () {
 
 此时，我们的组件会根据我们的设计改变状态，但是它的值仍然没有更新。我们接下来会处理这件事。
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col" style="text-align: center">Live example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}}
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">
-        <a
-          href="/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3"
-          >Check out the source code</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+| 实时示例                                                                                               |
+| ------------------------------------------------------------------------------------------------------ |
+| {{EmbedLiveSample("改变状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}} |
+| [查看源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_3)                      |
 
 ### 处理组件的值
 
@@ -597,10 +556,10 @@ function updateValue(select, index) {
   var nativeWidget = select.previousElementSibling;
 
   // 我们也需要得到自定义组件的值占位符，
-  var value = select.querySelector('.value');
+  var value = select.querySelector(".value");
 
   // 还有整个选项列表。
-  var optionList = select.querySelectorAll('.option');
+  var optionList = select.querySelectorAll(".option");
 
   // 我们将被选择的索引设定为我们的选择的索引
   nativeWidget.selectedIndex = index;
@@ -610,7 +569,7 @@ function updateValue(select, index) {
 
   // 然后高亮我们自定义组件里对应的选项
   highlightOption(select, optionList[index]);
-};
+}
 
 // 这个函数返回原生组件里当前选定的索引
 // 它需要 1 个参数：
@@ -621,20 +580,20 @@ function getIndex(select) {
   var nativeWidget = select.previousElementSibling;
 
   return nativeWidget.selectedIndex;
-};
+}
 ```
 
 通过这两个函数，我们可以将原生组件绑定到自定义的组件上。
 
 ```js
 // 我们在文档加载时处理事件的绑定。
-window.addEventListener('load', function () {
-  var selectList = document.querySelectorAll('.select');
+window.addEventListener("load", function () {
+  var selectList = document.querySelectorAll(".select");
 
   // 每个自定义组件都需要初始化
   selectList.forEach(function (select) {
-    var optionList = select.querySelectorAll('.option'),
-        selectedIndex = getIndex(select);
+    var optionList = select.querySelectorAll(".option"),
+      selectedIndex = getIndex(select);
 
     // 使我们的自定义组件可以获得焦点
     select.tabIndex = 0;
@@ -647,21 +606,25 @@ window.addEventListener('load', function () {
 
     // 每当用户点击一个选项的时候，更新相应的值
     optionList.forEach(function (option, index) {
-      option.addEventListener('click', function (event) {
+      option.addEventListener("click", function (event) {
         updateValue(select, index);
       });
     });
 
     // 每当用户在获得焦点的组件上用键盘操作时，更新相应的值
-    select.addEventListener('keyup', function (event) {
+    select.addEventListener("keyup", function (event) {
       var length = optionList.length,
-          index  = getIndex(select);
+        index = getIndex(select);
 
       // 当用户点击向下箭头时，跳转到下一个选项
-      if (event.keyCode === 40 && index < length - 1) { index++; }
+      if (event.keyCode === 40 && index < length - 1) {
+        index++;
+      }
 
       // 当用户点击向上箭头时，跳转到上一个选项
-      if (event.keyCode === 38 && index > 0) { index--; }
+      if (event.keyCode === 38 && index > 0) {
+        index--;
+      }
 
       updateValue(select, index);
     });
@@ -669,32 +632,14 @@ window.addEventListener('load', function () {
 });
 ```
 
-在上面的代码里，值得注意的是 [`tabIndex`](/zh-CN/docs/Web/API/HTMLElement/tabIndex) 属性的使用。使用这个属性是很有必要的，这可以确保原生组件将永远不会获得焦点，而且还可以确保当用户用户使用键盘和鼠标时，我们的自定义组件能够获得焦点。
+在上面的代码里，值得注意的是 [`tabIndex`](/zh-CN/docs/Web/API/HTMLElement/tabIndex) 属性的使用。使用这个属性是很有必要的，这可以确保原生组件将永远不会获得焦点，而且还可以确保当用户使用键盘和鼠标时，我们的自定义组件能够获得焦点。
 
 做完上面这些后，我们就完成了！下面是结果：
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col" style="text-align: center">Live example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}}
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">
-        <a
-          href="/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4"
-          >Check out the source code</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+| 实时示例                                                                                               |
+| ------------------------------------------------------------------------------------------------------ |
+| {{EmbedLiveSample("改变状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}} |
+| [查看源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)                      |
 
 但是等等，我们真的做完了嘛？
 
@@ -702,7 +647,7 @@ window.addEventListener('load', function () {
 
 我们构建了一个能够生效的东西，尽管这离一个特性齐全的选择框还差得远，但是它效果不错。但是我们已经完成的事情只不过是摆弄 DOM。这个组件并没有真正的语义，即使它看起来像一个选择框，但是从浏览器的角度来看并不是，所以辅助技术并不能明白这是一个选择框。简单来说，这个全新的选择框并不具备无障碍！
 
-幸运的是，有一种解决方案叫做 [ARIA](/zh-CN/docs/Accessibility/ARIA)。ARIA 代表"无障碍富互联网应用"。这是一个专为我们现在做的事情设计的 [W3C 规范](http://www.w3.org/TR/wai-aria/)：使网络应用和自定义组件易于访问，它本质上是一组用来拓展 HTML 的属性集，以便我们能够更好的描述角色，状态和属性，就像我们刚才设计的元素是是它试图传递的原生元素一样。使用这些属性非常简单，所以让我们来试试看。
+幸运的是，有一种解决方案叫做 [ARIA](/zh-CN/docs/Web/Accessibility/ARIA)。ARIA 代表“无障碍富互联网应用”。这是一个专为我们现在做的事情设计的 [W3C 规范](https://www.w3.org/TR/wai-aria/)：使网络应用和自定义组件易于访问，它本质上是一组用来拓展 HTML 的属性集，以便我们能够更好的描述角色、状态和属性，就像我们刚才设计的元素是它试图传递的原生元素一样。使用这些属性非常简单，所以让我们来试试看。
 
 ### `role` 属性
 
@@ -739,47 +684,29 @@ window.addEventListener('load', function () {
 ```js
 function updateValue(select, index) {
   var nativeWidget = select.previousElementSibling;
-  var value = select.querySelector('.value');
-  var optionList = select.querySelectorAll('.option');
+  var value = select.querySelector(".value");
+  var optionList = select.querySelectorAll(".option");
 
   // 我们确保所有的选项都没有被选中
   optionList.forEach(function (other) {
-    other.setAttribute('aria-selected', 'false');
+    other.setAttribute("aria-selected", "false");
   });
 
   // 我们确保选定的选项被选中了
-  optionList[index].setAttribute('aria-selected', 'true');
+  optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
   value.innerHTML = optionList[index].innerHTML;
   highlightOption(select, optionList[index]);
-};
+}
 ```
 
-这是经过所有的改变之后的最终结果。 ( 藉由 [NVDA](http://www.nvda-project.org/) or [VoiceOver](http://www.apple.com/accessibility/voiceover/) 这样的辅助技术尝试它，你会对此有更好的体会)：
+这是经过所有的改变之后的最终结果。（藉由 [NVDA](https://www.nvaccess.org/) 或 [VoiceOver](https://www.apple.com/accessibility/vision/) 这样的辅助技术尝试它，你会对此有更好的体会)：
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col" style="text-align: center">在线示例</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}}
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align: center">
-        <a
-          href="/zh-CN/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5"
-          >Check out the final source code</a
-        >
-      </td>
-    </tr>
-  </tbody>
-</table>
+| 实时示例                                                                                               |
+| ------------------------------------------------------------------------------------------------------ |
+| {{EmbedLiveSample("改变状态",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}} |
+| [查看最终源代码](/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5)                  |
 
 ## 总结
 
@@ -787,25 +714,8 @@ function updateValue(select, index) {
 
 这儿有一些库，在你编写自己的之前应该了解一下：
 
-- [jQuery UI](http://jqueryui.com/)
+- [jQuery UI](https://jqueryui.com/)
+- [AXE accessible custom select dropdowns](https://www.webaxe.org/accessible-custom-select-dropdowns/)
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
-- [Nice Forms](http://www.emblematiq.com/lab/niceforms/)
-- [And many more…](https://www.google.fr/search?q=HTML+custom+form+controls&ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:fr:official&client=firefox-a)
 
 如果你想更进一步，本例中的代码需要一些改进，才能变得更加通用和可重用。这是一个你可以尝试去做的练习。这里有两个提示可以帮到你：我们所有函数的第一个参数是相同的，这意味着这些函数需要相同的上下文。构建一个对象来共享那些上下文是更聪明的做法。还有，你需要让它的特性适用性更好；也就是说，它要能在一系列对 Web 标准的兼容性不同的浏览器上工作良好。祝愉快！
-
-{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
-
-## 在本单元中
-
-- [Your first HTML form](/zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/zh-CN/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/zh-CN/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

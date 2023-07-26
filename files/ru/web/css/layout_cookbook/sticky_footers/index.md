@@ -7,7 +7,7 @@ translation_of: Web/CSS/Layout_cookbook/Sticky_footers
 
 Шаблон нижнего колонтитула - это шаблон, в котором нижний колонтитул вашей страницы «прилипает» к нижней части области просмотра в тех случаях, когда содержимое короче высоты области просмотра. Рассмотрим два способа, как этого достичь.
 
-![A sticky footer pushed to the bottom of a box](https://mdn.mozillademos.org/files/16184/cookbook-footer.png)
+![A sticky footer pushed to the bottom of a box](cookbook-footer.png)
 
 ## Requirements
 

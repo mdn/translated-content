@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Functions/Default_parameters
 
 {{jsSidebar("Functions")}}
 
-**函数默认参数**允许在没有值或`undefined`被传入时使用默认形参。
+**函数默认参数**允许在没有值或 `undefined` 被传入时使用默认形参。
 
 {{EmbedInteractiveExample("pages/js/functions-default.html")}}
 
@@ -19,11 +19,11 @@ function [name]([param1[ = defaultValue1 ][, ..., paramN[ = defaultValueN ]]]) {
 
 ## 描述
 
-JavaScript 中函数的参数默认是`{{jsxref("undefined")}}`。然而，在某些情况下可能需要设置一个不同的默认值。这是默认参数可以帮助的地方。
+JavaScript 中函数的参数默认是 {{jsxref("undefined")}}。然而，在某些情况下可能需要设置一个不同的默认值。这是默认参数可以帮助的地方。
 
-以前，一般设置默认参数的方法是在函数体测试参数是否为`undefined`，如果是的话就设置为默认的值。
+以前，一般设置默认参数的方法是在函数体测试参数是否为 `undefined`，如果是的话就设置为默认的值。
 
-下面的例子中，如果在调用`multiply`时，参数`b`的值没有提供，那么它的值就为`undefined`。如果直接执行`a * b`，函数会返回 `NaN`。
+下面的例子中，如果在调用 `multiply` 时，参数 `b` 的值没有提供，那么它的值就为 `undefined`。如果直接执行 `a * b`，函数会返回 `NaN`。
 
 ```js
 function multiply(a, b) {
@@ -163,7 +163,7 @@ withoutDefaults.call({value: '=^_^='});
 
 ### 函数嵌套定义
 
-在 Gecko 33 中引入。在函数体内的函数声明不能引用内部的默认参数，并且会在 SpiderMonkey 抛出一个{{jsxref("ReferenceError")}}（现在是 {{jsxref("TypeError")}}），参见 {{bug(1022967)}}。默认参数总是会被首先执行，而在函数体内部的函数声明会在之后生效。
+在 Gecko 33 中引入。在函数体内的函数声明不能引用内部的默认参数，并且会在 SpiderMonkey 抛出一个{{jsxref("ReferenceError")}}（现在是 {{jsxref("TypeError")}}），参见 [Firefox bug 1022967](https://bugzil.la/1022967)。默认参数总是会被首先执行，而在函数体内部的函数声明会在之后生效。
 
 ```js
 // Doesn't work! Throws ReferenceError.
@@ -174,7 +174,7 @@ function f(a = go()) {
 
 ### 位于默认参数之后非默认参数
 
-在 Gecko 26 之前，以下代码会造成{{jsxref("SyntaxError")}}错误。这已经在{{bug(1022967)}}中修复，并在以后的版本中按预期方式工作。参数仍然设置为从左到右，覆盖默认参数，即使后面的参数没有默认值。
+在 Gecko 26 之前，以下代码会造成{{jsxref("SyntaxError")}}错误。这已经在[Firefox bug 1022967](https://bugzil.la/1022967)中修复，并在以后的版本中按预期方式工作。参数仍然设置为从左到右，覆盖默认参数，即使后面的参数没有默认值。
 
 ```js
 function f(x = 1, y) {

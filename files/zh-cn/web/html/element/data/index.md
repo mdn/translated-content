@@ -38,7 +38,7 @@ slug: Web/HTML/Element/data
 
 该元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
-- {{htmlattrdef("value")}}
+- `value`
   - : 该属性指定元素内容所对应的数据，或者说“机器可读的翻译”。
 
 ## 示例

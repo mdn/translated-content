@@ -88,9 +88,9 @@ if (!Object.is) {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.is")}}
+{{Compat}}
 
 ## Ver también
 

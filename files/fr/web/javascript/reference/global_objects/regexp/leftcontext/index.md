@@ -1,14 +1,7 @@
 ---
 title: RegExp.leftContext ($`)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
-tags:
-  - JavaScript
-  - Non-standard
-  - Propriété
-  - Reference
-  - RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/leftContext
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/leftContext
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -45,7 +38,7 @@ Cette propriété n'est pas standard et ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.leftContext")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,16 +1,6 @@
 ---
 title: i18n.detectLanguage()
 slug: Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - detectLanguage
-  - i18n
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage
 ---
 
@@ -24,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var detectingLanguages = browser.i18n.detectLanguage(
-  text                  // string
-)
+  text, // string
+);
 ```
 
 ### Paramètres
@@ -48,9 +38,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
     - `percentage`
       - : `integer`. Le pourcentage de la chaîne d'entrée qui était dans la langue détectée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.i18n.detectLanguage")}}
+{{Compat}}
 
 ## Exemples
 
@@ -62,7 +52,7 @@ function onLanguageDetected(langInfo) {
   }
 }
 
-var text = "L'homme est né libre, et partout il est dans les fers."
+var text = "L'homme est né libre, et partout il est dans les fers.";
 
 var detecting = browser.i18n.detectLanguage(text);
 detecting.then(onLanguageDetected);

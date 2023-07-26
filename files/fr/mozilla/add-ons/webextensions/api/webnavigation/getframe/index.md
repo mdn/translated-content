@@ -1,16 +1,6 @@
 ---
 title: webNavigation.getFrame()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getFrame
-  - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame
 ---
 
@@ -24,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingFrame = browser.webNavigation.getFrame(
-  details                // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -54,9 +44,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se
 
 Si l'onglet ou l'ID de trame spécifié n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.getFrame")}}
+{{Compat}}
 
 ## Exemples
 
@@ -71,7 +61,7 @@ function onError(error) {
 
 var gettingFrame = browser.webNavigation.getFrame({
   tabId: 19,
-  frameId: 1537
+  frameId: 1537,
 });
 
 // Edge specific - processId is required not optional, must be integer not null

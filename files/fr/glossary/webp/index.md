@@ -1,14 +1,7 @@
 ---
 title: WebP
-slug: Glossary/webp
-tags:
-  - Composing
-  - Débutant
-  - Glossaire
-  - Infrastructure
-  - WebP
+slug: Glossary/WebP
 translation_of: Glossary/webp
-original_slug: Glossaire/webp
 ---
 
 **WebP** est un format d'image avec compression, avec ou sans perte, développé par Google.

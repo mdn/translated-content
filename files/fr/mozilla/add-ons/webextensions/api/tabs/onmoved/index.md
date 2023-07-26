@@ -1,16 +1,6 @@
 ---
 title: tabs.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onMoved
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onMoved
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onMoved
 ---
 
@@ -23,9 +13,9 @@ Un seul événement de déplacement est déclenché, représentant l'onglet que 
 ## Syntaxe
 
 ```js
-browser.tabs.onMoved.addListener(listener)
-browser.tabs.onMoved.removeListener(listener)
-browser.tabs.onMoved.hasListener(listener)
+browser.tabs.onMoved.addListener(listener);
+browser.tabs.onMoved.removeListener(listener);
+browser.tabs.onMoved.hasListener(listener);
 ```
 
 Les événements ont trois fonctions:
@@ -70,9 +60,14 @@ Les événements ont trois fonctions:
 
 ```js
 function handleMoved(tabId, moveInfo) {
-  console.log("Tab " + tabId +
-              " moved from " + moveInfo.fromIndex +
-              " to " + moveInfo.toIndex);
+  console.log(
+    "Tab " +
+      tabId +
+      " moved from " +
+      moveInfo.fromIndex +
+      " to " +
+      moveInfo.toIndex,
+  );
 }
 
 browser.tabs.onMoved.addListener(handleMoved);
@@ -80,9 +75,9 @@ browser.tabs.onMoved.addListener(handleMoved);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onMoved")}}
+{{Compat}}
 
 > **Note :**
 >

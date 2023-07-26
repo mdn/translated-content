@@ -1,11 +1,6 @@
 ---
 title: '<rb> : l''élément de base ruby'
 slug: Web/HTML/Element/rb
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Ruby
 translation_of: Web/HTML/Element/rb
 ---
 
@@ -34,6 +29,10 @@ Dans cet exemple, on fournit une annotation pour le caractère original correspo
 </ruby>
 ```
 
+### Résultat
+
+{{EmbedLiveSample('')}}
+
 On voit ici que deux éléments `<rb>` sont inclus et permettent de délimiter les deux segments du texte de base. Pour l'annotation, chaque partie correspondante est délimitée par un élément {{htmlelement("rt")}}.
 
 On aurait également pu écrire cet exemple avec les deux parties du texte de base complètement séparées. Dans ce cas, il n'aurait pas été nécessaire d'inclure les éléments `<rb>` :
@@ -44,6 +43,10 @@ On aurait également pu écrire cet exemple avec les deux parties du texte de ba
   字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample('')}}
 
 ### Avec prise en charge de ruby
 
@@ -57,9 +60,9 @@ body {
 }
 ```
 
-Voici le résultat obtenu :
+#### Résultat
 
-{{EmbedLiveSample("Avec_prise_en_charge_de_ruby", "100%", 60)}}
+{{EmbedLiveSample("", "100%", 60)}}
 
 Pour un navigateur qui ne prend pas en charge les annotations ruby, voici à quoi aurait ressemblé le résultat :
 
@@ -75,7 +78,9 @@ body {
 }
 ```
 
-{{EmbedLiveSample("Sans_prise_en_charge_de_ruby", "100%", 60)}}
+#### Résultat
+
+{{EmbedLiveSample("", "100%", 60)}}
 
 > **Note :** Voir l'article sur l'élément {{HTMLElement("ruby")}} pour de plus amples exemples.
 

@@ -53,7 +53,7 @@ bool = document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 - `delete`
   - : 删除选中部分。
 - `enableAbsolutePositionEditor`
-  - : 启用或禁用允许移动绝对定位元素的抓取器。Firefox 63 Beta/Dev Edition 默认禁用此功能 ({{bug(1449564)}})。
+  - : 启用或禁用允许移动绝对定位元素的抓取器。Firefox 63 Beta/Dev Edition 默认禁用此功能 ([Firefox bug 1449564](https://bugzil.la/1449564))。
 - `enableInlineTableEditing`
   - : 启用或禁用表格行和列插入和删除控件。(IE 浏览器不支持)
 - `enableObjectResizing`

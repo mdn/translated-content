@@ -1,14 +1,6 @@
 ---
 title: IndexedDB API
 slug: Web/API/IndexedDB_API
-tags:
-  - API
-  - Advanced
-  - Database
-  - IndexedDB
-  - Landing
-  - Reference
-  - Storage
 ---
 
 {{DefaultAPISidebar("IndexedDB")}}
@@ -77,7 +69,7 @@ IndexedDB 작업은 애플리케이션 블록을 방지하기 위해 모두 비�
 
 ## 예시
 
-- [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/)): 참조 문서의 예제에 대한 참조 응용 프로그램입니다.
+- [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)): 참조 문서의 예제에 대한 참조 응용 프로그램입니다.
 
 ## 명세
 

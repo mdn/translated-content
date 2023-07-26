@@ -1,16 +1,6 @@
 ---
 title: pageAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getTitle
-  - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/getTitle
 ---
 
@@ -24,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingTitle = browser.pageAction.getTitle(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -41,9 +31,9 @@ var gettingTitle = browser.pageAction.getTitle(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera accomplie avec une chaîne contenant le titre de l'action de la page.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction.getTitle")}}
+{{Compat}}
 
 ## Exemples
 
@@ -56,7 +46,7 @@ function gotTitle(title) {
 
 browser.pageAction.onClicked.addListener((tab) => {
   var gettingTitle = browser.pageAction.getTitle({
-    tabId: tab.id
+    tabId: tab.id,
   });
   gettingTitle.then(gotTitle);
 });

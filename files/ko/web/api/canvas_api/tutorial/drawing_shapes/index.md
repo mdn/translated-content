@@ -1,23 +1,16 @@
 ---
 title: 캔버스(canvas)를 이용한 도형 그리기
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-tags:
-  - Canvas
-  - 그래픽
-  - 중급
-  - 캔버스
-  - 튜토리얼
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/HTML/Canvas/Tutorial/Drawing_shapes
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 앞서 캔버스 환경 설정([canvas environment](/ko/docs/Web/API/Canvas_API/Tutorial/Basic_usage))을 완료 하였다면, 이제 어떻게 캔버스에 그릴수 있는지에 대하여 자세하게 알아봅시다. 이 글을 끝내고 난 후, 여러분은 어떻게 사각형, 삼각형, 선, 아치, 곡선 등 의 기본적인 도형을 그릴수 있는지 익히실 수 있을 것 입니다. 캔버스 위에 물체를 그릴 때에는 path를 사용하는것이 필수적이므로 우리는 이것이 어떻게 사용되는지 볼 것입니다.
 
 ## 그리드
 
-![](https://mdn.mozillademos.org/files/224/Canvas_default_grid.png)드로잉을 시작 하기에 앞서, 캔버스 그리드 혹은 좌표공간 (**coordinate space)** 에 대하여 이야기 해보겠습니다. 이전 페이지에서 이야기 했던 HTML 골격(skeleton)는 가로 세로 각각 150 픽셀의 캔버스 요소를 가지고 있습니다. 오른쪽에 보시면, 캔버스와 기본 그리드가 놓인것을 보실 수 있습니다. 기본적으로 그리드의 1단위는 캔버스의 1픽셀과 같습니다. 이 그리드의 원점은 좌측상단의 (0,0) 입니다. 모든 요소들은 이 원점을 기준으로 위치됩니다. 그렇기 때문에, 파란 사각형의 좌측상단은 왼쪽에서 x 픽셀, 위에서 y 픽셀 떨어진 것이라 볼 수 있고, 이 사각형의 좌표는 (x,y)가 됩니다. 이 튜토리얼 후반부에서 어떻게 원점을 이동하며, 그리드를 회전하고 같은 비율로 확대/축소할 수 있는지 살펴볼 것이지만, 지금은 기본에 충실하도록 합시다.
+![](canvas_default_grid.png)드로잉을 시작 하기에 앞서, 캔버스 그리드 혹은 좌표공간 (**coordinate space)** 에 대하여 이야기 해보겠습니다. 이전 페이지에서 이야기 했던 HTML 골격(skeleton)는 가로 세로 각각 150 픽셀의 캔버스 요소를 가지고 있습니다. 오른쪽에 보시면, 캔버스와 기본 그리드가 놓인것을 보실 수 있습니다. 기본적으로 그리드의 1단위는 캔버스의 1픽셀과 같습니다. 이 그리드의 원점은 좌측상단의 (0,0) 입니다. 모든 요소들은 이 원점을 기준으로 위치됩니다. 그렇기 때문에, 파란 사각형의 좌측상단은 왼쪽에서 x 픽셀, 위에서 y 픽셀 떨어진 것이라 볼 수 있고, 이 사각형의 좌표는 (x,y)가 됩니다. 이 튜토리얼 후반부에서 어떻게 원점을 이동하며, 그리드를 회전하고 같은 비율로 확대/축소할 수 있는지 살펴볼 것이지만, 지금은 기본에 충실하도록 합시다.
 
 ## 직사각형 그리기
 
@@ -61,7 +54,7 @@ function draw() {
 
 위 예제의 결과는 다음과 같습니다.
 
-{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "https://mdn.mozillademos.org/files/245/Canvas_rect.png")}}
+{{EmbedLiveSample("Rectangular_shape_example", 160, 160, "canvas_rect.png")}}
 
 `fillRect()` 함수는 가로 세로 100 픽셀 사이즈의 검정 사각형을 그립니다. 이후 `clearRect()` 함수가 60x60 픽셀의 사각형 크기로 도형 중앙을 지우게 되고, `strokeRect()`은 이 빈 사각형 공간 안에 50x50 픽셀 사이즈의 윤곽선만 있는 사각형을 만들게 됩니다.
 
@@ -129,7 +122,7 @@ function draw() {
 
 위 코드의 실행 결과는 다음과 같습니다:
 
-{{EmbedLiveSample("Drawing_a_triangle", 110, 110, "https://mdn.mozillademos.org/files/9847/triangle.png")}}
+{{EmbedLiveSample("Drawing_a_triangle", 110, 110, "triangle.png")}}
 
 ### 펜(pen) 이동하기
 
@@ -171,7 +164,7 @@ function draw() {
 
 결과는 다음과 같습니다:
 
-{{EmbedLiveSample("Moving_the_pen", 160, 160, "https://mdn.mozillademos.org/files/252/Canvas_smiley.png")}}
+{{EmbedLiveSample("Moving_the_pen", 160, 160, "canvas_smiley.png")}}
 
 `moveTo()`를 사용한 코드라인을 지우면 연결된 선들을 확인 할 수 있습니다
 
@@ -222,7 +215,7 @@ function draw() {
 
 새로운 경로를 지정하기 위해 `beginPath()` 메소드를 먼저 실행합니다. 그 다음 `moveTo()` 메소드를 가지고 시작점을 원하는 위치로 새롭게 지정 해 줍니다. 다음은, 두선을 그어 삼각형의 두 면을 그려줍니다.
 
-{{EmbedLiveSample("Lines", 160, 160, "https://mdn.mozillademos.org/files/238/Canvas_lineTo.png")}}
+{{EmbedLiveSample("Lines", 160, 160, "canvas_lineto.png")}}
 
 여러분은 채워진 삼각형과 윤곽선 삼각형의 차이를 확인 하셨을 겁니다. 위에 언급했던 것 처럼, 경로가 채워지게 되면 그 도형은 자동으로 닫히게 되지만 윤곽선 삼각형에서는 그렇지 않기 때문입니다. 만약에 `closePath()` 메소드를 윤곽선 삼각형 코드에서 지운다면, 오직 두 선만 그려지게 되며 완벽한 삼각형으로 만들어지지 않습니다.
 
@@ -286,7 +279,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Arcs", 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png")}}
+{{EmbedLiveSample("Arcs", 160, 210, "canvas_arc.png")}}
 
 ### 베지어(Bezier) 곡선과 이차(Quadratic )곡선
 
@@ -297,7 +290,7 @@ function draw() {
 - {{domxref("CanvasRenderingContext2D.bezierCurveTo", "bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)")}}
   - : (`cp1x`, `cp1y`) 및 (cp2x, cp2y)로 지정된 제어점을 사용하여 현재 펜 위치에서 `x` 및 `y`로 지정된 끝점까지 삼차 베지어 곡선을 그립니다.
 
-![](https://mdn.mozillademos.org/files/223/Canvas_curves.png)오른쪽의 사진은 두 곡선의 차이를 가장 잘 설명해주고 있습니다. 이차 베지에 곡선은 시작점과 끝점 (파란색 점) 그리고 하나의 **제어점** (control point, 빨간 점으로 표시)을 가지고 있지만, 삼차 베지에 곡선은 두개의 제어점을 사용하고 있습니다.
+![](canvas_curves.png)오른쪽의 사진은 두 곡선의 차이를 가장 잘 설명해주고 있습니다. 이차 베지에 곡선은 시작점과 끝점 (파란색 점) 그리고 하나의 **제어점** (control point, 빨간 점으로 표시)을 가지고 있지만, 삼차 베지에 곡선은 두개의 제어점을 사용하고 있습니다.
 
 두 메소드에 모두 사용되는 `x`와 `y` 변수는 모두 끝점의 좌표를 나타냅니다. 첫번째 제어점은 `cp1x` 와 `cp1y` 좌표로, 두번째 제어점은 `cp2x` 와 `cp2y` 좌표로 표시되었습니다.
 
@@ -337,7 +330,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "https://mdn.mozillademos.org/files/243/Canvas_quadratic.png")}}
+{{EmbedLiveSample("Quadratic_Bezier_curves", 160, 160, "canvas_quadratic.png")}}
 
 #### 삼차 베지어 곡선 (Cubic Bezier curves)
 
@@ -371,7 +364,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "https://mdn.mozillademos.org/files/207/Canvas_bezier.png")}}
+{{EmbedLiveSample("Cubic_Bezier_curves", 160, 160, "canvas_bezier.png")}}
 
 ### 직사각형
 
@@ -482,7 +475,7 @@ function roundedRect(ctx, x, y, width, height, radius) {
 
 결과 이미지는 다음과 같습니다:
 
-{{EmbedLiveSample("Making_combinations", 160, 160, "https://mdn.mozillademos.org/files/9849/combinations.png")}}
+{{EmbedLiveSample("Making_combinations", 160, 160, "combinations.png")}}
 
 이 예제는 보기보다 아주 간단하기 때문에 자세한 설명은 생략하겠습니다. 알아 두어야할 가장 중요한 부분은 `fillStyle` 코드와 사용된 유틸리티 함수 (`roundedRect()` 부분) 입니다. 유틸리티 함수를 사용하게 되면, 사용해야 할 코드의 양과 복잡함을 줄여주는데 도움을 줍니다.
 
@@ -541,7 +534,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Path2D_example", 130, 110, "https://mdn.mozillademos.org/files/9851/path2d.png")}}
+{{EmbedLiveSample("Path2D_example", 130, 110, "path2d.png")}}
 
 ### SVG paths 사용하기
 

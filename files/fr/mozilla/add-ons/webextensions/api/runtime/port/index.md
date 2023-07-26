@@ -1,16 +1,6 @@
 ---
 title: runtime.Port
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/Port
-tags:
-  - API
-  - Add-ons
-  - Extensionns
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - port
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/Port
 ---
 
@@ -30,12 +20,12 @@ Vous pouvez utiliser ce modèle pour communiquer entre:
 
 Vous devez utiliser différentes API de connexion pour différents types de connexions, comme indiqué dans le tableau ci-dessous.
 
-| type de connection                         | Lancer une tentative de connexion                        | Gérer la tentative de connexion                                                             |
-| ------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Script d'arrière-plan au script de contenu | {{WebExtAPIRef("tabs.connect()")}}             | {{WebExtAPIRef("runtime.onConnect")}}                                            |
-| Script de contenu au script d'arrière-plan | {{WebExtAPIRef("runtime.connect()")}}         | {{WebExtAPIRef("runtime.onConnect")}}                                            |
+| type de connection                         | Lancer une tentative de connexion           | Gérer la tentative de connexion                                                             |
+| ------------------------------------------ | ------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Script d'arrière-plan au script de contenu | {{WebExtAPIRef("tabs.connect()")}}          | {{WebExtAPIRef("runtime.onConnect")}}                                                       |
+| Script de contenu au script d'arrière-plan | {{WebExtAPIRef("runtime.connect()")}}       | {{WebExtAPIRef("runtime.onConnect")}}                                                       |
 | Extension à l'application native           | {{WebExtAPIRef("runtime.connectNative()")}} | N'est pas applicable (voir [Native messaging](/fr/Add-ons/WebExtensions/Native_messaging)). |
-| Extension à l'extension                    | {{WebExtAPIRef("runtime.connect()")}}         | {{WebExtAPIRef("runtime.onConnectExternal")}}                                |
+| Extension à l'extension                    | {{WebExtAPIRef("runtime.connect()")}}       | {{WebExtAPIRef("runtime.onConnectExternal")}}                                               |
 
 ## Type
 
@@ -68,9 +58,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `sender`{{optional_inline}}
   - : {{WebExtAPIRef('runtime.MessageSender')}}. Contient des informations sur l'expéditeur du message. ette propriété ne sera présente que sur les ports transmis aux écouteurs `onConnect`/`onConnectExternal`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.Port")}}
+{{Compat}}
 
 ## Exemples
 
@@ -85,16 +75,16 @@ This content script:
 ```js
 // content-script.js
 
-var myPort = browser.runtime.connect({name:"port-from-cs"});
-myPort.postMessage({greeting: "hello from content script"});
+var myPort = browser.runtime.connect({ name: "port-from-cs" });
+myPort.postMessage({ greeting: "hello from content script" });
 
-myPort.onMessage.addListener(function(m) {
+myPort.onMessage.addListener(function (m) {
   console.log("In content script, received message from background script: ");
   console.log(m.greeting);
 });
 
-document.body.addEventListener("click", function() {
-  myPort.postMessage({greeting: "they clicked the page!"});
+document.body.addEventListener("click", function () {
+  myPort.postMessage({ greeting: "they clicked the page!" });
 });
 ```
 
@@ -116,17 +106,17 @@ var portFromCS;
 
 function connected(p) {
   portFromCS = p;
-  portFromCS.postMessage({greeting: "hi there content script!"});
-  portFromCS.onMessage.addListener(function(m) {
-    console.log("In background script, received message from content script")
+  portFromCS.postMessage({ greeting: "hi there content script!" });
+  portFromCS.onMessage.addListener(function (m) {
+    console.log("In background script, received message from content script");
     console.log(m.greeting);
   });
 }
 
 browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
-  portFromCS.postMessage({greeting: "they clicked the button!"});
+browser.browserAction.onClicked.addListener(function () {
+  portFromCS.postMessage({ greeting: "they clicked the button!" });
 });
 ```
 
@@ -137,19 +127,19 @@ Si plusieurs scripts de contenu communiquent en même temps, vous voudrez peut-�
 ```js
 // background-script.js
 
-var ports = []
+var ports = [];
 
 function connected(p) {
-  ports[p.sender.tab.id]    = p
+  ports[p.sender.tab.id] = p;
   //...
 }
 
-browser.runtime.onConnect.addListener(connected)
+browser.runtime.onConnect.addListener(connected);
 
-browser.browserAction.onClicked.addListener(function() {
-  ports.forEach(p => {
-        p.postMessage({greeting: "they clicked the button!"})
-    })
+browser.browserAction.onClicked.addListener(function () {
+  ports.forEach((p) => {
+    p.postMessage({ greeting: "they clicked the button!" });
+  });
 });
 ```
 

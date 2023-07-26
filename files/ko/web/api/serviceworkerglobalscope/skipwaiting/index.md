@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerGlobalScope.skipWaiting()
 slug: Web/API/ServiceWorkerGlobalScope/skipWaiting
-translation_of: Web/API/ServiceWorkerGlobalScope/skipWaiting
 ---
 {{APIRef("Service Workers API")}}
 
@@ -37,11 +36,11 @@ self.addEventListener('install', function(event) {
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

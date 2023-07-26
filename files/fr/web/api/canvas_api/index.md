@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API
 translation_of: Web/API/Canvas_API
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 Ajouté en [HTML5](/fr/docs/Web/Guide/HTML/HTML5), l'élément {{HTMLElement("canvas")}} est un nouvel élément qui peut être utilisé pour dessiner des graphismes via des scripts [JavaScript](/fr/docs/JavaScript). Par exemple, Il peut être utilisé pour dessiner des graphes, faire des compositions de photos, des animations, ou même faire du traitement ou de l'affichage de vidéos en temps réel.
 
@@ -25,10 +25,10 @@ Voilà un simple extrait de code qui utilise la méthode {{domxref("CanvasRender
 ### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 ```
 
@@ -44,15 +44,16 @@ ctx.fillRect(10, 10, 100, 100);
 </div>
 <textarea id="code" class="playable-code">
 ctx.fillStyle = 'green';
-ctx.fillRect(10, 10, 100, 100);</textarea>
+ctx.fillRect(10, 10, 100, 100);</textarea
+>
 ```
 
 ```js hidden
-var canvas = document.getElementById('canvas');
+var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var edit = document.getElementById('edit');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var edit = document.getElementById("edit");
 var code = textarea.value;
 
 function drawCanvas() {
@@ -60,17 +61,17 @@ function drawCanvas() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawCanvas();
 });
 
-edit.addEventListener('click', function() {
+edit.addEventListener("click", function () {
   textarea.focus();
-})
+});
 
-textarea.addEventListener('input', drawCanvas);
-window.addEventListener('load', drawCanvas);
+textarea.addEventListener("input", drawCanvas);
+window.addEventListener("load", drawCanvas);
 ```
 
 {{ EmbedLiveSample('Code_jouable', 700, 360) }}
@@ -100,7 +101,7 @@ Les interfaces liées au `WebGLRenderingContext` sont référencées sous [WebGL
 - [Extraits de code : Canvas](/fr/docs/Extraits_de_code/Canvas)
   - : Quelques extraits de code orientés vers les développeurs d'extension qui utilisent `<canvas>`.
 - [Demo: Un raycaster basique avec canvas](/fr/docs/Un_raycaster_basique_avec_canvas)
-  - : Une demonstration d'animation utilisant le ray-tracing dans un élément canvas.
+  - : Une démonstration d'animation utilisant le ray-tracing dans un élément canvas.
 - [Dessiner des objets DOM dans un élément canvas](/fr/docs/Web/HTML/Canvas/Dessiner_des_objets_DOM_dans_un_element_canvas)
   - : Comment dessiner un contenu DOM, tel que des éléments HTML, dans un canvas.
 - [Manipulation vidéo avec la balise canvas](/fr/docs/HTML/Manipulating_video_using_canvas)
@@ -120,13 +121,13 @@ Les interfaces liées au `WebGLRenderingContext` sont référencées sous [WebGL
 - [Paper.js](http://paperjs.org/) est une bibliothèque open-source qui rajoute un système de dessin vectoriel au canvas HTML5.
 - [Origami.js](http://origamijs.com/docs/) est une bibliothèque légère open-source pour canvas.
 - [libCanvas](http://libcanvas.github.com/) est un framework canvas puissant et léger.
-- [Processing.js](http://processingjs.org) est un portage du langage de visuaisation Processing.
+- [Processing.js](http://processingjs.org) est un portage du langage de visualisation Processing.
 - [PlayCanvas](https://playcanvas.com/) est un moteur de jeu open-source.
 - [Pixi.js](http://www.pixijs.com/) est un moteur de jeu open-source.
 - [PlotKit](http://www.liquidx.net/plotkit/) est une bibliothèque permettant de réaliser des diagrammes et des graphiques.
 - [Rekapi](https://github.com/jeremyckahn/rekapi) est une API d'animation par key-framing pour Canvas.
 - [PhiloGL](http://senchalabs.github.com/philogl/) est un framework WebGL pour la visualisation de données, pour la programmation créative et pour le developpement de jeux.
-- [JavaScript InfoVis Toolkit](http://thejit.org/) crée des visualisation de données interactives en 2D avec canvas pour le Web.
+- [JavaScript InfoVis Toolkit](http://thejit.org/) crée des visualisations de données interactives en 2D avec canvas pour le Web.
 - [EaselJS](http://www.createjs.com/easeljs) est une bibliothèque gratuite/open-source qui facilite l'utilisation de canvas pour faire des jeux ou de l'art
 - [Scrawl-canvas](http://scrawl.rikweb.org.uk/) est une autre bibliothèque open-source pour créer et manipuler des éléments 2D dans canvas
 - [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) est une bibliothèque open-source pour créer des cartes thermiques basées sur canvas

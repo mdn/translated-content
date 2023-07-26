@@ -28,13 +28,13 @@ _Наследует свойства от своего родителя, {{domxr
 - {{domxref("HTMLLinkElement.media")}}
   - : Is a {{domxref("DOMString")}} representing a list of one or more media formats to which the resource applies.
 - {{domxref("HTMLLinkElement.referrerPolicy")}} {{experimental_inline}}
-  - : Is a {{domxref("DOMString")}} that reflects the {{htmlattrxref("referrerpolicy", "link")}} HTML attribute indicating which referrer to use.
+  - : Is a {{domxref("DOMString")}} that reflects the [`referrerpolicy`](/ru/docs/Web/HTML/Element/link#referrerpolicy) HTML attribute indicating which referrer to use.
 - {{domxref("HTMLLinkElement.rel")}}
   - : Is a {{domxref("DOMString")}} representing the forward relationship of the linked resource from the document to the resource.
 - {{domxref("HTMLLinkElement.relList")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMTokenList")}} that reflects the {{htmlattrxref("rel", "link")}} HTML attribute, as a list of tokens.
+  - : Is a {{domxref("DOMTokenList")}} that reflects the [`rel`](/ru/docs/Web/HTML/Element/link#rel) HTML attribute, as a list of tokens.
 - {{domxref("HTMLLinkElement.sizes")}} {{readonlyInline}}
-  - : Is a {{domxref("DOMSettableTokenList")}} that reflects the {{htmlattrxref("sizes", "link")}} HTML attribute, as a list of tokens.
+  - : Is a {{domxref("DOMSettableTokenList")}} that reflects the [`sizes`](/ru/docs/Web/HTML/Element/link#sizes) HTML attribute, as a list of tokens.
 - {{domxref("LinkStyle.sheet")}} {{readonlyInline}}
   - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none.
 - {{domxref("HTMLLinkElement.type")}}
@@ -42,15 +42,15 @@ _Наследует свойства от своего родителя, {{domxr
 
 ### Устаревшие свойства
 
-- {{domxref("HTMLLinkElement.charset")}} {{obsolete_inline}}
+- {{domxref("HTMLLinkElement.charset")}}
   - : Is a {{domxref("DOMString")}} representing the character encoding for the target resource.
-- {{domxref("HTMLLinkElement.rev")}} {{obsolete_inline}}
+- {{domxref("HTMLLinkElement.rev")}}
 
   - : Is a {{domxref("DOMString")}} representing the reverse relationship of the linked resource from the resource to the document.
 
     > **Примечание:** Currently the W3C HTML 5.2 spec states that `rev` is no longer obsolete, whereas the WHATWG living standard still has it labeled obsolete. Until this discrepancy is resolved, you should still assume it is obsolete.
 
-- {{domxref("HTMLLinkElement.target")}} {{obsolete_inline}}
+- {{domxref("HTMLLinkElement.target")}}
   - : Is a {{domxref("DOMString")}} representing the name of the target frame to which the resource applies.
 
 ## Методы

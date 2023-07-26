@@ -1,88 +1,88 @@
 ---
-title: Logical NOT (!)
+title: 逻辑非（!）
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
 ---
 
 {{jsSidebar("Operators")}}
 
-The logical NOT (`!`) operator (logical complement, negation) takes truth to falsity and vice versa. It is typically used with {{jsxref("Boolean")}} (logical) values. When used with non-Boolean values, it returns `false` if its single operand can be converted to `true`; otherwise, returns `true`.
+**逻辑非**（`!`，逻辑连接取反）运算符将真值或假值转换为对应的相反值，经常用于布尔（逻辑）值。当与非布尔值使用时，如果其操作数可以转化为 `true`，则返回 `false`，否则返回 `true`。
 
 {{EmbedInteractiveExample("pages/js/expressions-logical-not.html", "shorter")}}
 
 ## 语法
 
-```plain
+```js-nolint
 !expr
 ```
 
-## Description
+## 描述
 
-Returns `false` if its single operand can be converted to `true`; otherwise, returns `true`.
+如果其操作数可以转化为 `true`，则返回 `false`，否则返回 `true`。
 
-If a value can be converted to `true`, the value is so-called {{Glossary("truthy")}}. If a value can be converted to `false`, the value is so-called {{Glossary("falsy")}}.
+能够转化为 `true` 的值叫做{{Glossary("truthy","真值")}}，能够转化为 `false` 的值叫做{{Glossary("falsy","假值")}}。
 
-Examples of expressions that can be converted to false are:
+能够转化为 false 的表达式的示例如下：
 
-- `null`;
-- `NaN`;
-- `0`;
-- empty string (`""` or `''` or ` `` `);
-- `undefined`.
+- `null`；
+- `NaN`；
+- `0`；
+- 空字符串（`""` 或 `''` 或 ` `` `）；
+- `undefined`。
 
-Even though the `!` operator can be used with operands that are not Boolean values, it can still be considered a boolean operator since its return value can always be converted to a [boolean primitive](/zh-CN/docs/Web/JavaScript/Data_structures#Boolean_type). To explicitly convert its return value (or any expression in general) to the corresponding boolean value, use a double [NOT operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT) or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} constructor.
+尽管 `!` 运算符可以与非布尔操作数一起使用，但它仍然被认为是一个布尔运算符，因为它的返回值总是可以被转换为[布尔基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#boolean_类型)。要明确地将其返回值（或任何一般的表达式）转换为相应的布尔值，请使用双非运算符（`!!`）或 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 构造函数。
 
-## Examples
+## 示例
 
-### Using NOT
+### 使用非运算符
 
-The following code shows examples of the `!` (logical NOT) operator.
+下列代码展示了 `!`（逻辑非）运算符的用法。
 
 ```js
-n1 = !true               // !t returns false
-n2 = !false              // !f returns true
-n3 = !''                 // !f returns true
-n4 = !'Cat'              // !t returns false
+!true; // !t returns false
+!false; // !f returns true
+!""; // !f returns true
+!"Cat"; // !t returns false
 ```
 
-### Double NOT (`!!`)
+### 双非运算符（`!!`）
 
-It is possible to use a couple of NOT operators in series to explicitly force the conversion of any value to the corresponding [boolean primitive](/zh-CN/docs/Web/JavaScript/Data_structures#Boolean_type). The conversion is based on the "truthyness" or "falsyness" of the value (see {{Glossary("truthy")}} and {{Glossary("falsy")}}).
+可以使用几个非运算符串联起来，明确地强制将任何值转换为相应的[布尔基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#boolean_类型)。这种转换是基于值的“真实性”或“虚假性”（详见{{Glossary("truthy","真值")}}和{{Glossary("falsy","假值")}}）。
 
-The same conversion can be done through the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} function.
+也可以使用 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 函数完成转换。
 
 ```js
-n1 = !!true                   // !!truthy returns true
-n2 = !!{}                     // !!truthy returns true: any object is truthy...
-n3 = !!(new Boolean(false))   // ...even Boolean objects with a false .valueOf()!
-n4 = !!false                  // !!falsy returns false
-n5 = !!""                     // !!falsy returns false
-n6 = !!Boolean(false)         // !!falsy returns false
+!!true; // !!truthy returns true
+!!{}; // !!truthy returns true: any object is truthy...
+!!new Boolean(false); // ...even Boolean objects with a false .valueOf()!
+!!false; // !!falsy returns false
+!!""; // !!falsy returns false
+!!Boolean(false); // !!falsy returns false
 ```
 
-### Converting between NOTs
+### 非运算符转换
 
-The following operation involving **booleans**:
+下述涉及到**布尔值**的运算：
 
-```js
+```js-nolint
 !!bCondition
 ```
 
-is always equal to:
+总是与此表达式相同：
 
-```js
+```js-nolint
 bCondition
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
 - {{jsxref("Boolean")}}
-- {{Glossary("Truthy")}}
-- {{Glossary("Falsy")}}
+- {{Glossary("Truthy","真值")}}
+- {{Glossary("Falsy","假值")}}

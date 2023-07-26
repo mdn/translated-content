@@ -8,18 +8,18 @@ original_slug: Web/HTML/Elemento/head
 
 El **elemento HTML `<head>`** provee información general (metadatos) acerca del documento, incluyendo su título y enlaces a scripts y hojas de estilos.
 
-| [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | Ninguna.                                                                                                                                                                                                                                                                                                                                        |
-| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                                        | Si el elemento es un {{htmlattrxref("srcdoc", "iframe")}} de un {{HTMLElement("iframe")}} , o si la información de título está disponible desde un protocolo de nivel superior, cero o más elementos de metadatos. De otro modo, uno o más elementos de metadatos donde exactamente uno es {{HTMLElement("title")}}. |
-| Omisión de etiqueta                                                        | La etiqueta de inicio puede ser omitida si lo primero dentro del elemento head es un elemento. La etiqueta de cierre puede ser omitida si lo primero después del elemento head no es un espacio o un comentario.                                                                                                                                |
-| Elementos padre permitidos                                                 | Un elemento {{HTMLElement("html")}}, pues éste es su primer hijo.                                                                                                                                                                                                                                                                      |
-| Interfaz DOM                                                               | {{domxref("HTMLHeadElement")}}                                                                                                                                                                                                                                                                                                        |
+| [Categorías de contenido](/es/docs/Web/Guide/HTML/categorias_de_contenido) | Ninguna.                                                                                                                                                                                                                                                                                                                            |
+| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                                        | Si el elemento es un [`srcdoc`](/es/docs/Web/HTML/Element/iframe#srcdoc) de un {{HTMLElement("iframe")}} , o si la información de título está disponible desde un protocolo de nivel superior, cero o más elementos de metadatos. De otro modo, uno o más elementos de metadatos donde exactamente uno es {{HTMLElement("title")}}. |
+| Omisión de etiqueta                                                        | La etiqueta de inicio puede ser omitida si lo primero dentro del elemento head es un elemento. La etiqueta de cierre puede ser omitida si lo primero después del elemento head no es un espacio o un comentario.                                                                                                                    |
+| Elementos padre permitidos                                                 | Un elemento {{HTMLElement("html")}}, pues éste es su primer hijo.                                                                                                                                                                                                                                                                   |
+| Interfaz DOM                                                               | {{domxref("HTMLHeadElement")}}                                                                                                                                                                                                                                                                                                      |
 
 ## Atributos
 
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
 
-- {{htmlattrdef("profile")}} {{deprecated_inline}}
+- `profile` {{deprecated_inline}}
   - : Los URIs de uno o más perfiles de metadatos, separados por un espacio en blanco.
 
 ## Ejemplo
@@ -40,9 +40,9 @@ Navegadores modernos que cumplen con el estándar HTML5 construyen automáticame
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.head")}}
+{{Compat}}
 
 ## Véase también
 

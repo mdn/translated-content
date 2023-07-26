@@ -1,12 +1,6 @@
 ---
 title: Event.eventPhase
 slug: Web/API/Event/eventPhase
-tags:
-  - Property
-  - Read-only
-  - Reference
-browser-compat: api.Event.eventPhase
-translation_of: Web/API/Event/eventPhase
 ---
 {{ApiRef("DOM")}}
 

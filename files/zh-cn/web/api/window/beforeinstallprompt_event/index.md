@@ -40,7 +40,7 @@ window.addEventListener("beforeinstallprompt", function(e) {
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - {{domxref("BeforeInstallPromptEvent.prompt")}}
 - {{domxref("BeforeInstallPromptEvent")}}

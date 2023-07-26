@@ -1,20 +1,8 @@
 ---
 title: <input type="radio">
-slug: Web/HTML/Element/Input/radio
-tags:
-  - Element
-  - HTML
-  - HTML Input Types
-  - HTML forms
-  - HTML input
-  - Input
-  - Input Types
-  - Reference
-  - 라디오
-  - 라디오 그룹
-  - 라디오 버튼
-translation_of: Web/HTML/Element/input/radio
+slug: Web/HTML/Element/input/radio
 ---
+
 {{HTMLSidebar}}
 
 **`radio`** 유형의 {{htmlelement("input")}} 요소는 보통 서로 관련된 옵션을 나타내는 라디오 버튼 콜렉션, **라디오 그룹**에 사용합니다. 임의의 그룹 내에서는 동시에 하나의 라디오 버튼만 선택할 수 있습니다. 라디오 버튼은 흔히 원형으로 그려지며, 선택한 경우 속을 채우거나 강조 표시를 합니다.
@@ -23,7 +11,7 @@ translation_of: Web/HTML/Element/input/radio
 
 오래된 라디오의 버튼과 비슷한 형태와 동작 방식을 가졌기에 라디오 버튼이라고 부릅니다.
 
-![Shows what radio buttons looked like in the olden days.](https://mdn.mozillademos.org/files/15610/old-radio.jpg)
+![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
 
 > **참고:** [체크박스](/ko/docs/Web/HTML/Element/input/checkbox)도 라디오 버튼과 비슷하지만 중요한 차이점이 하나 있습니다. 라디오 버튼은 여러 값에서 단 하나만 선택할 때 사용하지만, 체크박스는 각각의 값을 켜고 끌 수 있다는 점입니다. 다수의 컨트롤이 존재할 때 라디오 버튼은 전체에서 하나를 허용하고, 체크박스는 여러 개 선택을 허용합니다.
 
@@ -320,7 +308,7 @@ Most notable here is the use of the {{cssxref("-moz-appearance")}} property (wit
 
 Notice that when clicking on a radio button, there's a nice, smooth fade out/in effect as the two buttons change state. In addition, the style and coloring of the legend and submit button are customized to have strong contrast. This might not be a look you'd want in a real web application, but it definitely shows off the possibilities.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

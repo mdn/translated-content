@@ -28,9 +28,9 @@ El objeto de sincronización implementa los métodos definidos en el {{WebExtAPI
 - {{WebExtAPIRef("storage.StorageArea.clear()")}}
   - : Elimina todos los elementos del área de almacenamiento.
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("webextensions.api.storage.sync")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

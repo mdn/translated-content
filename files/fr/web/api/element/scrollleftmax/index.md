@@ -20,7 +20,7 @@ _Cette propriété ne fait partie d'aucune spécification._
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Element.scrollLeftMax")}}
+{{Compat}}
 
 ## Voir aussi
 

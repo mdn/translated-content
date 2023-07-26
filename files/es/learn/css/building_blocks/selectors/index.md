@@ -61,7 +61,8 @@ h1 {
 También los podrías combinar en una lista de selectores, separándolos con una coma.
 
 ```css
-h1, .special {
+h1,
+.special {
   color: blue;
 }
 ```
@@ -96,7 +97,8 @@ h1 {
 Sin embargo, si se combinan, toda la regla se considera no válida y no se aplicará estilo ni a `h1` ni a la clase.
 
 ```css
-h1, ..special {
+h1,
+..special {
   color: blue;
 }
 ```
@@ -110,19 +112,22 @@ Hay diferentes agrupaciones de selectores, y conocer qué tipo de selector neces
 Este grupo incluye selectores que delimitan un elemento HTML, como por ejemplo un `<h1>`.
 
 ```css
-h1 { }
+h1 {
+}
 ```
 
 También incluye selectores que delimitan una clase:
 
 ```css
-.box { }
+.box {
+}
 ```
 
 o un ID:
 
 ```css
-#unique { }
+#unique {
+}
 ```
 
 ### Selectores de atributo
@@ -130,13 +135,16 @@ o un ID:
 Este grupo de selectores te proporciona diferentes formas de seleccionar elementos según la presencia de un atributo determinado en un elemento:
 
 ```css
-a[title] { }
+a[title] {
+}
 ```
 
 O incluso hacer una selección basada en la presencia de un atributo que tiene un valor particular asignado:
 
 ```css
-a[href="https://example.com"] { }
+a[href="https://example.com"]
+{
+}
 ```
 
 ### Las pseudoclases y los pseudoelementos
@@ -144,13 +152,15 @@ a[href="https://example.com"] { }
 Este grupo de selectores incluye pseudoclases, que aplican estilo a ciertos estados de un elemento. La pseudoclase `:hover`, por ejemplo, selecciona un elemento solo cuando se le pasa el ratón por encima.
 
 ```css
-a: hover {}
+a: hover {
+}
 ```
 
 También incluye pseudoelementos, que seleccionan una parte determinada de un elemento en vez del elemento en sí. Por ejemplo, `::first-line` siempre selecciona la primera línea del texto que se encuentra dentro de un elemento (`<p>`, en el ejemplo siguiente), y actúa como si un elemento `<span>` hubiera delimitado la primera línea, seleccionado y aplicado estilo.
 
 ```css
-p::first-line { }
+p::first-line {
+}
 ```
 
 ### Combinadores
@@ -158,7 +168,8 @@ p::first-line { }
 El último grupo de selectores combina otros selectores con el fin de delimitar elementos de nuestros documentos. El ejemplo siguiente selecciona los párrafos que son hijos directos del elemento `<article>` utilizando el operador de combinación hijo (`>`):
 
 ```css
-article > p { }
+article > p {
+}
 ```
 
 ## Próximos pasos
@@ -184,24 +195,3 @@ La tabla que te mostramos a continuación proporciona una descripción general d
 | [Operador de combinación de elementos hijo](/es/docs/Web/CSS/Child_combinator)                              | `article > p`       | [Operadores de combinación de elementos hijo](/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Combinadores#Selector_de_combinaci%C3%B3n_de_elementos_hijo) |
 | [Operador de combinación de elementos hermanos adyacentes](/es/docs/Web/CSS/Selectores_hermanos_adyacentes) | `h1 + p`            | [Hermanos adyacentes](/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Combinadores#Hermanos_adyacentes)                                                    |
 | [Operador de combinación general de elementos hermanos](/es/docs/Web/CSS/Selectores_hermanos_generales)     | `h1 ~ p`            | [Hermanos generales](/es/docs/Learn/CSS/Building_blocks/Selectores_CSS/Combinadores#Hermanos_generales)                                                      |
-
-## En este módulo
-
-1. [La cascada y la herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Selectores de tipo, de clase y de ID](/es/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Selectores de atributo](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Las pseudoclases y los pseudoelementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Operadores de combinación](/es/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [El modelo de caja](/es/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [El uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [El desbordamiento de los contenidos](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Los valores y las unidades](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Imágenes, media y elementos de formulario](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Depurar el CSS](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizar el CSS](/es/docs/Learn/CSS/Building_blocks/Organizing)

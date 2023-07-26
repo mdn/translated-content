@@ -1,11 +1,7 @@
 ---
 title: Code privilégié
-slug: Glossary/privileged_code
-tags:
-  - Glossaire
-  - Privilégié
+slug: Glossary/Privileged_code
 translation_of: Glossary/privileged_code
-original_slug: Glossaire/privileged_code
 ---
 
 **Code privilégié** - Code Javascript de votre extension. Par exemple, code dans les scripts de contenu.

@@ -26,30 +26,28 @@ Há três formas de fazer isso:
 - Trabalhando com um documento individual na DOM — modificando seu estilo independentemente do stylesheets do documento.
 
 | Para mais informações sobre JavaScript, veja a página [JavaScript](/pt-BR/JavaScript) nesta wiki. |
-| -------------------------------------------------------------------------------------------------------------- |
+| ------------------------------------------------------------------------------------------------- |
 
 ### Ação: Uma demonstração de JavaScript
 
 Faça um novo documento em HTML, `doc5.html`. Copie e cole o conteúdo daqui, tenha certeza de rolar para copiar todo o código:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <title>Mozilla CSS Getting Started - JavaScript demonstration</title>
+    <link rel="stylesheet" type="text/css" href="style5.css" />
+    <script type="text/javascript" src="script5.js"></script>
+  </head>
 
-<head>
-<title>Mozilla CSS Getting Started - JavaScript demonstration</title>
-<link rel="stylesheet" type="text/css" href="style5.css" />
-<script type="text/javascript" src="script5.js"></script>
-</head>
+  <body>
+    <h1>JavaScript sample</h1>
 
-<body>
-<h1>JavaScript sample</h1>
+    <div id="square"></div>
 
-<div id="square"></div>
-
-<button type="button" onclick="doDemo(this);">Click Me</button>
-
-</body>
+    <button type="button" onclick="doDemo(this);">Click Me</button>
+  </body>
 </html>
 ```
 
@@ -65,7 +63,7 @@ Crie um novo arquivo CSS, `style5.css`. Copie e cole o conteúdo daqui:
 }
 
 button {
-  padding: .5em 2em;
+  padding: 0.5em 2em;
 }
 ```
 
@@ -73,14 +71,14 @@ Crie um novo arquivo de texto, `script5.js`. Copie e cole o conteúdo daqui:
 
 ```js
 // JavaScript demonstration
-function doDemo (button) {
+function doDemo(button) {
   var square = document.getElementById("square");
   square.style.backgroundColor = "#fa4";
   button.setAttribute("disabled", "true");
   setTimeout(clearDemo, 2000, button);
 }
 
-function clearDemo (button) {
+function clearDemo(button) {
   var square = document.getElementById("square");
   square.style.backgroundColor = "transparent";
   button.removeAttribute("disabled");
@@ -120,12 +118,13 @@ Esta wiki não suporta JavaScript nas páginas, então não é possível mostrar
   </tbody>
 </table>
 
-> **Nota:** **Notas importantes** sobre esta demonstração:- O documento HTML tem uma folha de estilo anexada, bem como um arquivo de script.
+> **Nota:** Sobre esta demonstração:
 >
+> - O documento HTML tem uma folha de estilo anexada, bem como um arquivo de script.
 > - O script trabalha com elementos individuais no DOM. Ele modifica o square's style diretamente. Ele modifica o estilo dos botões indiretamente mudando um atributo.
 > - Em JavaScript, `document.getElementById("square")` é similar em função ao seletor CSS `#square`.
 > - Em JavaScript, `backgroundColor` corresponde à propriedade CSS `background-color`. JavaScript não permite hífens em nomes, então "camelCase" é usada no lugar dele.
-> - Seu browser tem uma regra built-in CSS para `button{{ mediawiki.external('disabled=\"true\"') }}` ela muda a aparência dos botões quando está disabilitado.
+> - Seu browser tem uma regra built-in CSS para `button[disabled="true"]` ela muda a aparência dos botões quando está disabilitado.
 
 | Altere o script para que o quadrado salte 20 cm para a direita quando sua cor mudar e volte para trás quando retornar à cor base. |
 | --------------------------------------------------------------------------------------------------------------------------------- |

@@ -71,12 +71,12 @@ function myFunc() {
 
 ## Especificación
 
-No es parte de ninguna especificación. Se implementa en JavaScript 1.5.
+No es parte de ninguna especificación.
 
 ## Compatiblilidad de Navegadores
 
-{{Compat("javascript.builtins.Function.caller")}}
+{{Compat}}
 
 ## Véase también
 
-- Problema de implementación para SpiderMonkey {{bug(65683)}}
+- Problema de implementación para SpiderMonkey [Error 65683 en Firefox](https://bugzil.la/65683)

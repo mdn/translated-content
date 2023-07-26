@@ -150,9 +150,9 @@ oReq.open();
 
 > **备注：** progress 事件在使用 `file:` 协议的情况下是无效的。
 
-> **备注：** 从 {{Gecko("9.0")}} 开始，进度事件现在可以依托于每一个传入的数据块，包括进度事件被触发前在已经接受了最后一个数据包且连接已经被关闭的情况下接收到的最后一个块。这种情况下，当该数据包的 load 事件发生时 progress 事件会被自动触发。这使你可以只关注 progress 事件就可以可靠的监测进度。
+> **备注：** 从 Gecko 9.0 开始，进度事件现在可以依托于每一个传入的数据块，包括进度事件被触发前在已经接受了最后一个数据包且连接已经被关闭的情况下接收到的最后一个块。这种情况下，当该数据包的 load 事件发生时 progress 事件会被自动触发。这使你可以只关注 progress 事件就可以可靠的监测进度。
 
-> **备注：** 在 {{Gecko("12.0")}} 中，当 `responseType` 为 "moz-blob" 时，如果你的 progress 事件被触发，则响应的值是一个包含了接收到的数据的 {{domxref("Blob")}} 。
+> **备注：** 在 Gecko 12.0 中，当 `responseType` 为 "moz-blob" 时，如果你的 progress 事件被触发，则响应的值是一个包含了接收到的数据的 {{domxref("Blob")}} 。
 
 使用 `loadend` 事件可以侦测到所有的三种加载结束条件（`abort`、`load`，或 `error`）：
 
@@ -251,7 +251,7 @@ foo=bar&baz=The+first+line.%0D%0AThe+second+line.%0D%0A
 |*|
 |*|  :: XMLHttpRequest.prototype.sendAsBinary() Polyfill ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#sendAsBinary()
+|*|  https://developer.mozilla.org/zh-CN/docs/DOM/XMLHttpRequest#sendAsBinary()
 \*/
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
@@ -270,7 +270,7 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 |*|
 |*|  :: AJAX Form Submit Framework ::
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
+|*|  https://developer.mozilla.org/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest
 |*|
 |*|  This framework is released under the GNU Public License, version 3 or later.
 |*|  https://www.gnu.org/licenses/gpl-3.0-standalone.html
@@ -753,11 +753,7 @@ oReq.send(null);
 
 ## 安全性
 
-{{fx_minversion_note(3, "Versions of Firefox prior to Firefox 3 allowed you to set the preference <code>capability.policy.&lt;policyname&gt;.XMLHttpRequest.open&lt;/policyname&gt;</code> to <code>allAccess</code> to give specific sites cross-site access. This is no longer supported.")}}
-
-{{fx_minversion_note(5, "Versions of Firefox prior to Firefox 5 could use <code>netscape.security.PrivilegeManager.enablePrivilege(\"UniversalBrowserRead\");</code> to request cross-site access. This is no longer supported, even though it produces no warning and permission dialog is still presented.")}}
-
-要启用跨站脚本，推荐的做法是对 XMLHttpRequest 的响应使用 the `Access-Control-Allow-Origin` 的 HTTP 头。
+要启用跨站脚本，推荐的做法是对 XMLHttpRequest 的响应使用 `Access-Control-Allow-Origin` 的 HTTP 头。
 
 ### XMLHttpRequests 被停止
 
@@ -765,7 +761,7 @@ oReq.send(null);
 
 ## Worker
 
-设置 `overrideMimeType` 后在 {{domxref("Worker")}} 中无法正常工作，详见 {{bug(678057)}}。其他浏览器也许会以不同的手段处理。
+设置 `overrideMimeType` 后在 {{domxref("Worker")}} 中无法正常工作，详见 [Firefox bug 678057](https://bugzil.la/678057)。其他浏览器也许会以不同的手段处理。
 
 ## 规范
 
@@ -775,16 +771,10 @@ oReq.send(null);
 
 {{Compat}}
 
-## 参考资料
+## 参见
 
-1. [MDC AJAX introduction](/zh-CN/AJAX/Getting_Started)
-2. [HTML in XMLHttpRequest](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
-3. [HTTP access control](/zh-CN/HTTP_access_control)
-4. [How to check the security state of an XMLHTTPRequest over SSL](/zh-CN/How_to_check_the_security_state_of_an_XMLHTTPRequest_over_SSL)
-5. [XMLHttpRequest - REST and the Rich User Experience](http://www.peej.co.uk/articles/rich-user-experience.html)
-6. [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
-7. [Apple developers' reference](http://developer.apple.com/internet/webcontent/xmlhttpreq.html)
-8. ["Using the XMLHttpRequest Object" (jibbering.com)](http://jibbering.com/2002/4/httprequest.html)
-9. [The XMLHttpRequest Object: W3C Specification](http://www.w3.org/TR/XMLHttpRequest/)
-10. [Web Progress Events specification](http://dev.w3.org/2006/webapi/progress/Progress.html)
-11. [Reading Ogg files with JavaScript (Chris Double)](http://www.bluishcoder.co.nz/2009/06/05/reading-ogg-files-with-javascript.html)
+- [XMLHttpRequest 中的 HTML](/zh-CN/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest)
+- [HTTP 访问控制](/zh-CN/docs/Web/HTTP/CORS)
+- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
+- ["Using the XMLHttpRequest Object" (jibbering.com)](https://jibbering.com/2002/4/httprequest.html)
+- [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

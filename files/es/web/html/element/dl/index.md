@@ -60,7 +60,7 @@ El contenido para este ejemplo interactivo se encuentra almacenado en un reposit
     <tr>
       <th scope="row">Roles ARIA permitidos</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -82,10 +82,8 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
 <dl>
   <dt>Firefox</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
 
   <!-- Other terms and descriptions -->
@@ -94,7 +92,7 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
 
 Salida:
 
-![Image:HTML-dl1.png](/@api/deki/files/241/=HTML-dl1.png)
+![Image:HTML-dl1.png](html-dl1.png)
 
 ### Múltiples términos, descripción sencilla
 
@@ -104,10 +102,8 @@ Salida:
   <dt>Mozilla Firefox</dt>
   <dt>Fx</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
 
   <!-- Other terms and descriptions -->
@@ -116,7 +112,7 @@ Salida:
 
 Salida:
 
-![Image:HTML-dl2.png](/@api/deki/files/242/=HTML-dl2.png)
+![Image:HTML-dl2.png](html-dl2.png)
 
 ### Término sencillo, múltiples descripciones
 
@@ -124,16 +120,12 @@ Salida:
 <dl>
   <dt>Firefox</dt>
   <dd>
-    A free, open source, cross-platform,
-    graphical web browser developed by the
-    Mozilla Corporation and hundreds of
-    volunteers.
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
   <dd>
-    The Red Panda also known as the Lesser
-    Panda, Wah, Bear Cat or Firefox, is a
-    mostly herbivorous mammal, slightly larger
-    than a domestic cat (60 cm long).
+    The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox, is a
+    mostly herbivorous mammal, slightly larger than a domestic cat (60 cm long).
   </dd>
 
   <!-- Other terms and descriptions -->
@@ -142,7 +134,7 @@ Salida:
 
 Output:
 
-![Image:HTML-dl3.png](/@api/deki/files/243/=HTML-dl3.png)
+![Image:HTML-dl3.png](html-dl3.png)
 
 ### Múltiples términos y descripciones
 
@@ -208,9 +200,9 @@ Para cambiar la indentación de un término, usa la propiedad {{cssxref("margin"
 
 {{Specifications}}
 
-## Compatibilidad Web
+## Compatibilidad con navegadores
 
-{{Compat("html.elements.dl")}}
+{{Compat}}
 
 ## See also
 

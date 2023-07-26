@@ -26,7 +26,7 @@ var timeoutID = window.setTimeout(code [, delay]);
 
 Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этой функциональности в таких браузерах, необходимо использовать код для совместимости (см. раздел [Аргументы колбэк-функции](#Аргументы_колбэк-функции)).
 
-> **Предупреждение:** **Important:** Prior to Gecko 13 {{ geckoRelease("13.0") }}, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.
+> **Предупреждение:** **Important:** Prior to Gecko 13, Gecko passed an extra parameter to the callback routine, indicating the "actual lateness" of the timeout in milliseconds. This non-standard parameter is no longer passed.
 
 ## Пример
 
@@ -73,7 +73,7 @@ function clearAlert() {
 |*|  IE-specific polyfill which enables the passage of arbitrary arguments to the
 |*|  callback functions of JavaScript timers (HTML5 standard syntax).
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/window.setInterval
+|*|  https://developer.mozilla.org/ru/docs/DOM/window.setInterval
 |*|
 |*|  Syntax:
 |*|  var timeoutID = window.setTimeout(func, delay, [param1, param2, ...]);
@@ -174,7 +174,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error
 
 ### Возможное решение
 
-A possible way to solve the "`this`" problem is to replace the two native `setTimeout()` or `setInterval()` global functions with two _non-native_ ones which will enable their invocation through the [`Function.prototype.call`](en-US/docs/JavaScript/Reference/Global_Objects/Function/call) method. The following example shows a possible replacement:
+A possible way to solve the "`this`" problem is to replace the two native `setTimeout()` or `setInterval()` global functions with two _non-native_ ones which will enable their invocation through the [`Function.prototype.call`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/call) method. The following example shows a possible replacement:
 
 ```js
 // Enable the passage of the 'this' object through the JavaScript timers
@@ -213,11 +213,11 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2.5 s
 
 Это не нативные решения _ad hoc_ для этой проблемы.
 
-> **Примечание:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called.
+> **Примечание:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/ru/docs/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called.
 
 ## Замечания
 
-Отложенное выполнение кода можно отменить, используя [`window.clearTimeout()`](/en-US/docs/DOM/window.clearTimeout). Если функция должна вызываться неоднократно (например, каждые N миллисекунд), необходимо использовать [`window.setInterval()`](/en-US/docs/DOM/window.setInterval).
+Отложенное выполнение кода можно отменить, используя [`window.clearTimeout()`](/ru/docs/DOM/window.clearTimeout). Если функция должна вызываться неоднократно (например, каждые N миллисекунд), необходимо использовать [`window.setInterval()`](/ru/docs/DOM/window.setInterval).
 
 Важно заметить, что функция или код не могут быть выполнены, пока не завершится поток, вызвавший `setTimeout()`.
 
@@ -241,7 +241,7 @@ String literals are evaluated in the global context, so local symbols in the con
 
 [Historically](http://code.google.com/p/chromium/issues/detail?id=792#c10) browsers implement `setTimeout()` "clamping": successive `setTimeout()` calls with `delay` smaller than the "minimum delay" limit are forced to use at least the minimum delay. The minimum delay, `DOM_MIN_TIMEOUT_VALUE`, is 4 ms (stored in a preference in Firefox: `dom.min_timeout_value`), with a `DOM_CLAMP_TIMEOUT_NESTING_LEVEL` of 5ms.
 
-In fact, 4ms is [specified by the HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) and is consistent across browsers released in 2010 and onward. Prior to {{ geckoRelease("5.0") }}, the minimum timeout value for nested timeouts was 10 ms.
+In fact, 4ms is [specified by the HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) and is consistent across browsers released in 2010 and onward. Prior to Gecko 5.0, the minimum timeout value for nested timeouts was 10 ms.
 
 In addition to "clamping", the timeout can also fire later when the page (or the OS/browser itself) is busy with other tasks.
 
@@ -251,7 +251,7 @@ Browsers including Internet Explorer, Chrome, Safari, and Firefox store the dela
 
 #### Неактивные вкладки
 
-In {{ geckoRelease("5.0") }} and Chrome 11, timeouts are clamped to firing no more often than once per second (1000ms) in inactive tabs; see {{ bug(633421) }} for more information about this in Mozilla or [crbug.com/66078](http://crbug.com/66078) for details about this in Chrome.
+In Gecko 5.0 and Chrome 11, timeouts are clamped to firing no more often than once per second (1000ms) in inactive tabs; see {{ bug(633421) }} for more information about this in Mozilla or [crbug.com/66078](http://crbug.com/66078) for details about this in Chrome.
 
 ## Совместимость с браузерами
 

@@ -1,15 +1,6 @@
 ---
 title: browsingData.settings()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
-tags:
-  - API
-  - Extensions
-  - Method
-  - Reference
-  - Settings
-  - WebExtensions
-  - add-on
-  - browsingData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
 ---
 
@@ -26,7 +17,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var getSettings = browser.browsingData.settings()
+var getSettings = browser.browsingData.settings();
 ```
 
 ### Paramètres
@@ -46,9 +37,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.settings")}}
+{{Compat}}
 
 ## Exemples
 

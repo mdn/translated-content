@@ -1,6 +1,8 @@
 ---
-title: HTMLElement.outerText
+title: "HTMLElement: outerText プロパティ"
 slug: Web/API/HTMLElement/outerText
+l10n:
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("DOM")}}
@@ -12,7 +14,7 @@ slug: Web/API/HTMLElement/outerText
 
 ## 値
 
-{{domxref("DOMString")}} で、この要素とその配下で表示されるテキストコンテンツを表します。
+文字列で、この要素とその配下で表示されるテキストコンテンツを表します。
 
 要素自身が[表示されていない場合](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered)（例えば、文書から切り離されていた場合や表示から隠されていた場合）、返値は {{domxref("Node.textContent")}} プロパティのものと同じになります。
 
@@ -35,9 +37,7 @@ slug: Web/API/HTMLElement/outerText
 `outerText` は選択された要素全体を置き換えますので、 JavaScript で `p.outerText = "要素全体を置換"` を実行すると、選択された `p` 要素全体を置き換えます。
 
 ```html
-<div>
-   要素全体を置換
-</div>
+<div>要素全体を置換</div>
 ```
 
 一方 `p.innerText = "要素内のコンテンツを置換"` を実行すると、選択された `p` 要素の*内部の*コンテンツを置き換えます。

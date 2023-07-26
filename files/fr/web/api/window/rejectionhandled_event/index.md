@@ -1,56 +1,58 @@
 ---
-title: 'Window: rejectionhandled event'
+title: "Window : évènement rejectionhandled"
 slug: Web/API/Window/rejectionhandled_event
-tags:
-  - API
-  - Evènement
-  - HTML DOM
-  - JavaScript
-  - Promesse
-  - Reference
-  - Window
-  - onrejectionhandled
-  - rejectionhandled
-translation_of: Web/API/Window/rejectionhandled_event
+l10n:
+  sourceCommit: d9026c37acaf22da682206c381686fe8a4666f16
 ---
 
 {{APIRef("HTML DOM")}}
 
-L'événement **`rejectionhandled`** est envoyé à la portée globale du script (généralement {{domxref("window")}} mais aussi {{domxref("Worker")}}) chaque fois qu'un JavaScript {{jsxref("Promise")}} est rejeté mais après que le rejet de la promesse a été traité.
+L'évènement **`rejectionhandled`** est envoyé à la portée globale du script (il s'agit généralement de [`window`](/fr/docs/Web/API/Window), mais ça peut aussi être [`Worker`](/fr/docs/Web/API/Worker)) lorsqu'une [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) rompue est gérée tardivement, c'est-à-dire lorsqu'un gestionnaire est attaché à la promesse après que celle-ci a échoué en entraînant un évènement [`unhandledrejection`](/fr/docs/Web/API/Window/unhandledrejection_event).
 
-Cela peut être utilisé dans le débogage et pour la résilience générale des applications, en tandem avec l'événement {{domxref ("Window.unhandledrejection_event", "unhandledrejection")}}, qui est envoyé lorsqu'une promesse est rejetée mais qu'il n'y a pas de responsable du rejet .
+Cet évènement peut être utilisé pour le débogage et pour la résilience des applications en général. On pourra l'utiliser avec l'évènement `unhandledrejection` qui est émis lorsqu'une promesse est rompue et qu'elle n'a pas de gestionnaire d'échec à ce moment.
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Bulles</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Annulable</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("PromiseRejectionEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Propriété de gestionnaire d'événements</th>
-      <td>
-        {{domxref("WindowEventHandlers.onrejectionhandled", "onrejectionhandled")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+## Syntaxe
+
+On pourra utiliser le nom de l'évènement dans des méthodes comme [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou utiliser une propriété qui est un gestionnaire d'évènement.
+
+```js
+addEventListener("rejectionhandled", (event) => {});
+onrejectionhandled = (event) => {};
+```
+
+## Type d'évènement
+
+Un objet de type [`PromiseRejectionEvent`](/fr/docs/Web/API/PromiseRejectionEvent) qui hérite de [`Event`](/fr/docs/Web/API/Event).
+
+{{InheritanceDiagram("PromiseRejectionEvent")}}
+
+## Propriétés de l'évènement
+
+- [`PromiseRejectionEvent.promise`](/fr/docs/Web/API/PromiseRejectionEvent/promise) {{ReadOnlyInline}}
+  - : La [promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) JavaScript qui a été rompue.
+- [`PromiseRejectionEvent.reason`](/fr/docs/Web/API/PromiseRejectionEvent/reason) {{ReadOnlyInline}}
+  - : Une valeur ou un objet qui indique la raison de l'échec de la promesse, comme celui qui serait passé à [`Promise.reject()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/reject).
+
+## Alias pour les gestionnaires d'évènement
+
+En plus de l'interface `Window`, la propriété `onrejectionhandled` pour gérer l'évènement est disponible sur les cibles suivantes&nbsp;:
+
+- [`HTMLBodyElement`](/fr/docs/Web/API/HTMLBodyElement)
+- [`HTMLFrameSetElement`](/fr/docs/Web/API/HTMLFrameSetElement)
+- [`SVGSVGElement`](/fr/docs/Web/API/SVGSVGElement)
 
 ## Exemple
 
-Vous pouvez utiliser l'événement `rejectionhandled` pour consigner les promesses rejetées sur la console, ainsi que les raisons pour lesquelles elles ont été rejetées :
+L'évènement `rejectionhandled` peut être utilisé afin de journaliser les promesses rompues dans la console, ainsi que les raisons de leur échec&nbsp;:
 
 ```js
-window.addEventListener("rejectionhandled", event => {
-  console.log("Promise rejected; reason: " + event.reason);
-}, false);
+window.addEventListener(
+  "rejectionhandled",
+  (event) => {
+    console.log(`Promesse rompue - raison : ${event.reason}`);
+  },
+  false,
+);
 ```
 
 ## Spécifications
@@ -63,7 +65,7 @@ window.addEventListener("rejectionhandled", event => {
 
 ## Voir aussi
 
-- {{SectionOnPage("/en-US/docs/Web/JavaScript/Guide/Using_promises", "Promise rejection events")}}
-- {{domxref("PromiseRejectionEvent")}}
-- {{jsxref("Promise")}}
-- {{domxref("Window/unhandledrejection_event", "unhandledrejection")}}
+- [Les évènements relatifs aux échecs des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises#évènements_liés_à_la_rupture_dune_promesse)
+- [`PromiseRejectionEvent`](/fr/docs/Web/API/PromiseRejectionEvent)
+- [Les promesses (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [`unhandledrejection`](/fr/docs/Web/API/Window/unhandledrejection_event)

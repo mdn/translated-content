@@ -47,14 +47,6 @@ _The events properties, of the form `onXYZ`, are defined on the {{domxref("Windo
 
 _This interface defines no method._
 
-## Especificaciones
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat("api.WindowEventHandlers")}}
-
 ## See also
 
 - {{domxref("Window")}} and {{domxref("WorkerGlobalScope")}}

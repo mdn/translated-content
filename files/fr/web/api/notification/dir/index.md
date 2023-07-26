@@ -1,14 +1,6 @@
 ---
 title: Notification.dir
-slug: Web/API/notification/dir
-tags:
-  - API
-  - API Notifications
-  - Notification
-  - Notifications
-  - Propriété
-  - Reference
-  - direction
+slug: Web/API/Notification/dir
 translation_of: Web/API/Notification/dir
 ---
 
@@ -19,7 +11,7 @@ La propriété en lecture seule **`dir`** de l'interface {{domxref ("Notificatio
 ## Syntaxe
 
 ```js
-Notification.dir
+Notification.dir;
 ```
 
 ### Valeur

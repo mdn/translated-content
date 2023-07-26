@@ -1,12 +1,6 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
-tags:
-  - 레퍼런스
-  - 메소드
-  - 수학
-  - 자바스크립트
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 ---
 
 {{JSRef}}
@@ -47,7 +41,7 @@ Math.sin(1);           // 0.8414709848078965
 Math.sin(Math.PI / 2); // 1
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

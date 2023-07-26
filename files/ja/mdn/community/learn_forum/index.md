@@ -3,7 +3,7 @@ title: 学習フォーラム
 slug: MDN/Community/Learn_forum
 original_slug: MDN/Contribute/Help_beginners
 i10n:
-  sourceCommit: 8dbe0b2acd7fdbf533a9bd2f517999cc2035d952
+  sourceCommit: 4c6b993ad0d43bc679688a3488e13a4ec0b2c3ec
 ---
 
 {{MDNSidebar}}
@@ -59,7 +59,7 @@ i10n:
       2. いくつかの点を除いて素晴らしい出来だった場合は、その点を伝えつつ、たくさん褒めてあげましょう。
       3. その人がもう少しで完成するところまで行ったが、完全にはうまくいかなかった場合、その人はよくやったと言いつつ、うまくいくために必要な修正点を伝え、私たちがやったことが見られるように採点ガイドへのリンクを貼るのもいいでしょう。
       4. もし、その人が解決策を見つけられなかった場合は、親切に励まし、どのような方向に進むべきか、いくつかのヒントを与えてあげてください。もっとうまくできるように、もう一度チャンスを与えてあげてください。
-      5. もし何か助けが必要な場合は、 [Matrix](https://wiki.mozilla.org/Matrix) の [MDN Web Docs チャットルーム](https://chat.mozilla.org/#/room/#mdn:mozilla.org)で助けを求めてください。
+      5. もし何か助けが必要な場合は、 [MDN Web Docs チャットルーム](/ja/docs/MDN/Community/Communication_channels#chat_rooms)で助けを求めてください。
 
 > **メモ:** 重要: 何よりも、忍耐強く、友好的で、親切であること。忘れないでください — これらの人々のほとんどは初心者です。
 
@@ -70,10 +70,10 @@ MDN の[ウェブ開発を学ぶ](/ja/docs/Learn)の章に関連する質問の�
 1. 一般的なページ構造に目を通してください。
 2. 特に、利用可能な評価の種類に注目してください。
 
-   - 数多くの「うでだめし」記事が用意されています (例えば [/ja/docs/Learn/JavaScript/Building_blocks/conditionals#Test_your_skills!](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!) を参照してください)。
-   - モジュールによっては、最後にもっと詳しい評価テストがあります (例えば [/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery](/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery) を参照してください)。
+   - 数多くの「うでだめし」記事が用意されています（例えば [/ja/docs/Learn/JavaScript/Building_blocks/conditionals#Test_your_skills!](/ja/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!) を参照してください）。
+   - モジュールによっては、最後にもっと詳しい評価テストがあります（例えば [/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery](/ja/docs/Learn/JavaScript/Building_blocks/Image_gallery) を参照してください）。
 
-3. 学習エリアに関連する GitHub リポジトリーを見てみましょう (ほとんどのファイルは <https://github.com/mdn/learning-area/> に、一部は <https://github.com/mdn/css-examples/tree/master/learn> で利用できます)。学習者が助けを求めている例のほとんどがここに含まれています。
+3. 学習エリアに関連する GitHub リポジトリーを見てみましょう（ほとんどのファイルは <https://github.com/mdn/learning-area/> に、一部は <https://github.com/mdn/css-examples/tree/master/learn> で利用できます）。学習者が助けを求めている例のほとんどがここに含まれています。
 4. それぞれの評価やスキルテストには、学習者の作業を評価するのに役立つように、関連する採点ガイドと模範解答が用意されています。
 5. これらのリソースを見つけやすくするために、例えば以下のようなパターンがあります。
 

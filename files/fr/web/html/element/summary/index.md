@@ -1,11 +1,6 @@
 ---
 title: '<summary> : l''élément de révélation d''un résumé'
 slug: Web/HTML/Element/summary
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/summary
 ---
 
@@ -53,7 +48,7 @@ Voir la section ci-après sur la compatibilité des navigateurs à ce sujet car 
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_simple","100%","160")}}
+{{EmbedLiveSample("","100%","160")}}
 
 ### Utilisation de titres
 
@@ -74,7 +69,7 @@ Il est possible d'utiliser des titres au sein d'un résumé.
 
 #### Résultat
 
-{{EmbedLiveSample("Utilisation_de_titres", 650, 120)}}
+{{EmbedLiveSample("", 650, 120)}}
 
 ### Utiliser avec divers éléments HTML
 
@@ -93,7 +88,7 @@ Il est possible d'utiliser des titres au sein d'un résumé.
 
 #### Résultat
 
-{{EmbedLiveSample("Utiliser_avec_divers_éléments_HTML", 650, 120)}}
+{{EmbedLiveSample("", 650, 120)}}
 
 ## Résumé technique
 
@@ -123,7 +118,7 @@ Il est possible d'utiliser des titres au sein d'un résumé.
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisés</th>
-      <td>{{ARIARole("button")}}</td>
+      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>

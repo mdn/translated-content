@@ -1,15 +1,10 @@
 ---
 title: 텍스트 그리기
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
-tags:
-  - HTML
-  - HTML:Canvas
-  - NeedsContent
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 original_slug: Drawing_text_using_a_canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 이전 챕터에서 [스타일과 컬러를 적용하는 방법](/ko/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)에 대해서 보았고 이번에는 캔버스에 텍스트를 그리는 방법에 대해서 볼 예정입니다.
 

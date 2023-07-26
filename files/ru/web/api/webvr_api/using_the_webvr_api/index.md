@@ -8,7 +8,7 @@ translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 
 WebVR API - фантастическое дополнение к набору инструментов веб-разработчика, позволяющее отображать WebGL сцены на устройствах виртуальной реальности, таких как Oculus Rift и HTC Vive. Но как же начать разработку VR для Веба? Эта статья познакомит вас с основами.
 
-> **Примечание:** **Обратите внимание**: Наиболее стабильная версия WebVR API — 1.1 — была недавно реализована в Firefox 55 (для Windows в релизной версии, для Mac OS X только в Nightly версии). Так же она доступна в Chrome при использовании Google Daydream. Существует спецификация для следующей версии — 2.0 — но процесс разработки всё ещё находится на ранней стадии. Последнюю информацию можно найти на [WebVR Spec Version List](https://w3c.github.io/webvr/).
+> **Примечание:** Наиболее стабильная версия WebVR API — 1.1 — была недавно реализована в Firefox 55 (для Windows в релизной версии, для Mac OS X только в Nightly версии). Так же она доступна в Chrome при использовании Google Daydream. Существует спецификация для следующей версии — 2.0 — но процесс разработки всё ещё находится на ранней стадии. Последнюю информацию можно найти на [WebVR Spec Version List](https://w3c.github.io/webvr/).
 
 ## С чего начать
 
@@ -30,13 +30,13 @@ WebVR API - фантастическое дополнение к набору и
 
 Рассмотрим как работает WebVR API на примере, проекте raw-webgl-example, который выглядит похожим образом:
 
-![](https://mdn.mozillademos.org/files/15121/Capture1.png)
+![](capture1.png)
 
-> **Примечание:** **Обратите внимание**: вы можете найти [исходный код примера](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) на GitHub, а так же [посмотреть как он работает прямо в браузере](https://mdn.github.io/webvr-tests/raw-webgl-example/).
+> **Примечание:** вы можете найти [исходный код примера](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) на GitHub, а так же [посмотреть как он работает прямо в браузере](https://mdn.github.io/webvr-tests/raw-webgl-example/).
 >
 > Примечание: если вы решили просто посмотреть на этот пример, не подключая VR устройство и не используя Firefox , то есть вероятность, что он не будет корректно отображаться при том, что [простой A-Frame пример](https://mdn.github.io/webvr-tests/aframe-demo/) работает. В таком случае установите одну из последних версий Firefox, и пример должен отобразиться как на рисунке выше, плюс должна присутствовать анимация.
 
-> **Примечание:** **Обратите внимание**: Если WebVR не работает в вашем браузере, то возможно вам следует убедиться, что работа идёт через видеокарту. Например, для видеокарт фирмы NVIDIA, если у вас успешно установлена панель управления NVIDIA, по клику правой кнопки на ярлык Firefox появится контекстное меню, в котором можно будет выбрать _Run with graphics processor > High-performance NVIDIA processor_.
+> **Примечание:** Если WebVR не работает в вашем браузере, то возможно вам следует убедиться, что работа идёт через видеокарту. Например, для видеокарт фирмы NVIDIA, если у вас успешно установлена панель управления NVIDIA, по клику правой кнопки на ярлык Firefox появится контекстное меню, в котором можно будет выбрать _Run with graphics processor > High-performance NVIDIA processor_.
 
 Наш пример это своеобразный святой Грааль примеров WebGL — вращающийся куб в 3D. Реализован этот пример с помощью чистого [WebGL API](/ru/docs/Web/API/WebGL_API). Мы не будем объяснять основы JavaScript или WebGL, а только то, что касается WebVR.
 
@@ -47,7 +47,7 @@ WebVR API - фантастическое дополнение к набору и
 
 При просмотре исходного кода [основного JavaScript файла нашего примера](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js), вы легко сможете найти части, относящиеся к WebVR, по предваряющим их комментариям. Просто забейте в строку поиска по документу строчку "WebVR".
 
-> **Примечание:** **Обратите внимание**: Чтобы узнать больше об основах JavaScript и WebGL, обратитесь к нашим [учебным материалам по JavaScript](/ru/docs/Learn/JavaScript) и нашему [руководству по WebGL](/ru/docs/Web/API/WebGL_API/Tutorial).
+> **Примечание:** Чтобы узнать больше об основах JavaScript и WebGL, обратитесь к нашим [учебным материалам по JavaScript](/ru/docs/Learn/JavaScript) и нашему [руководству по WebGL](/ru/docs/Web/API/WebGL_API/Tutorial).
 
 ## Как это работает?
 
@@ -159,7 +159,7 @@ Inside the promise `then()` block, we check whether the array length is more tha
 
 Now we have a {{domxref("VRDisplay")}} object, we can use it do a number of things. The next thing we want to do is wire up functionality to start and stop presentation of the WebGL content to the display.
 
-Continuing on with the previous code block, we now add an event listener to our start/stop button (`btn`) — when this button is clicked we want to check whether we are presenting to the display already (we do this in a fairly dumb fashion, by checking what the button [`textContent`](/en-US/docs/Web/API/Node/textContent) contains).
+Continuing on with the previous code block, we now add an event listener to our start/stop button (`btn`) — when this button is clicked we want to check whether we are presenting to the display already (we do this in a fairly dumb fashion, by checking what the button [`textContent`](/ru/docs/Web/API/Node/textContent) contains).
 
 If the display is not already presenting, we use the {{domxref("VRDisplay.requestPresent()")}} method to request that the browser start presenting content to the display. This takes as a parameter an array of the {{domxref("VRLayerInit")}} objects representing the layers you want to present in the display.
 
@@ -229,7 +229,7 @@ To stop the VR presentation when the button is subsequently pressed, we call {{d
 
 Once the presentation starts, you'll be able to see the stereoscopic view displayed in the browser:
 
-![](https://mdn.mozillademos.org/files/15123/Capture2.png)
+![](capture2.png)
 
 You'll learn below how the stereoscopic view is actually produced.
 
@@ -417,7 +417,7 @@ function displayPoseStats(pose) {
   var angAcc = pose.angularAcceleration;
 ```
 
-We then write out the data into the information box, updating it on every frame. We've clamped each value to three decimal places using [`toFixed()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed), as the values are hard to read otherwise.
+We then write out the data into the information box, updating it on every frame. We've clamped each value to three decimal places using [`toFixed()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed), as the values are hard to read otherwise.
 
 You should note that we've used a conditional expression to detect whether the linear acceleration and angular acceleration arrays are successfully returned before we display the data. These values are not reported by most VR hardware as yet, so the code would throw an error if we did not do this (the arrays return `null` if they are not successfully reported).
 

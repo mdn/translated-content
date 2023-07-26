@@ -1,10 +1,6 @@
 ---
 title: var
 slug: Web/JavaScript/Reference/Statements/var
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/var
 original_slug: Web/JavaScript/Referencia/Sentencias/var
 ---
 

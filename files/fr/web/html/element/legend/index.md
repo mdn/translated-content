@@ -1,12 +1,6 @@
 ---
 title: <legend>
-slug: Web/HTML/Element/Legend
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
+slug: Web/HTML/Element/legend
 translation_of: Web/HTML/Element/legend
 ---
 
@@ -58,7 +52,7 @@ Cet élément contient uniquement [les attributs universels](/fr/docs/Web/HTML/A
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >.
       </td>

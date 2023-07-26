@@ -2,7 +2,6 @@
 title: min()
 slug: Web/CSS/min
 translation_of: Web/CSS/min()
-original_slug: Web/CSS/min()
 ---
 
 {{CSSRef}}

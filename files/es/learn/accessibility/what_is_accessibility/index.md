@@ -50,8 +50,8 @@ Las personas con discapacidad son tan diversas como las personas sin discapacida
 Las personas con discapacidad visual son aquellas con ceguera, poca visión o daltonismo. Muchas personas con discapacidad visual utilizan amplificadores de pantalla que consisten en lupas físicas o funciones de zoom por software. La mayoría de los navegadores y sistemas operativos de hoy en día tienen instaladas funciones de zoom. Algunos usuarios confían en los lectores de pantalla, un software que lee en voz alta los textos digitales. Algunos ejemplos de lectores de pantalla incluyen:
 
 - Productos comerciales de pago, como [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) y [Dolphin Screen Reader](https://yourdolphin.com/screenreader) (Windows).
-- Productos gratuitos, como [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://www.chromevox.com/) (Chrome, Windows y Mac OS X) y [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
-- Productos integrados en el sistema operativo, como [VoiceOver](https://www.apple.com/accessibility/mac/vision/) (MacOS, iPadOS, IOS), [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) (Microsoft Windows), [ChromeVox](https://www.chromevox.com/) (en Chrome OS) y [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- Productos gratuitos, como [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome, Windows y Mac OS X) y [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
+- Productos integrados en el sistema operativo, como [VoiceOver](https://www.apple.com/accessibility/mac/vision/) (MacOS, iPadOS, IOS), [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) (Microsoft Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (en Chrome OS) y [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
 Familiarizarse con los lectores de pantalla puede ser útil, así como configurar un lector de pantalla y jugar con él para aprender cómo funciona. Consulta nuestra [guía de lectores de pantalla de prueba para la navegación cruzada](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#Screenreaders) para obtener más detalles sobre su uso. El vídeo siguiente proporciona un breve ejemplo de cómo es esta experiencia.
 
@@ -163,16 +163,6 @@ Cuando la información semántica nativa proporcionada por los elementos HTML de
 Este artículo debería haber dado una descripción detallada sobre la accesibilidad, mostrar por qué es importante y enseñar cómo puede encajar en tu flujo de trabajo. Ahora también deberías tener sed de conocimientos sobre los detalles de implementación que hacen que los sitios sean accesibles. Comenzaremos con esto en la sección siguiente, observando por qué HTML es una buena base para la accesibilidad.
 
 {{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
-
-## En este módulo
-
-- [¿Qué es la accesibilidad?](/es/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: Una buena base para la accesibilidad](/es/docs/Learn/Accessibility/HTML)
-- [Buenas prácticas de accesibilidad en CSS y JavaScript](/es/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [Fundamentos WAI-ARIA](/es/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Multimedia accesible](/es/docs/Learn/Accessibility/Multimedia)
-- [Accesibilidad móvil](/es/docs/Learn/Accessibility/Mobile)
-- [Resolución de problemas de accesibilidad](/es/docs/Learn/Accessibility/Accessibility_troubleshooting)
 
 ## Véase también
 

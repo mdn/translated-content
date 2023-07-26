@@ -1,14 +1,7 @@
 ---
 title: Disposition en colonnes
 slug: Web/CSS/Layout_cookbook/Column_layouts
-tags:
-  - CSS
-  - Guide
-  - Multi-col
-  - flexbox
-  - grid
 translation_of: Web/CSS/Layout_cookbook/Column_layouts
-original_slug: Web/CSS/Layout_cookbook/Disposition_en_colonnes
 ---
 
 {{CSSRef}}
@@ -82,27 +75,7 @@ On utiliser les grilles CSS lorsque :
 
 ## Compatibilité des navigateurs
 
-Les différentes méthodes évoquées plus haut peuvent disposer d'une prise en charge différente selon les navigateurs, se référer à chacun des tableaux suivant pour plus de détails sur la prise en charge de chaque propriété.
-
-### column-width
-
-{{Compat("css.properties.column-width")}}
-
-### column-rule
-
-{{Compat("css.properties.column-rule")}}
-
-### flex
-
-{{Compat("css.properties.flex")}}
-
-### flex-wrap
-
-{{Compat("css.properties.flex-wrap")}}
-
-### grid-template-columns
-
-{{Compat("css.properties.grid-template-columns")}}
+{{Compat}}
 
 ## Voir aussi
 

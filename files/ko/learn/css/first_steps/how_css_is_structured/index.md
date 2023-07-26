@@ -22,11 +22,11 @@ CSS 가 무엇인지, 그리고 CSS 의 기본 사용법에 대해 여러분은 
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습) 및
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
+        <a href="/ko/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works"
           >CSS 작동 방식</a
         >
         이해
@@ -251,20 +251,20 @@ p {
 
 가장 기본적인 수준에서, CSS 는 두 가지 요소로 구성됩니다:
 
-- **속성 (Properties)**: 변경할 스타일 기능 (예: [`font-size`](/en-US/docs/Web/CSS/font-size), [`width`](/en-US/docs/Web/CSS/width), [`background-color`](/en-US/docs/Web/CSS/background-color)) 을 나타내는 식별자입니다.
+- **속성 (Properties)**: 변경할 스타일 기능 (예: [`font-size`](/ko/docs/Web/CSS/font-size), [`width`](/ko/docs/Web/CSS/width), [`background-color`](/ko/docs/Web/CSS/background-color)) 을 나타내는 식별자입니다.
 - **값 (Values)**: 지정된 각 속성에는 값이 지정되어 있으며, 이는 해당 스타일 기능을 변경하는 방법 (예: 글꼴, 너비 또는 배경색을 변경하려는 항목) 을 나타냅니다.
 
 아래 이미지는 단일 속성과 값을 강조 표시합니다. 속성 이름은 `color` 이고 값은 `blue` 입니다.
 
-![A declaration highlighted in the CSS](https://mdn.mozillademos.org/files/16498/declaration.png)
+![A declaration highlighted in the CSS](declaration.png)
 
 값 과 쌍을 이루는 속성을 _CSS **선언 (declaration)**_ 이라고 합니다. CSS 선언은 _CSS **선언 블록**_ 안에 있습니다. 다음 이미지는 선언 블록이 강조 표시된 CSS 를 보여줍니다.
 
-![A highlighted declaration block](https://mdn.mozillademos.org/files/16499/declaration-block.png)
+![A highlighted declaration block](declaration-block.png)
 
-마지막으로, CSS 선언 블록은 _선택자_ 와 쌍을 이루어 _CSS Rulesets_ (또는 _CSS **규칙** _) 를 생성합니다. 이미지에는 `h1` 선택자 및 `p` 선택자의 두 가지 규칙이 있습니다. `h1` 의 규칙이 강조 표시됩니다.
+마지막으로, CSS 선언 블록은 _선택자_ 와 쌍을 이루어 _CSS Rulesets_ (또는 **CSS 규칙**) 를 생성합니다. 이미지에는 `h1` 선택자 및 `p` 선택자의 두 가지 규칙이 있습니다. `h1` 의 규칙이 강조 표시됩니다.
 
-![The rule for h1 highlighted](https://mdn.mozillademos.org/files/16500/rules.png)
+![The rule for h1 highlighted](rules.png)
 
 CSS 속성을 특정 값으로 설정하는 것은 CSS 언어의 핵심 기능입니다. CSS 엔진은 페이지의 모든 단일 요소에 적용할 선언을 계산하여 적절하게 배치하고 스타일을 지정합니다. 기억해야 할 것은 CSS 에서 속성과 값이 모두 대소문자를 구분한다는 것입니다. 각 쌍의 속성 과 값은 콜론 (`:`) 으로 구분됩니다.
 
@@ -335,7 +335,7 @@ CSS 속성을 특정 값으로 설정하는 것은 CSS 언어의 핵심 기능�
 
 ## @rules
 
-아직, 우리는 [`@rules`](/en-US/docs/Web/CSS/At-rule) ("at-rules" 로 발음) 가 발생하지 않았습니다. 이것들은 CSS 에 행동 방법에 대한 지침을 제공하는 특수 규칙입니다. 일부 `@rules` 는 규칙 이름과 값으로 단순합니다. 예를 들어, 추가 스타일 시트를 기본 CSS 스타일 시트로 가져오려면 `@import` 를 사용할 수 있습니다:
+아직, 우리는 [`@rules`](/ko/docs/Web/CSS/At-rule) ("at-rules" 로 발음) 가 발생하지 않았습니다. 이것들은 CSS 에 행동 방법에 대한 지침을 제공하는 특수 규칙입니다. 일부 `@rules` 는 규칙 이름과 값으로 단순합니다. 예를 들어, 추가 스타일 시트를 기본 CSS 스타일 시트로 가져오려면 `@import` 를 사용할 수 있습니다:
 
 ```css
 @import 'styles2.css';
@@ -540,11 +540,3 @@ padding- left: 10px;
 브라우저가 HTML 과 CSS 를 가져와서 웹 페이지로 전환하는 방법에 대해 약간 이해하는 것이 유용합니다. 따라서 다음 기사 — [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works) — 에서 해당 작업을 살펴 보겠습니다.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-## 이번 강의에서는
-
-1. [CSS 란 무엇인가?](/ko/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 구조](/ko/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [새로운 지식 사용](/ko/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

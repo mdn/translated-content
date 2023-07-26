@@ -28,8 +28,8 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 - {{jsxref("Date")}}
 - {{jsxref("Error")}} 类型（仅限部分 [Error 类型](#error_类型)）。
 - {{jsxref("Map")}}
-- {{jsxref("Object")}} objects: but only plain objects (e.g. from object literals).
-- 除 `symbol` 以外的[基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#primitive_values)。
+- {{jsxref("Object")}} 对象：仅限简单对象（如使用对象字面量创建的）。
+- 除 `symbol` 以外的[基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#原始值)。
 - {{jsxref("RegExp")}}：`lastIndex` 字段不会被保留。
 - {{jsxref("Set")}}
 - {{jsxref("String")}}
@@ -37,16 +37,16 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 
 #### Error 类型
 
-仅支持以下 `Error` 类型：[Error](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error)、[EvalError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/EvalError)、[RangeError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RangeError)、[ReferenceError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)、[SyntaxError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)、[TypeError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError)、[URIError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/URIError)（或其它会被设置为 `Error` 的）。
+仅支持以下 `Error` 类型：[Error](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error)、[EvalError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/EvalError)、[RangeError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RangeError)、[ReferenceError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError)、[SyntaxError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)、[TypeError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError)、[URIError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/URIError)（或其他会被设置为 `Error` 的）。
 
-浏览器必须序列化 `name` 和 `message` 字段，其它有意义的字段则可能会序列化，如 `stack`、`cause` 等。
+浏览器必须序列化 `name` 和 `message` 字段，其他有意义的字段则可能会序列化，如 `stack`、`cause` 等。
 
 [AggregateError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AggregateError) 预计会在 [whatwg/html#5749](https://github.com/whatwg/html/pull/5749) 被添加到标准中（并且已被部分浏览器所支持）。
 
 ## 参见
 
 - [HTML 规范：安全地传递结构化数据](https://html.spec.whatwg.org/multipage/infrastructure.html#safe-passing-of-structured-data)
-- {{Glossary("Transferable objects", "可转移对象")}}
+- [可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)
 - {{domxref("structuredClone()")}}
 - {{domxref("window.history")}}
 - {{domxref("window.postMessage()")}}

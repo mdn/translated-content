@@ -1,6 +1,6 @@
 ---
 title: SubtleCrypto.generateKey()
-slug: Web/API/SubtleCrypto/GenerateKey
+slug: Web/API/SubtleCrypto/generateKey
 ---
 
 {{APIRef("Web Crypto API")}}
@@ -61,6 +61,6 @@ A {{jsxref("Promise")}} é rejeitada quando a seguinte exceção é encontrada:
 - {{domxref("Crypto")}} e {{domxref("Crypto.subtle")}}.
 - {{domxref("SubtleCrypto")}}, a interface a qual ele pertence.
 
-### Dicionário:
+### Dicionário
 
 "Key" = "Chave"

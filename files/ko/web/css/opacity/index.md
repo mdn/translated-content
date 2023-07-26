@@ -1,12 +1,6 @@
 ---
 title: opacity
 slug: Web/CSS/opacity
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - 색
-translation_of: Web/CSS/opacity
 ---
 {{CSSRef}}
 
@@ -82,7 +76,7 @@ img.opacity:hover {
 ```
 
 ```html
-<img src="//developer.mozilla.org/static/img/opengraph-logo.png"
+<img src="https://developer.mozilla.org/mdn-social-share.png"
   alt="MDN logo" width="128" height="146"
   class="opacity">
 ```

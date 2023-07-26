@@ -48,7 +48,7 @@ As duas URNs correspondem
 
 ### Esquema ou protocolo
 
-- ![Protocol](https://mdn.mozillademos.org/files/8013/mdn-url-protocol@x2.png)
+- ![Protocol](mdn-url-protocol@x2.png)
   - : `http://` é o protocolo. Ele indica qual é o protocolo que o navegador irá usar. Usualmente o protocolo é o HTTP, ou sua versão segura, HTTPS. A Web requer um desses dois, mas os navegadores tambem sabem como lidar com outros protocolos como o `mailto:` (para abrir um cliente de email) ou o `ftp:` para fazer uma transferêcia de arquivo, então não fique surpreso se ver alguns desses protocolos. Esquemas comuns são:
 
 | Esquema     | Descrição                                                                  |
@@ -66,27 +66,27 @@ As duas URNs correspondem
 
 ### Autoridade
 
-- ![Domaine Name](https://mdn.mozillademos.org/files/8015/mdn-url-domain@x2.png)
+- ![Domaine Name](mdn-url-domain@x2.png)
   - : `www.example.com` é o nome de domínio ou autoridade que governa o namespace. Ele indica qual servidor web será solicitado. Alternativamente, é possível utilizar um {{Glossary("IP address")}}, mas isso pode ser menos conveniente e não é muito utilizado na Web.
 
 ### Porta
 
-- ![Port](https://mdn.mozillademos.org/files/8017/mdn-url-port@x2.png)
+- ![Port](mdn-url-port@x2.png)
   - : `:80` é a porta nesta instância . Ela indica qual é o "portão" técnico usado para acessar os recursos no servidor web. Usualmente ela é omitida se o servidor web utiliza a porta padrão do protocolo HTTP (80 para HTTP e 443 para HTTPS) para garantir o acesso aos recursos. Do contrário, ela se torna obrigatória.
 
 ### Caminhos
 
-- ![Path to the file](https://mdn.mozillademos.org/files/8019/mdn-url-path@x2.png)
+- ![Path to the file](mdn-url-path@x2.png)
   - : `/path/to/myfile.html` é o caminho para o recurso no servidor Web. Nos primeiros dias da Web, um caminho era representado pelo caminho físico correspondente no servidor web. Hoje em dia isso é mais uma abstração tratada pelos servidores Web não sendo necessariamente o endereço físico do arquivo em questão.
 
 ### Query / Parâmetros
 
-- ![Parameters](https://mdn.mozillademos.org/files/8021/mdn-url-parameters@x2.png)
+- ![Parameters](mdn-url-parameters@x2.png)
   - : `?key1=value1&key2=value2` são parâmetros extras fornecidos ao servidor Web. Eles são uma lista de pares chaves/valores separados com o símbolo `&` O servidor web pode usar esses parametros para fazer coisas extras depois retornando o recurso para o usuário. Cada servidor web tem suas regras em relação aos parâmetros, e o unico jeito confiável de saber como um servidor Web especifico trata os parâmetros é perguntando o dono do servidor.
 
 ### Fragmentos
 
-- ![Anchor](https://mdn.mozillademos.org/files/8023/mdn-url-anchor@x2.png)
+- ![Anchor](mdn-url-anchor@x2.png)
   - : `#SomewhereInTheDocument` é uma âncora para outra parte do próprio recurso. Uma âncora representa uma espécie de "marcador" dentro do recurso, dando ao navegador as instruções para mostrar o conteúdo localizado naquele ponto "marcado". Em um documento HTML, por exemplo, o navegador erá dar scroll para a ancora em um ponto definido; em um vídeo ou audio, o navegor erá tentar ir para o tempo que a âncora representa. Vale ressaltar que a parte após o #, também conhecido como identificador de fragmento, nunca é enviado ao servidor com o pedido.
 
 ## Notas de uso

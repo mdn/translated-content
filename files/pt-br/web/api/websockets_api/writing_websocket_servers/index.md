@@ -80,7 +80,7 @@ Cada _data frame_ (do cliente para o servidor ou vice-versa) segue o mesmo forma
 
 ```
 Frame format:
-​​
+
       0                   1                   2                   3
       0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
      +-+-+-+-+-------+-+-------------+-------------------------------+

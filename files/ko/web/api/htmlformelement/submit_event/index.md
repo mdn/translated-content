@@ -1,12 +1,6 @@
 ---
 title: GlobalEventHandlers.onsubmit
 slug: Web/API/HTMLFormElement/submit_event
-tags:
-  - API
-  - HTML DOM
-  - 레퍼런스
-  - 속성
-translation_of: Web/API/GlobalEventHandlers/onsubmit
 original_slug: Web/API/GlobalEventHandlers/onsubmit
 ---
 

@@ -1,15 +1,12 @@
 ---
 title: Como criar um exercício de aprendizado interativo
 slug: conflicting/MDN/Writing_guidelines/Page_structures/Live_samples
-tags:
-  - Guía
-translation_of: MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 original_slug: MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 ---
 
 {{MDNSidebar}}
 
-Ao aprender a web, é importante confiar no conteúdo da aprendizagem ativa. Esse conteúdo é feito para ajudar a aprender algo pró-ativamente. Pode ser exercícios, exemplos de hackeáveis ​​em tempo real, tarefas a realizar, análises, etc. Em suma, qualquer coisa que desejar, ajuda alguém a entender ativamente algo.
+Ao aprender a web, é importante confiar no conteúdo da aprendizagem ativa. Esse conteúdo é feito para ajudar a aprender algo pró-ativamente. Pode ser exercícios, exemplos de hackeáveis em tempo real, tarefas a realizar, análises, etc. Em suma, qualquer coisa que desejar, ajuda alguém a entender ativamente algo.
 
 Não existe uma maneira direta para criar esse conteúdo. Por exemplo, existem muitas ferramentas de terceiros que podem ajudar-lo a criar exemplos em tempo real (ver: [JSFiddle](https://jsfiddle.net/) , [CodePen](https://codepen.io/) , [Dabblet](http://dabblet.com/) , etc.) que você pode vincular a partir de artigos MDN. Se Você Quiser CRIAR Exercícios Mais AVANÇADOS e compreensíveis, rápido Você PODE USAR fácilmente o [dedal](https://thimble.mozilla.org) DO PROJETO WebMaker.
 

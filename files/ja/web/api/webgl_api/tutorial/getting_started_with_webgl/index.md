@@ -3,7 +3,7 @@ title: WebGL 入門
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
+{{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
 [WebGL](/ja/docs/Web/API/WebGL_API) により、ウェブコンテンツが [OpenGL ES](https://www.khronos.org/opengles/) 2.0 ベースの API を用いて、対応しているブラウザーではプラグインを使わずに、二次元および三次元の描画を HTML の [`canvas`](/ja/docs/Web/API/Canvas_API) において行うことができます。
 

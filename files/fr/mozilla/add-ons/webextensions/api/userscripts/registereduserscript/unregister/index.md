@@ -1,14 +1,6 @@
 ---
 title: RegisteredUserScript.unregister()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
-tags:
-  - Add-ons
-  - Extensions
-  - Method
-  - User Scripts API
-  - WebExtensions
-  - unregister
-  - userScripts
 translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
 ---
 
@@ -36,9 +28,9 @@ Aucun
 
 Une {{JSxRef("Promise")}} qui sera résolu une fois le script utilisateur désenregistré. La promesse ne rapporte rien.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.userScripts.RegisteredUserScript.unregister")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,6 @@
 ---
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
-translation_of: Web/API/Intersection_Observer_API
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}
@@ -509,11 +508,11 @@ Below is the resulting content. Scroll this page up and down and notice how the 
 
 There's an even more extensive example at [Timing element visibility with the Intersection Observer API](/ko/docs/Web/API/Intersection_Observer_API/Timing_element_visibility).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

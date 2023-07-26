@@ -411,7 +411,7 @@ da como resultado:
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array")}}
+{{Compat}}
 
 ## Ver también
 

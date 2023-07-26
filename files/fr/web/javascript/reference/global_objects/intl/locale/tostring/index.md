@@ -1,14 +1,7 @@
 ---
 title: Intl.Locale.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
-tags:
-  - Intl
-  - JavaScript
-  - Locale
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/toString
 ---
 
 {{JSRef}}
@@ -41,13 +34,11 @@ console.log(maLocale.toString()); // Affiche "fr-Latn-FR-u-ca-gregory-hc-h24"
 
 ## Spécifications
 
-| Spécification                                                                                                                          | État                    | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.toString()`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.toString) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

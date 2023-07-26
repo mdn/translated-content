@@ -1,12 +1,6 @@
 ---
 title: Event.timeStamp
 slug: Web/API/Event/timeStamp
-tags:
-  - Property
-  - Reference
-  - Read-only
-browser-compat: api.Event.timeStamp
-translation_of: Web/API/Event/timeStamp
 ---
 
 {{APIRef("DOM")}}

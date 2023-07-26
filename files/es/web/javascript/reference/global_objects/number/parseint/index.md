@@ -53,9 +53,9 @@ if (Number.parseInt === undefined) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.parseInt")}}
+{{Compat}}
 
 ## See also
 

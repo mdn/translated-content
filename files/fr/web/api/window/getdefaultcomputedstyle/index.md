@@ -1,11 +1,6 @@
 ---
 title: Window.getDefaultComputedStyle()
-slug: Web/API/Window/getDefaultComputedStyle
-tags:
-  - API
-  - CSS
-  - Method
-  - Reference
+slug: Web/API/window/getDefaultComputedStyle
 translation_of: Web/API/window/getDefaultComputedStyle
 ---
 
@@ -35,21 +30,21 @@ var miseEnForme = window.getDefaultComputedStyle(elem1);
 
 ```html
 <style>
-#conteneur-elem {
-   position: absolute;
-   left:     100px;
-   top:      200px;
-   height:   100px;
- }
+  #conteneur-elem {
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    height: 100px;
+  }
 </style>
 
 <div id="conteneur-elem">factice</div>
 <div id="sortie"></div>
 
 <script>
-    var elem = document.getElementById("conteneur-elem");
-    var laPropCSS = window.getDefaultComputedStyle(elem).position;
-    document.getElementById("sortie").innerHTML = laPropCSS; // affichera "static"
+  var elem = document.getElementById("conteneur-elem");
+  var laPropCSS = window.getDefaultComputedStyle(elem).position;
+  document.getElementById("sortie").innerHTML = laPropCSS; // affichera "static"
 </script>
 ```
 
@@ -63,18 +58,18 @@ L'objet retourné est du même type que l'objet retourné par `getComputedStyle`
 
 ```html
 <style>
- h3:after {
-   content: ' déchire !';
- }
+  h3:after {
+    content: " déchire !";
+  }
 </style>
 
 <h3>contenu généré</h3>
 
 <script>
-  var h3       = document.querySelector('h3'),
-      resultat = getDefaultComputedStyle(h3, ':after').content;
+  var h3 = document.querySelector("h3"),
+    resultat = getDefaultComputedStyle(h3, ":after").content;
 
-  console.log('le contenu généré est : ', resultat); // retourne 'none'
+  console.log("le contenu généré est : ", resultat); // retourne 'none'
 </script>
 ```
 
@@ -88,4 +83,4 @@ Proposé au groupe de travail CSS.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.getDefaultComputedStyle")}}
+{{Compat}}

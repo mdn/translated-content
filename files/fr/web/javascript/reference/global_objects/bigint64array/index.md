@@ -1,15 +1,7 @@
 ---
 title: BigInt64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigInt64Array
-tags:
-  - BigInt
-  - Constructeur
-  - JavaScript
-  - Reference
-  - TypedArray
-  - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt64Array
-original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt64Array
 ---
 
 {{JSRef}}
@@ -151,13 +143,11 @@ var BigInt64 = new BigInt64Array(iterable);
 
 ## Spécifications
 
-| Spécification                                                                                     | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `BigInt`](https://tc39.github.io/proposal-bigint/#sec-typedarrays-and-dataview) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.BigInt64Array")}}
+{{Compat}}
 
 ## Voir aussi
 

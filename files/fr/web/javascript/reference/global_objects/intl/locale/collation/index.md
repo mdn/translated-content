@@ -1,15 +1,7 @@
 ---
 title: Intl.Locale.prototype.collation
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/collation
 ---
 
 {{JSRef}}
@@ -171,13 +163,11 @@ console.log(configColl.collation); // Affichera "emoji" dans la console
 
 ## Spécifications
 
-| Spécification                                                                                                                          | État                    | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.collation`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.collation) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.collation")}}
+{{Compat}}
 
 ## Voir aussi
 

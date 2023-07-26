@@ -2,7 +2,6 @@
 title: env()
 slug: Web/CSS/env
 translation_of: Web/CSS/env()
-original_slug: Web/CSS/env()
 ---
 
 {{CSSRef}}
@@ -123,4 +122,3 @@ Pour la deuxième valeur, il est possible d'utiliser des virgules afin de fourni
 - [Les propriétés personnalisées et la cascade](/fr/docs/Web/CSS/CSS_Variables)
 - [Les propriétés personnalisées (--\*)](/fr/docs/Web/CSS/--*)
 - [Utiliser les propriétés CSS personnalisées](/fr/docs/Web/CSS/Les_variables_CSS)
-- {{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}

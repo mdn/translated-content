@@ -8,13 +8,13 @@ original_slug: Web/CSS/transform-function/matrix()
 
 A função CSS **`matrix()`** define uma matriz de transformação 2D homogênea. Isso resulta em um dado do tipo {{cssxref("&lt;transform-function&gt;")}} .
 
-> **Note:** `matrix(a, b, c, d, tx, ty)` is a shorthand for `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`.
+> **Nota:** `matrix(a, b, c, d, tx, ty)` is a shorthand for `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)`.
 
 ## Syntax
 
 The `matrix()` function is specified with six values. The constant values are implied and not passed as parameters; the other parameters are described in the column-major order.
 
-> **Note:** Until Firefox 16, Gecko accepted a {{cssxref("&lt;length&gt;")}} value for _tx_ and _ty_.
+> **Nota:** Until Firefox 16, Gecko accepted a {{cssxref("&lt;length&gt;")}} value for _tx_ and _ty_.
 
 ```
 matrix(a, b, c, d, tx, ty)

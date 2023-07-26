@@ -1,5 +1,5 @@
 ---
-title: ':-moz-ui-invalid'
+title: ":-moz-ui-invalid"
 slug: Web/CSS/:user-invalid
 original_slug: Web/CSS/:-moz-ui-invalid
 ---
@@ -23,9 +23,9 @@ Por defecto Gecko aplica un estilo que crear un brillo rojo "glow" (usando la pr
 
 No es parte de ninguna especificación.
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.user-invalid")}}
+{{Compat}}
 
 ## Ver además
 

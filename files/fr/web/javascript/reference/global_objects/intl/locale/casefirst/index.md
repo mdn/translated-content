@@ -1,16 +1,7 @@
 ---
 title: Intl.Locale.prototype.caseFirst
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
-  - Unicode
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/caseFirst
 ---
 
 {{JSRef}}
@@ -53,13 +44,11 @@ console.log(us12hour.caseFirst); // affichera "lower" dans la console.
 
 ## Spécifications
 
-| Spécification                                                                                                      | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.caseFirst) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.caseFirst")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,16 +1,6 @@
 ---
 title: browsingData.remove()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - remove
-  - supprimer
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/remove
 ---
 
@@ -28,9 +18,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.browsingData.remove(
-  removalOptions,            // RemovalOptions object
-  dataTypes                  // DataTypeSet object
-)
+  removalOptions, // RemovalOptions object
+  dataTypes, // DataTypeSet object
+);
 ```
 
 ### Paramètres
@@ -44,9 +34,9 @@ var removing = browser.browsingData.remove(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.remove")}}
+{{Compat}}
 
 ## Exemples
 
@@ -65,12 +55,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.remove(
-  {since: oneWeekAgo},
-  {downloads: true, history: true}).
-then(onRemoved, onError);
+browser.browsingData
+  .remove({ since: oneWeekAgo }, { downloads: true, history: true })
+  .then(onRemoved, onError);
 ```
 
 Supprimer tout l'historique de téléchargement et de navigation :
@@ -84,9 +73,9 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.remove({},
-  {downloads: true, history: true}).
-then(onRemoved, onError);
+browser.browsingData
+  .remove({}, { downloads: true, history: true })
+  .then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}

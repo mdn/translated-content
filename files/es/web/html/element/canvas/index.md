@@ -13,16 +13,16 @@ Para más artículos sobre canvas, consulta la [página del tema canvas](/es/HTM
 ## Contexto de uso
 
 | Contenido permitido            | Transparente, ya sea [contenido estático](/en/HTML/Content_categories#phrasing_content) o [contenido dinámico](/en/HTML/Content_categories#flow_content) . |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                                                                                                                    |
-| Elementos primarios permitidos | Cualquier elemento que acepte contenido dinámico o cualquier otro elemento que acepte contenido estático .                                                                                                                                         |
-| Documento normativo            | [HTML 5, sección 4.8.10](http://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                                                                                                    |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                            |
+| Elementos primarios permitidos | Cualquier elemento que acepte contenido dinámico o cualquier otro elemento que acepte contenido estático .                                                 |
+| Documento normativo            | [HTML 5, sección 4.8.10](http://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                            |
 
 ## Atributos
 
-- {{ htmlattrdef("width") }}
+- `width`
   - : La anchura del espacio de coordenadas en píxeles CSS. El valor predeterminado es 300.
-- {{ htmlattrdef("height") }}
+- `height`
   - : La altura del espacio de coordenadas en píxeles CSS. El valor predeterminado es 150.
 
 > **Nota:** el tamaño del lienzo mostrado se puede cambiar con una hoja de estilo. La imagen se escala durante la representación para adaptarse al tamaño que se le ha aplicado estilo .

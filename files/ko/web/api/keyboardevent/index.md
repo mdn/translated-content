@@ -1,21 +1,6 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
-tags:
-  - API
-  - DOM
-  - Event
-  - Input
-  - Interface
-  - Key Events
-  - Keyboard Events
-  - KeyboardEvent
-  - MakeBrowserAgnostic
-  - Reference
-  - UI Events
-  - keyboard
-  - user input
-browser-compat: api.KeyboardEvent
 ---
 
 {{APIRef("UI Events")}}
@@ -222,7 +207,7 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 
 > **참고:** 리눅스에서는, Firefox 12와 그 이전 버전에서는 이 키들의 `keypress` 이벤트도 전송했습니다.
 
-그러나, macOS의 이벤트 모델의 제한으로 인해 Caps Lock은 `keydown` 이벤트만 전송합니다. Num Lock은 일부 오래된(2007년 이전의) 노트북 모델에서는 지원되었지만, 그 이후로는 macOS에선 외부 키보드에서도 Num Lock을 지원하지 않습니다. Num Lock 키가 있는 옛 맥북에서는 Num Lock은 어떤 이벤트도 생성하지 않습니다. Gecko는 F14 키가 있는 외부 키보드가 연결되어 있다면 Scroll Lock 키를 지원합니다. Firefox의 일부 이전 버전에서는 Scroll Lock 키도 `keypress` 이벤트를 발생시켰습니다. 이 일관성 없는 동작은 {{bug(602812)}}였습니다.
+그러나, macOS의 이벤트 모델의 제한으로 인해 Caps Lock은 `keydown` 이벤트만 전송합니다. Num Lock은 일부 오래된(2007년 이전의) 노트북 모델에서는 지원되었지만, 그 이후로는 macOS에선 외부 키보드에서도 Num Lock을 지원하지 않습니다. Num Lock 키가 있는 옛 맥북에서는 Num Lock은 어떤 이벤트도 생성하지 않습니다. Gecko는 F14 키가 있는 외부 키보드가 연결되어 있다면 Scroll Lock 키를 지원합니다. Firefox의 일부 이전 버전에서는 Scroll Lock 키도 `keypress` 이벤트를 발생시켰습니다. 이 일관성 없는 동작은 [Firefox bug 602812](https://bugzil.la/602812)였습니다.
 
 ### 자동 반복 처리
 
@@ -251,21 +236,6 @@ _이 인터페이스는 부모인 {{domxref("UIEvent")}} 와 {{domxref("Event")}
 8. `keyup`
 
 불행하게도 이러한 환경에서는 웹 컨텐츠가 이 키가 자동 반복되고 있는 키인지, 아니면 반복해서 눌리고 있는 키인지를 구별할 수 있는 방법이 없습니다.
-
-#### Gecko 5.0 이전의 자동 반복 처리
-
-Gecko 5.0 {{geckoRelease('5.0')}} 이전에는, 플랫폼 간의 키보드 처리의 일관성이 떨어졌습니다.
-
-- Windows
-  - : 자동 반복은 Gecko 4.0 이후와 동일합니다.
-- Mac
-  - : 첫 `keydown` 이벤트 이후에는 `keyup` 이벤트가 발생하기 전까진 `keypress` 이벤트만 전송됩니다. 간격을 두고 발생하는 `keydown` 이벤트는 전송되지 않습니다.
-- Linux
-  - : 플랫폼에 따라 이벤트 동작이 다릅니다. 기본 이벤트 모델의 동작에 따라 Windows 또는 Mac 처럼 동작합니다.
-
-> **참고:** 이벤트를 수동으로 실행하더라도 해당 이벤트와 관련된 기본 동작을 생성하지 않습니다.
-> 예를 들어, 키 이벤트를 수동으로 실행해도 포커스된 텍스트 입력 부분에 해당 문자가 표시되지는 않습니다.
-> UI 이벤트의 경우, 브라우저와 상호 작용하는 사용자의 작업 시뮬레이션 스크립트를 막으므로 보안상의 이유로 중요합니다.
 
 ## 예제
 
@@ -341,7 +311,7 @@ document.addEventListener('keyup', (event) => {
 
   <kbd>Enter</kbd>
 
-  키의 조합(상호 호환성을 위해 유지됨)을 제외한 [non-printable keys](</ko/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>)에 대해서는 `keypress` 이벤트가 발생하지 않습니다 ({{bug(968056)}}).
+  키의 조합(상호 호환성을 위해 유지됨)을 제외한 [non-printable keys](</ko/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>)에 대해서는 `keypress` 이벤트가 발생하지 않습니다 ([Firefox bug 968056](https://bugzil.la/968056)).
 
 ## 같이 보기
 

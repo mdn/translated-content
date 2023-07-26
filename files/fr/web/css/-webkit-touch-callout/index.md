@@ -1,11 +1,6 @@
 ---
 title: '-webkit-touch-callout'
 slug: Web/CSS/-webkit-touch-callout
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-touch-callout
 ---
 
@@ -53,4 +48,4 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-touch-callout")}}
+{{Compat}}

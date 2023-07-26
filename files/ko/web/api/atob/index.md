@@ -1,16 +1,6 @@
 ---
 title: atob()
 slug: Web/API/atob
-page-type: web-api-global-function
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Polyfill
-  - Web
-browser-compat: api.atob
-translation_of: Web/API/atob
 ---
 
 {{APIRef("HTML DOM")}}

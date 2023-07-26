@@ -1,22 +1,26 @@
 ---
 title: PushEvent
 slug: Web/API/PushEvent
+l10n:
+  sourceCommit: db72d5612ada1d40cde0de191389dde2fe062c23
 ---
 
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+{{APIRef("Push API")}}
 
-[Push API](/ja/docs/Web/API/Push_API) の **`PushEvent`** インターフェイスは、受け取ったプッシュメッセージを表します。このイベントは、{{domxref("ServiceWorker")}} の [グローバルスコープ](/ja/docs/Web/API/ServiceWorkerGlobalScope)に送信されます。これは、アプリケーションサーバーから {{domxref("PushSubscription")}} に送信された情報を含みます。
+**`PushEvent`** は[プッシュ API](/ja/docs/Web/API/Push_API) のインターフェイスで、受け取ったプッシュメッセージを表します。このイベントは、{{domxref("ServiceWorker")}} の [グローバルスコープ](/ja/docs/Web/API/ServiceWorkerGlobalScope)に送信されます。これは、アプリケーションサーバーから {{domxref("PushSubscription")}} に送信された情報を含みます。
+
+{{InheritanceDiagram}}
 
 ## コンストラクター
 
-- {{domxref("PushEvent.PushEvent()")}}
+- {{domxref("PushEvent.PushEvent", "PushEvent()")}}
   - : 新しい `PushEvent` オブジェクトを生成します。
 
 ## インスタンスプロパティ
 
 _親である {{domxref("ExtendableEvent")}} からプロパティを継承しています。追加プロパティ：_
 
-- {{domxref("PushEvent.data")}} {{readonlyinline}}
+- {{domxref("PushEvent.data")}} {{ReadOnlyInline}}
   - : {{domxref("PushSubscription")}} に送信されたデータを含む {{domxref("PushMessageData")}} オブジェクトへの参照を返します。
 
 ## インスタンスメソッド
@@ -28,30 +32,25 @@ _親である {{domxref("ExtendableEvent")}} からメソッドを継承して�
 次の例は、`PushEvent` からデータを取得して、すべてのサービスワーカークライアントで表示しています。
 
 ```js
-self.addEventListener('push', function(event) {
-  if (!(self.Notification && self.notification.permission === 'granted')) {
-   return;
- }
+self.addEventListener('push', (event) => {
+  if (!(self.Notification && self.Notification.permission === 'granted')) {
+    return;
+  }
 
- var data = {};
- if (event.data) {
-   data = event.data.json();
- }
- var title = data.title || "Something Has Happened";
- var message = data.message || "Here's something you might want to check out.";
- var icon = "images/new-notification.png";
+  const data = event.data?.json() ?? {};
+  const title = data.title || "Something Has Happened";
+  const message = data.message || "Here's something you might want to check out.";
+  const icon = "images/new-notification.png";
 
- var notification = new self.Notification(title, {
-   body: message,
-   tag: 'simple-push-demo-notification',
-   icon: icon
- });
+  const notification = new self.Notification(title, {
+    body: message,
+    tag: 'simple-push-demo-notification',
+    icon,
+  });
 
- notification.addEventListener('click', function() {
-   if (clients.openWindow) {
-     clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
-   }
- });
+  notification.addEventListener('click', () => {
+    clients.openWindow('https://example.blog.com/2015/03/04/something-new.html');
+  });
 });
 ```
 
@@ -61,9 +60,9 @@ self.addEventListener('push', function(event) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PushEvent")}}
+{{Compat}}
 
 ## 関連項目
 
-- [Push API](/ja/docs/Web/API/Push_API)
-- [Service Worker API](/ja/docs/Web/API/Service_Worker_API)
+- [プッシュ API](/ja/docs/Web/API/Push_API)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)

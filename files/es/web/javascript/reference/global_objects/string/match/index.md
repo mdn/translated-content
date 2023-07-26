@@ -1,14 +1,6 @@
 ---
 title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - RegExp
-  - Regular Expressions
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/match
 ---
 

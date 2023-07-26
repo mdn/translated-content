@@ -1,13 +1,6 @@
 ---
 title: URL.hash
 slug: Web/API/URL/hash
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/hash
 ---
 {{ APIRef("URL API") }}
 

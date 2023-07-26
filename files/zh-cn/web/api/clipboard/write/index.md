@@ -9,7 +9,7 @@ slug: Web/API/Clipboard/write
 
 但是你要提前获取 "[Permissions API](/zh-CN/docs/Web/API/Permissions_API)" 的 `"clipboard-write"` 权限才能将数据写入到剪贴板。
 
-> **备注：** 浏览器对这个异步剪贴板的 API 仍然在讨论中。所以在使用它之前请检查 [浏览器兼容性](#浏览器兼容性) 和 {{SectionOnPage("/en-US/docs/Web/API/Clipboard", "Clipboard availability")}} 以获得更多的兼容性信息。
+> **备注：** 浏览器对这个异步剪贴板的 API 仍然在讨论中。所以在使用它之前请检查[浏览器兼容性](#浏览器兼容性)和[剪切板可用性](/zh-CN/docs/Web/API/Clipboard#剪贴板可用性)以获得更多的兼容性信息。
 
 ## 语法
 

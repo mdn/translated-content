@@ -1,7 +1,6 @@
 ---
 title: String.prototype.toLocaleUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/toLocaleUpperCase
 ---
 
@@ -52,9 +51,9 @@ let locales = ['lt', 'LT', 'lt-LT', 'lt-u-co-phonebk', 'lt-x-lietuva'];
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.toLocaleUpperCase")}}
+{{Compat}}
 
 ## Ver también
 

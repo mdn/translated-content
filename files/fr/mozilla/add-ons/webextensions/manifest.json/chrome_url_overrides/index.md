@@ -1,10 +1,6 @@
 ---
 title: chrome_url_overrides
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides
 ---
 
@@ -119,6 +115,6 @@ Toutes les propriétés sont [localisables](/fr/Add-ons/WebExtensions/Internatio
 }
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.chrome_url_overrides")}}
+{{Compat}}

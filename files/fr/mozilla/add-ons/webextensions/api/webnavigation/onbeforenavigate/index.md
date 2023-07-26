@@ -1,16 +1,6 @@
 ---
 title: webNavigation.onBeforeNavigate
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onBeforeNavigate
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onBeforeNavigate
-  - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onBeforeNavigate
 ---
 
@@ -22,11 +12,11 @@ Lancé lorsque le navigateur est sur le point de démarrer un événement de nav
 
 ```js
 browser.webNavigation.onBeforeNavigate.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onBeforeNavigate.removeListener(listener)
-browser.webNavigation.onBeforeNavigate.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onBeforeNavigate.removeListener(listener);
+browser.webNavigation.onBeforeNavigate.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -50,7 +40,7 @@ Les événements ont trois fonctions :
       - : [`object`](#details). Détails sur l'événement de navigation.
 
 - `filter`{{optional_inline}}
-  - : `object`. Un objet contenant une seule propriété `url`, qui est un `tableau`  d'objets {{WebExtAPIRef("events.UrlFilter")}} objects.Un objet contenant une seule propriété qui correspondent à au moins un `UrlFilter` dans le tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
+  - : `object`. Un objet contenant une seule propriété `url`, qui est un `tableau` d'objets {{WebExtAPIRef("events.UrlFilter")}} objects.Un objet contenant une seule propriété qui correspondent à au moins un `UrlFilter` dans le tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
 
 ## Objets supplémentaires
 
@@ -69,9 +59,9 @@ Les événements ont trois fonctions :
 - `timeStamp`
   - : `number`. L'heure à laquelle le navigateur est sur le point de démarrer la navigation, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onBeforeNavigate")}}
+{{Compat}}
 
 ## Exemples
 
@@ -79,12 +69,8 @@ Logs les URL cibles de `onBeforeNavigate`, si le nom d'hôte de la cible contien
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnBefore(details) {
   console.log("onBeforeNavigate to: " + details.url);

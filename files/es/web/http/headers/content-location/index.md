@@ -9,9 +9,9 @@ La cabecera **`Content-Location`** indica una ubicación alternativa para los da
 
 Las cabeceras {{HTTPHeader("Location")}} y `Content-Location` son diferentes. `Location` indica la URL de una redirección, mientras que `Content-Location` indica la URL directa a ser utilizada para acceder al recurso, sin necesidad de realizar [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation) en el futuro. Mientras que `Location` es una cabecera asociada con la respuesta, `Content-Location` está asociada con los datos devueltos. Esta distinción puede parecer abstracta sin ver algunos [ejemplos](#Examples).
 
-| Header type                                      | {{Glossary("Entity header")}} |
-| ------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                       |
+| Header type                           | {{Glossary("Entity header")}} |
+| ------------------------------------- | ----------------------------- |
+| {{Glossary("Forbidden header name")}} | no                            |
 
 ## Sintaxis
 
@@ -73,14 +73,16 @@ Digamos que tiene un formulario [`<form>`](/es/docs/Web/HTML/Element/form) para 
 ```html
 <form action="/enviar-pago" method="post">
   <p>
-    <label>A quien desea enviar dinero?
-      <input type="text" name="destinatario">
+    <label
+      >A quien desea enviar dinero?
+      <input type="text" name="destinatario" />
     </label>
   </p>
 
   <p>
-    <label>Cuanto dinero?
-      <input type="number" name="cantidad">
+    <label
+      >Cuanto dinero?
+      <input type="number" name="cantidad" />
     </label>
   </p>
 
@@ -105,13 +107,11 @@ Content-Location: /mis-recibos/38
 
 ## Especificaciones
 
-| Especificación                                               | Título                                                        |
-| ------------------------------------------------------------ | ------------------------------------------------------------- |
-| {{RFC("7231", "Content-Location", "3.1.4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.headers.Content-Location")}}
+{{Compat}}
 
 ## Ver también
 

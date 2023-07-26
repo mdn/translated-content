@@ -1,6 +1,8 @@
 ---
 title: Node
 slug: Web/API/Node
+l10n:
+  sourceCommit: bb60fadaa7423d2195ae8727f197fa4361aa09df
 ---
 
 {{APIRef("DOM")}}
@@ -13,55 +15,56 @@ slug: Web/API/Node
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 _以下のプロパティに加え、 `Node` は親である {{DOMxRef("EventTarget")}} からプロパティを継承しています_。
 
-- {{DOMxRef("Node.baseURI")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.baseURI")}} {{ReadOnlyInline}}
   - : この `Node` を持つ文書のベース URL を表す文字列を返します。
-- {{DOMxRef("Node.childNodes")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.childNodes")}} {{ReadOnlyInline}}
   - : このノードのすべての子孫（要素、テキスト、コメント）を持つ、生きた {{DOMxRef("NodeList")}} を返します。 {{DOMxRef("NodeList")}} が生きているとは、`Node` の子が変化すれば自動的に {{DOMxRef("NodeList")}} オブジェクトが更新されることを意味します。
-- {{DOMxRef("Node.firstChild")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.firstChild")}} {{ReadOnlyInline}}
   - : ノードの直下の最初の子ノードを表す `Node` を返します。子が存在しなければ `null` を返します。
-- {{DOMxRef("Node.isConnected")}}{{ReadOnlyInline}}
-  - : 論理値で、ノードが (直接/間接的に) コンテキストオブジェクト、例えば、通常の DOM の場合は {{DOMxRef("Document")}} オブジェクト、あるいはシャドウ DOM の場合は {{DOMxRef("ShadowRoot")}} に接続されているかどうかを示します。
-- {{DOMxRef("Node.lastChild")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.isConnected")}} {{ReadOnlyInline}}
+  - : 論理値で、ノードが（直接/間接的に）コンテキストオブジェクト、例えば、通常の DOM の場合は {{DOMxRef("Document")}} オブジェクト、あるいはシャドウ DOM の場合は {{DOMxRef("ShadowRoot")}} に接続されているかどうかを示します。
+- {{DOMxRef("Node.lastChild")}} {{ReadOnlyInline}}
   - : ノードの直下の最後の子ノードを表す `Node` を返します。子が存在しなければ `null` を返します。
-- {{DOMxRef("Node.nextSibling")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.nextSibling")}} {{ReadOnlyInline}}
   - : ツリー構造で次のノードを表す `Node` を返します。該当するノードがない場合は `null` を返します。
-- {{DOMxRef("Node.nodeName")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.nodeName")}} {{ReadOnlyInline}}
   - : `Node` の名前を持つ文字列を返します。名前の構造は、ノードの型によって異なります。例えば、{{DOMxRef("HTMLElement")}} は {{DOMxRef("HTMLAudioElement")}} に対して `'audio'` というように対応するタグの名前、 {{DOMxRef("Text")}} ノードは `'#text'` という文字列、 {{DOMxRef("Document")}} ノードは `'#document'` という文字列になります。
-- {{DOMxRef("Node.nodeType")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.nodeType")}} {{ReadOnlyInline}}
+
   - : ノードの型を表す `unsigned short` を返します。使用できる値は次の通りです。
 
-    | 名前                                                 | 値 |
-    | ---------------------------------------------------- | ----- |
-    | `ELEMENT_NODE`                                       | `1`   |
-    | `ATTRIBUTE_NODE`                                     | `2`   |
-    | `TEXT_NODE`                                          | `3`   |
-    | `CDATA_SECTION_NODE`                                 | `4`   |
-    | `PROCESSING_INSTRUCTION_NODE`                        | `7`   |
-    | `COMMENT_NODE`                                       | `8`   |
-    | `DOCUMENT_NODE`                                      | `9`   |
-    | `DOCUMENT_TYPE_NODE`                                 | `10`  |
-    | `DOCUMENT_FRAGMENT_NODE`                             | `11`  |
+    | 名前                          | 値 |
+    | ----------------------------- | ----- |
+    | `ELEMENT_NODE`                | `1`   |
+    | `ATTRIBUTE_NODE`              | `2`   |
+    | `TEXT_NODE`                   | `3`   |
+    | `CDATA_SECTION_NODE`          | `4`   |
+    | `PROCESSING_INSTRUCTION_NODE` | `7`   |
+    | `COMMENT_NODE`                | `8`   |
+    | `DOCUMENT_NODE`               | `9`   |
+    | `DOCUMENT_TYPE_NODE`          | `10`  |
+    | `DOCUMENT_FRAGMENT_NODE`      | `11`  |
 
 - {{DOMxRef("Node.nodeValue")}}
   - : 現在のノードの値を取得または設定します。
-- {{DOMxRef("Node.ownerDocument")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.ownerDocument")}} {{ReadOnlyInline}}
   - : ノードが所属する文書を {{DOMxRef("Document")}} で返します。ノードが文書自身の場合は、`null` を返します。
-- {{DOMxRef("Node.parentNode")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.parentNode")}} {{ReadOnlyInline}}
   - : このノードの親の `Node` を返します。ノードがツリーの最上位である、あるいはツリーに加わっていないなど、親が存在しない場合は `null` を返します。
-- {{DOMxRef("Node.parentElement")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.parentElement")}} {{ReadOnlyInline}}
   - : このノードの親の要素を {{DOMxRef("Element")}} で返します。ノードに親が存在しない、あるいは親が {{DOMxRef("Element")}} ではない場合は、`null` を返します。
-- {{DOMxRef("Node.previousSibling")}}{{ReadOnlyInline}}
+- {{DOMxRef("Node.previousSibling")}} {{ReadOnlyInline}}
   - : ツリー構造で前のノードを表す `Node` を返します。該当するノードがない場合は `null` を返します。
 - {{DOMxRef("Node.textContent")}}
   - : 要素や要素のすべての子孫のテキストコンテンツを取得または設定します。
 
-## メソッド
+## インスタンスメソッド
 
-_以下のプロパティに加えて、親である {{DOMxRef("EventTarget")}} からメソッドを継承しています。_
+_以下のメソッドに加えて、親である {{DOMxRef("EventTarget")}} からメソッドを継承しています。_
 
 - {{DOMxRef("Node.appendChild()")}}
   - : 指定された `childNode` 引数を、現在のノードの最後の子として追加します。
@@ -85,7 +88,7 @@ _以下のプロパティに加えて、親である {{DOMxRef("EventTarget")}} 
 - {{DOMxRef("Node.isSameNode()")}}
   - : 2 つのノードが同じである（すなわち、同じオブジェクトを参照している）か否かを示す論理値を返します。
 - {{DOMxRef("Node.lookupPrefix()")}}
-  - : 指定した名前空間 URI の接頭辞があれば、その接頭辞を含む {{DOMxRef("DOMString")}} を返します。接頭辞がない場合は `null` を返します。複数の接頭辞があった場合の結果は実装依存です。
+  - : 指定した名前空間 URI の接頭辞があれば、その接頭辞を含む文字列を返します。接頭辞がない場合は `null` を返します。複数の接頭辞があった場合の結果は実装依存です。
 - {{DOMxRef("Node.lookupNamespaceURI()")}}
   - : 接頭辞を受け入れて、指定したノードで接頭辞が関連付けられた名前空間が見つかった場合は名前空間の URI を返します (見つからない場合は `null` を返します)。接頭辞として `null` を与えると、既定の名前空間を返します。
 - {{DOMxRef("Node.normalize()")}}
@@ -94,11 +97,6 @@ _以下のプロパティに加えて、親である {{DOMxRef("EventTarget")}} 
   - : 現在の要素から子ノードを削除します。そのノードは現在のノードの子であることが必要です。
 - {{DOMxRef("Node.replaceChild()")}}
   - : 現在のノードの子 `Node` のひとつを、引数で指定した別のノードで置き換えます。
-
-### 廃止されたメソッド
-
-- {{DOMxRef("Node.isSupported()")}} {{deprecated_inline}}
-  - : DOM 実装が特定の機能を実装しており、またその機能が指定したノードで対応しているかを確認して、その結果を `true` または `false` で返します。
 
 ## 例
 
@@ -109,7 +107,7 @@ _以下のプロパティに加えて、親である {{DOMxRef("EventTarget")}} 
 ```js
 function removeAllChildren(element) {
   while (element.firstChild) {
-    element.removeChild(element.firstChild)
+    element.removeChild(element.firstChild);
   }
 }
 ```
@@ -117,7 +115,7 @@ function removeAllChildren(element) {
 この関数の使用は単一の呼び出しです。こちらでは、文書の本文を空にします。
 
 ```js
-removeAllChildren(document.body)
+removeAllChildren(document.body);
 ```
 
 他の方法として、 textContent に空文字列を設定すること (`document.body.textContent = ""`) も可能です。
@@ -129,22 +127,21 @@ removeAllChildren(document.body)
 ```js
 function eachNode(rootNode, callback) {
   if (!callback) {
-    const nodes = []
-    eachNode(rootNode, function(node) {
-      nodes.push(node)
-    })
-    return nodes
+    const nodes = [];
+    eachNode(rootNode, (node) => {
+      nodes.push(node);
+    });
+    return nodes;
   }
 
-  if (false === callback(rootNode)) {
-    return false
+  if (callback(rootNode) === false) {
+    return false;
   }
 
   if (rootNode.hasChildNodes()) {
-    const nodes = rootNode.childNodes
-    for (let i = 0, l = nodes.length; i < l; ++i) {
-      if (false === eachNode(nodes[i], callback)) {
-        return
+    for (const node of rootNode.childNodes) {
+      if (eachNode(node, callback) === false) {
+        return;
       }
     }
   }
@@ -170,36 +167,32 @@ function eachNode(rootNode, callback) {
 
 ```js
 function grep(parentNode, pattern) {
-  const matches = []
-  let endScan = false
+  let matches = [];
+  let endScan = false;
 
-  eachNode(parentNode, function(node){
+  eachNode(parentNode, (node) => {
     if (endScan) {
-      return false
+      return false;
     }
 
     // Ignore anything which isn't a text node
     if (node.nodeType !== Node.TEXT_NODE) {
-      return
+      return;
     }
 
-    if (typeof pattern === "string") {
-      if (-1 !== node.textContent.indexOf(pattern)) {
-        matches.push(node)
-      }
-    }
-    else if (pattern.test(node.textContent)) {
+    if (typeof pattern === "string" && node.textContent.includes(pattern)) {
+      matches.push(node);
+    } else if (pattern.test(node.textContent)) {
       if (!pattern.global) {
-        endScan = true
-        matches = node
-      }
-      else {
-        matches.push(node)
+        endScan = true;
+        matches = node;
+      } else {
+        matches.push(node);
       }
     }
-  })
+  });
 
-  return matches
+  return matches;
 }
 ```
 

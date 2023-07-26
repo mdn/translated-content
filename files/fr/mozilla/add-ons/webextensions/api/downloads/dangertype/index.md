@@ -1,16 +1,6 @@
 ---
 title: downloads.DangerType
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DangerType
-tags:
-  - API
-  - Add-ons
-  - DangerType
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DangerType
 ---
 
@@ -43,9 +33,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `accepted`
   - : L'utilisateur a accepté le téléchargement dangereux.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.DangerType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

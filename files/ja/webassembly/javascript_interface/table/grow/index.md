@@ -4,14 +4,14 @@ slug: WebAssembly/JavaScript_interface/Table/grow
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`grow()`** は {{jsxref("WebAssembly.Table")}} オブジェクトのプロトタイプメソッドで、 Table インスタンスの大きさを指定された要素数だけ拡張します。
 
 ## 構文
 
 ```js
-grow(number)
+grow(number);
 ```
 
 ### 引数
@@ -34,15 +34,19 @@ grow(number)
 以下の例では、新しい WebAssembly Table のインスタンスを初期サイズ 2、最大サイズ 10 で生成しています。
 
 ```js
-var table = new WebAssembly.Table({ element: "anyfunc", initial: 2, maximum: 10 });
+var table = new WebAssembly.Table({
+  element: "anyfunc",
+  initial: 2,
+  maximum: 10,
+});
 ```
 
 以下のようにして、テーブルを 1 だけ拡張することができます。
 
 ```js
-console.log(table.length);   // "2"
-console.log(table.grow(1));  // "2"
-console.log(table.length);   // "3"
+console.log(table.length); // "2"
+console.log(table.grow(1)); // "2"
+console.log(table.length); // "3"
 ```
 
 ## 仕様書

@@ -1,14 +1,6 @@
 ---
 title: Console.timeLog()
-slug: Web/API/Console/timeLog
-tags:
-  - API
-  - Console Web
-  - DOM
-  - Développement Web
-  - Méthode
-  - console
-  - débogage
+slug: Web/API/console/timeLog
 translation_of: Web/API/Console/timeLog
 ---
 

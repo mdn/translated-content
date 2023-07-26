@@ -1,13 +1,6 @@
 ---
 title: identity
 slug: Mozilla/Add-ons/WebExtensions/API/identity
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Identity
-  - Reference
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/identity
 ---
 
@@ -56,9 +49,9 @@ Cela aura tendance à être spécifique au fournisseur de services, mais en gén
 - {{WebExtAPIRef("identity.launchWebAuthFlow()")}}
   - : Lancement WAF.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.identity")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

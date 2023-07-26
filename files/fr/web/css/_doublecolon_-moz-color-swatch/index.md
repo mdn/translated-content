@@ -1,11 +1,6 @@
 ---
 title: '::-moz-color-swatch'
 slug: Web/CSS/::-moz-color-swatch
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-moz-color-swatch
 ---
 
@@ -46,7 +41,7 @@ Ce pseudo-élément est spécifique à Gecko et ne fait partie d'aucune spécifi
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-color-swatch")}}
+{{Compat}}
 
 ## Voir aussi
 

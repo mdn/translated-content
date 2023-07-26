@@ -3,7 +3,7 @@ title: font-size-adjust
 slug: Web/CSS/font-size-adjust
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 ## 概述
 

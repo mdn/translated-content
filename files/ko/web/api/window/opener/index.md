@@ -1,13 +1,6 @@
 ---
 title: Window.opener
 slug: Web/API/Window/opener
-tags:
-  - API
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-translation_of: Web/API/Window/opener
 ---
 
 {{APIRef("HTML DOM")}}

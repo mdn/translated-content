@@ -1,20 +1,13 @@
 ---
 title: 캔버스(canvas)를 이용한 비디오 조작하기
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
-tags:
-  - Canvas
-  - Video
-  - 비디오
-  - 캔버스
-translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
-original_slug: Web/HTML/Canvas/Manipulating_video_using_canvas
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
-비디오에서 다양한 시각적 효과를 보여주기 위해,`캔버스`와 [`비디오`](/ko/docs/Web/HTML/Element/video)의 기능을 결합하여 실시간으로 비디오 데이터를 조작할 수 있습니다. 이 튜토리얼에서는 자바스크립트 코드로 어떻게 크로마 키잉(chroma-keying, 또한 "녹색 스크린 효과, green screen effect")을 구현할 수 있는지 보여줍니다.
+비디오에서 다양한 시각적 효과를 보여주기 위해,`캔버스`와 [`비디오`](/ko/docs/Web/HTML/Element/Video)의 기능을 결합하여 실시간으로 비디오 데이터를 조작할 수 있습니다. 이 튜토리얼에서는 자바스크립트 코드로 어떻게 크로마 키잉(chroma-keying, 또한 "녹색 스크린 효과, green screen effect")을 구현할 수 있는지 보여줍니다.
 
-[라이브 예제 보기](/samples/video/chroma-key/index.xhtml)
+{{EmbedGHLiveSample('dom-examples/canvas/chroma-keying/index.html', 700, 400) }}
 
 ## 문서(document) 내용
 
@@ -59,7 +52,7 @@ original_slug: Web/HTML/Canvas/Manipulating_video_using_canvas
 여기에서 중요한 요소는:
 
 1. 이 문서에는 ID가 c1, c2인 두 개의 [`캔버스`](/ko/docs/Web/HTML/Element/canvas)가 있습니다. 캔버스 c1은 비디오 원본의 현재 프레임을 보여주기 위해 사용되고, c2는 크로마 키잉 효과를 수행한 결과를 보여줍니다. c2에서 비디오의 녹색 배경을 대체할 정지 이미지를 미리 로드합니다.
-2. 자바스크립트 코드는 main.js에서 가져옵니다. 이 스크립트는 자바스크립트 1.8 기능을 사용했기 때문에 스크립트를 가져오는 22번째 줄에서 버전이 명시됩니다(원문: this script uses JavaScript 1.8 features, so that version is specified in line 22 when importing the script).
+2. 자바스크립트 코드는 main.js에서 가져옵니다. 이 스크립트는 자바스크립트 1.8 기능을 사용했기 때문에 스크립트를 가져오는 22번째 줄에서 버전이 명시됩니다
 3. 문서가 로드되면, processor.doLoad() 메서드가 실행됩니다.
 
 ## 자바스크립트 코드
@@ -139,11 +132,11 @@ main.js에 있는 자바스크립트 코드는 3개의 메서드로 구성됩니
 
 위 과정이 계속 호출 되면, 아래와 같이 비디오 요소에 가장 최근 프레임의 비디오 데이터가 표출됩니다.
 
-<img alt="video.png" class="default internal" src="/@api/deki/files/3282/=video.png" style="height: 192px; width: 320px;">
+![검은색 티셔츠를 입은 사람이 있고 배경색은 노란색인 비디오 요소의 한 프레임.](video.png)
 
 2번째 줄에서, 첫 번째 캔버스의 그래픽 컨텍스트 ctx1에 비디오 프레임이 복사 되는데, 원본의 절반 크기로 프레임을 그리기 위해 이전에 저장한 가로, 세로 값으로 지정합니다. 컨텍스트의 `drawImage()` 메서드에 비디오 요소를 전달하기만 하면 현재 비디오 프레임을 그릴 수 있습니다. 결과는 아래와 같습니다:
 
-<img alt="sourcectx.png" class="default internal" src="/@api/deki/files/3284/=sourcectx.png" style="height: 96px; width: 160px;">
+![위 사진을 축소한 사진입니다. 검은색 티셔츠를 입은 사람이 있고 배경색은 노란색인 비디오 요소의 한 프레임.](sourcectx.png)
 
 3번째 줄에서는 첫 번째 컨텍스트의 `getImageData()` 메서드를 호출해서 현재 비디오 프레임의 원시 그래픽 데이터 복사본을 가져옵니다. 이것은 조작할 수 있는 원시 32비트 픽셀 이미지 데이터를 제공합니다. 4번째 줄에서는 프레임의 이미지 데이터 전체 크기를 4로 나누어 이미지의 픽셀 수를 계산합니다.
 
@@ -153,11 +146,11 @@ main.js에 있는 자바스크립트 코드는 3개의 메서드로 구성됩니
 
 결과 이미지는 아래와 같습니다:
 
-<img alt="output.png" class="default internal" src="/@api/deki/files/3283/=output.png" style="height: 96px; width: 161px;">
+![비디오 요소의 단일 프레임은 위의 사진과 같은 사람이 검은색 티셔츠를 입고 있는 것을 보여주지만 배경은 Firefox 로고입니다.](output.png)
 
 이 과정은 비디오가 재생될 때마다 반복되므로, 매 프레임마다 처리되어 크로마 키잉 효과가 나타나는 것입니다.
 
-[라이브 예제 보기](/samples/video/chroma-key/index.xhtml)
+[전체 소스코드 보기](https://github.com/mdn/dom-examples/tree/main/canvas/chroma-keying)
 
 ## 더 보기
 

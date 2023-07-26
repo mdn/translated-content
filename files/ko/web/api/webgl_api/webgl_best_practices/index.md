@@ -1,10 +1,9 @@
 ---
 title: WebGL best practices
 slug: Web/API/WebGL_API/WebGL_best_practices
-translation_of: Web/API/WebGL_API/WebGL_best_practices
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 이 기사는 당신의 WebGL 콘텐트 질을 향상시키기 위한 제안과 팁을 제시합니다. 다음의 제안들을 따르면, 당신의 웹 애플리케이션이 더 많은 장치들과 브라우저들과의 호환성을 높일 수 있을 뿐만 아니라, 성능도 향상시킬 수 있게 도와줍니다.
 

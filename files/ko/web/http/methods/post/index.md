@@ -1,11 +1,6 @@
 ---
 title: POST
 slug: Web/HTTP/Methods/POST
-tags:
-  - HTTP
-  - Reference
-  - Request method
-translation_of: Web/HTTP/Methods/POST
 ---
 
 {{HTTPSidebar}}
@@ -102,7 +97,7 @@ value2
 
 ## 브라우저 호환성
 
-{{Compat("http.methods.POST")}}
+{{Compat}}
 
 ## 같이 보기
 

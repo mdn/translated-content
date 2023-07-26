@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 original_slug: Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas", "Web/API/Canvas_API/Tutorial/Finale")}}
 
 {{HTMLElement("canvas")}} 要素は、ウェブで二次元グラフィックを描画するためにもっとも広く使用されているツールのひとつです。しかし、ウェブサイトやアプリがキャンバス API の限界付近まで使用するようになって、パフォーマンスが悪化するようになりました。この記事では、キャンバス要素の使用を最適化して、グラフィックを確実に改善するための提案を行います。
 

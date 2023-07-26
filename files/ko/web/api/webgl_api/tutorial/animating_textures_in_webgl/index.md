@@ -1,19 +1,9 @@
 ---
 title: WebGL에서의 텍스쳐 애니메이션
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
-tags:
-  - Animation
-  - HTML5
-  - Texture
-  - Video
-  - WebGL
-  - 애니메이션
-  - 웹지엘
-  - 텍스쳐
-translation_of: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 앞 단원에서는 정적인 텍스쳐를 사용한 예제를 만들어 봤었는데, 이번에는 Ogg 비디오 파일을 이용해서 텍스쳐에 애니메이션 효과를 적용해 보겠습니다. 사실 만들기 상당히 쉽지만, 그래도 보는 재미는 쏠쏠하니까 한 번 만들어 보겠습니다. 텍스쳐를 구성할 소스로 어떤 종류의 데이터(예를 들면 {{ HTMLElement("canvas") }}와 같은)를 쓰더라도 코드는 비슷할 것입니다.
 

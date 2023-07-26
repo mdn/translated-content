@@ -1,14 +1,6 @@
 ---
 title: commands
 slug: Mozilla/Add-ons/WebExtensions/API/commands
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - commands
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 ---
 
@@ -26,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 - {{WebExtAPIRef("commands.getAll")}}
   - : Obtient toutes les commandes enregistrées pour cette extension.
 - {{WebExtAPIRef("commands.reset")}}
-  - : Réinitialiser la description de la commande donnée et le raccourci vers les valeurs données dans la clé “manifest”.
+  - : Réinitialiser la description de la commande donnée et le raccourci vers les valeurs données dans la clé "manifest".
 - {{WebExtAPIRef("commands.update")}}
   - : Modifiez la description ou le raccourci de la commande donnée.
 
@@ -37,7 +29,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/commands
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.commands")}} {{WebExtExamples("h2")}}
+{{Compat}} {{WebExtExamples("h2")}}
 
 > **Note :**
 >

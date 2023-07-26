@@ -1,10 +1,6 @@
 ---
 title: 실제값
 slug: Web/CSS/actual_value
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/actual_value
 ---
 
 {{CSSRef}}

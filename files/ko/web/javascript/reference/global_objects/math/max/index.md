@@ -1,23 +1,11 @@
 ---
 title: Math.max()
 slug: Web/JavaScript/Reference/Global_Objects/Math/max
-tags:
-  - JavaScript
-  - Largest Number
-  - Largest Value
-  - Math
-  - Method
-  - Maximum
-  - Reference
-  - Largest
-  - max
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
-browser-compat: javascript.builtins.Math.max
 ---
 
 {{JSRef}}
 
-**Math.max()**함수는 입력값으로 받은 0개 이상의 숫자 중 가장 큰 숫자를 반환합니다.
+**Math.max()** 함수는 입력값으로 받은 0개 이상의 숫자 중 가장 큰 숫자를 반환합니다.
 
 {{EmbedInteractiveExample("pages/js/math-max.html")}}
 

@@ -1,7 +1,6 @@
 ---
 title: accessKeyLabel
 slug: Web/API/HTMLElement/accessKeyLabel
-translation_of: Web/API/HTMLElement/accessKeyLabel
 ---
 
 {{ APIRef("HTML DOM") }}

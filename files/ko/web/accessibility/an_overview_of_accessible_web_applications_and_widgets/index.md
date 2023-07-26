@@ -1,7 +1,6 @@
 ---
-title: An overview of accessible web applications and widgets
+title: 웹 접근성 애플리케이션과 위젯 개요
 slug: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
-translation_of: Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets
 ---
 웹은 변화하고 있습니다. 페이지 중심의 정적이던 사이트들은 동적으로 변화하고 있고, 데스크톱 웹 어플리케이션들이 JS와 AJAX를 중점으로 사용하며 제작되고 있습니다. 디자이너들은 새로운 위젯들과 컨트롤을 한결같이 JavaScript, HTML, CSS를 조합해서 만들고 있습니다. 이런 변화는 사용성과 반응형 향상에는 극적으로 도움을 주지만, 또 다른 많은 유저들은 접근성 격차로 인해 제약이 발생하는 리스크도 안고 있습니다. JavaScript는 스크린리더 같은 보조기술을 사용하는 유저들이 접근하기 힘들다고 알려져 있었습니다. 하지만 현재는 다양한 사용자가 접근할 수 있는 동적 웹 어플리케이션을 만들 수 있습니다.
 
@@ -32,11 +31,11 @@ Example 1: 탭 위젯을 ARIA 레이블링 없이 만든 마크업. 마크업에
 </div>
 ```
 
-Example 2: 탭 위젯의 렌더링 화면. 유저는 비주얼로 확인 가능하지만, 보조기술과 같은 기계들은 읽지 못합니다. [Screenshot of the tabs widget](/@api/deki/files/4926/=Tabs_Widget.png)
+Example 2: 탭 위젯의 렌더링 화면. 유저는 비주얼로 확인 가능하지만, 보조기술과 같은 기계들은 읽지 못합니다. ![Screenshot of the tabs widget](tabs_widget.png)
 
 ## ARIA
 
-**Accessible Rich Internet Applications(**[WAI-ARIA](http://www.w3.org/WAI/intro/aria.php))는 W3C의 [Web Accessibility Initiative](http://www.w3.org/WAI/)에서 제작하고, 스크린리더 같은 보조기기에서 필요한 정보들을 추가하는 방법을 제공합니다. ARIA는 마크업에서 특별한 속성을 추가하여 개발자들이 위젯의 디테일한 정보를 제공할 때 사용합니다. 동적 웹 어플리케이션에서 찾을 수 있는 데스크톱 스타일 콘트롤과 표준 HTML 태그 사이에 있는 차이를 채우기 위해, ARIA는 친숙한 UI 위젯의 동작 상태(state)와 역할(Role)에 대한 설명을 제공합니다.
+**Accessible Rich Internet Applications(**[WAI-ARIA](https://www.w3.org/WAI/intro/aria.php))는 W3C의 [Web Accessibility Initiative](https://www.w3.org/WAI/)에서 제작하고, 스크린리더 같은 보조기기에서 필요한 정보들을 추가하는 방법을 제공합니다. ARIA는 마크업에서 특별한 속성을 추가하여 개발자들이 위젯의 디테일한 정보를 제공할 때 사용합니다. 동적 웹 어플리케이션에서 찾을 수 있는 데스크톱 스타일 콘트롤과 표준 HTML 태그 사이에 있는 차이를 채우기 위해, ARIA는 친숙한 UI 위젯의 동작 상태(state)와 역할(Role)에 대한 설명을 제공합니다.
 
 ARIA는 다른 타입의 속성 세개 roles, states, properties를 분할하여 정의하고 있습니다. Roles는 slider, menu bar, dialog와 같은 HTML4에서 사용하지 못하는 위젯을 설명합니다. Properties는 드래그가 가능하다는 것이나, 요소가 필요하다는 것이나, 팝업이 뜨는 것과 같은 위젯의 특징에 대해 설명합니다. State는 요소의 현재 상태에 대해 설명합니다. 이 정보는 보조기기에서 요소의 접근이 불가하거나, 숨겨져 있는 상태라는 것을 명시합니다.
 
@@ -84,7 +83,7 @@ ARIA provides attributes for declaring the current state of a UI widget. Example
 - `aria-grabbed`
   - : indicates the 'grabbed' state of an object in a drag-and-drop operation
 
-(For a full list of ARIA states, consult the [ARIA list of states and properties](http://www.w3.org/TR/wai-aria/states_and_properties).)
+(For a full list of ARIA states, consult the [ARIA list of states and properties](https://www.w3.org/TR/wai-aria/states_and_properties).)
 
 Developers should use ARIA states to indicate the state of UI widget elements and use CSS attribute selectors to alter the visual appearance based on the state changes (rather than using script to change a class name on the element).
 
@@ -217,12 +216,12 @@ Here's a summary of how keyboard navigation should work in an ARIA-enabled web a
 
 So, for the Tabs widget example above, the user should be able to navigate into and out of the widget's container (the `<ol>` in our markup) using the Tab and Shift-Tab keys. Once keyboard focus is inside the container, the arrow keys should allow the user to navigate between each tab (the `<li>` elements). From here, conventions vary from platform to platform. On Windows, the next tab should automatically be activated when the user presses the arrow keys. On Mac OS X, the user can press either Enter or the Spacebar to activate the next tab. An in-depth tutorial for creating [Keyboard-navigable JavaScript widgets](/en/Accessibility/Keyboard-navigable_JavaScript_widgets) describes how to implement this behavior with JavaScript.
 
-For more detail about desktop-style keyboard navigation conventions, a comprehensive [DHTML style guide](http://dev.aol.com/dhtml_style_guide) is available. It provides an overview of how keyboard navigation should work for each type of widget supported by ARIA. The W3C also offers a helpful [ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html) document that includes keyboard navigation and shortcut conventions for a variety of widgets.
+For more detail about desktop-style keyboard navigation conventions, a comprehensive [DHTML style guide](https://dev.aol.com/dhtml_style_guide) is available. It provides an overview of how keyboard navigation should work for each type of widget supported by ARIA. The W3C also offers a helpful [ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html) document that includes keyboard navigation and shortcut conventions for a variety of widgets.
 
 ## See also
 
 - [ARIA](/en/ARIA)
 - [Web applications and ARIA FAQ](/en/Accessibility/Web_applications_and_ARIA_FAQ)
-- [WAI-ARIA Specification](http://www.w3.org/TR/wai-aria/)
-- [WAI-ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html)
-- [DHTML Style Guide](http://dev.aol.com/dhtml_style_guide)
+- [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria/)
+- [WAI-ARIA Best Practices](https://www.w3.org/WAI/PF/aria-practices/Overview.html)
+- [DHTML Style Guide](https://dev.aol.com/dhtml_style_guide)

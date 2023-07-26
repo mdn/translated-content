@@ -1,7 +1,6 @@
 ---
 title: RTCSessionDescription.sdp
 slug: Web/API/RTCSessionDescription/sdp
-translation_of: Web/API/RTCSessionDescription/sdp
 ---
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}

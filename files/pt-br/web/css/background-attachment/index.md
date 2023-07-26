@@ -24,7 +24,7 @@ background-attachment: inherit;
 ### Valores
 
 - `fixed`
-  - : Essa chave significa que o background é fixo em relação ao viewport. Mesmo que um elemento tenha um mecanismo de rolar, o background ‘fixed’ não movimenta com o elemento.
+  - : Essa chave significa que o background é fixo em relação ao viewport. Mesmo que um elemento tenha um mecanismo de rolar, o background 'fixed' não movimenta com o elemento.
 - `local`
   - : Essa chave significa que o background é fixo em relação ao conteúdo do elemento: ise ele tem um mecanismo de rolar, o background rola com o conteúdo do elemento, e a área pintada e o posicionamento do background são relativos à área de rolagem do elemento ao invés da borda de fronteira deles.
 - `scroll`
@@ -42,7 +42,7 @@ background-attachment: inherit;
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
+  background-image: url("starsolid.gif");
   background-attachment: fixed;
 }
 ```
@@ -70,7 +70,7 @@ Essa propriedade suporta múltiplas imagens de background. Você pode especifica
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
+  background-image: url("starsolid.gif"), url("startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }

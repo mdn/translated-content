@@ -19,8 +19,4 @@ Flash — устаревшая технология, разработанная 
 4. [Ruffle, свободная реализация](https://ruffle.rs)
 5. [Глоссарий](/ru/docs/Glossary)
 
-    1. {{Glossary("Browser", "браузер")}}
-
-6. Статья на Wikipedia
-
-    1. {{Interwiki("wikipedia", "Adobe Flash")}}
+   1. {{Glossary("Browser", "браузер")}}

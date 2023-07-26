@@ -1,5 +1,5 @@
 ---
-title: '@import'
+title: "@import"
 slug: Web/CSS/@import
 ---
 
@@ -43,6 +43,6 @@ Dónde :
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.import")}}
+{{Compat}}

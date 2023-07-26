@@ -1,15 +1,10 @@
 ---
 title: Online and offline events
 slug: Web/API/Navigator/onLine
-tags:
-  - AJAX
-  - DOM
-  - Web Development
-translation_of: Web/API/Navigator/Online_and_offline_events
 original_slug: Web/API/Navigator/Online_and_offline_events
 ---
 
-In progress [Firefox 3](ko/Firefox_3_for_developers)는 [WHATWG 웹 애플리케이션 1.0 명세](http://www.whatwg.org/specs/web-apps/current-work/)에 기술된 [온라인/오프라인 이벤트](http://www.whatwg.org/specs/web-apps/current-work/#offline)를 구현합니다.
+In progress [Firefox 3](/ko/Firefox_3_for_developers)는 [WHATWG 웹 애플리케이션 1.0 명세](http://www.whatwg.org/specs/web-apps/current-work/)에 기술된 [온라인/오프라인 이벤트](http://www.whatwg.org/specs/web-apps/current-work/#offline)를 구현합니다.
 
 ### 개요
 
@@ -32,7 +27,7 @@ In progress [Firefox 3](ko/Firefox_3_for_developers)는 [WHATWG 웹 애플리케
 
 #### `navigator.onLine`
 
-[`navigator.onLine`](ko/DOM/window.navigator.onLine)는 `true`/`false`(온라인은 `true`, 오프라인은 `false`)를 보관하는 속성입니다. 이 속성은 사용자가 해당 메뉴 항목(파일 -> 오프라인 작업)을 선택하여 "오프라인 모드"로 전환할 때마다 갱신됩니다.
+[`navigator.onLine`](/ko/DOM/window.navigator.onLine)는 `true`/`false`(온라인은 `true`, 오프라인은 `false`)를 보관하는 속성입니다. 이 속성은 사용자가 해당 메뉴 항목(파일 -> 오프라인 작업)을 선택하여 "오프라인 모드"로 전환할 때마다 갱신됩니다.
 
 또한 이 속성은 브라우저가 네트워크에 더 이상 연결할 수 없을 때마다 갱신됩니다. 명세에 따르면:
 
@@ -44,11 +39,11 @@ Firefox 2는 윈도우와 리눅스에서 브라우저의 온라인/오프라인
 
 #### "`online`"과 "`offline`" 이벤트
 
-[Firefox 3](ko/Firefox_3)는 두 가지 새로운 이벤트를 도입하고 있습니다: 바로 "`online`"과 "`offline`"입니다. 이 두 가지 이벤트는 브라우저가 온라인과 오프라인 모드를 전환할 때 각 페이지의 `<body>`에서 발생합니다. 덧붙여, 이 이벤트는 `document.body`에서 `document`로 전달되고 `window`에서 끝납니다. 두 가지 이벤트 모두 취소 불가능한(non-cancellable) 이벤트입니다(여러분은 사용자가 온라인이 되거나 오프라인이 되는 것을 막을 수 없습니다).
+[Firefox 3](/ko/Firefox_3)는 두 가지 새로운 이벤트를 도입하고 있습니다: 바로 "`online`"과 "`offline`"입니다. 이 두 가지 이벤트는 브라우저가 온라인과 오프라인 모드를 전환할 때 각 페이지의 `<body>`에서 발생합니다. 덧붙여, 이 이벤트는 `document.body`에서 `document`로 전달되고 `window`에서 끝납니다. 두 가지 이벤트 모두 취소 불가능한(non-cancellable) 이벤트입니다(여러분은 사용자가 온라인이 되거나 오프라인이 되는 것을 막을 수 없습니다).
 
 널리 알려진 몇 가지 방법으로 해당 이벤트에 대한 리스너(listener)를 등록할 수 있습니다.
 
-- `window`, `document`, `document.body`에서 [`addEventListener`](ko/DOM/element.addEventListener)를 이용
+- `window`, `document`, `document.body`에서 [`addEventListener`](/ko/DOM/element.addEventListener)를 이용
 - 자바스크립트의 `Function` 개체에서 `document`나 `document.body`에 `.ononline` 혹은 `.onoffline` 속성을 설정 (**참고:** 호환성 때문에`window.ononline`이나 `window.onoffline`은 올바로 동작하지 않습니다.)
 - HTML 마크업의 `<body>` 태그에 `ononline="..."` 혹은 `onoffline="..."` 속성을 지정
 

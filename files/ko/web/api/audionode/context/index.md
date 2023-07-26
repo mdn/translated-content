@@ -1,14 +1,6 @@
 ---
 title: AudioNode.context
 slug: Web/API/AudioNode/context
-tags:
-  - API
-  - AudioNode
-  - Context
-  - Property
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioNode.context
 ---
 
 {{APIRef("Web Audio API")}}

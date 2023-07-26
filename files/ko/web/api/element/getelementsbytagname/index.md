@@ -1,12 +1,11 @@
 ---
 title: Element.getElementsByTagName()
 slug: Web/API/Element/getElementsByTagName
-translation_of: Web/API/Element/getElementsByTagName
 ---
 
 {{ APIRef("DOM") }}
 
-**Element.getElementsByTagName()** 메서드는 제공된 태그 네임([tag name](/en/DOM/element.tagName))을 가지는 엘리먼트의 유효한 {{domxref("HTML 컬랙션")}}를 반환합니다. 엘리먼트가 특정된 범위를 검색하는 경우, 그 자신의 엘리먼트는 제외하고, 특정된 엘리먼트의 하위에 있는 서브트리가 검색됩니다. 반환된 리스트가 _live_ 상태이면, 리스트는 DOM 트리와 함께 자동적으로 업데이트 되는 것을 의미합니다. 결과적으로, 동일한 엘리먼트와 인자값으로 **Element.getElementsByTagName()**을 여러번 호출할 필요성은 없어집니다.
+**Element.getElementsByTagName()** 메서드는 제공된 태그 네임([tag name](/en/DOM/element.tagName))을 가지는 엘리먼트의 유효한 {{domxref("HTML 컬랙션")}}를 반환합니다. 엘리먼트가 특정된 범위를 검색하는 경우, 그 자신의 엘리먼트는 제외하고, 특정된 엘리먼트의 하위에 있는 서브트리가 검색됩니다. 반환된 리스트가 _live_ 상태이면, 리스트는 DOM 트리와 함께 자동적으로 업데이트 되는 것을 의미합니다. 결과적으로, 동일한 엘리먼트와 인자값으로 **Element.getElementsByTagName()** 을 여러번 호출할 필요성은 없어집니다.
 
 HTML 문서 내에서 HTML 엘리먼트가 호출되면, getElementsByTagName는 진행하기 전에 그 인자들을 소문자로 변환합니다. 따라서, 카멜케이스로 이루어진 SVG 엘리먼트를 HTML문서의 서브트리 내에서 매칭하고자 하는 경우에는 {{ domxref("Element.getElementsByTagNameNS()") }}을 사용해야 합니다.
 

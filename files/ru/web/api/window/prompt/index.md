@@ -37,7 +37,7 @@ var sign = window.prompt('Are you feeling lucky', 'sure'); // открывает
 
 Вышеописанный prompt будет выглядеть следующим образом (в Chrome на OS X):
 
-[![prompt() dialog in Chrome on OS X](https://mdn.mozillademos.org/files/11303/prompt.png)](https://mdn.mozillademos.org/files/11303/prompt.png)
+[![prompt() dialog in Chrome on OS X](prompt.png)](prompt.png)
 
 ## Примечания
 

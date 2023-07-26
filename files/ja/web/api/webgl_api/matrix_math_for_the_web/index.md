@@ -3,11 +3,11 @@ title: ウェブの行列計算
 slug: Web/API/WebGL_API/Matrix_math_for_the_web
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 行列は、空間内のオブジェクトの変換を表すために使用でき、画像を構築したり、ウェブ上でデータを視覚化したりするときに、多くの主要な種類の計算を実行するために使用されます。 この記事では、行列を作成する方法と、[CSS transform](/ja/docs/Web/Guide/CSS/Using_CSS_transforms) および `matrix3d` transform 型でそれらを使用する方法について説明します。
 
-この記事では [CSS](/ja/docs/Web/CSS) を使用して説明を簡略化しますが、行列は [WebGL](/ja/docs/Web/API/WebGL_API)、[WebXR](/ja/docs/Web/API/WebXR_Device_API)（VR および AR）API、[GLSL シェーダー](/ja/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders)などのさまざまなテクノロジーで使用されるコアコンセプトです。 この記事は、[MDN コンテンツキット](https://github.com/TatumCreative/mdn-matrix-math)としても入手できます。 実際の例では、`MDN` という名前のグローバルオブジェクトで使用できる[ユーティリティ関数](https://github.com/TatumCreative/mdn-webgl)のコレクションを使用しています。
+この記事では [CSS](/ja/docs/Web/CSS) を使用して説明を簡略化しますが、行列は [WebGL](/ja/docs/Web/API/WebGL_API)、[WebXR](/ja/docs/Web/API/WebXR_Device_API)（VR および AR）API、[GLSL シェーダー](/ja/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders)などのさまざまなテクノロジーで使用されるコアコンセプトです。 この記事は、[MDN コンテンツキット](https://github.com/gregtatum/mdn-matrix-math)としても入手できます。 実際の例では、`MDN` という名前のグローバルオブジェクトで使用できる[ユーティリティ関数](https://github.com/gregtatum/mdn-webgl)のコレクションを使用しています。
 
 ## 変換行列
 
@@ -189,7 +189,7 @@ moveMe.style.transform = matrix3dRule;
 
 [JSFiddle で観る](https://jsfiddle.net/g24mgw6y)
 
-![行列による平行移動の例](https://mdn.mozillademos.org/files/11409/matrix-translation.jpg)
+![行列による平行移動の例](matrix-translation.jpg)
 
 ## 拡大縮小行列
 
@@ -212,7 +212,7 @@ let scaleMatrix = [
 
 [JSFiddle で観る](https://jsfiddle.net/fndd6e1b)
 
-![行列による拡大縮小の例](https://mdn.mozillademos.org/files/11407/matrix-scale.jpg)
+![行列による拡大縮小の例](matrix-scale.jpg)
 
 ## 回転行列
 
@@ -258,7 +258,7 @@ let rotateZMatrix = [
 
 [JSFiddle で観る](https://jsfiddle.net/9vr2dorz)
 
-![](https://mdn.mozillademos.org/files/11405/matrix-rotation.jpg)
+![](matrix-rotation.jpg)
 
 3 つの軸のそれぞれを中心に回転するための回転行列を返す関数のセットを次に示します。 大きな注意点の 1 つは、パースペクティブが適用されていないため、まだとても 3D に感じられない可能性があることです。 平面度（flatness）は、カメラが遠くのオブジェクトにズームインで非常に接近したときと同じです — 遠近感（sense of perspective）がなくなります。
 
@@ -307,7 +307,7 @@ function rotateAroundZAxis(a) {
 
 ### 複数の変換の合成
 
-行列の合成に使用する関数は `multiplyArrayOfMatrices()` です。 これは、この記事の冒頭で紹介した[ユーティリティ関数](https://github.com/TatumCreative/mdn-webgl)のセットの一部です。 行列の配列を取り、それらを掛け合わせて結果を返します。 WebGL シェーダーコードでは、これは言語に組み込まれており、`*` 演算子を使用できます。 さらに、この例では、上で定義した行列を返す `scale()` 関数と `translate()` 関数を使用しています。
+行列の合成に使用する関数は `multiplyArrayOfMatrices()` です。 これは、この記事の冒頭で紹介した[ユーティリティ関数](https://github.com/gregtatum/mdn-webgl)のセットの一部です。 行列の配列を取り、それらを掛け合わせて結果を返します。 WebGL シェーダーコードでは、これは言語に組み込まれており、`*` 演算子を使用できます。 さらに、この例では、上で定義した行列を返す `scale()` 関数と `translate()` 関数を使用しています。
 
 ```js
 let transformMatrix = MDN.multiplyArrayOfMatrices([
@@ -319,7 +319,7 @@ let transformMatrix = MDN.multiplyArrayOfMatrices([
 
 [JSFiddle で観る](https://jsfiddle.net/qxxg3yvc)
 
-![行列合成の例](https://mdn.mozillademos.org/files/11403/matrix-composition.jpg)
+![行列合成の例](matrix-composition.jpg)
 
 最後に、行列がどのように機能するかを示す楽しい手順は、手順を逆にして、行列を元の単位行列に戻すことです。
 

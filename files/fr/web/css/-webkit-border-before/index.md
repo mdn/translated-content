@@ -1,11 +1,6 @@
 ---
 title: '-webkit-border-before'
 slug: Web/CSS/-webkit-border-before
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-border-before
 ---
 
@@ -85,7 +80,7 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-border-before")}}
+{{Compat}}
 
 ## Voir aussi
 

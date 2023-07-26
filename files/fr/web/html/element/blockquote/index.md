@@ -1,19 +1,7 @@
 ---
 title: '<blockquote> : l''élément de bloc de citation'
 slug: Web/HTML/Element/blockquote
-tags:
-  - Blockquote
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Sectioning root
-  - Quotations
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/blockquote
-browser-compat: html.elements.blockquote
 ---
 
 {{HTMLSidebar}}
@@ -35,7 +23,7 @@ L'élément HTML **`<blockquote>`** (qui signifie _bloc de citation_) indique qu
           >Contenu de flux</a
         >,
         <a
-          href="fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#racines_de_sectionnement"
+          href="/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#racines_de_sectionnement"
           >racine de section</a
         >,
         <a href="/fr/docs/Web/Guide/HTML/Content_categories#palpable_content"
@@ -103,7 +91,7 @@ Pour changer l'indentation de `<blockquote>`, on utilisera la propriété [CSS](
 
 Pour les citations courtes, on pourra utiliser l'élément [`<q>`](/fr/docs/Web/HTML/Element/q).
 
-## Exemple
+## Exemples
 
 Cet exemple démontre l'utilisation de l'élément `<blockquote>` pour citer un passage de [RFC 1149 <i lang="en">A Standard for the Transmission of IP Datagrams on Avian Carriers</i>](https://datatracker.ietf.org/doc/html/rfc1149).
 
@@ -123,9 +111,9 @@ Cet exemple démontre l'utilisation de l'élément `<blockquote>` pour citer un 
 </blockquote>
 ```
 
-Le résultat de cet extrait HTML ressemble à ceci :
+### Résultat
 
-{{EmbedLiveSample("Exemple", 640, 200)}}
+{{EmbedLiveSample("", 640, 200)}}
 
 ## Spécifications
 

@@ -1,6 +1,6 @@
 ---
 title: Console.trace()
-slug: Web/API/Console/trace
+slug: Web/API/console/trace
 translation_of: Web/API/Console/trace
 ---
 

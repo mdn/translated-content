@@ -1,12 +1,11 @@
 ---
 title: WritableStream
 slug: Web/API/WritableStream
-translation_of: Web/API/WritableStream
 ---
 
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
-[Streams API](/ko/docs/Web/API/Streams_API)의 **`WritableStream`**는 지정된 곳에 스트림 데이터를 writing하기 위한 싱크 추상 인터페이스입니다. 이 객체는 내장 백프레셔와 큐잉으로 구성되어 있다.
+[Streams API](/ko/docs/Web/API/Streams_API)의 **`WritableStream`** 는 지정된 곳에 스트림 데이터를 writing하기 위한 싱크 추상 인터페이스입니다. 이 객체는 내장 백프레셔와 큐잉으로 구성되어 있다.
 
 ## 생성자
 

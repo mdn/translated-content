@@ -1,11 +1,6 @@
 ---
 title: browser_specific_settings
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - browser_specific_settings
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 ---
 
@@ -116,4 +111,4 @@ Exemple avec toutes les clés possibles. Notez que vous n'incluez normalement ni
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.browser_specific_settings")}}
+{{Compat}}

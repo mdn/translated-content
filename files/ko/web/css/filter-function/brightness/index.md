@@ -1,12 +1,6 @@
 ---
 title: brightness()
 slug: Web/CSS/filter-function/brightness
-tags:
-  - CSS
-  - CSS Function
-  - Filter Effects
-  - Reference
-translation_of: Web/CSS/filter-function/brightness()
 original_slug: Web/CSS/filter-function/brightness()
 ---
 

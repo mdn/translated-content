@@ -1,14 +1,6 @@
 ---
 title: sidebarAction
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction
-tags:
-  - API
-  - Extensions
-  - Non-standard
-  - Reference
-  - Sidebar
-  - WebExtensions
-  - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction
 ---
 
@@ -49,9 +41,9 @@ L'API sidebarAction est basée sur l'[API sidebarAction](https://dev.opera.com/e
 - {{WebExtAPIRef("sidebarAction.toggle()")}}
   - : Permet de basculer la visibilité de la barre latérale.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sidebarAction")}}
+{{Compat}}
 
 ## Exemple extensions
 

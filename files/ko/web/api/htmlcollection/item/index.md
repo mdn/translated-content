@@ -1,7 +1,6 @@
 ---
 title: HTMLCollection.item
 slug: Web/API/HTMLCollection/item
-translation_of: Web/API/HTMLCollection/item
 ---
 
 {{APIRef("HTML DOM")}}
@@ -37,7 +36,7 @@ var img0 = c.item(0);     // 이렇게 item() 메소드를 이용할 수 있지�
 var img1 = c[1];          // 이렇게 표기하는게 쉽고 더 보편적입니다
 ```
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

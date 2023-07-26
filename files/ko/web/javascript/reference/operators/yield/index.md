@@ -1,16 +1,6 @@
 ---
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
-tags:
-  - ECMAScript 2015
-  - Generators
-  - Iterator
-  - JavaScript
-  - Operator
-  - 반복자
-  - 생성기
-translation_of: Web/JavaScript/Reference/Operators/yield
-browser-compat: javascript.operators.yield
 ---
 
 {{jsSidebar("Operators")}}

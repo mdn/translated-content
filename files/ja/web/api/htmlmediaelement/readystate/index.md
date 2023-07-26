@@ -1,6 +1,8 @@
 ---
 title: HTMLMediaElement.readyState
 slug: Web/API/HTMLMediaElement/readyState
+l10n:
+  sourceCommit: 23aea0fbb04893c64890c89a634250283e2beb71
 ---
 
 {{APIRef("HTML DOM")}}
@@ -11,7 +13,7 @@ slug: Web/API/HTMLMediaElement/readyState
 
 `unsigned short` 型です。 可能な値は次のとおりです。
 
-<table class="standard-table">
+<table class="no-markdown">
   <thead>
     <tr>
       <th scope="col">定数</th>
@@ -58,20 +60,20 @@ slug: Web/API/HTMLMediaElement/readyState
 
 ## 例
 
-この例では、音声データを読み込むために \`example\` 要素で待ち受けします。そして、少なくとも現在の再生位置が読み込まれているかどうかをチェックします。読み込まれていれば、音声を再生します。
+この例では、音声データを読み込むために `example` 要素で待ち受けします。そして、少なくとも現在の再生位置が読み込まれているかどうかをチェックします。読み込まれていれば、音声を再生します。
 
 ```html
 <audio id="example" preload="auto">
- <source src="sound.ogg" type="audio/ogg" />
+  <source src="sound.ogg" type="audio/ogg" />
 </audio>
 ```
 
 ```js
-var obj = document.getElementById('example');
+const obj = document.getElementById('example');
 
-obj.addEventListener('loadeddata', function() {
+obj.addEventListener('loadeddata', () => {
 
-  if(obj.readyState >= 2) {
+  if (obj.readyState >= 2) {
     obj.play();
   }
 

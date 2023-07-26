@@ -7,7 +7,7 @@ slug: Web/HTML/Global_attributes/contextmenu
 
 > **警告：** [contextmenu](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu) 属性已经过时，将从所有浏览器中删除。
 
-**`contextmenu`**[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)是指用于某个元素的“上下文菜单”的{{HTMLElement("menu")}}的[ID](/zh-CN/docs/Web/HTML/Global_attributes/id)属性。上下文菜单是指在用户交互（例如右键点击）时出现的菜单。HTML5 允许我们自定义此菜单。这里有一些实现示例，包括嵌套菜单。
+**`contextmenu`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)是指用于某个元素的“上下文菜单”的{{HTMLElement("menu")}}的[ID](/zh-CN/docs/Web/HTML/Global_attributes/id)属性。上下文菜单是指在用户交互（例如右键点击）时出现的菜单。HTML5 允许我们自定义此菜单。这里有一些实现示例，包括嵌套菜单。
 
 ## 示例
 
@@ -88,7 +88,6 @@ function changeImage() {
 
 {{Compat}}
 
-## 推荐阅读
+## 参见
 
 - All [global attributes](/zh-CN/docs/Web/HTML/Global_attributes)
-- {{domxref("HTMLElement.contextMenu")}}

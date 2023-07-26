@@ -1,15 +1,7 @@
 ---
 title: devtools.inspectedWindow
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow
-tags:
-  - API
-  - Add-ons
-  - Devtools.inspectedWindows
-  - Extensions
-  - Reference
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow
 ---
 
 {{AddonSidebar}}
@@ -32,9 +24,9 @@ Comme toutes les APIs de `devtools`, cette API n'est disponible que pour exécut
 - [`devtools.inspectedWindow.reload()`](/fr/Add-ons/WebExtensions/API/devtools.inspectedWindow/reload)
   - : Rechargez le document de la fenêtre destination.
 
-## Comptatibilité navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.inspectedWindow")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

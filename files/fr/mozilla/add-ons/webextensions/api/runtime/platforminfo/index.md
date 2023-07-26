@@ -1,16 +1,6 @@
 ---
 title: runtime.PlatformInfo
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformInfo
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - PlatformInfo
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformInfo
 ---
 
@@ -29,9 +19,9 @@ Les valeurs de ce type sont des objets qui contiennent les propriétés suivante
 - `nacl_arch`
   - : {{WebExtAPIRef('runtime.PlatformNaclArch')}}. L'architecture du client natif Cela peut être différent de `arch` sur certaines plates-formes.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.PlatformInfo")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

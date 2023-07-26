@@ -1,12 +1,6 @@
 ---
 title: IDBFactory.cmp()
 slug: Web/API/IDBFactory/cmp
-tags:
-  - API
-  - IDBFactory
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBFactory/cmp
 ---
 
@@ -55,7 +49,7 @@ Cette méthode peut lever une exception {{domxref("DOMException")}} de type :
 var a = 1;
 var b = 2;
 var result = window.indexedDB.cmp(a, b);
-console.log( "Résultat de la comparaison : " + result );
+console.log("Résultat de la comparaison : " + result);
 ```
 
 ## Spécifications
@@ -74,4 +68,4 @@ console.log( "Résultat de la comparaison : " + result );
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -1,16 +1,6 @@
 ---
 title: browserAction.setTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setTitle
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setTitle
 ---
 
@@ -22,8 +12,8 @@ Définit le titre de l'action du navigateur. Le titre est affiché dans une info
 
 ```js
 browser.browserAction.setTitle(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -54,10 +44,6 @@ browser.browserAction.setTitle(
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et le titre n'est pas défini.
 - Si `windowId` et `tabId` sont tous les deux omis, le titre global est défini.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setTitle",10)}}
-
 ## Exemples
 
 Ce code change le titre entre "ceci" et "ça" chaque fois que l'utilisateur clique sur l'action du navigateur :
@@ -65,9 +51,9 @@ Ce code change le titre entre "ceci" et "ça" chaque fois que l'utilisateur cliq
 ```js
 function toggleTitle(title) {
   if (title == "this") {
-    browser.browserAction.setTitle({title: "that"});
+    browser.browserAction.setTitle({ title: "that" });
   } else {
-    browser.browserAction.setTitle({title: "this"});
+    browser.browserAction.setTitle({ title: "this" });
   }
 }
 
@@ -76,6 +62,10 @@ browser.browserAction.onClicked.addListener(() => {
   gettingTitle.then(toggleTitle);
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

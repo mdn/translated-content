@@ -1,11 +1,7 @@
 ---
 title: L'alignement des boîtes avec une disposition en colonnes
-slug: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
-tags:
-  - CSS
-  - Guide
+slug: Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout
 translation_of: Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
-original_slug: Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_colonnes
 ---
 
 {{CSSRef}}

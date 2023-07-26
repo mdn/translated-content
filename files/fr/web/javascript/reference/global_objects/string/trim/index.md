@@ -1,16 +1,7 @@
 ---
 title: String.prototype.trim()
-slug: Web/JavaScript/Reference/Global_Objects/String/Trim
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - String
-  - polyfill
+slug: Web/JavaScript/Reference/Global_Objects/String/trim
 translation_of: Web/JavaScript/Reference/Global_Objects/String/Trim
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/trim
 ---
 
 {{JSRef}}

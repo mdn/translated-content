@@ -12,9 +12,12 @@ slug: Web/Accessibility/ARIA
 这是进度条小部件的标记：
 
 ```html
-<div id="percent-loaded" role="progressbar" aria-valuenow="75"
-     aria-valuemin="0" aria-valuemax="100">
-</div>
+<div
+  id="percent-loaded"
+  role="progressbar"
+  aria-valuenow="75"
+  aria-valuemin="0"
+  aria-valuemax="100"></div>
 ```
 
 这个进度条是使用 {{HTMLElement("div")}} 构建的，它没有任何意义。不幸的是，HTML 4 中没有更多语义标签可供开发人员使用，因此我们需要包含 ARIA 角色和属性。这些是通过向元素添加属性来指定的。在这个例子中， `role="progressbar"` 属性通知浏览器这个元素实际上是一个 JavaScript 驱动的进度条小部件。 `aria-valuemin` 和 `aria-valuemax` 属性指定进度条的最小值和最大值，`aria-valuenow` 描述进度条的当前状态和因此必须使用 JavaScript 保持更新。
@@ -63,8 +66,6 @@ function updateProgress(percentComplete) {
 
 - [Enhancing page navigation with ARIA landmarks](https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
   - : 使用 ARIA 地标改进屏幕阅读器用户的网页导航的一个很好的介绍。参考 [ARIA landmark implementation notes](https://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) 和真实站点上的示例（截至 2011 年 7 月更新）。
-- [Improving form accessibility](/zh-CN/docs/Web/Accessibility/ARIA/forms)
-  - : ARIA 不仅适用于动态内容！了解如何使用附加 ARIA 属性提高 HTML 表单的无障碍。
 
 ## 脚本小部件的 ARIA
 

@@ -41,11 +41,11 @@ margin-bottom: unset;
 - `auto`
   - : 由浏览器自己选择一个合适的值。参见 {{cssxref("margin")}}。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 样例
+## 示例
 
 ### HTML
 
@@ -91,7 +91,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample('Example',350,200) }}
+{{ EmbedLiveSample('示例',350,200) }}
 
 ## 规范
 

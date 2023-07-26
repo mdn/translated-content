@@ -1,14 +1,6 @@
 ---
 title: WheelEvent.deltaX
 slug: Web/API/WheelEvent/deltaX
-tags:
-  - API
-  - DOM
-  - Lecture seulement
-  - Propriété
-  - Reference
-  - Référence(2)
-  - WheelEvent
 translation_of: Web/API/WheelEvent/deltaX
 ---
 
@@ -25,7 +17,10 @@ var dX = event.deltaX;
 ## Exemple
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});
+var syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaX: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaX);
 ```

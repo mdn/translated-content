@@ -1,34 +1,29 @@
 ---
-title: GlobalEventHandlers.onabort
+title: 'HTMLMediaElement: abort イベント'
 slug: Web/API/HTMLMediaElement/abort_event
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef}}
 
-**`abort`** イベントは、リソースが完全に読み込まれなかったが、それがエラーの結果ではなかった場合に発生します。
+**`abort`** イベントは、リソースが完全には読み込まれなかったが、それがエラーの結果ではなかった場合に発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("GlobalEventHandlers/onabort", "onabort")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('abort', (event) => {});
+
+onabort = (event) => { };
+```
+
+## イベント型
+
+一般の {{domxref("Event")}} です。
 
 ## 例
 
@@ -40,7 +35,9 @@ video.addEventListener('abort', () => {
   console.log(`Abort loading: ${videoSrc}`);
 });
 
-### 値
+const source = document.createElement('source');
+source.setAttribute('src', videoSrc);
+source.setAttribute('type', 'video/webm');
 
 video.appendChild(source);
 ```

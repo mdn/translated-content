@@ -1,13 +1,6 @@
 ---
 title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Method
-  - Proxy
-browser-compat: javascript.builtins.Proxy.handler.get
-translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 ---
 
 {{JSRef}}

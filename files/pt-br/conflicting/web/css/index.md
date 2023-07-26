@@ -1,10 +1,6 @@
 ---
 title: Ferramentas
 slug: conflicting/Web/CSS
-tags:
-  - CSS
-  - NeedsContent
-translation_of: Web/CSS/Tools
 original_slug: Web/CSS/Tools
 ---
 

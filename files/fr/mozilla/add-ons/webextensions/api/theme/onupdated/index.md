@@ -1,12 +1,6 @@
 ---
 title: theme.onUpdated
 slug: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
-tags:
-  - Add-ons
-  - Event
-  - Extensions
-  - Theme
-  - WebExtensions;
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
 ---
 
@@ -23,9 +17,9 @@ Notez que cet événement n'est pas déclenché pour les thèmes intégrés.
 ## Syntaxe
 
 ```js
-browser.theme.onUpdated.addListener(listener)
-browser.theme.onUpdated.removeListener(listener)
-browser.theme.onUpdated.hasListener(listener)
+browser.theme.onUpdated.addListener(listener);
+browser.theme.onUpdated.removeListener(listener);
+browser.theme.onUpdated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -54,9 +48,9 @@ Les événements ont trois fonctions :
         - `windowId`{{optional_inline}}
           - : `integer`. L'ID de la fenêtre pour laquelle le thème a été mis à jour. Si cette propriété n'est pas présente, cela signifie que le thème a été mise à jour globalement.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.theme.onUpdated", 10)}}
+{{Compat}}
 
 ## Exemples
 

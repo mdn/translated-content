@@ -1,8 +1,9 @@
 ---
 title: Компиляция Rust в WebAssembly
-slug: WebAssembly/Rust_to_wasm
+slug: WebAssembly/Rust_to_Wasm
 translation_of: WebAssembly/Rust_to_wasm
 ---
+
 {{WebAssemblySidebar}}
 
 Если уже вы написали некоторый код на Rust, вы можете скомпилировать его в WebAssembly! Из этого руководства вы узнаете всё, что вам нужно знать, чтобы скомпилировать проект на Rust в wasm и использовать его в существующем веб-приложении.
@@ -272,24 +273,24 @@ cd site
 Дальше нам нужно сконфигурировать Webpack. Создайте `webpack.config.js` и введите следующее:
 
 ```js
-const path = require('path');
+const path = require("path");
 module.exports = {
   entry: "./index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
   },
-  mode: "development"
+  mode: "development",
 };
 ```
 
 Теперь нам нужен HTML-файл; создайте `index.html` и поместите в него:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>hello-wasm example</title>
   </head>
   <body>
@@ -302,7 +303,7 @@ module.exports = {
 
 ```js
 const js = import("./node_modules/@yournpmusername/hello-wasm/hello_wasm.js");
-js.then(js => {
+js.then((js) => {
   js.greet("WebAssembly");
 });
 ```

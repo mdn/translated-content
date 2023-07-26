@@ -1,16 +1,6 @@
 ---
 title: 'Document: copy 이벤트'
 slug: Web/API/Document/copy_event
-tags:
-  - API
-  - Clipboard API
-  - Document
-  - Event
-  - Reference
-  - Web
-  - copy
-browser-compat: api.Document.copy_event
-translation_of: Web/API/Document/copy_event
 ---
 {{APIRef}}
 

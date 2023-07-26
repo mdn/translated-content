@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Compositing
 original_slug: Web/Guide/HTML/Canvas_tutorial/Compositing
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 Em todo os nossos [exemplos prévios](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Transformations), formas estavam sempre desenhadas uma em cima das outras. Este é mais do que adequado para a maioria das situações, mas é limita a ordem no qual a composição das formas são construídas.
 
@@ -23,7 +23,7 @@ Veja os seguintes [exemplos de composição](/pt-BR/docs/Web/API/Canvas_API/Tuto
 
 ## Caminhos de recorte (Clipping path)
 
-![](https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png)Um caminho de recorte (Clipping path) é como uma forma normal canvas mas isto age como uma máscara para esconder indesejáveis partes de formas. Isto é visualizado na imagem na direita. A forma da estrela vermelha é nosso caminho de recorte. Tudo que cai do lado de fora deste caminho não sai desenhado no canvas.
+![](canvas_clipping_path.png)Um caminho de recorte (Clipping path) é como uma forma normal canvas mas isto age como uma máscara para esconder indesejáveis partes de formas. Isto é visualizado na imagem na direita. A forma da estrela vermelha é nosso caminho de recorte. Tudo que cai do lado de fora deste caminho não sai desenhado no canvas.
 
 Se nós compararmos caminho de recorte para a propriedade `globalCompositeOperation` nós temos visto acima, nós veremos dois modelos de composição que alcança mais ou menos o mesmo efeito no source-in e source-atop. A mais importante diferença entre os dois é que o caminho de recorte nunca desenha algo na tela e o caminho de recorte nunca afeta por adicionar novas formas. Isto faz o caminho do recorte ideal para desenhar múltiplos na área restrita.
 
@@ -103,8 +103,8 @@ Tudo que for desenhado depois de criado o caminho de recorte somente aparecerá 
 
 Um exemplo de recorte:
 
-![](https://mdn.mozillademos.org/files/208/Canvas_clip.png)
+![](canvas_clip.png)
 
-{{EmbedLiveSample("A_clip_example", "180", "180", "https://mdn.mozillademos.org/files/208/Canvas_clip.png")}}
+{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

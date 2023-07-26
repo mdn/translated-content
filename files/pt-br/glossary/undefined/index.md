@@ -1,6 +1,6 @@
 ---
 title: undefined
-slug: Glossary/undefined
+slug: Glossary/Undefined
 original_slug: Glossario/undefined
 ---
 
@@ -10,7 +10,7 @@ Um valor **{{Glossary("primitive")}}** automaticamente atribuido para **variavei
 
 ### Conhecimentos gerais
 
-- {{Interwiki("wikipedia", "Undefined value")}} no Wikipedia
+- [Undefined value](https://pt.wikipedia.org/wiki/Valor_não_definido) no Wikipedia
 
 ### Referência Técnica
 

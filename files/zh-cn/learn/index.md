@@ -7,7 +7,7 @@ slug: Learn
 
 欢迎来到 MDN 学习区。本系列文章旨在为零基础 Web 开发初学者提供指导和开始编写网站代码所需的所有内容。
 
-该教程并不是“从入门到精通”类型的教程，只能让你做到“从入门到适应”。在此之后，你应该能够以你自己的方式学习 [MDN 的其他内容](/zh-CN/)，并接触到其它中、高级资源。
+该教程并不是“从入门到精通”类型的教程，只能让你做到“从入门到适应”。在此之后，你应该能够以你自己的方式学习 [MDN 的其他内容](/zh-CN/)，并接触到其他中、高级资源。
 
 从零开始学习 Web 开发极具挑战性，该教程将为你提供详细的资料，手把手帮助你轻松愉快地学习。无论你是正在学习 Web 开发的学生（自学或参与课程）、寻找材料的老师、编程爱好者，亦或是仅仅想了解一点点 Web 技术，我们都希望你能感到宾至如归。
 
@@ -67,25 +67,25 @@ slug: Learn
 
 3. 在命令提示符 / 终端中输入以下命令，即可将 `roy-tian/learning-area` 仓库拷贝到本地的 `learning-area` 文件夹：
 
-    ```bash
-    git clone https://github.com/roy-tian/learning-area
-    ```
+   ```bash
+   git clone https://github.com/roy-tian/learning-area
+   ```
 
-4. 然后即可使用访达（macOS）、文件资源管理器（Windows/Linux）或 [`cd` 命令](https://zh.wikipedia.org/wiki/Cd_(命令))) 进入该目录，查找所需文件。
+4. 然后即可使用访达（macOS）、文件资源管理器（Windows/Linux）或 [`cd` 命令](<https://zh.wikipedia.org/wiki/Cd_(命令)>)) 进入该目录，查找所需文件。
 
 你可以随时对本地 `learning-area` 目录与 GitHub 仓库中的 master 分支进行同步，具体步骤如下：
 
 1. 在命令提示符 / 终端中使用 `cd` 指令进入 `learning-area` 文件夹。例如，当你在父目录时：
 
-    ```bash
-    cd learning-area
-    ```
+   ```bash
+   cd learning-area
+   ```
 
 2. 执行以下命令以更新仓库：
 
-    ```bash
-    git pull
-    ```
+   ```bash
+   git pull
+   ```
 
 ## 联系我们
 

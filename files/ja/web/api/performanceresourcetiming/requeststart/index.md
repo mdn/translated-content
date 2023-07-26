@@ -1,59 +1,69 @@
 ---
 title: PerformanceResourceTiming.requestStart
 slug: Web/API/PerformanceResourceTiming/requestStart
+l10n:
+  sourceCommit: b3477f90eb235d08fe196373466a725050f43862
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
-**`requestStart`** 読み取り専用プロパティは、ブラウザーがサーバ、キャッシュ、またはローカルリソースにリソースのリクエストを開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。トランスポート接続が失敗してブラウザーがリクエストを終了すると、返される値は再試行要求の開始になります。
+**`requestStart`** は読み取り専用プロパティで、ブラウザーがサーバ、キャッシュ、またはローカルリソースにリソースのリクエストを開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。トランスポート接続が失敗してブラウザーがリクエストを終了すると、返される値は再試行要求の開始になります。
 
-`requestStart` には _end_ プロパティはありません。
+`requestStart` には _end_ プロパティはありません。リクエスト時間を計測するには、 {{domxref("PerformanceResourceTiming.responseStart", "responseStart")}} - `requestStart` を計算してください（下記の例を参照してください）。
 
-{{AvailableInWorkers}}
+## 値
 
-## 構文
+`requestStart` プロパティは以下の値を取ります。
 
-```
-resource.requestStart;
-```
-
-### 返値
-
-ブラウザーがサーバからのリソースのリクエストを開始する直前の時間を表す {{domxref("DOMHighResTimeStamp")}}
+- ブラウザーがサーバーからリソースのリクエストを始める直前の時刻を表す {{domxref("DOMHighResTimeStamp")}} です。
+- リソースがキャッシュから即座に取得された場合は `0` です。
+- リソースがオリジン間リクエストで取得され、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーが使用されなかった場合は `0` となります。
 
 ## 例
 
-次の例では、すべての "`resource`" {{domxref("PerformanceEntry.entryType","type")}} イベントの `*Start` プロパティと `*End` プロパティの値が記録されます。
+### リクエスト時間の計測
+
+`requestStart` と {{domxref("PerformanceResourceTiming.responseStart", "responseStart")}} プロパティを使用して、、リクエストにかかる時間を測定することができます。
 
 ```js
-function print_PerformanceEntries() {
-  // Use getEntriesByType() to just get the "resource" events
-  var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
-  }
-}
-function print_start_and_end_properties(perfEntry) {
-  // Print timestamps of the PerformanceEntry *start and *end properties
-  properties = ["connectStart", "connectEnd",
-                "domainLookupStart", "domainLookupEnd",
-                "fetchStart",
-                "redirectStart", "redirectEnd",
-                "requestStart",
-                "responseStart", "responseEnd",
-                "secureConnectionStart"];
+const request = entry.responseStart - entry.requestStart;
+```
 
-  for (var i=0; i < properties.length; i++) {
-    // check each property
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = NOT supported");
+{{domxref("PerformanceObserver")}} を使用した例です。このオブジェクトは、新しい `resource` パフォーマンス項目がブラウザーのパフォーマンスタイムラインに記録されると、それを通知します。オブザーバーが作成される前の項目にアクセスするために `buffered` オプションを使用します。
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const request = entry.responseStart - entry.requestStart;
+    if (request > 0) {
+      console.log(`${entry.name}: Request time: ${request}ms`);
     }
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+```
+
+{{domxref("Performance.getEntriesByType()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `resource` パフォーマンス項目のみを表示します。
+
+```js
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  const request = entry.responseStart - entry.requestStart;
+  if (request > 0) {
+    console.log(`${entry.name}: Request time: ${request}ms`);
   }
-}
+});
+```
+
+### オリジン間のタイミング情報
+
+`requestStart` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジン間のタイミング情報を見るためには、{{HTTPHeader("Timing-Allow-Origin")}} HTTP レスポンスヘッダーを設定する必要があります。
+
+例えば、`https://developer.mozilla.org` にタイミングリソースを見ることを許可するには、オリジン間リソースが送信する必要があります。
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
 ```
 
 ## 仕様書
@@ -62,4 +72,8 @@ function print_start_and_end_properties(perfEntry) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceResourceTiming.requestStart")}}
+{{Compat}}
+
+## 関連情報
+
+- {{HTTPHeader("Timing-Allow-Origin")}}

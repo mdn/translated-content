@@ -39,7 +39,7 @@ Nossa demo com bola saltitante é divertida, mas agora queremos torná-la um pou
 
 A imagem seguinte dá-lhe uma ideia do que deve ser o programa final:
 
-![](https://mdn.mozillademos.org/files/13875/bouncing-evil-circle.png)
+![](bouncing-evil-circle.png)
 
 Para lhe dar mais uma ideia, dê uma olhada no [exemplo finalizado](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (não espreitar o código-fonte!)
 
@@ -86,8 +86,8 @@ Novamente, lembre-se de definir suas propriedades herdadas como parâmetros no c
 
 Este método tem o mesmo propósito que o método `draw()` de `Ball()`: Ele desenha a instância do objeto na tela. Ele funcionará de maneira muito semelhante, portanto, você pode começar copiando a definição `Ball.prototype.draw`. Você deve então fazer as seguintes alterações:
 
-- Nós queremos que o círculo do mal não seja preenchido, mas apenas tenha uma linha externa (traço). Você pode conseguir isso atualizando [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) e [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) para [`strokeStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) e [`stroke()`](/en-US/docs/Web/API/CanvasRenderingContext2D/stroke).
-- Também queremos tornar o traço um pouco mais espesso, para que você possa ver o círculo maligno com mais facilidade. Isso pode ser obtido definindo um valor para [`lineWidth`](/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth) em algum lugar após a chamada [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) (3 será suficiente).
+- Nós queremos que o círculo do mal não seja preenchido, mas apenas tenha uma linha externa (traço). Você pode conseguir isso atualizando [`fillStyle`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/fillStyle) e [`fill()`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/fill) para [`strokeStyle`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/strokeStyle) e [`stroke()`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/stroke).
+- Também queremos tornar o traço um pouco mais espesso, para que você possa ver o círculo maligno com mais facilidade. Isso pode ser obtido definindo um valor para [`lineWidth`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/lineWidth) em algum lugar após a chamada [`beginPath()`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/beginPath) (3 será suficiente).
 
 #### `checkBounds()`
 
@@ -102,17 +102,17 @@ Esse método adicionará um ouvinte de evento `onkeydown` ao objeto `window` par
 
 ```js
 var _this = this;
-window.onkeydown = function(e) {
-    if (e.keyCode === 65) {
-      _this.x -= _this.velX;
-    } else if (e.keyCode === 68) {
-      _this.x += _this.velX;
-    } else if (e.keyCode === 87) {
-      _this.y -= _this.velY;
-    } else if (e.keyCode === 83) {
-      _this.y += _this.velY;
-    }
+window.onkeydown = function (e) {
+  if (e.keyCode === 65) {
+    _this.x -= _this.velX;
+  } else if (e.keyCode === 68) {
+    _this.x += _this.velX;
+  } else if (e.keyCode === 87) {
+    _this.y -= _this.velY;
+  } else if (e.keyCode === 83) {
+    _this.y += _this.velY;
   }
+};
 ```
 
 Assim, quando uma tecla é pressionada, a propriedade [keyCode](/pt-BR/docs/Web/API/KeyboardEvent/keyCode) é consultada para ver qual tecla é pressionada. Se for um dos quatro representados pelos códigos de teclas especificados, o círculo maligno se moverá para a esquerda / direita / para cima / para baixo.
@@ -142,22 +142,22 @@ Para implementar o contador de pontuação, siga os seguintes passos:
 1. No seu arquivo HTML, adicione um elemento {{HTMLElement("p")}} logo abaixo do elemento {{HTMLElement("h1")}} contendo o texto "Contagem de bolas:".
 2. No seu arquivo CSS, adicione a seguinte regra na parte inferior:
 
-    ```css
-    p {
-      position: absolute;
-      margin: 0;
-      top: 35px;
-      right: 5px;
-      color: #aaa;
-    }
-    ```
+   ```css
+   p {
+     position: absolute;
+     margin: 0;
+     top: 35px;
+     right: 5px;
+     color: #aaa;
+   }
+   ```
 
 3. Em seu JavaScript, faça as seguintes atualizações:
 
-    - Crie uma variável que armazene uma referência ao parágrafo.
-    - Mantenha uma contagem do número de bolas na tela de alguma forma.
-    - Incrementar a contagem e exibir o número atualizado de bolas cada vez que uma bola é adicionada à cena.
-    - Decrementar a contagem e exibir o número atualizado de bolas cada vez que o círculo maligno come uma bola (faz com que ele não exista).
+   - Crie uma variável que armazene uma referência ao parágrafo.
+   - Mantenha uma contagem do número de bolas na tela de alguma forma.
+   - Incrementar a contagem e exibir o número atualizado de bolas cada vez que uma bola é adicionada à cena.
+   - Decrementar a contagem e exibir o número atualizado de bolas cada vez que o círculo maligno come uma bola (faz com que ele não exista).
 
 ## Dicas e sugestões
 
@@ -169,13 +169,3 @@ Para implementar o contador de pontuação, siga os seguintes passos:
 Se você está seguindo esta avaliação como parte de um curso organizado, você deve poder dar seu trabalho ao seu professor / mentor para marcação. Se você é auto-didata, então você pode obter o guia de marcação com bastante facilidade, perguntando no tópico de [discussão para este exercício](https://discourse.mozilla.org/t/adding-features-to-our-bouncing-balls-demo-assessment/24689), ou no canal de [#mdn](irc://irc.mozilla.org/mdn) IRC da [Mozilla IRC](https://wiki.mozilla.org/IRC). Tente o exercício primeiro — não há nada a ganhar com a trapaça!
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
-
-## Neste módulo
-
-- [Object basics](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
-- [Object-oriented JavaScript for beginners](/pt-BR/docs/Learn/JavaScript/Objects/Object-oriented_JS)
-- [Object prototypes](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Inheritance in JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Inheritance)
-- [Working with JSON data](/pt-BR/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

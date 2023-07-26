@@ -1,11 +1,6 @@
 ---
 title: '-moz-orient'
 slug: Web/CSS/-moz-orient
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-moz-orient
 ---
 
@@ -72,7 +67,7 @@ Bien que [proposée](https://lists.w3.org/Archives/Public/www-style/2014Jun/0396
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-moz-orient")}}
+{{Compat}}
 
 ## Voir aussi
 

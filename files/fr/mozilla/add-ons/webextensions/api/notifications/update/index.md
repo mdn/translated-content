@@ -1,16 +1,6 @@
 ---
 title: notifications.update()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Notifications
-  - Reference
-  - Update
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/update
 ---
 
@@ -24,9 +14,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var updating = browser.notifications.update(
-  id,                            // string
-  options                        // NotificationOptions
-)
+  id, // string
+  options, // NotificationOptions
+);
 ```
 
 ### Paramètres
@@ -40,9 +30,9 @@ var updating = browser.notifications.update(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un booléen : `true` si la notification a été mise à jour, ou `false` si ce n'est pas le cas (par exemple, parce que la notification référencée par `id` n'existe pas).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.update")}}
+{{Compat}}
 
 ## Exemples
 
@@ -66,14 +56,14 @@ var CAKE_PREP_INTERVAL = 0.005;
 
 var progress = 0;
 
-browser.alarms.onAlarm.addListener(function(alarm) {
+browser.alarms.onAlarm.addListener(function (alarm) {
   progress = progress + 10;
   if (progress > 100) {
     browser.notifications.clear(cakeNotification);
     browser.alarms.clear("cake-progress");
   } else {
     browser.notifications.update(cakeNotification, {
-      "progress": progress
+      progress: progress,
     });
   }
 });
@@ -86,16 +76,15 @@ browser.browserAction.onClicked.addListener(function () {
     }
     progress = 0;
     browser.notifications.create(cakeNotification, {
-      "type": "progress",
-      "iconUrl": browser.extension.getURL("icons/cake-48.png"),
-      "title": "Your cake is being prepared...",
-      "message": "Something something cake",
-      "progress": progress
+      type: "progress",
+      iconUrl: browser.extension.getURL("icons/cake-48.png"),
+      title: "Your cake is being prepared...",
+      message: "Something something cake",
+      progress: progress,
     });
-    browser.alarms.create(
-      "cake-progress",
-      {periodInMinutes: CAKE_PREP_INTERVAL}
-    );
+    browser.alarms.create("cake-progress", {
+      periodInMinutes: CAKE_PREP_INTERVAL,
+    });
   });
 });
 ```

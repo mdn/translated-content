@@ -1,7 +1,6 @@
 ---
 title: 웹 워커 사용하기
 slug: Web/API/Web_Workers_API/Using_web_workers
-translation_of: Web/API/Web_Workers_API/Using_web_workers
 original_slug: Web/API/Web_Workers_API/basic_usage
 ---
 
@@ -89,8 +88,6 @@ myWorker.onmessage = function(e) {
 
 Here we grab the message event data and set it as the `textContent` of the result paragraph, so the user can see the result of the calculation.
 
-> **참고:** **Note**: The URI passed as a parameter to the `Worker` constructor must obey the [same-origin policy](/ko/docs/Web/Security/Same-origin_policy) .There is currently disagreement among browsers vendors on what URIs are of the same-origin; Gecko 10.0 {{geckoRelease("10.0")}} and later do allow data URIs and Internet Explorer 10 does not allow Blob URIs as a valid script for workers.
-
 > **참고:** Notice that `onmessage` and `postMessage()` need to be hung off the `Worker` object when used in the main script thread, but not when used in the worker. This is because, inside the worker, the worker is effectively the global scope.
 
 > **참고:** When a message is passed between the main thread and worker, it is copied or "transferred" (moved), not shared. Read [Transferring data to and from workers: further details](#transferring_data_to_and_from_workers_further_details) for a much more thorough explanation.
@@ -153,7 +150,7 @@ Here we'll concentrate on the differences between dedicated and shared workers. 
 
 > **참고:** If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host, and port).
 
-> **참고:** In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ({{bug(1177621)}}).
+> **참고:** In Firefox, shared workers cannot be shared between documents loaded in private and non-private windows ([Firefox bug 1177621](https://bugzil.la/1177621)).
 
 ### Spawning a shared worker
 
@@ -795,7 +792,7 @@ The main thing you _can't_ do in a Worker is directly affect the parent page. Th
 
 > **참고:** For a complete list of functions available to workers, see [Functions and interfaces available to workers](/ko/docs/Web/Reference/Functions_and_classes_available_to_workers).
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

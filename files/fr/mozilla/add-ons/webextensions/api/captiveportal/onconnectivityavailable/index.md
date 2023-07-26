@@ -1,14 +1,6 @@
 ---
 title: onConnectivityAvailable
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onConnectivityAvailable
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - captivePortal
 translation_of: Mozilla/Add-ons/WebExtensions/API/captivePortal/onConnectivityAvailable
 ---
 
@@ -19,9 +11,9 @@ S'allume lorsque le service de portail captif détermine que l'utilisateur peut 
 ## Syntaxe
 
 ```js
-browser.captivePortal.onConnectivityAvailable.addListener(callback)
-browser.captivePortal.onConnectivityAvailable.removeListener(listener)
-browser.captivePortal.onConnectivityAvailable.hasListener(listener)
+browser.captivePortal.onConnectivityAvailable.addListener(callback);
+browser.captivePortal.onConnectivityAvailable.removeListener(listener);
+browser.captivePortal.onConnectivityAvailable.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -58,9 +50,9 @@ browser.captivePortal.onConnectivityAvailable.addListener(handleConnectivity);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.captivePortal.onConnectivityAvailable")}}
+{{Compat}}
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -118,11 +118,7 @@ De nuevo, darse cuenta que esta implementación tiene como objeto la completa co
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.lastIndexOf")}}
-
-## Notas de compatibilidad
-
-- Desde Firefox 47 (Firefox 47 / Thunderbird 47 / SeaMonkey 2.44), el método ya no devolverá `-0`. Por ejemplo, `[0].lastIndexOf(0, -0)` siempre devolverá `+0` ({{bug(1242043)}}).
+{{Compat}}
 
 ## Ver también
 

@@ -1,16 +1,7 @@
 ---
 title: devtools.panels.themeName
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName
-tags:
-  - API
-  - Add-ons
-  - DevTools
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - themeName
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/themeName
 ---
 
 {{AddonSidebar()}}
@@ -23,9 +14,9 @@ Il s'agit d'une chaîne dont les valeurs possibles sont :
 - "foncé"
 - "firebug"
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.themeName")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

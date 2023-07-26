@@ -1,13 +1,6 @@
 ---
 title: URL.port
 slug: Web/API/URL/port
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-translation_of: Web/API/URL/port
 ---
 
 {{ApiRef("URL API")}}

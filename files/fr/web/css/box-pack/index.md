@@ -1,11 +1,6 @@
 ---
 title: box-pack
 slug: Web/CSS/box-pack
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/box-pack
 ---
 
@@ -136,7 +131,7 @@ Cette propriété n'est pas standard mais une propriété semblable est apparue 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.box-pack")}}
+{{Compat}}
 
 ## Voir aussi
 

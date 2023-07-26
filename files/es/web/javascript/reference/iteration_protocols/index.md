@@ -1,14 +1,6 @@
 ---
 title: Protocolos de Iteración
 slug: Web/JavaScript/Reference/Iteration_protocols
-tags:
-  - ECMAScript6
-  - Experimental
-  - Intermedio
-  - Iterable
-  - Iterador
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Iteration_protocols
 original_slug: Web/JavaScript/Referencia/Iteration_protocols
 ---
 

@@ -1,16 +1,6 @@
 ---
 title: browserAction.getTitle()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - getTitle
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle
 ---
 
@@ -26,8 +16,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingTitle = browser.browserAction.getTitle(
-  details               // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -50,10 +40,6 @@ var gettingTitle = browser.browserAction.getTitle(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne contenant le titre de l'action du navigateur.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.getTitle",2)}}
-
 ## Exemples
 
 Ce code change le titre entre "ceci" et "cela" chaque fois que l'utilisateur clique sur l'action du navigateur :
@@ -61,9 +47,9 @@ Ce code change le titre entre "ceci" et "cela" chaque fois que l'utilisateur cli
 ```js
 function toggleTitle(title) {
   if (title == "this") {
-    browser.browserAction.setTitle({title: "that"});
+    browser.browserAction.setTitle({ title: "that" });
   } else {
-    browser.browserAction.setTitle({title: "this"});
+    browser.browserAction.setTitle({ title: "this" });
   }
 }
 
@@ -72,6 +58,10 @@ browser.browserAction.onClicked.addListener(() => {
   gettingTitle.then(toggleTitle);
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

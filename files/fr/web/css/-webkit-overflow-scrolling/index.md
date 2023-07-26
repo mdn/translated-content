@@ -1,11 +1,6 @@
 ---
 title: '-webkit-overflow-scrolling'
 slug: Web/CSS/-webkit-overflow-scrolling
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-overflow-scrolling
 ---
 
@@ -77,7 +72,7 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-overflow-scrolling")}}
+{{Compat}}
 
 ## Voir aussi
 

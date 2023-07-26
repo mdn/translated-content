@@ -3,11 +3,11 @@ title: WebGL モデル ビュー 射影
 slug: Web/API/WebGL_API/WebGL_model_view_projection
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 この記事では、[WebGL](/ja/docs/Web/API/WebGL_API) プロジェクト内でデータを取得し、それを適切な空間に投影して画面に表示する方法について説明します。並進、拡縮、回転行列を使用した基本的な行列計算の知識があることを前提としています。3D シーンを構成するときに通常使用される中心的な 3 つの行列である、モデル、ビュー、射影行列について説明します。
 
-> **メモ:** This article is also available as an [MDN content kit](https://github.com/TatumCreative/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/TatumCreative/mdn-webgl) available under the `MDN` global object.
+> **メモ:** This article is also available as an [MDN content kit](https://github.com/gregtatum/mdn-model-view-projection). It also uses a collection of [utility functions](https://github.com/gregtatum/mdn-webgl) available under the `MDN` global object.
 
 ## モデル、ビュー、射影行列
 
@@ -21,7 +21,7 @@ WebGL の空間内の点とポリゴンの個々の変換は、並進、拡縮�
 
 WebGL プログラムでは、通常、データは自分の座標系で GPU にアップロードされ、次に頂点シェーダーがそれらの点を**クリップ空間**と呼ばれる特別な座標系に変換します。クリップ空間の外側にあるデータは切り取られ、描画されません。ただし、三角形がこのスペースの境界を跨ぐ場合は、新しい三角形に分割され、クリップスペースにある新しい三角形の部分のみが残ります。
 
-![A 3d graph showing clip space in WebGL.](https://mdn.mozillademos.org/files/11371/clip-space-graph.svg)
+![A 3d graph showing clip space in WebGL.](clip_space_graph.svg)
 
 上の図は、全ての点が収まる必要のあるクリップ空間を視覚化したものです。これは、各辺が 2 の立方体であり、片方の角が (-1,-1,-1) にあり、対角が (1,1,1) にあります。立方体の中心は点 (0,0,0) です。 クリップ空間に使用されるこの 8 立方メートルの座標系は、正規化デバイス座標（NDC）と呼ばれます。WebGL コードを調べて作業している間、その用語を時々耳にするかもしれません。
 
@@ -31,7 +31,7 @@ WebGL プログラムでは、通常、データは自分の座標系で GPU に
 
 この例では、画面上に 2D ボックスを描画するカスタム `WebGLBox` オブジェクトを作成します。
 
-> **メモ:** The code for each WebGLBox example is available in this [github repo](https://github.com/TatumCreative/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
+> **メモ:** The code for each WebGLBox example is available in this [github repo](https://github.com/gregtatum/mdn-model-view-projection/tree/master/lessons) and is organized by section. In addition there is a JSFiddle link at the bottom of each section.
 
 #### WebGLBox コンストラクタ
 
@@ -108,7 +108,7 @@ WebGLBox.prototype.draw = function(settings) {
 }
 ```
 
-シェーダーは GLSL で記述されたコードの一部であり、データポイントを取得して最終的に画面に描画します。便宜上、これらのシェーダーは、カスタム関数 `MDN.createWebGLProgramFromIds()` を介してプログラムに取り込まれる要素 {{htmlelement("script")}} に格納されます。この関数は、これらのチュートリアル用に作成された [ユーティリティ関数群](https://github.com/TatumCreative/mdn-webgl) の一部であり、ここでは詳しく説明しません。この関数は、いくつかの GLSL ソースコードを取得して WebGL プログラムにコンパイルする基本を処理します。関数は 3 つのパラメーターを取ります。プログラムをレンダリングするコンテキスト、頂点シェーダーを含む要素の ID {{htmlelement("script")}}、フラグメントシェーダーを含む要素の ID {{htmlelement("script")}} です。頂点シェーダーは頂点を配置し、フラグメントシェーダーは各ピクセルに色を付けます。
+シェーダーは GLSL で記述されたコードの一部であり、データポイントを取得して最終的に画面に描画します。便宜上、これらのシェーダーは、カスタム関数 `MDN.createWebGLProgramFromIds()` を介してプログラムに取り込まれる要素 {{htmlelement("script")}} に格納されます。この関数は、これらのチュートリアル用に作成された [ユーティリティ関数群](https://github.com/gregtatum/mdn-webgl) の一部であり、ここでは詳しく説明しません。この関数は、いくつかの GLSL ソースコードを取得して WebGL プログラムにコンパイルする基本を処理します。関数は 3 つのパラメーターを取ります。プログラムをレンダリングするコンテキスト、頂点シェーダーを含む要素の ID {{htmlelement("script")}}、フラグメントシェーダーを含む要素の ID {{htmlelement("script")}} です。頂点シェーダーは頂点を配置し、フラグメントシェーダーは各ピクセルに色を付けます。
 
 最初に、画面上で頂点を移動させる頂点シェーダーを見てみましょう。
 
@@ -185,7 +185,7 @@ box.draw({
 
 [JSFiddle で表示](https://jsfiddle.net/mff99yu5)
 
-![The results of drawing to clip space using WebGL.](https://mdn.mozillademos.org/files/11373/part1.png)
+![The results of drawing to clip space using WebGL.](part1.png)
 
 #### 演習
 
@@ -316,7 +316,7 @@ box.draw({
 
 [View on JSFiddle](https://jsfiddle.net/mff99yu)
 
-![The results of using homogeneous coordinates to move the boxes around in WebGL.](https://mdn.mozillademos.org/files/11375/part2.png)
+![The results of using homogeneous coordinates to move the boxes around in WebGL.](part2.png)
 
 ### Exercises
 
@@ -331,7 +331,7 @@ Finally a single model matrix is computed and set. This matrix represents the tr
 
 In this case, for every frame of the animation a series of scale, rotation, and translation matrices move the data into the desired spot in clip space. The cube is the size of clip space (-1,-1,-1) to (1,1,1) so it will need to be shrunk down in order to not fill the entirety of clip space. This matrix is sent directly to the shader, having been multiplied in JavaScript beforehand.
 
-The following code sample defines a method on the `CubeDemo` object that will create the model matrix. It uses custom functions to create and multiply matrices as defined in the [MDN WebGL](https://github.com/TatumCreative/mdn-webgl) shared code. The new function looks like this:
+The following code sample defines a method on the `CubeDemo` object that will create the model matrix. It uses custom functions to create and multiply matrices as defined in the [MDN WebGL](https://github.com/gregtatum/mdn-webgl) shared code. The new function looks like this:
 
 ```js
 CubeDemo.prototype.computeModelMatrix = function(now) {
@@ -381,7 +381,7 @@ gl_Position = model * vec4(position, 1.0);
 
 [View on JSFiddle](https://jsfiddle.net/5jofzgsh)
 
-![Using a model matrix](https://mdn.mozillademos.org/files/11377/part3.png)
+![Using a model matrix](part3.png)
 
 At this point the w value of the transformed point is still 1.0. The cube still doesn't have any perspective. The next section will take this setup and modify the w values to provide some perspective.
 
@@ -417,7 +417,7 @@ gl_Position = vec4(transformedPosition.xyz, w);
 
 [View on JSFiddle](https://jsfiddle.net/vk9r8h2c)
 
-![Filling the W component and creating some projection.](https://mdn.mozillademos.org/files/11379/part4.png)
+![Filling the W component and creating some projection.](part4.png)
 
 See that small dark blue triangle? That's an additional face added to our object because the rotation of our shape has caused that corner to extend outside clip space, thus causing the corner to be clipped away. See [Perspective projection matrix](#perspective_projection_matrix) below for an introduction to how to use more complex matrices to help control and prevent clipping.
 
@@ -520,7 +520,7 @@ gl_Position = projection * model * vec4(position, 1.0);
 
 [View on JSFiddle](https://jsfiddle.net/zwyLLcbw)
 
-![A simple projection matrix](https://mdn.mozillademos.org/files/11381/part5.png)
+![A simple projection matrix](part5.png)
 
 ## The viewing frustum
 
@@ -530,7 +530,7 @@ While rendering, we need to determine which polygons need to be rendered in orde
 
 A [frustum](https://en.wikipedia.org/wiki/frustum) is the 3D solid that results from taking any solid and slicing off two sections of it using two parallel planes. Consider our camera, which is viewing an area that starts immediately in front of its lens and extends off into the distance. The viewable area is a four-sided pyramid with its peak at the lens, its four sides corresponding to the extents of its peripheral vision range, and its base at the farthest distance it can see, like this:
 
-![A depiction of the entire viewing area of a camera. This area is a four-sided pyramid with its peak at the lens and its base at the world's maximum viewable distance.](https://mdn.mozillademos.org/files/17295/FullCameraFOV.svg)
+![A depiction of the entire viewing area of a camera. This area is a four-sided pyramid with its peak at the lens and its base at the world's maximum viewable distance.](fullcamerafov.svg)
 
 If we simply used this to determine the polygons to be rendered each frame, our renderer would need to render every polygon within this pyramid, all the way off into infinity, including also polygons that are very close to the lens—likely too close to be useful (and certainly including things that are so close that a real human wouldn't be able to focus on them in the same setting).
 
@@ -538,7 +538,7 @@ So the first step in reducing the number of polygons we need to compute and rend
 
 In WebXR, the near and far clipping planes are defined by specifying the distance from the lens to the closest point on a plane which is perpendicular to the viewing direction. Anything closer to the lens than the near clipping plane or farther from it than the far clipping plane is removed. This results in the viewing frustum, which looks like this:
 
-![A depiction of the camera's view frustum; the near and far planes have removed part of the volume, reducing the polygon count.](https://mdn.mozillademos.org/files/17296/CameraViewFustum.svg)
+![A depiction of the camera's view frustum; the near and far planes have removed part of the volume, reducing the polygon count.](camera_view_frustum.svg)
 
 The set of objects to be rendered for each frame is essentially created by starting with the set of all objects in the scene. Then any objects which are _entirely_ outside the viewing frustum are removed from the set. Next, objects which partially extrude outside the viewing frustum are clipped by dropping any polygons which are entirely outside the frustum, and by clipping the polygons which cross outside the frustrum so that they no longer exit it.
 
@@ -615,7 +615,7 @@ Additionally (not shown), the position and scale matrices of the model have been
 
 [View on JSFiddle](https://jsfiddle.net/Lzxw7e1q)
 
-![A true perspective matrix](https://mdn.mozillademos.org/files/11383/part6.png)
+![A true perspective matrix](part6.png)
 
 ### Exercises
 
@@ -678,7 +678,7 @@ After this step, the GPU pipeline will clip the out of range vertices, and send 
 
 [View on JSFiddle](https://jsfiddle.net/86fd797g)
 
-![The view matrix](https://mdn.mozillademos.org/files/11385/part7.png)
+![The view matrix](part7.png)
 
 ### Relating the coordinate systems
 

@@ -1,10 +1,6 @@
 ---
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/continue
 original_slug: Web/JavaScript/Referencia/Sentencias/continue
 ---
 

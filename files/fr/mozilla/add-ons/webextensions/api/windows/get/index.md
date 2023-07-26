@@ -1,16 +1,6 @@
 ---
 title: windows.get()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/get
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Référence(2)
-  - WebExtensions
-  - Windows
-  - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/get
 ---
 
@@ -24,9 +14,9 @@ Il s'agit d'une fonction asynchrone qui renvoit une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var getting = browser.windows.get(
-  windowId,              // integer
-  getInfo                // optional object
-)
+  windowId, // integer
+  getInfo, // optional object
+);
 ```
 
 ### Paramètres
@@ -38,7 +28,7 @@ var getting = browser.windows.get(
   - : `object`. Contient des options pour filtrer le type de fenêtre.
 
     - `populate`{{optional_inline}}
-      - : `boolean`. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre. Les objets Tab ne contiennent que les propriétés `url`, `title` et `favIconUrl`  i le fichier manifeste de l'extension comprend la permission `"tabs"`.
+      - : `boolean`. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre. Les objets Tab ne contiennent que les propriétés `url`, `title` et `favIconUrl` i le fichier manifeste de l'extension comprend la permission `"tabs"`.
     - `windowTypes`{{optional_inline}}
       - : `Ensemble d'objets` {{WebExtAPIRef('windows.WindowType')}}. Si défini, le retour de {{WebExtAPIRef('windows.Window')}} sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec des types de fenêtres `'panel'` qui sont limités aux propres fenêtres de l'extension.
 
@@ -49,10 +39,6 @@ var getting = browser.windows.get(
 ### Valeur de retour
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
-
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.windows.get",2)}}
 
 ## Exemples
 
@@ -72,10 +58,14 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var getting = browser.windows.get(tab.windowId, {populate: true});
+  var getting = browser.windows.get(tab.windowId, { populate: true });
   getting.then(logTabs, onError);
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

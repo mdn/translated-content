@@ -1,11 +1,6 @@
 ---
 title: match
 slug: Web/EXSLT/regexp/match
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/regexp/match
 ---
 
 {{XsltRef}}

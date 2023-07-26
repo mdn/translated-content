@@ -1,6 +1,6 @@
 ---
 title: Console
-slug: Web/API/Console
+slug: Web/API/console
 ---
 
 {{APIRef("Console API")}}
@@ -10,7 +10,7 @@ The **`Console`** object provides access to the browser's debugging console (e.g
 The `Console` object can be accessed from any global object. {{domxref("Window")}} on browsing scopes and {{domxref("WorkerGlobalScope")}} as specific variants in workers via the property console. It's exposed as {{domxref("Window.console")}}, and can be referenced as simply `console`. For example:
 
 ```js
-console.log("Failed to open the specified link")
+console.log("Failed to open the specified link");
 ```
 
 This page documents the [Methods](#methods) available on the `Console` object and gives a few [Usage](#usage) examples.
@@ -26,9 +26,11 @@ This page documents the [Methods](#methods) available on the `Console` object an
 - {{domxref("Console.count()")}}
   - : Log the number of times this line has been called with the given label.
 - {{domxref("Console.debug()")}}
+
   - : An alias for `log()`.
 
     > **備註：** Starting with Chromium 58 this method only appears in Chromium browser consoles when level "Verbose" is selected.
+
 - {{domxref("Console.dir()")}} {{Non-standard_inline}}
   - : Displays an interactive listing of the properties of a specified JavaScript object. This listing lets you use disclosure triangles to examine the contents of child objects.
 - {{domxref("Console.dirxml()")}} {{Non-standard_inline}}
@@ -139,7 +141,10 @@ The output looks like this:
 You can use the `%c` directive to apply a CSS style to console output:
 
 ```js
-console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+console.log(
+  "This is %cMy stylish message",
+  "color: yellow; font-style: italic; background-color: blue;padding: 2px",
+);
 ```
 
 The text before the directive will not be affected, but the text after the directive will be styled using the CSS declarations in the parameter.![](css-styling.png)
@@ -169,7 +174,7 @@ console.debug("Back to the outer level");
 
 The output looks like this:
 
-![nesting.png](/@api/deki/files/6082/=nesting.png)
+![nesting.png](console_groups_demo.png)
 
 ### Timers
 
@@ -185,7 +190,7 @@ console.timeEnd("answer time");
 
 Will log the time needed by the user to discard the alert box:
 
-![timerresult.png](/@api/deki/files/6084/=timerresult.png)
+![timerresult.png](console-timelog.png)
 
 Notice that the timer's name is displayed both when the timer is started and when it's stopped.
 
@@ -221,7 +226,7 @@ The output in the console looks something like this:
 ## Notes
 
 - At least in Firefox, if a page defines a `console` object, that object overrides the one built into Firefox.
-- Prior to {{Gecko("12.0")}}, the console object's methods only work when the Web Console is open. Starting with {{Gecko("12.0")}}, output is cached until the Web Console is opened, then displayed at that time.
+- Prior to Gecko 12.0, the console object's methods only work when the Web Console is open. Starting with Gecko 12.0, output is cached until the Web Console is opened, then displayed at that time.
 - It's worth noting that the Firefox's built-in `Console` object is compatible with the one provided by [Firebug](http://getfirebug.com/).
 
 ## See also

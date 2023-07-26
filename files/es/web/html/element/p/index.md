@@ -7,8 +7,9 @@ original_slug: Web/HTML/Elemento/p
 ### Definición
 
 - El elemento [p](/es/HTML/Elemento/p) (párrafo) es el apropiado para distribuir el texto en párrafos.
+
   - : **Sus etiquetas son**: \<p> y \</p> (la de cierre es opcional).
-  
+
     **Crea una caja**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
     **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).

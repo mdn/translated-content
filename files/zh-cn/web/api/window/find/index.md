@@ -5,7 +5,7 @@ slug: Web/API/Window/find
 
 {{ ApiRef() }}
 
-> **备注：** `window.find()` 可能会在未来版本的 Gecko 中被废弃。查看 {{Bug("672395")}}
+> **备注：** `window.find()` 可能会在未来版本的 Gecko 中被废弃。查看 [Firefox bug 672395](https://bugzil.la/672395)
 
 ### 概述
 
@@ -27,7 +27,7 @@ window.find(aString, aCaseSensitive, aBackwards, aWrapAround,
 - `aWrapAround`
   - : 布尔值。如果为`true`, 表示为循环搜索。
 - `aWholeWord` {{ unimplemented_inline() }}
-  - : 布尔值。如果为`true`,表示采用全字匹配搜索。该参数无效; 查看 {{ bug("481513") }}.
+  - : 布尔值。如果为`true`,表示采用全字匹配搜索。该参数无效; 查看 [Firefox bug 481513](https://bugzil.la/481513).
 - `aSearchInFrames`
   - : 布尔值。如果为`true`, 表示会搜索框架内的文本。
 - `aShowDialog`

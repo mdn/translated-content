@@ -32,7 +32,7 @@ if (tOLeft > 5) {
 
 这个例子展示了蓝色边框的 div 包含一个长的句子，红色的盒子是一个可以表示包含这个长句子的 span 标签的边界。
 
-![Image:offsetLeft.jpg](/@api/deki/files/790/=OffsetLeft.jpg)
+![Image:offsetLeft.jpg](offsetleft.jpg)
 
 ```plain
 <div style="width: 300px; border-color:blue;
@@ -68,6 +68,6 @@ if (tOLeft > 5) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{domxref("HTMLElement.offsetParent")}}, {{domxref("HTMLElement.offsetTop")}}, {{domxref("HTMLElement.offsetWidth")}}, {{domxref(" HTMLElement.offsetHeight")}}
+- {{domxref("HTMLElement.offsetParent")}}、{{domxref("HTMLElement.offsetTop")}}、{{domxref("HTMLElement.offsetWidth")}}、{{domxref("HTMLElement.offsetHeight")}}

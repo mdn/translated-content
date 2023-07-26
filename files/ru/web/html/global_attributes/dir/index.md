@@ -16,7 +16,7 @@ The **`dir`** [global attribute](/ru/docs/Web/HTML/Global_attributes) is an enum
 - `rtl`, which means _right to left_ and is to be used for languages that are written from the right to the left (like Arabic);
 - `auto`, which lets the user agent decide. It uses a basic algorithm as it parses the characters inside the element until it finds a character with a strong directionality, then applies that directionality to the whole element.
 
-> **Примечание:** **Usage notes:** This attribute is mandatory for the {{ HTMLElement("bdo") }} element where it has a different semantic meaning.\* This attribute is _not_ inherited by the {{ HTMLElement("bdi") }} element. If not set, its value is `auto`.
+> **Примечание:** This attribute is mandatory for the {{ HTMLElement("bdo") }} element where it has a different semantic meaning.\* This attribute is _not_ inherited by the {{ HTMLElement("bdi") }} element. If not set, its value is `auto`.
 >
 > - This attribute can be overridden by the CSS properties {{ cssxref("direction") }} and {{ cssxref("unicode-bidi") }}, if a CSS page is active and the element supports these properties.
 > - As the directionality of the text is semantically related to its content and not to its presentation, it is recommended that web developers use this attribute instead of the related CSS properties when possible. That way, the text will display correctly even on a browser that doesn't support CSS or has the CSS deactivated.

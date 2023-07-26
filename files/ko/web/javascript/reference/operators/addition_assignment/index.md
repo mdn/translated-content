@@ -1,14 +1,6 @@
 ---
 title: 더하기 할당 (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Addition_assignment
-browser-compat: javascript.operators.addition_assignment
 ---
 {{jsSidebar("Operators")}}
 

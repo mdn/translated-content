@@ -1,7 +1,6 @@
 ---
 title: RTCIceCandidate. toJSON()
 slug: Web/API/RTCIceCandidate/toJSON
-translation_of: Web/API/RTCIceCandidate/toJSON
 ---
 {{APIRef("WebRTC")}}
 

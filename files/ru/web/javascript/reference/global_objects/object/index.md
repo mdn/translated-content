@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object
 
 ## Синтаксис
 
-```
+```js
 // Инициализатор объекта или литерал
 { [ nameValuePair1[, nameValuePair2[, ...nameValuePairN] ] ] }
 
@@ -93,28 +93,46 @@ new Object([value])
 
 ### Свойства
 
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties')}}
+- {{jsxref("Object/Object", "Object()")}}
+  - : Превращает входные данные в объект.
+- {{jsxref("Object.prototype.constructor")}}
+  - : Указывает функцию, которая создает прототип объекта.
+- [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{Deprecated_Inline}}
+  - : Указывает на объект, который использовался в качестве прототипа при создании экземпляра объекта.
 
 ### Методы
 
-{{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Methods')}}
+- [`Object.prototype.__defineGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+  - : Связывает функцию со свойством, которое при обращении к нему выполняет эту функцию и возвращает ее возвращаемое значение.
+- [`Object.prototype.__defineSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
+  - : Связывает функцию со свойством, которое при установке выполняет ту функцию, которая изменяет свойство.
+- [`Object.prototype.__lookupGetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+  - : Возвращает функцию, привязанную в качестве средства получения к указанному свойству.
+- [`Object.prototype.__lookupSetter__()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
+  - : Возвращает функцию, привязанную в качестве установщика к указанному свойству.
+- {{jsxref("Object.prototype.hasOwnProperty()")}}
+  - : Возвращает логическое значение, указывающее, содержит ли объект указанное свойство как прямое свойство этого объекта, а не унаследованное через цепочку прототипов.
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+  - : Возвращает логическое значение, указывающее, содержит ли объект указанное свойство как прямое свойство этого объекта, а не унаследованное через цепочку прототипов.
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+  - : Возвращает логическое значение, указывающее, является ли указанное свойство свойством объекта [enumerable own](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties).
+- {{jsxref("Object.prototype.toLocaleString()")}}
+  - : Вызывает {{jsxref("Object/toString", "toString()")}}.
+- {{jsxref("Object.prototype.toString()")}}
+  - : Возвращает строковое представление объекта.
+- {{jsxref("Object.prototype.valueOf()")}}
+  - : Возвращает примитивное значение указанного объекта.
 
 ## Примеры
 
 ### Пример: использование `Object` с типами `undefined` и `null`
 
-Следующий пример сохраняет пустой объект `Object` в переменную `o`:
+Следующие примеры сохраняют пустой объект `Object` в переменную `o`:
 
 ```js
-var o = new Object();
-```
-
-```js
-var o = new Object(undefined);
-```
-
-```js
-var o = new Object(null);
+const o = new Object();
+const o = new Object(undefined);
+const o = new Object(null);
 ```
 
 ### Пример: использование `Object` для создания объектов `Boolean`
@@ -123,12 +141,12 @@ var o = new Object(null);
 
 ```js
 // эквивалентно o = new Boolean(true);
-var o = new Object(true);
+const o = new Object(true);
 ```
 
 ```js
 // эквивалентно o = new Boolean(false);
-var o = new Object(Boolean());
+const o = new Object(Boolean());
 ```
 
 ## Спецификации

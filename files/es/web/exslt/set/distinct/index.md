@@ -1,11 +1,6 @@
 ---
 title: distinct
 slug: Web/EXSLT/set/distinct
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/set/distinct
 ---
 
 {{XsltRef}}

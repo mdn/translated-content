@@ -52,7 +52,7 @@ _〈網路如何運作〉將簡單介紹_，當你透過電腦或手機瀏覽器
 
 這叫做 {{Glossary("IP Address", "IP 地址")}}，網路上它擁有獨一無二的位置。不過，記數字果然不簡單吧？這就是要發明域名伺服器的原因。他們會把你在瀏覽器輸入的網址（例如 mozilla.org）和網站的真實位置（IP）相匹配
 
-網站能直接透過其 IP 位置訪問之：在瀏覽器的網址列輸入 `63.245.215.20` 的話，可以走到 Mozilla 的網站。
+網站能直接透過其 IP 位置訪問之：在瀏覽器的網址列輸入 `63.245.215.20` 的話，可以走到 Mozilla 的網站。你可以使用 [DNS 查找工具](https://www.nslookup.io/website-to-ip-lookup/)查找網站的 IP 地址。
 
 ## 再講講封包
 
@@ -70,14 +70,3 @@ _〈網路如何運作〉將簡單介紹_，當你透過電腦或手機瀏覽器
 街頭的照片：[Street composing](https://www.flickr.com/photos/kdigga/9110990882/in/photolist-cXrKFs-c1j6hQ-mKrPUT-oRTUK4-7jSQQq-eT7daG-cZEZrh-5xT9L6-bUnkip-9jAbvr-5hVkHn-pMfobT-dm8JuZ-gjwYYM-pREaSM-822JRW-5hhMf9-9RVQNn-bnDMSZ-pL2z3y-k7FRM4-pzd8Y7-822upY-8bFN4Y-kedD87-pzaATg-nrF8ft-5anP2x-mpVky9-ceKc9W-dG75mD-pY62sp-gZmXVZ-7vVJL9-h7r9AQ-gagPYh-jvo5aM-J32rC-ibP2zY-a4JBcH-ndxM5Y-iFHsde-dtJ15p-8nYRgp-93uCB1-o6N5Bh-nBPUny-dNJ66P-9XWmVP-efXhxJ)、作者是[Kevin D](https://www.flickr.com/photos/kdigga/)。
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
-
-## 在模塊裡面
-
-- [安裝基本軟體](/zh-TW/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [你的網站看起來會是什麼樣子？](/zh-TW/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [與各式各樣檔案打交道](/zh-TW/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 基礎](/zh-TW/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 基本](/zh-TW/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 基礎](/zh-TW/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [將你的網站發佈上線](/zh-TW/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [網路如何做動](/zh-TW/Learn/Getting_started_with_the_web/How_the_Web_works)

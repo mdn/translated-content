@@ -1,7 +1,6 @@
 ---
 title: XMLHttpRequest.upload
 slug: Web/API/XMLHttpRequest/upload
-translation_of: Web/API/XMLHttpRequest/upload
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -20,11 +19,11 @@ upload 이벤트에서 다음 이벤트가 트리거되어 업로드를 모니�
 | {{event("timeout")}} | {{domxref("XMLHttpRequest.ontimeout", "ontimeout")}}         | {{domxref("XMLHttpRequest.timeout")}}에 명시되어 있는 시간 간격 내에 응답이 도착하지 않아, 업로드 시간이 초과되었습니다.                                                                                               |
 | {{event("loadend")}} | {{domxref("XMLHttpRequest.onloadend", "onloadend")}}         | 업로드가 완료되었습니다. 이 이벤트는 성공과 실패를 구분하지 않고 결과에 관계없이 업로드가 끝나면 전송됩니다. 이 이벤트 발생 이전에는 전송이 종료된 이유를 나타내기 위해 `load`, `error`, `abort`, `timeout` 중 하나를 전달합니다. |
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

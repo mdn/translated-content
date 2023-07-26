@@ -1,14 +1,6 @@
 ---
 title: management.onUninstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Reference
-  - WebExtensions
-  - management
-  - onUninstalled
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
 ---
 
@@ -21,9 +13,9 @@ L'API requière l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/pe
 ## Syntaxe
 
 ```js
-browser.management.onUninstalled.addListener(listener)
-browser.management.onUninstalled.removeListener(listener)
-browser.management.onUninstalled.hasListener(listener)
+browser.management.onUninstalled.addListener(listener);
+browser.management.onUninstalled.removeListener(listener);
+browser.management.onUninstalled.hasListener(listener);
 ```
 
 Les événement ont trois fonctions :
@@ -46,9 +38,9 @@ Les événement ont trois fonctions :
     - `info`
       - : [`ExtensionInfo`](/fr/Add-ons/WebExtensions/API/management/ExtensionInfo): informations de l'extension qui a été désinstallé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.onUninstalled")}}
+{{Compat}}
 
 ## Exemples
 

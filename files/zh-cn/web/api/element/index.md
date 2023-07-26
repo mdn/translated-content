@@ -110,8 +110,6 @@ _Inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DO
   - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
 - {{DOMxRef("Element.closest()")}} {{Experimental_Inline}}
   - : Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
-- {{DOMxRef("Element.createShadowRoot()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Creates a [shadow DOM](/zh-CN/docs/Web/Web_Components/Shadow_DOM) on on the element, turning it into a shadow host. Returns a {{DOMxRef("ShadowRoot")}}.
 - {{DOMxRef("Element.computedStyleMap()")}} {{Experimental_Inline}}
   - : Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
 - {{DOMxRef("EventTarget.dispatchEvent()")}}
@@ -221,8 +219,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 - {{DOMxRef("Element/select_event", "select")}}
   - : Fired when some text has been selected.
     Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.
-- {{DOMxRef("Element/show_event", "show")}}
-  - : Fired when a [contextmenu](/zh-CN/docs/Mozilla_event_reference/contextmenu) event was fired on/bubbled to an element that has a [contextmenu](/zh-CN/DOM/element.contextmenu) attribute. {{deprecated_inline}}
     Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.
 - {{DOMxRef("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).
@@ -264,22 +260,22 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ### Fullscreen events
 
-- `{{DOMxRef("Element/fullscreenchange_event", "fullscreenchange")}}`
+- {{DOMxRef("Element/fullscreenchange_event", "fullscreenchange")}}
   - : Sent to an {{DOMxRef("Element")}} when it transitions into or out of [full-screen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
     Also available via the {{DOMxRef("Element.onfullscreenchange", "onfullscreenchange")}} property.
-- `{{DOMxRef("Element/fullscreenerror_event", "fullscreenerror")}}`
+- {{DOMxRef("Element/fullscreenerror_event", "fullscreenerror")}}
   - : Sent to an `Element` if an error occurs while attempting to switch it into or out of [full-screen](/zh-CN/docs/Web/API/Fullscreen_API/Guide) mode.
     Also available via the {{DOMxRef("Element.onfullscreenerror", "onfullscreenerror")}} property.
 
 ### 键盘事件
 
-- `{{DOMxRef("Element/keydown_event", "keydown")}}`
+- {{DOMxRef("Element/keydown_event", "keydown")}}
   - : Fired when a key is pressed.
     Also available via the {{DOMxRef("GlobalEventHandlers/onkeydown", "onkeydown")}} property.
-- `{{DOMxRef("Element/keypress_event", "keypress")}}`
+- {{DOMxRef("Element/keypress_event", "keypress")}}
   - : Fired when a key that produces a character value is pressed down. {{deprecated_inline}}
     Also available via the {{DOMxRef("GlobalEventHandlers/onkeypress", "onkeypress")}} property.
-- `{{DOMxRef("Element/keyup_event", "keyup")}}`
+- {{DOMxRef("Element/keyup_event", "keyup")}}
   - : Fired when a key is released.
     Also available via the {{DOMxRef("GlobalEventHandlers/onkeyup", "onkeyup")}} property.
 

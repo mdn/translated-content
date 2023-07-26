@@ -1,7 +1,6 @@
 ---
 title: Document.cookie
 slug: Web/API/Document/cookie
-translation_of: Web/API/Document/cookie
 ---
 {{APIRef("DOM")}}
 
@@ -29,7 +28,7 @@ In the code above, `newCookie` is a string of form `key=value`. Note that you ca
 
   - `;path=path` (e.g., '`/`', '`/mydir`') If not specified, defaults to the current path of the current document location.
 
-    > **참고:** Prior to {{Gecko("6.0")}}, paths with quotes were treated as if the quotes were part of the string, instead of as if they were delimiters surrounding the actual path string. This has been fixed.
+    > **참고:** Prior to Gecko 6.0, paths with quotes were treated as if the quotes were part of the string, instead of as if they were delimiters surrounding the actual path string. This has been fixed.
 
   - `;domain=domain` (e.g., '`example.com`' or '`subdomain.example.com`'). If not specified, this defaults to the host portion of the current document location. Contrary to earlier specifications, leading dots in domain names are ignored, but browsers may decline to set the cookie containing such dots. If a domain is specified, subdomains are always included.
 
@@ -211,11 +210,11 @@ Cookie: cookie_name1=cookie_value1; cookie_name2=cookie_value2
 Accept: */*
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

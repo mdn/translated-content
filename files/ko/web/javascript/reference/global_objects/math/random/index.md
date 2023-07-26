@@ -1,7 +1,6 @@
 ---
 title: Math.random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 ---
 {{JSRef}}
 

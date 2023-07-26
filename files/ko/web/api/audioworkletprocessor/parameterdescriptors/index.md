@@ -1,14 +1,6 @@
 ---
 title: AudioWorkletProcessor.parameterDescriptors (static getter)
 slug: Web/API/AudioWorkletProcessor/parameterDescriptors
-tags:
-  - API
-  - AudioWorkletProcessor
-  - Experimental
-  - Property
-  - Reference
-  - parameterDescriptors
-browser-compat: api.AudioWorkletProcessor.parameterDescriptors
 ---
 
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}

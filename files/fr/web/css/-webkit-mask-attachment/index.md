@@ -1,11 +1,6 @@
 ---
 title: '-webkit-mask-attachment'
 slug: Web/CSS/-webkit-mask-attachment
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-mask-attachment
 ---
 
@@ -59,7 +54,7 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-mask-attachment")}}
+{{Compat}}
 
 ## Voir aussi
 

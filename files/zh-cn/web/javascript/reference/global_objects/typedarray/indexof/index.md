@@ -9,8 +9,9 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/indexOf
 
 ## 语法
 
-```plain
-typedarray.indexOf(searchElement[, fromIndex = 0])
+```js-nolint
+indexOf(searchElement)
+indexOf(searchElement, fromIndex)
 ```
 
 ### 参数

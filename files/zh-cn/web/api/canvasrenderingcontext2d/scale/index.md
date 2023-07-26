@@ -61,7 +61,7 @@ ctx.fillRect(10, 10, 8, 20);
 
 The scaled rectangle is red, and the non-scaled rectangle is gray.
 
-{{ EmbedLiveSample('Scaling_a_shape', 700, 180) }}
+{{ EmbedLiveSample('使用 scale 方法', 700, 180) }}
 
 ### 使用 scale 水平或竖直翻转
 
@@ -87,11 +87,11 @@ ctx.fillText('Hello world!', -280, 90);
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 ```
 
-#### Result
+#### 结果
 
-{{ EmbedLiveSample('Flipping_things_horizontally_or_vertically', 700, 180) }}
+{{ EmbedLiveSample('使用 scale 水平或竖直翻转', 700, 180) }}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 

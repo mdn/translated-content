@@ -1,9 +1,6 @@
 ---
 title: Operador Coma
-slug: Web/JavaScript/Reference/Operators/Comma_Operator
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
+slug: Web/JavaScript/Reference/Operators/Comma_operator
 original_slug: Web/JavaScript/Referencia/Operadores/operador_coma
 ---
 
@@ -35,7 +32,7 @@ for (var i = 0, j = 9; i <= 9; i++, j--)
   document.writeln("a[" + i + "][" + j + "] = " + a[i][j]);
 ```
 
-### Procesar y luego retornar:
+### Procesar y luego retornar
 
 Otro ejemplo de lo que se puede hacer con el operador coma es procesar antes de retornar. Como se mencionó, solo el último elemento será retornado pero todos los otros también van a ser evaluados. Así, se puede hacer:
 
@@ -49,11 +46,11 @@ function myFunc () {
 
 ## Especificaciones
 
-{{Specificaciones}}
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.comma")}}
+{{Compat}}
 
 ## Ver también
 

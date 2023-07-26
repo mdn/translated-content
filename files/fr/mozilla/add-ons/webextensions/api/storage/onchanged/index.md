@@ -1,16 +1,6 @@
 ---
 title: storage.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/storage/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Storage
-  - WebExtensions
-  - onChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/onChanged
 ---
 
@@ -21,9 +11,9 @@ Lancé lorsqu'un ou plusieurs éléments changent.
 ## Syntaxe
 
 ```js
-browser.storage.onChanged.addListener(callback)
-browser.storage.onChanged.removeListener(listener)
-browser.storage.onChanged.hasListener(listener)
+browser.storage.onChanged.addListener(callback);
+browser.storage.onChanged.removeListener(listener);
+browser.storage.onChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions:
@@ -51,9 +41,9 @@ Les événements ont trois fonctions:
     - `areaName`
       - : `string`. Le nom de la zone de stockage (`"sync"`, `"local"` or `"managed"`) auquel les modifications ont été apportées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage.onChanged")}}
+{{Compat}}
 
 ## Exemples
 

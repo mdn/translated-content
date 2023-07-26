@@ -1,12 +1,6 @@
 ---
 title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
-tags:
-  - JavaScript
-  - Method
-  - String
-  - Unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fromCharCode
 ---
 
@@ -47,9 +41,9 @@ String.fromCharCode(65,66,67)
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.fromCharCode")}}
+{{Compat}}
 
 ## Vea También
 

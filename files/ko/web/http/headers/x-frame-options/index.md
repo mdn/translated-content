@@ -1,7 +1,6 @@
 ---
 title: X-Frame-Options
 slug: Web/HTTP/Headers/X-Frame-Options
-translation_of: Web/HTTP/Headers/X-Frame-Options
 ---
 
 {{HTTPSidebar}}
@@ -43,7 +42,7 @@ X-Frame-Options: allow-from https://example.com/
 - `deny`
   - : 어떠한 사이트에서도 frame 상에서 보여질 수 없습니다.
 - `sameorigin`
-  - : 동일한 사이트의 frame에서만 보여집니다. 해당 스펙 안에서 브라우저 벤더가 최상위(top level), 혹은 부모(parent), 모든 체인(whole chain)에서 적용할지를 결정하도록 맡겨집니다. 하지만 모든 조상(ancestor)이 동일한 사이트에서 제공되지 않으면 이 옵션은 그다지 유용하지 않다고 논의되고 있습니다. (참고 {{bug(725490)}}). 상세 지원사항에 대한 참고 [Browser compatibility](#browser_compatibility).
+  - : 동일한 사이트의 frame에서만 보여집니다. 해당 스펙 안에서 브라우저 벤더가 최상위(top level), 혹은 부모(parent), 모든 체인(whole chain)에서 적용할지를 결정하도록 맡겨집니다. 하지만 모든 조상(ancestor)이 동일한 사이트에서 제공되지 않으면 이 옵션은 그다지 유용하지 않다고 논의되고 있습니다. (참고 [Firefox bug 725490](https://bugzil.la/725490)). 상세 지원사항에 대한 참고 [Browser compatibility](#browser_compatibility).
 - `allow-from uri`
   - : 지정된 특정 uri의 frame 에서만 보여집니다. 파이어폭스에서는 `sameorigin` 과 동일한 문제를 겪고 있습니다. 즉 동일한 사이트에 있는지에 대해서 frame의 조상(ancestor)을 확인하지 않습니다.
 
@@ -105,13 +104,13 @@ HAProxy에서 `X-Frame-Options` 헤더를 전송하려면, front-end, listen, �
 rspadd X-Frame-Options:\ sameorigin
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("http.headers.X-Frame-Options")}}
+{{Compat}}
 
 ## See also
 

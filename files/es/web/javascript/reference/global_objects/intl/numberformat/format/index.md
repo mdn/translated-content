@@ -54,9 +54,9 @@ console.log(formatted.join('; '));
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Intl.NumberFormat.format")}}
+{{Compat}}
 
 ## See also
 

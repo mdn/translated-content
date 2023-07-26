@@ -17,4 +17,3 @@ original_slug: Глоссарий/ARPA
 ### Общие сведения
 
 - [Официальный веб-сайт](http://www.iana.org/domains/arpa)
-- {{Interwiki("wikipedia", ".arpa")}} на Википедии

@@ -61,7 +61,7 @@ letter-spacing: unset;
 
 ### 结果
 
-{{ EmbedLiveSample('Examples', 440, 185) }}
+{{ EmbedLiveSample('示例', 440, 185) }}
 
 ## 可解决的问题
 

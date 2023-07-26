@@ -52,6 +52,6 @@ La característica `width` es especificada como {{cssxref("&lt;length&gt;")}} va
 
 {{Specifications}}
 
-## Navegadores Compatibles
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media.width")}}
+{{Compat}}

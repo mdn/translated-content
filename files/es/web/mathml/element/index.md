@@ -5,7 +5,7 @@ original_slug: Web/MathML/Elemento
 ---
 
 A continuación se muestra una lista alfabética de elementos de **presentación** en MathML.
-La _etiqueta de presentación_ es usada para describir la estructura y el diseño de la notación matemática mientras que la _etiqueta de contenido_ proporciona el significado matemático subyacente y se supone que no se renderiza a través del parseador de MathML (ver {{ bug(276028) }}). Si quieres aprender más sobre la etiqueta de contenido deberías echar un vistazo al [Capítulo 4](http://www.w3.org/TR/MathML3/chapter4.html) en la [especificación de MathML 3](http://www.w3.org/TR/MathML3/).
+La _etiqueta de presentación_ es usada para describir la estructura y el diseño de la notación matemática mientras que la _etiqueta de contenido_ proporciona el significado matemático subyacente y se supone que no se renderiza a través del parseador de MathML (ver [Error 276028 en Firefox](https://bugzil.la/276028)). Si quieres aprender más sobre la etiqueta de contenido deberías echar un vistazo al [Capítulo 4](http://www.w3.org/TR/MathML3/chapter4.html) en la [especificación de MathML 3](http://www.w3.org/TR/MathML3/).
 
 ### math
 

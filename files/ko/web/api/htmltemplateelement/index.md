@@ -1,14 +1,6 @@
 ---
 title: HTMLTemplateElement
 slug: Web/API/HTMLTemplateElement
-tags:
-  - API
-  - HTML DOM
-  - HTMLTemplateElement
-  - 레퍼런스
-  - 웹 컴포넌트
-  - 인터페이스
-translation_of: Web/API/HTMLTemplateElement
 ---
 {{APIRef("Web Components")}}
 

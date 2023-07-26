@@ -1,11 +1,6 @@
 ---
 title: slot
 slug: Web/HTML/Global_attributes/slot
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/slot
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -20,7 +15,7 @@ translation_of: Web/HTML/Global_attributes/slot
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.slot")}}
+{{Compat}}
 
 ## 같이 보기
 

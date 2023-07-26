@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.oncontextmenu
 slug: Web/API/Element/contextmenu_event
-translation_of: Web/API/GlobalEventHandlers/oncontextmenu
 original_slug: Web/API/GlobalEventHandlers/oncontextmenu
 ---
 
@@ -30,10 +29,10 @@ window.addEventListener('contextmenu', function (e) { // Not compatible with IE 
 }, false);
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser Compatibility
+## 브라우저 호환성
 
 {{Compat}}

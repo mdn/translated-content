@@ -1,10 +1,6 @@
 ---
 title: text-underline-offset
 slug: Web/CSS/text-underline-offset
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/text-underline-offset
 ---
 
@@ -84,7 +80,7 @@ p {
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-underline-offset")}}
+{{Compat}}
 
 ## Voir aussi
 

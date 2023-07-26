@@ -1,13 +1,6 @@
 ---
 title: <ul>
 slug: Web/HTML/Element/ul
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/ul
 ---
 
 {{HTMLSidebar}}
@@ -56,11 +49,11 @@ translation_of: Web/HTML/Element/ul
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("directory")}}, {{ARIARole("group")}},
-        {{ARIARole("listbox")}}, {{ARIARole("menu")}},
-        {{ARIARole("menubar")}}, {{ARIARole("radiogroup")}},
-        {{ARIARole("tablist")}}, {{ARIARole("toolbar")}},
-        {{ARIARole("tree")}}, {{ARIARole("presentation")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/directory_role'><code>directory</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/listbox_role'><code>listbox</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menu_role'><code>menu</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menubar_role'><code>menubar</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/radiogroup_role'><code>radiogroup</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/tablist_role'><code>tablist</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/toolbar_role'><code>toolbar</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/tree_role'><code>tree</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -74,7 +67,7 @@ translation_of: Web/HTML/Element/ul
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
-<div class="hidden"><dl><dt>{{ htmlattrdef("compact") }} {{Deprecated_inline}}</dt><dd>This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the {{glossary("user agent")}}, and it doesn't work in all browsers.</dd><dd><div class="warning"><strong>Warning:</strong> Do not use this attribute, as it has been deprecated: use <a href="/en-US/docs/CSS">CSS</a> instead. To give a similar effect as the <code>compact</code> attribute, the CSS property {{cssxref("line-height")}} can be used with a value of <code>80%</code>.</div></dd></dl><dl><dt>{{ htmlattrdef("type") }} {{Deprecated_inline}}</dt><dd>This attribute sets the bullet style for the list. The values defined under <a href="/en-US/docs/HTML3.2">HTML3.2</a> and the transitional version of <a href="/en-US/docs/HTML4.01">HTML 4.0/4.01</a> are:<ul><li><code>circle</code></li><li><code>disc</code></li><li><code>square</code></li></ul><p>A fourth bullet type has been defined in the WebTV interface, but not all browsers support it: <code>triangle</code>.</p><p>If not present and if no <a href="/en-US/docs/CSS">CSS</a> {{ cssxref("list-style-type") }} property applies to the element, the user agent selects a bullet type depending on the nesting level of the list.</p><div class="warning"><strong>Warning:</strong> Do not use this attribute, as it has been deprecated; use the <a href="/en-US/docs/Web/CSS">CSS</a> {{ cssxref("list-style-type") }} property instead.</div></dd></dl></div>
+<div class="hidden"><dl><dt>{{ htmlattrdef("compact") }} {{Deprecated_inline}}</dt><dd>This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the {{glossary("user agent")}}, and it doesn't work in all browsers.</dd><dd><div class="warning"><strong>Warning:</strong> Do not use this attribute, as it has been deprecated: use <a href="/ko/docs/CSS">CSS</a> instead. To give a similar effect as the <code>compact</code> attribute, the CSS property {{cssxref("line-height")}} can be used with a value of <code>80%</code>.</div></dd></dl><dl><dt>{{ htmlattrdef("type") }} {{Deprecated_inline}}</dt><dd>This attribute sets the bullet style for the list. The values defined under <a href="/ko/docs/HTML3.2">HTML3.2</a> and the transitional version of <a href="/ko/docs/HTML4.01">HTML 4.0/4.01</a> are:<ul><li><code>circle</code></li><li><code>disc</code></li><li><code>square</code></li></ul><p>A fourth bullet type has been defined in the WebTV interface, but not all browsers support it: <code>triangle</code>.</p><p>If not present and if no <a href="/ko/docs/CSS">CSS</a> {{ cssxref("list-style-type") }} property applies to the element, the user agent selects a bullet type depending on the nesting level of the list.</p><div class="warning"><strong>Warning:</strong> Do not use this attribute, as it has been deprecated; use the <a href="/ko/docs/Web/CSS">CSS</a> {{ cssxref("list-style-type") }} property instead.</div></dd></dl></div>
 
 ## 사용 일람
 
@@ -152,7 +145,7 @@ translation_of: Web/HTML/Element/ul
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.ul")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,17 +1,6 @@
 ---
 title: PushManager
 slug: Web/API/PushManager
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Push
-  - Push API
-  - Reference
-  - Service Workers
-  - 푸시
-  - 푸시 알림
-translation_of: Web/API/PushManager
 ---
 
 {{ApiRef("Push API")}}

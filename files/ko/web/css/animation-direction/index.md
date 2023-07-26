@@ -1,11 +1,6 @@
 ---
 title: animation-direction
 slug: Web/CSS/animation-direction
-tags:
-  - CSS 속성
-  - CSS 애니메이션
-translation_of: Web/CSS/animation-direction
-browser-compat: css.properties.animation-direction
 ---
 
 {{CSSRef}}
@@ -46,7 +41,7 @@ animation-direction: unset;
 - `alternate-reverse`
   - : 애니메이션은 매 사이클마다 각 주기의 방향을 뒤집으며, 첫 번째 반복은 역방향으로 진행됩니다. 사이클이 짝수인지 홀수인지를 결정하는 카운트가 하나에서 시작됩니다.
 
-> **참고:** **노트**: animation- \* 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 {{cssxref ( "animation-name")}} 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values)을 참조하십시오.
+> **참고:** animation- \* 속성에 여러 개의 쉼표로 구분 된 값을 지정하면 {{cssxref ( "animation-name")}} 속성에 지정된 애니메이션에 할당되는 값의 수에 따라 다른 방식으로 지정됩니다. 자세한 내용은 [여러 애니메이션 속성 값 설정](/ko/docs/Web/CSS/CSS_Animations/Using_CSS_animations#Setting_multiple_animation_property_values)을 참조하십시오.
 
 ### Formal syntax
 

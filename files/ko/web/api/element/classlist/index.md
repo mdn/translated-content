@@ -1,19 +1,11 @@
 ---
 title: Element.classList
 slug: Web/API/Element/classList
-tags:
-  - API
-  - DOM
-  - 레퍼런스
-  - 속성
-  - 엘리먼트
-  - 읽기 전용
-translation_of: Web/API/Element/classList
 ---
 
 {{APIRef("DOM")}}
 
-**`Element.classList`**는 엘리먼트의 클래스 속성의 컬렉션인 활성 {{domxref("DOMTokenList")}}를 반환하는 읽기 전용 프로퍼티이다.
+**`Element.classList`** 는 엘리먼트의 클래스 속성의 컬렉션인 활성 {{domxref("DOMTokenList")}}를 반환하는 읽기 전용 프로퍼티이다.
 
 `classList` 사용은 공백으로 구분된 문자열인 {{domxref("element.className")}}을 통해 엘리먼트의 클래스 목록에 접근하는 방식을 대체하는 간편한 방법이다.
 
@@ -23,7 +15,7 @@ translation_of: Web/API/Element/classList
 const elementClasses = elementNodeReference.classList;
 ```
 
-*elementClasses*는 *elementNodeReference*의 클래스 속성을 나타내는 {{domxref("DOMTokenList")}}이다. 만약 클래스 속성이 설정되어 있지 않거나 비어있다면 *elementClasses.length*는 `0`을 반환한다. `element.classList` 그 자체는 읽기 전용 프로퍼티지만 `add()`와 `remove()` 메서드를 이용하여 변형할 수 있다.
+`elementClasses`는 `elementNodeReference`의 클래스 속성을 나타내는 {{domxref("DOMTokenList")}}이다. 만약 클래스 속성이 설정되어 있지 않거나 비어있다면 *elementClasses.length*는 `0`을 반환한다. `element.classList` 그 자체는 읽기 전용 프로퍼티지만 `add()`와 `remove()` 메서드를 이용하여 변형할 수 있다.
 
 ## 메서드
 

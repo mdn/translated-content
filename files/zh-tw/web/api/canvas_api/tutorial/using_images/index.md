@@ -54,8 +54,8 @@ Using the [`crossOrigin`](/zh-TW/docs/HTML/CORS_settings_attributes) attribute o
 產生新的{{domxref("HTMLImageElement")}}物件也能當作影像來源，這邊，我們可以用 Image()來建構一個新影像元素:
 
 ```js
-var img = new Image();   // Create new img element
-img.src = 'myImage.png'; // Set source path
+var img = new Image(); // Create new img element
+img.src = "myImage.png"; // Set source path
 ```
 
 上述程式碼執行後會載入影像.
@@ -63,11 +63,15 @@ img.src = 'myImage.png'; // Set source path
 在影像載入完成前呼叫 drawImage()不會有任何效果，甚至某些瀏覽器還會拋出例外狀況，所以應該要透過利用載入事件來避免這類問題:
 
 ```js
-var img = new Image();   // Create new img element
-img.addEventListener("load", function() {
-  // execute drawImage statements here
-}, false);
-img.src = 'myImage.png'; // Set source path
+var img = new Image(); // Create new img element
+img.addEventListener(
+  "load",
+  function () {
+    // execute drawImage statements here
+  },
+  false,
+);
+img.src = "myImage.png"; // Set source path
 ```
 
 若是只要載入一份影像，可以用上面的方法，不過當需要載入、追蹤多個影像時，我們就需要更好的方法了，雖然管理多個影像載入已經超出本教學的範疇，然而如果有興趣的話，可以參考[JavaScript Image Preloader](http://www.webreference.com/programming/javascript/gr/column3/)這份文件.
@@ -77,7 +81,8 @@ img.src = 'myImage.png'; // Set source path
 另一個載入影像的方法是利用[data: url](/zh-TW/docs/data_URIs)，透過 data URL 可以直接將影像定義成 Base64 編碼的字串，然後嵌入程式碼之中.
 
 ```js
-var img_src = 'data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==';
+var img_src =
+  "data:image/gif;base64,R0lGODlhCwALAIAAAAAA3pn/ZiH5BAEAAAEALAAAAAALAAsAAAIUhA+hkcuO4lmNVindo7qyrIXiGBYAOw==";
 ```
 
 data URL 的好處之一是立即產生影像而不用再和伺服器連線，另一個好處是這樣便能夠將影像包入你的[CSS](/zh-TW/docs/Web/CSS), [JavaScript](/zh-TW/docs/Web/JavaScript), [HTML](/zh-TW/docs/Web/HTML)之中，讓影像更具可攜性.
@@ -86,21 +91,21 @@ data URL 的好處之一是立即產生影像而不用再和伺服器連線，�
 
 ### Using frames from a video
 
-我們還能夠使用{{HTMLElement("video")}}元素中的影片的影片畫格(縱使影片為隱藏)，例如，現在我們有一個 ID 為”myvideo” 的{{HTMLElement("video")}}元素:
+我們還能夠使用{{HTMLElement("video")}}元素中的影片的影片畫格(縱使影片為隱藏)，例如，現在我們有一個 ID 為「myvideo」 的{{HTMLElement("video")}}元素:
 
 ```js
 function getMyVideo() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
-    return document.getElementById('myvideo');
+    return document.getElementById("myvideo");
   }
 }
 ```
 
 上面的方法會回傳一個{{domxref("HTMLVideoElement")}}的影像物件，如前所述，這個物件可以被視為 CanvasImageSource 類別的物件來使用。
-關於如何利用\<video>元素於畫布上的進階說明，可以參考 html5Doctor 的“[video + canvas = magic](http://html5doctor.com/video-canvas-magic/)”一文.
+關於如何利用\<video>元素於畫布上的進階說明，可以參考 html5Doctor 的「[video + canvas = magic](http://html5doctor.com/video-canvas-magic/)」一文.
 
 ## 影像繪圖
 
@@ -115,32 +120,32 @@ function getMyVideo() {
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="180" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="180" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   var img = new Image();
-  img.onload = function(){
-    ctx.drawImage(img,0,0);
+  img.onload = function () {
+    ctx.drawImage(img, 0, 0);
     ctx.beginPath();
-    ctx.moveTo(30,96);
-    ctx.lineTo(70,66);
-    ctx.lineTo(103,76);
-    ctx.lineTo(170,15);
+    ctx.moveTo(30, 96);
+    ctx.lineTo(70, 66);
+    ctx.lineTo(103, 76);
+    ctx.lineTo(170, 15);
     ctx.stroke();
   };
-  img.src = 'backdrop.png';
+  img.src = "backdrop.png";
 }
 ```
 
 結果如下:
 
-{{EmbedLiveSample("Example.3A_A_simple_line_graph", 220, 160, "canvas_backdrop.png")}}
+{{EmbedLiveSample("範例: 一條簡單的線段影像", 220, 160, "canvas_backdrop.png")}}
 
 ## 縮放
 
@@ -157,30 +162,30 @@ drawImage()的第二個型態增加了兩個新參數，讓我們在畫布上放
 
 ```html hidden
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var ctx = document.getElementById('canvas').getContext('2d');
+  var ctx = document.getElementById("canvas").getContext("2d");
   var img = new Image();
-  img.onload = function(){
-    for (var i=0;i<4;i++){
-      for (var j=0;j<3;j++){
-        ctx.drawImage(img,j*50,i*38,50,38);
+  img.onload = function () {
+    for (var i = 0; i < 4; i++) {
+      for (var j = 0; j < 3; j++) {
+        ctx.drawImage(img, j * 50, i * 38, 50, 38);
       }
     }
   };
-  img.src = 'rhino.jpg';
+  img.src = "rhino.jpg";
 }
 ```
 
 結果如下:
 
-{{EmbedLiveSample("Example.3A_Tiling_an_image", 160, 160, "canvas_scale_image.png")}}
+{{EmbedLiveSample("範例: 排列影像", 160, 160, "canvas_scale_image.png")}}
 
 ## 切割影像
 
@@ -199,33 +204,42 @@ drawImage()第三個型態接受 9 個參數，其中 8 個讓我們從原始影
 
 ```html
 <html>
- <body onload="draw();">
-   <canvas id="canvas" width="150" height="150"></canvas>
-   <div style="display:none;">
-     <img id="source" src="rhino.jpg" width="300" height="227">
-     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
-   </div>
- </body>
+  <body onload="draw();">
+    <canvas id="canvas" width="150" height="150"></canvas>
+    <div style="display:none;">
+      <img id="source" src="rhino.jpg" width="300" height="227" />
+      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+    </div>
+  </body>
 </html>
 ```
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
 
   // Draw slice
-  ctx.drawImage(document.getElementById('source'),
-                33, 71, 104, 124, 21, 20, 87, 104);
+  ctx.drawImage(
+    document.getElementById("source"),
+    33,
+    71,
+    104,
+    124,
+    21,
+    20,
+    87,
+    104,
+  );
 
   // Draw frame
-  ctx.drawImage(document.getElementById('frame'),0,0);
+  ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
 ```
 
 這次我們不產生新的{{domxref("HTMLImageElement")}}物件，改採用直接把影像包入 HTML 的{{HTMLElement("img")}}標籤，然後再取得影像元素，其中 HTML 上的影像已經透過設定 CSS 屬性{{cssxref("display")}}為 none 來隱藏起來了.
 
-{{EmbedLiveSample("Example.3A_Framing_an_image", 160, 160, "canvas_drawimage2.jpg")}}
+{{EmbedLiveSample("範例: 畫一個有畫框的影像", 160, 160, "canvas_drawimage2.jpg")}}
 
 程式碼相當簡單，每個{{HTMLElement("img")}}有自己的 ID 屬性，這樣便可以利用{{domxref("document.getElementById()")}}輕易取得，之後再簡單地用 drawImage()方法切割犀牛影像然後縮放並放到畫布上，最後第二個 drawImage()再把畫框放到上面.
 
@@ -239,23 +253,23 @@ function draw() {
 
 ```html
 <html>
- <body onload="draw();">
-     <table>
+  <body onload="draw();">
+    <table>
       <tr>
-        <td><img src="gallery_1.jpg"></td>
-        <td><img src="gallery_2.jpg"></td>
-        <td><img src="gallery_3.jpg"></td>
-        <td><img src="gallery_4.jpg"></td>
+        <td><img src="gallery_1.jpg" /></td>
+        <td><img src="gallery_2.jpg" /></td>
+        <td><img src="gallery_3.jpg" /></td>
+        <td><img src="gallery_4.jpg" /></td>
       </tr>
       <tr>
-        <td><img src="gallery_5.jpg"></td>
-        <td><img src="gallery_6.jpg"></td>
-        <td><img src="gallery_7.jpg"></td>
-        <td><img src="gallery_8.jpg"></td>
+        <td><img src="gallery_5.jpg" /></td>
+        <td><img src="gallery_6.jpg" /></td>
+        <td><img src="gallery_7.jpg" /></td>
+        <td><img src="gallery_8.jpg" /></td>
       </tr>
-     </table>
-     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
- </body>
+    </table>
+    <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+  </body>
 </html>
 ```
 
@@ -263,7 +277,7 @@ function draw() {
 
 ```css
 body {
-  background: 0 -100px repeat-x url(bg_gallery.png) #4F191A;
+  background: 0 -100px repeat-x url(bg_gallery.png) #4f191a;
   margin: 10px;
 }
 
@@ -284,28 +298,25 @@ td {
 
 ```js
 function draw() {
-
   // Loop through all images
-  for (var i=0;i<document.images.length;i++){
-
+  for (var i = 0; i < document.images.length; i++) {
     // Don't add a canvas for the frame image
-    if (document.images[i].getAttribute('id')!='frame'){
-
+    if (document.images[i].getAttribute("id") != "frame") {
       // Create canvas element
-      canvas = document.createElement('canvas');
-      canvas.setAttribute('width',132);
-      canvas.setAttribute('height',150);
+      canvas = document.createElement("canvas");
+      canvas.setAttribute("width", 132);
+      canvas.setAttribute("height", 150);
 
       // Insert before the image
-      document.images[i].parentNode.insertBefore(canvas,document.images[i]);
+      document.images[i].parentNode.insertBefore(canvas, document.images[i]);
 
-      ctx = canvas.getContext('2d');
+      ctx = canvas.getContext("2d");
 
       // Draw image to canvas
-      ctx.drawImage(document.images[i],15,20);
+      ctx.drawImage(document.images[i], 15, 20);
 
       // Add frame
-      ctx.drawImage(document.getElementById('frame'),0,0);
+      ctx.drawImage(document.getElementById("frame"), 0, 0);
     }
   }
 }

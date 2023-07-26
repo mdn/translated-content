@@ -1,6 +1,6 @@
 ---
 title: privileged code
-slug: Glossary/privileged_code
+slug: Glossary/Privileged_code
 ---
 
 **Privileged code** - 拡張機能の Javascript コード。例えば、コンテンツスクリプトのコード。

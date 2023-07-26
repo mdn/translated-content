@@ -13,7 +13,7 @@ La méthode **`dump()`** de l'interface {{domxref("WorkerGlobalScope")}} permet 
 ## Syntaxe
 
 ```js
-dump('Mon message\n');
+dump("Mon message\n");
 ```
 
 ### Paramètre
@@ -37,18 +37,18 @@ Maintenant allez dans `about:config` et activez la préférence `browser.dom.win
 Après, lancez un worker contenant la ligne suivante:
 
 ```js
-dump('test\n');
+dump("test\n");
 ```
 
 Vous devriez observer le message «test» apparaître dans le terminal.
 
 ## Spécifications
 
-Cette méthode n’apparaît dans aucune spécification.
+Cette méthode n'apparaît dans aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.WorkerGlobalScope.dump")}}
+{{Compat}}
 
 ## Voir aussi
 

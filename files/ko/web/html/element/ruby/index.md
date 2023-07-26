@@ -1,13 +1,6 @@
 ---
 title: <ruby>
 slug: Web/HTML/Element/ruby
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/ruby
 ---
 
 {{HTMLSidebar}}
@@ -98,7 +91,7 @@ translation_of: Web/HTML/Element/ruby
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.ruby")}}
+{{Compat}}
 
 ## 같이 보기
 

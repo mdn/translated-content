@@ -1,9 +1,6 @@
 ---
 title: Document.forms
 slug: Web/API/Document/forms
-tags:
-  - Forms
-translation_of: Web/API/Document/forms
 ---
 
 {{APIRef("DOM")}}
@@ -51,7 +48,7 @@ var selectForm = document.forms[index];
 var selectFormElement = document.forms[index].elements[index];
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

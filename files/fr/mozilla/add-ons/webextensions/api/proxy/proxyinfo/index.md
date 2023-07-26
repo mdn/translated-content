@@ -1,13 +1,6 @@
 ---
 title: proxy.ProxyInfo
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/ProxyInfo
-tags:
-  - Add-ons
-  - Extensions
-  - Proxy
-  - ProxyInfo
-  - Type
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/ProxyInfo
 ---
 
@@ -53,8 +46,8 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `connectionIsolationKey` {{optional_inline}}
   - : `string.` Une clé optionnelle utilisée pour l'isolation supplémentaire de cette connexion proxy.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.proxy.ProxyInfo")}}
+{{Compat}}
 
 {{WebExtExamples}}

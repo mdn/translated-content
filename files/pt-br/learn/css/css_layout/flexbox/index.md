@@ -13,10 +13,10 @@ Uma nova tecnologia, mas com suporte bastante difundido entre navegadores, o Fle
       <th scope="row">Pré-requisitos:</th>
       <td>
         HTML básico (estude
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introdução a HTML</a
         >), e uma ideia de como CSS funciona (estude
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introdução a CSS</a
+        <a href="/pt-BR/docs/Learn/CSS/Introduction_to_CSS">Introdução a CSS</a
         >.)
       </td>
     </tr>
@@ -300,7 +300,7 @@ Depois, selecionamos o primeiro elemento {{HTMLElement("div")}}. Primeiro usamos
 
 ```css
 article:nth-of-type(3) div:first-child {
-  flex:1 100px;
+  flex: 1 100px;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -336,12 +336,3 @@ Isso conclui nosso tour sobre o básico de _flexbox_. Esperamos que você tenha 
 No próximo tópico, veremos outro aspecto importante dos Esquemas em CSS: os sistemas de _grid,_ como você pode ver nesse artigo sobre [CSS grid layout](https://blog.alura.com.br/criando-layouts-com-css-grid-layout/).
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Practical_positioning_examples", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
-
-## Neste módulo
-
-- [Introdução a Esquemas CSS](/pt-BR/docs/Learn/CSS/CSS_layout/Introduction)
-- [Flutuando Elementos com "float"](/pt-BR/docs/Learn/CSS/CSS_layout/Floats)
-- [Posicionamento de elementos](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning)
-- [Exemplos práticos de posicionamento](/pt-BR/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-- [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grids](/pt-BR/docs/Learn/CSS/CSS_layout/Grids)

@@ -103,7 +103,7 @@ Maintenant, créez le code requis (et les formats de police). Pour chaque police
 2. Allez sur le [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator) de Fontsquirrel.
 3. Téléversez les deux fichiers de fontes avec le bouton _Upload Fonts_.
 4. Cochez la case nommée « Yes, the fonts I'm uploading are legally eligible for web embedding » (_Oui, les fontes téléversées sont légalement éligibles à une intégration web_).
-5. Cliquez sur «&nbsp;*Download your kit* » (_Télécharger le kit_) .
+5. Cliquez sur «&nbsp;_Download your kit_ » (_Télécharger le kit_) .
 
 Après que le générateur a terminé le traitement, vous obtenez un fichier ZIP à télécharger — enregistrez‑le dans le même répertoire que les fichiers HTML et CSS.
 
@@ -122,9 +122,9 @@ Pour mettre en œuvre ces polices dans la démo, suivez ces étapes&nbsp;:
 3. Chaque fonction `url()` pointe sur un fichier de police à importer dans la CSS — assurez‑vous que les chemins vers les fichiers soient corrects, donc ajoutez `fonts/` au début de chaque chemin (si nécessaire).
 4. Maintenant, vous pouvez vous servir de ces polices dans vos piles de fontes, tout à fait comme les polices système ou une police «&nbsp;web safe ». Par exemple&nbsp;:
 
-    ```css
-    font-family: 'zantrokeregular', serif;
-    ```
+   ```css
+   font-family: "zantrokeregular", serif;
+   ```
 
 Vous devriez obtenir une page de démonstration avec les belles polices implémentées ci‑dessus. Comme les diverses polices sont créées en différentes tailles, il se peut que vous deviez ajuster la taille, l'espacement, etc. pour parfaire l'aspect.
 
@@ -153,13 +153,14 @@ Examinons la syntaxe générée par fontsquirrel pour `@font-face`. C'est un blo
 
 ```css
 @font-face {
-  font-family: 'ciclefina';
-  src: url('fonts/cicle_fina-webfont.eot');
-  src: url('fonts/cicle_fina-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/cicle_fina-webfont.woff2') format('woff2'),
-         url('fonts/cicle_fina-webfont.woff') format('woff'),
-         url('fonts/cicle_fina-webfont.ttf') format('truetype'),
-         url('fonts/cicle_fina-webfont.svg#ciclefina') format('svg');
+  font-family: "ciclefina";
+  src: url("fonts/cicle_fina-webfont.eot");
+  src:
+    url("fonts/cicle_fina-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/cicle_fina-webfont.woff2") format("woff2"),
+    url("fonts/cicle_fina-webfont.woff") format("woff"),
+    url("fonts/cicle_fina-webfont.ttf") format("truetype"),
+    url("fonts/cicle_fina-webfont.svg#ciclefina") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -178,11 +179,3 @@ Elle est désignée sous le vocable «&nbsp;bulletproof @font-face syntax&nbsp;�
 Maintenant que vous avez travaillé nos articles sur les principes fondamentaux pour composer du texte, il est temps de tester votre compréhension de la chose avec notre évaluation pour le module&nbsp;: composition d'une page d'accueil d'une école communale.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
-
-## Dans ce module
-
-- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte)
-- [Style de listes](/fr/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Mise_en_forme_des_liens)
-- Polices de caractères web
-- [Composition d'une page d'accueil d'une école de communauté](/fr/docs/Learn/CSS/Styling_text/Typesetting_a_homepage)

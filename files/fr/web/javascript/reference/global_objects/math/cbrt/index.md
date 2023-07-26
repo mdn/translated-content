@@ -1,15 +1,7 @@
 ---
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Math
-  - Méthode
-  - Reference
-  - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
-original_slug: Web/JavaScript/Reference/Objets_globaux/Math/cbrt
 ---
 
 {{JSRef}}

@@ -1,7 +1,6 @@
 ---
 title: SharedWorker
 slug: Web/API/SharedWorker
-translation_of: Web/API/SharedWorker
 ---
 {{APIRef("Web Workers API")}}
 

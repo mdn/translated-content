@@ -9,10 +9,6 @@ original_slug: Глоссарий/ECMAScript
 
 ## Learn more
 
-### General knowledge
-
-- {{Interwiki("wikipedia", "ECMAScript")}} на Wikipedia
-
 ### Technical reference
 
 - [ECMAScript](http://www.ecmascript.org/)

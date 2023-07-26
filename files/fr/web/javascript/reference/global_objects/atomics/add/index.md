@@ -1,14 +1,7 @@
 ---
 title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
-tags:
-  - Atomics
-  - JavaScript
-  - Mémoire partagée
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
-original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/add
 ---
 
 {{JSRef}}

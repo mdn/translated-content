@@ -1,16 +1,6 @@
 ---
 title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - runtime
-  - sendMessage
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
 
@@ -32,10 +22,10 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var sending = browser.runtime.sendMessage(
-  extensionId,             // optional string
-  message,                 // any
-  options                  // optional object
-)
+  extensionId, // optional string
+  message, // any
+  options, // optional object
+);
 ```
 
 ### Paramètres
@@ -78,10 +68,6 @@ Notez qu'avant Firefox 55, le règles étaient différentes dans le cas des 2 ar
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si le destinataire a envoyé une réponse, celle-ci sera remplie avec la réponse en tant qu'objet JSON. Sinon, il sera rempli sans arguments. si une erreur survient lors de la connexion à l'extension, la promessage sera rejetée avec un message d'erreur.
 
-## Compatibilité du navitageur
-
-{{Compat("webextensions.api.runtime.sendMessage")}}
-
 ## Exemples
 
 Voici un script de contenu qui envoie un message au script d'arrière-plan lorsque l'utilisateur clique sur la fenêtre de contenu. La charge utile du message est `{greeting: "Greeting from the content script"}`, et l'expéditeur s'attend également à recevoir une réponse, qui est gérée dans la fonction `handleResponse` :
@@ -99,7 +85,7 @@ function handleError(error) {
 
 function notifyBackgroundPage(e) {
   var sending = browser.runtime.sendMessage({
-    greeting: "Greeting from the content script"
+    greeting: "Greeting from the content script",
   });
   sending.then(handleResponse, handleError);
 }
@@ -113,13 +99,16 @@ Le script d'arrière-plan correspondant ressemble à ceci :
 // background-script.js
 
 function handleMessage(request, sender, sendResponse) {
-  console.log("Message from the content script: " +
-    request.greeting);
-  sendResponse({response: "Response from background script"});
+  console.log("Message from the content script: " + request.greeting);
+  sendResponse({ response: "Response from background script" });
 }
 
 browser.runtime.onMessage.addListener(handleMessage);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

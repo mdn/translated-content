@@ -1,13 +1,6 @@
 ---
 title: FormData
 slug: Web/API/FormData
-page-type: web-api-interface
-tags:
-  - API
-  - 인터페이스
-  - 폼 데이터
-browser-compat: api.FormData
-translation_of: Web/API/FormData
 ---
 {{APIRef("XMLHttpRequest")}}
 

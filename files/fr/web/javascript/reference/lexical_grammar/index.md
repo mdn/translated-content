@@ -1,13 +1,7 @@
 ---
 title: Grammaire lexicale
 slug: Web/JavaScript/Reference/Lexical_grammar
-tags:
-  - Avancé
-  - Grammaire
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Lexical_grammar
-original_slug: Web/JavaScript/Reference/Grammaire_lexicale
 ---
 
 {{JsSidebar("More")}}
@@ -258,7 +252,7 @@ false
 0777 // est compris comme octal et égale 511 en décimal
 ```
 
-Les littéraux décimaux peuvent commencer par un zéro (`0`) suivi d'un autre chiffre. Mais si tous les chiffres après le 0 sont (strictement) inférieurs à 8, le nombre sera analysé comme un nombre octal. Cela n'entraînera pas d'erreur JavaScript, voir {{bug(957513)}}. Voir aussi la page sur {{jsxref("parseInt", "parseInt()")}}.
+Les littéraux décimaux peuvent commencer par un zéro (`0`) suivi d'un autre chiffre. Mais si tous les chiffres après le 0 sont (strictement) inférieurs à 8, le nombre sera analysé comme un nombre octal. Cela n'entraînera pas d'erreur JavaScript, voir [bug Firefox 957513](https://bugzil.la/957513). Voir aussi la page sur {{jsxref("parseInt", "parseInt()")}}.
 
 #### Binaires
 

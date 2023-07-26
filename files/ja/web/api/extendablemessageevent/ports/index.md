@@ -1,19 +1,15 @@
 ---
 title: ExtendableMessageEvent.ports
 slug: Web/API/ExtendableMessageEvent/ports
+l10n:
+  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
 {{APIRef("Service Workers API")}}
 
-{{domxref("ExtendableMessageEvent")}} インターフェイスの **`ports`** 読み取り専用プロパティは、関連するメッセージチャンネル（メッセージが送信されるチャンネル）のポートを表す {{domxref("MessagePort")}} オブジェクトを含む配列を返します。
+**`ports`** は {{domxref("ExtendableMessageEvent")}} インターフェイスの読み取り専用プロパティで、関連するメッセージチャンネル（メッセージが送信されるチャンネル）のポートを表す {{domxref("MessagePort")}} オブジェクトを含む配列を返します。
 
-## 構文
-
-```
-var myPorts = extendableMessageEvent.ports;
-```
-
-### 値
+## 値
 
 {{domxref("MessagePort")}} オブジェクトの配列。
 
@@ -22,34 +18,34 @@ var myPorts = extendableMessageEvent.ports;
 次のコードをサービスワーカー内で使用して、{{domxref("PushMessageData")}} を介して受信したデータを[チャンネルメッセージ](/ja/docs/Web/API/Channel_Messaging_API)を介してメインコンテキストに送信することにより、プッシュメッセージに応答する場合、`onmessage` のイベントオブジェクトは `ExtendableMessageEvent` になります。
 
 ```js
-var port;
+let port;
 
-self.addEventListener('push', function(e) {
-  var obj = e.data.json();
+self.addEventListener('push', (e) => {
+  const obj = e.data.json();
 
-  if(obj.action === 'subscribe' || obj.action === 'unsubscribe') {
+  if (obj.action === 'subscribe' || obj.action === 'unsubscribe') {
     port.postMessage(obj);
-  } else if(obj.action === 'init' || obj.action === 'chatMsg') {
+  } else if (obj.action === 'init' || obj.action === 'chatMsg') {
     port.postMessage(obj);
   }
 });
 
-self.onmessage = function(e) {
+self.onmessage = (e) => {
   port = e.ports[0];
 }
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ExtendableMessageEvent.ports")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーの基本的なコード例](https://github.com/mdn/sw-test)（英語）
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)（英語）
 - [ServiceWorker の準備はできていますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- [Channel Messaging](/ja/docs/Web/API/Channel_Messaging_API)
+- [チャンネルメッセージング](/ja/docs/Web/API/Channel_Messaging_API)

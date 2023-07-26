@@ -1,14 +1,8 @@
 ---
 title: 304 Not Modified
 slug: Web/HTTP/Status/304
-tags:
-  - HTTP
-  - Redirection
-  - Reference
-  - Status code
-  - contents verification
-translation_of: Web/HTTP/Status/304
 ---
+
 {{HTTPSidebar}}
 
 클라이언트 리디렉션 응답 코드 **`304 Not Modified`** 는 요청된 리소스를 재전송할 필요가 없음을 나타낸다. 캐시된 자원으로의 암묵적인 리디렉션이다. 이 는 {{HTTPMethod("GET")}} 나 {{HTTPMethod("HEAD")}} 요청처럼 요청 방법이 {{glossary("안전")}} 한 경우 또는 요청이 조건부로 {{HTTPHeader("If-None-Match")}} 또는 {{HTTPHeader("If-Modified-Since")}} 헤더를 사용할 때 응답 된다.
@@ -29,7 +23,7 @@ translation_of: Web/HTTP/Status/304
 
 ## 브라우저 호환성
 
-{{Compat("http.status.304")}}
+{{Compat}}
 
 ## 호환성 노트
 

@@ -1,13 +1,6 @@
 ---
 title: String.prototype.sub()
 slug: Web/JavaScript/Reference/Global_Objects/String/sub
-tags:
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/sub
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/sub
 ---
 

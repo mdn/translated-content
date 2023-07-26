@@ -1,6 +1,6 @@
 ---
 title: JPEG
-slug: Glossary/jpeg
+slug: Glossary/JPEG
 original_slug: Glossario/JPEG
 ---
 
@@ -10,4 +10,4 @@ original_slug: Glossario/JPEG
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "JPEG")}} na Wikipedia
+- [JPEG](https://pt.wikipedia.org/wiki/JPEG) na Wikipedia

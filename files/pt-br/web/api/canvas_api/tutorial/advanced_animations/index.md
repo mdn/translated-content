@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 original_slug: Web/Guide/HTML/Canvas_tutorial/Advanced_animations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
 
 No último capítulo nós fizemos algumas [animações básicas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Basic_animations) e fomos conhecer caminhos para conseguir com que as coisas se movessem. Nesta parte prestaremos mais atenção nos movimentos e vamos adicionar algumas físicas para fazer nossas animações mais avançadas.
 
@@ -380,7 +380,7 @@ Mova a bola usando seu mouse e libere - o com um clique.
 
 Este curto capítulo somente explica algumas técnicas para criar as mais avançadas animações. Há muito mais! Como adicionar um paddle, alguns bricks, e tornar este demo dentro de um jogo [Breakout](http://en.wikipedia.org/wiki/Breakout_%28video_game%29)? Cheque a nossa área de Desenvolvimento de jogos para mais artigos de jogos.
 
-## Veja também:
+## Veja também
 
 - {{domxref("window.requestAnimationFrame()")}}
 - [Efficient animation for web games](/pt-BR/docs/Games/Techniques/Efficient_animation_for_web_games)

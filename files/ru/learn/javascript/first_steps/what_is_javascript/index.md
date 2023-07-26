@@ -17,7 +17,7 @@ original_slug: Learn/JavaScript/Первые_шаги/What_is_JavaScript
 
 JavaScript это язык, который позволяет вам применять сложные вещи на web странице — каждый раз, когда на web странице происходит что-то большее, чем просто её статичное отображение — отображение периодически обновляемого контента, или интерактивных карт, или анимация 2D/3D графики, или прокрутка видео в проигрывателе, и т.д. — можете быть уверены, что скорее всего, не обошлось без JavaScript. Это третий слой слоёного пирога стандартных web технологий, два из которых ([HTML](/ru/docs/Learn/HTML) и [CSS](/ru/docs/Learn/CSS)) мы детально раскрыли в других частях учебного пособия.
 
-![](https://mdn.mozillademos.org/files/13502/cake.png)
+![](cake.png)
 
 - {{glossary("HTML")}} - это язык разметки, который мы используем для визуального и смыслового структурирования нашего web контента, например, определяем параграфы, заголовки, таблицы данных, или вставляем изображения и видео на страницу.
 - {{glossary("CSS")}} - это язык стилей с помощью которого мы придаём стиль отображения нашего HTML контента, например придаём цвет фону (background) и шрифту, придаём контенту многоколоночный вид.
@@ -29,28 +29,28 @@ JavaScript это язык, который позволяет вам приме�
 <p>Player 1: Chris</p>
 ```
 
-![](https://mdn.mozillademos.org/files/13422/just-html.png)
+![](just-html.png)
 
 Затем мы добавим немного CSS, что бы это выглядело симпатичнее:
 
 ```css
 p {
-  font-family: 'helvetica neue', helvetica, sans-serif;
+  font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid rgba(0,0,200,0.6);
-  background: rgba(0,0,200,0.3);
-  color: rgba(0,0,200,0.6);
-  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+  border: 2px solid rgba(0, 0, 200, 0.6);
+  background: rgba(0, 0, 200, 0.3);
+  color: rgba(0, 0, 200, 0.6);
+  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
   border-radius: 10px;
   padding: 3px 10px;
   display: inline-block;
-  cursor:pointer;
+  cursor: pointer;
 }
 ```
 
-![](https://mdn.mozillademos.org/files/13424/html-and-css.png)
+![](html-and-css.png)
 
 И наконец, добавим немного JavaScript для придания динамического поведения:
 
@@ -86,7 +86,7 @@ API - это готовые наборы блоков кода, которые �
 
 Они обычно делятся на две категории.
 
-![](https://mdn.mozillademos.org/files/13508/browser.png)
+![](browser.png)
 
 **API-интерфейсы** браузера встроены в ваш веб-браузер и могут отображать данные из окружающего компьютерного окружения или делать полезные сложные вещи. Например:
 
@@ -112,7 +112,7 @@ API - это готовые наборы блоков кода, которые �
 
 Давайте составим краткий бриф, что же происходит когда мы загружаем страничку в браузере (первое упоминание в статье [Как работает CSS](/en-US/Learn/CSS/Introduction_to_CSS/How_CSS_works#How_does_CSS_actually_work)). Когда вы загружаете страничку в браузере, вы запускаете ваш код (HTML, CSS и JavaScript) внутри исполняемой среды (внутри вкладки браузера). Это как будто фабрика берёт сырьё (некий код) и выдаёт продукцию (веб-страничку).
 
-![](https://mdn.mozillademos.org/files/13504/execution.png)
+![](execution.png)
 
 Код JavaScript выполняется JavaScript-движком браузера, после того как код HTML и CSS был обработан и сформирован в веб-страницу. Это гарантирует, что структура и стиль страницы уже сформированы к моменту запуска JavaScript.
 
@@ -173,31 +173,29 @@ JavaScript применяется к вашей HTML странице точно
 2. Откройте этот файл в вашем браузере и в вашем текстовом редакторе. Вы увидите, что HTML создаёт простую веб-страницу с активной кнопкой.
 3. Затем, перейдите в текстовый редактор и добавьте следующие строки перед закрывающим тегом `</head>`:
 
-    ```html
-    <script>
-
-      // здесь будет JavaScript
-
-    </script>
-    ```
+   ```html
+   <script>
+     // здесь будет JavaScript
+   </script>
+   ```
 
 4. Теперь добавим JavaScript внутрь элемента {{htmlelement("script")}}, чтобы сделать страницу более интересной — добавьте следующий код ниже строки "// здесь будет JavaScript":
 
-    ```js
-    document.addEventListener("DOMContentLoaded", function() {
-      function createParagraph() {
-        let para = document.createElement('p');
-        para.textContent = 'You clicked the button!';
-        document.body.appendChild(para);
-      }
+   ```js
+   document.addEventListener("DOMContentLoaded", function () {
+     function createParagraph() {
+       let para = document.createElement("p");
+       para.textContent = "You clicked the button!";
+       document.body.appendChild(para);
+     }
 
-      const buttons = document.querySelectorAll('button');
+     const buttons = document.querySelectorAll("button");
 
-      for(let i = 0; i < buttons.length ; i++) {
-        buttons[i].addEventListener('click', createParagraph);
-      }
-    });
-    ```
+     for (let i = 0; i < buttons.length; i++) {
+       buttons[i].addEventListener("click", createParagraph);
+     }
+   });
+   ```
 
 5. Сохраните файл и обновите страницу в браузере — теперь вы должны увидеть, что при нажатии на кнопку создаётся новый абзац и помещается ниже.
 
@@ -212,25 +210,25 @@ JavaScript применяется к вашей HTML странице точно
 1. Сначала, создайте новый файл в той же папке, что и ваш файл-пример HTML. Назовите его `script.js` — убедитесь, что у имени файла расширение .js, так как оно распознается, как JavaScript.
 2. Замените ваш текущий элемент {{htmlelement("script")}} на следующий:
 
-    ```html
-    <script src="script.js" defer></script>
-    ```
+   ```html
+   <script src="script.js" defer></script>
+   ```
 
 3. Внутри `script.js` добавьте следующий скрипт:
 
-    ```js
-    function createParagraph() {
-      let para = document.createElement('p');
-      para.textContent = 'You clicked the button!';
-      document.body.appendChild(para);
-    }
+   ```js
+   function createParagraph() {
+     let para = document.createElement("p");
+     para.textContent = "You clicked the button!";
+     document.body.appendChild(para);
+   }
 
-    const buttons = document.querySelectorAll('button');
+   const buttons = document.querySelectorAll("button");
 
-    for(let i = 0; i < buttons.length ; i++) {
-      buttons[i].addEventListener('click', createParagraph);
-    }
-    ```
+   for (let i = 0; i < buttons.length; i++) {
+     buttons[i].addEventListener("click", createParagraph);
+   }
+   ```
 
 4. Сохраните и обновите страницу в браузере, и вы увидите то же самое! Все работает точно так же, но теперь у нас есть JavaScript во внешнем файле. Это, как правило, хорошо с точки зрения организации кода и его повторного использования в нескольких HTML файлах. Кроме того, HTML легче читать без огромных кусков кода, который скапливается в нем.
 
@@ -242,8 +240,8 @@ JavaScript применяется к вашей HTML странице точно
 
 ```js example-bad
 function createParagraph() {
-  var para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  var para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 ```
@@ -263,10 +261,10 @@ function createParagraph() {
 Использование чистой JavaScript конструкции, позволит вам выбрать все кнопки, используя одну команду. Код, который можно использовали для этой цели, выглядит следующим образом:
 
 ```js
-const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll("button");
 
-for(let i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", createParagraph);
 }
 ```
 
@@ -303,8 +301,8 @@ for(let i = 0; i < buttons.length ; i++) {
 // Функция: создаёт новый параграф и добавляет его вниз тела HTML.
 
 function createParagraph() {
-  var para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
+  var para = document.createElement("p");
+  para.textContent = "You clicked the button!";
   document.body.appendChild(para);
 }
 
@@ -315,10 +313,10 @@ function createParagraph() {
   При нажатии любой кнопки, будет выполняться функция createParagraph().
 */
 
-var buttons = document.querySelectorAll('button');
+var buttons = document.querySelectorAll("button");
 
-for (var i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
+for (var i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", createParagraph);
 }
 ```
 

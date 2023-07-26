@@ -1,16 +1,16 @@
 ---
-title: WindowOrWorkerGlobalScope.fetch()
+title: fetch()
 slug: Web/API/fetch
 original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
 
 {{APIRef("Fetch API")}}
 
-El método **`fetch()`** del mixin {{domxref("WindowOrWorkerGlobalScope")}} lanza el proceso de solicitud de un recurso de la red. Esto devuelve una promesa que resuelve al objeto {{domxref("Response")}} que representa la respuesta a la solicitud realizada.
+El método **`fetch()`** lanza el proceso de solicitud de un recurso de la red. Esto devuelve una promesa que resuelve al objeto {{domxref("Response")}} que representa la respuesta a la solicitud realizada.
 
 Tanto {{domxref("Window")}} como {{domxref("WorkerGlobalScope")}} implementan `WorkerOrGlobalScope`, por lo que el método `fetch()` está disponible en prácticamente cualquier contexto desde el que se pueda necesitar solicitar un recurso.
 
-Una promesa {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} se rechaza con un {{jsxref("TypeError")}} cuando sucede un error en la red, aunque normalmente significa un tema de permisos o similar. Una comprobación más precisa de una solicitud con `fetch()` debería comprobar que la promesa se resuelve, y que la propiedad {{domxref("Response.ok")}} tiene valor `true`. Un estatus HTTP 404 no constituye un error de red.
+Una promesa {{domxref("fetch","fetch()")}} se rechaza con un {{jsxref("TypeError")}} cuando sucede un error en la red, aunque normalmente significa un tema de permisos o similar. Una comprobación más precisa de una solicitud con `fetch()` debería comprobar que la promesa se resuelve, y que la propiedad {{domxref("Response.ok")}} tiene valor `true`. Un estatus HTTP 404 no constituye un error de red.
 
 El método `fetch()` es controlado por la directiva `connect-src` de la [Política de Seguridad de Contenido (Content Security Policy)](/es/docs/Security/CSP/CSP_policy_directives) en lugar de la directiva del recurso que se solicita.
 
@@ -56,7 +56,7 @@ Una {{domxref("Promise")}} que resuelve a un objeto {{domxref("Response")}}.
 
 | **Tipo**     | **Descriptción**                                                                                                                                                   |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `AbortError` | Se abortó la solicitud (mediante {{domxref("AbortController.abort()")}}).                                                                            |
+| `AbortError` | Se abortó la solicitud (mediante {{domxref("AbortController.abort()")}}).                                                                                          |
 | `TypeError`  | Desde [Firefox 43](/es/docs/Mozilla/Firefox/Releases/43), `fetch()` lanza un `TypeError` si la URL tiene credenciales, como en `http://usuario:clave@ejemplo.com`. |
 
 ## Ejemplo
@@ -64,16 +64,18 @@ Una {{domxref("Promise")}} que resuelve a un objeto {{domxref("Response")}}.
 En el ejemplo de [solicitud con Request](https://github.com/mdn/fetch-examples/tree/master/fetch-request) (ver [Fetch Request live](https://mdn.github.io/fetch-examples/fetch-request/)) creamos un nuevo objeto {{domxref("Request")}} usando el constructor pertinente, y realizamos una solicitud usando `fetch()`. Dado que estamos solicitando una imagen, ejecutamos {{domxref("Body.blob()")}} en la respuesta para darle el tipo MIME correspondiente para que sea gestionada apropiadamente, luego creamos un objeto URL de ella para mostrarla en un elemento {{htmlelement("img")}}.
 
 ```js
-var miImagen = document.querySelector('img');
+var miImagen = document.querySelector("img");
 
-var miSolicitud = new Request('flores.jpg');
+var miSolicitud = new Request("flores.jpg");
 
-fetch(miSolicitud).then(function(respuesta) {
-  return respuesta.blob();
-}).then(function(respuesta) {
-  var objeto = URL.createObjectURL(respuesta);
-  miImagen.src = objeto;
-});
+fetch(miSolicitud)
+  .then(function (respuesta) {
+    return respuesta.blob();
+  })
+  .then(function (respuesta) {
+    var objeto = URL.createObjectURL(respuesta);
+    miImagen.src = objeto;
+  });
 ```
 
 En el ejemplo de [solicitud con inicializador y Request](https://github.com/mdn/fetch-examples/blob/master/fetch-with-init-then-request/index.html) (ver [Fetch Request init live](https://mdn.github.io/fetch-examples/fetch-with-init-then-request/)) hacemos lo mismo pero además pasamos un objeto inicializador cuando invocamos el `fetch()`:
@@ -99,20 +101,22 @@ fetch(miSolicitud,miInicializador).then(function(respuesta) {
 Nótese que también podríamos pasar el objeto inicializador con el constructor de `Request` para conseguir el mismo efecto, p.ej.:
 
 ```js
-var miSolicitud = new Request('flores.jpg', miInicializador);
+var miSolicitud = new Request("flores.jpg", miInicializador);
 ```
 
 También se puede usar un objeto literal a modo de `headers` en `init`.
 
 ```js
-var miInicializador = { method: 'GET',
-                        headers: {
-                            'Content-Type': 'image/jpeg'
-                        },
-                        mode: 'cors',
-                        cache: 'default' };
+var miInicializador = {
+  method: "GET",
+  headers: {
+    "Content-Type": "image/jpeg",
+  },
+  mode: "cors",
+  cache: "default",
+};
 
-var myRequest = new Request('flowers.jpg', miInicializador);
+var myRequest = new Request("flowers.jpg", miInicializador);
 ```
 
 ## Especificaciones

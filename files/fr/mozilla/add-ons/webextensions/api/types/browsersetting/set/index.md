@@ -1,15 +1,6 @@
 ---
 title: set()
 slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
-tags:
-  - API
-  - Add-ons
-  - BrowserSetting
-  - Extensions
-  - Privacy
-  - Reference
-  - WebExtensions
-  - set
 translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
 ---
 
@@ -37,8 +28,8 @@ la méthode [`BrowserSetting.set()`](/fr/Add-ons/WebExtensions/API/privacy/Brows
 
 ```js
 var setting = setting.set(
-  details     // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -54,7 +45,7 @@ var setting = setting.set(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un `booléen`: `true` si le paramètre a été modifié, `false` sinon (par exemple, parce que l'extension n'a pas contrôlé le paramètre).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 Voir {{WebExtAPIRef("types.BrowserSetting")}}.
 
@@ -72,12 +63,10 @@ function onSet(result) {
 }
 
 browser.browserAction.onClicked.addListener(() => {
-
-    var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
-      value: false
-    });
-    setting.then(onSet);
-
+  var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
+    value: false,
+  });
+  setting.then(onSet);
 });
 ```
 

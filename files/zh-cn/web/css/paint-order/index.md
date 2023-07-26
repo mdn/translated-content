@@ -39,11 +39,11 @@ paint-order: markers stroke fill; /* 先 markers, 然后 stroke, 然后 fill */
 
   - : 指定一部分或者全部这些属性的渲染顺序
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
-## 使用示例
+## 示例
 
 ### HTML
 
@@ -69,9 +69,9 @@ p {
 }
 ```
 
-### 效果
+### 结果
 
-{{EmbedLiveSample('Examples', '100%', 165)}}
+{{EmbedLiveSample('示例', '100%', 165)}}
 
 ## 规范
 

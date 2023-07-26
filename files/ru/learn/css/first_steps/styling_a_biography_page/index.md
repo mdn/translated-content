@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/CSS/First_steps/Using_your_new_knowledge
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 С учётом того что вы узнали за последние несколько уроков, вы должны обнаружить, что вы можете форматировать простые текстовые документы с использованием CSS, чтобы добавить к ним свой собственный стиль. Эта статья даёт вам возможность сделать это.
@@ -48,7 +49,7 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 У вас должно получиться примерно как-то так:
 
-![Screenshot of how the example should look after completing the assessment.](https://mdn.mozillademos.org/files/17035/learn-css-basics-assessment.png)
+![Screenshot of how the example should look after completing the assessment.](learn-css-basics-assessment.png)
 
 После этого попробуйте использовать селекторы, не указанные здесь, но описанные в [Руководстве по CSS](/ru/docs/Web/CSS/Reference). Не бойтесь ошибок — практикуйтесь!
 
@@ -63,10 +64,10 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 1. Загрузите ваш код на [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/).
 2. Напишите пост с просьбой о помощи и / или оценке на [форуме MDN](https://discourse.mozilla.org/c/mdn). Добавьте тег "learning" к вашему посту, чтобы нам легче было его найти. В вашем посте должны быть:
 
-    - Заголовок с описанием наподобие "Assessment wanted for CSS First Steps".
-    - Описание того, что вам нужно, — к примеру, что вы уже пробовали, что у вас не получается и вам нужна помощь.
-    - Ссылка на ваш код в онлайн-редакторе.
-    - Ссылка на страницу о помощи, чтобы мы смогли помочь вам с вашим вопросом.
+   - Заголовок с описанием наподобие "Assessment wanted for CSS First Steps".
+   - Описание того, что вам нужно, — к примеру, что вы уже пробовали, что у вас не получается и вам нужна помощь.
+   - Ссылка на ваш код в онлайн-редакторе.
+   - Ссылка на страницу о помощи, чтобы мы смогли помочь вам с вашим вопросом.
 
 ## Что дальше?
 

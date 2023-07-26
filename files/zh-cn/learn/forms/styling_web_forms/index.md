@@ -37,7 +37,7 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 一些元素难以被美化，并且可能需要一些复杂的技巧，偶尔需要高级的 CSS3 知识。
 
-这些包括{{HTMLElement("legend")}}元素，但不能在所有平台上正确定位。Checkbox 和 radio 按钮也不能直接应用样式，但是，感谢 CSS3，你可以解决这个问题。{{htmlattrxref("placeholder", "input")}} 的内容不能以任何标准方式应用样式，但是实现它的所有浏览器也都实现了私有的 CSS 伪元素或伪类，让你可以对其定义样式。
+这些包括{{HTMLElement("legend")}}元素，但不能在所有平台上正确定位。Checkbox 和 radio 按钮也不能直接应用样式，但是，感谢 CSS3，你可以解决这个问题。[`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 的内容不能以任何标准方式应用样式，但是实现它的所有浏览器也都实现了私有的 CSS 伪元素或伪类，让你可以对其定义样式。
 
 我们会在[如何构建自定义表单挂件](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)一文中讲述如何处理更多特定的问题。
 
@@ -59,12 +59,12 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 ```html
 <form>
-  <input type="search">
+  <input type="search" />
 </form>
 ```
 
 ```css
-input[type=search] {
+input[type="search"] {
   border: 1px dotted #999;
   border-radius: 0;
 
@@ -81,9 +81,12 @@ input[type=search] {
 CSS font 和 text 功能能被很容易的应用到任何组件上（当然你可以在 form 组件上使用{{cssxref("@font-face")}} ）。然而，浏览器的行为经常不一致。默认情况下，一些组件不会从它们的父元素继承 {{cssxref("font-family")}}和 {{cssxref("font-size")}} 。相反，许多浏览器使用系统默认的字体和文本。为了让 form 表单的外观和其他内容保持一致，你可以在你的样式表中增加以下内容：
 
 ```css
-button, input, select, textarea {
-  font-family : inherit;
-  font-size   : 100%;
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
 }
 ```
 
@@ -100,13 +103,16 @@ button, input, select, textarea {
 **这是因为每个小部件都有自己的边框，填充和边距的规则。** 所以如果你想给几个不同的小部件相同的大小，你必须使用{{cssxref("box-sizing")}} 属性：
 
 ```css
-input, textarea, select, button {
-  width : 150px;
+input,
+textarea,
+select,
+button {
+  width: 150px;
   margin: 0;
 
   -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
-     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
-          box-sizing: border-box;
+  -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+  box-sizing: border-box;
 }
 ```
 
@@ -159,7 +165,7 @@ textarea {
 
 ![This is what we want to achieve with HTML and CSS](/files/4149/screenshot.png)
 
-如果你想继续关注这个例子，复制我们的 [postcard-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/postcard-example/postcard-start.html) 文件，并遵循接下来的指导操作。
+如果你想继续关注这个例子，复制我们的 [postcard-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/postcard-start.html) 文件，并遵循接下来的指导操作。
 
 ### The HTML
 
@@ -171,12 +177,12 @@ HTML 只比我们在 [the first article of this guide](/zh-CN/docs/HTML/Forms/My
 
   <div id="from">
     <label for="name">from:</label>
-    <input type="text" id="name" name="user_name">
+    <input type="text" id="name" name="user_name" />
   </div>
 
   <div id="reply">
     <label for="mail">reply:</label>
-    <input type="email" id="mail" name="user_email">
+    <input type="email" id="mail" name="user_email" />
   </div>
 
   <div id="message">
@@ -215,38 +221,40 @@ HTML 只比我们在 [the first article of this guide](/zh-CN/docs/HTML/Forms/My
 
 ```css
 @font-face {
-    font-family: 'handwriting';
-    src: url('fonts/journal-webfont.woff2') format('woff2'),
-         url('fonts/journal-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "handwriting";
+  src:
+    url("fonts/journal-webfont.woff2") format("woff2"),
+    url("fonts/journal-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'typewriter';
-    src: url('fonts/veteran_typewriter-webfont.woff2') format('woff2'),
-         url('fonts/veteran_typewriter-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "typewriter";
+  src:
+    url("fonts/veteran_typewriter-webfont.woff2") format("woff2"),
+    url("fonts/veteran_typewriter-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  font  : 21px sans-serif;
+  font: 21px sans-serif;
 
-  padding : 2em;
-  margin  : 0;
+  padding: 2em;
+  margin: 0;
 
-  background : #222;
+  background: #222;
 }
 
 form {
   position: relative;
 
-  width  : 740px;
-  height : 498px;
-  margin : 0 auto;
+  width: 740px;
+  height: 498px;
+  margin: 0 auto;
 
-  background: #FFF url(background.jpg);
+  background: #fff url(background.jpg);
 }
 ```
 
@@ -254,29 +262,31 @@ form {
 
 ```css
 h1 {
-  position : absolute;
-  left : 415px;
-  top  : 185px;
+  position: absolute;
+  left: 415px;
+  top: 185px;
 
-  font : 1em "typewriter", sans-serif;
+  font:
+    1em "typewriter",
+    sans-serif;
 }
 
 #from {
   position: absolute;
-  left : 398px;
-  top  : 235px;
+  left: 398px;
+  top: 235px;
 }
 
 #reply {
   position: absolute;
-  left : 390px;
-  top  : 285px;
+  left: 390px;
+  top: 285px;
 }
 
 #message {
   position: absolute;
-  left : 20px;
-  top  : 70px;
+  left: 20px;
+  top: 70px;
 }
 ```
 
@@ -284,20 +294,25 @@ h1 {
 
 ```css
 label {
-  font : .8em "typewriter", sans-serif;
+  font:
+    0.8em "typewriter",
+    sans-serif;
 }
 ```
 
 文本域需要一些通用的规则，我们只需简单的移除 {{cssxref("border","borders")}} 和 {{cssxref("background","backgrounds")}}, 并重新定义其{{cssxref("padding")}} 和 {{cssxref("margin")}}：
 
 ```css
-input, textarea {
-  font    : .9em/1.5em "handwriting", sans-serif;
+input,
+textarea {
+  font:
+    0.9em/1.5em "handwriting",
+    sans-serif;
 
-  border  : none;
-  padding : 0 10px;
-  margin  : 0;
-  width   : 240px;
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  width: 240px;
 
   background: none;
 }
@@ -306,10 +321,11 @@ input, textarea {
 当其中的一个域获得焦点后，我们用浅灰色、半透明的背景高亮它们，注意添加{{cssxref("outline")}} 属性非常重要，这样可以移除由某些浏览器添加的默认高亮效果：
 
 ```css
-input:focus, textarea:focus {
-  background   : rgba(0,0,0,.1);
+input:focus,
+textarea:focus {
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  outline      : none;
+  outline: none;
 }
 ```
 
@@ -319,8 +335,8 @@ input:focus, textarea:focus {
 
 ```css
 input {
-    height: 2.5em; /* for IE */
-    vertical-align: middle; /* This is optional but it makes legacy IEs look better */
+  height: 2.5em; /* for IE */
+  vertical-align: middle; /* This is optional but it makes legacy IEs look better */
 }
 ```
 
@@ -328,14 +344,14 @@ input {
 
 ```css
 textarea {
-  display : block;
+  display: block;
 
-  padding : 10px;
-  margin  : 10px 0 0 -10px;
-  width   : 340px;
-  height  : 360px;
+  padding: 10px;
+  margin: 10px 0 0 -10px;
+  width: 340px;
+  height: 360px;
 
-  resize  : none;
+  resize: none;
   overflow: auto;
 }
 ```
@@ -344,24 +360,24 @@ textarea {
 
 ```css
 button {
-  position     : absolute;
-  left         : 440px;
-  top          : 360px;
+  position: absolute;
+  left: 440px;
+  top: 360px;
 
-  padding      : 5px;
+  padding: 5px;
 
-  font         : bold .6em sans-serif;
-  border       : 2px solid #333;
+  font: bold 0.6em sans-serif;
+  border: 2px solid #333;
   border-radius: 5px;
-  background   : none;
+  background: none;
 
-  cursor       : pointer;
+  cursor: pointer;
 
--webkit-transform: rotate(-1.5deg);
-   -moz-transform: rotate(-1.5deg);
-    -ms-transform: rotate(-1.5deg);
-     -o-transform: rotate(-1.5deg);
-        transform: rotate(-1.5deg);
+  -webkit-transform: rotate(-1.5deg);
+  -moz-transform: rotate(-1.5deg);
+  -ms-transform: rotate(-1.5deg);
+  -o-transform: rotate(-1.5deg);
+  transform: rotate(-1.5deg);
 }
 
 button:after {
@@ -370,15 +386,15 @@ button:after {
 
 button:hover,
 button:focus {
-  outline   : none;
+  outline: none;
   background: #000;
-  color   : #FFF;
+  color: #fff;
 }
 ```
 
 瞧！
 
-> **备注：** 如果你的例子没有像你预期的那样工作，你想将它同我们的版本检查对比，你可以在 Github 上找到它 —— 查看 [在线演示](https://mdn.github.io/learning-area/html/forms/postcard-example/) (也可以查看[源代码](https://github.com/mdn/learning-area/tree/master/html/forms/postcard-example))。
+> **备注：** 如果你的例子没有像你预期的那样工作，你想将它同我们的版本检查对比，你可以在 Github 上找到它 —— 查看[在线演示](https://mdn.github.io/learning-area/html/forms/postcard-example/)（也可以查看[源代码](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)）。
 
 ## 总结
 
@@ -387,19 +403,6 @@ button:focus {
 [下一篇文章中](/zh-CN/docs/Learn/Forms/Advanced_form_styling)，我们将会看到如何处理落入“不好的”和“丑陋的”分类的表单组件。
 
 {{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
-
-## 本章目录
-
-- [创建我的第一个表单](/zh-CN/docs/Learn/Forms/Your_first_form)
-- [如何构造 web 表单](/zh-CN/docs/Learn/Forms/How_to_structure_a_web_form)
-- [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
-- [HTML5 input 类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
-- [样式化 web 表单](/zh-CN/docs/Learn/Forms/Styling_web_forms)
-- [高级表单样式](/zh-CN/docs/Learn/Forms/Advanced_form_styling)
-- [UI 伪类](/zh-CN/docs/Learn/Forms/UI_pseudo-classes)
-- [客户端表单验证](/zh-CN/docs/Learn/Forms/Form_validation)
-- [发送表单数据](/zh-CN/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 进阶内容
 

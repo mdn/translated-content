@@ -64,10 +64,10 @@ document.addEventListener('visibilitychange', function logData() {
 过去，许多网站使用 [`unload`](/zh-CN/docs/Web/API/Window/unload_event) 或 [`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event) 事件以在会话结束时发送统计数据。然而这是不可靠的，在许多情况下（尤其是移动设备）浏览器不会产生 `unload`、`beforeunload` 或 `pagehide` 事件。下面列出了一种不触发上述事件的情况：
 
 1. 用户加载了网页并与其交互。
-2. 完成浏览后，用户切换到了其它应用程序，而不是关闭选项卡。
+2. 完成浏览后，用户切换到了其他应用程序，而不是关闭选项卡。
 3. 随后，用户通过手机的应用管理器关闭了浏览器应用。
 
-此外，`unload` 事件与现代浏览器实现的往返缓存（[bfcache](https://web.dev/bfcache/)）不兼容。在部分浏览器（如：Firefox）通过在 bfcache 中排除包含 `unload` 事件处理器的页面来解决不兼容问题，但这存在性能损失。其它浏览器，例如 Safari 和 Android 上的 Chrome 浏览器则采取用户在同一标签页下导航至其它页面时不触发 `unload` 事件的方法来解决不兼容问题。
+此外，`unload` 事件与现代浏览器实现的往返缓存（[bfcache](https://web.dev/bfcache/)）不兼容。在部分浏览器（如：Firefox）通过在 bfcache 中排除包含 `unload` 事件处理器的页面来解决不兼容问题，但这存在性能损失。其他浏览器，例如 Safari 和 Android 上的 Chrome 浏览器则采取用户在同一标签页下导航至其他页面时不触发 `unload` 事件的方法来解决不兼容问题。
 
 Firefox 也会在 bfcache 中排除包含 `beforeunload` 事件处理器的页面。
 

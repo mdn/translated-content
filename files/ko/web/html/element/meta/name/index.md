@@ -1,14 +1,6 @@
 ---
 title: 표준 메타데이터 이름
 slug: Web/HTML/Element/meta/name
-tags:
-  - Attribute
-  - HTML
-  - HTML document metadata
-  - Reference
-  - metadata
-  - 메타데이터
-translation_of: Web/HTML/Element/meta/name
 ---
 
 {{HTMLSidebar}}
@@ -97,10 +89,6 @@ CSS Device Adaptation 명세는 다음과 같은 메타데이터 이름을 정�
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-##### 같이 보기
-
-CSS {{cssxref("@viewport")}} @-규칙
-
 ### 다른 메타데이터 이름
 
 [WHATWG Wiki MetaExtensions 페이지](https://wiki.whatwg.org/wiki/MetaExtensions)는 거대한 수의 비표준 메타데이터 목록을 포함합니다. 그러나 다음 메타데이터 이름을 포함한 일부 항목은 실제로도 꽤 자주 사용하고 있습니다.
@@ -136,4 +124,4 @@ CSS {{cssxref("@viewport")}} @-규칙
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.meta.name")}}
+{{Compat}}

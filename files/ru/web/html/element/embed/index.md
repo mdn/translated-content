@@ -1,5 +1,5 @@
 ---
-title: '<embed>: Вложение расширенных элементов'
+title: "<embed>: Вложение расширенных элементов"
 slug: Web/HTML/Element/embed
 tags:
   - HTML
@@ -23,13 +23,13 @@ translation_of: Web/HTML/Element/embed
 
 Имейте ввиду, что большинство современных браузеров посчитали устаревшей и удалили поддержку встраивания плагинов, так что использование `<embed>`, как правило, не рекомендуется, если вы хотите, чтобы ваш сайт одинаково работал у всех его пользователей.
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content. |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое                                          | Отсутствует, это {{Glossary("empty element")}}.                                                                                                                                     |
-| Пропуск тега                                                    | Должен иметь открывающий тег, закрывающий тег должен быть пропущен                                                                                                                             |
-| Разрешённые родительские элементы                               | Любой элемент, который допускает встроенный контент                                                                                                                                            |
-| Разрешённые роли ARIA                                           | {{ARIARole("application")}}, {{ARIARole("document")}}, {{ARIARole("img")}}, {{ARIARole("presentation")}}                                                         |
-| DOM-интерфейс                                                   | {{domxref("HTMLEmbedElement")}}                                                                                                                                                       |
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content.                                                                                                                                                                         |
+| ---------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                            | Отсутствует, это {{Glossary("empty element")}}.                                                                                                                                                                                                                                                                                                                        |
+| Пропуск тегов                                                    | Должен иметь открывающий тег, закрывающий тег должен быть пропущен                                                                                                                                                                                                                                                                                                     |
+| Допустимые родители                                              | Любой элемент, который допускает встроенный контент                                                                                                                                                                                                                                                                                                                    |
+| Допустимые ARIA-роли                                             | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/application_role">application</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/document_role">document</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/img_role">img</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> |
+| DOM-интерфейс                                                    | {{domxref("HTMLEmbedElement")}}                                                                                                                                                                                                                                                                                                                                        |
 
 ## Атрибуты
 
@@ -51,7 +51,7 @@ translation_of: Web/HTML/Element/embed
 ## Примеры
 
 ```html
-<embed type="video/quicktime" src="movie.mov" width="640" height="480">
+<embed type="video/quicktime" src="movie.mov" width="640" height="480" />
 ```
 
 ## Спецификации

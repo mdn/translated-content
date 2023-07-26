@@ -1,15 +1,6 @@
 ---
 title: theme.reset()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/reset
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Theme
-  - WebExtensions
-  - reset
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/reset
 ---
 
@@ -30,9 +21,9 @@ browser.theme.reset( windowsId // integer )
 - `windowId` {{optional_inline}}
   - : `integer`. L'ID d'une fenêtre. Si cela est indiqué, le thème appliqué sur cette fenêtre sera réinitialisé. Sinon le thème sera réinitialisé sur toutes les fenêtres.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.theme.reset")}}
+{{Compat}}
 
 ## Exemples
 

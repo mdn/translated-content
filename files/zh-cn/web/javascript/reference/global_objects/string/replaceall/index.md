@@ -68,7 +68,7 @@ The arguments to the function are as follows:
 
 (The exact number of arguments depends on whether the first argument is a {{jsxref("RegExp")}} object—and, if so, how many parenthesized submatches it specifies.)
 
-## 例子
+## 示例
 
 ### 使用 replaceAll
 

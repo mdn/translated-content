@@ -30,9 +30,9 @@ Para obtener más información sobre el uso de i18n en su extensión, consulte:
 
 <!---->
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("webextensions.api.i18n")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

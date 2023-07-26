@@ -1,6 +1,9 @@
 ---
-title: Element.getAttribute()
+title: "Element: getAttribute() メソッド"
+short-title: getAttribute()
 slug: Web/API/Element/getAttribute
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
@@ -11,29 +14,34 @@ slug: Web/API/Element/getAttribute
 
 ## 構文
 
-```js
-let attribute = element.getAttribute(attributeName);
+```js-nolint
+getAttribute(attributeName)
 ```
 
-ここで、
+### 引数
 
-- `attribute` は `attributeName` の値を持つ文字列です。
 - `attributeName` は値を取得したい属性の名前です。
+
+### 返値
+
+`attributeName` の値の入った文字列です。
 
 ## 例
 
-```js
+```html
 <!-- HTML 文書内の div の例 -->
 <div id="div1">Hi Champ!</div>
+```
 
+```js
 // コンソールへの出力
-const div1 = document.getElementById('div1');
+const div1 = document.getElementById("div1");
 //=> <div id="div1">Hi Champ!</div>
 
-const exampleAttr= div1.getAttribute('id');
+const exampleAttr = div1.getAttribute("id");
 //=> "div1"
 
-const align = div1.getAttribute('align')
+const align = div1.getAttribute("align");
 //=> null
 ```
 
@@ -45,21 +53,21 @@ HTML 文書とされている DOM の HTML 要素に対して呼び出すと、 
 
 ### 属性が存在しない場合
 
-基本的にはすべてのウェブブラウザー（限定的なリストですが Firefox, Internet Explorer, Opera の最新バージョン, Safari, Konqueror, iCab など）は、指定された要素に指定された属性が存在しない場合は `null` を返します。これは[現在の DOM 仕様書の草稿](https://dom.spec.whatwg.org/#dom-element-getattribute)で指定されています。一方、古い DOM 3 Core 仕様書では、このような場合の正しい返値は実際には空文字列となっています。そしていくつかの DOM の実装はこの動作を実装しています。実際、 `getAttribute()` の XUL (Gecko) での実装では、 DOM 3 Core 仕様書に従い空文字列を返します。結果的に、指定された要素に指定された属性が存在しない可能性があるのであれば、 {{domxref("element.hasAttribute()")}} を使用して属性の存在をチェックしてから `getAttribute()` を呼び出すべきでしょう。
+現代のウェブブラウザーはすべて、指定された要素に指定された属性が存在しない場合は `null` を返します。
 
 ### ノンス値の受け取り
 
 セキュリティ上の理由で、スクリプト以外、例えば CSS セレクターから来た [CSP](/ja/docs/Web/HTTP/CSP) のノンスと、 `.getAttribute("nonce")` の呼び出しは隠蔽されます。
 
 ```js example-bad
-let nonce =  script.getAttribute('nonce');
+let nonce = script.getAttribute("nonce");
 // 空文字列が返される
 ```
 
 コンテンツ属性のノンスをるには、代わりに {{domxref("HTMLElement/nonce", "nonce")}} プロパティを使用してください。
 
 ```js
-let nonce =  script.nonce;
+let nonce = script.nonce;
 ```
 
 ## 仕様書

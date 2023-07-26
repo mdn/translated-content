@@ -1,11 +1,6 @@
 ---
 title: quotes
 slug: Web/CSS/quotes
-tags:
-  - CSS
-  - Propriété
-  - Reference
-  - Web
 translation_of: Web/CSS/quotes
 ---
 

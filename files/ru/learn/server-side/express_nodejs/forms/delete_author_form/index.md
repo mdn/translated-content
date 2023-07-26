@@ -14,24 +14,32 @@ translation_of: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 
 ```js
 // Отображать форму для удаления автора GET
-exports.author_delete_get = function(req, res, next) {
-
-    async.parallel({
-        author: function(callback) {
-            Author.findById(req.params.id).exec(callback)
-        },
-        authors_books: function(callback) {
-          Book.find({ 'author': req.params.id }).exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); }
-        if (results.author==null) { // No results.
-            res.redirect('/catalog/authors');
-        }
-        // Удачно, значит рендерим.
-        res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
-    });
-
+exports.author_delete_get = function (req, res, next) {
+  async.parallel(
+    {
+      author: function (callback) {
+        Author.findById(req.params.id).exec(callback);
+      },
+      authors_books: function (callback) {
+        Book.find({ author: req.params.id }).exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      if (results.author == null) {
+        // No results.
+        res.redirect("/catalog/authors");
+      }
+      // Удачно, значит рендерим.
+      res.render("author_delete", {
+        title: "Delete Author",
+        author: results.author,
+        author_books: results.authors_books,
+      });
+    },
+  );
 };
 ```
 
@@ -53,32 +61,41 @@ exports.author_delete_get = function(req, res, next) {
 
 ```js
 // Обработчик удаления автора POST.
-exports.author_delete_post = function(req, res, next) {
-
-    async.parallel({
-        author: function(callback) {
-          Author.findById(req.body.authorid).exec(callback)
-        },
-        authors_books: function(callback) {
-          Book.find({ 'author': req.body.authorid }).exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); }
-        // Success
-        if (results.authors_books.length > 0) {
-            // Автор книги. Визуализация выполняется так же, как и для GET route.
-            res.render('author_delete', { title: 'Delete Author', author: results.author, author_books: results.authors_books } );
-            return;
-        }
-        else {
-            //У автора нет никаких книг. Удалить объект и перенаправить в список авторов.
-            Author.findByIdAndRemove(req.body.authorid, function deleteAuthor(err) {
-                if (err) { return next(err); }
-                // Успех-перейти к списку авторов
-                res.redirect('/catalog/authors')
-            })
-        }
-    });
+exports.author_delete_post = function (req, res, next) {
+  async.parallel(
+    {
+      author: function (callback) {
+        Author.findById(req.body.authorid).exec(callback);
+      },
+      authors_books: function (callback) {
+        Book.find({ author: req.body.authorid }).exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      // Success
+      if (results.authors_books.length > 0) {
+        // Автор книги. Визуализация выполняется так же, как и для GET route.
+        res.render("author_delete", {
+          title: "Delete Author",
+          author: results.author,
+          author_books: results.authors_books,
+        });
+        return;
+      } else {
+        //У автора нет никаких книг. Удалить объект и перенаправить в список авторов.
+        Author.findByIdAndRemove(req.body.authorid, function deleteAuthor(err) {
+          if (err) {
+            return next(err);
+          }
+          // Успех-перейти к списку авторов
+          res.redirect("/catalog/authors");
+        });
+      }
+    },
+  );
 };
 ```
 
@@ -90,7 +107,7 @@ exports.author_delete_post = function(req, res, next) {
 
 Создайте **/views/author_delete.pug** и скопируйте текст ниже.
 
-```html
+```pug
 extends layout
 
 block content
@@ -134,7 +151,7 @@ block content
 
 Откройте **author_detail.pug** и добавьте следующие строки внизу.
 
-```html
+```pug
 hr
 p
   a(href=author.url+'/delete') Delete author
@@ -142,7 +159,7 @@ p
 
 Теперь элемент управления должен отображаться в виде ссылки, как показано ниже на странице сведений об авторе.
 
-![](https://mdn.mozillademos.org/files/14492/LocalLibary_Express_Author_Detail_Delete.png)
+![](locallibary_express_author_detail_delete.png)
 
 ## Как это выглядит?
 
@@ -150,11 +167,11 @@ p
 
 Если у автора нет книг, вам будет представлена такая страница. После нажатия клавиши delete сервер удалит автора и перенаправит в список авторов
 
-![](https://mdn.mozillademos.org/files/14494/LocalLibary_Express_Author_Delete_NoBooks.png)
+![](locallibary_express_author_delete_nobooks.png)
 
 Если у автора есть книги, то вам будет представлен следующий вид. Затем вы можете удалить книги из их подробных страниц (как только этот код будет реализован!).
 
-![](https://mdn.mozillademos.org/files/14496/LocalLibary_Express_Author_Delete_WithBooks.png)
+![](locallibary_express_author_delete_withbooks.png)
 
 > **Примечание:** Другие страницы для удаления объектов могут быть реализованы примерно таким же образом. Мы оставили это как задачи.
 

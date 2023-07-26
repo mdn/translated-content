@@ -2,7 +2,6 @@
 title: FinalizationRegistry
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
-browser-compat: javascript.builtins.FinalizationRegistry
 ---
 
 {{JSRef}}

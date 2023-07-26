@@ -84,9 +84,9 @@ background-color: unset;
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample("Examples","200","150")}}
+{{EmbedLiveSample("示例","200","150")}}
 
 ## 规范
 
@@ -96,6 +96,6 @@ background-color: unset;
 
 {{Compat}}
 
-## 查看更多
+## 参见
 
 - [Multiple backgrounds](/zh-CN/CSS/Multiple_backgrounds)

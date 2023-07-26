@@ -1,63 +1,48 @@
 ---
 title: 'Window: appinstalled イベント'
 slug: Web/API/Window/appinstalled_event
+l10n:
+  sourceCommit: 266a565a634d1218995379e54e74bf9cc9504d83
 ---
 
 {{APIRef}}
 
-**`appinstalled`** は [Web Manifest API](/ja/docs/Web/Manifest) のイベントで、ブラウザーがあるページをアプリケーションとして成功裏にインストールしたとき発行されます。
+**`appinstalled`** は[ウェブマニフェスト API](/ja/docs/Web/Manifest) のイベントで、ブラウザーがあるページをアプリケーションとして成功裏にインストールしたとき発行されます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラー</th>
-      <td>
-        {{domxref("Window/onappinstalled", "onappinstalled")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('appinstalled', (event) => { });
+
+onappinstalled = (event) => { };
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
 `appinstalled` イベントは {{domxref("EventTarget/addEventListener", "addEventListener")}} メソッドで使用することができます。
 
 ```js
-window.addEventListener('appinstalled', function() {
+window.addEventListener('appinstalled', () => {
   console.log('アプリをインストールしてくれてありがとう！');
 });
 ```
 
-または {{domxref("Window/onappinstalled", "onappinstalled")}} イベントハンドラープロパティを使用してください。
+または `onappinstalled` イベントハンドラープロパティを使用してください。
 
 ```js
-window.onappinstalled = function() {
+window.onappinstalled = () => {
   console.log('アプリをインストールしてくれてありがとう！');
 };
 ```
 
-## 仕様書
-
-| 仕様書                                                                           | 状態                         |
-| -------------------------------------------------------------------------------- | ---------------------------- |
-| {{SpecName('Manifest', '#dfn-appinstalled', 'appinstalled')}} | {{Spec2('Manifest')}} |
-
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
-
-## 関連情報
-
-- 関連するイベントハンドラー、 {{domxref("Window.onappinstalled")}}

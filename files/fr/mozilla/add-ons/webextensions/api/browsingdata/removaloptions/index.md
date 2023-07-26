@@ -1,15 +1,6 @@
 ---
 title: browsingData.RemovalOptions
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - RemovalOptions
-  - Type
-  - WebExtensions
-  - browsingData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
 ---
 
@@ -43,9 +34,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `since` {{optional_inline}}
   - : `number`. Jusqu'à quand remontent les données, données en [millisecondes depuis l'époque UNIX](https://en.wikipedia.org/wiki/Unix_time). Notez que lorsque vous supprimez le cache du navigateur, le cache entier est toujours supprimé et cette option est ignorée. Si la propriété `since` est omise, la valeur par défaut est 0, ce qui signifie "pour toujours".
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.RemovalOptions", 2)}}
+{{Compat}}
 
 > **Note :**
 >

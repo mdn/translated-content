@@ -45,7 +45,7 @@ function f(x, o) {
 }
 ```
 
-Apenas quando `f` é chamado é `x` ou encontrado ou não, e se for encontrado, ou em `o` ou (se nenhuma propriedade existir) no objeto de ativação de `f`, onde o nome de `x` é o primeiro argumento formal. Se você esquecer de definir `x` no objeto que você passou como segundo argumento, ou se há algum bug similar ou confusão, você não vai receber um erro -- apenas resultados inesperados.
+Apenas quando `f` é chamado é `x` ou encontrado ou não, e se for encontrado, ou em `o` ou (se nenhuma propriedade existir) no objeto de ativação de `f`, onde o nome de `x` é o primeiro argumento formal. Se você esquecer de definir `x` no objeto que você passou como segundo argumento, ou se há algum bug similar ou confusão, você não vai receber um erro — apenas resultados inesperados.
 
 **Contra:** Código utilizando `with` talvez não seja compatível posteriormente, especialmente quando usado com algo que não seja um objeto simples. Considere esse exemplo:
 

@@ -13,17 +13,13 @@ original_slug: Глоссарий/Пробельные_символы
 
 1. Спецификация
 
-    1. [Пробельные символы ASCII](https://infra.spec.whatwg.org/#ascii-whitespace)
+   1. [Пробельные символы ASCII](https://infra.spec.whatwg.org/#ascii-whitespace)
 
 2. Ссылки
 
-    1. [Пробельные символы в модели DOM](/ru/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)
-    2. {{cssxref("white-space")}}
+   1. [Пробельные символы в модели DOM](/ru/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)
+   2. {{cssxref("white-space")}}
 
-3. Статья Википедии
+3. [Глоссарий](/ru/docs/Glossary)
 
-    1. {{interwiki("wikipedia", "Whitespace character")}}
-
-4. [Глоссарий](/ru/docs/Glossary)
-
-    1. {{Glossary("Character", "Символы")}}
+   1. {{Glossary("Character", "Символы")}}

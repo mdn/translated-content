@@ -1,14 +1,6 @@
 ---
 title: visibility
 slug: Web/CSS/visibility
-tags:
-  - CSS
-  - CSS Box Model
-  - CSS Property
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/visibility
 ---
 
 {{CSSRef}}

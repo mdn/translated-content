@@ -1,11 +1,11 @@
 ---
 title: Cacheable
-slug: Glossary/cacheable
+slug: Glossary/Cacheable
 ---
 
 **캐시 가능(cacheable)** 한 응답은 캐시할 수 있는 HTTP 응답으로, 나중에 검색하고 사용하기 위해 저장하여 새 요청을 서버에 저장합니다. 모든 HTTP 응답을 캐시할 수 있는 것은 아니며, 캐시할 HTTP 응답에 대한 제약 조건은 다음과 같습니다.
 
-- {{HTTPMethod("GET")}} 또는 {{HTTPMethod("HEAD")}} 메서드는 요청에 사용된 메서드는 그 자체로 캐시 가능합니다. {{HTTPMethod("POST")}} 또는 {{HTTPMethod("PATCH")}} 요청에 대한 응답은 신선도가 표시되고 {{HTTPHeader("Content-Location")}} 헤더가 설정된 경우 캐시될 수도 있지만 거의 구현되지 않았습니다. (예를 들어, Firefox는 https://bugzilla.mozilla.org/show_bug.cgi?id=109553 에 따라 이를 지원하지 않습니다.) {{HTTPMethod("PUT")}} 혹은 {{HTTPMethod("DELETE")}} 다른 메서드는 캐시 가능하지 않고 그 결과 역시 캐시할 수 없습니다.
+- {{HTTPMethod("GET")}} 또는 {{HTTPMethod("HEAD")}} 메서드는 요청에 사용된 메서드는 그 자체로 캐시 가능합니다. {{HTTPMethod("POST")}} 또는 {{HTTPMethod("PATCH")}} 요청에 대한 응답은 신선도가 표시되고 {{HTTPHeader("Content-Location")}} 헤더가 설정된 경우 캐시될 수도 있지만 거의 구현되지 않았습니다. (예를 들어, Firefox는 <https://bugzilla.mozilla.org/show_bug.cgi?id=109553> 에 따라 이를 지원하지 않습니다.) {{HTTPMethod("PUT")}} 혹은 {{HTTPMethod("DELETE")}} 다른 메서드는 캐시 가능하지 않고 그 결과 역시 캐시할 수 없습니다.
 - 애플리케이션 캐싱에 의해 알려진 응답의 상태 코드는 캐시 가능한 것으로 간주됩니다. {{HTTPStatus("200")}}, {{HTTPStatus("203")}}, {{HTTPStatus("204")}}, {{HTTPStatus("206")}}, {{HTTPStatus("300")}}, {{HTTPStatus("301")}}, {{HTTPStatus("404")}}, {{HTTPStatus("405")}}, {{HTTPStatus("410")}}, {{HTTPStatus("414")}}, {{HTTPStatus("501")}} 상태 코드는 캐시 가능합니다.
 - 응답에는 {{HTTPHeader("Cache-Control")}}과 같은 캐싱을 방지하는 특정 헤더가 있습니다.
 
@@ -20,7 +20,7 @@ GET /pageX.html HTTP/1.1
 (…)
 ```
 
-{{HTTPMethod("PUT")}} 요청을 캐시할 수 없습니다. 같은 URI에 대한 {{HTTPMethod("HEAD")}} 혹은 {{HTTPMethod("GET")}}를 통한 요청은 캐시된 데이터를 무효화합니다. 
+{{HTTPMethod("PUT")}} 요청을 캐시할 수 없습니다. 같은 URI에 대한 {{HTTPMethod("HEAD")}} 혹은 {{HTTPMethod("GET")}}를 통한 요청은 캐시된 데이터를 무효화합니다.
 
 ```http
 PUT /pageX.html HTTP/1.1

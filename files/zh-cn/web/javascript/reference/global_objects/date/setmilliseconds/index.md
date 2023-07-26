@@ -24,9 +24,9 @@ dateObj.setMilliseconds(millisecondsValue)
 
 如果指定的数字超出了合理范围，则日期对象的时间信息会被相应地更新。例如，如果指定了 1005，则秒数加 1，豪秒数为 5。
 
-## 例子
+## 示例
 
-### 例子：使用`setMilliseconds`
+### 示例：使用`setMilliseconds`
 
 ```js
 var theBigDay = new Date();

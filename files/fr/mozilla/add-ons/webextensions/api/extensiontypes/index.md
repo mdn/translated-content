@@ -1,15 +1,6 @@
 ---
 title: extensionTypes
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - extensionType
 translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes
 ---
 
@@ -30,9 +21,9 @@ Certains types communs utilisés dans d'autres APIs WebExtensions.
 - `extensionTypes.CSSOrigin`
   - : Indique si une feuille de style CSS injectée par [`tabs.insertCSS`](/fr/Add-ons/WebExtensions/API/tabs/insertCSS) doit être traitée comme une feuille de style "auteur" ou "utilisateur".
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extensionTypes")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

@@ -1,10 +1,6 @@
 ---
 title: web_accessible_resources
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 ---
 
@@ -103,6 +99,6 @@ Notez que si vous créez une page accessible sur le Web, n'importe quel site Web
 
 Crée un fichier dans "images/my-image.png" accessible sur le web.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.web_accessible_resources")}}
+{{Compat}}

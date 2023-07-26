@@ -9,7 +9,7 @@ slug: Web/CSS/text-underline-offset
 
 {{EmbedInteractiveExample("pages/css/text-underline-offset.html")}}
 
-`text-underline-offset` 不是 {{cssxref('text-decoration')}} 简写的一部分。虽然元素可以有多条 `text-decoration` 线，但 `text-underline-offset` 只影响下划线，而**不**影响其它可能的线装饰选项，例如 `overline` 或 `line-through`。
+`text-underline-offset` 不是 {{cssxref('text-decoration')}} 简写的一部分。虽然元素可以有多条 `text-decoration` 线，但 `text-underline-offset` 只影响下划线，而**不**影响其他可能的线装饰选项，例如 `overline` 或 `line-through`。
 
 ## 语法
 

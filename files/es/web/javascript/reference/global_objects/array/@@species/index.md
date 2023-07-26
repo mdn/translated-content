@@ -45,7 +45,7 @@ class MyArray extends Array {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.@@species")}}
+{{Compat}}
 
 ## Ver también
 

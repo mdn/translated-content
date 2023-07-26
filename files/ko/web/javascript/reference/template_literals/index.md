@@ -1,9 +1,6 @@
 ---
 title: Template literals
 slug: Web/JavaScript/Reference/Template_literals
-tags:
-  - Template
-translation_of: Web/JavaScript/Reference/Template_literals
 ---
 {{JsSidebar("More")}}
 
@@ -226,11 +223,11 @@ escape sequence 제한은 _tagged_ templates에만 적용되며 _untagged_ templ
 
 > **Warning:** let bad = `bad escape sequence: \unicode`;
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

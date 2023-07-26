@@ -17,9 +17,9 @@ var crypto = crypto.subtle;
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("api.Crypto.subtle")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,13 +1,9 @@
 ---
 title: WebGL tutorial
 slug: Web/API/WebGL_API/Tutorial
-tags:
-  - Tutorial
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 [WebGL](http://www.khronos.org/webgl/) 은 WebGL을 지원하는 브라우져에서 plugin을 사용하지 않고도, 웹 콘텐츠가 [OpenGL ES](http://www.khronos.org/opengles/) 2.0 기반의 API를 이용하여 HTML {{HTMLElement("canvas")}}에서 3D 랜더링을 할 수 있도록 해 줍니다. WebGL 프로그램은 JavaScripts로 작성 된 제어 코드와 컴퓨터의 Graphics Processing Unit (GPU)에서 실행되는 특수한 효과를 내는 코드(Shader code)로 구성 됩니다. WebGL 요소들은 다른 HTML요소들과 섞어서 함께 사용 할 수 있으며 페이지의 다른 부분이나 페이지 배경과 함께 사용 할 수 있습니다.
 

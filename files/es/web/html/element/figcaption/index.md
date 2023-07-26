@@ -15,7 +15,7 @@ El elemento **HTML `<figcaption>`** representa un subtítulo o leyenda asociado 
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/HTML/Content_categories"
+          href="/es/docs/HTML/Content_categories"
           title="HTML/Content_categories"
           >Content categories</a
         >
@@ -26,7 +26,7 @@ El elemento **HTML `<figcaption>`** representa un subtítulo o leyenda asociado 
       <th scope="row">Contenido Permitido</th>
       <td>
         <a
-          href="/en-US/docs/HTML/Content_categories#Flow_content"
+          href="/es/docs/HTML/Content_categories#Flow_content"
           title="HTML/Content categories#Flow content"
           >Flow content</a
         >.
@@ -68,11 +68,9 @@ Para ejemplos con `<figcaption>`, por favor ver la página {{HTMLElement("figure
 
 {{Specifications}}
 
-## Compatibilidad con los distintos navegadores
+## Compatibilidad con navegadores
 
-The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <https://github.com/mdn/browser-compat-data> and send us a pull request.
-
-{{Compat("html.elements.figcaption")}}
+{{Compat}}
 
 ## Ver además
 

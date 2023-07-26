@@ -1,15 +1,6 @@
 ---
 title: identity.launchWebAuthFlow
 slug: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Identity
-  - Method
-  - Reference
-  - WebExtensions
-  - launchWebAuthFlow
 translation_of: Mozilla/Add-ons/WebExtensions/API/identity/launchWebAuthFlow
 ---
 
@@ -41,8 +32,8 @@ S'il y a une erreur, la promesse est rejetée avec un message d'erreur. Les cond
 
 ```js
 var authorizing = browser.identity.launchWebAuthFlow(
-  details   // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -71,9 +62,9 @@ var authorizing = browser.identity.launchWebAuthFlow(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si l'extension est autorisée avec succès, elle sera remplie avec une chaîne contenant l'URL de redirection. L'URL inclura un paramètre qui est un jeton d'accès ou qui peut être échangé contre un jeton d'accès, en utilisant le flux documenté pour le fournisseur de services particulier.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.identity.launchWebAuthFlow")}}
+{{Compat}}
 
 ## Exemples
 
@@ -86,17 +77,18 @@ function validate(redirectURL) {
 
 function authorize() {
   const redirectURL = browser.identity.getRedirectURL();
-  const clientID = "664583959686-fhvksj46jkd9j5v96vsmvs406jgndmic.apps.googleusercontent.com";
+  const clientID =
+    "664583959686-fhvksj46jkd9j5v96vsmvs406jgndmic.apps.googleusercontent.com";
   const scopes = ["openid", "email", "profile"];
   let authURL = "https://accounts.google.com/o/oauth2/auth";
   authURL += `?client_id=${clientID}`;
   authURL += `&response_type=token`;
   authURL += `&redirect_uri=${encodeURIComponent(redirectURL)}`;
-  authURL += `&scope=${encodeURIComponent(scopes.join(' '))}`;
+  authURL += `&scope=${encodeURIComponent(scopes.join(" "))}`;
 
   return browser.identity.launchWebAuthFlow({
     interactive: true,
-    url: authURL
+    url: authURL,
   });
 }
 

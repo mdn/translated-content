@@ -1,10 +1,6 @@
 ---
 title: src
 slug: Web/CSS/@font-face/src
-tags:
-  - CSS
-  - Descripteur
-  - Reference
 translation_of: Web/CSS/@font-face/src
 ---
 

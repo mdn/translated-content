@@ -3,6 +3,7 @@ title: Список авторов. Тест - список жанров
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
+
 Страница списка авторов должна показывать список всех авторов, хранимых в БД, причём каждое имя автора должно быть связано со страницей подробностей для этого автора. Дата рождения автора и дата смерти должны выводиться в одной строке после имени автора.
 
 ## Контроллер
@@ -13,16 +14,19 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_pag
 
 ```js
 // Display list of all Authors.
-exports.author_list = function(req, res, next) {
-
+exports.author_list = function (req, res, next) {
   Author.find()
-    .sort([['family_name', 'ascending']])
+    .sort([["family_name", "ascending"]])
     .exec(function (err, list_authors) {
-      if (err) { return next(err); }
+      if (err) {
+        return next(err);
+      }
       //Successful, so render
-      res.render('author_list', { title: 'Author List', author_list: list_authors });
+      res.render("author_list", {
+        title: "Author List",
+        author_list: list_authors,
+      });
     });
-
 };
 ```
 
@@ -54,7 +58,7 @@ block content
 
 Запустите приложение и откройте браузер с адресом <http://localhost:3000/>. Выберите ссылку _All authors_. Если все было сделано правильно, страница должна выглядеть примерно так, как на следующем скриншоте.
 
-![Author List Page - Express Local Library site](https://mdn.mozillademos.org/files/14468/LocalLibary_Express_Author_List.png)
+![Author List Page - Express Local Library site](locallibary_express_author_list.png)
 
 > **Примечание:** Представление дат продолжительности жизни автора выглядит безобразно! Это можно исправить, если использовать [тот же подход](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data#date_formatting) , который применялся для списка `BookInstance` (добавить в модель `Author` виртуальное свойство продолжительности жизни). Но в этот раз, однако, некоторые даты могут отсутствовать, и ссылки на несуществующие свойства игнорируются, если не задан строгий режим. Метод `moment()` возвращает текущее время, и нежелательно, чтобы отсутствующие даты форматировались как "сегодня". Один из способов состоит в том, чтобы форматирующая функция возвращала пустую строку, если дата не существует. Например:
 >
@@ -64,14 +68,14 @@ block content
 
 В этой части требуется создать собственную страницу списка жанров. Страница должна показывать жанры, имеющиеся в БД, а для каждого жанра должна быть создана ссылка на страницу с детальной информацией. Скриншот ожидаемого результата приводится ниже.
 
-![Genre List - Express Local Library site](https://mdn.mozillademos.org/files/14460/LocalLibary_Express_Genre_List.png)
+![Genre List - Express Local Library site](locallibary_express_genre_list.png)
 
 Функция контроллера списка жанров должна получить список всех экземпляров `Genre`, и передать его в шаблон для отображения.
 
 1. Следует отредактировать `genre_list()` в файле **/controllers/genreController.js**.
 2. Реализация почти такая же, как и для контроллера `author_list()` .
 
-    - Sort the results by name, in ascending order.
+   - Sort the results by name, in ascending order.
 
 3. Отображающий шаблон должен быть назван **genre_list.pug**.
 4. Шаблону для отображения должны быть переданы переменные `title` (строка 'Genre List') и `genre_list` (the list of список жанров, который вернёт колбэк-функция `Genre.find()`.

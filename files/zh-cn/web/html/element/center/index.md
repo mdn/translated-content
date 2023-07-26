@@ -5,11 +5,9 @@ slug: Web/HTML/Element/center
 
 {{deprecated_header()}}
 
-## Summary
+HTML Center 元素（`<center>`）是个[块级元素](/zh-CN/docs/HTML/Block-level_elements)，可以包含段落，以及其他块级和内联元素。这个元素的整个内容在它的上级元素中水平居中（通常是 {{HTMLElement("body")}}）。
 
-HTML Center 元素 (`<center>`) 是个 [块级元素](/zh-CN/docs/HTML/Block-level_elements)，可以包含段落，以及其它块级和内联元素。这个元素的整个内容在它的上级元素中水平居中 (通常是 {{HTMLElement("body")}})。
-
-这个标签已经在 HTML 4（以及 XHTML 1）中废除了，以支持 [CSS](/zh-CN/docs/Web/CSS) {{Cssxref("text-align")}} 属性，它可以用于 {{HTMLElement("div")}} 元素，或者独立的 {{HTMLElement("p")}}。对于居中的块，使用其它 CSS 属性，例如 {{Cssxref("margin-left")}} 和 {{Cssxref("margin-right")}}，并将其设置为 `auto` (或者将 {{Cssxref("margin")}} 设为 `0 auto`).
+这个标签已经在 HTML 4（以及 XHTML 1）中废除了，以支持 [CSS](/zh-CN/docs/Web/CSS) {{Cssxref("text-align")}} 属性，它可以用于 {{HTMLElement("div")}} 元素，或者独立的 {{HTMLElement("p")}}。对于居中的块，使用其他 CSS 属性，例如 {{Cssxref("margin-left")}} 和 {{Cssxref("margin-right")}}，并将其设置为 `auto` (或者将 {{Cssxref("margin")}} 设为 `0 auto`).
 
 ## DOM 接口
 

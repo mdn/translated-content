@@ -1,13 +1,6 @@
 ---
 title: 명시도
 slug: Web/CSS/Specificity
-tags:
-  - CSS
-  - Example
-  - Guide
-  - Reference
-  - Web
-translation_of: Web/CSS/Specificity
 ---
 {{cssref}}
 

@@ -1,20 +1,6 @@
 ---
 title: console.trace()
 slug: Web/API/console/trace
-tags:
-  - API
-  - Chrome
-  - DOM
-  - Debugging
-  - Firefox
-  - Method
-  - String
-  - Web Development
-  - console.trace()
-  - trace
-  - web console
-browser-compat: api.console.trace
-translation_of: Web/API/Console/trace
 ---
 {{APIRef("Console API")}}
 

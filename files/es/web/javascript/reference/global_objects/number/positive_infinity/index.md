@@ -50,7 +50,7 @@ if (bigNumber === Number.POSITIVE_INFINITY) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.POSITIVE_INFINITY")}}
+{{Compat}}
 
 ## Ver también
 

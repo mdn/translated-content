@@ -7,15 +7,16 @@ slug: Web/JavaScript/Closures
 
 **闭包**（closure）是一个函数以及其捆绑的周边环境状态（**lexical environment**，**词法环境**）的引用的组合。换而言之，闭包让开发者可以从内部函数访问外部函数的作用域。在 JavaScript 中，闭包会随着函数的创建而被同时创建。
 
-## **词法作用域**
+## 词法作用域
 
 请看下面的代码：
 
 ```js
 function init() {
   var name = "Mozilla"; // name 是一个被 init 创建的局部变量
-  function displayName() { // displayName() 是内部函数，一个闭包
-      alert(name); // 使用了父函数中声明的变量
+  function displayName() {
+    // displayName() 是内部函数，一个闭包
+    alert(name); // 使用了父函数中声明的变量
   }
   displayName();
 }
@@ -26,17 +27,17 @@ init();
 
 使用[这个 JSFiddle 链接](http://jsfiddle.net/xAFs9/3/)运行该代码后发现， `displayName()` 函数内的 `alert()` 语句成功显示出了变量 `name` 的值（该变量在其父函数中声明）。这个*词法作用域*的例子描述了分析器如何在函数嵌套的情况下解析变量名。词法（lexical）一词指的是，词法作用域根据源代码中声明变量的位置来确定该变量在何处可用。嵌套函数可访问声明于它们外部作用域的变量。
 
-## **闭包**
+## 闭包
 
 现在来考虑以下例子：
 
 ```js
 function makeFunc() {
-    var name = "Mozilla";
-    function displayName() {
-        alert(name);
-    }
-    return displayName;
+  var name = "Mozilla";
+  function displayName() {
+    alert(name);
+  }
+  return displayName;
 }
 
 var myFunc = makeFunc();
@@ -53,7 +54,7 @@ myFunc();
 
 ```js
 function makeAdder(x) {
-  return function(y) {
+  return function (y) {
     return x + y;
   };
 }
@@ -61,7 +62,7 @@ function makeAdder(x) {
 var add5 = makeAdder(5);
 var add10 = makeAdder(10);
 
-console.log(add5(2));  // 7
+console.log(add5(2)); // 7
 console.log(add10(2)); // 12
 ```
 
@@ -79,7 +80,7 @@ console.log(add10(2)); // 12
 
 在 Web 中，你想要这样做的情况特别常见。大部分我们所写的 JavaScript 代码都是基于事件的 — 定义某种行为，然后将其添加到用户触发的事件之上（比如点击或者按键）。我们的代码通常作为回调：为响应事件而执行的函数。
 
-假如，我们想在页面上添加一些可以调整字号的按钮。一种方法是以像素为单位指定 `body` 元素的 `font-size`，然后通过相对的 `em` 单位设置页面中其它元素（例如`header`）的字号：
+假如，我们想在页面上添加一些可以调整字号的按钮。一种方法是以像素为单位指定 `body` 元素的 `font-size`，然后通过相对的 `em` 单位设置页面中其他元素（例如`header`）的字号：
 
 ```css
 body {
@@ -96,14 +97,14 @@ h2 {
 }
 ```
 
-我们的文本尺寸调整按钮可以修改 `body` 元素的 `font-size` 属性，由于我们使用相对单位，页面中的其它元素也会相应地调整。
+我们的文本尺寸调整按钮可以修改 `body` 元素的 `font-size` 属性，由于我们使用相对单位，页面中的其他元素也会相应地调整。
 
 以下是 JavaScript：
 
 ```js
 function makeSizer(size) {
-  return function() {
-    document.body.style.fontSize = size + 'px';
+  return function () {
+    document.body.style.fontSize = size + "px";
   };
 }
 
@@ -115,9 +116,9 @@ var size16 = makeSizer(16);
 `size12`，`size14` 和 `size16` 三个函数将分别把 `body` 文本调整为 12，14，16 像素。我们可以将它们分别添加到按钮的点击事件上。如下所示：
 
 ```js
-document.getElementById('size-12').onclick = size12;
-document.getElementById('size-14').onclick = size14;
-document.getElementById('size-16').onclick = size16;
+document.getElementById("size-12").onclick = size12;
+document.getElementById("size-14").onclick = size14;
+document.getElementById("size-16").onclick = size16;
 ```
 
 ```html
@@ -130,29 +131,29 @@ document.getElementById('size-16').onclick = size16;
 
 ## 用闭包模拟私有方法
 
-编程语言中，比如 Java，是支持将方法声明为私有的，即它们只能被同一个类中的其它方法所调用。
+编程语言中，比如 Java，是支持将方法声明为私有的，即它们只能被同一个类中的其他方法所调用。
 
 而 JavaScript 没有这种原生支持，但我们可以使用闭包来模拟私有方法。私有方法不仅仅有利于限制对代码的访问：还提供了管理全局命名空间的强大能力，避免非核心的方法弄乱了代码的公共接口部分。
 
 下面的示例展现了如何使用闭包来定义公共函数，并令其可以访问私有函数和变量。这个方式也称为[模块模式（module pattern）](http://www.google.com/search?q=javascript+module+pattern)：
 
 ```js
-var Counter = (function() {
+var Counter = (function () {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
   return {
-    increment: function() {
+    increment: function () {
       changeBy(1);
     },
-    decrement: function() {
+    decrement: function () {
       changeBy(-1);
     },
-    value: function() {
+    value: function () {
       return privateCounter;
-    }
-  }
+    },
+  };
 })();
 
 console.log(Counter.value()); /* logs 0 */
@@ -172,22 +173,22 @@ console.log(Counter.value()); /* logs 1 */
 > **备注：** 你应该注意到我们定义了一个匿名函数，用于创建一个计数器。我们立即执行了这个匿名函数，并将他的值赋给了变量`Counter`。我们可以把这个函数储存在另外一个变量`makeCounter`中，并用他来创建多个计数器。
 
 ```js
-var makeCounter = function() {
+var makeCounter = function () {
   var privateCounter = 0;
   function changeBy(val) {
     privateCounter += val;
   }
   return {
-    increment: function() {
+    increment: function () {
       changeBy(1);
     },
-    decrement: function() {
+    decrement: function () {
       changeBy(-1);
     },
-    value: function() {
+    value: function () {
       return privateCounter;
-    }
-  }
+    },
+  };
 };
 
 var Counter1 = makeCounter();
@@ -213,28 +214,28 @@ console.log(Counter2.value()); /* logs 0 */
 
 ```html
 <p id="help">Helpful notes will appear here</p>
-<p>E-mail: <input type="text" id="email" name="email"></p>
-<p>Name: <input type="text" id="name" name="name"></p>
-<p>Age: <input type="text" id="age" name="age"></p>
+<p>E-mail: <input type="text" id="email" name="email" /></p>
+<p>Name: <input type="text" id="name" name="name" /></p>
+<p>Age: <input type="text" id="age" name="age" /></p>
 ```
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById("help").innerHTML = help;
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
     var item = helpText[i];
-    document.getElementById(item.id).onfocus = function() {
+    document.getElementById(item.id).onfocus = function () {
       showHelp(item.help);
-    }
+    };
   }
 }
 
@@ -253,21 +254,21 @@ setupHelp();
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById("help").innerHTML = help;
 }
 
 function makeHelpCallback(help) {
-  return function() {
+  return function () {
     showHelp(help);
   };
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
     var item = helpText[i];
@@ -286,22 +287,22 @@ setupHelp();
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').innerHTML = help;
+  document.getElementById("help").innerHTML = help;
 }
 
 function setupHelp() {
   var helpText = [
-      {'id': 'email', 'help': 'Your e-mail address'},
-      {'id': 'name', 'help': 'Your full name'},
-      {'id': 'age', 'help': 'Your age (you must be over 16)'}
-    ];
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
+  ];
 
   for (var i = 0; i < helpText.length; i++) {
-    (function() {
-       var item = helpText[i];
-       document.getElementById(item.id).onfocus = function() {
-         showHelp(item.help);
-       }
+    (function () {
+      var item = helpText[i];
+      document.getElementById(item.id).onfocus = function () {
+        showHelp(item.help);
+      };
     })(); // 马上把当前循环项的 item 与事件回调相关联起来
   }
 }
@@ -313,14 +314,14 @@ setupHelp();
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   const helpText = [
-    { id: 'email', help: 'Your e-mail address' },
-    { id: 'name', help: 'Your full name' },
-    { id: 'age', help: 'Your age (you must be over 16)' },
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
   ];
 
   for (let i = 0; i < helpText.length; i++) {
@@ -340,14 +341,14 @@ setupHelp();
 
 ```js
 function showHelp(help) {
-  document.getElementById('help').textContent = help;
+  document.getElementById("help").textContent = help;
 }
 
 function setupHelp() {
   var helpText = [
-    { id: 'email', help: 'Your e-mail address' },
-    { id: 'name', help: 'Your full name' },
-    { id: 'age', help: 'Your age (you must be over 16)' },
+    { id: "email", help: "Your e-mail address" },
+    { id: "name", help: "Your full name" },
+    { id: "age", help: "Your age (you must be over 16)" },
   ];
 
   helpText.forEach(function (text) {
@@ -362,7 +363,7 @@ setupHelp();
 
 ## 性能考量
 
-如果不是某些特定任务需要使用闭包，在其它函数中创建函数是不明智的，因为闭包在处理速度和内存消耗方面对脚本性能具有负面影响。
+如果不是某些特定任务需要使用闭包，在其他函数中创建函数是不明智的，因为闭包在处理速度和内存消耗方面对脚本性能具有负面影响。
 
 例如，在创建新的对象或者类时，方法通常应该关联于对象的原型，而不是定义到对象的构造器中。原因是这将导致每次构造器被调用时，方法都会被重新赋值一次（也就是说，对于每个对象的创建，方法都会被重新赋值）。
 
@@ -372,11 +373,11 @@ setupHelp();
 function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
-  this.getName = function() {
+  this.getName = function () {
     return this.name;
   };
 
-  this.getMessage = function() {
+  this.getMessage = function () {
     return this.message;
   };
 }
@@ -395,7 +396,7 @@ MyObject.prototype = {
   },
   getMessage() {
     return this.message;
-  }
+  },
 };
 ```
 
@@ -406,10 +407,10 @@ function MyObject(name, message) {
   this.name = name.toString();
   this.message = message.toString();
 }
-MyObject.prototype.getName = function() {
+MyObject.prototype.getName = function () {
   return this.name;
 };
-MyObject.prototype.getMessage = function() {
+MyObject.prototype.getMessage = function () {
   return this.message;
 };
 ```

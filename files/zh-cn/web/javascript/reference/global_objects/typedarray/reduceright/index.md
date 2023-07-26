@@ -5,20 +5,19 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight
 
 {{JSRef}}
 
-**`reduceRight()`**在累加器和类型化数组的每个元素上（从右到左）调用函数，使其归约为单一的值。这个方法的算法和 {{jsxref("Array.prototype.reduceRight()")}}相同。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+**`reduceRight()`** 在累加器和类型化数组的每个元素上（从右到左）调用函数，使其归约为单一的值。这个方法的算法和 {{jsxref("Array.prototype.reduceRight()")}} 相同。_TypedArray_ 是这里的[类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_对象)之一。
 
 ## 语法
 
-```plain
-typedarray.reduceRight(callback[, initialValue])
+```js-nolint
+reduceRight(callbackFn)
+reduceRight(callbackFn, initialValue)
 ```
 
 ### 参数
 
 - `callback`
-
   - : 对类型数组的每一个值应用的函数，它接受四个参数：
-
     - `previousValue`
       - : 回调函数上一次调用所返回的值，或者是提供的 `initialValue`。
     - `currentValue`
@@ -27,7 +26,6 @@ typedarray.reduceRight(callback[, initialValue])
       - : 类型化数组中要处理的当前元素的下标
     - `array`
       - : `reduceRight` 在其上调用的类型化数组
-
 - `initialValue`
   - : 可选。用作 `callback` 首次调用的第一个参数的对象。
 

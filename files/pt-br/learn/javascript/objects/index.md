@@ -5,7 +5,7 @@ slug: Learn/JavaScript/Objects
 
 {{LearnSidebar}}
 
-Em JavaScript, a maioria das coisas são objetos, desde os principais recursos do JavaScript, como arrays, até o navegador {{Glossary("API", "APIs")}} construído sobre o JavaScript. Você pode até mesmo criar seus próprios objetos para encapsular funções e variáveis ​​relacionadas em pacotes eficientes e atuar como contêineres de dados úteis. É importante entender a natureza baseada em objetos do JavaScript se você quiser aprofundar seu conhecimento da linguagem, portanto, fornecemos este módulo para ajudá-lo. Aqui ensinamos a teoria e a sintaxe de objetos em detalhes, depois veremos como criar seus próprios objetos.
+Em JavaScript, a maioria das coisas são objetos, desde os principais recursos do JavaScript, como arrays, até o navegador {{Glossary("API", "APIs")}} construído sobre o JavaScript. Você pode até mesmo criar seus próprios objetos para encapsular funções e variáveis relacionadas em pacotes eficientes e atuar como contêineres de dados úteis. É importante entender a natureza baseada em objetos do JavaScript se você quiser aprofundar seu conhecimento da linguagem, portanto, fornecemos este módulo para ajudá-lo. Aqui ensinamos a teoria e a sintaxe de objetos em detalhes, depois veremos como criar seus próprios objetos.
 
 > **Observação:**
 >

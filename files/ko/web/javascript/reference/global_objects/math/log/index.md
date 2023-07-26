@@ -1,7 +1,6 @@
 ---
 title: Math.log()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
 ---
 
 {{JSRef}}

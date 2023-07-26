@@ -1,15 +1,6 @@
 ---
 title: browsingData.removeFormData()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removeDownloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeFormData
 ---
 
@@ -28,8 +19,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.browsingData.removeFormData(
-  removalOptions            // RemovalOptions object
-)
+  removalOptions, // RemovalOptions object
+);
 ```
 
 ### Paramètres
@@ -40,9 +31,9 @@ var removing = browser.browsingData.removeFormData(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.removeFormData")}}
+{{Compat}}
 
 ## Exemples
 
@@ -61,11 +52,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removeFormData(
-  {since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removeFormData({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Supprimer tous les données de formulaire enregistrées :
@@ -79,8 +70,7 @@ function onError(error) {
   console.error(error);
 }
 
-browser.browsingData.removeFormData({}).
-then(onRemoved, onError);
+browser.browsingData.removeFormData({}).then(onRemoved, onError);
 ```
 
 {{WebExtExamples}}

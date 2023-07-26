@@ -1,16 +1,6 @@
 ---
 title: runtime.OnRestartRequiredReason
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnRestartRequiredReason
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - OnRestartsRequiredReason
-  - Reference
-  - Type
-  - WebExtensions
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/OnRestartRequiredReason
 ---
 
@@ -26,9 +16,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 - `"os_update"`: Le navigateur / Système d'exploitation est mise à jour vers une nouvelle verion plus récente.
 - `"periodic"`: Le système a fonctionné pendant plus logntemps que la durée de disponibilité autorisée dans la stratégie d'entreprise.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.OnRestartRequiredReason")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

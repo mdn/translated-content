@@ -167,15 +167,15 @@ flex: unset;
 }
 ```
 
-{{EmbedLiveSample("flex", 1200, 370, "", "", "example-outcome-frame")}}
+{{EmbedLiveSample("描述", 1200, 370, "", "", "example-outcome-frame")}}
 
 默认情况下，元素不会缩短至小于内容框尺寸，若想改变这一状况，请设置元素的{{cssxref("min-width")}} 与 {{cssxref("min-height")}}属性。
 
-## 正式定义
+## 形式定义
 
 {{cssinfo}}
 
-## 正式语法
+## 形式语法
 
 {{csssyntax}}
 
@@ -249,5 +249,5 @@ flex.addEventListener("click", function() {
 
 ## 参见
 
-- CSS Flexbox 指南：_[Flexbox 基本概念](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox 指南：_[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS Flexbox 指南：_[Flexbox 基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox 指南：_[控制 Flex 子元素在主轴上的比例](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_

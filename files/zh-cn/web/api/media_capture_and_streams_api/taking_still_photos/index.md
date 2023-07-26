@@ -431,5 +431,5 @@ slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 
 - [GitHub 上的示例代码](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
 - {{domxref("MediaDevices.getUserMedia")}}
-- {{SectionOnPage("/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images", "使用视频帧")}}
+- Canvas 教程中的[使用视频帧](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images#使用视频帧)
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

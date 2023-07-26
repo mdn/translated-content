@@ -1,6 +1,8 @@
 ---
 title: WebSocket()
 slug: Web/API/WebSocket/WebSocket
+l10n:
+  sourceCommit: 4f0f7386262363103a3e9cf482bb348d8570b331
 ---
 
 {{APIRef("Web Sockets API")}}
@@ -9,7 +11,7 @@ slug: Web/API/WebSocket/WebSocket
 
 ## 構文
 
-```js
+```js-nolint
 new WebSocket(url)
 new WebSocket(url, protocols)
 ```
@@ -26,11 +28,11 @@ new WebSocket(url, protocols)
 
 ### 例外
 
-- [`SyntaxError`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)
+- `SyntaxError` {{domxref("DOMException")}}
   - : 次のような場合に発生します。
     - [`url`](#url) の解釈に失敗した場合
     - [`url`](#url) のスキームが `ws` または `wss` 以外であった場合
-    - [`url`](#url) に[フラグメント](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#fragment)があった場合
+    - [`url`](#url) に[フラグメント](/ja/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#フラグメント)があった場合
     - [`protocols`](#protocols) の何れかの値が複数回現れている、または WebSocket プロトコル仕様で定義された [`Sec-WebSocket-Protocol`](/ja/docs/Web/HTTP/Protocol_upgrade_mechanism#sec-websocket-protocol) フィールドの値を構成する要素の要件に一致しない場合。
 
 ## 仕様書

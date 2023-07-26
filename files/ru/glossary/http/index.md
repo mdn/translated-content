@@ -20,4 +20,3 @@ HTTP является текстовым (все сообщения осущес
 ## Изучите больше
 
 - [HTTP на сайте MDN](/ru/docs/Web/HTTP)
-- {{interwiki("wikipedia", "Hypertext Transfer Protocol", "HTTP")}} на Википедии

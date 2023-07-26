@@ -25,7 +25,7 @@ object.search = string;
 ## Примеры
 
 ```js
-// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils.search?q=123">
+// Допустим, что документ содержит элемент <a id="myAnchor" href="https://developer.mozilla.org/ru/docs/HTMLHyperlinkElementUtils.search?q=123">
 var anchor = document.getElementById("myAnchor");
 var result = anchor.search; // Вернёт: '?q=123'
 ```

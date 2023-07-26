@@ -3,14 +3,14 @@ title: マクロの使用
 slug: MDN/Writing_guidelines/Page_structures/Macros
 original_slug: MDN/Structures/Macros
 l10n:
-  sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
+  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
 ---
 
 {{MDNSidebar}}
 
-MDN が動作している [Yari](/ja/docs/MDN/Yari) プラットフォームは、幅広い作業の自動化を可能にする強力なマクロシステムである [KumaScript](/ja/docs/MDN/Tools/KumaScript) を提供しています。この記事は MDN のマクロを記事中で呼び出す方法について情報を提供します。
+MDN が動作している [Yari](https://github.com/mdn/yari/tree/main/docs/what-yari-does.md) プラットフォームは、幅広い作業の自動化を可能にする強力なマクロシステムである [KumaScript](https://github.com/mdn/yari/tree/main/docs/kumascript) を提供しています。この記事は MDN のマクロを記事中で呼び出す方法について情報を提供します。
 
-[KumaScript ガイド](/ja/docs/MDN/Tools/KumaScript)では MDN 上でマクロを利用する方法について詳細な情報を提供しているので、この節ではむしろ全体の簡潔なまとめをします。
+[KumaScript ガイド](https://github.com/mdn/yari/blob/main/docs/kumascript/README.md)では MDN 上でマクロを利用する方法について詳細な情報を提供しているので、この節ではむしろ全体の簡潔なまとめをします。
 
 ## マクロはどのように実装されているか
 
@@ -30,7 +30,7 @@ MDN 上で動作するマクロは、サーバーで実行される [JavaScript]
 - 引数はカンマで区切ります。
 - 引数がなければ括弧は取ってしまって構いません。 `\{{macroname()}}` と `\{{macroname}}` はまったく同じです。
 - 数値の引数は引用符で囲む必要がありませんが、囲んでも構いません (ただし、複数のピリオドを含むバージョン番号を渡す場合などは、引用符で囲む必要があります)。
-- エラーが発生した場合は、コードを丁寧に読み返して下さい。何が問題なのかそれでも特定できなかった場合には、 [KumaScript エラーのトラブルシューティング](/ja/docs/MDN/Tools/KumaScript/Troubleshooting)を参照して下さい。
+- エラーが発生した場合は、コードを丁寧に読み返して下さい。何が問題なのかそれでも特定できなかった場合には、 [KumaScript エラーのトラブルシューティング](https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md)を参照して下さい。
 
 マクロは高度にキャッシュ化されています。どの入力値についても (引数や、マクロを動作させる URL といった環境変数のいずれでも)、その結果は記憶され再利用されます。つまり、入力が変化した時だけマクロは実行されます。
 

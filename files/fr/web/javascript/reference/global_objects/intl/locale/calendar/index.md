@@ -1,15 +1,7 @@
 ---
 title: Intl.Locale.prototype.calendar
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/calendar
 ---
 
 {{JSRef}}
@@ -156,13 +148,11 @@ console.log(frBuddhist.calendar); // affiche "buddhist" dans la console
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.calendar`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.calendar) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.calendar")}}
+{{Compat}}
 
 ## Voir aussi
 

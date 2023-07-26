@@ -43,7 +43,7 @@ Para que los archivos se comuniquen entre sí, debes proporcionar una ruta de ar
 2. Abre tu archivo `index.html` e inserta el siguiente código en el archivo exactamente como se muestra. Por ahora, no te preocupes por lo que significa todo esto; veremos las estructuras con más detalle más adelante en la serie.
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html>
      <head>
        <meta charset="utf-8" />
@@ -79,14 +79,3 @@ Eso es todo por ahora. La estructura de tu directorio debería verse así:
 ![Una estructura de archivos en mac os x finder, que muestra un directorio de imágenes con una imagen, directorios de estilos y scripts vacíos, y un archivo index.html](file-structure.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
-
-## En este módulo
-
-- [Instalación de software básico](/es/Learn/Getting_started_with_the_web/Instalacion_de_software_basico)
-- [¿Cómo se verá tu sitio web?](/es/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Manejo de archivos](/es/Learn/Getting_started_with_the_web/Manejando_los_archivos)
-- [Conceptos básicos de HTML](/es/Learn/Getting_started_with_the_web/HTML_basics)
-- [Conceptos básicos de CSS](/es/Learn/Getting_started_with_the_web/CSS_basics)
-- [Conceptos básicos de JavaScript](/es/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publicar tu sitio web](/es/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [Cómo funciona la Web](/es/docs/Learn/Getting_started_with_the_web/Cómo_funciona_la_Web)

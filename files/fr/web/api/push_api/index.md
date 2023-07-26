@@ -1,14 +1,6 @@
 ---
 title: Push API
 slug: Web/API/Push_API
-tags:
-  - API
-  - Chargement
-  - Experimental
-  - Notifications
-  - Push
-  - Reference
-  - Service Workers
 translation_of: Web/API/Push_API
 ---
 
@@ -67,13 +59,7 @@ Les ajouts à [l'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_W
 
 ## Compatibilité des navigateurs
 
-### `PushEvent`
-
-{{Compat("api.PushEvent")}}
-
-### `PushMessageData`
-
-{{Compat("api.PushMessageData")}}
+{{Compat}}
 
 ## Voir aussi
 

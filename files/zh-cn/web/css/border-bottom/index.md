@@ -42,7 +42,7 @@ border-bottom: medium dashed blue;
 - {{cssxref("&lt;color&gt;")}}
   - : 见 {{Cssxref("border-bottom-color")}}。
 
-### 形式化语法
+### 形式语法
 
 {{csssyntax}}
 
@@ -65,7 +65,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Example')}}
+{{EmbedLiveSample('示例')}}
 
 ## 规范
 

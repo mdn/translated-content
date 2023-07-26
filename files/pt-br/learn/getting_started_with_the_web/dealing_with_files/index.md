@@ -42,24 +42,24 @@ Para fazer arquivos conversarem entre si, você tem que fornecer um caminho de a
 1. Copie a imagem que você escolheu antes para sua pasta `imagens`.
 2. Abra seu arquivo `index.html` e insira o seguinte código exatamente como está escrito. Não se preocupe com o significado — nós vamos olhar com mais detalhes essa estrutura posteriormente.
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>Minha página de teste</title>
-      </head>
-      <body>
-        <img src="" alt="Minha imagem de teste">
-      </body>
-    </html>
-    ```
+   ```html
+   <!doctype html>
+   <html>
+     <head>
+       <meta charset="utf-8" />
+       <title>Minha página de teste</title>
+     </head>
+     <body>
+       <img src="" alt="Minha imagem de teste" />
+     </body>
+   </html>
+   ```
 
 3. A linha `<img src="" alt="Minha imagem de teste">` é o código HTML que vai inserir uma imagem na página. Nós precisamos dizer ao HTML onde a imagem está. A imagem está dentro da pasta _imagens_, no mesmo diretório do `index.html`. Para trilhar o caminho de `index.html` para nossa imagem, o caminho é `imagens/nome-da-sua-imagem`. Por exemplo, nossa imagem é chamada `firefox-icon.png`, então, nosso caminho é `imagens/firefox-icon.png`.
 4. Insira o caminho dentro do seu código HTML, dentro das aspas do código `src=""`.
 5. Salve seu arquivo HTML, então carregue em seu navegador web (dê um duplo-clique no arquivo). Você deve ver sua nova página mostrando sua imagem!
 
-![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](https://mdn.mozillademos.org/files/9229/website-screenshot.png)
+![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](website-screenshot.png)
 
 Algumas regras gerais para caminhos de arquivo:
 
@@ -76,15 +76,4 @@ Por agora, isso é tudo o que precisamos saber.
 
 Por agora, é isso. Sua pasta deve parecer algo do tipo:
 
-![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](https://mdn.mozillademos.org/files/9231/file-structure.png){{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
-
-## Neste módulo
-
-- [Instalando os programas básicos](/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos)
-- [Como será o seu site?](/pt-BR/docs/Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer)
-- [Lidando com arquivos](/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos)
-- [HTML básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/HTML_basico)
-- [CSS básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/CSS_basico)
-- [Javascript básico](/pt-BR/docs/Aprender/Getting_started_with_the_web/JavaScript_basico)
-- [Publicando seu website](/pt-BR/docs/Aprender/Getting_started_with_the_web/Publicando_seu_site)
-- [Como a web funciona](/pt-BR/docs/Aprender/Getting_started_with_the_web/Como_a_Web_funciona)
+![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png){{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}

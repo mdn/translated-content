@@ -827,7 +827,7 @@ html,body,svg { height:100% }
           在当前位置和坐标
           <code><var>x</var></code
           >,<code><var>y</var></code
-          > 之间绘制一条椭圆曲线。用于绘制圆弧的椭圆中心根据命令的其它参数确定：
+          > 之间绘制一条椭圆曲线。用于绘制圆弧的椭圆中心根据命令的其他参数确定：
         </p>
         <ul>
           <li>
@@ -839,7 +839,7 @@ html,body,svg { height:100% }
           </li>
           <li>
             <code><var>large-arc-flag</var></code> 和
-            <code><var>sweep-flag</var></code> 允许选择必须绘制的弧线，因为其它参数可以绘制
+            <code><var>sweep-flag</var></code> 允许选择必须绘制的弧线，因为其他参数可以绘制
             4 条可能的弧线。
             <ul>
               <li>
@@ -871,7 +871,7 @@ html,body,svg { height:100% }
           在当前位置和指定位置之间绘制一条椭圆曲线。指定位置为当前位置沿
           x 轴偏移 <code><var>dx</var></code>
           以及沿 y 轴偏移 <code><var>dy</var></code>
-          处。用于绘制圆弧的椭圆中心根据命令的其它参数确定：
+          处。用于绘制圆弧的椭圆中心根据命令的其他参数确定：
         </p>
         <ul>
           <li>
@@ -883,7 +883,7 @@ html,body,svg { height:100% }
           </li>
           <li>
             <code><var>large-arc-flag</var></code> 和
-            <code><var>sweep-flag</var></code> 允许选择必须绘制的弧线，因为其它参数可以绘制
+            <code><var>sweep-flag</var></code> 允许选择必须绘制的弧线，因为其他参数可以绘制
             4 条可能的弧线。
             <ul>
               <li>
@@ -955,7 +955,7 @@ _ClosePath_ 命令将从*当前位置*绘制一条直线到路径中的第一个
   </tbody>
 </table>
 
-> **备注：** 使用 _ClosePath_ 命令闭合的形状的外观可能与使用其它命令向起始点绘制一条线而闭合的形状不同，因为前者是将线条的末端连接在一起（根据 {{SVGAttr('stroke-linejoin')}} 的设置），而不是仅仅绘制到坐标点上。
+> **备注：** 使用 _ClosePath_ 命令闭合的形状的外观可能与使用其他命令向起始点绘制一条线而闭合的形状不同，因为前者是将线条的末端连接在一起（根据 {{SVGAttr('stroke-linejoin')}} 的设置），而不是仅仅绘制到坐标点上。
 
 #### 示例
 

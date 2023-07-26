@@ -1,5 +1,5 @@
 ---
-title: Command line crash course
+title: 命令行速成课
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 ---
 
@@ -10,7 +10,7 @@ slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">先决条件：</th>
+      <th scope="row">预备条件：</th>
       <td>
         熟悉核心的 <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
         <a href="/zh-CN/docs/Learn/CSS">CSS</a>, 和
@@ -114,7 +114,7 @@ macOS 有一个名为 Darwin 的系统，它位于图形用户界面的下方。
 - 下载在特定的 url 找到的文件：`curl`
 - 在较大的文件体中寻找特定的片段：`grep`
 - 主页查看文件的内容：`less`, `cat`
-- 操作和转换文本流（例如，讲 HTML 文件中\<div>的所有实例改为\<article>）: `awk`, `tr`, `sed`
+- 操作和转换文本流（例如，将 HTML 文件中 `<div>` 的所有实例改为 `<article>`）：`awk`、`tr`、`sed`
 
 > **备注：** 在 web 上有许多很好的教程深入了解 web 上的命令行——这只是一个简短的介绍
 
@@ -207,7 +207,7 @@ ls -l
 - `mkdir` —这将在您所在的当前目录中创建一个新目录，名称是您在命令名之后提供的。例如 `mkdir my-awesome-website` 将创建一个新目录叫 `my-awesome-website`。
 - `rmdir` —删除指定目录，但仅当它为空时。例如`rmdir my-awesome-website`
 
-  将删除我们在上面创建的目录。如果您希望删除一个非空的目录 (并删除其中包含的所有内容)，则可以使用`-r` 选项（递归），但这很危险。确保以后在目录中不需要任何内容 ​​，因为它将永远消失。
+  将删除我们在上面创建的目录。如果您希望删除一个非空的目录 (并删除其中包含的所有内容)，则可以使用`-r` 选项（递归），但这很危险。确保以后在目录中不需要任何内容 ，因为它将永远消失。
 
 - `touch` —在当前目录中创建一个新的空文件。例如`touch mdn-example.md` 创建一个新的空文件叫做 `mdn-example.md`.
 - `mv` —
@@ -270,12 +270,12 @@ ls | wc -l
 
 让我们看一些更复杂的东西。我们将首先尝试获取 MDN 的“获取”页面的内容 `curl` 命令 (可用于从 url 请求内容)[https://developer.mozilla.org/en-US/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
 
-但是，这个 URL 是页面的旧位置。如果您在一个新的浏览器标签中输入它，您将 (最终) 被重定向到[https://developer.mozilla.org/enUS/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
+但是，这个 URL 是页面的旧位置。如果您在一个新的浏览器标签中输入它，您将 (最终) 被重定向到[https://developer.mozilla.org/en-US/docs/Web/API/fetch](/zh-CN/docs/Web/API/fetch).
 
 因此，如果您使用 curl 请求 `https://developer.mozilla.org/docs/Web/API/fetch`，则不会得到输出。现在就试试：
 
 ```bash
-curl https://developer.mozilla.org/en-US/docs/Web/API/fetch
+curl https://developer.mozilla.org/docs/Web/API/fetch
 ```
 
 我们想精确的告诉 `curl` 遵循重定向使用`-L` 标签。
@@ -292,9 +292,6 @@ curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location
 
 ```bash
 location: /en-US/docs/Web/API/fetch
-location: /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
-location: /en-US/docs/Web/API/GlobalFetch/fetch
-location: /en-US/docs/Web/API/fetch
 ```
 
 尽管有些做作，我们可以把这个结果做得更深入一点，并变换 `location:` 行内容，将基本的起点添加到每个起点的开始，这样我们就可以打印出完整的 url。为此，我们将在混合中添加 awk(它是一种类似于 JavaScript、Ruby 或 Python 的编程语言，只是要老得多 !)
@@ -308,9 +305,6 @@ curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location | aw
 最终的输出应该是这样的
 
 ```bash
-https://developer.mozilla.org/en-US/docs/Web/API/fetch
-https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
-https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch
 https://developer.mozilla.org/en-US/docs/Web/API/fetch
 ```
 
@@ -430,9 +424,13 @@ Stdin is read if it is piped to Prettier and no files are given.
 
 ```js
 const myObj = {
-a:1,b:{c:2}}
-function printMe(obj){console.log(obj.b.c)}
-printMe(myObj)
+  a: 1,
+  b: { c: 2 },
+};
+function printMe(obj) {
+  console.log(obj.b.c);
+}
+printMe(myObj);
 ```
 
 我们可以在代码基上运行得更好，以检查我们的代码是否需要调整。cd 到您的目录中，并尝试运行此命令：
@@ -504,11 +502,3 @@ printMe(myObj);
 这使我们结束了对终端/命令行的简短浏览。接下来，我们将更详细地介绍软件包管理器，以及如何使用它们。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
-
-## In this module
-
-- [Client-side tooling overview](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Overview)
-- [Command line crash course](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line)
-- [Package management basics](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management)
-- [Introducing a complete toolchain](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain)
-- [Deploying our app](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment)

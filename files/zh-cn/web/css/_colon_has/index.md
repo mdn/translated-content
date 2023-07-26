@@ -1,11 +1,11 @@
 ---
-title: ':has()'
+title: ":has()"
 slug: Web/CSS/:has
 ---
 
 {{CSSRef}}
 
-CSS 函数式[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:has()`** 表示一个元素，如果作为参数传递的任何[相对选择器](/zh-CN/docs/Web/CSS/CSS_Selectors#relative_selector)在锚定到该元素时，至少匹配一个元素。这个伪类通过把[可容错相对选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错相对选择器列表)作为参数，提供了一种针对引用元素选择父元素或者先前的兄弟元素的方法。
+CSS 函数式[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) **`:has()`** 表示一个元素，如果作为参数传递的任何[相对选择器](/zh-CN/docs/Web/CSS/CSS_selectors#relative_selector)在锚定到该元素时，至少匹配一个元素。这个伪类通过把[可容错相对选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错相对选择器列表)作为参数，提供了一种针对引用元素选择父元素或者先前的兄弟元素的方法。
 
 ```css
 /* Selects an h1 heading with a
@@ -22,7 +22,7 @@ h1:has(+ p) { margin-bottom: 0; }
 :has( <forgiving-relative-selector-list> )
 ```
 
-相对选择器列表参数是[可容错](/zh-CN/docs/Web/CSS/Selector_list#可容错选择器列表)的。通常在 CSS 中，选择器列表中的某个选择器无效时，那么整个列表则被视为无效。当 `:has()` 选择器列表中的一个选择器无法解析时，不正确或不受支持的选择器将被忽略，而其它的则将被正常使用。
+相对选择器列表参数是[可容错](/zh-CN/docs/Web/CSS/Selector_list#可容错选择器列表)的。通常在 CSS 中，选择器列表中的某个选择器无效时，那么整个列表则被视为无效。当 `:has()` 选择器列表中的一个选择器无法解析时，不正确或不受支持的选择器将被忽略，而其他的则将被正常使用。
 
 注意，如果一个浏览器中不支持 `:has()` 伪类本身，则整个选择器块将失效（除非 `:has()` 本身位于一个可容错选择器列表中，比如在 [`:is()`](/zh-CN/docs/Web/CSS/:is) 或 [`:where()`](/zh-CN/docs/Web/CSS/:where) 中）。
 
@@ -176,7 +176,7 @@ h1, h2, h3 {
 ## 参见
 
 - [`:is()`](/zh-CN/docs/Web/CSS/:is)、[`:where()`](/zh-CN/docs/Web/CSS/:where)、[`:not()`](/zh-CN/docs/Web/CSS/:not)
-- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_Selectors)
+- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)
 - [CSS 组合符](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list)
 - [使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)

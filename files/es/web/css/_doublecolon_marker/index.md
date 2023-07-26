@@ -1,5 +1,5 @@
 ---
-title: '::marker'
+title: "::marker"
 slug: Web/CSS/::marker
 ---
 
@@ -60,7 +60,7 @@ ul li::marker {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.selectors.marker")}}
+{{Compat}}
 
 ## Véase también
 

@@ -100,7 +100,7 @@ putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
 
 #### Результат
 
-{{ EmbedLiveSample('Понимание_putImageData', '', '', '', 'Web/API/CanvasRenderingContext2D/putImageData',800) }}
+{{ EmbedLiveSample('Понимание_putImageData') }}
 
 ### Потеря данных из-за оптимизации браузера
 
@@ -145,8 +145,8 @@ after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]
 
 ### Специфичные для Gecko заметки
 
-- Начиная с Gecko 10.0 {{ geckoRelease("10.0") }}, нескончаемые(например, NaN или Infinity) значения любого из этих параметров приводят к тому, что вызов `putImageData()` будет игнорироваться, а не вызывать исключение.
-- To comply with the specification, starting with Gecko 16.0 {{geckoRelease("16.0")}}, a call with an invalid number of arguments (only 3 or 7 arguments are valid), will now throw an error ({{bug(762657)}}).
+- Начиная с Gecko 10.0, нескончаемые(например, NaN или Infinity) значения любого из этих параметров приводят к тому, что вызов `putImageData()` будет игнорироваться, а не вызывать исключение.
+- To comply with the specification, starting with Gecko 16.0, a call with an invalid number of arguments (only 3 or 7 arguments are valid), will now throw an error ({{bug(762657)}}).
 
 ## Смотрите также
 

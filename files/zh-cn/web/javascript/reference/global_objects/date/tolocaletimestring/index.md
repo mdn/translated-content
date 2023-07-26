@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 
 {{JSRef}}
 
-**`toLocaleTimeString()`** 方法返回该日期对象时间部分的字符串，该字符串格式因语言而异。在支持 [`Intl.DateTimeFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 的实现中，该方法可变为简单地调用 `Intl.DateTimeFormat`。
+**`toLocaleTimeString()`** 方法返回该日期对象时间部分的字符串，该字符串格式因语言而异。在支持 [`Intl.DateTimeFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 的实现中，该方法仅是调用了 `Intl.DateTimeFormat` 方法。
 
 {{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}
 

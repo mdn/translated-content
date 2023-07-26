@@ -107,7 +107,7 @@ document.addEventListener("dragend", (event) => {
 
 ## 参见
 
-- 其它拖放事件：
+- 其他拖放事件：
 
   - {{domxref("Document/drag_event", "drag")}}
   - {{domxref("Document/dragstart_event", "dragstart")}}
@@ -116,7 +116,7 @@ document.addEventListener("dragend", (event) => {
   - {{domxref("Document/dragleave_event", "dragleave")}}
   - {{domxref("Document/drop_event", "drop")}}
 
-- 其它目标上的 `dragend` 事件：
+- 其他目标上的 `dragend` 事件：
 
   - {{domxref("Window")}}：{{domxref("Window/dragend_event", "dragend")}} 事件
   - {{domxref("HTMLElement")}}：{{domxref("HTMLElement/dragend_event", "dragend")}} 事件

@@ -1,8 +1,8 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
-translation_of: Web/HTTP/Headers/Content-Language
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Language`** {{Glossary("entity header")}}는 청중을 위한 언어를 설명하기 위해 사용되는데, 사용자가 선호하는 언어에 따라 사용자를 구분하도록 해줍니다.
@@ -43,7 +43,7 @@ Content-Language: de-DE, en-CA
 
 ### 문서가 작성된 언어 나타내기
 
-글로벌 [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) 어트리뷰는 HTML 엘리먼트 상에서 전체 [HTML](/ko/docs/Web/HTML) 문서 혹은 그의 일부의 언어를 나타내기 위해 사용됩니다.
+글로벌 [`lang`](/ko/docs/Web/HTML/Global_attributes/lang) 어트리뷰는 HTML 엘리먼트 상에서 전체 [HTML](/ko/docs/Web/HTML) 문서 혹은 그의 일부의 언어를 나타내기 위해 사용됩니다.
 
 ```html
 <html lang="de">

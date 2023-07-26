@@ -1,13 +1,7 @@
 ---
 title: Assertions
-slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
-tags:
-  - Assertions
-  - Guide
-  - JavaScript
-  - RegExp
+slug: Web/JavaScript/Guide/Regular_expressions/Assertions
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
-original_slug: Web/JavaScript/Guide/Expressions_régulières/Assertions
 ---
 
 {{jsSidebar("JavaScript Guide")}}

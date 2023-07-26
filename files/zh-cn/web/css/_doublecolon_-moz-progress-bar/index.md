@@ -13,7 +13,7 @@ slug: Web/CSS/::-moz-progress-bar
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -35,13 +35,9 @@ slug: Web/CSS/::-moz-progress-bar
 }
 ```
 
-### Result
+### 结果
 
-{{EmbedLiveSample('Examples')}}
-
-上面第一段样式的进度条会如下图所示：
-
-![Custom styled progress bar](/@api/deki/files/5387/=redbar.png)
+{{EmbedLiveSample('示例')}}
 
 ## 参见
 

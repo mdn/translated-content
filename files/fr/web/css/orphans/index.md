@@ -1,16 +1,12 @@
 ---
 title: orphans
 slug: Web/CSS/orphans
-tags:
-  - CSS
-  - Propriété
-  - Reference
 translation_of: Web/CSS/orphans
 ---
 
 {{CSSRef}}
 
-La propriété **`orphans`** définit le nombre _minimum_ de lignes qui doivent rester en bas d'une [page](/fr/docs/Web/CSS/M%C3%A9dia_pagin%C3%A9s), d'une région ou d'une [colonne](/fr/docs/Web/CSS/Colonnes_CSS) dans un conteneur de bloc.
+La propriété **`orphans`** définit le nombre _minimum_ de lignes qui doivent rester en bas d'une [page](/fr/docs/Web/CSS/Média_paginés), d'une région ou d'une [colonne](/fr/docs/Web/CSS/Colonnes_CSS) dans un conteneur de bloc.
 
 ```css
 /* Valeur numérique entière */

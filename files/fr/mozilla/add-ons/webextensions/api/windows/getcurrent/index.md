@@ -1,16 +1,6 @@
 ---
 title: windows.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - Windows
-  - getCurrent
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
 ---
 
@@ -26,8 +16,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingCurrent = browser.windows.getCurrent(
-  getInfo               // optional object
-)
+  getInfo, // optional object
+);
 ```
 
 ### Paramètres
@@ -49,9 +39,9 @@ var gettingCurrent = browser.windows.getCurrent(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet [`windows.Window`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) object contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.getCurrent",2)}}
+{{Compat}}
 
 ## Exemples
 
@@ -69,7 +59,7 @@ function onError(error) {
 }
 
 browser.browserAction.onClicked.addListener((tab) => {
-  var getting = browser.windows.getCurrent({populate: true});
+  var getting = browser.windows.getCurrent({ populate: true });
   getting.then(logTabs, onError);
 });
 ```

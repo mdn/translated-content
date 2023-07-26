@@ -6,8 +6,8 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 ここでは、イメージマップを設定する方法と、最初に検討すべきいくつかの欠点を説明します。
 
 | 前提条件: | [基本的な HTML 文書の作成方法](/ja/docs/Learn/Getting_started_with_the_web)と、[アクセス可能な画像をウェブページに追加する方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#ウェブページに画像を置くにはどうするのか)について、理解している必要があります。 |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 目的:     | 1 つの画像の異なる領域を異なるページにリンクする方法を学びます。                                                                                                                                                                                                       |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目的:     | 1 つの画像の異なる領域を異なるページにリンクする方法を学びます。                                                                                                                                                                                                            |
 
 > **警告:** この記事では、クライアント側のイメージマップについてのみ説明します。 ユーザーにマウスが必要なサーバー側のイメージマップは使用しないでください。
 
@@ -29,34 +29,29 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 - 画像には、ホットスポットの始まりと終わりを明示する必要があります。
 - ホットスポットは、どのビューポートサイズでも快適にタップするのに十分な大きさでなければなりません。 どれくらいの大きさか？ [72 × 72 CSS ピクセルは良好な最小値](http://uxmovement.com/mobile/finger-friendly-design-ideal-mobile-touch-target-sizes/)（英語）で、タッチターゲット間の間隔に余裕もあります。 [50languages.com](http://www.goethe-verlag.com/book2/) の世界地図（執筆時点）は、問題を完全に示しています。 アルバニアやエストニアよりもロシアや北米をタップする方がはるかに簡単です。
 
-{{htmlelement("img")}} 要素と {{htmlattrxref("alt",'img')}} テキストを使用して、[常に同じ方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#ウェブページに画像を置くにはどうするのか)で画像を挿入します。 画像がナビゲーションデバイスとしてのみ存在する場合、後で {{htmlelement('area')}} 要素に適切な {{htmlattrxref("alt",'area')}} テキストを指定すると `alt=""` と書くことができます。
+{{htmlelement("img")}} 要素と [`img`](/ja/docs/Web/HTML/Element/img#alt) テキストを使用して、[常に同じ方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#ウェブページに画像を置くにはどうするのか)で画像を挿入します。 画像がナビゲーションデバイスとしてのみ存在する場合、後で {{htmlelement('area')}} 要素に適切な [`area`](/ja/docs/Web/HTML/Element/area#alt) テキストを指定すると `alt=""` と書くことができます。
 
-特殊な {{htmlattrxref("usemap","img")}} 属性が必要です。 イメージマップには、スペースを含まない一意の名前を考えてください。 次に、`usemap` 属性の値としてその名前（# が先行する）を割り当てます。
+特殊な [`usemap`](/ja/docs/Web/HTML/Element/img#usemap) 属性が必要です。 イメージマップには、スペースを含まない一意の名前を考えてください。 次に、`usemap` 属性の値としてその名前（# が先行する）を割り当てます。
 
 ```html
-<img
-  src="image-map.png"
-  alt=""
-  usemap="#example-map-1" />
+<img src="image-map.png" alt="" usemap="#example-map-1" />
 ```
 
 ### ステップ 2: ホットスポットを有効にする
 
-このステップでは、すべてのコードを {{htmlelement('map')}} 要素内に配置します。 `<map>` には、上の `usemap` 属性で使用したのと同じマップ名の {{htmlattrxref("name","map")}} 属性だけが必要です。
+このステップでは、すべてのコードを {{htmlelement('map')}} 要素内に配置します。 `<map>` には、上の `usemap` 属性で使用したのと同じマップ名の [`name`](/ja/docs/Web/HTML/Element/map#name) 属性だけが必要です。
 
 ```html
-<map name="example-map-1">
-
-</map>
+<map name="example-map-1"></map>
 ```
 
 `<map>` 要素の中に {{htmlelement('area')}} 要素が必要です。 `<area>` 要素はそれぞれが 1 つのホットスポットに対応します。 キーボードでのナビゲーションを直観的に保つには、`<area>` 要素のソースでの順序がホットスポットの視覚的順序に対応していることを確認してください。
 
 `<area>` 要素は空要素ですが、次の 4 つの属性が必要です。
 
-- {{htmlattrxref('shape','area')}}
+- [`shape`](/ja/docs/Web/HTML/Element/area#shape)
 
-  {{htmlattrxref('coords','area')}}
+  [`coords`](/ja/docs/Web/HTML/Element/area#coords)
 
   - : `shape` は、`circle`（円）、`rect`（四角形）、`poly`（ポリゴン）、`default`（デフォルト）の 4 つの値のいずれかをとります。 （`default` の `<area>` は画像全体から、あなたが定義した他のホットスポットを除いたものです。） 選択した `shape` によって、`coords` で指定する必要がある座標情報が決まります。
 
@@ -68,9 +63,9 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 
     重なり合っている場合、ソースでの順序で選ばれます。
 
-- {{htmlattrxref('href','area')}}
+- [`href`](/ja/docs/Web/HTML/Element/area#href)
   - : リンク先のリソースの URL。 現在の領域をどこにもリンクさせたくない場合は、この属性を空白のままにしておくことができます（空白の円を描いている場合など）。
-- {{htmlattrxref('alt','area')}}
+- [`alt`](/ja/docs/Web/HTML/Element/area#alt)
 
   - : リンクがどこにあるのか、それが何をするのかを人に伝える必須の属性。 `alt` テキストは、画像が利用できない場合にのみ表示されます。 [アクセス可能なリンクテキストを書くためのガイドライン](/ja/docs/Learn/Accessibility/HTML#Text_alternatives)を参照してください。
 
@@ -78,13 +73,17 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
 
 ```html
 <map name="example-map-1">
-  <area shape="circle" coords="200,250,25"
-    href="page-2.html" alt="circle example" />
+  <area
+    shape="circle"
+    coords="200,250,25"
+    href="page-2.html"
+    alt="circle example" />
 
-
-  <area shape="rect" coords="10, 5, 20, 15"
-    href="page-3.html" alt="rectangle example" />
-
+  <area
+    shape="rect"
+    coords="10, 5, 20, 15"
+    href="page-3.html"
+    alt="rectangle example" />
 </map>
 ```
 

@@ -91,7 +91,7 @@ slug: Learn/JavaScript/Building_blocks/Image_gallery
 우리의 어두워지게/밝게 하는 `<button>`은 가만히 있습니다 — 우리는 이미 `btn` 상수에 `<button>`에 대한 참조를 저장하는 코드 라인을 제공했습니다. 여러분은 다음을 수행하는 `onclick`을 추가할 필요가 있습니다:
 
 1. `<button>`에 설정된 현재 클래스명을 확인 — 여러분은 다시 이것을 `getAttribute()`를 사용함으로써 달성할 수 있습니다.
-2. 만약 클래스명이 `"dark"`라면, `<button>` 클래스를 `"light"`로 ([`setAttribute()`](/en-US/docs/Web/API/Element/setAttribute)를 사용하여), 이것의 텍스트 콘텐츠를 "Lighten"으로, 그리고 덮어씌운 `<div>`의 {{cssxref("background-color")}}를 `"rgba(0,0,0,0.5)"`로 변경.
+2. 만약 클래스명이 `"dark"`라면, `<button>` 클래스를 `"light"`로 ([`setAttribute()`](/ko/docs/Web/API/Element/setAttribute)를 사용하여), 이것의 텍스트 콘텐츠를 "Lighten"으로, 그리고 덮어씌운 `<div>`의 {{cssxref("background-color")}}를 `"rgba(0,0,0,0.5)"`로 변경.
 3. 만약 클래스명이 `"dark"`가 아니라면, `<button>` 클래스를 `"dark"`로, 이것의 텍스트 콘텐츠를 다시 "Darken"으로, 덮어씌운 `<div>`의 {{cssxref("background-color")}}를 `"rgba(0,0,0,0)"`로 변경.
 
 다음의 코드 라인은 위의 2와 3에서 규정된 변화 달성에 대한 기초를 제공합니다.
@@ -119,13 +119,3 @@ overlay.style.backgroundColor = xxx;
     - 우리가 여러분이 도움을 원하는 문제를 찾을 수 있도록, 실제 과제나 평가 페이지의 링크.
 
 {{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
-
-## 이 과정에서는
-
-- [판단 내리기 — 조건문](/ko/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [반복문](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [함수 — 코드 재사용](/ko/docs/Learn/JavaScript/Building_blocks/Functions)
-- [함수 만들기](/ko/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [함수 반환 값](/ko/docs/Learn/JavaScript/Building_blocks/Return_values)
-- [이벤트 입문](/ko/docs/Learn/JavaScript/Building_blocks/Events)
-- **이미지 갤러리**

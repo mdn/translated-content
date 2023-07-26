@@ -58,22 +58,22 @@ Vamos brincar rapidamente com alguns números para nos familiarizarmos com a sin
 
 1. Primeiramente, vamos declarar duas variáveis e as inicializar com um _integer_ e um _float_, respectivamente, então digitaremos os nomes das variáveis para verificar se está tudo em ordem:
 
-    ```js
-    var meuInt = 5;
-    var meuFloat = 6.667;
-    meuInt;
-    meuFloat;
-    ```
+   ```js
+   var meuInt = 5;
+   var meuFloat = 6.667;
+   meuInt;
+   meuFloat;
+   ```
 
 2. Valores numéricos são inseridos sem aspas — tente declarar e inicializar mais duas variáveis contendo números antes de seguir em frente.
 3. Agora vamos checar se nossas duas variáveis originais são do mesmo tipo de dados. Há um operador chamado {{jsxref("Operators/typeof", "typeof")}} no JavaScript que faz isso. Insira as duas linhas conforme mostradas abaixo:
 
-    ```js
-    typeof meuInt;
-    typeof meuFloat;
-    ```
+   ```js
+   typeof meuInt;
+   typeof meuFloat;
+   ```
 
-    Você deve obter `"number"` de volta nos dois casos — isso torna as coisas muito mais fáceis para nós do que se diferentes tipos de números tivessem diferentes tipos de dados, e tivéssemos que lidar com eles em diferentes maneiras. Ufa!
+   Você deve obter `"number"` de volta nos dois casos — isso torna as coisas muito mais fáceis para nós do que se diferentes tipos de números tivessem diferentes tipos de dados, e tivéssemos que lidar com eles em diferentes maneiras. Ufa!
 
 ## Operadores aritméticos
 
@@ -93,28 +93,28 @@ Nós provavelmente não precisamos ensinar a você como fazer matemática básic
 
 1. Primeiro tente inserir alguns exemplos simples por sua conta, como
 
-    ```js
-    10 + 7
-    9 * 8
-    60 % 3
-    ```
+   ```js
+   10 + 7;
+   9 * 8;
+   60 % 3;
+   ```
 
 2. Você pode tentar declarar e inicializar alguns números dentro de variáveis, e tentar usá-los nas operações — as variáveis irão se comportar exatamente como os valores que elas armazenam para a finalidade das operações. Por exemplo:
 
-    ```js
-    var num1 = 10;
-    var num2 = 50;
-    9 * num1;
-    num2 / num1;
-    ```
+   ```js
+   var num1 = 10;
+   var num2 = 50;
+   9 * num1;
+   num2 / num1;
+   ```
 
 3. Por último, nesta seção, tente inserir algumas expressões mais complexas, como:
 
-    ```js
-    5 + 10 * 3;
-    num2 % 9 * num1;
-    num2 + num1 / 8 + 2;
-    ```
+   ```js
+   5 + 10 * 3;
+   (num2 % 9) * num1;
+   num2 + num1 / 8 + 2;
+   ```
 
 Alguns dos exemplos do último bloco podem não ter retornado os valores que você estava esperando; a seção abaixo pode lhe explicar o porquê.
 
@@ -202,7 +202,7 @@ Mas existem alguns tipos mais complexos, que fornecem atalhos úteis para manter
 
 Tente digitar alguns dos exemplos acima em seu console para ter uma ideia de como eles funcionam. Em cada caso, veja se você pode adivinhar qual é o valor antes de digitar a segunda linha.
 
-Note que você pode muito bem usar outros valores ​​no lado direito de cada expressão, por exemplo:
+Note que você pode muito bem usar outros valores no lado direito de cada expressão, por exemplo:
 
 ```js
 var x = 3; // x contém o valor 3
@@ -246,7 +246,7 @@ Não se preocupe se você estragar totalmente o código. Você sempre pode press
 
 > **Nota:** Talvez você já tenha visto alguém usando `==` e`!=` afim de testar igualdade ou desigualdade em JavaScript. Estes são operadores válidos em JavaScript, mas que diferem de `===`/`!==`. As versões anteriores testam se os valores são os mesmos, mas não se os tipos de dados dos valores são os mesmos. As últimas versões estritas testam a igualdade de ambos os valores e seus tipos de dados. Elas tendem a resultar em menos erros, por isso recomendamos que você as use.
 
-Se você tentar inserir alguns desses valores em um console, verá que todos eles retornam `true`/`false` — aqueles booleanos que mencionamos no último artigo. Eles são muito úteis, pois nos permitem tomar decisões em nosso código, e eles são usados ​​toda vez que queremos fazer uma escolha de algum tipo. Por exemplo, booleanos podem ser usados ​​para:
+Se você tentar inserir alguns desses valores em um console, verá que todos eles retornam `true`/`false` — aqueles booleanos que mencionamos no último artigo. Eles são muito úteis, pois nos permitem tomar decisões em nosso código, e eles são usados toda vez que queremos fazer uma escolha de algum tipo. Por exemplo, booleanos podem ser usados para:
 
 - Exibir o text label em um botão, dependendo se um recurso está ativado ou desativado
 - Exibir uma mensagem de 'game over' se um jogo acabou ou uma mensagem de vitória se o jogo foi vencido
@@ -261,19 +261,19 @@ Veremos como codificar essa lógica quando examinarmos instruções condicionais
 ```
 
 ```js
-var btn = document.querySelector('button');
-var txt = document.querySelector('p');
+var btn = document.querySelector("button");
+var txt = document.querySelector("p");
 
-btn.addEventListener('click', updateBtn);
+btn.addEventListener("click", updateBtn);
 
 function updateBtn() {
-   if (btn.textContent === 'Iniciar máquina') {
-       btn.textContent = 'Parar máquina';
-       txt.textContent = 'A máquina iniciou!';
-   } else {
-       btn.textContent = 'Iniciar máquina';
-       txt.textContent = 'A máquina está parada.';
-   }
+  if (btn.textContent === "Iniciar máquina") {
+    btn.textContent = "Parar máquina";
+    txt.textContent = "A máquina iniciou!";
+  } else {
+    btn.textContent = "Iniciar máquina";
+    txt.textContent = "A máquina está parada.";
+  }
 }
 ```
 
@@ -287,7 +287,7 @@ Você pode ver o operador de igualdade sendo usado apenas dentro da função `up
 
 ## Resumo
 
-Neste artigo, cobrimos as informações fundamentais que você precisa saber sobre números em JavaScript, por enquanto. Você verá os números sendo usados ​​de novo e de novo, durante todo o aprendizado de JavaScript. Portanto, é uma boa ideia tirar isso do caminho agora. Se você é uma daquelas pessoas que não gosta de matemática, pode se consolar com o fato de este capítulo ser muito curto.
+Neste artigo, cobrimos as informações fundamentais que você precisa saber sobre números em JavaScript, por enquanto. Você verá os números sendo usados de novo e de novo, durante todo o aprendizado de JavaScript. Portanto, é uma boa ideia tirar isso do caminho agora. Se você é uma daquelas pessoas que não gosta de matemática, pode se consolar com o fato de este capítulo ser muito curto.
 
 No próximo artigo, vamos explorar o texto e como o JavaScript nos permite manipulá-lo.
 

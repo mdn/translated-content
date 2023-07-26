@@ -1,16 +1,6 @@
 ---
 title: downloads.InterruptReason
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/InterruptReason
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - InterruptReason
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/InterruptReason
 ---
 
@@ -63,9 +53,9 @@ Divers :
 
 - `"CRASH"`
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.InterruptReason")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

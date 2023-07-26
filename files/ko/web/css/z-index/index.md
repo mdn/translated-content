@@ -1,12 +1,6 @@
 ---
 title: z-index
 slug: Web/CSS/z-index
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/z-index
 ---
 
 {{CSSRef}}

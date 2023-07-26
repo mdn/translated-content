@@ -243,7 +243,7 @@ li {
 
 ```css
 #replaced {
-  content: url("https://mdn.mozillademos.org/files/12668/MDN.svg");
+  content: url("mdn.svg");
 }
 
 #replaced::after { /* не будет отображаться, если замена элемента поддерживается */

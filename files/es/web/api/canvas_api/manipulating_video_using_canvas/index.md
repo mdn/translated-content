@@ -13,14 +13,13 @@ Al combinar las capacidades del elemento [`video`](/En/HTML/Element/Video) intro
 El documento XHTML que se utiliza para representar este contenido se muestra a continuación.
 
 ```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <style>
       body {
         background: black;
-        color:#CCCCCC;
+        color: #cccccc;
       }
       #c2 {
         background-image: url(foo.png);
@@ -28,10 +27,10 @@ El documento XHTML que se utiliza para representar este contenido se muestra a c
       }
       div {
         float: left;
-        border :1px solid #444444;
-        padding:10px;
+        border: 1px solid #444444;
+        padding: 10px;
         margin: 10px;
-        background:#3B3B3B;
+        background: #3b3b3b;
       }
     </style>
     <script type="text/javascript;version=1.8" src="main.js"></script>
@@ -39,11 +38,11 @@ El documento XHTML que se utiliza para representar este contenido se muestra a c
 
   <body onload="processor.doLoad()">
     <div>
-      <video id="video" src="video.ogv" controls="true"/>
+      <video id="video" src="video.ogv" controls="true" />
     </div>
     <div>
-      <canvas id="c1" width="160" height="96"/>
-      <canvas id="c2" width="160" height="96"/>
+      <canvas id="c1" width="160" height="96" />
+      <canvas id="c2" width="160" height="96" />
     </div>
   </body>
 </html>
@@ -53,9 +52,9 @@ Los puntos clave a tener en cuenta son:
 
 1. Este documento establece dos elemento&#x20;
 
-    `canvas`
+   `canvas`
 
-    &#x20;, con los identificadores de `c1` y `c2` . Canvas `c1` se utiliza para mostrar la imagen actual del video original, mientras que `c2` se utiliza para mostrar el video después de realizar la manipulación con el efecto croma; `c2` se carga previamente con la imagen fija que se utilizará para sustituir el fondo verde en el video.
+   &#x20;, con los identificadores de `c1` y `c2` . Canvas `c1` se utiliza para mostrar la imagen actual del video original, mientras que `c2` se utiliza para mostrar el video después de realizar la manipulación con el efecto croma; `c2` se carga previamente con la imagen fija que se utilizará para sustituir el fondo verde en el video.
 
 2. El código JavaScript es importado de un script llamado `main.js` ; este script utiliza JavaScript 1.8 características, de modo que la versión se especifica en la línea 22 al importar la secuencia de comandos.
 3. Cuando se carga el documento, se ejecuta el método `processor.doLoad()` de `main.js`.
@@ -135,11 +134,11 @@ El método `computeFrame()`, que se muestra a continuación, se encarga de ir a 
 
 Cuando esta rutina es llamada, el elemento video muestra el fotograma de datos de video más reciente, que tiene este aspecto:
 
-![video.png](/@api/deki/files/3282/=video.png)
+![video.png](video.png)
 
 En la línea 2, ese fotograma de video se copia al contexto gráfico `ctx1` del primer lienzo, especificando como alto y ancho los valores que previamente guardamos para dibujar el fotograma a mitad de tamaño. Ten en cuenta que puedes pasar simplemente el elemento de video al método `drawImage()` del contexto para dibujar el fotograma de video actual en dicho contexto. El resultado es:
 
-![sourcectx.png](/@api/deki/files/3284/=sourcectx.png)
+![sourcectx.png](sourcectx.png)
 
 Línea 3 obtiene una copia de los datos gráficos del actual fotograma de video llamando al método `getImageData()` en el primer contexto. Esto proporciona los datos de imagen en píxeles de 32 bits sin procesar que podemos después manipular. Línea 4 calcula el número de píxeles de la imagen al dividir entre cuatro el tamaño total de los datos de la imagen del fotograma.
 
@@ -149,7 +148,7 @@ Cada píxel de datos de imagen del fotograma que se encuentra que está dentro d
 
 La imagen resultante tiene este aspecto:
 
-![output.png](/@api/deki/files/3283/=output.png)
+![output.png](output.png)
 
 Esto se hace en varias ocasiones mientras el video se reproduce, de manera que fotograma tras fotograma se procesa y se muestra con el efecto de croma.
 

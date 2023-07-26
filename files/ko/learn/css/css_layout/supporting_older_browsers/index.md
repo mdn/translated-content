@@ -46,7 +46,7 @@ original_slug: Learn/CSS/CSS_layout/이전_브라우저_지원
 
 사이트에 들어오는 브라우저를 알면, 해당 대상에 사용하고 싶은 기술을 평가할 수 있고, 그리고 그 기술을 이용할 수 없는 방문객들에게 얼마나 쉽게 대안을 제공할 수 있는지 진단할 수 있습니다. 우리는 CSS 속성을 상세히 설명하는 각 페이지에 대한 브라우저 호환성 정보를 모질라 개발자 네트워크에서 제공함으로써 쉽게 사용할 수 있도록 노력하고 있습니다. 예를 들어, {{cssxref("grid-template-columns")}} 페이지를 살펴보십시오. 이 페이지의 맨 아래에는 이 속성을 지원하기 시작한 버전과 함께 주요 브라우저가 나열된 표가 있습니다.
 
-![](https://mdn.mozillademos.org/files/16047/browser-table.png)
+![](browser-table.png)
 
 기능이 얼마나 잘 지원되는지 확인하는 또 다른 일반적인 방법은 [Can I Use](https://caniuse.com/) 웹 사이트입니다. 이 사이트에는 대부분의 웹 플랫폼 기능이 브라우저 지원 상태에 대한 정보와 함께 나열됩니다. 위치별로 사용 통계를 볼 수 있습니다. 주로 특정 지역의 사용자가있는 사이트에서 작업하는 경우 유용합니다. Google 웹 로그 분석 계정을 연결하여 사용자 데이터를 기반으로 분석할 수도 있습니다.
 
@@ -109,7 +109,7 @@ CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용
 - 다단 레이아웃
   - : 특정 레이아웃의 경우 당신은 [다단](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)을 대체품로 사용할 수 있습니다. 여러분의 콘테이너가 `column-*` 속성에 속한 것으로 정의되었다면 grid 컨테이너가 될 것이고, 다단 동작은 발생하지 않습니다.
 - grid 대체품 역할인 Flexbox<
-  - : [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox)는 인터넷 익스플로러 10과 11이 지원하기 때문에 grid를 지원하는 브라우저가 훨씬 많이 있습니다. 다만 이 단원의 뒷부분에서 설명하고 있는 구형 브라우저에서 flex를 지원하기 위한 처리 방법에 대해서도 확인해보세요. flex 컨테이너를 grid 컨테이너로 만들면 자식에 적용된 모든 `flex` 속성은 무시됩니다.
+  - : [Flexbox](/ko/docs/Learn/CSS/CSS_layout/Flexbox)는 인터넷 익스플로러 10과 11이 지원하기 때문에 grid를 지원하는 브라우저가 훨씬 많이 있습니다. 다만 이 단원의 뒷부분에서 설명하고 있는 구형 브라우저에서 flex를 지원하기 위한 처리 방법에 대해서도 확인해보세요. flex 컨테이너를 grid 컨테이너로 만들면 자식에 적용된 모든 `flex` 속성은 무시됩니다.
 
 구형 브라우저에서 레이아웃 조정이 많이 필요한 경우 CSS를 이런 식으로 사용하면 괜찮은 경험을 할 수 있습니다. 오래되고 잘 지원되는 기술을 기반으로 간단한 레이아웃을 추가한 다음 최신 CSS를 사용하여 잠재 고객의 90% 이상이 볼 수있는 레이아웃을 만듭니다. 그러나 대체 코드에 새 브라우저가 해석할 내용이 포함되어야하는 경우가 있습니다. 이에 대한 좋은 예는 부동 항목에 백분율 너비를 추가하여 열을 마치 grid 디스플레이처럼 보이도록 컨테이너를 채울 수 있도록 (너비를) 늘리는 경우입니다.
 
@@ -225,18 +225,3 @@ Flexbox 및 그리드를 지원하는 대부분의 브라우저를 사용하면 
 - [feature query 사용하기 (동영상)](https://gridbyexample.com/learn/2016/12/24/learning-grid-day24/)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
-
-## 이번 단위에는
-
-- [CSS 레이아웃 소개](/ko/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal Flow](/ko/docs/Learn/CSS/CSS_layout/일반_흐름)
-- [Flexbox](/ko/docs/Learn/CSS/CSS_layout/Flexbox)
-- [그리드](/ko/docs/Learn/CSS/CSS_layout/Grids)
-- [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats)
-- [위치잡기](/ko/docs/Learn/CSS/CSS_layout/위치잡기)
-- [다단 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [반응형 디자인](/ko/docs/Learn/CSS/CSS_layout/반응형_디자인)
-- [미디어 쿼리 초보자 안내서](/ko/docs/Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서)
-- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/레거시_레이아웃_메서드)
-- [이전 브라우저 지원](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%B4%EC%A0%84_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%A7%80%EC%9B%90)
-- 레이아웃 이해도 필수 평가

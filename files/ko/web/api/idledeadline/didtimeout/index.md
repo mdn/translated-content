@@ -1,7 +1,6 @@
 ---
 title: IdleDeadline.didTimeout
 slug: Web/API/IdleDeadline/didTimeout
-translation_of: Web/API/IdleDeadline/didTimeout
 ---
 
 {{APIRef("Background Tasks")}}
@@ -26,11 +25,11 @@ Boolean 으로, 콜백의 timeout 기간이 경과하여 콜백이 실행 중이
 
 [Cooperative Scheduling of Background Tasks API](/ko/docs/Web/API/Background_Tasks_API)의 [complete example](/ko/docs/Web/API/Background_Tasks_API#Example) 를 참조하세요
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

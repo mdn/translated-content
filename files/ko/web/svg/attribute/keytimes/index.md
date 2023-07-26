@@ -1,7 +1,6 @@
 ---
 title: keyTimes
 slug: Web/SVG/Attribute/keyTimes
-translation_of: Web/SVG/Attribute/keyTimes
 ---
 « [SVG Attribute reference home](/ko/docs/Web/SVG/Attribute)
 

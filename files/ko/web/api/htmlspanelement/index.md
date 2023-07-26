@@ -1,12 +1,6 @@
 ---
 title: HTMLSpanElement
 slug: Web/API/HTMLSpanElement
-tags:
-  - API
-  - HTML DOM
-  - 레퍼런스
-  - 인터페이스
-translation_of: Web/API/HTMLSpanElement
 ---
 
 {{APIRef("HTML DOM")}}

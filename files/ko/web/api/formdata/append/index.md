@@ -1,9 +1,6 @@
 ---
 title: FormData.append()
 slug: Web/API/FormData/append
-page-type: web-api-instance-method
-browser-compat: api.FormData.append
-translation_of: Web/API/FormData/append
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -62,11 +59,11 @@ formData.append('userpic[]', myFileInput.files[1], 'chris2.jpg');
 
 이 기술을 사용하면 서버에 올라간 결과 데이터가 루프를 도는데 도움이 되는 구조이기 때문에, 이 기술을 사용하면 다중 -파일 업로드를 보다 쉽게 처리할 수 있습니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

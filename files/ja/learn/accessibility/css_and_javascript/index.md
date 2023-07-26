@@ -49,7 +49,8 @@ h1 {
   font-size: 5rem;
 }
 
-p, li {
+p,
+li {
   line-height: 1.5;
   font-size: 1.6rem;
 }
@@ -76,7 +77,8 @@ p, li {
 強調したテキストに対して、なんらかの単純な色付けを加えたいかもしれません。
 
 ```css
-strong, em {
+strong,
+em {
   color: #a60000;
 }
 ```
@@ -88,7 +90,10 @@ strong, em {
 略語、頭文字語、つまり頭文字で表したものを、その展開形と関連付けることを可能とする要素は、たとえば以下のようなものです。
 
 ```html
-<p>ウェブ・コンテンツは、<abbr title="Hypertext Markup Language">HTML</abbr>を使ってマークアップされています。</p>
+<p>
+  ウェブ・コンテンツは、<abbr title="Hypertext Markup Language">HTML</abbr
+  >を使ってマークアップされています。
+</p>
 ```
 
 この場合も、なんらかの単純な方法でスタイルを付けたいかもしれません。
@@ -106,7 +111,9 @@ abbr {
 ハイパーリンク——ウェブ上の新たな場所に行く方法——は、たとえば以下のようなものです。
 
 ```html
-<p><a href="https://www.mozilla.org">Mozilla のホームページ</a>に来てくださいね。</p>
+<p>
+  <a href="https://www.mozilla.org">Mozilla のホームページ</a>に来てくださいね。
+</p>
 ```
 
 ある種のとても簡単なリンクのスタイル付けを以下に示します。
@@ -116,7 +123,9 @@ a {
   color: #ff0000;
 }
 
-a:hover, a:visited, a:focus {
+a:hover,
+a:visited,
+a:focus {
   color: #a60000;
   text-decoration: none;
 }
@@ -142,7 +151,7 @@ a:active {
 ```html
 <div>
   <label for="name">お名前を入力してください</label>
-  <input type="text" id="name" name="name">
+  <input type="text" id="name" name="name" />
 </div>
 ```
 
@@ -233,7 +242,7 @@ JavaScript に頼りすぎると、しばしば問題が起きます。ときど
 
 ```html
 <label for="name">お名前を入力してください (Enter your name):</label>
-<input type="text" name="name" id="name">
+<input type="text" name="name" id="name" />
 ```
 
 フォームが送信されるときにだけ検査をしています。これは、UI をあまりに頻繁に更新しないようにするため、そして、スクリーン・リーダーのユーザーを (また、おそらくは他のユーザーも) 潜在的に混乱させることがないようにするためです。
@@ -242,16 +251,16 @@ JavaScript に頼りすぎると、しばしば問題が起きます。ときど
 form.onsubmit = validate;
 
 function validate(e) {
-  errorList.innerHTML = '';
-  for(var i = 0; i < formItems.length; i++) {
+  errorList.innerHTML = "";
+  for (var i = 0; i < formItems.length; i++) {
     var testItem = formItems[i];
-    if(testItem.input.value === '') {
-      errorField.style.left = '360px';
+    if (testItem.input.value === "") {
+      errorField.style.left = "360px";
       createLink(testItem);
     }
   }
 
-  if(errorList.innerHTML !== '') {
+  if (errorList.innerHTML !== "") {
     e.preventDefault();
   }
 }
@@ -267,11 +276,15 @@ function validate(e) {
 
 ```js
 function createLink(testItem) {
-  var listItem = document.createElement('li');
-  var anchor = document.createElement('a');
-  anchor.textContent = testItem.input.name + ' field is empty: fill in your ' + testItem.input.name + '.';
-  anchor.href = '#' + testItem.input.name;
-  anchor.onclick = function() {
+  var listItem = document.createElement("li");
+  var anchor = document.createElement("a");
+  anchor.textContent =
+    testItem.input.name +
+    " field is empty: fill in your " +
+    testItem.input.name +
+    ".";
+  anchor.href = "#" + testItem.input.name;
+  anchor.onclick = function () {
     testItem.input.focus();
   };
   listItem.appendChild(anchor);
@@ -281,7 +294,7 @@ function createLink(testItem) {
 
 各リンクは二つの役割を果たします。つまり、何のエラーなのかを教えてくれますし、さらに、そのリンクをクリックする / アクティブにすると問題の入力要素へ直接ジャンプして入力を訂正できるようになっています。
 
-> **メモ:** この例の `focus()` の部分は少し手が込んでいます。Chrome と Edge (と、IE の新しいバージョン) は、リンクがクリックされたときに要素にフォーカスを当てるので、`onclick`/`focus()` ブロックを必要としません。Safari はリンク自体とともにフォーム要素をハイライトするだけであり、そのため、実際にフォーム要素にフォーカスを当てるには `onclick`/`focus()` ブロックが必要です。Firefox は、こうした状況において入力要素に適切にフォーカスを当てることはまったくありません。よって、Firefox のユーザーは、現時点ではこの `onclick`/`focus()` ブロックの利益を享受できません (それ以外のすべてはうまく機能するのですが)。Firefox の問題はすぐに修正されるはずです。というのも、他のブラウザーと同等のふるまいを Firefox にさせるための作業が、今なされている最中ですから ({{bug(277178)}} を参照).
+> **メモ:** この例の `focus()` の部分は少し手が込んでいます。Chrome と Edge (と、IE の新しいバージョン) は、リンクがクリックされたときに要素にフォーカスを当てるので、`onclick`/`focus()` ブロックを必要としません。Safari はリンク自体とともにフォーム要素をハイライトするだけであり、そのため、実際にフォーム要素にフォーカスを当てるには `onclick`/`focus()` ブロックが必要です。Firefox は、こうした状況において入力要素に適切にフォーカスを当てることはまったくありません。よって、Firefox のユーザーは、現時点ではこの `onclick`/`focus()` ブロックの利益を享受できません (それ以外のすべてはうまく機能するのですが)。Firefox の問題はすぐに修正されるはずです。というのも、他のブラウザーと同等のふるまいを Firefox にさせるための作業が、今なされている最中ですから ([Firefox バグ 277178](https://bugzil.la/277178) を参照).
 
 さらに、ソース順における先頭に `errorField` を置いてあります (CSS を使って、UI 上では別のところに配置してありますが)。これが意味することは、ユーザーが、ページの最初に戻ることで、自分のフォーム送信でまさに何が間違っているのかも分かるし、問題の入力要素にも行ける、ということです。
 
@@ -333,13 +346,3 @@ imgThumb.onblur = hideImg;
 次は WAI-ARIA の番です!
 
 {{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
-
-## このモジュール内
-
-- [アクセシビリティとは?](/ja/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: アクセシビリティの基礎](/ja/docs/Learn/Accessibility/HTML)
-- [CSS と JavaScript のアクセシビリティのベスト・プラクティス](/ja/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA の基本](/ja/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [アクセシブルなマルチメディア](/ja/docs/Learn/Accessibility/Multimedia)
-- [モバイルアクセシビリティ](/ja/docs/Learn/Accessibility/Mobile)
-- [アクセシビリティのトラブルシューティング](/ja/docs/Learn/Accessibility/Accessibility_troubleshooting)

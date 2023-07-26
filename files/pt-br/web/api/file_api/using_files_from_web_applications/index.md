@@ -28,7 +28,7 @@ In this case, the file list passed to the `handleFiles()` function contains one 
 
 ### Using hidden file input elements using the click() method
 
-Starting in Gecko 2.0 {{ geckoRelease("2.0") }}, you can hide the admittedly ugly file {{ HTMLElement("input") }} element and present your own interface for opening the file picker and displaying which file or files the user has selected. You can do this by styling the input element with `display:none` and calling the {{ domxref("element.click","click()") }} method on the {{ HTMLElement("input") }} element.
+Starting in Gecko 2.0, you can hide the admittedly ugly file {{ HTMLElement("input") }} element and present your own interface for opening the file picker and displaying which file or files the user has selected. You can do this by styling the input element with `display:none` and calling the {{ domxref("element.click","click()") }} method on the {{ HTMLElement("input") }} element.
 
 Consider this HTML:
 
@@ -72,7 +72,7 @@ Note that in this case, the `handleFiles()` function looks up the file list inst
 
 ## Using object URLs
 
-Gecko 2.0 {{ geckoRelease("2.0") }} introduces support for the DOM {{ domxref("window.URL.createObjectURL()") }} and {{ domxref("window.URL.revokeObjectURL()") }} methods. These let you create simple URL strings that can be used to reference any data that can be referred to using a DOM {{ domxref("File") }} object, including local files on the user's computer.
+Gecko 2.0 introduces support for the DOM {{ domxref("window.URL.createObjectURL()") }} and {{ domxref("window.URL.revokeObjectURL()") }} methods. These let you create simple URL strings that can be used to reference any data that can be referred to using a DOM {{ domxref("File") }} object, including local files on the user's computer.
 
 When you have a {{ domxref("File") }} object you'd like to reference by URL from HTML, you can create an object URL for it like this:
 

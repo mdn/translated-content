@@ -12,7 +12,7 @@ slug: Web/API/PushManager/getSubscription
 ## 構文
 
 ```js
-​PushManager.getSubscription().then(function(pushSubscription) { ... } );
+PushManager.getSubscription().then(function(pushSubscription) { ... } );
 ```
 
 ### 引数

@@ -1,11 +1,6 @@
 ---
 title: Accept
 slug: Web/HTTP/Headers/Accept
-tags:
-  - Entête HTTP
-  - Entête de Requête
-  - HTTP
-  - Reference
 translation_of: Web/HTTP/Headers/Accept
 ---
 
@@ -64,15 +59,13 @@ Accept: image/*
 Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 ```
 
-## Specifications
+## Spécifications
 
-| Specification                                | Titre                                                              |
-| -------------------------------------------- | ------------------------------------------------------------------ |
-| {{RFC("7231", "Accept", "5.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Vocabulaire et cas d'usage |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Accept")}}
+{{Compat}}
 
 ## Voir aussi
 

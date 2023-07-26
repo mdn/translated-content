@@ -1,13 +1,9 @@
 ---
 title: WebGL 컨텍스트에 2D 컨텐츠 추가하기
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
-tags:
-  - Tutorial
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 일단 성공적으로 [WebGL컨텍스트를 생성](/en/WebGL/Getting_started_with_WebGL)하면 그 안에 렌더링을 시작할 수 있습니다. 가장 간단히 해볼 수 있는 것은 텍스쳐가 없는 2D 객체를 렌더링 하는 것입니다. 한번 사각형을 그리는 코드를 작성하는 것으로 시작해봅시다.
 
@@ -148,7 +144,7 @@ fragment의 색상에서 사용되는 gl_FragColor는 GL에서 만들어진 변�
 
 ## 객체 생성
 
-사각형 렌더링을 하기 전에 사각형의 각 정점들을 저장할 버퍼를 만들어야 합니다. 이를 **initBuffers()**라는 함수를 이용해 해보도록 하겠습니다. 앞으로 고급 WebGL 개념을 살펴보면서, 더욱 다양하고 복잡한 3D 오브젝트를 생성하고자 할 때 이 루틴을 많이 사용하게 될 것입니다.
+사각형 렌더링을 하기 전에 사각형의 각 정점들을 저장할 버퍼를 만들어야 합니다. 이를 **initBuffers()** 라는 함수를 이용해 해보도록 하겠습니다. 앞으로 고급 WebGL 개념을 살펴보면서, 더욱 다양하고 복잡한 3D 오브젝트를 생성하고자 할 때 이 루틴을 많이 사용하게 될 것입니다.
 
 ```js
 var horizAspect = 480.0/640.0;

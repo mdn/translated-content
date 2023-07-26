@@ -54,24 +54,24 @@ translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 1. Скопируйте изображение, которое вы выбрали ранее, в папку `images`.
 2. Откройте ваш файл `index.html` и вставьте следующий код в файл именно в таком виде. Не беспокойтесь о том, что все это значит - позже в этом руководстве мы рассмотрим структуры более подробно.
 
-    ```html
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>Моя тестовая страница</title>
-      </head>
-      <body>
-        <img src="" alt="Моё тестовое изображение">
-      </body>
-    </html>
-    ```
+   ```html
+   <!doctype html>
+   <html>
+     <head>
+       <meta charset="utf-8" />
+       <title>Моя тестовая страница</title>
+     </head>
+     <body>
+       <img src="" alt="Моё тестовое изображение" />
+     </body>
+   </html>
+   ```
 
 3. Строка `<img src="" alt="Моё тестовое изображение">` - это HTML код, который вставляет изображение на страницу. Мы должны сказать HTML, где находится изображение. Изображение находится внутри папки _images_, которая находится в той же директории что и `index.html`. Чтобы спуститься вниз по нашей файловой структуре от `index.html` до нашего изображения, путь к файлу должен выглядеть так `images/your-image-filename`. Например наше изображение, названное `firefox-icon.png`, имеет такой путь к файлу: `images/firefox-icon.png`.
 4. Вставьте путь к файлу в ваш HTML код между двойными кавычками `src=""`.
 5. Сохраните ваш HTML файл, а затем загрузите его в вашем браузере (двойной щелчок по файлу). Вы должны увидеть вашу новую веб-страницу, отображающую ваше изображение!
 
-![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](https://mdn.mozillademos.org/files/9229/website-screenshot.png)
+![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](website-screenshot.png)
 
 Некоторые общие правила о путях к файлам:
 
@@ -88,7 +88,7 @@ translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 
 К настоящему моменту структура вашей папки должна выглядеть примерно так:
 
-![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](https://mdn.mozillademos.org/files/9231/file-structure.png)
+![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 

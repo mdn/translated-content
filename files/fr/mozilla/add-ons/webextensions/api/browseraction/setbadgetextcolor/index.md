@@ -1,15 +1,6 @@
 ---
 title: browserAction.setBadgeTextColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeTextColor
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setBadgeTextColor
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeTextColor
 ---
 
@@ -21,8 +12,8 @@ Définit la couleur du texte du badge de l'action du navigateur. Les onglets san
 
 ```js
 browser.browserAction.setBadgeTextColor(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -49,36 +40,36 @@ browser.browserAction.setBadgeTextColor(
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la couleur n'est pas définie.
 - Si `windowId` et `tabId` sont tous deux omis, la couleur globale du texte du badge est définie à la place.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setBadgeTextColor",2)}}
-
 ## Exemples
 
 Une couleur de texte de badge qui commence par le rouge et passe au vert lorsque l'on clique sur l'action du navigateur :
 
 ```js
-browser.browserAction.setBadgeText({text: "1234"});
-browser.browserAction.setBadgeTextColor({color: "red"});
+browser.browserAction.setBadgeText({ text: "1234" });
+browser.browserAction.setBadgeTextColor({ color: "red" });
 
-browser.browserAction.onClicked.addListener(()=> {
-  browser.browserAction.setBadgeTextColor({color: "green"});
+browser.browserAction.onClicked.addListener(() => {
+  browser.browserAction.setBadgeTextColor({ color: "green" });
 });
 ```
 
 Définissez la couleur du texte du badge uniquement pour l'onglet actif :
 
 ```js
-browser.browserAction.setBadgeText({text: "1234"});
-browser.browserAction.setBadgeTextColor({color: "red"});
+browser.browserAction.setBadgeText({ text: "1234" });
+browser.browserAction.setBadgeTextColor({ color: "red" });
 
-browser.browserAction.onClicked.addListener((tab)=> {
+browser.browserAction.onClicked.addListener((tab) => {
   browser.browserAction.setBadgeTextColor({
     color: "green",
-    tabId: tab.id
+    tabId: tab.id,
   });
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

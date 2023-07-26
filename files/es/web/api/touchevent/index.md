@@ -88,9 +88,9 @@ See the [example on the main Touch events article](/en/DOM/Touch_events#Example)
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.TouchEvent")}}
+{{Compat}}
 
 ## See also
 

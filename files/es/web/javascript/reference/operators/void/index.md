@@ -1,11 +1,6 @@
 ---
 title: void
 slug: Web/JavaScript/Reference/Operators/void
-tags:
-  - JavaScript
-  - Operator
-  - Unary
-translation_of: Web/JavaScript/Reference/Operators/void
 original_slug: Web/JavaScript/Referencia/Operadores/void
 ---
 

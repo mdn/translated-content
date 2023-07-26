@@ -59,9 +59,9 @@ console.log((1234.5).toPrecision(2)); // logs '1.2e+3'
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.toPrecision")}}
+{{Compat}}
 
 ## Vea También
 

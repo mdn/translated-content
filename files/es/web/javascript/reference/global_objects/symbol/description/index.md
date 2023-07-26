@@ -1,9 +1,7 @@
 ---
 title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/description
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
-browser-compat: javascript.builtins.Symbol.description
 l10n:
   sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---

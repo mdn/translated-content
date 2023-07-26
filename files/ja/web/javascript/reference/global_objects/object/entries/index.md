@@ -103,7 +103,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### `Object` の反復処理
 
-[配列の分割](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring)を使って、オブジェクトを簡単に反復処理することができます。
+[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#配列の分割代入)を使って、オブジェクトを簡単に反復処理することができます。
 
 ```js
 const obj = { foo: 'bar', baz: 42 };

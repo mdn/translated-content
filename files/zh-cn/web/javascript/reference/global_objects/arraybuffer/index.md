@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 [`ArrayBuffer()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer) 构造函数创建一个以字节为单位的给定长度的新 `ArrayBuffer`。你也可以从现有的数据（例如，从 [Base64](/zh-CN/docs/Glossary/Base64) 字符串或者[从本地文件](/zh-CN/docs/Web/API/FileReader/readAsArrayBuffer)）获取数组缓冲区。
 
-`ArrayBuffer` 是一个{{glossary("Transferable objects","可转移对象")}}。
+`ArrayBuffer` 是一个[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)。
 
 ## 构造函数
 

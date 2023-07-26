@@ -1,7 +1,6 @@
 ---
 title: 'SyntaxError: missing ) after argument list'
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
-translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 ---
 
 {{jsSidebar("Errors")}}
@@ -38,4 +37,4 @@ console.log('PI: ' + Math.PI);
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/ko/docs/Web/JavaScript/Guide/Functions)

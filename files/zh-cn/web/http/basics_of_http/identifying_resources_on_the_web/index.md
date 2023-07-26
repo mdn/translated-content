@@ -17,8 +17,8 @@ URI 的最常见形式是统一资源定位符 ({{Glossary("URL")}})，它也被
 
 ```plain
 https://developer.mozilla.org
-https://developer.mozilla.org/en-US/docs/Learn/
-https://developer.mozilla.org/en-US/search?q=URL
+https://developer.mozilla.org/zh-CN/docs/Learn/
+https://developer.mozilla.org/zh-CN/search?q=URL
 ```
 
 在浏览器的地址栏中输入上述任一地址，浏览器就会加载相应的网页（资源）。
@@ -41,7 +41,7 @@ urn:ietf:rfc:7230
 上面两个 URN 标识了下面的资源：
 
 - 乔治·奥威尔所著的《1984》
-- IETF 规范 7230，超文本传输 ​​ 协议 (HTTP/1.1)：Message Syntax and Routing.
+- IETF 规范 7230，超文本传输 协议 (HTTP/1.1)：Message Syntax and Routing.
 
 ## 统一资源标识符的语法 (URI)
 
@@ -55,7 +55,7 @@ urn:ietf:rfc:7230
 | data        | [Data URIs](/zh-CN/docs/Web/HTTP/data_URIs)                           |
 | file        | 指定主机上文件的名称                                                  |
 | ftp         | [文件传输协议](/zh-CN/docs/Glossary/FTP)                              |
-| http/https  | [超文本传输 ​​ 协议／安全的超文本传输协议](/zh-CN/docs/Glossary/HTTP) |
+| http/https  | [超文本传输 协议／安全的超文本传输协议](/zh-CN/docs/Glossary/HTTP) |
 | mailto      | 电子邮件地址                                                          |
 | ssh         | 安全 shell                                                            |
 | tel         | 电话                                                                  |
@@ -91,7 +91,7 @@ urn:ietf:rfc:7230
 ## 示例
 
 ```plain
-https://developer.mozilla.org/en-US/docs/Learn
+https://developer.mozilla.org/zh-CN/docs/Learn
 tel:+1-816-555-1212
 git@github.com:mdn/browser-compat-data.git
 ftp://example.org/resource.txt

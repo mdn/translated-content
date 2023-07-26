@@ -1,14 +1,8 @@
 ---
 title: '<kbd>: 키보드 입력 요소'
 slug: Web/HTML/Element/kbd
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/kbd
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<kbd>` 요소**는 키보드 입력, 음성 입력 등 임의의 장치를 사용한 사용자의 입력을 나타냅니다. 관례에 따라 {{glossary("user agent", "사용자 에이전트")}}의 고정폭 글꼴로 표시하지만, HTML 표준은 그런 점을 강제하지 않습니다.
@@ -186,7 +180,7 @@ HTML을 업데이트해 앞선 스타일을 적용합니다.
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.kbd")}}
+{{Compat}}
 
 ## 같이 보기
 

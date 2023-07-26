@@ -11,11 +11,11 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 
 ### HTML
 
-- The [元素的畫面佈局與外觀呈現。">`HTMLImageElement`](/zh-TW/docs/Web/API/HTMLImageElement) `crossOrigin` property has been added and the [`crossorigin`](/zh-TW/docs/Web/HTML/Element/img#attr-crossorigin) attribute has been added to the [`<img>`](/zh-TW/docs/Web/HTML/Element/img) element. (see [bug 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299))
+- The [元素的畫面佈局與外觀呈現。">`HTMLImageElement`](/zh-TW/docs/Web/API/HTMLImageElement) `crossOrigin` property has been added and the [`crossorigin`](/zh-TW/docs/Web/HTML/Element/img#crossorigin) attribute has been added to the [`<img>`](/zh-TW/docs/Web/HTML/Element/img) element. (see [bug 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299))
 - The [`HTMLSelectElement.add()`](</zh-TW/docs/Web/API/HTMLSelectElement#add()>) method now supports either an item or index of an item that the new item should be inserted before. Previously it only supported an item. (see [bug 666200](https://bugzilla.mozilla.org/show_bug.cgi?id=666200))
 - The `HTMLIsIndexElement` constructor has been removed. No elements have implemented this interface since before Firefox 4.
 - The HTML5 "context menu" feature (`contextmenu` attribute), which lets you add custom element specific items to native context menu, is now supported (the implementation is still experimental awaiting changes in the specification; see [bug 617528](https://bugzilla.mozilla.org/show_bug.cgi?id=617528)).
-- Support for the [`accesskeylabel`](/zh-TW/HTML/Global_attributes#attr-accesskeylabel) attribute has been added to all elements.
+- Support for the [`accesskeylabel`](/zh-TW/HTML/Global_attributes#accesskeylabel) attribute has been added to all elements.
 - The [element is used to create interactive controls for web-based forms in order to accept data from the user.">`<input>`](/zh-TW/docs/Web/HTML/Element/input) and [`<textarea>`](/zh-TW/docs/Web/HTML/Element/textarea) elements now support the `selectionDirection` attribute, and their `setSelectionRange()` methods have been updated to support optionally specifying a direction.
 - Most elements now get a focus ring drawn around them if they've been made focusable by using the `tabindex` attribute and the user then focuses the element.
 - In a set of nested [`<label>`](/zh-TW/docs/Web/HTML/Element/label) elements click events do no longer trigger multiple elements, which caused Firefox to stop responding in the past (see [s">bug 646157](https://bugzilla.mozilla.org/show_bug.cgi?id=646157)).

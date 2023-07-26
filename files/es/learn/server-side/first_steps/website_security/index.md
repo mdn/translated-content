@@ -140,10 +140,3 @@ Este artículo ha explicado el concepto de seguridad en sitios web y algunas de 
 Hemos llegado al final de [este módulo](/es/docs/Learn/Server-side/Primeros_pasos), tratando tus primeros pasos en la programación de lado servidor de un sitio web. Esperamos que hayas disfrutado del aprendizaje de los conceptos fundamentales y estés listo para seleccionar un framework web y empezar a programar.
 
 {{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## En este módulo
-
-- [Introducción al lado servidor](/es/docs/Learn/Server-side/Primeros_pasos/Introducci%C3%B3n)
-- [Visión general Cliente-Servidor](/es/docs/Learn/Server-side/Primeros_pasos/Vision_General_Cliente_Servidor)
-- [Frameworks web de lado servidor](/es/docs/Learn/Server-side/Primeros_pasos/Web_frameworks)
-- [Seguridad de sitios web](/es/docs/Learn/Server-side/Primeros_pasos/seguridad_sitios_web)

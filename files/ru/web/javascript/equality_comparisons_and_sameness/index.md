@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 JavaScript предоставляет три оператора сравнения величин:
 
 - равенство ("двойное равно") использует [==](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality),
-- строгое равенство (или "тройное равно" или "идентично") использует [===](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity),
+- строгое равенство ("тройное равно" или "идентично") использует [===](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Identity),
 - и [`Object.is`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/is) (новшество из ECMAScript 6).
 
 Выбор оператора зависит от типа сравнения, которое необходимо произвести.
@@ -186,27 +186,27 @@ function attemptMutation(v) {
 
 Именно для сравнения нового и текущего неизменяемых свойств используется сравнение одинаковых величин, представленное методом {{jsxref("Object.is")}}.
 
-## Same-value-zero equality
+## Равенство одинаковых величин и нулей
 
-Similar to same-value equality, but +0 and -0 are considered equal.
+Аналогично равенству одинаковых величин, но +0 и -0 считаются равными.
 
-Same-value-zero equality is not exposed as a JavaScript API, but can be implemented with custom code:
+Равенство одинаковых величин и нулей не предоставляется как JavaScript API, но может быть реализовано с помощью пользовательского кода:
 
 ```js
 function sameValueZero(x, y) {
   if (typeof x === "number" && typeof y === "number") {
-    // x and y are equal (may be -0 and 0) or they are both NaN
+    // x и y равны (могут быть -0 и 0) или они оба равны NaN
     return x === y || (x !== x && y !== y);
   }
   return x === y;
 }
 ```
 
-Same-value-zero only differs from strict equality by treating `NaN` as equivalent, and only differs from same-value equality by treating `-0` as equivalent to `0`. This makes it usually have the most sensible behavior during searching, especially when working with `NaN`. It's used by [`Array.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), [`TypedArray.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes), as well as [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set) methods for comparing key equality.
+_Равенство одинаковых величин и нулей_ отличается от _строгого равенства_ тем, что принимает каждое значение `NaN` равным любому другому значению `NaN`, а от _равенства одинаковых величин_ тем, что принимает `-0` равным `0`. Подобное поведение обычно оказывается самым уместным при поиске в списках, особенно при работе с `NaN`. Данная стратегия сравнения используется в методах [`Array.prototype.includes()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes), [`TypedArray.prototype.includes()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/includes), а так же в [`Map`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Map) и [`Set`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Set) для оценки равенства ключей.
 
 ## Спецификации для равенства, строгого равенства и равенства одинаковых величин
 
-В стандарте ES5, сравнение выполняемое оператором [==](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) описывается в секции [11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3). Описание оператора [===](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) находится в секции [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6). В секции [9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) ES5 описывает операцию сравнение одинаковых величин для внутреннего движка JS. Строгое равенство и равенство одинаковых величин, практически одинаковы, за исключением обработки [числовых типов](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number). ES6 предлагает использовать алгоритм сравнения одинаковых величин через вызов [`Object.is`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
+В стандарте ES5, сравнение выполняемое оператором [==](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) описывается в секции [11.9.3, The Abstract Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.3). Описание оператора [===](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) находится в секции [11.9.6, The Strict Equality Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-11.9.6). В секции [9.12, The SameValue Algorithm](http://ecma-international.org/ecma-262/5.1/#sec-9.12) ES5 описывает операцию сравнение одинаковых величин для внутреннего движка JS. Строгое равенство и равенство одинаковых величин, практически одинаковы, за исключением обработки [числовых типов](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number). ES6 предлагает использовать алгоритм сравнения одинаковых величин через вызов [`Object.is`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/is).
 
 ### Как понимать все эти способы сравнения?
 
@@ -243,34 +243,34 @@ Same-value-zero only differs from strict equality by treating `NaN` as equivalen
 | `'foo'`             | `NaN`               | `❌ false` | `❌ false` | `❌ false`  | `❌ false`      |
 | `NaN`               | `NaN`               | `❌ false` | `❌ false` | `✅ true`   | `✅ true`       |
 
-### When to use Object.is() versus triple equals
+### Когда использовать Object.is(), а когда ===
 
-In general, the only time {{jsxref("Object.is")}}'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors, when it is desirable for your work to mirror some of the characteristics of {{jsxref("Object.defineProperty")}}. If your use case does not require this, it is suggested to avoid {{jsxref("Object.is")}} and use [`===`](/en-US/docs/Web/JavaScript/Reference/Operators) instead. Even if your requirements involve having comparisons between two {{jsxref("NaN")}} values evaluate to `true`, generally it is easier to special-case the {{jsxref("NaN")}} checks (using the {{jsxref("isNaN")}} method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.
+Особое поведение {{jsxref("Object.is")}} по отношению к нулям, вероятно, будет представлять интерес при реализации определенных схем метапрограммирования, особенно в отношении дескрипторов свойств, когда желательно, чтобы ваш алгоритм имел такое же поведение, как {{jsxref("Object.defineProperty")}}. В случае, если вам этого не требуется, рекомендуется избегать {{jsxref("Object.is")}} и вместо этого использовать [`===`](/ru/docs/Web/JavaScript/Reference/Operators). Как правило, даже при необходимости сравнения {{jsxref("NaN")}}-значений, эффективнее выполнить проверку таких значений отдельно, при помощи метода {{jsxref("isNaN")}}, чем выяснять, как окружающие вычисления могут повлиять на знаки нулей и как это отразится на вашем алгоритме.
 
-Here's a non-exhaustive list of built-in methods and operators that might cause a distinction between `-0` and `+0` to manifest itself in your code:
+Вот неполный список встроенных методов и операторов, при использовании которых, различие между `-0` и `+0` может оказаться важным для вашего кода:
 
-- [`-` (unary negation)](/en-US/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [`-` (unary negation)](/ru/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 
-  - : Consider the following example:
+  - : Рассмотрим следующий пример:
 
     ```js
     const stoppingForce = obj.mass * -obj.velocity;
     ```
 
-    If `obj.velocity` is `0` (or computes to `0`), a `-0` is introduced at that place and propagates out into `stoppingForce`.
+    Если `obj.velocity` равно `0` (или вычисляется как `0`), в этом месте возникает `-0` и присваивается в `stoppingForce`.
 
 - {{jsxref("Math.atan2")}}, {{jsxref("Math.ceil")}}, {{jsxref("Math.pow")}}, {{jsxref("Math.round")}}
   - : In some cases, it's possible for a `-0` to be introduced into an expression as a return value of these methods even when no `-0` exists as one of the parameters. For example, using {{jsxref("Math.pow")}} to raise {{jsxref("Infinity", "-Infinity")}} to the power of any negative, odd exponent evaluates to `-0`. Refer to the documentation for the individual methods.
 - {{jsxref("Math.floor")}}, {{jsxref("Math.max")}}, {{jsxref("Math.min")}}, {{jsxref("Math.sin")}}, {{jsxref("Math.sqrt")}}, {{jsxref("Math.tan")}}
   - : It's possible to get a `-0` return value out of these methods in some cases where a `-0` exists as one of the parameters. E.g., `Math.min(-0, +0)` evaluates to `-0`. Refer to the documentation for the individual methods.
-- [`~`](/en-US/docs/Web/JavaScript/Reference/Operators), [`<<`](/en-US/docs/Web/JavaScript/Reference/Operators), [`>>`](/en-US/docs/Web/JavaScript/Reference/Operators)
+- [`~`](/ru/docs/Web/JavaScript/Reference/Operators), [`<<`](/ru/docs/Web/JavaScript/Reference/Operators), [`>>`](/ru/docs/Web/JavaScript/Reference/Operators)
   - : Each of these operators uses the ToInt32 algorithm internally. Since there is only one representation for 0 in the internal 32-bit integer type, `-0` will not survive a round trip after an inverse operation. E.g., both `Object.is(~~(-0), -0)` and `Object.is(-0 << 2 >> 2, -0)` evaluate to `false`.
 
 Relying on {{jsxref("Object.is")}} when the signedness of zeros is not taken into account can be hazardous. Of course, when the intent is to distinguish between `-0` and `+0`, it does exactly what's desired.
 
 ### Caveat: Object.is() and NaN
 
-The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct floating point representations of `NaN` which don't behave identically in all contexts. For example:
+The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/ru/docs/Web/JavaScript/Typed_arrays) are available, we can have distinct floating point representations of `NaN` which don't behave identically in all contexts. For example:
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
@@ -286,6 +286,6 @@ console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
 console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 ```
 
-## See also
+## Смотрите также
 
 - [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/)

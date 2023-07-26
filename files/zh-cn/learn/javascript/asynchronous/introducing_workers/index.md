@@ -49,12 +49,11 @@ Workers 给了你在不同线程中运行某些任务的能力，因此你可以
 
 ```js
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -72,14 +71,17 @@ function generatePrimes(quota) {
   return primes;
 }
 
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `Finished generating ${quota} primes!`;
+  document.querySelector(
+    "#output",
+  ).textContent = `Finished generating ${quota} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Try typing in here immediately after pressing "Generate primes"';
   document.location.reload();
 });
 ```
@@ -98,28 +100,27 @@ document.querySelector('#reload').addEventListener('click', () => {
 "index.html" 文件和 "style.css" 文件已完成：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <script type="text/javascript" src="main.js" defer></script>
-    <link href="style.css"rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
   </head>
 
   <body>
-
     <label for="quota">Number of primes:</label>
-    <input type="text" id="quota" name="quota" value="1000000">
+    <input type="text" id="quota" name="quota" value="1000000" />
 
     <button id="generate">Generate primes</button>
     <button id="reload">Reload</button>
 
-    <textarea id="user-input" rows="5" cols="62">Try typing in here immediately after pressing "Generate primes"</textarea>
+    <textarea id="user-input" rows="5" cols="62">
+Try typing in here immediately after pressing "Generate primes"</textarea
+    >
 
     <div id="output"></div>
-
   </body>
-
 </html>
 ```
 
@@ -138,32 +139,34 @@ textarea {
 
 ```js
 // 在 "generate.js" 中创建一个新的 worker
-const worker = new Worker('./generate.js');
+const worker = new Worker("./generate.js");
 
 // 当用户点击 "Generate primes" 时，给 worker 发送一条消息。
 // 消息中的 command 属性是 "generate", 还包含另外一个属性 "quota"，即要生成的质数。
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   worker.postMessage({
-    command: 'generate',
-    quota: quota
+    command: "generate",
+    quota: quota,
   });
 });
 
 // 当 worker 给主线程回发一条消息时，为用户更新 output 框，包含生成的质数（从 message 中获取）。
-worker.addEventListener('message', message => {
-  document.querySelector('#output').textContent = `Finished generating ${message.data} primes!`;
+worker.addEventListener("message", (message) => {
+  document.querySelector(
+    "#output",
+  ).textContent = `Finished generating ${message.data} primes!`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = 'Try typing in here immediately after pressing "Generate primes"';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    'Try typing in here immediately after pressing "Generate primes"';
   document.location.reload();
 });
-
 ```
 
 - 首先，我们使用 {{DOMxRef("worker.Worker()", "Worker()")}} 构造函数创建 worker。我们传递一个指向 worker 脚本的 URL。只要 worker 被创建了，woker 脚本就会执行。
-- 其次，与同步版本一样，我们向 "Generate primes" 按钮添加一个 `click` 事件处理器。但是现在，我们不再调用 `generatePrimes()` 函数，而是使用 {{DOMxRef("worker.postMessage()", "worker.postMessage()")}} 像 worker 发送一条消息。这条消息可以携带一个参数，在本示例中我们传递一个包含两个属性的 JSON 对象：
+- 其次，与同步版本一样，我们向 "Generate primes" 按钮添加一个 `click` 事件处理器。但是现在，我们不再调用 `generatePrimes()` 函数，而是使用 {{DOMxRef("worker.postMessage()", "worker.postMessage()")}} 向 worker 发送一条消息。这条消息可以携带一个参数，在本示例中我们传递一个包含两个属性的 JSON 对象：
   - `command`：一个用于标识我们希望 worker 所做事情的字符串（以防我们的 worker 可以做多个事情）。
   - `quota`：要生成的质数的数量。
 - 然后，我们向 worker 添加一个 `message` 消息处理器。这样 worker 就能告诉我们它是什么时候完成的，并且传递给我们任何结果数据。我们的处理器从消息的 `data` 属性获取数据，然后将其写入 output 元素（数据与 `quota` 是完全相同的，这虽然没有意义，但是这展示了其中原理）。
@@ -174,20 +177,19 @@ document.querySelector('#reload').addEventListener('click', () => {
 ```js
 // 监听主线程中的消息。
 // 如果消息中的 command 是 "generate"，则调用 `generatePrimse()`
-addEventListener("message", message => {
-  if (message.data.command === 'generate') {
+addEventListener("message", (message) => {
+  if (message.data.command === "generate") {
     generatePrimes(message.data.quota);
   }
 });
 
 // 生成质数 (非常低效)
 function generatePrimes(quota) {
-
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -238,11 +240,3 @@ Workers 尽管不能访问主应用程序能访问的所有 API，尤其是不�
 - [Web workers API](/zh-CN/docs/Web/API/Web_Workers_API)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
-
-## 在本模块中
-
-- [异步 JavaScript 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [如何使用 promises](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
-- [实现基于 promise 的 API](/zh-CN/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- **workers 简介**
-- [序列动画](/zh-CN/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

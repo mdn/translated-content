@@ -1,19 +1,6 @@
 ---
 title: WebRTC API
 slug: Web/API/WebRTC_API
-tags:
-  - API
-  - Audio
-  - Landing
-  - Media
-  - NeedsTranslation
-  - Networking
-  - TopicStub
-  - Video
-  - WebRTC
-  - WebRTC API
-  - streaming
-translation_of: Web/API/WebRTC_API
 ---
 {{APIRef("WebRTC")}}
 
@@ -165,7 +152,7 @@ WebRTC API에는 보안 및 식별자를 관리하기위한 여러 인터페이�
 - [An Offer/Answer Model with Session Description Protocol (SDP)](https://tools.ietf.org/html/rfc3264)
 - [Session Traversal Utilities for NAT (STUN) Extension for Third Party Authorization](https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/)
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

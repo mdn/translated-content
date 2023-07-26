@@ -22,13 +22,7 @@ Cette implémentation permettra aux navigateurs d'optimiser le chargement des mo
 
 L'utilisation des modules natifs JavaScript repose sur les instructions [`import`](/fr/docs/Web/JavaScript/Reference/Statements/import) et [`export`](/fr/docs/Web/JavaScript/Reference/Statements/export) dont vous pouvez voir l'état de la compatibilité ici&nbsp;:
 
-### `import`
-
-{{Compat("javascript.statements.import")}}
-
-### `export`
-
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## Commençons par un exemple
 

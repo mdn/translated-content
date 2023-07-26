@@ -89,7 +89,7 @@ slug: Learn/JavaScript/First_steps/What_went_wrong
     ```js
     const lowOrHi = document.querySelector('lowOrHi');
     ```
-  
+
 6. 여기서는 문서 HTML의 요소 참조를 변수에 저장하려고 시도하고 있습니다. 48번째 줄이 실행된 후에 `lowOrHi`가 `null`인지 확인해 봅시다. 49번째 줄에 아래의 코드를 추가하세요.
 
     ```js
@@ -252,15 +252,3 @@ function checkGuess( {
 - 이 글을 마친 후에도 어떻게 수정해야 할지 모르는 오류가 있으면 도움을 구해보세요! (영어) [MDN Discourse 포럼의 Learning 카테고리](https://discourse.mozilla.org/c/mdn/learn/250), 아니면 [Matrix](https://wiki.mozilla.org/Matrix)의 [MDN Web Docs 채팅방](https://chat.mozilla.org/#/room/#mdn:mozilla.org)에서 어떤 오류인지 설명하면 도와드리겠습니다. 여러분의 코드를 문의에 포함하면 더 좋습니다.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
-
-## 이 과정은
-
-- [JavaScript가 뭔가요?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript에 발 담그기](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [뭐가 잘못됐을까요? JavaScript 문제 해결](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [필요한 정보를 저장하기 — 변수](/ko/docs/Learn/JavaScript/First_steps/Variables)
-- [JavaScript 기초 수학 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)
-- [텍스트 다루기 — JavaScript의 문자열](/ko/docs/Learn/JavaScript/First_steps/Strings)
-- [유용한 문자열 메서드](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)
-- [평가: 바보같은 이야기 생성기](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

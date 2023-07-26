@@ -9,7 +9,7 @@ Hemos visto mucho texto hasta ahora en este curso, pero la web sería realmente 
 
 Antes de empezar con este módulo, deberías tener un buen conocimiento de las bases de HTML, enseñadas en [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML). Si no has estado trabajando en este módulo (o alguno similar), ¡hazlo y luego vuelve!
 
-> **Nota:** Si estas trabajando en un ordenador/tablet/u otro dispositivo donde no puedas crear tus propios archivos, puedes probar (la mayoría de ellos) los ejemplos de código en programas online de codificado como [JSBin](http://jsbin.com/) o [Glitch](https://thimble.mozilla.org/).
+> **Nota:** Si estas trabajando en un ordenador/tablet/u otro dispositivo donde no puedas crear tus propios archivos, puedes probar (la mayoría de ellos) los ejemplos de código en programas online de codificado como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 
@@ -20,7 +20,7 @@ Este módulo contiene los siguientes artículos que te enseñarán todo lo funda
 - [Contenido de Audio y Video](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
   - : A continuación, veremos como usar los elementos de HTML5 {{htmlelement("video")}} y {{htmlelement("audio")}}, para insertar video y audio en nuestras páginas, incluyendo conceptos básicos, proporcionando acceso a diferentes formatos de archivo para diferentes navegadores, agregando ilustraciones y subtítulos y cómo resolver inconvenientes en navegadores más antiguos.
 - [De \<object> a \<iframe> - otras tecnologías de inserción](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-  - : En este punto, nos gustaría dar un paso hacia un lado, mirando algunos de los elementos que te permiten insertar una amplia variedad de tipos de contenido en tus páginas web: los elementos [`<iframe>`](/es/docs/Web/HTML/Element/iframe), [`<embed>`](/es/docs/Web/HTML/Element/embed) y [`<object>`](/es/docs/Web/HTML/Element/object).  
+  - : En este punto, nos gustaría dar un paso hacia un lado, mirando algunos de los elementos que te permiten insertar una amplia variedad de tipos de contenido en tus páginas web: los elementos [`<iframe>`](/es/docs/Web/HTML/Element/iframe), [`<embed>`](/es/docs/Web/HTML/Element/embed) y [`<object>`](/es/docs/Web/HTML/Element/object).
     El elemento &lt;iframe&gt; nos permite incluir otras páginas web, y las otras dos permiten insertar archivos de formato PDF, SVG e incluso Flash -una tecnología que está a punto de desaparecer, pero que todavía puede verse de manera semi-regular-.
 - [Añadiendo graficos vectoriales a la Web](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
   - : Los gráficos vectoriales pueden ser muy útiles en ciertas situaciones. A diferencia de los formatos normales como PNG / JPG, estos no se distorsionan/pixelizan cuando se los amplían -pueden permanecer suaves cuando se escalan-. Este artículo te introduce al concepto de gráficos vectoriales y cómo incluir el popular formato {{glossary ("SVG")}} en páginas web.

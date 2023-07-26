@@ -38,7 +38,7 @@ _Данный интерфейс наследует свойства от род
 
 - {{domxref("MouseEvent.button")}} {{readonlyinline}}
   - : Представляет код клавиши, нажатой в то время, когда произошло событие мыши.
-- {{domxref("MouseEvent.buttons")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}
+- {{domxref("MouseEvent.buttons")}} {{readonlyinline}}
   - : Отображает, какие клавиши были нажаты во время движения мыши.
 - {{domxref("MouseEvent.clientX")}} {{readonlyinline}}
   - : Отображение X координат курсора мыши в локальной системе координат (DOM контент).

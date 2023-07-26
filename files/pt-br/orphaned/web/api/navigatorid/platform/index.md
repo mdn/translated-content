@@ -1,16 +1,6 @@
 ---
 title: NavigatorID.platform
 slug: orphaned/Web/API/NavigatorID/platform
-tags:
-  - API
-  - DOM
-  - DOM_0
-  - Gecko
-  - HTML5
-  - Propriedade
-  - Referencia
-  - Referência(2)
-translation_of: Web/API/NavigatorID/platform
 original_slug: Web/API/NavigatorID/platform
 ---
 

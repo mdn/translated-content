@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.ontrack
 slug: Web/API/RTCPeerConnection/track_event
-translation_of: Web/API/RTCPeerConnection/ontrack
 original_slug: Web/API/RTCPeerConnection/ontrack
 ---
 
@@ -34,11 +33,9 @@ pc.ontrack = function(event) {
 
 첫 줄에 나온 `ontrack` 이벤트 핸들러는 들어오는 트랙의 첫 스트림을 가져다가 {{htmlattrxref("srcObject", "video")}} 속성에 지정합니다. 이렇게 함으로써 비디오의 스트림을 해당 요소에 연결하고, 유저에게 보여 줄 수 있게됩니다. 두 번째줄에서는 "통화 종료" 버튼을 활성화하여 유저가 통화를 종료 할 수 있도록 해줍니다.
 
-## 사양서
+## 명세서
 
-| 사양서                                                                                                                   | 상태                             | 코멘트                 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
-| {{SpecName('WebRTC 1.0', '#widl-RTCPeerConnection-ontrack', 'RTCPeerConnection.ontrack')}} | {{Spec2('WebRTC 1.0')}} | Initial specification. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

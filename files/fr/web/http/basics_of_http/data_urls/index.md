@@ -1,14 +1,7 @@
 ---
 title: URLs de données
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
-tags:
-  - Base64
-  - Guide
-  - HTTP
-  - Intermédiaire
-  - URL
 translation_of: Web/HTTP/Basics_of_HTTP/Data_URIs
-original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
 
 {{HTTPSidebar}}
@@ -93,13 +86,11 @@ beaucoup de texte...<p><a name="bottom">bottom</a>?arg=val
 
 ## Spécifications
 
-| Spécification        | Titre                  |
-| -------------------- | ---------------------- |
-| {{RFC("2397")}} | Le schéma d'URL "data" |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{compat("http.data-url")}}
+{{Compat}}
 
 ## Voir_aussi
 

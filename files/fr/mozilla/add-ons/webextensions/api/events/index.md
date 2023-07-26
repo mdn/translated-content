@@ -1,15 +1,6 @@
 ---
 title: events
 slug: Mozilla/Add-ons/WebExtensions/API/events
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - events
 translation_of: Mozilla/Add-ons/WebExtensions/API/events
 ---
 
@@ -26,9 +17,9 @@ Types communs utilisés par les API qui distribuent les événements.
 - {{WebExtAPIRef("events.UrlFilter")}}
   - : Filtre les URL pour différents critères. Si un critère donné correspond, alors tout le filtre correspond.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.events")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

@@ -5,7 +5,7 @@ slug: Web/CSS/:out-of-range
 
 {{CSSRef}}
 
-A [pseudo classe](/pt-BR/docs/CSS/Pseudo-classes) de [CSS](/pt-BR/docs/Web/CSS) **`:out-of-range`** representa um elemento de {{htmlelement("entrada")}} cujo valor atual esta fora dos limites especificados pelo {{htmlattrxref("min", "entrada")}} e {{htmlattrxref("max","entrada")}} atributos
+A [pseudo classe](/pt-BR/docs/CSS/Pseudo-classes) de [CSS](/pt-BR/docs/Web/CSS) **`:out-of-range`** representa um elemento de {{htmlelement("entrada")}} cujo valor atual esta fora dos limites especificados pelo [`min`](/pt-BR/docs/Web/HTML/Element/entrada#min) e [`max`](/pt-BR/docs/Web/HTML/Element/entrada#max) atributos
 
 ```css
 /* Selecione qualquer <entrada>, mas somente quando estiver dentros dos
@@ -17,7 +17,7 @@ input:out-of-range {
 
 Essa pseudo classe é muito útil por dar ao usuario uma indicacão visual de que o valor atual esta fora dos limites permitidos
 
-> **Note:** **Nota:** Esta pseudo classe se aplica somente a elementos que tem (ou podem ter) uma limitacao. Na falta dessa de algo como essa limitacao, o elemento nao tera como ficar "in-range"(dentro dos limites) ou "out-of-range" (fora dos limites).
+> **Nota:** Esta pseudo classe se aplica somente a elementos que tem (ou podem ter) uma limitacao. Na falta dessa de algo como essa limitacao, o elemento nao tera como ficar "in-range"(dentro dos limites) ou "out-of-range" (fora dos limites).
 
 ## Sintaxe
 

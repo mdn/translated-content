@@ -5,9 +5,9 @@ slug: Web/HTTP/Headers/Connection
 
 {{HTTPSidebar}}
 
-**Connection** 头（header）决定当前的事务完成后，是否会关闭网络连接。如果该值是“keep-alive”，网络连接就是持久的，不会关闭，使得对同一个服务器的请求可以继续在该连接上完成。
+**`Connection`** 通用标头控制网络连接在当前会话完成后是否仍然保持打开状态。如果发送的值是 `keep-alive`，则连接是持久的，不会关闭，允许对同一服务器进行后续请求。
 
-> **备注：** [特定于连接的标头字段（例如 Connection）不得与 HTTP/2 一起使用。](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)
+> **警告：** 在 [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) 和 [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting) 中，禁止使用特定于连接的标头字段，如 `Connection` 和 `Keep-Alive`。Chrome 和 Firefox 会在 HTTP/2 响应中忽略它们，但 Safari 遵循 HTTP/2 规范要求，不会加载包含这些字段的任何响应。
 
 除去标准的逐段传输（hop-by-hop）头（{{HTTPHeader("Keep-Alive")}}, {{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}}, {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}}, {{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}），任何逐段传输头都需要在 Connection 头中列出，这样才能让第一个代理知道必须处理它们且不转发这些头。标准的逐段传输头也可以列出（常见的例子是 {{HTTPHeader("Keep-Alive")}}，但这不是必须的）。
 
@@ -17,7 +17,7 @@ slug: Web/HTTP/Headers/Connection
 
 ## 语法
 
-```plain
+```http
 Connection: keep-alive
 Connection: close
 ```

@@ -49,9 +49,9 @@ Ver ejemplos [CSS animations](/es/docs/CSS/CSS_animations).
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation-name")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,13 +1,6 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-tags:
-  - CSS
-  - CSS Data Type
-  - Reference
-  - 블렌드 모드
-  - 혼합 모드
-translation_of: Web/CSS/blend-mode
 ---
 
 {{CSSRef}}
@@ -409,7 +402,7 @@ In the following example, we have a `<div>` with two background images set on it
 div {
   width: 300px;
   height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center,
+  background: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center,
   linear-gradient(to bottom, blue, orange);
 }
 ```
@@ -429,11 +422,11 @@ selectElem.addEventListener('change', () => {
 
 {{EmbedLiveSample('Blend_mode_comparison', '100%', 400)}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

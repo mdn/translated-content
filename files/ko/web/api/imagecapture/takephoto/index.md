@@ -1,14 +1,6 @@
 ---
 title: ImageCapture.takePhoto()
 slug: Web/API/ImageCapture/takePhoto
-tags:
-  - API
-  - Experimental
-  - ImageCapture
-  - MediaStream Image Capture
-  - Method
-  - Reference
-translation_of: Web/API/ImageCapture/takePhoto
 ---
 
 {{APIRef("MediaStream Image")}}

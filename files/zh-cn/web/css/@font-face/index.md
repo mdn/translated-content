@@ -44,9 +44,7 @@ slug: Web/CSS/@font-face
 
 下面的例子简单定义了一个可下载的字体，并应用到了文档的整个 body 标签上。
 
-[View live sample](/@api/deki/files/2935/=webfont-sample.html)
-
-```
+```html
 <html>
 <head>
   <title>Web Font Sample</title>
@@ -98,7 +96,7 @@ slug: Web/CSS/@font-face
 ## 注意
 
 - 这里使用的 Web fonts 仍然受到同域限制 (字体文件必须和调用它的网页同一域), 但可以使用 [HTTP access controls](/zh-CN/docs/HTTP_access_control) 解除这一限制。
-- 因为这里没有为 TrueType(ttf), OpenType(otf) 和 Web Open File Format(WOFF) 字体定义 MIME，因此不能为这些字体类型设置特定的 MIME（实际上 WOFF 的 MIME 将会是 application/font-woff，但浏览器对此 MIME 的识别还不统一，其它字体情况也类似，可暂时使用 application/octet-stream）。
+- 因为这里没有为 TrueType(ttf), OpenType(otf) 和 Web Open File Format(WOFF) 字体定义 MIME，因此不能为这些字体类型设置特定的 MIME（实际上 WOFF 的 MIME 将会是 application/font-woff，但浏览器对此 MIME 的识别还不统一，其他字体情况也类似，可暂时使用 application/octet-stream）。
 - 你不能在一个 CSS 选择器中定义 @font-face。例如，这样写是无效的：
 
   ```css example-bad

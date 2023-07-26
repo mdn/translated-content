@@ -1,16 +1,6 @@
 ---
 title: extension.getBackgroundPage()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getBackgroundPage
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
 ---
 
@@ -18,12 +8,12 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
 
 Alias de {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
 
-> **Note :** Cette méthode ne peut pas être utilisée en mode Navigation privée - elle renvoie toujours un tableau vide. Pour plus d'informations, voir {{bug(1329304)}}.
+> **Note :** Cette méthode ne peut pas être utilisée en mode Navigation privée - elle renvoie toujours un tableau vide. Pour plus d'informations, voir le [bug Firefox 1329304](https://bugzil.la/1329304).
 
 ## Syntaxe
 
 ```js
-var page = browser.extension.getBackgroundPage()
+var page = browser.extension.getBackgroundPage();
 ```
 
 ### Paramètres
@@ -34,9 +24,9 @@ Aucun
 
 `object`. [Window](/fr/docs/Web/API/Window) de la page d'arrière plan.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.getBackgroundPage")}}
+{{Compat}}
 
 ## Exemples
 

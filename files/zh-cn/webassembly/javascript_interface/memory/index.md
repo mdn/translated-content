@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Memory
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.Memory()`** 构造函数创建一个新的 `Memory` 对象。该对象的 {{jsxref("WebAssembly/Memory/buffer","buffer")}} 属性是一个可调整大小的 [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) ，其内存储的是 WebAssembly `实例` 所访问内存的原始字节码。
 
@@ -55,14 +55,15 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
 有两种方法可以获得 `WebAssembly.Memory` 对象。第一种方法是由 JavaScript 来创建。以下示例创建了一个新的 WebAssembly 内存实例，初始大小为 10 页（640KB），最大值设置为 100 页（6.4MB）。
 
 ```js
-var memory = new WebAssembly.Memory({initial:10, maximum:100});
+var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
 ```
 
 获取 `WebAssembly.Memory` 对象的第二种方法是从 WebAssembly 模块中导出。以下示例（详见 GitHub 页面 [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) ，也可以 [用浏览器运行查看](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)）使用 {{jsxref("WebAssembly.instantiateStreaming()")}} 方法实例化已加载的 memory.wasm 字节代码，同时导入上面一行中创建的内存。用它来存储一些值，然后导出一个函数并用它来对一些值进行求和操作。
 
 ```js
-WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
-.then(obj => {
+WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
+  js: { mem: memory },
+}).then((obj) => {
   var i32 = new Uint32Array(memory.buffer);
   for (var i = 0; i < 10; i++) {
     i32[i] = i;

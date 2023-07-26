@@ -1,13 +1,6 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
-tags:
-  - CSS
-  - CSS Background
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/background-origin
 ---
 
 {{CSSRef}}

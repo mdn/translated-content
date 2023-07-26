@@ -177,7 +177,7 @@ document.exitPointerLock();
 
 Pointer lock API 使用 movement 属性扩展了标准的 `MouseEvent`。
 
-```idl
+```webidl
 partial interface MouseEvent {
     readonly attribute long movementX;
     readonly attribute long movementY;

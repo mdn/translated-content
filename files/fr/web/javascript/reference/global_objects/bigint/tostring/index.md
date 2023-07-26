@@ -1,14 +1,7 @@
 ---
 title: BigInt.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
-tags:
-  - BigInt
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toString
-original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/toString
 ---
 
 {{JSRef}}
@@ -70,13 +63,11 @@ BigInt(-0).toString(); // '0'
 
 ## Spécifications
 
-| Spécification                                                                                      | État                    |
-| -------------------------------------------------------------------------------------------------- | ----------------------- |
-| [Proposition pour `BigInt`](https://tc39.github.io/proposal-bigint/#sec-bigint.prototype.tostring) | Proposition de niveau 3 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.BigInt.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

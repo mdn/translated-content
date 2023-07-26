@@ -36,7 +36,7 @@ str.slice(beginIndex[, endIndex])
 
 例 2：`str.slice(2, -1)` 提取第三个字符到倒数第一个字符。
 
-## 例子
+## 示例
 
 ### 使用 `slice()` 创建一个新的字符串
 

@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/Module
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.Module`** オブジェクトには、ブラウザーでコンパイルされたステートレスな WebAssembly コードが含まれています。これを効率的に[ワーカー間で共有](/ja/docs/Web/API/Worker/postMessage)したり、複数回インスタンス化したりすることができます。
 
@@ -31,9 +31,8 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module
 ```js
 var worker = new Worker("wasm_worker.js");
 
-WebAssembly.compileStreaming(fetch('simple.wasm'))
-.then(mod =>
-  worker.postMessage(mod)
+WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
+  worker.postMessage(mod),
 );
 ```
 
@@ -42,17 +41,17 @@ WebAssembly.compileStreaming(fetch('simple.wasm'))
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-onmessage = function(e) {
-  console.log('module received from main thread');
+onmessage = function (e) {
+  console.log("module received from main thread");
   var mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function(instance) {
+  WebAssembly.instantiate(mod, importObject).then(function (instance) {
     instance.exports.exported_func();
   });
 };

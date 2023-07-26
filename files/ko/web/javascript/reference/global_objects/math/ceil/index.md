@@ -1,8 +1,6 @@
 ---
 title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
-browser-compat: javascript.builtins.Math.ceil
 ---
 {{JSRef}}Math.ceil() 함수는 주어진 숫자보다 크거나 같은 숫자 중 가장 작은 숫자를 integer 로 반환합니다.
 

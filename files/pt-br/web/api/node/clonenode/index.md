@@ -20,9 +20,9 @@ var dupNode = node.cloneNode(deep);
 - _deep {{optional_inline}} \[1]_
   - : true se os elementos filhos do nó que está sendo clonado devem ser clonados juntos, ou false para clonar apenas o nó específico dispensando, assim, qualquer elemento DOM filho. Veja os exemplos abaixo.
 
-> **Nota:** Na especificação do DOM4 (implementado no Gecko 13.0 {{geckoRelease(13)}}), o argumento `deep` é opcional. Se omitido, por padrão, o método age como se o valor de deep fosse setado como true durante a sua execução. Para criação de clones superficiais, o argumento `deep` deve ser setado como `false`.
+> **Nota:** Na especificação do DOM4 (implementado no Gecko 13.0), o argumento `deep` é opcional. Se omitido, por padrão, o método age como se o valor de deep fosse setado como true durante a sua execução. Para criação de clones superficiais, o argumento `deep` deve ser setado como `false`.
 >
-> Este comportamento foi alterado na última especificação. Se omitido o argumento deep, o método irá interpretar o valor de deep como se fosse false. Embora ele continue opcional, é recomendado que você sempre observe o argumento deep para fins de compatibilidade anterior e posterior. Com o Gecko 28.0 {{geckoRelease(28)}}), foi advertido aos desenvolvedores para não omitirem o argumento. Iniciado com o Gecko 29.0 {{geckoRelease(29)}}), um clone superficial é o padrão ao invés de um clone aprofundado.
+> Este comportamento foi alterado na última especificação. Se omitido o argumento deep, o método irá interpretar o valor de deep como se fosse false. Embora ele continue opcional, é recomendado que você sempre observe o argumento deep para fins de compatibilidade anterior e posterior. Com o Gecko 28.0), foi advertido aos desenvolvedores para não omitirem o argumento. Iniciado com o Gecko 29.0), um clone superficial é o padrão ao invés de um clone aprofundado.
 
 ## Exemplo
 

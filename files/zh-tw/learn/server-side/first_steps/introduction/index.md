@@ -1,5 +1,5 @@
 ---
-title: 伺服器端的介紹
+title: 伺服器端介紹
 slug: Learn/Server-side/First_steps/Introduction
 original_slug: Learn/Server-side/First_steps/介紹
 ---
@@ -125,7 +125,7 @@ original_slug: Learn/Server-side/First_steps/介紹
 >
 > Google search results are optimized based on previous searches.
 >
-> 1. Go to [Google search](https:\\google.com).
+> 1. Go to [Google search](https://www.google.com/).
 > 2. Search for "football".
 > 3. Now try typing "favourite" in the search box and observe the autocomplete search predictions.
 >
@@ -185,10 +185,3 @@ original_slug: Learn/Server-side/First_steps/介紹
 在未來的文章，我們將協助你選擇最佳的網頁框架，做為你的第一個網站；接著，我們將帶你更詳細了解主要的用戶端-伺服端的互動。
 
 {{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
-
-## In this module
-
-- [Introduction to the server side](/zh-TW/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Server-side web frameworks](/zh-TW/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/zh-TW/docs/Learn/Server-side/First_steps/Website_security)

@@ -1,6 +1,6 @@
 ---
 title: CSS Fonts
-slug: Web/CSS/CSS_Fonts
+slug: Web/CSS/CSS_fonts
 translation_of: Web/CSS/CSS_Fonts
 ---
 

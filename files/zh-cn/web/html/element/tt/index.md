@@ -13,7 +13,7 @@ HTML 电报文本元素 (`<tt>`) 产生一个内联元素，使用浏览器内�
 
 ## 属性
 
-这个元素除了[全局属性](/zh-CN/docs/Web/HTML/global_attributes)之外，没有其它属性，所有元素都一样。
+这个元素除了[全局属性](/zh-CN/docs/Web/HTML/global_attributes)之外，没有其他属性，所有元素都一样。
 
 ## DOM 接口
 

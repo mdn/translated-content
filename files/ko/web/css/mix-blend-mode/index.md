@@ -1,11 +1,6 @@
 ---
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/mix-blend-mode
 ---
 
 {{CSSRef}}
@@ -692,11 +687,11 @@ p {
 
 {{EmbedLiveSample("Using mix-blend-mode with text", "", "420")}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

@@ -1,13 +1,7 @@
 ---
 title: URLs de type ressource
 slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
-tags:
-  - Guide
-  - HTTP
-  - Intermédiaire
-  - Ressource
 translation_of: Web/HTTP/Basics_of_HTTP/Resource_URLs
-original_slug: Web/HTTP/Basics_of_HTTP/URLs_de_type_ressource
 ---
 
 {{HTTPSidebar}}
@@ -46,7 +40,7 @@ De plus, certaines valeurs par défaut diffèrent selon les versions ou les inst
 
 ## Solution
 
-Afin de résoudre ce problème, Mozilla a modifié le comportement du chargement des URLs ressource via {{bug(863246)}}, rendu disponible à partir de Firefox 57 (Quantum).
+Afin de résoudre ce problème, Mozilla a modifié le comportement du chargement des URLs ressource via [bug Firefox 863246](https://bugzil.la/863246), rendu disponible à partir de Firefox 57 (Quantum).
 
 Auparavant, les sites web étaient capables d'accéder à n'importe quelle URI `resource:`, celles de Firefox mais aussi celles des modules complémentaires. Ce comportement est désormais interdit par défaut.
 

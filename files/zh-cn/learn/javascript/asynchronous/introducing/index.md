@@ -42,7 +42,7 @@ original_slug: learn/JavaScript/异步/简介
 观察下面的代码：
 
 ```js
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = `Hello, my name is ${name}!`;
 console.log(greeting);
 // "Hello, my name is Miriam!"
@@ -64,7 +64,7 @@ console.log(greeting);
 function makeGreeting(name) {
   return `Hello, my name is ${name}!`;
 }
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = makeGreeting(name);
 console.log(greeting);
 // "Hello, my name is Miriam!"
@@ -80,7 +80,7 @@ console.log(greeting);
 
 ```html
 <label for="quota">素数个数：</label>
-<input type="text" id="quota" name="quota" value="1000000">
+<input type="text" id="quota" name="quota" value="1000000" />
 
 <button id="generate">生成素数</button>
 <button id="reload">重载</button>
@@ -93,8 +93,8 @@ function generatePrimes(quota) {
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -108,13 +108,15 @@ function generatePrimes(quota) {
   }
   return primes;
 }
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `完成！已生成素数${quota}个。`;
+  document.querySelector(
+    "#output",
+  ).textContent = `完成！已生成素数${quota}个。`;
 });
-document.querySelector('#reload').addEventListener('click', () => {
-  document.location.reload()
+document.querySelector("#reload").addEventListener("click", () => {
+  document.location.reload();
 });
 ```
 
@@ -130,7 +132,7 @@ document.querySelector('#reload').addEventListener('click', () => {
 
 ```html hidden
 <label for="quota">素数个数</label>
-<input type="text" id="quota" name="quota" value="1000000">
+<input type="text" id="quota" name="quota" value="1000000" />
 <button id="generate">生成素数</button>
 <button id="reload">重载</button>
 <textarea id="user-input" rows="5" cols="62">
@@ -151,8 +153,8 @@ function generatePrimes(quota) {
   function isPrime(n) {
     for (let c = 2; c <= Math.sqrt(n); ++c) {
       if (n % c === 0) {
-          return false;
-       }
+        return false;
+      }
     }
     return true;
   }
@@ -166,13 +168,16 @@ function generatePrimes(quota) {
   }
   return primes;
 }
-document.querySelector('#generate').addEventListener('click', () => {
-  const quota = document.querySelector('#quota').value;
+document.querySelector("#generate").addEventListener("click", () => {
+  const quota = document.querySelector("#quota").value;
   const primes = generatePrimes(quota);
-  document.querySelector('#output').textContent = `完成！已生成素数${quota}个。`;
+  document.querySelector(
+    "#output",
+  ).textContent = `完成！已生成素数${quota}个。`;
 });
-document.querySelector('#reload').addEventListener('click', () => {
-  document.querySelector('#user-input').value = '点击“生成素数”按钮后试着在这里输入';
+document.querySelector("#reload").addEventListener("click", () => {
+  document.querySelector("#user-input").value =
+    "点击“生成素数”按钮后试着在这里输入";
   document.location.reload();
 });
 ```
@@ -212,18 +217,22 @@ pre {
 ```
 
 ```js
-const log = document.querySelector('.event-log');
-document.querySelector('#xhr').addEventListener('click', () => {
-  log.textContent = '';
+const log = document.querySelector(".event-log");
+document.querySelector("#xhr").addEventListener("click", () => {
+  log.textContent = "";
   const xhr = new XMLHttpRequest();
-  xhr.addEventListener('loadend', () => {
+  xhr.addEventListener("loadend", () => {
     log.textContent = `${log.textContent}完成！状态码：${xhr.status}`;
   });
-  xhr.open('GET', 'https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
+  xhr.open(
+    "GET",
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
+  );
   xhr.send();
-  log.textContent = `${log.textContent}请求已发起\n`;});
-document.querySelector('#reload').addEventListener('click', () => {
-  log.textContent = '';
+  log.textContent = `${log.textContent}请求已发起\n`;
+});
+document.querySelector("#reload").addEventListener("click", () => {
+  log.textContent = "";
   document.location.reload();
 });
 ```
@@ -274,9 +283,9 @@ function doStep3(init, callback) {
   callback(result);
 }
 function doOperation() {
-  doStep1(0, result1 => {
-    doStep2(result1, result2 => {
-      doStep3(result2, result3 => {
+  doStep1(0, (result1) => {
+    doStep2(result1, (result2) => {
+      doStep3(result2, (result3) => {
         console.log(`结果：${result3}`);
       });
     });
@@ -292,11 +301,3 @@ doOperation();
 由于以上这些原因，大多数现代异步 API 都不使用回调。事实上，JavaScript 中异步编程的基础是 {{jsxref("Promise")}}，这也是我们下一篇文章要讲述的主题。
 
 {{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
-
-## 本章目录
-
-- **异步 JavaScript 简介**
-- [如何使用 Promise](/zh-CN/docs/Learn/JavaScript/Asynchronous/Promises)
-- [应用一个基于 Promise 的 API](/zh-CN/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Worker 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [测验：序列动画](/zh-CN/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

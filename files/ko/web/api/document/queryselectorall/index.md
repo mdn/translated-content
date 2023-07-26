@@ -1,19 +1,6 @@
 ---
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
-tags:
-  - API
-  - CSS 셀렉터
-  - DOM
-  - querySelectorAll
-  - 다큐먼트
-  - 레퍼런스
-  - 메소드
-  - 셀렉터
-  - 엘리먼트 셀렉팅
-  - 엘리먼트 찾기
-  - 엘리먼트 탐색
-translation_of: Web/API/Document/querySelectorAll
 ---
 
 {{APIRef("DOM")}}

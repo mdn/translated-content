@@ -1,16 +1,6 @@
 ---
 title: downloads.setShelfEnabled()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/setShelfEnabled
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - setShelfEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/setShelfEnabled
 ---
 
@@ -35,9 +25,9 @@ Cette API est également disponible en tant que `browser.downloads.setShelfEnabl
 - `enabled`
   - : Un `boolean` l'état que vous souhaitez définir `setShelfEnabled()` à — `true` pour activer et `false` pour désactiver.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.setShelfEnabled")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

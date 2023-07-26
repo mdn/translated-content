@@ -23,10 +23,6 @@ original_slug: Глоссарий/Algorithm
 
 ## Дополнительные ресурсы
 
-### Общие сведения
-
-- {{Interwiki("wikipedia", "Алгоритм")}} на Википедии
-
 ### Технические материалы
 
 - [Пояснения к алгоритмам сортировки](https://www.toptal.com/developers/sorting-algorithms)

@@ -1,16 +1,8 @@
 ---
 title: <b>
 slug: Web/HTML/Element/b
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/b
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<b>` 요소**는 독자의 주의를 요소의 콘텐츠로 끌기 위한 용도로 사용합니다. 그 외의 다른 특별한 중요도는 주어지지 않습니다. 원래는 "굵은 글씨 요소"로 불렸으며, 대부분의 브라우저도 여전히 텍스트를 굵은 글씨체로 강조합니다. 그러나 `<b>`를 사용해 텍스트를 꾸미면 안됩니다. 대신 CSS {{cssxref("font-weight")}}를 사용해 굵은 글씨체를 적용하거나, {{htmlelement("strong")}} 요소를 사용해 특별히 중요한 텍스트를 나타내세요.
@@ -109,7 +101,7 @@ Keywords are displayed with the default style of the <b>element, likely in bold<
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.b")}}
+{{Compat}}
 
 ## 같이 보기
 

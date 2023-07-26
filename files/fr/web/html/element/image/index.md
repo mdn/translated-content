@@ -1,12 +1,6 @@
 ---
 title: <image>
 slug: Web/HTML/Element/image
-tags:
-  - Element
-  - HTML
-  - Non-standard
-  - Obsolete
-  - Reference
 translation_of: Web/HTML/Element/image
 ---
 
@@ -20,13 +14,11 @@ Bien que les navigateurs essaient de convertir cet élément {{HTMLElement("img"
 
 ## Spécifications
 
-Cet élément ne fait partie d'aucune spécification.
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-La plupart du temps, les navigateurs essaieront de convertir cet élément en un élément `<img>` si l'attribut {{htmlattrxref("src", "img")}} est utilisé. Créer un élément `<image>` sans attribut entraînera la création d'un objet `HTMLElement` avec le nom "image". Si l'élément est créé avec un attribut `src`, ce sera un objet `HTMLImageElement` qui sera créé et son nom sera "img".
-
-{{Compat("html.elements.image")}}
+{{Compat}}
 
 ## Voir aussi
 

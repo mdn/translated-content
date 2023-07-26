@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 
 ## 示例
 
-### 例子：使用 `SQRT1_2`
+### 示例：使用 `SQRT1_2`
 
 下面的函数返回 1/2 的平方根：
 

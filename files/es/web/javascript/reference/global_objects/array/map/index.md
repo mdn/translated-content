@@ -279,7 +279,7 @@ if (!Array.prototype.map) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.map")}}
+{{Compat}}
 
 ## Véase también
 

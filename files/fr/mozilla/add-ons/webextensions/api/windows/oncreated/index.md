@@ -1,16 +1,6 @@
 ---
 title: windows.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/windows/onCreated
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Référence(2)
-  - WebExtensions
-  - Windows
-  - onCreated
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/onCreated
 ---
 
@@ -21,9 +11,9 @@ Lancer quand la fenêtre est créée
 ## Syntaxe
 
 ```js
-browser.windows.onCreated.addListener(listener)
-browser.windows.onCreated.removeListener(listener)
-browser.windows.onCreated.hasListener(listener)
+browser.windows.onCreated.addListener(listener);
+browser.windows.onCreated.removeListener(listener);
+browser.windows.onCreated.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -46,9 +36,9 @@ Les événements ont trois fonctions :
     - `window`
       - : Un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la fenêtre qui a été créée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.onCreated")}}
+{{Compat}}
 
 ## Exemples
 

@@ -1,9 +1,7 @@
 ---
 title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
-browser-compat: javascript.builtins.Symbol.toStringTag
 l10n:
   sourceCommit: d5d9a70d1f8bc041c4ff226c3ff7e02382c5efef
 ---

@@ -1,16 +1,6 @@
 ---
 title: bookmarks.getChildren()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - getChildren
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
 ---
 
@@ -24,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var gettingChildren = browser.bookmarks.getChildren(
-  id                     // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres
@@ -58,9 +48,9 @@ gettingChildren.then(onFulfilled, onRejected);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.getChildren")}}
+{{Compat}}
 
 > **Note :**
 >

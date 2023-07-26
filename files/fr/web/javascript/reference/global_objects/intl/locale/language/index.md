@@ -1,15 +1,7 @@
 ---
 title: Intl.Locale.prototype.language
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Locale
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/language
 ---
 
 {{JSRef}}
@@ -44,13 +36,11 @@ console.log(langObj.language); // Affichera "es" dans la console
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.language`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.language) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.language")}}
+{{Compat}}
 
 ## Voir aussi
 

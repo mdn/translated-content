@@ -41,9 +41,9 @@ El cliente puede solicitar aquí extensiones y/o sub protocolos; vea [Misceláne
 
 Si alguna cabecera no se entiende o posee un valor incorrecto, el servidor debe responder "[400 Bad Request](/es/docs/HTTP/Response_codes#400)" e inmediatamente cerrar la conexión. Normalmente, también puede dar la razón porque falló el _handshake_ en el cuerpo de la respuesta HTTP, pero el mensaje podría no ser mostrado (el browser no lo muestra). Si el servidor no comprende que la versión del WebSockets, debería enviar una cabecera `Sec-WebSocket-Version` que contenga la(s) versión(es) no entendidas. (Esta guía explica v13, la más nueva). Ahora, vamos a ver la cabecera más curiosa, `Sec-WebSocket-Key`.
 
-> **Nota:** **Tip:** Todos los **navegadores** deben enviar una [`cabecera Origin`](/es/docs/HTTP/Access_control_CORS#Origin). Tu puedes usar esta cabecera por seguridad (revisando por el mismo origen, listas blancas/ listas negras, etc.) y enviar un [403 Forbidden](/es/docs/HTTP/Response_codes#403) si no te gusta lo que ves. Sin embargo, se advierte que los agentes no navegadores pueden enviar un falso `Origin`. La mayoría de las aplicaciones rechazaran las solicitudes sin esta cabecera.
+> **Nota:** Todos los **navegadores** deben enviar una [`cabecera Origin`](/es/docs/HTTP/Access_control_CORS#Origin). Tu puedes usar esta cabecera por seguridad (revisando por el mismo origen, listas blancas/ listas negras, etc.) y enviar un [403 Forbidden](/es/docs/HTTP/Response_codes#403) si no te gusta lo que ves. Sin embargo, se advierte que los agentes no navegadores pueden enviar un falso `Origin`. La mayoría de las aplicaciones rechazaran las solicitudes sin esta cabecera.
 
-> **Nota:** **Tip:** The request-uri (`/chat` here) has no defined meaning in the spec. So many people cleverly use it to let one server handle multiple WebSocket applications. For example, `example.com/chat` could invoke a multiuser chat app, while `/game` on the same server might invoke a multiplayer game.
+> **Nota:** The request-uri (`/chat` here) has no defined meaning in the spec. So many people cleverly use it to let one server handle multiple WebSocket applications. For example, `example.com/chat` could invoke a multiuser chat app, while `/game` on the same server might invoke a multiplayer game.
 
 > **Nota:** [Regular HTTP status codes](/es/docs/HTTP/Response_codes) can only be used before the handshake. After the handshake succeeds, you have to use a different set of codes (defined in section 7.4 of the spec).
 
@@ -60,7 +60,7 @@ Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
 
 Adicionalmente, el servidor puede decidir respecto de las solicitudes "extension/subprotocol" en este punto (ver [Miscelláneos](#Miscellaneous) para más detalles). La cabecera `Sec-WebSocket-Accept` es interesante. El servidor debe derivarla a partir de la cabecera `Sec-WebSocket-Key` enviada anteriormente por el cliente. Para lograr esto se deben concatenar la cabecera del cliente `Sec-WebSocket-Key` y el string "`258EAFA5-E914-47DA-95CA-C5AB0DC85B11`" (es un "[magic string](https://en.wikipedia.org/wiki/Magic_string)"), calcular el [hash SHA-1](https://en.wikipedia.org/wiki/SHA-1) del resultado y devolver el string codificado en [base64](https://en.wikipedia.org/wiki/Base64) de este hash.
 
-> **Nota:** **FYI:** Este aparentemente complicado e innecesario proceso se realiza de manera que sea obvio para el cliente si el servidor soporta o noWebSockets. Esto es importante de realizar, ya que podrían crearse problemas de seguridad si el servidor acepta conexiones WebSockets pero interpreta los datos como solicitudes HTTP.
+> **Nota:** Este aparentemente complicado e innecesario proceso se realiza de manera que sea obvio para el cliente si el servidor soporta o noWebSockets. Esto es importante de realizar, ya que podrían crearse problemas de seguridad si el servidor acepta conexiones WebSockets pero interpreta los datos como solicitudes HTTP.
 
 Así, si la cabecera `Sec-WebSocket-Key` era "`dGhlIHNhbXBsZSBub25jZQ==`", la correspondiente respuesta `Sec-WebSocket-Accept` será "`s3pPLMBiTxaQ9kYGzzhZRbK+xOo=`". Una vez que el servidor envía estas cabeceras, el "handshake" se considera completo y puedes comenzar a intercambiar datos.
 
@@ -209,7 +209,7 @@ Sec-WebSocket-Protocol: soap
 
 If you want your server to obey certain subprotocols, then naturally you'll need extra code on the server. Let's imagine we're using a subprotocol `json`. In this subprotocol, all data is passed as [JSON](https://en.wikipedia.org/wiki/JSON). If the client solicits this protocol and the server wants to use it, the server will need to have a JSON parser. Practically speaking, this will be part of a library, but the server will need to pass the data around.
 
-> **Nota:** **Tip:** To avoid name conflict, it's recommended to make your subprotocol name part of a domain string. If you are building a custom chat app that uses a proprietary format exclusive to Example Inc., then you might use this: `Sec-WebSocket-Protocol: chat.example.com`. For different versions, a widely-used method is to add a `/` followed by the version number, like `chat.example.com/2.0`. Note that this isn't required, it's just an optional convention, and you can use any string you wish.
+> **Nota:** To avoid name conflict, it's recommended to make your subprotocol name part of a domain string. If you are building a custom chat app that uses a proprietary format exclusive to Example Inc., then you might use this: `Sec-WebSocket-Protocol: chat.example.com`. For different versions, a widely-used method is to add a `/` followed by the version number, like `chat.example.com/2.0`. Note that this isn't required, it's just an optional convention, and you can use any string you wish.
 
 ## Related
 

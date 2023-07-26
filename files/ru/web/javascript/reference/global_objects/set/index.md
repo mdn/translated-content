@@ -2,227 +2,287 @@
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 tags:
-  - ECMAScript6
+  - Class
+  - ECMAScript 2015
+  - Global Objects
   - JavaScript
+  - Object
+  - Reference
   - set
-  - Экспериментальный
+  - Polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Set
 ---
 
-{{JSRef("Global_Objects", "Set")}}
+{{JSRef}}
 
-## Сводка
-
-Объекты **`Set`** позволяют вам сохранять _уникальные_ значения любого типа, как {{Glossary("Primitive", "примитивы")}}, так и другие типы объектов.
-
-## Синтаксис
-
-```
- new Set([iterable]);
-```
-
-### Параметры
-
-- iterable
-  - : При передаче [итерируемого объекта](/ru/docs/Web/JavaScript/Reference/Statements/for...of), все его элементы будут добавлены в новый Set. Иначе (или при `null`) новый `Set` будет пуст.
-
-### Возвращает
-
-Новый `Set` объект.
+Объект **`Set`** позволяет хранить уникальные значения любого типа, будь то {{Glossary("Primitive", "примитивы")}} или ссылки на объекты.
 
 ## Описание
 
-Объекты `Set` представляют коллекции значений, по которым вы можете выполнить обход в порядке вставки элементов. Значение элемента в `Set` может присутствовать **только в одном экземпляре**, что обеспечивает его уникальность в коллекции `Set`.
+Объекты "Set" - это коллекция значений. Значение в `Set` **может встречаться только один раз**; оно уникально в коллекции. Вы можете перебирать элементы набора в порядке вставки. Порядок _вставки_ соответствует порядку, в котором каждый элемент был успешно вставлен в коллекцию методом [`add()`](/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/add) (то есть, когда был вызван `add()`, в наборе ещё не было такого элемента).
+
+Спецификация требует реализации наборов, "которые в среднем обеспечивают время доступа, сублинейное количеству элементов в коллекции". Следовательно, он может быть представлен внутренне в виде хэш-таблицы (с поиском O(1)), дерева поиска (с поиском O(log(N))) или любой другой структуры данных, при условии, что сложность выше, чем O(N).
 
 ### Сравнение значений
 
-Поскольку каждое значение в `Set` должно быть уникальным, сравнение значений основано на алгоритме "подобное значение": `NaN` равно `NaN` (несмотря на то, что `NaN !== NaN`); все другие значения рассматриваются равными исходя из семантики оператора строго равенства ===. В ранних версиях черновика ECMAScript 6 `-0` и `+0` считались разными (несмотря на то, что `-0 === +0`), это было изменено в последующих версиях и адаптировано в Gecko 29 {{geckoRelease("29")}} ({{bug("952870")}}) и [последней ночной сборке Chrome](https://code.google.com/p/v8/issues/detail?id=3069). `NaN` и `undefined` также могут сохраняться в `Set`.
+При добавлении нового элемента в Set происходит проверка, добавлялся ли такой элемент ранее. Эта проверка использует специальный алгоритм сравнения значений [SameValueZero](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality). (Раньше использовался алгоритм [SameValue](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness#спецификации_для_равенства_строгого_равенства_и_равенства_одинаковых_величин), в котором значения `0` и `-0` считаются разными. Смотрите браузерную поддержку ниже). Это означает, что {{jsxref("NaN")}} считается равным `NaN` (не смотря на то что `NaN !== NaN`), а все другие значения считаются равными в соответствии с семантикой оператора `===`.
 
-## Свойства
+### Производительность
 
-- `Set.length`
+Метод [`has`](/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Set/has) проверяет наличие значения в `Set` используя алгоритм, который в среднем работает быстрее поэлементного перебора добавленных ранее элементов. В частности этот алгоритм работает быстрее чем метод [`Array.prototype.includes`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/includes на массиве, который хранит столько же элементов сколько сравниваемый объект `Set`.
 
-  - : Значение свойства `length` всегда равно 0.
+## Конструктор
 
-    Чтобы узнать количество элементов в `Set`, используйте {{jsxref("Set.prototype.size")}}.
+- {{jsxref("Set/Set", "Set()")}}
+  - : Создаёт новый объект `Set`.
+
+## Статические свойства
 
 - {{jsxref("Set.@@species", "get Set[@@species]")}}
   - : Функция-конструктор, которая используется для создания производных объектов.
-- {{jsxref("Set.prototype")}}
-  - : Представляет прототип конструктора `Set`. Позволяет добавлять свойства всем объектам типа `Set`.
 
-## Экземпляры `Set`
+## Свойства экземпляра
 
-Все экземпляры `Set` унаследованы от {{jsxref("Set.prototype")}}.
+- `Set.prototype[@@toStringTag]`
+  - : Начальное значение [`@@toStringTag`](/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) свойства - строка `"Set"`. Это значение используется в {{jsxref("Object.prototype.toString()")}}.
+- {{jsxref("Set.prototype.size")}}
+  - : Возвращает количество значений в объекте `Set`.
 
-### Свойства
+## Методы экземпляра
 
-{{page('ru/Web/JavaScript/Reference/Global_Objects/Set/prototype','Properties')}}
+- {{jsxref("Set.prototype.add()")}}
+  - : Вставляет новый элемент с указанным значением в объект `Set`, если в `Set` ещё нет элемента с таким же значением.
+- {{jsxref("Set.prototype.clear()")}}
+  - : Удаляет все значения из объекта `Set`.
+- {{jsxref("Set.prototype.delete()")}}
+  - : Удаляет элемент, связанный с переданным значением, и возвращает логическое значение, подтверждающее, был ли элемент успешно удалён или нет. `Set.prototype.has(value)` впоследствии вернет `false`.
+- {{jsxref("Set.prototype.has()")}}
+  - : Возвращает логическое значение, утверждающее, присутствует ли элемент с заданным значением в объекте `Set` или нет.
+- {{jsxref("Set.prototype.@@iterator()", "Set.prototype[@@iterator]()")}}
+  - : Возвращает новый объект итератора, который выдает **значения** для каждого элемента в объекте `Set` в порядке вставки.
+- {{jsxref("Set.prototype.values()")}}
+  - : Возвращает новый объект итератора, который выдает **значения** для каждого элемента в объекте `Set` в порядке вставки.
+- {{jsxref("Set.prototype.keys()")}}
+  - : Аналог {{jsxref("Set.prototype.values()")}}.
+- {{jsxref("Set.prototype.entries()")}}
 
-### Методы
+  - : Возвращает новый объект итератора, который содержит **массив `[value, value]`** для каждого элемента в объекте `Set` в порядке вставки.
 
-{{page('ru/Web/JavaScript/Reference/Global_Objects/Set/prototype','Methods')}}
+   Этот метод похож на соответствующий метод объекта {{jsxref("Map")}}, но в случае `Set` ключ (_key_) каждой записи совпадает с её значением (_value_).
+
+- {{jsxref("Set.prototype.forEach()")}}
+  - : Вызывает `callbackFn` один раз для каждого значения, присутствующего в объекте `Set` в порядке вставки. Если указан параметр `thisArg`, он будет использоваться в качестве значения `this` для каждого вызова `callbackFn`.
 
 ## Примеры
 
-### Использование объекта `Set`
+### Использование объекта Set
 
 ```js
-var mySet = new Set();
+const mySet1 = new Set()
 
-mySet.add(1); // Set { 1 }
-mySet.add(5); // Set { 1, 5 }
-mySet.add(5); // Set { 1, 5 }
-mySet.add("some text"); // Set { 1, 5, 'some text' }
-var o = {a: 1, b: 2};
-mySet.add(o);
+mySet1.add(1)           // Set(1) { 1 }
+mySet1.add(5)           // Set(2) { 1, 5 }
+mySet1.add(5)           // Set(2) { 1, 5 }
+mySet1.add('текст') // Set(3) { 1, 5, 'текст' }
+const o = {a: 1, b: 2}
+mySet1.add(o)
 
-mySet.add({a: 1, b: 2}); // переменная o связана с другим объектом, поэтому данная строка также сработает
+mySet1.add({a: 1, b: 2})   // o ссылается на другой объект, так что это нормально
 
-mySet.has(1); // true
-mySet.has(3); // false, 3 не было добавлено в set
-mySet.has(5);              // true
-mySet.has(Math.sqrt(25));  // true
-mySet.has("Some Text".toLowerCase()); // true
-mySet.has(o); // true
+mySet1.has(1)              // true
+mySet1.has(3)              // false, поскольку 3 не был добавлен в набор
+mySet1.has(5)              // true
+mySet1.has(Math.sqrt(25))  // true
+mySet1.has('Текст'.toLowerCase()) // true
+mySet1.has(o)       // true
 
-mySet.size; // 5
+mySet1.size         // 5
 
-mySet.delete(5); // удаляет 5 из set
-mySet.has(5);    // false, 5 было удалено
+mySet1.delete(5)    // удаляет элемент 5 из set
+mySet1.has(5)       // false, 5 был удалён
 
-mySet.size; // 4, было удалено одно значение
-console.log(mySet); // Set {1, 'some text', Object {a: 1, b: 2}, Object {a: 1, b: 2}}
+mySet1.size         // 4, поскольку мы удалили одно значение
+
+mySet1.add(5)       // Set(5) { 1, "текст", {...}, {...}, 5 } - ранее удаленный элемент будет добавлен как новый элемент, он не сохранит свое первоначальное положение до удаления
+
+console.log(mySet1) // Set(5) { 1, "текст", {…}, {…}, 5 }
 ```
 
-### Обход Set
+### Итерация по объекту Set
+
+Итерация наборов проходит по элементам в порядке вставки.
 
 ```js
-// обход элементов set
-// выведет элементы по порядку: 1, "some text", {"a": 1, "b": 2}
-for (let item of mySet) console.log(item);
+for (const item of mySet1) {
+  console.log(item);
+}
+// 1, "текст", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// выведет элементы по порядку: 1, "some text", {"a": 1, "b": 2}
-for (let item of mySet.keys()) console.log(item);
+for (const item of mySet1.keys()) {
+  console.log(item);
+}
+// 1, "текст", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// выведет элементы по порядку: 1, "some text", {"a": 1, "b": 2}
-for (let item of mySet.values()) console.log(item);
+for (const item of mySet1.values()) {
+  console.log(item);
+}
+// 1, "текст", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// выведет элементы по порядку: 1, "some text", {"a": 1, "b": 2}
-//(key и value в данном случае одинаковы)
-for (let [key, value] of mySet.entries()) console.log(key);
+// ключ и значение здесь одинаковы
+for (const [key, value] of mySet1.entries()) {
+  console.log(key);
+}
+// 1, "текст", { "a": 1, "b": 2 }, { "a": 1, "b": 2 }, 5
 
-// преобразует Set в Array
-var myArr = Array.from(mySet); // [1, "some text", {"a": 1, "b": 2}]
+// Преобразуем объект Set в объект Array с помощью Array.from
+const myArr = Array.from(mySet1) // [1, "текст", {"a": 1, "b": 2}, {"a": 1, "b": 2}, 5]
 
-// следующее будет работать при запуске с HTML документом
-mySet.add(document.body);
-mySet.has(document.querySelector("body")); // true
+// следующее также будет работать, если запустить его в HTML-документе
+mySet1.add(document.body)
+mySet1.has(document.querySelector('body')) // true
 
-// преобразования из Array в Set и обратно
-mySet2 = new Set([1,2,3,4]);
-mySet2.size; // 4
-[...mySet2]; // [1,2,3,4]
+// преобразование между Set и Array
+const mySet2 = new Set([1, 2, 3, 4]);
+console.log(mySet2.size); // 4
+console.log([...mySet2]); // [1, 2, 3, 4]
 
 // пересечение можно представить следующим образом
-var intersection = new Set([...set1].filter(x => set2.has(x)));
+const intersection = new Set([...mySet1].filter((x) => mySet2.has(x)));
 
 // разность можно представить следующим образом
-var difference = new Set([...set1].filter(x => !set2.has(x)));
+const difference = new Set([...mySet1].filter((x) => !mySet2.has(x)));
 
-// Обход элементов set при помощи forEach
-mySet.forEach(function(value) {
+// итерироваться можно с помощью forEach()
+mySet2.forEach((value) => {
   console.log(value);
 });
-
 // 1
 // 2
 // 3
 // 4
 ```
 
-### Реализация простых операций
+### Реализация базовых операций Set
 
 ```js
 function isSuperset(set, subset) {
-    for (var elem of subset) {
-        if (!set.has(elem)) {
-            return false;
-        }
+  for (const elem of subset) {
+    if (!set.has(elem)) {
+      return false;
     }
-    return true;
+  }
+  return true;
 }
 
 function union(setA, setB) {
-    var _union = new Set(setA);
-    for (var elem of setB) {
-        _union.add(elem);
-    }
-    return _union;
+  const _union = new Set(setA);
+  for (const elem of setB) {
+    _union.add(elem);
+  }
+  return _union;
 }
 
 function intersection(setA, setB) {
-    var _intersection = new Set();
-    for (var elem of setB) {
-        if (setA.has(elem)) {
-            _intersection.add(elem);
-        }
+  const _intersection = new Set();
+  for (const elem of setB) {
+    if (setA.has(elem)) {
+      _intersection.add(elem);
     }
-    return _intersection;
+  }
+  return _intersection;
+}
+
+function symmetricDifference(setA, setB) {
+  const _difference = new Set(setA);
+  for (const elem of setB) {
+    if (_difference.has(elem)) {
+      _difference.delete(elem);
+    } else {
+      _difference.add(elem);
+    }
+  }
+  return _difference;
 }
 
 function difference(setA, setB) {
-    var _difference = new Set(setA);
-    for (var elem of setB) {
-        _difference.delete(elem);
-    }
-    return _difference;
+  const _difference = new Set(setA);
+  for (const elem of setB) {
+    _difference.delete(elem);
+  }
+  return _difference;
 }
 
-// Например
-var setA = new Set([1, 2, 3, 4]),
-    setB = new Set([2, 3]),
-    setC = new Set([3, 4, 5, 6]);
+// Примеры
+const setA = new Set([1, 2, 3, 4])
+const setB = new Set([2, 3])
+const setC = new Set([3, 4, 5, 6])
 
-isSuperset(setA, setB);   // => true
-union(setA, setC);        // => Set [1, 2, 3, 4, 5, 6]
-intersection(setA, setC); // => Set [3, 4]
-difference(setA, setC);   // => Set [1, 2]
+isSuperset(setA, setB)          // true
+union(setA, setC)               // Set {1, 2, 3, 4, 5, 6}
+intersection(setA, setC)        // Set {3, 4}
+symmetricDifference(setA, setC) // Set {1, 2, 5, 6}
+difference(setA, setC)          // Set {1, 2}
 ```
 
-### Взаимоотношения с объектом `Array`
+### Связь с объектами массива
 
 ```js
-var myArray = ["value1", "value2", "value3"];
+const myArray = ['value1', 'value2', 'value3'];
 
-// Используйте конструктор Set для преобразования Array в Set
-var mySet = new Set(myArray);
+// Используйте обычный конструктор Set для преобразования массива в набор
+const mySet = new Set(myArray);
 
-mySet.has("value1"); // вернёт true
+mySet.has('value1')     // true
 
-// Используйте spread оператор для преобразования Set в Array
-console.log([...mySet]); // Отобразит тот же массив, что и myArray
+// Используйте синтаксис spread для преобразования набора в массив.
+console.log([...mySet]); // Покажет вам точно такой же массив, как и myArray
 ```
 
-### Взаимоотношения со `String`
+### Удаление повторяющиеся элементов из массива
 
 ```js
-var text = 'India';
+const numbers = [2,3,4,4,2,3,3,4,4,5,5,6,6,7,5,32,3,4,5]
 
-var mySet = new Set(text);  // Set ['I', 'n', 'd', 'i', 'a']
-mySet.size;  // 5
+console.log([...new Set(numbers)])
+
+// [2, 3, 4, 5, 6, 7, 32]
+```
+
+### Связь со строками
+
+```js
+const text = 'Индия';
+
+const mySet = new Set(text);  // Set(5) {'И', 'н', 'д', 'и', 'я'}
+mySet.size  // 5
+
+// чувствительный к регистру и пропускает дубликаты
+new Set("Слово")  // Set(5) { "С", "л", "о", "в", "о"}
+new Set("Слово")  // Set(4) { "С", "л", "о", "в"} // "о" встречается дважды в слове, но в объекте будет только одна
+```
+
+### Используйте Set для обеспечения уникальности списка значений
+
+```js
+const array = Array
+  .from(document.querySelectorAll('[id]'))
+  .map((e) => e.id);
+
+const set = new Set(array);
+console.assert(set.size === array.length);
 ```
 
 ## Спецификации
 
 {{Specifications}}
 
-## Совместимость с браузерами
+## Браузерная поддержка
 
 {{Compat}}
 
 ## Смотрите также
 
-- {{jsxref("Map")}}
+- [Полифил `Set` в `core-js`](https://github.com/zloirock/core-js#set)
+- [map](/ru-RU/docs/Web/JavaScript/Reference/Global_Objects/Map)
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

@@ -23,9 +23,9 @@ dateObj.toUTCString()
 
 `toUTCString` 的返回值是一个使用 UTC 时区的易读格式字符串。返回值的格式可能随平台而变化。通常返回值是一个 RFC-1123 格式的时间戳，这是一个 RFC-822 时间戳的小幅更新版。
 
-## 例子
+## 示例
 
-### 例子：使用`toUTCString`
+### 示例：使用`toUTCString`
 
 ```plain
 var today = new Date();

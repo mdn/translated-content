@@ -18,12 +18,12 @@ string = object.toString();
 ```js
 /*
 Let's imagine an
-<a id="myAnchor" href="https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString">
+<a id="myAnchor" href="https://developer.mozilla.org/zh-CN/docs/HTMLHyperlinkElementUtils/toString">
  element is in the document
 */
 var anchor = document.getElementById("myAnchor");
 var result = anchor.toString();
-// Returns: 'https://developer.mozilla.org/en-US/docs/HTMLHyperlinkElementUtils/toString'
+// Returns: 'https://developer.mozilla.org/zh-CN/docs/HTMLHyperlinkElementUtils/toString'
 ```
 
 ## 规范
@@ -34,6 +34,6 @@ var result = anchor.toString();
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - The {{domxref("HTMLHyperlinkElementUtils")}} mixin it belongs to.

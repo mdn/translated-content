@@ -130,11 +130,11 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 Here, we're specifying a timeout of 2000 ms.
 
-> **Nota:** Support for `timeout` was added in {{Gecko("12.0")}}.
+> **Nota:** Support for `timeout` was added in Gecko 12.0.
 
 ## Synchronous request
 
-> **Nota:** Starting with Gecko 30.0 {{ geckoRelease("30.0") }}, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
+> **Nota:** Starting with Gecko 30.0, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
 
 Em casos raros, o uso do método síncrono é preferível ao invés do método assíncrono.
 
@@ -154,7 +154,7 @@ if (request.status === 200) {
 
 Line 3 sends the request. The `null` parameter indicates that no body content is needed for the `GET` request.
 
-Line 5 checks the status code after the transaction is completed. If the result is 200 -- HTTP's "OK" result -- the document's text content is output to the console.
+Line 5 checks the status code after the transaction is completed. If the result is 200 — HTTP's "OK" result — the document's text content is output to the console.
 
 ### Example: Synchronous HTTP request from a `Worker`
 

@@ -1,15 +1,6 @@
 ---
 title: proxy.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Proxy
-  - Reference
-  - WebExtensions
-  - onRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
 ---
 
@@ -33,12 +24,12 @@ Pour utiliser `proxy.onRequest`, une extension doit avoir la [permission API](/f
 
 ```js
 browser.proxy.onRequest.addListener(
-  listener,             //  function
-  filter,               //  object
-  extraInfoSpec         //  optional array of strings
-)
-browser.proxy.onRequest.removeListener(listener)
-browser.proxy.onRequest.hasListener(listener)
+  listener, //  function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.proxy.onRequest.removeListener(listener);
+browser.proxy.onRequest.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -74,9 +65,9 @@ Les événements ont trois fonctions :
 - `extraInfoSpec` {{optional_inline}}
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer une seule valeur, `"requestHeaders"`, pour inclure les en-têtes de demande dans l'objet de `details` transmis à l'écouteur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.proxy.onRequest", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -90,12 +81,14 @@ function shouldProxyRequest(requestInfo) {
 function handleProxyRequest(requestInfo) {
   if (shouldProxyRequest(requestInfo)) {
     console.log(`Proxying: ${requestInfo.url}`);
-    return {type: "http", host: "127.0.0.1", port: 65535};
+    return { type: "http", host: "127.0.0.1", port: 65535 };
   }
-  return {type: "direct"};
+  return { type: "direct" };
 }
 
-browser.proxy.onRequest.addListener(handleProxyRequest, {urls: ["<all_urls>"]});
+browser.proxy.onRequest.addListener(handleProxyRequest, {
+  urls: ["<all_urls>"],
+});
 ```
 
 {{WebExtExamples}}

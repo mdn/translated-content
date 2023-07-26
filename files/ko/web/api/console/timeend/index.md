@@ -1,16 +1,6 @@
 ---
 title: console.timeEnd()
 slug: Web/API/console/timeEnd
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - console
-  - web console
-browser-compat: api.console.timeEnd
-translation_of: Web/API/Console/timeEnd
 ---
 {{APIRef("Console API")}}
 

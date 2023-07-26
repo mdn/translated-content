@@ -1,11 +1,6 @@
 ---
 title: ETag
 slug: Web/HTTP/Headers/ETag
-tags:
-  - HTTP
-  - Reference
-  - Response
-  - header
 translation_of: Web/HTTP/Headers/ETag
 ---
 
@@ -79,13 +74,11 @@ Le serveur comparera l'`ETag` du client (envoyé avec `If-None-Match`) à l'`ETa
 
 ## Spécifications
 
-| Spécification                            | Titre                                                        |
-| ---------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "ETag", "2.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.ETag")}}
+{{Compat}}
 
 ## Voir aussi
 

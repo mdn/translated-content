@@ -1,14 +1,7 @@
 ---
 title: '<data> : l''élément de données'
 slug: Web/HTML/Element/data
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/data
-browser-compat: html.elements.data
 ---
 
 {{HTMLSidebar}}
@@ -103,6 +96,10 @@ Dans l'exemple suivant, on affiche des noms de produits avec des codes correspon
   <li><data value="9887635">Énorme voiture</data></li>
 </ul>
 ```
+
+### Résultat
+
+{{EmbedLiveSample('',640,160)}}
 
 ## Spécifications
 

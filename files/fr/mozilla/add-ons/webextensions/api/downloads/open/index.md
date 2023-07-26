@@ -1,16 +1,6 @@
 ---
 title: downloads.open()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/open
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - downloads
-  - open
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/open
 ---
 
@@ -26,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var opening = browser.downloads.open(
-  downloadId      // integer
-)
+  downloadId, // integer
+);
 ```
 
 ### Paramètres
@@ -39,9 +29,9 @@ var opening = browser.downloads.open(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la demande a été acceptée, la promesse sera remplie sans arguments. Si la demande a échoué, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.open")}}
+{{Compat}}
 
 ## Exemples
 
@@ -57,15 +47,15 @@ function onError(error) {
 }
 
 function openDownload(downloadItems) {
-    if (downloadItems.length > 0) {
-      var opening = browser.downloads.open(downloadItems[0].id);
-      opening.then(onOpened, onError);
-    }
+  if (downloadItems.length > 0) {
+    var opening = browser.downloads.open(downloadItems[0].id);
+    opening.then(onOpened, onError);
   }
+}
 
 var searching = browser.downloads.search({
   limit: 1,
-  orderBy: ["-startTime"]
+  orderBy: ["-startTime"],
 });
 
 searching.then(openDownload, onError);

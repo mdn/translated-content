@@ -84,11 +84,11 @@ See here for a [brief history of feature-detecting localStorage](https://gist.gi
 
 To illustrate some typical web storage usage, we have created a simple example, imaginatively called **Web Storage Demo**. The [landing page](https://mdn.github.io/dom-examples/web-storage/) provides controls that can be used to customize the color, font, and decorative image:
 
-![](https://mdn.mozillademos.org/files/9685/landing.png)When you choose different options, the page is instantly updated; in addition, your choices are stored in `localStorage`, so that when you leave the page and load it again, later on, your choices are remembered.
+![](landing.png)When you choose different options, the page is instantly updated; in addition, your choices are stored in `localStorage`, so that when you leave the page and load it again, later on, your choices are remembered.
 
 We have also provided an [event output page](https://mdn.github.io/dom-examples/web-storage/event.html) — if you load this page in another tab, then make changes to your choices in the landing page, you'll see the updated storage information outputted as a {{domxref("StorageEvent")}} is fired.
 
-![](https://mdn.mozillademos.org/files/9687/event-output.png)
+![](event-output.png)
 
 > **Nota:** As well as viewing the example pages live using the above links, you can also [check out the source code](https://github.com/mdn/dom-examples/tree/master/web-storage).
 

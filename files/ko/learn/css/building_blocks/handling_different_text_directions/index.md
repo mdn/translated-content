@@ -1,6 +1,7 @@
 ---
 title: 텍스트 표시 방향 제어하기
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
+
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
@@ -24,11 +25,11 @@ CSS 학습에서 지금까지 경험한 많은 속성과 값은 화면의 크기
           >파일 작업</a
         >
         에 대한 기본 지식, HTML 기본 사항 (<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 소개</a
         >
         학습) 및 , CSS 작동 방식 이해 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫 번째 단계</a
         >
         학습)
@@ -49,7 +50,7 @@ CSS 쓰기 모드는 텍스트가 가로 또는 세로로 표시되는지 여부
 
 {{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
 
-[`writing-mode`](/en-US/docs/Web/CSS/writing-mode) 속성에 가능한 세 가지 값은 다음과 같습니다:
+[`writing-mode`](/ko/docs/Web/CSS/writing-mode) 속성에 가능한 세 가지 값은 다음과 같습니다:
 
 - `horizontal-tb`: 블록의 표시 방향은 위에서 아래 입니다. 문장은 가로로 표시됩니다.
 - `vertical-rl`: 블록의 표시 방향은 오른쪽에서 왼쪽입니다. 문장은 수직으로 표시됩니다.
@@ -67,11 +68,11 @@ CSS 쓰기 모드는 텍스트가 가로 또는 세로로 표시되는지 여부
 
 쓰기 모드를 전환하면, 블록 (block) 방향과 인라인 (inline) 방향을 변경합니다. `horizontal-tb` 쓰기 모드에서 블록 방향은 위에서 아래로 진행됩니다. `vertical-rl` 쓰기 모드에서 블록 방향은 오른쪽에서 왼쪽으로 수평으로 표시됩니다. 따라서 **블록 크기**는 항상 쓰기 모드에서 페이지에 표시되는 방향 블록입니다. **인라인 크기**는 항상 문장이 표시되는 방향입니다.
 
-이 그림은 가로 쓰기 모드에 있을 때 2 차원 모양을 보여줍니다.![Showing the block and inline axis for a horizontal writing mode.](https://mdn.mozillademos.org/files/16574/horizontal-tb.png)
+이 그림은 가로 쓰기 모드에 있을 때 2 차원 모양을 보여줍니다.![가로 쓰기 모드에 대한 블록 및 인라인 축을 표시](horizontal-tb.png)
 
 이 그림은 세로 쓰기 모드에서 2 차원 모양을 보여줍니다.
 
-![Showing the block and inline axis for a vertical writing mode.](https://mdn.mozillademos.org/files/16575/vertical.png)
+![수직 쓰기 모드에 대한 블록 및 인라인 축을 표시](vertical.png)
 
 CSS 레이아웃, 특히 최신 레이아웃 방법을 살펴보기 시작하면, 블록 및 인라인에 대한 이 아이디어가 매우 중요해 집니다. 나중에 다시 방문하겠습니다.
 
@@ -138,24 +139,3 @@ CSS 레이아웃, 특히 최신 레이아웃 방법을 살펴보기 시작하면
 다음 학습에서는 CSS 의 overflow 를 자세히 살펴볼 것입니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
-
-## 이번 단원에서는
-
-1. [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class 및 ID 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [속성 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes 및 pseudo-elements](/ko/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [결합자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [배경 및 테두리](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [다른 텍스트 방향 처리](/ko/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [콘텐츠 overflow](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [값 과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [CSS 에서 항목 크기 조정](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [이미지, 미디어 및 양식 요소](/ko/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [표 스타일링](/ko/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [CSS 디버깅](/ko/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [CSS 정리](/ko/docs/Learn/CSS/Building_blocks/Organizing)

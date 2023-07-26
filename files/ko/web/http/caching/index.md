@@ -1,12 +1,8 @@
 ---
-title: HTTP caching
+title: HTTP 캐싱
 slug: Web/HTTP/Caching
-tags:
-  - HTTP
-  - 가이드
-  - 캐싱
-translation_of: Web/HTTP/Caching
 ---
+
 {{HTTPSidebar}}
 
 웹 사이트와 애플리케이션의 성능은 이전에 가져온 리소스들을 재사용함으로써 현저하게 향상될 수 있습니다. 웹 캐시는 레이턴시와 네트워크 트래픽을 줄여줌으로써 리소스를 보여주는 데에 필요한 시간을 줄여줍니다. HTTP 캐싱을 활용하면 웹 사이트가 좀 더 빠르게 반응하도록 만들 수 있습니다.
@@ -17,7 +13,7 @@ translation_of: Web/HTTP/Caching
 
 캐시에는 몇 가지 종류가 있습니다: 크게 사설(private) 혹은 공유(shared) 캐시 두 가지 부류로 분류될 수 있습니다. *공유 캐시*는 한 명 이상의 사용자가 재사용할 수 있도록 응답을 저장하는 캐시를 말합니다. *사설 캐시*는 한 명의 사용자만 사용하는 캐시를 말합니다. 이 페이지에서는 거의 대부분 브라우저와 프록시 캐시에 대해서만 다룰 것이나, 그 외에도 더 나은 신뢰도, 성능 그리고 웹 사이트와 웹 애플리케이션의 확장(scaling)을 위해 웹 서버 위에 배포되는 게이트웨이 캐시, CDN, 리버스 프록시 캐시 그리고 로드 밸랜서 등이 있습니다.
 
-![What a cache provide, advantages/disadvantages of shared/private caches.](/en-US/docs/Web/HTTP/Caching/http_cache_type.png)
+![What a cache provide, advantages/disadvantages of shared/private caches.](/ko/docs/Web/HTTP/Caching/http_cache_type.png)
 
 ### 사설 브라우저 캐시
 
@@ -37,7 +33,7 @@ HTTP 캐싱은 선택적(optional)이지만 캐시된 리소스를 재사용하�
 - 완전하지 않은 결과: {{HTTPStatus(206)}} (Partial Content) 응답.
 - 캐시 키로 사용하기에 적절한 무언가가 정의된 경우의 {{HTTPMethod("GET")}} 이외의 응답.
 
-캐시 엔트리는 요청이 컨텐츠 협상의 대상인 경우, 두번째 키에 의해 구별되는 여러 개의 저장된 응답들로 구성될 수도 있습니다. 좀 더 자세한 내용을 참고하시려면 [아래에서](#Varying_responses) {{HTTPHeader("Vary")}} 헤더에 대해서 읽어보시기 바랍니다.
+캐시 엔트리는 요청이 컨텐츠 협상의 대상인 경우, 두번째 키에 의해 구별되는 여러 개의 저장된 응답들로 구성될 수도 있습니다. 좀 더 자세한 내용을 참고하시려면 [아래에서](#varying_responses) {{HTTPHeader("Vary")}} 헤더에 대해서 읽어보시기 바랍니다.
 
 ## 캐싱 제어
 
@@ -76,7 +72,7 @@ Cache-Control: public
 
 여기서 가장 중요한 디렉티브는 "`max-age=<seconds>`"로 리소스가 유효하다고 판단되는 최대 시간을 말합니다. 이 디렉티브는 요청 시간에 상대적이며, {{HTTPHeader("Expires")}}가 설정되어 있어도 그보다 우선합니다. 변경되지 않을 파일에 대해, 공격적으로 (긴 시간으로) 캐싱할 수 있습니다. 예를 들어 이미지, CSS 파일 그리고 자바스크립트 파일과 같은 정적 파일들입니다.
 
-좀 더 자세한 내용을 위해, 아래에서 [유효성](#유효성Freshness) 섹션을 참고하시기 바랍니다.
+좀 더 자세한 내용을 위해, 아래에서 [유효성](#유효성freshness) 섹션을 참고하시기 바랍니다.
 
 ```
 Cache-Control: max-age=31536000

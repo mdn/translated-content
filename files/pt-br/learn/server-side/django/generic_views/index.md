@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial Django Parte 6: Lista genérica e detail views'
+title: "Tutorial Django Parte 6: Lista genérica e detail views"
 slug: Learn/Server-side/Django/Generic_views
 ---
 
@@ -127,7 +127,7 @@ Crie o arquivo HTML **/locallibrary/catalog/templates/catalog/book_list.html** e
 
 Os templates para visualizações genéricas são como qualquer outro template (_embora_, é claro, o contexto/informações passadas para o template possam ser diferentes). Assim como em nosso template _index_, estendemos nosso template base na primeira linha e substituímos o bloco denominado `content`.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -152,7 +152,7 @@ A view passa o contexto (lista de livros), por padrão, um `object_list` e `book
 
 Nós usamos o [`if`](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#if), `else`, e `endif` template tags para verificar se o `book_list` foi definido e não está vazio. E se `book_list` está vazio, então a cláusula `else` exibe o texto explicando que não há livros para listar. E se `book_list` não estiver vazio, percorreremos a lista de livros.
 
-```html
+```django
 {% if book_list %}
   <!-- code here to list the books -->
 {% else %}
@@ -166,9 +166,9 @@ A condição acima verifica apenas um caso, mas você pode testar em condições
 
 O template usa as template tags [for](https://docs.djangoproject.com/pt-br/2.1/ref/templates/builtins/#for) e `endfor` para percorrer a lista de livros, como mostrado abaixo. Cada iteração preenche a variável de template `book` com informações para o item da lista atual.
 
-```html
+```django
 {% for book in book_list %}
-  <li> <!-- code here get information from each book item --> </li>
+  <li><!-- code here get information from each book item --></li>
 {% endfor %}
 ```
 
@@ -326,7 +326,7 @@ def book_detail_view(request, primary_key):
 
 Crie o arquivo HTML **/locallibrary/catalog/templates/catalog/book_detail.html** e forneça o conteúdo abaixo. Conforme discutido acima, este é o nome do arquivo de template padrão esperado pela view de _detalhes_ genérica class-based (para um modelo chamado `Book` no aplicativo chamado `catalog`).
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -356,7 +356,7 @@ Crie o arquivo HTML **/locallibrary/catalog/templates/catalog/book_detail.html**
 
 > **Nota:** O link do autor no template acima tem um URL vazio porque ainda não criamos uma página de detalhes do autor. Uma vez que isso exista, você deve atualizar o URL assim:
 >
-> ```
+> ```django
 > <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
 > ```
 
@@ -369,7 +369,7 @@ Embora um pouco maior, quase tudo neste template foi descrito anteriormente:
 
 A única coisa interessante que não vimos antes é a função `book.bookinstance_set.all()`. Este método é "automagicamente" construído pelo Django para retornar o conjunto de registros `BookInstance` associados com um `Book` em particular.
 
-```python
+```django
 {% for copy in book.bookinstance_set.all %}
   <!-- code to iterate across each copy/instance of a book -->
 {% endfor %}
@@ -397,7 +397,7 @@ Este método é necessário porque você declara um campo `ForeignKey` (um-para-
 >
 > Se você decidir ir com uma `class Meta` no model `Author` (provavelmente não tão flexível quanto personalizar o class-based view, mas fácil o suficiente), você terminará com algo assim:
 >
-> ```
+> ```python
 > class Author(models.Model):
 >     first_name = models.CharField(max_length=100)
 >     last_name = models.CharField(max_length=100)
@@ -426,11 +426,11 @@ Nesse ponto, deveríamos ter criado tudo o necessário para exibir a lista de li
 
 Clique no link **All books** para exibir a lista de livros.
 
-![Book List Page](https://mdn.mozillademos.org/files/14049/book_list_page_no_pagination.png)
+![Book List Page](book_list_page_no_pagination.png)
 
 Em seguida, clique no link de um dos seus livros. Se tudo estiver configurado corretamente, você deverá ver algo como a seguinte captura de tela.
 
-![Book Detail Page](https://mdn.mozillademos.org/files/14051/book_detail_page_no_pagination.png)
+![Book Detail Page](book_detail_page_no_pagination.png)
 
 ## Paginação
 
@@ -456,26 +456,26 @@ Agora que os dados estão paginados, precisamos adicionar suporte ao modelo para
 
 Abra **/locallibrary/catalog/templates/_base_generic.html_** e copie no seguinte bloco de paginação, abaixo do nosso bloco de conteúdo (destacado abaixo em negrito). O código primeiro verifica se a paginação está ativada na página atual. Nesse caso, adiciona os links seguintes e anteriores, conforme apropriado (e o número da página atual).
 
-```python
+```django
 {% block content %}{% endblock %}
 
-  {% block pagination %}
-    {% if is_paginated %}
-        <div class="pagination">
-            <span class="page-links">
-                {% if page_obj.has_previous %}
-                    <a href="\{{ request.path }}?page=\{{ page_obj.previous_page_number }}">previous</a>
-                {% endif %}
-                <span class="page-current">
-                    Page \{{ page_obj.number }} of \{{ page_obj.paginator.num_pages }}.
-                </span>
-                {% if page_obj.has_next %}
-                    <a href="\{{ request.path }}?page=\{{ page_obj.next_page_number }}">next</a>
-                {% endif %}
-            </span>
-        </div>
-    {% endif %}
-  {% endblock %}
+{% block pagination %}
+  {% if is_paginated %}
+    <div class="pagination">
+      <span class="page-links">
+        {% if page_obj.has_previous %}
+          <a href="\{{ request.path }}?page=\{{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+        <span class="page-current">
+          Page \{{ page_obj.number }} of \{{ page_obj.paginator.num_pages }}.
+        </span>
+        {% if page_obj.has_next %}
+          <a href="\{{ request.path }}?page=\{{ page_obj.next_page_number }}">next</a>
+        {% endif %}
+      </span>
+    </div>
+  {% endif %}
+{% endblock %}
 ```
 
 O `page_obj` é um objeto de [Paginator](https://docs.djangoproject.com/pt-br/2.1/topics/pagination/#paginator-objects) que existirá se a paginação estiver sendo usada na página atual. Permite obter todas as informações sobre a página atual, as páginas anteriores, quantas páginas existem, etc.
@@ -490,7 +490,7 @@ A captura de tela abaixo mostra a aparência da paginação - se você não inse
 
 Os links de paginação são exibidos na parte inferior, com os links seguinte/anterior, dependendo da página em que você está.
 
-![Book List Page - paginated](https://mdn.mozillademos.org/files/14057/book_list_paginated.png)
+![Book List Page - paginated](book_list_paginated.png)
 
 ## Challenge yourself
 
@@ -501,20 +501,23 @@ The challenge in this article is to create the author detail and list views requ
 
 The code required for the URL mappers and the views should be virtually identical to the `Book` list and detail views we created above. The templates will be different but will share similar behaviour.
 
-> **Nota:** :
+> **Nota:**
 >
 > - Once you've created the URL mapper for the author list page you will also need to update the **All authors** link in the base template. Follow the [same process](#Update_the_base_template) as we did when we updated the **All books** link.
 > - Once you've created the URL mapper for the author detail page, you should also update the [book detail view template](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) so that the author link points to your new author detail page (rather than being an empty URL). The line will change to add the template tag shown in bold below.
 >
->   ```html
->   <p><strong>Author:</strong> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a></p>
+>   ```django
+>   <p>
+>     <strong>Author:</strong>
+>     <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+>   </p>
 >   ```
 
 When you are finished, your pages should look something like the screenshots below.
 
-![Author List Page](https://mdn.mozillademos.org/files/14053/author_list_page_no_pagination.png)
+![Author List Page](author_list_page_no_pagination.png)
 
-![Author Detail Page](https://mdn.mozillademos.org/files/14055/author_detail_page_no_pagination.png)
+![Author Detail Page](author_detail_page_no_pagination.png)
 
 ## Summary
 
@@ -533,21 +536,3 @@ In our next articles, we'll extend this library to support user accounts, and th
 - [Pagination](https://docs.djangoproject.com/en/2.1/topics/pagination/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
-
-## Neste módulo
-
-- [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introduction)
-- [Configurando um ambiente de desenvolvimento Django](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial Django Parte 3: Usando models](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Tutorial Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial Django Parte 6: Lista genérica e detail views](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial Django Parte 7: Framework de Sessões](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial Django Parte 8: Autenticação de Usuário e permissões](/pt-BR/docs/Learn/Server-side/Django/Authentication)
-- [Tutorial Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Tutorial Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Tutorial Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- Segurança de aplicações web Django
-- [DIY Django mini blog](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

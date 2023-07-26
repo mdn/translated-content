@@ -1,16 +1,6 @@
 ---
 title: webRequest.onBeforeRedirect
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRedirect
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onBeforeRedirect
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRedirect
 ---
 
@@ -24,12 +14,12 @@ Notez que vous ne pouvez pas passer le `"blockage"` pour cet événement, donc v
 
 ```js
 browser.webRequest.onBeforeRedirect.addListener(
-  listener,             // function
-  filter,               //  object
-  extraInfoSpec         //  optional array of strings
-)
-browser.webRequest.onBeforeRedirect.removeListener(listener)
-browser.webRequest.onBeforeRedirect.hasListener(listener)
+  listener, // function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.webRequest.onBeforeRedirect.removeListener(listener);
+browser.webRequest.onBeforeRedirect.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -127,9 +117,9 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onBeforeRedirect", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -146,10 +136,9 @@ function logResponse(responseDetails) {
   console.log(responseDetails.redirectUrl);
 }
 
-browser.webRequest.onBeforeRedirect.addListener(
-  logResponse,
-  {urls: [target]}
-);
+browser.webRequest.onBeforeRedirect.addListener(logResponse, {
+  urls: [target],
+});
 ```
 
 {{WebExtExamples}}

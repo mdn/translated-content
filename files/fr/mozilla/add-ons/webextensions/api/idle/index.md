@@ -1,15 +1,6 @@
 ---
 title: idle
 slug: Mozilla/Add-ons/WebExtensions/API/idle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Idle
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/idle
 ---
 
@@ -36,9 +27,9 @@ Pour utiliser cette API, vous disposez de la [permission](/fr/Add-ons/WebExtensi
 - {{WebExtAPIRef("idle.onStateChanged")}}
   - : Définit quand le système change d'état.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.idle")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

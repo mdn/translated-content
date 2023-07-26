@@ -1,9 +1,6 @@
 ---
 title: CanvasCaptureMediaStreamTrack.requestFrame()
 slug: Web/API/CanvasCaptureMediaStreamTrack/requestFrame
-tags:
-  - 캔버스
-translation_of: Web/API/CanvasCaptureMediaStreamTrack/requestFrame
 ---
 
 {{APIRef("Media Capture and Streams")}}

@@ -1,11 +1,6 @@
 ---
 title: '-webkit-mask-repeat-y'
 slug: Web/CSS/-webkit-mask-repeat-y
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-mask-repeat-y
 ---
 
@@ -77,7 +72,7 @@ Chaque image aura la valeur associée, dans le même ordre.
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-mask-repeat-y")}}
+{{Compat}}
 
 ## Voir aussi
 

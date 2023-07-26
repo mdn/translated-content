@@ -81,10 +81,11 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 自動検出に対応するには、それぞれのプラグインの `<link>` 要素をウェブページの `<head>` セクションにします。
 
 ```html
-<link rel="search"
-      type="application/opensearchdescription+xml"
-      title="searchTitle"
-      href="pluginURL">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="searchTitle"
+  href="pluginURL" />
 ```
 
 太字の項目を以下の説明のように置き換えてください。
@@ -97,11 +98,17 @@ OpenSearch 記述ファイルは、[検索プラグインの自動検出](#autod
 もしサイトが複数の検索プラグインを提供しているなら、すべてを自動検出させることができます。例を示します。
 
 ```html
-<link rel="search" type="application/opensearchdescription+xml"
-      title="MySite: 著者" href="http://example.com/mysiteauthor.xml">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="MySite: 著者"
+  href="http://example.com/mysiteauthor.xml" />
 
-<link rel="search" type="application/opensearchdescription+xml"
-      title="MySite: タイトル" href="http://example.com/mysitetitle.xml">
+<link
+  rel="search"
+  type="application/opensearchdescription+xml"
+  title="MySite: タイトル"
+  href="http://example.com/mysitetitle.xml" />
 ```
 
 この方法で、著者とタイトルによる検索を行うプラグインをサイトで提供することができます。
@@ -130,7 +137,7 @@ OpenSearch プラグインは自動的に更新することができます。 `U
 - 検索プラグインの XML が整形式であることを確認してください。ファイルを直接 Firefox に読み込むことでチェックすることができます。アンパーサンド (&) を `template` の URL の中では `&amp;` にエスケープしなければなりません。タグは最後にスラッシュをまたは対応する終了タグで閉じる必要があります。
 - `xmlns` 属性は重要です。 — これがないと、 "Firefox could not download the search plugin" というエラーメッセージが出る可能性があります。
 - `text/html` の URL を含める**必要があります**。 Atom または [RSS](/ja/docs/Glossary/RSS) の URL 型のみを含む検索プラグインは (有効なものですが、 Firefox は対応していません)、 "could not download the search plugin" エラーを引き起こします。
-- リモートで取得されるファビコンは 10KB 以上でなければなりません ({{ Bug(361923) }} を参照)。
+- リモートで取得されるファビコンは 10KB 以上でなければなりません ([Firefox バグ 361923](https://bugzil.la/361923) を参照)。
 
 さらに、検索プラグインサービスはプラグイン開発者に役立つであろうログの仕組みを提供します。 `about:config` を使い '`browser.search.log`' を `true` に設定してください。検索プラグインが追加されるとログ情報が Firefox の[エラーコンソール](/ja/docs/Archive/Mozilla/Error_console) (ツール ➤ エラーコンソール)に表示されます。
 

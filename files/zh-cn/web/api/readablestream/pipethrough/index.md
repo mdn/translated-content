@@ -5,7 +5,7 @@ slug: Web/API/ReadableStream/pipeThrough
 
 {{APIRef("Streams")}}
 
-{{domxref("ReadableStream")}} 接口的 **`pipeThrough()`** 方法提供了一种链式的方式，将当前流通过转换流或者其它任何一对可写/可读的流进行管道传输。
+{{domxref("ReadableStream")}} 接口的 **`pipeThrough()`** 方法提供了一种链式的方式，将当前流通过转换流或者其他任何一对可写/可读的流进行管道传输。
 
 传输一个流通常在管道传输的时间内锁定这个流，以阻止其他 reader 锁定它。
 
@@ -67,3 +67,8 @@ fetch('png-logo.png')
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数
+- [链式管道传输](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams#链式管道传输)

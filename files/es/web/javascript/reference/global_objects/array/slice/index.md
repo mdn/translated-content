@@ -134,7 +134,7 @@ var list1 = list(1, 2, 3); // [1, 2, 3]
 
 ## Coordinación del comportamiento entre navegadores
 
-La especificación permite a los objetos del host ( entre ellos los objetos del DOM ) ser dependientes de la implementación. Esta **NO** obligatoriedad, origina diferencias en el comportamiento entre aquellos comprometidos con los estándares, como Mozilla, y los que no. En lo que concierne a `Array.prototype.slice` , por lo tanto, existen importantes incompatibilidades en IE < 9 . Versiones de IE a partir de la 9 permiten un comportamiento compatible más fiable. Se puede recurrir al “_shimming_” para alcanzar la compatibilidad en otros casos. Mientras otros navegadores modernos continúan mejorando para soportar esta habilidad, en la forma en que actualmente lo hacen Mozilla, Chrome, Safari, Opera e IE, los desarrolladores de código preocupados por el soporte DOM que confíen en este _shim_ no deben dejarse engañar por la semántica, deben confiar de forma segura en ella para proporcionar el comportamiento estándar que aparentemente ahora es la norma.
+La especificación permite a los objetos del host ( entre ellos los objetos del DOM ) ser dependientes de la implementación. Esta **NO** obligatoriedad, origina diferencias en el comportamiento entre aquellos comprometidos con los estándares, como Mozilla, y los que no. En lo que concierne a `Array.prototype.slice` , por lo tanto, existen importantes incompatibilidades en IE < 9 . Versiones de IE a partir de la 9 permiten un comportamiento compatible más fiable. Se puede recurrir al "_shimming_" para alcanzar la compatibilidad en otros casos. Mientras otros navegadores modernos continúan mejorando para soportar esta habilidad, en la forma en que actualmente lo hacen Mozilla, Chrome, Safari, Opera e IE, los desarrolladores de código preocupados por el soporte DOM que confíen en este _shim_ no deben dejarse engañar por la semántica, deben confiar de forma segura en ella para proporcionar el comportamiento estándar que aparentemente ahora es la norma.
 
 El _shim_ también soluciona que IE pueda tratar con el caso de que el segundo argumento de `slice()` pueda ser un valor {{jsxref("Global_Objects/null", "null")}}/{{jsxref("Global_Objects/undefined", "undefined")}} explícito. Esto era un problema en versiones anteriores de IE, pero todos los navegadores modernos, incluído IE >= 9, lo hacen actualmente.
 
@@ -211,9 +211,7 @@ El _shim_ también soluciona que IE pueda tratar con el caso de que el segundo a
 
 ## Compatibilidad con navegadores
 
-La tabla de compatibilidad en esta página esta generada desde datos estructurados. Si desea contribuir con los datos, por favor _"checkout"_ [https://github.com/mdn/browser-compat-data](https://github.com/mdn/browser-compat-data)y envíenos un _"pull request"_.
-
-{{Compat("javascript.builtins.Array.slice")}}
+{{Compat}}
 
 ## Ver también
 

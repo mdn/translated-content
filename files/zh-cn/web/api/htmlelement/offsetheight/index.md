@@ -25,7 +25,7 @@ var intElemOffsetHeight = document.getElementById(id_attribute_value).offsetHeig
 
 ## 示例
 
-![Image:Dimensions-offset.png](/@api/deki/files/186/=Dimensions-offset.png)
+![Image:Dimensions-offset.png](dimensions-offset.png)
 
 上面的图片中显示了 scollbar 和窗口高度的 offsetHeight.但是不能滚动的元素可能会有一个很大的高度值，大于可以看见的内容。这些元素原则上是被包含在滚动元素之中的。所以，这些不能滚动的元素可能会因为 scrollTop 的值会被完全隐藏或者部分隐藏；
 

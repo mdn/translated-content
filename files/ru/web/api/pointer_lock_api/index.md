@@ -109,7 +109,7 @@ function lockError(e) {
 
 The Pointer lock API extends the normal {{domxref("MouseEvent")}} interface with movement attributes.
 
-```idl
+```webidl
 partial interface MouseEvent {
     readonly attribute long movementX;
     readonly attribute long movementY;
@@ -134,7 +134,7 @@ When the mouse is unlocked, the system cursor can exit and re-enter the browser 
 
 We've written a [simple pointer lock demo](https://mdn.github.io/dom-examples/pointer-lock/) to show you how to use it to set up a simple control system ([see source code](https://github.com/mdn/dom-examples/tree/master/pointer-lock)). The demo looks like this:
 
-![A red circle on top of a black background.](https://mdn.mozillademos.org/files/7953/pointer-lock.png)
+![A red circle on top of a black background.](pointer-lock.png)
 
 This demo uses JavaScript to draw a ball on top of an {{ htmlelement("canvas") }} element. When you click the canvas, pointer lock is then used to remove the mouse pointer and allow you to move the ball directly using the mouse. Let's see how this works.
 

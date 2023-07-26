@@ -229,7 +229,7 @@ CSS は、テキストの視覚的な太さや強調を変更するために次�
 
   - `normal`: テキストを通常のフォントに設定します（既存のイタリック体をオフにします）。
   - `italic`: 利用できる場合は、*イタリック体版のフォント*を使用するようにテキストを設定します。 利用できない場合は、代わりに `oblique` でイタリック体をシミュレートします。
-  - `oblique`: 通常版を斜め ​​ にして作成された、イタリック体フォントのシミュレート版を使用するようにテキストを設定します。
+  - `oblique`: 通常版を斜めにして作成された、イタリック体フォントのシミュレート版を使用するようにテキストを設定します。
 
 - {{cssxref("font-weight")}}: テキストの太さを設定します。 利用可能なフォントのバリエーションが多数ある場合（_-light_、_-normal_、_-bold_、_-extrabold_、_-black_ など）、これには多くの値がありますが、現実的には `normal` と `bold` 以外のものを使用することはほとんどありません。
 
@@ -643,11 +643,3 @@ window.addEventListener("load", drawOutput);
 この記事のテキストで遊んで楽しんでくださいね！ 次の記事では、HTML リストの装飾について知っておくべきことをすべて説明します。
 
 {{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
-
-## このモジュール内の文書
-
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
-- [リストの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_lists)
-- [リンクの装飾](/ja/docs/Learn/CSS/Styling_text/Styling_links)
-- [ウェブフォント](/ja/docs/Learn/CSS/Styling_text/Web_fonts)
-- [コミュニティスクールのホームページの組版](/ja/Learn/CSS/Styling_text/Typesetting_a_homepage)

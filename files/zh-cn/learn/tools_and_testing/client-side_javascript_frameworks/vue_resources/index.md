@@ -1,120 +1,66 @@
 ---
-title: Vue resources
+title: Vue 资源
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-Now we'll round off our study of Vue by giving you a list of resources that you can use to go further in your learning, plus some other useful tips.
+现在，我们将为我们的 Vue 学习画上句号，这里将给你一个资源清单，你可以用它来进一步学习，还有一些其他有用的提示。
 
-<table class="learn-box standard-table">
+<table>
   <tbody>
     <tr>
-      <th scope="row">Prerequisites:</th>
+      <th scope="row">预备条件：</th>
       <td>
         <p>
-          Familiarity with the core <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
-          <a href="/zh-CN/docs/Learn/CSS">CSS</a>, and
-          <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> languages,
-          knowledge of the
-          <a
+          熟悉核心 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a href="/zh-CN/docs/Learn/CSS">CSS</a> 和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a>
+          语言，了解<a
             href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-            >terminal/command line</a
-          >.
+            >终端/命令行</a
+          >知识。
         </p>
         <p>
-          Vue components are written as a combination of JavaScript objects that
-          manage the app's data and an HTML-based template syntax that maps to
-          the underlying DOM structure. For installation, and to use some of the
-          more advanced features of Vue (like Single File Components or render
-          functions), you'll need a terminal with node + npm installed.
+           Vue 组件是由管理应用程序数据的 JavaScript 对象和映射到基础 DOM 结构的基于 HTML 的模板语法组成的。为了进行安装并使用 Vue 的一些更高级的功能（例如“单文件组件（SFC）”或渲染功能），你将需要一个装有 node + npm 的终端。
         </p>
       </td>
     </tr>
     <tr>
-      <th scope="row">Objective:</th>
+      <th scope="row">目标：</th>
       <td>
-        To learn where to go to find further information on Vue, to continue
-        your learning.
+        要了解去哪里寻找关于 Vue 的进一步信息，以继续学习。
       </td>
     </tr>
   </tbody>
 </table>
 
-## Further resources
+## 更多资源
 
 这里可以学到更多 Vue 知识：
 
-- [Vue Docs](https://vuejs.org/) — The main Vue site. Contains comprehensive documentation, including examples, cookbooks, and reference material. This is the best place to start learning Vue in depth.
-- [Vue Github Repo](https://github.com/vuejs/vue) — The Vue code itself. This is where you can report issues and/or contribute directly to the Vue codebase. Studying the Vue source code can help you better understand how the framework works, and write better code.
-- [Vue Forum](https://forum.vuejs.org/) — 获取帮助的 Vue 官方论坛。
-- [Vue CLI Docs](https://cli.vuejs.org/) — Documentation for the Vue CLI. This contains information on customizing and extending the output you are generating via the CLI.
-- [NuxtJS](https://nuxtjs.org/) — NuxtJS is a Server-Side Vue Framework, with some architectural opinions that can be useful to creating maintainable applications, even if you don’t use any of the Server Side Rendering features it provides. This site provides detailed documentation on using NuxtJS.
-- [Vue Mastery](https://www.vuemastery.com/courses/) — 一个 Vue 学习平台，也包含一些免费课程。
-- [Vue School](https://vueschool.io/) — 有一个 Vue 付费学习平台。
+- [Vue 文档](https://cn.vuejs.org/)——Vue 网站主页，包含全面的文档，包括示例、指导手册和参考资料。这是开始深入学习 Vue 的最好地方。
+- [Vue Github 仓库](https://github.com/vuejs/vue)——Vue 源码仓库。在这里你可以报告问题和/或直接对 Vue 代码库做出贡献。研究 Vue 的源代码可以帮助你更好地理解该框架的工作原理，并写出更好的代码。
+- [Vue 论坛](https://forum.vuejs.org/)——获取帮助的 Vue 官方论坛。
+- [Vue CLI 文档](https://cli.vuejs.org/)——Vue CLI 文档。这包含了关于定制和扩展你通过 CLI 生成的输出的信息。
+- [NuxtJS](https://nuxtjs.org/)——NuxtJS 是服务器端 Vue 框架，它的一些架构意见对创建可维护的应用程序很有用，即使你不使用它提供的任何服务器端渲染功能。这个网站提供了关于使用 NuxtJS 的详细文档。
+- [Vue Mastery](https://www.vuemastery.com/courses/)——一个 Vue 付费学习平台，也包含一些免费课程。
+- [Vue School](https://vueschool.io/)——也是一个 Vue 付费学习平台。
 
 ## 构建并发布你的 Vue app
 
-Vue CLI 也提供给我们的 app 准备发布到网络上的工具 .你可以这样做：
+Vue CLI 还为我们提供了准备向网络发布应用程序的工具。你可以像这样做：
 
-- 如果你的本地服务仍然正在运行，在控制台按下 <kbd>Ctrl</kbd>+<kbd>C</kbd> 停止它。
+- 如果你的本地服务仍然正在运行，在控制台按下 <kbd>Ctrl</kbd> \+ <kbd>C</kbd> 停止它。
 
-- 之后，在控制台运行 `npm run build` (或者 `yarn build`) .
+- 之后，在控制台运行 `npm run build`（或者 `yarn build`）。
 
-这将创建一个新的`dist` 文件夹来包含你的准备生产的所有文件内容 .为了发布你的网站到网上 , 复制这个文件夹的所有内容到你的主机环境。
+这将创建一个新的 `dist` 目录，包含所有准备好的生产文件。要把你的网站发布到网上，请把这个文件夹的内容复制到你的主机环境中。
 
-> **备注：** The Vue CLI 文档也包含一个[特别的指导来发布你的 app](https://cli.vuejs.org/guide/deployment.html#platform-guides) 到许多的公共主机平台 .
+> **备注：** Vue CLI 文档也包含一个[专门的指导手册](https://cli.vuejs.org/guide/deployment.html#platform-guides)，可以帮助你将应用发布到很多常见的托管平台。
 
-## Vue 3
+## Vue 2
 
-Vue 3 is a major release of the framework with a lot of major changes. It went into active beta in April, 2020. The biggest change is a new Composition API that works as an alternative to the current property-based API. In this new API, a single `setup()` function is used on the component. Only what you return from this function is available in your `<template>`s. You are required to be explicit about "reactive" properties when using this API. Vue handles this for you using the Options API. This makes the new API typically considered a more advanced use case.
+Vue 2 的支持将于 2023 年 12 月 31 日结束，所有 CLI 工具的默认 Vue 版本为 3 及以上版本。[组合式 API](https://cn.vuejs.org/guide/extras/composition-api-faq.html)作为基于属性的 API 的替代，`setup()` 函数将作用于组件上。只有你从这个函数返回的东西在你的 `<template>` 中可用。在使用这个 API 时，你需要对“响应式”的属性进行明确说明。Vue 使用[选项式 API](https://cn.vuejs.org/guide/extras/composition-api-faq.html#trade-offs)为你处理这个问题。这使得新的 API 通常被认为是一个更高级的用例。
 
-There are also a handful of other changes, including a change in how Apps are initialized in Vue. To read more about the changes involved with Vue 3, refer to [this article by Vue School which goes over most of the major changes in Vue 3](https://vueschool.io/articles/vuejs-tutorials/exciting-new-features-in-vue-3/).
+如果要从 Vue 2 升级，建议看一下 [Vue 3 迁移指南](https://v3-migration.vuejs.org/zh/)。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [客户端框架介绍](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [开始使用 React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [开始我们的 React todo list](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [组件化我们的 React app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [开始使用 Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [开始使用 Vue](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [构建我们的第一个 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [使用 CSS 装饰 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [使用 Vue 计算属性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue 资源](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [开始使用 Svelte](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [Svelte 中的 TypeScript 支持](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)

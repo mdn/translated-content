@@ -1,9 +1,6 @@
 ---
 title: FormData.get()
 slug: Web/API/FormData/get
-page-type: web-api-instance-method
-browser-compat: api.FormData.get
-translation_of: Web/API/FormData/get
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -48,11 +45,11 @@ formData.append('username', 'Bob');
 formData.get('username'); // Returns "Chris"
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

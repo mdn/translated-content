@@ -26,7 +26,7 @@ void ctx.translate(x, y);
 
 ## 示例
 
-### 使用 `translate` 方法
+### 移动形状
 
 这是一段使用 `translate` 方法的简单的代码片段。
 
@@ -39,59 +39,29 @@ void ctx.translate(x, y);
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
 
-ctx.translate(50, 50);
-ctx.fillRect(0,0,100,100);
+// Moved square
+ctx.translate(110, 30);
+ctx.fillStyle = 'red';
+ctx.fillRect(0, 0, 80, 80);
 
-// reset current transformation matrix to the identity matrix
+// Reset current transformation matrix to the identity matrix
 ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+// Unmoved square
+ctx.fillStyle = 'gray';
+ctx.fillRect(0, 0, 80, 80);
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.translate(50, 50);
-ctx.fillRect(0,0,100,100);
-ctx.setTransform(1, 0, 0, 1, 0, 0);</textarea>
-```
+移动后的正方形是红色的，未移动的正方形是灰色的。
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
+{{ EmbedLiveSample('移动形状', 700, 180) }}
 
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 

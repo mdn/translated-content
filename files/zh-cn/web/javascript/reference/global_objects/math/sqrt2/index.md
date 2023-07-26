@@ -15,7 +15,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 
 ## 示例
 
-### 例子：使用 `Math.SQRT2`
+### 示例：使用 `Math.SQRT2`
 
 下面的函数返回 2 的平方根：
 

@@ -160,9 +160,9 @@ if (!Array.prototype.some) {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.some")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,16 +1,6 @@
 ---
 title: bookmarks.removeTree()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - removeTree
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
 ---
 
@@ -26,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removingTree = browser.bookmarks.removeTree(
-  id                // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres
@@ -65,9 +55,9 @@ searchingBookmarks.then(removeMDN, onRejected);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.removeTree")}}
+{{Compat}}
 
 > **Note :**
 >

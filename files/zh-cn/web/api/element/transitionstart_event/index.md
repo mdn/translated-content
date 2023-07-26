@@ -5,7 +5,7 @@ slug: Web/API/Element/transitionstart_event
 
 {{APIRef}}{{SeeCompatTable}}
 
-**`transitionstart`** 事件会在 [CSS transition](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) 实际开始的时候触发，或者说在某个 {{cssxref("transition-delay")}} 已经结束之后触发。
+**`transitionstart`** 事件会在 [CSS transition](/zh-CN/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) 实际开始的时候触发，或者说在某个 {{cssxref("transition-delay")}} 已经结束之后触发。
 
 <table class="properties">
   <tbody>
@@ -92,7 +92,7 @@ transition.addEventListener('transitionend', function() {
 });
 ```
 
-{{ EmbedLiveSample('Examples', '100%', '150px') }}
+{{ EmbedLiveSample('运行实例', '100%', '150px') }}
 
 不同的地方是：
 

@@ -59,7 +59,7 @@ if (foo !== undefined && foo !== null) {
 }
 ```
 
-或者，你如果能确定 `foo` 的值不会是其它的[假值](/zh-CN/docs/Glossary/Falsy)（如：`""` 或 `0`），或者排除这些情况不是问题，那你可以简单地测试其是否为真。
+或者，你如果能确定 `foo` 的值不会是其他的[假值](/zh-CN/docs/Glossary/Falsy)（如：`""` 或 `0`），或者排除这些情况不是问题，那你可以简单地测试其是否为真。
 
 ```js example-good
 if (foo) {

@@ -1,7 +1,6 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
-translation_of: Web/API/Document/designMode
 ---
 
 {{ ApiRef() }}
@@ -24,11 +23,11 @@ document.designMode = "off";
 iframeNode.contentDocument.designMode = "on";
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

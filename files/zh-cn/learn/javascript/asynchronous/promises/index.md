@@ -34,18 +34,20 @@ original_slug: learn/JavaScript/异步/Promises语法
 > 1. 在浏览器的新标签页中访问<https://example.org>。
 > 2. 在该标签页中，打开[浏览器开发者工具](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools)中的 JavaScript 控制台
 > 3. 把我们展示的代码示例复制到控制台中运行。值得注意的是，你必须在每次输入新的示例之前重新加载页面，否则控制台会报错“重新定义了 `fetchPromise`”。
-在这个例子中，我们将从<https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json>下载 JSON 文件，并记录一些相关信息。
+>    在这个例子中，我们将从<https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json>下载 JSON 文件，并记录一些相关信息。
 
 要做到这一点，我们将向服务器发出一个 **HTTP 请求**。在 HTTP 请求中，我们向远程服务器发送一个请求信息，然后它向我们发送一个响应。这次，我们将发送一个请求，从服务器上获得一个 JSON 文件。还记得在上一篇文章中，我们使用 {{domxref("XMLHttpRequest")}} API 进行 HTTP 请求吗？那么，在这篇文章中，我们将使用 {{domxref("fetch", "fetch()")}} API，一个现代的、基于 Promise 的、用于替代 `XMLHttpRequest` 的方法。
 
 把下列代码复制到你的浏览器 JavaScript 控制台中：
 
 ```js
-const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
 console.log(fetchPromise);
 
-fetchPromise.then( response => {
+fetchPromise.then((response) => {
   console.log(`已收到响应：${response.status}`);
 });
 
@@ -78,11 +80,13 @@ Promise { <state>: "pending" }
 试试这个：
 
 ```js
-const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
-fetchPromise.then( response => {
+fetchPromise.then((response) => {
   const jsonPromise = response.json();
-  jsonPromise.then( json => {
+  jsonPromise.then((json) => {
     console.log(json[0].name);
   });
 });
@@ -94,16 +98,18 @@ fetchPromise.then( response => {
 
 等等！还记得上一篇文章吗？我们好像说过，在回调中调用另一个回调会出现多层嵌套的情况？我们是不是还说过，这种“回调地狱”使我们的代码难以理解？这不是也一样吗，只不过变成了用 `then()` 调用而已？
 
-当然如此。但 Promise 的优雅之处在于 *`then()` 本身也会返回一个 Promise，这个 Promise 将指示 `then()` 中调用的异步函数的完成状态*。这意味着我们可以（当然也应该）把上面的代码改写成这样：
+当然如此。但 Promise 的优雅之处在于 _`then()` 本身也会返回一个 Promise，这个 Promise 将指示 `then()` 中调用的异步函数的完成状态_。这意味着我们可以（当然也应该）把上面的代码改写成这样：
 
 ```js
-const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
 fetchPromise
-  .then( response => {
+  .then((response) => {
     return response.json();
   })
-  .then( json => {
+  .then((json) => {
     console.log(json[0].name);
   });
 ```
@@ -113,16 +119,18 @@ fetchPromise
 在进入下一步之前，还有一件事要补充：我们需要在尝试读取请求之前检查服务器是否接受并处理了该请求。我们将通过检查响应中的状态码来做到这一点，如果状态码不是“OK”，就抛出一个错误：
 
 ```js
-const fetchPromise = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
 fetchPromise
-  .then( response => {
+  .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.json();
   })
-  .then( json => {
+  .then((json) => {
     console.log(json[0].name);
   });
 ```
@@ -140,19 +148,21 @@ fetchPromise
 试试这个版本的 `fetch()` 代码。我们使用 `catch()` 添加了一个错误处理函数，并修改了 URL（这样请求就会失败）。
 
 ```js
-const fetchPromise = fetch('bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+const fetchPromise = fetch(
+  "bad-scheme://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
 
 fetchPromise
-  .then( response => {
+  .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP 请求错误：${response.status}`);
     }
     return response.json();
   })
-  .then( json => {
+  .then((json) => {
     console.log(json[0].name);
   })
-  .catch( error => {
+  .catch((error) => {
     console.error(`无法获取产品列表：${error}`);
   });
 ```
@@ -191,18 +201,24 @@ Promise 中有一些具体的术语值得我们弄清楚。
 譬如：
 
 ```js
-const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
-const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
-const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+const fetchPromise1 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+const fetchPromise2 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
+);
+const fetchPromise3 = fetch(
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
+);
 
 Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then( responses => {
+  .then((responses) => {
     for (const response of responses) {
       console.log(`${response.url}：${response.status}`);
     }
   })
-  .catch( error => {
-    console.error(`获取失败：${error}`)
+  .catch((error) => {
+    console.error(`获取失败：${error}`);
   });
 ```
 
@@ -219,18 +235,24 @@ https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json：200
 如果我们用一个错误编码的 URL 尝试同样的代码，就像这样：
 
 ```js
-const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
-const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
-const fetchPromise3 = fetch('bad-scheme://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+const fetchPromise1 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+const fetchPromise2 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
+);
+const fetchPromise3 = fetch(
+  "bad-scheme://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
+);
 
 Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then( responses => {
+  .then((responses) => {
     for (const response of responses) {
       console.log(`${response.url}：${response.status}`);
     }
   })
-  .catch( error => {
-    console.error(`获取失败：${error}`)
+  .catch((error) => {
+    console.error(`获取失败：${error}`);
   });
 ```
 
@@ -243,16 +265,22 @@ Promise.all([fetchPromise1, fetchPromise2, fetchPromise3])
 有时，你可能需要等待一组 Promise 中的某一个 Promise 的执行，而不关心是哪一个。在这种情况下，你需要 {{jsxref("Promise/any", "Promise.any()")}}。这就像 `Promise.all()`，不过在 Promise 数组中的任何一个被兑现时它就会被兑现，如果所有的 Promise 都被拒绝，它也会被拒绝。
 
 ```js
-const fetchPromise1 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
-const fetchPromise2 = fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found');
-const fetchPromise3 = fetch('https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json');
+const fetchPromise1 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+);
+const fetchPromise2 = fetch(
+  "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/not-found",
+);
+const fetchPromise3 = fetch(
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json",
+);
 
 Promise.any([fetchPromise1, fetchPromise2, fetchPromise3])
-  .then( response => {
+  .then((response) => {
     console.log(`${response.url}：${response.status}`);
   })
-  .catch( error => {
-    console.error(`获取失败：${error}`)
+  .catch((error) => {
+    console.error(`获取失败：${error}`);
   });
 ```
 
@@ -279,7 +307,9 @@ async function fetchProducts() {
   try {
     // 在这一行之后，我们的函数将等待 `fetch()` 调用完成
     // 调用 `fetch()` 将返回一个“响应”或抛出一个错误
-    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    const response = await fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
     if (!response.ok) {
       throw new Error(`HTTP 请求错误：${response.status}`);
     }
@@ -287,8 +317,7 @@ async function fetchProducts() {
     // `response.json()` 调用将返回 JSON 对象或抛出一个错误
     const json = await response.json();
     console.log(json[0].name);
-  }
-  catch(error) {
+  } catch (error) {
     console.error(`无法获取产品列表：${error}`);
   }
 }
@@ -305,20 +334,21 @@ fetchProducts();
 ```js example-bad
 async function fetchProducts() {
   try {
-    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    const response = await fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
     if (!response.ok) {
       throw new Error(`HTTP 请求错误：${response.status}`);
     }
     const json = await response.json();
     return json;
-  }
-  catch(error) {
+  } catch (error) {
     console.error(`无法获取产品列表：${error}`);
   }
 }
 
 const json = fetchProducts();
-console.log(json[0].name);   // json 是一个 Promise 对象，因此这句代码无法正常工作
+console.log(json[0].name); // json 是一个 Promise 对象，因此这句代码无法正常工作
 ```
 
 相反，你需要做一些事情，比如：
@@ -326,14 +356,15 @@ console.log(json[0].name);   // json 是一个 Promise 对象，因此这句代�
 ```js
 async function fetchProducts() {
   try {
-    const response = await fetch('https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json');
+    const response = await fetch(
+      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+    );
     if (!response.ok) {
       throw new Error(`HTTP 请求错误：${response.status}`);
     }
     const json = await response.json();
     return json;
-  }
-  catch(error) {
+  } catch (error) {
     console.error(`无法获取产品列表：${error}`);
   }
 }
@@ -350,7 +381,7 @@ jsonPromise.then((json) => console.log(json[0].name));
 
 Promise 是现代 JavaScript 异步编程的基础。它避免了深度嵌套回调，使表达和理解异步操作序列变得更加容易，并且它们还支持一种类似于同步编程中 `try...catch` 语句的错误处理方式。
 
-`async` 和 `await` 关键字使得从一系列连续的异步函数调用中建立一个操作变得更加容易，避免了创建显式 Promise 链，并允许你像编写异步代码那样编写同步代码。
+`async` 和 `await` 关键字使得从一系列连续的异步函数调用中建立一个操作变得更加容易，避免了创建显式 Promise 链，并允许你像编写同步代码那样编写异步代码。
 
 Promise 在所有现代浏览器的最新版本中都可以使用；唯一会出现支持问题的地方是 Opera Mini 和 IE11 及更早的版本。
 
@@ -366,11 +397,3 @@ Promise 在所有现代浏览器的最新版本中都可以使用；唯一会出
 - [Let's talk about how to talk about promises](https://thenewtoys.dev/blog/2021/02/08/lets-talk-about-how-to-talk-about-promises/)
 
 {{PreviousMenuNext("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous")}}
-
-## 本章目录
-
-- [异步 JavaScript 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing)
-- **如何使用 Promise**
-- [应用一个基于 Promise 的 API](/zh-CN/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Worker 简介](/zh-CN/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [测验：序列动画](/zh-CN/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

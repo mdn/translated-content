@@ -27,7 +27,7 @@ numObj.toLocaleString([locales[, options]])
 
 Проверьте раздел [Совместимость с браузерами](#Browser_compatibility), чтобы увидеть, какие браузеры поддерживают аргументы `locales` и `options`, и [Пример: проверка поддержки аргументов `locales` и `options`](#Example:_Checking_for_support_for_locales_and_options_arguments) для определения этой возможности.
 
-> **Примечание:** **Обратите внимание:** API интернационализации ECMAScript, реализованное в Firefox 29, добавляет аргумент `locales` к методу `Number.toLocaleString()`. Если этот аргумент равен {{jsxref("Global_Objects/undefined", "undefined")}}, этот метод возвращает локализованные цифры на языке, определяемом ОС, в то время, как предыдущие версии Firefox возвращали цифры на английском языке. Это изменение было помечено, как регрессия, затрагивающая обратную совместимость, которая скоро может быть исправлена. ({{bug(999003)}})
+> **Примечание:** API интернационализации ECMAScript, реализованное в Firefox 29, добавляет аргумент `locales` к методу `Number.toLocaleString()`. Если этот аргумент равен {{jsxref("Global_Objects/undefined", "undefined")}}, этот метод возвращает локализованные цифры на языке, определяемом ОС, в то время, как предыдущие версии Firefox возвращали цифры на английском языке. Это изменение было помечено, как регрессия, затрагивающая обратную совместимость, которая скоро может быть исправлена. ({{bug(999003)}})
 
 {{page('/ru/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', 'Parameters')}}
 
@@ -53,7 +53,7 @@ function toLocaleStringSupportsLocales() {
   try {
     number.toLocaleString('i');
   } catch (e) {
-    return e​.name === 'RangeError';
+    return e.name === 'RangeError';
   }
   return false;
 }

@@ -44,7 +44,7 @@ mkdir src/components
 touch src/components/Todo.js
 ```
 
-新しい `Todo.js`  ファイルは今は空です。ファイルを開いて最初の行に次を入力してください。
+新しい `Todo.js` ファイルは今は空です。ファイルを開いて最初の行に次を入力してください。
 
 ```js
 import React from "react";
@@ -87,7 +87,7 @@ export default function Todo() {
 
 > **メモ:** コンポーネントは常に何かを返さなければなりません。もし今後あなたが何も返さないコンポーネントをレンダリングしようとしたら、React はブラウザーにエラーを表示するでしょう。
 
-これで `Todo` コンポーネントは完成しました。`App.js` で、ファイルの先頭付近に次の行を追加して `Todo`  をインポートします。
+これで `Todo` コンポーネントは完成しました。`App.js` で、ファイルの先頭付近に次の行を追加して `Todo` をインポートします。
 
 <pre class="brush: js">import Todo from "./components/Todo";</pre>
 
@@ -97,8 +97,7 @@ export default function Todo() {
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">
   <Todo />
   <Todo />
   <Todo />
@@ -111,11 +110,11 @@ export default function Todo() {
 
 私たちがすべきことは、食べることだけではありません。そう、他にもすべきことがあります。— そう、TODO があります。次に、異なるコンポーネント呼び出しで別々のコンテンツをレンダリングする方法を見てみましょう。
 
-## _一意の_ `<Todo />`  を作成
+## _一意の_ `<Todo />` を作成
 
 コンポーネントが強力なのは、UI の一部を再利用し、その UI のソースを 1 か所で参照できるからです。問題は、通常、各コンポーネントのすべてを再利用するのではなく、ほとんどの部分を再利用しつつ小さな部分を変更したいということです。そこで props の出番です。
 
-### `name`  に何が入るでしょう？
+### `name` に何が入るでしょう？
 
 完了させたいタスクの名前を追跡するために、それぞれの `<Todo />` コンポーネントが一意の名前を表示するようにしなければなりません。
 
@@ -164,7 +163,7 @@ export default function Todo(props) {
 
 ### それは `completed` ですか？
 
-元の静的リストでは、`Eat` だけがチェックされていました。もう一度言いますが、`<Todo />` コンポーネントを構成する UI のほとんどを再利用しつつ、一つだけ変更したいのです。これは別の props が良い仕事をしてくれます！ `App.js`  での各 `<Todo />` の呼び出しには、完了したことを示す新しい props を与えます。最初の (`Eat`) は `true` の値を持ち、残りは `false` にします。
+元の静的リストでは、`Eat` だけがチェックされていました。もう一度言いますが、`<Todo />` コンポーネントを構成する UI のほとんどを再利用しつつ、一つだけ変更したいのです。これは別の props が良い仕事をしてくれます！ `App.js` での各 `<Todo />` の呼び出しには、完了したことを示す新しい props を与えます。最初の (`Eat`) は `true` の値を持ち、残りは `false` にします。
 
 ```js
 <Todo name="Eat" completed={true} />
@@ -184,7 +183,7 @@ export default function Todo(props) {
 
 各 `<Todo />` コンポーネントの `completed` prop を変更すると、ブラウザーはそれに応じてレンダリングされた同等のチェックボックスをチェックしたり、チェックを外したりします。
 
-### `id`  をください
+### `id` をください
 
 現在、`<Todo />` コンポーネントはすべてのタスクに `todo-0` という `id` 属性を与えています。これは悪い HTML です、なぜなら [id 属性](/ja/docs/Web/HTML/Global_attributes/id) は一意でなければならないからです（CSS や JavaScript などで文書フラグメントの一意な識別子として使用されます）。つまり、各 `Todo` に対して一意の値を取る `id` prop をコンポーネントに与えるべきです。
 
@@ -227,7 +226,7 @@ const DATA = [
 ];
 ```
 
-次に、 `tasks`  という名前の props として `<App />` に `DATA` を渡します。`src/index.js` の最終行は以下のようになるはずです。
+次に、 `tasks` という名前の props として `<App />` に `DATA` を渡します。`src/index.js` の最終行は以下のようになるはずです。
 
 ```js
 ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
@@ -253,8 +252,7 @@ const taskList = props.tasks?.map((task) => task.name);
 <ul
   role="list"
   className="todo-list stack-large stack-exception"
-  aria-labelledby="list-heading"
->
+  aria-labelledby="list-heading">
   {taskList}
 </ul>
 ```
@@ -410,8 +408,7 @@ function App(props) {
       <ul
         role="list"
         className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading"
-      >
+        aria-labelledby="list-heading">
         {taskList}
       </ul>
     </div>
@@ -428,58 +425,3 @@ export default App;
 この記事では、アプリをコンポーネントにうまく分割し、それらを効率的にレンダリングする方法について、詳しく説明しました。今回は、アプリをコンポーネントにうまく分割し、それらを効率的にレンダリングする方法について詳しく説明しました。さて、次は React でイベントを処理する方法を見て、いくつかのインタラクティブ機能を追加していきます。
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## このモジュール
-
-- [クライアント側フレームワークの紹介](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [フレームワークの主な機能](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [React をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [React ToDo リストをはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [React アプリのコンポーネント化](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [React のアクセシビリティ](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React リソース](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)
-
-- Angular
-
-  - [Angular をはじめる](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Angular todo リストアプリの事始め](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Angular アプリのスタイリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [item コンポーネントの作成](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [To Do アイテムのフィルタリング](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Angular アプリケーションのビルドとその他のリソース](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)

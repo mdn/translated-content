@@ -23,9 +23,9 @@ The **`ImageBitmap`** interface represents a bitmap image which can be drawn to 
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.ImageBitmap")}}
+{{Compat}}
 
 ## See also
 

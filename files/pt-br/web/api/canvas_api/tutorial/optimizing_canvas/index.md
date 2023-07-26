@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 original_slug: Web/Guide/HTML/Canvas_tutorial/Otimizando_Canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
 
 O elemento {{HTMLElement("canvas")}} é um dos padrões mais largamente utilizados para renderização de gráficos 2D na Web. É muito usado em jogos e em visualizações complexas. Porém, quando sítios web e aplicativos utilizam canvas até seus limites, começam a surgir problemas de perda de performance. Este artigo tem o objetivo de prover sugestões de otimização de seu elemento canvas e garantir que seu site ou aplicativo funcione melhor.
 
@@ -35,7 +35,7 @@ ctx.drawImage(myImage, 0.3, 0.5);
 
 This causes the browser to do extra calculations to create the anti-aliasing effect. To avoid this, make sure to round all co-ordinates used in calls to {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}} using {{jsxref("Math.floor()")}}, for example.
 
-### Don’t scale images in `drawImage`
+### Don't scale images in `drawImage`
 
 Cache various sizes of your images on an offscreen canvas when loading as opposed to constantly scaling them in {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}.
 
@@ -87,7 +87,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 
 ### Turn off transparency
 
-If your game uses canvas and doesn’t need to be transparent, set the `alpha` option to `false` when creating a drawing context with [`HTMLCanvasElement.getContext()`](/pt-BR/docs/Web/API/HTMLCanvasElement/getContext). This information can be used internally to optimize rendering.
+If your game uses canvas and doesn't need to be transparent, set the `alpha` option to `false` when creating a drawing context with [`HTMLCanvasElement.getContext()`](/pt-BR/docs/Web/API/HTMLCanvasElement/getContext). This information can be used internally to optimize rendering.
 
 ```js
 var ctx = canvas.getContext('2d', { alpha: false });

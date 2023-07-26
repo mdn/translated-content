@@ -1,12 +1,6 @@
 ---
 title: <xmp>
 slug: Web/HTML/Element/xmp
-tags:
-  - Element
-  - HTML
-  - Obsolete
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/xmp
 ---
 
@@ -32,7 +26,7 @@ Cet élément implémente l'interface {{domxref('HTMLElement')}}.
 
 ## Compatibilité des navigateurs
 
-{{Compat("html.elements.xmp")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -28,7 +28,7 @@ translation_of: Web/API/MediaStreamTrack
 
   - : Имеет значение `true`, если трек включён, то есть может может отображать поток медиа; или `false`, если он выключен, то есть отображает не поток данных, а чёрное изображение без звука. Если трек отключён, это свойство можно менять, но это не будет давать никакого эффекта.
 
-    > **Примечание:** **Обратите внимание:** Вы можете создать стандартную функцию "заглушить звук", устанавливая свойство `enabled` в значение `false`. Свойство `muted` используется, когда данные отсутствуют из-за технической проблемы.
+    > **Примечание:** Вы можете создать стандартную функцию "заглушить звук", устанавливая свойство `enabled` в значение `false`. Свойство `muted` используется, когда данные отсутствуют из-за технической проблемы.
 
 - {{domxref("MediaStreamTrack.id")}} {{readonlyInline}}
   - : Возвращает объект {{domxref("DOMString")}}, содержащий уникальный идентификатор (GUID) трека; генерируется браузером.
@@ -42,7 +42,7 @@ translation_of: Web/API/MediaStreamTrack
 
   - : Возвращает `true`, если трек не может предоставить данные по техническим причинам.
 
-    > **Примечание:** **Обратите внимание:** Вы можете создать стандартную функцию "заглушить звук", устанавливая свойство `enabled` в значение `false`, и возвращать звук, снова устанавливая его в значение `true`.
+    > **Примечание:** Вы можете создать стандартную функцию "заглушить звук", устанавливая свойство `enabled` в значение `false`, и возвращать звук, снова устанавливая его в значение `true`.
 
 - {{domxref("MediaStreamTrack.readonly")}} {{readonlyInline}}
   - : Возвращает `true`, если трек предназначен только для чтения (например, если его источник - видео файл или камера, настройки которой не могут быть изменены), иначе `false`.
@@ -73,21 +73,21 @@ translation_of: Web/API/MediaStreamTrack
 
 ## События
 
-- [`ended`](/en-US/docs/Web/API/MediaStreamTrack/ended_event)
+- [`ended`](/ru/docs/Web/API/MediaStreamTrack/ended_event)
   - : Вызывается, когда проигрывание трека останавливается (когда значение {{domxref("MediaStreamTrack.readyState", "readyState")}} становится `ended`).
-    Обработчик может быть установлен как свойство [`onended`](/en-US/docs/Web/API/MediaStreamTrack/onended).
-- [`mute`](/en-US/docs/Web/API/MediaStreamTrack/mute_event)
+    Обработчик может быть установлен как свойство [`onended`](/ru/docs/Web/API/MediaStreamTrack/onended).
+- [`mute`](/ru/docs/Web/API/MediaStreamTrack/mute_event)
   - : Вызывается, когда {{domxref("MediaStreamTrack.muted", "muted")}} принимает значение `true`, что означает, что трек временно не может предоставлять данные (например, при плохом подключении сети).
-    Обработчик может быть установлен как свойство [`onmute`](/en-US/docs/Web/API/MediaStreamTrack/onmute).
-- [`isolationchange`](/en-US/docs/Web/API/MediaStreamTrack/isolationchange_event)
+    Обработчик может быть установлен как свойство [`onmute`](/ru/docs/Web/API/MediaStreamTrack/onmute).
+- [`isolationchange`](/ru/docs/Web/API/MediaStreamTrack/isolationchange_event)
   - : Вызывается, когда свойство {{domxref("MediaStreamTrack.isolated", "isolated")}} принимает значение `true` из-за того, что документ больше не имеет разрешение на доступ к треку.
-    Обработчик может быть установлен как свойство [`onisolationchange`](/en-US/docs/Web/API/MediaStreamTrack/onisolationchange).
-- [`overconstrained`](/en-US/docs/Web/API/MediaStreamTrack/overconstrained_event) {{deprecated_inline}}
+    Обработчик может быть установлен как свойство [`onisolationchange`](/ru/docs/Web/API/MediaStreamTrack/onisolationchange).
+- [`overconstrained`](/ru/docs/Web/API/MediaStreamTrack/overconstrained_event) {{deprecated_inline}}
   - : Вызывается, когда источник не удовлетворяет ограничениям трека, что делает его непригодным для использования.
-    Обработчик может быть установлен как свойство [`onoverconstrained`](/en-US/docs/Web/API/MediaStreamTrack/onoverconstrained).
-- [`unmute`](/en-US/docs/Web/API/MediaStreamTrack/unmute_event)
+    Обработчик может быть установлен как свойство [`onoverconstrained`](/ru/docs/Web/API/MediaStreamTrack/onoverconstrained).
+- [`unmute`](/ru/docs/Web/API/MediaStreamTrack/unmute_event)
   - : Вызывается, когда данные снова становятся доступными, то есть пропадают технические проблемы.
-    Обработчик может быть установлен как свойство [`onunmute`](/en-US/docs/Web/API/MediaStreamTrack/onunmute).
+    Обработчик может быть установлен как свойство [`onunmute`](/ru/docs/Web/API/MediaStreamTrack/onunmute).
 
 ## Спецификации
 

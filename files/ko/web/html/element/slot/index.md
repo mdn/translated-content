@@ -1,15 +1,6 @@
 ---
 title: <slot>
 slug: Web/HTML/Element/slot
-tags:
-  - Element
-  - HTML
-  - HTML Web Components
-  - Reference
-  - Web
-  - Web Components
-  - 웹 컴포넌트
-translation_of: Web/HTML/Element/slot
 ---
 
 {{HTMLSidebar}}
@@ -113,4 +104,4 @@ translation_of: Web/HTML/Element/slot
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.slot")}}
+{{Compat}}

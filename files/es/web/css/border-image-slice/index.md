@@ -73,9 +73,9 @@ border-image-slice: unset;
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-image-slice")}}
+{{Compat}}
 
 ## Véase también
 

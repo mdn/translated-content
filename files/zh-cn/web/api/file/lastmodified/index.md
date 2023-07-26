@@ -40,7 +40,7 @@ fileInput.addEventListener('change', function(event) {
 
 结果：
 
-{{ EmbedLiveSample('Reading_from_file_input', 300, 50) }}
+{{ EmbedLiveSample('从 INPUT 标签读取文件', 300, 50) }}
 
 ### 动态创建文件
 

@@ -131,8 +131,8 @@ python3 -V
 
 1. 下载所需的安装程序：
 
-    1. 点击 <https://www.python.org/downloads/>
-    2. 选择 **Download Python 3.8.2** (具体的版本号可能不同)。
+   1. 点击 <https://www.python.org/downloads/>
+   2. 选择 **Download Python 3.8.2** (具体的版本号可能不同)。
 
 2. 使用 Finder 找到安装包，然后双击运行，并按照提示进行安装。
 
@@ -155,8 +155,8 @@ windows 默认不包含 Python, 但你可以从[python.org](https://www.python.o
 
 1. 下载所需版本：
 
-    1. 点击 <https://www.python.org/downloads/>
-    2. 选择 **Download Python 3.8.2** (具体的版本号可能不同)。
+   1. 点击 <https://www.python.org/downloads/>
+   2. 选择 **Download Python 3.8.2** (具体的版本号可能不同)。
 
 2. 双击现在的文件并按照提示安装 Python。
 3. 确保勾选了"Add Python to PATH"选项。
@@ -186,7 +186,7 @@ pip3 list
 
 安装了 Python 和 pip 之后，你就可以安装 virtualenvwrapper（包括了 virtualenv）。可以在[这里](http://virtualenvwrapper.readthedocs.io/en/latest/install.html)找到正式的安装指南，或按照以下指导操作。
 
-使用 pip3 安装该工具：​​​​​​
+使用 pip3 安装该工具：
 
 ```bash
 sudo pip3 install virtualenvwrapper
@@ -289,7 +289,7 @@ pip3 install virtualenvwrapper-win
 
 ### 创建虚拟环境
 
-一旦你成功安装了 *virtualenvwrapper* 或 *virtualenvwrapper-win*，那么在所有平台中使用虚拟环境的方法是非常相似的。
+一旦你成功安装了 _virtualenvwrapper_ 或 _virtualenvwrapper-win_，那么在所有平台中使用虚拟环境的方法是非常相似的。
 
 现在你可以使用 `mkvirtualenv`命令创建一个新的虚拟环境。在运行此命令时，你将看到正在设置的环境（你所看到的只略微与平台相关）。命令完成后，新的虚拟环境将被激活——你能看到提示符的开头就是括号中的环境名称（以下我们展示的是 Ubuntu 的，但是在 Windows/macOS 上，末行时相似的|）
 

@@ -2,17 +2,7 @@
 title: devtools.panels.ElementsPanel.setExpression()
 slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
-  - setExpression
 translation_of: >-
-  Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setExpression
-original_slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/setExpression
 ---
 
@@ -30,9 +20,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var evaluating = browser.devtools.panels.setExpression(
-  expression,       // string
-  rootTitle         // string
-)
+  expression, // string
+  rootTitle, // string
+);
 ```
 
 ### Paramètres
@@ -46,9 +36,9 @@ var evaluating = browser.devtools.panels.setExpression(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans arguments, une fois l'expression évaluée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels.ExtensionSidebarPane.setExpression", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -56,13 +46,11 @@ Ce code crée un volet de barre latérale qui affiche le [`tagName`](/fr/docs/We
 
 ```js
 function onCreated(sidebarPane) {
-
   browser.devtools.panels.elements.onSelectionChanged.addListener(() => {
     const exp = "$0 && $0.tagName";
     const title = "Selected Element tagName";
     sidebarPane.setExpression(exp, title);
   });
-
 }
 
 browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);

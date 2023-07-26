@@ -56,7 +56,7 @@ As páginas da web podem e serão muito diferentes umas das outras, mas todas te
 - rodapé (footer)
   - : Uma faixa na parte inferior da página que geralmente contém letras pequenas, avisos de direitos autorais ou informações de contato. É um lugar para colocar informações comuns (como o cabeçalho), mas geralmente essas informações não são críticas ou secundárias ao próprio site. O rodapé também é usado às vezes para fins de {{Glossary ("SEO")}}, fornecendo links para acesso rápido a conteúdo popular. Um "site típico" poderia ser colocado assim:
 
-![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](https://mdn.mozillademos.org/files/12417/sample-website.png)
+![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](sample-website.png)
 
 ## HTML para estruturar conteúdo
 
@@ -80,14 +80,17 @@ Para implementar essa marcação semântica, o HTML fornece tags dedicadas que v
 Nosso exemplo visto acima é representado pelo seguinte código (você também pode [encontrar o exemplo em nosso repositório GitHub](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). Gostaríamos que você olhasse o exemplo acima e, em seguida, examine a listagem abaixo para ver quais partes compõem a seção do visual.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
     <title>My page title</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet"
+      type="text/css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- as três linhas abaixo são uma correção para que elementos semânticos HTML5 funcionem em versões antigas do Internet Explorer-->
     <!--[if lt IE 9]>
@@ -110,34 +113,57 @@ Nosso exemplo visto acima é representado pelo seguinte código (você também p
         <li><a href="#">Contact</a></li>
       </ul>
 
-       <!-- Um formulário de pesquisa é uma outra maneira não linear comum de navegar por um site. -->
+      <!-- Um formulário de pesquisa é uma outra maneira não linear comum de navegar por um site. -->
 
-       <form>
-         <input type="search" name="q" placeholder="Search query">
-         <input type="submit" value="Go!">
-       </form>
-     </nav>
+      <form>
+        <input type="search" name="q" placeholder="Search query" />
+        <input type="submit" value="Go!" />
+      </form>
+    </nav>
 
     <!-- Esse é o conteúdo principal da nossa página -->
     <main>
-
       <!-- Contém um artigo -->
       <article>
         <h2>Article heading</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+          lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
+          viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
+          et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
+          congue enim, ut porta lorem lacinia consectetur.
+        </p>
 
         <h3>Subsection</h3>
 
-        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+        <p>
+          Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
+          Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
+        </p>
 
-        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+        <p>
+          Pelientesque auctor nisi id magna consequat sagittis. Curabitur
+          dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
+          Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
+        </p>
 
         <h3>Another subsection</h3>
 
-        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+        <p>
+          Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
+          soclis natoque penatibus et manis dis parturient montes, nascetur
+          ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
+          facilisis semper ac in est.
+        </p>
 
-        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+        <p>
+          Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
+          tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
+          ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
+          diam iaculis velit, is fringille sem nunc vet mi.
+        </p>
       </article>
 
       <!-- O contéudo do elemento aside pode ser aninhado dentro do conteúdo do elemento main -->
@@ -152,7 +178,6 @@ Nosso exemplo visto acima é representado pelo seguinte código (você também p
           <li><a href="#">Oh well...</a></li>
         </ul>
       </aside>
-
     </main>
 
     <!-- Esse é o rodapé principal que vai ser usado em todas as páginas do nosso website -->
@@ -160,7 +185,6 @@ Nosso exemplo visto acima é representado pelo seguinte código (você também p
     <footer>
       <p>©Copyright 2050 by nobody. All rights reversed.</p>
     </footer>
-
   </body>
 </html>
 ```
@@ -181,13 +205,18 @@ Reserve um tempo para examinar o código e entendê-lo - os comentários dentro 
 
 ### Elementos de layout não-semânticos
 
-Às vezes, você se depara numa situação em que não consegue encontrar um elemento semântico ideal para agrupar alguns itens ou agrupar algum conteúdo. Nesses momentos, convém agrupar um conjunto de elementos para afetá-los todos como uma única entidade com alguns {{glossary("CSS")}} ou {{glossary("JavaScript")}}. Para casos como esses, HTML oferece os elementos {{HTMLElement("div")}} e {{HTMLElement("span")}}. Você deve usá-los preferencialmente com um atributo {{htmlattrxref('class')}} adequado, para fornecer a eles algum tipo de rótulo para que possam ser facilmente referenciados.
+Às vezes, você se depara numa situação em que não consegue encontrar um elemento semântico ideal para agrupar alguns itens ou agrupar algum conteúdo. Nesses momentos, convém agrupar um conjunto de elementos para afetá-los todos como uma única entidade com alguns {{glossary("CSS")}} ou {{glossary("JavaScript")}}. Para casos como esses, HTML oferece os elementos {{HTMLElement("div")}} e {{HTMLElement("span")}}. Você deve usá-los preferencialmente com um atributo [`class`](/pt-BR/docs/Web/HTML/Global_attributes#class) adequado, para fornecer a eles algum tipo de rótulo para que possam ser facilmente referenciados.
 
 {{HTMLElement("span")}} é um elemento não-semântico embutido, que você deve usar apenas se não conseguir pensar em um elemento de texto semântico melhor para agrupar seu conteúdo ou se não quiser adicionar um significado específico. Por exemplo:
 
 ```html
-<p>O rei voltou bêbado para o quarto às 01:00, a cerveja não fez nada para ajudá-lo
-enquanto ele cambaleando pela porta <span class="editor-note">[Nota do editor: Neste ponto da peça, as luzes devem estar baixas]</span>.</p>
+<p>
+  O rei voltou bêbado para o quarto às 01:00, a cerveja não fez nada para
+  ajudá-lo enquanto ele cambaleando pela porta
+  <span class="editor-note"
+    >[Nota do editor: Neste ponto da peça, as luzes devem estar baixas]</span
+  >.
+</p>
 ```
 
 Nesse caso, a nota do editor deve meramente fornecer orientação extra para o diretor da peça; não é suposto ter um significado semântico extra. Para usuários observador, talvez o CSS fosse usado para distanciar a nota um pouco do texto principal.
@@ -199,12 +228,13 @@ Nesse caso, a nota do editor deve meramente fornecer orientação extra para o d
   <h2>Carrinho de compras</h2>
   <ul>
     <li>
-      <p><a href=""><strong>Brincos de prata</strong></a>: $99.95.</p>
-      <img src="../products/3333-0985/thumb.png" alt="Brincos de prata">
+      <p>
+        <a href=""><strong>Brincos de prata</strong></a
+        >: $99.95.
+      </p>
+      <img src="../products/3333-0985/thumb.png" alt="Brincos de prata" />
     </li>
-    <li>
-      ...
-    </li>
+    <li>...</li>
   </ul>
   <p>Preço total: $237.89</p>
 </div>
@@ -221,10 +251,12 @@ Dois elementos que você ocasionalmente vai usar e desejerá conhecer são {{htm
 `<br>` cria uma quebra de linha em um parágrafo; é a única maneira de forçar uma estrutura rígida em uma situação em que você deseja uma série de linhas curtas fixas, como em um endereço postal ou um poema. Por exemplo:
 
 ```html
-<p>Era uma vez um homem chamado O'Dell<br>
-Que adorava escrever HTML<br>
-Mas sua estrutura era ruim, sua semântica era triste<br>
-e sua marcação não leu muito bem.</p>
+<p>
+  Era uma vez um homem chamado O'Dell<br />
+  Que adorava escrever HTML<br />
+  Mas sua estrutura era ruim, sua semântica era triste<br />
+  e sua marcação não leu muito bem.
+</p>
 ```
 
 Sem os elementos `<br>`, o parágrafo seria apenas renderizado em uma longa linha (como dissemos anteriormente no curso, o HTML ignora a maioria dos espaços em branco); com elementos `<br>` no código, a marcação é renderizada assim
@@ -254,11 +286,11 @@ Enquanto isso, Harry estava sentado em casa, olhando para sua declaração de re
 
 Depois de planejar o conteúdo de uma página da Web simples, o próximo passo lógico é tentar descobrir qual conteúdo você deseja colocar em um site inteiro, quais páginas você precisa e como elas devem ser organizadas e vinculadas umas às outras. para a melhor experiência de usuário possível. Isso é chamado {{glossary("Information architecture")}}. Em um site grande e complexo, é possível planejar muito esse processo, mas para um site simples de poucas páginas, isso pode ser bastante simples e divertido!
 
-1. Lembre-se de que você terá alguns elementos comuns à maioria das páginas (se não todas), como o menu de navegação e o conteúdo do rodapé. Se seu site é para uma empresa, por exemplo, é uma boa ideia ter suas informações de contato disponíveis no rodapé de cada página. Anote o que você deseja que seja comum a todas as páginas.![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](https://mdn.mozillademos.org/files/12423/common-features.png)
-2. Em seguida, desenhe um esboço de como a estrutura de cada página deve parecer (pode parecer com nosso site simples acima). Observe o que cada bloco será.![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](https://mdn.mozillademos.org/files/12429/site-structure.png)
-3. Agora, faça um brainstorm de todos os outros conteúdos (comuns a todas as páginas) que você deseja ter no seu site - escreva uma grande lista.![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](https://mdn.mozillademos.org/files/12425/feature-list.png)
-4. Em seguida, tente classificar todos esses itens de conteúdo em grupos, para ter uma idéia de quais partes podem viver juntas em páginas diferentes. Isso é muito semelhante a uma técnica chamada {{glossary("Card sorting")}}.![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](https://mdn.mozillademos.org/files/12421/card-sorting.png)
-5. Agora, tente esboçar um mapa do site aproximado - faça um balão para cada página do seu site e desenhe linhas para mostrar o fluxo de trabalho típico entre as páginas. A página inicial provavelmente estará no centro e terá um link para a maioria, senão todas as outras; a maioria das páginas em um site pequeno deve estar disponível na navegação principal, embora haja exceções. Você também pode incluir notas sobre como as coisas podem ser apresentadas.![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](https://mdn.mozillademos.org/files/12427/site-map.png)
+1. Lembre-se de que você terá alguns elementos comuns à maioria das páginas (se não todas), como o menu de navegação e o conteúdo do rodapé. Se seu site é para uma empresa, por exemplo, é uma boa ideia ter suas informações de contato disponíveis no rodapé de cada página. Anote o que você deseja que seja comum a todas as páginas.![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](common-features.png)
+2. Em seguida, desenhe um esboço de como a estrutura de cada página deve parecer (pode parecer com nosso site simples acima). Observe o que cada bloco será.![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](site-structure.png)
+3. Agora, faça um brainstorm de todos os outros conteúdos (comuns a todas as páginas) que você deseja ter no seu site - escreva uma grande lista.![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](feature-list.png)
+4. Em seguida, tente classificar todos esses itens de conteúdo em grupos, para ter uma idéia de quais partes podem viver juntas em páginas diferentes. Isso é muito semelhante a uma técnica chamada {{glossary("Card sorting")}}.![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](card-sorting.png)
+5. Agora, tente esboçar um mapa do site aproximado - faça um balão para cada página do seu site e desenhe linhas para mostrar o fluxo de trabalho típico entre as páginas. A página inicial provavelmente estará no centro e terá um link para a maioria, senão todas as outras; a maioria das páginas em um site pequeno deve estar disponível na navegação principal, embora haja exceções. Você também pode incluir notas sobre como as coisas podem ser apresentadas.![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](site-map.png)
 
 ### Aprendizado ativo: crie seu próprio mapa do site
 
@@ -275,15 +307,3 @@ Nesse ponto, você deve ter uma idéia melhor sobre como estruturar uma página 
 - [Seções e estruturas de um documento HTML5](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document): Guia avançado para elementos semânticos do HTML5 e o algoritmo de estrutura de tópicos do HTML5.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
-
-## Neste módulo
-
-- [Iniciando com HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started)
-- [O que está no cabeçalho? Metadados em HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/The_head_metadata_in_HTML)
-- [Fundamentos do texto em HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Fundamentos_textuais_HTML)
-- [Criando hyperlinks](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks)
-- [Formatação avançada de texto](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Formatacao_avancada_texto)
-- [Estrutura de documento e sites](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Estrutura_de_documento_e_sites)
-- [Debugging HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Debugging_HTML)
-- [Marking up a letter](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-- [Structuring a page of content](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)

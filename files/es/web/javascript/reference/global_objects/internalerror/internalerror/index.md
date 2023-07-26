@@ -35,9 +35,9 @@ new InternalError("Fallo del motor");
 
 No forma parte de ningún estándar.
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.InternalError.InternalError")}}
+{{Compat}}
 
 ## Ve también
 

@@ -113,7 +113,7 @@ for (var i=0;i<6;i++){
 
 Результат выглядит так:
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}
+{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
 
 ## Спецификации
 

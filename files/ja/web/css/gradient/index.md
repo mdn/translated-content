@@ -21,7 +21,7 @@ CSS グラデーションは[自身の寸法を持ちません](/ja/docs/Web/CSS
 
 #### 放射グラデーション
 
-放射グラデーション (radical gradient) は、色が中心点 (origin) から連続的に変化します。 {{cssxref("gradient/radial-gradient()", "radial-gradient()")}} 関数で生成されます。
+放射グラデーション (radial gradient) は、色が中心点 (origin) から連続的に変化します。 {{cssxref("gradient/radial-gradient()", "radial-gradient()")}} 関数で生成されます。
 
 #### 反復グラデーション
 

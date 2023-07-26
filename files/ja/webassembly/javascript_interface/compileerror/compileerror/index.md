@@ -4,17 +4,17 @@ slug: WebAssembly/JavaScript_interface/CompileError/CompileError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError/CompileError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.CompileError()`** コンストラクターは、新しい WebAssembly の `CompileError` オブジェクトを生成します。これは WebAssembly のデコードまたは検証中のエラーを示します。
 
 ## 構文
 
 ```js
-new WebAssembly.CompileError()
-new WebAssembly.CompileError(message)
-new WebAssembly.CompileError(message, fileName)
-new WebAssembly.CompileError(message, fileName, lineNumber)
+new WebAssembly.CompileError();
+new WebAssembly.CompileError(message);
+new WebAssembly.CompileError(message, fileName);
+new WebAssembly.CompileError(message, fileName, lineNumber);
 ```
 
 ### 引数
@@ -34,15 +34,15 @@ new WebAssembly.CompileError(message, fileName, lineNumber)
 
 ```js
 try {
-  throw new WebAssembly.CompileError('Hello', 'someFile', 10);
+  throw new WebAssembly.CompileError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof CompileError); // true
-  console.log(e.message);                 // "Hello"
-  console.log(e.name);                    // "CompileError"
-  console.log(e.fileName);                // "someFile"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // コードの実行されていた位置を返す
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "CompileError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // コードの実行されていた位置を返す
 }
 ```
 

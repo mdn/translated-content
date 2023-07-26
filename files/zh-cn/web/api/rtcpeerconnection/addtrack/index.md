@@ -7,7 +7,7 @@ slug: Web/API/RTCPeerConnection/addTrack
 
 {{domxref("RTCPeerConnection")}} 对象的 **`addTrack()`** 方法将一个新的媒体音轨添加到一组音轨中，这些音轨将被传输给另一个对等点。
 
-> **备注：** 通过触发一个 {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 事件，向连接添加一个跟踪将触发重新协商。详情请参见{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Starting negotiation")}}。
+> **备注：** 通过触发一个 {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} 事件，向连接添加一个跟踪将触发重新协商。详情请参见[开始协商](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling#开始协商)。
 
 ## 语法
 
@@ -163,7 +163,7 @@ pc.setRemoteDescription(desc).then(function () {
 })
 ```
 
-这段代码获取从远程对等方接收到的 SDP，并构造一个新的{{domxref("RTCSessionDescription")}}传递到{{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}。成功之后，它使用{{domxref(" mediadevic. getusermedia()")}}获得对本地摄像头和麦克风的访问。
+这段代码获取从远程对等方接收到的 SDP，并构造一个新的 {{domxref("RTCSessionDescription")}} 传递到 {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}。成功之后，它使用 {{domxref("MediaDevices.getUserMedia")}} 获得对本地摄像头和麦克风的访问。
 
 如果成功，结果流将被分配为变量 **`previewElement`** 引用的{{HTMLElement("video")}}元素的源。
 

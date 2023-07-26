@@ -1,16 +1,6 @@
 ---
 title: runtime.onInstalled
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onInstalled
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onInstalled
 ---
 
@@ -23,9 +13,9 @@ Notez que `runtime.onInstalled` n'est pas la même chose {{WebExtAPIRef("managem
 ## Syntaxe
 
 ```js
-browser.runtime.onInstalled.addListener(listener)
-browser.runtime.onInstalled.removeListener(listener)
-browser.runtime.onInstalled.hasListener(listener)
+browser.runtime.onInstalled.addListener(listener);
+browser.runtime.onInstalled.removeListener(listener);
+browser.runtime.onInstalled.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -58,9 +48,9 @@ Les événements ont trois fonctions :
         - `temporary`
           - : `boolean`. Vrai si le module complémentaire a été installé temporairement. Par exemple, en utilisant la page "about:debugging" dans Firefox ou en utilisant [web-ext run](/fr/Add-ons/WebExtensions/Getting_started_with_web-ext). Sinon faux.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onInstalled", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -70,7 +60,7 @@ Lorsque l'extensin est installé, connectez-vous à la raison de l'installon et 
 function handleInstalled(details) {
   console.log(details.reason);
   browser.tabs.create({
-    url: "http://chilloutandwatchsomecatgifs.com/"
+    url: "http://chilloutandwatchsomecatgifs.com/",
   });
 }
 

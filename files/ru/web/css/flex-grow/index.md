@@ -93,7 +93,7 @@ flex-grow: unset;
 
 ### Результат
 
-{{EmbedLiveSample('Пример', '700px', '300px', '', 'Web/CSS/flex-grow')}}
+{{ EmbedLiveSample('Пример', '100%', '300') }}
 
 ## Спецификации
 

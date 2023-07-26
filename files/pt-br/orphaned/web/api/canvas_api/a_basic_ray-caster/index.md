@@ -1,11 +1,10 @@
 ---
 title: A basic ray-caster
 slug: orphaned/Web/API/Canvas_API/A_basic_ray-caster
-translation_of: Web/API/Canvas_API/A_basic_ray-caster
 original_slug: Web/API/Canvas_API/A_basic_ray-caster
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 Esse artigo disponibiliza um exemplo interessante do mundo real do uso do elemento {{HTMLElement("canvas")}} para fazer renderização via software de um ambiente em 3D utilizando _ray-casting_.
 
@@ -36,7 +35,7 @@ Além disso, deixa muito a desejar em termos de tentar ser qualquer tipo de moto
 
 ## O ray-caster
 
-As pessoas agradáveis ​​aqui têm copiado manualmente meus arquivos para que você possa dar uma olhada, e para o seu prazer de hacking eu postei o conteúdo do arquivo individual como listagem de código (veja abaixo).
+As pessoas agradáveis aqui têm copiado manualmente meus arquivos para que você possa dar uma olhada, e para o seu prazer de hacking eu postei o conteúdo do arquivo individual como listagem de código (veja abaixo).
 
 Então você está lá, o fogo até Safari 1.3 ou Firefox 1.5 ou outro navegador que suporta o elemento \<canvas> e divirta-se!
 

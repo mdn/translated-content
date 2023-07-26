@@ -1,5 +1,5 @@
 ---
-title: 'Руководство часть 6: Отображение списков и детальной информации'
+title: "Руководство часть 6: Отображение списков и детальной информации"
 slug: Learn/Server-side/Django/Generic_views
 tags:
   - django
@@ -121,7 +121,7 @@ class BookListView(generic.ListView):
 
 Шаблоны для обобщённых отображений такие же как все остальные шаблоны (хотя, естественно, передаваемые в них контекст, или информация могут отличаться). Так же как и с нашим шаблоном для главной страницы, в первой строке мы расширяем наш базовый шаблон, а затем определяем и замещаем блок с именем `content`.
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -149,7 +149,7 @@ class BookListView(generic.ListView):
 
 Мы применяем теги шаблона [`if`](https://docs.djangoproject.com/en/1.10/ref/templates/builtins/#if), `else` и `endif` для того, чтобы проверить определена ли переменная `book_list` и содержит ли она данные. Если список НЕ пуст, тогда мы выполняем итерации по списку книг. Если список пуст (`else`-случай) тогда мы показываем текст, поясняющий, что в наличии нет книг.
 
-```html
+```django
 {% if book_list %}
   <!-- здесь наш код "бежит" по списку книг -->
 {% else %}
@@ -163,9 +163,9 @@ class BookListView(generic.ListView):
 
 Шаблон использует тэги [for](https://docs.djangoproject.com/en/1.10/ref/templates/builtins/#for) и `endfor` для того, чтобы "пробежаться" по списку книг, как показано ниже. На каждой итерации (каждом цикле) в переменную шаблона `book` передаётся информация текущего элемента списка.
 
-```html
+```django
 {% for book in book_list %}
-  <li> <!-- здесь код, который использует информацию из каждого элемента book списка--> </li>
+  <li><!-- здесь код, который использует информацию из каждого элемента book списка--></li>
 {% endfor %}
 ```
 
@@ -315,7 +315,7 @@ def book_detail_view(request,pk):
 
 Создайте HTML файл **/locallibrary/catalog/templates/catalog/book_detail.html** и скопируйте в него содержимое, представленное ниже. Как было указано ранее, это шаблон "по умолчанию" (имя шаблона), который "ожидается"обобщённым классом отображения детальной информации (для модели с именем `Book` в приложении с именем `catalog`).
 
-```html
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
@@ -343,7 +343,7 @@ def book_detail_view(request,pk):
 
 > **Примечание:** Ссылка на автора в шаблоне содержит пустой URL-адрес, потому что мы ещё не создали страницу детальной информации об авторе. Когда это произойдёт, вы должны будете обновить данный URL-адрес как указано ниже:
 >
-> ```
+> ```django
 > <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
 > ```
 
@@ -356,7 +356,7 @@ def book_detail_view(request,pk):
 
 Одной интересной вещью, которую мы не видели ранее, является функция `book.bookinstance_set.all()`. Данный метод является "автомагически"-сконструированным Django для того, чтобы вернуть множество записей `BookInstance`, связанных с данной книгой `Book`.
 
-```python
+```django
 {% for copy in book.bookinstance_set.all %}
 <!-- итерации по каждой копии/экземпляру книги -->
 {% endfor %}
@@ -413,11 +413,11 @@ def book_detail_view(request,pk):
 
 Кликните ссылку **All books** для перехода на страницу со списком книг.
 
-![Book List Page](https://mdn.mozillademos.org/files/14049/book_list_page_no_pagination.png)
+![Book List Page](book_list_page_no_pagination.png)
 
 Затем кликните на ссылку одной из ваших книг. Если все настроено как надо, то вы должны увидеть то, что указано на картинке.
 
-![Book Detail Page](https://mdn.mozillademos.org/files/14051/book_detail_page_no_pagination.png)
+![Book Detail Page](book_detail_page_no_pagination.png)
 
 ## Постраничный вывод (Pagination)
 
@@ -443,24 +443,24 @@ class BookListView(generic.ListView):
 
 Откройте **/locallibrary/catalog/templates/_base_generic.html_** и, ниже блока `content`, вставьте блок (во фрагменте не выделен жирным), отвечающий за постраничный вывод. Данный код, в первую очередь, проверяет "включён" ли механизм постраничного вывода для данной страницы и если это так, то он добавляет ссылки `next` и `previous`, соответственно (а также, номер текущей страницы).
 
-```python
+```django
 {% block content %}{% endblock %}
 
 {% block pagination %}
   {% if is_paginated %}
-      <div class="pagination">
-          <span class="page-links">
-              {% if page_obj.has_previous %}
-                  <a href="\{{ request.path }}?page=\{{ page_obj.previous_page_number }}">previous</a>
-              {% endif %}
-              <span class="page-current">
-                  Page \{{ page_obj.number }} of \{{ page_obj.paginator.num_pages }}.
-              </span>
-              {% if page_obj.has_next %}
-                  <a href="\{{ request.path }}?page=\{{ page_obj.next_page_number }}">next</a>
-              {% endif %}
-          </span>
-      </div>
+    <div class="pagination">
+      <span class="page-links">
+        {% if page_obj.has_previous %}
+          <a href="\{{ request.path }}?page=\{{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+        <span class="page-current">
+          Page \{{ page_obj.number }} of \{{ page_obj.paginator.num_pages }}.
+        </span>
+        {% if page_obj.has_next %}
+          <a href="\{{ request.path }}?page=\{{ page_obj.next_page_number }}">next</a>
+        {% endif %}
+      </span>
+    </div>
   {% endif %}
 {% endblock %}
 ```
@@ -477,7 +477,7 @@ class BookListView(generic.ListView):
 
 Ссылки на страницы показаны в нижней части страницы. Показаны ссылки следующая/предыдущая в зависимости от того на какой странице вы в данный момент находитесь.
 
-![Book List Page - paginated](https://mdn.mozillademos.org/files/14057/book_list_paginated.png)
+![Book List Page - paginated](book_list_paginated.png)
 
 ## Проверьте себя
 
@@ -493,15 +493,18 @@ class BookListView(generic.ListView):
 > - Когда вы создадите URL-преобразование для страницы списка авторов вам понадобится обновить ссылку **All authors** в базовом шаблоне. Следуйте [тем же путём](#Update_the_base_template), который мы проделали когда обновляли ссылку **All books**.
 > - Когда вы создадите URL-преобразование для страницы с детальной информацией об авторе, вы должны будете обновить [шаблон детальной информации о книге](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**), таким образом, чтобы ссылка автора указывала на страницу с детальной информации о нем (а не быть пустой). Данная ссылка будет иметь вид как указано жирным во фрагменте ниже.
 >
->   ```html
->   <p><strong>Author:</strong> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a></p>
+>   ```django
+>   <p>
+>     <strong>Author:</strong>
+>     <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a>
+>   </p>
 >   ```
 
 Когда вы закончите, ваши страницы должны будут выглядеть как на картинке.
 
-![Author List Page](https://mdn.mozillademos.org/files/14053/author_list_page_no_pagination.png)
+![Author List Page](author_list_page_no_pagination.png)
 
-![Author Detail Page](https://mdn.mozillademos.org/files/14055/author_detail_page_no_pagination.png)
+![Author Detail Page](author_detail_page_no_pagination.png)
 
 ## Итоги
 

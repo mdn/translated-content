@@ -1,5 +1,5 @@
 ---
-title: 作者清单面页、分类清单页面、与自我挑战
+title: 作者清单面页、分类清单页面挑战
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 ---
 
@@ -9,20 +9,23 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 
 作者列表控制器函数，需要获取所有作者实例的列表，然后将这些实例传递给模板进行渲染。
 
-打开**/controllers/authorController.js**。在文件顶部附近，找到导出的`author_list()` 控制器方法，并将其替换为以下代码（更改后的代码以粗体显示）。
+打开 **/controllers/authorController.js**。在文件顶部附近，找到导出的 `author_list()` 控制器方法，并将其替换为以下代码（更改后的代码以粗体显示）。
 
 ```js
 // Display list of all Authors.
-exports.author_list = function(req, res, next) {
-
+exports.author_list = function (req, res, next) {
   Author.find()
-    .sort([['family_name', 'ascending']])
+    .sort([["family_name", "ascending"]])
     .exec(function (err, list_authors) {
-      if (err) { return next(err); }
+      if (err) {
+        return next(err);
+      }
       //Successful, so render
-      res.render('author_list', { title: 'Author List', author_list: list_authors });
+      res.render("author_list", {
+        title: "Author List",
+        author_list: list_authors,
+      });
     });
-
 };
 ```
 
@@ -48,7 +51,7 @@ block content
     li There are no authors.
 ```
 
-如同我们其它的模板，上面视图也依照着同样的模式。
+如同我们其他的模板，上面视图也依照着同样的模式。
 
 ## 它看起來像是？
 
@@ -75,7 +78,7 @@ block content
 1. 您需要在 **/controllers/genreController.js** 中编辑`genre_list()`。
 2. 实现方式几乎与`author_list()`控制器完全相同。
 
-    - 按名称以上升顺序，对结果进行排序。
+   - 按名称以上升顺序，对结果进行排序。
 
 3. 要呈现的模板，应命名为 **genre_list.pug**。
 4. 要呈现的模板应该传递变量`title`（'Genre List'）和种类列表`genre_list`（从`Genre.find()`回调返回）。

@@ -1,7 +1,6 @@
 ---
 title: HTMLLIElement
 slug: Web/API/HTMLLIElement
-translation_of: Web/API/HTMLLIElement
 ---
 {{ APIRef("HTML DOM") }}
 
@@ -26,11 +25,11 @@ _부모인 {{domxref("HTMLElement")}}에서 상속받습니다._
 
 _특정 메소드가 없으며, 부모로부터 프로퍼티를 상속 받습니다.{{domxref("HTMLElement")}}._
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

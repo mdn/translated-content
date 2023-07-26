@@ -10,12 +10,12 @@ HTML-элемент `<slot>` является частью набора техн
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Поток контента](/ru/docs/Web/HTML/Content_categories#Flow_content), [содержание формулировки](/ru/docs/Web/HTML/Content_categories#Phrasing_content) |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                        | [Прозрачный](/ru/docs/Web/HTML/Content_categories#Transparent_content_model)                                                                          |
+| Допустимое содержимое                                      | [Прозрачный](/ru/docs/Web/HTML/Content_categories#Transparent_content_model)                                                                          |
 | События                                                    | {{event("slotchange")}}                                                                                                                      |
-| Пропуск тега                                               | {{no_tag_omission}}                                                                                                                              |
-| Разрешённый родители                                       | Любой элемент, который принимает[содержание формулировки](/ru/docs/Web/HTML/Content_categories#Phrasing_content)                                     |
-| Разрешённые роли ARIA                                      | Никакой                                                                                                                                               |
-| Интерфейс DOM                                              | {{domxref("HTMLSlotElement")}}                                                                                                              |
+| Пропуск тегов                                              | {{no_tag_omission}}                                                                                                                              |
+| Допустимые родители                                        | Любой элемент, который принимает[содержание формулировки](/ru/docs/Web/HTML/Content_categories#Phrasing_content)                                     |
+| Допустимые ARIA-роли                                       | Нет                                                                                                                                               |
+| DOM-интерфейс                                              | {{domxref("HTMLSlotElement")}}                                                                                                              |
 
 ## Атрибуты
 

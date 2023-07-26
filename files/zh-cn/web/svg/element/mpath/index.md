@@ -44,7 +44,7 @@ slug: Web/SVG/Element/mpath
 
 实时输出：
 
-{{EmbedLiveSample("Example",250,165)}}
+{{EmbedLiveSample("示例",250,165)}}
 
 ## 属性
 

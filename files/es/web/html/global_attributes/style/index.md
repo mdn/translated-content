@@ -14,9 +14,9 @@ El [atributo global](/es/docs/Web/HTML/Atributos_Globales) **style** contiene de
 
 {{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.style")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,14 +1,10 @@
 ---
 title: Types WebGL
 slug: Web/API/WebGL_API/Types
-tags:
-  - Reference
-  - Types
-  - WebGL
 translation_of: Web/API/WebGL_API/Types
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 Les types suivants sont utilisés dans les interfaces [WebGL](/fr-FR/docs/Web/API/WebGL_API).
 

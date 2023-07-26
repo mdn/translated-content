@@ -13,9 +13,9 @@ Aunque la especificación no define los requerimientos para el nombre de las cla
 
 {{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.class")}}
+{{Compat}}
 
 ## Ver también
 

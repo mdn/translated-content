@@ -40,7 +40,7 @@ A seguir, uma lista de todos os tópicos abordados na área de aprendizado da MD
 - [JavaScript — Script dinamico do lado do cliente](/pt-BR/docs/Learn/JavaScript)
   - : JavaScript é a linguagem de script usada para adicionar funcionalidade dinâmica a páginas da web. Este tópico ensina todos os elementos essenciais necessários para se sentir confortável com a escrita e a compreensão do JavaScript.
 - [Formulários web - Trabalhando com dados do usuário](/pt-BR/docs/Web/Guide/HTML/Forms)
-  - : Os formulários web são uma ferramenta muito poderosa para interagir com os usuários - geralmente são usados ​​para coletar dados dos usuários ou permitir que eles controlem uma interface do usuário. Nos artigos listados abaixo, abordaremos todos os aspectos essenciais da estruturação, estilo e interação com os formulários web.
+  - : Os formulários web são uma ferramenta muito poderosa para interagir com os usuários - geralmente são usados para coletar dados dos usuários ou permitir que eles controlem uma interface do usuário. Nos artigos listados abaixo, abordaremos todos os aspectos essenciais da estruturação, estilo e interação com os formulários web.
 - [Acessibilidade - torne a web utilizável por todos](/pt-BR/docs/Learn/Accessibility)
   - : Acessibilidade é a prática de disponibilizar o conteúdo web para o maior número possível de pessoas, independentemente da deficiência, dispositivo, localidade ou outros fatores de diferenciação. Este tópico fornece tudo o que você precisa saber.
 - [Desempenho da Web - tornando os sites rápidos e responsivos](/pt-BR/docs/Aprender/Performance)
@@ -60,9 +60,9 @@ Se você preferir copiar o repositório de uma maneira mais flexível que permit
 2. Abra o [prompt de comando](https://www.lifewire.com/how-to-open-command-prompt-2618089) do seu computador (Windows) ou terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
 3. Para copiar o repositório da área de aprendizado para uma pasta chamada learning-area no local atual para o qual o prompt de comando / terminal está apontando, use o seguinte comando:
 
-    ```bash
-    git clone https://github.com/mdn/learning-area
-    ```
+   ```bash
+   git clone https://github.com/mdn/learning-area
+   ```
 
 4. Agora você pode entrar no diretório e encontrar os arquivos que procura (usando o Finder / File Explorer ou o [comando cd](<https://en.wikipedia.org/wiki/Cd_(command)>)).
 
@@ -70,15 +70,15 @@ Você pode atualizar o repositório `learning-area` com as alterações feitas n
 
 1. No prompt de comando / terminal, entre no diretório `learning-area` usando `cd`. Por exemplo, se você estivesse no diretório pai:
 
-    ```bash
-    cd learning-area
-    ```
+   ```bash
+   cd learning-area
+   ```
 
 2. Atualize o repositório usando o seguinte comando:
 
-    ```bash
-    git pull
-    ```
+   ```bash
+   git pull
+   ```
 
 ## Contate-nos
 

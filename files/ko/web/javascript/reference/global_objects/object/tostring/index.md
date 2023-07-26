@@ -1,13 +1,6 @@
 ---
 title: Object.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toString
-tags:
-  - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 ---
 
 {{JSRef}}
@@ -116,7 +109,7 @@ toString.call(undefined);   // [object Undefined]
 toString.call(null);        // [object Null]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

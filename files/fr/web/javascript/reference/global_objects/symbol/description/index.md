@@ -1,14 +1,7 @@
 ---
 title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
-tags:
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/description
-original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/description
 ---
 
 {{JSRef}}
@@ -48,13 +41,11 @@ Symbol.for('toto').description; // "toto"
 
 ## Spécifications
 
-| Spécification                                                                                                                           | État                    |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| [Proposition pour `Symbol.prototype.description`](https://tc39.github.io/proposal-Symbol-description/#sec-symbol.prototype.description) | Proposition de niveau 4 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.description")}}
+{{Compat}}
 
 ## Voir aussi
 

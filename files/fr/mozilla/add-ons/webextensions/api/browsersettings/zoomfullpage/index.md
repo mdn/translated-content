@@ -1,15 +1,6 @@
 ---
 title: browserSettings.zoomFullPage
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomFullPage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - zoomFullPage
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomFullPage
 ---
 
@@ -24,9 +15,9 @@ Valeurs du paramètre:
 - `true`: le zoom s'applique à la page web en entier (par défaut).
 - `false`: le zoom s'applique au texte de la page web seulement.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.zoomFullPage")}}
+{{Compat}}
 
 ## Exemples
 
@@ -37,8 +28,9 @@ function afficherResultat(resultat) {
   console.log(`Le paramètre a été modifié: ${resultat}`);
 }
 
-browser.browserSettings.zoomFullPage.set({value: false}).
-  then(afficherResultat);
+browser.browserSettings.zoomFullPage
+  .set({ value: false })
+  .then(afficherResultat);
 ```
 
 {{WebExtExamples}}

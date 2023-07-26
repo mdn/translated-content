@@ -92,9 +92,9 @@ Tenga en cuenta que aunque `obj` no es un array, el método `push` ha incrementa
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.push")}}
+{{Compat}}
 
 ## Ver también
 

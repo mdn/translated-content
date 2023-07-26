@@ -1,14 +1,6 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
-tags:
-  - Classes
-  - Declaration
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/class
 ---
 
 {{jsSidebar("Statements")}}

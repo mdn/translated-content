@@ -133,8 +133,8 @@ Vous pouvez facilement installer Python 3 (ainsi que l'outil _pip3_) sur [python
 
 1. Téléchargez l'installeur requis :
 
-    1. Allez sur <https://www.python.org/downloads/>
-    2. Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
+   1. Allez sur <https://www.python.org/downloads/>
+   2. Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
 
 2. Localisez le fichier en utilisant le _Finder_, puis double-cliquez le fichier package. Suivez les consignes d'installation.
 
@@ -157,8 +157,8 @@ Windows n'inclut pas Python par défaut, mais vous pouvez facilement l'installer
 
 1. Téléchargez l'installeur requis :
 
-    1. Allez sur <https://www.python.org/downloads/>
-    2. Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
+   1. Allez sur <https://www.python.org/downloads/>
+   2. Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
 
 2. Installez Python en double-cliquant sur le fichier télécharger puis en suivant les consignes d'installation
 3. Assurez-vous d'avoir coché la case intitulée "Ajouter Python au PATH".
@@ -401,21 +401,3 @@ Dans la section test vous avez aussi vu comment créer un nouveau site web Djang
 - [How to install Django on Windows](https://docs.djangoproject.com/en/2.1/howto/windows/) (Django docs)
 
 {{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
-
-## In this module
-
-- [Django introduction](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django Tutorial: The Local Library website](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django Tutorial Part 2: Creating a skeleton website](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django Tutorial Part 3: Using models](/fr/docs/Learn/Server-side/Django/Models)
-- [Django Tutorial Part 4: Django admin site](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django Tutorial Part 5: Creating our home page](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

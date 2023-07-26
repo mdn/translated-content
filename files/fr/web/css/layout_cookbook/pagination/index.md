@@ -1,11 +1,6 @@
 ---
 title: Pagination
 slug: Web/CSS/Layout_cookbook/Pagination
-tags:
-  - CSS
-  - Guide
-  - Recette
-  - flexbox
 translation_of: Web/CSS/Layout_cookbook/Pagination
 ---
 
@@ -57,15 +52,7 @@ Voir la section « Voir aussi » en fin d'article pour divers liens portants sur
 
 ## Compatibilité des navigateurs
 
-Les différentes méthodes évoquées plus haut peuvent disposer d'une prise en charge différente selon les navigateurs, se référer à chacun des tableaux suivant pour plus de détails sur la prise en charge de chaque propriété.
-
-### justify-content
-
-{{Compat("css.properties.justify-content")}}
-
-### column-gap in Flex layout
-
-{{Compat("css.properties.column-gap.flex_context")}}
+{{Compat}}
 
 ## Voir aussi
 

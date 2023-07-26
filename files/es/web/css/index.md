@@ -3,11 +3,11 @@ title: CSS
 slug: Web/CSS
 ---
 
-**Hojas de Estilo en Cascada** (del inglés _**C**ascading **S**tyle **S**heets_) o **CSS** es el lenguaje de [estilos](/es/docs/Web/API/StyleSheet) utilizado para describir la presentación de documentos [HTML](/es/docs/HTML) o [XML](/es/docs/XML) (incluyendo varios languages basados en XML como [SVG](/es/docs/Web/SVG), [MathML](/es/docs/Web/MathML) o {{Glossary("XHTML")}}). CSS describe como debe ser renderizado el elemento estructurado en la pantalla, en papel, en el habla o en otros medios.
+**Hojas de Estilo en Cascada** (del inglés _**C**ascading **S**tyle **S**heets_) o **CSS** es el lenguaje de [estilos](/es/docs/Web/API/StyleSheet) utilizado para describir la presentación de documentos [HTML](/es/docs/HTML) o [XML](/es/docs/XML) (incluyendo varios lenguajes basados en XML como [SVG](/es/docs/Web/SVG), [MathML](/es/docs/Web/MathML) o {{Glossary("XHTML")}}). CSS describe como debe ser renderizado el elemento estructurado en la pantalla, en papel, en el habla o en otros medios.
 
-**CSS** es uno de los lenguajes base de la _Open Web_ y posee una [especificación estandarizada](http://www.w3.org/Style/CSS/#specs) por parte del W3C. Anteriormente , el desarrollo de varias partes de las especificaciones de CSS era realizado de manera sincrónica, lo que permiía el versionado de las recomendaciones. Probablemente habrás escuchado acerca de CSS1, CSS2.1, CSS3. Sin embargo, CSS4 nunca se ha lanzado como una versión oficial.
+**CSS** es uno de los lenguajes base de la _Open Web_ y posee una [especificación estandarizada](http://www.w3.org/Style/CSS/#specs) por parte del W3C. Anteriormente , el desarrollo de varias partes de las especificaciones de CSS era realizado de manera sincrónica, lo que permitía el versionado de las recomendaciones. Probablemente habrás escuchado acerca de CSS1, CSS2.1, CSS3. Sin embargo, CSS4 nunca se ha lanzado como una versión oficial.
 
-Desde CSS3, el alcance de las especificaciones se incrementó de forma significativa y el progreso de los diferentes modulos de CSS comenzó a mostrar varias diferencias, lo que hizo más efectivo [desarrollar y publicar recomendaciones separadas por módulos](/es/docs/https://www.w3.org/Style/CSS/current-work). En vez de versionar las especificaciones de CSS, la W3C actualmente realiza una captura de las [ultimas espcificaciones estables de CSS](https://www.w3.org/TR/css//es/docs/).
+Desde CSS3, el alcance de las especificaciones se incrementó de forma significativa y el progreso de los diferentes módulos de CSS comenzó a mostrar varias diferencias, lo que hizo más efectivo [desarrollar y publicar recomendaciones separadas por módulos](https://www.w3.org/Style/CSS/current-work). En vez de versionar las especificaciones de CSS, la W3C actualmente realiza una captura de las [ultimas espcificaciones estables de CSS](https://www.w3.org/TR/css/).
 
 - Introducción a CSS
 
@@ -54,7 +54,7 @@ Nuestra [área de aprendizaje CSS](/es/docs/Learn/CSS) presenta múltiples módu
   - [Modelo de caja](/es/docs/CSS/box_model) y [colapso de margen](/es/docs/CSS/margin_collapsing)
   - El [bloque contenedor](/es/docs/Web/CSS/All_About_The_Containing_Block)
   - Contextos de [apilamiento](/es/docs/CSS/Understanding_z-index/The_stacking_context) y [formato de bloques](/es/docs/CSS/block_formatting_context)
-  - Valores [iniciales](/es/docs/CSS/initial_value), [calculados](/es/docs/CSS/computed_value), [usados](/es/docs/CSS/used_value)y [actuales](/es/docs/CSS/actual_value)
+  - Valores [iniciales](/es/docs/CSS/initial_value), [calculados](/es/docs/CSS/computed_value), [usados](/es/docs/CSS/used_value) y [actuales](/es/docs/CSS/actual_value)
   - [Propiedades abreviadas de CSS](/es/docs/Web/CSS/Shorthand_properties)
   - [Diseño de caja flexible de CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout)
   - [Diseño de cuadrícula CSS (_CSS Grid_)](/es/docs/Web/CSS/CSS_Grid_Layout)
@@ -63,23 +63,23 @@ Nuestra [área de aprendizaje CSS](/es/docs/Learn/CSS) presenta múltiples módu
 
 ## Cookbook
 
-El [libro de cocina de diseño CSS](/es/docs/Web/CSS/Layout_cookbook)[](/es/docs/Web/CSS/Layout_cookbook)tiene como objetivo reunir recetas para patrones de diseño comunes, sobre cosas que puedes necesitar implementar en tus sitios. Además de proporcionar código que puedes usar como punto de partida en tus proyectos, estas recetas destacan las diferentes formas en que se pueden usar las especificaciones de diseño y las elecciones que puedes hacer como desarrollador.
+El [libro de cocina de diseño CSS](/es/docs/Web/CSS/Layout_cookbook)[](/es/docs/Web/CSS/Layout_cookbook) tiene como objetivo reunir recetas para patrones de diseño comunes, sobre cosas que puedes necesitar implementar en tus sitios. Además de proporcionar código que puedes usar como punto de partida en tus proyectos, estas recetas destacan las diferentes formas en que se pueden usar las especificaciones de diseño y las elecciones que puedes hacer como desarrollador.
 
 ## Herramientas para el desarrollo de CSS
 
 - Puede usar el [Servicio de Validación CSS de W3C](https://jigsaw.w3.org/css-validator/) para verificar si su CSS es válido. Esta es una herramienta de depuración de valor incalculable.
 - Las [herramientas para desarrolladores de Firefox](/es/docs/Tools) te permiten ver y editar el CSS de una página en vivo a través de las herramientas [Inspector](/es/docs/Tools/Page_Inspector)y [Editor de estilos](/es/docs/Tools/Style_Editor).
 - La [extensión Web Developer](https://addons.mozilla.org/es/firefox/addon/60) para Firefox le permite rastrear y editar CSS en vivo en sitios vigilados.
-- La comunidad web ha creado varias [herramientas CSS](/es/docs/Web/CSS/Tools)para que las uses.
+- La comunidad web ha creado varias [herramientas CSS](/es/docs/Web/CSS/Tools) para que las uses.
 
 ## Meta errores
 
-- Firefox: {{bug(1323667)}}
+- Firefox: [Error 1323667 en Firefox](https://bugzil.la/1323667)
 
 ## Ver también
 
 - [Demos de CSS](/es/docs/Web/Demos_of_open_web_technologies#CSS): obtén un impulso creativo explorando ejemplos de las últimas tecnologías de CSS en acción.
 - Lenguajes web a los que se aplica CSS frecuentemente: [HTML](/es/docs/HTML), [SVG](/es/docs/SVG), [MathML,](/es/docs/Web/MathML) [XHTML](/es/docs/XHTML) y [XML](/es/docs/XML).
-- Tecnologías de Mozilla que hacen un amplio uso de CSS: [extensiones](/es/docs/Extensions) y [temas](/es/Add-ons/Themes)de [Firefox](/es/Firefox)y [Thunderbird](/es/docs/Mozilla/Thunderbird).
+- Tecnologías de Mozilla que hacen un amplio uso de CSS: [extensiones](/es/docs/Extensions) y [temas](/es/Add-ons/Themes) de [Firefox](/es/Firefox) y [Thunderbird](/es/docs/Mozilla/Thunderbird).
 - [Lista de correo de Mozilla](https://lists.mozilla.org/listinfo/dev-tech-layout)
 - [Preguntas de Stackoverflow sobre CSS](https://stackoverflow.com/questions/tagged/css)

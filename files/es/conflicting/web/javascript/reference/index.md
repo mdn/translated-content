@@ -1,9 +1,6 @@
 ---
 title: Acerca de
 slug: conflicting/Web/JavaScript/Reference
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/About
 original_slug: Web/JavaScript/Reference/About
 ---
 

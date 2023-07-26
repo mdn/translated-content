@@ -5,7 +5,7 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
 
-**CSS 媒体查询**为你提供了一种应用 CSS 的方法，仅在浏览器和设备的环境与你指定的规则相匹配的时候 CSS 才会真的被应用，例如“视口宽于 480 像素”的时候。媒体查询是响应式 Web 设计的关键部分，因为它允许你按照视口的尺寸创建不同的布局，不过它也可以用来探测和你的站点运行的环境相关联的其它条件，比如用户是在使用触摸屏还是鼠标。在本节课，你将会先学习到媒体查询的语法，然后继续在一个被安排好的示例中使用它，这个示例还会告诉你一个简单的设计是可以怎么被弄成响应式的。
+**CSS 媒体查询**为你提供了一种应用 CSS 的方法，仅在浏览器和设备的环境与你指定的规则相匹配的时候 CSS 才会真的被应用，例如“视口宽于 480 像素”的时候。媒体查询是响应式 Web 设计的关键部分，因为它允许你按照视口的尺寸创建不同的布局，不过它也可以用来探测和你的站点运行的环境相关联的其他条件，比如用户是在使用触摸屏还是鼠标。在本节课，你将会先学习到媒体查询的语法，然后继续在一个被安排好的示例中使用它，这个示例还会告诉你一个简单的设计是可以怎么被弄成响应式的。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -58,9 +58,9 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 ```css
 @media print {
-    body {
-        font-size: 12pt;
-    }
+  body {
+    font-size: 12pt;
+  }
 }
 ```
 
@@ -82,9 +82,9 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 ```css
 @media screen and (width: 600px) {
-    body {
-        color: red;
-    }
+  body {
+    color: red;
+  }
 }
 ```
 
@@ -94,9 +94,9 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 ```css
 @media screen and (max-width: 400px) {
-    body {
-        color: blue;
-    }
+  body {
+    color: blue;
+  }
 }
 ```
 
@@ -104,7 +104,7 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 实践中，使用最小值和最大值对响应式设计有很多的用处，所以你会很少见到`width`或`height` 单独使用的情况。
 
-还有许多其他媒体特征可以供你测试，尽管于 4 级和 5 级媒体查询规范中引入了一些新特征，它们受浏览器支持仍然有限。在 MDN 上，每个特征都已经同浏览器支持信息一同记载下来，你可以在[使用媒体查询：媒体特征](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features)中找到一张完整的列表。
+还有许多其他媒体特征可以供你测试，尽管于 4 级和 5 级媒体查询规范中引入了一些新特征，它们受浏览器支持仍然有限。在 MDN 上，每个特征都已经同浏览器支持信息一同记载下来，你可以在[使用媒体查询：媒体特征](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#Media_features)中找到一张完整的列表。
 
 #### 朝向
 
@@ -112,9 +112,9 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 ```css
 @media (orientation: landscape) {
-    body {
-        color: rebeccapurple;
-    }
+  body {
+    color: rebeccapurple;
+  }
 }
 ```
 
@@ -128,9 +128,9 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 ```css
 @media (hover: hover) {
-    body {
-        color: rebeccapurple;
-    }
+  body {
+    color: rebeccapurple;
+  }
 }
 ```
 
@@ -152,9 +152,9 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 ```css
 @media screen and (min-width: 400px) and (orientation: landscape) {
-    body {
-        color: blue;
-    }
+  body {
+    color: blue;
+  }
 }
 ```
 
@@ -166,9 +166,9 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 ```css
 @media screen and (min-width: 400px), screen and (orientation: landscape) {
-    body {
-        color: blue;
-    }
+  body {
+    color: blue;
+  }
 }
 ```
 
@@ -180,9 +180,9 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 ```css
 @media not all and (orientation: landscape) {
-    body {
-        color: blue;
-    }
+  body {
+    color: blue;
+  }
 }
 ```
 
@@ -212,54 +212,57 @@ slug: Learn/CSS/CSS_layout/Media_queries
 
 ```css
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    width: 90%;
-    margin: 2em auto;
-    font: 1em/1.3 Arial, Helvetica, sans-serif;
+  width: 90%;
+  margin: 2em auto;
+  font:
+    1em/1.3 Arial,
+    Helvetica,
+    sans-serif;
 }
 
 a:link,
 a:visited {
-    color: #333;
+  color: #333;
 }
 
 nav ul,
 aside ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 nav a:link,
 nav a:visited {
-    background-color: rgba(207, 232, 220, 0.2);
-    border: 2px solid rgb(79, 185, 227);
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    color: #333;
-    font-weight: bold;
+  background-color: rgba(207, 232, 220, 0.2);
+  border: 2px solid rgb(79, 185, 227);
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  color: #333;
+  font-weight: bold;
 }
 
 nav a:hover {
-    background-color: rgba(207, 232, 220, 0.7);
+  background-color: rgba(207, 232, 220, 0.7);
 }
 
 .related {
-    background-color: rgba(79, 185, 227, 0.3);
-    border: 1px solid rgb(79, 185, 227);
-    padding: 10px;
+  background-color: rgba(79, 185, 227, 0.3);
+  border: 1px solid rgb(79, 185, 227);
+  padding: 10px;
 }
 
 .sidebar {
-    background-color: rgba(207, 232, 220, 0.5);
-    padding: 10px;
+  background-color: rgba(207, 232, 220, 0.5);
+  padding: 10px;
 }
 
 article {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 ```
 
@@ -267,45 +270,39 @@ article {
 
 ```html
 <body>
-    <div class="wrapper">
-      <header>
-        <nav>
-          <ul>
-            <li><a href="">About</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">Meet the team</a></li>
-            <li><a href="">Blog</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <article>
-          <div class="content">
-            <h1>Veggies!</h1>
-            <p>
-              ...
-            </p>
-          </div>
-          <aside class="related">
-            <p>
-              ...
-            </p>
-          </aside>
-        </article>
-
-        <aside class="sidebar">
-          <h2>External vegetable-based links</h2>
-          <ul>
-            <li>
-              ...
-            </li>
-          </ul>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Meet the team</a></li>
+          <li><a href="">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <div class="content">
+          <h1>Veggies!</h1>
+          <p>...</p>
+        </div>
+        <aside class="related">
+          <p>...</p>
         </aside>
-      </main>
+      </article>
 
-      <footer><p>&copy;2019</p></footer>
-    </div>
-  </body>
+      <aside class="sidebar">
+        <h2>External vegetable-based links</h2>
+        <ul>
+          <li>...</li>
+        </ul>
+      </aside>
+    </main>
+
+    <footer><p>&copy;2019</p></footer>
+  </div>
+</body>
 ```
 
 这个简单的布局在移动端上也能表现得很好。如果我们在开发者工具中的响应式设计模式里面查看这个布局的话，我们可以看到，它作为一个直截了当的站点移动版布局来说，表现得相当优秀。
@@ -320,19 +317,19 @@ article {
 
 ```css
 @media screen and (min-width: 40em) {
-    article {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        column-gap: 20px;
-    }
+  article {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 20px;
+  }
 
-    nav ul {
-        display: flex;
-    }
+  nav ul {
+    display: flex;
+  }
 
-    nav li {
-        flex: 1;
-    }
+  nav li {
+    flex: 1;
+  }
 }
 ```
 
@@ -346,20 +343,20 @@ article {
 
 ```css
 @media screen and (min-width: 70em) {
-    main {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        column-gap: 20px;
-    }
+  main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 20px;
+  }
 
-    article {
-        margin-bottom: 0;
-    }
+  article {
+    margin-bottom: 0;
+  }
 
-    footer {
-        border-top: 1px solid #ccc;
-        margin-top: 2em;
-    }
+  footer {
+    border-top: 1px solid #ccc;
+    margin-top: 2em;
+  }
 }
 ```
 
@@ -375,42 +372,42 @@ article {
 
 ```html
 <ul class="grid">
-    <li>
-        <h2>Card 1</h2>
-        <p>...</p>
-    </li>
-    <li>
-        <h2>Card 2</h2>
-        <p>...</p>
-    </li>
-    <li>
-        <h2>Card 3</h2>
-        <p>...</p>
-    </li>
-    <li>
-        <h2>Card 4</h2>
-        <p>...</p>
-    </li>
-    <li>
-        <h2>Card 5</h2>
-        <p>...</p>
-    </li>
+  <li>
+    <h2>Card 1</h2>
+    <p>...</p>
+  </li>
+  <li>
+    <h2>Card 2</h2>
+    <p>...</p>
+  </li>
+  <li>
+    <h2>Card 3</h2>
+    <p>...</p>
+  </li>
+  <li>
+    <h2>Card 4</h2>
+    <p>...</p>
+  </li>
+  <li>
+    <h2>Card 5</h2>
+    <p>...</p>
+  </li>
 </ul>
 ```
 
 ```css
 .grid {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .grid li {
-    border: 1px solid #666;
-    padding: 10px;
+  border: 1px solid #666;
+  padding: 10px;
 }
 ```
 
@@ -431,18 +428,3 @@ article {
 你还能通过加入不同的组件进行实验，看下加入媒体查询，或者使用类似弹性盒或者网格的布局方式，哪个是让组件可响应的最佳途径。经常是没有什么对错的，你应该实验下，看看哪个对你的设计和内容效果最好。
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
-
-## 模块目录
-
-- [Introduction to CSS layout](/zh-CN/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal flow](/zh-CN/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/zh-CN/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/zh-CN/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/zh-CN/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column layout](/zh-CN/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/zh-CN/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Beginner's guide to media queries](/zh-CN/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Legacy layout methods](/zh-CN/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental layout comprehension assessment](/zh-CN/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

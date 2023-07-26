@@ -89,7 +89,7 @@ border-image-width: unset;
 
 ```css
 p {
-   border-image-source: url("https://mdn.mozillademos.org/files/10470/border.png");
+   border-image-source: url("border.png");
    border-image-slice: 30;
    border-image-width: 20px;
    border-image-repeat: round;
@@ -97,7 +97,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Примеры', '480', '320', '', 'Web/CSS/border-image-width') }}
+{{ EmbedLiveSample('Примеры', '100%', '200') }}
 
 ## Спецификации
 

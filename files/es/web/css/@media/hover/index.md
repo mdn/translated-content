@@ -42,6 +42,6 @@ La característica hover es especificada como un valor de palabra clave elegida 
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.media.hover")}}
+{{Compat}}

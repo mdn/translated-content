@@ -1,13 +1,7 @@
 ---
 title: GlobalEventHandlers.onerror
 slug: Web/API/Window/error_event
-tags:
-  - API
-  - HTML DOM
-  - Propriété
-  - Reference
 translation_of: Web/API/GlobalEventHandlers/onerror
-original_slug: Web/API/GlobalEventHandlers/onerror
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -45,22 +39,22 @@ element.onerror = function(event) { ... }
 
 ## Notes
 
-Quand une erreur de syntaxe**(?)** se produit dans un script chargé à partir d'une [origine différente](/fr/docs/Web/Security/Same-origin_policy), les détails de l'erreur de syntaxe ne sont pas rapportés, afin de prévenir la fuite d'information (voir {{bug("363897")}}). A la place, l'erreur est simplement reportée en tant que **`"Script error"`**. Ce comportement peut être surchargé par certains navigateurs en utilisant l'attribut `{{htmlattrxref("crossorigin","script")}}` de {{HTMLElement("script")}} et en faisant en sorte que le serveur envoie les entêtes de réponse [CORS](/fr/docs/Web/HTTP/Access_control_CORS) HTTP appropriés. Un contournement consiste à isoler "Script error" et à la gérer en sachant que les détails de l'erreur ne sont visibles que la console du navigateur et non accessibles en JavaScript.
+Quand une erreur de syntaxe**(?)** se produit dans un script chargé à partir d'une [origine différente](/fr/docs/Web/Security/Same-origin_policy), les détails de l'erreur de syntaxe ne sont pas rapportés, afin de prévenir la fuite d'information (voir [bug Firefox 363897](https://bugzil.la/363897)). A la place, l'erreur est simplement reportée en tant que **`"Script error"`**. Ce comportement peut être surchargé par certains navigateurs en utilisant l'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/script#crossorigin) de {{HTMLElement("script")}} et en faisant en sorte que le serveur envoie les entêtes de réponse [CORS](/fr/docs/Web/HTTP/Access_control_CORS) HTTP appropriés. Un contournement consiste à isoler "Script error" et à la gérer en sachant que les détails de l'erreur ne sont visibles que la console du navigateur et non accessibles en JavaScript.
 
 ```js
 window.onerror = function (msg, url, noLigne, noColonne, erreur) {
   var chaine = msg.toLowerCase();
   var souschaine = "script error";
-  if (chaine.indexOf(souschaine) > -1){
-    alert('Script Error : voir la Console du Navigateur pour les Détails');
+  if (chaine.indexOf(souschaine) > -1) {
+    alert("Script Error : voir la Console du Navigateur pour les Détails");
   } else {
     var message = [
-      'Message : ' + msg,
-      'URL : ' + url,
-      'Ligne : ' + noLigne,
-      'Colonne : ' + noColonne,
-      'Objet Error : ' + JSON.stringify(erreur)
-    ].join(' - ');
+      "Message : " + msg,
+      "URL : " + url,
+      "Ligne : " + noLigne,
+      "Colonne : " + noColonne,
+      "Objet Error : " + JSON.stringify(erreur),
+    ].join(" - ");
 
     alert(message);
   }

@@ -2,7 +2,6 @@
 title: Débordements de contenu (overflow)
 slug: Learn/CSS/Building_blocks/Overflowing_content
 translation_of: Learn/CSS/Building_blocks/Overflowing_content
-original_slug: Apprendre/CSS/Building_blocks/Overflowing_content
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
@@ -20,10 +19,10 @@ Dans ce cours nous allons étudier un autre concept important en CSS : les **dé
           >suite logicielle de base installée</a
         >, compétences élémentaires pour
         <a
-          href="/fr/docs/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers"
+          href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >travailler avec des fichiers</a
         >, connaissance de base du HTML (cf.
-        <a href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML"
+        <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
           >Introduction à HTML</a
         >), et une idée
         <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works"
@@ -113,24 +112,3 @@ Nous avons couvert beaucoup de choses dans cet article, mais pouvez-vous vous so
 Cette courte leçon a introduit le concept de débordement ; vous comprenez maintenant que le CSS essaie de ne pas faire disparaître le contenu qui déborde car cela entraînerait des pertes de données. Vous avez découvert que vous pouvez gérer un débordement éventuel, et que vous devez également tester votre travail pour vous assurer que vous ne causez pas accidentellement un débordement problématique.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
-
-## Dans ce module
-
-1. [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Sélecteurs de type, de classe et d'ID](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Sélecteurs d'attributs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [Le modèle de boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Arrière-plans et bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Gestion de différentes directions de texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Débordements de contenu](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Définir la taille des éléments en CSS](/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, médias et éléments de formulaire](/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Mise en page de tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Débogage de CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organiser votre CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing)

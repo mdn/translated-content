@@ -1,11 +1,6 @@
 ---
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
-tags:
-  - Expresion Regular
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/toString
 ---
 
@@ -56,9 +51,9 @@ new RegExp('\n').toString() === "/\\n/"; // true, desde ES5
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.RegExp.toString")}}
+{{Compat}}
 
 ## Vea también
 

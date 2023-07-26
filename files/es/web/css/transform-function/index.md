@@ -13,7 +13,7 @@ Existen varios modelos de coordenadas utilizados para describir la transformaci�
 
 ### Coordenadas Cartesianas
 
-[![](/files/3438/coord_in_R2.png)](/@api/deki/files/5796/=coord_in_R2.png)En las [Cordenadas cartesianas](https://es.wikipedia.org/wiki/Coordenadas_cartesianas), cada punto del [espacio Euclidiano](https://es.wikipedia.org/wiki/Geometr%C3%ADa_euclidiana) es descrito usando dos valores, la abscisa y la ordenada. El origen, el `(0, 0)` es la esquina superior izquierda del elemento. A diferencia de la convención geométrica habitual, y como la mayoría de los casos en los gráficos por computadora, el eje y (ordenada) va hacia abajo. Cada punto se describe matemáticamente utilizando la notación vectorial `(x, y)`.
+[![](/files/3438/coord_in_R2.png)](coord_in_r2.png)En las [Cordenadas cartesianas](https://es.wikipedia.org/wiki/Coordenadas_cartesianas), cada punto del [espacio Euclidiano](https://es.wikipedia.org/wiki/Geometr%C3%ADa_euclidiana) es descrito usando dos valores, la abscisa y la ordenada. El origen, el `(0, 0)` es la esquina superior izquierda del elemento. A diferencia de la convención geométrica habitual, y como la mayoría de los casos en los gráficos por computadora, el eje y (ordenada) va hacia abajo. Cada punto se describe matemáticamente utilizando la notación vectorial `(x, y)`.
 
 Cada función lineal es descrita usando una matriz 2x2 de la siguiente manera:
 
@@ -21,11 +21,11 @@ Cada función lineal es descrita usando una matriz 2x2 de la siguiente manera:
 
 Aplicar la transformación consiste en hacer, por cada punto, la multiplicación de matrices entre ambos:
 
-[![](/@api/deki/files/5799/=transform_functions_generic_transformation_cart.png?size=webview)](/@api/deki/files/5799/=transform_functions_generic_transformation_cart.png).
+[![](transform_functions_generic_transformation_cart.png?size=webview)](transform_functions_generic_transformation_cart.png).
 
 Es posible aplicar varias transformaciones en una fila:
 
-[![](/@api/deki/files/5800/=transform_functions_transform_composition_cart.png?size=webview)](/@api/deki/files/5800/=transform_functions_transform_composition_cart.png).
+[![](transform_functions_transform_composition_cart.png?size=webview)](transform_functions_transform_composition_cart.png).
 
 Con esta notación, es posible describir, y por lo tanto componer, las transformaciones más comunes: rotación, escala o transvección. De hecho, todas las transformaciones que son funciones lineales pueden ser descritas. Una transformación mayor no es lineal y por lo tanto debe ser tratada de forma especial cuando se usa esta notación: traslación. El vector de traslación (tx, ty) debe ser expresado de forma separada, como dos parámetros adicionales.
 
@@ -121,6 +121,6 @@ Existen varias funciones disponibles para describir transformaciones en CSS. Cad
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.types.transform-function")}}
+{{Compat}}

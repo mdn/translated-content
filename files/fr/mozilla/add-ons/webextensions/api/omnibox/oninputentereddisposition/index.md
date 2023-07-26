@@ -1,15 +1,6 @@
 ---
 title: omnibox.OnInputEnteredDisposition
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/OnInputEnteredDisposition
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - OnInputEnteredDisposition
-  - Reference
-  - Type
-  - WebExtensions
-  - omnibox
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/OnInputEnteredDisposition
 ---
 
@@ -30,9 +21,9 @@ Les valeurs de ce type sont des chaînes. Ils peuvent prendre l'une des valeurs 
 - "newBackgroundTab"
   - : Ouvrez la sélection dans un nouvel onglet d'arrière-plan, en conservant l'onglet en cours au premier plan.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.omnibox.OnInputEnteredDisposition")}}
+{{Compat}}
 
 > **Note :**
 >

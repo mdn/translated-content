@@ -1,6 +1,8 @@
 ---
 title: HTMLMediaElement.currentTime
 slug: Web/API/HTMLMediaElement/currentTime
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("HTML DOM")}}
@@ -15,7 +17,7 @@ slug: Web/API/HTMLMediaElement/currentTime
 
 メディアがまだ再生されていない場合、 `currentTime` の値は {{domxref("HTMLMediaElement.play", "play()")}} メソッドが呼ばれたときに再生が開始されるメディア内の時刻位置を示しています。
 
-currentTime`に新しい値を設定すると、メディアが利用可能であれば、指定された時刻にシークします。
+`currentTime`に新しい値を設定すると、メディアが利用可能であれば、指定された時刻にシークします。
 
 ライブストリーミングされたメディアなど、再生時間が不明なメディアでは、ブラウザーがメディアバッファーから時間切れのメディア部分を取得できない可能性があります。また、タイムラインが 0 秒で始まらないメディアは、そのタイムラインの最も早い時刻より前にシークすることはできません。
 
@@ -24,7 +26,7 @@ currentTime`に新しい値を設定すると、メディアが利用可能で�
 ## 例
 
 ```js
-var video = document.createElement('video');
+const video = document.createElement('video');
 console.log(video.currentTime);
 ```
 

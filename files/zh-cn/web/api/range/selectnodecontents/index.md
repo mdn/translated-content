@@ -66,7 +66,7 @@ deselectButton.addEventListener('click', e => {
 
 #### 结果
 
-{{EmbedLiveSample("Live_sample")}}
+{{EmbedLiveSample("实时样例")}}
 
 ## 规范
 

@@ -1,17 +1,7 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - Característica del lenguaje
-  - Declaración de variable
-  - ECMAScript 2015
-  - JavaScript
-  - Variables
-  - let
-  - sentencias
-translation_of: Web/JavaScript/Reference/Statements/let
 original_slug: Web/JavaScript/Referencia/Sentencias/let
-browser-compat: javascript.statements.let
 ---
 
 {{jsSidebar("Statements")}}
@@ -243,7 +233,7 @@ El alcance de las variables definidas usando `let` es el mismo bloque `let`, as�
 
 ### expresiones `let`
 
-> **Advertencia:** `Soporte de expresiones let` ha sido removido en Gecko 41 ({{bug(1023609)}}).
+> **Advertencia:** `Soporte de expresiones let` ha sido removido en Gecko 41 ([Error 1023609 en Firefox](https://bugzil.la/1023609)).
 
 Una **expresion `let`** permite establecer variables con alcance dentro de una expresión.
 

@@ -1,16 +1,6 @@
 ---
 title: tabs.TAB_ID_NONE
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/TAB_ID_NONE
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - TAB_ID_NONE
-  - WebExtensions
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/TAB_ID_NONE
 ---
 
@@ -18,9 +8,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/TAB_ID_NONE
 
 Une valeur d'ID spéciale donnée aux onglets qui ne sont pas des onglets du navigateur (par exemple, des onglets dans les fenêtres devtools).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.TAB_ID_NONE")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

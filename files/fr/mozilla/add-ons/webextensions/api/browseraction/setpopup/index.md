@@ -1,16 +1,6 @@
 ---
 title: browserAction.setPopup()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setPopup
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
 ---
 
@@ -22,8 +12,8 @@ Définit le document HTML qui sera ouvert en tant que popup lorsque l'utilisateu
 
 ```js
 browser.browserAction.setPopup(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -57,10 +47,6 @@ browser.browserAction.setPopup(
 - Si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue et le popup n'est pas défini.
 - Si `windowId` et `tabId` sont tous les deux omis, la fenêtre contextuelle globale est définie.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setPopup",2)}}
-
 ## Exemples
 
 Ce code ajoute une paire d'éléments de menu contextuel que vous pouvez utiliser pour basculer entre deux fenêtres contextuelles. Notez que vous aurez besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "contextMenus" définie dans le manifest de l'extension pour créer des éléments du menu contextuel.
@@ -74,30 +60,40 @@ function onCreated() {
   }
 }
 
-browser.contextMenus.create({
-  id: "popup-1",
-  type: "radio",
-  title: "Popup 1",
-  contexts: ["all"],
-  checked: true
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "popup-1",
+    type: "radio",
+    title: "Popup 1",
+    contexts: ["all"],
+    checked: true,
+  },
+  onCreated,
+);
 
-browser.contextMenus.create({
-  id: "popup-2",
-  type: "radio",
-  title: "Popup 2",
-  contexts: ["all"],
-  checked: false
-}, onCreated);
+browser.contextMenus.create(
+  {
+    id: "popup-2",
+    type: "radio",
+    title: "Popup 2",
+    contexts: ["all"],
+    checked: false,
+  },
+  onCreated,
+);
 
-browser.contextMenus.onClicked.addListener(function(info, tab) {
+browser.contextMenus.onClicked.addListener(function (info, tab) {
   if (info.menuItemId == "popup-1") {
-    browser.browserAction.setPopup({popup: "/popup/popup1.html"})
+    browser.browserAction.setPopup({ popup: "/popup/popup1.html" });
   } else if (info.menuItemId == "popup-2") {
-    browser.browserAction.setPopup({popup: "/popup/popup2.html"})
+    browser.browserAction.setPopup({ popup: "/popup/popup2.html" });
   }
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -1,7 +1,6 @@
 ---
 title: 'ReferenceError: can''t access lexical declaration`X'' before initialization'
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
-translation_of: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
 
 {{jsSidebar("Errors")}}
@@ -55,4 +54,4 @@ test();
 
 ## 그밖에 볼 것
 
-- [Temporal Dead Zone and errors with let](/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)
+- [Temporal Dead Zone and errors with let](/ko/docs/Web/JavaScript/Reference/Statements/let#Temporal_Dead_Zone_and_errors_with_let)

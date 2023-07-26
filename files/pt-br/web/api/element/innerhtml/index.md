@@ -113,7 +113,7 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // inofensivo, nesse caso
 ```
 
-Embora isso talvez se pareça como um ataque {{interwiki("wikipedia", "cross-site scripting")}}, o resultado é inofensivo. O HTML5 especifica que uma tag {{HTMLElement("script")}}, inserida via `innerHTML`, [não deve ser executada](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
+Embora isso talvez se pareça como um ataque [cross-site scripting](https://pt.wikipedia.org/wiki/cross-site_scripting), o resultado é inofensivo. O HTML5 especifica que uma tag {{HTMLElement("script")}}, inserida via `innerHTML`, [não deve ser executada](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0).
 
 No entanto, há formas de se executar JavaScript sem usar elementos {{HTMLElement("script")}}, por isso ainda há um risco de segurança sempre que você usa `innerHTML` para definir uma string sobre a qual você não tem controle. Por exemplo:
 

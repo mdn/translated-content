@@ -29,7 +29,7 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 ## 说明指导
 
 - [1. 客户端框架介绍](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-  - : 我们首先从以下话题开始研究框架，框架领域的总览，JavaScript 和框架历史的简介，为什么需要框架以及框架能带给我们什么，如何考虑选择一个框架开始学习，有什么其它的客户端框架可供选择。
+  - : 我们首先从以下话题开始研究框架，框架领域的总览，JavaScript 和框架历史的简介，为什么需要框架以及框架能带给我们什么，如何考虑选择一个框架开始学习，有什么其他的客户端框架可供选择。
 - [2. 框架的主要特性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
   - : 每种 JavaScript 框架都有自己不同的方式更新 DOM，处理浏览器事件，为开发者提供愉悦的使用体验，这篇文章将探索“四大”框架的主要特性，从高级角度探讨框架的工作方式以及它们之间的区别。
 

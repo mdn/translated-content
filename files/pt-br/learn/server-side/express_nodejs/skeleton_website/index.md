@@ -1,5 +1,5 @@
 ---
-title: 'Express Tutorial Parte 2: Criando a estrutura do website'
+title: "Express Tutorial Parte 2: Criando a estrutura do website"
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
 
@@ -7,7 +7,7 @@ slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
 
-Neste segundo [Express Tutorial](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) , mostrará como criar a estrutura do website que depois você poderá colocar _templates,_ chamadas de banco de dados ou rotas específicas.
+Neste segundo [Tutorial Express](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website), mostrará como criar a estrutura do website que depois você poderá colocar _templates,_ chamadas de banco de dados ou rotas específicas.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -15,7 +15,7 @@ Neste segundo [Express Tutorial](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tu
       <th scope="row">Pré-requisitos:</th>
       <td>
         <a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment"
+          href="/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment"
           >Preparar o ambiente de desenvolvimento do Node </a
         >. Revise o Tutorial Express.
       </td>
@@ -31,15 +31,15 @@ Neste segundo [Express Tutorial](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tu
 
 ## Visão Geral
 
-Nesse artigo mostraremos como criar a estrutura do website usando a ferramenta "[Express Application Generator](https://expressjs.com/en/starter/generator.html) ". Neste caso, usaremos a ferramenta para criar o framework para nosso [website "LocalLibrary"](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website), tpara o qual adicionaremos mais tarde todo o outro código necessário para o site. O processo é extremamente simples, com apenas a requisição de invocar o "Generator" na linha de comando com um novo nome de projeto, e, se quiser, especificar o _template_ do site e o gerador de CSS.
+Nesse artigo mostraremos como criar a estrutura do website usando a ferramenta "[Express Application Generator](https://expressjs.com/en/starter/generator.html) ". Neste caso, usaremos a ferramenta para criar o framework para nosso [website "LocalLibrary"](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website), para o qual adicionaremos mais tarde todo o outro código necessário para o site. O processo é extremamente simples, com apenas a requisição de invocar o "Generator" na linha de comando com um novo nome de projeto, e, se quiser, especificar o _template_ do site e o gerador de CSS.
 
 As seguintes sessões mostrará como chamar o "Application Generator", e prover uma pequena explicação sobre as diferentes opções de CSS. Também aprenderemos como a estrutura do site é definida. No final, será mostrado como podemos rodar o site para ver se funciona.
 
-> **Nota:** **Nota**: O "_Express Application Generator"_ não é o único gerador para as aplicações do Express, e o projeto gerado não é a única maneira viável de estruturar seus arquivos e diretórios. O site gerado, entretanto, tem um estrutura modular que é fácil de extender e ser entendida. Para aprender melhor sobre a aplicação do "_minimal_ Express", veja [Exemplo"Hello world"](https://expressjs.com/en/starter/hello-world.html).
+> **Nota:** **Nota**: O "_Express Application Generator"_ não é o único gerador para as aplicações do Express, e o projeto gerado não é a única maneira viável de estruturar seus arquivos e diretórios. O site gerado, entretanto, tem uma estrutura modular que é fácil de extender e ser entendida. Para aprender melhor sobre a aplicação do "_minimal_ Express", veja [Exemplo"Hello world"](https://expressjs.com/en/starter/hello-world.html).
 
 ## Usando o "Application Generator"
 
-Você já deve ter instalado o gerador como requisito.Como um lembrete rápido, você instala a ferramenta de gerador em todo o site usando o Gerenciador de pacotes NPM, como mostrado:
+Você já deve ter instalado o gerador como requisito. Como um lembrete rápido, você instala a ferramenta de gerador em todo o site usando o Gerenciador de pacotes NPM, como mostrado:
 
 ```bash
 npm install express-generator -g
@@ -80,17 +80,17 @@ Também pode ser escolhido um "view" (_template)_ usando`--view` e/ou um gerador
 
 ### Qual _engine_ de "view" devo usar?
 
-The _Express Application Generator_ allows you to configure a number of popular view/templating engines, including [EJS](https://www.npmjs.com/package/ejs), [Hbs](http://github.com/donpark/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), and [Vash](https://www.npmjs.com/package/vash), although it chooses Jade by default if you don't specify a view option. Express itself can also support a large number of other templating languages [out of the box](https://github.com/expressjs/express/wiki#template-engines).
+O _Express Application Generator_ permite que você configure vários mecanismos populares de exibição/modelagem, incluindo [EJS](https://www.npmjs.com/package/ejs), [Hbs](http://github.com/donpark/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), e [Vash](https://www.npmjs.com/package/vash), embora escolha Jade por padrão se você não especificar uma opção de visualização. O próprio Express também pode suportar um grande número de outras linguagens de modelagem [out of the box](https://github.com/expressjs/express/wiki#template-engines).
 
-> **Nota:** If you want to use a template engine that isn't supported by the generator then see [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) and the documentation for your target view engine.
+> **Nota:** Se você deseja usar um mecanismo de modelo que não é suportado pelo gerador, consulte [Usando mecanismos de modelo com o Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) e a documentação para seu mecanismo de exibição de destino.
 
-Generally speaking, you should select a templating engine that delivers all the functionality you need and allows you to be productive sooner — or in other words, in the same way that you choose any other component! Some of the things to consider when comparing template engines:
+De um modo geral, você deve selecionar um mecanismo de modelagem que forneça todas as funcionalidades de que você precisa e permita que você seja mais produtivo - ou em outras palavras, da mesma forma que você escolhe qualquer outro componente! Algumas das coisas a considerar ao comparar mecanismos de modelo:
 
-- Time to productivity — If your team already has experience with a templating language then it is likely they will be productive faster using that language. If not, then you should consider the relative learning curve for candidate templating engines.
-- Popularity and activity — Review the popularity of the engine and whether it has an active community. It is important to be able to get support for the engine when you have problems over the lifetime of the website.
-- Style — Some template engines use specific markup to indicate inserted content within "ordinary" HTML, while others construct the HTML using a different syntax (for example, using indentation and block names).
+- Tempo para produtividade — Se sua equipe já tiver experiência com uma linguagem de modelagem, é provável que eles sejam produtivos mais rapidamente usando essa linguagem. Caso contrário, você deve considerar a curva de aprendizado relativa para mecanismos de modelagem candidatos.
+- Popularidade e atividade — Revise a popularidade do mecanismo e se ele possui uma comunidade ativa. É importante poder obter suporte para o mecanismo quando você tiver problemas durante a vida útil do site.
+- Style — Alguns mecanismos de modelo usam marcação específica para indicar o conteúdo inserido no HTML "comum", enquanto outros constroem o HTML usando uma sintaxe diferente (por exemplo, usando recuo e nomes de bloco).
 - Performance/rendering time.
-- Features — you should consider whether the engines you look at have the following features available:
+- Features — você deve considerar se os mecanismos que você procura têm os seguintes recursos disponíveis:
 
   - Layout inheritance: Allows you to define a base template and then "inherit" just the parts of it that you want to be different for a particular page. This is typically a better approach than building templates by including a number of required components or building a template from scratch each time.
   - "Include" support: Allows you to build up templates by including other templates.
@@ -100,9 +100,9 @@ Generally speaking, you should select a templating engine that delivers all the 
   - Support for asynchronous operations and streaming.
   - Can be used on the client as well as the server. If a templating engine can be used on the client this allows the possibility of serving data and having all or most of the rendering done client-side.
 
-> **Nota:** **Tip:** There are many resources on the Internet to help you compare the different options!
+> **Nota:** **Tip:** Existem muitos recursos na Internet para ajudá-lo a comparar as diferentes opções!
 
-For this project, we'll use the [Pug](https://pugjs.org/api/getting-started.html) templating engine (this is the recently-renamed Jade engine), as this is one of the most popular Express/JavaScript templating languages and is supported out of the box by the generator.
+Para este projeto, usaremos o [Pug](https://pugjs.org/api/getting-started.html) mecanismo de modelagem (este é o mecanismo Jade que foi renomeado recentemente), pois esta é uma das linguagens de modelagem Express/JavaScript mais populares e é suportada imediatamente pelo gerador.
 
 ### What CSS stylesheet engine should I use?
 
@@ -110,7 +110,7 @@ The _Express Application Generator_ allows you to create a project that is confi
 
 > **Nota:**CSS has some limitations that make certain tasks difficult. CSS stylesheet engines allow you to use more powerful syntax for defining your CSS and then compile the definition into plain-old CSS for browsers to use.
 
-As with templating engines, you should use the stylesheet engine that will allow your team to be most productive. For this project, we'll use the ordinary CSS (the default) as our CSS requirements are not sufficiently complicated to justify using anything else.
+Assim como nos mecanismos de modelagem, você deve usar o mecanismo de folha de estilo que permitirá que sua equipe seja mais produtiva. Para este projeto, usaremos o CSS comum (o padrão), pois nossos requisitos de CSS não são suficientemente complicados para justificar o uso de qualquer outra coisa.
 
 ### What database should I use?
 
@@ -122,7 +122,7 @@ We'll discuss how to integrate with a database in a later article.
 
 For the sample _Local Library_ app we're going to build, we'll create a project named _express-locallibrary-tutorial_ using the _Pug_ template library and no CSS stylesheet engine.
 
-First, navigate to where you want to create the project and then run the _Express Application Generator_ in the command prompt as shown:
+Primeiro, navegue até onde deseja criar o projeto e, em seguida, execute o Express Application Generator no prompt de comando, conforme mostrado:
 
 ```bash
 express express-locallibrary-tutorial --view=pug
@@ -169,30 +169,30 @@ At this point, we have a complete skeleton project. The website doesn't actually
 
 1. First, install the dependencies (the `install` command will fetch all the dependency packages listed in the project's **package.json** file).
 
-    ```bash
-    cd express-locallibrary-tutorial
-    npm install
-    ```
+   ```bash
+   cd express-locallibrary-tutorial
+   npm install
+   ```
 
 2. Then run the application.
 
-    - On Windows, use this command:
+   - On Windows, use this command:
 
-      ```bash
-      SET DEBUG=express-locallibrary-tutorial:* & npm start
-      ```
+     ```bash
+     SET DEBUG=express-locallibrary-tutorial:* & npm start
+     ```
 
-    - On macOS or Linux, use this command:
+   - On macOS or Linux, use this command:
 
-      ```bash
-      DEBUG=express-locallibrary-tutorial:* npm start
-      ```
+     ```bash
+     DEBUG=express-locallibrary-tutorial:* npm start
+     ```
 
 3. Then load `http://localhost:3000/` in your browser to access the app.
 
 You should see a browser page that looks like this:
 
-![Browser for default Express app generator website](https://mdn.mozillademos.org/files/14375/ExpressGeneratorSkeletonWebsite.png)
+![Browser for default Express app generator website](expressgeneratorskeletonwebsite.png)
 
 You have a working Express application, serving itself to _localhost:3000_.
 
@@ -347,7 +347,7 @@ The file **/bin/www** is the application entry point! The very first thing this 
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require("../app");
 ```
 
 > **Nota:** `require()` is a global node function that is used to import modules into the current file. Here we specify **app.js** module using a relative path and omitting the optional (.**js**) file extension.
@@ -370,18 +370,18 @@ Back in the **www** entry point file above, it is this `module.exports` object t
 Let's work through the **app.js** file in detail. First, we import some useful node libraries into the file using `require()`, including http-errors, _express_, _morgan_ and _cookie-parser_ that we previously downloaded for our application using NPM; and _path_, which is a core Node library for parsing file and directory paths.
 
 ```js
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+var createError = require("http-errors");
+var express = require("express");
+var path = require("path");
+var cookieParser = require("cookie-parser");
+var logger = require("morgan");
 ```
 
 Then we `require()` modules from our routes directory. These modules/files contain code for handling particular sets of related "routes" (URL paths). When we extend the skeleton application, for example to list all books in the library, we will add a new file for dealing with book-related routes.
 
 ```js
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require("./routes/index");
+var usersRouter = require("./routes/users");
 ```
 
 > **Nota:** At this point, we have just _imported_ the module; we haven't actually used its routes yet (this happens just a little bit further down the file).
@@ -392,25 +392,25 @@ Next, we create the `app` object using our imported _express_ module, and then u
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "pug");
 ```
 
 The next set of functions call `app.use()` to add the _middleware_ libraries into the request handling chain. In addition to the 3rd party libraries we imported previously, we use the `express.static` middleware to get _Express_ to serve all the static files in the **/public** directory in the project root.
 
 ```js
-app.use(logger('dev'));
+app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 ```
 
 Now that all the other middleware is set up, we add our (previously imported) route-handling code to the request handling chain. The imported code will define particular routes for the different _parts_ of the site:
 
 ```js
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
 ```
 
 > **Nota:** The paths specified above ('/' and '`/users'`) are treated as a prefix to routes defined in the imported files. So for example, if the imported **users** module defines a route for `/profile`, you would access that route at `/users/profile`. We'll talk more about routes in a later article.
@@ -419,19 +419,19 @@ The last middleware in the file adds handler methods for errors and HTTP 404 res
 
 ```js
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.error = req.app.get("env") === "development" ? err : {};
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render("error");
 });
 ```
 
@@ -446,12 +446,12 @@ module.exports = app;
 The route file **/routes/users.js** is shown below (route files share a similar structure, so we don't need to also show **index.js**). First, it loads the _express_ module and uses it to get an `express.Router` object. Then it specifies a route on that object and lastly exports the router from the module (this is what allows the file to be imported into **app.js**).
 
 ```js
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get("/", function (req, res, next) {
+  res.send("respond with a resource");
 });
 
 module.exports = router;
@@ -469,8 +469,8 @@ The views (templates) are stored in the **/views** directory (as specified in **
 
 ```js
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res, next) {
+  res.render("index", { title: "Express" });
 });
 ```
 
@@ -500,15 +500,3 @@ Next, we'll start modifying the skeleton so that it works as a library website.
 - [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
-
-## In this module
-
-- [Express/Node introduction](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/pt-BR/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/pt-BR/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/pt-BR/docs/Learn/Server-side/Express_Nodejs/deployment)

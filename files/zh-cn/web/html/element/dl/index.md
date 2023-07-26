@@ -3,9 +3,11 @@ title: <dl>
 slug: Web/HTML/Element/dl
 ---
 
-## 简介
+{{HTMLSidebar}}
 
 **HTML `<dl>` 元素** （或 _HTML_ _描述列表元素_）是一个包含术语定义以及描述的列表，通常用于展示词汇表或者元数据 (键 - 值对列表)。
+
+{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}
 
 在 HTML5 之前， \<dl> 被大家以定义列表所熟知。
 
@@ -28,84 +30,85 @@ slug: Web/HTML/Element/dl
 ```html
 <dl>
   <dt>Firefox</dt>
-  <dd>A free, open source, cross-platform, graphical web browser
-      developed by the Mozilla Corporation and hundreds of volunteers.
+  <dd>
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
   </dd>
-  <!-- other terms and definitions -->
+
+  <!-- Other terms and descriptions -->
 </dl>
 ```
 
-输出：
+{{EmbedLiveSample("单条术语与描述")}}
 
-![Image:HTML-dl1.png](/@api/deki/files/241/=HTML-dl1.png)
-
-### 多条术语，单条描述
+### 多条术语、单条描述
 
 ```html
 <dl>
   <dt>Firefox</dt>
   <dt>Mozilla Firefox</dt>
   <dt>Fx</dt>
-  <dd>A free, open source, cross-platform, graphical web browser
-      developed by the Mozilla Corporation and hundreds of volunteers.</dd>
+  <dd>
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
+  </dd>
 
-  <!-- other terms and definitions -->
+  <!-- Other terms and descriptions -->
 </dl>
 ```
 
-输出：
+{{EmbedLiveSample("多条术语、单条描述")}}
 
-![Image:HTML-dl2.png](/@api/deki/files/242/=HTML-dl2.png)
-
-### 单条术语，多条描述
+### 单条术语、多条描述
 
 ```html
 <dl>
   <dt>Firefox</dt>
-  <dd>A free, open source, cross-platform, graphical web browser
-      developed by the Mozilla Corporation and hundreds of volunteers.</dd>
-  <dd>The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox,
-      is a mostly herbivorous mammal, slightly larger than a domestic cat
-      (60 cm long).</dd>
+  <dd>
+    A free, open source, cross-platform, graphical web browser developed by the
+    Mozilla Corporation and hundreds of volunteers.
+  </dd>
+  <dd>
+    The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox, is a
+    mostly herbivorous mammal, slightly larger than a domestic cat (60 cm long).
+  </dd>
 
-  <!-- other terms and definitions -->
+  <!-- Other terms and descriptions -->
 </dl>
 ```
 
-输出：
+{{EmbedLiveSample("单条术语、多条描述")}}
 
-![Image:HTML-dl3.png](/@api/deki/files/243/=HTML-dl3.png)
-
-### 多条术语，多条描述
+### 多条术语、多条描述
 
 同样的，该元素同样可以支持在一个列表中出现多条术语以及多条描述。
 
 ### 元数据
 
-描述列表可以很方便的将元数据展示为键 - 值对列表：
+描述列表可以很方便的将元数据展示为键—值对列表：
 
-```plain
+```html
 <dl>
-    <dt>Name</dt>
-    <dd>Godzilla</dd>
-    <dt>Born</dt>
-    <dd>1952</dd>
-    <dt>Birthplace</dt>
-    <dd>Japan</dd>
-    <dt>Color</dt>
-    <dd>Green</dd>
+  <dt>Name</dt>
+  <dd>Godzilla</dd>
+  <dt>Born</dt>
+  <dd>1952</dd>
+  <dt>Birthplace</dt>
+  <dd>Japan</dd>
+  <dt>Color</dt>
+  <dd>Green</dd>
 </dl>
 ```
 
 小技巧：通过 CSS3，我们可以很容易的在术语后面添加一个与内容无关的分隔符号，比如：
 
-```plain
-dt:after {
+```css
+dt::after {
   content: ": ";
 }
 ```
 
-### 在 {{HTMLElement("div")}} 元素中包装名称值组
+### 在 `div` 元素中包装名称值组
 
 WHATWG HTML 允许在 {{HTMLElement("div")}} 元素中的 {{HTMLElement("dl")}} 元素中包装每个名称 - 值组。当使用元数据时，或全局属性适用于整个组或用于样式时，这可能很有用。
 
@@ -130,7 +133,7 @@ WHATWG HTML 允许在 {{HTMLElement("div")}} 元素中的 {{HTMLElement("dl")}} 
 </dl>
 ```
 
-## 注意
+## 备注
 
 请不要将该元素（也不要用 {{HTMLElement("ul")}} 元素）用来在页面创建具有缩进效果的内容。虽然这样的结果样式看上去没问题，但是，这是很糟糕的做法，并且语义也不清晰。
 
@@ -144,9 +147,7 @@ WHATWG HTML 允许在 {{HTMLElement("div")}} 元素中的 {{HTMLElement("dl")}} 
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
-- {{HTMLElement("dt")}} element
-- {{HTMLElement("dd")}} element
-
-{{HTMLSidebar}}
+- {{HTMLElement("dt")}}
+- {{HTMLElement("dd")}}

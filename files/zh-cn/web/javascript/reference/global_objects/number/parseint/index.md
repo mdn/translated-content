@@ -19,7 +19,7 @@ Number.parseInt(string, radix)
 ### 参数
 
 - `string`
-  - : 要被解析的值。如果参数不是一个字符串，则将其[强制转化为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)。字符串开头的空白符将会被忽略。
+  - : 要被解析的值。如果参数不是一个字符串，则将其[强制转化为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)。字符串开头的空白符将会被忽略。
 - `radix` {{optional_inline}}
   - : 从 `2` 到 `36` 的整数，表示进制的基数。如果超出这个范围，将返回 `NaN`。假如 `radix` 未指定或者为 `0`，除非数字以 `0x` 或 `0X` 开头（此时假定为十六进制 `16`），否则假定为 `10`（十进制）。
 

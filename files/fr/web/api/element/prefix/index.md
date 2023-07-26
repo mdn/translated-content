@@ -1,12 +1,6 @@
 ---
 title: Element.prefix
 slug: Web/API/Element/prefix
-tags:
-  - API
-  - DOM
-  - Element
-  - Propriétés
-  - Préfixe
 translation_of: Web/API/Element/prefix
 ---
 
@@ -19,7 +13,7 @@ La propriété en lecture seule **`Element.prefix`** renvoie le préfixe d'espac
 ## Syntaxe
 
 ```js
-string = element.prefix
+string = element.prefix;
 ```
 
 ## Exemples

@@ -29,7 +29,8 @@ This example appends text to an element each time time the {{HTMLElement("div")}
     <title>Event Attribute Example</title>
     <script>
       function doSomething() {
-        document.getElementById("thanks").innerHTML += "<p>Thanks for clicking!</p>";
+        document.getElementById("thanks").innerHTML +=
+          "<p>Thanks for clicking!</p>";
       }
     </script>
   </head>
@@ -55,14 +56,17 @@ Instead, you should use {{domxref("EventTarget.addEventListener()")}}, as shown 
     <title>Event Attribute Example</title>
     <script>
       function doSomething() {
-        document.getElementById("thanks").innerHTML += "<p>Thanks for clicking!</p>";
+        document.getElementById("thanks").innerHTML +=
+          "<p>Thanks for clicking!</p>";
       }
 
       // Called when the page is done loading; this is where we do any setup we need,
       // such as creating event listeners for the elements in the page.
 
       function setup() {
-        document.getElementById("click").addEventListener("click", doSomething, true);
+        document
+          .getElementById("click")
+          .addEventListener("click", doSomething, true);
       }
 
       // Install an event handler on the window to receive the "load" event, which

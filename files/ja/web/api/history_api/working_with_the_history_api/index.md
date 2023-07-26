@@ -1,14 +1,16 @@
 ---
 title: 履歴 API の操作
 slug: Web/API/History_API/Working_with_the_History_API
+l10n:
+  sourceCommit: ff3545b816d9a945d3793ecc330a3b6cbdc59c1c
 ---
 
 {{DefaultAPISidebar("History API")}}
-HTML5 では、履歴項目を追加および変更するための {{DOMxRef("History.pushState", "pushState()")}} および {{DOMxRef("History.replaceState", "replaceState()")}} メソッドをそれぞれ導入しています。これらのメソッドは {{domxref("Window/popstate_event", "popstate")}} イベントと一緒に動作します。
+{{DOMxRef("History.pushState", "pushState()")}} および {{DOMxRef("History.replaceState", "replaceState()")}} メソッドは、それぞれ履歴項目を追加したり変更したりします。これらのメソッドは {{domxref("Window/popstate_event", "popstate")}} イベントと一緒に動作します。
 
 ## 履歴項目の追加と修正
 
-{{DOMxRef("History.pushState","pushState()")}} を使うことで、履歴の状態を変更した後に生成される {{domxref("XMLHttpRequest")}} オブジェクトの HTTP ヘッダー中のリファラも変更されます。リファラは {{domxref("XMLHttpRequest")}} オブジェクトが生成された時点での `this` となるウィンドウの持つドキュメントの URL となります。
+{{DOMxRef("History.pushState","pushState()")}} を使うことで、履歴の状態を変更した後に生成される {{domxref("XMLHttpRequest")}} オブジェクトの HTTP ヘッダー中のリファラも変更されます。リファラーは {{domxref("XMLHttpRequest")}} オブジェクトが生成された時点での `this` となるウィンドウの持つ文書の URL となります。
 
 ### pushState() の例
 
@@ -42,8 +44,6 @@ history.pushState(stateObj, "page 2", "bar.html")
 - **URL**
   - : 新しい履歴項目の URL はこの引数で与えられます。ブラウザーは `pushState()` の呼び出しの後にはこの URL を読み込もうとしませんが、例えばユーザーがブラウザーを再起動した後などには URL を読み込もうとする可能性があることに注意してください。新しい URL は絶対的である必要はありません。相対的である場合、現在の URL に対して相対的に解決されます。新しい URL は現在の URL と同じオリジンでなければなりません。そうでない場合、`pushState()` は例外を発生します。この引数はオプションです。指定しなかった場合、文書の現在の URL が設定されます。
 
-> **メモ:** Gecko 2.0 {{ geckoRelease("2.0") }} から Gecko 5.0 {{ geckoRelease("5.0") }} までの間では、渡されたオブジェクトは JSON を使用してシリアライズされます。 Gecko 6.0 {{ geckoRelease("6.0") }} より、オブジェクトは[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用してシリアライズされます。これにより多種多様なオブジェクトを安全に渡せるようになります。
-
 ある意味では、`pushState()` の呼び出しは `window.location = "#foo"` と設定するのと似ています。どちらも、現在の文書に関連する別の履歴項目の生成と有効化を行います。
 
 しかし、 `pushState()` にはいくらかの利点があります。
@@ -63,8 +63,6 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 具体的には、何らかのユーザーのアクションを受け、現在の履歴項目の URL または 状態オブジェクトを更新したい場合に `replaceState()` が役立ちます。
 
-> **メモ:** Gecko 2.0 {{ geckoRelease("2.0") }} から Gecko 5.0 {{ geckoRelease("5.0") }} までの間では、渡されたオブジェクトは JSON を使用してシリアライズされます。 Gecko 6.0 {{ geckoRelease("6.0") }} より、オブジェクトは[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用してシリアライズされます。これにより多種多様なオブジェクトを安全に渡せるようになります。
-
 ### replaceState() の例
 
 `https://mozilla.org/foo.html` で次の JavaScript を実行したとします。
@@ -74,7 +72,7 @@ let stateObj = { foo: "bar" }
 history.pushState(stateObj, "page 2", "bar.html")
 ```
 
-上記2行の説明は、上記の *[pushState() メソッドの例](#pushstate_の例)* の部分で得ることができます。
+上記2行の説明は、上記の _[pushState() メソッドの例](#pushstate_の例)_ の部分で得ることができます。
 
 次に、`https://mozilla.org/bar.html` で次の JavaScript を実行したとします。
 

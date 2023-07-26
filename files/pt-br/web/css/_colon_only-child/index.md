@@ -15,7 +15,7 @@ p:only-child {
 }
 ```
 
-> **Note:** **Nota**: Originalmente, foi definido que o elemento selecionado deveria ter um elemento-pai. A partir de Selectors Level 4, isso não é mais necessário.
+> **Nota:** Originalmente, foi definido que o elemento selecionado deveria ter um elemento-pai. A partir de Selectors Level 4, isso não é mais necessário.
 
 ## Sintaxe
 

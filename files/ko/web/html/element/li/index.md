@@ -1,12 +1,6 @@
 ---
 title: <li>
 slug: Web/HTML/Element/li
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/li
 ---
 
 {{HTMLSidebar}}
@@ -50,12 +44,12 @@ translation_of: Web/HTML/Element/li
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("presentation")}}, {{ARIARole("radio")}},
-        {{ARIARole("separator")}}, {{ARIARole("tab")}},
-        {{ARIARole("treeitem")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitem_role'><code>menuitem</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role'><code>menuitemcheckbox</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role'><code>menuitemradio</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/option_role'><code>option</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/radio_role'><code>radio</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/separator_role'><code>separator</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/tab_role'><code>tab</code></a>,
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/treeitem_role'><code>treeitem</code></a>
       </td>
     </tr>
     <tr>
@@ -135,7 +129,7 @@ translation_of: Web/HTML/Element/li
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.li")}}
+{{Compat}}
 
 ## 같이 보기
 

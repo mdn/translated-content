@@ -1,15 +1,7 @@
 ---
 title: Array.prototype.reduce()
-slug: Web/JavaScript/Reference/Global_Objects/Array/Reduce
-tags:
-  - Array
-  - ECMAScript 5
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
+slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/Reduce
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/reduce
 ---
 
 {{JSRef}}

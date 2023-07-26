@@ -34,16 +34,16 @@ Un nuevo objeto {{domxref("Blob")}} conteniendo la información especificada.
 
 ```js
 var unaParteDeArchivo = ['<a id="a"><b id="b">hey!</b></a>']; // un array de un solo DOMString
-var oMiBlob = new Blob(unaParteDeArchivo, {type : 'text/html'}); // el blob
+var oMiBlob = new Blob(unaParteDeArchivo, { type: "text/html" }); // el blob
 ```
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.Blob.Blob")}}
+{{Compat}}
 
 ## Vea también
 

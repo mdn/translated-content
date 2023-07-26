@@ -45,7 +45,7 @@ editable.addEventListener('input', (e) => {
 });
 ```
 
-{{EmbedLiveSample('Examples', '100%', 250)}}
+{{EmbedLiveSample('示例', '100%', 250)}}
 
 ## 规范
 

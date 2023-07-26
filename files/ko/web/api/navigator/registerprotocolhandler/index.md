@@ -1,13 +1,6 @@
 ---
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
-tags:
-  - API
-  - DOM
-  - Method
-  - Navigator
-  - Reference
-translation_of: Web/API/Navigator/registerProtocolHandler
 ---
 
 {{APIRef("HTML DOM")}}{{securecontext_header}}

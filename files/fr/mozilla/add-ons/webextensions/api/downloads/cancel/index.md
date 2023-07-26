@@ -1,18 +1,6 @@
 ---
 title: downloads.cancel()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/cancel
-tags:
-  - API
-  - Add-ons
-  - Annuler
-  - Extensions
-  - Metho
-  - Non-standard
-  - Reference
-  - Téléchargement
-  - WebExtensions
-  - cancel
-  - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/cancel
 ---
 
@@ -26,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var canceling = browser.downloads.cancel(
-  downloadId      // integer
-)
+  downloadId, // integer
+);
 ```
 
 ### Paramètres
@@ -39,9 +27,9 @@ var canceling = browser.downloads.cancel(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). Si la demande a été acceptée, la promesse sera remplie sans arguments. Si la demande a échoué, la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.cancel")}}
+{{Compat}}
 
 ## Exemples
 

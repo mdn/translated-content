@@ -20,14 +20,14 @@ slug: Web/JavaScript/Reference/Global_Objects/NaN
 有五种不同类型的操作返回 `NaN`：
 
 - 失败的数字转换（例如，显式转换，如 `parseInt("blabla")`、`Number(undefined)`，或隐式转换，如 `Math.abs(undefined)`）
-- 计算结果不是实数的数学运算（例如，`Math.sqrt(1)`）
+- 计算结果不是实数的数学运算（例如，`Math.sqrt(-1)`）
 - 不定式（例如，`0 * Infinity`、`1 ** Infinity`、`Infinity / Infinity`、`Infinity - Infinity`）
 - 一个操作数被强制转换为 `NaN` 的方法或表达式（例如，`7 ** NaN`、`7 * "blabla"`）——这意味着 `NaN` 具有传染性
 - 将无效值表示为数字的其他情况（例如，无效的 [Date](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) `new Date("blabla").getTime()`、`"".charCodeAt(1)`）
 
 `NaN` 及其行为不是 JavaScript 发明的。它在浮点运算中的语义（包括 `NaN !== NaN`）是由 [IEEE 754](https://zh.wikipedia.org/wiki/雙精度浮點數) 指定的。`NaN` 的行为包括：
 
-- 如果 `NaN` 涉及数学运算（但不涉及[位运算](zh-CN/docs/Web/JavaScript/Reference/Operators#位移运算符)），结果通常也是 `NaN`。（参见下面的[反例](#默默逃离_nan)。）
+- 如果 `NaN` 涉及数学运算（但不涉及[位运算](/zh-CN/docs/Web/JavaScript/Reference/Operators#位移运算符)），结果通常也是 `NaN`。（参见下面的[反例](#默默逃离_nan)。）
 - 当 `NaN` 是任何关系比较（`>`, `<`, `>=`, `<=`）的操作数之一时，结果总是 `false`。
 - `NaN` 不等于（通过 [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)、[`!=`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)、[`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality) 和 [`!==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)）任何其他值——包括与另一个 `NaN` 值。
 

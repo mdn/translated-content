@@ -1,13 +1,6 @@
 ---
 title: String.prototype.anchor()
 slug: Web/JavaScript/Reference/Global_Objects/String/anchor
-tags:
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/anchor
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/anchor
 ---
 

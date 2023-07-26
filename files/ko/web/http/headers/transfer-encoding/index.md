@@ -1,7 +1,6 @@
 ---
 title: Transfer-Encoding
 slug: Web/HTTP/Headers/Transfer-Encoding
-translation_of: Web/HTTP/Headers/Transfer-Encoding
 ---
 
 {{HTTPSidebar}}

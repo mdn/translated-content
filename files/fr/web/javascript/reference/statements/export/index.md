@@ -1,14 +1,7 @@
 ---
 title: export
 slug: Web/JavaScript/Reference/Statements/export
-tags:
-  - ECMAScript 2015
-  - Instruction
-  - JavaScript
-  - Modules
-  - export
 translation_of: Web/JavaScript/Reference/Statements/export
-original_slug: Web/JavaScript/Reference/Instructions/export
 ---
 
 {{jsSidebar("Statements")}}
@@ -141,7 +134,7 @@ console.log(cube(3)); // 27
 console.log(machin);    // 4.555806215962888
 ```
 
-> **Note :** Si l'import est réalisé dans un script HTML, il faut que celui-ci soit chargé avec l'attribut {{htmlattrxref("type")}} `"module"` : `<script type="module" src="./demo.js"></script>` sinon il y aura une erreur quant aux origines multiples ([CORS](/fr/docs/Web/HTTP/CORS)).
+> **Note :** Si l'import est réalisé dans un script HTML, il faut que celui-ci soit chargé avec l'attribut [`type`](/fr/docs/Web/HTML/Global_attributes#type) `"module"` : `<script type="module" src="./demo.js"></script>` sinon il y aura une erreur quant aux origines multiples ([CORS](/fr/docs/Web/HTTP/CORS)).
 > Il n'est pas possible de charger des modules JavaScript via une URL `file://` pour des raisons de sécurité (voir [CORS](/fr/docs/Web/HTTP/CORS) également). Il faudra utiliser un serveur HTTP.
 
 ### Utilisation d'exports par défaut

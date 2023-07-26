@@ -15,17 +15,11 @@ El código HTTP de redirección **`304 Not Modified`** en el response de la peti
 
 ## Especificaciones
 
-| Especificación                                           | Título                                                       |
-| -------------------------------------------------------- | ------------------------------------------------------------ |
-| {{RFC("7232", "304 Not Modified" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
+{{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("http.status.304")}}
-
-## Notas de compatibilidad
-
-- Browser behavior differs if this response erroneously includes a body on persistent connections See [204 No Content](/es/docs/Web/HTTP/Status/204) for more detail.
+{{Compat}}
 
 ## See also
 

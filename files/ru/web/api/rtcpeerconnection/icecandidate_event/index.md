@@ -4,7 +4,7 @@ slug: Web/API/RTCPeerConnection/icecandidate_event
 translation_of: Web/API/RTCPeerConnection/icecandidate_event
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 Событие **`icecandidate`** отправляется {{domxref("RTCPeerConnection")}} когда {{domxref("RTCIceCandidate")}} был идентифицирован и добавлен к локальному клиенту (local peer) через вызов {{domxref("RTCPeerConnection.setLocalDescription()")}}. Обработчик события должен передать кандидата удалённому клиенту (remote peer) по каналу сигнализации (signaling channel), чтобы удалённый клиент (remote peer) смог добавить его в свой набор удалённых кандидатов (remote candidates).
 

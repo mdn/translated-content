@@ -16,7 +16,7 @@ varalignment =HTMLTableElement.align;
 
 ### Parámetros
 
-- `alignment` {{deprecatedGeneric('inline','HTML4')}}
+- `alignment` {{deprecated_inline}}
 
   - : `alignment` es una cadena con uno de los siguientes valores:
 
@@ -28,8 +28,8 @@ varalignment =HTMLTableElement.align;
 
 ```js
 // Establecer la alineación de una tabla
-var t = document.getElementById('TableA');
-t.align = 'center';
+var t = document.getElementById("TableA");
+t.align = "center";
 ```
 
 ## Especificación

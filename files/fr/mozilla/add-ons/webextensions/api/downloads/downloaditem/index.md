@@ -1,16 +1,6 @@
 ---
 title: downloads.DownloadItem
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
-tags:
-  - API
-  - Add-ons
-  - DownloadItem
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 ---
 
@@ -63,9 +53,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `url`
   - : Un `string` représentant l'URL absolue à partir de laquelle le fichier a été téléchargé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.DownloadItem")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

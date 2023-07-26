@@ -1,12 +1,6 @@
 ---
 title: 부등 연산자(!=)
 slug: Web/JavaScript/Reference/Operators/Inequality
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.inequality
 ---
 
 {{jsSidebar("Operators")}}

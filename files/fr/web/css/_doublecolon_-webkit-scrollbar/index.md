@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-scrollbar'
 slug: Web/CSS/::-webkit-scrollbar
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-scrollbar
 ---
 
@@ -82,33 +77,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-### `::-webkit-scrollbar`
-
-{{Compat("css.selectors.-webkit-scrollbar")}}
-
-### `::-webkit-scrollbar-button`
-
-{{Compat("css.selectors.-webkit-scrollbar-button")}}
-
-### `::-webkit-scrollbar-thumb`
-
-{{Compat("css.selectors.-webkit-scrollbar-thumb")}}
-
-### `::-webkit-scrollbar-track`
-
-{{Compat("css.selectors.-webkit-scrollbar-track")}}
-
-### `::-webkit-scrollbar-track-piece`
-
-{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}
-
-### `::-webkit-scrollbar-corner`
-
-{{Compat("css.selectors.-webkit-scrollbar-corner")}}
-
-### `::-webkit-resizer`
-
-{{Compat("css.selectors.-webkit-resizer")}}
+{{Compat}}
 
 ## Voir aussi
 

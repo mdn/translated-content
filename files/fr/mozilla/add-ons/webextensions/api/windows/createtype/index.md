@@ -1,16 +1,6 @@
 ---
 title: windows.CreateType
 slug: Mozilla/Add-ons/WebExtensions/API/windows/CreateType
-tags:
-  - API
-  - Add-ons
-  - CreateType
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/CreateType
 ---
 
@@ -27,9 +17,9 @@ Les valeurs de ce type sont des objets `strings`. Les valeurs possibles sont :
 - `"panel"`
 - `"detached_panel"`
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.windows.CreateType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

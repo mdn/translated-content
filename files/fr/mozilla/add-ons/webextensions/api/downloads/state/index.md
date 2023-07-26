@@ -1,16 +1,6 @@
 ---
 title: downloads.State
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/State
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
-  - state
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/State
 ---
 
@@ -33,9 +23,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
 
 > **Note :** Ces constantes de chaîne ne changeront jamais, mais de nouvelles constantes peuvent être ajoutées.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.State")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

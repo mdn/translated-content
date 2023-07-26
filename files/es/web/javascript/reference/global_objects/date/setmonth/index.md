@@ -55,9 +55,9 @@ console.log(endOfMonth); //Wed Mar 02 2016 00:00:00
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Date.setMonth")}}
+{{Compat}}
 
 ## Ver también
 

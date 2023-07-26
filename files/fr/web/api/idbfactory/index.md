@@ -23,21 +23,29 @@ L'interface **`IDBFactory`** fait partie de l'[API IndexedDB](/fr/docs/Web/API/A
 
 ## Exemples
 
-Dans l'exemple qui suit, on effectue une requête sur une base de données et on gère les cas de succès et d'erreur. Vous pouvez consulter un exemple complet sur [notre application To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([voir l'exemple en _live_](https://mdn.github.io/to-do-notifications/)).
+Dans l'exemple qui suit, on effectue une requête sur une base de données et on gère les cas de succès et d'erreur. Vous pouvez consulter un exemple complet sur [notre application To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple en _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 var note = document.querySelector("ul");
 
 // Dans la ligne suivante, inclure les préfixes des
 // implémentations à tester
-window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+window.indexedDB =
+  window.indexedDB ||
+  window.mozIndexedDB ||
+  window.webkitIndexedDB ||
+  window.msIndexedDB;
 // attention à ne pas utiliser "var indexedDB = ..."
 // si on n'est pas dans une fonction
 
 // On pourra éventuellement avoir besoin de références
 // envers les objets window.IDB* :
-window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
-window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
+window.IDBTransaction =
+  window.IDBTransaction ||
+  window.webkitIDBTransaction ||
+  window.msIDBTransaction;
+window.IDBKeyRange =
+  window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange;
 // (Mozilla n'a jamais préfixé ces objets,
 // il n'est pas nécessaire d'écrire window.mozIDB*)
 
@@ -47,12 +55,12 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 // On ajoute ensuite les gestionnaires d'évènements
 // pour gérer le succès ou l'échec de l'ouverture
 // de la base de données
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Erreur lors du chargement de la base.</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>Erreur lors du chargement de la base.</li>";
 };
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Base de données initialisée.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Base de données initialisée.</li>";
 
   // store the result of opening the database in the db
   // variable. This is used a lot later on, for opening
@@ -77,4 +85,4 @@ DBOpenRequest.onsuccess = function(event) {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

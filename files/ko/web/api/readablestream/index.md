@@ -1,7 +1,6 @@
 ---
 title: ReadableStream
 slug: Web/API/ReadableStream
-translation_of: Web/API/ReadableStream
 ---
 
 {{APIRef("Streams")}}
@@ -65,11 +64,11 @@ fetch("https://www.example.org/").then((response) => {
 });
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

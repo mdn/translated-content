@@ -1,15 +1,6 @@
 ---
 title: pageAction
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction
 ---
 
@@ -58,9 +49,9 @@ Les actions de page sont pour des actions qui ne sont pertinentes que pour des p
 - {{WebExtAPIRef("pageAction.onClicked")}}
   - : Activé lorsqu'une icône d'action de page est cliquée. Cet événement ne se déclenchera pas si l'action de la page comporte une fenêtre contextuelle.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pageAction")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

@@ -1,10 +1,6 @@
 ---
 title: ':placeholder-shown'
 slug: Web/CSS/:placeholder-shown
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:placeholder-shown
 ---
 

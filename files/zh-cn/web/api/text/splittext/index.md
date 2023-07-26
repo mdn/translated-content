@@ -33,7 +33,7 @@ newNode = textNode.splitText(offset)
 - NO_MODIFICATION_ALLOWED_ERR
   - : 如果，原文本节点只读，则抛出这个异常。
 
-## 例子
+## 示例
 
 下面的例子中，一个 `<p>` 元素所包含的文本节点将会被分割成两个文本节点，然后在这两个节点中间插入一个 `<span>` 元素。
 
@@ -66,7 +66,7 @@ p.insertBefore(u, bar);
 
 ### 结果
 
-{{EmbedLiveSample("Example", 700, 70)}}
+{{EmbedLiveSample("示例", 700, 70)}}
 
 ## 规范
 

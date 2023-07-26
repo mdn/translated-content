@@ -195,9 +195,9 @@ Si necesitas dar soporte a motores de JavaScript realmente obsoletos que no sopo
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.find")}}
+{{Compat}}
 
 ## Ver también
 

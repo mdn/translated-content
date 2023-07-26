@@ -1,13 +1,6 @@
 ---
 title: Window.mozInnerScreenY
 slug: Web/API/Window/mozInnerScreenY
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - Propriété
-  - Reference
-  - Window
 translation_of: Web/API/Window/mozInnerScreenY
 ---
 
@@ -36,7 +29,7 @@ Ne fait partie d'aucune spécification ou recommandation technique du W3C.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Window.mozInnerScreenY")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,12 +1,6 @@
 ---
 title: HTML autocomplete 특성
 slug: Web/HTML/Attributes/autocomplete
-tags:
-  - Attribute
-  - HTML
-  - Reference
-  - 자동완성
-translation_of: Web/HTML/Attributes/autocomplete
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -217,7 +211,7 @@ Exampleville CA 95555
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.autocomplete")}}
+{{Compat}}
 
 ## 같이 보기
 

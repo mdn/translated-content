@@ -22,7 +22,7 @@ void mozTextAlongPath(in DOMString textToDraw, in boolean stroke);
 - Estas extensiones de texto no están aún estandarizadas por WHATWG.
 - No necesitas un contexto especial para usarlas; el contexto 2D funciona bien.
 - Todos los dibujos se realizan usando la transformación actual.
-- Revisa el {{ Bug(339553) }} si quieres leer más sobre las implementaciones específicas.
+- Revisa el [Error 339553 en Firefox](https://bugzil.la/339553) si quieres leer más sobre las implementaciones específicas.
 
 ### Demostraciones
 

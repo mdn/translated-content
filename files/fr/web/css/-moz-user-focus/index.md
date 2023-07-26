@@ -1,11 +1,6 @@
 ---
 title: '-moz-user-focus'
 slug: Web/CSS/-moz-user-focus
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-moz-user-focus
 ---
 
@@ -65,7 +60,7 @@ Cette propriété est une propriété propriétaire liée à Gecko/Mozilla et ne
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-moz-user-focus")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,7 +1,6 @@
 ---
-title: "aria-label"
+title: aria-label
 slug: Web/Accessibility/ARIA/Attributes/aria-label
-spec-urls: https://w3c.github.io/aria/#aria-label
 ---
 
 O atributo `aria-label` define um valor de string que rotula um elemento interativo.
@@ -43,7 +42,7 @@ O atributo `aria-label` pode ser usado com elementos HTML semânticos regulares;
 
 Não "exagere" o `aria-label`. Por exemplo, use texto visível com `aria-describedby` ou `aria-description`, não `aria-label`, para fornecer instruções adicionais ou esclarecer a interface do usuário. Lembre-se sempre de que você não precisa direcionar instruções apenas para leitores de tela; se forem necessárias instruções, forneça-as a todos (ou, de preferência, torne sua interface do usuário mais intuitiva).
 
-Nem todos os elementos podem receber um nome acessível. Nem `aria-label` nem `aria-labelledby` devem ser usados ​​com elementos não interativos ou papéis estruturais embutidos como `código`, `termo` ou `ênfase` nem papéis cuja semântica não será mapeada para a acessibilidade API, incluindo `presentation`, `none` e `hidden`. O atributo `aria-label` destina-se apenas a elementos interativos. Use `aria-label` para garantir que um nome acessível seja fornecido quando nenhum estiver visível no DOM para todos os elementos interativos, como links, vídeos, controles de formulário, [papéis de referência](/pt-BR/docs/Web/Accessibility/ARIA /Roles#3._landmark_roles) e [funções de widget](/pt-BR/docs/Web/Accessibility/ARIA/Roles#2._widget_roles).
+Nem todos os elementos podem receber um nome acessível. Nem `aria-label` nem `aria-labelledby` devem ser usados com elementos não interativos ou papéis estruturais embutidos como `código`, `termo` ou `ênfase` nem papéis cuja semântica não será mapeada para a acessibilidade API, incluindo `presentation`, `none` e `hidden`. O atributo `aria-label` destina-se apenas a elementos interativos. Use `aria-label` para garantir que um nome acessível seja fornecido quando nenhum estiver visível no DOM para todos os elementos interativos, como links, vídeos, controles de formulário, [papéis de referência](/pt-BR/docs/Web/Accessibility/ARIA /Roles#3.\_landmark_roles) e [funções de widget](/pt-BR/docs/Web/Accessibility/ARIA/Roles#2._widget_roles).
 
 Se você der a seus {{HTMLElement('iframe')}}s um `title`, suas imagens um atributo `alt` e os {{HTMLElement('label')}}s associados à sua entrada, `aria-label` não é necessário. Mas, se presente, o `aria-label` terá precedência sobre o `title`, `alt` e `<label>` como seu `iframe`, imagem ou nome acessível da entrada, respectivamente.
 

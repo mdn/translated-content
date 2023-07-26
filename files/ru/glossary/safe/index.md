@@ -1,6 +1,6 @@
 ---
 title: Безопасный метод
-slug: Glossary/safe
+slug: Glossary/Safe
 tags:
   - Glossary
   - HTTP

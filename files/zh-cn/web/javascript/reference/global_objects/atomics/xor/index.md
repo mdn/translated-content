@@ -53,7 +53,7 @@ Atomics.xor(typedArray, index, value)
 4  0100
 ```
 
-## 例子
+## 示例
 
 ```js
 const sab = new SharedArrayBuffer(1024);

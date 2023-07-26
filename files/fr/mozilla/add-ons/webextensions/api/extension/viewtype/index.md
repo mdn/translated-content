@@ -1,16 +1,6 @@
 ---
 title: extension.ViewType
 slug: Mozilla/Add-ons/WebExtensions/API/extension/ViewType
-tags:
-  - API
-  - Add-ons
-  - Extension
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - ViewType
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/ViewType
 ---
 
@@ -22,9 +12,9 @@ Le type de vue de l'extension.
 
 Les valeurs de ce type sont des chaînes. Les valeurs possibles sont : `"tab"`, `"popup"`, `"sidebar"`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.extension.ViewType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

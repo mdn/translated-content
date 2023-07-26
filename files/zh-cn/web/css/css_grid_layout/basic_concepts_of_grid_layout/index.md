@@ -1,11 +1,11 @@
 ---
 title: 网格布局的基本概念
-slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
+slug: Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout
 ---
 
 {{CSSRef}}
 
-[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)引入了二维网格布局系统，可用于布局页面主要的区域布局或小型组件。本文介绍了 CSS 网格布局 与 CSS 网格布局规范 Level 1 中的新术语。这篇简介中所展示的每种特性，接下来将在本指南的其余部分中有更详细地介绍。
+[CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)引入了二维网格布局系统，可用于布局页面主要的区域布局或小型组件。本文介绍了 CSS 网格布局 与 CSS 网格布局规范 Level 1 中的新术语。这篇简介中所展示的每种特性，接下来将在本指南的其余部分中有更详细地介绍。
 
 ## 什么是网格？
 
@@ -31,7 +31,7 @@ slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 
 多个元素可以放置在网格单元格中，或者区域可以部分地彼此重叠。然后可以 CSS 中的**z-index**属性来控制重叠区域显示的优先级。
 
-Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout)）结合使用时，可以帮助您创建以前不可能在 CSS 中构建的布局。这一切都是通过在网格容器上创建一个网格来开始的。
+Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)）结合使用时，可以帮助您创建以前不可能在 CSS 中构建的布局。这一切都是通过在网格容器上创建一个网格来开始的。
 
 ## 网格容器
 
@@ -144,7 +144,7 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 }
 ```
 
-{{EmbedLiveSample('grid_first', '610', '200')}}
+{{EmbedLiveSample('网格轨道', '610', '200')}}
 
 ### `fr` 单位
 
@@ -192,7 +192,7 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 }
 ```
 
-{{ EmbedLiveSample('fr_unit_ls', '220', '180') }}
+{{ EmbedLiveSample('fr 单位', '220', '180') }}
 
 在下面的这个例子中，我们创建定义了一个`2fr`轨道和两个`1fr`轨道。可用空间被四等分。其中两份给了第一个轨道，剩下两个轨道各占一份。
 
@@ -212,7 +212,7 @@ Grid 是一个强大的规范，当与 CSS 的其他部分（如[flexbox](/zh-CN
 }
 ```
 
-### 在轨道清单中使用`repeat()`
+### 在轨道清单中使用 `repeat()`
 
 有着多轨道的大型网格可使用 `repeat()` 标记来重复部分或整个轨道列表。如下方的网格定义：
 
@@ -300,7 +300,7 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 
 {{ EmbedLiveSample('隐式和显式网格', '230', '420') }}
 
-### 轨道大小和`minmax()`
+### 轨道大小和 `minmax()`
 
 在设置一个显式的网格或者定义自动创建的行和列的大小的时候，我们也许想给网格一个最小的尺寸，确保他们能扩大到容纳他里面添加的内容。举个例子，我想让我的行的高度永远不会缩小到 100 像素以下，但是如果我的内容延伸到 300 像素高了我想让我的行高也延伸到这个高度。
 
@@ -562,7 +562,7 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 }
 ```
 
-## 使用`z-index`控制层级
+## 使用 `z-index` 控制层级
 
 多个网格项目可以占用同一个网格单位。如果我们回到之前根据网格线编号放置网格项目的话，我们可以更改此项来使两个网格项目重叠。
 
@@ -617,9 +617,9 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 }
 ```
 
-{{ EmbedLiveSample('l_ex', '210', '410') }}
+{{ EmbedLiveSample('使用 z-index 控制层级', '210', '410') }}
 
-网格项目 `box2` 现在覆盖于 `box1 之上，其覆盖顺序遵循文档流的原始顺序（后来居上）`。
+网格项目 `box2` 现在覆盖于 `box1` 之上，其覆盖顺序遵循文档流的原始顺序（后来居上）。
 
 ### 控制顺序
 
@@ -682,4 +682,4 @@ Repeat 语句可以传入一个轨道列表，因此你可以用它来创建一�
 
 ## 下一步
 
-在本文章中我们快速对网格布局的概念有了个基本的了解。利用示例代码进行练习，然后[接下来我们正式开始挖掘关于网格布局的各种细节](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout)。
+在本文章中我们快速对网格布局的概念有了个基本的了解。利用示例代码进行练习，然后[接下来我们正式开始挖掘关于网格布局的各种细节](/zh-CN/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)。

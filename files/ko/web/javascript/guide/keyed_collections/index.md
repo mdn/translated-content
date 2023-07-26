@@ -1,7 +1,6 @@
 ---
-title: 키기반의 컬렉션
+title: 키 기반 컬렉션
 slug: Web/JavaScript/Guide/Keyed_collections
-translation_of: Web/JavaScript/Guide/Keyed_collections
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
@@ -14,7 +13,7 @@ translation_of: Web/JavaScript/Guide/Keyed_collections
 
 ECMAScript 6에서 값들을 매핑하기 위한 새로운 데이터 구조를 소개 하고 있다. 그중 하나인 Map객체는 간단한 키와 값을 서로 연결(매핑)시켜 저장하며 저장된 순서대로 각 요소들을 반복적으로 접근할 수 있도록 한다.
 
-다음 코드는 Map이 제공하는 기본적인 기능들을 보여 주고 있다. 더 많은 예제와 모든 기능에 대한 API를 볼려면 {{jsxref("Map")}} 페이지를 참고하면 된다. Map객체에 저장되어 있는 각 요소들을 \[키, 값] 형태의 배열로 반복적으로 반환해주는 [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) 를 사용할 수 있다.
+다음 코드는 Map이 제공하는 기본적인 기능들을 보여 주고 있다. 더 많은 예제와 모든 기능에 대한 API를 볼려면 {{jsxref("Map")}} 페이지를 참고하면 된다. Map객체에 저장되어 있는 각 요소들을 \[키, 값] 형태의 배열로 반복적으로 반환해주는 [`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of) 를 사용할 수 있다.
 
 ```js
 var sayings = new Map();
@@ -47,7 +46,7 @@ Object 혹은 Map중에 어느 것을 사용할지를 결정하는데 도움을 
 - 실행 시까지 키를 알수 없고, 모든 키가 동일한 type이며 모든 값들이 동일한 type일 경우에는 objects를 대신해서 map을 사용해라.
 - 각 개별 요소에 대해 적용해야 하는 로직이 있을 경우에는 objects를 사용해라.
 
-### `WeakMap` object
+### `WeakMap` 객체
 
 {{jsxref("WeakMap")}}객체는 object만을 키로 허용하고 값은 임의의 값을 허용하는 키/값 형태의 요소의 집합이다. 키가 가지고 있는 객체에 대한 참조는 객체에 대한 참조가 더이상 존재하지 않을 경우 garbage collection(GC)의 수거 대상이 되는 약한 참조를 의미한다. `WeakMap` API는 Map API와 동일하다.
 
@@ -100,7 +99,7 @@ for (let item of mySet) console.log(item);
 
 ### 배열과 Set의 상호 변환
 
-{{jsxref("Array.from")}} 혹은 [spread operator](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator)를 통해 Set객체를 가지고 {{jsxref("Array")}}을 생성할 수 있다. 또한 Set 생성자는 배열을 인자로 받을 수 있고 해당 배열을 Set객체의 요소로 저장한다. 한번 더 상기시키면 Set객체는 중복된 값을 저장하지 않기때문에 주어진 배열내의 중복된 요소들을 제거되어 Set으로 변환된다.
+{{jsxref("Array.from")}} 혹은 [spread operator](/ko/docs/Web/JavaScript/Reference/Operators/Spread_operator)를 통해 Set객체를 가지고 {{jsxref("Array")}}을 생성할 수 있다. 또한 Set 생성자는 배열을 인자로 받을 수 있고 해당 배열을 Set객체의 요소로 저장한다. 한번 더 상기시키면 Set객체는 중복된 값을 저장하지 않기때문에 주어진 배열내의 중복된 요소들을 제거되어 Set으로 변환된다.
 
 ```js
 Array.from(mySet);

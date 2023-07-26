@@ -1,13 +1,6 @@
 ---
 title: Console.dirxml()
-slug: Web/API/Console/dirxml
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthodes
-  - console
-  - débogage
+slug: Web/API/console/dirxml
 translation_of: Web/API/Console/dirxml
 ---
 

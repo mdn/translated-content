@@ -1,15 +1,6 @@
 ---
 title: find.removeHighlighting()
 slug: Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - find
-  - removeHighlighting
 translation_of: Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting
 ---
 
@@ -20,7 +11,7 @@ Supprimer toute mise en évidence d'une recherche précédente qui a été appli
 ## Syntaxe
 
 ```js
-browser.find.removeHighlighting()
+browser.find.removeHighlighting();
 ```
 
 ### Paramètres
@@ -31,9 +22,9 @@ Aucun
 
 Aucune.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.find.removeHighlighting", 10)}}
+{{Compat}}
 
 ## Exemples
 

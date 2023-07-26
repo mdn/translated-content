@@ -1,14 +1,7 @@
 ---
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
-tags:
-  - Array
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
-original_slug: Web/JavaScript/Reference/Objets_globaux/Array/sort
 ---
 
 {{JSRef}}
@@ -29,7 +22,7 @@ arr.sort(fonctionComparaison)
 ### Paramètres
 
 - `fonctionComparaison` {{optional_inline}}
-  - : Ce paramètre optionnel permet de spécifier une fonction définissant l'ordre de tri. Si absente, le tableau est trié selon la valeur de point de code [Unicode](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_litt%C3%A9raux#Unicode) de chaque caractère, d'après la conversion en chaine de caractères de chaque élément. Cette fonction prendra deux arguments : le premier élément à comparer et le deuxième élément à comparer.
+  - : Ce paramètre optionnel permet de spécifier une fonction définissant l'ordre de tri. Si absente, le tableau est trié selon la valeur de point de code [Unicode](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Unicode) de chaque caractère, d'après la conversion en chaine de caractères de chaque élément. Cette fonction prendra deux arguments : le premier élément à comparer et le deuxième élément à comparer.
 
 ### Valeur de retour
 
@@ -46,7 +39,7 @@ Si le paramètre `fonctionComparaison` est fourni, les éléments du tableau (qu
 - Si `fonctionComparaison(a, b)` est inférieur à 0, on trie `a` avec un indice inférieur à `b` (`a` sera classé avant `b`)
 - Si `fonctionComparaison(a, b)` renvoie 0, on laisse `a` et `b` inchangés l'un par rapport à l'autre, mais triés par rapport à tous les autres éléments. Note&nbsp;: la norme ECMAScript ne garantit pas ce comportement, par conséquent tous les navigateurs (par exemple les versions de Mozilla antérieures à 2003) ne respectent pas ceci.
 - Si `fonctionComparaison(a, b)` est supérieur à 0, on trie `b` avec un indice inférieur à `a`.
-- `fonctionComparaison(a, b)` doit toujours renvoyer le même résultat à partir de la même paire d'arguments. Si la fonction renvoie des résultats incohérents, alors l’ordre dans lequel sont triés les éléments n’est pas défini.
+- `fonctionComparaison(a, b)` doit toujours renvoyer le même résultat à partir de la même paire d'arguments. Si la fonction renvoie des résultats incohérents, alors l'ordre dans lequel sont triés les éléments n'est pas défini.
 
 Une fonction de comparaison aura donc généralement la forme suivante&nbsp;:
 
@@ -80,7 +73,7 @@ console.log(nombres);
 // [1, 2, 3, 4, 5]
 ```
 
-ECMAScript 2015 permet d'utiliser [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) et ainsi d'obtenir une syntaxe plus concise :
+ECMAScript 2015 permet d'utiliser [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) et ainsi d'obtenir une syntaxe plus concise :
 
 ```js
 let nombres = [4, 2, 5, 1, 3];
@@ -108,7 +101,7 @@ items.sort(function (a, b) {
 
 Certaines implémentations de JavaScript utilisent un tri stable&nbsp;: l'ordre partiel de `a` et `b` ne change pas si `a` et `b` sont égaux. Si l'indice de `a` était inférieur à celui de `b` avant le tri, il le sera toujours après, quels que soient les mouvements de `a` et `b` dus au tri.
 
-Le tri est stable dans [SpiderMonkey](/fr/docs/SpiderMonkey) et tous les navigateurs basés sur Mozilla à partir de [Gecko](/fr/docs/Gecko) 1.9 (voir le {{ Bug(224128) }}).
+Le tri est stable dans [SpiderMonkey](/fr/docs/SpiderMonkey) et tous les navigateurs basés sur Mozilla à partir de [Gecko](/fr/docs/Gecko) 1.9 (voir le [bug Firefox 224128](https://bugzil.la/224128)).
 
 Le comportement de la méthode `sort()` a changé entre JavaScript 1.1 et JavaScript 1.2.
 

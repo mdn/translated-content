@@ -17,12 +17,6 @@ IE прошёл через огромное количество релизов,
 
 ## Смотрите также
 
-### Основная информация
-
-- {{interwiki("wikipedia", "Internet Explorer", "Internet Explorer")}} в Википедии
-- {{interwiki("wikipedia", "History of Internet Explorer", "История Internet Explorer")}} в Википедии
-- {{interwiki("wikipedia", "Internet Explorer versions", "Версии Internet Explorer")}} в Википедии
-
 ### Изучение Internet Explorer
 
 - <http://windows.microsoft.com/en-us/internet-explorer/download-ie>

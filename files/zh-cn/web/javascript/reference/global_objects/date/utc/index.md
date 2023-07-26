@@ -25,8 +25,8 @@ Date.UTC(year, month, day, hour, minute, second, millisecond)
 
 - `year`
   - : 一个表示年份的整数值。
-  
-    从 `0` 到 `99` 的值会被映射到 `1900` 至 `1999` 年。其它的值则代表实际的年份。参见[示例](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#例子：将两位数年份映射为_1900_-_1999_年)。
+
+    从 `0` 到 `99` 的值会被映射到 `1900` 至 `1999` 年。其他的值则代表实际的年份。参见[示例](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#例子：将两位数年份映射为_1900_-_1999_年)。
 - `month` {{optional_inline}}
   - : `0`（一月）到 `11`（十二月）之间的一个整数，表示月份。从 ECMAScript 2017 开始，如果忽略该值，则默认为 `0`。_（直到 ECMAScript 2016，`month` 都是必须的参数。而从 ES2017 开始，它不再是必须的。）_
 - `date` {{optional_inline}}
@@ -55,7 +55,7 @@ Date.UTC(year, month, day, hour, minute, second, millisecond)
 1. `Date.UTC()` 方法使用协调世界时代替本地时间。
 2. `Date.UTC()` 方法返回一个时间数值，而不是一个 {{jsxref("Date")}} 对象。
 
-如果有一个指定的参数超出其合理范围，则 UTC 方法会通过更新其它参数直到该参数在合理范围内。例如，为月份指定 `15`，则年份将会加 `1`（`year + 1`），然后月份将会使用 `3`。
+如果有一个指定的参数超出其合理范围，则 UTC 方法会通过更新其他参数直到该参数在合理范围内。例如，为月份指定 `15`，则年份将会加 `1`（`year + 1`），然后月份将会使用 `3`。
 
 由于 `UTC()` 是 {{jsxref("Date")}} 的一个静态方法，所以应该直接调用 `Date.UTC()`，而不要把它作为 {{jsxref("Date")}} 实例的方法。
 

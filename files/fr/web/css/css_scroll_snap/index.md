@@ -1,11 +1,6 @@
 ---
 title: CSS Scroll Snap
-slug: Web/CSS/CSS_Scroll_Snap
-tags:
-  - CSS
-  - CSS Scroll Snap
-  - Reference
-  - Vue d'ensemble
+slug: Web/CSS/CSS_scroll_snap
 translation_of: Web/CSS/CSS_Scroll_Snap
 ---
 
@@ -51,7 +46,7 @@ translation_of: Web/CSS/CSS_Scroll_Snap
 ## Guides
 
 - [Concepts de bases pour _CSS Scroll Snap_](/fr/docs/Web/CSS/CSS_Scroll_Snap/Concepts_de_base)
-- [Compatiblité des navigateurs et _CSS Scroll Snap_](/fr/docs/Web/CSS/CSS_Scroll_Snap/Compatibilit%C3%A9_navigateurs)
+- [Compatiblité des navigateurs et _CSS Scroll Snap_](/fr/docs/Web/CSS/CSS_Scroll_Snap/Compatibilité_navigateurs)
 
 ## Spécifications
 

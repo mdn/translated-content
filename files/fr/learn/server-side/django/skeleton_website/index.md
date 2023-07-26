@@ -1,16 +1,6 @@
 ---
-title: 'Django didactique Section 2: Créer le squelette du site web'
+title: "Django didactique Section 2: Créer le squelette du site web"
 slug: Learn/Server-side/Django/skeleton_website
-tags:
-  - Apprentissage
-  - Article
-  - Didactitiel
-  - Débutant
-  - Guide
-  - Intro
-  - Programmation
-  - Tutoriel
-  - django
 translation_of: Learn/Server-side/Django/skeleton_website
 ---
 
@@ -51,7 +41,7 @@ La création est aisée:
 1. Utilisez la commande `django-admin` pour créer le dossier du projet ainsi que les sous-dossiers et fichiers de base ainsi que le script de gestion du projet (**manage.py**).
 2. Utilisez **manage.py** pour créer une ou plusieurs _applications_ du projet.
 
-    > **Note :** Un site web consiste en une ou plusieurs sections, par exemple un site principal, un blog, un wiki,... La bonne pratique avec Django est de réaliser chacun des composants comme des applications séparées qui pourront éventuellement être réutilisées dans d'autres projets.
+   > **Note :** Un site web consiste en une ou plusieurs sections, par exemple un site principal, un blog, un wiki,... La bonne pratique avec Django est de réaliser chacun des composants comme des applications séparées qui pourront éventuellement être réutilisées dans d'autres projets.
 
 3. Enregistrez la nouvelle application dans le projet.
 4. Liez les urls et chemins pour chaque application.
@@ -233,7 +223,7 @@ urlpatterns = [
 
 Le routage des URLs est géré à l'aide de la variable `urlpatterns`. Elle consititue une liste Python de fonctions `path()`. Chaque instance `path()` peut associer des motifs d'URL à une vue particulière, qui sera appelée si l'URL appellée correspond au motif décrit, ou vers une autre liste d'URL (dans ce cas, le motif est à considérer comme le motif de base pour le module dans lequel il est décrit). La variable `urlpatterns` contient au démarrage une seule fonction qui permet de gérer l'URL d'administration du site et utilisant le module par défaut de Django `admin.site.urls`.
 
-> **Note :** Dans la fonction `path()`, une route est une chaîne de caractères définissant une URL ou un motif d'URL. Cette chaîne peut inclure des variables nommées (entre < et >, par exemple `'catalog/<id>/'`). Ce motif correspondra à une URL du type **/catalog/*des_caractères*/**. La chaîne *des_caractères* sera transmis à la vue comme une chaîne de caractère associée à une variable nommée `id`. Ce point sera vu en détails plus loin dans la série didactique.
+> **Note :** Dans la fonction `path()`, une route est une chaîne de caractères définissant une URL ou un motif d'URL. Cette chaîne peut inclure des variables nommées (entre < et >, par exemple `'catalog/<id>/'`). Ce motif correspondra à une URL du type **/catalog/_des_caractères_/**. La chaîne _des_caractères_ sera transmis à la vue comme une chaîne de caractère associée à une variable nommée `id`. Ce point sera vu en détails plus loin dans la série didactique.
 
 Ajoutez les lignes ci-dessous à la fin du fichier de manière à ajouter dans la variable `urlpatterns` une nouvelle entrée à la liste des routes. Cette nouvelle entrée permet une nouvelle route pour `catalog/` dont la gestion est déléguée au fichier **urls.py** du module **catalog** (c'est-à-dire le fichier **catalog/urls.py**).
 
@@ -362,7 +352,7 @@ Ne vous inquitez ! Cette erreur était attendue ; elle est due à l'absence de d
 
 > **Note :** Chaque fois que vous apportez des modifications significatives, il est important d'exécuter à nouveau un migration et un test du serveur. Cela est assez rapide, pour ne pas s'en priver !
 
-## Relevez le défi...
+## Relevez le défi
 
 Le dossier **catalog/** a été créé automatiquement et contient des fichiers pour les vues, modèles de données, etc. Ouvrez-les pour les consulter.
 
@@ -380,21 +370,3 @@ Maintenant que ceci est fait, [le site web Local Library](/fr/docs/Learn/Server-
 - [Applications](https://docs.djangoproject.com/fr/2.2/ref/applications/#configuring-applications) (Django Docs). Contains information on configuring applications.
 
 {{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
-
-## Dans ce module
-
-- [Django introduction](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django Didactique: Site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django didactique Section 2: Créer le squelette du site web](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django didactique Section 3: Utilisation des modèles de données](/fr/docs/Learn/Server-side/Django/Models)
-- [Django didactique Section 4 : Site d'administration de Django](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django didactique Section 5: Créer la page d'accuei](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

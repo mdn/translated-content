@@ -56,7 +56,7 @@ Voir le guide [Utiliser l'API <i lang="en">Geolocation</i>](/fr/docs/Web/API/Geo
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Geolocation")}}
+{{Compat}}
 
 ### Disponibilité
 

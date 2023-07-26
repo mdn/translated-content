@@ -1,13 +1,8 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
-tags:
-  - HTTP
-  - 웹
-  - 참조
-  - 헤더
-translation_of: Web/HTTP/Headers/Connection
 ---
+
 {{HTTPSidebar}}
 
 **`Connection`** 일반 헤더는 현재의 전송이 완료된 후 네트워크 접속을 유지할지 말지를 제어합니다. 만약 전송된 값이 `keep-alive`면, 연결은 지속되고 끊기지 않으며, 동일한 서버에 대한 후속 요청을 수행할 수 있습니다.
@@ -45,4 +40,4 @@ Connection: close
 
 ## 브라우저 호환성
 
-{{Compat("http.headers.Connection")}}
+{{Compat}}

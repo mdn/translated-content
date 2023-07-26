@@ -1,12 +1,6 @@
 ---
 title: font
 slug: Web/CSS/font
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/font
 ---
 
 {{CSSRef}}
@@ -299,11 +293,11 @@ setCss();
 
 {{ EmbedLiveSample('Live_sample','100%', '440px')}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

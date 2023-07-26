@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-attachment'
+title: "-webkit-mask-attachment"
 slug: Web/CSS/-webkit-mask-attachment
 ---
 
@@ -26,14 +26,18 @@ Si se ha especificado una {{ Cssxref("-webkit-mask-image") }} , `-webkit-mask-at
 
 ```css
 body {
-    -webkit-mask-image: url('images/mask.png');
-    -webkit-mask-attachment: fixed;
+  -webkit-mask-image: url("images/mask.png");
+  -webkit-mask-attachment: fixed;
 }
 ```
 
-## Compatibilidad con los distintos navegadores
+## Especificaciones
 
-{{Compat("css.properties.-webkit-mask-attachment")}}
+No forma parte de ningún estándar.
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver además
 

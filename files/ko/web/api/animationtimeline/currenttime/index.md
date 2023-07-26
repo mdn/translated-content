@@ -1,7 +1,6 @@
 ---
 title: AnimationTimeline.currentTime
 slug: Web/API/AnimationTimeline/currentTime
-translation_of: Web/API/AnimationTimeline/currentTime
 ---
 
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
@@ -16,11 +15,11 @@ Web Animations API의 AnimationTimeline 인터페이스의 currentTime 읽기 �
 
 타임 라인의 현재 시간을 밀리 초 단위로 나타내는 숫자 또는 타임 라인이 비활성 상태 인 경우 null입니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

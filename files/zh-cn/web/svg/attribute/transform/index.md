@@ -7,6 +7,8 @@ slug: Web/SVG/Attribute/transform
 
 **`transform`** 属性定义了一系列应用于元素和元素子元素的变换规则集合
 
+## 示例
+
 ```css hidden
 html,body,svg { height:100% }
 ```
@@ -25,7 +27,7 @@ html,body,svg { height:100% }
 </svg>
 ```
 
-{{EmbedLiveSample('topExample', '100%', 200)}}
+{{EmbedLiveSample('示例', '100%', 200)}}
 
 **提示：** 从 SVG2 开始，transform 是一种图像属性，这意味着它可以用作 CSS 属性。但是请注意，CSS 属性和属性之间在语法上存在一些差异。有关在这种情况下使用的特定语法，请参见 CSS 属性{{cssxref('transform')}}的文档
 

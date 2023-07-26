@@ -33,12 +33,12 @@ Cuando una cadena no vacía es asignada a la propiedad `returnValue` del Evento,
 ## Ejemplos
 
 ```js
-window.addEventListener("beforeunload", function( event ) {
-  event.returnValue = "\o/";
+window.addEventListener("beforeunload", function (event) {
+  event.returnValue = "\\o/";
 });
 
 //is equivalent to
-window.addEventListener("beforeunload", function( event ) {
+window.addEventListener("beforeunload", function (event) {
   event.preventDefault();
 });
 ```
@@ -47,16 +47,20 @@ Los navegadores basado en Webkit no se basan en las especificaciones del cuadro 
 
 ```js
 window.addEventListener("beforeunload", function (e) {
-  var confirmationMessage = "\o/";
+  var confirmationMessage = "\\o/";
 
-  (e || window.event).returnValue = confirmationMessage;     //Gecko + IE
-  return confirmationMessage;                                //Webkit, Safari, Chrome etc.
+  (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+  return confirmationMessage; //Webkit, Safari, Chrome etc.
 });
 ```
 
-## Compatibilidad del navegador
+## Especificaciones
 
-{{Compat("api.BeforeUnloadEvent")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}
 
 ## Ver también
 

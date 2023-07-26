@@ -2,11 +2,9 @@
 title: WebAssembly.Exception
 slug: WebAssembly/JavaScript_interface/Exception
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception
-browser-compat: javascript.builtins.WebAssembly.Exception
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 Un objet **`WebAssembly.Exception`** représente une exception d'exécution levée depuis WebAssembly vers JavaScript ou levée depuis JavaScript vers un gestionnaire d'exception WebAssembly.
 
@@ -30,6 +28,7 @@ Afin que l'émission des exceptions soit plus rapide, les exceptions levées dep
 ## Méthodes des instansces
 
 - [`Exception.prototype.is()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/is)
+
   - : Teste si une exception correspond à une balise donnée.
 
 - [`Exception.prototype.getArg()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/getArg)

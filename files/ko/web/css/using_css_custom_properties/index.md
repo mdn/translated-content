@@ -1,14 +1,6 @@
 ---
 title: 사용자 지정 CSS 속성 사용하기 (변수)
 slug: Web/CSS/Using_CSS_custom_properties
-tags:
-  - CSS
-  - CSS Variable
-  - CSS 변수
-  - Custom Properties
-  - Guide
-  - Web
-translation_of: Web/CSS/Using_CSS_custom_properties
 ---
 {{cssref}}
 

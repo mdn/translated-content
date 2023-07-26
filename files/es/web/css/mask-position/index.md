@@ -1,5 +1,5 @@
 ---
-title: '-webkit-mask-position'
+title: "-webkit-mask-position"
 slug: Web/CSS/mask-position
 original_slug: Web/CSS/-webkit-mask-position
 ---
@@ -58,9 +58,9 @@ Acepta uno o dos valores. Se permiten valores negativos para {{cssxref("&lt;perc
 
 No forma parte de ninguna especificación.
 
-## Compatibilidad con los distintos nevegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.mask-position")}}
+{{Compat}}
 
 ## Ver tambien
 

@@ -1,22 +1,10 @@
 ---
 title: Object.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
-tags:
-  - JavaScript
-  - Method
-  - Non-standard
-  - Não padronizado
-  - Object
-  - Objeto
-  - Obsoleto
-  - Prototipo
-  - Prototype
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Object/toSource
 ---
 
-{{JSRef}} {{obsolete_header}}
+{{JSRef}}
 
 O método **`toSource()`** retorna uma cadeia de caracteres (_string_) representando o código fonte do objeto.
 

@@ -1,14 +1,6 @@
 ---
 title: History.forward()
 slug: Web/API/History/forward
-tags:
-  - API
-  - HTML DOM
-  - History
-  - History API
-  - Method
-  - Reference
-translation_of: Web/API/History/forward
 ---
 
 {{APIRef("DOM")}}

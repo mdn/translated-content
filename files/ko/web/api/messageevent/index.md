@@ -1,7 +1,6 @@
 ---
 title: MessageEvent
 slug: Web/API/MessageEvent
-translation_of: Web/API/MessageEvent
 ---
 {{APIRef("HTML DOM")}}
 

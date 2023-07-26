@@ -1,6 +1,6 @@
 ---
 title: 條件運算子
-slug: Web/JavaScript/Reference/Operators/Conditional_Operator
+slug: Web/JavaScript/Reference/Operators/Conditional_operator
 ---
 
 {{jsSidebar("Operators")}}
@@ -32,7 +32,7 @@ condition ? exprIfTrue : exprIfFalse
 
 ```js
 var age = 26;
-var beverage = (age >= 21) ? "Beer" : "Juice";
+var beverage = age >= 21 ? "Beer" : "Juice";
 console.log(beverage); // "Beer"
 ```
 
@@ -40,12 +40,12 @@ console.log(beverage); // "Beer"
 
 ```js
 function greeting(person) {
-    var name = person ? person.name : "stranger";
-    return "Howdy, " + name;
+  var name = person ? person.name : "stranger";
+  return "Howdy, " + name;
 }
 
-console.log(greeting({name: 'Alice'}));  // "Howdy, Alice"
-console.log(greeting(null));             // "Howdy, stranger"
+console.log(greeting({ name: "Alice" })); // "Howdy, Alice"
+console.log(greeting(null)); // "Howdy, stranger"
 ```
 
 ### 條件鏈
@@ -84,4 +84,4 @@ function example(…) {
 - [Nullish coalescing operator](/zh-TW/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
 - [Optional chaining](/zh-TW/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [Making decisions in your code — conditionals](/zh-TW/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [Expressions and operators](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)

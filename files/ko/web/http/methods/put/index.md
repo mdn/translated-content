@@ -1,12 +1,6 @@
 ---
 title: PUT
 slug: Web/HTTP/Methods/PUT
-tags:
-  - HTTP
-  - HTTP method
-  - Reference
-  - Request method
-translation_of: Web/HTTP/Methods/PUT
 ---
 
 {{HTTPSidebar}}
@@ -85,7 +79,7 @@ Content-Location: /existing.html
 
 ## 브라우저 호환성
 
-{{Compat("http.methods.PUT")}}
+{{Compat}}
 
 ## 같이 보기
 

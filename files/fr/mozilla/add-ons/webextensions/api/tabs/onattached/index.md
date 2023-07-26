@@ -1,16 +1,6 @@
 ---
 title: tabs.onAttached
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onAttached
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onAttached
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onAttached
 ---
 
@@ -21,9 +11,9 @@ Lancé lorsqu'un onglet est attaché à une fenêtre, par exemple parce qu'il a 
 ## Syntaxe
 
 ```js
-browser.tabs.onAttached.addListener(listener)
-browser.tabs.onAttached.removeListener(listener)
-browser.tabs.onAttached.hasListener(listener)
+browser.tabs.onAttached.addListener(listener);
+browser.tabs.onAttached.removeListener(listener);
+browser.tabs.onAttached.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -76,9 +66,9 @@ browser.tabs.onAttached.addListener(handleAttached);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onAttached")}}
+{{Compat}}
 
 > **Note :**
 >

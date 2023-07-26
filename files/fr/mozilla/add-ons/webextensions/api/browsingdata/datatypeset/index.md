@@ -1,15 +1,6 @@
 ---
 title: browsingData.DataTypeSet
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
-tags:
-  - API
-  - Add-ons
-  - DataTypeSet
-  - Extensions
-  - Reference
-  - Type
-  - WebExtensions
-  - browsingData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
 ---
 
@@ -53,9 +44,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `serviceWorkers` {{optional_inline}}
   - : `boolean`. Données mises en cache par les travailleurs du service.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.DataTypeSet")}}
+{{Compat}}
 
 > **Note :**
 >

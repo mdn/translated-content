@@ -1,17 +1,6 @@
 ---
 title: tabs.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - insertCSS
-  - onglets
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
 ---
 
@@ -33,9 +22,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var inserting = browser.tabs.insertCSS(
-  tabId,           // optional integer
-  details          // object
-)
+  tabId, // optional integer
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -73,12 +62,11 @@ Cet exemple s'insère dans l'onglet CSS actif qui provient d'une chaîne.
 var css = "body { border: 20px dotted pink; }";
 
 browser.browserAction.onClicked.addListener(() => {
-
   function onError(error) {
     console.log(`Error: ${error}`);
   }
 
-  var insertingCSS = browser.tabs.insertCSS({code: css});
+  var insertingCSS = browser.tabs.insertCSS({ code: css });
   insertingCSS.then(null, onError);
 });
 ```
@@ -87,21 +75,20 @@ Cet exemple insère CSS qui est chargé à partir d'un fichier empaqueté avec l
 
 ```js
 browser.browserAction.onClicked.addListener(() => {
-
   function onError(error) {
     console.log(`Error: ${error}`);
   }
 
-  var insertingCSS = browser.tabs.insertCSS(2, {file: "content-style.css"});
+  var insertingCSS = browser.tabs.insertCSS(2, { file: "content-style.css" });
   insertingCSS.then(null, onError);
 });
 ```
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.insertCSS")}}
+{{Compat}}
 
 > **Note :**
 >

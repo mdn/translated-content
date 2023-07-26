@@ -130,13 +130,24 @@ Content-Length: 41823
 ```
 
 ```html
-<!DOCTYPE html>
-<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
-<head prefix="og: http://ogp.me/ns#">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
-  ...
+<!doctype html>
+<html
+  lang="en-US"
+  dir="ltr"
+  class="redesign no-js"
+  data-ffo-opensanslight="false"
+  data-ffo-opensans="false">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <script>
+      (function (d) {
+        d.className = d.className.replace(/\bno-js/, "");
+      })(document.documentElement);
+    </script>
+    ...
+  </head>
+</html>
 ```
 
 El resto de la cabecera de la respuesta incluye información sobre la respuesta (ej. cuándo se generó), el servidor, y cómo espera el explorador manejar la página (ej. la linea `X-Frame-Options: DENY` le dice que al explorador que no está permitido incrustar esta página en un {{htmlelement("iframe")}} en otro sitio).
@@ -304,10 +315,3 @@ En este punto deberías tener una buena visión general de las operaciones que e
 En el módulo siguiente te ayudaremos a elegir el mejor Framework Web para tu primer sitio.
 
 {{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
-
-## En este módulo
-
-- [Introducción al lado servidor](/es/docs/Learn/Server-side/First_steps/Introduction)
-- [Visión general Cliente-Servidor](/es/docs/Learn/Server-side/First_steps/Client-Server_overview)
-- [Frameworks Web de lado servidor](/es/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Seguridad Web](/es/docs/Learn/Server-side/First_steps/Website_security)

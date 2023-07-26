@@ -1,12 +1,6 @@
 ---
 title: <select>
 slug: Web/HTML/Element/select
-tags:
-  - Element
-  - Formulaires
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/select
 ---
 
@@ -30,21 +24,21 @@ Pour plus d'exemples, voir [les contrôles natifs pour les formulaires](/fr/docs
 
 Comme tous les autres éléments HTML, celui-ci inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("autocomplete")}}
+- `autocomplete`
   - : Une chaîne de caractères qui fournit une indication à l'agent utilisateur pour les fonctionnalités d'autocomplétion. Voir [la page sur l'attribut `autocomplete`](/fr/docs/Web/HTML/Attributs/autocomplete) pour une liste des valeurs utilisables et de leurs impacts sur l'autocomplétion.
-- {{htmlattrdef("autofocus")}}
+- `autofocus`
   - : Cet attribut booléen permet d'indiquer si ce contrôle du formulaire devrait recevoir le focus au chargement de la page. Pour un même document, seul un élément de formulaire peut avoir l'attribut `autofocus` activé.
-- {{htmlattrdef("disabled")}}
+- `disabled`
   - : Cet attribut booléen indique que l'utilisateur ne peut pas intéragir avec le contrôle. Si cet attribut n'est pas utilisé, le contrôle héritera de l'état paramétré selon son conteneur (par exemple, via son élément parent {{HTMLElement("fieldset")}}. Si aucun élément parent n'a l'attribut `disabled` activé, le contrôle sera actif.
-- {{htmlattrdef("form")}}
+- `form`
   - : Cet attribut sert de référence au formulaire auquel est associé cet élément. Si cet attribut est utilisé, sa valeur doit être l'identifiant d'un élément {{HTMLElement("form")}} du même document. Cet attribut permet de placer des éléments n'importe où dans le document et pas nécessairement comme descendants d'un formulaire.
-- {{htmlattrdef("multiple")}}
+- `multiple`
   - : Cet attribut booléen indique qu'on peut sélectionner plusieurs options parmi celles offertes dans le contrôle. Par défaut, si cet attribut n'est pas utilisé, seule une option peut être sélectionnée.
-- {{htmlattrdef("name")}}
+- `name`
   - : Le nom associé au contrôle.
-- {{htmlattrdef("required")}}
+- `required`
   - : Un attribut booléen qui indique qu'une option dont la valeur est une chaîne de caractères non-vide doit être sélectionnée.
-- {{htmlattrdef("size")}}
+- `size`
   - : Si le contrôle est affichée comme une liste déroulante, cet attribut indique le nombre de lignes qui doivent être visibles à l'écran en même temps. On notera que les navigateurs ne sont pas obligés de présenter un élément `<select>` sous la forme d'une liste déroulante. La valeur par défaut de cet attribut est 0 (cf. notes de compatibilité ci-après).
 
 ## Mise en forme avec CSS
@@ -76,7 +70,7 @@ Pour plus d'informations sur la mise en forme de `<select>` :
 
 #### Résultat
 
-{{EmbedLiveSample("Exemple_basique","100%","150")}}
+{{EmbedLiveSample("","100%","150")}}
 
 ### Exemple multi-selection
 
@@ -98,6 +92,10 @@ L'exemple qui suit est légèrement plus complexe et illustre certaines fonction
   </select>
 </label>
 ```
+
+#### Résultat
+
+{{EmbedLiveSample("","100%","150")}}
 
 Cet exemple n'est pas disponible de façon interactive (le moteur de MDN supprime l'attribut `multiple` lors de l'affichage de la page) mais vous pouvez voir [l'exemple sur GitHub](https://mdn.github.io/learning-area/html/forms/select-example/select-multiple.html).
 
@@ -195,7 +193,7 @@ Les utilisateurs du clavier pourront sélectionner des options non-contigües de
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >,
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_interactif"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_interactif"
           >contenu interactif</a
         >,
         <a
@@ -227,7 +225,7 @@ Les utilisateurs du clavier pourront sélectionner des options non-contigües de
     </tr>
     <tr>
       <th scope="row">Rôles ARIA autorisé</th>
-      <td>{{ARIARole("menu")}}</td>
+      <td><code><a href="/fr/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code></td>
     </tr>
     <tr>
       <th scope="row">Interface DOM</th>

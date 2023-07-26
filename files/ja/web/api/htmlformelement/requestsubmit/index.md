@@ -1,8 +1,9 @@
 ---
-title: HTMLFormElement.requestSubmit()
+title: "HTMLFormElement: requestSubmit() メソッド"
+short-title: requestSubmit()
 slug: Web/API/HTMLFormElement/requestSubmit
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
 {{APIRef("HTML DOM")}}
@@ -20,7 +21,11 @@ requestSubmit(submitter)
 
 - `submitter` {{optional_inline}}
 
-  - : フォームを送信するための方法を記述した属性がある送信ボタンです。これは {{HTMLElement("input")}} または {{HTMLElement("button")}} 要素で `type` 属性が `submit` のものです。
+  - : このフォームのメンバーである{{Glossary("submit button", "送信ボタン")}}です。
+
+    `submitter` が `form*` 属性を指定している場合、このフォームの送信動作を[上書きします](/ja/docs/Glossary/Submit_button#フォームの動作の上書き)（`formmethod="POST"` など）。
+
+    `submitter` に `name` 属性があるか`{{HtmlElement('input/image', '&lt;input type="image"&gt;')}}` であった場合、フォームの送信時にそのデータが[含まれます](/ja/docs/Glossary/Submit_button#フォームデータ項目)（`btnName=btnValue` など）。
 
     `submitter` 引数を省略した場合、このフォーム要素自身が送信者として使用されます。
 
@@ -31,9 +36,9 @@ requestSubmit(submitter)
 ### 例外
 
 - {{jsxref("TypeError")}}
-  - : 指定された `submitter` が送信ボタンでない場合に発生します。
+  - : 指定された `submitter` が{{Glossary("submit button", "送信ボタン")}}でなかった場合に発生します。
 - `NotFoundError` {{domxref("DOMException")}}
-  - : 指定された `submitter` が、 `requestSubmit()` が呼び出されたフォームのメンバーでない場合に発生します。submitter は form 要素の子孫であるか、フォームを参照する {{htmlattrxref("form", "input")}} 属性を持たなければなりません。
+  - : 指定された `submitter` が、 `requestSubmit()` が呼び出されたフォームのメンバーでない場合に発生します。submitter は form 要素の子孫であるか、フォームを参照する [`form`](/ja/docs/Web/HTML/Element/input#form) 属性を持たなければなりません。
 
 ## 使用上の注意
 

@@ -2,7 +2,7 @@
 title: PointerEvent.pointerId
 slug: Web/API/PointerEvent/pointerId
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
 ---
 
 {{ APIRef("Pointer Events") }}
@@ -20,11 +20,15 @@ l10n:
 ```js
 let id; // これが以前に保存された pointerId であると仮定しましょう
 
-target.addEventListener('pointerdown', (event) => {
-  // キャッシュされた前のイベントの ID を現在の
-  // イベントの ID と比較し、それに応じて処理する
-  if (id === event.pointerId) process_event(event);
-}, false);
+target.addEventListener(
+  "pointerdown",
+  (event) => {
+    // キャッシュされた前のイベントの ID を現在の
+    // イベントの ID と比較し、それに応じて処理する
+    if (id === event.pointerId) process_event(event);
+  },
+  false
+);
 ```
 
 ## 仕様書

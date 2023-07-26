@@ -47,7 +47,7 @@ function f(arg) {
 
 ## 兼容性提醒
 
-- 在 Firefox 49 之前，会抛出的是 {{jsxref("TypeError")}} ({{bug(1275240)}})。
+- 在 Firefox 49 之前，会抛出的是 {{jsxref("TypeError")}}（[Firefox bug 1275240](https://bugzil.la/1275240)）。
 
 ## 相关
 

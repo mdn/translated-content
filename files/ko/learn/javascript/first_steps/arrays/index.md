@@ -678,15 +678,3 @@ updateCode();
 - {{jsxref("Array")}} — `Array` 객체 참조 페이지 — 이 페이지에서 다뤄진 기능들과 더 많은 것들에 대한 자세한 참조 가이드
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
-
-## 이번 모듈에서 배울 것들
-
-- [JavaScript란 무엇인가?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [JavaScript를 시작해보자](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [뭐가 잘못 되었지? Troubleshooting JavaScript(잘못된 걸 고쳐보자)](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [원하는 정보를 저장하기 — 변](/ko/docs/Learn/JavaScript/First_steps/Variables)수
-- [JavaScript의 수학 기초 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)
-- [문자 다루기 — JavaScript에서의 문자](/ko/docs/Learn/JavaScript/First_steps/Strings)
-- [유용한 문자 메소드](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)
-- [평가: 짧은 글 랜덤 생성기](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

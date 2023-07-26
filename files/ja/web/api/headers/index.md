@@ -41,15 +41,15 @@ l10n:
 - {{domxref("Headers.has()")}}
   - : `Headers` オブジェクトが特定のヘッダーを含むかどうかを示す値を、論理値で返します。
 - {{domxref("Headers.keys()")}}
-  - : このオブジェクトに含まれるキー/値のペアのすべてのキーを通して処理するための {{jsxref("Iteration_protocols", "反復子", "", 1)}}を返します。
+  - : このオブジェクトに含まれるキー/値のペアのすべてのキーを通して処理するための {{jsxref("Iteration_protocols", "イテレーター", "", 1)}}を返します。
 - {{domxref("Headers.set()")}}
   - : オブジェクト内の既存のヘッダーに新しい値を設定するか、まだ存在しない場合はヘッダーを追加する。
 - {{domxref("Headers.values()")}}
-  - : このオブジェクトに含まれるキー/値のペアのすべての値を通して処理するための{{jsxref("Iteration_protocols", "反復子", "", 1)}}を返します。
+  - : このオブジェクトに含まれるキー/値のペアのすべての値を通して処理するための{{jsxref("Iteration_protocols", "イテレーター", "", 1)}}を返します。
 
 > **メモ:** {{domxref("Headers.set()")}} と {{domxref("Headers.append()")}} の明確な違いは、複数の値を受け入れる特定のヘッダーが既に存在しているときの挙動です。{{domxref("Headers.set()")}} は既存の値を新しい値で上書きしますが、{{domxref("Headers.append()")}} は既存の値の末尾に新しい値を追加します。サンプルコードはそれぞれの専用ページで確認してください。
 
-> **メモ:** すべての Headers メソッドで、[有効な HTTP ヘッダー名](https://fetch.spec.whatwg.org/#concept-header-name) ではない名前の参照を渡そうとすると {{jsxref("TypeError")}} が発生します。ヘッダーに immutable {{Glossary("Guard", "ガード")}}がある場合、変更操作をしようとすると `TypeError` が発生します。します。そのほかの場外の場合は、単にに失敗します。
+> **メモ:** すべての Headers メソッドで、[有効な HTTP ヘッダー名](https://fetch.spec.whatwg.org/#concept-header-name) ではない名前の参照を渡そうとすると {{jsxref("TypeError")}} が発生します。ヘッダーに immutable {{Glossary("Guard", "ガード")}}がある場合、変更操作をしようとすると `TypeError` が発生します。します。そのほかの場外の場合は、単に失敗します。
 
 > **メモ:** ヘッダーを反復処理する時は、自動的に辞書順への並び替えが行われ、重複する名前は結合されます。
 

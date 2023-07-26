@@ -43,7 +43,7 @@ new Promise(function(resolve, reject) { ... });
 
 Так как методы `{{JSxRef("Promise.then", "Promise.prototype.then()")}}` и `{{JSxRef("Promise.catch", "Promise.prototype.catch()")}}` сами возвращают промис, их можно вызывать цепочкой, создавая _соединения._
 
-![](https://mdn.mozillademos.org/files/8633/promises.png)
+![](promises.png)
 
 > **Примечание:** говорят, что промис находится в состоянии _завершён (settled)_ когда он или исполнен или отклонён, т.е. в любом состоянии, кроме ожидания (это лишь форма речи, не являющаяся настоящим состоянием промиса). Также можно встретить термин _исполнен (resolved)_ — это значит что промис _завершён_ или "заблокирован" в ожидании завершения другого промиса. В статье [состояния и fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) приводится более подробное описание терминологии.
 
@@ -213,7 +213,7 @@ if ("Promise" in window) {
 
 ### Загрузка изображения при помощи XHR
 
-Другой простой пример использования `Promise` и [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) для загрузки изображения доступен в репозитории MDN[promise-test](https://github.com/mdn/js-examples/tree/master/promises-test) на GitHub. Вы также можете [посмотреть его в действии](https://mdn.github.io/js-examples/promises-test/). Каждый шаг прокомментирован и вы можете подробно исследовать Promise и XHR.
+Другой простой пример использования `Promise` и [`XMLHttpRequest`](/ru/docs/Web/API/XMLHttpRequest) для загрузки изображения доступен в репозитории MDN[promise-test](https://github.com/mdn/js-examples/tree/master/promises-test) на GitHub. Вы также можете [посмотреть его в действии](https://mdn.github.io/js-examples/promises-test/). Каждый шаг прокомментирован и вы можете подробно исследовать Promise и XHR.
 
 ## Спецификации
 

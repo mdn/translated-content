@@ -5,13 +5,13 @@ translation_of: Web/HTML/Element/ins
 ---
 **Элемент** **HTML `<ins>` **представляет собой диапазон текста, который был добавлен в документ
 
-| [Содержимое категорий](/ru/docs/HTML/Content_categories) | [Содержимое фраз](/ru/docs/HTML/Content_categories#Phrasing_content) or [содержимое потока](/ru/docs/HTML/Content_categories#Flow_content). |
+| [Содержимое категорий](/ru/docs/HTML/Content_categories) | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content) or [содержимое потока](/ru/docs/HTML/Content_categories#Flow_content). |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | Допустимое содержимое                                    | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                   |
-| Бездействие тега                                         | {{no_tag_omission}}                                                                                                                    |
-| Разрешённые родители                                     | Любой элемент, который принимает [содержимое фраз](/ru/docs/HTML/Content_categories#Phrasing_content).                                      |
-| Разрешённые ARIA роли                                    | Любые                                                                                                                                       |
-| Интерфейс DOM                                            | {{domxref("HTMLModElement")}}                                                                                                    |
+| Пропуск тегов                                            | {{no_tag_omission}}                                                                                                                    |
+| Допустимые родители                                      | Любой элемент, который принимает [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                      |
+| Допустимые ARIA-роли                                     | Любые                                                                                                                                       |
+| DOM-интерфейс                                            | {{domxref("HTMLModElement")}}                                                                                                    |
 
 ## Атрибуты
 

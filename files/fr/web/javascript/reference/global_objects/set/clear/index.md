@@ -1,15 +1,7 @@
 ---
 title: Set.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Set/clear
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
-original_slug: Web/JavaScript/Reference/Objets_globaux/Set/clear
 ---
 
 {{JSRef}}

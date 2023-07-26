@@ -1,11 +1,6 @@
 ---
 title: perspective
 slug: Web/CSS/perspective
-tags:
-  - CSS
-  - Propriétés
-  - Reference
-  - Transformations CSS
 translation_of: Web/CSS/perspective
 ---
 
@@ -123,6 +118,7 @@ perspective: unset;
             <div class="face top">5</div>
             <div class="face bottom">6</div>
           </div>
+        </div>
       </td>
     </tr>
   </tbody>

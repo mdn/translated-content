@@ -1,16 +1,6 @@
 ---
 title: <gradient>
 slug: Web/CSS/gradient
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Images
-  - Graphics
-  - Layout
-  - Reference
-  - 그라데이션
-  - 그레이디언트
-translation_of: Web/CSS/gradient
 ---
 
 {{CSSRef}}

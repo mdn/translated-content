@@ -62,9 +62,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad en Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-block-end-width")}}
+{{Compat}}
 
 ## Mira también
 

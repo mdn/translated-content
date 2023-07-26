@@ -1,16 +1,6 @@
 ---
 title: downloads.DownloadTime
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadTime
-tags:
-  - API
-  - Add-ons
-  - DownloadTime
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - downloads
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadTime
 ---
 
@@ -30,9 +20,9 @@ Un `DownloadTime` peut être l'un de trois types différents :
 
 - un nombre : ceci est interprété comme le nombre de millisecondes écoulées depuis l'époque UNIX.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.DownloadTime")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

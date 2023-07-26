@@ -1,16 +1,7 @@
 ---
 title: '<code> : l''élément de code en ligne'
 slug: Web/HTML/Element/code
-tags:
-  - Code
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Inline Code
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/code
-browser-compat: html.elements.code
 ---
 
 {{HTMLSidebar}}
@@ -106,9 +97,9 @@ Un paragraphe de texte qui contient `<code>` :
 </p>
 ```
 
-La sortie générée par ce HTML ressemble à ceci :
+### Résultat
 
-{{EmbedLiveSample('Exemples', '', 100)}}
+{{EmbedLiveSample('', '', 100)}}
 
 ## Notes
 

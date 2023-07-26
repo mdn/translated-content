@@ -200,7 +200,7 @@ Caps Lock や Num Lock、 Scroll Lock などのキーは LED 表示も切り替�
 
 > **メモ:** Linux の Firefox 12 以前では `keypress` イベントも発生していました。
 
-しかし Mac OS X のイベントモデルに関する制約から、Mac OS X の Caps Lock は `keydown` イベントのみが発生します。（2007 年モデル以前の）ノート型では Num Lock にも対応していましたが、今日の Mac OS X では外部キーボードにおいても Num Lock に対応していません。 Num Lock キーがある古い MacBook 上では、Num Lock キーによってイベントは何も発生しません。また、 F14 キーが接続されている外部キーボードであれば、 Gecko は Scroll Lock に対応しています。古い特定のバージョンの Firefox では、このキーによって `keypress` イベントが発生していました。この矛盾する挙動は {{bug(602812)}} で修正されました。
+しかし Mac OS X のイベントモデルに関する制約から、Mac OS X の Caps Lock は `keydown` イベントのみが発生します。（2007 年モデル以前の）ノート型では Num Lock にも対応していましたが、今日の Mac OS X では外部キーボードにおいても Num Lock に対応していません。 Num Lock キーがある古い MacBook 上では、Num Lock キーによってイベントは何も発生しません。また、 F14 キーが接続されている外部キーボードであれば、 Gecko は Scroll Lock に対応しています。古い特定のバージョンの Firefox では、このキーによって `keypress` イベントが発生していました。この矛盾する挙動は [Firefox バグ 602812](https://bugzil.la/602812) で修正されました。
 
 ### 自動リピートの扱い
 
@@ -273,7 +273,7 @@ document.addEventListener('keyup', (event) => {
 
 ### 互換性のメモ
 
-- Firefox 65 では、 `keypress` イベントは[表示可能でないキー](</ja/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>)では発生しなくなりました（{{bug(968056)}}）が、 <kbd>Enter</kbd> キー、 <kbd>Shift</kbd> + <kbd>Enter</kbd> キー、 <kbd>Ctrl</kbd> + <kbd>Enter</kbd> キーの組み合わせでは発生します (これらはブラウザー間の互換性の目的のために維持されています)。
+- Firefox 65 では、 `keypress` イベントは[表示可能でないキー](</ja/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>)では発生しなくなりました（[Firefox バグ 968056](https://bugzil.la/968056)）が、 <kbd>Enter</kbd> キー、 <kbd>Shift</kbd> + <kbd>Enter</kbd> キー、 <kbd>Ctrl</kbd> + <kbd>Enter</kbd> キーの組み合わせでは発生します (これらはブラウザー間の互換性の目的のために維持されています)。
 
 ## 関連情報
 

@@ -1,10 +1,6 @@
 ---
 title: display-inside
 slug: Web/CSS/display-inside
-tags:
-  - CSS
-  - Reference
-  - Type
 translation_of: Web/CSS/display-inside
 ---
 
@@ -79,29 +75,7 @@ Dans l'exemple qui suit, la boîte parente est ciblée avec `display: flow-root`
 
 ## Compatibilité des navigateurs
 
-### Prise en charge des valeurs multiples
-
-{{Compat("css.properties.display.multi-keyword_values", 10)}}
-
-### Prise en charge de `flow-root`
-
-{{Compat("css.properties.display.flow-root", 10)}}
-
-### Prise en charge des tableaux
-
-{{Compat("css.properties.display.table_values", 10)}}
-
-### Prise en charge des grilles
-
-{{Compat("css.properties.display.grid", 10)}}
-
-### Prise en charge des boîtes flexibles
-
-{{Compat("css.properties.display.flex", 10)}}
-
-### Prise en charge des annotations ruby
-
-{{Compat("css.properties.display.ruby_values", 10)}}
+{{Compat}}
 
 ## Voir aussi
 

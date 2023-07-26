@@ -1,6 +1,6 @@
 ---
 title: undefined
-slug: Glossary/undefined
+slug: Glossary/Undefined
 translation_of: Glossary/undefined
 original_slug: Глоссарий/undefined
 ---

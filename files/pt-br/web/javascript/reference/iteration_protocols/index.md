@@ -3,13 +3,13 @@ title: Iteration protocols
 slug: Web/JavaScript/Reference/Iteration_protocols
 ---
 
-{{jsSidebar("More")}}Algumas adições do ECMAScript 2015 não são novos _built-ins_ ou uma nova sintaxe, mas protocolos. Estes protocolos podem ser implementados por qualquer objeto desde que respeitando algumas convenções.Existem dois protocolos: O _protocolo iterável_ ([iterable protocol](#The_iterable_protocol)) e o _protocolo iterador_ ([iterator protocol](#The_iterator_protocol)).
+{{jsSidebar("More")}}Algumas adições do ECMAScript 2015 não são novos _built-ins_ ou uma nova sintaxe, mas protocolos. Estes protocolos podem ser implementados por qualquer objeto desde que respeitando algumas convenções.Existem dois protocolos: O _protocolo iterável_ ([iterable protocol](#the_iterable_protocol)) e o _protocolo iterador_ ([iterator protocol](#the_iterator_protocol)).
 
 ## O protocolo iterável (iterable protocol)
 
-O protocolo **iterável** permite que objetos JavaScript definam ou personalizem seu comportamento de iteração, como valores em um loop do construtor {{jsxref("Statements/for...of", "for..of")}}. Alguns tipos _built-in_ são _[built-in iterables](#Built-in_iterables)_ com um comportamento de iteração padrão, tal como {{jsxref("Array")}} ou {{jsxref("Map")}}, enquanto outros tipos (como {{jsxref("Object")}}) não são assim.
+O protocolo **iterável** permite que objetos JavaScript definam ou personalizem seu comportamento de iteração, como valores em um loop do construtor {{jsxref("Statements/for...of", "for..of")}}. Alguns tipos _built-in_ são _[built-in iterables](#built-in_iterables)_ com um comportamento de iteração padrão, tal como {{jsxref("Array")}} ou {{jsxref("Map")}}, enquanto outros tipos (como {{jsxref("Object")}}) não são assim.
 
-Para ser **iterável**, um objeto deve implementar o método **@@iterator**, o que significa que o objeto (ou um dos objetos acima de sua [cadeia de protótipos](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) deve ter uma propriedade com uma chave **@@iterator** que está disponível via constante `{{jsxref("Symbol.iterator")}}`:
+Para ser **iterável**, um objeto deve implementar o método **@@iterator**, o que significa que o objeto (ou um dos objetos acima de sua [cadeia de protótipos](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) deve ter uma propriedade com uma chave **@@iterator** que está disponível via constante `{{jsxref("Symbol.iterator")}}`:
 
 | Property            | Value                                                                                                                                                      |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -22,13 +22,13 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 4. **恢复 canvas 状态**
     如果已经保存了 canvas 的状态，可以先恢复它，然后重绘下一帧。
 
-## 操控动画 Controlling an animation
+## 操控动画
 
 在 canvas 上绘制内容是用 canvas 提供的或者自定义的方法，而通常，我们仅仅在脚本执行结束后才能看见结果，比如说，在 for 循环里面做完成动画是不太可能的。
 
 因此，为了实现动画，我们需要一些可以定时执行重绘的方法。有两种方法可以实现这样的动画操控。首先可以通过 `setInterval` 和 `setTimeout` 方法来控制在设定的时间点上执行重绘。
 
-### **有安排的更新画布** Scheduled updates
+### 有安排地更新画布
 
 首先，可以用{{domxref("window.setInterval()")}}, {{domxref("window.setTimeout()")}},和{{domxref("window.requestAnimationFrame()")}}来设定定期执行一个指定函数。
 
@@ -451,7 +451,7 @@ function draw() {
 
 {{EmbedLiveSample("鼠标追踪动画", "500", "500")}}
 
-## 其它例子
+## 其他例子
 
 - [Advanced animations](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Advanced_animations)
   - : 我们将在下一章看到一些先进的动画技术和物理现象。

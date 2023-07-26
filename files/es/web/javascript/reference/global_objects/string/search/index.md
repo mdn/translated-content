@@ -1,14 +1,6 @@
 ---
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/search
 ---
 
@@ -61,14 +53,7 @@ function testinput(re, str) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.String.search")}}
-
-## Notas específicas de Gecko
-
-- Antes de {{Gecko("8.0")}}, `search()` estaba mal implementado; cuando se invocaba sin parámetros o con {{jsxref("undefined")}}, buscaría coincidencias con la cadena 'undefined' en lugar de la cadena vacía. Esto está corregido; ahora `'a'.search()` y `'a'.search(undefined)` devuelven correctamente un 0.
-- Desde Gecko 39 (Firefox 39 / Thunderbird 39 / SeaMonkey 2.36), el argumento no estándar `flags` está obsoleto y muestra un aviso en la consola ({{bug(1142351)}}).
-- Desde Gecko 47 (Firefox 47 / Thunderbird 47 / SeaMonkey 2.44), el argumento no estándar `flags` no es soportado en compilaciones que no sean lanzamientos y pronto serán eliminadas por completo ({{bug(1245801)}}).
-- Desde Gecko 49 (Firefox 49 / Thunderbird 49 / SeaMonkey 2.46), el argumento no estándar `flags` no es soportado ({{bug(1108382)}}).
+{{Compat}}
 
 ## Vea también
 

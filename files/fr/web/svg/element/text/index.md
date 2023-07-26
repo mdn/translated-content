@@ -1,11 +1,6 @@
 ---
 title: text
 slug: Web/SVG/Element/text
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG contenu de texte
 translation_of: Web/SVG/Element/text
 ---
 
@@ -101,7 +96,7 @@ Cet élément implémente l'interface [`SVGTextElement`](/fr/DOM/SVGTextElement)
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.elements.text")}}
+{{Compat}}
 
 ## Articles liés
 

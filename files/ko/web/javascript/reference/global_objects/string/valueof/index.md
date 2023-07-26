@@ -1,13 +1,6 @@
 ---
 title: String.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/valueOf
-tags:
-  - 메서드
-  - 문자열
-  - 자바스크립트
-  - 참고
-  - 프로토타입
-translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
 ---
 
 {{JSRef}}

@@ -1,11 +1,6 @@
 ---
 title: tabindex
 slug: Web/HTML/Global_attributes/tabindex
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/tabindex
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -43,7 +38,7 @@ translation_of: Web/HTML/Global_attributes/tabindex
 
 ## 브라우저 호환성
 
-{{Compat("html.global_attributes.tabindex")}}
+{{Compat}}
 
 ## 같이 보기
 

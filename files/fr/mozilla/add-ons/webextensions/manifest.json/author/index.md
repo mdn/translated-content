@@ -1,12 +1,7 @@
 ---
 title: author
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/author
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/author
-original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/auteur
 ---
 
 {{AddonSidebar}}
@@ -40,4 +35,4 @@ Notez que Firefox ne supporte cette clé qu'à partir de la version 52 et que ce
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.author")}}
+{{Compat}}

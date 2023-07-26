@@ -1,17 +1,6 @@
 ---
 title: menus.ContextType
 slug: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
-tags:
-  - API
-  - Add-ons
-  - ContextType
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - contextMenus
-  - menus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
 ---
 
@@ -56,9 +45,9 @@ Les valeurs de ce type sont des chaînes. L'élément est affiché lorsque le co
 
 Notez que "launcher" n'est pas supporté.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.menus.ContextType", 10)}}
+{{Compat}}
 
 {{WebExtExamples}}
 

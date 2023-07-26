@@ -1,11 +1,6 @@
 ---
 title: theme
 slug: Mozilla/Add-ons/WebExtensions/API/theme
-tags:
-  - Extensions
-  - Themes
-  - WebExtensions
-  - add-on
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme
 ---
 
@@ -36,8 +31,8 @@ Pour utiliser cette API, une extension doit demander la [permission](/fr/Add-ons
 - {{WebExtAPIRef("theme.onUpdated")}}
   - : Emis quand le thème du navigateur change.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.theme")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}

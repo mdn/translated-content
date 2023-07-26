@@ -32,9 +32,9 @@ calculaCircunferencia(1);  // 6.283185307179586
 
 {{Specifications}}
 
-## Navegadores Compatibles
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.PI")}}
+{{Compat}}
 
 ## Ver tambien
 

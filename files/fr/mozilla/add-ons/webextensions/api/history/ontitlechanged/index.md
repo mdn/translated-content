@@ -1,14 +1,6 @@
 ---
 title: history.onTitleChanged
 slug: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - History
-  - Reference
-  - WebExtensions
-  - onTitleChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
 ---
 
@@ -17,9 +9,9 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
 ## Syntaxe
 
 ```js
-browser.history.onTitleChanged.addListener(listener)
-browser.history.onTitleChanged.removeListener(listener)
-browser.history.onTitleChanged.hasListener(listener)
+browser.history.onTitleChanged.addListener(listener);
+browser.history.onTitleChanged.removeListener(listener);
+browser.history.onTitleChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -44,9 +36,9 @@ Les événements ont trois fonctions :
     - `title`
       - : `String`. Title of the page visited.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.onTitleChanged")}}
+{{Compat}}
 
 ## Exemples
 

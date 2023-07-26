@@ -1,11 +1,6 @@
 ---
 title: '<head> : l''élément de métadonnées (en-tête) du document'
 slug: Web/HTML/Element/head
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/head
 ---
 
@@ -19,7 +14,7 @@ L'élément HTML **\<head>** fournit des informations générales (métadonnées
 
 Comme tous les éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
 
-- {{htmlattrdef("profile")}}{{deprecated_inline}}
+- `profile`{{deprecated_inline}}
   - : L'URI d'un ou plusieurs profils de métadonnées, séparés par un espace.
 
 ## Exemples
@@ -54,7 +49,7 @@ La plupart des navigateurs conformes à HTML5 construisent automatiquement l'él
       <th scope="row">Contenu autorisé</th>
       <td>
         Si le document est un document source
-        ({{htmlattrxref("srcdoc", "iframe")}}) d'une
+        (<a href="/fr/docs/Web/HTML/Element/iframe#srcdoc"><code>srcdoc</code></a>) d'une
         {{HTMLElement("iframe")}} ou si l'information pour le titre est
         disponible via un protocole de plus haut niveau zéro ou plusieurs
         éléments de méta-données.<br />Sinon un ou plusieurs éléments de

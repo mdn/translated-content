@@ -63,4 +63,4 @@ img {
 
 ## 関連情報
 
-- {{ Bug(58646) }}
+- [Firefox バグ 58646](https://bugzil.la/58646)

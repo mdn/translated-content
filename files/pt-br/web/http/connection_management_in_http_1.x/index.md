@@ -15,7 +15,7 @@ Dois novos modelos foram criados no HTTP/1.1.
 1. **O modelo de conexão persistente**, mantém conexões abertas entre solicitações sucessivas, reduzindo o tempo necessário para abrir novas conexões.
 2. **O modelo de pipelining HTTP**, vai um passo além, enviando várias solicitações sucessivas sem nem esperar por uma resposta, reduzindo em grande parte a latência da rede.
 
-![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](https://mdn.mozillademos.org/files/13727/HTTP1_x_Connections.png)
+![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](http1_x_connections.png)
 
 > **Nota:** HTTP/2 Adiciona modelos adicionais para o gerenciamento de conexão.
 
@@ -67,7 +67,7 @@ Como uma conexão de HTTP/1.x está serializando solicitações, mesmo sem qualq
 
 Se o servidor deseja um site de Web mais rápido ou resposta do aplicativo, é possível para o servidor forçar a abertura de mais conexões. Por exemplo, em vez de ter todos os recursos no mesmo domínio, diz www\.example.com, poderia dividir em vários domínios, www1.example.com, www2.example.com, www3.example.com. Cada um destes domínios resolver acessar o mesmo servidor e o navegador da Web abrirá 6 conexões para cada (no nosso exemplo, impulsionando as conexões para 18). Esta técnica é chamada sharding do domínio.
 
-![](https://mdn.mozillademos.org/files/13783/HTTPSharding.png)
+![](httpsharding.png)
 
 ## Conclusão
 

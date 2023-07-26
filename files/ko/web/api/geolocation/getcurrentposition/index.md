@@ -1,18 +1,6 @@
 ---
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
-tags:
-  - API
-  - Geolocation
-  - Geolocation API
-  - Method
-  - Reference
-  - Secure context
-  - getCurrentPosition
-  - 위치
-  - 위치정보
-browser-compat: api.Geolocation.getCurrentPosition
-translation_of: Web/API/Geolocation/getCurrentPosition
 ---
 {{securecontext_header}}{{ APIRef("Geolocation API") }}
 

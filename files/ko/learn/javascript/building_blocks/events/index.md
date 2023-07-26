@@ -13,7 +13,7 @@ slug: Learn/JavaScript/Building_blocks/Events
       <th scope="row">필요한 사전 지식:</th>
       <td>
         기본적인 컴퓨터 활용 능력, HTML, CSS,
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">JavaScript 첫걸음</a
+        <a href="/ko/docs/Learn/JavaScript/First_steps">JavaScript 첫걸음</a
         >에 대한 기본적인 이해
       </td>
     </tr>
@@ -76,7 +76,7 @@ btn.onclick = function() {
 }
 ```
 
-이 코드에서, {{domxref("Document.querySelector()")}} 함수를 사용하여, 우리는 `btn` 상수 내부에 버튼에 대한 참조를 저장했습니다. 우리는 또한 무작위의 숫자를 반환하는 함수를 정의했습니다. 코드의 세번째 부분은 이벤트 핸들러입니다. `btn` 상수는 [`<button>`](/ko/docs/Web/HTML/Element/button) 요소를 가리키고, 이 타입의 객체는 발생시킬 수 있는 얼마간의 이벤트를 가지고 있으므로, 이벤트 핸들러를 사용 가능합니다. [`onclick`](/ko/docs/Web/API/GlobalEventHandlers/onclick) 이벤트 핸들러 프로퍼티를 무작위의 RGB 색상을 생성하고 그것과 같은 [`<body>`](/en-US/docs/Web/HTML/Element/body) [`background-color`](/en-US/docs/Web/CSS/background-color)를 설정하는 코드를 포함하는 익명함수에 설정함으로써, 우리는 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트 발생에 귀를 기울이고 있습니다.
+이 코드에서, {{domxref("Document.querySelector()")}} 함수를 사용하여, 우리는 `btn` 상수 내부에 버튼에 대한 참조를 저장했습니다. 우리는 또한 무작위의 숫자를 반환하는 함수를 정의했습니다. 코드의 세번째 부분은 이벤트 핸들러입니다. `btn` 상수는 [`<button>`](/ko/docs/Web/HTML/Element/button) 요소를 가리키고, 이 타입의 객체는 발생시킬 수 있는 얼마간의 이벤트를 가지고 있으므로, 이벤트 핸들러를 사용 가능합니다. [`onclick`](/ko/docs/Web/API/GlobalEventHandlers/onclick) 이벤트 핸들러 프로퍼티를 무작위의 RGB 색상을 생성하고 그것과 같은 [`<body>`](/ko/docs/Web/HTML/Element/body) [`background-color`](/ko/docs/Web/CSS/background-color)를 설정하는 코드를 포함하는 익명함수에 설정함으로써, 우리는 [`click`](/ko/docs/Web/API/Element/click_event) 이벤트 발생에 귀를 기울이고 있습니다.
 
 이 코드는 언제든지 `<button>` 요소에서 click 이벤트가 발생될 때, 즉 언제든지 유저가 그것을 선택했을 때, 실행됩니다.
 
@@ -111,7 +111,7 @@ btn.onclick = function() {
 }
 ```
 
-[`onclick`](/ko/docs/Web/API/GlobalEventHandlers/onclick) 프로퍼티는 이 상황에서 쓰이고 있는 이벤트 핸들러 프로퍼티입니다. 이것은 본질적으로 버튼에서 사용 가능한 다른 것들과 같은 프로퍼티지만 (예: [`btn.textContent`](/ko/docs/Web/API/Node/textContent), 또는 [`btn.style`](/en-US/docs/Web/API/HTMLElement/style)), 이것은 특별한 타입입니다 — 어떤 코드와 동일한 것을 설정했을 때, 그 코드는 버튼에서 이벤트가 발생되었을 때 실행됩니다.
+[`onclick`](/ko/docs/Web/API/GlobalEventHandlers/onclick) 프로퍼티는 이 상황에서 쓰이고 있는 이벤트 핸들러 프로퍼티입니다. 이것은 본질적으로 버튼에서 사용 가능한 다른 것들과 같은 프로퍼티지만 (예: [`btn.textContent`](/ko/docs/Web/API/Node/textContent), 또는 [`btn.style`](/ko/docs/Web/API/HTMLElement/style)), 이것은 특별한 타입입니다 — 어떤 코드와 동일한 것을 설정했을 때, 그 코드는 버튼에서 이벤트가 발생되었을 때 실행됩니다.
 
 여러분은 또한 기명 함수 이름과 같은 핸들러 프로퍼티를 설정할 수 있습니다 ([자신만의 함수 만들기](/ko/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)에서 본 것처럼요). 다음은 아주 똑같이 동작합니다:
 
@@ -130,10 +130,10 @@ btn.onclick = bgChange;
 
 우선, [random-color-eventhandlerproperty.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/events/random-color-eventhandlerproperty.html)를 다운받으시고, 여러분의 브라우저에서 열어보세요. 이것은 우리가 이미 해본 단순한 무작위 색상 예제의 복사본입니다. 이제 `btn.onclick`를 다음의 다른 값들로 차례대로 바꿔 보시고, 예제에서 그 결과를 관찰해 보세요.
 
-- [`btn.onfocus`](/en-US/docs/Web/API/GlobalEventHandlers/onfocus)와 [`btn.onblur`](/en-US/docs/Web/API/GlobalEventHandlers/onblur) — 색상은 버튼이 포커스되고 포커스가 해제되었을 때 바뀝니다; 버튼을 포커스하기 위해 탭 키를 눌러 보시고 다시 탭 키를 눌러서 버튼으로부터 포커스를 해제해 보세요. 이것들은 종종 양식 필드(form field)가 포커스되었을 때 그것에 채움(filling)에 대한 정보를 표시하기 위해 사용되거나, 만약 양식 필드가 올바르지 않은 값으로 채워진다면 에러 메시지를 표시하기 위해 사용됩니다.
+- [`btn.onfocus`](/ko/docs/Web/API/GlobalEventHandlers/onfocus)와 [`btn.onblur`](/ko/docs/Web/API/GlobalEventHandlers/onblur) — 색상은 버튼이 포커스되고 포커스가 해제되었을 때 바뀝니다; 버튼을 포커스하기 위해 탭 키를 눌러 보시고 다시 탭 키를 눌러서 버튼으로부터 포커스를 해제해 보세요. 이것들은 종종 양식 필드(form field)가 포커스되었을 때 그것에 채움(filling)에 대한 정보를 표시하기 위해 사용되거나, 만약 양식 필드가 올바르지 않은 값으로 채워진다면 에러 메시지를 표시하기 위해 사용됩니다.
 - [`btn.ondblclick`](/ko/docs/Web/API/GlobalEventHandlers/ondblclick) — 오직 버튼이 더블 클릭되었을 때만 색상이 바뀝니다.
 - [`window.onkeydown`](/ko/docs/Web/API/GlobalEventHandlers/onkeydown), [`window.onkeyup`](/ko/docs/Web/API/GlobalEventHandlers/onkeyup) — 키보드에서 키가 눌렸을 때 색상이 바뀝니다. `keydown` 과 `keyup`은 단지 각각 키 누름(keystroke)의 누름(key down)과 뗌(key up) 부분을 지칭합니다. 알림: 만약 여러분이 이 이벤트 핸들러를 버튼 그 자체에 등록한다면 이것은 작동하지 않습니다 — 우리는, 전체 브라우저를 나타내는, [window](/ko/docs/Web/API/Window)에 이것을 등록해야만 합니다.
-- [`btn.onmouseover`](/en-US/docs/Web/API/GlobalEventHandlers/onmouseover) 와 [`btn.onmouseout`](/en-US/docs/Web/API/GlobalEventHandlers/onmouseout) — 각각 마우스 포인터가 버튼 위에 올라가 있을 때, 혹은 포인터가 버튼에서 벗어났을 때 색상이 바뀝니다.
+- [`btn.onmouseover`](/ko/docs/Web/API/GlobalEventHandlers/onmouseover) 와 [`btn.onmouseout`](/ko/docs/Web/API/GlobalEventHandlers/onmouseout) — 각각 마우스 포인터가 버튼 위에 올라가 있을 때, 혹은 포인터가 버튼에서 벗어났을 때 색상이 바뀝니다.
 
 몇몇 이벤트들은 일반적이고 거의 어디서나 사용 가능한 반면 (예: `onclick` 핸들러는 거의 어떠한 요소에서도 등록될 수 있습니다), 몇몇은 더욱 특수하고 오직 어떤 상황들에서만 유용합니다 (예: [onplay](/ko/docs/Web/API/GlobalEventHandlers/onplay)를 오직 {{htmlelement("video")}}와 같은, 특정한 요소에서만 사용하는 것은 타당합니다).
 
@@ -539,7 +539,7 @@ video.onclick = function() {
 - 브라우저는 선택된 요소가 버블링 단계에 대해 그것에 등록된 `onclick` 이벤트 핸들러를 가지고 있는지 확인하기 위해 검사하고, 만약 그렇다면 실행합니다.
 - 그리고서 그것은 바로 다음의 조상 요소로 이동하고 같은 일을 하고, 그리고서 그 다음 요소로 이동하고, `<html>` 요소에 닿을 때까지 계속합니다.
 
-[![](bubbling-capturing.png)](https://mdn.mozillademos.org/files/14075/bubbling-capturing.png)
+[![](bubbling-capturing.png)](bubbling-capturing.png)
 
 (더 큰 도표를 보려면 이미지를 클릭하세요)
 
@@ -597,13 +597,3 @@ video.onclick = function(e) {
 - [이벤트 접근](https://www.quirksmode.org/js/events_access.html) (이벤트 객체에 대한 논의) — Peter-Paul Koch가 작성한 또 다른 뛰어나게 상세한 글
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Return_values","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
-
-## 이 과정에서는
-
-- [판단을 만드세요 — 조건문](/ko/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [반복문](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code)
-- [함수 — 재새용 가능한 코드 블록](/ko/docs/Learn/JavaScript/Building_blocks/Functions)
-- [자신만의 함수 만들기](/ko/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-- [함수 반환 값](/ko/docs/Learn/JavaScript/Building_blocks/Return_values)
-- **이벤트 입문**
-- [이미지 갤러리](/ko/docs/Learn/JavaScript/Building_blocks/Image_gallery)

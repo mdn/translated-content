@@ -4,14 +4,14 @@ slug: WebAssembly/JavaScript_interface/Module/customSections
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/customSections
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.customSections()`** 関数はモジュールと文字列名を指定して、すべてのカスタムセクションのコンテンツのコピーを返します。
 
 ## 構文
 
 ```js
-WebAssembly.Module.customSections(module, sectionName)
+WebAssembly.Module.customSections(module, sectionName);
 ```
 
 ### 引数
@@ -50,14 +50,15 @@ wast2wasm simple-name-section.was -o simple-name-section.wasm --debug-names
 それから、`WebAssembly.Module.customSections` を使用して `length` が 0 より大きいかチェックして、モジュールに "name" カスタムセクションが含まれているかどうかチェックします。この例では "name" カスタムセクションが存在するため、`ArrayBuffer` オブジェクトが返されます。
 
 ```js
-WebAssembly.compileStreaming(fetch('simple-name-section.wasm'))
-.then(function(mod) {
-  var nameSections = WebAssembly.Module.customSections(mod, "name");
-  if (nameSections.length != 0) {
-    console.log("Module contains a name section");
-    console.log(nameSections[0]);
-  };
-});
+WebAssembly.compileStreaming(fetch("simple-name-section.wasm")).then(
+  function (mod) {
+    var nameSections = WebAssembly.Module.customSections(mod, "name");
+    if (nameSections.length != 0) {
+      console.log("Module contains a name section");
+      console.log(nameSections[0]);
+    }
+  },
+);
 ```
 
 ## 仕様書

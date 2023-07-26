@@ -1,16 +1,6 @@
 ---
 title: cookies.get()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/get
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/get
 ---
 
@@ -26,8 +16,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var getting = browser.cookies.get(
-  details                // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -49,9 +39,9 @@ var getting = browser.cookies.get(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef('cookies.Cookie', 'Cookie')}} contenant des détails sur le cookie, ou `null` si le cookie n'a pas été trouvé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.get")}}
+{{Compat}}
 
 ## Exemples
 
@@ -67,14 +57,14 @@ function logCookie(cookie) {
 function getCookie(tabs) {
   var getting = browser.cookies.get({
     url: tabs[0].url,
-    name: "favourite-colour"
+    name: "favourite-colour",
   });
   getting.then(logCookie);
 }
 
 var getActive = browser.tabs.query({
   active: true,
-  currentWindow: true
+  currentWindow: true,
 });
 getActive.then(getCookie);
 ```

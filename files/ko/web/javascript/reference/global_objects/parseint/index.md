@@ -1,13 +1,6 @@
 ---
 title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
-tags:
-  - JavaScript
-  - Method
-  - Reference
-  - parseInt
-browser-compat: javascript.builtins.parseInt
-translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
 {{jsSidebar("Objects")}}
 
@@ -118,7 +111,6 @@ console.log(filterInt('1.61803398875'))      // NaN
 parseInt('0xF', 16)
 parseInt('F', 16)
 parseInt('17', 8)
-parseInt(021, 8)
 parseInt('015', 10)    // parseInt('015', 8)이었다면 13을 반환
 parseInt(15.99, 10)
 parseInt('15,123', 10)

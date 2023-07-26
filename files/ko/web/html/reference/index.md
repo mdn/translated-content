@@ -1,12 +1,6 @@
 ---
 title: HTML 참고서
 slug: Web/HTML/Reference
-tags:
-  - HTML
-  - Landing
-  - Reference
-  - Web
-translation_of: Web/HTML/Reference
 ---
 
 {{HTMLSidebar}}

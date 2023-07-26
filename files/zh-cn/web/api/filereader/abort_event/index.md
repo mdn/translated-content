@@ -28,7 +28,7 @@ slug: Web/API/FileReader/abort_event
   </tbody>
 </table>
 
-## 例子
+## 示例
 
 ### 实例
 
@@ -133,9 +133,9 @@ function handleSelected(e) {
 fileInput.addEventListener('change', handleSelected);返回返回发的
 ```
 
-#### 返回结果
+#### 结果
 
-{{ EmbedLiveSample('Live_example', '100%', '300px') }}
+{{ EmbedLiveSample('实例', '100%', '300px') }}
 
 ## 规范
 
@@ -145,6 +145,6 @@ fileInput.addEventListener('change', handleSelected);返回返回发的
 
 {{Compat}}
 
-## 另请参见
+## 参见
 
 - 相关事件：{{domxref("FileReader.loadstart_event", "loadstart")}}, {{domxref("FileReader.loadend_event", "loadend")}}, {{domxref("FileReader.progress_event", "progress")}}, {{domxref("FileReader.error_event", "error")}}, {{domxref("FileReader.load_event", "load")}}.

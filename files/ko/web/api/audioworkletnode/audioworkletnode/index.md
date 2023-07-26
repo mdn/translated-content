@@ -1,13 +1,6 @@
 ---
 title: AudioWorkletNode()
 slug: Web/API/AudioWorkletNode/AudioWorkletNode
-tags:
-  - API
-  - AudioWorkletNode
-  - Constructor
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioWorkletNode.AudioWorkletNode
 ---
 
 {{APIRef("Web Audio API")}}

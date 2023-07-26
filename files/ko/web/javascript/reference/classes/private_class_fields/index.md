@@ -1,11 +1,6 @@
 ---
 title: Private class fields
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
-tags:
-  - Class
-  - JavaScript
-  - Private Field
-translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 ---
 
 {{JsSidebar("Classes")}}
@@ -163,7 +158,7 @@ private 인스턴스 메소드는 private 인스턴스 필드와는 다르게 cl
 
     const instance = new ClassWithPrivateMethod()
     console.log(instance.getPrivateMessage())
-    // expected output: "hello worl​d"
+    // expected output: "hello world"
 ```
 
 private 인스턴스 메소드는 generator, async 그리고 async generator 함수가 될 수 있다. private getter 와 setter 또한 가능하다:
@@ -186,18 +181,18 @@ private 인스턴스 메소드는 generator, async 그리고 async generator 함
     }
 
     new ClassWithPrivateAccessor();
-    // expected output: "✨hello worl​d✨"
+    // expected output: "✨hello world✨"
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
 ## See also
 
-- [Public class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
+- [Public class fields](/ko/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)

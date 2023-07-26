@@ -1,15 +1,9 @@
 ---
 title: WebGL로 3D 객체 만들기
 slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
-tags:
-  - 3D
-  - 3차원
-  - WebGL
-  - 입체
-translation_of: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
 이제 우리가 만든 정사각형에 5개의 면을 더해서 3차원 정육면체를 만들어 보겠습니다. 이 작업을 조금 더 효율적으로 하기 위해서 `drawArray()` 메서드를 호출해서 정점을 직접 핸들링하는 대신에, 정점 배열을 인덱스와 값으로 정의된 테이블이라고 생각하고, 각 정점을 인덱스로 참조해서 정육면체 각 면의 정점 위치를 정의하고 `gl.drawElements()`를 호출해서 그려보겠습니다.
 

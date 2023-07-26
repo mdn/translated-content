@@ -1,11 +1,6 @@
 ---
 title: '-webkit-mask-repeat-x'
 slug: Web/CSS/-webkit-mask-repeat-x
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-webkit-mask-repeat-x
 ---
 
@@ -77,7 +72,7 @@ Chaque image aura la valeur associée, dans le même ordre.
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.-webkit-mask-repeat-x")}}
+{{Compat}}
 
 ## Voir aussi
 

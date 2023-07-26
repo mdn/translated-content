@@ -25,7 +25,7 @@ slug: Web/SVG/Element/g
 </svg>
 ```
 
-{{EmbedLiveSample("Example",220,130)}}
+{{EmbedLiveSample("示例",220,130)}}
 
 ## 属性
 

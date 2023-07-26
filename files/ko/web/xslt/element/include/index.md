@@ -1,9 +1,6 @@
 ---
 title: include
 slug: Web/XSLT/Element/include
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/include
 original_slug: Web/XSLT/include
 ---
 

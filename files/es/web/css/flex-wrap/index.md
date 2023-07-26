@@ -50,9 +50,9 @@ element {
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.flex-wrap")}}
+{{Compat}}
 
 ## Ver también
 

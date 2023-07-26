@@ -204,7 +204,7 @@ class ClassWithPublicInstanceMethod {
 
 const instance = new ClassWithPublicInstanceMethod();
 console.log(instance.publicMethod());
-// Ожидаемый вывод: "hello worl​d"
+// Ожидаемый вывод: "hello world"
 ```
 
 Публичные методы добавляются в прототип класса во время его создания с помощью {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Они изменяемы, неперечисляемы и настраиваемы.
@@ -238,7 +238,7 @@ class SubClass extends BaseClass {
 
 const instance = new SubClass();
 console.log(instance.subPublicMethod());
-// Ожидаемый вывод: "hello worl​d"
+// Ожидаемый вывод: "hello world"
 ```
 
 Геттеры и сеттеры это специальные методы, которые привязаны к свойствам класса и которые вызываются, когда к свойству обращаются или записывают. Используйте [get](/ru/docs/Web/JavaScript/Reference/Functions/get) и [set](/ru/docs/Web/JavaScript/Reference/Functions/set) для объявления публичных геттеров и сеттеров экземпляра.
@@ -256,7 +256,7 @@ class ClassWithGetSet {
 
 const instance = new ClassWithGetSet();
 console.log(instance.msg);
-// Ожидаемый вывод: "hello worl​d"
+// Ожидаемый вывод: "hello world"
 
 instance.msg = 'cake';
 console.log(instance.msg);

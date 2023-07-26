@@ -1,11 +1,6 @@
 ---
 title: ':-moz-submit-invalid'
 slug: Web/CSS/:-moz-submit-invalid
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:-moz-submit-invalid
 ---
 
@@ -27,7 +22,7 @@ Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-submit-invalid")}}
+{{Compat}}
 
 ## Voir aussi
 

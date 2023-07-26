@@ -1,6 +1,6 @@
 ---
 title: WebP
-slug: Glossary/webp
+slug: Glossary/WebP
 original_slug: Glossario/webp
 ---
 

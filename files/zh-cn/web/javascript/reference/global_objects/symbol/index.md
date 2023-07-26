@@ -145,7 +145,7 @@ typeof Symbol.iterator === 'symbol'
 - 尝试将一个 symbol 值转换为一个 number 值时，会抛出一个 {{jsxref("TypeError")}} 错误 (e.g. `+sym` or `sym | 0`).
 - 使用宽松相等时，`Object(sym) == sym` returns `true.`
 - 这会阻止你从一个 symbol 值隐式地创建一个新的 string 类型的属性名。例如，`Symbol("foo") + "bar"` 将抛出一个 {{jsxref("TypeError")}} (can't convert symbol to string).
-- ["safer" `String(sym)` conversion](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#String_conversion) 的作用会像 symbol 类型调用 {{jsxref("Symbol.prototype.toString()")}} 一样，但是注意 `new String(sym)` 将抛出异常。
+- ["safer" `String(sym)` conversion](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换) 的作用会像 symbol 类型调用 {{jsxref("Symbol.prototype.toString()")}} 一样，但是注意 `new String(sym)` 将抛出异常。
 
 ### Symbols 与 `for...in` 迭代
 

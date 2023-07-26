@@ -14,23 +14,23 @@ Todos aprendemos a escribir una carta más tarde o más temprano; es también pr
       <th scope="row">Prerrequisitos:</th>
       <td>
         Antes de intentar este examen deberías haber trabajado los artículos
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >,
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
+          href="/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
           >What's in the head? Metadata in HTML</a
         >,
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML text fundamentals</a
         >,
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          href="/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
           >Creating hyperlinks</a
         >, y
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting"
+          href="/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting"
           >Advanced text formatting</a
         >.
       </td>
@@ -47,7 +47,7 @@ Todos aprendemos a escribir una carta más tarde o más temprano; es también pr
 
 ## Punto de partida
 
-Para comenzar esta prueba, deberemos copiar [el texto que deberemos trabajar](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), y el [CSS que necesitaremos incluir](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt) en nuestro HTML. Crearemos un archivo nuevo `.html` usando nuestro editor de texto (o alternativamente usaremos otros como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/) para hacer nuestra prueba).
+Para comenzar esta prueba, deberemos copiar [el texto que deberemos trabajar](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), y el [CSS que necesitaremos incluir](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt) en nuestro HTML. Crearemos un archivo nuevo `.html` usando nuestro editor de texto (o alternativamente usaremos otros como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/) para hacer nuestra prueba).
 
 ## Resumen del proyecto a desarrollar
 
@@ -83,9 +83,9 @@ El encabezamiento del documento:
 - Utiliza el [Validador de HTML W3C HTML](https://validator.w3.org/) para validar tu HTML; recibirás puntos de bonificación si se valida.
 - No necesitas conocer CSS para hacer este ejercicio; solo debes poner el CSS proporcionado en el elemento HTML adecuado.
 
-## Example
+## Ejemplo
 
-The following screenshot shows an example of what the letter might look like after being marked up.
+La siguiente captura de pantalla muestra un ejemplo de cómo se vería la carta después de marcarla.
 
 ![](letter-update.png)
 

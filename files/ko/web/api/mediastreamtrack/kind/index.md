@@ -1,14 +1,6 @@
 ---
 title: MediaStreamTrack.kind
 slug: Web/API/MediaStreamTrack/kind
-tags:
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Property
-  - Read-only
-  - Reference
-  - WebRTC
-translation_of: Web/API/MediaStreamTrack/kind
 ---
 
 {{APIRef("Media Capture and Streams")}}

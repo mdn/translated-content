@@ -9,8 +9,9 @@ original_slug: Web/HTML/Elemento/var
 ### Definición
 
 - Marca variables de programas y similares.
+
   - : **Sus etiquetas son**: \<var> y \</var> (ambas obligatorias)
-  
+
     **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
     **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).
@@ -28,9 +29,9 @@ original_slug: Web/HTML/Elemento/var
 
 **Eventos**: onclick, ondblclick, onmousedown, onmouseup, onmouseover, onmousemove, onmouseout, onkeypress, onkeydown, onkeyup.
 
-##### Atributos Específicos - No tiene.
+##### Atributos Específicos - No tiene
 
-##### Atributos Transicionales - No tiene.
+##### Atributos Transicionales - No tiene
 
 ### Ejemplos
 

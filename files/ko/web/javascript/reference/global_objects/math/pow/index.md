@@ -1,12 +1,6 @@
 ---
 title: Math.pow()
 slug: Web/JavaScript/Reference/Global_Objects/Math/pow
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-browser-compat: javascript.builtins.Math.pow
 ---
 
 {{JSRef}}**`Math.pow()`**함수는`base^exponent`처럼

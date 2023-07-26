@@ -1,17 +1,7 @@
 ---
 title: browserSettings.proxyConfig
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/settings
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - proxyConfig
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/settings
-original_slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/proxyConfig
 ---
 
 {{AddonSidebar()}}
@@ -54,14 +44,14 @@ let proxySettings = {
   proxyType: "manual",
   http: "http://proxy.org:8080",
   socksVersion: 4,
-  passthrough: ".example.org"
+  passthrough: ".example.org",
 };
 
-browser.proxy.settings.set({value: proxySettings});
+browser.proxy.settings.set({ value: proxySettings });
 ```
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.proxy.settings", 10)}}
+{{Compat}}

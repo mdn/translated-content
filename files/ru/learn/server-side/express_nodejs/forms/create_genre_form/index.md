@@ -13,7 +13,7 @@ To use the _express-validator_ in our controllers we have to _require_ the funct
 Open **/controllers/genreController.js**, and add the following line at the top of the file:
 
 ```js
-const validator = require('express-validator');
+const validator = require("express-validator");
 ```
 
 ## Controller—get route
@@ -22,8 +22,8 @@ Find the exported `genre_create_get()` controller method and replace it with the
 
 ```js
 // Display Genre create form on GET.
-exports.genre_create_get = function(req, res, next) {
-  res.render('genre_form', { title: 'Create Genre' });
+exports.genre_create_get = function (req, res, next) {
+  res.render("genre_form", { title: "Create Genre" });
 };
 ```
 
@@ -33,55 +33,52 @@ Find the exported `genre_create_post()` controller method and replace it with th
 
 ```js
 // Handle Genre create on POST.
-exports.genre_create_post =  [
-
+exports.genre_create_post = [
   // Validate that the name field is not empty.
-  validator.body('name', 'Genre name required').trim().isLength({ min: 1 }),
+  validator.body("name", "Genre name required").trim().isLength({ min: 1 }),
 
   // Sanitize (escape) the name field.
-  validator.sanitizeBody('name').escape(),
+  validator.sanitizeBody("name").escape(),
 
   // Process request after validation and sanitization.
   (req, res, next) => {
-
     // Extract the validation errors from a request.
     const errors = validator.validationResult(req);
 
     // Create a genre object with escaped and trimmed data.
-    var genre = new Genre(
-      { name: req.body.name }
-    );
-
+    var genre = new Genre({ name: req.body.name });
 
     if (!errors.isEmpty()) {
       // There are errors. Render the form again with sanitized values/error messages.
-      res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});
+      res.render("genre_form", {
+        title: "Create Genre",
+        genre: genre,
+        errors: errors.array(),
+      });
       return;
-    }
-    else {
+    } else {
       // Data from form is valid.
       // Check if Genre with same name already exists.
-      Genre.findOne({ 'name': req.body.name })
-        .exec( function(err, found_genre) {
-           if (err) { return next(err); }
+      Genre.findOne({ name: req.body.name }).exec(function (err, found_genre) {
+        if (err) {
+          return next(err);
+        }
 
-           if (found_genre) {
-             // Genre exists, redirect to its detail page.
-             res.redirect(found_genre.url);
-           }
-           else {
-
-             genre.save(function (err) {
-               if (err) { return next(err); }
-               // Genre saved. Redirect to genre detail page.
-               res.redirect(genre.url);
-             });
-
-           }
-
-         });
+        if (found_genre) {
+          // Genre exists, redirect to its detail page.
+          res.redirect(found_genre.url);
+        } else {
+          genre.save(function (err) {
+            if (err) {
+              return next(err);
+            }
+            // Genre saved. Redirect to genre detail page.
+            res.redirect(genre.url);
+          });
+        }
+      });
     }
-  }
+  },
 ];
 ```
 
@@ -93,10 +90,9 @@ The first method in the array defines a validator (`validator.body()`) from the 
 
 ```js
 // Validate that the name field is not empty.
-validator.body('name', 'Genre name required').isLength({ min: 1 }).trim(),
-
-// Sanitize (escape) the name field.
-validator.sanitizeBody('name').escape()
+validator.body("name", "Genre name required").isLength({ min: 1 }).trim(),
+  // Sanitize (escape) the name field.
+  validator.sanitizeBody("name").escape();
 ```
 
 After specifying the validators and sanitizers we create a middleware function to extract any validation errors. We use `isEmpty()` to check whether there are any errors in the validation result. If there are then we render the form again, passing in our sanitised genre object and the array of error messages (`errors.array()`).
@@ -129,20 +125,22 @@ If the genre name data is valid then we check if a `Genre` with the same name al
 
 ```js
 // Check if Genre with same name already exists.
-Genre.findOne({ 'name': req.body.name })
-  .exec( function(err, found_genre) {
-  if (err) { return next(err); }
-    if (found_genre) {
-      // Genre exists, redirect to its detail page.
-      res.redirect(found_genre.url);
+Genre.findOne({ name: req.body.name }).exec(function (err, found_genre) {
+  if (err) {
+    return next(err);
+  }
+  if (found_genre) {
+    // Genre exists, redirect to its detail page.
+    res.redirect(found_genre.url);
+  } else {
+    genre.save(function (err) {
+      if (err) {
+        return next(err);
       }
-    else {
-      genre.save(function (err) {
-        if (err) { return next(err); }
-          // Genre saved. Redirect to genre detail page.
-          res.redirect(genre.url);
-        });
-    }
+      // Genre saved. Redirect to genre detail page.
+      res.redirect(genre.url);
+    });
+  }
 });
 ```
 
@@ -153,13 +151,17 @@ This same pattern is used in all our post controllers: we run validators, then s
 The same view is rendered in both the `GET` and `POST` controllers/routes when we create a new `Genre` (and later on it is also used when we _update_ a `Genre`). In the `GET` case the form is empty, and we just pass a title variable. In the `POST` case the user has previously entered invalid data—in the `genre` variable we pass back a sanitized version of the entered data and in the `errors` variable we pass back an array of error messages.
 
 ```js
-res.render('genre_form', { title: 'Create Genre'});
-res.render('genre_form', { title: 'Create Genre', genre: genre, errors: errors.array()});
+res.render("genre_form", { title: "Create Genre" });
+res.render("genre_form", {
+  title: "Create Genre",
+  genre: genre,
+  errors: errors.array(),
+});
 ```
 
 Create **/views/genre_form.pug** and copy in the text below.
 
-```html
+```pug
 extends layout
 
 block content
@@ -191,11 +193,11 @@ The last part of the page is the error code. This simply prints a list of errors
 
 Run the application, open your browser to <http://localhost:3000/>, then select the _Create new genre_ link. If everything is set up correctly, your site should look something like the following screenshot. After you enter a value, it should be saved and you'll be taken to the genre detail page.
 
-![Genre Create Page - Express Local Library site](https://mdn.mozillademos.org/files/14476/LocalLibary_Express_Genre_Create_Empty.png)
+![Genre Create Page - Express Local Library site](locallibary_express_genre_create_empty.png)
 
 The only error we validate against server-side is that the genre field must not be empty. The screenshot below shows what the error list would look like if you didn't supply a genre (highlighted in red).
 
-![](https://mdn.mozillademos.org/files/14480/LocalLibary_Express_Genre_Create_Error.png)
+![](locallibary_express_genre_create_error.png)
 
 > **Примечание:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We can also validate that the field is not empty on the client side by adding the value `required='true'` to the field definition in the form:
 >

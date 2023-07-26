@@ -1,14 +1,7 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat/format
 ---
 
 {{JSRef}}La méthode **`Intl.RelativeTimeFormat.prototype.format()`** permet de formater une valeur avec une unité selon des options de locale et de formatage stockées dans l'objet {{jsxref("RelativeTimeFormat")}}.{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-format.html")}}
@@ -75,10 +68,8 @@ rtf.format(1, "day");
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                    | Commentaires |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.RelativeTime`](https://tc39.github.io/proposal-intl-relative-time/#sec-Intl.RelativeTimeFormat.prototype.format) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat.format")}}
+{{Compat}}

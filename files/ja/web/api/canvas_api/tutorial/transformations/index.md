@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Transformations
 original_slug: Web/Guide/HTML/Canvas_tutorial/Transformations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 これまでのチュートリアルで、[キャンバスのグリッド](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)や**座標空間**について学びました。今までは既定のグリッドしか使用しておらず、また必要に応じてキャンバス全体のサイズを変更していました。座標変換 (transformations) には、原点を別の場所に移したり、回転したり、拡大縮小したりといった、より強力な手段があります。
 

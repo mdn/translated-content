@@ -86,7 +86,7 @@ Object.seal(1);
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.seal")}}
+{{Compat}}
 
 ## Ver también
 

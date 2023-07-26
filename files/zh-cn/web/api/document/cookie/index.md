@@ -38,7 +38,7 @@ document.cookie = newCookie;
 
 - cookie 的值字符串可以用[encodeURIComponent()](/zh-CN/docs/JavaScript/Reference/Global_Objects/encodeURIComponent)来保证它不包含任何逗号、分号或空格 (cookie 值中禁止使用这些值).
 
-> **备注：** 在{{Gecko("6.0")}}前，被引号括起的路径的引号会被当做路径的一部分，而不是被当做定界符。现在已被修复。
+> **备注：** 在 Gecko 6.0 前，被引号括起的路径的引号会被当做路径的一部分，而不是被当做定界符。现在已被修复。
 
 ## 示例
 
@@ -86,7 +86,7 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)someCookieName\s*\=\s*([^;]*).*$)|^.
 |*|
 |*|  A complete cookies reader/writer framework with full unicode support.
 |*|
-|*|  https://developer.mozilla.org/en-US/docs/DOM/document.cookie
+|*|  https://developer.mozilla.org/zh-CN/docs/DOM/document.cookie
 |*|
 |*|  This framework is released under the GNU Public License, version 3 or later.
 |*|  http://www.gnu.org/licenses/gpl-3.0-standalone.html

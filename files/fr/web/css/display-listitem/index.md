@@ -1,10 +1,6 @@
 ---
 title: <display-listitem>
 slug: Web/CSS/display-listitem
-tags:
-  - CSS
-  - Reference
-  - Type de donnée
 translation_of: Web/CSS/display-listitem
 ---
 
@@ -45,9 +41,7 @@ Une valeur `list-item` indiquera à l'élément de se comporter comme un éléme
 
 ## Compatibilité des navigateurs
 
-### Prise en charge de `list-item`
-
-{{Compat("css.properties.display.list-item", 10)}}
+{{Compat}}
 
 ## Voir aussi
 

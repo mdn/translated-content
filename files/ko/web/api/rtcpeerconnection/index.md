@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
-translation_of: Web/API/RTCPeerConnection
 ---
 {{APIRef('WebRTC')}}
 
@@ -226,11 +225,9 @@ The `RTCSignalingState` enum specifies the possible values of {{domxref("RTCPeer
   </tbody>
 </table>
 
-## 사양
+## 명세서
 
-| 사양명                                                                                           | 상태                             | 설명       |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('WebRTC 1.0', '#interface-definition', 'RTCPeerConnection')}} | {{Spec2('WebRTC 1.0')}} | 초기 정의. |
+{{Specifications}}
 
 ## 브라우저 호환성
 

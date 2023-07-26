@@ -1,15 +1,6 @@
 ---
 title: pkcs11.uninstallModule()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/uninstallModule
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - pkcs11
-  - uninstallModule
 translation_of: Mozilla/Add-ons/WebExtensions/API/pkcs11/uninstallModule
 ---
 
@@ -23,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var uninstalling = browser.pkcs11.uninstallModule(
-  name              // string
-)
+  name, // string
+);
 ```
 
 ### Paramètres
@@ -38,9 +29,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 Si le module n'a pas pu être trouvé ou qu'une autre erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.pkcs11.uninstallModule", 10)}}
+{{Compat}}
 
 ## Exemples
 

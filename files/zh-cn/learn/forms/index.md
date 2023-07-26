@@ -19,11 +19,11 @@ slug: Learn/Forms
 
 在开始这个模块之前，您至少应该熟悉[对 HTML 的介绍](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)系列。此时此刻，您应该会发现[基本指南](#基本指南)很容易理解，并且能够使用我们的[原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)指南。
 
-然而，掌握表单需要的不仅仅是 HTML 知识——你还需要学习一些特定的技术来设置表单控件的样式，并且需要一些编码知识来处理诸如验证和创建自定义表单控件之类的事情。因此，在您查看下面列出的其它部分之前，我们建议你先离开，并学习一些 [CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript)。
+然而，掌握表单需要的不仅仅是 HTML 知识——你还需要学习一些特定的技术来设置表单控件的样式，并且需要一些编码知识来处理诸如验证和创建自定义表单控件之类的事情。因此，在您查看下面列出的其他部分之前，我们建议你先离开，并学习一些 [CSS](/zh-CN/docs/Learn/CSS) 和 [JavaScript](/zh-CN/docs/Learn/JavaScript)。
 
-以上内容明确地说明了为什么我们将 web 表单独立放在一个模块中，而不是将其与 HTML、CSS 和 JavaScript 这些模块放在一起——表单元素比绝大多数其它的 HTML 元素都要复杂，并且它们还需要与相关的 CSS 和 JavaScript 技术紧密集合才能充分利用它们。
+以上内容明确地说明了为什么我们将 web 表单独立放在一个模块中，而不是将其与 HTML、CSS 和 JavaScript 这些模块放在一起——表单元素比绝大多数其他的 HTML 元素都要复杂，并且它们还需要与相关的 CSS 和 JavaScript 技术紧密集合才能充分利用它们。
 
-> **备注：** 如果你正在使用一个无法创建自己的文件的计算机、平板电脑或其它设备，那么你可以尝试（大多数）在线编码程序中的代码示例，例如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/)。
+> **备注：** 如果你正在使用一个无法创建自己的文件的计算机、平板电脑或其他设备，那么你可以尝试（大多数）在线编码程序中的代码示例，例如 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/)。
 
 ## 基本指南
 
@@ -37,8 +37,8 @@ slug: Learn/Forms
 - [原生表单控件](/zh-CN/docs/Learn/Forms/Basic_native_form_controls)
   - : 我们从详细了解原始 HTML {{htmlelement("input")}} 元素的类型开始，同时学习在收集不同类型数据时可用的选择。
 - [HTML5 input 的类型](/zh-CN/docs/Learn/Forms/HTML5_input_types)
-  - : 在这里，我们深入挖掘 `<input>` 元素，了解 HTML5 发布时提供的其它 input 类型，以及它们提供的各种 UI 弓箭和数据收集增强功能。此外，我们可以了解 {{htmlelement('output')}} 元素。
-- [其它表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
+  - : 在这里，我们深入挖掘 `<input>` 元素，了解 HTML5 发布时提供的其他 input 类型，以及它们提供的各种 UI 弓箭和数据收集增强功能。此外，我们可以了解 {{htmlelement('output')}} 元素。
+- [其他表单控件](/zh-CN/docs/Learn/Forms/Other_form_controls)
   - : 接下来，我们学习所有非 `<input>` 表单控件，以及相关的工具，如：{{htmlelement('select')}}、{{htmlelement('textarea')}}、{{htmlelement('meter')}} 和 {{htmlelement('progress')}}。
 
 ## 表单样式指南

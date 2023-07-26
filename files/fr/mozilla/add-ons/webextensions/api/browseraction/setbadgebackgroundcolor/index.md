@@ -1,16 +1,6 @@
 ---
 title: browserAction.setBadgeBackgroundColor()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setBadgeBackgroundColor
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor
 ---
 
@@ -26,8 +16,8 @@ D'autres navigateurs utilisent toujours une couleur de texte blanche, il est don
 
 ```js
 browser.browserAction.setBadgeBackgroundColor(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -54,38 +44,36 @@ browser.browserAction.setBadgeBackgroundColor(
 - Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la couleur n'est pas définie.
 - Si `windowId` et `tabId` sont tous deux omis, la couleur d'arrière-plan du badge global est définie à la place.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setBadgeBackgroundColor",2)}}
-
-La couleur par défaut dans Firefox est : `[217, 0, 0, 255]`.
-
 ## Exemples
 
 Une couleur d'arrière plan qui commence en rouge et devient verte lorsque l'action du navigateur est cliquée :
 
 ```js
-browser.browserAction.setBadgeText({text: "1234"});
-browser.browserAction.setBadgeBackgroundColor({color: "red"});
+browser.browserAction.setBadgeText({ text: "1234" });
+browser.browserAction.setBadgeBackgroundColor({ color: "red" });
 
-browser.browserAction.onClicked.addListener(()=> {
-  browser.browserAction.setBadgeBackgroundColor({color: "green"});
+browser.browserAction.onClicked.addListener(() => {
+  browser.browserAction.setBadgeBackgroundColor({ color: "green" });
 });
 ```
 
 Réglez la couleur d'arrière-plan du badge uniquement pour l'onget actif :
 
 ```js
-browser.browserAction.setBadgeText({text: "1234"});
-browser.browserAction.setBadgeBackgroundColor({color: "red"});
+browser.browserAction.setBadgeText({ text: "1234" });
+browser.browserAction.setBadgeBackgroundColor({ color: "red" });
 
-browser.browserAction.onClicked.addListener((tab)=> {
+browser.browserAction.onClicked.addListener((tab) => {
   browser.browserAction.setBadgeBackgroundColor({
     color: "green",
-    tabId: tab.id
+    tabId: tab.id,
   });
 });
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

@@ -1,15 +1,6 @@
 ---
 title: downloads.DownloadQuery
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
-tags:
-  - API
-  - Add-ons
-  - DownloadQuery
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
 ---
 
@@ -74,9 +65,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `exists`{{optional_inline}}
   - : Un `boolean` si un fichier téléchargé existe toujours (`true`) ou non (`false`). Inclure seulement {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} avec cette valeur `existe`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.DownloadQuery")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

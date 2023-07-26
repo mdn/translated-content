@@ -1,16 +1,6 @@
 ---
 title: browserAction.disable()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - disable
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
 ---
 
@@ -22,8 +12,8 @@ Désactive l'action du navigateur pour un onglet, ce qui signifie qu'il ne peut 
 
 ```js
 browser.browserAction.disable(
-  tabId // optional integer
-)
+  tabId, // optional integer
+);
 ```
 
 ### Paramètres
@@ -31,9 +21,9 @@ browser.browserAction.disable(
 - `tabId`{{optional_inline}}
   - : `integer`. L'identifiant (ID) de l'onglet pour lequel vous souhaitez désactiver l'action du navigateur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserAction.disable")}}
+{{Compat}}
 
 ## Exemples
 

@@ -1,16 +1,8 @@
 ---
 title: '<head>: 문서 메타데이터 (헤더) 요소'
 slug: Web/HTML/Element/head
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
-  - Web
-  - 요소
-translation_of: Web/HTML/Element/head
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<head>` 요소**는 기계가 식별할 수 있는 문서 정보(메타데이터)를 담습니다. 정보로는 문서가 사용할 [제목](/ko/docs/Web/HTML/Element/title), [스크립트](/ko/docs/Web/HTML/Element/script), [스타일 시트](/ko/docs/Web/HTML/Element/style) 등이 있습니다.
@@ -96,7 +88,7 @@ HTML5 호환 브라우저는 `<head>`가 없는 경우 자동으로 생성합니
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.head")}}
+{{Compat}}
 
 ## 같이 보기
 

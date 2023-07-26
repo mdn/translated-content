@@ -1,17 +1,10 @@
 ---
 title: WebAssembly.validate()
 slug: WebAssembly/JavaScript_interface/validate
-tags:
-  - API
-  - JavaScript
-  - Méthode
-  - Reference
-  - WebAssembly
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
-original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 La fonction **`WebAssembly.validate()`** permet de valider un [tableau typé](/fr/docs/Web/JavaScript/Tableaux_typés) de _bytecode_ WebAssembly et renvoie un booléen qui indique si le contenu du tableau forme un module WebAssembly valide (`true`) ou non (`false`).
 
@@ -39,13 +32,14 @@ Si la valeur passée en argument n'est pas un tableau typé ou un {{jsxref("Arra
 Dans l'exemple suivant, (cf. le fichier `validate.html` du [code source](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html), ainsi que [l'exemple _live_](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html)), on récupère un module .wasm et on le convertit en un tableau typé. Ensuite, on appelle la méthode `validate()` afin de vérifier si le module est valide.
 
 ```js
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(function(bytes) {
-  var valid = WebAssembly.validate(bytes);
-  console.log("Les octets forment un module "
-    + (valid ? "" : "in") + "valide.");
-});
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then(function (bytes) {
+    var valid = WebAssembly.validate(bytes);
+    console.log(
+      "Les octets forment un module " + (valid ? "" : "in") + "valide.",
+    );
+  });
 ```
 
 ## Spécifications

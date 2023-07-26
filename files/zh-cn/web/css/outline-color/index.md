@@ -32,18 +32,18 @@ outline-color: unset;
 
 `outline-color`可用以下这些值。
 
-### Values
+### 值
 
 - {{cssxref("&lt;color&gt;")}}
   - : 轮廓颜色，规则同 `<color>`.
 - `invert`
   - : 反色，用于确认轮廓的显示。注意不是所有浏览器都支持该属性，若不则该属性无效。
 
-### 正规语法
+### 形式语法
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -61,7 +61,7 @@ p {
 }
 ```
 
-{{ EmbedLiveSample('Example') }}
+{{ EmbedLiveSample('示例') }}
 
 ## Accessibility concerns
 
@@ -83,7 +83,7 @@ Color contrast ratio is determined by comparing the luminosity of the text and b
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{cssxref("&lt;color&gt;")}} 数据类型
 - 其他与颜色有关的属性：{{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, 和{{cssxref("column-rule-color")}}

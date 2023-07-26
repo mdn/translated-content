@@ -1,11 +1,6 @@
 ---
 title: '-moz-force-broken-image-icon'
 slug: Web/CSS/-moz-force-broken-image-icon
-tags:
-  - CSS
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/CSS/-moz-force-broken-image-icon
 ---
 
@@ -64,4 +59,4 @@ Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne
 
 ## Voir aussi
 
-- {{Bug(58646)}}
+- [bug Firefox 58646](https://bugzil.la/58646)

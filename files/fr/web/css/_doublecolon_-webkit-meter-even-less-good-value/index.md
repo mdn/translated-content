@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-meter-even-less-good-value'
 slug: Web/CSS/::-webkit-meter-even-less-good-value
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-meter-even-less-good-value
 ---
 
@@ -43,7 +38,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-meter-even-less-good-value")}}
+{{Compat}}
 
 ## Voir aussi
 

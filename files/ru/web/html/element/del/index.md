@@ -14,11 +14,11 @@ translation_of: Web/HTML/Element/del
 
 | [Категории контента](/ru/docs/HTML/Content_categories) | [Фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content) или [потоковый контент](/ru/docs/HTML/Content_categories#Flow_content). |
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённый контент                                    | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                     |
-| Пропуск тега                                           | {{no_tag_omission}}                                                                                                                      |
+| Допустимое содержимое                                  | [Прозрачный](/ru/docs/HTML/Content_categories#Transparent_content_model).                                                                     |
+| Пропуск тегов                                          | {{no_tag_omission}}                                                                                                                      |
 | Допустимые родители                                    | Любой элемент, который принимает [фразовый контент](/ru/docs/HTML/Content_categories#Phrasing_content).                                       |
-| Допустимые ARIA роли                                   | Любые                                                                                                                                         |
-| DOM интерфейс                                          | {{domxref("HTMLModElement")}}                                                                                                      |
+| Допустимые ARIA-роли                                   | Любые                                                                                                                                         |
+| DOM-интерфейс                                          | {{domxref("HTMLModElement")}}                                                                                                      |
 
 ## Атрибуты
 
@@ -27,7 +27,7 @@ translation_of: Web/HTML/Element/del
 - {{htmlattrdef("cite")}}
   - : URI для ресурса, который объясняет изменение (например, протоколы соединений).
 - {{htmlattrdef("datetime")}}
-  - : Этот атрибут устанавливает время и дату изменение и должен представлять собой строку с допустимой датой и временем (время не является обязательным параметром - параметр опционален). Если значение не может быть проанализировано как дата с опционально временем, элемент не будет иметь соответствующей временной отметки. Формат строки без времени смотри в {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid date string")}}. Формат строки с датой и временем описан в {{SectionOnPage("/en-US/docs/Web/HTML/Date_and_time_formats", "Format of a valid local date and time string")}}.
+  - : Этот атрибут устанавливает время и дату изменение и должен представлять собой строку с допустимой датой и временем (время не является обязательным параметром - параметр опционален). Если значение не может быть проанализировано как дата с опционально временем, элемент не будет иметь соответствующей временной отметки. Формат строки без времени смотри в {{SectionOnPage("/ru/docs/Web/HTML/Date_and_time_formats", "Format of a valid date string")}}. Формат строки с датой и временем описан в {{SectionOnPage("/ru/docs/Web/HTML/Date_and_time_formats", "Format of a valid local date and time string")}}.
 
 ## Примеры
 

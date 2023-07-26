@@ -1,13 +1,8 @@
 ---
 title: '<body>: 문서 본문 요소'
 slug: Web/HTML/Element/body
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/body
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<body>` 요소**는 HTML 문서의 내용을 나타냅니다. 한 문서에 하나의 `<body>` 요소만 존재할 수 있습니다.
@@ -157,7 +152,7 @@ translation_of: Web/HTML/Element/body
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.body")}}
+{{Compat}}
 
 ## 같이 보기
 

@@ -1,13 +1,6 @@
 ---
 title: class 식
 slug: Web/JavaScript/Reference/Operators/class
-tags:
-  - ECMAScript 2015
-  - Expression
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/class
 ---
 
 {{jsSidebar("Operators")}}

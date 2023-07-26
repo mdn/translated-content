@@ -17,7 +17,7 @@ slug: Web/API/Window/outerHeight
 
 以下の図は、 `outerHeight` と `innerHeight` の違いを示しています。
 
-![innerHeight vs outerHeight illustration](/@api/deki/files/213/=FirefoxInnerVsOuterHeight2.png)
+![innerHeight vs outerHeight illustration](firefoxinnervsouterheight2.png)
 
 ## 仕様書
 

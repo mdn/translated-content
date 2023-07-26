@@ -94,7 +94,7 @@ for (let i = 0; i < lineCap.length; i++) {
 }
 ```
 
-{{EmbedLiveSample("Разница_между_значениями_lineCap", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}
+{{EmbedLiveSample("Разница_между_значениями_lineCap", "180", "180", "canvas_linecap.png")}}
 
 ## Спецификации
 

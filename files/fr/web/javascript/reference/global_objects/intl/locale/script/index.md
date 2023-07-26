@@ -1,14 +1,7 @@
 ---
 title: Intl.Locale.prototype.script
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/script
 ---
 
 {{JSRef}}
@@ -43,13 +36,11 @@ console.log(scriptObj.script); // Affichera "Latn" dans la console
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                    | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.script`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.script) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.script")}}
+{{Compat}}
 
 ## Voir aussi
 

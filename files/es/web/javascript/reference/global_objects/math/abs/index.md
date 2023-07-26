@@ -52,9 +52,9 @@ Math.abs();         // NaN
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.abs")}}
+{{Compat}}
 
 ## Ver también
 

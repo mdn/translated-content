@@ -19,7 +19,7 @@ ctx.getLineDash();
 
 ## 示例
 
-### 使用 `getLineDash` 方法
+### 获取当前的划线设置
 
 这是一段使用 `getLineDash` 方法的简单的代码片段。
 
@@ -32,63 +32,24 @@ ctx.getLineDash();
 #### JavaScript
 
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.setLineDash([5, 15]);
-console.log(ctx.getLineDash()); // [5, 15]
+ctx.setLineDash([10, 20]);
+console.log(ctx.getLineDash()); // [10, 20]
 
+// Draw a dashed line
 ctx.beginPath();
-ctx.moveTo(0,100);
-ctx.lineTo(400, 100);
+ctx.moveTo(0, 50);
+ctx.lineTo(300, 50);
 ctx.stroke();
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.setLineDash([5, 15]);
-ctx.beginPath();
-ctx.moveTo(0,100);
-ctx.lineTo(400, 100);
-ctx.stroke();</textarea>
-```
+{{ EmbedLiveSample('获取当前的划线设置', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 

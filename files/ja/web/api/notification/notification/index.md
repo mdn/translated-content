@@ -1,6 +1,8 @@
 ---
 title: Notification()
 slug: Web/API/Notification/Notification
+l10n:
+  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -9,7 +11,7 @@ slug: Web/API/Notification/Notification
 
 ## 構文
 
-```js
+```js-nolint
 new Notification(title)
 new Notification(title, options)
 ```
@@ -45,6 +47,7 @@ new Notification(title, options)
     - `requireInteraction`
       - : 通知が自動的に閉じるのではなく、ユーザーがクリックするか解除するまでアクティブな状態を維持すべきであることを示します。既定値は `false` です。
     - `actions`
+
       - : 通知で表示するアクションの配列です。配列内のそれぞれの要素は、以下のメンバーを持つオブジェクトです。
 
         - `action`: 通知上に表示されるユーザーアクションを特定する文字列。
@@ -62,11 +65,7 @@ new Notification(title, options)
 
 ```js
 function spawnNotification(body, icon, title) {
-  const options = {
-      body: body,
-      icon: icon
-  }
-  const notification = new Notification(title, options);
+  const notification = new Notification(title, { body, icon });
 }
 ```
 

@@ -1,9 +1,6 @@
 ---
 title: FormData.values()
 slug: Web/API/FormData/values
-page-type: web-api-instance-method
-browser-compat: api.FormData.values
-translation_of: Web/API/FormData/values
 ---
 
 {{APIRef("XMLHttpRequest")}}
@@ -43,11 +40,11 @@ value1
 value2
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

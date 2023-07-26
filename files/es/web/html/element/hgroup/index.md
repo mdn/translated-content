@@ -17,10 +17,10 @@ Este elemento se fue removido de la especificacion HTML5 (W3C), por favor no usa
 ### Contexto de uso
 
 | Contenido permitido        | Cero o más elementos HTML de encabezado ({{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}) |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de etiqueta        | Ninguna, ambas, la etiqueta de inicio y fin son obligatorias                                                                                                                                                                                         |
-| Elementos padre permitidos | Cualquier elemento que acepte [flujo de contenido](/en/HTML/Content_categories#flow_content).                                                                                                              |
-| Documento nomativo         | [HTML5, section 4.4.7](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-hgroup-element)                                                                                                                                 |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omisión de etiqueta        | Ninguna, ambas, la etiqueta de inicio y fin son obligatorias                                                                                                                                   |
+| Elementos padre permitidos | Cualquier elemento que acepte [flujo de contenido](/en/HTML/Content_categories#flow_content).                                                                                                  |
+| Documento nomativo         | [HTML5, section 4.4.7](http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-hgroup-element)                                                                           |
 
 ### Atributos
 
@@ -45,6 +45,10 @@ Este elemento implementa la interfaz `HTMLElement`.
 </hgroup>
 ```
 
-### Compatibilidad
+## Especificaciones
 
-{{Compat("html.elements.hgroup")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

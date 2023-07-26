@@ -19,7 +19,7 @@ translation_of: Web/CSS/background-image
 
 Если указанное изображение не может быть нарисовано (например, когда файл, определённый указанным URI, не может быть загружен), браузеры обрабатывают его так, как если бы оно было значением `none`.
 
-> **Примечание:** **Обратите внимание:** Даже, если изображение непрозрачно и цвет не будет показан при нормальных обстоятельствах, веб-разработчику следует всегда указывать атрибут {{cssxref("background-color")}}. Если изображение не может быть загружено —например, в случае отказа сетевого подключения — у элемента будет отображён цветной фон.
+> **Примечание:** Даже, если изображение непрозрачно и цвет не будет показан при нормальных обстоятельствах, веб-разработчику следует всегда указывать атрибут {{cssxref("background-color")}}. Если изображение не может быть загружено —например, в случае отказа сетевого подключения — у элемента будет отображён цветной фон.
 
 {{cssinfo}}
 
@@ -74,7 +74,7 @@ pre, p {
 }
 
 div {
-  background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+  background-image: url("mdn_logo_only_color.png");
 }
 
 p {
@@ -82,8 +82,8 @@ p {
 }
 
 .catsandstars {
-  background-image:  url("https://mdn.mozillademos.org/files/11991/startransparent.gif"),
-                     url("https://mdn.mozillademos.org/files/7693/catfront.png");
+  background-image:  url("startransparent.gif"),
+                     url("catfront.png");
   background-color: transparent;
 }
 ```

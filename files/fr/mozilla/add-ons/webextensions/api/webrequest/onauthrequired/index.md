@@ -1,16 +1,6 @@
 ---
 title: webRequest.onAuthRequired
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
-tags:
-  - API
-  - Addons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onAuthRequired
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
 ---
 
@@ -54,12 +44,12 @@ Si une extension a les permissions "webRequest", "webRequestBlocking", "proxy", 
 
 ```js
 browser.webRequest.onAuthRequired.addListener(
-  listener,                    // function
-  filter,                      //  object
-  extraInfoSpec                //  optional array of strings
-)
-browser.webRequest.onAuthRequired.removeListener(listener)
-browser.webRequest.onAuthRequired.hasListener(listener)
+  listener, // function
+  filter, //  object
+  extraInfoSpec, //  optional array of strings
+);
+browser.webRequest.onAuthRequired.removeListener(listener);
+browser.webRequest.onAuthRequired.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -165,9 +155,9 @@ Les événements ont trois fonctions :
 - `url`
   - : `string`. Cible de la demande.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.onAuthRequired", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -180,10 +170,7 @@ function observe(requestDetails) {
   console.log("observing: " + requestDetails.requestId);
 }
 
-browser.webRequest.onAuthRequired.addListener(
-  observe,
-  {urls: [target]}
-);
+browser.webRequest.onAuthRequired.addListener(observe, { urls: [target] });
 ```
 
 Ce code annule les demandes d'authentification pour l'URL cible :
@@ -193,14 +180,12 @@ var target = "https://intranet.company.com/";
 
 function cancel(requestDetails) {
   console.log("canceling: " + requestDetails.requestId);
-  return {cancel: true};
+  return { cancel: true };
 }
 
-browser.webRequest.onAuthRequired.addListener(
-  cancel,
-  {urls: [target]},
-  ["blocking"]
-);
+browser.webRequest.onAuthRequired.addListener(cancel, { urls: [target] }, [
+  "blocking",
+]);
 ```
 
 Ce code fournit les informations d'identification de manière synchrone. Il doit garder une trace des demandes en suspens, pour s'assurer qu'il n'essaie pas à plusieurs reprises de soumettre de mauvaises références :
@@ -210,8 +195,8 @@ var target = "https://intranet.company.com/";
 
 var myCredentials = {
   username: "me@company.com",
-  password: "zDR$ERHGDFy"
-}
+  password: "zDR$ERHGDFy",
+};
 
 var pendingRequests = [];
 
@@ -230,28 +215,22 @@ function provideCredentialsSync(requestDetails) {
   // assume our credentials were bad, and give up.
   if (pendingRequests.indexOf(requestDetails.requestId) != -1) {
     console.log("bad credentials for: " + requestDetails.requestId);
-    return {cancel:true};
+    return { cancel: true };
   }
   pendingRequests.push(requestDetails.requestId);
   console.log("providing credentials for: " + requestDetails.requestId);
-  return {authCredentials: myCredentials};
+  return { authCredentials: myCredentials };
 }
 
 browser.webRequest.onAuthRequired.addListener(
-    provideCredentialsSync,
-    {urls: [target]},
-    ["blocking"]
-  );
-
-browser.webRequest.onCompleted.addListener(
-  completed,
-  {urls: [target]}
+  provideCredentialsSync,
+  { urls: [target] },
+  ["blocking"],
 );
 
-browser.webRequest.onErrorOccurred.addListener(
-  completed,
-  {urls: [target]}
-);
+browser.webRequest.onCompleted.addListener(completed, { urls: [target] });
+
+browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
 ```
 
 Ce code fournit les informations d'identification de manière asynchrone, en les récupérant à partir du stockage. Il doit également assurer le suivi des demandes en suspens, afin de s'assurer qu'il n'essaie pas à plusieurs reprises de soumettre de mauvaises références :
@@ -278,8 +257,7 @@ function provideCredentialsAsync(requestDetails) {
   // and give up.
   if (pendingRequests.indexOf(requestDetails.requestId) != -1) {
     console.log("bad credentials for: " + requestDetails.requestId);
-    return {cancel: true};
-
+    return { cancel: true };
   } else {
     pendingRequests.push(requestDetails.requestId);
     console.log("providing credentials for: " + requestDetails.requestId);
@@ -290,20 +268,14 @@ function provideCredentialsAsync(requestDetails) {
 }
 
 browser.webRequest.onAuthRequired.addListener(
-    provideCredentialsAsync,
-    {urls: [target]},
-    ["blocking"]
-  );
-
-browser.webRequest.onCompleted.addListener(
-  completed,
-  {urls: [target]}
+  provideCredentialsAsync,
+  { urls: [target] },
+  ["blocking"],
 );
 
-browser.webRequest.onErrorOccurred.addListener(
-  completed,
-  {urls: [target]}
-);
+browser.webRequest.onCompleted.addListener(completed, { urls: [target] });
+
+browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
 ```
 
 {{WebExtExamples}}

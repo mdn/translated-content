@@ -15,11 +15,11 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
       <th scope="row">사전 요구 사항:</th>
       <td>
         <p>
-          코어 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>과
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a>에 익숙함,
+          코어 <a href="/ko/docs/Learn/HTML">HTML</a>,
+          <a href="/ko/docs/Learn/CSS">CSS</a>과
+          <a href="/ko/docs/Learn/JavaScript">JavaScript</a>에 익숙함,
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
           >에 대한 지식
         </p>
@@ -59,7 +59,7 @@ slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_compon
 </script>
 ```
 
-이제 `ToDoItem`에 내용을 추가해보겠습니다. Vue 2의 템플릿은 단일 루트 엘리멘트만을 허용합니다. 즉, 템플릿 섹션 안의 모든 것을 포함하는 하나의 엘리멘트가 존재해야 합니다. (Vue 3에서는 다중 루트 엘리멘트를 지원합니다!) 여기서는 [`<div>`](/en-US/docs/Web/HTML/Element/div) 를 루트 엘리멘트로 지정하겠습니다.
+이제 `ToDoItem`에 내용을 추가해보겠습니다. Vue 2의 템플릿은 단일 루트 엘리멘트만을 허용합니다. 즉, 템플릿 섹션 안의 모든 것을 포함하는 하나의 엘리멘트가 존재해야 합니다. (Vue 3에서는 다중 루트 엘리멘트를 지원합니다!) 여기서는 [`<div>`](/ko/docs/Web/HTML/Element/div) 를 루트 엘리멘트로 지정하겠습니다.
 
 1. 우선 템플릿 섹션에 빈 `<div>` 를 추가하세요.
 2. `<div>` 안에 체크박스와 레이블을 추가해보겠습니다. 아래와 같이 체크박스에 `id` 를 추가하고, 체크박스 id를 레이블에 매핑하는 `for` 속성을 추가합니다.
@@ -103,7 +103,7 @@ export default {
 
 `ToDoItem` 컴포넌트를 앱에 실제로 렌더링하려면 `<template>` 태그 안에서 `<to-do-item></to-do-item>` 요소를 사용해야 합니다. JavaScript에서 컴포넌트 파일의 이름과 그 표현은 항상 어퍼카멜케이스(e.g. `ToDoList`)를 사용하며, 해당 커스텀 엘리멘트는 하이픈으로 연결된 소문자(e.g. `<to-do-list>`)로 표현합니다.
 
-1. [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) 아래에 리스트 아이템([`<li>`](/en-US/docs/Web/HTML/Element/li))을 포함하는 비정렬 리스트([`<ul>`](/en-US/docs/Web/HTML/Element/ul))를 생성합니다.
+1. [`<h1>`](/ko/docs/Web/HTML/Element/Heading_Elements) 아래에 리스트 아이템([`<li>`](/ko/docs/Web/HTML/Element/li))을 포함하는 비정렬 리스트([`<ul>`](/ko/docs/Web/HTML/Element/ul))를 생성합니다.
 2. 리스트 아이템 안에 `<to-do-item></to-do-item>`을 추가합니다.
 
 `App.vue` `<template>` 은 아래와 같은 모양이 될 것입니다.
@@ -121,7 +121,7 @@ export default {
 
 렌더링된 앱을 다시 확인해보면 체크박스와 레이블로 구성된 `ToDoItem` 이 보일 것입니다.
 
-![The current rendering state of the app, which includes a title of To-Do List, and a single checkbox and label](https://mdn.mozillademos.org/files/17243/rendered-todoitem.png)
+![The current rendering state of the app, which includes a title of To-Do List, and a single checkbox and label](rendered-todoitem.png)
 
 ## props를 사용해 컴포넌트를 동적으로 만들기
 
@@ -213,7 +213,7 @@ So that's props in a nutshell. Next we'll move on to how Vue persists data state
 
 If you change the value of the `label` prop passed into the `<to-do-item></to-do-item>` call in your App component, you should see it update. This is great. We have a checkbox, with an updatable label. However, we're currently not doing anything with the "done" prop — we can check the checkboxes in the UI, but nowhere in the app are we recording whether a todo item is actually done.
 
-To achieve this, we want to bind the component's `done` prop to the `checked` attribute on the [`<input>`](/en-US/docs/Web/HTML/Element/input) element, so that it can serve as a record of whether the checkbox is checked or not. However, it's important that props serve as one-way data binding — a component should never alter the value of its own props. There are a lot of reasons for this. In part, components editing props can make debugging a challenge. If a value is passed to multiple children, it could be hard to track where the changes to that value were coming from. In addition, changing props can cause components to re-render. So mutating props in a component would trigger the component to rerender, which may in-turn trigger the mutation again.
+To achieve this, we want to bind the component's `done` prop to the `checked` attribute on the [`<input>`](/ko/docs/Web/HTML/Element/input) element, so that it can serve as a record of whether the checkbox is checked or not. However, it's important that props serve as one-way data binding — a component should never alter the value of its own props. There are a lot of reasons for this. In part, components editing props can make debugging a challenge. If a value is passed to multiple children, it could be hard to track where the changes to that value were coming from. In addition, changing props can cause components to re-render. So mutating props in a component would trigger the component to rerender, which may in-turn trigger the mutation again.
 
 To work around this, we can manage the `done` state using Vue’s `data` property. The `data` property is where you can manage local state in a component, it lives inside the component object alongside the `props` property and has the following structure:
 
@@ -345,49 +345,3 @@ And that will do for this article. At this point we have a nicely-working `ToDoI
 Now we're ready to add multiple `ToDoItem` components to our App. In our next article we'll look at adding a set of todo item data to our `App.vue` component, which we'll then loop through and display inside `ToDoItem` components using the `v-for` directive.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
-
-## In this module
-
-- [Introduction to client-side frameworks](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Framework main features](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
-- React
-
-  - [Getting started with React](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
-  - [Beginning our React todo list](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
-  - [Componentizing our React app](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
-  - [React interactivity: Events and state](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
-  - [React interactivity: Editing, filtering, conditional rendering](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
-  - [Accessibility in React](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
-  - [React resources](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
-
-- Ember
-
-  - [Getting started with Ember](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started)
-  - [Ember app structure and componentization](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization)
-  - [Ember interactivity: Events, classes and state](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state)
-  - [Ember Interactivity: Footer functionality, conditional rendering](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer)
-  - [Routing in Ember](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing)
-  - [Ember resources and troubleshooting](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources)
-
-- Vue
-
-  - [Getting started with Vue](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started)
-  - [Creating our first Vue component](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
-  - [Rendering a list of Vue components](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-  - [Adding a new todo form: Vue events, methods, and models](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - [Styling Vue components with CSS](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
-  - [Using Vue computed properties](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)
-  - [Vue conditional rendering: editing existing todos](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering)
-  - [Focus management with Vue refs](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management)
-  - [Vue resources](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources)
-
-- Svelte
-
-  - [Getting started with Svelte](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
-  - [Starting our Svelte Todo list app](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning)
-  - [Dynamic behavior in Svelte: working with variables and props](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props)
-  - [Componentizing our Svelte app](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components)
-  - [Advanced Svelte: Reactivity, lifecycle, accessibility](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility)
-  - [Working with Svelte stores](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores)
-  - [TypeScript support in Svelte](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript)
-  - [Deployment and next steps](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next)

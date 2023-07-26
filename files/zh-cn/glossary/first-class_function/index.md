@@ -3,6 +3,8 @@ title: First-class Function（头等函数）
 slug: Glossary/First-class_Function
 ---
 
+{{GlossarySidebar}}
+
 当一门编程语言的函数可以被当作变量一样用时，则称这门语言拥有**头等函数**。例如，在这门语言中，函数可以被当作参数传递给其他函数，可以作为另一个函数的返回值，还可以被赋值给一个变量。
 
 ## 示例 | 把函数赋值给变量
@@ -10,9 +12,9 @@ slug: Glossary/First-class_Function
 ### JavaScript
 
 ```js
-const foo = function() {
-   console.log("foobar");
-}
+const foo = function () {
+  console.log("foobar");
+};
 // 用变量来调用它
 foo();
 ```
@@ -27,7 +29,7 @@ foo();
 
 ```js
 function sayHello() {
-   return "Hello, ";
+  return "Hello, ";
 }
 function greeting(helloMessage, name) {
   console.log(helloMessage() + name);
@@ -46,9 +48,9 @@ greeting(sayHello, "JavaScript!"); // Hello, JavaScript!
 
 ```js
 function sayHello() {
-   return function() {
-      console.log("Hello!");
-   }
+  return function () {
+    console.log("Hello!");
+  };
 }
 ```
 
@@ -61,11 +63,11 @@ function sayHello() {
 ### 1- 用一个变量
 
 ```js
-const sayHello = function() {
-   return function() {
-      console.log("Hello!");
-   }
-}
+const sayHello = function () {
+  return function () {
+    console.log("Hello!");
+  };
+};
 const myFunc = sayHello();
 myFunc(); // Hello!
 ```
@@ -78,9 +80,9 @@ myFunc(); // Hello!
 
 ```js
 function sayHello() {
-   return function() {
-      console.log("Hello!");
-   }
+  return function () {
+    console.log("Hello!");
+  };
 }
 sayHello()();
 ```

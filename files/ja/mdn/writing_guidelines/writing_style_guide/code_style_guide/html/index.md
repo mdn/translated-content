@@ -17,15 +17,15 @@ original_slug: MDN/Guidelines/Code_guidelines/HTML
 HTML5 の文書型宣言を使ってください。短く、覚えやすく、後方互換性があります。
 
 ```html example-good
-<!DOCTYPE html>
+<!doctype html>
 ```
 
 ### 文書の言語
 
-{{htmlelement("html")}} 要素に {{htmlattrxref('lang')}} 属性を使い、文書の言語を設定してください。
+{{htmlelement("html")}} 要素に [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性を使い、文書の言語を設定してください。
 
 ```html example-good
-<html lang="ja">
+<html lang="ja"></html>
 ```
 
 これは、アクセシビリティや検索エンジンに有利で、コンテンツのローカライズにも役立ち、ベストプラクティスを使用するよう人々に注意を促すものです。
@@ -35,7 +35,7 @@ HTML5 の文書型宣言を使ってください。短く、覚えやすく、�
 また文書の文字セットを以下のように定義してください。
 
 ```html example-good
-<meta charset="utf-8">
+<meta charset="utf-8" />
 ```
 
 UTF-8 を使用しない特別な理由がない限り、 UTF-8 を使用してください。さらに、 HTML の {{HTMLElement("head")}} ブロックの中（最初の 1 キロバイト以内）で、できるだけ早く文字セットを設定した方がいいでしょう。これは、かなり[厄介な Internet Explorer のセキュリティ脆弱性](https://docs.microsoft.com/en-US/troubleshoot/developer/browsers/development-website/wrong-character-set-for-html-page)に対して保護されるからです。
@@ -45,7 +45,7 @@ UTF-8 を使用しない特別な理由がない限り、 UTF-8 を使用して�
 最後に、常にビューポートメタタグを HTML の {{HTMLElement("head")}} に追加して、この例がモバイル端末で動作する可能性を高めておく必要があります。文書には少なくとも次のものを入れてください。これは、必要に応じて後で修正することができます。
 
 ```html example-good
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width" />
 ```
 
 詳しくは [viewport メタタグを使用してモバイルブラウザーでのレイアウトを制御する](/ja/docs/Web/HTML/Viewport_meta_tag)をご覧ください。
@@ -55,7 +55,7 @@ UTF-8 を使用しない特別な理由がない限り、 UTF-8 を使用して�
 すべての属性の値は二重引用符で囲まなければなりません。 HTML5 でクオートの省略が許されるようになり、広まっていますが、取り入れるとマークアップが綺麗になり読みやすくなります。例えば、こちらは良い例です。
 
 ```html example-good
-<img src="images/logo.jpg" alt="A circular globe icon" class="no-border">
+<img src="images/logo.jpg" alt="A circular globe icon" class="no-border" />
 ```
 
 次の例と比べてください。
@@ -88,7 +88,7 @@ required="required"
 <p class="nice">This looks nice and neat</p>
 ```
 
-```html example-bad
+```html-nolint example-bad
 <P CLASS="WHOA-THERE">Why is my markup shouting?</P>
 ```
 
@@ -112,7 +112,7 @@ HTML には単一引用符でなく、二重引用符を使ってください。
 <p class="important">Yes</p>
 ```
 
-```html example-bad
+```html-nolint example-bad
 <p class='important'>Nope</p>
 ```
 
@@ -141,20 +141,5 @@ MDN Web Docs では、HTML 要素について書くためのいくつかのル�
 - **要素名**: [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) マクロを使用すると、その要素の MDN Web Docs ページへのリンクを作成します。例えば、`{HTMLElement("title")}}` と書くと "{{HTMLElement("title")}}" が生成されます。
   リンクを作成しない場合は、**名前を山括弧で囲み**、「インラインコード」スタイル（例：`<title>`）を使用してください。
 - **属性名**: 「インラインコード」スタイルを使用して、属性名を `code font` で表示します。
-    さらに、その属性が何をするものであるかの説明と関連して言及されるとき、またはページで初めて使用されるときは、 **`bold face`** で記述してください。
-- **属性の定義**: 定義語には [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) マクロを使用してください（例: `\{{htmlattrdef("type")}}`）。 これにより、用語の定義には [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) マクロを使用して、他のページから簡単にリンクすることができます（例: `\{{htmlattrxref("type", "element")}}`）。
+  さらに、その属性が何をするものであるかの説明と関連して言及されるとき、またはページで初めて使用されるときは、 **`bold face`** で記述してください。
 - **属性値**: 属性値に「インラインコード」スタイルを使用して `<code>` を適用し、コードサンプルの構文で必要な場合を除き、文字列の値を引用符で囲まないでください。例: 「`<input>` 要素の `type` 属性に `email` または `tel` を設定したとき ...」とします。
-
-### 末尾のスラッシュ
-
-空要素に XHTML スタイルの末尾のスラッシュを含めないでください、不要ですし、実行速度を遅くします。注意しないと古いブラウザーを中断させます（思い返してみると、 Netscape 4 から問題とはなっていませんが）。
-
-```html example-good
-<input type="text">
-<hr>
-```
-
-```html example-bad
-<input type="text" />
-<hr />
-```

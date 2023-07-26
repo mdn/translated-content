@@ -1,7 +1,6 @@
 ---
 title: Using the Gamepad API
 slug: Web/API/Gamepad_API/Using_the_Gamepad_API
-translation_of: Web/API/Gamepad_API/Using_the_Gamepad_API
 ---
 
 HTML5 introduced many of the necessary components for rich, interactive game development. Technologies like `<canvas>`, WebGL, `<audio>`, and `<video>`, along with JavaScript implementations, have matured to the point where they can now support many tasks previously requiring native code. The Gamepad API is a way for developers and designers to access and use gamepads and other game controllers.
@@ -327,10 +326,10 @@ if (!haveEvents) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}

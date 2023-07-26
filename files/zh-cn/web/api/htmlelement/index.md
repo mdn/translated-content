@@ -5,7 +5,7 @@ slug: Web/API/HTMLElement
 
 {{APIRef}}
 
-HTMLElement 接口表示所有的 [HTML](/zh-CN/docs/Web/HTML) 元素。一些 HTML 元素直接实现了 HTMLElement 接口，其它的间接实现 HTMLElement 接口。
+HTMLElement 接口表示所有的 [HTML](/zh-CN/docs/Web/HTML) 元素。一些 HTML 元素直接实现了 HTMLElement 接口，其他的间接实现 HTMLElement 接口。
 
 ## 属性
 
@@ -17,7 +17,6 @@ _继承自父接口 {{domxref("Element")}} 和 {{domxref("GlobalEventHandlers")}
 | {{domxref("HTMLElement.accessKeyLabel")}}                                                  | {{domxref("DOMString")}}                     | 返回一个包含元素访问的快捷键的字符串（只读）                               |
 | {{domxref("HTMLElement.contentEditable")}}                                                  | {{domxref("DOMString")}}                     | 获取/设置元素的可编辑状态                                                  |
 | {{domxref("HTMLElement.isContentEditable")}} {{readonlyInline}}                     | {{domxref("Boolean")}}                         | 表明元素的内容是否可编辑（只读）                                           |
-| {{domxref("HTMLElement.contextMenu")}}                                                      | {{domxref("HTMLMenuElement")}}             | 设置/获取元素的右键菜单                                                    |
 | {{domxref("HTMLElement.dataset")}} {{readonlyInline}}                                     | {{domxref("DOMStringMap")}}                 | 获取元素的自定义属性，是一个对象（key-value，只读）                        |
 | {{domxref("HTMLElement.dir")}}                                                                  | {{domxref("DOMString")}}                     | 获取/设置元素的方向，可选的值有：ltr，rtl，auto                            |
 | {{domxref("HTMLElement.draggable")}}                                                          | {{domxref("Boolean")}}                         | 设置/获取元素是否可以拖拽                                                  |

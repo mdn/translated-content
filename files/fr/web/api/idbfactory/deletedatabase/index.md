@@ -1,11 +1,6 @@
 ---
 title: IDBFactory.deleteDatabase()
 slug: Web/API/IDBFactory/deleteDatabase
-tags:
-  - IDBFactory
-  - IndexedDB
-  - Méthode
-  - Reference
 translation_of: Web/API/IDBFactory/deleteDatabase
 ---
 
@@ -49,11 +44,11 @@ Cette méthode renvoie un objet {{domxref("IDBOpenDBRequest")}} sur lequel seron
 ```js
 var DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
 
-DBDeleteRequest.onerror = function(event) {
+DBDeleteRequest.onerror = function (event) {
   console.log("Erreur lors de la suppression de la base");
 };
 
-DBDeleteRequest.onsuccess = function(event) {
+DBDeleteRequest.onsuccess = function (event) {
   console.log("Suppression de la base réussie");
 
   console.log(event.result); // undefined
@@ -76,4 +71,4 @@ DBDeleteRequest.onsuccess = function(event) {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer des données et les modifier : {{domxref("IDBObjectStore")}}
 - Manipuler des curseurs : {{domxref("IDBCursor")}}
-- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages)
+- Exemple de référence pour IndexedDB : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)

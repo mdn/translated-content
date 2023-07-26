@@ -1,14 +1,6 @@
 ---
 title: 나머지 할당 (%=)
 slug: Web/JavaScript/Reference/Operators/Remainder_assignment
-tags:
-  - Assignment operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Remainder_assignment
-browser-compat: javascript.operators.remainder_assignment
 ---
 {{jsSidebar("Operators")}}
 

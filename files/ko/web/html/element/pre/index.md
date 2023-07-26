@@ -1,15 +1,8 @@
 ---
 title: <pre>
 slug: Web/HTML/Element/pre
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/pre
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<pre>` 요소**는 미리 서식을 지정한 텍스트를 나타내며, HTML에 작성한 내용 그대로 표현합니다. 텍스트는 보통 고정폭 글꼴을 사용해 렌더링하고, 요소 내 공백문자를 그대로 유지합니다.
@@ -121,7 +114,7 @@ body {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.pre")}}
+{{Compat}}
 
 ## 같이 보기
 

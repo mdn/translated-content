@@ -47,13 +47,13 @@ Para colocar uma única imagem em uma página da web, usamos o elemento {{htmlel
 Por exemplo, se sua imagem for chamada `dinossauro.jpg`, e está no mesmo diretório de sua página HTML, você poderia inserir a imagem assim:
 
 ```html
-<img src="dinossauro.jpg">
+<img src="dinossauro.jpg" />
 ```
 
 Se a imagem estivesse em um subdiretório de `images`, que estivesse dentro do mesmo diretório da página HTML (que o Google recomenda para fins de indexição/{{glossary("SEO")}}), então você a incorporaria da seguinte maneira:
 
 ```html
-<img src="images/dinossauro.jpg">
+<img src="images/dinossauro.jpg" />
 ```
 
 E assim por diante.
@@ -63,7 +63,7 @@ E assim por diante.
 Você pode incorporar a imagem usando seu URL absoluto, por exemplo:
 
 ```html
-<img src="https://www.example.com/images/dinosaur.jpg">
+<img src="https://www.example.com/images/dinosaur.jpg" />
 ```
 
 Mas isso é inútil, pois apenas faz o navegador trabalhar mais, pesquisando o endereço IP do servidor DNS novamente, etc. Você quase sempre manterá as imagens do seu site no mesmo servidor que o HTML.
@@ -78,7 +78,7 @@ Mas isso é inútil, pois apenas faz o navegador trabalhar mais, pesquisando o e
 
 Nosso código acima nos daria o seguinte resultado:
 
-![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](https://mdn.mozillademos.org/files/12700/basic-image.png)
+![A basic image of a dinosaur, embedded in a browser, with Images in HTML written above it](basic-image.png)
 
 > **Nota:** Elementos como {{htmlelement("img")}} e {{htmlelement("video")}} às vezes são chamados de elementos substituídos. Isso ocorre porque o conteúdo e o tamanho do elemento são definidos por um recurso externo (como uma imagem ou arquivo de vídeo), não pelo conteúdo do próprio elemento.
 
@@ -89,14 +89,15 @@ Nosso código acima nos daria o seguinte resultado:
 O próximo atributo que veremos é `alt`. Seu valor deve ser uma descrição textual da imagem, para uso em situações em que a imagem não pode ser vista/exibida ou leva muito tempo para renderizar devido a uma conexão lenta à Internet. Por exemplo, nosso código acima pode ser modificado da seguinte maneira:
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="The head and torso of a dinosaur skeleton;
-          it has a large head with long sharp teeth">
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth" />
 ```
 
 A maneira mais fácil de testar seu texto `alt` é digitar incorretamente seu nome de arquivo. Se, por exemplo, o nome da nossa imagem estivesse escrito `dinosooooor.jpg`, o navegador não exibiria a imagem, mas exibiria o texto alternativo:
 
-![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](https://mdn.mozillademos.org/files/12702/alt-text.png)
+![The Images in HTML title, but this time the dinosaur image is not displayed, and alt text is in its place.](alt-text.png)
 
 Então, por que você veria ou precisaria de texto alternativo? Pode ser útil por vários motivos:
 
@@ -122,16 +123,17 @@ Essencialmente, a chave é oferecer uma experiência utilizável, mesmo quando a
 Você pode usar os atributos `width` e `height`, para especificar a largura e altura da sua imagem. Você pode encontrar a largura e a altura da sua imagem de várias maneiras. Por exemplo, no Mac, você pode usar <kbd>Cmd</kbd> + <kbd>I</kbd> para exibir as informações do arquivo de imagem. Voltando ao nosso exemplo, poderíamos fazer isso:
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="A cabeça e o tronco de um esqueleto de dinossauro;
+<img
+  src="images/dinosaur.jpg"
+  alt="A cabeça e o tronco de um esqueleto de dinossauro;
           tem uma cabeça grande com dentes longos e afiados"
-     width="400"
-     height="341">
+  width="400"
+  height="341" />
 ```
 
 Isso não resulta em muita diferença para a tela, em circunstâncias normais. Mas se a imagem não estiver sendo exibida, por exemplo, o usuário acabou de navegar para a página e a imagem ainda não foi carregada, você notará que o navegador está deixando um espaço para a imagem aparecer:
 
-![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](https://mdn.mozillademos.org/files/12706/alt-text-with-width-height.png)
+![The Images in HTML title, with dinosaur alt text, displayed inside a large box that results from width and height settings](alt-text-with-width-height.png)
 
 É uma coisa boa a fazer, resultando no carregamento da página mais rápido e sem problemas.
 
@@ -144,17 +146,18 @@ No entanto, você não deve alterar o tamanho das suas imagens usando atributos 
 Como [nos links](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks), você também pode adicionar o atributo `title` nas images, para fornecer mais informações de suporte, se necessário. No nosso exemplo, poderíamos fazer isso:
 
 ```html
-<img src="images/dinosaur.jpg"
-     alt="A cabeça e o tronco de um esqueleto de dinossauro;
+<img
+  src="images/dinosaur.jpg"
+  alt="A cabeça e o tronco de um esqueleto de dinossauro;
           tem uma cabeça grande com dentes longos e afiados"
-     width="400"
-     height="341"
-     title="Um T-Rex em exibição no Museu da Universidade de Manchester">
+  width="400"
+  height="341"
+  title="Um T-Rex em exibição no Museu da Universidade de Manchester" />
 ```
 
 Isso nos dá uma dica de ferramenta, assim como os títulos dos links:
 
-![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](https://mdn.mozillademos.org/files/12708/image-with-title.png)
+![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](image-with-title.png)
 
 Os títulos das imagens não são essenciais para incluir. Geralmente, é melhor incluir essas informações de suporte no texto principal do artigo, em vez de anexá-las à imagem. No entanto, eles são úteis em algumas circunstâncias; por exemplo, em uma galeria de imagens quando você não tem espaço para legendas.
 
@@ -178,8 +181,7 @@ Se você cometer um erro, sempre poderá redefini-lo usando o botão _Reset_. Se
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input">
-<img></textarea>
+<textarea id="code" class="input"><img></textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -190,10 +192,11 @@ Se você cometer um erro, sempre poderá redefini-lo usando o botão _Reset_. Se
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 10em;
   padding: 10px;
@@ -217,13 +220,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n     alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n     width="200"\n     height="171"\n     title="A T-Rex on display in the Manchester University Museum">';
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n     alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n     width="200"\n     height="171"\n     title="A T-Rex on display in the Manchester University Museum">';
   drawOutput();
 });
 
@@ -239,11 +243,12 @@ Por falar em legendas, existem várias maneiras de adicionar uma legenda para ac
 
 ```html
 <div class="figure">
-  <img src="images/dinosaur.jpg"
-       alt="The head and torso of a dinosaur skeleton;
+  <img
+    src="images/dinosaur.jpg"
+    alt="The head and torso of a dinosaur skeleton;
             it has a large head with long sharp teeth"
-       width="400"
-       height="341">
+    width="400"
+    height="341" />
 
   <p>A T-Rex on display in the Manchester University Museum.</p>
 </div>
@@ -267,7 +272,7 @@ Uma solução melhor, é usar os elementos do HTML5 {{htmlelement("figure")}} e 
 
 O elemento {{htmlelement("figcaption")}} informa aos navegadores e à tecnologia de assistência que a legenda descreve o outro conteúdo do elemento {{htmlelement("figure")}}.
 
-> **Nota:** Do ponto de vista da acessibilidade, legendas e {{htmlattrxref('alt','img')}} texto têm papéis distintos. As legendas beneficiam até as pessoas que podem ver a imagem, enquanto {{htmlattrxref('alt','img')}} texto fornece a mesma funcionalidade que uma imagem ausente. Portanto, legendas e `alt` texto não deve apenas dizer a mesma coisa, porque ambos aparecem quando a imagem desaparece. Tente desativar as imagens no seu navegador e veja como fica.
+> **Nota:** Do ponto de vista da acessibilidade, legendas e [`alt`](/pt-BR/docs/Web/HTML/Element/img#alt) texto têm papéis distintos. As legendas beneficiam até as pessoas que podem ver a imagem, enquanto [`alt`](/pt-BR/docs/Web/HTML/Element/img#alt) texto fornece a mesma funcionalidade que uma imagem ausente. Portanto, legendas e `alt` texto não deve apenas dizer a mesma coisa, porque ambos aparecem quando a imagem desaparece. Tente desativar as imagens no seu navegador e veja como fica.
 
 Uma figura não precisa ser uma imagem. É uma unidade de conteúdo independente que:
 
@@ -288,8 +293,7 @@ Se você cometer um erro, sempre poderá redefini-lo usando o botão _Reset_. Se
 
 ```html hidden
 <h2>Input</h2>
-<textarea id="code" class="input">
-</textarea>
+<textarea id="code" class="input"></textarea>
 <h2>Output</h2>
 <div class="output"></div>
 <div class="controls">
@@ -300,10 +304,11 @@ Se você cometer um erro, sempre poderá redefini-lo usando o botão _Reset_. Se
 
 ```css hidden
 body {
-  font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;
+  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
 }
 
-.input, .output {
+.input,
+.output {
   width: 90%;
   height: 10em;
   padding: 10px;
@@ -327,13 +332,14 @@ function drawOutput() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener("click", function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   drawOutput();
 });
 
-solution.addEventListener("click", function() {
-textarea.value = '<figure>\n  <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n       alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n       width="200"\n       height="171">\n  <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
+solution.addEventListener("click", function () {
+  textarea.value =
+    '<figure>\n  <img src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"\n       alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"\n       width="200"\n       height="171">\n  <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>\n</figure>';
   drawOutput();
 });
 
@@ -345,7 +351,7 @@ window.addEventListener("load", drawOutput);
 
 ## Imagens de fundo CSS
 
-Você também pode usar CSS para incorporar imagens em páginas da web (e JavaScript, mas isso é outra história). A propriedade {{cssxref("background-image")}} do CSS, e o outras propriedades `background-*`, são usados ​​para controlar o posicionamento da imagem de fundo. Por exemplo, para colocar uma imagem de plano de fundo em cada parágrafo de uma página, você pode fazer o seguinte:
+Você também pode usar CSS para incorporar imagens em páginas da web (e JavaScript, mas isso é outra história). A propriedade {{cssxref("background-image")}} do CSS, e outras propriedades `background-*`, são usados para controlar o posicionamento da imagem de fundo. Por exemplo, para colocar uma imagem de plano de fundo em cada parágrafo de uma página, você pode fazer o seguinte:
 
 ```css
 p {

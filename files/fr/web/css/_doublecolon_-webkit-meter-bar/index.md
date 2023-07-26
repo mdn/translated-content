@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-meter-bar'
 slug: Web/CSS/::-webkit-meter-bar
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-meter-bar
 ---
 
@@ -50,7 +45,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-meter-bar")}}
+{{Compat}}
 
 ## Voir aussi
 

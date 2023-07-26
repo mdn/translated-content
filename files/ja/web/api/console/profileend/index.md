@@ -7,7 +7,7 @@ i10n:
 
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-> **警告:** console.profile() の直後に本 API を呼び出すと、本 API が動作しないことがあります。これを回避するには、 setTimeout の中で 5ms 以上遅延させて呼び出してください。 {{bug(1240249)}} を参照してください。
+> **警告:** console.profile() の直後に本 API を呼び出すと、本 API が動作しないことがあります。これを回避するには、 setTimeout の中で 5ms 以上遅延させて呼び出してください。 [Firefox バグ 1240249](https://bugzil.la/1240249) を参照してください。
 
 **`console.profileEnd()`** メソッドは、 {{DOMxRef("console.profile()")}} で開始したプロファイルの記録を終了します。
 

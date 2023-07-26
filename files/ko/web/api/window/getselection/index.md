@@ -1,7 +1,6 @@
 ---
 title: Window.getSelection()
 slug: Web/API/Window/getSelection
-translation_of: Web/API/Window/getSelection
 ---
 
 {{ ApiRef() }}
@@ -50,11 +49,11 @@ HTML inputs provide simpler helper APIs for working with selection (see {{domxre
 
 Notice the difference between _selection_ and _focus_. {{domxref("Document.activeElement")}} returns the focused element.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

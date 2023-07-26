@@ -1,13 +1,6 @@
 ---
 title: EventSource()
 slug: Web/API/EventSource/EventSource
-tags:
-  - API
-  - EventSource
-  - 레퍼런스
-  - 생성자
-  - 서버 전송 이벤트
-translation_of: Web/API/EventSource/EventSource
 ---
 
 {{APIRef('WebSockets API')}}
@@ -41,7 +34,7 @@ evtSource.onmessage = function(e) {
 }
 ```
 
-> **참고:** **노트**: GitHub 에서 전체 예시를 확인할 수 있습니다 — [Simple SSE demo using PHP를 사용하는 간단한 SSE 데모](https://github.com/mdn/dom-examples/tree/master/server-sent-events)를 보세요.
+> **참고:** GitHub 에서 전체 예시를 확인할 수 있습니다 — [Simple SSE demo using PHP를 사용하는 간단한 SSE 데모](https://github.com/mdn/dom-examples/tree/master/server-sent-events)를 보세요.
 
 ## 명세
 

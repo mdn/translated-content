@@ -5,13 +5,9 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/length
 
 {{JSRef}}
 
-**`length`**访问器属性表示类型化数组的长度（元素数）。
+**`length`** 访问器属性表示类型化数组的长度（元素数）。
 
-## 语法
-
-```plain
-typedarray.length
-```
+{{EmbedInteractiveExample("pages/js/typedarray-length.html","shorter")}}
 
 ## 描述
 

@@ -11,7 +11,7 @@ El elemento {{HTMLElement("input")}} del tipo **`"range"`** permite que el usuar
 ### Ejemplo
 
 ```html
-<input type="range">
+<input type="range" />
 ```
 
 {{EmbedLiveSample("summary_sample1", 600, 40)}}
@@ -38,11 +38,11 @@ Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un 
     <tr>
       <td><strong>Atributos comunes soportados</strong></td>
       <td>
-        {{htmlattrxref("autocomplete", "input")}},
-        {{htmlattrxref("list", "input")}},
-        {{htmlattrxref("max", "input")}},
-        {{htmlattrxref("min", "input")}} y
-        {{htmlattrxref("step", "input")}}
+        <a href="/es/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#max"><code>max</code></a>,
+        <a href="/es/docs/Web/HTML/Element/input#min"><code>min</code></a> y
+        <a href="/es/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
@@ -63,11 +63,13 @@ Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un 
 
 ## Value
 
-El atributo {{htmlattrxref("value", "input")}} contiene un {{domxref("DOMString")}} que es la representación de tipo cadena del número seleccionado. El valor nunca es una cadena vacía (`""`). El valor por defecto es el punto intermedio entre los valores mínimo y máximo especificados, a menos que el valor máximo sea menor que el valor mínimo, en cuyo caso el valor por defecto será el valor del atributo `min`. El algoritmo de determina el valor por defecto es:
+El atributo [`value`](/es/docs/Web/HTML/Element/input#value) contiene un {{domxref("DOMString")}} que es la representación de tipo cadena del número seleccionado. El valor nunca es una cadena vacía (`""`). El valor por defecto es el punto intermedio entre los valores mínimo y máximo especificados, a menos que el valor máximo sea menor que el valor mínimo, en cuyo caso el valor por defecto será el valor del atributo `min`. El algoritmo de determina el valor por defecto es:
 
 ```js
-defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
-               : rangeElem.min + (rangeElem.max - rangeElem.min)/2;
+defaultValue =
+  rangeElem.max < rangeElem.min
+    ? rangeElem.min
+    : rangeElem.min + (rangeElem.max - rangeElem.min) / 2;
 ```
 
 Si se intenta establecer un valor inferior al mínimo definido, el valor será igual al mínimo. De manera similar, un intento de establecer un valor superior al máximo da como resultado el valor máximo.
@@ -87,32 +89,32 @@ Como regla general, si el usuario está más interesado en la distancia entre un
 
 ### Especificar los valores mínimo y máximo
 
-Por defecto, el valor mínimo es 0 y el máximo es 100. Si es necesario modificar dichos valores, podemos usar los atributos {{htmlattrxref("min", "input")}} y/o {{htmlattrxref("max", "input")}}. Podemos usar cualquier valor de coma flotante.
+Por defecto, el valor mínimo es 0 y el máximo es 100. Si es necesario modificar dichos valores, podemos usar los atributos [`min`](/es/docs/Web/HTML/Element/input#min) y/o [`max`](/es/docs/Web/HTML/Element/input#max). Podemos usar cualquier valor de coma flotante.
 
 Por ejemplo, para usar un rango entre -10 y 10, usaremos:
 
 ```html
-<input type="range" min="-10" max="10">
+<input type="range" min="-10" max="10" />
 ```
 
 {{EmbedLiveSample("Specifying_the_minimum_and_maximum", 600, 40)}}
 
 ### Definir el tamaño de los saltos
 
-Por defecto, cada salto tiene valor 1, es decir el valor será siempre un número entero. Podemos cambiarlo mediante el atributo {{htmlattrxref("step")}}. Si necesitas, por ejemplo, un valor entre 5 y 10 con una precisión de dos decimales, debes indicar que el valor de `step` es 0.01:
+Por defecto, cada salto tiene valor 1, es decir el valor será siempre un número entero. Podemos cambiarlo mediante el atributo [`step`](/es/docs/Web/HTML/Global_attributes#step). Si necesitas, por ejemplo, un valor entre 5 y 10 con una precisión de dos decimales, debes indicar que el valor de `step` es 0.01:
 
 ```html
-<input type="range" min="5" max="10" step="0.01">
+<input type="range" min="5" max="10" step="0.01" />
 ```
 
 {{EmbedLiveSample("Granularity_sample1", 600, 40)}}
 
 #### Valor `any`
 
-Si quieres aceptar cualquier valor independientemente de la cantidad de decimales, puede especificar un valor de `"any"` al atrtibuto {{htmlattrxref("step", "input")}}:
+Si quieres aceptar cualquier valor independientemente de la cantidad de decimales, puede especificar un valor de `"any"` al atrtibuto [`step`](/es/docs/Web/HTML/Element/input#step):
 
 ```html
-<input type="range" min="0" max="3.14" step="any">
+<input type="range" min="0" max="3.14" step="any" />
 ```
 
 {{EmbedLiveSample("Granularity_sample2", 600, 40)}}
@@ -121,7 +123,7 @@ En el ejemplo, permitimos al usuario seleccionar cualquier valor entre 0 y π si
 
 ### Añadir marcas y etiquetas
 
-La especificación HTML permite a los navegadores cierta flexibilidad sobre cómo presentar el control range. En ningún sitio es más notoria dicha flexibilidad como a la hora de representar las marcas y las etiquetas de un rango. La especificación describe cómo añadir puntos personalizados al control range usando el atributo {{htmlattrxref("list", "input")}} y el elemento {{HTMLElement("datalist")}}, pero no hay requisitos o recomendaciones de estandarizar las marcas a lo largo del control.
+La especificación HTML permite a los navegadores cierta flexibilidad sobre cómo presentar el control range. En ningún sitio es más notoria dicha flexibilidad como a la hora de representar las marcas y las etiquetas de un rango. La especificación describe cómo añadir puntos personalizados al control range usando el atributo [`list`](/es/docs/Web/HTML/Element/input#list) y el elemento {{HTMLElement("datalist")}}, pero no hay requisitos o recomendaciones de estandarizar las marcas a lo largo del control.
 
 #### Mockups del control range
 
@@ -129,12 +131,12 @@ Como los navegadores tienen esta flexibilidad, y hasta la fecha ninguno admite t
 
 ##### El control rango sin adornos
 
-Cuando no especificas un atributo {{htmlattrxref("list", "input")}} al input range, un navegador que lo soporte mostrará lo siguie.
+Cuando no especificas un atributo [`list`](/es/docs/Web/HTML/Element/input#list) al input range, un navegador que lo soporte mostrará lo siguie.
 
 HTML
 
 ```html
-<input type="range">
+<input type="range" />
 ```
 
 Captura de pantalla
@@ -142,25 +144,25 @@ Captura de pantalla
 
 ##### Un control rango con marcas
 
-El siguiente rango utiliza el atributo `list` (al cual le especificamos el ID del elemento {{HTMLElement("datalist")}}) para definir la serie de marcas del rango. Hay once marcas, cada una de ellas mide un 10%, representadas por el {{htmlattrxref("value", "option")}} de cada elemento {{HTMLElement("option")}}.
+El siguiente rango utiliza el atributo `list` (al cual le especificamos el ID del elemento {{HTMLElement("datalist")}}) para definir la serie de marcas del rango. Hay once marcas, cada una de ellas mide un 10%, representadas por el [`value`](/es/docs/Web/HTML/Element/option#value) de cada elemento {{HTMLElement("option")}}.
 
 HTML
 
 ```html
-<input type="range" list="tickmarks">
+<input type="range" list="tickmarks" />
 
 <datalist id="tickmarks">
-  <option value="0">
-  <option value="10">
-  <option value="20">
-  <option value="30">
-  <option value="40">
-  <option value="50">
-  <option value="60">
-  <option value="70">
-  <option value="80">
-  <option value="90">
-  <option value="100">
+  <option value="0"></option>
+  <option value="10"></option>
+  <option value="20"></option>
+  <option value="30"></option>
+  <option value="40"></option>
+  <option value="50"></option>
+  <option value="60"></option>
+  <option value="70"></option>
+  <option value="80"></option>
+  <option value="90"></option>
+  <option value="100"></option>
 </datalist>
 ```
 
@@ -169,25 +171,25 @@ Captura de pantalla
 
 ##### Un control rango con marcas y etiquetas
 
-Puedes añadir etiquetas a tu control range usando el atributo {{htmlattrxref("label", "option")}} al elemento {{HTMLElement("option")}} correspondiente a cada marca que desees etiquetar.
+Puedes añadir etiquetas a tu control range usando el atributo [`label`](/es/docs/Web/HTML/Element/option#label) al elemento {{HTMLElement("option")}} correspondiente a cada marca que desees etiquetar.
 
 HTML
 
 ```html
-<input type="range" list="tickmarks">
+<input type="range" list="tickmarks" />
 
 <datalist id="tickmarks">
-  <option value="0" label="0%">
-  <option value="10">
-  <option value="20">
-  <option value="30">
-  <option value="40">
-  <option value="50" label="50%">
-  <option value="60">
-  <option value="70">
-  <option value="80">
-  <option value="90">
-  <option value="100" label="100%">
+  <option value="0" label="0%"></option>
+  <option value="10"></option>
+  <option value="20"></option>
+  <option value="30"></option>
+  <option value="40"></option>
+  <option value="50" label="50%"></option>
+  <option value="60"></option>
+  <option value="70"></option>
+  <option value="80"></option>
+  <option value="90"></option>
+  <option value="100" label="100%"></option>
 </datalist>
 ```
 
@@ -200,12 +202,12 @@ Captura de pantalla
 
 Por defecto, si un navegador renderiza un input range, lo mostrará como un "slider" (deslizador) que se desliza hacia la izquierda y hacia la derecha. By default, if a browser renders a range input as a slider, it will render it so that the knob slides left and right. Sin embargo puedes cambiar esto fácilmente para que se deslice hacia arriba y hacia abajo simplemente usando CSS
 
-> **Nota:** Esto aún no está implementado por los principales navegadores. This is not actually implemented yet by any of the major browsers. See Firefox {{bug(981916)}}, [Chrome bug 341071](https://bugs.chromium.org/p/chromium/issues/detail?id=341071).
+> **Nota:** Esto aún no está implementado por los principales navegadores. This is not actually implemented yet by any of the major browsers. See Firefox [Error 981916 en Firefox](https://bugzil.la/981916), [Chrome bug 341071](https://bugs.chromium.org/p/chromium/issues/detail?id=341071).
 
 Si tenemos el siguiente control range:
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 {{EmbedLiveSample("Orientation_sample1", 200, 200, "orientation_sample1.png")}}
@@ -224,7 +226,7 @@ Dicho control se muestra en horizontal (al menos en los principales navegadores,
 #### HTML
 
 ```html
-<input type="range" id="volume" min="0" max="11" value="7" step="1">
+<input type="range" id="volume" min="0" max="11" value="7" step="1" />
 ```
 
 #### Result
@@ -241,7 +243,7 @@ El HTML necesita que el elemento {{HTMLElement("input")}} esté dentro de un ele
 
 ```html
 <div class="slider-wrapper">
-  <input type="range" min="0" max="11" value="7" step="1">
+  <input type="range" min="0" max="11" value="7" step="1" />
 </div>
 ```
 
@@ -280,10 +282,10 @@ El tamaño del range es 150 pixeles de ancho por 20 pixeles de alto. Ponemos los
 
 No hay un patrón de validación disponible; sin embargo, se realizan las siguientes formas de validación automática:
 
-- Si el {{htmlattrxref("value", "input")}} está configurado con un valor que no se puede convertir en un número de coma flotante válido, la validación falla porque recibe una entrada incorrecta.
-- El valor no puede ser menor que el valor de {{htmlattrxref("min", "input")}}. Por defecto es 0.
-- El valor no puede ser mayor que el {{htmlattrxref("max", "input")}}. Por defecto es 100.
-- El valor será un múltiplo del valor de {{htmlattrxref("step", "input")}}. Por defecto es 1.
+- Si el [`value`](/es/docs/Web/HTML/Element/input#value) está configurado con un valor que no se puede convertir en un número de coma flotante válido, la validación falla porque recibe una entrada incorrecta.
+- El valor no puede ser menor que el valor de [`min`](/es/docs/Web/HTML/Element/input#min). Por defecto es 0.
+- El valor no puede ser mayor que el [`max`](/es/docs/Web/HTML/Element/input#max). Por defecto es 100.
+- El valor será un múltiplo del valor de [`step`](/es/docs/Web/HTML/Element/input#step). Por defecto es 1.
 
 ## Ejemplos
 

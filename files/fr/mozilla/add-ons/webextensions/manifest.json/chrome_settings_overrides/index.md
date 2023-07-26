@@ -1,12 +1,6 @@
 ---
 title: chrome_settings_overrides
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - chrome_settings_overrides
-  - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
 ---
 
@@ -211,6 +205,6 @@ La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés
   </tbody>
 </table>
 
-## Compatibilité de navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.chrome_settings_overrides", 10)}}
+{{Compat}}

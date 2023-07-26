@@ -1,11 +1,6 @@
 ---
 title: <ins>
 slug: Web/HTML/Element/ins
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/ins
 ---
 
@@ -21,9 +16,9 @@ L'élément HTML **`<ins>`** représente un fragment de texte qui a été ajout�
 
 On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Attributs_universels) pour cet élément.
 
-- {{htmlattrdef("cite")}}
+- `cite`
   - : Cet attribut définit l'URI d'une ressource qui explique la modification (par exemple, un compte-rendu de réunion ou un lien vers un rapport).
-- {{htmlattrdef("datetime")}}
+- `datetime`
   - : Cet attribut indique la date et l'heure de la modification. La valeur de cet attribut doit être [une date valide avec une chaîne de caractères optionnelle pour l'heure](https://www.w3.org/TR/2011/WD-html5-20110525/common-microsyntaxes.html#valid-date-string-with-optional-time). Si la valeur ne peut pas être analysée comme une date, l'indication temporelle sera absente de l'élément. Voir [l'article sur les formats](/fr/docs/Web/HTML/Formats_date_heure_HTML) pour la représentation d'[une date seule](/fr/docs/Web/HTML/Formats_date_heure_HTML#Représentation_des_dates) ou d'[une date avec une heure](/fr/docs/Web/HTML/Formats_date_heure_HTML#Représentation_des_dates_et_heures_locales).
 
 ## Exemples
@@ -80,11 +75,11 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
       </th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >Contenu phrasé</a
         >
         ou
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
           >contenu de flux</a
         >.
       </td>
@@ -93,7 +88,7 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Mod%C3%A8le_de_contenu_transparent"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Modèle_de_contenu_transparent"
           >Contenu transparent</a
         >.
       </td>
@@ -109,7 +104,7 @@ Certaines personnes qui utilisent des lecteurs d'écran désactivent sciemment c
       <td>
         Tout élément qui accepte du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >.
       </td>

@@ -1,15 +1,6 @@
 ---
 title: console.groupEnd()
 slug: Web/API/console/groupEnd
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - web console
-browser-compat: api.console.groupEnd
-translation_of: Web/API/console/groupEnd
 ---
 
 {{APIRef("Console API")}}

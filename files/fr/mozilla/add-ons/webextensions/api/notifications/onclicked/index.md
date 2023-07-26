@@ -1,16 +1,6 @@
 ---
 title: notifications.onClicked
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClicked
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Notifications
-  - Reference
-  - WebExtensions
-  - onClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onClicked
 ---
 
@@ -21,9 +11,9 @@ Lancé lorsque l'utilisateur clique sur une notification, mais pas sur l'un des 
 ## Syntaxe
 
 ```js
-browser.notifications.onClicked.addListener(listener)
-browser.notifications.onClicked.removeListener(listener)
-browser.notifications.onClicked.hasListener(listener)
+browser.notifications.onClicked.addListener(listener);
+browser.notifications.onClicked.removeListener(listener);
+browser.notifications.onClicked.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -46,17 +36,17 @@ Les événements ont trois fonctions :
     - `notificationId`
       - : `string`. ID de la notification sur laquelle l'utilisateur a cliqué.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.notifications.onClicked")}}
+{{Compat}}
 
 ## Exemples
 
 Dans cet exemple simple, nous ajoutons un écouteur à l'événement {{WebExtAPIRef("notifications.onClicked")}} pour écouter les notifications système en cours de clic. Lorsque cela se produit, nous enregistrons un message approprié à la console.
 
 ```js
-browser.notifications.onClicked.addListener(function(notificationId) {
-  console.log('Notification ' + notificationId + ' was clicked by the user');
+browser.notifications.onClicked.addListener(function (notificationId) {
+  console.log("Notification " + notificationId + " was clicked by the user");
 });
 ```
 

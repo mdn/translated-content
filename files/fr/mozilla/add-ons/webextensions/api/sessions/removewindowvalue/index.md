@@ -1,15 +1,6 @@
 ---
 title: sessions.removeWindowValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - removeWindowsValue
-  - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue
 ---
 
@@ -23,9 +14,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.sessions.removeWindowValue(
-  windowId,    // integer
-  key          // string
-)
+  windowId, // integer
+  key, // string
+);
 ```
 
 ### Paramètres
@@ -39,9 +30,9 @@ var removing = browser.sessions.removeWindowValue(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui ne sera résolue aucun argument si l'élément a été supprimé avec succès. Si l'appel a échoué (par exemple, parce que l'ID de la fenêtre n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.removeWindowValue", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -61,13 +52,13 @@ async function removeFromActiveWindow() {
 browser.menus.create({
   id: "add-my-item",
   title: "add item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.create({
   id: "remove-my-item",
   title: "remove item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info) => {

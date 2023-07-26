@@ -58,15 +58,15 @@ scroll-snap-type: unset;
 - `proximity`
   - : 如果它当前没有被滚动，这个滚动容器的可视视图将基于基于用户代理滚动的参数去到临时点上。如果内容被添加、移动、删除或者重置大小，滚动偏移将被调整为保持静止在临时点上。
 
-### 正式语法
+### 形式语法
 
 {{csssyntax}}
 
 ## 示例
 
-### HTML 内容
+### HTML
 
-```plain
+```html
 <div class="holster">
 <div class="container x mandatory-scroll-snapping" dir="ltr">
   <div>X Mand. LTR</div>
@@ -134,9 +134,9 @@ scroll-snap-type: unset;
 </div>
 ```
 
-### CSS 内容
+### CSS
 
-```plain
+```css
 /* setup */
 html, body, .holster {
   height: 100%;
@@ -218,7 +218,7 @@ html, body, .holster {
 }
 ```
 
-{{EmbedLiveSample("Example", "100%", "260")}}
+{{EmbedLiveSample("示例", "100%", "260")}}
 
 ## 规范
 

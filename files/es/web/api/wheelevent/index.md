@@ -46,9 +46,9 @@ _Este interfaz no define ningún método, pero hereda métodos de estos padres, 
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.WheelEvent")}}
+{{Compat}}
 
 ## Ver también
 

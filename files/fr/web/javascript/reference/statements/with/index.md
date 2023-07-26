@@ -1,13 +1,7 @@
 ---
 title: with
 slug: Web/JavaScript/Reference/Statements/with
-tags:
-  - Déprécié
-  - Instruction
-  - JavaScript
-  - Reference
 translation_of: Web/JavaScript/Reference/Statements/with
-original_slug: Web/JavaScript/Reference/Instructions/with
 ---
 
 {{jsSidebar("Statements")}}

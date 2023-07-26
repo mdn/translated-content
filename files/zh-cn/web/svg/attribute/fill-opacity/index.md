@@ -3,7 +3,7 @@ title: fill-opacity
 slug: Web/SVG/Attribute/fill-opacity
 ---
 
-« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
+{{SVGRef}}
 
 该属性指定了填色的不透明度或当前对象的内容物的不透明度。
 

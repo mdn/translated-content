@@ -34,7 +34,7 @@ _`MediaQueryList` インターフェイスは親インターフェイスであ�
 _以下のイベントは `MediaQueryList` オブジェクトに配信されます。_
 
 - {{DOMxRef("MediaQueryList.change_event", "change")}}
-  - : 文書に対してメディアクエリーを実行した結果が変更されたときに `MediaQueryList` に送信されます。例えば、メディアクエリーが `(min-width: 400px)` の場合、 `change` イベントが文書の{{Glossary("viewport", "ビューポート")}}の幅が 400px の閾値を通過するよう変更されるたびに発行されます。  
+  - : 文書に対してメディアクエリーを実行した結果が変更されたときに `MediaQueryList` に送信されます。例えば、メディアクエリーが `(min-width: 400px)` の場合、 `change` イベントが文書の{{Glossary("viewport", "ビューポート")}}の幅が 400px の閾値を通過するよう変更されるたびに発行されます。
 
 ## 例
 

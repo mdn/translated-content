@@ -3,7 +3,7 @@ title: Começando com WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
+{{DefaultAPISidebar("WebGL")}}{{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
 [WebGL](http://www.khronos.org/webgl/) permite que o contéudo web use uma API baseada em [OpenGL ES](http://www.khronos.org/opengles/) 2.0 para realizar renderização 3D em um [`canvas`](/pt-BR/docs/Web/API/Canvas_API) HTML em browsers que o suportam sem o uso de plugins. Programas WebGL consistem em um código de controle escrito em JavaScript e códigos de efeitos especiais (shader code) que é executado na Unidade Gráfica de Processamento (GPU) de um computador. Elementos WebGL podem ser utilizados junto com outros elementos HTML e com outras partes da página ou do fundo.
 
@@ -57,9 +57,9 @@ Se o contexto for inicializado com sucesso, a variável `gl` é nossa referênci
 
 Nesse ponto, você tem código suficiente para o contexto WebGL ser inicializado com sucesso, e você deve visualizar uma grande caixa preta vazia, pronta e esperando para receber conteúdo.
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample1/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
-[Veja o código completo](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample1) | [Abra a demo em uma nova página](http://mdn.github.io/webgl-examples/tutorial/sample1/)
+[Veja o código completo](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample1) | [Abra a demo em uma nova página](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
 
 ## Veja também
 

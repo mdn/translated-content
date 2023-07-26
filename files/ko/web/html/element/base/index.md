@@ -1,14 +1,8 @@
 ---
 title: <base>
 slug: Web/HTML/Element/base
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Reference
-translation_of: Web/HTML/Element/base
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<base>` 요소**는 문서 안의 모든 상대 {{glossary("URL")}}이 사용할 기준 URL을 지정합니다. 문서에는 하나의 `<base>` 요소만 존재할 수 있습니다.
@@ -69,9 +63,9 @@ translation_of: Web/HTML/Element/base
   - : 문서 내 상대 URL이 사용할 기준 URL. 절대 및 상대 URL을 사용할 수 있습니다.
 - {{htmlattrdef("target")}}
   - : `target` 속성을 명시하지 않은 {{htmlelement("a")}}, {{htmlelement("area")}}, 또는 {{htmlelement("form")}} 요소가 탐색을 유발했을 때, 그 결과를 보여줄 기본 {{glossary("browsing context", "브라우징 맥락")}}. **키워드**나 **저작자 정의 이름**으로 지정합니다.
-  
+
   다음 키워드는 특별한 의미를 갖습니다.
-  
+
   - `_self` (기본값): 결과를 현재 브라우징 맥락에 보여줍니다.
   - `_blank`: 결과를 새로 생성한, 이름 없는 브라우징 맥락에 보여줍니다.
   - `_parent`: 현재 페이지가 프레임 안에 존재하는 경우, 결과를 현재 브라우징 맥락의 부모에 보여줍니다. 부모가 없으면 `_self`와 동일합니다.
@@ -113,4 +107,4 @@ translation_of: Web/HTML/Element/base
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.base")}}
+{{Compat}}

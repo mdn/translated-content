@@ -1,10 +1,6 @@
 ---
 title: display-outside
 slug: Web/CSS/display-outside
-tags:
-  - CSS
-  - Reference
-  - Type de donnée
 translation_of: Web/CSS/display-outside
 ---
 
@@ -62,9 +58,7 @@ span {
 
 ## Compatibilité des navigateurs
 
-### Prise en charge `run-in`
-
-{{Compat("css.properties.display.run-in", 10)}}
+{{Compat}}
 
 ## Voir aussi
 

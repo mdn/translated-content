@@ -18,8 +18,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 browser.browserAction.getBadgeTextColor(
-  details // object
-)
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -42,10 +42,6 @@ browser.browserAction.getBadgeTextColor(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec la couleur récupérée comme un {{WebExtAPIRef('browserAction.ColorArray')}}.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.getBadgeTextColor",2)}}
-
 ## Exemples
 
 Enregistrer la couleur du texte du badge :
@@ -61,6 +57,10 @@ function onFailure(error) {
 
 browser.browserAction.getBadgeTextColor({}).then(onGot, onFailure);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

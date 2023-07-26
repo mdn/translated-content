@@ -1,15 +1,6 @@
 ---
 title: browsingData.removePasswords()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removePasswords
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - browsingData
-  - removePasswords
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removePasswords
 ---
 
@@ -28,8 +19,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var removing = browser.browsingData.removePasswords(
-  removalOptions            // RemovalOptions object
-)
+  removalOptions, // RemovalOptions object
+);
 ```
 
 ### Paramètres
@@ -41,9 +32,9 @@ var removing = browser.browsingData.removePasswords(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browsingData.removePasswords")}}
+{{Compat}}
 
 ## Exemples
 
@@ -62,10 +53,11 @@ function weekInMilliseconds() {
   return 1000 * 60 * 60 * 24 * 7;
 }
 
-var oneWeekAgo = (new Date()).getTime() - weekInMilliseconds();
+var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
 
-browser.browsingData.removePasswords({since: oneWeekAgo}).
-then(onRemoved, onError);
+browser.browsingData
+  .removePasswords({ since: oneWeekAgo })
+  .then(onRemoved, onError);
 ```
 
 Supprime tous les mots de passe enregistrés :

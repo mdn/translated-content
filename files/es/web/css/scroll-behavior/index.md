@@ -60,7 +60,8 @@ a {
   width: 50px;
   text-decoration: none;
 }
-nav, scroll-container {
+nav,
+scroll-container {
   display: block;
   margin: 0 auto;
   text-align: center;
@@ -96,4 +97,4 @@ scroll-page {
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.properties.scroll-behavior")}}
+{{Compat}}

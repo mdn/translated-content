@@ -25,7 +25,7 @@ original_slug: Learn/CSS/为文本添加样式/Typesetting_a_homepage
 
 在本测评开始前，你应该：
 
-- 获取本次练习的 [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/index.html) 和 [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/style.css) 文件以及提供的 [external link icon](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/external-link-52.png)。
+- 获取本次练习的 [HTML](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/index.html) 和 [CSS](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/style.css) 文件以及提供的 [external link icon](https://github.com/mdn/learning-area/blob/main/css/styling-text/typesetting-a-homepage-start/external-link-52.png)。
 - 在本地计算机中拷贝一份上述文件。
 
 > **备注：** 或者，你可以使用像 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 的网站完成你的测评。你可以把 HTML 和 CSS 粘贴到在线编辑器中，并使用[this URL](http://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png)指定背景图像。如果你使用的在线编辑器没有单独的 CSS 面板，你可以将其放在 HTML 文件的\<style>元素中。
@@ -83,11 +83,3 @@ original_slug: Learn/CSS/为文本添加样式/Typesetting_a_homepage
 如果你将本测评作为课程的一部分，你应该能够将你的作品交给你的老师/指导员打分。如果你是自学的，你可以很轻松地在[discussion thread for this exercise](https://discourse.mozilla.org/t/typesetting-a-community-school-home-page-assessment/24683)，或者[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn) IRC 频道上获得打分。先尝试完成本次练习——作弊是学不到任何东西的！
 
 {{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
-
-## 在本单元中
-
-- [Fundamental text and font styling](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Styling lists](/zh-CN/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Styling links](/zh-CN/docs/Learn/CSS/Styling_text/Styling_links)
-- [Web fonts](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Typesetting a community school homepage](/zh-CN/Learn/CSS/Styling_text/Typesetting_a_homepage)

@@ -3,7 +3,7 @@ title: Introducción a JavaScript asíncrono
 slug: Learn/JavaScript/Asynchronous/Introducing
 original_slug: Learn/JavaScript/Asynchronous/Concepts
 l10n:
-  sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f1805d8b0eb3591009b6b7fee274bb7ed1bc5638f18
+  sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f18
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
@@ -45,7 +45,7 @@ En este artículo, comenzaremos viendo el problema de las funciones síncronas d
 Considere el siguiente código:
 
 ```js
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = `¡Hola, mi nombre es ${name}!`;
 console.log(greeting);
 // "¡Hola, mi nombre es Miriam!"
@@ -66,7 +66,7 @@ function makeGreeting(name) {
   return `¡Hola, mi nombre es ${name}!`;
 }
 
-const name = 'Miriam';
+const name = "Miriam";
 const greeting = makeGreeting(name);
 console.log(greeting);
 // "¡Hola, mi nombre es Miriam!"
@@ -102,7 +102,7 @@ function isPrime(n) {
   return n > 1;
 }
 
-const random = (max) => Math.floor(Math.random() * max); 
+const random = (max) => Math.floor(Math.random() * max);
 
 function generatePrimes(quota) {
   const primes = [];
@@ -115,15 +115,15 @@ function generatePrimes(quota) {
   return primes;
 }
 
-const quota = document.querySelector('#quota');
-const output = document.querySelector('#output');
+const quota = document.querySelector("#quota");
+const output = document.querySelector("#output");
 
-document.querySelector('#generate').addEventListener('click', () => {
+document.querySelector("#generate").addEventListener("click", () => {
   const primes = generatePrimes(quota.value);
   output.textContent = `¡Finalizado! se han generado ${quota.value} números primos`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
+document.querySelector("#reload").addEventListener("click", () => {
   document.location.reload();
 });
 ```
@@ -184,15 +184,15 @@ function generatePrimes(quota) {
   return primes;
 }
 
-const quota = document.querySelector('#quota');
-const output = document.querySelector('#output');
+const quota = document.querySelector("#quota");
+const output = document.querySelector("#output");
 
-document.querySelector('#generate').addEventListener('click', () => {
+document.querySelector("#generate").addEventListener("click", () => {
   const primes = generatePrimes(quota.value);
   output.textContent = `¡Finalizado! se han generado ${quota.value} números primos`;
 });
 
-document.querySelector('#reload').addEventListener('click', () => {
+document.querySelector("#reload").addEventListener("click", () => {
   document.location.reload();
 });
 ```
@@ -232,23 +232,27 @@ pre {
 ```
 
 ```js
-const log = document.querySelector('.event-log');
+const log = document.querySelector(".event-log");
 
-document.querySelector('#xhr').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#xhr").addEventListener("click", () => {
+  log.textContent = "";
 
   const xhr = new XMLHttpRequest();
 
-  xhr.addEventListener('loadend', () => {
+  xhr.addEventListener("loadend", () => {
     log.textContent = `${log.textContent}Finalizado con el estado: ${xhr.status}`;
   });
 
-  xhr.open('GET', 'https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
+  xhr.open(
+    "GET",
+    "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json",
+  );
   xhr.send();
-  log.textContent = `${log.textContent}Inicio de la solicitud XHR\n`;});
+  log.textContent = `${log.textContent}Inicio de la solicitud XHR\n`;
+});
 
-document.querySelector('#reload').addEventListener('click', () => {
-  log.textContent = '';
+document.querySelector("#reload").addEventListener("click", () => {
+  log.textContent = "";
   document.location.reload();
 });
 ```
@@ -325,11 +329,3 @@ Cuando anidamos devoluciones de llamada de esta manera, también puede ser muy d
 Por estas razones, la mayoría de las APIs asíncronas modernas no utilizan _callbacks_. En su lugar, la base de la programación asíncrona en JavaScript es la {{jsxref("Promise")}}, y ese es el tema del siguiente artículo.
 
 {{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
-
-## En este módulo
-
-- **Introducción a JavaScript asíncrono**
-- [Como utilizar las promesas](/es/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Implementación de una API basada en promesas](/es/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-- [Introducción a los workers](/es/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-- [Evaluación: animación secuencial](/es/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

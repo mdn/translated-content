@@ -1,15 +1,6 @@
 ---
 title: AudioParam.linearRampToValueAtTime()
 slug: Web/API/AudioParam/linearRampToValueAtTime
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - linearRampToValueAtTime
-browser-compat: api.AudioParam.linearRampToValueAtTime
 ---
 
 {{ APIRef("Web Audio API") }}

@@ -1,18 +1,8 @@
 ---
 title: '<video>: 비디오 삽입 요소'
-slug: Web/HTML/Element/Video
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Media
-  - Multimedia
-  - Reference
-  - Web
-  - 동영상
-  - 비디오
-translation_of: Web/HTML/Element/video
+slug: Web/HTML/Element/video
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<video>` 요소**는 비디오 플레이백을 지원하는 미디어 플레이어를 문서에 삽입합니다. 오디오 콘텐츠에도 사용할 수 있으나, {{htmlelement("audio")}} 요소가 사용자 경험에 좀 더 적합합니다.
@@ -124,11 +114,11 @@ AddType video/webm .webm
 
 ## DOM 인터페이스
 
-이 요소는 [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement) 인터페이스를 구현하고 있습니다.
+이 요소는 [`HTMLVideoElement`](/ko/docs/Web/API/HTMLVideoElement) 인터페이스를 구현하고 있습니다.
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.video")}}
+{{Compat}}
 
 ## 참고
 

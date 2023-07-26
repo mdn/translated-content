@@ -1,14 +1,6 @@
 ---
 title: WheelEvent.deltaY
 slug: Web/API/WheelEvent/deltaY
-tags:
-  - API
-  - DOM
-  - Lecture seulement
-  - Propriété
-  - Reference
-  - Référence(2)
-  - WheelEvent
 translation_of: Web/API/WheelEvent/deltaY
 ---
 
@@ -25,7 +17,10 @@ var dY = event.deltaY;
 ## Exemple
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaY": 4, "deltaMode": 0});
+var syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaY: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaY);
 ```

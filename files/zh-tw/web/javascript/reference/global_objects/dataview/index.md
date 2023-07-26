@@ -28,7 +28,7 @@ A new `DataView` object representing the specified data buffer.
 
 ### Errors thrown
 
-- `{{jsxref("RangeError")}}`
+- {{jsxref("RangeError")}}
   - : Thrown if the `byteOffset` and `byteLength` result in the specified view extending past the end of the buffer.
 
 ## 描述
@@ -38,7 +38,7 @@ A new `DataView` object representing the specified data buffer.
 Multi-byte number formats are represented in memory differently depending on machine architecture, see {{Glossary("Endianness")}} for an explanation. DataView accessors provide explicit control of how data will be accessed irrespective of the platform architecture's endianness.
 
 ```js
-var littleEndian = (function() {
+var littleEndian = (function () {
   var buffer = new ArrayBuffer(2);
   new DataView(buffer).setInt16(0, 256, true /* littleEndian */);
   // Int16Array uses the platform's endianness.

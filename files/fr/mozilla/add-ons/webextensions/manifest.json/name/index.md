@@ -1,10 +1,6 @@
 ---
 title: name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/name
 ---
 
@@ -39,6 +35,6 @@ C'est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationalizati
 "name": "Mon extension"
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.name")}}
+{{Compat}}

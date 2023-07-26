@@ -1,7 +1,6 @@
 ---
 title: with
 slug: Web/JavaScript/Reference/Statements/with
-translation_of: Web/JavaScript/Reference/Statements/with
 ---
 
 <div class="warning">Use of the <code>with</code> statement is not recommended, as it may be the source of confusing bugs and compatibility issues. See the "Ambiguity Contra" paragraph in the "Description" section below for details.</div>
@@ -46,7 +45,7 @@ function f(x, o) {
 }
 ```
 
-Only when `f` is called is `x` either found or not, and if found, either in `o` or (if no such property exists) in `f`'s activation object, where `x` names the first formal argument. If you forget to define `x` in the object you pass as the second argument, or if there's some similar bug or confusion, you won't get an error -- just unexpected results.
+Only when `f` is called is `x` either found or not, and if found, either in `o` or (if no such property exists) in `f`'s activation object, where `x` names the first formal argument. If you forget to define `x` in the object you pass as the second argument, or if there's some similar bug or confusion, you won't get an error — just unexpected results.
 
 **Contra:** Code using `with` may not be forward compatible, especially when used with something other than a plain object. Consider this example:
 
@@ -77,11 +76,11 @@ with (Math) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

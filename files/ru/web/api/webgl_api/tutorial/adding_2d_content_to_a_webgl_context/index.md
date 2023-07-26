@@ -1,12 +1,9 @@
 ---
 title: Добавление двухмерного контента в контекст WebGL
 slug: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
-tags:
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 После того, как вы успешно [создали контекст WebGL](/ru/docs/Web/WebGL/Getting_started_with_WebGL), вы можете начинать отображать в нем графические объекты. Простейшая вещь, которую вы можете сделать - отрисовать простой квадрат без текстуры. Итак, начнём построение кода для отрисовки квадрата.
 

@@ -5,19 +5,42 @@ slug: Web/HTTP/Methods/OPTIONS
 
 {{HTTPSidebar}}
 
-**HTTP 的 `OPTIONS 方法`** 用于获取目的资源所支持的通信选项。客户端可以对特定的 URL 使用 OPTIONS 方法，也可以对整站（通过将 URL 设置为“\*”）使用该方法。
+**HTTP `OPTIONS` 方法**请求给定的 URL 或服务器的允许通信选项。客户端可以用这个方法指定一个 URL，或者用星号（`*`）来指代整个服务器。
 
-| Request has body                     | No  |
-| ------------------------------------ | --- |
-| Successful response has body         | Yes |
-| {{Glossary("Safe")}}         | Yes |
-| {{Glossary("Idempotent")}} | Yes |
-| {{Glossary("Cacheable")}}     | No  |
-| Allowed in HTML forms                | No  |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">请求是否有主体</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">成功的响应是否有主体</th>
+      <td>是</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Safe/HTTP", "安全")}}</th>
+      <td>是</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Idempotent","幂等")}}</th>
+      <td>是</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Cacheable","可缓存")}}</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        允许在 <a href="/zh-CN/docs/Learn/Forms">HTML 表单</a>中使用
+      </th>
+      <td>不允许</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
+```http
 OPTIONS /index.html HTTP/1.1
 OPTIONS * HTTP/1.1
 ```
@@ -26,59 +49,68 @@ OPTIONS * HTTP/1.1
 
 ### 检测服务器所支持的请求方法
 
-可以使用 OPTIONS 方法对服务器发起请求，以检测服务器支持哪些 HTTP 方法：
+要想知道一个服务器支持哪些请求方法，可以使用 `curl` 命令行程序来发出 `OPTIONS` 请求：
 
-```plain
-curl -X OPTIONS http://example.org -i
+```bash
+curl -X OPTIONS https://example.org -i
 ```
 
-响应报文包含一个 {{HTTPHeader("Allow")}} 首部字段，该字段的值表明了服务器支持的所有 HTTP 方法：
+响应包含 {{HTTPHeader("Allow")}} 标头，其值表明了服务器支持的所有 HTTP 方法：
 
-```plain
-HTTP/1.1 200 OK
+```http
+HTTP/1.1 204 No Content
 Allow: OPTIONS, GET, HEAD, POST
 Cache-Control: max-age=604800
 Date: Thu, 13 Oct 2016 11:45:00 GMT
-Expires: Thu, 20 Oct 2016 11:45:00 GMT
 Server: EOS (lax004/2813)
-x-ec-custom-error: 1
-Content-Length: 0
 ```
 
 ### CORS 中的预检请求
 
-在 [CORS](/zh-CN/docs/Web/HTTP/Access_control_CORS) 中，可以使用 OPTIONS 方法发起一个预检请求，以检测实际请求是否可以被服务器所接受。预检请求报文中的 {{HTTPHeader("Access-Control-Request-Method")}} 首部字段告知服务器实际请求所使用的 HTTP 方法；{{HTTPHeader("Access-Control-Request-Headers")}} 首部字段告知服务器实际请求所携带的自定义首部字段。服务器基于从预检请求获得的信息来判断，是否接受接下来的实际请求。
+在 [CORS](/zh-CN/docs/Web/HTTP/CORS) 中，可以使用 OPTIONS 方法发起一个[预检请求](/zh-CN/docs/Glossary/Preflight_request)，以检测实际请求是否可以被服务器所接受。在这个示例中，我们会为这些参数请求权限：
 
-```plain
+- 在预检请求中发送的 {{HTTPHeader("Access-Control-Request-Method")}} 标头告知服务器实际请求所使用的 HTTP 方法，在这里将实际使用 {{HTTPMethod("POST")}} 请求方法。
+- {{HTTPHeader("Access-Control-Request-Headers")}} 标头告知服务器实际请求所携带的自定义标头，在这里会使用 `X-PINGOTHER` 和 `Content-Type` 标头。
+
+```http
 OPTIONS /resources/post-here/ HTTP/1.1
-Host: bar.other
+Host: bar.example
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
-Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
 Connection: keep-alive
-Origin: http://foo.example
+Origin: https://foo.example
 Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 ```
 
-服务器所返回的 {{HTTPHeader("Access-Control-Allow-Methods")}} 首部字段将所有允许的请求方法告知客户端。该首部字段与 {{HTTPHeader("Allow")}} 类似，但只能用于涉及到 CORS 的场景中。
+服务器现在可以回应是否会接受这些情况下的请求。在这个例子中，服务器的响应说明了：
 
-```plain
+- {{HTTPHeader("Access-Control-Allow-Origin")}}
+  - : `https://foo.example` 源被允许通过以下方式请求 `bar.example/resources/post-here/` URL：
+- {{HTTPHeader("Access-Control-Allow-Methods")}}
+  - : {{HTTPMethod("POST")}}、{{HTTPMethod("GET")}} 和 `OPTIONS` 是该 URL 允许的方法（该标头类似于 {{HTTPHeader("Allow")}} 响应标头，但只用于 [CORS](/zh-CN/docs/Web/HTTP/CORS)）。
+- {{HTTPHeader("Access-Control-Allow-Headers")}}
+  - : `X-PINGOTHER` 和 `Content-Type` 是该 URL 允许的请求标头。
+- {{HTTPHeader("Access-Control-Max-Age")}}
+  - : 以上权限可以缓存 86400 秒（1 天）。
+
+```http
 HTTP/1.1 200 OK
 Date: Mon, 01 Dec 2008 01:15:39 GMT
 Server: Apache/2.0.61 (Unix)
-Access-Control-Allow-Origin: http://foo.example
+Access-Control-Allow-Origin: https://foo.example
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400
 Vary: Accept-Encoding, Origin
-Content-Encoding: gzip
-Content-Length: 0
 Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
-Content-Type: text/plain
 ```
+
+## 状态码
+
+{{HTTPStatus("200")}} OK 和 {{HTTPStatus("204")}} No Content 都是[允许的状态码](https://fetch.spec.whatwg.org/#ref-for-ok-status)，但是部分浏览器错误地认为 `204 No Content` 也适用于该资源，且不发送后续请求来获取资源内容。
 
 ## 规范
 
@@ -90,5 +122,5 @@ Content-Type: text/plain
 
 ## 参见
 
-- {{HTTPHeader("Allow")}} header
-- [CORS](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- {{HTTPHeader("Allow")}} 标头
+- [CORS](/zh-CN/docs/Web/HTTP/CORS)

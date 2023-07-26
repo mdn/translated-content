@@ -63,7 +63,7 @@ _唯一変わらないのは、変化することです。_
 
 ### ブラウザー
 
-あなたはおそらく、今この瞬間もウェブブラウザーの中でこの言葉を読んでいるでしょう（プリントアウトした場合や、画面リーダーなどの支援技術を使用して読み上げている場合は除きます）。ウェブブラウザーとは、人々がウェブを利用するために使用するソフトウェアのことで、[Firefox](https://www.mozilla.org/ja/firefox/)、[Chrome](https://www.google.com/chrome/)、[Opera](https://www.opera.com/)、[Safari](https://www.apple.com/jp/safari/)、[Edge](https://www.microsoft.com/ja-jp/edge) などがあります。
+あなたはおそらく、今この瞬間もウェブブラウザーの中でこの言葉を読んでいるでしょう（プリントアウトした場合や、スクリーンリーダーなどの支援技術を使用して読み上げている場合は除きます）。ウェブブラウザーとは、人々がウェブを利用するために使用するソフトウェアのことで、[Firefox](https://www.mozilla.org/ja/firefox/)、[Chrome](https://www.google.com/chrome/)、[Opera](https://www.opera.com/)、[Safari](https://www.apple.com/jp/safari/)、[Edge](https://www.microsoft.com/ja-jp/edge) などがあります。
 
 ### HTTP
 
@@ -90,7 +90,7 @@ HTTP メッセージ（リクエストとレスポンスと呼ばれる）の実
 
   <p>これは文章の段落です。</p>
 
-  <img src="cat.jpg" alt="A picture of my cat">
+  <img src="cat.jpg" alt="A picture of my cat" />
   ```
 
   家づくりに例えるなら、HTML は家の土台や壁のようなもので、構造を与え、家を支えているものです。
@@ -108,8 +108,8 @@ HTTP メッセージ（リクエストとレスポンスと呼ばれる）の実
 - **JavaScript** は、動的なスタイルの切り替えから、サーバーからの更新の取得、複雑な 3D グラフィックに至るまで、ウェブサイトに対話性を追加するために使用されるプログラミング言語です。以下の簡単な JavaScript は、段落への参照をメモリーに格納し、その中のテキストを変更します。
 
   ```js
-  let pElem = document.querySelector('p');
-  pElem.textContent =  'We changed the text!';
+  let pElem = document.querySelector("p");
+  pElem.textContent = "We changed the text!";
   ```
 
   家に例えると、 JavaScript は炊飯器、テレビ、電子レンジ、ドライヤーなどです。家に便利な機能を与えるものです。
@@ -140,7 +140,7 @@ HTML、CSS、JavaScriptは、フロントエンド（またはクライアント
 
 - ユーザー 1 は、画面の内側が狭い iPhone で見ているかもしれません。
 - ユーザー 2 は、ワイド画面のモニターを取り付けた Windows のノートパソコンで見ているかもしれません。
-- ユーザー 3 は目が不自由で、ウェブページを読み上げるために画面リーダーを使用しているかもしれません。
+- ユーザー 3 は目が不自由で、ウェブページを読み上げるためにスクリーンリーダーを使用しているかもしれません。
 - ユーザー 4 は、最新のブラウザーが動作しない、非常に古いデスクトップ機を使用している可能性があります。
 
 ユーザーが何を使用するか正確には分からないので、防御的にデザインする必要があります。つまり、上記のユーザー全員が同じ経験を得られるとは限りませんが、上記のユーザー全員が使用できるように、可能な限り柔軟なウェブサイトを作成する必要があります。つまり、可能な限りすべての人のためにウェブが動作するようにしようということです。

@@ -80,15 +80,13 @@ _strWindowFeatures_ 是一个可选的字符串，包含了新窗口的一组用
 
 **如果你定义了 _strWindowFeatures_ 参数，那么没有在这个字符串中列出的特性会被禁用或移除** （除了 _titlebar_ 和 _close_ 默认设置为 yes）
 
-> **备注：** 如果你使用了 _strWindowFeatures_ 参数，那么只需要列出新窗口中启用的特性，其它的特性（除了*titlebar*和*close*）将被禁用或移除。
-
-![Firefox Chrome Toolbars Illustration](/@api/deki/files/210/=FirefoxChromeToolbarsDescription7a.gif)
+> **备注：** 如果你使用了 _strWindowFeatures_ 参数，那么只需要列出新窗口中启用的特性，其他的特性（除了*titlebar*和*close*）将被禁用或移除。
 
 ## 位置尺寸特征
 
 [Note on position and dimension error correction](#Note_on_position_and_dimension_error_correction)
 
-{{bug(176320)}}
+[Firefox bug 176320](https://bugzil.la/176320)
 
 [Note on precedence](#Note_on_precedence)
 
@@ -131,7 +129,7 @@ _strWindowFeatures_ 是一个可选的字符串，包含了新窗口的一组用
     Mozilla and Firefox users can force new windows to always render the Navigation Toolbar by setting `dom.disable_window_open_feature.toolbar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js).
 - location
   - : If this feature is on, then the new secondary window renders the Location bar in Mozilla-based browsers. MSIE 5+ and Opera 7.x renders the Address Bar.
-    Mozilla and Firefox users can force new windows to always render the location bar by setting `dom.disable_window_open_feature.location` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). {{Fx_minversion_note(3, "In Firefox 3, <code>dom.disable_window_open_feature.location</code> now defaults to <var>true</var>, forcing the presence of the Location Bar much like in IE7. See bug 337344 for more information.")}}
+    Mozilla and Firefox users can force new windows to always render the location bar by setting `dom.disable_window_open_feature.location` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js).
 - personalbar
   - : If this feature is on, then the new secondary window renders the Personal Toolbar in Netscape 6.x, Netscape 7.x and Mozilla browser. It renders the Bookmarks Toolbar in Firefox. In addition to the Personal Toolbar, Mozilla browser will render the Site Navigation Bar if such toolbar is visible, present in the parent window.
     Mozilla and Firefox users can force new windows to always render the Personal Toolbar/Bookmarks toolbar by setting `dom.disable_window_open_feature.personalbar` to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js).
@@ -140,60 +138,6 @@ _strWindowFeatures_ 是一个可选的字符串，包含了新窗口的一组用
 - status
   - : If this feature is on, then the new secondary window has a status bar. Users can force the rendering of status bar in all Mozilla-based browsers, in MSIE 6 SP2 ([Note on status bar in XP SP2](#Note_on_security_issues_of_the_status_bar_presence)) and in Opera 6+. The default preference setting in recent Mozilla-based browser releases and in Firefox 1.0 is to force the presence of the status bar.
     [Note on status bar](#Note_on_status_bar)
-
-### Window functionality features
-
-<dl><dt>attention {{NonStandardBadge}}</dt><dd>If this feature is specified, the window is able to open even if another application is already in the foreground. This feature is for Firefox OS applications only, and is currently restricted to certified applications. See {{SectionOnPage("/en-US/docs/Archive/B2G_OS/Firefox_OS_apps/App_permissions", "Internal (Certified) app permissions")}} for more information.</dd><dt>dependent</dt><dd>If on, the new window is said to be dependent of its parent window. A dependent window closes when its parent window closes. A dependent window is minimized on the Windows task bar only when its parent window is minimized. On Windows platforms, a dependent window does not show on the task bar. A dependent window also stays in front of the parent window.<br>Dependent windows are not implemented on MacOS X, this option will be ignored.<br>The dependent feature is currently under revision to be removed ({{Bug(214867)}})<br>In MSIE 6, the nearest equivalent to this feature is the <code>showModelessDialog()</code> method.</dd><dt>dialog</dt><dd><a href="https://developer.mozilla.org/@api/deki/files/268/=MenuSystemCommands.png"><img alt="MenuSystemCommands.png" class="internal lwrap" src="https://developer.mozilla.org/@api/deki/files/268/=MenuSystemCommands.png?size=webview" style="float: left; height: 170px; width: 170px;"></a>The <code>dialog</code> feature removes all icons (restore, minimize, maximize) from the window's titlebar, leaving only the close button. Mozilla 1.2+ and Netscape 7.1 will render the other menu system commands (in FF 1.0 and in NS 7.0x, the command system menu is not identified with the Firefox/NS 7.0x icon on the left end of the titlebar: that's probably a bug. You can access the command system menu with a right-click on the titlebar). Dialog windows are windows which have no minimize system command icon and no maximize/restore down system command icon on the titlebar nor in correspondent menu item in the command system menu. They are said to be dialog because their normal, usual purpose is to only notify info and to be dismissed, closed. On Mac systems, dialog windows have a different window border and they may get turned into a sheet.</dd><dt>minimizable</dt><dd>This setting can only apply to dialog windows; "minimizable" requires <code>dialog=yes</code>. If <code>minimizable</code> is on, the new dialog window will have a minimize system command icon in the titlebar and it will be minimizable. Any non-dialog window is always minimizable and <code>minimizable=no</code> will be ignored.</dd><dt>fullscreen</dt><dd>Do not use. Not implemented in Mozilla. There are no plans to implement this feature in Mozilla.<br>This feature no longer works in MSIE 6 SP2 the way it worked in MSIE 5.x. The Windows taskbar, as well as the titlebar and the status bar of the window are not visible, nor accessible when fullscreen is enabled in MSIE 5.x.<br><code>fullscreen</code> always upsets users with large monitor screen or with dual monitor screen. Forcing <code>fullscreen</code> onto other users is also extremely unpopular and is considered an outright rude attempt to impose web author's viewing preferences onto users.<br><a href="#Note_on_fullscreen">Note on fullscreen</a><br><code>fullscreen</code> does not really work in MSIE 6 SP2.</dd><dt>resizable</dt><dd>If this feature is on, the new secondary window will be resizable.<br><strong>Note</strong>: Starting with version 1.4, Mozilla-based browsers have a window resizing grippy at the right end of the status bar, this ensures that users can resize the browser window even if the web author requested this secondary window to be non-resizable. In such case, the maximize/restore icon in the window's titlebar will be disabled and the window's borders won't allow resizing but the window will still be resizable via that grippy in the status bar.<p>Starting with Firefox 3, secondary windows are always resizable ({{Bug(177838)}})</p><div class="note"><p>For accessibility reasons, it is strongly recommended to set this feature always on</p></div></dd><dd>Mozilla and Firefox users can force new windows to be easily resizable by setting<br><code>dom.disable_window_open_feature.resizable</code><br>to <var>true</var> in <a href="http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config">about:config</a> or in their <a href="http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js">user.js file</a>.</dd><dt>scrollbars</dt><dd>If this feature is on, the new secondary window will show horizontal and/or vertical scrollbar(s) if the document doesn't fit into the window's viewport.<div class="note"><p><strong>Tip</strong>: For accessibility reasons, it is strongly encouraged to set this feature always on.</p></div>Mozilla and Firefox users can force this option to be always enabled for new windows by setting<br><code>dom.disable_window_open_feature.scrollbars</code><br>to <var>true</var> in <a href="http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config">about:config</a> or in their <a href="http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js">user.js file</a>.<br><a href="#Note_on_scrollbars">Note on scrollbars</a></dd></dl>
-
-### Features requiring privileges
-
-The following features require the `UniversalBrowserWrite` privilege, otherwise they will be ignored. Chrome scripts have this privilege automatically, others have to request it from the PrivilegeManager.
-
-- chrome
-  - : **Note**: Starting with Mozilla 1.7/Firefox 0.9, this feature requires the `UniversalBrowserWrite` privilege ({{Bug(244965)}}). Without this privilege, it is ignored.
-    If on, the page is loaded as window's only content, without any of the browser's interface elements. There will be no context menu defined by default and none of the standard keyboard shortcuts will work. The page is supposed to provide a user interface of its own, usually this feature is used to open XUL documents (standard dialogs like the JavaScript Console are opened this way).
-- modal
-
-  - : **Note**: Starting with Mozilla 1.2.1, this feature requires the `UniversalBrowserWrite` privilege ({{Bug(180048)}}). Without this privilege, it is ignored.
-    If on, the new window is said to be modal. The user cannot return to the main window until the modal window is closed. A typical modal window is created by the [alert() function](/zh-CN/docs/DOM/window.alert).
-    The exact behavior of modal windows depends on the platform and on the Mozilla release version.
-
-    > **备注：** As of {{Gecko("1.9")}}, the Internet Explorer equivalent to this feature is the {{domxref("window.showModalDialog()")}} method. For compatibility reasons, it's now supported in Firefox. Note also that starting in {{Gecko("2.0")}}, you can use {{domxref("window.showModalDialog()")}} without UniversalBrowserWrite privileges.
-
-- titlebar
-  - : By default, all new secondary windows have a titlebar. If set to _no or 0_, this feature removes the titlebar from the new secondary window.
-    Mozilla and Firefox users can force new windows to always render the titlebar by setting
-    `dom.disable_window_open_feature.titlebar`
-    to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js).
-- alwaysRaised
-  - : If on, the new window will always be displayed on top of other browser windows, regardless of whether it is active or not.
-- alwaysLowered
-  - : If on, the new created window floats below, under its own parent when the parent window is not minimized. alwaysLowered windows are often referred as pop-under windows. The alwaysLowered window can not be on top of the parent but the parent window can be minimized. In NS 6.x, the alwaysLowered window has no minimize system command icon and no restore/maximize system command.
-- z-lock
-  - : Same as `alwaysLowered`.
-- close
-  - : When set to _no or 0_, this feature removes the system close command icon and system close menu item. It will only work for dialog windows (`dialog` feature set). `close=no` will override `minimizable=yes`.
-    Mozilla and Firefox users can force new windows to always have a close button by setting
-    `dom.disable_window_open_feature.close`
-    to _true_ in [about:config](http://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](http://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js).
-
-The position and size feature elements require a number to be set. The toolbars and window functionalities can be set with a _yes_ or _no_; you can use _1_ instead of _yes_ and _0_ instead of _no_. The toolbar and functionality feature elements also accept the shorthand form: you can turn a feature on by simply listing the feature name in the _features_ string. If you supply the _features_ parameter, then the `titlebar` and `close` are still _yes_ by default, but the other features which have a _yes_/_no_ choice will be _no_ by default and will be turned off.
-
-Example:
-
-```js
-var windowObjectReference; // global variable
-
-function openRequestedPopup() {
-  windowObjectReference = window.open(
-    "http://www.domainname.ext/path/ImgFile.png",
-    "DescriptiveWindowName",
-    "width=420,height=230,resizable,scrollbars=yes,status=1"
-  );
-}
-```
-
-In this example, the window will be resizable, it will render scrollbar(s) if needed, if the content overflows requested window dimensions and it will render the status bar. It will not render the menubar nor the location bar. Since the author knew about the size of the image (400 pixels wide and 200 pixels high), he added the margins applied to the root element in MSIE 6 which is 15 pixels for top margin, 15 pixels for the bottom margin, 10 pixels for the left margin and 10 pixels for the right margin.
 
 ## Best practices
 
@@ -389,114 +333,6 @@ The purpose is to warn users in advance of context changes to minimize confusion
 
 When extreme changes in context are explicitly identified before they occur, then the users can determine if they wish to proceed or so they can be prepared for the change: not only they will not be confused or feel disoriented, but more experienced users can better decide how to open such links (in a new window or not, in the same window, in a new tab or not, in "background" or not).
 
-**References**
-
-- "If your link spawns a new window, or causes another windows to 'pop up' on your display, or move the focus of the system to a new FRAME or Window, then the nice thing to do is to tell the user that something like that will happen." [World Wide Web Consortium Accessibility Initiative regarding popups](http://www.w3.org/WAI/wcag-curric/sam77-0.htm)
-- "Use link titles to provide users with a preview of where each link will take them, before they have clicked on it." [Ten Good Deeds in Web Design](http://www.useit.com/alertbox/991003.html), Jakob Nielsen, October 1999
-- [Using Link Titles to Help Users Predict Where They Are Going](http://www.useit.com/alertbox/980111.html), Jakob Nielsen, January 1998
-
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td class="header" colspan="4">
-        Example "New Window" Icons &#x26; Cursors
-      </td>
-    </tr>
-    <tr>
-      <td style="width: 25%">
-        <img
-          alt="New window icon from yahoo.com"
-          src="https://developer.mozilla.org/@api/deki/files/782/=NewwindowYahoo.png"
-        />
-      </td>
-      <td style="width: 25%">
-        <img
-          alt="New window icon from microsoft.com"
-          src="https://developer.mozilla.org/@api/deki/files/780/=NewwinMSIE.gif"
-        />
-      </td>
-      <td style="width: 25%">
-        <img
-          alt="New window icon from webaim.org"
-          src="https://developer.mozilla.org/@api/deki/files/296/=Popup_requested_new_window.gif"
-        />
-      </td>
-      <td style="width: 25%">
-        <img
-          alt="New window icon from sun.com"
-          src="https://developer.mozilla.org/@api/deki/files/811/=PopupImageSun.gif"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <img
-          alt="New window icon from bbc.co.uk"
-          src="https://developer.mozilla.org/@api/deki/files/795/=Opennews_rb.gif"
-        />
-      </td>
-      <td>
-        <img
-          alt="New window icon from Accessible Internet Solutions"
-          src="https://developer.mozilla.org/@api/deki/files/15/=AIS_NewWindowIcon.png"
-        />
-      </td>
-      <td>
-        <img
-          alt="New window icon from accessify.com"
-          src="https://developer.mozilla.org/@api/deki/files/809/=Pop-up-launcher.gif"
-        />
-      </td>
-      <td>
-        <img
-          alt="New window icon from webstyleguide.com"
-          src="https://developer.mozilla.org/@api/deki/files/417/=Webstyleguide_com_newwind.gif"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <img
-          alt="New window icon from an unknown source"
-          src="https://developer.mozilla.org/@api/deki/files/810/=Popicon_1.gif"
-        />
-      </td>
-      <td>
-        <img
-          alt="New window icon from an unknown source"
-          src="https://developer.mozilla.org/@api/deki/files/779/=New.gif"
-        />
-      </td>
-      <td>
-        <img
-          alt="New window icon from an unknown source"
-          src="https://developer.mozilla.org/@api/deki/files/419/=WillCreateOrRecycleNewWindow.gif"
-        />
-      </td>
-      <td>
-        <img
-          alt="New window icon from gtalbot.org"
-          src="https://developer.mozilla.org/@api/deki/files/287/=OpenRequestedPopup.png"
-        />
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <img
-          alt="New window cursor from draig.de"
-          src="https://developer.mozilla.org/@api/deki/files/169/=Cursor_LinkNewWindowTargetBlank.png"
-        />
-      </td>
-      <td colspan="2">
-        <img
-          alt="New window cursor from mithgol.ru"
-          src="https://developer.mozilla.org/@api/deki/files/170/=Cursor_newwindowSergeySokoloff.png"
-        />
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 #### Always use the target attribute
 
 If javascript support is disabled or non-existent, then the user agent will create a secondary window accordingly or will render the referenced resource according to its handling of the target attribute: e.g. some user agents which can not create new windows, like MS Web TV, will fetch the referenced resource and append it at the end of the current document. The goal and the idea is to try to provide - **not impose** - to the user a way to open the referenced resource, a mode of opening the link. Your code should not interfere with the features of the browser at the disposal of the user and your code should not interfere with the final decision resting with the user.
@@ -597,10 +433,6 @@ _References:_
 
 - [Fine-Tune Your Web Site for Windows XP Service Pack 2](http://msdn2.microsoft.com/en-us/library/ms997645.aspx#xpsp_topic5)
 - [Changes to Functionality in Microsoft Windows XP Service Pack 2, Script sizing of Internet Explorer windows](http://technet.microsoft.com/en-us/library/bb457150.aspx#ECAA)
-
-### Note on outerHeight versus height
-
-![innerHeight vs outerHeight illustration](/@api/deki/files/212/=FirefoxInnerVsOuterHeight.png)
 
 ### Note on refreshing vs. opening a new window/tab
 

@@ -1,14 +1,6 @@
 ---
 title: console
 slug: Web/API/console
-tags:
-  - API
-  - Debugging
-  - Interface
-  - Reference
-  - web console
-browser-compat: api.console
-translation_of: Web/API/Console
 ---
 
 {{APIRef("Console API")}}

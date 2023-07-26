@@ -1,13 +1,6 @@
 ---
 title: <position>
 slug: Web/CSS/position_value
-tags:
-  - CSS
-  - CSS Data Type
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/position_value
 ---
 
 {{CSSRef}}
@@ -18,7 +11,7 @@ translation_of: Web/CSS/position_value
 
 ## 구문
 
-![](https://mdn.mozillademos.org/files/12215/position_type.png)`<position>` 자료형은 하나 혹은 두 개의 키워드와 함께 선택적인 오프셋을 사용해 지정합니다.
+![](position_type.png)`<position>` 자료형은 하나 혹은 두 개의 키워드와 함께 선택적인 오프셋을 사용해 지정합니다.
 
 키워드에는 `center`, `top`, `right`, `bottom`, `left`가 있으며, 각각 요소 박스의 해당하는 방향 모서리 또는 마주보는 두 모서리의 가운데 지점을 의미합니다. 맥락에 따라, `center`는 좌우 모서리의 중간점일 수도 있고, 상하 모서리의 중간점일 수도 있습니다.
 

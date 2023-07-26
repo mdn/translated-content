@@ -1,15 +1,6 @@
 ---
 title: sessions.getTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - getTabValue
-  - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue
 ---
 
@@ -25,9 +16,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var retrieving = browser.sessions.getTabValue(
-  tabId,    // integer
-  key       // string
-)
+  tabId, // integer
+  key, // string
+);
 ```
 
 ### Paramètres
@@ -41,9 +32,9 @@ var retrieving = browser.sessions.getTabValue(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera résolue avec la valeur si elle existe, ou `undefined`. Si elle n'existe pas. Si l'appel a échoué (par exemple, parce que l'ID de l'onglet n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.sessions.getTabValue", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -59,7 +50,9 @@ function onGetRejected(e) {
 }
 
 browser.tabs.onCreated.addListener((tab) => {
-  browser.sessions.getTabValue(tab.id, "my-key").then(onGetResolved, onGetRejected);
+  browser.sessions
+    .getTabValue(tab.id, "my-key")
+    .then(onGetResolved, onGetRejected);
 });
 ```
 

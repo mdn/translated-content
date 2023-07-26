@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 original_slug: Web/Guide/HTML/Canvas_tutorial/Applying_styles_and_colors
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
 [図形の描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)についての章では、既定の線と塗りつぶしのスタイルのみを使用しました。ここでは、私たちの絵を少しでも魅力的にするために、自由に使えるキャンバスのオプションについて探っていきます。色、線のスタイル、グラデーション、パターン、影を追加する方法を学びます。
 

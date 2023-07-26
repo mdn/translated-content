@@ -1,14 +1,6 @@
 ---
 title: management.get()
 slug: Mozilla/Add-ons/WebExtensions/API/management/get
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - WebExtensions
-  - get
-  - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/get
 ---
 
@@ -24,8 +16,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var gettingInfo = browser.management.get(
-  id                  // string
-)
+  id, // string
+);
 ```
 
 ### Paramètres
@@ -37,9 +29,9 @@ var gettingInfo = browser.management.get(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} , contenant les informations sur l'extension. La promise sera rejetée si aucune extension avec l'ID donné n'est installée ou si l'appelant ne peut pas accéder à l'extension.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.get")}}
+{{Compat}}
 
 ## Exemples
 

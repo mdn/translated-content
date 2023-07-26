@@ -3,6 +3,8 @@ title: Expando
 slug: Glossary/Expando
 ---
 
+{{GlossarySidebar}}
+
 可扩展对象的动态属性 (Expando properties) 是{{glossary("JavaScript")}} 添加到{{glossary("DOM")}} 节点的属性 , 可以直接从 DOM 元素中访问。这些属性不是{{glossary("对象")}} 的 DOM 规范的一部分：
 
 ```js
@@ -21,14 +23,16 @@ expando 可能是 expandable object 的缩写，表示可扩展的对象。expan
 var n = 5;
 var i, j;
 
-var arr = new Array(n);            //创建第一维的数组
-for (i = 0; i < n; i++)
-{
-    arr[i] = new Array(n);
-    for (j = 0; j < n; j++)        // 内循环创建第二维数组
-    {
-        arr[i][j] = i * j;         // 数组赋值
-    }
+var arr = new Array(n); //创建第一维的数组
+for (i = 0; i < n; i++) {
+  arr[i] = new Array(n);
+  for (
+    j = 0;
+    j < n;
+    j++ // 内循环创建第二维数组
+  ) {
+    arr[i][j] = i * j; // 数组赋值
+  }
 }
 console.log(arr);
 ```

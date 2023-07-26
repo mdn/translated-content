@@ -1,11 +1,6 @@
 ---
 title: <small>
 slug: Web/HTML/Element/small
-tags:
-  - Element
-  - HTML
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/small
 ---
 
@@ -33,7 +28,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 
 ### Résultat
 
-{{EmbedLiveSample("Exemples","100%","120")}}
+{{EmbedLiveSample("","100%",'')}}
 
 ## Résumé technique
 

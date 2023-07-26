@@ -28,7 +28,7 @@ slug: Web/CSS/@page
 
 ## 描述
 
-你不能用 @page 规则来修改所有的 CSS 属性。你只能修改文档的 margin、orphans、widows 和分页符。试图对其它属性的修改都是无效的。
+你不能用 @page 规则来修改所有的 CSS 属性。你只能修改文档的 margin、orphans、widows 和分页符。试图对其他属性的修改都是无效的。
 
 `@page` 规则可以通过 CSS 对象模型接口的 {{domxref("CSSPageRule")}} 访问。
 

@@ -1,12 +1,6 @@
 ---
 title: Document.hidden
 slug: Web/API/Document/hidden
-tags:
-  - API
-  - Document
-  - Property
-  - Reference
-translation_of: Web/API/Document/hidden
 ---
 
 {{ ApiRef("DOM") }}

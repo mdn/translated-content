@@ -2,18 +2,8 @@
 title: Intl.RelativeTimeFormat.prototype.resolvedOptions()
 slug: >-
   Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - i18n
 translation_of: >-
   Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/resolvedOptions
-original_slug: >-
-  Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat/resolvedOptions
 ---
 
 {{JSRef}}
@@ -70,14 +60,11 @@ usedOptions.numberingSystem; // "latn"
 
 ## Spécifications
 
-| Spécification                                                                                                                                     | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
-|                                                                                                                                                   |                         |              |
-| [Proposition pour `Intl.RelativeTime`](https://tc39.github.io/proposal-intl-relative-time/#sec-intl.relativetimeformat.prototype.resolvedoptions) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.RelativeTimeFormat.resolvedOptions")}}
+{{Compat}}
 
 ## Voir aussi
 

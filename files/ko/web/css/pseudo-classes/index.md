@@ -1,13 +1,6 @@
 ---
 title: 의사 클래스
 slug: Web/CSS/Pseudo-classes
-tags:
-  - CSS
-  - Overview
-  - Pseudo-class
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Pseudo-classes
 ---
 
 {{CSSRef}}

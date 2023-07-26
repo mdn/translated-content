@@ -10,7 +10,7 @@ translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recordin
 
 ## Пример приложения: Веб диктофон
 
-![An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back.](https://mdn.mozillademos.org/files/7885/web-dictaphone.png)
+![An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back.](web-dictaphone.png)
 
 Для демонстрации основной функциональности интерфейса `MediaRecorder API`, мы создали веб диктофон, позволяющий записывать отрывки аудио и проигрывать их после записи. Он визуализирует устройства ввода звука, используя интерфейс `Web Audio API`. В этой статье будем концентрироваться на функциональности записи и воспроизведения.
 
@@ -244,7 +244,7 @@ mediaRecorder.onstop = function(e) {
 </article>
 ```
 
-После этого создаём объект {{domxref("Blob")}} с комбинацией наших записанных частей аудио и создаём объект URL ссылающийся на него, используя метод `window.URL.createObjectURL(blob)`. Затем устанавливаем значение атрибута {{htmlattrxref("src", "audio")}} элемента {{HTMLElement("audio")}} в созданный объект URL, так, что бы при нажатии на кнопку воспроизведения объект `Blob` передал свои данные элементу.
+После этого создаём объект {{domxref("Blob")}} с комбинацией наших записанных частей аудио и создаём объект URL ссылающийся на него, используя метод `window.URL.createObjectURL(blob)`. Затем устанавливаем значение атрибута [`src`](/ru/docs/Web/HTML/Element/audio#src) элемента {{HTMLElement("audio")}} в созданный объект URL, так, что бы при нажатии на кнопку воспроизведения объект `Blob` передал свои данные элементу.
 
 Наконец, устанавливаем обработчик события `onclick` на кнопке удаления, для удаления всей структуры HTML проигрывания результата записи (элемент clip).
 

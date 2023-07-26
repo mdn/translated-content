@@ -5,37 +5,33 @@ slug: Web/CSS/:first-child
 
 {{CSSRef}}
 
-**`:first-child`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-class](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示在一组兄弟元素中的第一个元素。
+**`:first-child`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示在一组兄弟元素中的第一个元素。
 
-```css
-/* Selects any <p> that is the first element
-   among its siblings */
-p:first-child {
-  color: lime;
-}
-```
-
-> **备注：** 最初定义时，所选元素必须有一个 parent。而从选择器 Level 4 开始，parent 不再是必须的。
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-first-child.html", "tabbed-shorter")}}
 
 ## 语法
 
-{{csssyntax}}
+```css
+:first-child {
+  /* ... */
+}
+```
 
 ## 示例
 
-### Basic example
+### 基础示例
 
 #### HTML
 
 ```html
 <div>
-  <p>This text is selected!</p>
-  <p>This text isn't selected.</p>
+  <p>此文本已选中！</p>
+  <p>此文本未选中。</p>
 </div>
 
 <div>
-  <h2>This text isn't selected: it's not a `p`.</h2>
-  <p>This text isn't selected.</p>
+  <h2>此文本未被选中：它不是一个 `p`。</h2>
+  <p>此文本未被选中。</p>
 </div>
 ```
 
@@ -49,11 +45,11 @@ p:first-child {
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample('Basic_example', 500, 200)}}
+{{EmbedLiveSample('基础示例', 500, 200)}}
 
-### Styling a list
+### 样式化列表
 
 #### HTML
 
@@ -61,7 +57,8 @@ p:first-child {
 <ul>
   <li>Item 1</li>
   <li>Item 2</li>
-  <li>Item 3
+  <li>
+    Item 3
     <ul>
       <li>Item 3.1</li>
       <li>Item 3.2</li>
@@ -84,11 +81,11 @@ ul li:first-child {
 }
 ```
 
-#### Result
+#### 结果
 
-{{EmbedLiveSample('Styling_a_list')}}
+{{EmbedLiveSample('样式化列表')}}
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
@@ -96,6 +93,9 @@ ul li:first-child {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{cssxref(":first-of-type")}}, {{cssxref(":last-child")}}, {{cssxref(":nth-child")}}
+- {{CSSxRef(":-moz-first-node")}} {{Non-standard_Inline}}
+- {{CSSxRef(":first-of-type")}}
+- {{CSSxRef(":last-child")}}
+- {{CSSxRef(":nth-child", ":nth-child()")}}

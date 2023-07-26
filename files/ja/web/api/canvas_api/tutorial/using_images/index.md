@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Using_images
 original_slug: Web/Guide/HTML/Canvas_tutorial/Using_images
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 
 これまで、[図形](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)を作成して[スタイルを適用する](/ja/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)方法を見てきました。 {{HTMLElement("canvas")}} のより面白い機能のひとつが、画像を扱えることです。これは動的な画像合成を行う、グラフの背景として使用する、ゲームのスプライトとして使用するなどといったことが可能です。 PNG、GIF、JPEG といった、ブラウザーが対応しているどの形式でも外部画像が使用できます。同じページ上の別のキャンバス要素によって生成された画像も、ソースとして使用できます。
 
@@ -42,7 +42,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Using_images
 
 ### ほかのドメインにある画像の使用
 
-{{htmlattrxref("crossorigin", "img")}} 属性を{{HTMLElement("img")}} 要素に使用すると（{{domxref("HTMLImageElement.crossOrigin")}} プロパティを反映）、`drawImage()` を呼び出してほかのドメインから画像を読み込む許可を求めることができます。ホスティングしているドメインが画像のドメイン間のアクセスを許可している場合は、キャンバスを汚染せずに画像を使用できます。そうでない場合は、画像を使用すると[キャンバスを汚染します](/ja/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f)。
+[`crossorigin`](/ja/docs/Web/HTML/Element/img#crossorigin) 属性を{{HTMLElement("img")}} 要素に使用すると（{{domxref("HTMLImageElement.crossOrigin")}} プロパティを反映）、`drawImage()` を呼び出してほかのドメインから画像を読み込む許可を求めることができます。ホスティングしているドメインが画像のドメイン間のアクセスを許可している場合は、キャンバスを汚染せずに画像を使用できます。そうでない場合は、画像を使用すると[キャンバスを汚染します](/ja/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f)。
 
 ### ほかの canvas 要素の使用
 

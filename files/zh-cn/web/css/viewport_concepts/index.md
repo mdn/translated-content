@@ -35,7 +35,7 @@ window.innerHeight /* 800 */
 window.outerHeight /* 900 */
 ```
 
-下面是一些帮助你查询视口大小和其它类似的长度属性的 DOM 属性：
+下面是一些帮助你查询视口大小和其他类似的长度属性的 DOM 属性：
 
 - 文档的 {{DOMxRef("Element.clientWidth")}} 是指一个文档使用 [CSS pixels](/zh-CN/docs/Web/HTML/Viewport_meta_tag#screen_density) 单位表示的内部宽度，包括其 padding（不包括 border、margin 或垂直滚动条）。**这就是视口的宽度**。
 - {{DOMxRef("Window.innerWidth")}} 是用 CSS 像素单位表示的浏览器窗口的视口宽度，包括垂直滚动条。

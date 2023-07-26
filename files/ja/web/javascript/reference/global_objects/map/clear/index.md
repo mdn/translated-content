@@ -1,6 +1,8 @@
 ---
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
+l10n:
+  sourceCommit: 2eb202adbe3d83292500ed46344d63fbbae410b5
 ---
 
 {{JSRef}}
@@ -11,8 +13,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 
 ## 構文
 
-```
-myMap.clear();
+```js-nolint
+clear()
 ```
 
 ### 返値
@@ -24,17 +26,17 @@ myMap.clear();
 ### clear() の使用
 
 ```js
-var myMap = new Map();
+const myMap = new Map();
 myMap.set('bar', 'baz');
 myMap.set(1, 'foo');
 
-myMap.size;       // 2
-myMap.has('bar'); // true
+console.log(myMap.size);  // 2
+console.log(myMap.has('bar')); // true
 
 myMap.clear();
 
-myMap.size;       // 0
-myMap.has('bar')  // false
+console.log(myMap.size);  // 0
+console.log(myMap.has('bar')); // false
 ```
 
 ## 仕様書
@@ -43,7 +45,7 @@ myMap.has('bar')  // false
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Map.clear")}}
+{{Compat}}
 
 ## 関連情報
 

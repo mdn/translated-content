@@ -1,8 +1,6 @@
 ---
 title: Éléments
 slug: Web/XSLT/Element
-tags:
-  - Référence_XSLT
 translation_of: Web/XSLT/Element
 ---
 
@@ -17,13 +15,13 @@ A ce propos, tous les attributs d'un LRE et certains attributs d'un nombre limit
 L'expression a évaluer est placée entre accolades&nbsp;:
 
 ```html
-<img src="{$image-dir}/mygraphic.jpg"/>
+<img src="{$image-dir}/mygraphic.jpg" />
 ```
 
 Ce qui donnera&nbsp;:
 
 ```html
-<img src="/images/mygraphic.jpg"/>
+<img src="/images/mygraphic.jpg" />
 ```
 
 Les définitions des éléments ci-dessous incluent une description, la syntaxe, une liste des attributs requis ou optionnels, une description du type et de la position, les sources dans la recommandation du W3C et le niveau de support actuel dans Gecko.

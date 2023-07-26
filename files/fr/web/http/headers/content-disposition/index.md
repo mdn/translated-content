@@ -1,10 +1,6 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
-tags:
-  - HTTP
-  - Reference
-  - header
 translation_of: Web/HTTP/Headers/Content-Disposition
 ---
 
@@ -70,7 +66,7 @@ name="fieldName"; filename="filename.jpg"
 ## Directives
 
 `<name>`
-Est suivie d'une chaîne contenant le nom du champ HTML dans la forme auquel le contenu de cette sous-partie se réfère. Lorsqu'il s'agit de plusieurs fichiers dans le même champ (par exemple, l'attribut {{htmlattrxref("multiple", "input")}} d'un {{HTMLElement("input","&lt;input type=file&gt;")}} element), il peut y avoir plusieurs sous-parties portant le même nom.
+Est suivie d'une chaîne contenant le nom du champ HTML dans la forme auquel le contenu de cette sous-partie se réfère. Lorsqu'il s'agit de plusieurs fichiers dans le même champ (par exemple, l'attribut [`multiple`](/fr/docs/Web/HTML/Element/input#multiple) d'un {{HTMLElement("input","&lt;input type=file&gt;")}} element), il peut y avoir plusieurs sous-parties portant le même nom.
 
 Un `name` avec une valeur de `'_charset_'` indique que la partie n'est pas un champ HTML, mais le jeu de caractères par défaut à utiliser pour les pièces sans informations de charset explicites.
 
@@ -84,13 +80,17 @@ Les paramètres `filename` et `filename*` diffèrent uniquement en ce que `filen
 
 Une réponse déclanchant le dialogue "Enregistrer sous":
 
-```html
+```http
 200 OK
 Content-Type: text/html; charset=utf-8
 Content-Disposition: attachment; filename="cool.html"
 Content-Length: 22
+```
 
-<HTML>Enregistrez-moi !</HTML>
+```html
+<html>
+  Enregistrez-moi !
+</html>
 ```
 
 Ce fichier HTML simple sera sauvegardé en tant que téléchargement régulier plutôt que dans le navigateur. La plupart des navigateurs proposeront de l'enregistrer sous le nom de fichier `cool.html` (par défaut).
@@ -115,19 +115,11 @@ value2
 
 ## Spécifications
 
-| Spécification        | Titre                                                                                                                    |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| {{RFC("7578")}} | Retour des valeurs à partir des formulaires: multipart / form-data                                                       |
-| {{RFC("6266")}} | Utilisation du champ Header Content-Disposition dans le protocole de transfert hypertexte (HTTP)                         |
-| {{RFC("2183")}} | Communiquer des informations de présentation dans les messages Internet: le champ de l'en-tête de disposition de contenu |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
 {{Compat}}
-
-## Notes de compatibilité
-
-- Firefox 5 gère l'en-tête de réponse HTTP `Content-Disposition` plus efficacement si les deux paramètres du nom de fichier et du nom de fichier sont fournis. Il examine tous les noms fournis, en utilisant le paramètre \* du nom de fichier, s'il est disponible, même si un paramètre de nom de fichier est inclus en premier. Auparavant, le premier paramètre correspondant serait utilisé, empêchant ainsi un nom plus approprié d'être utilisé. Voir {{bug (588781)}}.
 
 ## Voir aussi
 

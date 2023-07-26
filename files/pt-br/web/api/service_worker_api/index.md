@@ -3,7 +3,7 @@ title: API do Service Worker
 slug: Web/API/Service_Worker_API
 ---
 
-{{ServiceWorkerSidebar}}
+{{DefaultAPISidebar("Service Workers API")}}
 
 Essencialmente, um _service worker_ se comporta como um servidor _proxy_ situado entre uma aplicação web, o navegador e a rede (quando esta estiver disponível). Eles servem, dentre outras coisas, para possibilitar a criação de experiências _offline_ eficientes, interceptar requisições de rede – agindo adequadamente de acordo com o _status_ atual da conexão – e atualizar os _assets_ que residem no servidor. Service workers também permitem o acesso às APIs de _push notification_ e _background sync_.
 

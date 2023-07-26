@@ -2,6 +2,7 @@
 title: Coordinates
 slug: Web/API/GeolocationCoordinates
 ---
+
 {{APIRef("Geolocation API")}}
 
 La interfaz **`Coordinates`** representa la posición y altitud del dispositivo en la Tierra, así como la precisión con la cual estas propiedades son calculadas.
@@ -33,9 +34,9 @@ La interfaz `Coordinates` no implementa ni edita ningún método.
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.GeolocationCoordinates")}}
+{{Compat}}
 
 ## Ver también
 

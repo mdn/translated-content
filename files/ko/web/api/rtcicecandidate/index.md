@@ -1,7 +1,6 @@
 ---
 title: RTCIceCandidate
 slug: Web/API/RTCIceCandidate
-translation_of: Web/API/RTCIceCandidate
 ---
 
 {{APIRef("WebRTC")}}

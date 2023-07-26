@@ -17,7 +17,9 @@ slug: Learn/HTML/Tables/Advanced
 
 ```html
 <table>
-  <caption>ジュラ紀の恐竜</caption>
+  <caption>
+    ジュラ紀の恐竜
+  </caption>
 
   ...
 </table>
@@ -27,7 +29,7 @@ slug: Learn/HTML/Tables/Advanced
 
 キャプションは `<table>` タグのすぐ下に配置します。
 
-> **メモ:** {{htmlattrxref("summary","table")}} 属性は、`<table>` 要素で説明を提供するためにも使用できます。 これはスクリーンリーダーによっても読み上げられます。 ただし、`summary` は HTML5 仕様では{{glossary("deprecated","推奨されておらず")}}、(ページには表示されないので)晴眼のユーザには読むことができないため、代わりに `<caption>` 要素を使用することをお勧めします。
+> **メモ:** [`summary`](/ja/docs/Web/HTML/Element/table#summary) 属性は、`<table>` 要素で説明を提供するためにも使用できます。 これはスクリーンリーダーによっても読み上げられます。 ただし、`summary` は HTML5 仕様では{{glossary("deprecated","推奨されておらず")}}、(ページには表示されないので)晴眼のユーザには読むことができないため、代わりに `<caption>` 要素を使用することをお勧めします。
 
 ### アクティブラーニング: キャプションの追加
 
@@ -61,19 +63,19 @@ slug: Learn/HTML/Tables/Advanced
 2. ブラウザーでそれを開いてみてください — あなたはそれが問題ないように見えますが、それは改善されることになるかもしれません。 支出額の合計を含む "SUM" 行は間違った場所にあるように思われ、コードから抜けている細部がいくつかあります。
 3. 明白なヘッダー行を `<thead>` 要素内に、 "SUM" 行を `<tfoot>` 要素内に、そして残りの内容を `<tbody>` 要素内に配置します。
 4. 保存して更新すると、`<tfoot>` 要素を追加すると "SUM" 行が表の一番下に移動していることがわかります。
-5. 次に、{{htmlattrxref("colspan","td")}} 属性を追加して "SUM" セルを最初の 4 列にまたがるようにします。そのため、実際の数は "Cost" 列の下部に表示されます。
+5. 次に、[`colspan`](/ja/docs/Web/HTML/Element/td#colspan) 属性を追加して "SUM" セルを最初の 4 列にまたがるようにします。そのため、実際の数は "Cost" 列の下部に表示されます。
 6. これらの要素が CSS を適用するためにどれほど有用であるかのアイデアをあなたに与えるために、表にいくつかの簡単な追加のスタイリングを追加しましょう。 HTML 文書の `<head>` の中には、空の {{htmlelement("style")}} 要素があります。 この要素内に、次の CSS コード行を追加します。
 
-    ```css
-    tbody {
-      font-size: 90%;
-      font-style: italic;
-    }
+   ```css
+   tbody {
+     font-size: 90%;
+     font-style: italic;
+   }
 
-    tfoot {
-      font-weight: bold;
-    }
-    ```
+   tfoot {
+     font-weight: bold;
+   }
+   ```
 
 7. 保存して更新し、結果を確認します。 `<tbody>` 要素と `<tfoot>` 要素が適切に配置されていない場合は、同じスタイルを適用するためにはるかに複雑なセレクタ/規則を記述する必要があります。
 
@@ -82,109 +84,110 @@ slug: Learn/HTML/Tables/Advanced
 完成した表は次のようになります。
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My spending record</title>
     <style>
+      html {
+        font-family: sans-serif;
+      }
 
-        html {
-          font-family: sans-serif;
-        }
+      table {
+        border-collapse: collapse;
+        border: 2px solid rgb(200, 200, 200);
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+      }
 
-          table {
-          border-collapse: collapse;
-          border: 2px solid rgb(200,200,200);
-          letter-spacing: 1px;
-          font-size: 0.8rem;
-        }
+      td,
+      th {
+        border: 1px solid rgb(190, 190, 190);
+        padding: 10px 20px;
+      }
 
-        td, th {
-          border: 1px solid rgb(190,190,190);
-          padding: 10px 20px;
-        }
+      th {
+        background-color: rgb(235, 235, 235);
+      }
 
-        th {
-          background-color: rgb(235,235,235);
-        }
+      td {
+        text-align: center;
+      }
 
-        td {
-          text-align: center;
-        }
+      tr:nth-child(even) td {
+        background-color: rgb(250, 250, 250);
+      }
 
-        tr:nth-child(even) td {
-          background-color: rgb(250,250,250);
-        }
+      tr:nth-child(odd) td {
+        background-color: rgb(245, 245, 245);
+      }
 
-        tr:nth-child(odd) td {
-          background-color: rgb(245,245,245);
-        }
+      caption {
+        padding: 10px;
+      }
 
-        caption {
-          padding: 10px;
-        }
+      tbody {
+        font-size: 90%;
+        font-style: italic;
+      }
 
-        tbody {
-          font-size: 90%;
-          font-style: italic;
-        }
-
-        tfoot {
-          font-weight: bold;
-        }
+      tfoot {
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
-      <table>
-        <caption>How I chose to spend my money</caption>
-        <thead>
-          <tr>
-            <th>Purchase</th>
-            <th>Location</th>
-            <th>Date</th>
-            <th>Evaluation</th>
-            <th>Cost (€)</th>
-          </tr>
-        </thead>
-        <tfoot>
-          <tr>
-            <td colspan="4">SUM</td>
-            <td>118</td>
-          </tr>
-        </tfoot>
-        <tbody>
-          <tr>
-            <td>Haircut</td>
-            <td>Hairdresser</td>
-            <td>12/09</td>
-            <td>Great idea</td>
-            <td>30</td>
-          </tr>
-          <tr>
-            <td>Lasagna</td>
-            <td>Restaurant</td>
-            <td>12/09</td>
-            <td>Regrets</td>
-            <td>18</td>
-          </tr>
-          <tr>
-            <td>Shoes</td>
-            <td>Shoeshop</td>
-            <td>13/09</td>
-            <td>Big regrets</td>
-            <td>65</td>
-          </tr>
-          <tr>
-            <td>Toothpaste</td>
-            <td>Supermarket</td>
-            <td>13/09</td>
-            <td>Good</td>
-            <td>5</td>
-          </tr>
-        </tbody>
+    <table>
+      <caption>
+        How I chose to spend my money
+      </caption>
+      <thead>
+        <tr>
+          <th>Purchase</th>
+          <th>Location</th>
+          <th>Date</th>
+          <th>Evaluation</th>
+          <th>Cost (€)</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="4">SUM</td>
+          <td>118</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>Haircut</td>
+          <td>Hairdresser</td>
+          <td>12/09</td>
+          <td>Great idea</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>Lasagna</td>
+          <td>Restaurant</td>
+          <td>12/09</td>
+          <td>Regrets</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>Shoes</td>
+          <td>Shoeshop</td>
+          <td>13/09</td>
+          <td>Big regrets</td>
+          <td>65</td>
+        </tr>
+        <tr>
+          <td>Toothpaste</td>
+          <td>Supermarket</td>
+          <td>13/09</td>
+          <td>Good</td>
+          <td>5</td>
+        </tr>
+      </tbody>
     </table>
-
   </body>
 </html>
 ```
@@ -342,7 +345,7 @@ slug: Learn/HTML/Tables/Advanced
 
 ### scope 属性
 
-この記事の新しい話題は {{htmlattrxref("scope","th")}} 属性です。 これは `<th>` 要素に追加して、ヘッダーがどのセルのヘッダーであるかをスクリーンリーダーに正確に伝えることができます — 例えば、それが入っているのは行のヘッダーなのか、それとも列のヘッダーなのか？ 先ほどの支出記録の例を振り返ると、次のように列ヘッダーを列ヘッダーとして明確に定義できます。
+この記事の新しい話題は [`scope`](/ja/docs/Web/HTML/Element/th#scope) 属性です。 これは `<th>` 要素に追加して、ヘッダーがどのセルのヘッダーであるかをスクリーンリーダーに正確に伝えることができます — 例えば、それが入っているのは行のヘッダーなのか、それとも列のヘッダーなのか？ 先ほどの支出記録の例を振り返ると、次のように列ヘッダーを列ヘッダーとして明確に定義できます。
 
 ```html
 <thead>
@@ -374,7 +377,7 @@ slug: Learn/HTML/Tables/Advanced
 
 ### id 属性と headers 属性
 
-`scope` 属性を使用する代わりに、{{htmlattrxref("id")}} 属性と {{htmlattrxref("headers", "td")}} 属性を使用して、ヘッダーとセル間の関連付けを作成することもできます。 使い方は次のとおりです。
+`scope` 属性を使用する代わりに、[`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性と [`headers`](/ja/docs/Web/HTML/Element/td#headers) 属性を使用して、ヘッダーとセル間の関連付けを作成することもできます。 使い方は次のとおりです。
 
 1. 各 `<th>` 要素に一意の `id` を追加します。
 2. 各 `<td>` 要素に `headers` 属性を追加します。 各 `headers` 属性には、そのセルのヘッダーとして機能する全ての `<th>` 要素の `id` のリストを、スペースで区切って含める必要があります。
@@ -394,16 +397,15 @@ slug: Learn/HTML/Tables/Advanced
   </tr>
 </thead>
 <tbody>
-<tr>
-  <th id="haircut">Haircut</th>
-  <td headers="location haircut">Hairdresser</td>
-  <td headers="date haircut">12/09</td>
-  <td headers="evaluation haircut">Great idea</td>
-  <td headers="cost haircut">30</td>
-</tr>
+  <tr>
+    <th id="haircut">Haircut</th>
+    <td headers="location haircut">Hairdresser</td>
+    <td headers="date haircut">12/09</td>
+    <td headers="evaluation haircut">Great idea</td>
+    <td headers="cost haircut">30</td>
+  </tr>
 
   ...
-
 </tbody>
 ```
 
@@ -422,9 +424,3 @@ slug: Learn/HTML/Tables/Advanced
 表の HTML について他にも学べることがいくつかありますが、現時点で知っておく必要があることは全てここで説明しました。 この時点で、HTML の表のスタイリングについて学びたいと思うかもしれません — [スタイリングされた表](/ja/docs/Learn/CSS/Styling_boxes/Styling_tables)を参照してください。
 
 {{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
-
-## このモジュール
-
-- [HTML の表の基本](/ja/docs/Learn/HTML/Tables/Basics)
-- [HTML 表の高度な機能とアクセシビリティ](/ja/docs/Learn/HTML/Tables/Advanced)
-- [評価: 太陽系の惑星のデータを構造化する](/ja/docs/Learn/HTML/Tables/Structuring_planet_data)

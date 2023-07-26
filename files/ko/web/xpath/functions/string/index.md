@@ -1,9 +1,6 @@
 ---
 title: string
 slug: Web/XPath/Functions/string
-tags:
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/string
 ---
 
 {{ XsltRef() }}

@@ -1,7 +1,6 @@
 ---
 title: 텍스트 서식
 slug: Web/JavaScript/Guide/Text_formatting
-translation_of: Web/JavaScript/Guide/Text_formatting
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
@@ -43,7 +42,7 @@ JavaScript의 {{Glossary("문자열")}} 유형은 원문의 데이터를 나타�
 
 #### 유니코드 코드 포인트 이스케이프
 
-ECMAScript 6의 새로운 기능. 유니 코드 포인트 이스케이프를 사용하면 16 진수를 사용하여 모든 문자를 이스케이프 처리 할 수 ​​있으므로 최대 `0x10FFFF`의 유니 코드 코드 포인트를 사용할 수 있습니다. 간단한 유니 코드 이스케이프를 사용하면 동일한 결과를 얻기 위해서 서로 게이트를 별도로 작성해야하는 경우가 있습니다.
+ECMAScript 6의 새로운 기능. 유니 코드 포인트 이스케이프를 사용하면 16 진수를 사용하여 모든 문자를 이스케이프 처리 할 수 있으므로 최대 `0x10FFFF`의 유니 코드 코드 포인트를 사용할 수 있습니다. 간단한 유니 코드 이스케이프를 사용하면 동일한 결과를 얻기 위해서 서로 게이트를 별도로 작성해야하는 경우가 있습니다.
 
 {{jsxref("String.fromCodePoint()")}} 나 {{jsxref("String.prototype.codePointAt()")}}를 참고하세요.
 
@@ -210,7 +209,7 @@ mystring[0]; // This returns "H"
 
 ### 다중 선 템플릿 문자열
 
-[템플릿 문자열](/en-US/docs/Web/JavaScript/Reference/template_strings)은 포함 식을 용납하는 문자열 리터럴입니다. 여러분은 그것들과 함께 다중 선 문자열 및 문자열 보간 기능을 사용할 수 있습니다.
+[템플릿 문자열](/ko/docs/Web/JavaScript/Reference/template_strings)은 포함 식을 용납하는 문자열 리터럴입니다. 여러분은 그것들과 함께 다중 선 문자열 및 문자열 보간 기능을 사용할 수 있습니다.
 
 템플릿 문자열은 작은따옴표나 큰따옴표 대신에 back-tick (\` \`) ([grave accent](https://en.wikipedia.org/wiki/Grave_accent))문자로 묶습니다. 템플릿 문자열은 자리 표시자를 포함 할 수 있습니다. 이들은 달러 기호와 중괄호로 표시됩니다. (`${expression}`)
 
@@ -256,7 +255,7 @@ console.log(`Fifteen is ${a + b} and\nnot ${2 * a + b}.`);
 // not 20."
 ```
 
-자세한 내용은 [JavaScript 참조](/en-US/docs/Web/JavaScript/Reference)에서 [템플릿 문자열](/en-US/docs/Web/JavaScript/Reference/template_strings)에 대해 읽어보세요.
+자세한 내용은 [JavaScript 참조](/ko/docs/Web/JavaScript/Reference)에서 [템플릿 문자열](/ko/docs/Web/JavaScript/Reference/template_strings)에 대해 읽어보세요.
 
 ## 국제화
 

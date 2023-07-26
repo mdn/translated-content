@@ -1,5 +1,5 @@
 ---
-title: 'Django didactique Section 3: Utilisation des modèles de données'
+title: "Django didactique Section 3: Utilisation des modèles de données"
 slug: Learn/Server-side/Django/Models
 translation_of: Learn/Server-side/Django/Models
 ---
@@ -98,7 +98,7 @@ Détaillons ce qu'il en retourne :
 
 Chaque objet peut contenir autant d'attributs que de besoin et de quelque type qu'il soit. Chaque attribut correspondra à une colonne - _ou champ_ - dans une table de la base de données. Chaque enregistrement, ou ligne dans la table, correspondra à une instance de la classe d'objet et chaque champ sera évalué. Un champ est de la forme :
 
-```js
+```python
 my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
 ```
 
@@ -160,7 +160,7 @@ ordering = ['title', '-pubdate']
 
 Les livres sont présenté dans l'ordre alphabétique de leur titre, puis dans l'ordre chronologique du plus récent au plus ancien.
 
-Un autre attribut très utile est celui d'un nom vernaculaire pour la classe, `verbose_name`  peut être au singulier et au pluriel :
+Un autre attribut très utile est celui d'un nom vernaculaire pour la classe, `verbose_name` peut être au singulier et au pluriel :
 
 ```python
 verbose_name = 'BetterName'
@@ -448,21 +448,3 @@ A ce stade, il est prématuré de créer le site web, nous allons simplement uti
 - [Référence de l'API QuerySet](https://docs.djangoproject.com/fr/2.2/ref/models/querysets/) (Documentation Django)
 
 {{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
-
-## Dans ce module
-
-- [Django introduction](/fr/docs/Learn/Server-side/Django/Introduction)
-- [Setting up a Django development environment](/fr/docs/Learn/Server-side/Django/development_environment)
-- [Django Didactique: Site web "Bibliothèque locale"](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Django didactique Section 2: Créer le squelette du site web](/fr/docs/Learn/Server-side/Django/skeleton_website)
-- [Django didactique Section 3: Utilisation des modèles de données](/fr/docs/Learn/Server-side/Django/Models)
-- [Django didactique Section 4 : Site d'administration de Django](/fr/docs/Learn/Server-side/Django/Admin_site)
-- [Django didactique Section 5: Créer la page d'accueil](/fr/docs/Learn/Server-side/Django/Home_page)
-- [Django Tutorial Part 6: Generic list and detail views](/fr/docs/Learn/Server-side/Django/Generic_views)
-- [Django Tutorial Part 7: Sessions framework](/fr/docs/Learn/Server-side/Django/Sessions)
-- [Django Tutorial Part 8: User authentication and permissions](/fr/docs/Learn/Server-side/Django/Authentication)
-- [Django Tutorial Part 9: Working with forms](/fr/docs/Learn/Server-side/Django/Forms)
-- [Django Tutorial Part 10: Testing a Django web application](/fr/docs/Learn/Server-side/Django/Testing)
-- [Django Tutorial Part 11: Deploying Django to production](/fr/docs/Learn/Server-side/Django/Deployment)
-- [Django web application security](/fr/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/fr/docs/Learn/Server-side/Django/django_assessment_blog)

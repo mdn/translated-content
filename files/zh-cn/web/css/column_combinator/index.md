@@ -62,7 +62,7 @@ col.selected || td {
 
 ### 结果
 
-{{EmbedLiveSample("Examples", "100%")}}
+{{EmbedLiveSample("示例", "100%")}}
 
 ## 规范
 
@@ -72,7 +72,7 @@ col.selected || td {
 
 {{Compat}}
 
-## 相关
+## 参见
 
 - {{HTMLElement("col")}}
 - {{HTMLElement("colgroup")}}

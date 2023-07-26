@@ -9,7 +9,7 @@ Web Authentication API 继承自 [Credential Management API](/zh-CN/docs/Web/API
 
 ## Web authentication 概念和用例
 
-Web Authentication API（也称作 WebAuthn）使用[asymmetric (public-key) cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) （非对称加密）替代密码或 SMS 短信在网站上注册、登录、[second-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)（双因素验证）。解决了 [phishing](https://en.wikipedia.org/wiki/Phishing)（钓鱼）、[data breaches](https://en.wikipedia.org/wiki/Data_breach)（数据破坏）、SMS 文本攻击、其它双因素验证等重大安全问题，同时显著提高了易用性（因为用户不必管理许多越来越复杂的密码）。
+Web Authentication API（也称作 WebAuthn）使用[asymmetric (public-key) cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) （非对称加密）替代密码或 SMS 短信在网站上注册、登录、[second-factor authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)（双因素验证）。解决了 [phishing](https://en.wikipedia.org/wiki/Phishing)（钓鱼）、[data breaches](https://en.wikipedia.org/wiki/Data_breach)（数据破坏）、SMS 文本攻击、其他双因素验证等重大安全问题，同时显著提高了易用性（因为用户不必管理许多越来越复杂的密码）。
 
 许多网站已实现用户注册账号，登录已有账号的页面，WebAuthn 作为这些页面的替代和补充。类似其他形式的 [Credential Management API](/zh-CN/docs/Web/API/Credential_Management_API)（凭据管理 API)。Web Authentication API 有两个对应于注册和登录的基本方法：
 
@@ -29,7 +29,7 @@ Web Authentication API（也称作 WebAuthn）使用[asymmetric (public-key) cry
 
 一个典型的注册过程包括如图 1 所示的六个步骤，这些在稍后会进一步描述。这是一个注册过程的概览，所需数据已经被简化。所有的必填字段、可选字段及它们在创建注册请求中的含义可以在 {{domxref("PublicKeyCredentialCreationOptions")}} 字典中找到。类似地，完整的响应字段可以在 {{domxref("PublicKeyCredential")}} 接口（其中 {{domxref("PublicKeyCredential.response")}} 是 {{domxref("AuthenticatorAttestationResponse")}} 的接口）中找到。请注意大多数编写程序的 JavaScript 程序员只会关心第 1 步和第 5 步，分别对应 create() 函数的调用和返回。但是，了解步骤 2 到 4 对于理解在浏览器和认证器中发生了什么以及返回数据的含义至关重要。
 
-![WebAuthn registration component and dataflow diagram](<mdn_webauthn_registration_(r3).png>)
+![WebAuthn registration component and dataflow diagram](webauthn_registration_r4.png)
 
 _图 1 - WebAuthn 注册流程及与各个步骤相关的重要数据。_
 
@@ -53,7 +53,7 @@ _图 1 - WebAuthn 注册流程及与各个步骤相关的重要数据。_
 
 用户在 WebAuthn 中注册完成之后就可以使用 WebAuthn 进行身份验证（或者说登录）。验证流程与注册相似，图 2 所示的验证流程也与图 1 相似。不过，注册和验证之间的主要区别在于：1) 验证不需要用户或信赖方信息；2) 验证使用之前生成的密钥对创建一个断言，而不是使用在认证器在制造过程中烧录的密钥对创建证明。和上文一样，下面的验证流程图只是一个概况，并非详细描述。验证所需的数据可以在 {{domxref("PublicKeyCredentialRequestOptions")}} 字典中找到；返回的数据可以在 {{domxref("PublicKeyCredential")}} 接口（其中 {{domxref("PublicKeyCredential.response")}} 是 {{domxref("AuthenticatorAssertionResponse")}} 的接口）中找到。
 
-![WebAuthn authentication component and dataflow diagram](<mdn_webauthn_authentication_(r1).png>)
+![WebAuthn authentication component and dataflow diagram](mdn_webauthn_authentication_r1.png)
 
 _图 2 - WebAuthn 验证流程及与各个步骤相关的重要数据。_
 

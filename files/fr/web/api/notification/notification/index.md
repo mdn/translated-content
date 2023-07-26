@@ -1,15 +1,7 @@
 ---
 title: Notification()
-slug: Web/API/notification/Notification
-tags:
-  - API
-  - API Notifications
-  - Constructeur
-  - Notification
-  - Notifications
-  - Reference
+slug: Web/API/Notification/Notification
 translation_of: Web/API/Notification/Notification
-browser-compat: api.Notification.Notification
 ---
 
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
@@ -19,7 +11,7 @@ Le constructeur **`Notification()`** crée une nouvelle instance d'objet [`Notif
 ## Syntaxe
 
 ```js
-const myNotification = new Notification(title, options)
+const myNotification = new Notification(title, options);
 ```
 
 ### Paramètres
@@ -52,7 +44,7 @@ Dans notre [démo Emogotchi](https://chrisdavidmills.github.io/emogotchi/) ([voi
 function spawnNotification(body, icon, title) {
   const options = {
     body: body,
-    icon: icon
+    icon: icon,
   };
   const n = new Notification(title, options);
 }

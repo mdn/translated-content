@@ -1,5 +1,5 @@
 ---
-title: 'Django Tutorial Part 2: 创建网站的地基'
+title: "Django Tutorial Part 2: 创建网站的地基"
 slug: Learn/Server-side/Django/skeleton_website
 ---
 
@@ -37,7 +37,7 @@ slug: Learn/Server-side/Django/skeleton_website
 1. 使用 django-admin 工具创建工程的文件夹，基本的文件模板和工程管理脚本（**manage.py**）。
 2. 用**manage.py** 创建一个或多个应用。
 
-    > **备注：** 一个网站可能由多个部分组成，比如，主要页面，博客，wiki，下载区域等。Django 鼓励将这些部分作为分开的应用开发。如果这样的话，在需要可以在不同的工程中复用这些应用。
+   > **备注：** 一个网站可能由多个部分组成，比如，主要页面，博客，wiki，下载区域等。Django 鼓励将这些部分作为分开的应用开发。如果这样的话，在需要可以在不同的工程中复用这些应用。
 
 3. 在工程里注册新的应用。
 4. 为每个应用分配 url。

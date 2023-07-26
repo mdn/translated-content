@@ -1,11 +1,6 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-tags:
-  - ECMAScript6
-  - Modules
-  - import
-translation_of: Web/JavaScript/Reference/Statements/import
 ---
 
 {{jsSidebar("Statements")}}

@@ -1,15 +1,6 @@
 ---
 title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
-tags:
-  - API
-  - Geolocation API
-  - Method
-  - Reference
-  - Secure context
-  - 위치
-  - 위치정보
-translation_of: Web/API/Geolocation/clearWatch
 ---
 
 {{securecontext_header}}{{ APIref("Geolocation API") }}

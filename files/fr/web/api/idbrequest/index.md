@@ -1,15 +1,6 @@
 ---
 title: IDBRequest
 slug: Web/API/IDBRequest
-tags:
-  - API
-  - Database
-  - IDBRequest
-  - IndexedDB
-  - Interface
-  - Reference
-  - Storage
-  - TopicStub
 translation_of: Web/API/IDBRequest
 ---
 
@@ -59,7 +50,7 @@ On peut écouter les évènement avec `addEventListener()` ou bien en assignant 
 
 ## Exemple
 
-Dans l'exemple suivant, on ouvre une base de données et on fait une requête. Les gestionnaires d'événement `{{domxref("IDBRequest.onsuccess","onsuccess")}}` et `{{domxref("IDBRequest","onerror")}}` sont inclus. Pour un exemple de travail complet, voir notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/) ([voir l'exemple en direct](http://mdn.github.io/to-do-notifications/)).
+Dans l'exemple suivant, on ouvre une base de données et on fait une requête. Les gestionnaires d'événement `{{domxref("IDBRequest.onsuccess","onsuccess")}}` et `{{domxref("IDBRequest","onerror")}}` sont inclus. Pour un exemple de travail complet, voir notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([voir l'exemple en direct](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 var db;
@@ -69,12 +60,12 @@ var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Ces deux gestionnaires d'événement interviennent quand la dase de
 // de données s'ouvre ou non.
-DBOpenRequest.onerror = function(event) {
-  note.innerHTML += '<li>Error loading database.</li>';
+DBOpenRequest.onerror = function (event) {
+  note.innerHTML += "<li>Error loading database.</li>";
 };
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Database initialised.</li>";
 
   // Affecte le resutat de l'ouverture à la variable.
   db = DBOpenRequest.result;
@@ -97,4 +88,4 @@ DBOpenRequest.onsuccess = function(event) {
 - Définir un intervalle de clés: {{domxref("IDBKeyRange")}}
 - Récupérer et modifier vos données: {{domxref("IDBObjectStore")}}
 - utiliser les curseurs: {{domxref("IDBCursor")}}
-- Exemple de référence: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- Exemple de référence: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

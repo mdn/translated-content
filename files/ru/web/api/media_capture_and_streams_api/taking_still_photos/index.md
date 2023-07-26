@@ -6,11 +6,11 @@ tags:
 translation_of: Web/API/WebRTC_API/Taking_still_photos
 original_slug: Web/API/Media_Streams_API/Taking_still_photos
 ---
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 В этой статье объясняется как использовать WebRTC для получения доступа к камере компьютера или мобильного устройства, и захвата кадров с их помощью. [Ознакомьтесь с примером,](https://mdn-samples.mozilla.org/s/webrtc-capturestill) а затем узнайте как это работает.
 
-![Uz WebRTC balstīta attēla uztveršanas lietotne - kreisajā pusē un bez tīmekļa kameras uzņemšanas video straumē un poga](https://mdn.mozillademos.org/files/10281/web-rtc-demo.png)
+![Uz WebRTC balstīta attēla uztveršanas lietotne - kreisajā pusē un bez tīmekļa kameras uzņemšanas video straumē un poga](web-rtc-demo.png)
 
 Перейдите непосредственно [к коду на Github](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill) , при желании.
 
@@ -116,13 +116,13 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 
 Успешное выполнение промиса передаёт объект потока( `stream` ) в качестве параметра функции метода `then()`., который присваивается свойству `srcObject` элемента {{HTMLElement("video")}}, направляя поток в него.
 
-Как только поток связан с элементом `<video>` , запускаем его воспроизведение, вызовом метода [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play).
+Как только поток связан с элементом `<video>` , запускаем его воспроизведение, вызовом метода [`HTMLMediaElement.play()`](/ru/docs/Web/API/HTMLMediaElement#play).
 
 Метод обработки ошибки промиса вызывается в случае, если получение потока окажется неудачным, к примеру, когда к устройству подключена несовместимая камера, или пользователь запретил к ней доступ.
 
 #### Обработка события начала воспроизведения
 
-После момента вызова метода [`HTMLMediaElement.play()`](/en-US/docs/Web/API/HTMLMediaElement#play) на элементе {{HTMLElement("video")}}, возникает промежуток времени до начала воспроизведения видеопотока. Для недопущения блокирования интерфейса пользователя в это промежуток, нужно установить обработчик события {{event("canplay")}} элемента `video` , который сработает, когда элемент начнёт воспроизведение видеопотока. В этот момент все свойства элемента `video` конфигурируются на основе формата потока.
+После момента вызова метода [`HTMLMediaElement.play()`](/ru/docs/Web/API/HTMLMediaElement#play) на элементе {{HTMLElement("video")}}, возникает промежуток времени до начала воспроизведения видеопотока. Для недопущения блокирования интерфейса пользователя в это промежуток, нужно установить обработчик события {{event("canplay")}} элемента `video` , который сработает, когда элемент начнёт воспроизведение видеопотока. В этот момент все свойства элемента `video` конфигурируются на основе формата потока.
 
 ```
     video.addEventListener('canplay', function(ev){
@@ -211,7 +211,7 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 
 Затем, если ширина и высота не равны нулю (имеется в виду, что есть, по крайней мере, потенциально допустимые данные изображения), мы устанавливаем ширину и высоту `canvas`, чтобы они соответствовали ширине захваченного кадра, затем вызываем метод {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} , что бы отрисовать текущий кадр видео в контексте `canvas`, заполнив весь холст изображением кадра.
 
-> **Примечание:** **Примечание :** Используется факт того, что интерфейс {{domxref("HTMLVideoElement")}} похож на интерфейс {{domxref("HTMLImageElement")}} для любых API , которые принимают `HTMLImageElement` в качестве параметра, с текущим кадром видео, представленным как содержимое изображения.
+> **Примечание:** Используется факт того, что интерфейс {{domxref("HTMLVideoElement")}} похож на интерфейс {{domxref("HTMLImageElement")}} для любых API , которые принимают `HTMLImageElement` в качестве параметра, с текущим кадром видео, представленным как содержимое изображения.
 
 Как только `canvas` будет содержать захваченное видео, конвертируем его в PNG формат, вызывая метод {{domxref("HTMLCanvasElement.toDataURL()")}} на нем; наконец вызываем метод {{domxref("Element.setAttribute", "photo.setAttribute()")}} отображая захваченное изображение в элементе изображения (бокса фотографии).
 
@@ -232,5 +232,5 @@ original_slug: Web/API/Media_Streams_API/Taking_still_photos
 - [Пробуем пример](https://mdn-samples.mozilla.org/s/webrtc-capturestill)
 - [Примеры на Github](https://github.com/mdn/samples-server/tree/master/s/webrtc-capturestill)
 - {{domxref("Navigator.mediaDevices.getUserMedia()")}}
-- {{SectionOnPage("/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images","Использование изображений")}}
+- {{SectionOnPage("/ru/docs/Web/API/Canvas_API/Tutorial/Using_images","Использование изображений")}}
 - {{domxref("CanvasRenderingContext2D.drawImage()")}}

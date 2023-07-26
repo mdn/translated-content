@@ -3,6 +3,7 @@ title: id
 slug: Web/HTML/Global_attributes/id
 original_slug: Web/HTML/Atributos_Globales/id
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 El [atributo global](/es/docs/Web/HTML/Global_attributes) **id** define un identificador único (ID) el cual no debe repetirse en todo el documento. Su propósito es identificar el elemento al vincularlo (usando un identificador de fragmento), en scripts u hojas de estilo (con CSS).
@@ -17,9 +18,9 @@ El valor de este atributo no debe contener espacios en blanco. Los navegadores t
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.id")}}
+{{Compat}}
 
 ## Ver también
 

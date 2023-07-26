@@ -1,12 +1,6 @@
 ---
 title: Accept-Language
 slug: Web/HTTP/Headers/Accept-Language
-tags:
-  - En-tête HTTP
-  - En-tête de requête
-  - HTTP
-  - Négociation de contenu
-  - Reference
 translation_of: Web/HTTP/Headers/Accept-Language
 ---
 
@@ -71,13 +65,11 @@ Accept-Language: en-US,en;q=0.5
 
 ## Spécifications
 
-| Spécification                                            | Titre                                                         |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7231", "Accept-Language", "5.3.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Context |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Accept-Language")}}
+{{Compat}}
 
 ## Voir aussi
 

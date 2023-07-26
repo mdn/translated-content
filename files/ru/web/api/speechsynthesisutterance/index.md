@@ -49,7 +49,7 @@ _`SpeechSynthesisUtterance` ещё наследует свойства из ег
 
 ## Examples
 
-В нашей базовой [Демо-версия синтезатора речи](https://github.com/mdn/web-speech-api/tree/master/speak-easy-synthesis), мы сначала получаем ссылку на контроллер SpeechSynthesis, используя `window.speechSynthesis`. После определения некоторых необходимых переменных мы получаем список доступных голосов, используя {{domxref("SpeechSynthesis.getVoices()")}}, и заполнить меню выбора с ними, чтобы пользователь мог выбрать, какой голос он хочет.
+В нашей базовой [Демо-версия синтезатора речи](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis), мы сначала получаем ссылку на контроллер SpeechSynthesis, используя `window.speechSynthesis`. После определения некоторых необходимых переменных мы получаем список доступных голосов, используя {{domxref("SpeechSynthesis.getVoices()")}}, и заполнить меню выбора с ними, чтобы пользователь мог выбрать, какой голос он хочет.
 
 Внутри обработчика `inputForm.onsubmit` мы останавливаем отправку формы с помощью [preventDefault()](/ru/docs/Web/API/Event/preventDefault), используйте {{domxref("SpeechSynthesisUtterance.SpeechSynthesisUtterance()", "constructor")}} для создания нового экземпляра высказывания, содержащего текст из текста {{htmlelement("input")}}, установите {{domxref("SpeechSynthesisUtterance.voice","voice")}}на голос, выбранный в элементе {{htmlelement("select")}} и начните высказывание через {{domxref("SpeechSynthesis.speak()")}} метод.
 

@@ -12,4 +12,4 @@ Le paquet EXSLT <i lang="en">Common</i> fournit des fonctionnalités de base qui
 
 ## Compatibilité des navigateurs
 
-{{Compat("xslt.exslt.exsl")}}
+{{Compat}}

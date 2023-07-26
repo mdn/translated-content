@@ -11,7 +11,7 @@ Blob 表示的不一定是 JavaScript 原生格式的数据。{{DOMxRef("File")}
 
 ## 使用 blob
 
-要从其它非 blob 对象和数据构造一个 `Blob`，请使用 {{DOMxRef("Blob.Blob", "Blob()")}} 构造函数。要创建一个 blob 数据的子集 blob，请使用 {{DOMxRef("Blob.slice()", "slice()")}} 方法。要获取用户文件系统上的文件对应的 `Blob` 对象，请参阅 {{DOMxRef("File")}} 文档。
+要从其他非 blob 对象和数据构造一个 `Blob`，请使用 {{DOMxRef("Blob.Blob", "Blob()")}} 构造函数。要创建一个 blob 数据的子集 blob，请使用 {{DOMxRef("Blob.slice()", "slice()")}} 方法。要获取用户文件系统上的文件对应的 `Blob` 对象，请参阅 {{DOMxRef("File")}} 文档。
 
 接受 `Blob` 对象的 API 也被列在 {{DOMxRef("File")}} 文档中。
 
@@ -42,7 +42,7 @@ Blob 表示的不一定是 JavaScript 原生格式的数据。{{DOMxRef("File")}
 
 ### 创建一个 blob
 
-{{DOMxRef("Blob.Blob", "Blob()")}} 构造函数可以通过其它对象创建 blob。例如，用一个 JSON 字符串构造一个 blob：
+{{DOMxRef("Blob.Blob", "Blob()")}} 构造函数可以通过其他对象创建 blob。例如，用一个 JSON 字符串构造一个 blob：
 
 ```js
 const obj = {hello: 'world'};
@@ -64,7 +64,7 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'
 
 #### JavaScript
 
-该示例代码片段的主要片段是 `typedArrayToURL()` 函数，其用于从给定的类型化数组创建一个 `Blob`，并返回该 `Blob` 的对象 URL。将数据转换为对象 URL 后，可通过多种方式使用，包括：作为 {{HTMLElement("img")}} 元素 {{htmlattrxref("src", "img")}} 属性的值（当然，假设给定的数据包含了一张图片）。
+该示例代码片段的主要片段是 `typedArrayToURL()` 函数，其用于从给定的类型化数组创建一个 `Blob`，并返回该 `Blob` 的对象 URL。将数据转换为对象 URL 后，可通过多种方式使用，包括：作为 {{HTMLElement("img")}} 元素 [`src`](/zh-CN/docs/Web/HTML/Element/img#src) 属性的值（当然，假设给定的数据包含了一张图片）。
 
 ```js
 function showViewLiveResultButton() {
@@ -132,7 +132,7 @@ const text = await (new Response(blob)).text();
 const text = await blob.text();
 ```
 
-通过使用 `FileReader` 的其它方法可以把 Blob 读取为字符串或者数据 URL。
+通过使用 `FileReader` 的其他方法可以把 Blob 读取为字符串或者数据 URL。
 
 ## 规范
 

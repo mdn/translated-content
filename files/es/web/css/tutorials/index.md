@@ -7,7 +7,7 @@ Aprender CSS puede ser una tarea desalentadora. Para ayudarte, hemos escrito num
 
 Esta página enlista todo el contenido, con una descripción corta. Estan agrupados por grado de complejidad, para que escogas lo mas apropiado para tu nivel.
 
-> **Nota:** **Nota del editor:** **Debemos de usar tags de "grado de dificultad" en las páginas de este tutorial para que las listas basadas en grados de dificultad puedan ser automáticamente construidas.**
+> **Nota:** **Debemos de usar tags de "grado de dificultad" en las páginas de este tutorial para que las listas basadas en grados de dificultad puedan ser automáticamente construidas.**
 
 ## Turorial CSS Nivel Principiante
 

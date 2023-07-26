@@ -8,7 +8,8 @@ tags:
 translation_of: MDN/Contribute/Feedback
 original_slug: MDN/Contribute/Feedback
 ---
-{{MDNSidebar}}{{IncludeSubnav("/ru/docs/MDN")}}
+
+{{MDNSidebar}}
 
 Добро пожаловать в MDN! Если у вас есть предложения или проблемы с использованием MDN, то это нужное вам место. Тот факт, что у вас есть предложения сделать MDN лучше, делает вас частью большого сообщества MDN и мы благодарим вас за ваш интерес.
 

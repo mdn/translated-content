@@ -1,16 +1,6 @@
 ---
 title: browserAction.setBadgeText()
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - browserAction
-  - setBadgeText
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
 ---
 
@@ -24,8 +14,8 @@ Les onglets sans texte de badge spécifique hériteront du texte global du badge
 
 ```js
 browser.browserAction.setBadgeText(
-  details // object
-)
+  details, // object
+);
 ```
 
 Cette API est également disponible sous `chrome.browserAction.setBadgeText()`.
@@ -56,10 +46,6 @@ Cette API est également disponible sous `chrome.browserAction.setBadgeText()`.
 - si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue.
 - si `windowId` et `tabId` sont tous les deux omis, le badge global est défini.
 
-## Compatibilité du navigateur
-
-{{Compat("webextensions.api.browserAction.setBadgeText",2)}}
-
 ## Exemples
 
 Ajouter un badge indiquant combien de fois l'utilisateur a cliqué sur le bouton :
@@ -68,11 +54,15 @@ Ajouter un badge indiquant combien de fois l'utilisateur a cliqué sur le bouton
 var clicks = 0;
 
 function increment() {
-  browser.browserAction.setBadgeText({text: (++clicks).toString()});
+  browser.browserAction.setBadgeText({ text: (++clicks).toString() });
 }
 
 browser.browserAction.onClicked.addListener(increment);
 ```
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 {{WebExtExamples}}
 

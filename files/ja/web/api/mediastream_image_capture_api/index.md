@@ -11,34 +11,34 @@ slug: Web/API/MediaStream_Image_Capture_API
 
 画像またはビデオストリームを検索するプロセスは、以下のように行われます。サンプルコードは、[Chrome の Image Capture の例](https://googlechrome.github.io/samples/image-capture/)を基にしています。
 
-First, get a reference to a device by calling {{domxref("MediaDevices.getUserMedia()")}}. The example below simply says give me whatever video device is available, though the `getUserMedia()` method allows more specific capabilities to be requested. This method returns a {{jsxref("Promise")}} that resolves with a {{domxref("MediaStream")}} object.
+まず、{{domxref("MediaDevices.getUserMedia()")}} を呼び出してデバイスへの参照を取得します。`getUserMedia()` メソッドではより詳細な機能を要求できますが、以下の例では単に利用可能な任意のビデオデバイスを要求しています。このメソッドは、{{domxref("MediaStream")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。
 
 ```js
 navigator.mediaDevices.getUserMedia({ video: true })
   .then(mediaStream => {
-    // Do something with the stream.
+    // ストリームについて何らかの処理を行う
   })
 ```
 
-Next, isolate the visual part of the media stream. Do this by calling {{domxref("MediaStream.getVideoTracks()")}}. This returns an array of {{domxref("MediaStreamTrack")}} objects. The code below assumes that the first item in the `MediaStreamTrack` array is the one to use. You can use the properties of the `MediaStreamTrack` objects to select the one you need.
+次に、メディアストリームから映像部分を分離します。これは、{{domxref("MediaStream.getVideoTracks()")}} を呼ぶことで行います。これは {{domxref("MediaStreamTrack")}} オブジェクトの配列を返します。以下のコードでは、`MediaStreamTrack` の配列の最初のアイテムが使いたいものだと仮定しています。`MediaStreamTrack` オブジェクトのプロパティを用いて使いたいものを選ぶことができます。
 
 ```js
 const track = mediaStream.getVideoTracks()[0];
 ```
 
-At this point, you might want to configure the device capabilities before capturing an image. You can do this by calling {{domxref("MediaStreamTrack.applyConstraints","applyConstraints()")}} on the track object before doing anything else.
+この時点で、映像を取得する前にデバイスの機能の設定をしたいかもしれません。これは、他の操作をする前にトラックオブジェクトの {{domxref("MediaStreamTrack.applyConstraints","applyConstraints()")}} を呼ぶことでできます。
 
 ```js
 let zoom = document.querySelector('#zoom');
 const capabilities = track.getCapabilities();
-// Check whether zoom is supported or not.
+// ズームに対応しているかをチェックする
 if(!capabilities.zoom) {
   return;
 }
 track.applyConstraints({ advanced : [{ zoom: zoom.value }] });
 ```
 
-Finally, pass the `MediaStreamTrack` object to the {{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}} constructor. Though a `MediaStream` holds several types of tracks and provides multiple methods for retrieving them, the ImageCapture constructor will throw a {{domxref("DOMException")}} of type `NotSupportedError` if {{domxref("MediaStreamTrack.kind")}} is not `"video"`.
+最後に、`MediaStreamTrack` オブジェクトを {{domxref("ImageCapture.ImageCapture()", "ImageCapture()")}} コンストラクターに渡します。`MediaStream` にはいくつかのトラックの種類があり、それらを取得する複数の方法を提供していますが、`ImageCapture` コンストラクターは {{domxref("MediaStreamTrack.kind")}} が `"video"` でない場合、種類が `NotSupportedError` である {{domxref("DOMException")}} を投げます。
 
 ```js
 let imageCapture = new ImageCapture(track);
@@ -47,9 +47,9 @@ let imageCapture = new ImageCapture(track);
 ## インターフェイス
 
 - {{domxref("ImageCapture")}}
-  - : 有効な {{domxref("MediaStreamTrack")}} を通じて参照される写真デバイスから画像をキャプチャするためのインタフェース。
+  - : 有効な {{domxref("MediaStreamTrack")}} を通じて参照される写真デバイスから画像をキャプチャするためのインターフェイス。
 - {{domxref("PhotoCapabilities")}}
-  - : 接続されている写真デバイスに利用可能な設定オプションを提供します。 {{domxref("ImageCapture.getPhotoCapabilities", "ImageCapture.getPhotoCapabilities()")}} を呼び出して `PhotoCapabilities` オブジェクトを取得します。
+  - : 接続されている写真デバイスに利用可能な設定オプションを提供します。{{domxref("ImageCapture.getPhotoCapabilities", "ImageCapture.getPhotoCapabilities()")}} を呼び出して `PhotoCapabilities` オブジェクトを取得します。
 
 ## 仕様書
 

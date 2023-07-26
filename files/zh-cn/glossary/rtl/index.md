@@ -1,7 +1,9 @@
 ---
 title: RTL（从右到左）
-slug: Glossary/rtl
+slug: Glossary/RTL
 ---
+
+{{GlossarySidebar}}
 
 **RTL**（**从右到左**，Right To Left）是{{Glossary("locale", "区域设置")}}的属性之一，用于指示语言从右到左的书写方向。
 

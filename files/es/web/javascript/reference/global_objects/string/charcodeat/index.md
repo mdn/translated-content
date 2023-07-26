@@ -1,13 +1,6 @@
 ---
 title: String.prototype.charCodeAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - String
-  - Unicode
-translation_of: Web/JavaScript/Reference/Global_Objects/String/charCodeAt
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/charCodeAt
 ---
 

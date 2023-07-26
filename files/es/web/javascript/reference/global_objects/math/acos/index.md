@@ -50,9 +50,9 @@ Para valores menores que -1 o mayores que 1, `Math.acos()` devuelve {{jsxref("Na
 
 {{Specifications}}
 
-## Compatibilidad con navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.acos")}}
+{{Compat}}
 
 ## Ver también
 

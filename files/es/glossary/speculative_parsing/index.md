@@ -1,6 +1,6 @@
 ---
 title: Optimizar sus páginas para análisis especulativo
-slug: Glossary/speculative_parsing
+slug: Glossary/Speculative_parsing
 original_slug: Web/HTML/Optimizing_your_pages_for_speculative_parsing
 ---
 

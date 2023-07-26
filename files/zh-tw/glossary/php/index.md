@@ -3,6 +3,8 @@ title: PHP
 slug: Glossary/PHP
 ---
 
+{{GlossarySidebar}}
+
 PHP（PHP: Hypertext Preprocessor 的遞歸縮寫，意為「PHP：超文字預處理器」）是一個開源的伺服器端腳本語言，可用於建制網頁應用和動態網站。
 
 ## 範例
@@ -28,13 +30,13 @@ PHP（PHP: Hypertext Preprocessor 的遞歸縮寫，意為「PHP：超文字預�
 ### PHP 變數
 
 ```php
-​​​​​​​​​​​​​​<?php
+<?php
  // 變數
  $nome='Danilo';
  $sobrenome='Santos';
  $pais='Brasil';
  $email='danilocarsan@gmailcom';
-​​​​​​​
+
  // 印出變數
  echo $nome;
  echo $sobrenome;

@@ -22,10 +22,10 @@ Si no tuvieramos matrices, tendríamos que almacenar cada elemento en una variab
 Como en artículos anteriores, aprendamos sobre los aspectos básicos reales de las matrices ingresando algunos ejemplos en una consola de JavaScript. A continuación proporcionamos uno (también puedes [abrir en consola](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) en una pestaña o ventana separadas, o usar la [consola de desarrollador de navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), si lo prefieres).
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>JavaScript console</title>
     <style>
       * {
@@ -33,7 +33,7 @@ Como en artículos anteriores, aprendamos sobre los aspectos básicos reales de 
       }
 
       html {
-        background-color: #0C323D;
+        background-color: #0c323d;
         color: #809089;
         font-family: monospace;
       }
@@ -67,64 +67,59 @@ Como en artículos anteriores, aprendamos sobre los aspectos básicos reales de 
         line-height: 1.5;
         font-family: monospace;
         padding: 0;
-        background: #0C323D;
+        background: #0c323d;
         color: #809089;
       }
 
       div {
         clear: both;
       }
-
     </style>
   </head>
-  <body>
-
-
-  </body>
+  <body></body>
 
   <script>
     var geval = eval;
     function createInput() {
-      var inputDiv = document.createElement('div');
-      var inputPara = document.createElement('p');
-      var inputForm = document.createElement('input');
+      var inputDiv = document.createElement("div");
+      var inputPara = document.createElement("p");
+      var inputForm = document.createElement("input");
 
-      inputDiv.setAttribute('class','input');
-      inputPara.textContent = '>';
+      inputDiv.setAttribute("class", "input");
+      inputPara.textContent = ">";
       inputDiv.appendChild(inputPara);
       inputDiv.appendChild(inputForm);
       document.body.appendChild(inputDiv);
 
-      if(document.querySelectorAll('div').length > 1) {
+      if (document.querySelectorAll("div").length > 1) {
         inputForm.focus();
       }
 
-      inputForm.addEventListener('change', executeCode);
+      inputForm.addEventListener("change", executeCode);
     }
 
     function executeCode(e) {
       try {
         var result = geval(e.target.value);
-      } catch(e) {
-        var result = 'error — ' + e.message;
+      } catch (e) {
+        var result = "error — " + e.message;
       }
 
-      var outputDiv = document.createElement('div');
-      var outputPara = document.createElement('p');
+      var outputDiv = document.createElement("div");
+      var outputPara = document.createElement("p");
 
-      outputDiv.setAttribute('class','output');
-      outputPara.textContent = 'Result: ' + result;
+      outputDiv.setAttribute("class", "output");
+      outputPara.textContent = "Result: " + result;
       outputDiv.appendChild(outputPara);
       document.body.appendChild(outputDiv);
 
       e.target.disabled = true;
-      e.target.parentNode.style.opacity = '0.5';
+      e.target.parentNode.style.opacity = "0.5";
 
-      createInput()
+      createInput();
     }
 
     createInput();
-
   </script>
 </html>
 ```
@@ -137,17 +132,17 @@ Las matrices se construyen con corchetes, que contiene una lista de elementos se
 
 1. Digamos que queríamos almacenar una lista de compras en una matriz — haríamos algo como lo siguiente. Ingresa las siguientes líneas en la consola:
 
-    ```js
-    let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
-    shopping;
-    ```
+   ```js
+   let shopping = ["bread", "milk", "cheese", "hummus", "noodles"];
+   shopping;
+   ```
 
 2. En este caso, cada elemento de la matriz es una cadena, pero ten en cuenta que puedes almacenar cualquier elemento en una matriz — cadena, número, objeto, otra variable, incluso otra matriz. También puedes mezclar y combinar tipos de elementos — no todos tienen que ser números, cadenas, etc. Prueba estos:
 
-    ```js
-    let sequence = [1, 1, 2, 3, 5, 8, 13];
-    let random = ['tree', 795, [0, 1, 2]];
-    ```
+   ```js
+   let sequence = [1, 1, 2, 3, 5, 8, 13];
+   let random = ["tree", 795, [0, 1, 2]];
+   ```
 
 3. Intenta creando un par de matrices por tu cuenta, antes de continuar.
 
@@ -157,26 +152,26 @@ Puedes entonces acceder a elementos individuales en la matriz mediante la notaci
 
 1. Ingresa lo siguiente en tu consola:
 
-    ```js
-    shopping[0];
-    // returns "bread"
-    ```
+   ```js
+   shopping[0];
+   // returns "bread"
+   ```
 
 2. también puedes modificar un elemento en una matriz simplemente dando a un item de la matriz un nuevo valor. Prueba esto:
 
-    ```js
-    shopping[0] = 'tahini';
-    shopping;
-    // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
-    ```
+   ```js
+   shopping[0] = "tahini";
+   shopping;
+   // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
+   ```
 
-    > **Nota:** Lo dijimos antes, pero solo como recordatorio — ¡ las computadoras comienzan a contar desde 0!
+   > **Nota:** Lo dijimos antes, pero solo como recordatorio — ¡ las computadoras comienzan a contar desde 0!
 
 3. Ten en cuenta que una matriz dentro de otra matriz se llama matriz multidimensional. Puedes acceder a los elementos de una matriz que estén dentro de otra, encadenando dos pares de corchetes. Por ejemplo, para acceder a uno de los elementos dentro de la matriz, que a su vez, es el tercer elemento dentro de la matriz `random` (ver sección anterior), podríamos hacer algo como esto:
 
-    ```js
-    random[2][2];
-    ```
+   ```js
+   random[2][2];
+   ```
 
 4. Intenta seguir jugando y haciendo algunas modificaciones más a tus ejemplos de matriz antes de continuar.
 
@@ -216,125 +211,130 @@ A menudo se te presentarán algunos datos brutos contenidos en una cadena larga 
 
 1. Vamos a jugar con esto, para ver como funciona. Primero, crea una cadena en tu consola:
 
-    ```js
-    let myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
-    ```
+   ```js
+   let myData = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
+   ```
 
 2. Ahora dividámoslo en cada coma:
 
-    ```js
-    let myArray = myData.split(',');
-    myArray;
-    ```
+   ```js
+   let myArray = myData.split(",");
+   myArray;
+   ```
 
 3. Finalmente, intenta encontrar la longitud de tu nueva matriz y recuperar algunos elementos de ella:
 
-    ```js
-    myArray.length;
-    myArray[0]; // the first item in the array
-    myArray[1]; // the second item in the array
-    myArray[myArray.length-1]; // the last item in the array
-    ```
+   ```js
+   myArray.length;
+   myArray[0]; // the first item in the array
+   myArray[1]; // the second item in the array
+   myArray[myArray.length - 1]; // the last item in the array
+   ```
 
 4. También puedes ir en la dirección opuesta usando el método {{jsxref("Array.prototype.join()","join()")}}. Prueba lo siguiente:
 
-    ```js
-    let myNewString = myArray.join(',');
-    myNewString;
-    ```
+   ```js
+   let myNewString = myArray.join(",");
+   myNewString;
+   ```
 
 5. Otra forma de convertir una matriz en cadena es usar el método {{jsxref("Array.prototype.toString()","toString()")}}. `toString()` es posiblemente más simple que `join()` ya que no toma un parámetro, pero es más limitado. Con `join()` puedes especificar diferentes separadores (intenta ejecutar el Paso 4 con un caracter diferente a la coma).
 
-    ```js
-    let dogNames = ['Rocket','Flash','Bella','Slugger'];
-    dogNames.toString(); //Rocket,Flash,Bella,Slugger
-    ```
+   ```js
+   let dogNames = ["Rocket", "Flash", "Bella", "Slugger"];
+   dogNames.toString(); //Rocket,Flash,Bella,Slugger
+   ```
 
 ### Agregar y eliminar elementos de la matriz
 
 Todavia no hemos cubierto la posibilidad de agregar y eliminar elementos de la matriz — echemos un vistazo a esto ahora. Usaremos la matriz `myArray` con la que terminamos en la última sección. Si todavía no has seguido esa sección, primero crea la matriz en tu consola:
 
 ```js
-let myArray = ['Manchester', 'London', 'Liverpool', 'Birmingham', 'Leeds', 'Carlisle'];
+let myArray = [
+  "Manchester",
+  "London",
+  "Liverpool",
+  "Birmingham",
+  "Leeds",
+  "Carlisle",
+];
 ```
 
 Antes que nada, para añdir o eliminar un elemento al final de una matriz podemos usar {{jsxref("Array.prototype.push()","push()")}} y {{jsxref("Array.prototype.pop()","pop()")}} respectivamente.
 
 1. primero usemos `push()` — nota que necesitas incluir uno o más elementos que desees agregas al final de tu matriz. Prueba esto:
 
-    ```js
-    myArray.push('Cardiff');
-    myArray;
-    myArray.push('Bradford', 'Brighton');
-    myArray;
-    ```
+   ```js
+   myArray.push("Cardiff");
+   myArray;
+   myArray.push("Bradford", "Brighton");
+   myArray;
+   ```
 
 2. La nueva longitud de la matriz se devuelve cuando finaliza la llamada al método. Si quisieras almacenar la nueva longitud de matriz en una variable, podrías hacer algo como esto:
 
-    ```js
-    let newLength = myArray.push('Bristol');
-    myArray;
-    newLength;
-    ```
+   ```js
+   let newLength = myArray.push("Bristol");
+   myArray;
+   newLength;
+   ```
 
 3. Eliminar el último elemento de una matriz es tan simple como ejecutar `pop()` en ella. Prueba esto:
 
-    ```js
-    myArray.pop();
-    ```
+   ```js
+   myArray.pop();
+   ```
 
 4. El elemento que sé eliminó se devuelve cuando se completa la llamada al método. Para guardar este elemento en una variable, puedes hacer lo siguiente:
 
-    ```js
-    let removedItem = myArray.pop();
-    myArray;
-    removedItem;
-    ```
+   ```js
+   let removedItem = myArray.pop();
+   myArray;
+   removedItem;
+   ```
 
 {{jsxref("Array.prototype.unshift()","unshift()")}} y {{jsxref("Array.prototype.shift()","shift()")}} funcionan exactamente igual de `push()` y `pop()`, respectivamente, excepto que funcionan al principio de la matriz, no al final.
 
 1. Primero `unshift()` — prueba el siguiente comando:
 
-    ```js
-    myArray.unshift('Edinburgh');
-    myArray;
-    ```
+   ```js
+   myArray.unshift("Edinburgh");
+   myArray;
+   ```
 
 2. Ahora `shift()`; prueba estos!
 
-    ```js
-    let removedItem = myArray.shift();
-    myArray;
-    removedItem;
-    ```
+   ```js
+   let removedItem = myArray.shift();
+   myArray;
+   removedItem;
+   ```
 
 ## Aprendizaje activo: ¡Imprimiendo esos productos!
 
 Volvamos al ejemplo que describimos anteriormente — imprima los nombres de los productos y los precios en una factura, luego, sume los precios e imprímelos en la parte inferior. En el ejemplo editable a continuación, hay comentarios que contienen números — cada uno de estos marca un lugar donde debe agregar algo al código. Ellos son los siguientes:
 
 1. Debajo de `// number 1` hay un número de cadena, cada una de las cuales contiene un nombre de producto y un precio separados por dos puntos. Nos gustaría que conviertas esto en una matriz y lo almacenamos en una matriz llamda `products`.
-2. En la misma línea que el comentario `// number 2` es el comienzo de un ciclo for. En esta línea, actualmente tenemos `i <= 0`, que es una prueba condicional que hace que el bucle que el [bucle for](/es/Learn/JavaScript/First_steps/A_first_splash#Loops) se detenga inmediatamente, porque dice "detener cuando `i` es menor o igual 0", y `i` comienza en 0. Nos gustaría que reemplazaras esto con una prueba condicional que detenga el ciclo cuando `i` no sea inferior a la longitud la matriz `products` .
+2. En la misma línea que el comentario `// number 2` es el comienzo de un ciclo for. En esta línea, actualmente tenemos `i <= 0`, que es una prueba condicional que hace que el [bucle for](/es/Learn/JavaScript/First_steps/A_first_splash#Loops) se detenga inmediatamente, porque dice "detener cuando `i` es menor o igual 0", y `i` comienza en 0. Nos gustaría que reemplazaras esto con una prueba condicional que detenga el ciclo cuando `i` no sea inferior a la longitud la matriz `products` .
 3. justo debajo del comentario `// number 3` queremos que escriba una línea de código que divide el elemento actual de la matriz (`nombre:precio`) en dos elementos separados, uno que contiene solo el nombre y otros que contienen solo el precio. Si no está seguro de cómo hacerlo, consulte el artículo [Métodos de cadenas útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods) para obtener ayuda o, mejor aún, consulte la sección [Converting between strings and arrays](#converting_between_strings_and_arrays) de este artículo.
 4. Como parte de la línea de código anterior, también querras convertir el precio de una cadena a un número. Si no pudes recordar como hacerlo, consulta el [primer artículo de cadenas](/es/Learn/JavaScript/First_steps/Strings#Numbers_versus_strings).
 5. Hay una variable llamada `total` que se crea y se le da un valor de 0 en la parte superior del código. Dentro del ciclo (debajo de `// number 4`) queremos que agregues una línea que añade el precio actual del artículo a ese total en cada iteración del ciclo, de modo que al final del código el total correcto se imprima en la factura. Es posible que necesites un [operador de asignación](/es/Learn/JavaScript/First_steps/Math#Assignment_operators) para hacer esto.
-6. Queremos que cambies la línea justo de bajo `// number 5` para que la variable `itemText` se iguale a "nombre de elemnto actual — $precio de elemento actual", por ejemplo "Zapatos — $23.99" en cada caso, por lo que la ionformación correcta artículo está impreso en la factura. Esto es simplemente una concatenación de cadenas, lo que debería ser familiar para ti.
+6. Queremos que cambies la línea justo de bajo `// number 5` para que la variable `itemText` se iguale a "nombre de elemnto actual — $precio de elemento actual", por ejemplo "Zapatos — $23.99" en cada caso, por lo que la información correcta del artículo está impreso en la factura. Esto es simplemente una concatenación de cadenas, lo que debería ser familiar para ti.
 
 ```html hidden
 <h2>Live output</h2>
 
 <div class="output" style="min-height: 150px;">
+  <ul></ul>
 
-<ul>
-
-</ul>
-
-<p></p>
-
+  <p></p>
 </div>
 
 <h2>Editable code</h2>
 
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 410px;width: 95%">
 var list = document.querySelector('.output ul');
@@ -366,15 +366,15 @@ totalBox.textContent = 'Total: $' + total.toFixed(2);
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -382,40 +382,40 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar totalBox = document.querySelector(\'.output p\');\nvar total = 0;\nlist.innerHTML = \'\';\ntotalBox.textContent = \'\';\n\nvar products = [\'Underpants:6.99\',\n \'Socks:5.99\',\n \'T-shirt:14.99\',\n \'Trousers:31.99\',\n \'Shoes:23.99\'];\n\nfor(var i = 0; i < products.length; i++) {\n var subArray = products[i].split(\':\');\n var name = subArray[0];\n var price = Number(subArray[1]);\n total += price;\n itemText = name + \' — $\' + price;\n\n var listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n}\n\ntotalBox.textContent = \'Total: $\' + total.toFixed(2);';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nvar totalBox = document.querySelector('.output p');\nvar total = 0;\nlist.innerHTML = '';\ntotalBox.textContent = '';\n\nvar products = ['Underpants:6.99',\n 'Socks:5.99',\n 'T-shirt:14.99',\n 'Trousers:31.99',\n 'Shoes:23.99'];\n\nfor(var i = 0; i < products.length; i++) {\n var subArray = products[i].split(':');\n var name = subArray[0];\n var price = Number(subArray[1]);\n total += price;\n itemText = name + ' — $' + price;\n\n var listItem = document.createElement('li');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n}\n\ntotalBox.textContent = 'Total: $' + total.toFixed(2);";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
-
 
   if (e.keyCode === 27) {
     textarea.blur();
@@ -426,8 +426,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -438,10 +441,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -491,19 +494,16 @@ Para completar la aplicación necesitamos:
 ```html hidden
 <h2>Live output</h2>
 <div class="output" style="min-height: 150px;">
+  <input type="text" /><button>Search</button>
 
-<input type="text"><button>Search</button>
-
-<ul>
-
-</ul>
-
+  <ul></ul>
 </div>
 
 <h2>Editable code</h2>
 
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
-
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="playable-code" style="height: 370px; width: 95%">
 var list = document.querySelector('.output ul');
@@ -545,8 +545,8 @@ searchBtn.onclick = function() {
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution">
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" />
 </div>
 ```
 
@@ -573,9 +573,9 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -583,38 +583,39 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var jsSolution = 'var list = document.querySelector(\'.output ul\');\nvar searchInput = document.querySelector(\'.output input\');\nvar searchBtn = document.querySelector(\'.output button\');\n\nlist.innerHTML = \'\';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== \'\') {\n myHistory.unshift(searchInput.value);\n\n list.innerHTML = \'\';\n\n for(var i = 0; i < myHistory.length; i++) {\n itemText = myHistory[i];\n var listItem = document.createElement(\'li\');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n }\n\n if(myHistory.length >= 5) {\n myHistory.pop();\n }\n\n searchInput.value = \'\';\n searchInput.focus();\n }\n}';
+var jsSolution =
+  "var list = document.querySelector('.output ul');\nvar searchInput = document.querySelector('.output input');\nvar searchBtn = document.querySelector('.output button');\n\nlist.innerHTML = '';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== '') {\n myHistory.unshift(searchInput.value);\n\n list.innerHTML = '';\n\n for(var i = 0; i < myHistory.length; i++) {\n itemText = myHistory[i];\n var listItem = document.createElement('li');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n }\n\n if(myHistory.length >= 5) {\n myHistory.pop();\n }\n\n searchInput.value = '';\n searchInput.focus();\n }\n}";
 var solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -626,8 +627,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -638,10 +642,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -665,15 +669,3 @@ Lo único que queda por hacer es trabajar a través de la evaluación de este m�
 - {{jsxref("Array")}} — the `Array` object reference page — for a detailed reference guide to the features discussed in this page, and many more.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
-
-## En este módulo
-
-- [¿Qué es JavaScript?](/es/docs/Learn/JavaScript/First_steps/Qu%C3%A9_es_JavaScript)
-- [Un primer acercamiento a JavaScript](/es/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [¿Qué salió mal? Troubleshooting JavaScript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Guardando la información que necesitas— Variables](/es/docs/Learn/JavaScript/First_steps/Variables)
-- [Matemáticas básicas en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Matem%C3%A1ticas)
-- [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings)
-- [Métodos útiles para el manejo de cadenas](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arreglos](/es/docs/Learn/JavaScript/First_steps/Arrays)
-- [Evaluaciones: Generador de historias absurdas](/es/docs/Learn/JavaScript/First_steps/Silly_story_generator)

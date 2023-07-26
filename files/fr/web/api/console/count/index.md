@@ -1,14 +1,6 @@
 ---
 title: Console.count()
-slug: Web/API/Console/count
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthodes
-  - Web
-  - console
-  - débogage
+slug: Web/API/console/count
 translation_of: Web/API/Console/count
 ---
 

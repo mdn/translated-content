@@ -17,7 +17,7 @@ HTML 문서는 {{glossary("element","요소")}}로 구조화한 일반 텍스트
 
 HTML 태그는 {{Glossary("attribute","특성")}}을 사용해 확장할 수 있고, 브라우저가 요소를 읽어들일 때 추가 정보를 제공합니다.
 
-![Detail of the structure of an HTML element](https://mdn.mozillademos.org/files/7659/anatomy-of-an-html-element.png)
+![Detail of the structure of an HTML element](anatomy-of-an-html-element.png)
 
 HTML은 보통 `.htm`이나 `.html` 확장자로 저장해 {{glossary("server", "웹 서버")}}로 제공하며, 아무 {{glossary("browser", "브라우저")}}로 렌더링할 수 있습니다.
 

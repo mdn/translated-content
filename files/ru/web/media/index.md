@@ -12,7 +12,7 @@ tags:
 translation_of: Web/Media
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
+{{QuickLinksWithSubpages("/ru/docs/Web/Media")}}
 
 Over the years, the Web's ability to present, create, and manage audio, video, and other media has grown at an increasing pace. Today, there are a large number of APIs available, as well as HTML elements, DOM interfaces, and other features that make it possible to not only perform these tasks, but use media in tandem with other technologies to do truly remarkable things. This article lists the various APIs with links to documentation you may find helpful in mastering them.
 
@@ -51,7 +51,7 @@ These articles cover HTML features for media developers.
 - [Using audio and video in HTML](/ru/docs/Web/Media/HTML_media)
   - : A guide to using the HTML `<audio>` and `<video>` elements.
 - [Accessible multimedia](/ru/docs/Learn/Accessibility/Multimedia)
-  - : In this guide, we cover ways web designers and developers can create content that is accessible to people with different capabilities. This ranges from using the {{htmlattrxref("alt", "img")}} attribute on {{HTMLElement("img")}} elements to captions to tagging media for screen readers.
+  - : In this guide, we cover ways web designers and developers can create content that is accessible to people with different capabilities. This ranges from using the [`alt`](/ru/docs/Web/HTML/Element/img#alt) attribute on {{HTMLElement("img")}} elements to captions to tagging media for screen readers.
 - [Guide to media types and formats on the web](/ru/docs/Web/Media/Formats)
   - : A guide to the file types and codecs available for images, audio, and video media on the web. This includes recommendations for what formats to use for what kinds of content, best practices including how to provide fallbacks and how to prioritize media types, and also includes general browser support information for each media container and codec.
 - [Streaming audio and video](/ru/docs/Web/Media/Streaming)

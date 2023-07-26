@@ -36,13 +36,13 @@ fetch(resource, options)
     - 文字列または{{Glossary("stringifier", "文字列化")}}できるその他のオブジェクト（{{domxref("URL")}} オブジェクトを含む）。取得したいリソースの直接の URL を含む文字列です。
     - {{domxref("Request")}} オブジェクト。
 
-- `init` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : リクエストに適用したいカスタム設定を含むオブジェクト。可能なオプションは以下の通りです。
 
     - `method`
       - : リクエストするメソッド、`GET`、`POST` など。なお、 {{httpheader("Origin")}} ヘッダーは {{HTTPMethod("HEAD")}} または {{HTTPMethod("GET")}} メソッドの読み取りリクエストでは設定されません。
-        (この動作は Firefox 65 で修正されました。 {{bug(1508661)}} を参照)
+        (この動作は Firefox 65 で修正されました。 [Firefox バグ 1508661](https://bugzil.la/1508661) を参照)
     - `headers`
       - : リクエストに追加したいヘッダーで、 {{domxref("Headers")}} オブジェクトまたは {{jsxref("String")}} 値を持つオブジェクトリテラルで指定してください。なお、[一部の名前は禁止されています](/ja/docs/Glossary/Forbidden_header_name)。
     - `body`

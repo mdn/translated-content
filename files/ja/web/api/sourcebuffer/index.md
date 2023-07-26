@@ -1,6 +1,8 @@
 ---
 title: SourceBuffer
 slug: Web/API/SourceBuffer
+l10n:
+  sourceCommit: 7552f08addb16f738bfb957ae79c5a9202ab36ff
 ---
 
 {{APIRef("Media Source Extensions")}}
@@ -9,115 +11,111 @@ slug: Web/API/SourceBuffer
 
 {{InheritanceDiagram}}
 
-## プロパティ
+## インスタンスプロパティ
 
 - {{domxref("SourceBuffer.appendWindowEnd")}}
   - : 追加ウィンドウの終わりのタイムスタンプを制御します。
 - {{domxref("SourceBuffer.appendWindowStart")}}
   - : 追加ウィンドウ（[append window](https://w3c.github.io/media-source/#append-window)）の始まりのタイムスタンプを制御します。 これは、`SourceBuffer` に追加されるメディアデータをフィルタリングするために使用できるタイムスタンプの範囲です。 この範囲内のタイムスタンプを持つコード化されたメディアフレームは追加されますが、範囲外のものは除外されます。
-- {{domxref("SourceBuffer.audioTracks")}} {{readonlyInline}}
+- {{domxref("SourceBuffer.audioTracks")}} {{ReadOnlyInline}}
   - : `SourceBuffer` 内に現在含まれている音声トラックのリスト。
-- {{domxref("SourceBuffer.buffered")}} {{readonlyInline}}
-  - : `SourceBuffer` に現在バッファされている時間範囲を返します。
+- {{domxref("SourceBuffer.buffered")}} {{ReadOnlyInline}}
+  - : `SourceBuffer` に現在バッファーされている時間範囲を返します。
 - {{domxref("SourceBuffer.mode")}}
   - : `SourceBuffer` 内のメディアセグメントの順序を、任意の順序で追加できるか、または厳密な順序で保持する必要があるかを制御します。
-- {{domxref("SourceBuffer.textTracks")}} {{readonlyInline}}
-  - : `SourceBuffer` 内に現在含まれているテキストトラックのリスト。
+- {{domxref("SourceBuffer.textTracks")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : `SourceBuffer` 内に現在含まれているテキストトラックのリストです。
 - {{domxref("SourceBuffer.timestampOffset")}}
   - : その後 `SourceBuffer` に追加されるメディアセグメント内のタイムスタンプに適用されるオフセットを制御します。
-- {{domxref("SourceBuffer.trackDefaults")}}
-  - : `SourceBuffer` に追加されるメディアの初期化セグメント（[initialization segment](https://w3c.github.io/media-source/#init-segment)）で、種類、ラベル、言語情報が利用できない場合に使用するデフォルト値を指定します。
-- {{domxref("SourceBuffer.updating")}} {{readonlyInline}}
-  - : `SourceBuffer` が現在更新されているかどうか、つまり {{domxref("SourceBuffer.appendBuffer()")}}、{{domxref("SourceBuffer.appendStream()")}}、または {{domxref("SourceBuffer.remove()")}} の操作が現在進行中かどうかを示すブール値。
-- {{domxref("SourceBuffer.videoTracks")}} {{readonlyInline}}
-  - : `SourceBuffer` 内に現在含まれている動画トラックのリスト。
+- {{domxref("SourceBuffer.updating")}} {{ReadOnlyInline}}
+  - : 論理値で、`SourceBuffer` が現在更新されているかどうか、つまり {{domxref("SourceBuffer.appendBuffer()")}} または {{domxref("SourceBuffer.remove()")}} の操作が現在進行中かどうかを示します。
+- {{domxref("SourceBuffer.videoTracks")}} {{ReadOnlyInline}}
+  - : `SourceBuffer` 内に現在含まれている動画トラックのリストです。。
 
-### イベントハンドラ
+## インスタンスメソッド
 
-- {{domxref("SourceBuffer.onabort")}}
-  - : {{domxref("SourceBuffer.appendBuffer()")}} または {{domxref("SourceBuffer.appendStream()")}} が {{domxref("SourceBuffer.abort()")}} の呼び出しによって終了するたびに発生します。 {{domxref("SourceBuffer.updating")}} は `true` から `false` に変更されます。
-- {{domxref("SourceBuffer.onerror")}}
-  - : {{domxref("SourceBuffer.appendBuffer()")}} 中または {{domxref("SourceBuffer.appendStream()")}} 中にエラーが発生するたびに発生します。 {{domxref("SourceBuffer.updating")}} は `true` から `false` に変更されます。
-- {{domxref("SourceBuffer.onupdate")}}
-  - : {{domxref("SourceBuffer.appendBuffer()")}} メソッドまたは {{domxref("SourceBuffer.remove()")}} が完了するたびに発生します。 {{domxref("SourceBuffer.updating")}} は `true` から `false` に変更されます。 このイベントは、`onupdateend` の前に発生します。
-- {{domxref("SourceBuffer.onupdateend")}}
-  - : {{domxref("SourceBuffer.appendBuffer()")}} メソッドまたは {{domxref("SourceBuffer.remove()")}} が終了するたびに発生します。 このイベントは、`onupdate` の後に発生します。
-- {{domxref("SourceBuffer.onupdatestart")}}
-  - : {{domxref("SourceBuffer.updating")}} の値が `false` から `true` に遷移するたびに発生します。
-
-## メソッド
-
-_親インターフェイスである {{domxref("EventTarget")}} からメソッドを継承します。_
+_親インターフェイスである {{domxref("EventTarget")}} からメソッドを継承しています。_
 
 - {{domxref("SourceBuffer.abort()")}}
   - : 現在のセグメントを中止し、セグメントパーサーをリセットします。
 - {{domxref("SourceBuffer.appendBuffer()")}}
-  - : {{domxref("ArrayBuffer")}} または {{domxref("ArrayBufferView")}} オブジェクトからのメディアセグメントデータを `SourceBuffer` に追加します。
-- {{domxref("SourceBuffer.appendBufferAsync()")}} {{experimental_inline}}
-  - : 指定されたバッファを `SourceBuffer` に非同期的に追加するプロセスを開始します。 バッファが追加されると満たされる {{jsxref("Promise")}} を返します。
-- {{domxref("SourceBuffer.appendStream()")}}
-  - : `ReadableStream` オブジェクトからのメディアセグメントデータを `SourceBuffer` に追加します。
+  - : {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}} のいずれかのオブジェクトからのメディアセグメントデータを `SourceBuffer` に追加します。
+- {{domxref("SourceBuffer.appendBufferAsync()")}} {{Non-standard_Inline}} {{Experimental_Inline}}
+  - : 指定されたバッファーを `SourceBuffer` に非同期的に追加するプロセスを開始します。 バッファが追加されると満たされる {{jsxref("Promise")}} を返します。
 - {{domxref("SourceBuffer.changeType()")}}
   - : 今後の {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}} の呼び出しで、新しいデータが準拠することを期待する {{Glossary("MIME type","MIME タイプ")}}を変更します。
 - {{domxref("SourceBuffer.remove()")}}
   - : `SourceBuffer` から特定の時間範囲内のメディアセグメントを削除します。
-- {{domxref("SourceBuffer.removeAsync()")}} {{experimental_inline}}
+- {{domxref("SourceBuffer.removeAsync()")}} {{Non-standard_Inline}} {{Experimental_Inline}}
   - : 指定された範囲のメディアセグメントを `SourceBuffer` から非同期的に削除するプロセスを開始します。 一致するすべてのセグメントが削除されると満たされる {{jsxref("Promise")}} を返します。
+
+## イベント
+
+- {{domxref("SourceBuffer.abort_event", "abort")}}
+  - : {{domxref("SourceBuffer.appendBuffer()")}} または {{domxref("SourceBuffer.appendStream()")}} が {{domxref("SourceBuffer.abort()")}} の呼び出しによって終了するたびに発生します。 {{domxref("SourceBuffer.updating")}} は `true` から `false` に変更されます。
+- {{domxref("SourceBuffer.error_event", "error")}}
+  - : {{domxref("SourceBuffer.appendBuffer()")}} 中または {{domxref("SourceBuffer.appendStream()")}} 中にエラーが発生するたびに発生します。 {{domxref("SourceBuffer.updating")}} は `true` から `false` に変更されます。
+- {{domxref("SourceBuffer.update_event", "update")}}
+  - : {{domxref("SourceBuffer.appendBuffer()")}} メソッドまたは {{domxref("SourceBuffer.remove()")}} が完了するたびに発生します。 {{domxref("SourceBuffer.updating")}} は `true` から `false` に変更されます。 このイベントは、`onupdateend` の前に発生します。
+- {{domxref("SourceBuffer.updateend_event", "updateend")}}
+  - : {{domxref("SourceBuffer.appendBuffer()")}} メソッドまたは {{domxref("SourceBuffer.remove()")}} が終了するたびに発生します。 このイベントは、`onupdate` の後に発生します。
+- {{domxref("SourceBuffer.updatestart_event", "updatestart")}}
+  - : {{domxref("SourceBuffer.updating")}} の値が `false` から `true` に遷移するたびに発生します。
 
 ## 例
 
 次の簡単な例では、動画をチャンクごとに可能な限り高速でロードし、できるだけ早く再生します。 この例は Nick Desaulniers によって作成され、[ここでライブで見る](http://nickdesaulniers.github.io/netfix/demo/bufferAll.html)ことができます（さらに調査するために[ソースをダウンロードする](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferAll.html)こともできます）。
 
 ```js
-var video = document.querySelector('video');
+const video = document.querySelector("video");
 
-var assetURL = 'frag_bunny.mp4';
+const assetURL = "frag_bunny.mp4";
 // Blink はコーデックに関して特定する必要がある
 // ./mp4info frag_bunny.mp4 | grep Codec
-var mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+const mimeCodec = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
 
-if ('MediaSource' in window && MediaSource.isTypeSupported(mimeCodec)) {
-  var mediaSource = new MediaSource();
-  //console.log(mediaSource.readyState); // closed
+if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
+  const mediaSource = new MediaSource();
+  console.log(mediaSource.readyState); // closed
   video.src = URL.createObjectURL(mediaSource);
-  mediaSource.addEventListener('sourceopen', sourceOpen);
+  mediaSource.addEventListener("sourceopen", sourceOpen);
 } else {
-  console.error('サポートされていない MIME タイプまたはコーデック: ', mimeCodec);
+  console.error(`${mimeCodec} の MIME タイプまたはコーデックには対応していません`, mimeCodec);
 }
 
-function sourceOpen (_) {
-  //console.log(this.readyState); // open
-  var mediaSource = this;
-  var sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
-  fetchAB(assetURL, function (buf) {
-    sourceBuffer.addEventListener('updateend', function (_) {
+function sourceOpen() {
+  console.log(this.readyState); // open
+  const mediaSource = this;
+  const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
+  fetchAB(assetURL, (buf) => {
+    sourceBuffer.addEventListener("updateend", () => {
       mediaSource.endOfStream();
       video.play();
-      //console.log(mediaSource.readyState); // ended
+      console.log(mediaSource.readyState); // ended
     });
     sourceBuffer.appendBuffer(buf);
   });
 }
 
-function fetchAB (url, cb) {
+function fetchAB(url, cb) {
   console.log(url);
-  var xhr = new XMLHttpRequest;
-  xhr.open('get', url);
-  xhr.responseType = 'arraybuffer';
-  xhr.onload = function () {
+  const xhr = new XMLHttpRequest();
+  xhr.open("get", url);
+  xhr.responseType = "arraybuffer";
+  xhr.onload = () => {
     cb(xhr.response);
   };
   xhr.send();
 }
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.SourceBuffer")}}
+{{Compat}}
 
 ## 関連情報
 

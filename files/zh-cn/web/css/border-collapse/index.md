@@ -41,10 +41,6 @@ border-collapse: unset;
 
 ## 示例
 
-### 查看独立的例子
-
-[查看在线演示](/samples/cssref/border-collapse.html)
-
 ### 各个浏览器引擎的多彩表格
 
 #### HTML
@@ -105,7 +101,7 @@ table th, table td {
 
 #### 结果
 
-{{ EmbedLiveSample('A_colorful_table_of_browser_engines', 400, 300) }}
+{{ EmbedLiveSample('各个浏览器引擎的多彩表格', 400, 300) }}
 
 ## 规范
 

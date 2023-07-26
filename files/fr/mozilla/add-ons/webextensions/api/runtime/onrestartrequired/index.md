@@ -1,16 +1,6 @@
 ---
 title: runtime.onRestartRequired
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/onRestartRequired
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onRestartRequired
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onRestartRequired
 ---
 
@@ -21,9 +11,9 @@ Lancé lorsqu'une application ou le périphérique sur lequel elle s'exécute do
 ## Syntaxe
 
 ```js
-browser.runtime.onRestartRequired.addListener(listener)
-browser.runtime.onRestartRequired.removeListener(listener)
-browser.runtime.onRestartRequired.hasListener(listener)
+browser.runtime.onRestartRequired.addListener(listener);
+browser.runtime.onRestartRequired.removeListener(listener);
+browser.runtime.onRestartRequired.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -46,9 +36,9 @@ Les événements ont trois fonctions :
     - `raison`
       - : Une valeur {{WebExtAPIRef('runtime.OnRestartRequiredReason')}} — La raison pour laquelle l'événemtn est envoyé.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.onRestartRequired")}}
+{{Compat}}
 
 ## Exemples
 

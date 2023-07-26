@@ -1,10 +1,6 @@
 ---
 title: CSS Box Alignment
-slug: Web/CSS/CSS_Box_Alignment
-tags:
-  - Alignement
-  - CSS
-  - Guide
+slug: Web/CSS/CSS_box_alignment
 translation_of: Web/CSS/CSS_Box_Alignment
 ---
 

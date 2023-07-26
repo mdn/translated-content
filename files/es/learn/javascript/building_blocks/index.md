@@ -17,7 +17,7 @@ Hemos reunido un curso que incluye toda la información esencial que necesitas p
 
 Antes de empezar este módulo, deberías ya tener alguna familiaridad con lo básico de [HTML](/es/docs/Learn/HTML/Introduction_to_HTML) y [CSS](/es/docs/Learn/CSS/Introduction_to_CSS), y también deberías haber trabajado todos lo módulos previos, [JavaScript primeros pasos](/es/docs/Learn/JavaScript/First_steps).
 
-> **Nota:** Si estas trabajando en una computadora/tablet/otro dispositivo donde no tienes la capacidad de crear tus propios archivos, podrías practicar (la mayoría de) los ejemplos de código en un programa en linea tales como [JSBin](http://jsbin.com/) o [Thimble](https://thimble.mozilla.org/).
+> **Nota:** Si estas trabajando en una computadora/tablet/otro dispositivo donde no tienes la capacidad de crear tus propios archivos, podrías practicar (la mayoría de) los ejemplos de código en un programa en linea tales como [JSBin](http://jsbin.com/) o [Glitch](https://glitch.com/).
 
 ## Guías
 
@@ -31,7 +31,7 @@ Antes de empezar este módulo, deberías ya tener alguna familiaridad con lo bá
   - : Con la información presentada en el artículo anterior, este artículo, pretende demostrar una parte práctica. Se podrá desarrollar una función propia, y durante el desarrollo se presentarán algunos consejos prácticos y útiles para trabajar con funciones.
 - [Una función devuelve valores](/es/docs/Learn/JavaScript/Building_blocks/Return_values)
   - : Un concepto fundamental que ha de tenerse en cuenta, es que las funciones pueden devolver valores al finalizar su ejecución, aunque algunas funciones también pueden no devolver ningún valor. Es importante entender como son esos valores, qué tipos pueden tener y cómo aprovechar el valor devuelto por la función en el programa.
-- [Introducción a eventos](/es/docs/Learn/JavaScript/Building_blocks/Eventos)
+- [Introducción a eventos](/es/docs/Learn/JavaScript/Building_blocks/Events)
   - : Los eventos son acciones u ocurrencias que aparecen durante la ejecución del programa, y que son reportadas por el sistema, de forma que se pueda responder a los eventos de la forma deseada. Por ejemplo, si un usuario hace un click en un botón de una página web, puede que se quiera que ese evento inicie una acción en el que se muestre cierta información en un cuadro de información. En este último artículo se presentarán y describirán los conceptos necesarios con respecto a los eventos, y como funcionan en un navegador.
 
 ## Evaluaciones

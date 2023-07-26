@@ -57,9 +57,11 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("media-src")}}
   - : Especifica origenes válidos para carga de archivos usando elementos como {{HTMLElement("audio")}} , {{HTMLElement("video")}} y {{HTMLElement("track")}}.
 - {{CSP("object-src")}}
+
   - : Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}} elements.
 
     Elements controlled by `object-src` are perhaps coincidentally considered legacy HTML elements and aren't recieving new standardized features (such as the security attributes `sandbox` or `allow` for `<iframe>`). Therefore it is **recommended** to restrict this fetch-directive (e.g. explicitly set `object-src 'none'` if possible).
+
 - {{CSP("prefetch-src")}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}
@@ -80,7 +82,7 @@ Document directives govern the properties of a document or [worker](/es/docs/Web
 - {{CSP("plugin-types")}}
   - : Restricts the set of plugins that can be embedded into a document by limiting the types of resources which can be loaded.
 - {{CSP("sandbox")}}
-  - : Enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} attribute.
+  - : Enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/es/docs/Web/HTML/Element/iframe#sandbox) attribute.
 - {{CSP("disown-opener")}} {{deprecated_inline}}
   - : Ensures a resource will disown its opener when navigated to.
 
@@ -103,7 +105,7 @@ Reporting directives control the reporting process of CSP violations. See also t
 
   - : Instructs the user agent to report attempts to violate the Content Security Policy. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
 
-    > **Advertencia:** Though the {{CSP("report-to")}} directive is intended to replace the deprecated **`report-uri`** directive, {{CSP("report-to")}} isn’t supported in most browsers yet. So for compatibility with current browsers while also adding forward compatibility when browsers get {{CSP("report-to")}} support, you can specify both **`report-uri`** and {{CSP("report-to")}}:
+    > **Advertencia:** Though the {{CSP("report-to")}} directive is intended to replace the deprecated **`report-uri`** directive, {{CSP("report-to")}} isn't supported in most browsers yet. So for compatibility with current browsers while also adding forward compatibility when browsers get {{CSP("report-to")}} support, you can specify both **`report-uri`** and {{CSP("report-to")}}:
     >
     > ```
     > Content-Security-Policy: ...; report-uri https://endpoint.example.com; report-to groupname

@@ -1,10 +1,6 @@
 ---
 title: alpha-value
 slug: Web/CSS/alpha-value
-tags:
-  - CSS
-  - Reference
-  - Type de donnée
 translation_of: Web/CSS/alpha-value
 ---
 

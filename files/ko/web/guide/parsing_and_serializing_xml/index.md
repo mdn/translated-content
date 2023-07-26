@@ -1,17 +1,6 @@
 ---
 title: XML 파싱 및 직렬화
 slug: Web/Guide/Parsing_and_serializing_XML
-tags:
-  - AJAX
-  - Add-ons
-  - DOM
-  - Extensions
-  - JSON
-  - JXON
-  - XML
-  - XMLHttpRequest
-  - 가이드
-translation_of: Web/Guide/Parsing_and_serializing_XML
 original_slug: Web/Guide/XML_파싱_및_직렬화
 ---
 

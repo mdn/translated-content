@@ -41,7 +41,7 @@ class MyArrayBuffer extends ArrayBuffer {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.ArrayBuffer.@@species")}}
+{{Compat}}
 
 ## Ver también
 

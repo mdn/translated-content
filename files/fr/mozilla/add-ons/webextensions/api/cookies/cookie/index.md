@@ -1,16 +1,6 @@
 ---
 title: cookies.Cookie
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
-tags:
-  - API
-  - Add-ons
-  - Cookies
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - cookie
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 ---
 
@@ -47,9 +37,9 @@ Les valeurs de ce type sont des objets, qui peuvent contenir les propriétés su
 - `value`
   - : Une `chaîne` représentant la valeur du cookie.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.cookies.Cookie")}}
+{{Compat}}
 
 ## Exemples
 

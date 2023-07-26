@@ -33,9 +33,9 @@ translation_of: Web/API/Screen
   - : Возвращает расстояние в пикселях от верхней стороны экрана до текущего экрана.
 - {{domxref("Screen.width")}}
   - : Возвращает ширину экрана в пикселях.
-- {{domxref("Screen.mozEnabled")}} {{gecko_minversion_inline("12.0")}}
+- {{domxref("Screen.mozEnabled")}}
   - : Булево. Установка на false выключит экран устройства.
-- {{domxref("Screen.mozBrightness")}} {{gecko_minversion_inline("12.0")}}
+- {{domxref("Screen.mozBrightness")}}
   - : Управляет яркостью экрана устройства. Ожидается значение между 0 и 1.0.
 
 ### Обработчик событий

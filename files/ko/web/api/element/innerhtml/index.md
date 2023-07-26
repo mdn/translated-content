@@ -1,7 +1,6 @@
 ---
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
-translation_of: Web/API/Element/innerHTML
 ---
 
 {{APIRef("DOM")}}
@@ -121,7 +120,7 @@ log("Logging mouse events inside this container...");
 
 `log()` 함수는 {{jsxref("Date.toLocaleTimeString", "toLocaleTimeString()")}}을 사용하여 {{jsxref("Date")}} 객체에서 현재 시간을 가져 오고, 타임 스탬프와 메시지 텍스트가 있는 문자열을 작성하여 로그 출력을 만듭니다. 그런 다음 메시지는 클래스 `"log"`가 있는 상자에 추가됩니다.
 
-{{domxref("MouseEvent")}} 기반 이벤트 ({{event("mousedown")}}, {{event("click")}}, {{event("mouseenter")}}와 같은) 정보를 기록하는 두 번째 메서드를 추가합니다:
+{{domxref("MouseEvent")}} 기반 이벤트 ({{domxref("Element/mousedown_event", "mousedown")}}, {{domxref("Element/click_event", "click")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}와 같은) 정보를 기록하는 두 번째 메서드를 추가합니다:
 
 ```js
 function logEvent(event) {
@@ -182,17 +181,15 @@ HTML은 우리의 예제에서 아주 간단합니다.
 
 {{EmbedLiveSample("Example", 640, 350)}}
 
-## Specification
+## 명세서
 
-| Specification                                                                                        | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('DOM Parsing', '#dom-element-innerhtml', 'Element.innerHTML')}} | {{Spec2('DOM Parsing')}} | Initial definition |
+{{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
 - {{domxref("Node.textContent")}} 과 {{domxref("Node.innerText")}}
 - {{domxref("Element.insertAdjacentHTML()")}}

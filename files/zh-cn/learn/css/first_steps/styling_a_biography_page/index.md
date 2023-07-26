@@ -89,11 +89,3 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 恭喜你完成了第一个模块的学习。现在你应该对 CSS 有了一个大致的了解 并且能够了解在样式表中发生的大多数事情。在下一个模块[CSS 构建](/zh-CN/docs/Learn/CSS/Building_blocks)中，我们将对一些关键区域进行深入的学习。
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
-
-**本章目录**
-
-1. [什么是 CSS？](/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [CSS 入门](/zh-CN/docs/Learn/CSS/First_steps/Getting_started)
-3. [CSS 是如何构成的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [CSS 是如何工作的](/zh-CN/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [运用你所学的知识](/zh-CN/docs/Learn/CSS/First_steps/Styling_a_biography_page)

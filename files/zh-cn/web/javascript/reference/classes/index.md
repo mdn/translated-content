@@ -401,7 +401,7 @@ class Bar extends calculatorMixin(randomizerMixin(Foo)) { }
 
 无法重新定义类。尝试这样做会产生一个 `SyntaxError`.
 
-如果您正在使用 Web 浏览器（例如 Firefox Web 控制台， (**Tools** > **Web Developer** > **Web Console**) 并且您两次“运行”具有相同名称的类的定义，您将收到一个 `SyntaxError: redeclaration of let ClassName;`. (请参阅中有关此问题的进一步讨论 {{Bug(1428672)}}.) 在 Chrome 开发者工具中执行类似的操作会给您一个以下信息： `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
+如果您正在使用 Web 浏览器（例如 Firefox Web 控制台， (**Tools** > **Web Developer** > **Web Console**) 并且您两次“运行”具有相同名称的类的定义，您将收到一个 `SyntaxError: redeclaration of let ClassName;`. (请参阅中有关此问题的进一步讨论 [Firefox bug 1428672](https://bugzil.la/1428672).) 在 Chrome 开发者工具中执行类似的操作会给您一个以下信息： `Uncaught SyntaxError: Identifier 'ClassName' has already been declared at <anonymous>:1:1`.
 
 ## 参见
 

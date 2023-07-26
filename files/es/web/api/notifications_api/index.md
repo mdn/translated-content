@@ -1,62 +1,63 @@
 ---
-title: Notifications API
+title: API de Notificaciones
 slug: Web/API/Notifications_API
+l10n:
+  sourceCommit: f3976b4130f066a6114aeb9617924cdcb0f994ce
 ---
 
-{{DefaultAPISidebar("Web Notifications")}}
+{{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-The Notifications API allows web pages to control the display of system notifications to the end user. These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app. The API is designed to be compatible with existing notification systems, across different platforms.
+La API de notificaciones permite que las páginas web controlen la visualización de las notificaciones del sistema para el usuario final. Estos están fuera de la ventana de navegación de nivel superior, por lo que se pueden mostrar incluso cuando el usuario ha cambiado de pestaña o se ha movido a una aplicación diferente. La API está diseñada para ser compatible con los sistemas de notificación existentes, en diferentes plataformas.
 
-## Concepts and usage
+## Conceptos y uso
 
-On supported platforms, showing a system notification generally involves two things. First, the user needs to grant the current origin permission to display system notifications, which is generally done when the app or site initialises, using the {{domxref("Notification.requestPermission()")}} method. This will spawn a request dialog, along the following lines:
+En las plataformas compatibles, mostrar una notificación del sistema generalmente implica dos cosas. Primero, el usuario debe otorgar el permiso de origen actual para mostrar las notificaciones del sistema, lo que generalmente se hace cuando se inicializa la aplicación o el sitio, mediante el método {{domxref("Notification.requestPermission()")}}. Esto debe hacerse en respuesta a un gesto del usuario, como hacer clic en un botón, por ejemplo:
 
-![](screen_shot_2019-12-11_at_9.59.14_am.png)
+```js
+btn.addEventListener("click", () => {
+  let promise = Notification.requestPermission();
+  // esperar por el permiso
+});
+```
 
-From here the user can choose to allow notifications from this origin, block notifications from this origin, or not choose at this point. Once a choice has been made, the setting will generally persist for the current session.
+Esta no es solo la mejor práctica: no debe enviar _spam_ a los usuarios con notificaciones que no aceptaron, sino que, en el futuro, los navegadores rechazarán explícitamente las notificaciones que no se activen en respuesta a un gesto del usuario. Firefox ya está haciendo esto desde la versión 72, por ejemplo.
 
-> **Nota:** As of Firefox 44, the permissions for Notifications and [Push](/es/docs/Web/API/Push_API) have been merged. If permission is granted for notifications, push will also be enabled.
+Esto generará un cuadro de diálogo de solicitud, a lo largo de las siguientes líneas:
 
-Next, a new notification is created using the {{domxref("Notification.Notification","Notification()")}} constructor. This must be passed a title argument, and can optionally be passed an options object to specify options, such as text direction, body text, icon to display, notification sound to play, and more.
+![Un cuadro de diálogo que le pide al usuario que permita notificaciones desde ese origen. Hay opciones para nunca permitir o permitir notificaciones.](screen_shot_2019-12-11_at_9.59.14_am.png)
 
-{{AvailableInWorkers}}
+Desde aquí el usuario puede optar por permitir las notificaciones de este origen, o bloquearlas. Una vez que se ha hecho una elección, la configuración generalmente persistirá durante la sesión actual.
 
-In addition, the Notifications API spec specifies a number of additions to the [ServiceWorker API](/es/docs/Web/API/ServiceWorker_API), to allow service workers to fire notifications.
+> **Nota:** A partir de Firefox 44 se combinaron los permisos de Notificaciones y [Push](/es/docs/Web/API/Push_API). Si se otorga permiso para las notificaciones, también se habilitará el envío.
 
-> **Nota:** To find out more about using notifications in your own app, read [Using the Notifications API](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API).
+A continuación, se crea una nueva notificación usando el constructor {{domxref("Notification.Notification","Notification()")}}. A esto se le debe pasar un argumento de título y, opcionalmente, se le puede pasar un objeto de opciones para especificar opciones, como la dirección del texto, el cuerpo del texto, el icono para mostrar, el sonido de notificación para reproducir y más.
 
-## Notifications interfaces
+Además, la especificación de la API de notificaciones especifica una serie de adiciones a la [API ServiceWorker](/es/docs/Web/API/Service_Worker_API), para permitir que los _service workers_ activen las notificaciones.
+
+> **Nota:** Para obtener más información sobre el uso de notificaciones en su propia aplicación, lea [Uso de la API de notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API).
+
+## Interfaces de notificaciones
 
 - {{domxref("Notification")}}
-  - : Defines a notification object.
+  - : Define un objeto de notificación.
 
-### Service worker additions
+### Adiciones de service worker
 
 - {{domxref("ServiceWorkerRegistration")}}
-  - : Includes the {{domxref("ServiceWorkerRegistration.showNotification()")}} and {{domxref("ServiceWorkerRegistration.getNotifications()")}} method, for controlling the display of notifications.
+  - : Incluye el método {{domxref("ServiceWorkerRegistration.showNotification()")}} y {{domxref("ServiceWorkerRegistration.getNotifications()")}}, para controlar la visualización de notificaciones.
 - {{domxref("ServiceWorkerGlobalScope")}}
-  - : Includes the {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}} handler, for firing custom functions when a notification is clicked.
+  - : Incluye el controlador {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}}, para activar funciones personalizadas cuando se hace clic en una notificación.
 - {{domxref("NotificationEvent")}}
-  - : A specific type of event object, based on {{domxref("ExtendableEvent")}}, which represents a notification that has fired.
+  - : Un tipo específico de objeto de evento, basado en {{domxref("ExtendableEvent")}}, que representa una notificación que se ha activado.
 
 ## Especificaciones
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
-## Firefox OS permissions
+## Veáse también
 
-When using notifications in a Firefox OS app, be sure to add the `desktop-notification` permission in your manifest file. Notifications can be used at any permission level, hosted or above:
-
-```json
-"permissions": {
-  "desktop-notification": {}
-}
-```
-
-## See also
-
-- [Using the Notifications API](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Uso de la API de notificaciones](/es/docs/Web/API/Notifications_API/Using_the_Notifications_API)

@@ -1,16 +1,6 @@
 ---
 title: La desestructuración
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - Característica del lenguaje
-  - Desestructuración
-  - Desestructurar arreglos y objetos anidados
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - Objetos anidados y desestructuración de array
-  - Operador
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 original_slug: Web/JavaScript/Referencia/Operadores/Destructuring_assignment
 ---
 
@@ -429,7 +419,7 @@ const [,, { name }] = props;
 console.log(name); // "FizzBuzz"
 ```
 
-#### Se busca la cadena de prototipos al desestructurar el objeto.
+#### Se busca la cadena de prototipos al desestructurar el objeto
 
 Al deconstruir un objeto, si no se accede a una propiedad en sí misma, continuará buscando a lo largo de la cadena de prototipos.
 
@@ -445,9 +435,9 @@ const {self, prot} = obj;
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.destructuring")}}
+{{Compat}}
 
 ## Ve también
 

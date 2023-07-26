@@ -13,11 +13,11 @@ Web Speech API 有一个主要的控制接口——[`SpeechRecognition`](/zh-CN/
 
 Demo
 
-为了简单展示 Web speech recognition 的作用，我们写了一个 demo——[Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer)。点击屏幕之后，说出 HTML 颜色关键字 (网页里罗列的单词就是)，接下来应用的背景颜色就会变成你说的颜色。
+为了简单展示 Web speech recognition 的作用，我们写了一个 demo——[Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer)。点击屏幕之后，说出 HTML 颜色关键字 (网页里罗列的单词就是)，接下来应用的背景颜色就会变成你说的颜色。
 
 ![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red.](speech-color-changer.png)
 
-为了跑这个 demo，可以 clone Github 仓库 (上面甩出的就是，或者[directly download](https://github.com/mdn/web-speech-api/archive/master.zip))，可以在支持的移动端浏览器 (比如 Chrome) 导航到 [live demo URL](http://mdn.github.io/web-speech-api/speech-color-changer/) 直接观看 (亲测 desktop browser 也是可以的，不过只能是 Chrome)，也可以通过 [WebIDE](/zh-CN/docs/Tools/WebIDE) 作为一个 app 加载到 Firefox OS(Firefox OS 使用 API 的权限问题见下文)。
+为了跑这个 demo，可以 clone Github 仓库 (上面甩出的就是，或者[directly download](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip))，可以在支持的移动端浏览器 (比如 Chrome) 导航到 [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speech-color-changer/) 直接观看 (亲测 desktop browser 也是可以的，不过只能是 Chrome)，也可以通过 [WebIDE](/zh-CN/docs/Tools/WebIDE) 作为一个 app 加载到 Firefox OS(Firefox OS 使用 API 的权限问题见下文)。
 
 ### Browser support
 
@@ -192,11 +192,11 @@ Web Speech API 对此有一个主要控制接口——[`SpeechSynthesis`](/zh-CN
 
 ### Demo
 
-为了展示 Web 语音合成的简单使用，我们提供了一个例子—— [Speak easy synthesis](https://github.com/mdn/web-speech-api/tree/gh-pages/speak-easy-synthesis) 。例子是一套表单控件，包括输入需要被合成的文本，设置音调、语速和发出文本时需要的语音。在输入文本之后，按下`Enter`/`Return`键使它播放。
+为了展示 Web 语音合成的简单使用，我们提供了一个例子—— [Speak easy synthesis](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis) 。例子是一套表单控件，包括输入需要被合成的文本，设置音调、语速和发出文本时需要的语音。在输入文本之后，按下`Enter`/`Return`键使它播放。
 
 ![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 
-想跑这个例子，你可以 git clone Github 仓库中的部分 (或者[直接下载](https://github.com/mdn/web-speech-api/archive/master.zip))，在桌面版支持的浏览器打开 index.html 文件，或者在移动端浏览器直接导向 [live demo URL](http://mdn.github.io/web-speech-api/speak-easy-synthesis/) ，像 Chrome 和 Firefox OS。
+想跑这个例子，你可以 git clone Github 仓库中的部分 (或者[直接下载](https://github.com/mdn/dom-examples/archive/refs/heads/main.zip))，在桌面版支持的浏览器打开 index.html 文件，或者在移动端浏览器直接导向 [live demo URL](https://mdn.github.io/dom-examples/web-speech-api/speak-easy-synthesis/) ，像 Chrome 和 Firefox OS。
 
 ### 浏览器支持
 

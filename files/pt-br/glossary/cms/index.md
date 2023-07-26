@@ -10,4 +10,4 @@ O CMS da sigla em inglês( Content Management System) ou seja, Sistema de Gerenc
 
 ### Conhecimento Geral
 
-- {{Interwiki("wikipedia", "Sistema de gerenciamento de conteudo")}} no Wikipedia
+- [Sistema de gerenciamento de conteudo](https://pt.wikipedia.org/wiki/Sistema_de_gerenciamento_de_conteúdo) no Wikipedia

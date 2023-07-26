@@ -1,15 +1,6 @@
 ---
 title: tabs.discard()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - WebExtensions
-  - discard
-  - onglets
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/discard
 ---
 
@@ -29,8 +20,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var discarding = browser.tabs.discard(
-  tabIds          // integer or integer array
-)
+  tabIds, // integer or integer array
+);
 ```
 
 ### Paramètres
@@ -76,9 +67,9 @@ discarding.then(onDiscarded, onError);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.discard", 10)}}
+{{Compat}}
 
 > **Note :**
 >

@@ -1,8 +1,8 @@
 ---
 title: Accept
 slug: Web/HTTP/Headers/Accept
-translation_of: Web/HTTP/Headers/Accept
 ---
+
 {{HTTPSidebar}}
 
 **`Accept`** 요청 HTTP 헤더는 [MIME 타입](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)으로 표현되는, 클라이언트가 이해 가능한 컨텐츠 타입이 무엇인지를 알려줍니다. [컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)을 이용해, 서버는 제안 중 하나를 선택하고 사용하며 {{HTTPHeader("Content-Type")}} 응답 헤더로 클라이언트에게 선택된 타입을 알려줍니다. 브라우저는 요청이 이루어진 컨텍스트에 따라 해당 헤더에 대해 적당한 값들을 설정합니다: CSS 스타일시트를 불러오게 되면, 이미지, 비디오 혹은 스크립트를 불러올 때와 다른 값이 요청에 대해 설정됩니다.

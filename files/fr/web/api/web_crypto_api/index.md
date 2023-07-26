@@ -2,7 +2,6 @@
 title: API Web Crypto
 slug: Web/API/Web_Crypto_API
 translation_of: Web/API/Web_Crypto_API
-browser-compat: api.Crypto
 ---
 
 {{DefaultAPISidebar("Web Crypto API")}}
@@ -25,10 +24,8 @@ Certains navigateurs implémentent une interface appelée [`Crypto`](/fr/docs/We
 
 ## Spécifications
 
-| Spécification                                            |
-| -------------------------------------------------------- |
-| [API Web Cryptography](https://w3c.github.io/webcrypto/) |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{compat}}
+{{Compat}}

@@ -1,15 +1,16 @@
 ---
-title: DOMTimeStamp
+title: Unix time (UNIX 時間)
 slug: Glossary/Unix_time
 original_slug: Web/API/DOMTimeStamp
+l10n:
+  sourceCommit: af32ed24e243178cd060769b7c707afcc271f9f6
 ---
 
-{{APIRef("DOM")}}
+UNIX 時間はタイムスタンプを表す方法の一つで、通常、 UNIX 元期の開始（1970 年 1 月 1 日午前 0 時 (UTC)）からの秒数で定義されます。うるう秒は無視されます。
 
-**`DOMTimeStamp`** 型は、これが記述された仕様に依存し、ミリ秒単位の絶対値または相対値を表します。
+ウェブプラットフォームでは、 UNIX 時間がタイムスタンプに使用され、 UNIX 元期の開始からのミリ秒数として与えられます。
 
-## 仕様書
+## 関連情報
 
-| 仕様書                                                                               | 状態                     | 備考     |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName("WebIDL", "#common-DOMTimeStamp", "DOMTimeStamp")}} | {{Spec2("WebIDL")}} | 初回定義 |
+- [UNIX 時間](https://ja.wikipedia.org/wiki/UNIX時間)（ウィキペディア）
+- [うるう秒](https://ja.wikipedia.org/wiki/閏秒)（ウィキペディア）

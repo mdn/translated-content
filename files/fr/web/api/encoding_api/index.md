@@ -1,11 +1,6 @@
 ---
 title: Encoding API
 slug: Web/API/Encoding_API
-tags:
-  - API
-  - Encoding
-  - Overview
-  - Reference
 translation_of: Web/API/Encoding_API
 ---
 
@@ -33,10 +28,4 @@ L'API fournit quatres interfaces: {{domxref("TextDecoder")}}, {{domxref("TextEnc
 
 ## Compatibilité des navigateurs
 
-### `TextDecoder`
-
-{{Compat("api.TextDecoder")}}
-
-### `TextEncoder`
-
-{{Compat("api.TextEncoder")}}
+{{Compat}}

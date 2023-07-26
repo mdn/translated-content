@@ -1,21 +1,25 @@
 ---
 title: clear()
-slug: Web/API/Console/clear
+slug: Web/API/console/clear
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{APIRef("Console API")}}
 
-清空控制台。
-
-控制台显示的内容将会被一些信息替换，比如‘Console was cleared’这样的信息。
-
-需要的注意的一点是在 Google Chrome 浏览器中，如果用户在[设置](https://developers.google.cn/web/tools/chrome-devtools/console#preserve-log)中勾选了“Preserve log”选项，console.clear() 将不会起作用。
+**`console.clear()`** 方法会清空控制台，但前提是该控制台允许清空。像浏览器运行的图形控制台就允许清空，而像 Node 运行的终端上显示的控制台则不支持它，调用该方法将不会产生任何效果（也不会报错）。
 
 ## 语法
 
-```plain
-console.clear();
+```js-nolint
+clear();
 ```
+
+### 参数
+
+无
+
+### 返回值
+
+无 ({{jsxref("undefined")}})。
 
 ## 规范
 
@@ -24,9 +28,3 @@ console.clear();
 ## 浏览器兼容性
 
 {{Compat}}
-
-## 相关链接
-
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
-- [MSDN: Using the F12 Tools Console to View Errors and Status](http://msdn.microsoft.com/library/gg589530)
-- [Chrome Developer Tools: Using the Console](https://developer.chrome.com/devtools/docs/console#assertions)

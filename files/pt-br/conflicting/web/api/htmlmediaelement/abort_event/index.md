@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onabort
 slug: conflicting/Web/API/HTMLMediaElement/abort_event
-translation_of: Web/API/GlobalEventHandlers/onabort
 original_slug: Web/API/GlobalEventHandlers/onabort
 ---
 

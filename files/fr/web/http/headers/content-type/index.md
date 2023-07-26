@@ -1,10 +1,6 @@
 ---
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
-tags:
-  - HTTP
-  - Reference
-  - en-tête
 translation_of: Web/HTTP/Headers/Content-Type
 ---
 
@@ -57,8 +53,8 @@ Dans une requête {{HTTPMethod("POST")}}, qui vient d'une soumission d'un formul
 
 ```html
 <form action="/" method="post" enctype="multipart/form-data">
-  <input type="text" name="description" value="du texte">
-  <input type="file" name="monFichier">
+  <input type="text" name="description" value="du texte" />
+  <input type="file" name="monFichier" />
   <button type="submit">Envoyer</button>
 </form>
 ```
@@ -86,12 +82,9 @@ Content-Type: text/plain
 
 ## Spécifications
 
-| Spécification                                                        | Titre                                                         |
-| -------------------------------------------------------------------- | ------------------------------------------------------------- |
-| {{RFC("7233", "Content-Type in multipart", "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests        |
-| {{RFC("7231", "Content-Type", "3.1.1.5")}}             | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
+{{Specifications}}
 
-## Compatibilité selon les navigateurs
+## Compatibilité des navigateurs
 
 {{Compat}}
 

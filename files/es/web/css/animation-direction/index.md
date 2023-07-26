@@ -47,9 +47,9 @@ Visitar [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejemp
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.animation-direction")}}
+{{Compat}}
 
 ## Consulte también
 

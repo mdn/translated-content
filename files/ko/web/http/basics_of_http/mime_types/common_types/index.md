@@ -1,7 +1,6 @@
 ---
 title: MIME 타입의 전체 목록
 slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 ---
 
 {{HTTPSidebar}}

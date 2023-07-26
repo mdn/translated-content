@@ -1,6 +1,8 @@
 ---
 title: 拡張機能の中身
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
+l10n:
+  sourceCommit: cd0ab2ab5c80fa7101d531e4e55a64a6d5a4889c
 ---
 
 {{AddonSidebar}}
@@ -13,18 +15,18 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 このマニフェストには、下記のファイルに対する参照を含めることができます。
 
-- [バックグラウンドスクリプト](#background_scripts)
+- [バックグラウンドスクリプト](#バックグラウンドスクリプト_2)
   - : 長時間動作するロジックを実装します。
 - アイコン
   - : 拡張機能とそれが定義するボタンのアイコン。
-- [サイドバー、ポップアップ、オプションページ](#sidebars_popups_and_options_pages)
+- [サイドバー、ポップアップ、オプションページ](#サイドバー、ポップアップ、オプションページ_2)
   - : 色々な UI コンポーネントを提供する HTML 文書です。
-- [コンテンツスクリプト](#content_scripts)
+- [コンテンツスクリプト](#コンテンツスクリプト_2)
   - : 拡張機能に含まれる JavaScript で、ウェブページに挿入するもの
 - [ウェブでアクセス可能なリソース](#web_accessible_resources)
   - : まとめられたコンテンツをウェブページやコンテンツスクリプトにアクセス可能とする。
 
-![](webextension-anatomy.png)
+![ウェブ拡張機能の構成要素。manifest.JSON は、すべての拡張機能で存在する必要があります。これは、バックグラウンドページ、コンテンツスクリプト、ブラウザーアクション、ページアクション、オプションページ、およびウェブアクセス可能リソースへのポインターを提供します。バックグラウンドページは HTML と JS で構成されます。コンテンツスクリプトは、 JS と CSS から構成されています。ユーザがアイコンをクリックすることでブラウザアクションとページアクションが発生し、その結果表示されるポップアップが HTML、CSS、JS で構成されています。オプションページは、HTML、CSS、JS で構成されます。](webextension-anatomy.png)
 
 詳細は [`manifest.json`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json) のリファレンスを参照してください。
 
@@ -34,75 +36,11 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 拡張機能には、特定のウェブページやブラウザーウィンドウの寿命とは無関係に、長期的な状態を維持したり、長期的な処理を実行したりする必要があることがよくあります。そのためのものがバックグラウンドスクリプトです。
 
-バックグラウンドスクリプトは拡張機能が読み込まれると同時にロードされ、拡張機能が無効にされるかアンインストールされるまでロードされた状態を維持します。あらかじめ要求された必要な[パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)の限りにおいて、スクリプト中で [WebExtention API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) を使うことができます。
+バックグラウンドスクリプトには、永続的なものと永続的でないものがあります。永続的なバックグラウンドスクリプトは、拡張機能が読み込まれるとすぐに読み込まれ、拡張機能が無効化されるかアンインストールされるまで読み込まれたままになります。このバックグラウンドスクリプトの動作は、Manifest V2 でのみ利用可能です。永続的でないバックグラウンドスクリプトは、イベントに応答するために必要なときに読み込まれ、アイドル状態になるとアンロードされます。このバックグラウンド スクリプト動作は、Manifest V2 ではオプションであり、Manifest V3 で利用可能な唯一のバックグラウンド スクリプト動作です。
 
-### バックグラウンドスクリプトを定義する
+スクリプト中で [WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) を、あらかじめ要求された必要な[パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)の限りにおいて使うことができます。
 
-`manifest.json` の中に `"background"` キーを用いることでバックグラウンドスクリプトをインクルードできます。
-
-```json
-// manifest.json
-
-"background": {
-  "scripts": ["background-script.js"]
-}
-```
-
-複数のバックグラウンドスクリプトを指定することもできます。その場合は、 1 つのウェブページに複数のスクリプトが読み込まれた場合と同じように、同じコンテキストで実行されます。
-
-バックグラウンドスクリプトを指定する代わりに、ES6 モジュールをサポートするバックグラウンドページを指定することもできます。
-
-- **manifest.json**
-
-  - : &#x20;
-
-    ```json
-    // manifest.json
-
-    "background": {
-      "page": "background-page.html"
-    }
-    ```
-
-- **background-page.html**
-
-  - : &#x20;
-
-    ```html
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="utf-8">
-        <script type="module" src="background-script.js"></script>
-      </head>
-    </html>
-    ```
-
-### バックグラウンドスクリプトの実行環境
-
-#### DOM API
-
-バックグラウンドスクリプトは、バックグラウンドページと呼ばれる特殊なページのコンテキストで実行されます。ここでは [`window`](/ja/docs/Web/API/Window) というグローバルオブジェクトが利用でき、そのオブジェクトによってすべての DOM API 標準が利用できます。
-
-> **警告:** Firefox では、バックグラウンドページでは[`alert()`](/ja/docs/Web/API/Window/alert)、[`confirm()`](/ja/docs/Web/API/Window/confirm)、[`prompt()`](/ja/docs/Web/API/Window/prompt)の使用はサポートされません。
-
-#### WebExtension API
-
-バックグラウンドスクリプトは、その拡張機能が持つ[パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)の範囲で [WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) にアクセスできます。
-
-#### オリジン間アクセス
-
-バックグラウンドスクリプトは、拡張機能が持つ [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)に一致するホストに XHR リクエストを送信することができます。
-
-#### ウェブコンテンツ
-
-バックグラウンドスクリプトからウェブページに直接アクセスすることができません。しかし、ウェブページに[コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)を読み込ませれば、[メッセージを渡す API を使ってコンテンツスクリプトと通信](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts)をすることができます。
-
-#### コンテンツセキュリティポリシー
-
-バックグラウンドスクリプトは Content Security Policy による制約を受けており、 [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のように危険な処理は実行できません。
-
-詳細は [Content Security Policy](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) を参照してください。
+詳しくは[バックグラウンドスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Background_scripts)の記事をご覧ください。
 
 ## サイドバー、ポップアップ、オプションページ
 
@@ -139,7 +77,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 - クロスドメインの XHR リクエストを作成できる
 - [WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/API) の小さなサブセットを利用できる
-- [バックグラウンドスクリプトとメッセージの交換ができ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts)、この方法ですべての WebExtension API に間接的にアクセスできる
+- [バックグラウンドスクリプトとメッセージの交換ができ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts)、この方法ですべての WebExtension API に間接的にアクセスできる
 
 コンテンツスクリプトから通常のスクリプトに直接アクセスすることはできませんが、標準化されている [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage) API を用いれば、スクリプト間でメッセージを交換することが可能です。
 
@@ -147,10 +85,10 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 詳しくは [コンテンツスクリプト](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)の記事を参照してください。
 
-## Web accessible resources
+## ウェブでアクセス可能なリソース
 
-Web accessible resources とは、拡張機能にインクルードしてコンテンツスクリプトや ウェブページのスクリプトからアクセスできるリソースのことであり、代表的なものは画像や HTML / CSS / JavaScript です。web-accessible なリソースは、特殊な URI スキームを介して ウェブページのスクリプトやコンテンツスクリプトから参照できます。
+ウェブでアクセス可能なリソースとは、拡張機能にインクルードしてコンテンツスクリプトや ウェブページのスクリプトからアクセスできるリソースのことであり、代表的なものは画像や HTML / CSS / JavaScript です。ウェブでアクセス可能なリソースは、特殊な URI スキームを介して ウェブページのスクリプトやコンテンツスクリプトから参照できます。
 
-例えばコンテンツスクリプトから ウェブページ内に画像を挿入したい場合、拡張機能に画像をインクルードして web-accessible とし、画像を `src` 属性で参照する [`img`](/ja/docs/Web/HTML/Element/img) タグをコンテンツスクリプトが作成して ウェブページに追加する、といったシナリオが考えられます。
+例えばコンテンツスクリプトから ウェブページ内に画像を挿入したい場合、拡張機能に画像をインクルードしてウェブでアクセス可能とし、画像を `src` 属性で参照する [`img`](/ja/docs/Web/HTML/Element/img) タグをコンテンツスクリプトが作成して ウェブページに追加する、といったシナリオが考えられます。
 
-詳細は、 `manifest.json` のキーである [web_accessible_resources](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) のドキュメントを見てください。
+詳細は、 `manifest.json` のキーである [`"web_accessible_resources"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) のドキュメントを見てください。

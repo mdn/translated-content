@@ -1,14 +1,7 @@
 ---
 title: TypedArray.prototype.buffer
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
-tags:
-  - JavaScript
-  - Propriété
-  - Prototype
-  - Reference
-  - TypedArray
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
-original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/buffer
 ---
 
 {{JSRef}}

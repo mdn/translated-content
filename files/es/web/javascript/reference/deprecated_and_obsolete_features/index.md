@@ -1,11 +1,6 @@
 ---
 title: Características en desuso y obsoletas
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
-tags:
-  - Deprecated
-  - JavaScript
-  - Obsolete
-translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 original_slug: Web/JavaScript/Referencia/Características_Desaprobadas
 ---
 

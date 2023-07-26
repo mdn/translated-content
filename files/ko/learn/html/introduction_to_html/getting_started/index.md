@@ -49,7 +49,7 @@ My cat is very grumpy
 
 HTML에서의 요소에 대해 좀 더 알아봅시다.
 
-![](https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png)
+![](grumpy-cat-small.png)
 
 엘리먼트의 주요 부분은 다음과 같습니다.
 
@@ -245,7 +245,7 @@ HTML에는 두가지 종류의 요소(Element) 가 있습니다. 블록 레벨 �
 
 요소는 아래 이미지와 같이 속성을 가질 수 있습니다:
 
-![&amp;lt;p class="editor-note">My cat is very grumpy&amp;lt;/p>](https://mdn.mozillademos.org/files/9345/grumpy-cat-attribute-small.png)
+![&amp;lt;p class="editor-note">My cat is very grumpy&amp;lt;/p>](grumpy-cat-attribute-small.png)
 
 속성은 요소에 실제론 나타내고 싶지 않지만 추가적인 내용을 담고 싶을 때 사용합니다. 위에는 나중에 스타일에 관련된 내용이나 기타 내용을 위해 해당 목표를 구분할 수 있는 `class` 속성을 부여했습니다.
 
@@ -514,7 +514,7 @@ That wraps up the basics of individual HTML elements, but they aren't very usefu
 
 이제 웹 브라우저에서 이 파일을 열어 렌더링 된 코드의 모양을 확인할 수 있습니다. 코드를 편집하고 브라우저를 새로 고침하여 결과를 확인하십시오. 첫 페이지는 다음과 같습니다.
 
-![A simple HTML page that says This is my page](https://mdn.mozillademos.org/files/12279/template-screenshot.png)이 연습에서는 앞에서 설명한대로 컴퓨터에서 로컬로 코드를 편집하거나 아래 샘플 창에서 편집 할 수 있습니다 (편집 가능한 샘플 창은 {{htmlelement ( "body")}} 요소의 내용만 나타냄 이 경우). 다음 작업을 구현하여 기술을 익히십시오.
+![A simple HTML page that says This is my page](template-screenshot.png)이 연습에서는 앞에서 설명한대로 컴퓨터에서 로컬로 코드를 편집하거나 아래 샘플 창에서 편집 할 수 있습니다 (편집 가능한 샘플 창은 {{htmlelement ( "body")}} 요소의 내용만 나타냄 이 경우). 다음 작업을 구현하여 기술을 익히십시오.
 
 - {{htmlelement ( "body")}} 요소의 시작 태그 바로 아래에 문서의 기본 제목을 추가하십시오. `<h1>` 여는 태그와 `</h1>` 닫는 태그 안에 싸야합니다.
 - 관심있는 주제에 대한 텍스트를 포함하도록 단락 컨텐츠를 편집하십시오.

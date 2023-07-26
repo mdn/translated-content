@@ -20,9 +20,9 @@ Notar que la propiedad {{domxref("HTMLElement.dataset")}} es un {{domxref("Strin
 
 {{Specifications}}
 
-## Compatibilidad en exploradores
+## Compatibilidad con navegadores
 
-{{Compat("html.global_attributes.data_attributes")}}
+{{Compat}}
 
 ## Ver también
 

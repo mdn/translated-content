@@ -1,5 +1,5 @@
 ---
-title: '-webkit-overflow-scrolling'
+title: "-webkit-overflow-scrolling"
 slug: Web/CSS/-webkit-overflow-scrolling
 ---
 
@@ -26,14 +26,10 @@ La propiedad CSS `-webkit-overflow-scrolling` controla si los dispositivos táct
 
 ```html
 <div class="scroll-touch">
-  <p>
-    This paragraph has momentum scrolling
-  </p>
+  <p>This paragraph has momentum scrolling</p>
 </div>
 <div class="scroll-auto">
-  <p>
-    This paragraph does not.
-  </p>
+  <p>This paragraph does not.</p>
 </div>
 ```
 
@@ -69,9 +65,9 @@ p {
 
 No es parte de ninguna especificación. Apple tiene una [descripción en la Referencia CSS de Safari.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling)
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.-webkit-overflow-scrolling")}}
+{{Compat}}
 
 ## Ver también
 

@@ -22,13 +22,13 @@ original_slug: Learn/CSS/CSS_layout/Отзывчивый_дизайн
 
 Эти два подхода, как правило, приводили к тому, что веб-сайт лучше всего выглядел на экране человека, создавшего сайт! Жидкий сайт приводил к раздавленному дизайну на маленьких экранах (как видно ниже) и не читаемо длинным строкам на больших.
 
-![A layout with two columns squashed into a mobile size viewport.](https://mdn.mozillademos.org/files/16834/mdn-rwd-liquid.png)
+![A layout with two columns squashed into a mobile size viewport.](mdn-rwd-liquid.png)
 
 > **Примечание:** Посмотрите этот простой жидкий макет: [пример](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html). При просмотре примера, растягивайте и сжимайте окно браузера чтобы увидеть, как это выглядит при разных размерах.
 
 Сайт с фиксированной шириной рисковал иметь горизонтальную полосу прокрутки на экранах меньших чем ширина сайта (как видно ниже) и много белого пространства на краях дизайна на больших экранах.
 
-![A layout with a horizontal scrollbar in a mobile viewport.](https://mdn.mozillademos.org/files/16835/mdn-rwd-fixed.png)
+![A layout with a horizontal scrollbar in a mobile viewport.](mdn-rwd-fixed.png)
 
 > **Примечание:** Посмотрите этот простой макет с фиксированной шириной: [пример](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html). Снова изучите результат по мере изменения размера окна браузера.
 
@@ -100,11 +100,11 @@ target / context = result
 
 Следующий пример демонстрирует простой отзывчивый дизайн, с использованием медиавыражений и гибких сеток. На узких экранах макет отображает блоки, расположенные друг над другом:
 
-![A mobile view of the layout with boxes stacked on top of each other vertically.](https://mdn.mozillademos.org/files/16836/mdn-rwd-mobile.png)
+![A mobile view of the layout with boxes stacked on top of each other vertically.](mdn-rwd-mobile.png)
 
 На более широких экранах они перемещаются в два столбца:
 
-![A desktop view of a layout with two columns.](https://mdn.mozillademos.org/files/16837/mdn-rwd-desktop.png)
+![A desktop view of a layout with two columns.](mdn-rwd-desktop.png)
 
 > **Примечание:** вы можете найти [живой пример](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) и [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html) этого примера на GitHub.
 
@@ -205,11 +205,11 @@ h1 {
 
 В мобильных версиях заголовок меньше:
 
-![A stacked layout with a small heading size.](https://mdn.mozillademos.org/files/16838/mdn-rwd-font-mobile.png)
+![A stacked layout with a small heading size.](mdn-rwd-font-mobile.png)
 
 На компьютерах, однако, мы видим больший размер заголовка:
 
-![A two column layout with a large heading.](https://mdn.mozillademos.org/files/16839/mdn-rwd-font-desktop.png)
+![A two column layout with a large heading.](mdn-rwd-font-desktop.png)
 
 > **Примечание:** смотрите этот пример в действии: [пример](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [исходный код](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
 
@@ -227,7 +227,7 @@ h1 {
 
 The problem with doing the above is that the user loses the ability to zoom any text set using the `vw` unit, as that text is always related to the size of the viewport. **Therefore you should never set text using viewport units alone**.
 
-There is a solution, and it involves using [`calc()`](/en-US/docs/Web/CSS/calc). If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
+There is a solution, and it involves using [`calc()`](/ru/docs/Web/CSS/calc). If you add the `vw` unit to a value set using a fixed size such as `em`s or `rem`s then the text will still be zoomable. Essentially, the `vw` unit adds on top of that zoomed value:
 
 ```css
 h1 {
@@ -244,7 +244,7 @@ This means that we only need to specify the font size for the heading once, rath
 If you look at the HTML source of a responsive page, you will usually see the following {{htmlelement("meta")}} tag in the `<head>` of the document.
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 This meta tag tells mobile browsers that they should set the width of the viewport to the device width, and scale the document to 100% of its intended size, which shows the document at the mobile-optimized size that you intended.
@@ -266,8 +266,6 @@ There are other settings you can use with the viewport meta tag, however in gene
 - `user-scalable`: Prevents zooming if set to `no`.
 
 You should avoid using `minimum-scale`, `maximum-scale`, and in particular setting `user-scalable` to `no`. Users should be allowed to zoom as much or as little as they need to; preventing this causes accessibility problems.
-
-> **Примечание:** There is a CSS @ rule designed to replace the viewport meta tag — [@viewport](/ru/docs/Web/CSS/@viewport) — however, it has poor browser support. When both are used the meta tag overrides @viewport.
 
 ## Summary
 

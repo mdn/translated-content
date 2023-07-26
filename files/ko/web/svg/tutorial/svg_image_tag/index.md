@@ -1,10 +1,6 @@
 ---
 title: SVG 이미지 요소
 slug: Web/SVG/Tutorial/SVG_Image_Tag
-tags:
-  - 이미지
-  - 학습서
-translation_of: Web/SVG/Tutorial/SVG_Image_Tag
 ---
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Fonts", "Web/SVG/Tutorial/Tools_for_SVG") }}
 

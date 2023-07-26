@@ -88,13 +88,13 @@ Considere o documento HTML a seguir:
 
 Um esboço renderizado para esse documento seria como:
 
-![](https://mdn.mozillademos.org/files/14599/outline-colon.png)
+![](outline-colon.png)
 
 Isso é, o esboço renderizado deve ser o título primário, HTML, seguido por dois pontos e espaço, seguido pelo título secundário, Living Standard - Last Update 12 August 2016.
 
 Ou, o esboço renderizado para aquele documento poderia ser como:
 
-![Rendered outline that includes an \<hgroup> element, with parens around the secondary heading](https://mdn.mozillademos.org/files/14601/outline-paren.png)
+![Rendered outline that includes an \<hgroup> element, with parens around the secondary heading](outline-paren.png)
 
 Isso é, o esboço renderizado deve mostrar o título primário, HTML, seguido pelo título secundário mostrado entre parênteses: (Living Standard - Last Updated 12 August 2016).
 

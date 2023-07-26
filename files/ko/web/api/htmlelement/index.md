@@ -1,12 +1,6 @@
 ---
 title: HTMLElement
 slug: Web/API/HTMLElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Reference
-translation_of: Web/API/HTMLElement
 ---
 
 {{ APIRef("HTML DOM") }}
@@ -89,11 +83,11 @@ _부모인 {{domxref("Element")}}의 속성을 상속합니다. {{domxref("Globa
 `onXYZ` 형태의 대부분의 이벤트 핸들러 속성은 {{domxref("GlobalEventHandlers")}} 또는 {{domxref("TouchEventHandlers")}} 에 정의되어 있으며 `HTMLElement` 에 의해 구현되었습니다. 다음 `HTMLElement` 에 해당하는 핸들러입니다.
 
 - {{ domxref("HTMLElement.oncopy") }} {{ non-standard_inline() }}
-  - : `copy` 이벤트를 위한 이벤트 핸들링 코드를 반환합니다({{bug("280959")}}).
+  - : `copy` 이벤트를 위한 이벤트 핸들링 코드를 반환합니다([Firefox bug 280959](https://bugzil.la/280959)).
 - {{ domxref("HTMLElement.oncut") }} {{ non-standard_inline() }}
-  - : `cut` 이벤트를 위한 이벤트 핸들링 코드를 반환합니다({{bug("280959")}}).
+  - : `cut` 이벤트를 위한 이벤트 핸들링 코드를 반환합니다([Firefox bug 280959](https://bugzil.la/280959)).
 - {{ domxref("HTMLElement.onpaste") }} {{ non-standard_inline() }}
-  - : `paste` 이벤트를 위한 이벤트 핸들링 코드를 반환합니다({{bug("280959")}}).
+  - : `paste` 이벤트를 위한 이벤트 핸들링 코드를 반환합니다([Firefox bug 280959](https://bugzil.la/280959)).
 - {{domxref("TouchEventHandlers.ontouchstart")}} {{non-standard_inline}}
   - : {{event("touchstart")}} 이벤트를 위한 이벤트 핸들링 코드를 반환합니다.
 - {{domxref("TouchEventHandlers.ontouchend")}} {{non-standard_inline}}

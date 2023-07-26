@@ -1,15 +1,6 @@
 ---
 title: theme.getCurrent()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/getCurrent
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - Theme
-  - WebExtensions
-  - getCurrent
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/getCurrent
 ---
 
@@ -23,8 +14,8 @@ Il s'agit d'une fonction asynchrone qui renvoie un objet [`Promise`](/fr/docs/We
 
 ```js
 var getting = browser.theme.getCurrent(
-  windowId    // integer
-)
+  windowId, // integer
+);
 ```
 
 ### Paramètres
@@ -36,26 +27,23 @@ var getting = browser.theme.getCurrent(
 
 Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). L'objet Promise sera résolu avec un objet {{WebExtAPIRef("theme.Theme")}} représentant le thème appliqué à la fenêtre spécifiée. Si aucun thème provenant d'une extension a été appliqué, l'objet Promise sera résolu avec un objet vide.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.theme.getCurrent", 10)}}
+{{Compat}}
 
 ## Exemples
 
 Obtient les propriétés des couleurs `accentcolor` et `toolbar` dans le thème actuel.
 
 ```js
-function getStyle(themeInfo)
-{
-  if (themeInfo.colors)
-  {
-    console.log("accent color : " +  themeInfo.colors.accentcolor);
+function getStyle(themeInfo) {
+  if (themeInfo.colors) {
+    console.log("accent color : " + themeInfo.colors.accentcolor);
     console.log("toolbar : " + themeInfo.colors.toolbar);
   }
 }
 
-async function getCurrentThemeInfo()
-{
+async function getCurrentThemeInfo() {
   var themeInfo = await browser.theme.getCurrent();
   getStyle(themeInfo);
 }

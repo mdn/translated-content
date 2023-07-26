@@ -1,17 +1,7 @@
 ---
 title: Responsive design
 slug: Learn/CSS/CSS_layout/Responsive_Design
-tags:
-  - Images
-  - Media Queries
-  - RWD
-  - Responsive web design
-  - Typographie
-  - flexbox
-  - grid
-  - grille fluide
 translation_of: Learn/CSS/CSS_layout/Responsive_Design
-original_slug: Apprendre/CSS/CSS_layout/Responsive_Design
 ---
 
 {{learnsidebar}}{{PreviousMenuNext("Apprendre/CSS/CSS_layout/Multiple-column_Layout", "Apprendre/CSS/CSS_layout/Media_queries", "Apprendre/CSS/CSS_layout")}}
@@ -160,7 +150,7 @@ Si vous spécifiez plutôt une largeur de colonne, vous spécifiez une largeur m
 
 ### Flexbox
 
-Dans Flexbox, les articles flexibles se rétréciront et répartiront l'espace entre les articles en fonction de l'espace dans leur conteneur, en fonction de leur comportement initial. En modifiant les valeurs de `flex-grow` et `flex-shrink`  vous pouvez indiquer comment vous souhaitez que les articles se comportent lorsqu'ils rencontrent plus ou moins d'espace autour d'eux.
+Dans Flexbox, les articles flexibles se rétréciront et répartiront l'espace entre les articles en fonction de l'espace dans leur conteneur, en fonction de leur comportement initial. En modifiant les valeurs de `flex-grow` et `flex-shrink` vous pouvez indiquer comment vous souhaitez que les articles se comportent lorsqu'ils rencontrent plus ou moins d'espace autour d'eux.
 
 Dans l'exemple ci-dessous, les éléments flex prendront chacun autant d'espace dans le conteneur flex, en utilisant la notation `flex: 1` comme décrit dans la rubrique de mise en page [Flexbox: Taille modulable des éléments flex](/fr/docs/Apprendre/CSS/CSS_layout/Flexbox#Taille_modulable_des_éléments_flex).
 
@@ -201,7 +191,7 @@ img {
 
 Cette approche présente des inconvénients évidents. L'image peut être affichée à une taille beaucoup plus petite que sa taille réelle, ce qui est un gaspillage de bande passante - un utilisateur mobile peut télécharger une image dont la taille est beaucoup plus grande que ce qu'il voit réellement dans la fenêtre du navigateur. De plus, il se peut que vous ne vouliez pas le même rapport hauteur/largeur de l'image sur le mobile que sur le bureau. Par exemple, il peut être agréable d'avoir une image carrée pour le mobile, mais de montrer la même image en format paysage sur le bureau. Ou, en tenant compte de la taille plus petite d'une image sur le mobile, vous pouvez vouloir montrer une image différente, qui est plus facile à comprendre sur un écran de petite taille. Ces choses ne peuvent pas être réalisées par une simple réduction de la taille d'une image.
 
-Les images responsives, en utilisant l'élément {{htmlelement("picture")}} et les attributs {{htmlelement("img")}} `srcset` et `sizes`  permettent de résoudre ces deux problèmes. Vous pouvez fournir plusieurs tailles ainsi que des " indices " (méta-données qui décrivent la taille de l'écran et la résolution pour lesquelles l'image est la mieux adaptée), et le navigateur choisira l'image la plus appropriée pour chaque dispositif, en s'assurant qu'un utilisateur téléchargera une taille d'image appropriée pour le dispositif qu'il utilise.
+Les images responsives, en utilisant l'élément {{htmlelement("picture")}} et les attributs {{htmlelement("img")}} `srcset` et `sizes` permettent de résoudre ces deux problèmes. Vous pouvez fournir plusieurs tailles ainsi que des " indices " (méta-données qui décrivent la taille de l'écran et la résolution pour lesquelles l'image est la mieux adaptée), et le navigateur choisira l'image la plus appropriée pour chaque dispositif, en s'assurant qu'un utilisateur téléchargera une taille d'image appropriée pour le dispositif qu'il utilise.
 
 Vous pouvez également créer des images directes utilisées à différentes tailles, ce qui permet d'obtenir un recadrage différent ou une image complètement différente pour différentes tailles d'écran.
 
@@ -272,7 +262,7 @@ Cela signifie que nous n'avons besoin de spécifier la taille de la police pour 
 Si vous regardez le code source d'une page HTML responsive, vous verrez généralement la balise suivante {{htmlelement("meta")}} dans la section `<head>` du document.
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
 Cette balise meta dit aux navigateurs mobiles qu'ils doivent ajuster la largeur de la fenêtre à la largeur de l'écran de l'appareil, et mettre l'échelle du document à 100% de sa taille prévue, affichant le document à la taille optimisée pour les mobiles que vous vouliez.
@@ -295,8 +285,6 @@ Il existe d'autres paramètres que vous pouvez utiliser avec la balise meta view
 
 Vous devriez éviter d'utiliser `minimum-scale`, `maximum-scale`, et en particulier la définition de `user-scalable` sur `no`. Les utilisateurs devraient être autorisés à zoomer autant ou aussi peu que nécessaire; éviter cela entraîne des problèmes d'accessibilité.
 
-> **Note :** Il existe une règle @ CSS conçue pour remplacer la métabalise viewport — [@viewport](/fr/docs/Web/CSS/@viewport) — Cependant, son support par navigateur est médiocre. Il a été mis en œuvre dans Internet Explorer et Edge, mais une fois que Edgium (La version Edge basée sur Chromium) sera livré, il ne fera plus partie du navigateur Edge.
-
 ## Sommaire
 
 Le responsive design fait référence à la conception d'un site ou d'une application qui répond à l'environnement dans lequel il est vu. Elle englobe un certain nombre de caractéristiques et de techniques CSS et HTML, et c'est essentiellement la façon dont nous construisons les sites web par défaut. Considérez les sites que vous visitez sur votre téléphone - il est probablement assez inhabituel de tomber sur un site dont la version de bureau est réduite, ou sur lequel vous devez faire défiler les pages pour trouver des choses. Cela s'explique par le fait que le web a adopté cette approche de design réactif.
@@ -304,18 +292,3 @@ Le responsive design fait référence à la conception d'un site ou d'une applic
 Il est également devenu beaucoup plus facile de réaliser des responsives designs à l'aide des méthodes de mise en page que vous avez apprises dans ces leçons. Si vous êtes novice en matière de développement web, vous disposez aujourd'hui de beaucoup plus d'outils qu'aux premiers jours du responsive design. Il est donc utile de vérifier l'âge des documents que vous référencez. Si les articles historiques sont toujours utiles, l'utilisation moderne des CSS et du HTML facilite grandement la création de designs élégants et utiles, quel que soit le dispositif avec lequel votre visiteur consulte le site.
 
 {{PreviousMenuNext("Apprendre/CSS/CSS_layout/Multiple-column_Layout", "Apprendre/CSS/CSS_layout/Media_queries", "Apprendre/CSS/CSS_layout")}}
-
-## Dans ce module
-
-- [Introduction à la mise en page en CSS](/fr/docs/Apprendre/CSS/CSS_layout/Introduction)
-- [Cours normal](/fr/docs/Apprendre/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Apprendre/CSS/CSS_layout/Flexbox)
-- [Grid](/fr/docs/Apprendre/CSS/CSS_layout/Grids)
-- [Les boîtes flottantes](/fr/docs/Apprendre/CSS/CSS_layout/Floats)
-- [Le positionnement](/fr/docs/Apprendre/CSS/CSS_layout/Le_positionnement)
-- [Disposition sur plusieurs colonnes](/fr/docs/Apprendre/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/fr/docs/Apprendre/CSS/CSS_layout/Responsive_Design)
-- [Guide du débutant pour les Medias Queries](/fr/docs/Apprendre/CSS/CSS_layout/Media_queries)
-- [Méthodes de mises en page traditionnelles](/fr/docs/Apprendre/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Prise en charge des anciens navigateurs](/fr/docs/Apprendre/CSS/CSS_layout/Prise_en_charge_des_anciens_navigateurs)
-- [Compréhension fondamentale de la mise en page](/fr/docs/Apprendre/CSS/CSS_layout/Fundamental_Layout_Comprehension)

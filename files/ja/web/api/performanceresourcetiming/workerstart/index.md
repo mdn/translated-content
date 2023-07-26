@@ -1,58 +1,71 @@
 ---
 title: PerformanceResourceTiming.workerStart
 slug: Web/API/PerformanceResourceTiming/workerStart
+l10n:
+  sourceCommit: b3477f90eb235d08fe196373466a725050f43862
 ---
 
-{{APIRef("Resource Timing API")}}
+{{APIRef("Performance API")}}
 
-{{domxref("PerformanceResourceTiming")}} インターフェイスの **`workerStart`** 読み取り専用プロパティは、Service Worker スレッドが既に実行されている場合は {{domxref("FetchEvent")}} を送出する直前、または Service Worker スレッドがまだ実行されていない場合は開始される直前に {{domxref("DOMHighResTimeStamp")}} を返します。リソースが Service Worker によってインターセプトされない場合、このプロパティは常に 0 を返します。
+**`workerStart`** は {{domxref("PerformanceResourceTiming")}} インターフェイスの読み取り専用プロパティで、サービスワーカーのスレッドが既に実行されている場合は {{domxref("FetchEvent")}} を送出する直前、またはサービスワーカーのスレッドがまだ実行されていない場合は、開始される直前に {{domxref("DOMHighResTimeStamp")}} を返します。このリソースがサービスワーカーに介入されない場合、このプロパティは常に 0 を返します。
 
-{{AvailableInWorkers}}
+## 値
 
-## 構文
+`workerStart` プロパティは以下の値を取ることがあります。
 
-```
-resource.workerStart;
-```
-
-### 値
-
-{{domxref("DOMHighResTimeStamp")}}
+- {{domxref("DOMHighResTimeStamp")}}
+- サービスワーカーが使用されていない場合は `0`。
+- リソースがオリジン間リクエストで、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーが使用されていない場合は `0`。
 
 ## 例
 
-次の例では、すべての "`resource`" {{domxref("PerformanceEntry.entryType","type")}} イベントの `*Start` プロパティと `*End` プロパティの値が記録されます。
+### サービスワーカーの処理時間の計測
+
+`workerStart` および {{domxref("PerformanceResourceTiming.fetchStart", "fetchStart")}} プロパティを使用して、 {{domxref("ServiceWorker")}} の処理時間を計測することができます。
 
 ```js
-function print_PerformanceEntries() {
-  // Use getEntriesByType() to just get the "resource" events
-  var p = performance.getEntriesByType("resource");
-  for (var i=0; i < p.length; i++) {
-    print_start_and_end_properties(p[i]);
-  }
-}
-function print_start_and_end_properties(perfEntry) {
-  // Print timestamps of the PerformanceEntry *start and *end properties
-  properties = ["connectStart", "connectEnd",
-                "domainLookupStart", "domainLookupEnd",
-                "fetchStart",
-                "redirectStart", "redirectEnd",
-                "requestStart",
-                "responseStart", "responseEnd",
-                "secureConnectionStart",
-                "workerStart"];
+const workerProcessingTime = entry.fetchStart - entry.workerStart;
+```
 
-  for (var i=0; i < properties.length; i++) {
-    // check each property
-    var supported = properties[i] in perfEntry;
-    if (supported) {
-      var value = perfEntry[properties[i]];
-      console.log("... " + properties[i] + " = " + value);
-    } else {
-      console.log("... " + properties[i] + " = NOT supported");
+{{domxref("PerformanceObserver")}} の使用例で、ブラウザーのパフォーマンスタイムラインに記録された新しい `resource` パフォーマンス項目を通知します。オブザーバーが作成される前の項目にアクセスするために `buffered` オプションを使用します。
+
+```js
+const observer = new PerformanceObserver((list) => {
+  list.getEntries().forEach((entry) => {
+    const workerProcessingTime = entry.fetchStart - entry.workerStart;
+    if (workerProcessingTime > 0) {
+      console.log(
+        `${entry.name}: Worker processing time: ${workerProcessingTime}ms`
+      );
     }
+  });
+});
+
+observer.observe({ type: "resource", buffered: true });
+```
+
+{{domxref("Performance.getEntriesByType()")}} を使用した例です。このメソッドを呼び出した時点でブラウザー上のパフォーマンスタイムラインに存在する `resource` パフォーマンス項目のみを表示します。
+
+```js
+const resources = performance.getEntriesByType("resource");
+resources.forEach((entry) => {
+  const workerProcessingTime = entry.fetchStart - entry.workerStart;
+  if (workerProcessingTime > 0) {
+    console.log(
+      `${entry.name}: Worker processing time: ${workerProcessingTime}ms`
+    );
   }
-}
+});
+```
+
+### オリジン間のタイミング情報
+
+`workerStart` プロパティの値が `0` である場合、そのリソースはオリジン間リクエストである可能性があります。オリジン間の時刻情報を見るためには、HTTP の {{HTTPHeader("Timing-Allow-Origin")}} レスポンスヘッダーを設定する必要があります。
+
+例えば、`https://developer.mozilla.org` に時刻リソースを見ることを許可するには、オリジン間リソースが送信する必要があります。
+
+```http
+Timing-Allow-Origin: https://developer.mozilla.org
 ```
 
 ## 仕様書
@@ -61,4 +74,8 @@ function print_start_and_end_properties(perfEntry) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.PerformanceResourceTiming.workerStart")}}
+{{Compat}}
+
+## 関連情報
+
+- {{HTTPHeader("Timing-Allow-Origin")}}

@@ -1,7 +1,6 @@
 ---
 title: Eventos on-line e off-line
 slug: orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
-translation_of: Web/API/NavigatorOnLine/Online_and_offline_events
 original_slug: Web/API/NavigatorOnLine/Online_and_offline_events
 ---
 

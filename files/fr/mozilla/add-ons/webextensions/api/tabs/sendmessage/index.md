@@ -1,17 +1,6 @@
 ---
 title: tabs.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onglets
-  - sendMessage
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
 ---
 
@@ -27,10 +16,10 @@ Il s'agit d'une fonction asynchrone qui renvoit un objet [`Promise`](/fr/docs/We
 
 ```js
 var sending = browser.tabs.sendMessage(
-  tabId,                   // integer
-  message,                 // any
-  options                  // optional object
-)
+  tabId, // integer
+  message, // any
+  options, // optional object
+);
 ```
 
 ### Paramètres
@@ -64,21 +53,24 @@ function onError(error) {
 
 function sendMessageToTabs(tabs) {
   for (let tab of tabs) {
-    browser.tabs.sendMessage(
-      tab.id,
-      {greeting: "Hi from background script"}
-    ).then(response => {
-      console.log("Message from the content script:");
-      console.log(response.response);
-    }).catch(onError);
+    browser.tabs
+      .sendMessage(tab.id, { greeting: "Hi from background script" })
+      .then((response) => {
+        console.log("Message from the content script:");
+        console.log(response.response);
+      })
+      .catch(onError);
   }
 }
 
 browser.browserAction.onClicked.addListener(() => {
-  browser.tabs.query({
-    currentWindow: true,
-    active: true
-  }).then(sendMessageToTabs).catch(onError);
+  browser.tabs
+    .query({
+      currentWindow: true,
+      active: true,
+    })
+    .then(sendMessageToTabs)
+    .catch(onError);
 });
 ```
 
@@ -88,18 +80,18 @@ Voici le script de contenu associé:
 // content-script.js
 "use strict";
 
-browser.runtime.onMessage.addListener(request => {
+browser.runtime.onMessage.addListener((request) => {
   console.log("Message from the background script:");
   console.log(request.greeting);
-  return Promise.resolve({response: "Hi from content script"});
+  return Promise.resolve({ response: "Hi from content script" });
 });
 ```
 
 {{WebExtExamples}}
 
-## Compatiblité des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.sendMessage")}}
+{{Compat}}
 
 > **Note :**
 >

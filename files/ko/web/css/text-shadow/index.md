@@ -1,10 +1,6 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/text-shadow
 ---
 
 {{CSSRef}}
@@ -101,11 +97,11 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 
 {{EmbedLiveSample('Multiple_shadows', '660px', '170px')}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

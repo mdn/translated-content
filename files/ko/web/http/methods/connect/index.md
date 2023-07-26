@@ -1,12 +1,8 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
-tags:
-  - HTTP
-  - 요청 메소드
-  - 참고사항
-translation_of: Web/HTTP/Methods/CONNECT
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `CONNECT`** 메소드는 요청한 리소스에 대해 양방향 연결을 시작하는 메소드입니다. 이는 터널을 열기 위해서 사용될 수 있습니다.
@@ -39,7 +35,7 @@ translation_of: Web/HTTP/Methods/CONNECT
     </tr>
     <tr>
       <th scope="row">
-        Allowed in <a href="/en-US/docs/Web/Guide/HTML/Forms">HTML forms</a>
+        Allowed in <a href="/ko/docs/Web/Guide/HTML/Forms">HTML forms</a>
       </th>
       <td>No</td>
     </tr>
@@ -70,7 +66,7 @@ Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
 ## 브라우저 호환성
 
-{{Compat("http.methods.CONNECT")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

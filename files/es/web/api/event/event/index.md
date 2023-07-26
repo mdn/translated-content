@@ -2,7 +2,7 @@
 title: Event()
 slug: Web/API/Event/Event
 l10n:
-  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a461244e233c16c6f0d347972c5c762f5b836318a46124
+  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
 ---
 
 {{APIRef("DOM")}}
@@ -39,7 +39,7 @@ Una instancia del objeto {{domxref("Event")}}.
 ```js
 // crea un evento look que se propaga y no puede cancelarse
 
-var evento = new Event("look", {"bubbles":true, "cancelable":false});
+var evento = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(evento);
 
 // El evento puede ser despachado desde cualquier elemento, no solo desde el `document`.

@@ -23,7 +23,7 @@ p:read-write {
 
 ## Exemplos
 
-### Confirmando informações do formulário em controles read-only/read-write.
+### Confirmando informações do formulário em controles read-only/read-write
 
 Ao utilizar os controles de formulário `readonly` permite que o usuário verifique e verifique as informações que eles podem ter inserido em um formulário anterior (por exemplo: Detalhes de envio), enquanto ainda pode enviar as informações junto com o resto do formulário. Nós fazemos exatamente isso no exemplo abaixo.
 
@@ -48,9 +48,9 @@ Você pode encontrar o código fonte completo em [readonly-confirmation.html](ht
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
 
-### Estilizar controle não formal de read-write.
+### Estilizar controle não formal de read-write
 
-Este seletor não seleciona apenas {{htmlElement("input")}}/{{htmlElement("textarea")}} elementos - ele selecionará qualquer elemento que possa ser editado pelo usuário, como um {{htmlelement("p")}} elemento com {{htmlattrxref("contenteditable")}} definido sobre ele.
+Este seletor não seleciona apenas {{htmlElement("input")}}/{{htmlElement("textarea")}} elementos - ele selecionará qualquer elemento que possa ser editado pelo usuário, como um {{htmlelement("p")}} elemento com [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable) definido sobre ele.
 
 ```html
 <p contenteditable>Este parágrafo é editável; é read-write.</p>
@@ -92,4 +92,4 @@ p:read-write {
 ## Veja também
 
 - {{cssxref(":read-only")}}
-- Atributo HTML {{htmlattrxref("contenteditable")}}.
+- Atributo HTML [`contenteditable`](/pt-BR/docs/Web/HTML/Global_attributes#contenteditable).

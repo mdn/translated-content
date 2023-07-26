@@ -3,7 +3,7 @@ title: Math.expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
 ---
 
-{{JSRef("Global_Objects", "Math")}}
+{{JSRef}}
 
 ## 概述
 
@@ -29,10 +29,12 @@ Math.expm1(x)
 ## 示例
 
 ```js
-Math.expm1(1)     // 1.7182818284590453
-Math.expm1(-38)   // -1
-Math.expm1("-38") // -1
-Math.expm1("foo") // NaN
+Math.expm1(-Infinity); // -1
+Math.expm1(-1); // -0.6321205588285577
+Math.expm1(-0); // -0
+Math.expm1(0); // 0
+Math.expm1(1); // 1.718281828459045
+Math.expm1(Infinity); // Infinity
 ```
 
 ## Polyfill
@@ -53,6 +55,6 @@ Math.expm1 = Math.expm1 || function (x) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{jsxref("Global_Objects/Math", "Math")}} 对象。

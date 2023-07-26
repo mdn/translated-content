@@ -5,24 +5,24 @@ slug: Web/API/CanvasPattern/setTransform
 
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-**`CanvasPattern.setTransform()`** 方法使用 {{domxref("SVGMatrix")}} 对象作为图案的变换矩阵，并在此图案上调用它。
+**`CanvasPattern.setTransform()`** 方法使用 {{domxref("DOMMatrix")}} 对象作为图案的变换矩阵，并在此图案上调用它。
 
 ## 语法
 
-```
-void pattern.setTransform(matrix);
+```js-nolint
+setTransform(matrix)
 ```
 
 ### 参数
 
 - `matrix`
-  - : {{domxref("SVGMatrix")}} ，被用作图案的变换矩阵。
+  - : {{domxref("DOMMatrix")}}，被用作图案的变换矩阵。
 
 ## 示例
 
 ### 使用 `setTransform` 方法
 
-这是一段简单的代码片段，使用 `setTransform` 方法创建一个来自 {{domxref("SVGMatrix")}} 具有指定图案变化的{{domxref("CanvasPattern")}} 。如例子所示，如果你把图案赋值给当前的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} ，当你使用 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，图案会被应用到 canvas 上绘制出效果。
+这是一段简单的代码片段，使用 `setTransform` 方法创建一个来自 {{domxref("DOMMatrix")}} 具有指定图案变化的{{domxref("CanvasPattern")}}。如例子所示，如果你把图案赋值给当前的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}，当你使用 {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} 方法时，图案会被应用到 canvas 上绘制出效果。
 
 #### HTML
 
@@ -100,9 +100,9 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 380) }}
+{{ EmbedLiveSample('使用 setTransform 方法', 700, 380) }}
 
-## 规范描述
+## 规范
 
 {{Specifications}}
 
@@ -113,4 +113,4 @@ window.addEventListener("load", drawCanvas);
 ## 参见
 
 - 接口定义，{{domxref("CanvasPattern")}}
-- {{domxref("SVGMatrix")}}
+- {{domxref("DOMMatrix")}}

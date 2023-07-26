@@ -1,10 +1,6 @@
 ---
 title: browser_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 ---
 
@@ -344,7 +340,7 @@ Si Firefox ne peut pas trouver une correspondance exacte pour la taille qu'il ve
 Une action de navigateur avec juste une icône, spécifiée en 2 tailles différentes. Les scripts d'arrière-plan de l'extension peuvent recevoir des événements de clic lorsque l'utilisateur clique sur l'icône en utilisant un code comme celui-ci :
 
 ```js
- browser.browserAction.onClicked.addListener(handleClick);
+browser.browserAction.onClicked.addListener(handleClick);
 ```
 
 ```json
@@ -362,9 +358,9 @@ Une action de navigateur avec une icône, un titre et une fenêtre contextuelle.
 
 Pour une extension simple, mais complète, qui utilise une action de navigateur, consultez le [tutoriel pas à pas](/fr/Add-ons/WebExtensions/Your_second_WebExtension).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.browser_action", 10)}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -61,7 +61,7 @@ try {
 }
 ```
 
-### 使用 RangeError（对于其它的值）
+### 使用 RangeError（对于其他的值）
 
 ```js
 function check(value) {

@@ -1,156 +1,121 @@
 ---
-title: Page Visibility API
+title: ページ可視性 API
 slug: Web/API/Page_Visibility_API
 original_slug: Web/Guide/User_experience/Using_the_Page_Visibility_API
+l10n:
+  sourceCommit: c41a14a44308f59a7e3bbe73988044bf547172d3
 ---
 
 {{DefaultAPISidebar("Page Visibility API")}}
 
-タブを使って閲覧している場合、どのウェブページもバックグラウンドにあってユーザーから見えていない場合があります。 Page Visibility API では、現在ページが見えているかどうかを調べる機能とともに、文書が表示されたり非表示になったりした時を監視することができるイベントを提供します。
+ページ可視性 API (Page Visibility API) では、現在ページが見えているかどうかを調べる機能とともに、文書が表示されたり非表示になったりした時を監視することができるイベントを提供します。
 
-> **メモ:** The Page Visibility API は、文書が表示されていない時に不必要なタスクの実行を抑止することで、リソースを節約したり実行効率を上げたりするために特に有用です。
+これは特に、文書が表示されていない時に不必要なタスクの実行を抑止することで、リソースを節約したり実行効率を上げたりするために特に有用です。
 
-ユーザーがウィンドウを最小化したり他のタブに切り替えたりした時、 API は {{event("visibilitychange")}} イベントを送信してリスナーにページの状態が変化したことを知らせます。イベントを検出していくつかの操作を実行したり、様々な動作をしたりすることができます。例えば、ウェブアプリで動画を再生している場合、ユーザーがタブをバックグラウンドにした場合に動画を一時停止させ、ユーザーがこのタブに戻ったときに再生を再開させたりすることができます。ユーザーは動画の位置に迷うことがなく、動画の音声が新しく前景になったタブの音声を邪魔せず、ユーザーがその間に動画を見落とすことがなくなります。
+## 概念と使用法
 
-{{HTMLElement("iframe")}} の可視状態は、親文書と同じになります。 CSS プロパティにより ({{cssxref("display", "display: none;")}} のように) `<iframe>` を隠しても visibility のイベントは発生せず、またフレームに含まれる文書の状態も変わりません。
+ユーザーがウィンドウを最小化したり他のタブに切り替えたりした時、 API は {{domxref("document.visibilitychange_event", "visibilitychange")}} イベントを送信してリスナーにページの状態が変化したことを知らせます。イベントを検出していくつかの操作を実行したり、様々な動作をしたりすることができます。例えば、ウェブアプリで動画を再生している場合、ユーザーがタブをバックグラウンドにした場合に動画を一時停止させ、ユーザーがこのタブに戻ったときに再生を再開させたりすることができます。ユーザーは動画の位置に迷うことがなく、動画の音声が新しく前景になったタブの音声を邪魔せず、ユーザーがその間に動画を見落とすことがなくなります。
+
+{{HTMLElement("iframe")}} の可視状態は、親文書と同じになります。 CSS プロパティにより ({{cssxref("display", "display: none;")}} のように) `<iframe>` を隠しても可視性イベントは発生せず、またフレームに含まれる文書の状態も変わりません。
 
 ### 使用例
 
-Page Visibility API の使用例をいくつか考えてみましょう。
+ページ可視性 API の使用例をいくつか考えてみましょう。
 
 - 画像のスライドショーがあるサイトで、ユーザーが見ていない間に次のスライドに進むべきではないもの
 - 情報をダッシュボードに表示するアプリケーションで、ページが見えていないときは更新情報をサーバーへ問い合わせてほしくないもの
 - 正確なページビューをカウントできるよう、ページがプリレンダリングされている状態を検出したい。
-- デバイスがスタンバイモードである (ユーザーが電源ボタンを押して、画面を消灯している) ときに、音声を止めたいサイト。
+- 端末がスタンバイモードである (ユーザーが電源ボタンを押して、画面を消灯している) ときに、音声を止めたいサイト。
 
-以前、開発者はこれを検出するために不完全な代替手段を使用していました。例えば window で onblur/onfocus ハンドラーを登録することでページがアクティブではないときを知る助けになりますが、ページがユーザーから隠された状態であることは知らせてくれません。 Page Visibility API はこれを解決します。
+以前、開発者はこれを検出するために不完全な代替手段を使用していました。例えばウィンドウで {{domxref("Window/blur_event", "blur")}} および {{domxref("Window/focus_event", "focus")}} イベントを監視することで、ページがアクティブではないときを知る助けになりますが、ページがユーザーから隠された状態であることは知らせてくれません。ページ可視性 API はこれを解決します。
 
-> **メモ:** {{domxref("GlobalEventHandlers.onblur", "onblur")}} 及び {{domxref("GlobalEventHandlers.onfocus", "onfocus")}} はユーザーがウィンドウを切り替えたことを教えてくれますが、非表示にしたという意味になるとは限りません。ページが非表示になるのは、ユーザーがタブを切り替えたり、タブを含むブラウザーウィンドウを最小化したりした時だけです。
+> **メモ:** {{domxref("Window.blur_event", "onblur")}} および {{domxref("Window.focus_event", "onfocus")}} はユーザーがウィンドウを切り替えたことを教えてくれますが、非表示にしたという意味になるとは限りません。ページが非表示になるのは、ユーザーがタブを切り替えたり、タブを含むブラウザーウィンドウを最小化したりした時だけです。
 
-### Policies in place to aid background page performance
+### バックグラウンドページのパフォーマンスを向上させるためのポリシー
 
-Separately from the Page Visibility API, user agents typically have a number of policies in place to mitigate the performance impact of background or hidden tabs. These may include:
+ページ可視性 API とは別に、ユーザーエージェントは通常、バックグラウンドまたは隠されたタブのパフォーマンスへの影響を緩和するために、いくつかのポリシーを持っています。これには次のようなものがあります。
 
-- Most browsers stop sending {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} callbacks to background tabs or hidden {{ HTMLElement("iframe") }}s in order to improve performance and battery life.
-- Timers such as {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} are throttled in background/inactive tabs to help improve performance. See [Reasons for delays longer than specified](/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified) for more details.
-- Budget-based background timeout throttling is now available in modern browsers (Firefox 58+, Chrome 57+), placing an additional limit on background timer CPU usage. This operates in a similar way across modern browsers, with the details being as follows:
+- ほとんどのブラウザーは、パフォーマンスとバッテリーライフを改善するために、バックグラウンドのタブや非表示の {{ HTMLElement("iframe") }} への {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} コールバックの送信を停止します。
+- {{domxref("setTimeout()")}} などのタイマーは、バックグラウンド/非アクティブなタブでは、パフォーマンスを向上させるために遅延されます。詳しくは、[遅延が指定値より長い理由](/ja/docs/Web/API/setTimeout#遅延が指定値より長い理由)を参照してください。
+- ブラウザーは、予算ベースのバックグラウンドタイムアウトの調整機能を実装しています。これは現代のブラウザー間で類似した方法で処理され、詳細は以下のとおりです。
 
-  - In Firefox, windows in background tabs each have their own time budget in milliseconds — a max and a min value of +50 ms and -150 ms, respectively. Chrome is very similar except that the budget is specified in seconds.
-  - Windows are subjected to throttling after 30 seconds, with the same throttling delay rules as specified for window timers (again, see [Reasons for delays longer than specified](/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout#Reasons_for_delays_longer_than_specified)). In Chrome, this value is 10 seconds.
-  - Timer tasks are only permitted when the budget is non-negative.
-  - Once a timer's code has finished running, the duration of time it took to execute is subtracted from its window's timeout budget.
-  - The budget regenerates at a rate of 10 ms per second, in both Firefox and Chrome.
+  - Firefox では、バックグラウンドタブのウィンドウは、それぞれ自分自身でミリ秒単位の時間予算（最大値で +50ms、最小値で -150ms）を保有します。 Chrome は、予算が秒単位で指定されることを除けば、とてもよく似ています。
+  - ウィンドウは、ウィンドウタイマーに指定されたのと同じ遅延調整ルールで、 30 秒後に調整されます（ここでも、[遅延が指定値より長い理由](/ja/docs/Web/API/setTimeout#遅延が指定値より長い理由)を参照してください）。Chrome では、この値は 10 秒です。
+  - タイマータスクは、予算が非負のときのみ許可されます。
+  - タイマーのコードの実行が完了すると、その実行に要した時間がウィンドウのタイムアウト予算から差し引かれます。
+  - 予算は、Firefox、Chrome ともに、 1 秒間に 10 ミリ秒の割合で再生成されます。
 
-Some processes are exempt from this throttling behavior. In these cases, you can use the Page Visibility API to reduce the tabs' performance impact while they're hidden.
+一部のプロセスは、この調整動作から除外されます。このような場合、ページ可視性 API を使用して、タブが非表示になっている間のパフォーマンスへの影響を軽減することができます。
 
-- Tabs which are playing audio are considered foreground and aren’t throttled.
-- Tabs running code that's using real-time network connections ([WebSockets](/ja/docs/Web/API/WebSockets_API) and [WebRTC](/ja/docs/Web/API/WebRTC_API)) go unthrottled in order to avoid closing these connections timing out and getting unexpectedly closed.
-- [IndexedDB](/ja/docs/Web/API/IndexedDB_API) processes are also left unthrottled in order to avoid timeouts.
+- 音声を再生しているタブはフォアグラウンドとみなされ、調整されることはありません。
+- リアルタイムのネットワーク接続（[WebSocket](/ja/docs/Web/API/WebSockets_API) や [WebRTC](/ja/docs/Web/API/WebRTC_API)）を使用しているコードを実行しているタブは、これらの接続がタイムアウトして予期せず取得されるのを避けるために、調整が解除されます。
+- [IndexedDB](/ja/docs/Web/API/IndexedDB_API) のプロセスもタイムアウトを避けるため、調整なしのままになります。
 
-## 例
+## 他のインターフェイスの拡張
 
-[ライブサンプル](http://daniemon.com/tech/webapps/page-visibility/)をご覧ください (音声つき動画あり)。
+### インスタンスプロパティ
 
-この例では別のタブに切り替えたときに動画再生を一時停止、また元のタブに戻った時に再生を再開しており、以下のコードで作られました:
+ページ可視性 API は、以下のプロパティを {{domxref("Document")}} インターフェイスに追加します。
 
-```js
-// hidden プロパティおよび可視性の変更イベントの名前を設定
-var hidden, visibilityChange;
-if (typeof document.hidden !== "undefined") { // Opera 12.10 や Firefox 18 以降でサポート
-  hidden = "hidden";
-  visibilityChange = "visibilitychange";
-} else if (typeof document.msHidden !== "undefined") {
-  hidden = "msHidden";
-  visibilityChange = "msvisibilitychange";
-} else if (typeof document.webkitHidden !== "undefined") {
-  hidden = "webkitHidden";
-  visibilityChange = "webkitvisibilitychange";
-}
-
-var videoElement = document.getElementById("videoElement");
-
-// ページが隠れたとき、動画再生を一時停止する。
-// ページが表示されたとき、動画を再生する。
-function handleVisibilityChange() {
-  if (document[hidden]) {
-    videoElement.pause();
-  } else {
-    videoElement.play();
-  }
-}
-
-// ブラウザーが addEventListener または Page Visibility API をサポートしない場合に警告
-if (typeof document.addEventListener === "undefined" || hidden === undefined) {
-  console.log("This demo requires a browser, such as Google Chrome or Firefox, that supports the Page Visibility API.");
-} else {
-  // Page Visibility の変更を扱う
-  document.addEventListener(visibilityChange, handleVisibilityChange, false);
-
-  // 動画が一時停止されたときに、タイトルを設定する。
-  // 一時停止したことを示す。
-  videoElement.addEventListener("pause", function(){
-    document.title = 'Paused';
-  }, false);
-
-  // 動画を再生するときに、タイトルを設定する。
-  videoElement.addEventListener("play", function(){
-    document.title = 'Playing';
-  }, false);
-
-}
-```
-
-## Document インターフェイスに追加されたプロパティ
-
-The Page Visibility API adds the following properties to the {{domxref("Document")}} interface:
-
-- {{domxref("Document.hidden")}} {{ReadOnlyInline}}
+- {{domxref("Document.hidden")}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : ページがユーザーから隠された状態であると思われる場合に `true` を、そうでない場合に `false` を返します。
 - {{domxref("Document.visibilityState")}} {{ReadOnlyInline}}
 
-  - : 文書の現在の可視状態を示す {{domxref("DOMString")}} です。取りうる値は以下の通りです。
+  - : 文字列で、文書の現在の可視状態を示します。取りうる値は以下の通りです。
 
     - `visible`
-      - : ページのコンテンツは少なくとも部分的に可視状態です。実際は、最小化されていないウィンドウのフォアグラウンドのタブにページがあることを意味します。
+      - : このページのコンテンツは、少なくとも部分的に可視状態です。実際は、最小化されていないウィンドウのフォアグラウンドのタブにページがあることを意味します。
     - `hidden`
-      - : ページのコンテンツはユーザーから見えていません。実際は、文書がバックグラウンドのタブか最小化されているウィンドウにある、あるいは OS のスクリーンがロックされていることを意味します。
-    - `prerender`
+      - : このページのコンテンツはユーザーから見えていません。実際は、文書がバックグラウンドのタブか最小化されているウィンドウにある、あるいは OS のスクリーンがロックされていることを意味します。
 
-      - : ページのコンテンツはプリレンダリングされており、ユーザーから見えていません (`document.hidden` では隠されているとみなされます)。文書は `prerender` の状態から始まるかもしれませんが、プリレンダリングは 1 つの文書は 1 回しか行われないので、他の状態からこの状態に移ることはありません。
+### イベント
 
-        > **メモ:** すべてのブラウザーがプリレンダリングに対応しているわけではありません。
+ページ可視性 API は、以下のイベントを {{domxref("Document")}} インターフェイスに追加します。
 
-    - `unloaded`
+- {{domxref("Document.visibilitychange_event", "visibilitychange")}}
+  - : タブの内容が可視状態または非表示になった時に発行されます。
 
-      - : ページがメモリからアンロードされている途中です。
+## 例
 
-        > **メモ:** すべてのブラウザーが `unloaded` の値に対応しているわけではありません。
+### ページが非表示になると音声を一時停止
 
-- {{domxref("Document.onvisibilitychange")}}
-  - : {{event("visibilitychange")}} イベントが発生したときに呼び出されるコードを提供する {{domxref("EventListener")}} です。
+この例では、ユーザーが異なる形に切り替えたときに音声を一時停止し、元に戻したときに再生します。
+
+#### HTML
+
+```html
+<audio
+  controls
+  src="https://mdn.github.io/webaudio-examples/audio-basics/outfoxing.mp3"></audio>
+```
+
+#### JavaScript
 
 ```js
-//startSimulation および pauseSimulation は別途定義される
-function handleVisibilityChange() {
-  if (document.hidden) {
-    pauseSimulation();
-  } else  {
-    startSimulation();
-  }
-}
+const audio = document.querySelector("audio");
 
-document.addEventListener("visibilitychange", handleVisibilityChange, false);
+// Handle page visibility change:
+// - If the page is hidden, pause the video
+// - If the page is shown, play the video
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    audio.pause();
+  } else {
+    audio.play();
+  }
+});
 ```
+
+#### 結果
+
+{{EmbedLiveSample("Pausing audio on page hide", "", 100)}}
+
+音声を再生してから、異なる形のタブに切り替えて、もう一度再生してみてください。
 
 ## 仕様書
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.Document.visibilityState")}}
-
-## 関連情報
-
-- IEBlog での [Page Visibility API](http://blogs.msdn.com/b/ie/archive/2011/07/08/using-pc-hardware-more-efficiently-in-html5-new-web-performance-apis-part-2.aspx) の解説
-- Google による [Page Visibility API](http://code.google.com/chrome/whitepapers/pagevisibility.html) の解説
+{{Compat}}

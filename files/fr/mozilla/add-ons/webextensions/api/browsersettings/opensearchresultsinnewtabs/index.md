@@ -1,15 +1,6 @@
 ---
 title: browserSettings.openSearchResultsInNewTabs
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Property
-  - Reference
-  - WebExtensions
-  - browserSettings
-  - openSearchResultsInNewTabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs
 ---
 
@@ -21,9 +12,9 @@ Si la valeur est définie à `true`, lorsque l'utilisateur sélectionne un terme
 
 Notez que cela n'affecte pas le comportement lors de la sélection des éléments de omnibox/awesomebar, uniquement la zone de recherche dédiée..
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.browserSettings.openSearchResultsInNewTabs")}}
+{{Compat}}
 
 ## Exemples
 
@@ -34,8 +25,9 @@ function logResult(result) {
   console.log(`Setting was modified: ${result}`);
 }
 
-browser.browserSettings.openSearchResultsInNewTabs.set({value: true}).
-  then(logResult);
+browser.browserSettings.openSearchResultsInNewTabs
+  .set({ value: true })
+  .then(logResult);
 ```
 
 {{WebExtExamples}}

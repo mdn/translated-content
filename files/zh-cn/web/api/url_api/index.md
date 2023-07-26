@@ -16,12 +16,12 @@ URL 标准的主要内容是由 URL 的定义以及它的结构和解析方式�
 给指定的 URL 创建一个 {{domxref("URL")}} 对象将解析 URL 并通过其属性对其组成部分的快速访问。
 
 ```js
-let addr = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL_API");
+let addr = new URL("https://developer.mozilla.org/zh-CN/docs/Web/API/URL_API");
 let host = addr.host;
 let path = addr.pathname;
 ```
 
-上面的代码片段为您正在阅读的文章创建一个`URL`对象，然后获取 {{domxref("URL.host", "host")}} 和 {{domxref("URL.pathname", "pathname")}} 属性。在本例中，这些字符串的值分别是`developer.mozilla.org` 和`/en-US/docs/Web/API/URL_API`。
+上面的代码片段为您正在阅读的文章创建一个`URL`对象，然后获取 {{domxref("URL.host", "host")}} 和 {{domxref("URL.pathname", "pathname")}} 属性。在本例中，这些字符串的值分别是`developer.mozilla.org` 和`/zh-CN/docs/Web/API/URL_API`。
 
 ### 修改 URL
 
@@ -57,10 +57,8 @@ try {
 
 URL API 是一个简单的 API，它的名字只有几个接口：
 
--
 - [`URL`](/zh-CN/docs/Web/API/URL)
 - [`URLSearchParams`](/zh-CN/docs/Web/API/URLSearchParams)
--
 
 该规范的旧版本包括一个名为{{domxref("URLUtilsReadOnly")}}的接口，该接口已经合并到{{domxref("WorkerLocation")}} 接口中。
 

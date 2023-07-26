@@ -1,9 +1,6 @@
 ---
 title: element
 slug: Web/XSLT/Element/element
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/element
 ---
 
 {{ XsltRef() }}

@@ -1,13 +1,8 @@
 ---
 title: <footer>
 slug: Web/HTML/Element/footer
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-translation_of: Web/HTML/Element/footer
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<footer>` 요소**는 가장 가까운 [구획 콘텐츠](/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽)나 [구획 루트](/ko/docs/Web/HTML/HTML5_문서의_섹션과_윤곽)의 푸터를 나타냅니다. 푸터는 일반적으로 구획의 작성자, 저작권 정보, 관련 문서 등의 내용을 담습니다.
@@ -61,7 +56,7 @@ The source for this interactive example is stored in a GitHub repository. If you
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -101,7 +96,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.footer")}}
+{{Compat}}
 
 ## 같이 보기
 

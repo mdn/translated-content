@@ -1,15 +1,6 @@
 ---
 title: Notification.close()
-slug: Web/API/notification/close
-tags:
-  - API
-  - API Notifications
-  - Méthode
-  - Notification
-  - Notifications
-  - Reference
-  - close
-  - fermeture
+slug: Web/API/Notification/close
 translation_of: Web/API/Notification/close
 ---
 
@@ -22,7 +13,7 @@ La méthode `close()` de l'interface {{domxref("Notification")}} est utilisée p
 ## Syntaxe
 
 ```js
-Notification.close()
+Notification.close();
 ```
 
 ### Paramètres
@@ -41,16 +32,16 @@ Dans l'extrait de code suivant, nous avons une simple fonction qui, lorsqu'elle 
 function spawnNotification(theBody, theIcon, theTitle) {
   const options = {
     body: theBody,
-    icon: theIcon
-  }
+    icon: theIcon,
+  };
 
-  const n = new Notification(theTitle, options)
-  document.addEventListener('visibilitychange', () => {
-    if (document.visibilityState === 'visible') {
+  const n = new Notification(theTitle, options);
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
       // The tab has become visible so clear the now-stale Notification.
-      n.close()
+      n.close();
     }
-  })
+  });
 }
 ```
 

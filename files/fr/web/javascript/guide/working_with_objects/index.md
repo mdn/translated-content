@@ -1,16 +1,7 @@
 ---
 title: Utiliser les objets
-slug: Web/JavaScript/Guide/Working_with_Objects
-tags:
-  - Beginner
-  - Comparing object
-  - Document
-  - Guide
-  - JavaScript
-  - Object
-  - l10n:priority
+slug: Web/JavaScript/Guide/Working_with_objects
 translation_of: Web/JavaScript/Guide/Working_with_Objects
-original_slug: Web/JavaScript/Guide/Utiliser_les_objets
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
@@ -154,7 +145,7 @@ On peut créer des objets avec une fonction qui est un constructeur, mais on peu
 La syntaxe utilisée avec les initialisateurs d'objets est la suivante :
 
 ```js
-let obj = { 
+let obj = {
   propriete_1:   valeur_1,   // propriete_# peut être un identifiant
             2:   valeur_2,   // ou un nombre
             // ...,

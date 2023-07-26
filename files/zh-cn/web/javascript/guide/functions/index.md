@@ -3,7 +3,7 @@ title: 函数
 slug: Web/JavaScript/Guide/Functions
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}
 
 函数是 JavaScript 中的基本组件之一。一个函数是 JavaScript 过程 — 一组执行任务或计算值的语句。要使用一个函数，你必须将其定义在你希望调用它的作用域内。
 
@@ -44,14 +44,14 @@ function myFunc(theObject) {
   theObject.make = "Toyota";
 }
 
-var mycar = {make: "Honda", model: "Accord", year: 1998};
+var mycar = { make: "Honda", model: "Accord", year: 1998 };
 var x, y;
 
-x = mycar.make;     // x 获取的值为 "Honda"
+x = mycar.make; // x 获取的值为 "Honda"
 
 myFunc(mycar);
-y = mycar.make;     // y 获取的值为 "Toyota"
-                    // (make 属性被函数改变了)
+y = mycar.make; // y 获取的值为 "Toyota"
+// (make 属性被函数改变了)
 ```
 
 ### 函数表达式
@@ -59,14 +59,18 @@ y = mycar.make;     // y 获取的值为 "Toyota"
 虽然上面的函数声明在语法上是一个语句，但函数也可以由函数表达式创建。这样的函数可以是**匿名**的；它不必有一个名称。例如，函数`square`也可这样来定义：
 
 ```js
-const square = function(number) { return number * number; };
+const square = function (number) {
+  return number * number;
+};
 var x = square(4); // x gets the value 16
 ```
 
 然而，函数表达式也可以提供函数名，并且可以用于在函数内部代指其本身，或者在调试器堆栈跟踪中识别该函数：
 
 ```js
-const factorial = function fac(n) {return n<2 ? 1 : n*fac(n-1)};
+const factorial = function fac(n) {
+  return n < 2 ? 1 : n * fac(n - 1);
+};
 
 console.log(factorial(3));
 ```
@@ -74,11 +78,10 @@ console.log(factorial(3));
 当将函数作为参数传递给另一个函数时，函数表达式很方便。下面的例子演示了一个叫`map`的函数如何被定义，而后使用一个表达式函数作为其第一个参数进行调用：
 
 ```js
-function map(f,a) {
+function map(f, a) {
   let result = []; // 创建一个数组
   let i; // 声明一个值，用来循环
-  for (i = 0; i != a.length; i++)
-    result[i] = f(a[i]);
+  for (i = 0; i != a.length; i++) result[i] = f(a[i]);
   return result;
 }
 ```
@@ -89,15 +92,14 @@ function map(f,a) {
 function map(f, a) {
   let result = []; // 创建一个数组
   let i; // 声明一个值，用来循环
-  for (i = 0; i != a.length; i++)
-    result[i] = f(a[i]);
+  for (i = 0; i != a.length; i++) result[i] = f(a[i]);
   return result;
 }
-const f = function(x) {
-   return x * x * x;
-}
-let numbers = [0,1, 2, 5,10];
-let cube = map(f,numbers);
+const f = function (x) {
+  return x * x * x;
+};
+let numbers = [0, 1, 2, 5, 10];
+let cube = map(f, numbers);
 console.log(cube);
 ```
 
@@ -107,16 +109,16 @@ console.log(cube);
 
 ```js
 var myFunc;
-if (num == 0){
-  myFunc = function(theObject) {
-    theObject.make = "Toyota"
-  }
+if (num == 0) {
+  myFunc = function (theObject) {
+    theObject.make = "Toyota";
+  };
 }
 ```
 
 除了上述的定义函数方法外，你也可以在运行时用 {{jsxref("Function")}} 构造器由一个字符串来创建一个函数，很像 {{jsxref("Global_Objects/eval", "eval()")}} 函数。
 
-当一个函数是一个对象的属性时，称之为**方法**。了解更多关于对象和方法的知识 [使用对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects)。
+当一个函数是一个对象的属性时，称之为**方法**。了解更多关于对象和方法的知识 [使用对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects)。
 
 ## 调用函数
 
@@ -133,7 +135,9 @@ square(5);
 ```js
 console.log(square(5));
 /* ... */
-function square(n) { return n*n }
+function square(n) {
+  return n * n;
+}
 ```
 
 函数域是指函数声明时的所在的地方，或者函数在顶层被声明时指整个程序。
@@ -145,19 +149,17 @@ console.log(square); // square is hoisted with an initial value undefined.
 console.log(square(5)); // Uncaught TypeError: square is not a function
 const square = function (n) {
   return n * n;
-}
+};
 ```
 
-函数的参数并不局限于字符串或数字。你也可以将整个对象传递给函数。函数 `show_props`（其定义参见 [用对象编程](/zh-CN/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)）就是一个将对象作为参数的例子。
+函数的参数并不局限于字符串或数字。你也可以将整个对象传递给函数。函数 `show_props`（其定义参见[用对象编程](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#对象和属性)）就是一个将对象作为参数的例子。
 
 函数可以被递归，就是说函数可以调用其本身。例如，下面这个函数就是用递归计算阶乘：
 
 ```js
-function factorial(n){
-  if ((n == 0) || (n == 1))
-    return 1;
-  else
-    return (n * factorial(n - 1));
+function factorial(n) {
+  if (n == 0 || n == 1) return 1;
+  else return n * factorial(n - 1);
 }
 ```
 
@@ -173,7 +175,7 @@ d = factorial(4); // 24 赋值给 d
 e = factorial(5); // 120 赋值给 e
 ```
 
-还有其它的方式来调用函数。常见的一些情形是某些地方需要动态调用函数，或者函数的实参数量是变化的，或者调用函数的上下文需要指定为在运行时确定的特定对象。显然，函数本身就是对象，因此这些对象也有方法（参考{{jsxref("Function")}} ）。作为此中情形之一，{{jsxref("Function.apply", "apply()")}}方法可以实现这些目的。
+还有其他的方式来调用函数。常见的一些情形是某些地方需要动态调用函数，或者函数的实参数量是变化的，或者调用函数的上下文需要指定为在运行时确定的特定对象。显然，函数本身就是对象，因此这些对象也有方法（参考{{jsxref("Function")}} ）。作为此中情形之一，{{jsxref("Function.apply", "apply()")}}方法可以实现这些目的。
 
 ## 函数作用域
 
@@ -182,8 +184,8 @@ e = factorial(5); // 120 赋值给 e
 ```js
 // 下面的变量定义在全局作用域 (global scope) 中
 var num1 = 20,
-    num2 = 3,
-    name = "Chamahk";
+  num2 = 3,
+  name = "Chamahk";
 
 // 本函数定义在全局作用域
 function multiply() {
@@ -195,7 +197,7 @@ multiply(); // 返回 60
 // 嵌套函数的例子
 function getScore() {
   var num1 = 2,
-      num2 = 3;
+    num2 = 3;
 
   function add() {
     return name + " scored " + (num1 + num2);
@@ -221,7 +223,7 @@ getScore(); // 返回 "Chamahk scored 5"
 
 ```js
 var foo = function bar() {
-   // statements go here
+  // statements go here
 };
 ```
 
@@ -235,9 +237,10 @@ var foo = function bar() {
 
 ```js
 var x = 0;
-while (x < 10) { // "x < 10" 是循环条件
-   // do stuff
-   x++;
+while (x < 10) {
+  // "x < 10" 是循环条件
+  // do stuff
+  x++;
 }
 ```
 
@@ -245,7 +248,8 @@ while (x < 10) { // "x < 10" 是循环条件
 
 ```js
 function loop(x) {
-  if (x >= 10) // "x >= 10" 是退出条件（等同于 "!(x < 10)"）
+  if (x >= 10)
+    // "x >= 10" 是退出条件（等同于 "!(x < 10)"）
     return;
   // 做些什么
   loop(x + 1); // 递归调用
@@ -257,8 +261,7 @@ loop(0);
 
 ```js
 function walkTree(node) {
-  if (node == null) //
-    return;
+  if (node == null) return;
   // do something with node
   for (var i = 0; i < node.childNodes.length; i++) {
     walkTree(node.childNodes[i]);
@@ -274,11 +277,10 @@ function walkTree(node) {
 
 ```js
 function foo(i) {
-  if (i < 0)
-    return;
-  console.log('begin:' + i);
+  if (i < 0) return;
+  console.log("begin:" + i);
   foo(i - 1);
-  console.log('end:' + i);
+  console.log("end:" + i);
 }
 foo(3);
 
@@ -396,80 +398,85 @@ outside()(10); // returns 20 instead of 10
 此外，由于内部函数可以访问外部函数的作用域，因此当内部函数生存周期大于外部函数时，外部函数中定义的变量和函数的生存周期将比内部函数执行时间长。当内部函数以某一种方式被任何一个外部函数作用域访问时，一个闭包就产生了。
 
 ```js
-var pet = function(name) {          //外部函数定义了一个变量"name"
-  var getName = function() {
+var pet = function (name) {
+  //外部函数定义了一个变量"name"
+  var getName = function () {
     //内部函数可以访问 外部函数定义的"name"
     return name;
-  }
+  };
   //返回这个内部函数，从而将其暴露在外部函数作用域
   return getName;
 };
 myPet = pet("Vivie");
 
-myPet();                            // 返回结果 "Vivie"
+myPet(); // 返回结果 "Vivie"
 ```
 
 实际上可能会比上面的代码复杂的多。在下面这种情形中，返回了一个包含可以操作外部函数的内部变量方法的对象。
 
 ```js
-var createPet = function(name) {
+var createPet = function (name) {
   var sex;
 
   return {
-    setName: function(newName) {
+    setName: function (newName) {
       name = newName;
     },
 
-    getName: function() {
+    getName: function () {
       return name;
     },
 
-    getSex: function() {
+    getSex: function () {
       return sex;
     },
 
-    setSex: function(newSex) {
-      if(typeof newSex == "string"
-        && (newSex.toLowerCase() == "male" || newSex.toLowerCase() == "female")) {
+    setSex: function (newSex) {
+      if (
+        typeof newSex == "string" &&
+        (newSex.toLowerCase() == "male" || newSex.toLowerCase() == "female")
+      ) {
         sex = newSex;
       }
-    }
-  }
-}
+    },
+  };
+};
 
 var pet = createPet("Vivie");
-pet.getName();                  // Vivie
+pet.getName(); // Vivie
 
 pet.setName("Oliver");
 pet.setSex("male");
-pet.getSex();                   // male
-pet.getName();                  // Oliver
+pet.getSex(); // male
+pet.getName(); // Oliver
 ```
 
-在上面的代码中，外部函数的`name`变量对内嵌函数来说是可取得的，而除了通过内嵌函数本身，没有其它任何方法可以取得内嵌的变量。内嵌函数的内嵌变量就像内嵌函数的保险柜。它们会为内嵌函数保留“稳定”——而又安全——的数据参与运行。而这些内嵌函数甚至不会被分配给一个变量，或者不必一定要有名字。
+在上面的代码中，外部函数的`name`变量对内嵌函数来说是可取得的，而除了通过内嵌函数本身，没有其他任何方法可以取得内嵌的变量。内嵌函数的内嵌变量就像内嵌函数的保险柜。它们会为内嵌函数保留“稳定”——而又安全——的数据参与运行。而这些内嵌函数甚至不会被分配给一个变量，或者不必一定要有名字。
 
 ```js
-var getCode = (function(){
-  var secureCode = "0]Eal(eh&2";    // A code we do not want outsiders to be able to modify...
+var getCode = (function () {
+  var secureCode = "0]Eal(eh&2"; // A code we do not want outsiders to be able to modify...
 
   return function () {
     return secureCode;
   };
 })();
 
-getCode();    // Returns the secret code
+getCode(); // Returns the secret code
 ```
 
 > **备注：** 尽管有上述优点，使用闭包时仍然要小心避免一些陷阱。如果一个闭包的函数定义了一个和外部函数的某个变量名称相同的变量，那么这个闭包将无法引用外部函数的这个变量。
 >
 > ```js
-> var createPet = function(name) {  // Outer function defines a variable called "name"
+> var createPet = function (name) {
+>   // Outer function defines a variable called "name"
 >   return {
->     setName: function(name) {    // Enclosed function also defines a variable called "name"
->       name = name;               // ??? How do we access the "name" defined by the outer function ???
->     }
->   }
-> }
+>     setName: function (name) {
+>       // Enclosed function also defines a variable called "name"
+>       name = name; // ??? How do we access the "name" defined by the outer function ???
+>     },
+>   };
+> };
 > ```
 
 ## 使用 arguments 对象
@@ -477,7 +484,7 @@ getCode();    // Returns the secret code
 函数的实际参数会被保存在一个类似数组的 arguments 对象中。在函数内，你可以按如下方式找出传入的参数：
 
 ```js
-arguments[i]
+arguments[i];
 ```
 
 其中`i`是参数的序数编号（译注：数组索引），以 0 开始。所以第一个传来的参数会是`arguments[0]`。参数的数量由`arguments.length`表示。
@@ -488,13 +495,13 @@ arguments[i]
 
 ```js
 function myConcat(separator) {
-   var result = ''; // 把值初始化成一个字符串，这样就可以用来保存字符串了！！
-   var i;
-   // iterate through arguments
-   for (i = 1; i < arguments.length; i++) {
-      result += arguments[i] + separator;
-   }
-   return result;
+  var result = ""; // 把值初始化成一个字符串，这样就可以用来保存字符串了！！
+  var i;
+  // iterate through arguments
+  for (i = 1; i < arguments.length; i++) {
+    result += arguments[i] + separator;
+  }
+  return result;
 }
 ```
 
@@ -527,9 +534,9 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 
 ```js
 function multiply(a, b) {
-  b = (typeof b !== 'undefined') ?  b : 1;
+  b = typeof b !== "undefined" ? b : 1;
 
-  return a*b;
+  return a * b;
 }
 
 multiply(5); // 5
@@ -539,7 +546,7 @@ multiply(5); // 5
 
 ```js
 function multiply(a, b = 1) {
-  return a*b;
+  return a * b;
 }
 
 multiply(5); // 5
@@ -553,7 +560,7 @@ multiply(5); // 5
 
 ```js
 function multiply(multiplier, ...theArgs) {
-  return theArgs.map(x => multiplier * x);
+  return theArgs.map((x) => multiplier * x);
 }
 
 var arr = multiply(2, 1, 2, 3);
@@ -571,18 +578,15 @@ console.log(arr); // [2, 4, 6]
 在一些函数模式中，更简洁的函数很受欢迎。对比一下：
 
 ```js
-var a = [
-  "Hydrogen",
-  "Helium",
-  "Lithium",
-  "Beryllium"
-];
+var a = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
 
-var a2 = a.map(function(s){ return s.length });
+var a2 = a.map(function (s) {
+  return s.length;
+});
 
 console.log(a2); // logs [ 8, 6, 7, 9 ]
 
-var a3 = a.map( s => s.length );
+var a3 = a.map((s) => s.length);
 
 console.log(a3); // logs [ 8, 6, 7, 9 ]
 ```
@@ -612,7 +616,7 @@ var p = new Person();
 ```js
 function Person() {
   var self = this; // 有的人习惯用`that`而不是`self`，
-                   // 无论你选择哪一种方式，请保持前后代码的一致性
+  // 无论你选择哪一种方式，请保持前后代码的一致性
   self.age = 0;
 
   setInterval(function growUp() {
@@ -627,7 +631,7 @@ function Person() {
 箭头函数捕捉闭包上下文的`this`值，所以下面的代码工作正常。
 
 ```js
-function Person(){
+function Person() {
   this.age = 0;
 
   setInterval(() => {
@@ -643,23 +647,23 @@ var p = new Person();
 JavaScript 语言有好些个顶级的内建函数：
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
-  - : **`eval()`**方法会对一串字符串形式的 JavaScript 代码字符求值。
+  - : **`eval()`** 方法会对一串字符串形式的 JavaScript 代码字符求值。
 - {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
-  - : **`uneval()`**方法创建的一个{{jsxref("Object")}}的源代码的字符串表示。
+  - : **`uneval()`** 方法创建的一个 {{jsxref("Object")}} 的源代码的字符串表示。
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-  - : **`isFinite()`**函数判断传入的值是否是有限的数值。如果需要的话，其参数首先被转换为一个数值。
+  - : **`isFinite()`** 函数判断传入的值是否是有限的数值。如果需要的话，其参数首先被转换为一个数值。
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : **`isNaN()`**函数判断一个值是否是{{jsxref("Global_Objects/NaN", "NaN")}}。注意：`isNaN`函数内部的[`强制转换规则`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description)十分有趣；另一个可供选择的是 ECMAScript 6 中定义{{jsxref("Number.isNaN()")}} , 或者使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)来判断数值类型。
+  - : **`isNaN()`** 函数判断一个值是否是 {{jsxref("Global_Objects/NaN", "NaN")}}。注意：`isNaN` 函数内部的[强制转换规则](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN#描述)十分有趣；另一个可供选择的是 ECMAScript 6 中定义 {{jsxref("Number.isNaN()")}}, 或者使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof) 来判断数值类型。
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
   - : **`parseFloat()`** 函数解析字符串参数，并返回一个浮点数。
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}
   - : **`parseInt()`** 函数解析字符串参数，并返回指定的基数（基础数学中的数制）的整数。
 - {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-  - : **`decodeURI()`** 函数对先前经过{{jsxref("Global_Objects/encodeURI", "encodeURI")}}函数或者其他类似方法编码过的字符串进行解码。
+  - : **`decodeURI()`** 函数对先前经过 {{jsxref("Global_Objects/encodeURI", "encodeURI")}} 函数或者其他类似方法编码过的字符串进行解码。
 - {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-  - : **`decodeURIComponent()`**方法对先前经过{{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}}函数或者其他类似方法编码过的字符串进行解码。
+  - : **`decodeURIComponent()`** 方法对先前经过 {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} 函数或者其他类似方法编码过的字符串进行解码。
 - {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-  - : **`encodeURI()`**方法通过用以一个，两个，三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的某些字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。
+  - : **`encodeURI()`** 方法通过用以一个、两个、三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的某些字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。
 - {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
   - : **`encodeURIComponent()`** 方法通过用以一个，两个，三个或四个转义序列表示字符的 UTF-8 编码替换统一资源标识符（URI）的每个字符来进行编码（每个字符对应四个转义序列，这四个序列组了两个”替代“字符）。
 - {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}
@@ -667,4 +671,4 @@ JavaScript 语言有好些个顶级的内建函数：
 - {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}
   - : 已废弃的 **`unescape()`** 方法计算生成一个新的字符串，其中的十六进制转义序列将被其表示的字符替换。上述的转义序列就像{{jsxref("Global_Objects/escape", "escape")}}里介绍的一样。因为 `unescape` 已经废弃，建议使用{{jsxref("Global_Objects/decodeURI", "decodeURI()")}}或者{{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent")}} 替代本方法。
 
-{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
+{{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_operators")}}

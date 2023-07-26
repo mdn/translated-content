@@ -1,6 +1,6 @@
 ---
 title: CSS Reglas Condicionales
-slug: Web/CSS/CSS_Conditional_Rules
+slug: Web/CSS/CSS_conditional_rules
 original_slug: Web/CSS/CSS_Reglas_Condicionales
 ---
 
@@ -25,20 +25,6 @@ _None._
 
 {{Specifications}}
 
-## Compatibilidad de navegadores
+## Compatibilidad con navegadores
 
-### `@document` rule
-
-{{Compat("css.at-rules.document")}}
-
-### `@import` rule
-
-{{Compat("css.at-rules.import")}}
-
-### `@media` rule
-
-{{Compat("css.at-rules.media")}}
-
-### `@supports` rule
-
-{{Compat("css.at-rules.supports")}}
+{{Compat}}

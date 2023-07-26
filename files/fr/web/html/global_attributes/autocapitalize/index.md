@@ -1,13 +1,7 @@
 ---
 title: autocapitalize
 slug: Web/HTML/Global_attributes/autocapitalize
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
 translation_of: Web/HTML/Global_attributes/autocapitalize
-original_slug: Web/HTML/Attributs_universels/autocapitalize
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -21,7 +15,7 @@ L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`autocapitalize
 
 L'attribut `autocapitalize` n'a aucun impact lorsqu'on utilise un clavier physique. Il modifie la saisie pour les autres moyens de saisie tels que les claviers virtuels ou les moyens de saisie orale. Le but de cet attribut est d'aider de tels moyens à faciliter la saisie de l'utilisateur. Par défaut, un tel moyen de saisie utilisera une majuscule pour chaque début de phrase, modifier l'attribut `autocapitalize` permet aux auteurs de modifier ce comportement selon les différents éléments.
 
-L'attribut `autocapitalize` n'entraînera pas de mise en majuscule automatique pour un élément {{HTMLElement("input")}} dont l'attribut {{htmlattrxref("type", "input")}} vaut `url`, `email` ou `password`.
+L'attribut `autocapitalize` n'entraînera pas de mise en majuscule automatique pour un élément {{HTMLElement("input")}} dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) vaut `url`, `email` ou `password`.
 
 ## Spécifications
 

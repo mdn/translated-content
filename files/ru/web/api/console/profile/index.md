@@ -1,6 +1,6 @@
 ---
 title: Console.profile()
-slug: Web/API/Console/profile
+slug: Web/API/console/profile
 tags:
   - API
   - Профайлер

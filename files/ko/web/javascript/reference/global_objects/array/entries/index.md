@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
-tags:
-  - Array
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 ---
 
 {{JSRef}}
@@ -75,7 +67,7 @@ for (const element of [, "a"].entries()) {
 
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

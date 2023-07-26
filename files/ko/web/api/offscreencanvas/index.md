@@ -1,19 +1,11 @@
 ---
 title: OffscreenCanvas
 slug: Web/API/OffscreenCanvas
-tags:
-  - API
-  - Canvas
-  - Experimental
-  - Interface
-  - Reference
-translation_of: Web/API/OffscreenCanvas
-browser-compat: api.OffscreenCanvas
 ---
 
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-**`OffscreenCanvas`**는 화면 밖에서 렌더링되는 캔버스 인터페이스입니다. window 객체와 [worker](/ko/docs/Web/API/Web_Workers_API) 객체 모두 지원합니다.
+**`OffscreenCanvas`** 는 화면 밖에서 렌더링되는 캔버스 인터페이스입니다. window 객체와 [worker](/ko/docs/Web/API/Web_Workers_API) 객체 모두 지원합니다.
 
 ## 생성자
 
@@ -36,7 +28,7 @@ browser-compat: api.OffscreenCanvas
   - : 캔버스에 들어있는 이미지에 대한 {{domxref("Blob")}} 객체를 생성합니다.
 
 - {{domxref("OffscreenCanvas.transferToImageBitmap()")}}
-  - : OffscreenCanvas에 렌더링된 이미지중에서 가장 최근에 렌더링된 이미지를 {{domxref("ImageBitmap")}} 객체로 생성합니다.
+  - : `OffscreenCanvas`에 렌더링된 이미지중에서 가장 최근에 렌더링된 이미지를 {{domxref("ImageBitmap")}} 객체로 생성합니다.
 
 ## 예시
 
@@ -44,7 +36,7 @@ browser-compat: api.OffscreenCanvas
 
 `OffscreenCanvas` API를 사용하는 방법은 `OffscreenCanvas`에 속한 {{domxref("RenderingContext")}}를 이용해 새로운 프레임 객체를 생성하는 것입니다. 새 프레임이 컨텍스트에 렌더링이 되고나면, 가장 최근에 렌더링 된 이미지를 저장하는 {{domxref("OffscreenCanvas.transferToImageBitmap", "transferToImageBitmap()")}} 메소드를 호출할 수 있습니다. 이 메소드는 다른 수 많은 Web API에서 사용되고 있는 {{domxref("ImageBitmap")}} 객체를 리턴합니다.
 
-`ImageBitmap`을 화면에 표시하려면, 현재 (화면에 보여지고 있는) 캔버스 요소의 `canvas.getContext("bitmaprenderer")` 메소드를 호출했을 때 생성되는 {{domxref("ImageBitmapRenderingContext")}} 객체를 사용하면 됩니다. 이 컨텍스트는 캔버스의 내용을 주어진 `ImageBitmap`으로 전환하는 기능을 제공합니다. OffscreenCanvas에서 이전에 렌더링이 되어서 등록된 `ImageBitmap`을 이용한 {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}}을 호출하면 `ImageBitmap`이 캔버스에 표시되고 소유권 역시 캔버스로 넘어갑니다. 단일 `OffscreenCanvas`는 프레임들을 임의의 다른 `ImageBitmapRenderingContext` 객체로 전달합니다.
+`ImageBitmap`을 화면에 표시하려면, 현재 (화면에 보여지고 있는) 캔버스 요소의 `canvas.getContext("bitmaprenderer")` 메소드를 호출했을 때 생성되는 {{domxref("ImageBitmapRenderingContext")}} 객체를 사용하면 됩니다. 이 컨텍스트는 캔버스의 내용을 주어진 `ImageBitmap`으로 전환하는 기능을 제공합니다. `OffscreenCanvas`에서 이전에 렌더링이 되어서 등록된 `ImageBitmap`을 이용한 {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}}을 호출하면 `ImageBitmap`이 캔버스에 표시되고 소유권 역시 캔버스로 넘어갑니다. 단일 `OffscreenCanvas`는 프레임들을 임의의 다른 `ImageBitmapRenderingContext` 객체로 전달합니다.
 
 아래에 두 개의 {{HTMLElement("canvas")}} 요소가 있습니다.
 

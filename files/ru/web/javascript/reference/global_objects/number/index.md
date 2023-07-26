@@ -54,8 +54,6 @@ b instanceof Number; // is false
 - {{jsxref("Number.prototype")}}
   - : Позволяет добавлять свойства к объекту `Number`.
 
-{{jsOverrides("Function", "properties", "MAX_VALUE", "MIN_VALUE", "NaN", "NEGATIVE_INFINITY", "POSITIVE_INFINITY", "protoype")}}
-
 ## Методы
 
 - {{jsxref("Number.isNaN()")}} {{experimental_inline}}
@@ -66,14 +64,12 @@ b instanceof Number; // is false
   - : Определяет, является ли тип переданного значения «числом», а само число — целым значением.
 - {{jsxref("Number.isSafeInteger()")}} {{experimental_inline}}
   - : Определяет, является ли переданное значение безопасным целым числом (числом в диапазоне от `-(253 - 1)` до `253 - 1`).
-- ~~{{jsxref("Number.toInteger()")}} {{obsolete_inline}}~~
+- ~~{{jsxref("Number.toInteger()")}}~~
   - : ~~Использовался для вычисления переданного значения и преобразования его в целое число (или бесконечность {{jsxref("Global_Objects/Infinity", "Infinity")}}), но был удалён.~~
 - {{jsxref("Number.parseFloat()")}} {{experimental_inline}}
   - : Представляет собой тот же самый метод, что и метод {{jsxref("Global_Objects/parseFloat", "parseFloat")}} глобального объекта.
 - {{jsxref("Number.parseInt()")}} {{experimental_inline}}
   - : Представляет собой тот же самый метод, что и метод {{jsxref("Global_Objects/parseInt", "parseInt")}} глобального объекта.
-
-{{jsOverrides("Function", "methods", "isNaN")}}
 
 ## Экземпляры объекта `Number`
 

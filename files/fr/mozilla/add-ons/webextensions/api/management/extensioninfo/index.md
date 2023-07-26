@@ -1,15 +1,6 @@
 ---
 title: ExtensionInfo
 slug: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
-tags:
-  - API
-  - Add-ons
-  - ExtensionInfo
-  - Extensions
-  - Reference
-  - Type
-  - WebExtensions
-  - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo
 ---
 
@@ -79,9 +70,9 @@ Il s'agit d'un objet avec les propriétés suivantes :
 - `versionName`
   - : `string`. Le nom descriptif pour la version de l'extension, tiré de la clé [version_name](/fr/Add-ons/WebExtensions/manifest.json/version_name) du manifest.json.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.ExtensionInfo")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

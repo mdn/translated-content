@@ -12,7 +12,7 @@ tags:
 ## Примеры
 
 ```js
-const value1 = '5';
+const value1 = "5";
 const value2 = 9;
 let sum = value1 + value2;
 
@@ -29,7 +29,6 @@ sum = Number(value1) + value2;
 
 ## Смотрите также
 
-- {{Interwiki("wikipedia", "Type conversion")}} (Википедия)
 - [Глоссарий](/ru/docs/Glossary)
 
   - {{Glossary("Type")}}

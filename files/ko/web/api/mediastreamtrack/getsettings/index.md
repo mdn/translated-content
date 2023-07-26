@@ -1,13 +1,6 @@
 ---
 title: MediaStreamTrack.getSettings()
 slug: Web/API/MediaStreamTrack/getSettings
-tags:
-  - API
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Method
-  - Reference
-translation_of: Web/API/MediaStreamTrack/getSettings
 ---
 
 {{APIRef("Media Capture and Streams")}}

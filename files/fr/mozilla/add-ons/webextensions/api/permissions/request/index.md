@@ -1,14 +1,6 @@
 ---
 title: permissions.request()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/request
-tags:
-  - API
-  - Add-ons
-  - Method
-  - Permissions
-  - Reference
-  - WebExtensions
-  - request
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/request
 ---
 
@@ -30,8 +22,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var requesting = browser.permissions.request(
-  permissions                // Permissions object
-)
+  permissions, // Permissions object
+);
 ```
 
 ### Paramètres
@@ -43,9 +35,9 @@ var requesting = browser.permissions.request(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `true` si l'extension a reçu toutes les permissions répertoriées dans l'argument des `permissions` , ou `false` dans le cas contraire.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.permissions.request")}}
+{{Compat}}
 
 ## Exemples
 
@@ -54,11 +46,10 @@ Ce code ajoute un gestionnaire de clics qui demande diverses permissions, puis e
 ```js
 const permissionsToRequest = {
   permissions: ["bookmarks", "history"],
-  origins: ["https://developer.mozilla.org/"]
-}
+  origins: ["https://developer.mozilla.org/"],
+};
 
 function requestPermissions() {
-
   function onResponse(response) {
     if (response) {
       console.log("Permission was granted");
@@ -68,14 +59,17 @@ function requestPermissions() {
     return browser.permissions.getAll();
   }
 
-  browser.permissions.request(permissionsToRequest)
+  browser.permissions
+    .request(permissionsToRequest)
     .then(onResponse)
     .then((currentPermissions) => {
-    console.log(`Current permissions:`, currentPermissions);
-  });
+      console.log(`Current permissions:`, currentPermissions);
+    });
 }
 
-document.querySelector("#request").addEventListener("click", requestPermissions);
+document
+  .querySelector("#request")
+  .addEventListener("click", requestPermissions);
 ```
 
 {{WebExtExamples}}

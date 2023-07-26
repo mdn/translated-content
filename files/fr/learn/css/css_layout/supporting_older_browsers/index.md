@@ -1,21 +1,7 @@
 ---
 title: Prise en charge des anciens navigateurs
 slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-tags:
-  - Apprendre
-  - Beginner
-  - CSS
-  - Débutant
-  - Guide
-  - Layout
-  - Learn
-  - feature queries
-  - flexbox
-  - float
-  - grid
-  - legacy
 translation_of: Learn/CSS/CSS_layout/Supporting_Older_Browsers
-original_slug: Apprendre/CSS/CSS_layout/Prise_En_Charge_Des_Anciens_Navigateurs
 ---
 
 {{LearnSidebar}}
@@ -88,7 +74,7 @@ Dans l'exemple ci-dessous, nous avons fait flotter trois `<div>` pour les affich
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -98,7 +84,7 @@ Dans l'exemple ci-dessous, nous avons fait flotter trois `<div>` pour les affich
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
 }
 ```
@@ -146,7 +132,7 @@ Dans la disposition flottante, le pourcentage est calculé à partir du conteneu
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -156,7 +142,7 @@ Dans la disposition flottante, le pourcentage est calculé à partir du conteneu
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
@@ -192,7 +178,7 @@ Si nous ajoutons une requête de fonctionnalité à l'exemple ci-dessus, nous po
 }
 
 .wrapper {
-  background-color: rgb(79,185,227);
+  background-color: rgb(79, 185, 227);
   padding: 10px;
   max-width: 400px;
   display: grid;
@@ -202,14 +188,14 @@ Si nous ajoutons une requête de fonctionnalité à l'exemple ci-dessus, nous po
 .item {
   float: left;
   border-radius: 5px;
-  background-color: rgb(207,232,220);
+  background-color: rgb(207, 232, 220);
   padding: 1em;
   width: 33.333%;
 }
 
 @supports (display: grid) {
   .item {
-      width: auto;
+    width: auto;
   }
 }
 ```
@@ -262,18 +248,3 @@ Vous disposez désormais des connaissances nécessaires pour utiliser en toute c
 - [Utilisation des requêtes de fonctionnalités (vidéo)](https://gridbyexample.com/learn/2016/12/24/learning-grid-day24/) (en)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
-
-## Dans ce module
-
-- [Introduction à la mise en page en CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Cours normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Les boîtes flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Le positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Disposition sur plusieurs colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Responsive design](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design)
-- [Guide du débutant des Media Queries](/fr/docs/Learn/CSS/CSS_layout/Media_queries)
-- [Méthodes de mises en page traditionnelles](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Prise en charge des anciens navigateurs](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Compréhension fondamentale de la mise en page](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

@@ -76,18 +76,3 @@ CSS リソースファイルで提供されているセレクタとルールセ�
 組織的な研修の一部としてこの評価に従っているなら、あなたは採点のためにあなたの教師/メンターに作業結果を提出できるはずです。もし自己学習しているのであれば、[この練習問題についてのディスカッションスレッド](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682)、または [Mozilla IRC](https://wiki.mozilla.org/IRC) の [#mdn](irc://irc.mozilla.org/mdn) IRC チャンネルで尋ねることで、非常に簡単に採点ガイドを入手できます。最初にエクササイズをしてみてください — 不正をすることによって得られるものは何もありません！
 
 {{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
-
-## このモジュール
-
-- [CSS の仕組み](/ja/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works)
-- [CSS の構文](/ja/docs/Learn/CSS/Introduction_to_CSS/Syntax)
-- [CSS セレクタ](/ja/docs/Learn/CSS/Introduction_to_CSS/Selectors)
-- [単純セレクタ](/ja/docs/Learn/CSS/Introduction_to_CSS/Simple_selectors)
-- [属性セレクタ](/ja/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors)
-- [擬似クラスと擬似要素](/ja/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements)
-- [コンビネーターとセレクタリスト](/ja/docs/Learn/CSS/Introduction_to_CSS/Combinators_and_multiple_selectors)
-- [CSS の値と単位](/ja/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
-- [カスケードと継承](/ja/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance)
-- [ボックスモデル](/ja/docs/Learn/CSS/Introduction_to_CSS/Box_model)
-- [CSS のデバッグ](/ja/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
-- [基本的な CSS の理解](/ja/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension)

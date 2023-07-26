@@ -13,7 +13,7 @@ slug: Web/API/ExtendableEvent/waitUntil
 
 `waitUntil()` 方法最初必须在事件回调里调用，在此之后，方法可以被调用多次，直至所有传入的 promise 被解决。
 
-> **备注：** 上述段落描述的行为已经在 Firefox 43 中被修复 (参见 {{bug(1180274)}}.)
+> **备注：** 上述段落描述的行为已经在 Firefox 43 中被修复（参见 [Firefox bug 1180274](https://bugzil.la/1180274)）。
 
 ## 语法
 

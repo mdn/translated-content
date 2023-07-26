@@ -1,11 +1,6 @@
 ---
 title: Console.assert()
-slug: Web/API/Console/assert
-tags:
-  - API
-  - DOM
-  - Méthodes
-  - débogage
+slug: Web/API/console/assert
 translation_of: Web/API/console/assert
 ---
 

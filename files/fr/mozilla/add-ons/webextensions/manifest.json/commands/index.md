@@ -1,11 +1,6 @@
 ---
 title: commands
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/commands
-tags:
-  - Add-ons
-  - Extensions
-  - Keyboard Shortcuts
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/commands
 ---
 
@@ -129,7 +124,7 @@ Cela définit deux raccourcis :
 Vous pouvez alors écouter la commande `"toggle-feature"` avec un code comme celui-ci :
 
 ```js
-browser.commands.onCommand.addListener(function(command) {
+browser.commands.onCommand.addListener(function (command) {
   if (command == "toggle-feature") {
     console.log("toggling the feature!");
   }
@@ -170,10 +165,10 @@ Les combinaisons de touches doivent être composées de deux ou trois touches :
 2. **second modificateur** (facultatif). S'il est fourni, il doit être `"Shift"` ou (pour Firefox ≥ 63) l'un quelconque des `"Ctrl"`, `"Alt"`, `"Command"`, ou `"MacCtrl"`. Ne doit pas être le modificateur déjà utilisé comme modificateur principal.
 3. **touche** (obligatoire). Ce peut être l'une des touches :
 
-    - lettres `A` – `Z`
-    - chiffres `0` – `9`
-    - fonctions `F1` – `F12`
-    - `Comma` (virgule), `Period` (point), `Home` (début), `End` (Fin), `PageUp` (page précédente), `PageDown` (page suivante), `Space` (espace), `Insert` (inser), `Delete` (Suppr), `Up` (haut), `Down` (bas), `Left` (gauche), `Right` (droite)
+   - lettres `A` – `Z`
+   - chiffres `0` – `9`
+   - fonctions `F1` – `F12`
+   - `Comma` (virgule), `Period` (point), `Home` (début), `End` (Fin), `PageUp` (page précédente), `PageDown` (page suivante), `Space` (espace), `Insert` (inser), `Delete` (Suppr), `Up` (haut), `Down` (bas), `Left` (gauche), `Right` (droite)
 
 La clé est ensuite donnée sous la forme d'une chaîne contenant l'ensemble des valeurs de clé, dans l'ordre indiqué ci-dessus, séparées "`+`". Par exemple, `"Ctrl+Shift+Z"`.
 
@@ -226,6 +221,6 @@ Définissez deux raccourcis clavier, l'un avec une combinaison de touches spéci
 }
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.commands")}}
+{{Compat}}

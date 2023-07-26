@@ -38,7 +38,7 @@ browser.menus.create(
         - 상위 항목에 콘텍스트가 설정되었으면 그걸 물려받는다.
         - 아니면, 항목은 ["page"]로 설정된다.
     - `documentUrlPatterns` {{optional_inline}}
-      - : `string`의 `배열`. 메뉴 항목의 표시를 URL이 주어진 [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)과 일치하는 문서로 제한한다. 프레임에도 적용된다.
+      - : `string`의 `배열`. 메뉴 항목의 표시를 URL이 주어진 [match patterns](/ko/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)과 일치하는 문서로 제한한다. 프레임에도 적용된다.
     - `enabled` {{optional_inline}}
       - : `boolean`. 메뉴 항목이 사용 가능한지 아닌지를 지정한다. 기본값은 `true`.
     - `icons` {{optional_inline}}
@@ -60,10 +60,10 @@ browser.menus.create(
               }
         ```
 
-        > **Note:** The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
+        > **Note:** The top-level menu item uses the [icons](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
 
     - `id` {{optional_inline}}1
-      - : `string`. The unique ID to assign to this item. Is mandatory for non-persistent [background (event) pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) in Manifest V2 and in Manifest V3. Cannot be the same as another ID for this extension.
+      - : `string`. The unique ID to assign to this item. Is mandatory for non-persistent [background (event) pages](/ko/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) in Manifest V2 and in Manifest V3. Cannot be the same as another ID for this extension.
     - `onclick` {{optional_inline}}
       - : `function`. A function that will be called when the menu item is clicked. Event pages cannot use this: instead, they should register a listener for {{WebExtAPIRef('menus.onClicked')}}.
     - `parentId` {{optional_inline}}
@@ -84,7 +84,7 @@ browser.menus.create(
 
         Only the first ampersand will be used to set an access key: subsequent ampersands will not be displayed but will not set keys. So "\&A and \&B" will be shown as "A and B" and set "A" as the access key.
 
-        In some localized versions of Firefox (Japanese and Chinese), the access key is surrounded by parentheses and appended to the menu label, _unless_ the menu title itself already ends with the access key (`"toolkit(&K)"` for example). For more details, see {{bug(1647373)}}.
+        In some localized versions of Firefox (Japanese and Chinese), the access key is surrounded by parentheses and appended to the menu label, _unless_ the menu title itself already ends with the access key (`"toolkit(&K)"` for example). For more details, see [Firefox bug 1647373](https://bugzil.la/1647373).
 
     - `type` {{optional_inline}}
       - : `{{WebExtAPIRef('menus.ItemType')}}`. The type of menu item: "normal", "checkbox", "radio", "separator". Defaults to "normal".
@@ -102,7 +102,7 @@ browser.menus.create(
 
 ## 브라우저 호환성
 
-{{Compat("webextensions.api.menus.create", 10)}}
+{{Compat}}
 
 ## 예제
 

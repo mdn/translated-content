@@ -1,14 +1,8 @@
 ---
 title: <header>
 slug: Web/HTML/Element/header
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/header
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<header>` 요소**는 소개 및 탐색에 도움을 주는 콘텐츠를 나타냅니다. 제목, 로고, 검색 폼, 작성자 이름 등의 요소도 포함할 수 있습니다.
@@ -55,7 +49,7 @@ translation_of: Web/HTML/Element/header
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
       <td>
-        {{ARIARole("group")}}, {{ARIARole("presentation")}}
+        <a href='/ko/docs/Web/Accessibility/ARIA/Roles/group_role'><code>group</code></a>, <a href='/ko/docs/Web/Accessibility/ARIA/Roles/presentation_role'><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -107,4 +101,4 @@ translation_of: Web/HTML/Element/header
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.header")}}
+{{Compat}}

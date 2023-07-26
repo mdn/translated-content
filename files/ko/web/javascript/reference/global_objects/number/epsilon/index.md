@@ -1,12 +1,6 @@
 ---
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Number
-  - 속성
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
 
 {{JSRef}}

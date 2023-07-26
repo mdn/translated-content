@@ -1,12 +1,6 @@
 ---
 title: Supérieur strict (>)
 slug: Web/JavaScript/Reference/Operators/Greater_than
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.greater_than
 ---
 
 {{jsSidebar("Operators")}}

@@ -62,8 +62,6 @@ _这个接口也继承了{{domxref("UIEvent")}} 和 {{domxref("Event")}}原型�
   - : 当鼠标事件触发时，如果 <kbd>shift</kbd> 键被按下，则返回 true；
 - {{domxref("MouseEvent.which")}} {{non-standard_inline}} {{readonlyinline}}
   - : 当鼠标事件触发时，表示被按下的按钮。
-- {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{readonlyinline}}
-  - : 点击事件发生时施加在触摸屏或者平板设备的压力量。这个数值在 0.0（最小压力）和 1.0（最大压力）之间。
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{readonlyinline}}
   - : 生成事件的类型（若干 `MOZ_SOURCE_*`常量如下列出）。可通过该属性获知鼠标事件是否由真实鼠标设备触发，亦或通过触摸事件触发（这可能影响处理坐标事件时的精确程度）。
 - {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}

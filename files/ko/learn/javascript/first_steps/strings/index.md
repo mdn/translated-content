@@ -110,7 +110,7 @@ console.log(bigmouth);
 
 ## 문자열 연결하기
 
-1. 'Concatenate'는 '결합' 을 의미하는 프로프래밍 단어입니다. 자바스크립트에서 문자열을 함꼐 결합하려면 숫자를 더할 때 사용하는 것과 동일한 더하기 (+) 연산자를 사용하지만 이 상황에서는 다른 작업을 수행합니다. 콘솔에 예를 들어 보겠습니다.
+1. 'Concatenate'는 '결합' 을 의미하는 프로프래밍 단어입니다. 자바스크립트에서 문자열을 함께 결합하려면 숫자를 더할 때 사용하는 것과 동일한 더하기 (+) 연산자를 사용하지만 이 상황에서는 다른 작업을 수행합니다. 콘솔에 예를 들어 보겠습니다.
 
     ```js
     var one = 'Hello, ';
@@ -200,15 +200,3 @@ button.onclick = function() {
 여기까지 자바스크립트에서 다루는 문자열의 기본이었습니다. 다음 글에서는 자바스크립트에서 문자열에 사용할 수 있는 기본 제공 메소드를 조작하는 방법에 대해 알아보겠습니다.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
-
-## In this module
-
-- [What is JavaScript?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/ko/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/ko/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/ko/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/ko/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

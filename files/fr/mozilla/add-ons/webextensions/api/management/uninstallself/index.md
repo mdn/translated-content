@@ -1,14 +1,6 @@
 ---
 title: management.uninstallSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - UnintallSeft
-  - WebExtensions
-  - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
 ---
 
@@ -24,8 +16,8 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 
 ```js
 var uninstallingSelf = browser.management.uninstallSelf(
-  options              // object
-)
+  options, // object
+);
 ```
 
 ### Paramètres
@@ -43,9 +35,9 @@ var uninstallingSelf = browser.management.uninstallSelf(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désinstallation.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.uninstallSelf")}}
+{{Compat}}
 
 ## Exemples
 
@@ -59,7 +51,7 @@ function onCanceled(error) {
 }
 
 var uninstalling = browser.management.uninstallSelf({
-  showConfirmDialog: true
+  showConfirmDialog: true,
 });
 
 uninstalling.then(null, onCanceled);
@@ -74,7 +66,7 @@ function onCanceled(error) {
 
 var uninstalling = browser.management.uninstallSelf({
   showConfirmDialog: true,
-  dialogMessage: "Testing self-uninstall"
+  dialogMessage: "Testing self-uninstall",
 });
 
 uninstalling.then(null, onCanceled);

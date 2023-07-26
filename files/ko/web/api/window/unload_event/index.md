@@ -1,12 +1,6 @@
 ---
 title: 'Window: unload 이벤트'
 slug: Web/API/Window/unload_event
-tags:
-  - Event
-  - Reference
-  - Window
-  - 이벤트
-translation_of: Web/API/Window/unload_event
 ---
 
 {{APIRef}}

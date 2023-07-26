@@ -1,81 +1,84 @@
 ---
 title: Cache.put()
 slug: Web/API/Cache/put
+l10n:
+  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
 ---
 
 {{APIRef("Service Workers API")}}
 
-{{domxref("Cache")}} インターフェイスの **`put()`** メソッドを使用すると、キーと値のペアを現在の {{domxref("Cache")}} オブジェクトに追加できます。
+**`put()`** は {{domxref("Cache")}} インターフェイスのメソッドで、キーと値のペアを現在の {{domxref("Cache")}} オブジェクトに追加することができます。
 
-多くの場合、1 つ以上のリクエストを {{domxref("WindowOrWorkerGlobalScope.fetch","fetch()")}} して、その結果を直接キャッシュに追加したいだけです。 そのような場合、{{domxref("Cache.add","Cache.add()")}} や {{domxref("Cache.addAll","Cache.addAll()")}} を使用する方がよいでしょう。 これらは、1 つ以上のそれらの操作の一括指定関数であるためです。
+多くの場合、やりたいことは、ただ 1 つ以上のリクエストを {{domxref("fetch()")}} して、その結果を直接キャッシュに追加するだけです。そのような場合は、{{domxref("Cache.add","Cache.add()")}} や {{domxref("Cache.addAll","Cache.addAll()")}} を使用した方がよいでしょう。 これらはこうした操作を 1 つ以上行うための一括操作関数であるためです。
 
 ```js
-fetch(url).then(function(response) {
+fetch(url).then((response) => {
   if (!response.ok) {
-    throw new TypeError('Bad response status');
+    throw new TypeError("Bad response status");
   }
   return cache.put(url, response);
-})
+});
 ```
 
-> **メモ:** `put()` は、リクエストに一致する、以前にキャッシュに保存されたキーと値のペアを上書きします。
+> **メモ:** `put()` は、リクエストが以前にキャッシュに保存されたものと一致すると、キーと値のペアを上書きします。
 
-> **メモ:** {{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は、200 の範囲にない `Response.status` 値を持つレスポンスをキャッシュしませんが、{{domxref("Cache.put")}} では、リクエストとレスポンスのペアを格納できます。 その結果、{{domxref("Cache.put")}} では可能ですが、{{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は不透明なレスポンスを格納するために使用できません。
+> **メモ:** {{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は、200 台にない `Response.status` 値を持つレスポンスをキャッシュしませんが、 {{domxref("Cache.put")}} では、リクエストとレスポンスのペアを格納できます。結果的に、{{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は不透明なレスポンスを格納するために使用できませんが、 {{domxref("Cache.put")}} では可能です。
 
 ## 構文
 
-```
-cache.put(request, response).then(function() {
-  // リクエストとレスポンスのペアがキャッシュに追加されました
-});
+```js-nolint
+put(request, response)
 ```
 
-### パラメーター
+### 引数
 
-- request
+- `request`
   - : キャッシュに追加する {{domxref("Request")}} オブジェクトまたは URL。
-- response
+- `response`
   - : リクエストと合う {{domxref("Response")}}。
 
-### 戻り値
+### 返値
 
-`undefined` で解決する {{jsxref("Promise")}}。
+`undefined` で解決する {{jsxref("Promise")}} です。
 
-> **メモ:** URL スキームが `http` または `https` でない場合、Promise は `TypeError` で拒否します。
+### 例外
+
+- {{jsxref("TypeError")}}
+  - : URL スキームが `http` または `https` のどちらでもない場合に返されます。
 
 ## 例
 
-この例は、MDN の [sw-test の例](https://github.com/mdn/sw-test/)からのものです（[sw-test をライブで](https://mdn.github.io/sw-test/)見る）。 ここでは、{{domxref("FetchEvent")}} が発生するのを待ちます。 次のようなカスタムレスポンスを作成します。
+この例は、MDN の [simple-service-worker の例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)からのものです（[simple-service-worker をライブで](https://bncb2v.csb.app/)見る）。 ここでは、{{domxref("FetchEvent")}} が発生するのを待ちます。 次のようなカスタムレスポンスを作成します。
 
 1. {{domxref("CacheStorage.match","CacheStorage.match()")}} を使用して、リクエストの一致が {{domxref("CacheStorage")}} にあるかどうかを確認します。 もしそうなら、それを提供します。
-2. そうでない場合は、`open()` を使用して `v1` キャッシュを開き、{{domxref("Cache.put","Cache.put()")}} を使用してデフォルトのネットワークリクエストをキャッシュに入れ、 `return response.clone()` を使用してデフォルトのネットワークリクエストのクローンを返します。 `put()` がレスポンスのボディを消費するため、クローンが必要です。
-3. これが失敗した場合（ネットワークがダウンしているなど）、フォールバックレスポンスを返します。
+2. そうでない場合は、`v1` キャッシュを `open()` で開き、{{domxref("Cache.put","Cache.put()")}} を使用して既定のネットワークリクエストをキャッシュに入れ、 `return response.clone()` を使用して既定のネットワークリクエストのクローンを返します。 `put()` がレスポンスの本体を消費するため、クローンが必要です。
+3. これが失敗した場合（ネットワークがダウンしているなど）、代替レスポンスを返します。
 
 ```js
-var response;
-var cachedResponse = caches.match(event.request).catch(function() {
-  return fetch(event.request);
-}).then(function(r) {
-  response = r;
-  caches.open('v1').then(function(cache) {
-    cache.put(event.request, response);
-  });
-  return response.clone();
-}).catch(function() {
-  return caches.match('/sw-test/gallery/myLittleVader.jpg');
-});
+let response;
+const cachedResponse = caches
+  .match(event.request)
+  .catch(() => fetch(event.request))
+  .then((r) => {
+    response = r;
+    caches.open("v1").then((cache) => {
+      cache.put(event.request, response);
+    });
+    return response.clone();
+  })
+  .catch(() => caches.match("/gallery/myLittleVader.jpg"));
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Cache.put")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Service worker の使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("WorkerGlobalScope.caches")}}
+- {{domxref("caches")}}

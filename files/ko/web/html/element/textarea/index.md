@@ -1,13 +1,6 @@
 ---
 title: <textarea>
 slug: Web/HTML/Element/textarea
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Web
-translation_of: Web/HTML/Element/textarea
 ---
 
 {{HTMLSidebar}}
@@ -123,7 +116,7 @@ _Textarea_ 는 래스터 이미지 처럼 고유한 넓이를 가지고 있습�
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.textarea")}}
+{{Compat}}
 
 ## 같이 보기
 

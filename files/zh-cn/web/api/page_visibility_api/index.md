@@ -28,7 +28,7 @@ slug: Web/API/Page_Visibility_API
 
 ### 制定有助于后台页面性能的策略
 
-在页面可见性 API 之外，用户代理会采取许多策略来减轻背景或隐藏选项卡对性能的影响。这些可能包括：
+在页面可见性 API 之外，用户代理会采取许多策略来减轻后台或隐藏选项卡对性能的影响。这些可能包括：
 
 - 大多数浏览器不会调用被隐藏的标签页或{{ HTMLElement("iframe") }}框架当中{{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}定义的回调函数，这会提升性能并且延长电池的使用寿命。
 - 在后台标签页或不活跃的标签页中 {{domxref("setTimeout()")}} 等定时器会受到一定的限制以提升性能。参见[实际延时比设定值更久的原因](/zh-CN/docs/Web/API/setTimeout#实际延时比设定值更久的原因：最小延迟时间)。
@@ -109,7 +109,7 @@ if (typeof document.addEventListener === "undefined" || typeof document[hidden] 
 
     - `visible` : 页面内容至少是部分可见。在实际中，这意味着页面是非最小化窗口的前景选项卡。
     - `hidden` : 页面内容对用户不可见。在实际中，这意味着文档可以是一个后台标签，或是最小化窗口的一部分，或是在操作系统锁屏激活的状态下。
-    - `prerender` : 页面内容正在被预渲染且对用户是不可见的 (被 document.hidden 当做隐藏). 文档可能初始状态为 prerender，但绝不会从其它值转为该值。
+    - `prerender` : 页面内容正在被预渲染且对用户是不可见的 (被 document.hidden 当做隐藏). 文档可能初始状态为 prerender，但绝不会从其他值转为该值。
     - 注释：有的浏览器不支持此功能`unloaded` : 页面正在从内存中卸载。
     - 注释：有的浏览器不支持此功能
 

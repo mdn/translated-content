@@ -1,16 +1,7 @@
 ---
 title: BigInt.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
-tags:
-  - BigInt
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
-original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/toLocaleString
 ---
 
 {{JSRef}}
@@ -109,13 +100,11 @@ Lorsqu'on souhaite mettre en forme une grande quantité de nombres, mieux vaudra
 
 ## Spécifications
 
-| Spécification                                                            | État                     |
-| ------------------------------------------------------------------------ | ------------------------ |
-| [`BigInt`](https://tc39.es/ecma402/#sup-bigint.prototype.tolocalestring) | Proposition de niveau 3. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.BigInt.toLocaleString")}}
+{{Compat}}
 
 ## Voir aussi
 

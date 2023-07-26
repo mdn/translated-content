@@ -1,15 +1,6 @@
 ---
 title: tabs.captureTab()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureTab
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - captureTab
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/captureTab
 ---
 
@@ -23,9 +14,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var capturing = browser.tabs.captureTab(
-  tabId,               // optional integer
-  options              // optional extensionTypes.ImageDetails
-)
+  tabId, // optional integer
+  options, // optional extensionTypes.ImageDetails
+);
 ```
 
 ### Paramètres
@@ -52,7 +43,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-browser.browserAction.onClicked.addListener(function() {
+browser.browserAction.onClicked.addListener(function () {
   var capturing = browser.tabs.captureTab();
   capturing.then(onCaptured, onError);
 });
@@ -60,9 +51,9 @@ browser.browserAction.onClicked.addListener(function() {
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.captureTab")}}
+{{Compat}}
 
 > **Note :**
 >

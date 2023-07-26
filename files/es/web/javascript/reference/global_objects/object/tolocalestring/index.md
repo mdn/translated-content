@@ -89,7 +89,7 @@ let numeroFrances = unNumero.toLocaleString('fr');
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.toLocaleString")}}
+{{Compat}}
 
 ## Ver también
 

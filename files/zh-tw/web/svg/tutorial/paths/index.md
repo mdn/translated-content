@@ -1,8 +1,9 @@
 ---
 title: 路徑
 slug: Web/SVG/Tutorial/Paths
-original_slug: Web/SVG/Tutorial/路径
 ---
+
+{{SVGRef}}
 
 {{ PreviousNext("Web/SVG/Tutorial/Basic_Shapes", "Web/SVG/Tutorial/Fills_and_Strokes") }}
 
@@ -34,7 +35,7 @@ m dx dy
 
 In the following example we only have a point at (10,10). Note, though, that it wouldn't show up if you were just drawing the path normally. For example:
 
-![](/@api/deki/files/45/=Blank_Path_Area.png)
+![](blank_path_area.png)
 
 ```xml
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +63,7 @@ V y (or v dy)
 
 An easy place to start is by drawing a shape. We will start with a rectangle (the same type that could be more easily made with a `<rect>` element). It's composed of horizontal and vertical lines only:
 
-![](/@api/deki/files/292/=Path_Line_Commands.png)
+![](path_line_commands.png)
 
 ```xml
 <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
@@ -218,16 +219,33 @@ For the unrotated ellipse in the image above, there are only two different arcs 
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">
-  <path d="M10 315
+  <path
+    d="M10 315
             L 110 215
             A 36 60 0 0 1 150.71 170.29
             L 172.55 152.45
             A 30 50 -45 0 1 215.1 109.9
-            L 315 10" stroke="black" fill="green" stroke-width="2" fill-opacity="0.5"/>
-  <circle cx="150.71" cy="170.29" r="2" fill="red"/>
-  <circle cx="110" cy="215" r="2" fill="red"/>
-  <ellipse cx="144.931" cy="229.512" rx="36" ry="60" fill="transparent" stroke="blue"/>
-  <ellipse cx="115.779" cy="155.778" rx="36" ry="60" fill="transparent" stroke="blue"/>
+            L 315 10"
+    stroke="black"
+    fill="green"
+    stroke-width="2"
+    fill-opacity="0.5" />
+  <circle cx="150.71" cy="170.29" r="2" fill="red" />
+  <circle cx="110" cy="215" r="2" fill="red" />
+  <ellipse
+    cx="144.931"
+    cy="229.512"
+    rx="36"
+    ry="60"
+    fill="transparent"
+    stroke="blue" />
+  <ellipse
+    cx="115.779"
+    cy="155.778"
+    rx="36"
+    ry="60"
+    fill="transparent"
+    stroke="blue" />
 </svg>
 ```
 
@@ -237,7 +255,7 @@ If the start->end points are farther than the ellipse's x and y radius can reach
 
 The four different paths mentioned above are determined by the next two argument flags. As mentioned earlier, there are still two possible ellipses for the path to travel around and two different possible paths on both ellipses, giving four possible paths. The first argument is the large-arc-flag. It simply determines if the arc should be greater than or less than 180 degrees; in the end, this flag determines which direction the arc will travel around a given circle. The second argument is the sweep-flag. It determines if the arc should begin moving at positive angles or negative ones, which essentially picks which of the two circles you will travel around. The example below shows all four possible combinations, along with the two circles for each case.
 
-![](/@api/deki/files/345/=SVGArcs_Flags.png)
+![](svgarcs_flags.png)
 
 ```xml
 <svg width="325" height="325" xmlns="http://www.w3.org/2000/svg">

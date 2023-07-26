@@ -28,7 +28,7 @@ O arco tagente do coegiente dos parâmetros
 
 O `Math.atan2()` método retorna um valor numérico entre -π e π representando o ângulo teta entre (x, y). Assim indo no sentido anti-horario ao ângulo, medido em radianos, entre o eixo X positivo, e o ponto`(x, y)`.Nota os argumentos para essa função: primeiro o eixo Y(ordenadas) e o eixo X(absissas) como segundo parâmetro.
 
-![A simple diagram showing the angle returned by atan2(y, x)](https://mdn.mozillademos.org/files/11557/atan2.png)
+![A simple diagram showing the angle returned by atan2(y, x)](atan2.png)
 
 `Math.atan2()os argumentos são passados separados x e y enquanto no Math.atan() é passado a razão entre esses argumentos.`
 

@@ -22,7 +22,7 @@ slug: Web/CSS/@document
 - `url()`，匹配整个 URL。
 - `url-prefix()`，匹配文档的 URL 是否以参数指定的值开头。
 - `domain()`，匹配文档的域名是否为参数中指定的域名或者为它的子域名。
-- `regexp()`，匹配文档的 URL 是否和参数中指定的[正则表达式](/zh-CN/JavaScript/Guide/Regular_Expressions)匹配。该表达式必须匹配整个 URL。
+- `regexp()`，匹配文档的 URL 是否和参数中指定的[正则表达式](/zh-CN/JavaScript/Guide/Regular_expressions)匹配。该表达式必须匹配整个 URL。
 
 提供给 `url()`、`url-prefix()`，和 `domain()` 函数的参数可以不使用引号括起来。但提供给 `regexp()` 函数的参数必须用引号括起来。
 

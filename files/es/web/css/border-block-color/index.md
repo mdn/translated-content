@@ -9,7 +9,7 @@ La propiedad de [CSS](/es/docs/Web/CSS) **`border-block-color`** define el color
 
 ```css
 border-block-color: yellow;
-border-block-color: #F5F6F7;
+border-block-color: #f5f6f7;
 ```
 
 El color de borde en la otra dimensión puede ser establecida con {{cssxref("border-inline-color")}} que establece {{cssxref("border-inline-start-color")}}, y {{cssxref("border-inline-end-color")}}.
@@ -59,9 +59,9 @@ div {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.border-block-color")}}
+{{Compat}}
 
 ## Mira también
 

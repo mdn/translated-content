@@ -94,7 +94,7 @@ button.onclick = function() {
 
 在下面在线运行实例，设置不同的偏移值去观察它怎么去影响选中内容的。
 
-{{ EmbedLiveSample('Examples', '100%', 370) }}
+{{ EmbedLiveSample('示例', '100%', 370) }}
 
 > **备注：** 实例在这里 [example on GitHub](https://github.com/chrisdavidmills/selection-api-examples/blob/master/setBaseAndExtent.html) ([see it live also](https://chrisdavidmills.github.io/selection-api-examples/setBaseAndExtent.html).)
 

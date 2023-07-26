@@ -1,15 +1,6 @@
 ---
 title: AudioWorkletNode
 slug: Web/API/AudioWorkletNode
-tags:
-  - API
-  - Audio
-  - AudioWorkletNode
-  - Experimental
-  - Interface
-  - Reference
-  - Web Audio API
-browser-compat: api.AudioWorkletNode
 ---
 {{APIRef("Web Audio API")}}
 

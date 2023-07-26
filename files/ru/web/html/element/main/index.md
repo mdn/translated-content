@@ -17,14 +17,14 @@ translation_of: Web/HTML/Element/main
 
 {{EmbedInteractiveExample("pages/tabbed/main.html","tabbed-shorter")}}
 
-Документ не должен иметь более одного элемента `<main>` у которого не указан атрибут {{htmlattrxref("hidden")}}.
+Документ не должен иметь более одного элемента `<main>` у которого не указан атрибут [`hidden`](/ru/docs/Web/HTML/Global_attributes#hidden).
 
 | [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [явный контент](/ru/docs/Web/Guide/HTML/Content_categories#Явный_контент).                                                                                                                                                |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Разрешённое содержимое                                           | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток).                                                                                                                                                                                                                           |
-| Пропуск тега                                                     | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                                                                                                                                                                |
-| Разрешённые родительские элементы                                | Те, в которых разрешается [контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) в качестве содержимого, но только если это [иерархически корректный `main` элемент](https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element). |
-| Разрешённые ARIA роли                                            | Роль `main` применяется к `<main>` по умолчанию, и роль [`presentation`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role) также разрешена.                                                                                                                              |
+| Допустимое содержимое                                            | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток).                                                                                                                                                                                                                           |
+| Пропуск тегов                                                    | Ни одного; Оба тега, открывающий и закрывающий, являются обязательными.                                                                                                                                                                                                                                |
+| Допустимые родители                                              | Те, в которых разрешается [контент основного потока](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток) в качестве содержимого, но только если это [иерархически корректный `main` элемент](https://html.spec.whatwg.org/multipage/grouping-content.html#hierarchically-correct-main-element). |
+| Допустимые ARIA-роли                                             | Роль `main` применяется к `<main>` по умолчанию, и роль [`presentation`](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role) также разрешена.                                                                                                                              |
 | DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                   |
 
 ## Атрибуты
@@ -78,7 +78,7 @@ translation_of: Web/HTML/Element/main
 
 Пропуск навигации, также известный как "skipnav", это техника которая позволяет пользователю вспомогательных технологий совершать быстрый обход больших разделов повторяющегося контента (главная навигация, информационные баннеры и т.д.). Это позволяет пользователю получить доступ к основному контенту страницы быстрее.
 
-Добавление атрибута {{htmlattrxref("id")}} в элемент `<main>` позволяет ему становится целью для ссылки пропуска навигации.
+Добавление атрибута [`id`](/ru/docs/Web/HTML/Global_attributes#id) в элемент `<main>` позволяет ему становится целью для ссылки пропуска навигации.
 
 ```html
 <body>

@@ -2,7 +2,6 @@
 title: Cours normal
 slug: Learn/CSS/CSS_layout/Normal_Flow
 translation_of: Learn/CSS/CSS_layout/Normal_Flow
-original_slug: Apprendre/CSS/CSS_layout/Normal_Flow
 ---
 
 {{LearnSidebar}}
@@ -17,7 +16,7 @@ Cet article décrit le déroulement normal, c'est-à-dire la façon dont les él
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les fondamentaux du HTML (étudiez
-        <a href="/fr/Apprendre/HTML/Introduction_%C3%A0_HTML"
+        <a href="/fr/Apprendre/HTML/Introduction_à_HTML"
           >Introduction au HTML</a
         >) et avoir une idée de la manière dont les CSS fonctionnent (étudiez
         <a href="/fr/Apprendre/CSS/Introduction_à_CSS">Introduction aux CSS</a
@@ -57,28 +56,32 @@ Voici un exemple simple expliquant cela :
 ```html
 <h2>Cours d'un document de base</h2>
 
-<p>Je suis un élément de niveau bloc de base.
- Mes éléments de niveau bloc adjacents sont sur de
- nouvelles lignes en dessous de moi.</p>
+<p>
+  Je suis un élément de niveau bloc de base. Mes éléments de niveau bloc
+  adjacents sont sur de nouvelles lignes en dessous de moi.
+</p>
 
-<p>Par défaut, nous occupons 100% de la largeur
- de notre élément parent et nous sommes aussi hauts
- que notre contenu enfant. Nos largeur et hauteur totales
- sont égales à la largeur/hauteur de notre
- contenu + remplissage + encadrement.</p>
+<p>
+  Par défaut, nous occupons 100% de la largeur de notre élément parent et nous
+  sommes aussi hauts que notre contenu enfant. Nos largeur et hauteur totales
+  sont égales à la largeur/hauteur de notre contenu + remplissage + encadrement.
+</p>
 
-<p>Nous sommes séparés de nos marges.
- Comme il y a fusion des marges, nous sommes séparés
- par la largeur de l'une de nos marges et non les deux.</p>
+<p>
+  Nous sommes séparés de nos marges. Comme il y a fusion des marges, nous sommes
+  séparés par la largeur de l'une de nos marges et non les deux.
+</p>
 
-<p>Des éléments inline <span>comme celui-ci</span> ou
- <span>celui‑là</span> sont placés sur la même ligne et
- les nœuds de texte adjacents, s'il y a de la place sur
- la même ligne. Les débordements des éléments inline
- <span>sont placés sur une nouvelle ligne si possible
- (comme celle‑ci contenant du texte)</span>, sinon ils
- sont placés sur une nouvelle ligne, comme cette image&nbsp;:
- <img src="long.jpg"></p>
+<p>
+  Des éléments inline <span>comme celui-ci</span> ou <span>celui‑là</span> sont
+  placés sur la même ligne et les nœuds de texte adjacents, s'il y a de la place
+  sur la même ligne. Les débordements des éléments inline
+  <span
+    >sont placés sur une nouvelle ligne si possible (comme celle‑ci contenant du
+    texte)</span
+  >, sinon ils sont placés sur une nouvelle ligne, comme cette image&nbsp;:
+  <img src="long.jpg" />
+</p>
 ```
 
 ```css
@@ -88,8 +91,8 @@ body {
 }
 
 p {
-  background: rgba(255,84,104,.3);
-  border: 2px solid rgb(255,84,104);
+  background: rgba(255, 84, 104, 0.3);
+  border: 2px solid rgb(255, 84, 104);
   padding: 10px;
   margin: 10px;
 }
@@ -107,16 +110,3 @@ span {
 Maintenant que vous avez vu ce qu'est le cours normal de la mise en page et la façon dont le navigateur présente les choses par défaut, passons à la page suivante pour comprendre comment modifier cet affichage par défaut pour créer une mise en page conforme à votre design.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
-
-## Dans ce module
-
-- [Introduction to CSS layout](/fr/docs/Learn/CSS/CSS_layout/Introduction)
-- [Normal Flow](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
-- [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grid](/fr/docs/Learn/CSS/CSS_layout/Grids)
-- [Floats](/fr/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/fr/docs/Learn/CSS/CSS_layout/Positioning)
-- [Multiple-column Layout](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [Legacy Layout Methods](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)
-- [Supporting older browsers](/fr/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [Fundamental Layout Comprehension Assessment](/fr/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

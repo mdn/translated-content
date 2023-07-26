@@ -1,12 +1,6 @@
 ---
 title: unset
 slug: Web/CSS/unset
-tags:
-  - CSS
-  - CSS Cascade
-  - Layout
-  - Reference
-translation_of: Web/CSS/unset
 ---
 
 {{CSSRef}}

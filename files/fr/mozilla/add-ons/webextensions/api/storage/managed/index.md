@@ -1,16 +1,6 @@
 ---
 title: storage.managed
 slug: Mozilla/Add-ons/WebExtensions/API/storage/managed
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - Storage
-  - WebExtensions
-  - managed
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/managed
 ---
 
@@ -33,8 +23,7 @@ Voici un exemple de manifest :
   "name": "favourite-color-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
-  "data":
-  {
+  "data": {
     "color": "management thinks it should be blue!"
   }
 }
@@ -43,7 +32,7 @@ Voici un exemple de manifest :
 Compte tenu de ce manifeste, l'extension "favourite-color-examples\@mozilla.org" pourrait accéder aux données en utilisant un code comme celui-ci :
 
 ```js
-var storageItem = browser.storage.managed.get('color');
+var storageItem = browser.storage.managed.get("color");
 storageItem.then((res) => {
   console.log(`Managed colur is: ${res.color}`);
 });
@@ -99,9 +88,9 @@ Le fichier json ressemblerait à ceci :
 
 Pour plus d'informations, voir l'article de Chrome pour les zones de stockage [Manifeste pour les zones de stockage](https://developer.chrome.com/extensions/manifest/storage).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.storage.managed")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

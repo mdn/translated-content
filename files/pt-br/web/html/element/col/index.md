@@ -5,7 +5,7 @@ slug: Web/HTML/Element/col
 
 {{HTMLSidebar}}
 
-O elemento **HTML `<col>` **define uma tabela contendo colunas e sendo utilizada para definições semanticas em todas as colunas comuns. É normalmente encontrada dentro do elemento("colgroup")}} .Este elemento permite a estilização de colunas utilizando-se do CSS, porém apenas um numero pequeno de atributos que terão efeito dentro das colunas ([veja as especificações do CSS 2.1](https://www.w3.org/TR/CSS21/tables.html#columns) a partir dessa lista).
+O elemento **HTML `<col>`** define uma tabela contendo colunas e sendo utilizada para definições semanticas em todas as colunas comuns. É normalmente encontrada dentro do elemento("colgroup")}} .Este elemento permite a estilização de colunas utilizando-se do CSS, porém apenas um numero pequeno de atributos que terão efeito dentro das colunas ([veja as especificações do CSS 2.1](https://www.w3.org/TR/CSS21/tables.html#columns) a partir dessa lista).
 
 <table class="properties">
   <tbody>
@@ -32,7 +32,7 @@ O elemento **HTML `<col>` **define uma tabela contendo colunas e sendo utilizada
         {{HTMLElement("colgroup")}} only, though it can be implicitly
         defined as its start tag is not mandatory. The
         {{HTMLElement("colgroup")}} must not have a
-        {{htmlattrxref("span", "colgroup")}} attribute.
+        <a href="/pt-BR/docs/Web/HTML/Element/colgroup#span"><code>span</code></a> attribute.
       </td>
     </tr>
     <tr>
@@ -50,7 +50,7 @@ O elemento **HTML `<col>` **define uma tabela contendo colunas e sendo utilizada
 
 This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("align")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("align")}} {{Deprecated_inline}}
 
   - : This enumerated attribute specifies how horizontal alignment of each column cell content will be handled. Possible values are:
 
@@ -58,17 +58,17 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
     - `center`, centering the content in the cell
     - `right`, aligning the content to the right of the cell
     - `justify`, inserting spaces into the textual content so that the content is justified in the cell
-    - `char`, aligning the textual content on a special character with a minimal offset, defined by the {{htmlattrxref("char", "col")}} and {{htmlattrxref("charoff", "col")}} attributes {{unimplemented_inline(2212)}}.
+    - `char`, aligning the textual content on a special character with a minimal offset, defined by the [`char`](/pt-BR/docs/Web/HTML/Element/col#char) and [`charoff`](/pt-BR/docs/Web/HTML/Element/col#charoff) attributes {{unimplemented_inline(2212)}}.
 
-    If this attribute is not set, its value is inherited from the {{htmlattrxref("align", "colgroup")}} of the {{HTMLElement("colgroup")}} element this `<col>` element belongs too. If there are none, the `left` value is assumed.
+    If this attribute is not set, its value is inherited from the [`align`](/pt-BR/docs/Web/HTML/Element/colgroup#align) of the {{HTMLElement("colgroup")}} element this `<col>` element belongs too. If there are none, the `left` value is assumed.
 
     > **Note:**Do not use this attribute as it is obsolete (not supported) in the latest standard.- To achieve the same effect as the `left`, `center`, `right` or `justify` values:
     >
     > - Do not try to set the {{cssxref("text-align")}} property on a selector giving a {{HTMLElement("col")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("col")}} element, they won't inherit it.
-    > - If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and `b`to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
-    > - If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+    > - If the table doesn't use a [`colspan`](/pt-BR/docs/Web/HTML/Element/td#colspan) attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and `b`to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
+    > - If the table does use a [`colspan`](/pt-BR/docs/Web/HTML/Element/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
     >
-    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the {{htmlattrxref("char", "col")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the [`char`](/pt-BR/docs/Web/HTML/Element/col#char) as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
 
@@ -86,13 +86,13 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 
     > **Note:** **Usage note:** Do not use this attribute, as it is non-standard and only implemented in some versions of Microsoft Internet Explorer: the {{HTMLElement("col")}} element should be styled using [CSS](/pt-BR/docs/CSS). To give a similar effect to the **bgcolor** attribute, use the [CSS](/pt-BR/docs/CSS) property {{cssxref("background-color")}}, on the relevant {{HTMLElement("td")}} elements.
 
-- {{htmlattrdef("char")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("char")}} {{Deprecated_inline}}
 
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "col")}} is not set to `char`, this attribute is ignored.
+  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If [`align`](/pt-BR/docs/Web/HTML/Element/col#align) is not set to `char`, this attribute is ignored.
 
-    > **Note:**Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "col")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "col")}} attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+    > **Note:**Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the [`char`](/pt-BR/docs/Web/HTML/Element/col#char), in CSS3, you can use the character set using the [`char`](/pt-BR/docs/Web/HTML/Element/col#char) attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
 
-- {{htmlattrdef("charoff")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("charoff")}} {{Deprecated_inline}}
 
   - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
 
@@ -101,7 +101,7 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 - {{htmlattrdef("span")}}
   - : This attribute contains a positive integer indicating the number of consecutive columns the `<col>` element spans. If not present, its default value is `1`.
 
-- {{htmlattrdef("valign")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
+- {{htmlattrdef("valign")}} {{Deprecated_inline}}
 
   - : This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
 
@@ -112,10 +112,10 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 
     > **Note:**Do not use this attribute as it is obsolete (and not supported) in the latest standard:- Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a {{HTMLElement("col")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("col")}} element, they won't inherit it.
     >
-    > - If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the {{cssxref("vertical-align")}} property can be used.
-    > - If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+    > - If the table doesn't use a [`colspan`](/pt-BR/docs/Web/HTML/Element/td#colspan) attribute, use the `td:nth-child(an+b)` CSS selector where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the {{cssxref("vertical-align")}} property can be used.
+    > - If the table does use a [`colspan`](/pt-BR/docs/Web/HTML/Element/td#colspan) attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
-- {{htmlattrdef("width")}} {{obsolete_inline("html5")}}
+- {{htmlattrdef("width")}}
   - : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `0.5*` also can be used.
 
 ## Exemplo

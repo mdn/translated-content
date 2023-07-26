@@ -1,14 +1,7 @@
 ---
 title: Function.displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
-tags:
-  - Function
-  - JavaScript
-  - Non-standard
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/displayName
-original_slug: Web/JavaScript/Reference/Objets_globaux/Function/displayName
 ---
 
 {{JSRef}} {{Non-standard_header}}
@@ -82,4 +75,4 @@ N'appartient à aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.displayName")}}
+{{Compat}}

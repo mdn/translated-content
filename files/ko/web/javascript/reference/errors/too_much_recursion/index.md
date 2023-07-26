@@ -1,7 +1,6 @@
 ---
 title: 'InternalError: too much recursion'
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
-translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
 ---
 
 {{jsSidebar("Errors")}}
@@ -14,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
 
 ## 에러 형식
 
-[`InternalError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError).
+[`InternalError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/InternalError).
 
 ## 무엇이 잘못되었을까?
 
@@ -51,4 +50,4 @@ loop(0);
 ## 참조
 
 - {{Glossary("Recursion")}}
-- [Recursive functions](/en-US/docs/Web/JavaScript/Guide/Functions#Recursion)
+- [Recursive functions](/ko/docs/Web/JavaScript/Guide/Functions#Recursion)

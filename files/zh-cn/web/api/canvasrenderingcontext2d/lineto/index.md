@@ -22,7 +22,7 @@ void ctx.lineTo(x, y);
 
 ## 示例
 
-### 使用 `lineTo` 方法
+### 画一条直线
 
 这是一段使用 `lineTo` 方法的简单的代码片段。使用 {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 绘制路径的起始点，使用 {{domxref("CanvasRenderingContext.moveTo", "moveTo()")}}移动画笔，使用 {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} 方法真正地画线。
 
@@ -34,60 +34,23 @@ void ctx.lineTo(x, y);
 
 #### JavaScript
 
+线从 (30, 50) 处开始，并在 (150, 100) 处结束。
+
 ```js
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.beginPath();
-ctx.moveTo(0,0);
-ctx.lineTo(100, 100);
-ctx.stroke();
+ctx.beginPath(); // Start a new path
+ctx.moveTo(30, 50); // Move the pen to (30, 50)
+ctx.lineTo(150, 100); // Draw a line to (150, 100)
+ctx.stroke(); // Render the path
 ```
 
-修改下面的代码并在线查看 canvas 的变化：
+#### 结果
 
-```html hidden
-<canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-<div class="playable-buttons">
-  <input id="edit" type="button" value="Edit" />
-  <input id="reset" type="button" value="Reset" />
-</div>
-<textarea id="code" class="playable-code">
-ctx.beginPath();
-ctx.moveTo(0,0);
-ctx.lineTo(100, 100);
-ctx.stroke();</textarea>
-```
+{{ EmbedLiveSample('画一条直线', 700, 180) }}
 
-```js hidden
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var edit = document.getElementById("edit");
-var code = textarea.value;
-
-function drawCanvas() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function() {
-  textarea.value = code;
-  drawCanvas();
-});
-
-edit.addEventListener("click", function() {
-  textarea.focus();
-})
-
-textarea.addEventListener("input", drawCanvas);
-window.addEventListener("load", drawCanvas);
-```
-
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
-
-## 规范描述
+## 规范
 
 {{Specifications}}
 

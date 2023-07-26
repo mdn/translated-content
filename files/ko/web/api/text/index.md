@@ -1,12 +1,6 @@
 ---
 title: Text
 slug: Web/API/Text
-tags:
-  - API
-  - DOM
-  - Interface
-  - Reference
-translation_of: Web/API/Text
 ---
 
 {{ApiRef("DOM")}}

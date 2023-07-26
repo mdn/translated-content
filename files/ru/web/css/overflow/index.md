@@ -40,7 +40,7 @@ overflow: inherit
 
 #### Расширения Mozilla
 
-- `-moz-scrollbars-none` {{ obsolete_inline() }}
+- `-moz-scrollbars-none`
   - : Используйте `overflow:hidden`.
 - `-moz-scrollbars-horizontal` {{ Deprecated_inline() }}
   - : Использование {{ Cssxref("overflow-x") }} и {{ Cssxref("overflow-y") }} предпочтительнее.

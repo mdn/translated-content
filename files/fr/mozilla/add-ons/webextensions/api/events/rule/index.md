@@ -1,16 +1,6 @@
 ---
 title: events.Rule
 slug: Mozilla/Add-ons/WebExtensions/API/events/Rule
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Rule
-  - Type
-  - WebExtensions
-  - events
 translation_of: Mozilla/Add-ons/WebExtensions/API/events/Rule
 ---
 
@@ -33,9 +23,9 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `priority`{{optional_inline}}
   - : `integer`. Priorité optionnelle de cette règle. Par défaut à 100.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.events.Rule")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

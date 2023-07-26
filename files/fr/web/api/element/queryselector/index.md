@@ -35,7 +35,9 @@ Si aucune correspondance n'est trouvée, la valeur retournée est `null`.
 Dans ce premier exemple, est retourné le premier élément [`<style>`](/fr/docs/Web/HTML/Element/style) dans le corps du document HTML qui, soit n'a pas de type, soit a le type `text/css`:
 
 ```js
-var el = document.body.querySelector("style[type='text/css'], style:not([type])");
+var el = document.body.querySelector(
+  "style[type='text/css'], style:not([type])",
+);
 ```
 
 ### La hiérarchie entière compte
@@ -63,7 +65,8 @@ Cet exemple montre que la hiérarchie du document entier est prise en compte lor
 
 ```js
 var baseElement = document.querySelector("p");
-document.getElementById("output").innerHTML = (baseElement.querySelector("div span").innerHTML);
+document.getElementById("output").innerHTML =
+  baseElement.querySelector("div span").innerHTML;
 ```
 
 #### Résultat

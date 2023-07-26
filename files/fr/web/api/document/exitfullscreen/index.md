@@ -1,12 +1,6 @@
 ---
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
-tags:
-  - API
-  - Affichage
-  - DOM
-  - Méthodes
-  - Plein écran
 translation_of: Web/API/Document/exitFullscreen
 ---
 
@@ -28,9 +22,9 @@ document.exitFullscreen();
 // Click bascule en mode plein écran
 document.onclick = function (event) {
   if (document.fullscreenElement) {
-    document.exitFullscreen()
+    document.exitFullscreen();
   } else {
-    document.documentElement.requestFullscreen()
+    document.documentElement.requestFullscreen();
   }
 };
 ```
@@ -51,4 +45,4 @@ document.onclick = function (event) {
 - {{ domxref("Document.fullscreen") }}
 - {{ domxref("Document.fullscreenElement") }}
 - {{ cssxref(":fullscreen") }}
-- {{ HTMLAttrXRef("allowfullscreen", "iframe") }}
+- [`allowfullscreen`](/fr/docs/HTML/Element/iframe#allowfullscreen)

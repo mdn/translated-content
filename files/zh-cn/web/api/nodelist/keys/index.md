@@ -45,7 +45,7 @@ for(var key of list.keys()) {
 2
 ```
 
-## 浏览器兼容
+## 浏览器兼容性
 
 {{Compat}}
 

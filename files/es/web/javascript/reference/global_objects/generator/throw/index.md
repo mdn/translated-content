@@ -59,9 +59,9 @@ g.throw(new Error('Something went wrong'));
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Generator.throw")}}
+{{Compat}}
 
 ## See also
 

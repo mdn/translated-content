@@ -1,7 +1,6 @@
 ---
 title: "<menu> : l'élément de menu"
 slug: Web/HTML/Element/menu
-browser-compat: html.elements.menu
 translation_of: Web/HTML/Element/menu
 ---
 
@@ -36,7 +35,7 @@ Dans cet exemple, on utilise un élément `<menu>` afin de créer une barre d'ou
   <li><button onclick="paste()">Coller</button></li>
 </menu>
 ```
-  
+
 On notera que, sur le plan fonctionnel, cela est équivalent à&nbsp;:
 
 ```html

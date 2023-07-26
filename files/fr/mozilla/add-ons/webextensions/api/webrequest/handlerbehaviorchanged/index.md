@@ -1,16 +1,6 @@
 ---
 title: webRequest.handlerBehaviorChanged()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - handlerBehaviorChanged
-  - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
 ---
 
@@ -36,7 +26,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-var flushingCache = browser.webRequest.handlerBehaviorChanged()
+var flushingCache = browser.webRequest.handlerBehaviorChanged();
 ```
 
 ### Paramètres
@@ -47,9 +37,9 @@ None.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments, lorsque l'opération sera terminée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webRequest.handlerBehaviorChanged")}}
+{{Compat}}
 
 ## Exemples
 

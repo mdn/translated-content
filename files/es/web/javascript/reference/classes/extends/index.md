@@ -1,7 +1,6 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-translation_of: Web/JavaScript/Reference/Classes/extends
 original_slug: Web/JavaScript/Referencia/Classes/extends
 ---
 
@@ -82,9 +81,9 @@ Object.getPrototypeOf(nullExtends.prototype) // null
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.classes.extends")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,16 +1,6 @@
 ---
 title: webNavigation.onDOMContentLoaded
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onDOMContentLoaded
-  - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
 ---
 
@@ -22,11 +12,11 @@ Lancé lorsque l'événement [DOMContentLoaded](/fr/docs/Web/Events/DOMContentLo
 
 ```js
 browser.webNavigation.onDOMContentLoaded.addListener(
-  listener,                   // function
-  filter                      // optional object
-)
-browser.webNavigation.onDOMContentLoaded.removeListener(listener)
-browser.webNavigation.onDOMContentLoaded.hasListener(listener)
+  listener, // function
+  filter, // optional object
+);
+browser.webNavigation.onDOMContentLoaded.removeListener(listener);
+browser.webNavigation.onDOMContentLoaded.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -67,9 +57,9 @@ Les événements ont trois fonctions :
 - `timeStamp`
   - : `number`. L'heure à laquelle `DOMContentLoaded` a été déclenchée, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.webNavigation.onDOMContentLoaded")}}
+{{Compat}}
 
 ## Exemples
 
@@ -77,18 +67,17 @@ Logs les URL cibles pour `onDOMContentLoaded`,si le nom d'hôte de l'URL cible c
 
 ```js
 var filter = {
-  url:
-  [
-    {hostContains: "example.com"},
-    {hostPrefix: "developer"}
-  ]
-}
+  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+};
 
 function logOnDOMContentLoaded(details) {
   console.log("onDOMContentLoaded: " + details.url);
 }
 
-browser.webNavigation.onDOMContentLoaded.addListener(logOnDOMContentLoaded, filter);
+browser.webNavigation.onDOMContentLoaded.addListener(
+  logOnDOMContentLoaded,
+  filter,
+);
 ```
 
 {{WebExtExamples}}

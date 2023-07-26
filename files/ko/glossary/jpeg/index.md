@@ -1,6 +1,6 @@
 ---
 title: JPEG
-slug: Glossary/jpeg
+slug: Glossary/JPEG
 ---
 
 **JPEG**(Joint Photographic Experts Group)는 디지털 이미지에 많이 사용하는 손실 압축법입니다.

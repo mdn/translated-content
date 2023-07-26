@@ -121,7 +121,7 @@ Los objectos [JSON2](https://github.com/douglascrockford/JSON-js) y [JSON3](http
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.JSON")}}
+{{Compat}}
 
 ## Vea también
 

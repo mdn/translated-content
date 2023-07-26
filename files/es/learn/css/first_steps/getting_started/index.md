@@ -45,28 +45,28 @@ Nuestro punto de partida es un documento HTML. Puedes copiar el código de abajo
 ```html
 <!doctype html>
 <html lang="es">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Empezamos con el CSS</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>Soy un título de nivel uno</h1>
 
-    <p>Este es un párrafo de texto. En el texto hay un <span>elemento span</span>
-y también un <a href="http://example.com">enlace</a>.</p>
+    <p>
+      Este es un párrafo de texto. En el texto hay un
+      <span>elemento span</span> y también un
+      <a href="http://example.com">enlace</a>.
+    </p>
 
     <p>Este es el segundo párrafo. Contiene un elemento <em>destacado</em>.</p>
 
     <ul>
-        <li>Punto uno</li>
-        <li>Punto dos</li>
-        <li>Punto <em>tres</em></li>
+      <li>Punto uno</li>
+      <li>Punto dos</li>
+      <li>Punto <em>tres</em></li>
     </ul>
-
-</body>
-
+  </body>
 </html>
 ```
 
@@ -81,7 +81,7 @@ Crea un archivo en la misma carpeta que tu documento HTML y guárdalo como `styl
 Para vincular `styles.css` a `index.html`, añade la siguiente línea en algún lugar dentro del {{htmlelement ("head")}} del documento HTML:
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 Este elemento {{htmlelement ("link")}} le dice al navegador que hay una hoja de estilo con el atributo `rel` y la ubicación de esa hoja de estilo como el valor del atributo `href`. Puedes probar si el CSS funciona añadiendo una regla a `styles.css`. Usando el editor de código, añade lo siguiente al archivo CSS:
@@ -109,8 +109,9 @@ p {
 Puedes determinar múltiples selectores a la vez, separándolos con una coma. Si queremos que todos los párrafos y todos los elementos de la lista sean verdes, el código se verá así:
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 
@@ -145,7 +146,7 @@ En tu documento HTML, añade al segundo elemento de la lista un [atributo de cla
 ```html
 <ul>
   <li>Punto uno</li>
-  <li class = "special">Punto dos</li>
+  <li class="special">Punto dos</li>
   <li>Punto <em>tres</em></li>
 </ul>
 ```
@@ -283,11 +284,3 @@ En este tutorial, hemos visto varias formas con las que se puede diseñar un doc
 En el próximo artículo, veremos cómo se estructura el CSS.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
-
-## En este módulo
-
-1. [¿Qué es el CSS?](/es/docs/Learn/CSS/First_steps/What_is_CSS)
-2. [Empezar con CSS](/es/docs/Learn/CSS/First_steps/Getting_started)
-3. [Cómo se estructura el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4. [Cómo funciona el CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works)
-5. [Pon en práctica tus conocimientos nuevos](/es/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

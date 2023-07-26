@@ -1,11 +1,6 @@
 ---
 title: max-height
 slug: Web/CSS/max-height
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/max-height
 ---
 
 {{CSSRef}}

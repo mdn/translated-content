@@ -1,6 +1,8 @@
 ---
 title: HTMLMediaElement.seekable
 slug: Web/API/HTMLMediaElement/seekable
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("HTML DOM")}}
@@ -13,13 +15,13 @@ slug: Web/API/HTMLMediaElement/seekable
 
 ## 例
 
-```html
-var video = document.querySelector("video");
-var timeRangesObject = video.seekable;
-var timeRanges = [];
-// オブジェクトを走査し、配列に出力する
-for (let count = 0; count < timeRangesObject.length; count ++) {
-    timeRanges.push([timeRangesObject.start(count), timeRangesObject.end(count)]);
+```js
+const video = document.querySelector("video");
+const timeRangesObject = video.seekable;
+const timeRanges = [];
+// オブジェクトを走査し、配列へ出力
+for (let count = 0; count < timeRangesObject.length; count++) {
+  timeRanges.push([timeRangesObject.start(count), timeRangesObject.end(count)]);
 }
 ```
 

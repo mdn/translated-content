@@ -1,8 +1,6 @@
 ---
 title: Anatomie d'une WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-tags:
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
 
@@ -63,10 +61,10 @@ Au lieu de spécifier des scripts d'arrière-plan, vous pouvez spécifier une pa
 **background-page.html**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <script type="module" src="background-script.js"></script>
   </head>
 </html>

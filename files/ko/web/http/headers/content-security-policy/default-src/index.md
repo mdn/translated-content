@@ -1,7 +1,6 @@
 ---
 title: 'CSP: default-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
-translation_of: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
 
 {{HTTPSidebar}}
@@ -95,7 +94,7 @@ Content-Security-Policy: connect-src 'self';
                          worker-src 'self'
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

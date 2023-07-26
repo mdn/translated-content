@@ -1,7 +1,6 @@
 ---
 title: Drag Operations
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
-translation_of: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 original_slug: Web/API/HTML_드래그_앤_드롭_API/Drag_operations
 ---
 {{DefaultAPISidebar("HTML Drag and Drop API")}}

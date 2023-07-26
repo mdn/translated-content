@@ -1,13 +1,6 @@
 ---
 title: options_ui
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
-tags:
-  - Add-ons
-  - Extensions
-  - Manifest
-  - Options
-  - WebExtensions
-  - options_ui
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
 ---
 
@@ -127,9 +120,9 @@ La clé `options_ui` est un objet avec le contenu suivant :
   }
 ```
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.options_ui")}}
+{{Compat}}
 
 ## Voir aussi
 

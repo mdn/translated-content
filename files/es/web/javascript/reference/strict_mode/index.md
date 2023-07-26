@@ -1,12 +1,6 @@
 ---
 title: Modo Estricto
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - ECMAScript5
-  - Guía
-  - JavaScript
-  - Modo estricto
-translation_of: Web/JavaScript/Reference/Strict_mode
 original_slug: Web/JavaScript/Referencia/Modo_estricto
 ---
 

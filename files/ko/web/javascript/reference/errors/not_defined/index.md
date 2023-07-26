@@ -1,7 +1,6 @@
 ---
 title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
-translation_of: Web/JavaScript/Reference/Errors/Not_defined
 ---
 
 {{jsSidebar("Errors")}}
@@ -67,5 +66,5 @@ console.log(num1); // 2
 ## 참조
 
 - {{Glossary("Scope")}}
-- [Declaring variables in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
-- [Function scope in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Functions#Function_scope/en-US/docs/)
+- [Declaring variables in the JavaScript Guide](/ko/docs/Web/JavaScript/Guide/Grammar_and_types#Declaring_variables)
+- [Function scope in the JavaScript Guide](/ko/docs/Web/JavaScript/Guide/Functions#함수_스코프)

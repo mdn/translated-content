@@ -5,7 +5,7 @@ slug: Web/API/IDBCursor
 
 {{APIRef("IndexedDB")}}
 
-[IndexedDB API](/ja/docs/IndexedDB) の **`IDBCursor`** インターフェイスはデータベースの複数レコードを横断したり繰り返すための[カーソル](/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor)です。
+[IndexedDB API](/ja/docs/IndexedDB) の **`IDBCursor`** インターフェイスはデータベースの複数レコードを横断したり繰り返すための[カーソル](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%82%AB%E3%83%BC%E3%82%BD%E3%83%AB)です。
 
 このカーソルはどのインデックスやオブジェクトをループしているかを示す元です。これは範囲内の位置を示し、レコードのキー順に増/減して動きます。カーソルはアプリケーションからカーソル範囲内の全レコードに非同期に処理できるようにします。
 
@@ -43,7 +43,7 @@ slug: Web/API/IDBCursor
 
 {{ deprecated_header(13) }}
 
-> **警告:** これらの定数は利用できません。Gecko 25 で削除されました。代わりに文字列定数を直接使う必要があります。({{ bug(891944) }})
+> **警告:** これらの定数は利用できません。Gecko 25 で削除されました。代わりに文字列定数を直接使う必要があります。([Firefox バグ 891944](https://bugzil.la/891944))
 
 - `NEXT`: `"next"` : カーソルは重複を含む全てのレコードを提示します。キーの範囲の下限から開始し、上方向に動きます。(キーの順番に単調増加します)
 - `NEXTUNIQUE` : `"nextunique"` : カーソルは重複を除いた全てのレコードを提示します。同じキーを持つ複数のレコードが存在する場合、走査の順で最初のレコードのみを取得できます。キーの範囲の下限から開始し、上方向に動きます。

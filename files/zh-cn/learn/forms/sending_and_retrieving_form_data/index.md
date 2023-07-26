@@ -49,39 +49,39 @@ web 基于非常基本的客户端/服务器体系结构，可以总结如下:�
 
 ### 在客户端：定义如何发送数据
 
-{{HTMLElement("form")}}元素定义了如何发送数据。它的所有属性都是为了让您配置当用户点击提交按钮时发送的请求。两个最重要的属性是{{htmlattrxref("action","form")}}和{{htmlattrxref("method","form")}}。
+{{HTMLElement("form")}}元素定义了如何发送数据。它的所有属性都是为了让您配置当用户点击提交按钮时发送的请求。两个最重要的属性是[`action`](/zh-CN/docs/Web/HTML/Element/form#action)和[`method`](/zh-CN/docs/Web/HTML/Element/form#method)。
 
-#### {{htmlattrxref("action","form")}} 属性
+#### `action` 属性
 
 这个属性定义了发送数据要去的位置。它的值必须是一个有效的 URL。如果没有提供此属性，则数据将被发送到包含这个表单的页面的 URL。
 
 在这个例子中，数据被发送到一个绝对 URL —— `http://foo.com`：
 
 ```html
-<form action="http://foo.com">
+<form action="http://foo.com">…</form>
 ```
 
 这里，我们使用相对 URL——数据被发送到服务器上的不同 URL
 
 ```html
-<form action="/somewhere_else">
+<form action="/somewhere_else">…</form>
 ```
 
 在没有属性的情况下，像下面一样，{{HTMLElement("form")}}数据被发送到表单出现的相同页面上：
 
 ```html
-<form>
+<form>…</form>
 ```
 
-许多较老的页面使用下面的符号表示数据应该被发送到包含表单的相同页面；这是必需的，因为直到 HTML5{{htmlattrxref("action", "form")}}属性都需要该符号。现在，这不再需要了。
+许多较老的页面使用下面的符号表示数据应该被发送到包含表单的相同页面；这是必需的，因为直到 HTML5[`action`](/zh-CN/docs/Web/HTML/Element/form#action)属性都需要该符号。现在，这不再需要了。
 
 ```html
-<form action="#">
+<form action="#">…</form>
 ```
 
-> **备注：** 可以指定使用 HTTPS(安全 HTTP) 协议的 URL。当您这样做时，数据将与请求的其余部分一起加密，即使表单本身是托管在使用 HTTP 访问的不安全页面上。另一方面，如果表单是在安全页面上托管的，但是您指定了一个不安全的 HTTP URL，它带有{{htmlattrxref("action","form")}}属性，所有的浏览器都会在每次尝试发送数据时向用户显示一个安全警告，因为数据不会被加密。
+> **备注：** 可以指定使用 HTTPS(安全 HTTP) 协议的 URL。当您这样做时，数据将与请求的其余部分一起加密，即使表单本身是托管在使用 HTTP 访问的不安全页面上。另一方面，如果表单是在安全页面上托管的，但是您指定了一个不安全的 HTTP URL，它带有[`action`](/zh-CN/docs/Web/HTML/Element/form#action)属性，所有的浏览器都会在每次尝试发送数据时向用户显示一个安全警告，因为数据不会被加密。
 
-#### {{htmlattrxref("method","form")}}属性
+#### `method` 属性
 
 该属性定义了如何发送数据。[HTTP 协议](/zh-CN/docs/HTTP)提供了几种执行请求的方法；HTML 表单数据可以通过许多不同的方法进行数据传输，其中最常见的是`GET`方法和`POST`方法。
 
@@ -99,11 +99,11 @@ HTTP 请求由两个部分组成：一个包含关于浏览器功能的全局元
 <form action="http://foo.com" method="get">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="say" id="say" value="Hi">
+    <input name="say" id="say" value="Hi" />
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="to" id="to" value="Mom">
+    <input name="to" id="to" value="Mom" />
   </div>
   <div>
     <button>Send my greetings</button>
@@ -125,23 +125,23 @@ GET /?say=Hi&to=Mom HTTP/2.0
 Host: foo.com
 ```
 
-> **备注：** 你可以在 GitHub 上看到本例子——见 [get-method.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/get-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
+> **备注：** 你可以在 GitHub 上看到本例子——见 [get-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/get-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/get-method.html)).
 
 ##### POST 方法
 
 `POST`方法略有不同。这是浏览器在询问响应时使用与服务器通信的方法，该响应考虑了 HTTP 请求正文中提供的数据:“嘿，服务器，看一下这些数据，然后给我回一个适当的结果。”如果使用该方法发送表单，则将数据追加到 HTTP 请求的主体中。
 
-让我们来看一个例子，这是我们在上面的`GET`部分中所看到的相同的形式，但是使用{{htmlattrxref("method","form")}}属性设置为`post`。
+让我们来看一个例子，这是我们在上面的`GET`部分中所看到的相同的形式，但是使用[`method`](/zh-CN/docs/Web/HTML/Element/form#method)属性设置为`post`。
 
 ```html
 <form action="http://foo.com" method="post">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="say" id="say" value="Hi">
+    <input name="say" id="say" value="Hi" />
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="to" id="to" value="Mom">
+    <input name="to" id="to" value="Mom" />
   </div>
   <div>
     <button>Send my greetings</button>
@@ -162,7 +162,7 @@ say=Hi&to=Mom
 
 `Content-Length`数据头表示主体的大小，`Content-Type`数据头表示发送到服务器的资源类型。稍后我们将讨论这些标头。
 
-> **备注：** 你可以在 GitHub 上看到本例—— 见 [post-method.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/post-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)).
+> **备注：** 你可以在 GitHub 上看到本例—— 见 [post-method.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/post-method.html) ([预览版](https://mdn.github.io/learning-area/html/forms/sending-form-data/post-method.html)).
 
 #### 查看 HTTP 请求
 
@@ -202,7 +202,7 @@ HTTP 请求永远不会显示给用户 (如果您想要看到它们，您需要�
 ?>
 ```
 
-这个例子显示了一个带有我们发送的数据的页面。您可以在我们的示例[php-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.html)中看到这一点——该文件包含与我们之前看到的相同的示例表单，它使用了`post`的`method`和`php-example.php`的`action`。当提交时，它将表单数据发送到[php-example.php](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.php)，其中包含了上述代码块中所见的 php 代码。当执行此代码时，浏览器中的输出是`Hi Mom`。
+这个例子显示了一个带有我们发送的数据的页面。您可以在我们的示例[php-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.html)中看到这一点——该文件包含与我们之前看到的相同的示例表单，它使用了`post`的`method`和`php-example.php`的`action`。当提交时，它将表单数据发送到[php-example.php](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/php-example.php)，其中包含了上述代码块中所见的 php 代码。当执行此代码时，浏览器中的输出是`Hi Mom`。
 
 ![](php-result.png)
 
@@ -211,7 +211,7 @@ HTTP 请求永远不会显示给用户 (如果您想要看到它们，您需要�
 #### 例子：Python
 
 这个例子展示了如何使用 Python 完成同样的事情——在 web 页面上显示提交的数据。
-这将使用[Flask framework](http://flask.pocoo.org/)来呈现模板、处理表单数据提交等 (参见[python-example.py](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/python-example.py))。
+这将使用[Flask framework](http://flask.pocoo.org/)来呈现模板、处理表单数据提交等 (参见[python-example.py](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/python-example.py))。
 
 ```plain
 from flask import Flask, render_template, request
@@ -231,8 +231,8 @@ if __name__ == "__main__":
 
 以上代码中引用的两个模板如下：
 
-- [form.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/form.html): 与我们在 [POST 方法](#post_方法) 小节中看到的相同的表单，但是将`action`设置为`\{{ url_for('hello') }}`。(这是一个[Jinja2](http://jinja.pocoo.org/docs/2.9/)模板，它基本上是 HTML，但是可以包含对运行包含在花括号中的 web 服务器的 Python 代码的调用。`url_for('hello')`基本上是在“提交表单时重定向到`/hello`”。
-- [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html): 这个模板只包含一行，用于呈现渲染时传递给它的两个数据块。
+- [form.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/form.html): 与我们在 [POST 方法](#post_方法) 小节中看到的相同的表单，但是将`action`设置为`\{{ url_for('hello') }}`。(这是一个[Jinja2](http://jinja.pocoo.org/docs/2.9/)模板，它基本上是 HTML，但是可以包含对运行包含在花括号中的 web 服务器的 Python 代码的调用。`url_for('hello')`基本上是在“提交表单时重定向到`/hello`”。
+- [greeting.html](https://github.com/mdn/learning-area/blob/main/html/forms/sending-form-data/templates/greeting.html): 这个模板只包含一行，用于呈现渲染时传递给它的两个数据块。
   这是通过前面所见的`hello()`函数完成的，该函数在`/hello`URL 被导向时运行。
 
 > **备注：** 同样，如果您只是尝试将其直接加载到浏览器中，那么这段代码将无法工作。Python 的工作方式与 PHP 略有不同——要在本地运行此代码，您需要[安装 Python/pip](/zh-CN/docs/Learn/Server-side/Django/development_environment#Installing_Python_3)，然后使用`pip3 install flask`安装 Flask。此时，您应该能够使用`python3 python-example.py`来运行这个示例，然后在浏览器中导航到`localhost:5000`。
@@ -255,14 +255,14 @@ if __name__ == "__main__":
 
 用 HTML 表单发送文件是一个特殊的例子。文件是二进制数据——或者被认为是这样的——而所有其他数据都是文本数据。由于 HTTP 是一种文本协议，所以处理二进制数据有特殊的要求。
 
-### {{htmlattrxref("enctype","form")}} 属性
+### `enctype` 属性
 
 该属性允许您指定在提交表单时所生成的请求中的`Content-Type`的 HTTP 数据头的值。这个数据头非常重要，因为它告诉服务器正在发送什么样的数据。默认情况下，它的值是`application/x-www-form-urlencoded`。它的意思是：“这是已编码为 URL 参数的表单数据。”
 
 如果你想要发送文件，你需要额外的三个步骤：
 
-- 将{{htmlattrxref("method","form")}}属性设置为`POST`，因为文件内容不能放入 URL 参数中。
-- 将{{htmlattrxref("enctype","form")}}的值设置为`multipart/form-data`，因为数据将被分成多个部分，每个文件单独占用一个部分，表单正文中包含的文本数据（如果文本也输入到表单中）占用一个部分。
+- 将[`method`](/zh-CN/docs/Web/HTML/Element/form#method)属性设置为`POST`，因为文件内容不能放入 URL 参数中。
+- 将[`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype)的值设置为`multipart/form-data`，因为数据将被分成多个部分，每个文件单独占用一个部分，表单正文中包含的文本数据（如果文本也输入到表单中）占用一个部分。
 - 包含一个或多个[File picker](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets#File_picker)小部件，允许用户选择将要上传的文件。
 
 例如：
@@ -271,7 +271,7 @@ if __name__ == "__main__":
 <form method="post" enctype="multipart/form-data">
   <div>
     <label for="file">Choose a file</label>
-    <input type="file" id="file" name="myFile">
+    <input type="file" id="file" name="myFile" />
   </div>
   <div>
     <button>Send the file</button>
@@ -279,7 +279,7 @@ if __name__ == "__main__":
 </form>
 ```
 
-> **备注：** 一些浏览器支持{{HTMLElement("input")}}的{{htmlattrxref("multiple","input")}}属性，它允许只用一个 `<input>` 元素选择一个以上的文件上传。服务器如何处理这些文件取决于服务器上使用的技术。如前所述，使用框架将使您的生活更轻松。
+> **备注：** 一些浏览器支持{{HTMLElement("input")}}的[`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple)属性，它允许只用一个 `<input>` 元素选择一个以上的文件上传。服务器如何处理这些文件取决于服务器上使用的技术。如前所述，使用框架将使您的生活更轻松。
 
 > **警告：** 为了防止滥用，许多服务器配置了文件和 HTTP 请求的大小限制。在发送文件之前，先检查服务器管理员的权限是很重要的。
 
@@ -331,7 +331,7 @@ SQL 注入是一种试图在目标 web 站点使用的数据库上执行操作�
 
 如您所见，发送表单数据很容易，但要确保应用程序的安全性是很棘手的。请记住，前端开发人员不是应该定义数据安全模型的人。是的，我们将看到，[执行客户端数据验证](/zh-CN/docs/HTML/Forms/Data_form_validation)是可能的，但是服务器不能信任这种验证，因为它无法真正知道客户端到底发生了什么。
 
-## 相关链接
+## 参见
 
 如果您想了解更多关于保护 web 应用程序的信息，您可以深入了解这些资源：
 
@@ -340,17 +340,3 @@ SQL 注入是一种试图在目标 web 站点使用的数据库上执行操作�
 - [Chris Shiflett's blog about PHP Security](http://shiflett.org/)
 
 {{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
-
-## 在本单元中
-
-- [Your first HTML form](/zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form)
-- [How to structure an HTML form](/zh-CN/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form)
-- [The native form widgets](/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets)
-- [Sending form data](/zh-CN/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/zh-CN/docs/Learn/HTML/Forms/Form_validation)
-- [How to build custom form widgets](/zh-CN/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets)
-- [Sending forms through JavaScript](/zh-CN/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript)
-- [HTML forms in legacy browsers](/zh-CN/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/zh-CN/docs/Learn/HTML/Forms/Styling_HTML_forms)
-- [Advanced styling for HTML forms](/zh-CN/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms)
-- [Property compatibility table for form widgets](/zh-CN/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

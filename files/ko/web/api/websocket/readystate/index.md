@@ -1,14 +1,6 @@
 ---
 title: WebSocket.readyState
 slug: Web/API/WebSocket/readyState
-tags:
-  - API
-  - Property
-  - Reference
-  - Web API
-  - WebSocket
-browser-compat: api.WebSocket.readyState
-translation_of: Web/API/WebSocket/readyState
 ---
 
 {{APIRef("Web Sockets API")}}

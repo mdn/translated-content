@@ -48,7 +48,7 @@ for (let letra of iterador) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.values")}}
+{{Compat}}
 
 ## Vea también
 

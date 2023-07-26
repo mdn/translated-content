@@ -1,12 +1,12 @@
 ---
-title: WindowOrWorkerGlobalScope.caches
+title: caches
 slug: Web/API/caches
 original_slug: Web/API/WindowOrWorkerGlobalScope/caches
 ---
 
 {{APIRef()}}{{SeeCompatTable}}
 
-La propiedad de sólo-lectura **`caches`**, de la interfaz {{domxref("WindowOrWorkerGlobalScope")}}, devuelve el objeto {{domxref("CacheStorage")}} asociado al contexto actual. Este objeto habilita funcionalidades como guardar assets para su utilización _offline_, y generar respuestas personalizadas a las peticiones.
+La propiedad de sólo-lectura **`caches`** devuelve el objeto {{domxref("CacheStorage")}} asociado al contexto actual. Este objeto habilita funcionalidades como guardar assets para su utilización _offline_, y generar respuestas personalizadas a las peticiones.
 
 ## Sintaxis
 
@@ -23,22 +23,22 @@ Un objeto {{domxref("CacheStorage")}}.
 El siguiente ejemplo muestra la forma en la que utilizarías una cache en un contexto de [service worker](/es/docs/Web/API/Service_Worker_API) para guardar assets _offline_.
 
 ```js
-this.addEventListener('install', function(event) {
+this.addEventListener("install", function (event) {
   event.waitUntil(
-    caches.open('v1').then(function(cache) {
+    caches.open("v1").then(function (cache) {
       return cache.addAll(
-        '/sw-test/',
-        '/sw-test/index.html',
-        '/sw-test/style.css',
-        '/sw-test/app.js',
-        '/sw-test/image-list.js',
-        '/sw-test/star-wars-logo.jpg',
-        '/sw-test/gallery/',
-        '/sw-test/gallery/bountyHunters.jpg',
-        '/sw-test/gallery/myLittleVader.jpg',
-        '/sw-test/gallery/snowTroopers.jpg'
+        "/sw-test/",
+        "/sw-test/index.html",
+        "/sw-test/style.css",
+        "/sw-test/app.js",
+        "/sw-test/image-list.js",
+        "/sw-test/star-wars-logo.jpg",
+        "/sw-test/gallery/",
+        "/sw-test/gallery/bountyHunters.jpg",
+        "/sw-test/gallery/myLittleVader.jpg",
+        "/sw-test/gallery/snowTroopers.jpg",
       );
-    })
+    }),
   );
 });
 ```
@@ -47,9 +47,9 @@ this.addEventListener('install', function(event) {
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.caches")}}
+{{Compat}}
 
 ## Ver también
 

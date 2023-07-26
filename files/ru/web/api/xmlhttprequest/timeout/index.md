@@ -11,7 +11,7 @@ translation_of: Web/API/XMLHttpRequest/timeout
 
 {{APIRef('XMLHttpRequest')}}
 
-Свойство **`XMLHttpRequest.timeout`** определяет количество миллисекунд, которое запрос будет выполняться, до того, как будет автоматически прерван. Имеет размер `unsigned long.` Значение по умолчанию - 0, определяет, что таймаута нет. Таймаут не должен быть использован в синхронных запросах XMLHttpRequests в {{Glossary('среде документа')}}, или будет вызвано исключение `InvalidAccessError`. Когда случается таймаут - вызывается событие [timeout](/ru/docs/Web/Events/timeout). {{gecko_minversion_inline("12.0")}}
+Свойство **`XMLHttpRequest.timeout`** определяет количество миллисекунд, которое запрос будет выполняться, до того, как будет автоматически прерван. Имеет размер `unsigned long.` Значение по умолчанию - 0, определяет, что таймаута нет. Таймаут не должен быть использован в синхронных запросах XMLHttpRequests в {{Glossary('среде документа')}}, или будет вызвано исключение `InvalidAccessError`. Когда случается таймаут - вызывается событие [timeout](/ru/docs/Web/Events/timeout).
 
 > **Примечание:** вы не можете использовать таймаут для синхронных запросов с окном - владельцем.[Использование таймаута с асинхронными запросами](/ru/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests#Example_using_a_timeout)
 

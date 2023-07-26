@@ -9,7 +9,7 @@ slug: Web/API/DataTransferItem/webkitGetAsEntry
 
 > **备注：** 此功能`webkitGetAsEntry()`在此时非包含 Firefox 的非 WebKit 浏览器中实现; 它可能会`getAsEntry()`在以后简单地重命名，所以你应该进行防御性编码，寻找两者。
 
-## [语法](/zh-CN/docs/Web/API/DataTransferItem/webkitGetAsEntry#Syntax)
+## 语法
 
 ```
 DataTransferItem.webkitGetAsEntry();
@@ -27,11 +27,11 @@ DataTransferItem.webkitGetAsEntry();
 
 在此示例中，创建了一个放置区域，该放置区域[`drop`](/zh-CN/docs/Web/Events/drop)通过扫描已删除的文件和目录来响应事件，从而输出分层目录列表。
 
-### HTML 内容
+### HTML
 
 HTML 建立了放置区本身，它是[`<div>`](/zh-CN/docs/Web/HTML/Element/div)具有 ID 的元素`"dropzone"`，以及带有 ID 的无序列表元素`"listing"`。
 
-```
+```html
 <p>Drag files and/or directories to the box below!</p>
 
 <div id="dropzone">
@@ -46,11 +46,11 @@ HTML 建立了放置区本身，它是[`<div>`](/zh-CN/docs/Web/HTML/Element/div
 </ul>
 ```
 
-### CSS 内容
+### CSS
 
 此处显示示例使用的样式。
 
-```
+```css
 #dropzone {
   text-align: center;
   width: 300px;
@@ -76,7 +76,7 @@ body {
 }
 ```
 
-### JavaScript 内容
+### JavaScript
 
 首先，让我们看一下递归`scanFiles()`函数。该函数将[`FileSystemEntry`](/zh-CN/docs/Web/API/FileSystemEntry)表示要扫描和处理的文件系统中的条目（`item`参数）和插入内容列表（`container`参数）的元素作为输入。
 
@@ -137,7 +137,7 @@ dropzone.addEventListener("drop", function(event) {
 }, false);
 ```
 
-这将获取[`DataTransferItem`](/zh-CN/docs/Web/API/DataTransferItem)表示从中删除的项目的对象列表`event.dataTransfer.items`。然后我们打电话[`Event.preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)来防止事件在完成后被进一步处理。
+这将获取表示从 `event.dataTransfer.items` 中删除的项目的 {{domxref("DataTransferItem")}} 对象列表。然后我们调用 {{domxref("Event.preventDefault()")}} 来防止事件在完成后被进一步处理。
 
 现在是时候开始构建列表了。首先，通过设置[`listing.innerHTML`](/zh-CN/docs/Web/API/Element/innerHTML)为空来清空列表。这使我们[`ul`](/zh-CN/docs/Web/API/Ul)开始插入目录条目为空。
 
@@ -147,7 +147,7 @@ dropzone.addEventListener("drop", function(event) {
 
 你可以通过下面的尝试看看它是如何工作的。找到一些文件和目录并将其拖入，然后查看生成的输出。
 
-{{ EmbedLiveSample('Example', 600, 400) }}
+{{ EmbedLiveSample('示例', 600, 400) }}
 
 ## 规范
 
@@ -157,7 +157,7 @@ dropzone.addEventListener("drop", function(event) {
 
 {{Compat}}
 
-## 也可以看看
+## 参见
 
 - [文件和目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
 - [文件系统 API 简介](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)

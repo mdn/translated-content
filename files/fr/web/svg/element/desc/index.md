@@ -1,10 +1,6 @@
 ---
 title: desc
 slug: Web/SVG/Element/desc
-tags:
-  - Element
-  - SVG
-  - SVG Description
 translation_of: Web/SVG/Element/desc
 ---
 
@@ -34,9 +30,9 @@ _(Aucun)_
 
 Cet élément implémente l'interface [`SVGDescElement`](/fr/docs/Web/API/SVGDescElement).
 
-## Compatibilitée des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("svg.elements.desc")}}
+{{Compat}}
 
 ## Voir aussi
 

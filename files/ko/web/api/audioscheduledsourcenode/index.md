@@ -1,16 +1,6 @@
 ---
 title: AudioScheduledSourceNode
 slug: Web/API/AudioScheduledSourceNode
-tags:
-  - API
-  - Audio
-  - AudioScheduledSourceNode
-  - Interface
-  - Media
-  - Reference
-  - Web Audio API
-  - sound
-browser-compat: api.AudioScheduledSourceNode
 ---
 
 {{APIRef("Web Audio API")}}

@@ -1,7 +1,6 @@
 ---
 title: 'ReferenceError: deprecated caller or arguments usage'
 slug: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_usage
 ---
 
 {{jsSidebar("Errors")}}
@@ -26,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Errors/Deprecated_caller_or_arguments_u
 
 ### `function.caller` or `arguments.callee.caller`
 
-{{jsxref("Function.caller")}} 와 [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) 는 사라지게 되었습니다. (자세한 정보는 레퍼런스 문서를 확인해 보세요.)
+{{jsxref("Function.caller")}} 와 [`arguments.callee.caller`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/callee) 는 사라지게 되었습니다. (자세한 정보는 레퍼런스 문서를 확인해 보세요.)
 
 ```js example-bad
 "use strict";
@@ -67,7 +66,7 @@ console.log('returned: ' + g.arguments);
 
 ## 참조
 
-- [Deprecated and obsolete features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
-- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+- [Deprecated and obsolete features](/ko/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)
+- [Strict mode](/ko/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Function.arguments")}}
-- {{jsxref("Function.caller")}} and [`arguments.callee.caller`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+- {{jsxref("Function.caller")}} and [`arguments.callee.caller`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/callee)

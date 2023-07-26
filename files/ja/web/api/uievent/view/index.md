@@ -1,17 +1,15 @@
 ---
 title: UIEvent.view
 slug: Web/API/UIEvent/view
+l10n:
+  sourceCommit: 3ca86db64959ed9dc6c8021dc3eb89e82a6628c7
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-**`UIEvent.view`** は読み取り専用のプロパティで、イベントを生成したものの {{domxref("WindowProxy")}} オブジェクトを返します。ブラウザーでは、これはイベントが発行された {{ domxref("Window") }} です。
+**`UIEvent.view`** は読み取り専用のプロパティで、イベントを生成したものの {{glossary("WindowProxy")}} オブジェクトを返します。ブラウザーでは、これはイベントが発行された {{ domxref("Window") }} です。
 
-## 構文
-
-```js
-var view = event.view;
-```
+## 値
 
 - `view` は `AbstractView` オブジェクトの参照です。
 

@@ -1,46 +1,35 @@
 ---
 title: 'HTMLMediaElement: emptied イベント'
 slug: Web/API/HTMLMediaElement/emptied_event
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("HTMLMediaElement")}}
 
 `emptied` イベントは、メディアが空になると発生します。 例えば、このイベントは、メディアがすでに読み込まれている（または部分的に読み込まれている）状態で、それを再読み込みするために `load()` メソッドを呼び出した場合に送信されます。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{DOMxRef("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">対象</th>
-      <td>要素</td>
-    </tr>
-    <tr>
-      <th scope="row">既定のアクション</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラプロパティ</th>
-      <td>{{domxref("GlobalEventHandlers.onemptied")}}</td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('emptied', (event) => {});
+
+onemptied = (event) => { };
+```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
 これらの例では、 `HTMLMediaElement` の `emptied` イベントのイベントリスナーを追加し、そのイベントハンドラーがイベントの発生に反応したときにメッセージを投稿します。
 
-`addEventListener()` を使用する場合
+`addEventListener()` を使用する場合:
 
 ```js
 const video = document.querySelector('video');
@@ -50,7 +39,7 @@ video.addEventListener('emptied', (event) => {
 });
 ```
 
-`onemptied` イベントハンドラプロパティを使用する場合
+`onemptied` イベントハンドラプロパティを使用する場合:
 
 ```js
 const video = document.querySelector('video');

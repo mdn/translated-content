@@ -2,7 +2,7 @@
 title: PointerEvent
 slug: Web/API/PointerEvent
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: c5240154445333f79ea4fc8a4c9843da99a198b2
 ---
 
 {{ APIRef("Pointer Events") }}
@@ -101,5 +101,4 @@ _このインターフェイスは、{{domxref("MouseEvent")}} および {{domxr
 
 - {{ domxref("Touch_events","タッチイベント", "", 1) }}
 - {{ domxref("GestureEvent") }}
-- {{ domxref("MSGestureEvent") }}
 - {{cssxref("touch-action")}}

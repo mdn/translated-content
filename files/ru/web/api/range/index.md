@@ -78,7 +78,7 @@ _Не имеют унаследованных свойств._
   - : `Освобождает Range` от использования для улучшения производительности .
 - {{ domxref("Range.toString()")}}
   - : Возвращает текст в `Range`.
-- {{ domxref("Range.compareNode()")}} {{ Obsolete_inline }}{{non-standard_inline}}
+- {{ domxref("Range.compareNode()")}} {{non-standard_inline}}
   - : Возвращает константу, представляющую, находится ли {{domxref("Node")}} до, после, внутри или вокруг range.
 - {{ domxref("Range.comparePoint()")}} {{experimental_inline}}
   - : Возвращает -1, 0, или 1 в зависимости от того, находиться ли referenceNode перед, внутри, или после `Range`.

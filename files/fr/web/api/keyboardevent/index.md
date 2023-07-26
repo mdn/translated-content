@@ -1,13 +1,6 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
-tags:
-  - API
-  - DOM
-  - Evènements IU
-  - Interface
-  - Reference
-  - évènements
 translation_of: Web/API/KeyboardEvent
 ---
 
@@ -163,7 +156,7 @@ Certaines touches inversent l'état d'un voyant lumineux ; celles-ci comprennent
 
 > **Note :** Sous Linux, Firefox 12 et les versions antérieures ont également envoyé l'événement `keypress` pour ces touches.
 
-Cependant, une limitation du modèle d'événement Mac OS X fait que Caps Lock ne génère que l'événement `keydown`. Num Lock était supporté sur certains modèles d'ordinateurs portables plus anciens (modèles 2007 et plus anciens), mais depuis lors, Mac OS X n'a pas supporté Num Lock même sur les claviers externes. Sur les MacBooks plus anciens avec une touche Num Lock, cette touche ne génère aucun événement touche. Gecko supporte la touche Scroll Lock si un clavier externe ayant une touche F14 est connecté. Dans certaines anciennes versions de Firefox, cette touche générait un événement `keypress` ; ce comportement incohérent était le {{bug(602812)}}.
+Cependant, une limitation du modèle d'événement Mac OS X fait que Caps Lock ne génère que l'événement `keydown`. Num Lock était supporté sur certains modèles d'ordinateurs portables plus anciens (modèles 2007 et plus anciens), mais depuis lors, Mac OS X n'a pas supporté Num Lock même sur les claviers externes. Sur les MacBooks plus anciens avec une touche Num Lock, cette touche ne génère aucun événement touche. Gecko supporte la touche Scroll Lock si un clavier externe ayant une touche F14 est connecté. Dans certaines anciennes versions de Firefox, cette touche générait un événement `keypress` ; ce comportement incohérent était le [bug Firefox 602812](https://bugzil.la/602812).
 
 ### Gestion de l'auto-répétition
 
@@ -209,44 +202,50 @@ Avant Gecko 5.0, la gestion du clavier était moins cohérente entre les plates-
 ## Exemple
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<script>
-'use strict';
+  <head>
+    <script>
+      "use strict";
 
-document.addEventListener('keydown', (event) => {
-  const nomTouche = event.key;
+      document.addEventListener(
+        "keydown",
+        (event) => {
+          const nomTouche = event.key;
 
-  if (nomTouche === 'Control') {
-    // Pas d'alerte si seule la touche Control est pressée.
-    return;
-  }
+          if (nomTouche === "Control") {
+            // Pas d'alerte si seule la touche Control est pressée.
+            return;
+          }
 
-  if (event.ctrlKey) {
-    // Même si event.key n'est pas 'Control' (par ex., 'a' is pressed),
-    // event.ctrlKey peut être true si la touche Ctrl est pressée dans le même temps.
-    alert(`Combinaison de ctrlKey + ${nomTouche}`);
-     } else {
-    alert(`Touche pressée ${nomTouche}`);
-  }
-}, false);
+          if (event.ctrlKey) {
+            // Même si event.key n'est pas 'Control' (par ex., 'a' is pressed),
+            // event.ctrlKey peut être true si la touche Ctrl est pressée dans le même temps.
+            alert(`Combinaison de ctrlKey + ${nomTouche}`);
+          } else {
+            alert(`Touche pressée ${nomTouche}`);
+          }
+        },
+        false,
+      );
 
-document.addEventListener('keyup', (event) => {
-  const nomTouche = event.key;
+      document.addEventListener(
+        "keyup",
+        (event) => {
+          const nomTouche = event.key;
 
-  // Dès que l'utilisateur relâche la touche Ctrl, la touche n'est plus active.
-  // Aussi event.ctrlKey est false.
-  if (nomTouche === 'Control') {
-    alert('La touche Control a été relâchée');
-  }
-}, false);
+          // Dès que l'utilisateur relâche la touche Ctrl, la touche n'est plus active.
+          // Aussi event.ctrlKey est false.
+          if (nomTouche === "Control") {
+            alert("La touche Control a été relâchée");
+          }
+        },
+        false,
+      );
+    </script>
+  </head>
 
-</script>
-</head>
-
-<body>
-</body>
+  <body></body>
 </html>
 ```
 

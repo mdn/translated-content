@@ -4,7 +4,9 @@ slug: Web/CSS/:host_function
 original_slug: Web/CSS/:host()
 ---
 
-{{seecompattable}}{{CSSRef}}[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数 **`:host()`** 选择包含使用这段 CSS 的 [Shadow DOM](/zh-CN/docs/Web/Web_Components/Using_shadow_DOM) 的影子宿主（这样就可以从 Shadow DOM 中选择包括它的自定义元素）——但前提是该函数的参数与选择的阴影宿主相匹配。
+{{seecompattable}}{{CSSRef}}
+
+[CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数 **`:host()`** 选择包含使用这段 CSS 的 [Shadow DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 的影子宿主（这样就可以从 Shadow DOM 中选择包括它的自定义元素）——但前提是该函数的参数与选择的阴影宿主相匹配。
 
 最简单的用法是仅将类名放在某些自定义元素实例上，然后将相关的类选择器作为函数参数包含在内。不能将它与后代选择器表达式一起使用，以仅选择特定祖先内部的自定义元素的实例。这是 {{cssxref(":host-context()")}} 的作用。
 
@@ -64,6 +66,6 @@ style.textContent = 'span:hover { text-decoration: underline; }' +
 
 ## 参见
 
-- [Web components](/zh-CN/docs/Web/Web_Components)
+- [Web components](/zh-CN/docs/Web/API/Web_components)
 - {{cssxref(":host-context", ":host-context()")}}
 - {{cssxref(":host")}}

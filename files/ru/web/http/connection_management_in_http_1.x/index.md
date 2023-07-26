@@ -14,7 +14,7 @@ translation_of: Web/HTTP/Connection_management_in_HTTP_1.x
 
 В HTTP/1.1 были созданы две новые модели. Модель постоянного соединения оставляет соединение открытым между последовательными запросами, экономя время, требуемое для открытия новых соединений. Модель конвейерной обработки HTTP делает следующий шаг - она позволяет отсылать несколько запросов подряд, не дожидаясь ответа, что существенно сокращает время ожидания в сети.
 
-![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](https://mdn.mozillademos.org/files/13727/HTTP1_x_Connections.png)
+![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](http1_x_connections.png)
 
 > **Примечание:** В HTTP/2 внесены дополнительные модели управления соединением.
 
@@ -68,7 +68,7 @@ TCP-рукопожатие само по себе затратно по врем
 
 Если сервер хочет иметь более быстрый ответ от веб-сайта или приложения, он может открыть больше соединений. Например, вместо того, чтобы иметь все ресурсы на одном домене, скажем, `www.example.com`, он может распределить их по нескольким доменам, `www1.example.com`, `www2.example.com`, `www3.example.com`. Каждый из этих доменов разрешается на том же сервере, и веб-браузер откроет 6 соединений к каждому (в нашем примере число соединений возрастёт до 18). Этот метод называют доменным разделением (_domain sharding)_.
 
-![](https://mdn.mozillademos.org/files/13783/HTTPSharding.png)
+![](httpsharding.png)
 
 ## Заключение
 

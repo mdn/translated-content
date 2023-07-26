@@ -3,11 +3,12 @@ title: Веб Запрос
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest
 ---
+
 {{AddonSidebar}}
 
 Добавляет обработчики событий на различных стадиях HTTP запроса. Обработчик получить детальную информацию о запросе и способен изменить или отменить запрос.
 
-Каждое событие запущено на определённой стадии запроса. Типичный порядок событий такой:![](https://mdn.mozillademos.org/files/13376/webRequest-flow.png)
+Каждое событие запущено на определённой стадии запроса. Типичный порядок событий такой:![](webrequest-flow.png)
 
 {{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} Может быть запущен в любой момент во время запроса. Чреда событий может отличаться от приведённой выше: например, в Firefox, после [HSTS](/ru/docs/Web/HTTP/Headers/Strict-Transport-Security) обновления, событие `onBeforeRedirect` будет запущено сразу же после `onBeforeRequest`.
 

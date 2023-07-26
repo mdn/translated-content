@@ -63,14 +63,17 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
 Наш пример, представленный выше, содержит следующий код (Вы также можете [найти пример в нашем репозитории Github](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). Мы хотели бы, чтобы вы взглянули на приведённый выше пример, а затем просмотрели код ниже, чтобы узнать, из каких частей он состоит.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
 
     <title>Заголовок моей страницы</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One"
+      rel="stylesheet"
+      type="text/css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- следующие 3 строки нужны для корректного отображения семантических элементов HTML5 в старых версиях Internet Explorer-->
     <!--[if lt IE 9]>
@@ -93,34 +96,57 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
         <li><a href="#">Контакты</a></li>
       </ul>
 
-       <!-- Форма поиска — это ещё один распространённый нелинейный способ навигации по веб-сайту. -->
+      <!-- Форма поиска — это ещё один распространённый нелинейный способ навигации по веб-сайту. -->
 
-       <form>
-         <input type="search" name="q" placeholder="Search query">
-         <input type="submit" value="Go!">
-       </form>
-     </nav>
+      <form>
+        <input type="search" name="q" placeholder="Search query" />
+        <input type="submit" value="Go!" />
+      </form>
+    </nav>
 
     <!-- Здесь основное содержимое нашей страницы -->
     <main>
-
       <!-- Она содержит статью -->
       <article>
         <h2>Заголовок статьи</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
+          lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
+          viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
+          et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
+          congue enim, ut porta lorem lacinia consectetur.
+        </p>
 
         <h3>Подраздел</h3>
 
-        <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+        <p>
+          Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
+          dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
+          Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
+        </p>
 
-        <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+        <p>
+          Pelientesque auctor nisi id magna consequat sagittis. Curabitur
+          dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
+          Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
+        </p>
 
         <h3>Ещё один подраздел</h3>
 
-        <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+        <p>
+          Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
+          soclis natoque penatibus et manis dis parturient montes, nascetur
+          ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
+          facilisis semper ac in est.
+        </p>
 
-        <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+        <p>
+          Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
+          tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
+          ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
+          diam iaculis velit, is fringille sem nunc vet mi.
+        </p>
       </article>
 
       <!-- Дополнительный контент также может быть вложен в основной контент -->
@@ -135,7 +161,6 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
           <li><a href="#">Лаааадно...</a></li>
         </ul>
       </aside>
-
     </main>
 
     <!-- И вот наш главный нижний колонтитул, который используется на всех страницах нашего веб-сайта -->
@@ -143,7 +168,6 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
     <footer>
       <p>©Авторские права никому не принадлежат, 2050. Все права защищены.</p>
     </footer>
-
   </body>
 </html>
 ```
@@ -164,14 +188,19 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
 
 ### Несемантические обёртки
 
-Иногда вы будете сталкиваться с ситуацией, когда вы не можете найти идеальный семантический элемент, чтобы сгруппировать некоторые элементы вместе или обернуть некоторый контент. Иногда вам просто нужно будет сгруппировать несколько элементов вместе, чтобы применить к ним, как к единой сущности, {{glossary("CSS")}} или {{glossary("JavaScript")}}. Для таких случаев в HTML есть элементы {{HTMLElement("div")}} и {{HTMLElement("span")}}. Вам следует использовать их с подходящим значением атрибута {{htmlattrxref('class')}} или {{htmlattrxref('id')}}, чтобы можно было легко получить к ним доступ.
+Иногда вы будете сталкиваться с ситуацией, когда вы не можете найти идеальный семантический элемент, чтобы сгруппировать некоторые элементы вместе или обернуть некоторый контент. Иногда вам просто нужно будет сгруппировать несколько элементов вместе, чтобы применить к ним, как к единой сущности, {{glossary("CSS")}} или {{glossary("JavaScript")}}. Для таких случаев в HTML есть элементы {{HTMLElement("div")}} и {{HTMLElement("span")}}. Вам следует использовать их с подходящим значением атрибута [`class`](/ru/docs/Web/HTML/Global_attributes#class) или [`id`](/ru/docs/Web/HTML/Global_attributes#id), чтобы можно было легко получить к ним доступ.
 
 {{HTMLElement("span")}} — это строчный несемантический элемент, который стоит использовать только если вы не можете подобрать более подходящий семантический текстовый элемент для обёртывания контента или если не хотите добавлять какие-либо конкретные значения. Например:
 
 ```html
-<p>Пьяный Король возвратился в свою комнату в 01:00
-и всё никак не мог войти в дверь: хмель мешал <span class="editor-note">[Примечание редактора: В этот момент
-свет на сцене должен быть приглушён]</span>.</p>
+<p>
+  Пьяный Король возвратился в свою комнату в 01:00 и всё никак не мог войти в
+  дверь: хмель мешал
+  <span class="editor-note"
+    >[Примечание редактора: В этот момент свет на сцене должен быть
+    приглушён]</span
+  >.
+</p>
 ```
 
 В этом примере примечание редактора просто сообщает дополнительные пожелания режиссёру пьесы. В нем нет особого семантического значения. Для слабовидящих пользователей, возможно, примечание будет отделено от основного содержимого с помощью CSS.
@@ -183,12 +212,13 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
   <h2>Корзина</h2>
   <ul>
     <li>
-      <p><a href=""><strong>Silver earrings</strong></a>: $99.95.</p>
-      <img src="../products/3333-0985/thumb.png" alt="Серебряные серьги">
+      <p>
+        <a href=""><strong>Silver earrings</strong></a
+        >: $99.95.
+      </p>
+      <img src="../products/3333-0985/thumb.png" alt="Серебряные серьги" />
     </li>
-    <li>
-      ...
-    </li>
+    <li>...</li>
   </ul>
   <p>Итого: $237.89</p>
 </div>
@@ -205,10 +235,12 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
 `<br>` создаёт разрыв строки в абзаце, и это единственный способ изменить жёсткую структуру в ситуации, когда вам нужна серия фиксированных коротких строк, например, в почтовом адресе или стихотворении. Пример:
 
 ```html
-<p>Жила-была девчушка Нелл,<br>
-Любившая писать HTML:<br>
-Её семантика ужасна была — <br>
-Она и сама прочитать ничего не могла.</p>
+<p>
+  Жила-была девчушка Нелл,<br />
+  Любившая писать HTML:<br />
+  Её семантика ужасна была — <br />
+  Она и сама прочитать ничего не могла.
+</p>
 ```
 
 Без элемента `<br>` абзац разместится в одну длинную линию (как было сказано ранее, [HTML игнорирует переносы строк](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Whitespace_in_HTML)), а с ним в коде — разметка будет выглядеть следующим образом:
@@ -238,13 +270,13 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
 
 Когда вы уже спланировали содержание одной веб-страницы, следующий логический шаг — продумать содержание всего веб-сайта: какие страницы нужны, как они будут устроены и связаны друг с другом для лучшего восприятия пользователем. Это называется {{glossary("Information architecture")}}. В большом, сложном веб-сайте на планирование может уходить много времени, однако спроектировать простой веб-сайт из нескольких страниц может быть очень легко и весело!
 
-1. Имейте в виду, что у вас будет несколько элементов, общих для большинства (если не всех) страниц — например, меню навигации и содержимого нижнего колонтитула. Например, для сайта компании хорошая идея разместить контактные данные в нижнем колонтитуле на каждой странице. Составьте список элементов, общих для всех страниц. ![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](https://mdn.mozillademos.org/files/12423/common-features.png)
-2. Теперь набросайте структуру страниц (можно взять за образец наш простой дизайн, приведённый раннее). Что находится в этих блоках?![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](https://mdn.mozillademos.org/files/12429/site-structure.png)
-3. Теперь составьте список остальной (уникальной для каждой страницы) информации, которую вы разместите на сайте.![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](https://mdn.mozillademos.org/files/12425/feature-list.png)
-4. Сгруппируйте информацию по темам. Какие части можно разместить на одной странице? Это похоже на метод {{glossary("Card sorting")}}. ![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](https://mdn.mozillademos.org/files/12421/card-sorting.png)
+1. Имейте в виду, что у вас будет несколько элементов, общих для большинства (если не всех) страниц — например, меню навигации и содержимого нижнего колонтитула. Например, для сайта компании хорошая идея разместить контактные данные в нижнем колонтитуле на каждой странице. Составьте список элементов, общих для всех страниц. ![the common features of the travel site to go on every page: title and logo, contact, copyright, terms and conditions, language chooser, accessibility policy](common-features.png)
+2. Теперь набросайте структуру страниц (можно взять за образец наш простой дизайн, приведённый раннее). Что находится в этих блоках?![A simple diagram of a sample site structure, with a header, main content area, two optional sidebars, and footer](site-structure.png)
+3. Теперь составьте список остальной (уникальной для каждой страницы) информации, которую вы разместите на сайте.![A long list of all the features that we could put on our travel site, from searching, to special offers and country-specific info](feature-list.png)
+4. Сгруппируйте информацию по темам. Какие части можно разместить на одной странице? Это похоже на метод {{glossary("Card sorting")}}. ![The items that should appear on a holiday site sorted into 5 categories: Search, Specials, Country-specific info, Search results, and Buy things](card-sorting.png)
 5. Составьте карту сайта. Обведите каждую страницу рамкой, и продумайте перемещения пользователя между ними. Обычно в центре оказывается главная страница, с которой можно быстро перейти на все остальные. На небольшом сайте большинство страниц помещают в главную навигацию, но не обязательно класть туда все ссылки. Также можете пометить, как выглядят элементы страниц — ссылками, списками, карточками.
 
-![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](https://mdn.mozillademos.org/files/12427/site-map.png)
+![A map of the site showing the homepage, country page, search results, specials page, checkout, and buy page](site-map.png)
 
 ### Самостоятельная работа: создайте свою собственную карту сайта
 

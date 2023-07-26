@@ -1,7 +1,6 @@
 ---
 title: Node.contains()
 slug: Web/API/Node/contains
-translation_of: Web/API/Node/contains
 ---
 
 {{APIRef("DOM")}}
@@ -24,11 +23,11 @@ function isInPage(node) {
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

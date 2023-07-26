@@ -1,16 +1,6 @@
 ---
 title: alarms.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - alarms
-  - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
 ---
 
@@ -23,7 +13,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var getAlarms = browser.alarms.getAll()
+var getAlarms = browser.alarms.getAll();
 ```
 
 ### Paramètres
@@ -51,7 +41,7 @@ getAlarms.then(gotAll);
 
 ## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.alarms.getAll")}}
+{{Compat}}
 
 > **Note :**
 >

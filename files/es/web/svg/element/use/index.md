@@ -61,6 +61,10 @@ Por razones de seguridad, algunos navegadores podrían aplicar una política del
 
 Este elemento implementa la interface [`SVGUseElement`](/en/DOM/SVGUseElement).
 
-## Compatibilidad entre navegadores
+## Especificaciones
 
-{{Compat("svg.elements.use")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

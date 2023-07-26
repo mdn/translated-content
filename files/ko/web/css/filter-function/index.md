@@ -1,12 +1,6 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Filter Effects
-  - Reference
-translation_of: Web/CSS/filter-function
 ---
 {{cssref}}
 
@@ -78,7 +72,7 @@ translation_of: Web/CSS/filter-function
 div {
   width: 300px;
   height: 300px;
-  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center;
+  background: url(https://mdn.dev/archives/media/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center;
 }
 
 li {
@@ -188,11 +182,9 @@ setDiv(selectElem.value);
 
 {{EmbedLiveSample('필터_함수_비교', '100%', 500)}}
 
-## 명세
+## 명세서
 
-| Specification                                                                                                    | Status                               | Comments            |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }} | {{ Spec2('Filters 1.0') }} | Initial definition. |
+{{Specifications}}
 
 ## 같이 보기
 

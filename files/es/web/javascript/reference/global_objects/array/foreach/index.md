@@ -56,7 +56,7 @@ El rango de elementos procesados por `forEach()` se establece antes de la primer
 
 `foreach()` no muta/modifica el array desde el que es llamado (aunque `callback`, si se invoca, podría hacerlo).
 
-> **Nota:** **Nota :** No hay forma de detener o cortar un bucle `forEach` que no sea lanzar una excepción. Si necesita dicho comportamiento, el método `.forEach()` es la herramienta equivocada, use una simple iteración en su lugar. Si está probando los elementos del array para un predicado y necesita devolver un valor boleano, puede usar {{jsxref("Array.prototype.every()", "every()")}} o {{jsxref("Array.prototype.some()", "some()")}} en su lugar.
+> **Nota:** No hay forma de detener o cortar un bucle `forEach` que no sea lanzar una excepción. Si necesita dicho comportamiento, el método `.forEach()` es la herramienta equivocada, use una simple iteración en su lugar. Si está probando los elementos del array para un predicado y necesita devolver un valor boleano, puede usar {{jsxref("Array.prototype.every()", "every()")}} o {{jsxref("Array.prototype.some()", "some()")}} en su lugar.
 
 ## Ejemplos
 
@@ -124,7 +124,7 @@ var o1 = {a:1, b:2};
 var o2 = copy(o1); // o2 ahora se parece a o1
 ```
 
-### Si el array se modifica durante la iteración, otros elementos pueden ser omitidos.
+### Si el array se modifica durante la iteración, otros elementos pueden ser omitidos
 
 El siguiente ejemplo muestra por consola "uno", "dos", "cuatro". Cuando se alcanza el registro que contiene el valor "dos", el primer registro del array se desplaza, lo que hace que los registros restantes se muevan una posición. Debido a que el elemento "cuatro" está ahora en una posición anterior en el array, "tres" se omitirá. `forEach()` no hace una copia del array antes de iterar.
 
@@ -211,7 +211,7 @@ if (!Array.prototype.forEach) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.forEach")}}
+{{Compat}}
 
 ## Vea también
 

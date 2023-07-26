@@ -1,15 +1,7 @@
 ---
 title: devtools.panels
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Reference
-  - WebExtensions
-  - devtools.panels
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels
-original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels
 ---
 
 {{AddonSidebar}}
@@ -50,9 +42,9 @@ Comme toutes les API de devtools, cette API est uniquement disponible pour le co
 - [`devtools.panels.onThemeChanged`](/fr/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged)
   - : Mise en place lorsque le thème Devtools change.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.devtools.panels", 2)}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

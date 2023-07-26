@@ -1,12 +1,6 @@
 ---
 title: IDBObjectStore.name
 slug: Web/API/IDBObjectStore/name
-tags:
-  - API
-  - IDBObjectStore
-  - IndexedDB
-  - Propriété
-  - Reference
 translation_of: Web/API/IDBObjectStore/name
 ---
 
@@ -40,14 +34,14 @@ Plusieurs exceptions peuvent être levées lorsqu'on tente de modifier le nom d'
 
 ## Exemples
 
-Dans le fragment de code qui suit, on ouvre une transaction en lecture/écriture pour la base de données et on ajoute des données au magasin d'objets grâce à la méthode `add()`. Une fois que le magasin d'objets a été créé, on inscrit la valeur de `objectStore.name` dans la console. Pour un exemple complet, voir notre application [To-do Notifications](https://github.com/mdn/to-do-notifications/) (cf. également [la démonstration _live_](https://mdn.github.io/to-do-notifications/)).
+Dans le fragment de code qui suit, on ouvre une transaction en lecture/écriture pour la base de données et on ajoute des données au magasin d'objets grâce à la méthode `add()`. Une fois que le magasin d'objets a été créé, on inscrit la valeur de `objectStore.name` dans la console. Pour un exemple complet, voir notre application [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) (cf. également [la démonstration _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // On ouvre la base de données
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Initialisation de la base de données</li>';
+DBOpenRequest.onsuccess = function (event) {
+  note.innerHTML += "<li>Initialisation de la base de données</li>";
 
   // On enregistre le résultat de l'ouverture dans la variable
   // db afin de l'utiliser ensuite.
@@ -60,19 +54,30 @@ DBOpenRequest.onsuccess = function(event) {
 
 function addData() {
   // On crée un nouvel objet pour l'insérer dans la base
-  var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
+  var newItem = [
+    {
+      taskTitle: "Walk dog",
+      hours: 19,
+      minutes: 30,
+      day: 24,
+      month: "December",
+      year: 2013,
+      notified: "no",
+    },
+  ];
 
   // On ouvre une transaction en lecture/écriture
   // afin d'ajouter les données
   var transaction = db.transaction(["toDoList"], "readwrite");
 
   // On gère le cas où la transaction est effectuée correctement
-  transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction terminée : modification appliquée.</li>';
+  transaction.oncomplete = function (event) {
+    note.innerHTML += "<li>Transaction terminée : modification appliquée.</li>";
   };
 
-  transaction.onerror = function(event) {
-    note.innerHTML += '<li>Transaction non ouverte. Les doublons sont interdits.</li>';
+  transaction.onerror = function (event) {
+    note.innerHTML +=
+      "<li>Transaction non ouverte. Les doublons sont interdits.</li>";
   };
 
   // On crée un magasin d'objets pour la transaction
@@ -82,11 +87,11 @@ function addData() {
   // On ajoute l'objet newItem dans le magasin d'objet
   var objectStoreRequest = objectStore.add(newItem[0]);
 
-  objectStoreRequest.onsuccess = function(event) {
+  objectStoreRequest.onsuccess = function (event) {
     // On rapporte la réussite de l'ajout de l'objet en base
-    note.innerHTML += '<li>Nouvel élément ajouté dans la base de données.</li>';
+    note.innerHTML += "<li>Nouvel élément ajouté dans la base de données.</li>";
   };
-};
+}
 ```
 
 ## Spécifications
@@ -105,4 +110,4 @@ function addData() {
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}
 - Récupérer et modifier les données : {{domxref("IDBObjectStore")}}
 - Utiliser les curseurs {{domxref("IDBCursor")}}
-- Exemple de référence : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([exemple _live_](https://mdn.github.io/to-do-notifications/)).
+- Exemple de référence : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([exemple _live_](https://mdn.github.io/dom-examples/to-do-notifications/)).

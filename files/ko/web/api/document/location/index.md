@@ -1,14 +1,6 @@
 ---
 title: Document.location
 slug: Web/API/Document/location
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Read-only
-  - Reference
-translation_of: Web/API/Document/location
 ---
 
 {{APIRef("DOM")}}
@@ -36,11 +28,11 @@ dump(document.location);
 // "http://www.example.com/juicybits.html" to the console
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

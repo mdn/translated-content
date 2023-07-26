@@ -21,7 +21,7 @@ _`SpeechRecognition` also inherits properties from its parent interface, {{domxr
 - {{domxref("SpeechRecognition.grammars")}}
   - : Returns and sets a collection of {{domxref("SpeechGrammar")}} objects that represent the grammars that will be understood by the current `SpeechRecognition`.
 - {{domxref("SpeechRecognition.lang")}}
-  - : Returns and sets the language of the current `SpeechRecognition`. If not specified, this defaults to the HTML {{htmlattrxref("lang","html")}} attribute value, or the user agent's language setting if that isn't set either.
+  - : Returns and sets the language of the current `SpeechRecognition`. If not specified, this defaults to the HTML [`lang`](/zh-CN/docs/Web/HTML/Element/html#lang) attribute value, or the user agent's language setting if that isn't set either.
 - {{domxref("SpeechRecognition.continuous")}}
   - : Controls whether continuous results are returned for each recognition, or only a single result. Defaults to single (`false`.)
 - {{domxref("SpeechRecognition.interimResults")}}
@@ -82,7 +82,7 @@ Listen to these events using [`addEventListener()`](/zh-CN/docs/Web/API/EventTar
 
 ## Examples
 
-In our simple [Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor, create a new {{domxref("SpeechGrammarList")}}, and set it to be the grammar that will be recognised by the `SpeechRecognition` instance using the {{domxref("SpeechRecognition.grammars")}} property.
+In our simple [Speech color changer](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speech-color-changer) example, we create a new `SpeechRecognition` object instance using the {{domxref("SpeechRecognition.SpeechRecognition", "SpeechRecognition()")}} constructor, create a new {{domxref("SpeechGrammarList")}}, and set it to be the grammar that will be recognised by the `SpeechRecognition` instance using the {{domxref("SpeechRecognition.grammars")}} property.
 
 After some other values have been defined, we then set it so that the recognition service starts when a click event occurs (see {{domxref("SpeechRecognition.start()")}}.) When a result has been successfully recognised, the {{domxref("SpeechRecognition.onresult")}} handler fires, we extract the color that was spoken from the event object, and then set the background color of the {{htmlelement("html")}} element to that colour.
 

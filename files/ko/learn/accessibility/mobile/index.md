@@ -16,7 +16,7 @@ original_slug: Learn/접근성/모바일
         <p>
           기본적인 컴퓨터 사용능력, HTML, CSS, JavaScript에 대한 기본적인 이해,
           그리고
-          <a href="/en-US/docs/Learn/Accessibility">이전 내용들에 대한 이해</a>.
+          <a href="/ko/docs/Learn/Accessibility">이전 내용들에 대한 이해</a>.
         </p>
       </td>
     </tr>
@@ -276,13 +276,3 @@ In this article, we have provided you with some details about common mobile acce
 - [Make your site work on touch devices](http://www.creativebloq.com/javascript/make-your-site-work-touch-devices-51411644) — Useful article about using touch events to get interactions working on mobile devices.
 
 {{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
-
-## In this module
-
-- [What is accessibility?](/ko/docs/Learn/Accessibility/What_is_accessibility)
-- [HTML: A good basis for accessibility](/ko/docs/Learn/Accessibility/HTML)
-- [CSS and JavaScript accessibility best practices](/ko/docs/Learn/Accessibility/CSS_and_JavaScript)
-- [WAI-ARIA basics](/ko/docs/Learn/Accessibility/WAI-ARIA_basics)
-- [Accessible multimedia](/ko/docs/Learn/Accessibility/Multimedia)
-- [Mobile accessibility](/ko/docs/Learn/Accessibility/Mobile)
-- [Accessibility troubleshooting](/ko/docs/Learn/Accessibility/Accessibility_troubleshooting)

@@ -1,13 +1,6 @@
 ---
 title: outline-style
 slug: Web/CSS/outline-style
-tags:
-  - CSS
-  - CSS Outline
-  - CSS Property
-  - Reference
-  - recipe:css-property
-translation_of: Web/CSS/outline-style
 ---
 
 {{CSSRef}}

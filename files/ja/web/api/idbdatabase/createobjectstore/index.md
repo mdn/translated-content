@@ -78,8 +78,8 @@ IDBDatabase.createObjectStore(name, options);
 
     | プロパティ      | 説明                                                                                                                                                                                                                                                                               |
     | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `keyPath`       | 新しいオブジェクトストアで使用される[キーパス](/ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB#gloss_keypath)。空や特定されていない場合、オブジェクトストアはキーパスなしで生成されて、[アウトオブラインキー](/ja/docs/IndexedDB#gloss_out-of-line_key) が使用されます。 |
-    | `autoIncrement` | `true` だった場合、オブジェクトストアは[キージェネレーター](/ja/docs/IndexedDB#gloss_key_generator)を持ちます。既定値は `false`。                                                                                                                                                             |
+    | `keyPath`       | 新しいオブジェクトストアで使用される[キーパス](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%82%AD%E3%83%BC%E3%83%91%E3%82%B9)。空や特定されていない場合、オブジェクトストアはキーパスなしで生成されて、[アウトオブラインキー](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%82%A2%E3%82%A6%E3%83%88%E3%82%AA%E3%83%96%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%AD%E3%83%BC) が使用されます。 |
+    | `autoIncrement` | `true` だった場合、オブジェクトストアは[キージェネレーター](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%82%AD%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%8D%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC)を持ちます。既定値は `false`。                                                                                                                                                             |
 
     未知のパラメーターは無視されます。
 

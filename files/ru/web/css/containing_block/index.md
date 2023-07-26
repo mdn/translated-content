@@ -15,7 +15,7 @@ translation_of: Web/CSS/Containing_block
 3. Border область или область границы (border area).
 4. Margin область или область внешнего поля (margin area).
 
-![Diagram of the box model](https://mdn.mozillademos.org/files/16558/box-model.png)
+![Diagram of the box model](box-model.png)
 
 Многие разработчики верят, что содержащий блок элемента - это всегда content область его родителя, но это не всегда является правдой. Давайте исследуем факторы, которые определяют, что представляет собой содержащий элемент блок.
 
@@ -109,7 +109,7 @@ p {
 
 ### Example 2
 
-In this example, the paragraph's containing block is the {{HTMLElement("body")}} element, because `<section>` is not a block container (because of `display: inline`) and doesn’t establish a formatting context.
+In this example, the paragraph's containing block is the {{HTMLElement("body")}} element, because `<section>` is not a block container (because of `display: inline`) and doesn't establish a formatting context.
 
 ```html hidden
 <body>

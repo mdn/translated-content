@@ -1,6 +1,8 @@
 ---
 title: Window.requestAnimationFrame()
-slug: Web/API/Window/requestAnimationFrame
+slug: Web/API/window/requestAnimationFrame
+l10n:
+  sourceCommit: c575deb5f1775b532360c612a85b35a5ff9525d9
 ---
 
 {{APIRef}}
@@ -18,8 +20,8 @@ slug: Web/API/Window/requestAnimationFrame
 
 ## 構文
 
-```js
-window.requestAnimationFrame(callback);
+```js-nolint
+requestAnimationFrame(callback)
 ```
 
 ### 引数
@@ -29,7 +31,7 @@ window.requestAnimationFrame(callback);
 
 ## 返値
 
-`long` 整数値で、リクエスト ID、コールバックリスト内のエントリーを一意に識別するための、`long` 整数値の `requestID` を返します。この値は非ゼロ値ですが、値そのものを推定することはできないでしょう。この値を {{domxref("window.cancelAnimationFrame()")}} に渡すことで、コールバック関数の更新を中止できます。
+`long` の整数値で、リクエスト ID、コールバックリスト内のエントリーを一意に識別するためのリクエスト ID を返します。この値は非ゼロ値ですが、値そのものを推定することはできないでしょう。この値を {{domxref("window.cancelAnimationFrame()")}} に渡すことで、コールバック関数の更新を中止できます。
 
 ## 例
 
@@ -49,22 +51,20 @@ function step(timestamp) {
   if (previousTimeStamp !== timestamp) {
     // ここで Math.min() を使用して、要素がちょうど 200px で止まるようにします。
     const count = Math.min(0.1 * elapsed, 200);
-    element.style.transform = 'translateX(' + count + 'px)';
+    element.style.transform = `translateX(${count}px)`;
     if (count === 200) done = true;
   }
 
   if (elapsed < 2000) { // Stop the animation after 2 seconds
-    previousTimeStamp = timestamp
-    !done && window.requestAnimationFrame(step);
+    previousTimeStamp = timestamp;
+    if (!done) {
+      window.requestAnimationFrame(step);
+    }
   }
 }
 
 window.requestAnimationFrame(step);
 ```
-
-## メモ
-
-Edge のバージョン 17 以前と Internet Explorer は、描画サイクルの前に `requestAnimationFrame` を確実に発行するとは限りません。
 
 ## 仕様書
 
@@ -77,14 +77,10 @@ Edge のバージョン 17 以前と Internet Explorer は、描画サイクル�
 ## 関連情報
 
 - {{domxref("Window.cancelAnimationFrame()")}}
-- [mozRequestAnimationFrame](http://weblogs.mozillazine.org/roc/archives/2010/08/mozrequestanima.html)
-  \- ブログ投稿
-- [requestAnimationFrame
-  for smart animating](https://paulirish.com/2011/requestanimationframe-for-smart-animating/) - ブログ投稿
-- [Animating
-  with javascript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - ブログ投稿
+- [mozRequestAnimationFrame](https://robert.ocallahan.org/2010/08/mozrequestanimationframe-frame-rate_17.html) - ブログ投稿
+- [requestAnimationFrame for smart animating](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) - ブログ投稿
+- [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - ブログ投稿
 - [TestUFO: Test your web
   browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
-- Paul Irish: [requestAnimationFrame
-  API: now with sub-millisecond precision](http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision)
+- Paul Irish: [requestAnimationFrame API: now with sub-millisecond precision](https://developer.chrome.com/blog/requestanimationframe-api-now-with-sub-millisecond-precision/)
 - [ポリフィル](https://github.com/behnammodi/polyfill/blob/master/window.polyfill.js)

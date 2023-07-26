@@ -3,6 +3,7 @@ title: Firefox 32 для разработчиков
 slug: Mozilla/Firefox/Releases/32
 translation_of: Mozilla/Firefox/Releases/32
 ---
+
 {{FirefoxSidebar}}
 
 Хотите помочь с документированием Firefox 32? Взгляните на [список ошибок, о которых нужно написать](http://beta.elchi3.de/doctracker/#list=fx&version=32.0) и приступайте!
@@ -33,7 +34,7 @@ translation_of: Mozilla/Firefox/Releases/32
 
 ### HTML
 
-- Экспериментальная реализация свойства (включается параметром) {{HTMLElement("img")}} {{HTMLattrxref("srcset", "img")}}. Чтобы включить его, установите значение `dom.image.srcset.enable` в `true` ({{Bug(870021)}}).
+- Экспериментальная реализация свойства (включается параметром) {{HTMLElement("img")}} [`srcset`](/ru/docs/Web/HTML/Element/img#srcset). Чтобы включить его, установите значение `dom.image.srcset.enable` в `true` ({{Bug(870021)}}).
 
 ### JavaScript
 

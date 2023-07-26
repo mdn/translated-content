@@ -1,15 +1,9 @@
 ---
 title: CSS Color
-slug: Web/CSS/CSS_Colors
-tags:
-  - CSS
-  - CSS Colors
-  - HTML Colors
-  - Overview
-  - Reference
-translation_of: Web/CSS/CSS_Color
+slug: Web/CSS/CSS_colors
 original_slug: Web/CSS/CSS_Color
 ---
+
 {{CSSRef}}
 
 **CSS 색상**은 색상, 색상 유형, 색상 혼합, 투명도 및 이러한 색상 효과를 HTML에 적용하는 방법을 다루는 CSS 모듈입니다. {{cssxref("&lt;color&gt;")}} 값을 취하는 모든 CSS 속성이 이 모듈에 속하는건 아니지만 의존성은 가지고 있습니다.
@@ -29,7 +23,7 @@ original_slug: Web/CSS/CSS_Color
 ## 안내서
 
 - [CSS를 사용하여 HTML 요소에 색상 적용하기](/ko/docs/Web/HTML/Applying_color)
-  - : CSS를 사용하여 다양한 유형의 콘텐츠에 색상을 적용하는 방법에 대한 안내서입니다. 모든 색상 관련 CSS 속성이 적용됩니다.​
+  - : CSS를 사용하여 다양한 유형의 콘텐츠에 색상을 적용하는 방법에 대한 안내서입니다. 모든 색상 관련 CSS 속성이 적용됩니다.
 
 ## 도구
 

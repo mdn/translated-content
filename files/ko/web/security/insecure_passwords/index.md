@@ -1,7 +1,6 @@
 ---
 title: 안전하지 않은 비밀번호
 slug: Web/Security/Insecure_passwords
-translation_of: Web/Security/Insecure_passwords
 ---
 
 HTTP를 통한 로그인 양식은 특히 사용자의 비밀번호를 추출하는데 사용할 수 있는 다양한 종류의 공격으로 인해 위험합니다. 네트워크 도청자는 네트워크를 스니핑하거나 전송되는 페이지를 수정하여 사용자의 비밀번호를 도용할 수 있습니다. 이 페이지는 안전하지 않은 비밀번호와 비밀번호 도용을 둘러싼 위험을 사용자와 개발자에게 경고하기 위해 Firefox가 마련한 보안 메커니즘에 대해 자세히 설명합니다.

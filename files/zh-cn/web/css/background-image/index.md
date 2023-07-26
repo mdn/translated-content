@@ -82,9 +82,9 @@ div {
 }
 ```
 
-#### 运行结果
+#### 结果
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('示例')}}
 
 ## 无障碍相关
 

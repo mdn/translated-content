@@ -1,15 +1,7 @@
 ---
 title: Object.getOwnPropertyNames()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Méthode
-  - Object
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames
-original_slug: Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertyNames
 ---
 
 {{JSRef}}
@@ -143,7 +135,7 @@ Object.getOwnPropertyNames('toto')
 
 ## Voir aussi
 
-- [Énumérabilité et possession des propriétés](/fr/docs/Web/JavaScript/Caract%C3%A8re_%C3%A9num%C3%A9rable_des_propri%C3%A9t%C3%A9s_et_rattachement)
+- [Énumérabilité et possession des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}

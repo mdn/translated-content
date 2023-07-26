@@ -30,14 +30,14 @@ A-Frame で何かを作るために環境設定を始めましょう。デモを
 ```html
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>MDN Games: A-Frame demo</title>
-  <script src="aframe.min.js"></script>
-</head>
-<body>
-  <!-- HTML goes here -->
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>MDN Games: A-Frame demo</title>
+    <script src="aframe.min.js"></script>
+  </head>
+  <body>
+    <!-- HTML goes here -->
+  </body>
 </html>
 ```
 
@@ -52,8 +52,7 @@ A-Frame で何かを作るために環境設定を始めましょう。デモを
 `<body>` 要素の中に `<a-scene>` 要素を追加して、シーンを作成しましょう。
 
 ```html
-<a-scene>
-</a-scene>
+<a-scene> </a-scene>
 ```
 
 ### 立方体の追加
@@ -61,11 +60,7 @@ A-Frame で何かを作るために環境設定を始めましょう。デモを
 立方体をシーンに追加するには、 `<a-scene>` 要素の中に単純な [`<a-box>`](https://aframe.io/docs/primitives/a-box.html) 要素を追加します。今すぐ追加してみましょう。
 
 ```html
-<a-box
-  color="#0095DD"
-  position="0 1 0"
-  rotation="20 40 0">
-</a-box>
+<a-box color="#0095DD" position="0 1 0" rotation="20 40 0"> </a-box>
 ```
 
 いくつかの定義済み引数、 `color`、`position`、`rotation` が含まれています。かなり分かりやすいと思いますが、立方体の色や 3D シーン内の位置、そして立方体の回転状態を定義しています。
@@ -117,16 +112,9 @@ A-Frame は必要となるものをすべてセットアップしてくれます
 A-Frame の基本的な光源タイプは directional と ambient です。最初のタイプはシーン内のどこかに配置された平行光源で、2つ目のタイプは最初のタイプから反射しますのでより自然に見えます; このライトはグローバルにセットできます。新しいコードを既存コードの下に追加します — ここでは標準的な `<a-light>` 要素を使います。
 
 ```html
-<a-light
-  type="directional"
-  color="#FFF"
-  intensity="0.5"
-  position="-1 1 2">
+<a-light type="directional" color="#FFF" intensity="0.5" position="-1 1 2">
 </a-light>
-<a-light
-  type="ambient"
-  color="#FFF">
-</a-light>
+<a-light type="ambient" color="#FFF"> </a-light>
 ```
 
 directional ライトは白色で、強度を `0.5` にセットし、位置 `-1 1 2` に配置しています。ambient ライトは色のみ指定することができ、これも白にしています。
@@ -176,12 +164,12 @@ directional ライトは白色で、強度を `0.5` にセットし、位置 `-1
 JavaScript で作成したエンティティをシーンへ追加することもできますので、その機能を使って 3 つ目の図形として円柱を追加してみましょう。 `<body>` 要素の最後、つまり `<a-scene>` の直後に、新たに {{htmlelement("script")}} 要素を追加し、その内側に次の JaveScript コードを記述します。
 
 ```js
-var scene = document.querySelector('a-scene');
-var cylinder = document.createElement('a-cylinder');
-cylinder.setAttribute('color', '#FF9500');
-cylinder.setAttribute('height', '2');
-cylinder.setAttribute('radius', '0.75');
-cylinder.setAttribute('position', '3 1 0');
+var scene = document.querySelector("a-scene");
+var cylinder = document.createElement("a-cylinder");
+cylinder.setAttribute("color", "#FF9500");
+cylinder.setAttribute("height", "2");
+cylinder.setAttribute("radius", "0.75");
+cylinder.setAttribute("position", "3 1 0");
 scene.appendChild(cylinder);
 ```
 
@@ -200,10 +188,7 @@ scene.appendChild(cylinder);
 特別な [`<a-animation>`](https://aframe.io/docs/core/animation.html) というエンティティがあり、要素のアニメーションを手助けしてくれます。下記の `<a-animation>` 要素を `<a-box>` 要素の子要素として追加してください。
 
 ```html
-<a-box
-  color="#0095DD"
-  rotation="20 40 0"
-  position="0 1 0">
+<a-box color="#0095DD" rotation="20 40 0" position="0 1 0">
   <a-animation
     attribute="rotation"
     from="20 0 0"
@@ -257,7 +242,7 @@ var t = 0;
 function render() {
   t += 0.01;
   requestAnimationFrame(render);
-  cylinder.setAttribute('position', '3 '+(Math.sin(t*2)+1)+' 0');
+  cylinder.setAttribute("position", "3 " + (Math.sin(t * 2) + 1) + " 0");
 }
 render();
 ```

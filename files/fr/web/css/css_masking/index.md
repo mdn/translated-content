@@ -1,13 +1,7 @@
 ---
 title: CSS Masks
-slug: Web/CSS/CSS_Masking
-tags:
-  - Aperçu
-  - CSS
-  - CSS Masking
-  - Reference
+slug: Web/CSS/CSS_masking
 translation_of: Web/CSS/CSS_Masking
-original_slug: Web/CSS/CSS_Masks
 ---
 
 {{CSSRef}}

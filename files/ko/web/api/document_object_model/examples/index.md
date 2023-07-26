@@ -1,10 +1,6 @@
 ---
 title: Examples
 slug: Web/API/Document_Object_Model/Examples
-page-type: guide
-tags:
-  - DOM
-  - DOM Reference
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -102,7 +98,7 @@ tags:
         onclick="setBorderWidth(20);" />
       <input 
         type="button" 
-        value="border를 5px로 만들기"  
+        value="border를 5px로 만들기"
         onclick="setBorderWidth(5);" />
     </form>
   </body>

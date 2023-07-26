@@ -1,8 +1,7 @@
 ---
-title: 'Évaluation : page d''accueil Mozilla'
+title: "Évaluation : page d'accueil Mozilla"
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
-original_slug: Apprendre/HTML/Multimedia_and_embedding/Mozilla_splash_page
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
@@ -70,7 +69,7 @@ Dans l'élément {{htmlelement("article")}} (juste en-dessous de la balise d'ouv
 
 ### Ajouter des images adaptatives aux liens vers les ressources externes
 
-Dans l'élément {{htmlelement("div")}} de la catégorie `further-info` vous trouverez quatre autres éléments {{htmlelement("a")}} — chacun d'eux liant vers une page intéressante traitant de Mozilla. Pour compléter cette section, vous devrez insérer un élément {{htmlelement("img")}} dans ceux contenant les attributs {{htmlattrxref("src", "img")}}, {{htmlattrxref("alt", "img")}}, {{htmlattrxref("srcset", "img")}} et {{htmlattrxref("sizes", "img")}} adéquats.
+Dans l'élément {{htmlelement("div")}} de la catégorie `further-info` vous trouverez quatre autres éléments {{htmlelement("a")}} — chacun d'eux liant vers une page intéressante traitant de Mozilla. Pour compléter cette section, vous devrez insérer un élément {{htmlelement("img")}} dans ceux contenant les attributs [`src`](/fr/docs/Web/HTML/Element/img#src), [`alt`](/fr/docs/Web/HTML/Element/img#alt), [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) et [`sizes`](/fr/docs/Web/HTML/Element/img#sizes) adéquats.
 
 Dans tous les cas (sauf un — lequel serait naturellement adaptatif ?) nous voulons que le navigateur desserve la version 120px de large quand la largeur du cadre est de 480px ou moins, ou la version 400px de large dans les autres cas.
 
@@ -95,12 +94,3 @@ La capture d'écran suivante montre à quoi devrait ressembler la page d'accueil
 Si vous suivez cette étude en faisant partie d'un programme de cours organisé, vous devriez pouvoir montrer votre travail à votre professeur/mentor pour une correction. Si vous apprenez seul, alors vous pourrez obtenir des informations et des corrections en demandant sur le [fil de discussion concernant cet exercice](https://discourse.mozilla.org/t/mozilla-splash-page-assignment/24679), ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez de faire l'exercice d'abord — On ne gagne rien en trichant !
 
 {{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
-
-## Dans ce module :
-
-- [Les images en HTML](/fr/Apprendre/HTML/Multimedia_and_embedding/Images_in_HTML)
-- [Contenu audio et video](/fr/Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video)
-- [Des objets aux "iframes" - autres techniques d'intégration](/fr/Apprendre/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Ajouter des images vectorielles à une page web](/fr/Apprendre/HTML/Comment/Ajouter_des_images_vectorielles_%C3%A0_une_page_web)
-- [Images adaptatives](/fr/Apprendre/HTML/Comment/Ajouter_des_images_adaptatives_%C3%A0_une_page_web)
-- [Évaluation : page d'accueil Mozilla](/fr/Apprendre/HTML/Multimedia_and_embedding/Mozilla_splash_page)

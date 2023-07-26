@@ -1,14 +1,8 @@
 ---
 title: <col>
 slug: Web/HTML/Element/col
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/col
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<col>` 요소**는 표의 열을 나타내며, 열에 속하는 칸에 공통된 의미를 부여할 때 사용합니다. {{htmlelement("colgroup")}} 안에서 찾을 수 있습니다.
@@ -83,7 +77,7 @@ The following attributes are deprecated and should not be used. They are documen
 
 - {{htmlattrdef("bgcolor")}} {{Deprecated_inline}}
 
-  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/en-US/docs/Web/CSS/color_value#color_keywords) can also be used.
+  - : The background color of the table. It is a [6-digit hexadecimal RGB code](/ko/docs/Web/CSS/color_value#rgb_colors), prefixed by a '`#`'. One of the predefined [color keywords](/ko/docs/Web/CSS/color_value#color_keywords) can also be used.
 
     To achieve a similar effect, use the CSS {{cssxref("background-color")}} property.
 
@@ -119,4 +113,4 @@ The following attributes are deprecated and should not be used. They are documen
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.col")}}
+{{Compat}}

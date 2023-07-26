@@ -1,16 +1,6 @@
 ---
 title: tabs.onReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onReplaced
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onReplaced
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onReplaced
 ---
 
@@ -23,9 +13,9 @@ Cet événement peut ne pas être pertinent ou pris en charge par des navigateur
 ## Syntaxe
 
 ```js
-browser.tabs.onReplaced.addListener(listener)
-browser.tabs.onReplaced.removeListener(listener)
-browser.tabs.onReplaced.hasListener(listener)
+browser.tabs.onReplaced.addListener(listener);
+browser.tabs.onReplaced.removeListener(listener);
+browser.tabs.onReplaced.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -68,9 +58,9 @@ browser.tabs.onReplaced.addListener(handleReplaced);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.onReplaced")}}
+{{Compat}}
 
 > **Note :**
 >

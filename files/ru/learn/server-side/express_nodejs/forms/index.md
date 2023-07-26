@@ -1,5 +1,5 @@
 ---
-title: 'Учебник Express часть 6: Работа с формами'
+title: "Учебник Express часть 6: Работа с формами"
 slug: Learn/Server-side/Express_Nodejs/forms
 tags:
   - Начинающим
@@ -30,15 +30,19 @@ translation_of: Learn/Server-side/Express_Nodejs/forms
 
 Первый краткий обзор [HTML Forms](/ru/docs/Web/Guide/HTML/Forms). Рассмотрим простую HTML-форму с одним текстовым полем для ввода имени некоторой "команды" и связанной с ней меткой:
 
-![Simple name field example in HTML form](https://mdn.mozillademos.org/files/14117/form_example_name_field.png)
+![Simple name field example in HTML form](form_example_name_field.png)
 
 Определённые в HTML формы собираются внутри тэга `<form>...</form>`, содержащего хотя ы один элемент `input` с `type="submit"`.
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -58,13 +62,13 @@ Input `submit` будет отображаться в виде кнопки (п�
 
 Блок-схема процесса обработки запросов формы показана ниже, начиная с запроса страницы, содержащей форму (показана зелёным цветом):
 
-![](https://mdn.mozillademos.org/files/14478/Web%20server%20form%20handling.png)
+![](web_server_form_handling.png)
 
 Как показано на диаграмме выше, основные действия, которые необходимо выполнить коду обработки форм:
 
 1. Отображение формы по умолчанию при первом запросе пользователем.
 
-    - Форма может содержать пустые поля (например, если вы создаёте новую запись), или она может быть предварительно заполнена начальными значениями (например, если вы изменяете запись или имеете полезные начальные значения по умолчанию).
+   - Форма может содержать пустые поля (например, если вы создаёте новую запись), или она может быть предварительно заполнена начальными значениями (например, если вы изменяете запись или имеете полезные начальные значения по умолчанию).
 
 2. Получение данных, отправленных пользователем, обычно в запросе HTTP `POST`.
 3. Валидация и очистка данных.
@@ -100,8 +104,8 @@ npm install express-validator
 Для того, чтобы использовать валидатор в наших контроллерах, мы должны требовать функции, которые мы хотим использовать из модулей **'express-validator/check**' и **'express-validator/filter**', как показано ниже:
 
 ```js
-const { body,validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');
+const { body, validationResult } = require("express-validator/check");
+const { sanitizeBody } = require("express-validator/filter");
 ```
 
 Есть много доступных функций, позволяющих проверять и очищать данные из параметров запроса, тела, заголовков, файлов cookie и т. д., или все сразу. Для этого урока мы будем использовать `body`, `sanitizeBody`, and `validationResult` (как "требуется" выше).
@@ -135,17 +139,16 @@ const { sanitizeBody } = require('express-validator/filter');
 
   ```js
   (req, res, next) => {
-      // Extract the validation errors from a request.
-      const errors = validationResult(req);
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-      if (!errors.isEmpty()) {
-          // There are errors. Render form again with sanitized values/errors messages.
-          // Error messages can be returned in an array using `errors.array()`.
-          }
-      else {
-          // Data from form is valid.
-      }
-  }
+    if (!errors.isEmpty()) {
+      // There are errors. Render form again with sanitized values/errors messages.
+      // Error messages can be returned in an array using `errors.array()`.
+    } else {
+      // Data from form is valid.
+    }
+  };
   ```
 
   Мы используем метод `isEmpty()` результата проверки, чтобы проверить, были ли ошибки, и его метод array (), чтобы получить набор сообщений об ошибках. Дополнительные сведения см. в разделе API результатов проверки.
@@ -176,10 +179,10 @@ const { sanitizeBody } = require('express-validator/filter');
 
 ```js
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
-router.get('/genre/create', genre_controller.genre_create_get);
+router.get("/genre/create", genre_controller.genre_create_get);
 
 // POST request for creating Genre.
-router.post('/genre/create', genre_controller.genre_create_post);
+router.post("/genre/create", genre_controller.genre_create_post);
 ```
 
 ## Express формы — подразделы

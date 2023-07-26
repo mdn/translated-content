@@ -25,8 +25,8 @@ Firefox 14 は 米国時間 2012 年 7 月 17 日にリリースされました�
 - {{domxref("Document")}} のメソッドである `execCommandShowHelp()` と `queryCommandText()` は、今まで何もしませんでしたが、削除されました。`
 - `GeoPositionAddress` インターフェイスは、 [Geolocation](/ja/docs/Web/API/Geolocation_API) API で廃止された仕様の一部であり、削除されました。
 - {{domxref("Storage", "localStorage/sessionStorage")}} がプロパティアクセスを通した宣言されていないキーに対して `null` ではなく `undefined` を正しく返すようになりました。
-- {{domxref("ImageData")}} オブジェクトが実装されました ({{bug(550309)}})。
-- {{domxref("Attr")}} インターフェイスの子ノードに関する属性やメソッドが廃止されました ({{bug(737122)}})。
+- {{domxref("ImageData")}} オブジェクトが実装されました ([Firefox バグ 550309](https://bugzil.la/550309))。
+- {{domxref("Attr")}} インターフェイスの子ノードに関する属性やメソッドが廃止されました ([Firefox バグ 737122](https://bugzil.la/737122))。
 
 ### CSS
 
@@ -66,7 +66,7 @@ Gecko で新しい [HTTP](/ja/docs/Web/HTTP) [`308 Permanent Redirect`](/ja/docs
 - `nsILocalFile` インターフェイスは `nsIFile` にマージされました ([bug 682360](https://bugzilla.mozilla.org/show_bug.cgi?id=682360))。
 - ブックマークをインポートするための `nsIPlacesImportExportService` におけるメソッドは [`BookmarkHTMLUtils.jsm`](/ja/docs/JavaScript_code_modules/BookmarkHTMLUtils.jsm) JavaScript コードモジュールの利用を促すために削除されました。
 - `nsIDOMGeoPositionAddress` インターフェースは削除されました。
-- `getItemGUID`, `setItemGUID`, `getItemIdForGUID` の各メソッドが `nsINavBookmarksService` から削除されました ({{bug("715355")}})。
+- `getItemGUID`, `setItemGUID`, `getItemIdForGUID` の各メソッドが `nsINavBookmarksService` から削除されました ([Firefox バグ 715355](https://bugzil.la/715355))。
 
 ### スペルチェック
 

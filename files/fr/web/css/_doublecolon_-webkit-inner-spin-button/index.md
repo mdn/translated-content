@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-inner-spin-button'
 slug: Web/CSS/::-webkit-inner-spin-button
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-inner-spin-button
 ---
 
@@ -39,7 +34,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-inner-spin-button")}}
+{{Compat}}
 
 ## Voir aussi
 

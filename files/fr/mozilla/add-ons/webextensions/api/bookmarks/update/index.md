@@ -1,16 +1,6 @@
 ---
 title: bookmarks.update()
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
-tags:
-  - API
-  - Add-ons
-  - Bookmarks
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - Update
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/update
 ---
 
@@ -26,9 +16,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var updating = browser.bookmarks.update(
-  id,                    // string
-  changes                // object
-)
+  id, // string
+  changes, // object
+);
 ```
 
 ### Paramètres
@@ -66,7 +56,7 @@ function updateFolders(items) {
     // only folders, so skip items with a `url`
     if (!item.url) {
       var updating = browser.bookmarks.update(item.id, {
-        title: "Mozilla Developer Network (MDN)"
+        title: "Mozilla Developer Network (MDN)",
       });
       updating.then(onFulfilled, onRejected);
     }
@@ -79,9 +69,9 @@ searching.then(updateFolders, onRejected);
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.bookmarks.update")}}
+{{Compat}}
 
 > **Note :**
 >

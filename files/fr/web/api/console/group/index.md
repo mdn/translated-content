@@ -1,14 +1,6 @@
 ---
 title: Console.group()
-slug: Web/API/Console/group
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthodes
-  - Web
-  - console
-  - débogage
+slug: Web/API/console/group
 translation_of: Web/API/Console/group
 ---
 

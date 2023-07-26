@@ -61,11 +61,11 @@ function handleStart(evt) {
   var ctx = el.getContext("2d");
   var touches = evt.changedTouches;
 
-  for (var i=0; i<touches.length; i++) {
+  for (var i = 0; i < touches.length; i++) {
     ongoingTouches.push(touches[i]);
     var color = colorForTouch(touches[i]);
     ctx.fillStyle = color;
-    ctx.fillRect(touches[i].pageX-2, touches[i].pageY-2, 4, 4);
+    ctx.fillRect(touches[i].pageX - 2, touches[i].pageY - 2, 4, 4);
   }
 }
 ```
@@ -87,7 +87,7 @@ function handleMove(evt) {
 
   ctx.lineWidth = 4;
 
-  for (var i=0; i<touches.length; i++) {
+  for (var i = 0; i < touches.length; i++) {
     var color = colorForTouch(touches[i]);
     var idx = ongoingTouchIndexById(touches[i].identifier);
 
@@ -97,7 +97,7 @@ function handleMove(evt) {
     ctx.lineTo(touches[i].pageX, touches[i].pageY);
     ctx.closePath();
     ctx.stroke();
-    ongoingTouches.splice(idx, 1, touches[i]);  // swap in the new touch record
+    ongoingTouches.splice(idx, 1, touches[i]); // swap in the new touch record
   }
 }
 ```
@@ -121,7 +121,7 @@ function handleEnd(evt) {
 
   ctx.lineWidth = 4;
 
-  for (var i=0; i<touches.length; i++) {
+  for (var i = 0; i < touches.length; i++) {
     var color = colorForTouch(touches[i]);
     var idx = ongoingTouchIndexById(touches[i].identifier);
 
@@ -129,7 +129,7 @@ function handleEnd(evt) {
     ctx.beginPath();
     ctx.moveTo(ongoingTouches[i].pageX, ongoingTouches[i].pageY);
     ctx.lineTo(touches[i].pageX, touches[i].pageY);
-    ongoingTouches.splice(i, 1);  // remove it; we're done
+    ongoingTouches.splice(i, 1); // remove it; we're done
   }
 }
 ```
@@ -145,8 +145,8 @@ function handleCancel(evt) {
   evt.preventDefault();
   var touches = evt.changedTouches;
 
-  for (var i=0; i<touches.length; i++) {
-    ongoingTouches.splice(i, 1);  // remove it; we're done
+  for (var i = 0; i < touches.length; i++) {
+    ongoingTouches.splice(i, 1); // remove it; we're done
   }
 }
 ```
@@ -177,14 +177,14 @@ La función `ongoingTouchIndexById()` abajo explora mediante la matriz `ongoingT
 
 ```js
 function ongoingTouchIndexById(idToFind) {
-  for (var i=0; i<ongoingTouches.length; i++) {
+  for (var i = 0; i < ongoingTouches.length; i++) {
     var id = ongoingTouches[i].identifier;
 
     if (id == idToFind) {
       return i;
     }
   }
-  return -1;    // not found
+  return -1; // not found
 }
 ```
 
@@ -223,6 +223,10 @@ function onTouch(evt) {
 
 Una cosa para prevenir cosas como `pinchZoom` en una página es llamar a `preventDefault()` en el segundo toque de una serie. Este comportamiento no está bien definido en los eventos de toque, y resulta en diferentes comportamientos en diferentes navegadores (osea iOS evitará el zoom o acercamiento pero permitirá vista panorámica con ambos dedos. Android permitirá zoom o acercamiento pero no una panorámica. Opera and Firefox actualmente evita panorámica y zoom o acercamiento). Actualmente, no se recomienda depender de ningún comportamiento en particular en este caso, si no mas bien depender de una meta vista para evitar el zoom.
 
-## Compatibilidad de navegadores
+## Especificaciones
 
-{{Compat("api.Touch")}}
+{{Specifications}}
+
+## Compatibilidad con navegadores
+
+{{Compat}}

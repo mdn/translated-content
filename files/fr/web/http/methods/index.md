@@ -1,12 +1,7 @@
 ---
 title: Méthodes de requête HTTP
 slug: Web/HTTP/Methods
-tags:
-  - HTTP
-  - Méthodes
-  - Reference
 translation_of: Web/HTTP/Methods
-original_slug: Web/HTTP/Méthode
 ---
 
 {{HTTPSidebar}}
@@ -34,10 +29,7 @@ HTTP définit un ensemble de **méthodes de requête** qui indiquent l'action qu
 
 ## Spécifications
 
-| Spécification                                        | Titre                                                         | Commentaires                                                           |
-| ---------------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| {{RFC("7231", "Request methods", "4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content | Définition de GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS et TRACE. |
-| {{RFC("5789", "Patch method", "2")}}     | PATCH Method for HTTP                                         | Définition de PATCH.                                                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

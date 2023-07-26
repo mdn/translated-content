@@ -22,7 +22,7 @@ decodeURI(encodedURI)
 
 ### Valor retornado
 
-Uma nova string representando a versão não codificada do URI (Uniform Resource Identifier) ​​codificado fornecido.
+Uma nova string representando a versão não codificada do URI (Uniform Resource Identifier) codificado fornecido.
 
 ### Exceções
 
@@ -30,7 +30,7 @@ Lança uma exceção {{jsxref("URIError")}} ("sequência de URI malformada") qua
 
 ## Descrição
 
-Substitui cada sequência de escape no URI codificado pelo caractere que ele representa, mas não decodifica sequências de escape que não poderiam ter sido introduzidas por {{jsxref("encodeURI")}}. O caractere “`#`” não é decodificado a partir de sequência de escape.
+Substitui cada sequência de escape no URI codificado pelo caractere que ele representa, mas não decodifica sequências de escape que não poderiam ter sido introduzidas por {{jsxref("encodeURI")}}. O caractere "`#`" não é decodificado a partir de sequência de escape.
 
 ## Exemplos
 

@@ -1,14 +1,7 @@
 ---
 title: Intl.Locale.prototype.baseName
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
-tags:
-  - Internationalisation
-  - Intl
-  - JavaScript
-  - Propriété
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
-original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/baseName
 ---
 
 {{JSRef}}
@@ -55,13 +48,11 @@ console.log(dutch.baseName); // Prints out "nl-Latn-NL"
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                    | Commentaires |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
-| [Proposition pour `Intl.Locale.prototype.baseName`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.baseName) | Proposition de niveau 3 |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Locale.baseName")}}
+{{Compat}}
 
 ## Voir aussi
 

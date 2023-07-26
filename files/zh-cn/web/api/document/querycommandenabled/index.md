@@ -5,7 +5,7 @@ slug: Web/API/Document/queryCommandEnabled
 
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-> **备注：** 该方法在部分浏览器返回的结果是不可预料的。因此，建议使用 execCommand 的返回值直接判断，或通过其它方式嗅探，而非使用该方法。
+> **备注：** 该方法在部分浏览器返回的结果是不可预料的。因此，建议使用 execCommand 的返回值直接判断，或通过其他方式嗅探，而非使用该方法。
 
 **`Document.queryCommandEnabled()`** 方法可查询浏览器中指定的编辑指令是否可用。
 

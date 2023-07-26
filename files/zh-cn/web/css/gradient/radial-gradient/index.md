@@ -46,7 +46,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 ## 描述
 
-与其它渐变相同，径向渐变是一个[不固定尺寸](/zh-CN/docs/Web/CSS/image#no_intrinsic)的图像，即它没有首选的大小，也没有首选的比例。具体大小将由它所应用的元素的大小决定。
+与其他渐变相同，径向渐变是一个[不固定尺寸](/zh-CN/docs/Web/CSS/image#no_intrinsic)的图像，即它没有首选的大小，也没有首选的比例。具体大小将由它所应用的元素的大小决定。
 
 如要创建重复的径向渐变来填充容器，请使用 CSS 的 {{cssxref("repeating-radial-gradient")}} 方法。
 
@@ -87,7 +87,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 }
 ```
 
-{{EmbedLiveSample('Simple_gradient', 120, 120)}}
+{{EmbedLiveSample('简单的渐变', 120, 120)}}
 
 ### 非居中渐变
 
@@ -109,11 +109,11 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 }
 ```
 
-{{EmbedLiveSample('Non-centered_gradient', 240, 120)}}
+{{EmbedLiveSample('非居中渐变', 240, 120)}}
 
 ### 更多径向渐变示例
 
-请参见 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Images/Using_CSS_gradients)获取更多示例。
+请参见 [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)获取更多示例。
 
 ## 规范
 
@@ -125,7 +125,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 
 ## 参见
 
-- [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_Images/Using_CSS_gradients)
+- [CSS 渐变](/zh-CN/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - 其他的渐变函数：{{cssxref("repeating-radial-gradient")}}、{{cssxref("linear-gradient")}}、{{cssxref("repeating-linear-gradient")}}、{{cssxref("conic-gradient")}}、{{cssxref("repeating-conic-gradient")}}
 - {{cssxref("&lt;image&gt;")}}
 - {{cssxref("_image","image()")}}

@@ -1,12 +1,6 @@
 ---
 title: Event.srcElement
 slug: Web/API/Event/srcElement
-tags:
-  - API
-  - DOM
-  - Evènement
-  - Propriétés
-  - Éléments SRC
 translation_of: Web/API/Event/srcElement
 ---
 
@@ -22,7 +16,7 @@ Ne fait partie d'aucune spécification.
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Event.srcElement")}}
+{{Compat}}
 
 ## Voir aussi
 

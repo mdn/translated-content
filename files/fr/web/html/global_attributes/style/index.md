@@ -1,13 +1,7 @@
 ---
 title: style
 slug: Web/HTML/Global_attributes/style
-tags:
-  - Attribut
-  - Attribut universel
-  - HTML
-  - Reference
 translation_of: Web/HTML/Global_attributes/style
-original_slug: Web/HTML/Attributs_universels/style
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -16,7 +10,7 @@ L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`style`** conti
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-style.html","tabbed-shorter")}}
 
-> **Note :** Cet attribut ne doit pas être utilisé à des fins sémantiques. En effet, si toute mise en forme est retirée, toute page doit rester correcte d'un point de vue sémantique. On ne devrait pas, notamment, utiliser cet attribut afin de cacher des informations qui ne seraient pas pertinentes (cela devrait être réalisé avec l'attribut {{htmlattrxref("hidden")}}.
+> **Note :** Cet attribut ne doit pas être utilisé à des fins sémantiques. En effet, si toute mise en forme est retirée, toute page doit rester correcte d'un point de vue sémantique. On ne devrait pas, notamment, utiliser cet attribut afin de cacher des informations qui ne seraient pas pertinentes (cela devrait être réalisé avec l'attribut [`hidden`](/fr/docs/Web/HTML/Global_attributes#hidden).
 
 ## Exemples
 

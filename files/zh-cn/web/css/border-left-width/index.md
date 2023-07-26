@@ -44,7 +44,7 @@ border-left-width: unset;
 
 {{csssyntax}}
 
-## 例子
+## 示例
 
 ### HTML
 
@@ -71,7 +71,7 @@ div:nth-child(2) {
 
 ### 结果
 
-{{EmbedLiveSample('Example', '100%')}}
+{{EmbedLiveSample('示例', '100%')}}
 
 ## 规范
 
@@ -83,7 +83,7 @@ div:nth-child(2) {
 
 {{Compat}}
 
-## 其他
+## 参见
 
 - The other border-width-related CSS properties: {{Cssxref("border-bottom-width")}}, {{Cssxref("border-right-width")}}, {{Cssxref("border-top-width")}}, and {{Cssxref("border-width")}}.
 - The other border-left-related CSS properties: {{Cssxref("border")}}, {{Cssxref("border-left")}}, {{Cssxref("border-left-style")}}, and {{Cssxref("border-left-color")}}.

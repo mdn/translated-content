@@ -470,7 +470,7 @@ drawChart({
 
 你也可以在没有该默认值的情况下编写该函数。但是，如果你省略该默认值，该函数将在调用时寻找至少一个参数来提供，而在当前形式下，你可以在不提供任何参数的情况下调用 `drawChart()`。否则，你至少需要提供一个空对象字面量。
 
-有关详细信息，请参阅[默认参数值 > 有默认值的解构参数](zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters#有默认值的解构参数)。
+有关详细信息，请参阅[默认参数值 > 有默认值的解构参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters#有默认值的解构参数)。
 
 #### 解构嵌套对象和数组
 
@@ -486,7 +486,7 @@ const metadata = {
       title: 'JavaScript-Umgebung'
     }
   ],
-  url: '/en-US/docs/Tools/Scratchpad'
+  url: '/zh-CN/docs/Tools/Scratchpad'
 };
 
 let {
@@ -558,7 +558,7 @@ console.log(fizzBuzz); // true
 
 ### 解构基本类型
 
-对象解构几乎等同于[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_Accessors)。这意味着，如果尝试解构基本类型的值，该值将被包装到相应的包装器对象中，并且在包装器对象上访问该属性。
+对象解构几乎等同于[属性访问](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors)。这意味着，如果尝试解构基本类型的值，该值将被包装到相应的包装器对象中，并且在包装器对象上访问该属性。
 
 ```js
 const { a, toFixed } = 1;

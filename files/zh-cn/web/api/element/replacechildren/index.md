@@ -23,7 +23,7 @@ Element.replaceChildren(...nodesOrDOMStrings) // 返回 undefined
 
 - {{domxref("HierarchyRequestError")}}: 当违反了[节点树的约束条件](https://dom.spec.whatwg.org/#concept-node-tree)时抛出。
 
-## 例子
+## 示例
 
 ### 清空一个节点
 
@@ -131,7 +131,7 @@ noBtn.addEventListener('click', () => {
 
 最终结果如下：
 
-{{EmbedLiveSample('Transferring_nodes_between_parents', '100%', '350')}}
+{{EmbedLiveSample('在父节点之间转移节点', '100%', '350')}}
 
 ## 规范
 
@@ -141,7 +141,7 @@ noBtn.addEventListener('click', () => {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
 - {{domxref("Element")}} and {{domxref("ChildNode")}}
 - {{domxref("Element.prepend()")}}

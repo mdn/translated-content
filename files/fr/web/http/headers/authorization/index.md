@@ -1,11 +1,6 @@
 ---
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
-tags:
-  - HTTP
-  - Reference
-  - en-tête
-  - requête
 translation_of: Web/HTTP/Headers/Authorization
 ---
 
@@ -63,10 +58,11 @@ Voir aussi l'article [authentification HTTP](/fr/docs/Web/HTTP/Authentication) a
 
 ## Spécifications
 
-| Spécification                                        | Titre                                  |
-| ---------------------------------------------------- | -------------------------------------- |
-| {{RFC("7235", "Authorization", "4.2")}} | HTTP/1.1 : Authentification            |
-| {{RFC("7617")}}                                 | Schéma d'Authentification HTTP 'Basic' |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir
 

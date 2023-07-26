@@ -17,7 +17,7 @@ original_slug: Learn/CSS/CSS_layout/반응형_디자인
           href="/ko/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 입문서</a
         >를 공부하세요), 그리고 CSS의 작동 방식을 파악하기 위해 (<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/ko/docs/Learn/CSS/First_steps"
           >CSS 첫걸음</a
         >과
         <a href="/ko/docs/Learn/CSS/Building_blocks">CSS 구성 블록</a>를
@@ -40,13 +40,13 @@ original_slug: Learn/CSS/CSS_layout/반응형_디자인
 
 이러한 두 가지 접근법은 사이트를 디자인하는 사람의 화면에서 가장 보기 좋은 웹 사이트로 귀결되는 경향이 있었습니다! 유동 사이트는 (아래에서 볼 수 있듯이) 디자이너의 화면보다 더 작은 화면에는 찌부러진 디자인이 나오고, 더 큰 화면에는 읽을 수 없을 정도로 길이가 긴 라인을 만들어냅니다.
 
-![두 개의 열이 있는 레이아웃이 모바일 크기 뷰포트에서 찌부러집니다.](https://mdn.mozillademos.org/files/16834/mdn-rwd-liquid.png)
+![두 개의 열이 있는 레이아웃이 모바일 크기 뷰포트에서 찌부러집니다.](mdn-rwd-liquid.png)
 
 > **참고:** **주석**: 여기 간단한 유동 레이아웃을 보세요: [예제](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html), [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html). 예제를 보면 브라우저 창을 안팎으로 드래그하여 서로 다른 크기에 반응해 어떻게 보이는지 확인합니다.
 
 고정 폭 사이트는 (아래에서 보듯) 사이트 너비보다 작은 화면상에 수평 스크롤 막대가 생기는 위험이 있고 더 큰 화면상에서는 웹디자인 가장자리에 많은 흰색 공간이 생길 위험이 있습니다.
 
-![이동 뷰포트에 수평 스크롤 막대가 있는 레이아웃입니다.](https://mdn.mozillademos.org/files/16835/mdn-rwd-fixed.png)
+![이동 뷰포트에 수평 스크롤 막대가 있는 레이아웃입니다.](mdn-rwd-fixed.png)
 
 > **참고:** **주석**: 여기 간단한 고정 너비 레이아웃을 보세요: [예제](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html), [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html). 역시 브라우저 창 크기를 변경할 때 결과를 관찰하세요.
 
@@ -118,11 +118,11 @@ target / context = result
 
 다음 예제에서는 미디어 쿼리와 가변 격자를 사용하여 간단한 반응형 디자인를 보여줍니다. 좁은 화면상에서는 상자가 상대 요소 위해 겹겹이 쌓여지는 레이아웃 형태로 표시됩니다.
 
-![상자 무리가 상대 요소의 상단에 수직으로 겹겹이 쌓이는 모바일뷰 레이아웃입니다.](https://mdn.mozillademos.org/files/16836/mdn-rwd-mobile.png)
+![상자 무리가 상대 요소의 상단에 수직으로 겹겹이 쌓이는 모바일뷰 레이아웃입니다.](mdn-rwd-mobile.png)
 
 On wider screens they move to two columns:
 
-![2단 레이아웃이 적용된 데스크탑 뷰입니다.](https://mdn.mozillademos.org/files/16837/mdn-rwd-desktop.png)
+![2단 레이아웃이 적용된 데스크탑 뷰입니다.](mdn-rwd-desktop.png)
 
 > **참고:** **주석**: 여러분은 여기서 [실례](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html)를 찾아볼 수 있으며, 이 예제에 대한 [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html)를 깃허브에서 찾을 수 있습니다.
 
@@ -168,7 +168,7 @@ On wider screens they move to two columns:
 
 ### CSS 격자
 
-CSS 격자 레이아웃에서 `fr` 단위는 격자 트랙 전역에 걸쳐 이용할 수 있는 공간을 분배할 수 있습니다. 다음 예에서는 `1fr` 크기의 트랙 3개가 있는 격자 컨테이너를 만듭니다. 이렇게 하면 3개의 열 트랙이 생성되며, 각 트랙은 컨테이너에 있는 사용 가능한 공간\의 한 부분을 차지합니다. 여러분은 [fr 단위를 포함한 가변 격자](ko/docs/Learn/CSS/CSS_layout/Grids#fr_단위를_포함하는_가변_격자)라는 격자 레이아웃 학습 주제에서 격자를 생성하는 이같은 접근 방식에 대해 자세히 알 수 있습니다.
+CSS 격자 레이아웃에서 `fr` 단위는 격자 트랙 전역에 걸쳐 이용할 수 있는 공간을 분배할 수 있습니다. 다음 예에서는 `1fr` 크기의 트랙 3개가 있는 격자 컨테이너를 만듭니다. 이렇게 하면 3개의 열 트랙이 생성되며, 각 트랙은 컨테이너에 있는 사용 가능한 공간\의 한 부분을 차지합니다. 여러분은 [fr 단위를 포함한 가변 격자](/ko/docs/Learn/CSS/CSS_layout/Grids#fr_단위를_포함하는_가변_격자)라는 격자 레이아웃 학습 주제에서 격자를 생성하는 이같은 접근 방식에 대해 자세히 알 수 있습니다.
 
 ```css
 .container {
@@ -191,7 +191,7 @@ img {
 
 이 접근법에는 명백한 단점이 있습니다. 해당 이미지는 고유 크기보다 훨씬 작게 표시될 수 있어 대역폭 낭비입니다. 다시말해 모바일 사용자는 브라우저 창에서 실제로 보는 것의 몇 배 크기의 이미지를 다운로드하게 되니 낭비입니다. 또한, 데스크톱과 같은 이미지 가로 세로 비율을 모바일에서 원하지 않을 수도 있습니다. 예를 들어, 모바일의 경우 정사각형 이미지가 좋을 수 있지만 데스크톱상에는 같은 이미지를 가로 보기처럼 장면을 보여줍니다. 또는 모바일 상의 이미지의 크기가 작다는 것을 이해하면서도 서로 다른 이미지를 모두 보여주고 싶을 경우가 있습니다. 말하자면 작은 화면 크기에서 더 쉽게 해석될 수 있는 이미지를 말합니다. 이런 것들은 단순히 이미지를 축소해서는 달성할 수 없습니다.
 
-반응형 이미지는 [`<picture>`](/en-US/docs/Web/HTML/Element/picture) 요소와 [`<img>`](/en-US/docs/Web/HTML/Element/img), `srcset`과 `sizes` 속성은 이러한 문제를 모두 해결합니다. 여러분은 "힌트"(이미지에 가장 적합한 화면 크기와 해상도를 설명하는 메타 데이터)와 함께 여러 크기를 제공할 수 있으며, 브라우저는 각 장치에 가장 적합한 이미지를 선택하며, 사용자가 사용하고 있는 장치에 적합한 이미지 크기를 다운로드할 수 있도록 담보합니다.
+반응형 이미지는 [`<picture>`](/ko/docs/Web/HTML/Element/picture) 요소와 [`<img>`](/ko/docs/Web/HTML/Element/img), `srcset`과 `sizes` 속성은 이러한 문제를 모두 해결합니다. 여러분은 "힌트"(이미지에 가장 적합한 화면 크기와 해상도를 설명하는 메타 데이터)와 함께 여러 크기를 제공할 수 있으며, 브라우저는 각 장치에 가장 적합한 이미지를 선택하며, 사용자가 사용하고 있는 장치에 적합한 이미지 크기를 다운로드할 수 있도록 담보합니다.
 
 또한 다른 화면 크기에서 사용되는 이미지를 *art direct*할 수 있으므로 서로 다른 화면 크기에 대해 서로 다른 자르기 또는 완전히 다른 이미지를 제공할 수 있습니다.
 
@@ -223,11 +223,11 @@ h1 {
 
 모바일에서는 머리글이 더 작다:
 
-![머리글 크기가 작은 스택 모양의 레이아웃입니다.](https://mdn.mozillademos.org/files/16838/mdn-rwd-font-mobile.png)
+![머리글 크기가 작은 스택 모양의 레이아웃입니다.](mdn-rwd-font-mobile.png)
 
 On desktop however we see the larger heading size:
 
-![큰 머리글이 딸린 두개의 열 레이아웃입니다.](https://mdn.mozillademos.org/files/16839/mdn-rwd-font-desktop.png)
+![큰 머리글이 딸린 두개의 열 레이아웃입니다.](mdn-rwd-font-desktop.png)
 
 > **참고:** 이 예제의 실제 구현 장면: [예제](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
 
@@ -245,7 +245,7 @@ h1 {
 
 위의 작업 수행에서의 문제는 사용자가 vw 단위를 사용하여 텍스트 집합을 확대/축소하는 기능을 상실하는 데 있다. **따라서 여러분은 뷰포트 단위만으로 텍스트를 설정해서는 안 된다**.
 
-해결책이 하나 있다. [`calc()`](/en-US/docs/Web/CSS/calc)를 사용하는 것이다. 즉, `em`와 같은 고정된 크기를 사용하여 속성값 집합에 `vw` 단위를 추가하면 텍스트는 여전히 확대/축소할 수 있다. 본질적으로 `vw` 단위는 확대/축소 값에 더해 추가된다.
+해결책이 하나 있다. [`calc()`](/ko/docs/Web/CSS/calc)를 사용하는 것이다. 즉, `em`와 같은 고정된 크기를 사용하여 속성값 집합에 `vw` 단위를 추가하면 텍스트는 여전히 확대/축소할 수 있다. 본질적으로 `vw` 단위는 확대/축소 값에 더해 추가된다.
 
 ```css
 h1 {
@@ -285,8 +285,6 @@ h1 {
 
 여러분은 `minimum-scale`와 `maximum-scale` 사용을 피해야하며, 특히 `user-scalable`를 `no`로 설정하는 것도 피해야 합니다. 사용자는 필요한 만큼 확대하거나 축소할 수 있어야 합니다.이를 방지하면 접근성 문제가 발생합니다.
 
-> **참고:** 뷰포트 메타 태그를 대체하기 위해 고안된 CSS @ 규칙이 있습니다. [@viewport](/ko/docs/Web/CSS/@viewport) 그러나 브라우저 지원이 매우 형편없습니다. 그것은 인터넷 익스플로러와 에지에서 구현되었지만, 일단 크롬 기반 에지가 출시되면 더 이상 에지 브라우저의 일부가 되지 않게 됩니다.
-
 ## 요약정리
 
 반응형 디자인은 디자인이 보여지는 당해 환경에서 반응하는 사이트 및 애플리케이션 디자인을 말합니다. 그것은 많은 CSS와 HTML 기능과 기술을 망라하며 이제 기본값으로 우리가 웹사이트를 구축할 때 필수적인 방법입니다. 여러분이 휴대폰으로 방문하는 사이트를 생각해보세요. 데스크톱 버전이 축소된 사이트, 또는 사물을 찾기 위해 옆으로 스크롤해야 하는 사이트를 우연히 발견한다는 것은 상당히 이례적인 일일 것입니다. 그렇게 된 것은 웹이 반응형으로 디자인하는 접근방식으로 옮겨갔기 때문입니다.
@@ -294,18 +292,3 @@ h1 {
 또한 이번 단원에서 배운 레이아웃 메서드의 도움으로 반응형 디자인을 달성하기가 훨씬 쉬워졌습니다. 여러분이 당대 웹 개발에 신출내기라면, 반응형 디자인 초창기보다 훨씬 많은 도구가 마련되어 있으니 맘껏 이용하십시요. 따라서 당신이 참조하고 있는 어떤 자료의 연혁을 확인할 가치가 있습니다. 역사적 기록 문서로서 여전히 유용하지만, 사이트 방문자가 이용하는 장치가 무엇이건 관계없이 우아하고 유용한 디자인을 훨씬 쉽게 생성하려면 CSS와 HTML의 현대적 용법이 정답입니다.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
-
-## 이번 단위에는
-
-- [CSS 레이아웃 소개](/ko/docs/Learn/CSS/CSS_layout/Introduction)
-- [일반 대열](/ko/docs/Learn/CSS/CSS_layout/일반_흐름)
-- [가변상자](/ko/docs/Learn/CSS/CSS_layout/Flexbox)
-- [격자](/ko/docs/Learn/CSS/CSS_layout/Grids)
-- [부동체](/ko/docs/Learn/CSS/CSS_layout/Floats)
-- [위치잡기](/ko/docs/Learn/CSS/CSS_layout/위치잡기)
-- [다단 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
-- [반응형 디자인](/ko/docs/Learn/CSS/CSS_layout/반응형_디자인)
-- [미디어 쿼리 초보자 안내서](/ko/docs/Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서)
-- [레거시 레이아웃 메서드](/ko/docs/Learn/CSS/CSS_layout/레거시_레이아웃_메서드)
-- [이전 브라우저 지원](/ko/docs/Learn/CSS/CSS_layout/%EC%9D%B4%EC%A0%84_%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80_%EC%A7%80%EC%9B%90)
-- [레이아웃 이해도 필수 평가](/ko/docs/Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension)

@@ -1,14 +1,6 @@
 ---
 title: AudioParam.cancelScheduledValues()
 slug: Web/API/AudioParam/cancelScheduledValues
-tags:
-  - API
-  - AudioParam
-  - Method
-  - Reference
-  - Web Audio API
-  - cancelScheduledValues
-browser-compat: api.AudioParam.cancelScheduledValues
 ---
 
 {{ APIRef("Web Audio API") }}

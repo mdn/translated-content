@@ -1,14 +1,6 @@
 ---
 title: NavigatorLanguage
 slug: orphaned/Web/API/NavigatorLanguage
-tags:
-  - API
-  - HTML-DOM
-  - NeedsTranslation
-  - No Interface
-  - Reference
-  - TopicStub
-translation_of: Web/API/NavigatorLanguage
 original_slug: Web/API/NavigatorLanguage
 ---
 

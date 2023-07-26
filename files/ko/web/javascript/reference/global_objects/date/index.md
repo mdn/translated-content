@@ -1,15 +1,6 @@
 ---
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
-tags:
-  - Class
-  - Date
-  - JavaScript
-  - Reference
-  - 날짜
-  - 시간
-translation_of: Web/JavaScript/Reference/Global_Objects/Date
-browser-compat: javascript.builtins.Date
 ---
 
 {{JSRef}}
@@ -58,7 +49,7 @@ UTC를 기준으로 하는 읽기/쓰기 메서드도 존재합니다.
   - : 1970년 1월 1일 00:00:00 UTC로부터 지난 시간을 밀리초 단위의 숫자 값으로 반환합니다. 윤초는 무시합니다.
 - {{jsxref("Date.parse()")}}
   - : 날짜를 나타내는 문자열을 분석한 후, 해당 날짜와 1970년 1월 1일 00:00:00 UTC의 시간 차이를 밀리초 단위의 숫자 값으로 반환합니다.
-  
+
     > **참고:** `Date.parse()`를 사용한 날짜 분석은 브라우저 간 차이 및 일관적이지 못한 동작을
     가지고 있으므로 사용하지 않는 것이 좋습니다.
 - {{jsxref("Date.UTC()")}}

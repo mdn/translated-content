@@ -9,8 +9,9 @@ original_slug: Web/HTML/Elemento/big
 **big** de big=grande
 
 - Muestra el texto marcado con un tamaño de fuente más grande. El tamaño de la fuente puede definirse en una escala del 1 al 7, **big** aumenta este valor en un punto.
+
   - : **Sus etiquetas son**: `<big>` y `</big>` (Ambas obligatorias).
-  
+
     **Crea una caja**: En línea.
 
     **Está definido como**: Elemento [de estilo de fuente](/es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente) y por lo tanto [en línea](/es/HTML/Elemento/Tipos_de_elementos#en_l.C3.ADnea).
@@ -226,7 +227,13 @@ original_slug: Web/HTML/Elemento/big
 
 ```html
 <p>
-  Texto normal y texto <big> cada <big> vez <big> más <big> grande. </big></big></big></big>
+  Texto normal y texto
+  <big>
+    cada
+    <big>
+      vez <big> más <big> grande. </big></big></big
+    ></big
+  >
 </p>
 ```
 

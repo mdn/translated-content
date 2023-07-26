@@ -1,14 +1,6 @@
 ---
 title: management.getSelf()
 slug: Mozilla/Add-ons/WebExtensions/API/management/getSelf
-tags:
-  - API
-  - Add-ons
-  - Méthode
-  - Reference
-  - WebExtensions
-  - getSelf
-  - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/getSelf
 ---
 
@@ -23,7 +15,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/Jav
 ## Syntaxe
 
 ```js
-var gettingSelf = browser.management.getSelf()
+var gettingSelf = browser.management.getSelf();
 ```
 
 ### Paramètres
@@ -34,9 +26,9 @@ Aucun.
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un objet {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}, contenant les informations sur l'extension.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.management.getSelf")}}
+{{Compat}}
 
 ## Exemples
 

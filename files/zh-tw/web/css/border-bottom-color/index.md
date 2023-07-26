@@ -5,7 +5,7 @@ slug: Web/CSS/border-bottom-color
 
 {{CSSRef}}
 
-**`border-bottom-color`** 是一種CSS屬性，用來設定元件下側[邊框](/zh-TW/docs/Web/CSS/border)的顏色。也可由含括此屬性功能的簡寫屬性{{cssxref("border-color")}}或{{cssxref("border-bottom")}}設定該屬性值。
+**`border-bottom-color`** 是一種 CSS 屬性，用來設定元件下側[邊框](/zh-TW/docs/Web/CSS/border)的顏色。也可由含括此屬性功能的簡寫屬性 {{cssxref("border-color")}} 或 {{cssxref("border-bottom")}} 設定該屬性值。
 
 {{EmbedInteractiveExample("pages/css/border-bottom-color.html")}}
 
@@ -51,9 +51,10 @@ border-bottom-color: unset;
 
 ```html
 <div class="mybox">
-  <p>這是一個帶有框線的方框。
-     請注意某側框線顏色已設為
-     <span class="redtext">紅色</span>。</p>
+  <p>
+    這是一個帶有框線的方框。 請注意某側框線顏色已設為
+    <span class="redtext">紅色</span>。
+  </p>
 </div>
 ```
 
@@ -61,13 +62,13 @@ border-bottom-color: unset;
 
 ```css
 .mybox {
-    border: solid 0.3em gold;
-    border-bottom-color: red;
-    width: auto;
+  border: solid 0.3em gold;
+  border-bottom-color: red;
+  width: auto;
 }
 
 .redtext {
-    color: red;
+  color: red;
 }
 ```
 

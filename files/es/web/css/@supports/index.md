@@ -1,5 +1,5 @@
 ---
-title: '@supports'
+title: "@supports"
 slug: Web/CSS/@supports
 ---
 
@@ -132,7 +132,7 @@ es equivalente a:
 
 ## Compatibilidad con navegadores
 
-{{Compat("css.at-rules.supports")}}
+{{Compat}}
 
 ## Ver también
 

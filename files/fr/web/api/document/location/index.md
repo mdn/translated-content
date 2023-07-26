@@ -1,13 +1,6 @@
 ---
 title: Document.location
 slug: Web/API/Document/location
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Propriété
-  - Reference
-  - lecture seule
 translation_of: Web/API/Document/location
 ---
 
@@ -22,8 +15,8 @@ Si le document courant n'est pas un contexte de navigation, la valeur renvoyée 
 ## Syntaxe
 
 ```js
-locationObj = document.location
-document.location = 'http://www.mozilla.org' // équivalent à document.location.href = 'http://www.mozilla.org'
+locationObj = document.location;
+document.location = "http://www.mozilla.org"; // équivalent à document.location.href = 'http://www.mozilla.org'
 ```
 
 ## Exemple

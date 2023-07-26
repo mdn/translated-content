@@ -1,15 +1,6 @@
 ---
 title: 'Window: paste 이벤트'
 slug: Web/API/Window/paste_event
-tags:
-  - API
-  - Event
-  - Reference
-  - Web
-  - Window
-  - paste
-browser-compat: api.Window.paste_event
-translation_of: Web/API/Window/paste_event
 ---
 
 {{APIRef}}

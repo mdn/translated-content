@@ -1,17 +1,7 @@
 ---
 title: '<area> : l''élément de zone'
 slug: Web/HTML/Element/area
-tags:
-  - Content
-  - Element
-  - HTML
-  - HTML:Flow content
-  - HTML:Phrasing content
-  - Multimedia
-  - Reference
-  - Web
 translation_of: Web/HTML/Element/area
-browser-compat: html.elements.area
 ---
 
 {{HTMLSidebar}}
@@ -161,7 +151,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 - **`type`** {{deprecated_inline}}
   - : Sans effet car ignoré par les navigateurs.
 
-## Exemple
+## Exemples
 
 Dans cet exemple, la partie gauche est un lien vers une page et la partie droite est inactive.
 

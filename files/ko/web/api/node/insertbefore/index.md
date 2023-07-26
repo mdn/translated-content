@@ -1,7 +1,6 @@
 ---
 title: Node.insertBefore()
 slug: Web/API/Node/insertBefore
-translation_of: Web/API/Node/insertBefore
 ---
 {{APIRef("DOM")}}
 
@@ -21,7 +20,7 @@ var insertedNode = parentNode.insertBefore(newNode, referenceNode);
 
 `referenceNode` 가 `null` 이라면, `newNode` 가 자식 노드의 리스트의 끝에 삽입됩니다.
 
-> **참고:** _`referenceNode`_ 는 **선택 인자가 아닙니다.** -- 명시적으로 `Node` 나 `null` 를 전달해야 합니다. 전달하지 않거나 잘못된 값을 전달하면 브라우저 버전에 따라 다른 결과를 얻게 됩니다.
+> **참고:** _`referenceNode`_ 는 **선택 인자가 아닙니다.** — 명시적으로 `Node` 나 `null` 를 전달해야 합니다. 전달하지 않거나 잘못된 값을 전달하면 브라우저 버전에 따라 다른 결과를 얻게 됩니다.
 
 ## Returns
 
@@ -113,11 +112,11 @@ parentElement.insertBefore(newElement, theFirstChild);
 
 When the element does not have a first child, then `firstChild` is `null`. The element is still appended to the parent, after the last child. Since the parent element did not have a first child, it did not have a last child either. Consequently, the new element is the only element, after insertion.
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

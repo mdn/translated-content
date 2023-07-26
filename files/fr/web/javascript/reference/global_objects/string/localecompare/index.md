@@ -2,8 +2,6 @@
 title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
-original_slug: Web/JavaScript/Reference/Objets_globaux/String/localeCompare
-browser-compat: javascript.builtins.String.localeCompare
 ---
 
 {{JSRef}}

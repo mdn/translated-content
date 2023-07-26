@@ -5,9 +5,9 @@ slug: Web/API/WebGLRenderingContext/uniform
 
 {{APIRef("WebGL")}}
 
-[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的**`WebGLRenderingContext.uniform[1234][fi][v]()`** 方法指定了 uniform 变量的值。所有在 ShaderProgram 对象中定义的，且激活的 uniform 变量在 ShaderProgram 执行 link 成功后被初始化为 0。它们将保留通过调用此方法分配给它们的值，直到再次将其初始化为 0 时，也就是 ShaderProgram 对象上发生下一次成功的 link 操作为止。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.uniform[1234][fi][v]()`** 方法指定了 uniform 变量的值。所有在 ShaderProgram 对象中定义的，且激活的 uniform 变量在 ShaderProgram 执行 link 成功后被初始化为 0。它们将保留通过调用此方法分配给它们的值，直到再次将其初始化为 0 时，也就是 ShaderProgram 对象上发生下一次成功的 link 操作为止。
 
-> **备注：** 这里描述的许多函数都扩展了 WebGL 2 接口，可在以下地址查看 {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}.
+> **备注：** 这里描述的许多函数都扩展了 WebGL 2 接口，可在以下地址查看 {{domxref("WebGL2RenderingContext.uniform","WebGL2RenderingContext.uniform[1234][uif][v]()")}}。
 
 ## 语法
 
@@ -35,7 +35,7 @@ void gl.uniform4iv(location, value);
 
 ### 参数
 
-- location
+- `location`
   - : {{domxref("WebGLUniformLocation")}} 对象包含了将要修改的 uniform 属性位置。
 - `value, v0, v1, v2, v3`
 
@@ -48,7 +48,7 @@ void gl.uniform4iv(location, value);
 
 ### 返回值
 
-None.
+无（{{jsxref("undefined")}}）。
 
 ## 示例
 

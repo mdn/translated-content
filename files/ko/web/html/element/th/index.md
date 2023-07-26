@@ -1,13 +1,6 @@
 ---
 title: <th>
 slug: Web/HTML/Element/th
-tags:
-  - HTML
-  - 레퍼런스
-  - 요소
-  - 웹
-  - 표
-translation_of: Web/HTML/Element/th
 ---
 
 {{HTMLSidebar}}
@@ -22,7 +15,7 @@ The **HTML `<th>` element** defines a cell as header of a group of table cells. 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories"
           >Content categories</a
         >
       </th>
@@ -31,7 +24,7 @@ The **HTML `<th>` element** defines a cell as header of a group of table cells. 
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content"
+        <a href="/ko/docs/Web/Guide/HTML/Content_categories#Flow_content"
           >Flow content</a
         >, but with no header, footer, sectioning content, or heading content
         descendants.
@@ -121,7 +114,7 @@ This element includes the [global attributes](/ko/docs/Web/HTML/Global_attribute
   - : This attribute contains a non-negative integer value that indicates for how many columns the cell extends. Its default value is `1`. Values higher than 1000 will be considered as incorrect and will be set to the default value (1).
 - {{htmlattrdef("headers")}}
   - : This attribute contains a list of space-separated strings, each corresponding to the **id** attribute of the {{HTMLElement("th")}} elements that apply to this element.
-- {{htmlattrdef("height")}} {{Deprecated_inline("html 4")}}, {{deprecated_inline}}
+- {{htmlattrdef("height")}} {{deprecated_inline}}
 
   - : This attribute is used to define a recommended cell height.
 
@@ -135,7 +128,7 @@ This element includes the [global attributes](/ko/docs/Web/HTML/Global_attribute
 
     - `row`: The header relates to all cells of the row it belongs to.
     - `col`: The header relates to all cells of the column it belongs to.
-    - `rowgroup`: The header belongs to a rowgroup and relates to all of its cells. These cells can be placed to the right or the left of the header, depending on the value of the [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) attribute in the {{HTMLElement("table")}} element.
+    - `rowgroup`: The header belongs to a rowgroup and relates to all of its cells. These cells can be placed to the right or the left of the header, depending on the value of the [`dir`](/ko/docs/Web/HTML/Global_attributes/dir) attribute in the {{HTMLElement("table")}} element.
     - `colgroup`: The header belongs to a colgroup and relates to all of its cells.
     - `auto`
 
@@ -152,7 +145,7 @@ This element includes the [global attributes](/ko/docs/Web/HTML/Global_attribute
 
     > **참고:** Do not use this attribute as it is obsolete in the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
 
-- {{htmlattrdef("width")}} {{Deprecated_inline("html 4")}}, {{deprecated_inline}}
+- {{htmlattrdef("width")}} {{deprecated_inline}}
 
   - : This attribute is used to define a recommended cell width. Additional space can be added with the {{domxref("HTMLTableElement.cellSpacing", "cellspacing")}} and {{domxref("HTMLTableElement.cellPadding", "cellpadding")}} properties and the width of the {{HTMLElement("col")}} element can also create extra width. But, if a column's width is too narrow to show a particular cell properly, it will be widened when displayed.
 
@@ -162,13 +155,13 @@ This element includes the [global attributes](/ko/docs/Web/HTML/Global_attribute
 
 See {{HTMLElement("table")}} for examples on `<th>`.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
-{{Compat("html.elements.th")}}
+{{Compat}}
 
 ## See also
 

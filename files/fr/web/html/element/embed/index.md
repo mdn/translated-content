@@ -1,19 +1,7 @@
 ---
 title: '<embed> : l''élément de contenu externe embarqué'
 slug: Web/HTML/Element/embed
-tags:
-  - Element
-  - Embedding Content
-  - External content
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - Plugins
-  - Reference
-  - Web
-  - embed
 translation_of: Web/HTML/Element/embed
-browser-compat: html.elements.embed
 ---
 
 {{HTMLSidebar}}
@@ -121,7 +109,7 @@ Cet élément possède [les attributs universels](/fr/docs/Web/HTML/Global_attri
 
 Il est possible d'utiliser la propriété CSS [`object-position`](/fr/docs/Web/CSS/object-position) afin d'ajuster la position de l'objet embarqué au sein de la _frame_ et la propriété CSS [`object-fit`](/fr/docs/Web/CSS/object-fit) afin de contrôler la façon dont la taille de l'objet est ajustée par rapport à celle de la _frame_.
 
-## Exemple
+## Exemples
 
 ```html
 <embed type="video/quicktime" src="film.mov" width="640" height="480" title="Titre de ma vidéo">

@@ -1,15 +1,6 @@
 ---
 title: Geolocation
 slug: Web/API/Geolocation
-tags:
-  - API
-  - Advanced
-  - Geolocation API
-  - Interface
-  - Reference
-  - Secure context
-  - 위치정보
-translation_of: Web/API/Geolocation
 ---
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}

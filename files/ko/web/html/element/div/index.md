@@ -1,16 +1,8 @@
 ---
 title: '<div>: 콘텐츠 분할 요소'
 slug: Web/HTML/Element/div
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/div
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<div>` 요소**는 플로우 콘텐츠를 위한 통용 컨테이너입니다. {{glossary("CSS")}}로 꾸미기 전에는 콘텐츠나 레이아웃에 어떤 영향도 주지 않습니다.
@@ -136,7 +128,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.div")}}
+{{Compat}}
 
 ## 같이 보기
 

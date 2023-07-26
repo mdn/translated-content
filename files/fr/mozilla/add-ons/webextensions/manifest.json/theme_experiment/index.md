@@ -1,19 +1,7 @@
 ---
 title: theme expérimentation
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
-tags:
-  - Add-ons
-  - Browser
-  - Customisation
-  - Customise
-  - Design
-  - Look and Feel
-  - Themes
-  - colors
-  - navigatuer
-  - theme manifest
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
-original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experimentation
 ---
 
 {{AddonSidebar}}
@@ -184,6 +172,6 @@ Ceci a pour effet de rendre l'icône de recharge orange.
 
 Cette propriété peut également être utilisée dans `browser.theme.update()`. `images` et `properties` travaillent de la même manière que `colors`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.theme_experiment")}}
+{{Compat}}

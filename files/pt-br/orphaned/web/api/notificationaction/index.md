@@ -1,7 +1,6 @@
 ---
 title: NotificationAction
 slug: orphaned/Web/API/NotificationAction
-translation_of: Web/API/NotificationAction
 original_slug: Web/API/NotificationAction
 ---
 

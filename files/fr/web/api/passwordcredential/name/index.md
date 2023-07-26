@@ -1,12 +1,6 @@
 ---
 title: PasswordCredential.name
 slug: Web/API/PasswordCredential/name
-tags:
-  - API
-  - Credential Management API
-  - PasswordCredential
-  - Propriété
-  - Reference
 translation_of: Web/API/PasswordCredential/name
 ---
 
@@ -17,7 +11,7 @@ La propriété **`name`** est accessible en lecture seule et est rattachée à l
 ## Syntaxe
 
 ```js
-name = passwordCredential.name
+name = passwordCredential.name;
 ```
 
 ### Valeur

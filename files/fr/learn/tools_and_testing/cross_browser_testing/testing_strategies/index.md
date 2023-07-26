@@ -227,11 +227,11 @@ Pour utiliser Virtual Box, vous avez besoin de :
 4. Pour créer une nouvelle machine virtuelle, appuyer sur le bouton _Nouveau_ dans le coin en haut à gauche.
 5. Suivez les instructions et remplissez les boîtes de dialogues suivantes comme il se doit. Vous allez :
 
-    1. Donner un nom à votre machine virtuelle
-    2. Choisir un système d'exploitation et une version que vous allez installer dessus
-    3. Préciser combien de RAM doit être allouée (nous vous recommandons quelque chose comme 2048Mo, ou 2Go)
-    4. Créer un disque dur virtuel (choisissez les options pas défaut à travers les trois boîtes de dialogues contenant _Créer un disque dur virtuel maintenant_, _IDV (image disque virtuelle)_, _Allocation dynamique_)
-    5. Choisissez l'emplacement du fichier et la taille du disque dur virtuel (choisir un nom sensé et un emplacement facile à garder, et pour la dimension préciser quelque chose autour de 50Go, ou autant que vous pensez que c'est nécessaire)
+   1. Donner un nom à votre machine virtuelle
+   2. Choisir un système d'exploitation et une version que vous allez installer dessus
+   3. Préciser combien de RAM doit être allouée (nous vous recommandons quelque chose comme 2048Mo, ou 2Go)
+   4. Créer un disque dur virtuel (choisissez les options pas défaut à travers les trois boîtes de dialogues contenant _Créer un disque dur virtuel maintenant_, _IDV (image disque virtuelle)_, _Allocation dynamique_)
+   5. Choisissez l'emplacement du fichier et la taille du disque dur virtuel (choisir un nom sensé et un emplacement facile à garder, et pour la dimension préciser quelque chose autour de 50Go, ou autant que vous pensez que c'est nécessaire)
 
 Maintenant la nouvelle virtual box devrait apparaître dans le menu gauche de la fenêtre de l'interface principale de Virtual Box. A ce stade, vous pouvez double-cliquer dessus pour ouvrir la virtual box — cela commencera à démarrer la machine virtuelle, mais il n'y aura pas encore le système d'exploitation d'installé. A cet instant vous devez préciser à la boîte de dialogue l'image de votre programme d'installation, et les étapes s'exécuteront une par une dans la machine virtuelle, exactement comme si c'était un vrai ordinateur.
 
@@ -297,14 +297,3 @@ Après avoir lu cet article vous devriez maintenant avoir une bonne idée de ce 
 La prochaine fois nous tournerons notre attention sur les problèmes concrets de votre code que vos tests peuvent révéler, en commençant avec le HTML et le CSS.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## Dans ce module
-
-- [Introduction to cross browser testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

@@ -1,6 +1,6 @@
 ---
 title: Console.assert()
-slug: Web/API/Console/assert
+slug: Web/API/console/assert
 ---
 
 {{APIRef("Console API")}}

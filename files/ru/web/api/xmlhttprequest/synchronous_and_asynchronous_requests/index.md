@@ -128,11 +128,11 @@ loadFile("message.txt", 2000, showMessage, "New message!\n");
 
 2 аргумент функции `loadFile` устанавливает время ожидание равное 2000ms.
 
-> **Примечание:** **Внимание:** Поддержка `timeout` была добавлена начиная с {{Gecko("12.0")}}.
+> **Примечание:** Поддержка `timeout` была добавлена начиная с Gecko 12.0.
 
 ## Synchronous request
 
-> **Примечание:** Starting with Gecko 30.0 {{ geckoRelease("30.0") }}, Blink 39.0, and Edge 13, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
+> **Примечание:** Starting with Gecko 30.0, Blink 39.0, and Edge 13, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
 
 Synchronous XHR often causes hangs on the web. But developers typically don't notice the problem because the hang only manifests during poor network conditions or slow server response. Synchronous XHR is now in deprecation state. Developers are recommended to move away from the API.
 
@@ -154,11 +154,11 @@ if (request.status === 200) {
 
 Line 3 sends the request. The `null` parameter indicates that no body content is needed for the `GET` request.
 
-Line 5 checks the status code after the transaction is completed. If the result is 200 -- HTTP's "OK" result -- the document's text content is output to the console.
+Line 5 checks the status code after the transaction is completed. If the result is 200 — HTTP's "OK" result — the document's text content is output to the console.
 
 ### Example: Synchronous HTTP request from a `Worker`
 
-One of the few cases in which a synchronous request does not usually block execution is the use of `XMLHttpRequest` within a [`Worker`](/en-US/docs/Web/API/Worker).
+One of the few cases in which a synchronous request does not usually block execution is the use of `XMLHttpRequest` within a [`Worker`](/ru/docs/Web/API/Worker).
 
 **`example.html`** (the main page):
 
@@ -181,13 +181,13 @@ One of the few cases in which a synchronous request does not usually block execu
 </html>
 ```
 
-**`myFile.txt`** (the target of the synchronous [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) invocation):
+**`myFile.txt`** (the target of the synchronous [`XMLHttpRequest`](/ru/docs/Web/API/XMLHttpRequest) invocation):
 
 ```
 Hello World!!
 ```
 
-**`myTask.js`** (the [`Worker`](/en-US/docs/Web/API/Worker)):
+**`myTask.js`** (the [`Worker`](/ru/docs/Web/API/Worker)):
 
 ```js
 self.onmessage = function (event) {
@@ -238,4 +238,4 @@ function logData() {
 - [`XMLHttpRequest`](/ru/docs/Web/API/XMLHttpRequest)
 - [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [AJAX](/ru/docs/Web/Guide/AJAX)
-- [`navigator.sendBeacon`](/en-US/docs/Web/API/Navigator/sendBeacon)
+- [`navigator.sendBeacon`](/ru/docs/Web/API/Navigator/sendBeacon)

@@ -1,12 +1,6 @@
 ---
 title: margin
 slug: Web/CSS/margin
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/margin
-translation_of_original: Web/CSS/margin-new
 ---
 
 {{CSSRef}}

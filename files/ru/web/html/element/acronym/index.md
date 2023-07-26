@@ -6,8 +6,6 @@ tags:
 translation_of: Web/HTML/Element/acronym
 ---
 
-{{obsolete_header}}
-
 ## Аннотация
 
 Элемент акронима (`<acronym>)` позволяет явно указать, что данная последовательность букв, являющуюся акронимом или аббревиатурой.
@@ -50,7 +48,7 @@ translation_of: Web/HTML/Element/acronym
 
 {{Compat}}
 
-## Смотрите также:
+## Смотрите также
 
 - {{HTMLElement("abbr")}}
 

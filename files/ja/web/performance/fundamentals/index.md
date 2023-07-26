@@ -156,7 +156,7 @@ CSS アニメーションでは、 [キーフレーム](/ja/docs/Web/CSS/@keyfra
 
 #### イベントを即時にする
 
-アクセシビリティに配慮した古いタイプのウェブ開発者は、キーボード入力二も対応する click イベントが大好きです。モバイル端末では、これらのイベントは遅すぎます。代わりに {{domxref("Element/touchstart_event", "touchstart")}} と {{domxref("Element/touchend_event", "touchend")}} を使うべきです。これらのイベントには、アプリの操作を鈍くする遅延がないからです。最初にタッチ対応のテストを行えば、アクセシビリティも犠牲にすることはありません。例えば、 Financial Times は、そのために [fastclick](https://github.com/ftlabs/fastclick) というライブラリーを使用しており、これを利用することができます。
+アクセシビリティに配慮した古いタイプのウェブ開発者は、キーボード入力にも対応する click イベントが大好きです。モバイル端末では、これらのイベントは遅すぎます。代わりに {{domxref("Element/touchstart_event", "touchstart")}} と {{domxref("Element/touchend_event", "touchend")}} を使うべきです。これらのイベントには、アプリの操作を鈍くする遅延がないからです。最初にタッチ対応のテストを行えば、アクセシビリティも犠牲にすることはありません。例えば、 Financial Times は、そのために [fastclick](https://github.com/ftlabs/fastclick) というライブラリーを使用しており、これを利用することができます。
 
 #### インターフェイスをシンプルに保つ
 

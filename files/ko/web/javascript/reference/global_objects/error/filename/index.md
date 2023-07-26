@@ -1,12 +1,6 @@
 ---
 title: Error.prototype.fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
-tags:
-  - JavaScript
-  - Non-standard
-  - Property
-  - Prototype
-browser-compat: javascript.builtins.Error.fileName
 ---
 
 {{JSRef}} {{non-standard_header}}

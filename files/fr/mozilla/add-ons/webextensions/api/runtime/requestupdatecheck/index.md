@@ -1,16 +1,6 @@
 ---
 title: runtime.requestUpdateCheck()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/requestUpdateCheck
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - requestUpdateCheck
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/requestUpdateCheck
 ---
 
@@ -23,7 +13,7 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 ## Syntaxe
 
 ```js
-var requestingCheck = browser.runtime.requestUpdateCheck()
+var requestingCheck = browser.runtime.requestUpdateCheck();
 ```
 
 ### Paramètres
@@ -43,9 +33,9 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
     - `version`
       - : `string`. La version de la mise à jour.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime.requestUpdateCheck")}}
+{{Compat}}
 
 ## Exemples
 

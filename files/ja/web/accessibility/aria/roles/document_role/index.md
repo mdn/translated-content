@@ -1,18 +1,18 @@
 ---
-title: 'ARIA: document ロール'
-slug: Web/Accessibility/ARIA/Roles/Document_Role
+title: "ARIA: document ロール"
+slug: Web/Accessibility/ARIA/Roles/document_role
 ---
 
 複雑な複合[ウィジェット](/ja/docs/Web/Accessibility/ARIA/Roles/widget_Role)や[アプリケーション](/ja/docs/Web/Accessibility/ARIA/Roles/Application_Role)で一般的に使用される文書 (`document`) ロールは、コンテキストを読み取りモードに切り替えることを支援技術を知らせることができます。 文書 (`document`) ロールは、読み取りモードまたは閲覧モードを持つ支援技術に、この要素に含まれるコンテンツを文書モードを使用して読み取るように指示します。
 
 ```html
 <div role="dialog">
- ...
- <div id="InfoText" role="document" tabindex="0">
-  <p>いくつかの情報テキストがここに入ります。</p>
- </div>
- ...
- <button>閉じる</button>
+  ...
+  <div id="InfoText" role="document" tabindex="0">
+    <p>いくつかの情報テキストがここに入ります。</p>
+  </div>
+  ...
+  <button>閉じる</button>
 </div>
 ```
 

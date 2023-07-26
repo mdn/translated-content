@@ -1,13 +1,6 @@
 ---
 title: CSS 참고서
 slug: Web/CSS/Reference
-tags:
-  - CSS
-  - Guide
-  - Overview
-  - Reference
-  - l10n:priority
-translation_of: Web/CSS/Reference
 ---
 
 {{CSSRef}}

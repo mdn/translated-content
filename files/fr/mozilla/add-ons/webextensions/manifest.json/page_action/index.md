@@ -1,10 +1,6 @@
 ---
 title: page_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
 ---
 
@@ -267,7 +263,7 @@ La clé `page_action` est un objet qui peut avoir l'une des trois propriétés, 
 Une action de page avec juste une icône spécifiée en 2 tailles différentes. Les scripts d'arrière-plan de l'extension peuvent recevoir des événements de clic lorsque l'utilisateur clique sur l'icône en utilisant un code comme celui-ci :
 
 ```js
- browser.pageAction.onClicked.addListener(handleClick);
+browser.pageAction.onClicked.addListener(handleClick);
 ```
 
 ```json
@@ -283,9 +279,9 @@ Une action de page avec juste une icône spécifiée en 2 tailles différentes. 
 
 Une action de page avec une icône, un titre et une fenêtre contextuelle. Cette dernière s'affiche lorsque l'utilisateur clique sur l'icône.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.manifest.page_action")}}
+{{Compat}}
 
 ## Voir aussi
 

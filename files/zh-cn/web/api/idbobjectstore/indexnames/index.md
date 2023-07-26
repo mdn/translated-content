@@ -21,7 +21,7 @@ var myindexNames = objectStore.indexNames;
 
 ## Example
 
-在下面的代码片段中，我们在数据库上打开一个读/写事务并使用 `add()` 向对象存储添加一些数据。创建对象存储后，我们将打印 `objectStore.indexNames` 到控制台。有关完整的工作示例，请参阅我们的 [待办事项通知](https://github.com/mdn/to-do-notifications/)应用程序 ( [实时查看示例](http://mdn.github.io/to-do-notifications/) )
+在下面的代码片段中，我们在数据库上打开一个读/写事务并使用 `add()` 向对象存储添加一些数据。创建对象存储后，我们将打印 `objectStore.indexNames` 到控制台。有关完整的工作示例，请参阅我们的 [待办事项通知](https://github.com/mdn/dom-examples/tree/main/to-do-notifications)应用程序 ( [实时查看示例](https://mdn.github.io/dom-examples/to-do-notifications/) )
 
 ```js
 // 让我们来打开我们的数据库
@@ -77,7 +77,7 @@ function addData() {
 
 {{Compat}}
 
-## 查看其它内容
+## 查看其他内容
 
 - [使用 IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - 启动事务 : {{domxref("IDBDatabase")}}
@@ -85,4 +85,4 @@ function addData() {
 - 设置键的范围 : {{domxref("IDBKeyRange")}}
 - 检索和更改数据 : {{domxref("IDBObjectStore")}}
 - 使用游标 : {{domxref("IDBCursor")}}
-- 参考示例 : [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- 参考示例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)

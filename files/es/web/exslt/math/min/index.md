@@ -1,11 +1,6 @@
 ---
 title: min
 slug: Web/EXSLT/math/min
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/math/min
 ---
 
 {{XsltRef}}

@@ -3,7 +3,7 @@ title: WebGL でのオブジェクトのアニメーティング
 slug: Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL", "Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL") }}
 
 前の例で作成したコードはすでに、WebGL のシーンを 15 ミリ秒ごとに再描画するよう設定されています。今までは単純に、毎回同じものをそのまま再描画していました。これから、正方形が実際に動くようにコードを変えていきます。
 

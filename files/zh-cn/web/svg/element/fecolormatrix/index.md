@@ -92,7 +92,7 @@ slug: Web/SVG/Element/feColorMatrix
 
 该示例渲染效果如下所示：
 
-{{EmbedLiveSample("Example",300,700,"/files/4371/test.png")}}
+{{EmbedLiveSample("示例",300,700)}}
 
 ## 属性
 

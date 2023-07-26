@@ -1,9 +1,6 @@
 ---
 title: FormData.has()
 slug: Web/API/FormData/has
-page-type: web-api-instance-method
-browser-compat: api.FormData.has
-translation_of: Web/API/FormData/has
 ---
 {{APIRef("XMLHttpRequest")}}
 
@@ -42,11 +39,11 @@ formData.append('username', 'Chris');
 formData.has('username'); // Returns true
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

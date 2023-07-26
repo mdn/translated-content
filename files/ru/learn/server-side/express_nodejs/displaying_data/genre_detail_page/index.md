@@ -11,38 +11,43 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_pa
 Откройте файл **/controllers/genreController.js** и импортируйте модули _async_ и _Book_ в первых строках файла.
 
 ```js
-var Book = require('../models/book');
-var async = require('async');
+var Book = require("../models/book");
+var async = require("async");
 ```
 
 Найдите экспортируемый метод контроллера `genre_detail()` и замените его следующим кодом:
 
 ```js
 // Display detail page for a specific Genre.
-exports.genre_detail = function(req, res, next) {
+exports.genre_detail = function (req, res, next) {
+  async.parallel(
+    {
+      genre: function (callback) {
+        Genre.findById(req.params.id).exec(callback);
+      },
 
-    async.parallel({
-        genre: function(callback) {
-            Genre.findById(req.params.id)
-              .exec(callback);
-        },
-
-        genre_books: function(callback) {
-          Book.find({ 'genre': req.params.id })
-          .exec(callback);
-        },
-
-    }, function(err, results) {
-        if (err) { return next(err); }
-        if (results.genre==null) { // No results.
-            var err = new Error('Genre not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render
-        res.render('genre_detail', { title: 'Genre Detail', genre: results.genre, genre_books: results.genre_books } );
-    });
-
+      genre_books: function (callback) {
+        Book.find({ genre: req.params.id }).exec(callback);
+      },
+    },
+    function (err, results) {
+      if (err) {
+        return next(err);
+      }
+      if (results.genre == null) {
+        // No results.
+        var err = new Error("Genre not found");
+        err.status = 404;
+        return next(err);
+      }
+      // Successful, so render
+      res.render("genre_detail", {
+        title: "Genre Detail",
+        genre: results.genre,
+        genre_books: results.genre_books,
+      });
+    },
+  );
 };
 ```
 
@@ -53,10 +58,11 @@ The ID of the required genre record is encoded at the end of the URL and extract
 > **Примечание:** If the genre does not exist in the database (i.e. it may have been deleted) then `findById()` will return successfully with no results. In this case we want to display a "not found" page, so we create an `Error` object and pass it to the `next` middleware function in the chain.
 >
 > ```js
-> if (results.genre==null) { // No results.
->     var err = new Error('Genre not found');
->     err.status = 404;
->     return next(err);
+> if (results.genre == null) {
+>   // No results.
+>   var err = new Error("Genre not found");
+>   err.status = 404;
+>   return next(err);
 > }
 > ```
 >
@@ -95,7 +101,7 @@ The view is very similar to all our other templates. The main difference is that
 
 Run the application and open your browser to <http://localhost:3000/>. Select the _All genres_ link, then select one of the genres (e.g. "Fantasy"). If everything is set up correctly, your page should look something like the following screenshot.
 
-![Genre Detail Page - Express Local Library site](https://mdn.mozillademos.org/files/14462/LocalLibary_Express_Genre_Detail.png)
+![Genre Detail Page - Express Local Library site](locallibary_express_genre_detail.png)
 
 > **Примечание:** You might get an error similar to this:
 >
@@ -106,7 +112,7 @@ Run the application and open your browser to <http://localhost:3000/>. Select th
 > This is a mongoose error coming from the **req.params.id**. To solve this problem, first you need to require mongoose on the **genreController.js** page like this:
 >
 > ```js
->  var mongoose = require('mongoose');
+> var mongoose = require("mongoose");
 > ```
 >
 > Then use **mongoose.Types.ObjectId()** to convert the id to a that can be used. For example:

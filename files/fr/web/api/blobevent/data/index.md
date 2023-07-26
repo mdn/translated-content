@@ -1,13 +1,6 @@
 ---
 title: BlobEvent.data
 slug: Web/API/BlobEvent/data
-tags:
-  - API
-  - Blob
-  - DOM
-  - Evènement
-  - Propriétés
-  - données
 translation_of: Web/API/BlobEvent/data
 ---
 
@@ -20,7 +13,7 @@ La propriété en lecture seule **`BlobEvent.data`** représente un {{domxref("B
 ## Syntaxe
 
 ```js
-associatedBlob = BlobEvent.data
+associatedBlob = BlobEvent.data;
 ```
 
 ## Spécifications

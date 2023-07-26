@@ -1,16 +1,6 @@
 ---
 title: history.deleteRange()
 slug: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - History
-  - Méthode
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - deleteRange
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
 ---
 
@@ -24,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var deletingRange = browser.history.deleteRange(
-  range           // object
-)
+  range, // object
+);
 ```
 
 ### Paramètres
@@ -43,9 +33,9 @@ var deletingRange = browser.history.deleteRange(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera remplie sans paramètre lorsque la plage a été supprimée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.deleteRange")}}
+{{Compat}}
 
 ## Exemples
 
@@ -60,7 +50,7 @@ function oneMinuteAgo() {
 
 browser.history.deleteRange({
   startTime: oneMinuteAgo(),
-  endTime: Date.now()
+  endTime: Date.now(),
 });
 ```
 

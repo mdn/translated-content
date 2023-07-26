@@ -1,7 +1,6 @@
 ---
 title: Touch events
 slug: Web/API/Touch_events
-translation_of: Web/API/Touch_events
 ---
 {{DefaultAPISidebar("Touch Events")}}
 
@@ -298,7 +297,7 @@ function onTouch(evt) {
 
 One technique for preventing things like `pinchZoom` on a page is to call `preventDefault()` on the second touch in a series. This behavior is not well defined in the touch events spec, and results in different behavior for different browsers (i.e., iOS will prevent zooming but still allow panning with both fingers; Android will allow zooming but not panning; Opera and Firefox currently prevent all panning and zooming.) Currently, it's not recommended to depend on any particular behavior in this case, but rather to depend on meta viewport to prevent zooming.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

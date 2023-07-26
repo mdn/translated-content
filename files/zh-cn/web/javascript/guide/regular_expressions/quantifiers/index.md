@@ -1,6 +1,6 @@
 ---
 title: 量词
-slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
+slug: Web/JavaScript/Guide/Regular_expressions/Quantifiers
 original_slug: Web/JavaScript/Guide/Regular_Expressions/量词
 ---
 
@@ -140,8 +140,8 @@ var loooongWord = /\b\w{13,}\b/g;
 var sentence = "Why do I have to learn multiplication table?";
 
 console.table(sentence.match(singleLetterWord)); // ["I"]
-console.table(sentence.match(notSoLongWord));    // [ "Why", "do", "I", "have", "to", "learn", "table" ]
-console.table(sentence.match(loooongWord));      // ["multiplication"] 可选可选字符
+console.table(sentence.match(notSoLongWord)); // [ "Why", "do", "I", "have", "to", "learn", "table" ]
+console.table(sentence.match(loooongWord)); // ["multiplication"] 可选可选字符
 ```
 
 ### 可选字符
@@ -181,13 +181,13 @@ console.log(text.match(nonGreedyRegexp));
 // The match is the smallest one possible
 ```
 
-## See also
+## 参见
 
-- [Regular expressions guide](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular expressions guide](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
 
-  - [Character classes](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes)
-  - [Assertions](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
-  - [Unicode property escapes](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
-  - [Groups and ranges](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+  - [Character classes](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
+  - [Assertions](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
+  - [Unicode property escapes](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Unicode_character_class_escape)
+  - [Groups and ranges](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_Ranges)
 
 - [The `RegExp()` constructor](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

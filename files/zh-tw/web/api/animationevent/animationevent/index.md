@@ -6,8 +6,6 @@ original_slug: Web/API/AnimationEvent/initAnimationEvent
 
 {{ apiref("Web Animations API") }}
 
-## Summary
-
 The **`AnimationEvent.initAnimationEvent()`** method Initializes an animation event created using the deprecated {{domxref("Document.createEvent()", "Document.createEvent(\"AnimationEvent\")")}} method.
 
 `AnimationEvent` created this way are untrusted.

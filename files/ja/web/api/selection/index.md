@@ -90,7 +90,7 @@ const range  = selObj.getRangeAt(0);
 
 選択と入力フォーカス（{{DOMxRef("Document.activeElement")}} で示される）には、ブラウザーによって異なる複雑な関係があります。ブラウザー間の互換性のあるコードでは、これらを別個に扱う方がよいでしょう。
 
-Safari と Chrome は（Firefox と異なり）現在、プログラムで選択範囲を変更する場合、選択範囲を含む要素にフォーカスを当てます。将来的には変更される可能性があります（[W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) と {{WebKitBug("38696")}} を参照して下さい）。
+Safari と Chrome は（Firefox と異なり）現在、プログラムで選択範囲を変更する場合、選択範囲を含む要素にフォーカスを当てます。将来的には変更される可能性があります（[W3C bug 14383](https://www.w3.org/Bugs/Public/show_bug.cgi?id=14383) と [WebKit bug 38696](https://webkit.org/b/38696) を参照して下さい）。
 
 ### 編集ホストのフォーカス変更に関する選択 API の挙動
 
@@ -133,7 +133,7 @@ Safari と Chrome は（Firefox と異なり）現在、プログラムで選択
 - **アンカー**
   - : 選択範囲のアンカーは、選択範囲の始点です。マウスで選択する場合、アンカーは文書内で最初にマウスボタンが押された位置となります。ユーザーがマウスやキーボードを使用して選択範囲を変更しても、アンカーは移動しません。
 - **編集ホスト**
-  - : 編集可能な要素（例えば、{{htmlattrxref("contenteditable")}}が設定された HTML 要素、または {{DOMxRef("Document.designMode", "designMode")}} が有効になっている文書の HTML 子要素など）。
+  - : 編集可能な要素（例えば、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable)が設定された HTML 要素、または {{DOMxRef("Document.designMode", "designMode")}} が有効になっている文書の HTML 子要素など）。
 - **選択フォーカス**
 
   - : 選択範囲の _フォーカス_ は、選択範囲の終点です。マウスで選択する場合、フォーカスは文書内でマウスボタンが離された位置にあります。ユーザーがマウスやキーボードを使用して選択範囲を変更すると、フォーカスは移動した選択範囲の終点になります。

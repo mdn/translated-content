@@ -1,7 +1,6 @@
 ---
 title: values
 slug: Web/SVG/Attribute/values
-translation_of: Web/SVG/Attribute/values
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

@@ -1,36 +1,43 @@
 ---
-title: PushEvent.PushEvent()
+title: PushEvent()
 slug: Web/API/PushEvent/PushEvent
+l10n:
+  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
 ---
 
-{{APIRef("Push API")}}{{SeeCompatTable()}}
+{{APIRef("Push API")}}
 
 **`PushEvent()`** コンストラクターは、新しい {{domxref("PushEvent")}} オブジェクトを生成します。このコンストラクターは、サービスワーカーにのみ公開されていることに注意してください。
 
 ## 構文
 
 ```js-nolint
-var myPushEvent = new PushEvent(type, eventInitDict);
+new PushEvent(type)
+new PushEvent(type, options)
 ```
 
 ## 引数
 
 - `type`
-  - : `PushEvent` の型を定義する {{domxref("DOMString")}}。{{event("push")}} か {{event("pushsubscriptionchange")}} を設定可能。
-- `eventInitDict` {{optional_inline}}
+  - : 文字列で、イベントの名前を示します。
+    大文字小文字の区別があり、ブラウザーは `push` または `pushsubscriptionchange` に設定します。
+- `options` {{optional_inline}}
+  - : オブジェクトで、 _{{domxref("ExtendableEvent/ExtendableEvent", "ExtendableEvent()")}} で定義されているプロパティに加えて_、以下のプロパティを指定することができます。
+    - `data`
+      - : `PushEvent` に格納したいデータ（もしあれば）。コンストラクターが呼び出されると、結果オブジェクトの {{domxref("PushEvent.data")}} プロパティには、これらのバイト列を格納した新しい {{domxref("PushMessageData")}} オブジェクトが設定されます。
 
-  - : `PushEvent` オブジェクトに設定するいずれかの初期データを含むオプションオブジェクト。オプションは次のとおり：
+### 返値
 
-    - `data`： `PushEvent` に含ませる何らかのデータ。コンストラクタが呼び出された際、結果オブジェクトの {{domxref("PushEvent.data")}} プロパティは、`eventInitDict` データメンバーから抽出されたバイトを含む新しい {{domxref("PushMessageData")}} オブジェクトを設定する。
+新しい {{domxref("PushEvent")}} オブジェクトです。
 
 ## 例
 
 ```js
-var dataInit = {
-                data : 'Some sample text'
-              }
+const dataInit = {
+  data : 'Some sample text'
+}
 
-var myPushEvent = new PushEvent('push', dataInit);
+const myPushEvent = new PushEvent('push', dataInit);
 
 myPushEvent.data.text(); // 'Some sample text' を返す
 ```
@@ -41,10 +48,9 @@ myPushEvent.data.text(); // 'Some sample text' を返す
 
 ## ブラウザーの互換性
 
-{{Compat("api.PushEvent.PushEvent")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
-- [Using the Push API](/ja/docs/Web/API/Push_API/Using_the_Push_API)
-- [Push API](/ja/docs/Web/API/Push_API)
-- [Service Worker API](/ja/docs/Web/API/Service_Worker_API)
+- [プッシュ API](/ja/docs/Web/API/Push_API)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)

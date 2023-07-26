@@ -1,11 +1,6 @@
 ---
 title: 202 Accepted
 slug: Web/HTTP/Status/202
-tags:
-  - HTTP
-  - Reference
-  - Status code
-translation_of: Web/HTTP/Status/202
 ---
 
 {{HTTPSidebar}}

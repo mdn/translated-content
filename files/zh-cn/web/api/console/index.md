@@ -1,6 +1,6 @@
 ---
 title: Console
-slug: Web/API/Console
+slug: Web/API/console
 ---
 
 {{APIRef("Console API")}}
@@ -68,7 +68,7 @@ console.log("Failed to open the specified link")
 - {{domxref("Console.warn()")}}
   - : 打印一个警告信息，可以使用 [string substitution](/zh-CN/docs/Web/API/console#Using_string_substitutions) 和额外的参数。
 
-## 用法
+## 示例
 
 ### 输出文本到控制台
 
@@ -245,7 +245,7 @@ foo();
 
 ## 注意
 
-- 在 Firefox 浏览器中，如果页面中自己定义了 `console` 对象，那么它会覆盖掉浏览器内置的 `console`对象，在其它浏览器可能也是。
+- 在 Firefox 浏览器中，如果页面中自己定义了 `console` 对象，那么它会覆盖掉浏览器内置的 `console`对象，在其他浏览器可能也是。
 
 ## 相关文档
 

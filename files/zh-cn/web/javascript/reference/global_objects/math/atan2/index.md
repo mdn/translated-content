@@ -30,7 +30,7 @@ Math.atan2(y, x)
 
 ## 示例
 
-### 例子：使用 `Math.atan2`
+### 示例：使用 `Math.atan2`
 
 ```js
 Math.atan2(90, 15) // 1.4056476493802699

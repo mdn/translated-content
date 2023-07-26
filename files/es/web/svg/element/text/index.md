@@ -91,9 +91,13 @@ SVG text también puede ser estilizado
 
 Este elemento hereda la interfaz de [`SVGTextElement`](/en/DOM/SVGTextElement).
 
+## Especificaciones
+
+{{Specifications}}
+
 ## Compatibilidad con navegadores
 
-{{Compat("svg.elements.text")}}
+{{Compat}}
 
 ## Relacionados
 

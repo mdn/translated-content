@@ -1,13 +1,6 @@
 ---
 title: Console.warn()
-slug: Web/API/Console/warn
-tags:
-  - API
-  - DOM
-  - Développement
-  - Méthode
-  - console
-  - débogage
+slug: Web/API/console/warn
 translation_of: Web/API/Console/warn
 ---
 

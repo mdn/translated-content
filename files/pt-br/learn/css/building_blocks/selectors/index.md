@@ -5,7 +5,7 @@ slug: Learn/CSS/Building_blocks/Selectors
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
-Em {{Glossary("CSS")}}, os seletores são usados ​​para direcionar os elementos {{glossary("HTML")}} em nossas páginas da web que queremos estilizar. Há uma grande variedade de seletores CSS disponíveis, permitindo uma precisão refinada ao selecionar os elementos a serem estilizados. Neste artigo e seus sub-artigos, examinaremos os diferentes tipos em grande detalhe, vendo como eles funcionam.
+Em {{Glossary("CSS")}}, os seletores são usados para direcionar os elementos {{glossary("HTML")}} em nossas páginas da web que queremos estilizar. Há uma grande variedade de seletores CSS disponíveis, permitindo uma precisão refinada ao selecionar os elementos a serem estilizados. Neste artigo e seus sub-artigos, examinaremos os diferentes tipos em grande detalhe, vendo como eles funcionam.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -22,12 +22,12 @@ Em {{Glossary("CSS")}}, os seletores são usados ​​para direcionar os elemen
           >trabalhar com arquivos</a
         > , conceitos básicos de HTML (estude
         <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML"
           >Introdução ao HTML</a
         >
         ) e uma ideia de como o CSS funciona (estude os
         <a
-          href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps"
+          href="https://developer.mozilla.org/pt-BR/docs/Learn/CSS/First_steps"
           >primeiros passos do CSS</a
         > ).
       </td>
@@ -43,7 +43,7 @@ Em {{Glossary("CSS")}}, os seletores são usados ​​para direcionar os elemen
 
 Você já conheceu os seletores. Um seletor CSS é a primeira parte de uma regra CSS. É um padrão de elementos e outros termos que informam ao navegador quais elementos HTML devem ser selecionados para que os valores de propriedade CSS dentro da regra sejam aplicados a eles. O elemento ou elementos que são selecionados pelo seletor são referidos como o _assunto do seletor_ .
 
-![Some code with the h1 highlighted.](https://mdn.mozillademos.org/files/16550/selector.png)
+![Some code with the h1 highlighted.](selector.png)
 
 Em artigos anteriores, você conheceu alguns seletores diferentes e aprendeu que existem seletores que direcionam o documento de maneiras diferentes - por exemplo, selecionando um elemento como `h1`, ou uma classe como `.special`.
 
@@ -65,7 +65,7 @@ h1 {
 
 Eu também poderia combiná-los em uma lista de seletores, adicionando uma vírgula entre eles.
 
-```css
+```css-nolint
 h1, .special {
   color: blue;
 }
@@ -86,7 +86,7 @@ No exemplo ao vivo abaixo, tente combinar os dois seletores que têm declaraçõ
 
 Ao agrupar seletores dessa forma, se algum seletor for inválido, a regra inteira será ignorada.
 
-No exemplo a seguir, a regra do seletor de classe inválida será ignorada, enquanto o `h1`ainda seria estilizado.
+No exemplo a seguir, a regra do seletor de classe inválida será ignorada, enquanto o `h1` ainda seria estilizado.
 
 ```css
 h1 {
@@ -98,10 +98,11 @@ h1 {
 }
 ```
 
-Quando combinados, no entanto, nem o `h1`nem a classe terão o estilo, pois a regra inteira é considerada inválida.
+Quando combinados, no entanto, nem o `h1` nem a classe terão o estilo, pois a regra inteira é considerada inválida.
 
 ```css
-h1, ..special {
+h1,
+..special {
   color: blue;
 }
 ```
@@ -115,19 +116,22 @@ Existem alguns agrupamentos diferentes de seletores e saber qual tipo de seletor
 Este grupo inclui seletores que têm como alvo um elemento HTML, como um `<h1>`.
 
 ```css
-h1 { }
+h1 {
+}
 ```
 
 Também inclui seletores que direcionam uma classe:
 
 ```css
-.box { }
+.box {
+}
 ```
 
 ou um ID:
 
 ```css
-#unique { }
+#unique {
+}
 ```
 
 ### Seletores de atributos
@@ -135,13 +139,16 @@ ou um ID:
 Este grupo de seletores oferece diferentes maneiras de selecionar elementos com base na presença de um determinado atributo em um elemento:
 
 ```css
-a[title] { }
+a[title] {
+}
 ```
 
 Ou até mesmo faça uma seleção com base na presença de um atributo com um valor específico:
 
 ```css
-a[href="https://example.com"] { }
+a[href="https://example.com"]
+{
+}
 ```
 
 ### Pseudo classes e pseudo-elementos
@@ -149,13 +156,15 @@ a[href="https://example.com"] { }
 Este grupo de seletores inclui pseudo classes, que definem o estilo de certos estados de um elemento. A `:hover`pseudoclasse, por exemplo, seleciona um elemento apenas quando ele está sendo passado pelo ponteiro do mouse:
 
 ```css
-a:hover { }
+a:hover {
+}
 ```
 
 Também inclui pseudoelementos, que selecionam uma determinada parte de um elemento em vez do próprio elemento. Por exemplo, `::first-line`sempre seleciona a primeira linha de texto dentro de um elemento (a `<p>`no caso abaixo), agindo como se a tivesse `<span>`sido colocado em volta da primeira linha formatada e então selecionado.
 
 ```css
-p::first-line { }
+p::first-line {
+}
 ```
 
 ### Combinadores
@@ -163,7 +172,8 @@ p::first-line { }
 O grupo final de seletores combina outros seletores para direcionar os elementos em nossos documentos. O seguinte, por exemplo, seleciona parágrafos que são filhos diretos de `<article>`elementos usando o combinador filho ( `>`):
 
 ```css
-article > p { }
+article > p {
+}
 ```
 
 ## Próximos passos
@@ -189,24 +199,3 @@ A tabela a seguir fornece uma visão geral dos seletores disponíveis para uso, 
 | [Child combinator](/pt-BR/docs/Web/CSS/Child_combinator)                       | `article > p`       | [Child combinator](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Child_combinator)                               |
 | [Adjacent sibling combinator](/pt-BR/docs/Web/CSS/Adjacent_sibling_combinator) | `h1 + p`            | [Adjacent sibling](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators#Adjacent_sibling)                               |
 | [General sibling combinator](/pt-BR/docs/Web/CSS/General_sibling_combinator)   | `h1 ~ p`            | [General sibling](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators#General_sibling)                                 |
-
-## In this module
-
-1. [Cascade and inheritance](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Type, class, and ID selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Attribute selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Pseudo-classes and pseudo-elements](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Combinators](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [The box model](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/pt-BR/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/pt-BR/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/pt-BR/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/pt-BR/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizing your CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Organizing)

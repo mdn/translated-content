@@ -1,15 +1,6 @@
 ---
 title: contextualIdentities.update()
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/update
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Méthode
-  - Reference
-  - Update
-  - WebExtensions
-  - contextualIdentities
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/update
 ---
 
@@ -23,9 +14,9 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var createContext = browser.contextualIdentities.update(
-  cookieStoreId,           // string
-  details                  // object
-)
+  cookieStoreId, // string
+  details, // object
+);
 ```
 
 ### Paramètres
@@ -74,9 +65,9 @@ var createContext = browser.contextualIdentities.update(
 
 Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec un {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} qui décrit l'identité mise à jour. Si l'identité n'a pas pu être trouvée ou si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.contextualIdentities.update")}}
+{{Compat}}
 
 ## Exemples
 
@@ -91,12 +82,13 @@ function onError(e) {
   console.error(e);
 }
 
-browser.contextualIdentities.update(
-  "firefox-container-1", {
+browser.contextualIdentities
+  .update("firefox-container-1", {
     name: "my-thing",
     color: "purple",
-    icon: "briefcase"
-  }).then(onUpdated, onError);
+    icon: "briefcase",
+  })
+  .then(onUpdated, onError);
 ```
 
 {{WebExtExamples}}

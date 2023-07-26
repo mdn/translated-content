@@ -1,12 +1,6 @@
 ---
 title: document.execCommand
 slug: Web/API/Document/execCommand
-tags:
-  - API
-  - DOM
-  - Method
-  - Méthodes
-  - Reference
 translation_of: Web/API/Document/execCommand
 ---
 
@@ -22,7 +16,7 @@ courant.
 ## Syntaxe
 
 ```js
-document.execCommand(aCommandName, aShowDefaultUI, aValueArgument)
+document.execCommand(aCommandName, aShowDefaultUI, aValueArgument);
 ```
 
 ### Valeur de retour
@@ -72,11 +66,11 @@ prise en charge ou si elle est désactivée.
 - `delete`
   - : Supprimer la sélection courante.
 - `enableAbsolutePositionEditor`
-  - : Active ou désactive la poignée qui permet de déplacer les éléments positionnés de façon absolue. Celle-ci est désactivée par défaut depuis Firefox 64 ({{bug(1490641)}}).
+  - : Active ou désactive la poignée qui permet de déplacer les éléments positionnés de façon absolue. Celle-ci est désactivée par défaut depuis Firefox 64 ([bug Firefox 1490641](https://bugzil.la/1490641)).
 - `enableInlineTableEditing`
-  - : Active ou désactive les contrôles pour l'insertion ou la suppression des lignes ou colonnes de tableau. Les contrôles sont désactivés par défaut depuis Firefox 64 ({{bug(1490641)}}).
+  - : Active ou désactive les contrôles pour l'insertion ou la suppression des lignes ou colonnes de tableau. Les contrôles sont désactivés par défaut depuis Firefox 64 ([bug Firefox 1490641](https://bugzil.la/1490641)).
 - `enableObjectResizing`
-  - : Active ou désactive les contrôles permettant de redimensionner les images, tableaux ou les éléments positionnés de façon absolue. Les poignées sont désactivées par défaut depuis Firefox 64 ({{bug(1490641)}}).
+  - : Active ou désactive les contrôles permettant de redimensionner les images, tableaux ou les éléments positionnés de façon absolue. Les poignées sont désactivées par défaut depuis Firefox 64 ([bug Firefox 1490641](https://bugzil.la/1490641)).
 - `fontName`
   - : Modifie le nom de la police pour la sélection ou à partir du point d'insertion. La valeur fournie en argument doit être un nom de police (ex. `"Arial"`).
 - `fontSize`
@@ -155,13 +149,11 @@ Un exemple d'utilisation est disponible
 
 ## Spécifications
 
-| Spécification                                                  | État                   | Commentaires |
-| -------------------------------------------------------------- | ---------------------- | ------------ |
-| [execCommand](https://w3c.github.io/editing/docs/execCommand/) | Brouillon non officiel |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Document.execCommand")}}
+{{Compat}}
 
 ## Voir aussi
 

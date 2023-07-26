@@ -212,7 +212,7 @@ if (!Array.from) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Array.from")}}
+{{Compat}}
 
 ## Ver también
 

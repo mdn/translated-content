@@ -1,16 +1,6 @@
 ---
 title: tabs.WindowType
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/WindowType
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
-  - WindowType
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/WindowType
 ---
 
@@ -27,9 +17,9 @@ Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
 - **"panel"**
 - **"devtools"**
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.WindowType")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

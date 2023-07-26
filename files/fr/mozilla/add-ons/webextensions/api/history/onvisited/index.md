@@ -1,16 +1,6 @@
 ---
 title: history.onVisited
 slug: Mozilla/Add-ons/WebExtensions/API/history/onVisited
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - History
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onVisited
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/onVisited
 ---
 
@@ -21,9 +11,9 @@ Mise en place à chaque fois que l'utilisateur visite une page. Un objet {{WebEx
 ## Syntaxe
 
 ```js
-browser.history.onVisited.addListener(listener)
-browser.history.onVisited.removeListener(listener)
-browser.history.onVisited.hasListener(listener)
+browser.history.onVisited.addListener(listener);
+browser.history.onVisited.removeListener(listener);
+browser.history.onVisited.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -49,9 +39,9 @@ Les événements ont trois fonctions :
 
         Au moment où cet événement est envoyé, le navigateur ne connaît pas encore le titre de la page. Si le navigateur a déjà visité cette page et s'est souvenu de son ancien titre, l'objet `HistoryItem.title` contiendra l'ancien titre de la page. Si le navigateur n'a pas d'enregistrement de l'ancien titre de la page, alors `HistoryItem.title` sera vide. Pour obtenir les titres des pages dès qu'ils sont connus, écoutez {{WebExtAPIRef("history.onTitleChanged")}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.history.onVisited")}}
+{{Compat}}
 
 ## Exemples
 

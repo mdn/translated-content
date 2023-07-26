@@ -1,14 +1,10 @@
 ---
 title: 스타일과 색 적용하기
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
-tags:
-  - HTML5
-  - 그래픽
-  - 캔버스
-translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 original_slug: Web/HTML/Canvas/Tutorial/Applying_styles_and_colors
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
 [도형 그리기](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes) 장에서는 기본 선과 채우기 스타일만 사용했습니다. 여기서 우리는 그리기를 조금 더 매력적으로 만들 수있는 캔버스 옵션을 살펴볼 것입니다. 그리기에 다른 색상, 선 스타일, 그라디언트, 패턴 및 그림자를 추가하는 방법을 배우게됩니다.
 
@@ -61,7 +57,7 @@ draw();
 
 결과는 아래와 같습니다.
 
-{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
+{{EmbedLiveSample("A_fillStyle_example", 160, 160, "canvas_fillstyle.png")}}
 
 ### `strokeStyle` 예제
 
@@ -90,14 +86,14 @@ draw();
 
 결과는 아래와 같습니다.
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}
+{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
 
 ## 투명도
 
 캔버스에는 불투명한 도형을 그릴 수도 있고, 반투명한 도형도 그릴 수도 있습니다. `globalAlpha` 값을 설정하거나 윤곽선 또는 채움 스타일에 반투명 색을 적용하면 됩니다.
 
 - {{domxref("CanvasRenderingContext2D.globalAlpha", "globalAlpha = transparencyValue")}}
-  - : 투명도 값이 설정되면 이후 캔버스에 그려지는 모든 도형들의 투명도가 바뀝니다. 설정하는 값은 0.0(완전히 투명)과 1.0(완전히 불투명) 사이에 있어야 하며, 초기 설정값은 1.0(완전히 투명)입니다.
+  - : 투명도 값이 설정되면 이후 캔버스에 그려지는 모든 도형들의 투명도가 바뀝니다. 설정하는 값은 0.0(완전히 투명)과 1.0(완전히 불투명) 사이에 있어야 하며, 초기 설정값은 1.0(완전히 불투명)입니다.
 
 `globalAlpha`는 모두 같은 투명도로 캔버스에 많은 도형을 그릴 때 유용합니다. 하지만, 보통은 각각의 도형마다 투명도를 설정하는 것이 더 유용할 것입니다.
 
@@ -150,7 +146,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}
+{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}
 
 ### `rgba()`를 사용한 예제
 
@@ -188,7 +184,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "https://mdn.mozillademos.org/files/246/Canvas_rgba.png")}}
+{{EmbedLiveSample("An_example_using_rgba()", "180", "180", "canvas_rgba.png")}}
 
 ## 선 모양
 
@@ -240,11 +236,11 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineWidth_example", "180", "180", "https://mdn.mozillademos.org/files/239/Canvas_linewidth.png")}}
+{{EmbedLiveSample("A_lineWidth_example", "180", "180", "canvas_linewidth.png")}}
 
 선명한 선을 얻으려면 경로에 획을 어떻게 그려지는지 이해해야 합니다. 아래의 이미지를 보면, 격자는 캔버스의 좌표 격자를 나타냅니다. 격자선 사이에 있는 사각형은 실제 픽셀과 딱 맞아 떨어집니다. 아래에 있는 첫번째 이미지를 보면, (2,1)에서 (5,5)로 사각형이 채워져 있습니다. 사각형의 전체 영역(연한 붉은 색)은 픽셀 경계선 사이에 딱 맞아 떨어지기 때문에 채워진 사각형은 선명한 가장자리를 갖습니다.
 
-![](https://mdn.mozillademos.org/files/201/Canvas-grid.png)
+![](canvas-grid.png)
 
 만일 (3,1)에서 (3,5)로 그리는 직선의 두께가 1.0이라면, 두번째 이미지와 같은 상황이 됩니다. 채워진 실제 영역 (진한 파란색)은 패스의 양쪽에있는 픽셀의 절반까지만 확장됩니다. 이것은 1 픽셀을 채우는 것이 아니므로 근사값으로 화면에 그려지게 됩니다. 그래서 양옆의 영역(연한 파란색과 짙은 파란 색)으로, 실제 설정한 색과는 다른 흐릿한 색으로 채워지는 것입니다. 이전 예제에서 보듯이 선 두께가 `1.0`인 선에서 일어난 일입니다.
 
@@ -260,7 +256,7 @@ draw();
 
 `lineCap` 속성은 그리려는 모든 선의 끝점 모양을 결정합니다. `butt`, `round`, `square`라는 세 가지 값을 가지며, 초기 설정값은 `butt`입니다.
 
-![](https://mdn.mozillademos.org/files/236/Canvas_linecap.png)
+![](canvas_linecap.png)
 
 - `butt`
   - : 선의 끝이 좌표에 딱맞게 잘립니다.
@@ -308,7 +304,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}
+{{EmbedLiveSample("A_lineCap_example", "180", "180", "canvas_linecap.png")}}
 
 ### `lineJoin` 예제
 
@@ -316,7 +312,7 @@ draw();
 
 이 속성에는 세 가지 값이 있는데, `round`, `bevel`, `miter`이며, 초기 설정값은 `miter`입니다. 두 부분들이 같은 방향으로 연결되어 있는 경우에는, `lineJoin`을 설정해도 아무런 효과가 나타나지 않습니다.
 
-![](https://mdn.mozillademos.org/files/237/Canvas_linejoin.png)
+![](canvas_linejoin.png)
 
 - `round`
   - : 도형의 모서리를, 연결되는 부분들의 공통 끝점을 중심으로 하는 원 모양으로 만듭니다. 이때 원의 반지름은 선의 두께와 같습니다.
@@ -353,7 +349,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}
+{{EmbedLiveSample("A_lineJoin_example", "180", "180", "canvas_linejoin.png")}}
 
 ### `miterLimit` 속성 예제
 
@@ -428,7 +424,7 @@ document.getElementById('miterLimit').value = document.getElementById('canvas').
 draw();
 ```
 
-{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}
+{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "400", "180", "canvas_miterlimit.png")}}
 
 ### 대시라인 사용하기
 
@@ -463,7 +459,7 @@ function march() {
 march();
 ```
 
-{{EmbedLiveSample("Using_line_dashes", "120", "120", "https://mdn.mozillademos.org/files/9853/marching-ants.png")}}
+{{EmbedLiveSample("Using_line_dashes", "120", "120", "marching-ants.png")}}
 
 ## 그라디언트(Gradient)
 
@@ -536,7 +532,7 @@ draw();
 
 두 번째 그래디언트에서는 시작 색상 (위치 0.0)을 지정하지 않았는데, 자동으로 다음 색상 중단점의 색상으로 가정하기 때문에 반드시 필요하지는 않기 때문입니다. 따라서 위치 0.5에 검은색을 지정하면 시작부터 중단점까지 자동으로 검정색 그라이언트를 만듭니다.
 
-{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "https://mdn.mozillademos.org/files/235/Canvas_lineargradient.png")}}
+{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "canvas_lineargradient.png")}}
 
 ### `createRadialGradient` 예제
 
@@ -591,7 +587,7 @@ draw();
 
 그레이디언트의 마지막 색 적용 지점에서는 투명도를 적용하였습니다. 투명도가 적용된 지점에서 이전 지점까지의 색 변화를 보기 좋게 만들려면, 두 지점에 똑같은 색을 적용하면 되는데, 이 예제에서는 색의 값을 다른 방식으로 입력하여 헷갈릴 수도 있습니다. 첫번째 그레이디언트에 사용된 `#019F62`와 `rgba(1,159,98,1)`은 같은 색입니다.
 
-{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}
+{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}
 
 ## 패턴(Patterns)
 
@@ -631,7 +627,7 @@ function draw() {
 
   // 패턴으로 사용할 이미지 오브젝트를 생성한다
   var img = new Image();
-  img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+  img.src = 'canvas_createpattern.png';
   img.onload = function() {
 
     // 패턴을 생성한다
@@ -653,7 +649,7 @@ draw();
 
 The result looks like this:
 
-{{EmbedLiveSample("A_createPattern_example", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}
+{{EmbedLiveSample("A_createPattern_example", "180", "180", "canvas_createpattern.png")}}
 
 ## 그림자
 
@@ -703,7 +699,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}
+{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "shadowed-string.png")}}
 
 다음 장에서 [텍스트 그리기](/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_text)에 대한 `font` 속성과 `fillText` 메소드를 살펴 보겠습니다.
 
@@ -738,6 +734,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "https://mdn.mozillademos.org/files/9855/fill-rule.png")}}
+{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "fill-rule.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

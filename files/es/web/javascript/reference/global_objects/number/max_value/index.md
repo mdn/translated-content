@@ -40,9 +40,9 @@ verificarValorMaximo(numero2); // El número es infinito
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Number.MAX_VALUE")}}
+{{Compat}}
 
 ## Ver también
 

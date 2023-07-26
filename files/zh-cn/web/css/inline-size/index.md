@@ -5,55 +5,59 @@ slug: Web/CSS/inline-size
 
 {{CSSRef}}
 
-**`inline-size`** [CSS](/zh-CN/docs/Web/CSS) 属性影响一个元素的{{cssxref("width")}} 或 {{cssxref("height")}}，以改变一个元素的盒模型的水平或垂直大小（是 width 还是 height 取决于该元素的{{cssxref("writing-mode")}}）。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`inline-size`** 根据元素的书写模式定义了元素区块的横向或纵向尺寸。根据 {{CSSXref("writing-mode")}} 的值，此属性对应于 {{CSSXref("width")}} 或 {{CSSXref("height")}} 属性。
+
+若为纵向书写模式，则 `inline-size` 的值对应于元素的高度；否则对应于元素的宽度。与此相关的属性为 {{CSSXref("block-size")}}，此属性定义了元素另一方向的尺度。
 
 {{EmbedInteractiveExample("pages/css/inline-size.html")}}
 
 ## 语法
 
 ```css
-/* <length> values */
+/* <length> 值 */
 inline-size: 300px;
 inline-size: 25em;
 
-/* <percentage> values */
+/* <percentage> 值 */
 inline-size: 75%;
 
-/* Keyword values */
+/* 关键词值 */
 inline-size: max-content;
 inline-size: min-content;
 inline-size: fit-content(20em);
 inline-size: auto;
 
-/* Global values */
+/* 全局值 */
 inline-size: inherit;
 inline-size: initial;
+inline-size: revert;
+inline-size: revert-layer;
 inline-size: unset;
 ```
 
-如果元素的 writing-mode 是垂直方向的它会影响 height，否则默认是影响 width。
+### 取值
 
-有一个与 inline-size 属性有关的{{cssxref("block-size")}}，它定义了元素的其他尺寸。
+`inline-size` 属性的取值与 {{CSSXref("width")}} 和 {{CSSXref("height")}} 属性相同。
 
-{{cssinfo}}
+## 形式定义
 
-### 值
+{{CSSInfo}}
 
-`inline-size`属性的可选值与{{cssxref("width")}}和{{cssxref("height")}}的可选值一样。
+## 形式语法
 
-### 正式语法
-
-{{csssyntax}}
+{{CSSSyntax}}
 
 ## 示例
 
-### HTML
+### 以像素为单位设置行向尺寸
+
+#### HTML
 
 ```html
-<p class="exampleText">Example text</p>
+<p class="exampleText">示例文本</p>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .exampleText {
@@ -63,7 +67,9 @@ inline-size: unset;
 }
 ```
 
-{{EmbedLiveSample("Example")}}
+#### 结果
+
+{{EmbedLiveSample("以像素为单位设置行向尺寸")}}
 
 ## 规范
 
@@ -73,7 +79,7 @@ inline-size: unset;
 
 {{Compat}}
 
-## 参阅
+## 参见
 
-- The mapped physical properties: {{cssxref("width")}} and {{cssxref("height")}}
-- {{cssxref("writing-mode")}}
+- 对应的实体属性：{{CSSXref("width")}} 和 {{CSSXref("height")}}
+- {{CSSXref("writing-mode")}}

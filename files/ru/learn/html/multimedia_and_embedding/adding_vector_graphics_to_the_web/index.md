@@ -26,9 +26,9 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphi
 
 Различия становятся заметны, когда вы изменяете масштаб страницы — PNG изображение становится неровным (становятся видны пиксели), потому что оно содержит информацию о положении и цвете каждого пикселя. При увеличении каждый пиксель также увеличивается, охватывая несколько пикселей дисплея, поэтому становятся заметны "кирпичики". Векторное изображение продолжает выглядеть ровным и красивым, потому что фигуры, масштабируются совместно с ним.
 
-![Two star images](https://mdn.mozillademos.org/files/12866/raster-vector-default-size.png)
+![Two star images](raster-vector-default-size.png)
 
-![Two star images zoomed in, one crisp and the other blurry](https://mdn.mozillademos.org/files/12868/raster-vector-zoomed.png)
+![Two star images zoomed in, one crisp and the other blurry](raster-vector-zoomed.png)
 
 > **Примечание:** Оба изображения сверху имеют формат PNG — слева показано растровое изображение, справа условно показано векторное изображение. Напоминаем, что пример с реальными растровым и векторными изображениями находится по ссылке: [vector-versus-raster.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) !
 
@@ -41,10 +41,12 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphi
 В качестве простого примера, следующий код создаёт круг и прямоугольник:
 
 ```html
-<svg version="1.1"
-     baseProfile="full"
-     width="300" height="200"
-     xmlns="http://www.w3.org/2000/svg">
+<svg
+  version="1.1"
+  baseProfile="full"
+  width="300"
+  height="200"
+  xmlns="http://www.w3.org/2000/svg">
   <rect width="100%" height="100%" fill="black" />
   <circle cx="150" cy="100" r="90" fill="blue" />
 </svg>
@@ -81,10 +83,10 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphi
 
 ```html
 <img
-    src="equilateral.svg"
-    alt="triangle with all three sides equal"
-    height="87px"
-    width="100px" />
+  src="equilateral.svg"
+  alt="triangle with all three sides equal"
+  height="87px"
+  width="100px" />
 ```
 
 #### Плюсы
@@ -100,10 +102,13 @@ original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphi
 
 ### Устранение неполадок и кросс-браузерная поддержка
 
-Для браузеров которые не поддерживают SVG (IE 8 и ниже, Android 2.3 и ниже), вы можете ссылаться на PNG или JPG в `src` атрибуте и использовать {{htmlattrxref("srcset", "img")}} атрибут (который распознают только последние браузеры) чтобы сослаться на SVG. В этом случае SVG будут загружаться только поддерживающими браузерами - старые же браузеры будут загружать PNG:
+Для браузеров которые не поддерживают SVG (IE 8 и ниже, Android 2.3 и ниже), вы можете ссылаться на PNG или JPG в `src` атрибуте и использовать [`srcset`](/ru/docs/Web/HTML/Element/img#srcset) атрибут (который распознают только последние браузеры) чтобы сослаться на SVG. В этом случае SVG будут загружаться только поддерживающими браузерами - старые же браузеры будут загружать PNG:
 
 ```html
-<img src="equilateral.png" alt="triangle with equal sides" srcset="equilateral.svg">
+<img
+  src="equilateral.png"
+  alt="triangle with equal sides"
+  srcset="equilateral.svg" />
 ```
 
 Также вы можете использовать SVG в качестве фоновых изображение CSS, как показано ниже. В приведённом коде ниже старые браузеры будут придерживаться PNG, который они понимают, тогда как новые браузеры будут загружать SVG:
@@ -120,11 +125,11 @@ background-size: contain;
 
 ### Как включить SVG в ваш HTML код
 
-Вы можете открыть файл SVG в текстовом редакторе, скопировать этот код и вставить его в ваш HTML документ — такой приём иногда называют встраиванием SVG (**SVG inline** или **inlining SVG**). Убедитесь, что фрагмент вашего SVG кода начинается и заканчивается с тегов [`<svg></svg>`](/en-US/docs/Web/SVG/Element/svg) (не включайте ничего, кроме них). Вот очень простой пример того, что вы можете вставить в ваш документ:
+Вы можете открыть файл SVG в текстовом редакторе, скопировать этот код и вставить его в ваш HTML документ — такой приём иногда называют встраиванием SVG (**SVG inline** или **inlining SVG**). Убедитесь, что фрагмент вашего SVG кода начинается и заканчивается с тегов [`<svg></svg>`](/ru/docs/Web/SVG/Element/svg) (не включайте ничего, кроме них). Вот очень простой пример того, что вы можете вставить в ваш документ:
 
 ```html
 <svg width="300" height="200">
-    <rect width="100%" height="100%" fill="green" />
+  <rect width="100%" height="100%" fill="green" />
 </svg>
 ```
 
@@ -142,9 +147,7 @@ background-size: contain;
 - Браузер не может кешировать встроенный SVG, так как он кеширует обычные изображения.
 - Вы можете добавить альтернативный вариант в элементе {{svgelement("foreignObject")}}, но браузеры поддерживающие SVG будут продолжать загружать все альтернативные изображения. Вы должны взвесить действительно стоит ли поддержка устаревших браузеров дополнительных накладных расходов (ресурсов).
 
-<!---->
-
-### Как встраивать SVG при помощи {{htmlelement("iframe")}}
+### Как встраивать SVG при помощи \<iframe>
 
 Вы можете открывать ваши SVG изображения в браузере просто как веб-страницы. Таким образом встраивание SVG документа с помощью `<iframe>` выполняется как мы изучали ранее в главе [От \<object> к \<iframe> — другие технологии внедрения](/ru/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies).
 
@@ -152,7 +155,7 @@ background-size: contain;
 
 ```html
 <iframe src="triangle.svg" width="500" height="500" sandbox>
-    <img src="triangle.png" alt="Triangle with three unequal sides" />
+  <img src="triangle.png" alt="Triangle with three unequal sides" />
 </iframe>
 ```
 
@@ -172,11 +175,12 @@ background-size: contain;
 ```html hidden
 <h2>Live output</h2>
 
-<div class="output" style="min-height: 50px;">
-</div>
+<div class="output" style="min-height: 50px;"></div>
 
 <h2>Editable code</h2>
-<p class="a11y-label">Press Esc to move focus away from the code area (Tab inserts a tab character).</p>
+<p class="a11y-label">
+  Press Esc to move focus away from the code area (Tab inserts a tab character).
+</p>
 
 <textarea id="code" class="input" style="width: 95%;min-height: 200px;">
   <svg width="100%" height="100%">
@@ -191,8 +195,8 @@ background-size: contain;
 </textarea>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="Reset">
-  <input id="solution" type="button" value="Show solution" disabled>
+  <input id="reset" type="button" value="Reset" />
+  <input id="solution" type="button" value="Show solution" disabled />
 </div>
 ```
 
@@ -219,10 +223,10 @@ body {
 ```
 
 ```js hidden
-var textarea = document.getElementById('code');
-var reset = document.getElementById('reset');
-var solution = document.getElementById('solution');
-var output = document.querySelector('.output');
+var textarea = document.getElementById("code");
+var reset = document.getElementById("reset");
+var solution = document.getElementById("solution");
+var output = document.querySelector(".output");
 var code = textarea.value;
 var userEntry = textarea.value;
 
@@ -230,38 +234,38 @@ function updateCode() {
   output.innerHTML = textarea.value;
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = htmlSolution;
-  solution.value = 'Show solution';
+  solution.value = "Show solution";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if(solution.value === 'Show solution') {
+solution.addEventListener("click", function () {
+  if (solution.value === "Show solution") {
     textarea.value = solutionEntry;
-    solution.value = 'Hide solution';
+    solution.value = "Hide solution";
   } else {
     textarea.value = userEntry;
-    solution.value = 'Show solution';
+    solution.value = "Show solution";
   }
   updateCode();
 });
 
-var htmlSolution = '';
+var htmlSolution = "";
 var solutionEntry = htmlSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -273,8 +277,11 @@ function insertAtCaret(text) {
   var scrollPos = textarea.scrollTop;
   var caretPos = textarea.selectionStart;
 
-  var front = (textarea.value).substring(0, caretPos);
-  var back = (textarea.value).substring(textarea.selectionEnd, textarea.value.length);
+  var front = textarea.value.substring(0, caretPos);
+  var back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
   textarea.value = front + text + back;
   caretPos = caretPos + text.length;
   textarea.selectionStart = caretPos;
@@ -285,10 +292,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if(solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

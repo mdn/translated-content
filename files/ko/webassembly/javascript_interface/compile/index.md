@@ -1,17 +1,17 @@
 ---
 title: WebAssembly.compile()
 slug: WebAssembly/JavaScript_interface/compile
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compile
 ---
-{{JSRef}}
+
+{{WebAssemblySidebar}}
 
 **`WebAssembly.compile()`**함수는 WebAssembly 바이너리 코드에서 {{jsxref ( "WebAssembly.Module")}}을 컴파일합니다. 이 함수는 모듈을 인스턴스화하기 전에 컴파일해야하는 경우에 유용합니다. 그렇지 않으면 {{jsxref ( "WebAssembly.instantiate ()")}} 함수를 사용해야합니다.
 
 ## Syntax
 
 ```js
-Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
+WebAssembly.compile(bufferSource);
 ```
 
 ### Parameters
@@ -35,22 +35,19 @@ Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
 ```js
 var worker = new Worker("wasm_worker.js");
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.compile(bytes)
-).then(mod =>
-  worker.postMessage(mod)
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.compile(bytes))
+  .then((mod) => worker.postMessage(mod));
 ```
 
 > **참고:** 대부분의 경우에 {{jsxref("WebAssembly.compileStreaming()")}}를 사용하는 것이 좋습니다. 이는 `compile()`보다 효율적이기 때문입니다.
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

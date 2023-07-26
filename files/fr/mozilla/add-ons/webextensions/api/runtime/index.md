@@ -1,15 +1,6 @@
 ---
 title: runtime
 slug: Mozilla/Add-ons/WebExtensions/API/runtime
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Interface
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 ---
 
@@ -105,9 +96,9 @@ Il fournit également des API de messagerie vous permettant de:
 - {{WebExtAPIRef("runtime.onRestartRequired")}}
   - : Lancé lorsque le périphérique doit être redémarré.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.runtime")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

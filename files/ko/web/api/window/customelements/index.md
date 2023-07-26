@@ -1,13 +1,6 @@
 ---
 title: Window.customElements
 slug: Web/API/Window/customElements
-tags:
-  - API
-  - Property
-  - Reference
-  - Web Components
-  - Window
-translation_of: Web/API/Window/customElements
 ---
 
 {{APIRef}}

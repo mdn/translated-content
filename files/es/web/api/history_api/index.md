@@ -136,9 +136,9 @@ Para un ejemplo completo de un sitio AJAX, ver: [Ejemplo de navegación AJAX](/e
 
 {{Specifications}}
 
-## Compatibilidad entre navegadores
+## Compatibilidad con navegadores
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## Ver también
 

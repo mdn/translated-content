@@ -1,7 +1,6 @@
 ---
 title: Alerts
 slug: conflicting/Web/Accessibility/ARIA
-translation_of: Web/Accessibility/ARIA/forms/alerts
 original_slug: Web/Accessibility/ARIA/forms/alerts
 ---
 

@@ -7,9 +7,9 @@ slug: Web/API/WebGL_API/By_example/Detect_WebGL
 
 这个例子演示了如何通过渲染上下文来检测{{Glossary("WebGL")}}，并将结果报告给用户。
 
-{{EmbedLiveSample("detect-webgl-source",660,150)}}
-
 ### WebGL 特性检测
+
+{{EmbedLiveSample("WebGL 特性检测",660,150)}}
 
 在第一个例子中，我们将检查浏览器是否支持{{Glossary("WebGL")}}。为此，我们将尝试从{{domxref("HTMLCanvasElement","canvas")}}元素获取{{domxref("WebGLRenderingContext","WebGL 渲染的上下文","",1)}} 。{{domxref("WebGLRenderingContext","WebGL 渲染的上下文", "", 1)}}是一个接口，通过它你可以设置和查询绘图器的状态，发送数据到 WebGL，执行绘制命令。
 

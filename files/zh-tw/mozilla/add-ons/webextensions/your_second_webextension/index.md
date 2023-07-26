@@ -35,7 +35,7 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 - 內容腳本與整個 extension 間的溝通
 - 打包 extension 所需的資源，讓網頁可以存取
 
-也可以在 GitHub 上找到範例的原始碼： <https://github.com/mdn/webextensions-examples/tree/master/beastify>
+也可以在 GitHub 上找到範例的原始碼： <https://github.com/mdn/webextensions-examples/tree/main/beastify>
 
 實作這個 extension 前，請先確認你的 Firefox 有 45.0 或更新的版本。
 
@@ -54,20 +54,17 @@ cd beastify
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Beastify",
   "version": "1.0",
 
   "description": "Adds a browser action icon to the toolbar. Click the button to choose a beast. The active tab's body content is then replaced with a picture of the chosen beast. See https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Examples#beastify",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/main/beastify",
   "icons": {
     "48": "icons/beasts-48.png"
   },
 
-  "permissions": [
-    "activeTab"
-  ],
+  "permissions": ["activeTab"],
 
   "browser_action": {
     "default_icon": "icons/beasts-32.png",
@@ -80,7 +77,6 @@ cd beastify
     "beasts/turtle.jpg",
     "beasts/snake.jpg"
   ]
-
 }
 ```
 
@@ -142,27 +138,27 @@ touch choose_beast.html choose_beast.css choose_beast.js
 HTML 內容長得像這樣：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="choose_beast.css"/>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="choose_beast.css" />
   </head>
 
-<body>
-  <div id="popup-content">
-    <div class="button beast">Frog</div>
-    <div class="button beast">Turtle</div>
-    <div class="button beast">Snake</div>
-    <div class="button reset">Reset</div>
-  </div>
-  <div id="error-content" class="hidden">
-    <p>Can't beastify this web page.</p><p>Try a different page.</p>
-  </div>
-  <script src="choose_beast.js"></script>
-</body>
-
+  <body>
+    <div id="popup-content">
+      <div class="button beast">Frog</div>
+      <div class="button beast">Turtle</div>
+      <div class="button beast">Snake</div>
+      <div class="button reset">Reset</div>
+    </div>
+    <div id="error-content" class="hidden">
+      <p>Can't beastify this web page.</p>
+      <p>Try a different page.</p>
+    </div>
+    <script src="choose_beast.js"></script>
+  </body>
 </html>
 ```
 
@@ -175,7 +171,8 @@ HTML 內容長得像這樣：
 CSS 定義了 pop-up 的大小，並確保三個選項有填滿整個 pop-up，並給他們幾個基本的 style：
 
 ```css
-html, body {
+html,
+body {
   width: 100px;
 }
 
@@ -188,19 +185,19 @@ html, body {
 }
 
 .beast:hover {
-  background-color: #CFF2F2;
+  background-color: #cff2f2;
 }
 
 .beast {
- background-color: #E5F2F2;
+  background-color: #e5f2f2;
 }
 
 .clear {
- background-color: #FBFBC9;
+  background-color: #fbfbc9;
 }
 
 .clear:hover {
- background-color: #EAEAC9;
+  background-color: #eaeac9;
 }
 ```
 
@@ -243,15 +240,17 @@ document.addEventListener("click", (e) => {
     var chosenBeastURL = beastNameToURL(chosenBeast);
 
     browser.tabs.executeScript(null, {
-      file: "/content_scripts/beastify.js"
+      file: "/content_scripts/beastify.js",
     });
 
-    var gettingActiveTab = browser.tabs.query({active: true, currentWindow: true});
-    gettingActiveTab.then((tabs) => {
-      browser.tabs.sendMessage(tabs[0].id, {beastURL: chosenBeastURL});
+    var gettingActiveTab = browser.tabs.query({
+      active: true,
+      currentWindow: true,
     });
-  }
-  else if (e.target.classList.contains("clear")) {
+    gettingActiveTab.then((tabs) => {
+      browser.tabs.sendMessage(tabs[0].id, { beastURL: chosenBeastURL });
+    });
+  } else if (e.target.classList.contains("clear")) {
     browser.tabs.reload();
     window.close();
   }
@@ -318,7 +317,7 @@ browser.runtime.onMessage.addListener(beastify);
 
 最後，我們需要將動物的照片放進來
 
-新增一個名為 "beasts" 的資料夾，並把三張動物的圖片放進此資料夾中，請取相對應的檔名。可以使用[範例圖片](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts) ，或從這邊下載：
+新增一個名為「beasts」的資料夾，並把三張動物的圖片放進此資料夾中，請取相對應的檔名。可以使用[範例圖片](https://github.com/mdn/webextensions-examples/tree/main/beastify/beasts)，或從這邊下載：
 
 ![](frog.jpg)![](snake.jpg)![](turtle.jpg)
 

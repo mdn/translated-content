@@ -60,9 +60,9 @@ Para dar soporte compatible con `Object.values()` a entornos antiguos que no la 
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Object.values")}}
+{{Compat}}
 
 ## Ver también
 

@@ -1,14 +1,7 @@
 ---
 title: Date.prototype.getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
-tags:
-  - Date
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
-original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getSeconds
 ---
 
 {{JSRef}}

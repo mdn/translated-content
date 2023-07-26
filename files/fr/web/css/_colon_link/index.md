@@ -1,10 +1,6 @@
 ---
 title: ':link'
 slug: Web/CSS/:link
-tags:
-  - CSS
-  - Pseudo-classe
-  - Reference
 translation_of: Web/CSS/:link
 ---
 

@@ -1,16 +1,6 @@
 ---
 title: idle.IdleState
 slug: Mozilla/Add-ons/WebExtensions/API/idle/IdleState
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Idle
-  - IdleState
-  - Non-standard
-  - Reference
-  - Type
-  - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/idle/IdleState
 ---
 
@@ -22,9 +12,9 @@ Chaîne d'écrivant l'état d'inactivité du périphérique.
 
 Les valeurs de ce type sont des chaînes. Les valeurs possibles sont : `"active"`, `"idle"`, `"locked"`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.idle.IdleState")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

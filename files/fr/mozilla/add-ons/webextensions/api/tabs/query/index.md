@@ -1,16 +1,6 @@
 ---
 title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - query
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/query
 ---
 
@@ -24,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var querying = browser.tabs.query(
-  queryInfo             // object
-)
+  queryInfo, // object
+);
 ```
 
 ### Paramètres
@@ -109,7 +99,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({currentWindow: true});
+var querying = browser.tabs.query({ currentWindow: true });
 querying.then(logTabs, onError);
 ```
 
@@ -127,7 +117,7 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({currentWindow: true, active: true});
+var querying = browser.tabs.query({ currentWindow: true, active: true });
 querying.then(logTabs, onError);
 ```
 
@@ -145,15 +135,15 @@ function onError(error) {
   console.log(`Error: ${error}`);
 }
 
-var querying = browser.tabs.query({url: "*://*.mozilla.org/*"});
+var querying = browser.tabs.query({ url: "*://*.mozilla.org/*" });
 querying.then(logTabs, onError);
 ```
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.tabs.query")}}
+{{Compat}}
 
 > **Note :**
 >

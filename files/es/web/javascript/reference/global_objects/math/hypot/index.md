@@ -90,9 +90,9 @@ Math.hypot = function (x, y) {
 
 {{Specifications}}
 
-## Compatibilidad en navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.Math.hypot")}}
+{{Compat}}
 
 ## Ver también
 

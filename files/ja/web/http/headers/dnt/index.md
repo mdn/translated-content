@@ -1,6 +1,8 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
+l10n:
+  sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
 {{HTTPSidebar}}{{Deprecated_header}}
@@ -23,7 +25,7 @@ slug: Web/HTTP/Headers/DNT
 
 ## 構文
 
-```
+```http
 DNT: 0
 DNT: 1
 DNT: null
@@ -60,9 +62,9 @@ navigator.doNotTrack; // "0" or "1"
 
 - {{domxref("Navigator.doNotTrack")}}
 - {{HTTPHeader("Tk")}} ヘッダー
-- [Wikipedia の Do Not Track](https://en.wikipedia.org/wiki/Do_Not_Track)
+- [Do Not Track (Wikipedia)](https://en.wikipedia.org/wiki/Do_Not_Track)
 - [What Does the "Track" in "Do Not Track" Mean? – EFF](https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean)
-- [donottrack.us](https://donottrack.us/)
+- [DNT (Electronic Frontier Foundation)](https://www.eff.org/issues/do-not-track)
 - DNT ブラウザー設定のヘルプ:
-  - [Firefox](https://www.mozilla.org/en-US/firefox/dnt/)
+  - [Firefox](https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature)
   - [Chrome](https://support.google.com/chrome/answer/2790761)

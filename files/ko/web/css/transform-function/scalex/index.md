@@ -1,7 +1,6 @@
 ---
 title: scaleX()
 slug: Web/CSS/transform-function/scaleX
-translation_of: Web/CSS/transform-function/scaleX()
 original_slug: Web/CSS/transform-function/scaleX()
 ---
 {{CSSRef}}
@@ -117,7 +116,7 @@ div {
 
 {{EmbedLiveSample("Examples","200","200")}}
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 

@@ -1,8 +1,7 @@
 ---
 title: Document.scrollingElement
 slug: Web/API/Document/scrollingElement
-browser-compat: api.Document.scrollingElement
-translation_of: 'Web/API/Document/scrollingElement'
+translation_of: "Web/API/Document/scrollingElement"
 ---
 
 {{APIRef("DOM")}}
@@ -28,6 +27,6 @@ scrollElm.scrollTop = 0;
 
 {{Specifications}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
 {{Compat}}

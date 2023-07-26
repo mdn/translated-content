@@ -3,7 +3,9 @@ title: Column layouts
 slug: Web/CSS/Layout_cookbook/Column_layouts
 ---
 
-{{CSSRef}}你可能经常需要创建一个包含几个栏目的布局，css 提供了几个方法来实现它。使用 Grid, Flexbox 或者 Multi-column layout 都取决于你想要实现什么目标，在这篇 recipe 中我们会探讨这些内容![three different styles of layouts which have two columns in the container.](cookbook-multiple-columns.png)
+{{CSSRef}}
+
+你可能经常需要创建一个包含几个栏目的布局，css 提供了几个方法来实现它。使用 Grid, Flexbox 或者 Multi-column layout 都取决于你想要实现什么目标，在这篇 recipe 中我们会探讨这些内容![three different styles of layouts which have two columns in the container.](cookbook-multiple-columns.png)
 
 ## Requirements
 
@@ -87,6 +89,6 @@ Use Grid:
 
 ## Resources on MDN
 
-- [Guide to Multi-column Layout](/zh-CN/docs/Web/CSS/CSS_Columns)
-- [Guide to Flexbox](/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/)
-- [Guide to CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout)
+- [Guide to Multi-column Layout](/zh-CN/docs/Web/CSS/CSS_multicol_layout)
+- [Guide to Flexbox](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/)
+- [Guide to CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_grid_layout)

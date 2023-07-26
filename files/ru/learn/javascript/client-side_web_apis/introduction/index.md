@@ -18,7 +18,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 
 Для лучшего понимания рассмотрим аналогию с домашними электросетями. Когда вы хотите использовать какой-то электроприбор, вы просто подключаете его к розетке, и всё работает. Вы не пытаетесь подключить провода напрямую к источнику тока — делать это бесполезно и, если вы не электрик, сложно и опасно.
 
-![](https://mdn.mozillademos.org/files/14317/plug-socket.png)
+![](plug-socket.png)
 
 _Image source: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/9518184890/in/photostream/lightbox/) by [The Clear Communication People](https://www.flickr.com/photos/easy-pics/), on Flickr._
 
@@ -33,7 +33,7 @@ _Image source: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/
 - **API браузера** встроены в веб-браузер и способны использовать данные браузера и компьютерной среды для осуществления более сложных действий с этими данными. К примеру, [API Геолокации (Geolocation API)](/ru/docs/Web/API/Geolocation/Using_geolocation) предоставляет простые в использовании конструкции JavaScript для работы с данными местоположения, так что вы сможете, допустим, отметить своё расположение на карте Google Map. На самом деле, в браузере выполняется сложный низкоуровневый код (например, на C++) для подключения к устройству GPS (или любому другому устройству геолокации), получения данных и передачи их браузеру для обработки вашей программой, но, как было сказано выше, эти детали скрыты благодаря API.
 - **Сторонние API** не встроены в браузер по умолчанию. Такие API и информацию о них обычно необходимо искать в интернете. Например, [Twitter API](https://dev.twitter.com/overview/documentation) позволяет размещать последние твиты (tweets) на вашем веб-сайте. В данном API определён набор конструкций, осуществляющих запросы к сервисам Twitter и возвращающих определённые данные.
 
-![](https://mdn.mozillademos.org/files/13508/browser.png)
+![](browser.png)
 
 ### Взаимодействие JavaScript, API и других средств JavaScript
 
@@ -43,7 +43,7 @@ _Image source: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/
 - API браузера (Browser APIs) — конструкции, встроенные в браузер, построенные на основе языка JavaScript, предназначенные для облегчения разработки функциональности.
 - Сторонние API (Third party APIs) — конструкции, встроенные в сторонние платформы (такие как Twitter, Facebook) позволяющие вам использовать часть функциональности этих платформ в своих собственных веб-страницах/приложениях (например, показывать последние Твиты на вашей странице).
 - Библиотеки JavaScript — Обычно один или несколько файлов, содержащих [пользовательские (custom) функции](/ru/docs/Learn/JavaScript/Building_blocks/Functions#Custom_functions). Такие файлы можно прикрепить к веб-странице, чтобы ускорить или предоставить инструменты для написания общего функциональности. Примеры: jQuery, Mootools и React.
-- JavaScript фреймворки (frameworks) — Следующий шаг в развитии разработки после библиотек. Фреймворки JavaScript (такие как Angular и Ember) стремятся к тому, чтобы быть набором HTML, CSS, JavaScript и других технологий, после установки которого можно "писать" веб-приложение с нуля. Главное различие между фреймворками и библиотеками - "Обратное направление управления" ( “Inversion of Control” ). Вызов метода из библиотеки происходит по требованию разработчика. При использовании фреймворка - наоборот, фреймворк производит вызов кода разработчика.
+- JavaScript фреймворки (frameworks) — Следующий шаг в развитии разработки после библиотек. Фреймворки JavaScript (такие как Angular и Ember) стремятся к тому, чтобы быть набором HTML, CSS, JavaScript и других технологий, после установки которого можно "писать" веб-приложение с нуля. Главное различие между фреймворками и библиотеками - "Обратное направление управления" ( "Inversion of Control" ). Вызов метода из библиотеки происходит по требованию разработчика. При использовании фреймворка - наоборот, фреймворк производит вызов кода разработчика.
 
 ## На что способны API?
 
@@ -88,18 +88,24 @@ _Image source: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/
 - {{domxref("Position")}}, предоставляет данные о местоположении устройства в заданный момент времени — содержит {{domxref("Coordinates")}} - объект, хранящий координаты и отметку о текущем времени.
 - {{domxref("Coordinates")}}, содержит много полезной информации о расположении устройства, включая широту и долготу, высоту, скорость и направление движения и т.д.
 
-Так как же эти объекты взаимодействуют? Если вы посмотрите на наш пример [maps-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html) ([see it live also](http://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), вы увидите следующий код:
+Так как же эти объекты взаимодействуют? Если вы посмотрите на наш пример [web audio example](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/web-audio/index.html) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/introduction/web-audio/)), вы увидите следующий код:
 
 ```js
-navigator.geolocation.getCurrentPosition(function(position) {
-  var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+navigator.geolocation.getCurrentPosition(function (position) {
+  var latlng = new google.maps.LatLng(
+    position.coords.latitude,
+    position.coords.longitude,
+  );
   var myOptions = {
     zoom: 8,
     center: latlng,
     mapTypeId: google.maps.MapTypeId.TERRAIN,
-    disableDefaultUI: true
-  }
-  var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
+    disableDefaultUI: true,
+  };
+  var map = new google.maps.Map(
+    document.querySelector("#map_canvas"),
+    myOptions,
+  );
 });
 ```
 
@@ -136,13 +142,18 @@ var myLatitude = position.coords.latitude;
 Мы совмещаем API Геолокации со сторонним API - Google Maps API, который используем для того, чтобы отметить расположение, возвращаемое `getCurrentPosition()` , на Google Map. Чтобы Google Maps API стал доступен на нашей странице, мы включаем его в HTML документ:
 
 ```html
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
+<script
+  type="text/javascript"
+  src="https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA"></script>
 ```
 
 Чтобы использовать этот API, во-первых создадим объект `LatLng` с помощью конструктора `google.maps.LatLng()` , принимающим данные геолокации {{domxref("Coordinates.latitude")}} и {{domxref("Coordinates.longitude")}} :
 
 ```js
-var latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+var latlng = new google.maps.LatLng(
+  position.coords.latitude,
+  position.coords.longitude,
+);
 ```
 
 Этот объект сам является значением свойства `center` объекта настроек (options), который мы назвали `myOptions`. Затем мы создаём экземпляр объекта, представляющего нашу карту, вызывая конструктор `google.maps.Map()` и передавая ему два параметра — ссылку на элемент {{htmlelement("div")}}, на котором мы хотим отрисовывать карту (с ID `map_canvas`), и объект настроек (options), который мы определили выше.
@@ -152,8 +163,8 @@ var myOptions = {
   zoom: 8,
   center: latlng,
   mapTypeId: google.maps.MapTypeId.TERRAIN,
-  disableDefaultUI: true
-}
+  disableDefaultUI: true,
+};
 
 var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
 ```
@@ -174,23 +185,23 @@ var map = new google.maps.Map(document.querySelector("#map_canvas"), myOptions);
 Найти точку входа Document Object Model (DOM) API ещё проще — при применении этого API используется объект {{domxref("Document")}}, или экземпляр элемента HTML, с которым вы хотите каким-либо образом взаимодействовать, к примеру:
 
 ```js
-var em = document.createElement('em'); // создаёт новый элемент em
-var para = document.querySelector('p'); // ссылка на существующий элемент p
-em.textContent = 'Hello there!'; // присвоение текстового содержимого
+var em = document.createElement("em"); // создаёт новый элемент em
+var para = document.querySelector("p"); // ссылка на существующий элемент p
+em.textContent = "Hello there!"; // присвоение текстового содержимого
 para.appendChild(em); // встроить em внутрь para
 ```
 
 Точки входа других API немного сложнее, часто подразумевается создание особого контекста, в котором будет написан код API. Например, объект контекста Canvas API создаётся получением ссылки на элемент {{htmlelement("canvas")}}, на котором вы хотите рисовать, а затем необходимо вызвать метод {{domxref("HTMLCanvasElement.getContext()")}}:
 
 ```js
-var canvas = document.querySelector('canvas');
-var ctx = canvas.getContext('2d');
+var canvas = document.querySelector("canvas");
+var ctx = canvas.getContext("2d");
 ```
 
 Всё, что мы хотим сделать с canvas после этого, достигается вызовом свойств и методов объекта содержимого (content) (который является экземпляром {{domxref("CanvasRenderingContext2D")}}), например:
 
 ```js
-Ball.prototype.draw = function() {
+Ball.prototype.draw = function () {
   ctx.beginPath();
   ctx.fillStyle = this.color;
   ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
@@ -204,22 +215,23 @@ Ball.prototype.draw = function() {
 
 Мы уже обсуждали события ранее в этом курсе, в нашей статье [Introduction to events](/ru/docs/Learn/JavaScript/Building_blocks/Events) — в этой статье детально описываются события на стороне клиента и их применение. Если вы ещё не знакомы с тем, как работают события клиентской части, рекомендуем прочитать эту статью прежде, чем продолжить.
 
-В некоторых API содержится ряд различных событий, в некоторых - событий нет. Свойства обработчика, позволяющие запускать функции при совершении какого-либо события по большей части перечислены в нашем материале отдельного раздела "Обработчики событий (Event handlers)". Как простой пример, экземпляры объекта [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) (каждый представляет собой HTTP-запрос к серверу на получение каких-либо ресурсов (resource)) имеют несколько доступных событий, например, событие `load` происходит, когда ответ с запрашиваемым ресурсом был успешно возвращён и доступен в данный момент.
+В некоторых API содержится ряд различных событий, в некоторых - событий нет. Свойства обработчика, позволяющие запускать функции при совершении какого-либо события по большей части перечислены в нашем материале отдельного раздела "Обработчики событий (Event handlers)". Как простой пример, экземпляры объекта [`XMLHttpRequest`](/ru/docs/Web/API/XMLHttpRequest) (каждый представляет собой HTTP-запрос к серверу на получение каких-либо ресурсов (resource)) имеют несколько доступных событий, например, событие `load` происходит, когда ответ с запрашиваемым ресурсом был успешно возвращён и доступен в данный момент.
 
 Следующий код содержит простой пример использования событий:
 
 ```js
-var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+var requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
+request.open("GET", requestURL);
+request.responseType = "json";
 request.send();
 
-request.onload = function() {
+request.onload = function () {
   var superHeroes = request.response;
   populateHeader(superHeroes);
   showHeroes(superHeroes);
-}
+};
 ```
 
 > **Примечание:** вы можете увидеть этот код в действии в примере [ajax.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/ajax.html) ([see it live](http://mdn.github.io/learning-area/javascript/apis/introduction/ajax.html) also).
@@ -238,7 +250,7 @@ request.onload = function() {
 
 [Notifications API](/ru/docs/Web/API/Notifications_API) запрашивает разрешение подобным образом:
 
-![](https://mdn.mozillademos.org/files/14315/notification-permission.png)
+![](notification-permission.png)
 
 Запросы разрешений необходимы для обеспечения безопасности пользователей — не будь их, сайты могли бы скрытно отследить ваше местоположение, не создавая множество надоедливых уведомлений.
 

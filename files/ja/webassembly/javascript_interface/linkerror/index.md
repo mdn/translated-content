@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/LinkError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.RuntimeLinkError`** オブジェクトは、モジュールのインスタンス化の際に発生したエラーを示します (開始した関数での[トラップ](https://webassembly.org/docs/semantics/#traps)を除く)。
 
@@ -43,15 +43,15 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError
 
 ```js
 try {
-  throw new WebAssembly.LinkError('Hello', 'someFile', 10);
+  throw new WebAssembly.LinkError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof LinkError); // true
-  console.log(e.message);                 // "Hello"
-  console.log(e.name);                    // "LinkError"
-  console.log(e.fileName);                // "someFile"
-  console.log(e.lineNumber);              // 10
-  console.log(e.columnNumber);            // 0
-  console.log(e.stack);                   // コードが実行されていた位置を返す
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "LinkError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // コードが実行されていた位置を返す
 }
 ```
 

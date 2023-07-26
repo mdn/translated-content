@@ -1,11 +1,6 @@
 ---
 title: 'SyntaxError: missing variable name'
 slug: Web/JavaScript/Reference/Errors/No_variable_name
-tags:
-  - Error
-  - Error de sintaxis
-  - errores
-translation_of: Web/JavaScript/Reference/Errors/No_variable_name
 ---
 
 {{jsSidebar("Errors")}}

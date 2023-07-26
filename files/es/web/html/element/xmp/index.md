@@ -24,7 +24,7 @@ Este elemento no tiene otros atributos que los [atributos globales](/es/docs/Web
 
 Este elemento implementa la interface {{domxref('HTMLElement')}} .
 
-> **Nota:** **Nota de implementación:** hasta Gecko 1.9.2 inclusivamente , Firefox implemente la interface {{domxref('HTMLSpanElement')}} para este elemento .
+> **Nota:** hasta Gecko 1.9.2 inclusivamente , Firefox implemente la interface {{domxref('HTMLSpanElement')}} para este elemento .
 
 ## Ver también
 

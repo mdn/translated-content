@@ -14,7 +14,7 @@ original_slug: Web/API/Видимость_страницы_API
 
 При переключении между вкладками, web страница переходит в фоновый режим и поэтому не видна пользователю. Page Visibility API предоставляет события, которые вы можете отслеживать, чтобы узнать, когда страница станет видимой или скрытой, а так же возможность наблюдать текущее состояние видимости страницы.
 
-> **Примечание:** **Notes:** The Page Visibility API особенно полезно для сбережения ресурсов и улучшения производительности, позволяя странице остановить выполнение не нужных задач, когда она не видна.
+> **Примечание:** The Page Visibility API особенно полезно для сбережения ресурсов и улучшения производительности, позволяя странице остановить выполнение не нужных задач, когда она не видна.
 
 Когда пользователь сворачивает окно или переключается на другую вкладку, API отправляет {{event("visibilitychange")}} событие обработчикам, что состояние страницы изменилось. Вы можете отследить это событие и выполнить какие-то действия. Например, если ваше app проигрывает видео, его можно поставить на паузу, когда пользователь переключил вкладку (страница ушла в фон), а затем возобновить видео, когда пользователь вернулся на вкладку. Пользователь не теряет место на котором остановил просмотр, звук от видео не конфликтует с аудио новой вкладки, пользователь комфортно просмотреть оба видео.
 
@@ -49,7 +49,7 @@ Separately from the Page Visibility API, user agents typically have a number of 
 
 Some processes are exempt from this throttling behavior. In these cases, you can use the Page Visibility API to reduce the tabs' performance impact while they're hidden.
 
-- Tabs which are playing audio are considered foreground and aren’t throttled.
+- Tabs which are playing audio are considered foreground and aren't throttled.
 - Tabs running code that's using real-time network connections ([WebSockets](/ru/docs/Web/API/WebSockets_API) and [WebRTC](/ru/docs/Web/API/WebRTC_API)) go unthrottled in order to avoid closing these connections timing out and getting unexpectedly closed.
 - [IndexedDB](/ru/docs/Web/API/IndexedDB_API) processes are also left unthrottled in order to avoid timeouts.
 

@@ -15,7 +15,7 @@ WebAssembly에서 바이너리와 텍스트 사이에 기본적인 코드 교환
 
 우선, S- expressions이 어떻게 보이는지 봅시다. 트리의 각 노드는 한 쌍의 괄호`( ... )` 안에 있습니다. 괄호 안의 첫 번째 레이블은 노드의 유형을 알려주고, 그 후에 속성 또는 하위 노드의 공백으로 구분 된 목록이 있습니다. 즉, WebAssembly S-expression을 의미합니다.
 
-```rs
+```rust
     (module (memory 1) (func))
 ```
 
@@ -25,7 +25,7 @@ WebAssembly에서 바이너리와 텍스트 사이에 기본적인 코드 교환
 
 가장 간단하고, 작동 가능한 wasm 모듈 작성을 시작합니다.
 
-```rs
+```rust
     (module)
 ```
 
@@ -33,7 +33,7 @@ WebAssembly에서 바이너리와 텍스트 사이에 기본적인 코드 교환
 
 만약 이 모듈을 바이너리로 전환하면,([웹어셈블리 텍스트 형식을 wasm으로 변환](/ko/docs/WebAssembly/Text_format_to_wasm) 참조), 우리는 8바이트짜리 모듈 헤더를 [이진 형식](http://webassembly.org/docs/binary-encoding/#high-level-structure)으로 보게 될 것입니다.
 
-```rs
+```rust
     0000000: 0061 736d              ; WASM_BINARY_MAGIC
     0000004: 0d00 0000              ; WASM_BINARY_VERSION
 ```
@@ -44,13 +44,13 @@ WebAssembly에서 바이너리와 텍스트 사이에 기본적인 코드 교환
 
 webassembly 모듈의 모든 코드는 다음과 같은 의사 코드 구조를 갖는 함수로 구성되어있습니다.
 
-```rs
+```rust
     ( func <signature> <locals> <body> )
 ```
 
-- 명칭(**signature)**은 함수에서 (인자를)받고 (반환 값)반환하는 형식을 정의합니다.
-- 지역인수(**locals)**는 자바스크립트의 변수 같지만, 명시적으로 형식을 정의합니다.
-- 본문(**body)**은 저수준 정의를 일렬로 나열한 목록입니다.
+- **명칭**(**signature**)은 함수에서 (인자를)받고 (반환 값)반환하는 형식을 정의합니다.
+- **지역인수**(**locals**)는 자바스크립트의 변수 같지만, 명시적으로 형식을 정의합니다.
+- **본문**(**body**)은 저수준 정의를 일렬로 나열한 목록입니다.
 
 좀 다르게 보여도 다른 언어의 함수와 비슷합니다.
 
@@ -70,7 +70,7 @@ Signatures는 반환 형식 선언 목록 뒤에 오는 매개 변수 형식 선
 
 하나의 인자를 받기 위해 `(param i32)`라고 작성하고, 반환 값을 받기 위해 `(result i32)`라고 작성합니다. 아래에 2개의 32비트 정수를 받고 64비트 부동소수를 반환하는 바이너리 함수를 작성하였습니다.
 
-```rs
+```rust
     (func (param i32) (param i32) (result f64) ... )
 ```
 
@@ -82,7 +82,7 @@ signature 뒤에는 형식을 가진 locals를 나열합니다. `(local i32)`와
 
 The `get_local`/`set_local` 명령문은 숫자로 이루어진 요소를 가져오거나 설정합니다. parameter가 선언 순서상 먼저 위치하며, 그다음 locals 순으로 되어 있습니다.
 
-```rs
+```rust
     (func (param i32) (param f32) (local f64)
       get_local 0
       get_local 1
@@ -95,7 +95,7 @@ The `get_local`/`set_local` 명령문은 숫자로 이루어진 요소를 가져
 
 따라서 위에 작성한 함수 명칭을 아래와 같이 재구성할 수 있습니다.
 
-```rs
+```rust
     (func (param $p1 i32) (param $p2 f32) (local $loc f64) …)
 ```
 
@@ -109,7 +109,7 @@ The `get_local`/`set_local` 명령문은 숫자로 이루어진 요소를 가져
 
 함수가 호출되면, 이 함수는 빈 스택으로 시작하여 함수가 실행되는 동안 스택이 서서히 채우고 끝나면 다시 비워 버립니다. 아래 함수를 실행해 봅시다.
 
-```rs
+```rust
     (func (param $p i32)
       get_local $p
       get_local $p
@@ -124,7 +124,7 @@ The `get_local`/`set_local` 명령문은 숫자로 이루어진 요소를 가져
 
 전에 언급했듯이, 함수의 본문은 단순히 함수가 호출됐을 때 실행할 작업의 리스트입니다. 이전에 다루었던 것을 종합하면 아래와 같이 간단한 함수를 포함하는 모듈을 선언할 수 있습니다.
 
-```rs
+```rust
     (module
       (func (param $lhs i32) (param $rhs i32) (result i32)
         get_local $lhs
@@ -144,13 +144,13 @@ The `get_local`/`set_local` 명령문은 숫자로 이루어진 요소를 가져
 
 locals와 마찬가지로 함수는 기본적으로 인덱스로 식별되지만 편의상 이름을 지정할 수 있습니다. 먼저 `func` 키워드 바로 뒤에 달러 기호가 붙은 이름을 추가합니다.
 
-```rs
+```rust
     (func $add … )
 ```
 
 이제 내보내기 선언을 추가해야합니다. 다음과 같습니다.
 
-```rs
+```rust
     (export "add" (func $add))
 ```
 
@@ -158,7 +158,7 @@ locals와 마찬가지로 함수는 기본적으로 인덱스로 식별되지만
 
 그래서 우리의 마지막 모듈은 (지금은) 다음과 같습니다.
 
-```rs
+```rust
     (module
       (func $add (param $lhs i32) (param $rhs i32) (result i32)
         get_local $lhs
@@ -173,10 +173,9 @@ locals와 마찬가지로 함수는 기본적으로 인덱스로 식별되지만
 다음으로 바이너리를 `addCode` ([Fetching WebAssembly Bytecode](/ko/docs/WebAssembly/Fetching_WebAssembly_bytecode)에서 설명한대로)라는 형식화 된 배열에로드하고, 컴파일 및 인스턴스화 한 다음 자바 스크립트에서 `add` 함수를 실행합니다. (이제 `add()`는 인스턴스의 [`exports`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports) 속성에서 찾을 수 있습니다)
 
 ```js
-    WebAssembly.instantiateStreaming(fetch('add.wasm'))
-    .then(obj => {
-       console.log(obj.instance.exports.add(1, 2));  // "3"
-    });
+WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
+  console.log(obj.instance.exports.add(1, 2)); // "3"
+});
 ```
 
 > **참고:** 이 예제는 GitHub에서 [add.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/add.html)로 찾을 수 있습니다 ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/add.html)). 인스턴스 함수에 대한 자세한 내용은 {{jsxref ( "WebAssembly.instantiate ()")}}를 참조하십시오.
@@ -212,10 +211,9 @@ In this example you’ll notice an `(export "getAnswerPlus1")` section, declared
 위의 모듈을 호출하는 JavaScript 코드는 다음과 같습니다.
 
 ```js
-    WebAssembly.instantiateStreaming(fetch('call.wasm'))
-    .then(obj => {
-       console.log(obj.instance.exports.getAnswerPlus1());  // "43"
-    });
+WebAssembly.instantiateStreaming(fetch("call.wasm")).then((obj) => {
+  console.log(obj.instance.exports.getAnswerPlus1()); // "43"
+});
 ```
 
 > **참고:** 이 예제는 GitHub에서 [call.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/call.html)로 찾을 수 있습니다 ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/call.html)).
@@ -243,18 +241,19 @@ JavaScript 함수에는 서명 개념이 없으므로 임포트의 선언 된 �
 이것은 다음과 같습니다.
 
 ```js
-    var importObject = {
-      console: {
-        log: function(arg) {
-          console.log(arg);
-        }
-      }
-    };
+var importObject = {
+  console: {
+    log: function (arg) {
+      console.log(arg);
+    },
+  },
+};
 
-    WebAssembly.instantiateStreaming(fetch('logger.wasm'), importObject)
-    .then(obj => {
-      obj.instance.exports.logIt();
-    });
+WebAssembly.instantiateStreaming(fetch("logger.wasm"), importObject).then(
+  (obj) => {
+    obj.instance.exports.logIt();
+  },
+);
 ```
 
 > **참고:** 이 예제는 GitHub에서 [logger.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger.html)로 찾을 수 있습니다 (라이브([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/logger.html))도 참조하십시오).
@@ -281,7 +280,7 @@ WebAssembly 텍스트 형식에서는 다음과 비슷합니다 (GitHub의 [glob
 JavaScript를 사용하여 동일한 값을 만들려면 {{jsxref("WebAssembly.Global()")}} 생성자를 사용합니다.
 
 ```js
-    const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 ```
 
 ### WebAssembly Memory
@@ -305,18 +304,18 @@ JavaScript의 관점에서 볼 때 크기가 조정 가능한 큰 {{domxref("Arr
 자바 스크립트 측면에서 우리는 [TextDecoder API](/ko/docs/Web/API/TextDecoder)를 사용하여 바이트를 자바 스크립트 문자열로 쉽게 디코딩 할 수 있습니다. (여기서는 `utf8`을 지정하지만 다른 많은 인코딩이 지원됩니다.)
 
 ```js
-    function consoleLogString(offset, length) {
-      var bytes = new Uint8Array(memory.buffer, offset, length);
-      var string = new TextDecoder('utf8').decode(bytes);
-      console.log(string);
-    }
+function consoleLogString(offset, length) {
+  var bytes = new Uint8Array(memory.buffer, offset, length);
+  var string = new TextDecoder("utf8").decode(bytes);
+  console.log(string);
+}
 ```
 
 이제 남은 부분은 `consoleLogString`이 WebAssembly `memory`에 액세스하는 부분입니다. WebAssembly는 JavaScript로 [`Memory`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) 객체를 만들고 WebAssembly 모듈에서 메모리를 가져 오거나 WebAssembly 모듈에서 메모리를 만들어 JavaScript로 내보낼 수 있는 유연성을 제공합니다.
 
 간단히하기 위해 JavaScript로 작성한 다음 WebAssembly로 가져와 봅시다. 우리의 `import`statement는 다음과 같이 작성됩니다 :
 
-```rs
+```rust
     (import "js" "mem" (memory 1))
 ```
 
@@ -326,7 +325,7 @@ JavaScript의 관점에서 볼 때 크기가 조정 가능한 큰 {{domxref("Arr
 
 최종 wasm 모듈을 확인하겠습니다.
 
-```rs
+```rust
     (module
       (import "console" "log" (func $log (param i32 i32)))
       (import "js" "mem" (memory 1))
@@ -342,14 +341,15 @@ JavaScript의 관점에서 볼 때 크기가 조정 가능한 큰 {{domxref("Arr
 자바 스크립트에서 우리는 1 페이지 메모리를 만들고 그것을 전달할 수 있습니다. 결과적으로 "Hi"가 콘솔에 출력됩니다 :
 
 ```js
-    var memory = new WebAssembly.Memory({initial:1});
+var memory = new WebAssembly.Memory({ initial: 1 });
 
-    var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
+var importObject = { console: { log: consoleLogString }, js: { mem: memory } };
 
-    WebAssembly.instantiateStreaming(fetch('logger2.wasm'), importObject)
-    .then(obj => {
-      obj.instance.exports.writeHi();
-    });
+WebAssembly.instantiateStreaming(fetch("logger2.wasm"), importObject).then(
+  (obj) => {
+    obj.instance.exports.writeHi();
+  },
+);
 ```
 
 > **참고:** 깃허브에서 소스 전체버전을 확인할 수 있습니다. [logger2.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/logger2.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/logger2.html)).
@@ -374,7 +374,7 @@ WebAssembly는 `anyfunc` 유형을 추가 할 수 있습니다 (유형이 모든
 
 그러면 우리 테이블에 함수를 어떻게 배치할까요? `data` 섹션을 사용하여 선형 메모리 영역을 바이트로 초기화하는 것처럼 `elem` 섹션을 사용하여 함수가있는 테이블 영역을 초기화 할 수 있습니다.
 
-```rs
+```rust
     (module
       (table 2 anyfunc)
       (elem (i32.const 0) $f1 $f2)
@@ -414,7 +414,7 @@ WebAssembly는 `anyfunc` 유형을 추가 할 수 있습니다 (유형이 모든
 
 우리가 사용 할 테이블을 정의했습니다. 다음 코드 섹션을 통해 테이블을 사용 할 수 있습니다.
 
-```rs
+```rust
     (type $return_i32 (func (result i32))) ;; if this was f32, type checking would fail
     (func (export "callByIndex") (param $i i32) (result i32)
       get_local $i
@@ -428,7 +428,7 @@ WebAssembly는 `anyfunc` 유형을 추가 할 수 있습니다 (유형이 모든
 
 다음과 같이 `call_indirect` 매개 변수를 명령 호출 중에 명시 적으로 선언 할 수도 있습니다.
 
-```rs
+```rust
     (call_indirect (type $return_i32) (get_local $i))
 ```
 
@@ -438,13 +438,13 @@ WebAssembly는 `anyfunc` 유형을 추가 할 수 있습니다 (유형이 모든
 
 `call_indirect`와 호출하는 테이블을 연결하는 것은 무엇입니까? 대답은 모듈 인스턴스 당 하나의 테이블 만 허용된다는 것입니다. `call_indirect`가 암시 적으로 호출하는 것입니다. 향후, 여러 테이블이 허용 될 때, 우리는 또한 어떤 종류의 테이블 식별자를 지정할 필요가있습니다
 
-```rs
+```rust
     call_indirect $my_spicy_table (type $i32_to_void)
 ```
 
 전체 모듈은 모두 이와 같이 보이며 [wasm-table.wat](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.wat) 예제 파일에서 찾을 수 있습니다.
 
-```rs
+```rust
     (module
       (table 2 anyfunc)
       (func $f1 (result i32)
@@ -462,12 +462,11 @@ WebAssembly는 `anyfunc` 유형을 추가 할 수 있습니다 (유형이 모든
 다음 자바 스크립트를 사용하여 웹 페이지에로드합니다.
 
 ```js
-    WebAssembly.instantiateStreaming(fetch('wasm-table.wasm'))
-    .then(obj => {
-      console.log(obj.instance.exports.callByIndex(0)); // returns 42
-      console.log(obj.instance.exports.callByIndex(1)); // returns 13
-      console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
-    });
+WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
+  console.log(obj.instance.exports.callByIndex(0)); // returns 42
+  console.log(obj.instance.exports.callByIndex(1)); // returns 13
+  console.log(obj.instance.exports.callByIndex(2)); // returns an error, because there is no index position 2 in the table
+});
 ```
 
 > **참고:** [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html)에서 이 예제를 확인할 수 있습니다. ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
@@ -486,7 +485,7 @@ JavaScript는 함수 참조에 대한 모든 액세스 권한을 갖기 때문�
 
 `shared0.wat`:
 
-```rs
+```rust
     (module
       (import "js" "memory" (memory 1))
       (import "js" "table" (table 1 anyfunc))
@@ -525,19 +524,19 @@ JavaScript는 함수 참조에 대한 모든 액세스 권한을 갖기 때문�
 어셈블리로 변환 한 후 다음 코드를 통해 JavaScript에서 `shared0.wasm`과 `shared1.wasm`을 사용합니다.
 
 ```js
-    var importObj = {
-      js: {
-        memory : new WebAssembly.Memory({ initial: 1 }),
-        table : new WebAssembly.Table({ initial: 1, element: "anyfunc" })
-      }
-    };
+var importObj = {
+  js: {
+    memory: new WebAssembly.Memory({ initial: 1 }),
+    table: new WebAssembly.Table({ initial: 1, element: "anyfunc" }),
+  },
+};
 
-    Promise.all([
-      WebAssembly.instantiateStreaming(fetch('shared0.wasm'), importObj),
-      WebAssembly.instantiateStreaming(fetch('shared1.wasm'), importObj)
-    ]).then(function(results) {
-      console.log(results[1].instance.exports.doIt());  // prints 42
-    });
+Promise.all([
+  WebAssembly.instantiateStreaming(fetch("shared0.wasm"), importObj),
+  WebAssembly.instantiateStreaming(fetch("shared1.wasm"), importObj),
+]).then(function (results) {
+  console.log(results[1].instance.exports.doIt()); // prints 42
+});
 ```
 
 컴파일되는 각 모듈은 동일한 메모리 및 테이블 객체를 가져와 동일한 선형 메모리 및 테이블 "주소 공간"을 공유 할 수 있습니다.

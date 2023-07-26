@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface/RuntimeError
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 **`WebAssembly.RuntimeError`** オブジェクトは、 WebAssembly が[トラップ](https://webassembly.org/docs/semantics/#traps)を指定するたびに例外として発生するエラー型です。
 
@@ -43,15 +43,15 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 
 ```js
 try {
-  throw new WebAssembly.RuntimeError('Hello', 'someFile', 10);
+  throw new WebAssembly.RuntimeError("Hello", "someFile", 10);
 } catch (e) {
   console.log(e instanceof WebAssembly.RuntimeError); // true
-  console.log(e.message);                             // "Hello"
-  console.log(e.name);                                // "RuntimeError"
-  console.log(e.fileName);                            // "someFile"
-  console.log(e.lineNumber);                          // 10
-  console.log(e.columnNumber);                        // 0
-  console.log(e.stack);                               // コードが実行されていた位置を返す
+  console.log(e.message); // "Hello"
+  console.log(e.name); // "RuntimeError"
+  console.log(e.fileName); // "someFile"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // コードが実行されていた位置を返す
 }
 ```
 

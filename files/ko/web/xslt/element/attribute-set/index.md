@@ -1,11 +1,9 @@
 ---
 title: attribute-set
 slug: Web/XSLT/Element/attribute-set
-tags:
-  - XSLT_Reference
-translation_of: Web/XSLT/Element/attribute-set
 original_slug: Web/XSLT/attribute-set
 ---
+
 {{ XsltRef() }}
 
 `<xsl:attribute-set>` 요소는 CSS 안에 이름 붙인 스타일과 비슷한 방식으로 이름 붙인 속성 집합을 만듭니다. 그러면, 출력 문서에 전체로서 적용할 수 있습니다.

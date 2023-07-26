@@ -37,9 +37,9 @@ La interfaz **`RTCRtpReceiver`** de la [WebRTC API](/es/docs/Web/API/WebRTC_API)
 
 {{Specifications}}
 
-## Compatibilidad
+## Compatibilidad con navegadores
 
-{{Compat("api.RTCRtpReceiver")}}
+{{Compat}}
 
 ## Ver también
 

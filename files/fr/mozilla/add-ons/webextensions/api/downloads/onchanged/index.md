@@ -1,17 +1,6 @@
 ---
 title: downloads.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Non-standard
-  - Reference
-  - Téléchargement
-  - WebExtensions
-  - downloads
-  - onChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
 ---
 
@@ -24,9 +13,9 @@ L'écouteur reçoit un fichier `downloadDelta` en tant que paramètre — un obj
 ## Syntaxe
 
 ```js
-browser.downloads.onChanged.addListener(listener)
-browser.downloads.onChanged.removeListener(listener)
-browser.downloads.onChanged.hasListener(listener)
+browser.downloads.onChanged.addListener(listener);
+browser.downloads.onChanged.removeListener(listener);
+browser.downloads.onChanged.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -56,7 +45,7 @@ Les événements ont trois fonctions :
 L'objet `downloadDelta` a les propriétés suivantes disponibles :
 
 - `id`
-  - : Un `integer` représentant l'identifiant de l'`id`  {{WebExtAPIRef('downloads.DownloadItem')}} qui a changé.
+  - : Un `integer` représentant l'identifiant de l'`id` {{WebExtAPIRef('downloads.DownloadItem')}} qui a changé.
 - `url`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant une modification d'une `url` {{WebExtAPIRef('downloads.DownloadItem')}}.
 - `filename`{{optional_inline}}
@@ -84,9 +73,9 @@ L'objet `downloadDelta` a les propriétés suivantes disponibles :
 - `exists`{{optional_inline}}
   - : Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état {{WebExtAPIRef('downloads.DownloadItem')}}.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.downloads.onChanged")}}
+{{Compat}}
 
 ## Exemples
 

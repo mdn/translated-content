@@ -1,13 +1,6 @@
 ---
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
-tags:
-  - API
-  - CSSOM
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/CSSStyleSheet
 ---
 
 {{APIRef("CSSOM")}}
@@ -55,11 +48,11 @@ A (possibly incomplete) list of ways a style sheet can be associated with a docu
 | HTTP Link Header                                                                               | Yes                                     | _N/A_                                                                | N/A                                                                                                                             | N/A                                                                      |
 | User agent (default) style sheets                                                              | No                                      | N/A                                                                  | N/A                                                                                                                             | N/A                                                                      |
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 

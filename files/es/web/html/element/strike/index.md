@@ -7,8 +7,9 @@ original_slug: Web/HTML/Elemento/strike
 ### Definición
 
 - Muestra el texto tachado con una linea horizontal.
+
   - : **Sus etiquetas son**: \<strike> y \</strike> (Ambas obligatorias)
-  
+
     **Crea una caja**:[en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
     **Está definido como**:[Elemento de estilo de fuente](/es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).

@@ -61,6 +61,6 @@ As seguintes informações adicionais para a [Service Worker API](/pt-BR/docs/We
 ## Veja também
 
 - [Usando Push API](/pt-BR/docs/Web/API/Push_API/Using_the_Push_API)
-- [Push API Demo](https://github.com/chrisdavidmills/push-api-demo), no Github
+- [Push API Demo](/pt-BR/docs/Web/API/Push_API), no Github
 - [Push Notifications on the Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt
 - [Service Worker API](/pt-BR/docs/Web/API/Service_Worker_API)

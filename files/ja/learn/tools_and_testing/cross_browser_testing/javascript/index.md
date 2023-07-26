@@ -54,7 +54,7 @@ As we said in the [previous article](/ja/docs/Learn/Tools_and_testing/Cross_brow
 
 - Basic syntax and logic problems (again, check out [Troubleshooting JavaScript](/ja/docs/Learn/JavaScript/First_steps/What_went_wrong)).
 - Making sure variables, etc. are defined in the correct scope, and you are not running into conflicts between items declared in different places (see [Function scope and conflicts](/ja/docs/Learn/JavaScript/Building_blocks/Functions#function_scope_and_conflicts)).
-- Confusion about [this](/ja/docs/Web/JavaScript/Reference/Operators/this), in terms of what scope it applies to, and therefore if its value is what you intended. You can read [What is "this"?](/ja/docs/Learn/JavaScript/Objects/Basics#what_is_this) for a light introduction; you should also study examples like [this one](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), which shows a typical pattern of saving a `this` scope to a separate variable, then using that variable in nested functions so you can be sure you are applying functionality to the correct `this` scope.
+- Confusion about [this](/ja/docs/Web/JavaScript/Reference/Operators/this), in terms of what scope it applies to, and therefore if its value is what you intended. You can read [What is "this"?](/ja/docs/Learn/JavaScript/Objects/Basics#this_とは何か) for a light introduction; you should also study examples like [this one](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), which shows a typical pattern of saving a `this` scope to a separate variable, then using that variable in nested functions so you can be sure you are applying functionality to the correct `this` scope.
 - Incorrectly using functions inside loops that iterate with a global variable (more generally "getting the scope wrong"). For example, in [bad-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) (see [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)), we loop through 10 iterations using a variable defined with `var`, each time creating a paragraph and adding an [onclick](/ja/docs/Web/API/Element/click_event) event handler to it. When clicked, we want each one to display an alert message containing its number (the value of `i` at the time it was created). Instead they all report `i` as 11 — because the `for` loop does all its iterating before nested functions are invoked.
 
   > **メモ:** The easiest solution is to declare the iteration variable with `let` instead of `var`—the value of `i` associated with the function is then unique to each iteration. Unfortunately this does not work correctly with IE11, which is why we haven't used this approach in the "good" for loop.
@@ -115,22 +115,23 @@ If you look at the console, you'll see the error message "Uncaught TypeError: ca
 
 ```js
 function showHeroes(jsonObj) {
-  let heroes = jsonObj['members'];
+  let heroes = jsonObj["members"];
 
   for (const hero of heroes) {
     // …
-   }
+  }
 
-   // …
- }
+  // …
+}
 ```
 
 So the code falls over as soon as we try to access a property of `jsonObj` (which as you might expect, is supposed to be a [JSON object](/ja/docs/Learn/JavaScript/Objects/JSON)). This is supposed to be fetched from an external `.json` file using the following XMLHttpRequest call:
 
 ```js
-let requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+let requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
 let request = new XMLHttpRequest();
-request.open('GET', requestURL);
+request.open("GET", requestURL);
 request.send();
 
 let superHeroes = request.response;
@@ -147,7 +148,7 @@ You may already know what is wrong with this code, but let's explore it some mor
 Try inserting the following line just below line 31 (bolded above):
 
 ```js
-console.log('Response value: ', superHeroes);
+console.log("Response value: ", superHeroes);
 ```
 
 Refresh the page in the browser, and you will get an output in the console of "Response value:", plus the same error message we saw before
@@ -163,11 +164,11 @@ showHeroes(superHeroes);
 to the following:
 
 ```js
-request.onload = function() {
+request.onload = function () {
   let superHeroes = request.response;
   populateHeader(superHeroes);
   showHeroes(superHeroes);
-}
+};
 ```
 
 To summarize, anytime something is not working and a value does not appear to be what it is meant to be at some point in your code, you can use `console.log()` to print it out and see what is happening.
@@ -203,7 +204,7 @@ We can find out some very useful information in here.
 3. Exploring further down the call stack, click `onload` in the _Call Stack_ section. The view will update to show the `request.onload` function in the center panel, and its scopes in the _Scopes_ section.
 4. If you expand the `onload` scope, you'll see that the `superHeroes` variable is a text string too, not an object. This settles it — our [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) call is returning the JSON as text, not JSON.
 
-We'd like you to try fixing this problem yourself. To give you a clue, you can either [tell the XMLHttpRequest object explicitly to return JSON format](/ja/docs/Web/API/XMLHttpRequest/responseType), or [convert the returned text to JSON](/ja/docs/Learn/JavaScript/Objects/JSON#converting_between_objects_and_text) after the response arrives. If you get stuck, consult our [fixed-ajax.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fixed-ajax.html) example.
+We'd like you to try fixing this problem yourself. To give you a clue, you can either [tell the XMLHttpRequest object explicitly to return JSON format](/ja/docs/Web/API/XMLHttpRequest/responseType), or [convert the returned text to JSON](/ja/docs/Learn/JavaScript/Objects/JSON#オブジェクトとテキスト間の変換) after the response arrives. If you get stuck, consult our [fixed-ajax.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fixed-ajax.html) example.
 
 > **メモ:** The debugger tab has many other useful features that we've not discussed here, for example conditional breakpoints and watch expressions. For a lot more information, see the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) page.
 
@@ -313,27 +314,27 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
 2. Next, save a copy of the [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) in the same directory as the HTML.
 3. Apply the polyfill scripts to the page using the following code — place these above the existing {{htmlelement("script")}} element so they will be available on the page already when we start trying to use Fetch (we are also loading a Promise polyfill from a CDN, as IE11 does support promises, which fetch requires):
 
-    ```html
-    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-    <script src="fetch.js"></script>
-    ```
+   ```html
+   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+   <script src="fetch.js"></script>
+   ```
 
 4. Inside the original {{htmlelement("script")}}, add the following code:
 
-    ```js
-    const myImage = document.querySelector('.my-image');
+   ```js
+   const myImage = document.querySelector(".my-image");
 
-    fetch('flowers.jpg').then((response) => {
-      response.blob().then((myBlob) => {
-        const objectURL = URL.createObjectURL(myBlob);
-        myImage.src = objectURL;
-      });
-    });
-    ```
+   fetch("flowers.jpg").then((response) => {
+     response.blob().then((myBlob) => {
+       const objectURL = URL.createObjectURL(myBlob);
+       myImage.src = objectURL;
+     });
+   });
+   ```
 
 5. Now if you load it in a browser that doesn't support [Fetch](/ja/docs/Web/API/fetch) (IE is an obvious candidate), you should still see the flower image appear — cool!
-    ![](fetch-image.jpg)
+   ![](fetch-image.jpg)
 
 > **メモ:** You can find our finished version at [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).
 
@@ -347,7 +348,7 @@ Doing this requires some extra setup in your JavaScript. You need some kind of a
 if (browserSupportsAllFeatures()) {
   main();
 } else {
-  loadScript('polyfills.js', main);
+  loadScript("polyfills.js", main);
 }
 
 function main(err) {
@@ -367,7 +368,7 @@ Here we are testing whether the [`Promise`](/ja/docs/Web/JavaScript/Reference/Gl
 
 ```js
 function loadScript(src, done) {
-  const js = document.createElement('script');
+  const js = document.createElement("script");
   js.src = src;
   js.onload = () => {
     done();
@@ -396,13 +397,15 @@ Another option that is becoming popular for people that want to use modern JavaS
 So for example, we talked about arrow functions (see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) live, and see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/arrow-function.html)) earlier in the article, which only work in the newest browsers:
 
 ```js
-addEventListener("click", () => { });
+addEventListener("click", () => {});
 ```
 
 We could transpile this across to a traditional old-fashioned anonymous function, so it would work in older browsers:
 
 ```js
-addEventListener("click", function() { /* … */ });
+addEventListener("click", function () {
+  /* … */
+});
 ```
 
 The recommended tool for JavaScript transpiling is currently [Babel](https://babeljs.io/). This offers transpilation capabilities for language features that are appropriate for transpilation. For features that can't just be easily transpiled into an older equivalent, Babel also offers polyfills to provide support.
@@ -420,9 +423,9 @@ The code used to look something like this (although this is a simplified example
 ```js
 let ua = navigator.userAgent;
 
-if (ua.includes('Firefox')) {
+if (ua.includes("Firefox")) {
   // run Firefox-specific code
-} else if (ua.includes('Chrome')) {
+} else if (ua.includes("Chrome")) {
   // run Chrome-specific code
 }
 ```
@@ -439,7 +442,7 @@ Many developers implemented bad browser sniffing code and didn't maintain it, an
 
 The lesson to be learned here is — NEVER use browser sniffing. The only real use case for browser sniffing code in the modern day is if you are implementing a fix for a bug in a very specific version of a particular browser. But even then, most bugs get fixed pretty quickly in browser vendor rapid release cycles. It won't come up very often. [Feature detection](#feature_detection) is almost always a better option — if you detect whether a feature is supported, you won't need to change your code when new browser versions come out, and the tests are much more reliable.
 
-If you come across browser sniffing when joining an existing project, look at whether it can be replaced with something more sensible. Browser sniffing causes all kind of interesting bugs, like {{bug(1308462)}}.
+If you come across browser sniffing when joining an existing project, look at whether it can be replaced with something more sensible. Browser sniffing causes all kind of interesting bugs, like [Firefox バグ 1308462](https://bugzil.la/1308462).
 
 ### JavaScript プレフィックスを扱う
 
@@ -467,7 +470,7 @@ Again, prefixed features were never supposed to be used in production websites �
 For example, try going into your browser's developer console and start typing
 
 ```js
-window.AudioContext
+window.AudioContext;
 ```
 
 If this feature is supported in your browser, it will autocomplete.
@@ -481,14 +484,3 @@ There are many other issues you'll encounter with JavaScript; the most important
 So that's JavaScript. Simple huh? Maybe not so simple, but this article should at least give you a start, and some ideas on how to tackle the JavaScript-related problems you will come across.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
-
-## このモジュール内
-
-- [Introduction to cross browser testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction)
-- [Strategies for carrying out testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)
-- [Handling common HTML and CSS problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
-- [Handling common JavaScript problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript)
-- [Handling common accessibility problems](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility)
-- [Implementing feature detection](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
-- [Introduction to automated testing](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing)
-- [Setting up your own test automation environment](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment)

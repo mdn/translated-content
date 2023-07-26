@@ -2,7 +2,6 @@
 title: Formulaires HTML dans les navigateurs historiques
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
 translation_of: Learn/Forms/HTML_forms_in_legacy_browsers
-original_slug: Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers
 ---
 
 {{LearnSidebar}}
@@ -44,12 +43,12 @@ Voyons quelques exemples relatifs aux formulaires en HTML.
 
 #### Types d'entrées en HTML
 
-Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon dont ils simplifient est grandement prévisible. Si un navigateur ne connaît pas la valeur de l'attribut {{htmlattrxref("type","input")}} d'un élément {{HTMLElement("input")}}, il prendra une valeur `text` en recours.
+Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon dont ils simplifient est grandement prévisible. Si un navigateur ne connaît pas la valeur de l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) d'un élément {{HTMLElement("input")}}, il prendra une valeur `text` en recours.
 
 ```html
 <label for="myColor">
- Choisir une couleur
-  <input type="color" id="myColor" name="color">
+  Choisir une couleur
+  <input type="color" id="myColor" name="color" />
 </label>
 ```
 
@@ -83,11 +82,11 @@ Les nouveaux types d'entrées amenés par HTML5 sont très sympas car la façon 
 Les [sélecteurs d'attributs CSS](/fr/docs/Web/CSS/Sélecteurs_d_attribut) sont très utiles avec les [formulaires HTML](/fr/docs/Learn/Forms), mais certains navigateurs historiques ne les prennent pas en charge. Dans ce cas, il est courant de doubler le type avec une classe équivalente&nbsp;:
 
 ```html
-<input type="number" class="number">
+<input type="number" class="number" />
 ```
 
 ```css
-input[type=number] {
+input[type="number"] {
   /* Ceci peut échouer avec certains navigateurs */
 }
 
@@ -99,7 +98,7 @@ input.number {
 Notez que ce qui suit n'est pas utile (car redondant) et peut échouer dans certains navigateurs&nbsp;:
 
 ```css
-input[type=number],
+input[type="number"],
 input.number {
   /* Ceci peut échouer dans certains navigateurs ; s'il ne comprennent pas
      l'un des sélecteurs, il sautent la totalité de la règle */
@@ -110,19 +109,19 @@ input.number {
 
 Il y a deux manières de définir un bouton dans un formulaire HTML&nbsp;:
 
-- un élément {{HTMLElement("input")}} avec un attribut {htmlattrxref("type","input")}} défini avec une des valeurs `button`, `submit`, `reset` ou `image`
+- un élément {{HTMLElement("input")}} avec un attribut [`type`](/fr/docs/HTML/Element/input#type) défini avec une des valeurs `button`, `submit`, `reset` ou `image`
 - un élément {{HTMLElement("button")}}
 
 L'élément {{HTMLElement("input")}} peut rendre les choses compliquées si vous voulez appliquer des CSS avec un sélecteur d'élément&nbsp;:
 
 ```html
-<input type="button" class="button" value="Cliquez‑moi">
+<input type="button" class="button" value="Cliquez‑moi" />
 ```
 
 ```css
 input {
   /* Cette règle annule le rendu par défaut défini avec un élément input */
-  border: 1px solid #CCC;
+  border: 1px solid #ccc;
 }
 
 input.button {
@@ -139,8 +138,8 @@ input.button {
 
 L'élément {{HTMLElement("button")}} présente deux problèmes potentiels&nbsp;:
 
-- un bogue dans certaines anciennes versions d'Internet Explorer. Lorsque l'utilisateur clique sur le bouton, ce n'est pas le contenu de l'attribut {{htmlattrxref("value", "button")}} qui est envoyé, mais le contenu HTML disponible entre balises de début et de fin de l'élément {{HTMLElement("button")}}. Ce n'est un problème que si vous voulez envoyer une telle valeur, par exemple si le traitement des données dépend du bouton sur lequel l'utilisateur clique.
-- certains navigateurs très anciens n'utilisent pas `submit` comme valeur par défaut pour l'attribut {{htmlattrxref("type","button")}}, donc il est recommandé de toujours définir l'attribut {{htmlattrxref("type","button")}} pour les éléments {{HTMLElement("button")}}.
+- un bogue dans certaines anciennes versions d'Internet Explorer. Lorsque l'utilisateur clique sur le bouton, ce n'est pas le contenu de l'attribut [`value`](/fr/docs/Web/HTML/Element/button#value) qui est envoyé, mais le contenu HTML disponible entre balises de début et de fin de l'élément {{HTMLElement("button")}}. Ce n'est un problème que si vous voulez envoyer une telle valeur, par exemple si le traitement des données dépend du bouton sur lequel l'utilisateur clique.
+- certains navigateurs très anciens n'utilisent pas `submit` comme valeur par défaut pour l'attribut [`type`](/fr/docs/Web/HTML/Element/button#type), donc il est recommandé de toujours définir l'attribut [`type`](/fr/docs/Web/HTML/Element/button#type) pour les éléments {{HTMLElement("button")}}.
 
 ```html
 <!-- Cliquer sur ce boutton envoie «&nbsp;<em>Do A</em>&nbsp;» au lieu de «&nbsp;A&nbsp;» dans certains cas -->
@@ -180,20 +179,20 @@ Voici un exemple&nbsp;:
 Modernizr.load({
   // Cette ligne teste si le navigateur prend en charge l'API
   // de validation de formulaires HTML5
-  test : Modernizr.formvalidation,
+  test: Modernizr.formvalidation,
 
   // Si ce n'est pas le cas, le polyfill suivant sera chargé
-  nope : form-validation-API-polyfill.js,
+  nope: form_validation_API_polyfill.js,
 
   // En tout cas, le fichier au cœur de l'application, et dont elle dépend,
   // est chargé
-  both : app.js,
+  both: app.js,
 
   // Une fois les deux fichiers chargés, cette fonction est appelée
   // dans le but d'initialiser l'application
-  complete : function () {
+  complete: function () {
     app.init();
-  }
+  },
 });
 ```
 
@@ -210,17 +209,3 @@ Même si des scripts comme Modernizr sont très attentifs aux performances, le c
 Comme vous pouvez le constater, opérer avec des navigateurs historiques n'est pas qu'une question de formulaires. C'est tout un ensemble de techniques&nbsp;; mais les maîtriser toutes dépasserait le cadre de cet article.
 
 Si vous avez lu tous les articles de ce [guide à propos des formulaires en HTML](/fr/docs/Learn/Forms), vous devriez maintenant être à l'aise avec leur utilisation. Si vous trouvez de nouvelles techniques ou de nouvelles astuces, aidez‑nous à [améliorer ce guide](/fr/docs/MDN/Débuter_sur_MDN).
-
-## Dans ce module
-
-- [Mon premier formulaire HTML](/fr/docs/Learn/Forms/Mon_premier_formulaire_HTML)
-- [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/Comment_structurer_un_formulaire_HTML)
-- [Les widgets natifs pour formulaire](/fr/docs/Learn/Forms/Les_blocs_de_formulaires_natifs)
-- [Envoi des données de formulaire](/fr/docs/Learn/Forms/Envoyer_et_extraire_les_données_des_formulaires)
-- [Validation des données de formulaire](/fr/docs/Learn/Forms/Validation_donnees_formulaire)
-- [Comment construire des widgets personnalisés pour formulaire](/fr/docs/Learn/Forms/Comment_construire_des_widgets_de_formulaires_personnalisés)
-- [Envoi de formulaires à l'aide du JavaScript](/fr/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Formulaires HTML dans les navigateurs anciens](/fr/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Mise en forme des formulaires HTML](/fr/docs/Learn/Forms/Apparence_des_formulaires_HTML)
-- [Mise en forme avancée des formulaires HTML](/fr/docs/Learn/Forms/Advanced_styling_for_HTML_forms)
-- [Table de compatibilité des propriétés pour les widgets de formulaire](/fr/docs/Learn/Forms/Property_compatibility_table_for_form_widgets)

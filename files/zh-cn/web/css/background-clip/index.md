@@ -78,7 +78,7 @@ p {
 
 #### 结果
 
-{{EmbedLiveSample('Examples', 600, 580)}}
+{{EmbedLiveSample('示例', 600, 580)}}
 
 ## 规范
 

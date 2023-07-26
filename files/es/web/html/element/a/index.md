@@ -1,5 +1,5 @@
 ---
-title: '<a>: El elemento ancla'
+title: "<a>: El elemento ancla"
 slug: Web/HTML/Element/a
 original_slug: Web/HTML/Elemento/a
 ---
@@ -23,7 +23,7 @@ El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de interne
       <th scope="row">Contenido permitido</th>
       <td>
         <a
-          href="/en-US/docs/HTML/Content_categories#Transparent_content_model"
+          href="/es/docs/HTML/Content_categories#Transparent_content_model"
           title="HTML/Content_categories#Transparent_content_model"
           >Transparente, que contiene contenido de flujo (excluyendo contenido
           interactivo) o contenido de párrafo.</a
@@ -48,12 +48,12 @@ El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de interne
     <tr>
       <th scope="row">Roles ARIA permitidos</th>
       <td>
-        {{ARIARole("button")}}, {{ARIARole("checkbox")}},
-        {{ARIARole("menuitem")}},
-        {{ARIARole("menuitemcheckbox")}},
-        {{ARIARole("menuitemradio")}}, {{ARIARole("option")}},
-        {{ARIARole("radio")}}, {{ARIARole("switch")}},
-        {{ARIARole("tab")}}, {{ARIARole("treeitem")}}
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>,
+        <a href="/es/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/es/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a>
       </td>
     </tr>
     <tr>
@@ -67,7 +67,7 @@ El _Elemento HTML `Anchor`_ **`<a>`** crea un enlace a otras páginas de interne
 
 Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
-- {{htmlattrdef("download")}}
+- `download`
 
   - : Este atributo, indica descargar a los navegadores una URL en lugar de navegar hacia ella, por lo que el usuario será dirigido para salvarla como un archivo local. Si el atributo tiene un valor, éste se utilizará como nombre de archivo por defecto en el mensaje Guardar que se abre cuando el usuario hace clic en el enlace (sin embargo, el usuario puede cambiar el nombre antes de guardar el archivo). No hay restricciones sobre los valores permitidos, aunque: / y: \ se convertirán en guiones bajos (_underscores_), lo que evitará sugerencias de ruta específicas. Se debe tener en cuenta que la mayoría de los sistemas de archivos tienen limitaciones con respecto a los símbolos de puntuación admitidos en los nombres de archivo, por lo que los navegadores ajustarán los nombres de los archivos en consecuencia.
 
@@ -78,7 +78,7 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
     > - Si el encabezado (_header_) HTTP [`Content-Disposition:`](/es/docs/Web/HTTP/Headers/Content-Disposition) proporciona un nombre de archivo diferente al de este atributo, el encabezado HTTP tiene prioridad sobre este atributo.
     > - Si `Content-Disposition:` está ajustado a `inline`, Firefox prioriza `Content-Disposition`, como en el caso del nombre de archivo, mientras que Chrome prioriza el atributo `download`.
 
-- {{htmlattrdef("href")}}
+- `href`
 
   - : Contiene una URL o un fragmento de URL al cual apunta el enlace.
     Un fragmento de URL es un nombre ("name") precedido por el símbolo de número (`#`), el cual especifíca una ubicación interna objetivo (un [ID](/es/docs/HTML/Global_attributes#attr-id) de un elemento HTML) dentro del actual documento. Las URLs no están restringidas sólo a documentos de internet basados en HTTP, sin embargo pueden utilizar cualquier protocolo soportado por el navegador. Por ejemplo, [`file:`](https://en.wikipedia.org/wiki/File_URI_scheme), `ftp:`, and `mailto:` funcionan en la mayoría de los navegadores.
@@ -86,9 +86,9 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
     > **Nota:** Puede ser utilizado `href="#top"` o un fragmento vacío `href="#"` para enlazar a la parte superior de la página actual. [Este comportamiento está especficado en HTML5](https://www.w3.org/TR/html5/single-page.html#scroll-to-fragid).
 
-- {{htmlattrdef("hreflang")}}
+- `hreflang`
   - : Este atributo indica el lenguaje humano del recurso al que se enlaza. Este es únicamente informativo, sin ninguna funcionalidad incorporada. Los valores permitidos están determinados por [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt).
-- {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
+- `referrerpolicy` {{experimental_inline}}
 
   - : Indica que [referencia (_referer_)](/es/docs/Web/HTTP/Headers/Referer) enviar cuado la URL es recuperada:
 
@@ -98,9 +98,9 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
     - `'origin-when-cross-origin'` significa que la navegación a otros orígenes (_origins_) será limitada al esquema (_scheme_), el host y el puerto, mientras que la navegación en el mismo origen (origin) incuirá la trayectoria de referencia (_referrer's path_).
     - `'unsafe-url'` significa que la referencia (_referrer_) incuirá el origen(`origin`) y la trayectoria (_path_), pero no el fragmento, contraseña o nombre de usuario. Esto es inseguro, ya que puede filtrar datos desde una URL segura hacia URLs inseguras.
 
-- {{htmlattrdef("rel")}}
+- `rel`
   - : Especifica la relación del objeto de destino con el objeto de enlace. El valor es una lista separada por espacios de tipos de enlace[tipos de enlace (link types)](/es/docs/Web/HTML/Link_types).
-- {{htmlattrdef("target")}}
+- `target`
 
   - : Especifica en donde desplegar la URL enlazada. Es un nombre (_name of_), o palabra clave (_keyword for_), un contexto de navegación _(browsing context)_: una pestaña, ventana, o `<iframe>`. Las siguientes palabras clave (_keywords_) tienen significado especial:
 
@@ -111,28 +111,28 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
     > **Nota:** Cuando se utiliza `target`, considera agregar `rel="noopener noreferrer"` para evitar el uso de la API `window.opener`.
 
-- {{htmlattrdef("type")}}
+- `type`
   - : Especifica el tipo de medio (_media type_) en la forma de {{Glossary("MIME type")}} para la URL enlazada. Esto es únicamente informativo, sin ninguna funcionalidad incorporada.
 
 ### Atributos obsoletos
 
-- {{HTMLAttrDef("charset")}} {{Deprecated_Inline}}
+- `charset` {{Deprecated_Inline}}
 
   - : Este atributo define la [codificación de caracteres (character encoding)](/es/docs/Glossary/character_encoding) de la URL enlazada. El valor debe de ser una lista delimitada por espacio y/o coma de caracteres definidos en [RFC 2045](https://tools.ietf.org/html/rfc2045). El valor por defecto es `ISO-8859-1`.
 
-    > **Nota:** **Nota de uso:** Este atributo es obsoleto en HTML5 y **no debe ser utilizado por autores**. Para lograr su efecto, se debe utilzar el encabezado HTTP [`Content-Type:`](/es/docs/Web/HTTP/Headers/Content-Type) en la URL enlazada.
+    > **Nota:** Este atributo es obsoleto en HTML5 y **no debe ser utilizado por autores**. Para lograr su efecto, se debe utilzar el encabezado HTTP [`Content-Type:`](/es/docs/Web/HTTP/Headers/Content-Type) en la URL enlazada.
 
-- {{HTMLAttrDef("coords")}} {{Deprecated_Inline}}
+- `coords` {{Deprecated_Inline}}
   - : Para utilizar con el siguiente atributo `shape`, este atributo utiliza una lista de números separada por comas para definir las coordenadas del enlace en la página.
-- {{HTMLAttrDef("name")}} {{Deprecated_Inline}}
+- `name` {{Deprecated_Inline}}
 
   - : Este atributo era requerido para anclas (_anchors_) que definían una posible ubicación dentro de la página. En HTML 4.01, `id` y `name` podían ser utilizados simultáneamente en un elemento `<a>` simpre y cuando tuvieran valores idénticos.
 
-    > **Nota:** **Nota de uso:** Este atributo es obsoleto en HTML5, se utiliza el [atributo global `id`](/es/docs/HTML/Global_attributes#attr-id) en su lugar.
+    > **Nota:** Este atributo es obsoleto en HTML5, se utiliza el [atributo global `id`](/es/docs/HTML/Global_attributes#attr-id) en su lugar.
 
-- {{HTMLAttrDef("rev")}} {{Deprecated_Inline}}
+- `rev` {{Deprecated_Inline}}
   - : Este atributo especifica un enlace inverso, la relación inversa del atributo **rel**. Fue desechado por ser muy confuso.
-- {{HTMLAttrDef("shape")}} {{Deprecated_Inline}}
+- `shape` {{Deprecated_Inline}}
 
   - : Este atributo era utilizado para definir una región de enlaces para crear un mapa de imagen. El valore es `circle`, `default`, `polygon`, y `rect`. El formato del atributo `coords` depende del valor de la forma geométrica. Para `circle`, el valor es `x,y,r` donde `x` y `y` son las coordenadas en pixel para el centro del círculo y `r` es el valor del radio en pixeles. Para `rect`, el atributo `coords` debe ser `x,y,w,h`. Los valores `x y y` definen la esquina superior izquierda del rectángulo, mientras que `w` y `h` definen el ancho y el alto respectivamente. Un valor del `polygon` para `shape` requiere los valores `x1,y1,x2,y2,...` para `coords`. Cada uno de los pares `x,y` definen un punto en el polígono, con puntos sucesivos que son unidos por líneas rectas y el útlimo punto se une al primer punto. El valor `default` para `shape` Requiere que el área encerrada, típicamente una imágen, sea utilizada.
 
@@ -144,9 +144,7 @@ Este elemento incluye los [atributos globales](/es/docs/HTML/Global_attributes).
 
 ```html
 <!-- anclaje a un archivo externo -->
-<a href="https://www.mozilla.com/">
-Enlace externo
-</a>
+<a href="https://www.mozilla.com/">Enlace externo</a>
 ```
 
 #### Resultado
@@ -157,9 +155,7 @@ Enlace externo
 
 ```html
 <!-- enlace a un elemento en esta página con id="attr-href" -->
-<a href="#attr-href">
-Descripción de enlaces de la misma página
-</a>
+<a href="#attr-href">Descripción de enlaces de la misma página</a>
 ```
 
 #### Resultado
@@ -172,8 +168,7 @@ Este ejemplo utiliza una imagen que enlaza a la página de inicio de MDN. La pá
 
 ```html
 <a href="https://developer.mozilla.org/en-US/" target="_blank">
-  <img src="mdn_logo.png"
-       alt="MDN logo" />
+  <img src="mdn_logo.png" alt="MDN logo" />
 </a>
 ```
 
@@ -210,13 +205,17 @@ Para detalles adicionales acerca del esquema de la URL `tel`, consultar {{RFC(28
 Si deseas permitir a los usurios descargar una elemento HTML {{HTMLElement("canvas")}} como una imagen, puedes crear un enlace con una atributo `download` y la información canvas como un archivo URL:
 
 ```js
-var link = document.createElement('a');
-link.innerHTML = 'download image';
+var link = document.createElement("a");
+link.innerHTML = "download image";
 
-link.addEventListener('click', function(ev) {
+link.addEventListener(
+  "click",
+  function (ev) {
     link.href = canvas.toDataURL();
     link.download = "mypainting.png";
-}, false);
+  },
+  false,
+);
 
 document.body.appendChild(link);
 ```
@@ -237,13 +236,13 @@ Cuando se clicea sobre un {{HTMLElement("a")}} las consecuencias varían de acue
 
 ¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
 
-| Navegadores de escritorio                                                                                                                             | Windows 8.1 | OS X 10.9                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------- |
-| Firefox 30.0                                                                                                                                          | Si          | Si                              |
+| Navegadores de escritorio                                                                      | Windows 8.1 | OS X 10.9                       |
+| ---------------------------------------------------------------------------------------------- | ----------- | ------------------------------- |
+| Firefox 30.0                                                                                   | Si          | Si                              |
 | Chrome ≥39 ([Chromium bug 388666](https://code.google.com/p/chromium/issues/detail?id=388666)) | Si          | Si                              |
-| Safari 7.0.5                                                                                                                                          | N/A         | Sólo cuando tiene un `tabindex` |
-| Internet Explorer 11                                                                                                                                  | Si          | N/A                             |
-| Presto (Opera 12)                                                                                                                                     | Si          | Si                              |
+| Safari 7.0.5                                                                                   | N/A         | Sólo cuando tiene un `tabindex` |
+| Internet Explorer 11                                                                           | Si          | N/A                             |
+| Presto (Opera 12)                                                                              | Si          | Si                              |
 
 ¿Al hacer un clic en un [`<a>`](/es/docs/Web/HTML/Element/a) se enfoca?
 

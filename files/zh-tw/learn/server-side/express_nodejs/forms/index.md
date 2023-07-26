@@ -1,5 +1,5 @@
 ---
-title: 'Express 教學 6: 使用表單'
+title: "Express 教學 6: 使用表單"
 slug: Learn/Server-side/Express_Nodejs/forms
 ---
 
@@ -32,7 +32,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 ### HTML 表單
 
-首先簡要概述 [HTML 表單](/zh-TW/docs/Web/Guide/HTML/Forms)。考慮一個簡單的 HTML 表單，其中包含一個文本字段，用於輸入某些 “團隊” 的名稱，及其相關標籤：
+首先簡要概述 [HTML 表單](/zh-TW/docs/Web/Guide/HTML/Forms)。考慮一個簡單的 HTML 表單，其中包含一個文本字段，用於輸入某些 「團隊」 的名稱，及其相關標籤：
 
 ![Simple name field example in HTML form](form_example_name_field.png)
 
@@ -40,13 +40,17 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">Enter name: </label>
-    <input id="team_name" type="text" name="name_field" value="Default name for team.">
-    <input type="submit" value="OK">
+  <label for="team_name">Enter name: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="Default name for team." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
-雖然這裡，我們只包含一個（文本）字段，用於輸入團隊名稱，但表單可能包含任意數量的其他輸入元素，及其相關標籤。字段的 `type` 屬性，定義將顯示哪種窗口小部件。該字段的名稱`name`和`id` ，用於標識 JavaScript/CSS/HTML 中的字段，而 `value`定義字段首次顯示時的初始值。匹配團隊標籤使用 `label` 標籤，指定（請參閱上面的“輸入名稱” "Enter name"），其中 `for` 字段，包含 `input` 相關輸入的 `id`值。
+雖然這裡，我們只包含一個（文本）字段，用於輸入團隊名稱，但表單可能包含任意數量的其他輸入元素，及其相關標籤。字段的 `type` 屬性，定義將顯示哪種窗口小部件。該字段的名稱`name`和`id` ，用於標識 JavaScript/CSS/HTML 中的字段，而 `value`定義字段首次顯示時的初始值。匹配團隊標籤使用 `label` 標籤，指定（請參閱上面的「輸入名稱」 "Enter name"），其中 `for` 字段，包含 `input` 相關輸入的 `id`值。
 
 提交輸入（`submit`）將顯示為按鈕（默認情況下） - 用戶可以按此按鈕，將其他輸入元素包含的數據，上傳到服務器（在本例中，只有 `team_name`）。表單屬性，定義用於發送數據的 HTTP `method`方法，和服務器上數據的目標（`action`）：
 
@@ -68,7 +72,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 1. 在用戶第一次請求時顯示默認表單。
 
-    - 表單可能包含空白字段（例如，如果您正在創建新記錄），或者可能預先填充了初始值（例如，如果您要更改記錄，或者俱有有用的默認初始值）。
+   - 表單可能包含空白字段（例如，如果您正在創建新記錄），或者可能預先填充了初始值（例如，如果您要更改記錄，或者俱有有用的默認初始值）。
 
 2. 接收用戶提交的數據，通常是在 HTTP `POST`請求中。
 3. 驗證並清理數據。
@@ -104,15 +108,15 @@ npm install express-validator
 要在我們的控制器中使用驗證器，我們必須從 'e**xpress-validator/check**'和'**express-validator/filter**'模塊中，導入我們想要使用的函數，如下所示：
 
 ```js
-const { body,validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');
+const { body, validationResult } = require("express-validator/check");
+const { sanitizeBody } = require("express-validator/filter");
 ```
 
 有許多可用的功能，允許您一次檢查和清理請求參數，正文，標頭，cookie 等數據，或所有數據。對於本教程，我們主要使用 `body`， `sanitizeBody`，和 `validationResult`（如上面 required 導入的 ）。
 
 功能定義如下：
 
-- [`body(fields[, message])`](https://github.com/ctavan/express-validator#bodyfields-message): 指定請求本文中的一組字段（`POST`參數）以及可選的錯誤消息，如果測試失敗，則可以顯示該字段。驗證標準以菊花鏈形式連接到 `body()`方法。例如，下面的第一個檢查測試，“name”字段不為空，如果不是，則設置錯誤消息“Empty name”。第二個測試，檢查 age 字段是否為有效日期，並使用`optional()`指定 null 和空字符串不會驗證失敗。
+- [`body(fields[, message])`](https://github.com/ctavan/express-validator#bodyfields-message): 指定請求本文中的一組字段（`POST`參數）以及可選的錯誤消息，如果測試失敗，則可以顯示該字段。驗證標準以菊花鏈形式連接到 `body()`方法。例如，下面的第一個檢查測試，「name」字段不為空，如果不是，則設置錯誤消息「Empty name」。第二個測試，檢查 age 字段是否為有效日期，並使用`optional()`指定 null 和空字符串不會驗證失敗。
 
   ```js
   body('name', 'Empty name').isLength({ min: 1 }),
@@ -139,17 +143,16 @@ const { sanitizeBody } = require('express-validator/filter');
 
   ```js
   (req, res, next) => {
-      // Extract the validation errors from a request.
-      const errors = validationResult(req);
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-      if (!errors.isEmpty()) {
-          // There are errors. Render form again with sanitized values/errors messages.
-          // Error messages can be returned in an array using `errors.array()`.
-          }
-      else {
-          // Data from form is valid.
-      }
-  }
+    if (!errors.isEmpty()) {
+      // There are errors. Render form again with sanitized values/errors messages.
+      // Error messages can be returned in an array using `errors.array()`.
+    } else {
+      // Data from form is valid.
+    }
+  };
   ```
 
   我們使用驗證結果的`isEmpty()`方法，來檢查是否存在錯誤，並使用其 `array()` 方法，來獲取錯誤消息集合。有關更多信息，請參閱驗證結果的 [Validation Result API](https://github.com/ctavan/express-validator#validation-result-api)。
@@ -171,7 +174,7 @@ const { sanitizeBody } = require('express-validator/filter');
 - 使用已存在的對象創建對象（因此用戶在嘗試創建任何 `Book`對象之前，必須創建任何所需的 `Author`和 `Genre`實例）。
 - 如果對象未被其他對象引用，則刪除該對象（例如，在刪除所有關聯的 `BookInstance`對象之前，您將無法刪除該書）。
 
-> **備註：** 更“牢固”的實現，可能允許您在創建新對象時，創建依賴對象，並隨時刪除任何對象（例如，通過刪除依賴對象，或從數據庫中，刪除對已刪除對象的引用） 。
+> **備註：** 更「牢固」的實現，可能允許您在創建新對象時，創建依賴對象，並隨時刪除任何對象（例如，通過刪除依賴對象，或從數據庫中，刪除對已刪除對象的引用） 。
 
 ### 路由
 
@@ -183,10 +186,10 @@ const { sanitizeBody } = require('express-validator/filter');
 
 ```js
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
-router.get('/genre/create', genre_controller.genre_create_get);
+router.get("/genre/create", genre_controller.genre_create_get);
 
 // POST request for creating Genre.
-router.post('/genre/create', genre_controller.genre_create_post);
+router.post("/genre/create", genre_controller.genre_create_post);
 ```
 
 ## Express 表單子文件
@@ -205,7 +208,7 @@ router.post('/genre/create', genre_controller.genre_create_post);
 實現 `Book`, `BookInstance`, 和 `Genre`模型的刪除頁面，用跟我們的作者刪除頁面相同的方式，將它們與關聯的詳細信息頁面，鏈接起來。頁面應遵循相同的設計方法：
 
 - 如果有來自其他對象的、對於對象的引用，則應顯示註釋，列出這些對象，並說明在刪除列出的對象之前，無法刪除此記錄。
-- 如果沒有對該對象的其他引用，則視圖應提示刪除它。如果用戶按下“刪除”按鈕 **Delete**，則應刪除該記錄。
+- 如果沒有對該對象的其他引用，則視圖應提示刪除它。如果用戶按下「刪除」按鈕 **Delete**，則應刪除該記錄。
 
 一些提示：
 
@@ -218,7 +221,7 @@ router.post('/genre/create', genre_controller.genre_create_post);
 一些提示：
 
 - 我們剛剛實施的圖書更新頁面是最難的！相同的模式可用於其他對象的更新頁面。
-- 作者`Author`的死亡日期和出生日期字段，以及書本實例`BookInstance` 的 due_date 字段，是輸入到表單上日期輸入字段的錯誤格式（它需要 “YYYY-MM-DD” 形式的數據）。解決此問題的最簡單方法，是為適當格式化的日期，定義新的虛擬屬性，然後在關聯的視圖模板中，使用此字段。
+- 作者`Author`的死亡日期和出生日期字段，以及書本實例`BookInstance` 的 due_date 字段，是輸入到表單上日期輸入字段的錯誤格式（它需要 「YYYY-MM-DD」 形式的數據）。解決此問題的最簡單方法，是為適當格式化的日期，定義新的虛擬屬性，然後在關聯的視圖模板中，使用此字段。
 - 如果您遇到困難，此處示例中的更新頁面有一些示例[的連結。](https://github.com/mdn/express-locallibrary-tutorial)
 
 ## 總結
@@ -232,15 +235,3 @@ Express, node, 與 NPM 上面的第三方套件，提供你需要的每樣東西
 - [express-validator](https://www.npmjs.com/package/express-validator) (npm docs).
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs/deployment", "Learn/Server-side/Express_Nodejs")}}
-
-## 本教程連結
-
-- [Express/Node introduction](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/zh-TW/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/zh-TW/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/zh-TW/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms)
-- [Express Tutorial Part 7: Deploying to production](/zh-TW/docs/Learn/Server-side/Express_Nodejs/deployment)

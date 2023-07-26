@@ -5,135 +5,144 @@ slug: Web/API/Worker/postMessage
 
 {{APIRef("Web Workers API")}}
 
-{{domxref("Worker")}} 接口的 **`postMessage()`**方法向 worker 的内部作用域发送一个消息。这接受单个参数，这是要发送给 worker 的数据。数据可以是由[结构化克隆](/zh-CN/docs/Web/Guide/DOM/The_structured_clone_algorithm)算法处理的任何值或 JavaScript 对象，其包括循环引用。
+{{domxref("Worker")}} 接口的 **`postMessage()`** 方法可以向 worker 发送消息。第一个参数是要发送到 worker 的数据。该数据可以是任何可以被[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)处理的 JavaScript 对象。
 
-工作者可以使用 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 方法将信息发送回生成它的线程。
+{{domxref("Worker")}} 的 **`postMessage()`** 方法委托给 {{domxref("MessagePort")}} 的 {{domxref("MessagePort.postMessage", "postMessage()")}} 方法，该方法会在对应的用于接收 {{domxref("MessagePort")}} 的事件循环中添加一个任务。
+
+Worker 可以使用 {{domxref("DedicatedWorkerGlobalScope.postMessage")}} 方法将信息发送回生成它的线程。
 
 ## 语法
 
-```js
-myWorker.postMessage(aMessage, transferList);
+```js-nolint
+postMessage(message)
+postMessage(message, transfer)
 ```
 
 ### 参数
 
-- _aMessage_
-  - : The object to deliver to the worker; this will be in the data field in the event delivered to the {{domxref("DedicatedWorkerGlobalScope.onmessage")}} handler. This may be any value or JavaScript object handled by the [structured clone](/zh-CN/docs/Web/Guide/DOM/The_structured_clone_algorithm) algorithm, which includes cyclical references.
-- _transferList_ {{optional_inline}}
-  - : 一个可选的{{domxref("Transferable")}}对象的[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)，用于传递所有权。如果一个对象的所有权被转移，在发送它的上下文中将变为不可用（中止），并且只有在它被发送到的 worker 中可用。
-    可转移对象是如{{domxref("ArrayBuffer")}}，{{domxref("MessagePort")}}或{{domxref("ImageBitmap")}}的实例对象。transferList 数组中不可传入 null。
+- `message`
+  - : 要传递给 worker 的对象；这将在传递给 {{domxref("DedicatedWorkerGlobalScope.message_event")}} 事件的 `data` 字段中。这可以是任何值或可以通过[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)处理的 JavaScript 对象（可以包含循环引用）。
 
-### Returns
+      如果*未*提供 `message` 参数，则解析器将抛出 {{jsxref("SyntaxError")}}。如果要传递给 worker 的数据不重要，可以显式传递 `null` 或 `undefined`。
 
-Void.
+- `transfer` {{optional_inline}}
+  - : 一个可选的、会被转移所有权的[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)。如果一个对象的所有权被转移，它将在发送它的上下文中变为不可用（中止），而仅在接收方的 worker 中可用。
 
-## Example
+    像 {{domxref("ArrayBuffer")}}、{{domxref("MessagePort")}} 或 {{domxref("ImageBitmap")}} 类的实例才是可转移对象，才能够被转移。不能将 `null` 作为 `transfer` 的值。
 
-以下代码显示了如何使用 {{domxref("Worker.Worker", "Worker()")}} 构造函数创建一个 Worker 对象。当两个表单输入 (`first`和`second)`中的其中一个的输入值改变时， [`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 事件将调用`postMessage()`把两个 input 的值发送给当前 worker。
+### 返回值
+
+无 ({{jsxref("undefined")}})。
+
+## 示例
+
+下面的代码片段展示了使用 {{domxref("Worker.Worker", "Worker()")}} 构造函数创建一个 {{domxref("Worker")}} 对象。当两个表单输入框（`first` 和 `second`）的值发生改变时，{{domxref("HTMLElement/change_event", "change")}} 事件将调用 `postMessage()`，以将这两个输入框的值发送给当前的 worker。
 
 ```js
-var myWorker = new Worker('worker.js');
+const myWorker = new Worker("worker.js");
 
-first.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+first.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("消息已传递给 worker");
+};
 
-second.onchange = function() {
-  myWorker.postMessage([first.value,second.value]);
-  console.log('Message posted to worker');
-}
+second.onchange = () => {
+  myWorker.postMessage([first.value, second.value]);
+  console.log("消息已传递给 worker");
+};
 ```
 
-有关完整的示例，请参阅我们的[Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
+有关完整的示例，请参阅我们的[简单 worker 示例](https://github.com/mdn/simple-web-worker)和（[运行示例](http://mdn.github.io/simple-web-worker/)）。
 
 > **备注：** `postMessage()` 一次只能发送一个对象。如上所示，如果你想传递多个值，可以使用数组。
 
-### Transfer Example
+### 转移示例
 
-This example shows a Firefox add-on that transfers an `ArrayBuffer` from the main thread to the `ChromeWorker`, and then the `ChromeWorker` transfers it back to the main thread.
+这个最小化的例子中，`main` 中创建了一个 `ArrayBuffer`，并将其发送给 `myWorker`，然后让 `myWorker` 将其转移回 `main`，并在每个步骤中记录大小。
 
-#### Main thread code:
+#### main.js 代码
 
 ```js
-var myWorker = new ChromeWorker(self.path + 'myWorker.js');
+// 创建 worker
+const myWorker = new Worker("myWorker.js");
 
-function handleMessageFromWorker(msg) {
-    console.log('incoming message from worker, msg:', msg);
-    switch (msg.data.aTopic) {
-        case 'do_sendMainArrBuff':
-            sendMainArrBuff(msg.data.aBuf)
-            break;
-        default:
-            throw 'no aTopic on incoming message to ChromeWorker';
-    }
-}
+// 监听 myWorker 将缓冲区传回 main
+myWorker.addEventListener("message", function handleMessageFromWorker(msg) {
+  console.log("message from worker received in main:", msg);
 
-myWorker.addEventListener('message', handleMessageFromWorker);
+  const bufTransferredBackFromWorker = msg.data;
 
-// Ok lets create the buffer and send it
-var arrBuf = new ArrayBuffer(8);
-console.info('arrBuf.byteLength pre transfer:', arrBuf.byteLength);
+  console.log(
+    "buf.byteLength in main AFTER transfer back from worker:",
+    bufTransferredBackFromWorker.byteLength
+  );
+});
 
-myWorker.postMessage(
-    {
-        aTopic: 'do_sendWorkerArrBuff',
-        aBuf: arrBuf // The array buffer that we passed to the transferrable section 3 lines below
-    },
-    [
-        arrBuf // The array buffer we created 9 lines above
-    ]
+// 创建 buffer
+const myBuf = new ArrayBuffer(8);
+
+console.log(
+  "buf.byteLength in main BEFORE transfer to worker:",
+  myBuf.byteLength
 );
 
-console.info('arrBuf.byteLength post transfer:', arrBuf.byteLength);
+// 发送 myBuf 给 myWorker 并转移底层 ArrayBuffer
+myWorker.postMessage(myBuf, [myBuf]);
+
+console.log(
+  "buf.byteLength in main AFTER transfer to worker:",
+  myBuf.byteLength
+);
 ```
 
-#### Worker code
+#### myWorker.js 代码
 
 ```js
-self.onmessage = function (msg) {
-    switch (msg.data.aTopic) {
-        case 'do_sendWorkerArrBuff':
-                sendWorkerArrBuff(msg.data.aBuf)
-            break;
-        default:
-            throw 'no aTopic on incoming message to ChromeWorker';
-    }
-}
+// 监听 main 并将缓冲区转移到 myWorker
+self.onmessage = function handleMessageFromMain(msg) {
+  console.log("message from main received in worker:", msg);
 
-function sendWorkerArrBuff(aBuf) {
-    console.info('from worker, PRE send back aBuf.byteLength:', aBuf.byteLength);
+  const bufTransferredFromMain = msg.data;
 
-    self.postMessage({aTopic:'do_sendMainArrBuff', aBuf:aBuf}, [aBuf]);
+  console.log(
+    "buf.byteLength in worker BEFORE transfer back to main:",
+    bufTransferredFromMain.byteLength
+  );
 
-    console.info('from worker, POST send back aBuf.byteLength:', aBuf.byteLength);
-}
+  // 将 buf 发送回 main 并转移底层 ArrayBuffer
+  self.postMessage(bufTransferredFromMain, [bufTransferredFromMain]);
+
+  console.log(
+    "buf.byteLength in worker AFTER transfer back to main:",
+    bufTransferredFromMain.byteLength
+  );
+};
 ```
 
-#### Output logged
+#### 输出日志
 
+```bash
+buf.byteLength in main BEFORE transfer to worker:        8                     main.js:19
+buf.byteLength in main AFTER transfer to worker:         0                     main.js:27
+
+message from main received in worker:                    MessageEvent { ... }  myWorker.js:3
+buf.byteLength in worker BEFORE transfer back to main:   8                     myWorker.js:7
+buf.byteLength in worker AFTER transfer back to main:    0                     myWorker.js:15
+
+message from worker received in main:                    MessageEvent { ... }  main.js:6
+buf.byteLength in main AFTER transfer back from worker:  8                     main.js:10
 ```
-arrBuf.byteLength pre transfer: 8                              bootstrap.js:40
-arrBuf.byteLength post transfer: 0                             bootstrap.js:42
 
-from worker, PRE send back aBuf.byteLength: 8                  myWorker.js:5:2
+`ArrayBuffer` 在传输后, 其 `byteLength` 将变为 0。要查看此 Firefox 演示插件的完整可运行示例，请参阅此处：[GitHub :: ChromeWorker - demo-transfer-arraybuffer](https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b)
 
-incoming message from worker, msg: message { ... }             bootstrap.js:20
-got back buf in main thread, aBuf.byteLength: 8                bootstrap.js:12
-
-from worker, POST send back aBuf.byteLength: 0                 myWorker.js:7:2
-```
-
-`byteLength` goes to 0 as it is transferred. To see a full working example of this Firefox demo add-on see here: [GitHub :: ChromeWorker - demo-transfer-arraybuffer](https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b)
-
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- The {{domxref("Worker")}} interface it belongs to.
+- 它属于 {{domxref("Worker")}} 接口。

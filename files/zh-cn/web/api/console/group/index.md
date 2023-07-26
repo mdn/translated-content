@@ -1,36 +1,38 @@
 ---
-title: console.group
-slug: Web/API/Console/group
+title: console.group()
+slug: Web/API/console/group
 ---
 
-{{ ApiRef() }}
+{{APIRef("Console API")}}
 
-## 概述
+**`console.group()`** 方法在 [Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)上创建一个新的分组。随后输出到控制台上的内容都会被添加一个缩进，表示该内容属于当前分组，直到调用 {{domxref("console.groupEnd()")}} 之后，当前分组结束。
 
-在 [Web 控制台](/zh-CN/Tools/Web_Console)上创建一个新的分组。随后输出到控制台上的内容都会被添加一个缩进，表示该内容属于当前分组，直到调用{{ domxref("console.groupEnd()") }}之后，当前分组结束。
+{{AvailableInWorkers}}
 
 ## 语法
 
-```plain
-console.group();
+```js-nolint
+group()
+group(label)
 ```
 
-## 参数
+### 参数
 
-无。
+- `label`
+  - : 分组标签。
 
-## 备注
+### 返回值
 
-在文档{{ domxref("console") }}中查看[在控制台中使用分组](/zh-CN/DOM/console#Using_groups_in_the_console),了解更多详细内容。
+无（{{jsxref("undefined")}}）。
 
 ## 规范
 
-不属于任何公开的规范
+{{Specifications}}
 
 ## 浏览器兼容性
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [Opera Dragonfly documentation: Console](http://www.opera.com/dragonfly/documentation/console/)
+- {{domxref("console.groupEnd()")}}

@@ -1,12 +1,13 @@
 ---
 title: Остаточные параметры (rest parameters)
-slug: Web/JavaScript/Reference/Functions/Rest_parameters
+slug: Web/JavaScript/Reference/Functions/rest_parameters
 tags:
   - JavaScript
   - Остаточные параметры
   - Функции
 translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 Синтаксис **остаточных параметров** функции позволяет представлять неограниченное множество аргументов в виде массива.

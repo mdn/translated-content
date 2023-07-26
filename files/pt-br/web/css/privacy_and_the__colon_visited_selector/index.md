@@ -8,7 +8,7 @@ original_slug: Web/CSS/Privacidade_e_o_seletor_:visited
 
 Antes de 2010, o seletor [CSS](/pt-BR/docs/Web/CSS) {{ cssxref(":visited") }} permitia que websites descobrissem o histórico de navegação dos usuários e quais sites estes haviam visitado. Isto foi feito por meio do {{domxref("window.getComputedStyle")}} e outras tecnicas. Este processo era fácil de ser feito, e tornou possível não somente determinar onde os usuários estiveram na internet, mas também poderia ser usado para descobrir um monte de informação sobre a identidade destes.
 
-Para contornar este problema, {{ Gecko("2") }} implementou atualizações de privacidade para limitar a quantidade de informações que poderiam ser obtidas através dos links visitados. Outros navegadores também fizeram mudanças similares.
+Para contornar este problema, Gecko 2 implementou atualizações de privacidade para limitar a quantidade de informações que poderiam ser obtidas através dos links visitados. Outros navegadores também fizeram mudanças similares.
 
 ## Pequenas mentiras brancas
 

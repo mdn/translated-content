@@ -1,11 +1,12 @@
 ---
 title: <input type="range">
-slug: Web/HTML/Element/Input/range
+slug: Web/HTML/Element/input/range
 tags:
   - контроллер
   - слайдер
 translation_of: Web/HTML/Element/input/range
 ---
+
 {{HTMLSidebar("Input_types")}}
 
 Элементы {{HTMLElement("input")}} с типом **`range`** позволяют пользователю определить числовое значение, которое должно быть в пределах указанного промежутка. Однако, точное значение должно быть не слишком важно. Обычно они представляет собой слайдер или контроллер, но не текстовое поле как {{HTMLElement('input/number', 'number')}}. Так как этот виджет неточен, его не следует использовать, в случае, если важно установить точное значение .
@@ -17,7 +18,7 @@ translation_of: Web/HTML/Element/input/range
 | **[Value](#value)**               | {{domxref("DOMString")}}, содержащий строковое представление выбранного числового значения; используйте {{domxref("HTMLInputElement.valueAsNumber", "valueAsNumber")}} чтобы получить значение {{jsxref("Number")}}. |
 | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **События**                       | {{event("change")}} и {{event("input")}}                                                                                                                                                                                                        |
-| **Поддерживаемые общие атрибуты** | {{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("max", "input")}}, {{htmlattrxref("min", "input")}}, and {{htmlattrxref("step", "input")}}       |
+| **Поддерживаемые общие атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`max`](/ru/docs/Web/HTML/Element/input#max), [`min`](/ru/docs/Web/HTML/Element/input#min), and [`step`](/ru/docs/Web/HTML/Element/input#step)       |
 | **IDL атрибуты**                  | `list`, `value`, и `valueAsNumber`                                                                                                                                                                                                                         |
 | **Методы**                        | {{domxref("HTMLInputElement.stepDown", "stepDown()")}} и {{domxref("HTMLInputElement.stepUp", "stepUp()")}}                                                                                                            |
 
@@ -25,12 +26,12 @@ translation_of: Web/HTML/Element/input/range
 
 Для этого поля нет доступного паттерна валидации, но следующая валидация реализованы следующие проверки
 
-- Если значение {{htmlattrxref("value", "input")}} содержит что-то что не может быть конвертированно в число с плавающей точкой, произойдёт ошибка некорректного ввода.
-- Значение не может быть меньше чем {{htmlattrxref("min", "input")}}. По умолчанию: 0.
-- Значение не может быть больше чем {{htmlattrxref("max", "input")}}. По умолчанию: 100.
-- Значение должно кратно {{htmlattrxref("step", "input")}}. По умолчанию: 1.
+- Если значение [`value`](/ru/docs/Web/HTML/Element/input#value) содержит что-то что не может быть конвертированно в число с плавающей точкой, произойдёт ошибка некорректного ввода.
+- Значение не может быть меньше чем [`min`](/ru/docs/Web/HTML/Element/input#min). По умолчанию: 0.
+- Значение не может быть больше чем [`max`](/ru/docs/Web/HTML/Element/input#max). По умолчанию: 100.
+- Значение должно кратно [`step`](/ru/docs/Web/HTML/Element/input#step). По умолчанию: 1.
 
-Атрибут {{htmlattrxref("value", "input")}} содержит {{domxref("DOMString")}}, который содержит строковое представление выбранного числа. Значение никогда не является пустой строкой (`""`). Значение, по умолчанию, находится посередине, между указанными минимальным и максимальным значениями — если максимум оказывается меньше минимума, то значение по умолчанию приравнивается к значению атрибута `min`. Алгоритм определения значения по умолчанию:
+Атрибут [`value`](/ru/docs/Web/HTML/Element/input#value) содержит {{domxref("DOMString")}}, который содержит строковое представление выбранного числа. Значение никогда не является пустой строкой (`""`). Значение, по умолчанию, находится посередине, между указанными минимальным и максимальным значениями — если максимум оказывается меньше минимума, то значение по умолчанию приравнивается к значению атрибута `min`. Алгоритм определения значения по умолчанию:
 
 ```js
 defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
@@ -60,7 +61,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 ### {{htmlattrdef("min")}}
 
-Наименьшее значение в диапазоне допустимых значений. Если {{htmlattrxref("value", "input")}}, введённый в элемент, меньше этого значения, то элемент не проходит [проверку ограничения](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). Если значение атрибута `min` не является числом, то элемент не имеет максимального значения.
+Наименьшее значение в диапазоне допустимых значений. Если [`value`](/ru/docs/Web/HTML/Element/input#value), введённый в элемент, меньше этого значения, то элемент не проходит [проверку ограничения](/ru/docs/Web/Guide/HTML/HTML5/Constraint_validation). Если значение атрибута `min` не является числом, то элемент не имеет максимального значения.
 
 Это значение должно быть меньше или равно значению атрибута `max`.
 
@@ -96,7 +97,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 ### Указание минимума и максимума
 
-По умолчанию, минимум равен 0, а максимум равен 100. Если вас это не устраивает, вы можете с лёгкостью указать другие границы, изменив значения атрибутов {{htmlattrxref("min", "input")}} и/или {{htmlattrxref("max", "input")}}. Они могут быть принимать любые значения с плавающей точкой.
+По умолчанию, минимум равен 0, а максимум равен 100. Если вас это не устраивает, вы можете с лёгкостью указать другие границы, изменив значения атрибутов [`min`](/ru/docs/Web/HTML/Element/input#min) и/или [`max`](/ru/docs/Web/HTML/Element/input#max). Они могут быть принимать любые значения с плавающей точкой.
 
 Например, указать диапазон значений между -10 и 10, вы можете, используя:
 
@@ -108,7 +109,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 ### Настройка детализации значения
 
-По умолчанию, степень детализации равна 1, тем самым показывая, что значение всегда является целым числом. Вы можете изменить атрибут {{htmlattrxref("step")}} контроля степени детализации. Например, если вам нужно значение между 5 и 10, с точностью до двух знаков после запятой, вы должны установить значение `step` на 0.01:
+По умолчанию, степень детализации равна 1, тем самым показывая, что значение всегда является целым числом. Вы можете изменить атрибут [`step`](/ru/docs/Web/HTML/Global_attributes#step) контроля степени детализации. Например, если вам нужно значение между 5 и 10, с точностью до двух знаков после запятой, вы должны установить значение `step` на 0.01:
 
 ```html
 <input type="range" min="5" max="10" step="0.01">
@@ -116,7 +117,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 {{EmbedLiveSample("Granularity_sample1", 600, 40)}}
 
-Если вы хотите принять любое значение, независимо от разрядности, вы можете указать значение `any` для атрибута {{htmlattrxref("step", "input")}}:
+Если вы хотите принять любое значение, независимо от разрядности, вы можете указать значение `any` для атрибута [`step`](/ru/docs/Web/HTML/Element/input#step):
 
 ```html
 <input type="range" min="0" max="3.14" step="any">
@@ -128,7 +129,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 ### Добавление хэш-меток и лейблов
 
-Спецификация HTML даёт браузерам некоторую гибкость при представлении диапазонных контроллеров. Нигде эта гибкость не проявляется больше, чем в области хэш-меток и, в меньшей степени, лейблов. Спецификация описывает как добавлять кастомные точки контроллера диапазона, используя атрибут {{htmlattrxref("list", "input")}} и элемент {{HTMLElement("datalist")}}, но не имеет требований или рекомендаций по стандартизации хэш-меток и лейблов по длине контроллера.
+Спецификация HTML даёт браузерам некоторую гибкость при представлении диапазонных контроллеров. Нигде эта гибкость не проявляется больше, чем в области хэш-меток и, в меньшей степени, лейблов. Спецификация описывает как добавлять кастомные точки контроллера диапазона, используя атрибут [`list`](/ru/docs/Web/HTML/Element/input#list) и элемент {{HTMLElement("datalist")}}, но не имеет требований или рекомендаций по стандартизации хэш-меток и лейблов по длине контроллера.
 
 #### Макеты контроллера диапазона
 
@@ -136,7 +137,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 ##### Недекорированный контроллер диапазона
 
-Этот результат вы получите, если не укажите атрибут {{htmlattrxref("list", "input")}}, или браузер не будет его поддерживать.
+Этот результат вы получите, если не укажите атрибут [`list`](/ru/docs/Web/HTML/Element/input#list), или браузер не будет его поддерживать.
 
 <table class="fullwidth standard-table">
   <tbody>
@@ -149,7 +150,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
       <td>
         <img
           alt="Screenshot of a plain slider control on macOS"
-          src="https://mdn.mozillademos.org/files/14989/macslider-plain.png"
+          src="macslider-plain.png"
           style="height: 28px; width: 184px"
         />
       </td>
@@ -159,7 +160,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 ##### Контроллер диапазона с хэш-метками
 
-Контроллер диапазона, использующий атрибут `list`, указывающий ID {{HTMLElement("datalist")}}, который определяет серию хэш-меток на контроллере. Их одиннадцать, одна на 0% и на каждой отметки 10%. Каждая точка представлена с помощью элемента {{HTMLElement("option")}} с его набором {{htmlattrxref("value", "option")}} значений диапазона, при котором должна быть нарисована метка.
+Контроллер диапазона, использующий атрибут `list`, указывающий ID {{HTMLElement("datalist")}}, который определяет серию хэш-меток на контроллере. Их одиннадцать, одна на 0% и на каждой отметки 10%. Каждая точка представлена с помощью элемента {{HTMLElement("option")}} с его набором [`value`](/ru/docs/Web/HTML/Element/option#value) значений диапазона, при котором должна быть нарисована метка.
 
 <table class="fullwidth standard-table">
   <tbody>
@@ -192,7 +193,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
       <td>
         <img
           alt="Screenshot of a plain slider control on macOS"
-          src="https://mdn.mozillademos.org/files/14991/macslider-ticks.png"
+          src="macslider-ticks.png"
           style="height: 28px; width: 184px"
         />
       </td>
@@ -202,7 +203,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 ##### Контроллер диапазона с хэш-метками и лейблами
 
-Вы можете добавить лейблы в свой контроллер диапазонов, добавив атрибут {{htmlattrxref("label", "option")}} элементам {{HTMLElement("option")}}, соответствующим значениям, на которых вы бы хотели видеть лейблы.
+Вы можете добавить лейблы в свой контроллер диапазонов, добавив атрибут [`label`](/ru/docs/Web/HTML/Element/option#label) элементам {{HTMLElement("option")}}, соответствующим значениям, на которых вы бы хотели видеть лейблы.
 
 <table class="fullwidth standard-table">
   <tbody>
@@ -235,7 +236,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
       <td>
         <img
           alt="Screenshot of a plain slider control on macOS"
-          src="https://mdn.mozillademos.org/files/14993/macslider-labels.png"
+          src="macslider-labels.png"
           style="height: 44px; width: 184px"
         />
       </td>
@@ -257,7 +258,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 <input type="range" id="volume" min="0" max="11" value="7" step="1">
 ```
 
-{{EmbedLiveSample("Orientation_sample1", 200, 200, "https://mdn.mozillademos.org/files/14983/Orientation_sample1.png")}}
+{{EmbedLiveSample("Orientation_sample1", 200, 200, "orientation_sample1.png")}}
 
 Это горизонтальный контроллер (по крайне мере на большинстве основных браузеров, другие могут отличаться).
 
@@ -282,7 +283,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 #### Результат
 
-{{EmbedLiveSample("Orientation_sample2", 200, 200, "https://mdn.mozillademos.org/files/14985/Orientation_sample2.png")}}
+{{EmbedLiveSample("Orientation_sample2", 200, 200, "orientation_sample2.png")}}
 
 К сожалению, большинство браузеров сейчас не поддерживают вертикальные контроллы напрямую.
 
@@ -327,7 +328,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 Размеры контроллера это набор из 150 пикселей длины и 20 пикселей высоты. Маржинги установлены на 0 и {{cssxref("transform-origin")}} смещается в середину пространства, на котором вращается слайдер; поскольку слайдер имеет ширину 150 пикселей, он вращается через прямоугольник по 150 пикселей с каждой стороны. Смещение начала координат на 75px по каждой оси означает, что мы будем вращаться вокруг центра этого пространства. Наконец, мы поворачиваем против часовой стрелки на 90°. Результат: инпут range, который вращается таким образом, что максимальное значение находится сверху, а минимальное снизу.
 
-{{EmbedLiveSample("Orientation_sample3", 200, 200, "https://mdn.mozillademos.org/files/14987/Orientation_sample3.png")}}
+{{EmbedLiveSample("Orientation_sample3", 200, 200, "orientation_sample3.png")}}
 
 ### appearance property
 
@@ -367,7 +368,7 @@ input[type="range"] {
 
 {{EmbedLiveSample("orient_attribute", 200, 200)}}
 
-### writing-mode: bt-lr;
+### writing-mode: bt-lr
 
 Свойство {{cssxref('writing-mode')}} может быть использовано для специальных эффектов
 
@@ -428,7 +429,7 @@ input[type="range"] {
 
 - [HTML Forms](/ru/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}} и интерфейс {{domxref("HTMLInputElement")}}, на котором он основан
-- [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
+- [`<input type="number">`](/ru/docs/Web/HTML/Element/input/number)
 - {{domxref('validityState.rangeOverflow')}} и{{domxref('validityState.rangeUnderflow')}}
 - [Controlling multiple parameters with ConstantSourceNode](/ru/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
 - [Styling the range element](https://css-tricks.com/sliding-nightmare-understanding-range-input)

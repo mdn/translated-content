@@ -23,9 +23,11 @@ Les serveurs produiront généralement ce statut si&nbsp;:
 
 ## Spécifications
 
-| Spécification                                                                    | Titre                        |
-| -------------------------------------------------------------------------------- | ---------------------------- |
-| [RFC 6585, section 5: 431 Request Header Fields Too Large](https://datatracker.ietf.org/doc/html/rfc6585#section-5) | Additional HTTP Status Codes |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

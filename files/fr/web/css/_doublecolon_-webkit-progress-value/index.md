@@ -1,11 +1,6 @@
 ---
 title: '::-webkit-progress-value'
 slug: Web/CSS/::-webkit-progress-value
-tags:
-  - CSS
-  - Non-standard
-  - Pseudo-element
-  - Reference
 translation_of: Web/CSS/::-webkit-progress-value
 ---
 
@@ -49,7 +44,7 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-progress-value")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -42,8 +42,14 @@ La propiedad {{cssxref ("background")}} de CSS es una propiedad abreviada de una
 
 ```css
 .box {
-  background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
-  url(big-star.png) center no-repeat, rebeccapurple;
+  background:
+    linear-gradient(
+        105deg,
+        rgba(255, 255, 255, 0.2) 39%,
+        rgba(51, 56, 57, 1) 96%
+      ) center center / 400px 200px no-repeat,
+    url(big-star.png) center no-repeat,
+    rebeccapurple;
 }
 ```
 
@@ -176,9 +182,12 @@ Si haces esto, las imágenes de fondo pueden quedar superpuestas entre sí. Los 
 Las otras propiedades `background-*` también pueden tener valores múltiples separados por comas, de la misma manera que `background-image`:
 
 ```css
-background-image: url(image1.png), url(image2.png), url(image3.png), url(image1.png);
+background-image: url(image1.png), url(image2.png), url(image3.png),
+  url(image1.png);
 background-repeat: no-repeat, repeat-x, repeat;
-background-position: 10px 20px,  top right;
+background-position:
+  10px 20px,
+  top right;
 ```
 
 Cada valor de las diversas propiedades coincide con los valores que están en la misma posición en las otras propiedades. Arriba, por ejemplo, el valor para la propiedad `background-repeat` de `image1` será `no-repeat`. Sin embargo, ¿qué sucede cuando diferentes propiedades tienen una cantidad diferente de valores? La respuesta es que los valores que ocupan las posiciones más pequeñas se alternan cíclicamente: en el ejemplo anterior hay cuatro imágenes de fondo pero solo dos valores `background-position`. Los primeros dos valores de posición se aplicarán a las dos primeras imágenes, luego los valores volverán a asignarse cíclicamente: a `image3` se le dará el primer valor de posición, y a `image4` se le dará el segundo valor de posición.
@@ -299,24 +308,3 @@ En este artículo hemos expuesto bastantes conceptos y puedes ver que hay mucho 
 En el próximo artículo descubriremos cómo interacciona el modo de escritura de tu documento con tu CSS. ¿Qué sucede cuando el texto no fluye de izquierda a derecha?
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
-
-## En este módulo
-
-1. [Cascada y herencia](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Selectores CSS](/es/docs/Learn/CSS/Building_blocks/Selectors)
-
-    - [Selectores de tipo, de clase y de ID](/es/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Selectores de atributos](/es/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-    - [Las pseudoclases y los pseudoelementos](/es/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-    - [Selectores de combinación](/es/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-3. [El modelo de cajas](/es/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Fondos y bordes](/es/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [El uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [El desbordamiento de los contenidos](/es/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Los valores y las unidades](/es/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Elementos de dimensionado en CSS](/es/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Imágenes, media y elementos de formulario](/es/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Aplicar estilo a las tablas](/es/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Depurar el CSS](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-12. [Organizar el CSS](/es/docs/Learn/CSS/Building_blocks/Organizing)

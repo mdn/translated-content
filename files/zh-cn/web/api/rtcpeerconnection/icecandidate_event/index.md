@@ -13,7 +13,7 @@ slug: Web/API/RTCPeerConnection/icecandidate_event
 
 ### 分享新的候选
 
-触发 `icecandidate` 事件的首要原因：当获得新的源之后，需要将该源的信息发送给远端信号服务器，并分发至其它端的 {{domxref("RTCPeerConnection")}}。其它 {{domxref("RTCPeerConnection")}} 通过 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 方法将新 {{domxref("RTCPeerCandidateIceEvent.candidate", "candidate")}} 中携带的信息，将新的源描述信息添加进它的备选池中；
+触发 `icecandidate` 事件的首要原因：当获得新的源之后，需要将该源的信息发送给远端信号服务器，并分发至其他端的 {{domxref("RTCPeerConnection")}}。其他 {{domxref("RTCPeerConnection")}} 通过 {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}} 方法将新 {{domxref("RTCPeerCandidateIceEvent.candidate", "candidate")}} 中携带的信息，将新的源描述信息添加进它的备选池中；
 
 ```js
 rtcPeerConnection.onicecandidate = (event) => {

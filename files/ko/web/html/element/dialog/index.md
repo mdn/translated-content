@@ -1,16 +1,8 @@
 ---
 title: '<dialog>: 대화 상자 요소'
 slug: Web/HTML/Element/dialog
-tags:
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - polyfill
-  - 대화 상자
-translation_of: Web/HTML/Element/dialog
 ---
+
 {{HTMLSidebar}}
 
 **HTML `<dialog>` 요소**는 닫을 수 있는 경고, 검사기, 창 등 대화 상자 및 기타 다른 상호작용 가능한 컴포넌트를 나타냅니다.
@@ -57,7 +49,7 @@ translation_of: Web/HTML/Element/dialog
     </tr>
     <tr>
       <th scope="row">가능한 ARIA 역할</th>
-      <td>{{ARIARole("alertdialog")}}</td>
+      <td><a href='/ko/docs/Web/Accessibility/ARIA/Roles/alertdialog_role'><code>alertdialog</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM 인터페이스</th>
@@ -159,7 +151,7 @@ favDialog.addEventListener('close', function onClose() {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.dialog")}}
+{{Compat}}
 
 ## 폴리필
 

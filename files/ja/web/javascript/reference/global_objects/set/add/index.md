@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/add
 
 {{JSRef}}
 
-**`add()`** メソッドは、指定した値を持つ新しい要素を `Set` オブジェクトの末尾に追加します。
+**`add()`** メソッドは `Set` 内に同じ値を持つ要素がない場合、指定した値を持つ新しい要素を `Set` オブジェクトの末尾に追加します。
 
 {{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
 

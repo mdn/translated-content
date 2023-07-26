@@ -295,7 +295,7 @@ These are properties of the window object that can be set to establish event han
 
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowEventHandlers")}}._
 
-> **備註：** Starting in {{Gecko("9.0")}}, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/zh-TW/docs/DOM/DOM_event_handlers) for details.
+> **備註：** Starting in Gecko 9.0, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/zh-TW/docs/DOM/DOM_event_handlers) for details.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : Called when the loading of a resource has been aborted, such as by a user canceling the load while it is still in progress
@@ -327,8 +327,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : Called when the orientation is changed (For mobile devices)
 - {{domxref("Window.ondeviceorientationabsolute")}} {{non-standard_inline}} Chrome only
   - : An event handler property for any device orientation changes.
-- {{domxref("Window.ondeviceproximity")}}
-  - : An event handler property for device proximity event
 - {{domxref("GlobalEventHandlers.onerror")}}
   - : Called when a resource fails to load OR when an error occurs at runtime. See [`error`](/zh-TW/docs/Web/API/Element/error_event) event.
 - {{domxref("GlobalEventHandlers.onfocus")}}
@@ -401,8 +399,6 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
   - : An event handler for unhandled {{jsxref("Promise")}} rejection events.
 - {{domxref("WindowEventHandlers.onunload")}}
   - : Called when the user navigates away from the page.
-- {{domxref("Window.onuserproximity")}}
-  - : An event handler property for user proximity events.
 - {{domxref("Window.onvrdisplayconnect")}}
   - : Represents an event handler that will run when a compatible VR device has been connected to the computer (when the `vrdisplayconnected` event fires).
 - {{domxref("Window.onvrdisplaydisconnect")}}

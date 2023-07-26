@@ -4,7 +4,7 @@ slug: WebAssembly/JavaScript_interface
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 
-{{JSRef}}
+{{WebAssemblySidebar}}
 
 El objeto **`WebAssembly`** de JavaScript actua como un namespace para todas las funcionalidades realcionados con [WebAssembly](/es/docs/WebAssembly).
 
@@ -55,19 +55,16 @@ Después de obtener algún bytecode de WebAssembly usando la sentencia fetch, no
 ```js
 var importObject = {
   imports: {
-    imported_func: function(arg) {
+    imported_func: function (arg) {
       console.log(arg);
-    }
-  }
+    },
+  },
 };
 
-fetch('simple.wasm').then(response =>
-  response.arrayBuffer()
-).then(bytes =>
-  WebAssembly.instantiate(bytes, importObject)
-).then(result =>
-  result.instance.exports.exported_func()
-);
+fetch("simple.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
+  .then((result) => result.instance.exports.exported_func());
 ```
 
 > **Nota:** Ver [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) en GitHub ([view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/)) para un ejemplo que hace uso de la función [`fetchAndInstantiate()`](https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js#L1).
@@ -76,9 +73,9 @@ fetch('simple.wasm').then(response =>
 
 {{Specifications}}
 
-## Compatibilidad de Navegadores
+## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.WebAssembly")}}
+{{Compat}}
 
 ## Ver también
 

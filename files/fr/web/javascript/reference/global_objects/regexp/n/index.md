@@ -1,14 +1,7 @@
 ---
 title: RegExp.$1-$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
-tags:
-  - JavaScript
-  - Non-standard
-  - Propriété
-  - Reference
-  - RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/n
-original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/n
 ---
 
 {{JSRef}} {{non-standard_header}}
@@ -57,7 +50,7 @@ Ces propriétés ne sont pas standard, elles ne font partie d'aucune spécificat
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.n")}}
+{{Compat}}
 
 ## Voir aussi
 

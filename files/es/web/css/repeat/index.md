@@ -93,21 +93,11 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ```html
 <div id="container">
-  <div>
-    Este elemento tiene un ancho de 50 pixels.
-  </div>
-  <div>
-    Elemento con un ancho flexible.
-  </div>
-  <div>
-    Este elemento tiene un ancho de 50 pixels.
-  </div>
-  <div>
-    Elemento con un ancho flexible.
-  </div>
-  <div>
-    Este elemento tiene un ancho de 100 pixels.
-  </div>
+  <div>Este elemento tiene un ancho de 50 pixels.</div>
+  <div>Elemento con un ancho flexible.</div>
+  <div>Este elemento tiene un ancho de 50 pixels.</div>
+  <div>Elemento con un ancho flexible.</div>
+  <div>Este elemento tiene un ancho de 100 pixels.</div>
 </div>
 ```
 
@@ -119,6 +109,6 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 {{Specifications}}
 
-## Compatibilidad del navegador
+## Compatibilidad con navegadores
 
-{{Compat("css.properties.grid-template-columns.repeat")}}
+{{Compat}}

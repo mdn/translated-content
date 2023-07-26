@@ -1,6 +1,8 @@
 ---
 title: XMLHttpRequest.responseURL
 slug: Web/API/XMLHttpRequest/responseURL
+l10n:
+  sourceCommit: b5b33acd44e7bb9c7be2efc75ba9a04b8bf8b2b2
 ---
 
 {{APIRef('XMLHttpRequest')}}
@@ -10,9 +12,9 @@ slug: Web/API/XMLHttpRequest/responseURL
 ## 例
 
 ```js
-var xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest();
 xhr.open('GET', 'http://example.com/test', true);
-xhr.onload = function () {
+xhr.onload = () => {
   console.log(xhr.responseURL); // http://example.com/test
 };
 xhr.send(null);

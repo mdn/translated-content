@@ -54,3 +54,7 @@ const size = queuingStrategy.size();
 ## 浏览器兼容性
 
 {{Compat}}
+
+## 参见
+
+- {{domxref("CountQueuingStrategy")}}

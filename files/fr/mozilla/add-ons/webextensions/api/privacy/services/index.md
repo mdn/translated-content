@@ -1,14 +1,6 @@
 ---
 title: privacy.services
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/services
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Privacy
-  - Property
-  - Reference
-  - Services
 translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/services
 ---
 
@@ -21,9 +13,9 @@ La propriété {{WebExtAPIRef("privacy.services")}} contient des paramètres li�
 - `passwordSavingEnabled`
   - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur contenue est un booléen. Si il est défini à `true`, le gestionnaire de mot de passe du navigateur proposera de stocker des mots de passe lorsque l'utilisateur les entrera. La valeur par défaut est : `true`.
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.privacy.services", 10)}}
+{{Compat}}
 
 ## Exemples
 
@@ -38,19 +30,21 @@ function onSet(result) {
   }
 }
 
-  var getting = browser.privacy.services.passwordSavingEnabled.get({});
-  getting.then((got) => {
-    console.log(got.value);
-    if ((got.levelOfControl === "controlled_by_this_extension") ||
-        (got.levelOfControl === "controllable_by_this_extension")) {
-      var setting = browser.privacy.services.passwordSavingEnabled.set({
-        value: false
-      });
-      setting.then(onSet);
-    } else {
-      console.log("Not able to set passwordSavingEnabled");
-    }
-  });
+var getting = browser.privacy.services.passwordSavingEnabled.get({});
+getting.then((got) => {
+  console.log(got.value);
+  if (
+    got.levelOfControl === "controlled_by_this_extension" ||
+    got.levelOfControl === "controllable_by_this_extension"
+  ) {
+    var setting = browser.privacy.services.passwordSavingEnabled.set({
+      value: false,
+    });
+    setting.then(onSet);
+  } else {
+    console.log("Not able to set passwordSavingEnabled");
+  }
+});
 ```
 
 {{WebExtExamples}}

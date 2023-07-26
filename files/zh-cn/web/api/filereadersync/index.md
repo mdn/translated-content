@@ -26,7 +26,7 @@ DOMString readAsDataURL(Blob blob);
 
 ### readAsArrayBuffer()
 
-该方法可以读取指定的 [`Blob`](Blob) 或者 [`File`](File)对象中的内容。当读取完毕后，返回一个 [`ArrayBuffer`](../JavaScript_typed_arrays/ArrayBuffer) 对象，里面包含了被读取文件的内容数据。如果在读取过程中发生了错误，则会抛出相关的异常。
+该方法可以读取指定的 [`Blob`](/zh-CN/docs/Web/API/Blob) 或者 [`File`](/zh-CN/docs/Web/API/File) 对象中的内容。当读取完毕后，返回一个 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 对象，里面包含了被读取文件的内容数据。如果在读取过程中发生了错误，则会抛出相关的异常。
 
 ```
 ArrayBuffer readAsArrayBuffer(
@@ -41,7 +41,7 @@ ArrayBuffer readAsArrayBuffer(
 
 #### 返回值
 
-一个 [`ArrayBuffer`](../JavaScript_typed_arrays/ArrayBuffer) 对象，包含了被读取文件的内容。
+一个 [`ArrayBuffer`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 对象，包含了被读取文件的内容。
 
 #### 异常
 

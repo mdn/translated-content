@@ -1,12 +1,7 @@
 ---
 title: Bas de page adhérant
 slug: Web/CSS/Layout_cookbook/Sticky_footers
-tags:
-  - CSS
-  - Guide
-  - Recette
 translation_of: Web/CSS/Layout_cookbook/Sticky_footers
-original_slug: Web/CSS/Layout_cookbook/Bas_de_page_adhérant
 ---
 
 {{CSSRef}}
@@ -46,21 +41,7 @@ On commence de la même façon mais on utilise `display:flex` plutôt que `displ
 
 ## Compatibilité des navigateurs
 
-#### grid-template-rows
-
-{{Compat("css.properties.grid-template-rows")}}
-
-#### flex-direction
-
-{{Compat("css.properties.flex-direction")}}
-
-#### flex-grow
-
-{{Compat("css.properties.flex-grow")}}
-
-#### flex-shrink
-
-{{Compat("css.properties.flex-shrink")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,16 +1,7 @@
 ---
 title: proxy.onProxyError
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onError
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Proxy
-  - Reference
-  - WebExtensions
-  - onProxyError
 translation_of: Mozilla/Add-ons/WebExtensions/API/proxy/onError
-original_slug: Mozilla/Add-ons/WebExtensions/API/proxy/onProxyError
 ---
 
 {{AddonSidebar()}}
@@ -22,9 +13,9 @@ L'erreur peut être déclenchée en lançant ou renvoyant une valeur invalide da
 ## Syntaxe
 
 ```js
-browser.proxy.onError.addListener(listener)
-browser.proxy.onError.removeListener(listener)
-browser.proxy.onError.hasListener(listener)
+browser.proxy.onError.addListener(listener);
+browser.proxy.onError.removeListener(listener);
+browser.proxy.onError.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -49,6 +40,6 @@ Les événements ont trois fonctions :
 
 {{WebExtExamples}}
 
-## Compatibilité du navigateur
+## Compatibilité des navigateurs
 
-{{Compat("webextensions.api.proxy.onError")}}
+{{Compat}}

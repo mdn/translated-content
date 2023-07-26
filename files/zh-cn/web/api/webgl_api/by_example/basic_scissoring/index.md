@@ -7,9 +7,9 @@ slug: Web/API/WebGL_API/By_example/Basic_scissoring
 
 在本例中，我们将学会如何使用 WebGL（scissoring operations）剪切操作来绘制简单的矩形和正方形。Scissoring 建立了一个剪切区域，在此区域外不会发生绘图。
 
-{{EmbedLiveSample("basic-scissoring-source",660,425)}}
+## Clearing the drawing buffer when scissoring applies
 
-### Clearing the drawing buffer when scissoring applies
+{{EmbedLiveSample("Clearing the drawing buffer when scissoring applies",660,425)}}
 
 This is a simple demonstration of a rendering with {{domxref("WebGLRenderingContext.scissor","scissor()")}}.
 

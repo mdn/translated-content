@@ -1,22 +1,17 @@
 ---
-title: CanvasRenderingContext2D.font
+title: "CanvasRenderingContext2D: font プロパティ"
 slug: Web/API/CanvasRenderingContext2D/font
+l10n:
+  sourceCommit: 1306c224f386c6a8038a3bd115ce5637d5bd6084
 ---
 
 {{APIRef}}
 
 **`CanvasRenderingContext2D.font`** はキャンバス 2D API のプロパティで、テキストを描画するときに用いられる現在のテキストスタイルを指定します。この文字列は [CSS の font](/ja/docs/Web/CSS/font) の記述子と同じ構文を用います。
 
-## 構文
+## 値
 
-```js
-ctx.font = value;
-```
-
-### オプション
-
-- `value`
-  - : {{domxref("DOMString")}} で、 CSS の {{cssxref("font")}} の値として解釈されるものです。既定のフォントは 10px sans-serif です。
+文字列で、CSS の {{cssxref("font")}} の値として解釈されるものです。既定のフォントは 10px sans-serif です。
 
 ## 例
 
@@ -33,25 +28,25 @@ ctx.font = value;
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-ctx.font = 'bold 48px serif';
-ctx.strokeText('Hello world', 50, 100);
+ctx.font = "bold 48px serif";
+ctx.strokeText("Hello world", 50, 100);
 ```
 
 #### 結果
 
 {{ EmbedLiveSample('Using_a_custom_font', 700, 180) }}
 
-CSS フォント読み込み API でフォントを読み込む
+### CSS フォント読み込み API でフォントを読み込む
 
 {{domxref("FontFace")}} API の助力により、キャンバスで使用する前にフォントを明示的に読み込むことができます。
 
 ```js
-let f = new FontFace('test', 'url(x)');
+let f = new FontFace("test", "url(x)");
 
-f.load().then(function() {
+f.load().then(() => {
   // canvas コンテキストでフォントを使用する準備ができた
 });
 ```
@@ -63,11 +58,6 @@ f.load().then(function() {
 ## ブラウザーの互換性
 
 {{Compat}}
-
-### Gecko 特有のメモ
-
-- Firefox など Gecko ベースのブラウザーでは、このプロパティのほかに標準外かつ非推奨の `ctx.mozTextStyle` を定義しています。代わりに `ctx.font` を使用してください。
-- Gecko では、システムフォントをキャンバスの 2D コンテキストの {{domxref("CanvasRenderingContext2D.font", "font")}} (例えば `menu`) の値として設定した場合、フォントの値を取得しても期待したフォントが返されない (何も返されない) ことがありました。これは、Firefox 57 でリリースされた Firefox の並列 CSS エンジン [Quantum/Stylo]("https://wiki.mozilla.org/Quantum/Stylo) で修正されました (bug 1374885)。
 
 ## 関連情報
 

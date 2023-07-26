@@ -8,7 +8,7 @@ translation_of: MDN/Kuma
 original_slug: MDN/Yari
 ---
 
-{{MDNSidebar}}{{IncludeSubnav("/ru/docs/MDN")}}
+{{MDNSidebar}}
 
 Kuma - код на Django, который обслуживает Mozilla Developer Network.
 

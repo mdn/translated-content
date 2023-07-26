@@ -1,6 +1,6 @@
 ---
 title: HTTPS
-slug: Glossary/https
+slug: Glossary/HTTPS
 original_slug: Glossario/https
 ---
 
@@ -10,4 +10,4 @@ original_slug: Glossario/https
 
 ### Conhecimento geral
 
-- {{Interwiki("wikipedia", "HTTPS")}} na Wikipedia
+- [HTTPS](https://pt.wikipedia.org/wiki/HTTPS) na Wikipedia

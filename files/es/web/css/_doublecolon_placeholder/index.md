@@ -1,5 +1,5 @@
 ---
-title: '::placeholder'
+title: "::placeholder"
 slug: Web/CSS/::placeholder
 ---
 
@@ -29,7 +29,7 @@ Solo el subconjuto de las propiedades CSS que aplican al pseudo-elemento {{cssxr
 #### HTML
 
 ```html
-<input placeholder="Type something here!">
+<input placeholder="Type something here!" />
 ```
 
 #### CSS
@@ -51,7 +51,7 @@ input::placeholder {
 #### HTML
 
 ```html
-<input placeholder="Type something here...">
+<input placeholder="Type something here..." />
 ```
 
 #### CSS
@@ -93,7 +93,11 @@ Con esta implementación, el contenido de la sugerencia, esta disponible incluso
 ```html
 <label for="user-email">Your email address</label>
 <span id="user-email-hint" class="input-hint">Example: jane@sample.com</span>
-<input id="user-email" aria-describedby="user-email-hint" name="email" type="email">
+<input
+  id="user-email"
+  aria-describedby="user-email-hint"
+  name="email"
+  type="email" />
 ```
 
 - [Los textos provisionales en los campos del formulario son dañinos (Placeholders in Form Fields Are Harmful) — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
@@ -106,7 +110,7 @@ El campo temporal puede aparecer con el mismo estilo como el texto ingresado por
 
 ### Etiquetas
 
-El texto provisional no es un reemplazo para el elemento {{htmlelement("label")}}. Sin una etiqueta que ha sido programaticamente asociada con la entrada usando una combinación de los atributos {{htmlattrxref("for", "label")}} y {{htmlattrxref("id")}}, tecnología asistiva como los lectores de pantalla no pueden leer los elementos {{htmlelement("input")}}.
+El texto provisional no es un reemplazo para el elemento {{htmlelement("label")}}. Sin una etiqueta que ha sido programaticamente asociada con la entrada usando una combinación de los atributos [`for`](/es/docs/Web/HTML/Element/label#for) y [`id`](/es/docs/Web/HTML/Global_attributes#id), tecnología asistiva como los lectores de pantalla no pueden leer los elementos {{htmlelement("input")}}.
 
 - [Sugerencias básicas de formularios (MDN Basic form hints)](/es/docs/Web/Accessibility/ARIA/forms/Basic_form_hints)
 - [Los textos provisionales en los campos del formulario son dañinos (Placeholders in Form Fields Are Harmful) — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
@@ -115,9 +119,9 @@ El texto provisional no es un reemplazo para el elemento {{htmlelement("label")}
 
 {{Specifications}}
 
-## Compatibilidad de los navegadores
+## Compatibilidad con navegadores
 
-{{Compat("css.selectors.placeholder")}}
+{{Compat}}
 
 ## Ver también
 

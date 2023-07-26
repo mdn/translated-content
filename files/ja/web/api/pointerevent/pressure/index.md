@@ -2,7 +2,7 @@
 title: PointerEvent.pressure
 slug: Web/API/PointerEvent/pressure
 l10n:
-  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
+  sourceCommit: c244d3b2cb6c17e6ba8692e3faec393afd9988ca
 ---
 
 {{ APIRef("Pointer Events") }}
@@ -18,18 +18,22 @@ l10n:
 このスニペットでは、{{domxref("Element/pointerdown_event", "pointerdown")}} イベントが発生すると、そのイベントの `pressure` プロパティの値に応じてさまざまな関数が呼び出されます。
 
 ```js
-someElement.addEventListener('pointerdown', (event) => {
-  if (event.pressure === 0) {
-    // 圧力なし
-    process_no_pressure(event);
-  } else if (event.pressure === 1) {
-    // 最大圧力
-    process_max_pressure(event);
-  } else {
-    // デフォルト
-    process_pressure(event);
-  }
-}, false);
+someElement.addEventListener(
+  "pointerdown",
+  (event) => {
+    if (event.pressure === 0) {
+      // 圧力なし
+      process_no_pressure(event);
+    } else if (event.pressure === 1) {
+      // 最大圧力
+      process_max_pressure(event);
+    } else {
+      // デフォルト
+      process_pressure(event);
+    }
+  },
+  false
+);
 ```
 
 ## 仕様書

@@ -1,7 +1,6 @@
 ---
 title: TypedArray.of()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/of
-translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/of
 ---
 
 {{JSRef}}
@@ -56,11 +55,11 @@ Float32Array.of(1, 2, 3);    // Float32Array [ 1, 2, 3 ]
 Int16Array.of(undefined);    // IntArray [ 0 ]
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
