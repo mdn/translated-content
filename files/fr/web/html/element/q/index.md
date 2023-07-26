@@ -1,5 +1,5 @@
 ---
-title: '<q> : l''élément de citation en incise'
+title: "<q> : l'élément de citation en incise"
 slug: Web/HTML/Element/q
 translation_of: Web/HTML/Element/q
 ---

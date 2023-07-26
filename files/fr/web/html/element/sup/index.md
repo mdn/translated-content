@@ -1,5 +1,5 @@
 ---
-title: '<sup> : l''élément de mise en exposant'
+title: "<sup> : l'élément de mise en exposant"
 slug: Web/HTML/Element/sup
 translation_of: Web/HTML/Element/sup
 ---

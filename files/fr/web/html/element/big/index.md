@@ -1,5 +1,5 @@
 ---
-title: '<big> : l''élément d''agrandissement de texte'
+title: "<big> : l'élément d'agrandissement de texte"
 slug: Web/HTML/Element/big
 translation_of: Web/HTML/Element/big
 ---

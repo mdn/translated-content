@@ -1,5 +1,5 @@
 ---
-title: '<abbr> : l''élément d''abréviation'
+title: "<abbr> : l'élément d'abréviation"
 slug: Web/HTML/Element/abbr
 translation_of: Web/HTML/Element/abbr
 ---

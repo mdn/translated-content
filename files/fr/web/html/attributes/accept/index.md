@@ -1,5 +1,5 @@
 ---
-title: 'Attribut HTML : accept'
+title: "Attribut HTML : accept"
 slug: Web/HTML/Attributes/accept
 translation_of: Web/HTML/Attributes/accept
 ---

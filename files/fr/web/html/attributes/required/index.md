@@ -1,5 +1,5 @@
 ---
-title: 'Attribut HTML : required'
+title: "Attribut HTML : required"
 slug: Web/HTML/Attributes/required
 translation_of: Web/HTML/Attributes/required
 ---

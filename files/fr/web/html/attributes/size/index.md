@@ -1,5 +1,5 @@
 ---
-title: 'Attribut HTML : size'
+title: "Attribut HTML : size"
 slug: Web/HTML/Attributes/size
 translation_of: Web/HTML/Attributes/size
 ---

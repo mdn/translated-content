@@ -1,5 +1,5 @@
 ---
-title: '<u> : l''élément d''annotation non textuelle'
+title: "<u> : l'élément d'annotation non textuelle"
 slug: Web/HTML/Element/u
 translation_of: Web/HTML/Element/u
 ---

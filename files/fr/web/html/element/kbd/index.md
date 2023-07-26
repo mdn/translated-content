@@ -1,5 +1,5 @@
 ---
-title: '<kbd> : l''élément de saisie clavier'
+title: "<kbd> : l'élément de saisie clavier"
 slug: Web/HTML/Element/kbd
 translation_of: Web/HTML/Element/kbd
 ---

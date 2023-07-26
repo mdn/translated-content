@@ -1,5 +1,5 @@
 ---
-title: '<footer> : l''élément de pied de page ou de section'
+title: "<footer> : l'élément de pied de page ou de section"
 slug: Web/HTML/Element/footer
 translation_of: Web/HTML/Element/footer
 ---

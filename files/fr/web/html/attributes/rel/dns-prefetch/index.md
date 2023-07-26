@@ -1,5 +1,5 @@
 ---
-title: 'Types de liens : dns-prefetch'
+title: "Types de liens : dns-prefetch"
 slug: Web/HTML/Attributes/rel/dns-prefetch
 translation_of: Web/HTML/Link_types/dns-prefetch
 ---
