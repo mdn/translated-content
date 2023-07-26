@@ -23,6 +23,7 @@ build/
 /files/pt-br/learn/server-side/django/forms/index.md
 /files/ru/learn/server-side/django/forms/index.md
 /files/ru/learn/server-side/django/introduction/index.md
+/files/ru/learn/html/introduction_to_html/the_head_metadata_in_html/index.md
 /files/zh-cn/learn/css/howto/css_faq/index.md
 /files/zh-cn/learn/server-side/django/forms/index.md
 
@@ -84,7 +85,6 @@ build/
 /files/pt-br/web/svg/**/*.md
 
 # ru
-/files/ru/learn/html/**/*.md
 /files/ru/web/api/**/*.md
 /files/ru/web/css/**/*.md
 /files/ru/web/html/**/*.md
