@@ -49,12 +49,12 @@ original_slug: Web/CSS/-webkit-mask-repeat
 
 ```css
 .exampleone {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat: repeat-x;
 }
 
 .exampletwo {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat: no-repeat;
 }
 ```
@@ -65,7 +65,7 @@ Se puede especificar, seperados por comas, un `<repeat-style>` para cada una de 
 
 ```css
 .examplethree {
-  -webkit-mask-image: url('mask1.png'), url('mask2.png');
+  -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat: repeat-x, repeat-y;
 }
 ```

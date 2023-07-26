@@ -13,7 +13,7 @@ Renvoie le nœud `Attr` pour l'attribut avec l'espace de noms et le nom donnés.
 ### Syntaxe
 
 ```js
-attributeNode = element.getAttributeNodeNS(namespace,nodeName)
+attributeNode = element.getAttributeNodeNS(namespace, nodeName);
 ```
 
 ### Paramètres

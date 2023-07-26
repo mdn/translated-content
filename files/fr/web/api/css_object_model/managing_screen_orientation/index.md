@@ -28,7 +28,12 @@ Prenons pour exemple le code HTML suivant:
   <li>C</li>
 </ul>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut interdum tristique dapibus. Nullam quis malesuada est.</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec
+  sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt
+  leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut
+  interdum tristique dapibus. Nullam quis malesuada est.
+</p>
 ```
 
 Le CSS s'appuie sur une media query `orientation` pour gérer les styles spécifiques liés à l'orientation de l'écran.
@@ -36,8 +41,9 @@ Le CSS s'appuie sur une media query `orientation` pour gérer les styles spécif
 ```css
 /* D'abord, on définit les styles communs */
 
-html, body {
-  width : 100%;
+html,
+body {
+  width: 100%;
   height: 100%;
 }
 
@@ -49,17 +55,17 @@ body {
 }
 
 p {
-  font   : 1em sans-serif;
-  margin : 0;
-  padding: .5em;
+  font: 1em sans-serif;
+  margin: 0;
+  padding: 0.5em;
 }
 
 ul {
   list-style: none;
 
-  font   : 1em monospace;
-  margin : 0;
-  padding: .5em;
+  font: 1em monospace;
+  margin: 0;
+  padding: 0.5em;
 
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -69,7 +75,7 @@ ul {
 
 li {
   display: inline-block;
-  margin : 0;
+  margin: 0;
   padding: 0.5em;
   background: white;
 }
@@ -100,15 +106,15 @@ Une fois qu'on a définit les styles communs, on peut définir des cas spéciaux
   }
 
   li + li {
-    margin-top: .5em;
+    margin-top: 0.5em;
   }
 }
 ```
 
 Et voici le résultat:
 
-| Portrait                                                                                                 | Landscape                                                                                                |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Portrait                                                                       | Landscape                                                                      |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
 | {{ EmbedLiveSample("Ajuster_la_mise_en_page_selon_l'orientation", 180, 350) }} | {{ EmbedLiveSample("Ajuster_la_mise_en_page_selon_l'orientation", 350, 180) }} |
 
 > **Note :** La media query orientation s'applique en vérité selon l'orientation de la fenêtre du navigateur (ou iframe) et non l'orientation de l'appareil.
@@ -138,7 +144,7 @@ Toute application web peut verrouiller l'écran dans une orientation pour répon
 {{domxref("Screen.lockOrientation()")}} accepte une chaîne de caractères (ou une série de chaînes de caractères) pour définir le type de verrouillage à appliquer. Les valeurs acceptées sont: `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`, `portrait`, `landscape` (Voir {{domxref("Screen.lockOrientation")}} pour en savoir plus sur ces valeurs).
 
 ```js
-screen.lockOrientation('landscape');
+screen.lockOrientation("landscape");
 ```
 
 > **Note :** Un verrouillage d'écran est dépendant de l'application web. Si une a application A est verrouillée à `landscape` et l'application B est verrouillée à `portrait`, passer de l'application A à B ou à A ne va pas déclencher un événement [`orientationchange`](/fr/docs/Web/API/Window/orientationchange_event) parce que les deux applications gardent l'orientation qu'elles avaient.

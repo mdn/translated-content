@@ -1,5 +1,5 @@
 ---
-title: '<link> : l''élément de lien vers des ressources externes'
+title: "<link> : l'élément de lien vers des ressources externes"
 slug: Web/HTML/Element/link
 translation_of: Web/HTML/Element/link
 ---

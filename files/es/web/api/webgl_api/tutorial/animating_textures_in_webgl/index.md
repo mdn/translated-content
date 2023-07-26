@@ -17,7 +17,8 @@ El primer paso es añadir el HTML para crear el elemento {{ HTMLElement("video")
 
 ```html
 <video id="video">
-  Parece ser que tu navegador no soporta el elemento HTML5. <code>&lt;video&gt;</code>
+  Parece ser que tu navegador no soporta el elemento HTML5.
+  <code>&lt;video&gt;</code>
 </video>
 ```
 

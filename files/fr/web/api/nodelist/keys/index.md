@@ -33,8 +33,8 @@ node.appendChild(kid3);
 var list = node.childNodes;
 
 // Utilisation de for..of
-for(var key of list.keys()) {
-   console.log(key);
+for (var key of list.keys()) {
+  console.log(key);
 }
 ```
 

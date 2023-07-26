@@ -1,5 +1,5 @@
 ---
-title: '<th> : l''élément d''en-tête de tableau'
+title: "<th> : l'élément d'en-tête de tableau"
 slug: Web/HTML/Element/th
 translation_of: Web/HTML/Element/th
 ---

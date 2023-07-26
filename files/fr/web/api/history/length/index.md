@@ -11,7 +11,7 @@ La propriété en lecture seule **`History.length`** retourne un entier indiquan
 ## Syntaxe
 
 ```js
-const length = history.length
+const length = history.length;
 ```
 
 ## Spécifications

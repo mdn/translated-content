@@ -1,5 +1,5 @@
 ---
-title: '<p> : l''élément paragraphe'
+title: "<p> : l'élément paragraphe"
 slug: Web/HTML/Element/p
 translation_of: Web/HTML/Element/p
 ---

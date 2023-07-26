@@ -21,10 +21,10 @@ Si la batterie est en charge, la variable a la valeur `true`. Sinon, dans le cas
 ### JavaScript
 
 ```js
-navigator.getBattery().then(battery => {
+navigator.getBattery().then((battery) => {
   const charging = battery.charging;
 
-  document.querySelector('#charging').textContent = charging;
+  document.querySelector("#charging").textContent = charging;
 });
 ```
 

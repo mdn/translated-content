@@ -11,8 +11,8 @@ La propriété **`HTMLFormElement.method`** représente la méthode HTTP utilis�
 ## Syntaxe
 
 ```js
-string = form.method
-form.method = string
+string = form.method;
+form.method = string;
 ```
 
 ## Exemple

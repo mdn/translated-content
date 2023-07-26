@@ -29,7 +29,7 @@ sel.collapse(parentNode, offset);
 ```js
 /* Positionner le curseur au début de l'élément body d'un document HTML. */
 var body = document.getElementsByTagName("body")[0];
-window.getSelection().collapse(body,0);
+window.getSelection().collapse(body, 0);
 ```
 
 ## Spécifications

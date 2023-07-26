@@ -77,7 +77,7 @@ Sinon, vous pouvez simplement utiliser la notation de tableau standard pour acc�
 ```js
 const highlightedItems = userList.querySelectorAll(".highlighted");
 
-highlightedItems.forEach(function(userItem) {
+highlightedItems.forEach(function (userItem) {
   deleteUser(userItem);
 });
 ```
@@ -93,8 +93,7 @@ Considérez ce HTML, avec ses trois blocs {{HTMLElement("div")}} imbriqués.
 ```html
 <div class="outer">
   <div class="select">
-    <div class="inner">
-    </div>
+    <div class="inner"></div>
   </div>
 </div>
 ```
@@ -102,8 +101,8 @@ Considérez ce HTML, avec ses trois blocs {{HTMLElement("div")}} imbriqués.
 ### JavaScript
 
 ```js
-const select = document.querySelector('.select');
-const inner = select.querySelectorAll('.outer .inner');
+const select = document.querySelector(".select");
+const inner = select.querySelectorAll(".outer .inner");
 inner.length; // 1, not 0!
 ```
 
@@ -112,8 +111,8 @@ Dans cet exemple, lors de la sélection de `".outer .inner"` dans le contexte, l
 La pseudo-classe {{cssxref (":scope")}} restaure le comportement attendu, ne faisant correspondre les sélecteurs que sur les descendants de l'élément de base :
 
 ```js
-const select = document.querySelector('.select');
-const inner = select.querySelectorAll(':scope .outer .inner');
+const select = document.querySelector(".select");
+const inner = select.querySelectorAll(":scope .outer .inner");
 inner.length; // 0
 ```
 

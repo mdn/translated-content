@@ -11,8 +11,8 @@ La propriété **`csp`** de l'interface {{domxref("HTMLIFrameElement")}} spécif
 ## Syntaxe
 
 ```js
-var csp = HTMLIFrameElement.csp
-HTMLIFrameElement.csp = csp
+var csp = HTMLIFrameElement.csp;
+HTMLIFrameElement.csp = csp;
 ```
 
 ### Valeur

@@ -1,5 +1,5 @@
 ---
-title: '<tfoot> : l''élément de pied de tableau'
+title: "<tfoot> : l'élément de pied de tableau"
 slug: Web/HTML/Element/tfoot
 translation_of: Web/HTML/Element/tfoot
 ---

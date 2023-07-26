@@ -33,11 +33,11 @@ Un objet {{domxref("IDBRequest")}} sur lequel seront déclenchés les évènemen
 
 Cette méthode peut déclencher une exception {{domxref("DOMException")}} ayant l'un des types suivants :
 
-| Exception                  | Description                                                                                                  |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| `InvalidStateError`        | L'objet {{domxref("IDBObjectStore")}} ou l'objet {{domxref("IDBIndex")}} a été supprimé. |
-| `TransactionInactiveError` | La transaction rattachée au magasin d'objets ({{domxref("IDBObjectStore")}}) est inactive.        |
-| `DataError`                | La clé ou l'intervalle de clés indiqué est invalide.                                                         |
+| Exception                  | Description                                                                                |
+| -------------------------- | ------------------------------------------------------------------------------------------ |
+| `InvalidStateError`        | L'objet {{domxref("IDBObjectStore")}} ou l'objet {{domxref("IDBIndex")}} a été supprimé.   |
+| `TransactionInactiveError` | La transaction rattachée au magasin d'objets ({{domxref("IDBObjectStore")}}) est inactive. |
+| `DataError`                | La clé ou l'intervalle de clés indiqué est invalide.                                       |
 
 ## Exemples
 
@@ -47,9 +47,9 @@ Dans ce fragment de code, on crée une transaction, on ouvre le magasin d'objets
 var transaction = db.transaction("name", "readonly");
 var objectStore = transaction.objectStore("name");
 var request = objectStore.openCursor();
-request.onsuccess = function(event) {
+request.onsuccess = function (event) {
   var cursor = event.target.result;
-  if(cursor) {
+  if (cursor) {
     // cursor.value contient l'enregistrement courant
     // pendant le parcours, on peut éventuellement le manipuler ici
     cursor.continue();

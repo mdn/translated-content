@@ -1,5 +1,5 @@
 ---
-title: 'Types de liens : manifest'
+title: "Types de liens : manifest"
 slug: Web/HTML/Attributes/rel/manifest
 translation_of: Web/HTML/Link_types/manifest
 ---

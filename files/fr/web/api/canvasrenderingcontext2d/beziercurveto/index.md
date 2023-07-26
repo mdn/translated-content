@@ -45,14 +45,14 @@ Cet exemple montre comment une courbe cubique de Bézier est dessinée.
 
 ```js
 // Define canvas and context
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Define the points as {x, y}
-let debut = { x: 50,    y: 20  };
-let cp1 =   { x: 230,   y: 30  };
-let cp2 =   { x: 150,   y: 80  };
-let fin =   { x: 250,   y: 100 };
+let debut = { x: 50, y: 20 };
+let cp1 = { x: 230, y: 30 };
+let cp2 = { x: 150, y: 80 };
+let fin = { x: 250, y: 100 };
 
 // Courbe de Bézier cubique
 ctx.beginPath();
@@ -61,17 +61,17 @@ ctx.bezierCurveTo(cp1.x, cp1.y, cp2.x, cp2.y, fin.x, fin.y);
 ctx.stroke();
 
 // Points de début et d'arrivée
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.beginPath();
-ctx.arc(debut.x, debut.y, 5, 0, 2 * Math.PI);  // Début
-ctx.arc(fin.x, fin.y, 5, 0, 2 * Math.PI);      // Fin
+ctx.arc(debut.x, debut.y, 5, 0, 2 * Math.PI); // Début
+ctx.arc(fin.x, fin.y, 5, 0, 2 * Math.PI); // Fin
 ctx.fill();
 
 // Points de contrôles
-ctx.fillStyle = 'red';
+ctx.fillStyle = "red";
 ctx.beginPath();
-ctx.arc(cp1.x, cp1.y, 5, 0, 2 * Math.PI);  // Point de contrôle n°1
-ctx.arc(cp2.x, cp2.y, 5, 0, 2 * Math.PI);  // Point de contrôle n°2
+ctx.arc(cp1.x, cp1.y, 5, 0, 2 * Math.PI); // Point de contrôle n°1
+ctx.arc(cp2.x, cp2.y, 5, 0, 2 * Math.PI); // Point de contrôle n°2
 ctx.fill();
 ```
 
@@ -101,7 +101,7 @@ const contexte2D = canvas.getContext("2d");
 
 contexte2D.beginPath();
 contexte2D.moveTo(30, 30);
-contexte2D.bezierCurveTo(120,160, 180,10, 220,140);
+contexte2D.bezierCurveTo(120, 160, 180, 10, 220, 140);
 contexte2D.stroke();
 ```
 

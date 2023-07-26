@@ -11,7 +11,7 @@ Le constructeur **`Event()`** crée un nouvel {{domxref("Event")}} (_évènement
 ## Syntaxe
 
 ```js
- event = new Event(typeArg, eventInit);
+event = new Event(typeArg, eventInit);
 ```
 
 ### Valeurs
@@ -30,7 +30,7 @@ Le constructeur **`Event()`** crée un nouvel {{domxref("Event")}} (_évènement
 
 ```js
 // crée un évènement "look" qui est diffusé et ne peut être annulé
-var evt = new Event("look", {"bubbles":true, "cancelable":false});
+var evt = new Event("look", { bubbles: true, cancelable: false });
 document.dispatchEvent(evt);
 
 // l'événement peut être envoyé à partir de n'importe quel élément, pas seulement le document

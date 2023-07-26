@@ -46,7 +46,7 @@ Este ejemplo muesta cómo diferentes valores de tamaño de la caja (`box-sizing`
 
 ```html
 <div class="content-box">Contenido de la caja</div>
-<br>
+<br />
 <div class="border-box">Borde de la caja</div>
 ```
 
