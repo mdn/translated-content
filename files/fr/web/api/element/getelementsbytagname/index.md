@@ -15,7 +15,7 @@ Quand elle est appelée sur un élément HTML dans un document HTML, `getElement
 ## Syntaxe
 
 ```js
-elements = element.getElementsByTagName(tagName)
+elements = element.getElementsByTagName(tagName);
 ```
 
 - `elements` est une {{domxref("HTMLCollection")}} contenant les éléments trouvés, dans l'ordre dans lequel ils apparaissent dans le sous-arbre. Si aucun élément n'a été trouvé, la `HTMLCollection` est vide.
@@ -29,10 +29,10 @@ elements = element.getElementsByTagName(tagName)
 var table = document.getElementById("forecast-table");
 var cells = table.getElementsByTagName("td");
 for (var i = 0; i < cells.length; i++) {
-    var status = cells[i].getAttribute("data-status");
-    if ( status == "open" ) {
-        // saisit les données
-    }
+  var status = cells[i].getAttribute("data-status");
+  if (status == "open") {
+    // saisit les données
+  }
 }
 ```
 

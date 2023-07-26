@@ -20,14 +20,14 @@ L'utilisation typique de ceci peut être d'empêcher le téléchargement de cert
 ## Syntaxe
 
 ```js
-var string = document.visibilityState
+var string = document.visibilityState;
 ```
 
 ## Exemples
 
 ```js
-document.addEventListener("visibilitychange", function() {
-  console.log( document.visibilityState );
+document.addEventListener("visibilitychange", function () {
+  console.log(document.visibilityState);
   // Modifier le comportement...
 });
 ```
