@@ -123,9 +123,7 @@ En général, les navigateurs donnent un style au contenu d'un élément `<cite>
 ## Exemples
 
 ```html
-<p>
-  Plus d'informations sont disponibles dans <cite>[ISO-0000].</cite>
-</p>
+<p>Plus d'informations sont disponibles dans <cite>[ISO-0000].</cite></p>
 ```
 
 ### Résultat

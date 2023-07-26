@@ -109,8 +109,8 @@ L'élément `<em>` est souvent utilisé pour indiquer un contraste, implicite ou
 
 ```html
 <p>
-  Dans HTML5, ce qui était appelé contenu de <em>type bloc</em>
-  est maintenant appelé contenu de <em>flux</em>.
+  Dans HTML5, ce qui était appelé contenu de <em>type bloc</em> est maintenant
+  appelé contenu de <em>flux</em>.
 </p>
 ```
 

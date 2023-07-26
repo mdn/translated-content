@@ -92,11 +92,11 @@ Seuls [les attributs universels](/fr/docs/Web/HTML/Global_attributes) peuvent ê
 
 ```html
 <p>
-  Cet article décrit plusieurs éléments <b class="keyword">texte</b>.
-  Il explique leur usage dans un document <b class="keyword">HTML</b>.
+  Cet article décrit plusieurs éléments <b class="keyword">texte</b>. Il
+  explique leur usage dans un document <b class="keyword">HTML</b>.
 </p>
-Les mots-clés sont affichés avec le style par défaut de
-l'élément &lt;b&gt;, sûrement en gras.
+Les mots-clés sont affichés avec le style par défaut de l'élément &lt;b&gt;,
+sûrement en gras.
 ```
 
 ### Résultat

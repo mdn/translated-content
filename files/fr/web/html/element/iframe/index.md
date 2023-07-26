@@ -213,8 +213,11 @@ L'exemple qui suit utilise la page située à <https://example.org> pour l'inté
 #### HTML
 
 ```html
-<iframe src="https://example.org"
-        title="Exemple d'iframe" width="400" height="300">
+<iframe
+  src="https://example.org"
+  title="Exemple d'iframe"
+  width="400"
+  height="300">
 </iframe>
 ```
 

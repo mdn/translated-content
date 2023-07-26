@@ -103,15 +103,15 @@ Les ancres d'une page ([`<a>`](/fr/docs/Web/HTML/Element/a)), par exemple `<a hr
 Les balises [Open Graph](https://ogp.me/) ne tiennent pas de compte de l'élément `<base>`, et doivent toujours avoir des URL absolues complètes. Par exemple :
 
 ```html
-<meta property="og:image" content="https://example.com/thumbnail.jpg">
+<meta property="og:image" content="https://example.com/thumbnail.jpg" />
 ```
 
 ## Exemples
 
 ```html
-<base href="https://www.example.com/">
-<base target="_blank">
-<base target="_top" href="https://example.com/">
+<base href="https://www.example.com/" />
+<base target="_blank" />
+<base target="_top" href="https://example.com/" />
 ```
 
 ## Spécifications

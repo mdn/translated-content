@@ -77,16 +77,12 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 ```html
 <!-- Une simple image -->
 <figure>
-  <img
-  src="favicon-192x192.png"
-  alt="Le logo de MDN.">
+  <img src="favicon-192x192.png" alt="Le logo de MDN." />
 </figure>
 
 <!-- Une image avec une légende -->
 <figure>
-  <img
-  src="favicon-192x192.png"
-  alt="Le logo de MDN.">
+  <img src="favicon-192x192.png" alt="Le logo de MDN." />
   <figcaption>Logo MDN</figcaption>
 </figure>
 ```
@@ -126,8 +122,9 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
   <figcaption>
     <cite>Edsger Dijkstra : </cite>
   </figcaption>
-  <p>« Si le débogage correspond au retrait de bogues,
-    alors la programmation correspond à l'ajout de bogues. »
+  <p>
+    « Si le débogage correspond au retrait de bogues, alors la programmation
+    correspond à l'ajout de bogues. »
   </p>
 </figure>
 ```
@@ -141,15 +138,14 @@ Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web
 ```html
 <figure>
   <p style="white-space:pre">
-    Bid me discourse, I will enchant thine ear,
-      Or like a fairy trip upon the green,
-    Or, like a nymph, with long dishevell'd hair,
-      Dance on the sands, and yet no footing seen:
-    Love is a spirit all compact of fire,
-      Not gross to sink, but light, and will aspire.
+    Bid me discourse, I will enchant thine ear, Or like a fairy trip upon the
+    green, Or, like a nymph, with long dishevell'd hair, Dance on the sands, and
+    yet no footing seen: Love is a spirit all compact of fire, Not gross to
+    sink, but light, and will aspire.
   </p>
-  <figcaption><cite>Venus and Adonis</cite>.
-    By: William Shakespeare</figcaption>
+  <figcaption>
+    <cite>Venus and Adonis</cite>. By: William Shakespeare
+  </figcaption>
 </figure>
 ```
 

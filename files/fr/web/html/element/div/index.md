@@ -105,8 +105,10 @@ Comme tous les autres éléments HTML, cet élément accepte [les attributs univ
 
 ```html
 <div>
-  <p>Tout type de contenu. Par exemple &lt;p&gt;,
-  &lt;table&gt;. À vous de voir&nbsp;!</p>
+  <p>
+    Tout type de contenu. Par exemple &lt;p&gt;, &lt;table&gt;. À vous de
+    voir&nbsp;!
+  </p>
 </div>
 ```
 
@@ -122,8 +124,9 @@ Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via d
 
 ```html
 <div class="shadowbox">
-  <p>Voici un paragraphe très intéressant inscrit dans une boîte
-  avec une ombre.</p>
+  <p>
+    Voici un paragraphe très intéressant inscrit dans une boîte avec une ombre.
+  </p>
 </div>
 ```
 
