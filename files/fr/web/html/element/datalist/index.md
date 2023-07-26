@@ -1,5 +1,5 @@
 ---
-title: '<datalist> : l''élément de liste des données'
+title: "<datalist> : l'élément de liste des données"
 slug: Web/HTML/Element/datalist
 translation_of: Web/HTML/Element/datalist
 ---

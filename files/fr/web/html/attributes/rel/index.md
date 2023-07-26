@@ -1,5 +1,5 @@
 ---
-title: 'Attribut HTML : rel'
+title: "Attribut HTML : rel"
 slug: Web/HTML/Attributes/rel
 translation_of: Web/HTML/Attributes/rel
 ---

@@ -1,5 +1,5 @@
 ---
-title: 'Attribut HTML : maxlength'
+title: "Attribut HTML : maxlength"
 slug: Web/HTML/Attributes/maxlength
 translation_of: Web/HTML/Attributes/maxlength
 ---

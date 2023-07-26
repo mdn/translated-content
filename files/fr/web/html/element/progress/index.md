@@ -1,5 +1,5 @@
 ---
-title: '<progress> : l''élément d''indicateur de progression'
+title: "<progress> : l'élément d'indicateur de progression"
 slug: Web/HTML/Element/progress
 translation_of: Web/HTML/Element/progress
 ---

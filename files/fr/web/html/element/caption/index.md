@@ -1,5 +1,5 @@
 ---
-title: '<caption> : l''élément de légende d''un tableau'
+title: "<caption> : l'élément de légende d'un tableau"
 slug: Web/HTML/Element/caption
 translation_of: Web/HTML/Element/caption
 ---

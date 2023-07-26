@@ -1,5 +1,5 @@
 ---
-title: 'Types de liens : preconnect'
+title: "Types de liens : preconnect"
 slug: Web/HTML/Attributes/rel/preconnect
 translation_of: Web/HTML/Link_types/preconnect
 ---

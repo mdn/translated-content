@@ -1,5 +1,5 @@
 ---
-title: '<form> : l''élément représentant un formulaire'
+title: "<form> : l'élément représentant un formulaire"
 slug: Web/HTML/Element/form
 translation_of: Web/HTML/Element/form
 ---

@@ -1,5 +1,5 @@
 ---
-title: '<acronym> : l''élément d''acronyme'
+title: "<acronym> : l'élément d'acronyme"
 slug: Web/HTML/Element/acronym
 translation_of: Web/HTML/Element/acronym
 ---

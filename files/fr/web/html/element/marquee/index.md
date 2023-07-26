@@ -1,5 +1,5 @@
 ---
-title: '<marquee> : l''élément de fronton (obsolète)'
+title: "<marquee> : l'élément de fronton (obsolète)"
 slug: Web/HTML/Element/marquee
 translation_of: Web/HTML/Element/marquee
 ---

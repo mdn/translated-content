@@ -1,5 +1,5 @@
 ---
-title: '<base> : l''élément pour l''URL de base du document'
+title: "<base> : l'élément pour l'URL de base du document"
 slug: Web/HTML/Element/base
 translation_of: Web/HTML/Element/base
 ---

@@ -1,5 +1,5 @@
 ---
-title: '<embed> : l''élément de contenu externe embarqué'
+title: "<embed> : l'élément de contenu externe embarqué"
 slug: Web/HTML/Element/embed
 translation_of: Web/HTML/Element/embed
 ---

@@ -1,5 +1,5 @@
 ---
-title: '<b> : l''élément portant à l''attention'
+title: "<b> : l'élément portant à l'attention"
 slug: Web/HTML/Element/b
 translation_of: Web/HTML/Element/b
 ---

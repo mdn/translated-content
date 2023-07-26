@@ -1,5 +1,5 @@
 ---
-title: '<img> : l''élément d''image embarquée'
+title: "<img> : l'élément d'image embarquée"
 slug: Web/HTML/Element/img
 translation_of: Web/HTML/Element/img
 ---

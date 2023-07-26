@@ -1,5 +1,5 @@
 ---
-title: '<samp> : l''élément d''échantillon en sortie'
+title: "<samp> : l'élément d'échantillon en sortie"
 slug: Web/HTML/Element/samp
 l10n:
   sourceCommit: 20f58e36e34d79bac99aa527865a754e9c29c81b

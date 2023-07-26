@@ -1,5 +1,5 @@
 ---
-title: '<sub> : l''élément de mise en indice'
+title: "<sub> : l'élément de mise en indice"
 slug: Web/HTML/Element/sub
 l10n:
   sourceCommit: ca8d6889ade7fc6121aaf4d59158fa6a795f1a1b

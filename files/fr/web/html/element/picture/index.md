@@ -1,5 +1,5 @@
 ---
-title: '<picture> : l''élément d''image adaptative'
+title: "<picture> : l'élément d'image adaptative"
 slug: Web/HTML/Element/picture
 translation_of: Web/HTML/Element/picture
 ---

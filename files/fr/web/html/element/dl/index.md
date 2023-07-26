@@ -1,5 +1,5 @@
 ---
-title: '<dl> : l''élément de liste de descriptions'
+title: "<dl> : l'élément de liste de descriptions"
 slug: Web/HTML/Element/dl
 translation_of: Web/HTML/Element/dl
 ---

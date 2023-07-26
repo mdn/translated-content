@@ -1,5 +1,5 @@
 ---
-title: '<center> : l''élément de texte centré'
+title: "<center> : l'élément de texte centré"
 slug: Web/HTML/Element/center
 translation_of: Web/HTML/Element/center
 ---

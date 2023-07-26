@@ -1,5 +1,5 @@
 ---
-title: 'Attribut HTML : max'
+title: "Attribut HTML : max"
 slug: Web/HTML/Attributes/max
 translation_of: Web/HTML/Attributes/max
 ---
