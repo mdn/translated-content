@@ -15,9 +15,9 @@ La méthode **`Window.showModalDialog()`** permettait de créer et d'afficher un
 ## Syntaxe
 
 ```js
-showModalDialog(uri)
-showModalDialog(uri, arguments)
-showModalDialog(uri, arguments, options)
+showModalDialog(uri);
+showModalDialog(uri, arguments);
+showModalDialog(uri, arguments, options);
 ```
 
 ### Paramètres
