@@ -23,8 +23,7 @@ Une valeur booléenne qui indique si la fenêtre est en plein écran.
 ```js
 if (window.fullScreen) {
   // en plein écran !
-}
-else {
+} else {
   // pas en plein écran !
 }
 ```
