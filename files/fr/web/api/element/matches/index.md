@@ -29,17 +29,19 @@ var result = element.matches(selectorString);
 </ul>
 
 <script type="text/javascript">
-  var birds = document.getElementsByTagName('li');
+  var birds = document.getElementsByTagName("li");
 
   for (var i = 0; i < birds.length; i++) {
-    if (birds[i].matches('.endangered')) {
-      console.log('Le - ' + birds[i].textContent + '- est en voie de disparition !');
+    if (birds[i].matches(".endangered")) {
+      console.log(
+        "Le - " + birds[i].textContent + "- est en voie de disparition !",
+      );
     }
   }
 </script>
 ```
 
-Ce code affichera l'alerte "Le - aigle des Philippines - est en voie de disparition !" sur la console, puisque l'élèment possède l'attribut` class `de valeur `endangered`.
+Ce code affichera l'alerte "Le - aigle des Philippines - est en voie de disparition !" sur la console, puisque l'élèment possède l'attribut `class` de valeur `endangered`.
 
 ## Exceptions
 
@@ -58,9 +60,9 @@ if (!Element.prototype.matches) {
     Element.prototype.msMatchesSelector ||
     Element.prototype.oMatchesSelector ||
     Element.prototype.webkitMatchesSelector ||
-    function(s) {
+    function (s) {
       var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-          i = matches.length;
+        i = matches.length;
       while (--i >= 0 && matches.item(i) !== this) {}
       return i > -1;
     };
@@ -69,7 +71,7 @@ if (!Element.prototype.matches) {
 
 Cependant, étant donné la possibilité de prendre en charge les anciens navigateurs, les éléments suivants devraient suffire pour la plupart (sinon tous) des cas pratiques (c'est-à-dire le support IE9 +).
 
-```html
+```js
 if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.msMatchesSelector;
 }

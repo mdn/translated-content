@@ -11,7 +11,7 @@ La méthode **`Element.remove()`** retire l'élément courant du DOM.
 ## Syntaxe
 
 ```js
-remove()
+remove();
 ```
 
 ## Exemples
@@ -25,7 +25,7 @@ remove()
 ```
 
 ```js
-const element = document.getElementById('div-02');
+const element = document.getElementById("div-02");
 element.remove(); // supprime le div avec l'identifiant 'div-02'
 ```
 
@@ -34,7 +34,7 @@ element.remove(); // supprime le div avec l'identifiant 'div-02'
 La méthode `remove()` ne fait pas partie de la portée créée par une instruction `with`. Voir [`Symbol.unscopables`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) pour plus d'informations.
 
 ```js
-with(node) {
+with (node) {
   remove();
 }
 // ReferenceError: remove is not defined

@@ -36,14 +36,14 @@ var formData = new FormData();
 Si nous ajoutons deux valeurs `username` en utilisant {{domxref("FormData.append")}} :
 
 ```js
-formData.append('username', 'Chris');
-formData.append('username', 'Bob');
+formData.append("username", "Chris");
+formData.append("username", "Bob");
 ```
 
 La fonction `getAll()` suivante va retourner chaque valeurs de `username` dans un tableau :
 
 ```js
-formData.getAll('username'); // Returns ["Chris", "Bob"]
+formData.getAll("username"); // Returns ["Chris", "Bob"]
 ```
 
 ## Spécifications

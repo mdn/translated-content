@@ -17,7 +17,7 @@ Les évènements initialisés par ce moyen ont été créés par la méthode {{d
 ## Syntaxe
 
 ```js
-event.initEvent(type, bubbles, cancelable)
+event.initEvent(type, bubbles, cancelable);
 ```
 
 - `type`
@@ -31,16 +31,20 @@ event.initEvent(type, bubbles, cancelable)
 
 ```js
 // Crée un évènement.
-var event = document.createEvent('Event');
+var event = document.createEvent("Event");
 
 // Crée un évènement click qui doit se propager vers le haut
 // et ne peut être annulé
-event.initEvent('click', true, false);
+event.initEvent("click", true, false);
 
 // Écoute les évènements.
-elem.addEventListener('click', function (e) {
-  // e.target matches elem
-}, false);
+elem.addEventListener(
+  "click",
+  function (e) {
+    // e.target matches elem
+  },
+  false,
+);
 
 elem.dispatchEvent(event);
 ```
