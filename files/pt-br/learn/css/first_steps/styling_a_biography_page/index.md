@@ -1,5 +1,5 @@
 ---
-title: Using your new knowledge
+title: Usando seu novo conhecimento
 slug: Learn/CSS/First_steps/Styling_a_biography_page
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
@@ -65,7 +65,7 @@ Lembre-se de que não há resosta errada aqui — neste momento de seu aprendiza
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/biog.html", '100%', 1600)}}
 
-## Assessment or further help
+## Avaliação ou ajuda adicional
 
 Se gostaria de ter seu trabalho avaliado, ou se ficou emperrado e gostaria de ajuda:
 

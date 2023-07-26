@@ -108,7 +108,7 @@ p {
   background-color: teal;
 }
 
-.transformed{
+.transformed {
   /* idéntico a rotateZ(45deg); */
   transform: rotate(45deg);
   background-color: blue;

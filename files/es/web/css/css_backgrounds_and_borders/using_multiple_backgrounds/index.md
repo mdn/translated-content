@@ -12,7 +12,11 @@ Especificar fondos múltiples es fácil:
 
 ```css
 .myclass {
-  background: background1, background 2, ..., backgroundN;
+  background:
+    background1,
+    background 2,
+    ...,
+    backgroundN;
 }
 ```
 
@@ -36,8 +40,19 @@ En este ejemplo, tres fondos son apilados: el logo de Firefox, un [gradiente lin
   height: 400px;
   background-image: url(firefox.png), url(bubbles.png), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: bottom right, left, right;
-  background: -moz-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -webkit-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -ms-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background-position:
+    bottom right,
+    left,
+    right;
+  background:
+    -moz-linear-gradient(
+      to right,
+      rgba(30, 75, 115, 1),
+      rgba(255, 255, 255, 0)
+    ),
+    -webkit-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)),
+    -ms-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)),
+    linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
 }
 ```
 

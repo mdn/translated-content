@@ -1873,8 +1873,8 @@
 /es/docs/Web/CSS/Referencia_CSS/Extensiones_Mozilla	/es/docs/Web/CSS/Mozilla_Extensions
 /es/docs/Web/CSS/Referencia_CSS/background-blend-mode	/es/docs/Web/CSS/background-blend-mode
 /es/docs/Web/CSS/Referencia_CSS/mix-blend-mode	/es/docs/Web/CSS/mix-blend-mode
-/es/docs/Web/CSS/Selectores_CSS	/es/docs/Web/CSS/CSS_Selectors
-/es/docs/Web/CSS/Selectores_CSS/Usando_la_pseudo-clase_:target_en_selectores	/es/docs/Web/CSS/CSS_Selectors/Using_the_:target_pseudo-class_in_selectors
+/es/docs/Web/CSS/Selectores_CSS	/es/docs/Web/CSS/CSS_selectors
+/es/docs/Web/CSS/Selectores_CSS/Usando_la_pseudo-clase_:target_en_selectores	/es/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors
 /es/docs/Web/CSS/Selectores_atributo	/es/docs/Web/CSS/Attribute_selectors
 /es/docs/Web/CSS/Selectores_hermanos_adyacentes	/es/docs/Web/CSS/Adjacent_sibling_combinator
 /es/docs/Web/CSS/Selectores_hermanos_generales	/es/docs/Web/CSS/General_sibling_combinator

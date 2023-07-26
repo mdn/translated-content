@@ -27,28 +27,27 @@ translation_of: Learn/CSS/First_steps/Getting_started
 ```html
 <!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Начало работы с CSS</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>Я заголовок первого уровня</h1>
 
-    <p>Это абзац. В нём есть <span>элемент span</span>,
-а также <a href="http://example.com">ссылка</a>.</p>
+    <p>
+      Это абзац. В нём есть <span>элемент span</span>, а также
+      <a href="http://example.com">ссылка</a>.
+    </p>
 
     <p>Это второй абзац. Он содержит <em>акцентирующий</em> текст.</p>
 
     <ul>
-        <li>Элемент один</li>
-        <li>Элемент два</li>
-        <li>Элемент <em>три</em></li>
+      <li>Элемент один</li>
+      <li>Элемент два</li>
+      <li>Элемент <em>три</em></li>
     </ul>
-
-</body>
-
+  </body>
 </html>
 ```
 
@@ -63,7 +62,7 @@ translation_of: Learn/CSS/First_steps/Getting_started
 Чтобы связать styles.css с index.html, добавьте следующую строку где-то внутри{{htmlelement("head")}} HTML документа:
 
 ```html
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css" />
 ```
 
 Элемент {{htmlelement("link")}} сообщает браузеру, что у нас есть таблица стилей, используя атрибут _rel_, и местоположение этой таблицы стилей в качестве значения атрибута _href._ вы можете проверить, работает ли CSS, добавив правило в _styles.css_. Используя ваш редактор кода, добавьте следующее в ваш файл CSS:
@@ -91,8 +90,9 @@ p {
 Вы можете выбрать несколько селекторов одновременно, разделив их запятыми. Если я хочу, чтобы все параграфы и все элементы списка были зелёными, моё правило выглядит так:
 
 ```css
-p, li {
-    color: green;
+p,
+li {
+  color: green;
 }
 ```
 

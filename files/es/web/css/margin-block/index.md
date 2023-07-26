@@ -9,9 +9,9 @@ La propiedad de [CSS](/es/docs/Web/CSS) **`margin-block`** define el bloque lóg
 
 ```css
 /* <length> values */
-margin-block: 10px 20px;  /* An absolute length */
-margin-block: 1em 2em;   /* relative to the text size */
-margin-block: 5% 2%;    /* relative to the nearest block container's width */
+margin-block: 10px 20px; /* An absolute length */
+margin-block: 1em 2em; /* relative to the text size */
+margin-block: 5% 2%; /* relative to the nearest block container's width */
 margin-block: 10px; /* sets both start and end values */
 
 /* Keyword values */

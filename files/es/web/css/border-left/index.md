@@ -30,7 +30,7 @@ border-left: [border-width || border-style || border-color | inherit] ;
 
 ```css
 element {
-    border-left: 1px solid #000;
+  border-left: 1px solid #000;
 }
 ```
 

@@ -69,13 +69,13 @@ _Heredados de su padre, {{domxref("HTMLElement")}}._
 
 ```js
 var img1 = new Image(); // HTML5 Constructor
-img1.src = 'image1.png';
-img1.alt = 'alt';
+img1.src = "image1.png";
+img1.alt = "alt";
 document.body.appendChild(img1);
 
-var img2 = document.createElement('img'); // Uso DOM HTMLImageElement
-img2.src = 'image2.jpg';
-img2.alt = 'alt text';
+var img2 = document.createElement("img"); // Uso DOM HTMLImageElement
+img2.src = "image2.jpg";
+img2.alt = "alt text";
 document.body.appendChild(img2);
 
 // Usando la primera imagen en el documento
