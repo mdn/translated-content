@@ -13,7 +13,7 @@ La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegi
 ## Syntaxe
 
 ```js
-serviceWorkerRegistration.showNotification(title, [options])
+serviceWorkerRegistration.showNotification(title, [options]);
 ```
 
 ### Paramètres
@@ -53,21 +53,21 @@ Un {{jsxref('Promise')}} qui se résout en `undefined`.
 ## Exemples
 
 ```js
-navigator.serviceWorker.register('sw.js')
+navigator.serviceWorker.register("sw.js");
 
 function showNotification() {
   Notification.requestPermission((result) => {
-    if (result === 'granted') {
+    if (result === "granted") {
       navigator.serviceWorker.ready.then((registration) => {
-        registration.showNotification('Vibration Sample', {
-          body: 'Buzz! Buzz!',
-          icon: '../images/touch/chrome-touch-icon-192x192.png',
+        registration.showNotification("Vibration Sample", {
+          body: "Buzz! Buzz!",
+          icon: "../images/touch/chrome-touch-icon-192x192.png",
           vibrate: [200, 100, 200, 100, 200, 100, 200],
-          tag: 'vibration-sample'
-        })
-      })
+          tag: "vibration-sample",
+        });
+      });
     }
-  })
+  });
 }
 ```
 
