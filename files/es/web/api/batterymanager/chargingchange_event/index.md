@@ -13,7 +13,7 @@ Especifica un evento que escucha para recibir eventos [`chargingchange`](/es/doc
 ## Sintaxis
 
 ```js
-battery.onchargingchange = funcRef
+battery.onchargingchange = funcRef;
 ```
 
 Donde `battery` es un objeto {{domxref("BatteryManager")}}, y `funcRef` es una función para llamar cuando se produce el evento [`chargingchange`](/es/docs/Web/Reference/Events/chargingchange).
@@ -30,14 +30,13 @@ Donde `battery` es un objeto {{domxref("BatteryManager")}}, y `funcRef` es una f
 ### Contenido JavaScript
 
 ```js
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then(function (battery) {
+  battery.onchargingchange = chargingChange();
 
-   battery.onchargingchange = chargingChange();
-
-   function chargingChange() {
-      document.querySelector('#level').textContent = battery.level;
-      document.querySelector('#chargingTime').textContent = battery.chargingTime;
-   }
+  function chargingChange() {
+    document.querySelector("#level").textContent = battery.level;
+    document.querySelector("#chargingTime").textContent = battery.chargingTime;
+  }
 });
 ```
 

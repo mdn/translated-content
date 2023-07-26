@@ -48,7 +48,7 @@ _Esta interfaz no hereda ningún método._
 ## Ejemplo
 
 ```js
-var paramsString = "q=URLUtils.searchParams&topic=api"
+var paramsString = "q=URLUtils.searchParams&topic=api";
 var searchParams = new URLSearchParams(paramsString);
 
 //Itera los parámetros de búsqueda.

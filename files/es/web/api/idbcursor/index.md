@@ -58,19 +58,19 @@ En este simple fragmento creamos una transacción, recuperamos un almacén de ob
 
 ```js
 function displayData() {
-  var transaction = db.transaction(['rushAlbumList'], "readonly");
-  var objectStore = transaction.objectStore('rushAlbumList');
+  var transaction = db.transaction(["rushAlbumList"], "readonly");
+  var objectStore = transaction.objectStore("rushAlbumList");
 
-  objectStore.openCursor().onsuccess = function(event) {
+  objectStore.openCursor().onsuccess = function (event) {
     var cursor = event.target.result;
-    if(cursor) {
-      var listItem = document.createElement('li');
-      listItem.innerHTML = cursor.value.albumTitle + ', ' + cursor.value.year;
+    if (cursor) {
+      var listItem = document.createElement("li");
+      listItem.innerHTML = cursor.value.albumTitle + ", " + cursor.value.year;
       list.appendChild(listItem);
 
       cursor.continue();
     } else {
-      console.log('Entries all displayed.');
+      console.log("Entries all displayed.");
     }
   };
 }

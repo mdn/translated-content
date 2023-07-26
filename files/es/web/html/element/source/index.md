@@ -93,9 +93,9 @@ Este ejemplo muestra cómo ofrecer un video en formato Ogg para usuarios cuyos n
 
 ```html
 <video controls>
-  <source src="foo.webm" type="video/webm">
-  <source src="foo.ogg" type="video/ogg">
-  <source src="foo.mov" type="video/quicktime">
+  <source src="foo.webm" type="video/webm" />
+  <source src="foo.ogg" type="video/ogg" />
+  <source src="foo.mov" type="video/quicktime" />
   Lo lamento; su navegador no soporta video HTML5.
 </video>
 ```

@@ -73,25 +73,30 @@ pre {                               /* make the box translucent (80% opaque) */
 ```html
 <!doctype html>
 <html>
-<head>
-<style>
-img.opacity {
-   opacity: 1;
-   filter: alpha(opacity=50);
-   zoom: 1;
- }
+  <head>
+    <style>
+      img.opacity {
+        opacity: 1;
+        filter: alpha(opacity=50);
+        zoom: 1;
+      }
 
-img.opacity:hover {
-   opacity: 0.5;
-   filter: alpha(opacity=100);
-   zoom: 1;
- }
-</style>
-</head>
+      img.opacity:hover {
+        opacity: 0.5;
+        filter: alpha(opacity=100);
+        zoom: 1;
+      }
+    </style>
+  </head>
 
-<body>
-<img src="//developer.mozilla.org/media/img/mdn-logo.png" alt="MDN logo" width="128" height="146" class="opacity">
-</body>
+  <body>
+    <img
+      src="//developer.mozilla.org/media/img/mdn-logo.png"
+      alt="MDN logo"
+      width="128"
+      height="146"
+      class="opacity" />
+  </body>
 </html>
 ```
 

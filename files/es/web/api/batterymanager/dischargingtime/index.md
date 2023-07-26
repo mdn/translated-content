@@ -34,10 +34,11 @@ o si el sistema es incapaz de calcular el tiempo de descarga.
 ### Contenido JavaScript
 
 ```js
-navigator.getBattery().then(function(battery) {
+navigator.getBattery().then(function (battery) {
   var time = battery.dischargingTime;
 
-  document.querySelector("#dischargingTime").textContent = battery.dischargingTime;
+  document.querySelector("#dischargingTime").textContent =
+    battery.dischargingTime;
 });
 ```
 

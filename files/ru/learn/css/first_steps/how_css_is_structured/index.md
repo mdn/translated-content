@@ -37,12 +37,12 @@ original_slug: Learn/CSS/First_steps/Как_структурирован_CSS
 Внешняя таблица стилей - это когда у вас есть CSS отдельным файлом с расширением `.css`, и ссылка на него из HTML-элемента `<link>`:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Я пробую писать CSS</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <h1>Привет!</h1>
@@ -71,13 +71,13 @@ p {
 
 ```html
 <!-- Файл находится внутри под-директории styles, находящейся в текущей директории -->
-<link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/style.css" />
 
 <!-- Файл — внутри под-директории styles внутри под-под-директории general и так далее -->
-<link rel="stylesheet" href="styles/general/style.css">
+<link rel="stylesheet" href="styles/general/style.css" />
 
 <!-- Вверх на один уровень в директории, затем направиться в под-директорию styles -->
-<link rel="stylesheet" href="../styles/style.css">
+<link rel="stylesheet" href="../styles/style.css" />
 ```
 
 ### Внутренняя таблица стилей
@@ -87,10 +87,10 @@ p {
 Таким образом, HTML будет выглядеть вот так:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Я пробую писать CSS</title>
     <style>
       h1 {
@@ -118,14 +118,16 @@ p {
 Встроенные стили являются правилами CSS, которые влияют только на один элемент, содержащиеся в атрибуте `style`:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Я пробую писать CSS</title>
   </head>
   <body>
-    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">Привет!</h1>
+    <h1 style="color: blue;background-color: yellow;border: 1px solid black;">
+      Привет!
+    </h1>
     <p style="color:red;">Это мой первый опыт в CSS</p>
   </body>
 </html>
@@ -142,17 +144,15 @@ p {
 index.html:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Я пробую писать CSS</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-
     <p>Пишите сюда свой код</p>
-
   </body>
 </html>
 ```
@@ -309,7 +309,7 @@ p {
   width: 100px;
   height: 100px;
   background-color: rebeccapurple;
-  transform: rotate(0.8turn)
+  transform: rotate(0.8turn);
 }
 ```
 
@@ -328,7 +328,7 @@ p {
 До сих пор не сталкивались мы с правилами [`@rules`](/ru/docs/Web/CSS/At-rule) (произносится как _эт-рулс_, от английского "at-rules"). Это особые правила, дающие CSS инструкции, как вести себя. У некоторых правил `@rules` простые названия и значения. Чтобы, к примеру, импортировать ещё одну таблицу стилей в основной CSS-файл, нужно использовать `@import`:
 
 ```css
-@import 'styles2.css';
+@import "styles2.css";
 ```
 
 Чаще других встречается `@rules` под названием `@media`: оно позволяет вам использовать [медиавыражения](/ru/docs/Web/CSS/Media_Queries/Using_media_queries), чтобы применять CSS в определённых случаях, только если выполняются те или иные условия (например, при изменении размеров окна или при просмотре сайта с иного типа устройства).
@@ -416,7 +416,10 @@ background-scroll: fixed;
 /* Работаю над основными элементами */
 /* -------------------------------------------------------------------------------------------- */
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -430,16 +433,19 @@ body {
   }
 }
 
-h1 {font-size: 1.5em;}
+h1 {
+  font-size: 1.5em;
+}
 
 /* Работаю над элементами, вложенными в DOM  */
 /* -------------------------------------------------------------------------------------------- */
-div p, #id:first-line {
+div p,
+#id:first-line {
   background-color: red;
-  background-style: none
+  background-style: none;
 }
 
-div p{
+div p {
   margin: 0;
   padding: 1em;
 }
@@ -471,7 +477,10 @@ p {
 
 ```css
 body {
-  font: 1em/150% Helvetica, Arial, sans-serif;
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
   padding: 1em;
   margin: 0 auto;
   max-width: 33em;
@@ -490,7 +499,7 @@ h1 {
 div p,
 #id:first-line {
   background-color: red;
-  background-style: none
+  background-style: none;
 }
 
 div p {
@@ -506,14 +515,37 @@ div p + p {
 То же самое вы можете написать, не добавляя большие отступы, — коды идентичны; но я уверен, вы согласитесь, что это очень тяжело прочитать:
 
 ```css
-body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
-@media (min-width: 70em) { body {font-size: 130%;} }
+body {
+  font:
+    1em/150% Helvetica,
+    Arial,
+    sans-serif;
+  padding: 1em;
+  margin: 0 auto;
+  max-width: 33em;
+}
+@media (min-width: 70em) {
+  body {
+    font-size: 130%;
+  }
+}
 
-h1 {font-size: 1.5em;}
+h1 {
+  font-size: 1.5em;
+}
 
-div p, #id:first-line {background-color: red; background-style: none}
-div p {margin: 0; padding: 1em;}
-div p + p {padding-top: 0;}
+div p,
+#id:first-line {
+  background-color: red;
+  background-style: none;
+}
+div p {
+  margin: 0;
+  padding: 1em;
+}
+div p + p {
+  padding-top: 0;
+}
 ```
 
 Как вы будете оформлять код — решать вам; хотя, работая в команде, вы обнаружите, что она придерживается тех правил форматирования, которые в ней утверждены.

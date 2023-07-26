@@ -12,7 +12,7 @@ Devuelve un objeto de selección representando el rango del texto seleccionado p
 ### Sintaxis
 
 ```js
-selection =window.getSelection() ;
+selection = window.getSelection();
 ```
 
 - `selection` es un objeto de [selección](/es/docs/Web/API/Selection).
@@ -21,10 +21,10 @@ selection =window.getSelection() ;
 
 ```js
 function foo() {
-   var selObj = window.getSelection();
-   alert(selObj);
-   var selRange = selObj.getRangeAt(0);
-   // ... Hacer las cosas con el rango ...
+  var selObj = window.getSelection();
+  alert(selObj);
+  var selRange = selObj.getRangeAt(0);
+  // ... Hacer las cosas con el rango ...
 }
 ```
 

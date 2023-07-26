@@ -59,9 +59,8 @@ document.body.innerHTML = ""; // Reemplaza el contenido de <body> con una cadena
 El siguiente ejemplo recupera la sintaxis HTML actual del documento y reemplaza los caracteres "`<`" con la entidad HTML "`&lt;`", convirtiendo esencialmente el HTML en texto plano. Esto luego se envuelve en un elemento [\<pre>](/es/docs/Web/HTML/Element/pre). Entonces el valor de innerHTML se cambia a esta nueva cadena. Como resultado, se muestra en pantalla el código fuente completo de la página.
 
 ```js
-document.documentElement.innerHTML = "<pre>" +
-         document.documentElement.innerHTML.replace(/</g,"&lt;") +
-            "</pre>";
+document.documentElement.innerHTML =
+  "<pre>" + document.documentElement.innerHTML.replace(/</g, "&lt;") + "</pre>";
 ```
 
 > **Nota:** Esta propiedad fue inicialmente implementada por navegadores web, y luego especificada por el WHATWG y el W3C en HTML5. Implementaciones antiguas no la implementarán exactamente igual. Por ejemplo, cuando el texto es ingresado en una caja de **texto multilinea (elemento `textarea`)**, Internet Explorer cambiará el valor de la propiedad `innerHTML` del **elemento `textarea`**, mientras que los navegadores Gecko no lo hacen.
