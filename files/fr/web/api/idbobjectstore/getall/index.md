@@ -23,9 +23,9 @@ Pour distinguer ces situations, on pourra appeler une de ces deux méthodes&nbsp
 ## Syntaxe
 
 ```js
-getAll()
-getAll(query)
-getAll(query, count)
+getAll();
+getAll(query);
+getAll(query, count);
 ```
 
 ### Paramètres
