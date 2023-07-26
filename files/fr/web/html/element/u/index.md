@@ -84,7 +84,7 @@ Pour souligner du texte sans que cela ait une quelconque portée sémantique, on
 
 ```html
 <span class="underline">Le plat du jour</span>
-<br>
+<br />
 Soupe de potiron avec un soupçon de noix de muscade
 ```
 

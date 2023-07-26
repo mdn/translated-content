@@ -41,8 +41,7 @@ En HTML 4, `<strong>` indiquait simplement une emphase plus forte. En HTML5, l'�
 ```html
 <p>
   Avant de faire le truc X il est
-  <strong>nécessaire</strong> de
-  faire le truc Y avant.
+  <strong>nécessaire</strong> de faire le truc Y avant.
 </p>
 ```
 

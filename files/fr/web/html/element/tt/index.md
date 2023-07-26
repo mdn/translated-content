@@ -43,8 +43,7 @@ Il est possible de surcharger la police par défaut utilisée pour cet élément
 
 ```css
 tt {
-  font-family: "Lucida Console", "Menlo", "Monaco", "Courier",
-               monospace;
+  font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
 }
 ```
 

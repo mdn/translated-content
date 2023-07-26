@@ -33,7 +33,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ```html
 <object data="animation.swf" type="application/x-shockwave-flash">
-  <param name="param11" value="valeurConf">
+  <param name="param11" value="valeurConf" />
 </object>
 ```
 
