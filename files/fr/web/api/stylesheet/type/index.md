@@ -11,13 +11,13 @@ Type spécifie la langue de la feuille de style pour cette feuille de style.
 ## Syntaxe
 
 ```js
-String = stylesheet.type
+string = stylesheet.type;
 ```
 
 ## Exemple
 
 ```
-Ss.type = "text / css";
+stylesheet.type = "text/css";
 ```
 
 ## Spécification

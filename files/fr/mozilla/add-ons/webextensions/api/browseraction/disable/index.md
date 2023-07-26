@@ -12,8 +12,8 @@ Désactive l'action du navigateur pour un onglet, ce qui signifie qu'il ne peut 
 
 ```js
 browser.browserAction.disable(
-  tabId // optional integer
-)
+  tabId, // optional integer
+);
 ```
 
 ### Paramètres

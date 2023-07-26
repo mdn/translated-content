@@ -34,7 +34,7 @@ Aucune.
 
 ### Exceptions
 
-Si *masque* n'est pas l'une des valeurs possibles listées, une erreur `gl.INVALID_ENUM` est déclenchée.
+Si _masque_ n'est pas l'une des valeurs possibles listées, une erreur `gl.INVALID_ENUM` est déclenchée.
 
 ## Exemples
 

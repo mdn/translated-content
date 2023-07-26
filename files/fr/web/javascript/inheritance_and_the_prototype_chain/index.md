@@ -310,7 +310,7 @@ console.log(d.hasOwnProperty);
 
 #### Suppression des propriétés avec `delete`
 
-L'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_delete) permet de supprimer une propriété directement rattachée à un objet. En revanche, il n'empêchera pas l'exploration de la chaîne de prototype :
+L'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete) permet de supprimer une propriété directement rattachée à un objet. En revanche, il n'empêchera pas l'exploration de la chaîne de prototype :
 
 ```js
 let a = {toto: 1};

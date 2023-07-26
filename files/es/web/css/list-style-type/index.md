@@ -75,13 +75,15 @@ ol.shortcut {
 ### HTML
 
 ```html
-<ol class="normal">List 1
+<ol class="normal">
+  List 1
   <li>Hello</li>
   <li>World</li>
   <li>What's up?</li>
 </ol>
 
-<ol class="shortcut">List 2
+<ol class="shortcut">
+  List 2
   <li>Looks</li>
   <li>Like</li>
   <li>The</li>

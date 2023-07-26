@@ -22,10 +22,14 @@ node = nodeIterator.previousNode();
 
 ```js
 var nodeIterator = document.createNodeIterator(
-    document.body,
-    NodeFilter.SHOW_ELEMENT,
-    { acceptNode: function(node) { return NodeFilter.FILTER_ACCEPT; } },
-    false // cet argument facultatif n'est plus utilisé
+  document.body,
+  NodeFilter.SHOW_ELEMENT,
+  {
+    acceptNode: function (node) {
+      return NodeFilter.FILTER_ACCEPT;
+    },
+  },
+  false, // cet argument facultatif n'est plus utilisé
 );
 currentNode = nodeIterator.nextNode(); // renvoie le noeud suivant
 previousNode = nodeIterator.previousNode(); // même résultat, puisque nous sommes retournés au noeud précédent

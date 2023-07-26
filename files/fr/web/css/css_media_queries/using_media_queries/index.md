@@ -264,5 +264,5 @@ Il est possible d'utiliser l'opérateur `or` pour tester une correspondance sur 
 
 - [Tester des requêtes média en script](/fr/docs/Web/CSS/Media_Queries/Testing_media_queries)
 - [Utiliser les animations CSS entre les requêtes média (en anglais)](https://davidwalsh.name/animate-media-queries)
-- [Les caractéristiques média spécifiques à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions#caract%c3%a9ristiques)
-- [Les caractéristiques média spécifiques à WebKit](/fr/docs/Web/CSS/WebKit_Extensions#caract%c3%a9ristiques_m%c3%a9dia)
+- [Les caractéristiques média spécifiques à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions#caractéristiques)
+- [Les caractéristiques média spécifiques à WebKit](/fr/docs/Web/CSS/WebKit_Extensions#caractéristiques_média)

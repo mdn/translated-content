@@ -1,5 +1,5 @@
 ---
-title: '<table> : l''élément de tableau'
+title: "<table> : l'élément de tableau"
 slug: Web/HTML/Element/table
 translation_of: Web/HTML/Element/table
 ---

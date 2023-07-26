@@ -27,7 +27,7 @@ async function [name]([param1[, param2[, …, paramN]]]) {
 - `instructions`
   - : Les instructions qui composent le corps de la fonction.
 
-> **Note :** À partir d'ES2015 (ES6), il est aussi possible d'utiliser des [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) pour les expressions de fonction asynchrone.
+> **Note :** À partir d'ES2015 (ES6), il est aussi possible d'utiliser des [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) pour les expressions de fonction asynchrone.
 
 ## Description
 

@@ -11,7 +11,7 @@ Cette méthode supprime toutes les alarmes actives. C'est une fonction asynchron
 ## Syntaxe
 
 ```js
-var clearAlarms = browser.alarms.clearAll()
+var clearAlarms = browser.alarms.clearAll();
 ```
 
 ### Paramètres
@@ -26,7 +26,7 @@ Une promesse ({{jsxref("Promise")}}) qui sera tenue avec une valeur booléenne. 
 
 ```js
 function onClearedAll(wasCleared) {
-  console.log(wasCleared);  // true/false
+  console.log(wasCleared); // true/false
 }
 
 var clearAlarms = browser.alarms.clearAll();

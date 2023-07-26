@@ -13,8 +13,8 @@ Sous certaines conditions, par exemple au changement d'onglet, le navigateur pou
 ## Syntaxe
 
 ```js
-alert()
-alert(message)
+alert();
+alert(message);
 ```
 
 ### Paramètres

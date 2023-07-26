@@ -46,19 +46,19 @@ Primeiro de tudo, faça uma cópia local do arquivo [oojs-class-inheritance-star
 function Person(first, last, age, gender, interests) {
   this.name = {
     first,
-    last
+    last,
   };
   this.age = age;
   this.gender = gender;
   this.interests = interests;
-};
+}
 ```
 
 Os métodos são _todos_ definidos no protótipo do construtor. Por exemplo:
 
 ```js
-Person.prototype.greeting = function() {
-  alert('Hi! I\'m ' + this.name.first + '.');
+Person.prototype.greeting = function () {
+  alert("Hi! I'm " + this.name.first + ".");
 };
 ```
 
@@ -93,7 +93,7 @@ Como nota, poderíamos simplesmente ter feito isso:
 function Teacher(first, last, age, gender, interests, subject) {
   this.name = {
     first,
-    last
+    last,
   };
   this.age = age;
   this.gender = gender;
@@ -122,7 +122,7 @@ function BlueGlassBrick() {
   Brick.call(this);
 
   this.opacity = 0.5;
-  this.color = 'blue';
+  this.color = "blue";
 }
 ```
 
@@ -134,21 +134,22 @@ Tudo está bem até agora, mas nós temos um problema. Nós definimos um novo co
 
 1. Adicione a seguinte linha abaixo da sua adição anterior:
 
-    ```js
-    Teacher.prototype = Object.create(Person.prototype);
-    ```
+   ```js
+   Teacher.prototype = Object.create(Person.prototype);
+   ```
 
-    Aqui nosso amigo [`create()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/create) vem para o resgate novamente. Nesse caso, estamos usando para criar um novo objeto e torná-lo o valor de `Teacher.prototype`. O novo objeto tem `Person.prototype` como seu protótipo e, portanto, herdará, se e quando necessário, todos os métodos disponíveis no `Person.prototype`.
+   Aqui nosso amigo [`create()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/create) vem para o resgate novamente. Nesse caso, estamos usando para criar um novo objeto e torná-lo o valor de `Teacher.prototype`. O novo objeto tem `Person.prototype` como seu protótipo e, portanto, herdará, se e quando necessário, todos os métodos disponíveis no `Person.prototype`.
 
 2. Precisamos fazer mais uma coisa antes de prosseguirmos. Depois de adicionar a última linha, a propriedade `constructor` de `Teacher.prototype` agora é igual a `Person()`, porque apenas definimos `Teacher.prototype` para fazer referência a um objeto que herda suas propriedades de `Person.prototype`! Tente salvar seu código, carregar a página em um navegador e inserir `Teacher.prototype.constructor` no console para verificar.
 3. Isso pode se tornar um problema, então precisamos definir isso corretamente. Você pode fazer isso voltando ao seu código-fonte e adicionando a seguinte linha na parte inferior:
 
-    ```js
-    Object.defineProperty(Teacher.prototype, 'constructor', {
-        value: Teacher,
-        enumerable: false, // so that it does not appear in 'for in' loop
-        writable: true });
-    ```
+   ```js
+   Object.defineProperty(Teacher.prototype, "constructor", {
+     value: Teacher,
+     enumerable: false, // so that it does not appear in 'for in' loop
+     writable: true,
+   });
+   ```
 
 4. Agora, se você salvar e atualizar, entrar em `Teacher.prototype.constructor` deve retornar `Teacher()`, conforme desejado, além de estarmos herdando de `Person()`!
 
@@ -159,18 +160,36 @@ Para finalizar nosso código, precisamos definir uma nova função `greeting()` 
 A maneira mais fácil de fazer isso é defini-lo no protótipo do `Teacher()` — adicione o seguinte na parte inferior do seu código:
 
 ```js
-Teacher.prototype.greeting = function() {
+Teacher.prototype.greeting = function () {
   var prefix;
 
-  if (this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
-    prefix = 'Mr.';
-  } else if (this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F') {
-    prefix = 'Mrs.';
+  if (
+    this.gender === "male" ||
+    this.gender === "Male" ||
+    this.gender === "m" ||
+    this.gender === "M"
+  ) {
+    prefix = "Mr.";
+  } else if (
+    this.gender === "female" ||
+    this.gender === "Female" ||
+    this.gender === "f" ||
+    this.gender === "F"
+  ) {
+    prefix = "Mrs.";
   } else {
-    prefix = 'Mx.';
+    prefix = "Mx.";
   }
 
-  alert('Hello. My name is ' + prefix + ' ' + this.name.last + ', and I teach ' + this.subject + '.');
+  alert(
+    "Hello. My name is " +
+      prefix +
+      " " +
+      this.name.last +
+      ", and I teach " +
+      this.subject +
+      ".",
+  );
 };
 ```
 
@@ -181,7 +200,14 @@ Isso alerta a saudação do professor, que também usa um prefixo de nome apropr
 Agora que você digitou todo o código, tente criar uma instância de objeto do `Teacher()` colocando o seguinte na parte inferior do seu JavaScript (ou algo semelhante à sua escolha):
 
 ```js
-var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');
+var teacher1 = new Teacher(
+  "Dave",
+  "Griffiths",
+  31,
+  "male",
+  ["football", "cookery"],
+  "mathematics",
+);
 ```
 
 Agora salve e atualize e tente acessar as propriedades e os métodos do novo objeto `teacher1`, por exemplo:
@@ -234,7 +260,7 @@ class Person {
   constructor(first, last, age, gender, interests) {
     this.name = {
       first,
-      last
+      last,
     };
     this.age = age;
     this.gender = gender;
@@ -243,11 +269,11 @@ class Person {
 
   greeting() {
     console.log(`Hi! I'm ${this.name.first}`);
-  };
+  }
 
   farewell() {
     console.log(`${this.name.first} has left the building. Bye for now!`);
-  };
+  }
 }
 ```
 
@@ -259,11 +285,11 @@ A declaração [class](/pt-BR/docs/Web/JavaScript/Reference/Statements/class) in
 Agora podemos instanciar instâncias de objeto usando o operador [`new`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new), da mesma maneira que fizemos antes:
 
 ```js
-let han = new Person('Han', 'Solo', 25, 'male', ['Smuggling']);
+let han = new Person("Han", "Solo", 25, "male", ["Smuggling"]);
 han.greeting();
 // Hi! I'm Han
 
-let leia = new Person('Leia', 'Organa', 19, 'female', ['Government']);
+let leia = new Person("Leia", "Organa", 19, "female", ["Government"]);
 leia.farewell();
 // Leia has left the building. Bye for now
 ```
@@ -281,15 +307,15 @@ class Teacher extends Person {
   constructor(first, last, age, gender, interests, subject, grade) {
     this.name = {
       first,
-      last
+      last,
     };
 
-  this.age = age;
-  this.gender = gender;
-  this.interests = interests;
-  // subject and grade are specific to Teacher
-  this.subject = subject;
-  this.grade = grade;
+    this.age = age;
+    this.gender = gender;
+    this.interests = interests;
+    // subject and grade are specific to Teacher
+    this.subject = subject;
+    this.grade = grade;
   }
 }
 ```
@@ -311,10 +337,18 @@ class Teacher extends Person {
 Quando instanciamos instâncias de objeto `Teacher` , podemos agora chamar métodos e propriedades definidos em `Teacher` e `Person`, como seria de esperar:
 
 ```js
-let snape = new Teacher('Severus', 'Snape', 58, 'male', ['Potions'], 'Dark arts', 5);
+let snape = new Teacher(
+  "Severus",
+  "Snape",
+  58,
+  "male",
+  ["Potions"],
+  "Dark arts",
+  5,
+);
 snape.greeting(); // Hi! I'm Severus.
 snape.farewell(); // Severus has left the building. Bye for now.
-snape.age // 58
+snape.age; // 58
 snape.subject; // Dark arts
 ```
 
@@ -362,13 +396,13 @@ O exemplo abaixo mostra os dois recursos em ação:
 
 ```js
 // Check the default value
-console.log(snape.subject) // Returns "Dark arts"
+console.log(snape.subject); // Returns "Dark arts"
 
 // Change the value
-snape.subject="Balloon animals" // Sets _subject to "Balloon animals"
+snape.subject = "Balloon animals"; // Sets _subject to "Balloon animals"
 
 // Check it again and see if it matches the new value
-console.log(snape.subject) // Returns "Balloon animals"
+console.log(snape.subject); // Returns "Balloon animals"
 ```
 
 > **Nota:** You can find this example on GitHub as [es2015-getters-setters.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-getters-setters.html) ([see it live also](https://mdn.github.io/learning-area/javascript/oojs/advanced/es2015-getters-setters.html)).

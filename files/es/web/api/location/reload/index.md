@@ -1,5 +1,5 @@
 ---
-title: 'Location: reload()'
+title: "Location: reload()"
 slug: Web/API/Location/reload
 ---
 
@@ -26,10 +26,11 @@ location.reload();
 ### JavaScript
 
 ```js
-const reload = document.getElementById('reload');
+const reload = document.getElementById("reload");
 
-reload.addEventListener('click', _ => { // el _ es para indicar la ausencia de parametros
-    location.reload();
+reload.addEventListener("click", (_) => {
+  // el _ es para indicar la ausencia de parametros
+  location.reload();
 });
 ```
 

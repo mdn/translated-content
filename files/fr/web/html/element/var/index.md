@@ -1,5 +1,5 @@
 ---
-title: '<var> : l''élément de variable'
+title: "<var> : l'élément de variable"
 slug: Web/HTML/Element/var
 translation_of: Web/HTML/Element/var
 ---

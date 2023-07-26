@@ -14,12 +14,6 @@ La propriété **`frameType`** (accessible en lecture seule) de l'interface {{do
 var myFrameType = Client.frameType;
 ```
 
-## Exemple
-
-```js
-TBD
-```
-
 ## Spécifications
 
 {{Specifications}}

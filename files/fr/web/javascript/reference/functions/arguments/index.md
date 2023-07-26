@@ -24,7 +24,7 @@ arguments
 
 ## Description
 
-L'objet `arguments` est une variable locale (intrinsèque et inhérente aux fonctions) disponible dans toutes les fonctions (qui ne sont pas [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)).
+L'objet `arguments` est une variable locale (intrinsèque et inhérente aux fonctions) disponible dans toutes les fonctions (qui ne sont pas [des fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées)).
 
 Vous pouvez accéder aux arguments d'une fonction à l'intérieur de celle-ci en utilisant l'objet `arguments`. Cet objet contient une entrée pour chaque argument passé à la fonction, l'indice de la première entrée commençant à 0. Par exemple, si une fonction est appelée avec trois arguments, on accède à ceux-ci comme suit&nbsp;:
 
@@ -54,7 +54,7 @@ var args = Array.from(arguments);
 
 ### Utilisation de la décomposition avec les arguments
 
-On peut utiliser la méthode {{jsxref("Array.from()")}} ou encore [l'opérateur de décomposition](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateur_de_d%C3%A9composition) afin de convertir cet objet en un _vrai_ `Array` :
+On peut utiliser la méthode {{jsxref("Array.from()")}} ou encore [l'opérateur de décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition) afin de convertir cet objet en un _vrai_ `Array` :
 
 ```js
 var args = Array.from(arguments);
@@ -167,7 +167,7 @@ function truc(a=1) {
 truc(10); // 10
 ```
 
-Si l'objet `arguments` est modifié dans la fonction, cela modifiera la valeur du paramètre passé. Dans cet exemple où il n'y a ni [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/param%C3%A8tres_du_reste), ni [paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments), ni [décomposition](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Op%C3%A9rateur_de_d%C3%A9composition), le résultat sera 100 :
+Si l'objet `arguments` est modifié dans la fonction, cela modifiera la valeur du paramètre passé. Dans cet exemple où il n'y a ni [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste), ni [paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments), ni [décomposition](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateur_de_décomposition), le résultat sera 100 :
 
 ```js
 fonction truc(a) {

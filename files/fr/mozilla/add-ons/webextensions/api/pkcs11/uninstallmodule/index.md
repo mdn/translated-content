@@ -14,8 +14,8 @@ C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScrip
 
 ```js
 var uninstalling = browser.pkcs11.uninstallModule(
-  name              // string
-)
+  name, // string
+);
 ```
 
 ### Paramètres

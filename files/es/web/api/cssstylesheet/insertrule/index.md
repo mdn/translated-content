@@ -51,24 +51,28 @@ addStylesheetRules([
   ]
 ]);
  */
-function addStylesheetRules (decls) {
-  var styleEl = document.createElement('style');
+function addStylesheetRules(decls) {
+  var styleEl = document.createElement("style");
   document.head.appendChild(styleEl);
   // Aparentemente ¿alguna versión de Safari necesita la siguiente linea? No lo sé.
-  styleEl.appendChild(document.createTextNode(''));
+  styleEl.appendChild(document.createTextNode(""));
   var s = styleEl.sheet;
-  for (var i=0, rl = rules.length; i < rl; i++) {
-    var j = 1, rule = rules[i], selector = decl[0], propStr = '';
+  for (var i = 0, rl = rules.length; i < rl; i++) {
+    var j = 1,
+      rule = rules[i],
+      selector = decl[0],
+      propStr = "";
     // Si el segundo argumento de una regla es una matriz de matrices, corrijamos nuestras variables.
-    if (Object.prototype.toString.call(rule[1][0]) === '[object Array]') {
+    if (Object.prototype.toString.call(rule[1][0]) === "[object Array]") {
       rule = rule[1];
       j = 0;
     }
-    for (var pl=rule.length; j < pl; j++) {
+    for (var pl = rule.length; j < pl; j++) {
       var prop = rule[j];
-      propStr += prop[0] + ':' + prop[1] + (prop[2] ? ' !important' : '') + ';\n';
+      propStr +=
+        prop[0] + ":" + prop[1] + (prop[2] ? " !important" : "") + ";\n";
     }
-    s.insertRule(selector + '{' + propStr + '}', s.cssRules.length);
+    s.insertRule(selector + "{" + propStr + "}", s.cssRules.length);
   }
 }
 ```

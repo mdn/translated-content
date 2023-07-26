@@ -1,5 +1,5 @@
 ---
-title: 'Types de liens : noreferrer'
+title: "Types de liens : noreferrer"
 slug: Web/HTML/Attributes/rel/noreferrer
 translation_of: Web/HTML/Link_types/noreferrer
 ---

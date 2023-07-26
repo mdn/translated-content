@@ -11,7 +11,7 @@ La méthode **`toJSON()`** de l'interface [`PerformanceServerTiming`](/fr/docs/W
 ## Syntaxe
 
 ```js
-let json = PerformanceServerTiming.toJSON()
+let json = PerformanceServerTiming.toJSON();
 ```
 
 ### Paramètres

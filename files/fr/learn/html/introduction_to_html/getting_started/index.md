@@ -19,7 +19,7 @@ Cet article porte sur les fondements du HTML, pour prendre un bon départ — no
           >logiciels de base</a
         >
         et savoir
-        <a href="/fr/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers"
+        <a href="/fr/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
           >gérer les fichiers</a
         >.
       </td>
@@ -195,7 +195,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_créer_votre_premier_élément_HTML', 700, 400, "", "")}}
+{{ EmbedLiveSample('Apprentissage_actif_créer_votre_premier_élément_HTML', 700, 400)}}
 
 ### Éléments imbriqués
 
@@ -232,7 +232,7 @@ Prenez l'exemple suivant :
 
 {{htmlelement("em")}} est un élément en ligne et, comme vous pouvez le voir ci-dessous, les trois premiers éléments s'affichent sur la même ligne sans qu'il n'y ait d'espace entre eux. Par contre, {{htmlelement("p")}} est un élément de niveau bloc, donc chaque élément apparaît sur une nouvelle ligne et un espace apparaît au-dessus et au-dessous de chacun d'eux (l'espacement est dû au [style CSS](/fr/docs/Learn/CSS/First_steps) par défaut du navigateur qui s'applique aux paragraphes).
 
-{{ EmbedLiveSample('Éléments_bloc_vs_en_ligne', 700, 200, "", "") }}
+{{ EmbedLiveSample('Éléments_bloc_vs_en_ligne', 700, 200) }}
 
 > **Note :** HTML5 a redéfini les catégories d'éléments dans HTML5 : voir [catégories de contenu d'éléments](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories). Bien que ces définitions soient plus précises et moins ambiguës que celles qui précèdent, elles sont beaucoup plus compliquées à comprendre que « block » et « inline ». Nous nous en tiendrons donc à ces dernières tout au long de ce sujet.
 
@@ -251,7 +251,7 @@ Tous les éléments ne suivent pas le modèle ci-dessus d'ouverture de balise, p
 
 Cela affichera l'élément suivant sur votre page :
 
-{{ EmbedLiveSample('Éléments_vides', 700, 300, "", "") }}
+{{ EmbedLiveSample('Éléments_vides', 700, 300) }}
 
 ## Attributs
 
@@ -415,7 +415,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_ajouter_des_attributs_à_un_élément', 700, 400,"","") }}
+{{ EmbedLiveSample('Apprentissage_actif_ajouter_des_attributs_à_un_élément', 700, 400) }}
 
 ### Les attributs booléens
 
@@ -455,7 +455,7 @@ Cependant, si nous ajoutons l'attribut `title` dans ce même style, cela devient
 
 En effet, le navigateur interprétera mal la balise, pensant que l'attribut `title` est en fait quatre attributs — un attribut `title` avec la valeur « La » et trois attributs booléens, « `page` », « `d'accueil` » et « `Mozilla` ». Ce n'est évidemment pas ce qui était prévu et cela provoquera des erreurs ou un comportement inattendu dans le code, comme on le voit dans l'exemple en direct ci-dessous. Essayez de passer la souris sur le lien pour voir ce que le texte de `title` donne.
 
-{{ EmbedLiveSample("Omettre_des_guillemets_autour_des_valeurs_dattribut", 700, 100, "", "") }}
+{{ EmbedLiveSample("Omettre_des_guillemets_autour_des_valeurs_dattribut", 700, 100) }}
 
 Nous vous recommandons de toujours inclure les guillemets afin d'éviter ce type de problèmes, mais aussi pour que le code soit plus lisible.
 
@@ -684,7 +684,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_ajouter_certaines_fonctionnalités_à_un_document_HTML', 700, 600, "", "") }}
+{{ EmbedLiveSample('Apprentissage_actif_ajouter_certaines_fonctionnalités_à_un_document_HTML', 700, 600) }}
 
 ### Espace vide en HTML
 
@@ -715,7 +715,7 @@ Nous devons utiliser les références des caractères — des codes spéciaux qu
 | '            | `&apos;`             |
 | &            | `&amp;`              |
 
-> **Note :** Un graphique de toutes les références d'entité de caractères HTML est disponible sur Wikipédia : [Liste des entités caractère de XML et HTML](https://fr.wikipedia.org/wiki/Liste_des_entit%C3%A9s_caract%C3%A8re_de_XML_et_HTML).
+> **Note :** Un graphique de toutes les références d'entité de caractères HTML est disponible sur Wikipédia : [Liste des entités caractère de XML et HTML](https://fr.wikipedia.org/wiki/Liste_des_entités_caractère_de_XML_et_HTML).
 
 Dans l'exemple ci-dessous, voici deux paragraphes parlant de techniques Web :
 
@@ -745,7 +745,7 @@ Pour transformer une section de contenu dans votre fichier HTML en commentaire, 
 
 Comme vous pouvez le voir ci-dessous, le premier paragraphe apparaît dans le rendu de l'éditeur en ligne, mais le second n'apparaît pas.
 
-{{ EmbedLiveSample('Commentaires_en_HTML', 700, 100, "", "") }}
+{{ EmbedLiveSample('Commentaires_en_HTML', 700, 100) }}
 
 ## Résumé
 

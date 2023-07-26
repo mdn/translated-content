@@ -1,6 +1,9 @@
 ---
-title: Element.toggleAttribute()
+title: "Element: toggleAttribute() メソッド"
+short-title: toggleAttribute()
 slug: Web/API/Element/toggleAttribute
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef("DOM")}}
@@ -9,15 +12,15 @@ slug: Web/API/Element/toggleAttribute
 
 ## 構文
 
-```js
-toggleAttribute(name);
-toggleAttribute(name, force);
+```js-nolint
+toggleAttribute(name)
+toggleAttribute(name, force)
 ```
 
 ### 引数
 
 - `name`
-  - : {{domxref("DOMString")}} で、トグル切り替えしたい属性の名前を指定します。 HTML 文書内の HTML 要素に対して `toggleAttribute()` が呼び出されるとばれると、属性名は自動的に全て小文字に変換されます。
+  - : 文字列で、トグル切り替えしたい属性の名前を指定します。HTML 文書内の HTML 要素に対して `toggleAttribute()` が呼び出されるとばれると、属性名は自動的に全て小文字に変換されます。
 - `force` {{optional_inline}}
   - : 論理値で、以下の効果があります。
     - 指定されなかった場合、 `toggleAttribute` メソッドは `name` という名前の属性を「トグル切り替え」します。 — 存在すれば取り除き、存在しなければ追加します。
@@ -40,47 +43,25 @@ toggleAttribute(name, force);
 ### HTML
 
 ```html
-<input value="text">
-<button>toggleAttribute("disabled")</button>
+<input value="text" /> <button>toggleAttribute("disabled")</button>
 ```
 
 ### JavaScript
 
 ```js
-var button = document.querySelector("button");
-var input = document.querySelector("input");
+const button = document.querySelector("button");
+const input = document.querySelector("input");
 
-button.addEventListener("click", function(){
+button.addEventListener("click", () => {
   input.toggleAttribute("disabled");
 });
 ```
 
 ### 結果
 
-{{ EmbedLiveSample('Example', '300', '50') }}
+{{ EmbedLiveSample('Examples', '300', '50') }}
 
 {{DOMAttributeMethods}}
-
-## ポリフィル
-
-```js
-if (!Element.prototype.toggleAttribute) {
-  Element.prototype.toggleAttribute = function(name, force) {
-    if(force !== void 0) force = !!force
-
-    if (this.hasAttribute(name)) {
-      if (force) return true;
-
-      this.removeAttribute(name);
-      return false;
-    }
-    if (force === false) return false;
-
-    this.setAttribute(name, "");
-    return true;
-  };
-}
-```
 
 ## 仕様書
 

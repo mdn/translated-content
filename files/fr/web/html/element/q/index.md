@@ -1,5 +1,5 @@
 ---
-title: '<q> : l''élément de citation en incise'
+title: "<q> : l'élément de citation en incise"
 slug: Web/HTML/Element/q
 translation_of: Web/HTML/Element/q
 ---
@@ -52,7 +52,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
@@ -64,7 +64,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >.
       </td>
@@ -78,7 +78,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >.
       </td>
