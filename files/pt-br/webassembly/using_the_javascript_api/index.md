@@ -41,7 +41,7 @@ Vamos percorrer alguns exemplos que explicam como usar a API WebAssembly JavaScr
 
 Uma novidade no Firefox 58 é a capacidade de compilar e instanciar módulos WebAssembly diretamente de fontes subjacentes. Isso é obtido usando [`WebAssembly.compileStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/compileStreaming) e [`WebAssembly.instantiateStreaming()`](/pt-BR/docs/WebAssembly/JavaScript_interface/instantiateStreaming). Esses métodos são mais fáceis do que suas contrapartes sem streaming, porque eles podem transformar o código de byte diretamente em instâncias `Module`/`Instance`, eliminando a necessidade de colocar separadamente o {{domxref("Response")}} em um {{jsxref("ArrayBuffer")}}.
 
-Este exemplo (consulte nossa demonstração [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) no GitHub e [visualize it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) também) mostra como usar `instantiateStreaming()` para buscar um módulo Wasm, importar um JavaScript função nele, compilá-lo e instanciá-lo e acessar sua função exportada - tudo em uma única etapa.
+Este exemplo (consulte nossa demonstração [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/instantiate-streaming.html) no GitHub e [visualize it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) também) mostra como usar `instantiateStreaming()` para buscar um módulo Wasm, importar uma função JavaScript nele, compilá-lo e instanciá-lo e acessar sua função exportada - tudo em uma única etapa.
 
 Adicione o seguinte ao seu script, abaixo do primeiro bloco:
 
