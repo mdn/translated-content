@@ -11,9 +11,9 @@ Para permitir que o WebAssembly seja lido e editado por humanos, existe uma repr
 
 ## S-expressions
 
-Nos formatos binário e textual, a unidade fundamental de código no WebAssembly é um módulo. No formato de texto, um módulo é representado como uma grande S-expressão. As S-expressions são um formato textual muito antigo e muito simples para representar árvores e, portanto, podemos pensar em um módulo como uma árvore de nós que descreve a estrutura do módulo e seu código. Ao contrário da Abstract Syntax Tree de uma linguagem de programação, porém, a árvore do WebAssembly é bastante plana, consistindo principalmente em listas de instruções.
+Nos formatos binário e textual, a unidade fundamental de código no WebAssembly é um módulo. No formato de texto, um módulo é representado como uma grande S-expression. As S-expressions são um formato textual muito antigo e muito simples para representar árvores e, portanto, podemos pensar em um módulo como uma árvore de nós que descreve a estrutura do módulo e seu código. Ao contrário da Abstract Syntax Tree de uma linguagem de programação, porém, a árvore do WebAssembly é bastante plana, consistindo principalmente em listas de instruções.
 
-Primeiro, vamos ver como é uma expressão S. Cada nó na árvore vai dentro de um par de parênteses — `( ... )`. O primeiro rótulo dentro dos parênteses informa que tipo de nó é e, depois disso, há uma lista separada por espaços de atributos ou nós filhos. Isso significa a S-expression do WebAssembly:
+Primeiro, vamos ver como é uma S-expression. Cada nó na árvore vai dentro de um par de parênteses — `( ... )`. O primeiro rótulo dentro dos parênteses informa que tipo de nó é e, depois disso, há uma lista separada por espaços de atributos ou nós filhos. Isso significa a S-expression do WebAssembly:
 
 ```wasm
 (module (memory 1) (func))
@@ -52,14 +52,14 @@ Todo o código em um módulo webassembly é agrupado em funções, que possuem a
 - Os **locais** são como variáveis em JavaScript, mas com tipos explícitos declarados.
 - O **corpo** é apenas uma lista linear de instruções de baixo nível.
 
-Portanto, isso é semelhante a funções em outros idiomas, mesmo que pareça diferente porque é uma S-expression.
+Portanto, isso é semelhante a funções em outras linguagens, mesmo que pareça diferente porque é uma S-expression.
 
 ## Assinaturas e parâmetros
 
 A assinatura é uma sequência de declarações de tipo de parâmetro seguida por uma lista de declarações de tipo de retorno. Vale ressaltar aqui que:
 
 - A ausência de um `(result)` significa que a função não retorna nada.
-- Na iteração atual, pode haver no máximo 1 tipo de retorno, mas [posteriormente isso será relaxado](https://webassembly.org/docs/future-features#multiple-return) para qualquer número.
+- Na iteração atual, pode haver no máximo 1 tipo de retorno, mas [posteriormente isso será flexibilizado](https://webassembly.org/docs/future-features#multiple-return) para qualquer número.
 
 Cada parâmetro tem um tipo explicitamente declarado; Wasm [Tipos de número](#number_types), [Tipos de referência](#reference_types), [Tipos de vetor](#vector_types).
 Os tipos de números são:
@@ -92,7 +92,7 @@ Os comandos `local.get`/`local.set` referem-se ao item a ser obtido/definido por
 
 A instrução `local.get 0` obteria o parâmetro i32, `local.get 1` obteria o parâmetro f32 e `local.get 2` obteria o f64 local.
 
-Há outro problema aqui - usar índices numéricos para se referir a itens pode ser confuso e irritante, então o formato de texto permite que você nomeie parâmetros, locais e a maioria dos outros itens simplesmente incluindo um nome prefixado por um símbolo de dólar (`$`) logo antes da declaração de tipo.
+Há outro problema aqui - usar índices numéricos para se referir a itens pode ser confuso e irritante, então o formato de texto permite que você nomeie parâmetros, locais e a maioria dos outros itens simplesmente incluindo um nome prefixado por um cifrão (`$`) logo antes da declaração de tipo.
 
 Assim, você poderia reescrever nossa assinatura anterior assim:
 
@@ -106,7 +106,7 @@ E então poderia escrever `local.get $p1` em vez de `local.get 0`, etc. (Observe
 
 Antes de podermos escrever um corpo de função, temos que falar sobre mais uma coisa: **máquinas de pilha**. Embora o navegador o compile para algo mais eficiente, a execução do Wasm é definida em termos de uma máquina de pilha onde a ideia básica é que todo tipo de instrução empurra e/ou retira um certo número de valores `i32`/`i64`/`f32`/`f64` para/de uma pilha.
 
-Por exemplo, `local.get` é definido para colocar o valor do local lido na pilha e `i32.add` mostra dois valores `i32` (ele implicitamente pega os dois valores anteriores colocados na pilha), calcula sua soma (modulo 2^32) e empurra o valor i32 resultante.
+Por exemplo, `local.get` é definido para colocar o valor do local lido na pilha e `i32.add` empurra dois valores `i32` (ele implicitamente pega os dois valores anteriores colocados na pilha), calcula sua soma (modulo 2^32) e empurra o valor `i32` resultante.
 
 Quando uma função é chamada, ela começa com uma pilha vazia que é gradualmente preenchida e esvaziada conforme as instruções do corpo são executadas. Por exemplo, depois de executar a seguinte função:
 
