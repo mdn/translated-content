@@ -14,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">전제 조건:</th>
       <td>
-        기본 컴퓨터 활용 능력,
+        기본 컴퓨터 활용 능력,
         <a
           href="/ko/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
           >설치된 기본 소프트웨어</a
