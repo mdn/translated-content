@@ -204,7 +204,7 @@ Vejamos um exemplo de tabela simples — um módulo WebAssembly que cria e expor
    console.log(tbl.get(1)()); // 42
    ```
 
-Este código acessa cada referência de função armazenada na tabela por sua vez e as instancia para imprimir os valores que contêm no console — observe como cada referência de função é recuperada com um [`Table.prototype.get()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table/get), adicionamos um conjunto extra de parênteses no final para realmente invocar a função.
+Este código acessa cada referência de função armazenada na tabela por sua vez e as instâncias para imprimir os valores que contêm no console — observe como cada referência de função é recuperada com um [`Table.prototype.get()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Table/get), adicionamos um conjunto extra de parênteses no final para realmente invocar a função.
 
 > **Nota:** você pode encontrar nossa demonstração completa em [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([veja ao vivo também](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)).
 
