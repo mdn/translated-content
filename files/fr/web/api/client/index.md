@@ -31,17 +31,17 @@ Ce message est contenu dans une promesse qui est résolue si la réponse ne cont
 ```js
 // client service worker (par exemple un document)
 function sendMessage(message) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     // Notez que c'est la version du ServiceWorker.postMessage
     navigator.serviceWorker.controller.postMessage(message);
-    window.serviceWorker.onMessage = function(e) {
+    window.serviceWorker.onMessage = function (e) {
       resolve(e.data);
     };
   });
 }
 
 // Contrôle du service worker
-self.addEventListener("message", function(e) {
+self.addEventListener("message", function (e) {
   // e.source est un object client
   e.source.postMessage("Hello! Your message was: " + e.data);
 });

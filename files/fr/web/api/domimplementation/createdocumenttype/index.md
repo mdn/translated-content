@@ -11,7 +11,11 @@ La méthode **`DOMImplementation.createDocumentType()`** renvoie un objet {{domx
 ## Syntaxe
 
 ```js
-doctype = document.implementation.createDocumentType(qualifiedNameStr, publicId, systemId)
+doctype = document.implementation.createDocumentType(
+  qualifiedNameStr,
+  publicId,
+  systemId,
+);
 ```
 
 ### Paramètres
@@ -32,8 +36,16 @@ doctype = document.implementation.createDocumentType(qualifiedNameStr, publicId,
 ## Exemple
 
 ```js
-var dt = document.implementation.createDocumentType('svg:svg', '-//W3C//DTD SVG 1.1//EN', 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd');
-var d = document.implementation.createDocument('http://www.w3.org/2000/svg', 'svg:svg', dt);
+var dt = document.implementation.createDocumentType(
+  "svg:svg",
+  "-//W3C//DTD SVG 1.1//EN",
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd",
+);
+var d = document.implementation.createDocument(
+  "http://www.w3.org/2000/svg",
+  "svg:svg",
+  dt,
+);
 alert(d.doctype.publicId); // -//W3C//DTD SVG 1.1//EN
 ```
 

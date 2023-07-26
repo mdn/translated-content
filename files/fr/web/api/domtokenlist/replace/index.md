@@ -11,7 +11,7 @@ La méthode **`replace()`** de l'interface {{domxref("DOMTokenList")}} remplace 
 ## Syntaxe
 
 ```js
-tokenList.replace(oldToken,newToken);
+tokenList.replace(oldToken, newToken);
 ```
 
 ### Paramètres
@@ -43,7 +43,7 @@ var classes = span.classList;
 try {
   classes.replace("c", "z");
   span.textContent = classes;
-} catch(e) {
+} catch (e) {
   span.textContent = e;
 }
 ```

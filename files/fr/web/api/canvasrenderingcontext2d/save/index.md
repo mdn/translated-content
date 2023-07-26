@@ -38,13 +38,13 @@ Cet exemple utilise la méthode `save()` pour enregistrer l'état par défaut et
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // On sauvegarde l'état par défaut
 ctx.save();
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 
 // On restaure l'état par défaut
