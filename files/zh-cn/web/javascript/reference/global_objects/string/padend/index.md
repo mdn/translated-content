@@ -19,9 +19,9 @@ padEnd(targetLength, padString)
 ### 参数
 
 - `targetLength`
-  - : 当前 `str` 填充后的长度。如果该值小于或等于 `str.length`，则会直接返回当前字符串。
+  - : 当前 `str` 填充后的长度。如果该值小于或等于 `str.length`，则会直接返回当前 `str`。
 - `padString` {{optional_inline}}
-  - : 用于填充当前 `str` 的字符串。如果 `padString` 太长，无法适应 `targetLength`，则会被截断：对于从左到右的语言，左侧的部分将会被保留；对于从右到左的语言，右侧的部分将会被保留。默认值为 “ ” (`U+0020`)。
+  - : 用于填充当前 `str` 的字符串。如果 `padString` 太长，无法适应 `targetLength`，则会被截断：对于从左到右的语言，左侧的部分将会被保留；对于从右到左的语言，右侧的部分将会被保留。默认值为“ ” (`U+0020`)。
 
 ### 返回值
 
