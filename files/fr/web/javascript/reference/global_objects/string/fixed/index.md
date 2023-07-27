@@ -11,7 +11,7 @@ La méthode **`fixed()`** permet de créer un élément HTML {{HTMLElement("tt")
 ## Syntaxe
 
 ```js
-str.fixed()
+str.fixed();
 ```
 
 ### Valeur de retour

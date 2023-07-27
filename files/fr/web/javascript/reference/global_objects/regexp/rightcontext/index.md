@@ -11,8 +11,8 @@ La propriété non-standard **`rightContext`** est une propriété statique, acc
 ## Syntaxe
 
 ```js
-RegExp.rightContext
-RegExp["$'"]
+RegExp.rightContext;
+RegExp["$'"];
 ```
 
 ## Description
@@ -29,7 +29,7 @@ L'alias ne peut pas être utilisé avec la syntaxe utilisant le point (`RegExp.$
 var re = /coucou/g;
 re.test("coucou monde !");
 RegExp.rightContext; // " monde !"
-RegExp["$'"];       // " monde !"
+RegExp["$'"]; // " monde !"
 ```
 
 ## Spécifications

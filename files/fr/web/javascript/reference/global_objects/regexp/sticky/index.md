@@ -21,7 +21,7 @@ La propriété `sticky` ne peut pas être modifiée directement. Elle est unique
 ### Utiliser une expression rationnelle avec le _flag_ _sticky_
 
 ```js
-var str = '#toto#';
+var str = "#toto#";
 var regex = /toto/y;
 
 regex.lastIndex = 1;

@@ -20,7 +20,7 @@ La valeur de `size` est un entier représentant le nombre d'éléments contenus 
 var monSet = new Set();
 monSet.add(1);
 monSet.add(5);
-monSet.add("du texte")
+monSet.add("du texte");
 
 monSet.size; // 3
 ```

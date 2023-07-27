@@ -13,7 +13,7 @@ La méthode **`entries()`** renvoie un nouvel objet [`Iterator`](/fr/docs/Web/Ja
 ## Syntaxe
 
 ```js
-monSet.entries()
+monSet.entries();
 ```
 
 ### Valeur de retour

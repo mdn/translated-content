@@ -13,7 +13,7 @@ La méthode **`charAt()`** renvoie une nouvelle chaîne contenant le caractère 
 ## Syntaxe
 
 ```js
-str.charAt(index)
+str.charAt(index);
 ```
 
 ### Paramètres
@@ -38,11 +38,11 @@ L'exemple suivant affiche les caractères à différentes positions de la chaîn
 ```js
 var uneChaîne = "Coucou tout le monde";
 
-console.log("La caractère d'indice 0 est '" + uneChaîne.charAt(0)   + "'");
-console.log("La caractère d'indice 1 est '" + uneChaîne.charAt(1)   + "'");
-console.log("La caractère d'indice 2 est '" + uneChaîne.charAt(2)   + "'");
-console.log("La caractère d'indice 3 est '" + uneChaîne.charAt(3)   + "'");
-console.log("La caractère d'indice 4 est '" + uneChaîne.charAt(4)   + "'");
+console.log("La caractère d'indice 0 est '" + uneChaîne.charAt(0) + "'");
+console.log("La caractère d'indice 1 est '" + uneChaîne.charAt(1) + "'");
+console.log("La caractère d'indice 2 est '" + uneChaîne.charAt(2) + "'");
+console.log("La caractère d'indice 3 est '" + uneChaîne.charAt(3) + "'");
+console.log("La caractère d'indice 4 est '" + uneChaîne.charAt(4) + "'");
 console.log("La caractère d'indice 999 est '" + uneChaîne.charAt(999) + "'");
 ```
 
@@ -115,8 +115,8 @@ function getWholeChar(str, i) {
 Dans un environnement ECMAScript 2016 qui permet d'utiliser l'affectation par décomposition, on peut obtenir une version plus succincte et flexible :
 
 ```js
-var str = 'A\uD87E\uDC04Z'; // We could also use a non-BMP character directly
-for (var i=0, chr; i < str.length; i++) {
+var str = "A\uD87E\uDC04Z"; // We could also use a non-BMP character directly
+for (var i = 0, chr; i < str.length; i++) {
   [chr, i] = getWholeCharAndI(str, i);
   // Adapt this line at the top of each loop, passing in the whole string and
   // the current iteration and returning an array with the individual character
@@ -129,37 +129,37 @@ function getWholeCharAndI(str, i) {
   var code = str.charCodeAt(i);
 
   if (Number.isNaN(code)) {
-    return ''; // Position not found
+    return ""; // Position not found
   }
-  if (code < 0xD800 || code > 0xDFFF) {
+  if (code < 0xd800 || code > 0xdfff) {
     return [str.charAt(i), i]; // Normal character, keeping 'i' the same
   }
 
   // High surrogate (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 <= code && code <= 0xDBFF) {
-    if (str.length <= (i+1))  {
-      throw 'High surrogate without following low surrogate';
+  if (0xd800 <= code && code <= 0xdbff) {
+    if (str.length <= i + 1) {
+      throw "High surrogate without following low surrogate";
     }
-    var next = str.charCodeAt(i+1);
-      if (0xDC00 > next || next > 0xDFFF) {
-        throw 'High surrogate without following low surrogate';
-      }
-      return [str.charAt(i)+str.charAt(i+1), i+1];
+    var next = str.charCodeAt(i + 1);
+    if (0xdc00 > next || next > 0xdfff) {
+      throw "High surrogate without following low surrogate";
+    }
+    return [str.charAt(i) + str.charAt(i + 1), i + 1];
   }
   // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
-    throw 'Low surrogate without preceding high surrogate';
+    throw "Low surrogate without preceding high surrogate";
   }
-  var prev = str.charCodeAt(i-1);
+  var prev = str.charCodeAt(i - 1);
 
   // (could change last hex to 0xDB7F to treat high private surrogates
   // as single characters)
-  if (0xD800 > prev || prev > 0xDBFF) {
-    throw 'Low surrogate without preceding high surrogate';
+  if (0xd800 > prev || prev > 0xdbff) {
+    throw "Low surrogate without preceding high surrogate";
   }
   // Return the next character instead (and increment)
-  return [str.charAt(i+1), i+1];
+  return [str.charAt(i + 1), i + 1];
 }
 ```
 
@@ -168,13 +168,13 @@ function getWholeCharAndI(str, i) {
 Si on souhaite récupérer les paires de codets des caractères hors du plan classique, on peut utiliser le code suivant :
 
 ```js
-function fixedCharAt (str, idx) {
-  var ret = '';
-  str += '';
+function fixedCharAt(str, idx) {
+  var ret = "";
+  str += "";
   var end = str.length;
 
   var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
-  while ((surrogatePairs.exec(str)) != null) {
+  while (surrogatePairs.exec(str) != null) {
     var li = surrogatePairs.lastIndex;
     if (li - 2 < idx) {
       idx++;
@@ -184,14 +184,17 @@ function fixedCharAt (str, idx) {
   }
 
   if (idx >= end || idx < 0) {
-    return '';
+    return "";
   }
 
   ret += str.charAt(idx);
 
-  if (/[\uD800-\uDBFF]/.test(ret) && /[\uDC00-\uDFFF]/.test(str.charAt(idx+1))) {
+  if (
+    /[\uD800-\uDBFF]/.test(ret) &&
+    /[\uDC00-\uDFFF]/.test(str.charAt(idx + 1))
+  ) {
     // On avance d'un puisque l'un des caractères fait partie de la paire
-    ret += str.charAt(idx+1);
+    ret += str.charAt(idx + 1);
   }
   return ret;
 }

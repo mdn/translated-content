@@ -13,7 +13,7 @@ La méthode statique **`Reflect.apply()`** permet d'appeler une fonction cible a
 ## Syntaxe
 
 ```js
-Reflect.apply(cible, argumentThis, listeArguments)
+Reflect.apply(cible, argumentThis, listeArguments);
 ```
 
 ### Paramètres

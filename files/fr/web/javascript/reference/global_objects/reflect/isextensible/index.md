@@ -13,7 +13,7 @@ La méthode statique **`Reflect.isExtensible()`** permet de déterminer si un ob
 ## Syntaxe
 
 ```js
-Reflect.isExtensible(cible)
+Reflect.isExtensible(cible);
 ```
 
 ### Paramètres

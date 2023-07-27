@@ -13,7 +13,7 @@ La méthode statique **`Reflect.has()`** fonctionne comme [l'opérateur `in`](/f
 ## Syntaxe
 
 ```js
-Reflect.has(cible, cléPropriété)
+Reflect.has(cible, cléPropriété);
 ```
 
 ### Paramètres
@@ -38,19 +38,24 @@ La méthode `Reflect.has` vous permet de vérifier si une propriété est prése
 ## Exemples
 
 ```js
-Reflect.has({x: 0}, "x"); // true
-Reflect.has({x: 0}, "y"); // false
+Reflect.has({ x: 0 }, "x"); // true
+Reflect.has({ x: 0 }, "y"); // false
 
 // renvoie true pour les propriétés présentes
 // grâce à la chaîne de prototypes
-Reflect.has({x: 0}, "toString");
+Reflect.has({ x: 0 }, "toString");
 
 // Proxy avec la méthode .has()
-obj = new Proxy({}, {
-  has(t, k) { return k.startsWith("bou"); }
-});
+obj = new Proxy(
+  {},
+  {
+    has(t, k) {
+      return k.startsWith("bou");
+    },
+  },
+);
 Reflect.has(obj, "bouchon"); // true
-Reflect.has(obj, "bonbon");  // false
+Reflect.has(obj, "bonbon"); // false
 ```
 
 ## Spécifications

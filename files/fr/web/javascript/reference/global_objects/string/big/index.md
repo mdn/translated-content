@@ -13,7 +13,7 @@ La méthode **`big()`** crée un élément HTML {{HTMLElement("big")}} qui affic
 ## Syntaxe
 
 ```js
-str.big()
+str.big();
 ```
 
 ### Valeur de retour
@@ -32,15 +32,15 @@ L'exemple suivant montre les méthodes de `String` pour changer la taille d'une 
 ```js
 var chaîneMonde = "Coucou monde";
 
-console.log( chaîneMonde.small()     ); // <small>Coucou monde</small>
-console.log( chaîneMonde.big()       ); // <big>Coucou monde</big>
-console.log( chaîneMonde.fontsize(7) ); // <fontsize=7>Coucou monde</fontsize>
+console.log(chaîneMonde.small()); // <small>Coucou monde</small>
+console.log(chaîneMonde.big()); // <big>Coucou monde</big>
+console.log(chaîneMonde.fontsize(7)); // <fontsize=7>Coucou monde</fontsize>
 ```
 
 Avec l'objet {{domxref("HTMLElement.style", "element.style")}}, il est possible d'accéder à l'attribut `style` de l'élément et de le manipuler. Par exemple :
 
 ```js
-document.getElementById('idÉlément').style.fontSize = '2em'
+document.getElementById("idÉlément").style.fontSize = "2em";
 ```
 
 ## Spécifications

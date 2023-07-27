@@ -13,7 +13,7 @@ La méthode **`[@@search]()`** recherche une correspondance entre une expression
 ## Syntaxe
 
 ```js
-regexp[Symbol.search](str)
+regexp[Symbol.search](str);
 ```
 
 ### Paramètres
@@ -31,9 +31,9 @@ regexp[Symbol.search](str)
 Cette méthode est appelée en interne lors de l'utilisation de {{jsxref("String.prototype.search()")}}. Ainsi, les deux exemples qui suivent sont équivalents et le second est la version interne du premier :
 
 ```js
-'abc'.search(/a/);
+"abc".search(/a/);
 
-/a/[Symbol.search]('abc');
+/a/[Symbol.search]("abc");
 ```
 
 Cette méthode existe afin de pouvoir adapter le comportement de la recherche pour les sous-classes de `RegExp`.
@@ -46,9 +46,9 @@ Cette méthode peut être utilisée comme {{jsxref("String.prototype.search()")}
 
 ```js
 var re = /-/g;
-var str = '2016-01-02';
+var str = "2016-01-02";
 var résultat = re[Symbol.search](str);
-console.log(résultat);  // 4
+console.log(résultat); // 4
 ```
 
 ### Utiliser `@@search` avec une sous-classe
@@ -58,7 +58,7 @@ Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger `[@@search]()` afin 
 ```js
 class MaRegExp extends RegExp {
   constructor(str) {
-    super(str)
+    super(str);
     this.pattern = str;
   }
   [Symbol.search](str) {
@@ -66,8 +66,8 @@ class MaRegExp extends RegExp {
   }
 }
 
-var re = new MaRegExp('a+b');
-var str = 'ab a+b';
+var re = new MaRegExp("a+b");
+var str = "ab a+b";
 var résultat = str.search(re); // String.prototype.search appelle re[@@search].
 console.log(résultat); // 3
 ```

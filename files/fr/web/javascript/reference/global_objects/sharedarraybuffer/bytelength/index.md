@@ -13,7 +13,7 @@ La propriété d'accesseur **`byteLength`** représente la longueur d'un {{jsxre
 ## Syntaxe
 
 ```js
-sab.byteLength
+sab.byteLength;
 ```
 
 ## Description

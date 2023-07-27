@@ -13,7 +13,7 @@ La méthode statique **`Reflect.preventExtensions()`** permet d'empêcher d'ajou
 ## Syntaxe
 
 ```js
-Reflect.preventExtensions(cible)
+Reflect.preventExtensions(cible);
 ```
 
 ### Paramètres

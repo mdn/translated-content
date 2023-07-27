@@ -13,7 +13,7 @@ La méthode statique **`Reflect.defineProperty()`** est semblable à {{jsxref("O
 ## Syntaxe
 
 ```js
-Reflect.defineProperty(cible, cléPropriété, attributs)
+Reflect.defineProperty(cible, cléPropriété, attributs);
 ```
 
 ### Paramètres
@@ -43,7 +43,7 @@ La méthode `Reflect.defineProperty` permet d'ajouter ou de modifier finement un
 
 ```js
 var obj = {};
-Reflect.defineProperty(obj, "x", {value: 7}); // true
+Reflect.defineProperty(obj, "x", { value: 7 }); // true
 obj.x; // 7
 ```
 

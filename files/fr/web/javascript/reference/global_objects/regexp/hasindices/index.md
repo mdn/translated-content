@@ -23,18 +23,18 @@ Cette propriété ne peut être modifiée directement.
 ### Utiliser `hasIndices`
 
 ```js
-const str1 = 'toto truc toto';
+const str1 = "toto truc toto";
 
-const regex1 = new RegExp('toto', 'gd');
+const regex1 = new RegExp("toto", "gd");
 
 console.log(regex1.hasIndices); // Affiche : true
 
 console.log(regex1.exec(str1).indices[0]); // Affiche : Array [0, 3]
 console.log(regex1.exec(str1).indices[0]); // Affiche : Array [8, 11]
 
-const str2 = 'toto truc toto';
+const str2 = "toto truc toto";
 
-const regex2 = new RegExp('toto');
+const regex2 = new RegExp("toto");
 
 console.log(regex2.hasIndices); // Affiche : false
 

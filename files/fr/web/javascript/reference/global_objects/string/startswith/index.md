@@ -36,8 +36,8 @@ Cette méthode permet de savoir si une chaine de caractères commence avec une a
 ```js
 var str = "Être, ou ne pas être : telle est la question.";
 
-console.log(str.startsWith("Être"));         // true
-console.log(str.startsWith("pas être"));     // false
+console.log(str.startsWith("Être")); // true
+console.log(str.startsWith("pas être")); // false
 console.log(str.startsWith("pas être", 12)); // true
 ```
 

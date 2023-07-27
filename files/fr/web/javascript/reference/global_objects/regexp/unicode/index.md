@@ -19,7 +19,7 @@ Cette propriété ne peut pas être modifiée directement.
 ## Exemples
 
 ```js
-var regex = new RegExp('\u{61}', 'u');
+var regex = new RegExp("\u{61}", "u");
 
 console.log(regex.unicode); // true
 ```

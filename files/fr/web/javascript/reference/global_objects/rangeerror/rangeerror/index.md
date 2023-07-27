@@ -11,10 +11,10 @@ Le constructeur **`RangeError()`** permet de créer une erreur lorsqu'une valeur
 ## Syntaxe
 
 ```js
-new RangeError()
-new RangeError(message)
-new RangeError(message, nomFichier)
-new RangeError(message, nomFichier, numeroLigne)
+new RangeError();
+new RangeError(message);
+new RangeError(message, nomFichier);
+new RangeError(message, nomFichier, numeroLigne);
 ```
 
 ### Parameters
@@ -32,15 +32,14 @@ new RangeError(message, nomFichier, numeroLigne)
 
 ```js
 function verifier(n) {
-  if( !(n >= -500 && n <= 500) ) {
+  if (!(n >= -500 && n <= 500)) {
     throw new RangeError("L'argument doit être compris entre -500 et 500.");
   }
 }
 
 try {
   verifier(2000);
-}
-catch(error) {
+} catch (error) {
   if (error instanceof RangeError) {
     // Gérer l'erreur
   }
@@ -51,16 +50,17 @@ catch(error) {
 
 ```js
 function verifier(valeur) {
-  if(["pomme", "banane", "carotte"].includes(valeur) === false) {
-    throw new RangeError("L'argument doit valeur 'pomme', 'banane', ou 'carotte'.");
+  if (["pomme", "banane", "carotte"].includes(valeur) === false) {
+    throw new RangeError(
+      "L'argument doit valeur 'pomme', 'banane', ou 'carotte'.",
+    );
   }
 }
 
 try {
   verifier("chou");
-}
-catch(error) {
-  if(error instanceof RangeError) {
+} catch (error) {
+  if (error instanceof RangeError) {
     // Gérer l'erreur
   }
 }
