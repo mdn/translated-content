@@ -15,8 +15,7 @@ Une **instruction étiquetée (_labeled_ en anglais)** peut être utilisée avec
 ## Syntaxe
 
 ```js
-label :
-    instruction
+label: instruction;
 ```
 
 - `label`
@@ -39,16 +38,16 @@ En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), on ne peut pas 
 ```js
 var i, j;
 
-boucle1:
-for (i = 0; i < 3; i++) {      //Le premier for correspond à "boucle1"
-   boucle2:
-   for (j = 0; j < 3; j++) {   //Le second for correspond à "boucle2"
-      if (i === 1 && j === 1) {
-         continue boucle1;
-      } else {
-         console.log("i = " + i + ", j = " + j);
-      }
-   }
+boucle1: for (i = 0; i < 3; i++) {
+  //Le premier for correspond à "boucle1"
+  boucle2: for (j = 0; j < 3; j++) {
+    //Le second for correspond à "boucle2"
+    if (i === 1 && j === 1) {
+      continue boucle1;
+    } else {
+      console.log("i = " + i + ", j = " + j);
+    }
+  }
 }
 
 // On aura les résultats suivants :
@@ -70,10 +69,9 @@ for (i = 0; i < 3; i++) {      //Le premier for correspond à "boucle1"
 var nbItemsReussis = 0;
 var i, j;
 
-top:
-for (i = 0; i < items.length; i++){
-  for (j = 0; j < tests.length; j++){
-    if (!tests[j].reussi(items[i])){
+top: for (i = 0; i < items.length; i++) {
+  for (j = 0; j < tests.length; j++) {
+    if (!tests[j].reussi(items[i])) {
       continue top;
     }
   }
@@ -86,10 +84,10 @@ for (i = 0; i < items.length; i++){
 ```js
 var i, j;
 
-boucle1:
-for (i = 0; i < 3; i++) { // première boucle étiquetée « boucle1 »
-  boucle2:
-  for (j =0; j < 3; j++) { // seconde boucle étiquetée « boucle2 »
+boucle1: for (i = 0; i < 3; i++) {
+  // première boucle étiquetée « boucle1 »
+  boucle2: for (j = 0; j < 3; j++) {
+    // seconde boucle étiquetée « boucle2 »
     if (i == 1 && j == 1) {
       break boucle1;
     }
@@ -114,10 +112,9 @@ for (i = 0; i < 3; i++) { // première boucle étiquetée « boucle1 »
 var toutReussi = true;
 var i, j;
 
-top:
-for (i = 0; items.length; i++)
+top: for (i = 0; items.length; i++)
   for (j = 0; j < tests.length; i++)
-    if (!tests[j].reusi(items[i])){
+    if (!tests[j].reusi(items[i])) {
       toutReussi = false;
       break top;
     }
@@ -138,7 +135,7 @@ console.log("swap");
 // On aura alors dans la console :
 
 // "face"
-// "swap 
+// "swap
 ```
 
 ### Déclarations de fonctions étiquetées

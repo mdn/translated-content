@@ -12,7 +12,7 @@ L'opérateur de **décalage binaire à droite non-signé (`>>>`)** décale la s�
 ## Syntaxe
 
 ```js
-a >>> b
+a >>> b;
 ```
 
 ## Description
@@ -40,7 +40,7 @@ Toutefois, ce n'est pas le cas pour les nombres négatifs : `-9 >>> 2` renverra 
 ### Utiliser le décalage à droite non-signé
 
 ```js
- 9 >>> 2; // 2
+9 >>> 2; // 2
 -9 >>> 2; // 1073741821
 ```
 

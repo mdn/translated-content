@@ -12,8 +12,8 @@ L'opérateur de division et d'affectation (`/=`) divise la variable fournie par 
 ## Syntaxe
 
 ```js
-Opérateur : x /= y
-Signification:  x  = x / y
+Opérateur: x /= y;
+Signification: x = x / y;
 ```
 
 ## Exemples
@@ -22,10 +22,10 @@ Signification:  x  = x / y
 
 ```js
 let truc = 5;
-truc /= 2;      // 2.5
-truc /= 2;      // 1.25
-truc /= 0;      // Infinity
-truc /= 'toto'; // NaN
+truc /= 2; // 2.5
+truc /= 2; // 1.25
+truc /= 0; // Infinity
+truc /= "toto"; // NaN
 ```
 
 ## Spécifications

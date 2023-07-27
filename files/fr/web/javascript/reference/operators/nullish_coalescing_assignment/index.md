@@ -12,7 +12,7 @@ L'opérateur d'affectation après coalescence des nuls (`x ??= y`) effectue une 
 ## Syntaxe
 
 ```js
-expr1 ??= expr2
+expr1 ??= expr2;
 ```
 
 ## Description

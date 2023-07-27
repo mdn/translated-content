@@ -12,7 +12,7 @@ L'opérateur de soustraction (`-`) effectue la soustraction entre les deux opér
 ## Syntaxe
 
 ```js
-Opérateur : x - y
+Opérateur: x - y;
 ```
 
 ## Exemples
@@ -20,14 +20,14 @@ Opérateur : x - y
 ### Avec des valeurs numériques
 
 ```js
-5 - 3     // 2
-3 - 5     // -2
+5 - 3; // 2
+3 - 5; // -2
 ```
 
 ### Avec des valeurs non-numériques
 
 ```js
-'toto' - 3 // NaN
+"toto" - 3; // NaN
 ```
 
 ## Spécifications

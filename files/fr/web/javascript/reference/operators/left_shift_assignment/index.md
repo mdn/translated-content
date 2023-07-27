@@ -12,8 +12,8 @@ L'opérateur de décalage à gauche et d'affectation (`<<=`) décale la séquenc
 ## Syntaxe
 
 ```js
-Opérateur : x <<= y
-Signification :  x   = x << y
+Opérateur: x <<= y;
+Signification: x = x << y;
 ```
 
 ## Exemples

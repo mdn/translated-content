@@ -41,9 +41,15 @@ Il est possible de déclarer des fonctions de façon conditionnelle (c'est-à-di
 
 ```js
 var remontee = "toto" in this;
-console.log(`'toto' ${remontee ? "est" : "n'est pas"} remontée. typeof toto vaut ${typeof toto}`);
+console.log(
+  `'toto' ${
+    remontee ? "est" : "n'est pas"
+  } remontée. typeof toto vaut ${typeof toto}`,
+);
 if (false) {
-  function toto(){ return 1; }
+  function toto() {
+    return 1;
+  }
 }
 
 // Pour Chrome:
@@ -63,9 +69,15 @@ On obtient exactement les mêmes résultats si la condition est vérifiée (ici 
 
 ```js
 var remontee = "toto" in this;
-console.log(`'toto' ${remontee ? "est" : "n'est pas"} remontée. typeof toto vaut ${typeof toto}`);
+console.log(
+  `'toto' ${
+    remontee ? "est" : "n'est pas"
+  } remontée. typeof toto vaut ${typeof toto}`,
+);
 if (true) {
-  function toto(){ return 1; }
+  function toto() {
+    return 1;
+  }
 }
 
 // Pour Chrome:
@@ -98,8 +110,8 @@ On notera que les {{jsxref("Opérateurs/L_opérateur_function", "expressions de 
 ```js
 nonRemontée(); // TypeError: nonRemontée is not a function
 
-var nonRemontée = function() {
-   console.log("truc");
+var nonRemontée = function () {
+  console.log("truc");
 };
 ```
 
@@ -111,7 +123,7 @@ Dans l'exemple qui suit, on déclare une fonction qui renvoie le total des vente
 
 ```js
 function calc_ventes(nb_produits_a, nb_produits_b, nb_produits_c) {
-   return nb_produits_a*79 + nb_produits_b * 129 + nb_produits_c * 699;
+  return nb_produits_a * 79 + nb_produits_b * 129 + nb_produits_c * 699;
 }
 ```
 

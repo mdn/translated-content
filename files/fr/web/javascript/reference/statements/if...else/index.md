@@ -14,9 +14,9 @@ L'instruction **`if`** exécute une instruction si une condition donnée est vra
 
 ```js
 if (condition) {
-  statement1
+  statement1;
 } else {
-  statement2
+  statement2;
 }
 ```
 
@@ -60,9 +60,9 @@ Afin d'exécuter plusieurs instructions, on utilisera un {{jsxref("Statements/bl
 
 ```js
 if (condition) {
-  instructions1
+  instructions1;
 } else {
-  instructions2
+  instructions2;
 }
 ```
 
@@ -91,7 +91,7 @@ if (cipher_char == from_char) {
 Bien qu'il n'y ait pas de mot-clé elseif dans le langage JavaScript, il est possible d'imbriquer des instructions if...else à la suite les une des autres en plaçant un espace entre else et le début de l'instruction if imbriquée :
 
 ```js
-if (x > 50){
+if (x > 50) {
   // faire quelque chose
 } else if (x > 5) {
   // faire autre chose
@@ -105,7 +105,7 @@ if (x > 50){
 Il est conseillé de ne pas utiliser d'affectation au sein des expressions conditionnelles. En effet, l'affectation peut être confondue avec un test d'égalité lorsqu'on analyse le code. Il ne faut donc pas utiliser le code suivant (bien qu'il fonctionne) :
 
 ```js example-bad
-if (x = y) {
+if ((x = y)) {
   /* exécuter les instructions */
 }
 ```

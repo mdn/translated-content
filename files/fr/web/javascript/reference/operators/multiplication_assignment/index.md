@@ -12,8 +12,8 @@ L'opérateur de multiplication et d'affectation (`*=`) multiplie une variable fo
 ## Syntaxe
 
 ```js
-Opérateur : x *= y
-Signification :  x  = x * y
+Opérateur: x *= y;
+Signification: x = x * y;
 ```
 
 ## Exemples
@@ -22,8 +22,8 @@ Signification :  x  = x * y
 
 ```js
 let truc = 5;
-truc *= 2;      // 10
-truc *= 'toto'; // NaN
+truc *= 2; // 10
+truc *= "toto"; // NaN
 ```
 
 ## Spécifications

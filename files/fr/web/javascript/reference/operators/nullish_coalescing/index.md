@@ -15,7 +15,7 @@ Contrairement à [l'opérateur logique OU (`||`)](/fr/docs/Web/JavaScript/Refere
 ## Syntaxe
 
 ```js
-leftExpr ?? rightExpr
+leftExpr ?? rightExpr;
 ```
 
 ## Exemples
@@ -46,7 +46,7 @@ Auparavant, lorsque l'on voulait attribuer une valeur par défaut à une variabl
 let toto;
 
 // toto ne se voit jamais attribuer de valeur, il vaut donc undefined
-let unTexteBateau = toto || 'Coucou !';
+let unTexteBateau = toto || "Coucou !";
 ```
 
 Cependant, parce que `||` est un opérateur logique booléen, l'opérande de gauche a été converti en un booléen pour l'évaluation et aucune valeur _falsy_ (`0`, `''`, `NaN`, `null`, `undefined`) n'a été renvoyée. Ce comportement peut entraîner des conséquences inattendues si on souhaite considérer `0`, `''` ou `NaN` comme des valeurs valides.
@@ -57,19 +57,19 @@ let texte = "";
 
 let qté = compteur || 42;
 let message = texte || "Coucou !";
-console.log(qté);     // 42 et non 0
+console.log(qté); // 42 et non 0
 console.log(message); // "Coucou !" et non ""
 ```
 
 L'opérateur de coalescence des nuls évite ce risque en ne renvoyant le deuxième opérande que lorsque le premier vaut `null` ou `undefined` (mais pas d'autres valeurs _falsy_) :
 
 ```js
-let monTexte = ''; // Un chaine vide (qui est donc une valeur falsy)
+let monTexte = ""; // Un chaine vide (qui est donc une valeur falsy)
 
-let notFalsyText = monTexte || 'Hello world';
+let notFalsyText = monTexte || "Hello world";
 console.log(notFalsyText); // Hello world
 
-let preservingFalsy = monTexte ?? 'Salut le voisin';
+let preservingFalsy = monTexte ?? "Salut le voisin";
 console.log(preservingFalsy); // '' (car monTexte n'est ni null ni undefined)
 ```
 
@@ -78,15 +78,24 @@ console.log(preservingFalsy); // '' (car monTexte n'est ni null ni undefined)
 À l'instar des opérateurs logiques OR (`||`) et AND (`&&`), l'expression de droite n'est pas évaluée si celle de gauche ne vaut ni `null` ni `undefined`.
 
 ```js
-function A() { console.log('A a été appelée'); return undefined; }
-function B() { console.log('B a été appelée'); return false; }
-function C() { console.log('C a été appelée'); return "toto"; }
+function A() {
+  console.log("A a été appelée");
+  return undefined;
+}
+function B() {
+  console.log("B a été appelée");
+  return false;
+}
+function C() {
+  console.log("C a été appelée");
+  return "toto";
+}
 
-console.log( A() ?? C() );
+console.log(A() ?? C());
 // Inscrit "A a été appelée" puis "C a été appelée" et enfin "toto"
 // puisque : A() retourne undefined, les deux expressions sont donc évaluées
 
-console.log( B() ?? C() );
+console.log(B() ?? C());
 // Inscrit "B a été appelée" puis false
 // puisque : B() retourne false (et non null ou undefined) et
 // l'opérande de droite n'est pas évaluée
@@ -114,7 +123,7 @@ Tout comme l'opérateur de coalescence des nuls, l'[opérateur de chaînage opti
 ```js
 let toto = { uneProprieteToto: "coucou" };
 
-console.log(toto.uneProprieteToto?.toUpperCase());  // "COUCOU"
+console.log(toto.uneProprieteToto?.toUpperCase()); // "COUCOU"
 console.log(toto.uneProprieteTiti?.toUpperCase()); // undefined
 ```
 

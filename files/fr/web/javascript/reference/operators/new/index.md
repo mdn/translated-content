@@ -19,8 +19,8 @@ Le mot-clé `new`, utilisé avec une fonction, applique les 4 étapes suivantes 
 
 ## Syntaxe
 
-```js
-new constructeur[([arguments])]
+```js-nolint
+new constructeur[([arguments])];
 ```
 
 ### Paramètres
@@ -54,18 +54,18 @@ function Voiture() {}
 voiture1 = new Voiture();
 voiture2 = new Voiture();
 
-console.log(voiture1.couleur);            // undefined
+console.log(voiture1.couleur); // undefined
 
 Voiture.prototype.couleur = "couleur standard";
-console.log(voiture1.couleur);            // couleur standard
+console.log(voiture1.couleur); // couleur standard
 
 voiture1.couleur = "noir";
-console.log(voiture1.couleur);            // noir
+console.log(voiture1.couleur); // noir
 
-console.log(voiture1.__proto__.couleur);  // couleur standard
-console.log(voiture2.__proto__.couleur);  // couleur standard
-console.log(voiture1.couleur);            // noir
-console.log(voiture2.couleur);            // couleur standard
+console.log(voiture1.__proto__.couleur); // couleur standard
+console.log(voiture2.__proto__.couleur); // couleur standard
+console.log(voiture1.couleur); // noir
+console.log(voiture2.couleur); // couleur standard
 ```
 
 > **Note :** Si on n'écrit pas l'appel du constructeur avec l'opérateur `new`, le constructeur est appelé comme une fonction normale et ne crée pas d'objet. Dans ce cas, la valeur de `this` sera différente.
@@ -78,9 +78,9 @@ Supposons que vous vouliez créer un type d'objet pour les voitures. Vous voulez
 
 ```js
 function Voiture(marque, modèle, année) {
-   this.marque = marque;
-   this.modèle = modèle;
-   this.année = année;
+  this.marque = marque;
+  this.modèle = modèle;
+  this.année = année;
 }
 ```
 
@@ -104,9 +104,9 @@ Supposons que vous ayez défini un objet appelé `Personne` de la manière suiva
 
 ```js
 function Personne(nom, age, surnom) {
-   this.nom = nom;
-   this.age = age;
-   this.surnom = surnom;
+  this.nom = nom;
+  this.age = age;
+  this.surnom = surnom;
 }
 ```
 
@@ -121,10 +121,10 @@ Vous pouvez alors réécrire la définition de `Voiture` pour contenir une propr
 
 ```js
 function Voiture(marque, modèle, année, propriétaire) {
-   this.marque = marque;
-   this.modèle = modèle;
-   this.année = année;
-   this.propriétaire = propriétaire;
+  this.marque = marque;
+  this.modèle = modèle;
+  this.année = année;
+  this.propriétaire = propriétaire;
 }
 ```
 
@@ -138,7 +138,7 @@ voiture2 = new Voiture("Nissan", "300ZX", 1992, ken);
 Plutôt que de passer une chaîne littérale ou une valeur entière lors de la création des nouveaux objets, les instructions ci-dessus utilisent les objets `rand` et `ken` comme paramètres pour les propriétaires. Pour connaître le nom du propriétaire de `voiture2`, on peut alors accéder à la propriété suivante&nbsp;:
 
 ```js
-voiture2.propriétaire.nom
+voiture2.propriétaire.nom;
 ```
 
 ## Spécifications

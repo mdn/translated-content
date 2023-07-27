@@ -12,8 +12,8 @@ L'opérateur d'affectation après soustraction (`-=`) calcule la soustraction de
 ## Syntaxe
 
 ```js
-Opérateur : x -= y
-Signification :  x  = x - y
+Opérateur: x -= y;
+Signification: x = x - y;
 ```
 
 ## Exemples
@@ -22,8 +22,8 @@ Signification :  x  = x - y
 
 ```js
 let truc = 5;
-truc -= 2;      // 3
-truc -= 'toto'; // NaN
+truc -= 2; // 3
+truc -= "toto"; // NaN
 ```
 
 ## Spécifications

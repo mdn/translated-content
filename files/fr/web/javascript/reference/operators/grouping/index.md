@@ -30,16 +30,16 @@ var b = 2;
 var c = 3;
 
 // précédence normale
-a + b * c     // 7
+a + b * c; // 7
 // l'évaluation est effectuée de cette façon
-a + (b * c)   // 7
+a + (b * c); // 7
 
 // précédence surchargée avec le groupement
 // on additionne avant de multiplier
-(a + b) * c   // 9
+(a + b) * c; // 9
 
 // mathématiquement, cela est équivalent à
-a * c + b * c // 9
+a * c + b * c; // 9
 ```
 
 ## Spécifications

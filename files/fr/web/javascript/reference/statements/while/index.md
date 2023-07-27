@@ -55,9 +55,9 @@ Dans la fonction qui suit, on incrémente un compteur grâce à une boucle `whil
 ```js
 const maFonctionAvecWhile = () => {
   let i = 0;
-  while (i< 20){
+  while (i < 20) {
     i++;
-  };
+  }
   console.log(i);
 };
 ```
@@ -75,7 +75,7 @@ Par exemple, le fragment qui suit causera une boucle infinie&nbsp;:
 ```js example-bad
 const seuil = 14;
 let compteur = 0;
-while (compteur = seuil) {
+while ((compteur = seuil)) {
   compteur++;
   /* Faire quelque chose avec compteur */
 }
