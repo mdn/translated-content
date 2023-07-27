@@ -28,86 +28,23 @@ Bien que les propriétés raccourcies soient pratiques à utiliser. Il est néce
 
    1. Les propriétés raccourcies qui gèrent les bords d'une boîte telles que {{cssxref("border-style")}}, {{cssxref("margin")}} ou {{cssxref("padding")}}. Elles utilisent une méthode constante selon qu'elles reçoivent 1 à 4 valeurs :
 
-       <table>
-         <tbody>
-           <tr>
-             <td style="width: 79px"><img alt="border1.png" src="border1.png" /></td>
-             <td>
-               <em>1 valeur </em>: <code>border-width: 1em</code> — La valeur unique
-               s'adresse à tous les côtés.
-             </td>
-           </tr>
-           <tr>
-             <td><img alt="border2.png" src="border2.png" /></td>
-             <td>
-               <em>2 valeurs </em>: <code>border-width: 1em 2em</code> — La première
-               valeur représente les côtés horizontaux en haut et en bas. La seconde
-               valeur représente les côtés verticaux, à gauche et à droite.
-             </td>
-           </tr>
-           <tr>
-             <td><img alt="border3.png" src="border3.png" /></td>
-             <td>
-               <em>3 valeurs </em>: <code>border-width: 1em 2em 3em</code> — La
-               première valeur représente le côté haut, la deuxième les côtés gauche et
-               droit et la troisième représente le côté bas.
-             </td>
-           </tr>
-           <tr>
-             <td><img alt="border4.png" src="border4.png" /></td>
-             <td>
-               <p>
-                 <em>4 valeurs </em>: <code>border-width: 1em 2em 3em 4em</code> — Les
-                 quatre valeurs représentent respectivement le côté haut, le côté
-                 droit, le côté bas et le côté haut, toujours dans cet ordre (le sens
-                 horaire).
-               </p>
-             </td>
-           </tr>
-         </tbody>
-       </table>
+      - _1 valeur_ : `border-width: 1em` — La valeur unique s'adresse à tous les côtés. ![](border1.png)
+
+      - _2 valeurs_ : `border-width: 1em 2em` — La première valeur représente les côtés horizontaux en haut et en bas. La seconde valeur représente les côtés verticaux, à gauche et à droite. ![](border2.png)
+
+      - _3 valeurs_ : `border-width: 1em 2em 3em` — La première valeur représente le côté haut, la deuxième les côtés gauche et droit et la troisième représente le côté bas. ![](border3.png)
+
+      - _4 valeurs_ : `border-width: 1em 2em 3em 4em` — Les quatre valeurs représentent respectivement le côté haut, le côté droit, le côté bas et le côté haut, toujours dans cet ordre (le sens horaire). ![](border4.png)
 
    2. De la même façon, les propriétés raccourcies relatives aux coins d'une boîte comme {{cssxref("border-radius")}} utilisent une méthode constante selon qu'elles reçoivent 1 à 4 valeurs :
 
-       <table>
-         <tbody>
-           <tr>
-             <td style="width: 69px"><img alt="corner1.png" src="corner1.png" /></td>
-             <td>
-               <em>1 valeur </em>: <code>border-radius: 1em</code> — La valeur
-               s'applique à tous les coins.
-             </td>
-           </tr>
-           <tr>
-             <td><img alt="corner2.png" src="corner2.png" /></td>
-             <td>
-               <em>2 valeurs </em>: <code>border-radius: 1em 2em</code> — La première
-               valeur s'applique aux coins en haut à gauche et en bas à droite et la
-               deuxième s'applique aux coins en haut à droite et en bas à gauche.
-             </td>
-           </tr>
-           <tr>
-             <td><img alt="corner3.png" src="corner3.png" /></td>
-             <td>
-               <em>3 valeurs </em>: <code>border-radius: 1em 2em 3em</code> — La
-               première valeur représente le coin en haut à gauche, la deuxième
-               représente les coins en haut à droite et en bas à gauche et la troisième
-               valeur représente le coin en bas à droite.
-             </td>
-           </tr>
-           <tr>
-             <td><img alt="corner4.png" src="corner4.png" /></td>
-             <td>
-               <p>
-                 <em>4 valeurs </em>: <code>border-radius: 1em 2em 3em 4em</code> — Les
-                 quatre valeurs s'appliquent respectivement au coin en haut à gauche,
-                 en haut à droite, en bas à droite et en bas à gauche, toujours dans
-                 cet ordre (le sens horaire).
-               </p>
-             </td>
-           </tr>
-         </tbody>
-       </table>
+      - _1 valeur_ : `border-radius: 1em` — La valeur s'applique à tous les coins. ![](corner1.png)
+
+      - _2 valeurs_ : `border-radius: 1em 2em` — La première valeur s'applique aux coins en haut à gauche et en bas à droite et la deuxième s'applique aux coins en haut à droite et en bas à gauche. ![](corner2.png)
+
+      - _3 valeurs_ : `border-radius: 1em 2em 3em` — La première valeur représente le coin en haut à gauche, la deuxième représente les coins en haut à droite et en bas à gauche et la troisième valeur représente le coin en bas à droite. ![](corner3.png)
+
+      - _4 valeurs_ : `border-radius: 1em 2em 3em 4em` — Les quatre valeurs s'appliquent respectivement au coin en haut à gauche, en haut à droite, en bas à droite et en bas à gauche, toujours dans cet ordre (le sens horaire). ![](corner4.png)
 
 ## Les propriétés concernant l'arrière-plan
 
