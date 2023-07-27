@@ -28,7 +28,9 @@ background-position: 1cm 2cm;
 background-position: 10ch 8em;
 
 /* Multiple images */
-background-position: 0 0, center;
+background-position:
+  0 0,
+  center;
 
 /* Edge offsets values */
 background-position: bottom 10px right 20px;
@@ -158,7 +160,9 @@ div {
 /* 多背景图片：每个图片依次和相应的 `background-position` 匹配 */
 .examplethree {
   background-image: url("startransparent.gif"), url("catfront.png");
-  background-position: 0px 0px, right 3em bottom 2em;
+  background-position:
+    0px 0px,
+    right 3em bottom 2em;
 }
 ```
 

@@ -9,7 +9,7 @@ slug: Web/CSS/Column_combinator
 
 ```css
 /* 属于"被选择"列的表单元格 */
-col.selected || td {
+col.selected||td {
   background: gray;
 }
 ```
@@ -29,14 +29,14 @@ column-selector || cell-selector {
 ```html
 <table border="1">
   <colgroup>
-    <col span="2"/>
-    <col class="selected"/>
+    <col span="2" />
+    <col class="selected" />
   </colgroup>
   <tbody>
     <tr>
-      <td>A
-      <td>B
-      <td>C
+      <td>A</td>
+      <td>B</td>
+      <td>C</td>
     </tr>
     <tr>
       <td colspan="2">D</td>
@@ -53,7 +53,7 @@ column-selector || cell-selector {
 ### CSS
 
 ```css
-col.selected || td {
+col.selected||td {
   background: gray;
   color: white;
   font-weight: bold;

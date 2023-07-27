@@ -12,20 +12,22 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 在用 `grid-template-rows` 和 `grid-template-columns` 属性定义网格时，可以为网格中的部分或全部网格线命名。为了便于演示，下面将使用在基于网格线定位一文中使用过的简单布局。这次我们会用命名线来创建网格。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -33,8 +35,8 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 
 ```css
 .wrapper {
- display: grid;
- grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
+  display: grid;
+  grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
   grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
 }
 ```
@@ -87,20 +89,22 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 在选择名字时，如果把一个区域周围的线都用 `-start` 和 `-end` 作为后缀，就像上面的例子那样，网格就会为区域创建一个名字，名字就是后缀前的单词。再看上面的例子，我们把一些行和列命名为 `content-start` 和 `content-end`，这意味着得到了一个命名为 content 的网格区域，并且可以在这个区域中放入你想放的内容。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -108,9 +112,9 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 
 ```css
 .wrapper {
-   display: grid;
-   grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
-   grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
+  display: grid;
+  grid-template-columns: [main-start] 1fr [content-start] 1fr [content-end] 1fr [main-end];
+  grid-template-rows: [main-start] 100px [content-start] 100px [content-end] 100px [main-end];
 }
 .thing {
   grid-area: content;
@@ -156,20 +160,22 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 接下来使用隐式命名的网格线来定位项目 `overlay`，这和先显式命名网格线然后再定位是一样的。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -196,13 +202,13 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
   grid-area: sd;
 }
 .wrapper > div.overlay {
-    z-index: 10;
-    grid-column: main-start / main-end;
-    grid-row: hd-start / ft-end;
-    border: 4px solid rgb(92,148,13);
-    background-color: rgba(92,148,13,.4);
-    color: rgb(92,148,13);
-    font-size: 150%;
+  z-index: 10;
+  grid-column: main-start / main-end;
+  grid-row: hd-start / ft-end;
+  border: 4px solid rgb(92, 148, 13);
+  background-color: rgba(92, 148, 13, 0.4);
+  color: rgb(92, 148, 13);
+  font-size: 150%;
 }
 ```
 
@@ -229,27 +235,29 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 下面的例子创建了一个有 12 个等宽列的网格，在定义列轨道尺寸为 1fr 之前，也定义了网格线名字 `[col-start]`，也就是说最终会创建一个 12 列的网格，每个 `1fr` 宽的列左侧的线都被命名为 `col-start`。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```css
 .wrapper {
-      display: grid;
-      grid-template-columns: repeat(12, [col-start] 1fr);
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
 }
 ```
 
@@ -257,7 +265,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 
 ```css
 .item1 {
-  grid-column: col-start / col-start 5
+  grid-column: col-start / col-start 5;
 }
 ```
 
@@ -271,8 +279,8 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines
 
 ```html
 <div class="wrapper">
-    <div class="item1">I am placed from col-start line 1 to col-start 5</div>
-   <div class="item2">I am placed from col-start line 7 spanning 3 lines</div>
+  <div class="item1">I am placed from col-start line 1 to col-start 5</div>
+  <div class="item2">I am placed from col-start line 7 spanning 3 lines</div>
 </div>
 ```
 
@@ -296,7 +304,7 @@ repeat 语法不仅可用于重复的单一轨道尺寸，也可以用于轨道�
 
 ```css
 .wrapper {
-  grid-template-columns: repeat(4, [col-start] 1fr [col-end] );
+  grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
 }
 ```
 
@@ -304,27 +312,29 @@ repeat 语法不仅可用于重复的单一轨道尺寸，也可以用于轨道�
 
 ```css
 .wrapper {
-  grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr  [col-end col-start] 1fr [col-end];
+  grid-template-columns: [col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end col-start] 1fr [col-end];
 }
 ```
 
 如果已经定义了一个轨道列表，接下来在使用 span 关键字定位项目时，不仅可以在 span 后面写一个行序数，还可以在 `span` 后面写一个命名线的行序数。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
@@ -334,7 +344,7 @@ repeat 语法不仅可用于重复的单一轨道尺寸，也可以用于轨道�
   grid-template-columns: repeat(6, [col1-start] 1fr [col2-start] 3fr);
 }
 .item1 {
-  grid-column: col1-start / col2-start 2
+  grid-column: col1-start / col2-start 2;
 }
 .item2 {
   grid-row: 2;
@@ -344,8 +354,12 @@ repeat 语法不仅可用于重复的单一轨道尺寸，也可以用于轨道�
 
 ```html
 <div class="wrapper">
-  <div class="item1">I am placed from col1-start line 1 to col2-start line 2</div>
-  <div class="item2">I am placed from col1-start line 2 spanning 2 lines named col1-start</div>
+  <div class="item1">
+    I am placed from col1-start line 1 to col2-start line 2
+  </div>
+  <div class="item2">
+    I am placed from col1-start line 2 spanning 2 lines named col1-start
+  </div>
 </div>
 ```
 
@@ -368,30 +382,32 @@ repeat 语法不仅可用于重复的单一轨道尺寸，也可以用于轨道�
 然后就可以使用这个框架来布局页面了。比如，创建一个三列的布局，有头部和尾部，HTML 代码如下所示。
 
 ```css hidden
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 .wrapper {
-    border: 2px solid #f76707;
-    border-radius: 5px;
-    background-color: #fff4e6;
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
 }
 
 .wrapper > * {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
-    background-color: #ffd8a8;
-    padding: 1em;
-    color: #d9480f;
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
 }
 ```
 
 ```html
 <div class="wrapper">
   <header class="main-header">I am the header</header>
-   <aside class="side1">I am sidebar 1</aside>
-   <article class="content">I am the main article</article>
-   <aside class="side2">I am sidebar 2</aside>
-   <footer class="main-footer">I am the footer</footer>
+  <aside class="side1">I am sidebar 1</aside>
+  <article class="content">I am the main article</article>
+  <aside class="side2">I am sidebar 2</aside>
+  <footer class="main-footer">I am the footer</footer>
 </div>
 ```
 
@@ -399,7 +415,7 @@ repeat 语法不仅可用于重复的单一轨道尺寸，也可以用于轨道�
 
 ```css
 .main-header,
-.main-footer  {
+.main-footer {
   grid-column: col-start / span 12;
 }
 .side1 {

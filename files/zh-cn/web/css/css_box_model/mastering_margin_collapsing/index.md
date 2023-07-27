@@ -38,12 +38,8 @@ slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 
 <div>
   这个父元素包含两个段落！
-  <p>
-    该段落与上面的文本之间有一个 <code>.4rem</code> 的边距。
-  </p>
-  <p>
-    我的下边距与我的父元素折叠，产生了一个 <code>2rem</code> 的边距。
-  </p>
+  <p>该段落与上面的文本之间有一个 <code>.4rem</code> 的边距。</p>
+  <p>我的下边距与我的父元素折叠，产生了一个 <code>2rem</code> 的边距。</p>
 </div>
 
 <p>我在上面元素的下方 <code>2rem</code> 处。</p>

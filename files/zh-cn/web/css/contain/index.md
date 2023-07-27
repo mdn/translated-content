@@ -216,10 +216,16 @@ CSS 引号受类似影响，与引号相关的 {{CSSXref("content")}} 值的作�
 
 ```html
 <!-- 有样式局限 -->
-<span class="open-quote">外<span style="contain: style;"><span class="open-quote">内</span></span></span><span class="close-quote">闭</span>
+<span class="open-quote"
+  >外<span style="contain: style;"
+    ><span class="open-quote">内</span></span
+  ></span
+><span class="close-quote">闭</span>
 <br />
 <!-- 无局限 -->
-<span class="open-quote">外<span><span class="open-quote">内</span></span></span><span class="close-quote">闭</span>
+<span class="open-quote"
+  >外<span><span class="open-quote">内</span></span></span
+><span class="close-quote">闭</span>
 ```
 
 ```css

@@ -309,9 +309,9 @@ Some people have difficulty distinguishing colors. The [WCAG 2.0](https://www.w3
 
 ```html
 <div></div>
-<hr>
+<hr />
 <label for="color">Enter a valid color value:</label>
-<input type="text" id="color">
+<input type="text" id="color" />
 ```
 
 #### CSS
@@ -324,30 +324,38 @@ div {
 ```
 
 ```js hidden
-const inputElem = document.querySelector('input');
-const divElem = document.querySelector('div');
+const inputElem = document.querySelector("input");
+const divElem = document.querySelector("div");
 
 function validTextColor(stringToTest) {
-  if (stringToTest === "") { return false; }
-  if (stringToTest === "inherit") { return false; }
-  if (stringToTest === "transparent") { return false; }
+  if (stringToTest === "") {
+    return false;
+  }
+  if (stringToTest === "inherit") {
+    return false;
+  }
+  if (stringToTest === "transparent") {
+    return false;
+  }
 
   const image = document.createElement("img");
   image.style.color = "rgb(0, 0, 0)";
   image.style.color = stringToTest;
-  if (image.style.color !== "rgb(0, 0, 0)") { return true; }
+  if (image.style.color !== "rgb(0, 0, 0)") {
+    return true;
+  }
   image.style.color = "rgb(255, 255, 255)";
   image.style.color = stringToTest;
   return image.style.color !== "rgb(255, 255, 255)";
 }
 
-inputElem.addEventListener('change', () => {
-  if(validTextColor(inputElem.value)) {
+inputElem.addEventListener("change", () => {
+  if (validTextColor(inputElem.value)) {
     divElem.style.backgroundColor = inputElem.value;
-    divElem.textContent = '';
+    divElem.textContent = "";
   } else {
-    divElem.style.backgroundColor = 'white';
-    divElem.textContent = 'Invalid color value';
+    divElem.style.backgroundColor = "white";
+    divElem.textContent = "Invalid color value";
   }
 });
 ```

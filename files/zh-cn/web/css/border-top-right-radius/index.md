@@ -25,11 +25,23 @@ slug: Web/CSS/border-top-right-radius
 正式语法: {{csssyntax("border-top-right-radius")}}
 ```
 
-```html
-border-top-right-radius: radius               /* the corner is a circle    */  E.g. border-top-right-radius: 3px
-border-top-right-radius: horizontal vertical  /* the corner is an ellipsis */  E.g. border-top-right-radius: 0.5em 1em
+```css
+/* the corner is a circle */
+/* border-top-right-radius: radius */
+border-top-right-radius: 3px;
 
-border-top-right-radius: inherit
+/* the corner is an ellipse */
+/* border-top-right-radius: horizontal vertical */
+border-top-right-radius: 0.5em 1em;
+
+border-top-right-radius: inherit;
+
+/* Global values */
+border-top-right-radius: inherit;
+border-top-right-radius: initial;
+border-top-right-radius: revert;
+border-top-right-radius: revert-layer;
+border-top-right-radius: unset;
 ```
 
 之上：

@@ -32,16 +32,16 @@ CSS 层叠算法期望通过挑选 CSS 声明来给 CSS 属性设置正确的值
 1. 它首先过滤来自不同源的全部规则，并保留要应用到指定元素上的那些规则。这意味着这些规则的选择器匹配指定元素，同时也是一个合适的 @规则（at-rule）的一部分。
 2. 其次，它依据重要性对这些规则进行排序。即是指，规则后面是否跟随者 !import 以及规则的来源。层叠是按升序排列的，这意味着来着用户自定义样式表的 !important 值比用户代理样式表的普通值优先级高：
 
-    |     | 来源                       | 重要程度     |
-    | --- | -------------------------- | ------------ |
-    | 1   | 用户代理                   | 普通         |
-    | 2   | 用户                       | 普通         |
-    | 3   | 页面作者                   | 普通         |
-    | 4   | CSS 动画                   | 见下节       |
-    | 5   | 页面作者                   | `!important` |
-    | 6   | 用户                       | `!important` |
-    | 7   | 用户代理                   | `!important` |
-    | 8   | css 过渡 (css transitions) |              |
+   |     | 来源                       | 重要程度     |
+   | --- | -------------------------- | ------------ |
+   | 1   | 用户代理                   | 普通         |
+   | 2   | 用户                       | 普通         |
+   | 3   | 页面作者                   | 普通         |
+   | 4   | CSS 动画                   | 见下节       |
+   | 5   | 页面作者                   | `!important` |
+   | 6   | 用户                       | `!important` |
+   | 7   | 用户代理                   | `!important` |
+   | 8   | css 过渡 (css transitions) |              |
 
 3. 假如层叠顺序相等，则使用哪个值取决于[优先级](/zh-CN/docs/CSS/Specificity)。
 
@@ -64,31 +64,41 @@ all 属性让你能够立刻把所有的属性都还原到它们初始（默认�
 **用户代理 CSS：**
 
 ```css
-li { margin-left: 10px }
+li {
+  margin-left: 10px;
+}
 ```
 
 **网页作者 CSS1：**
 
 ```css
-li { margin-left: 0 } /* This is a reset */
+li {
+  margin-left: 0;
+} /* This is a reset */
 ```
 
 **网页作者 CSS2：**
 
 ```css
 @media screen {
-  li { margin-left: 3px }
+  li {
+    margin-left: 3px;
+  }
 }
 
 @media print {
-  li { margin-left: 1px }
+  li {
+    margin-left: 1px;
+  }
 }
 ```
 
 **用户 CSS：**
 
 ```css
-.specific { margin-left: 1em }
+.specific {
+  margin-left: 1em;
+}
 ```
 
 **HTML：**
@@ -105,21 +115,21 @@ li { margin-left: 0 } /* This is a reset */
 故是这 3 条声明的竞争：
 
 ```css
-margin-left: 0
+margin-left: 0;
 ```
 
 ```css
-margin-left: 3px
+margin-left: 3px;
 ```
 
 ```css
-margin-left: 1px
+margin-left: 1px;
 ```
 
 由于是在屏幕显示，所以最后一条舍弃，而前两条的选择器相同，因此优先级也相同，故最终选择的是后者：
 
 ```css
-margin-left: 3px
+margin-left: 3px;
 ```
 
 注意尽管定义在用户 CSS 里面的声明有更高的优先级，但它并不会被选中，因为层叠算法是先于优先级算法的。

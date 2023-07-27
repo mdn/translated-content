@@ -62,7 +62,7 @@ Phasellus eget velit sagittis.
 ```css
 body {
   font-size: small;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   color: blue;
 }
 
