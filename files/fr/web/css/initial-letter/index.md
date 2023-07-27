@@ -14,9 +14,9 @@ initial-letter: normal;
 
 /* Valeurs numériques            */
 /* Types <number> puis <integer> */
-initial-letter: 1.5;   /* La première lettre occupe 1.5 lignes */
-initial-letter: 3.0;   /* La première lettre occupe 3 lignes   */
-initial-letter: 3.0 2; /* La première lettre occupe 3 lignes et
+initial-letter: 1.5; /* La première lettre occupe 1.5 lignes */
+initial-letter: 3; /* La première lettre occupe 3 lignes   */
+initial-letter: 3 2; /* La première lettre occupe 3 lignes et
                           s'enfonce de deux lignes vers le bas */
 
 /* Valeurs globales */
@@ -52,8 +52,8 @@ La valeur de cette propriété peut être le mot-clé `normal` ou un nombre (`<n
 
 ```css
 .exemple {
-  -webkit-initial-letter: 3.0 2;
-  initial-letter: 3.0 2;
+  -webkit-initial-letter: 3 2;
+  initial-letter: 3 2;
 }
 ```
 
@@ -61,9 +61,9 @@ La valeur de cette propriété peut être le mot-clé `normal` ou un nombre (`<n
 
 ```html
 <p class="exemple">
-  Un grand rosier se trouvait à l’entrée du jardin&nbsp;;
-  les roses qu’il portait étaient blanches, mais trois
-  jardiniers étaient en train de les peindre en rouge.
+  Un grand rosier se trouvait à l’entrée du jardin&nbsp;; les roses qu’il
+  portait étaient blanches, mais trois jardiniers étaient en train de les
+  peindre en rouge.
 </p>
 ```
 

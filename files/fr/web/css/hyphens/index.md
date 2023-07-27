@@ -66,7 +66,7 @@ Dans cet exemple, on crée trois classes CSS pour illustrer chacune des configur
 p {
   width: 55px;
   border: 1px solid black;
- }
+}
 p.none {
   -webkit-hyphens: none;
   -ms-hyphens: none;
@@ -88,13 +88,17 @@ p.auto {
 
 ```html
 <ul>
-  <li><code>none</code>: aucun trait d'union, dépassement si nécessaire
+  <li>
+    <code>none</code>: aucun trait d'union, dépassement si nécessaire
     <p lang="en" class="none">An extreme&shy;ly long English word</p>
   </li>
-  <li><code>manual</code>: un trait d'union uniquement à &amp;hyphen; ou &amp;shy; (si nécessaire)
+  <li>
+    <code>manual</code>: un trait d'union uniquement à &amp;hyphen; ou &amp;shy;
+    (si nécessaire)
     <p lang="en" class="manual">An extreme&shy;ly long English word</p>
   </li>
-  <li><code>auto</code>: un trait d'union où l'algorithme l'estime nécessaire
+  <li>
+    <code>auto</code>: un trait d'union où l'algorithme l'estime nécessaire
     <p lang="en" class="auto">An extreme&shy;ly long English word</p>
   </li>
 </ul>

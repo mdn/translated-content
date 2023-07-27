@@ -24,7 +24,9 @@ font-feature-settings: normal;
 font-feature-settings: "smcp";
 font-feature-settings: "smcp" on;
 font-feature-settings: "swsh" 2;
-font-feature-settings: "smcp", "swsh" 2;
+font-feature-settings:
+  "smcp",
+  "swsh" 2;
 
 /* Valeurs globales */
 font-feature-settings: inherit;
@@ -52,30 +54,46 @@ font-feature-settings: unset;
 
 ```css
 /* on utilise les glyphes alternatifs en small-cap */
-.smallcaps { font-feature-settings: "smcp" on; }
+.smallcaps {
+  font-feature-settings: "smcp" on;
+}
 
 /* on convertit les majuscules et minuscules en petites
    capitales */
-.allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
+.allsmallcaps {
+  font-feature-settings: "c2sc", "smcp";
+}
 
 /* on utilise les zéros barrés d'une barre oblique afin de
    les différencier de "O" */
-.nicezero { font-feature-settings: "zero"; }
+.nicezero {
+  font-feature-settings: "zero";
+}
 
 /* on active les formes historiques */
-.hist { font-feature-settings: "hist"; }
+.hist {
+  font-feature-settings: "hist";
+}
 
 /* on désactive les ligatures communément utilisées */
-.noligs { font-feature-settings: "liga" 0; }
+.noligs {
+  font-feature-settings: "liga" 0;
+}
 
 /* on active les chiffres tabulaires (chasse fixe) */
-td.tabular { font-feature-settings: "tnum"; }
+td.tabular {
+  font-feature-settings: "tnum";
+}
 
 /* on active les fractions automatiques */
-.fractions { font-feature-settings: "frac"; }
+.fractions {
+  font-feature-settings: "frac";
+}
 
 /* on utilise le deuxième caractère de « swash » */
-.swash { font-feature-settings: "swsh" 2; }
+.swash {
+  font-feature-settings: "swsh" 2;
+}
 
 /* On active l'ensemble stylistique 7 */
 .fancystyle {

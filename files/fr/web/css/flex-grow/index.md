@@ -74,12 +74,12 @@ La propriété `flex-grow` se définit avec une valeur de type [`<number>`](#num
 
 .box {
   flex-shrink: 1;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box1 {
   flex-grow: 1;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 ```
 

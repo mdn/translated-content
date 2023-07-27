@@ -99,7 +99,7 @@ Un autre aspect important est la **composition** des valeurs exprimées avec cet
 <div>
   <span>
     Extérieur
-      <span>Intérieur</span>
+    <span>Intérieur</span>
     Extérieur
   </span>
 </div>
@@ -142,7 +142,7 @@ On utilisera le même fragment de HTML :
 ```html
 <span>
   Extérieur
-    <span>Intérieur</span>
+  <span>Intérieur</span>
   Extérieur
 </span>
 ```
@@ -158,15 +158,21 @@ Dans cet exemple, si la taille par défaut du navigateur vaut `16px`, tous les m
 ```css
 /* Le paragraphe sera écrit avec une grande */
 /* fonte.                                   */
-p { font-size: xx-large }
+p {
+  font-size: xx-large;
+}
 
 /* La taille du texte des h1 sera 2.5 fois plus */
 /* grande que le texte autour.                  */
-h1 { font-size: 250% }
+h1 {
+  font-size: 250%;
+}
 
 /* Le texte contenu dans des éléments span */
 /* mesurera 16px                           */
-span { font-size: 16px; }
+span {
+  font-size: 16px;
+}
 ```
 
 ### Démonstration
