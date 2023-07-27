@@ -13,7 +13,8 @@ Ce sélecteur est principalement destiné aux développeurs de thèmes.
 ## Syntaxe
 
 ```css
-:-moz-suppressed {}
+:-moz-suppressed {
+}
 ```
 
 ## Exemple

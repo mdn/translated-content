@@ -30,7 +30,8 @@ Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une
 ## Syntaxe
 
 ```css
-::grammar-error {}
+::grammar-error {
+}
 ```
 
 ## Exemples

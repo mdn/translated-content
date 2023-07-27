@@ -13,7 +13,8 @@ Ce sélecteur est destiné principalement à une utilisation par les développeu
 ## Syntaxe
 
 ```css
-:-moz-user-disabled {}
+:-moz-user-disabled {
+}
 ```
 
 ## Exemples
