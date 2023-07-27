@@ -6,7 +6,7 @@ original_slug: Web/媒体/Autoplay_guide
 
 网页加载完成后立即播放音频（或带有音频轨道的视频）可能会意外地打扰到用户。尽管自动播放媒体文件是一个很实用的功能，但是我们也应该谨慎地使用它，保证只有在它被需要的时候才使用。为了让用户拥有控制权，通常浏览器会提供各种方式禁用自动播放音频功能。在这篇文章中，我们将介绍各种媒体和 Web Audio APIs 的自动播放功能，包括关于如何使用自动播放功能、如何优雅的处理阻止自动播放功能的一些简短的介绍。
 
-当源媒体没有音轨或音轨静音时，阻止自动播放不会应用于{{HTMLElement("video")}}元素。具有活动音轨的媒体被认为是**可听的**，并且阻止自动播放适用于它们。**听不见的**媒体不受阻止自动播放的影响。
+当源媒体没有音轨或音轨静音时，阻止自动播放不会应用于 {{HTMLElement("video")}} 元素。具有活动音轨的媒体被认为是**可听的**，并且阻止自动播放适用于它们。**听不见的**媒体不受阻止自动播放的影响。
 
 ## 自动播放 和 自动播放暂停
 
@@ -38,7 +38,7 @@ audioElement.play();
 - 音频被静音或其音量设置为 0
 - 用户和网页已有交互行为（包括点击、触摸、按下某个键等等）
 - 网站已被列入白名单；如果浏览器确定用户经常与媒体互动，这可能会自动发生，也可能通过首选项或其他用户界面功能手动发生
-- 自动播放策略应用到{{HTMLElement("iframe")}}或者其文档上
+- 自动播放策略应用到 {{HTMLElement("iframe")}} 或者其文档上
 
 否则，播放可能会被阻止。导致播放被阻塞的确切情况以及将网站列入白名单的具体方法因浏览器而异，但最好是遵循以上的原则。
 
@@ -52,7 +52,7 @@ audioElement.play();
 
 ### autoplay 属性
 
-想让内容自动播放的最简单方法是将[`autoplay`](/zh-CN/docs/Web/HTML/Element/audio#autoplay)属性添加到{{HTMLElement("audio")}}或{{HTMLElement("video")}}元素。并将{{domxref("HTMLMediaElement.autoplay", "autoplay")}}属性设置为 `true` ，当 `autoplay` 的属性为 `true` 时，媒体元素将在发生以下情况后尽快自动开始播放：
+想让内容自动播放的最简单方法是将 [`autoplay`](/zh-CN/docs/Web/HTML/Element/audio#autoplay) 属性添加到 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素。并将 {{domxref("HTMLMediaElement.autoplay", "autoplay")}} 属性设置为 `true` ，当 `autoplay` 的属性为 `true` 时，媒体元素将在发生以下情况后尽快自动开始播放：
 
 - 页面允许使用自动播放功能
 - 媒体元素已在页面加载期间创建
@@ -60,7 +60,7 @@ audioElement.play();
 
 #### 例子 1: autoplay 属性
 
-使用 `autoplay` 属性的{{HTMLElement("audio")}}元素就像如下：
+使用 `autoplay` 属性的 {{HTMLElement("audio")}} 元素就像如下：
 
 ```html
 <audio id="musicplayer" autoplay>
@@ -70,11 +70,11 @@ audioElement.play();
 
 #### 例子 2：检测自动播放失败
 
-如果你依靠自动播放功能去做一些重要的事情，或者自动播放失败会以任何方式影响你的应用程序，那你可能会想知道自动播放什么时候没有开始。不幸的是，对于[`autoplay`](/zh-CN/docs/Web/HTML/Element/audio#autoplay)属性，识别自动播放是否成功开始是很棘手的。自动播放失败时**不会触发**任何事件。也没有抛出异常或可以设置回调，甚至在媒体元素上都没有标记来告诉你自动播放是否起作用。你实际能做的就是检查一些值，然后根据这些值猜测自动播放是否起作用。
+如果你依靠自动播放功能去做一些重要的事情，或者自动播放失败会以任何方式影响你的应用程序，那你可能会想知道自动播放什么时候没有开始。不幸的是，对于 [`autoplay`](/zh-CN/docs/Web/HTML/Element/audio#autoplay) 属性，识别自动播放是否成功开始是很棘手的。自动播放失败时**不会触发**任何事件。也没有抛出异常或可以设置回调，甚至在媒体元素上都没有标记来告诉你自动播放是否起作用。你实际能做的就是检查一些值，然后根据这些值猜测自动播放是否起作用。
 
-如果您能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。您可以通过侦听要在媒体元素上触发的[`play`](/zh-CN/docs/Web/API/HTMLMediaElement/play_event)事件来轻松实现此目的。
+如果您能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。您可以通过侦听要在媒体元素上触发的 [`play`](/zh-CN/docs/Web/API/HTMLMediaElement/play_event) 事件来轻松实现此目的。
 
-当媒体暂停后恢复时以及发生自动播放时都会发送`play`事件。这意味着第一次触发`play`事件时，您知道您的媒体是在页面打开后第一次启动的。
+当媒体暂停后恢复时以及发生自动播放时都会发送 `play` 事件。这意味着第一次触发 `play` 事件时，您知道您的媒体是在页面打开后第一次启动的。
 
 考虑以下 HTML 作为媒体元素:
 
@@ -82,7 +82,7 @@ audioElement.play();
 <video src="myvideo.mp4" autoplay onplay=handleFirstPlay(event)">
 ```
 
-这里我们有一个 {{HTMLElement("video")}} 元素，它设置了[`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay) 属性，并设置了 {{domxref("HTMLMediaElement.onplay", "onplay")}} 事件处理程序；该事件由名为`handleFirstPlay()` 的函数处理，该函数接收`play`事件作为输入。
+这里我们有一个 {{HTMLElement("video")}} 元素，它设置了 [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay) 属性，并设置了 {{domxref("HTMLMediaElement.onplay", "onplay")}} 事件处理程序；该事件由名为 `handleFirstPlay()` 的函数处理，该函数接收 `play` 事件作为输入。
 
 `handleFirstPlay()` 看起来像这样:
 
@@ -96,21 +96,21 @@ function handleFirstPlay(event) {
 }
 ```
 
-从{{domxref("Event")}}对象的{{domxref("Event.target", "target")}}获取对视频元素的引用后，该元素的 `onplay` 处理程序将设置为 `null`。这将阻止任何未来的播放事件被传递给处理程序。当文档位于后台选项卡时，如果用户暂停并恢复视频或浏览器自动暂停和恢复视频，则可能会发生这种情况。.
+从 {{domxref("Event")}} 对象的 {{domxref("Event.target", "target")}} 获取对视频元素的引用后，该元素的 `onplay` 处理程序将设置为 `null`。这将阻止任何未来的播放事件被传递给处理程序。当文档位于后台选项卡时，如果用户暂停并恢复视频或浏览器自动暂停和恢复视频，则可能会发生这种情况。.
 
 此时，您的网站或应用程序可以开始执行依赖于视频启动的任何操作。
 
 > **备注：** 此方法不区分自动播放和用户手动开始播放。
 
-### The play() method
+### play() 方法
 
-术语“自动播放”还指脚本尝试在处理用户输入事件的上下文之外触发包含音频的媒体播放的场景。这是通过调用媒体元素的{{domxref("HTMLMediaElement.play", "play()")}}方法来完成的。
+术语“自动播放”还指脚本尝试在处理用户输入事件的上下文之外触发包含音频的媒体播放的场景。这是通过调用媒体元素的 {{domxref("HTMLMediaElement.play", "play()")}} 方法来完成的。
 
 > **备注：** 强烈建议您尽可能使用自动播放属性，因为自动播放属性对自动播放首选项的支持比其他自动播放媒体的方式更广泛。它还让浏览器负责开始播放，并优化播放的时间。
 
 #### 示例：播放视频
 
-这个简单的示例播放文档中找到的第一个{{HTMLElement("video")}}元素。除非文档有权自动播放媒体，否则 `play()` 不会让播放开始。
+这个简单的示例播放文档中找到的第一个 {{HTMLElement("video")}} 元素。除非文档有权自动播放媒体，否则 `play()` 不会让播放开始。
 
 ```js
 document.querySelector("video").play();
@@ -118,7 +118,7 @@ document.querySelector("video").play();
 
 #### 示例：处理 play() 失败
 
-当您使用{{domxref("HTMLMediaElement.play", "play()")}}方法启动媒体时，更容易检测到自动播放媒体的故障。 `play()` 返回一个{{jsxref("Promise")}}，一旦媒体成功开始播放，该 Promise 就会被解析；当播放无法开始时（例如自动播放被拒绝），该 Promise 将被拒绝。当自动播放失败时，您可能希望为用户提供一种手动告诉浏览器要求用户授予播放媒体权限的方法。
+当您使用 {{domxref("HTMLMediaElement.play", "play()")}} 方法启动媒体时，更容易检测到自动播放媒体的故障。`play()` 返回一个 {{jsxref("Promise")}}，一旦媒体成功开始播放，该 Promise 就会被解析；当播放无法开始时（例如自动播放被拒绝），该 Promise 将被拒绝。当自动播放失败时，您可能希望为用户提供一种手动告诉浏览器要求用户授予播放媒体权限的方法。
 
 您可以使用这样的代码来完成这项工作:
 
@@ -141,9 +141,9 @@ if (startPlayPromise !== undefined) {
 }
 ```
 
-我们对 play() 的结果做的第一件事是确保它不是`undefined`。我们检查这一点是因为在早期版本的 HTML 规范中，play() 没有返回值。最近添加了返回一个允许您确定操作成功或失败的承诺。检查`undefined`可防止此代码在旧版本的 Web 浏览器上失败并出现错误。
+我们对 play() 的结果做的第一件事是确保它不是 `undefined`。我们检查这一点是因为在早期版本的 HTML 规范中，play() 没有返回值。最近添加了返回一个允许您确定操作成功或失败的承诺。检查 `undefined` 可防止此代码在旧版本的 Web 浏览器上失败并出现错误。
 
-然后我们向 Promise 添加一个 {{jsxref("Promise.catch", "catch()")}} 处理程序。这将查看错误的{{domxref("DOMException.name", "name")}}以查看它是否为 `NotAllowedError`。这表示由于权限问题导致播放失败，例如自动播放被拒绝。如果是这样的话，我们应该提供一个用户界面，让用户手动开始播放；这是由函数 `showPlayButton()` 处理的。
+然后我们向 Promise 添加一个 {{jsxref("Promise.catch", "catch()")}} 处理程序。这将查看错误的 {{domxref("DOMException.name", "name")}} 以查看它是否为 `NotAllowedError`。这表示由于权限问题导致播放失败，例如自动播放被拒绝。如果是这样的话，我们应该提供一个用户界面，让用户手动开始播放；这是由函数 `showPlayButton()` 处理的。
 
 任何其他错误都会被适当处理。
 
@@ -151,57 +151,57 @@ if (startPlayPromise !== undefined) {
 
 ## Autoplay using the Web Audio API
 
-In the [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API), a web site or app can start playing audio using the `start()` method on a source node linked to the {{domxref("AudioContext")}}. Doing so outside the context of handling a user input event is subject to autoplay rules.
+在 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 中，网站或应用程序可以使用链接到 {{domxref("AudioContext")}} 的源节点上的 `start()` 方法开始播放音频。在处理用户输入事件的上下文之外执行此操作受自动播放规则的约束。
 
-_More content will come soon; autoplay blocking is still being worked on at Mozilla. If others have it already, they are welcome to pitch in with this section..._
+_更多内容即将推出； Mozilla 仍在致力于自动播放阻止。如果其他人已经拥有它，欢迎他们参与本部分......_
 
-## The autoplay feature policy
+## 自动播放功能策略
 
-In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} header's [`autoplay`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/autoplay) directive is used to control which domains, if any, can be used to autoplay media. By default, the `autoplay` feature policy is set to `'self'` (_including the single quote characters_), indicating that autoplay is permitted as they're hosted on the same domain as the document.
+除了上述的浏览器端管理和对自动播放功能的控制之外，网络服务器也可以表示愿意让自动播放功能发挥作用。 {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} 标头的 [`autoplay`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/autoplay) 指令用于控制哪些域（如果有）可用于自动播放媒体。默认情况下， `autoplay` 功能策略设置为 `'self'`（包括单引号字符），表示允许自动播放，因为它们与文档托管在同一域中。
 
-You can also specify `'none'` to disable autoplay entirely, `'*'` to allow autoplay from all domains, or one or more specific origins from which media can be automatically played. These origins are separated by space characters.
+您还可以指定 `'none'` 以完全禁用自动播放， `'*'` 以允许来自所有域的自动播放，或指定一个或多个可以自动播放媒体的特定来源。这些源由空格字符分隔。
 
-> **备注：** The specified feature policy applies to the document and every {{HTMLElement("iframe")}} nested within it, unless those frames include an [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow), which sets a new feature policy for that frame and all frames nested within it.
+> **备注：** 指定的功能策略适用于文档以及嵌套在其中的每个 {{HTMLElement("iframe")}}，除非这些框架包含为该框架以及嵌套在其中的所有框架设置新的功能策略的 [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow)。
 
-When using the [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow) attribute on an `<iframe>` to specify a feature policy for that frame and its nested frames, you can also specify the value `'src'` to allow autoplay of media only from the same domain as that specified by the frame's [`src`](/zh-CN/docs/Web/HTML/Element/iframe#src) attribute.
+当使用 `<iframe>` 上的 [`allow`](/zh-CN/docs/Web/HTML/Element/iframe#allow) 属性指定该框架及其嵌套框架的功能策略时，您还可以指定值 `'src'` 以允许仅自动播放来自与该框架的 [`src`](/zh-CN/docs/Web/HTML/Element/iframe#src) 属性指定的域相同的域的媒体。
 
-### Example: Allowing autoplay only from the document's domain
+### 示例：仅允许来自文档域的自动播放
 
-To use the {{HTTPHeader("Permissions-Policy")}} header to only allow media to autoplay from the document's {{Glossary("origin")}}:
+使用 {{HTTPHeader("Permissions-Policy")}} 标头来仅允许媒体从文档的 {{Glossary("origin")}} 自动播放:
 
 ```plain
 Permissions-Policy: autoplay 'self'
 ```
 
-To do the same for an {{HTMLElement("iframe")}}:
+对 {{HTMLElement("iframe")}} 执行相同操作:
 
 ```html
 <iframe src="mediaplayer.html" allow="autoplay 'src'"> </iframe>
 ```
 
-### Example: Allowing autoplay and fullscreen mode
+### 示例：允许自动播放和全屏模式
 
-Adding [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API) permission to the previous example results in a `Permissions-Policy` header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.
+如果无论域如何都允许全屏访问，则向前面的示例添加 [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API) 权限会产生如下所示的 `Permissions-Policy` 标头；可以根据需要添加域限制。
 
 ```plain
 Permissions-Policy: autoplay 'self'; fullscreen
 ```
 
-The same permissions, grated using the `<iframe>` element's `allow` property, look like this:
+使用 `<iframe>` 元素的 `allow` 属性授予相同的权限，如下所示:
 
 ```html
 <iframe src="mediaplayer.html" allow="autoplay 'src'; fullscreen"> </iframe>
 ```
 
-### Example: Allowing autoplay from specific sources
+### 示例：允许来自特定来源的自动播放
 
-The `Permissions-Policy` header to allow media to be played from both the document's (or `<iframe>`'s) own domain and `https://example.media` looks like this:
+允许从文档（或 `<iframe>`）自己的域和 `https://example.media` 播放媒体的 `Permissions-Policy` 标头如下所示:
 
 ```plain
 Permissions-Policy: autoplay 'self' https://example.media
 ```
 
-An {{HTMLElement("iframe")}} can be written to specify that this autoplay policy should be applied to itself and any child frames would be written thusly:
+可以编写 {{HTMLElement("iframe")}} 来指定此自动播放策略应该应用于其自身，并且任何子框架都将这样编写:
 
 ```html
 <iframe
@@ -212,56 +212,56 @@ An {{HTMLElement("iframe")}} can be written to specify that this autoplay policy
 </iframe>
 ```
 
-### Example: Disabling autoplay
+### 示例：禁用自动播放
 
-Setting the `autoplay` feature policy to `'none'` disables autoplay entirely for the document or `<iframe>` and all nested frames. The HTTP header is:
+将 `autoplay` 功能策略设置为 `'none'` 会完全禁用文档或 `<iframe>` 以及所有嵌套框架的自动播放。 HTTP 标头是:
 
 ```plain
 Permissions-Policy: autoplay 'none'
 ```
 
-Using the `<iframe>`'s `allow` attribute:
+使用 `<iframe>` 的 `allow` 属性:
 
 ```html
 <iframe src="mediaplayer.html" allow="autoplay 'none'"> </iframe>
 ```
 
-## Best practices
+## 最佳实践
 
-Tips and recommended best practices to help you make the most of working with autoplay are offered here.
+此处提供了提示和推荐的最佳实践，可帮助您充分利用自动播放功能。
 
-### Handling autoplay failure with media controls
+### 使用媒体控件处理自动播放失败
 
-A common use case for autoplay is to automatically begin to play a video clip that goes along with an article, an advertisement, or a preview of the page's main functionality. To autoplay videos like these, you have two options: don't have an audio track, or have an audio track but configure the {{HTMLElement("video")}} element to mute the audio by default, like this:
+自动播放的一个常见用例是自动开始播放伴随文章、广告或页面主要功能预览的视频剪辑。要自动播放此类视频，您有两种选择：没有音轨，或者有音轨但配置 {{HTMLElement("video")}} 元素为静音，如下所示：
 
 ```html
 <video src="/videos/awesomevid.webm" controls autoplay muted></video>
 ```
 
-This video element is configured to include the user controls (typically play/pause, scrubbing through the video's timeline, volume control, and muting); also, since the [`muted`](/zh-CN/docs/Web/HTML/Element/video#muted) attribute is included, the video will autoplay but with the audio muted. The user has the option, however, of re-enabling the audio by clicking on the unmute button in the controls.
+该视频元素配置为包括用户控件（通常是播放/暂停、浏览视频时间线、音量控制和静音）；此外，由于包含 [`muted`](/zh-CN/docs/Web/HTML/Element/video#muted) 属性，视频将自动播放，但音频静音。不过，用户可以选择通过单击控件中的取消静音按钮来重新启用音频。
 
-## Browser configuration options
+## 浏览器配置选项
 
-Browsers may have preferences that control the way autoplay works, or how autoplay blocking is handled. Here, any such preferences that may be of special significance or importance to you as a web developer are listed. These include any that may aid in testing or debugging as well as any that could be set in a way that you need to be prepared to handle.
+浏览器可能具有控制自动播放工作方式或如何处理自动播放阻止的首选项。此处列出了对您作为 Web 开发人员可能具有特殊意义或重要性的任何此类首选项。其中包括任何可能有助于测试或调试的内容，以及任何可以以您需要准备处理的方式设置的内容。
 
 ### Firefox
 
 - `media.allowed-to-play.enabled`
-  - : A Boolean preference which specifies whether or not the {{domxref("HTMLMediaElement.allowedToPlay")}} property is exposed to the web. This is currently `false` by default (except in nightly builds, where it's `true` by default). If this is `false`, the `allowedToPlay` property is missing from the `HTMLMediaElement` interface, and is thus not present on either {{HTMLElement("audio")}} or {{HTMLElement("video")}} elements.
+  - : 布尔首选项，指定 {{domxref("HTMLMediaElement.allowedToPlay")}} 属性是否向 Web 公开。目前默认情况下这是 `false`（除了在夜间构建中，默认情况下为 `true`）。如果此值为 `false`，则  `HTMLMediaElement` 接口中缺少 allowedToPlay 属性，因此该属性不会出现在 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素上。
 - `media.autoplay.allow-extension-background-pages`
-  - : This Boolean preference, if `true`, allows browser extensions' background scripts to autoplay audio media. Setting this value to `false` disables this capability. The default value is `true`.
+  - : 布尔首选项，如果为 `true`，则允许浏览器扩展的后台脚本自动播放音频媒体。将此值设置为 `false` 将禁用此功能。默认值是 `true`。
 - `media.autoplay.allow-muted`
-  - : A Boolean preference which if `true` (the default) allows audio media which is currently muted to be automatically played. If this has been changed to `false`, media with an audio track will not be permitted to play even if muted.
+  - : 布尔首选项，如果为 `true`（默认值），则允许自动播放当前静音的音频媒体。如果将其更改为 `false`，则即使静音，也不允许播放带有音轨的媒体。
 - `media.autoplay.block-webaudio`
-  - : A Boolean preference which indicates whether or not to apply autoplay blocking to the [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API). The default is `true`.
+  - : 布尔首选项，指示是否对 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 应用阻止自动播放。默认为 `true`。
 - `media.autoplay.default`
-  - : An integer preference which specifies whether per-domain configuration for autoplay support by default is allowed (`0`), blocked (`1`), or prompt-on-use (`2`). The default value is `0`.
+  - : 整数首选项，指定默认情况下是否允许 (`0`)、阻止 (`1`) 或使用提示 (`2`) 的自动播放支持的每个域配置。默认值为 `0`。
 - `media.autoplay.enabled.user-gestures-needed` (Nightly builds only)
-  - : A Boolean preference which controls whether or not detection of user gestures is allowed to override the setting of `media.autoplay.default`. If `media.autoplay.default` is _not_ set to `0` (autoplay allowed by default), this preference being `true` allows autoplay of media with audio tracks anyway if the page has been activated by user gestures, and media that isn't audible is not restricted at all.
+  - : 布尔首选项，用于控制是否允许通过检测用户手势来覆盖 `media.autoplay.default` 的设置。如果 `media.autoplay.default` （默认情况下允许自动播放）未设为 `0`，则如果页面已被用户手势激活，则此首选项设置为 `true` 时，无论如何都允许自动播放带音轨的媒体，而不带音轨的媒体则完全不受限制。
 - `media.block-autoplay-until-in-foreground`
-  - : A Boolean preference which indicates whether or not media playback is blocked when started on a background tab. The default value, `true`, means that even when otherwise available, autoplay won't take place until after a tab is brought to the foreground. This prevents the distracting situation in which a tab begins playing sound and the user can't find the tab among all their tabs and windows.
+  - : 布尔首选项，指示在后台选项卡上启动时是否阻止媒体播放。默认值 `true` 意味着即使其他方式可用，在选项卡置于前台之前也不会进行自动播放。这可以防止出现分散注意力的情况，即选项卡开始播放声音并且用户无法在所有选项卡和窗口中找到该选项卡。
 
-## See also
+## 参见
 
 - [Web media technologies](/zh-CN/docs/Web/Media)
 - [Video and audio content](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) (Learning guide)
