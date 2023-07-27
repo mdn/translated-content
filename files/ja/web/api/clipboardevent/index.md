@@ -1,6 +1,8 @@
 ---
 title: ClipboardEvent
 slug: Web/API/ClipboardEvent
+l10n:
+  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
 ---
 
 {{APIRef("Clipboard API")}}
@@ -14,14 +16,14 @@ slug: Web/API/ClipboardEvent
 - {{domxref("ClipboardEvent.ClipboardEvent", "ClipboardEvent()")}}
   - : 指定した引数で `ClipboardEvent` イベントを生成します。
 
-## プロパティ
+## インスタンスプロパティ
 
 _親である {{domxref("Event")}} から継承したプロパティもあります。_
 
-- {{domxref("ClipboardEvent.clipboardData")}} {{readonlyInline}}
+- {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
   - : ユーザーが開始した {{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}} 操作によって影響を受けたデータとその MIME タイプを含む {{domxref("DataTransfer")}} オブジェクト。
 
-## メソッド
+## インスタンスメソッド
 
 _固有のメソッドはありません。親である {{domxref("Event")}} から継承したメソッドがあります。_
 
