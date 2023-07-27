@@ -12,7 +12,7 @@ Cette méthode est à peu près équivalente à&nbsp;:
 
 ```js
 newNode.appendChild(range.extractContents());
-range.insertNode(newNode)
+range.insertNode(newNode);
 ```
 
 Après déplacement, les bornes du `range` incluent `newNode`.

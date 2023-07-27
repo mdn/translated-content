@@ -1,5 +1,5 @@
 ---
-title: '<u> : l''élément d''annotation non textuelle'
+title: "<u> : l'élément d'annotation non textuelle"
 slug: Web/HTML/Element/u
 translation_of: Web/HTML/Element/u
 ---
@@ -84,7 +84,7 @@ Pour souligner du texte sans que cela ait une quelconque portée sémantique, on
 
 ```html
 <span class="underline">Le plat du jour</span>
-<br>
+<br />
 Soupe de potiron avec un soupçon de noix de muscade
 ```
 

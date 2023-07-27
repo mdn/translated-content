@@ -7,6 +7,7 @@ original_slug: Web/HTML/Elemento/param
 ### Definición
 
 - **param** de "parameter" = parámetro. Permite especificar parámetros de ejecución para un objeto.
+
   - : **Sus etiquetas son**: `<param>` (solo tiene una).
 
     **Crea una caja**: No.

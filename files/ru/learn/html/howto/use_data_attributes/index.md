@@ -20,7 +20,7 @@ original_slug: Web/Guide/HTML/Using_data_attributes
   data-columns="3"
   data-index-number="12314"
   data-parent="cars">
-...
+  ...
 </article>
 ```
 
@@ -53,10 +53,10 @@ article::before {
 Также можно использовать [селекторы атрибутов](/ru/docs/Web/CSS/Attribute_selectors) в CSS для изменения стилей в соответствии с данным:
 
 ```css
-article[data-columns='3']{
+article[data-columns="3"] {
   width: 400px;
 }
-article[data-columns='4']{
+article[data-columns="4"] {
   width: 600px;
 }
 ```

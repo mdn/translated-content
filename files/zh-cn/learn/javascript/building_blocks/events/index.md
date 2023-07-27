@@ -57,7 +57,9 @@ slug: Learn/JavaScript/Building_blocks/Events
 ```
 
 ```css hidden
-button { margin: 10px };
+button {
+  margin: 10px;
+}
 ```
 
 然后我们有一些 JavaScript。我们将在下一节中更详细地讨论这个问题，但现在我们可以说：它为按钮的 `"click"` 事件添加了一个事件处理器，该处理器对该事件的反应是将页面背景设置为随机颜色：
@@ -248,7 +250,7 @@ function bgChange() {
 }
 ```
 
-在 web 上发现的最早的注册事件处理器的方法涉及到[*事件处理器 HTML 属性*](/zh-CN/docs/Web/HTML/Attributes#event_handler_attributes)（或*内联事件处理器*），如示例所示。属性值就是你想在事件发生时运行的 JavaScript 代码。上面的示例调用了同一页面上 {{htmlelement("script")}} 元素内定义的一个函数，但你也可以直接在属性内插入 JavaScript，比如说：
+在 web 上发现的最早的注册事件处理器的方法涉及到[_事件处理器 HTML 属性_](/zh-CN/docs/Web/HTML/Attributes#event_handler_attributes)（或*内联事件处理器*），如示例所示。属性值就是你想在事件发生时运行的 JavaScript 代码。上面的示例调用了同一页面上 {{htmlelement("script")}} 元素内定义的一个函数，但你也可以直接在属性内插入 JavaScript，比如说：
 
 ```html
 <button onclick="alert('你好，这是来自旧式事件处理器的一条消息');">
@@ -489,7 +491,9 @@ HTML 代码看起来像这样：
       src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
       type="video/webm" />
     <p>
-      你的浏览器不支持 HTML 视频，这里有视频的<a href="rabbit320.mp4">替代链接</a>。
+      你的浏览器不支持 HTML 视频，这里有视频的<a href="rabbit320.mp4"
+        >替代链接</a
+      >。
     </p>
   </video>
 </div>
@@ -582,7 +586,9 @@ box.addEventListener("click", () => box.classList.add("hidden"));
       src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
       type="video/webm" />
     <p>
-      你的浏览器不支持 HTML 视频，这里有视频的<a href="rabbit320.mp4">替代链接</a>。
+      你的浏览器不支持 HTML 视频，这里有视频的<a href="rabbit320.mp4"
+        >替代链接</a
+      >。
     </p>
   </video>
 </div>

@@ -72,10 +72,10 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 在 {{htmlelement("script")}} 元素中，添加以下代码。这会存储对 {{htmlelement("select")}} 和 {{htmlelement("pre")}} 元素的引用，并对 `<select>` 元素添加一个事件监听器，以便在用户选择一个新的值时，新值将作为参数传递给名为 `updateDisplay()` 的函数。
 
 ```js
-const verseChoose = document.querySelector('select');
-const poemDisplay = document.querySelector('pre');
+const verseChoose = document.querySelector("select");
+const poemDisplay = document.querySelector("pre");
 
-verseChoose.addEventListener('change', () => {
+verseChoose.addEventListener("change", () => {
   const verse = verseChoose.value;
   updateDisplay(verse);
 });
@@ -84,9 +84,7 @@ verseChoose.addEventListener('change', () => {
 下面让我们定义 `updateDisplay()` 函数。首先，将以下内容放在你之前的代码块下方——这是该函数的空壳。
 
 ```js
-function updateDisplay(verse) {
-
-}
+function updateDisplay(verse) {}
 ```
 
 让我们将通过构造一个指向我们要加载的文本文件的相对 URL 来开始编写函数，因为我们稍后需要它。任何时候 {{htmlelement("select")}} 元素的值都与所选的 {{htmlelement("option")}} 内的文本相同（除非在值属性中指定了不同的值）——例如“Verse 1”。相应的诗歌文本文件是“verse1.txt”，并与 HTML 文件位于同一目录中，因此只需要文件名即可。
@@ -94,7 +92,7 @@ function updateDisplay(verse) {
 但是，web 服务器往往是区分大小写的，且文件名没有空格。要将“Verse 1”转换为“verse1.txt”，我们需要将 `V` 转换为小写、删除空格，并在末尾添加“.txt”。这可以通过 {{jsxref("String.replace", "replace()")}}、{{jsxref("String.toLowerCase", "toLowerCase()")}} 和[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)来完成。在 `updateDisplay()` 函数中添加以下代码：
 
 ```js
-verse = verse.replace(' ', '').toLowerCase();
+verse = verse.replace(" ", "").toLowerCase();
 const url = `${verse}.txt`;
 ```
 
@@ -117,10 +115,10 @@ fetch(url)
   })
   // 若成功调用 response.text()，会使用返回的文本来调用 `then()` 处理器，
   // 然后我们将其拷贝到 `poemDisplay` 框中。
-  .then((text) => poemDisplay.textContent = text)
+  .then((text) => (poemDisplay.textContent = text))
   // 捕获可能出现的任何错误，
   // 并在 `poemDisplay` 框中显示一条消息。
-  .catch((error) => poemDisplay.textContent = `获取诗歌失败：${error}`);
+  .catch((error) => (poemDisplay.textContent = `获取诗歌失败：${error}`));
 ```
 
 这里有很多内容需要展开。
@@ -138,8 +136,8 @@ fetch(url)
 此示例的一个问题是，它在第一次加载时不会显示任何诗歌。要解决此问题，请在代码的最后（`</script>` 结束标签之前）添加以下两行代码，以默认加载第一首诗歌，并确保 {{htmlelement("select")}} 元素始终显示正确的值：
 
 ```js
-updateDisplay('Verse 1');
-verseChoose.value = 'Verse 1';
+updateDisplay("Verse 1");
+verseChoose.value = "Verse 1";
 ```
 
 ### 在服务端运行示例
@@ -163,7 +161,7 @@ verseChoose.value = 'Verse 1';
 第一个使用 Fetch 的代码块可以在 JavaScript 的开头找到：
 
 ```js
-fetch('products.json')
+fetch("products.json")
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP 错误：${response.status}`);
@@ -220,15 +218,14 @@ fetch(url)
 const request = new XMLHttpRequest();
 
 try {
-  request.open('GET', 'products.json');
+  request.open("GET", "products.json");
 
-  request.responseType = 'json';
+  request.responseType = "json";
 
-  request.addEventListener('load', () => initialize(request.response));
-  request.addEventListener('error', () => console.error('XHR error'));
+  request.addEventListener("load", () => initialize(request.response));
+  request.addEventListener("error", () => console.error("XHR error"));
 
   request.send();
-
 } catch (error) {
   console.error(`XHR error ${request.status}`);
 }

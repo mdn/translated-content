@@ -27,7 +27,7 @@ Pour en savoir plus sur les fenêtres d'affichage dans les différents navigateu
 Un site type, optimisé pour les mobiles, contient quelque chose comme ce qui suit :
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 ```
 
 La propriété `width` contrôle la taille de la zone d'affichage. Elle peut être définie sur un nombre spécifique de pixels comme `width=600` ou sur la valeur spéciale `device-width`, qui est la largeur de l'écran en pixels CSS à une échelle de 100%. (Il existe des valeurs `height` et `device-height` correspondantes, qui peuvent être utiles pour les pages comportant des éléments qui changent de taille ou de position en fonction de la hauteur du viewport).
@@ -55,7 +55,7 @@ Les sites peuvent définir leur viewport à une taille spécifique. Par exemple,
 Pour les pages qui définissent une échelle initiale ou maximale, cela signifie que la propriété `width` se traduit en fait par une largeur _minimum_ de viewport. Par exemple, si votre mise en page nécessite une largeur d'au moins 500 pixels, vous pouvez utiliser le balisage suivant. Lorsque la largeur de l'écran est supérieure à 500 pixels, le navigateur élargira la fenêtre d'affichage (plutôt que de zoomer) pour s'adapter à l'écran :
 
 ```html
-<meta name="viewport" content="width=500, initial-scale=1">
+<meta name="viewport" content="width=500, initial-scale=1" />
 ```
 
 Les autres [attributs](/fr/docs/Web/HTML/Element/meta#attributes) disponibles sont `minimum-scale`, `maximum-scale` et `user-scalable`. Ces propriétés affectent l'échelle et la largeur initiales, ainsi que la limitation des changements de niveau de zoom.
@@ -63,13 +63,15 @@ Les autres [attributs](/fr/docs/Web/HTML/Element/meta#attributes) disponibles so
 Tous les navigateurs mobiles ne gèrent pas les changements d'orientation de la même manière. Par exemple, Mobile Safari se contente souvent de zoomer la page lors du passage du portrait au paysage, au lieu de la disposer comme elle le ferait si elle était initialement chargée en paysage. Si les développeurs et développeuses Web veulent que leurs paramètres d'échelle restent cohérents lors du changement d'orientation sur l'iPhone, ils/elles doivent ajouter une valeur `maximum-scale` pour empêcher ce zoom, ce qui a l'effet secondaire parfois indésirable d'empêcher les utilisateurs/utilisatrices de faire un zoom avant&nbsp;:
 
 ```html
-<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
 ```
 
 Supprimer le petit zoom appliqué par de nombreux smartphones en définissant les valeurs d'échelle initiale et d'échelle minimale à 0,86. Le résultat est que le défilement horizontal est supprimé dans n'importe quelle orientation et que l'utilisateur peut zoomer s'il le souhaite.
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86" />
 ```
 
 ## Tailles communes des fenêtres d'affichage pour les appareils mobiles et les tablettes

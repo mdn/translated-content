@@ -1,5 +1,5 @@
 ---
-title: '<sup> : l''élément de mise en exposant'
+title: "<sup> : l'élément de mise en exposant"
 slug: Web/HTML/Element/sup
 translation_of: Web/HTML/Element/sup
 ---
@@ -49,10 +49,7 @@ Voici quelques cas d'utilisation (non exhaustifs) pour `<sup>` :
 #### HTML
 
 ```html
-<p>
-  Voici la fonction exponentielle :
-  e<sup>x</sup>.
-</p>
+<p>Voici la fonction exponentielle : e<sup>x</sup>.</p>
 ```
 
 #### Résultat
@@ -66,9 +63,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
 #### HTML
 
 ```html
-<p>
-  Robert a présenté son rapport à M<sup>lle</sup> Bernard.
-</p>
+<p>Robert a présenté son rapport à M<sup>lle</sup> Bernard.</p>
 ```
 
 #### Résultat
@@ -81,8 +76,7 @@ Bien que, techniquement, le lettrage supérieur ne corresponde pas à la mise en
 
 ```html
 <p>
-  Voici comment le nombre ordinal cinquième est écrit dans
-  différentes langues
+  Voici comment le nombre ordinal cinquième est écrit dans différentes langues
 </p>
 <ul>
   <li>en français : 5<sup>e</sup></li>

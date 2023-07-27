@@ -48,14 +48,20 @@ Cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Att
 
 <menu type="context" id="popup-menu">
   <menuitem type="checkbox" checked>Une case à cocher</menuitem>
-  <hr>
-  <menuitem type="command" label="Cette commande ne fait rien" icon="https://developer.mozilla.org/static/img/favicon144.png">
+  <hr />
+  <menuitem
+    type="command"
+    label="Cette commande ne fait rien"
+    icon="https://developer.mozilla.org/static/img/favicon144.png">
     Les commandes n'affichent pas leurs contenus.
   </menuitem>
-  <menuitem type="command" label="Cette commande contient du JavAScript" onclick="alert('command clicked')">
+  <menuitem
+    type="command"
+    label="Cette commande contient du JavAScript"
+    onclick="alert('command clicked')">
     Les commandes n'affichent pas leurs contenus.
   </menuitem>
-  <hr>
+  <hr />
   <menuitem type="radio" radiogroup="group1">Bouton radio 1</menuitem>
   <menuitem type="radio" radiogroup="group1">Bouton radio 2</menuitem>
 </menu>

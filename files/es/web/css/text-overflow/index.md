@@ -85,10 +85,18 @@ p {
 ### HTML
 
 ```html
-<p class="overflow-visible">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-<p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-<p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-<p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="overflow-visible">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
+<p class="overflow-clip">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
+<p class="overflow-ellipsis">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
+<p class="overflow-string">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
 ```
 
 ### Result

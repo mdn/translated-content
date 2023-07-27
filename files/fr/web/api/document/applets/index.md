@@ -11,7 +11,7 @@ translation_of: Web/API/Document/applets
 ### Syntaxe
 
 ```js
-nodeList = document.applets
+nodeList = document.applets;
 ```
 
 ### Exemple

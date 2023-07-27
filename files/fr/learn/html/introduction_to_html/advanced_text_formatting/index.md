@@ -240,7 +240,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_interactif_balisez_une_série_de_définitions', 700, 350, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Apprentissage_interactif_balisez_une_série_de_définitions', 700, 350) }}
 
 ## Citations
 
@@ -459,7 +459,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_Qui_a_dit_quoi_', 700, 450, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Apprentissage_actif_Qui_a_dit_quoi_', 700, 450) }}
 
 ## Abréviations
 
@@ -618,7 +618,7 @@ textarea.onkeyup = function () {
 };
 ```
 
-{{ EmbedLiveSample('Apprentissage_actif_marquer_une_abréviation', 700, 300, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('Apprentissage_actif_marquer_une_abréviation', 700, 300) }}
 
 ## Balisage des détails de contact
 

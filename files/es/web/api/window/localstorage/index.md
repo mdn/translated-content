@@ -33,7 +33,7 @@ Un objeto {{DOMxRef("Storage")}} que se puede utilizar para acceder al espacio d
 El siguiente código accede al objeto local {{DOMxRef("Storage")}} actual y agrega un ítem al mismo usando {{DOMxRef("Storage.setItem()")}}.
 
 ```js
-localStorage.setItem('miGato', 'Juan');
+localStorage.setItem("miGato", "Juan");
 ```
 
 > **Nota:** Por favor ver el articulo [Usando la Web Storage API](/es/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) para un ejemplo completo.
@@ -41,13 +41,13 @@ localStorage.setItem('miGato', 'Juan');
 La sintaxis para leer el ítem almacenado en `localStorage` es la siguiente:
 
 ```js
-var cat = localStorage.getItem('miGato');
+var cat = localStorage.getItem("miGato");
 ```
 
 La sintaxis para eliminar el ítem almacenado en `localStorage` es la siguiente:
 
 ```js
-localStorage.removeItem('miGato');
+localStorage.removeItem("miGato");
 ```
 
 La sintaxis para eliminar todos los ítems almacenados en `localStorage` es la siguiente:

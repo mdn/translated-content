@@ -11,7 +11,7 @@ La propriété en lecture seule **`HTMLFormElement.length`** retourne le nombre 
 ## Syntaxe
 
 ```js
-integer = form.length
+integer = form.length;
 ```
 
 ## Exemple

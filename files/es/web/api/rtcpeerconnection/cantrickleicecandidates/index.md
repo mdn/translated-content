@@ -31,12 +31,12 @@ function waitToCompleteIceGathering(pc) {
       "icegatheringstatechange",
       (e) =>
         e.target.iceGatheringState === "complete" &&
-        resolve(pc.localDescription)
+        resolve(pc.localDescription),
     );
   });
 }
 
-// El siguiente código podría usarse para manejar una oferta de un par 
+// El siguiente código podría usarse para manejar una oferta de un par
 // cuando no se sabe si es compatible con trickle ICE.
 async function newPeer(remoteOffer) {
   await pc.setRemoteDescription(remoteOffer);
@@ -50,7 +50,7 @@ async function newPeer(remoteOffer) {
 
 pc.addEventListener(
   "icecandidate",
-  (e) => pc.canTrickleIceCandidates && sendCandidateToPeer(e.candidate)
+  (e) => pc.canTrickleIceCandidates && sendCandidateToPeer(e.candidate),
 );
 ```
 

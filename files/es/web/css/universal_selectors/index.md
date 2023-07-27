@@ -33,7 +33,7 @@ El asterisco es opcional con selectores simples. Por ejemplo, `*.warning` y `.wa
 ### CSS
 
 ```css
-* [lang^=en] {
+* [lang^="en"] {
   color: green;
 }
 
@@ -46,7 +46,7 @@ El asterisco es opcional con selectores simples. Por ejemplo, `*.warning` y `.wa
 }
 
 .floating {
-  float: left
+  float: left;
 }
 
 /* despejar automáticamente el siguiente hermano después de un elemento flotante */

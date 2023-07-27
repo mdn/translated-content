@@ -119,24 +119,26 @@ if (shoppingDone === true) {
 ```
 
 ```js
-const select = document.querySelector('select');
-const para = document.querySelector('p');
+const select = document.querySelector("select");
+const para = document.querySelector("p");
 
-select.addEventListener('change', setWeather);
+select.addEventListener("change", setWeather);
 
 function setWeather() {
   const choice = select.value;
 
-  if (choice === 'sunny') {
-    para.textContent = '阳光明媚。穿上短裤吧！去海滩，或公园，吃个冰淇淋。';
-  } else if (choice === 'rainy') {
-    para.textContent = '外面下着雨；带上雨衣和雨伞，不要在外面呆太久。';
-  } else if (choice === 'snowing') {
-    para.textContent = '大雪纷飞，天寒地冻！最好呆在家里喝杯热巧克力，或者去堆个雪人。';
-  } else if (choice === 'overcast') {
-    para.textContent = '虽然没有下雨，但天空灰蒙蒙的，随时都可能变天，所以要带一件雨衣以防万一。';
+  if (choice === "sunny") {
+    para.textContent = "阳光明媚。穿上短裤吧！去海滩，或公园，吃个冰淇淋。";
+  } else if (choice === "rainy") {
+    para.textContent = "外面下着雨；带上雨衣和雨伞，不要在外面呆太久。";
+  } else if (choice === "snowing") {
+    para.textContent =
+      "大雪纷飞，天寒地冻！最好呆在家里喝杯热巧克力，或者去堆个雪人。";
+  } else if (choice === "overcast") {
+    para.textContent =
+      "虽然没有下雨，但天空灰蒙蒙的，随时都可能变天，所以要带一件雨衣以防万一。";
   } else {
-    para.textContent = '';
+    para.textContent = "";
   }
 }
 ```
@@ -161,12 +163,12 @@ function setWeather() {
 我们想特别提到测试布尔值（`true` / `false`），和一个你会频繁遇到的通用模式，任何不是 `false`、`undefined`、`null`、`0`、`NaN`、或一个空字符串（`''`）在作为条件语句进行测试时实际返回 `true`，因此可以简单地使用变量名称来测试它是否为真，甚至是否存在（即它不是 undefined 的）。例如：
 
 ```js
-let cheese = 'Cheddar';
+let cheese = "Cheddar";
 
 if (cheese) {
-  console.log('耶！这里有一些制作奶酪吐司的奶酪。');
+  console.log("耶！这里有一些制作奶酪吐司的奶酪。");
 } else {
-  console.log('今天你的吐司上没有奶酪了。');
+  console.log("今天你的吐司上没有奶酪了。");
 }
 ```
 
@@ -189,7 +191,7 @@ if (shoppingDone) {
 将一个 `if...else` 语句放在另外一个中嵌套是完全可行的。例如，我们可以更新我们的天气预报应用程序，以显示更多的选择，具体取决于温度：
 
 ```js
-if (choice === 'sunny') {
+if (choice === "sunny") {
   if (temperature < 86) {
     para.textContent = `外面现在是 ${temperature} 华氏度——风和日丽。让我们去海滩或公园，吃个冰激凌。`;
   } else if (temperature >= 86) {
@@ -210,22 +212,28 @@ if (choice === 'sunny') {
 举一个逻辑与的例子，刚才的那段代码片段可以写成下面这样：
 
 ```js
-if (choice === 'sunny' && temperature < 86) {
-  para.textContent = '外面现在是' + temperature + ' 华氏度——风和日丽。让我们去海滩或公园，吃个冰激凌。';
-} else if (choice === 'sunny' && temperature >= 86) {
-  para.textContent = '外面现在是' + temperature + ' 华氏度——很热！如果你想出去，一定要涂抹一些防晒霜。';
+if (choice === "sunny" && temperature < 86) {
+  para.textContent =
+    "外面现在是" +
+    temperature +
+    " 华氏度——风和日丽。让我们去海滩或公园，吃个冰激凌。";
+} else if (choice === "sunny" && temperature >= 86) {
+  para.textContent =
+    "外面现在是" +
+    temperature +
+    " 华氏度——很热！如果你想出去，一定要涂抹一些防晒霜。";
 }
 ```
 
-所以，只有当 `choice === 'sunny'` *并且* `temperature < 86` 都返回 `true` 时，第一个代码块才能运行。
+所以，只有当 `choice === 'sunny'` _并且_ `temperature < 86` 都返回 `true` 时，第一个代码块才能运行。
 
 让我们快速看一个逻辑或的例子：
 
 ```js
-if (iceCreamVanOutside || houseStatus === 'on fire') {
-  console.log('你需要赶紧离开这间房子。');
+if (iceCreamVanOutside || houseStatus === "on fire") {
+  console.log("你需要赶紧离开这间房子。");
 } else {
-  console.log('或许你应该呆在这里。');
+  console.log("或许你应该呆在这里。");
 }
 ```
 
@@ -244,7 +252,7 @@ if (!(iceCreamVanOutside || houseStatus === 'on fire')) {
 可以在任何结构中随意合并很多个逻辑表达式。接下来的例子将会只在**或运算符**两边的语句同时返回 true 时才会执行代码，这也就意味着整个**与运算符**语句将会返回 true：
 
 ```js
-if ((x === 5 || y > 3 || z <= 10) && (loggedIn || userName === 'Steve')) {
+if ((x === 5 || y > 3 || z <= 10) && (loggedIn || userName === "Steve")) {
   // 执行代码
 }
 ```
@@ -318,29 +326,31 @@ switch (表达式) {
 ```
 
 ```js
-const select = document.querySelector('select');
-const para = document.querySelector('p');
+const select = document.querySelector("select");
+const para = document.querySelector("p");
 
-select.addEventListener('change', setWeather);
+select.addEventListener("change", setWeather);
 
 function setWeather() {
   const choice = select.value;
 
   switch (choice) {
-    case 'sunny':
-      para.textContent = '阳光明媚。穿上短裤吧！去海滩，或公园，吃个冰淇淋。';
+    case "sunny":
+      para.textContent = "阳光明媚。穿上短裤吧！去海滩，或公园，吃个冰淇淋。";
       break;
-    case 'rainy':
-      para.textContent = '外面下着雨；带上雨衣和雨伞，不要在外面呆太久。';
+    case "rainy":
+      para.textContent = "外面下着雨；带上雨衣和雨伞，不要在外面呆太久。";
       break;
-    case 'snowing':
-      para.textContent = '大雪纷飞，天寒地冻！最好呆在家里喝杯热巧克力，或者去堆个雪人。';
+    case "snowing":
+      para.textContent =
+        "大雪纷飞，天寒地冻！最好呆在家里喝杯热巧克力，或者去堆个雪人。";
       break;
-    case 'overcast':
-      para.textContent = '虽然没有下雨，但天空灰蒙蒙的，随时都可能变天，所以要带一件雨衣以防万一。';
+    case "overcast":
+      para.textContent =
+        "虽然没有下雨，但天空灰蒙蒙的，随时都可能变天，所以要带一件雨衣以防万一。";
       break;
     default:
-      para.textContent = '';
+      para.textContent = "";
   }
 }
 ```
@@ -361,8 +371,8 @@ condition ? 运行这段代码 : 否则，运行这段代码
 
 ```js
 const greeting = isBirthday
-  ? '小王生日快乐，祝你有个美好的一天！'
-  : '小王早上好。';
+  ? "小王生日快乐，祝你有个美好的一天！"
+  : "小王早上好。";
 ```
 
 在这里我们有一个变量叫做 `isBirthday`——如果它是 `true`，我们给客人一个生日快乐的消息；如果不是，改为标准的每日问候。
@@ -382,18 +392,19 @@ const greeting = isBirthday
 ```
 
 ```js
-const select = document.querySelector('select');
-const html = document.querySelector('html');
-document.body.style.padding = '10px';
+const select = document.querySelector("select");
+const html = document.querySelector("html");
+document.body.style.padding = "10px";
 
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
   html.style.color = textColor;
 }
 
-select.addEventListener('change', () => select.value === 'black'
-  ? update('black', 'white')
-  : update('white', 'black')
+select.addEventListener("change", () =>
+  select.value === "black"
+    ? update("black", "white")
+    : update("white", "black"),
 );
 ```
 
@@ -450,9 +461,7 @@ select.addEventListener('change', () => select.value === 'black'
 </div>
 
 <h2>可编辑代码</h2>
-<p class="a11y-label">
-  按下 Esc 以将焦点移出代码区（Tab 键添加制表符）。
-</p>
+<p class="a11y-label">按下 Esc 以将焦点移出代码区（Tab 键添加制表符）。</p>
 
 <textarea id="code" class="playable-code" style="height: 400px;width: 95%">
 const select = document.querySelector('select');
@@ -528,9 +537,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -538,21 +547,21 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = '查看解答';
+  solution.value = "查看解答";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-  if (solution.value === '查看解答') {
+solution.addEventListener("click", function () {
+  if (solution.value === "查看解答") {
     textarea.value = solutionEntry;
-    solution.value = '隐藏解答';
+    solution.value = "隐藏解答";
   } else {
     textarea.value = userEntry;
-    solution.value = '查看解答';
+    solution.value = "查看解答";
   }
   updateCode();
 });
@@ -583,20 +592,20 @@ function createCalendar(days, choice) {
   }
 }
 
-createCalendar(31,'January');`
+createCalendar(31,'January');`;
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -608,7 +617,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -620,10 +632,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === '查看解答') {
+  if (solution.value === "查看解答") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -661,9 +673,7 @@ textarea.onkeyup = function(){
 </div>
 
 <h2>可编辑代码</h2>
-<p class="a11y-label">
-  按下 Esc 以将焦点移出代码区（Tab 键添加制表符）。
-</p>
+<p class="a11y-label">按下 Esc 以将焦点移出代码区（Tab 键添加制表符）。</p>
 
 <textarea id="code" class="playable-code" style="height: 450px;width: 95%">
 const select = document.querySelector('select');
@@ -678,11 +688,12 @@ select.addEventListener('change', () => {
 function update(bgColor, textColor) {
   html.style.backgroundColor = bgColor;
   html.style.color = textColor;
-}</textarea>
+}</textarea
+>
 
 <div class="playable-buttons">
-  <input id="reset" type="button" value="重置">
-  <input id="solution" type="button" value="查看解答">
+  <input id="reset" type="button" value="重置" />
+  <input id="solution" type="button" value="查看解答" />
 </div>
 ```
 
@@ -709,9 +720,9 @@ body {
 ```
 
 ```js hidden
-const textarea = document.getElementById('code');
-const reset = document.getElementById('reset');
-const solution = document.getElementById('solution');
+const textarea = document.getElementById("code");
+const reset = document.getElementById("reset");
+const solution = document.getElementById("solution");
 let code = textarea.value;
 let userEntry = textarea.value;
 
@@ -719,21 +730,21 @@ function updateCode() {
   eval(textarea.value);
 }
 
-reset.addEventListener('click', function() {
+reset.addEventListener("click", function () {
   textarea.value = code;
   userEntry = textarea.value;
   solutionEntry = jsSolution;
-  solution.value = '查看解答';
+  solution.value = "查看解答";
   updateCode();
 });
 
-solution.addEventListener('click', function() {
-    if (solution.value === '查看解答') {
+solution.addEventListener("click", function () {
+  if (solution.value === "查看解答") {
     textarea.value = solutionEntry;
-    solution.value = '隐藏解答';
+    solution.value = "隐藏解答";
   } else {
     textarea.value = userEntry;
-    solution.value = '查看解答';
+    solution.value = "查看解答";
   }
   updateCode();
 });
@@ -770,15 +781,15 @@ function update(bgColor, textColor) {
 
 let solutionEntry = jsSolution;
 
-textarea.addEventListener('input', updateCode);
-window.addEventListener('load', updateCode);
+textarea.addEventListener("input", updateCode);
+window.addEventListener("load", updateCode);
 
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
-textarea.onkeydown = function(e){
+textarea.onkeydown = function (e) {
   if (e.keyCode === 9) {
     e.preventDefault();
-    insertAtCaret('\t');
+    insertAtCaret("\t");
   }
 
   if (e.keyCode === 27) {
@@ -790,7 +801,10 @@ function insertAtCaret(text) {
   const scrollPos = textarea.scrollTop;
   let caretPos = textarea.selectionStart;
   const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+  const back = textarea.value.substring(
+    textarea.selectionEnd,
+    textarea.value.length,
+  );
 
   textarea.value = front + text + back;
   caretPos += text.length;
@@ -802,10 +816,10 @@ function insertAtCaret(text) {
 
 // Update the saved userCode every time the user updates the text area code
 
-textarea.onkeyup = function(){
+textarea.onkeyup = function () {
   // We only want to save the state when the user code is being shown,
   // not the solution, so that solution is not saved over the user code
-  if (solution.value === 'Show solution') {
+  if (solution.value === "Show solution") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;

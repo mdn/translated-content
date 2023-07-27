@@ -13,10 +13,10 @@ Para más artículos sobre canvas, consulta la [página del tema canvas](/es/HTM
 ## Contexto de uso
 
 | Contenido permitido            | Transparente, ya sea [contenido estático](/en/HTML/Content_categories#phrasing_content) o [contenido dinámico](/en/HTML/Content_categories#flow_content) . |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                                                                                                                    |
-| Elementos primarios permitidos | Cualquier elemento que acepte contenido dinámico o cualquier otro elemento que acepte contenido estático .                                                                                                                                         |
-| Documento normativo            | [HTML 5, sección 4.8.10](http://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                                                                                                                    |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre                                                                            |
+| Elementos primarios permitidos | Cualquier elemento que acepte contenido dinámico o cualquier otro elemento que acepte contenido estático .                                                 |
+| Documento normativo            | [HTML 5, sección 4.8.10](http://www.w3.org/TR/html5/the-canvas-element.html#the-canvas-element)                                                            |
 
 ## Atributos
 

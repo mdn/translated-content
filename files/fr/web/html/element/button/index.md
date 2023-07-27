@@ -1,5 +1,5 @@
 ---
-title: '<button> : l''élément représentant un bouton'
+title: "<button> : l'élément représentant un bouton"
 slug: Web/HTML/Element/button
 translation_of: Web/HTML/Element/button
 ---
@@ -206,7 +206,7 @@ Afin de fournir un nom accessible pour un bouton, on fournira un contenu texte d
 ```html
 <button name="favorite" type="button">
   <svg aria-hidden="true" viewBox="0 0 10 10">
-    <path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z"/>
+    <path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z" />
   </svg>
   Ajouter aux favoris
 </button>

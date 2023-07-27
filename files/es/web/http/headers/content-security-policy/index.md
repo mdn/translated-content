@@ -57,9 +57,11 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("media-src")}}
   - : Especifica origenes válidos para carga de archivos usando elementos como {{HTMLElement("audio")}} , {{HTMLElement("video")}} y {{HTMLElement("track")}}.
 - {{CSP("object-src")}}
+
   - : Specifies valid sources for the {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}} elements.
 
     Elements controlled by `object-src` are perhaps coincidentally considered legacy HTML elements and aren't recieving new standardized features (such as the security attributes `sandbox` or `allow` for `<iframe>`). Therefore it is **recommended** to restrict this fetch-directive (e.g. explicitly set `object-src 'none'` if possible).
+
 - {{CSP("prefetch-src")}}
   - : Specifies valid sources to be prefetched or prerendered.
 - {{CSP("script-src")}}

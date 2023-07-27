@@ -33,7 +33,7 @@ foo();
 
 Dans la console, la trace suivante sera affichée :
 
-```html
+```plain
 bar
 foo
 <anonymous>

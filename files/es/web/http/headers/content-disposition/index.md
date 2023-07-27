@@ -11,9 +11,9 @@ En un cuerpo `multipart/form-data`, el encabezado general **`Content-Disposition
 
 El encabezado `Content-Disposition` está definido en el contexto de mensajes MIME para correos electrónicos, pero sólo un subconjuto de los parámetros posibles aplican a formularios HTTP y peticiones {{HTTPMethod("POST")}}. Sólo el valor `form-data`, como las directivas opcionales `name` and `filename`, pueden ser utilizadas en el contexto HTTP.
 
-| Tipo de encabezado                               | {{Glossary("Response header")}} (para el cuerpo principal) {{Glossary("General header")}} (para una subparte de un cuerpo multipartes) |
-| ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name")}} | no                                                                                                                                                        |
+| Tipo de encabezado                    | {{Glossary("Response header")}} (para el cuerpo principal) {{Glossary("General header")}} (para una subparte de un cuerpo multipartes) |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| {{Glossary("Forbidden header name")}} | no                                                                                                                                     |
 
 ## Sintaxis
 

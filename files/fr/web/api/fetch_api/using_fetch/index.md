@@ -16,9 +16,9 @@ Le support de l'API Fetch peut être détecté en vérifiant l'existence de {{do
 
 ```js
 if (window.fetch) {
-    // exécuter ma requête fetch ici
+  // exécuter ma requête fetch ici
 } else {
-    // Faire quelque chose avec XMLHttpRequest?
+  // Faire quelque chose avec XMLHttpRequest?
 }
 ```
 
@@ -27,16 +27,16 @@ if (window.fetch) {
 Une requête `fetch` basique est vraiment simple à initier. Jetez un coup d'œil au code suivant&nbsp;:
 
 ```js
-const myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-fetch('flowers.jpg')
-.then(function(response) {
-  return response.blob();
-})
-.then(function(myBlob) {
-  const objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});
+fetch("flowers.jpg")
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (myBlob) {
+    const objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  });
 ```
 
 Ici nous récupérons une image à travers le réseau et l'insérons dans un élément {{htmlelement("img")}}. L'utilisation la plus simple de `fetch()` prend un argument — le chemin de la ressource que nous souhaitons récupérer — et retourne une promesse (promise) contenant, en réponse, un objet (de type {{domxref("Response")}}).
@@ -56,19 +56,21 @@ La méthode `fetch()` accepte un second paramètre optionnel, un objet `init` qu
 ```js
 var myHeaders = new Headers();
 
-var myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'cors',
-               cache: 'default' };
+var myInit = {
+  method: "GET",
+  headers: myHeaders,
+  mode: "cors",
+  cache: "default",
+};
 
-fetch('flowers.jpg',myInit)
-.then(function(response) {
-  return response.blob();
-})
-.then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});
+fetch("flowers.jpg", myInit)
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (myBlob) {
+    var objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  });
 ```
 
 Reportez-vous à {{domxref("GlobalFetch.fetch","fetch()")}} pour la liste complète des options disponibles, et plus de détails.
@@ -78,19 +80,22 @@ Reportez-vous à {{domxref("GlobalFetch.fetch","fetch()")}} pour la liste compl�
 Une promesse {{domxref("GlobalFetch.fetch","fetch()")}} va retourner une {{jsxref("TypeError")}} quand un problème réseau s'est produit. Cependant, il peut aussi s'agir d'un problème de permission ou quelque chose de similaire — un code HTTP 404 ne constitue pas une erreur réseau, par exemple. Un bon test de la réussite de `fetch()` devrait inclure la vérification que la promesse soit résolue, puis vérifier que la propriété {{domxref("Response.ok")}} ait la valeur _true_. Le code devrait ressembler à ce qui suit:
 
 ```js
-fetch('flowers.jpg').then(function(response) {
-  if(response.ok) {
-    response.blob().then(function(myBlob) {
-      var objectURL = URL.createObjectURL(myBlob);
-      myImage.src = objectURL;
-    });
-  } else {
-    console.log('Mauvaise réponse du réseau');
-  }
-})
-.catch(function(error) {
-  console.log('Il y a eu un problème avec l\'opération fetch : ' + error.message);
-});
+fetch("flowers.jpg")
+  .then(function (response) {
+    if (response.ok) {
+      response.blob().then(function (myBlob) {
+        var objectURL = URL.createObjectURL(myBlob);
+        myImage.src = objectURL;
+      });
+    } else {
+      console.log("Mauvaise réponse du réseau");
+    }
+  })
+  .catch(function (error) {
+    console.log(
+      "Il y a eu un problème avec l'opération fetch : " + error.message,
+    );
+  });
 ```
 
 ### Fournir votre propre objet requête
@@ -100,27 +105,29 @@ Plutôt que de transmettre le chemin de la ressource que vous souhaitez récupé
 ```js
 var myHeaders = new Headers();
 
-var myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'cors',
-               cache: 'default' };
+var myInit = {
+  method: "GET",
+  headers: myHeaders,
+  mode: "cors",
+  cache: "default",
+};
 
-var myRequest = new Request('flowers.jpg',myInit);
+var myRequest = new Request("flowers.jpg", myInit);
 
-fetch(myRequest,myInit)
-.then(function(response) {
-  return response.blob();
-})
-.then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});
+fetch(myRequest, myInit)
+  .then(function (response) {
+    return response.blob();
+  })
+  .then(function (myBlob) {
+    var objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  });
 ```
 
 `Request()` accepte exactement les mêmes paramètres que la méthode `fetch()`. Vous pouvez même lui transmettre un objet Request existant pour en créer une copie :
 
 ```js
-var anotherRequest = new Request(myRequest,myInit);
+var anotherRequest = new Request(myRequest, myInit);
 ```
 
 C'est très pratique, si le corps de la requête et de la réponse ne sont utilisés qu'une fois seulement. Cette manière de faire une copie permet de ré-utiliser la requête/réponse, en changeant juste les options du `init` si nécessaire.
@@ -172,7 +179,7 @@ Toutes les méthodes d'en-tête provoquent une erreur `TypeError` si un nom d'en
 var myResponse = Response.error();
 try {
   myResponse.headers.set("Origin", "http://mybank.com");
-} catch(e) {
+} catch (e) {
   console.log("Ne peut pas prétendre être une banque!");
 }
 ```
@@ -180,10 +187,10 @@ try {
 Un bon cas d'utilisation des en-têtes est de vérifier que le type de contenu récupéré est correct avant de poursuivre le traitement. Par exemple&nbsp;:
 
 ```js
-fetch(myRequest).then(function(response) {
+fetch(myRequest).then(function (response) {
   var contentType = response.headers.get("content-type");
-  if(contentType && contentType.indexOf("application/json") !== -1) {
-    return response.json().then(function(json) {
+  if (contentType && contentType.indexOf("application/json") !== -1) {
+    return response.json().then(function (json) {
       // traitement du JSON
     });
   } else {
@@ -256,11 +263,11 @@ Ceci rend l'usage de données non textuelles plus facile qu'avec XHR.
 Le corps des requêtes peut être défini en passant les paramètres du corps&nbsp;:
 
 ```js
-var form = new FormData(document.getElementById('login-form'));
+var form = new FormData(document.getElementById("login-form"));
 fetch("/login", {
   method: "POST",
-  body: form
-})
+  body: form,
+});
 ```
 
 Les requêtes et réponses (et par extension la fonction `fetch()`), vont tenter de déterminer le type de contenu. Une requête va automatiquement définir un en-tête `Content-Type` si rien n'est défini dans le dictionnaire \[NDLT&nbsp;: configuration d'initialisation].
