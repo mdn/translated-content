@@ -14,7 +14,7 @@ Web Bluetooth API は、Bluetooth Low Energy の周辺機器に接続して操�
 ## インターフェイス
 
 - {{DOMxRef("Bluetooth")}}
-  - : 指定のオプションを設定した {{DOMxRef("BluetoothDevice")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。
+  - : 指定のオプションに合致する {{DOMxRef("BluetoothDevice")}} オブジェクトで解決する {{jsxref("Promise")}} を返します。
 - {{DOMxRef("BluetoothCharacteristicProperties")}}
   - : 特定の `BluetoothRemoteGATTCharacteristic` のプロパティを提供します。
 - {{DOMxRef("BluetoothDevice")}}
