@@ -142,7 +142,7 @@ console.log(frBuddhist.calendar); // affiche "buddhist" dans la console
 Le constructeur {{jsxref("Locale", "Intl.Locale")}} peut utiliser un argument optionnel qui est un objet permettant de configurer la locale via différentes extensions dont les calendriers. En utilisant la propriété `calendar` de cet objet, on définit le calendrier qui sera utilisé :
 
 ```js
-let frBuddhist = new Intl.Locale("fr-FR", {calendar: "buddhist"});
+let frBuddhist = new Intl.Locale("fr-FR", { calendar: "buddhist" });
 console.log(frBuddhist.calendar); // affiche "buddhist" dans la console
 ```
 

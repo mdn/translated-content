@@ -13,7 +13,7 @@ La méthode **`Intl.NumberFormat.prototype.format()`** formate un nombre en fonc
 ## Syntaxe
 
 ```js
-numberFormat.format(nombre)
+numberFormat.format(nombre);
 ```
 
 ### Paramètres
@@ -32,7 +32,7 @@ La fonction d'accesseur `format` permet de formater un nombre donné en une cha�
 On peut utiliser la fonction renvoyée par `format` pour formater une valeur monétaire selon la locale russe :
 
 ```js
-var options = {style: "currency", currency: "RUB"};
+var options = { style: "currency", currency: "RUB" };
 var numberFormat = new Intl.NumberFormat("ru-RU", options);
 console.log(numberFormat.format(654321.987));
 // → "654 321,99 руб."

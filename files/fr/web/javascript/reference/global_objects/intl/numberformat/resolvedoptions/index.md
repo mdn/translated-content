@@ -13,7 +13,7 @@ La méthode **`Intl.NumberFormat.prototype.resolvedOptions()`** renvoie un nouve
 ## Syntaxe
 
 ```js
-numberFormat.resolvedOptions()
+numberFormat.resolvedOptions();
 ```
 
 ### Valeur de retour
@@ -45,16 +45,16 @@ Un seul des deux groupes suivants est inclus dans les propriétés :
 ### Utiliser la méthode `resolvedOptions()`
 
 ```js
-var de = new Intl.NumberFormat('de-DE');
+var de = new Intl.NumberFormat("de-DE");
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;                // "de-DE"
-usedOptions.numberingSystem;       // "latn"
-usedOption.style;                  // "decimal"
-usedOptions.minimumIntegerDigits;  // 1
+usedOptions.locale; // "de-DE"
+usedOptions.numberingSystem; // "latn"
+usedOption.style; // "decimal"
+usedOptions.minimumIntegerDigits; // 1
 usedOptions.minimumFractionDigits; // 0
 usedOptions.maximumFractionDigits; // 3
-usedOptions.useGrouping;           // true
+usedOptions.useGrouping; // true
 ```
 
 ## Spécifications

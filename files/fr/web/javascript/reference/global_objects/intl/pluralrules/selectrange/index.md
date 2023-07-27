@@ -11,7 +11,7 @@ La méthode **`Intl.PluralRules.prototype.selectRange()`** reçoit deux valeurs 
 ## Syntaxe
 
 ```js
-selectRange(debutIntervalle, finIntervalle)
+selectRange(debutIntervalle, finIntervalle);
 ```
 
 ### Valeur de retour
@@ -27,10 +27,10 @@ Cette fonction sélectionne une catégorie de nombre selon les options de locale
 ### Utiliser `selectRange()`
 
 ```js
- new Intl.PluralRules('sl').selectRange(102, 201);
+new Intl.PluralRules("sl").selectRange(102, 201);
 // → 'few'
 
- new Intl.PluralRules('pt').selectRange(102, 102);
+new Intl.PluralRules("pt").selectRange(102, 102);
 // → 'other'
 ```
 

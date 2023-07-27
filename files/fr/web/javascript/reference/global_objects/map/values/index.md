@@ -13,7 +13,7 @@ La méthode **`values()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript
 ## Syntaxe
 
 ```js
-maMap.values()
+maMap.values();
 ```
 
 ### Valeur de retour

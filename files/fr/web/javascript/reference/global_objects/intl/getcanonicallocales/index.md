@@ -13,7 +13,7 @@ La méthode **`Intl.getCanonicalLocales()`** renvoie un tableau contenant les no
 ## Syntaxe
 
 ```js
-Intl.getCanonicalLocales(locales)
+Intl.getCanonicalLocales(locales);
 ```
 
 ### Paramètres

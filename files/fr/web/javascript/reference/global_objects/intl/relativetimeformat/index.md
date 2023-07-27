@@ -39,9 +39,9 @@ L'exemple suivant illustre comment créer un formateur de temps relatif en angla
 // On crée un formateur en anglais en utilisant explicitement
 // les valeurs par défaut.
 const rtf = new Intl.RelativeTimeFormat("en", {
-    localeMatcher: "best fit", // autre valeur possible : "lookup"
-    numeric: "always", // autre valeur possible : "auto"
-    style: "long", // autre valeur possible : "short" ou "narrow"
+  localeMatcher: "best fit", // autre valeur possible : "lookup"
+  numeric: "always", // autre valeur possible : "auto"
+  style: "long", // autre valeur possible : "short" ou "narrow"
 });
 
 // On formate un temps relatif avec une valeur négative (-1).

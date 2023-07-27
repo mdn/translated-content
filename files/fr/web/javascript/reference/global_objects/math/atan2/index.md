@@ -13,7 +13,7 @@ La fonction **`Math.atan2()`** renvoie l'arc tangente du quotient de ses argumen
 ## Syntaxe
 
 ```js
-Math.atan2(y, x)
+Math.atan2(y, x);
 ```
 
 ### Paramètres

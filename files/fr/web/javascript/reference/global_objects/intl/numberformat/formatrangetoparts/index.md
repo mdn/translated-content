@@ -11,13 +11,14 @@ La méthode **`Intl.Numberformat.prototype.formatRangeToParts()`** permet de for
 ## Syntaxe
 
 ```js
-formatRangeToParts()
-formatRangeToParts(debutIntervalle, finIntervalle)
+formatRangeToParts();
+formatRangeToParts(debutIntervalle, finIntervalle);
 ```
 
 ### Paramètres
 
 - `debutIntervalle`
+
   - : Une valeur numérique [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) ou [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
 
 - `finIntervalle`
@@ -37,9 +38,8 @@ La méthode `formatRangeToParts()` est utile lorsqu'on souhaite construire des c
   { type: "literal", value: "-", source: "shared" },
   { type: "integer", value: "5", source: "endRange" },
   { type: "literal", value: " ", source: "shared" },
-  { type: "currency", value: "€", source: "shared" }
-]
-
+  { type: "currency", value: "€", source: "shared" },
+];
 ```
 
 Les types de valeur possibles pour les fragments sont&nbsp;:
@@ -79,12 +79,12 @@ Les types de valeur possibles pour les fragments sont&nbsp;:
 const debutIntervalle = 3500;
 const finIntervalle = 9500;
 
-const formateur = new Intl.NumberFormat('de-DE', {
-  style: 'currency',
-  currency: 'EUR'
+const formateur = new Intl.NumberFormat("de-DE", {
+  style: "currency",
+  currency: "EUR",
 });
 
-formateur.formatRange(debutIntervalle, finIntervalle)
+formateur.formatRange(debutIntervalle, finIntervalle);
 // "3.500,00–9.500,00 €"
 ```
 

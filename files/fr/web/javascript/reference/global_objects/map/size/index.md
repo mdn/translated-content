@@ -24,7 +24,7 @@ maMap.set("a", "alpha");
 maMap.set("b", "beta");
 maMap.set("g", "gamma");
 
-maMap.size // 3
+maMap.size; // 3
 ```
 
 ## Spécifications

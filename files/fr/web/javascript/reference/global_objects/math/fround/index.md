@@ -13,7 +13,7 @@ La fonction **`Math.fround()`** renvoie le nombre flottant à [précision simple
 ## Syntaxe
 
 ```js
-Math.fround(x)
+Math.fround(x);
 ```
 
 ### Paramètres
@@ -38,15 +38,15 @@ Pour résoudre ce problème, on peut utiliser `Math.fround()` afin de transforme
 ### Utiliser `Math.fround()`
 
 ```js
-Math.fround(0);     // 0
-Math.fround(1);     // 1
+Math.fround(0); // 0
+Math.fround(1); // 1
 
 // 1.337 ne peut pas être représenté correctement
 // sur 32 bits
 Math.fround(1.337); // 1.3370000123977661
 
-Math.fround(1.5);   // 1.5
-Math.fround(NaN);   // NaN
+Math.fround(1.5); // 1.5
+Math.fround(NaN); // NaN
 ```
 
 ## Spécifications
