@@ -82,7 +82,7 @@ touch-action 属性可以被指定为：
 
 **触摸动作**也经常用于完全解决由支持双击缩放手势引起的点击事件的延迟。
 
-```html
+```css
 html {
   touch-action: manipulation;
 }

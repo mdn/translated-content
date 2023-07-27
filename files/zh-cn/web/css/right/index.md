@@ -40,6 +40,7 @@ right: unset;
 ### 取值
 
 - {{cssxref("&lt;length&gt;")}}
+
   - : 可以是负的，正的 或者 null {{cssxref("&lt;length&gt;")}} 表示：
 
     - 对于**绝对定位的元素**，元素右外边距边界与其包含块右边界之间的偏移。
@@ -48,6 +49,7 @@ right: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : 代表元素包含块的宽度的百分比 {{cssxref("&lt;percentage&gt;")}}。
 - `auto`
+
   - : 这个关键字表示：
 
     - 对于绝对定位元素，元素将忽略此属性而以 {{ Cssxref("left") }} 属性为准，如果此时设置 `width: auto`，将基于内容需要的宽度设置宽度；如果 `left` 也为 `auto` 的话，元素的水平位置就是它假如作为静态（即 static）元素时该在的位置。
@@ -66,7 +68,7 @@ right: unset;
 #example_3 {
   width: 100px;
   height: 100px;
-  background-color: #FFC7E4;
+  background-color: #ffc7e4;
   position: relative;
   top: 20px;
   left: 20px;
@@ -75,7 +77,7 @@ right: unset;
 #example_4 {
   width: 100px;
   height: 100px;
-  background-color: #FFD7C2;
+  background-color: #ffd7c2;
   position: absolute;
   bottom: 10px;
   right: 20px;

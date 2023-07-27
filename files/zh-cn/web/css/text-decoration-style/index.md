@@ -52,12 +52,12 @@ text-decoration-style: unset;
 
 ```css
 .example {
-       -moz-text-decoration-line: underline;
-       -moz-text-decoration-style: wavy;
-       -moz-text-decoration-color: red;
-    -webkit-text-decoration-line: underline;
-    -webkit-text-decoration-style: wavy;
-    -webkit-text-decoration-color: red;
+  -moz-text-decoration-line: underline;
+  -moz-text-decoration-style: wavy;
+  -moz-text-decoration-color: red;
+  -webkit-text-decoration-line: underline;
+  -webkit-text-decoration-style: wavy;
+  -webkit-text-decoration-color: red;
 }
 ```
 

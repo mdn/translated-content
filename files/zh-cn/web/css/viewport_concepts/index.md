@@ -24,15 +24,15 @@ slug: Web/CSS/Viewport_concepts
 视口的宽度并不总是窗口的宽度。如果你测试 Chrome 或 Firefox 浏览器中 window 和 document 的宽度和高度，你会得到如下值：
 
 ```js
-document.documentElement.clientWidth /* 1200 */
-window.innerWidth /* 1200 */
-window.outerWidth /* 1200 */
+document.documentElement.clientWidth; /* 1200 */
+window.innerWidth; /* 1200 */
+window.outerWidth; /* 1200 */
 ```
 
 ```js
-document.documentElement.clientHeight /* 800 */
-window.innerHeight /* 800 */
-window.outerHeight /* 900 */
+document.documentElement.clientHeight; /* 800 */
+window.innerHeight; /* 800 */
+window.outerHeight; /* 900 */
 ```
 
 下面是一些帮助你查询视口大小和其他类似的长度属性的 DOM 属性：
@@ -48,15 +48,15 @@ window.outerHeight /* 900 */
 当缩放时，Firefox 和 Chrome 对 `innerWidth` 和 `clientWidth` 给出了新的 CSS 像素大小。浏览器对 `outerWidth` 和 `outerHeight` 的返回值有差异。Firefox 返回了缩放后的 CSS 像素值，Chrome 返回了默认的像素值：
 
 ```js
-document.documentElement.clientWidth /* 800 */
-window.innerWidth /* 800 */
-window.outerWidth /* 800 in Firefox, 1200 in chrome */
+document.documentElement.clientWidth; /* 800 */
+window.innerWidth; /* 800 */
+window.outerWidth; /* 800 in Firefox, 1200 in chrome */
 ```
 
 ```js
-document.documentElement.clientHeight /* 533 */
-window.innerHeight /* 533 */
-window.outerHeight /* 596 in Firefox, 900 in chrome */
+document.documentElement.clientHeight; /* 533 */
+window.innerHeight; /* 533 */
+window.outerHeight; /* 596 in Firefox, 900 in chrome */
 ```
 
 原始的视口大小是 1200 x 800 像素。缩放后变成了 800 x 533。这是布局视口。该网页有固定的头部和尾部，带有下列样式，它们将会固定在相对布局视口的顶部和底部。
@@ -90,7 +90,7 @@ Web 浏览器包含两个视口，**布局视口**和**视觉视口**。视觉�
 
 #### `<iframe>`
 
-对于一个 `iframe`  来说，视觉视口是其内部高度和宽度的大小而不是其父文档的大小。你可以为其高度和宽度设置任意数值，但过大的值可能会使 `iframe` 部分内容超出视口导致超出部分不可见。
+对于一个 `iframe` 来说，视觉视口是其内部高度和宽度的大小而不是其父文档的大小。你可以为其高度和宽度设置任意数值，但过大的值可能会使 `iframe` 部分内容超出视口导致超出部分不可见。
 
 在 CSS 中，可以使用相对于视口的长度单位 `vh` 和 `vw`。1vh 意味着值为视口高度的 1%，同理 1vw 即值为视口宽度的 1%。
 
@@ -98,7 +98,7 @@ Web 浏览器包含两个视口，**布局视口**和**视觉视口**。视觉�
 
 ```css
 iframe {
-    width: 50vw;
+  width: 50vw;
 }
 ```
 
@@ -108,9 +108,9 @@ iframe {
 
 ```css
 @media screen and (min-width: 500px) {
-    p {
-        color: red;
-    }
+  p {
+    color: red;
+  }
 }
 ```
 
@@ -155,7 +155,7 @@ SVG 参照 [viewbox](/zh-CN/docs/Web/SVG/Attribute/viewBox) 属性，内置了�
 如果开发者想让移动端浏览器使用屏幕宽度作为视口替换默认的 980px 宽度视口，则可以在 HTML 的头部添加以下标签：
 
 ```html
-<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="width=device-width" />
 ```
 
 这里 `width` 属性指的是视口宽度，现在视口的宽度被设置为了设备的屏幕宽度，即文档视口宽度大小与设备宽度大小 100% 对应（转换为 CSS 像素值相同）。除了 `width` 属性外，还有 `initial-scale`、`maximum-scale`、`minimum-scale`，以及 `user-scalable` 属性可供设置。这些属性分别设置了文档的初始缩放比例、最大缩放比例、最小缩放比例以及是否允许用户进行缩放操作。但这些属性的默认值已经很好了，开发时可以忽略掉这些属性。
