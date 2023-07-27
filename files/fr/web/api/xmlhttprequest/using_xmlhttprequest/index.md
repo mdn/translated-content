@@ -166,7 +166,7 @@ req.addEventListener("loadend", loadEnd);
 
 function loadEnd(e) {
   console.log(
-    "Le transfert est terminé (mais on ne sait pas s'il a réussi ou non)."
+    "Le transfert est terminé (mais on ne sait pas s'il a réussi ou non).",
   );
 }
 ```
@@ -249,7 +249,7 @@ function getHeaderTime() {
 const req = new XMLHttpRequest();
 req.open(
   "HEAD", // On utilise HEAD, car on ne veut récupérer que les en-têtes
-  "votrepage.html"
+  "votrepage.html",
 );
 req.onload = getHeaderTime;
 req.send();
@@ -262,7 +262,7 @@ Créons deux fonctions&nbsp;:
 ```js
 function getHeaderTime() {
   const lastVisit = parseFloat(
-    window.localStorage.getItem(`lm_${this.filepath}`)
+    window.localStorage.getItem(`lm_${this.filepath}`),
   );
   const lastModified = Date.parse(this.getResponseHeader("Last-Modified"));
 
@@ -274,7 +274,10 @@ function getHeaderTime() {
 
 function ifHasChanged(URL, callback) {
   const req = new XMLHttpRequest();
-  req.open("HEAD" /* On utilise HEAD, car on ne veut récupérer que les en-têtes */, URL);
+  req.open(
+    "HEAD" /* On utilise HEAD, car on ne veut récupérer que les en-têtes */,
+    URL,
+  );
   req.callback = callback;
   req.filepath = URL;
   req.onload = getHeaderTime;
@@ -289,8 +292,8 @@ Pour tester cet exemple&nbsp;:
 ifHasChanged("votrepage.html", function (modified, visit) {
   console.log(
     `La page '${this.filepath}' a été modifiée le ${new Date(
-      nModified
-    ).toLocaleString()}!`
+      nModified,
+    ).toLocaleString()}!`,
   );
 });
 ```

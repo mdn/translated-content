@@ -11,7 +11,7 @@ translation_of: Web/API/Window/blur
 ## Syntaxe
 
 ```js
-window.blur()
+window.blur();
 ```
 
 ## Exemple

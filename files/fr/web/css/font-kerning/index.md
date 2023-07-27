@@ -6,7 +6,7 @@ translation_of: Web/CSS/font-kerning
 
 {{CSSRef}}
 
-La propriété **`font-kerning`** contrôle le crénage de la police ; c'est-à-dire l'espace créé entre les lettres. L'information de crénage est stockée dans la police et si la police est *bien crénée*, cette caractéristique permet aux caractères, quels qu'ils soient, d'être espacés de manière semblable.![Exemple pour font-kerning](font-kerning.png)
+La propriété **`font-kerning`** contrôle le crénage de la police ; c'est-à-dire l'espace créé entre les lettres. L'information de crénage est stockée dans la police et si la police est _bien crénée_, cette caractéristique permet aux caractères, quels qu'ils soient, d'être espacés de manière semblable.![Exemple pour font-kerning](font-kerning.png)
 
 ```css
 font-kerning: auto;
@@ -43,7 +43,8 @@ font-kerning: unset;
 ### CSS
 
 ```css
-#nokern, #kern {
+#nokern,
+#kern {
   font-size: 2rem;
   font-family: serif;
 }
@@ -66,10 +67,10 @@ font-kerning: unset;
 ### JavaScript
 
 ```js
-var input  = document.getElementById('input'),
-    kern   = document.getElementById('kern'),
-    nokern = document.getElementById('nokern');
-input.addEventListener('keyup', function() {
+var input = document.getElementById("input"),
+  kern = document.getElementById("kern"),
+  nokern = document.getElementById("nokern");
+input.addEventListener("keyup", function () {
   kern.textContent = input.value; /* On met à jour le contenu */
   nokern.textContent = input.value;
 });

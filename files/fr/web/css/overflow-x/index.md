@@ -62,28 +62,26 @@ Si [`overflow-y`](/fr/docs/Web/CSS/overflow-y) vaut `hidden`, `scroll` ou `auto`
 
 ```html
 <ul>
-  <li><code>overflow-x:hidden</code> — cache le texte en dehors de la boîte
-    <div id="div1">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-x:hidden</code> — cache le texte en dehors de la boîte
+    <div id="div1">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-x:scroll</code> — ajoute toujours un ascenseur
-    <div id="div2">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-x:scroll</code> — ajoute toujours un ascenseur
+    <div id="div2">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-x:visible</code> — affiche le texte en dehors de la boîte si besoin
-    <div id="div3">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-x:visible</code> — affiche le texte en dehors de la boîte si
+    besoin
+    <div id="div3">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 
-  <li><code>overflow-x:auto</code> — sur la plupart des navigateurs, cela sera équivalent à <code>scroll</code>
-    <div id="div4">
-      ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    </div>
+  <li>
+    <code>overflow-x:auto</code> — sur la plupart des navigateurs, cela sera
+    équivalent à <code>scroll</code>
+    <div id="div4">ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ</div>
   </li>
 </ul>
 ```

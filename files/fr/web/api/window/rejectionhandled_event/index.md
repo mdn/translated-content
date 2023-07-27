@@ -1,5 +1,5 @@
 ---
-title: 'Window : évènement rejectionhandled'
+title: "Window : évènement rejectionhandled"
 slug: Web/API/Window/rejectionhandled_event
 l10n:
   sourceCommit: d9026c37acaf22da682206c381686fe8a4666f16
@@ -16,8 +16,8 @@ Cet évènement peut être utilisé pour le débogage et pour la résilience des
 On pourra utiliser le nom de l'évènement dans des méthodes comme [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), ou utiliser une propriété qui est un gestionnaire d'évènement.
 
 ```js
-addEventListener('rejectionhandled', (event) => { });
-onrejectionhandled = (event) => { };
+addEventListener("rejectionhandled", (event) => {});
+onrejectionhandled = (event) => {};
 ```
 
 ## Type d'évènement
@@ -46,9 +46,13 @@ En plus de l'interface `Window`, la propriété `onrejectionhandled` pour gérer
 L'évènement `rejectionhandled` peut être utilisé afin de journaliser les promesses rompues dans la console, ainsi que les raisons de leur échec&nbsp;:
 
 ```js
-window.addEventListener("rejectionhandled", (event) => {
-  console.log(`Promesse rompue - raison : ${event.reason}`);
-}, false);
+window.addEventListener(
+  "rejectionhandled",
+  (event) => {
+    console.log(`Promesse rompue - raison : ${event.reason}`);
+  },
+  false,
+);
 ```
 
 ## Spécifications

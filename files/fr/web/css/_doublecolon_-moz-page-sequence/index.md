@@ -1,5 +1,5 @@
 ---
-title: '::-moz-page-sequence'
+title: "::-moz-page-sequence"
 slug: Web/CSS/::-moz-page-sequence
 translation_of: Web/CSS/::-moz-page-sequence
 ---

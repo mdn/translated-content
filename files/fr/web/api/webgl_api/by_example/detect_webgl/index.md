@@ -23,13 +23,13 @@ La gestion d'une machine graphique au sein d'une seule interface n'est pas propr
 
 ```css
 body {
-  text-align : center;
+  text-align: center;
 }
 button {
-  display : block;
-  font-size : inherit;
-  margin : auto;
-  padding : 0.6em;
+  display: block;
+  font-size: inherit;
+  margin: auto;
+  padding: 0.6em;
 }
 ```
 
@@ -38,35 +38,38 @@ button {
 // correspondant au chargement de la fenêtre. De cette
 // façon, le DOM est complètement chargé et mis en forme
 // avant de le manipuler.
-window.addEventListener("load", function() {
-  var paragraph = document.querySelector("p"),
-    button = document.querySelector("button");
+window.addEventListener(
+  "load",
+  function () {
+    var paragraph = document.querySelector("p"),
+      button = document.querySelector("button");
 
-  // On ajoute un gestionnaire d'événement pour
-  // le clic sur le bouton
-  button.addEventListener("click", detectWebGLContext, false);
-  function detectWebGLContext () {
+    // On ajoute un gestionnaire d'événement pour
+    // le clic sur le bouton
+    button.addEventListener("click", detectWebGLContext, false);
+    function detectWebGLContext() {
+      // On crée un élément canvas. Le canvas n'est pas
+      // ajouté au document et il n'est donc jamais
+      // affiché dans la fenêtre du navigateur
+      var canvas = document.createElement("canvas");
 
-    // On crée un élément canvas. Le canvas n'est pas
-    // ajouté au document et il n'est donc jamais
-    // affiché dans la fenêtre du navigateur
-    var canvas = document.createElement("canvas");
+      // On récupère le contexte WebGLRenderingContext
+      // depuis l'élément canvas.
+      var gl =
+        canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
 
-    // On récupère le contexte WebGLRenderingContext
-    // depuis l'élément canvas.
-    var gl = canvas.getContext("webgl")
-      || canvas.getContext("experimental-webgl");
-
-    // On affiche le résultat.
-    if (gl && gl instanceof WebGLRenderingContext) {
-      paragraph.innerHTML =
-        "Félicitations, votre navigateur supporte WebGL.";
-    } else {
-      paragraph.innerHTML = "Échec du contexte WebGL. "
-        + "Votre navigateur peut ne pas supporter WebGL.";
+      // On affiche le résultat.
+      if (gl && gl instanceof WebGLRenderingContext) {
+        paragraph.innerHTML = "Félicitations, votre navigateur supporte WebGL.";
+      } else {
+        paragraph.innerHTML =
+          "Échec du contexte WebGL. " +
+          "Votre navigateur peut ne pas supporter WebGL.";
+      }
     }
-  }
-}, false);
+  },
+  false,
+);
 ```
 
 Le code source de cet exemple est également disponible sur [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/detect-webgl).

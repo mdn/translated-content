@@ -19,9 +19,9 @@ self.ononline = function() { ... };
 L'extrait de code suivant montre un gestionnaire `ononline` placé dans un worker :
 
 ```js
-self.ononline = function() {
-  console.log('Your worker is now online');
-}
+self.ononline = function () {
+  console.log("Your worker is now online");
+};
 ```
 
 ## Spécifications

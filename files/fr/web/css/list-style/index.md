@@ -27,7 +27,7 @@ Cette propriété est une propriété raccourcie pour les propriétés CSS&nbsp;
 list-style: square;
 
 /* Image */
-list-style: url('../img/etoile.png');
+list-style: url("../img/etoile.png");
 
 /* Position */
 list-style: inside;
@@ -36,8 +36,7 @@ list-style: inside;
 list-style: georgian inside;
 
 /* type | image | position */
-list-style: lower-roman url('../img/etoile.png') outside;
-
+list-style: lower-roman url("../img/etoile.png") outside;
 
 /* Valeur avec un mot-clé */
 list-style: none;
@@ -83,13 +82,15 @@ ul li::before {
 Une autre approche consiste à affecter une valeur `url` à la propriété `list-style`&nbsp;:
 
 ```css
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: none;
 }
 
 /* cela devient : */
 
-nav ol, nav ul {
+nav ol,
+nav ul {
   list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
 }
 ```

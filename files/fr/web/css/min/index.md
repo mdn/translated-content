@@ -41,7 +41,8 @@ La fonction `min()` peut également être utilisée pour définir la taille maxi
 #### CSS
 
 ```css
-input, label {
+input,
+label {
   padding: 2px;
   box-sizing: border-box;
   display: inline-block;
@@ -63,7 +64,7 @@ On a ici la règle qui s'applique au formulaire et qui occupe 100% de la largeur
 ```html
 <form>
   <label>Saisir quelque chose :</label>
-  <input type="text">
+  <input type="text" />
 </form>
 ```
 

@@ -11,7 +11,7 @@ La propriété en lecteur seul `ImageData.data` retourne un {{jsxref("Uint8Clamp
 ## Syntaxe
 
 ```js
-imagedata.data
+imagedata.data;
 ```
 
 ## Exemple

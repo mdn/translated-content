@@ -13,7 +13,7 @@ La propriété en lecture seule **`scope`** de l'interface {{domxref ("ServiceWo
 ## Syntaxe
 
 ```js
-serviceWorkerRegistration.scope
+serviceWorkerRegistration.scope;
 ```
 
 ## Spécifications

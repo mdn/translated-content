@@ -1,5 +1,5 @@
 ---
-title: ':playing'
+title: ":playing"
 slug: Web/CSS/:playing
 translation_of: Web/CSS/:playing
 ---
@@ -12,7 +12,6 @@ Une ressource est lue même si elle se trouve en mémoire tampon ou mise en paus
 
 ```css
 :playing {
-
 }
 ```
 

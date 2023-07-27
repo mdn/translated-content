@@ -1,5 +1,5 @@
 ---
-title: 'Types de liens : prerender'
+title: "Types de liens : prerender"
 slug: Web/HTML/Attributes/rel/prerender
 translation_of: Web/HTML/Link_types/prerender
 ---

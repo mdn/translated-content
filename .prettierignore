@@ -20,6 +20,10 @@ build/
 /files/fr/glossary/grid_lines/index.md
 /files/fr/glossary/main_axis/index.md
 /files/fr/learn/server-side/django/forms/index.md
+/files/fr/web/css/align-self/index.md
+/files/fr/web/css/justify-content/index.md
+/files/fr/web/css/place-items/index.md
+/files/fr/web/css/place-self/index.md
 /files/pt-br/learn/server-side/django/forms/index.md
 /files/ru/learn/server-side/django/forms/index.md
 /files/ru/learn/server-side/django/introduction/index.md
@@ -35,10 +39,6 @@ build/
 /files/es/web/javascript/reference/**/*.md
 
 # fr
-/files/fr/mozilla/add-ons/webextensions/api/**/*.md
-/files/fr/web/api/**/*.md
-/files/fr/web/css/**/*.md
-/files/fr/web/html/**/*.md
 /files/fr/web/javascript/**/*.md
 
 # ja

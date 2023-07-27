@@ -58,8 +58,8 @@ Si la direction de l'élément est définie grâce à l'attribut `dir`, la décl
 ```css
 .exemple {
   /* du bas vers le haut */
-  -moz-box-direction: reverse;      /* Mozilla */
-  -webkit-box-direction: reverse;   /* WebKit */
+  -moz-box-direction: reverse; /* Mozilla */
+  -webkit-box-direction: reverse; /* WebKit */
   box-direction: reverse;
 }
 ```

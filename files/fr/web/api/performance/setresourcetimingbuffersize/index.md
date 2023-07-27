@@ -15,7 +15,7 @@ La taille recommandée du tampon de synchronisation des ressources d'un navigate
 ## Syntaxe
 
 ```js
-  performance.setResourceTimingBufferSize(maxSize);
+performance.setResourceTimingBufferSize(maxSize);
 ```
 
 ### Arguments

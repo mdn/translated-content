@@ -49,7 +49,7 @@ Cela est exactement équivalent à l'utilisation du [sélecteur d'attribut](/fr/
   background-color: skyblue;
 }
 .toto {
- font-weight: bold;
+  font-weight: bold;
 }
 ```
 
@@ -57,7 +57,10 @@ Cela est exactement équivalent à l'utilisation du [sélecteur d'attribut](/fr/
 
 ```html
 <div class="classy">Voici un div avec du texte.</div>
-<div class="toto classy truc">Les éléments peuvent avoir plusieurs classes, le sélecteur fonctionnera tout de même !</div>
+<div class="toto classy truc">
+  Les éléments peuvent avoir plusieurs classes, le sélecteur fonctionnera tout
+  de même !
+</div>
 <div>En voilà un autre.</div>
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-progress-inner-element'
+title: "::-webkit-progress-inner-element"
 slug: Web/CSS/::-webkit-progress-inner-element
 translation_of: Web/CSS/::-webkit-progress-inner-element
 ---
@@ -27,7 +27,7 @@ progress {
 ### HTML
 
 ```html
-<progress value="10" max="50">
+<progress value="10" max="50"></progress>
 ```
 
 ### Résultat

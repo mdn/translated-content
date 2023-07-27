@@ -110,11 +110,10 @@ Le HTML crée les boîtes contenant les instructions et la boîte `pixel-ratio` 
 <div class="container">
   <div class="inner-container">
     <p>
-      Cet exemple illustre les effets d'un zooom
-      ou d'un dézoom de la page (mais aussi du 
-      déplacement de la fenêtre vers un écran avec
-      un autre facteur d'échelle) sur la valeur de 
-      la propriété <code>Window.devicePixelRatio</code>. Essayez de zoomer et voyez le
+      Cet exemple illustre les effets d'un zooom ou d'un dézoom de la page (mais
+      aussi du déplacement de la fenêtre vers un écran avec un autre facteur
+      d'échelle) sur la valeur de la propriété
+      <code>Window.devicePixelRatio</code>. Essayez de zoomer et voyez le
       résultat !
     </p>
   </div>
@@ -126,7 +125,9 @@ Le HTML crée les boîtes contenant les instructions et la boîte `pixel-ratio` 
 
 ```css
 body {
-  font: 22px arial, sans-serif;
+  font:
+    22px arial,
+    sans-serif;
 }
 
 .container {

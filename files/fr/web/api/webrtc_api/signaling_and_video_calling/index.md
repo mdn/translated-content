@@ -19,11 +19,11 @@ Les deux parties (l'appelant et l'appelé) doivent mettre en place leurs propres
 
 ```js
 var pc = new RTCPeerConnection();
-pc.onaddstream = function(obj) {
+pc.onaddstream = function (obj) {
   var vid = document.createElement("video");
   document.appendChild(vid);
   vid.srcObject = obj.stream;
-}
+};
 
 // Helper functions
 function endCall() {
@@ -47,16 +47,20 @@ l'appelant doit utiliser {{domxref("navigator.getUserMedia()")}} pour obtenir un
 ```js
 // recuperer la liste des "amis" a partir du serveur
 // l'utilisateur selectionne un amis avec qui lancer la connection
-navigator.getUserMedia({video: true}, function(stream) {
+navigator.getUserMedia({ video: true }, function (stream) {
   // l'ajout d'un stream locale ne declanche pas onaddstream,
   // donc il faut l'appeler manuellement.
-  pc.onaddstream = e => video.src = URL.createObjectURL(e.stream);
+  pc.onaddstream = (e) => (video.src = URL.createObjectURL(e.stream));
   pc.addStream(stream);
 
-  pc.createOffer(function(offer) {
-    pc.setLocalDescription(offer, function() {
-      // envoi de l'offre au serveur qui se charge de la transmettre a "l'ami" choisit precedemment.
-    }, error);
+  pc.createOffer(function (offer) {
+    pc.setLocalDescription(
+      offer,
+      function () {
+        // envoi de l'offre au serveur qui se charge de la transmettre a "l'ami" choisit precedemment.
+      },
+      error,
+    );
   }, error);
 });
 ```
@@ -69,17 +73,25 @@ Ensuite, une réponse est créée en utilisant {{domxref("RTCPeerConnection.crea
 
 ```js
 var offer = getOfferFromFriend();
-navigator.getUserMedia({video: true}, function(stream) {
-  pc.onaddstream = e => video.src = URL.createObjectURL(e.stream);
+navigator.getUserMedia({ video: true }, function (stream) {
+  pc.onaddstream = (e) => (video.src = URL.createObjectURL(e.stream));
   pc.addStream(stream);
 
-  pc.setRemoteDescription(new RTCSessionDescription(offer), function() {
-    pc.createAnswer(function(answer) {
-      pc.setLocalDescription(answer, function() {
-        // envoi de la réponse au serveur qui la transmettra a l'appelant
+  pc.setRemoteDescription(
+    new RTCSessionDescription(offer),
+    function () {
+      pc.createAnswer(function (answer) {
+        pc.setLocalDescription(
+          answer,
+          function () {
+            // envoi de la réponse au serveur qui la transmettra a l'appelant
+          },
+          error,
+        );
       }, error);
-    }, error);
-  }, error);
+    },
+    error,
+  );
 });
 ```
 
@@ -90,7 +102,11 @@ retour a la première machine, qui recois la reponse. une fois cette dernière a
 ```js
 // pc a été déclaré précédemment, lors de l'envoi de l'offre.
 var offer = getResponseFromFriend();
-pc.setRemoteDescription(new RTCSessionDescription(offer), function() { }, error);
+pc.setRemoteDescription(
+  new RTCSessionDescription(offer),
+  function () {},
+  error,
+);
 ```
 
 ## Ancien contenu en approche!
@@ -110,10 +126,15 @@ Cette page contient des informations périmées selon <http://stackoverflow.com/
 Comme vous pouvez l'imaginer, avec une API aussi jeune, vous devez utiliser les préfixes de navigateur et les positionner dans des variables communes.
 
 ```js
-var PeerConnection = window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
+var PeerConnection =
+  window.mozRTCPeerConnection || window.webkitRTCPeerConnection;
 var IceCandidate = window.mozRTCIceCandidate || window.RTCIceCandidate;
-var SessionDescription = window.mozRTCSessionDescription || window.RTCSessionDescription;
-navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || navigator.webkitGetUserMedia;
+var SessionDescription =
+  window.mozRTCSessionDescription || window.RTCSessionDescription;
+navigator.getUserMedia =
+  navigator.getUserMedia ||
+  navigator.mozGetUserMedia ||
+  navigator.webkitGetUserMedia;
 ```
 
 ## PeerConnection
@@ -130,12 +151,16 @@ L'objet {{domxref("RTCConfiguration")}} contient l'information sur les serveurs 
 
 ```js
 var configuration = {
-    iceServers: [
-        {url: "stun:23.21.150.121"},
-        {url: "stun:stun.l.google.com:19302"},
-        {url: "turn:numb.viagenie.ca", credential: "webrtcdemo", username: "louis%40mozilla.com"}
-    ]
-}
+  iceServers: [
+    { url: "stun:23.21.150.121" },
+    { url: "stun:stun.l.google.com:19302" },
+    {
+      url: "turn:numb.viagenie.ca",
+      credential: "webrtcdemo",
+      username: "louis%40mozilla.com",
+    },
+  ],
+};
 ```
 
 Google met à disposition un [serveur STUN public](https://code.google.com/p/natvpn/source/browse/trunk/stun_server_list) que nous pouvons utiliser. J'ai également créé un compte chez <http://numb.viagenie.ca/> pour un accès gratuit à un serveur TURN. Vous pouvez faire la même chose et les remplacer par vos propres informations d'identification.
@@ -146,11 +171,8 @@ Selon le type de connexion, vous devez passer des options.
 
 ```js
 var options = {
-    optional: [
-        {DtlsSrtpKeyAgreement: true},
-        {RtpDataChannels: true}
-    ]
-}
+  optional: [{ DtlsSrtpKeyAgreement: true }, { RtpDataChannels: true }],
+};
 ```
 
 `DtlsSrtpKeyAgreement` est exigé pour Chrome et Firefox pour interagir.
@@ -163,10 +185,12 @@ Après avoir créé la connexion et en passant par les serveurs STUN et TURN dis
 
 ```js
 pc.onicecandidate = function (e) {
-    // candidate exists in e.candidate
-    if (e.candidate == null) { return }
-    send("icecandidate", JSON.stringify(e.candidate));
-    pc.onicecandidate = null;
+  // candidate exists in e.candidate
+  if (e.candidate == null) {
+    return;
+  }
+  send("icecandidate", JSON.stringify(e.candidate));
+  pc.onicecandidate = null;
 };
 ```
 
@@ -201,11 +225,15 @@ Une offre SDP (Session Description Protocol) et le méta données qui décrit au
 Un échange nécessite une offre d'un pair, alors l'autre pair doit recevoir l'offre et offrir en retour une réponse.
 
 ```js
-pc.createOffer(function (offer) {
+pc.createOffer(
+  function (offer) {
     pc.setLocalDescription(offer);
 
     send("offer", JSON.stringify(offer));
-}, errorHandler, constraints);
+  },
+  errorHandler,
+  constraints,
+);
 ```
 
 ### errorHandler
@@ -214,7 +242,7 @@ S'il y avait un problème lors de la génération d'une offre, cette méthode se
 
 ```js
 var errorHandler = function (err) {
-    console.error(err);
+  console.error(err);
 };
 ```
 
@@ -224,10 +252,10 @@ Options pour l'offre SDP.
 
 ```js
 var constraints = {
-    mandatory: {
-        OfferToReceiveAudio: true,
-        OfferToReceiveVideo: true
-    }
+  mandatory: {
+    OfferToReceiveAudio: true,
+    OfferToReceiveVideo: true,
+  },
 };
 ```
 
@@ -241,14 +269,18 @@ Une réponse SDP est comme une offre, mais est une réponse ; un peu comme répo
 
 ```js
 recv("offer", function (offer) {
-    offer = new SessionDescription(JSON.parse(offer))
-    pc.setRemoteDescription(offer);
+  offer = new SessionDescription(JSON.parse(offer));
+  pc.setRemoteDescription(offer);
 
-    pc.createAnswer(function (answer) {
-        pc.setLocalDescription(answer);
+  pc.createAnswer(
+    function (answer) {
+      pc.setLocalDescription(answer);
 
-        send("answer", JSON.stringify(answer));
-    }, errorHandler, constraints);
+      send("answer", JSON.stringify(answer));
+    },
+    errorHandler,
+    constraints,
+  );
 });
 ```
 
@@ -288,7 +320,7 @@ Exécuté s'il y a une erreur de création de la connexion. Le premier argument 
 
 ```js
 channel.onerror = function (err) {
-    console.error("Channel Error:", err);
+  console.error("Channel Error:", err);
 };
 ```
 
@@ -296,8 +328,8 @@ channel.onerror = function (err) {
 
 ```js
 channel.onmessage = function (e) {
-    console.log("Got message:", e.data);
-}
+  console.log("Got message:", e.data);
+};
 ```
 
 Le cœur de la connexion. Lorsque vous recevez un message, cette méthode s'exécute. Le premier argument est un objet d'événement qui contient les données, heure de réception et autres informations.
@@ -337,12 +369,16 @@ Maintenant nous allons couvrir la transmission de médias tels que l'audio ou la
 ### Obtenir les médias de l'utilisateur
 
 ```js
-<video id="preview" autoplay></video>
+<video id="preview" autoplay></video>;
 
 var video = document.getElementById("preview");
-navigator.getUserMedia(mediaOptions, function (stream) {
+navigator.getUserMedia(
+  mediaOptions,
+  function (stream) {
     video.src = URL.createObjectURL(stream);
-}, errorHandler);
+  },
+  errorHandler,
+);
 ```
 
 **`mediaOptions`**
@@ -351,8 +387,8 @@ Les contraintes sur les types de médias que vous souhaitez renvoyer de l'utilis
 
 ```js
 var mediaOptions = {
-    video: true,
-    audio: true
+  video: true,
+  audio: true,
 };
 ```
 
@@ -375,11 +411,11 @@ pc.addStream(stream);
 #### onaddstream
 
 ```js
-<video id="otherPeer" autoplay></video>
+<video id="otherPeer" autoplay></video>;
 
 var otherPeer = document.getElementById("otherPeer");
 pc.onaddstream = function (e) {
-    otherPeer.src = URL.createObjectURL(e.stream);
+  otherPeer.src = URL.createObjectURL(e.stream);
 };
 ```
 

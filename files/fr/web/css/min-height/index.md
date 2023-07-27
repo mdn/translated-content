@@ -63,9 +63,13 @@ min-height: unset;
 ### Définition de min-height
 
 ```css
-table { min-height: 75%; }
+table {
+  min-height: 75%;
+}
 
-form { min-height: 0; }
+form {
+  min-height: 0;
+}
 ```
 
 ## Spécifications

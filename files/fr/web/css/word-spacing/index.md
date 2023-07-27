@@ -54,8 +54,8 @@ word-spacing: unset;
 ### HTML
 
 ```html
-<p id="ligne1">Voici le texte de la ligne 1 </p>
-<p id="ligne2" >Et voilà celui de la ligne 2 </p>
+<p id="ligne1">Voici le texte de la ligne 1</p>
+<p id="ligne2">Et voilà celui de la ligne 2</p>
 ```
 
 ### CSS

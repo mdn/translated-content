@@ -19,9 +19,9 @@ self.onerror = function() { ... };
 L'extrait de code suivant montre un gestionnaire `onerror` placé au sein d'un worker :
 
 ```js
-self.onerror = function() {
-  console.log('There is an error inside your worker!');
-}
+self.onerror = function () {
+  console.log("There is an error inside your worker!");
+};
 ```
 
 ## Spécifications

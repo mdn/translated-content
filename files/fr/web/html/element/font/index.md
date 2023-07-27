@@ -1,5 +1,5 @@
 ---
-title: '<font> : l''élément de police'
+title: "<font> : l'élément de police"
 slug: Web/HTML/Element/font
 translation_of: Web/HTML/Element/font
 ---

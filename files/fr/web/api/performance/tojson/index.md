@@ -13,7 +13,7 @@ La méthode **`toJSON()`** de l'interface {{domxref("Performance")}} est un sér
 ## Syntaxe
 
 ```js
-  myPerf = performance.toJSON()
+myPerf = performance.toJSON();
 ```
 
 ### Arguments

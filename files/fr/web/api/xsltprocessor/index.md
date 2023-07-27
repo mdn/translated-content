@@ -13,7 +13,7 @@ Un objet **`XSLTProcessor`** applique une transformation de feuille de style [XS
 Le constructeur n'a pas de paramètre.
 
 ```js
-new XSLTProcessor()
+new XSLTProcessor();
 ```
 
 ## Méthodes
@@ -23,12 +23,13 @@ new XSLTProcessor()
 - [`transformToFragment()`](/fr/docs/Web/API/XSLTProcessor/transformToFragment)
   - : Transforme la source du nœud en appliquant la fonction [`importStylesheet()`](/fr/docs/Web/API/XSLTProcessor/importStylesheet). Le document propriétaire du fragment de document résultant est le nœud propriétaire.
 - [`transformToDocument()`](/fr/docs/Web/API/XSLTProcessor/transformToDocument)
+
   - : Transforme la source du nœud en appliquant la feuille de style donnée lors de l'importation à l'aide de la fonction [`importStylesheet()`](/fr/docs/Web/API/XSLTProcessor/importStylesheet).
 
     L'objet résultant dépend de la [méthode de sortie](https://www.w3.org/TR/xslt/#output) de la feuille de style&nbsp;:
 
-    | Méthode de sortie | Type de résultat                                                                                                    |
-    | ----------------- | ------------------------------------------------------------------------------------------------------------------- |
+    | Méthode de sortie | Type de résultat                                                                                                             |
+    | ----------------- | ---------------------------------------------------------------------------------------------------------------------------- |
     | `html`            | [`HTMLDocument`](/fr/docs/Web/API/HTMLDocument)                                                                              |
     | `xml`             | [`XMLDocument`](/fr/docs/Web/API/XMLDocument)                                                                                |
     | `text`            | [`XMLDocument`](/fr/docs/Web/API/XMLDocument) avec un seul élément racine `<transformiix:result>` avec le texte comme enfant |

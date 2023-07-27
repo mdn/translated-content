@@ -1,5 +1,5 @@
 ---
-title: '@color-profile'
+title: "@color-profile"
 slug: Web/CSS/@color-profile
 translation_of: Web/CSS/@color-profile
 ---
@@ -12,7 +12,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@color-profil
 
 ```css
 @color-profile --swop5c {
-  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 ```
 
@@ -39,7 +39,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@color-profil
 
 ```css
 @color-profile --swop5c {
-  src: url('https://example.org/SWOP2006_Coated5v2.icc');
+  src: url("https://example.org/SWOP2006_Coated5v2.icc");
 }
 
 .header {

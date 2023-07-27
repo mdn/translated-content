@@ -59,9 +59,8 @@ blockquote {
 
 ```html
 <blockquote>
-  Du reste, depuis son bain dans la mare aux larmes,
-  tout était changé&nbsp;: la salle, la table de verre, et
-  la petite porte avaient complétement disparu.
+  Du reste, depuis son bain dans la mare aux larmes, tout était changé&nbsp;: la
+  salle, la table de verre, et la petite porte avaient complétement disparu.
 </blockquote>
 ```
 

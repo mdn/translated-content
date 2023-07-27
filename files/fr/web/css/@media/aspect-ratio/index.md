@@ -28,7 +28,14 @@ Les navigateurs ont ajouté une propriété `aspect-ratio` interne qui s'appliqu
 Pour Firefox, la feuille de style interne ressemble à :
 
 ```css
-img, input[type="image"], video, embed, iframe, marquee, object, table {
+img,
+input[type="image"],
+video,
+embed,
+iframe,
+marquee,
+object,
+table {
   aspect-ratio: attr(width) / attr(height);
 }
 ```

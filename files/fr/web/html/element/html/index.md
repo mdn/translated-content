@@ -1,5 +1,5 @@
 ---
-title: '<html> : l''élément de racine du document HTML'
+title: "<html> : l'élément de racine du document HTML"
 slug: Web/HTML/Element/html
 translation_of: Web/HTML/Element/html
 ---
@@ -24,10 +24,14 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Attri
 Le DOCTYPE utilisé dans l'exemple suivant indique que le document est un document HTML5.
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-  <head>...</head>
-  <body>...</body>
+  <head>
+    ...
+  </head>
+  <body>
+    ...
+  </body>
 </html>
 ```
 
