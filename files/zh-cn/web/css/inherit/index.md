@@ -15,16 +15,22 @@ slug: Web/CSS/inherit
 
 ```css
 /* 设置二级标题的颜色为绿色 */
-h2 { color: green; }
+h2 {
+  color: green;
+}
 
 /* ...but leave those in the sidebar alone so they use their parent's color */
-#sidebar h2 { color: inherit; }
+#sidebar h2 {
+  color: inherit;
+}
 ```
 
 在下面这个例子中，如果 sidebar 中`h2`元素的 div 匹配下面的规则的话，颜色会变成蓝色。
 
 ```css
-div#current { color: blue; }
+div#current {
+  color: blue;
+}
 ```
 
 ## 规范

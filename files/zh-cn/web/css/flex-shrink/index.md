@@ -14,7 +14,7 @@ flex-shrink: 0.6;
 /* Global values */
 flex-shrink: inherit;
 flex-shrink: initial;
-flex-shrink: unset
+flex-shrink: unset;
 ```
 
 {{cssinfo}}
@@ -61,7 +61,7 @@ flex-shrink: unset
 
 #content div {
   flex-basis: 120px;
-  border: 3px solid rgba(0,0,0,.2);
+  border: 3px solid rgba(0, 0, 0, 0.2);
 }
 
 .box {

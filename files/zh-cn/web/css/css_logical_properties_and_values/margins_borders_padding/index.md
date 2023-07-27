@@ -15,7 +15,7 @@ slug: Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
 
 如果你用了 `horizontal-tb` 的书写模式和从右到左的行内方向，那么 {{CSSXref("margin-inline-start")}} 会和 {{CSSXref("margin-right")}} 一样，而在竖排书写模式里 {{CSSXref("margin-inline-start")}} 会和用 {{CSSXref("margin-top")}} 一样。
 
-| 逻辑属性                                  | 实体属性                                    |
+| 逻辑属性                                 | 实体属性                                  |
 | ---------------------------------------- | ----------------------------------------- |
 | {{CSSXref("border-block-end")}}          | {{CSSXref("border-bottom")}}              |
 | {{CSSXref("border-block-end-color")}}    | {{CSSXref("border-bottom-color")}}        |
@@ -48,20 +48,20 @@ slug: Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding
 
 还有一些简写属性可以用于让我们同时设置盒子块向或者行向的两侧。这些简写属性没有等价的实体属性。
 
-| 属性                                | 用途                                                                                                     |
-| ---------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| 属性                               | 用途                                                                                                         |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | {{CSSXref("border-block")}}        | 为两个块向边框设置 {{CSSXref("border-color")}}、{{CSSXref("border-style")}} 和 {{CSSXref("border-width")}}。 |
-| {{CSSXref("border-block-color")}}  | 为两个块向边框设置 `border-color`。                                                                         |
-| {{CSSXref("border-block-style")}}  | 为两个块向边框设置 `border-style`。                                                                         |
-| {{CSSXref("border-block-width")}}  | 为两个块向边框设置 `border-width`。                                                                         |
+| {{CSSXref("border-block-color")}}  | 为两个块向边框设置 `border-color`。                                                                          |
+| {{CSSXref("border-block-style")}}  | 为两个块向边框设置 `border-style`。                                                                          |
+| {{CSSXref("border-block-width")}}  | 为两个块向边框设置 `border-width`。                                                                          |
 | {{CSSXref("border-inline")}}       | 为两个行向边框设置 `border-color`、`border-style` 和 `border-width`。                                        |
-| {{CSSXref("border-inline-color")}} | 为两个行向边框设置 `border-color`。                                                                         |
-| {{CSSXref("border-inline-style")}} | 为两个行向边框设置 `border-style`。                                                                         |
-| {{CSSXref("border-inline-width")}} | 为两个行向边框设置 `border-width`。                                                                         |
+| {{CSSXref("border-inline-color")}} | 为两个行向边框设置 `border-color`。                                                                          |
+| {{CSSXref("border-inline-style")}} | 为两个行向边框设置 `border-style`。                                                                          |
+| {{CSSXref("border-inline-width")}} | 为两个行向边框设置 `border-width`。                                                                          |
 | {{CSSXref("margin-block")}}        | 设置所有块向外边距（{{CSSXref("margin")}}）。                                                                |
 | {{CSSXref("margin-inline")}}       | 设置所有行向外边距（`margin`）。                                                                             |
-| {{CSSXref("padding-block")}}       | 设置块向内边距（{{CSSXref("padding")}}）。                                                                  |
-| {{CSSXref("padding-inline")}}      | 设置行向内边距（`padding`）。                                                                               |
+| {{CSSXref("padding-block")}}       | 设置块向内边距（{{CSSXref("padding")}}）。                                                                   |
+| {{CSSXref("padding-inline")}}      | 设置行向内边距（`padding`）。                                                                                |
 
 ## 外边距示例
 

@@ -26,7 +26,7 @@ list-style-type: trad-chinese-informal;
 list-style-type: kannada;
 
 /* <string> value */
-list-style-type: '-';
+list-style-type: "-";
 
 /* Identifier matching an @counter-style rule */
 list-style-type: custom-counter-style;
@@ -167,13 +167,15 @@ ol.shortcut {
 ### HTML
 
 ```html
-<ol class="normal">List 1
+<ol class="normal">
+  List 1
   <li>Hello</li>
   <li>World</li>
   <li>What's up?</li>
 </ol>
 
-<ol class="shortcut">List 2
+<ol class="shortcut">
+  List 2
   <li>Looks</li>
   <li>Like</li>
   <li>The</li>

@@ -9,7 +9,7 @@ slug: Web/CSS/margin-top
 
 {{EmbedInteractiveExample("pages/css/margin-top.html")}}
 
-此属性对于*不*[*可替换*](/zh-CN/docs/Web/CSS/Replaced_element)的内联元素没有效果，比如 {{HTMLElement("span")}} 或 {{HTMLElement("code")}}。
+此属性对于_不_ [_可替换_](/zh-CN/docs/Web/CSS/Replaced_element) 的内联元素没有效果，比如 {{HTMLElement("span")}} 或 {{HTMLElement("code")}}。
 
 ## 语法
 

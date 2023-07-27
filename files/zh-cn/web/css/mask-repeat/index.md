@@ -23,8 +23,13 @@ mask-repeat: round space;
 mask-repeat: no-repeat round;
 
 /* Multiple values */
-mask-repeat: space round, no-repeat;
-mask-repeat: round repeat, space, repeat-x;
+mask-repeat:
+  space round,
+  no-repeat;
+mask-repeat:
+  round repeat,
+  space,
+  repeat-x;
 
 /* Global values */
 mask-repeat: inherit;
@@ -59,9 +64,9 @@ One or more `<repeat-style>` values, separated by commas.
 
     | `repeat`    | The image is repeated as much as needed to cover the whole mask painting area. The last image will be clipped if it doesn't fit.                                                                                                                                                                                                                                                                                              |
     | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `space`     | The image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images. The {{cssxref("mask-position")}} property is ignored unless only one image can be displayed without clipping. The only case where clipping happens using `space` is when there isn't enough room to display one image.       |
+    | `space`     | The image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images. The {{cssxref("mask-position")}} property is ignored unless only one image can be displayed without clipping. The only case where clipping happens using `space` is when there isn't enough room to display one image.               |
     | `round`     | As the allowed space increases in size, the repeated images will stretch (leaving no gaps) until there is room for another one to be added. When the next image is added, all of the current ones compress to allow room. Example: An image with an original width of 260px, repeated three times, might stretch until each repetition is 300px wide, and then another image will be added. They will then compress to 225px. |
-    | `no-repeat` | The image is not repeated (and hence the mask painting area will not necessarily be entirely covered). The position of the non-repeated mask image is defined by the {{cssxref("mask-position")}} CSS property.                                                                                                                                                                                                       |
+    | `no-repeat` | The image is not repeated (and hence the mask painting area will not necessarily be entirely covered). The position of the non-repeated mask image is defined by the {{cssxref("mask-position")}} CSS property.                                                                                                                                                                                                               |
 
 ### 形式语法
 
@@ -85,8 +90,7 @@ One or more `<repeat-style>` values, separated by commas.
 ```
 
 ```html hidden
-<div id="masked">
-</div>
+<div id="masked"></div>
 <select id="repetition">
   <option value="repeat-x">repeat-x</option>
   <option value="repeat-y">repeat-y</option>
@@ -112,7 +116,7 @@ You can specify a different `<repeat-style>` for each mask image, separated by c
 
 ```css
 .examplethree {
-  mask-image: url('mask1.png'), url('mask2.png');
+  mask-image: url("mask1.png"), url("mask2.png");
   mask-repeat: repeat-x, repeat-y;
 }
 ```

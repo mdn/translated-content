@@ -12,16 +12,16 @@ slug: Web/CSS/mask
 mask: none;
 
 /* Image values */
-mask: url(mask.png);                       /* 使用位图来做遮罩 */
-mask: url(masks.svg#star);                 /* 使用 SVG 图形中的形状来做遮罩 */
+mask: url(mask.png); /* 使用位图来做遮罩 */
+mask: url(masks.svg#star); /* 使用 SVG 图形中的形状来做遮罩 */
 
 /* Combined values */
-mask: url(masks.svg#star) luminance;       /* Element within SVG graphic used as luminance mask */
-mask: url(masks.svg#star) 40px 20px;       /* 使用 SVG 图形中的形状来做遮罩并设定它的位置：离上边缘 40px，离左边缘 20px */
-mask: url(masks.svg#star) 0 0/50px 50px;   /* 使用 SVG 图形中的形状来做遮罩并设定它的位置和大小：长宽都是 50px */
-mask: url(masks.svg#star) repeat-x;        /* Element within SVG graphic used as horizontally repeated mask */
-mask: url(masks.svg#star) stroke-box;      /* Element within SVG graphic used as mask extending to the box enclosed by the stroke */
-mask: url(masks.svg#star) exclude;         /* Element within SVG graphic used as mask and combined with background using non-overlapping parts */
+mask: url(masks.svg#star) luminance; /* Element within SVG graphic used as luminance mask */
+mask: url(masks.svg#star) 40px 20px; /* 使用 SVG 图形中的形状来做遮罩并设定它的位置：离上边缘 40px，离左边缘 20px */
+mask: url(masks.svg#star) 0 0/50px 50px; /* 使用 SVG 图形中的形状来做遮罩并设定它的位置和大小：长宽都是 50px */
+mask: url(masks.svg#star) repeat-x; /* Element within SVG graphic used as horizontally repeated mask */
+mask: url(masks.svg#star) stroke-box; /* Element within SVG graphic used as mask extending to the box enclosed by the stroke */
+mask: url(masks.svg#star) exclude; /* Element within SVG graphic used as mask and combined with background using non-overlapping parts */
 
 /* Global values */
 mask: inherit;

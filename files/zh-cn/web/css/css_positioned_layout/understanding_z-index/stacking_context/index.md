@@ -125,70 +125,72 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context
 
 ```css
 * {
-    margin: 0;
+  margin: 0;
 }
 html {
-    padding: 20px;
-    font: 12px/20px Arial, sans-serif;
+  padding: 20px;
+  font:
+    12px/20px Arial,
+    sans-serif;
 }
 div {
-    opacity: 0.7;
-    position: relative;
+  opacity: 0.7;
+  position: relative;
 }
 h1 {
-    font: inherit;
-    font-weight: bold;
+  font: inherit;
+  font-weight: bold;
 }
 #div1,
 #div2 {
-    border: 1px dashed #696;
-    padding: 10px;
-    background-color: #cfc;
+  border: 1px dashed #696;
+  padding: 10px;
+  background-color: #cfc;
 }
 #div1 {
-    z-index: 5;
-    margin-bottom: 190px;
+  z-index: 5;
+  margin-bottom: 190px;
 }
 #div2 {
-    z-index: 2;
+  z-index: 2;
 }
 #div3 {
-    z-index: 4;
-    opacity: 1;
-    position: absolute;
-    top: 40px;
-    left: 180px;
-    width: 330px;
-    border: 1px dashed #900;
-    background-color: #fdd;
-    padding: 40px 20px 20px;
+  z-index: 4;
+  opacity: 1;
+  position: absolute;
+  top: 40px;
+  left: 180px;
+  width: 330px;
+  border: 1px dashed #900;
+  background-color: #fdd;
+  padding: 40px 20px 20px;
 }
 #div4,
 #div5 {
-    border: 1px dashed #996;
-    background-color: #ffc;
+  border: 1px dashed #996;
+  background-color: #ffc;
 }
 #div4 {
-    z-index: 6;
-    margin-bottom: 15px;
-    padding: 25px 10px 5px;
+  z-index: 6;
+  margin-bottom: 15px;
+  padding: 25px 10px 5px;
 }
 #div5 {
-    z-index: 1;
-    margin-top: 15px;
-    padding: 5px 10px;
+  z-index: 1;
+  margin-top: 15px;
+  padding: 5px 10px;
 }
 #div6 {
-    z-index: 3;
-    position: absolute;
-    top: 20px;
-    left: 180px;
-    width: 150px;
-    height: 125px;
-    border: 1px dashed #009;
-    padding-top: 125px;
-    background-color: #ddf;
-    text-align: center;
+  z-index: 3;
+  position: absolute;
+  top: 20px;
+  left: 180px;
+  width: 150px;
+  height: 125px;
+  border: 1px dashed #009;
+  padding-top: 125px;
+  background-color: #ddf;
+  text-align: center;
 }
 ```
 
