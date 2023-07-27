@@ -39,7 +39,7 @@ slug: Web/HTTP/Methods/PATCH
     </tr>
     <tr>
       <th scope="row">{{Glossary("Cacheable", "キャッシュ")}}</th>
-      <td>不可</td>
+      <td>鮮度を表す情報が含まれている場合のみ可能</td>
     </tr>
     <tr>
       <th scope="row">

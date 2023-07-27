@@ -1,5 +1,5 @@
 ---
-title: ':-moz-submit-invalid'
+title: ":-moz-submit-invalid"
 slug: Web/CSS/:-moz-submit-invalid
 translation_of: Web/CSS/:-moz-submit-invalid
 ---
@@ -13,7 +13,7 @@ Par défaut, aucun style n'est appliqué. Vous pouvez utiliser cette pseudo-clas
 ## Syntaxe
 
 ```css
-:-moz-submit-invalid
+:-moz-submit-invalid {}
 ```
 
 ## Spécifications

@@ -24,7 +24,7 @@ _Hérite des propriétés de son parent, {{domxref("Event")}}_.
 
 ## Méthodes
 
-*Pas de méthode spécifique&nbsp;; hérite des méthodes de son parent [`Event`](/fr/docs/Web/API/Event).*
+_Pas de méthode spécifique&nbsp;; hérite des méthodes de son parent [`Event`](/fr/docs/Web/API/Event)._
 
 ## Spécifications
 

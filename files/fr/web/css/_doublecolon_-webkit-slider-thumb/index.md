@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-slider-thumb'
+title: "::-webkit-slider-thumb"
 slug: Web/CSS/::-webkit-slider-thumb
 translation_of: Web/CSS/::-webkit-slider-thumb
 ---

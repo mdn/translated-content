@@ -13,7 +13,7 @@ Une valeur de type `<color>` peut être définie de l'une des façons suivantes&
 
 - En utilisant un mot-clé (comme `blue` ou `transparent`). Tous les mots-clés indiquent une couleur dans [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
 - En utilisant le système de coordonnées RGB cubiques avec une notation hexadécimale précédée d'un `#` ou avec les notations fonctionnelles [`rgb()`](/fr/docs/Web/CSS/color_value/rgb) et [`rgba()`](/fr/docs/Web/CSS/color_value/rgba). Les couleurs ainsi définies appartiennent toujours à [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
-- En utilisant [le système de coordonnées cylindriques HSL](https://fr.wikipedia.org/wiki/Teinte_saturation_luminosit%C3%A9#TSL) avec les notations fonctionnelles [`hsl()`](/fr/docs/Web/CSS/color_value/hsl) et [`hsla()`](/fr/docs/Web/CSS/color_value/hsla). Les couleurs ainsi définies appartiennent toujours à [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
+- En utilisant [le système de coordonnées cylindriques HSL](https://fr.wikipedia.org/wiki/Teinte_saturation_luminosité#TSL) avec les notations fonctionnelles [`hsl()`](/fr/docs/Web/CSS/color_value/hsl) et [`hsla()`](/fr/docs/Web/CSS/color_value/hsla). Les couleurs ainsi définies appartiennent toujours à [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
 - En utilisant [le système de coordonnées cylindriques HWB](https://en.wikipedia.org/wiki/HWB_color_model) avec la notation fonctionnelle [`hwb()`](/fr/docs/Web/CSS/color_value/hwb). Les couleurs ainsi définies appartiennent toujours à [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB).
 - En utilisant [le système de coordonnées cylindriques LCH](https://en.wikipedia.org/wiki/CIELAB_color_space#Cylindrical_representation:_CIELCh_or_CIEHLC) avec la notation fonctionnelle [`lch()`](/fr/docs/Web/CSS/color_value/lch). Cela permet de représenter n'importe quelle couleur visible.
 - En utilisant [le système de coordonnées Lab](https://fr.wikipedia.org/wiki/L*a*b*_CIE_1976), avec la notation fonctionnelle [`lab()`](/fr/docs/Web/CSS/color_value/lab). Cela permet de représenter n'importe quelle couleur visible.
@@ -64,7 +64,7 @@ Les couleurs RGB peuvent être exprimées avec une notation hexadécimale (préf
 
 Le modèle de couleurs HSL définit des couleurs dans [l'espace de couleur sRGB](https://fr.wikipedia.org/wiki/SRGB) selon ses composantes de teinte (<i lang="en">hue</i> en anglais), de saturation, et de luminosité. Une composante alpha optionnelle décrit l'opacité de la couleur (et donc sa transparence).
 
-La plupart des conceptrices et concepteurs trouvent le modèle HSL plus intuitif que le modèle RGB, car il permet d'ajuster indépendamment la teinte, la saturation et la luminosité. HSL permet également de créer plus facilement une palette de nuances sur la même teinte. Toutefois, utiliser HSL afin de créer des variations de couleurs peut produire des résultats surprenants, car il n'est pas [uniforme pour la perception](https://fr.wikipedia.org/wiki/%C3%89cart_de_couleur). Ainsi, `hsl(240 100% 50%)` et `hsl(60 100% 50%)` ont la même composante de luminosité, mais la première est bien plus sombre que la seconde.
+La plupart des conceptrices et concepteurs trouvent le modèle HSL plus intuitif que le modèle RGB, car il permet d'ajuster indépendamment la teinte, la saturation et la luminosité. HSL permet également de créer plus facilement une palette de nuances sur la même teinte. Toutefois, utiliser HSL afin de créer des variations de couleurs peut produire des résultats surprenants, car il n'est pas [uniforme pour la perception](https://fr.wikipedia.org/wiki/Écart_de_couleur). Ainsi, `hsl(240 100% 50%)` et `hsl(60 100% 50%)` ont la même composante de luminosité, mais la première est bien plus sombre que la seconde.
 
 Les couleurs HSL sont exprimées à l'aide des notations fonctionnelles `hsl()` et `hsla()`.
 
@@ -162,30 +162,38 @@ div {
 ```
 
 ```js hidden
-const inputElem = document.querySelector('input');
-const divElem = document.querySelector('div');
+const inputElem = document.querySelector("input");
+const divElem = document.querySelector("div");
 
 function validTextColor(stringToTest) {
-  if (stringToTest === "") { return false; }
-  if (stringToTest === "inherit") { return false; }
-  if (stringToTest === "transparent") { return false; }
+  if (stringToTest === "") {
+    return false;
+  }
+  if (stringToTest === "inherit") {
+    return false;
+  }
+  if (stringToTest === "transparent") {
+    return false;
+  }
 
   const image = document.createElement("img");
   image.style.color = "rgb(0, 0, 0)";
   image.style.color = stringToTest;
-  if (image.style.color !== "rgb(0, 0, 0)") { return true; }
+  if (image.style.color !== "rgb(0, 0, 0)") {
+    return true;
+  }
   image.style.color = "rgb(255, 255, 255)";
   image.style.color = stringToTest;
   return image.style.color !== "rgb(255, 255, 255)";
 }
 
-inputElem.addEventListener('change', () => {
+inputElem.addEventListener("change", () => {
   if (validTextColor(inputElem.value)) {
     divElem.style.backgroundColor = inputElem.value;
-    divElem.textContent = '';
+    divElem.textContent = "";
   } else {
-    divElem.style.backgroundColor = 'white';
-    divElem.textContent = 'Valeur de couleur invalide';
+    divElem.style.backgroundColor = "white";
+    divElem.textContent = "Valeur de couleur invalide";
   }
 });
 ```

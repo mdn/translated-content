@@ -13,7 +13,7 @@ Lorsque `click()` est appelée sur les éléments qui la prenne en charge (par e
 ## Syntaxe
 
 ```js
-click()
+click();
 ```
 
 ### Paramètres
@@ -32,7 +32,11 @@ Dans cet exemple, on simule un clic de souris lorsque le pointeur de la souris s
 
 ```html
 <form>
-  <input type="checkbox" id="maCaseACocher" onmouseover="maFonction()" onclick="console.log('un évènement click a eu lieu')">
+  <input
+    type="checkbox"
+    id="maCaseACocher"
+    onmouseover="maFonction()"
+    onclick="console.log('un évènement click a eu lieu')" />
 </form>
 ```
 
@@ -41,7 +45,7 @@ Dans cet exemple, on simule un clic de souris lorsque le pointeur de la souris s
 ```js
 // Lorsque l'évènement mouseover est déclenché, exécuter maFonction
 function maFonction() {
-  document.getElementById('maCaseACocher').click();
+  document.getElementById("maCaseACocher").click();
 }
 ```
 

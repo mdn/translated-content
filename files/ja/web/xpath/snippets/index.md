@@ -18,13 +18,15 @@ slug: Web/XPath/Snippets
 // initial work.
 function evaluateXPath(aNode, aExpr) {
   var xpe = new XPathEvaluator();
-  var nsResolver = xpe.createNSResolver(aNode.ownerDocument == null ?
-    aNode.documentElement : aNode.ownerDocument.documentElement);
+  var nsResolver = xpe.createNSResolver(
+    aNode.ownerDocument == null
+      ? aNode.documentElement
+      : aNode.ownerDocument.documentElement,
+  );
   var result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
   var found = [];
   var res;
-  while (res = result.iterateNext())
-    found.push(res);
+  while ((res = result.iterateNext())) found.push(res);
   return found;
 }
 ```
@@ -32,14 +34,14 @@ function evaluateXPath(aNode, aExpr) {
 この関数は **`new XPathEvaluator()`** コンストラクタを使用していますが、Firefox、Chrome、Opera、Safari ではサポートされているものの、Edge または Internet Explorer ではサポートされていません。Edge または Internet Explorer のユーザーがアクセスできる Web ドキュメント内のスクリプトは、 **`new XPathEvaluator()`** の呼び出しを次のフラグメントに置き換える必要があります。
 
 ```js
-  // XPathEvaluator is implemented on objects that implement Document
-  var xpe = aNode.ownerDocument || aNode;
+// XPathEvaluator is implemented on objects that implement Document
+var xpe = aNode.ownerDocument || aNode;
 ```
 
 その場合、[XPathNSResolver](/ja/docs/Web/API/document/createNSResolver)の作成は次のように単純化できます。
 
 ```js
-  var nsResolver = xpe.createNSResolver(xpe.documentElement);
+var nsResolver = xpe.createNSResolver(xpe.documentElement);
 ```
 
 ただし、`createNSResolver`は、XPath 式の名前空間プレフィックスが問い合わせる文書の名前空間プレフィックスと一致する（かつデフォルトの名前空間が使用されていない(回避策については[document.createNSResolver](/ja/docs/Web/API/document/createNSResolver)を参照)）ことが確認されている場合にのみ使用する必要があります。それ以外の場合は、XPathNSResolver の独自の実装を提供する必要があります。
@@ -85,7 +87,7 @@ results = evaluateXPath(people, "/people/person[2]");
 results = evaluateXPath(people, "//person[address/@city='denver']");
 
 // get all the addresses that have "south" in the street name
-results = evaluateXPath(people,  "//address[contains(@street, 'south')]");
+results = evaluateXPath(people, "//address[contains(@street, 'south')]");
 alert(results.length);
 ```
 
@@ -100,17 +102,25 @@ alert(results.length);
 // var els = docEvaluateArray('//a');
 // alert(els[0].nodeName); // gives 'A' in HTML document with at least one link
 
-function docEvaluateArray (expr, doc, context, resolver) {
-    var i, result, a = [];
-    doc = doc || (context ? context.ownerDocument : document);
-    resolver = resolver || null;
-    context = context || doc;
+function docEvaluateArray(expr, doc, context, resolver) {
+  var i,
+    result,
+    a = [];
+  doc = doc || (context ? context.ownerDocument : document);
+  resolver = resolver || null;
+  context = context || doc;
 
-    result = doc.evaluate(expr, context, resolver, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null);
-    for(i = 0; i < result.snapshotLength; i++) {
-        a[i] = result.snapshotItem(i);
-    }
-    return a;
+  result = doc.evaluate(
+    expr,
+    context,
+    resolver,
+    XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+    null,
+  );
+  for (i = 0; i < result.snapshotLength; i++) {
+    a[i] = result.snapshotItem(i);
+  }
+  return a;
 }
 ```
 
@@ -122,25 +132,43 @@ function docEvaluateArray (expr, doc, context, resolver) {
 
 ```js
 function getXPathForElement(el, xml) {
-  var xpath = '';
+  var xpath = "";
   var pos, tempitem2;
 
-  while(el !== xml.documentElement) {
+  while (el !== xml.documentElement) {
     pos = 0;
     tempitem2 = el;
-    while(tempitem2) {
-      if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) { // If it is ELEMENT_NODE of the same name
+    while (tempitem2) {
+      if (tempitem2.nodeType === 1 && tempitem2.nodeName === el.nodeName) {
+        // If it is ELEMENT_NODE of the same name
         pos += 1;
       }
       tempitem2 = tempitem2.previousSibling;
     }
 
-    xpath = "*[name()='"+el.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']["+pos+']'+'/'+xpath;
+    xpath =
+      "*[name()='" +
+      el.nodeName +
+      "' and namespace-uri()='" +
+      (el.namespaceURI === null ? "" : el.namespaceURI) +
+      "'][" +
+      pos +
+      "]" +
+      "/" +
+      xpath;
 
     el = el.parentNode;
   }
-  xpath = '/*'+"[name()='"+xml.documentElement.nodeName+"' and namespace-uri()='"+(el.namespaceURI===null?'':el.namespaceURI)+"']"+'/'+xpath;
-  xpath = xpath.replace(/\/$/, '');
+  xpath =
+    "/*" +
+    "[name()='" +
+    xml.documentElement.nodeName +
+    "' and namespace-uri()='" +
+    (el.namespaceURI === null ? "" : el.namespaceURI) +
+    "']" +
+    "/" +
+    xpath;
+  xpath = xpath.replace(/\/$/, "");
   return xpath;
 }
 ```

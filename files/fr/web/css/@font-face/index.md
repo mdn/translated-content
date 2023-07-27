@@ -1,5 +1,5 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
 l10n:
   sourceCommit: ccafad98826d97da19728626047a7020000fd639
@@ -14,9 +14,11 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-face`**
 ```css
 @font-face {
   font-family: "Trickster";
-  src: local("Trickster"),
-    url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1), url("trickster-outline.otf")
-      format("opentype"), url("trickster-outline.woff") format("woff");
+  src:
+    local("Trickster"),
+    url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
+    url("trickster-outline.otf") format("opentype"),
+    url("trickster-outline.woff") format("woff");
 }
 ```
 
@@ -46,6 +48,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-face`**
 - [`size-adjust`](/fr/docs/Web/CSS/@font-face/size-adjust)
   - : Définit un multiplicateur pour les contours des glyphes et les métriques associées à cette police. Cela permet de simplifier l'harmonisation de différentes polices lorsqu'elles sont affichées avec le même corps.
 - [`src`](/fr/docs/Web/CSS/@font-face/src)
+
   - : Indique les ressources à utiliser pour la police. La valeur est une liste de valeurs indiquant les ressources à tenter les unes après les autres. Chaque ressource est indiquée avec `url()` ou `local()`. C'est la première ressource de la liste qui est chargée correctement qui est utilisée. Les éléments situés après sont ignorés. Si plusieurs descripteurs `src` sont définis, seule la dernière règle déclarée capable de charger une ressource est appliquée.
 
     > **Note :** Les éléments que le navigateur considère comme invalides sont ignorés. Certains navigateurs pourront ignorer l'ensemble du descripteur si même un seul des éléments est invalide. Cela pourra avoir un impact sur la gestion des alternatives.
@@ -53,9 +56,11 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-face`**
     Une notation `url()` peut être suivie des notations fonctionnelles `format()` et `tech()`, comme ceci&nbsp;:
 
     ```css
-    src: local("Trickster"),
-      url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1), url("trickster-outline.otf")
-        format("opentype"), url("trickster-outline.woff") format("woff");
+    src:
+      local("Trickster"),
+      url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
+      url("trickster-outline.otf") format("opentype"),
+      url("trickster-outline.woff") format("woff");
     ```
 
     `url()` indique l'URL d'un fichier de police et fonctionne comme la notation fonctionnelle `url()` qu'on utilise par ailleurs en CSS. Si le fichier de la police contient plusieurs polices, un fragment d'identifiant doit être utilisé pour indiquer la police à utiliser. Par exemple&nbsp;:
@@ -97,6 +102,7 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-face`**
     | `format("truetype-variations")` | `format(truetype) tech(variations)` |
 
     > **Note :** `format(svg)` correspond aux [polices SVG](/fr/docs/Web/SVG/Tutorial/SVG_fonts), tandis que `tech(color-SVG)` correspond aux [polices OpenType avec un tableau SVG](https://learn.microsoft.com/en-us/typography/opentype/spec/svg) (également appelées polices de couleur OpenType-SVG)&nbsp;: il s'agit de deux types de polices complètement différents.
+
 - [`unicode-range`](/fr/docs/Web/CSS/@font-face/unicode-range)
   - : L'intervalle des points de code Unicode pour lesquels la règle `@font-face` s'applique.
 
@@ -150,7 +156,7 @@ Dans cet exemple, on indique une police téléchargeable à utiliser et on l'app
 #### HTML
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -199,7 +205,9 @@ Cela signifie généralement que les fichiers locaux doivent apparaître avant l
 ```css
 @font-face {
   font-family: "MgOpenModernaBold";
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf") format(opentype);
+  src:
+    url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental),
+    url("MgOpenModernaBold.otf") format(opentype);
 }
 ```
 
@@ -214,7 +222,9 @@ On notera dans ce cas que les descripteurs `src` sont essayés dans l'ordre inve
   font-family: "MgOpenModernaBold";
   src: url("MgOpenModernaBold.otf") format(opentype);
   src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental);
-  src: url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental), url("MgOpenModernaBold.otf") format(opentype);
+  src:
+    url("MgOpenModernaBoldIncr.otf") format("opentype") tech(incremental),
+    url("MgOpenModernaBold.otf") format(opentype);
 }
 ```
 

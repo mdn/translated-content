@@ -15,7 +15,7 @@ Les requêtes sont retournées dans le même ordre que l'ordre d'insertion.
 ## Syntaxe
 
 ```js
-cache.keys(request,{options}).then(function(response) {
+cache.keys(request, { options }).then(function (response) {
   // fait quelque chose avec votre tableau de réponses
 });
 ```
@@ -40,13 +40,13 @@ Une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau de clé de 
 ## Exemples
 
 ```js
-caches.open('v1').then(function(cache) {
-  cache.keys().then(function(keys) {
-    keys.forEach(function(request, index, array) {
+caches.open("v1").then(function (cache) {
+  cache.keys().then(function (keys) {
+    keys.forEach(function (request, index, array) {
       cache.delete(request);
     });
   });
-})
+});
 ```
 
 ## Spécifications

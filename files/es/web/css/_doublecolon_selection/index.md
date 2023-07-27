@@ -1,5 +1,5 @@
 ---
-title: '::selection'
+title: "::selection"
 slug: Web/CSS/::selection
 ---
 
@@ -25,12 +25,24 @@ Gecko es la única máquina que requiere el prefijo. Devido a el factor que las 
 
 ```css
 /* dibuja en cualquier texto seleccionado el color amarillo  sobre un fondo rojo */
-::-moz-selection { color: gold;  background: red; }
-::selection      { color: gold;  background: red; }
+::-moz-selection {
+  color: gold;
+  background: red;
+}
+::selection {
+  color: gold;
+  background: red;
+}
 
 /* dibuja el texto seleccionado en un parrafo de color blanco y negro*/
-p::-moz-selection { color: white;  background: black; }
-p::selection      { color: white;  background: black; }
+p::-moz-selection {
+  color: white;
+  background: black;
+}
+p::selection {
+  color: white;
+  background: black;
+}
 ```
 
 ## Especificaciones

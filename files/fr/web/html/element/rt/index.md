@@ -1,5 +1,5 @@
 ---
-title: '<rt> : l''élément de texte Ruby'
+title: "<rt> : l'élément de texte Ruby"
 slug: Web/HTML/Element/rt
 translation_of: Web/HTML/Element/rt
 ---
@@ -21,10 +21,7 @@ Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Att
 #### HTML
 
 ```html
-<ruby>
-  漢 <rt>Kan</rt>
-  字 <rt>ji</rt>
-</ruby>
+<ruby> 漢 <rt>Kan</rt> 字 <rt>ji</rt> </ruby>
 ```
 
 ```css hidden

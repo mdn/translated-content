@@ -1,5 +1,5 @@
 ---
-title: '::grammar-error'
+title: "::grammar-error"
 slug: Web/CSS/::grammar-error
 translation_of: Web/CSS/::grammar-error
 ---
@@ -30,7 +30,7 @@ Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une
 ## Syntaxe
 
 ```css
-::grammar-error
+::grammar-error {}
 ```
 
 ## Exemples
@@ -38,15 +38,16 @@ Seul un sous-ensemble restreint de propriétés CSS peut être utilisé dans une
 ### CSS
 
 ```css
-p::grammar-error { color:red }
+p::grammar-error {
+  color: red;
+}
 ```
 
 ### HTML
 
 ```html
 <p>
-  Alice devina tout de suite qu’il chercher l’éventail
-  et la paire de gants.
+  Alice devina tout de suite qu’il chercher l’éventail et la paire de gants.
 </p>
 ```
 

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:dir`** permet de cibler un élément selon la direction du texte qu'il contient.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:dir()`** permet de cibler un élément selon la direction du texte qu'il contient.
 
 ```css
 /* Cible le contenu avec du texte */

@@ -59,13 +59,17 @@ Dans certains cas, les moteurs de recherche couvrent un public régional. Certai
 
 ```html
 <div itemscope itemtype="https://schema.org/SoftwareApplication">
-  <span itemprop="name">Angry Birds</span> -
+  <span itemprop="name">Angry Birds</span> - NÉCESSITE
+  <span itemprop="operatingSystem">ANDROID</span><br />
+  <link
+    itemprop="applicationCategory"
+    href="https://schema.org/GameApplication" />
 
-  NÉCESSITE <span itemprop="operatingSystem">ANDROID</span><br>
-  <link itemprop="applicationCategory" href="https://schema.org/GameApplication"/>
-
-  <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
-  ÉVALUATION :
+  <div
+    itemprop="aggregateRating"
+    itemscope
+    itemtype="https://schema.org/AggregateRating">
+    ÉVALUATION :
     <span itemprop="ratingValue">4.6</span> (
     <span itemprop="ratingCount">8864</span> notes )
   </div>

@@ -92,7 +92,9 @@ user-select: unset;
 ```html
 <p>Vous devriez pouvoir sélectionner ce texte.</p>
 <p class="unselectable">Hop, vous ne pouvez pas sélectionner ce texte !</p>
-<p class="all">Cliquer une fois permettra de sélectionner l'ensemble du texte.</p>
+<p class="all">
+  Cliquer une fois permettra de sélectionner l'ensemble du texte.
+</p>
 ```
 
 ### Résultat

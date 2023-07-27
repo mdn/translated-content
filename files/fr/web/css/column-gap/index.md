@@ -124,9 +124,8 @@ column-gap: unset;
 
 ```html
 <p class="content-box">
-  Un texte sur plusieurs colonnes avec une gouttière
-  de 40px paramétrée grâce à la propriété `column-gap`.
-  C'est plutôt pas mal comme effet non ?
+  Un texte sur plusieurs colonnes avec une gouttière de 40px paramétrée grâce à
+  la propriété `column-gap`. C'est plutôt pas mal comme effet non ?
 </p>
 ```
 

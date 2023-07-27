@@ -27,8 +27,8 @@ Un {{domxref("WebGLBuffer")}} stockant des données telles que des sommets ou de
 ### Création d'un tampon
 
 ```js
-var canevas = document.getElementById('canevas');
-var gl = canevas.getContext('webgl');
+var canevas = document.getElementById("canevas");
+var gl = canevas.getContext("webgl");
 var tampon = gl.createBuffer();
 ```
 

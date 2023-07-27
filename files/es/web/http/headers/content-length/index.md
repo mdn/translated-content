@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Content-Length
 
 El encabezado de entidad **`Content-Length`** indica el tamaño de la entidad-cuerpo, en bytes, enviado al destinatario.
 
-| Tipo de cabecera                                             | {{Glossary("Entity header")}} |
-| ------------------------------------------------------------ | ---------------------------------------- |
-| {{Glossary("Nombre de cabecera prohibido")}} | si                                       |
+| Tipo de cabecera                             | {{Glossary("Entity header")}} |
+| -------------------------------------------- | ----------------------------- |
+| {{Glossary("Nombre de cabecera prohibido")}} | si                            |
 
 ## Sintaxis
 

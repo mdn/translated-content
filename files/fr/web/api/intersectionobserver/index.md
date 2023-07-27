@@ -38,16 +38,16 @@ Lorsqu'un objet implémentant `IntersectionObserver` est créé, il est configur
 ## Exemple
 
 ```js
-var intersectionObserver = new IntersectionObserver(function(entries) {
+var intersectionObserver = new IntersectionObserver(function (entries) {
   // Si intersectionRatio vaut 0 ou moins, la cible
   // est hors de vue et rien n'est alors fait
   if (entries[0].intersectionRatio <= 0) return;
 
   loadItems(10);
-  console.log('Nouveaux éléments chargés');
+  console.log("Nouveaux éléments chargés");
 });
 // début de l'observation
-intersectionObserver.observe(document.querySelector('.scrollerFooter'));
+intersectionObserver.observe(document.querySelector(".scrollerFooter"));
 ```
 
 ## Spécifications

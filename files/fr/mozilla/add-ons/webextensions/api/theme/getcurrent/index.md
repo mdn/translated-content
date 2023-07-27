@@ -14,8 +14,8 @@ Il s'agit d'une fonction asynchrone qui renvoie un objet [`Promise`](/fr/docs/We
 
 ```js
 var getting = browser.theme.getCurrent(
-  windowId    // integer
-)
+  windowId, // integer
+);
 ```
 
 ### Paramètres
@@ -36,17 +36,14 @@ Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). 
 Obtient les propriétés des couleurs `accentcolor` et `toolbar` dans le thème actuel.
 
 ```js
-function getStyle(themeInfo)
-{
-  if (themeInfo.colors)
-  {
-    console.log("accent color : " +  themeInfo.colors.accentcolor);
+function getStyle(themeInfo) {
+  if (themeInfo.colors) {
+    console.log("accent color : " + themeInfo.colors.accentcolor);
     console.log("toolbar : " + themeInfo.colors.toolbar);
   }
 }
 
-async function getCurrentThemeInfo()
-{
+async function getCurrentThemeInfo() {
   var themeInfo = await browser.theme.getCurrent();
   getStyle(themeInfo);
 }

@@ -1,5 +1,5 @@
 ---
-title: '<tt> : l''élément de texte de téléscripteur (obsolète)'
+title: "<tt> : l'élément de texte de téléscripteur (obsolète)"
 slug: Web/HTML/Element/tt
 translation_of: Web/HTML/Element/tt
 ---
@@ -43,8 +43,7 @@ Il est possible de surcharger la police par défaut utilisée pour cet élément
 
 ```css
 tt {
-  font-family: "Lucida Console", "Menlo", "Monaco", "Courier",
-               monospace;
+  font-family: "Lucida Console", "Menlo", "Monaco", "Courier", monospace;
 }
 ```
 

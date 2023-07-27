@@ -12,11 +12,11 @@ Esta **propiedad** aplicara el énfasis a cada carácter especificado en el text
 text-emphasis: none; /* No emphasis marks */
 
 /* <string> valor */
-text-emphasis: 'x';
-text-emphasis: '点';
-text-emphasis: '\25B2';
-text-emphasis: '*' #555;
-text-emphasis: 'foo'; /* Should NOT use. It may be computed to or rendered as 'f' only */
+text-emphasis: "x";
+text-emphasis: "点";
+text-emphasis: "\25B2";
+text-emphasis: "*" #555;
+text-emphasis: "foo"; /* Should NOT use. It may be computed to or rendered as 'f' only */
 
 /* Valor de la Palabra Clave */
 text-emphasis: filled;
@@ -82,7 +82,7 @@ This example draws a heading with triangles used to emphasize each character.
 
 ```css
 h2 {
-  text-emphasis: triangle #D55;
+  text-emphasis: triangle #d55;
 }
 ```
 

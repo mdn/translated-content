@@ -102,17 +102,17 @@ Esse método adicionará um ouvinte de evento `onkeydown` ao objeto `window` par
 
 ```js
 var _this = this;
-window.onkeydown = function(e) {
-    if (e.keyCode === 65) {
-      _this.x -= _this.velX;
-    } else if (e.keyCode === 68) {
-      _this.x += _this.velX;
-    } else if (e.keyCode === 87) {
-      _this.y -= _this.velY;
-    } else if (e.keyCode === 83) {
-      _this.y += _this.velY;
-    }
+window.onkeydown = function (e) {
+  if (e.keyCode === 65) {
+    _this.x -= _this.velX;
+  } else if (e.keyCode === 68) {
+    _this.x += _this.velX;
+  } else if (e.keyCode === 87) {
+    _this.y -= _this.velY;
+  } else if (e.keyCode === 83) {
+    _this.y += _this.velY;
   }
+};
 ```
 
 Assim, quando uma tecla é pressionada, a propriedade [keyCode](/pt-BR/docs/Web/API/KeyboardEvent/keyCode) é consultada para ver qual tecla é pressionada. Se for um dos quatro representados pelos códigos de teclas especificados, o círculo maligno se moverá para a esquerda / direita / para cima / para baixo.
@@ -142,22 +142,22 @@ Para implementar o contador de pontuação, siga os seguintes passos:
 1. No seu arquivo HTML, adicione um elemento {{HTMLElement("p")}} logo abaixo do elemento {{HTMLElement("h1")}} contendo o texto "Contagem de bolas:".
 2. No seu arquivo CSS, adicione a seguinte regra na parte inferior:
 
-    ```css
-    p {
-      position: absolute;
-      margin: 0;
-      top: 35px;
-      right: 5px;
-      color: #aaa;
-    }
-    ```
+   ```css
+   p {
+     position: absolute;
+     margin: 0;
+     top: 35px;
+     right: 5px;
+     color: #aaa;
+   }
+   ```
 
 3. Em seu JavaScript, faça as seguintes atualizações:
 
-    - Crie uma variável que armazene uma referência ao parágrafo.
-    - Mantenha uma contagem do número de bolas na tela de alguma forma.
-    - Incrementar a contagem e exibir o número atualizado de bolas cada vez que uma bola é adicionada à cena.
-    - Decrementar a contagem e exibir o número atualizado de bolas cada vez que o círculo maligno come uma bola (faz com que ele não exista).
+   - Crie uma variável que armazene uma referência ao parágrafo.
+   - Mantenha uma contagem do número de bolas na tela de alguma forma.
+   - Incrementar a contagem e exibir o número atualizado de bolas cada vez que uma bola é adicionada à cena.
+   - Decrementar a contagem e exibir o número atualizado de bolas cada vez que o círculo maligno come uma bola (faz com que ele não exista).
 
 ## Dicas e sugestões
 

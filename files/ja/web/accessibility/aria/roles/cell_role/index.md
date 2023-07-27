@@ -90,8 +90,12 @@ ARIA の第一のルールは、要素を転用して、ARIA のロール、ス�
   </div>
   <div role="rowgroup">
     <div role="row">
-      <span role="columnheader" aria-sort="none" aria-rowindex="1">ARIA ロール</span>
-      <span role="columnheader" aria-sort="none" aria-rowindex="1">意味論的な要素</span>
+      <span role="columnheader" aria-sort="none" aria-rowindex="1"
+        >ARIA ロール</span
+      >
+      <span role="columnheader" aria-sort="none" aria-rowindex="1"
+        >意味論的な要素</span
+      >
     </div>
   </div>
   <div role="rowgroup">
@@ -132,7 +136,9 @@ ARIA の第一のルールは、要素を転用して、ARIA のロール、ス�
   </caption>
   <thead role="rowgroup">
     <tr role="row">
-      <th role="columnheader" aria-sort="none" aria-rowindex="1">ARIA ロール</th>
+      <th role="columnheader" aria-sort="none" aria-rowindex="1">
+        ARIA ロール
+      </th>
       <th role="columnheader" aria-sort="none" aria-rowindex="1">
         意味論的な要素
       </th>

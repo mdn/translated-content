@@ -1,5 +1,5 @@
 ---
-title: ':-moz-loading'
+title: ":-moz-loading"
 slug: Web/CSS/:-moz-loading
 translation_of: Web/CSS/:-moz-loading
 ---
@@ -13,7 +13,7 @@ Cette pseudo-classe est principalement destinée aux développeurs de thèmes.
 ## Syntaxe
 
 ```css
-:-moz-loading
+:-moz-loading {}
 ```
 
 ## Exemples

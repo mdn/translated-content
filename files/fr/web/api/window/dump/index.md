@@ -13,7 +13,7 @@ La sortie produite par `dump()` n'est _pas_ envoyée vers la console des outils 
 ## Syntaxe
 
 ```js
-dump(message)
+dump(message);
 ```
 
 ### Paramètres

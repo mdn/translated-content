@@ -1,5 +1,5 @@
 ---
-title: '<noframes> : l''élément alternatif aux frames (obsolete)'
+title: "<noframes> : l'élément alternatif aux frames (obsolete)"
 slug: Web/HTML/Element/noframes
 translation_of: Web/HTML/Element/noframes
 ---
@@ -24,12 +24,13 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 
 ```html
 <frameset cols="50%,50%">
-  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frameset"/>
-  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame"/>
+  <frame
+    src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frameset" />
+  <frame src="https://developer.mozilla.org/fr/docs/Web/HTML/Element/frame" />
   <noframes>
     <p>
-      Il semblerait que votre navigateur ne supporte pas les frames,
-      ou qu'il est configuré pour ne pas les autoriser.
+      Il semblerait que votre navigateur ne supporte pas les frames, ou qu'il
+      est configuré pour ne pas les autoriser.
     </p>
   </noframes>
 </frameset>

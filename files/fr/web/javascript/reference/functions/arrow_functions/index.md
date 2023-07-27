@@ -6,7 +6,7 @@ translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 
 {{jsSidebar("Functions")}}
 
-Une **expression de fonction fléchée** (_arrow function_ en anglais) permet d'avoir une syntaxe plus courte que [les expressions de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function) et ne possède pas ses propres valeurs pour [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this), [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments), [`super`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/super), ou [`new.target`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/new.target). Les fonctions fléchées sont souvent [anonymes](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/name) et ne sont pas destinées à être utilisées pour déclarer des méthodes.
+Une **expression de fonction fléchée** (_arrow function_ en anglais) permet d'avoir une syntaxe plus courte que [les expressions de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function) et ne possède pas ses propres valeurs pour [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this), [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments), [`super`](/fr/docs/Web/JavaScript/Reference/Opérateurs/super), ou [`new.target`](/fr/docs/Web/JavaScript/Reference/Opérateurs/new.target). Les fonctions fléchées sont souvent [anonymes](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/name) et ne sont pas destinées à être utilisées pour déclarer des méthodes.
 
 {{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
 
@@ -237,7 +237,7 @@ console.log(Toto.prototype);
 
 #### Utiliser le mot-clé `yield`
 
-Le mot-clé [`yield`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/yield) ne peut pas être utilisé dans le corps d'une fonction fléchée (sauf si cela intervient dans une autre fonction, imbriquée dans la fonction fléchée). De fait, les fonctions fléchéees ne peuvent donc pas être utilisées comme générateurs.
+Le mot-clé [`yield`](/fr/docs/Web/JavaScript/Reference/Opérateurs/yield) ne peut pas être utilisé dans le corps d'une fonction fléchée (sauf si cela intervient dans une autre fonction, imbriquée dans la fonction fléchée). De fait, les fonctions fléchéees ne peuvent donc pas être utilisées comme générateurs.
 
 #### Utiliser le mot-clé `new`
 

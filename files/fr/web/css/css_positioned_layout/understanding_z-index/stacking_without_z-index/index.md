@@ -31,16 +31,11 @@ Dans l'exemple suivant, les blocs en position absolue et relative sont correctem
 ### HTML
 
 ```html
-<div id="abs1" class="absolute">
-  <b>DIV #1</b><br />position: absolute;</div>
-<div id="rel1" class="relative">
-  <b>DIV #2</b><br />position: relative;</div>
-<div id="rel2" class="relative">
-  <b>DIV #3</b><br />position: relative;</div>
-<div id="abs2" class="absolute">
-  <b>DIV #4</b><br />position: absolute;</div>
-<div id="sta1" class="static">
-  <b>DIV #5</b><br />position: static;</div>
+<div id="abs1" class="absolute"><b>DIV #1</b><br />position: absolute;</div>
+<div id="rel1" class="relative"><b>DIV #2</b><br />position: relative;</div>
+<div id="rel2" class="relative"><b>DIV #3</b><br />position: relative;</div>
+<div id="abs2" class="absolute"><b>DIV #4</b><br />position: absolute;</div>
+<div id="sta1" class="static"><b>DIV #5</b><br />position: static;</div>
 ```
 
 ### CSS

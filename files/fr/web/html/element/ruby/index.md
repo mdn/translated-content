@@ -22,8 +22,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Global
 
 ```html
 <ruby>
-  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
-  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp> 字 <rp>(</rp><rt>ji</rt><rp>)</rp>
 </ruby>
 ```
 
@@ -36,9 +35,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Global
 #### HTML
 
 ```html
-<ruby>
-  明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp>
-</ruby>
+<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
 ```
 
 #### Résultat
@@ -52,7 +49,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Global
     <tr>
       <th scope="row">
         <dfn
-          ><a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu"
+          ><a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
             >Catégories de contenu</a
           ></dfn
         >
@@ -62,7 +59,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Global
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu de phrasé</a
         >,
         <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_tangible"
@@ -74,7 +71,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Global
       <th scope="row">Contenu autorisé</th>
       <td>
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu de phrasé</a
         >.
       </td>
@@ -87,7 +84,7 @@ Cet élément inclut uniquement les [attributs globaux](/fr/docs/Web/HTML/Global
       <th scope="row">Parents autorisés</th>
       <td>
         Tout élément qui accepte du <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu de phrasé</a
         >.
       </td>

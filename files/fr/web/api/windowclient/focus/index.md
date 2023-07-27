@@ -11,7 +11,7 @@ La méthode **`focus()`** de l'interface {{domxref("WindowClient")}} focus le cl
 ## Syntaxe
 
 ```js
-Client.focus().then(function(WindowClient) {
+Client.focus().then(function (WindowClient) {
   // utilisez le WindowClient une fois qu'il est focus
 });
 ```
@@ -27,23 +27,25 @@ Une {{jsxref("Promise")}} qui est résolue vers le {{domxref("WindowClient")}} e
 ## Exemple
 
 ```js
-self.addEventListener('notificationclick', function(event) {
-  console.log('On notification click: ', event.notification.tag);
+self.addEventListener("notificationclick", function (event) {
+  console.log("On notification click: ", event.notification.tag);
   event.notification.close();
 
   // Vérifie si le client en cours est ouvert et
   // le focus le cas échéant
-  event.waitUntil(clients.matchAll({
-    type: "window"
-  }).then(function(clientList) {
-    for (var i = 0; i < clientList.length; i++) {
-      var client = clientList[i];
-      if (client.url == '/' && 'focus' in client)
-        return client.focus();
-    }
-    if (clients.openWindow)
-      return clients.openWindow('/');
-  }));
+  event.waitUntil(
+    clients
+      .matchAll({
+        type: "window",
+      })
+      .then(function (clientList) {
+        for (var i = 0; i < clientList.length; i++) {
+          var client = clientList[i];
+          if (client.url == "/" && "focus" in client) return client.focus();
+        }
+        if (clients.openWindow) return clients.openWindow("/");
+      }),
+  );
 });
 ```
 

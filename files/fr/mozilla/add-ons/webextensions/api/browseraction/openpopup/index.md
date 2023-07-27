@@ -11,7 +11,7 @@ Vous pouvez uniquement appeler cette fonction à partir du gestionnaire pour une
 ## Syntaxe
 
 ```js
-browser.browserAction.openPopup()
+browser.browserAction.openPopup();
 ```
 
 ### Paramètres
@@ -34,7 +34,7 @@ Ouvrez la fenêtre contextuelle lorsque l'utilisateur sélectionne un élément 
 browser.menus.create({
   id: "open-popup",
   title: "open popup",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

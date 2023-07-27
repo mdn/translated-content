@@ -29,13 +29,24 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role
 ### 例 1: パーセンテージ値を持つ基本的なプログレスバー
 
 ```html
-<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20 %</div>
+<div
+  role="progressbar"
+  aria-valuenow="20"
+  aria-valuemin="0"
+  aria-valuemax="100">
+  20 %
+</div>
 ```
 
 ### 例 2: aria-valuetext の使用
 
 ```html
-<div role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuetext="ステップ 2: ファイルをコピーしています... " aria-valuemax="100">
+<div
+  role="progressbar"
+  aria-valuenow="20"
+  aria-valuemin="0"
+  aria-valuetext="ステップ 2: ファイルをコピーしています... "
+  aria-valuemax="100">
   ステップ 2: ファイルをコピーしています...
 </div>
 ```

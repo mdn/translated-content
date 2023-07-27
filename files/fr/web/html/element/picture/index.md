@@ -1,5 +1,5 @@
 ---
-title: '<picture> : l''élément d''image adaptative'
+title: "<picture> : l'élément d'image adaptative"
 slug: Web/HTML/Element/picture
 translation_of: Web/HTML/Element/picture
 ---
@@ -37,8 +37,8 @@ L'attribut `media` de l'élément {{HTMLElement("source")}} permet de rédiger u
 
 ```html
 <picture>
- <source srcset="mdn-logo-wide.png" media="(min-width: 600px)">
- <img src="mdn-logo-narrow.png" alt="MDN">
+  <source srcset="mdn-logo-wide.png" media="(min-width: 600px)" />
+  <img src="mdn-logo-narrow.png" alt="MDN" />
 </picture>
 ```
 
@@ -48,8 +48,8 @@ L'attribut `type` d'un élément {{HTMLElement("source")}} permet d'indiquer le 
 
 ```html
 <picture>
- <source srcset="mdn-logo.svg" type="image/svg+xml">
- <img src="mdn-logo.png" alt="MDN">
+  <source srcset="mdn-logo.svg" type="image/svg+xml" />
+  <img src="mdn-logo.png" alt="MDN" />
 </picture>
 ```
 
@@ -59,20 +59,20 @@ L'attribut `type` d'un élément {{HTMLElement("source")}} permet d'indiquer le 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu"
           >Catégories de contenu</a
         >
       </th>
       <td>
-        <a href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_de_flux"
+        <a href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_de_flux"
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phrasé"
           >contenu phrasé</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_int%C3%A9gr%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_intégré"
           >contenu intégré</a
         >.
       </td>
@@ -94,7 +94,7 @@ L'attribut `type` d'un élément {{HTMLElement("source")}} permet d'indiquer le 
       <td>
         Tout élément qui peut contenir du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_int%C3%A9gr%C3%A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_intégré"
           >contenu intégré</a
         >.
       </td>

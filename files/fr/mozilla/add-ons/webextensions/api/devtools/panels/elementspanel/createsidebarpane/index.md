@@ -22,8 +22,8 @@ Cette fonction prend un argument, qui est une chaîne représentant le titre du 
 
 ```js
 var creating = browser.devtools.panels.elements.createSidebarPane(
-  title       // string
-)
+  title, // string
+);
 ```
 
 ### Paramètres
@@ -50,8 +50,8 @@ function onCreated(sidebarPane) {
     someString: "hello there",
     someObject: {
       someNumber: 42,
-      someOtherString: "this is my pane's content"
-    }
+      someOtherString: "this is my pane's content",
+    },
   });
 }
 

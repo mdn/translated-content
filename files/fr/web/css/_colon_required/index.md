@@ -1,5 +1,5 @@
 ---
-title: ':required'
+title: ":required"
 slug: Web/CSS/:required
 translation_of: Web/CSS/:required
 ---
@@ -43,11 +43,11 @@ input:required {
 ```html
 <form>
   <label for="url-input">Tapez une URL :</label>
-  <input type="url" id="url-input">
-  <br>
-  <br>
+  <input type="url" id="url-input" />
+  <br />
+  <br />
   <label for="email-input">Tapez une adresse courriel :</label>
-  <input type="email" id="email-input" required>
+  <input type="email" id="email-input" required />
 </form>
 ```
 

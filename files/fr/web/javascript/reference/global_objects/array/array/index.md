@@ -28,7 +28,7 @@ new Array(longueurTableau)
 
 ### Utilisation de la notation littérale
 
-Les tableaux peuvent être créés avec une notation [littérale](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Litt%C3%A9raux_de_tableaux) :
+Les tableaux peuvent être créés avec une notation [littérale](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Littéraux_de_tableaux) :
 
 ```js
 let fruits = ['Pomme', 'Banane'];

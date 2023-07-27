@@ -109,8 +109,8 @@ p {
   background-color: teal;
 }
 
-.transformation{
-  transform: matrix(0.87,-0.5,0,0.87,0,1);
+.transformation {
+  transform: matrix(0.87, -0.5, 0, 0.87, 0, 1);
   background-color: blue;
 }
 ```

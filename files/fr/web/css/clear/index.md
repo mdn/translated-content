@@ -12,7 +12,7 @@ La propriété **`clear`** indique si un élément peut être situé à côté d
 
 Lorsqu'elle est appliquée aux blocs non-flottants, elle déplace [le bord de la bordure](/fr/docs/Learn/CSS/Building_blocks/The_box_model) de l'élément sous [le bord de la marge](/fr/docs/Learn/CSS/Building_blocks/The_box_model) de tous les éléments flottants concernés. Il y aura [fusion des marges (_margin collapsing_)](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) verticales entre l'élément flottant et le bloc non-flottant mais pas entre les élément flottants.
 
-Lorsqu'elle est appliquée aux éléments flottants, elle déplace [le bord de la marge](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte) de l'élément sous [le bord de la marge](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte) de tous les éléments flottants concernés. Cela impacte la position des éléments flottants suivants car ceux-ci ne peuvent pas être situés plus haut que les éléments flottants qui les précèdent.
+Lorsqu'elle est appliquée aux éléments flottants, elle déplace [le bord de la marge](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) de l'élément sous [le bord de la marge](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) de tous les éléments flottants concernés. Cela impacte la position des éléments flottants suivants car ceux-ci ne peuvent pas être situés plus haut que les éléments flottants qui les précèdent.
 
 Les éléments flottants qui sont dégagés sont les éléments flottants précédant l'élément ciblé, au sein de du [même contexte de formatage](/fr/docs/Web/Guide/CSS/Block_formatting_context).
 
@@ -20,9 +20,9 @@ Les éléments flottants qui sont dégagés sont les éléments flottants préc�
 >
 > ```css
 > #conteneur::after {
->    content: "";
->    display: block;
->    clear: both;
+>   content: "";
+>   display: block;
+>   clear: both;
 > }
 > ```
 
@@ -74,7 +74,10 @@ clear: unset;
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
   <p class="left">Ce paragraphe est dégagé à gauche.</p>
 </div>
@@ -83,9 +86,9 @@ clear: unset;
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .left {
   border: 1px solid black;
@@ -102,7 +105,7 @@ clear: unset;
   float: left;
   margin: 0;
   background-color: red;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 50%;
@@ -117,7 +120,10 @@ p {
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
   <p class="right">Ce paragraphe est dégagé à droite.</p>
 </div>
@@ -126,9 +132,9 @@ p {
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .right {
   border: 1px solid black;
@@ -139,13 +145,13 @@ p {
   margin: 0;
   background-color: black;
   color: #fff;
-  width:20%;
+  width: 20%;
 }
 .red {
   float: right;
   margin: 0;
   background-color: red;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 50%;
@@ -160,8 +166,15 @@ p {
 
 ```html
 <div class="wrapper">
-  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.</p>
-  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="black">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus
+    ac dui.
+  </p>
+  <p class="red">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet
+    diam. Duis mattis varius dui. Suspendisse eget dolor.
+  </p>
   <p class="both">Ce paragraphe est dégagé de chaque côté.</p>
 </div>
 ```
@@ -169,9 +182,9 @@ p {
 #### CSS
 
 ```css
-.wrapper{
-  border:1px solid black;
-  padding:10px;
+.wrapper {
+  border: 1px solid black;
+  padding: 10px;
 }
 .both {
   border: 1px solid black;
@@ -182,13 +195,13 @@ p {
   margin: 0;
   background-color: black;
   color: #fff;
-  width:20%;
+  width: 20%;
 }
 .red {
   float: right;
   margin: 0;
   background-color: red;
-  width:20%;
+  width: 20%;
 }
 p {
   width: 45%;

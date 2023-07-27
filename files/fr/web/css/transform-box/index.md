@@ -61,7 +61,7 @@ p {
 }
 
 .premier {
-   border: 3px black solid;
+  border: 3px black solid;
 }
 
 .deuxieme {

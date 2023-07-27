@@ -13,7 +13,7 @@ Il s'agit d'une fonction asynchrone qui renvoie une {{JSxRef("Promise")}}.
 ## Syntaxe
 
 ```js
-var gettingInfo = browser.runtime.getBrowserInfo()
+var gettingInfo = browser.runtime.getBrowserInfo();
 ```
 
 ### Paramètres

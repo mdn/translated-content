@@ -20,8 +20,9 @@ Pour associer un élément `<label>` avec un élément `<input>`, il faut fourni
 On peut également créer un lien implicite en imbriquant l'élément `<input>` directement au sein d'un élément `<label>` . Dans ce cas, les attributs `for` et `id` ne sont plus nécessaires.
 
 ```html
-<label>Aimez-vous les petits pois ?
-  <input type="checkbox" name="petits_pois">
+<label
+  >Aimez-vous les petits pois ?
+  <input type="checkbox" name="petits_pois" />
 </label>
 ```
 
@@ -88,7 +89,7 @@ Il ne faut pas placer d'éléments interactifs (tels que les ancres ({{HTMLEleme
 
 ```html example-bad
 <label for="tac">
-  <input id="tac" type="checkbox" name="terms-and-conditions">
+  <input id="tac" type="checkbox" name="terms-and-conditions" />
   J'accepte <a href="terms-and-conditions.html">les conditions d'utilisation</a>
 </label>
 ```
@@ -97,7 +98,7 @@ Il ne faut pas placer d'éléments interactifs (tels que les ancres ({{HTMLEleme
 
 ```html example-good
 <label for="tac">
-  <input id="tac" type="checkbox" name="terms-and-conditions">
+  <input id="tac" type="checkbox" name="terms-and-conditions" />
   J'accepte les conditions d'utilisation
 </label>
 <p>
@@ -116,7 +117,7 @@ S'il faut associer un titre à un formulaire ou à une section d'un formulaire, 
 ```html example-bad
 <label for="votre-nom">
   <h3>Votre nom</h3>
-  <input id="votre-nom" name="votre-nom" type="text">
+  <input id="votre-nom" name="votre-nom" type="text" />
 </label>
 ```
 
@@ -125,7 +126,7 @@ S'il faut associer un titre à un formulaire ou à une section d'un formulaire, 
 ```html example-good
 <label class="label-grand" for="votre-nom">
   Votre nom
-  <input id="votre-nom" name="votre-nom" type="text">
+  <input id="votre-nom" name="votre-nom" type="text" />
 </label>
 ```
 
@@ -150,11 +151,11 @@ Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value
           >Contenu de flux</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >,
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_associ.C3.A9_aux_formulaires"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_associ.C3.A9_aux_formulaires"
           >contenu associé aux formulaires</a
         >
         (listed, submittable, resettable),
@@ -166,7 +167,7 @@ Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value
     <tr>
       <th scope="row">Contenu autorisé</th>
       <td>
-        <a href="/fr/docs/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+        <a href="/fr/docs/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >Contenu phrasé</a
         >
         sans éléments <code>label</code> descendants. À l'exception du contrôle
@@ -183,7 +184,7 @@ Un élément {{HTMLElement("input")}} avec `type="button"` et un attribut `value
       <td>
         Tout élément acceptant du
         <a
-          href="/fr/docs/Web/HTML/Cat%C3%A9gorie_de_contenu#Contenu_phras.C3.A9"
+          href="/fr/docs/Web/HTML/Catégorie_de_contenu#Contenu_phras.C3.A9"
           >contenu phrasé</a
         >.
       </td>

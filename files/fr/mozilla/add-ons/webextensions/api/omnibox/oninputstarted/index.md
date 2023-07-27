@@ -13,9 +13,9 @@ Cela sera envoyé avant tout événement {{WebExtAPIRef("omnibox.onInputChanged"
 ## Syntaxe
 
 ```js
-browser.omnibox.onInputStarted.addListener(listener)
-browser.omnibox.onInputStarted.removeListener(listener)
-browser.omnibox.onInputStarted.hasListener(listener)
+browser.omnibox.onInputStarted.addListener(listener);
+browser.omnibox.onInputStarted.removeListener(listener);
+browser.omnibox.onInputStarted.hasListener(listener);
 ```
 
 Les événements ont trois fonctions :
@@ -42,7 +42,7 @@ Les événements ont trois fonctions :
 
 ```js
 browser.omnibox.onInputStarted.addListener(() => {
-  console.log("User has started interacting with me.")
+  console.log("User has started interacting with me.");
 });
 ```
 

@@ -43,7 +43,7 @@ web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 我们在 [dom-example.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html)（[也可以看看在线的例子](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html)）上创建了一个简单的示例页面。试着在浏览器中打开它。这是一个非常简单的页面，包含一个 {{htmlelement("section")}} 元素，里面有一张图片，还有一个带链接的段落。该 HTML 源代码看起来像这样：
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -90,19 +90,19 @@ web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 3. 要操作 DOM 内的元素，首先需要选择它，并将它的引用存储在一个变量中。在 script 元素中，添加下列代码行：
 
    ```js
-   const link = document.querySelector('a');
+   const link = document.querySelector("a");
    ```
 
 4. 现在我们已经将元素引用存储在一个变量中，我们可以开始使用可用的属性和方法来操作它（它们定义在 {{htmlelement("a")}} 元素的 {{domxref("HTMLAnchorElement")}} 接口上，它继承于更一般的父接口 {{domxref("HTMLElement")}}，以及 {{domxref("Node")}}——它代表 DOM 中所有节点）。首先，让我们通过更新 {{domxref("Node.textContent")}} 属性的值来改变链接中的文本。在前一行下面添加以下内容：
 
    ```js
-   link.textContent = 'Mozilla Developer Network';
+   link.textContent = "Mozilla Developer Network";
    ```
 
 5. 我们也能修改链接指向的 URL，使得它被点击时不会走向错误的位置。在底部再次加入下列代码：
 
    ```js
-   link.href = 'https://developer.mozilla.org';
+   link.href = "https://developer.mozilla.org";
    ```
 
 请注意，就像 JavaScript 中所做的那样，有许多方法可以选择一个元素并将其引用存储在一个变量中。{{domxref("Document.querySelector()")}} 是推荐的现代方法。它很方便，因为它允许你使用 CSS 选择器来选择元素。上面的 `querySelector()` 调用将匹配文档中出现的第一个 {{htmlelement("a")}} 元素。如果你想对多个元素进行匹配和操作，你可以使用 {{domxref("Document.querySelectorAll()")}}，它可以匹配文档中与选择器相匹配的每个元素，并将它们的引用存储在一个叫做 {{domxref("NodeList")}} 的[数组](/zh-CN/docs/Learn/JavaScript/First_steps/Arrays)对象中。
@@ -121,14 +121,14 @@ web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 1. 回到当前的例子，我们先获取到 {{htmlelement("section")}} 元素的引用。在已有 script 中添加下列代码（其他代码也同样处理）：
 
    ```js
-   const sect = document.querySelector('section');
+   const sect = document.querySelector("section");
    ```
 
 2. 现在用 {{domxref("Document.createElement()")}} 创建一个新的段落，用与之前相同的方法赋予相同的文本：
 
    ```js
-   const para = document.createElement('p');
-   para.textContent = 'We hope you enjoyed the ride.';
+   const para = document.createElement("p");
+   para.textContent = "We hope you enjoyed the ride.";
    ```
 
 3. 现在可以用 {{domxref("Node.appendChild()")}} 方法在后面追加新的段落：
@@ -140,13 +140,15 @@ web 浏览器是非常复杂的软件，有许多活动部件，其中许多部�
 4. 最后，在内部链接的段落中添加文本节点，完美的结束句子。首先我们要使用 {{domxref("Document.createTextNode()")}} 创建一个文本节点：
 
    ```js
-   const text = document.createTextNode(' — the premier source for web development knowledge.');
+   const text = document.createTextNode(
+     " — the premier source for web development knowledge.",
+   );
    ```
 
 5. 现在获取内部连接的段落的引用，并把文本节点附加到这个节点上：
 
    ```js
-   const linkPara = document.querySelector('p');
+   const linkPara = document.querySelector("p");
    linkPara.appendChild(text);
    ```
 
@@ -195,11 +197,11 @@ linkPara.parentNode.removeChild(linkPara);
 1. 作为示例，把下面的代码行加到我们的例子中：
 
    ```js
-   para.style.color = 'white';
-   para.style.backgroundColor = 'black';
-   para.style.padding = '10px';
-   para.style.width = '250px';
-   para.style.textAlign = 'center';
+   para.style.color = "white";
+   para.style.backgroundColor = "black";
+   para.style.padding = "10px";
+   para.style.width = "250px";
+   para.style.textAlign = "center";
    ```
 
 2. 重新载入页面，你将看到样式已经应用到段落中。如果在浏览器的 [Page Inspector/DOM inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) 中查看段落，你会看到这些代码的确为文档添加了内联样式：
@@ -233,7 +235,7 @@ linkPara.parentNode.removeChild(linkPara);
 3. 现在我们改为使用 HTML 操作的常用方法——{{domxref("Element.setAttribute()")}}——它接受两个参数：想在元素上设置的属性、要为它设置的值。在这种情况下，我们在段落中设置类名为 highlight：
 
    ```js
-   para.setAttribute('class', 'highlight');
+   para.setAttribute("class", "highlight");
    ```
 
 4. 刷新你的页面，不会看到任何改变——CSS 仍然应用于该段落，但这次是通过给它一个类，由我们的 CSS 规则选择，而不是作为内联 CSS 样式。
