@@ -1,5 +1,5 @@
 ---
-title: ':-moz-only-whitespace'
+title: ":-moz-only-whitespace"
 slug: Web/CSS/:-moz-only-whitespace
 translation_of: Web/CSS/:-moz-only-whitespace
 ---
@@ -19,7 +19,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:-moz-only-whitespace`** 
 ### HTML
 
 ```html
-<div> </div>
+<div></div>
 ```
 
 ### CSS

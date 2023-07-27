@@ -1,5 +1,5 @@
 ---
-title: ':fullscreen'
+title: ":fullscreen"
 slug: Web/CSS/:fullscreen
 translation_of: Web/CSS/:fullscreen
 ---
@@ -43,9 +43,11 @@ Lorsque le document est en mode plein écran, on utilise cette fois-ci la pseudo
 ```html
 <h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
 
-<p>This demo uses the <code>:fullscreen</code> pseudo-class to automatically
+<p>
+  This demo uses the <code>:fullscreen</code> pseudo-class to automatically
   change the style of a button used to toggle full-screen mode on and off,
-  entirely using CSS.</p>
+  entirely using CSS.
+</p>
 
 <button id="fs-toggle">Toggle Fullscreen</button>
 ```

@@ -33,12 +33,12 @@ L'astérisque est optionnelle lorsqu'elle est utilisée avec des sélecteurs sim
 ### CSS
 
 ```css
-* [lang^=fr] {
-  color:green;
+* [lang^="fr"] {
+  color: green;
 }
 
 *.warning {
-  color:red;
+  color: red;
 }
 
 *#maincontent {

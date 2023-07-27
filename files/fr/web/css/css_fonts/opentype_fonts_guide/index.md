@@ -147,7 +147,9 @@ Selon la spécification, on peut fournir le code à quatre caractères de la car
 
 ```css
 .no-ligatures {
-  font-feature-settings: "liga" 0, "dlig" 0;
+  font-feature-settings:
+    "liga" 0,
+    "dlig" 0;
 }
 ```
 
@@ -164,14 +166,14 @@ Ainsi, les petites capitales peuvent être activées de différentes façons mai
 
 ```css
 .small-caps {
-   font-feature-settings: "smcp", "c2sc";
+  font-feature-settings: "smcp", "c2sc";
 }
 
 @supports (font-variant-caps: all-small-caps) {
-   .small-caps {
-       font-feature-settings: normal;
-       font-variant-caps: all-small-caps;
-   }
+  .small-caps {
+    font-feature-settings: normal;
+    font-variant-caps: all-small-caps;
+  }
 }
 ```
 

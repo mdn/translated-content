@@ -27,7 +27,6 @@ sur plusieurs
 lignes
 */
 
-
 /* Le commentaire qui suit permet
    de désactiver une règle */
 /*

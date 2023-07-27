@@ -55,13 +55,13 @@ border-top-width: unset;
 ### CSS
 
 ```css
-.element1{
+.element1 {
   border-top: thick solid red;
 }
-.element2{
+.element2 {
   border-top: medium solid orange;
 }
-.element3{
+.element3 {
   border-top: thin solid green;
 }
 ```
@@ -69,17 +69,11 @@ border-top-width: unset;
 ### HTML
 
 ```html
-<p class="element1">
-  Une bordure épaisse rouge.
-</p>
+<p class="element1">Une bordure épaisse rouge.</p>
 
-<p class="element2">
-  Une bordure moyenne orange.
-</p>
+<p class="element2">Une bordure moyenne orange.</p>
 
-<p class="element3">
-  Et une bordure fine verte.
-</p>
+<p class="element3">Et une bordure fine verte.</p>
 ```
 
 ### Résultat

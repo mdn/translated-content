@@ -39,7 +39,8 @@ C'est pourquoi, dans tous les navigateurs sauf Internet Explorer Windows, les ma
 Comment cela va-t-il être rendu dans un document&nbsp;? Pour le moment, nous avons un résultat équivalent à ces styles&nbsp;:
 
 ```css
-ul, li {
+ul,
+li {
   margin-left: 0;
   padding-left: 0;
 }

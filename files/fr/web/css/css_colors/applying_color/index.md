@@ -149,14 +149,19 @@ Voici quelques exemples utilisant la notation HSL :
 ```css hidden
 table {
   border: 1px solid black;
-  font: 16px "Open Sans", Helvetica, Arial, sans-serif;
+  font:
+    16px "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid black;
-  padding:4px 6px;
+  padding: 4px 6px;
   text-align: left;
 }
 
@@ -225,14 +230,10 @@ Voici le fragment de code HTML utilisé pour cet exemple :
 ```html
 <div class="conteneur">
   <div class="boite boiteGauche">
-    <p>
-      Voici la première boîte.
-    </p>
+    <p>Voici la première boîte.</p>
   </div>
   <div class="boite boiteDroite">
-    <p>
-      Voici la seconde boîte.
-    </p>
+    <p>Voici la seconde boîte.</p>
   </div>
 </div>
 ```
@@ -267,7 +268,10 @@ Les deux boîtes colorées possèdent un certain nombre de propriétés communes
   height: 100px;
   margin: 0;
   padding: 4px 6px;
-  font: 28px "Marker Felt", "Zapfino", cursive;
+  font:
+    28px "Marker Felt",
+    "Zapfino",
+    cursive;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -330,7 +334,7 @@ Voici le fragment HTML qui permet de créer une boîte qui contient un sélecteu
 ```html
 <div id="box">
   <label for="colorPicker">Couleur de la bordure :</label>
-  <input type="color" value="#8888ff" id="colorPicker">
+  <input type="color" value="#8888ff" id="colorPicker" />
   <p id="output"></p>
 </div>
 ```
@@ -345,7 +349,11 @@ La feuille CSS détermine la taille de la boîte et une mise en forme simple. La
   height: 200px;
   border: 2px solid rgb(245, 220, 225);
   padding: 4px 6px;
-  font: 16px "Lucida Grande", "Helvetica", "Arial", "sans-serif"
+  font:
+    16px "Lucida Grande",
+    "Helvetica",
+    "Arial",
+    "sans-serif";
 }
 ```
 
@@ -360,13 +368,21 @@ let output = document.getElementById("output");
 
 box.style.borderColor = colorPicker.value;
 
-colorPicker.addEventListener("input", function(event) {
-  box.style.borderColor = event.target.value;
-}, false);
+colorPicker.addEventListener(
+  "input",
+  function (event) {
+    box.style.borderColor = event.target.value;
+  },
+  false,
+);
 
-colorPicker.addEventListener("change", function(event) {
-  output.innerText = "Couleur choisie : " + colorPicker.value;
-}, false);
+colorPicker.addEventListener(
+  "change",
+  function (event) {
+    output.innerText = "Couleur choisie : " + colorPicker.value;
+  },
+  false,
+);
 ```
 
 L'évènement [`input`](/fr/docs/Web/API/HTMLElement/input_event) est envoyé chaque fois que la valeur de l'élément change, c'est-à-dire chaque fois que l'utilisateur ajuste la couleur via le sélecteur. Pour chacun de ces évènements, on modifie la couleur de la bordure afin qu'elle corresponde à celle du sélecteur.
