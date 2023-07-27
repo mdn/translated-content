@@ -12,7 +12,7 @@ original_slug: Web/媒体/Autoplay_guide
 
 术语**自动播放**是指无需用户明确请求开始播放即可导致音频开始播放的任何功能。这包括使用 HTML 属性自动播放媒体以及用户使用 JavaScript 代码在处理用户输入的上下文之外开始播放。
 
-这意味着以下两种行为都被视为自动播放行为，因此受到浏览器阻止自动播放策略的约束:
+这意味着以下两种行为都被视为自动播放行为，因此受到浏览器阻止自动播放策略的约束：
 
 ```html
 <audio src="/music.mp4" autoplay></audio>
@@ -76,15 +76,15 @@ audioElement.play();
 
 当媒体暂停后恢复时以及发生自动播放时都会发送 `play` 事件。这意味着第一次触发 `play` 事件时，您知道您的媒体是在页面打开后第一次启动的。
 
-考虑以下 HTML 作为媒体元素:
+考虑以下 HTML 作为媒体元素：
 
 ```html
-<video src="myvideo.mp4" autoplay onplay=handleFirstPlay(event)">
+<video src="myvideo.mp4" autoplay onplay="handleFirstPlay(event)">
 ```
 
 这里我们有一个 {{HTMLElement("video")}} 元素，它设置了 [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay) 属性，并设置了 {{domxref("HTMLMediaElement.onplay", "onplay")}} 事件处理程序；该事件由名为 `handleFirstPlay()` 的函数处理，该函数接收 `play` 事件作为输入。
 
-`handleFirstPlay()` 看起来像这样:
+`handleFirstPlay()` 看起来像这样：
 
 ```js
 function handleFirstPlay(event) {
@@ -96,7 +96,7 @@ function handleFirstPlay(event) {
 }
 ```
 
-从 {{domxref("Event")}} 对象的 {{domxref("Event.target", "target")}} 获取对视频元素的引用后，该元素的 `onplay` 处理程序将设置为 `null`。这将阻止任何未来的播放事件被传递给处理程序。当文档位于后台选项卡时，如果用户暂停并恢复视频或浏览器自动暂停和恢复视频，则可能会发生这种情况。.
+从 {{domxref("Event")}} 对象的 {{domxref("Event.target", "target")}} 获取对视频元素的引用后，该元素的 `onplay` 处理程序将设置为 `null`。这将阻止任何未来的播放事件被传递给处理程序。当文档位于后台选项卡时，如果用户暂停并恢复视频或浏览器自动暂停和恢复视频，则可能会发生这种情况。
 
 此时，您的网站或应用程序可以开始执行依赖于视频启动的任何操作。
 
@@ -120,7 +120,7 @@ document.querySelector("video").play();
 
 当您使用 {{domxref("HTMLMediaElement.play", "play()")}} 方法启动媒体时，更容易检测到自动播放媒体的故障。`play()` 返回一个 {{jsxref("Promise")}}，一旦媒体成功开始播放，该 Promise 就会被解析；当播放无法开始时（例如自动播放被拒绝），该 Promise 将被拒绝。当自动播放失败时，您可能希望为用户提供一种手动告诉浏览器要求用户授予播放媒体权限的方法。
 
-您可以使用这样的代码来完成这项工作:
+您可以使用这样的代码来完成这项工作：
 
 ```js
 let startPlayPromise = videoElem.play();
@@ -153,7 +153,7 @@ if (startPlayPromise !== undefined) {
 
 在 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 中，网站或应用程序可以使用链接到 {{domxref("AudioContext")}} 的源节点上的 `start()` 方法开始播放音频。在处理用户输入事件的上下文之外执行此操作受自动播放规则的约束。
 
-_更多内容即将推出； Mozilla 仍在致力于自动播放阻止。如果其他人已经拥有它，欢迎他们参与本部分......_
+_更多内容即将推出；Mozilla 仍在致力于自动播放阻止。如果其他人已经拥有它，欢迎他们参与本部分......_
 
 ## 自动播放功能策略
 
@@ -173,7 +173,7 @@ _更多内容即将推出； Mozilla 仍在致力于自动播放阻止。如果�
 Permissions-Policy: autoplay 'self'
 ```
 
-对 {{HTMLElement("iframe")}} 执行相同操作:
+对 {{HTMLElement("iframe")}} 执行相同操作：
 
 ```html
 <iframe src="mediaplayer.html" allow="autoplay 'src'"> </iframe>
@@ -187,7 +187,7 @@ Permissions-Policy: autoplay 'self'
 Permissions-Policy: autoplay 'self'; fullscreen
 ```
 
-使用 `<iframe>` 元素的 `allow` 属性授予相同的权限，如下所示:
+使用 `<iframe>` 元素的 `allow` 属性授予相同的权限，如下所示：
 
 ```html
 <iframe src="mediaplayer.html" allow="autoplay 'src'; fullscreen"> </iframe>
@@ -195,13 +195,13 @@ Permissions-Policy: autoplay 'self'; fullscreen
 
 ### 示例：允许来自特定来源的自动播放
 
-允许从文档（或 `<iframe>`）自己的域和 `https://example.media` 播放媒体的 `Permissions-Policy` 标头如下所示:
+允许从文档（或 `<iframe>`）自己的域和 `https://example.media` 播放媒体的 `Permissions-Policy` 标头如下所示：
 
 ```plain
 Permissions-Policy: autoplay 'self' https://example.media
 ```
 
-可以编写 {{HTMLElement("iframe")}} 来指定此自动播放策略应该应用于其自身，并且任何子框架都将这样编写:
+可以编写 {{HTMLElement("iframe")}} 来指定此自动播放策略应该应用于其自身，并且任何子框架都将这样编写：
 
 ```html
 <iframe
@@ -214,13 +214,13 @@ Permissions-Policy: autoplay 'self' https://example.media
 
 ### 示例：禁用自动播放
 
-将 `autoplay` 功能策略设置为 `'none'` 会完全禁用文档或 `<iframe>` 以及所有嵌套框架的自动播放。 HTTP 标头是:
+将 `autoplay` 功能策略设置为 `'none'` 会完全禁用文档或 `<iframe>` 以及所有嵌套框架的自动播放。 HTTP 标头是：
 
 ```plain
 Permissions-Policy: autoplay 'none'
 ```
 
-使用 `<iframe>` 的 `allow` 属性:
+使用 `<iframe>` 的 `allow` 属性：
 
 ```html
 <iframe src="mediaplayer.html" allow="autoplay 'none'"> </iframe>
