@@ -39,13 +39,10 @@ build/
 /files/es/web/javascript/reference/**/*.md
 
 # fr
-/files/fr/web/css/**/*.md
 /files/fr/web/javascript/**/*.md
 
 # ja
-/files/ja/learn/css/**/*.md
 /files/ja/learn/javascript/**/*.md
-/files/ja/learn/server-side/**/*.md
 /files/ja/mdn/**/*.md
 /files/ja/web/api/**/*.md
 /files/ja/web/css/**/*.md

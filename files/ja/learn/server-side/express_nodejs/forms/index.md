@@ -1,5 +1,5 @@
 ---
-title: 'Express チュートリアル Part 6: フォームの操作'
+title: "Express チュートリアル Part 6: フォームの操作"
 slug: Learn/Server-side/Express_Nodejs/forms
 ---
 
@@ -31,9 +31,13 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 ```html
 <form action="/team_name_url/" method="post">
-    <label for="team_name">名前を入力してください: </label>
-    <input id="team_name" type="text" name="name_field" value="デフォルトのチーム名.">
-    <input type="submit" value="OK">
+  <label for="team_name">名前を入力してください: </label>
+  <input
+    id="team_name"
+    type="text"
+    name="name_field"
+    value="デフォルトのチーム名." />
+  <input type="submit" value="OK" />
 </form>
 ```
 
@@ -57,7 +61,7 @@ slug: Learn/Server-side/Express_Nodejs/forms
 
 1. ユーザーが最初に要求したときにデフォルトのフォームを表示します。
 
-    - フォームには空白のフィールドが含まれていたり (新しいレコードを作成している場合など)、初期値があらかじめ入力されていたり (レコードを変更している場合や、デフォルトの初期値がある場合など) します。
+   - フォームには空白のフィールドが含まれていたり (新しいレコードを作成している場合など)、初期値があらかじめ入力されていたり (レコードを変更している場合や、デフォルトの初期値がある場合など) します。
 
 2. ユーザーから送信されたデータを、通常は HTTP `POST`リクエストで受信します。
 3. データを検証し、ハッキング防止のために特殊文字を置換(サニタイズ)します。
@@ -93,8 +97,8 @@ npm install express-validator
 コントローラでバリデータを使うには、以下のように **'express-validator/check'** と **'express-validator/filter'**モジュールから使いたい関数を要求(require)しなければなりません。
 
 ```js
-const { body,validationResult } = require('express-validator/check');
-const { sanitizeBody } = require('express-validator/filter');
+const { body, validationResult } = require("express-validator/check");
+const { sanitizeBody } = require("express-validator/filter");
 ```
 
 多くの関数が用意されており、リクエストパラメータ、body、ヘッダー、Cookie などのデータをチェックしてサニタイズすることができますし、一度にすべてのデータをチェックしてサニタイズすることもできます。このチュートリアルでは、主に`body`、`sanitizeBody`、`validationResult`を使用します。
@@ -128,17 +132,16 @@ const { sanitizeBody } = require('express-validator/filter');
 
   ```js
   (req, res, next) => {
-      // Extract the validation errors from a request.
-      const errors = validationResult(req);
+    // Extract the validation errors from a request.
+    const errors = validationResult(req);
 
-      if (!errors.isEmpty()) {
-          // There are errors. Render form again with sanitized values/errors messages.
-          // Error messages can be returned in an array using `errors.array()`.
-          }
-      else {
-          // Data from form is valid.
-      }
-  }
+    if (!errors.isEmpty()) {
+      // There are errors. Render form again with sanitized values/errors messages.
+      // Error messages can be returned in an array using `errors.array()`.
+    } else {
+      // Data from form is valid.
+    }
+  };
   ```
 
   We use the validation result's `isEmpty()` method to check if there were errors, and its `array()` method to get the set of error messages. See the [Validation Result API](https://github.com/ctavan/express-validator#validation-result-api) for more information.
@@ -169,10 +172,10 @@ We have already created the routes for all our model's create pages in **/routes
 
 ```js
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
-router.get('/genre/create', genre_controller.genre_create_get);
+router.get("/genre/create", genre_controller.genre_create_get);
 
 // POST request for creating Genre.
-router.post('/genre/create', genre_controller.genre_create_post);
+router.post("/genre/create", genre_controller.genre_create_post);
 ```
 
 ## Express forms subarticles

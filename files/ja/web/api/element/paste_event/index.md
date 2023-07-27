@@ -1,6 +1,9 @@
 ---
-title: 'Element: paste イベント'
+title: "Element: paste イベント"
+short-title: paste
 slug: Web/API/Element/paste_event
+l10n:
+  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
 ---
 
 {{APIRef}}
@@ -11,18 +14,18 @@ slug: Web/API/Element/paste_event
 
 このイベントのハンドラーは、イベントの `clipboardData` プロパティにある {{domxref("DataTransfer/getData", "getData()")}} を呼び出すことでクリップボードの中身にアクセスすることができます。
 
-既定の動作を上書きする場合 (例えば、別なデータを挿入したりクリップボードの内容を変換したりする場合など)、イベントハンドラーで {{domxref("Event/preventDefault", "event.preventDefault()")}} を使用して既定のアクションをキャンセルした上で、必要なデータを手動で挿入してください。
+既定の動作を上書きする場合（例えば、別なデータを挿入したりクリップボードの内容を変換したりする場合など）、イベントハンドラーで {{domxref("Event/preventDefault", "event.preventDefault()")}} を使用して既定のアクションをキャンセルした上で、必要なデータを手動で挿入してください。
 
-[合成で](/ja/docs/Web/Events/Creating_and_triggering_events) `paste` イベントを構築して配信することができますが、文書の内容には影響しません。
+[合成した](/ja/docs/Web/Events/Creating_and_triggering_events) `paste` イベントを構築して配信することができますが、文書の内容には影響しません。
 
 ## 構文
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
 ```js
-addEventListener('paste', (event) => { });
+addEventListener("paste", (event) => {});
 
-onpaste = (event) => { };
+onpaste = (event) => {};
 ```
 
 ## イベント型
@@ -43,29 +46,31 @@ onpaste = (event) => { };
 ```
 
 ```css hidden
-div.source, div.target {
-    border: 1px solid gray;
-    margin: .5rem;
-    padding: .5rem;
-    height: 1rem;
-    background-color: #e9eef1;
+div.source,
+div.target {
+  border: 1px solid gray;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  height: 1rem;
+  background-color: #e9eef1;
 }
 ```
 
 #### JS
 
 ```js
-const target = document.querySelector('div.target');
+const target = document.querySelector("div.target");
 
-target.addEventListener('paste', (event) => {
-    event.preventDefault();
+target.addEventListener("paste", (event) => {
+  event.preventDefault();
 
-    let paste = (event.clipboardData || window.clipboardData).getData('text');
-    paste = paste.toUpperCase();
-    const selection = window.getSelection();
-    if (!selection.rangeCount) return;
-    selection.deleteFromDocument();
-    selection.getRangeAt(0).insertNode(document.createTextNode(paste));
+  let paste = (event.clipboardData || window.clipboardData).getData("text");
+  paste = paste.toUpperCase();
+  const selection = window.getSelection();
+  if (!selection.rangeCount) return;
+  selection.deleteFromDocument();
+  selection.getRangeAt(0).insertNode(document.createTextNode(paste));
+  selection.collapseToEnd();
 });
 ```
 

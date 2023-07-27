@@ -34,13 +34,15 @@ var test = document.querySelector("a:has(> img)");
 Dans l'exemple suivant, le sélecteur permet de cibler uniquement les éléments {{HTMLElement("a")}} qui contiennent un fils direct {{HTMLElement("img")}} :
 
 ```css
-a:has(> img) {}
+a:has(> img) {
+}
 ```
 
 Le sélecteur qui suit correspond aux éléments {{HTMLElement("h1")}} qui précèdent directement un élément {{HTMLElement("p")}} :
 
 ```css
-h1:has(+ p) {}
+h1:has(+ p) {
+}
 ```
 
 ## Spécifications

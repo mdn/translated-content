@@ -13,7 +13,8 @@ Ce sélecteur est principalement destiné à être utilisé par les développeur
 ## Syntaxe
 
 ```css
-:-moz-broken {}
+:-moz-broken {
+}
 ```
 
 ## Exemples

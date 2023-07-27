@@ -41,8 +41,9 @@ p {
 
 ## Syntaxe
 
-```css
-:host-context( <selecteur-composite> ) {}
+```css-nolint
+:host-context(<selecteur-composite>) {
+}
 ```
 
 ## Exemples
