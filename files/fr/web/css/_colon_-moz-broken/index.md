@@ -1,5 +1,5 @@
 ---
-title: ':-moz-broken'
+title: ":-moz-broken"
 slug: Web/CSS/:-moz-broken
 translation_of: Web/CSS/:-moz-broken
 ---

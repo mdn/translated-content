@@ -1,5 +1,5 @@
 ---
-title: ':only-child'
+title: ":only-child"
 slug: Web/CSS/:only-child
 translation_of: Web/CSS/:only-child
 ---

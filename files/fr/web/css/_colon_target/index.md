@@ -1,5 +1,5 @@
 ---
-title: ':target'
+title: ":target"
 slug: Web/CSS/:target
 translation_of: Web/CSS/:target
 ---

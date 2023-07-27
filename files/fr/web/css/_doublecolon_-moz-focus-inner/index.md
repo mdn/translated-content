@@ -1,5 +1,5 @@
 ---
-title: '::-moz-focus-inner'
+title: "::-moz-focus-inner"
 slug: Web/CSS/::-moz-focus-inner
 translation_of: Web/CSS/::-moz-focus-inner
 l10n:

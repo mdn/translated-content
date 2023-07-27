@@ -1,5 +1,5 @@
 ---
-title: '::-moz-range-thumb'
+title: "::-moz-range-thumb"
 slug: Web/CSS/::-moz-range-thumb
 translation_of: Web/CSS/::-moz-range-thumb
 ---

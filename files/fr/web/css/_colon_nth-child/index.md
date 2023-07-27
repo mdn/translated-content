@@ -1,5 +1,5 @@
 ---
-title: ':nth-child'
+title: ":nth-child"
 slug: Web/CSS/:nth-child
 translation_of: Web/CSS/:nth-child
 ---

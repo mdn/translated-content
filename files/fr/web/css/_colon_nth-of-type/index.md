@@ -1,5 +1,5 @@
 ---
-title: ':nth-of-type'
+title: ":nth-of-type"
 slug: Web/CSS/:nth-of-type
 translation_of: Web/CSS/:nth-of-type
 ---

@@ -1,5 +1,5 @@
 ---
-title: '-moz-orient'
+title: "-moz-orient"
 slug: Web/CSS/-moz-orient
 translation_of: Web/CSS/-moz-orient
 ---
