@@ -34,9 +34,9 @@ L'objet **`Intl.Collator`** permet de comparer des chaînes de caractères en te
 L'exemple qui suit illustre les différents résultats qu'on peut obtenir en comparant deux chaînes de caractères&nbsp;:
 
 ```js
-console.log(new Intl.Collator().compare('a', 'c')); // → une valeur négative
-console.log(new Intl.Collator().compare('c', 'a')); // → une valeur positive
-console.log(new Intl.Collator().compare('a', 'a')); // → 0
+console.log(new Intl.Collator().compare("a", "c")); // → une valeur négative
+console.log(new Intl.Collator().compare("c", "a")); // → une valeur positive
+console.log(new Intl.Collator().compare("a", "a")); // → 0
 ```
 
 Les résultats indiqués ici sont génériques et, en pratique, peuvent varier entre les navigateurs et les versions des navigateurs. En effet les valeurs obtenues dépendent de l'implémentation. Les spécifications indiquent uniquement le signe (positif ou négatif) du résultat.
@@ -47,11 +47,11 @@ Les résultats fournis par [`Collator.prototype.compare()`](/fr/docs/Web/JavaScr
 
 ```js
 // en allemand, 'ä' est équivalent à 'a' pour le tri
-console.log(new Intl.Collator('de').compare('ä', 'z'));
+console.log(new Intl.Collator("de").compare("ä", "z"));
 // → une valeur négative
 
 // en suédois, 'ä' arrive après 'z'
-console.log(new Intl.Collator('sv').compare('ä', 'z'));
+console.log(new Intl.Collator("sv").compare("ä", "z"));
 // → une valeur positive
 ```
 
@@ -61,11 +61,11 @@ Les résultats fournis par [`Collator.prototype.compare()`](/fr/docs/Web/JavaScr
 
 ```js
 // en allemand, 'ä' est composé de la lettre de base 'a'
-console.log(new Intl.Collator('de', {sensitivity: 'base'}).compare('ä', 'a'));
+console.log(new Intl.Collator("de", { sensitivity: "base" }).compare("ä", "a"));
 // → 0
 
 // en suédois, 'ä' et 'a' sont distincts en termes de base
-console.log(new Intl.Collator('sv', {sensitivity: 'base'}).compare('ä', 'a'));
+console.log(new Intl.Collator("sv", { sensitivity: "base" }).compare("ä", "a"));
 // → une valeur positive
 ```
 

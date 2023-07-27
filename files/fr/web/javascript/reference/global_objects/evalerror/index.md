@@ -36,15 +36,15 @@ L'objet **`EvalError`** indique une erreur relative à la fonction [`eval()`](/f
 
 ```js
 try {
-  throw new EvalError('Coucou', 'unFichier.js', 10);
+  throw new EvalError("Coucou", "unFichier.js", 10);
 } catch (e) {
   console.log(e instanceof EvalError); // true
-  console.log(e.message);              // "Coucou"
-  console.log(e.name);                 // "EvalError"
-  console.log(e.fileName);             // "unFichier.js"
-  console.log(e.lineNumber);           // 10
-  console.log(e.columnNumber);         // 0
-  console.log(e.stack);                // "@Scratchpad/2:2:9\n"
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "EvalError"
+  console.log(e.fileName); // "unFichier.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

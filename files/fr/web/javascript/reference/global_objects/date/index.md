@@ -148,14 +148,14 @@ Ainsi, on dispose de méthodes permettant d'obtenir ou de définir les différen
 
 Les exemples qui suivent illustrent différentes méthodes permettant de créer des dates JavaScript :
 
-> **Note :** L'analyse de chaîne de caractères représentant des dates avec le constructeur `Date`  (ou `Date.parse` qui est équivalent) est fortement déconseillée en raison des différences de comportement existant entre les navigateurs.
+> **Note :** L'analyse de chaîne de caractères représentant des dates avec le constructeur `Date` (ou `Date.parse` qui est équivalent) est fortement déconseillée en raison des différences de comportement existant entre les navigateurs.
 
 ```js
-let aujourdhui = new Date()
-let anniversaire = new Date('September 22, 2018 15:00:00')
-let anniversaire = new Date('2018-09-22T15:00:00')
-let anniversaire = new Date(2018, 8, 22)            // the month is 0-indexed
-let anniversaire = new Date(2018, 8, 22, 15, 0, 0)
+let aujourdhui = new Date();
+let anniversaire = new Date("September 22, 2018 15:00:00");
+let anniversaire = new Date("2018-09-22T15:00:00");
+let anniversaire = new Date(2018, 8, 22); // the month is 0-indexed
+let anniversaire = new Date(2018, 8, 22, 15, 0, 0);
 ```
 
 ### Les années sur deux chiffres correspondent à la période 1900 – 1999
@@ -163,12 +163,12 @@ let anniversaire = new Date(2018, 8, 22, 15, 0, 0)
 Afin de créer et de manipuler des dates sur les années `0` à `99` de notre ère, on doit utiliser les méthodes {{jsxref("Date.prototype.setFullYear()")}} and {{jsxref("Date.prototype.getFullYear()")}}.
 
 ```js
-let date = new Date(98, 1)  // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+let date = new Date(98, 1); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
 // Méthode dépréciée, 98 correspond également ici à 1998
-date.setYear(98)            // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
+date.setYear(98); // Sun Feb 01 1998 00:00:00 GMT+0000 (GMT)
 
-date.setFullYear(98)        // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
+date.setFullYear(98); // Sat Feb 01 0098 00:00:00 GMT+0000 (BST)
 ```
 
 ### Calculer le temps écoulé
@@ -179,36 +179,36 @@ En raison de durées différentes pour les jours (heure d'été / heure d'hiver)
 
 ```js
 // Utiliser des objets Date
-let debut = Date.now()
+let debut = Date.now();
 
 // Ici, l'évènement dont on veut mesurer la durée :
-faireQuelqueChosePendantLongtemps()
-let fin = Date.now()
-let duree = fin - debut // La durée écoulée, en millisecondes
+faireQuelqueChosePendantLongtemps();
+let fin = Date.now();
+let duree = fin - debut; // La durée écoulée, en millisecondes
 ```
 
 ```js
 // En utilisant les méthodes natives
-let debut = new Date()
+let debut = new Date();
 
 // Ici, l'évènement dont on veut mesurer la durée :
-faireQuelqueChosePendantLongtemps()
-let fin = new Date()
-let duree = fin.getTime() - debut.getTime() // La durée écoulée, en millisecondes
+faireQuelqueChosePendantLongtemps();
+let fin = new Date();
+let duree = fin.getTime() - debut.getTime(); // La durée écoulée, en millisecondes
 ```
 
 ```js
 // Pour tester le temps d'exécution d'une fonction
 function afficheDureeEcoulee(fTest) {
   let debut = Date.now(),
-      valRetour = fTest(),
-      fin = Date.now()
+    valRetour = fTest(),
+    fin = Date.now();
 
-  console.log(`Durée écoulée : ${ String(fin - debut) } millisecondes`)
-  return valRetour
+  console.log(`Durée écoulée : ${String(fin - debut)} millisecondes`);
+  return valRetour;
 }
 
-let valeurDeRetour = afficheDureeEcoulee(maFonctionATester)
+let valeurDeRetour = afficheDureeEcoulee(maFonctionATester);
 ```
 
 > **Note :** Pour les navigateurs qui prennent en charge l'{{domxref("Window.performance", "API Web Performance", "", 1)}}, la méthode {{domxref("Performance.now()")}} peut fournir un outil de mesure des durées écoulées plus fiable et précis que {{jsxref("Date.now()")}}.
@@ -216,7 +216,7 @@ let valeurDeRetour = afficheDureeEcoulee(maFonctionATester)
 ### Obtenir le nombre de secondes écoulées depuis l'epoch ECMAScript
 
 ```js
-let secondes = Math.floor(Date.now() / 1000)
+let secondes = Math.floor(Date.now() / 1000);
 ```
 
 Dans ce cas, on renvoie un entier et c'est pour ça qu'on utilise {{jsxref("Math.floor()")}}. Par ailleurs, on n'utilise pas {{jsxref("Math.round()")}} afin d'avoir le nombre de secondes effectivement écoulées.

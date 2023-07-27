@@ -13,7 +13,7 @@ La méthode **`getUTCMinutes()`** renvoie les minutes de la date renseignée, d'
 ## Syntaxe
 
 ```js
-dateObj.getUTCMinutes()
+dateObj.getUTCMinutes();
 ```
 
 ### Valeur de retour

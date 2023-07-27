@@ -13,7 +13,7 @@ La méthode **`setUTCDate()`** définit le jour du mois pour la date, selon UTC.
 ## Syntaxe
 
 ```js
-dateObj.setUTCDate(valeurJour)
+dateObj.setUTCDate(valeurJour);
 ```
 
 ### Paramètres

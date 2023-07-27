@@ -13,7 +13,7 @@ La méthode **`setMilliseconds()`** définit les millièmes de secondes pour la 
 ## Syntaxe
 
 ```js
-dateObj.setMilliseconds(valeurMs)
+dateObj.setMilliseconds(valeurMs);
 ```
 
 ### Paramètres
