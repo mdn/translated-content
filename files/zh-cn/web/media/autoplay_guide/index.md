@@ -247,7 +247,7 @@ Permissions-Policy: autoplay 'none'
 ### Firefox
 
 - `media.allowed-to-play.enabled`
-  - : 布尔首选项，指定 {{domxref("HTMLMediaElement.allowedToPlay")}} 属性是否向 Web 公开。目前默认情况下这是 `false`（除了在夜间构建中，默认情况下为 `true`）。如果此值为 `false`，则  `HTMLMediaElement` 接口中缺少 allowedToPlay 属性，因此该属性不会出现在 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素上。
+  - : 布尔首选项，指定 {{domxref("HTMLMediaElement.allowedToPlay")}} 属性是否向 Web 公开。目前默认情况下这是 `false`（除了在夜间构建中，默认情况下为 `true`）。如果此值为 `false`，则 `HTMLMediaElement` 接口中缺少 allowedToPlay 属性，因此该属性不会出现在 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素上。
 - `media.autoplay.allow-extension-background-pages`
   - : 布尔首选项，如果为 `true`，则允许浏览器扩展的后台脚本自动播放音频媒体。将此值设置为 `false` 将禁用此功能。默认值是 `true`。
 - `media.autoplay.allow-muted`
