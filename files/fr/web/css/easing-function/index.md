@@ -205,7 +205,11 @@ div > div {
   width: 50px;
   height: 50px;
   background-color: blue;
-  background-image: radial-gradient(circle at 10px 10px, rgba(25,255,255,0.8),rgba(25,255,255,0.4));
+  background-image: radial-gradient(
+    circle at 10px 10px,
+    rgba(25, 255, 255, 0.8),
+    rgba(25, 255, 255, 0.4)
+  );
   border-radius: 50%;
   top: 25px;
   animation: 1.5s infinite alternate;
@@ -237,7 +241,7 @@ const startBtn = document.querySelector("button");
 const divElem = document.querySelector("div > div");
 
 startBtn.addEventListener("click", () => {
-  if(startBtn.textContent === "Démarrer l'animation") {
+  if (startBtn.textContent === "Démarrer l'animation") {
     divElem.style.animationName = "move-right";
     startBtn.textContent = "Arrêter l'animation";
     divElem.style.animationTimingFunction = selectElem.value;
