@@ -17,7 +17,6 @@ text-emphasis-position: over left;
 text-emphasis-position: under right;
 text-emphasis-position: under left;
 
-
 text-emphasis-position: left over;
 text-emphasis-position: right under;
 text-emphasis-position: left under;
@@ -124,12 +123,12 @@ D'autres préfèrent masquer le contenu ruby et privilégier les marques d'empha
 
 ```css
 em {
- /* On utilise text-emphasis pour les <em> */
+  /* On utilise text-emphasis pour les <em> */
   text-emphasis: dot;
 }
 
 em rt {
- /* On masque le ruby dans les éléments <em> */
+  /* On masque le ruby dans les éléments <em> */
   display: none;
 }
 ```

@@ -16,10 +16,10 @@ La propriété **`text-decoration`** est utilisée pour « décorer » le texte 
 
 ```css
 /* Valeurs avec mots-clés */
-text-decoration: none;                 /* Aucune décoration */
-text-decoration: underline red;        /* On souligne en rouge */
-text-decoration: underline wavy red;   /* On souligne en rouge avec */
-                                       /* une ligne ondulée */
+text-decoration: none; /* Aucune décoration */
+text-decoration: underline red; /* On souligne en rouge */
+text-decoration: underline wavy red; /* On souligne en rouge avec */
+/* une ligne ondulée */
 
 /* Valeurs globales */
 text-decoration: inherit;
@@ -80,10 +80,11 @@ text-decoration: unset;
 <p class="under">Ce texte a une ligne en dessous.</p>
 <p class="over">Ce texte a une ligne au dessus.</p>
 <p class="line">Ce texte est barré d'une ligne.</p>
-<p>Ce <a class="plain" href="#">lien ne sera pas souligné</a>,
-    comme les liens le sont normalement. Attention à ces décorations
-    sur les ancres cars le soulignement sert souvent d'indication pour
-    un hyperlien.</p>
+<p>
+  Ce <a class="plain" href="#">lien ne sera pas souligné</a>, comme les liens le
+  sont normalement. Attention à ces décorations sur les ancres cars le
+  soulignement sert souvent d'indication pour un hyperlien.
+</p>
 <p class="underover">Ce texte a des lignes en dessous et au dessus.</p>
 <p class="blink">Ce texte peut clignoter selon le navigateur utilisé.</p>
 ```

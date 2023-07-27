@@ -14,10 +14,10 @@ La propriété **`text-emphasis-style`** définit le type d'emphase utilisée. C
 text-emphasis-style: none;
 
 /*  Valeur distincte */
-text-emphasis-style: 'x';
-text-emphasis-style: '点';
-text-emphasis-style: '\25B2';
-text-emphasis-style: '*';
+text-emphasis-style: "x";
+text-emphasis-style: "点";
+text-emphasis-style: "\25B2";
+text-emphasis-style: "*";
 
 /* Valeurs avec un mot-clé */
 text-emphasis-style: filled;
