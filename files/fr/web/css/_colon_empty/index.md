@@ -49,7 +49,7 @@ body {
 <div class="box"><!-- Je serai bleu. --></div>
 <div class="box">Je serai rouge.</div>
 <div class="box">
-    <!-- Je serai rouge à cause des espaces autour du commentaire -->
+  <!-- Je serai rouge à cause des espaces autour du commentaire -->
 </div>
 ```
 

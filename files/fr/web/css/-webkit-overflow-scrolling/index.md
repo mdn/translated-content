@@ -49,14 +49,10 @@ p {
 
 ```html
 <div class="scroll-touch">
-  <p>
-    Ce paragraphe a un défilement inertiel.
-  </p>
+  <p>Ce paragraphe a un défilement inertiel.</p>
 </div>
 <div class="scroll-auto">
-  <p>
-     Pas celui-ci.
-  </p>
+  <p>Pas celui-ci.</p>
 </div>
 ```
 

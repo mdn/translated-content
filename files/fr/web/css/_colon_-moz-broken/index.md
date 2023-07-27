@@ -13,7 +13,7 @@ Ce sélecteur est principalement destiné à être utilisé par les développeur
 ## Syntaxe
 
 ```css
-:-moz-broken
+:-moz-broken {}
 ```
 
 ## Exemples
@@ -21,7 +21,7 @@ Ce sélecteur est principalement destiné à être utilisé par les développeur
 ### HTML
 
 ```html
-<img src="broken.jpg" alt="Cette image ne fonctionne pas. :-(">
+<img src="broken.jpg" alt="Cette image ne fonctionne pas. :-(" />
 ```
 
 ### CSS

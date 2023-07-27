@@ -41,7 +41,7 @@ Si la propriété {{cssxref("-webkit-mask-image")}} est définie, **`-webkit-mas
 
 ```css
 body {
-  -webkit-mask-image: url('images/mask.png');
+  -webkit-mask-image: url("images/mask.png");
   -webkit-mask-attachment: fixed;
 }
 ```

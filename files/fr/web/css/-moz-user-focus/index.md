@@ -41,7 +41,9 @@ En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'él
 ### HTML
 
 ```html
-<input class="ignored" value="L'utilisateur ne peut pas placer le focus sur cet élément.">
+<input
+  class="ignored"
+  value="L'utilisateur ne peut pas placer le focus sur cet élément." />
 ```
 
 ### CSS

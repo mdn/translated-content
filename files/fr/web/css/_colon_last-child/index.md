@@ -37,8 +37,8 @@ li:last-child {
 
 ```html
 <ul>
-   <li>Cet élément n'est pas vert !</li>
-   <li>Celui-ci est vert.</li>
+  <li>Cet élément n'est pas vert !</li>
+  <li>Celui-ci est vert.</li>
 </ul>
 ```
 

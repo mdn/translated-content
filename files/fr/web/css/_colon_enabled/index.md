@@ -11,7 +11,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:enabled`** permet de cib
 ```css
 /* Cible n'importe quel élément <input> actif */
 input:enabled {
-  color: #22AA22;
+  color: #22aa22;
 }
 ```
 
@@ -28,12 +28,16 @@ Dans cet exemple, les textes des éléments activés seront verts alors que ceux
 ```html
 <form action="url_of_form">
   <label for="PremierChamp">Premier champ (activé) :</label>
-  <input type="text" id="PremierChamp" value="Titi"><br />
+  <input type="text" id="PremierChamp" value="Titi" /><br />
 
   <label for="DeuxiemeChamp">Deuxième champ (désactivé) :</label>
-  <input type="text" id="DeuxiemeChamp" value="Toto" disabled="disabled"><br />
+  <input
+    type="text"
+    id="DeuxiemeChamp"
+    value="Toto"
+    disabled="disabled" /><br />
 
-  <input type="button" value="Envoyer"/>
+  <input type="button" value="Envoyer" />
 </form>
 ```
 
@@ -41,13 +45,12 @@ Dans cet exemple, les textes des éléments activés seront verts alors que ceux
 
 ```css
 input:enabled {
-  color: #22AA22;
+  color: #22aa22;
 }
 
 input:disabled {
-  color: #D9D9D9;
+  color: #d9d9d9;
 }
-
 ```
 
 ### Résultat

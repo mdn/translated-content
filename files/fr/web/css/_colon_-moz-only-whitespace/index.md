@@ -19,7 +19,7 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:-moz-only-whitespace`** 
 ### HTML
 
 ```html
-<div> </div>
+<div></div>
 ```
 
 ### CSS
