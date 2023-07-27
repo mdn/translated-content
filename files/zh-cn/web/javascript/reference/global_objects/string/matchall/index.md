@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/matchAll
 
 {{JSRef}}
 
-**`matchAll()`** 方法返回一个迭代器，用于匹配一个字符串和一个[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)，包括[捕获组](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)在内的所有结果。
+**`matchAll()`** 方法返回一个迭代器，该迭代器包含了检索字符串与[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)进行匹配的所有结果（包括[捕获组](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)）。
 
 {{EmbedInteractiveExample("pages/js/string-matchall.html")}}
 
@@ -23,16 +23,16 @@ matchAll(regexp)
 
     如果 `regexp` 不是一个 `RegExp` 对象，并且没有 `Symbol.matchAll` 方法，它将通过 `new RegExp(regexp, 'g')` 被隐式转换为一个 {{jsxref("RegExp")}} 对象。
 
-    如果 `regexp` 是一个[正则表达式对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)，那么它必须设置了全局（`g`）标志，否则会抛出一个 {{jsxref("TypeError")}} 异常。
+    如果 `regexp` 是一个[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)，那么它必须设置了全局（`g`）标志，否则会抛出 {{jsxref("TypeError")}} 异常。
 
 ### 返回值
 
-一个匹配结果的[可迭代的迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)（它不可重新开始）。每个匹配结果都是一个数组，其形状与 {{jsxref("RegExp.prototype.exec()")}} 的返回值相同。
+一个匹配结果的[可迭代迭代器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Iterator)（它不可重新开始）。每个匹配结果都是一个数组，其形状与 {{jsxref("RegExp.prototype.exec()")}} 的返回值相同。
 
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果 `regexp` 是一个[正则表达式对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)，且没有设置全局（`g`）标志（其 [`flags`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) 属性不包含 `"g"`），则会抛出该异常。
+  - : 如果 `regexp` 是一个[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#正则表达式的特殊处理)，且没有设置全局（`g`）标志（其 [`flags`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/flags) 属性不包含 `"g"`），则会抛出该异常。
 
 ## 描述
 
@@ -58,7 +58,7 @@ while ((match = regexp.exec(str)) !== null) {
 // 找到 foosball 起始位置=16 结束位置=24。
 ```
 
-有了可用的 `matchAll()` 方法，可以避免使用 `while` 循环和带有 `g` 标志的 `exec`。相反，你可以获得一个迭代器，以便使用更方便的 `for...of` 循环、[数组展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或者 `Array.from()` 构造函数：
+如果有 `matchAll()` 方法，则可以避免使用 {{jsxref("Statements/while", "while")}} 循环和带有 `g` 标志的 `exec`。相反，你可以获得一个迭代器，以便使用更方便的 {{jsxref("Statements/for...of", "for...of")}} 循环、[数组展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)或 `Array.from()` 构造函数：
 
 ```js
 const regexp = /foo[a-z]*/g;
@@ -81,7 +81,7 @@ Array.from(str.matchAll(regexp), (m) => m[0]);
 // [ "football", "foosball" ]
 ```
 
-如果没有 `/g` 标志，`matchAll` 会抛出异常。
+如果没有 `g` 标志，`matchAll` 会抛出异常。
 
 ```js
 const regexp = /[a-c]/;
@@ -90,7 +90,7 @@ str.matchAll(regexp);
 // TypeError
 ```
 
-`matchAll` 内部做了一个 `regexp` 的复制，所以不像 {{jsxref("Global_Objects/RegExp/exec", "regexp.exec()")}}，`lastIndex` 在字符串扫描时不会改变。
+`matchAll` 内部做了一个 `regexp` 的复制，所以不像 {{jsxref("Global_Objects/RegExp/exec", "regexp.exec()")}}，`lastIndex` 在字符串扫描后不会改变。
 
 ```js
 const regexp = /[a-c]/g;
@@ -115,7 +115,7 @@ const str = "test1test2";
 str.match(regexp); // ['test1', 'test2']
 ```
 
-使用 `matchAll()` 方法，可以轻松获取捕获组：
+使用 `matchAll` 方法，可以轻松获取捕获组：
 
 ```js
 const array = [...str.matchAll(regexp)];
@@ -126,7 +126,7 @@ array[1];
 // ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
 ```
 
-### 使用一个没有实现 @@matchAll 的非正则对象调用 matchAll()
+### 使用实现了 @@matchAll 的非正则对象调用 matchAll()
 
 如果一个对象有一个 `Symbol.matchAll` 方法，它可以被用作自定义匹配器。`Symbol.matchAll` 的返回值将成为 `matchAll()` 的返回值。
 
