@@ -15,7 +15,7 @@ La méthode **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** renvoie un
 ## Syntaxe
 
 ```js
-relativeTimeFormat.resolvedOptions()
+relativeTimeFormat.resolvedOptions();
 ```
 
 ### Valeur de retour
@@ -49,12 +49,12 @@ L'objet renvoyé par cette méthode possèdera les propriétés suivantes :
 ## Exemples
 
 ```js
-var de = new Intl.RelativeTimeFormat('de-DE');
+var de = new Intl.RelativeTimeFormat("de-DE");
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;          // "de-DE"
-usedOptions.style;           // "long"
-usedOptions.numeric;         // "always"
+usedOptions.locale; // "de-DE"
+usedOptions.style; // "long"
+usedOptions.numeric; // "always"
 usedOptions.numberingSystem; // "latn"
 ```
 

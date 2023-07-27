@@ -13,7 +13,7 @@ La fonction **`Math.floor(x)`** renvoie le plus grand entier qui est inférieur 
 ## Syntaxe
 
 ```js
-Math.floor(x)
+Math.floor(x);
 ```
 
 ### Paramètres
@@ -36,12 +36,12 @@ Un nombre qui représente le plus grand entier inférieur ou égal à la valeur 
 ### Utiliser `Math.floor`
 
 ```js
-Math.floor( 45.95); //  45
-Math.floor( 45.05); //  45
-Math.floor(  4   ); //   4
+Math.floor(45.95); //  45
+Math.floor(45.05); //  45
+Math.floor(4); //   4
 Math.floor(-45.05); // -46
 Math.floor(-45.95); // -46
-Math.floor(null);   // 0
+Math.floor(null); // 0
 ```
 
 ## Spécifications

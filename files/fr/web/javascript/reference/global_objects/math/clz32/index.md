@@ -13,7 +13,7 @@ La fonction **`Math.clz32()`** renvoie le nombre de zéros de tête dans la repr
 ## Syntaxe
 
 ```js
-Math.clz32(x)
+Math.clz32(x);
 ```
 
 ### Paramètres
@@ -38,15 +38,26 @@ Cette fonction est particulièrement utile aux systèmes qui compilent du code J
 ## Exemples
 
 ```js
-Math.clz32(1)                // 31
-Math.clz32(1000)             // 22
-Math.clz32()                 // 32
+Math.clz32(1); // 31
+Math.clz32(1000); // 22
+Math.clz32(); // 32
 
-var liste = [NaN, Infinity, -Infinity, 0, -0, null, undefined, 'machin', {}, []];
-liste.every(n => Math.clz32(n) == 32); // true
+var liste = [
+  NaN,
+  Infinity,
+  -Infinity,
+  0,
+  -0,
+  null,
+  undefined,
+  "machin",
+  {},
+  [],
+];
+liste.every((n) => Math.clz32(n) == 32); // true
 
-Math.clz32(true)             // 31
-Math.clz32(3.5)              // 30
+Math.clz32(true); // 31
+Math.clz32(3.5); // 30
 ```
 
 ## Spécifications

@@ -15,7 +15,7 @@ La fonction **`Math.acosh()`** renvoie l'arc cosinus hyperbolique d'un nombre.El
 ## Syntaxe
 
 ```js
-Math.acosh(x)
+Math.acosh(x);
 ```
 
 ### Paramètres
@@ -36,11 +36,11 @@ L'arc cosinus hyperbolique du nombre en argument. Si le nombre est inférieur à
 ### Utiliser `Math.acosh()`
 
 ```js
-Math.acosh(-1);  // NaN
-Math.acosh(0);   // NaN
+Math.acosh(-1); // NaN
+Math.acosh(0); // NaN
 Math.acosh(0.5); // NaN
-Math.acosh(1);   // 0
-Math.acosh(2);   // 1.3169578969248166
+Math.acosh(1); // 0
+Math.acosh(2); // 1.3169578969248166
 ```
 
 Pour les valeurs strictement inférieures à 1 `Math.acosh` renvoie {{jsxref("NaN")}}.

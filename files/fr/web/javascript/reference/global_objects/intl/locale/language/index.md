@@ -29,7 +29,7 @@ console.log(langStr.language); // Affichera "en" dans la console
 Bien que la composante de la langue doive être indiquée dans le premier paramètre, le constructeur {{jsxref("Locale", "Locale")}} prend comme deuxième argument un objet de configuration qui permet de surcharger cette composante.
 
 ```js
-let langObj = new Intl.Locale("en-Latn-US", {language: "es"});
+let langObj = new Intl.Locale("en-Latn-US", { language: "es" });
 
 console.log(langObj.language); // Affichera "es" dans la console
 ```

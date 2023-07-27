@@ -11,7 +11,7 @@ La méthode **`Intl.ListFormat.prototype.resolvedOptions()`** renvoie un nouvel 
 ## Syntaxe
 
 ```js
-listFormat.resolvedOptions()
+listFormat.resolvedOptions();
 ```
 
 ### Valeur de retour
@@ -36,8 +36,8 @@ const deListFormatter = new Intl.ListFormat("de-DE", { style: "short" });
 
 const usedOptions = de.resolvedOptions();
 console.log(usedOptions.locale); // "de-DE"
-console.log(usedOptions.style);  // "short"
-console.log(usedOptions.type);   // "conjunction" (la valeur par défaut)
+console.log(usedOptions.style); // "short"
+console.log(usedOptions.type); // "conjunction" (la valeur par défaut)
 ```
 
 ## Spécifications

@@ -37,15 +37,15 @@ Dans cet exemple, on voit l'impact de la locale sur les règles de nombre. Afin 
 // L'arabe possède plusieurs règles
 // de nombre
 
-new Intl.PluralRules('ar-EG').select(0);
+new Intl.PluralRules("ar-EG").select(0);
 // → 'zero'
-new Intl.PluralRules('ar-EG').select(1);
+new Intl.PluralRules("ar-EG").select(1);
 // → 'one'
-new Intl.PluralRules('ar-EG').select(2);
+new Intl.PluralRules("ar-EG").select(2);
 // → 'two'
-new Intl.PluralRules('ar-EG').select(6);
+new Intl.PluralRules("ar-EG").select(6);
 // → 'few'
-new Intl.PluralRules('ar-EG').select(18);
+new Intl.PluralRules("ar-EG").select(18);
 // → 'many'
 ```
 

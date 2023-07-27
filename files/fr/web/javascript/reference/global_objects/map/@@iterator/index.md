@@ -13,7 +13,7 @@ La valeur initiale de la propriété **`@@iterator`** est la même fonction que 
 ## Syntaxe
 
 ```js
-maMap[Symbol.iterator]
+maMap[Symbol.iterator];
 ```
 
 ### Valeur de retour

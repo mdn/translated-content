@@ -37,11 +37,11 @@ Lève une exception {{jsxref("SyntaxError")}} si la chaine de caractère à anal
 
 ```js
 try {
-  JSON.parse('{}');              // {}
-  JSON.parse('true');            // true
-  JSON.parse('"toto"');          // "toto"
+  JSON.parse("{}"); // {}
+  JSON.parse("true"); // true
+  JSON.parse('"toto"'); // "toto"
   JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
-  JSON.parse('null');            // null
+  JSON.parse("null"); // null
 } catch (e) {
   console.error("Parsing error:", e);
 }
@@ -55,17 +55,17 @@ Si le _reviver_ ne transforme que certaines valeurs et pas d'autres, assurez-vou
 
 ```js
 JSON.parse('{"p": 5}', (key, value) => {
-  if (typeof value === 'number') {
-    return value * 2;  // renvoie value * 2 pour les nombres
+  if (typeof value === "number") {
+    return value * 2; // renvoie value * 2 pour les nombres
   }
-  return value;        // pour le reste, la valeur est inchangée
+  return value; // pour le reste, la valeur est inchangée
 });
 
 // { p: 10 }
 
 JSON.parse('{"1": 1, "2": 2,"3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
-    console.log(key);            // on affiche le nom de la propriété dans la console
-    return value;                // et on renvoie la valeur inchangée.
+  console.log(key); // on affiche le nom de la propriété dans la console
+  return value; // et on renvoie la valeur inchangée.
 });
 
 // 1
@@ -81,7 +81,7 @@ JSON.parse('{"1": 1, "2": 2,"3": {"4": 4, "5": {"6": 6}}}', (key, value) => {
 
 ```js example-bad
 // les deux instructions qui suivent lèveront une SyntaxError
-JSON.parse('[1, 2, 3, 4, ]');
+JSON.parse("[1, 2, 3, 4, ]");
 JSON.parse('{ "toto" : 1, }');
 ```
 

@@ -31,8 +31,8 @@ Cette méthode renvoie un booléen : `true` si un élément avec cette clé exis
 var maMap = new Map();
 maMap.set("truc", "toto");
 
-maMap.has("truc");  // renvoie true
-maMap.has("machin");// renvoie false
+maMap.has("truc"); // renvoie true
+maMap.has("machin"); // renvoie false
 ```
 
 ## Spécifications

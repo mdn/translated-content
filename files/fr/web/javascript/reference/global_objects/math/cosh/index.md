@@ -17,7 +17,7 @@ La fonction **`Math.cosh()`** renvoie le cosinus hyperbolique d'un nombre, défi
 ## Syntaxe
 
 ```js
-Math.cosh(x)
+Math.cosh(x);
 ```
 
 ### Paramètres
@@ -38,8 +38,8 @@ Le cosinus hyperbolique du nombre passé en argument.
 ### Utiliser `Math.cosh()`
 
 ```js
-Math.cosh(0);  // 1
-Math.cosh(1);  // 1.5430806348152437
+Math.cosh(0); // 1
+Math.cosh(1); // 1.5430806348152437
 Math.cosh(-1); // 1.5430806348152437
 ```
 
@@ -48,18 +48,22 @@ Math.cosh(-1); // 1.5430806348152437
 Cette fonction peut être émulée grâce à la fonction {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}} :
 
 ```js
-Math.cosh = Math.cosh || function(x) {
+Math.cosh =
+  Math.cosh ||
+  function (x) {
     return (Math.exp(x) + Math.exp(-x)) / 2;
-}
+  };
 ```
 
 On peut également utiliser un unique appel à {{jsxref("Objets_globaux/Math/exp", "exp()")}} :
 
 ```js
-Math.cosh = Math.cosh || function(x) {
+Math.cosh =
+  Math.cosh ||
+  function (x) {
     var y = Math.exp(x);
     return (y + 1 / y) / 2;
-}
+  };
 ```
 
 ## Spécifications
