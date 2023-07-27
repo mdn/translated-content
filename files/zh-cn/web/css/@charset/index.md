@@ -1,5 +1,5 @@
 ---
-title: '@charset'
+title: "@charset"
 slug: Web/CSS/@charset
 ---
 
@@ -33,7 +33,7 @@ slug: Web/CSS/@charset
 ```
 
 - _charset_
-  - : 它是一个 {{cssxref("&lt;string&gt;")}} 表示字符编码被使用。它必须是在被 [IANA-registry](http://www.iana.org/assignments/character-sets) 声明过的 web-safe 字符编码中的一个，还必须被双引号包围，遵循一个空格字符 (U+0020)，并且立即以分号结束。如果有多个相关的编码名字，只有被标记为 *preferred* 的那个才会被使用。
+  - : 它是一个 {{cssxref("&lt;string&gt;")}} 表示字符编码被使用。它必须是在被 [IANA-registry](http://www.iana.org/assignments/character-sets) 声明过的 web-safe 字符编码中的一个，还必须被双引号包围，遵循一个空格字符 (U+0020)，并且立即以分号结束。如果有多个相关的编码名字，只有被标记为 _preferred_ 的那个才会被使用。
 
 ## 例子
 
@@ -41,10 +41,13 @@ slug: Web/CSS/@charset
 @charset "UTF-8";
 @charset "utf-8"; /*大小写不敏感*/
 /* 设置 css 的编码格式为 Unicode UTF-8 */
+```
+
+```css-nolint example-bad
 @charset 'iso-8859-15'; /* 无效的，使用了错误的引号 */
-@charset  "UTF-8";      /* 无效的，多于一个空格 */
- @charset "UTF-8";      /* 无效的，在 at-rule 之前多了一个空格 */
-@charset UTF-8;         /* 无效的，缺少单引号 ' 或双引号 "，charset 不是一个有效的 CSS {{cssxref("&lt;string&gt;")}} */
+@charset  "UTF-8"; /* 无效的，多于一个空格 */
+ @charset "UTF-8"; /* 无效的，在 at-rule 之前多了一个空格 */
+@charset UTF-8; /* 无效的，缺少单引号 ' 或双引号 "，charset 不是一个有效的 CSS {{cssxref("&lt;string&gt;")}} */
 ```
 
 ## 规范

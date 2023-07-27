@@ -1,5 +1,5 @@
 ---
-title: '::backdrop'
+title: "::backdrop"
 slug: Web/CSS/::backdrop
 ---
 
@@ -10,7 +10,7 @@ slug: Web/CSS/::backdrop
 ```css
 /* Backdrop 只有通过 dialog.showModal() 打开对话框时会被显示 */
 dialog::backdrop {
-  background: rgba(255,0,0,.25);
+  background: rgba(255, 0, 0, 0.25);
 }
 ```
 

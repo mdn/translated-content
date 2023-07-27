@@ -1,5 +1,5 @@
 ---
-title: ':enabled'
+title: ":enabled"
 slug: Web/CSS/:enabled
 ---
 

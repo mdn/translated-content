@@ -18,7 +18,7 @@ slug: Web/CSS/@media/aspect-ratio
 ### HTML
 
 ```html
-<div id='inner'>
+<div id="inner">
   Watch this element as you resize your viewport's width and height.
 </div>
 ```
@@ -36,7 +36,7 @@ slug: Web/CSS/@media/aspect-ratio
 /* 最大宽高比 */
 @media (max-aspect-ratio: 3/2) {
   div {
-    background: #9ff;  /* cyan */
+    background: #9ff; /* cyan */
   }
 }
 

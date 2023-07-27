@@ -1,5 +1,5 @@
 ---
-title: ':blank'
+title: ":blank"
 slug: Web/CSS/:blank
 original_slug: Web/CSS/:blank空白伪类
 ---

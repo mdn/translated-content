@@ -1,5 +1,5 @@
 ---
-title: '::file-selector-button'
+title: "::file-selector-button"
 slug: Web/CSS/::file-selector-button
 ---
 
