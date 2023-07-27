@@ -211,7 +211,7 @@ function getIndex(select) {
 }
 
 // ------------- //
-// Event binding //
+// 事件绑定 //
 // ------------- //
 
 window.addEventListener("load", () => {
