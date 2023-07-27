@@ -62,7 +62,7 @@ L'en-tête expérimental [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH) expo
 
 > **Note :** Cet en-tête fait partie de la technologie **expérimentale** des _indications client_ (<i lang="en">client hints</i>) et est uniquement disponible pour Chrome, à partir de Chrome 61.
 
-L'en-tête [`Accept-CH-Lifetime`](/fr/docs/Web/HTTP/Headers/Accept-CH-Lifetime) est utilisé de concert avec la valeur `Device-Memory` de l'en-tête `Accept-CH` et indique la durée pendant laquelle l'appareil devrait partager sa quantité de mémoire vive. La valeur est exprimée en millisecondes et est optionelle.
+L'en-tête [`Accept-CH-Lifetime`](/fr/docs/Web/HTTP/Headers/Accept-CH-Lifetime) est utilisé de concert avec la valeur `Device-Memory` de l'en-tête `Accept-CH` et indique la durée pendant laquelle l'appareil devrait partager sa quantité de mémoire vive. La valeur est exprimée en millisecondes et est optionnelle.
 
 ### L'en-tête `Accept-Encoding`
 
@@ -72,7 +72,7 @@ La compression des messages HTTP est l'une des méthodes majeures pour améliore
 
 ### L'en-tête `Accept-Language`
 
-L'en-tête [`Accept-Language`](/fr/docs/Web/HTTP/Headers/Accept-Language) sert à indiquer la langue à privilégier pour l'utilisatrice ou l'utilisateur. Il s'agit d'une liste de valeurs pondérées (par exemple `"de, en;q=0.7`"). Une valeur par défaut est généralement paramétrée à travers l'interface graphique de l'agent utilisateur, mais la plupart des navigateurs autorisent la sélection de plusieurs langues.
+L'en-tête [`Accept-Language`](/fr/docs/Web/HTTP/Headers/Accept-Language) sert à indiquer la langue à privilégier pour l'utilisatrice ou l'utilisateur. Il s'agit d'une liste de valeurs pondérées (par exemple `de, en;q=0.7`). Une valeur par défaut est généralement paramétrée à travers l'interface graphique de l'agent utilisateur, mais la plupart des navigateurs autorisent la sélection de plusieurs langues.
 
 En raison de [l'entropie croissante déduite de la configuration](https://www.eff.org/deeplinks/2010/01/primer-information-theory-and-privacy), une valeur modifiée peut être utilisée pour tracer la personne. Il n'est pas recommandé de la charger et un site web ne peut pas intégralement se baser sur cette valeur pour déduire l'intention effective de la personne. Il est préférable d'éviter la détection des langues via cet en-tête, car l'expérience utilisateur peut être dégradée.
 
