@@ -2,7 +2,7 @@
 title: CompositionEvent
 slug: Web/API/CompositionEvent
 l10n:
-  sourceCommit: 164d2b6e6c9ce32fcb8ad19436fe44766cb5c3eb
+  sourceCommit: e811fc31b67e145c5882e8e3f128d1938c627a51
 ---
 
 {{APIRef("UI Events")}}
@@ -18,7 +18,7 @@ DOM の **`CompositionEvent`** は、ユーザーの間接的なテキストの�
 
 ## プロパティ
 
-_このインターフェイスは、親である {{domxref("UIEvent")}} および祖先である {{domxref("Event")}} からもプロパティを継承します。_
+_このインターフェイスは、親である {{domxref("UIEvent")}} および祖先である {{domxref("Event")}} から継承したプロパティもあります。_
 
 - {{domxref("CompositionEvent.data")}} {{ReadOnlyInline}}
   - : イベントを発生させた入力システムによって生成された文字を返します。これは、`CompositionEvent` オブジェクトを生成したイベントの型に応じて変わります。
@@ -27,7 +27,7 @@ _このインターフェイスは、親である {{domxref("UIEvent")}} およ�
 
 ## メソッド
 
-_このインターフェイスは、親である {{domxref("UIEvent")}} および祖先である {{domxref("Event")}} からもメソッドを継承します。_
+_このインターフェイスは、親である {{domxref("UIEvent")}} および祖先である {{domxref("Event")}} から継承したメソッドもあります。_
 
 - {{domxref("CompositionEvent.initCompositionEvent()")}} {{deprecated_inline}}
   - : `CompositionEvent` オブジェクトの属性を初期化します。
