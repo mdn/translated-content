@@ -1,5 +1,5 @@
 ---
-title: ':out-of-range'
+title: ":out-of-range"
 slug: Web/CSS/:out-of-range
 translation_of: Web/CSS/:out-of-range
 ---
@@ -29,9 +29,17 @@ input:out-of-range {
 
 ```html
 <form action="" id="form1">
-  <ul>Les valeurs entre 1 et 10 sont autorisées.
+  <ul>
+    Les valeurs entre 1 et 10 sont autorisées.
     <li>
-      <input id="valeur1" name="valeur1" type="number" placeholder="1 à 10" min="1" max="10" value="12">
+      <input
+        id="valeur1"
+        name="valeur1"
+        type="number"
+        placeholder="1 à 10"
+        min="1"
+        max="10"
+        value="12" />
       <label for="valeur1">Votre valeur est </label>
     </li>
   </ul>
@@ -60,11 +68,11 @@ input:out-of-range {
 }
 
 input:in-range + label::after {
-  content:' OK';
+  content: " OK";
 }
 
 input:out-of-range + label::after {
-    content:'hors des limites !';
+  content: "hors des limites !";
 }
 ```
 

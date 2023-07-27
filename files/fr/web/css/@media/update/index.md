@@ -25,8 +25,8 @@ La caractéristique `update` est définie avec un mot-clé parmi ceux de la list
 
 ```html
 <p>
-  Si ce texte est animé, cela signifie que vous utilisez
-  un appareil avec un affichage qui évolue rapidement.
+  Si ce texte est animé, cela signifie que vous utilisez un appareil avec un
+  affichage qui évolue rapidement.
 </p>
 ```
 

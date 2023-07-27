@@ -91,7 +91,7 @@ div {
 p.relatif {
   position: relative;
   top: 5em;
-  border: 2px black solid
+  border: 2px black solid;
 }
 ```
 

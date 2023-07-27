@@ -1,5 +1,5 @@
 ---
-title: ':focus-visible'
+title: ":focus-visible"
 slug: Web/CSS/:focus-visible
 translation_of: Web/CSS/:focus-visible
 ---
@@ -15,7 +15,8 @@ On notera que Firefox prend en charge cette fonctionnalité via une ancienne pse
 ## Syntaxe
 
 ```css
-:focus-visible
+:focus-visible {
+}
 ```
 
 ## Exemples
@@ -27,18 +28,19 @@ Dans cet exemple, le sélecteur `:focus-visible` utilise le comportement de l'ag
 #### HTML
 
 ```html
-<input value="Styles par défaut"><br>
-<button>Styles par défaut</button><br>
-<input class="focus-only" value=":focus only"><br>
-<button class="focus-only">:focus only</button><br>
-<input class="focus-visible-only" value=":focus-visible only"><br>
+<input value="Styles par défaut" /><br />
+<button>Styles par défaut</button><br />
+<input class="focus-only" value=":focus only" /><br />
+<button class="focus-only">:focus only</button><br />
+<input class="focus-visible-only" value=":focus-visible only" /><br />
 <button class="focus-visible-only">:focus-visible only</button>
 ```
 
 #### CSS
 
 ```css
-input, button {
+input,
+button {
   margin: 10px;
 }
 

@@ -34,7 +34,6 @@ element(id)
   width: 400px;
   height: 400px;
   background: -moz-element(#monArrierePlan) no-repeat;
-
 }
 
 .paragraphe {
@@ -43,7 +42,7 @@ element(id)
   color: white;
 }
 
-#monArrierePlan{
+#monArrierePlan {
   width: 1024px;
   height: 1024px;
   background-image: linear-gradient(to right, red, orange, yellow, white);
@@ -58,21 +57,17 @@ element(id)
 
 ```html
 <div class="exemple">
-  <p>
-    Cet élément utilise l'élément
-    #monArrierePlan comme image
-    de fond !
-  </p>
+  <p>Cet élément utilise l'élément #monArrierePlan comme image de fond !</p>
 </div>
 
 <div class="cache">
   <div id="monArrierePlan">
-    <p class="paragraphe">
-      Et voici un texte inscrit sur
-      l'arrière-plan.
-    </p>
-  <div>
-<div>
+    <p class="paragraphe">Et voici un texte inscrit sur l'arrière-plan.</p>
+    <div>
+      <div></div>
+    </div>
+  </div>
+</div>
 ```
 
 #### Résultat
@@ -104,9 +99,7 @@ Pour les navigateurs qui prennent en charge `element`, on peut ici voir un arri�
 <div class="exemple"></div>
 
 <div class="cache">
-  <button id="monArrierePlan" type="button">
-    Méchant bouton
-  </button>
+  <button id="monArrierePlan" type="button">Méchant bouton</button>
 </div>
 ```
 

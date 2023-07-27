@@ -53,14 +53,12 @@ Voir {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}} pour plus d'infor
 
 ```css
 element {
-
   /* L'axe principal sera la direction de bloc  */
   /* et on commencera par le bas (main-start et */
   /* main-end inversés. Les éléments flexibles  */
   /* passent sur une nouvelle ligne si besoin   */
 
   flex-flow: column-reverse wrap;
-
 }
 ```
 

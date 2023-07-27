@@ -43,9 +43,9 @@ Voici un exemple de mise en forme prenant en compte ces restrictions :
 }
 
 :visited {
-  outline-color: orange;     /* Les liens visités auront un contour orange */
-  color: yellow;             /* Le texte des liens visités sera en jaune   */
-  background-color: green;   /* L'arrière-plan des liens visités sera vert */
+  outline-color: orange; /* Les liens visités auront un contour orange */
+  color: yellow; /* Le texte des liens visités sera en jaune   */
+  background-color: green; /* L'arrière-plan des liens visités sera vert */
 }
 ```
 
