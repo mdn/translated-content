@@ -1,5 +1,5 @@
 ---
-title: '::marker'
+title: "::marker"
 slug: Web/CSS/::marker
 translation_of: Web/CSS/::marker
 ---

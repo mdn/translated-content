@@ -1,5 +1,5 @@
 ---
-title: ':fullscreen'
+title: ":fullscreen"
 slug: Web/CSS/:fullscreen
 translation_of: Web/CSS/:fullscreen
 ---

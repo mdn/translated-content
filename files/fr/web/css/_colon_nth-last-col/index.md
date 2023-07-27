@@ -1,5 +1,5 @@
 ---
-title: ':nth-last-col'
+title: ":nth-last-col"
 slug: Web/CSS/:nth-last-col
 translation_of: Web/CSS/:nth-last-col
 ---

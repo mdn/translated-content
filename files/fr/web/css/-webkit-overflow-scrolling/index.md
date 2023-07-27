@@ -1,5 +1,5 @@
 ---
-title: '-webkit-overflow-scrolling'
+title: "-webkit-overflow-scrolling"
 slug: Web/CSS/-webkit-overflow-scrolling
 translation_of: Web/CSS/-webkit-overflow-scrolling
 ---

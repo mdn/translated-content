@@ -1,5 +1,5 @@
 ---
-title: '::-webkit-scrollbar'
+title: "::-webkit-scrollbar"
 slug: Web/CSS/::-webkit-scrollbar
 translation_of: Web/CSS/::-webkit-scrollbar
 ---

@@ -1,5 +1,5 @@
 ---
-title: '@font-face'
+title: "@font-face"
 slug: Web/CSS/@font-face
 l10n:
   sourceCommit: ccafad98826d97da19728626047a7020000fd639

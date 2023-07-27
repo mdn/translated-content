@@ -1,5 +1,5 @@
 ---
-title: ':first-child'
+title: ":first-child"
 slug: Web/CSS/:first-child
 translation_of: Web/CSS/:first-child
 ---

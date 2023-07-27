@@ -1,5 +1,5 @@
 ---
-title: '::first-letter'
+title: "::first-letter"
 slug: Web/CSS/::first-letter
 translation_of: Web/CSS/::first-letter
 ---

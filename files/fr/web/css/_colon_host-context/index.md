@@ -1,7 +1,7 @@
 ---
-title: ':host-context()'
+title: ":host-context()"
 slug: Web/CSS/:host-context
-translation_of: 
+translation_of:
 l10n:
   sourceCommit: 257486f64b2472dda4996a4ea7b6b5305e46f863
 ---

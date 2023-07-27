@@ -1,5 +1,5 @@
 ---
-title: ':invalid'
+title: ":invalid"
 slug: Web/CSS/:invalid
 translation_of: Web/CSS/:invalid
 ---

@@ -1,5 +1,5 @@
 ---
-title: ':has'
+title: ":has"
 slug: Web/CSS/:has
 translation_of: Web/CSS/:has
 ---

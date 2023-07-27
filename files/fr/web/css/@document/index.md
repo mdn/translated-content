@@ -1,5 +1,5 @@
 ---
-title: '@document'
+title: "@document"
 slug: Web/CSS/@document
 translation_of: Web/CSS/@document
 ---

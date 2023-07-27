@@ -1,5 +1,5 @@
 ---
-title: ':required'
+title: ":required"
 slug: Web/CSS/:required
 translation_of: Web/CSS/:required
 ---
