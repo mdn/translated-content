@@ -13,7 +13,7 @@ La méthode **`keys()`** renvoie un nouvel objet `Array Iterator` contenant les 
 ## Syntaxe
 
 ```js
-arr.keys()
+arr.keys();
 ```
 
 ### Valeur de retour

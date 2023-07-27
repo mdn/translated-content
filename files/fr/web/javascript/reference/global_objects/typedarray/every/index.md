@@ -56,7 +56,7 @@ Dans l'exemple suivant, on teste si tous les éléments du tableau typé sont su
 function estGrand(element, index, array) {
   return element >= 10;
 }
-new Uint8Array([12, 5, 8, 130, 44]).every(estGrand);   // false
+new Uint8Array([12, 5, 8, 130, 44]).every(estGrand); // false
 new Uint8Array([12, 54, 18, 130, 44]).every(estGrand); // true
 ```
 
@@ -65,8 +65,8 @@ new Uint8Array([12, 54, 18, 130, 44]).every(estGrand); // true
 [Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) permettent d'utiliser une syntaxe plus concise pour parvenir au même résultat :
 
 ```js
-new Uint8Array([12, 5, 8, 130, 44]).every(elem => elem >= 10); // false
-new Uint8Array([12, 54, 18, 130, 44]).every(elem => elem >= 10); // true
+new Uint8Array([12, 5, 8, 130, 44]).every((elem) => elem >= 10); // false
+new Uint8Array([12, 54, 18, 130, 44]).every((elem) => elem >= 10); // true
 ```
 
 ## Spécifications

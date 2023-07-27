@@ -11,10 +11,10 @@ Le constructeur **`SyntaxError()`** permet de créer un objet représentant une 
 ## Syntaxe
 
 ```js
-new SyntaxError()
-new SyntaxError(message)
-new SyntaxError(message, nomFichier)
-new SyntaxError(message, nomFichier, numeroLigne)
+new SyntaxError();
+new SyntaxError(message);
+new SyntaxError(message, nomFichier);
+new SyntaxError(message, nomFichier, numeroLigne);
 ```
 
 ### Paramètres
@@ -32,7 +32,7 @@ new SyntaxError(message, nomFichier, numeroLigne)
 
 ```js
 try {
-  eval('coucou truc');
+  eval("coucou truc");
 } catch (e) {
   console.error(e instanceof SyntaxError);
   console.error(e.message);
@@ -48,15 +48,15 @@ try {
 
 ```js
 try {
-  throw new SyntaxError('Coucou', 'unFichier.js', 10);
+  throw new SyntaxError("Coucou", "unFichier.js", 10);
 } catch (e) {
   console.error(e instanceof SyntaxError); // true
-  console.error(e.message);                // Coucou
-  console.error(e.name);                   // SyntaxError
-  console.error(e.fileName);               // unFichier.js
-  console.error(e.lineNumber);             // 10
-  console.error(e.columnNumber);           // 0
-  console.error(e.stack);                  // @debugger eval code:3:9
+  console.error(e.message); // Coucou
+  console.error(e.name); // SyntaxError
+  console.error(e.fileName); // unFichier.js
+  console.error(e.lineNumber); // 10
+  console.error(e.columnNumber); // 0
+  console.error(e.stack); // @debugger eval code:3:9
 }
 ```
 

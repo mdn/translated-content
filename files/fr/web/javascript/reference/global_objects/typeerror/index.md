@@ -42,13 +42,13 @@ Une exception `TypeError` peut être levée lorsque&nbsp;:
 try {
   null.f();
 } catch (e) {
-  console.log(e instanceof TypeError);  // true
-  console.log(e.message);               // "null has no properties"
-  console.log(e.name);                  // "TypeError"
-  console.log(e.fileName);              // "Scratchpad/1"
-  console.log(e.lineNumber);            // 2
-  console.log(e.columnNumber);          // 2
-  console.log(e.stack);                 // "@Scratchpad/2:2:3\n"
+  console.log(e instanceof TypeError); // true
+  console.log(e.message); // "null has no properties"
+  console.log(e.name); // "TypeError"
+  console.log(e.fileName); // "Scratchpad/1"
+  console.log(e.lineNumber); // 2
+  console.log(e.columnNumber); // 2
+  console.log(e.stack); // "@Scratchpad/2:2:3\n"
 }
 ```
 
@@ -56,15 +56,15 @@ try {
 
 ```js
 try {
-  throw new TypeError('Coucou', 'unFichier.js', 10);
+  throw new TypeError("Coucou", "unFichier.js", 10);
 } catch (e) {
-  console.log(e instanceof TypeError);  // true
-  console.log(e.message);               // "Coucou"
-  console.log(e.name);                  // "TypeError"
-  console.log(e.fileName);              // "unFichier.js"
-  console.log(e.lineNumber);            // 10
-  console.log(e.columnNumber);          // 0
-  console.log(e.stack);                 // "@Scratchpad/2:2:9\n"
+  console.log(e instanceof TypeError); // true
+  console.log(e.message); // "Coucou"
+  console.log(e.name); // "TypeError"
+  console.log(e.fileName); // "unFichier.js"
+  console.log(e.lineNumber); // 10
+  console.log(e.columnNumber); // 0
+  console.log(e.stack); // "@Scratchpad/2:2:9\n"
 }
 ```
 

@@ -13,7 +13,7 @@ La méthode **`sort()`** permet de trier numériquement les éléments d'un tabl
 ## Syntaxe
 
 ```js
-typedarray.sort([fonctionComparaison])
+typedarray.sort([fonctionComparaison]);
 ```
 
 ### Paramètres

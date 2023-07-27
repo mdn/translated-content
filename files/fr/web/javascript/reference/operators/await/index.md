@@ -31,7 +31,7 @@ Si on passe une promesse à une expression `await`, celle-ci attendra jusqu'à l
 
 ```js
 function resolveAfter2Seconds(x) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(x);
     }, 2000);
@@ -50,9 +50,9 @@ Les objets dotés d'une méthode `then()` (_thenable_ en anglais) seront égalem
 ```js
 async function f0() {
   const thenable = {
-    then: function(resolve, _reject) {
+    then: function (resolve, _reject) {
       resolve("résolu :)");
-    }
+    },
   };
   console.log(await thenable); // résolu :)
 }
@@ -85,11 +85,9 @@ f3();
 On peut également gérer le cas où la promesse est rejetée grâce à {{jsxref("Promise.prototype.catch()")}} :
 
 ```js
-var response = await maFonctionPromesse().catch(
-  (err) => {
-    console.log(err);
-  }
-);
+var response = await maFonctionPromesse().catch((err) => {
+  console.log(err);
+});
 ```
 
 ## Spécifications

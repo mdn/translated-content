@@ -13,7 +13,7 @@ L'opérateur d'assignement simple (`=`) est utilisé pour définir la valeur d'u
 ## Syntaxe
 
 ```js
-x = y
+x = y;
 ```
 
 ## Exemples

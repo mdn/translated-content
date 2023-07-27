@@ -13,7 +13,7 @@ La propriété **`buffer`** est un accesseur représentant l'{{jsxref("ArrayBuff
 ## Syntaxe
 
 ```js
-typedArray.buffer
+typedArray.buffer;
 ```
 
 ## Description

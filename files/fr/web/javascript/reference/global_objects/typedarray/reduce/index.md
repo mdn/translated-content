@@ -49,7 +49,7 @@ Si le tableau typé est vide et que le paramètre `valeurInitiale` n'a pas été
 ## Exemples
 
 ```js
-var total = new Uint8Array([0, 1, 2, 3]).reduce(function(a, b) {
+var total = new Uint8Array([0, 1, 2, 3]).reduce(function (a, b) {
   return a + b;
 });
 // total == 6

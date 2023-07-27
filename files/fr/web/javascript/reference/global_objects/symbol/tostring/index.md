@@ -29,19 +29,19 @@ L'objet {{jsxref("Symbol")}} surcharge la méthode `toString()` d'{{jsxref("Obje
 Bien qu'il soit possible d'appeler `toString()` pour les symboles, il n'est pas possible de concaténer une chaîne de caractères avec ce type d'objet :
 
 ```js
-Symbol("toto") + "machin";  // TypeError : Impossible de convertir un symbole en chaîne de caractères
+Symbol("toto") + "machin"; // TypeError : Impossible de convertir un symbole en chaîne de caractères
 ```
 
 ## Exemples
 
 ```js
-Symbol("desc").toString();   // "Symbol(desc)"
+Symbol("desc").toString(); // "Symbol(desc)"
 
 // symboles connus
-Symbol.iterator.toString();  // "Symbol(Symbol.iterator)
+Symbol.iterator.toString(); // "Symbol(Symbol.iterator)
 
 // symboles globaux
-Symbol.for("toto").toString() // "Symbol(toto)"
+Symbol.for("toto").toString(); // "Symbol(toto)"
 ```
 
 ## Spécifications

@@ -13,7 +13,7 @@ La méthode **`toString()`** renvoie une chaine de caractères représentant l'o
 ## Syntaxe
 
 ```js
-str.toString()
+str.toString();
 ```
 
 ### Valeur de retour

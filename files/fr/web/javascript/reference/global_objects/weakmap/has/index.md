@@ -32,7 +32,7 @@ var wm = new WeakMap();
 wm.set(window, "toto");
 
 wm.has(window); // renvoie true
-wm.has("machin");  // renvoie false
+wm.has("machin"); // renvoie false
 ```
 
 ## Spécifications

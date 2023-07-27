@@ -34,7 +34,7 @@ Cependant, si `Symbol.match` vaut `false`, cette vérification `isRegExp` indiqu
 var re = /toto/;
 re[Symbol.match] = false;
 "/toto/".startsWith(re); // true
-"/truc/".endsWith(re);   // false
+"/truc/".endsWith(re); // false
 ```
 
 ## Spécifications
