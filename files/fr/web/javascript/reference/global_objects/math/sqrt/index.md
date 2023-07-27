@@ -15,7 +15,7 @@ La fonction **`Math.sqrt()`** renvoie la racine carrée d'un nombre. Cette fonct
 ## Syntaxe
 
 ```js
-Math.sqrt(x)
+Math.sqrt(x);
 ```
 
 ### Paramètres
@@ -36,11 +36,11 @@ Si la valeur de `x` est négative, `sqrt` renverra {{jsxref("NaN")}}.
 ## Exemples
 
 ```js
-Math.sqrt(9);  // 3
-Math.sqrt(2);  // 1.414213562373095
+Math.sqrt(9); // 3
+Math.sqrt(2); // 1.414213562373095
 
-Math.sqrt(1);  // 1
-Math.sqrt(0);  // 0
+Math.sqrt(1); // 1
+Math.sqrt(0); // 0
 Math.sqrt(-1); // NaN
 Math.sqrt(-0); // -0
 ```

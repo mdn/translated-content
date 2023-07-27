@@ -13,7 +13,7 @@ La fonction **`Math.sin()`** renvoie le sinus d'un nombre.
 ## Syntaxe
 
 ```js
-Math.sin(x)
+Math.sin(x);
 ```
 
 ### Paramètres
@@ -34,8 +34,8 @@ La méthode `sin()` renvoie une valeur numérique comprise (au sens large) entre
 ## Exemples
 
 ```js
-Math.sin(0);           // 0
-Math.sin(1);           // 0.8414709848078965
+Math.sin(0); // 0
+Math.sin(1); // 0.8414709848078965
 
 Math.sin(Math.PI / 2); // 1
 ```

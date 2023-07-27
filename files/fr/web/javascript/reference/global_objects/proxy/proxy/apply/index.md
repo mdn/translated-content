@@ -14,8 +14,7 @@ La méthode **`handler.apply()`** représente une trappe pour un appel de foncti
 
 ```js
 var p = new Proxy(cible, {
-  apply: function(cible, thisArg, listeArguments) {
-  }
+  apply: function (cible, thisArg, listeArguments) {},
 });
 ```
 
@@ -57,15 +56,15 @@ Si les invariants suivants ne sont pas respectés, le proxy lèvera une exceptio
 Dans l'exemple ci-dessous, on piège un appel de fonction.
 
 ```js
-var p = new Proxy(function() {}, {
-  apply: function(target, thisArg, argumentsList) {
+var p = new Proxy(function () {}, {
+  apply: function (target, thisArg, argumentsList) {
     console.log("called: " + argumentsList.join(", "));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
-  }
+  },
 });
 
 console.log(p(1, 2, 3)); // "called: 1, 2, 3"
-                         // 6
+// 6
 ```
 
 ## Spécifications

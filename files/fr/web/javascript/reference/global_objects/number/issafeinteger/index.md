@@ -15,7 +15,7 @@ La méthode **`Number.isSafeInteger()`** permet de déterminer si la valeur, pas
 ## Syntaxe
 
 ```js
-Number.isSafeInteger(valeurÀTester)
+Number.isSafeInteger(valeurÀTester);
 ```
 
 ### Paramètres
@@ -41,14 +41,14 @@ L'intervalle des entiers qui peuvent être correctement représentés est `[-(2^
 ## Exemples
 
 ```js
-Number.isSafeInteger(3);                    // true
-Number.isSafeInteger(Math.pow(2, 53))       // false
-Number.isSafeInteger(Math.pow(2, 53) - 1)   // true
-Number.isSafeInteger(NaN);                  // false
-Number.isSafeInteger(Infinity);             // false
-Number.isSafeInteger("3");                  // false
-Number.isSafeInteger(3.1);                  // false
-Number.isSafeInteger(3.0);                  // true
+Number.isSafeInteger(3); // true
+Number.isSafeInteger(Math.pow(2, 53)); // false
+Number.isSafeInteger(Math.pow(2, 53) - 1); // true
+Number.isSafeInteger(NaN); // false
+Number.isSafeInteger(Infinity); // false
+Number.isSafeInteger("3"); // false
+Number.isSafeInteger(3.1); // false
+Number.isSafeInteger(3.0); // true
 ```
 
 ## Spécifications

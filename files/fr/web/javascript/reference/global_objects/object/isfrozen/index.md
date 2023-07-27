@@ -13,7 +13,7 @@ La méthode **`Object.isFrozen()`** permet de déterminer si un objet est {{jsxr
 ## Syntaxe
 
 ```js
-Object.isFrozen(obj)
+Object.isFrozen(obj);
 ```
 
 ### Paramètres

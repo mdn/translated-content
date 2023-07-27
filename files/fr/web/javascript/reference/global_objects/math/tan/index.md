@@ -13,7 +13,7 @@ La fonction **`Math.tan()`** renvoie la tangente d'un nombre exprimant un angle 
 ## Syntaxe
 
 ```js
-Math.tan(x)
+Math.tan(x);
 ```
 
 ### Paramètres
@@ -43,8 +43,8 @@ Math.tan(1); // 1.5574077246549023
 
 ```js
 function getTanDeg(deg) {
-   var rad = deg * Math.PI/180;
-   return Math.tan(rad);
+  var rad = (deg * Math.PI) / 180;
+  return Math.tan(rad);
 }
 ```
 

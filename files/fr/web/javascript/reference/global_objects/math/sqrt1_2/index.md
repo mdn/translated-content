@@ -22,7 +22,7 @@ La fonction suivante renvoie la valeur de cette constante :
 
 ```js
 function getRoot1_2() {
-   return Math.SQRT1_2;
+  return Math.SQRT1_2;
 }
 
 getRoot1_2(); // 0.7071067811865476

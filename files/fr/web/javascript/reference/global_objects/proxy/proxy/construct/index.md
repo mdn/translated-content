@@ -14,8 +14,7 @@ La méthode **`handler.construct()`** est une trappe pour l'opérateur {{jsxref(
 
 ```js
 var p = new Proxy(cible, {
-  construct: function(cible, listeArguments, newTarget) {
-  }
+  construct: function (cible, listeArguments, newTarget) {},
 });
 ```
 
@@ -56,24 +55,24 @@ Si les invariants suivants ne sont pas respectés, le proxy renverra une excepti
 Dans l'exemple qui suit, on piège l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.
 
 ```js
-var p = new Proxy(function() {}, {
-  construct: function(target, argumentsList) {
+var p = new Proxy(function () {}, {
+  construct: function (target, argumentsList) {
     console.log("called: " + argumentsList.join(", "));
     return { value: argumentsList[0] * 10 };
-  }
+  },
 });
 
 console.log(new p(1).value); // "appel sur : 1"
-                             // 10
+// 10
 ```
 
 Dans cette version, on ne respecte pas la contrainte d'invariance :
 
 ```js
-var p = new Proxy(function() {}, {
-  construct: function(target, argumentsList) {
+var p = new Proxy(function () {}, {
+  construct: function (target, argumentsList) {
     return 1;
-  }
+  },
 });
 
 new p(); // Une exception TypeError est levée
@@ -82,11 +81,14 @@ new p(); // Une exception TypeError est levée
 Dans le code qui suit, le proxy n'est pas correctement initialisé. La cible du proxy doit être un constructeur valide qui puisse être utilisé avec `new`.
 
 ```js
-var p = new Proxy({}, {
-  construct: function(target, argumentsList, newTarget){
-    return {};
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    construct: function (target, argumentsList, newTarget) {
+      return {};
+    },
+  },
+);
 
 new p(); // TypeError: p is not a constructor
 ```

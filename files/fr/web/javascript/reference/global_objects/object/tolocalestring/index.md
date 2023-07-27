@@ -13,7 +13,7 @@ La méthode **`toLocaleString()`** renvoie une chaine de caractères représenta
 ## Syntaxe
 
 ```js
-obj.toLocaleString()
+obj.toLocaleString();
 ```
 
 ### Valeur de retour

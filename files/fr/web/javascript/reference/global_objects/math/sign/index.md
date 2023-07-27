@@ -13,7 +13,7 @@ La fonction **`Math.sign()`** renvoie le signe d'un nombre et permet de savoir s
 ## Syntaxe
 
 ```js
-Math.sign(x)
+Math.sign(x);
 ```
 
 ### Paramètres
@@ -36,14 +36,14 @@ L'argument passé à cette fonction sera implicitement converti au type `number`
 ## Exemples
 
 ```js
-Math.sign(3)     //  1
-Math.sign(-3)    // -1
-Math.sign("-3")  // -1
-Math.sign(0)     //  0
-Math.sign(-0)    // -0
-Math.sign(NaN)   // NaN
-Math.sign("foo") // NaN
-Math.sign()      // NaN
+Math.sign(3); //  1
+Math.sign(-3); // -1
+Math.sign("-3"); // -1
+Math.sign(0); //  0
+Math.sign(-0); // -0
+Math.sign(NaN); // NaN
+Math.sign("foo"); // NaN
+Math.sign(); // NaN
 ```
 
 ## Spécifications

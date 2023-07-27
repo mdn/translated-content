@@ -14,8 +14,7 @@ La méthode **`handler.isExtensible()`** est une trappe pour intercepter les op�
 
 ```js
 var p = new Proxy(cible, {
-  isExtensible: function(cible) {
-  }
+  isExtensible: function (cible) {},
 });
 ```
 
@@ -52,25 +51,31 @@ Si les invariants suivants ne sont pas respectés, le proxy renverra une excepti
 Dans l'exemple qui suit, on intercepte {{jsxref("Object.isExtensible()")}}.
 
 ```js
-var p = new Proxy({}, {
-  isExtensible: function(cible) {
-    console.log("appelée");
-    return true;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    isExtensible: function (cible) {
+      console.log("appelée");
+      return true;
+    },
+  },
+);
 
 console.log(Object.isExtensible(p)); // "appelée"
-                                     // true
+// true
 ```
 
 Le code suivante ne respecte pas l'invariant et entraîne donc une exception.
 
 ```js
-var p = new Proxy({}, {
-  isExtensible: function(cible) {
-    return false;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    isExtensible: function (cible) {
+      return false;
+    },
+  },
+);
 
 Object.isExtensible(p); // TypeError est levée
 ```

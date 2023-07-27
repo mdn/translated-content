@@ -13,7 +13,7 @@ La méthode **`Object.isSealed()`** permet de déterminer si un objet est scell�
 ## Syntaxe
 
 ```js
-Object.isSealed(obj)
+Object.isSealed(obj);
 ```
 
 ### Paramètres
@@ -68,10 +68,14 @@ Object.isFrozen(scellé); // true
 var s2 = Object.seal({ p: 3 });
 Object.isFrozen(s2); // false ("p" est toujours modifiable)
 
-var s3 = Object.seal({ get p() { return 0; } });
+var s3 = Object.seal({
+  get p() {
+    return 0;
+  },
+});
 // pour les accesseurs, seule l'accès en
 // configuration est important
-Object.isFrozen(s3); // true 
+Object.isFrozen(s3); // true
 ```
 
 ## Notes

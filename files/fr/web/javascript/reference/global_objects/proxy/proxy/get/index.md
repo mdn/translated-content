@@ -14,8 +14,7 @@ La méthode **`handler.get()`** est une trappe pour intercepter l'accès à la v
 
 ```js
 var p = new Proxy(cible, {
-  get: function(cible, propriété, récepteur) {
-  }
+  get: function (cible, propriété, récepteur) {},
 });
 ```
 
@@ -58,15 +57,18 @@ Si les invariants suivants ne sont pas respectés, le proxy renverra une excepti
 Dans l'exemple suivant, on intercepte les accès aux propriétés :
 
 ```js
-var p = new Proxy({}, {
-  get: function(cible, propriété, récepteur) {
-    console.log("appelée : " + propriété);
-    return 10;
-  }
-});
+var p = new Proxy(
+  {},
+  {
+    get: function (cible, propriété, récepteur) {
+      console.log("appelée : " + propriété);
+      return 10;
+    },
+  },
+);
 
 console.log(p.a); // "appelée : a"
-                  // 10
+// 10
 ```
 
 Le code suivant ne respecte pas l'invariant :
@@ -77,13 +79,13 @@ Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: false,
   value: 10,
-  writable: false
+  writable: false,
 });
 
 var p = new Proxy(obj, {
-  get: function(cible, propriété) {
+  get: function (cible, propriété) {
     return 20;
-  }
+  },
 });
 
 p.a; // exception TypeError levée

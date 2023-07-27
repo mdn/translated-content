@@ -60,7 +60,7 @@ Il n'existe pas de méthode pour `Object` qui permette de supprimer une proprié
 - [`Object.getPrototypeOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)
   - : Retourne le prototype de l'objet indiqué.
 - [`Object.is()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is)
-  - : Détermine si deux valeurs sont la même valeur. Considère comme égales toutes les valeurs NaN (ce qui diffère à la fois de la *comparaison d'égalité abstraite* et de la *comparaison d'égalité stricte*).
+  - : Détermine si deux valeurs sont la même valeur. Considère comme égales toutes les valeurs NaN (ce qui diffère à la fois de la _comparaison d'égalité abstraite_ et de la _comparaison d'égalité stricte_).
 - [`Object.isExtensible()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isExtensible)
   - : Détermine si l'extension d'un objet est permise.
 - [`Object.isFrozen()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/isFrozen)

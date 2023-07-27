@@ -13,7 +13,7 @@ La méthode **`valueOf()`** renvoie la valeur primitive d'un objet donné.
 ## Syntaxe
 
 ```js
-object.valueOf()
+object.valueOf();
 ```
 
 ### Valeur de retour
@@ -39,7 +39,9 @@ Il est possible de créer une fonction à appeler à la place de la méthode `va
 Supposons qu'on ait un type d'objet `monTypeDeNombre` et qu'on désire lui ajouter une méthode `valueOf` spécifique, on pourra utiliser le code suivant :
 
 ```js
-monTypeDeNombre.prototype.valueOf = function(){ return valeurPrimitive;};
+monTypeDeNombre.prototype.valueOf = function () {
+  return valeurPrimitive;
+};
 ```
 
 En utilisant ce code, chaque fois qu'un objet de type `monTypeDeNombre` sera utilisé dans un contexte où il doit être représenté comme une valeur primitive, JavaScript appellera automatiquement la fonction qui y est définie.
@@ -47,7 +49,7 @@ En utilisant ce code, chaque fois qu'un objet de type `monTypeDeNombre` sera uti
 C'est habituellement JavaScript qui invoquera la méthode `valueOf`, mais il est aussi possible de l'appeler soi-même :
 
 ```js
-monNombre.valueOf()
+monNombre.valueOf();
 ```
 
 > **Note :** Les objets à utiliser dans un contexte textuel sont convertis avec la méthode {{jsxref("Object.toString", "toString()")}} ce qui est différent de la conversion d'objets {{jsxref("String")}} en valeurs primitives avec `valueOf`. Tous les objets peuvent être convertis en chaînes de caractères (la façon la plus générique étant "`[object type]`"). En revanche, la plupart des objets ne peut pas être convertie en nombre ou booléen par exemple.
@@ -58,12 +60,12 @@ monNombre.valueOf()
 
 ```js
 function MonTypeDeNombre(n) {
-    this.nombre = n;
+  this.nombre = n;
 }
 
-MonTypeDeNombre.prototype.valueOf = function(){
+MonTypeDeNombre.prototype.valueOf = function () {
   return this.nombre;
-}
+};
 
 var monObj = new MonTypeDeNombre(4);
 console.log(monObj + 3); // 7 car l'opération a implicitement utilisé valueOf

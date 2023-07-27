@@ -13,7 +13,7 @@ La méthode **`__defineGetter__`** permet de lier une propriété d'un objet à 
 ## Syntaxe
 
 ```js
-obj.__defineGetter__(prop, func)
+obj.__defineGetter__(prop, func);
 ```
 
 ### Paramètres
@@ -37,22 +37,27 @@ La méthode `__defineGetter__` permet de définir un {{jsxref("Opérateurs/L_op�
 // Méthode non-standard et dépréciée
 
 var o = {};
-o.__defineGetter__('gimmeFive', function() { return 5; });
+o.__defineGetter__("gimmeFive", function () {
+  return 5;
+});
 console.log(o.gimmeFive); // 5
-
 
 // Façon standard
 
 // En utilisant l'opérateur get
-var o = { get gimmeFive() { return 5; } };
+var o = {
+  get gimmeFive() {
+    return 5;
+  },
+};
 console.log(o.gimmeFive); // 5
 
 // En utilisant Object.defineProperty
 var o = {};
-Object.defineProperty(o, 'gimmeFive', {
-  get: function() {
+Object.defineProperty(o, "gimmeFive", {
+  get: function () {
     return 5;
-  }
+  },
 });
 console.log(o.gimmeFive); // 5
 ```

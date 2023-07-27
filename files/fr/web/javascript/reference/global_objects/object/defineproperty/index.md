@@ -15,7 +15,7 @@ La méthode statique **`Object.defineProperty()`** permet de définir une nouvel
 ## Syntaxe
 
 ```js
-Object.defineProperty(obj, prop, descripteur)
+Object.defineProperty(obj, prop, descripteur);
 ```
 
 ### Paramètres
@@ -70,10 +70,10 @@ var obj = {};
 // en utilisant __proto__
 Object.defineProperty(obj, "clé", {
   __proto__: null, // aucune propriété héritée
-  value: "static"  // non énumérable
-                   // non configurable
-                   // non accessible en écriture
-                   // par défaut
+  value: "static", // non énumérable
+  // non configurable
+  // non accessible en écriture
+  // par défaut
 });
 
 // en étant explicite
@@ -81,20 +81,20 @@ Object.defineProperty(obj, "clé", {
   enumerable: false,
   configurable: false,
   writable: false,
-  value: "static"
+  value: "static",
 });
 
 // en recyclant un objet
 function avecValeur(valeur) {
-  var d = avecValeur.d || (
-    avecValeur.d = {
+  var d =
+    avecValeur.d ||
+    (avecValeur.d = {
       enumerable: false,
       writable: false,
       configurable: false,
-      value: null
-    }
-  );
-  if(d.value !== valeur){
+      value: null,
+    });
+  if (d.value !== valeur) {
     d.value = valeur;
   }
   return d;
@@ -106,7 +106,7 @@ Object.defineProperty(obj, "clé", avecValeur("static"));
 // on peut empêcher que du code ajoute des
 // propriétés (valeur, get, set, enumerable,
 // writable, configurable) au prototype d'Object
-(Object.freeze||Object)(Object.prototype);
+(Object.freeze || Object)(Object.prototype);
 ```
 
 ## Exemples
@@ -122,21 +122,27 @@ var o = {}; // on crée un nouvel objet
 
 // Exemple d'une propriété ajoutée via defineProperty
 // avec un descripteur de données
-Object.defineProperty(o, "a", {value : 37,
-                               writable : true,
-                               enumerable : true,
-                               configurable : true});
+Object.defineProperty(o, "a", {
+  value: 37,
+  writable: true,
+  enumerable: true,
+  configurable: true,
+});
 // la propriété 'a' existe pour l'objet o et vaut 37
 
 // Exemple d'une propriété ajoutée via defineProperty
 // avec un descripteur d'accesseur
 var valeurB = 38;
-Object.defineProperty(o, "b", {get : function(){ return valeurB; },
-                               set : function(nouvelleValeur){
-                                           valeurB = nouvelleValeur;
-                                     },
-                               enumerable : true,
-                               configurable : true});
+Object.defineProperty(o, "b", {
+  get: function () {
+    return valeurB;
+  },
+  set: function (nouvelleValeur) {
+    valeurB = nouvelleValeur;
+  },
+  enumerable: true,
+  configurable: true,
+});
 o.b; // 38
 // la propriété 'b' existe pour l'objet o
 // et vaut 38
@@ -144,11 +150,12 @@ o.b; // 38
 // identique à valeurB, sauf si o.b est redéfini
 
 // On ne peut pas mélanger les deux :
-Object.defineProperty(o, "conflit", { value: 0x9f91102,
-                                       get: function() {
-                                            return 0xdeadbeef;
-                                       }
-                                     });
+Object.defineProperty(o, "conflit", {
+  value: 0x9f91102,
+  get: function () {
+    return 0xdeadbeef;
+  },
+});
 // une exception TypeError sera lancée : value n'apparaît
 // que dans les descripteurs de données
 // get n'apparait que dans les descripteurs d'accesseur
@@ -169,29 +176,28 @@ Lorsque l'attribut `writable` vaut `false` pour la propriété, cette dernière 
 ```js
 var o = {}; // On crée un nouvel objet
 
-Object.defineProperty(o, "a", { value : 37,
-                                writable : false });
+Object.defineProperty(o, "a", { value: 37, writable: false });
 
 console.log(o.a); // inscrit 37 dans les journaux (logs)
 o.a = 25; // Aucune exception n'est lancée (on aurait une
-          // exception en mode strict, y compris si la
-          // valeur souhaitée avait été la même)
+// exception en mode strict, y compris si la
+// valeur souhaitée avait été la même)
 console.log(o.a); // inscrit toujours 37.
-                  //L'affectation n'a pas fonctionné.
+//L'affectation n'a pas fonctionné.
 ```
 
 ```js
 // En mode strict
-(function() {
-  'use strict';
+(function () {
+  "use strict";
   var o = {};
-  Object.defineProperty(o, 'b', {
+  Object.defineProperty(o, "b", {
     value: 2,
-    writable: false
+    writable: false,
   });
   o.b = 3; // déclenche une TypeError: "b" est en lecture seule
   return o.b; // renvoie 2 sans la ligne précédente
-}());
+})();
 ```
 
 Comme on l'a vu dans l'exemple, essayer de modifier une propriété non accessible en écriture ne la modifie pas. Cela ne rend pas d'erreur non plus (en mode non-strict).
@@ -202,27 +208,27 @@ L'attribut de propriété `enumerable` permet de définir si la propriété est 
 
 ```js
 var o = {};
-Object.defineProperty(o, 'a', {
+Object.defineProperty(o, "a", {
   value: 1,
-  enumerable: true
+  enumerable: true,
 });
-Object.defineProperty(o, 'b', {
+Object.defineProperty(o, "b", {
   value: 2,
-  enumerable: false
+  enumerable: false,
 });
-Object.defineProperty(o, 'c', {
-  value: 3
+Object.defineProperty(o, "c", {
+  value: 3,
 }); // enumerable vaut false par défaut
 o.d = 4; // enumerable vaut true par défaut
-         // lorsqu'on crée une propriété
-         // en la définissant
-Object.defineProperty(o, Symbol.for('e'), {
+// lorsqu'on crée une propriété
+// en la définissant
+Object.defineProperty(o, Symbol.for("e"), {
   value: 5,
-  enumerable: true
+  enumerable: true,
 });
-Object.defineProperty(o, Symbol.for('f'), {
+Object.defineProperty(o, Symbol.for("f"), {
   value: 6,
-  enumerable: false
+  enumerable: false,
 });
 
 for (var i in o) {
@@ -232,20 +238,20 @@ for (var i in o) {
 
 Object.keys(o); // ['a', 'd']
 
-o.propertyIsEnumerable('a'); // true
-o.propertyIsEnumerable('b'); // false
-o.propertyIsEnumerable('c'); // false
-o.propertyIsEnumerable('d'); // true
-o.propertyIsEnumerable(Symbol.for('e')); // true
-o.propertyIsEnumerable(Symbol.for('f')); // false
+o.propertyIsEnumerable("a"); // true
+o.propertyIsEnumerable("b"); // false
+o.propertyIsEnumerable("c"); // false
+o.propertyIsEnumerable("d"); // true
+o.propertyIsEnumerable(Symbol.for("e")); // true
+o.propertyIsEnumerable(Symbol.for("f")); // false
 
-var p = { ...o }
-p.a // 1
-p.b // undefined
-p.c // undefined
-p.d // 4
-p[Symbol.for('e')] // 5
-p[Symbol.for('f')] // undefined
+var p = { ...o };
+p.a; // 1
+p.b; // undefined
+p.c; // undefined
+p.d; // 4
+p[Symbol.for("e")]; // 5
+p[Symbol.for("f")]; // undefined
 ```
 
 #### Attribut `configurable`
@@ -254,23 +260,31 @@ L'attribut `configurable` permet de contrôler si la propriété peut être supp
 
 ```js
 var o = {};
-Object.defineProperty(o, "a", { get : function(){return 1;},
-                                configurable : false } );
+Object.defineProperty(o, "a", {
+  get: function () {
+    return 1;
+  },
+  configurable: false,
+});
 
-Object.defineProperty(o, "a", {configurable : true});
+Object.defineProperty(o, "a", { configurable: true });
 // renvoie une TypeError
 
-Object.defineProperty(o, "a", {enumerable : true});
+Object.defineProperty(o, "a", { enumerable: true });
 // renvoie une TypeError
 
-Object.defineProperty(o, "a", {set : function(){}});
+Object.defineProperty(o, "a", { set: function () {} });
 // renvoie une TypeError (set était non défini avant)
 
-Object.defineProperty(o, "a", {get : function(){return 1;}});
+Object.defineProperty(o, "a", {
+  get: function () {
+    return 1;
+  },
+});
 // renvoie une TypeError
 // (bien que le nouveau get soit identique au précédent)
 
-Object.defineProperty(o, "a", {value : 12});
+Object.defineProperty(o, "a", { value: 12 });
 // renvoie une TypeError
 
 console.log(o.a); // log 1
@@ -289,19 +303,22 @@ var o = {};
 
 o.a = 1;
 // est équivalent à :
-Object.defineProperty(o, "a", {value : 1,
-                               writable : true,
-                               configurable : true,
-                               enumerable : true});
-
+Object.defineProperty(o, "a", {
+  value: 1,
+  writable: true,
+  configurable: true,
+  enumerable: true,
+});
 
 // D'un autre côté,
-Object.defineProperty(o, "a", {value : 1});
+Object.defineProperty(o, "a", { value: 1 });
 // sera équivalent à :
-Object.defineProperty(o, "a", {value : 1,
-                               writable : false,
-                               configurable : false,
-                               enumerable : false});
+Object.defineProperty(o, "a", {
+  value: 1,
+  writable: false,
+  configurable: false,
+  enumerable: false,
+});
 ```
 
 ### Accesseurs et mutateurs adaptés
@@ -313,18 +330,20 @@ function Archiviste() {
   var température = null;
   var archive = [];
 
-  Object.defineProperty(this, "température",{
-    get: function() {
+  Object.defineProperty(this, "température", {
+    get: function () {
       console.log("accès !");
       return température;
     },
-    set: function(value) {
+    set: function (value) {
       température = value;
-      archive.push({val: température});
-    }
+      archive.push({ val: température });
+    },
   });
 
-  this.getArchive = function() {return archive;};
+  this.getArchive = function () {
+    return archive;
+  };
 }
 
 var arc = new Archiviste();
