@@ -34,10 +34,9 @@ var g = gen(); // "Generator { }"
 ### Un itérateur infini
 
 ```js
-function* idMaker(){
-    var index = 0;
-    while(true)
-        yield index++;
+function* idMaker() {
+  var index = 0;
+  while (true) yield index++;
 }
 
 var gen = idMaker(); // "Generator { }"
@@ -72,11 +71,11 @@ function* fibonacci() {
 }
 
 var it = fibonacci();
-console.log(it);          // "Generator {  }"
-console.log(it.next());   // 1
+console.log(it); // "Generator {  }"
+console.log(it.next()); // 1
 console.log(it.send(10)); // 20
-console.log(it.close());  // undefined
-console.log(it.next());   // throws StopIteration (le générateur est clôturé)
+console.log(it.close()); // undefined
+console.log(it.next()); // throws StopIteration (le générateur est clôturé)
 ```
 
 ## Spécifications

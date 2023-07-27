@@ -13,7 +13,7 @@ La méthode **`Intl.Collator.prototype.compare()`** compare deux chaînes de car
 ## Syntaxe
 
 ```js
-collator.compare(chaine1, chaine2)
+collator.compare(chaine1, chaine2);
 ```
 
 ### Paramètres
@@ -45,10 +45,13 @@ Ici, on utilise la fonction de l'accesseur `compare` pour trouver les chaînes �
 
 ```js
 var a = ["Congrès", "congres", "Assemblée", "poisson"];
-var collator = new Intl.Collator("fr", {usage: "search", sensitivity: "base"});
+var collator = new Intl.Collator("fr", {
+  usage: "search",
+  sensitivity: "base",
+});
 var s = "congres";
 var matches = a.filter(function (v) {
-    return collator.compare(v, s) === 0;
+  return collator.compare(v, s) === 0;
 });
 console.log(matches.join(", "));
 // → "Congrès, congres"

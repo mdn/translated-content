@@ -15,7 +15,7 @@ La fonction **`eval()`** permet d'évaluer du code JavaScript représenté sous 
 ## Syntaxe
 
 ```js
-eval(str)
+eval(str);
 ```
 
 ### Paramètres
@@ -39,7 +39,7 @@ Si l'argument passé à `eval()` n'est pas une chaîne de caractères, `eval()` 
 
 ```js
 eval(new String("2 + 2")); // renvoie un objet String contenant "2 + 2"
-eval("2 + 2");             // renvoie 4
+eval("2 + 2"); // renvoie 4
 ```
 
 Ce comportement peut être résolu de façon générique en utilisant la méthode `toString()`.
@@ -53,11 +53,12 @@ Si la fonction `eval` est utilisée de manière indirecte, en l'invoquant par un
 
 ```js
 function test() {
-  var x = 2, y = 4;
-  console.log(eval("x + y"));  // Appel direct, portée locale, résultat de 6
+  var x = 2,
+    y = 4;
+  console.log(eval("x + y")); // Appel direct, portée locale, résultat de 6
   var geval = eval;
   console.log(geval("x + y")); // Appel indirect, portée globale, lance une exception ReferenceError car `x` n'est pas défini
-  (0, eval)('x + y'); // un autre exemple d'appel indirect.
+  (0, eval)("x + y"); // un autre exemple d'appel indirect.
 }
 ```
 
@@ -74,23 +75,19 @@ De plus, les moteurs JavaScript modernes convertissent le code JavaScript en cod
 Avec `eval()` :
 
 ```js
-function looseJsonParse(obj){
-    return eval("(" + obj + ")");
+function looseJsonParse(obj) {
+  return eval("(" + obj + ")");
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 Avec `Function` :
 
 ```js
-function looseJsonParse(obj){
-    return Function('"use strict";return (' + obj + ')')();
+function looseJsonParse(obj) {
+  return Function('"use strict";return (' + obj + ")")();
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 Dans le premier cas, l'évaluation de `c: new Date()` sera beaucoup plus lente car `Date` peut faire référence à une variable déclarée avant. Dans le second cas, la fonction est évaluée dans la portée globale et le moteur peut donc utiliser {{jsxref("Date")}} directement.
@@ -98,15 +95,21 @@ Dans le premier cas, l'évaluation de `c: new Date()` sera beaucoup plus lente c
 Autrement dit, dans le premier cas, on aurait pu avoir un code comme :
 
 ```js
-function Date(n){
-    return ["Monday","Tuesday","Wednesday","Thursaday","Friday","Saturday","Sunday"][n%7 || 0];
+function Date(n) {
+  return [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursaday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ][n % 7 || 0];
 }
-function looseJsonParse(obj){
-    return eval("(" + obj + ")");
+function looseJsonParse(obj) {
+  return eval("(" + obj + ")");
 }
-console.log(looseJsonParse(
-   "{a:(4-1), b:function(){}, c:new Date()}"
-))
+console.log(looseJsonParse("{a:(4-1), b:function(){}, c:new Date()}"));
 ```
 
 Auquel cas, le navigateur doit effectuer une recherche coûteuse afin de vérifier s'il y a des variables locales `Date`.
@@ -114,17 +117,21 @@ Auquel cas, le navigateur doit effectuer une recherche coûteuse afin de vérifi
 Pour obtenir un résultat identique, on peut tout à fait se passer d'`eval()` :
 
 ```js
-function Date(n){
-    return ["Monday","Tuesday","Wednesday","Thursaday","Friday","Saturday","Sunday"][n%7 || 0];
+function Date(n) {
+  return [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursaday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ][n % 7 || 0];
 }
-function runCodeWithDateFunction(obj){
-    return Function('"use strict";return (' + obj + ')')()(
-        Date
-    );
+function runCodeWithDateFunction(obj) {
+  return Function('"use strict";return (' + obj + ")")()(Date);
 }
-console.log(runCodeWithDateFunction(
-   "function(Date){ return Date(5) }"
-))
+console.log(runCodeWithDateFunction("function(Date){ return Date(5) }"));
 ```
 
 1\. Le code passé à `runCodeWithDateFunction` peut être minifié.
@@ -143,16 +150,16 @@ Enfin, pour la plupart des cas, on doit pouvoir éviter de passer par
 
 ```js
 var obj = { a: 20, b: 30 };
-var nomPropriété = getNomProp();  //une méthode qui renvoie "a" ou "b"
+var nomPropriété = getNomProp(); //une méthode qui renvoie "a" ou "b"
 
-eval( "var résultat = obj." + nomPropriété );
+eval("var résultat = obj." + nomPropriété);
 ```
 
 Cependant, `eval()` n'est pas du tout nécessaire. Il est beaucoup plus simple, plus sécurisé, plus rapide, d'utiliser les [accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres) :
 
 ```js
 var obj = { a: 20, b: 30 };
-var nomPropriété = getNomProp();  // une méthode qui renvoie  "a" or "b"
+var nomPropriété = getNomProp(); // une méthode qui renvoie  "a" or "b"
 var résultat = obj[nomPropriété]; //  obj[ "a" ] correspond à obj.a
 ```
 
@@ -165,7 +172,7 @@ Les fonctions JavaScript sont des [citoyens de premier rang du langage](https://
 setTimeout(function() { ... }, 1000);
 
 // au lieu de elt.setAttribute("onclick", "...") on utilisera :
-elt.addEventListener("click", function() { ... } , false); 
+elt.addEventListener("click", function() { ... } , false);
 ```
 
 [Les fermetures (_closures_)](/fr/docs/Web/JavaScript/Guide/Closures) sont utiles lorsqu'on souhaite obtenir des fonctions paramétrées sans avoir à concaténer des chaînes de caractères.
@@ -195,7 +202,7 @@ var x = 2;
 var y = 39;
 var z = "42";
 eval("x + y + 1"); // renvoie 42
-eval(z);           // renvoie 42
+eval(z); // renvoie 42
 ```
 
 ### Utiliser `eval()` pour une chaîne d'instructions
@@ -205,7 +212,7 @@ Dans l'exemple qui suit, `eval()` est utilisée pour évaluer la chaîne de cara
 ```js
 var x = 5;
 var str = "if (x == 5) {console.log('z vaut 42'); z = 42;} else z = 0; ";
-console.log("z vaut "+eval(str));
+console.log("z vaut " + eval(str));
 ```
 
 ### Le résultat d'`eval()` est celui de la dernière expression
@@ -215,12 +222,12 @@ console.log("z vaut "+eval(str));
 ```js
 var str = "if ( a ) { 1+1; } else { 1+2; }";
 var a = true;
-var b = eval(str);  // renvoie 2
+var b = eval(str); // renvoie 2
 
 console.log("b vaut : " + b);
 
 a = false;
-b = eval(str);      // renvoie 3
+b = eval(str); // renvoie 3
 
 console.log("b vaut : " + b);
 ```
@@ -230,10 +237,10 @@ console.log("b vaut : " + b);
 Pour qu'une fonction soit restituée lors de l'évaluation, il est nécessaire d'encadrer l'expression contenue dans la chaîne de caractères avec des parenthèses :
 
 ```js
-var fctStr1 = "function a() {}"
-var fctStr2 = "(function a() {})"
-var fct1 = eval(fctStr1)  // renvoie undefined
-var fct2 = eval(fctStr2)  // renvoie une function
+var fctStr1 = "function a() {}";
+var fctStr2 = "(function a() {})";
+var fct1 = eval(fctStr1); // renvoie undefined
+var fct2 = eval(fctStr2); // renvoie une function
 ```
 
 ## Spécifications

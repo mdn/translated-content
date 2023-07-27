@@ -11,7 +11,7 @@ La méthode **`next()`** renvoie un objet possédant deux propriétés `done` et
 ## Syntaxe
 
 ```js
-gen.next(valeur)
+gen.next(valeur);
 ```
 
 ### Paramètres
@@ -44,10 +44,10 @@ function* gen() {
 }
 
 var g = gen(); // "Generator { }"
-g.next();      // "Object { value: 1, done: false }"
-g.next();      // "Object { value: 2, done: false }"
-g.next();      // "Object { value: 3, done: false }"
-g.next();      // "Object { value: undefined, done: true }"
+g.next(); // "Object { value: 1, done: false }"
+g.next(); // "Object { value: 2, done: false }"
+g.next(); // "Object { value: 3, done: false }"
+g.next(); // "Object { value: undefined, done: true }"
 ```
 
 ### Envoyer des valeurs à un générateur
@@ -56,7 +56,7 @@ Ici, `next` est appelé avec une valeur. On notera ici que le premier appel n'af
 
 ```js
 function* gen() {
-  while(true) {
+  while (true) {
     var value = yield null;
     console.log(value);
   }

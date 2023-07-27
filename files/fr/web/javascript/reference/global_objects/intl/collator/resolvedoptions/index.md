@@ -13,7 +13,7 @@ La méthode **`Intl.Collator.prototype.resolvedOptions()`** renvoie un nouvel ob
 ## Syntaxe
 
 ```js
-collator.resolvedOptions()
+collator.resolvedOptions();
 ```
 
 ### Valeur de retour
@@ -36,15 +36,15 @@ L'objet renvoyé par cette méthode contient les propriétés suivantes :
 ## Exemples
 
 ```js
-var de = new Intl.Collator('de', { sensitivity: 'base' })
+var de = new Intl.Collator("de", { sensitivity: "base" });
 var usedOptions = de.resolvedOptions();
 
-usedOptions.locale;            // "de"
-usedOptions.usage;             // "sort"
-usedOptions.sensitivity;        // "base"
+usedOptions.locale; // "de"
+usedOptions.usage; // "sort"
+usedOptions.sensitivity; // "base"
 usedOptions.ignorePunctuation; // false
-usedOptions.collation;         // "default"
-usedOptions.numeric;           // false
+usedOptions.collation; // "default"
+usedOptions.numeric; // false
 ```
 
 ## Spécifications

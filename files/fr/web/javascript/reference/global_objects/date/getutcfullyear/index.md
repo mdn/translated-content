@@ -13,7 +13,7 @@ La méthode **`getUTCFullYear()`** renvoie l'année de la date renseignée, d'ap
 ## Syntaxe
 
 ```js
-dateObj.getUTCFullYear()
+dateObj.getUTCFullYear();
 ```
 
 ### Valeur de retour

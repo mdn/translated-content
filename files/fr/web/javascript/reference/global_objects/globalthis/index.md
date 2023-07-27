@@ -13,7 +13,7 @@ La propriété globale **`globalThis`** renvoie l'objet global de plus haut nive
 ## Syntaxe
 
 ```js
-globalThis
+globalThis;
 ```
 
 ## Description
@@ -39,15 +39,21 @@ Avant l'introduction de `globalThis`, la seule façon qui permettait d'obtenir l
 
 ```js
 var getGlobal = function () {
-  if (typeof self !== 'undefined') { return self; }
-  if (typeof window !== 'undefined') { return window; }
-  if (typeof global !== 'undefined') { return global; }
+  if (typeof self !== "undefined") {
+    return self;
+  }
+  if (typeof window !== "undefined") {
+    return window;
+  }
+  if (typeof global !== "undefined") {
+    return global;
+  }
   throw new Error("impossible de trouver l'objet global");
 };
 
 var globals = getGlobal();
 
-if (typeof globals.setTimeout !== 'function') {
+if (typeof globals.setTimeout !== "function") {
   // pas de setTimeout pour cet environnement
 }
 ```
@@ -55,7 +61,7 @@ if (typeof globals.setTimeout !== 'function') {
 Avec `globalThis`, il n'est plus nécessaire de parcourir les différents mots-clés des différents environnements :
 
 ```js
-if (typeof globalThis.setTimeout !== 'function') {
+if (typeof globalThis.setTimeout !== "function") {
   // pas de setTimeout pour cet environnement
 }
 ```

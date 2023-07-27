@@ -15,16 +15,16 @@ La propriété **`lineNumber`** contient le numéro de la ligne qui a déclench�
 ```js
 var e = new Error("Ne peut pas lire la donnée");
 throw e;
-console.log(e.lineNumber) // 2
+console.log(e.lineNumber); // 2
 ```
 
 ### Alternative en utilisant l'événement `error`
 
 ```js
 window.addEventListener("error", function (e) {
- console.log(e.lineNumber); //5
+  console.log(e.lineNumber); //5
 });
-var e = new Error('Ne peut pas lire la donnée');
+var e = new Error("Ne peut pas lire la donnée");
 throw e;
 ```
 

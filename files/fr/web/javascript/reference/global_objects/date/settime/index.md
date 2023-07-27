@@ -13,7 +13,7 @@ La méthode **`setTime()`** met l'objet {{jsxref("Date")}} à jour par rapport a
 ## Syntaxe
 
 ```js
-dateObj.setTime(valeurTemps)
+dateObj.setTime(valeurTemps);
 ```
 
 ### Paramètres

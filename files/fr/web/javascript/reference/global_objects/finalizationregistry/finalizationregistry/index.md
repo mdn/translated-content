@@ -33,7 +33,7 @@ new FinalizationRegistry(function(valeurTenue) { ... })
 On crée le registre en fournissant la fonction de rappel&nbsp;:
 
 ```js
-const registre = new FinalizationRegistry(valeurTenue => {
+const registre = new FinalizationRegistry((valeurTenue) => {
   // ....
 });
 ```

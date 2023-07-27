@@ -19,7 +19,7 @@ dateObj.setMonth(valeurMois[, valeurJour])
 ### Versions antérieures à JavaScript 1.3
 
 ```js
-dateObj.setMonth(valeurMois)
+dateObj.setMonth(valeurMois);
 ```
 
 ### Paramètres

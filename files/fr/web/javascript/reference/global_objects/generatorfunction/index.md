@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 En JavaScript, chaque fonction génératrice est en réalité un objet `GeneratorFunction`. Il n'existe pas d'objet global avec le nom `GeneratorFunction`, mais il est possible de créer un constructeur `GeneratorFunction()` avec le code suivant&nbsp;:
 
 ```js
-const GeneratorFunction = Object.getPrototypeOf(function*(){}).constructor;
+const GeneratorFunction = Object.getPrototypeOf(function* () {}).constructor;
 ```
 
 ## Description
@@ -31,8 +31,8 @@ Invoquer un constructeur de fonction génératrice comme une fonction (sans util
 ### Créer un générateur en utilisant le constructeur `GeneratorFunction()`
 
 ```js
-const GeneratorFunction = Object.getPrototypeOf(function*(){}).constructor;
-const g = new GeneratorFunction('a', 'yield a * 2');
+const GeneratorFunction = Object.getPrototypeOf(function* () {}).constructor;
+const g = new GeneratorFunction("a", "yield a * 2");
 const iterator = g(10);
 console.log(iterator.next().value); // 20
 ```
