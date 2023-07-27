@@ -265,7 +265,7 @@ text-stroke: 4px navy;
 
 > **备注：** 为更深层次了解处理前缀属性，请参阅[跨浏览器测试](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing)模块的[处理常见的 HTML 和 CSS 问题——处理 CSS 前缀](/zh-CN/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#处理_css_前缀)。
 
-> **备注：** 请参阅 [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)、[Microsoft CSS 扩展](/zh-CN/docs/Web/CSS/Microsoft_Extensions)和 [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions) 以了解浏览器前缀 CSS 属性的列表。
+> **备注：** 请参阅 [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions) 和 [WebKit CSS 扩展](/zh-CN/docs/Web/CSS/WebKit_Extensions)，以了解浏览器前缀 CSS 属性的列表。
 
 ## z-index 属性与定位有什么关系？
 
