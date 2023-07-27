@@ -39,9 +39,7 @@ if (paragraphe.matches(":scope")) {
 ### HTML
 
 ```html
-<p id="para">
-  Voici un paragraphe, pas vraiment intéressant mais bon.
-</p>
+<p id="para">Voici un paragraphe, pas vraiment intéressant mais bon.</p>
 <p id="output"></p>
 ```
 

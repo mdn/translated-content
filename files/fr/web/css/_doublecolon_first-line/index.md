@@ -59,8 +59,8 @@ p::first-line {
 
 ```html
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-  sed do eiusmod tempor incididunt ut labore.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
 </p>
 ```
 
@@ -84,8 +84,8 @@ p::first-line {
 
 ```html
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-  sed do eiusmod tempor incididunt ut labore.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
 </p>
 ```
 
@@ -109,8 +109,8 @@ p::first-line {
 
 ```html
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-  sed do eiusmod tempor incididunt ut labore.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore.
 </p>
 ```
 

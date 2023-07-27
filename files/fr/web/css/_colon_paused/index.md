@@ -12,7 +12,6 @@ Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs
 
 ```css
 :paused {
-
 }
 ```
 

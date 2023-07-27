@@ -62,15 +62,11 @@ body :not(.classy, p) {
 ### HTML
 
 ```html
-<p>
-  Un peu de texte.
-</p>
-<p class="classy">
-  Encore du texte.
-</p>
+<p>Un peu de texte.</p>
+<p class="classy">Encore du texte.</p>
 <span>
   Et toujours du texte.
-<span>
+</span>
 ```
 
 ### Résultat

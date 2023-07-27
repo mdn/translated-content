@@ -21,7 +21,7 @@ input::-webkit-outer-spin-button {
 ### HTML
 
 ```html
-<input type="number">
+<input type="number" />
 ```
 
 ### Résultat

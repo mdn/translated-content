@@ -21,13 +21,14 @@ selecteur::-webkit-file-upload-button
 ### CSS
 
 ```css
-input, label {
+input,
+label {
   display: block;
 }
 
-input[type=file]::-webkit-file-upload-button {
+input[type="file"]::-webkit-file-upload-button {
   border: 1px solid grey;
-  background: #FFFAAA;
+  background: #fffaaa;
 }
 ```
 
@@ -35,8 +36,8 @@ input[type=file]::-webkit-file-upload-button {
 
 ```html
 <form>
-  <label for="fileUpload">Uploader un fichier</label><br>
-  <input type="file" id="fileUpload">
+  <label for="fileUpload">Uploader un fichier</label><br />
+  <input type="file" id="fileUpload" />
 </form>
 ```
 
