@@ -42,7 +42,6 @@ build/
 /files/fr/web/javascript/**/*.md
 
 # ja
-/files/ja/learn/css/**/*.md
 /files/ja/learn/javascript/**/*.md
 /files/ja/mozilla/**/*.md
 /files/ja/mdn/**/*.md

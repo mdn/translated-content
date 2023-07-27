@@ -48,8 +48,13 @@ slug: Learn/CSS/Building_blocks/Organizing
 CSS をフォーマットする方法には、いくつかの方法を見かけるでしょう。開発者によっては、次のようにすべてのルールを 1 行に配置しています。
 
 ```css
-.box { background-color: #567895; }
-h2 { background-color: black; color: white; }
+.box {
+  background-color: #567895;
+}
+h2 {
+  background-color: black;
+  color: white;
+}
 ```
 
 また、すべてを新しい行に分割したがる開発者もいます。
@@ -121,13 +126,24 @@ CSS に書かれていることの多くは自明なことなので、いちい�
 ```css
 /* || 一般的なスタイル */
 
-body { /* … */ }
+body {
+  /* … */
+}
 
-h1, h2, h3, h4 { /* … */ }
+h1,
+h2,
+h3,
+h4 {
+  /* … */
+}
 
-ul { /* … */ }
+ul {
+  /* … */
+}
 
-blockquote { /* … */ }
+blockquote {
+  /* … */
+}
 ```
 
 この部分の後で、いくつかのユーティリティクラスを定義することができます。例えば、フレックスアイテムとして表示するリストや他の方法で表示するリストの既定リストスタイルを削除するクラスなどです。多くの異なる要素に適用することが分かっているいくつかのスタイル指定がある場合、この部分に記述することができます。
@@ -149,9 +165,13 @@ blockquote { /* … */ }
 ```css
 /* || サイト全体 */
 
-.main-nav { /* … */ }
+.main-nav {
+  /* … */
+}
 
-.logo { /* … */ }
+.logo {
+  /* … */
+}
 ```
 
 最後に、特定のものを使用するための CSS を、それらが使用されるコンテキスト、ページ、あるいはコンポーネントごとに分けて記載します。
@@ -159,9 +179,13 @@ blockquote { /* … */ }
 ```css
 /* || 店のページ */
 
-.product-listing { /* … */ }
+.product-listing {
+  /* … */
+}
 
-.product-box { /* … */ }
+.product-box {
+  /* … */
+}
 ```
 
 このように物事を順番に並べることで、少なくともスタイルシートのどの部分に変更したいものがあるのかを知ることができます。
@@ -221,7 +245,7 @@ CSS を記述するための独自のルールを考え出す代わりに、コ�
 }
 
 .comment .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .list-item {
@@ -231,7 +255,7 @@ CSS を記述するための独自のルールを考え出す代わりに、コ�
 }
 
 .list-item .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 ```
 
@@ -244,7 +268,7 @@ OOCSS では、`media` と呼ばれる 1 つのパターンを作成して、両
 }
 
 .media .content {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .comment img {
@@ -285,9 +309,7 @@ BEM とは、 Block Element Modifier の略です。 BEM では、ブロック�
 ```html
 <form class="form form--theme-xmas form--simple">
   <input class="form__input" type="text" />
-  <input
-    class="form__submit form__submit--disabled"
-    type="submit" />
+  <input class="form__submit form__submit--disabled" type="submit" />
 </form>
 ```
 
