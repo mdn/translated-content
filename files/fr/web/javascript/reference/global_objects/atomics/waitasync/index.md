@@ -15,8 +15,8 @@ La méthode statique **`Atomics.waitAsync()`** permet d'attendre de façon async
 ## Syntaxe
 
 ```js
-Atomics.waitAsync(typedArray, index, value)
-Atomics.waitAsync(typedArray, index, value, timeout)
+Atomics.waitAsync(typedArray, index, value);
+Atomics.waitAsync(typedArray, index, value, timeout);
 ```
 
 ### Paramètres
@@ -36,7 +36,7 @@ Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) d
 
 ```js
 { async: false, value: 'ok' }
-{ async: false, value: 'not-equal' } 
+{ async: false, value: 'not-equal' }
 { async: false, value: 'timed-out' }
 { async: true, value: promise }
 ```

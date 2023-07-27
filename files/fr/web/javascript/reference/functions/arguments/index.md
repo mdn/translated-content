@@ -19,7 +19,7 @@ L'objet **`arguments`** est un objet, **semblable** à un tableau, correspondant
 ## Syntaxe
 
 ```js
-arguments
+arguments;
 ```
 
 ## Description
@@ -29,15 +29,15 @@ L'objet `arguments` est une variable locale (intrinsèque et inhérente aux fonc
 Vous pouvez accéder aux arguments d'une fonction à l'intérieur de celle-ci en utilisant l'objet `arguments`. Cet objet contient une entrée pour chaque argument passé à la fonction, l'indice de la première entrée commençant à 0. Par exemple, si une fonction est appelée avec trois arguments, on accède à ceux-ci comme suit&nbsp;:
 
 ```js
-arguments[0]
-arguments[1]
-arguments[2]
+arguments[0];
+arguments[1];
+arguments[2];
 ```
 
 Les arguments peuvent aussi être modifiés&nbsp;:
 
 ```js
-arguments[1] = 'nouvelle valeur';
+arguments[1] = "nouvelle valeur";
 ```
 
 ### Type de l'objet `arguments` et liens avec `Array`
@@ -64,7 +64,8 @@ var args = [...arguments];
 > **Attention :** Il est déconseillé d'utiliser `slice` sur les arguments car cela peut empêcher certaines optimisations des moteurs JavaScript. Pour ce scénario, on peut par exemple construire un nouveau tableau en parcourant l'objet arguments (à ce sujet, voir [cette page](https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments) sur les contraintes d'optimisations liées à V8). Pour cet exemple, on pourra utiliser `Array.apply` :
 >
 > ```js
-> var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments));
+> var args =
+>   arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments);
 > ```
 
 L'objet `arguments` est disponible uniquement dans le corps d'une fonction. Tenter d'accéder à l'objet `arguments` en dehors de la déclaration d'une fonction renvoie une erreur.
@@ -160,7 +161,7 @@ toto(1, 2, 3); // [1, 2, 3]
 Toutefois, pour les fonctions utilisées en mode non-strict, un **objet `arguments`** n'est fourni à l'intérieur de la fonction uniquement si celle-ci n'utilise pas de [paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste), pas de [paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments) ou de [paramètre décomposé](/fr/docs/Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition). Par exemple, dans la fonction suivante, qui utilise un paramètre par défaut, ce sera 10 qui sera renvoyé (et non 100) :
 
 ```js
-function truc(a=1) {
+function truc(a = 1) {
   arguments[0] = 100;
   return a;
 }
@@ -183,7 +184,7 @@ En fait, lorsqu'il n'y a aucun paramètre du reste, paramètre par défaut ou au
 function func(a, b) {
   arguments[0] = 99;
   arguments[1] = 99;
-  console.log(a + " " +b);
+  console.log(a + " " + b);
 }
 
 func(1, 2); // 99 99

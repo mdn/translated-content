@@ -13,7 +13,7 @@ La méthode statique **`Atomics.or()`** calcule le résultat d'un OU binaire ent
 ## Syntaxe
 
 ```js
-Atomics.or(typedArray, index, value)
+Atomics.or(typedArray, index, value);
 ```
 
 ### Paramètres
@@ -64,7 +64,7 @@ var ta = new Uint8Array(sab);
 ta[0] = 2;
 
 Atomics.or(ta, 0, 1); // renvoie 2, l'ancienne valeur
-Atomics.load(ta, 0);  // 3
+Atomics.load(ta, 0); // 3
 ```
 
 ## Spécifications

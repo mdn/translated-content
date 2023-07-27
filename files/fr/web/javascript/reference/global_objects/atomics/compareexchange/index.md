@@ -13,7 +13,7 @@ La méthode statique **`Atomics.compareExchange()`** échange une valeur d'un ta
 ## Syntaxe
 
 ```js
-Atomics.compareExchange(typedArray, index, valeurAttendue, valeurRemplacement)
+Atomics.compareExchange(typedArray, index, valeurAttendue, valeurRemplacement);
 ```
 
 ### Paramètres
@@ -45,7 +45,7 @@ var ta = new Uint8Array(sab);
 ta[0] = 7;
 
 Atomics.compareExchange(ta, 0, 7, 12); // renvoie 7, l'ancienne valeur
-Atomics.load(ta, 0);                   // 12
+Atomics.load(ta, 0); // 12
 ```
 
 ## Spécifications

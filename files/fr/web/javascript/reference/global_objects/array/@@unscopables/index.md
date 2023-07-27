@@ -11,7 +11,7 @@ La propriété symbol **`@@unscopable`** contient les noms des propriétés qui 
 ## Syntaxe
 
 ```js
-arr[Symbol.unscopables]
+arr[Symbol.unscopables];
 ```
 
 ## Description
@@ -29,7 +29,7 @@ Le code qui suit fonctionne bien pour ES5 et les versions antérieures. En revan
 ```js
 var keys = [];
 
-with(Array.prototype) {
+with (Array.prototype) {
   keys.push("something");
 }
 

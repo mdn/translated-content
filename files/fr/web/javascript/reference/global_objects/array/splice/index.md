@@ -41,7 +41,7 @@ Si vous spécifiez un nombre différent d'éléments à insérer et d'éléments
 Le script suivant illustre l'utilisation de `splice` :
 
 ```js
-var mesPoissons  = ["scalaire", "clown", "mandarin", "chirurgien"];
+var mesPoissons = ["scalaire", "clown", "mandarin", "chirurgien"];
 
 // supprime 0 élément à partir de l'index 2, et insère "tambour"
 var enleves = mesPoissons.splice(2, 0, "tambour");

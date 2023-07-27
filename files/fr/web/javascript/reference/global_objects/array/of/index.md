@@ -11,11 +11,11 @@ La methode **`Array.of()`** permet de créer une nouvelle instance d'objet `Arra
 La différence entre **`Array.of()`** et le constructeur **`Array`** se situe dans la gestion de d'arguments entiers : **`Array.of(7)`** crée un tableau avec un seul élément, 7, tandis que **`Array(7)`** produit un tableau avec 7 éléments vides (à ne pas confondre avec des éléments qui auraient explicitement la valeur [`undefined`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/undefined)).
 
 ```js
-Array.of(7);       // [7]
+Array.of(7); // [7]
 Array.of(1, 2, 3); // [1, 2, 3]
 
-Array(7);          // un tableau avec 7 emplacements vides
-Array(1, 2, 3);    // [1, 2, 3]
+Array(7); // un tableau avec 7 emplacements vides
+Array(1, 2, 3); // [1, 2, 3]
 ```
 
 ## Syntaxe
@@ -38,18 +38,18 @@ Une nouvelle instance de {{jsxref("Array")}}.
 Cette fonction fait partie du standard ECMAScript 2015. Pour plus d'informations, voir les pages sur [la proposition pour `Array.of` et `Array.from`](https://gist.github.com/rwaldron/1074126) ainsi que la page sur le [fragment d'émulation pour `Array.of`](https://gist.github.com/rwaldron/3186576).
 
 ```js
-Array.of(7);       // [7]
+Array.of(7); // [7]
 Array.of(1, 2, 3); // [1, 2, 3]
 
-Array(7);          // [ , , , , , , ]
-Array(1, 2, 3);    // [1, 2, 3]
+Array(7); // [ , , , , , , ]
+Array(1, 2, 3); // [1, 2, 3]
 ```
 
 ## Exemples
 
 ```js
-Array.of(1);         // [1]
-Array.of(1, 2, 3);   // [1, 2, 3]
+Array.of(1); // [1]
+Array.of(1, 2, 3); // [1, 2, 3]
 Array.of(undefined); // [undefined]
 ```
 
@@ -59,7 +59,7 @@ Exécuter ce code avant tout autre code permettra de créer la méthode **`Array
 
 ```js
 if (!Array.of) {
-  Array.of = function() {
+  Array.of = function () {
     return Array.prototype.slice.call(arguments);
   };
 }

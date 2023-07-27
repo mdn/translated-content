@@ -13,9 +13,9 @@ Le constructeur **`DataView()`** permet de construire des objets [`DataView`](/f
 ## Syntaxe
 
 ```js
-new DataView(buffer)
-new DataView(buffer, decalageOctets)
-new DataView(buffer, decalageOctets, longueurOctets)
+new DataView(buffer);
+new DataView(buffer, decalageOctets);
+new DataView(buffer, decalageOctets, longueurOctets);
 ```
 
 ### Paramètres

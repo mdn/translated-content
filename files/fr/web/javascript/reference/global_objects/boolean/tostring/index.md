@@ -13,7 +13,7 @@ La méthode **`toString()`** renvoie une chaine de caractères correspondant à 
 ## Syntaxe
 
 ```js
-bool.toString()
+bool.toString();
 ```
 
 ### Valeur de retour

@@ -119,7 +119,9 @@ const semblableTableau = {
   2: 4,
 };
 console.log(
-  Array.prototype.findLastIndex.call(semblableTableau, (x) => Number.isInteger(x)),
+  Array.prototype.findLastIndex.call(semblableTableau, (x) =>
+    Number.isInteger(x),
+  ),
 ); // 2
 ```
 

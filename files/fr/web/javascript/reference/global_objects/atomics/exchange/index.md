@@ -13,7 +13,7 @@ La méthode statique **`Atomics.exchange()`** permet d'enregistrer une valeur à
 ## Syntaxe
 
 ```js
-Atomics.exchange(typedArray, index, valeur)
+Atomics.exchange(typedArray, index, valeur);
 ```
 
 ### Paramètres
@@ -41,8 +41,8 @@ L'ancienne valeur qui était contenue à (`typedArray[index]`).
 var sab = new SharedArrayBuffer(1024);
 var ta = new Uint8Array(sab);
 
-Atomics.exchange(ta, 0, 12);  // renvoie 0, l'ancienne valeur
-Atomics.load(ta, 0);          // 12
+Atomics.exchange(ta, 0, 12); // renvoie 0, l'ancienne valeur
+Atomics.load(ta, 0); // 12
 ```
 
 ## Spécifications

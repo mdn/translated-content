@@ -47,11 +47,11 @@ Dans l'exemple qui suit, on définit une pseudo-propriété `courant` pour un ob
 
 ```js
 var o = {
-  set courant (str) {
+  set courant(str) {
     this.log[this.log.length] = str;
   },
-  log: []
-}
+  log: [],
+};
 ```
 
 On notera que `courant` n'est pas défini. Toute tentative pour y accéder renverra `undefined`.
@@ -69,12 +69,16 @@ delete o.courant;
 On peut également ajouter un mutateur sur un objet d'ores et déjà créé. Pour cela, on utilisera la méthode {{jsxref("Object.defineProperty()")}}.
 
 ```js
-var o = { a:0 };
+var o = { a: 0 };
 
-Object.defineProperty(o, "b", { set: function (x) { this.a = x / 2; } });
+Object.defineProperty(o, "b", {
+  set: function (x) {
+    this.a = x / 2;
+  },
+});
 
 o.b = 10; // On utilise le setter, qui affecte 10 / 2 (5) à 'a'
-console.log(o.a) // 5
+console.log(o.a); // 5
 ```
 
 ### Utiliser un nom de propriété calculé
@@ -84,11 +88,13 @@ var expr = "toto";
 
 var obj = {
   bidule: "truc",
-  set [expr](v) { this.bidule = v; }
+  set [expr](v) {
+    this.bidule = v;
+  },
 };
 
 console.log(obj.bidule); // "truc"
-obj.toto = "bidule";      // le mutateur est utilisé
+obj.toto = "bidule"; // le mutateur est utilisé
 console.log(obj.bidule); // "bidule"
 ```
 

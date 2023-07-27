@@ -53,20 +53,25 @@ function f() {
 f(1, 2, 3);
 // [1, 2, 3]
 
-
 // Ça fonctionne avec tous les objets itérables...
 // Set
 const s = new Set(["toto", "truc", "truc", "bidule"]);
 Array.from(s);
 // ["toto", "truc", "bidule"]
 
-
 // Map
-const m = new Map([[1, 2], [2, 4], [4, 8]]);
+const m = new Map([
+  [1, 2],
+  [2, 4],
+  [4, 8],
+]);
 Array.from(m);
 // [[1, 2], [2, 4], [4, 8]]
 
-const mapper = new Map([["1", "a"], ["2", "b"]]);
+const mapper = new Map([
+  ["1", "a"],
+  ["2", "b"],
+]);
 Array.from(mapper.values());
 // ["a", "b"]
 
@@ -77,15 +82,13 @@ Array.from(mapper.keys());
 Array.from("toto");
 // ["t", "o", "t", "o"]
 
-
 // En utilisant une fonction fléchée pour remplacer map
 // et manipuler des éléments
-Array.from([1, 2, 3], x => x + x);
+Array.from([1, 2, 3], (x) => x + x);
 // [2, 4, 6]
 
-
 // Pour générer une séquence de nombres
-Array.from({length: 5}, (v, k) => k);
+Array.from({ length: 5 }, (v, k) => k);
 // [0, 1, 2, 3, 4]
 ```
 

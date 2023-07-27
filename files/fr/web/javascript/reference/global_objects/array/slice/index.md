@@ -13,9 +13,9 @@ La méthode **`slice()`** renvoie un objet tableau, contenant une copie superfic
 ## Syntaxe
 
 ```js
-arr.slice()
-arr.slice(début)
-arr.slice(début, fin)
+arr.slice();
+arr.slice(début);
+arr.slice(début, fin);
 ```
 
 ### Paramètres
