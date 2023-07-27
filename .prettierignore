@@ -39,7 +39,6 @@ build/
 /files/es/web/javascript/reference/**/*.md
 
 # fr
-/files/fr/web/css/**/*.md
 /files/fr/web/javascript/**/*.md
 
 # ja
