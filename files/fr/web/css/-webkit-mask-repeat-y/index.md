@@ -45,12 +45,12 @@ La propriété **`-webkit-mask-repeat-y`** définit la façon dont une image de 
 
 ```css
 .exempleun {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: repeat;
 }
 
 .exempledeux {
-  -webkit-mask-image: url('mask.png');
+  -webkit-mask-image: url("mask.png");
   -webkit-mask-repeat-y: no-repeat;
 }
 ```
@@ -61,7 +61,7 @@ On peut définir un style de répétition (`<repeat-style>`) différent pour cha
 
 ```css
 .exempletrois {
-  -webkit-mask-image: url('mask1.png'), url('mask2.png');
+  -webkit-mask-image: url("mask1.png"), url("mask2.png");
   -webkit-mask-repeat-y: repeat, space;
 }
 ```

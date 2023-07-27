@@ -24,8 +24,7 @@ En utilisant un navigateur qui prend en charge cette propriété et en saisissan
 ### HTML
 
 ```html
-<label for="name">Nom :</label>
-<input type="text" name="name" id="name" />
+<label for="name">Nom :</label> <input type="text" name="name" id="name" />
 ```
 
 ### CSS

@@ -41,8 +41,8 @@ La pseudo-classe **`:any-link`** permet de représenter un élément qui agit co
 ### HTML
 
 ```html
-<a href="https://mozilla.org">Une page différente</a><br>
-<a href="#">Une ancre</a><br>
+<a href="https://mozilla.org">Une page différente</a><br />
+<a href="#">Une ancre</a><br />
 <a>Un lien sans cible (n'est pas mis en forme)</a>
 ```
 

@@ -13,7 +13,7 @@ Cette pseudo-classe est principalement destinée aux développeurs de thèmes.
 ## Syntaxe
 
 ```css
-:-moz-loading
+:-moz-loading {}
 ```
 
 ## Exemples

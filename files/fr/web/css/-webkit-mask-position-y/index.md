@@ -25,7 +25,10 @@ La propriété **`-webkit-mask-position-y`** permet de définir la position vert
 -webkit-mask-position-y: -1cm;
 
 /* Gestion de plusieurs valeurs */
--webkit-mask-position-y: 50px, 25%, -3em;
+-webkit-mask-position-y:
+  50px,
+  25%,
+  -3em;
 
 /* Valeurs globales */
 -webkit-mask-position-y: inherit;

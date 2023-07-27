@@ -65,7 +65,7 @@ La propriété **`-webkit-mask-composite`** définit la façon dont plusieurs im
 
 ```css
 .exemple {
-  -webkit-mask-image: url(mask1.png), url('mask2.png');
+  -webkit-mask-image: url(mask1.png), url("mask2.png");
   -webkit-mask-composite: xor, source-over;
 }
 ```

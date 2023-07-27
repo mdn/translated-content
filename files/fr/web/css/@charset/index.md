@@ -31,7 +31,7 @@ Le moteur dispose de différentes méthodes pour déterminer l'encodage d'une fe
 où
 
 - `charset`
-  - : Est une chaîne de caractères (une valeur CSS de type {{cssxref("&lt;string&gt;")}}) indiquant l'encodage qui doit être utilisé. Cette valeur doit correspondre à un nom d'encodage valide pour le Web tel que défini dans [le registre IANA](https://www.iana.org/assignments/character-sets/character-sets.xhtml) et doit être délimitée par des doubles quotes, précédée d'un blanc (U+0020) et suivie d'un point-virgule. Si plusieurs noms sont associés avec l'encodage, seul celui marqué avec *préféré* (_preferred_) doit être utilisé.
+  - : Est une chaîne de caractères (une valeur CSS de type {{cssxref("&lt;string&gt;")}}) indiquant l'encodage qui doit être utilisé. Cette valeur doit correspondre à un nom d'encodage valide pour le Web tel que défini dans [le registre IANA](https://www.iana.org/assignments/character-sets/character-sets.xhtml) et doit être délimitée par des doubles quotes, précédée d'un blanc (U+0020) et suivie d'un point-virgule. Si plusieurs noms sont associés avec l'encodage, seul celui marqué avec _préféré_ (_preferred_) doit être utilisé.
 
 ### Syntaxe formelle
 
@@ -42,15 +42,15 @@ où
 ### Exemples valides
 
 ```css
-@charset "UTF-8";      /* Valide, la feuille de style est encodée en Unicode UTF-8 */
+@charset "UTF-8"; /* Valide, la feuille de style est encodée en Unicode UTF-8 */
 @charset "iso-8859-15"; /* Valide, la feuille de style est encodée en Latin-9 (langues d'Europe occidentale avec le symbole €) */
 ```
 
 ### Exemples invalides
 
-```css example-bad
- @charset "UTF-8";      /* Invalide, il y a un caractère (un espace) avant la règle @ */
-@charset UTF-8;         /* Invalide, sans ' ou ", le jeu de caractères n'est pas une chaîne CSS ({{cssxref("&lt;string&gt;")}}) */
+```css-nolint example-bad
+ @charset "UTF-8"; /* Invalide, il y a un caractère (un espace) avant la règle @ */
+@charset UTF-8; /* Invalide, sans ' ou ", le jeu de caractères n'est pas une chaîne CSS ({{cssxref("&lt;string&gt;")}}) */
 ```
 
 ## Spécifications

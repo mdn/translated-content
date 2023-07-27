@@ -41,8 +41,8 @@ Cette pseudo-classe ne s'applique qu'aux éléments avec le focus, elle ne s'app
 ### HTML
 
 ```html
-<input class="prenom" value="Rouge si focus">
-<input class="nom" value="Vert si focus">
+<input class="prenom" value="Rouge si focus" />
+<input class="nom" value="Vert si focus" />
 ```
 
 ### Résultat

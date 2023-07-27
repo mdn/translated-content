@@ -60,7 +60,8 @@ La pseudo-classe `:dir()` nécessite un paramètre qui indique la direction du t
 ```html
 <div dir="rtl">
   <span>test1</span>
-  <div dir="ltr">test2
+  <div dir="ltr">
+    test2
     <div dir="auto">עִבְרִית</div>
   </div>
 </div>

@@ -51,16 +51,16 @@ input:default + label {
 <fieldset>
   <legend>Saison préférée</legend>
 
-  <input type="radio" name="season" id="spring">
+  <input type="radio" name="season" id="spring" />
   <label for="spring">Printemps</label>
 
-  <input type="radio" name="season" id="summer" checked>
+  <input type="radio" name="season" id="summer" checked />
   <label for="summer">Eté</label>
 
-  <input type="radio" name="season" id="fall">
+  <input type="radio" name="season" id="fall" />
   <label for="fall">Automne</label>
 
-  <input type="radio" name="season" id="winter">
+  <input type="radio" name="season" id="winter" />
   <label for="winter">Hiver</label>
 </fieldset>
 ```
