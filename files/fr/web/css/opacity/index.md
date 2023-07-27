@@ -18,13 +18,13 @@ La valeur s'applique à l'ensemble de l'élément et à ce qu'il contient même 
 /* Valeurs numériques */
 /* Totalement opaque  */
 opacity: 1;
-opacity: 1.0;
+opacity: 1;
 
 /* Légèrement transparent */
 opacity: 0.6;
 
 /* Complètement transparent */
-opacity: 0.0;
+opacity: 0;
 opacity: 0;
 
 /* Valeurs globales */
@@ -39,11 +39,11 @@ opacity: unset;
 
   - : Une valeur de type {{cssxref("&lt;number&gt;")}} dans l'intervalle \[`0.0`, `1.0]` qui représente l'opacité de l'élément, la valeur de son canal alpha. Les valeurs en dehors de cet intervalle seront considérées comme valides mais ramenées dans cet intervalle (ainsi `6` sera équivalent à `1` et -2 sera équivalent à `0`).
 
-    | Valeur                                                                                              | Signification                                                         |
-    | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-    | `0`                                                                                                 | L'élément est complètement transparent (invisible).                   |
+    | Valeur                                                                                   | Signification                                                         |
+    | ---------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+    | `0`                                                                                      | L'élément est complètement transparent (invisible).                   |
     | Toute valeur de type {{cssxref("&lt;number&gt;")}} strictement comprise entre `0` et `1` | L'élément est partiellement transparent, on peut voir l'arrière-plan. |
-    | `1` (la valeur par défaut)                                                                          | L'élément est complètement opaque.                                    |
+    | `1` (la valeur par défaut)                                                               | L'élément est complètement opaque.                                    |
 
 ## Définition formelle
 
@@ -113,9 +113,12 @@ img.opacity:hover {
 #### HTML
 
 ```html
-<img src="//developer.mozilla.org/media/img/mdn-logo.png"
-     alt="MDN logo" width="128" height="146"
-     class="opacity">
+<img
+  src="//developer.mozilla.org/media/img/mdn-logo.png"
+  alt="MDN logo"
+  width="128"
+  height="146"
+  class="opacity" />
 ```
 
 #### Résultat

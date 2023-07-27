@@ -21,7 +21,7 @@ scroll-padding-block: auto;
 /* Valeurs de longueur */
 /* Type <length> */
 scroll-padding-block: 10px;
-scroll-padding-block: 1em .5em;
+scroll-padding-block: 1em 0.5em;
 scroll-padding-block: 10%;
 
 /* Valeurs globales */

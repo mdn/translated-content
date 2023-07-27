@@ -16,7 +16,7 @@ Les valeurs des marges de défilement correspondent aux décalages entre la zone
 /* Valeurs de longueur */
 /* Type <length> */
 scroll-margin-inline: 10px;
-scroll-margin-inline: 1em .5em;
+scroll-margin-inline: 1em 0.5em;
 
 /* Valeurs globales */
 scroll-margin-inline: inherit;
